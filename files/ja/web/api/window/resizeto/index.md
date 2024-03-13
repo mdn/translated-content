@@ -1,15 +1,8 @@
 ---
 title: Window.resizeTo()
 slug: Web/API/Window/resizeTo
-tags:
-  - API
-  - CSSOM View
-  - メソッド
-  - リファレンス
-  - Window
-browser-compat: api.Window.resizeTo
-translation_of: Web/API/Window/resizeTo
 ---
+
 {{APIRef}}
 
 **`Window.resizeTo()`** メソッドは、ウィンドウのサイズを動的に変更します。
@@ -17,7 +10,7 @@ translation_of: Web/API/Window/resizeTo
 ## 構文
 
 ```js
-resizeTo(width, height)
+resizeTo(width, height);
 ```
 
 ### 引数
@@ -37,10 +30,7 @@ resizeTo(width, height)
 
 ```js
 function quarter() {
-  window.resizeTo(
-    window.screen.availWidth / 2,
-    window.screen.availHeight / 2
-  );
+  window.resizeTo(window.screen.availWidth / 2, window.screen.availHeight / 2);
 }
 ```
 

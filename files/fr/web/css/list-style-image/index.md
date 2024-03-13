@@ -1,9 +1,8 @@
 ---
 title: list-style-image
 slug: Web/CSS/list-style-image
-translation_of: Web/CSS/list-style-image
-browser-compat: css.properties.list-style-image
 ---
+
 {{CSSRef}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`list-style-image`** définit l'image utilisée comme puce devant les [éléments de listes](/fr/docs/Web/HTML/Element/li).
@@ -21,7 +20,7 @@ On peut également utiliser la propriété raccourcie [`list-style`](/fr/docs/We
 list-style-image: none;
 
 /*  Valeurs pointant vers une image */
-list-style-image: url('starsolid.gif');
+list-style-image: url("starsolid.gif");
 
 /* Valeurs avec une image */
 list-style-image: linear-gradient(to left bottom, red, blue);
@@ -110,4 +109,4 @@ ul {
 - [`list-style`](/fr/docs/Web/CSS/list-style)
 - [`list-style-type`](/fr/docs/Web/CSS/list-style-type)
 - [`list-style-position`](/fr/docs/Web/CSS/list-style-position)
-- La fonction [`url()`](/fr/docs/Web/CSS/url())
+- La fonction [`url()`](</fr/docs/Web/CSS/url()>)

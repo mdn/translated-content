@@ -1,15 +1,8 @@
 ---
 title: Promise() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Promise/Promise
-tags:
-  - コンストラクター
-  - JavaScript
-  - Promise
-  - リファレンス
-  - ポリフィル
-browser-compat: javascript.builtins.Promise.Promise
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/Promise
 ---
+
 {{JSRef}}
 
 **`Promise`** コンストラクターは、主にまだプロミスに対応していない関数をラップするために使用します。
@@ -19,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/Promise
 ## 構文
 
 ```js
-new Promise(executor)
+new Promise(executor);
 ```
 
 ### 引数
@@ -92,11 +85,11 @@ const myFirstPromise = new Promise((resolve, reject) => {
 ```js
 function myAsyncFunction(url) {
   return new Promise((resolve, reject) => {
-    const xhr = new XMLHttpRequest()
-    xhr.open("GET", url)
-    xhr.onload = () => resolve(xhr.responseText)
-    xhr.onerror = () => reject(xhr.statusText)
-    xhr.send()
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", url);
+    xhr.onload = () => resolve(xhr.responseText);
+    xhr.onerror = () => reject(xhr.statusText);
+    xhr.send();
   });
 }
 ```

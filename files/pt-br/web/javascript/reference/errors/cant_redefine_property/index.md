@@ -1,12 +1,8 @@
 ---
 title: 'TypeError: can''t redefine non-configurable property "x"'
 slug: Web/JavaScript/Reference/Errors/Cant_redefine_property
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 A exceção do Javascript "can't redefine non-configurable property" ocorre quando é
@@ -41,9 +37,9 @@ não especificá-las como configurável.
 
 ```js example-bad
 var obj = Object.create({});
-Object.defineProperty(obj, "foo", {value: "bar"});
+Object.defineProperty(obj, "foo", { value: "bar" });
 
-Object.defineProperty(obj, "foo", {value: "baz"});
+Object.defineProperty(obj, "foo", { value: "baz" });
 // TypeError: can't redefine non-configurable property "foo"
 ```
 
@@ -52,8 +48,8 @@ posteriormente no código.
 
 ```js example-good
 var obj = Object.create({});
-Object.defineProperty(obj, "foo", {value: "bar", configurable: true});
-Object.defineProperty(obj, "foo", {value: "baz", configurable: true});
+Object.defineProperty(obj, "foo", { value: "bar", configurable: true });
+Object.defineProperty(obj, "foo", { value: "baz", configurable: true });
 ```
 
 ## Veja também

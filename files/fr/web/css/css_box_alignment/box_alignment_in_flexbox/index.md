@@ -1,20 +1,15 @@
 ---
 title: L'alignement des boîtes avec Flexbox
-slug: Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox
-tags:
-  - CSS
-  - Guide
-  - flexbox
-translation_of: Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox
-original_slug: Web/CSS/CSS_Box_Alignment/Alignement_boîtes_disposition_Flexbox
+slug: Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox
 ---
+
 {{CSSRef}}
 
 Le module de spécification _[Box Alignment](/fr/docs/Web/CSS/CSS_Box_Alignment)_ détaille le fonctionnement de l'alignement selon les différentes méthodes de disposition. Dans cet article, nous verrons comment fonctionne l'alignement des boîtes avec les boîtes flexibles (_flexbox_). Cette page détaille les aspects spécifiques relatifs à l'alignement et aux boîtes flexibles. Pour une description générale des fonctionnalités communes pour les différentes dispositions, voir [la page principale sur cette spécification](/fr/docs/Web/CSS/CSS_Box_Alignment).
 
 ## Exemple simple
 
-Dans cet exemple, trois objets flexibles sont alignés sur l'axe principal avec {{cssxref("justify-content")}} et sur l'axe secondaire grâce à {{cssxref("align-items")}}. Le premier objet surcharge l'alignement fourni par `align-items`en utilisant `center` comme valeur pour la propriété {{cssxref("align-self")}}.
+Dans cet exemple, trois objets flexibles sont alignés sur l'axe principal avec {{cssxref("justify-content")}} et sur l'axe secondaire grâce à {{cssxref("align-items")}}. Le premier objet surcharge l'alignement fourni par `align-items` en utilisant `center` comme valeur pour la propriété {{cssxref("align-self")}}.
 
 {{EmbedGHLiveSample("css-examples/box-alignment/overview/flex-align-items.html", '100%', 500)}}
 

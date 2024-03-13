@@ -1,17 +1,8 @@
 ---
 title: <length-percentage>
 slug: Web/CSS/length-percentage
-tags:
-  - CSS
-  - CSS データ型
-  - データ型
-  - リファレンス
-  - length-percentage
-  - 単位
-  - 値
-browser-compat: css.types.length-percentage
-translation_of: Web/CSS/length-percentage
 ---
+
 {{CSSRef}}
 
 **`<length-percentage>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、 {{Cssxref("length")}} または {{Cssxref("percentage")}} が取りうる値を表します。

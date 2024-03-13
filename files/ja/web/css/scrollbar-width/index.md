@@ -1,16 +1,8 @@
 ---
 title: scrollbar-width
 slug: Web/CSS/scrollbar-width
-tags:
-  - CSS
-  - CSS プロパティ
-  - リファレンス
-  - CSS スクロールバー
-  - recipe:css-property
-  - scrollbar-width
-browser-compat: css.properties.scrollbar-width
-translation_of: Web/CSS/scrollbar-width
 ---
+
 {{CSSRef}}
 
 **`scrollbar-width`** プロパティは、要素のスクロールバーが表示される時の最大の太さを設定することができます。
@@ -57,7 +49,7 @@ scrollbar-width: unset;
       </tbody>
     </table>
 
-     > **Note:** ユーザーエージェントは、ビューポートのルート要素に何らかの `scrollbar-width` の値を設定する必要があります。
+    > **メモ:** ユーザーエージェントは、ビューポートのルート要素に何らかの `scrollbar-width` の値を設定する必要があります。
 
 ## アクセシビリティの考慮
 
@@ -96,7 +88,13 @@ WCAG 基準 2.1.1 (キーボード) は、長らく基本的なキーボード�
 #### HTML
 
 ```html
-<div class="scroller">Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic. Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</div>
+<div class="scroller">
+  Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+  daikon amaranth tatsoi tomatillo melon azuki bean garlic. Gumbo beet greens
+  corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts
+  fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber
+  earthnut pea peanut soko zucchini.
+</div>
 ```
 
 #### 結果

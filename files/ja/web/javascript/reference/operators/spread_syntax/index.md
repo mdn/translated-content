@@ -1,15 +1,8 @@
 ---
 title: スプレッド構文
 slug: Web/JavaScript/Reference/Operators/Spread_syntax
-tags:
-  - ECMAScript 2015
-  - イテレーター
-  - JavaScript
-  - 言語機能
-  - Reference
-browser-compat: javascript.operators.spread
-translation_of: Web/JavaScript/Reference/Operators/Spread_syntax
 ---
+
 {{jsSidebar("Operators")}}
 
 **スプレッド構文** (`...`) を使うと、配列式や文字列などの反復可能オブジェクトを、0 個以上の引数 (関数呼び出しの場合) や要素 (配列リテラルの場合) を期待された場所で展開したり、オブジェクト式を、0 個以上のキーと値の組 (オブジェクトリテラルの場合) を期待された場所で展開したりすることができます。
@@ -55,7 +48,7 @@ myFunction(...iterableObj); // iterableObj のすべての要素を関数 myFunc
 配列リテラルや文字列の場合:
 
 ```js
-[...iterableObj, '4', 'five', 6]; // iterableObj のすべての要素を挿入することで、2 つの配列を組み合わせる
+[...iterableObj, "4", "five", 6]; // iterableObj のすべての要素を挿入することで、2 つの配列を組み合わせる
 ```
 
 オブジェクトリテラルの場合 (ECMAScript 2018 の新機能)
@@ -77,7 +70,7 @@ let objClone = { ...obj }; // オブジェクトのすべてのキーと値の�
 配列の要素を引数にして関数を呼び出すには {{jsxref("Function.prototype.apply()")}} を使うのが一般的です。
 
 ```js
-function myFunction(x, y, z) { }
+function myFunction(x, y, z) {}
 let args = [0, 1, 2];
 myFunction.apply(null, args);
 ```
@@ -85,7 +78,7 @@ myFunction.apply(null, args);
 スプレッド構文を使うと、上のコードは次のように書くことができます。
 
 ```js
-function myFunction(x, y, z) { }
+function myFunction(x, y, z) {}
 let args = [0, 1, 2];
 myFunction(...args);
 ```
@@ -93,7 +86,7 @@ myFunction(...args);
 スプレッド構文は、引数リストのどの引数でも使用でき、またスプレッド構文は複数回使用することもできます。
 
 ```js
-function myFunction(v, w, x, y, z) { }
+function myFunction(v, w, x, y, z) {}
 let args = [0, 1];
 myFunction(-1, ...args, 2, ...[3]);
 ```
@@ -103,7 +96,7 @@ myFunction(-1, ...args, 2, ...[3]);
 {{jsxref("Operators/new", "new")}} によってコンストラクターを呼び出すとき、配列と `apply()` を**直接**使用することはできません (`apply()` は `[[Call]]` を実行するのであり `[[Construct]]` ではない)。ただし、配列はスプレッド構文のおかげで簡単に `new` を使用することができます。
 
 ```js
-let dateFields = [1970, 0, 1];  // 1 Jan 1970
+let dateFields = [1970, 0, 1]; // 1 Jan 1970
 let d = new Date(...dateFields);
 ```
 
@@ -111,26 +104,26 @@ let d = new Date(...dateFields);
 
 ```js
 function applyAndNew(constructor, args) {
-   function partial () {
-      return constructor.apply(this, args);
-   };
-   if (typeof constructor.prototype === "object") {
-      partial.prototype = Object.create(constructor.prototype);
-   }
-   return partial;
+  function partial() {
+    return constructor.apply(this, args);
+  }
+  if (typeof constructor.prototype === "object") {
+    partial.prototype = Object.create(constructor.prototype);
+  }
+  return partial;
 }
 
-function myConstructor () {
-   console.log("arguments.length: " + arguments.length);
-   console.log(arguments);
-   this.prop1="val1";
-   this.prop2="val2";
-};
+function myConstructor() {
+  console.log("arguments.length: " + arguments.length);
+  console.log(arguments);
+  this.prop1 = "val1";
+  this.prop2 = "val2";
+}
 
 let myArguments = ["hi", "how", "are", "you", "mr", null];
 let myConstructorWithArguments = applyAndNew(myConstructor, myArguments);
 
-console.log(new myConstructorWithArguments);
+console.log(new myConstructorWithArguments());
 //  (internal log of myConstructor):           arguments.length: 6
 //  (internal log of myConstructor):           ["hi", "how", "are", "you", "mr", null]
 //  (log of "new myConstructorWithArguments"): {prop1: "val1", prop2: "val2"}
@@ -143,8 +136,8 @@ console.log(new myConstructorWithArguments);
 スプレッド構文を使用しない場合、既存の配列を一部として使用して新しい配列を作成するには、配列リテラル構文は十分ではなく、{{jsxref("Array.prototype.push", "push()")}}, {{jsxref("Array.prototype.splice", "splice()")}}, {{jsxref("Array.prototype.concat", "concat()")}} などを組み合わせて使う高圧的なコードを使用しなければなりません。
 
 ```js
-let parts = ['shoulders', 'knees'];
-let lyrics = ['head', ...parts, 'and', 'toes'];
+let parts = ["shoulders", "knees"];
+let lyrics = ["head", ...parts, "and", "toes"];
 //  ["head", "shoulders", "knees", "and", "toes"]
 ```
 
@@ -161,7 +154,7 @@ arr2.push(4);
 //  arr は変更されません
 ```
 
-> **Note:** コピーは 1 段階の深さで行われます。そのため、次の例のような多次元配列のようなオブジェクトをコピーする場合には適さないでしょう。({{jsxref("Object.assign()")}} についても同じことが言えます。)
+> **メモ:** コピーは 1 段階の深さで行われます。そのため、次の例のような多次元配列のようなオブジェクトをコピーする場合には適さないでしょう。({{jsxref("Object.assign()")}} についても同じことが言えます。)
 >
 > ```js example-bad
 > let a = [[1], [2], [3]];
@@ -171,7 +164,7 @@ arr2.push(4);
 > //  1
 >
 > //  しまった。 'a' も影響を受けてしまった。
-> a
+> a;
 > //  [[], [2], [3]]
 > ```
 
@@ -205,7 +198,7 @@ let arr1 = [0, 1, 2];
 let arr2 = [3, 4, 5];
 
 //  arr2 のすべての要素を arr1 へ移植します
-Array.prototype.unshift.apply(arr1, arr2)
+Array.prototype.unshift.apply(arr1, arr2);
 
 //  arr1 is now [3, 4, 5, 0, 1, 2]</pre>
 ```
@@ -220,7 +213,7 @@ arr1 = [...arr2, ...arr1];
 //  arr1 is now [3, 4, 5, 0, 1, 2]
 ```
 
-> **Note:** `unshift()` とは異なり、これは新しい `arr1` を生成しており、その場では元の `arr1` を変更しません。
+> **メモ:** `unshift()` とは異なり、これは新しい `arr1` を生成しており、その場では元の `arr1` を変更しません。
 
 ### オブジェクトリテラルでのスプレッド構文
 
@@ -229,8 +222,8 @@ arr1 = [...arr2, ...arr1];
 浅いコピー (プロトタイプを除く) の作成や、マージしたオブジェクトの作成が {{jsxref("Object.assign()")}} を使うよりも短いコードで書けます。
 
 ```js
-let obj1 = { foo: 'bar', x: 42 };
-let obj2 = { foo: 'baz', y: 13 };
+let obj1 = { foo: "bar", x: 42 };
+let obj2 = { foo: "baz", y: 13 };
 
 let clonedObj = { ...obj1 };
 // Object { foo: "bar", x: 42 }
@@ -244,14 +237,14 @@ let mergedObj = { ...obj1, ...obj2 };
 スプレッド構文は {{jsxref("Object.assign()")}} 関数を置き換えたり模倣することはできないことに注意してください。
 
 ```js
-let obj1 = { foo: 'bar', x: 42 };
-let obj2 = { foo: 'baz', y: 13 };
-const merge = ( ...objects ) => ( { ...objects } );
+let obj1 = { foo: "bar", x: 42 };
+let obj2 = { foo: "baz", y: 13 };
+const merge = (...objects) => ({ ...objects });
 
-let mergedObj1 = merge (obj1, obj2);
+let mergedObj1 = merge(obj1, obj2);
 // Object { 0: { foo: 'bar', x: 42 }, 1: { foo: 'baz', y: 13 } }
 
-let mergedObj2 = merge ({}, obj1, obj2);
+let mergedObj2 = merge({}, obj1, obj2);
 // Object { 0: {}, 1: { foo: 'bar', x: 42 }, 2: { foo: 'baz', y: 13 } }
 ```
 
@@ -264,7 +257,7 @@ let mergedObj2 = merge ({}, obj1, obj2);
 スプレッド構文 (スプレッドプロパティの場合を除く) は、[反復可能](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator)オブジェクトにのみ適用できます。
 
 ```js
-let obj = {'key1': 'value1'};
+let obj = { key1: "value1" };
 let array = [...obj]; // TypeError: obj is not iterable
 ```
 
@@ -282,5 +275,5 @@ JavaScript エンジンには、引数の個数に上限があります。関数
 
 ## 関連情報
 
-- {{jsxref("Functions/rest_parameters", "残余引数", "", 1)}} (こちらも ‘`...`’)
-- {{jsxref("Function.prototype.apply()")}} (こちらも ‘`...`’)
+- {{jsxref("Functions/rest_parameters", "残余引数", "", 1)}} (こちらも '`...`')
+- {{jsxref("Function.prototype.apply()")}} (こちらも '`...`')

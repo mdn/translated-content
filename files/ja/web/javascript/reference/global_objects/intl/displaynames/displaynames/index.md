@@ -1,17 +1,8 @@
 ---
 title: Intl.DisplayNames() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/DisplayNames
-tags:
-  - Constructor
-  - DisplayNames
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Reference
-browser-compat: javascript.builtins.Intl.DisplayNames.DisplayNames
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/DisplayNames
 ---
+
 {{JSRef}}
 
 **`Intl.DisplayNames()`** コンストラクターは、言語、地域、文字体系の表示名の一貫した翻訳を可能にする {{jsxref("Intl/DisplayNames", "Intl.DisplayNames")}} オブジェクトを生成します。
@@ -23,9 +14,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/Displa
 ## 構文
 
 ```js
-new Intl.DisplayNames()
-new Intl.DisplayNames(locales)
-new Intl.DisplayNames(locales, options)
+new Intl.DisplayNames();
+new Intl.DisplayNames(locales);
+new Intl.DisplayNames(locales, options);
 ```
 
 ### 引数
@@ -85,7 +76,7 @@ new Intl.DisplayNames(locales, options)
 ロケールを指定しない基本的な使用法では、既定のロケールと既定のオプションで書式化された文字列が返されます。
 
 ```js
-console.log((new Intl.DisplayNames([], {type: 'language'})).of('US'));
+console.log(new Intl.DisplayNames([], { type: "language" }).of("US"));
 // 期待される出力: 'us'
 ```
 

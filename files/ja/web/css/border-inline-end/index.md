@@ -1,21 +1,8 @@
 ---
 title: border-inline-end
 slug: Web/CSS/border-inline-end
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - 実験的
-  - リファレンス
-  - border-inline
-  - border-inline-end
-  - border-inline-end-color
-  - border-inline-end-style
-  - border-inline-end-width
-  - recipe:css-shorthand-property
-browser-compat: css.properties.border-inline-end
-translation_of: Web/CSS/border-inline-end
 ---
+
 {{CSSRef}}
 
 **`border-inline-end`** は [CSS](/ja/docs/Web/CSS) のプロパティで、個々の論理的なインライン方向の末尾側境界のプロパティ値を、スタイルシート内の単一の場所で設定するための[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)です。

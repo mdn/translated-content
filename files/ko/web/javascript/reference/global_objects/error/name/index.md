@@ -1,13 +1,8 @@
 ---
 title: Error.prototype.name
 slug: Web/JavaScript/Reference/Global_Objects/Error/name
-tags:
-  - JavaScript
-  - Property
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Error/name
-browser-compat: javascript.builtins.Error.name
 ---
+
 {{JSRef}}
 
 **`name`** 속성은 오류 타입을 설명하기 위한 이름을 나타냅니다. 초기값은 "Error"입니다.
@@ -23,9 +18,9 @@ browser-compat: javascript.builtins.Error.name
 ### 사용자 정의 에러 발생시키기
 
 ```js
-var e = new Error('Malformed input'); // e.name은 'Error'
+var e = new Error("Malformed input"); // e.name은 'Error'
 
-e.name = 'ParseError';
+e.name = "ParseError";
 throw e;
 // e.toString()은 'ParseError: Malformed input'을 반환합니다
 ```

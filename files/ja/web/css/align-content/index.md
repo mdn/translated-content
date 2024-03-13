@@ -1,16 +1,11 @@
 ---
 title: align-content
 slug: Web/CSS/align-content
-tags:
-  - CSS
-  - CSS ボックス配置
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.align-content
-translation_of: Web/CSS/align-content
 ---
-[CSS](/ja/docs/Web/CSS) の **`align-content`** プロパティは、[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)の交差軸または[グリッド](/ja/docs/Web/CSS/CSS_Grid_Layout)のブロック軸方向の内部のアイテムの間または周囲の空間の配分方法を設定します。
+
+{{CSSRef}}
+
+[CSS](/ja/docs/Web/CSS) の **`align-content`** プロパティは、[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)の交差軸または[グリッド](/ja/docs/Web/CSS/CSS_grid_layout)のブロック軸方向の内部のアイテムの間または周囲の空間の配分方法を設定します。
 
 下記のインタラクティブデモでは、グリッドレイアウトを使用してこのプロパティの値のいくつかを説明しています。
 
@@ -23,11 +18,11 @@ translation_of: Web/CSS/align-content
 ```css
 /* 基本的な位置による配置 */
 /* align-content は left および right の値を取りません */
-align-content: center;     /* アイテムを中央に寄せる */
-align-content: start;      /* アイテムを先頭に寄せる */
-align-content: end;        /* アイテムを末尾に寄せる */
+align-content: center; /* アイテムを中央に寄せる */
+align-content: start; /* アイテムを先頭に寄せる */
+align-content: end; /* アイテムを末尾に寄せる */
 align-content: flex-start; /* フレックスアイテムを先頭に寄せる */
-align-content: flex-end;   /* フレックスアイテムを末尾に寄せる */
+align-content: flex-end; /* フレックスアイテムを末尾に寄せる */
 
 /* 通常の配置 */
 align-content: normal;
@@ -41,12 +36,12 @@ align-content: last baseline;
 align-content: space-between; /* アイテムを均等に配置し
                                  最初のアイテムは先頭に寄せ、
                                  最後のアイテムは末尾に寄せる */
-align-content: space-around;  /* アイテムを均等に配置し
+align-content: space-around; /* アイテムを均等に配置し
                                  各アイテムの両側に半分の大きさの
                                  間隔を置く */
-align-content: space-evenly;  /* アイテムを均等に配置し
+align-content: space-evenly; /* アイテムを均等に配置し
                                  各アイテムの周りに同じ大きさの間隔を置く */
-align-content: stretch;       /* アイテムを均等に配置し
+align-content: stretch; /* アイテムを均等に配置し
                                  コンテナーに合うようにサイズ「自動」の
                                  アイテムを引き伸ばす */
 
@@ -69,10 +64,10 @@ align-content: unset;
   - : 各アイテムは、交差軸方向で配置コンテナーの末尾側の端に向けて互いに寄せて配置されます。
 - `flex-start`
   - : 各アイテムは、フレックスコンテナーに依存して、交差軸の先頭側である配置コンテナーの端に向けて互いに寄せて配置されます。
- これはフレックスレイアウトのアイテムのみに適用されます。フレックスコンテナーの子ではないアイテムでは、この値は `start` のように扱われます。
+    これはフレックスレイアウトのアイテムのみに適用されます。フレックスコンテナーの子ではないアイテムでは、この値は `start` のように扱われます。
 - `flex-end`
   - : 各アイテムは、フレックスコンテナーに依存して、交差軸の末尾側である配置コンテナーの端に向けて互いに寄せて配置されます。
- これはフレックスレイアウトのアイテムのみに適用されます。フレックスコンテナーの子ではないアイテムでは、この値は `end` のように扱われます。
+    これはフレックスレイアウトのアイテムのみに適用されます。フレックスコンテナーの子ではないアイテムでは、この値は `end` のように扱われます。
 - `center`
   - : 各アイテムは、交差軸方向で配置コンテナーの中央に互いに寄せて配置されます。
 - `normal`
@@ -84,6 +79,7 @@ align-content: unset;
     ![the baseline is the line upon which most letters "sit" and below which descenders extend.](410px-typography_line_terms.svg.png)
 
     `first baseline` の代替配置は `start`、`last baseline` の代替配置は `end` です。
+
 - `space-between`
   - : 各アイテムは、配置コンテナーの中で交差軸方向に均等に配置されます。隣接するアイテム同士の間隔は同じになります。最初のアイテムは配置コンテナーの交差軸の先頭側に寄せられ、最後のアイテムは配置コンテナーの交差軸の末尾側に寄せられます。
 - `space-around`
@@ -101,17 +97,17 @@ align-content: unset;
 
 {{CSSInfo}}
 
-## 関連情報
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples">例</h2>
+## 例
 
 ### CSS
 
 ```css
 #container {
-  height:200px;
+  height: 200px;
   width: 240px;
   align-content: center; /* Can be changed in the live sample */
   background-color: #8c8c8c;
@@ -230,26 +226,26 @@ select {
 ```
 
 ```js hidden
-var values = document.getElementById('values');
-var display = document.getElementById('display');
-var container = document.getElementById('container');
+var values = document.getElementById("values");
+var display = document.getElementById("display");
+var container = document.getElementById("container");
 
-values.addEventListener('change', function (evt) {
+values.addEventListener("change", function (evt) {
   container.style.alignContent = evt.target.value;
 });
 
-display.addEventListener('change', function (evt) {
+display.addEventListener("change", function (evt) {
   container.className = evt.target.value;
 });
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples", 260, 290)}}
+{{EmbedLiveSample("例", 260, 290)}}
 
 ## 仕様書
 
-{{Specifications("css.properties.align-content.grid_context")}}
+{{Specifications}}
 
 ## ブラウザーの互換性
 
@@ -257,9 +253,7 @@ display.addEventListener('change', function (evt) {
 
 ## 関連情報
 
-- CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS フレックスボックスガイド: _[フレックスコンテナー内でのアイテムの配置](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
-- CSS グリッドガイド: _[CSS グリッドレイアウト内でのボックス配置](/ja/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
+- CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS フレックスボックスガイド: _[フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
+- CSS グリッドガイド: _[グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
 - [CSS ボックス配置](/ja/docs/Web/CSS/CSS_Box_Alignment)
-
-{{CSSRef}}

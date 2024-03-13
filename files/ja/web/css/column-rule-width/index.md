@@ -1,15 +1,8 @@
 ---
 title: column-rule-width
 slug: Web/CSS/column-rule-width
-tags:
-  - CSS
-  - CSS 段組みレイアウト
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.column-rule-width
-translation_of: Web/CSS/column-rule-width
 ---
+
 {{ CSSRef}}
 
 **`column-rule-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、段組みレイアウトで段間に引かれる線（段間罫）の太さを設定します。
@@ -57,10 +50,11 @@ column-rule-width: unset;
 #### HTML
 
 ```html
-<p>This is a bunch of text split into three columns.
-   The `column-rule-width` property is used to change
-   the width of the line that is drawn between columns.
-   Don't you think that's wonderful?</p>
+<p>
+  This is a bunch of text split into three columns. The `column-rule-width`
+  property is used to change the width of the line that is drawn between
+  columns. Don't you think that's wonderful?
+</p>
 ```
 
 #### CSS

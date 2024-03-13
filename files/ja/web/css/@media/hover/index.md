@@ -1,15 +1,8 @@
 ---
 title: hover
 slug: Web/CSS/@media/hover
-tags:
-  - '@media'
-  - CSS
-  - メディアクエリー
-  - リファレンス
-  - メディア特性
-browser-compat: css.at-rules.media.hover
-translation_of: Web/CSS/@media/hover
 ---
+
 {{CSSRef}}
 
 [CSS](/ja/docs/Web/CSS) の **`hover`** [メディア特性](/ja/docs/Web/CSS/@media#メディア特性)は、*第一の*入力機構が要素の上でホバー (停止) することができるかどうかを検査するために使用することができます。

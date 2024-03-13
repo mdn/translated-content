@@ -1,9 +1,8 @@
 ---
 title: env()
 slug: Web/CSS/env
-translation_of: Web/CSS/env()
-original_slug: Web/CSS/env()
 ---
+
 {{CSSRef}}
 
 La fonction CSS **`env()`** peut être utilisée afin d'insérer la valeur d'une variable d'environnement dans une règle. Les variables d'environnement sont globales pour un document donné, à la différence des [propriétés personnalisées](/fr/docs/Web/CSS/--*). Les variables d'environnement sont définies au niveau de l'agent utilisateur et non par l'utilisateur/le concepteur.
@@ -12,11 +11,10 @@ La fonction CSS **`env()`** peut être utilisée afin d'insérer la valeur d'une
 
 ```css
 body {
-  padding:
-    env(safe-area-inset-top, 20px)
-    env(safe-area-inset-right, 20px)
-    env(safe-area-inset-bottom, 20px)
-    env(safe-area-inset-left, 20px);
+  padding: env(safe-area-inset-top, 20px) env(safe-area-inset-right, 20px) env(
+      safe-area-inset-bottom,
+      20px
+    ) env(safe-area-inset-left, 20px);
 }
 ```
 
@@ -59,10 +57,10 @@ Dans l'exemple qui suit, on utilise le deuxième paramètre de la notation fonct
 
 ```html
 <p>
-  Si la fonction <code>env()</code> est prise en charge dans votre
-  navigateur, le texte de ce paragraphe aura 50 pixels de padding avec
-  la bordure gauche mais pas la droite / basse et haute.
-  En effet, le code CSS associé est équivalent à <code>padding: 0 0 0 50px</code>
+  Si la fonction <code>env()</code> est prise en charge dans votre navigateur,
+  le texte de ce paragraphe aura 50 pixels de padding avec la bordure gauche
+  mais pas la droite / basse et haute. En effet, le code CSS associé est
+  équivalent à <code>padding: 0 0 0 50px</code>
   car les noms des propriétés CSS associées aux agents utilisateurs sont
   sensibles à la casse (contrairement aux autres propriétés).
 </p>
@@ -74,11 +72,10 @@ Dans l'exemple qui suit, on utilise le deuxième paramètre de la notation fonct
 p {
   width: 300px;
   border: 2px solid red;
-  padding:
-    env(safe-area-inset-top, 50px)
-    env(safe-area-inset-right, 50px)
-    env(safe-area-inset-bottom, 50px)
-    env(SAFE-AREA-INSET-LEFT, 50px);
+  padding: env(safe-area-inset-top, 50px) env(safe-area-inset-right, 50px) env(
+      safe-area-inset-bottom,
+      50px
+    ) env(SAFE-AREA-INSET-LEFT, 50px);
 }
 ```
 
@@ -110,13 +107,11 @@ Pour la deuxième valeur, il est possible d'utiliser des virgules afin de fourni
 
 ## Spécifications
 
-| Spécification                                                                                | État                                                 | Commentaires         |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------------------- | -------------------- |
-| {{SpecName("CSS3 Environment Variables", "#env-function", "env()")}} | {{Spec2("CSS3 Environment Variables")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.custom-property.env")}}
+{{Compat}}
 
 ## Voir aussi
 
@@ -124,4 +119,3 @@ Pour la deuxième valeur, il est possible d'utiliser des virgules afin de fourni
 - [Les propriétés personnalisées et la cascade](/fr/docs/Web/CSS/CSS_Variables)
 - [Les propriétés personnalisées (--\*)](/fr/docs/Web/CSS/--*)
 - [Utiliser les propriétés CSS personnalisées](/fr/docs/Web/CSS/Les_variables_CSS)
-- {{CSSxRef("@viewport/viewport-fit", "viewport-fit (@viewport)")}}

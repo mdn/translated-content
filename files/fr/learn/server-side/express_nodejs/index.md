@@ -1,19 +1,8 @@
 ---
 title: Express Web Framework (Node.js/JavaScript)
 slug: Learn/Server-side/Express_Nodejs
-tags:
-  - Beginner
-  - CodingScripting
-  - Express
-  - Express.js
-  - Intro
-  - JavaScript
-  - Learn
-  - Node
-  - Server-side programming
-  - node.js
-translation_of: Learn/Server-side/Express_Nodejs
 ---
+
 {{LearnSidebar}}
 
 Express est une infrastructure d'application (framework), écrit en JavaScript et hébergée dans l'environnement d'exécution node.js. Cette section explique certains de ses principaux avantages, comment configurer votre environnement de développement et comment effectuer des tâches courantes de développement et de déploiement.

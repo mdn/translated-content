@@ -1,15 +1,8 @@
 ---
 title: IntersectionObserver
 slug: Web/API/IntersectionObserver
-tags:
-  - API
-  - Interface
-  - Intersection Observer API
-  - IntersectionObserver
-  - Reference
-browser-compat: api.IntersectionObserver
-translation_of: Web/API/IntersectionObserver
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 [Intersection Observer API](/ko/docs/Web/API/Intersection_Observer_API)의 **`IntersectionObserver`** 인터페이스는 대상 요소와 상위 요소, 또는 대상 요소와 최상위 문서의 {{Glossary("viewport", "뷰포트")}}가 서로 교차하는 영역이 달라지는 경우 이를 비동기적으로 감지할 수 있는 수단을 제공합니다.
@@ -44,16 +37,16 @@ translation_of: Web/API/IntersectionObserver
 ## 예제
 
 ```js
-var intersectionObserver = new IntersectionObserver(function(entries) {
+var intersectionObserver = new IntersectionObserver(function (entries) {
   // intersectionRatio가 0이라는 것은 대상을 볼 수 없다는 것이므로
   // 아무것도 하지 않음
   if (entries[0].intersectionRatio <= 0) return;
 
   loadItems(10);
-  console.log('새 항목 불러옴');
+  console.log("새 항목 불러옴");
 });
 // 주시 시작
-intersectionObserver.observe(document.querySelector('.scrollerFooter'));
+intersectionObserver.observe(document.querySelector(".scrollerFooter"));
 ```
 
 ## 명세

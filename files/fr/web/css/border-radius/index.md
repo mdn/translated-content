@@ -1,9 +1,8 @@
 ---
 title: border-radius
 slug: Web/CSS/border-radius
-translation_of: Web/CSS/border-radius
-browser-compat: css.properties.border-radius
 ---
+
 {{CSSRef}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`border-radius`** permet de définir des coins arrondis pour la bordure d'un élément. La courbure de chaque coin est définie avec un ou deux rayons de courbures qui permettent de définir un arc de cercle ou un arc d'ellipse.
@@ -154,10 +153,10 @@ border-radius: 1em / 5em;
 
 /* est équivalent à : */
 
-border-top-left-radius:     1em 5em;
-border-top-right-radius:    1em 5em;
+border-top-left-radius: 1em 5em;
+border-top-right-radius: 1em 5em;
 border-bottom-right-radius: 1em 5em;
-border-bottom-left-radius:  1em 5em;
+border-bottom-left-radius: 1em 5em;
 ```
 
 ```css
@@ -165,10 +164,10 @@ border-radius: 4px 3px 6px / 2px 4px;
 
 /* est équivalent à : */
 
-border-top-left-radius:     4px 2px;
-border-top-right-radius:    3px 4px;
+border-top-left-radius: 4px 2px;
+border-top-right-radius: 3px 4px;
 border-bottom-right-radius: 6px 2px;
-border-bottom-left-radius:  3px 4px;
+border-bottom-left-radius: 3px 4px;
 ```
 
 ## Définition formelle

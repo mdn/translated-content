@@ -1,17 +1,8 @@
 ---
 title: hanging-punctuation
 slug: Web/CSS/hanging-punctuation
-tags:
-  - CSS
-  - CSS Property
-  - CSS テキスト
-  - CSS テキスト
-  - CSS プロパティ
-  - Experimental
-  - Reference
-  - リファレンス
-translation_of: Web/CSS/hanging-punctuation
 ---
+
 {{CSSRef}}
 
 **`hanging-punctuation`** は [CSS](/ja/docs/Web/CSS) のプロパティで、区切り記号をテキストの行頭や行末にぶら下げるべきかどうかを指定します。ぶら下げられる区切り記号は行ボックスの外側に配置されれることがあります。
@@ -85,7 +76,11 @@ hanging-punctuation: unset;
 #### HTML
 
 ```html
-<p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dignissim nunc mauris, et sollicitudin est scelerisque sed. Praesent laoreet tortor massa, sit amet vulputate nulla pharetra ut.”</p>
+<p>
+  “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dignissim
+  nunc mauris, et sollicitudin est scelerisque sed. Praesent laoreet tortor
+  massa, sit amet vulputate nulla pharetra ut.”
+</p>
 ```
 
 #### CSS
@@ -93,7 +88,7 @@ hanging-punctuation: unset;
 ```css
 p {
   hanging-punctuation: first last;
-  margin: .5rem;
+  margin: 0.5rem;
 }
 ```
 

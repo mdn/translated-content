@@ -1,15 +1,8 @@
 ---
 title: handler.get()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Proxy
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get
-original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/get
 ---
+
 {{JSRef}}
 
 La méthode **`handler.get()`** est une trappe pour intercepter l'accès à la valeur d'une propriété.
@@ -20,8 +13,7 @@ La méthode **`handler.get()`** est une trappe pour intercepter l'accès à la v
 
 ```js
 var p = new Proxy(cible, {
-  get: function(cible, propriété, récepteur) {
-  }
+  get: function (cible, propriété, récepteur) {},
 });
 ```
 
@@ -64,15 +56,18 @@ Si les invariants suivants ne sont pas respectés, le proxy renverra une excepti
 Dans l'exemple suivant, on intercepte les accès aux propriétés :
 
 ```js
-var p = new Proxy({}, {
-  get: function(cible, propriété, récepteur) {
-    console.log("appelée : " + propriété);
-    return 10;
-  }
-});
+var p = new Proxy(
+  {},
+  {
+    get: function (cible, propriété, récepteur) {
+      console.log("appelée : " + propriété);
+      return 10;
+    },
+  },
+);
 
 console.log(p.a); // "appelée : a"
-                  // 10
+// 10
 ```
 
 Le code suivant ne respecte pas l'invariant :
@@ -83,13 +78,13 @@ Object.defineProperty(obj, "a", {
   configurable: false,
   enumerable: false,
   value: 10,
-  writable: false
+  writable: false,
 });
 
 var p = new Proxy(obj, {
-  get: function(cible, propriété) {
+  get: function (cible, propriété) {
     return 20;
-  }
+  },
 });
 
 p.a; // exception TypeError levée
@@ -97,14 +92,11 @@ p.a; // exception TypeError levée
 
 ## Spécifications
 
-| Spécification                                                                                                                                | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-get-p-receiver', '[[Get]]')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-get-p-receiver', '[[Get]]')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
-## Compatiblité des navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Proxy.handler.get")}}
+{{Compat}}
 
 ## Voir aussi
 

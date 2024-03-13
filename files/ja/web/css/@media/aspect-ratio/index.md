@@ -1,15 +1,8 @@
 ---
 title: aspect-ratio
 slug: Web/CSS/@media/aspect-ratio
-tags:
-  - '@media'
-  - CSS
-  - メディアクエリー
-  - リファレンス
-  - メディア特性
-browser-compat: css.at-rules.media.aspect-ratio
-translation_of: Web/CSS/@media/aspect-ratio
 ---
+
 {{CSSRef}}
 
 **`aspect-ratio`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、{{glossary("viewport", "ビューポート")}}のアスペクト比を調べるために使用します。
@@ -27,8 +20,8 @@ translation_of: Web/CSS/@media/aspect-ratio
 ### HTML
 
 ```html
-<div id='inner'>
-  ビューポートの幅と高さを変更しながら、この要素を見ていてください。
+<div id="inner">
+  ビューポートの幅と高さを変更しながら、この要素を見ていてください。
 </div>
 ```
 
@@ -37,23 +30,23 @@ translation_of: Web/CSS/@media/aspect-ratio
 ```css
 /* 最小アスペクト比 */
 @media (min-aspect-ratio: 8/5) {
-  div {
-    background: #9af; /* blue */
-  }
+  div {
+    background: #9af; /* blue */
+  }
 }
 
 /* 最大アスペクト比 */
 @media (max-aspect-ratio: 3/2) {
-  div {
-    background: #9ff;  /* cyan */
-  }
+  div {
+    background: #9ff; /* cyan */
+  }
 }
 
 /* 正確なアスペクト比。上書きを防ぐために最下部に配置 */
 @media (aspect-ratio: 1/1) {
-  div {
-    background: #f9a; /* red */
-  }
+  div {
+    background: #f9a; /* red */
+  }
 }
 ```
 
@@ -61,32 +54,33 @@ translation_of: Web/CSS/@media/aspect-ratio
 
 ```html hidden
 <label id="wf" for="w">width:165</label>
-<input id="w" name="w" type="range" min="100" max="250" step="5" value="165">
+<input id="w" name="w" type="range" min="100" max="250" step="5" value="165" />
 <label id="hf" for="w">height:165</label>
-<input id="h" name="h" type="range" min="100" max="250" step="5" value="165">
+<input id="h" name="h" type="range" min="100" max="250" step="5" value="165" />
 
-<iframe id="outer" src="data:text/html,<style> @media (min-aspect-ratio: 8/5) { div { background: %239af; } } @media (max-aspect-ratio: 3/2) { div { background: %239ff; } } @media (aspect-ratio: 1/1) { div { background: %23f9a; } }</style><div id='inner'> Watch this element as you resize your viewport's width and height.</div>">
-
+<iframe
+  id="outer"
+  src="data:text/html,<style> @media (min-aspect-ratio: 8/5) { div { background: %239af; } } @media (max-aspect-ratio: 3/2) { div { background: %239ff; } } @media (aspect-ratio: 1/1) { div { background: %23f9a; } }</style><div id='inner'> Watch this element as you resize your viewport's width and height.</div>">
 </iframe>
 ```
 
 ```css hidden
-iframe{
-  display:block;
+iframe {
+  display: block;
 }
 ```
 
 ```js hidden
-outer.style.width=outer.style.height="165px"
+outer.style.width = outer.style.height = "165px";
 
-w.onchange=w.oninput=function(){
-  outer.style.width=w.value+"px"
-  wf.textContent="width:"+w.value
-}
-h.onchange=h.oninput=function(){
-  outer.style.height=h.value+"px"
-  hf.textContent="height:"+h.value
-}
+w.onchange = w.oninput = function () {
+  outer.style.width = w.value + "px";
+  wf.textContent = "width:" + w.value;
+};
+h.onchange = h.oninput = function () {
+  outer.style.height = h.value + "px";
+  hf.textContent = "height:" + h.value;
+};
 ```
 
 {{ EmbedLiveSample('Result', '300px', '350px') }}

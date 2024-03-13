@@ -1,17 +1,8 @@
 ---
-title: 'Performance: resourcetimingbufferfull イベント'
+title: "Performance: resourcetimingbufferfull イベント"
 slug: Web/API/Performance/resourcetimingbufferfull_event
-tags:
-  - API
-  - DOM
-  - イベント
-  - パフォーマンス
-  - リファレンス
-  - ウェブパフォーマンス
-  - onresourcetimingbufferfull
-browser-compat: api.Performance.resourcetimingbufferfull_event
-translation_of: Web/API/Performance/resourcetimingbufferfull_event
 ---
+
 {{APIRef}}
 
 `resourcetimingbufferfull` イベントは、ブラウザーのリソースタイミングバッファーがいっぱいになると発生します。
@@ -58,7 +49,7 @@ function init() {
 addEventListener() 関数を使用してハンドラーを設定することもできます。
 
 ```js
-performance.addEventListener('resourcetimingbufferfull', buffer_full);
+performance.addEventListener("resourcetimingbufferfull", buffer_full);
 ```
 
 ## 仕様書

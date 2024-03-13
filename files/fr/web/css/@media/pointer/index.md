@@ -1,12 +1,8 @@
 ---
 title: pointer
 slug: Web/CSS/@media/pointer
-tags:
-  - CSS
-  - Caractéristique média
-  - Reference
-translation_of: Web/CSS/@media/pointer
 ---
+
 {{CSSRef}}
 
 **`pointer`** est une caractéristique média CSS (cf. {{cssxref("@media")}}) qui permet de vérifier si le dispositif de saisie/d'entrée principal est un dispositif de pointage et, le cas échéant, de connaître sa précision.
@@ -31,8 +27,7 @@ Dans cet exemple, on crée une petite case à cocher pour les utilisateurs qui d
 ### HTML
 
 ```html
-<input id="test" type="checkbox" />
-<label for="test">Coucou !</label>
+<input id="test" type="checkbox" /> <label for="test">Coucou !</label>
 ```
 
 ### CSS
@@ -71,13 +66,11 @@ input[type="checkbox"]:checked {
 
 ## Spécifications
 
-| Spécification                                                                | État                                     | Commentaires                                                     |
-| ---------------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------------------------------------- |
-| {{SpecName('CSS4 Media Queries', '#pointer', 'pointer')}} | {{Spec2('CSS4 Media Queries')}} | Ajout dans la spécification de niveau 4 pour les requêtes média. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.media.pointer")}}
+{{Compat}}
 
 ## Voir aussi
 

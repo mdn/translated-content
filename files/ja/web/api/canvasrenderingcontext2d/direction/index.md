@@ -1,16 +1,8 @@
 ---
 title: CanvasRenderingContext2D.direction
 slug: Web/API/CanvasRenderingContext2D/direction
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - 実験的
-  - プロパティ
-  - リファレンス
-browser-compat: api.CanvasRenderingContext2D.direction
-translation_of: Web/API/CanvasRenderingContext2D/direction
 ---
+
 {{APIRef}} {{SeeCompatTable}}
 
 **`CanvasRenderingContext2D.direction`** はキャンバス 2D API のプロパティで、テキストを描画する際に使用する現在の書字方向を指定します。
@@ -49,13 +41,13 @@ ctx.direction = "ltr" || "rtl" || "inherit";
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 
-ctx.font = '48px serif';
-ctx.fillText('Hi!', 150, 50);
-ctx.direction = 'rtl';
-ctx.fillText('Hi!', 150, 130);
+ctx.font = "48px serif";
+ctx.fillText("Hi!", 150, 50);
+ctx.direction = "rtl";
+ctx.fillText("Hi!", 150, 130);
 ```
 
 #### 結果

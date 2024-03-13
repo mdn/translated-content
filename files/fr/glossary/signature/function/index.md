@@ -1,14 +1,10 @@
 ---
 title: Signature (fonctions)
 slug: Glossary/Signature/Function
-tags:
-  - Glossaire
-  - Java
-  - JavaScript
-  - Programmation
-translation_of: Glossary/Signature/Function
-original_slug: Glossaire/Signature/Fonction
 ---
+
+{{GlossarySidebar}}
+
 Une **signature de fonction** (ou signature de _type_, ou signature de _méthode_) définit les entrées et sorties des {{Glossary("Function", "fonctions")}} et des {{Glossary("Method", "méthodes")}}.
 
 Une signature peut comporter :
@@ -22,15 +18,15 @@ Une signature peut comporter :
 
 ### Signatures en JavaScript
 
-{{Glossary("JavaScript")}} est un langage à *typage faible et* *dynamique*. Cela signifie que vous n'avez pas à déclarer le type d'une variable à l'avance. Il sera déterminé automatiquement pendant le traitement du programme. Une signature en JavaScript peut vous apporter certaines informations sur la méthode :
+{{Glossary("JavaScript")}} est un langage à _typage faible et_ _dynamique_. Cela signifie que vous n'avez pas à déclarer le type d'une variable à l'avance. Il sera déterminé automatiquement pendant le traitement du programme. Une signature en JavaScript peut vous apporter certaines informations sur la méthode :
 
 ```js
-MonObjet.prototype.maFonction(valeur)
+MonObjet.prototype.maFonction(valeur);
 ```
 
 - La méthode est installée sur un {{Glossary("Object","objet")}} appelé `MonObjet`.
 - La méthode est installée sur le `prototype` de `MonObjet` (c'est par conséquent une {{Glossary("Method","méthode")}} d'instance) par opposition à une {{Glossary("Method","méthode")}} statique.
-- Le nom de la méthode est ` maFonction``. `
+- Le nom de la méthode est `maFonction`.
 - La méthode accepte un paramètre appelé `valeur` et n'est pas définie.
 
 ### Signatures en Java
@@ -51,4 +47,4 @@ public static void main(String[] args)
 
 ### `Culture générale`
 
-- {{Interwiki("wikipedia", "Signature de type#Java", "Signatures de type interne en Java")}} sur Wikipédia
+- [Signature de type](https://fr.wikipedia.org/wiki/Signature_de_type) sur Wikipédia

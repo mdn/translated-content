@@ -1,16 +1,9 @@
 ---
 title: 合成とクリッピング
 slug: Web/API/Canvas_API/Tutorial/Compositing
-tags:
-  - キャンバス
-  - グラフィック
-  - HTML
-  - HTML5
-  - 中級者
-  - チュートリアル
-translation_of: Web/API/Canvas_API/Tutorial/Compositing
 ---
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}
+
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}
 
 [これまでの例](/ja/docs/Web/API/Canvas_API/Tutorial/Transformations)ではすべて、図形は、常に 1 つずつ重ねて描かれていました。これはほとんどの状況において十分すぎるほど適切ですが、複合図形の構築順序が制限されます。しかし、 `globalCompositeOperation` プロパティを設定することで、この動作を変更することができます。さらに、 `clip` プロパティによって、シェイプの不要な部分を隠すことができます。
 
@@ -48,7 +41,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Compositing
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   ctx.fillRect(0, 0, 150, 150);
   ctx.translate(75, 75);
 
@@ -59,8 +52,8 @@ function draw() {
 
   // 背景を描く
   var lingrad = ctx.createLinearGradient(0, -75, 0, 75);
-  lingrad.addColorStop(0, '#232256');
-  lingrad.addColorStop(1, '#143778');
+  lingrad.addColorStop(0, "#232256");
+  lingrad.addColorStop(1, "#143778");
 
   ctx.fillStyle = lingrad;
   ctx.fillRect(-75, -75, 150, 150);
@@ -68,13 +61,14 @@ function draw() {
   // 星を描く
   for (var j = 1; j < 50; j++) {
     ctx.save();
-    ctx.fillStyle = '#fff';
-    ctx.translate(75 - Math.floor(Math.random() * 150),
-                  75 - Math.floor(Math.random() * 150));
+    ctx.fillStyle = "#fff";
+    ctx.translate(
+      75 - Math.floor(Math.random() * 150),
+      75 - Math.floor(Math.random() * 150),
+    );
     drawStar(ctx, Math.floor(Math.random() * 4) + 2);
     ctx.restore();
   }
-
 }
 
 function drawStar(ctx, r) {

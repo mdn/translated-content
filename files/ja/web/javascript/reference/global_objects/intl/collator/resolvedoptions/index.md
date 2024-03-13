@@ -1,18 +1,8 @@
 ---
 title: Intl.Collator.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/resolvedOptions
-tags:
-  - Collator
-  - 国際化
-  - Intl
-  - JavaScript
-  - ローカライズ
-  - メソッド
-  - プロトタイプ
-  - リファレンス
-browser-compat: javascript.builtins.Intl.Collator.resolvedOptions
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Collator/resolvedOptions
 ---
+
 {{JSRef}}
 
 **`Intl.Collator.prototype.resolvedOptions()`** メソッドは、この {{jsxref("Intl.Collator")}} オブジェクトの初期化時に計算されたロケールと照合オプションを反映したプロパティを持つ新しいオブジェクトを返します。
@@ -24,7 +14,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Collator/resolvedOp
 ## 構文
 
 ```js
-resolvedOptions()
+resolvedOptions();
 ```
 
 ### 返値
@@ -49,15 +39,15 @@ resolvedOptions()
 ### resolvedOptions メソッドの使用
 
 ```js
-var de = new Intl.Collator('de', { sensitivity: 'base' })
+var de = new Intl.Collator("de", { sensitivity: "base" });
 var usedOptions = de.resolvedOptions();
 
-usedOptions.locale;            // "de"
-usedOptions.usage;             // "sort"
-usedOptions.sensitivity;       // "base"
+usedOptions.locale; // "de"
+usedOptions.usage; // "sort"
+usedOptions.sensitivity; // "base"
 usedOptions.ignorePunctuation; // false
-usedOptions.collation;         // "default"
-usedOptions.numeric;           // false
+usedOptions.collation; // "default"
+usedOptions.numeric; // false
 ```
 
 ## 仕様書

@@ -1,15 +1,8 @@
 ---
 title: Map.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Map/forEach
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Map
-  - Method
-  - Prototype
-  - Reference
-browser-compat: javascript.builtins.Map.forEach
 ---
+
 {{JSRef}}
 
 O método **`forEach()`** executa a função que foi provida uma vez para cada par de chave-valor no objeto `Map`, na order em que foram inseridos.
@@ -85,9 +78,13 @@ O código a seguir imprime uma linha para cada elemento do objeto `Map`:
 
 ```js
 function logMapElements(value, key, map) {
-    console.log(`map.get('${key}') = ${value}`)
+  console.log(`map.get('${key}') = ${value}`);
 }
-new Map([['foo', 3], ['bar', {}], ['baz', undefined]]).forEach(logMapElements)
+new Map([
+  ["foo", 3],
+  ["bar", {}],
+  ["baz", undefined],
+]).forEach(logMapElements);
 // logs:
 // "map.get('foo') = 3"
 // "map.get('bar') = [object Object]"

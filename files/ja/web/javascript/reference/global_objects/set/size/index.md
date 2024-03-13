@@ -1,18 +1,13 @@
 ---
 title: Set.prototype.size
 slug: Web/JavaScript/Reference/Global_Objects/Set/size
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - プロパティ
-  - プロトタイプ
-  - set
-browser-compat: javascript.builtins.Set.size
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/size
+l10n:
+  sourceCommit: 16bacf2194dc9e9ff6ee5bcc65316547cf88a8d9
 ---
+
 {{JSRef}}
 
-**`size`** アクセサープロパティは {{jsxref("Set")}} オブジェクト内の（固有の）要素の数を返します。
+**`size`** は {{jsxref("Set")}} インスタンスのアクセサープロパティで、この集合内の（固有の）要素の数を返します。
 
 {{EmbedInteractiveExample("pages/js/set-prototype-size.html")}}
 
@@ -25,12 +20,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Set/size
 ### size の使用
 
 ```js
-var mySet = new Set();
+const mySet = new Set();
 mySet.add(1);
 mySet.add(5);
-mySet.add('some text')
+mySet.add("some text");
 
-mySet.size; // 3
+console.log(mySet.size); // 3
 ```
 
 ## 仕様書

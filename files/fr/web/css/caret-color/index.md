@@ -1,13 +1,8 @@
 ---
 title: caret-color
 slug: Web/CSS/caret-color
-tags:
-  - CSS
-  - Propriété
-  - Reference
-  - Web
-translation_of: Web/CSS/caret-color
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`caret-color`** définit la couleur du curseur visible à l'endroit où l'utilisateur peut ajouter du texte ou un autre contenu dans l'élément lorsqu'il saisit au clavier ou qu'il édite les informations.
@@ -43,9 +38,13 @@ caret-color: hsla(228, 4%, 24%, 0.8);
 - \<color>
   - : L'agent utilisateur utilise la couleur ({{cssxref("&lt;color&gt;")}}) indiquée comme couleur pour le curseur de saisie.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -69,20 +68,16 @@ caret-color: hsla(228, 4%, 24%, 0.8);
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName("CSS3 UI", "#propdef-caret-color", "caret-color")}} | {{Spec2("CSS3 UI")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.caret-color")}}
+{{Compat}}
 
 ## Voir aussi
 
 - {{HTMLElement("input")}}
-- L'attribut HTML {{htmlattrxref("contenteditable")}} qui rend le texte d'un élément éditable
+- L'attribut HTML [`contenteditable`](/fr/docs/Web/HTML/Global_attributes#contenteditable) qui rend le texte d'un élément éditable
 - [Rendre du contenu éditable](/fr/docs/Web/Guide/HTML/Editable_content)
 - [Appliquer des couleurs sur des éléments HTML grâce à CSS](/fr/docs/Web/HTML/Applying_color)
 - Le type de données {{cssxref("&lt;color&gt;")}}

@@ -1,9 +1,8 @@
 ---
 title: 406 Not Acceptable
 slug: Web/HTTP/Status/406
-translation_of: Web/HTTP/Status/406
-browser-compat: http.status.406
 ---
+
 {{HTTPSidebar}}
 
 Le code de réponse d'erreur HTTP **`406 Not Acceptable`** indique qu'il est impossible de servir une réponse qui satisfait aux critères définis dans les en-têtes de négociation de contenu et que le serveur ne souhaite pas fournir de représentation par défaut.

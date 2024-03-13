@@ -1,15 +1,11 @@
 ---
-title: HTMLTableElement.tHead
+title: "HTMLTableElement: tHead プロパティ"
+short-title: tHead
 slug: Web/API/HTMLTableElement/tHead
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLTableElement.tHead
-translation_of: Web/API/HTMLTableElement/tHead
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLTableElement.tHead`** は {{HTMLElement("table")}} の {{HTMLElement("thead")}} 要素を表します。そのような要素がない場合は、この値は `null` になります。

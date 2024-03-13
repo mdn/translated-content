@@ -1,17 +1,8 @@
 ---
 title: PannerNode.coneOuterAngle
 slug: Web/API/PannerNode/coneOuterAngle
-page-type: web-api-instance-property
-tags:
-  - API
-  - PannerNode
-  - Property
-  - Reference
-  - Web Audio API
-  - coneOuterAngle
-browser-compat: api.PannerNode.coneOuterAngle
-translation_of: Web/API/PannerNode/coneOuterAngle
 ---
+
 {{ APIRef("Web Audio API") }}
 
 `coneOuterAngle` は {{ domxref("PannerNode") }} インターフェイスのプロパティで、倍精度実数値で円錐の外側の体積を一定値だけ減少させる角度を、度単位で記述します。
@@ -36,5 +27,5 @@ translation_of: Web/API/PannerNode/coneOuterAngle
 
 ## 関連情報
 
-- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [ウェブ音声空間化の基礎知識](/ja/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ空間化の基礎知識](/ja/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)

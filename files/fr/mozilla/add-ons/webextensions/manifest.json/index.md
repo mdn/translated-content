@@ -1,9 +1,8 @@
 ---
 title: manifest.json
 slug: Mozilla/Add-ons/WebExtensions/manifest.json
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json
-browser-compat: webextensions.manifest
 ---
+
 {{AddonSidebar}}
 
 > **Note :** Cet article décrit le format du fichier `manifest.json` pour les extensions web. Si vous cherchez des informations quant au manifeste des applications web progressives (PWA), consultez plutôt [l'article sur les manifestes d'application web](/fr/docs/Web/Manifest).
@@ -52,7 +51,7 @@ Pour des exemples complets d'extensions, vous pouvez consulter [ces exemples d'e
   },
 
   "background": {
-    "scripts": ["jquery.js", "mon-script-arriere-plan.js"],
+    "scripts": ["jquery.js", "mon-script-arriere-plan.js"]
   },
 
   "browser_action": {
@@ -111,7 +110,7 @@ Pour des exemples complets d'extensions, vous pouvez consulter [ces exemples d'e
   "version": "0.1",
 
   "user_scripts": {
-    "api_script": "apiscript.js",
+    "api_script": "apiscript.js"
   },
 
   "web_accessible_resources": ["images/mon-image.png"]

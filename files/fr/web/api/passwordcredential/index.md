@@ -1,14 +1,8 @@
 ---
 title: PasswordCredential
 slug: Web/API/PasswordCredential
-tags:
-  - API
-  - Credential Management API
-  - Interface
-  - PasswordCredential
-  - Reference
-translation_of: Web/API/PasswordCredential
 ---
+
 {{SeeCompatTable}}{{APIRef("Credential Management API")}}
 
 L'interface **`PasswordCredential`**, rattachée à l'[API Credential Management](/fr/docs/Web/API/Credential_Management_API), fournit des informations quant à un couple nom d'utilisateur/mot de passe. Pour les navigateurs qui prennent en charge cette fonctionnalité, une instance de cette interface peut être passée comme propriété `credential` de l'objet `init` utilisé comme argument de la méthode globale {{domxref('fetch')}}.
@@ -50,21 +44,18 @@ var cred = new PasswordCredential({
   id: id,
   password: password,
   name: name,
-  iconURL: iconUrl
+  iconURL: iconUrl,
 });
 
-navigator.credentials.store(cred)
- .then(function() {
- // Faire quelque chose avec.
+navigator.credentials.store(cred).then(function () {
+  // Faire quelque chose avec.
 });
 ```
 
 ## Spécifications
 
-| Spécification                                    | État                                         | Commentaires         |
-| ------------------------------------------------ | -------------------------------------------- | -------------------- |
-| {{SpecName('Credential Management')}} | {{Spec2('Credential Management')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PasswordCredential")}}
+{{Compat}}

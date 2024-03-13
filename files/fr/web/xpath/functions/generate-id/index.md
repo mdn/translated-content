@@ -1,11 +1,8 @@
 ---
 title: generate-id
 slug: Web/XPath/Functions/generate-id
-tags:
-  - Référence_XSLT
-translation_of: Web/XPath/Functions/generate-id
-original_slug: Web/XPath/Fonctions/generate-id
 ---
+
 {{ XsltRef() }}
 
 La fonction `generate-id` génère un identifiant `id` unique pour le premier nœud d'un ensemble de nœuds donné et retourne une chaîne contenant cet `id`.

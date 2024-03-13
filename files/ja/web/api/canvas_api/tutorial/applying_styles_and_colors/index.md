@@ -1,17 +1,9 @@
 ---
 title: スタイルと色の適用
 slug: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
-tags:
-  - キャンバス
-  - グラフィック
-  - HTML
-  - HTML5
-  - 中級者
-  - チュートリアル
-translation_of: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
-original_slug: Web/Guide/HTML/Canvas_tutorial/Applying_styles_and_colors
 ---
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}
+
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}
 
 [図形の描画](/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)についての章では、既定の線と塗りつぶしのスタイルのみを使用しました。ここでは、私たちの絵を少しでも魅力的にするために、自由に使えるキャンバスのオプションについて探っていきます。色、線のスタイル、グラデーション、パターン、影を追加する方法を学びます。
 
@@ -26,17 +18,17 @@ original_slug: Web/Guide/HTML/Canvas_tutorial/Applying_styles_and_colors
 
 `color` は文字列で、 CSS の {{cssxref("&lt;color&gt;")}} やグラデーションオブジェクト、パターンオブジェクトを表します。グラデーションオブジェクトとパターンオブジェクトについては後で見ます。既定では、輪郭線と塗りつぶしの色は黒に設定されています（CSS 色では`#000000`）。
 
-> **Note:** `strokeStyle` および `fillStyle` プロパティを設定すると、その設定した値が既定となって、それ以降に描かれる図形の線や塗りつぶしはその色で行なわれるようになります。それぞれの図形をそれぞれ別の色で描きたい場合は、図形を描くごとに `fillStyle` や `strokeStyle` プロパティを設定する必要があります。
+> **メモ:** `strokeStyle` および `fillStyle` プロパティを設定すると、その設定した値が既定となって、それ以降に描かれる図形の線や塗りつぶしはその色で行なわれるようになります。それぞれの図形をそれぞれ別の色で描きたい場合は、図形を描くごとに `fillStyle` や `strokeStyle` プロパティを設定する必要があります。
 
 入力できる有効な文字列は、 CSS の {{cssxref("&lt;color&gt;")}} 値である必要があります。 下記の例では同じ色について説明しています。
 
 ```js
 // これらは全て fillStyle にオレンジ色を設定します
 
-ctx.fillStyle = 'orange';
-ctx.fillStyle = '#FFA500';
-ctx.fillStyle = 'rgb(255, 165, 0)';
-ctx.fillStyle = 'rgba(255, 165, 0, 1)';
+ctx.fillStyle = "orange";
+ctx.fillStyle = "#FFA500";
+ctx.fillStyle = "rgb(255, 165, 0)";
+ctx.fillStyle = "rgba(255, 165, 0, 1)";
 ```
 
 ### `fillStyle` の例
@@ -45,11 +37,15 @@ ctx.fillStyle = 'rgba(255, 165, 0, 1)';
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   for (var i = 0; i < 6; i++) {
     for (var j = 0; j < 6; j++) {
-      ctx.fillStyle = 'rgb(' + Math.floor(255 - 42.5 * i) + ', ' +
-                       Math.floor(255 - 42.5 * j) + ', 0)';
+      ctx.fillStyle =
+        "rgb(" +
+        Math.floor(255 - 42.5 * i) +
+        ", " +
+        Math.floor(255 - 42.5 * j) +
+        ", 0)";
       ctx.fillRect(j * 25, i * 25, 25, 25);
     }
   }
@@ -73,18 +69,22 @@ draw();
 この例は上の例と似ていますが、 `strokeStyle` プロパティを使って、図形の輪郭の色を変えています。また、 `arc()` メソッドを使って、四角形の代わりに円を描いています。
 
 ```js
-  function draw() {
-    var ctx = document.getElementById('canvas').getContext('2d');
-    for (var i = 0; i < 6; i++) {
-      for (var j = 0; j < 6; j++) {
-        ctx.strokeStyle = 'rgb(0, ' + Math.floor(255 - 42.5 * i) + ', ' +
-                         Math.floor(255 - 42.5 * j) + ')';
-        ctx.beginPath();
-        ctx.arc(12.5 + j * 25, 12.5 + i * 25, 10, 0, Math.PI * 2, true);
-        ctx.stroke();
-      }
+function draw() {
+  var ctx = document.getElementById("canvas").getContext("2d");
+  for (var i = 0; i < 6; i++) {
+    for (var j = 0; j < 6; j++) {
+      ctx.strokeStyle =
+        "rgb(0, " +
+        Math.floor(255 - 42.5 * i) +
+        ", " +
+        Math.floor(255 - 42.5 * j) +
+        ")";
+      ctx.beginPath();
+      ctx.arc(12.5 + j * 25, 12.5 + i * 25, 10, 0, Math.PI * 2, true);
+      ctx.stroke();
     }
   }
+}
 ```
 
 ```html hidden
@@ -113,8 +113,8 @@ draw();
 ```js
 // 輪郭線と塗りつぶしの色に透明色を割り当てる
 
-ctx.strokeStyle = 'rgba(255, 0, 0, 0.5)';
-ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
+ctx.strokeStyle = "rgba(255, 0, 0, 0.5)";
+ctx.fillStyle = "rgba(255, 0, 0, 0.5)";
 ```
 
 `rgba()` 関数は `rgb()` 関数によく似ていますが、 1 つ引数が増えます。最後の引数には、この色の透明度の値を設定します。有効な値の範囲は、 0.0 （完全に透明）から 1.0 （完全に不透明）です。
@@ -125,17 +125,17 @@ ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   // draw background
-  ctx.fillStyle = '#FD0';
+  ctx.fillStyle = "#FD0";
   ctx.fillRect(0, 0, 75, 75);
-  ctx.fillStyle = '#6C0';
+  ctx.fillStyle = "#6C0";
   ctx.fillRect(75, 0, 75, 75);
-  ctx.fillStyle = '#09F';
+  ctx.fillStyle = "#09F";
   ctx.fillRect(0, 75, 75, 75);
-  ctx.fillStyle = '#F30';
+  ctx.fillStyle = "#F30";
   ctx.fillRect(75, 75, 75, 75);
-  ctx.fillStyle = '#FFF';
+  ctx.fillStyle = "#FFF";
 
   // set transparency value
   ctx.globalAlpha = 0.2;
@@ -165,21 +165,21 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // Draw background
-  ctx.fillStyle = 'rgb(255, 221, 0)';
+  ctx.fillStyle = "rgb(255, 221, 0)";
   ctx.fillRect(0, 0, 150, 37.5);
-  ctx.fillStyle = 'rgb(102, 204, 0)';
+  ctx.fillStyle = "rgb(102, 204, 0)";
   ctx.fillRect(0, 37.5, 150, 37.5);
-  ctx.fillStyle = 'rgb(0, 153, 255)';
+  ctx.fillStyle = "rgb(0, 153, 255)";
   ctx.fillRect(0, 75, 150, 37.5);
-  ctx.fillStyle = 'rgb(255, 51, 0)';
+  ctx.fillStyle = "rgb(255, 51, 0)";
   ctx.fillRect(0, 112.5, 150, 37.5);
 
   // Draw semi transparent rectangles
   for (var i = 0; i < 10; i++) {
-    ctx.fillStyle = 'rgba(255, 255, 255, ' + (i + 1) / 10 + ')';
+    ctx.fillStyle = "rgba(255, 255, 255, " + (i + 1) / 10 + ")";
     for (var j = 0; j < 4; j++) {
       ctx.fillRect(5 + i * 14, 5 + j * 37.5, 14, 27.5);
     }
@@ -228,7 +228,7 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   for (var i = 0; i < 10; i++) {
     ctx.lineWidth = 1 + i;
     ctx.beginPath();
@@ -257,7 +257,7 @@ draw();
 
 これを解決するには、パスの作成を非常に正確に行う必要があります。 `1.0` の幅の線はパスの両側へ半単位伸びることを知っていて、パスを (3.5,1) から (3.5,5) まで作成すると、 3 番目の画像のような状況になります。 `1.0` の線幅は完全に、正確に 1 ピクセルの縦線を埋めることになります。
 
-> **Note:** 縦線の例では、 Y 位置はまだ整数のグリッド線位置を参照していることに注意してください。もしそうでなければ、端点で半分しかカバーしていないピクセルが見えるでしょう（ただし、この動作は、既定値が `butt` である現在の `lineCap` スタイルに依存していることにも注意してください。奇数幅の線に対して半ピクセル座標で一貫したストロークを計算するには、 `lineCap` スタイルを `square` にして、端点周りのストロークの外枠が自動的にピクセル全体を正確に覆うまで拡張します）。
+> **メモ:** 縦線の例では、 Y 位置はまだ整数のグリッド線位置を参照していることに注意してください。もしそうでなければ、端点で半分しかカバーしていないピクセルが見えるでしょう（ただし、この動作は、既定値が `butt` である現在の `lineCap` スタイルに依存していることにも注意してください。奇数幅の線に対して半ピクセル座標で一貫したストロークを計算するには、 `lineCap` スタイルを `square` にして、端点周りのストロークの外枠が自動的にピクセル全体を正確に覆うまで拡張します）。
 >
 > また、パスの始点と終点のみが影響を受けることに注意してください。パスが `closePath()` で閉じられると、始点と終点がなくなります。その代わりに、パスのすべての端点は、現在の `lineJoin` スタイルの設定（既定値は `miter`）を使用して、接続された区間の外側の境界線をそれらの交点まで自動的に拡張する効果があり、レンダリングストロークは、接続された区間が水平または垂直である場合にそれぞれの端点を中心としたピクセル全体を正確に覆うようになります。これらの追加ラインスタイルのデモについては、次の 2 つのセクションを参照してください。
 
@@ -282,11 +282,11 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  var lineCap = ['butt', 'round', 'square'];
+  var ctx = document.getElementById("canvas").getContext("2d");
+  var lineCap = ["butt", "round", "square"];
 
   // ガイドを描画
-  ctx.strokeStyle = '#09f';
+  ctx.strokeStyle = "#09f";
   ctx.beginPath();
   ctx.moveTo(10, 10);
   ctx.lineTo(140, 10);
@@ -295,7 +295,7 @@ function draw() {
   ctx.stroke();
 
   // 線を描画
-  ctx.strokeStyle = 'black';
+  ctx.strokeStyle = "black";
   for (var i = 0; i < lineCap.length; i++) {
     ctx.lineWidth = 15;
     ctx.lineCap = lineCap[i];
@@ -334,8 +334,8 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  var lineJoin = ['round', 'bevel', 'miter'];
+  var ctx = document.getElementById("canvas").getContext("2d");
+  var lineJoin = ["round", "bevel", "miter"];
   ctx.lineWidth = 10;
   for (var i = 0; i < lineJoin.length; i++) {
     ctx.lineJoin = lineJoin[i];
@@ -380,31 +380,31 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // キャンバスを消去
   ctx.clearRect(0, 0, 150, 150);
 
   // ガイドを描画
-  ctx.strokeStyle = '#09f';
-  ctx.lineWidth   = 2;
+  ctx.strokeStyle = "#09f";
+  ctx.lineWidth = 2;
   ctx.strokeRect(-5, 50, 160, 50);
 
   // 線のスタイルを設定
-  ctx.strokeStyle = '#000';
+  ctx.strokeStyle = "#000";
   ctx.lineWidth = 10;
 
   // 入力をチェック
-  if (document.getElementById('miterLimit').value.match(/\d+(\.\d+)?/)) {
-    ctx.miterLimit = parseFloat(document.getElementById('miterLimit').value);
+  if (document.getElementById("miterLimit").value.match(/\d+(\.\d+)?/)) {
+    ctx.miterLimit = parseFloat(document.getElementById("miterLimit").value);
   } else {
-    alert('Value must be a positive number');
+    alert("Value must be a positive number");
   }
 
   // 線を描画
   ctx.beginPath();
   ctx.moveTo(0, 100);
-  for (i = 0; i < 24 ; i++) {
+  for (i = 0; i < 24; i++) {
     var dy = i % 2 == 0 ? 25 : -25;
     ctx.lineTo(Math.pow(i, 1.5) * 2, 75 + dy);
   }
@@ -417,11 +417,13 @@ function draw() {
 <table>
   <tr>
     <td><canvas id="canvas" width="150" height="150"></canvas></td>
-    <td><code>miterLimit</code> を変更するには、下に新しい値を入力し、再描画ボタンをクリックしてください。<br><br>
+    <td>
+      <code>miterLimit</code>
+      を変更するには、下に新しい値を入力し、再描画ボタンをクリックしてください。<br /><br />
       <form onsubmit="return draw();">
         <label>マイター制限</label>
-        <input type="number" size="3" id="miterLimit"/>
-        <input type="submit" value="Redraw"/>
+        <input type="number" size="3" id="miterLimit" />
+        <input type="submit" value="Redraw" />
       </form>
     </td>
   </tr>
@@ -429,7 +431,9 @@ function draw() {
 ```
 
 ```js hidden
-document.getElementById('miterLimit').value = document.getElementById('canvas').getContext('2d').miterLimit;
+document.getElementById("miterLimit").value = document
+  .getElementById("canvas")
+  .getContext("2d").miterLimit;
 draw();
 ```
 
@@ -446,7 +450,7 @@ draw();
 ```
 
 ```js
-var ctx = document.getElementById('canvas').getContext('2d');
+var ctx = document.getElementById("canvas").getContext("2d");
 var offset = 0;
 
 function draw() {
@@ -497,8 +501,8 @@ var radialgradient = ctx.createRadialGradient(75, 75, 0, 75, 75, 100);
 
 ```js
 var lineargradient = ctx.createLinearGradient(0, 0, 150, 150);
-lineargradient.addColorStop(0, 'white');
-lineargradient.addColorStop(1, 'black');
+lineargradient.addColorStop(0, "white");
+lineargradient.addColorStop(1, "black");
 ```
 
 ### `createLinearGradient` の例
@@ -507,18 +511,18 @@ lineargradient.addColorStop(1, 'black');
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // グラデーションを生成
   var lingrad = ctx.createLinearGradient(0, 0, 0, 150);
-  lingrad.addColorStop(0, '#00ABEB');
-  lingrad.addColorStop(0.5, '#fff');
-  lingrad.addColorStop(0.5, '#26C000');
-  lingrad.addColorStop(1, '#fff');
+  lingrad.addColorStop(0, "#00ABEB");
+  lingrad.addColorStop(0.5, "#fff");
+  lingrad.addColorStop(0.5, "#26C000");
+  lingrad.addColorStop(1, "#fff");
 
   var lingrad2 = ctx.createLinearGradient(0, 50, 0, 95);
-  lingrad2.addColorStop(0.5, '#000');
-  lingrad2.addColorStop(1, 'rgba(0, 0, 0, 0)');
+  lingrad2.addColorStop(0.5, "#000");
+  lingrad2.addColorStop(1, "rgba(0, 0, 0, 0)");
 
   // グラデーションに塗りつぶしと輪郭のスタイルを割り当てる
   ctx.fillStyle = lingrad;
@@ -527,7 +531,6 @@ function draw() {
   // 図形を描画
   ctx.fillRect(10, 10, 130, 130);
   ctx.strokeRect(50, 50, 50, 50);
-
 }
 ```
 
@@ -551,28 +554,28 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // グラデーションを作成
   var radgrad = ctx.createRadialGradient(45, 45, 10, 52, 50, 30);
-  radgrad.addColorStop(0, '#A7D30C');
-  radgrad.addColorStop(0.9, '#019F62');
-  radgrad.addColorStop(1, 'rgba(1, 159, 98, 0)');
+  radgrad.addColorStop(0, "#A7D30C");
+  radgrad.addColorStop(0.9, "#019F62");
+  radgrad.addColorStop(1, "rgba(1, 159, 98, 0)");
 
   var radgrad2 = ctx.createRadialGradient(105, 105, 20, 112, 120, 50);
-  radgrad2.addColorStop(0, '#FF5F98');
-  radgrad2.addColorStop(0.75, '#FF0188');
-  radgrad2.addColorStop(1, 'rgba(255, 1, 136, 0)');
+  radgrad2.addColorStop(0, "#FF5F98");
+  radgrad2.addColorStop(0.75, "#FF0188");
+  radgrad2.addColorStop(1, "rgba(255, 1, 136, 0)");
 
   var radgrad3 = ctx.createRadialGradient(95, 15, 15, 102, 20, 40);
-  radgrad3.addColorStop(0, '#00C9FF');
-  radgrad3.addColorStop(0.8, '#00B5E2');
-  radgrad3.addColorStop(1, 'rgba(0, 201, 255, 0)');
+  radgrad3.addColorStop(0, "#00C9FF");
+  radgrad3.addColorStop(0.8, "#00B5E2");
+  radgrad3.addColorStop(1, "rgba(0, 201, 255, 0)");
 
   var radgrad4 = ctx.createRadialGradient(0, 150, 50, 0, 140, 90);
-  radgrad4.addColorStop(0, '#F4F201');
-  radgrad4.addColorStop(0.8, '#E4C700');
-  radgrad4.addColorStop(1, 'rgba(228, 199, 0, 0)');
+  radgrad4.addColorStop(0, "#F4F201");
+  radgrad4.addColorStop(0.8, "#E4C700");
+  radgrad4.addColorStop(1, "rgba(228, 199, 0, 0)");
 
   // 図形を描画
   ctx.fillStyle = radgrad4;
@@ -608,23 +611,23 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // グラデーションの作成
   var conicGrad1 = ctx.createConicGradient(2, 62, 75);
-  conicGrad1.addColorStop(0, '#A7D30C');
-  conicGrad1.addColorStop(1, '#fff');
+  conicGrad1.addColorStop(0, "#A7D30C");
+  conicGrad1.addColorStop(1, "#fff");
 
   var conicGrad2 = ctx.createConicGradient(0, 187, 75);
   // we multiple our values by Math.PI/180 to convert degrees to radians
-  conicGrad2.addColorStop(0, 'black');
-  conicGrad2.addColorStop(0.25, 'black');
-  conicGrad2.addColorStop(0.25, 'white');
-  conicGrad2.addColorStop(0.5, 'white');
-  conicGrad2.addColorStop(0.5, 'black');
-  conicGrad2.addColorStop(0.75, 'black');
-  conicGrad2.addColorStop(0.75, 'white');
-  conicGrad2.addColorStop(1, 'white');
+  conicGrad2.addColorStop(0, "black");
+  conicGrad2.addColorStop(0.25, "black");
+  conicGrad2.addColorStop(0.25, "white");
+  conicGrad2.addColorStop(0.5, "white");
+  conicGrad2.addColorStop(0.5, "black");
+  conicGrad2.addColorStop(0.75, "black");
+  conicGrad2.addColorStop(0.75, "white");
+  conicGrad2.addColorStop(1, "white");
 
   // 図形を描画
   ctx.fillStyle = conicGrad1;
@@ -670,11 +673,11 @@ type は、パターンを作成するための画像の使用方法を指定し
 
 ```js
 var img = new Image();
-img.src = 'someimage.png';
-var ptrn = ctx.createPattern(img, 'repeat');
+img.src = "someimage.png";
+var ptrn = ctx.createPattern(img, "repeat");
 ```
 
-> **Note:** `drawImage()` メソッドと同様に、このメソッドを呼び出す前に使用する画像が読み込まれていることを確認する必要があります。そうしないと、パターンが正しく描画されない可能性があります。
+> **メモ:** `drawImage()` メソッドと同様に、このメソッドを呼び出す前に使用する画像が読み込まれていることを確認する必要があります。そうしないと、パターンが正しく描画されない可能性があります。
 
 ### `createPattern` の例
 
@@ -682,19 +685,17 @@ var ptrn = ctx.createPattern(img, 'repeat');
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // 新しい画像オブジェクトを生成して、パターンとして使用する
   var img = new Image();
-  img.src = 'canvas_createpattern.png';
-  img.onload = function() {
-
+  img.src = "canvas_createpattern.png";
+  img.onload = function () {
     // パターンを作成
-    var ptrn = ctx.createPattern(img, 'repeat');
+    var ptrn = ctx.createPattern(img, "repeat");
     ctx.fillStyle = ptrn;
     ctx.fillRect(0, 0, 150, 150);
-
-  }
+  };
 }
 ```
 
@@ -727,7 +728,7 @@ draw();
 
 `shadowColor` プロパティは影の効果の色を示す CSS 標準の色の値です。は、既定では完全透過の黒です。
 
-> **Note:** 影は `source-over` [合成操作](/ja/docs/Web/API/Canvas_API/Tutorial/Compositing)でのみ描画されます。
+> **メモ:** 影は `source-over` [合成操作](/ja/docs/Web/API/Canvas_API/Tutorial/Compositing)でのみ描画されます。
 
 ### 影付きテキストの例
 
@@ -735,16 +736,16 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   ctx.shadowOffsetX = 2;
   ctx.shadowOffsetY = 2;
   ctx.shadowBlur = 2;
-  ctx.shadowColor = 'rgba(0, 0, 0, 0.5)';
+  ctx.shadowColor = "rgba(0, 0, 0, 0.5)";
 
-  ctx.font = '20px Times New Roman';
-  ctx.fillStyle = 'Black';
-  ctx.fillText('Sample String', 5, 30);
+  ctx.font = "20px Times New Roman";
+  ctx.fillStyle = "Black";
+  ctx.fillText("Sample String", 5, 30);
 }
 ```
 
@@ -758,7 +759,7 @@ draw();
 
 {{EmbedLiveSample("A_shadowed_text_example", "180", "100", "shadowed-string.png")}}
 
-font` プロパティと `fillText` メソッドについては、次の章の [テキストの描画](/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_text)で見ていくことにしましょう。
+`font` プロパティと `fillText` メソッドについては、次の章の [テキストの描画](/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_text)で見ていくことにしましょう。
 
 ## キャンバスの塗りつぶしルール
 
@@ -766,18 +767,20 @@ font` プロパティと `fillText` メソッドについては、次の章の [
 
 2 つの値が可能です。
 
-- **`"nonzero"`**: [非ゼロワインディングルール](https://en.wikipedia.org/wiki/Nonzero-rule)です。こちらが既定のルールです。
-- **`"evenodd"`**: [偶奇ワインディングルール](https://en.wikipedia.org/wiki/Even%E2%80%93odd_rule)です。
+- `nonzero`
+  - : [非ゼロワインディングルール](https://en.wikipedia.org/wiki/Nonzero-rule)です。こちらが既定のルールです。
+- `evenodd`
+  - : [偶奇ワインディングルール](https://en.wikipedia.org/wiki/Even%E2%80%93odd_rule)です。
 
 この例では `evenodd` ルールを使用しています。
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   ctx.beginPath();
   ctx.arc(50, 50, 30, 0, Math.PI * 2, true);
   ctx.arc(50, 50, 15, 0, Math.PI * 2, true);
-  ctx.fill('evenodd');
+  ctx.fill("evenodd");
 }
 ```
 

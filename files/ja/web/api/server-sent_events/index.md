@@ -1,22 +1,15 @@
 ---
 title: サーバー送信イベント
 slug: Web/API/Server-sent_events
-page-type: web-api-overview
-tags:
-  - API
-  - Overview
-  - SSE
-  - Server-sent events
-spec-urls: https://html.spec.whatwg.org/multipage/server-sent-events.html#server-sent-events
-translation_of: Web/API/Server-sent_events
 ---
+
 {{DefaultAPISidebar("Server Sent Events")}}
 
 伝統的には、ウェブページが新たなデータを受け取るために、サーバーにリクエストを送信しなければなりません。すなわち、ページがサーバーからデータを要求します。サーバー送信イベントによって、サーバーがウェブページにメッセージをプッシュ送信することにより、サーバーからウェブページへ新たなデータをいつでも送信することができます。入ってくるメッセージは、ウェブページ内の _[イベント](/ja/docs/Web/API/Event)およびデータ_ として扱うことができます。
 
 {{AvailableInWorkers}}
 
-> **Note:** Firefox は現在、サービスワーカーでのサーバー送信イベントの使用に対応していません（専用ワーカーと共有ワーカーでは対応しています）。 {{bug(1681218)}} を参照してください。
+> **メモ:** Firefox は現在、サービスワーカーでのサーバー送信イベントの使用に対応していません（専用ワーカーと共有ワーカーでは対応しています）。 [Firefox バグ 1681218](https://bugzil.la/1681218) を参照してください。
 
 ## 概念と使用方法
 
@@ -30,7 +23,6 @@ translation_of: Web/API/Server-sent_events
 ## 例
 
 - [PHP を使用した簡単な SSE のデモ](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
-
 
 ## 仕様書
 

@@ -1,9 +1,8 @@
 ---
 title: HTMLElement.tabIndex
 slug: Web/API/HTMLElement/tabIndex
-translation_of: Web/API/HTMLElement/tabIndex
-browser-compat: api.HTMLElement.tabIndex
 ---
+
 {{APIRef("HTML DOM")}}
 
 La propriété **`tabIndex`**, rattachée à l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement), représente l'ordre de tabulation de l'élément
@@ -24,7 +23,7 @@ Un entier.
 ## Exemples
 
 ```js
-const b1 = document.getElementById('bouton1');
+const b1 = document.getElementById("bouton1");
 
 b1.tabIndex = 1;
 ```

@@ -1,12 +1,6 @@
 ---
-title: 'TypeError: cyclic object value'
+title: "TypeError: cyclic object value"
 slug: Web/JavaScript/Reference/Errors/Cyclic_object_value
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - TypeError
-translation_of: Web/JavaScript/Reference/Errors/Cyclic_object_value
 ---
 
 {{jsSidebar("Errors")}}
@@ -55,7 +49,7 @@ JSON.stringify(circularReference);
 const getCircularReplacer = () => {
   const seen = new WeakSet();
   return (key, value) => {
-    if (typeof value === 'object' && value !== null) {
+    if (typeof value === "object" && value !== null) {
       if (seen.has(value)) {
         return;
       }

@@ -1,12 +1,8 @@
 ---
 title: scroll-margin-bottom
 slug: Web/CSS/scroll-margin-bottom
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/scroll-margin-bottom
 ---
+
 {{CSSRef}}
 
 La propriété **`scroll-margin-bottom`** définit la marge de défilement de l'élément sur le côté bas. La zone de défilement est déterminée en prenant la boîte de bordure modifiée, en prenant le rectangle englobant puis en ajoutant les décalages indiqués.
@@ -32,18 +28,18 @@ scroll-margin-bottom: unset;
 - `<length>`
   - : Un décalage par rapport au côté correspondant du conteneur de défilement.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Spécifications
 
-| Spécification                                                                                                                    | État                                             | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Scroll Snap Points", "#propdef-scroll-margin-bottom", "scroll-margin-bottom")}} | {{Spec2("CSS Scroll Snap Points")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.scroll-margin-bottom")}}
+{{Compat}}

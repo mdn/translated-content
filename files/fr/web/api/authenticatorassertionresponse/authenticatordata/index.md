@@ -1,14 +1,8 @@
 ---
 title: AuthenticatorAssertionResponse.authenticatorData
 slug: Web/API/AuthenticatorAssertionResponse/authenticatorData
-tags:
-  - API
-  - Propriété
-  - Reference
-  - Web Authentication API
-  - WebAuthn
-translation_of: Web/API/AuthenticatorAssertionResponse/authenticatorData
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Web Authentication API")}}
 
 La propriété **`authenticatorData`** (rattachée à l'interface {{domxref("AuthenticatorAssertionResponse")}}) fournit un {{jsxref("ArrayBuffer")}} qui contient les informations relatives à l'authenticateur tels que :
@@ -53,12 +47,10 @@ Un objet {{jsxref("ArrayBuffer")}} dont la propriété {{jsxref("ArrayBuffer.byt
 
 TBD
 
-## Specifications
+## Spécifications
 
-| Spécification                    | État                         | Commentaires         |
-| -------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('WebAuthn')}} | {{Spec2('WebAuthn')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.AuthenticatorAssertionResponse")}}
+{{Compat}}

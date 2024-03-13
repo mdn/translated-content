@@ -1,21 +1,8 @@
 ---
 title: MediaStreamTrack
 slug: Web/API/MediaStreamTrack
-page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - Interface
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaStreamTrack
-  - Reference
-  - Video
-  - WebRTC
-browser-compat: api.MediaStreamTrack
-translation_of: Web/API/MediaStreamTrack
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 **`MediaStreamTrack`** インターフェイスは、ストリームに含まれる一つのメディアトラックを表現します。一般的に、音声や動画のトラックですが、他の種類のトラックも存在することがあります。
@@ -32,7 +19,7 @@ translation_of: Web/API/MediaStreamTrack
 
   - : 論理型で、トラックが有効の場合は `true` の値になり、メディアソースストリームを出力することができます。トラックが無効な場合は `false` の値になり、メディアソースストリームに出力されません。トラックの接続が解除された場合、この値は変更することはできますが、影響を与えることはありません。
 
-    > **Note:** 標準的な「ミュート」（消音）機能は `enabled` を `false` に設定することで実装できます。 `muted` プロパティは技術的な問題でメディアがない状態を表します。
+    > **メモ:** 標準的な「ミュート」（消音）機能は `enabled` を `false` に設定することで実装できます。 `muted` プロパティは技術的な問題でメディアがない状態を表します。
 
 - {{domxref("MediaStreamTrack.id")}} {{readonlyInline}}
   - : トラックの固有識別子 (GUID) を含む文字列を返します。この識別子はブラウザーによって生成されます。
@@ -44,7 +31,7 @@ translation_of: Web/API/MediaStreamTrack
 
   - : 技術的な問題でこのトラックがメディアデータを提供できないかどうかを示す論理値を返します。
 
-    > **Note:** 標準的な「ミュート」（消音）機能は `enabled` を `false` に設定することで実装でき、再び `true` に設定することでメディアのミュートを解除することができます。
+    > **メモ:** 標準的な「ミュート」（消音）機能は `enabled` を `false` に設定することで実装でき、再び `true` に設定することでメディアのミュートを解除することができます。
 
 - {{domxref("MediaStreamTrack.readyState")}} {{readonlyInline}}
 
@@ -73,7 +60,7 @@ translation_of: Web/API/MediaStreamTrack
 
 ## イベント
 
-これらのイベントを待ち受けするには、 {{domxref("EventTarget.addEventListener", "addEventListener()")}} を使用するか、イベントリスナーをこのインターフェイスの `onイベント名` プロパティに代入するかしてください。。
+これらのイベントを待ち受けするには、 {{domxref("EventTarget.addEventListener", "addEventListener()")}} を使用するか、イベントリスナーをこのインターフェイスの `onイベント名` プロパティに代入するかしてください。
 
 - {{domxref("MediaStreamTrack/ended_event", "ended")}}
   - : トラックの再生が終わったとき（{{domxref("MediaStreamTrack.readyState", "readyState")}} の値が `ended` に変化したとき）に送られます

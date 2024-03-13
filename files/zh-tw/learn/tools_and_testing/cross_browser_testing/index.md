@@ -1,8 +1,8 @@
 ---
 title: 跨瀏覽器測試
 slug: Learn/Tools_and_testing/Cross_browser_testing
-translation_of: Learn/Tools_and_testing/Cross_browser_testing
 ---
+
 {{LearnSidebar}}
 
 此模組專注於測試網路專案的跨瀏覽器領域。在此，我們會辨認你的目標閱聽者（例如你最該對什麼樣的用戶、瀏覽器、還有設備操心？）如何做測試、不同類型的程式碼會碰上的主要問題、如何解決/減輕這些問題、哪些工具最能幫你測試和修復問題、還有如何用自動化加速測試。

@@ -1,15 +1,9 @@
 ---
 title: キャンバスとピクセル操作
 slug: Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
-tags:
-  - キャンバス
-  - グラフィック
-  - 中級者
-  - チュートリアル
-translation_of: Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
-original_slug: Web/Guide/HTML/Canvas_tutorial/Pixel_manipulation_with_canvas
 ---
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}
+
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}
 
 これまで、キャンバスの実際のピクセルは見てきませんでした。 `ImageData` オブジェクトを使用して、ピクセルデータを操作するためにデータ配列へ直接読み取りや書き込みを行うことが可能です。また、画像のスムージング（アンチエイリアシング）の制御方法やキャンバスの画像を保存する方法も見ていきます。
 
@@ -31,7 +25,7 @@ original_slug: Web/Guide/HTML/Canvas_tutorial/Pixel_manipulation_with_canvas
 例えば画像の 50 行目の 200 列目にあるピクセルから青色成分の値を読み取るには、以下のようにします。
 
 ```js
-blueComponent = imageData.data[((50 * (imageData.width * 4)) + (200 * 4)) + 2];
+blueComponent = imageData.data[50 * (imageData.width * 4) + 200 * 4 + 2];
 ```
 
 座標（X と Y）が与えられると、次のようなことをすることになるかもしれません。
@@ -108,7 +102,7 @@ var myImageData = ctx.getImageData(left, top, width, height);
 
 このメソッドは (`left`,`top`)、(`left+width`, `top`)、(`left`, `top+height`)、(`left+width`, `top+height`) の点で四隅を表したキャンバスの領域のピクセルデータを表す `ImageData` オブジェクトを返します。点の座標は、キャンバスの座標空間の単位で指定します。
 
-> **Note:** 返される `ImageData` オブジェクトで、キャンバスの外部にあるピクセルはすべて透明な黒色になります。
+> **メモ:** 返される `ImageData` オブジェクトで、キャンバスの外部にあるピクセルはすべて透明な黒色になります。
 
 このメソッドは、[キャンバスを使用した動画の操作](/ja/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)の記事でも説明しています。
 
@@ -118,16 +112,16 @@ var myImageData = ctx.getImageData(left, top, width, height);
 
 ```js
 var img = new Image();
-img.crossOrigin = 'anonymous';
-img.src = './assets/rhino.jpg';
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
-img.onload = function() {
+img.crossOrigin = "anonymous";
+img.src = "./assets/rhino.jpg";
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+img.onload = function () {
   ctx.drawImage(img, 0, 0);
-  img.style.display = 'none';
+  img.style.display = "none";
 };
-var hoveredColor = document.getElementById('hovered-color');
-var selectedColor = document.getElementById('selected-color');
+var hoveredColor = document.getElementById("hovered-color");
+var selectedColor = document.getElementById("selected-color");
 
 function pick(event, destination) {
   var x = event.layerX;
@@ -135,18 +129,18 @@ function pick(event, destination) {
   var pixel = ctx.getImageData(x, y, 1, 1);
   var data = pixel.data;
 
-    const rgba = `rgba(${data[0]}, ${data[1]}, ${data[2]}, ${data[3] / 255})`;
-    destination.style.background = rgba;
-    destination.textContent = rgba;
+  const rgba = `rgba(${data[0]}, ${data[1]}, ${data[2]}, ${data[3] / 255})`;
+  destination.style.background = rgba;
+  destination.textContent = rgba;
 
-    return rgba;
+  return rgba;
 }
 
-canvas.addEventListener('mousemove', function(event) {
-    pick(event, hoveredColor);
+canvas.addEventListener("mousemove", function (event) {
+  pick(event, hoveredColor);
 });
-canvas.addEventListener('click', function(event) {
-    pick(event, selectedColor);
+canvas.addEventListener("click", function (event) {
+  pick(event, selectedColor);
 });
 ```
 
@@ -158,7 +152,7 @@ canvas.addEventListener('click', function(event) {
 
 ## コンテキストへのピクセルデータの描画
 
-[putImageData()](/ja/docs/Web/API/CanvasRenderingContext2D/putImageData) メソッドを使用して、コンテキストにピクセルデータを描くことができます。
+{{domxref("CanvasRenderingContext2D.putImageData", "putImageData()")}} メソッドを使用して、コンテキストにピクセルデータを描くことができます。
 
 ```js
 ctx.putImageData(myImageData, dx, dy);
@@ -174,61 +168,61 @@ ctx.putImageData(myImageData, 0, 0);
 
 ### 色のグレースケール化と反転
 
-この例では、すべてのピクセルに対して繰り返し処理を行い、値を変更したピクセル配列を [putImageData()] (/ja/docs/Web/API/CanvasRenderingContext2D/putImageData) を使ってキャンバスに戻しています。反転機能は、最大値 255 から各色を減算します。グレースケール関数は、赤、緑、青の平均値を使用します。また、例えば `x = 0.299r + 0.587g + 0.114b` という式で与えられる加重平均を使用することもできます。詳しくは Wikipedia の[グレースケール](https://ja.wikipedia.org/wiki/%E3%82%B0%E3%83%AC%E3%83%BC%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%AB)をご覧ください。
+この例では、すべてのピクセルに対して繰り返し処理を行い、値を変更したピクセル配列を {{domxref("CanvasRenderingContext2D.putImageData", "putImageData()")}} を使ってキャンバスに戻しています。反転機能は、最大値 255 から各色を減算します。グレースケール関数は、赤、緑、青の平均値を使用します。また、例えば `x = 0.299r + 0.587g + 0.114b` という式で与えられる加重平均を使用することもできます。詳しくは Wikipedia の[グレースケール](https://ja.wikipedia.org/wiki/%E3%82%B0%E3%83%AC%E3%83%BC%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%AB)をご覧ください。
 
 ```js
 var img = new Image();
-img.crossOrigin = 'anonymous';
-img.src = './assets/rhino.jpg';
+img.crossOrigin = "anonymous";
+img.src = "./assets/rhino.jpg";
 
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 
-img.onload = function() {
-    ctx.drawImage(img, 0, 0);
+img.onload = function () {
+  ctx.drawImage(img, 0, 0);
 };
 
-var original = function() {
-    ctx.drawImage(img, 0, 0);
+var original = function () {
+  ctx.drawImage(img, 0, 0);
 };
 
-var invert = function() {
-    ctx.drawImage(img, 0, 0);
-    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-    const data = imageData.data;
-    for (var i = 0; i < data.length; i += 4) {
-        data[i]     = 255 - data[i];     // red
-        data[i + 1] = 255 - data[i + 1]; // green
-        data[i + 2] = 255 - data[i + 2]; // blue
-    }
-    ctx.putImageData(imageData, 0, 0);
+var invert = function () {
+  ctx.drawImage(img, 0, 0);
+  const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  const data = imageData.data;
+  for (var i = 0; i < data.length; i += 4) {
+    data[i] = 255 - data[i]; // red
+    data[i + 1] = 255 - data[i + 1]; // green
+    data[i + 2] = 255 - data[i + 2]; // blue
+  }
+  ctx.putImageData(imageData, 0, 0);
 };
 
-var grayscale = function() {
-    ctx.drawImage(img, 0, 0);
-    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-    const data = imageData.data;
-    for (var i = 0; i < data.length; i += 4) {
-        var avg = (data[i] + data[i + 1] + data[i + 2]) / 3;
-        data[i]     = avg; // red
-        data[i + 1] = avg; // green
-        data[i + 2] = avg; // blue
-    }
-    ctx.putImageData(imageData, 0, 0);
+var grayscale = function () {
+  ctx.drawImage(img, 0, 0);
+  const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  const data = imageData.data;
+  for (var i = 0; i < data.length; i += 4) {
+    var avg = (data[i] + data[i + 1] + data[i + 2]) / 3;
+    data[i] = avg; // red
+    data[i + 1] = avg; // green
+    data[i + 2] = avg; // blue
+  }
+  ctx.putImageData(imageData, 0, 0);
 };
 
-const inputs = document.querySelectorAll('[name=color]');
+const inputs = document.querySelectorAll("[name=color]");
 for (const input of inputs) {
-    input.addEventListener("change", function(evt) {
-        switch (evt.target.value) {
-            case "inverted":
-                return invert();
-            case "grayscale":
-                return grayscale();
-            default:
-                return original();
-        }
-    });
+  input.addEventListener("change", function (evt) {
+    switch (evt.target.value) {
+      case "inverted":
+        return invert();
+      case "grayscale":
+        return grayscale();
+      default:
+        return original();
+    }
+  });
 }
 ```
 
@@ -245,49 +239,65 @@ for (const input of inputs) {
 マウスカーソルの位置を取得して、そこから上下左右に 5 ピクセルの範囲の画像を切り取ります。そして切り取った画像を別のキャンバスにコピーして、望むサイズにリサイズします。ズーム用のキャンバスでは、元のキャンバスから切り取った 10×10 ピクセルの画像を 200×200 ピクセルにリサイズしています。
 
 ```js
-zoomctx.drawImage(canvas,
-                  Math.min(Math.max(0, x - 5), img.width - 10),
-                  Math.min(Math.max(0, y - 5), img.height - 10),
-                  10, 10, 0, 0, 200, 200);
+zoomctx.drawImage(
+  canvas,
+  Math.min(Math.max(0, x - 5), img.width - 10),
+  Math.min(Math.max(0, y - 5), img.height - 10),
+  10,
+  10,
+  0,
+  0,
+  200,
+  200,
+);
 ```
 
 ズームの例です。
 
 ```js
 var img = new Image();
-img.crossOrigin = 'anonymous';
-img.src = './assets/rhino.jpg';
-img.onload = function() {
+img.crossOrigin = "anonymous";
+img.src = "./assets/rhino.jpg";
+img.onload = function () {
   draw(this);
 };
 
 function draw(img) {
-  var canvas = document.getElementById('canvas');
-  var ctx = canvas.getContext('2d');
+  var canvas = document.getElementById("canvas");
+  var ctx = canvas.getContext("2d");
   ctx.drawImage(img, 0, 0);
 
-  var smoothedZoomCtx = document.getElementById('smoothed-zoom').getContext('2d');
+  var smoothedZoomCtx = document
+    .getElementById("smoothed-zoom")
+    .getContext("2d");
   smoothedZoomCtx.imageSmoothingEnabled = true;
   smoothedZoomCtx.mozImageSmoothingEnabled = true;
   smoothedZoomCtx.webkitImageSmoothingEnabled = true;
   smoothedZoomCtx.msImageSmoothingEnabled = true;
 
-  var pixelatedZoomCtx = document.getElementById('pixelated-zoom').getContext('2d');
+  var pixelatedZoomCtx = document
+    .getElementById("pixelated-zoom")
+    .getContext("2d");
   pixelatedZoomCtx.imageSmoothingEnabled = false;
   pixelatedZoomCtx.mozImageSmoothingEnabled = false;
   pixelatedZoomCtx.webkitImageSmoothingEnabled = false;
   pixelatedZoomCtx.msImageSmoothingEnabled = false;
 
-  var zoom = function(ctx, x, y) {
-    ctx.drawImage(canvas,
-        Math.min(Math.max(0, x - 5), img.width - 10),
-        Math.min(Math.max(0, y - 5), img.height - 10),
-        10, 10,
-        0, 0,
-        200, 200);
+  var zoom = function (ctx, x, y) {
+    ctx.drawImage(
+      canvas,
+      Math.min(Math.max(0, x - 5), img.width - 10),
+      Math.min(Math.max(0, y - 5), img.height - 10),
+      10,
+      10,
+      0,
+      0,
+      200,
+      200,
+    );
   };
 
-  canvas.addEventListener('mousemove', function(event) {
+  canvas.addEventListener("mousemove", function (event) {
     const x = event.layerX;
     const y = event.layerY;
     zoom(smoothedZoomCtx, x, y);
@@ -306,7 +316,7 @@ function draw(img) {
 
 {{domxref("HTMLCanvasElement")}} は、画像を保存する際に役に立つ `toDataURL()` メソッドを提供します。これは、 [data URI](/ja/docs/Web/HTTP/data_URIs) として引数 `type` で指定した形式（既定値は [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics)）で表した画像を返します。返される画像の解像度は 96 dpi です。
 
-> **Note:** CORS を使用せずに他の {{Glossary("origin")}} から取得したピクセルがキャンバスに含まれている場合、キャンバスは**汚染**され、その内容を読み取ったり保存したりできなくなることに注意してください。
+> **メモ:** CORS を使用せずに他の {{Glossary("origin")}} から取得したピクセルがキャンバスに含まれている場合、キャンバスは**汚染**され、その内容を読み取ったり保存したりできなくなることに注意してください。
 > [セキュリティと汚染されたキャンバス](/ja/docs/Web/HTML/CORS_enabled_image#security_and_tainted_canvases)を参照してください。
 
 - {{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/png')")}}

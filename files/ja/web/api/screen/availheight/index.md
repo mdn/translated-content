@@ -1,17 +1,8 @@
 ---
 title: Screen.availHeight
 slug: Web/API/Screen/availHeight
-page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - Property
-  - Reference
-  - Screen size
-  - availHeight
-browser-compat: api.Screen.availHeight
-translation_of: Web/API/Screen/availHeight
 ---
+
 {{APIRef("CSSOM")}}
 
 {{DOMxRef("Screen")}} インターフェイスの **`availHeight`** プロパティは読み取り専用で、画面のウェブコンテンツに利用することができる範囲の高さを、 CSS ピクセル単位で返します。 {{DOMxRef("Screen")}} は {{DOMxRef("Window")}} インターフェイスの {{DOMxRef("Window.screen", "window.screen")}} プロパティから得ることができますので、 `availHeight` は `window.screen.availHeight` を使用してアクセスすることができます。
@@ -22,7 +13,7 @@ translation_of: Web/API/Screen/availHeight
 
 画面の利用可能な空間の高さを示す CSS ピクセル数を示す数値。これは、 {{DOMxRef("Screen.height", "window.screen.height")}} の値よりも大きくすることはできず、端末やユーザーエージェントがそれ自身のために垂直方向の空間を確保している場合は、より小さくなります。
 
-例えば、 Dock が画面の一番下（これが既定）にある Mac の場合、 `availHeight` の値は、下図のように、 `height`  (CSS ピクセル単位の画面全体の高さ) から Dock とメニューバーの高さを差し引いた値になります。
+例えば、 Dock が画面の一番下（これが既定）にある Mac の場合、 `availHeight` の値は、下図のように、 `height` (CSS ピクセル単位の画面全体の高さ) から Dock とメニューバーの高さを差し引いた値になります。
 
 [![Screen.availHeight が Screen.height と画面の内容にどのように関係しているかを示す図](availheight-diagram.svg)](availheight-diagram.svg)
 
@@ -32,8 +23,12 @@ translation_of: Web/API/Screen/availHeight
 
 メインウィンドウでは、パネルを開くときに以下のようなコードを使用します。
 
-```html
-let paletteWindow = window.open("panels.html", "Panels", "left=0, top=0, width=200");
+```js
+let paletteWindow = window.open(
+  "panels.html",
+  "Panels",
+  "left=0, top=0, width=200",
+);
 ```
 
 Panels ウィンドウの HTML (`panels.html`) には、独自の JavaScript コードがあり、ウィンドウが作成されるとすぐに実行されます。このコードは、特定のイベント（あらゆるイベント）を待つ必要もありません。このコードは、利用可能な空間に基づいてウィンドウの寸法の変更を処理します。

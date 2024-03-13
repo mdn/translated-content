@@ -1,13 +1,8 @@
 ---
-title: '-webkit-mask-position-x'
+title: "-webkit-mask-position-x"
 slug: Web/CSS/-webkit-mask-position-x
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
-translation_of: Web/CSS/-webkit-mask-position-x
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 La propriété **`-webkit-mask-position-x`** permet de définir la position horizontale initiale d'une image de masque.
@@ -29,7 +24,10 @@ La propriété **`-webkit-mask-position-x`** permet de définir la position hori
 -webkit-mask-position-x: -1cm;
 
 /* Gestion de plusieurs valeurs */
--webkit-mask-position-x: 50px, 25%, -3em;
+-webkit-mask-position-x:
+  50px,
+  25%,
+  -3em;
 
 /* Valeurs globales */
 -webkit-mask-position-x: inherit;
@@ -76,7 +74,7 @@ Cette propriété est une propriété propriétaire liée à WebKit/Blink et ne 
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.-webkit-mask-position-x")}}
+{{Compat}}
 
 ## Voir aussi
 

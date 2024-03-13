@@ -1,14 +1,8 @@
 ---
 title: DOMPoint.DOMPoint()
 slug: Web/API/DOMPoint/DOMPoint
-tags:
-  - API
-  - Constructeurs
-  - DOM
-  - Géométrie
-  - Quadrilatère
-translation_of: Web/API/DOMPoint/DOMPoint
 ---
+
 {{APIRef("DOM")}}{{ SeeCompatTable() }}
 
 Le constructeur **`DOMPoint()`** crée un nouvel objet {{domxref("DOMPoint")}}.
@@ -42,13 +36,11 @@ var myDOMPoint = new DOMPoint(0.4, 0.5, -0.5, 1);
 
 ## Spécifications
 
-| Spécification                                                                                                | Statut                                       | Commentaire                                        |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | -------------------------------------------------- |
-| {{SpecName('Geometry Interfaces', '#dom-dompoint-dompointx-y-z-w', 'DOMPoint()')}} | {{Spec2('Geometry Interfaces')}} | La dernière version de la spécification est un ED. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMPoint.DOMPoint")}}
+{{Compat}}
 
 ## Voir aussi
 

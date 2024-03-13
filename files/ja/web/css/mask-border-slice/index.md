@@ -1,18 +1,8 @@
 ---
 title: mask-border-slice
 slug: Web/CSS/mask-border-slice
-tags:
-  - CSS
-  - CSS マスク
-  - CSS プロパティ
-  - 実験的
-  - NeedsCompatTable
-  - NeedsExample
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.mask-border-slice
-translation_of: Web/CSS/mask-border-slice
 ---
+
 {{CSSRef}}
 
 **`mask-border-slice`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{cssxref("mask-border-source")}} で設定された画像を複数の領域に分割します。これらの領域は要素の[マスク境界](/ja/docs/Web/CSS/mask-border)の部品を構成するために使用されます。
@@ -98,9 +88,9 @@ Chromium ベースのブラウザーは、このプロパティの古い版 — 
 -webkit-mask-box-image-slice: 30 fill;
 ```
 
-> **Note:** [`mask-border`](/ja/docs/Web/CSS/mask-border) ページでは動作する例を (Chromium で対応している古い接頭辞つきの境界マスクプロパティを使用して) 挙げていますので、効果について分かるでしょう。
+> **メモ:** [`mask-border`](/ja/docs/Web/CSS/mask-border) ページでは動作する例を (Chromium で対応している古い接頭辞つきの境界マスクプロパティを使用して) 挙げていますので、効果について分かるでしょう。
 
-> **Note:** fill キーワードは、要素の内容を表示したい場合には設定する必要があります。
+> **メモ:** fill キーワードは、要素の内容を表示したい場合には設定する必要があります。
 
 ## 仕様書
 

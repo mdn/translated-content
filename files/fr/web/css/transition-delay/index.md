@@ -1,9 +1,8 @@
 ---
 title: transition-delay
 slug: Web/CSS/transition-delay
-translation_of: Web/CSS/transition-delay
-browser-compat: css.properties.transition-delay
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`transition-delay`** indique la durée à attendre avant de débuter [la transition](/fr/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) qui s'applique pour un changement de propriété.

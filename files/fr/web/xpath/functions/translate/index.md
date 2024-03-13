@@ -1,11 +1,8 @@
 ---
 title: translate
 slug: Web/XPath/Functions/translate
-tags:
-  - Référence_XSLT
-translation_of: Web/XPath/Functions/translate
-original_slug: Web/XPath/Fonctions/translate
 ---
+
 {{ XsltRef() }}
 
 La fonction `translate` évalue une chaîne et un ensemble de caractères à traduire, et retourne la chaîne traduite.
@@ -41,13 +38,13 @@ XPath note que la fonction `translate` n'est pas une solution suffisante pour la
 
 Cependant, `translate` est à l'heure actuelle la fonction la plus proche d'une fonction pouvant convertir une chaîne en bas de casse ou haut de casse.
 
-#### Exemple
+Exemple
 
 ```xml
-<xsl:value-of select="translate('Le rapide renard.', 'abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'") />
+<xsl:value-of select="translate('Le rapide renard.', 'abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ')" />
 ```
 
-#### Sortie
+Sortie
 
 ```
 LE RAPIDE RENARD.
@@ -55,13 +52,13 @@ LE RAPIDE RENARD.
 
 - Si `abc` est plus long que `XYZ`, alors chaque occurrence d'un caractère de `abc` qui n'a pas de correspondance dans `XYZ` sera supprimée.
 
-#### Exemple
+Exemple
 
 ```xml
 <xsl:value-of select="translate('Le renard rapide.', 'renard', 'panda')" />
 ```
 
-#### Sortie
+Sortie
 
 ```
 La pandp pdpia.

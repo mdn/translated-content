@@ -1,16 +1,11 @@
 ---
 title: サイトの安全化
 slug: Web/Security/Securing_your_site
-tags:
-  - HTTP
-  - セキュリティ
-  - ウェブ開発
-  - ウェブサイトセキュリティ
-translation_of: Web/Security/Securing_your_site
 ---
+
 サイトをより安全にする方法はいくつもあります。この記事では、その方法を紹介するとともに、他のより有益な記事へのリンクを掲載しています。
 
-> **Note:** この記事は作成途中であり、以下の事項に従うことによりあなたのサイトが完全にセキュアになることを保証するものではありません。
+> **メモ:** この記事は作成途中であり、以下の事項に従うことによりあなたのサイトが完全にセキュアになることを保証するものではありません。
 
 ## ユーザー情報のセキュリティ
 
@@ -39,6 +34,6 @@ translation_of: Web/Security/Securing_your_site
 ## 関連情報
 
 - [Open Web Application Security Project (OWASP)](https://www.owasp.org/)
-- [Mozilla Web Security Cheat Sheet](https://infosec.mozilla.org/guidelines/web_security/en-US/docs/)
+- [Mozilla Web Security Cheat Sheet](https://infosec.mozilla.org/guidelines/web_security.html#web-security-cheat-sheet)
 
 {{QuickLinksWithSubpages("/ja/docs/Web/Security")}}

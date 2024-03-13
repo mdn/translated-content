@@ -1,19 +1,8 @@
 ---
 title: offset-distance
 slug: Web/CSS/offset-distance
-tags:
-  - CSS
-  - CSS モーションパス
-  - CSS プロパティ
-  - 実験的
-  - モーションパス
-  - リファレンス
-  - motion-offset
-  - offset-distance
-  - recipe:css-property
-browser-compat: css.properties.offset-distance
-translation_of: Web/CSS/offset-distance
 ---
+
 {{CSSRef}}
 
 **`offset-distance`** は CSS プロパティで、 {{CSSxRef("offset-path")}} 上の要素を配置する位置を指定します。
@@ -69,7 +58,7 @@ CSS モーションパスのモーションアスペクトは、一般に `offse
 
 ```css
 #motion-demo {
-  offset-path: path('M20,20 C20,100 200,0 200,100');
+  offset-path: path("M20,20 C20,100 200,0 200,100");
   animation: move 3000ms infinite alternate ease-in-out;
   width: 40px;
   height: 40px;

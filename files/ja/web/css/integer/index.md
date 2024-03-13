@@ -1,13 +1,8 @@
 ---
 title: <integer>
 slug: Web/CSS/integer
-tags:
-  - CSS
-  - CSS データ型
-  - リファレンス
-  - ウェブ
-translation_of: Web/CSS/integer
 ---
+
 {{CSSRef}}
 
 **`<integer>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、 {{cssxref("number")}} の特殊型であり、正と負の整数を表現します。整数は {{cssxref("column-count")}}, {{cssxref("counter-increment")}}, {{cssxref("grid-column")}}, {{cssxref("grid-row")}}, {{cssxref("z-index")}} など、数多くの CSS プロパティで使用することができます。
@@ -16,7 +11,7 @@ translation_of: Web/CSS/integer
 
 `<integer>` データ型は 1 桁から数桁の 10 進数、 0 から 9 までを含み、任意でその前に単一の `+` または `-` の符号が付きます。整数に関連付けられた単位はありません。
 
-> **Note:** 公式には、有効な `<integer>` 値の範囲は決められていません。 Opera では 2^15 - 1、 IE では2^20 - 1 まで、その他のブラウザーではそれ以上の値に対応しています。 CSS3 Values の策定中には対応すべき最小範囲について多くの議論がありました。 [LC 段階の 2012 年 4 月の最新の決定](https://lists.w3.org/Archives/Public/www-style/2012Apr/0633.html)では、 [-2^27 - 1; 2^27 - 1] でしたが、しかし 2^24 - 1 や 2^30 - 1 のような他の値も[提案されていました](https://lists.w3.org/Archives/Public/www-style/2012Apr/0530.html)。しかし、最新の仕様書では範囲を定めなくなりました。
+> **メモ:** 公式には、有効な `<integer>` 値の範囲は決められていません。 Opera では 2^15 - 1、 IE では2^20 - 1 まで、その他のブラウザーではそれ以上の値に対応しています。 CSS3 Values の策定中には対応すべき最小範囲について多くの議論がありました。 [LC 段階の 2012 年 4 月の最新の決定](https://lists.w3.org/Archives/Public/www-style/2012Apr/0633.html)では、 [-2^27 - 1; 2^27 - 1] でしたが、しかし 2^24 - 1 や 2^30 - 1 のような他の値も[提案されていました](https://lists.w3.org/Archives/Public/www-style/2012Apr/0530.html)。しかし、最新の仕様書では範囲を定めなくなりました。
 
 ## 補間
 
@@ -38,7 +33,7 @@ translation_of: Web/CSS/integer
 ### 無効な整数
 
 ```plain example-bad
-12.0        整数を表していますが、これは &lt;number&gt; であり、&lt;integer&gt; ではありません。
+12.0        整数を表していますが、これは <number> であり、<integer> ではありません。
 12.         小数点を含んではいけません。
 +---12      先頭に置ける +/- は 1 つだけです。
 ten         文字は使えません。

@@ -1,17 +1,8 @@
 ---
 title: 定位
 slug: Learn/CSS/CSS_layout/Positioning
-tags:
-  - CSS
-  - 初学者
-  - 定位
-  - 布局
-  - 指南
-  - 相对定位
-  - 绝对定位
-translation_of: Learn/CSS/CSS_layout/Positioning
-original_slug: Learn/CSS/CSS_layout/定位
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout/Practical_positioning_examples", "Learn/CSS/CSS_layout")}}
@@ -21,7 +12,7 @@ original_slug: Learn/CSS/CSS_layout/定位
 <table>
   <tbody>
     <tr>
-      <th>预备知识：</th>
+      <th>前提：</th>
       <td>
         HTML 基础 (学习
         <a href="/zh-CN/docs/learn/HTML/Introduction_to_HTML">HTML 导学</a>) 和
@@ -31,7 +22,7 @@ original_slug: Learn/CSS/CSS_layout/定位
       </td>
     </tr>
     <tr>
-      <th>目的：</th>
+      <th>目标：</th>
       <td>了解 CSS 定位的工作原理</td>
     </tr>
   </tbody>
@@ -41,26 +32,43 @@ original_slug: Learn/CSS/CSS_layout/定位
 
 定位是一个相当复杂的话题，所以我们深入了解代码之前，让我们审视一下布局理论，并让我们了解它的工作原理。
 
-首先，围绕元素内容添加任何内边距、边界和外边距来布置单个元素盒子——这就是[盒模型](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model) ，我们前面看过。默认情况下，块级元素的内容宽度是其父元素的宽度的 100％，并且与其内容一样高。内联元素高宽与他们的内容高宽一样。你不能对内联元素设置宽度或高度——它们只是位于块级元素的内容中。 如果要以这种方式控制内联元素的大小，则需要将其设置为类似块级元素 `display: block;`。
+首先，围绕元素内容添加任何内边距、边界和外边距来布置单个元素盒子——这就是[盒模型](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model) ，我们前面看过。默认情况下，块级元素的内容宽度是其父元素的宽度的 100％，并且与其内容一样高。内联元素高宽与他们的内容高宽一样。你不能对内联元素设置宽度或高度——它们只是位于块级元素的内容中。如果要以这种方式控制内联元素的大小，则需要将其设置为类似块级元素 `display: block;`。
 
 这只是解释了单个元素，但是元素相互之间如何交互呢？**正常的布局流**（在布局介绍文章中提到）是将元素放置在浏览器视口内的系统。默认情况下，块级元素在视口中垂直布局——每个都将显示在上一个元素下面的新行上，并且它们的外边距将分隔开它们。
 
 内联元素表现不一样——它们不会出现在新行上；相反，它们互相之间以及任何相邻（或被包裹）的文本内容位于同一行上，只要在父块级元素的宽度内有空间可以这样做。如果没有空间，那么溢流的文本或元素将向下移动到新行。
 
-如果两个相邻元素都在其上设置外边距，并且两个外边距接触，则两个外边距中的较大者保留，较小的一个消失——这叫[外边距折叠](/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing), 我们之前也遇到过。
+如果两个相邻元素都在其上设置外边距，并且两个外边距接触，则两个外边距中的较大者保留，较小的一个消失——这叫[外边距折叠](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing), 我们之前也遇到过。
 
 让我们来看一个简单的例子来解析这一切：
 
 ```html
 <h1>Basic document flow</h1>
 
-<p>I am a basic block level element. My adjacent block level elements sit on new lines below me.</p>
+<p>
+  I am a basic block level element. My adjacent block level elements sit on new
+  lines below me.
+</p>
 
-<p>By default we span 100% of the width of our parent element, and we are as tall as our child content. Our total width and height is our content + padding + border width/height.</p>
+<p>
+  By default we span 100% of the width of our parent element, and we are as tall
+  as our child content. Our total width and height is our content + padding +
+  border width/height.
+</p>
 
-<p>We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.</p>
+<p>
+  We are separated by our margins. Because of margin collapsing, we are
+  separated by the width of one of our margins, not both.
+</p>
 
-<p>inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements will <span>wrap onto a new line if possible (like this one containing text)</span>, or just go on to a new line if not, much like this image will do: <img src="https://mdn.mozillademos.org/files/13360/long.jpg"></p>
+<p>
+  inline elements <span>like this one</span> and <span>this one</span> sit on
+  the same line as one another, and adjacent text nodes, if there is space on
+  the same line. Overflowing inline elements will
+  <span>wrap onto a new line if possible (like this one containing text)</span>,
+  or just go on to a new line if not, much like this image will do:
+  <img src="long.jpg" />
+</p>
 ```
 
 ```css
@@ -86,7 +94,7 @@ span {
 
 在我们阅读本文时，我们将多次重复这个例子，因为我们要展示不同定位选项的效果。
 
-如果可能，我们希望你在本地计算机上跟随练习——从 GitHub 仓库下载一个 [`0_basic-flow.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/0_basic-flow.html) ([源代码](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/1_static-positioning.html)) 然后用它作为我们的起步点。
+如果可能，我们希望你在本地计算机上跟随练习——从 GitHub 仓库下载一个 [`0_basic-flow.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/0_basic-flow.html) ([源代码](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/1_static-positioning.html)) 然后用它作为我们的起步点。
 
 ## 介绍定位
 
@@ -96,12 +104,12 @@ span {
 
 ### 静态定位
 
-静态定位是每个元素获取的默认值——它只是意味着“将元素放入它在文档布局流中的正常位置 ——这里没有什么特别的。
+静态定位是每个元素获取的默认值——它只是意味着“将元素放入它在文档布局流中的正常位置——这里没有什么特别的。
 
 为了演示这一点，并为以后的部分设置示例，首先在 HTML 中添加一个`positioned` 的 `class` 到第二个{{htmlelement("p")}}：
 
 ```html
-<p class="positioned"> ... </p>
+<p class="positioned">...</p>
 ```
 
 现在，将以下规则添加到 CSS 的底部：
@@ -115,7 +123,7 @@ span {
 
 如果现在保存和刷新，除了第 2 段的更新的背景颜色，根本没有差别。这很好——正如我们之前所说，静态定位是默认行为！
 
-> **备注：** 你可以在 [`1_static-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/1_static-positioning.html) 查看这个例子 ([see source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/1_static-positioning.html))。
+> **备注：** 你可以在 [`1_static-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/1_static-positioning.html) 查看这个例子 ([see source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/1_static-positioning.html))。
 
 ### 相对定位
 
@@ -136,20 +144,37 @@ top: 30px;
 left: 30px;
 ```
 
-> **备注：** 这些属性的值可以采用逻辑上期望的任何单位 ——px，mm，rems，％等。
+> **备注：** 这些属性的值可以采用逻辑上期望的任何单位——px、mm、rem、% 等。
 
 如果你现在保存和刷新，你会得到一个这样的结果：
 
 ```html hidden
 <h1>Relative positioning</h1>
 
-<p>I am a basic block level element. My adjacent block level elements sit on new lines below me.</p>
+<p>
+  I am a basic block level element. My adjacent block level elements sit on new
+  lines below me.
+</p>
 
-<p class="positioned">By default we span 100% of the width of our parent element, and our are as tall as our child content. Our total width and height is our content + padding + border width/height.</p>
+<p class="positioned">
+  By default we span 100% of the width of our parent element, and our are as
+  tall as our child content. Our total width and height is our content + padding
+  + border width/height.
+</p>
 
-<p>We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.</p>
+<p>
+  We are separated by our margins. Because of margin collapsing, we are
+  separated by the width of one of our margins, not both.
+</p>
 
-<p>inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements <span>wrap onto a new line if possible — like this one containing text</span>, or just go on to a new line if not, much like this image will do: <img src="https://mdn.mozillademos.org/files/13360/long.jpg"></p>
+<p>
+  inline elements <span>like this one</span> and <span>this one</span> sit on
+  the same line as one another, and adjacent text nodes, if there is space on
+  the same line. Overflowing inline elements
+  <span>wrap onto a new line if possible — like this one containing text</span>,
+  or just go on to a new line if not, much like this image will do:
+  <img src="long.jpg" />
+</p>
 ```
 
 ```css hidden
@@ -182,7 +207,7 @@ span {
 
 酷，是吗？好吧，所以这个结果这可能不是你期待的——为什么它移动到底部和右边，但我们指定顶部和左边？听起来不合逻辑，但这只是相对定位工作的方式——你需要考虑一个看不见的力，推动定位的盒子的一侧，移动它的相反方向。所以例如，如果你指定 `top: 30px;`一个力推动框的顶部，使它向下移动 30px。
 
-> **备注：** 你可以在 [`2_relative-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/2_relative-positioning.html) 查看这个例子 ([see source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/2_relative-positioning.html))。
+> **备注：** 你可以在 [`2_relative-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/2_relative-positioning.html) 查看这个例子 ([see source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/2_relative-positioning.html))。
 
 ### 绝对定位
 
@@ -197,13 +222,30 @@ position: absolute;
 ```html hidden
 <h1>Absolute positioning</h1>
 
-<p>I am a basic block level element. My adjacent block level elements sit on new lines below me.</p>
+<p>
+  I am a basic block level element. My adjacent block level elements sit on new
+  lines below me.
+</p>
 
-<p class="positioned">By default we span 100% of the width of our parent element, and we are as tall as our child content. Our total width and height is our content + padding + border width/height.</p>
+<p class="positioned">
+  By default we span 100% of the width of our parent element, and we are as tall
+  as our child content. Our total width and height is our content + padding +
+  border width/height.
+</p>
 
-<p>We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.</p>
+<p>
+  We are separated by our margins. Because of margin collapsing, we are
+  separated by the width of one of our margins, not both.
+</p>
 
-<p>inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements <span>wrap onto a new line if possible — like this one containing text</span>, or just go on to a new line if not, much like this image will do: <img src="https://mdn.mozillademos.org/files/13360/long.jpg"></p>
+<p>
+  inline elements <span>like this one</span> and <span>this one</span> sit on
+  the same line as one another, and adjacent text nodes, if there is space on
+  the same line. Overflowing inline elements
+  <span>wrap onto a new line if possible — like this one containing text</span>,
+  or just go on to a new line if not, much like this image will do:
+  <img src="long.jpg" />
+</p>
 ```
 
 ```css hidden
@@ -242,7 +284,7 @@ span {
 
 > **备注：** 是的，margins 仍会影响定位的元素。然而 margin collapsing 不会。
 
-> **备注：** 你可以在[`3_absolute-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/3_absolute-positioning.html) 查看这个例子 ([see source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/3_absolute-positioning.html))。
+> **备注：** 你可以在[`3_absolute-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/3_absolute-positioning.html) 查看这个例子 ([see source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/3_absolute-positioning.html))。
 
 ### 定位上下文
 
@@ -250,7 +292,7 @@ span {
 
 如果所有的父元素都没有显式地定义 position 属性，那么所有的父元素默认情况下 position 属性都是 static。结果，绝对定位元素会被包含在**初始块容器**中。这个初始块容器有着和浏览器视口一样的尺寸，并且\<html>元素也被包含在这个容器里面。简单来说，绝对定位元素会被放在\<html>元素的外面，并且根据浏览器视口来定位。
 
-绝对定位元素在 HTML 源代码中，是被放在\<body>中的，但是在最终的布局里面，它离页面 (而不是\<body>) 的左边界、上边界有 30px 的距离。我们可以改变**定位上下文** —— 绝对定位的元素的相对位置元素。通过设置其中一个父元素的定位属性 —— 也就是包含绝对定位元素的那个元素（如果要设置绝对定位元素的相对元素，那么这个元素一定要包含绝对定位元素）。 为了演示这一点，将以下声明添加到你的 body 规则中：
+绝对定位元素在 HTML 源代码中，是被放在 \<body> 中的，但是在最终的布局里面，它离页面（而不是 \<body>）的左边界、上边界有 30px 的距离。我们可以改变**定位上下文**——绝对定位的元素的相对位置元素。通过设置其中一个父元素的定位属性——也就是包含绝对定位元素的那个元素（如果要设置绝对定位元素的相对元素，那么这个元素一定要包含绝对定位元素）。为了演示这一点，将以下声明添加到你的 body 规则中：
 
 ```css
 position: relative;
@@ -261,13 +303,29 @@ position: relative;
 ```html hidden
 <h1>Positioning context</h1>
 
-<p>I am a basic block level element. My adjacent block level elements sit on new lines below me.</p>
+<p>
+  I am a basic block level element. My adjacent block level elements sit on new
+  lines below me.
+</p>
 
-<p class="positioned">Now I'm absolutely positioned relative to the <code>&lt;body&gt;</code> element, not the <code>&lt;html&gt;</code> element!</p>
+<p class="positioned">
+  Now I'm absolutely positioned relative to the
+  <code>&lt;body&gt;</code> element, not the <code>&lt;html&gt;</code> element!
+</p>
 
-<p>We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.</p>
+<p>
+  We are separated by our margins. Because of margin collapsing, we are
+  separated by the width of one of our margins, not both.
+</p>
 
-<p>inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements <span>wrap onto a new line if possible — like this one containing text</span>, or just go on to a new line if not, much like this image will do: <img src="https://mdn.mozillademos.org/files/13360/long.jpg"></p>
+<p>
+  inline elements <span>like this one</span> and <span>this one</span> sit on
+  the same line as one another, and adjacent text nodes, if there is space on
+  the same line. Overflowing inline elements
+  <span>wrap onto a new line if possible — like this one containing text</span>,
+  or just go on to a new line if not, much like this image will do:
+  <img src="long.jpg" />
+</p>
 ```
 
 ```css hidden
@@ -301,20 +359,22 @@ span {
 
 定位的元素现在相对于{{htmlelement("body")}}元素。
 
-> **备注：** 你可以在这里看到这个例子 [`4_positioning-context.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/4_positioning-context.html) ([see source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/4_positioning-context.html)).
+> **备注：** 你可以在这里看到这个例子 [`4_positioning-context.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/4_positioning-context.html) ([see source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/4_positioning-context.html)).
 
 ### 介绍 z-index
 
-所有这些绝对定位很有趣，但还有另一件事我们还没有考虑到 ——当元素开始重叠，什么决定哪些元素出现在其他元素的顶部？在我们已经看到的示例中，我们在定位上下文中只有一个定位的元素，它出现在顶部，因为定位的元素胜过未定位的元素。当我们有不止一个的时候呢？
+所有这些绝对定位很有趣，但还有另一件事我们还没有考虑到——当元素开始重叠，什么决定哪些元素出现在其他元素的顶部？在我们已经看到的示例中，我们在定位上下文中只有一个定位的元素，它出现在顶部，因为定位的元素胜过未定位的元素。当我们有不止一个的时候呢？
 
 尝试添加以下到你的 CSS，使第一段也是绝对定位：
 
-    p:nth-of-type(1) {
-      position: absolute;
-      background: lime;
-      top: 10px;
-      right: 30px;
-    }
+```css
+p:nth-of-type(1) {
+  position: absolute;
+  background: lime;
+  top: 10px;
+  right: 30px;
+}
+```
 
 此时，你将看到第一段的颜色为绿色，移出文档流程，并位于原始位置上方一点。它也堆叠在原始的 `.positioned` 段落下，其中两个重叠。这是因为 `.positioned` 段落是源顺序 (HTML 标记) 中的第二个段落，并且源顺序中后定位的元素将赢得先定位的元素。
 
@@ -324,20 +384,38 @@ span {
 
 要更改堆叠顺序，请尝试将以下声明添加到 `p:nth-of-type(1)` 规则中：
 
-    z-index: 1;
+```css
+z-index: 1;
+```
 
 你现在应该可以看到完成的例子：
 
 ```html hidden
 <h1>z-index</h1>
 
-<p>I am a basic block level element. My adjacent block level elements sit on new lines below me.</p>
+<p>
+  I am a basic block level element. My adjacent block level elements sit on new
+  lines below me.
+</p>
 
-<p class="positioned">Now I'm absolutely positioned relative to the <code>&lt;body&gt;</code> element, not the <code>&lt;html&gt;</code> element!</p>
+<p class="positioned">
+  Now I'm absolutely positioned relative to the
+  <code>&lt;body&gt;</code> element, not the <code>&lt;html&gt;</code> element!
+</p>
 
-<p>We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.</p>
+<p>
+  We are separated by our margins. Because of margin collapsing, we are
+  separated by the width of one of our margins, not both.
+</p>
 
-<p>inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements <span>wrap onto a new line if possible — like this one containing text</span>, or just go on to a new line if not, much like this image will do: <img src="https://mdn.mozillademos.org/files/13360/long.jpg"></p>
+<p>
+  inline elements <span>like this one</span> and <span>this one</span> sit on
+  the same line as one another, and adjacent text nodes, if there is space on
+  the same line. Overflowing inline elements
+  <span>wrap onto a new line if possible — like this one containing text</span>,
+  or just go on to a new line if not, much like this image will do:
+  <img src="long.jpg" />
+</p>
 ```
 
 ```css hidden
@@ -375,11 +453,11 @@ p:nth-of-type(1) {
 }
 ```
 
-{{ EmbedLiveSample('Introducing_z-index', '100%', 400) }}
+{{ EmbedLiveSample('介绍 z-index', '100%', 400) }}
 
-请注意，z-index 只接受无单位索引值；你不能指定你想要一个元素是 Z 轴上 23 像素—— 它不这样工作。较高的值将高于较低的值，这取决于你使用的值。使用 2 和 3 将产生与 300 和 40000 相同的效果。
+请注意，z-index 只接受无单位索引值；你不能指定你想要一个元素是 Z 轴上 23 像素——它不这样工作。较高的值将高于较低的值，这取决于你使用的值。使用 2 和 3 将产生与 300 和 40000 相同的效果。
 
-> **备注：** 你可以在这里看到这个例子 [`5_z-index.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/5_z-index.html) ([see source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/5_z-index.html)).
+> **备注：** 你可以在这里看到这个例子 [`5_z-index.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/5_z-index.html) ([see source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/5_z-index.html)).
 
 ### 固定定位
 
@@ -389,43 +467,62 @@ p:nth-of-type(1) {
 
 现在，更新 `body` 规则以删除`position: relative;` 声明并添加固定高度，如此：
 
-    body {
-      width: 500px;
-      height: 1400px;
-      margin: 0 auto;
-    }
+```css
+body {
+  width: 500px;
+  height: 1400px;
+  margin: 0 auto;
+}
+```
 
 现在我们要给{{htmlelement("h1")}}元素 `position: fixed;`，并让它坐在视口的顶部中心。将以下规则添加到 CSS：
 
-    h1 {
-      position: fixed;
-      top: 0;
-      width: 500px;
-      margin: 0 auto;
-      background: white;
-      padding: 10px;
-    }
+```css
+h1 {
+  position: fixed;
+  top: 0;
+  width: 500px;
+  margin: 0 auto;
+  background: white;
+  padding: 10px;
+}
+```
 
 `top: 0;`是要使它贴在屏幕的顶部；我们然后给出标题与内容列相同的宽度，并使用可靠的老技巧 `margin: 0 auto;` 使它居中。然后我们给它一个白色背景和一些内边距，所以内容将不会在它下面可见。
 
 如果你现在保存并刷新，你会看到一个有趣的小效果，标题保持固定，内容显示向上滚动并消失在其下。但是我们可以改进这一点——目前标题下面挡住一些内容的开头。这是因为定位的标题不再出现在文档流中，所以其他内容向上移动到顶部。我们要把它向下移动一点；我们可以通过在第一段设置一些顶部边距来做到这一点。添加：
 
-    p:nth-of-type(1) {
-      margin-top: 60px;
-    }
+```css
+p:nth-of-type(1) {
+  margin-top: 60px;
+}
+```
 
 你现在应该看到完成的例子：
 
 ```html hidden
 <h1>Fixed positioning</h1>
 
-<p>I am a basic block level element. My adjacent block level elements sit on new lines below me.</p>
+<p>
+  I am a basic block level element. My adjacent block level elements sit on new
+  lines below me.
+</p>
 
 <p class="positioned">I'm not positioned any more...</p>
 
-<p>We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.</p>
+<p>
+  We are separated by our margins. Because of margin collapsing, we are
+  separated by the width of one of our margins, not both.
+</p>
 
-<p>inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements <span>wrap onto a new line if possible — like this one containing text</span>, or just go on to a new line if not, much like this image will do: <img src="https://mdn.mozillademos.org/files/13360/long.jpg"></p>
+<p>
+  inline elements <span>like this one</span> and <span>this one</span> sit on
+  the same line as one another, and adjacent text nodes, if there is space on
+  the same line. Overflowing inline elements
+  <span>wrap onto a new line if possible — like this one containing text</span>,
+  or just go on to a new line if not, much like this image will do:
+  <img src="long.jpg" />
+</p>
 ```
 
 ```css hidden
@@ -461,26 +558,54 @@ p:nth-of-type(1) {
 }
 ```
 
-{{ EmbedLiveSample('Fixed_positioning', '100%', 400) }}
+{{ EmbedLiveSample('固定定位', '100%', 400) }}
 
-> **备注：** 你可以在这里看到这个例子[`6_fixed-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/6_fixed-positioning.html) ([see source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/6_fixed-positioning.html)).
+> **备注：** 你可以在这里看到这个例子[`6_fixed-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/6_fixed-positioning.html) ([see source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/6_fixed-positioning.html)).
 
 ### position: sticky
 
-还有一个可用的位置值称为 position: sticky，比起其他位置值要新一些。它基本上是相对位置和固定位置的混合体，它允许被定位的元素表现得像相对定位一样，直到它滚动到某个阈值点（例如，从视口顶部起 1​​0 像素）为止，此后它就变得固定了。例如，它可用于使导航栏随页面滚动直到特定点，然后粘贴在页面顶部。
+还有一个可用的位置值称为 position: sticky，比起其他位置值要新一些。它基本上是相对位置和固定位置的混合体，它允许被定位的元素表现得像相对定位一样，直到它滚动到某个阈值点（例如，从视口顶部起 10 像素）为止，此后它就变得固定了。例如，它可用于使导航栏随页面滚动直到特定点，然后粘贴在页面顶部。
 
 #### Sticky positioning example
 
 ```html hidden
 <h1>Sticky positioning</h1>
 
-<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
+  dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus
+  ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus
+  laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum,
+  tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus
+  neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
+  volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros
+  pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec
+  lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+</p>
 
 <div class="positioned">Sticky</div>
 
-<p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+<p>
+  Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+  ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+  est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+  tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus
+  sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+  vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+</p>
 
-<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
+  dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus
+  ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus
+  laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum,
+  tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus
+  neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
+  volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros
+  pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec
+  lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+</p>
 ```
 
 ```css hidden
@@ -490,8 +615,8 @@ body {
 }
 
 .positioned {
-  background: rgba(255,84,104,.3);
-  border: 2px solid rgb(255,84,104);
+  background: rgba(255, 84, 104, 0.3);
+  border: 2px solid rgb(255, 84, 104);
   padding: 10px;
   margin: 10px;
   border-radius: 5px;
@@ -506,59 +631,47 @@ body {
 }
 ```
 
-{{ EmbedLiveSample('Sticky_1', '100%', 200) }}
+{{ EmbedLiveSample('Sticky positioning example', '100%', 200) }}
+
+#### 滚动索引
 
 `position: sticky` 的另一种有趣且常用的用法，是创建一个滚动索引页面。在此页面上，不同的标题会停留在页面顶部。这样的示例的标记可能如下所示：
 
-    <h1>Sticky positioning</h1>
+```html
+<h1>Sticky positioning</h1>
 
-    <dl>
-        <dt>A</dt>
-        <dd>Apple</dd>
-        <dd>Ant</dd>
-        <dd>Altimeter</dd>
-        <dd>Airplane</dd>
-        <dt>B</dt>
-        <dd>Bird</dd>
-        <dd>Buzzard</dd>
-        <dd>Bee</dd>
-        <dd>Banana</dd>
-        <dd>Beanstalk</dd>
-        <dt>C</dt>
-        <dd>Calculator</dd>
-        <dd>Cane</dd>
-        <dd>Camera</dd>
-        <dd>Camel</dd>
-        <dt>D</dt>
-        <dd>Duck</dd>
-        <dd>Dime</dd>
-        <dd>Dipstick</dd>
-        <dd>Drone</dd>
-        <dt>E</dt>
-        <dd>Egg</dd>
-        <dd>Elephant</dd>
-        <dd>Egret</dd>
-    </dl>
+<dl>
+  <dt>A</dt>
+  <dd>Apple</dd>
+  <dd>Ant</dd>
+  <dd>Altimeter</dd>
+  <dd>Airplane</dd>
+  <dt>B</dt>
+  <dd>Bird</dd>
+  <dd>Buzzard</dd>
+  <dd>Bee</dd>
+  <dd>Banana</dd>
+  <dd>Beanstalk</dd>
+  <dt>C</dt>
+  <dd>Calculator</dd>
+  <dd>Cane</dd>
+  <dd>Camera</dd>
+  <dd>Camel</dd>
+  <dt>D</dt>
+  <dd>Duck</dd>
+  <dd>Dime</dd>
+  <dd>Dipstick</dd>
+  <dd>Drone</dd>
+  <dt>E</dt>
+  <dd>Egg</dd>
+  <dd>Elephant</dd>
+  <dd>Egret</dd>
+</dl>
+```
 
 CSS 可能如下所示。在正常布局流中，{{htmlelement("dt")}}元素将随内容滚动。当我们在{{htmlelement("dt")}}元素上添加`position: sticky`，并将{{cssxref("top")}}的值设置为 0，当标题滚动到视口的顶部时，支持此属性的浏览器会将标题粘贴到那个位置。随后，每个后续标题将替换前一个标题，直到它向上滚动到该位置。
 
-    dt {
-      background-color: black;
-      color: white;
-      padding: 10px;
-      position: sticky;
-      top: 0;
-      left: 0;
-      margin: 1em 0;
-    }
-
 ```css
-body {
-  width: 500px;
-  height: 1400px;
-  margin: 0 auto;
-}
-
 dt {
   background-color: black;
   color: white;
@@ -570,57 +683,56 @@ dt {
 }
 ```
 
-```html
+```css hidden
+body {
+  width: 500px;
+  height: 1400px;
+  margin: 0 auto;
+}
+```
+
+```html hidden
 <h1>Sticky positioning</h1>
 
 <dl>
-    <dt>A</dt>
-    <dd>Apple</dd>
-    <dd>Ant</dd>
-    <dd>Altimeter</dd>
-    <dd>Airplane</dd>
-    <dt>B</dt>
-    <dd>Bird</dd>
-    <dd>Buzzard</dd>
-    <dd>Bee</dd>
-    <dd>Banana</dd>
-    <dd>Beanstalk</dd>
-    <dt>C</dt>
-    <dd>Calculator</dd>
-    <dd>Cane</dd>
-    <dd>Camera</dd>
-    <dd>Camel</dd>
-    <dt>D</dt>
-    <dd>Duck</dd>
-    <dd>Dime</dd>
-    <dd>Dipstick</dd>
-    <dd>Drone</dd>
-    <dt>E</dt>
-    <dd>Egg</dd>
-    <dd>Elephant</dd>
-    <dd>Egret</dd>
+  <dt>A</dt>
+  <dd>Apple</dd>
+  <dd>Ant</dd>
+  <dd>Altimeter</dd>
+  <dd>Airplane</dd>
+  <dt>B</dt>
+  <dd>Bird</dd>
+  <dd>Buzzard</dd>
+  <dd>Bee</dd>
+  <dd>Banana</dd>
+  <dd>Beanstalk</dd>
+  <dt>C</dt>
+  <dd>Calculator</dd>
+  <dd>Cane</dd>
+  <dd>Camera</dd>
+  <dd>Camel</dd>
+  <dt>D</dt>
+  <dd>Duck</dd>
+  <dd>Dime</dd>
+  <dd>Dipstick</dd>
+  <dd>Drone</dd>
+  <dt>E</dt>
+  <dd>Egg</dd>
+  <dd>Elephant</dd>
+  <dd>Egret</dd>
 </dl>
 ```
 
-{{ EmbedLiveSample('Sticky_2', '100%', 200) }}
+{{ EmbedLiveSample('滚动索引', '100%', 200) }}
 
-> **备注：** 你可以在 [`7_sticky-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/7_sticky-positioning.html) 查看这个例子 ([see source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/7_sticky-positioning.html))。
+> **备注：** 你可以在 [`7_sticky-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/7_sticky-positioning.html) 查看这个例子 ([see source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/7_sticky-positioning.html))。
 
-## 试试你的技术！
+## 技能测试！
 
-这篇文章到此为止了，但你们能记住最重要的信息吗？在继续之前，你可以找到一些进一步的测试来验证是否完全掌握了这个知识：[试试你的技术](/zh-CN/docs/Learn/CSS/CSS_layout/Position_skills)。
+这篇文章到此为止了，但你们能记住最重要的信息吗？在继续之前，你可以找到一些进一步的测试来验证是否完全掌握了这个知识：[技能测试：定位](/zh-CN/docs/Learn/CSS/CSS_layout/Position_skills)。
 
 ## 总结
 
 我相信你用基本定位愉快地玩耍；它是创建复杂的 CSS 布局和 UI 功能背后的基本工具之一。考虑到这一点，在下一篇文章中，我们将更有趣的定位——我们将进一步，开始建立一些真实世界有用的东西。
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout/Practical_positioning_examples", "Learn/CSS/CSS_layout")}}
-
-## 在本单元中
-
-- [布局介绍](/zh-CN/docs/Learn/CSS/CSS_layout/Introduction)
-- [浮动](/zh-CN/docs/Learn/CSS/CSS_layout/Floats)
-- [定位](/zh-CN/docs/Learn/CSS/CSS_layout/Positioning)
-- [定位练习案例](/zh-CN/docs/Learn/CSS/CSS_layout/Practical_positioning_examples)
-- [弹性盒子](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Grids](/zh-CN/docs/Learn/CSS/CSS_layout/Grids)

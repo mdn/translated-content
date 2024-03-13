@@ -1,9 +1,8 @@
 ---
 title: Element.clientLeft
 slug: Web/API/Element/clientLeft
-translation_of: Web/API/Element/clientLeft
-browser-compat: api.Element.clientLeft
 ---
+
 {{APIRef("DOM")}}
 
 La propriété en lecture seule **`Element.clientLeft`** représente la largeur de la bordure gauche d'un élément, exprimée en pixels. Cette largeur inclut l'éventuelle largeur de la barre de défilement verticale si le texte se lit de droite à gauche et s'il y a un dépassement entraînant l'apparition d'une barre de défilement à gauche. `clientLeft` n'inclut pas la marge gauche ou le remplissage (<i lang="en">padding</i>) à gauche.
@@ -29,9 +28,12 @@ Dans l'exemple qui suit, la zone du client possède un arrière-plan blanc avec 
 ```html
 <div id="container">
   <div id="contained">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.
+    </p>
   </div>
 </div>
 ```
@@ -39,7 +41,6 @@ Dans l'exemple qui suit, la zone du client possède un arrière-plan blanc avec 
 ### CSS
 
 ```css
-
 #container {
   margin: 3rem;
   background-color: rgb(255, 255, 204);

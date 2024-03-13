@@ -1,10 +1,8 @@
 ---
 title: Date.prototype.toLocaleDateString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/toLocaleDateString
-browser-compat: javascript.builtins.Date.toLocaleDateString
 ---
+
 {{JSRef}}
 
 La méthode **`toLocaleDateString()`** renvoie une chaine de caractères correspondant à la date (le fragment de l'objet qui correspond à la date&nbsp;: jour, mois, année) exprimée selon une locale donnée et pour le fuseau horaire de l'agent utilisateur.
@@ -16,9 +14,9 @@ Les arguments `locales` et `options` permettent aux applications de définir le 
 ## Syntaxe
 
 ```js
-toLocaleDateString()
-toLocaleDateString(locales)
-toLocaleDateString(locales, options)
+toLocaleDateString();
+toLocaleDateString(locales);
+toLocaleDateString(locales, options);
 ```
 
 ### Paramètres
@@ -120,7 +118,12 @@ Les résultats fournis par `toLocaleDateString()` peuvent être personnalisés g
 let date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // fournir le jour de la semaine avec une date longue
-let options = {weekday: "long", year: "numeric", month: "long", day: "numeric"};
+let options = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
 console.log(date.toLocaleDateString("de-DE", options));
 // → "Donnerstag, 20. Dezember 2012"
 

@@ -1,11 +1,11 @@
 ---
 title: bookmarks
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks
 ---
+
 {{AddonSidebar}}
 
-此[WebExtensions](/zh-CN/docs/Mozilla/Add-ons/WebExtensions) {{WebExtAPIRef("bookmarks")}} API 允许一个附加组件和浏览器的书签系统交互和操作。您可以用它给页面加书签，获取已有的书签，以及编辑，移除和管理书签。
+此[WebExtensions](/zh-CN/docs/Mozilla/Add-ons/WebExtensions) {{WebExtAPIRef("bookmarks")}} API 允许一个附加组件和浏览器的书签系统交互和操作。你可以用它给页面加书签，获取已有的书签，以及编辑，移除和管理书签。
 
 欲使用此 API，一个附件组件必须请求"bookmarks" [permission](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)在它的[`manifest.json`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json)文件当中。
 
@@ -41,7 +41,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks
 - {{WebExtAPIRef("bookmarks.move()")}}
   - : 将指定的书签树节点移到指定位置
 - {{WebExtAPIRef("bookmarks.update()")}}
-  - : 更新书签或文件夹的属性。只需要指定您需要更改的属性，未指定的属性不会更改。注意：目前只支持“title”和“url”属性。
+  - : 更新书签或文件夹的属性。只需要指定你需要更改的属性，未指定的属性不会更改。注意：目前只支持“title”和“url”属性。
 - {{WebExtAPIRef("bookmarks.remove()")}}
   - : 删除书签或者空文件夹。
 - {{WebExtAPIRef("bookmarks.removeTree()")}}
@@ -70,11 +70,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.bookmarks")}}
+{{Compat}}
 
-> **备注：** The "Chrome incompatibilities" section is included from [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](/en-US/Add-ons/WebExtensions/Chrome_incompatibilities) using the [WebExtChromeCompat](/en-US/docs/Template:WebExtChromeCompat) macro.
+> **备注：** The "Chrome incompatibilities" section is included from [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](/zh-CN/Add-ons/WebExtensions/Chrome_incompatibilities) using the [WebExtChromeCompat](/zh-CN/docs/Template:WebExtChromeCompat) macro.
 >
-> If you need to update this content, edit [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](/en-US/Add-ons/WebExtensions/Chrome_incompatibilities), then shift-refresh this page to see your changes.
+> If you need to update this content, edit [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](/zh-CN/Add-ons/WebExtensions/Chrome_incompatibilities), then shift-refresh this page to see your changes.
 
 {{WebExtExamples("h2")}}
 
@@ -82,7 +82,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -109,4 +110,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

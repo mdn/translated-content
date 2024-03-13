@@ -1,12 +1,8 @@
 ---
 title: grid-area
 slug: Web/CSS/grid-area
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/grid-area
 ---
+
 {{CSSRef}}
 
 La propriété **`grid-area`** est une propriété raccourcie pour {{cssxref("grid-row-start")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-row-end")}} et {{cssxref("grid-column-end")}} qui permet de définir la taille d'un objet de la grille et son emplacement via les bords de sa zone de grille.
@@ -79,9 +75,13 @@ grid-area: unset;
 
     Si l'entier n'est pas défini, la valeur par défaut qui sera utilisée sera `1`. Les entiers négatifs ou nuls sont invalides.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -124,15 +124,11 @@ grid-area: unset;
 
 ## Spécifications
 
-| Spécification                                                                    | État                         | Commentaires         |
-| -------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName("CSS3 Grid", "#propdef-grid-area", "grid-area")}} | {{Spec2("CSS3 Grid")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.grid-area")}}
+{{Compat}}
 
 ## Voir aussi
 

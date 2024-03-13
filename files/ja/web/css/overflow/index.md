@@ -1,19 +1,8 @@
 ---
 title: overflow
 slug: Web/CSS/overflow
-tags:
-  - CSS
-  - CSS ボックスモデル
-  - CSS プロパティ
-  - クリッピング
-  - レイアウト
-  - リファレンス
-  - overflow
-  - recipe:css-shorthand-property
-  - スクロール
-browser-compat: css.properties.overflow
-translation_of: Web/CSS/overflow
 ---
+
 {{CSSRef}}
 
 `overflow` は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、要素のオーバーフロー時、すなわち、要素の内容が多すぎて[ブロック整形コンテキスト](/ja/docs/Web/Guide/CSS/Block_formatting_context)に収まらない場合の望ましい動作を両方向について設定します。
@@ -58,6 +47,7 @@ overflow: unset;
 - `scroll`
   - : 内容は、必要に応じてパディングボックスに合わせて切り取られます。コンテンツが変化したときに、スクロールバーが現れたり消えたりするのを防ぐため、ブラウザーは内容がクリッピングされるかどうかに関わらず、スクロールバーを常に表示します。プリンターはあふれた部分の内容を印刷する可能性があります。
 - `auto`
+
   - : {{Glossary("user agent", "ユーザーエージェント")}}に依存します。内容がパディングボックス内に収まる場合は `visible` と同じように表示されますが、新しいブロック整形コンテキストを生成します。デスクトップブラウザーは内容があふれる場合、スクロールバーを表示します。
 
 - `overlay` {{deprecated_inline}}
@@ -103,33 +93,37 @@ JavaScript の {{domxref("Element.scrollTop")}} プロパティは、 `overflow`
 #### HTML
 
 ```html
-  <div>
-    <code>visible</code>
-    <p class="visible">
-     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
-    </p>
-  </div>
+<div>
+  <code>visible</code>
+  <p class="visible">
+    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+    doloremque laudantium.
+  </p>
+</div>
 
-  <div>
-    <code>hidden</code>
-    <p class="hidden">
-     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
-    </p>
-  </div>
+<div>
+  <code>hidden</code>
+  <p class="hidden">
+    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+    doloremque laudantium.
+  </p>
+</div>
 
-  <div>
-    <code>scroll</code>
-    <p class="scroll">
-     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
-    </p>
-  </div>
+<div>
+  <code>scroll</code>
+  <p class="scroll">
+    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+    doloremque laudantium.
+  </p>
+</div>
 
-  <div>
-    <code>auto</code>
-    <p class="auto">
-     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
-    </p>
-  </div>
+<div>
+  <code>auto</code>
+  <p class="auto">
+    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+    doloremque laudantium.
+  </p>
+</div>
 ```
 
 #### CSS
@@ -182,5 +176,5 @@ p.auto {
 
 ## 関連情報
 
-- 関連 CSS プロパティ: {{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{Cssxref("overflow-x")}}, {{Cssxref("overflow-y")}}, {{Cssxref("overflow-inline")}}, {{Cssxref("overflow-block")}}, {{Cssxref("clip")}}, {{Cssxref("display")}}
+- 関連 CSS プロパティ: {{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{Cssxref("overflow-x")}}, {{Cssxref("overflow-y")}}, {{Cssxref("overflow-inline")}}, {{Cssxref("overflow-block")}}, {{Cssxref("clip")}}, {{Cssxref("display")}}
 - [CSS オーバーフロー](/ja/docs/Web/CSS/CSS_Overflow) および [スクロール可能なオーバーフローのデバッグ](/ja/docs/Tools/Page_Inspector/How_to/Debug_Scrollable_Overflow)

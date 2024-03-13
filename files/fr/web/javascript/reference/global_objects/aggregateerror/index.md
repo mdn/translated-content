@@ -1,15 +1,8 @@
 ---
 title: AggregateError
 slug: Web/JavaScript/Reference/Global_Objects/AggregateError
-tags:
-  - AggregateError
-  - Classe
-  - Experimental
-  - Interface
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Global_Objects/AggregateError
-original_slug: Web/JavaScript/Reference/Objets_globaux/AggregateError
 ---
+
 {{JSRef}}
 
 Un objet **`AggregateError`** représente une erreur lorsque plusieurs erreurs doivent être agrégées en une seule. Ce type d'exception est levée lorsque plusieurs erreurs sont rapportées par une opération, par exemple avec {{JSxRef("Promise.any()")}} lorsque l'ensemble des promesses qui lui sont passées échouent.
@@ -31,13 +24,11 @@ Un objet **`AggregateError`** représente une erreur lorsque plusieurs erreurs d
 ### Intercepter une erreur `AggregateError`
 
 ```js
-Promise.any([
-  Promise.reject(new Error("une erreur")),
-]).catch(e => {
+Promise.any([Promise.reject(new Error("une erreur"))]).catch((e) => {
   console.log(e instanceof AggregateError); // true
-  console.log(e.message);                   // "All Promises rejected"
-  console.log(e.name);                      // "AggregateError"
-  console.log(e.errors);                    // [ Error: "une erreur" ]
+  console.log(e.message); // "All Promises rejected"
+  console.log(e.name); // "AggregateError"
+  console.log(e.errors); // [ Error: "une erreur" ]
 });
 ```
 
@@ -45,26 +36,22 @@ Promise.any([
 
 ```js
 try {
-  throw new AggregateError([
-    new Error("une erreur"),
-  ], 'Coucou');
+  throw new AggregateError([new Error("une erreur")], "Coucou");
 } catch (e) {
   console.log(e instanceof AggregateError); // true
-  console.log(e.message);                   // "Coucou"
-  console.log(e.name);                      // "AggregateError"
-  console.log(e.errors);                    // [ Error: "une erreur" ]
+  console.log(e.message); // "Coucou"
+  console.log(e.name); // "AggregateError"
+  console.log(e.errors); // [ Error: "une erreur" ]
 }
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Promise.any', '#sec-aggregate-error-object-structure', 'AggregateError')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.AggregateError")}}
+{{Compat}}
 
 ## Voir
 

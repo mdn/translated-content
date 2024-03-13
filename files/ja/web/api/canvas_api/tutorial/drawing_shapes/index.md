@@ -1,18 +1,9 @@
 ---
 title: キャンバスでの図形の描画
 slug: Web/API/Canvas_API/Tutorial/Drawing_shapes
-tags:
-  - キャンバス
-  - グラフィック
-  - HTML
-  - HTML キャンバス
-  - HTML5
-  - 中級者
-  - チュートリアル
-translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
-original_slug: Web/Guide/HTML/Canvas_tutorial/Drawing_shapes
 ---
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}
+
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}
 
 [キャンバスの環境](/ja/docs/Web/API/Canvas_API/Tutorial/Basic_usage)をセットアップしましたので、キャンバスに描画する方法の詳細に入ることができます。この記事の終わりまでに、矩形、三角形、直線、円弧、曲線を描く方法を学び、基本的な図形について理解できます。キャンバスにオブジェクトを描く際はパスを扱うことが不可欠ですので、その方法を見ていきます。
 
@@ -53,9 +44,9 @@ original_slug: Web/Guide/HTML/Canvas_tutorial/Drawing_shapes
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
+  var canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
+    var ctx = canvas.getContext("2d");
 
     ctx.fillRect(25, 25, 100, 100);
     ctx.clearRect(45, 45, 60, 60);
@@ -97,13 +88,13 @@ function draw() {
 
 パスを作る最初の作業は `beginPath()` メソッドを呼び出すことです。内部では、パスは図形を一緒に作るサブパス（線、円弧など）のリストとして保存されます。このメソッドが呼び出される毎に、リストはリセットされ新しい図形を始めることができます。
 
-> **Note:** `beginPath()` を呼び出した直後やキャンバスを新規作成した直後など、現在のパスが空であるときに最初にパスを構築するコマンドは、実際は何であるかにかかわらず常に `moveTo()` として扱われます。このためパスをリセットした後はほぼ必ず、開始位置を明示することが必要になるでしょう。
+> **メモ:** `beginPath()` を呼び出した直後やキャンバスを新規作成した直後など、現在のパスが空であるときに最初にパスを構築するコマンドは、実際は何であるかにかかわらず常に `moveTo()` として扱われます。このためパスをリセットした後はほぼ必ず、開始位置を明示することが必要になるでしょう。
 
 2 番目の作業は描かれる実際のパスを定義するメソッドを呼び出すことです。まもなくみることになります。
 
 3 番目は任意の作業ですが、 `closePath()` メソッドを呼び出すことです。このメソッドは現在の点から始点に向けて直線を描くことで図形を閉じようとします。もし図形がすでに閉じられているかリストに点がひとつしかない場合はこの関数は何もしません。
 
-> **Note:** `fill()` が呼び出されたとき、開いている図形は自動的に閉じられるので、`closePath()` を呼び出す必要はありません。これは、`stroke()` を呼び出したときは**あてはまりません**。
+> **メモ:** `fill()` が呼び出されたとき、開いている図形は自動的に閉じられるので、`closePath()` を呼び出す必要はありません。これは、`stroke()` を呼び出したときは**あてはまりません**。
 
 ### 三角形の描画
 
@@ -119,9 +110,9 @@ function draw() {
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
+  var canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
+    var ctx = canvas.getContext("2d");
 
     ctx.beginPath();
     ctx.moveTo(75, 50);
@@ -149,26 +140,26 @@ function draw() {
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
+  var canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-     var ctx = canvas.getContext('2d');
+    var ctx = canvas.getContext("2d");
 
     ctx.beginPath();
     ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // 外の円
     ctx.moveTo(110, 75);
-    ctx.arc(75, 75, 35, 0, Math.PI, false);  // 口 (時計回り)
+    ctx.arc(75, 75, 35, 0, Math.PI, false); // 口 (時計回り)
     ctx.moveTo(65, 65);
-    ctx.arc(60, 65, 5, 0, Math.PI * 2, true);  // 左目
+    ctx.arc(60, 65, 5, 0, Math.PI * 2, true); // 左目
     ctx.moveTo(95, 65);
-    ctx.arc(90, 65, 5, 0, Math.PI * 2, true);  // 右目
+    ctx.arc(90, 65, 5, 0, Math.PI * 2, true); // 右目
     ctx.stroke();
   }
 }
@@ -180,7 +171,7 @@ function draw() {
 
 もし、連続した線を見たい場合は、`moveTo()`を呼び出す行を削除してください。
 
-> **Note:** `arc()` 関数とそのパラメータの解説は[円弧](#円弧)の節をご覧下さい。
+> **メモ:** `arc()` 関数とそのパラメータの解説は[円弧](#円弧)の節をご覧下さい。
 
 ### 直線
 
@@ -203,9 +194,9 @@ function draw() {
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
+  var canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
+    var ctx = canvas.getContext("2d");
 
     // 塗りつぶした三角形
     ctx.beginPath();
@@ -242,7 +233,7 @@ function draw() {
 
 もっと詳しく `arc` メソッドを見てみましょう。このメソッドは 6 つの引数を取ります。 `x` と `y` は円弧を描画する円の中心の座標です。 `x` と `y` は円弧を描画する円の中心の座標で、 `radius` はその名の通り半径です。 `startAngle` および `endAngle` 引数は、円のカーブに沿った円弧の始点と終点をラジアン単位で指定します。これらは x 軸から測定されます。 `counterclockwise` 引数は論理値で、 `true` の場合は反時計回りに、それ以外の場合は時計回りに円弧が描かれます。
 
-> **Note:** `arc` 関数の角度は度ではなく、ラジアンで計算されます。度からラジアンに変換するには、 JavaScript の式では `radians = (Math.PI/180)*degrees` を使うことができます。
+> **メモ:** `arc` 関数の角度は度ではなく、ラジアンで計算されます。度からラジアンに変換するには、 JavaScript の式では `radians = (Math.PI/180)*degrees` を使うことができます。
 
 次の例は、上で見たものよりも少し複雑です。これは 12 種類の円弧を、それぞれ異なる角度と塗りつぶしで描画します。
 
@@ -252,7 +243,7 @@ function draw() {
 
 `clockwise` 引数の文は最初と 3 番目の列では時計回りの円弧として 2 番目と 4 番目の列では反時計回りの円弧という結果になります。最後に、 `if` 文は上半分は輪郭を描画された円弧を、下半分は塗られた円弧を作ります。
 
-> **Note:** この例では、ほかの例より若干大きなサイズである 150 x 200 ピクセルのキャンバスが必要です。
+> **メモ:** この例では、ほかの例より若干大きなサイズである 150 x 200 ピクセルのキャンバスが必要です。
 
 ```html hidden
 <html>
@@ -264,9 +255,9 @@ function draw() {
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
+  var canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
+    var ctx = canvas.getContext("2d");
 
     for (var i = 0; i < 4; i++) {
       for (var j = 0; j < 3; j++) {
@@ -317,17 +308,17 @@ function draw() {
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
+  var canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
+    var ctx = canvas.getContext("2d");
 
     // 二次曲線の例
     ctx.beginPath();
@@ -351,17 +342,17 @@ function draw() {
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
+  var canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
+    var ctx = canvas.getContext("2d");
 
     // 三次ベジェ曲線の例
     ctx.beginPath();
@@ -402,9 +393,9 @@ function draw() {
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
+  var canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
+    var ctx = canvas.getContext("2d");
 
     roundedRect(ctx, 12, 12, 150, 150, 15);
     roundedRect(ctx, 19, 19, 150, 150, 9);
@@ -444,7 +435,7 @@ function draw() {
     ctx.lineTo(83, 116);
     ctx.fill();
 
-    ctx.fillStyle = 'white';
+    ctx.fillStyle = "white";
     ctx.beginPath();
     ctx.moveTo(91, 96);
     ctx.bezierCurveTo(88, 96, 87, 99, 87, 101);
@@ -458,7 +449,7 @@ function draw() {
     ctx.bezierCurveTo(107, 99, 106, 96, 103, 96);
     ctx.fill();
 
-    ctx.fillStyle = 'black';
+    ctx.fillStyle = "black";
     ctx.beginPath();
     ctx.arc(101, 102, 2, 0, Math.PI * 2, true);
     ctx.fill();
@@ -498,9 +489,9 @@ function roundedRect(ctx, x, y, width, height, radius) {
   - : **`Path2D()`** コンストラクターは、新たにインスタンス化した `Path2D` オブジェクトを返します。任意で引数として別のパス、あるいは [SVG パス](/ja/docs/Web/SVG/Tutorial/Paths)データを構成する文字列を指定できます（コピーを作成）。
 
 ```js
-new Path2D();     // 空のパスオブジェクトを作成する
+new Path2D(); // 空のパスオブジェクトを作成する
 new Path2D(path); // 別の Path2D オブジェクトを複製する
-new Path2D(d);    // SVG パスデータからパスを作成する
+new Path2D(d); // SVG パスデータからパスを作成する
 ```
 
 これまで見てきたすべての[パスメソッド](/ja/docs/Web/API/CanvasRenderingContext2D#paths)、`moveTo`、`rect`、`arc`、`quadraticCurveTo` などを、 `Path2D` オブジェクトで使用することができます。
@@ -516,17 +507,17 @@ new Path2D(d);    // SVG パスデータからパスを作成する
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="130" height="100"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="130" height="100"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
+  var canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
+    var ctx = canvas.getContext("2d");
 
     var rectangle = new Path2D();
     rectangle.rect(10, 10, 50, 50);
@@ -549,7 +540,7 @@ function draw() {
 このパスはある点に移動して (`M10 10`) 、そこから右へ水平に 80 ポイント移動 (`h 80`)、下へ 80 ポイント移動 (`v 80`) 、 80 ポイント 左へ移動 (`h -80`) 、そして始点へ戻ります (`z`)。この例は [`Path2D` コンストラクター](/ja/docs/Web/API/Path2D/Path2D#using_svg_paths)のページで確認できます。
 
 ```js
-var p = new Path2D('M10 10 h 80 v 80 h -80 Z');
+var p = new Path2D("M10 10 h 80 v 80 h -80 Z");
 ```
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}

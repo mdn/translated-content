@@ -1,18 +1,11 @@
 ---
 title: ServiceWorkerRegistration.sync
 slug: Web/API/ServiceWorkerRegistration/sync
-tags:
-  - API
-  - 実験的
-  - プロパティ
-  - リファレンス
-  - サービスワーカー
-  - ServiceWorkerRegistration
-  - Sync
-browser-compat: api.ServiceWorkerRegistration.sync
-translation_of: Web/API/ServiceWorkerRegistration/sync
+l10n:
+  sourceCommit: 6d194a9afcce7beef0082c1dc50644bd0fcda635
 ---
-{{Non-standard_header}}{{APIRef("Service Workers API")}}
+
+{{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 **`sync`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスのプロパティで、バックグラウンド同期プロセスを管理する {{domxref("SyncManager")}} インターフェイスへの参照を返します。
 

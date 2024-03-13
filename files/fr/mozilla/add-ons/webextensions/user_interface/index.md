@@ -1,12 +1,8 @@
 ---
 title: Interface utilisateur
 slug: Mozilla/Add-ons/WebExtensions/user_interface
-tags:
-  - Landing
-  - User Interface
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface
 ---
+
 {{AddonSidebar}}
 
 Les WebExtensions disposent de plusieurs options d'interface utilisateur afin que leur fonctionnalité puisse être mise à la disposition de l'utilisateur. Un résumé de ces options est fourni ci-dessous, avec une introduction plus détaillée à chaque option d'interface utilisateur dans cette section.

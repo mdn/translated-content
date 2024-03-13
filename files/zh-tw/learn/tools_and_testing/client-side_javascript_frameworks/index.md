@@ -1,8 +1,8 @@
 ---
 title: 理解 JavaScript 前端框架
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks
-translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks
 ---
+
 {{LearnSidebar}}
 
 JavaScript 框架在前端開發佔有重要的地位：它能讓前端工程師透過千錘百鍊的工具，建立擴展性高、互動性強的網路程式。多數公司也視 JavaScript 框架為重要的前端工具。因此多數前端工程師，會需要擁有前端框架的技能。
@@ -104,37 +104,37 @@ JavaScript 框架在前端開發佔有重要的地位：它能讓前端工程師
 >
 > If you need to check your code against our version, you can find a finished version of the sample Svelte app code as it should be after each article, in our [mdn-svelte-tutorial](https://github.com/opensas/mdn-svelte-tutorial) repo. For a running live version, see our Svelte REPL at <https://svelte.dev/repl/378dd79e0dfe4486a8f10823f3813190?version=3.23.2>.
 
-- [1. Getting started with Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
+- [1. Getting started with Svelte](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
   - : In this article we'll provide a quick introduction to the [Svelte framework](https://svelte.dev/). We will see how Svelte works and what sets it apart from the rest of the frameworks and tools we've seen so far. Then we will learn how to setup our development environment, create a sample app, understand the structure of the project, and see how to run it locally and build it for production.
-- [2. Starting our Svelte Todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
+- [2. Starting our Svelte Todo list app](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
   - : Now that we have a basic understanding of how things work in Svelte, we can start building our example app: a todo list. In this article we will first have a look at the desired functionality of our app, then we'll create a `Todos.svelte` component and put static markup and styles in place, leaving everything ready to start developing our To-Do list app features, which we'll go on to in subsequent articles.
-- [3. Dynamic behavior in Svelte: working with variables and props](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
+- [3. Dynamic behavior in Svelte: working with variables and props](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
   - : Now that we have our markup and styles ready we can start developing the required features for our Svelte To-Do list app. In this article we'll be using variables and props to make our app dynamic, allowing us to add and delete todos, mark them as complete, and filter them by status.
-- [4. Componentizing our Svelte app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
+- [4. Componentizing our Svelte app](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
   - : The central objective of this article is to look at how to break our app into manageable components and share information between them. We'll componentize our app, then add more functionality to allow users to update existing components.
-- [5. Advanced Svelte: Reactivity, lifecycle, accessibility](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
+- [5. Advanced Svelte: Reactivity, lifecycle, accessibility](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
   - : In this article we will add the app's final features and further componentize our app. We will learn how to deal with reactivity issues related to updating objects and arrays. To avoid common pitfalls, we'll have to dig a little deeper into Svelte's reactivity system. We'll also look at solving some accessibility focus issues, and more besides.
-- [6. Working with Svelte stores](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
+- [6. Working with Svelte stores](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
   - : In this article we will show another way to handle state management in Svelte — [Stores](https://svelte.dev/tutorial/writable-stores). Stores are global data repositories that hold values. Components can subscribe to stores and receive notifications when their values change.
-- [7. TypeScript support in Svelte](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
+- [7. TypeScript support in Svelte](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
   - : We will now learn how to use TypeScript in Svelte applications. First we'll learn what TypeScript is and what benefits it can bring us. Then we'll see how to configure our project to work with TypeScript files. Finally we will go over our app and see what modifications we have to make to fully take advantage of TypeScript features.
-- [8. Deployment and next steps](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
+- [8. Deployment and next steps](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
   - : In this final article we will look at how to deploy your application and get it online, and also share some of the resources that you should go on to, to continue your Svelte learning journey.
 
 ## Angular 教學
 
 > **備註：** Angular 教學的最後測試時間為 2021 年四月，使用 Angular CLI（NG）11.2.5。
 >
-> 如果您需要根據我們的版本檢查程式碼，可以在 [angular-to-do-example](https://github.com/kapunahelewong/angular-to-do-example/tree/main/src) 上找到範例程式碼的最終版本。
+> 如果你需要根據我們的版本檢查程式碼，可以在 [angular-to-do-example](https://github.com/kapunahelewong/angular-to-do-example/tree/main/src) 上找到範例程式碼的最終版本。
 
 - [1. Angular 新手入門](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
   - : 在本文中，我們將會探索 Angular 所提供的功能、安裝必備工具、建立範例應用程式，並進一步瞭解 Angular 的基本架構。
 - [2. 開始開發我們的 Angular 待辦事項應用程式](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
-  - : 此刻，我們已準備好使用 Angular 來創建我們的待辦事項應用程式。完成後的應用程式將具有顯示待辦項目列表，並包含編輯、刪除與新增項目等功能。在本篇中，您將學到應用程式的結構，以及建立一個可顯示待辦項目的基礎列表。
+  - : 此刻，我們已準備好使用 Angular 來創建我們的待辦事項應用程式。完成後的應用程式將具有顯示待辦項目列表，並包含編輯、刪除與新增項目等功能。在本篇中，你將學到應用程式的結構，以及建立一個可顯示待辦項目的基礎列表。
 - [3. 使用樣式點綴我們的 Angular 應用程式](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
   - : 現在，我們已經建立了基本的應用程式結構，並加入了內容，接著我們就要來對應用程式進行樣式的調整，透過本篇文章來學習如何使用樣式點綴我們的 Angular 應用程式。
 - [4. 建立一個項目元件](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
-  - : 元件為您提供了一種組織應用程式的方式。本篇文章將引導您建立一個元件，來處理待辦列表中的各個待辦項目，並增加標示完成、編輯以及刪除的功能。在本篇也將介紹 Angular 事件模型
+  - : 元件為你提供了一種組織應用程式的方式。本篇文章將引導你建立一個元件，來處理待辦列表中的各個待辦項目，並增加標示完成、編輯以及刪除的功能。在本篇也將介紹 Angular 事件模型
 - [5. 過濾待辦事項](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
   - : 現在，讓我們繼續增加功能，以允許用戶過濾待辦項目，以便他們可以查看進行中、已完成或所有待辦項目。
 - [6. 構建 Angular 應用程序和更多資源](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)
@@ -151,4 +151,4 @@ JavaScript 框架在前端開發佔有重要的地位：它能讓前端工程師
 
 先講一下：我們選什麼框架**並不是**因為他們最棒，而是因為我們認同他們：這些框架在較吻合以上的考量要點。
 
-我們以本來希望在一開始包含更多框架，但最後決定先發布，之後再追加其它教學，而非延後。如果屬意的框架沒放進去、而你也想幫忙的話，來和我們聊聊吧！透過 [Matrix](https://wiki.mozilla.org/Matrix)、[Discourse](https://discourse.mozilla.org/c/mdn)、或 [mdn-admins list](mailto:mdn-admins@mozilla.org) 與我們聯繫。
+我們以本來希望在一開始包含更多框架，但最後決定先發布，之後再追加其它教學，而非延後。如果屬意的框架沒放進去而你也想幫忙的話，請隨時[與我們聯繫](/zh-TW/docs/MDN/Community/Communication_channels)。

@@ -1,14 +1,8 @@
 ---
 title: Function.length
 slug: Web/JavaScript/Reference/Global_Objects/Function/length
-tags:
-  - Function
-  - JavaScript
-  - Propriété
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/length
-original_slug: Web/JavaScript/Reference/Objets_globaux/Function/length
 ---
+
 {{JSRef}}
 
 La propriété **`length`** définit le nombre de paramètres attendus par la fonction.
@@ -32,28 +26,23 @@ La propriété `length` du prototype de {{jsxref("Function")}} vaut 0.
 ```js
 console.log(Function.length); /* 1 */
 
-console.log((function()        {}).length); /* 0 */
-console.log((function(a)       {}).length); /* 1 */
-console.log((function(a, b)    {}).length); /* 2 etc. */
-console.log((function(...args) {}).length);
+console.log(function () {}.length); /* 0 */
+console.log(function (a) {}.length); /* 1 */
+console.log(function (a, b) {}.length); /* 2 etc. */
+console.log(function (...args) {}.length);
 // 0, le paramètre du reste n'est pas compté
-console.log((function(a, b = 1, c) {}).length);
+console.log(function (a, b = 1, c) {}.length);
 // 1, seuls les paramètres avant les valeurs par
 // défaut sont comptés
 ```
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires                                                        |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                             | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.1.               |
-| {{SpecName('ES5.1', '#sec-15.3.5.1', 'Function.length')}}                         | {{Spec2('ES5.1')}}     |                                                                     |
-| {{SpecName('ES6', '#sec-function-instances-length', 'Function.length')}}     | {{Spec2('ES6')}}         | L'attribut `configurable` de cette propriété vaut `true` désormais. |
-| {{SpecName('ESDraft', '#sec-function-instances-length', 'Function.length')}} | {{Spec2('ESDraft')}} |                                                                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Function.length")}}
+{{Compat}}
 
 ## Voir aussi
 

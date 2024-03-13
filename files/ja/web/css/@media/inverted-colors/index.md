@@ -1,15 +1,8 @@
 ---
 title: inverted-colors
 slug: Web/CSS/@media/inverted-colors
-tags:
-  - '@media'
-  - CSS
-  - メディアクエリー
-  - リファレンス
-  - メディア特性
-browser-compat: css.at-rules.media.inverted-colors
-translation_of: Web/CSS/@media/inverted-colors
 ---
+
 {{CSSRef}}
 
 **`inverted-colors`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、{{glossary("user agent", "ユーザーエージェント")}}またはその下の OS が色を反転しているかどうかを調べるために使用することができます。
@@ -28,8 +21,14 @@ translation_of: Web/CSS/@media/inverted-colors
 ### HTML
 
 ```html
-<p>If you're using inverted colors, this text should be blue on white (the inverse of yellow on black). If you're not, it should be red on light gray.</p>
-<p>If the text is gray, your browser doesn't support the `inverted-colors` media feature.</p>
+<p>
+  If you're using inverted colors, this text should be blue on white (the
+  inverse of yellow on black). If you're not, it should be red on light gray.
+</p>
+<p>
+  If the text is gray, your browser doesn't support the `inverted-colors` media
+  feature.
+</p>
 ```
 
 ### CSS

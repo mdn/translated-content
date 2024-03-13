@@ -1,8 +1,8 @@
 ---
 title: hanging-punctuation
 slug: Web/CSS/hanging-punctuation
-translation_of: Web/CSS/hanging-punctuation
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`hanging-punctuation`** indique si un signe de ponctuation se situant au début ou à la fin d'une ligne de texte doit rester sur cette ligne, quitte à sortir de la boîte qui représente la ligne.
@@ -60,9 +60,13 @@ Cette propriété peut être définie grâce à une, deux ou trois valeurs :
 - `allow-end`
   - : Un point ou une virgule en fin de ligne restera sur cette ligne si la justification du texte ne laisse pas l'espace nécessaire.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -70,14 +74,11 @@ Cette propriété peut être définie grâce à une, deux ou trois valeurs :
 
 ```html
 <p>
-   Lorem ipsum dolor sit amet, consectetur
-   adipiscing elit. Curabitur dignissim nunc
-   mauris, et sollicitudin est scelerisque
-   sed. Praesent laoreet tortor massa, sit
-   amet vulputate nulla pharetra ut. Proin
-   ornare commodo sodales. Class aptent
-   taciti sociosqu ad litora torquent per
-   conubia nostra, per inceptos himenaeos.
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dignissim
+  nunc mauris, et sollicitudin est scelerisque sed. Praesent laoreet tortor
+  massa, sit amet vulputate nulla pharetra ut. Proin ornare commodo sodales.
+  Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+  inceptos himenaeos.
 </p>
 ```
 
@@ -86,7 +87,7 @@ Cette propriété peut être définie grâce à une, deux ou trois valeurs :
 ```css
 p {
   hanging-punctuation: first;
-  margin: .5rem;
+  margin: 0.5rem;
 }
 ```
 
@@ -96,12 +97,8 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('CSS3 Text', '#hanging-punctuation-property', 'hanging-punctuation')}} | {{Spec2('CSS3 Text')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.hanging-punctuation")}}
+{{Compat}}

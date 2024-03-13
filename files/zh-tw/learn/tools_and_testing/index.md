@@ -1,8 +1,8 @@
 ---
 title: 工具與測試
 slug: Learn/Tools_and_testing
-translation_of: Learn/Tools_and_testing
 ---
+
 {{LearnSidebar}}
 
 當你開始對網路核心技術（如 HTML、CSS、JavaScript）感到熟悉、累積經驗、閱讀更多資源、學到更多技巧和竅門時，你會碰上一大堆的工具，從 CSS 與 JavaScript 開始，到測試並自動化程式、還有一堆眉眉角角。等到你網路專案變得龐大而複雜時，你可能會想要用上某些工具、並針對你的程式碼，撰寫些可信賴的測試計劃。學習專區的這一區，旨在給你做出明智抉擇的所需。

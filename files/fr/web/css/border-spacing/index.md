@@ -1,16 +1,11 @@
 ---
 title: border-spacing
 slug: Web/CSS/border-spacing
-tags:
-  - CSS
-  - Propriété
-  - Reference
-  - Tableaux CSS
-translation_of: Web/CSS/border-spacing
 ---
+
 {{CSSRef}}
 
-La propriété **`border-spacing`** définit la distance qu'il y a entre les bordures de cellules adjacentes d'un tableau (uniquement lorsque {{cssxref("border-collapse")}} vaut `separate`). Cette propriété est équivalente à l'attribut HTML déprécié {{htmlattrxref("cellspacing","table")}} mais une deuxième valeur peut être utilisée afin d'obtenir un espacement vertical différent de l'espacement horizontal.
+La propriété **`border-spacing`** définit la distance qu'il y a entre les bordures de cellules adjacentes d'un tableau (uniquement lorsque {{cssxref("border-collapse")}} vaut `separate`). Cette propriété est équivalente à l'attribut HTML déprécié [`cellspacing`](/fr/docs/Web/HTML/Element/table#cellspacing) mais une deuxième valeur peut être utilisée afin d'obtenir un espacement vertical différent de l'espacement horizontal.
 
 {{EmbedInteractiveExample("pages/css/border-spacing.html")}}
 
@@ -46,9 +41,13 @@ La propriété `border-spacing` peut être définie avec une ou deux valeurs :
 - `length`
   - : Une valeur de longueur ({{cssxref("&lt;length&gt;")}} qui décrit l'espacement entre les cellules.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -100,17 +99,13 @@ td {
 
 ## Spécifications
 
-| Spécification                                                                                    | État                     | Commentaires         |
-| ------------------------------------------------------------------------------------------------ | ------------------------ | -------------------- |
-| {{SpecName('CSS2.1', 'tables.html#separated-borders', 'border-spacing')}} | {{Spec2('CSS2.1')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.border-spacing")}}
+{{Compat}}
 
-## Voir auss
+## Voir aussi
 
 - {{cssxref("border-collapse")}}
 - {{cssxref("border-style")}}

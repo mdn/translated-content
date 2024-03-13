@@ -1,18 +1,8 @@
 ---
-title: 'Window: blur イベント'
+title: "Window: blur イベント"
 slug: Web/API/Window/blur_event
-tags:
-  - API
-  - イベント
-  - FocusEvent
-  - リファレンス
-  - ウェブ
-  - Window
-  - blur
-  - onblur
-browser-compat: api.Window.blur_event
-translation_of: Web/API/Window/blur_event
 ---
+
 {{APIRef}}
 
 **`blur`** イベントは、要素がフォーカスを失ったときに発生します。
@@ -75,19 +65,20 @@ translation_of: Web/API/Window/blur_event
 
 ```js
 function pause() {
-  document.body.classList.add('paused');
-  log.textContent = 'FOCUS LOST!';
+  document.body.classList.add("paused");
+  log.textContent = "FOCUS LOST!";
 }
 
 function play() {
-  document.body.classList.remove('paused');
-  log.textContent = 'This document has focus. Click outside the document to lose focus.';
+  document.body.classList.remove("paused");
+  log.textContent =
+    "This document has focus. Click outside the document to lose focus.";
 }
 
-const log = document.getElementById('log');
+const log = document.getElementById("log");
 
-window.addEventListener('blur', pause);
-window.addEventListener('focus', play);
+window.addEventListener("blur", pause);
+window.addEventListener("focus", play);
 ```
 
 #### 結果
@@ -102,7 +93,7 @@ window.addEventListener('focus', play);
 
 {{Compat}}
 
-このイベントが処理されている間、 {{DOMxRef("Document.activeElement")}} の値はブラウザーによって異なります ({{bug(452307)}})。 IE10 はフォーカスが移動する先の要素を設定しますが、 Firefox と Chrome ではふつう、文書の `body` を設定します。
+このイベントが処理されている間、 {{DOMxRef("Document.activeElement")}} の値はブラウザーによって異なります ([Firefox バグ 452307](https://bugzil.la/452307))。 IE10 はフォーカスが移動する先の要素を設定しますが、 Firefox と Chrome ではふつう、文書の `body` を設定します。
 
 ## 関連情報
 

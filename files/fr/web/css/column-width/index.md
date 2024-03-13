@@ -1,12 +1,8 @@
 ---
 title: column-width
 slug: Web/CSS/column-width
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/column-width
 ---
+
 {{CSSRef}}
 
 La propriété **`column-width`** définit une largeur de colonne idéale lorsqu'on utilise une disposition en colonnes. Aussi, on aura le plus de colonnes possible et pour lesquelles aucune n'est moins large que `column-width`. La colonne réelle peut être plus petite que cette taille si son conteneur est moins large que cette valeur.
@@ -40,9 +36,13 @@ column-width: unset;
 - `auto`
   - : Un mot-clé indiquant que la largeur de la colonne doit être déterminée grâce aux autres propriétés CSS comme {{cssxref("column-count")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -62,10 +62,9 @@ column-width: unset;
 
 ```html
 <div class="content-box">
-  Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-  sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-  magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-  quis nostrud exerci tation ullamcorper suscipit lobortis
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+  nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
+  enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
   nisl ut aliquip ex ea commodo consequat.
 </div>
 ```
@@ -76,16 +75,11 @@ column-width: unset;
 
 ## Spécifications
 
-| Spécification                                                                                | État                                     | Commentaires                                                                                                          |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Writing Modes', '#auto-multicol', 'column-width')}} | {{Spec2('CSS4 Writing Modes')}} | Ajoutes des tailles intrinsèques grâce aux mots-clés `min-content`, `max-content`, `fill-available` et `fit-content`. |
-| {{SpecName('CSS3 Multicol', '#cw', 'column-width')}}                         | {{Spec2('CSS3 Multicol')}}     | Définition initiale.                                                                                                  |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.column-width")}}
+{{Compat}}
 
 ## Voir aussi
 

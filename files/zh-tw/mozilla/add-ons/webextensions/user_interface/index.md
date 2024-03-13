@@ -1,16 +1,13 @@
 ---
 title: 用戶介面
 slug: Mozilla/Add-ons/WebExtensions/user_interface
-tags:
-  - 擴充套件
-  - 用戶介面
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface
 ---
+
 {{AddonSidebar}}
 
 套件 APIs 提供了幾種介面來完成對用戶的功能。下方是那些介面的概述，每種用戶介面都有更詳細的資訊可以查閱。
 
-> **備註：** 爲了使用這些 UI 元件在套件裡提供優秀的用戶體驗，建議閱讀[用戶體驗最佳實踐](/en-US/docs/Mozilla/Add-ons/WebExtensions/User_experience_best_practices)文章。
+> **備註：** 爲了使用這些 UI 元件在套件裡提供優秀的用戶體驗，建議閱讀[用戶體驗最佳實踐](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/User_experience_best_practices)文章。
 
 <table class="standard-table">
   <thead>
@@ -40,7 +37,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface
     <tr>
       <td>
         附帶<a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups"
+          href="/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups"
           >彈出視窗</a
         >的工具列按鈕
       </td>
@@ -73,7 +70,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface
     <tr>
       <td>
         附帶<a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups"
+          href="/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups"
           >彈出視窗</a
         >的網址列按鈕
       </td>
@@ -90,7 +87,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface
     <tr>
       <td>
         <a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items"
+          href="/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items"
           >快捷選單</a
         >
       </td>
@@ -107,7 +104,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface
     <tr>
       <td>
         <a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars"
+          href="/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars"
           >側邊欄</a
         >
       </td>
@@ -121,7 +118,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface
     <tr>
       <td>
         <a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages"
+          href="/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages"
           >選項頁面</a
         >
       </td>
@@ -154,7 +151,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface
     <tr>
       <td>
         <a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Notifications"
+          href="/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Notifications"
           >通知</a
         >
       </td>
@@ -171,7 +168,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface
     <tr>
       <td>
         <a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Omnibox"
+          href="/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Omnibox"
           >網址列建議</a
         >
       </td>
@@ -186,7 +183,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface
     <tr>
       <td>
         <a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels"
+          href="/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels"
           >開發者工具面板</a
         >
       </td>
@@ -203,6 +200,6 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface
 
 下面是一些關於建立這些用戶介面的詳細教學：
 
-- [在工具列加入一個按鈕](/en-US/docs/Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar)
-- [建立設定頁面](/en-US/docs/Mozilla/Add-ons/WebExtensions/Implement_a_settings_page)
-- [擴充開發者工具](/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools)
+- [在工具列加入一個按鈕](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar)
+- [建立設定頁面](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Implement_a_settings_page)
+- [擴充開發者工具](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools)

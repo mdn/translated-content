@@ -1,15 +1,8 @@
 ---
 title: Window.sizeToContent()
 slug: Web/API/Window/sizeToContent
-tags:
-  - API
-  - HTML DOM
-  - メソッド
-  - リファレンス
-  - Window
-browser-compat: api.Window.sizeToContent
-translation_of: Web/API/Window/sizeToContent
 ---
+
 {{APIRef}}{{Non-standard_header}}
 
 **`Window.sizeToContent()`** メソッドは、ウィンドウの大きさを内容に合わせて変更します。動作するには、この関数が呼び出された時点で DOM コンテンツの読み込みが完了している必要があります。例えば、{{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} イベントが発行された後です。
@@ -19,7 +12,7 @@ Firefox 20 以降では、ウィンドウの最小サイズを制限すること
 ## 構文
 
 ```js
-sizeToContent()
+sizeToContent();
 ```
 
 ### 引数

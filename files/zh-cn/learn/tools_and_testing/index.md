@@ -1,16 +1,8 @@
 ---
 title: 工具和测试
 slug: Learn/Tools_and_testing
-tags:
-  - CSS
-  - HTML
-  - JavaScript
-  - 工具
-  - 测试
-  - 自动化
-  - 跨浏览器
-translation_of: Learn/Tools_and_testing
 ---
+
 {{LearnSidebar}}
 
 一旦你开始使用 web 的核心技术（如 HTML,CSS 和 Javascript）进行编程，并且开始获得更多的体验，读更多的资料，学习更多的提示和技巧，你就会遇到各种工具，从优化的 CSS 和 Javascript 到测试和自动化应用，再到其他更多的领域。当你的 web 项目变得更大更复杂，如果你希望利用一些工具为你的代码做出可靠的测试计划。本节教程旨在帮助你开始并做出明智的选择。
@@ -23,7 +15,7 @@ web 行业是个让人兴奋的地方，但它也有并发症。现在我们用�
 
 ## 学习途径
 
-尝试详细地使用这些工具之前，你首先应该学习 [HTML](/en-US/docs/Learn/HTML), [CSS](/en-US/docs/Learn/CSS)，和 [JavaScript](/en-US/docs/Learn/JavaScript) 的基础知识。比如，在你开始调试复杂 web 代码之前，你需要知道这些语言的基础知识，或者能有效地使用 Javascript 库，或者能够使用测试工具为你的代码编写和运行测试等等。
+尝试详细地使用这些工具之前，你首先应该学习 [HTML](/zh-CN/docs/Learn/HTML), [CSS](/zh-CN/docs/Learn/CSS)，和 [JavaScript](/zh-CN/docs/Learn/JavaScript) 的基础知识。比如，在你开始调试复杂 web 代码之前，你需要知道这些语言的基础知识，或者能有效地使用 Javascript 库，或者能够使用测试工具为你的代码编写和运行测试等等。
 
 首先你需要一个扎实的基础。
 

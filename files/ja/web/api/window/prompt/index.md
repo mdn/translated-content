@@ -1,17 +1,8 @@
 ---
 title: Window.prompt()
 slug: Web/API/Window/prompt
-tags:
-  - API
-  - HTML DOM
-  - MakeBrowserAgnostic
-  - メソッド
-  - リファレンス
-  - Window
-  - prompt
-browser-compat: api.Window.prompt
-translation_of: Web/API/Window/prompt
 ---
+
 {{ApiRef("Window")}}
 
 `window.prompt()` は、ユーザーにテキストを入力するように促すダイアログをオプションのメッセージと共に表示し、ユーザーがテキストを送信するかダイアログをキャンセルするまで待機するようにブラウザーに指示します。
@@ -48,7 +39,7 @@ if (sign.toLowerCase() == "scorpio") {
 
 // プロンプトの使い方には色々なものがあります。
 sign = window.prompt(); // 空のプロンプトを表示
-sign = prompt();       //  同上
+sign = prompt(); //  同上
 sign = window.prompt("元気にしてる ?"); // 「元気にしてる ?」の文字列入りで表示
 sign = window.prompt("元気にしてる ?", "元気だよ !"); // 「元気にしてる ?」 の文字列入りで、入力欄の初期値に「元気だよ !」を設定して表示
 ```

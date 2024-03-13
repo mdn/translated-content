@@ -1,17 +1,8 @@
 ---
 title: Intl.Locale.prototype.maximize()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/maximize
-tags:
-  - 国際化
-  - Intl
-  - JavaScript
-  - Locale
-  - メソッド
-  - プロトタイプ
-  - リファレンス
-browser-compat: javascript.builtins.Intl.Locale.maximize
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/maximize
 ---
+
 {{JSRef}}
 
 **`Intl.Locale.prototype.maximize()`** メソッドは、既存の値に基づいてロケールの言語、文字体系、地域の最も可能性の近い値を取得します。
@@ -21,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/maximize
 ## 構文
 
 ```js
-maximize()
+maximize();
 ```
 
 ### 返値
@@ -37,7 +28,7 @@ maximize()
 ### maximize の使用
 
 ```js
-let myLocale = new Intl.Locale("ja", {hourCycle: "h24", calendar: "gregory"});
+let myLocale = new Intl.Locale("ja", { hourCycle: "h24", calendar: "gregory" });
 console.log(myLocale.baseName); // "ja" と表示
 console.log(myLocale.toString()); // "ja-u-ca-gregory-hc-h24" と表示
 let myLocMaximized = myLocale.maximize();

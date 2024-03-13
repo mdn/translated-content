@@ -1,15 +1,8 @@
 ---
 title: handler.setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/setPrototypeOf
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Proxy
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/setPrototypeOf
-original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/setPrototypeOf
 ---
+
 {{JSRef}}
 
 La méthode **`handler.setPrototypeOf()`** est une trappe pour intercepter {{jsxref("Object.setPrototypeOf()")}}.
@@ -20,8 +13,7 @@ La méthode **`handler.setPrototypeOf()`** est une trappe pour intercepter {{jsx
 
 ```js
 var p = new Proxy(cible, {
-  setPrototypeOf: function(cible, prototype) {
-  }
+  setPrototypeOf: function (cible, prototype) {},
 });
 ```
 
@@ -59,16 +51,17 @@ Si les invariants suivants ne sont pas respectés, le proxy renverra une excepti
 
 Si on souhaite interdire la définition d'un nouveau prototype pour un objet, on peut utiliser une méthode `setPrototypeOf` qui renvoie `false` ou qui génère une exception.
 
-Avec cette première approche, toute opération qui voudra modifier le prototype génèrera une exception. On aura par exemple {{jsxref("Object.setPrototypeOf()")}} qui créera et lèvera l'exception `TypeError`. Si la modification est effectuée par une opération qui ne génère pas d'exception en cas d'échec (comme  {{jsxref("Reflect.setPrototypeOf()")}}), aucune exception ne sera générée.
+Avec cette première approche, toute opération qui voudra modifier le prototype génèrera une exception. On aura par exemple {{jsxref("Object.setPrototypeOf()")}} qui créera et lèvera l'exception `TypeError`. Si la modification est effectuée par une opération qui ne génère pas d'exception en cas d'échec (comme {{jsxref("Reflect.setPrototypeOf()")}}), aucune exception ne sera générée.
 
 ```js
 var handlerReturnsFalse = {
-    setPrototypeOf(target, newProto) {
-        return false;
-    }
+  setPrototypeOf(target, newProto) {
+    return false;
+  },
 };
 
-var newProto = {}, target = {};
+var newProto = {},
+  target = {};
 
 var p1 = new Proxy(target, handlerReturnsFalse);
 Object.setPrototypeOf(p1, newProto);
@@ -81,12 +74,13 @@ Avec cette seconde approche, toute tentative de modification génèrera une exce
 
 ```js
 var handlerThrows = {
-    setPrototypeOf(target, newProto) {
-        throw new Error("erreur custom");
-    }
+  setPrototypeOf(target, newProto) {
+    throw new Error("erreur custom");
+  },
 };
 
-var newProto = {}, target = {};
+var newProto = {},
+  target = {};
 
 var p2 = new Proxy(target, handlerThrows);
 Object.setPrototypeOf(p2, newProto);
@@ -97,14 +91,11 @@ Reflect.setPrototypeOf(p2, newProto);
 
 ## Spécifications
 
-| Spécification                                                                                                                                                    | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-setprototypeof-v', '[[SetPrototypeOf]]')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-setprototypeof-v', '[[SetPrototypeOf]]')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Proxy.handler.setPrototypeOf")}}
+{{Compat}}
 
 ## Voir aussi
 

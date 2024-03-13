@@ -1,15 +1,8 @@
 ---
 title: <display-box>
 slug: Web/CSS/display-box
-tags:
-  - CSS
-  - CSS データ型
-  - CSS 表示
-  - データ型
-  - リファレンス
-  - display-box
-translation_of: Web/CSS/display-box
 ---
+
 {{CSSRef}}
 
 これらのキーワードは、要素が表示ボックスを作るかどうかを定義します。
@@ -23,6 +16,7 @@ translation_of: Web/CSS/display-box
   - : これらの要素は自身のために特定のボックスを生成しません。擬似ボックスやその子ボックスで置き換えられます。なお、 CSS Display Level 3 仕様書では、 `contents` の値が「普通ではない要素」 — 置換要素のように、 CSS ボックスの純粋な概念に従って表示されない要素に影響する方法を定義しています。詳しくは [Appendix B: Effects of display: contents on Unusual Elements](https://drafts.csswg.org/css-display/#unbox) を参照してください。
 
     _ブラウザーのバグにより、現在のところ、この値を使用するとアクセシビリティツリーから要素を削除します。 — 読み上げソフトは中に何があるかを見ません。詳しくは後述の[アクセシビリティの考慮](#アクセシビリティの考慮)の節をご覧ください。_
+
 - `none`
   - : 要素の表示を無くし、レイアウトに影響を与えなくなります (文書は要素が存在しないかのように表示されます)。すべての子孫要素も表示がなくなります。
     要素が通常占める空間を確保しつつ、実際には何も表示しないようにしたいのであれば、代わりに {{CSSxRef("visibility")}} プロパティを使用してください。
@@ -91,15 +85,13 @@ p.secret {
 
 ## 仕様書
 
-| 仕様書                                                                            | 状態                           |
-| ---------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('CSS3 Display', '#typedef-display-box', 'display-box')}} | {{Spec2('CSS3 Display')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
 ### contents の対応
 
-{{Compat("css.properties.display.contents", 10)}}
+{{Compat}}
 
 ## 関連情報
 

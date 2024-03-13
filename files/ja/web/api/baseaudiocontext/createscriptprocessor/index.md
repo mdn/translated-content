@@ -1,28 +1,22 @@
 ---
 title: BaseAudioContext.createScriptProcessor()
 slug: Web/API/BaseAudioContext/createScriptProcessor
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - メソッド
-  - リファレンス
-  - ウェブ音声 API
-  - createScriptProcessor
-browser-compat: api.BaseAudioContext.createScriptProcessor
-translation_of: Web/API/BaseAudioContext/createScriptProcessor
-original_slug: Web/API/AudioContext/createScriptProcessor
 ---
+
 {{APIRef("Web Audio API")}}{{deprecated_header}}
 
 `createScriptProcessor()` は {{domxref("BaseAudioContext")}} インターフェイスのメソッドで、直接音声処理に用いられる {{domxref("ScriptProcessorNode")}} を生成します。
 
-> **Note:** この機能は [AudioWorklet](/ja/docs/Web/API/AudioWorklet) と {{domxref("AudioWorkletNode")}} インターフェイスに置き換えられました。
+> **メモ:** この機能は [AudioWorklet](/ja/docs/Web/API/AudioWorklet) と {{domxref("AudioWorkletNode")}} インターフェイスに置き換えられました。
 
 ## 構文
 
 ```js
-createScriptProcessor(bufferSize, numberOfInputChannels, numberOfOutputChannels)
+createScriptProcessor(
+  bufferSize,
+  numberOfInputChannels,
+  numberOfOutputChannels,
+);
 ```
 
 ### 引数
@@ -38,9 +32,9 @@ createScriptProcessor(bufferSize, numberOfInputChannels, numberOfOutputChannels)
 - `numberOfOutputChannels`
   - : 整数で、このノードの出力のチャンネル数を指定します。既定値は 2 です。
 
-> **Warning:** Webkit は現在（バージョン 31）、このメソッドを呼び出すときに有効な `bufferSize` を渡すことを要求しています。
+> **警告:** Webkit は現在（バージョン 31）、このメソッドを呼び出すときに有効な `bufferSize` を渡すことを要求しています。
 
-> **Note:** numberOfInputChannels` と `numberOfOutputChannels` の両方が 0 にするのは無効です。
+> **メモ:** numberOfInputChannels`と`numberOfOutputChannels` の両方が 0 にするのは無効です。
 
 ### 返値
 
@@ -50,12 +44,12 @@ createScriptProcessor(bufferSize, numberOfInputChannels, numberOfOutputChannels)
 
 次の例は、 {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}} によって読み込んだトラックを、入力トラック（バッファー）のそれぞれの音声サンプルにホワイトノイズを加えて処理し {{domxref("AudioDestinationNode")}} によって再生する `ScriptProcessorNode` の基本的な使用方法を示しています。各チャンネルと各サンプルフレームに対して、`scriptNode.onaudioprocess`関数は関連する `audioProcessingEvent` を受け取り、それを使って入力バッファの各チャンネルと各チャンネルの各サンプルを通してループし、少量のホワイトノイズを追加してからその結果を各ケースで出力サンプルとしてセットします。
 
-> **Note:** 完全な動作する例については、 GitHub の [script-processor-node](https://mdn.github.io/webaudio-examples/script-processor-node/) リポジトリを参照してください（[ソースコード](https://github.com/mdn/webaudio-examples/blob/master/script-processor-node/index.html)も見てください）。
+> **メモ:** 完全な動作する例については、 GitHub の [script-processor-node](https://mdn.github.io/webaudio-examples/script-processor-node/) リポジトリを参照してください（[ソースコード](https://github.com/mdn/webaudio-examples/blob/master/script-processor-node/index.html)も見てください）。
 
 ```js
-var myScript = document.querySelector('script');
-var myPre = document.querySelector('pre');
-var playButton = document.querySelector('button');
+var myScript = document.querySelector("script");
+var myPre = document.querySelector("pre");
+var playButton = document.querySelector("button");
 
 // Create AudioContext and buffer source
 var audioCtx = new AudioContext();
@@ -69,22 +63,27 @@ console.log(scriptNode.bufferSize);
 
 function getData() {
   request = new XMLHttpRequest();
-  request.open('GET', 'viper.ogg', true);
-  request.responseType = 'arraybuffer';
-  request.onload = function() {
+  request.open("GET", "viper.ogg", true);
+  request.responseType = "arraybuffer";
+  request.onload = function () {
     var audioData = request.response;
 
-    audioCtx.decodeAudioData(audioData, function(buffer) {
-      myBuffer = buffer;
-      source.buffer = myBuffer;
-    },
-    function(e){"Error with decoding audio data" + e.err});
-  }
+    audioCtx.decodeAudioData(
+      audioData,
+      function (buffer) {
+        myBuffer = buffer;
+        source.buffer = myBuffer;
+      },
+      function (e) {
+        "Error with decoding audio data" + e.err;
+      },
+    );
+  };
   request.send();
 }
 
 // Give the node a function to process audio events
-scriptNode.onaudioprocess = function(audioProcessingEvent) {
+scriptNode.onaudioprocess = function (audioProcessingEvent) {
   // The input buffer is the song we loaded earlier
   var inputBuffer = audioProcessingEvent.inputBuffer;
 
@@ -102,30 +101,30 @@ scriptNode.onaudioprocess = function(audioProcessingEvent) {
       outputData[sample] = inputData[sample];
 
       // add noise to each output sample
-      outputData[sample] += ((Math.random() * 2) - 1) * 0.2;
+      outputData[sample] += (Math.random() * 2 - 1) * 0.2;
     }
   }
-}
+};
 
 getData();
 
 // wire up play button
-playButton.onclick = function() {
+playButton.onclick = function () {
   source.connect(scriptNode);
   scriptNode.connect(audioCtx.destination);
   source.start();
-}
+};
 
 // When the buffer source stops playing, disconnect everything
-source.onended = function() {
+source.onended = function () {
   source.disconnect(scriptNode);
   scriptNode.disconnect(audioCtx.destination);
-}
+};
 ```
 
 ## 仕様書
 
-2014 年 8 月 29 日の[ウェブ音声 API 仕様書](https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createscriptprocessor)公開以降、この機能は非推奨となりました。標準化の目処が立たなくなりました。
+2014 年 8 月 29 日の[ウェブオーディオ API 仕様書](https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createscriptprocessor)公開以降、この機能は非推奨となりました。標準化の目処が立たなくなりました。
 
 これは [AudioWorklet](/ja/docs/Web/API/AudioWorklet) と {{domxref("AudioWorkletNode")}} インターフェイスに置き換えられました。
 
@@ -135,4 +134,4 @@ source.onended = function() {
 
 ## 関連情報
 
-- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

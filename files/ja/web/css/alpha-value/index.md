@@ -1,19 +1,8 @@
 ---
 title: <alpha-value>
 slug: Web/CSS/alpha-value
-tags:
-  - Alpha
-  - Alpha-value
-  - CSS
-  - CSS データ型
-  - CSS リファレンス
-  - データ型
-  - Example
-  - リファレンス
-  - 色
-spec-urls: https://drafts.csswg.org/css-color/#type-def-alpha-value
-translation_of: Web/CSS/alpha-value
 ---
+
 {{CSSRef}}
 
 **`<alpha-value>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)であり、 {{cssxref("&lt;number&gt;")}} または {{cssxref("&lt;percentage&gt;")}} によって色の **{{Glossary("alpha", "アルファチャネル")}}** または **透過性** を表します。
@@ -39,7 +28,7 @@ translation_of: Web/CSS/alpha-value
 ```css
 /* <rgba()> */
 color: rgba(34, 12, 64, 0.6);
-color: rgba(34.0 12 64 / 60%);
+color: rgba(34 12 64 / 60%);
 ```
 
 ### シェイプ画像の閾値の設定

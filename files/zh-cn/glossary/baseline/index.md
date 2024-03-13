@@ -1,21 +1,16 @@
 ---
 title: 基线
-slug: Glossary/baseline
-translation_of: Glossary/baseline
-original_slug: Glossary/基线
+slug: Glossary/Baseline
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
-**基线**是指欧洲和西亚文字排版中，用于在上面放置字符的一条假象的基准线。
 
-字符的降部比如 g 和 p 会向下超出基线，带弧形的会向上和向下扩展的字形（ {{Glossary("glyph", "Glyphs")}} ），比如 C 或 3 会略微向下超出基线。
+{{GlossarySidebar}}
 
-东亚文字没有基线，他们的字形放置在方盒子，没有升部和降部。
+根据语境的不同，**基线**（baseline）一词有多种含义。它可以指：
 
-## 学习更多
+{{GlossaryDisambiguation}}
 
-### 基本知识
+## 参见
 
-- 维基百科上的基线 [Baseline](<https://en.wikipedia.org/wiki/Baseline_(typography)>)
-
-### 技术参考
-
-- MDN 上的 CSS 盒对齐 [CSS Box Alignment](/zh-CN/docs/Web/CSS/CSS_Box_Alignment#Types_of_alignment)
+- 维基百科上的 [Baseline](https://en.wikipedia.org/wiki/Baseline) 词条

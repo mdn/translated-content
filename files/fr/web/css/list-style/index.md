@@ -1,9 +1,8 @@
 ---
 title: list-style
 slug: Web/CSS/list-style
-translation_of: Web/CSS/list-style
-browser-compat: css.properties.list-style
 ---
+
 {{CSSRef}}
 
 La propriété **`list-style`** est une [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) qui permet de définir [`list-style-type`](/fr/docs/Web/CSS/list-style-type), [`list-style-image`](/fr/docs/Web/CSS/list-style-image) et [`list-style-position`](/fr/docs/Web/CSS/list-style-position).
@@ -27,7 +26,7 @@ Cette propriété est une propriété raccourcie pour les propriétés CSS&nbsp;
 list-style: square;
 
 /* Image */
-list-style: url('../img/etoile.png');
+list-style: url("../img/etoile.png");
 
 /* Position */
 list-style: inside;
@@ -36,8 +35,7 @@ list-style: inside;
 list-style: georgian inside;
 
 /* type | image | position */
-list-style: lower-roman url('../img/etoile.png') outside;
-
+list-style: lower-roman url("../img/etoile.png") outside;
 
 /* Valeur avec un mot-clé */
 list-style: none;
@@ -83,13 +81,15 @@ ul li::before {
 Une autre approche consiste à affecter une valeur `url` à la propriété `list-style`&nbsp;:
 
 ```css
-nav ol, nav ul {
+nav ol,
+nav ul {
   list-style: none;
 }
 
 /* cela devient : */
 
-nav ol, nav ul {
+nav ol,
+nav ul {
   list-style: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E");
 }
 ```

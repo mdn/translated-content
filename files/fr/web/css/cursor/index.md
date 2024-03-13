@@ -1,9 +1,8 @@
 ---
 title: cursor
 slug: Web/CSS/cursor
-translation_of: Web/CSS/cursor
-browser-compat: css.properties.cursor
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`cursor`** définit la forme du curseur (s'il y en a un) lorsque le pointeur est au-dessus de l'élément.
@@ -21,8 +20,12 @@ cursor: auto;
 cursor: url(hand.cur), pointer;
 
 /* Une valeur d'URL avec des coordonnées et un mot-clé par défaut */
-cursor: url(cursor1.png) 4 12, auto;
-cursor: url(cursor2.png) 2 2, pointer;
+cursor:
+  url(cursor1.png) 4 12,
+  auto;
+cursor:
+  url(cursor2.png) 2 2,
+  pointer;
 
 /* Valeurs globales */
 cursor: inherit;
@@ -37,7 +40,10 @@ Chaque `<url>` peut éventuellement être suivi par un couple de nombres sépar�
 Par exemple, on peut indiquer deux images grâce à deux valeurs `<url>` et fournir des coordonnées `<x><y>` pour la deuxième. Si aucune des images n'a pu être chargée, on recourt au mot-clé `progress` :
 
 ```css
-cursor: url(one.svg), url(two.svg) 5 5, progress;
+cursor:
+  url(one.svg),
+  url(two.svg) 5 5,
+  progress;
 ```
 
 ### Valeurs
@@ -349,9 +355,13 @@ cursor: url(one.svg), url(two.svg) 5 5, progress;
       </tbody>
     </table>
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Notes d'utilisation
 
@@ -380,13 +390,9 @@ Pour plus d'informations, voir le tableau de compatibilité ci-après.
 ### HTML
 
 ```html
-<p class="toto">
-  On dirait qu'on pourrait sélectionner une zone.
-</p>
+<p class="toto">On dirait qu'on pourrait sélectionner une zone.</p>
 
-<p class="truc">
-  Et là on peut zoomer.
-</p>
+<p class="truc">Et là on peut zoomer.</p>
 ```
 
 ### Résultat
@@ -395,12 +401,7 @@ Pour plus d'informations, voir le tableau de compatibilité ci-après.
 
 ## Spécifications
 
-| Spécification                                                                | État                                 | Commentaires                                                                  |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ----------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Basic UI', '#cursor', 'cursor')}}         | {{Spec2('CSS3 Basic UI')}} | Ajout de plusieurs mots-clés et de la syntaxe de positionnement pour `url()`. |
-| {{SpecName('CSS2.1', 'ui.html#cursor-props', 'cursor')}} | {{Spec2('CSS2.1')}}             | Définition initiale.                                                          |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 

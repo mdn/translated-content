@@ -1,20 +1,8 @@
 ---
 title: FileSystemFileEntry.createWriter()
 slug: Web/API/FileSystemFileEntry/createWriter
-page-type: web-api-instance-method
-tags:
-  - API
-  - ファイルとディレクトリー項目 API
-  - FileSystemFileEntry
-  - Files
-  - メソッド
-  - 標準外
-  - リファレンス
-  - createWriter
-  - 非推奨
-browser-compat: api.FileSystemFileEntry.createWriter
-translation_of: Web/API/FileSystemFileEntry/createWriter
 ---
+
 {{APIRef("File and Directories Entries API")}}{{deprecated_header}}{{Non-standard_header}}
 
 {{domxref("FileSystemFileEntry")}} インターフェイスの **`createWriter()`** メソッドは、ディレクトリー項目によって表現されるファイルにデータを書き込むために使用します。
@@ -22,8 +10,8 @@ translation_of: Web/API/FileSystemFileEntry/createWriter
 ## 構文
 
 ```js
-createWriter(successCallback)
-createWriter(successCallback, errorCallback)
+createWriter(successCallback);
+createWriter(successCallback, errorCallback);
 ```
 
 ### 引数
@@ -43,13 +31,16 @@ createWriter(successCallback, errorCallback)
 
 ```js
 function writeToFileEntry(entry, text) {
-  entry.createWriter(function(fileWriter) {
-    let data = Blob([text], { type: "text/plain" });
+  entry.createWriter(
+    function (fileWriter) {
+      let data = Blob([text], { type: "text/plain" });
 
-    fileWriter.write(data);
-  }, function(fileError) {
-    /* do whatever to handle the error */
-  });
+      fileWriter.write(data);
+    },
+    function (fileError) {
+      /* do whatever to handle the error */
+    },
+  );
 }
 ```
 

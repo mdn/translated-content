@@ -1,14 +1,8 @@
 ---
 title: scroll-margin-inline
 slug: Web/CSS/scroll-margin-inline
-tags:
-  - CSS
-  - Propriété
-  - Propriété logique
-  - Propriété raccourcie
-  - Reference
-translation_of: Web/CSS/scroll-margin-inline
 ---
+
 {{CSSRef}}
 
 La propriété **`scroll-margin-inline`** est une propriété raccourcie logique qui définit les marges de défilement sur l'axe de bloc (i.e. les propriétés logiques `scroll-margin-inline-start` et `scroll-margin-inline-end`).
@@ -21,7 +15,7 @@ Les valeurs des marges de défilement correspondent aux décalages entre la zone
 /* Valeurs de longueur */
 /* Type <length> */
 scroll-margin-inline: 10px;
-scroll-margin-inline: 1em .5em;
+scroll-margin-inline: 1em 0.5em;
 
 /* Valeurs globales */
 scroll-margin-inline: inherit;
@@ -34,18 +28,18 @@ scroll-margin-inline: unset;
 - `<length>`
   - : Un décalage par rapport au côté correspondant du conteneur de défilement.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Spécifications
 
-| Spécification                                                                                                                    | État                                             | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Scroll Snap Points", "#propdef-scroll-margin-inline", "scroll-margin-inline")}} | {{Spec2("CSS Scroll Snap Points")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.scroll-margin-inline")}}
+{{Compat}}

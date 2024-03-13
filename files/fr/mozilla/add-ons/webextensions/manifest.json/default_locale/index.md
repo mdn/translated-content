@@ -1,12 +1,8 @@
 ---
 title: default_locale
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/default_locale
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/default_locale
 ---
+
 {{AddonSidebar}}
 
 <table class="standard-table">
@@ -41,6 +37,6 @@ Voir [Internationalisation](/fr/Add-ons/WebExtensions/Internationalization).
 "default_locale": "fr"
 ```
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.default_locale")}}
+{{Compat}}

@@ -1,15 +1,8 @@
 ---
 title: Window.mozInnerScreenX
 slug: Web/API/Window/mozInnerScreenX
-tags:
-  - API
-  - HTML DOM
-  - NeedsSpecTable
-  - Propriété
-  - Reference
-  - Window
-translation_of: Web/API/Window/mozInnerScreenX
 ---
+
 {{APIRef}}
 
 ## Résumé
@@ -35,9 +28,9 @@ Ne fait partie d'aucune spécification ou recommandation technique du W3C.
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.mozInnerScreenX")}}
+{{Compat}}
 
-## Voir également
+## Voir aussi
 
 - {{domxref("window.mozInnerScreenY")}}
-- [`nsIDOMWindowUtils.screenPixelsPerCSSPixel`](/en-US/docs/XPCOM_Interface_Reference/nsIDOMWindowUtils)
+- [`nsIDOMWindowUtils.screenPixelsPerCSSPixel`](/fr/docs/XPCOM_Interface_Reference/nsIDOMWindowUtils)

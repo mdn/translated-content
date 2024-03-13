@@ -1,28 +1,9 @@
 ---
 title: Formats de date et d'heure utilisés en HTML
 slug: Web/HTML/Date_and_time_formats
-tags:
-  - Date
-  - Element
-  - Format
-  - HTML
-  - ISO 8601
-  - Input
-  - Reference
-  - String
-  - Time
-  - Week
-  - datetime
-  - datetime-local
-  - del
-  - ins
-  - month
-  - month-year
-  - week-year
-translation_of: Web/HTML/Date_and_time_formats
-original_slug: Web/HTML/Formats_date_heure_HTML
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 Certains éléments HTML manipulent des valeurs temporelles pour des dates ou des heures. Les formats utilisés pour les chaînes de caractères qui définissent ces valeurs sont décrits dans cet article. Les éléments qui utilisent ces données sont notamment les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) qui permettent de choisir une date, une heure ou les deux, les éléments [`<ins>`](/fr/docs/Web/HTML/Element/ins) et [`<del>`](/fr/docs/Web/HTML/Element/del) dont l'attribut [`ins`](/fr/docs/Web/HTML/Element/ins#attr-datetime) indique la date (ou la date et l'heure) à laquelle l'ajout ou la suppression de contenu a eu lieu.
 
@@ -134,7 +115,7 @@ En HTML, les chaînes qui représentent des dates et des heures manipulent uniqu
 
 ### Numérotation des années
 
-La spécification HTML indique que les années doivent être exprimées selon le [calendrier grégorien](https://fr.wikipedia.org/wiki/Calendrier_gr%C3%A9gorien). Bien que les interfaces utilisateur permettent éventuellement de saisir des dates grâce à d'autres calendriers, la valeur sous-jacente est toujours représentée à l'aide du calendrier grégorien.
+La spécification HTML indique que les années doivent être exprimées selon le [calendrier grégorien](https://fr.wikipedia.org/wiki/Calendrier_grégorien). Bien que les interfaces utilisateur permettent éventuellement de saisir des dates grâce à d'autres calendriers, la valeur sous-jacente est toujours représentée à l'aide du calendrier grégorien.
 
 Bien que le calendrier grégorien ait été créé en 1582 afin de remplacer le calendrier julien, la notation grégorienne est « étendue » en HTML jusqu'à 1 après J.C. Aussi, si vous manipulez des dates antérieures à 1582, assurez-vous qu'elles soient bien exprimées selon le calendrier grégorien.
 
@@ -295,7 +276,7 @@ Une chaîne de caractères représentant une heure peut décrire différentes pr
 
 Voici quelques règles supplémentaires :
 
-- L'heure est toujours exprimée selon une horloge sur 24 heures où `00` correspond à minuit et où `23` correspond à onze heures du soir. Aucune valeur en dehors de l'intervalle `00`-`23` n'est autorisée.
+- L'heure est toujours exprimée selon une horloge sur 24 heures où `00` correspond à minuit et où `23` correspond à onze heures du soir. Aucune valeur en dehors de l'intervalle `00` - `23` n'est autorisée.
 - La valeur représentant les minutes doit être composée de deux chiffres et être située entre `00` et `59`. Les valeurs en dehors de cet intervalle ne sont pas autorisées.
 - Si les secondes ne sont pas exprimées, il ne faut pas que la valeur se termine par un deux-points (après les minutes).
 - Si les secondes sont exprimées, leur nombre doit être entre `00` et `59`. Il n'est pas possible d'indiquer des secondes intercalaires à l'aide de valeurs telles que `60` ou `61`.

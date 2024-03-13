@@ -1,12 +1,8 @@
 ---
 title: hyphens
 slug: Web/CSS/hyphens
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/hyphens
 ---
+
 {{CSSRef}}
 
 La propriété **`hyphens`** indique au navigateur comment gérer les traits d'union lors des sauts de ligne. Grâce à elle, on peut empêcher l'utilisation des traits d'union en fin de ligne, contrôler quand ils sont ajoutés ou laisser le navigateur décider.
@@ -42,9 +38,13 @@ hyphens: unset;
 
 > **Note :** Le comportement défini par `auto` dépend de la langue indiquée par le document. Aussi, il faut indiquer la langue via l'attribut HTML `lang` pour s'assurer que les fins de ligne et les traits d'union sont bien gérés selon la langue indiquée.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Suggérer des emplacements de coupe pour les lignes
 
@@ -65,7 +65,7 @@ Dans cet exemple, on crée trois classes CSS pour illustrer chacune des configur
 p {
   width: 55px;
   border: 1px solid black;
- }
+}
 p.none {
   -webkit-hyphens: none;
   -ms-hyphens: none;
@@ -87,13 +87,17 @@ p.auto {
 
 ```html
 <ul>
-  <li><code>none</code>: aucun trait d'union, dépassement si nécessaire
+  <li>
+    <code>none</code>: aucun trait d'union, dépassement si nécessaire
     <p lang="en" class="none">An extreme&shy;ly long English word</p>
   </li>
-  <li><code>manual</code>: un trait d'union uniquement à &amp;hyphen; ou &amp;shy; (si nécessaire)
+  <li>
+    <code>manual</code>: un trait d'union uniquement à &amp;hyphen; ou &amp;shy;
+    (si nécessaire)
     <p lang="en" class="manual">An extreme&shy;ly long English word</p>
   </li>
-  <li><code>auto</code>: un trait d'union où l'algorithme l'estime nécessaire
+  <li>
+    <code>auto</code>: un trait d'union où l'algorithme l'estime nécessaire
     <p lang="en" class="auto">An extreme&shy;ly long English word</p>
   </li>
 </ul>
@@ -105,15 +109,11 @@ p.auto {
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaires         |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName("CSS3 Text", "#hyphens-property", "hyphens")}} | {{Spec2("CSS3 Text")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.hyphens")}}
+{{Compat}}
 
 ## Voir aussi
 

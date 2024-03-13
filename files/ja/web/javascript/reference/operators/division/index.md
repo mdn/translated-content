@@ -1,14 +1,8 @@
 ---
 title: 除算 (/)
 slug: Web/JavaScript/Reference/Operators/Division
-tags:
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Reference
-browser-compat: javascript.operators.division
-translation_of: Web/JavaScript/Reference/Operators/Division
 ---
+
 {{jsSidebar("Operators")}}
 
 除算演算子 (`/`) は、左のオペランドを被除数とし、右のオペランドを除数としたオペランド同士の除算結果を生成します。
@@ -18,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Operators/Division
 ## 構文
 
 ```js
-x / y
+x / y;
 ```
 
 ## 例
@@ -26,21 +20,21 @@ x / y
 ### 基本的な除算
 
 ```js
-1 / 2              // 0.5
+1 / 2; // 0.5
 
-Math.floor(3 / 2) // 1
+Math.floor(3 / 2); // 1
 
-1.0 / 2.0         // 0.5
+1.0 / 2.0; // 0.5
 ```
 
 ### ゼロ除算
 
 ```js
-2.0 / 0     // Infinity
+2.0 / 0; // Infinity
 
-2.0 / 0.0   // Infinity。 0.0 === 0 であるため
+2.0 / 0.0; // Infinity。 0.0 === 0 であるため
 
-2.0 / -0.0  // -Infinity
+2.0 / -0.0; // -Infinity
 ```
 
 ## 仕様書

@@ -1,16 +1,8 @@
 ---
 title: Map.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Map/@@iterator
-tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Map
-  - Method
-  - Prototype
-  - Reference
-browser-compat: javascript.builtins.Map.@@iterator
 ---
+
 {{JSRef}}
 
 <p class="seoSummary">O valor inicial da propriedade <strong><code>@@iterator</code></strong>
@@ -22,47 +14,47 @@ browser-compat: javascript.builtins.Map.@@iterator
 ## Sintaxe
 
 ```js
-myMap[Symbol.iterator]
+myMap[Symbol.iterator];
 ```
 
 ### Valor retornado
 
-A função iterativa do map, que é a {{jsxref("Map.prototype.entries()", "entries()")}}  por padrão
+A função iterativa do map, que é a {{jsxref("Map.prototype.entries()", "entries()")}} por padrão
 
 ## Exemplos
 
 ### Usando o \[@@iterator]\()
 
 ```js
-const myMap = new Map()
-myMap.set('0', 'foo')
-myMap.set(1, 'bar')
-myMap.set({}, 'baz')
+const myMap = new Map();
+myMap.set("0", "foo");
+myMap.set(1, "bar");
+myMap.set({}, "baz");
 
-const mapIter = myMap[Symbol.iterator]()
+const mapIter = myMap[Symbol.iterator]();
 
-console.log(mapIter.next().value) // ["0", "foo"]
-console.log(mapIter.next().value) // [1, "bar"]
-console.log(mapIter.next().value) // [Object, "baz"]
+console.log(mapIter.next().value); // ["0", "foo"]
+console.log(mapIter.next().value); // [1, "bar"]
+console.log(mapIter.next().value); // [Object, "baz"]
 ```
 
 ### Usando o \[@@iterator]\() com for..of
 
 ```js
-const myMap = new Map()
-myMap.set('0', 'foo')
-myMap.set(1, 'bar')
-myMap.set({}, 'baz')
+const myMap = new Map();
+myMap.set("0", "foo");
+myMap.set(1, "bar");
+myMap.set({}, "baz");
 
 for (const entry of myMap) {
-  console.log(entry)
+  console.log(entry);
 }
 // ["0", "foo"]
 // [1, "bar"]
 // [{}, "baz"]
 
 for (const [key, value] of myMap) {
-  console.log(`${key}: ${value}`)
+  console.log(`${key}: ${value}`);
 }
 // 0: foo
 // 1: bar

@@ -1,14 +1,8 @@
 ---
 title: PUT
 slug: Web/HTTP/Methods/PUT
-tags:
-  - HTTP
-  - Reference
-  - Request method
-translation_of: Web/HTTP/Methods/PUT
-original_slug: Web/HTTP/Méthode/PUT
-browser-compat: http.methods.PUT
 ---
+
 {{HTTPSidebar}}
 
 La **méthode HTTP PUT** crée une nouvelle ressource ou remplace une représentation de la ressource ciblée par le contenu de la requête.

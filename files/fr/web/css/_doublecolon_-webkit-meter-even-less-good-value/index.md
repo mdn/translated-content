@@ -1,13 +1,8 @@
 ---
-title: '::-webkit-meter-even-less-good-value'
+title: "::-webkit-meter-even-less-good-value"
 slug: Web/CSS/::-webkit-meter-even-less-good-value
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-element
-  - Reference
-translation_of: Web/CSS/::-webkit-meter-even-less-good-value
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 Le pseudo-élément **`::-webkit-meter-even-less-good-value`** donne une couleur rouge à l'élément {{HTMLElement("meter")}} lorsque les valeurs de `value` et d'optimum sont dans des intervalles opposés (par exemple : `value` < `low` < `high` < `optimum` ou `value` > `high` > `low` > `optimum`).
@@ -42,7 +37,7 @@ Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink e
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.-webkit-meter-even-less-good-value")}}
+{{Compat}}
 
 ## Voir aussi
 

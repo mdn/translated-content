@@ -1,16 +1,8 @@
 ---
-title: '-webkit-mask-position-x'
+title: "-webkit-mask-position-x"
 slug: Web/CSS/-webkit-mask-position-x
-tags:
-  - CSS
-  - CSS マスク
-  - CSS プロパティ
-  - 標準外
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.-webkit-mask-position-x
-translation_of: Web/CSS/-webkit-mask-position-x
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 `-webkit-mask-position-x` は CSS のプロパティで、マスク画像の初期の水平方向の位置を設定します。
@@ -30,7 +22,10 @@ translation_of: Web/CSS/-webkit-mask-position-x
 -webkit-mask-position-x: -1cm;
 
 /* 複数の値 */
--webkit-mask-position-x: 50px, 25%, -3em;
+-webkit-mask-position-x:
+  50px,
+  25%,
+  -3em;
 
 /* グローバル値 */
 -webkit-mask-position-x: inherit;

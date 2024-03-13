@@ -1,15 +1,8 @@
 ---
 title: scripting
 slug: Web/CSS/@media/scripting
-tags:
-  - '@media'
-  - CSS
-  - メディアクエリー
-  - リファレンス
-  - メディア特性
-browser-compat: css.at-rules.media.scripting
-translation_of: Web/CSS/@media/scripting
 ---
+
 {{CSSRef}}
 
 **`scripting`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、 (JavaScript などの) スクリプトが利用できるかどうかを調べるために使用することができます。
@@ -31,7 +24,9 @@ translation_of: Web/CSS/@media/scripting
 
 ```html
 <p class="script-none">スクリプトは利用できません。 :-(</p>
-<p class="script-initial-only">スクリプトはページを読み込んでいる間だけ有効です。残念。</p>
+<p class="script-initial-only">
+  スクリプトはページを読み込んでいる間だけ有効です。残念。
+</p>
 <p class="script-enabled">スクリプトは有効です。 :-)</p>
 ```
 
@@ -44,7 +39,7 @@ p {
 
 @media (scripting: none) {
   .script-none {
-     color: red;
+    color: red;
   }
 }
 

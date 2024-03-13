@@ -1,12 +1,8 @@
 ---
 title: Event.defaultPrevented
 slug: Web/API/Event/defaultPrevented
-tags:
-  - Property
-  - Read-only
-browser-compat: api.Event.defaultPrevented
-translation_of: Web/API/Event/defaultPrevented
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("Event")}} 인터페이스의 **`defaultPrevented`** 읽기 전용 속성은 {{domxref("Event.preventDefault()")}}로 이 이벤트를 취소했는지 나타내는 불리언 값을 반환합니다.
@@ -35,21 +31,21 @@ function stopLink(event) {
 }
 
 function logClick(event) {
-  const log = document.getElementById('log');
+  const log = document.getElementById("log");
 
-  if (event.target.tagName === 'A') {
+  if (event.target.tagName === "A") {
     if (event.defaultPrevented) {
-      log.innerText = '죄송합니다. 이 링크는 방문할 수 없습니다.\n' + log.innerText;
-    }
-    else {
-      log.innerText = '링크 방문 중...\n' + log.innerText;
+      log.innerText =
+        "죄송합니다. 이 링크는 방문할 수 없습니다.\n" + log.innerText;
+    } else {
+      log.innerText = "링크 방문 중...\n" + log.innerText;
     }
   }
 }
 
-const a = document.getElementById('link2');
-a.addEventListener('click', stopLink);
-document.addEventListener('click', logClick);
+const a = document.getElementById("link2");
+a.addEventListener("click", stopLink);
+document.addEventListener("click", logClick);
 ```
 
 ### 결과

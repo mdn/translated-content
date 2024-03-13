@@ -1,50 +1,36 @@
 ---
 title: IntersectionObserverEntry.target
 slug: Web/API/IntersectionObserverEntry/target
-tags:
-  - API
-  - Intersection Observer
-  - IntersectionObserver
-  - Propriété
-  - target
-translation_of: Web/API/IntersectionObserverEntry/target
+l10n:
+  sourceCommit: d9026c37acaf22da682206c381686fe8a4666f16
 ---
-{{APIRef("Intersection Observer API")}}{{SeeCompatTable}}
 
-La propriété en lecture seule **`target`** de l'interface {{domxref("IntersectionObserverEntry")}} indique quel {{domxref("Element")}} ciblé a changé sa proportion d'intersection avec l'élément racine.
+{{APIRef("Intersection Observer API")}}
 
-## Syntaxe
+La propriété en lecture seule **`target`**, rattachée à l'interface [`IntersectionObserverEntry`](/fr/docs/Web/API/IntersectionObserverEntry) indique [l'élément](/fr/docs/Web/API/Element) ciblé pour lequel la proportion d'intersection avec la racine d'intersection a changé.
 
-```js
-var target = IntersectionObserverEntry.target;
-```
+## Valeur
 
-### Valeur
+La propriété `target` de `IntersectionObserverEntry` indique [l'élément](/fr/docs/Web/API/Element) précédemment ciblé en appelant [`IntersectionObserver.observe()`](/fr/docs/Web/API/IntersectionObserver/observe) pour lequel un changement d'intersection avec la racine a eu lieu.
 
-La propriété `target` de l'`IntersectionObserverEntry` spécifie quel {{domxref("Element")}} précédemment ciblé par l'appel à {{domxref("IntersectionObserver.observe()")}} dont l'intersection avec la racine a changé.
+## Exemples
 
-## Exemple
-
-Dans cet exemple, la valeur de la propriété CSS {{cssxref("opacity")}} de chaque élément cible vaut son {{domxref("IntersectionObserverEntry.intersectionRatio", "intersectionRatio")}}.
+Dans cet exemple simple, chaque élément ciblé voit son [opacité](/fr/docs/Web/CSS/opacity) paramétrée avec la valeur de [`intersectionRatio`](/fr/docs/Web/API/IntersectionObserverEntry/intersectionRatio).
 
 ```js
 function intersectionCallback(entries) {
-  entries.forEach(function(entry) {
+  entries.forEach((entry) => {
     entry.target.opacity = entry.intersectionRatio;
   });
 }
 ```
 
-Ainsi, l'élément devient visible seulement lorsqu'il est entièrement visible, c'est-à-dire que la zone qu'il couvre est contenue dans celle de la racine. Autrement, son opacité diminue graduellement avec sa proportion d'intersection avec son élément racine.
-
-Pour voir un exemple plus concret, vous pouvez vous renseigner sur l'{{SectionOnPage("/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility", "Handling intersection changes")}}.
+Pour un exemple plus concret, voir [Gérer les changements d'intersection](/fr/docs/Web/API/Intersection_Observer_API/Timing_element_visibility#gerer_les_changements_dintersection).
 
 ## Spécifications
 
-| Spécification                                                                                                                                            | Statut                                       | Commentaire         |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------- |
-| {{SpecName('IntersectionObserver', '#dom-intersectionobserverentry-target', 'IntersectionObserverEntry.target')}} | {{Spec2('IntersectionObserver')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IntersectionObserverEntry.target")}}
+{{Compat}}

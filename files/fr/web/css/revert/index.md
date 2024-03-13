@@ -1,13 +1,8 @@
 ---
 title: revert
 slug: Web/CSS/revert
-tags:
-  - CSS
-  - Cascade
-  - Mot-clé
-  - Reference
-translation_of: Web/CSS/revert
 ---
+
 {{CSSRef}}
 
 Le mot-clé **`revert`** permet de _remonter_ la cascade afin que la propriété puisse prendre la valeur qui aurait été utilisée sans mise en forme particulière (la valeur qu'elle aurait eu sans mise en forme appliquée par la feuille de style de l'auteur, de l'utilisateur ou de l'agent utilisateur). Ainsi, si la propriété hérite de son parent, elle prendra la valeur héritée et sinon la valeur par défaut de l'agent utilisateur (ou de la feuille de style utilisateur).
@@ -83,16 +78,11 @@ h3 {
 <h3 style="font-weight: unset; color: unset;">
   Ceci aura toujours font-weight: normal mais color: black
 </h3>
-<p>
-  Juste un peu de texte
-</p>
+<p>Juste un peu de texte</p>
 <h3 style="font-weight: revert; color: revert;">
-  Ceci devrait avoir font-weight: bold (la valeur originale)
-  et color: black
+  Ceci devrait avoir font-weight: bold (la valeur originale) et color: black
 </h3>
-<p>
- Juste un peu de texte
-</p>
+<p>Juste un peu de texte</p>
 ```
 
 #### Résultat
@@ -116,18 +106,12 @@ h3 {
 #### HTML
 
 ```html
-<h3>
-  Un style spécifique
-</h3>
-<p>
-  Juste un peu de texte
-</p>
+<h3>Un style spécifique</h3>
+<p>Juste un peu de texte</p>
 <h3 style="all: revert">
   Retour aux réglages par défaut pour toutes les propriétés
 </h3>
-<p>
-  Juste un peu de texte
-</p>
+<p>Juste un peu de texte</p>
 ```
 
 #### Résultat
@@ -175,13 +159,11 @@ On voit ici que le paragraphe reste en rouge malgré l'utilisation de `revert` p
 
 ## Spécifications
 
-| Spécification                                                        | Statut                           | Commentaires         |
-| -------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('CSS4 Cascade', '#default', 'revert')}} | {{Spec2('CSS4 Cascade')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.types.global_keywords.revert")}}
+{{Compat}}
 
 ## Voir aussi
 

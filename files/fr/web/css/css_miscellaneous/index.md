@@ -1,12 +1,8 @@
 ---
 title: CSS Miscellaneous
-slug: Web/CSS/CSS_Miscellaneous
-tags:
-  - Aperçu
-  - CSS
-  - Reference
-translation_of: Web/CSS/CSS_Miscellaneous
+slug: Web/CSS/CSS_miscellaneous
 ---
+
 {{CSSRef}}
 
 Cette page regroupe des propriétés CSS qui sont hautement expérimentales ou qui ne rentrent dans aucune autre catégorie.

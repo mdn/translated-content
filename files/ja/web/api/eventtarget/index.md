@@ -1,12 +1,10 @@
 ---
 title: EventTarget
 slug: Web/API/EventTarget
-tags:
-  - インターフェイス
-  - リファレンス
-browser-compat: api.EventTarget
-translation_of: Web/API/EventTarget
+l10n:
+  sourceCommit: 049632675ccb83fe2e257c43071d366d3f80ee2b
 ---
+
 {{ApiRef("DOM")}}
 
 **`EventTarget`** インターフェイスは、イベントを受け取ることや、リスナーを持つことができるオブジェクトが実装します。
@@ -23,7 +21,7 @@ translation_of: Web/API/EventTarget
 - {{domxref("EventTarget.EventTarget()","EventTarget()")}}
   - : 新しい `EventTarget` オブジェクトのインスタンスを作成します。
 
-## メソッド
+## インスタンスメソッド
 
 - {{domxref("EventTarget.addEventListener()")}}
   - : 特定のイベント種別のイベントハンドラーを `EventTarget` に登録します。

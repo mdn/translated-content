@@ -1,15 +1,8 @@
 ---
 title: Vue 入門
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started
-tags:
-  - Beginner
-  - Frameworks
-  - Installation
-  - JavaScript
-  - Learn
-  - client-side
-  - vue
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 現在來介紹我們的第三個框架 Vue 。在這篇文章中，我們會介紹 Vue 的背景，如何安裝 Vue 及建立一個新專案，學習整個 Vue 專案的高階架構及一個獨立的元件，學習如何在本地端運行專案，以及開始建構我們的範例。
@@ -46,7 +39,7 @@ tags:
 
 ## 更了解 Vue
 
-Vue 是一個新穎的 Javascript 框架，它提供了很多有用的功能來達到漸進增強（ progressive enhancement ）的策略。與其他的框架不同的是，你可以把 Vue 和既有的 HTML 做整合，這讓你可以像使用插入性替換的函式庫一樣來使用 Vue ，就像使用 [JQuery](/zh-TW/docs/Glossary/jQuery) 一樣。
+Vue 是一個新穎的 Javascript 框架，它提供了很多有用的功能來達到漸進增強（ progressive enhancement ）的策略。與其他的框架不同的是，你可以把 Vue 和既有的 HTML 做整合，這讓你可以像使用插入性替換的函式庫一樣來使用 Vue ，就像使用 [JQuery](https://jquery.com/) 一樣。
 
 除此之外，你也可以使用 Vue 來寫一個單頁式應用程式。這讓你可以完全使用 Vue 來建構網頁，當處理較複雜的應用時有較好的開發效率及體驗。 Vue 也有提供函式庫來做客戶端路由及狀態管理。 Vue 對客戶端路由及狀態管理這些工具採取中間立場的態度，雖然 Vue 的核心團隊推薦使用這些函式庫，但是這些函式庫沒有直接打包進 Vue，而是讓你可以自由選擇使用其他更適合你的應用的路由庫或狀態管理庫。
 
@@ -73,8 +66,8 @@ Vue 是一個新穎的 Javascript 框架，它提供了很多有用的功能來�
 
 然而，以上方法有一些限制。若要建置一些較複雜的應用程式，你將需要使用 [Vue NPM 套件](https://www.npmjs.com/package/vue)。 這讓你可以使用 Vue 的進階功能且可以使用打包器像是 WebPack。為了讓使用 Vue 建置應用程式變得更容易，可以使用 CLI 來精簡化開發流程。如果要使用 npm 套件 & CLI ，你將需要：
 
-1.  安裝 Node.js 8.11+
-2.  npm 或 yarn
+1. 安裝 Node.js 8.11+
+2. npm 或 yarn
 
 > **備註：** 如果你沒有安裝以上工具，請參考[關於安裝 npm 及 Node.js](/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#adding_powerups) 。
 
@@ -98,50 +91,22 @@ yarn global add @vue/cli
 
 為了探索 Vue 各式各樣的功能，我們將會製作一個待辦事項應用程式。我們將使用 Vue CLI 來創造一個新專案框架來建構我們的應用程式。請跟著以下步驟：
 
-1.  在終端機 `cd` 切換到你想要創建應用程式的資料夾，然後執行 `vue create moz-todo-vue` 。
-2.  使用方向鍵以及
+1. 在終端機 `cd` 切換到你想要創建應用程式的資料夾，然後執行 `vue create moz-todo-vue`。
+2. 使用方向鍵以及 <kbd>Enter</kbd> 鍵，選擇「Manually select features」
 
-    <kbd>Enter</kbd>
+3. 第一個呈現在你眼前的選單讓你選擇想要加入到專案的功能。確認「Babel」和「Linter / Formatter」都已選取。如果沒有的話，使用方向鍵及空白鍵來切換選取，當它們都已被選取，按下 <kbd>Enter</kbd> 鍵進行下一步。
 
-    鍵，選擇「 Manually select features 」
+4. 接下來，你要選擇 linter / formatter 的設定。切換到「Eslint with error prevention only」然後按下 <kbd>Enter</kbd>。這個設定會進行報錯提醒，但不會強制你修改。
 
-3.  第一個呈現在你眼前的選單讓你選擇想要加入到專案的功能。確認「 Babel 」和「 Linter / Formatter 」都已選取。如果沒有的話，使用方向鍵及空白鍵來切換選取，當它們都已被選取，按下
+5. 然後，你將會被詢問需要哪種自動化的 linting 設定。選擇「Lint on save」。這樣每當我們儲存專案檔案時，就會自動幫我們檢查錯誤。按下 <kbd>Enter</kbd> 鍵進行下一步。
 
-    <kbd>Enter</kbd>
+6. 現在，你將要選擇如何管理你的組態檔案。「In dedicated config files」將會把你的組態設定放在專門的檔案裡，像是 ESLint 的組態設定會放在它們專門的檔案裡。「In package.json」，會把你的組態設定放在應用程式的 `package.json` 檔案裡。選擇「In dedicated config files」然後按下 <kbd>Enter</kbd>。
 
-    鍵進行下一步。
-
-4.  接下來，你要選擇 linter / formatter 的設定。切換到「 Eslint with error prevention only 」然後按下
-
-    <kbd>Enter</kbd>
-
-    。這個設定會進行報錯提醒，但不會強制你修改。
-
-5.  然後，你將會被詢問需要哪種自動化的 linting 設定。選擇「 Lint on save 」。這樣每當我們儲存專案檔案時，就會自動幫我們檢查錯誤。按下
-
-    <kbd>Enter</kbd>
-
-    鍵進行下一步。
-
-6.  現在，你將要選擇如何管理你的組態檔案。「 In dedicated config files 」將會把你的組態設定放在專門的檔案裡，像是 ESLint 的組態設定會放在它們專門的檔案裡。「 In package.json 」，會把你的組態設定放在應用程式的 `package.json` 檔案裡。選擇「 In dedicated config files 」然後按下
-
-    <kbd>Enter</kbd>
-
-    。
-
-7.  最後，你將會被問到是否要將以上設定存為預設值。你可以自行決定，如果未來想要再使用這組設定，請按下
-
-    <kbd>y</kbd>
-
-    ， 否則按
-
-    <kbd>n</kbd>
-
-    。
+7. 最後，你將會被問到是否要將以上設定存為預設值。你可以自行決定，如果未來想要再使用這組設定，請按下 <kbd>y</kbd>，否則按 <kbd>n</kbd> 。
 
 CLI 會開始建構你的專案，並且安裝所需的相依套件。
 
-如果你之前沒有執行過 Vue CLI ，你將會被問一個問題－請選擇套件管理員。你可以使用方向鍵來選擇你想使用的套件管理員，Vue CLI 將會把這個套件管理員設為預設值。之後如果你想要使用不同的套件管理員，可以在執行 `vue create` 時傳入一個標幟 `--packageManager=<package-manager>` 。舉例來說，如果你現在想要用 npm 來創建 `moz-todo-vue` 專案，但是之前是使用 yarn ，你可以執行 `vue create moz-todo-vue --packageManager=npm` 。
+如果你之前沒有執行過 Vue CLI ，你將會被問一個問題－請選擇套件管理員。你可以使用方向鍵來選擇你想使用的套件管理員，Vue CLI 將會把這個套件管理員設為預設值。之後如果你想要使用不同的套件管理員，可以在執行 `vue create` 時傳入一個標幟 `--packageManager=<package-manager>` 。舉例來說，如果你現在想要用 npm 來創建 `moz-todo-vue` 專案，但是之前是使用 yarn ，你可以執行 `vue create moz-todo-vue --packageManager=npm` 。
 
 > **備註：** 在這裡我們沒有介紹所有的選項，你可以參考 Vue 官方文件裡的[關於 CLI 的更多資訊](https://cli.vuejs.org)。
 
@@ -191,20 +156,20 @@ CLI 會開始建構你的專案，並且安裝所需的相依套件。
 以 `App.vue` 為例，我們設定元件的名稱為 `App` ，並且在 `components` 屬性中加入 `HelloWorld` 來註冊這個元件。以這種方式來註冊元件是本地註冊。本地註冊的元件只能在註冊它們的元件裡面使用，所以你需要在每個使用它們的元件檔案裡匯入並且註冊它們。這對於 bundle splitting/tree shaking 很有用，因為在應用程式裡不是每一頁都需要所有的元件。
 
 ```js
-import HelloWorld from './components/HelloWorld.vue';
+import HelloWorld from "./components/HelloWorld.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     // 你可以在這裡註冊元件
-    HelloWorld
-  }
+    HelloWorld,
+  },
 };
 ```
 
 > **備註：** 如果你想要使用 [TypeScript](https://www.typescriptlang.org/) 語法，你必須把 `<script>` 標籤的 `lang` 屬性設定成 `<script lang="ts">` 來告訴編譯器你要使用 TypeScript 。
 
-`<style>` 是你撰寫元件的 CSS 的地方。如果你加上 `scoped` 屬性，例如 `<style scoped>` ， Vue 會把樣式的範圍限制在這個單一檔案元件裡。這類似 CSS-in-JS 的解決方案 ，但是它允許你寫單純的 CSS 。
+`<style>` 是你撰寫元件的 CSS 的地方。如果你加上 `scoped` 屬性，例如 `<style scoped>` ， Vue 會把樣式的範圍限制在這個單一檔案元件裡。這類似 CSS-in-JS 的解決方案，但是它允許你寫單純的 CSS 。
 
 > **備註：** 如果你在使用 CLI 創建專案時有選擇 CSS 預處理器，你可以在 `<style>` 標籤上添加 `lang` 屬性，這些內容在建置的時候將會被 Webpack 處理。舉例來說， `<style lang="scss">` 允許你在樣式資訊中使用 SCSS 語法。
 
@@ -237,7 +202,7 @@ INFO  Starting development server...
 現在讓我們來對應用程式做一些改變——刪除 Vue logo 。打開 `App.vue` 檔案，從 template 區塊刪除 [`<img>`](/zh-TW/docs/Web/HTML/Element/img) 元素：
 
 ```html
-<img alt="Vue logo" src="./assets/logo.png">
+<img alt="Vue logo" src="./assets/logo.png" />
 ```
 
 如果你的伺服器仍在正常運行，你應該可以看到 logo 幾乎即時地從渲染頁面裡移除。接下來，我們再把 `HelloWorld` 從模板裡移除。
@@ -245,7 +210,7 @@ INFO  Starting development server...
 首先刪除以下這行：
 
 ```html
-<HelloWorld msg="Welcome to Your Vue.js App"/>
+<HelloWorld msg="Welcome to Your Vue.js App" />
 ```
 
 這時如果你儲存 `App.vue` 檔案，渲染的應用程式會拋出一個錯誤，因為我們註冊了元件但是沒有使用它。所以我們必須移除在 `<script>` 元素裡面用來匯入及註冊元件的程式碼：
@@ -253,12 +218,12 @@ INFO  Starting development server...
 現在刪除以下這幾行：
 
 ```js
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from "./components/HelloWorld.vue";
 ```
 
 ```js
 components: {
-  HelloWorld
+  HelloWorld;
 }
 ```
 
@@ -280,63 +245,8 @@ components: {
 
 讓我們現在暫時告一個段落。我們學習了 Vue 背後的一些想法，創建應用架構並使我們的範例應用可以在其運行，檢查它，並且對它做一些初步的改變。
 
-在進行基本介紹之前，我們將進一步建構我們的範例應用，一個基本的待辦應用程式，它讓我們儲存待辦事項，在已完成的事項上打勾，以及依事項完成 /未完成狀態來過濾列表。
+在進行基本介紹之前，我們將進一步建構我們的範例應用，一個基本的待辦應用程式，它讓我們儲存待辦事項，在已完成的事項上打勾，以及依事項完成 /未完成狀態來過濾列表。
 
 在下一篇文章中，我們將會建立第一個客製元件，研究一些重要的概念，像是透過 props 傳遞資料及儲存它的資料狀態。
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
-
-## 在本模組
-
-- [前端框架介紹](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-- [框架主要功能](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
-- React
-
-  - [React 入門](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
-  - [建立我們的 React 待辦清單](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - [元件化我們的 React 應用程式](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
-  - [React 互動性：事件與狀態](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
-  - [React 互動性：編輯、過濾、條件式渲染](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
-  - [React 無障礙](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - [React 資源](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
-
-- Ember
-
-  - [Ember 入門](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-  - [Ember 應用程式結構及元件化](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
-  - [Ember 互動性：事件、類別、狀態](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
-  - [Ember 互動性： Footer 功能、條件式渲染](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
-  - [Ember 路由](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
-  - [Ember 資源及偵錯](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
-
-- Vue
-
-  - [Vue 入門](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
-  - [建立第一個 Vue 元件](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
-  - [渲染 Vue 清單](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-  - [新增待辦表單： Vue 事件、方法、模型](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - [透過 CSS 樣式化 Vue 元件](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
-  - [使用 Vue 計算屬性](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
-  - [Vue 條件式渲染：編輯已存在的待辦表單](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
-  - [聚焦 Vue refs](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
-  - [Vue 資源](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
-
-- Svelte
-
-  - [Svelte 入門](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
-  - [開始寫我們的 Svelte 待辦清單應用程式](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
-  - [Svelte 中的動態行為：變數及屬性](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
-  - [元件化我們的 Svelte 應用程式](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
-  - [進階 Svelte ：反應性、生命週期、可存取性](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
-  - [和 Svelte stores 共舞](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
-  - [Svelte 中的 TypeScript](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
-  - [部署和下一步](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
-
-- Angular
-
-  - [Angular 入門](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
-  - [開始我們的 Angular 待辦清單應用程式](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
-  - [樣式化我們的 Angular 應用程式](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
-  - [Creating an item component 建立（待辦清單）項目元件](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
-  - [過濾我們的待辦項目](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
-  - [建置 Angular 應用程式及更多資源](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)

@@ -1,18 +1,6 @@
 ---
 title: MediaQueryList.media
 slug: Web/API/MediaQueryList/media
-tags:
-  - API
-  - CSSOM View
-  - Media
-  - Media Queries
-  - MediaQueryList
-  - Property
-  - Reference
-  - プロパティ
-  - メディア
-  - メディアクエリー
-translation_of: Web/API/MediaQueryList/media
 ---
 
 {{APIRef("CSSOM")}}
@@ -30,7 +18,7 @@ translation_of: Web/API/MediaQueryList/media
 ### JavaScript
 
 ```js
-let mql = window.matchMedia('(max-width: 600px)');
+let mql = window.matchMedia("(max-width: 600px)");
 
 document.querySelector(".mq-value").innerText = mql.media;
 ```
@@ -47,7 +35,9 @@ document.querySelector(".mq-value").innerText = mql.media;
 
 ```css hidden
 .mq-value {
-  font: 18px arial, sans-serif;
+  font:
+    18px arial,
+    sans-serif;
   font-weight: bold;
   color: #88f;
   padding: 0.4em;

@@ -1,16 +1,8 @@
 ---
 title: <filter-function>
 slug: Web/CSS/filter-function
-tags:
-  - CSS
-  - CSS データ型
-  - データ型
-  - フィルター効果
-  - NeedsCompatTable
-  - リファレンス
-browser-compat: css.types.filter-function
-translation_of: Web/CSS/filter-function
 ---
+
 {{CSSRef}}
 
 **`<filter-function>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、入力された画像の表示方法を変更することができるグラフィカル効果を表します。これは {{cssxref("filter")}} および {{cssxref("backdrop-filter")}} プロパティで使用します。
@@ -51,27 +43,25 @@ translation_of: Web/CSS/filter-function
 ```html
 <div></div>
 <ul>
-  <li>
-    <label for="filter-select">フィルター関数を選択:</label>
-    <select id="filter-select">
-      <option selected>blur</option>
-      <option>brightness</option>
-      <option>contrast</option>
-      <option>drop-shadow</option>
-      <option>grayscale</option>
-      <option>hue-rotate</option>
-      <option>invert</option>
-      <option>opacity</option>
-      <option>saturate</option>
-      <option>sepia</option>
-    </select>
-  </li>
-  <li>
-    <input type="range"><output></output>
-  </li>
-  <li>
-    <p>現在の値: <code></code></p>
-  </li>
+  <li>
+    <label for="filter-select">フィルター関数を選択:</label>
+    <select id="filter-select">
+      <option selected>blur</option>
+      <option>brightness</option>
+      <option>contrast</option>
+      <option>drop-shadow</option>
+      <option>grayscale</option>
+      <option>hue-rotate</option>
+      <option>invert</option>
+      <option>opacity</option>
+      <option>saturate</option>
+      <option>sepia</option>
+    </select>
+  </li>
+  <li><input type="range" /><output></output></li>
+  <li>
+    <p>現在の値: <code></code></p>
+  </li>
 </ul>
 ```
 
@@ -81,7 +71,8 @@ translation_of: Web/CSS/filter-function
 div {
   width: 300px;
   height: 300px;
-  background: url(https://media.prod.mdn.mozit.cloud/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png) no-repeat center;
+  background: url(https://mdn.dev/archives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png)
+    no-repeat center;
 }
 
 li {
@@ -92,7 +83,7 @@ li {
 }
 
 input {
-  width: 60%
+  width: 60%;
 }
 
 output {
@@ -109,66 +100,82 @@ select {
 #### JavaScript
 
 ```js
-const selectElem = document.querySelector('select');
-const divElem = document.querySelector('div');
-const slider = document.querySelector('input');
-const output = document.querySelector('output');
-const curValue = document.querySelector('p code');
+const selectElem = document.querySelector("select");
+const divElem = document.querySelector("div");
+const slider = document.querySelector("input");
+const output = document.querySelector("output");
+const curValue = document.querySelector("p code");
 
-selectElem.addEventListener('change', () => {
+selectElem.addEventListener("change", () => {
   setSlider(selectElem.value);
   setDiv(selectElem.value);
 });
 
-slider.addEventListener('input', () => {
+slider.addEventListener("input", () => {
   setDiv(selectElem.value);
 });
 
 function setSlider(filter) {
-  if(filter === 'blur') {
+  if (filter === "blur") {
     slider.value = 0;
     slider.min = 0;
     slider.max = 30;
     slider.step = 1;
-    slider.setAttribute('data-unit', 'px');
-  } else if(filter === 'brightness' || filter === 'contrast' || filter === 'saturate') {
+    slider.setAttribute("data-unit", "px");
+  } else if (
+    filter === "brightness" ||
+    filter === "contrast" ||
+    filter === "saturate"
+  ) {
     slider.value = 1;
     slider.min = 0;
     slider.max = 4;
     slider.step = 0.05;
-    slider.setAttribute('data-unit', '');
-  } else if(filter === 'drop-shadow') {
+    slider.setAttribute("data-unit", "");
+  } else if (filter === "drop-shadow") {
     slider.value = 0;
     slider.min = -20;
     slider.max = 40;
     slider.step = 1;
-    slider.setAttribute('data-unit', 'px');
-  } else if(filter === 'opacity') {
+    slider.setAttribute("data-unit", "px");
+  } else if (filter === "opacity") {
     slider.value = 1;
     slider.min = 0;
     slider.max = 1;
     slider.step = 0.01;
-    slider.setAttribute('data-unit', '');
-  } else if(filter === 'grayscale' || filter === 'invert' || filter === 'sepia') {
+    slider.setAttribute("data-unit", "");
+  } else if (
+    filter === "grayscale" ||
+    filter === "invert" ||
+    filter === "sepia"
+  ) {
     slider.value = 0;
     slider.min = 0;
     slider.max = 1;
     slider.step = 0.01;
-    slider.setAttribute('data-unit', '');
-  } else if(filter === 'hue-rotate') {
+    slider.setAttribute("data-unit", "");
+  } else if (filter === "hue-rotate") {
     slider.value = 0;
     slider.min = 0;
     slider.max = 360;
     slider.step = 1;
-    slider.setAttribute('data-unit', 'deg');
+    slider.setAttribute("data-unit", "deg");
   }
 }
 
 function setDiv(filter) {
-  if(filter === 'drop-shadow') {
-    divElem.style.filter = `${selectElem.value}(${Math.round(slider.value)}${slider.getAttribute('data-unit')} ${Math.round(slider.value)}${slider.getAttribute('data-unit')} ${Math.round(Math.abs(slider.value/2))}${slider.getAttribute('data-unit')})`;
+  if (filter === "drop-shadow") {
+    divElem.style.filter = `${selectElem.value}(${Math.round(
+      slider.value,
+    )}${slider.getAttribute("data-unit")} ${Math.round(
+      slider.value,
+    )}${slider.getAttribute("data-unit")} ${Math.round(
+      Math.abs(slider.value / 2),
+    )}${slider.getAttribute("data-unit")})`;
   } else {
-    divElem.style.filter = `${selectElem.value}(${slider.value}${slider.getAttribute('data-unit')}`;
+    divElem.style.filter = `${selectElem.value}(${
+      slider.value
+    }${slider.getAttribute("data-unit")}`;
   }
 
   updateOutput();

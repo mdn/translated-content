@@ -1,17 +1,13 @@
 ---
 title: grid-auto-flow
 slug: Web/CSS/grid-auto-flow
-tags:
-  - CSS
-  - CSS グリッド
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.grid-auto-flow
+l10n:
+  sourceCommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
 ---
+
 {{CSSRef}}
 
-The **`grid-auto-flow`** CSS property controls how the auto-placement algorithm works, specifying exactly how auto-placed items get flowed into the grid.
+**`grid-auto-flow`** は CSS のプロパティで、自動配置のアルゴリズムの動作を制御し、自動配置されたアイテムがどのようにグリッドに流れ込むかを正確に指定するものです。
 
 {{EmbedInteractiveExample("pages/css/grid-auto-flow.html")}}
 
@@ -29,53 +25,54 @@ grid-auto-flow: column dense;
 grid-auto-flow: inherit;
 grid-auto-flow: initial;
 grid-auto-flow: revert;
+grid-auto-flow: revert-layer;
 grid-auto-flow: unset;
 ```
 
-This property may take one of two forms:
+このプロパティは、次のいずれかの形態を取ることができます。
 
-- a single keyword: one of `row`, `column`, or `dense`.
-- two keywords: `row dense` or `column dense`.
+- 単一のキーワード: `row`、 `column`、 `dense` のうち 1 つ
+- 2 つのキーワード: `row dense` または `column dense`
 
 ### 値
 
 - `row`
-  - : Items are placed by filling each row in turn, adding new rows as necessary. If neither `row` nor `column` is provided, `row` is assumed.
+  - : アイテムは、各行を順番に埋めていき、必要に応じて新しい行を追加していくことで配置されます。 `row` と `column` のどちらも指定されなかった場合は、 `row` とみなされます。
 - `column`
-  - : Items are placed by filling each column in turn, adding new columns as necessary.
+  - : アイテムは、各列を順番に埋めていき、必要に応じて新しい列を追加していくことで配置されます。
 - `dense`
 
-  - : "dense" packing algorithm attempts to fill in holes earlier in the grid, if smaller items come up later. This may cause items to appear out-of-order, when doing so would fill in holes left by larger items.
+  - : "dense" パッキングアルゴリズムは、小さいアイテムが後で出てきた場合、グリッドの早い段階で穴を埋めようとします。そのため、より大きなアイテムが残した穴を埋めるために、アイテムが順番通りに表示されないことがあります。
 
-    If it is omitted, a "sparse" algorithm is used, where the placement algorithm only ever moves "forward" in the grid when placing items, never backtracking to fill holes. This ensures that all of the auto-placed items appear "in order", even if this leaves holes that could have been filled by later items.
+    これを省略すると、 "sparse" アルゴリズムが使用され、配置アルゴリズムはアイテムを配置するときにグリッド内を「前に進む」だけで、穴を埋めるために後ろに戻ることはありません。これにより、自動配置されたアイテムはすべて「順番通り」に表示され、たとえ後から配置したアイテムで埋められるはずの穴が残っていたとしても、確実に埋められるようになります。
 
-## Formal definition
+## 公式定義
 
 {{cssinfo}}
 
-## Formal syntax
+## 形式文法
 
 {{csssyntax}}
 
-## Examples
+## 例
 
-### Setting grid auto-placement
+### グリッドの自動配置を設定する
 
 #### HTML
 
 ```html
 <div id="grid">
-  <div id="item1"></div>
-  <div id="item2"></div>
-  <div id="item3"></div>
-  <div id="item4"></div>
-  <div id="item5"></div>
+  <div id="item1"></div>
+  <div id="item2"></div>
+  <div id="item3"></div>
+  <div id="item4"></div>
+  <div id="item5"></div>
 </div>
 <select id="direction">
-  <option value="column">column</option>
-  <option value="row">row</option>
+  <option value="column">column</option>
+  <option value="row">row</option>
 </select>
-<input id="dense" type="checkbox">
+<input id="dense" type="checkbox" />
 <label for="dense">dense</label>
 ```
 
@@ -88,7 +85,7 @@ This property may take one of two forms:
   display: grid;
   gap: 10px;
   grid-template: repeat(4, 1fr) / repeat(2, 1fr);
-  grid-auto-flow: column;  /* or 'row', 'row dense', 'column dense' */
+  grid-auto-flow: column; /* or 'row', 'row dense', 'column dense' */
 }
 
 #item1 {
@@ -116,10 +113,10 @@ This property may take one of two forms:
 
 ```js hidden
 function changeGridAutoFlow() {
-  var grid = document.getElementById("grid");
-  var direction = document.getElementById("direction");
-  var dense = document.getElementById("dense");
-  var gridAutoFlow = direction.value === "row" ? "row" : "column";
+  const grid = document.getElementById("grid");
+  const direction = document.getElementById("direction");
+  const dense = document.getElementById("dense");
+  let gridAutoFlow = direction.value === "row" ? "row" : "column";
 
   if (dense.checked) {
     gridAutoFlow += " dense";
@@ -128,26 +125,26 @@ function changeGridAutoFlow() {
   grid.style.gridAutoFlow = gridAutoFlow;
 }
 
-const selectElem = document.querySelector('select');
-const inputElem = document.querySelector('input');
-selectElem.addEventListener('change', changeGridAutoFlow);
-inputElem.addEventListener('change', changeGridAutoFlow);
+const selectElem = document.querySelector("select");
+const inputElem = document.querySelector("input");
+selectElem.addEventListener("change", changeGridAutoFlow);
+inputElem.addEventListener("change", changeGridAutoFlow);
 ```
 
-#### Result
+#### 結果
 
-{{EmbedLiveSample("Setting_grid_auto-placement", "200px", "230px")}}
+{{EmbedLiveSample("グリッドの自動配置を設定する", "200px", "230px")}}
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 
-## See also
+## 関連情報
 
-- Related CSS properties: {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid")}}
-- Grid Layout Guide: _[Auto-placement in grid layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)_
-- Video tutorial: _[Introducing Grid auto-placement and order](http://gridbyexample.com/video/series-auto-placement-order/)_
+- 関連する CSS プロパティ: {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid")}}
+- グリッドレイアウトガイド: _[グリッドレイアウトでの自動配置](/ja/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)_
+- 動画チュートリアル: _[Introducing Grid auto-placement and order](https://gridbyexample.com/video/series-auto-placement-order/)_

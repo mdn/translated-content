@@ -1,15 +1,8 @@
 ---
 title: any-hover
 slug: Web/CSS/@media/any-hover
-tags:
-  - '@media'
-  - CSS
-  - メディアクエリー
-  - メディア特性
-  - リファレンス
-browser-compat: css.at-rules.media.any-hover
-translation_of: Web/CSS/@media/any-hover
 ---
+
 {{CSSRef}}
 
 **`any-hover`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、要素の上で停止することができる入力メカニズムが*何らか*利用できるかどうかを検査するために使用することができます。

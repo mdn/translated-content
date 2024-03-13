@@ -1,13 +1,8 @@
 ---
 title: size
 slug: Web/CSS/@page/size
-tags:
-  - CSS
-  - Descripteur
-  - Experimental
-  - Reference
-translation_of: Web/CSS/@page/size
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 Le descripteur **`size`**, associé à la règle @ {{cssxref("@page")}}, permet de définir les dimensions et l'orientation de la boîte utilisée pour représenter une page. La plupart du temps, cette taille correspondra à la totalité de la taille de la page imprimée.
@@ -77,6 +72,14 @@ size: A4 portrait;
     - `ledger`
       - : Ce mot-clé correspond à la taille standard des pages d'un livre en grand format aux États-Unis. Cela correspond à : 11in x 17in.
 
+## Définition formelle
+
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
+
 ## Exemples
 
 ```css
@@ -95,15 +98,11 @@ size: A4 portrait;
 
 ## Spécifications
 
-| Spécification                                                    | État                                     | Commentaires         |
-| ---------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Paged Media', '#size', 'size')}} | {{Spec2('CSS3 Paged Media')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.page.size")}}
+{{Compat}}
 
 ## Voir aussi
 

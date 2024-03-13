@@ -1,16 +1,8 @@
 ---
-title: '-moz-orient'
+title: "-moz-orient"
 slug: Web/CSS/-moz-orient
-tags:
-  - CSS
-  - CSS プロパティ
-  - Mozilla 拡張
-  - 標準外
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.-moz-orient
-translation_of: Web/CSS/-moz-orient
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 **`-moz-orient`** は [CSS](/ja/docs/Web/CSS) のプロパティで、適用される要素の向きを指定します。
@@ -43,16 +35,10 @@ translation_of: Web/CSS/-moz-orient
 ### HTML
 
 ```html
-<p>
-  The following progress meter
-  is horizontal (the default):
-</p>
+<p>The following progress meter is horizontal (the default):</p>
 <progress max="100" value="75"></progress>
 
-<p>
- The following progress meter
- is vertical:
-</p>
+<p>The following progress meter is vertical:</p>
 <progress class="vert" max="100" value="75"></progress>
 ```
 

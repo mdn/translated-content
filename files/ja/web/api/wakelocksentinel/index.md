@@ -1,16 +1,8 @@
 ---
 title: WakeLockSentinel
 slug: Web/API/WakeLockSentinel
-tags:
-  - API
-  - インターフェイス
-  - リファレンス
-  - 画面起動ロック API
-  - 起動ロック
-  - 画面
-browser-compat: api.WakeLockSentinel
-translation_of: Web/API/WakeLockSentinel
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Screen Wake Lock API")}}
 
 **`WakeLockSentinel`** は[画面起動ロック API](/ja/docs/Web/API/Screen_Wake_Lock_API) のインターフェイスで、基礎となるプラットフォームの起動ロックへのハンドルを提供し、手動で解放および再取得することができます。起動ロックを表す {{jsxref('Object')}} は {{domxref('WakeLock.request()','navigator.wakelock.request()')}} メソッドを介して返されます。
@@ -53,31 +45,28 @@ let wakeLock = null;
 // 起動ロックを要求するための非同期関数を作成
 const requestWakeLock = async () => {
   try {
-    wakeLock = await navigator.wakeLock.request('screen');
+    wakeLock = await navigator.wakeLock.request("screen");
 
     // release イベントを待ち受け
-    wakeLock.addEventListener('release', () => {
+    wakeLock.addEventListener("release", () => {
       // 起動ロックが解放されたら、それに合わせて UI を変更する
     });
-
   } catch (err) {
     // 起動ロックに失敗した場合 - ふつうはバッテリーなどシステム関連
-
   }
-}
+};
 
-wakeLockOnButton.addEventListener('click', () => {
+wakeLockOnButton.addEventListener("click", () => {
   requestWakeLock();
-})
+});
 
-wakeLockOffButton.addEventListener('click', () => {
+wakeLockOffButton.addEventListener("click", () => {
   if (wakeLock !== null) {
-    wakeLock.release()
-      .then(() => {
-        wakeLock = null;
-      })
+    wakeLock.release().then(() => {
+      wakeLock = null;
+    });
   }
-})
+});
 ```
 
 ## 仕様書

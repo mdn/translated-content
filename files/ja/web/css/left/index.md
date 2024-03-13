@@ -1,15 +1,10 @@
 ---
 title: left
 slug: Web/CSS/left
-tags:
-  - CSS
-  - CSS 位置指定レイアウト
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.left
-translation_of: Web/CSS/left
+l10n:
+  sourceCommit: 73091fbe590d96857d743eaeec5aee4a8101994f
 ---
+
 {{CSSRef}}
 
 **`left`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[位置指定要素](/ja/docs/Web/CSS/position)の水平位置の決定に関与します。位置指定されていない要素には効果はありません。
@@ -33,6 +28,7 @@ left: auto;
 left: inherit;
 left: initial;
 left: revert;
+left: revert-layer;
 left: unset;
 ```
 
@@ -59,9 +55,9 @@ left: unset;
 
 ## 解説
 
-`left` の効果は、要素がどの様に配置されているか (つまり、 {{cssxref("position")}} プロパティの値) によって変わります。
+`left` の効果は、要素がどの様に配置されているか（つまり、 {{cssxref("position")}} プロパティの値）によって変わります。
 
-- `position` が `absolute` または `fixed` に設定されている場合、 `left` プロパティは要素の左辺と包含ブロックの左辺との間の距離を指定します。 (包含ブロックは相対配置された祖先の要素です。)
+- `position` が `absolute` または `fixed` に設定されている場合、 `left` プロパティは要素の左辺の外側のマージンと、包含ブロックの左辺の内側のマージンとの間の距離を指定します。（包含ブロックは相対配置された祖先の要素です。）
 - `position` が `relative` に設定されている場合、 `left` プロパティは要素の左辺が通常位置から右方向へ移動する量を指定します。
 - `position` が `sticky` に設定されている場合、 `left` プロパティは sticky 制約の矩形を計算するために使用されます。
 - `position` が `static` に設定されている場合、 `left` プロパティは*効果がありません*。
@@ -78,7 +74,7 @@ left: unset;
 
 ## 例
 
-<h3 id="Positioning_elements">位置指定要素</h3>
+### 位置指定要素
 
 #### HTML
 
@@ -90,7 +86,10 @@ left: unset;
       left: 20px;
       top: 20px;
     </pre>
-    <p>The only containing element for this div is the main window, so it positions itself in relation to it.</p>
+    <p>
+      The only containing element for this div is the main window, so it
+      positions itself in relation to it.
+    </p>
   </div>
 
   <div id="example_2">
@@ -127,7 +126,8 @@ left: unset;
         left: 0;
         top: 200px;
       </pre>
-      <p>Absolute position with both left and right declared</p> </div>
+      <p>Absolute position with both left and right declared</p>
+    </div>
   </div>
 </div>
 ```
@@ -138,7 +138,7 @@ left: unset;
 #wrap {
   width: 700px;
   margin: 0 auto;
-  background: #5C5C5C;
+  background: #5c5c5c;
 }
 
 pre {
@@ -154,7 +154,7 @@ pre {
   position: absolute;
   left: 20px;
   top: 20px;
-  background-color: #D8F5FF;
+  background-color: #d8f5ff;
 }
 
 #example_2 {
@@ -163,8 +163,7 @@ pre {
   position: relative;
   top: 0;
   right: 0;
-  background-color: #C1FFDB;
-
+  background-color: #c1ffdb;
 }
 #example_3 {
   width: 600px;
@@ -172,29 +171,29 @@ pre {
   position: relative;
   top: 20px;
   left: 20px;
-  background-color: #FFD7C2;
+  background-color: #ffd7c2;
 }
 
 #example_4 {
-  width:200px;
-  height:200px;
-  position:absolute;
-  bottom:10px;
-  right:20px;
-  background-color:#FFC7E4;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  background-color: #ffc7e4;
 }
 #example_5 {
   position: absolute;
   right: 0;
   left: 0;
   top: 100px;
-  background-color: #D7FFC2;
+  background-color: #d7ffc2;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Positioning_elements',1200,650)}}
+{{EmbedLiveSample('位置指定要素',1200,650)}}
 
 ## 仕様書
 

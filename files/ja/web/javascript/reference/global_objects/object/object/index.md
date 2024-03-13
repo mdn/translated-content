@@ -1,14 +1,8 @@
 ---
 title: Object() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Object/Object
-tags:
-  - Constructor
-  - JavaScript
-  - Object
-  - Reference
-browser-compat: javascript.builtins.Object.Object
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/Object
 ---
+
 {{JSRef}}
 
 **`Object` コンストラクター**は、与えられた値のオブジェクトラッパーを生成します。
@@ -22,8 +16,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/Object
 ## 構文
 
 ```js
-new Object()
-new Object(value)
+new Object();
+new Object(value);
 ```
 
 ### 引数
@@ -36,10 +30,10 @@ new Object(value)
 ### 新しい Object の生成
 
 ```js
-let o = new Object()
-o.foo = 42
+let o = new Object();
+o.foo = 42;
 
-console.log(o)
+console.log(o);
 // Object { foo: 42 }
 ```
 
@@ -48,15 +42,15 @@ console.log(o)
 以下の例は、空の `Object` オブジェクトを `o` に格納します。
 
 ```js
-let o = new Object()
+let o = new Object();
 ```
 
 ```js
-let o = new Object(undefined)
+let o = new Object(undefined);
 ```
 
 ```js
-let o = new Object(null)
+let o = new Object(null);
 ```
 
 ## 仕様書

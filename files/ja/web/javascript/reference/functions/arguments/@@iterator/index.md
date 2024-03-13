@@ -1,14 +1,8 @@
 ---
 title: arguments[@@iterator]()
 slug: Web/JavaScript/Reference/Functions/arguments/@@iterator
-tags:
-  - 関数
-  - JavaScript
-  - プロパティ
-  - arguments
-browser-compat: javascript.functions.arguments.@@iterator
-translation_of: Web/JavaScript/Reference/Functions/arguments/@@iterator
 ---
+
 {{jsSidebar("Functions")}}
 
 **`@@iterator`** プロパティの初期値は {{jsxref("Array.prototype.values")}} プロパティの初期値と同じ関数オブジェクトです。
@@ -16,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Functions/arguments/@@iterator
 ## 構文
 
 ```js
-arguments[Symbol.iterator]()
+arguments[Symbol.iterator]();
 ```
 
 ## 例
@@ -31,7 +25,7 @@ function f() {
     console.log(letter);
   }
 }
-f('w', 'y', 'k', 'o', 'p');
+f("w", "y", "k", "o", "p");
 ```
 
 ## 仕様書

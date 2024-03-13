@@ -1,13 +1,8 @@
 ---
 title: Content Security Policy (CSP)
 slug: Web/HTTP/CSP
-tags:
-  - CSP
-  - Content Security Policy
-  - Reference
-  - Security
-translation_of: Web/HTTP/CSP
 ---
+
 {{HTTPSidebar}}
 
 **Une _Content Security Policy ({{Glossary("CSP")}})_ ou stratégie de sécurité du contenu** permet d'améliorer la sécurité des sites web en permettant de détecter et réduire certains types d'attaques, dont les attaques {{Glossary("XSS")}} (_Cross Site Scripting_) et les injections de contenu. Ces attaques peuvent être utilisées dans divers buts, comme le vol de données, le défacement de site ou la diffusion de _malware_.
@@ -160,11 +155,11 @@ Content-Security-Policy: default-src 'none'; style-src cdn.example.com; report-u
 et qui contient le code HTML suivant :
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>Connectez-vous</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     ... Contenu ...
@@ -190,7 +185,7 @@ Comme vous pouvez le constater, le rapport inclus l'URI complète de la ressourc
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.csp")}}
+{{Compat}}
 
 _Il existe une incompatibilité spécifique dans certaines versions de Safari : si un en-tête `Content-Security-Policy` est défini mais qu'il n'y a pas d'en-tête `Same-Origin` , le navigateur bloquera le contenu du site courant et celui de l'extérieur en indiquant que la stratégie ne permet pas d'avoir ce contenu._
 

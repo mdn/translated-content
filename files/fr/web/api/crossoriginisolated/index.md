@@ -1,11 +1,8 @@
 ---
 title: crossOriginIsolated
 slug: Web/API/crossOriginIsolated
-page-type: web-api-global-property
-translation_of: Web/API/crossOriginIsolated
-original_slug: Web/API/WindowOrWorkerGlobalScope/crossOriginIsolated
-browser-compat: api.crossOriginIsolated
 ---
+
 {{APIRef()}}{{SeeCompatTable}}
 
 La propriété globale en lecture seule **`crossOriginIsolated`** renvoie une valeur booléenne indiquant si un objet [`SharedArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer) peut être envoyé via un appel à [`Window.postMessage()`](/fr/docs/Web/API/Window/postMessage).
@@ -20,7 +17,7 @@ Une valeur booléenne.
 ## Exemples
 
 ```js
-if(crossOriginIsolated) {
+if (crossOriginIsolated) {
   // On peut envoyer un SharedArrayBuffer
 } else {
   // Sinon on fait autre chose

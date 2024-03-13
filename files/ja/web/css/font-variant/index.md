@@ -1,15 +1,8 @@
 ---
 title: font-variant
 slug: Web/CSS/font-variant
-tags:
-  - CSS
-  - CSS フォント
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.font-variant
-translation_of: Web/CSS/font-variant
 ---
+
 {{CSSRef}}
 
 **`font-variant`** は CSS の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、フォントのすべての変化形を設定することができます。
@@ -38,6 +31,7 @@ font-variant: common-ligatures small-caps;
 font-variant: inherit;
 font-variant: initial;
 font-variant: revert;
+font-variant: revert-layer;
 font-variant: unset;
 ```
 
@@ -68,7 +62,7 @@ font-variant: unset;
 
 ## 例
 
-<h3 id="Setting_the_small-caps_font_variant">スモールキャップのフォント変化形の設定</h3>
+### スモールキャップのフォント変化形の設定
 
 #### HTML
 
@@ -81,16 +75,16 @@ font-variant: unset;
 
 ```css
 p.normal {
-  font-variant: normal;
+  font-variant: normal;
 }
 p.small {
-  font-variant: small-caps;
+  font-variant: small-caps;
 }
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Setting_the_small-caps_font_variant', '', '', '', 'Web/CSS/font-variant') }}
+{{ EmbedLiveSample('Setting the small-caps font variant') }}
 
 ## 仕様書
 

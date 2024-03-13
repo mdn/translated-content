@@ -1,8 +1,8 @@
 ---
 title: Firefox 3 技術文件
 slug: Mozilla/Firefox/Releases/3
-translation_of: Mozilla/Firefox/Releases/3
 ---
+
 {{FirefoxSidebar}}
 
 ### Firefox 3 網站開發須知
@@ -26,7 +26,7 @@ translation_of: Mozilla/Firefox/Releases/3
 - [Drag / drop](zh_tw/Firefox_3_Drag_and_Drop_Events) 事件
   - : Firefox 3 支援兩個新的 events，在「拖放」開始與結束的時候，可以傳給「拖放操作」的 source node。
 - HTML 5 的 focus 相關屬性
-  - : Firefox 3 支援 HTML 5 新增給 DOM 的兩個屬性 [activeElement](/en/docs/DOM:document.activeElement) 與 [hasFocus](/en/docs/DOM:document.hasFocus)。
+  - : Firefox 3 支援 HTML 5 新增給 DOM 的兩個屬性 [activeElement](/zh-TW/docs/DOM:document.activeElement) 與 [hasFocus](/zh-TW/docs/DOM:document.hasFocus)。
 - [Offline resources on Firefox](zh_tw/Offline_resources_on_Firefox)
   - : Firefox 3 現在支援讓 web application 可以要求將 resources 存入快取，以便我們離線時可以執行 web applications。
 - [CSS 的改善](zh_tw/Firefox_3_CSS_Improvement)
@@ -46,11 +46,11 @@ translation_of: Mozilla/Firefox/Releases/3
 
 ### 參考資料
 
-[Firefox 3 for developers](/en/docs/Firefox_3_for_developers#For_web_site_and_application_developers)
+[Firefox 3 for developers](/zh-TW/docs/Firefox_3_for_developers#For_web_site_and_application_developers)
 
 ### 延伸閱讀
 
-- [Updating extensions for Firefox 3](/en/docs/Updating_extensions_for_Firefox_3)
-- [Updating web applications for Firefox 3](/en/docs/Updating_web_applications_for_Firefox_3)
-- [Firefox 2 for developers](/en/docs/Firefox_2_for_developers)
-- [Firefox 1.5 for developers](/en/docs/Firefox_1.5_for_developers)
+- [Updating extensions for Firefox 3](/zh-TW/docs/Updating_extensions_for_Firefox_3)
+- [Updating web applications for Firefox 3](/zh-TW/docs/Updating_web_applications_for_Firefox_3)
+- [Firefox 2 for developers](/zh-TW/docs/Firefox_2_for_developers)
+- [Firefox 1.5 for developers](/zh-TW/docs/Firefox_1.5_for_developers)

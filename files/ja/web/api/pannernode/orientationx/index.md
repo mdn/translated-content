@@ -1,16 +1,8 @@
 ---
 title: PannerNode.orientationX
 slug: Web/API/PannerNode/orientationX
-page-type: web-api-instance-property
-tags:
-  - PannerNode
-  - Property
-  - Reference
-  - Web Audio API
-  - orientationX
-browser-compat: api.PannerNode.orientationX
-translation_of: Web/API/PannerNode/orientationX
 ---
+
 {{ APIRef("Web Audio API") }}
 
 **`orientationX`** は {{ domxref("PannerNode") }} インターフェイスのプロパティで、音声ソースが向いている方向の X (水平) 成分を 3D 直交座標空間で表示します。
@@ -36,7 +28,7 @@ translation_of: Web/API/PannerNode/orientationX
 ```js
 // このユーティリティは、Y 軸周りの回転量 (つまり「水平面」での回転) を
 // 方向ベクトルに変換します
-const yRotationToVector = degrees =&gt; {
+const yRotationToVector = (degrees) => {
   // 度をラジアンに変換し、0 で聞き手の方を向くように角度をオフセットします
   const radians = (degrees - 90) * (Math.PI / 180);
   // ここでコサインとサインを使用すると，出力値は常に正規化されます
@@ -55,10 +47,10 @@ const yRotationToVector = degrees =&gt; {
 const context = new AudioContext();
 
 const osc = new OscillatorNode(context);
-osc.type = 'sawtooth';
+osc.type = "sawtooth";
 
 const panner = new PannerNode(context);
-panner.panningModel = 'HRTF';
+panner.panningModel = "HRTF";
 ```
 
 次に、空間音の*円錐体*を設定し、それが聞こえる範囲を決めます。
@@ -105,8 +97,7 @@ panner.orientationZ.setValueAtTime(z2, context.currentTime + 2);
 最後に、すべてのノードを接続して、オシレーターを起動しましょう。
 
 ```js
-osc.connect(panner)
-   .connect(context.destination);
+osc.connect(panner).connect(context.destination);
 
 osc.start(0);
 ```
@@ -121,6 +112,6 @@ osc.start(0);
 
 ## 関連情報
 
-- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [ウェブ音声空間化の基礎知識](/ja/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ空間化の基礎知識](/ja/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
 - {{domxref("PannerNode")}}

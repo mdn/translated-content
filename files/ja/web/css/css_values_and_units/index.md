@@ -1,16 +1,11 @@
 ---
 title: CSS 値と単位
 slug: Web/CSS/CSS_Values_and_Units
-tags:
-  - CSS
-  - ガイド
-  - リファレンス
-  - 値と単位
-translation_of: Web/CSS/CSS_Values_and_Units
 ---
+
 {{CSSRef}}
 
-CSS 宣言はすべて、プロパティと値の組を含みます。プロパティによって、値は単純な整数やキーワードから、一連のキーワードや単位つき・単位なしの値などを含みます。CSS プロパティには受け付けるデータ型の組み合わせ -- 値と単位 -- があります。以下ではデータ型の大部分を概観します。より詳しい情報は、それぞれのデータ型のページを参照してください。
+CSS 宣言はすべて、プロパティと値の組を含みます。プロパティによって、値は単純な整数やキーワードから、一連のキーワードや単位つき・単位なしの値などを含みます。CSS プロパティには受け付けるデータ型の組み合わせ — 値と単位 — があります。以下ではデータ型の大部分を概観します。より詳しい情報は、それぞれのデータ型のページを参照してください。
 
 ## テキストのデータ型
 
@@ -46,7 +41,7 @@ CSS の仕様では、ウェブ開発者が定義できる値には、アニメ�
 
 ```css
 .item::after {
-    content: "This is my content.";
+  content: "This is my content.";
 }
 ```
 
@@ -66,7 +61,7 @@ left | right | none | inline-start | inline-end
 
 ```css
 .box {
-    float: left;
+  float: left;
 }
 ```
 
@@ -86,7 +81,7 @@ left | right | none | inline-start | inline-end
 
 ```css
 .box {
-  background-image: url("images/my-background.png");
+  background-image: url("images/my-background.png");
 }
 
 .box {
@@ -131,22 +126,22 @@ CSS では、以下のものを表すために寸法を使います。
 
 相対的な長さの単位は、他のものを基準に長さを表します。例えば、`em` はその要素のフォントの大きさを基準とする値で、`vh` はビューポートの高さを基準とする値です。
 
-| 単位   | 基準                                                                                                                            |
-| ------ | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `em`   | その要素のフォントの大きさ                                                                                                              |
-| `ex`   | その要素のフォントの x-height                                                                                                        |
-| `cap`  | その要素のフォントの Cap height (大文字の名目上の高さ)                                                              |
-| `ch`   | その要素のフォントにおける narrow グリフの平均文字送り幅で、“0” (ZERO, U+0030) のグリフを表す                     |
-| `ic`   | その要素のフォントにおける full width グリフの平均文字送り幅で、“水” (CJK water ideograph, U+6C34) のグリフを表す |
-| `rem`  | ルート要素のフォントの大きさ                                                                                                         |
-| `lh`   | その要素の行の高さ                                                                                                            |
-| `rlh`  | ルート要素の行の高さ                                                                                                       |
-| `vw`   | ビューポートの幅の 1%                                                                                                                |
-| `vh`   | ビューポートの高さの 1%                                                                                                               |
-| `vi`   | ルート要素のインライン軸におけるビューポートの大きさの 1%。                                                                               |
-| `vb`   | ルート要素のブロック軸におけるビューポートの大きさの 1%。                                                                                |
-| `vmin` | ビューポートの小さい側の 1%。                                                                                                    |
-| `vmax` | ビューポートの大きい側の 1%。                                                                                                     |
+| 単位   | 基準                                                                                                              |
+| ------ | ----------------------------------------------------------------------------------------------------------------- |
+| `em`   | その要素のフォントの大きさ                                                                                        |
+| `ex`   | その要素のフォントの x-height                                                                                     |
+| `cap`  | その要素のフォントの Cap height (大文字の名目上の高さ)                                                            |
+| `ch`   | その要素のフォントにおける narrow グリフの平均文字送り幅で、"0" (ZERO, U+0030) のグリフを表す                     |
+| `ic`   | その要素のフォントにおける full width グリフの平均文字送り幅で、"水" (CJK water ideograph, U+6C34) のグリフを表す |
+| `rem`  | ルート要素のフォントの大きさ                                                                                      |
+| `lh`   | その要素の行の高さ                                                                                                |
+| `rlh`  | ルート要素の行の高さ                                                                                              |
+| `vw`   | ビューポートの幅の 1%                                                                                             |
+| `vh`   | ビューポートの高さの 1%                                                                                           |
+| `vi`   | ルート要素のインライン軸におけるビューポートの大きさの 1%。                                                       |
+| `vb`   | ルート要素のブロック軸におけるビューポートの大きさの 1%。                                                         |
+| `vmin` | ビューポートの小さい側の 1%。                                                                                     |
+| `vmax` | ビューポートの大きい側の 1%。                                                                                     |
 
 絶対的な長さの単位は物理的な長さであり、インチやセンチメートルなどと決まっています。そのため、これらの単位の多くは、印刷などの固定サイズの媒体への出力に向いています。たとえば、 `mm` は物理的なミリメートルで、センチメートルの 1/10 です。
 
@@ -170,12 +165,12 @@ CSS では、以下のものを表すために寸法を使います。
 | ------ | ------------ | --------------------------------- |
 | `deg`  | 度           | 完全な円は 360 度です。           |
 | `grad` | グラディアン | 完全な円は 400 グラディアンです。 |
-| `rad`  | ラジアン     | 完全な円は 2π ラジアンです。     |
+| `rad`  | ラジアン     | 完全な円は 2π ラジアンです。      |
 | `turn` | 周           | 完全な円は 1 周です。             |
 
 #### 時間の単位
 
-時間の値は {{cssxref("&lt;time&gt;")}} 型で表されます。時間の値を含めるときは、単位 -- the `s` か `ms` -- の指定が必要です。以下の値を受け付けます。
+時間の値は {{cssxref("&lt;time&gt;")}} 型で表されます。時間の値を含めるときは、単位 — the `s` か `ms` — の指定が必要です。以下の値を受け付けます。
 
 | 単位 | 名称   | 説明                     |
 | ---- | ------ | ------------------------ |
@@ -260,81 +255,4 @@ CSS では、以下のものを表すために寸法を使います。
 
 ## 仕様書
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">仕様書</th>
-      <th scope="col">状態</th>
-      <th scope="col">備考</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName("CSS4 Values")}}</td>
-      <td>{{Spec2("CSS4 Values")}}</td>
-      <td>
-        <code>vi</code>, <code>vb</code>, <code>ic</code>,
-        <code>cap</code>, <code>lh</code>, <code>rlh</code> 単位の追加。<br />
-        <code>min()</code>, <code>max()</code>, <code>clamp()</code> 関数記法の追加<br>
-        <code>toggle()</code> の追加
-      </td>
-    </tr>
-    <tr>
-      <td>{{SpecName("CSS3 Values")}}</td>
-      <td>{{Spec2("CSS3 Values")}}</td>
-      <td>
-        <code>calc()</code>, <code>ch</code>, <code>rem</code>, <code>vw</code>, <code>vw</code>, <code>vmin</code>, <code> vmax</code>, <code>Q</code> の追加
-      </td>
-    </tr>
-    <tr>
-      <td>{{SpecName("CSS4 Colors")}}</td>
-      <td>{{Spec2("CSS4 Colors")}}</td>
-      <td>
-        <code>rgb()</code>, <code>rgba()</code>, <code>hsl()</code>,
-        <code>hsla()</code> 関数のカンマ無し構文の追加。`rgb()` と `hsl()` にアルファ値を追加し、`rgba()` と `hsla()` をこれらへの (非推奨の) 別名に変更。<br />
-        `rebeccapurple` 色キワードを追加。<br />
-        4 と 8 桁の 16 進カラー値を追加、最後の桁はアルファ値を表します。<br />
-        <code>hwb()</code>, <code>device-cmyk()</code>,
-        <code>color()</code> 関数の追加。
-      </td>
-    </tr>
-    <tr>
-      <td>{{SpecName("CSS3 Colors")}}</td>
-      <td>{{Spec2("CSS3 Colors")}}</td>
-      <td>
-        システム色を非推奨化。SVG 色を追加。<code>rgba()</code>, <code>hsl()</code>,
-        <code>hsla()</code> 関数の追加。
-      </td>
-    </tr>
-    <tr>
-      <td>{{SpecName("CSS4 Images")}}</td>
-      <td>{{Spec2("CSS4 Images")}}</td>
-      <td>
-        <p>
-          <code>element()</code>, <code>image()</code>,
-          <code>image-set()</code>, <code>conic-gradient()</code> の追加。
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td>{{SpecName("CSS3 Images")}}</td>
-      <td>{{Spec2("CSS3 Images")}}</td>
-      <td>画像の初回定義。</td>
-    </tr>
-    <tr>
-      <td>{{SpecName("CSS2.1")}}</td>
-      <td>{{Spec2("CSS2.1")}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName("CSS1")}}</td>
-      <td>{{Spec2("CSS1")}}</td>
-      <td>初回定義。</td>
-    </tr>
-  </tbody>
-</table>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-- [CSS 基本データ型](/ja/docs/Web/CSS/CSS_Types)
-- [CSS 導入: 値と単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)
+{{Specifications}}

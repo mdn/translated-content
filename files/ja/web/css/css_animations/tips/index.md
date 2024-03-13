@@ -1,14 +1,8 @@
 ---
 title: CSS アニメーションのヒントとコツ
-slug: Web/CSS/CSS_Animations/Tips
-tags:
-  - CSS
-  - CSS アニメーション
-  - 例
-  - ガイド
-  - リファレンス
-translation_of: Web/CSS/CSS_Animations/Tips
+slug: Web/CSS/CSS_animations/Tips
 ---
+
 {{CSSRef}}
 
 CSS アニメーションを使えば、文書やアプリを構成する要素に、驚くようなことができるようになります。しかし、当たり前のようで当たり前でないことや、すぐには思いつかないような賢い方法があるかもしれません。この記事では、止まってしまったアニメーションを再び動かす方法など、作業を楽にするために見つけたヒントをまとめています。
@@ -24,8 +18,7 @@ CSS アニメーションを使えば、文書やアプリを構成する要素�
 はじめに、HTML にアニメーションしてほしい {{HTMLElement("div")}} と、アニメーションを再生 (またはリプレイ) するためのボタンを定義しましょう。
 
 ```html
-<div class="box">
-</div>
+<div class="box"></div>
 
 <div class="runButton">Click me to run the animation</div>
 ```
@@ -46,14 +39,21 @@ CSS アニメーションを使えば、文書やアプリを構成する要素�
   padding-bottom: 4px;
   color: white;
   background-color: darkgreen;
-  font: 14px "Open Sans", "Arial", sans-serif;
+  font:
+    14px "Open Sans",
+    "Arial",
+    sans-serif;
 }
 ```
 
 ```css
 @keyframes colorchange {
-  0% { background: yellow }
-  100% { background: blue }
+  0% {
+    background: yellow;
+  }
+  100% {
+    background: blue;
+  }
 }
 
 .box {
@@ -78,8 +78,8 @@ CSS アニメーションを使えば、文書やアプリを構成する要素�
 ```js
 function play() {
   document.querySelector(".box").className = "box";
-  window.requestAnimationFrame(function(time) {
-    window.requestAnimationFrame(function(time) {
+  window.requestAnimationFrame(function (time) {
+    window.requestAnimationFrame(function (time) {
       document.querySelector(".box").className = "box changing";
     });
   });
@@ -115,25 +115,25 @@ document.querySelector(".runButton").addEventListener("click", play, false);
 
 ```css
 .slidein {
-  animation-duration: 5s;
-  animation-name: slidein;
-  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
 }
 
 .stopped {
-  animation-name: none;
+  animation-name: none;
 }
 
 @keyframes slidein {
-  0% {
-    margin-left: 0%;
-  }
-  50% {
-    margin-left: 50%;
-  }
-  100% {
-    margin-left: 0%;
-  }
+  0% {
+    margin-left: 0%;
+  }
+  50% {
+    margin-left: 50%;
+  }
+  100% {
+    margin-left: 0%;
+  }
 }
 ```
 
@@ -142,15 +142,15 @@ document.querySelector(".runButton").addEventListener("click", play, false);
 ```
 
 ```js
-let watchme = document.getElementById('watchme')
+let watchme = document.getElementById("watchme");
 
-watchme.className = 'slidein'
+watchme.className = "slidein";
 const listener = (e) => {
-  watchme.className = 'slidein stopped'
-}
-watchme.addEventListener('click', () =>
-  watchme.addEventListener('animationiteration', listener, false)
-)
+  watchme.className = "slidein stopped";
+};
+watchme.addEventListener("click", () =>
+  watchme.addEventListener("animationiteration", listener, false),
+);
 ```
 
 デモ <https://jsfiddle.net/morenoh149/5ty5a4oy/>

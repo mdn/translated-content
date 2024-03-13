@@ -1,15 +1,8 @@
 ---
 title: <display-internal>
 slug: Web/CSS/display-internal
-tags:
-  - CSS
-  - CSS データ型
-  - CSS Display
-  - データ型
-  - リファレンス
-  - display-internal
-translation_of: Web/CSS/display-internal
 ---
+
 {{CSSRef}}
 
 `table` や `ruby` のような一部のレイアウトモデルでは、複雑な内部構造があり、様々なその子要素や子孫要素が担う様々な役割があります。このページではこれらを「内部の」表示値として定義し、特定のレイアウトモードでのみ意味を持ちます。
@@ -55,11 +48,11 @@ translation_of: Web/CSS/display-internal
 <main>
   <div>
     <label for="name">Name</label>
-    <input type="text" id="name" name="name">
+    <input type="text" id="name" name="name" />
   </div>
   <div>
     <label for="age">Age</label>
-    <input type="text" id="age" name="age">
+    <input type="text" id="age" name="age" />
   </div>
 </main>
 ```
@@ -75,7 +68,8 @@ div {
   display: table-row;
 }
 
-label, input {
+label,
+input {
   display: table-cell;
   margin: 5px;
 }
@@ -87,9 +81,7 @@ label, input {
 
 ## 仕様書
 
-| 仕様書                                                                                            | 状態                           |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('CSS3 Display', '#typedef-display-internal', 'display-internal')}} | {{Spec2('CSS3 Display')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
@@ -97,13 +89,13 @@ label, input {
 
 `table`, `table-cell`, `table-column`, `table-column-group`, `table-footer-group`, `table-header-group`, `table-row`, `table-row-group`
 
-{{Compat("css.properties.display.table_values", 10)}}
+{{Compat}}
 
 ### 対応している ruby の値
 
 `ruby`, `ruby-base`, `ruby-base-container`, `ruby-text`, `ruby-text-container`
 
-{{Compat("css.properties.display.ruby_values", 10)}}
+{{Compat}}
 
 ## 関連情報
 

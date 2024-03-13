@@ -1,18 +1,8 @@
 ---
 title: border-end-end-radius
 slug: Web/CSS/border-end-end-radius
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - 実験的
-  - リファレンス
-  - border-end-end-radius
-  - recipe:css-property
-  - 書字方向
-browser-compat: css.properties.border-end-end-radius
-translation_of: Web/CSS/border-end-end-radius
 ---
+
 {{CSSRef}}
 
 **`border-end-end-radius`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的な境界の半径を定義します。これは要素の {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} に応じて、物理的な境界の半径に対応づけられます。これは[テキストの方向](/ja/docs/Web/CSS/text-orientation)や[書字方向](/ja/docs/Web/CSS/CSS_Writing_Modes)に依存せずにスタイルを構築する際に便利です。
@@ -32,6 +22,8 @@ border-end-end-radius: initial;
 border-end-end-radius: revert;
 border-end-end-radius: unset;
 ```
+
+{{EmbedInteractiveExample("pages/css/border-end-end-radius.html")}}
 
 このプロパティは、要素の block-end と inline-end の間の角に影響します。すなわち、書字方向が `horizontal-tb` で `ltr` の方向であれば、 {{CSSxRef("border-bottom-right-radius")}} プロパティに対応します。
 
@@ -69,14 +61,14 @@ div {
   background-color: rebeccapurple;
   width: 120px;
   height: 120px;
-  border-end-end-radius: 10px;
+  border-end-end-radius: 10px;
 }
 
 .exampleText {
   writing-mode: vertical-rl;
   padding: 10px;
   background-color: #fff;
-  border-end-end-radius: 10px;
+  border-end-end-radius: 10px;
 }
 ```
 

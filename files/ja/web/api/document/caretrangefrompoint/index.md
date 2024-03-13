@@ -1,19 +1,8 @@
 ---
 title: Document.caretRangeFromPoint()
 slug: Web/API/Document/caretRangeFromPoint
-page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM View
-  - Document
-  - HTML DOM
-  - Method
-  - Non-standard
-  - Reference
-  - caretRangeFromPoint
-browser-compat: api.Document.caretRangeFromPoint
-translation_of: Web/API/Document/caretRangeFromPoint
 ---
+
 {{APIRef("DOM")}}{{Non-standard_header}}
 
 **`caretRangeFromPoint()`** は {{domxref("Document")}} インターフェイスのメソッドで、指定された座標にある文書フラグメントの {{domxref("Range")}} オブジェクトを返します。
@@ -21,7 +10,7 @@ translation_of: Web/API/Document/caretRangeFromPoint
 ## 構文
 
 ```js
-caretRangeFromPoint(x, y)
+caretRangeFromPoint(x, y);
 ```
 
 ### 引数
@@ -65,32 +54,35 @@ function insertBreakAtPoint(e) {
     textNode = range.offsetNode;
     offset = range.offset;
   } else {
-    document.body.textContent = "[This browser supports neither"
-      + " document.caretRangeFromPoint"
-      + " nor document.caretPositionFromPoint.]";
+    document.body.textContent =
+      "[This browser supports neither" +
+      " document.caretRangeFromPoint" +
+      " nor document.caretPositionFromPoint.]";
     return;
   }
   // Only split TEXT_NODEs
   if (textNode && textNode.nodeType == 3) {
     let replacement = textNode.splitText(offset);
-    let br = document.createElement('br');
+    let br = document.createElement("br");
     textNode.parentNode.insertBefore(br, replacement);
   }
 }
 
 let paragraphs = document.getElementsByTagName("p");
 for (let i = 0; i < paragraphs.length; i++) {
-  paragraphs[i].addEventListener('click', insertBreakAtPoint, false);
+  paragraphs[i].addEventListener("click", insertBreakAtPoint, false);
 }
 ```
 
 ### HTML
 
 ```html
-<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+<p>
+  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+  eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+  voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+  kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+</p>
 ```
 
 ## ブラウザーの互換性

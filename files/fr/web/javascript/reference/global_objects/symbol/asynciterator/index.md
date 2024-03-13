@@ -1,15 +1,8 @@
 ---
 title: Symbol.asyncIterator
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator
-tags:
-  - ECMAScript 2018
-  - JavaScript
-  - Propriété
-  - Reference
-  - Symbole
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator
-original_slug: Web/JavaScript/Reference/Objets_globaux/Symbol/asyncIterator
 ---
+
 {{JSRef}}
 
 Le symbole connu **`Symbol.asyncIterator`** définit l'itérateur asynchrone par défaut d'un objet. Si cette propriété est définie sur un objet, celui-ci est un itérable asynchrone et peut être utilisé avec une boucle [`for await...of`](/fr/docs/Web/JavaScript/Reference/Instructions/for-await...of).
@@ -28,20 +21,20 @@ Il est possible de définir son propre itérable en définissant la propriété 
 
 ```js
 const myAsyncIterable = new Object();
-myAsyncIterable[Symbol.asyncIterator] = async function*() {
-    yield "coucou";
-    yield "l'itération";
-    yield "asynchrone !";
+myAsyncIterable[Symbol.asyncIterator] = async function* () {
+  yield "coucou";
+  yield "l'itération";
+  yield "asynchrone !";
 };
 
 (async () => {
-    for await (const x of myAsyncIterable) {
-        console.log(x);
-        // expected output:
-        //    "coucou"
-        //    "l'itération"
-        //    "asynchrone !"
-    }
+  for await (const x of myAsyncIterable) {
+    console.log(x);
+    // expected output:
+    //    "coucou"
+    //    "l'itération"
+    //    "asynchrone !"
+  }
 })();
 ```
 
@@ -51,13 +44,11 @@ Il n'existe actuellement pas d'objets JavaScript natifs qui possèdent la clé `
 
 ## Spécifications
 
-| Spécification                                                                                        | État                     | Commentaires |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | ------------ |
-| {{SpecName('ES2018', '#sec-symbol.asynciterator', 'Symbol.asyncIterator')}} | {{Spec2('ES2018')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{compat("javascript.builtins.Symbol.asyncIterator")}}
+{{Compat}}
 
 ## Voir aussi
 

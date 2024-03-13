@@ -1,24 +1,17 @@
 ---
 title: transform-origin
 slug: Web/CSS/transform-origin
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS 座標変換
-  - Reference
-  - 'default value: center'
-  - recipe:css-property
-  - transform-origin
-browser-compat: css.properties.transform-origin
-translation_of: Web/CSS/transform-origin
+l10n:
+  sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
 ---
-{{ CSSRef }}
+
+{{CSSRef}}
 
 **`transform-origin`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の座標変換 (transform) における原点を設定します。
 
 {{EmbedInteractiveExample("pages/css/transform-origin.html")}}
 
-座標変換の原点とは、それを中心に座標変換が適用される点です。例えば、 `[rotate()](/ja/docs/Web/CSS/transform-function/rotate)` 関数における座標変換の原点は、回転の中心です。
+座標変換の原点とは、それを中心に座標変換が適用される点です。例えば、 [`rotate()`](/ja/docs/Web/CSS/transform-function/rotate) 関数における座標変換の原点は、回転の中心です。
 
 実際には、このプロパティは一対の座標変換で、その要素の他の座標変換の周りを囲みます。最初の座標変換は、原点を真の原点である <math><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></math> に移動させます。その後、他の座標変換が適用されますが、座標変換の原点は <math><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></math> にあるので、これらの座標変換はその原点の周りで作用します。最後に逆方向の変換を行い，座標変換の原点を元の位置に戻します。したがって，この定義は 次のようになります。
 
@@ -73,6 +66,7 @@ transform-origin: bottom right 2cm;
 transform-origin: inherit;
 transform-origin: initial;
 transform-origin: revert;
+transform-origin: revert-layer;
 transform-origin: unset;
 ```
 
@@ -125,7 +119,7 @@ transform-origin: unset;
 
 {{CSSInfo}}
 
-> **Note:** `transform-origin` の初期値は、ルートの `<svg>` 要素と [foreignObject](/ja/docs/Web/SVG/Element/foreignObject) の直接の子である `<svg>` 要素を除いたすべての SVG 要素では `0 0` です。また、 `transform-origin` は他の CSS 要素と同様に `50% 50%` です。詳しくは [SVG transform-origin](/ja/docs/Web/SVG/Attribute/transform-origin) 属性を参照してください。
+> **メモ:** `transform-origin` の初期値は、ルートの `<svg>` 要素と [foreignObject](/ja/docs/Web/SVG/Element/foreignObject) の直接の子である `<svg>` 要素を除いたすべての SVG 要素では `0 0` です。また、 `transform-origin` は他の CSS 要素と同様に `50% 50%` です。詳しくは [SVG の transform-origin](/ja/docs/Web/SVG/Attribute/transform-origin) 属性を参照してください。
 
 ## 形式文法
 
@@ -133,110 +127,108 @@ transform-origin: unset;
 
 ## 例
 
-<h3 id="A_demonstration_of_various_transform_values">様々な変換値のデモ</h3>
+### 様々な座標変換値のデモ
 
 この例は、様々な変換関数で様々なt `transform-origin` の値を選択した場合の効果を表します。
 
 ```html hidden
 <div class="container">
+  <div class="example">
+    <div class="box box1">&nbsp;</div>
+    <div class="box original">&nbsp;</div>
+  </div>
 
-<div class="example">
-  <div class="box box1">&nbsp;</div>
-  <div class="box original">&nbsp;</div>
-</div>
-
-<pre>
+  <pre>
 transform: none;
-</pre>
+  </pre>
 
-<div class="example">
-  <div class="box box2">&nbsp;</div>
-  <div class="box original">&nbsp;</div>
-</div>
+  <div class="example">
+    <div class="box box2">&nbsp;</div>
+    <div class="box original">&nbsp;</div>
+  </div>
 
-<pre>
+  <pre>
 transform: rotate(30deg);
-</pre>
+  </pre>
 
-<div class="example">
-  <div class="box box3">&nbsp;</div>
-  <div class="box original">&nbsp;</div>
-</div>
+  <div class="example">
+    <div class="box box3">&nbsp;</div>
+    <div class="box original">&nbsp;</div>
+  </div>
 
-<pre>
+  <pre>
 transform: rotate(30deg);
 transform-origin: 0 0;
-</pre>
+  </pre>
 
-<div class="example">
-  <div class="box box4">&nbsp;</div>
-  <div class="box original">&nbsp;</div>
-</div>
+  <div class="example">
+    <div class="box box4">&nbsp;</div>
+    <div class="box original">&nbsp;</div>
+  </div>
 
-<pre>
+  <pre>
 transform: rotate(30deg);
 transform-origin: 100% 100%;
-</pre>
+  </pre>
 
-<div class="example">
-  <div class="box box5">&nbsp;</div>
-  <div class="box original">&nbsp;</div>
-</div>
+  <div class="example">
+    <div class="box box5">&nbsp;</div>
+    <div class="box original">&nbsp;</div>
+  </div>
 
-<pre>
+  <pre>
 transform: rotate(30deg);
 transform-origin: -1em -3em;
-</pre>
+  </pre>
 
-<div class="example">
-  <div class="box box6">&nbsp;</div>
-  <div class="box original">&nbsp;</div>
-</div>
+  <div class="example">
+    <div class="box box6">&nbsp;</div>
+    <div class="box original">&nbsp;</div>
+  </div>
 
-<pre>
+  <pre>
 transform: scale(1.7);
-</pre>
+  </pre>
 
-<div class="example">
-  <div class="box box7">&nbsp;</div>
-  <div class="box original">&nbsp;</div>
-</div>
+  <div class="example">
+    <div class="box box7">&nbsp;</div>
+    <div class="box original">&nbsp;</div>
+  </div>
 
-<pre>
+  <pre>
 transform: scale(1.7);
 transform-origin: 0 0;
-</pre>
+  </pre>
 
-<div class="example">
-  <div class="box box8">&nbsp;</div>
-  <div class="box original">&nbsp;</div>
-</div>
+  <div class="example">
+    <div class="box box8">&nbsp;</div>
+    <div class="box original">&nbsp;</div>
+  </div>
 
-<pre>
+  <pre>
 transform: scale(1.7);
 transform-origin: 100% -30%;
-</pre>
+  </pre>
 
-<div class="example">
-  <div class="box box9">&nbsp;</div>
-  <div class="box original">&nbsp;</div>
-</div>
+  <div class="example">
+    <div class="box box9">&nbsp;</div>
+    <div class="box original">&nbsp;</div>
+  </div>
 
-<pre>
+  <pre>
 transform: skewX(50deg);
 transform-origin: 100% -30%;
-</pre>
+  </pre>
 
-<div class="example">
-  <div class="box box10">&nbsp;</div>
-  <div class="box original">&nbsp;</div>
-</div>
+  <div class="example">
+    <div class="box box10">&nbsp;</div>
+    <div class="box original">&nbsp;</div>
+  </div>
 
-<pre>
+  <pre>
 transform: skewY(50deg);
 transform-origin: 100% -30%;
-</pre>
-
+  </pre>
 </div>
 ```
 
@@ -293,7 +285,7 @@ transform-origin: 100% -30%;
   transform: scale(1.7);
 }
 
-.box7  {
+.box7 {
   transform: scale(1.7);
   transform-origin: 0 0;
 }
@@ -316,11 +308,15 @@ transform-origin: 100% -30%;
 
 {{EmbedLiveSample('A_demonstration_of_various_transform_values', '', 1350) }}
 
+## 仕様書
+
+{{Specifications}}
+
 ## ブラウザーの互換性
 
 {{Compat}}
 
 ## 関連情報
 
-- [CSS 座標変換の使用](/ja/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- [CSS 座標変換の使用](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
 - <https://css-tricks.com/almanac/properties/t/transform-origin/>

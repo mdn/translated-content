@@ -1,14 +1,8 @@
 ---
 title: scroll-padding-inline
 slug: Web/CSS/scroll-padding-inline
-tags:
-  - CSS
-  - Propriété
-  - Propriété logique
-  - Propriété raccourcie
-  - Reference
-translation_of: Web/CSS/scroll-padding-inline
 ---
+
 {{CSSRef}}
 
 La propriété **`scroll-padding-inline`** est une propriété raccourcie qui permet de définir le remplissage, sur l'axe en ligne, entre l'élément et la zone de défilement. Autrement dit, elle permet de définir `scroll-padding-inline-end` et `scroll-padding-inline-start`.
@@ -26,7 +20,7 @@ scroll-padding-inline: auto;
 /* Valeurs de longueur */
 /* Type <length> */
 scroll-padding-inline: 10px;
-scroll-padding-inline: 1em .5em;
+scroll-padding-inline: 1em 0.5em;
 scroll-padding-inline: 10%;
 
 /* Valeurs globales */
@@ -42,18 +36,18 @@ scroll-padding-inline: unset;
 - `auto`
   - : Le décalage est déterminé par l'agent utilisateur. Cette valeur correspond généralement à `0px` mais le navigateur peut utiliser une heuristique et déterminer si une valeur non nulle est préférable au regard du contexte dans lequel se trouve l'élément.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
 
-## Specifications
+## Syntaxe formelle
 
-| Spécification                                                                                                                    | État                                             | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Scroll Snap Points", "#propdef-scroll-padding-inline", "scroll-padding-inline")}} | {{Spec2("CSS Scroll Snap Points")}} | Définition initiale. |
+{{CSSSyntax}}
 
-{{cssinfo}}
+## Spécifications
+
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.scroll-padding-inline")}}
+{{Compat}}

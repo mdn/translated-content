@@ -1,24 +1,16 @@
 ---
 title: getState
 slug: Mozilla/Add-ons/WebExtensions/API/captivePortal/getState
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - captivePortal
-translation_of: Mozilla/Add-ons/WebExtensions/API/captivePortal/getState
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Renvoie l'état du portail comme `unknown`, `not_captive`, `unlocked_portal`, ou `locked_portal`.
 
 ## Syntaxe
 
 ```js
-var state = browser.captivePortal.getState()
+var state = browser.captivePortal.getState();
 ```
 
 ### Valeur retournée
@@ -27,11 +19,12 @@ Une [Promise](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui est 
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.captivePortal.getState")}}
+{{Compat}}
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -58,4 +51,4 @@ Une [Promise](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui est 
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

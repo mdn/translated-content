@@ -1,12 +1,8 @@
 ---
-title: ':only-child'
+title: ":only-child"
 slug: Web/CSS/:only-child
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:only-child
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:only-child`** représente n'importe quel élément qui est le seul enfant de son élément parent. Elle permet d'obtenir le même effet que `:first-child:last-child` ou `:nth-child(1):nth-last-child(1)`, mais avec une spécificité inférieure.
@@ -33,7 +29,7 @@ p:only-child {
 
 ```css
 span:only-child {
-  color:red;
+  color: red;
 }
 ```
 
@@ -41,21 +37,12 @@ span:only-child {
 
 ```html
 <div>
-  <span>
-    Ce span est l'unique enfant
-    de son parent
-  </span>
+  <span> Ce span est l'unique enfant de son parent </span>
 </div>
 
 <div>
-  <span>
-    Ce span est l'un des deux
-    enfants de son parent
-  </span>
-  <span>
-    Ce span est l'un des deux
-    enfants de son parent
-  </span>
+  <span> Ce span est l'un des deux enfants de son parent </span>
+  <span> Ce span est l'un des deux enfants de son parent </span>
 </div>
 ```
 
@@ -69,7 +56,7 @@ span:only-child {
 
 ```css
 li li {
-  list-style-type : disc;
+  list-style-type: disc;
 }
 
 li:only-child {
@@ -83,18 +70,21 @@ li:only-child {
 
 ```html
 <ol>
-  <li>Premier
+  <li>
+    Premier
     <ul>
       <li>Ceci est l'unique élément enfant</li>
     </ul>
   </li>
-  <li>Deuxième
+  <li>
+    Deuxième
     <ul>
       <li>Cette liste a deux éléments</li>
       <li>Cette liste a deux éléments</li>
     </ul>
   </li>
-  <li>Troisième
+  <li>
+    Troisième
     <ul>
       <li>Cette liste a trois éléments</li>
       <li>Cette liste a trois éléments</li>
@@ -110,14 +100,11 @@ li:only-child {
 
 ## Spécifications
 
-| Spécification                                                                            | État                                 | Commentaires                                                          |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | --------------------------------------------------------------------- |
-| {{SpecName('CSS4 Selectors', '#only-child-pseudo', ':only-child')}} | {{Spec2('CSS4 Selectors')}} | Il n'est plus nécessaire qu'un élément ait un parent pour être ciblé. |
-| {{SpecName('CSS3 Selectors', '#only-child-pseudo', ':only-child')}} | {{Spec2('CSS3 Selectors')}} | Définition initiale.                                                  |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.only-child")}}
+{{Compat}}
 
 ## Voir aussi
 

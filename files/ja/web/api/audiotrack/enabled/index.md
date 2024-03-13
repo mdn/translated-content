@@ -1,23 +1,8 @@
 ---
 title: AudioTrack.enabled
 slug: Web/API/AudioTrack/enabled
-page-type: web-api-instance-property
-tags:
-  - Audio
-  - AudioTrack
-  - HTML DOM
-  - Media
-  - Media Controls
-  - Media Track
-  - Property
-  - Reference
-  - Video
-  - enabled
-  - mute
-  - track
-browser-compat: api.AudioTrack.enabled
-translation_of: Web/API/AudioTrack/enabled
 ---
+
 {{APIRef("HTML DOM")}}
 
 **{{domxref("AudioTrack")}}** の **`enabled`** プロパティは、記述された音声トラックが現在使用可能かどうかを指定します。 `enabled` を `false` に設定してトラックを無効にすると、トラックはミュートになり、音声は生成されません。
@@ -54,7 +39,7 @@ function swapCommentaryMain() {
 
 上記の `swapCommentaryMain()` 関数は、{{HTMLElement("video")}} 要素の `"main-video"` の音声トラック内で、{{domxref("AudioTrack.kind", "kind")}} の値が `"main"` と `"commentary"` である音声トラックを見つけます。 これらはプライマリ音声トラックと解説トラックを表します。
 
-> **Note:** この例では、動画には各種類のトラックが 1 つずつしかないと想定していますが、必ずしもそうとは限りません。
+> **メモ:** この例では、動画には各種類のトラックが 1 つずつしかないと想定していますが、必ずしもそうとは限りません。
 
 次に、要素の音声トラックを、JavaScript の {{jsxref("Array.forEach", "forEach()")}} メソッドを使用してスキャンします（メディア要素の {{domxref("HTMLMediaElement.audioTracks", "audioTracks")}} プロパティは実際には JavaScript の配列ではありませんが、ほとんどの場合は同様にアクセスできます）。
 

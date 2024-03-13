@@ -1,17 +1,8 @@
 ---
 title: min-block-size
 slug: Web/CSS/min-block-size
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - Experimental
-  - リファレンス
-  - min-block-size
-  - recipe:css-property
-browser-compat: css.properties.min-block-size
-translation_of: Web/CSS/min-block-size
 ---
+
 {{CSSRef}}
 
 **`min-block-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、書字方向に応じて要素ブロックの水平または垂直方向の最小の寸法を定義します。これは {{cssxref("min-width")}} または {{cssxref("min-height")}} のどちらかのプロパティと、 {{cssxref("writing-mode")}} の値に応じて対応します。

@@ -1,12 +1,8 @@
 ---
 title: color-gamut
 slug: Web/CSS/@media/color-gamut
-tags:
-  - CSS
-  - Caractéristique média
-  - Reference
-translation_of: Web/CSS/@media/color-gamut
 ---
+
 {{CSSRef}}
 
 **`color-gamut`** est une caractéristique média dont la valeur décrit l'intervalle approximatif des couleurs qui sont prises en charge par l'agent utilisateur et l'appareil responsable de l'affichage.
@@ -46,10 +42,8 @@ La caractéristique `color-gamut` est définie avec un mot-clé parmi ceux de la
 
 ## Spécifications
 
-| Spécification                                                                            | État                                     | Commentaires         |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS4 Media Queries', '#color-gamut', 'color-gamut')}} | {{Spec2('CSS4 Media Queries')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.media.color-gamut")}}
+{{Compat}}

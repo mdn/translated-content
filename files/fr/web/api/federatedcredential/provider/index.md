@@ -1,14 +1,8 @@
 ---
 title: FederatedCredential.provider
 slug: Web/API/FederatedCredential/provider
-tags:
-  - API
-  - Credential Management API
-  - FederatedCredential
-  - Propriété
-  - Reference
-translation_of: Web/API/FederatedCredential/provider
 ---
+
 {{SeeCompatTable}}{{APIRef("")}}
 
 La propriété **`provider`**, rattachée à l'interface {{domxref("FederatedCredential")}}, fournit une chaîne de caractères {{domxref("USVString")}} qui décrit un fournisseur d'identité fédéré.
@@ -16,7 +10,7 @@ La propriété **`provider`**, rattachée à l'interface {{domxref("FederatedCre
 ## Syntaxe
 
 ```js
-var provider = FederatedCredential.provider
+var provider = FederatedCredential.provider;
 ```
 
 ### Valeur
@@ -31,10 +25,8 @@ Une chaîne de caractères {{domxref("USVString")}} identifiant un fournisseur d
 
 ## Spécifications
 
-| Spécification                                    | État                                         | Commentaires         |
-| ------------------------------------------------ | -------------------------------------------- | -------------------- |
-| {{SpecName('Credential Management')}} | {{Spec2('Credential Management')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.FederatedCredential.provider")}}
+{{Compat}}

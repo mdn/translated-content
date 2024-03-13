@@ -1,14 +1,8 @@
 ---
 title: Document.onbeforescriptexecute
 slug: Web/API/Document/beforescriptexecute_event
-tags:
-  - API
-  - DOM
-  - Propriétés
-  - scripts
-translation_of: Web/API/Document/onbeforescriptexecute
-original_slug: Web/API/Document/onbeforescriptexecute
 ---
+
 {{ApiRef("DOM")}} {{non-standard_header }}
 
 ## Résumé

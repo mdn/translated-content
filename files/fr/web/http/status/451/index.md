@@ -1,9 +1,8 @@
 ---
 title: 451 Unavailable For Legal Reasons
 slug: Web/HTTP/Status/451
-translation_of: Web/HTTP/Status/451
-browser-compat: http.status.451
 ---
+
 {{HTTPSidebar}}
 
 Le code de réponse d'erreur HTTP **`451 Unavailable For Legal Reasons`** indique que le client a demandé une ressource qui n'est pas disponible pour des raisons légales (par exemple, une page web sous le coup d'une action en justice).
@@ -30,13 +29,16 @@ Content-Type: text/html
 
 ```html
 <html>
-  <head><title>Unavailable For Legal Reasons</title></head>
+  <head>
+    <title>Unavailable For Legal Reasons</title>
+  </head>
   <body>
     <h1>Unavailable For Legal Reasons</h1>
-    <p>This request may not be serviced in the Roman Province
-    of Judea due to the Lex Julia Majestatis, which disallows
-    access to resources hosted on servers deemed to be
-    operated by the People's Front of Judea.</p>
+    <p>
+      This request may not be serviced in the Roman Province of Judea due to the
+      Lex Julia Majestatis, which disallows access to resources hosted on
+      servers deemed to be operated by the People's Front of Judea.
+    </p>
   </body>
 </html>
 ```

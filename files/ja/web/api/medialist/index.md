@@ -1,20 +1,13 @@
 ---
 title: MediaList
 slug: Web/API/MediaList
-tags:
-  - API
-  - CSSOM
-  - インターフェイス
-  - MediaList
-  - リファレンス
-browser-compat: api.MediaList
-translation_of: Web/API/MediaList
 ---
+
 {{APIRef("CSSOM")}}
 
 **`MediaList`** インターフェイスはスタイルシートのメディアクエリーを表します。例えば、 {{htmlelement("link")}} 要素の `media` 属性で設定されるものです。
 
-> **Note:** `MediaList` は生きたリストです。以下のプロパティやメソッドを使用して更新すると、直ちに文書の動作が更新されます。
+> **メモ:** `MediaList` は生きたリストです。以下のプロパティやメソッドを使用して更新すると、直ちに文書の動作が更新されます。
 
 ## プロパティ
 

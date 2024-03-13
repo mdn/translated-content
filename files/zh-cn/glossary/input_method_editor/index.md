@@ -1,13 +1,11 @@
 ---
-title: Input method editor
+title: 输入法编辑器
 slug: Glossary/Input_method_editor
-tags:
-  - IME
-  - 词汇表
-  - 输入法编辑器
-translation_of: Glossary/Input_method_editor
 ---
-输入法编辑器 (IME) 是一种程序，可为文本输入提供专门的用户界面。输入法编辑器在许多情况下使用：
+
+{{GlossarySidebar}}
+
+输入法编辑器（IME）是一种程序，可为文本输入提供专门的用户界面。输入法编辑器在许多情况下使用：
 
 - 使用拉丁键盘输入中文，日文或韩文文本
 - 使用数字键盘输入拉丁文字
@@ -15,10 +13,7 @@ translation_of: Glossary/Input_method_editor
 
 ## 参见
 
-- 维基百科文章
+- [输入法](https://zh.wikipedia.org/wiki/输入法)
+- [术语](/zh-CN/docs/Glossary)
 
-  - {{Interwiki("wikipedia", "Input method")}}
-
-- [词汇表](/zh-CN/docs/Glossary)
-
-  - {{Glossary("I18N")}}
+  - {{Glossary("Internationalization", "国际化")}}

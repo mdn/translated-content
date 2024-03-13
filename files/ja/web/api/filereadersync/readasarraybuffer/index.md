@@ -1,26 +1,29 @@
 ---
-title: FileReaderSync.readAsArrayBuffer()
+title: "FileReaderSync: readAsArrayBuffer() メソッド"
+short-title: readAsArrayBuffer()
 slug: Web/API/FileReaderSync/readAsArrayBuffer
-translation_of: Web/API/FileReaderSync/readAsArrayBuffer
+l10n:
+  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
+
 {{APIRef("File API")}}
 
 `readAsArrayBuffer()` は {{DOMxRef("FileReaderSync")}} インターフェイスのメソッドで、{{DOMxRef("File")}} または {{DOMxRef("Blob")}} オブジェクトを同期的に {{jsxref("ArrayBuffer")}} に読み込むことができます。このインターフェイスは、ブロックが発生する可能性のある同期 I/O を可能にするため、[ワーカー](/ja/docs/Web/API/Worker)で[のみ利用可能](/ja/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)です。
 
 ## 構文
 
-```js
-ArrayBuffer readAsArrayBuffer(blob);
+```js-nolint
+readAsArrayBuffer(blob)
 ```
 
 ### 引数
 
 - `blob`
-  - : {{DOMxRef("File")}} または {{DOMxRef("Blob")}} で、 {{DOMxRef("File")}} または {{jsxref("ArrayBuffer")}} に読み込むためのものです。
+  - : {{DOMxRef("File")}} または {{DOMxRef("Blob")}} で、{{DOMxRef("File")}} または {{jsxref("ArrayBuffer")}} に読み込むためのものです。
 
 ### 返値
 
-ファイルのデータを表す {{jsxref("ArrayBuffer")}} です。
+ファイルのデータを表す {{jsxref("ArrayBuffer")}} です。
 
 ## 例外
 
@@ -52,4 +55,4 @@ ArrayBuffer readAsArrayBuffer(blob);
 - {{DOMxRef("File")}}
 - {{DOMxRef("FileReaderSync")}}
 - {{DOMxRef("FileReader")}}
-- {{DOMxRef("BlobBuilder")}}, {{ domxref("Blob") }}
+- {{ domxref("Blob") }}

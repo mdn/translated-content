@@ -1,13 +1,8 @@
 ---
 title: padding-block-start
 slug: Web/CSS/padding-block-start
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-translation_of: Web/CSS/padding-block-start
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`padding-block-start`** définit le début logique de la zone de remplissage d'un élément de bloc. Cette propriété logique est traduite en une propriété physique selon le mode d'écriture, la directionnalité et l'orientation du texte. Autrement dit, elle correspond à la propriété {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}} ou {{cssxref("padding-left")}} selon les valeurs qui sont utilisées pour {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
@@ -26,7 +21,7 @@ padding-block-start: 1em;
 
 /* Valeurs de proportions */
 /* Type <percentage>      */
-padding-block-start: 5%;  /* Relatif à la largeur du bloc englobant */
+padding-block-start: 5%; /* Relatif à la largeur du bloc englobant */
 
 /* Valeurs globales */
 padding-block-start: inherit;
@@ -38,9 +33,13 @@ padding-block-start: unset;
 
 La propriété `padding-block-start` peut prendre les mêmes valeurs que la propriété {{cssxref("padding-left")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -64,7 +63,7 @@ div {
 .exemple {
   writing-mode: vertical-lr;
   padding-block-start: 20px;
-  background-color: #C8C800;
+  background-color: #c8c800;
 }
 ```
 
@@ -74,15 +73,11 @@ div {
 
 ## Spécifications
 
-| Spécification                                                                                                                | État                                             | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-padding-block-start", "padding-block-start")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.padding-block-start")}}
+{{Compat}}
 
 ## Voir aussi
 

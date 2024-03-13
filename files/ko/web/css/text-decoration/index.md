@@ -1,17 +1,11 @@
 ---
 title: text-decoration
 slug: Web/CSS/text-decoration
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text Decoration
-  - Reference
-browser-compat: css.properties.text-decoration
-translation_of: Web/CSS/text-decoration
 ---
+
 {{CSSRef}}
 
-[CSS](/ko/docs/Web/CSS) **`text-decoration`** [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)은 텍스트에 장식용 선을 추가합니다. 이 속성은 {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-style")}}, {{cssxref("text-decoration-thickness")}}의 단축 속성입니다.
+[CSS](/ko/docs/Web/CSS) **`text-decoration`** [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)은 텍스트에 장식용 선을 추가합니다. 이 속성은 {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-style")}}, {{cssxref("text-decoration-thickness")}}의 단축 속성입니다.
 
 {{EmbedInteractiveExample("pages/css/text-decoration.html")}}
 
@@ -99,13 +93,16 @@ text-decoration: unset;
 <p class="under">밑줄을 가지는 텍스트입니다.</p>
 <p class="over">윗줄을 가지는 텍스트입니다.</p>
 <p class="line">취소선을 가지는 텍스트입니다.</p>
-<p>기본 스타일과 달리
+<p>
+  기본 스타일과 달리
   <a class="plain" href="#">이 링크에는 밑줄이 없을 것입니다.</a>
-  사용자들은 보통 하이퍼링크 여부를 밑줄로 구분하므로, 앵커에서
-  밑줄을 제거할 때는 주의해야 합니다.</p>
+  사용자들은 보통 하이퍼링크 여부를 밑줄로 구분하므로, 앵커에서 밑줄을 제거할
+  때는 주의해야 합니다.
+</p>
 <p class="underover">밑줄과 윗줄 모두 가지는 텍스트입니다.</p>
-<p class="thick">브라우저가 지원하는 경우 아주 두꺼운 보라색
-  밑줄을 가지게 될 텍스트입니다.</p>
+<p class="thick">
+  브라우저가 지원하는 경우 아주 두꺼운 보라색 밑줄을 가지게 될 텍스트입니다.
+</p>
 <p class="blink">이 텍스트는 브라우저에 따라서 깜빡일 수 있습니다.</p>
 ```
 

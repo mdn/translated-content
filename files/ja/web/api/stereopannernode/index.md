@@ -1,20 +1,11 @@
 ---
 title: StereoPannerNode
 slug: Web/API/StereoPannerNode
-page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - Interface
-  - Reference
-  - StereoPannerNode
-  - Web Audio API
-browser-compat: api.StereoPannerNode
-translation_of: Web/API/StereoPannerNode
 ---
+
 {{APIRef("Web Audio API")}}
 
-`StereoPannerNode` は[ウェブ音声 API](/ja/docs/Web/API/Web_Audio_API) のインターフェイスで、音声ストリームを左右にパンすることができる、シンプルなステレオのパンニングを行うノードを表します。これは {{domxref("AudioNode")}} の一種で、コストが低くパワーの変わらない [アルゴリズム](http://webaudio.github.io/web-audio-api/#panning-algorithm)を用います。
+`StereoPannerNode` は[ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) のインターフェイスで、音声ストリームを左右にパンすることができる、シンプルなステレオのパンニングを行うノードを表します。これは {{domxref("AudioNode")}} の一種で、コストが低くパワーの変わらない [アルゴリズム](http://webaudio.github.io/web-audio-api/#panning-algorithm)を用います。
 
 {{domxref("StereoPannerNode.pan", "pan")}} 属性には -1 （完全に左へパンニング）から 1（完全に右へパンニング）までの実数値を単位をつけずに指定します。このインターフェイスにより、{{domxref("PannerNode")}} よりシンプルにパンを指定できます。
 
@@ -77,4 +68,4 @@ _固有のメソッドはありません。親である {{domxref("AudioNode")}}
 
 ## 関連情報
 
-- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

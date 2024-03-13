@@ -1,12 +1,10 @@
 ---
 title: 算法
 slug: Glossary/Algorithm
-tags:
-  - 专业术语
-  - 编程基础
-translation_of: Glossary/Algorithm
-original_slug: Glossary/算法
 ---
+
+{{GlossarySidebar}}
+
 算法是一个良定义的具体计算步骤的一个序列。
 
 换句话说，一个算法就是由人或机器可重复的解决问题的方法。计算机科学家们使用算法的复杂度（又称 O 标记法）来表示算法的效率。
@@ -20,13 +18,8 @@ original_slug: Glossary/算法
 
 还有很多机器学习算法例如“线性回归”、“决策树”、“随机森林”、“支持向量机”、“循环神经网络（RNN）”、“长短时记忆（LSTM）神经网络”、“卷积神经网络（CNN）”、“深度卷积神经网络”等。
 
-## 更多详情
+## 参见
 
-### 通用知识库（维基百科）
-
-- {{Interwiki("wikipedia", "Algorithm", "Algorithm")}}，维基百科
-
-### 技术分析
-
+- [Algorithm](https://zh.wikipedia.org/wiki/Algorithm)，维基百科
 - [Explanations of sorting algorithms](https://www.toptal.com/developers/sorting-algorithms)
-- [Explanations of algorithmic complexity](https://bigocheatsheet.com/)
+- [Explanations of algorithmic complexity](https://www.bigocheatsheet.com/)

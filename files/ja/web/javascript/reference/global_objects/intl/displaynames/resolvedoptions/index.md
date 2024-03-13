@@ -1,18 +1,8 @@
 ---
 title: Intl.DisplayNames.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/resolvedOptions
-tags:
-  - DisplayNames
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Method
-  - Prototype
-  - Reference
-browser-compat: javascript.builtins.Intl.DisplayNames.resolvedOptions
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/resolvedOptions
 ---
+
 {{JSRef}}
 
 **`Intl.DisplayNames.prototype.resolvedOptions()`** メソッドは、現在の {{jsxref("Intl.DisplayNames")}} オブジェクトの初期化時に計算されたロケールとスタイルの書式オプションを反映したプロパティを持つ新しいオブジェクトを返します。
@@ -20,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/resolv
 ## 構文
 
 ```js
-resolvedOptions()
+resolvedOptions();
 ```
 
 ### 返値
@@ -45,12 +35,12 @@ resolvedOptions()
 ### resolvedOptions の使用
 
 ```js
-const displayNames = new Intl.DisplayNames(['de-DE'], {type: 'region'});
+const displayNames = new Intl.DisplayNames(["de-DE"], { type: "region" });
 
 const usedOptions = displayNames.resolvedOptions();
-console.log(usedOptions.locale);   // "de-DE"
-console.log(usedOptions.style);    // "long"
-console.log(usedOptions.type);     // "region"
+console.log(usedOptions.locale); // "de-DE"
+console.log(usedOptions.style); // "long"
+console.log(usedOptions.type); // "region"
 console.log(usedOptions.fallback); // "code"
 ```
 

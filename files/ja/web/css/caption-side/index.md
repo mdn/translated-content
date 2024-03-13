@@ -1,15 +1,8 @@
 ---
 title: caption-side
 slug: Web/CSS/caption-side
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS 表
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.caption-side
-translation_of: Web/CSS/caption-side
 ---
+
 {{CSSRef}}
 
 **`caption-side`** は [CSS](/ja/docs/Web/CSS) のプロパティで、表 ({{htmlelement("table")}}) の {{HTMLElement("caption")}} の中身を指定された側に配置します。この値は表の {{cssxref('writing-mode')}} に対する相対値です。
@@ -69,17 +62,21 @@ caption-side: unset;
 
 ```html
 <table class="top">
-  <caption>Caption ABOVE the table</caption>
+  <caption>
+    Caption ABOVE the table
+  </caption>
   <tr>
     <td>Some data</td>
     <td>Some more data</td>
   </tr>
 </table>
 
-<br>
+<br />
 
 <table class="bottom">
-  <caption>Caption BELOW the table</caption>
+  <caption>
+    Caption BELOW the table
+  </caption>
   <tr>
     <td>Some data</td>
     <td>Some more data</td>

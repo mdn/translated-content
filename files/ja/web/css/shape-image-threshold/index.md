@@ -1,21 +1,8 @@
 ---
 title: shape-image-threshold
 slug: Web/CSS/shape-image-threshold
-tags:
-  - 境界
-  - CSS
-  - CSS プロパティ
-  - CSS シェイプ
-  - 浮動領域
-  - Opacity
-  - プロパティ
-  - Reference
-  - シェイプ
-  - recipe:css-property
-  - shape-image-threshold
-browser-compat: css.properties.shape-image-threshold
-translation_of: Web/CSS/shape-image-threshold
 ---
+
 {{CSSRef}}
 
 **`shape-image-threshold`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{cssxref("shape-outside")}} の値に指定された画像によってシェイプを抽出するために使用するアルファチャネルのしきい値を設定します。
@@ -64,14 +51,14 @@ shape-image-threshold: unset;
 <p>
   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel at commodi
   voluptates enim, distinctio officia. Saepe optio accusamus doloribus sint
-  facilis itaque ab nulla, dolor molestiae assumenda cum sit placeat
-  adipisci, libero quae nihil porro debitis laboriosam inventore animi
-  impedit nostrum nesciunt quisquam expedita! Dolores consectetur iure atque
-  a mollitia dicta repudiandae illum exercitationem aliquam repellendus
-  ipsum porro modi, id nemo eligendi, architecto ratione quibusdam iusto
-  nisi soluta? Totam inventore ea eum sed velit et eligendi suscipit
-  accusamus iusto dolore, at provident eius alias maxime pariatur non
-  deleniti ipsum sequi rem eveniet laboriosam magni expedita?
+  facilis itaque ab nulla, dolor molestiae assumenda cum sit placeat adipisci,
+  libero quae nihil porro debitis laboriosam inventore animi impedit nostrum
+  nesciunt quisquam expedita! Dolores consectetur iure atque a mollitia dicta
+  repudiandae illum exercitationem aliquam repellendus ipsum porro modi, id nemo
+  eligendi, architecto ratione quibusdam iusto nisi soluta? Totam inventore ea
+  eum sed velit et eligendi suscipit accusamus iusto dolore, at provident eius
+  alias maxime pariatur non deleniti ipsum sequi rem eveniet laboriosam magni
+  expedita?
 </p>
 ```
 
@@ -82,10 +69,8 @@ shape-image-threshold: unset;
   width: 150px;
   height: 150px;
   float: left;
-  background-image: linear-gradient(30deg, black, transparent 80%,
-      transparent);
-  shape-outside: linear-gradient(30deg, black, transparent 80%,
-      transparent);
+  background-image: linear-gradient(30deg, black, transparent 80%, transparent);
+  shape-outside: linear-gradient(30deg, black, transparent 80%, transparent);
   shape-image-threshold: 0.2;
 }
 ```

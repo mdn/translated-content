@@ -1,8 +1,8 @@
 ---
 title: Firefox 2 技術文件
 slug: Mozilla/Firefox/Releases/2
-translation_of: Mozilla/Firefox/Releases/2
 ---
+
 {{FirefoxSidebar}}
 
 ## Firefox 2 的開發相關特色
@@ -59,7 +59,7 @@ Firefox 2 有許多新的特色及功能，本文提供各項新特色的相關�
 
 ## 給廣大使用者的新功能
 
-Firefox 2 提供比上個版本更簡潔的操作介面，強化的安全隱私保護，讓您上網更安全方便。
+Firefox 2 提供比上個版本更簡潔的操作介面，強化的安全隱私保護，讓你上網更安全方便。
 
 ### 使用操作體驗
 

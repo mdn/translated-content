@@ -1,11 +1,8 @@
 ---
 title: normalize-space
 slug: Web/XPath/Functions/normalize-space
-tags:
-  - XSLT
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/normalize-space
 ---
+
 {{ XsltRef() }}
 
 `normalize-space` 関数は、文字列から前後のホワイトスペースを取り除き、連続するホワイトスペースを 1 つのスペースに置き換え、その結果として得られる文字列を返します。

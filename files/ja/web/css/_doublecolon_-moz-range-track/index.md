@@ -1,20 +1,13 @@
 ---
-title: '::-moz-range-track'
+title: "::-moz-range-track"
 slug: Web/CSS/::-moz-range-track
-tags:
-  - CSS
-  - CSS:Mozilla 拡張
-  - 標準外
-  - 擬似要素
-  - リファレンス
-  - セレクター
-translation_of: Web/CSS/::-moz-range-track
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 **`::-moz-range-track`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、 [Mozilla 拡張](/ja/docs/Web/CSS/Mozilla_Extensions)であり、 `type="range"` の {{HTMLElement("input")}} でインジケーターがスライドする*トラック* (すなわち、溝) を表します。
 
-> **Note:** `::-moz-range-track` を `<input type="range">` 以外で使用すると、何にも一致せず、効果がありません。
+> **メモ:** `::-moz-range-track` を `<input type="range">` 以外で使用すると、何にも一致せず、効果がありません。
 
 ## 構文
 
@@ -25,13 +18,13 @@ translation_of: Web/CSS/::-moz-range-track
 ### HTML
 
 ```html
-<input type="range" min="0" max="100" step="5" value="50"/>
+<input type="range" min="0" max="100" step="5" value="50" />
 ```
 
 ### CSS
 
 ```css
-input[type=range]::-moz-range-track {
+input[type="range"]::-moz-range-track {
   background-color: green;
 }
 ```

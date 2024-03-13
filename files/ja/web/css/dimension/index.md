@@ -1,17 +1,8 @@
 ---
 title: <dimension>
 slug: Web/CSS/dimension
-tags:
-  - CSS
-  - CSS データ型
-  - データ型
-  - リファレンス
-  - dimension
-  - 単位
-  - 値
-browser-compat: css.types.dimension
-translation_of: Web/CSS/dimension
 ---
+
 {{CSSRef}}
 
 **`<dimension>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、 {{CSSxRef("&lt;number&gt;")}} とそれに添付された単位を表します (`10px` など)。

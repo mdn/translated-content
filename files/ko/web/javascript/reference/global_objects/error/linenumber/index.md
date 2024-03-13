@@ -1,14 +1,8 @@
 ---
 title: Error.prototype.lineNumber
 slug: Web/JavaScript/Reference/Global_Objects/Error/lineNumber
-tags:
-  - JavaScript
-  - Non-standard
-  - Property
-  - Prototype
-  - Reference
-browser-compat: javascript.builtins.Error.lineNumber
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 **`lineNumber`** 속성은 이 오류가 발생한 파일의 행 번호를 포함합니다.
@@ -18,18 +12,18 @@ browser-compat: javascript.builtins.Error.lineNumber
 ### lineNumber 사용하기
 
 ```js
-var e = new Error('Could not parse input');
+var e = new Error("Could not parse input");
 throw e;
-console.log(e.lineNumber) // 2
+console.log(e.lineNumber); // 2
 ```
 
 ### 오류 이벤트를 사용하는 또 다른 예제
 
 ```js
-window.addEventListener('error', function(e) {
+window.addEventListener("error", function (e) {
   console.log(e.lineNumber); // 5
 });
-var e = new Error('Could not parse input');
+var e = new Error("Could not parse input");
 throw e;
 ```
 

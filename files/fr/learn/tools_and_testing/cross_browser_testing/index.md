@@ -1,23 +1,8 @@
 ---
 title: Test sur plusieurs navigateurs
 slug: Learn/Tools_and_testing/Cross_browser_testing
-tags:
-  - Accessibility
-  - Automation
-  - Beginner
-  - CSS
-  - CodingScripting
-  - HTML
-  - JavaScript
-  - Landing
-  - Learn
-  - Module
-  - Testing
-  - Tools
-  - TopicStub
-  - cross browser
-translation_of: Learn/Tools_and_testing/Cross_browser_testing
 ---
+
 {{LearnSidebar}}
 
 Ce module se concentre sur le test de projets Web sur différents navigateurs. Nous cherchons à identifier votre public cible (par exemple, de quels utilisateurs, navigateurs et appareils avez-vous le plus besoin de vous soucier?), comment procéder aux tests, les principaux problèmes auxquels vous serez confronté avec différents types de code et comment les atténuer, quels outils sont les plus utiles pour vour aider à tester et résoudre les problèmes, et comment utiliser l'automatisation pour accélérer les tests.

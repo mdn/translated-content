@@ -1,9 +1,8 @@
 ---
 title: Constructeur BigInt()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/BigInt
-translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/BigInt
-browser-compat: javascript.builtins.BigInt.BigInt
 ---
+
 {{JSRef}}
 
 Le constructeur **`BigInt()`** renvoie une valeur de type `bigint` (grand entier).

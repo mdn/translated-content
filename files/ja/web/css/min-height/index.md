@@ -1,20 +1,8 @@
 ---
 title: min-height
 slug: Web/CSS/min-height
-tags:
-  - CSS
-  - CSS プロパティ
-  - レイアウト
-  - 最小
-  - リファレンス
-  - 寸法
-  - height
-  - min-height
-  - recipe:css-property
-  - size
-browser-compat: css.properties.min-height
-translation_of: Web/CSS/min-height
 ---
+
 {{CSSRef}}
 
 **`min-height`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の最小高を設定します。これは {{cssxref("height")}} プロパティの[使用値](/ja/docs/Web/CSS/used_value)が、`min-height` で指定した値を下回ることを防ぎます。
@@ -72,9 +60,13 @@ min-height: unset;
 ### min-height の設定
 
 ```css
-table { min-height: 75%; }
+table {
+  min-height: 75%;
+}
 
-form { min-height: 0; }
+form {
+  min-height: 0;
+}
 ```
 
 ## 仕様書
@@ -83,9 +75,9 @@ form { min-height: 0; }
 
 ## ブラウザーの互換性
 
-{{Compat("css.properties.min-height")}}
+{{Compat}}
 
 ## 関連情報
 
-- [ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), {{cssxref("box-sizing")}}
+- [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{cssxref("box-sizing")}}
 - {{cssxref("height")}}, {{cssxref("max-height")}}

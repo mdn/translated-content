@@ -1,15 +1,8 @@
 ---
 title: text-underline-position
 slug: Web/CSS/text-underline-position
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text Decoration
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.text-underline-position
-translation_of: Web/CSS/text-underline-position
 ---
+
 {{CSSRef}}
 
 **`text-underline-position`** は [CSS](/ja/docs/Web/CSS) のプロパティであり、{{cssxref("text-decoration")}} プロパティの `underline` の値で設定される下線 (傍線) の位置を指定します。
@@ -70,15 +63,17 @@ text-underline-position: unset;
 2 つの段落の例を見てみましょう。
 
 ```html
-<p class="horizontal">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Nullam consectetur ac turpis vel laoreet. Nullam volutpat pharetra lorem, sit
-amet feugiat tortor volutpat quis. Nam eget sodales quam. Aliquam accumsan
-tellus ac erat posuere.</p>
+<p class="horizontal">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur ac
+  turpis vel laoreet. Nullam volutpat pharetra lorem, sit amet feugiat tortor
+  volutpat quis. Nam eget sodales quam. Aliquam accumsan tellus ac erat posuere.
+</p>
 
-<p class="vertical">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Nullam consectetur ac turpis vel laoreet. Nullam volutpat pharetra lorem, sit
-amet feugiat tortor volutpat quis. Nam eget sodales quam. Aliquam accumsan
-tellus ac erat posuere.</p>
+<p class="vertical">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur ac
+  turpis vel laoreet. Nullam volutpat pharetra lorem, sit amet feugiat tortor
+  volutpat quis. Nam eget sodales quam. Aliquam accumsan tellus ac erat posuere.
+</p>
 ```
 
 CSS はこのようになります。

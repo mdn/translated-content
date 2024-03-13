@@ -1,15 +1,8 @@
 ---
 title: font-synthesis
 slug: Web/CSS/font-synthesis
-tags:
-  - CSS
-  - CSS フォント
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.font-synthesis
-translation_of: Web/CSS/font-synthesis
 ---
+
 {{CSSRef}}
 
 **`font-synthesis`** は [CSS](/ja/docs/Web/CSS) のプロパティで、太字やイタリックの字体がない場合に、ブラウザーが合成してよいかどうかを制御します。
@@ -29,6 +22,8 @@ font-synthesis: initial;
 font-synthesis: revert;
 font-synthesis: unset;
 ```
+
+{{EmbedInteractiveExample("pages/css/font-synthesis.html")}}
 
 ### 値
 
@@ -61,7 +56,7 @@ font-synthesis: unset;
 
 ```html
 <em class="syn">Synthesize me! 站直。</em>
-<br/>
+<br />
 <em class="no-syn">Don't synthesize me! 站直。</em>
 ```
 
@@ -69,13 +64,13 @@ font-synthesis: unset;
 
 ```css
 em {
-  font-weight: bold;
+  font-weight: bold;
 }
 .syn {
-  font-synthesis: style weight small-caps;
+  font-synthesis: style weight small-caps;
 }
 .no-syn {
-  font-synthesis: none;
+  font-synthesis: none;
 }
 ```
 

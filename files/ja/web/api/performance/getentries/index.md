@@ -1,14 +1,8 @@
 ---
 title: performance.getEntries()
 slug: Web/API/Performance/getEntries
-tags:
-  - API
-  - メソッド
-  - リファレンス
-  - ウェブパフォーマンス
-browser-compat: api.Performance.getEntries
-translation_of: Web/API/Performance/getEntries
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 **`getEntries()`** メソッドは、そのページのすべての {{domxref("PerformanceEntry")}} オブジェクトのリストを返します。リストのメンバー（エントリー）は、明示的な時点でパフォーマンスマークまたはメジャーを作成することで（たとえば {{domxref("Performance.mark","mark()")}} メソッドを呼び出すことで）作成できます。特定の種類のパフォーマンスエントリーや特定の名前のパフォーマンスエントリーにのみ関心がある場合は、 {{domxref("Performance.getEntriesByType", "getEntriesByType()")}} と {{domxref("Performance.getEntriesByName", "getEntriesByName()")}} を参照してください。
@@ -51,25 +45,39 @@ function use_PerformanceEntry_methods() {
 
   // Use getEntries() to iterate through the each entry
   let p = performance.getEntries();
-  for (var i=0; i < p.length; i++) {
+  for (var i = 0; i < p.length; i++) {
     console.log("Entry[" + i + "]");
     check_PerformanceEntry(p[i]);
   }
 
   // Use getEntriesByType() to get all "mark" entries
   p = performance.getEntriesByType("mark");
-  for (let i=0; i < p.length; i++) {
-    console.log ("Mark only entry[" + i + "]: name = " + p[i].name +
-         "; startTime = " + p[i].startTime +
-         "; duration  = " + p[i].duration);
+  for (let i = 0; i < p.length; i++) {
+    console.log(
+      "Mark only entry[" +
+        i +
+        "]: name = " +
+        p[i].name +
+        "; startTime = " +
+        p[i].startTime +
+        "; duration  = " +
+        p[i].duration,
+    );
   }
 
   // Use getEntriesByName() to get all "mark" entries named "Begin"
   p = performance.getEntriesByName("Begin", "mark");
-  for (let i=0; i < p.length; i++) {
-    console.log ("Mark and Begin entry[" + i + "]: name = " + p[i].name +
-         "; startTime = " + p[i].startTime +
-         "; duration  = " + p[i].duration);
+  for (let i = 0; i < p.length; i++) {
+    console.log(
+      "Mark and Begin entry[" +
+        i +
+        "]: name = " +
+        p[i].name +
+        "; startTime = " +
+        p[i].startTime +
+        "; duration  = " +
+        p[i].duration,
+    );
   }
 }
 ```

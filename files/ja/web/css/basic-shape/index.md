@@ -1,13 +1,8 @@
 ---
 title: <basic-shape>
 slug: Web/CSS/basic-shape
-tags:
-  - CSS
-  - CSS シェイプ
-  - CSS データ型
-  - リファレンス
-translation_of: Web/CSS/basic-shape
 ---
+
 {{CSSRef}}
 
 **`<basic-shape>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、{{cssxref("clip-path")}}、{{cssxref("shape-outside")}}、{{cssxref("offset-path")}} の各プロパティで使用されるシェイプを表します。
@@ -120,7 +115,7 @@ translation_of: Web/CSS/basic-shape
 - どちらのシェイプも同じ参照ボックスを使う必要があります。
 - 両方のシェイプが同じ型で、型が `ellipse()` または `circle()` で、半径に `closest-side` または `farthest-side` のキーワードが使われていない場合、シェイプ関数のそれぞれの値の間で補間が行われます。
 - 両方のシェイプの型が `inset()` の場合、シェイプ関数のそれぞれの値の間で補間が行われます。
-- 両方のシェイプの型が `polygon()` で、両方の多角形が同じ数の角を持っており、同じ `&lt;fill-rule&gt;` を使用している場合、シェイプ関数のそれぞれの値の間で補間が行われます。
+- 両方のシェイプの型が `polygon()` で、両方の多角形が同じ数の角を持っており、同じ `<fill-rule>` を使用している場合、シェイプ関数のそれぞれの値の間で補間が行われます。
 - 両方のシェイプの型が `path()` の場合、両方の文字列が同じ数でパスデータコマンドの型が同じ順序であれば、実数でそれぞれのパスデータコマンドが補間されます。
 - それ以外の場合は補間が行われません。
 
@@ -143,18 +138,45 @@ div {
   width: 300px;
   height: 300px;
   background: repeating-linear-gradient(red, orange 50px);
-  clip-path: polygon(50% 0%, 60% 40%, 100% 50%, 60% 60%, 50% 100%, 40% 60%, 0% 50%, 40% 40%);
+  clip-path: polygon(
+    50% 0%,
+    60% 40%,
+    100% 50%,
+    60% 60%,
+    50% 100%,
+    40% 60%,
+    0% 50%,
+    40% 40%
+  );
   animation: 4s poly infinite alternate ease-in-out;
   margin: 10px auto;
 }
 
 @keyframes poly {
   from {
-    clip-path: polygon(50% 0%, 60% 40%, 100% 50%, 60% 60%, 50% 100%, 40% 60%, 0% 50%, 40% 40%);
+    clip-path: polygon(
+      50% 0%,
+      60% 40%,
+      100% 50%,
+      60% 60%,
+      50% 100%,
+      40% 60%,
+      0% 50%,
+      40% 40%
+    );
   }
 
   to {
-    clip-path: polygon(50% 30%, 100% 0%, 70% 50%, 100% 100%, 50% 70%, 0% 100%, 30% 50%, 0% 0%);
+    clip-path: polygon(
+      50% 30%,
+      100% 0%,
+      70% 50%,
+      100% 100%,
+      50% 70%,
+      0% 100%,
+      30% 50%,
+      0% 0%
+    );
   }
 }
 ```

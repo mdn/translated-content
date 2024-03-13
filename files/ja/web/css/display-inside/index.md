@@ -1,15 +1,8 @@
 ---
 title: <display-inside>
 slug: Web/CSS/display-inside
-tags:
-  - CSS
-  - CSS データ型
-  - CSS 表示
-  - データ型
-  - リファレンス
-  - display-inside
-translation_of: Web/CSS/display-inside
 ---
+
 {{CSSRef}}
 
 以下のキーワードは、要素の内部の {{CSSxRef("display")}} 種別を指定し、これは要素 (置換要素ではないものとする) の内容物をレイアウトする整形コンテキストの種類を定義します。これらのキーワードは `display` プロパティの値として使用され、単一のキーワードとしては伝統的な目的に、または Level 3 仕様書では {{CSSxRef("&lt;display-outside&gt;")}} のキーワードと共に使用されます。
@@ -33,11 +26,11 @@ translation_of: Web/CSS/display-inside
 - `flex`
   - : 要素は、ブロック要素のように動作しつつ、そのコンテンツを[フレックスボックスモデル](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)に従ってレイアウトします。
 - `grid`
-  - : 要素は、ブロック要素のように動作しつつ、そのコンテンツを[グリッドモデル](/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)に従ってレイアウトします。
+  - : 要素は、ブロック要素のように動作しつつ、そのコンテンツを[グリッドモデル](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)に従ってレイアウトします。
 - `ruby` {{Experimental_Inline}}
   - : 要素は、インライン要素のように動作しつつ、そのコンテンツをルビ (ruby) モデルに従ってレイアウトします。HTML の {{HTMLElement("ruby")}} 要素のように動作します。
 
-> **Note:** 二つの値の構文に対応しているブラウザーは、 `display: flex` や `display: grid` などの内部表示種別のみが指定されていると、外部表示種別を `block` に設定します。これで期待通りに動作します。例えば、ある要素を `display: grid` に指定した場合、そのボックスはブロックレベルボックスのグリッドコンテナーとして生成されることが期待されるでしょう。
+> **メモ:** 二つの値の構文に対応しているブラウザーは、 `display: flex` や `display: grid` などの内部表示種別のみが指定されていると、外部表示種別を `block` に設定します。これで期待通りに動作します。例えば、ある要素を `display: grid` に指定した場合、そのボックスはブロックレベルボックスのグリッドコンテナーとして生成されることが期待されるでしょう。
 
 <h2 id="Examples">例</h2>
 
@@ -56,18 +49,18 @@ translation_of: Web/CSS/display-inside
 
 ```css
 .box {
-    background-color: rgb(224, 206, 247);
-    border: 5px solid rebeccapurple;
-    display: flow-root;
+  background-color: rgb(224, 206, 247);
+  border: 5px solid rebeccapurple;
+  display: flow-root;
 }
 
 .float {
-    float: left;
-    width: 200px;
-    height: 150px;
-    background-color: white;
-    border:1px solid black;
-    padding: 10px;
+  float: left;
+  width: 200px;
+  height: 150px;
+  background-color: white;
+  border: 1px solid black;
+  padding: 10px;
 }
 ```
 
@@ -77,37 +70,35 @@ translation_of: Web/CSS/display-inside
 
 ## 仕様書
 
-| 仕様書                                                                                    | 状態                           |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- |
-| {{SpecName('CSS3 Display', '#typedef-display-inside', 'display-inside')}} | {{Spec2('CSS3 Display')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
 ### 複数のキーワードの対応
 
-{{Compat("css.properties.display.multi-keyword_values", 10)}}
+{{Compat}}
 
 - Chromium のバグ: <https://bugs.chromium.org/p/chromium/issues/detail?id=804600>
 
 ### flow-root の対応
 
-{{Compat("css.properties.display.flow-root", 10)}}
+{{Compat}}
 
 ### table の対応
 
-{{Compat("css.properties.display.table_values", 10)}}
+{{Compat}}
 
 ### grid の対応
 
-{{Compat("css.properties.display.grid", 10)}}
+{{Compat}}
 
 ### flex の対応
 
-{{Compat("css.properties.display.flex", 10)}}
+{{Compat}}
 
 ### ruby の対応
 
-{{Compat("css.properties.display.ruby_values", 10)}}
+{{Compat}}
 
 ## 関連情報
 
@@ -119,5 +110,5 @@ translation_of: Web/CSS/display-inside
   - {{CSSxRef("&lt;display-box&gt;")}}
   - {{CSSxRef("&lt;display-legacy&gt;")}}
 
-- [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
-- [グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
+- [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)

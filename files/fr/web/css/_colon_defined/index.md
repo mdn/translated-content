@@ -1,16 +1,8 @@
 ---
-title: ':defined'
+title: ":defined"
 slug: Web/CSS/:defined
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
-translation_of: Web/CSS/:defined
-browser-compat: css.selectors.defined
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:defined`** représente n'importe quel élément ayant été défini. Cela inclut les éléments standards provenant du navigateur, ainsi que les éléments personnalisés (« _custom elements_ ») ayant correctement été définis (c'est-à-dire grâce à la méthode [`CustomElementRegistry.define()`](/fr/docs/Web/API/CustomElementRegistry/define)).
@@ -38,21 +30,22 @@ Les fragments de code qui suivent sont tirés [du dépôt `defined-pseudo-class`
 Pour cette démonstration on définit un élément personnalisé trivial :
 
 ```js
-customElements.define('simple-custom',
+customElements.define(
+  "simple-custom",
   class extends HTMLElement {
     constructor() {
       super();
 
-      let divElem = document.createElement('div');
-      divElem.textContent = this.getAttribute('text');
+      let divElem = document.createElement("div");
+      divElem.textContent = this.getAttribute("text");
 
-      let shadowRoot = this.attachShadow({mode: 'open'})
-        .appendChild(divElem);
-  }
-})
+      let shadowRoot = this.attachShadow({ mode: "open" }).appendChild(divElem);
+    }
+  },
+);
 ```
 
-On insère ensuite une copie de cet élément dans le document, à côté d'un paragraphe classique {`<p>` :
+On insère ensuite une copie de cet élément dans le document, à côté d'un paragraphe classique `<p>` :
 
 ```html
 <simple-custom text="Le texte de l'élément personnalisé"></simple-custom>

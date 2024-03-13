@@ -1,10 +1,8 @@
 ---
 title: print-color-adjust
 slug: Web/CSS/print-color-adjust
-translation_of: Web/CSS/print-color-adjust
-original_slug: Web/CSS/-webkit-print-color-adjust
-browser-compat: css.properties.print-color-adjust
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`print-color-adjust`** définit ce que [l'agent utilisateur](/fr/docs/Glossary/User_agent) pourra éventuellement faire pour optimiser l'apparence de l'élément sur l'appareil de sortie. Par défaut, le navigateur peut réaliser des ajustements sur l'apparence de l'élément qu'il estime nécessaires et prudents selon le type et les capacités de l'appareil de sortie.
@@ -61,12 +59,17 @@ Dans cet exemple, on a une boîte qui utilise [`background-image`](/fr/docs/Web/
 ```css
 .ma-boite {
   background-color: black;
-  background-image: linear-gradient(rgba(0, 0, 180, 0.5), rgba(70, 140, 220, 0.5));
+  background-image: linear-gradient(
+    rgba(0, 0, 180, 0.5),
+    rgba(70, 140, 220, 0.5)
+  );
   color: #900;
   width: 15rem;
   height: 6rem;
   text-align: center;
-  font: 24px "Helvetica", sans-serif;
+  font:
+    24px "Helvetica",
+    sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -1,12 +1,8 @@
 ---
 title: range
 slug: Web/CSS/@counter-style/range
-tags:
-  - CSS
-  - Descripteur
-  - Reference
-translation_of: Web/CSS/@counter-style/range
 ---
+
 {{CSSRef}}
 
 Le descripteur **`range`**, associé à la règle @ {{cssxref("@counter-style")}}, permet de définir l'intervalle de valeurs pris en compte par le compteur personnalisé. Si la valeur du compteur de la liste est en dehors de cet intervalle, ce sera la mise en forme de secours qui sera utilisée pour représenter le marqueur du compteur. La valeur de `range` peut être `auto` ou une liste de majorants/minorants, séparés par des virgules.
@@ -35,8 +31,12 @@ range: 6 infinite;
 range: infinite infinite;
 
 /* Valeurs indiquant plusieurs intervalles */
-range: 2 5, 8 10;
-range: infinite 6, 10 infinite;
+range:
+  2 5,
+  8 10;
+range:
+  infinite 6,
+  10 infinite;
 ```
 
 ### Values
@@ -58,7 +58,9 @@ range: infinite 6, 10 infinite;
 @counter-style range-multi-example {
   system: cyclic;
   symbols: "\25A0" "\25A1";
-  range: 2 4, 7 9;
+  range:
+    2 4,
+    7 9;
 }
 
 .exemple {
@@ -89,13 +91,11 @@ Résultat
 
 ## Spécifications
 
-| Spécification                                                                                | État                                         | Commentaires         |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName("CSS3 Counter Styles", "#counter-style-range", "range")}} | {{Spec2('CSS3 Counter Styles')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.counter-style.range")}}
+{{Compat}}
 
 ## Voir aussi
 

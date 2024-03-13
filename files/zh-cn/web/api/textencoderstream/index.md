@@ -1,15 +1,8 @@
 ---
 title: TextEncoderStream
 slug: Web/API/TextEncoderStream
-page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Encoding
-  - Reference
-  - TextEncoderStream
-transition_of: Web/API/TextEncoderStream
 ---
+
 {{APIRef("Encoding API")}}
 
 {{domxref('Encoding API','','',' ')}} 的 **`TextEncoderStream`** 接口将一个字符串流转换为 UTF-8 编码的字节。它与 {{domxref("TextEncoder")}} 的流形式等价。

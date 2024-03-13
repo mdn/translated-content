@@ -1,9 +1,8 @@
 ---
 title: Window.alert()
 slug: Web/API/Window/alert
-translation_of: Web/API/Window/alert
-browser-compat: api.Window.alert
 ---
+
 {{APIRef}}
 
 `window.alert()` indique au navigateur d'afficher une boîte de dialogue avec un message optionnel, et d'attendre que la personne ferme cette boîte de dialogue.
@@ -13,8 +12,8 @@ Sous certaines conditions, par exemple au changement d'onglet, le navigateur pou
 ## Syntaxe
 
 ```js
-alert()
-alert(message)
+alert();
+alert(message);
 ```
 
 ### Paramètres

@@ -1,12 +1,8 @@
 ---
 title: break-inside
 slug: Web/CSS/break-inside
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/break-inside
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`break-inside`** définit comment la page, la colonne ou la région se fragmente au sein de la boîte générée. S'il n'y a aucune boîte générée, la propriété est ignorée.
@@ -51,9 +47,13 @@ La propriété `break-inside` se définit avec un mot-clé parmi ceux de la list
 - `avoid-region` {{experimental_inline}}
   - : Cette valeur interdit toute rupture de région au sein de la boîte.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Synonymes pour `page-break-inside`
 
@@ -88,16 +88,17 @@ p {
 
 ```html
 <div class="exemple">
-  <p>« Mais alors, » pensa Alice, « ne serai-je donc
-  jamais plus vieille que je ne le suis maintenant ?
-  D’un côté cela aura ses avantages, ne jamais être
-  une vieille femme. Mais alors avoir toujours des
-  leçons à apprendre ! Oh, je n’aimerais pas cela du
-  tout. »</p>
-  <p>« Oh ! Alice, petite folle, » se répondit-elle.
-  « Comment pourriez-vous apprendre des leçons ici ?
-  Il y a à peine de la place pour vous, et il n’y en
-  a pas du tout pour vos livres de leçons. »</p>
+  <p>
+    « Mais alors, » pensa Alice, « ne serai-je donc jamais plus vieille que je
+    ne le suis maintenant ? D’un côté cela aura ses avantages, ne jamais être
+    une vieille femme. Mais alors avoir toujours des leçons à apprendre ! Oh, je
+    n’aimerais pas cela du tout. »
+  </p>
+  <p>
+    « Oh ! Alice, petite folle, » se répondit-elle. « Comment pourriez-vous
+    apprendre des leçons ici ? Il y a à peine de la place pour vous, et il n’y
+    en a pas du tout pour vos livres de leçons. »
+  </p>
 </div>
 ```
 
@@ -107,20 +108,8 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                                     | Commentaires                                |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------- |
-| {{SpecName('CSS3 Fragmentation', '#break-within', 'break-inside')}}                             | {{Spec2('CSS3 Fragmentation')}} | Aucune modification.                        |
-| {{SpecName('CSS3 Regions', '#region-flow-break', 'break-inside')}}                             | {{Spec2('CSS3 Regions')}}         | Ajout de la gestion des ruptures de région. |
-| {{SpecName('CSS3 Multicol', '#break-before-break-after-break-inside', 'break-inside')}} | {{Spec2('CSS3 Multicol')}}     | Définition initiale.                        |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.break-inside", 4)}}
-
-### Notes relatives à la compatibilité
-
-Avant Firefox 65, l'ancienne propriété {{cssxref("page-break-inside")}} fonctionnait dans Firefox en empêchant les ruptures de colonnes et de pages. On utilisera les deux propriétés afin d'obtenir une rétrocompatibilité avec ces versions.
-
-Pour les anciens navigateurs basés sur WebKit, on peut utiliser la propriété préfixée `-webkit-column-break-inside` afin de contrôler les ruptures de colonne.
+{{Compat}}

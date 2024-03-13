@@ -1,26 +1,18 @@
 ---
 title: Intl.ListFormat.prototype.formatToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/formatToParts
-tags:
-  - 国際化
-  - Intl
-  - JavaScript
-  - ListFormat
-  - ローカライズ
-  - メソッド
-  - プロトタイプ
-  - リファレンス
-browser-compat: javascript.builtins.Intl.ListFormat.formatToParts
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/formatToParts
 ---
+
 {{JSRef}}
 
 **`Intl.ListFormat.prototype.formatToParts()`** メソッドは、ロケールを考慮した値のリストの書式化で使用できる様々な部分を表すオブジェクトの配列 ({{jsxref("Array")}}) を返します。
 
+{{EmbedInteractiveExample("pages/js/intl-listformat-prototype-formattoparts.html", "taller")}}
+
 ## 構文
 
 ```js
-formatToParts(list)
+formatToParts(list);
 ```
 
 ### 引数
@@ -45,8 +37,11 @@ formatToParts(list)
 ### formatToParts の使用
 
 ```js
-const fruits = ['Apple', 'Orange', 'Pineapple'];
-const myListFormat = new Intl.ListFormat('en-GB', { style: 'long', type: 'conjunction' });
+const fruits = ["Apple", "Orange", "Pineapple"];
+const myListFormat = new Intl.ListFormat("en-GB", {
+  style: "long",
+  type: "conjunction",
+});
 
 console.table(myListFormat.formatToParts(fruits));
 // [

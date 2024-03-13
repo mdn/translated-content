@@ -1,22 +1,15 @@
 ---
 title: ReadableStreamDefaultController.enqueue()
 slug: Web/API/ReadableStreamDefaultController/enqueue
-tags:
-  - API
-  - Method
-  - ReadableStreamDefaultController
-  - Reference
-  - Streams
-  - enqueue
-translation_of: Web/API/ReadableStreamDefaultController/enqueue
 ---
+
 {{APIRef("Streams")}}
 
 {{domxref("ReadableStreamDefaultController")}} 接口的 **`enqueue()`** 方法将给定数据块送入到关联的流中。
 
 ## 语法
 
-```js
+```js-nolint
 enqueue(chunk)
 ```
 
@@ -48,15 +41,15 @@ const stream = new ReadableStream({
       // 将随机字符串添加到流
       controller.enqueue(string);
       // 在屏幕上展示
-      let listItem = document.createElement('li');
+      let listItem = document.createElement("li");
       listItem.textContent = string;
       list1.appendChild(listItem);
     }, 1000);
-    button.addEventListener('click', function() {
+    button.addEventListener("click", function () {
       clearInterval(interval);
       fetchStream();
       controller.close();
-    })
+    });
   },
   pull(controller) {
     // 在这个例子中不使用 pull
@@ -65,7 +58,7 @@ const stream = new ReadableStream({
     // 如果取消了 reader，则会调用该函数，
     // 所以我们应该在这里停止生成字符串
     clearInterval(interval);
-  }
+  },
 });
 ```
 
@@ -76,3 +69,8 @@ const stream = new ReadableStream({
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- [使用可读流](/zh-CN/docs/Web/API/Streams_API/Using_readable_streams)
+- {{domxref("ReadableStreamDefaultController")}}

@@ -1,15 +1,8 @@
 ---
-title: 'HTMLFormElement: submit event'
+title: "HTMLFormElement: submit event"
 slug: Web/API/HTMLFormElement/submit_event
-tags:
-  - 事件
-  - 表单
-  - 参考
-  - 提交
-  - HTML DOM
-  - HTML 表单元素
-translation_of: Web/API/HTMLFormElement/submit_event
 ---
+
 {{APIRef}}
 
 当表单 {{HtmlElement("form")}} 提交的时候触发 `submit` 事件。
@@ -49,8 +42,8 @@ translation_of: Web/API/HTMLFormElement/submit_event
 
 ```html
 <form id="form">
-  <label>Test field: <input type="text"></label>
-  <br><br>
+  <label>Test field: <input type="text" /></label>
+  <br /><br />
   <button type="submit">Submit form</button>
 </form>
 <p id="log"></p>
@@ -64,9 +57,9 @@ function logSubmit(event) {
   event.preventDefault();
 }
 
-const form = document.getElementById('form');
-const log = document.getElementById('log');
-form.addEventListener('submit', logSubmit);
+const form = document.getElementById("form");
+const log = document.getElementById("log");
+form.addEventListener("submit", logSubmit);
 ```
 
 ### 结果

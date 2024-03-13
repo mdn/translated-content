@@ -1,12 +1,8 @@
 ---
 title: Contenu
 slug: Learn/CSS/Howto/Generated_content
-tags:
-  - CSS
-  - CSS:Premiers_pas
-translation_of: Learn/CSS/Howto/Generated_content
-original_slug: Apprendre/CSS/Comment/Generated_content
 ---
+
 {{LearnSidebar}}
 
 Cet article décrit différentes façons d'utiliser CSS afin d'ajouter du contenu à un document affiché. Vous pouvez modifier votre feuille de style afin d'ajouter du contenu textuel ou des images.
@@ -65,7 +61,7 @@ Cette règle ajoute un espace et une icône après chaque lien qui possède la c
 
 ```css
 a.glossary::after {
-   content: " " url("glossary-icon.gif");
+  content: " " url("glossary-icon.gif");
 }
 ```
 

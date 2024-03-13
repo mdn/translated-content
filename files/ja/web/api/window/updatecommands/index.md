@@ -1,18 +1,8 @@
 ---
 title: Window.updateCommands()
 slug: Web/API/Window/updateCommands
-tags:
-  - API
-  - HTML DOM
-  - メソッド
-  - リファレンス
-  - Window
-  - XUL コマンドノード
-  - sCommandName
-  - updateCommands
-browser-compat: api.Window.updateCommands
-translation_of: Web/API/Window/updateCommands
 ---
+
 {{ ApiRef() }}{{Non-standard_header}}
 
 ## 概要
@@ -22,7 +12,7 @@ translation_of: Web/API/Window/updateCommands
 ## 構文
 
 ```js
-updateCommands("sCommandName")
+updateCommands("sCommandName");
 ```
 
 ### 引数

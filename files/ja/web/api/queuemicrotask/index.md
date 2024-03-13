@@ -1,28 +1,8 @@
 ---
 title: queueMicrotask()
 slug: Web/API/queueMicrotask
-tags:
-  - API
-  - HTML DOM
-  - Intervals
-  - JavaScript
-  - Method
-  - Microtask
-  - Performance
-  - Reference
-  - Scheduling
-  - ServiceWorker
-  - SharedWorker
-  - Tasks
-  - Timers
-  - Window
-  - Worker
-  - asynchronous
-  - queueMicrotask
-  - setTimeout
-  - Polyfill
-browser-compat: api.queueMicrotask
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`queueMicrotask()`** は {{domxref("Window")}} または {{domxref("Worker")}} インターフェイスのメソッドです。ブラウザーのイベントループへ制御が戻る前の安全なタイミングで実行されるマイクロタスクをキューします。
@@ -38,7 +18,7 @@ browser-compat: api.queueMicrotask
 ## 構文
 
 ```js
-queueMicrotask(callback)
+queueMicrotask(callback);
 ```
 
 ### 引数
@@ -68,17 +48,18 @@ MyElement.prototype.loadData = function (url) {
       this.dispatchEvent(new Event("load"));
     });
   } else {
-    fetch(url).then(res => res.arrayBuffer()).then(data => {
-      this._cache[url] = data;
-      this._setData(data);
-      this.dispatchEvent(new Event("load"));
-    });
+    fetch(url)
+      .then((res) => res.arrayBuffer())
+      .then((data) => {
+        this._cache[url] = data;
+        this._setData(data);
+        this.dispatchEvent(new Event("load"));
+      });
   }
 };
 ```
 
 ## queueMicrotask() が利用できない場合
-<!-- ## When queueMicrotask() isn't available -->
 
 以下のコードは基本的にはモダンエンジンの `queueMicrotask()` のモンキーパッチです。即時解決される promise を用いてマイクロタスクを生成します。
 
@@ -87,7 +68,11 @@ if (typeof self.queueMicrotask !== "function") {
   self.queueMicrotask = function (callback) {
     Promise.resolve()
       .then(callback)
-      .catch(e => setTimeout(() => { throw e; })); // 例外を通知
+      .catch((e) =>
+        setTimeout(() => {
+          throw e;
+        }),
+      ); // 例外を通知
   };
 }
 ```

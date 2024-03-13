@@ -1,10 +1,8 @@
 ---
 title: Array.prototype.at()
 slug: Web/JavaScript/Reference/Global_Objects/Array/at
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/at
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/at
-browser-compat: javascript.builtins.Array.at
 ---
+
 {{JSRef}}
 
 El método **`at()`** recibe un valor numérico entero y devuelve el elemento en esa posición, permitiendo valores positivos y negativos. Los valores negativos contarán desde el último elemento del array.
@@ -16,7 +14,7 @@ Esto no sugiere que haya algo mal con usar la notación de corchetes. Por ejempl
 ## Sintaxis
 
 ```js
-at(índice)
+at(índice);
 ```
 
 ### Parámetros
@@ -36,7 +34,7 @@ El siguiente ejemplo proporciona una función que devuelve el último elemento e
 
 ```js
 // Nuestro array con objetos
-const carrito = ['manzana', 'plátano', 'pera'];
+const carrito = ["manzana", "plátano", "pera"];
 
 // Una función que devuelve el último elemento de un array dado
 function devolverUltimo(arr) {
@@ -48,7 +46,7 @@ const objeto1 = devolverUltimo(carrito);
 console.log(objeto1); // Muestra: 'pera'
 
 // Añade un elemento a nuestro array 'carrito'
-carrito.push('naranja');
+carrito.push("naranja");
 const objeto2 = devolverUltimo(carrito);
 console.log(objeto2); // Muestra: 'naranja'
 ```
@@ -59,10 +57,10 @@ Este ejemplo compara diferentes maneras de seleccionar el penúltimo (uno antes 
 
 ```js
 // Nuestro array con elementos
-const colores = ['rojo', 'verde', 'azul'];
+const colores = ["rojo", "verde", "azul"];
 
 // Usando la propiedad length
-const lengthMetodo = colores[colores.length-2];
+const lengthMetodo = colores[colores.length - 2];
 console.log(lengthMetodo); // Muestra: 'verde'
 
 // Usando el método slice(). Note que se devuelve un array

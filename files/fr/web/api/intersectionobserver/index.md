@@ -1,15 +1,8 @@
 ---
 title: IntersectionObserver
 slug: Web/API/IntersectionObserver
-tags:
-  - API
-  - Interface
-  - Intersection Observer API
-  - IntersectionObserver
-  - Reference
-  - observers
-translation_of: Web/API/IntersectionObserver
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 L'interface **`IntersectionObserver`** de l'[API _Intersection Observer_](/fr/docs/Web/API/Intersection_Observer_API) fournit un moyen d'observer de manière asynchrone les changements d'intersection d'un élément cible avec un élément ancêtre ou avec la fenêtre du document ([_viewport_](/fr/docs/Glossary/Viewport)). L'ancêtre ou la fenêtre du document est alors appelé racine dans ce contexte.
@@ -44,27 +37,25 @@ Lorsqu'un objet implémentant `IntersectionObserver` est créé, il est configur
 ## Exemple
 
 ```js
-var intersectionObserver = new IntersectionObserver(function(entries) {
+var intersectionObserver = new IntersectionObserver(function (entries) {
   // Si intersectionRatio vaut 0 ou moins, la cible
   // est hors de vue et rien n'est alors fait
   if (entries[0].intersectionRatio <= 0) return;
 
   loadItems(10);
-  console.log('Nouveaux éléments chargés');
+  console.log("Nouveaux éléments chargés");
 });
 // début de l'observation
-intersectionObserver.observe(document.querySelector('.scrollerFooter'));
+intersectionObserver.observe(document.querySelector(".scrollerFooter"));
 ```
 
 ## Spécifications
 
-| Spécification                                    | Statut                                       | Commentaire |
-| ------------------------------------------------ | -------------------------------------------- | ----------- |
-| {{SpecName('IntersectionObserver')}} | {{Spec2('IntersectionObserver')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IntersectionObserver")}}
+{{Compat}}
 
 ## Voir aussi
 

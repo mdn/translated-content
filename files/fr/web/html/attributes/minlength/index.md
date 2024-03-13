@@ -1,17 +1,8 @@
 ---
-title: 'Attribut HTML : minlength'
+title: "Attribut HTML : minlength"
 slug: Web/HTML/Attributes/minlength
-tags:
-  - Attribute
-  - Attributes
-  - Constraint validation
-  - HTML
-  - Input
-  - Reference
-  - minlength
-  - textarea
-translation_of: Web/HTML/Attributes/minlength
 ---
+
 {{HTMLSidebar}}
 
 L'attribut **`minlength`** définit le nombre minimal de caractères (sous forme d'unités de code UTF-16) que l'utilisateur peut saisir dans un élément [`<input>`](/fr/docs/Web/HTML/Element/Input) ou [`<textarea>`](/fr/docs/Web/HTML/Element/Textarea). Il doit s'agir d'une valeur entière égale ou supérieure à 0. Si aucune longueur minimale n'est spécifiée, ou si une valeur invalide est spécifiée, l'entrée n'a pas de longueur minimale. Cette valeur doit être inférieure ou égale à la valeur de [`maxlength`](/fr/docs/Web/HTML/Attributes/maxlength), sinon la valeur ne sera jamais valide, car il est impossible de satisfaire aux deux critères.
@@ -24,7 +15,7 @@ En ajoutant `minlength="5"`, la valeur doit soit être vide, soit comporter cinq
 
 ```html
 <label for="fruit">Entrez un nom de fruit d'au moins 5 lettres.</label>
-<input type="text" minlength="5" id="fruit">
+<input type="text" minlength="5" id="fruit" />
 ```
 
 Nous pouvons utiliser des pseudo-classes pour donner un style à l'élément en fonction de la validité de la valeur. La valeur sera valide tant qu'elle sera soit nulle (vide), soit longue de cinq caractères ou plus. _Vert_ est invalide, _Citron_ est valide.
@@ -45,14 +36,11 @@ input:invalid:focus {
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                           |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'input.html#attr-input-minlength', 'l\'attribut minlength')}} | {{Spec2('HTML WHATWG')}} |
-| {{SpecName('HTML5.1', 'input.html#attr-minlength-accept', 'l\'attribut minlength')}}     | {{Spec2('HTML5.1')}}     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.attribute.minlength")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,21 +1,8 @@
 ---
 title: max-inline-size
 slug: Web/CSS/max-inline-size
-tags:
-  - CSS
-  - CSS Logical Properties
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - Element size
-  - Experimental
-  - リファレンス
-  - Text Direction
-  - Writing Mode
-  - max-inline-size
-  - recipe:css-property
-browser-compat: css.properties.max-inline-size
-translation_of: Web/CSS/max-inline-size
 ---
+
 {{CSSRef}}
 
 **`max-inline-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、書字方向に応じて要素ブロックの水平または垂直方向の最大の寸法を定義します。これは {{cssxref("max-width")}} または {{cssxref("max-height")}} のどちらかのプロパティと、 {{cssxref("writing-mode")}} の値に応じて対応します。

@@ -1,13 +1,8 @@
 ---
 title: IDBCursor.continue()
 slug: Web/API/IDBCursor/continue
-tags:
-  - API
-  - IndexedDB
-  - Méthode
-  - Reference
-translation_of: Web/API/IDBCursor/continue
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`continue()`** de l'interface {{domxref("IDBCursor")}} fait avancer le curseur jusqu'à la prochaine position qui corrrespond à une clé donnée si celle-ci est passée en paramètre, si aucune clé n'est indiquée, le curseur avancera à la position qui suit immédiatement la position actuelle (dans la direction de progression du curseur).
@@ -27,7 +22,7 @@ curseur.continue(cléOptionnelle);
 
 ### Exceptions
 
-Cette méthode peut déclencher des exceptions  {{domxref("DOMException")}} de type :
+Cette méthode peut déclencher des exceptions {{domxref("DOMException")}} de type :
 
 <table class="standard-table">
   <thead>
@@ -69,37 +64,36 @@ Cette méthode peut déclencher des exceptions  {{domxref("DOMException")}} de t
 
 ## Exemple
 
-Dans ce petit morceau de code, on fait une transaction, on récupère un magasin d'objet, puis on utilise un curseur afin d'itérer sur les enregistrements contenus dans le magasin. Il n'est pas nécessaire de sélectionner les données selon une clé, on peut simplement toutes les récupérer. On notera qu'à chaque itération de la boucle, on récupère les données correspondantes à l'enregistrement grâce au curseur sous la forme `curseur.value.toto`. Pour étudier un exemple de travail complet, voir [notre exemple IDBCursor](https://github.com/mdn/IDBcursor-example/) ([voir l'exemple live](https://mdn.github.io/IDBcursor-example/)).
+Dans ce petit morceau de code, on fait une transaction, on récupère un magasin d'objet, puis on utilise un curseur afin d'itérer sur les enregistrements contenus dans le magasin. Il n'est pas nécessaire de sélectionner les données selon une clé, on peut simplement toutes les récupérer. On notera qu'à chaque itération de la boucle, on récupère les données correspondantes à l'enregistrement grâce au curseur sous la forme `curseur.value.toto`. Pour étudier un exemple de travail complet, voir [notre exemple IDBCursor](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbcursor) ([voir l'exemple live](https://mdn.github.io/dom-examples/indexeddb-examples/idbcursor/)).
 
 ```js
 function afficheDonnee() {
-  var transaction = db.transaction(['granListAlbum'], "readonly");
-  var objectStore = transaction.objectStore('granListAlbum');
+  var transaction = db.transaction(["granListAlbum"], "readonly");
+  var objectStore = transaction.objectStore("granListAlbum");
 
-  objectStore.openCursor().onsuccess = function(event) {
+  objectStore.openCursor().onsuccess = function (event) {
     var curseur = event.target.result;
-    if(curseur) {
-      var listItem = document.createElement('li');
-      listItem.innerHTML = curseur.value.titreAlbum + ', ' + curseur.value.annee;
+    if (curseur) {
+      var listItem = document.createElement("li");
+      listItem.innerHTML =
+        curseur.value.titreAlbum + ", " + curseur.value.annee;
       list.appendChild(listItem);
 
       curseur.continue();
     } else {
-      console.log('Entrées toutes affichés.');
+      console.log("Entrées toutes affichés.");
     }
   };
-};
+}
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBCursor-continue-void-any-key', 'continue()')}} | {{Spec2('IndexedDB')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.IDBCursor.continue")}}
+{{Compat}}
 
 ## Voir aussi
 
@@ -109,4 +103,4 @@ function afficheDonnee() {
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}
 - Manipuler des curseurs : {{domxref("IDBCursor")}}
-- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages)
+- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)

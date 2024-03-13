@@ -1,19 +1,8 @@
 ---
-title: '::cue'
+title: "::cue"
 slug: Web/CSS/::cue
-tags:
-  - '::cue'
-  - CSS
-  - メディア
-  - 擬似要素
-  - リファレンス
-  - セレクター
-  - ウェブ動画テキストトラック
-  - WebVTT
-  - cue
-browser-compat: css.selectors.cue
-translation_of: Web/CSS/::cue
 ---
+
 {{CSSRef}}
 
 **`::cue`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、選択された要素内の [WebVTT](/ja/docs/Web/API/WebVTT_API) キューに一致します。これにより、 VTT トラック付きのメディアで[キャプションや他のキューをスタイル付けする](/ja/docs/Web/API/WebVTT_API#styling_webtt_cues)ことができます。
@@ -24,6 +13,8 @@ translation_of: Web/CSS/::cue
   font-weight: bold;
 }
 ```
+
+{{EmbedInteractiveExample("pages/tabbed/pseudo-element-cue.html", "tabbed-shorter")}}
 
 このプロパティは、あたかも 1 つの部品であるかのように、一連のキュー全体に適用されます。 `background` とその個別指定だけは例外で、各キューに個別に適用されます。これは、ボックスが生成されて予期せずメディアの大きな領域を占めることを避けるためです。
 

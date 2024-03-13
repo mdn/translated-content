@@ -1,8 +1,8 @@
 ---
 title: Document.bgColor
 slug: Web/API/Document/bgColor
-translation_of: Web/API/Document/bgColor
 ---
+
 {{APIRef("DOM")}} {{ Deprecated_header() }}
 
 La propriété obsolète `bgColor` renvoie ou déinit la couleur de fond (background-color) du document courant.
@@ -10,8 +10,8 @@ La propriété obsolète `bgColor` renvoie ou déinit la couleur de fond (backgr
 ## Syntaxe
 
 ```js
-color = document.bgColor
-document.bgColor =color
+color = document.bgColor;
+document.bgColor = color;
 ```
 
 ### Parametres
@@ -32,4 +32,4 @@ La valeur par défaut pour cette propriété sur Firefox est le blanc (`#ffffff`
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.bgColor")}}
+{{Compat}}

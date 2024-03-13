@@ -1,16 +1,8 @@
 ---
 title: Intl.ListFormat() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/ListFormat
-tags:
-  - Constructor
-  - 国際化
-  - Intl
-  - JavaScript
-  - ListFormat
-  - リファレンス
-browser-compat: javascript.builtins.Intl.ListFormat.ListFormat
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/ListFormat
 ---
+
 {{JSRef}}
 
 **`Intl.ListFormat()`** コンストラクターは、言語を考慮したリストの書式化を可能にする
@@ -23,9 +15,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/ListForm
 ## 構文
 
 ```js
-new Intl.ListFormat()
-new Intl.ListFormat(locales)
-new Intl.ListFormat(locales, options)
+new Intl.ListFormat();
+new Intl.ListFormat(locales);
+new Intl.ListFormat(locales, options);
 ```
 
 ### 引数
@@ -40,7 +32,7 @@ new Intl.ListFormat(locales, options)
       - : 使用するロケール照合アルゴリズム。取りうる値は以下の通りです。
         - "`best fit`" （既定値）
         - "`lookup`"
-        このオプションについての詳細は、 {{jsxref("Global_Objects/Intl", "Intl", "#Locale_negotiation", 1)}} のページをご覧ください。
+          このオプションについての詳細は、 {{jsxref("Global_Objects/Intl", "Intl", "#Locale_negotiation", 1)}} のページをご覧ください。
     - `type`
       - : グループ化の種類を示します。取りうる値は以下の通りです。
         - "`conjunction`" - リスト項目の "and" ベースのグループ化: "A, B, and C" （既定値）
@@ -59,62 +51,96 @@ new Intl.ListFormat(locales, options)
 次の例では、英語を使用するリストのフォーマッターを生成する方法を示します。
 
 ```js
-const list = ['Motorcycle', 'Bus', 'Car'];
+const list = ["Motorcycle", "Bus", "Car"];
 
-console.log(new Intl.ListFormat('en-GB', { style: 'long', type: 'conjunction' })
-.format(list));
+console.log(
+  new Intl.ListFormat("en-GB", { style: "long", type: "conjunction" }).format(
+    list,
+  ),
+);
 // Motorcycle, Bus and Car
 
-console.log(new Intl.ListFormat('en-GB', { style: 'long' })
-.format(list));
+console.log(new Intl.ListFormat("en-GB", { style: "long" }).format(list));
 // Motorcycle, Bus and Car
 
-console.log(new Intl.ListFormat('en-US', { style: 'long' })
-.format(list));
+console.log(new Intl.ListFormat("en-US", { style: "long" }).format(list));
 // Motorcycle, Bus, and Car
 
-console.log(new Intl.ListFormat('en-GB', { style: 'short', type: 'conjunction' })
-.format(list));
+console.log(
+  new Intl.ListFormat("en-GB", { style: "short", type: "conjunction" }).format(
+    list,
+  ),
+);
 // Motorcycle, Bus and Car
 
-console.log(new Intl.ListFormat('en-US', { style: 'short', type: 'conjunction' })
-.format(list));
+console.log(
+  new Intl.ListFormat("en-US", { style: "short", type: "conjunction" }).format(
+    list,
+  ),
+);
 // Motorcycle, Bus, & Car
 
-console.log(new Intl.ListFormat('en-GB', { style: 'narrow', type: 'conjunction' })
-.format(list));
+console.log(
+  new Intl.ListFormat("en-GB", { style: "narrow", type: "conjunction" }).format(
+    list,
+  ),
+);
 // Motorcycle, Bus, Car
 
-console.log(new Intl.ListFormat('en-GB', { style: 'long', type: 'disjunction' })
-.format(list));
+console.log(
+  new Intl.ListFormat("en-GB", { style: "long", type: "disjunction" }).format(
+    list,
+  ),
+);
 // Motorcycle, Bus or Car
 
-console.log(new Intl.ListFormat('en-GB', { style: 'short', type: 'disjunction' })
-.format(list));
+console.log(
+  new Intl.ListFormat("en-GB", { style: "short", type: "disjunction" }).format(
+    list,
+  ),
+);
 // Motorcycle, Bus or Car
 
-console.log(new Intl.ListFormat('en-GB', { style: 'narrow', type: 'disjunction' })
-.format(list));
+console.log(
+  new Intl.ListFormat("en-GB", { style: "narrow", type: "disjunction" }).format(
+    list,
+  ),
+);
 // Motorcycle, Bus or Car
 
-console.log(new Intl.ListFormat('en-US', { style: 'narrow' })
-.format(list));
+console.log(new Intl.ListFormat("en-US", { style: "narrow" }).format(list));
 // Motorcycle, Bus, Car
 
-console.log(new Intl.ListFormat('en-GB', { style: 'narrow', type: 'unit' })
-.format(list));
+console.log(
+  new Intl.ListFormat("en-GB", { style: "narrow", type: "unit" }).format(list),
+);
 // Motorcycle Bus Car
 
-console.log(new Intl.ListFormat('en-US', { style: 'long' })
-.format(["30 degrees", "15 minutes", "50 seconds"]));
+console.log(
+  new Intl.ListFormat("en-US", { style: "long" }).format([
+    "30 degrees",
+    "15 minutes",
+    "50 seconds",
+  ]),
+);
 // 30 degrees, 15 minutes, and 50 seconds
 
-console.log(new Intl.ListFormat('en-US', { style: 'narrow' })
-.format(["30 degrees", "15 minutes", "50 seconds"]));
+console.log(
+  new Intl.ListFormat("en-US", { style: "narrow" }).format([
+    "30 degrees",
+    "15 minutes",
+    "50 seconds",
+  ]),
+);
 // 30 degrees, 15 minutes, 50 seconds
 
-console.log(new Intl.ListFormat('en-US', { style: 'narrow', type: 'unit' })
-.format(["30°", "15′", "50″"]));
+console.log(
+  new Intl.ListFormat("en-US", { style: "narrow", type: "unit" }).format([
+    "30°",
+    "15′",
+    "50″",
+  ]),
+);
 // 30° 15′ 50″
 ```
 

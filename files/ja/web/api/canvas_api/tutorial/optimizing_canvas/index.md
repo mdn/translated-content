@@ -1,17 +1,9 @@
 ---
 title: キャンバスの最適化
 slug: Web/API/Canvas_API/Tutorial/Optimizing_canvas
-tags:
-  - 上級者
-  - キャンバス
-  - グラフィック
-  - HTML
-  - HTML5
-  - チュートリアル
-translation_of: Web/API/Canvas_API/Tutorial/Optimizing_canvas
-original_slug: Web/Guide/HTML/Canvas_tutorial/Optimizing_canvas
 ---
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas", "Web/API/Canvas_API/Tutorial/Finale")}}
+
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas", "Web/API/Canvas_API/Tutorial/Finale")}}
 
 {{HTMLElement("canvas")}} 要素は、ウェブで二次元グラフィックを描画するためにもっとも広く使用されているツールのひとつです。しかし、ウェブサイトやアプリがキャンバス API の限界付近まで使用するようになって、パフォーマンスが悪化するようになりました。この記事では、キャンバス要素の使用を最適化して、グラフィックを確実に改善するための提案を行います。
 
@@ -24,11 +16,11 @@ original_slug: Web/Guide/HTML/Canvas_tutorial/Optimizing_canvas
 アニメーションフレーム毎に同じ描画操作を繰り返していることに気づいたら、あらかじめオフスクリーンキャンバスに描画しておくことを検討しましょう。そして、必要な時に本来のキャンバスにオフスクリーン画像を、最初の場所で生成したときのステップなしで描画することができます。
 
 ```js
-myCanvas.offscreenCanvas = document.createElement('canvas');
+myCanvas.offscreenCanvas = document.createElement("canvas");
 myCanvas.offscreenCanvas.width = myCanvas.width;
 myCanvas.offscreenCanvas.height = myCanvas.height;
 
-myCanvas.getContext('2d').drawImage(myCanvas.offScreenCanvas, 0, 0);
+myCanvas.getContext("2d").drawImage(myCanvas.offScreenCanvas, 0, 0);
 ```
 
 ### 浮動小数点数値の座標を避けて整数を使用
@@ -66,10 +58,18 @@ ctx.drawImage(myImage, 0.3, 0.5);
     border: 2px solid black;
   }
 
-  canvas { position: absolute; }
-  #ui-layer { z-index: 3; }
-  #game-layer { z-index: 2; }
-  #background-layer { z-index: 1; }
+  canvas {
+    position: absolute;
+  }
+  #ui-layer {
+    z-index: 3;
+  }
+  #game-layer {
+    z-index: 2;
+  }
+  #background-layer {
+    z-index: 1;
+  }
 </style>
 ```
 
@@ -88,8 +88,8 @@ var scaleY = window.innerHeight / canvas.height;
 var scaleToFit = Math.min(scaleX, scaleY);
 var scaleToCover = Math.max(scaleX, scaleY);
 
-stage.style.transformOrigin = '0 0'; //scale from top left
-stage.style.transform = 'scale(' + scaleToFit + ')';
+stage.style.transformOrigin = "0 0"; //scale from top left
+stage.style.transform = "scale(" + scaleToFit + ")";
 ```
 
 ### 透過をやめる
@@ -97,7 +97,7 @@ stage.style.transform = 'scale(' + scaleToFit + ')';
 アプリケーションがキャンバスを使用していて背後のものを透過させる必要がない場合は、 {{domxref("HTMLCanvasElement.getContext()")}} で描画コンテキストを生成する際に `alpha` オプションを `false` に設定しましょう。この情報を使用してブラウザーが描画を最適化する可能性があります。
 
 ```js
-var ctx = canvas.getContext('2d', { alpha: false });
+var ctx = canvas.getContext("2d", { alpha: false });
 ```
 
 ### 高解像度のディスプレイでの拡大縮小
@@ -117,8 +117,8 @@ canvas.height = rect.height * dpr;
 ctx.scale(dpr, dpr);
 
 // Set the "drawn" size of the canvas
-canvas.style.width = rect.width + 'px';
-canvas.style.height = rect.height + 'px';
+canvas.style.width = rect.width + "px";
+canvas.style.height = rect.height + "px";
 ```
 
 ### その他の TIPS

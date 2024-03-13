@@ -1,14 +1,8 @@
 ---
 title: shape
 slug: Web/CSS/@media/shape
-tags:
-  - '@media'
-  - CSS
-  - リファレンス
-  - メディア特性
-browser-compat: css.at-rules.media.shape
-translation_of: Web/CSS/@media/shape
 ---
+
 {{CSSRef}}
 
 `shape` は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、端末の形状が矩形であるか丸いディスプレイであるかを区別するために使用することができます。
@@ -60,9 +54,12 @@ h1 {
 
 ```html
 <head>
-    <link rel="stylesheet" href="default.css" />
-    <link media="screen and (shape: rect)" rel="stylesheet" href="rectangle.css" />
-    <link media="screen and (shape: round)" rel="stylesheet" href="round.css" />
+  <link rel="stylesheet" href="default.css" />
+  <link
+    media="screen and (shape: rect)"
+    rel="stylesheet"
+    href="rectangle.css" />
+  <link media="screen and (shape: round)" rel="stylesheet" href="round.css" />
 </head>
 ```
 

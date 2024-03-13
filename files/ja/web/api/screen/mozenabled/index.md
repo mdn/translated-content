@@ -1,18 +1,8 @@
 ---
 title: Screen.mozEnabled
 slug: Web/API/Screen/mozEnabled
-page-type: web-api-instance-property
-tags:
-  - API
-  - API:Mozilla Extensions
-  - DOM
-  - Deprecated
-  - Non-standard
-  - Property
-  - Reference
-browser-compat: api.Screen.mozEnabled
-translation_of: Web/API/Screen/mozEnabled
 ---
+
 {{APIRef("CSSOM")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 これは論理値で、端末の画面を制御します。 `false` に設定すると画面をオフにします。

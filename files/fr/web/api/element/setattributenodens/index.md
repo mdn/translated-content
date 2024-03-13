@@ -1,13 +1,8 @@
 ---
 title: element.setAttributeNodeNS
 slug: Web/API/Element/setAttributeNodeNS
-tags:
-  - API
-  - DOM
-  - Element
-  - Méthodes
-translation_of: Web/API/Element/setAttributeNodeNS
 ---
+
 {{ APIRef("DOM") }}
 
 `setAttributeNodeNS` ajoute un nouveau nœud attribut avec l'espace de noms et le nom spécifiés.
@@ -15,7 +10,7 @@ translation_of: Web/API/Element/setAttributeNodeNS
 ## Syntaxe
 
 ```js
-replacedAttr = element.setAttributeNodeNS(attributeNode)
+replacedAttr = element.setAttributeNodeNS(attributeNode);
 ```
 
 - `replacedAttr`
@@ -35,7 +30,7 @@ var d2 = document.getElementById("two");
 var a = d1.getAttributeNodeNS(myns, "special-align");
 d2.setAttributeNodeNS(a);
 
-alert(d2.attributes[1].value) // renvoie&nbsp;: "utterleft"
+alert(d2.attributes[1].value); // renvoie&nbsp;: "utterleft"
 ```
 
 ## Notes

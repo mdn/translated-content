@@ -1,16 +1,8 @@
 ---
 title: Sec-CH-UA-Bitness
 slug: Web/HTTP/Headers/Sec-CH-UA-Bitness
-translation_of: Web/HTTP/Headers/Sec-CH-UA-Bitness
-tags:
-  - Sec-CH-UA-Bitness
-  - Client hint
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
-  -  Experimental
 ---
+
 {{HTTPSidebar}} {{SeeCompatTable}} {{securecontext_header}}
 
 **`Sec-CH-UA-Bitness`** [用户代理客户端提示](/zh-CN/docs/Web/HTTP/Client_hints#user-agent_client_hints)请求标头提供用户代理底层 CPU 架构（architecture）的“位数”。这是一种以位为单位的指示内存地址大小的整数，通常为 64 位或 32 位。
@@ -76,6 +68,6 @@ Sec-CH-UA-Bitness: "64"
 
 - [客户端提示](/zh-CN/docs/Web/HTTP/Client_hints)
 - [用户代理客户端提示 API](/zh-CN/docs/Web/API/User-Agent_Client_Hints_API)
-- [通过用户代理客户端提示改善用户隐私和开发人员体验](https://web.dev/user-agent-client-hints/)（web.dev）
+- [通过用户代理客户端提示改善用户隐私和开发人员体验](https://developer.chrome.com/articles/user-agent-client-hints/)（web.dev）
 - {{HTTPHeader("Accept-CH")}}
 - [HTTP 缓存 > Vary 响应](/zh-CN/docs/Web/HTTP/Caching#vary_响应)和 {{HTTPHeader("Vary")}}

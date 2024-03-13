@@ -1,20 +1,8 @@
 ---
 title: DOMPoint()
 slug: Web/API/DOMPoint/DOMPoint
-page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Coordinates
-  - DOM
-  - DOMPoint
-  - Geometry
-  - Geometry Interfaces
-  - Point
-  - Reference
-browser-compat: api.DOMPoint.DOMPoint
-translation_of: Web/API/DOMPoint/DOMPoint
 ---
+
 {{APIRef("DOM")}}
 
 **`DOMPoint()`** コンストラクターは、プロパティの一部または全部の値を指定して、新しい {{domxref("DOMPoint")}} オブジェクトを作成し、それを返します。
@@ -24,11 +12,11 @@ translation_of: Web/API/DOMPoint/DOMPoint
 ## 構文
 
 ```js
-new DOMPoint()
-new DOMPoint(x)
-new DOMPoint(x, y)
-new DOMPoint(x, y, z)
-new DOMPoint(x, y, z, w)
+new DOMPoint();
+new DOMPoint(x);
+new DOMPoint(x, y);
+new DOMPoint(x, y, z);
+new DOMPoint(x, y, z, w);
 ```
 
 ### 引数

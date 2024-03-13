@@ -1,18 +1,8 @@
 ---
-title: 'Window: focus イベント'
+title: "Window: focus イベント"
 slug: Web/API/Window/focus_event
-tags:
-  - API
-  - イベント
-  - Focus
-  - FocusEvent
-  - リファレンス
-  - ウェブ
-  - Window
-  - onfocus
-browser-compat: api.Window.focus_event
-translation_of: Web/API/Window/focus_event
 ---
+
 {{APIRef}}
 
 **`focus`** イベントは、要素がフォーカスを受け取ったときに発生します。
@@ -75,19 +65,20 @@ translation_of: Web/API/Window/focus_event
 
 ```js
 function pause() {
-  document.body.classList.add('paused');
-  log.textContent = 'FOCUS LOST!';
+  document.body.classList.add("paused");
+  log.textContent = "FOCUS LOST!";
 }
 
 function play() {
-  document.body.classList.remove('paused');
-  log.textContent = 'This document has focus. Click outside the document to lose focus.';
+  document.body.classList.remove("paused");
+  log.textContent =
+    "This document has focus. Click outside the document to lose focus.";
 }
 
-const log = document.getElementById('log');
+const log = document.getElementById("log");
 
-window.addEventListener('blur', pause);
-window.addEventListener('focus', play);
+window.addEventListener("blur", pause);
+window.addEventListener("focus", play);
 ```
 
 #### 結果

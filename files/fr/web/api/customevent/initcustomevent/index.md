@@ -1,12 +1,8 @@
 ---
 title: CustomEvent.initCustomEvent()
 slug: Web/API/CustomEvent/initCustomEvent
-tags:
-  - API
-  - DOM
-  - Méthodes
-translation_of: Web/API/CustomEvent/initCustomEvent
 ---
+
 {{APIRef("DOM")}}{{deprecated_header}}
 
 La méthode **`CustomEvent.initCustomEvent()`** initialise un objet `CustomEvent`. Si l'évènement a déjà été distribué, cette méthode ne change rien.
@@ -36,13 +32,11 @@ event.initCustomEvent(type, canBubble, cancelable, detail);
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                           | Commentaire                                                                                                                                                    |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG','#dom-customevent-initcustomevent','CustomEvent')}} | {{Spec2('DOM WHATWG')}} | Définition initiale, mais déjà dépréciée au profit de l'utilisation d'un constructeur,{{domxref("CustomEvent.CustomEvent", "CustomEvent()")}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CustomEvent.initCustomEvent")}}
+{{Compat}}
 
 ## Voir aussi
 

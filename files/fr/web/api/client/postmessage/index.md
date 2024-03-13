@@ -1,16 +1,8 @@
 ---
 title: Client.postMessage()
 slug: Web/API/Client/postMessage
-tags:
-  - API
-  - Client
-  - Méthode
-  - Reference
-  - Service Worker
-  - ServiceWorker
-  - postMessage
-translation_of: Web/API/Client/postMessage
 ---
+
 {{SeeCompatTable}}{{APIRef("Client")}}
 
 La méthode **`postMessage()`** de l'interface [`Client`](/fr/docs/Web/API/Client) permet à un service worker client d'envoyer un message à un [`ServiceWorker`](/fr/docs/Web/API/ServiceWorker).
@@ -40,26 +32,26 @@ Ce message est contenu dans une promesse qui se résolvera si la réponse ne con
 
 ```js
 function sendMessage(message) {
-  return new Promise(function(resolve, reject) {
-     var messageChannel = new MessageChannel();
-     messageChannel.port1.onmessage = function(event) {
-       if (event.data.error) {
-         reject(event.data.error);
-       } else {
-         resolve(event.data);
-       }
-     };
-    navigator.serviceWorker.controller.postMessage(message, [messageChannel.port2]);
+  return new Promise(function (resolve, reject) {
+    var messageChannel = new MessageChannel();
+    messageChannel.port1.onmessage = function (event) {
+      if (event.data.error) {
+        reject(event.data.error);
+      } else {
+        resolve(event.data);
+      }
+    };
+    navigator.serviceWorker.controller.postMessage(message, [
+      messageChannel.port2,
+    ]);
   });
 }
 ```
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                               | Commentaire         |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Service Workers', '#client-postmessage-method', 'postMessage()')}} | {{Spec2('Service Workers')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Client.postMessage")}}
+{{Compat}}

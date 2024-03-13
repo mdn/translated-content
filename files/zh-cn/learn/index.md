@@ -1,35 +1,15 @@
 ---
 title: 学习 Web 开发
 slug: Learn
-tags:
-  - CSS
-  - HTML
-  - Web
-  - 交互式网站
-  - 初学者
-  - 前端
-  - 启程
-  - 学习
-  - 学习 Web 开发
-  - 索引
-  - 网站
-translation_of: Learn
 ---
+
 {{LearnSidebar}}
 
 欢迎来到 MDN 学习区。本系列文章旨在为零基础 Web 开发初学者提供指导和开始编写网站代码所需的所有内容。
 
-该教程并不是“从入门到精通”类型的教程，只能让你做到“从入门到适应”。在此之后，你应该能够以你自己的方式学习 [MDN 的其他内容](/zh-CN/)，并接触到其它中、高级资源。
+该教程并不是“从入门到精通”类型的教程，只能让你做到“从入门到适应”。在此之后，你应该能够以你自己的方式学习 [MDN 的其他内容](/zh-CN/)，并接触到其他中、高级资源。
 
 从零开始学习 Web 开发极具挑战性，该教程将为你提供详细的资料，手把手帮助你轻松愉快地学习。无论你是正在学习 Web 开发的学生（自学或参与课程）、寻找材料的老师、编程爱好者，亦或是仅仅想了解一点点 Web 技术，我们都希望你能感到宾至如归。
-
-> **标注：**
->
-> #### 想要成为一名前端工程师？
->
-> 我们汇总了一门课程，其中包含你实现成为前端工程师目标所需要的所有基本信息。
->
-> [**点击开始**](/zh-CN/docs/Learn/Front-end_web_developer)
 
 ## 学习起点
 
@@ -44,6 +24,14 @@ translation_of: Learn
 
 > **备注：** 可在[术语表](/zh-CN/docs/Glossary)中查询术语。此外，如果你对 Web 开发有具体问题，可以尝试在[常见问题](/zh-CN/docs/Learn/Common_questions)寻找答案。
 
+> **标注：**
+>
+> #### 想要成为一名前端工程师？
+>
+> 如果你想要成为一名前端 Web 工程师而又不确定首先要学习什么，我们建议你使用 [MDN 教学课程](/en-US/curriculum/)来规划学习。它提供了结构化的学习路径，涵盖成为一名成功的前端开发人员所需的基本技能与实践，以及推荐的学习资源。
+>
+> [**现在开始**](/en-US/curriculum/)
+
 ## 涵盖的主题
 
 以下列表包含了 MDN 学习区涵盖的所有主题：
@@ -57,9 +45,9 @@ translation_of: Learn
 - [JavaScript - 动态客户端脚本语言](/zh-CN/docs/Learn/JavaScript)
   - : JavaScript 是用于向网页添加动态功能的脚本语言。该专题涵盖有关编写和理解 JavaScript 代码所需的所有重点。
 - [Web 表单 - 操作用户数据](/zh-CN/docs/Learn/Forms)
-  - : Web 表单是用于进行用户交互的强大工具 —— 其常用于收集用户数据和控制用户界面。该专题将对 Web 表单的结构、样式、交互要点进行介绍。
-- [可访问性 - 让每个人都能畅游网络](/zh-CN/docs/Learn/Accessibility)
-  - : “可访问性”（Accessibility）是开发人员对让更多的人能够不受残疾、设备、地区等因素的限制访问 Web 内容做出的努力。该专题包含一切所需了解的信息。
+  - : Web 表单是用于进行用户交互的强大工具——其常用于收集用户数据和控制用户界面。该专题将对 Web 表单的结构、样式、交互要点进行介绍。
+- [无障碍 - 让每个人都能畅游网络](/zh-CN/docs/Learn/Accessibility)
+  - : “无障碍”（Accessibility）是开发人员对让更多的人能够不受残疾、设备、地区等因素的限制访问 Web 内容做出的努力。该专题包含一切所需了解的信息。
 - [Web 性能优化 - 让网站更快做出响应](/zh-CN/docs/Learn/Performance)
   - : Web 性能是确保网络应用的快速下载并对用户操作进行快速响应的艺术，而无论用户的带宽大小、屏幕尺寸、网络状态好坏或是设备性能高低。
 - [工具与测试](/zh-CN/docs/Learn/Tools_and_testing)
@@ -79,31 +67,31 @@ translation_of: Learn
 
 3. 在命令提示符 / 终端中输入以下命令，即可将 `roy-tian/learning-area` 仓库拷贝到本地的 `learning-area` 文件夹：
 
-    ```bash
-    git clone https://github.com/roy-tian/learning-area
-    ```
+   ```bash
+   git clone https://github.com/roy-tian/learning-area
+   ```
 
-4. 然后即可使用访达（macOS）、文件资源管理器（Windows/Linux）或 [`cd` 命令](https://zh.wikipedia.org/wiki/Cd_(命令))) 进入该目录，查找所需文件。
+4. 然后即可使用访达（macOS）、文件资源管理器（Windows/Linux）或 [`cd` 命令](<https://zh.wikipedia.org/wiki/Cd_(命令)>)) 进入该目录，查找所需文件。
 
 你可以随时对本地 `learning-area` 目录与 GitHub 仓库中的 master 分支进行同步，具体步骤如下：
 
 1. 在命令提示符 / 终端中使用 `cd` 指令进入 `learning-area` 文件夹。例如，当你在父目录时：
 
-    ```bash
-    cd learning-area
-    ```
+   ```bash
+   cd learning-area
+   ```
 
 2. 执行以下命令以更新仓库：
 
-    ```bash
-    git pull
-    ```
+   ```bash
+   git pull
+   ```
 
 ## 联系我们
 
 如果你想就任何事宜联系我们，最好的方式是在[论坛](https://discourse.mozilla.org/c/mdn/236)上留言。如果你认为网站上有任何错误或遗漏、请求新的学习主题、针对你不理解的部分请求帮助、或提出任何其他问题，我们都期待听到你的意见。
 
-如果你有兴趣帮助我们开发或改进社区内容，请阅读[如何做出贡献](/zh-CN/docs/MDN/Contribute)部分并联系我们！无论您是学生、老师、经验丰富的 Web 开发者、还是其他有兴趣通过帮助我们以提升自学经验的人，我们都不胜荣幸！
+如果你有兴趣帮助我们开发或改进社区内容，请阅读[如何做出贡献](/zh-CN/docs/MDN/Community/Contributing)部分并联系我们！无论你是学生、老师、经验丰富的 Web 开发者、还是其他有兴趣通过帮助我们以提升自学经验的人，我们都不胜荣幸！
 
 ## 参见
 

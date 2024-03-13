@@ -1,21 +1,8 @@
 ---
 title: Window
 slug: Web/API/Window
-page-type: web-api-interface
-tags:
-  - API
-  - Browser
-  - HTML DOM
-  - Interface
-  - Reference
-  - Tab
-  - Window
-  - global
-  - global scope
-  - scope
-browser-compat: api.Window
-translation_of: Web/API/Window
 ---
+
 {{APIRef("DOM")}}
 
 **`Window`** インターフェイスは、 {{glossary("DOM")}} 文書を収めるウィンドウを表します。 `document` プロパティは、そのウィンドウに読み込まれた [DOM の document オブジェクト](/ja/docs/Web/API/Document) を指します。
@@ -60,7 +47,7 @@ _このインターフェイスは {{domxref("EventTarget")}} インターフェ
 - {{domxref("Window.console")}} {{ReadOnlyInline}}
   - : ブラウザーのデバッグコンソールへアクセスするための console オブジェクトへの参照を返します。
 - {{domxref("Window.customElements")}} {{ReadOnlyInline}}
-  - : {{domxref("CustomElementRegistry")}} オブジェクトへの参照を返します。これは新しい[カスタム要素](/ja/docs/Web/Web_Components/Using_custom_elements)の登録や、以前に登録したカスタム要素の情報を取得するために使用できます。
+  - : {{domxref("CustomElementRegistry")}} オブジェクトへの参照を返します。これは新しい[カスタム要素](/ja/docs/Web/API/Web_components/Using_custom_elements)の登録や、以前に登録したカスタム要素の情報を取得するために使用できます。
 - {{domxref("crypto_property", "Window.crypto")}} {{readOnlyInline}}
   - : ブラウザーの crypto オブジェクトを返します。
 - {{domxref("Window.devicePixelRatio")}} {{ReadOnlyInline}}
@@ -331,7 +318,7 @@ _このインターフェイスは、 {{domxref("EventTarget")}} インターフ
 これらのイベントを待ち受けするには、 [`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) を使用するか、イベントリスナーをこのインターフェイスの `onイベント名` プロパティに代入するかしてください。
 
 - {{domxref("Window/error_event", "error")}}
-  - : リソースの読み込みに失敗したか、利用できないときに発生します。例えば、スクリプトに実行エラーがあった場合や、画像が見つからなかったり、向こうであったりした場合です。
+  - : リソースの読み込みに失敗したか、利用できないときに発生します。例えば、スクリプトに実行エラーがあった場合や、画像が見つからなかったり、無効であったりした場合です。
     {{domxref("GlobalEventHandlers/onerror", "onerror")}} プロパティからも利用できます。
 - {{domxref("Window/languagechange_event", "languagechange")}}
   - : ユーザーの推奨される言語が変更されたときに、グローバルスコープオブジェクトに発生します。

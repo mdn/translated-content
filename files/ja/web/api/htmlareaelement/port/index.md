@@ -1,16 +1,10 @@
 ---
-title: HTMLAreaElement.port
+title: "HTMLAreaElement: port プロパティ"
 slug: Web/API/HTMLAreaElement/port
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAreaElement
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLAreaElement.port
-translation_of: Web/API/HTMLAreaElement/port
-original_slug: Web/API/HTMLHyperlinkElementUtils/port
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
+
 {{ApiRef("HTML DOM")}}
 
 **`HTMLAreaElement.port`** プロパティは、URL のポート番号が入った文字列です。 URL に明示的にポート番号が含まれていない場合は、`''` に設定されます。
@@ -24,7 +18,7 @@ original_slug: Web/API/HTMLHyperlinkElementUtils/port
 ### エリアのリンクからポート番号を取得
 
 ```js
-// <area id="myArea" href="https://developer.mozilla.org:443/en-US/docs/HTMLAreaElement"> 要素が文書にあったとします。
+// <area id="myArea" href="https://developer.mozilla.org:443/ja/docs/HTMLAreaElement"> 要素が文書にあったとします。
 const area = document.getElementByID("myArea");
 area.port; // '443' を返す
 ```

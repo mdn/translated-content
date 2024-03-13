@@ -1,12 +1,8 @@
 ---
 title: border-left-color
 slug: Web/CSS/border-left-color
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/border-left-color
 ---
+
 {{CSSRef}}
 
 La propriété **`border-left-color`** permet de définir la couleur utilisée pour la bordure gauche d'un élément.
@@ -34,12 +30,16 @@ border-left-color: unset;
 
 ### Valeurs
 
-- <`color>`
+- `<color>`
   - : Une valeur de couleur (type {{cssxref("&lt;color&gt;")}}) qui décrit la couleur utilisée pour la bordure du côté gauche.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -61,9 +61,10 @@ border-left-color: unset;
 
 ```html
 <div class="maboite">
-  <p>Une boîte avec une bordure autour.
-     Notez le côté de la boîte qui est
-     <span class="texterouge">rouge</span>.</p>
+  <p>
+    Une boîte avec une bordure autour. Notez le côté de la boîte qui est
+    <span class="texterouge">rouge</span>.
+  </p>
 </div>
 ```
 
@@ -73,16 +74,11 @@ border-left-color: unset;
 
 ## Spécifications
 
-| Spécification                                                                                            | État                                     | Commentaires                                                                                                                                                             |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('CSS3 Backgrounds', '#the-border-color', 'border-color')}}             | {{Spec2('CSS3 Backgrounds')}} | Pas de modification significative, la valeur `transparent` a été supprimée car elle fait désormais partie du type {{cssxref("&lt;color&gt;")}} qui a été étendu. |
-| {{SpecName('CSS2.1', 'box.html#border-color-properties', 'border-left-color')}} | {{Spec2('CSS2.1')}}                 | Définition initiale.                                                                                                                                                     |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.border-left-color")}}
+{{Compat}}
 
 ## Voir aussi
 

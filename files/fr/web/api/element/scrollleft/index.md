@@ -1,9 +1,8 @@
 ---
 title: Element.scrollLeft
 slug: Web/API/Element/scrollLeft
-translation_of: Web/API/Element/scrollLeft
-browser-compat: api.Element.scrollLeft
 ---
+
 {{APIRef("DOM")}}
 
 La propriété **`Element.scrollLeft`** permet de lire ou de modifier le nombre de pixels le long desquels le contenu d'un élément a défilé depuis son bord gauche.
@@ -53,10 +52,10 @@ Un nombre
 ### JavaScript
 
 ```js
-const button = document.getElementById('slide');
+const button = document.getElementById("slide");
 
 button.onclick = function () {
-  document.getElementById('container').scrollLeft += 20;
+  document.getElementById("container").scrollLeft += 20;
 };
 ```
 

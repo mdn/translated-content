@@ -1,17 +1,8 @@
 ---
 title: ShadowRoot.delegatesFocus
 slug: Web/API/ShadowRoot/delegatesFocus
-tags:
-  - API
-  - プロパティ
-  - リファレンス
-  - ShadowRoot
-  - ウェブコンポーネント
-  - delegatesFocus
-  - シャドウ DOM
-browser-compat: api.ShadowRoot.delegatesFocus
-translation_of: Web/API/ShadowRoot/delegatesFocus
 ---
+
 {{APIRef("Shadow DOM")}}
 
 **`delegatesFocus`** は {{domxref("ShadowRoot")}} インターフェイスの読み取り専用プロパティで、シャドウルートがフォーカスを委任する場合は `true`、そうでなければ `false` を返します。

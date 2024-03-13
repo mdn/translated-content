@@ -1,16 +1,8 @@
 ---
 title: ShadowRoot.mode
 slug: Web/API/ShadowRoot/mode
-tags:
-  - API
-  - プロパティ
-  - リファレンス
-  - ShadowRoot
-  - mode
-  - シャドウ DOM
-browser-compat: api.ShadowRoot.mode
-translation_of: Web/API/ShadowRoot/mode
 ---
+
 {{APIRef("Shadow DOM")}}
 
 **`mode`** は {{domxref("ShadowRoot")}} の読み取り専用プロパティで、モードを `open` と `closed` のどちらかで示します。これはシャドウルートの内部機能を JavaScript からアクセスできるかどうかを定義します。
@@ -20,7 +12,7 @@ translation_of: Web/API/ShadowRoot/mode
 ## 構文
 
 ```js
-var mode = shadowRoot.mode
+var mode = shadowRoot.mode;
 ```
 
 ### 値

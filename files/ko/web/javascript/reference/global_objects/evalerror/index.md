@@ -1,15 +1,8 @@
 ---
 title: EvalError
 slug: Web/JavaScript/Reference/Global_Objects/EvalError
-tags:
-  - Class
-  - EvalError
-  - JavaScript
-  - Object
-  - Reference
-browser-compat: javascript.builtins.EvalError
-translation_of: Web/JavaScript/Reference/Global_Objects/EvalError
 ---
+
 {{JSRef}}
 
 **`EvalError`** 객체는 전역 {{jsxref("Global_Objects/eval", "eval()")}} 함수에 관한 오류를 나타냅니다. 이 예외는 JavaScript에 의해 더 이상 발생하지 않지만 `EvalError` 객체는 하위 호환성을 위해 남아있습니다.
@@ -42,19 +35,19 @@ translation_of: Web/JavaScript/Reference/Global_Objects/EvalError
 
 ```js
 try {
-  throw new EvalError('Hello', 'someFile.js', 10);
+  throw new EvalError("Hello", "someFile.js", 10);
 } catch (e) {
   console.log(e instanceof EvalError); // true
-  console.log(e.message);              // "Hello"
-  console.log(e.name);                 // "EvalError"
-  console.log(e.fileName);             // "someFile.js"
-  console.log(e.lineNumber);           // 10
-  console.log(e.columnNumber);         // 0
-  console.log(e.stack);                // "@Scratchpad/2:2:9\n"
+  console.log(e.message); // "Hello"
+  console.log(e.name); // "EvalError"
+  console.log(e.fileName); // "someFile.js"
+  console.log(e.lineNumber); // 10
+  console.log(e.columnNumber); // 0
+  console.log(e.stack); // "@Scratchpad/2:2:9\n"
 }
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

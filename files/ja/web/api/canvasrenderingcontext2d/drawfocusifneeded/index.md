@@ -1,16 +1,8 @@
 ---
 title: CanvasRenderingContext2D.drawFocusIfNeeded()
 slug: Web/API/CanvasRenderingContext2D/drawFocusIfNeeded
-tags:
-  - API
-  - アクセシビリティ
-  - Canvas
-  - CanvasRenderingContext2D
-  - メソッド
-  - リファレンス
-browser-compat: api.CanvasRenderingContext2D.drawFocusIfNeeded
-translation_of: Web/API/CanvasRenderingContext2D/drawFocusIfNeeded
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.drawFocusIfNeeded()`** はキャンバス 2D API のメソッドで、引数で与えられた要素にフォーカスが当たった時に、現在のパスもしくは指定されたパスの周りにフォーカスリングを描画します。
@@ -47,14 +39,14 @@ void ctx.drawFocusIfNeeded(path, element);
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-const button1 = document.getElementById('button1');
-const button2 = document.getElementById('button2');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+const button1 = document.getElementById("button1");
+const button2 = document.getElementById("button2");
 
-document.addEventListener('focus', redraw, true);
-document.addEventListener('blur', redraw, true);
-canvas.addEventListener('click', handleClick, false);
+document.addEventListener("focus", redraw, true);
+document.addEventListener("blur", redraw, true);
+canvas.addEventListener("click", handleClick, false);
 redraw();
 
 function redraw() {
@@ -87,14 +79,14 @@ function drawButton(el, x, y) {
   const height = 40;
 
   // ボタンの背景
-  ctx.fillStyle = active ? 'pink' : 'lightgray';
+  ctx.fillStyle = active ? "pink" : "lightgray";
   ctx.fillRect(x, y, width, height);
 
   // ボタンのテキスト
-  ctx.font = '15px sans-serif';
-  ctx.textAlign = 'center';
-  ctx.textBaseline = 'middle';
-  ctx.fillStyle = active ? 'blue' : 'black';
+  ctx.font = "15px sans-serif";
+  ctx.textAlign = "center";
+  ctx.textBaseline = "middle";
+  ctx.fillStyle = active ? "blue" : "black";
   ctx.fillText(el.textContent, x + width / 2, y + height / 2);
 
   // クリック可能な領域を定義

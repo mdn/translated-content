@@ -1,26 +1,18 @@
 ---
 title: onConnectivityAvailable
 slug: Mozilla/Add-ons/WebExtensions/API/captivePortal/onConnectivityAvailable
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - captivePortal
-translation_of: Mozilla/Add-ons/WebExtensions/API/captivePortal/onConnectivityAvailable
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 S'allume lorsque le service de portail captif détermine que l'utilisateur peut se connecter à l'internet.
 
 ## Syntaxe
 
 ```js
-browser.captivePortal.onConnectivityAvailable.addListener(callback)
-browser.captivePortal.onConnectivityAvailable.removeListener(listener)
-browser.captivePortal.onConnectivityAvailable.hasListener(listener)
+browser.captivePortal.onConnectivityAvailable.addListener(callback);
+browser.captivePortal.onConnectivityAvailable.removeListener(listener);
+browser.captivePortal.onConnectivityAvailable.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -57,11 +49,12 @@ browser.captivePortal.onConnectivityAvailable.addListener(handleConnectivity);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.captivePortal.onConnectivityAvailable")}}
+{{Compat}}
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -88,4 +81,4 @@ browser.captivePortal.onConnectivityAvailable.addListener(handleConnectivity);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

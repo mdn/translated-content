@@ -1,18 +1,9 @@
 ---
 title: 座標変換
 slug: Web/API/Canvas_API/Tutorial/Transformations
-tags:
-  - キャンバス
-  - グラフィック
-  - ガイド
-  - HTML
-  - HTML5
-  - 中級者
-  - ウェブ
-translation_of: Web/API/Canvas_API/Tutorial/Transformations
-original_slug: Web/Guide/HTML/Canvas_tutorial/Transformations
 ---
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}
+
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}
 
 これまでのチュートリアルで、[キャンバスのグリッド](/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)や**座標空間**について学びました。今までは既定のグリッドしか使用しておらず、また必要に応じてキャンバス全体のサイズを変更していました。座標変換 (transformations) には、原点を別の場所に移したり、回転したり、拡大縮小したりといった、より強力な手段があります。
 
@@ -39,24 +30,24 @@ original_slug: Web/Guide/HTML/Canvas_tutorial/Transformations
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
-  ctx.fillRect(0, 0, 150, 150);   // 既定の設定で矩形を描画
-  ctx.save();                  // 既定の状態を保存
+  ctx.fillRect(0, 0, 150, 150); // 既定の設定で矩形を描画
+  ctx.save(); // 既定の状態を保存
 
-  ctx.fillStyle = '#09F';      // 設定変更
+  ctx.fillStyle = "#09F"; // 設定変更
   ctx.fillRect(15, 15, 120, 120); // 新たな設定で矩形を描画
 
-  ctx.save();                  // 現在の状態を保存
-  ctx.fillStyle = '#FFF';      // 設定変更
+  ctx.save(); // 現在の状態を保存
+  ctx.fillStyle = "#FFF"; // 設定変更
   ctx.globalAlpha = 0.5;
-  ctx.fillRect(30, 30, 90, 90);   // 新たな設定で矩形を描画
+  ctx.fillRect(30, 30, 90, 90); // 新たな設定で矩形を描画
 
-  ctx.restore();               // 以前の状態を復元
-  ctx.fillRect(45, 45, 60, 60);   // 復元した設定で矩形を描画
+  ctx.restore(); // 以前の状態を復元
+  ctx.fillRect(45, 45, 60, 60); // 復元した設定で矩形を描画
 
-  ctx.restore();               // 以前の状態を復元
-  ctx.fillRect(60, 60, 30, 30);   // 復元した設定で矩形を描画
+  ctx.restore(); // 以前の状態を復元
+  ctx.fillRect(60, 60, 30, 30); // 復元した設定で矩形を描画
 }
 ```
 
@@ -95,11 +86,11 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   for (var i = 0; i < 3; i++) {
     for (var j = 0; j < 3; j++) {
       ctx.save();
-      ctx.fillStyle = 'rgb(' + (51 * i) + ', ' + (255 - 51 * i) + ', 255)';
+      ctx.fillStyle = "rgb(" + 51 * i + ", " + (255 - 51 * i) + ", 255)";
       ctx.translate(10 + j * 50, 10 + i * 50);
       ctx.fillRect(0, 0, 25, 25);
       ctx.restore();
@@ -133,36 +124,36 @@ draw();
 
 この例は、まずはキャンバスの原点で矩形を回転するために `rotate()` メソッドを使用して、次に矩形自身の中心で回転するために `translate()` の助けを借りています。
 
-> **Note:** 角度はラジアン (radians) で表しており、度数 (degrees) ではありません。これは `radians = (Math.PI/180)*degrees` のようにすると変換できます。
+> **メモ:** 角度はラジアン (radians) で表しており、度数 (degrees) ではありません。これは `radians = (Math.PI/180)*degrees` のようにすると変換できます。
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // 左の矩形を canvas の原点で回転する
   ctx.save();
   // 青い矩形
-  ctx.fillStyle = '#0095DD';
+  ctx.fillStyle = "#0095DD";
   ctx.fillRect(30, 30, 100, 100);
   ctx.rotate((Math.PI / 180) * 25);
   // 灰色の矩形
-  ctx.fillStyle = '#4D4E53';
+  ctx.fillStyle = "#4D4E53";
   ctx.fillRect(30, 30, 100, 100);
   ctx.restore();
 
   // 右の矩形を矩形の中心で回転する
   // draw blue rect
-  ctx.fillStyle = '#0095DD';
+  ctx.fillStyle = "#0095DD";
   ctx.fillRect(150, 30, 100, 100);
 
   ctx.translate(200, 80); // 矩形の中心に移動する
-                          // x = x + 0.5 * 幅
-                          // y = y + 0.5 * 高さ
+  // x = x + 0.5 * 幅
+  // y = y + 0.5 * 高さ
   ctx.rotate((Math.PI / 180) * 25); // 回転する
   ctx.translate(-200, -80); // 元の位置に移動する
 
   // 灰色の矩形を描く
-  ctx.fillStyle = '#4D4E53';
+  ctx.fillStyle = "#4D4E53";
   ctx.fillRect(150, 30, 100, 100);
 }
 ```
@@ -196,7 +187,7 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   // シンプルな図形を描いて、拡大する
   ctx.save();
@@ -206,8 +197,8 @@ function draw() {
 
   // 水平方向に反転する
   ctx.scale(-1, 1);
-  ctx.font = '48px serif';
-  ctx.fillText('MDN', -135, 120);
+  ctx.font = "48px serif";
+  ctx.fillText("MDN", -135, 120);
 }
 ```
 
@@ -256,21 +247,21 @@ draw();
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
 
   var sin = Math.sin(Math.PI / 6);
   var cos = Math.cos(Math.PI / 6);
   ctx.translate(100, 100);
   var c = 0;
   for (var i = 0; i <= 12; i++) {
-    c = Math.floor(255 / 12 * i);
-    ctx.fillStyle = 'rgb(' + c + ', ' + c + ', ' + c + ')';
+    c = Math.floor((255 / 12) * i);
+    ctx.fillStyle = "rgb(" + c + ", " + c + ", " + c + ")";
     ctx.fillRect(0, 0, 100, 10);
     ctx.transform(cos, sin, -sin, cos, 0, 0);
   }
 
   ctx.setTransform(-1, 0, 0, 1, 100, 100);
-  ctx.fillStyle = 'rgba(255, 128, 255, 0.5)';
+  ctx.fillStyle = "rgba(255, 128, 255, 0.5)";
   ctx.fillRect(0, 50, 100, 100);
 }
 ```

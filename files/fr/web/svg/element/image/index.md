@@ -1,8 +1,8 @@
 ---
 title: <image>
 slug: Web/SVG/Element/image
-translation_of: Web/SVG/Element/image
 ---
+
 {{SVGRef}}
 
 L'élément Image SVG (\<image>) permet d'inclure une image matricielle dans un document SVG.
@@ -16,10 +16,18 @@ L'élément Image SVG (\<image>) permet d'inclure une image matricielle dans un 
 Rendu basique d'une image PNG dans un objet SVG :
 
 ```html
-<svg width="100%" height="100%" viewBox="0 0 100 100"
-     xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink">
-  <image xlink:href="/files/2917/fxlogo.png" x="0" y="0" height="100" width="100" />
+<svg
+  width="100%"
+  height="100%"
+  viewBox="0 0 100 100"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <image
+    xlink:href="/files/2917/fxlogo.png"
+    x="0"
+    y="0"
+    height="100"
+    width="100" />
 </svg>
 ```
 
@@ -29,11 +37,11 @@ Rendu basique d'une image PNG dans un objet SVG :
 
 ### Attributs globaux
 
-- [Attributs de traitement conditionnel](/fr/SVG/Attribute#ConditionalProccessing "en/SVG/Attribute#ConditionalProccessing") »
-- [Attributs noyau](/fr/SVG/Attribute#Core "en/SVG/Attribute#Core") »
-- [Attributs d'événement graphique](/fr/SVG/Attribute#GraphicalEvent "en/SVG/Attribute#GraphicalEvent") »
-- [Attributs Xlink](/fr/SVG/Attribute#XLink "en/SVG/Attribute#XLink") »
-- [Attributs de présentation](/fr/SVG/Attribute#Presentation "en/SVG/Attribute#Presentation") »
+- [Attributs de traitement conditionnel](/fr/SVG/Attribute#ConditionalProccessing) »
+- [Attributs noyau](/fr/SVG/Attribute#Core) »
+- [Attributs d'événement graphique](/fr/SVG/Attribute#GraphicalEvent) »
+- [Attributs Xlink](/fr/SVG/Attribute#XLink) »
+- [Attributs de présentation](/fr/SVG/Attribute#Presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -50,8 +58,8 @@ Rendu basique d'une image PNG dans un objet SVG :
 
 ## Interface DOM
 
-Cet élément implémente l'interface [`SVGImageElement`](/fr/DOM/SVGImageElement "en/DOM/SVGImageElement").
+Cet élément implémente l'interface [`SVGImageElement`](/fr/DOM/SVGImageElement).
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.image")}}
+{{Compat}}

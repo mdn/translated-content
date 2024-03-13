@@ -1,8 +1,8 @@
 ---
-title: ':nth-child'
+title: ":nth-child"
 slug: Web/CSS/:nth-child
-translation_of: Web/CSS/:nth-child
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:nth-child(an+b)`** permet de cibler un élément qui possède `an+b-1` éléments voisins (au même niveau) avant lui dans l'arbre du document pour des valeurs entières `n` et qui possède un élément parent. Autrement dit, un sélecteur utilisant cette pseudo-classe permettra de cibler les éléments fils d'un élément dont les positions correspondent au motif _an+b_.
@@ -78,16 +78,17 @@ html {
   font-family: sans-serif;
 }
 
-span, div em {
+span,
+div em {
   padding: 10px;
   border: 1px solid green;
   display: inline-block;
   margin-bottom: 3px;
 }
 
-.premier span:nth-child(2n+1),
-.deuxieme span:nth-child(2n+1),
-.troisieme span:nth-of-type(2n+1) {
+.premier span:nth-child(2n + 1),
+.deuxieme span:nth-child(2n + 1),
+.troisieme span:nth-of-type(2n + 1) {
   background-color: lime;
 }
 ```
@@ -96,10 +97,8 @@ span, div em {
 
 ```html
 <p>
-  <code>span:nth-child(2n+1)</code>,
-  <em>sans</em> un <code>&lt;em&gt;</code>
-  parmi les éléments. Les éléments fils 1, 3,
-  5 et 7 sont sélectionnés.
+  <code>span:nth-child(2n+1)</code>, <em>sans</em> un <code>&lt;em&gt;</code>
+  parmi les éléments. Les éléments fils 1, 3, 5 et 7 sont sélectionnés.
 </p>
 
 <div class="premier">
@@ -113,10 +112,9 @@ span, div em {
 </div>
 
 <p>
-  <code>span:nth-child(2n+1)</code>,
-  <em>avec</em> un élément <code>&lt;em&gt;</code>
-  parmi les fils. Les éléments fils 1, 5,
-  et 7 sont sélectionnés. 3 est compté
+  <code>span:nth-child(2n+1)</code>, <em>avec</em> un élément
+  <code>&lt;em&gt;</code>
+  parmi les fils. Les éléments fils 1, 5, et 7 sont sélectionnés. 3 est compté
   mais n'est pas ciblé car ce n'est pas
   <code>&lt;span&gt;</code>.
 </p>
@@ -133,15 +131,12 @@ span, div em {
 </div>
 
 <p>
-  <code>span:nth-of-type(2n+1)</code>,
-  <em>avec</em> un <code>&lt;em&gt;</code>
-  parmi les éléments fils. Les éléments fils
-  1, 4, 6 et 8 sont sélectionnés. 3 n'est pas
-  compté ni ciblé car c'est un <code>&lt;em&gt;</code>,
-  et pas un <code>&lt;span&gt;</code> et
-  <code>nth-of-type</code> ne sélectionne que les
-  fils de ce type. Ce <code>&lt;em&gt;</code> est
-  sauté et est ignoré.
+  <code>span:nth-of-type(2n+1)</code>, <em>avec</em> un
+  <code>&lt;em&gt;</code> parmi les éléments fils. Les éléments fils 1, 4, 6 et
+  8 sont sélectionnés. 3 n'est pas compté ni ciblé car c'est un
+  <code>&lt;em&gt;</code>, et pas un <code>&lt;span&gt;</code> et
+  <code>nth-of-type</code> ne sélectionne que les fils de ce type. Ce
+  <code>&lt;em&gt;</code> est sauté et est ignoré.
 </p>
 
 <div class="troisieme">
@@ -162,14 +157,11 @@ span, div em {
 
 ## Spécifications
 
-| Spécification                                                                            | État                                 | Commentaires                                                                                 |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | -------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Selectors', '#nth-child-pseudo', ':nth-child')}} | {{Spec2('CSS4 Selectors')}} | Ajout de la syntaxe `<selector>`. Les éléments ciblés peuvent ne pas avoir d'élément parent. |
-| {{SpecName('CSS3 Selectors', '#nth-child-pseudo', ':nth-child')}} | {{Spec2('CSS3 Selectors')}} | Définition initiale.                                                                         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.nth-child")}}
+{{Compat}}
 
 ## Voir aussi
 

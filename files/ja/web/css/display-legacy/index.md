@@ -1,15 +1,8 @@
 ---
 title: <display-legacy>
 slug: Web/CSS/display-legacy
-tags:
-  - CSS
-  - CSS データ型
-  - CSS 表示
-  - データ型
-  - リファレンス
-  - display-legacy
-translation_of: Web/CSS/display-legacy
 ---
+
 {{CSSRef}}
 
 CSS 2 では `display` プロパティで単一のキーワードによる構文を採用しており、同じレイアウトモードのブロックレベルとインラインレベルで別々のキーワードが必要でした。このページではこれらの値を詳しく紹介します。
@@ -35,6 +28,7 @@ CSS 2 では `display` プロパティで単一のキーワードによる構文
   - : 要素は、インライン要素のようにふるまいつつ、その内容物をフレックスボックスモデルに従ってレイアウトします。
 
     これは `inline flex` と等価です。
+
 - `inline-grid`
 
   - : 要素は、インライン要素のようにふるまいつつ、その内容物をグリッドモデルに従ってレイアウトします。
@@ -78,27 +72,25 @@ Not a flex item
 
 ## 仕様書
 
-| 仕様書                                                                                    | 状態                           |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- |
-| {{SpecName('CSS3 Display', '#typedef-display-legacy', 'display-legacy')}} | {{Spec2('CSS3 Display')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
 ### inline-block の対応
 
-{{Compat("css.properties.display.inline-block", 10)}}
+{{Compat}}
 
 ### inline-table の対応
 
-{{Compat("css.properties.display.inline-table", 10)}}
+{{Compat}}
 
 ### inline-flex の対応
 
-{{Compat("css.properties.display.inline-flex", 10)}}
+{{Compat}}
 
 ### inline-grid の対応
 
-{{Compat("css.properties.display.inline-grid", 10)}}
+{{Compat}}
 
 ## 関連情報
 

@@ -1,15 +1,11 @@
 ---
 title: Content-Encoding
 slug: Web/HTTP/Headers/Content-Encoding
-tags:
-  - HTTP
-  - Headers
-  - Reference
-translation_of: Web/HTTP/Headers/Content-Encoding
 ---
+
 {{HTTPSidebar}}
 
-{{Glossary("representation header", "实体消息首部")}} **`Content-Encoding`** 列出了对当前实体消息（消息荷载）应用的任何编码类型，以及编码的顺序。它让接收者知道需要以何种顺序解码该实体消息才能获得原始荷载格式。 Content-Encoding 主要用于在不丢失原媒体类型内容的情况下压缩消息数据。
+{{Glossary("representation header", "实体消息首部")}} **`Content-Encoding`** 列出了对当前实体消息（消息荷载）应用的任何编码类型，以及编码的顺序。它让接收者知道需要以何种顺序解码该实体消息才能获得原始荷载格式。Content-Encoding 主要用于在不丢失原媒体类型内容的情况下压缩消息数据。
 
 请注意原始媒体/内容的类型通过 {{HTTPHeader("Content-Type")}} 首部给出，而 `Content-Encoding` 应用于数据的表示，或“编码形式”。如果原始媒体以某种方式编码（例如 zip 文件），则该信息不应该被包含在 `Content-Encoding` 首部内。
 
@@ -43,13 +39,13 @@ Content-Encoding: deflate, gzip
 ## 指令
 
 - `gzip`
-  - : 表示采用 {{interWiki("wikipedia", "LZ77与LZ78#LZ77", "Lempel-Ziv coding")}}（LZ77）压缩算法，以及 32 位 CRC 校验的编码方式。这个编码方式最初由 UNIX 平台上的 _gzip_ 程序采用。出于兼容性的考虑，HTTP/1.1 标准提议支持这种编码方式的服务器应该识别作为别名的 `x-gzip` 指令。
+  - : 表示采用 [Lempel-Ziv coding](https://zh.wikipedia.org/wiki/LZ77与LZ78#LZ77)（LZ77）压缩算法，以及 32 位 CRC 校验的编码方式。这个编码方式最初由 UNIX 平台上的 _gzip_ 程序采用。出于兼容性的考虑，HTTP/1.1 标准提议支持这种编码方式的服务器应该识别作为别名的 `x-gzip` 指令。
 - `compress`
-  - : 采用 {{interWiki("wikipedia", "LZW", "Lempel-Ziv-Welch")}}（LZW）压缩算法。这个名称来自 UNIX 系统的 _compress_ 程序，该程序实现了前述算法。与其同名程序已经在大部分 UNIX 发行版中消失一样，这种内容编码方式已经被大部分浏览器弃用，部分因为专利问题（这项专利在 2003 年到期）。
+  - : 采用 [Lempel-Ziv-Welch](https://zh.wikipedia.org/wiki/LZW)（LZW）压缩算法。这个名称来自 UNIX 系统的 _compress_ 程序，该程序实现了前述算法。与其同名程序已经在大部分 UNIX 发行版中消失一样，这种内容编码方式已经被大部分浏览器弃用，部分因为专利问题（这项专利在 2003 年到期）。
 - `deflate`
-  - : 采用 {{interWiki("wikipedia", "zlib")}} 结构（在 {{rfc(1950)}} 中规定），和 {{interWiki("wikipedia", "DEFLATE", "deflate")}} 压缩算法（在 {{rfc(1951)}} 中规定)。
+  - : 采用 [zlib](https://zh.wikipedia.org/wiki/zlib) 结构（在 {{rfc(1950)}} 中规定），和 [deflate](https://zh.wikipedia.org/wiki/DEFLATE) 压缩算法（在 {{rfc(1951)}} 中规定)。
 - `br`
-  - : 表示采用 {{interWiki("wikipedia", "Brotli")}} 算法的编码方式。
+  - : 表示采用 [Brotli](https://zh.wikipedia.org/wiki/Brotli) 算法的编码方式。
 
 ## 示例
 
@@ -61,7 +57,7 @@ Content-Encoding: deflate, gzip
 Accept-Encoding: gzip, deflate
 ```
 
-服务器在 `Content-Encoding` 响应首部提供了实际采用的压缩模式：
+服务器在 `Content-Encoding` 响应首部提供了实际采用的压缩模式：
 
 ```
 Content-Encoding: gzip

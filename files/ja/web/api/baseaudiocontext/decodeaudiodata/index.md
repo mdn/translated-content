@@ -1,33 +1,23 @@
 ---
 title: BaseAudioContext.decodeAudioData()
 slug: Web/API/BaseAudioContext/decodeAudioData
-tags:
-  - API
-  - 音声
-  - AudioContext
-  - BaseAudioContext
-  - メソッド
-  - リファレンス
-  - ウェブ音声 API
-  - decodeAudioData
-translation_of: Web/API/BaseAudioContext/decodeAudioData
-original_slug: Web/API/AudioContext/decodeAudioData
 ---
+
 {{ APIRef("Web Audio API") }}
 
 `decodeAudioData()` は {{ domxref("BaseAudioContext") }} のメソッドで、 {{jsxref("ArrayBuffer")}} に書き込まれた音声ファイルデータを非同期にデコードするために使用されます。この場合、 `ArrayBuffer` は {{domxref("XMLHttpRequest")}} と {{domxref("FileReader")}} から読み込まれます。デコードされた {{domxref("AudioBuffer")}} は {{domxref("AudioContext")}} のサンプリングレートにリサンプリングされ、コールバックやプロミスに渡されます。
 
-この方法は、オーディオトラックからウェブ音声 API 用のオーディオソースを作成する際に推奨される方法です。この方法は、音声ファイルの断片的なデータではなく、完全なファイルデータに対してのみ動作します。
+この方法は、オーディオトラックからウェブオーディオ API 用のオーディオソースを作成する際に推奨される方法です。この方法は、音声ファイルの断片的なデータではなく、完全なファイルデータに対してのみ動作します。
 
 ## 構文
 
 ```js
 // 古いコールバックの構文:
-decodeAudioData(arrayBuffer, successCallback)
-decodeAudioData(arrayBuffer, successCallback, errorCallback)
+decodeAudioData(arrayBuffer, successCallback);
+decodeAudioData(arrayBuffer, successCallback, errorCallback);
 
 // 新しいプロミスベースの構文:
-decodeAudioData(arrayBuffer)
+decodeAudioData(arrayBuffer);
 ```
 
 ### 引数
@@ -53,7 +43,7 @@ decodeAudioData(arrayBuffer)
 
 ボタンは単に `getData()` を実行して、それぞれトラックの読み込みと再生、停止を行うだけです。ソースの `stop()` メソッドが呼ばれると、ソースは消滅します。
 
-> **Note:** [例をライブで実行](https://mdn.github.io/webaudio-examples/decode-audio-data/) （または[ソースを閲覧](https://github.com/mdn/webaudio-examples/tree/master/decode-audio-data)することができます。）
+> **メモ:** [例をライブで実行](https://mdn.github.io/webaudio-examples/decode-audio-data/) （または[ソースを閲覧](https://github.com/mdn/webaudio-examples/tree/master/decode-audio-data)することができます。）
 
 ```js
 // 変数の定義
@@ -61,10 +51,10 @@ decodeAudioData(arrayBuffer)
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var source;
 
-var pre = document.querySelector('pre');
-var myScript = document.querySelector('script');
-var play = document.querySelector('.play');
-var stop = document.querySelector('.stop');
+var pre = document.querySelector("pre");
+var myScript = document.querySelector("script");
+var play = document.querySelector(".play");
+var stop = document.querySelector(".stop");
 
 // 音声トラックの読み込みには XHR を使い、
 // decodeAudioData でデコードし、バッファーに格納する
@@ -74,39 +64,43 @@ function getData() {
   source = audioCtx.createBufferSource();
   var request = new XMLHttpRequest();
 
-  request.open('GET', 'viper.ogg', true);
+  request.open("GET", "viper.ogg", true);
 
-  request.responseType = 'arraybuffer';
+  request.responseType = "arraybuffer";
 
-  request.onload = function() {
+  request.onload = function () {
     var audioData = request.response;
 
-    audioCtx.decodeAudioData(audioData, function(buffer) {
+    audioCtx.decodeAudioData(
+      audioData,
+      function (buffer) {
         source.buffer = buffer;
 
         source.connect(audioCtx.destination);
         source.loop = true;
       },
 
-      function(e){ console.log("Error with decoding audio data" + e.err); });
-
-  }
+      function (e) {
+        console.log("Error with decoding audio data" + e.err);
+      },
+    );
+  };
 
   request.send();
 }
 
 // 音声の停止と再生を行うボタン
 
-play.onclick = function() {
+play.onclick = function () {
   getData();
   source.start(0);
-  play.setAttribute('disabled', 'disabled');
-}
+  play.setAttribute("disabled", "disabled");
+};
 
-stop.onclick = function() {
+stop.onclick = function () {
   source.stop(0);
-  play.removeAttribute('disabled');
-}
+  play.removeAttribute("disabled");
+};
 
 // pre要素にスクリプトを設定する
 
@@ -116,8 +110,8 @@ pre.innerHTML = myScript.innerHTML;
 ### 新しいプロミスベースの構文
 
 ```js
-ctx.decodeAudioData(audioData).then(function(decodedData) {
- // デコードしたデータをここで使う
+ctx.decodeAudioData(audioData).then(function (decodedData) {
+  // デコードしたデータをここで使う
 });
 ```
 
@@ -131,4 +125,4 @@ ctx.decodeAudioData(audioData).then(function(decodedData) {
 
 ## 関連情報
 
-- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

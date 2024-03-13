@@ -1,22 +1,13 @@
 ---
 title: proxy.onRequest
 slug: Mozilla/Add-ons/WebExtensions/API/proxy/onRequest
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Proxy
-  - Reference
-  - WebExtensions
-  - onRequest
-translation_of: Mozilla/Add-ons/WebExtensions/API/proxy/onRequest
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Déclenché lorsqu'une requête Web est sur le point d'être effectuée, pour donner à l'extension la possibilité de l'utiliser comme proxy.
 
-Cet événement est étroitement modélisé sur les événements définis dans l'API  [`webRequest`](/fr/Add-ons/WebExtensions/API/webRequest) Comme ces événements, sa fonction `addListener()` prend trois arguments :
+Cet événement est étroitement modélisé sur les événements définis dans l'API [`webRequest`](/fr/Add-ons/WebExtensions/API/webRequest) Comme ces événements, sa fonction `addListener()` prend trois arguments :
 
 - l'écouteur qui sera appelé lorsque l'événement est déclenché.
 - Un objet [`RequestFilter`](/fr/Add-ons/WebExtensions/API/webRequest/RequestFilter) contrôlant quelles requêtes provoquent le déclenchement de l'événement.
@@ -32,12 +23,12 @@ Pour utiliser `proxy.onRequest`, une extension doit avoir la [permission API](/f
 
 ```js
 browser.proxy.onRequest.addListener(
-  listener,             //  function
-  filter,               //  object
-  extraInfoSpec         //  optional array of strings
-)
-browser.proxy.onRequest.removeListener(listener)
-browser.proxy.onRequest.hasListener(listener)
+  listener, //  function
+  filter, //  object
+  extraInfoSpec, //  optional array of strings
+);
+browser.proxy.onRequest.removeListener(listener);
+browser.proxy.onRequest.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -64,7 +55,7 @@ Les événements ont trois fonctions :
     - Une `Promise` qui se résout en un objet `ProxyInfo`
     - Une `Promise` qui résout en un tableau d'objets `ProxyInfo`.
 
-    Si l'écouteur renvoie un tableau, ou une Promesse qui se résout en un tableau, alors tous les objets`ProxyInfo` après le premier représentent les basculements: si le proxy à la position N dans le tableau n'est pas accessible quand son `ProxyInfo.failoverTimeout` alors le navigateur essayez le proxy à la position N+1.
+    Si l'écouteur renvoie un tableau, ou une Promesse qui se résout en un tableau, alors tous les objets `ProxyInfo` après le premier représentent les basculements: si le proxy à la position N dans le tableau n'est pas accessible quand son `ProxyInfo.failoverTimeout` alors le navigateur essayez le proxy à la position N+1.
 
     S'il y a une erreur spécifiant les objets `proxy.ProxyInfo` objects, alors {{WebExtAPIRef("proxy.onError")}} sera appelé.
 
@@ -73,9 +64,9 @@ Les événements ont trois fonctions :
 - `extraInfoSpec` {{optional_inline}}
   - : `array` de `string`. Options supplémentaires pour l'événement. Vous pouvez passer une seule valeur, `"requestHeaders"`, pour inclure les en-têtes de demande dans l'objet de `details` transmis à l'écouteur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.proxy.onRequest", 10)}}
+{{Compat}}
 
 ## Exemples
 
@@ -89,12 +80,14 @@ function shouldProxyRequest(requestInfo) {
 function handleProxyRequest(requestInfo) {
   if (shouldProxyRequest(requestInfo)) {
     console.log(`Proxying: ${requestInfo.url}`);
-    return {type: "http", host: "127.0.0.1", port: 65535};
+    return { type: "http", host: "127.0.0.1", port: 65535 };
   }
-  return {type: "direct"};
+  return { type: "direct" };
 }
 
-browser.proxy.onRequest.addListener(handleProxyRequest, {urls: ["<all_urls>"]});
+browser.proxy.onRequest.addListener(handleProxyRequest, {
+  urls: ["<all_urls>"],
+});
 ```
 
 {{WebExtExamples}}

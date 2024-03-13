@@ -1,12 +1,8 @@
 ---
 title: Firefox
 slug: Mozilla/Firefox
-tags:
-  - Firefox
-  - Landing
-  - Mozilla
-translation_of: Mozilla/Firefox
 ---
+
 {{FirefoxSidebar}}
 
 [Firefox](https://www.mozilla.org/fr/firefox/new/) est le navigateur populaire de Mozilla, disponible sur de nombreuses plates-formes dont Windows, Mac OS et Linux pour les ordinateurs de bureau, ainsi que Android et iOS pour les appareils mobiles. Grâce à une large compatibilité, les dernières nouveautés en technologie web et des outils puissants pour développer, Firefox est idéal pour les développeurs web et les utilisateurs.
@@ -29,7 +25,7 @@ Découvrez comment créer des modules complémentaires pour [Firefox](https://ww
 
 ## Éditions de Firefox
 
-Firefox est disponible sous cinq **éditions** différentes, l'une d’entre-elles est forcément adaptée pour vous&nbsp;!
+Firefox est disponible sous cinq **éditions** différentes, l'une d'entre-elles est forcément adaptée pour vous&nbsp;!
 
 ### Firefox Nightly
 

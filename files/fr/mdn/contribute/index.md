@@ -1,12 +1,8 @@
 ---
 title: Contribuer à MDN
 slug: MDN/Contribute
-tags:
-  - Guide
-  - Landing
-  - MDN Meta
-translation_of: MDN/Contribute
 ---
+
 {{MDNSidebar}}
 
 MDN Web Docs a besoin de votre aide ! Nous avons un grand nombre de fautes de frappe à corriger, d'exemples à rédiger, de bogues à résoudre, de personnes à qui parler, et bien d'autres choses encore, et ce nombre ne cesse d'augmenter à mesure que les gens commencent à utiliser le site. Cette page présente ce que vous pouvez faire pour nous aider.

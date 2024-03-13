@@ -1,16 +1,8 @@
 ---
 title: TypedArray.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/forEach
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Reference
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/forEach
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/forEach
 ---
+
 {{JSRef}}
 
 La méthode **`forEach()`** permet d'exécuter une fonction donnée sur chaque élément du tableau. Cette méthode implémente le même algorithme que {{jsxref("Array.prototype.forEach()")}}.
@@ -65,7 +57,7 @@ Le code ci-dessous affiche une ligne pour chaque élément du tableau typé :
 
 ```js
 function affichageContenuTableau(élément, index, tableau) {
-  console.log('a[' + index + '] = ' + élément);
+  console.log("a[" + index + "] = " + élément);
 }
 
 new Uint8Array([0, 1, 2, 3]).forEach(affichageContenuTableau);
@@ -78,14 +70,11 @@ new Uint8Array([0, 1, 2, 3]).forEach(affichageContenuTableau);
 
 ## Spécifications
 
-| Spécification                                                                                                                    | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-%typedarray%.prototype.foreach', '%TypedArray%.prototype.forEach')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.foreach', '%TypedArray%.prototype.forEach')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.forEach")}}
+{{Compat}}
 
 ## Voir aussi
 

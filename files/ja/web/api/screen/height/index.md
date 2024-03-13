@@ -1,17 +1,8 @@
 ---
 title: Screen.height
 slug: Web/API/Screen/height
-page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - NeedsMarkupWork
-  - NeedsMobileBrowserCompatibility
-  - Property
-  - Reference
-browser-compat: api.Screen.height
-translation_of: Web/API/Screen/height
 ---
+
 {{APIRef("CSSOM")}}
 
 **`Screen.height`** は読み取り専用プロパティで、画面の高さをピクセル数で返します。
@@ -24,7 +15,7 @@ translation_of: Web/API/Screen/height
 
 ```js
 if (window.screen.availHeight !== window.screen.height) {
-   // 何かが画面を占拠している
+  // 何かが画面を占拠している
 }
 ```
 

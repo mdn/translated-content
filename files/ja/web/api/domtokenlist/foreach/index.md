@@ -1,21 +1,20 @@
 ---
-title: DOMTokenList.forEach()
+title: "DOMTokenList: forEach() メソッド"
+short-title: forEach()
 slug: Web/API/DOMTokenList/forEach
-tags:
-- メソッド
-- リファレンス
-browser-compat: api.DOMTokenList.forEach
-translation_of: Web/API/DOMTokenList/forEach
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
+
 {{APIRef("DOM")}}
 
 **`forEach()`** は {{domxref("DOMTokenList")}} インターフェイスのメソッドで、リスト中のそれぞれの値の組に対して挿入順で 1 回ずつ、引数で渡されたコールバックを呼び出します。
 
 ## 構文
 
-```js
-forEach(callback);
-forEach(callback, thisArg);
+```js-nolint
+forEach(callback)
+forEach(callback, thisArg)
 ```
 
 ### 引数
@@ -40,7 +39,7 @@ forEach(callback, thisArg);
 
 ## 例
 
-次の例では、 {{htmlelement("pre")}} 要素に設定されたクラスのリストを `DOMTokenList` として受け取るのに {{domxref("Element.classList")}} を使用しています。 `forEach()` を使用して値を含む反復子を取得し、それぞれの値を `<pre>` の {{domxref("Node.textContent")}} に `forEach()` の中の関数から書き込みます。
+次の例では、{{htmlelement("pre")}} 要素に設定されたクラスのリストを `DOMTokenList` として受け取るのに {{domxref("Element.classList")}} を使用しています。`forEach()` を使用して値を含むイテレーターを取得し、それぞれの値を `<pre>` の {{domxref("Node.textContent")}} に `forEach()` の中の関数から書き込みます。
 
 ### HTML
 
@@ -55,12 +54,9 @@ const pre = document.querySelector("pre");
 const classes = pre.classList;
 const iterator = classes.values();
 
-classes.forEach(
-  function(value, key, listObj) {
-    pre.textContent += `(${value} ${key})/${this}\n`;
-  },
-  "arg"
-);
+classes.forEach(function (value, key, listObj) {
+  pre.textContent += `(${value} ${key})/${this}\n`;
+}, "arg");
 ```
 
 ### 結果

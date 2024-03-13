@@ -1,13 +1,8 @@
 ---
-title: '-webkit-mask-attachment'
+title: "-webkit-mask-attachment"
 slug: Web/CSS/-webkit-mask-attachment
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
-translation_of: Web/CSS/-webkit-mask-attachment
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 Si la propriété {{cssxref("-webkit-mask-image")}} est définie, **`-webkit-mask-attachment`** permet de déterminer si la position de l'image est fixe par rapport à la zone d'affichage ou si elle défile avec le bloc qui l'englobe.
@@ -45,7 +40,7 @@ Si la propriété {{cssxref("-webkit-mask-image")}} est définie, **`-webkit-mas
 
 ```css
 body {
-  -webkit-mask-image: url('images/mask.png');
+  -webkit-mask-image: url("images/mask.png");
   -webkit-mask-attachment: fixed;
 }
 ```
@@ -58,7 +53,7 @@ Cette propriété est une propriété propriétaire liée à WebKit/Blink et ne 
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.-webkit-mask-attachment")}}
+{{Compat}}
 
 ## Voir aussi
 

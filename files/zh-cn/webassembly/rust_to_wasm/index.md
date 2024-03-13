@@ -1,13 +1,8 @@
 ---
 title: 编译 Rust 为 WebAssembly
-slug: WebAssembly/Rust_to_wasm
-tags:
-  - WebAssembly
-  - rust
-  - wasm
-  - 编译
-translation_of: WebAssembly/Rust_to_wasm
+slug: WebAssembly/Rust_to_Wasm
 ---
+
 {{WebAssemblySidebar}}
 
 如果你写了一些 Rust 代码，你可以把它编译成 WebAssembly！这份教程将带你编译 Rust 项目为 wasm 并在一个现存的 web 应用中使用它。
@@ -16,8 +11,8 @@ translation_of: WebAssembly/Rust_to_wasm
 
 Rust 和 WebAssembly 有两大主要用例：
 
-- 构建完整应用 —— 整个 Web 应用都基于 Rust 开发！
-- 构建应用的组成部分 —— 在现存的 JavaScript 前端中使用 Rust。
+- 构建完整应用——整个 Web 应用都基于 Rust 开发！
+- 构建应用的组成部分——在现存的 JavaScript 前端中使用 Rust。
 
 目前，Rust 团队正专注于第二种用例，因此我们也将着重介绍它。对于第一种用例，可以参阅 [`yew`](https://github.com/DenisKolodin/yew) 这类项目。
 
@@ -38,7 +33,7 @@ Rust 和 WebAssembly 有两大主要用例：
 要构建我们的包，我们需要一个额外工具 `wasm-pack`。它会帮助我们把我们的代码编译成 WebAssembly 并制造出正确的 `npm` 包。使用下面的命令可以下载并安装它：
 
 ```bash
-$ cargo install wasm-pack
+cargo install wasm-pack
 ```
 
 ### 安装 Node.js 并获取 npm 账户
@@ -137,9 +132,9 @@ use wasm_bindgen::prelude::*;
 
 第三行包括了一个将库中的代码引入到你的代码中的使用命令。在这个情况下，将会引入 `wasm_bindgen::prelude` 的全部模块。我们将在下一节中使用这些内容。
 
-在我们开始下一节之前，我们将讲一讲 `wasm-bindgen`.
+在我们开始下一节之前，我们将讲一讲 `wasm-bindgen`。
 
-`wasm-pack` 使用 `wasm-bindgen`，其它工具，去提供一个连接 JavaScript 和 Rust 的桥。它允许 JavaScript 使用 string 调用 Rust API，或者调用一个 Rust function 去捕获 JavaScript 异常。
+`wasm-pack` 使用另一个工具 `wasm-bindgen` 来提供 JavaScript 和 Rust 类型之间的桥梁。它允许 JavaScript 使用字符串调用 Rust API，或调用 Rust 函数来捕获 JavaScript 异常。
 
 我们将在我们的包中使用 `wasm-bindgen` 的功能。事实上，这是下一节的内容！
 
@@ -160,7 +155,7 @@ extern {
 
 你可能会疑惑这个函数是什么，你的疑惑可能是正确的：这是 [the `alert` function provided by JavaScript](/zh-CN/docs/Web/API/Window/alert)！我们将在下一节中调用这个函数。
 
-当你想调用新的 JavaScript 函数时，你可以在这里写他们，`wasm-bindgen` 将负责为您设置一切。并非一切都得到支持，但我们正在努力！如果缺少某些内容，请 [file bugs](https://github.com/rustwasm/wasm-bindgen/issues/new) 。
+当你想调用新的 JavaScript 函数时，你可以在这里写他们，`wasm-bindgen` 将负责为你设置一切。并非一切都得到支持，但我们正在努力！如果缺少某些内容，请 [file bugs](https://github.com/rustwasm/wasm-bindgen/issues/new) 。
 
 #### 编写能够在 JavaScript 中调用的 Rust 函数
 
@@ -175,11 +170,11 @@ pub fn greet(name: &str) {
 
 我们又看到了 `#[wasm_bindgen]` 属性。在这里，它并非定义一个 `extern` 块，而是 `fn，`这代表我们希望能够在 JavaScript 中使用这个 Rust 函数。这和 `extern` 正相反：我们并非引入函数，而是要把函数给外部世界使用。
 
-这个函数的名字是 `greet`，它需要一个参数，一个字符串 （写作 `&str`）。它调用了我们前面在 `extern` 块中引入的 `alert` 函数。它传递了一个让我们串联字符串的 `format!` 宏的调用。
+这个函数的名字是 `greet`，它需要一个参数，一个字符串（写作 `&str`）。它调用了我们前面在 `extern` 块中引入的 `alert` 函数。它传递了一个让我们串联字符串的 `format!` 宏的调用。
 
-`format!` 在这里有两个参数，一个格式化字符串和一个要填入的变量。格式化字符串是 `"Hello, {}!"` 部分。它可以包含一个或多个 `{}`，变量将会被填入其中。传递的变量是 `name`，也就是这个函数的参数。所以当我们调用 `greet("Steve")`时我们就能看到 `"Hello, Steve!"。`
+`format!` 在这里有两个参数，一个格式化字符串和一个要填入的变量。格式化字符串是 `"Hello, {}!"` 部分。它可以包含一个或多个 `{}`，变量将会被填入其中。传递的变量是 `name`，也就是这个函数的参数。所以当我们调用 `greet("Steve")`时我们就能看到 `"Hello, Steve!"`。
 
-这个传递到了 `alert()`，所以当我们调用这个函数时，我们应该能看到他谈弹出了一个带有 "Hello, Steve!" 的消息框。
+上述字符串被传递到了 `alert()`，所以当我们调用这个函数时，我们应该能看到一个消息框弹出，其中的内容为“Hello, Steve!”。
 
 我们的库写完了，是时候构建它了。
 
@@ -214,16 +209,16 @@ wasm-bindgen = "0.2"
 现在我们已经完成了所有配置项，开始构建吧！在命令行输入以下命令：
 
 ```bash
-$ wasm-pack build --scope mynpmusername
+wasm-pack build --scope mynpmusername
 ```
 
 这个命令将做一系列事情 (这会花一些时间，特别是当你第一次运行 `wasm-pack`)。想了解详细情况，查看[这篇在 Mozilla Hacks 上的文章](https://hacks.mozilla.org/2018/04/hello-wasm-pack/)。简单来说，`wasm-pack build` 将做以下几件事：
 
-1.  将你的 Rust 代码编译成 WebAssembly。
-2.  在编译好的 WebAssembly 代码基础上运行 `wasm-bindgen`，生成一个 JavaScript 文件将 WebAssembly 文件包装成一个模块以便 npm 能够识别它。
-3.  创建一个 `pkg` 文件夹并将 JavaScript 文件和生成的 WebAssembly 代码移到其中。
-4.  读取你的 `Cargo.toml` 并生成相应的 `package.json。`
-5.  复制你的 `README.md` (如果有的话) 到文件夹中。
+1. 将你的 Rust 代码编译成 WebAssembly。
+2. 在编译好的 WebAssembly 代码基础上运行 `wasm-bindgen`，生成一个 JavaScript 文件将 WebAssembly 文件包装成一个模块以便 npm 能够识别它。
+3. 创建一个 `pkg` 文件夹并将 JavaScript 文件和生成的 WebAssembly 代码移到其中。
+4. 读取你的 `Cargo.toml` 并生成相应的 `package.json`。
+5. 复制你的 `README.md` (如果有的话) 到文件夹中。
 
 最后的结果？你在 `pkg` 文件夹下有了一个 npm 包。
 
@@ -236,8 +231,8 @@ $ wasm-pack build --scope mynpmusername
 把我们的新包发布到 npm registry:
 
 ```bash
-$ cd pkg
-$ npm publish --access=public
+cd pkg
+npm publish --access=public
 ```
 
 我们现在有了一个 npm 包，使用 Rust 编写，但已经被编译为 WebAssembly 了。现在这个包已经可以被 JavaScript 使用了，而且使用它完全不需要用户安装 Rust；包中的代码是 WebAssembly 代码，而不是 Rust 源码！
@@ -249,9 +244,9 @@ $ npm publish --access=public
 让我们离开`pkg`目录，并创建一个新目录`site`，尝试以下操作：
 
 ```bash
-$ cd ../..
-$ mkdir site
-$ cd site
+cd ../..
+mkdir site
+cd site
 ```
 
 创建一个新文件 `package.json`，然后输入如下代码：
@@ -272,29 +267,29 @@ $ cd site
 }
 ```
 
-请注意，您需要在依赖项部分的 `@` 之后填写自己的用户名。
+请注意，你需要在依赖项部分的 `@` 之后填写自己的用户名。
 
 接下来，我们需要配置 Webpack。创建 `webpack.config.js` 并输入：
 
 ```js
-const path = require('path');
+const path = require("path");
 module.exports = {
   entry: "./index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "index.js",
   },
-  mode: "development"
+  mode: "development",
 };
 ```
 
 现在我们需要一个 HTML 文件。创建一个`index.html`并写入如下内容：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>hello-wasm example</title>
   </head>
   <body>
@@ -307,23 +302,23 @@ module.exports = {
 
 ```js
 const js = import("./node_modules/@yournpmusername/hello-wasm/hello_wasm.js");
-js.then(js => {
+js.then((js) => {
   js.greet("WebAssembly");
 });
 ```
 
-请注意，您需要再次填写您的 npm 用户名。
+请注意，你需要再次填写你的 npm 用户名。
 
 这将从`node_modules`文件夹导入我们的模块。这不是最佳做法，但这里只做一个演示，因此暂时就这样用。加载后，它将从该模块调用`greet`函数，并传入字符串“WebAssembly”参数。注意这里看上去没有什么特别的，但是我们正在调用 Rust 代码！就 JavaScript 代码所知，这只是一个普通模块。
 
 我们已经完成了所有的文件！让我们试一下：
 
 ```bash
-$ npm install
-$ npm run serve
+npm install
+npm run serve
 ```
 
-这将启动一个 Web 服务器。访问 [http://localhost:8080 ](http://localhost:8080)，您应该会在屏幕上看到一个警告框，其中包含 `Hello, WebAssembly!` ！我们已经成功地从 JavaScript 调用了 Rust，并从 Rust 调用了 JavaScript。
+这将启动一个 Web 服务器。访问 `http://localhost:8080`，你应该会在屏幕上看到一个内容为 `Hello, WebAssembly!` 的警告框。我们已经成功地从 JavaScript 调用了 Rust，并从 Rust 调用了 JavaScript。
 
 ## 结论
 

@@ -1,16 +1,8 @@
 ---
 title: Int8Array
 slug: Web/JavaScript/Reference/Global_Objects/Int8Array
-tags:
-  - クラス
-  - Int8Array
-  - JavaScript
-  - TypedArray
-  - 型付き配列
-  - ポリフィル
-browser-compat: javascript.builtins.Int8Array
-translation_of: Web/JavaScript/Reference/Global_Objects/Int8Array
 ---
+
 {{JSRef}}
 
 **`Int8Array`** は型付き配列で、 2 の補数形式の 8 ビット符号付き整数値の配列を表します。中身は `0` で初期化されます。生成されると、配列内の要素はそのオブジェクトのメソッドを使用するか、配列の標準的な添字の構文 (すなわち、ブラケット記法) を使用するかして参照することができます。
@@ -113,7 +105,7 @@ console.log(int8.length); // 2
 console.log(int8.BYTES_PER_ELEMENT); // 1
 
 // 配列から
-var arr = new Int8Array([21,31]);
+var arr = new Int8Array([21, 31]);
 console.log(arr[1]); // 31
 
 // From another TypedArray
@@ -126,7 +118,9 @@ var buffer = new ArrayBuffer(8);
 var z = new Int8Array(buffer, 1, 4);
 
 // 反復可能オブジェクトから
-var iterable = function*(){ yield* [1,2,3]; }();
+var iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 var int8 = new Int8Array(iterable);
 // Int8Array[1, 2, 3]
 ```

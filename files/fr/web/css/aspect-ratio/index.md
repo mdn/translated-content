@@ -1,9 +1,8 @@
 ---
 title: aspect-ratio
 slug: Web/CSS/aspect-ratio
-translation_of: Web/CSS/aspect-ratio
-browser-compat: css.properties.aspect-ratio
 ---
+
 {{CSSRef}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`aspect-ratio`** définit un **ratio d'affichage préférentiel** pour la boîte, qui sera utilisé dans le calcul des tailles automatiques et pour d'autres fonctions de mise en page.
@@ -49,7 +48,14 @@ Les navigateurs ont ajouté une propriété `aspect-ratio` interne qui s'appliqu
 Sur Firefox, la règle de la feuille de styles interne ressemble à cela&nbsp;:
 
 ```css
-img, input[type="image"], video, embed, iframe, marquee, object, table {
+img,
+input[type="image"],
+video,
+embed,
+iframe,
+marquee,
+object,
+table {
   aspect-ratio: attr(width) / attr(height);
 }
 ```

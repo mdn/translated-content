@@ -1,25 +1,18 @@
 ---
-title: HTMLObjectElement.setCustomValidity()
+title: "HTMLObjectElement: setCustomValidity() メソッド"
+short-title: setCustomValidity()
 slug: Web/API/HTMLObjectElement/setCustomValidity
-page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - HTMLObjectElement
-  - Method
-  - NeedsExample
-  - Reference
-  - setCustomValidity()
-browser-compat: api.HTMLObjectElement.setCustomValidity
-translation_of: Web/API/HTMLObjectElement/setCustomValidity
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`setCustomValidity()`** は {{domxref("HTMLObjectElement")}} インターフェイスのメソッドで、この要素に独自の検証メッセージを設定します。
 
 ## 構文
 
-```js
+```js-nolint
 setCustomValidity(errorMessage)
 ```
 
@@ -46,13 +39,13 @@ function validate(inputID) {
   const validityState = input.validity;
 
   if (validityState.valueMissing) {
-    input.setCustomValidity('ここに記入するんだ！');
+    input.setCustomValidity("ここに記入するんだ！");
   } else if (validityState.rangeUnderflow) {
-    input.setCustomValidity('もっと高い数字が必要だ!');
+    input.setCustomValidity("もっと高い数字が必要だ!");
   } else if (validityState.rangeOverflow) {
-    input.setCustomValidity('高すぎる!');
+    input.setCustomValidity("高すぎる!");
   } else {
-    input.setCustomValidity('');
+    input.setCustomValidity("");
   }
 
   input.reportValidity();

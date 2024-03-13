@@ -1,8 +1,10 @@
 ---
 title: Symbol.species
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/species
-browser-compat: javascript.builtins.Symbol.species
+l10n:
+  sourceCommit: 8bf018f0a39d012a0d98afe3f15e0ed0fb7c8ce5
 ---
+
 {{JSRef}}
 
 El símbolo conocido como **`Symbol.species`** especifica una propiedad con valor de función que la función constructora utiliza para crear objetos derivados.
@@ -24,13 +26,15 @@ Es posible que quieras devolver objetos {{jsxref("Array")}} en tu clase array de
 ```js
 class MyArray extends Array {
   // Sobrescribir especies al constructor de la matriz Array
-  static get [Symbol.species]() { return Array; }
+  static get [Symbol.species]() {
+    return Array;
+  }
 }
-let a = new MyArray(1,2,3);
-let mapped = a.map(x => x * x);
+let a = new MyArray(1, 2, 3);
+let mapped = a.map((x) => x * x);
 
 console.log(mapped instanceof MyArray); // false
-console.log(mapped instanceof Array);   // true
+console.log(mapped instanceof Array); // true
 ```
 
 ## Especificaciones
@@ -45,4 +49,3 @@ console.log(mapped instanceof Array);   // true
 
 - {{jsxref("Map.@@species", "Map[@@species]")}}
 - {{jsxref("Set.@@species", "Set[@@species]")}}
-

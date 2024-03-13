@@ -1,14 +1,8 @@
 ---
 title: scroll-margin-block
 slug: Web/CSS/scroll-margin-block
-tags:
-  - CSS
-  - Propriété
-  - Propriété logique
-  - Propriété raccourcie
-  - Reference
-translation_of: Web/CSS/scroll-margin-block
 ---
+
 {{CSSRef}}
 
 La propriété **`scroll-margin-block`** est une propriété raccourcie logique qui définit les marges de défilement sur l'axe de bloc (i.e. les propriétés logiques `scroll-margin-block-start` et `scroll-margin-block-end`).
@@ -23,7 +17,7 @@ Les valeurs des marges de défilement correspondent aux décalages entre la zone
 /* Valeurs de longueur */
 /* Type <length> */
 scroll-margin-block: 10px;
-scroll-margin-block: 1em .5em;
+scroll-margin-block: 1em 0.5em;
 
 /* Valeurs globales */
 scroll-margin-block: inherit;
@@ -36,18 +30,18 @@ scroll-margin-block: unset;
 - `<length>`
   - : Un décalage par rapport au côté correspondant du conteneur de défilement.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Spécifications
 
-| Spécification                                                                                                                | État                                             | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Scroll Snap Points", "#propdef-scroll-margin-block", "scroll-margin-block")}} | {{Spec2("CSS Scroll Snap Points")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.scroll-margin-block")}}
+{{Compat}}

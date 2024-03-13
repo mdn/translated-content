@@ -1,15 +1,8 @@
 ---
-title: '-webkit-overflow-scrolling'
+title: "-webkit-overflow-scrolling"
 slug: Web/CSS/-webkit-overflow-scrolling
-tags:
-  - CSS
-  - CSS プロパティ
-  - 標準外
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.-webkit-overflow-scrolling
-translation_of: Web/CSS/-webkit-overflow-scrolling
 ---
+
 {{CSSRef}} {{Non-standard_header}}
 
 `-webkit-overflow-scrolling` は [CSS](/ja/docs/Web/CSS) のプロパティは、指定された要素で惰性付き (momentum-based) スクロールを使用するかどうかを制御します。
@@ -37,14 +30,10 @@ translation_of: Web/CSS/-webkit-overflow-scrolling
 
 ```html
 <div class="scroll-touch">
-  <p>
-    This paragraph has momentum scrolling
-  </p>
+  <p>This paragraph has momentum scrolling</p>
 </div>
 <div class="scroll-auto">
-  <p>
-    This paragraph does not.
-  </p>
+  <p>This paragraph does not.</p>
 </div>
 ```
 

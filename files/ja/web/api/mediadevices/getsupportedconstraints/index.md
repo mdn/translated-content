@@ -1,26 +1,17 @@
 ---
-title: MediaDevices.getSupportedConstraints()
+title: "MediaDevices: getSupportedConstraints() メソッド"
 slug: Web/API/MediaDevices/getSupportedConstraints
-tags:
-  - API
-  - メディア
-  - メディアキャプチャとストリーム API
-  - メディアストリーム API
-  - MediaDevices
-  - メソッド
-  - リファレンス
-  - WebRTC
-  - getSupportedConstraints
-browser-compat: api.MediaDevices.getSupportedConstraints
-translation_of: Web/API/MediaDevices/getSupportedConstraints
+l10n:
+  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 **`getSupportedConstraints()`** は {{domxref("MediaDevices")}} インターフェイスのメソッドで、 {{domxref("MediaTrackSupportedConstraints")}} 辞書に基づくオブジェクトを返却し、そのそれぞれのメンバーフィールドは、{{Glossary("user agent", "ユーザーエージェント")}}が理解する制約可能なプロパティの 1 つを指定します。
 
 ## 構文
 
-```js
+```js-nolint
 getSupportedConstraints()
 ```
 
@@ -39,27 +30,25 @@ getSupportedConstraints()
 ```html hidden
 <p>あなたのブラウザーは、以下のメディア制約に対応しています。</p>
 
-<ul id="constraintList">
-</ul>
+<ul id="constraintList"></ul>
 ```
 
 ```css hidden
 body {
-  font: 15px Arial, sans-serif;
+  font:
+    15px Arial,
+    sans-serif;
 }
 ```
 
 ```js
-let constraintList = document.getElementById("constraintList");
-let supportedConstraints = navigator.mediaDevices.getSupportedConstraints();
+const constraintList = document.querySelector("#constraintList");
+const supportedConstraints = navigator.mediaDevices.getSupportedConstraints();
 
-for (let constraint in supportedConstraints) {
-  if (supportedConstraints.hasOwnProperty(constraint)) {
-    let elem = document.createElement("li");
-
-    elem.innerHTML = "<code>" + constraint + "</code>";
-    constraintList.appendChild(elem);
-  }
+for (const constraint of Object.keys(supportedConstraints)) {
+  const elem = document.createElement("li");
+  elem.innerHTML = `<code>${constraint}</code>`;
+  constraintList.appendChild(elem);
 }
 ```
 

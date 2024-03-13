@@ -1,15 +1,8 @@
 ---
 title: CSS カウンタースタイル
-slug: Web/CSS/CSS_Counter_Styles
-tags:
-  - CSS
-  - CSS カウンタースタイル
-  - ガイド
-  - NeedsContent
-  - 概要
-  - リファレンス
-translation_of: Web/CSS/CSS_Counter_Styles
+slug: Web/CSS/CSS_counter_styles
 ---
+
 {{CSSRef}}
 
 **CSS カウンタースタイル** (CSS Counter Styles) は CSS のモジュールの一つで、独自のカウンタースタイルを定義することができます。
@@ -42,20 +35,18 @@ translation_of: Web/CSS/CSS_Counter_Styles
 
 ## 仕様書
 
-| 仕様書                              | 状態                             | 備考     |
-| ----------------------------------- | -------------------------------- | -------- |
-| {{SpecName('CSS3 Counter Styles')}} | {{Spec2('CSS3 Counter Styles')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
 ### `@counter-style` ルール
 
-{{Compat("css.at-rules.counter-style")}}
+{{Compat}}
 
 ### `counter-increment` プロパティ
 
-{{Compat("css.properties.counter-increment")}}
+{{Compat}}
 
 ### `counter-reset` プロパティ
 
-{{Compat("css.properties.counter-reset")}}
+{{Compat}}

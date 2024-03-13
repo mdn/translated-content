@@ -1,15 +1,8 @@
 ---
 title: font-variant-ligatures
 slug: Web/CSS/font-variant-ligatures
-tags:
-  - CSS
-  - CSS フォント
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.font-variant-ligatures
-translation_of: Web/CSS/font-variant-ligatures
 ---
+
 {{CSSRef}}
 
 **`font-variant-ligatures`** は CSS のプロパティで、適用される用途の文字コンテンツで使われる{{Glossary("ligature", "合字")}}および{{Glossary("contextual forms", "文脈に合わせた字形")}}を制御します。これにより、結果のテキストでより調和した形を利用することができます。
@@ -22,19 +15,20 @@ translation_of: Web/CSS/font-variant-ligatures
 /* キーワード値 */
 font-variant-ligatures: normal;
 font-variant-ligatures: none;
-font-variant-ligatures: common-ligatures;           /* <common-lig-values> */
-font-variant-ligatures: no-common-ligatures;        /* <common-lig-values> */
-font-variant-ligatures: discretionary-ligatures;    /* <discretionary-lig-values> */
+font-variant-ligatures: common-ligatures; /* <common-lig-values> */
+font-variant-ligatures: no-common-ligatures; /* <common-lig-values> */
+font-variant-ligatures: discretionary-ligatures; /* <discretionary-lig-values> */
 font-variant-ligatures: no-discretionary-ligatures; /* <discretionary-lig-values> */
-font-variant-ligatures: historical-ligatures;       /* <historical-lig-values> */
-font-variant-ligatures: no-historical-ligatures;    /* <historical-lig-values> */
-font-variant-ligatures: contextual;                 /* <contextual-alt-values> */
-font-variant-ligatures: no-contextual;              /* <contextual-alt-values> */
+font-variant-ligatures: historical-ligatures; /* <historical-lig-values> */
+font-variant-ligatures: no-historical-ligatures; /* <historical-lig-values> */
+font-variant-ligatures: contextual; /* <contextual-alt-values> */
+font-variant-ligatures: no-contextual; /* <contextual-alt-values> */
 
 /* グローバル値 */
 font-variant-ligatures: inherit;
 font-variant-ligatures: initial;
 font-variant-ligatures: revert;
+font-variant-ligatures: revert-layer;
 font-variant-ligatures: unset;
 ```
 
@@ -84,54 +78,54 @@ font-variant-ligatures: unset;
 
 ## 例
 
-<h3 id="Setting_font_ligatures_and_contextual_forms">フォントの合字と文脈に合わせた字形の設定</h3>
+### フォントの合字と文脈に合わせた字形の設定
 
 #### HTML
 
 ```html
-<link href="//fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Lora" rel="stylesheet" />
 <p class="normal">
-  normal<br>
+  normal<br />
   if fi ff tf ft jf fj
 </p>
 <p class="none">
-  none<br>
+  none<br />
   if fi ff tf ft jf fj
 </p>
 <p class="common-ligatures">
-  common-ligatures<br>
+  common-ligatures<br />
   if fi ff tf ft jf fj
 </p>
 <p class="no-common-ligatures">
-  no-common-ligatures<br>
+  no-common-ligatures<br />
   if fi ff tf ft jf fj
 </p>
 <p class="discretionary-ligatures">
-  discretionary-ligatures<br>
+  discretionary-ligatures<br />
   if fi ff tf ft jf fj
 </p>
 <p class="no-discretionary-ligatures">
-  no-discretionary-ligatures<br>
+  no-discretionary-ligatures<br />
   if fi ff tf ft jf fj
 </p>
 <p class="historical-ligatures">
-  historical-ligatures<br>
+  historical-ligatures<br />
   if fi ff tf ft jf fj
 </p>
 <p class="no-historical-ligatures">
-  no-historical-ligatures<br>
+  no-historical-ligatures<br />
   if fi ff tf ft jf fj
 </p>
 <p class="contextual">
-  contextual<br>
+  contextual<br />
   if fi ff tf ft jf fj
 </p>
 <p class="no-contextual">
-  no-contextual<br>
+  no-contextual<br />
   if fi ff tf ft jf fj
 </p>
 <p class="contextual">
-  contextual<br>
+  contextual<br />
   if fi ff tf ft jf fj
 </p>
 ```
@@ -189,7 +183,7 @@ p {
 
 #### 結果
 
-{{ EmbedLiveSample('Setting_font_ligatures_and_contextual_forms', '', '700', '', 'Web/CSS/font-variant-ligatures') }}
+{{ EmbedLiveSample('Setting font ligatures and contextual forms', '', '700') }}
 
 ## 仕様書
 

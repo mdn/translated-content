@@ -1,8 +1,8 @@
 ---
 title: 遊戲開發
 slug: Games
-translation_of: Games
 ---
+
 {{GamesSidebar}}
 
 遊戲絕對是最受歡迎的電腦功能之一。而相關技術不斷推陳出新，讓玩家在任何相容標準的網路瀏覽器上，也能盡情享受畫質更優、效能更好的遊戲。
@@ -51,7 +51,7 @@ translation_of: Games
   - : Tutorials and articles about game development in general.
 - [HTML5 Gamedev Starter](http://html5devstarter.enclavegames.com/)
   - : Starter for the new game developers, a curated list of links to various, useful resources around the web.
-- [js13kGames](http://js13kgames.com/)
+- [js13kGames](https://js13kgames.com/)
   - : JavaScript coding competition for HTML5 game developers with the file size limit set to 13 kilobytes. All the submitted games are available in a readable form on GitHub.
 - [Mozilla Hacks blog](https://hacks.mozilla.org/category/games/)
   - : Games category on the Mozilla Hacks blog containing interesting gamedev related articles.

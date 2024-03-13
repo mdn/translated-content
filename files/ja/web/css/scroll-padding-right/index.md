@@ -1,16 +1,8 @@
 ---
 title: scroll-padding-right
 slug: Web/CSS/scroll-padding-right
-tags:
-  - CSS
-  - Reference
-  - Web
-  - recipe:css-property
-  - scroll-padding
-  - scroll-padding-right
-browser-compat: css.properties.scroll-padding-right
-translation_of: Web/CSS/scroll-padding-right
 ---
+
 {{CSSRef}}
 
 `scroll-padding-right` プロパティは、スクロールポートの*最適表示領域*のオフセットを定義します。ユーザーのビュー内でものを配置するためのターゲット領域として使用される領域です。これにより、他のコンテンツ (固定位置のツールバーやサイドバーなど) によって隠されているスクロールポートの領域を除外したり、単にターゲット要素とスクロールポートの端との間により多くの余裕を持たせたりすることができます。

@@ -1,8 +1,8 @@
 ---
 title: AudioBuffer.sampleRate
 slug: Web/API/AudioBuffer/sampleRate
-translation_of: Web/API/AudioBuffer/sampleRate
 ---
+
 {{ APIRef("Web Audio API") }}
 
 La propriété `sampleRate` de l'interface {{ domxref("AudioBuffer") }} renvoie un nombre à virgule flottante représentant la taux d'échantillonage, en échantillons par seconde, des données PCM stockées dans la mémoire-tampon.
@@ -10,7 +10,11 @@ La propriété `sampleRate` de l'interface {{ domxref("AudioBuffer") }} renvoie 
 ## Syntaxe
 
 ```js
-var tableauMemoireTampon = audioCtx.createBuffer(nombreCanaux, nombreFrames, contexteAudio.sampleRate);
+var tableauMemoireTampon = audioCtx.createBuffer(
+  nombreCanaux,
+  nombreFrames,
+  contexteAudio.sampleRate,
+);
 tableauMemoireTampon.sampleRate;
 ```
 
@@ -27,10 +31,13 @@ var nombreCanaux = 2;
 // Crée une mémoire tampon vide de 2 secondes
 // à la fréquence d'échantillonage du contexte AudioContext
 var nombreFrames = contexteAudio.sampleRate * 2.0;
-var tableauDonnees = audioCtx.createBuffer(nombreCanaux, nombreFrames, contexteAudio.sampleRate);
+var tableauDonnees = audioCtx.createBuffer(
+  nombreCanaux,
+  nombreFrames,
+  contexteAudio.sampleRate,
+);
 
-
-bouton.onclick = function() {
+bouton.onclick = function () {
   // remplit la mémoire tampon avec du bruit blanc
   // valeurs aléatoires entre -1.0 et 1.0
   for (var canal = 0; canal < nombreCanaux; canal++) {
@@ -43,18 +50,16 @@ bouton.onclick = function() {
     }
   }
   console.log(tableauDonnees.sampleRate);
-}
+};
 ```
 
-## Spécification
+## Spécifications
 
-| Spécification                                                                                        | Statut                               | Commentaire |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#widl-AudioBuffer-sampleRate', 'sampleRate')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
-## Compatibilité des Navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.AudioBuffer.sampleRate")}}
+{{Compat}}
 
 ## Voir aussi
 

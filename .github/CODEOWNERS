@@ -56,10 +56,26 @@
 # TRANSLATION GUIDE OWNER(S)
 # ----------------------------------------------------------------------------
 /docs/        @mdn/core-yari-content
+/docs/es/     @mdn/yari-content-es
+/docs/fr/     @mdn/yari-content-fr
+/docs/ja/     @mdn/yari-content-ja
 /docs/ko/     @mdn/yari-content-ko
+/docs/pt-br/  @mdn/yari-content-pt-br
 /docs/ru/     @mdn/yari-content-ru
 /docs/zh-cn/  @mdn/yari-content-zh
 /docs/zh-tw/  @mdn/yari-content-zh
+
+# ----------------------------------------------------------------------------
+# ISSUE TEMPLATE OWNER(S)
+# ----------------------------------------------------------------------------
+.github/ISSUE_TEMPLATE/page-report-es.yml     @mdn/yari-content-es
+.github/ISSUE_TEMPLATE/page-report-fr.yml     @mdn/yari-content-fr
+.github/ISSUE_TEMPLATE/page-report-ja.yml     @mdn/yari-content-ja
+.github/ISSUE_TEMPLATE/page-report-ko.yml     @mdn/yari-content-ko
+.github/ISSUE_TEMPLATE/page-report-pt-br.yml  @mdn/yari-content-pt-br
+.github/ISSUE_TEMPLATE/page-report-ru.yml     @mdn/yari-content-ru
+.github/ISSUE_TEMPLATE/page-report-zh-cn.yml  @mdn/yari-content-zh
+.github/ISSUE_TEMPLATE/page-report-zh-tw.yml  @mdn/yari-content-zh
 
 # ----------------------------------------------------------------------------
 # CONTROL FILES OWNER(S)
@@ -71,3 +87,6 @@
 /.github/     @mdn/core-dev
 /*            @mdn/core-dev
 /*.md         @mdn/core-dev @mdn/core-yari-content
+/CONTRIBUTING.md            @mdn/core-yari-content
+/PEERS_GUIDELINES.md        @mdn/core-yari-content
+/.prettierignore

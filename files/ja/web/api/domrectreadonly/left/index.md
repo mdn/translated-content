@@ -1,16 +1,11 @@
 ---
-title: DOMRectReadOnly.left
+title: "DOMRectReadOnly: left プロパティ"
+short-title: left
 slug: Web/API/DOMRectReadOnly/left
-tags:
-  - API
-  - DOM
-  - DOMRectReadOnly
-  - 位置
-  - プロパティ
-  - リファレンス
-browser-compat: api.DOMRectReadOnly.left
-translation_of: Web/API/DOMRectReadOnly/left
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
 **`left`** は **`DOMRectReadOnly`** インターフェイスの読み取り専用プロパティで、この `DOMRect` の左端の座標を返します。（`x` と同じ、または `width` が負の数であれば `x + width` と同じです。）

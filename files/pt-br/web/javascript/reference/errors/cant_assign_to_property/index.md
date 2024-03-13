@@ -1,12 +1,8 @@
 ---
 title: 'TypeError: can''t assign to property "x" on "y": not an object'
 slug: Web/JavaScript/Reference/Errors/Cant_assign_to_property
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 A exceção do modo strict do Javascript "can't assign to property" ocorre quando é feita
@@ -40,7 +36,7 @@ que uma variante de objeto de uma {{jsxref("String")}} ou um {{jsxref("Number")}
 ### Casos inválidos
 
 ```js example-bad
-'use strict';
+"use strict";
 
 var foo = "minha string";
 // A linha a seguir não faz nada se não estiver em modo strict.
@@ -52,7 +48,7 @@ foo.bar = {}; // TypeError: can't assign to property "bar" on "my string": not a
 Corrija o código para evitar que um [primitivo](/pt-BR/docs/Glossary/Primitive) seja usado em tais lugares, ou corrija o problema criando o objeto homólogo {{jsxref("Object")}}.
 
 ```js example-good
-'use strict';
+"use strict";
 
 var foo = new String("minha string");
 foo.bar = {};

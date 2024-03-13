@@ -1,14 +1,8 @@
 ---
-title: 'ReferenceError: can''t access lexical declaration`X'' before initialization'
+title: "ReferenceError: can't access lexical declaration 'X' before initialization"
 slug: Web/JavaScript/Reference/Errors/Cant_access_lexical_declaration_before_init
-tags:
-  - Erreur
-  - JavaScript
-  - Reference
-  - ReferenceError
-translation_of: Web/JavaScript/Reference/Errors/Cant_access_lexical_declaration_before_init
-original_slug: Web/JavaScript/Reference/Erreurs/Cant_access_lexical_declaration_before_init
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message
@@ -34,13 +28,13 @@ Il y a eu un accès à une variable déclarée avec `let` ou `const` avant que c
 Dans l'exemple qui suit, la variable `toto` est redéclarée dans le bloc avec un second `let` et elle n'est donc pas initialisée.
 
 ```js example-bad
-function test(){
-   let toto = 33;
-   if (true) {
-      let toto = (toto + 55);
-      // ReferenceError: can't access lexical
-      // declaration `toto` before initialization
-   }
+function test() {
+  let toto = 33;
+  if (true) {
+    let toto = toto + 55;
+    // ReferenceError: can't access lexical
+    // declaration `toto` before initialization
+  }
 }
 test();
 ```
@@ -50,11 +44,11 @@ test();
 Afin que `toto` puisse être modifiée au sein de l'instruction `if`, on enlèvera la redéclaration dans ce bloc :
 
 ```js example-good
-function test(){
-   let toto = 33;
-   if (true) {
-      toto = (toto + 55);
-   }
+function test() {
+  let toto = 33;
+  if (true) {
+    toto = toto + 55;
+  }
 }
 test();
 ```

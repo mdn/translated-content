@@ -1,13 +1,8 @@
 ---
 title: 'TypeError: property "x" is non-configurable and can''t be deleted'
 slug: Web/JavaScript/Reference/Errors/Cant_delete
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - Strict Mode
-  - TypeError
 ---
+
 {{jsSidebar("Errors")}}
 
 A exceção do Javascript "property is non-configurable and can't be deleted" ocorre
@@ -42,26 +37,26 @@ Propriedades não configuráveis não são comuns, mas podem ser criadas usando
 {{jsxref("Object.defineProperty()")}} ou {{jsxref("Object.freeze()")}}.
 
 ```js example-bad
-'use strict';
-var obj = Object.freeze({name: 'Elsa', score: 157});
-delete obj.score;  // TypeError
+"use strict";
+var obj = Object.freeze({ name: "Elsa", score: 157 });
+delete obj.score; // TypeError
 
-'use strict';
+("use strict");
 var obj = {};
-Object.defineProperty(obj, 'foo', {value: 2, configurable: false});
-delete obj.foo;  // TypeError
+Object.defineProperty(obj, "foo", { value: 2, configurable: false });
+delete obj.foo; // TypeError
 
-'use strict';
+("use strict");
 var frozenArray = Object.freeze([0, 1, 2]);
-frozenArray.pop();  // TypeError
+frozenArray.pop(); // TypeError
 ```
 
 Também existem algumas propriedades não configuráveis embutidas no Javascript. Talvez você tenha
 tentado deletar uma constante matemática.
 
 ```js example-bad
-'use strict';
-delete Math.PI;  // TypeError
+"use strict";
+delete Math.PI; // TypeError
 ```
 
 ## Veja também

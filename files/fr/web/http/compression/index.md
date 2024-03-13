@@ -1,12 +1,8 @@
 ---
 title: Compression dans HTTP
 slug: Web/HTTP/Compression
-tags:
-  - Guide
-  - HTTP
-  - compression
-translation_of: Web/HTTP/Compression
 ---
+
 {{HTTPSidebar}}
 
 La compression est une méthode importante pour accroitre les performances d'un site web. Pour certaines pages, la réduction de la taille des éléments économise jusqu'à 70 % de la bande passante. Les algorithmes de compression s'améliorent d'années en années, les nouveaux algorithmes étant supportés à la fois par les serveurs et les clients.
@@ -40,7 +36,7 @@ La compression de bout en bout constitue la compression permettant le plus de ga
 
 L'ensemble des navigateurs récents supportent la compression de bout en bout et le seul élément à échanger entre le serveur et le client est l'algorithme de compression à utiliser. Ces algorithmes sont optimisés pour le transport du texte. Dans les années 90, les technologies de compression ont évoluées rapidement, il existe donc de nombreuses possibilités en termes d'algorithmes. Les algorithmes qu'il convient de considérer à l'heure actuelle sont : `gzip`, le plus utilisé et `br` le nouveau venu.
 
-Pour sélectionner l'algorithme à utiliser, le navigateur et le serveur s'appuient sur [la négociation du contenu](/fr/docs/Web/HTTP/Content_negotiation). Le navigateur envoie un en-tête {{HTTPHeader("Accept-Encoding")}} contenant les algorithmes qu'il prend en charge par ordre de préférence, le serveur en sélectionne un pour compresser le corps de la réponse et inclut l'algorithme utilisé dans l'en-tête {{HTTPHeader("Content-Encoding")}} pour informer le navigateur de l’algorithme sélectionné. La négociation de contenu s'appuyant sur l'encodage des données le serveur doit envoyer un en-tête {{HTTPHeader("Vary")}} contenant au moins {{HTTPHeader("Accept-Encoding")}} en plus de l'en-tête de la réponse. Les caches seront ainsi en mesure de gérer les différentes représentations de la ressource.
+Pour sélectionner l'algorithme à utiliser, le navigateur et le serveur s'appuient sur [la négociation du contenu](/fr/docs/Web/HTTP/Content_negotiation). Le navigateur envoie un en-tête {{HTTPHeader("Accept-Encoding")}} contenant les algorithmes qu'il prend en charge par ordre de préférence, le serveur en sélectionne un pour compresser le corps de la réponse et inclut l'algorithme utilisé dans l'en-tête {{HTTPHeader("Content-Encoding")}} pour informer le navigateur de l'algorithme sélectionné. La négociation de contenu s'appuyant sur l'encodage des données le serveur doit envoyer un en-tête {{HTTPHeader("Vary")}} contenant au moins {{HTTPHeader("Accept-Encoding")}} en plus de l'en-tête de la réponse. Les caches seront ainsi en mesure de gérer les différentes représentations de la ressource.
 
 ![Séquence de négociation de contenu échangeant les algorithmes de compression et les en-têtes associés](httpcompression1.png)
 

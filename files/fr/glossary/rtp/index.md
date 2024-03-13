@@ -1,24 +1,20 @@
 ---
-title: RTP (Real-time Transport Protocol) and SRTP (Secure RTP)
+title: RTP (Real-time Transport Protocol) et SRTP (Secure RTP)
 slug: Glossary/RTP
-tags:
-  - Glossaire
-  - RTP
-  - Réseau
-  - protocole
-translation_of: Glossary/RTP
-original_slug: Glossaire/RTP
+l10n:
+  sourceCommit: 5abb200b37e5b6fe5f85132bb3d6dcc3aa4a6f4c
 ---
-Le **Real-time Transport Protocol** (**RTP**) est un protocole réseau qui décrit comment transmettre divers médias (audio, vidéo) d'un point de terminaison à un autre en temps réel. RTP convient aux applications de streaming vidéo, à la téléphonie sur {{glossary ("IP")}} comme Skype et aux technologies de conférence.
 
-La version sécurisée de RTP, **SRTP**, est utilisé par [WebRTC](/fr/docs/Web/API/WebRTC_API), et utilise le cryptage et l'authentification pour minimiser le risque d'attaques par déni de service et de failles de sécurité.
+{{GlossarySidebar}}
 
-RTP est rarement utilisé seul; à la place, il est utilisé en conjonction avec d'autres protocoles comme {{glossary("RTSP")}} et {{glossary("SDP")}}.
+Le **<i lang="en">Real-time Transport Protocol</i>** (abrégé en **RTP**, et qu'on pourrait traduire en français par «&nbsp;protocole de transport en temps réel&nbsp;») est un protocole réseau qui décrit comment transmettre divers médias (audio, vidéo) d'un point de terminaison à un autre en temps réel. RTP convient aux applications de diffusion vidéo, à la téléphonie [VoIP](/fr/docs/Glossary/VoIP) comme Skype et aux outils de visioconférence.
 
-## Apprendre plus
+La version sécurisée de RTP, **SRTP**, est utilisé par [WebRTC](/fr/docs/Web/API/WebRTC_API), et utilise le chiffrement et l'authentification pour minimiser le risque d'attaques par déni de service et certaines failles de sécurité.
 
-### Culture générale
+RTP est rarement utilisé seul. Il est plus généralement utilisé en conjonction avec d'autres protocoles comme [RTSP](/fr/docs/Glossary/RTSP) et [SDP](/fr/docs/Glossary/SDP).
 
-- [Introduction au Real-time Transport Protocol](/fr/docs/Web/API/WebRTC_API/Intro_to_RTP)
-- {{Interwiki("wikipedia", "Real-time_Transport_Protocol","RTP")}} sur Wikipédia
-- {{RFC(3550)}} (l'un des documents qui spécifie précisément le fonctionnement du protocole)
+## Voir aussi
+
+- [Introduction au protocole de transport en temps réel](/fr/docs/Web/API/WebRTC_API/Intro_to_RTP)
+- [RTP](https://fr.wikipedia.org/wiki/Real-time_Transport_Protocol) sur Wikipédia
+- La [RFC 3550 (en anglais)](https://datatracker.ietf.org/doc/html/rfc3550) qui est un des documents spécifiant le protocole

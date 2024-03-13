@@ -1,15 +1,8 @@
 ---
 title: Boolean.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Boolean/valueOf
-tags:
-  - Boolean
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Boolean/valueOf
-original_slug: Web/JavaScript/Reference/Objets_globaux/Boolean/valueOf
 ---
+
 {{JSRef}}
 
 La méthode **`valueOf()`** renvoie la valeur primitive de l'objet {{jsxref("Boolean")}}.
@@ -19,7 +12,7 @@ La méthode **`valueOf()`** renvoie la valeur primitive de l'objet {{jsxref("Boo
 ## Syntaxe
 
 ```js
-bool.valueOf()
+bool.valueOf();
 ```
 
 ### Valeur de retour
@@ -38,21 +31,16 @@ Cette méthode est généralement utilisée de façon interne pas le moteur Java
 
 ```js
 var x = new Boolean();
-var maVar = x.valueOf()      // assigne false à maVar
+var maVar = x.valueOf(); // assigne false à maVar
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaires                                          |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                             | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.6.4.3', 'Boolean.prototype.valueOf')}}                             | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-boolean.prototype.valueof', 'Boolean.prototype.valueOf')}}         | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-boolean.prototype.valueof', 'Boolean.prototype.valueOf')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Boolean.valueOf")}}
+{{Compat}}
 
 ## Voir aussi
 

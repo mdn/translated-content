@@ -1,9 +1,8 @@
 ---
 title: 403 Forbidden
 slug: Web/HTTP/Status/403
-translation_of: Web/HTTP/Status/403
-browser-compat: http.status.403
 ---
+
 {{HTTPSidebar}}
 
 Le code de statut d'erreur de réponse HTTP **`403 Forbidden`** indique qu'un serveur comprend la requête mais refuse de l'autoriser.

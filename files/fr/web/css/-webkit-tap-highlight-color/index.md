@@ -1,13 +1,8 @@
 ---
-title: '-webkit-tap-highlight-color'
+title: "-webkit-tap-highlight-color"
 slug: Web/CSS/-webkit-tap-highlight-color
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
-translation_of: Web/CSS/-webkit-tap-highlight-color
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 La propriété **`-webkit-tap-highlight-color`** est une propriété non-standard qui permet de définir la couleur utilisée pour surligner le lien et indiquer qu'il a bien été activé/touché par l'utilisateur.

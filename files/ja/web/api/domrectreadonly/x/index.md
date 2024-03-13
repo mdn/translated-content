@@ -1,16 +1,11 @@
 ---
-title: DOMRectReadOnly.x
+title: "DOMRectReadOnly: x プロパティ"
+short-title: x
 slug: Web/API/DOMRectReadOnly/x
-tags:
-  - API
-  - DOM
-  - DOMRectReadOnly
-  - 位置
-  - プロパティ
-  - リファレンス
-browser-compat: api.DOMRectReadOnly.x
-translation_of: Web/API/DOMRectReadOnly/x
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
 **`x`** は **`DOMRectReadOnly`** インターフェイスの読み取り専用プロパティで、 `DOMRect` の原点の X 座標を表します。

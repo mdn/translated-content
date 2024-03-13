@@ -1,17 +1,8 @@
 ---
 title: row-gap (grid-row-gap)
 slug: Web/CSS/row-gap
-tags:
-  - CSS
-  - CSS フレックスボックス
-  - CSS グリッド
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-  - row-gap
-browser-compat: css.properties.row-gap
-translation_of: Web/CSS/row-gap
 ---
+
 {{CSSRef}}
 
 **`row-gap`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のグリッド行の間のすき間 ({{glossary("gutters", "溝")}}) の寸法を定義します。
@@ -46,7 +37,7 @@ row-gap: unset;
 
 {{cssinfo}}
 
-## 関連情報
+## 形式文法
 
 {{csssyntax}}
 
@@ -134,4 +125,4 @@ row-gap: unset;
 ## 関連情報
 
 - 関連する CSS プロパティ: {{CSSxRef("column-gap")}}, {{CSSxRef("gap")}}
-- グリッドレイアウトガイド: [グリッドレイアウトの基本概念 - 溝](/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#gutters)
+- グリッドレイアウトガイド: [グリッドレイアウトの基本概念 - 溝](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#溝)

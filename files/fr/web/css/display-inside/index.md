@@ -1,12 +1,8 @@
 ---
 title: display-inside
 slug: Web/CSS/display-inside
-tags:
-  - CSS
-  - Reference
-  - Type
-translation_of: Web/CSS/display-inside
 ---
+
 {{CSSRef}}
 
 Ces mots-clés définissent le type d'affichage ({{CSSxRef("display")}}) pour l'intérieur de l'élément. Ce type servira à la disposition du contenu de l'élément (si ce contenu n'est pas un élément remplacé). Ces mots-clés sont des valeurs de la propriété `display` et peuvent, historiquement être utilisé seul, ou plus récemment (cf. la spécification de niveau 3), être utilisé en combinaison avec un mot-clé {{CSSxRef("&lt;display-outside&gt;")}}.
@@ -58,7 +54,7 @@ Dans l'exemple qui suit, la boîte parente est ciblée avec `display: flow-root`
   width: 200px;
   height: 150px;
   background-color: white;
-  border:1px solid black;
+  border: 1px solid black;
   padding: 10px;
 }
 ```
@@ -78,29 +74,7 @@ Dans l'exemple qui suit, la boîte parente est ciblée avec `display: flow-root`
 
 ## Compatibilité des navigateurs
 
-### Prise en charge des valeurs multiples
-
-{{Compat("css.properties.display.multi-keyword_values", 10)}}
-
-### Prise en charge de `flow-root`
-
-{{Compat("css.properties.display.flow-root", 10)}}
-
-### Prise en charge des tableaux
-
-{{Compat("css.properties.display.table_values", 10)}}
-
-### Prise en charge des grilles
-
-{{Compat("css.properties.display.grid", 10)}}
-
-### Prise en charge des boîtes flexibles
-
-{{Compat("css.properties.display.flex", 10)}}
-
-### Prise en charge des annotations ruby
-
-{{Compat("css.properties.display.ruby_values", 10)}}
+{{Compat}}
 
 ## Voir aussi
 

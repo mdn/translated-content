@@ -1,8 +1,8 @@
 ---
 title: Authentification HTTP
 slug: Web/HTTP/Authentication
-translation_of: Web/HTTP/Authentication
 ---
+
 {{HTTPSidebar}}
 
 HTTP fournit la structure permettant le contrôle d'accès ainsi que l'authentification. Le schéma d'authentification HTTP le plus courant est « l'_authentification basique_ » (« _Basic authentication_ » en anglais). Cette page a pour but de présenter ce schéma d'authentification, et montre comment l'utiliser pour restreindre l'accès à votre serveur.
@@ -43,7 +43,7 @@ Les en-têtes de réponse [`WWW-Authenticate`](/fr/docs/Web/HTTP/Headers/WWW-Aut
 
 La syntaxe pour ces en-têtes est la suivante :
 
-```html
+```http
 WWW-Authenticate: <type> realm=<realm>
 Proxy-Authenticate: <type> realm=<realm>
 ```
@@ -54,7 +54,7 @@ Ici, `<type>` est le schéma d'authentification (« Basic » est le plus courant
 
 Les en-têtes de requête [`Authorization`](/fr/docs/Web/HTTP/Headers/Authorization) et [`Proxy-Authorization`](/fr/docs/Web/HTTP/Headers/Proxy-Authorization) contiennent les identifiants pour authentifier un client avec un serveur (de procuration). Ici, le type est encore une fois nécessaire, suivi par les identifiants, qui peuvent être encodés voire encryptés selon le schéma d'authentification utilisé.
 
-```html
+```http
 Authorization: <type> <credentials>
 Proxy-Authorization: <type> <credentials>
 ```

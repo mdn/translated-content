@@ -1,14 +1,11 @@
 ---
-title: Event.type
+title: "Event: type プロパティ"
+short-title: type
 slug: Web/API/Event/type
-page-type: web-api-instance-property
-tags:
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.Event.type
-translation_of: Web/API/Event/type
+l10n:
+  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
+
 {{APIRef}}
 
 **`type`** は {{domxref("Event")}} インターフェイスの読み取り専用プロパティで、イベントの種別を表す文字列を返します。イベントが構築されると設定され、この名前は `click`, `load`, `error` のような特定のイベントを参照するためによく使用されます。
@@ -32,19 +29,19 @@ translation_of: Web/API/Event/type
 
 ```js
 function getEventType(event) {
-  const log = document.getElementById('log');
-  log.innerText = event.type + '\n' + log.innerText;
+  const log = document.getElementById("log");
+  log.innerText = `${event.type}\n${log.innerText}`;
 }
 
 // キーボードイベント
-document.addEventListener('keydown', getEventType, false);  // first
-document.addEventListener('keypress', getEventType, false); // second
-document.addEventListener('keyup', getEventType, false);    // third
+document.addEventListener("keydown", getEventType, false); // first
+document.addEventListener("keypress", getEventType, false); // second
+document.addEventListener("keyup", getEventType, false); // third
 
 // マウスイベント
-document.addEventListener('mousedown', getEventType, false); // first
-document.addEventListener('mouseup', getEventType, false);   // second
-document.addEventListener('click', getEventType, false);     // third
+document.addEventListener("mousedown", getEventType, false); // first
+document.addEventListener("mouseup", getEventType, false); // second
+document.addEventListener("click", getEventType, false); // third
 ```
 
 ### 結果

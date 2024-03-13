@@ -1,15 +1,8 @@
 ---
 title: column-rule-style
 slug: Web/CSS/column-rule-style
-tags:
-  - CSS
-  - CSS 段組みレイアウト
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.column-rule-style
-translation_of: Web/CSS/column-rule-style
 ---
+
 {{ CSSRef}}
 
 **`column-rule-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、段組みレイアウトで段の間に引かれる線 (段間罫) のスタイルを設定します。
@@ -60,10 +53,11 @@ column-rule-style: unset;
 #### HTML
 
 ```html
-<p>This is a bunch of text split into three columns.
-   The `column-rule-style` property is used to change
-   the style of the line that is drawn between columns.
-   Don't you think that's wonderful?</p>
+<p>
+  This is a bunch of text split into three columns. The `column-rule-style`
+  property is used to change the style of the line that is drawn between
+  columns. Don't you think that's wonderful?
+</p>
 ```
 
 #### CSS

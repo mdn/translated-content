@@ -1,17 +1,8 @@
 ---
 title: TypedArray.from()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/from
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Reference
-  - TypedArray
-  - TypedArrays
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/from
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/from
 ---
+
 {{JSRef}}
 
 La méthode **`TypedArray.from()`** crée un nouvel objet {{jsxref("TypedArray", "TypedArray", "#Les_objets_TypedArray")}} à partir d'un objet itérable ou d'un objet semblable à un tableau. Cette méthode est similaire à {{jsxref("Array.from()")}}.
@@ -73,33 +64,27 @@ var s = new Set([1, 2, 3]);
 Uint8Array.from(s);
 // Uint8Array [ 1, 2, 3 ]
 
-
 // String
 Int16Array.from("123");
 // Int16Array [ 1, 2, 3 ]
 
-
 // En utilisant un fonction fléchée en tant que
 // fonctionMap pour manipuler les éléments
-Float32Array.from([1, 2, 3], x => x + x);
+Float32Array.from([1, 2, 3], (x) => x + x);
 // Float32Array [ 2, 4, 6 ]
 
-
 // Pour construire une séquence de nombres
-Uint8Array.from({length: 5}, (v, k) => k);
+Uint8Array.from({ length: 5 }, (v, k) => k);
 // Uint8Array [ 0, 1, 2, 3, 4 ]
 ```
 
 ## Spécifications
 
-| Spécification                                                                                | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-%typedarray%.from', '%TypedArray%.from')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.from', '%TypedArray%.from')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.from")}}
+{{Compat}}
 
 ## Voir aussi
 

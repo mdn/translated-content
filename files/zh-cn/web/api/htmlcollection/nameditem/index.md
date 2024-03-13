@@ -1,20 +1,13 @@
 ---
 title: HTMLCollection.namedItem()
 slug: Web/API/HTMLCollection/namedItem
-page-type: web-api-instance-method
-tags:
-  - API
-  - Element Lists
-  - HTMLCollection
-  - Interface
-  - Reference
-translation_of: Web/API/HTMLCollection/namedItem
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("HTMLCollection")}} 接口的 **`namedItem()`** 方法返回第一个与集合中的 `id` 或者 `name` 属性匹配成功的 {{domxref("Element")}}，如果没有匹配成功，则返回 `null`。
 
-在 JavaScript中，对一个 {{jsxref("String")}} 使用数组括号语法，例如 `collection["value"]` 等价于 `collection.namedItem("value")`。
+在 JavaScript 中，对一个 {{jsxref("String")}} 使用数组括号语法，例如 `collection["value"]` 等价于 `collection.namedItem("value")`。
 
 ## 语法
 
@@ -46,22 +39,22 @@ const item = collection.namedItem(key);
 ### JavaScript
 
 ```js
-const container = document.getElementById('personal');
+const container = document.getElementById("personal");
 
 // Returns the HTMLSpanElement with the name "title" if no such element exists null is returned
-const titleSpan = container.children.namedItem('title');
+const titleSpan = container.children.namedItem("title");
 
 // The following variants return undefined instead of null if there's no element with a matching name or id
-const firstnameSpan = container.children['firstname'];
+const firstnameSpan = container.children["firstname"];
 const lastnameSpan = container.children.lastname;
 
 // Returns the span element with the id "degree"
-const degreeSpan = container.children.namedItem('degree');
+const degreeSpan = container.children.namedItem("degree");
 
-const output = document.createElement('div');
+const output = document.createElement("div");
 output.textContent = `Result: ${titleSpan.textContent} ${firstnameSpan.textContent} ${lastnameSpan.textContent} ${degreeSpan.textContent}`;
 
-container.insertAdjacentElement('afterend', output);
+container.insertAdjacentElement("afterend", output);
 ```
 
 {{EmbedLiveSample("示例")}}

@@ -1,18 +1,10 @@
 ---
 title: Notification.body
 slug: Web/API/Notification/body
-page-type: web-api-instance-property
-tags:
-  - API
-  - BODY
-  - Notification
-  - Notifications
-  - Notifications API
-  - Property
-  - Reference
-browser-compat: api.Notification.body
-translation_of: Web/API/Notification/body
+l10n:
+  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 **`body`** は {{domxref("Notification")}} インターフェイスの読み取り専用プロパティで、 {{domxref("Notification.Notification","Notification()")}} コンストラクターの `body` オプションで指定された通知の本文の文字列を返します。
@@ -26,9 +18,9 @@ translation_of: Web/API/Notification/body
 ```js
 function spawnNotification(theBody, theIcon, theTitle) {
   const options = {
-      body: theBody,
-      icon: theIcon
-  }
+    body: theBody,
+    icon: theIcon,
+  };
   const n = new Notification(theTitle, options);
 
   console.log(n.body);

@@ -1,12 +1,8 @@
 ---
 title: background-clip
 slug: Web/CSS/background-clip
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/background-clip
 ---
+
 {{CSSRef}}
 
 La propriété **`background-clip`** définit la façon dont l'arrière-plan d'un élément (que ce soit l'image ou la couleur) s'étend sous la boîte de bordure, la boîte de remplissage (_padding_) ou la boîte de contenu.
@@ -41,9 +37,13 @@ background-clip: unset;
 - `text` {{experimental_inline}}
   - : L'arrière-plan est limité (rogné) au texte en premier plan.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -51,13 +51,13 @@ background-clip: unset;
 
 ```css
 p {
- border: 10px navy;
- border-style: dotted double;
- margin: 1em;
- padding: 2em;
- background: #F8D575;
- font: 900 1.2em sans-serif;
- text-decoration: underline;
+  border: 10px navy;
+  border-style: dotted double;
+  margin: 1em;
+  padding: 2em;
+  background: #f8d575;
+  font: 900 1.2em sans-serif;
+  text-decoration: underline;
 }
 
 .border-box {
@@ -74,28 +74,17 @@ p {
 
 .text {
   background-clip: text;
-  color: rgba(0,0,0,.2);
+  color: rgba(0, 0, 0, 0.2);
 }
 ```
 
 ### HTML
 
 ```html
-<p class="border-box">
-  L'arrière-plan s'étend sous la bordure.
-</p>
-<p class="padding-box">
-  L'arrière-plan s'étend jusqu'avant la
-  bordure.
-</p>
-<p class="content-box">
-  L'arrière-plan s'arrête à la boîte de
-  contenu.
-</p>
-<p class="text">
-  L'arrière-plan se limite au texte au
-  premier-plan.
-</p>
+<p class="border-box">L'arrière-plan s'étend sous la bordure.</p>
+<p class="padding-box">L'arrière-plan s'étend jusqu'avant la bordure.</p>
+<p class="content-box">L'arrière-plan s'arrête à la boîte de contenu.</p>
+<p class="text">L'arrière-plan se limite au texte au premier-plan.</p>
 ```
 
 ### Résultat
@@ -104,16 +93,11 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                                        | État                                     | Commentaires               |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------- |
-| {{SpecName('CSS3 Backgrounds', '#the-background-clip', 'background-clip')}} | {{Spec2('CSS3 Backgrounds')}} | Définition initiale.       |
-| {{SpecName('CSS4 Backgrounds', '#background-clip', 'background-clip')}}     | {{Spec2('CSS4 Backgrounds')}} | Ajout de la valeur `text`. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.background-clip")}}
+{{Compat}}
 
 ## Voir aussi
 

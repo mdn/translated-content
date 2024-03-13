@@ -1,16 +1,10 @@
 ---
 title: translate3d()
 slug: Web/CSS/transform-function/translate3d
-tags:
-  - CSS
-  - CSS 関数
-  - CSS 座標変換
-  - 関数
-  - リファレンス
-translation_of: Web/CSS/transform-function/translate3d()
-original_slug: Web/CSS/transform-function/translate3d()
-browser-compat: css.types.transform-function.translate3d
+l10n:
+  sourceCommit: 88e01e6f934ea5f2413cecfab1b5112cf819ba09
 ---
+
 {{CSSRef}}
 
 **`translate3d()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、要素を三次元空間内で再配置します。返値は {{cssxref("&lt;transform-function&gt;")}} データ型です。
@@ -28,34 +22,34 @@ translate3d(tx, ty, tz)
 ### 値
 
 - `tx`
-  - : 変換ベクトルの横座標を表す {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} です。
+  - : 移動ベクトルの横座標を表す {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} です。
 - `ty`
-  - : 変換ベクトルの縦座標を表す {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} です。
+  - : 移動ベクトルの縦座標を表す {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} です。
 - `tz`
-  - : 変換ベクトルの z 成分を表す {{cssxref("&lt;length&gt;")}} です。 {{cssxref("&lt;percentage&gt;")}} 値は指定できません。この場合、これを含む座標変換は無効とされます。
+  - : 移動ベクトルの z 成分を表す {{cssxref("&lt;length&gt;")}} です。 {{cssxref("&lt;percentage&gt;")}} 値は指定できません。この場合、これを含む座標変換は無効とされます。
 
 <table class="standard-table">
   <thead>
     <tr>
-      <th scope="col">ℝ^2 のデカルト座標</th>
-      <th scope="col">ℝℙ^2 の同次座標</th>
-      <th scope="col">ℝ^3 のデカルト座標</th>
-      <th scope="col">ℝℙ^3 の同次座標</th>
+      <th scope="col"><a href="/ja/docs/Web/CSS/transform-function#直交座標系">直交座標系</a> (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^2</a>)</th>
+      <th scope="col"><a href="https://en.wikipedia.org/wiki/Homogeneous_coordinates">同次座標系</a> (<a href="https://en.wikipedia.org/wiki/Real_projective_plane">ℝℙ^2</a>)</th>
+      <th scope="col">直交座標系 (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^3</a>)</th>
+      <th scope="col">同次座標系 (<a href="https://en.wikipedia.org/wiki/Real_projective_space">ℝℙ^3</a>)</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td colspan="2">
         <p>
-          ℝ^2 では線形変換ではないので、デカルト座標の行列で表すことはできない。
+          この変換は 3D 空間に適用され、平面上では表せません。
         </p>
       </td>
       <td>
-        ℝ^3 では線形変換ではないので、デカルト座標の行列で表すことはできない。
+        ℝ^3 では線形変換ではないので、直交座標の行列で表すことはできません。
       </td>
       <td>
         <math
-          ><mfenced
+          ><mrow><mo>(</mo
             ><mtable
               ><mtr
                 ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
@@ -70,7 +64,7 @@ translate3d(tx, ty, tz)
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
                 ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
               ></mtable
-            ></mfenced
+            ><mo>)</mo></mrow
           ></math
         >
       </td>
@@ -80,7 +74,7 @@ translate3d(tx, ty, tz)
 
 ## 例
 
-<h3 id="Using_a_single_axis_translation">単一軸の座標変換の使用</h3>
+### 単一軸の座標変換の使用
 
 #### HTML
 
@@ -100,7 +94,7 @@ div {
 }
 
 .moved {
-  /* Equivalent to perspective(500px) translateX(10px) */
+  /* perspective(500px) translateX(10px) と等価 */
   transform: perspective(500px) translate3d(10px, 0, 0px);
   background-color: pink;
 }
@@ -108,9 +102,9 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("Using_a_single_axis_translation", 250, 250)}}
+{{EmbedLiveSample("単一軸の座標変換の使用", 250, 250)}}
 
-<h3 id="Combining_z-axis_and_x-axis_translation">z 軸と x 軸を組み合わせた座標変換</h3>
+### z 軸と x 軸を組み合わせた座標変換
 
 #### HTML
 
@@ -137,7 +131,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("Combining_z-axis_and_x-axis_translation", 250, 250)}}
+{{EmbedLiveSample("z_軸と_x_軸を組み合わせた座標変換", 250, 250)}}
 
 ## 仕様書
 
@@ -151,3 +145,4 @@ div {
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
+- {{cssxref("translate")}}

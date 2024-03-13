@@ -1,17 +1,8 @@
 ---
 title: CSSNumericValue.min()
 slug: Web/API/CSSNumericValue/min
-tags:
-  - API
-  - CSS 型付きオブジェクトモデル API
-  - CSSNumericValue
-  - 実験的
-  - Houdini
-  - メソッド
-  - リファレンス
-  - min()
-browser-compat: api.CSSNumericValue.min
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 **`min()`** は {{domxref('CSSNumericValue')}} インターフェイスのメソッドで、渡された値のうちで最も小さい値を返します。渡された値は同じ型でなければなりません。
@@ -19,7 +10,7 @@ browser-compat: api.CSSNumericValue.min
 ## 構文
 
 ```js
-min(number1, /* ..., */ numberN)
+min(number1, /* ..., */ numberN);
 ```
 
 ### 引数

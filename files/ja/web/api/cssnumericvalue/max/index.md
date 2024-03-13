@@ -1,18 +1,8 @@
 ---
 title: CSSNumericValue.max()
 slug: Web/API/CSSNumericValue/max
-tags:
-  - API
-  - CSS 型付きオブジェクトモデル API
-  - CSSNumericValue
-  - 実験的
-  - Houdini
-  - メソッド
-  - リファレンス
-  - max()
-browser-compat: api.CSSNumericValue.max
-translation_of: Web/API/CSSNumericValue/max
 ---
+
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
 **`max()`** は {{domxref("CSSNumericValue")}} インターフェイスのメソッドで、渡された値の中から最も大きい値を返します。渡された値は同じ型でなければなりません。
@@ -20,7 +10,7 @@ translation_of: Web/API/CSSNumericValue/max
 ## 構文
 
 ```js
-max(number1, /* ..., */ numberN)
+max(number1, /* ..., */ numberN);
 ```
 
 ### 引数

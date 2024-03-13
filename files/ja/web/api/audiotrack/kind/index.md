@@ -1,22 +1,8 @@
 ---
 title: AudioTrack.kind
 slug: Web/API/AudioTrack/kind
-page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Audio Track
-  - AudioTrack
-  - HTML DOM
-  - Media
-  - Property
-  - Read-only
-  - Reference
-  - id
-  - track
-browser-compat: api.AudioTrack.kind
-translation_of: Web/API/AudioTrack/kind
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`kind`** プロパティは、文字列で **{{domxref("AudioTrack")}}** に含まれる音声のカテゴリーを示します。

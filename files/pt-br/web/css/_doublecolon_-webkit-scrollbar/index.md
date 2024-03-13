@@ -1,16 +1,8 @@
 ---
-title: '::-webkit-scrollbar'
+title: "::-webkit-scrollbar"
 slug: Web/CSS/::-webkit-scrollbar
-tags:
-  - '::-webkit-scrollbar'
-  - CSS
-  - CSS Selectors
-  - CSS:WebKit Extensions
-  - Non-standard
-  - Pseudo-element
-  - Reference
-  - Selector
 ---
+
 {{CSSRef}}{{Non-standard_Header}}
 
 O pseudo-elemento CSS `:-webkit-scrollbar` afeta o estilo de um elemento referente a barra de rolagem quando se tem por definido `overflow:scroll;`.
@@ -89,6 +81,7 @@ com uma barra de rolagem estranha.<br>
 Quem diria que barras de rolagem poderiam ser estraaaanhas?
 </div>
 ```
+
 ### Resultado
 
 {{EmbedLiveSample("Examples")}}
@@ -101,31 +94,31 @@ Não é parte de nenhum padrão.
 
 ### `::-webkit-scrollbar`
 
-{{Compat("css.selectors.-webkit-scrollbar")}}
+{{Compat}}
 
 ### `::-webkit-scrollbar-button`
 
-{{Compat("css.selectors.-webkit-scrollbar-button")}}
+{{Compat}}
 
 ### `::-webkit-scrollbar-thumb`
 
-{{Compat("css.selectors.-webkit-scrollbar-thumb")}}
+{{Compat}}
 
 ### `::-webkit-scrollbar-track`
 
-{{Compat("css.selectors.-webkit-scrollbar-track")}}
+{{Compat}}
 
 ### `::-webkit-scrollbar-track-piece`
 
-{{Compat("css.selectors.-webkit-scrollbar-track-piece")}}
+{{Compat}}
 
 ### `::-webkit-scrollbar-corner`
 
-{{Compat("css.selectors.-webkit-scrollbar-corner")}}
+{{Compat}}
 
 ### `::-webkit-resizer`
 
-{{Compat("css.selectors.-webkit-resizer")}}
+{{Compat}}
 
 ## Veja Também
 

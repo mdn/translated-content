@@ -1,18 +1,11 @@
 ---
 title: AudioWorkletProcessor.parameterDescriptors (static getter)
 slug: Web/API/AudioWorkletProcessor/parameterDescriptors
-tags:
-  - API
-  - AudioWorkletProcessor
-  - Experimental
-  - Property
-  - Reference
-  - parameterDescriptors
-browser-compat: api.AudioWorkletProcessor.parameterDescriptors
 ---
+
 {{APIRef("Web Audio API")}}{{SeeCompatTable}}
 
-{{domxref("AudioWorkletProcessor")}}로부터 파생된 클래스의  **`parameterDescriptors`** 읽기 전용 속성은 _static getter_ 인데, 이는 {{domxref("AudioParamDescriptor")}} 기반 객체의 iterable을 반환합니다.
+{{domxref("AudioWorkletProcessor")}}로부터 파생된 클래스의 **`parameterDescriptors`** 읽기 전용 속성은 _static getter_ 인데, 이는 {{domxref("AudioParamDescriptor")}} 기반 객체의 iterable을 반환합니다.
 
 이 속성은 {{domxref("AudioWorkletProcessor")}} 인터페이스의 일부가 아니지만, 만약 정의된다면, 이것은 {{domxref("AudioWorkletProcessor")}} 생성자에 의해 연관된 {{domxref("AudioWorkletNode")}}의 {{domxref("AudioWorkletNode.parameters",
   "parameters")}} 속성에서 사용자 정의 {{domxref("AudioParam")}} 객체들의 리스트를 생성하기 위해 내부적으로 호출됩니다.

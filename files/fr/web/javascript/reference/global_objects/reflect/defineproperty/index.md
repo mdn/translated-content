@@ -1,15 +1,8 @@
 ---
 title: Reflect.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Reference
-  - Reflect
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty
-original_slug: Web/JavaScript/Reference/Objets_globaux/Reflect/defineProperty
 ---
+
 {{JSRef}}
 
 La méthode statique **`Reflect.defineProperty()`** est semblable à {{jsxref("Object.defineProperty()")}} mais renvoie un {{jsxref("Boolean")}}.
@@ -19,7 +12,7 @@ La méthode statique **`Reflect.defineProperty()`** est semblable à {{jsxref("O
 ## Syntaxe
 
 ```js
-Reflect.defineProperty(cible, cléPropriété, attributs)
+Reflect.defineProperty(cible, cléPropriété, attributs);
 ```
 
 ### Paramètres
@@ -49,7 +42,7 @@ La méthode `Reflect.defineProperty` permet d'ajouter ou de modifier finement un
 
 ```js
 var obj = {};
-Reflect.defineProperty(obj, "x", {value: 7}); // true
+Reflect.defineProperty(obj, "x", { value: 7 }); // true
 obj.x; // 7
 ```
 
@@ -67,14 +60,11 @@ if (Reflect.defineProperty(cible, propriété, attributs)) {
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-reflect.defineproperty', 'Reflect.defineProperty')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-reflect.defineproperty', 'Reflect.defineProperty')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Reflect.defineProperty")}}
+{{Compat}}
 
 ## Voir aussi
 

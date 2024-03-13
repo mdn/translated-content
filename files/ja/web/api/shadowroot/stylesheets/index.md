@@ -1,14 +1,8 @@
 ---
 title: ShadowRoot.styleSheets
 slug: Web/API/ShadowRoot/styleSheets
-tags:
-  - API
-  - ShadowRoot
-  - プロパティ
-  - リファレンス
-  - スタイルシート
-browser-compat: api.ShadowRoot.styleSheets
 ---
+
 {{APIRef("CSSOM")}}
 
 **`styleSheets`** は {{domxref("ShadowRoot")}} インターフェイスの読み取り専用プロパティで、シャドウツリーに明示的にリンクされるか埋め込まれたスタイルシートを表す {{domxref('CSSStyleSheet')}} オブジェクトの {{domxref('StyleSheetList')}} を返します。
@@ -16,7 +10,7 @@ browser-compat: api.ShadowRoot.styleSheets
 ## 構文
 
 ```js
-shadowRoot.styleSheets
+shadowRoot.styleSheets;
 ```
 
 ### 値
@@ -26,7 +20,7 @@ shadowRoot.styleSheets
 ## 例
 
 ```js
-let customElem = document.querySelector('my-shadow-dom-element');
+let customElem = document.querySelector("my-shadow-dom-element");
 let shadow = customElem.shadowRoot;
 let styleSheets = shadow.styleSheets;
 ```

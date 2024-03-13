@@ -1,8 +1,8 @@
 ---
 title: 跨浏览器测试介绍
 slug: Learn/Tools_and_testing/Cross_browser_testing/Introduction
-translation_of: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 本文是对跨浏览器测试的入门概述，帮助了解“什么是跨浏览器测试？”，“常见的问题都有哪些？”，以及“应该怎么测试，识别和修复问题？”
@@ -12,9 +12,9 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Introduction
     <tr>
       <th scope="row">阅读基础：</th>
       <td>
-        熟悉 <a href="/en-US/docs/Learn/HTML">HTML</a>,
-        <a href="/en-US/docs/Learn/CSS">CSS</a>, 和
-        <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> 语言。
+        熟悉 <a href="/zh-CN/docs/Learn/HTML">HTML</a>,
+        <a href="/zh-CN/docs/Learn/CSS">CSS</a>, 和
+        <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言。
       </td>
     </tr>
     <tr>
@@ -26,27 +26,27 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 
 ## 什么是跨浏览器测试？
 
-跨浏览器测试（cross browser testing）是确保您的网站或 web 应用能在可接受数量的浏览器（across an acceptable number of web browsers）上正常使用的测试方法。作为网站开发者，您有责任确保项目能供所有用户使用，无论他们使用的是哪种浏览器，设备或辅助工具。您需要注意的点：
+跨浏览器测试（cross browser testing）是确保你的网站或 web 应用能在可接受数量的浏览器（across an acceptable number of web browsers）上正常使用的测试方法。作为网站开发者，你有责任确保项目能供所有用户使用，无论他们使用的是哪种浏览器，设备或辅助工具。你需要注意的点：
 
-- 除了您在工作中经常使用的一两种浏览器，还有一些老旧的浏览器也会有用户在使用。这些浏览器对 CSS 和 JavaScript 的新特性支持的不够。
+- 除了你在工作中经常使用的一两种浏览器，还有一些老旧的浏览器也会有用户在使用。这些浏览器对 CSS 和 JavaScript 的新特性支持的不够。
 - 不同的设备支持的功能也不一样，有功能强大的新平板电脑，智能手机，智能电视，也有功能不全的廉价平板电脑，老旧手机。
 - 残疾人士通过屏幕阅读器等辅助技术上网，可能不会使用鼠标（有些人只使用键盘）。
 
-请记住，您不能代表产品的用户 - 您的网站能适配 Macbook Pro 或高端 Galaxy Nexus，并不意味它适用于所有用户 - 还有很多测试工作要做！
+请记住，你不能代表产品的用户 - 你的网站能适配 Macbook Pro 或高端 Galaxy Nexus，并不意味它适用于所有用户 - 还有很多测试工作要做！
 
 > **备注：** [Make the web work for everyone](https://hacks.mozilla.org/2016/07/make-the-web-work-for-everyone/) 文章列出了浏览器的市场份额，使用情况和相关兼容性问题。
 
 我们先解释下术语。首先，我们所讨论的“跨浏览器使用（working cross browser）”，应该在不同浏览器中提供可接受的用户体验。虽然无法在所有浏览器上提供相同的体验，但确保核心功能使用顺畅就算可以。比如在现代浏览器上，能显示动画、3D 或闪光效果，而在较旧的浏览器上，可以呈现出相同信息的平面图片。只要网站主满意，你的工作就算完成了。
 
-另一方面，视力正常的用户能正常浏览内容，但视力障碍的用户却因为屏幕阅读器无法读取信息而无法阅读内容。这是糟糕的体验，需要您能兼容屏幕阅读器软件。
+另一方面，视力正常的用户能正常浏览内容，但视力障碍的用户却因为屏幕阅读器无法读取信息而无法阅读内容。这是糟糕的体验，需要你能兼容屏幕阅读器软件。
 
-其次，当我们说“可接受数量的浏览器（across an acceptable number of web browsers）” ，并不是说世界上 100% 的浏览器，这也是不可能。您可以通过信息收集了解用户都在使用哪些浏览器和设备，但也不能保证全都采集到（也是本专题第二篇所讨论的 — 参见 [要测试全部的吗？（Gotta test 'em all?）](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#Gotta_test_%27em_all)）。作为 web 开发者，您自然要确保网站主要求的浏览器都能正常工作，但除此之外，您需要防御性编程（code defensively），尽可能让其它浏览器也能正常查看内容。这是 Web 开发的重大挑战之一！
+其次，当我们说“可接受数量的浏览器（across an acceptable number of web browsers）” ，并不是说世界上 100% 的浏览器，这也是不可能。你可以通过信息收集了解用户都在使用哪些浏览器和设备，但也不能保证全都采集到（也是本专题第二篇所讨论的——参见[是否需要测试？](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#是否需要测试？)）。作为 web 开发者，你自然要确保网站主要求的浏览器都能正常工作，但除此之外，你需要防御性编程（code defensively），尽可能让其他浏览器也能正常查看内容。这是 Web 开发的重大挑战之一！
 
 > **备注：** 后面会详细介绍防御性编程（code defensively）
 
 ## 为什么会出现跨浏览器问题？
 
-对于为何出现跨浏览器问题，原因有很多，而且要注意，我们在此讨论的是跨不同浏览器/设备/浏览偏好时出现的表现差异的问题。你应该在遇到跨浏览器问题之前就预先修复你代码里的 Bug（如需巩固记忆，请参阅之前主题中的[Debugging HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)，[Debugging CSS](/en-US/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS)，以及[What went wrong?Troubleshooting Javascript](/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong)）。
+对于为何出现跨浏览器问题，原因有很多，而且要注意，我们在此讨论的是跨不同浏览器/设备/浏览偏好时出现的表现差异的问题。你应该在遇到跨浏览器问题之前就预先修复你代码里的 Bug（如需巩固记忆，请参阅之前主题中的[Debugging HTML](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)，[Debugging CSS](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS)，以及[What went wrong?Troubleshooting Javascript](/zh-CN/docs/Learn/JavaScript/First_steps/What_went_wrong)）。
 
 跨浏览器问题会出现通常因为：
 
@@ -66,7 +66,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 
 一个项目的测试和排错工作流可以大致分为如下四个阶段（这只是粗略划分——因人而异）：
 
-**初步规划>开发>测试/查错>修复/迭代**
+**初步规划** > **开发** > **测试/查错** > **修复/迭代**
 
 步骤 2 到步骤 4 在必要时应多次重复直到开发完成。我们会在后续章节详细探讨测试程序的不同之处，但现在我们只概述每个阶段可能出现的问题。
 
@@ -102,13 +102,13 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 
 在每个实现阶段之后，你需要测试这些新功能。要开始测试，你应该确保你的代码没有能够阻止功能运行的一般性错误：
 
-1.  在一些稳定浏览器中测试，例如 Firefox、Safari、Chrome 或 IE/Edge。
-2.  做一些低可用性测试，比如尝试只用键盘使用网站，或通过屏幕阅读器访问，来检查可操纵性。
-3.  在移动端测试，例如 iOS 或 Android。
+1. 在一些稳定浏览器中测试，例如 Firefox、Safari、Chrome 或 IE/Edge。
+2. 做一些低可用性测试，比如尝试只用键盘使用网站，或通过屏幕阅读器访问，来检查可操纵性。
+3. 在移动端测试，例如 iOS 或 Android。
 
 此时，你要修复一切发现的问题。
 
-接下来，你应该在所有浏览器上测试并集中精力排除跨浏览器问题（关于[determining your target browers](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#Gotta_test_%27em_all)，请查阅下一篇文章获取更多信息）。例如
+接下来，你应该在所有浏览器上测试并集中精力排除跨浏览器问题（关于[确定你的目标浏览器](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#是否需要测试？)，请查阅下一篇文章获取更多信息）。例如
 
 - 尝试在所有现代桌面浏览器上测试最新的修改——包括（理想条件下，Windows、Mac、Linux 的）Firefox、Chrome、Opera、IE、Edge 和 Safari。
 - 在常用的手机和平板浏览器中测试（例如 iPhone/iPad 上的 iOS Safari、iPhone/iPad/Android 的 Chrome 和 Firefox）。
@@ -147,7 +147,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 
 那可能不是你的错误——如果是一个浏览器的 Bug，那就希望厂商尽快修复它。也许它已经被修复了——例如若一个 Bug 存在于 Firefox 版本 49，但 Firefox Nightly 中已经不存在了。如果还未修复，你可能需要提交一个 Bug 报告。
 
-如果是你的错误，你需要修复它！查出导致该 Bug 的原因（再次，查阅[Debugging HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)，[Debugging CSS](/en-US/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS)，和[What went wrong? Troubleshooting JavaScript](/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong)）。当你找到原因，你需要决定如何在产生问题的浏览器中解决它——你不能直接改掉问题代码，因为这会在其他浏览器中导致问题。普遍做法是以某种方式分叉代码，例如用 Javascript 功能检测代码来检测问题功能不运行的情况，并运行一些在那些情况下生效的代码。
+如果是你的错误，你需要修复它！查出导致该 Bug 的原因（再次，查阅[Debugging HTML](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)，[Debugging CSS](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS)，和[What went wrong? Troubleshooting JavaScript](/zh-CN/docs/Learn/JavaScript/First_steps/What_went_wrong)）。当你找到原因，你需要决定如何在产生问题的浏览器中解决它——你不能直接改掉问题代码，因为这会在其他浏览器中导致问题。普遍做法是以某种方式分叉代码，例如用 Javascript 功能检测代码来检测问题功能不运行的情况，并运行一些在那些情况下生效的代码。
 
 一旦完成修复，你应该重新测试来确保你的修复工作有效，并且没有导致网站的其他地方在其他浏览器中出问题。
 
@@ -166,14 +166,3 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 本文应该能够让你对跨浏览器测试最重要的部分有一个更高层次的理解。有了这些知识的武装，你现在可以继续并开始学习跨浏览器测试策略了。
 
 {{NextMenu("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies", "Learn/Tools_and_testing/Cross_browser_testing")}}
-
-## 指南
-
-- [跨浏览器测试简介](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)
-- [测试策略](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies)
-- [处理常见的 HTML 和 CSS 问题](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
-- [处理常见的 JavaScript 问题](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)
-- [处理常见的可访问性问题](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)
-- [实现特征检查](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
-- [自动测试简介](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing)
-- [建立你自己的自动化测试环境](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment)

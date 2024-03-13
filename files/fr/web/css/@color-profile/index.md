@@ -1,9 +1,8 @@
 ---
-title: '@color-profile'
+title: "@color-profile"
 slug: Web/CSS/@color-profile
-translation_of: Web/CSS/@color-profile
-browser-compat: css.at-rules.color-profile
 ---
+
 {{CSSRef}}
 
 La [règle @](/fr/docs/Web/CSS/At-rule) [CSS](/fr/docs/Web/CSS) **`@color-profile`** définit et nomme un profil de couleur qui peut être utilisé ensuite avec la fonction [`color()`](/fr/docs/Web/CSS/color_value/color) afin d'indiquer une couleur.
@@ -12,7 +11,7 @@ La [règle @](/fr/docs/Web/CSS/At-rule) [CSS](/fr/docs/Web/CSS) **`@color-profil
 
 ```css
 @color-profile --swop5c {
-  src: url('https://example.org/SWOP2006_Coated5v2.icc');
+  src: url("https://example.org/SWOP2006_Coated5v2.icc");
 }
 ```
 
@@ -39,7 +38,7 @@ La [règle @](/fr/docs/Web/CSS/At-rule) [CSS](/fr/docs/Web/CSS) **`@color-profil
 
 ```css
 @color-profile --swop5c {
-  src: url('https://example.org/SWOP2006_Coated5v2.icc');
+  src: url("https://example.org/SWOP2006_Coated5v2.icc");
 }
 
 .header {

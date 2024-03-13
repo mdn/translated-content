@@ -1,18 +1,10 @@
 ---
 title: Notification.title
 slug: Web/API/Notification/title
-page-type: web-api-instance-property
-tags:
-  - API
-  - Notification
-  - Notifications
-  - Notifications API
-  - Property
-  - Reference
-  - Title
-browser-compat: api.Notification.title
-translation_of: Web/API/Notification/title
+l10n:
+  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 **`title`** は {{domxref("Notification")}} インターフェイスの読み取り専用プロパティで、 {{domxref("Notification.Notification","Notification()")}} コンストラクターの `title` 引数で指定された通知のタイトルを示します。
@@ -24,15 +16,15 @@ translation_of: Web/API/Notification/title
 ## 例
 
 ```js
-function spawnNotification(theBody,theIcon,theTitle) {
+function spawnNotification(theBody, theIcon, theTitle) {
   const options = {
-      body: theBody,
-      icon: theIcon
-  }
+    body: theBody,
+    icon: theIcon,
+  };
 
-  const n = new Notification(theTitle,options);
+  const n = new Notification(theTitle, options);
 
-  console.log(n.title)
+  console.log(n.title);
 }
 ```
 

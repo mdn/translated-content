@@ -1,15 +1,8 @@
 ---
 title: JavaScript
 slug: Learn/JavaScript
-tags:
-  - Débutant
-  - Développement
-  - JavaScript
-  - Modules
-  - scripts
-translation_of: Learn/JavaScript
-original_slug: Apprendre/JavaScript
 ---
+
 {{LearnSidebar}}
 
 {{Glossary('JavaScript')}} est un langage de programmation qui vous permet de mettre en œuvre des éléments complexes sur des pages Web (une page Web contenant plus que de simples informations statiques). Chaque fois qu'une page affiche des mises à jour de contenu en temps réel, des cartes interactives, des animations graphiques 2D / 3D ou un juke-box vidéo défilant, etc. — vous pouvez parier que JavaScript est probablement impliqué.
@@ -19,8 +12,8 @@ original_slug: Apprendre/JavaScript
 JavaScript est sans doute plus difficile à apprendre que les technologies connexes telles que [HTML](/fr/Apprendre/HTML) et [CSS](/fr/Apprendre/CSS). Avant d'essayer d'apprendre le JavaScript, il est fortement conseillé de se familiariser d'abord avec au moins ces deux technologies, et peut-être aussi avec d'autres. Commencez par travailler sur les modules suivants&nbsp;:
 
 - [Commencer avec le Web](/fr/Apprendre/Commencer_avec_le_web)
-- [Introduction au HTML](/fr/Apprendre/HTML/Introduction_%C3%A0_HTML)
-- [Introduction à CSS](/fr/Apprendre/CSS/Introduction_%C3%A0_CSS)
+- [Introduction au HTML](/fr/Apprendre/HTML/Introduction_à_HTML)
+- [Introduction à CSS](/fr/Apprendre/CSS/Introduction_à_CSS)
 
 Avoir une expérience antérieure avec d'autres langages de programmation peut également aider.
 

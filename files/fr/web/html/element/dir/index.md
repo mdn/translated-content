@@ -1,20 +1,9 @@
 ---
-title: '<dir> : l''élément de répertoire'
+title: "<dir> : l'élément de répertoire"
 slug: Web/HTML/Element/dir
-tags:
-  - Directory
-  - Element
-  - HTML
-  - HTML Lists
-  - Deprecated
-  - Reference
-  - Web
-  - dir
-  - lists
-translation_of: Web/HTML/Element/dir
-browser-compat: html.elements.dir
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 > **Attention :** Cette fonctionnalité est obsolète. Bien qu'encore supportée par des navigateurs, son utilisation est découragée pour tout nouveau projet. Évitez de l'utiliser.
 

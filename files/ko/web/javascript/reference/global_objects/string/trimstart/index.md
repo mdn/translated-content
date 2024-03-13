@@ -1,16 +1,8 @@
 ---
 title: String.prototype.trimStart()
 slug: Web/JavaScript/Reference/Global_Objects/String/trimStart
-tags:
-- JavaScript
-- Method
-- Prototype
-- Reference
-- String
-- Polyfill
-browser-compat: javascript.builtins.String.trimStart
-translation_of: Web/JavaScript/Reference/Global_Objects/String/trimStart
 ---
+
 {{JSRef}}
 
 **`trimStart()`** 메서드는 문자열 시작부분의 공백을 제거합니다. 또한 `trimLeft()`라는 별칭으로 호출이 가능합니다.
@@ -19,9 +11,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/trimStart
 ## 구문
 
 ```js
-trimStart()
+trimStart();
 
-trimLeft()
+trimLeft();
 ```
 
 ### 반환값
@@ -31,7 +23,7 @@ trimLeft()
 
 ### 별칭
 
-{{jsxref("String.prototype.padStart")}} 표준 메서드 이름과 같은 함수의 일관성을 위해서 `trimStart` 가 되었습니다.  
+{{jsxref("String.prototype.padStart")}} 표준 메서드 이름과 같은 함수의 일관성을 위해서 `trimStart` 가 되었습니다.
 그러나, 웹 호환성을 위해서 `trimLeft` 이라는 별칭을 가집니다. 일부 엔진에서 이것은 다음 예시를 의미합니다.
 
 ```js
@@ -45,13 +37,13 @@ String.prototype.trimLeft.name === "trimStart";
 다음 예제는 `'foo  '` 문자열을 표시합니다.
 
 ```js
-var str = '   foo  ';
+var str = "   foo  ";
 
 console.log(str.length); // 8
 
 str = str.trimStart();
 console.log(str.length); // 5
-console.log(str);        // 'foo  '
+console.log(str); // 'foo  '
 ```
 
 ## 폴리필
@@ -59,18 +51,20 @@ console.log(str);        // 'foo  '
 ```js
 //https://github.com/FabioVergani/js-Polyfill_String-trimStart
 
-(function(w){
-    var String=w.String, Proto=String.prototype;
+(function (w) {
+  var String = w.String,
+    Proto = String.prototype;
 
-    (function(o,p){
-        if(p in o?o[p]?false:true:true){
-            var r=/^\s+/;
-            o[p]=o.trimLeft||function(){
-                return this.replace(r,'')
-            }
-        }
-    })(Proto,'trimStart');
-
+  (function (o, p) {
+    if (p in o ? (o[p] ? false : true) : true) {
+      var r = /^\s+/;
+      o[p] =
+        o.trimLeft ||
+        function () {
+          return this.replace(r, "");
+        };
+    }
+  })(Proto, "trimStart");
 })(window);
 
 /*

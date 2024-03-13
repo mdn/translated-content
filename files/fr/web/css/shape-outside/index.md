@@ -1,12 +1,8 @@
 ---
 title: shape-outside
 slug: Web/CSS/shape-outside
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/shape-outside
 ---
+
 {{CSSRef}}
 
 La propriété **`shape-outside`** définit une forme (qui peut ne pas être un rectangle) autour de laquelle le contenu en ligne devra « s'écouler ». Par défaut, le contenu en ligne évolue autour de la boîte de marge de l'élément flottant. La propriété `shape-outside` permet de personnaliser ce contour et d'obtenir un texte qui s'écoule autour d'objets plus complexes que des rectangles.
@@ -28,11 +24,10 @@ shape-outside: circle();
 shape-outside: ellipse();
 shape-outside: inset(10px 10px 10px 10px);
 shape-outside: polygon(10px 10px, 20px 20px, 30px 30px);
-shape-outside: linear-gradient(45deg, rgba(255,255,255,0) 150px, red 150px);
+shape-outside: linear-gradient(45deg, rgba(255, 255, 255, 0) 150px, red 150px);
 
 /* Valeur de type <url> */
 shape-outside: url(image.png);
-
 
 /* Valeur de type <gradient> */
 shape-outside: linear-gradient(45deg, rgba(255, 255, 255, 0) 150px, red 150px);
@@ -54,9 +49,13 @@ shape-outside: unset;
 - `<image>`
   - : La forme est extraite et calculée à partir du canal alpha de l'image {{cssxref("image")}} en utilisant l propriété {{cssxref("shape-image-threshold")}}. Les agents utilisateurs doivent utiliser la méthode `fetch`, éventuellement avec CORS pour les URL utilisées dans `shape-outside`. Lors de l'accès à la ressource, les agents utilisateurs doivent utiliser le mode Anonymous et définir la source du _referrer_ comme l'URL de la feuille de style, l'origine de l'URL doit être celle du document. S'il y a des erreurs réseau empêchant de récupérer l'image, l'effet sera le même que celui obtenu avec la valeur **`none`**.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Interpolation
 
@@ -77,10 +76,9 @@ Afin de pouvoir interpoler entre deux formes, on appliquera les règles suivante
   <div class="left"></div>
   <div class="right"></div>
   <p>
-    Sometimes a web page's text content appears to be
-    funneling your attention towards a spot on the page
-    to drive you to follow a particular link.  Sometimes
-    you don't notice.
+    Sometimes a web page's text content appears to be funneling your attention
+    towards a spot on the page to drive you to follow a particular link.
+    Sometimes you don't notice.
   </p>
 </div>
 ```
@@ -126,15 +124,11 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                                | État                             | Commentaires         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('CSS Shapes', '#shape-outside-property', 'shape-outside')}} | {{Spec2('CSS Shapes')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.shape-outside")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,22 +1,13 @@
 ---
-title: ':default'
+title: ":default"
 slug: Web/CSS/:default
-tags:
-  - ':default'
-  - CSS
-  - フォーム
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-  - default
-browser-compat: css.selectors.default
-translation_of: Web/CSS/:default
 ---
+
 {{CSSRef}}
 
 **`:default`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、関連する要素のグループ内で既定となっているフォーム上の要素を選択します。
+
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-default.html", "tabbed-shorter")}}
 
 このセレクターが何に一致するかについては、 [HTML Standard §4.16.3 Pseudo-classes](https://html.spec.whatwg.org/multipage/semantics-other.html#selector-default) で定義されています。 — {{htmlelement("button")}}、[`<input type="checkbox">`](/ja/docs/Web/HTML/Element/input/checkbox)、[`<input type="radio">`](/ja/docs/Web/HTML/Element/input/radio)、{{htmlelement("option")}} 要素に一致させることができます。
 
@@ -26,7 +17,9 @@ translation_of: Web/CSS/:default
 
 ## 構文
 
-{{csssyntax}}
+```
+:default
+```
 
 ## 例
 
@@ -36,16 +29,16 @@ translation_of: Web/CSS/:default
 <fieldset>
   <legend>Favorite season</legend>
 
-  <input type="radio" name="season" id="spring">
+  <input type="radio" name="season" id="spring" />
   <label for="spring">Spring</label>
 
-  <input type="radio" name="season" id="summer" checked>
+  <input type="radio" name="season" id="summer" checked />
   <label for="summer">Summer</label>
 
-  <input type="radio" name="season" id="fall">
+  <input type="radio" name="season" id="fall" />
   <label for="fall">Fall</label>
 
-  <input type="radio" name="season" id="winter">
+  <input type="radio" name="season" id="winter" />
   <label for="winter">Winter</label>
 </fieldset>
 ```

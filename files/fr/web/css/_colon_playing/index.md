@@ -1,9 +1,8 @@
 ---
-title: ':playing'
+title: ":playing"
 slug: Web/CSS/:playing
-browser-compat: css.selectors.playing
-translation_of: Web/CSS/:playing
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 Le sélecteur de [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:playing`** est une pseudo-classe d'état d'une ressource audio, vidéo ou autre type de ressource capable d'être lue ou mise en pause lorsque cet élément est lu.
@@ -12,7 +11,6 @@ Une ressource est lue même si elle se trouve en mémoire tampon ou mise en paus
 
 ```css
 :playing {
-
 }
 ```
 

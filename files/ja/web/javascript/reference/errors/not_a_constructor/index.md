@@ -1,13 +1,8 @@
 ---
 title: 'TypeError: "x" is not a constructor'
 slug: Web/JavaScript/Reference/Errors/Not_a_constructor
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - TypeError
-translation_of: Web/JavaScript/Reference/Errors/Not_a_constructor
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の例外 "is not a constructor" は、オブジェクトや変数をコンストラクターとして使用しようとしたものの、そのオブジェクトや変数がコンストラクターではなかった場合に発生します。
@@ -53,8 +48,8 @@ new Math();
 new Symbol();
 // TypeError: Symbol is not a constructor
 
-function* f() {};
-var obj = new f;
+function* f() {}
+var obj = new f();
 // TypeError: f is not a constructor
 ```
 
@@ -73,7 +68,7 @@ function Car(make, model, year) {
 次のようにして `mycar` というオブジェクトを生成できるようになりました。
 
 ```js
-var mycar = new Car('Eagle', 'Talon TSi', 1993);
+var mycar = new Car("Eagle", "Talon TSi", 1993);
 ```
 
 ### プロミスの場合

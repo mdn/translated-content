@@ -1,13 +1,8 @@
 ---
 title: Les sprites CSS
-slug: Web/CSS/CSS_Images/Implementing_image_sprites_in_CSS
-tags:
-  - Avancé
-  - CSS
-  - Guide
-translation_of: Web/CSS/CSS_Images/Implementing_image_sprites_in_CSS
-original_slug: Web/CSS/CSS_Images/Sprites_CSS
+slug: Web/CSS/CSS_images/Implementing_image_sprites_in_CSS
 ---
+
 {{CSSRef}}
 
 Les _sprites_ sont utilisées dans de nombreuses applications web où de multiples images sont utilisées. Au lieu d'avoir une image par fichier, on économise de la bande passante et de la mémoire en les envoyant toute dans le même fichier, ainsi, le nombre de requêtes HTTP diminue. On utilise alors `background-position` pour choisir l'image qu'on souhaite utiliser.
@@ -20,7 +15,7 @@ Supposons qu'une image est affichée pour chaque élement de la classe `toolbtn`
 
 ```css
 .toolbtn {
-  background: url('myfile.png');
+  background: url("myfile.png");
   display: inline-block;
   height: 20px;
   width: 20px;

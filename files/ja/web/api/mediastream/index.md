@@ -1,16 +1,8 @@
 ---
 title: MediaStream
 slug: Web/API/MediaStream
-tags:
-  - API
-  - インターフェイス
-  - メディアストリーム API
-  - MediaStream
-  - リファレンス
-  - WebRTC
-browser-compat: api.MediaStream
-translation_of: Web/API/MediaStream
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 **`MediaStream`** インターフェイスは、メディアコンテンツのストリームを表します。ストリームは動画や音声など複数の**トラック**から成ります。それぞれのトラックは {{domxref("MediaStreamTrack")}} のインスタンスとして定義されます。
@@ -98,5 +90,5 @@ _このインターフェイスは親である {{domxref("EventTarget")}} から
 
 - [MediaStream 収録 API の使用](/ja/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
 - [WebRTC API](/ja/docs/Web/API/WebRTC_API)
-- [ウェブ音声 API](/ja/docs/Web/API/Web_Audio_API)
+- [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API)
 - {{domxref("MediaStreamTrack")}}

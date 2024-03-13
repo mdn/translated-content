@@ -1,11 +1,8 @@
 ---
 title: count
 slug: Web/XPath/Functions/count
-tags:
-  - Référence_XSLT
-translation_of: Web/XPath/Functions/count
-original_slug: Web/XPath/Fonctions/count
 ---
+
 {{ XsltRef() }}
 
 La fonction `count` compte le nombre de nœuds dans un ensemble de nœuds et retourne un entier.

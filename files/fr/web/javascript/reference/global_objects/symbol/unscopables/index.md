@@ -1,15 +1,8 @@
 ---
 title: Symbol.unscopables
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/unscopables
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Propriété
-  - Reference
-  - Symbol
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/unscopables
-original_slug: Web/JavaScript/Reference/Objets_globaux/Symbol/unscopables
 ---
+
 {{JSRef}}
 
 Le symbole connu **`Symbol.unscopables`** est utilisé afin de définir les noms des propriétés propres et héritées qui sont exclues de l'objet lors de l'utilisation de [`with`](/fr/docs/Web/JavaScript/Reference/Instructions/with) sur l'objet en question.
@@ -26,12 +19,12 @@ En définissant une propriété comme `true` dans un objet `unscopables`, cela e
 
 ## Exemples
 
-Le code qui suit fonctionne bien pour ES5 et les versions antérieures. En revanche, pour ECMAScript 2015 (ES6) et les versions ultérieures où la méthode  {{jsxref("Array.prototype.keys()")}} existe, lorsqu'on utilise un environnement créé avec `with`, `"keys"` serait désormais la méthode et non la variable. C'est là que le symbole natif `@@unscopables` `Array.prototype[@@unscopables]` intervient et empêche d'explorer ces méthodes avec `with`.
+Le code qui suit fonctionne bien pour ES5 et les versions antérieures. En revanche, pour ECMAScript 2015 (ES6) et les versions ultérieures où la méthode {{jsxref("Array.prototype.keys()")}} existe, lorsqu'on utilise un environnement créé avec `with`, `"keys"` serait désormais la méthode et non la variable. C'est là que le symbole natif `@@unscopables` `Array.prototype[@@unscopables]` intervient et empêche d'explorer ces méthodes avec `with`.
 
 ```js
 var keys = [];
 
-with(Array.prototype) {
+with (Array.prototype) {
   keys.push("something");
 }
 
@@ -45,15 +38,15 @@ On peut également manipuler `unscopables` sur ses propres objets :
 ```js
 var obj = {
   toto: 1,
-  truc: 2
+  truc: 2,
 };
 
 obj[Symbol.unscopables] = {
   toto: false,
-  truc: true
+  truc: true,
 };
 
-with(obj) {
+with (obj) {
   console.log(toto); // 1
   console.log(truc); // ReferenceError: truc is not defined
 }
@@ -61,14 +54,11 @@ with(obj) {
 
 ## Spécifications
 
-| Spécification                                                                                    | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-symbol.unscopables', 'Symbol.unscopables')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-symbol.unscopables', 'Symbol.unscopables')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Symbol.unscopables")}}
+{{Compat}}
 
 ## Voir aussi
 

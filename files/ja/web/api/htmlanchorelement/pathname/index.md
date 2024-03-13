@@ -1,16 +1,10 @@
 ---
-title: HTMLAnchorElement.pathname
+title: "HTMLAnchorElement: pathname プロパティ"
 slug: Web/API/HTMLAnchorElement/pathname
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAnchorElement
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLAnchorElement.pathname
-translation_of: Web/API/HTMLAnchorElement/pathname
-original_slug: Web/API/HTMLHyperlinkElementUtils/pathname
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
+
 {{ApiRef("HTML DOM")}}
 
 **`HTMLAnchorElement.pathname`** プロパティは、最初の `'/'` とその後に続く URL のパスが入った文字列（または、パスがない場合は空の文字列）です。
@@ -22,9 +16,9 @@ original_slug: Web/API/HTMLHyperlinkElementUtils/pathname
 ## 例
 
 ```js
-// <a id="myAnchor" href="/en-US/docs/HTMLAnchorElement"> 要素が文書にあったとします
+// <a id="myAnchor" href="/ja/docs/HTMLAnchorElement"> 要素が文書にあったとします
 const anchor = document.getElementById("myAnchor");
-anchor.pathname; // '/en-US/docs/HTMLAnchorElement' を返す
+anchor.pathname; // '/ja/docs/HTMLAnchorElement' を返す
 ```
 
 ## 仕様書

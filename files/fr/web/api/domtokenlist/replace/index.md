@@ -1,8 +1,8 @@
 ---
 title: DOMTokenList.replace()
 slug: Web/API/DOMTokenList/replace
-translation_of: Web/API/DOMTokenList/replace
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`replace()`** de l'interface {{domxref("DOMTokenList")}} remplace une marque _(token)_ existante par une nouvelle marque.
@@ -10,7 +10,7 @@ La méthode **`replace()`** de l'interface {{domxref("DOMTokenList")}} remplace 
 ## Syntaxe
 
 ```js
-tokenList.replace(oldToken,newToken);
+tokenList.replace(oldToken, newToken);
 ```
 
 ### Paramètres
@@ -42,7 +42,7 @@ var classes = span.classList;
 try {
   classes.replace("c", "z");
   span.textContent = classes;
-} catch(e) {
+} catch (e) {
   span.textContent = e;
 }
 ```
@@ -53,10 +53,8 @@ La sortie ressemble à ceci :
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                           | Commentaire         |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('DOM WHATWG','#dom-domtokenlist-replace','replace()')}} | {{Spec2('DOM WHATWG')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.DOMTokenList.replace")}}
+{{Compat}}

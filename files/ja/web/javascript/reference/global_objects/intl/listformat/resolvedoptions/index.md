@@ -1,17 +1,8 @@
 ---
 title: Intl.ListFormat.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/resolvedOptions
-tags:
-  - 国際化
-  - Intl
-  - JavaScript
-  - ListFormat
-  - メソッド
-  - プロトタイプ
-  - リファレンス
-browser-compat: javascript.builtins.Intl.ListFormat.resolvedOptions
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/resolvedOptions
 ---
+
 {{JSRef}}
 
 **`Intl.ListFormat.prototype.resolvedOptions()`** メソッドは、現在の {{jsxref("Intl.ListFormat")}} オブジェクトの構築時に計算されたロケールとスタイル整形オプションを反映したプロパティを持つ新しいオブジェクトを返します。
@@ -21,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/resolved
 ## 構文
 
 ```js
-listFormat.resolvedOptions()
+listFormat.resolvedOptions();
 ```
 
 ### 返値
@@ -48,8 +39,8 @@ const deListFormatter = new Intl.ListFormat("de-DE", { style: "short" });
 
 const usedOptions = de.resolvedOptions();
 console.log(usedOptions.locale); // "de-DE"
-console.log(usedOptions.style);  // "short"
-console.log(usedOptions.type);   // "conjunction" (the default value)
+console.log(usedOptions.style); // "short"
+console.log(usedOptions.type); // "conjunction" (the default value)
 ```
 
 ## 仕様書

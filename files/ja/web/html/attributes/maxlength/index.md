@@ -1,17 +1,8 @@
 ---
-title: 'HTML 属性: maxlength'
+title: "HTML 属性: maxlength"
 slug: Web/HTML/Attributes/maxlength
-tags:
-  - 属性
-  - Attributes
-  - 制約検証
-  - HTML
-  - Input
-  - リファレンス
-  - maxlength
-  - textarea
-spec-urls: https://html.spec.whatwg.org/multipage/input.html#attr-input-maxlength
-translation_of: Web/HTML/Attributes/maxlength
+l10n:
+  sourceCommit: cfcbb39cc595bd536b107f6771bfb3f8e13bacca
 ---
 
 {{HTMLSidebar}}
@@ -26,10 +17,12 @@ maxlength が指定されなかった場合、または無効な値が指定さ�
 
 ブラウザーは一般的に、 maxlength 属性が許可する以上のテキストをユーザーが入力することを防止しますが、長さが maxlength が許可しているよりも長くなった場合、 {{domxref("ValidityState")}} オブジェクトの読み取り専用の {{domxref("ValidityState.tooLong", "tooLong")}} プロパティが true になります。
 
+{{EmbedInteractiveExample("pages/tabbed/attribute-maxlength.html", "tabbed-shorter")}}
+
 ## 例
 
 ```html
-<input type="password" maxlength="4"/>
+<input type="password" maxlength="4" />
 ```
 
 {{EmbedLiveSample('Examples', '100%', 200)}}
@@ -40,13 +33,13 @@ maxlength が指定されなかった場合、または無効な値が指定さ�
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.attribute.maxlength")}}
+{{Compat}}
 
 ## 関連情報
 
 - [`minlength`](/ja/docs/Web/HTML/Attributes/minlength)
 - [`size`](/ja/docs/Web/HTML/Attributes/size)
 - [`pattern`](/ja/docs/Web/HTML/Attributes/pattern)
-- [制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)
-- [制約検証 API](/ja/docs/Web/API/Constraint_validation)
+- [制約検証](/ja/docs/Web/HTML/Constraint_validation)
+- [制約検証 API](/ja/docs/Learn/Forms/Form_validation)
 - {{htmlelement('input')}}

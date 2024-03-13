@@ -1,11 +1,8 @@
 ---
 title: id
 slug: Web/XPath/Functions/id
-tags:
-  - Référence_XSLT
-translation_of: Web/XPath/Functions/id
-original_slug: Web/XPath/Fonctions/id
 ---
+
 {{ XsltRef() }}
 
 La fonction `id` recherche les nœuds correspondant aux identifiants `id` donnés et retourne un ensemble de nœuds contenant les nœuds identifiés.

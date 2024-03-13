@@ -1,19 +1,8 @@
 ---
 title: BaseAudioContext.state
 slug: Web/API/BaseAudioContext/state
-tags:
-  - API
-  - Audio
-  - AudioContext
-  - BaseAudioContext
-  - プロパティ
-  - リファレンス
-  - ウェブ音声 API
-  - state
-browser-compat: api.BaseAudioContext.state
-translation_of: Web/API/BaseAudioContext/state
-original_slug: Web/API/AudioContext/state
 ---
+
 {{ APIRef("Web Audio API") }}
 
 `state` は {{ domxref("BaseAudioContext") }} インターフェイスの読み取り専用プロパティで、現在の `AudioContext` の状態を返します。
@@ -33,9 +22,9 @@ original_slug: Web/API/AudioContext/state
 次のスニペットは [AudioContext states のデモ](https://github.com/mdn/webaudio-examples)（[ライブ実行で確認](https://mdn.github.io/webaudio-examples/audiocontext-states/)）の一部です。 {{domxref("BaseAudioContext.statechange_event", "onstatechange")}} ハンドラーは、状態が変わるたびにコンソールにログを出力するために使われています。
 
 ```js
-audioCtx.onstatechange = function() {
+audioCtx.onstatechange = function () {
   console.log(audioCtx.state);
-}
+};
 ```
 
 ### iOS Safari における一時停止した再生の再開の状態
@@ -44,7 +33,7 @@ iOS の Safari では、ユーザーが（タブの切り替え、ブラウザ�
 
 ```js
 function play() {
-  if (audioCtx.state === 'interrupted') {
+  if (audioCtx.state === "interrupted") {
     audioCtx.resume().then(() => play());
     return;
   }
@@ -62,4 +51,4 @@ function play() {
 
 ## 関連情報
 
-- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

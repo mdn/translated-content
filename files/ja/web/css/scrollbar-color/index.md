@@ -1,16 +1,8 @@
 ---
 title: scrollbar-color
 slug: Web/CSS/scrollbar-color
-tags:
-  - CSS
-  - CSS プロパティ
-  - リファレンス
-  - CSS スクロールバー
-  - recipe:css-property
-  - scrollbar-color
-browser-compat: css.properties.scrollbar-color
-translation_of: Web/CSS/scrollbar-color
 ---
+
 {{CSSRef}}
 
 **`scrollbar-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、スクロールバーのトラックとつまみの色を設定します。
@@ -28,7 +20,7 @@ translation_of: Web/CSS/scrollbar-color
 scrollbar-color: auto;
 
 /* <color> 値 */
-scrollbar-color: rebeccapurple green;   /* 二つの有効な色。
+scrollbar-color: rebeccapurple green; /* 二つの有効な色。
 一つ目はスクロールバーのつまみ、二つ目はトラックに適用される。 */
 
 /* グローバル値 */
@@ -61,7 +53,7 @@ scrollbar-color: unset;
       </tbody>
     </table>
 
-    > **Note:** ユーザーエージェントはビューポートのルート要素に、何らかの `scrollbar-color` の値を適用しなければなりません。
+    > **メモ:** ユーザーエージェントはビューポートのルート要素に、何らかの `scrollbar-color` の値を適用しなければなりません。
 
 ## アクセシビリティの考慮
 
@@ -93,7 +85,13 @@ scrollbar-color: unset;
 #### HTML
 
 ```html
-<div class="scroller">Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic. Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</div>
+<div class="scroller">
+  Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+  daikon amaranth tatsoi tomatillo melon azuki bean garlic. Gumbo beet greens
+  corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts
+  fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber
+  earthnut pea peanut soko zucchini.
+</div>
 ```
 
 #### 結果

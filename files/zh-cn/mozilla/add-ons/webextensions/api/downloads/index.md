@@ -1,22 +1,11 @@
 ---
 title: downloads
 slug: Mozilla/Add-ons/WebExtensions/API/downloads
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - NeedsTranslation
-  - Non-standard
-  - Reference
-  - TopicStub
-  - WebExtensions
-  - downloads
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads
 ---
+
 {{AddonSidebar}}启用与浏览器的下载管理器交互的扩展。你可以使用这个 API 模块来下载文件、取消、暂停、恢复下载和在文件管理器中显示下载的文件。
 
-为使用此 API，你需要在你的 [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 文件中声明 "downloads" [API 权限](/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions)。
+为使用此 API，你需要在你的 [manifest.json](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 文件中声明 "downloads" [API 权限](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#API_permissions)。
 
 ## Types
 
@@ -79,11 +68,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/downloads
 - {{WebExtAPIRef("downloads.onErased")}}
   - : 当一个下载从历史中擦除时被 Fires with the `downloadId` 触发。
 - {{WebExtAPIRef("downloads.onChanged")}}
-  - : 当任意一个 {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} 的属性期望 `bytesReceived` 改变时，此事件被这个 \`downloadId\` 和包含了变化属性的对象触发。
+  - : 当任意一个 {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} 的属性期望 `bytesReceived` 改变时，此事件被这个 `downloadId` 和包含了变化属性的对象触发。
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.downloads")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 
@@ -91,7 +80,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/downloads
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -118,4 +108,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/downloads
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

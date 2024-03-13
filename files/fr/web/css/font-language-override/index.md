@@ -1,12 +1,8 @@
 ---
 title: font-language-override
 slug: Web/CSS/font-language-override
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/font-language-override
 ---
+
 {{CSSRef}}
 
 La propriété **`font-language-override`** permet de contrôler l'utilisation des glyphes spécifiques à une langue pour une police.
@@ -16,15 +12,15 @@ La propriété **`font-language-override`** permet de contrôler l'utilisation d
 font-language-override: normal;
 
 /* <string> values */
-font-language-override: "ENG";  /* Use English glyphs */
-font-language-override: "TRK";  /* Use Turkish glyphs */
+font-language-override: "ENG"; /* Use English glyphs */
+font-language-override: "TRK"; /* Use Turkish glyphs */
 /* Valeurs globales */
 font-language-override: initial;
 font-language-override: inherit;
 font-language-override: unset;
 ```
 
-Par défaut, les navigateurs utilisent l'attribut global {{htmlattrxref("lang")}} pour déterminer la langue du texte d'un élément. Grâce à cette information, certains glyphes spéciaux, conçus pour cette langue, peuvent être utilisés. Ainsi, de nombreuses polices possèdent un caractère spécial pour la ligature `fi` afin que le point du `i` fusionne avec le caractère précédent. Cette ligature ne devrait pas être utilisée en turc, car il existe deux formes pour le i, avec et sans point : `i` et `ı`.
+Par défaut, les navigateurs utilisent l'attribut global [`lang`](/fr/docs/Web/HTML/Global_attributes#lang) pour déterminer la langue du texte d'un élément. Grâce à cette information, certains glyphes spéciaux, conçus pour cette langue, peuvent être utilisés. Ainsi, de nombreuses polices possèdent un caractère spécial pour la ligature `fi` afin que le point du `i` fusionne avec le caractère précédent. Cette ligature ne devrait pas être utilisée en turc, car il existe deux formes pour le i, avec et sans point : `i` et `ı`.
 
 Quelques fois, l'auteur d'un document peut vouloir surcharger la langue. Ainsi, si la fonte ne sait pas que la langue azérie possède un i sans point, comme le turc, on pourra utiliser `font-language-override` pour forcer l'utilisation des glyphes turcs qui seront plus adaptés que les glyphes par défaut.
 
@@ -39,9 +35,13 @@ Cette propriété est définie avec le mot-clé `normal` ou avec une chaîne de 
 - `<string>`
   - : Cette chaîne de caractère force le navigateur à utiliser les glyphes de la langue correspondante. Les valeurs qui peuvent être utilisées sont [les valeurs du système de langue OpenType](https://www.microsoft.com/typography/otspec/languagetags.htm).
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -62,7 +62,7 @@ p.para2 {
 ```html
 <p class="para1">Réglage par défaut.</p>
 <p class="para2">
-  Un paragraphe pour lequel  <code>font-language-override</code>
+  Un paragraphe pour lequel <code>font-language-override</code>
   cible le danois
 </p>
 ```
@@ -73,15 +73,11 @@ p.para2 {
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                             | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('CSS3 Fonts', '#propdef-font-language-override', 'font-language-override')}} | {{Spec2('CSS3 Fonts')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.font-language-override")}}
+{{Compat}}
 
 ## Voir aussi
 

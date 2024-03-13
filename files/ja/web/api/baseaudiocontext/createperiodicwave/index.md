@@ -1,20 +1,8 @@
 ---
 title: BaseAudioContext.createPeriodicWave()
 slug: Web/API/BaseAudioContext/createPeriodicWave
-tags:
-  - API
-  - 音声
-  - AudioContext
-  - BaseAudioContext
-  - メディア
-  - メソッド
-  - リファレンス
-  - ウェブ音声 API
-  - createPeriodicWave
-browser-compat: api.BaseAudioContext.createPeriodicWave
-translation_of: Web/API/BaseAudioContext/createPeriodicWave
-original_slug: Web/API/AudioContext/createPeriodicWave
 ---
+
 {{ APIRef("Web Audio API") }}
 
 `createPeriodicWave()` は {{ domxref("AudioContext") }} インターフェイスのメソッドで、周期的な波形を定義するために使われる {{domxref("PeriodicWave")}} を生成します。これは {{ domxref("OscillatorNode") }} の出力を決めるために使われます。
@@ -22,8 +10,8 @@ original_slug: Web/API/AudioContext/createPeriodicWave
 ## 構文
 
 ```js
-createPeriodicWave(real, imag)
-createPeriodicWave(real, imag, constraints)
+createPeriodicWave(real, imag);
+createPeriodicWave(real, imag, constraints);
 ```
 
 ### 引数
@@ -41,7 +29,7 @@ createPeriodicWave(real, imag, constraints)
 
     - `disableNormalization`: `true` に設定すると、周期的な波の正規化を無効にします。既定値は `false` です。
 
-> **Note:** 正規化した場合、結果の波は最大絶対ピーク値が 1 になります。
+> **メモ:** 正規化した場合、結果の波は最大絶対ピーク値が 1 になります。
 
 ### 返値
 
@@ -62,7 +50,7 @@ imag[0] = 0;
 real[1] = 1;
 imag[1] = 0;
 
-var wave = ac.createPeriodicWave(real, imag, {disableNormalization: true});
+var wave = ac.createPeriodicWave(real, imag, { disableNormalization: true });
 
 osc.setPeriodicWave(wave);
 
@@ -108,7 +96,7 @@ osc.stop(2);
 <mrow><mn>3</mn>
 <mi>i</mi>
 </mrow></msup></mrow><annotation encoding="TeX">\left(a+bi\right)e^{i} , \left(c+di\right)e^{2i} ,
-\left(f+gi\right)e^{3i}   </annotation>
+\left(f+gi\right)e^{3i} </annotation>
 </semantics></math>など）、正でも負でも構いません。このような係数を手動で得る簡単な方法は（ベストではありませんが）、グラフ計算機を使うことです。
 
 ## 仕様書
@@ -121,4 +109,4 @@ osc.stop(2);
 
 ## 関連情報
 
-- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

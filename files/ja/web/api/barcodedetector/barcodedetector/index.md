@@ -1,17 +1,8 @@
 ---
 title: BarcodeDetector()
 slug: Web/API/BarcodeDetector/BarcodeDetector
-tags:
-  - バーコード検出 API
-  - BarcodeDetector
-  - コンストラクター
-  - barcode
-  - バーコード検出
-  - 形状認識
-  - 実験的
-browser-compat: api.BarcodeDetector.BarcodeDetector
-translation_of: Web/API/BarcodeDetector/BarcodeDetector
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Barcode Detector API")}}{{SeeCompatTable}}
 
 **`BarcodeDetector()`** コンストラクターは、線形および二次元バーコードを画像から検出する新しい {{domxref("BarcodeDetector")}} （検出器）オブジェクトを生成します。
@@ -36,13 +27,15 @@ new BarcodeDetector();
 
 ```js
 // 新しい検出器を生成
-var barcodeDetector = new BarcodeDetector({formats: ['code_39', 'codabar', 'ean_13']});
+var barcodeDetector = new BarcodeDetector({
+  formats: ["code_39", "codabar", "ean_13"],
+});
 
 // 互換性のチェック
 if (barcodeDetector) {
-  console.log('Barcode Detector に対応しています。');
+  console.log("Barcode Detector に対応しています。");
 } else {
-  console.log('Barcode Detector はこのブラウザーでは対応していません。');
+  console.log("Barcode Detector はこのブラウザーでは対応していません。");
 }
 ```
 

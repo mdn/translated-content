@@ -1,8 +1,8 @@
 ---
 title: API Console
 slug: Web/API/Console_API
-translation_of: Web/API/Console_API
 ---
+
 {{DefaultAPISidebar("Console API")}}
 
 L'API Console fournit des fonctionnalités permettant d'effectuer des tâches de débogage lors du développement, telles que la journalisation de message ou des valeurs de variables à des points définis du code, ou le calcul de la durée d'une opération.
@@ -25,10 +25,10 @@ La méthode la plus couramment utilisée est [`console.log()`](/fr/docs/Web/API/
 ## Exemples
 
 ```js
-let maChaine = 'Hello world'
+let maChaine = "Hello world";
 
 // Affiche "Hello world" dans la console
-console.log(maChaine)
+console.log(maChaine);
 ```
 
 Consultez [la page de référence de la console](/fr/docs/Web/API/Console#exemples_dutilisation) pour plus d'exemples.
@@ -39,7 +39,7 @@ Consultez [la page de référence de la console](/fr/docs/Web/API/Console#exempl
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.console")}}
+{{Compat}}
 
 ## Voir aussi
 

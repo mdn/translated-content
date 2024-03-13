@@ -1,10 +1,10 @@
 ---
 title: Symbol.toStringTag
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag
-original_slug: Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag
-browser-compat: javascript.builtins.Symbol.toStringTag
+l10n:
+  sourceCommit: d5d9a70d1f8bc041c4ff226c3ff7e02382c5efef
 ---
+
 {{JSRef}}
 
 El símbolo conocido como **`Symbol.toStringTag`** es una propiedad con valor de cadena que se utiliza en la creación de la descripción de cadena por defecto de un objeto. Se accede a ella internamente mediante el método {{jsxref("Object.prototype.toString()")}}.
@@ -16,19 +16,19 @@ El símbolo conocido como **`Symbol.toStringTag`** es una propiedad con valor de
 ### Etiquetas por defecto
 
 ```js
-Object.prototype.toString.call('foo');     // "[object String]"
-Object.prototype.toString.call([1, 2]);    // "[object Array]"
-Object.prototype.toString.call(3);         // "[object Number]"
-Object.prototype.toString.call(true);      // "[object Boolean]"
+Object.prototype.toString.call("foo"); // "[object String]"
+Object.prototype.toString.call([1, 2]); // "[object Array]"
+Object.prototype.toString.call(3); // "[object Number]"
+Object.prototype.toString.call(true); // "[object Boolean]"
 Object.prototype.toString.call(undefined); // "[object Undefined]"
-Object.prototype.toString.call(null);      // "[object Null]"
+Object.prototype.toString.call(null); // "[object Null]"
 // ... and more
 ```
 
 ### Símbolos toStringTag integrados
 
 ```js
-Object.prototype.toString.call(new Map());       // "[object Map]"
+Object.prototype.toString.call(new Map()); // "[object Map]"
 Object.prototype.toString.call(function* () {}); // "[object GeneratorFunction]"
 Object.prototype.toString.call(Promise.resolve()); // "[object Promise]"
 // ... and more
@@ -51,7 +51,7 @@ Ahora, con la ayuda de `toStringTag`, puede establecer su propia etiqueta person
 ```js
 class ValidatorClass {
   get [Symbol.toStringTag]() {
-    return 'Validator';
+    return "Validator";
   }
 }
 
@@ -63,9 +63,9 @@ Object.prototype.toString.call(new ValidatorClass()); // "[object Validator]"
 Debido a un [cambio en las especificaciones de WebIDL](https://github.com/whatwg/webidl/pull/357) a mediados de 2020, los navegadores están añadiendo una propiedad `Symbol.toStringTag` a todos los objetos prototipo del DOM. Por ejemplo, para acceder a la propiedad `Symbol.toStringTag` de {{domxref("HTMLButtonElement")}}:
 
 ```js
-let test = document.createElement('button');
+let test = document.createElement("button");
 test.toString(); // Devuelve [object HTMLButtonElement]
-test[Symbol.toStringTag];  // Devuelve HTMLButtonElement
+test[Symbol.toStringTag]; // Devuelve HTMLButtonElement
 ```
 
 ## Especificaciones
@@ -80,4 +80,3 @@ test[Symbol.toStringTag];  // Devuelve HTMLButtonElement
 
 - [Polyfill de `Symbol.toStringTag` en `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
 - {{jsxref("Object.prototype.toString()")}}
-

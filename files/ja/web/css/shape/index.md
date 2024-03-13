@@ -1,23 +1,13 @@
 ---
 title: <shape>
 slug: Web/CSS/shape
-tags:
-  - CSS
-  - CSS データ型
-  - CSS 関数
-  - データ型
-  - 非推奨
-  - レイアウト
-  - リファレンス
-  - ウェブ
-browser-compat: css.types.shape
-translation_of: Web/CSS/shape
 ---
+
 {{CSSRef}}{{deprecated_header}}
 
 **`<shape>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、ある領域の具体的な形状を表します。この領域は、{{cssxref("clip")}} プロパティが適用される要素の一部を表します。
 
-> **Note:** `<shape>` と `rect()` は {{cssxref("clip")}} と連携して動作しますが、これは {{cssxref("clip-path")}} に置き換えらえて非推奨となりました。可能であれば、代わりに `clip-path` と {{cssxref("&lt;basic-shape&gt;")}} データ型を使用してください。
+> **メモ:** `<shape>` と `rect()` は {{cssxref("clip")}} と連携して動作しますが、これは {{cssxref("clip-path")}} に置き換えらえて非推奨となりました。可能であれば、代わりに `clip-path` と {{cssxref("&lt;basic-shape&gt;")}} データ型を使用してください。
 
 ## 構文
 

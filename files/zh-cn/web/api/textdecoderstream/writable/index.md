@@ -1,18 +1,11 @@
 ---
 title: TextDecoderStream.writable
 slug: Web/API/TextDecoderStream/writable
-page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - writable
-  - TextDecoderStream
-translation_of: Web/api/TextDecoderStream/writable
 ---
+
 {{APIRef("Encoding API")}}
 
-{{domxref("TextDecoderStream")}} 接口的只读属性  **`writable`** 返回一个 {{domxref("WritableStream")}}。
+{{domxref("TextDecoderStream")}} 接口的只读属性 **`writable`** 返回一个 {{domxref("WritableStream")}}。
 
 ## 值
 

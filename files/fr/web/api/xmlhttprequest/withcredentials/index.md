@@ -1,14 +1,8 @@
 ---
 title: XMLHttpRequest.withCredentials
 slug: Web/API/XMLHttpRequest/withCredentials
-tags:
-  - API
-  - Propriété
-  - Reference
-  - XHR
-  - XMLHttpRequest
-translation_of: Web/API/XMLHttpRequest/withCredentials
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 La propriété **`XMLHttpRequest.withCredentials`** est un booléen qui indique si une requête `Access-Control` entre plusieurs sites devrait être réalisée avec des informations d'authentification (_credentials_) telles que des cookies, des en-têtes d'autorisation ou des certificats clients. Activer `withCredentials` n'aura aucun impact sur les requêtes effectuées sur un même site.
@@ -25,17 +19,15 @@ Les cookies tiers obtenus lorsque `withCredentials` vaut `true` continuent de re
 
 ```js
 var xhr = new XMLHttpRequest();
-xhr.open('GET', 'http://example.com/', true);
+xhr.open("GET", "http://example.com/", true);
 xhr.withCredentials = true;
 xhr.send(null);
 ```
 
 ## Spécifications
 
-| Spécification                                                                        | État                                 | Commentaires |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------ |
-| {{SpecName('XMLHttpRequest', '#the-withcredentials-attribute')}} | {{Spec2('XMLHttpRequest')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.XMLHttpRequest.withCredentials")}}
+{{Compat}}

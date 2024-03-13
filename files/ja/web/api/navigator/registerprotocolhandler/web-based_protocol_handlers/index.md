@@ -1,13 +1,8 @@
 ---
 title: ウェブベースのプロトコルハンドラー
 slug: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
-page-type: guide
-tags:
-  - 上級者
-  - HTML5
-  - ウェブベースのプロトコルハンドラー
-translation_of: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
 ---
+
 ## 背景
 
 ウェブページで `http` ではないプロトコルを使用したリソースへのリンクを見つけることがよくあります。例えば、 `mailto:` プロトコルです。
@@ -25,9 +20,11 @@ translation_of: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_han
 ウェブアプリケーションをプロトコルハンドラーとして設定するのは、難しい処理ではありません。基本的に、ウェブアプリケーションは自身を指定したプロトコルのための可能なハンドラーとしてブラウザーに登録するために [`registerProtocolHandler()`](/ja/docs/Web/API/Navigator/registerProtocolHandler) を使用します。
 
 ```js
-navigator.registerProtocolHandler("web+burger",
-                                  "http://www.google.co.uk/?uri=%s",
-                                  "Burger handler");
+navigator.registerProtocolHandler(
+  "web+burger",
+  "http://www.google.co.uk/?uri=%s",
+  "Burger handler",
+);
 ```
 
 ここでの引数は次の通りです。
@@ -40,7 +37,7 @@ navigator.registerProtocolHandler("web+burger",
 
 ![](protocolregister.png)
 
-> **Note:** URL テンプレートが提供されるとき、登録する URL は登録が行われようとするウェブページと同じドメインである**必要があります**。異なるドメインであった場合は、登録は失敗します。 例えば `http://example.com/homepage.html` では `http://example.com/handle_mailto/%s` はプロトコルハンドラーとして登録可能ですが、 `http://example.org/handle_mailto/%s` はプロトコルハンドラーとして登録することはできません。
+> **メモ:** URL テンプレートが提供されるとき、登録する URL は登録が行われようとするウェブページと同じドメインである**必要があります**。異なるドメインであった場合は、登録は失敗します。 例えば `http://example.com/homepage.html` では `http://example.com/handle_mailto/%s` はプロトコルハンドラーとして登録可能ですが、 `http://example.org/handle_mailto/%s` はプロトコルハンドラーとして登録することはできません。
 
 同じプロトコルハンドラーを 2 回以上登録すると、そのプロトコルハンドラーが既に登録済みであることを示す別のポップアップが表示されます。従って、プロトコルハンドラーの登録を呼び出すのを防ぐために、以下のように既に登録済みであるかどうかを確認するのが良いでしょう。
 
@@ -71,14 +68,16 @@ navigator.registerProtocolHandler("web+burger",
 ### 例
 
 ```html
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="en">
-<head>
-  <title>ウェブプロトコルハンドラーサンプル - テスト</title>
-</head>
-<body>
-  <p>前に<a href="web+burger:cheeseburger">これ</a>を見たことがありますか？</p>
-</body>
+  <head>
+    <title>ウェブプロトコルハンドラーサンプル - テスト</title>
+  </head>
+  <body>
+    <p>
+      前に<a href="web+burger:cheeseburger">これ</a>を見たことがありますか？
+    </p>
+  </body>
 </html>
 ```
 
@@ -92,7 +91,7 @@ http://www.google.co.uk/?uri=web+burger:cheeseburger
 
 サーバー側コードは、クエリー文字列の引数を展開し、要求されたアクションを行います。
 
-> **Note:** サーバー側コードには `href` 属性の値の**全体**が渡されます。つまり、サーバー側コードは、そのデータからプロトコルを解釈しなければならないということです。
+> **メモ:** サーバー側コードには `href` 属性の値の**全体**が渡されます。つまり、サーバー側コードは、そのデータからプロトコルを解釈しなければならないということです。
 
 ### 例
 

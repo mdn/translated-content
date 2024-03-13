@@ -1,20 +1,8 @@
 ---
 title: var()
 slug: Web/CSS/var
-tags:
-  - CSS
-  - CSS Custom Properties
-  - CSS Function
-  - CSS Variables
-  - Experimental
-  - Function
-  - Reference
-  - Variables
-  - var
-  - var()
-original_slug: Web/CSS/var()
-browser-compat: css.properties.custom-property.var
 ---
+
 {{CSSRef}}
 
 [Функция](/ru/docs/Web/CSS/CSS_Functions) [CSS](/ru/docs/Web/CSS) **`var()`** используется для вставки значения [кастомного свойства](/ru/docs/Web/CSS/--*) (также известного как "CSS-переменная") в другое свойство.
@@ -58,7 +46,10 @@ body {
 /* Резервное значение */
 /* Стили для элементов компонента: */
 .component .header {
-  color: var(--header-color, blue); /* header-color не существует, поэтому используется blue */
+  color: var(
+    --header-color,
+    blue
+  ); /* header-color не существует, поэтому используется blue */
 }
 
 .component .text {
@@ -75,7 +66,7 @@ body {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

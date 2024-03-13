@@ -1,16 +1,8 @@
 ---
 title: document.createElementNS
 slug: Web/API/Document/createElementNS
-tags:
-  - API
-  - Création
-  - DOM
-  - Document
-  - Elements
-  - Méthodes
-  - URI
-translation_of: Web/API/Document/createElementNS
 ---
+
 {{ApiRef("DOM")}}
 
 Crée un élément avec l'URI de l'espace de noms spécifié et un nom qualifié.
@@ -82,13 +74,11 @@ Cet exemple crée un nouvel élément \<div> dans l'espace de noms [XHTML](/fr/d
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('DOM WHATWG', "#dom-document-createelementns", "Document.createElement")}} | {{Spec2('DOM WHATWG')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.createElementNS")}}
+{{Compat}}
 
 ## Voir aussi
 

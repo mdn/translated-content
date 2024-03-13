@@ -1,9 +1,8 @@
 ---
-title: '::-moz-range-progress'
+title: "::-moz-range-progress"
 slug: Web/CSS/::-moz-range-progress
-translation_of: Web/CSS/::-moz-range-progress
-browser-compat: css.selectors.-moz-range-progress
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 Le pseudo-élément **`::-moz-range-progress`** représente la portion de la piste d'un élément [`<input>`](/fr/docs/Web/HTML/Element/Input) de type `range`, qui correspond aux valeurs inférieures à la valeur sélectionnée par le curseur.
@@ -19,13 +18,13 @@ Le pseudo-élément **`::-moz-range-progress`** représente la portion de la pis
 ### HTML
 
 ```html
-<input type="range" min="0" max="100" step="5" value="50"/>
+<input type="range" min="0" max="100" step="5" value="50" />
 ```
 
 ### CSS
 
 ```css
-input[type=range]::-moz-range-progress {
+input[type="range"]::-moz-range-progress {
   background-color: green;
   height: 1em;
 }

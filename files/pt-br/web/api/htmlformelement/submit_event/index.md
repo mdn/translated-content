@@ -1,15 +1,6 @@
 ---
-title: 'HTMLFormElement: submit event'
+title: "HTMLFormElement: submit event"
 slug: Web/API/HTMLFormElement/submit_event
-tags:
-  - API
-  - Event
-  - Forms
-  - HTML DOM
-  - HTMLFormElement
-  - Reference
-  - submit
-translation_of: Web/API/HTMLFormElement/submit_event
 ---
 
 {{APIRef}}
@@ -66,9 +57,9 @@ function logSubmit(event) {
   event.preventDefault();
 }
 
-const form = document.getElementById('form');
-const log = document.getElementById('log');
-form.addEventListener('submit', logSubmit);
+const form = document.getElementById("form");
+const log = document.getElementById("log");
+form.addEventListener("submit", logSubmit);
 ```
 
 ### Resultado
@@ -79,7 +70,7 @@ form.addEventListener('submit', logSubmit);
 
 {{Specifications}}
 
-## Compatibilidade com os navegadores
+## Compatibilidade com navegadores
 
 {{Compat}}
 

@@ -1,12 +1,8 @@
 ---
 title: align-content
 slug: Web/CSS/align-content
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/align-content
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`align-content`** définit la façon dont l'espace est réparti entre et autour des éléments le long de l'axe en bloc du conteneur (c'est-à-dire l'axe orthogonal à l'axe d'écriture) lorsque celui-ci est [un conteneur de boîte flexible](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout) et le long de l'axe principal lorsque le conteneur est une grille.
@@ -22,11 +18,11 @@ Cette propriété n'aura aucun effet sur les boîtes flexibles disposées sur un
 ```css
 /* Alignement le long de l'axe */
 /* Note : align-content ne prend pas en charge les valeurs left et right */
-align-content: center;     /* Les éléments sont groupés au centre */
-align-content: start;      /* Les éléments sont groupés au début  */
-align-content: end;        /* Les éléments sont groupés à la fin */
+align-content: center; /* Les éléments sont groupés au centre */
+align-content: start; /* Les éléments sont groupés au début  */
+align-content: end; /* Les éléments sont groupés à la fin */
 align-content: flex-start; /* Les éléments flexibles sont groupés au début */
-align-content: flex-end;   /* Les éléments flexibles sont groupés à la fin */
+align-content: flex-end; /* Les éléments flexibles sont groupés à la fin */
 
 /* Alignement normal */
 align-content: normal;
@@ -41,12 +37,12 @@ align-content: space-between; /* L'espace est réparti entre
                                  les éléments, le premier est
                                  accolé au bord et le dernier
                                  également. */
-align-content: space-around;  /* L'espace est réparti entre les
+align-content: space-around; /* L'espace est réparti entre les
                                  éléments avec un demi-espace
                                  au début et à la fin */
-align-content: space-evenly;  /* L'espace est réparti entre les
+align-content: space-evenly; /* L'espace est réparti entre les
                                  éléments et autour */
-align-content: stretch;       /* Les éléments dimensionnés avec
+align-content: stretch; /* Les éléments dimensionnés avec
                                  auto sont étirés également
                                  afin de remplir le conteneur*/
 
@@ -91,9 +87,13 @@ align-content: unset;
 - `unsafe`
   - : Ce mot-clé est utilisé avec un mot-clé pour l'alignement. Quelle que soit la taille et le dépassement éventuellement occasionné, l'élément est aligné avec la valeur indiquée.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -101,7 +101,7 @@ align-content: unset;
 
 ```css
 #container {
-  height:200px;
+  height: 200px;
   width: 240px;
   align-content: center; /* Cette valeur peut être changée dans la démonstration */
   background-color: #8c8c8c;
@@ -220,15 +220,15 @@ select {
 ```
 
 ```js hidden
-var values = document.getElementById('values');
-var display = document.getElementById('display');
-var container = document.getElementById('container');
+var values = document.getElementById("values");
+var display = document.getElementById("display");
+var container = document.getElementById("container");
 
-values.addEventListener('change', function (evt) {
+values.addEventListener("change", function (evt) {
   container.style.alignContent = evt.target.value;
 });
 
-display.addEventListener('change', function (evt) {
+display.addEventListener("change", function (evt) {
   container.className = evt.target.value;
 });
 ```
@@ -239,24 +239,11 @@ display.addEventListener('change', function (evt) {
 
 ## Spécifications
 
-| Spécification                                                                                            | État                                     | Commentaires                                                                                          |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| {{SpecName("CSS3 Box Alignment", "#propdef-align-content", "align-content")}} | {{Spec2("CSS3 Box Alignment")}} | Ajout des valeurs `[ first \| last ]? baseline`, `start`, `end`, `left`, `right` et `unsafe \| safe`. |
-| {{SpecName("CSS3 Flexbox", "#align-content", "align-content")}}                     | {{Spec2("CSS3 Flexbox")}}         | Définition initiale.                                                                                  |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.align-content")}}
-
-### Prise en charge pour les dispositions flexibles (_Flexbox_)
-
-{{Compat("css.properties.align-content.flex_context")}}
-
-### Prise en charge pour les dispositions avec les grilles CSS
-
-{{Compat("css.properties.align-content.grid_context")}}
+{{Compat}}
 
 ## Voir aussi
 

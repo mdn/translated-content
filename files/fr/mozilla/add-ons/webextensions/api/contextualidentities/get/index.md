@@ -1,18 +1,9 @@
 ---
 title: contextualIdentities.get()
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/get
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Reference
-  - WebExtensions
-  - contextualIdentities
-  - get
-translation_of: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/get
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Obtient des informations sur une identité contextuelle, compte tenu de son ID de cookie.
 
@@ -22,8 +13,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var getContext = browser.contextualIdentities.get(
-  cookieStoreId                  // string
-)
+  cookieStoreId, // string
+);
 ```
 
 ### Paramètres
@@ -35,9 +26,9 @@ var getContext = browser.contextualIdentities.get(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}} qui décrit l'identité. Si l'identité n'a pas pu être trouvée ou si la fonctionnalité d'identités contextuelles n'est pas activée, la promesse est rejetée.
 
-## Comptatiblité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.contextualIdentities.get")}}
+{{Compat}}
 
 ## Exemples
 

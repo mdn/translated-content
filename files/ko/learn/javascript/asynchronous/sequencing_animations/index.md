@@ -1,11 +1,8 @@
 ---
 title: Sequencing animations
 slug: Learn/JavaScript/Asynchronous/Sequencing_animations
-translation_of: Learn/JavaScript/Asynchronous/Sequencing_animations
-tags:
-  - JavaScript
-  - Learn
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}
 
 이 평가에서는 일련의 애니메이션을 순서대로 재생하도록 페이지를 업데이트할 것입니다. 이를 진행하기 위해 [프로미스 사용 방법](/ko/docs/Learn/JavaScript/Asynchronous/Promises)에서 배운 몇 가지 기술을 사용할 예정입니다.
@@ -40,7 +37,7 @@ tags:
 
 ![Screenshot of sequencing-animations assessment page](./sequencing-animations.png)
 
-이미지는 [Using the Web Animations API](/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API) 가이드에서 가져온 것입니다.
+이미지는 [Using the Web Animations API](/ko/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API) 가이드에서 가져온 것입니다.
 
 ## 프로젝트 설명
 
@@ -54,21 +51,21 @@ tags:
 
 ### 첫 번째 이미지 애니메이션
 
-우리는 [Web Animations API](/ko/docs/Web/API/Web_Animations_API)의 {{domxref("Element/animate", "element.animate()")}} 메서드를 사용하여 애니메이션을 적용할 것입니다. 
+우리는 [Web Animations API](/ko/docs/Web/API/Web_Animations_API)의 {{domxref("Element/animate", "element.animate()")}} 메서드를 사용하여 애니메이션을 적용할 것입니다.
 
 "main.js"를 업데이트하여 다음과 같이 `alice1.animate()` 호출을 추가해줍니다.
 
 ```js
 const aliceTumbling = [
-  { transform: 'rotate(0) scale(1)' },
-  { transform: 'rotate(360deg) scale(0)' }
+  { transform: "rotate(0) scale(1)" },
+  { transform: "rotate(360deg) scale(0)" },
 ];
 
 const aliceTiming = {
   duration: 2000,
   iterations: 1,
-  fill: 'forwards'
-}
+  fill: "forwards",
+};
 
 const alice1 = document.querySelector("#alice1");
 const alice2 = document.querySelector("#alice2");
@@ -108,11 +105,3 @@ alice1.animate(aliceTumbling, aliceTiming);
    - 도움이 필요한 질문을 찾을 수 있도록 실제 작업 또는 평가 페이지에 대한 링크
 
 {{PreviousMenu("Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}
-
-## 이번 과정
-
-- [Introducing asynchronous JavaScript](/ko/docs/Learn/JavaScript/Asynchronous/Introducing)
-- [How to use promises](/ko/docs/Learn/JavaScript/Asynchronous/Promises)
-- [Implementing a promise-based API](/ko/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)
-- [Introducing workers](/ko/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
-- **Assessment: sequencing animations**

@@ -1,16 +1,8 @@
 ---
 title: ShadowRoot.innerHTML
 slug: Web/API/ShadowRoot/innerHTML
-tags:
-  - API
-  - プロパティ
-  - リファレンス
-  - ShadowRoot
-  - innerHTML
-  - シャドウ DOM
-browser-compat: api.ShadowRoot.innerHTML
-translation_of: Web/API/ShadowRoot/innerHTML
 ---
+
 {{APIRef("Shadow DOM")}}
 
 **`innerHTML`** は {{domxref("ShadowRoot")}} インターフェイスのプロパティで、 `ShadowRoot` の内部の DOM ツリーに対する参照を設定したり返したりします。
@@ -18,8 +10,8 @@ translation_of: Web/API/ShadowRoot/innerHTML
 ## 構文
 
 ```js
-var domString = shadowRoot.innerHTML
-shadowRoot.innerHTML = domString
+var domString = shadowRoot.innerHTML;
+shadowRoot.innerHTML = domString;
 ```
 
 ### 値
@@ -29,10 +21,10 @@ shadowRoot.innerHTML = domString
 ## 例
 
 ```js
-let customElem = document.querySelector('my-shadow-dom-element');
+let customElem = document.querySelector("my-shadow-dom-element");
 let shadow = customElem.shadowRoot;
 
-shadow.innerHTML = '<strong>This element should be more important!</strong>';
+shadow.innerHTML = "<strong>This element should be more important!</strong>";
 ```
 
 ## 仕様書

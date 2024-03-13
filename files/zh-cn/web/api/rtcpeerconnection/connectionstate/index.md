@@ -1,8 +1,8 @@
 ---
 title: RTCPeerConnection.connectionState
 slug: Web/API/RTCPeerConnection/connectionState
-translation_of: Web/API/RTCPeerConnection/connectionState
 ---
+
 {{APIRef("WebRTC")}}
 
 **`connectionState`** 只读属性表示了当前所有被使用的 ICE 连接的状态，其返回值为以下字符串之一：`new`、`connecting`、`connected`、`disconnected`、`failed` 或 `closed`。

@@ -1,12 +1,8 @@
 ---
 title: 基本的な図形
 slug: Web/SVG/Tutorial/Basic_Shapes
-tags:
-  - 初心者
-  - SVG
-  - SVG:チュートリアル
-translation_of: Web/SVG/Tutorial/Basic_Shapes
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/Positions", "Web/SVG/Tutorial/Paths") }}
 
 ほとんどの SVG の描画に使われる基本的な図形がいくつかあります。これらの図形の目的は、その名前からかなり明白です。それらの位置や大きさを決定する引数のいくつかが与えられていますが、要素のリファレンスにはおそらくより正確で完全な説明と、ここでは取り上げない他のプロパティが含まれているでしょう。しかし、これらはほとんどの SVG 文書で使用されるため、ある種の紹介をする必要があります。
@@ -38,7 +34,7 @@ translation_of: Web/SVG/Tutorial/Basic_Shapes
 </svg>
 ```
 
-> **Note:** `stroke`, `stroke-width`, `fill` の各属性は、後のチュートリアルで説明します。
+> **メモ:** `stroke`, `stroke-width`, `fill` の各属性は、後のチュートリアルで説明します。
 
 ### 長方形
 
@@ -126,7 +122,7 @@ translation_of: Web/SVG/Tutorial/Basic_Shapes
 
 {{SVGElement("polygon")}} は {{SVGElement("polyline")}} と似ており、点のリストを結ぶ直線で構成されています。しかし、多角形の場合、パスは自動的に最後の点と最初の点を結び、閉じた形状を作成します。
 
-> **Note:** 長方形は多角形の一種ですので、もう少し柔軟性が必要な場合には、多角形を使って `<rect/>` 要素を作成することができます。
+> **メモ:** 長方形は多角形の一種ですので、もう少し柔軟性が必要な場合には、多角形を使って `<rect/>` 要素を作成することができます。
 
 ```xml
 <polygon points="50, 160 55, 180 70, 180 60, 190 65, 205 50, 195 35, 205 40, 190 30, 180 45, 180"/>

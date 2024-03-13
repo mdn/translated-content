@@ -1,16 +1,8 @@
 ---
 title: text-justify
 slug: Web/CSS/text-justify
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS テキスト
-  - Reference
-  - recipe:css-property
-  - text-justify
-browser-compat: css.properties.text-justify
-translation_of: Web/CSS/text-justify
 ---
+
 {{CSSRef}}
 
 **`text-justify`** は CSS のプロパティで、要素に {{cssxref("text-align")}}`: justify;` が設定された時にテキストに適用される両端揃えの種類を設定します。
@@ -24,7 +16,7 @@ text-justify: inter-word;
 text-justify: inter-character;
 text-justify: distribute; /* 非推奨の値 */
 
-/* Global values */
+/* グローバル値 */
 text-justify: inherit;
 text-justify: initial;
 text-justify: revert;
@@ -57,11 +49,36 @@ text-justify: unset;
 ### text-justify の様々な値のデモ
 
 ```html hidden
-<p class="none"><code>text-justify: none</code> —<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare maximus vehicula. Duis nisi velit, dictum id mauris vitae, lobortis pretium quam. Quisque sed nisi pulvinar, consequat justo id, feugiat leo. Cras eu elementum dui.</p>
-<p class="auto"><code>text-justify: auto</code> —<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare maximus vehicula. Duis nisi velit, dictum id mauris vitae, lobortis pretium quam. Quisque sed nisi pulvinar, consequat justo id, feugiat leo. Cras eu elementum dui.</p>
-<p class="dist"><code>text-justify: distribute</code> —<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare maximus vehicula. Duis nisi velit, dictum id mauris vitae, lobortis pretium quam. Quisque sed nisi pulvinar, consequat justo id, feugiat leo. Cras eu elementum dui.</p>
-<p class="word"><code>text-justify: inter-word</code> —<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare maximus vehicula. Duis nisi velit, dictum id mauris vitae, lobortis pretium quam. Quisque sed nisi pulvinar, consequat justo id, feugiat leo. Cras eu elementum dui.</p>
-<p class="char"><code>text-justify: inter-character</code> —<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ornare maximus vehicula. Duis nisi velit, dictum id mauris vitae, lobortis pretium quam. Quisque sed nisi pulvinar, consequat justo id, feugiat leo. Cras eu elementum dui.</p>
+<p class="none">
+  <code>text-justify: none</code> —<br />Lorem ipsum dolor sit amet, consectetur
+  adipiscing elit. Nunc ornare maximus vehicula. Duis nisi velit, dictum id
+  mauris vitae, lobortis pretium quam. Quisque sed nisi pulvinar, consequat
+  justo id, feugiat leo. Cras eu elementum dui.
+</p>
+<p class="auto">
+  <code>text-justify: auto</code> —<br />Lorem ipsum dolor sit amet, consectetur
+  adipiscing elit. Nunc ornare maximus vehicula. Duis nisi velit, dictum id
+  mauris vitae, lobortis pretium quam. Quisque sed nisi pulvinar, consequat
+  justo id, feugiat leo. Cras eu elementum dui.
+</p>
+<p class="dist">
+  <code>text-justify: distribute</code> —<br />Lorem ipsum dolor sit amet,
+  consectetur adipiscing elit. Nunc ornare maximus vehicula. Duis nisi velit,
+  dictum id mauris vitae, lobortis pretium quam. Quisque sed nisi pulvinar,
+  consequat justo id, feugiat leo. Cras eu elementum dui.
+</p>
+<p class="word">
+  <code>text-justify: inter-word</code> —<br />Lorem ipsum dolor sit amet,
+  consectetur adipiscing elit. Nunc ornare maximus vehicula. Duis nisi velit,
+  dictum id mauris vitae, lobortis pretium quam. Quisque sed nisi pulvinar,
+  consequat justo id, feugiat leo. Cras eu elementum dui.
+</p>
+<p class="char">
+  <code>text-justify: inter-character</code> —<br />Lorem ipsum dolor sit amet,
+  consectetur adipiscing elit. Nunc ornare maximus vehicula. Duis nisi velit,
+  dictum id mauris vitae, lobortis pretium quam. Quisque sed nisi pulvinar,
+  consequat justo id, feugiat leo. Cras eu elementum dui.
+</p>
 ```
 
 ```css

@@ -1,14 +1,8 @@
 ---
 title: orphans
 slug: Web/CSS/orphans
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS 断片化
-  - リファレンス
-  - Web
-translation_of: Web/CSS/orphans
 ---
+
 {{CSSRef}}
 
 **`orphans`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[ページ](/ja/docs/Web/CSS/Paged_Media)、領域、[段](/ja/docs/Web/CSS/CSS_Columns)の*最下部*に表示されるブロックコンテナーの最小行数を設定します。
@@ -18,7 +12,7 @@ translation_of: Web/CSS/orphans
 orphans: 2;
 orphans: 3;
 
-/* Global values */
+/* グローバル値 */
 orphans: inherit;
 orphans: initial;
 orphans: revert;
@@ -48,11 +42,15 @@ orphans: unset;
 
 #### HTML
 
-```html
+```html-nolint
 <div>
   <p>これは幾らかのテキストを含む最初の段落です。</p>
-  <p>これは最初の段落よりも多くのテキストを含む第二の段落です。これは orphans がどの様に動作するのかを示すために用います。</p>
-  <p>これは第三の段落です。これは最初の段落よりも少しだけ長いテキストを含んでいます。</p>
+  <p>
+    これは最初の段落よりも多くのテキストを含む第二の段落です。これは orphans がどの様に動作するのかを示すために用います。
+  </p>
+  <p>
+    これは第三の段落です。これは最初の段落よりも少しだけ長いテキストを含んでいます。
+  </p>
 </div>
 ```
 

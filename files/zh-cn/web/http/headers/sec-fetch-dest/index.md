@@ -1,8 +1,8 @@
 ---
 title: Sec-Fetch-Dest
 slug: Web/HTTP/Headers/Sec-Fetch-Dest
-translation_of: Web/HTTP/Headers/Sec-Fetch-Dest
 ---
+
 {{HTTPSidebar}}
 
 **`Sec-Fetch-Dest`** {{Glossary("Fetch metadata request header", "Fetch 元数据请求标头")}}指示请求的目标，即数据的来源以及如何使用这些获取到的数据。
@@ -28,10 +28,9 @@ translation_of: Web/HTTP/Headers/Sec-Fetch-Dest
   </tbody>
 </table>
 
-
 ## 语法
 
- ```
+```
 Sec-Fetch-Dest: audio
 Sec-Fetch-Dest: audioworklet
 Sec-Fetch-Dest: document
@@ -130,5 +129,5 @@ Sec-Fetch-Site: cross-site
   - {{HTTPHeader("Sec-Fetch-Site")}}
   - {{HTTPHeader("Sec-Fetch-User")}}
 
-- [使用 Fetch 元数据使你的资源免受 Web 攻击](https://web.dev/fetch-metadata/) (web.dev)
+- [使用 Fetch 元数据使你的资源免受 Web 攻击](https://web.dev/articles/fetch-metadata) (web.dev)
 - [Fetch 元数据请求标头 playground](https://secmetadata.appspot.com/) (secmetadata.appspot.com)

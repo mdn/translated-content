@@ -1,16 +1,8 @@
 ---
 title: Sec-CH-UA
 slug: Web/HTTP/Headers/Sec-CH-UA
-translation_of: Web/HTTP/Headers/Sec-CH-UA
-tags:
-  - Sec-CH-UA
-  - Client hint
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
-  -  Experimental
 ---
+
 {{HTTPSidebar}} {{SeeCompatTable}} {{securecontext_header}}
 
 **`Sec-CH-UA`** [用户代理客户端提示](/zh-CN/docs/Web/HTTP/Client_hints#user-agent_client_hints)请求标头（header）提供用户代理的品牌（brand）和重要的版本信息。
@@ -90,6 +82,6 @@ Sec-CH-UA: "Opera";v="81", " Not;A Brand";v="99", "Chromium";v="95"
 
 - [客户端提示](/zh-CN/docs/Web/HTTP/Client_hints)
 - [用户代理客户端提示 API](/zh-CN/docs/Web/API/User-Agent_Client_Hints_API)
-- [通过用户代理客户端提示改善用户隐私和开发人员体验](https://web.dev/user-agent-client-hints/)（web.dev）
+- [通过用户代理客户端提示改善用户隐私和开发人员体验](https://developer.chrome.com/articles/user-agent-client-hints/)（web.dev）
 - {{HTTPHeader("Accept-CH")}}
 - [HTTP 缓存 > Vary 响应](/zh-CN/docs/Web/HTTP/Caching#vary_响应)和 {{HTTPHeader("Vary")}}

@@ -1,15 +1,8 @@
 ---
 title: AudioNode.numberOfInputs
 slug: Web/API/AudioNode/numberOfInputs
-tags:
-  - API
-  - AudioNode
-  - Property
-  - Reference
-  - Web Audio API
-  - numberOfInputs
-browser-compat: api.AudioNode.numberOfInputs
 ---
+
 {{APIRef("Web Audio API")}}
 
 {{domxref("AudioNode")}} 인터페이스의 `numberOfInputs` 속성은 해당 노드에 공급되는 입력의 수를 반환합니다. 소스 노드는 `numberOfInputs` 속성의 값이 0인 노드로 정의됩니다.

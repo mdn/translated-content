@@ -1,15 +1,8 @@
 ---
 title: font-kerning
 slug: Web/CSS/font-kerning
-tags:
-  - CSS
-  - CSS フォント
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.font-kerning
-translation_of: Web/CSS/font-kerning
 ---
+
 {{CSSRef}}
 
 **`font-kerning`** CSS プロパティはフォントに存在するカーニング情報の使用を制御します。
@@ -85,11 +78,11 @@ div {
 #### JavaScript
 
 ```js
-let input  = document.getElementById('input');
-let kern   = document.getElementById('kern');
-let nokern = document.getElementById('nokern');
+let input = document.getElementById("input");
+let kern = document.getElementById("kern");
+let nokern = document.getElementById("nokern");
 
-input.addEventListener('keyup', function() {
+input.addEventListener("keyup", function () {
   kern.textContent = input.value; /* Update content */
   nokern.textContent = input.value;
 });

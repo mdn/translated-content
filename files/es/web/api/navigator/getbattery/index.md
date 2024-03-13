@@ -1,9 +1,8 @@
 ---
 title: Navigator.getBattery()
 slug: Web/API/Navigator/getBattery
-translation_of: Web/API/Navigator/getBattery
-browser-compat: api.Navigator.getBattery
 ---
+
 {{ ApiRef("Battery API") }}
 
 El método **`getBattery()`** provee información acerca de la
@@ -17,7 +16,7 @@ documentación para detalles adicionales, una guía para usar la API, y código 
 ## Sintaxis
 
 ```js
-getBattery()
+getBattery();
 ```
 
 ### Parámetros
@@ -49,16 +48,16 @@ Este método no arroja excepciones reales; en su lugar, rechaza la promesa retor
 ## Ejemplos
 
 Este ejemplo obtiene el estado actual de carga de la batería y establece un
-manejador para el evento {{Event("chargingchange")}}, de manera tal que el estado de carga
+manejador para el evento [`chargingchange`](/es/docs/Web/Reference/Events/chargingchange), de manera tal que el estado de carga
 es grabado cuando cambia.
 
 ```js
 let batteryIsCharging = false;
 
-navigator.getBattery().then(function(battery) {
+navigator.getBattery().then(function (battery) {
   batteryIsCharging = battery.charging;
 
-  battery.addEventListener('chargingchange', function() {
+  battery.addEventListener("chargingchange", function () {
     batteryIsCharging = battery.charging;
   });
 });

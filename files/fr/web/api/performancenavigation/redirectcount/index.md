@@ -1,20 +1,8 @@
 ---
 title: PerformanceNavigation.redirectCount
 slug: Web/API/PerformanceNavigation/redirectCount
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - Déprécié
-  - HTML
-  - Navigation Timing
-  - PerformanceNavigation
-  - Property
-  - Propriété
-  - Read-only
-  - Héritage
-translation_of: Web/API/PerformanceNavigation/redirectCount
 ---
+
 {{APIRef("Navigation Timing")}}
 
 > **Attention :** Cette interface est dépréciée dans la spécification [Navigation Timing Level 2](https://w3c.github.io/navigation-timing/#obsolete). Veuillez utiliser la propriété [`PerformanceNavigationTiming.redirectCount`](/fr/docs/Web/API/PerformanceNavigationTiming/redirectCount) de l'interface [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming) à la place.
@@ -29,13 +17,11 @@ let amount = performanceNavigation.redirectCount;
 
 ## Spécifications
 
-| Spécifications                                                                                                                                                       | Statut                                   | Commentaire          |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('Navigation Timing', '#dom-performancenavigation-redirectcount', 'PerformanceNavigation.redirectCount')}} | {{Spec2('Navigation Timing')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.PerformanceNavigation.redirectCount")}}
+{{Compat}}
 
 ## Voir aussi
 

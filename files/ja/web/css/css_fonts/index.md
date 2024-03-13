@@ -1,14 +1,8 @@
 ---
 title: CSS フォント
-slug: Web/CSS/CSS_Fonts
-tags:
-  - CSS
-  - CSS フォント
-  - ガイド
-  - 概要
-  - リファレンス
-translation_of: Web/CSS/CSS_Fonts
+slug: Web/CSS/CSS_fonts
 ---
+
 {{CSSRef}}
 
 **CSS フォント** (CSS Fonts) は CSS のモジュールの一つで、フォントに関するプロパティを定義し、どのようにフォントリソースを読み取るのかを定義します。これによって、単一の文字に利用できる複数のフォントがある場合、使用するフォントのスタイルを、例えばフォントファミリー、寸法、太さ、行の高さ、字体の種類を定義することができます。
@@ -31,10 +25,12 @@ p {
 ```
 
 ```html
-<p>Three hundred years ago<br>
-  I thought I might get some sleep<br>
-  I stretched myself out onna antique bed<br>
-  An' my spirit did a midnite creep</p>
+<p>
+  Three hundred years ago<br />
+  I thought I might get some sleep<br />
+  I stretched myself out onna antique bed<br />
+  An' my spirit did a midnite creep
+</p>
 ```
 
 結果は以下のようになります。
@@ -87,9 +83,4 @@ p {
 
 ## 仕様書
 
-| 仕様書                                                  | 状態                    | 備考                                                                                             |
-| ------------------------------------------------------- | ----------------------- | ------------------------------------------------------------------------------------------------ |
-| {{SpecName('CSS4 Fonts')}}                              | {{Spec2('CSS4 Fonts')}} | `font-variation-settings` (および関連する高水準プロパティ) および `font-optical-sizing` を追加。 |
-| {{SpecName('CSS3 Fonts')}}                              | {{Spec2('CSS3 Fonts')}} | `font-feature-settings` (および関連する高水準プロパティ) を追加。                                |
-| {{SpecName('CSS2.1', 'fonts.html#font-shorthand', '')}} | {{Spec2('CSS2.1')}}     |                                                                                                  |
-| {{SpecName('CSS1', '#font', '')}}                       | {{Spec2('CSS1')}}       | 初回定義                                                                                         |
+{{Specifications}}

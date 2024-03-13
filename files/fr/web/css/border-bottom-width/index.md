@@ -1,12 +1,8 @@
 ---
 title: border-bottom-width
 slug: Web/CSS/border-bottom-width
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/border-bottom-width
 ---
+
 {{CSSRef}}
 
 La propriété **`border-bottom-width`** définit l'épaisseur de la bordure pour le côté bas d'un élément.
@@ -45,22 +41,26 @@ border-bottom-width: unset;
 
     La spécification ne précise pas de façon exacte l'épaisseur correspondant à chacun de ces mots-clés (c'est donc à chaque implémentation de choisir). La spécification requiert toutefois que l'inégalité suivante soit respectée `thin ≤ medium ≤ thick` et que ces valeurs soient constantes pour un même document`.`
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
 ### CSS
 
 ```css
-.element1{
+.element1 {
   border-bottom: thick solid red;
 }
-.element2{
+.element2 {
   border-bottom: medium solid orange;
 }
-.element3{
+.element3 {
   border-bottom: thin solid green;
 }
 ```
@@ -68,17 +68,11 @@ border-bottom-width: unset;
 ### HTML
 
 ```html
-<p class="element1">
-  Une bordure épaisse rouge.
-</p>
+<p class="element1">Une bordure épaisse rouge.</p>
 
-<p class="element2">
-  Une bordure moyenne orange.
-</p>
+<p class="element2">Une bordure moyenne orange.</p>
 
-<p class="element3">
-  Et une bordure fine verte.
-</p>
+<p class="element3">Et une bordure fine verte.</p>
 ```
 
 ### Résultat
@@ -87,17 +81,11 @@ border-bottom-width: unset;
 
 ## Spécifications
 
-| Spécification                                                                                                | État                                     | Commentaires                       |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ---------------------------------- |
-| {{SpecName('CSS3 Backgrounds', '#the-border-width', 'border-bottom-width')}}         | {{Spec2('CSS3 Backgrounds')}} | Pas de modification significative. |
-| {{SpecName('CSS2.1', 'box.html#border-width-properties', 'border-bottom-width')}} | {{Spec2('CSS2.1')}}                 | Définition initiale.               |
-| {{SpecName('CSS1', '#border-left-width', 'border-bottom-width')}}                     | {{Spec2('CSS1')}}                 | Définition initiale.               |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.border-bottom-width")}}
+{{Compat}}
 
 ## Voir aussi
 

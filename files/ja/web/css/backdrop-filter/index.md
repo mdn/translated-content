@@ -1,20 +1,8 @@
 ---
 title: backdrop-filter
 slug: Web/CSS/backdrop-filter
-tags:
-  - CSS
-  - CSS プロパティ
-  - グラフィック
-  - レイアウト
-  - NeedsContent
-  - リファレンス
-  - SVG
-  - SVG フィルター
-  - ウェブ
-  - recipe:css-property
-browser-compat: css.properties.backdrop-filter
-translation_of: Web/CSS/backdrop-filter
 ---
+
 {{CSSRef}}
 
 **`backdrop-filter`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の背後の領域に、ぼかしや色変化のようなグラフィック効果を適用することができます。要素の*背後*のすべてに適用されるため、効果を見るためには少なくとも一部が透明な要素またはその背景を作成する必要があります。
@@ -48,6 +36,8 @@ backdrop-filter: revert;
 backdrop-filter: unset;
 ```
 
+{{EmbedInteractiveExample("pages/css/backdrop-filter.html")}}
+
 ## 構文
 
 ### 値
@@ -76,7 +66,7 @@ backdrop-filter: unset;
   font-family: sans-serif;
   text-align: center;
   line-height: 1;
- -webkit-backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   max-width: 50%;
   max-height: 50%;
@@ -90,7 +80,8 @@ body {
 }
 
 body {
-  background-image: url(https://picsum.photos/id/1080/6858/4574), linear-gradient(rgb(219, 166, 166), rgb(0, 0, 172));
+  background-image: url(https://picsum.photos/id/1080/6858/4574),
+    linear-gradient(rgb(219, 166, 166), rgb(0, 0, 172));
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;

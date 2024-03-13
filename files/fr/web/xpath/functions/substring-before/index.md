@@ -1,11 +1,8 @@
 ---
 title: substring-before
 slug: Web/XPath/Functions/substring-before
-tags:
-  - Référence_XSLT
-translation_of: Web/XPath/Functions/substring-before
-original_slug: Web/XPath/Fonctions/substring-before
 ---
+
 {{ XsltRef() }}
 
 La fonction `substring-before()` retourne retourne la partie d'une chaîne donnée précédant une sous-chaîne donnée.

@@ -1,51 +1,51 @@
 ---
-title: HTMLSelectElement.remove()
+title: "HTMLSelectElement: remove() メソッド"
+short-title: remove()
 slug: Web/API/HTMLSelectElement/remove
-tags:
-  - API
-  - HTML DOM
-  - HTMLSelectElement
-  - メソッド
-  - リファレンス
-browser-compat: api.HTMLSelectElement.remove
-translation_of: Web/API/HTMLSelectElement/remove
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLSelectElement.remove()`** メソッドは、この select 要素の選択肢の集合から指定された位置の要素を削除します。
 
 ## 構文
 
-```js
-collection.remove(index);
+```js-nolint
+remove(index)
 ```
 
 ### 引数
 
-- `index` は long 値で、集合から削除する {{ domxref("HTMLOptionElement") }} の位置を表します。この位置の要素が見つからなかった場合は、このメソッドは効果がありません。
+- `index` はゼロから始まる long 値で、集合から削除する {{ domxref("HTMLOptionElement") }} の位置を表します。この位置の要素が見つからなかった場合は、このメソッドは効果がありません。
+
+### 返値
+
+なし（{{jsxref("undefined")}}）。
 
 ## 例
 
+```html
+<select id="existingList" name="existingList">
+  <option value="1">Option: Value 1</option>
+  <option value="2">Option: Value 2</option>
+  <option value="3">Option: Value 3</option>
+</select>
+```
+
 ```js
-var sel = document.getElementById("existingList");
+let sel = document.getElementById("existingList");
 sel.remove(1);
+```
 
-/*
-  以下の select オブジェクトが既にあるとします。
+HTML は次のようになります。
 
-  <select id="existingList" name="existingList">
-    <option value="1">Option: Value 1</option>
-    <option value="2">Option: Value 2</option>
-    <option value="3">Option: Value 3</option>
-  </select>
-
-  以下のように変化します。
-
-  <select id="existingList" name="existingList">
-    <option value="1">Option: Value 1</option>
-    <option value="3">Option: Value 3</option>
-  </select>
-*/
+```html
+<select id="existingList" name="existingList">
+  <option value="1">Option: Value 1</option>
+  <option value="3">Option: Value 3</option>
+</select>
 ```
 
 ## 仕様書

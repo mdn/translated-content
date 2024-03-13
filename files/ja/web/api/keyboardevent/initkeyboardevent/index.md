@@ -1,26 +1,21 @@
 ---
-title: KeyboardEvent.initKeyboardEvent()
+title: "KeyboardEvent: initKeyboardEvent() メソッド"
+short-title: initKeyboardEvent()
 slug: Web/API/KeyboardEvent/initKeyboardEvent
-page-type: web-api-instance-method
-tags:
-  - API
-  - Deprecated
-  - KeyboardEvent
-  - Method
-  - Reference
-browser-compat: api.KeyboardEvent.initKeyboardEvent
-translation_of: Web/API/KeyboardEvent/initKeyboardEvent
+l10n:
+  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
 ---
+
 {{APIRef("UI Events")}}{{Deprecated_Header}}
 
-**`KeyboardEvent.initKeyboardEvent()`** メソッドは、キーボードイベントオブジェクトの属性を初期化します。このメソッドは DOM Level 3 Events の草案で導入されましたが、より新しい草案では非推奨とされています。Gecko はこの機能に対応していません。このメソッドを実験的に実装すると、既存のウェブアプリが壊れてしまうからです（{{bug(999645)}} を参照してください）。
+**`KeyboardEvent.initKeyboardEvent()`** メソッドは、キーボードイベントオブジェクトの属性を初期化します。このメソッドは DOM Level 3 Events の草案で導入されましたが、より新しい草案では非推奨とされています。Gecko はこの機能に対応していません。このメソッドを実験的に実装すると、既存のウェブアプリが壊れてしまうからです（[Firefox バグ 999645](https://bugzil.la/999645) を参照してください）。
 ウェブアプリケーションは、もしコンストラクターが使用できるのであれば、代わりに使用する必要があります。
 
 ## 構文
 
-```js
+```js-nolint
 initKeyboardEvent(type, canBubble, cancelable,
-                  view,  key, location, ctrlKey,
+                  view, key, location, ctrlKey,
                   altKey, shiftKey, metaKey)
 ```
 
@@ -33,7 +28,7 @@ initKeyboardEvent(type, canBubble, cancelable,
 - `cancelable` {{optional_inline}}
   - : イベントをキャンセルできるかどうかを示します。既定値は `false` です。
 - `view` {{optional_inline}}
-  - : 関連付けられている {{domxref("WindowProxy")}} を指定します。既定値は `null` です。
+  - : 関連付けられている {{glossary("WindowProxy")}} を指定します。既定値は `null` です。
 - `key` {{optional_inline}}
   - : key 属性の値。既定値は `""` です。
 - `location` {{optional_inline}}

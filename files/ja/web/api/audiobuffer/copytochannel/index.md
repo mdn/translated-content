@@ -1,17 +1,8 @@
 ---
 title: AudioBuffer.copyToChannel()
 slug: Web/API/AudioBuffer/copyToChannel
-tags:
-  - API
-  - 音声
-  - AudioBuffer
-  - メソッド
-  - リファレンス
-  - ウェブ音声 API
-  - copyToChannel
-browser-compat: api.AudioBuffer.copyToChannel
-translation_of: Web/API/AudioBuffer/copyToChannel
 ---
+
 {{ APIRef("Web Audio API") }}
 
 `copyToChannel()` は {{ domxref("AudioBuffer") }} インターフェイスのメソッドで、元の配列から指定の `AudioBuffer` のチャンネルへとコピーします。
@@ -35,11 +26,11 @@ copyToChannel(source, channelNumber, startInChannel);
 
 ```js
 var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
-var anotherArray = new Float32Array;
+var anotherArray = new Float32Array();
 // myArrayBuffer の 2 番目のチャンネルからコピーする
-myArrayBuffer.copyFromChannel(anotherArray,1,0);
+myArrayBuffer.copyFromChannel(anotherArray, 1, 0);
 // anotherArray から、 myArrayBuffer の 1 番目のチャンネルにコピーする。これで 2 つのチャンネルのデータは同じになる
-myArrayBuffer.copyToChannel (anotherArray,0,0);
+myArrayBuffer.copyToChannel(anotherArray, 0, 0);
 ```
 
 ## 仕様書
@@ -52,4 +43,4 @@ myArrayBuffer.copyToChannel (anotherArray,0,0);
 
 ## 関連情報
 
-- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

@@ -1,15 +1,15 @@
 ---
 title: Gamepad
 slug: Web/API/Gamepad
-translation_of: Web/API/Gamepad
 ---
+
 {{APIRef("Gamepad API")}}
 
 L'interface **`Gamepad`** de l'[API Gamepad](/fr/docs/Web/API/Gamepad_API) définit une manette individuelle ou un autre contrôleur, autorisant l'accès à des informations telles que les boutons pressés, la position des axes et l'identifiant.
 
 Un objet `Gamepad` peut être retourné de deux manières :
 
-- Via la propriété `gamepad` des événements {{event("gamepadconnected")}} et {{event("gamepaddisconnected")}}.
+- Via la propriété `gamepad` des événements [`gamepadconnected`](/fr/docs/Web/API/Window/gamepadconnected_event) et [`gamepadisdisconnected`](/fr/docs/Web/API/Window/gamepadisdisconnected_event).
 - Ou en prenant n'importe quelle position dans le tableau retourné par la méthode {{domxref("Navigator.getGamepads()")}}.
 
 ## Propriétés
@@ -33,7 +33,7 @@ Un objet `Gamepad` peut être retourné de deux manières :
 
 ### Extensions expérimentales apportées à `Gamepad`
 
-Les interfaces suivantes sont définies dans la spécification {{SpecName("GamepadExtensions")}} et fournissent un accès à des fonctionnalités expérimentales tels que les retours haptiques et informations de position des contrôleurs WebVR.
+Les interfaces suivantes sont définies dans la spécification `GamepadExtensions` et fournissent un accès à des fonctionnalités expérimentales tels que les retours haptiques et informations de position des contrôleurs WebVR.
 
 - {{domxref("Gamepad.hand")}} {{readonlyinline}}
   - : Une énumération qui définit dans quelle main le contrôleur est tenue (ou dans laquelle il est probablement tenue).
@@ -45,53 +45,24 @@ Les interfaces suivantes sont définies dans la spécification {{SpecName("Gamep
 ## Exemples
 
 ```js
-window.addEventListener("gamepadconnected", function(event) {
-  console.log("Contrôleur connecté à %d: %s. %d boutons, %d axes.",
-  event.gamepad.index, event.gamepad.id,
-  event.gamepad.buttons.length, event.gamepad.axes.length);
+window.addEventListener("gamepadconnected", function (event) {
+  console.log(
+    "Contrôleur connecté à %d: %s. %d boutons, %d axes.",
+    event.gamepad.index,
+    event.gamepad.id,
+    event.gamepad.buttons.length,
+    event.gamepad.axes.length,
+  );
 });
 ```
 
 ## Spécifications
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("Gamepad", "#gamepad-interface", "Gamepad")}}
-      </td>
-      <td>{{Spec2("Gamepad")}}</td>
-      <td>Première définition</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('WebVR', '#gamepad-getvrdisplays-attribute', 'displayId')}}
-      </td>
-      <td>{{Spec2("WebVR")}}</td>
-      <td>
-        <p>
-          Définit la propriété {{domxref("Gamepad.displayId")}}.
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("GamepadExtensions", "#partial-gamepad-interface", "Gamepad extensions")}}
-      </td>
-      <td>{{Spec2("GamepadExtensions")}}</td>
-      <td>Définit les extensions expérimentales</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
-## Compatibilités des navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("api.Gamepad")}}
+{{Compat}}
 
 ## Voir aussi
 

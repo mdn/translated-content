@@ -1,15 +1,8 @@
 ---
 title: get Map[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/Map/@@species
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Map
-  - Propriété
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Map/@@species
-original_slug: Web/JavaScript/Reference/Global_Objects/Map/@@species
 ---
+
 {{JSRef}}
 
 **`Map[@@species]`** renvoie le constructeur `Map`.
@@ -17,7 +10,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Map/@@species
 ## Syntaxe
 
 ```js
-Map[Symbol.species]
+Map[Symbol.species];
 ```
 
 ## Description
@@ -38,20 +31,19 @@ Pour des objets dérivés (par exemple un dictionnaire `MaMap` que vous auriez c
 class MaMap extends Map {
   // On surcharge le symbole species de MaMap
   // avec le constructeur Map parent
-  static get [Symbol.species]() { return Map; }
+  static get [Symbol.species]() {
+    return Map;
+  }
 }
 ```
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                       | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-get-map-@@species', 'get Map [ @@species ]')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-get-map-@@species', 'get Map [ @@species ]')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Map.@@species")}}
+{{Compat}}
 
 ## Voir aussi
 

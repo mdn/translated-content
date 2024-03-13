@@ -1,11 +1,8 @@
 ---
 title: Elements du menu contextuel
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
-tags:
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
-original_slug: Mozilla/Add-ons/WebExtensions/user_interface/elements_menu_contextuel
 ---
+
 {{AddonSidebar}}
 
 Cette option d'interface utilisateur ajoute un ou plusieurs éléments à un menu contextuel du navigateur. Il s'agit du menu contextuel disponible lorsqu'un utilisateur clique avec le bouton droit de la souris sur une page Web. Les onglets peuvent aussi avoir des menus contextuels, disponibles via l' API [browser.menus](/fr/Add-ons/WebExtensions/API/menus).
@@ -29,11 +26,14 @@ Vous gérez les éléments du menu contextuel par programmation, en utilisant l'
 Vous pouvez ensuite ajouter (mettre à jour ou supprimer) les éléments du menu contextuel dans votre script de fond de l'extension. Pour créer un élément de menu, vous spécifiez un ID, son titre et les menus contextuels sur lesquels il doit apparaître:
 
 ```js
-browser.contextMenus.create({
-  id: "log-selection",
-  title: browser.i18n.getMessage("contextMenuItemSelectionLogger"),
-  contexts: ["selection"]
-}, onCreated);
+browser.contextMenus.create(
+  {
+    id: "log-selection",
+    title: browser.i18n.getMessage("contextMenuItemSelectionLogger"),
+    contexts: ["selection"],
+  },
+  onCreated,
+);
 ```
 
 Votre extension attend les clics sur les éléments du menu. L'information passée sur l'élément a cliqué, le contexte où le clic s'est produit, et les détails de l'onglet où le clic a eu lieu, peuvent ensuite être utilisés pour appeler les fonctionnalités de l'extension appropriées.
@@ -51,7 +51,7 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 
 ## Icônes
 
-Pour plus de détails sur la création d'icônes à utiliser avec votre menu contextuel, voir  [Iconography](https://design.firefox.com/photon/visuals/iconography.html) dans la documentation du [Systeme de conception de Photon](https://design.firefox.com/photon/index.html).
+Pour plus de détails sur la création d'icônes à utiliser avec votre menu contextuel, voir [Iconography](https://design.firefox.com/photon/visuals/iconography.html) dans la documentation du [Systeme de conception de Photon](https://design.firefox.com/photon/index.html).
 
 ## Exemples
 

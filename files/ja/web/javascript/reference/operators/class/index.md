@@ -1,17 +1,8 @@
 ---
 title: クラス式
 slug: Web/JavaScript/Reference/Operators/class
-tags:
-  - クラス
-  - ECMAScript 2015
-  - 式
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - リファレンス
-browser-compat: javascript.operators.class
-translation_of: Web/JavaScript/Reference/Operators/class
 ---
+
 {{jsSidebar("Operators")}}
 
 **クラス式**は、 ECMAScript 2015 でクラスを定義する方法の 1 つです。{{jsxref("Operators/function", "関数式", "", "true")}}と同じように、クラス式は名前を付けることも付けないこともできます。名前を付けた場合、クラス名はクラス内部のみのローカルです。
@@ -40,16 +31,16 @@ const MyClass = class [className] [extends otherClassName] {
 `constructor` メソッドは省略可能です。クラス式で生成されたクラスは、常に {{jsxref("Operators/typeof", "typeof")}} が "`function`" の値を返します。
 
 ```js
-'use strict';
-let Foo = class {};  // コンストラクタープロパティは省略可能
-Foo = class {};      // 再宣言が可能
+"use strict";
+let Foo = class {}; // コンストラクタープロパティは省略可能
+Foo = class {}; // 再宣言が可能
 
-typeof Foo;             // "function" を返す
-typeof class {};        // "function" を返す
+typeof Foo; // "function" を返す
+typeof class {}; // "function" を返す
 
-Foo instanceof Object;   // true
+Foo instanceof Object; // true
 Foo instanceof Function; // true
-class Foo {}            // SyntaxError が発生 (クラス宣言は再宣言ができない)
+class Foo {} // SyntaxError が発生 (クラス宣言は再宣言ができない)
 ```
 
 ## 例
@@ -62,13 +53,13 @@ class Foo {}            // SyntaxError が発生 (クラス宣言は再宣言が
 const Foo = class {
   constructor() {}
   bar() {
-    return 'Hello World!';
+    return "Hello World!";
   }
 };
 
 const instance = new Foo();
-instance.bar();  // "Hello World!"
-Foo.name;        // "Foo"
+instance.bar(); // "Hello World!"
+Foo.name; // "Foo"
 ```
 
 ### 名前付きクラス式
@@ -81,11 +72,11 @@ const Foo = class NamedFoo {
   whoIsThere() {
     return NamedFoo.name;
   }
-}
+};
 const bar = new Foo();
-bar.whoIsThere();  // "NamedFoo"
-NamedFoo.name;     // ReferenceError: NamedFoo is not defined
-Foo.name;          // "NamedFoo"
+bar.whoIsThere(); // "NamedFoo"
+NamedFoo.name; // ReferenceError: NamedFoo is not defined
+Foo.name; // "NamedFoo"
 ```
 
 ## 仕様書

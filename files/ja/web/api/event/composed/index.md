@@ -1,14 +1,11 @@
 ---
-title: Event.composed
+title: "Event: composed プロパティ"
+short-title: composed
 slug: Web/API/Event/composed
-page-type: web-api-instance-property
-tags:
-  - プロパティ
-  - 読み取り専用
-  - リファレンス
-browser-compat: api.Event.composed
-translation_of: Web/API/Event/composed
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
+
 {{APIRef("Shadow DOM")}}
 
 **`composed`** は {{domxref("Event")}} インターフェイスの読み取り専用プロパティで、イベントがシャドウ DOM 境界を越えて標準 DOM に伝播するかどうかを示す論理値を返すものです。
@@ -30,38 +27,40 @@ UA から送られるすべての UI イベントは合成されます（クリ�
 2 つの定義は次のようになります。
 
 ```js
-customElements.define('open-shadow',
+customElements.define(
+  "open-shadow",
   class extends HTMLElement {
     constructor() {
       super();
 
-      const pElem = document.createElement('p');
-      pElem.textContent = this.getAttribute('text');
+      const pElem = document.createElement("p");
+      pElem.textContent = this.getAttribute("text");
 
       const shadowRoot = this.attachShadow({
-        mode: 'open'
+        mode: "open",
       });
 
       shadowRoot.appendChild(pElem);
     }
-  }
+  },
 );
 
-customElements.define('closed-shadow',
+customElements.define(
+  "closed-shadow",
   class extends HTMLElement {
     constructor() {
       super();
 
-      const pElem = document.createElement('p');
-      pElem.textContent = this.getAttribute('text');
+      const pElem = document.createElement("p");
+      pElem.textContent = this.getAttribute("text");
 
       const shadowRoot = this.attachShadow({
-        mode: 'closed'
+        mode: "closed",
       });
 
       shadowRoot.appendChild(pElem);
     }
-  }
+  },
 );
 ```
 
@@ -75,7 +74,7 @@ customElements.define('closed-shadow',
 それから click イベントリスナーを `<html>` 要素に設定します。
 
 ```js
-document.querySelector('html').addEventListener('click', function(e) {
+document.querySelector("html").addEventListener("click", (e) => {
   console.log(e.composed);
   console.log(e.composedPath());
 });

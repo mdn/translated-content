@@ -1,17 +1,11 @@
 ---
-title: Range.collapsed
+title: "Range: collapsed プロパティ"
+short-title: collapsed
 slug: Web/API/Range/collapsed
-page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Property
-  - Range
-  - Reference
-browser-compat: api.Range.collapsed
-translation_of: Web/API/Range/collapsed
+l10n:
+  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
+
 {{ APIRef("DOM") }}
 
 **`Range.collapsed`** は読み取り専用プロパティで、 {{domxref("Range")}} の開始点と終了点が同じ位置にあるかどうかを示す論理型フラグを返します。 {{domxref("Range")}} の開始境界点と終了境界点が DOM 上で同じ位置であれば `true` を、そうでなければ `false` を返します。

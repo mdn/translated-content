@@ -1,15 +1,8 @@
 ---
-title: 构建内容丰富的网页
+title: 构建网页内容
 slug: Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content
-tags:
-  - HTML
-  - 初学者
-  - 布局
-  - 结构
-  - 设计
-  - 评估
-translation_of: Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
 
 构建页面内容是一项重要技能，页面构建清晰才能顺利交付进行 CSS 布局。本测验将测试你是否能构思出页面的最终外观，以及是否会选用适当的结构语义。
@@ -17,7 +10,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         完成本章之前的全部课程，特别是
         <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/文件和网站结构"
@@ -65,7 +58,7 @@ translation_of: Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content
 
 ## 提示
 
-- 可用 [W3C ](https://validator.w3.org/)[HTML 验证器](https://validator.w3.org/) 来验证 HTML；验证通过有额外加分。(有两行包含“googleapis”的 `<link>` 元素用于从 Google Fonts 服务引入自定义字体到页面；它们不会被验证，所以不用担心。)
+- 可用 [W3C HTML 验证器](https://validator.w3.org/) 来验证 HTML；验证通过有额外加分。(有两行包含“googleapis”的 `<link>` 元素用于从 Google Fonts 服务引入自定义字体到页面；它们不会被验证，所以不用担心。)
 - 本测验不需要任何 CSS 知识；只需用 HTML 元素添加现成的 CSS 即可。
 - 现成的 CSS 已经设计好布局，使用正确的结构元素，页面就会渲染成绿色。
 - 如果你遇到困难不知道应该把添加元素到哪里，通常一个好的做法是：画一个简单的页面布局模块图，然后为每个块记录下恰当的元素。
@@ -78,18 +71,6 @@ translation_of: Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content
 
 ## 测验
 
-如果你是在课堂上进行这个测验，你可以把作品交给导师或教授去打分了。如果你是在自学，也可以在 [本节测验的讨论页](https://discourse.mozilla.org/t/structuring-a-page-of-content-assignment/24678) 或者 [Mozilla 聊天室 ](https://wiki.mozilla.org/IRC)的 [#mdn](irc://irc.mozilla.org/mdn) 频道取得帮助。要自己先尝试，作弊是不会有收获的！
+如果你是在课堂上进行这个测验，你可以把作品交给导师或教授去打分了。如果你是在自学，也可以在 [本节测验的讨论页](https://discourse.mozilla.org/t/structuring-a-page-of-content-assignment/24678) 或者 [Mozilla 聊天室](https://wiki.mozilla.org/IRC) 的 [#mdn](irc://irc.mozilla.org/mdn) 频道取得帮助。要自己先尝试，作弊是不会有收获的！
 
 {{PreviousMenu("Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
-
-## 本章目录
-
-- [开始学习 HTML](/zh-CN/docs/learn/HTML/Introduction_to_HTML/Getting_started)
-- [“头”里有什么？HTML 元信息](/zh-CN/docs/learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [HTML 文字处理初步](/zh-CN/docs/learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [创建超链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [高级文字格式](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [文档和站点结构](/zh-CN/docs/learn/HTML/Introduction_to_HTML/文件和网站结构)
-- [HTML 调试](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [课程测验：为信件排版](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [课程测验：构建内容丰富的网页](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

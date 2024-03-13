@@ -1,9 +1,8 @@
 ---
 title: Element.removeAttribute()
 slug: Web/API/Element/removeAttribute
-browser-compat: api.Element.removeAttribute
-translation_of: Web/API/Element/removeAttribute
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`removeAttribute()`**, rattachée à l'interface [`Element`](/fr/docs/Web/API/Element), supprime l'attribut ayant le nom indiqué de l'élément.

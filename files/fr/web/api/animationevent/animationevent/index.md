@@ -1,12 +1,10 @@
 ---
 title: AnimationEvent()
 slug: Web/API/AnimationEvent/AnimationEvent
-page-type: web-api-constructor
-translation_of: Web/API/AnimationEvent/AnimationEvent
-browser-compat: api.AnimationEvent.AnimationEvent
 l10n:
   sourceCommit: c000698d544f932314050edec3f47b8b8dc906bf
 ---
+
 {{APIRef("Web Animations API")}}
 
 Le constructeur **`AnimationEvent()`** renvoie un nouvel objet [`AnimationEvent`](/fr/docs/Web/API/AnimationEvent), qui représente un évènement relatif à une animation.
@@ -14,8 +12,8 @@ Le constructeur **`AnimationEvent()`** renvoie un nouvel objet [`AnimationEvent`
 ## Syntaxe
 
 ```js
-new AnimationEvent(type)
-new AnimationEvent(type, options)
+new AnimationEvent(type);
+new AnimationEvent(type, options);
 ```
 
 ### Paramètres
@@ -23,7 +21,7 @@ new AnimationEvent(type, options)
 - `type`
   - : Une chaîne représentant le nom du type de l'objet `AnimationEvent`, sensible à la casse. Les valeurs possibles sont `animationstart`, `animationend` ou `animationiteration`.
 - `options` {{optional_inline}}
-  - : Un objet qui, *en plus des propriétés définies par le constructeur [`Event()`](/fr/docs/Web/API/Event/Event)*, contient les propriétés suivantes&nbsp;:
+  - : Un objet qui, _en plus des propriétés définies par le constructeur [`Event()`](/fr/docs/Web/API/Event/Event)_, contient les propriétés suivantes&nbsp;:
     - `animationName` {{optional_inline}}
       - : Une chaîne contenant la valeur de la propriété CSS [`animation-name`](/fr/docs/Web/CSS/animation-name) associée à la transition. La valeur par défaut est `""`.
     - `elapsedTime` {{optional_inline}}

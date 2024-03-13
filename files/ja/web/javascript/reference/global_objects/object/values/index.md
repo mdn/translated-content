@@ -1,15 +1,8 @@
 ---
 title: Object.values()
 slug: Web/JavaScript/Reference/Global_Objects/Object/values
-tags:
-  - JavaScript
-  - メソッド
-  - Object
-  - リファレンス
-  - Polyfill
-browser-compat: javascript.builtins.Object.values
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/values
 ---
+
 {{JSRef}}
 
 **`Object.values()`** メソッドは、指定されたオブジェクトが持つ列挙可能なプロパティの値を、 {{jsxref("Statements/for...in", "for...in")}} ループで提供される場合と同じ順序で配列にして返します。 (違いは、 `for...in` ループではプロパティチェーン上のプロパティも同様に列挙するという点だけです。)
@@ -19,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/values
 ## 構文
 
 ```js
-Object.values(obj)
+Object.values(obj);
 ```
 
 ### 引数
@@ -44,25 +37,34 @@ Object.values(obj)
 ### Object.values の使用
 
 ```js
-const obj = { foo: 'bar', baz: 42 };
+const obj = { foo: "bar", baz: 42 };
 console.log(Object.values(obj)); // ['bar', 42]
 
 // 配列風オブジェクト
-const arrayLikeObj1 = { 0: 'a', 1: 'b', 2: 'c' };
-console.log(Object.values(arrayLikeObj1 )); // ['a', 'b', 'c']
+const arrayLikeObj1 = { 0: "a", 1: "b", 2: "c" };
+console.log(Object.values(arrayLikeObj1)); // ['a', 'b', 'c']
 
 // ランダムなキー順序を持つ配列風オブジェクト
 // 数値のキーを使用すると、値はキーの番号順に返される
-const arrayLikeObj2 = { 100: 'a', 2: 'b', 7: 'c' };
-console.log(Object.values(arrayLikeObj2 )); // ['b', 'c', 'a']
+const arrayLikeObj2 = { 100: "a", 2: "b", 7: "c" };
+console.log(Object.values(arrayLikeObj2)); // ['b', 'c', 'a']
 
 // 列挙可能でないプロパティ getFoo がある
-const my_obj = Object.create({}, { getFoo: { value: function() { return this.foo; } } });
-my_obj.foo = 'bar';
+const my_obj = Object.create(
+  {},
+  {
+    getFoo: {
+      value: function () {
+        return this.foo;
+      },
+    },
+  },
+);
+my_obj.foo = "bar";
 console.log(Object.values(my_obj)); // ['bar']
 
 // オブジェクトでない引数はオブジェクトへと型強制される
-console.log(Object.values('foo')); // ['f', 'o', 'o']
+console.log(Object.values("foo")); // ['f', 'o', 'o']
 ```
 
 ## 仕様書

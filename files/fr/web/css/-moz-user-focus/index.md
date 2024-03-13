@@ -1,13 +1,8 @@
 ---
-title: '-moz-user-focus'
+title: "-moz-user-focus"
 slug: Web/CSS/-moz-user-focus
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
-translation_of: Web/CSS/-moz-user-focus
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 La propriété **`-moz-user-focus`** est utilisée pour indiquer si l'élément peut recevoir le focus.
@@ -25,7 +20,7 @@ La propriété **`-moz-user-focus`** est utilisée pour indiquer si l'élément 
 
 En utilisant la valeur `ignore`, on peut désactiver la prise de focus sur l'élément (l'utilisateur ne pourra pas activer l'élément) et l'élément sera sauté lors de la navigation à la tabulation.
 
-> **Note :** Cette propriété ne fonctionne pas pour les éléments XUL {{XULElem("textbox")}} car l'élément `textbox` en tant que tel ne reçoit jamais le focus. À la place, XBL crée un élément HTML {{HTMLElement("input")}} anonyme à l'intérieur du `textbox` et que l'élément reçoit le focus. On peut empêcher le `textbox` de prendre le focus clavier en passant son index de tabulation à `-1`, pour l'empêcher de prendre le focus souris, on pourra utiliser les événements `mousedown`.
+{{CSSInfo}}
 
 ## Syntaxe
 
@@ -45,7 +40,9 @@ En utilisant la valeur `ignore`, on peut désactiver la prise de focus sur l'él
 ### HTML
 
 ```html
-<input class="ignored" value="L'utilisateur ne peut pas placer le focus sur cet élément.">
+<input
+  class="ignored"
+  value="L'utilisateur ne peut pas placer le focus sur cet élément." />
 ```
 
 ### CSS
@@ -64,7 +61,7 @@ Cette propriété est une propriété propriétaire liée à Gecko/Mozilla et ne
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.-moz-user-focus")}}
+{{Compat}}
 
 ## Voir aussi
 

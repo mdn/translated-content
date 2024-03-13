@@ -1,12 +1,8 @@
 ---
 title: omnibox
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/omnibox
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/omnibox
 ---
+
 {{AddonSidebar}}
 
 <table class="standard-table">
@@ -46,6 +42,6 @@ Si deux ou plusieurs extensions définissent le même mot-clé, l'extension qui 
 }
 ```
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.omnibox")}}
+{{Compat}}

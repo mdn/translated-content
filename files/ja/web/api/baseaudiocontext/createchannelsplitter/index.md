@@ -1,28 +1,18 @@
 ---
 title: BaseAudioContext.createChannelSplitter()
 slug: Web/API/BaseAudioContext/createChannelSplitter
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - メソッド
-  - リファレンス
-  - ウェブ音声 API
-  - createChannelSplitter
-browser-compat: api.BaseAudioContext.createChannelSplitter
-translation_of: Web/API/BaseAudioContext/createChannelSplitter
-original_slug: Web/API/AudioContext/createChannelSplitter
 ---
+
 {{ APIRef("Web Audio API") }}
 
 `createChannelSplitter()` は {{domxref("BaseAudioContext")}} インターフェイスのメソッドで、 {{domxref("ChannelSplitterNode")}} を作成します。これは音声ストリームの個々のチャンネルにアクセスし、それらを個別に処理するために使用されます。
 
-> **Note:** {{domxref("ChannelSplitterNode.ChannelSplitterNode", "ChannelSplitterNode()")}} コンストラクターは {{domxref("ChannelSplitterNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#creating_an_audionode)を参照してください。
+> **メモ:** {{domxref("ChannelSplitterNode.ChannelSplitterNode", "ChannelSplitterNode()")}} コンストラクターは {{domxref("ChannelSplitterNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#creating_an_audionode)を参照してください。
 
 ## 構文
 
 ```js
-createChannelSplitter(numberOfOutputs)
+createChannelSplitter(numberOfOutputs);
 ```
 
 ### 引数
@@ -40,29 +30,29 @@ createChannelSplitter(numberOfOutputs)
 
 ```js
 var ac = new AudioContext();
-ac.decodeAudioData(someStereoBuffer, function(data) {
- var source = ac.createBufferSource();
- source.buffer = data;
- var splitter = ac.createChannelSplitter(2);
- source.connect(splitter);
- var merger = ac.createChannelMerger(2);
+ac.decodeAudioData(someStereoBuffer, function (data) {
+  var source = ac.createBufferSource();
+  source.buffer = data;
+  var splitter = ac.createChannelSplitter(2);
+  source.connect(splitter);
+  var merger = ac.createChannelMerger(2);
 
- // 左チャンネルのボリュームのみ小さくする
- var gainNode = ac.createGain();
- gainNode.gain.setValueAtTime(0.5, ac.currentTime);
- splitter.connect(gainNode, 0);
+  // 左チャンネルのボリュームのみ小さくする
+  var gainNode = ac.createGain();
+  gainNode.gain.setValueAtTime(0.5, ac.currentTime);
+  splitter.connect(gainNode, 0);
 
- // スプリッターをマージャーの 2 番目の入力に接続すると、チャンネルが効果的に交換され、
- // ステレオイメージが反転します。
- gainNode.connect(merger, 0, 1);
- splitter.connect(merger, 1, 0);
+  // スプリッターをマージャーの 2 番目の入力に接続すると、チャンネルが効果的に交換され、
+  // ステレオイメージが反転します。
+  gainNode.connect(merger, 0, 1);
+  splitter.connect(merger, 1, 0);
 
- var dest = ac.createMediaStreamDestination();
+  var dest = ac.createMediaStreamDestination();
 
- // ChannelMergerNode を使っているので、ステレオの MediaStream が
- // できました。これでウェブ音声グラフを WebRTC や MediaRecorder などに
- // パイプするのに使えます。
- merger.connect(dest);
+  // ChannelMergerNode を使っているので、ステレオの MediaStream が
+  // できました。これでウェブオーディオグラフを WebRTC や MediaRecorder などに
+  // パイプするのに使えます。
+  merger.connect(dest);
 });
 ```
 
@@ -76,4 +66,4 @@ ac.decodeAudioData(someStereoBuffer, function(data) {
 
 ## 関連情報
 
-- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

@@ -1,18 +1,8 @@
 ---
 title: StylePropertyMapReadOnly.size
 slug: Web/API/StylePropertyMapReadOnly/size
-tags:
-  - API
-  - CSS 型付きオブジェクトモデル API
-  - 実験的
-  - Houdini
-  - Property
-  - リファレンス
-  - StylePropertyMapReadOnly
-  - size
-browser-compat: api.StylePropertyMapReadOnly.size
-translation_of: Web/API/StylePropertyMapReadOnly/size
 ---
+
 {{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
 **`size`** は {{domxref("StylePropertyMapReadOnly")}} インターフェイスの読み取り専用プロパティで、 `StylePropertyMapReadOnly` オブジェクトの大きさを符号なし長整数で返します。
@@ -20,7 +10,7 @@ translation_of: Web/API/StylePropertyMapReadOnly/size
 ## 構文
 
 ```js
-var size = StylePropertyMapReadOnly.size
+var size = StylePropertyMapReadOnly.size;
 ```
 
 ### 値
@@ -33,7 +23,7 @@ var size = StylePropertyMapReadOnly.size
 
 ```js
 // 要素を取得
-const buttonEl = document.querySelector('button');
+const buttonEl = document.querySelector("button");
 
 // `computedStyleMap` ですべての計算済みスタイルが取得できます
 const allComputedStyles = buttonEl.computedStyleMap();

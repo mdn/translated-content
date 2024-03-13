@@ -1,15 +1,8 @@
 ---
 title: handler.preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/preventExtensions
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Proxy
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/preventExtensions
-original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/preventExtensions
 ---
+
 {{JSRef}}
 
 La méthode **`handler.preventExtensions()`** est une trappe pour {{jsxref("Object.preventExtensions()")}}.
@@ -20,8 +13,7 @@ La méthode **`handler.preventExtensions()`** est une trappe pour {{jsxref("Obje
 
 ```js
 var p = new Proxy(cible, {
-  preventExtensions: function(cible) {
-  }
+  preventExtensions: function (cible) {},
 });
 ```
 
@@ -58,40 +50,43 @@ Si les invariants suivants ne sont pas respectés, le proxy renverra une execpti
 On intercepte l'appel à {{jsxref("Object.preventExtensions()")}} dans l'exemple suivant :
 
 ```js
-var p = new Proxy({}, {
-  preventExtensions: function(cible) {
-    console.log("appelé");
-    Object.preventExtensions(cible);
-    return true;
-  }
-});
+var p = new Proxy(
+  {},
+  {
+    preventExtensions: function (cible) {
+      console.log("appelé");
+      Object.preventExtensions(cible);
+      return true;
+    },
+  },
+);
 
 console.log(Object.preventExtensions(p)); // "appelé"
-                                          // true
+// true
 ```
 
 Le code suivant ne respecte pas l'invariant :
 
 ```js
-var p = new Proxy({}, {
-  preventExtensions: function(cible) {
-    return true;
-  }
-});
+var p = new Proxy(
+  {},
+  {
+    preventExtensions: function (cible) {
+      return true;
+    },
+  },
+);
 
 Object.preventExtensions(p); // TypeError est levée
 ```
 
 ## Spécifications
 
-| Spécification                                                                                                                                                        | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-preventextensions', '[[PreventExtensions]]')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-preventextensions', '[[PreventExtensions]]')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Proxy.handler.preventExtensions")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,16 +1,9 @@
 ---
 title: 画像の使用
 slug: Web/API/Canvas_API/Tutorial/Using_images
-tags:
-  - 上級者
-  - キャンバス
-  - グラフィック
-  - HTML
-  - チュートリアル
-translation_of: Web/API/Canvas_API/Tutorial/Using_images
-original_slug: Web/Guide/HTML/Canvas_tutorial/Using_images
 ---
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_text", "Web/API/Canvas_API/Tutorial/Transformations" )}}
+
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_text", "Web/API/Canvas_API/Tutorial/Transformations" )}}
 
 これまで、[図形](/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)を作成して[スタイルを適用する](/ja/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)方法を見てきました。 {{HTMLElement("canvas")}} のより面白い機能のひとつが、画像を扱えることです。これは動的な画像合成を行う、グラフの背景として使用する、ゲームのスプライトとして使用するなどといったことが可能です。 PNG、GIF、JPEG といった、ブラウザーが対応しているどの形式でも外部画像が使用できます。同じページ上の別のキャンバス要素によって生成された画像も、ソースとして使用できます。
 
@@ -48,7 +41,7 @@ original_slug: Web/Guide/HTML/Canvas_tutorial/Using_images
 
 ### ほかのドメインにある画像の使用
 
-{{htmlattrxref("crossorigin", "img")}} 属性を{{HTMLElement("img")}} 要素に使用すると（{{domxref("HTMLImageElement.crossOrigin")}} プロパティを反映）、`drawImage()` を呼び出してほかのドメインから画像を読み込む許可を求めることができます。ホスティングしているドメインが画像のドメイン間のアクセスを許可している場合は、キャンバスを汚染せずに画像を使用できます。そうでない場合は、画像を使用すると[キャンバスを汚染します](/ja/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f)。
+[`crossorigin`](/ja/docs/Web/HTML/Element/img#crossorigin) 属性を{{HTMLElement("img")}} 要素に使用すると（{{domxref("HTMLImageElement.crossOrigin")}} プロパティを反映）、`drawImage()` を呼び出してほかのドメインから画像を読み込む許可を求めることができます。ホスティングしているドメインが画像のドメイン間のアクセスを許可している場合は、キャンバスを汚染せずに画像を使用できます。そうでない場合は、画像を使用すると[キャンバスを汚染します](/ja/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f)。
 
 ### ほかの canvas 要素の使用
 
@@ -61,8 +54,8 @@ original_slug: Web/Guide/HTML/Canvas_tutorial/Using_images
 もうひとつの方法は、スクリプト内で新たな {{domxref("HTMLImageElement")}} オブジェクトを作成することです。そのために、便利な `Image()` コンストラクターを使用することができます。
 
 ```js
-var img = new Image();   // 新たな img 要素を作成
-img.src = 'myImage.png'; // ソースのパスを設定
+var img = new Image(); // 新たな img 要素を作成
+img.src = "myImage.png"; // ソースのパスを設定
 ```
 
 このスクリプトを実行すると、画像の読み込みが始まります。
@@ -70,11 +63,15 @@ img.src = 'myImage.png'; // ソースのパスを設定
 画像の読み込みが完了する前に `drawImage()` を呼び出しても、何も行いません（あるいは、古いブラウザーでは例外が発生するかもしれません）。よって画像を読み込む前に描画しないようにするために、load イベントを使用する必要があります。
 
 ```js
-var img = new Image();   // 新たな img 要素を作成
-img.addEventListener('load', function() {
-  // drawImage を実行する文をここに置く
-}, false);
-img.src = 'myImage.png'; // ソースのパスを設定
+var img = new Image(); // 新たな img 要素を作成
+img.addEventListener(
+  "load",
+  function () {
+    // drawImage を実行する文をここに置く
+  },
+  false,
+);
+img.src = "myImage.png"; // ソースのパスを設定
 ```
 
 外部画像を 1 つだけ使用するのであれば、これは良い方法ですが、 2 つ以上を追跡する必要がある場合は、もっと賢い方法に頼る必要があります。画像の先読み方法については、このチュートリアルの範囲外ですが、覚えておくとよいでしょう。
@@ -84,8 +81,9 @@ img.src = 'myImage.png'; // ソースのパスを設定
 画像を埋め込む別の方法が、[data: URL](/ja/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) です。 data URL によって、画像を Base64 でエンコードした文字列として、コード内で完全に定義できます。
 
 ```js
-var img = new Image();   // 新たな img 要素を作成
-img.src = 'data:image/gif;base64,R0lGODlhCwALAIAAAAAA3pn/ZiH5BAEAAAEALAAAAAALAAsAAAIUhA+hkcuO4lmNVindo7qyrIXiGBYAOw==';
+var img = new Image(); // 新たな img 要素を作成
+img.src =
+  "data:image/gif;base64,R0lGODlhCwALAIAAAAAA3pn/ZiH5BAEAAAEALAAAAAALAAsAAAIUhA+hkcuO4lmNVindo7qyrIXiGBYAOw==";
 ```
 
 data URL の利点のひとつが、別にサーバとの通信を行うことなく即座に結果の画像を使用できることです。ほかに潜在的な利点として [CSS](/ja/docs/Web/CSS)、[JavaScript](/ja/docs/Web/JavaScript)、[HTML](/ja/docs/Web/HTML)、画像をひとつのファイルにカプセル化することもでき、ほかの場所へ持ち運びやすくなります。
@@ -98,11 +96,11 @@ data URL の利点のひとつが、別にサーバとの通信を行うこと�
 
 ```js
 function getMyVideo() {
-  var canvas = document.getElementById('canvas');
+  var canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
+    var ctx = canvas.getContext("2d");
 
-    return document.getElementById('myvideo');
+    return document.getElementById("myvideo");
   }
 }
 ```
@@ -116,7 +114,7 @@ function getMyVideo() {
 - {{domxref("CanvasRenderingContext2D.drawImage", "drawImage(image, x, y)")}}
   - : 引数 `image` で指定した `CanvasImageSource` を、座標 (`x`, `y`) に描画します。
 
-> **Note:** SVG 画像は、ルート \<svg> 要素で幅と高さを指定しなければなりません。
+> **メモ:** SVG 画像は、ルート \<svg> 要素で幅と高さを指定しなければなりません。
 
 ### 例: シンプルな折れ線グラフ
 
@@ -132,9 +130,9 @@ function getMyVideo() {
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   var img = new Image();
-  img.onload = function() {
+  img.onload = function () {
     ctx.drawImage(img, 0, 0);
     ctx.beginPath();
     ctx.moveTo(30, 96);
@@ -143,7 +141,7 @@ function draw() {
     ctx.lineTo(170, 15);
     ctx.stroke();
   };
-  img.src = 'backdrop.png';
+  img.src = "backdrop.png";
 }
 ```
 
@@ -162,7 +160,7 @@ function draw() {
 
 以下の例は画像を壁紙として使用して、キャンバス上で数回繰り返して貼り付けています。ループ処理によって、さまざまな場所に縮小した画像を貼り付けました。以下のコードでは、最初の `for` ループで行の繰り返し処理を行います。2 番目の `for` ループで列の繰り返し処理を行います。画像は元のサイズの 3 分の 1 である、 50x38 ピクセルに縮小しています。
 
-> **Note:** 画像を拡大しすぎると不鮮明に、あるいは縮小しすぎると荒くなります。読みやすくしておかなければならない文字列が画像内にある場合は、サイズを変更しないほうがよいでしょう。
+> **メモ:** 画像を拡大しすぎると不鮮明に、あるいは縮小しすぎると荒くなります。読みやすくしておかなければならない文字列が画像内にある場合は、サイズを変更しないほうがよいでしょう。
 
 ```html hidden
 <html>
@@ -174,16 +172,16 @@ function draw() {
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   var img = new Image();
-  img.onload = function() {
+  img.onload = function () {
     for (var i = 0; i < 4; i++) {
       for (var j = 0; j < 3; j++) {
         ctx.drawImage(img, j * 50, i * 38, 50, 38);
       }
     }
   };
-  img.src = 'rhino.jpg';
+  img.src = "rhino.jpg";
 }
 ```
 
@@ -215,8 +213,8 @@ function draw() {
   <body onload="draw();">
     <canvas id="canvas" width="150" height="150"></canvas>
     <div style="display:none;">
-      <img id="source" src="rhino.jpg" width="300" height="227">
-      <img id="frame" src="canvas_picture_frame.png" width="132" height="150">
+      <img id="source" src="rhino.jpg" width="300" height="227" />
+      <img id="frame" src="canvas_picture_frame.png" width="132" height="150" />
     </div>
   </body>
 </html>
@@ -224,15 +222,24 @@ function draw() {
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
-  var ctx = canvas.getContext('2d');
+  var canvas = document.getElementById("canvas");
+  var ctx = canvas.getContext("2d");
 
   // スライス画像を描く
-  ctx.drawImage(document.getElementById('source'),
-                33, 71, 104, 124, 21, 20, 87, 104);
+  ctx.drawImage(
+    document.getElementById("source"),
+    33,
+    71,
+    104,
+    124,
+    21,
+    20,
+    87,
+    104,
+  );
 
   // フレームを描く
-  ctx.drawImage(document.getElementById('frame'), 0, 0);
+  ctx.drawImage(document.getElementById("frame"), 0, 0);
 }
 ```
 
@@ -255,19 +262,19 @@ function draw() {
   <body onload="draw();">
     <table>
       <tr>
-        <td><img src="gallery_1.jpg"></td>
-        <td><img src="gallery_2.jpg"></td>
-        <td><img src="gallery_3.jpg"></td>
-        <td><img src="gallery_4.jpg"></td>
+        <td><img src="gallery_1.jpg" /></td>
+        <td><img src="gallery_2.jpg" /></td>
+        <td><img src="gallery_3.jpg" /></td>
+        <td><img src="gallery_4.jpg" /></td>
       </tr>
       <tr>
-        <td><img src="gallery_5.jpg"></td>
-        <td><img src="gallery_6.jpg"></td>
-        <td><img src="gallery_7.jpg"></td>
-        <td><img src="gallery_8.jpg"></td>
+        <td><img src="gallery_5.jpg" /></td>
+        <td><img src="gallery_6.jpg" /></td>
+        <td><img src="gallery_7.jpg" /></td>
+        <td><img src="gallery_8.jpg" /></td>
       </tr>
-     </table>
-     <img id="frame" src="canvas_picture_frame.png" width="132" height="150">
+    </table>
+    <img id="frame" src="canvas_picture_frame.png" width="132" height="150" />
   </body>
 </html>
 ```
@@ -276,7 +283,7 @@ function draw() {
 
 ```css
 body {
-  background: 0 -100px repeat-x url(bg_gallery.png) #4F191A;
+  background: 0 -100px repeat-x url(bg_gallery.png) #4f191a;
   margin: 10px;
 }
 
@@ -297,28 +304,25 @@ td {
 
 ```js
 function draw() {
-
   // すべての画像に対するループ処理
   for (var i = 0; i < document.images.length; i++) {
-
     // 額縁の画像用の canvas は追加しない
-    if (document.images[i].getAttribute('id') != 'frame') {
-
+    if (document.images[i].getAttribute("id") != "frame") {
       // canvas 要素を作成
-      canvas = document.createElement('canvas');
-      canvas.setAttribute('width', 132);
-      canvas.setAttribute('height', 150);
+      canvas = document.createElement("canvas");
+      canvas.setAttribute("width", 132);
+      canvas.setAttribute("height", 150);
 
       // 画像の前に挿入
-      document.images[i].parentNode.insertBefore(canvas,document.images[i]);
+      document.images[i].parentNode.insertBefore(canvas, document.images[i]);
 
-      ctx = canvas.getContext('2d');
+      ctx = canvas.getContext("2d");
 
       // canvas に画像を描く
       ctx.drawImage(document.images[i], 15, 20);
 
       // 額縁を追加
-      ctx.drawImage(document.getElementById('frame'), 0, 0);
+      ctx.drawImage(document.getElementById("frame"), 0, 0);
     }
   }
 }

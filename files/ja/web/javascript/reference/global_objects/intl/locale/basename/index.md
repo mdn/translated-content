@@ -1,18 +1,8 @@
 ---
 title: Intl.Locale.prototype.baseName
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/baseName
-tags:
-  - 国際化
-  - Intl
-  - JavaScript
-  - プロパティ
-  - Locale
-  - ローカライズ
-  - プロトタイプ
-  - リファレンス
-browser-compat: javascript.builtins.Intl.Locale.baseName
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/baseName
 ---
+
 {{JSRef}}
 
 **`Intl.Locale.prototype.baseName`** プロパティは、 `Locale` の文字列表現の部分文字列を返し、そこには `Locale` についての中核情報が含まれています。
@@ -50,7 +40,7 @@ console.log(japan.baseName); // "ja-JP" と表示
 // 入力文字列は言語がオランダ語、地域がベルギーであることを示していますが、
 
 // ただし、オプションオブジェクトで地域を上書きしており、オランダに設定しています
-let dutch = new Intl.Locale("nl-Latn-BE", {region: "NL"});
+let dutch = new Intl.Locale("nl-Latn-BE", { region: "NL" });
 
 console.log(dutch.baseName); // "nl-Latn-NL" と表示
 ```

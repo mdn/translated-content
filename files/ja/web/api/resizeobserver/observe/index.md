@@ -1,25 +1,18 @@
 ---
-title: ResizeObserver.observe()
+title: "ResizeObserver: observe() メソッド"
+short-title: observe()
 slug: Web/API/ResizeObserver/observe
-page-type: web-api-instance-method
-tags:
-  - API
-  - メソッド
-  - リファレンス
-  - リサイズオブザーバー API
-  - ResizeObserver
-  - observe()
-  - observers
-browser-compat: api.ResizeObserver.observe
-translation_of: Web/API/ResizeObserver/observe
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
+
 {{APIRef("Resize Observer API")}}
 
 **`observe()`** は {{domxref("ResizeObserver")}} インターフェイスのメソッドで、指定された {{domxref('Element')}} または {{domxref('SVGElement')}} の監視を開始します。
 
 ## 構文
 
-```js
+```js-nolint
 observe(target)
 observe(target, options)
 ```
@@ -53,26 +46,41 @@ observe(target, options)
 
 ## 例
 
-次のスニペットは [resize-observer-text.html](https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html) ([ソースを表示](https://github.com/mdn/dom-examples/blob/master/resize-observer/resize-observer-text.html)) の例から取ったものです。
+次のスニペットは [resize-observer-text.html](https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html) ([ソースを表示](https://github.com/mdn/dom-examples/blob/main/resize-observer/resize-observer-text.html)) の例から取ったものです。
 
 ```js
-const resizeObserver = new ResizeObserver(entries => {
-  for (let entry of entries) {
-    if(entry.contentBoxSize) {
+const resizeObserver = new ResizeObserver((entries) => {
+  for (const entry of entries) {
+    if (entry.contentBoxSize) {
       // クロームが標準外の配列を使用しているかどうかのチェック
       if (entry.contentBoxSize[0]) {
-        h1Elem.style.fontSize = Math.max(1.5, entry.contentBoxSize[0].inlineSize/200) + 'rem';
-        pElem.style.fontSize = Math.max(1, entry.contentBoxSize[0].inlineSize/600) + 'rem';
+        h1Elem.style.fontSize = `${Math.max(
+          1.5,
+          entry.contentBoxSize[0].inlineSize / 200,
+        )}rem`;
+        pElem.style.fontSize = `${Math.max(
+          1,
+          entry.contentBoxSize[0].inlineSize / 600,
+        )}rem`;
       } else {
-        h1Elem.style.fontSize = Math.max(1.5, entry.contentBoxSize.inlineSize/200) + 'rem';
-        pElem.style.fontSize = Math.max(1, entry.contentBoxSize.inlineSize/600) + 'rem';
+        h1Elem.style.fontSize = `${Math.max(
+          1.5,
+          entry.contentBoxSize.inlineSize / 200,
+        )}rem`;
+        pElem.style.fontSize = `${Math.max(
+          1,
+          entry.contentBoxSize.inlineSize / 600,
+        )}rem`;
       }
     } else {
-      h1Elem.style.fontSize = Math.max(1.5, entry.contentRect.width/200) + 'rem';
-      pElem.style.fontSize = Math.max(1, entry.contentRect.width/600) + 'rem';
+      h1Elem.style.fontSize = `${Math.max(
+        1.5,
+        entry.contentRect.width / 200,
+      )}rem`;
+      pElem.style.fontSize = `${Math.max(1, entry.contentRect.width / 600)}rem`;
     }
   }
-  console.log('Size changed');
+  console.log("サイズが変更されました");
 });
 
 resizeObserver.observe(divElem);
@@ -81,7 +89,7 @@ resizeObserver.observe(divElem);
 オプションオブジェクトを使った `observe()` の呼び出しは、次のようになります。
 
 ```js
-resizeObserver.observe(divElem, { box : 'border-box' });
+resizeObserver.observe(divElem, { box: "border-box" });
 ```
 
 ## 仕様書

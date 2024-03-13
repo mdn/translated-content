@@ -1,15 +1,8 @@
 ---
 title: element.replaceChild
 slug: Web/API/Node/replaceChild
-tags:
-  - API
-  - DOM
-  - Enfant
-  - Méthodes
-  - Noeuds
-  - Remplacement
-translation_of: Web/API/Node/replaceChild
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`Node.replaceChild()`** remplace un nœud enfant du noeud spécifié par un autre nœud.
@@ -40,7 +33,9 @@ var sp1 = document.createElement("span");
 sp1.id = "newSpan";
 
 // Crée du contenu pour le nouvel élément
-var sp1_content = document.createTextNode("nouvel élément span de remplacement.");
+var sp1_content = document.createTextNode(
+  "nouvel élément span de remplacement.",
+);
 
 // Applique ce contenu au nouvel élément
 sp1.appendChild(sp1_content);
@@ -60,13 +55,11 @@ parentDiv.replaceChild(sp1, sp2);
 
 ## Spécifications
 
-| Spécification                                                                                        | Statut                           | Commentaire |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName("DOM WHATWG", "#dom-node-replacechild", "Node: replaceChild")}} | {{Spec2("DOM WHATWG")}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Node.replaceChild")}}
+{{Compat}}
 
 ## Voir aussi
 

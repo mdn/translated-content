@@ -1,15 +1,8 @@
 ---
 title: CanvasRenderingContext2D.arc()
 slug: Web/API/CanvasRenderingContext2D/arc
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - メソッド
-  - リファレンス
-browser-compat: api.CanvasRenderingContext2D.arc
-translation_of: Web/API/CanvasRenderingContext2D/arc
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.arc()`** は[キャンバス 2D API](/ja/docs/Web/API/CanvasRenderingContext2D) のメソッドで、サブパスに円弧を加えます。
@@ -35,7 +28,7 @@ void ctx.arc(x, y, radius, startAngle, endAngle [, counterclockwise]);
 - `endAngle`
   - : 円弧の終わりの角度を、 X 軸の正の方向から時計回りに定められるラジアン角で表します。
 - `counterclockwise` {{optional_inline}}
-  - : 省略可能な論理値です。 `true` の場合、円弧を反時計回りに始まりから終わりの角度に向けて描きます。既定値は `fale` （時計回り）です。
+  - : 省略可能な論理値です。 `true` の場合、円弧を反時計回りに始まりから終わりの角度に向けて描きます。既定値は `false` （時計回り）です。
 
 ## 例
 
@@ -54,8 +47,8 @@ void ctx.arc(x, y, radius, startAngle, endAngle [, counterclockwise]);
 円弧の X 座標は 100、 Y 座標は 75、半径は 50 です。円弧を一周させるには、 0 ラジアン（0**°**）の角度で始まり、 2π ラジアン（360**°**）の角度で終わります。
 
 ```js
-const canvas = document.querySelector('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.beginPath();
 ctx.arc(100, 75, 50, 0, 2 * Math.PI);
@@ -75,19 +68,19 @@ ctx.stroke();
 ```
 
 ```js
-const canvas = document.querySelector('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
 
 // Draw shapes
 for (let i = 0; i <= 3; i++) {
   for (let j = 0; j <= 2; j++) {
     ctx.beginPath();
-    let x             = 25 + j * 50;                 // x 座標
-    let y             = 25 + i * 50;                 // y 座標
-    let radius        = 20;                          // 円弧の半径
-    let startAngle    = 0;                           // 円弧の開始位置
-    let endAngle      = Math.PI + (Math.PI * j) / 2; // 円弧の終了位置
-    let counterclockwise = i % 2 == 1;                  // 円弧を描く方向
+    let x = 25 + j * 50; // x 座標
+    let y = 25 + i * 50; // y 座標
+    let radius = 20; // 円弧の半径
+    let startAngle = 0; // 円弧の開始位置
+    let endAngle = Math.PI + (Math.PI * j) / 2; // 円弧の終了位置
+    let counterclockwise = i % 2 == 1; // 円弧を描く方向
 
     ctx.arc(x, y, radius, startAngle, endAngle, counterclockwise);
 

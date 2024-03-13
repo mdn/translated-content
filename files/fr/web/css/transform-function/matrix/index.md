@@ -1,10 +1,8 @@
 ---
 title: matrix()
 slug: Web/CSS/transform-function/matrix
-translation_of: Web/CSS/transform-function/matrix()
-original_slug: Web/CSS/transform-function/matrix()
-browser-compat: css.types.transform-function.matrix
 ---
+
 {{CSSRef}}
 
 La fonction **`matrix()`** définit une matrice homogène de transformation, définie par 6 coefficients. Les paramètres de cette fonction sont ces coefficients, dans l'ordre des lignes puis des colonnes, suivis des coefficients de translation.
@@ -110,8 +108,8 @@ p {
   background-color: teal;
 }
 
-.transformation{
-  transform: matrix(0.87,-0.5,0,0.87,0,1);
+.transformation {
+  transform: matrix(0.87, -0.5, 0, 0.87, 0, 1);
   background-color: blue;
 }
 ```

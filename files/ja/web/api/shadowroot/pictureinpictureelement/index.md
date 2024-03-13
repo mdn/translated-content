@@ -1,15 +1,8 @@
 ---
 title: ShadowRoot.pictureInPictureElement
 slug: Web/API/ShadowRoot/pictureInPictureElement
-tags:
-  - API
-  - プロパティ
-  - リファレンス
-  - ShadowRoot
-  - ウェブコンポーネント
-  - シャドウ DOM
-browser-compat: api.ShadowRoot.pictureInPictureElement
 ---
+
 {{APIRef("Shadow DOM")}}
 
 **`pictureInPictureElement`** は {{domxref("ShadowRoot")}} インターフェイスの読み取り専用プロパティで、このシャドウツリー内で現在、ピクチャインピクチャモードで表示されている要素 ({{domxref("Element")}}) を返します。現在、ピクチャインピクチャモードが使用されていない場合は `null` を返します。
@@ -17,7 +10,7 @@ browser-compat: api.ShadowRoot.pictureInPictureElement
 ## 構文
 
 ```js
-shadowRoot.pictureInPictureElement
+shadowRoot.pictureInPictureElement;
 ```
 
 ### 値
@@ -27,7 +20,7 @@ shadowRoot.pictureInPictureElement
 ## 例
 
 ```js
-let customElem = document.querySelector('my-shadow-dom-element');
+let customElem = document.querySelector("my-shadow-dom-element");
 let shadow = customElem.shadowRoot;
 let pipElem = shadow.pictureInPictureElement;
 ```

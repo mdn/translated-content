@@ -1,18 +1,8 @@
 ---
 title: 通知 API の使用
 slug: Web/API/Notifications_API/Using_the_Notifications_API
-page-type: guide
-tags:
-  - API
-  - Advanced
-  - Guide
-  - Notifications
-  - Notifications API
-  - Push
-  - Tutorial
-browser-compat: api.Notification
-translation_of: Web/API/Notifications_API/Using_the_Notifications_API
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 [通知 API](/ja/docs/Web/API/Notifications_API) は、ウェブページやアプリからシステムレベルでページ外部に表示される通知を送ることを可能にします。これにより、アプリケーションがアイドルやバックグラウンドの状態であっても、アプリからユーザーに情報を送信することができます。この記事では、アプリで API を使用する方法の基本を見ていきます。
@@ -27,7 +17,7 @@ translation_of: Web/API/Notifications_API/Using_the_Notifications_API
 
 ウェブ通知の最も顕著な用途の一つが、ウェブベースのメールや IRC アプリケーションにおいて、新しいメッセージを受信したときに、ユーザーがほかのアプリケーションで何かをしていても通知をする必要がある場合です。これには数多くの事例が存在し、例えば [Slack](https://slack.com/) などがあります。
 
-ウェブ通知がどのように利用できるのかの考えを深めるために、実世界の例を — To-do リストアプリ — を書いてみました。これは [IndexedDB](/ja/docs/Web/API/IndexedDB_API) を使用してローカルにデータを格納し、タスクの期限が来たときにシステム通知を使用してユーザーに通知します。 [To-do リストのコードをダウンロード](https://github.com/mdn/to-do-notifications/tree/gh-pages)するか、[ライブで実行するアプリを見る](https://mdn.github.io/to-do-notifications/)かしてみましょう。
+ウェブ通知がどのように利用できるのかの考えを深めるために、実世界の例を — To-do リストアプリ — を書いてみました。これは [IndexedDB](/ja/docs/Web/API/IndexedDB_API) を使用してローカルにデータを格納し、タスクの期限が来たときにシステム通知を使用してユーザーに通知します。 [To-do リストのコードをダウンロード](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)するか、[ライブで実行するアプリを見る](https://mdn.github.io/dom-examples/to-do-notifications/)かしてみましょう。
 
 ## 許可の要求
 
@@ -53,7 +43,7 @@ translation_of: Web/API/Notifications_API/Using_the_Notifications_API
 通知を表示する許可をまだ得ていない場合は、アプリケーションは {{domxref("Notification.requestPermission()")}} メソッドを使用してユーザーに要求する必要があります。もっとも簡単な形では、次のようなものがあります。
 
 ```js
-Notification.requestPermission().then(function(result) {
+Notification.requestPermission().then(function (result) {
   console.log(result);
 });
 ```
@@ -81,24 +71,26 @@ function askNotificationPermission() {
   // function to actually ask the permissions
   function handlePermission(permission) {
     // set the button to shown or hidden, depending on what the user answers
-    if(Notification.permission === 'denied' || Notification.permission === 'default') {
-      notificationBtn.style.display = 'block';
+    if (
+      Notification.permission === "denied" ||
+      Notification.permission === "default"
+    ) {
+      notificationBtn.style.display = "block";
     } else {
-      notificationBtn.style.display = 'none';
+      notificationBtn.style.display = "none";
     }
   }
 
   // Let's check if the browser supports notifications
-  if (!('Notification' in window)) {
+  if (!("Notification" in window)) {
     console.log("This browser does not support notifications.");
   } else {
-    if(checkNotificationPromise()) {
-      Notification.requestPermission()
-      .then((permission) => {
+    if (checkNotificationPromise()) {
+      Notification.requestPermission().then((permission) => {
         handlePermission(permission);
-      })
+      });
     } else {
-      Notification.requestPermission(function(permission) {
+      Notification.requestPermission(function (permission) {
         handlePermission(permission);
       });
     }
@@ -110,7 +102,7 @@ function askNotificationPermission() {
 
 コードの重複を避けるために、このスニペットの最初のメインブロックである `handlePermission()` 関数の中に、多少のハウスキーピングコードを格納しています。この内部では、 `Notification.permission` の値を明示的に設定し (古いバージョンの Chrome では自動的に設定できないものがありました)、ユーザーが許可ダイアログで選択した内容に応じてボタンを表示・非表示にしています。すでに許可されている場合は表示したくありませんが、ユーザーが許可を拒否することを選択した場合は、後で変更できるようにしたいと考えています。
 
-> **Note:** バージョン 37 より前の Chrome では、 {{domxref("Notification.requestPermission()")}} を `load` イベントのハンドラー内で呼び出すことを許可していませんでした ([issue 274284](https://bugs.chromium.org/p/chromium/issues/detail?id=274284) をご覧ください)。
+> **メモ:** バージョン 37 より前の Chrome では、 {{domxref("Notification.requestPermission()")}} を `load` イベントのハンドラー内で呼び出すことを許可していませんでした ([issue 274284](https://bugs.chromium.org/p/chromium/issues/detail?id=274284) をご覧ください)。
 
 ### requestPermission() プロミスの機能検出
 
@@ -118,14 +110,14 @@ function askNotificationPermission() {
 
 ```js
 function checkNotificationPromise() {
-    try {
-      Notification.requestPermission().then();
-    } catch(e) {
-      return false;
-    }
-
-    return true;
+  try {
+    Notification.requestPermission().then();
+  } catch (e) {
+    return false;
   }
+
+  return true;
+}
 ```
 
 基本的には、 `.then()` メソッドが `requestPermission()` で利用できるかどうかを確認します。成功した場合は `true` を返します。失敗した場合は、 `false` を `catch() {}` ブロック内で返します。
@@ -137,9 +129,9 @@ function checkNotificationPromise() {
 例えば To-do リストの例では必要に応じて以下のスニペットを使用して通知を作成します (`createNotification()` 内にあります)。
 
 ```js
-const img = '/to-do-notifications/img/icon-128.png';
+const img = "/to-do-notifications/img/icon-128.png";
 const text = 'HEY! Your task "' + title + '" is now overdue.';
-const notification = new Notification('To do list', { body: text, icon: img });
+const notification = new Notification("To do list", { body: text, icon: img });
 ```
 
 ## 通知を閉じる
@@ -147,18 +139,18 @@ const notification = new Notification('To do list', { body: text, icon: img });
 {{domxref("Notification.close","close()")}} を使用して、ユーザーに関係がなくなった通知を除去します (例えば、メッセージアプリなどで、ユーザーが既にウェブページ上の通知を読んだ場合や、音楽アプリですでに次の曲が始まっているため、曲の変更を行うための通知を閉じるなど)。最近のブラウザーの多くは、数秒 (約 4 秒) 経過すると通知を自動的に解除しますが、これはユーザーやユーザーエージェントの判断に委ねられているため、一般的には気にする必要はありません。通知の削除はオペレーティングシステムレベルでも発生する可能性があり、ユーザーが制御できるようにしておく必要があります。古いバージョンの Chrome は通知を自動的に削除しないので、他のブラウザーの通知トレイから通知を削除しないように、古いバージョンのブラウザーでのみ {{domxref("setTimeout()")}} の後に削除してください。
 
 ```js
-const n = new Notification('My Great Song');
-document.addEventListener('visibilitychange', function() {
-  if (document.visibilityState === 'visible') {
+const n = new Notification("My Great Song");
+document.addEventListener("visibilitychange", function () {
+  if (document.visibilityState === "visible") {
     // The tab has become visible so clear the now-stale Notification.
     n.close();
   }
 });
 ```
 
-> **Note:** この API は、 (現代のブラウザーで) 一定時間経過後に通知を画面から消去するだけのために使用すべきではありません。通知が最初に表示された後にユーザーがそれとやりとりすることを防ぐため、このメソッドは通知トレイからも通知を削除するためです。
+> **メモ:** この API は、 (現代のブラウザーで) 一定時間経過後に通知を画面から消去するだけのために使用すべきではありません。通知が最初に表示された後にユーザーがそれとやりとりすることを防ぐため、このメソッドは通知トレイからも通知を削除するためです。
 
-> **Note:** "close" イベントを受け取ったとき、それが通知を閉じたユーザーであるという保証はありません。これは仕様書に準拠しており、以下のように記載されています。「通知が基礎となる通知プラットフォームによって、またはユーザーによって閉じられるとき、その通知のための閉じるステップを実行しなければなりません。」
+> **メモ:** "close" イベントを受け取ったとき、それが通知を閉じたユーザーであるという保証はありません。これは仕様書に準拠しており、以下のように記載されています。「通知が基礎となる通知プラットフォームによって、またはユーザーによって閉じられるとき、その通知のための閉じるステップを実行しなければなりません。」
 
 ## Notification イベント
 
@@ -192,19 +184,19 @@ Notifications API の仕様では、{{domxref("Notification")}} のインスタ�
 以下の方法で、複数の通知を扱うことが可能です。
 
 ```js
-window.addEventListener('load', function () {
-  const button = document.getElementsByTagName('button')[0];
+window.addEventListener("load", function () {
+  const button = document.getElementsByTagName("button")[0];
 
   if (window.self !== window.top) {
     // Ensure that if our document is in a frame, we get the user
     // to first open it in its own tab or window. Otherwise, it
     // won't be able to request permission to send notifications.
     button.textContent = "View live result of the example code above";
-    button.addEventListener('click', () => window.open(location.href));
+    button.addEventListener("click", () => window.open(location.href));
     return;
   }
 
-  button.addEventListener('click', function () {
+  button.addEventListener("click", function () {
     // If the user agreed to get notified
     // Let's try to send ten notifications
     if (window.Notification && Notification.permission === "granted") {
@@ -212,7 +204,7 @@ window.addEventListener('load', function () {
       // Using an interval cause some browsers (including Firefox) are blocking notifications if there are too much in a certain time.
       const interval = window.setInterval(function () {
         // Thanks to the tag, we should only see the "Hi! 9" notification
-        const n = new Notification("Hi! " + i, {tag: 'soManyNotification'});
+        const n = new Notification("Hi! " + i, { tag: "soManyNotification" });
         if (i++ == 9) {
           window.clearInterval(interval);
         }
@@ -230,7 +222,9 @@ window.addEventListener('load', function () {
           // Using an interval cause some browsers (including Firefox) are blocking notifications if there are too much in a certain time.
           const interval = window.setInterval(function () {
             // Thanks to the tag, we should only see the "Hi! 9" notification
-            const n = new Notification("Hi! " + i, {tag: 'soManyNotification'});
+            const n = new Notification("Hi! " + i, {
+              tag: "soManyNotification",
+            });
             if (i++ == 9) {
               window.clearInterval(interval);
             }

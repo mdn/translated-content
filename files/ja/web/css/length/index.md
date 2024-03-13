@@ -1,28 +1,19 @@
 ---
 title: <length>
 slug: Web/CSS/length
-tags:
-  - CSS
-  - CSS データ型
-  - データ型
-  - レイアウト
-  - リファレンス
-  - ウェブ
-  - length
-browser-compat: css.types.length
-translation_of: Web/CSS/length
 ---
+
 {{CSSRef}}
 
 **`<length>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、長さの値を表します。長さは {{Cssxref("width")}}、{{Cssxref("height")}}、{{Cssxref("margin")}}、{{Cssxref("padding")}}、{{Cssxref("border-width")}}、{{Cssxref("font-size")}}、{{Cssxref("text-shadow")}} など数多くの CSS プロパティで使用されています。
 
-> **Note:** {{cssxref("&lt;percentage&gt;")}} 値も `<length>` 値を受け付ける同じプロパティの一部でも使用することができますが、 `<length>` 値と同じものではありません。 {{cssxref("&lt;length-percentage&gt;")}} を参照してください。
+> **メモ:** {{cssxref("&lt;percentage&gt;")}} 値も `<length>` 値を受け付ける同じプロパティの一部でも使用することができますが、 `<length>` 値と同じものではありません。 {{cssxref("&lt;length-percentage&gt;")}} を参照してください。
 
 ## 構文
 
 `<length>` データ型は一つの {{cssxref("&lt;number&gt;")}} とそれに続く以下に挙げる単位の一つから成ります。単位と数値の間に空白は置きません。数値 `0` の後の単位は省略可能です。
 
-> **Note:** 負の `<length>` を許容するプロパティとそうでないプロパティがあります。
+> **メモ:** 負の `<length>` を許容するプロパティとそうでないプロパティがあります。
 
 ### 単位
 
@@ -34,7 +25,7 @@ translation_of: Web/CSS/length
 
 フォントの相対長では、 `<length>` の値を、要素やその親で現在使われているフォントにおける、特定の文字やフォント属性の寸法で定義します。
 
-> **Note:** これらの単位、特に `em` と `rem` は、ユーザーがフォントサイズを変更しても[ページの縦方向のリズム](https://24ways.org/2006/compose-to-a-vertical-rhythm)を維持する、スケーラブルなレイアウトを作るためによく使われます。
+> **メモ:** これらの単位、特に `em` と `rem` は、ユーザーがフォントサイズを変更しても[ページの縦方向のリズム](https://24ways.org/2006/compose-to-a-vertical-rhythm)を維持する、スケーラブルなレイアウトを作るためによく使われます。
 
 - `cap` {{experimental_inline}}
   - : その要素の {{Cssxref("font")}} における "cap height" (ふつうの大文字の高さ) を表します。
@@ -82,7 +73,7 @@ translation_of: Web/CSS/length
 
 高解像度の端末では、インチ (`in`)、センチメートル (`cm`)、ミリメートル (`mm`) は対応する物理的な単位と同じになります。従って、 `px` の単位は、それ (1 インチの 1/96) を基準に定義されます。
 
-> **Note:** たくさんのユーザーが、テキストが読みやすくなるよう{{glossary("user agent", "ユーザーエージェント")}}の既定のフォントの大きさを拡大しています。絶対的な長さで指定すると、大きさが固定され、ユーザー設定によって拡大しなくなるため、アクセシビリティ上の問題が発生します。この理由から、 `font-size` を設定する場合には、 (`em` や `rem` のような) 相対的な単位が適しています。
+> **メモ:** たくさんのユーザーが、テキストが読みやすくなるよう{{glossary("user agent", "ユーザーエージェント")}}の既定のフォントの大きさを拡大しています。絶対的な長さで指定すると、大きさが固定され、ユーザー設定によって拡大しなくなるため、アクセシビリティ上の問題が発生します。この理由から、 `font-size` を設定する場合には、 (`em` や `rem` のような) 相対的な単位が適しています。
 
 - `px`
   - : 1 ピクセルです。画面表示では、伝統的に端末の 1 ピクセル (ドット) を表します。しかし、*プリンター*や*高解像度の画面*では、 CSS の 1 ピクセルが端末の複数ピクセルになることがあります。 `1px` = `1in` の 1/96 です。
@@ -117,14 +108,11 @@ translation_of: Web/CSS/length
 <div class="outer">
   <div class="input-container">
     <label>長さを入力してください:</label>
-    <input type="text" id="length">
+    <input type="text" id="length" />
   </div>
-  <div class="inner">
-
-  </div>
+  <div class="inner"></div>
 </div>
-<div class="results">
-</div>
+<div class="results"></div>
 ```
 
 #### CSS
@@ -146,15 +134,17 @@ html {
 .inner {
   height: 50px;
   background-color: #999;
-  box-shadow: inset 3px 3px 5px rgba(255,255,255,0.5),
-              inset -3px -3px 5px rgba(0,0,0,0.5);
+  box-shadow:
+    inset 3px 3px 5px rgba(255, 255, 255, 0.5),
+    inset -3px -3px 5px rgba(0, 0, 0, 0.5);
 }
 
 .result {
   height: 20px;
   background-color: #999;
-  box-shadow: inset 3px 3px 5px rgba(255,255,255,0.5),
-              inset -3px -3px 5px rgba(0,0,0,0.5);
+  box-shadow:
+    inset 3px 3px 5px rgba(255, 255, 255, 0.5),
+    inset -3px -3px 5px rgba(0, 0, 0, 0.5);
   background-color: orange;
   display: flex;
   align-items: center;
@@ -186,22 +176,22 @@ label {
 #### JavaScript
 
 ```js
-const inputDiv = document.querySelector('.inner');
-const inputElem = document.querySelector('input');
-const resultsDiv = document.querySelector('.results');
+const inputDiv = document.querySelector(".inner");
+const inputElem = document.querySelector("input");
+const resultsDiv = document.querySelector(".results");
 
-inputElem.addEventListener('change', () => {
+inputElem.addEventListener("change", () => {
   inputDiv.style.width = inputElem.value;
 
-  const result = document.createElement('div');
-  result.className = 'result';
+  const result = document.createElement("div");
+  result.className = "result";
   result.style.width = inputElem.value;
   result.innerHTML = `<code>width: ${inputElem.value}</code>`;
   resultsDiv.appendChild(result);
 
-  inputElem.value = '';
+  inputElem.value = "";
   inputElem.focus();
-})
+});
 ```
 
 #### 結果
@@ -220,4 +210,4 @@ inputElem.addEventListener('change', () => {
 
 - [CSS 値と単位チュートリアル](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)
 - [CSS 値と単位リファレンス](/ja/docs/Web/CSS/CSS_Values_and_Units)
-- [ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model)
+- [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model)

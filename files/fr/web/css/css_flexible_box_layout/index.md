@@ -1,14 +1,8 @@
 ---
 title: Disposition des boîtes flexibles CSS
-slug: Web/CSS/CSS_Flexible_Box_Layout
-tags:
-  - Aperçu
-  - CSS
-  - CSS Flexible Box Layout
-  - CSS Flexible Boxes
-  - Reference
-translation_of: Web/CSS/CSS_Flexible_Box_Layout
+slug: Web/CSS/CSS_flexible_box_layout
 ---
+
 {{CSSRef}}
 
 **Le module de disposition des boîtes flexibles CSS** (_CSS Flexible Box Layout_) est un module de CSS qui définit un modèle de boîtes optimisé pour la conception des interfaces utilisateurs. En utilisant le modèle des boîtes flexibles, les éléments d'une conteneur flexible peuvent être disposés dans n'importe quelle direction et étendre leurs dimensions (pour remplir un espace vide) ou se réduire pour éviter de dépasser en dehors de l'élément parent. On peut facilement manipuler les alignements horizontal et vertical des éléments fils. On peut aussi imbriquer plusieurs niveaux de boîtes flexibles afin de construire des dispositions en deux dimensions..
@@ -66,18 +60,16 @@ Les propriétés `align-content`, `align-self`, `align-items` et `justify-conten
   - : Ce guide explique les différentes méthodes qui permettent de modifier l'ordre et la direction des éléments dans le conteneur flexible et aborde également les problèmes que cela peut causer.
 - [Contrôler les proportions des éléments flexibles le long de l'axe principal](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Contrôler_les_proportions_des_boîtes_flexibles_le_long_de_l_axe_principal)
   - : Cet article explique le fonctionnement des propriétés `flex-grow`, `flex-shrink` et `flex-basis`.
-- [Maîtriser le passage à la ligne des éléments flexibles](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Ma%C3%AEtriser_passage_%C3%A0_la_ligne_des_%C3%A9l%C3%A9ments_flexibles)
+- [Maîtriser le passage à la ligne des éléments flexibles](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Maîtriser_passage_à_la_ligne_des_éléments_flexibles)
   - : Comment créer des conteneur flexibles qui s'étendent sur plusieurs lignes et contrôler l'affichage des éléments sur ces lignes.
 - [Les cas d'utilisation classiques des boîtes flexibles](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Cas_utilisation_flexbox)
   - : Des _design patterns_ pouvant être résolus avec les boîtes flexibles.
-- [La rétrocompatibilité de _flexbox_](/fr/docs/Web/CSS/Disposition_flexbox_CSS/R%C3%A9trocompatibilite_de_flexbox)
+- [La rétrocompatibilité de _flexbox_](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Rétrocompatibilite_de_flexbox)
   - : L'état de la compatibilité des navigateurs pour les boîtes flexibles, les différents problème d'interopérabilité, la gestion des anciens navigateurs et l'évolution de la spécification.
 
 ## Spécifications
 
-| Spécification                        | État                                 | Commentaires         |
-| ------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('CSS3 Flexbox')}} | {{ Spec2('CSS3 Flexbox') }} | Définition initiale. |
+{{Specifications}}
 
 ## Voir aussi
 

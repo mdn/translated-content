@@ -1,14 +1,8 @@
 ---
 title: document.getElementsByName()
 slug: Web/API/Document/getElementsByName
-tags:
-  - API
-  - DOM
-  - Document
-  - HTML
-  - Méthodes
-translation_of: Web/API/Document/getElementsByName
 ---
+
 {{ ApiRef("DOM") }}
 
 Renvoie une liste des éléments portant un {{domxref("element.name","name")}} donné dans le document (X)HTML.
@@ -16,7 +10,7 @@ Renvoie une liste des éléments portant un {{domxref("element.name","name")}} d
 ## Syntaxe
 
 ```js
-elements = document.getElementsByName(name)
+elements = document.getElementsByName(name);
 ```
 
 - `elements` est une collection de {{domxref("NodeList")}}
@@ -25,21 +19,21 @@ elements = document.getElementsByName(name)
 ## Exemple
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
- ...
-</head>
+  <head>
+    ...
+  </head>
 
-<body>
-<form name="up"><input type="text"></form>
-<div name="down"><input type="text"></div>
+  <body>
+    <form name="up"><input type="text" /></form>
+    <div name="down"><input type="text" /></div>
 
-<script>
-var up_forms = document.getElementsByName("up");
-console.log(up_forms[0].tagName); // retourne "FORM"
-</script>
-</body>
+    <script>
+      var up_forms = document.getElementsByName("up");
+      console.log(up_forms[0].tagName); // retourne "FORM"
+    </script>
+  </body>
 </html>
 ```
 
@@ -51,13 +45,7 @@ La méthode **getElementsByName** fonctionne différemment dans différents navi
 
 ## Spécifications
 
-- [DOM Level 2 HTML : getElementsByName](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-71555259) — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2-html/html.html#ID-71555259) (non normative)
-- [HTML5 : getElementsByName](http://www.whatwg.org/html/#dom-document-getelementsbyname)
-
-| Spécification                                                                                                                | Statut                               | Commentaire         |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('HTML WHATWG', '#dom-document-getelementsbyname', "Document.getElementsByName()")}} | {{ Spec2('HTML WHATWG') }} |                     |
-| {{SpecName("DOM2 HTML", "html.html#ID-71555259", "Document.getElementsByName()")}}                 | {{Spec2("DOM2 HTML")}}         | Définition initiale |
+{{Specifications}}
 
 ## Voir aussi
 

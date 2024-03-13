@@ -1,27 +1,18 @@
 ---
 title: contextualIdentities.onRemoved
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onRemoved
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Reference
-  - WebExtensions
-  - contextualIdentities
-  - onRemoved
-translation_of: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onRemoved
 ---
-{{AddonSidebar()}}
 
-Lancé lorsqu'une nouvelle identité contextuelle est supprimée. Les identités contextuelles peuvent être supprimées par des extensions en utilisant l'API `contextualIdentities`,  ou directement par l'utilisateur, en utilisant l'interface utilisateur du navigateur.
+{{AddonSidebar}}
+
+Lancé lorsqu'une nouvelle identité contextuelle est supprimée. Les identités contextuelles peuvent être supprimées par des extensions en utilisant l'API `contextualIdentities`, ou directement par l'utilisateur, en utilisant l'interface utilisateur du navigateur.
 
 ## Syntaxe
 
 ```js
-browser.contextualIdentities.onRemoved.addListener(listener)
-browser.contextualIdentities.onRemoved.removeListener(listener)
-browser.contextualIdentities.onRemoved.hasListener(listener)
+browser.contextualIdentities.onRemoved.addListener(listener);
+browser.contextualIdentities.onRemoved.removeListener(listener);
+browser.contextualIdentities.onRemoved.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -44,9 +35,9 @@ Les événements ont trois fonctions :
     - `changeInfo`
       - : `object`. Un objet qui contient une seule propriété, `contextualIdentity`, qui est un objet {{WebExtAPIRef("contextualIdentities.ContextualIdentity")}} représentant l'identité qui a été supprimée.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.contextualIdentities.onRemoved")}}
+{{Compat}}
 
 ## Exemples
 
@@ -60,7 +51,8 @@ browser.contextualIdentities.onRemoved.addListener(handleRemoved);
 
 {{WebExtExamples}}
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -87,4 +79,4 @@ browser.contextualIdentities.onRemoved.addListener(handleRemoved);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

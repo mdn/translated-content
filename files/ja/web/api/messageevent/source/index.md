@@ -1,31 +1,25 @@
 ---
-title: MessageEvent.source
+title: "MessageEvent: source プロパティ"
+short-title: source
 slug: Web/API/MessageEvent/source
-tags:
-  - API
-  - DOM
-  - MessageEvent
-  - プロパティ
-  - リファレンス
-  - messaging
-  - source
-browser-compat: api.MessageEvent.source
-translation_of: Web/API/MessageEvent/source
+l10n:
+  sourceCommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
 ---
+
 {{APIRef("HTML DOM")}}
 
-**`source`** は {{domxref("MessageEvent")}} インターフェイスの読み取り専用プロパティで、メッセージ送信者を表す `MessageEventSource` （{{domxref("WindowProxy")}}, {{domxref("MessagePort")}}, {{domxref("ServiceWorker")}} オブジェクトのいずれか）です。
+**`source`** は {{domxref("MessageEvent")}} インターフェイスの読み取り専用プロパティで、メッセージ送信者を表す `MessageEventSource` （{{glossary("WindowProxy")}}, {{domxref("MessagePort")}}, {{domxref("ServiceWorker")}} オブジェクトのいずれか）です。
 
 ## 値
 
-メッセージ送信者を表す `MessageEventSource` （{{domxref("WindowProxy")}}, {{domxref("MessagePort")}}, {{domxref("ServiceWorker")}} オブジェクトのいずれか）です。
+メッセージ送信者を表す `MessageEventSource` （{{glossary("WindowProxy")}}, {{domxref("MessagePort")}}, {{domxref("ServiceWorker")}} オブジェクトのいずれか）です。
 
 ## 例
 
 ```js
-myWorker.onmessage = function(e) {
+myWorker.onmessage = (e) => {
   result.textContent = e.data;
-  console.log('Message received from worker');
+  console.log("Message received from worker");
   console.log(e.source);
 };
 ```

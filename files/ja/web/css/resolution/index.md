@@ -1,16 +1,8 @@
 ---
 title: <resolution>
 slug: Web/CSS/resolution
-tags:
-  - CSS
-  - CSS データ型
-  - データ型
-  - リファレンス
-  - ウェブ
-  - レイアウト
-browser-compat: css.types.resolution
-translation_of: Web/CSS/resolution
 ---
+
 {{CSSRef}}
 
 **`<resolution>`** は [CSS](/ja/docs/Web/CSS) の [データ型](/ja/docs/Web/CSS/CSS_Types) で、[メディアクエリ](/ja/docs/Web/CSS/Media_Queries)の [resolution](/ja/docs/Web/CSS/@media/resolution) で使われ、出力端末のピクセル密度である、解像度を表します。
@@ -28,11 +20,11 @@ translation_of: Web/CSS/resolution
 - `dpcm`
   - : [センチメートルあたりのドット数](https://en.wikipedia.org/wiki/Dots_per_inch) を表します。1 インチは 2.54 cm なので、`1dpcm ≈ 2.54dpi` です。
 - `dppx`
-  - : ピクセル (`[px](/ja/docs/Web/CSS/length#px)`) あたりのドット数を表します。CSS の `in` と CSS の `px` の比率は 1:96 で固定なので、`1dppx` は `96dpi` と同じです。これは {{cssxref("image-resolution")}} で定義される、CSS の画像の既定の解像度に一致します。
+  - : ピクセル ([`px`](/ja/docs/Web/CSS/length#px)) あたりのドット数を表します。CSS の `in` と CSS の `px` の比率は 1:96 で固定なので、`1dppx` は `96dpi` と同じです。これは {{cssxref("image-resolution")}} で定義される、CSS の画像の既定の解像度に一致します。
 - `x`
   - : `dppx` の別名です。
 
-> **Note:** 仮に値 `0` に対しすべての単位が同じ解像度を表すとしても、単位を省略してはいけません。言い換えると `0` は無効で、`0dpi`、`0dpcm`、`0dppx` のどれも表しません。
+> **メモ:** 仮に値 `0` に対しすべての単位が同じ解像度を表すとしても、単位を省略してはいけません。言い換えると `0` は無効で、`0dpi`、`0dpcm`、`0dppx` のどれも表しません。
 
 ## 例
 

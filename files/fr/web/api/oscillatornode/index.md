@@ -1,8 +1,8 @@
 ---
 title: OscillatorNode
 slug: Web/API/OscillatorNode
-translation_of: Web/API/OscillatorNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 L'interface `OscillatorNode` représente un signal périodique, une sinusoïde par exemple. C'est un module de traitement audio {{domxref("AudioNode")}} qui crée un signal sinusoïdal à une fréquence donnée — c'est-à-dire génère une tonalité constante.
@@ -17,14 +17,14 @@ On crée un `OscillatorNode` en utilisant la méthode {{domxref("AudioContext.cr
 
 ## Propriétés
 
-*Hérite des propriétés de ses parents,* *{{domxref("AudioNode")}}*.
+_Hérite des propriétés de ses parents, {{domxref("AudioNode")}}_.
 
 - {{domxref("OscillatorNode.frequency")}}
   - : {{domxref("AudioParam")}} de type [a-rate](/fr/docs/Web/API/AudioParam#a-rate) représentant la fréquence d'oscillation en Hertz (la propriété frequency est en lecture seule, mais sa sous-propriété value ne l'est pas).
 - {{domxref("OscillatorNode.detune")}}
-  - : {{domxref("AudioParam")}} de type [a-rate](/fr/docs/Web/API/AudioParam#a-rate) représentant le désaccordage de l' oscillation exprimé en cents  (la propriété detune est en lecture seule, mais sa sous-propriété value ne l'est pas).
+  - : {{domxref("AudioParam")}} de type [a-rate](/fr/docs/Web/API/AudioParam#a-rate) représentant le désaccordage de l' oscillation exprimé en cents (la propriété detune est en lecture seule, mais sa sous-propriété value ne l'est pas).
 - {{domxref("OscillatorNode.type")}}
-  - : Chaîne de caractères indiquant la forme de l'onde générée. Différentes ondes produisent différentes tonalités.  Les valeurs standard sont `"sine"`, `"square"`, `"sawtooth"`, `"triangle"` et `"custom"`. La valeur par défault is `"sine"`. `custom` permet d'utiliser une {{domxref("PeriodicWave")}} pour décrire une forme d'onde personnalisée.
+  - : Chaîne de caractères indiquant la forme de l'onde générée. Différentes ondes produisent différentes tonalités. Les valeurs standard sont `"sine"`, `"square"`, `"sawtooth"`, `"triangle"` et `"custom"`. La valeur par défault is `"sine"`. `custom` permet d'utiliser une {{domxref("PeriodicWave")}} pour décrire une forme d'onde personnalisée.
 
 ## Méthodes
 
@@ -53,7 +53,7 @@ var contexteAudio = new (window.AudioContext || window.webkitAudioContext)();
 // create Oscillator node
 var oscillator = contexteAudio.createOscillator();
 oscillator.connect(contexteAudio.destination);
-oscillator.type = 'square';
+oscillator.type = "square";
 oscillator.frequency.value = 440; // valeur en hertz
 
 oscillator.start();
@@ -61,13 +61,11 @@ oscillator.start();
 
 ## Spécifications
 
-| Spécification                                                                                                | Statut                               | Commentaire |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#the-oscillatornode-interface', 'OscillatorNode')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.OscillatorNode")}}
+{{Compat}}
 
 ## Voir aussi
 

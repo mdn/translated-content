@@ -1,16 +1,9 @@
 ---
 title: contentScripts.register()
 slug: Mozilla/Add-ons/WebExtensions/API/contentScripts/register
-tags:
-  - API
-  - Extensions
-  - Méthode
-  - Reference
-  - contentScripts
-  - register
-translation_of: Mozilla/Add-ons/WebExtensions/API/contentScripts/register
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Utilisez cette fonction pour enregistrer un ou plusieurs scripts de contenu.
 
@@ -22,15 +15,15 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var registering = browser.contentScripts.register(
-  contentScriptOptions       // object
-)
+  contentScriptOptions, // object
+);
 ```
 
 ### Paramètres
 
 - `contentScriptOptions`
 
-  - : `object`. Un objet `RegisteredContentScriptOptions` représentant les scripts de contenu à enregistrer. Sa syntaxe est similaire à celle des objets du tableau de clés de manifest [`content_scripts`](/fr/Add-ons/WebExtensions/manifest.json/content_scripts).  Les différences sont :
+  - : `object`. Un objet `RegisteredContentScriptOptions` représentant les scripts de contenu à enregistrer. Sa syntaxe est similaire à celle des objets du tableau de clés de manifest [`content_scripts`](/fr/Add-ons/WebExtensions/manifest.json/content_scripts). Les différences sont :
 
     - les noms de propriété utilisent camelCase plutôt que des traits de soulignement (par exemple, `excludeMatches`, pas `exclude_matches`
     - les propriétés `js` et `css` vous permettent d'enregistrer des chaînes ainsi que des URL, leur syntaxe doit donc distinguer ces types.
@@ -62,26 +55,25 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 
 Actuellement, les scripts de contenu ne sont pas enregistrés lorsque la page d'extension correspondante (à partir de laquelle les scripts de contenu ont été enregistrés) est déchargée, vous devez donc enregistrer un script de contenu depuis une page d'extension qui persiste au moins aussi longtemps que vous voulez que les scripts de contenu restent enregistrés.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.contentScripts.register", 10)}}
+{{Compat}}
 
 ## Exemples
 
-Cet exemple enregistre le script de contenu `defaultCode`  pour toutes les URL `.org` :
+Cet exemple enregistre le script de contenu `defaultCode` pour toutes les URL `.org` :
 
 ```js
 const defaultHosts = "*://*.org/*";
-const defaultCode = "document.body.innerHTML = '<h1>This page has been eaten<h1>'";
+const defaultCode =
+  "document.body.innerHTML = '<h1>This page has been eaten<h1>'";
 
 async function register(hosts, code) {
-
   return await browser.contentScripts.register({
     matches: [hosts],
-    js: [{code}],
-    runAt: "document_idle"
+    js: [{ code }],
+    runAt: "document_idle",
   });
-
 }
 
 var registered = register(defaultHosts, defaultCode);
@@ -91,10 +83,10 @@ Ce code enregistre le fichier JS à l'adresse content_scripts/example.js:
 
 ```js
 const scriptObj = await browser.contentScripts.register({
-  "js": [{file: "/content_scripts/example.js"}],
-  "matches": ["<all_urls>"],
-  "allFrames": true,
-  "runAt": "document_start"
+  js: [{ file: "/content_scripts/example.js" }],
+  matches: ["<all_urls>"],
+  allFrames: true,
+  runAt: "document_start",
 });
 ```
 

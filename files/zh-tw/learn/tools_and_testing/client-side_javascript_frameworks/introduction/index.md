@@ -1,8 +1,8 @@
 ---
 title: 前端框架簡介
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction
-translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 我們從整體概述來探討框架、提供 JavaScript 與框架的簡要歷史、框架存在的理由、他們提供什麼東西、如何決定選擇哪個框架、以及前端框架的的替代方案。
@@ -30,7 +30,7 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introd
 
 ## 一段簡短的歷史
 
-在 JavaScript 誕生的 1996，它的作用就只有針對網頁，提供些許的互動和興奮。但之後網路漸漸從*拿來看*，變成*拿來用*了。JavaScript 慢慢地紅了起來，JavaScript 開發者也開始針對自己碰上的問題，寫出了能解決問題的工具、接著包成能複用的工具包。他們就能把這個被稱為**函式庫**（library）的東西，拿去與他人共享。共享的函式庫生態，也有助於塑造網路的增長趨勢。
+在 JavaScript 誕生的 1996 年，它的作用僅僅是為當時由靜態文檔組成的網頁，提供些許的互動和興奮感。而當網路漸漸從*閱讀*的媒介，成為*做事*的場所，JavaScript 也慢慢地紅了起來。JavaScript 開發者們撰寫了許多工具，來解決自己遭遇的問題，並打包成能重複使用的工具包，稱為**函式庫**（library），以便和他人共享自己的解決方案。這個共享函式庫的生態，也推進了網路的增長。
 
 目前 JavaScript 已經是網路的必需品了，[大約 95% 的網站都又在使用 JavaScript](https://w3techs.com/technologies/details/cp-javascript)，網路也成了當今生活的必須。使用者可以透過文字與影像，來寫論文、聽音樂、看電影、與人遠距離交流。曾經只能透過裝在電腦內的原生軟體所完成的事情，現在也能網路上做到。這種現代化、複雜度高、還有各種互動的網站，被稱為**網路應用程式**（web applications）。
 
@@ -83,21 +83,21 @@ React 使用一種很像是 HTML 的 JavaScript 語法：[JSX](https://reactjs.o
 ```js
 const state = [
   {
-    id: 'todo-0',
-    name: 'Learn some frameworks!'
-  }
-]
+    id: "todo-0",
+    name: "Learn some frameworks!",
+  },
+];
 ```
 
 我們如何對用戶顯示工作？我們想將每個工作，都表示為一個列表項目：結構為無序列表元素 [`<ul>`](/zh-TW/docs/Web/HTML/Element/ul) 內，含有一定數量的 [`<li>`](/zh-TW/docs/Web/HTML/Element/li) 元素。怎麼做呢？看起來就像這樣：
 
 ```js
 function buildTodoItemEl(id, name) {
-  const item = document.createElement('li');
-  const span = document.createElement('span');
+  const item = document.createElement("li");
+  const span = document.createElement("span");
   const textContent = document.createTextNode(name);
 
-  span.appendChild(textContent)
+  span.appendChild(textContent);
 
   item.id = id;
   item.appendChild(span);
@@ -113,10 +113,10 @@ function buildTodoItemEl(id, name) {
 
 ```js
 function buildDeleteButtonEl(id) {
-  const button = document.createElement('button');
-  const textContent = document.createTextNode('Delete');
+  const button = document.createElement("button");
+  const textContent = document.createTextNode("Delete");
 
-  button.setAttribute('type', 'button');
+  button.setAttribute("type", "button");
   button.appendChild(textContent);
 
   return button;
@@ -128,7 +128,7 @@ function buildDeleteButtonEl(id) {
 ```js
 function renderTodoList() {
   const frag = document.createDocumentFragment();
-  state.tasks.forEach(task => {
+  state.tasks.forEach((task) => {
     const item = buildTodoItemEl(task.id, task.name);
     frag.appendChild(item);
   });
@@ -240,9 +240,9 @@ web 最重要的功能之一，就是頁面之間的導航：畢竟它就是相�
 
 不同模塊的框架，會採用不同的方法。來開發 Web 應用程式。框架都會定期變化、也都有其優缺點。選擇哪個框架的過程，是與團隊及專案息息相關的。你需要透過研究，來找出合適的需求。換句話說，我們已經找出了一些能有效地研究出選擇的問題：
 
-1.  框架支援哪些瀏覽器？
-2.  框架使用哪個特定領域語言（domain-specific language）？
-3.  框架有夠大的社群與夠好的文件（或其他東西）支援嗎？
+1. 框架支援哪些瀏覽器？
+2. 框架使用哪個特定領域語言（domain-specific language）？
+3. 框架有夠大的社群與夠好的文件（或其他東西）支援嗎？
 
 接下來我們退提供一個表格，來展示各大框架的*瀏覽器支援*、還有能用的**特定領域語言**。
 
@@ -316,38 +316,3 @@ Vue 的開發團隊也寫了[有關 Vue 與其他框架的詳盡比較](https://
 我們的下一篇文章，將探討更底層的東西，著眼於框架傾向於提供的特定種類的功能，以及它們為什麼能動。
 
 {{NextMenu("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
-
-## 在本模塊
-
-- [前端框架介紹](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-- [框架的主要功能](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
-- React
-
-  - [開始學 React](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
-  - [建立我們的 React 待辦清單](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - [把 React app 組件化](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
-  - [響應性 React：事件與狀態](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
-  - [響應性 React：編輯、過濾、條件式過濾](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
-  - [React 無障礙](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - [React 的資源](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
-
-- Ember
-
-  - [開始學 Ember](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-  - [Ember app 架構與組件](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
-  - [響應性 Ember：事件、類別、狀態](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
-  - [響應性 Ember：Footer 功能、條件式渲染](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
-  - [Ember 的路由](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
-  - [Ember 的資源與除錯](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
-
-- Vue
-
-  - [開始學 Vue](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
-  - [建立第一個 Vue 組件](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
-  - [渲染 Vue 組件的列表](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-  - [寫一個 todo 表單：Vue 的事件、方法、model](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - [透過 CSS 樣式化 Vue 組件](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
-  - [使用 Vue 的計算屬性](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
-  - [Vue 的條件式渲染：編輯已存在的待辦](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
-  - [重點管理 Vue ref](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
-  - [Vue 的資源](/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)

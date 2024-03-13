@@ -1,16 +1,10 @@
 ---
-title: HTMLAnchorElement.port
+title: "HTMLAnchorElement: port プロパティ"
 slug: Web/API/HTMLAnchorElement/port
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAnchorElement
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLAnchorElement.port
-translation_of: Web/API/HTMLAnchorElement/port
-original_slug: Web/API/HTMLHyperlinkElementUtils/port
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
+
 {{ApiRef("HTML DOM")}}
 
 **`HTMLAnchorElement.port`** プロパティは、URL のポート番号が入った文字列です。 URL に明示的にポート番号が含まれていない場合は、`''` に設定されます。
@@ -24,7 +18,7 @@ original_slug: Web/API/HTMLHyperlinkElementUtils/port
 ### アンカーリンクからポート番号を取得
 
 ```js
-// <a id="myAnchor" href="https://developer.mozilla.org:443/en-US/docs/HTMLAnchorElement"> 要素が文書にあったとします。
+// <a id="myAnchor" href="https://developer.mozilla.org:443/ja/docs/HTMLAnchorElement"> 要素が文書にあったとします。
 const anchor = document.getElementByID("myAnchor");
 anchor.port; // '443' を返す
 ```

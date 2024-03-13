@@ -1,8 +1,8 @@
 ---
 title: <mover>
 slug: Web/MathML/Element/mover
-translation_of: Web/MathML/Element/mover
 ---
+
 {{MathMLRef()}}
 
 L'élément MathML `<mover>` est utilisé pour attacher un accent ou une limite au-dessus d'une expression. La syntaxe est la suivante: `<mover> base overscript </mover>`
@@ -31,31 +31,29 @@ Rendu dans votre navigateur&nbsp;: <math><mover accent="true"><mrow><mi>x </mi><
 
 ```html
 <math>
-
-<mover accent="true">
-  <mrow>
-    <mi> x </mi>
-    <mo> + </mo>
-    <mi> y </mi>
-    <mo> + </mo>
-    <mi> z </mi>
-  </mrow>
-  <mo> &#x23DE; <!--TOP CURLY BRACKET--> </mo>
-</mover>
-
+  <mover accent="true">
+    <mrow>
+      <mi> x </mi>
+      <mo> + </mo>
+      <mi> y </mi>
+      <mo> + </mo>
+      <mi> z </mi>
+    </mrow>
+    <mo>
+      &#x23DE;
+      <!--TOP CURLY BRACKET-->
+    </mo>
+  </mover>
 </math>
 ```
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                       | Commentaire            |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ---------------------- |
-| {{ SpecName('MathML3', 'chapter3.html#presm.mover', 'mover') }} | {{ Spec2('MathML3') }} | Spécification courante |
-| {{ SpecName('MathML2', 'chapter3.html#presm.mover', 'mover') }} | {{ Spec2('MathML2') }} | Spécification initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("mathml.elements.mover")}}
+{{Compat}}
 
 ## Voir aussi
 

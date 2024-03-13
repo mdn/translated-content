@@ -1,15 +1,8 @@
 ---
 title: Map.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/Map/has
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Map
-  - Method
-  - Prototype
-  - Reference
-browser-compat: javascript.builtins.Map.has
 ---
+
 {{JSRef}}
 
 O método **`has()`** retorna um booleano indicando se o elemento com a chave especificada existe ou não.
@@ -19,7 +12,7 @@ O método **`has()`** retorna um booleano indicando se o elemento com a chave es
 ## Sintaxe
 
 ```js
-has(key)
+has(key);
 ```
 
 ### Parâmetros
@@ -36,18 +29,18 @@ has(key)
 ### Usando has()
 
 ```js
-let myMap = new Map()
-myMap.set('bar', "foo")
+let myMap = new Map();
+myMap.set("bar", "foo");
 
-myMap.has('bar')   // retorna true
-myMap.has('baz')   // retorna false
+myMap.has("bar"); // retorna true
+myMap.has("baz"); // retorna false
 ```
 
 ## Especificações
 
 {{Specifications}}
 
-## Compatibilidade com navegadores.
+## Compatibilidade com navegadores
 
 {{Compat}}
 

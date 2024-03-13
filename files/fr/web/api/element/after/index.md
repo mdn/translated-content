@@ -1,9 +1,8 @@
 ---
 title: Element.after()
 slug: Web/API/Element/after
-translation_of: Web/API/Element/after
-browser-compat: api.Element.after
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`Element.after()`** permet d'insérer un ensemble d'objets [`Node`](/fr/docs/Web/API/Node) ou de chaînes de caractères dans la liste des enfants du parent de l'objet `Element` courant, juste après ce dernier.
@@ -12,9 +11,9 @@ Les objets qui sont des chaînes de caractères sont insérés comme des nœuds 
 ## Syntaxe
 
 ```js
-after(noeud1)
-after(noeud1, noeud2)
-after(noeud1, noeud2, /* ... ,*/ noeudN)
+after(noeud1);
+after(noeud1, noeud2);
+after(noeud1, noeud2, /* ... ,*/ noeudN);
 ```
 
 ### Paramètres

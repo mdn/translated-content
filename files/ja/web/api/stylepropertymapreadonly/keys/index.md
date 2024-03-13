@@ -1,26 +1,16 @@
 ---
 title: StylePropertyMapReadOnly.keys()
 slug: Web/API/StylePropertyMapReadOnly/keys
-tags:
-  - API
-  - CSS Typed Object Model API
-  - 実験的
-  - Houdini
-  - メソッド
-  - リファレンス
-  - StylePropertyMapReadOnly
-  - keys()
-browser-compat: api.StylePropertyMapReadOnly.keys
-translation_of: Web/API/StylePropertyMapReadOnly/keys
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
-**`StylePropertyMapReadOnly.keys()`** メソッドは、 `StylePropertyMapReadOnly` の各項目のキーを含む新しい*配列反復子*を返します。
+**`StylePropertyMapReadOnly.keys()`** メソッドは、 `StylePropertyMapReadOnly` の各項目のキーを含む新しい*配列イテレーター*を返します。
 
 ## 構文
 
 ```js
-StylePropertyMapReadOnly.keys()
+StylePropertyMapReadOnly.keys();
 ```
 
 ### 引数
@@ -37,7 +27,7 @@ StylePropertyMapReadOnly.keys()
 
 ```js
 // button 要素を取得
-const buttonEl = document.querySelector('button');
+const buttonEl = document.querySelector("button");
 
 // すべての計算済みスタイルを `computedStyleMap` で受け取る
 const allComputedStyles = buttonEl.computedStyleMap();

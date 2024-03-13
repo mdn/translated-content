@@ -1,19 +1,10 @@
 ---
 title: margin-block-start
 slug: Web/CSS/margin-block-start
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - 実験的
-  - NeedsContent
-  - リファレンス
-  - margin-block
-  - margin-block-start
-  - recipe:css-property
-browser-compat: css.properties.margin-block-start
-translation_of: Web/CSS/margin-block-start
+l10n:
+  sourceCommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
 ---
+
 {{CSSRef}}
 
 **`margin-block-start`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のインライン方向の論理的な先頭側のマージンを定義し、それが要素の書字方向やテキストの方向に応じて物理的なマージンに対応づけられます。
@@ -24,9 +15,9 @@ translation_of: Web/CSS/margin-block-start
 
 ```css
 /* <length> 値 */
-margin-block-start: 10px;  /* 絶対的な長さ */
-margin-block-start: 1em;   /* テキストの大きさに対する相対値 */
-margin-block-start: 5%;    /* 直近のブロックコンテナーの大きさに対する相対値 */
+margin-block-start: 10px; /* 絶対的な長さ */
+margin-block-start: 1em; /* テキストの大きさに対する相対値 */
+margin-block-start: 5%; /* 直近のブロックコンテナーの大きさに対する相対値 */
 
 /* キーワード値 */
 margin-block-start: auto;
@@ -35,6 +26,7 @@ margin-block-start: auto;
 margin-block-start: inherit;
 margin-block-start: initial;
 margin-block-start: revert;
+margin-block-start: revert-layer;
 margin-block-start: unset;
 ```
 
@@ -56,7 +48,7 @@ margin-block-start: unset;
 
 ## 例
 
-<h3 id="Setting_block_start_margin">ブロック方向の先頭のマージンの設定</h3>
+### ブロック方向の先頭のマージンの設定
 
 #### HTML
 
@@ -84,7 +76,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("Setting_block_start_margin", 140, 140)}}
+{{EmbedLiveSample("ブロック方向の先頭のマージンの設定", 140, 140)}}
 
 ## 仕様書
 
@@ -96,5 +88,6 @@ div {
 
 ## 関連情報
 
+- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
 - 対応づけ先の物理的プロパティ: {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

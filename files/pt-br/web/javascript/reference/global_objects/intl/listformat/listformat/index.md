@@ -1,14 +1,6 @@
 ---
 title: Construtor Intl.ListFormat()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/ListFormat
-tags:
-  - Construtor
-  - Internacionalização
-  - Intl
-  - JavaScript
-  - ListFormat
-  - Referência
-browser-compat: javascript.builtins.Intl.ListFormat.ListFormat
 ---
 
 {{JSRef}}
@@ -65,20 +57,20 @@ const list = ["Moto", "Ônibus", "Carro"];
 
 console.log(
   new Intl.ListFormat("pt-BR", { style: "long", type: "conjunction" }).format(
-    list
-  )
+    list,
+  ),
 );
 // > Moto, Ônibus e Carro
 
 console.log(
   new Intl.ListFormat("pt-BR", { style: "short", type: "disjunction" }).format(
-    list
-  )
+    list,
+  ),
 );
 // > Moto, Ônibus ou Carro
 
 console.log(
-  new Intl.ListFormat("pt-BR", { style: "narrow", type: "unit" }).format(list)
+  new Intl.ListFormat("pt-BR", { style: "narrow", type: "unit" }).format(list),
 );
 // > Moto Ônibus Carro
 ```

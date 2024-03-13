@@ -1,22 +1,13 @@
 ---
 title: justify-tracks
 slug: Web/CSS/justify-tracks
-tags:
-  - CSS
-  - 実験的
-  - プロパティ
-  - リファレンス
-  - grid
-  - justify-tracks
-  - masonry
-browser-compat: css.properties.justify-tracks
-translation_of: Web/CSS/justify-tracks
 ---
+
 {{CSSRef}}
 
 {{SeeCompatTable}}
 
-**`align-tracks`** は CSS のプロパティで、インライン軸が[組積](/ja/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout)であるグリッドコンテナーの組積軸の配置を設定します。
+**`align-tracks`** は CSS のプロパティで、インライン軸が[組積](/ja/docs/Web/CSS/CSS_grid_layout/Masonry_layout)であるグリッドコンテナーの組積軸の配置を設定します。
 
 ## 構文
 
@@ -25,7 +16,7 @@ translation_of: Web/CSS/justify-tracks
 justify-tracks: start;
 justify-tracks: space-between;
 justify-tracks: center;
-justify-tracks: start,center,end;
+justify-tracks: start, center, end;
 
 /* グローバル値 */
 justify-tracks: inherit;
@@ -65,7 +56,7 @@ justify-tracks: unset;
 
 {{cssinfo}}
 
-## 関連情報
+## 形式文法
 
 {{csssyntax}}
 

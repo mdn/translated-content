@@ -1,18 +1,8 @@
 ---
 title: Screen.orientation
 slug: Web/API/Screen/orientation
-page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - Experimental
-  - Property
-  - Read-only
-  - Screen Orientation
-  - screen
-browser-compat: api.Screen.orientation
-translation_of: Web/API/Screen/orientation
 ---
+
 {{APIRef("Screen Orientation API")}}
 
 **`orientation`** は {{DOMxRef("Screen")}} インターフェイスの読み取り専用プロパティで、現在の画面の向きを返します。
@@ -26,13 +16,19 @@ translation_of: Web/API/Screen/orientation
 ## 例
 
 ```js
-var orientation = (screen.orientation || {}).type || screen.mozOrientation || screen.msOrientation;
+var orientation =
+  (screen.orientation || {}).type ||
+  screen.mozOrientation ||
+  screen.msOrientation;
 
 if (orientation === "landscape-primary") {
   console.log("良い感じですね。");
 } else if (orientation === "landscape-secondary") {
   console.log("うーん…。画面が上下逆です！");
-} else if (orientation === "portrait-secondary" || orientation === "portrait-primary") {
+} else if (
+  orientation === "portrait-secondary" ||
+  orientation === "portrait-primary"
+) {
   console.log("うーん…。スクリーンを横向きにした方がいいですよ");
 } else if (orientation === undefined) {
   console.log("このブラウザーは画面方向 API に対応していません :(");

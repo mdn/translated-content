@@ -1,15 +1,8 @@
 ---
 title: border-bottom-left-radius
 slug: Web/CSS/border-bottom-left-radius
-tags:
-  - CSS
-  - CSS 境界
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.border-bottom-left-radius
-translation_of: Web/CSS/border-bottom-left-radius
 ---
+
 {{CSSRef}}
 
 **`border-bottom-left-radius`** は [CSS](/ja/docs/Web/CSS) のプロパティで、角の曲率を定義する楕円の半径 (または半長軸と半短軸の半径) を指定することで、要素の左下の角を丸めます。
@@ -22,7 +15,7 @@ translation_of: Web/CSS/border-bottom-left-radius
 
 背景は、画像または単色ですが、丸みがあっても境界で切り取られます。切り取られる正確な位置は、 {{cssxref("background-clip")}} プロパティの値で定義されます。
 
-> **Note:** このプロパティの値が `border-bottom-left-radius` プロパティの後の {{cssxref("border-radius")}} 一括指定プロパティで設定されなかった場合、このプロパティは[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)によって初期値にリセットされます。
+> **メモ:** このプロパティの値が `border-bottom-left-radius` プロパティの後の {{cssxref("border-radius")}} 一括指定プロパティで設定されなかった場合、このプロパティは[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)によって初期値にリセットされます。
 
 ## 構文
 

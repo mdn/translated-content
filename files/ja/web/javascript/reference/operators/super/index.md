@@ -1,21 +1,15 @@
 ---
 title: super
 slug: Web/JavaScript/Reference/Operators/super
-tags:
-  - クラス
-  - ECMAScript 2015
-  - JavaScript
-  - 言語機能
-  - 左辺式
-  - 演算子
-browser-compat: javascript.operators.super
-translation_of: Web/JavaScript/Reference/Operators/super
 ---
+
 {{jsSidebar("Operators")}}
 
 **super** キーワードは、オブジェクトの親の関数を呼び出すために使用できます。
 
 `super.prop` および `super[expr]` 式は、[class](/ja/docs/Web/JavaScript/Reference/Classes) と[オブジェクトリテラル](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer)の両方におけるあらゆる[メソッド定義](/ja/docs/Web/JavaScript/Reference/Functions/Method_definitions)で有効です。
+
+{{EmbedInteractiveExample("pages/js/expressions-super.html", "taller")}}
 
 ## 構文
 
@@ -37,12 +31,12 @@ super.functionOnParent([arguments]);
 ```js
 class Rectangle {
   constructor(height, width) {
-    this.name = 'Rectangle';
+    this.name = "Rectangle";
     this.height = height;
     this.width = width;
   }
   sayName() {
-    console.log('Hi, I am a ', this.name + '.');
+    console.log("Hi, I am a ", this.name + ".");
   }
   get area() {
     return this.height * this.width;
@@ -62,7 +56,7 @@ class Square extends Rectangle {
 
     // Note: 'this' を使う前に super() をコールしなければなりません。
     // でないと reference error になります。
-    this.name = 'Square';
+    this.name = "Square";
   }
 }
 ```
@@ -74,13 +68,13 @@ class Square extends Rectangle {
 ```js
 class Rectangle {
   static logNbSides() {
-    return 'I have 4 sides';
+    return "I have 4 sides";
   }
 }
 
 class Square extends Rectangle {
   static logDescription() {
-    return super.logNbSides() + ' which are all equal';
+    return super.logNbSides() + " which are all equal";
   }
 }
 Square.logDescription(); // 'I have 4 sides which are all equal'
@@ -100,7 +94,7 @@ class Derived extends Base {
   }
 }
 
-new Derived().delete(); // ReferenceError: invalid delete involving 'super'. 
+new Derived().delete(); // ReferenceError: invalid delete involving 'super'.
 ```
 
 ### `super.prop` は書き込み不可能なプロパティを上書きできない
@@ -110,10 +104,10 @@ new Derived().delete(); // ReferenceError: invalid delete involving 'super'.
 ```js
 class X {
   constructor() {
-    Object.defineProperty(this, 'prop', {
+    Object.defineProperty(this, "prop", {
       configurable: true,
       writable: false,
-      value: 1
+      value: 1,
     });
   }
 }
@@ -123,7 +117,7 @@ class Y extends X {
     super();
   }
   foo() {
-    super.prop = 2;   // 値を上書きできない
+    super.prop = 2; // 値を上書きできない
   }
 }
 
@@ -139,15 +133,15 @@ super は[オブジェクト初期化子 / リテラル](/ja/docs/Web/JavaScript
 ```js
 var obj1 = {
   method1() {
-    console.log('method 1');
-  }
-}
+    console.log("method 1");
+  },
+};
 
 var obj2 = {
   method2() {
     super.method1();
-  }
-}
+  },
+};
 
 Object.setPrototypeOf(obj2, obj1);
 obj2.method2(); // logs "method 1"

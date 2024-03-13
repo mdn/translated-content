@@ -1,14 +1,9 @@
 ---
 title: 高度なアニメーション
 slug: Web/API/Canvas_API/Tutorial/Advanced_animations
-tags:
-  - キャンバス
-  - グラフィック
-  - チュートリアル
-translation_of: Web/API/Canvas_API/Tutorial/Advanced_animations
-original_slug: Web/Guide/HTML/Canvas_tutorial/Advanced_animations
 ---
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}
+
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}
 
 前の章では、いくつかの[基本的なアニメーション](/ja/docs/Web/API/Canvas_API/Tutorial/Basic_animations)を作成して、物の動かし方を学びました。このパートでは、 運動そのものをより詳細に見て、 アニメーションをより高度にするための物理を追加していきましょう。
 
@@ -23,21 +18,21 @@ original_slug: Web/Guide/HTML/Canvas_tutorial/Advanced_animations
 普通通り、まず描画コンテキストが必要になります。ボールを描くため、 `ball` オブジェクトを作成して、プロパティと、キャンバスにボールを描くための `draw()` メソッドを持つようにします。
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 
 var ball = {
   x: 100,
   y: 100,
   radius: 25,
-  color: 'blue',
-  draw: function() {
+  color: "blue",
+  draw: function () {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
     ctx.closePath();
     ctx.fillStyle = this.color;
     ctx.fill();
-  }
+  },
 };
 
 ball.draw();
@@ -50,8 +45,8 @@ ball.draw();
 ボールができたので、このチュートリアルの[前の章](/ja/docs/Web/API/Canvas_API/Tutorial/Basic_animations)で学んだような、基本的なアニメーションを追加する準備ができたことになります。ここでも {{domxref("window.requestAnimationFrame()")}} がアニメーションを制御するのに役立っています。ボールは、位置に速度ベクトルを追加することで移動します。また、フレームごとに {{domxref("CanvasRenderingContext2D.clearRect", "clear", "", 1)}} キャンバスに以前のフレームから古い円を削除しています。
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 var raf;
 
 var ball = {
@@ -60,29 +55,29 @@ var ball = {
   vx: 5,
   vy: 2,
   radius: 25,
-  color: 'blue',
-  draw: function() {
+  color: "blue",
+  draw: function () {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
     ctx.closePath();
     ctx.fillStyle = this.color;
     ctx.fill();
-  }
+  },
 };
 
 function draw() {
-  ctx.clearRect(0,0, canvas.width, canvas.height);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
   ball.draw();
   ball.x += ball.vx;
   ball.y += ball.vy;
   raf = window.requestAnimationFrame(draw);
 }
 
-canvas.addEventListener('mouseover', function(e) {
+canvas.addEventListener("mouseover", function (e) {
   raf = window.requestAnimationFrame(draw);
 });
 
-canvas.addEventListener('mouseout', function(e) {
+canvas.addEventListener("mouseout", function (e) {
   window.cancelAnimationFrame(raf);
 });
 
@@ -115,8 +110,8 @@ if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 var raf;
 
 var ball = {
@@ -125,39 +120,37 @@ var ball = {
   vx: 5,
   vy: 2,
   radius: 25,
-  color: 'blue',
-  draw: function() {
+  color: "blue",
+  draw: function () {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
     ctx.closePath();
     ctx.fillStyle = this.color;
     ctx.fill();
-  }
+  },
 };
 
 function draw() {
-  ctx.clearRect(0,0, canvas.width, canvas.height);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
   ball.draw();
   ball.x += ball.vx;
   ball.y += ball.vy;
 
-  if (ball.y + ball.vy > canvas.height ||
-      ball.y + ball.vy < 0) {
+  if (ball.y + ball.vy > canvas.height || ball.y + ball.vy < 0) {
     ball.vy = -ball.vy;
   }
-  if (ball.x + ball.vx > canvas.width ||
-      ball.x + ball.vx < 0) {
+  if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
     ball.vx = -ball.vx;
   }
 
   raf = window.requestAnimationFrame(draw);
 }
 
-canvas.addEventListener('mouseover', function(e) {
+canvas.addEventListener("mouseover", function (e) {
   raf = window.requestAnimationFrame(draw);
 });
 
-canvas.addEventListener('mouseout', function(e) {
+canvas.addEventListener("mouseout", function (e) {
   window.cancelAnimationFrame(raf);
 });
 
@@ -175,8 +168,8 @@ ball.draw();
 動きをよりリアルにするために、例えばこんな風に移動量を変化させることができます。
 
 ```js
-ball.vy *= .99;
-ball.vy += .25;
+ball.vy *= 0.99;
+ball.vy += 0.25;
 ```
 
 これにより、フレームごとに垂直方向の速度が遅くなり、最終的にボールは床の上でバウンドするだけになります。
@@ -192,8 +185,8 @@ ball.vy += .25;
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 var raf;
 
 var ball = {
@@ -202,41 +195,39 @@ var ball = {
   vx: 5,
   vy: 2,
   radius: 25,
-  color: 'blue',
-  draw: function() {
+  color: "blue",
+  draw: function () {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
     ctx.closePath();
     ctx.fillStyle = this.color;
     ctx.fill();
-  }
+  },
 };
 
 function draw() {
-  ctx.clearRect(0,0, canvas.width, canvas.height);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
   ball.draw();
   ball.x += ball.vx;
   ball.y += ball.vy;
-  ball.vy *= .99;
-  ball.vy += .25;
+  ball.vy *= 0.99;
+  ball.vy += 0.25;
 
-  if (ball.y + ball.vy > canvas.height ||
-      ball.y + ball.vy < 0) {
+  if (ball.y + ball.vy > canvas.height || ball.y + ball.vy < 0) {
     ball.vy = -ball.vy;
   }
-  if (ball.x + ball.vx > canvas.width ||
-      ball.x + ball.vx < 0) {
+  if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
     ball.vx = -ball.vx;
   }
 
   raf = window.requestAnimationFrame(draw);
 }
 
-canvas.addEventListener('mouseover', function(e) {
+canvas.addEventListener("mouseover", function (e) {
   raf = window.requestAnimationFrame(draw);
 });
 
-canvas.addEventListener('mouseout', function(e) {
+canvas.addEventListener("mouseout", function (e) {
   window.cancelAnimationFrame(raf);
 });
 
@@ -252,7 +243,7 @@ ball.draw();
 これまで、前のフレームをクリアするときは {{domxref("CanvasRenderingContext2D.clearRect", "clearRect")}} メソッドを使用していました。このメソッドを半透明の {{domxref("CanvasRenderingContext2D.fillRect", "fillRect")}} に置き換えると、簡単に後引き効果を作ることができます。
 
 ```js
-ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
+ctx.fillStyle = "rgba(255, 255, 255, 0.3)";
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 ```
 
@@ -267,8 +258,8 @@ ctx.fillRect(0, 0, canvas.width, canvas.height);
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 var raf;
 
 var ball = {
@@ -277,42 +268,40 @@ var ball = {
   vx: 5,
   vy: 2,
   radius: 25,
-  color: 'blue',
-  draw: function() {
+  color: "blue",
+  draw: function () {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
     ctx.closePath();
     ctx.fillStyle = this.color;
     ctx.fill();
-  }
+  },
 };
 
 function draw() {
-  ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
+  ctx.fillStyle = "rgba(255, 255, 255, 0.3)";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   ball.draw();
   ball.x += ball.vx;
   ball.y += ball.vy;
-  ball.vy *= .99;
-  ball.vy += .25;
+  ball.vy *= 0.99;
+  ball.vy += 0.25;
 
-  if (ball.y + ball.vy > canvas.height ||
-      ball.y + ball.vy < 0) {
+  if (ball.y + ball.vy > canvas.height || ball.y + ball.vy < 0) {
     ball.vy = -ball.vy;
   }
-  if (ball.x + ball.vx > canvas.width ||
-      ball.x + ball.vx < 0) {
+  if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
     ball.vx = -ball.vx;
   }
 
   raf = window.requestAnimationFrame(draw);
 }
 
-canvas.addEventListener('mouseover', function(e) {
+canvas.addEventListener("mouseover", function (e) {
   raf = window.requestAnimationFrame(draw);
 });
 
-canvas.addEventListener('mouseout', function(e) {
+canvas.addEventListener("mouseout", function (e) {
   window.cancelAnimationFrame(raf);
 });
 
@@ -338,8 +327,8 @@ ball.draw();
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 var raf;
 var running = false;
 
@@ -349,19 +338,19 @@ var ball = {
   vx: 5,
   vy: 1,
   radius: 25,
-  color: 'blue',
-  draw: function() {
+  color: "blue",
+  draw: function () {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
     ctx.closePath();
     ctx.fillStyle = this.color;
     ctx.fill();
-  }
+  },
 };
 
 function clear() {
-  ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
-  ctx.fillRect(0,0,canvas.width,canvas.height);
+  ctx.fillStyle = "rgba(255, 255, 255, 0.3)";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
 }
 
 function draw() {
@@ -380,7 +369,7 @@ function draw() {
   raf = window.requestAnimationFrame(draw);
 }
 
-canvas.addEventListener('mousemove', function(e) {
+canvas.addEventListener("mousemove", function (e) {
   if (!running) {
     clear();
     ball.x = e.clientX;
@@ -389,14 +378,14 @@ canvas.addEventListener('mousemove', function(e) {
   }
 });
 
-canvas.addEventListener('click', function(e) {
+canvas.addEventListener("click", function (e) {
   if (!running) {
     raf = window.requestAnimationFrame(draw);
     running = true;
   }
 });
 
-canvas.addEventListener('mouseout', function(e) {
+canvas.addEventListener("mouseout", function (e) {
   window.cancelAnimationFrame(raf);
   running = false;
 });

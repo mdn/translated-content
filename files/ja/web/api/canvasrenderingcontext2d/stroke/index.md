@@ -1,15 +1,8 @@
 ---
 title: CanvasRenderingContext2D.stroke()
 slug: Web/API/CanvasRenderingContext2D/stroke
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
-browser-compat: api.CanvasRenderingContext2D.stroke
-translation_of: Web/API/CanvasRenderingContext2D/stroke
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.stroke()`** はキャンバス 2D API のメソッドで、現在のあるいは渡されたパスを、現在の線のスタイルで描画します。
@@ -28,7 +21,7 @@ void ctx.stroke(path);
 ### 引数
 
 - `path`
-  - : 描画する {{domxref("Path2D")}} パス。
+  - : 描画する {{domxref("Path2D")}} パス。
 
 ## 例
 
@@ -45,8 +38,8 @@ void ctx.stroke(path);
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 ctx.rect(10, 10, 150, 100);
 ctx.stroke();
 ```
@@ -70,26 +63,26 @@ ctx.stroke();
 このコードは、 1 つ目のパスを 3 回、 2 つ目のパスを 2 回、 3 つ目のパスを 1 回だけ描画します。
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // First sub-path
 ctx.lineWidth = 26;
-ctx.strokeStyle = 'orange';
+ctx.strokeStyle = "orange";
 ctx.moveTo(20, 20);
 ctx.lineTo(160, 20);
 ctx.stroke();
 
 // Second sub-path
 ctx.lineWidth = 14;
-ctx.strokeStyle = 'green';
+ctx.strokeStyle = "green";
 ctx.moveTo(20, 80);
 ctx.lineTo(220, 80);
 ctx.stroke();
 
 // Third sub-path
 ctx.lineWidth = 4;
-ctx.strokeStyle = 'pink';
+ctx.strokeStyle = "pink";
 ctx.moveTo(20, 140);
 ctx.lineTo(280, 140);
 ctx.stroke();
@@ -112,11 +105,11 @@ ctx.stroke();
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.lineWidth = 16;
-ctx.strokeStyle = 'red';
+ctx.strokeStyle = "red";
 
 // Stroke on top of fill
 ctx.beginPath();

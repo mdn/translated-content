@@ -1,21 +1,6 @@
 ---
 title: MediaQueryList.matches
 slug: Web/API/MediaQueryList/matches
-tags:
-  - API
-  - Adaptive Design
-  - CSSOM
-  - CSSOM View
-  - DOM
-  - Media Queries
-  - MediaQueryList
-  - Property
-  - Reference
-  - matches
-  - アダプティブデザイン
-  - プロパティ
-  - メディアクエリー
-translation_of: Web/API/MediaQueryList/matches
 ---
 
 {{APIRef("CSSOM")}}
@@ -41,15 +26,13 @@ function addMQListener(mq, callback) {
   }
 }
 
-addMQListener(window.matchMedia("(orientation:landscape)"),
-  event => {
-    if (event.matches) {
-      /* 横向きの画面になった */
-    } else {
-      /* 縦向きの画面になった */
-    }
+addMQListener(window.matchMedia("(orientation:landscape)"), (event) => {
+  if (event.matches) {
+    /* 横向きの画面になった */
+  } else {
+    /* 縦向きの画面になった */
   }
-);
+});
 ```
 
 ## 仕様書
@@ -58,7 +41,7 @@ addMQListener(window.matchMedia("(orientation:landscape)"),
 
 ## ブラウザーの互換性
 
-{{Compat("api.MediaQueryList.matches")}}
+{{Compat}}
 
 ## 関連情報
 

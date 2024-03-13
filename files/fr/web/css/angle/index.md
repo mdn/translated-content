@@ -1,12 +1,8 @@
 ---
 title: <angle>
 slug: Web/CSS/angle
-tags:
-  - CSS
-  - Reference
-  - Type
-translation_of: Web/CSS/angle
 ---
+
 {{CSSRef}}
 
 Le type de données CSS **`<angle>`** permet de représenter des angles exprimés en degrés, radians, grades ou tours. Les angles positifs sont des angles allant dans le sens horaire et les valeurs négatives sont des angles allant dans le sens anti-horaire. Les angles sont par exemples utilisés pour les transformations CSS ({{cssxref("transform")}}) ou les dégradés ({{cssxref("&lt;gradient&gt;")}}).
@@ -24,7 +20,7 @@ Pour les propriétés statiques et pour une unité donnée, un même angle pourr
 Pour représenter une valeur dans le type `<angle>`, on pourra utiliser les unités suivantes :
 
 - `deg`
-  - : Cette unité permet de représenter un angle exprimé en [degrés](<https://fr.wikipedia.org/wiki/Degr%C3%A9_(angle)>). Un cercle complet correspondra à `360deg`. Voici des valeurs pour l'exemple : `0deg`, `90deg`, `360deg`.
+  - : Cette unité permet de représenter un angle exprimé en [degrés](<https://fr.wikipedia.org/wiki/Degré_(angle)>). Un cercle complet correspondra à `360deg`. Voici des valeurs pour l'exemple : `0deg`, `90deg`, `360deg`.
 - `grad`
   - : Cette unité permet de représenter un angle exprimé en [grades](<https://fr.wikipedia.org/wiki/Grade_(angle)>). Un cercle complet correspondra à `400grad`. Voici des valeurs pour l'exemple : `0grad`, `100grad`, `400grad`.
 - `rad`
@@ -80,11 +76,8 @@ Même si toutes les unités exprimeront une valeur nulle identique, l'unité **d
 
 ## Spécifications
 
-| Spécification                                                            | État                             | Commentaires         |
-| ------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('CSS4 Values', '#angles', '&lt;angle&gt;')}} | {{Spec2('CSS4 Values')}} |                      |
-| {{SpecName('CSS3 Values', '#angles', '&lt;angle&gt;')}} | {{Spec2('CSS3 Values')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.types.angle")}}
+{{Compat}}

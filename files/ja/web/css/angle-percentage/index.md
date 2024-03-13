@@ -1,16 +1,8 @@
 ---
 title: <angle-percentage>
 slug: Web/CSS/angle-percentage
-tags:
-  - CSS
-  - CSS データ型
-  - データ型
-  - リファレンス
-  - angle-percentage
-  - 単位
-  - 値
-translation_of: Web/CSS/angle-percentage
 ---
+
 {{CSSRef}}
 
 **`<angle-percentage>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、 {{Cssxref("&lt;angle&gt;")}} または {{Cssxref("&lt;percentage&gt;")}} が取りうる値を表します。
@@ -35,4 +27,4 @@ translation_of: Web/CSS/angle-percentage
 
 - [CSS データ型](/ja/docs/Web/CSS/CSS_Types)
 - [CSS グラデーションの使用](/ja/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
-- [`conic-gradient()`](/ja/docs/Web/CSS/gradient/conic-gradient()) および [`repeating-conic-gradient()`](/ja/docs/Web/CSS/gradient/repeating-conic-gradient())
+- [`conic-gradient()`](</ja/docs/Web/CSS/gradient/conic-gradient()>) および [`repeating-conic-gradient()`](</ja/docs/Web/CSS/gradient/repeating-conic-gradient()>)

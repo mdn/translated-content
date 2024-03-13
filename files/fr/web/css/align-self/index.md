@@ -1,8 +1,8 @@
 ---
 title: align-self
 slug: Web/CSS/align-self
-translation_of: Web/CSS/align-self
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`align-self`** permet d'aligner les objets flexibles d'une ligne flexible ou d'une grille en surchargeant la valeur donnée par {{cssxref("align-items")}}.
@@ -34,8 +34,7 @@ align-self: flex-end; /* Les éléments flexibles sont alignés à la fin */
 align-self: baseline;
 align-self: first baseline;
 align-self: last baseline;
-align-self: stretch; /* Les objets dimensionnés avec 'auto' sont */
-                     /* étirés pour remplir le conteneur */
+align-self: stretch; /* Les objets dimensionnés avec 'auto' sont étirés pour remplir le conteneur */
 
 /* Alignement avec gestion du dépassement */
 align-self: safe center;
@@ -82,9 +81,13 @@ align-self: unset;
 - `unsafe`
   - : Quelle que soit les tailles relatives des objets par rapport au conteneur, la valeur indiquant l'alignement sera respectée.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -137,22 +140,11 @@ align-self: unset;
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                     | Commentaires         |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
-| {{SpecName("CSS3 Box Alignment", "#propdef-align-self", "align-self")}} | {{Spec2("CSS3 Box Alignment")}} |                      |
-| {{SpecName("CSS3 Flexbox", "#propdef-align-self", "align-self")}}         | {{Spec2("CSS3 Flexbox")}}         | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-### Prise en charge pour les dispositions avec les boîtes flexibles (_Flexbox_)
-
-{{Compat("css.properties.align-self.flex_context")}}
-
-### Prise en charge pour les dispositions avec les grilles CSS
-
-{{Compat("css.properties.align-self.grid_context")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,15 +1,8 @@
 ---
 title: class
 slug: Web/JavaScript/Reference/Statements/class
-tags:
-  - Classes
-  - ECMAScript 2015
-  - Instruction
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Statements/class
-original_slug: Web/JavaScript/Reference/Instructions/class
 ---
+
 {{jsSidebar("Statements")}}
 
 La **déclaration class** crée une nouvelle classe avec le nom fourni en utilisant l'héritage à base de prototypes pour émuler le fonctionnement de classe.
@@ -41,7 +34,7 @@ Dans l'exemple qui suit, on définit une classe `Polygone` pour laquelle on cré
 ```js
 class Polygone {
   constructor(hauteur, largeur) {
-    this.nom = 'Polygone';
+    this.nom = "Polygone";
     this.hauteur = hauteur;
     this.largeur = largeur;
   }
@@ -49,8 +42,8 @@ class Polygone {
 
 class Carré extends Polygone {
   constructor(longueur) {
-    super(longueur,longueur);
-    this.nom = 'Carré';
+    super(longueur, longueur);
+    this.nom = "Carré";
   }
 }
 ```
@@ -59,26 +52,21 @@ class Carré extends Polygone {
 >
 > ```js
 > // Deux déclarations avec le même nom
-> class Toto {};
-> class Toto {}; // Uncaught SyntaxError: Identifier 'Toto' has already been declared
+> class Toto {}
+> class Toto {} // Uncaught SyntaxError: Identifier 'Toto' has already been declared
 >
 > // Expression puis déclaration
 > var Truc = class {};
-> class Truc {}; // Uncaught TypeError: Identifier 'Truc' has already been declared
+> class Truc {} // Uncaught TypeError: Identifier 'Truc' has already been declared
 > ```
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-class-definitions', 'Définitions de classe')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ES2016', '#sec-class-definitions', 'Class definitions')}}         | {{Spec2('ES2016')}}     |                      |
-| {{SpecName('ES2017', '#sec-class-definitions', 'Class definitions')}}         | {{Spec2('ES2017')}}     |                      |
-| {{SpecName('ESDraft', '#sec-class-definitions', 'Définitions de classe')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.statements.class")}}
+{{Compat}}
 
 ## Voir aussi
 

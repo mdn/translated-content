@@ -1,13 +1,8 @@
 ---
-title: '::-webkit-slider-runnable-track'
+title: "::-webkit-slider-runnable-track"
 slug: Web/CSS/::-webkit-slider-runnable-track
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-element
-  - Reference
-translation_of: Web/CSS/::-webkit-slider-runnable-track
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 Le pseudo-élément **`::-webkit-slider-runnable-track`** représente la piste utilisée par un élément {{HTMLElement("input")}} de type `"range"` (cf. {{HTMLElement("input/range", '&lt;input type="range"&gt;')}}).
@@ -18,7 +13,7 @@ Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink e
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.-webkit-slider-runnable-track")}}
+{{Compat}}
 
 ## Voir aussi
 

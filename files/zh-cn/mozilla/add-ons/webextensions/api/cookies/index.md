@@ -1,19 +1,13 @@
 ---
 title: cookies
 slug: Mozilla/Add-ons/WebExtensions/API/cookies
-tags:
-  - API
-  - Add-ons
-  - Cookies
-  - Extensions
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/cookies
 ---
+
 {{AddonSidebar}}
 
 使用 WebExtensions 获取或设置 cookies, 并且在修改时能够获得通知。
 
-你需要在 [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 文件中开启“cookies”[API 权限](/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions)，并且需要对应站点的 [主机权限](/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) 才能设置指定站点的 cookie。详细信息查看 [cookie 权限](/en-US/Add-ons/WebExtensions/API/cookies#Permissions).
+你需要在 [manifest.json](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 文件中开启“cookies”[API 权限](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#API_permissions)，并且需要对应站点的 [主机权限](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) 才能设置指定站点的 cookie。详细信息查看 [cookie 权限](/zh-CN/Add-ons/WebExtensions/API/cookies#Permissions).
 
 ## 类型
 
@@ -44,7 +38,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/cookies
 
 ## 权限
 
-为了使用这个 API，插件必须在它的 manifest 中指定"cookies" [API 权限](/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions)，和它想要使用 cookie 的任何网站的 [host 权限](/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) 。插件将能读取或写入 host 权限中所匹配的 URL 可以读取或写入的任何 cookie。例如：
+为了使用这个 API，插件必须在它的 manifest 中指定"cookies" [API 权限](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#API_permissions)，和它想要使用 cookie 的任何网站的 [host 权限](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) 。插件将能读取或写入 host 权限中所匹配的 URL 可以读取或写入的任何 cookie。例如：
 
 - `http://*.example.com/`
 
@@ -79,7 +73,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/cookies
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.cookies")}}
+{{Compat}}
 
 ### Edge 不兼容
 
@@ -91,7 +85,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/cookies
 >
 > Microsoft Edge 兼容性数据由 Microsoft Corporation 提供，并包含在 Creative Commons Attribution 3.0 United States License.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -118,4 +113,4 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/cookies
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

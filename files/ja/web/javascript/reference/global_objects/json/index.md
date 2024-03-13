@@ -1,15 +1,8 @@
 ---
 title: JSON
 slug: Web/JavaScript/Reference/Global_Objects/JSON
-tags:
-  - JSON
-  - JavaScript
-  - 名前空間
-  - オブジェクト
-  - リファレンス
-browser-compat: javascript.builtins.JSON
-translation_of: Web/JavaScript/Reference/Global_Objects/JSON
 ---
+
 {{JSRef}}
 
 **`JSON`** オブジェクトは、 [JavaScript Object
@@ -31,9 +24,9 @@ JSON は、オブジェクト、配列、数値、文字列、論理値、そし
 {{jsxref("JSON.parse()")}} が文字列を JSON として解釈し、{{jsxref("Global_Objects/eval", "eval")}} が文字列を JavaScript として実行するこの例を考えてみてください。
 
 ```js
-let code = '"\u2028\u2029"'
-JSON.parse(code)  // どのエンジンでも "\u2028\u2029" と評価される
-eval(code)        // 古いエンジンでは SyntaxError が発生する
+let code = '"\u2028\u2029"';
+JSON.parse(code); // どのエンジンでも "\u2028\u2029" と評価される
+eval(code); // 古いエンジンでは SyntaxError が発生する
 ```
 
 他の違いとしては、二重引用符で囲まれた文字列のみを許可していることや、 {{jsxref("undefined")}} やコメントの規定がないことなどが挙げられます。 JSON に基づいたより人間に優しい設定フォーマットを使いたい場合、 Babel コンパイラーによって使われる [JSON5](https://json5.org/) と、より一般的に使われる [YAML](https://ja.wikipedia.org/wiki/YAML) があります。
@@ -96,7 +89,7 @@ DIGIT = %x30-39            ; 0-9
       ; DIGIT equivalent to DIGIT rule in [RFC5234]
 ```
 
-重要でない{{glossary("whitespace", "ホワイトスペース")}}は、基本的に任意の場所に置くことができますが、 `JSONNumber` (数値に空白を含んではいけません) や `JSONString` (対応する文字であると解釈されるか、エラーが発生します) の内部を除きます。ホワイトスペースとして有効な文字はタブ文字 ([U+0009](https://unicode-table.com/en/0009/))、キャリッジリターン ([U+000D](https://unicode-table.com/en/000D/))、ラインフィード ([U+000A](https://unicode-table.com/en/000A/))、空白 ([U+0020](https://unicode-table.com/en/0020/)) のみです。
+重要でない{{glossary("whitespace", "ホワイトスペース")}}は、基本的に任意の場所に置くことができますが、 `JSONNumber` (数値に空白を含んではいけません) や `JSONString` (対応する文字であると解釈されるか、エラーが発生します) の内部を除きます。ホワイトスペースとして有効な文字はタブ文字 ([U+0009](https://symbl.cc/en/0009/))、キャリッジリターン ([U+000D](https://symbl.cc/en/000D/))、ラインフィード ([U+000A](https://symbl.cc/en/000A/))、空白 ([U+0020](https://symbl.cc/en/0020/)) のみです。
 
 ## 静的メソッド
 
@@ -111,17 +104,17 @@ DIGIT = %x30-39            ; 0-9
 
 ```json
 {
-  "browsers": {
-    "firefox": {
-      "name": "Firefox",
-      "pref_url": "about:config",
-      "releases": {
-        "1": {
-          "release_date": "2004-11-09",
-          "status": "retired",
-          "engine": "Gecko",
-          "engine_version": "1.7"
-        }
+  "browsers": {
+    "firefox": {
+      "name": "Firefox",
+      "pref_url": "about:config",
+      "releases": {
+        "1": {
+          "release_date": "2004-11-09",
+          "status": "retired",
+          "engine": "Gecko",
+          "engine_version": "1.7"
+        }
       }
     }
   }

@@ -1,15 +1,8 @@
 ---
-title: 'Element : évènement mouseout'
+title: "Element : évènement mouseout"
 slug: Web/API/Element/mouseout_event
-tags:
-  - API
-  - DOM
-  - Event
-  - Interface
-  - Reference
-  - mouseout
-translation_of: Web/API/Element/mouseout_event
 ---
+
 {{APIRef}}
 
 L'évènement **`mouseout`** est déclenché à partir d'un {{domxref("Element")}} lorsqu'un dispositif de pointage (ex. une souris) déplace le curseur en dehors de l'élément ou de l'un de ses fils. `mouseout` est également apporté à un élément si le curseur se déplace dans un élément fils car l'élément fils peut masquer la zone visible de l'élément.
@@ -60,27 +53,35 @@ let test = document.getElementById("test");
 
 // On affiche la liste en violet lorsque le curseur quitte
 // l'élément <ul>
-test.addEventListener("mouseleave", function( event ) {
-  // on cible la cible de mouseleave
-  event.target.style.color = "purple";
+test.addEventListener(
+  "mouseleave",
+  function (event) {
+    // on cible la cible de mouseleave
+    event.target.style.color = "purple";
 
-  // on réinitialise la couleur après quelques instants
-  setTimeout(function() {
-    event.target.style.color = "";
-  }, 1000);
-}, false);
+    // on réinitialise la couleur après quelques instants
+    setTimeout(function () {
+      event.target.style.color = "";
+    }, 1000);
+  },
+  false,
+);
 
 // On affiche les éléments <li> en orange lorsque la souris
 // les quitte
-test.addEventListener("mouseout", function( event ) {
-  // on cible la cible de mouseout
-  event.target.style.color = "orange";
+test.addEventListener(
+  "mouseout",
+  function (event) {
+    // on cible la cible de mouseout
+    event.target.style.color = "orange";
 
- // on réinitialise la couleur après quelques instants
-  setTimeout(function() {
-    event.target.style.color = "";
-  }, 500);
-}, false);
+    // on réinitialise la couleur après quelques instants
+    setTimeout(function () {
+      event.target.style.color = "";
+    }, 500);
+  },
+  false,
+);
 ```
 
 ### Résultat
@@ -89,14 +90,11 @@ test.addEventListener("mouseout", function( event ) {
 
 ## Spécifications
 
-| Spécification                                                                        | État                             |
-| ------------------------------------------------------------------------------------ | -------------------------------- |
-| {{SpecName('UI Events', '#event-type-mouseout', 'mouseout')}}     | {{Spec2('UI Events')}}     |
-| {{SpecName('DOM3 Events', '#event-type-mouseout', 'mouseout')}} | {{Spec2('DOM3 Events')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.mouseout_event")}}
+{{Compat}}
 
 ## Voir aussi
 

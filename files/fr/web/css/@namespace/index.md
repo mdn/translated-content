@@ -1,12 +1,8 @@
 ---
-title: '@namespace'
+title: "@namespace"
 slug: Web/CSS/@namespace
-tags:
-  - CSS
-  - Reference
-  - Règle @
-translation_of: Web/CSS/@namespace
 ---
+
 {{CSSRef}}
 
 **`@namespace`** est [une règle @](/fr/docs/Web/CSS/Règles_@) qui définit [les espaces de noms XML](/fr/docs/Glossaire/Namespace) utilisés dans une feuille de style CSS. Les espaces de noms définis sont alors utilisés pour restreindre les sélecteurs [universels](/fr/docs/Web/CSS/Sélecteurs_universels), [de type](/fr/docs/Web/CSS/Sélecteurs_de_type), et [d'attribut](/fr/docs/Web/CSS/Sélecteurs_d_attribut) afin que ceux-ci ne sélectionnent que les éléments contenus dans cet espace de nom. La règle `@namespace` est généralement utilisée lorsqu'on manipule des documents entremêlant différents espaces de noms (par exemple, un document HTML5 qui contient du SVG en ligne ou du MathML ou alors un fichier XML qui est composé de plusieurs vocabulaires).
@@ -18,13 +14,16 @@ translation_of: Web/CSS/@namespace
 /* Cela correspond à tous les éléments XHTML <a>
   car XHTML est l'espace de nom par défaut, sans
   préfixe. */
-a {}
+a {
+}
 
 /* Cela correspond à tous les éléments SVG <a> */
-svg|a {}
+svg|a {
+}
 
 /* Cela correspond aux éléments <a> XHTML et SVG */
-*|a {}
+*|a {
+}
 ```
 
 Les règles `@namespace` doivent suivre les règles @ {{cssxref("@charset")}} et {{cssxref("@import")}} et précéder les autres règles @ ainsi que les déclarations de style contenus dans la feuille de style.
@@ -55,10 +54,8 @@ En [HTML5](/fr/docs/Glossaire/HTML5), les [éléments étrangers](https://html.s
 
 ## Spécifications
 
-| Spécification                                                                    | État                                 | Commentaires         |
-| -------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('CSS3 Namespaces', '#declaration', '@namespace')}} | {{Spec2('CSS3 Namespaces')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.namespace")}}
+{{Compat}}

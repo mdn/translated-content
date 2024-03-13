@@ -1,10 +1,8 @@
 ---
 title: table
 slug: Web/API/HTMLTableElement
-tags:
-  - Référence_du_DOM_Gecko
-translation_of: Web/API/HTMLTableElement
 ---
+
 {{ ApiRef() }}
 
 ## Interface de l'élément HTML Table

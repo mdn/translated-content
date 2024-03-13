@@ -1,14 +1,11 @@
 ---
 title: HTML
 slug: Glossary/HTML
-tags:
-  - CodingScripting
-  - Glossary
-  - HTML
-  - l10n:priority
-translation_of: Glossary/HTML
 ---
-{{QuickLinksWithSubpages("/en-US/docs/Glossary")}}
+
+{{GlossarySidebar}}
+
+{{QuickLinksWithSubpages("/zh-TW/docs/Glossary")}}
 
 超文件標示語言（**HTML**，HyperText Markup Language）是用於指定網頁結構的描述性語言。
 
@@ -32,14 +29,14 @@ HTML 文件的副檔名通常存為 `.htm` 或是 `.html`。它們會放在{{Glo
 
 ### 基本知識
 
-- 維基百科的 {{interwiki("wikipedia", "HTML", "HTML")}}
+- 維基百科的 [HTML](https://zh.wikipedia.org/wiki/HTML)
 
 ### 學習 HTML
 
-- [我們的 HTML 教學](/zh-TW/Learn/HTML)
-- [codecademy.com 的網路課程](http://www.codecademy.com/en/tracks/web)
+- [我們的 HTML 教學](/zh-TW/docs/Learn/HTML)
+- [codecademy.com 的網路課程](https://www.codecademy.com/en/tracks/web)
 
 ### 技術參考
 
 - [HTML 的 CSS 文件](/zh-TW/docs/Web/HTML)
-- [HTML 規範](http://www.w3.org/TR/html5/)
+- [HTML 規範](https://www.w3.org/TR/html5/)

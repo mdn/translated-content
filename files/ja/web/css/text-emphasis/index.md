@@ -1,15 +1,10 @@
 ---
 title: text-emphasis
 slug: Web/CSS/text-emphasis
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS テキスト装飾
-  - Reference
-  - recipe:css-shorthand-property
-browser-compat: css.properties.text-emphasis
-translation_of: Web/CSS/text-emphasis
+l10n:
+  sourceCommit: b82ff59aab7883b7bb2222cf9f9f9b6eed818e08
 ---
+
 {{CSSRef}}
 
 **`text-emphasis`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 (空白や制御文字を除く) テキストに圏点を適用します。これは {{cssxref("text-emphasis-style")}} と {{cssxref("text-emphasis-color")}} の[一括指定](/ja/docs/Web/CSS/Shorthand_properties)です。
@@ -20,7 +15,7 @@ translation_of: Web/CSS/text-emphasis
 
 圏点の大きさは、ルビと同様にフォントの大きさの約 50% であり、 `text-emphasis` は現在の行間隔が圏点を表示するのに十分でない場合、行の高さに影響を与えることがあります。
 
-> **Note:** `text-emphasis` は、 {{cssxref("text-emphasis-position")}} の値をリセットしません。これは、圏点のスタイルと色がテキストで異なる場合に、圏点の位置を要求することがほとんど見込まれないためです。珍しくもこれを必要とするような場合は、プロパティ {{cssxref("text-emphasis-position")}} を使用してください。
+> **メモ:** `text-emphasis` は、 {{cssxref("text-emphasis-position")}} の値をリセットしません。これは、圏点のスタイルと色がテキストで異なる場合に、圏点の位置を要求することがほとんど見込まれないためです。珍しくもこれを必要とするような場合は、プロパティ {{cssxref("text-emphasis-position")}} を使用してください。
 
 ## 構成要素のプロパティ
 
@@ -36,11 +31,11 @@ translation_of: Web/CSS/text-emphasis
 text-emphasis: none; /* 圏点なし */
 
 /* <string> 値 */
-text-emphasis: 'x';
-text-emphasis: '点';
-text-emphasis: '\25B2';
-text-emphasis: '*' #555;
-text-emphasis: 'foo'; /* 使用するべきではない。 'f' のみとして計算や表示が行われる */
+text-emphasis: "x";
+text-emphasis: "点";
+text-emphasis: "\25B2";
+text-emphasis: "*" #555;
+text-emphasis: "foo"; /* 使用するべきではない。 'f' のみとして計算や表示が行われる */
 
 /* キーワード値 */
 text-emphasis: filled;
@@ -55,6 +50,7 @@ text-emphasis: filled sesame #555;
 text-emphasis: inherit;
 text-emphasis: initial;
 text-emphasis: revert;
+text-emphasis: revert-layer;
 text-emphasis: unset;
 ```
 
@@ -77,7 +73,7 @@ text-emphasis: unset;
 - `sesame`
   - : 記号としてゴマを表示します。filled sesame は `'﹅'` (`U+FE45`)、open sesame は`'﹆'` (`U+FE46`) です。これは、他の図形が与えられていない場合、縦書きモードで既定の形状です。
 - `<string>`
-  - : 記号として文字列を表示します。 `&lt;string&gt;` には 1 <em>文字</em>を超える文字列を指定しないでください。ユーザーエージェントは、 1 つより多い書記素クラスターから構成される文字列を短縮したり無視したりする可能性があります。
+  - : 記号として文字列を表示します。 `<string>` には 1 <em>文字</em>を超える文字列を指定しないでください。ユーザーエージェントは、 1 つより多い書記素クラスターから構成される文字列を短縮したり無視したりする可能性があります。
 - `<color>`
   - : 記号の色を定義します。 color を指定しない場合、既定では `currentcolor` です。
 
@@ -89,9 +85,9 @@ text-emphasis: unset;
 
 {{csssyntax}}
 
-## Examples
+## 例
 
-<h3 id="A_heading_with_emphasis_shape_and_color">強調して色を付けた見出し</h3>
+### 強調して色を付けた見出し
 
 この例は、見出しの各文字に三角形の圏点を付けて描画します。
 
@@ -99,8 +95,7 @@ text-emphasis: unset;
 
 ```css
 h2 {
-  -webkit-text-emphasis: triangle #D55;
-  text-emphasis: triangle #D55;
+  text-emphasis: triangle #d55;
 }
 ```
 
@@ -110,7 +105,7 @@ h2 {
 <h2>これは重要です！</h2>
 ```
 
-#### Result
+#### 結果
 
 {{EmbedLiveSample("A_heading_with_emphasis_shape_and_color", 500, 90)}}
 

@@ -1,14 +1,8 @@
 ---
 title: Geolocation
 slug: Web/API/Geolocation
-tags:
-  - API
-  - Avancé
-  - Géolocalisation API
-  - Interface
-  - Reference
-translation_of: Web/API/Geolocation
 ---
+
 {{APIRef("Geolocation API")}}
 
 En intégrant l'interface **`Geolocation`**, on peut obtenir la position d'un ordinateur, d'un téléphone ou d'une tablette, ce qui permet aux contenus Web d'accéder à leur localisation. Un site internet ou une application mobile peut alors offrir divers services liés à la localisation de l'utilisateur.
@@ -34,13 +28,11 @@ _L'interface de géolocalisation n'hérite d'aucune méthode._
 
 ## Spécifications
 
-| Spécification                        | Statut                           | Commentaire             |
-| ------------------------------------ | -------------------------------- | ----------------------- |
-| {{SpecName('Geolocation')}} | {{Spec2('Geolocation')}} | Spécification initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Geolocation")}}
+{{Compat}}
 
 ## Voir aussi
 

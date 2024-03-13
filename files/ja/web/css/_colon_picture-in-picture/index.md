@@ -1,25 +1,17 @@
 ---
-title: ':picture-in-picture'
+title: ":picture-in-picture"
 slug: Web/CSS/:picture-in-picture
-tags:
-  - CSS
-  - Picture-in-Picture
-  - Picture-in-Picture API
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - 動画
-  - pip
-browser-compat: css.selectors.picture-in-picture
-translation_of: Web/CSS/:picture-in-picture
 ---
+
 {{CSSRef}}
 
 **`:picture-in-picture`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、現在ピクチャインピクチャモードの要素に一致します。
 
 ## 構文
 
-{{csssyntax}}
+```
+:picture-in-picture
+```
 
 ## 使用上のメモ
 
@@ -36,8 +28,10 @@ translation_of: Web/CSS/:picture-in-picture
 ```html
 <h1>MDN Web Docs Demo: :picture-in-picture pseudo-class</h1>
 
-<p>This demo uses the <code>:picture-in-picture</code> pseudo-class to automatically
-  change the style of a video entirely using CSS.</p>
+<p>
+  This demo uses the <code>:picture-in-picture</code> pseudo-class to
+  automatically change the style of a video entirely using CSS.
+</p>
 
 <video id="pip-video"></video>
 ```

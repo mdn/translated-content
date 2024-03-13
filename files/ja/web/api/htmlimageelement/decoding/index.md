@@ -1,17 +1,11 @@
 ---
-title: HTMLImageElement.decoding
+title: "HTMLImageElement: decoding プロパティ"
+short-title: decoding
 slug: Web/API/HTMLImageElement/decoding
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLImageElement
-  - プロパティ
-  - リファレンス
-  - decoding
-browser-compat: api.HTMLImageElement.decoding
-translation_of: Web/API/HTMLImageElement/decoding
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
+
 {{APIRef}}
 
 **`decoding`** は {{domxref("HTMLImageElement")}} インターフェイスのプロパティで、ブラウザーが画像をどのようにデコードすべきかというヒントを表します。
@@ -20,9 +14,12 @@ translation_of: Web/API/HTMLImageElement/decoding
 
 デコードヒントを表す文字列です。使用可能な値は以下の通りです。
 
-- **`sync`**: 画像を他のコンテンツと同期してデコードし、アトミックに表示します。
-- **`async`**: 画像を非同期でデコードすることで、他のコンテンツ提示の遅延を減らすことができます。
-- **`auto`**: 既定のモードで、デコードモードに対する優先順位がないことを示します。ブラウザーが最適なものを決定します。
+- `sync`
+  - : 画像を他のコンテンツと同期してデコードし、アトミックに表示します。
+- `async`
+  - : 画像を非同期でデコードすることで、他のコンテンツ提示の遅延を減らすことができます。
+- `auto`
+  - : 既定のモードで、デコードモードに対する優先順位がないことを示します。ブラウザーが最適なものを決定します。
 
 ## 使用上の注意
 
@@ -31,9 +28,9 @@ translation_of: Web/API/HTMLImageElement/decoding
 ## 例
 
 ```js
-var img = new Image();
-img.decoding = 'sync';
-img.src = 'img/logo.png';
+const img = new Image();
+img.decoding = "sync";
+img.src = "img/logo.png";
 ```
 
 ## 仕様書

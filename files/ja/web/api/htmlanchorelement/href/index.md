@@ -1,17 +1,10 @@
 ---
-title: HTMLAnchorElement.href
+title: "HTMLAnchorElement: href プロパティ"
 slug: Web/API/HTMLAnchorElement/href
-page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAnchorElement
-  - Location
-  - プロパティ
-  - リファレンス
-browser-compat: api.HTMLAnchorElement.href
-translation_of: Web/API/HTMLAnchorElement/href
-original_slug: Web/API/HTMLHyperlinkElementUtils/href
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
+
 {{ApiRef("HTML DOM")}}
 
 **`HTMLAnchorElement.href`** は{{Glossary("stringifier", "文字列化")}}プロパティで、URL 全体を含む文字列を返し、 href を更新することもできます。

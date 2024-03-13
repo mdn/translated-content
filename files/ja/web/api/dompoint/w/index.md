@@ -1,21 +1,11 @@
 ---
-title: DOMPoint.w
+title: "DOMPoint: w プロパティ"
+short-title: w
 slug: Web/API/DOMPoint/w
-page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - DOMPoint
-  - Geometry
-  - Geometry Interfaces
-  - Point
-  - Property
-  - Reference
-  - W
-  - perspective
-browser-compat: api.DOMPoint.w
-tranaslation_of: Web/API/DOMPoint/w
+l10n:
+  sourceCommit: 1b094710cd2816a6669ce616b6f56d0a5b25e6ad
 ---
+
 {{APIRef("DOM")}}
 
 **`DOMPoint`** インターフェースの **`w`** プロパティは、空間上のこの点の視点位置 w を保持します。

@@ -1,14 +1,8 @@
 ---
 title: performance.mark()
 slug: Web/API/Performance/mark
-tags:
-  - API
-  - メソッド
-  - リファレンス
-  - ウェブパフォーマンス
-browser-compat: api.Performance.mark
-translation_of: Web/API/Performance/mark
 ---
+
 {{APIRef("User Timing API")}}
 
 **`mark()`** メソッドは、ブラウザーのパフォーマンスエントリーバッファーに、指定された名前で{{domxref("DOMHighResTimeStamp","timestamp")}} を作成します。
@@ -23,21 +17,23 @@ translation_of: Web/API/Performance/mark
 
 ```js
 performance.mark(name);
-performance.mark(measureName, markOptions)
+performance.mark(measureName, markOptions);
 ```
 
 ### 引数
 
 - name
+
   - : {{domxref("DOMString")}} で、マークの名前を表します。このメソッドで指定された `name` がすでに {{domxref("PerformanceTiming")}} インターフェイスに存在していた場合は、 {{jsxref("SyntaxError")}} が発生します。
 
 - `markOptions` {{optional_inline}}
+
   - : このマークのためにタイムスタンプと追加のメタデータを指定するためのオブジェクトです。
 
     - `detail`
       - : マークに含める任意のメタデータです。
     - `startTime`
-      - : マークの時刻として使用する {{domxref("DOMHighResTimeStamp")}} desu.
+      - : マークの時刻として使用する {{domxref("DOMHighResTimeStamp")}} です。
 
 ### 返値
 
