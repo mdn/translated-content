@@ -63,7 +63,7 @@ $id = $_GET['id']
 
 藉由 (1) 所有輸入字串的單引號 ' 取代成雙引號 "，還有 (2) 在每個 ' 之前加上 /。修正後的 Magical String 不能繞過驗證，並使你的資料庫保持安全。
 
-## 了解詳情
+## 參見
 
 - 維基百科上的 [SQL 注入](https://zh.wikipedia.org/wiki/SQL注入)
 - OWASP（Open Web Application Security Project）上的[解釋 SQL 注入](https://www.owasp.org/index.php/SQL_Injection)
