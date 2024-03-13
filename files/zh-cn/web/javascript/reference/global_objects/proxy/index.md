@@ -345,7 +345,7 @@ console.log(products.number); // 3
 ```js
 /*
   var docCookies = ... get the "docCookies" object here:
-  https://developer.mozilla.org/zh-CN/docs/DOM/document.cookie#A_little_framework.3A_a_complete_cookies_reader.2Fwriter_with_full_unicode_support
+  https://reference.codeproject.com/dom/document/cookie/simple_document.cookie_framework
 */
 
 var docCookies = new Proxy(docCookies, {
