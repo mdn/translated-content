@@ -18,14 +18,14 @@ l10n:
 >
 > ```md
 > ---
-> title: <NombreDelElemento>
-> slug: Web/SVG/Element/NombreDelElemento
-> page-type: svg-element
+> title: NombreDeLaCabecera
+> slug: Web/HTTP/Headers/NameOfTheHeader
+> page-type: http-header
 > status:
 >   - experimental
 >   - deprecated
 >   - non-standard
-> browser-compat: svg.elements.NombreDelElemento
+> browser-compat: path.to.feature.NameOfTheHeader
 > ---
 > ```
 >
