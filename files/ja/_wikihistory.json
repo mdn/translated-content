@@ -4750,10 +4750,6 @@
       "Taken Bot"
     ]
   },
-  "Mozilla/Firefox/Releases/1.5/Adapting_XUL_Applications_for_Firefox_1.5": {
-    "modified": "2019-03-23T23:44:03.678Z",
-    "contributors": ["SphinxKnight", "Mgjbot", "Morishoji"]
-  },
   "Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching": {
     "modified": "2019-03-24T00:03:05.751Z",
     "contributors": ["silverskyvicto", "fscholz", "Mgjbot", "electrolysis"]
