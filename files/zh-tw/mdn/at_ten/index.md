@@ -17,7 +17,7 @@ slug: MDN/At_ten
 
 十年來，MDN 社群持續紀錄著開放網路。從修改錯別字到撰寫整個 API 文件，每個人不分多少都有貢獻。我們傑出的成員 (Mozillians) 已經翻譯或編寫超過 90000 頁的內容。你也可以成為其中的一員。
 
-[了解更多關於貢獻的資訊](/zh-TW/docs/MDN_at_ten/Contributing_to_MDN)
+[了解更多關於貢獻的資訊](/zh-TW/docs/MDN/Community/Contributing)
 
 ## 參見
 
