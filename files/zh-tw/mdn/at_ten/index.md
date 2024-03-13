@@ -13,7 +13,7 @@ slug: MDN/At_ten
 
 [了解歷史](/zh-TW/docs/MDN/At_ten/History_of_MDN)
 
-## MDN
+## 為 MDN 做出貢獻
 
 十年來，MDN 社群持續紀錄著開放網路。從修改錯別字到撰寫整個 API 文件，每個人不分多少都有貢獻。我們傑出的成員（Mozillian）已經翻譯或編寫超過 90000 頁的內容。你也可以成為其中的一員。
 
