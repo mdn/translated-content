@@ -44,7 +44,7 @@ slug: Web/HTML/Element/em
 
 ### 結果
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("範例")}}
 
 ## 技術摘要
 
@@ -59,9 +59,9 @@ slug: Web/HTML/Element/em
       <td>
         <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
           >流內容</a
-        >，<a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
+        >、<a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
           >段落型內容</a
-        >，可觸及的內容。
+        >、捫及內容。
       </td>
     </tr>
     <tr>
