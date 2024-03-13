@@ -1,6 +1,7 @@
 ---
 title: Firefox 1.5 に XUL アプリケーションを対応させる
-slug: Mozilla/Firefox/Releases/1.5/Adapting_XUL_Applications_for_Firefox_1.5
+slug: conflicting/Mozilla/Firefox/Releases/1.5
+original_slug: Mozilla/Firefox/Releases/1.5/Adapting_XUL_Applications_for_Firefox_1.5
 ---
 
 このページでは、[Firefox 1.5](/ja/Firefox_1.5) の変更点のうち、XUL アプリケーション開発者に影響するものについて、リストで示します。
