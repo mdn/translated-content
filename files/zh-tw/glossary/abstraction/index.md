@@ -37,6 +37,6 @@ obj.display();
 // b = 20
 ```
 
-### 參見
+## 參見
 
 - 維基百科上的[抽象化](<https://zh.wikipedia.org/wiki/抽象化_(計算機科學)>)
