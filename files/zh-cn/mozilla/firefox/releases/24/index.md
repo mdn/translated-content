@@ -24,6 +24,6 @@ slug: Mozilla/Firefox/Releases/24
 - [Firefox 24 Aurora Notes](http://www.mozilla.org/zh-CN/firefox/24.0a2/auroranotes/)
 - [Firefox 24 网站兼容性](/zh-CN/docs/Site_Compatibility_for_Firefox_24)
 
-### 更早版本
+### 更早期的版本
 
-{{Firefox_for_developers('23')}}
+{{Firefox_for_developers}}

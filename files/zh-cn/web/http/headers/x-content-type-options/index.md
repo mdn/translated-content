@@ -40,7 +40,7 @@ X-Content-Type-Options: nosniff
 
 {{Compat}}
 
-## 相关内容
+## 参见
 
 - {{HTTPHeader("Content-Type")}}
 - The [original definition](https://blogs.msdn.microsoft.com/ie/2008/09/02/ie8-security-part-vi-beta-2-update/) of X-Content-Type-Options by Microsoft.

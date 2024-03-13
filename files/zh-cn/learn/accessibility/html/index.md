@@ -330,7 +330,7 @@ UI 控件无障碍的一个关键方面是，默认情况下，浏览器允许�
 
 基本上，[`tabindex`](/zh-CN/docs/Web/HTML/Global_attributes#tabindex) 属性主要用于允许 tabbable 元素具有自定义 Tab 键顺序（以正数顺序指定），而不是仅按其默认源顺序进行标记。这几乎总是一个糟糕的主意，因为它可能会造成重大混乱。例如，如果布局以与源代码非常不同的视觉顺序显示事物，而且你想让事情更符合逻辑。这里 `tabindex` 有另外两个选项：
 
-- `tabindex="0"` — 如上所述，该值允许 通常不可放置的元素（tabbable elements）变为可放置的。这是 tabindex 最有用的的地方。
+- `tabindex="0"` — 如上所述，该值允许 通常不可放置的元素（tabbable elements）变为可放置的。这是 tabindex 最有用的地方。
 - `tabindex="-1"` — 这允许 通常不可放置的元素（tabbable elements）以编程的方式接收焦点，例如，通过 JavaScript，或作为链接的目标。
 
 虽然上面的添加允许我们用 `tab` 选择按钮，但它不允许我们通过 `Enter / Return` 键来激活它们。要做到这一点，我们必须添加下面的 JS 小绝招（JavaScript trickery）：

@@ -48,6 +48,6 @@ slug: Web/HTML/Element/figcaption
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{HTMLElement("figure")}} 元素。
