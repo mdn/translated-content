@@ -30096,10 +30096,6 @@
     "modified": "2020-03-14T06:36:03.749Z",
     "contributors": ["mfuji09", "silverskyvicto"]
   },
-  "conflicting/Mozilla/Firefox/Releases/1.5": {
-    "modified": "2019-03-23T23:44:03.678Z",
-    "contributors": ["SphinxKnight", "Mgjbot", "Morishoji"]
-  },
   "conflicting/Web/API/Document": {
     "modified": "2020-10-15T22:12:31.952Z",
     "contributors": ["mfuji09"]
