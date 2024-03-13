@@ -41,7 +41,7 @@ l10n:
 - [HTTP](/zh-TW/docs/Web/HTTP)
   - : **超文字傳輸協定**（Hypertext Transfer Protocol）是基本的網際網路協定，用於從網路上取得檔案、樣式表、程式碼、圖片、影片、字型，以及其他資源——以及將資料傳回伺服器。
 - [媒體](/zh-TW/docs/Web/Media)
-  - : 用於在網頁檔案和應用程式中嵌入和串流視訊、音訊和圖片內容的格式、轉碼器、協定、API，和技術。
+  - : 用於在網頁檔案和應用程式中嵌入和串流視訊、音訊和圖片內容的格式、轉碼器、協定、API 和技術。
 - [SVG](/zh-TW/docs/Web/SVG)
   - : 可縮放向量圖形（Scalable Vector Graphic）使你能夠建立任何大小皆能平滑縮放的圖片。
 - [MathML](/zh-TW/docs/Web/MathML)
