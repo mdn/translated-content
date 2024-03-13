@@ -344,7 +344,7 @@ console.log(products.number); // 3
 
 ```js
 /*
-  const docCookies = ... get the "docCookies" object here:
+  const docCookies = ……通过以下链接获取“docCookies”对象：
   https://reference.codeproject.com/dom/document/cookie/simple_document.cookie_framework
 */
 
