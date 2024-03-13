@@ -21,7 +21,7 @@ for (variable in object)
 ### 参数
 
 - `variable`
-  - : 在每次迭代时接收一个字符串属性名。它可以通过使用 [`const`](/zh-CN/docs/Web/JavaScript/Reference/Statements/const)、[`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let) 或 [`var`](/zh-CN/docs/Web/JavaScript/Reference/Statements/var) 进行声明，也可以是一个[赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment)目标（例如，先前声明的变量、对象属性或 [解构赋值模式](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)）。使用 `var` 声明的变量不会局限于循环内部，即它们与 `for...in` 循环所在的作用域相同。
+  - : 在每次迭代时接收一个字符串属性名。它可以通过使用 [`const`](/zh-CN/docs/Web/JavaScript/Reference/Statements/const)、[`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let) 或 [`var`](/zh-CN/docs/Web/JavaScript/Reference/Statements/var) 进行声明，也可以是一个[赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment)目标（例如，先前声明的变量、对象属性或[解构赋值模式](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)）。使用 `var` 声明的变量不会局限于循环内部，即它们与 `for...in` 循环所在的作用域相同。
 - `object`
   - : 其非符号可枚举属性被遍历的对象。
 - `statement`
@@ -29,13 +29,13 @@ for (variable in object)
 
 ## 描述
 
-该循环将遍历对象本身的所有可枚举属性，以及对象从其原型链继承的属性（原型链中较近的原型的属性优先于较远的原型的属性）。
+该循环将迭代对象本身的所有可枚举属性，以及对象从其原型链继承的属性（原型链中较近的原型的属性优先于较远的原型的属性）。
 
-`for...in` 循环只会遍历可枚举的非符号属性。从内置构造函数（如 `Array` 和 `Object`）创建的对象会从 `Array.prototype` 和 `Object.prototype` 继承不可枚举属性，例如 `Array` 的 `indexOf()` 方法或 `Object` 的 `toString()` 方法，在 `for...in` 循环中不会被访问到。
+`for...in` 循环只会迭代可枚举的非符号属性。从内置构造函数（如 `Array` 和 `Object`）创建的对象会从 `Array.prototype` 和 `Object.prototype` 继承不可枚举属性，例如 `Array` 的 `indexOf()` 方法或 `Object` 的 `toString()` 方法，它们在 `for...in` 循环中不会被访问到。
 
 根据现代 ECMAScript 规范的定义，遍历的顺序是一致且可预测的。在原型链的每个组件中，所有非负整数键（可以作为数组索引）将首先按值升序遍历，然后是其他字符串键按属性创建的先后顺序升序遍历。
 
-在 `for...in` 循环中，`variable` 部分可以接受任何在 `=` 运算符之前的内容。只要在循环体内部不重新赋值（可以在迭代之间更改，因为它们是两个独立的变量），你可以使用 {{jsxref("Statements/const", "const")}} 来声明变量。否则，你可以使用 {{jsxref("Statements/let", "let")}}。你可以使用[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)来分配多个局部变量，或者使用属性访问器（例如 `for (x.y in iterable)`）将值分配给对象属性。
+在 `for...in` 循环中，`variable` 部分可以接受任何在 `=` 运算符之前的内容。只要在循环体内部不重新赋值（可以在迭代之间更改，因为它们是两个独立的变量），你可以使用 {{jsxref("Statements/const", "const")}} 来声明变量。否则，你可以使用 {{jsxref("Statements/let", "let")}}。你可以使用[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)来为多个局部变量赋值，或者使用属性访问器（例如 `for (x.y in iterable)`）将值赋给对象属性。
 
 一种[遗留的语法](/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#语句)允许在 `for...in` 循环中的 `var` 声明的循环变量具有初始值。在严格模式下，这会抛出[语法错误](/zh-CN/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer)，而在非严格模式下则会被忽略。
 
@@ -49,7 +49,7 @@ for (variable in object)
 
 这意味着：
 
-- 任何在迭代过程中被添加到当前访问对象中的属性都不会被访问到，因为所有当前对象的自有属性已经被保存了。
+- 任何在迭代过程中被添加到当前访问对象中的属性都不会被访问到，因为当前对象的所有自有属性已经被保存了。
 - 如果原型链中多个对象具有相同名称的属性，则只会访问第一个，并且只有它是可枚举时才会被访问。如果它是不可枚举的，则不会访问具有相同名称的任何其他属性，即使它们也是可枚举的。
 
 一般来说，最好不要在迭代过程中添加、修改或删除对象属性，除非是正在访问的属性。规范明确允许实现可以在以下情况下不遵循上述算法：
@@ -99,7 +99,7 @@ for (const prop in obj) {
 
 ### 迭代自有属性
 
-下面的函数展示了 {{jsxref("Object.hasOwn()")}} 的用法：继承的属性不会被显示。
+下面的函数展示了 {{jsxref("Object.hasOwn()")}} 的用法：继承的属性不会显示。
 
 ```js
 const triangle = { a: 1, b: 2, c: 3 };
@@ -162,7 +162,7 @@ for (const prop in obj) {
 // 没有输出，因为第一个“a”属性已经被访问过，并且是不可枚举的。
 ```
 
-此外，请考虑以下情况，即行为是未指定的，并且实现往往偏离指定的算法：
+此外，请考虑以下情况，即行为是未指定的，并且实现往往偏离规定的算法：
 
 在迭代过程中更改原型链：
 
