@@ -75,7 +75,7 @@ char = unescaped /
         %x6E /          ; n    换行符   U+000A
         %x72 /          ; r    回车符   U+000D
         %x74 /          ; t    制表符   U+0009
-        %x75 4HEXDIG )  ; uXXXX                U+XXXX
+        %x75 4HEXDIG )  ; uXXXX        U+XXXX
 escape = %x5C              ; \
 quotation-mark = %x22      ; "
 unescaped = %x20-21 / %x23-5B / %x5D-10FFFF
@@ -97,7 +97,7 @@ DIGIT = %x30-39            ; 0-9
 - {{jsxref("JSON.parse()")}}
   - : 解析 JSON 字符串并返回对应的值，可以额外传入一个转换函数，用来将生成的值和其属性，在返回之前进行某些修改。
 - {{jsxref("JSON.stringify()")}}
-  - : 返回与指定值对应的 JSON 字符串，可以通过额外的参数，控制仅包含某些属性，或者以自定义方法来替换某些 key 对应的属性值。
+  - : 返回与指定值对应的 JSON 字符串，可以通过额外的参数，控制仅包含某些属性，或者以自定义方法来替换某些属性值。
 
 ## 示例
 
