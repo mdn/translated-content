@@ -10,7 +10,7 @@ slug: Web/API/Window/outerHeight
 
 ## 노트
 
-윈도우의 크기를 변경하려면  {{domxref("window.resizeBy()")}} 그리고 {{domxref("window.resizeTo()")}}를 확인해주세요.
+윈도우의 크기를 변경하려면 {{domxref("window.resizeBy()")}} 그리고 {{domxref("window.resizeTo()")}}를 확인해주세요.
 
 윈도우 브라우저의 내부 높이값, 즉 브라우저 안에서 보여지는 페이지의 높이값을 가져오려면 {{domxref("window.innerHeight")}}를 확인해주세요.
 
