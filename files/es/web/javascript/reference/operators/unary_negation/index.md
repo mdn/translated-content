@@ -19,7 +19,6 @@ El operador de **negación unaria (`-`)** precede a su operando y lo niega.
 
 ## Descripción
 
-The `-` operator is overloaded for two types of operands: number and [BigInt](/es/docs/Web/JavaScript/Reference/Global_Objects/BigInt). It first [coerces the operand to a numeric value](/es/docs/Web/JavaScript/Data_structures#numeric_coercion) and tests the type of it. It performs BigInt negation if the operand becomes a BigInt; otherwise, it performs number negation.
 
 El operador `-` acepta dos tipos de operandos: número y [BigInt](/es/docs/Web/JavaScript/Reference/Global_Objects/BigInt). Primero [intenta transformar el operando a un valor numérico](/es/docs/Web/JavaScript/Data_structures#numeric_coercion) y prueba su tipo. Realiza una negación BigInt si elo operando se convirtió en un BigInt; de lo contrario, realiza la negación de número.
 
