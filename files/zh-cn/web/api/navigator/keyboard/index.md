@@ -9,7 +9,7 @@ l10n:
 
 {{domxref("Navigator")}} 接口的只读属性 **`keyboard`** 返回一个 {{domxref('Keyboard')}} 对象，通过该对象可访问检索键盘布局映射和切换捕捉物理键盘按键的函数。
 
-### 值
+## 值
 
 一个 {{domxref('Keyboard')}} 对象。
 
