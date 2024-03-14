@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`::highlight()`** CSS [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements) 用于将样式应用到自定义高亮。
+**`::highlight()`** CSS [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements) 用于设置自定义高亮样式。
 
 自定义高亮是一组 {{domxref("Range")}} 对象，并且通过 {{domxref("HighlightRegistry")}} 在网页上注册。
 
@@ -19,7 +19,7 @@ l10n:
 - {{CSSxRef("background-color")}}
 - {{CSSxRef("text-decoration")}} 及其相关属性
 - {{CSSxRef("text-shadow")}}
-- {{CSSxRef("-webkit-text-stroke-color")}}, {{CSSxRef("-webkit-text-fill-color")}} and {{CSSxRef("-webkit-text-stroke-width")}}
+- {{CSSxRef("-webkit-text-stroke-color")}}、 {{CSSxRef("-webkit-text-fill-color")}} 和 {{CSSxRef("-webkit-text-stroke-width")}}
 
 特别地，{{CSSxRef("background-image")}} 将被忽略。
 
@@ -31,12 +31,12 @@ l10n:
 
 ## 示例
 
-### 字符高亮
+### 高亮字符
 
 #### HTML
 
 ```html
-<p id="rainbow-text">CSS Custom Highlight API rainbow</p>
+<p id="rainbow-text">CSS 自定义高亮 API——彩虹色</p>
 ```
 
 #### CSS
@@ -83,37 +83,35 @@ l10n:
 const textNode = document.getElementById("rainbow-text").firstChild;
 
 if (!CSS.highlights) {
-  textNode.textContent =
-    "The CSS Custom Highlight API is not supported in this browser!";
+  textNode.textContent = "此浏览器不支持 CSS 自定义高亮 API！";
 }
 
-// Create and register highlights for each color in the rainbow.
+// 创建并注册彩虹色中每种颜色的高亮。
 const highlights = [];
 for (let i = 0; i < 7; i++) {
-  // Create a new highlight for this color.
+  // 为该颜色创建新的高亮。
   const colorHighlight = new Highlight();
   highlights.push(colorHighlight);
 
-  // Register this highlight under a custom name.
+  // 以自定义名称注册此高亮。
   CSS.highlights.set(`rainbow-color-${i + 1}`, colorHighlight);
 }
 
-// Iterate over the text, character by character.
+// 逐个字符迭代文本。
 for (let i = 0; i < textNode.textContent.length; i++) {
-  // Create a new range just for this character.
+  // 专门为此字符创建一个新范围。
   const range = new Range();
   range.setStart(textNode, i);
   range.setEnd(textNode, i + 1);
 
-  // Add the range to the next available highlight,
-  // looping back to the first one once we've reached the 7th.
+  // 将该范围添加到下一个可用的高亮中，当达到第 7 个高亮时，循环回到第一个高亮。
   highlights[i % 7].add(range);
 }
 ```
 
 #### 结果
 
-{{ EmbedLiveSample("字符高亮") }}
+{{ EmbedLiveSample("高亮字符") }}
 
 ## 规范
 
