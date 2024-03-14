@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`::highlight()`** CSS [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements) 用于设置自定义高亮样式。
+**`::highlight()`** CSS [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)用于设置自定义高亮样式。
 
 自定义高亮是一组 {{domxref("Range")}} 对象，并且通过 {{domxref("HighlightRegistry")}} 在网页上注册。
 
@@ -19,7 +19,7 @@ l10n:
 - {{CSSxRef("background-color")}}
 - {{CSSxRef("text-decoration")}} 及其相关属性
 - {{CSSxRef("text-shadow")}}
-- {{CSSxRef("-webkit-text-stroke-color")}}、 {{CSSxRef("-webkit-text-fill-color")}} 和 {{CSSxRef("-webkit-text-stroke-width")}}
+- {{CSSxRef("-webkit-text-stroke-color")}}、{{CSSxRef("-webkit-text-fill-color")}} 和 {{CSSxRef("-webkit-text-stroke-width")}}
 
 特别地，{{CSSxRef("background-image")}} 将被忽略。
 
