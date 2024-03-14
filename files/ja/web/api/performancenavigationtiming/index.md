@@ -46,7 +46,7 @@ l10n:
 - {{domxref('PerformanceNavigationTiming.domContentLoadedEventStart')}} {{ReadOnlyInline}}
   - : {{domxref("DOMHighResTimeStamp")}} で、現在の文書でユーザーエージェントが [`DOMContentLoaded`](/ja/docs/Web/API/Document/DOMContentLoaded_event) イベントを起動する直前の時間と等しい時間値を表します。
 - {{domxref('PerformanceNavigationTiming.domInteractive')}} {{ReadOnlyInline}}
-  - : {{domxref("DOMHighResTimeStamp")}} で、ユーザーエージェントがこの文書の [`readyState`](/en-US/docs/Web/API/Document/readyState) を `"interactive"` に設定する直前の時刻を表します。
+  - : {{domxref("DOMHighResTimeStamp")}} で、ユーザーエージェントがこの文書の [`readyState`](/ja/docs/Web/API/Document/readyState) を `"interactive"` に設定する直前の時刻を表します。
 - {{domxref('PerformanceNavigationTiming.loadEventEnd')}} {{ReadOnlyInline}}
   - : {{domxref("DOMHighResTimeStamp")}} で、現在の文書の [`load`](/ja/docs/Web/API/Window/load_event) イベントが完了した時刻を表します。
 - {{domxref('PerformanceNavigationTiming.loadEventStart')}} {{ReadOnlyInline}}
