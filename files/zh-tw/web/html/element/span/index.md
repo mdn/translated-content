@@ -5,7 +5,7 @@ slug: Web/HTML/Element/span
 
 {{HTMLSidebar}}
 
-**`<span>`** [HTML](/zh-TW/docs/Web/HTML) 元素是一個通用的行內容器，用於包裹詞組內容，本身並不代表任何特定含義。它可用於為樣式目的（使用 [`class`](/zh-TW/docs/Web/HTML/Global_attributes#class) 或 [`id`](/zh-TW/docs/Web/HTML/Global_attributes#id) 屬性）對元素進行分組，或因它們共享屬性值（如 [`lang`](/zh-TW/docs/Web/HTML/Global_attributes#lang)）而使用。僅在沒有其他語義元素適用時應使用 `<span>`。`<span>` 非常類似於 {{HTMLElement("div")}} 元素，但 {{HTMLElement("div")}} 是一個[塊級元素](/zh-TW/docs/Glossary/Block-level_content)，而 `<span>` 是一個[行內元素](/zh-TW/docs/Glossary/Inline-level_content)。
+**`<span>`** [HTML](/zh-TW/docs/Web/HTML) 元素是一個通用的行內容器，用於包裹詞組內容，本身並不代表任何特定含義。它可用於為樣式目的（使用 [`class`](/zh-TW/docs/Web/HTML/Global_attributes#class) 或 [`id`](/zh-TW/docs/Web/HTML/Global_attributes#id) 屬性）對元素進行分組，或因它們共享屬性值（如 [`lang`](/zh-TW/docs/Web/HTML/Global_attributes#lang)）而使用。僅在沒有其他語義元素適用時應使用 `<span>`。`<span>` 非常類似於 {{HTMLElement("div")}} 元素，但 {{HTMLElement("div")}} 是一個[塊級元素](/zh-TW/docs/Glossary/Block-level_content)，而 `<span>` 是一個[行級元素](/zh-TW/docs/Glossary/Inline-level_content)。
 
 {{EmbedInteractiveExample("pages/tabbed/span.html", "tabbed-shorter")}}
 
@@ -25,7 +25,7 @@ slug: Web/HTML/Element/span
 
 #### 結果
 
-{{EmbedLiveSample('Example_1')}}
+{{EmbedLiveSample('範例 1')}}
 
 ### 範例 2
 
@@ -49,7 +49,7 @@ li span {
 
 #### 結果
 
-{{EmbedLiveSample('Example_2')}}
+{{EmbedLiveSample('範例 2')}}
 
 ## 技術摘要
 
@@ -64,7 +64,7 @@ li span {
       <td>
         <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
           >流內容</a
-        >，<a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
+        >、<a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
           >段落型內容</a
         >。
       </td>
