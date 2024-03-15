@@ -80,7 +80,7 @@ slug: Web/CSS/CSS_colors
   - : 색상 인식 및 불감증 (색맹) 사용자, 시력 저하 및 전정 또는 기타 신경학적 장애를 가진 사용자를 위해 색상을 인지하고 사용하는 것에 대한 문서입니다.
 - [WCAG 1.4.1: 색상 대비](/ko/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)
   - : 가독성을 보장하기 위한 배경과 전경 컨텐츠 간의 대비 요구 사항에 대한 설명입니다.
-- [색상 선택 도구](/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool)
+- [색상 선택 도구](/ko/docs/Web/CSS/CSS_colors/Color_picker_tool)
   - : 이 도구는 사용자 정의 색상을 생성, 조정 및 실험하기 쉽게 만듭니다.
 
 ## 관련 개념
