@@ -110,10 +110,10 @@ slug: Web/CSS/CSS_colors
 - SVG [`color`](/ko/docs/Web/SVG/Attribute/color) 속성
 - {{glossary("Color wheel")}} 용어 사전
 - {{glossary("Interpolation")}} 용어 사전
-- [`@font-palette-values`](/en-US/docs/Web/CSS/@font-palette-values) @규칙 [`override-colors`](/en-US/docs/Web/CSS/@font-palette-values/override-colors) 설명자
-- [`@color-profile`](/en-US/docs/Web/CSS/@color-profile) @규칙
-- [`color-gamut`](/en-US/docs/Web/CSS/@media/color-gamut) @미디어 규칙
-- [`forced-colors`](/en-US/docs/Web/CSS/@media/forced-colors) @미디어 규칙
+- [`@font-palette-values`](/ko/docs/Web/CSS/@font-palette-values) @규칙 [`override-colors`](/ko/docs/Web/CSS/@font-palette-values/override-colors) 설명자
+- [`@color-profile`](/ko/docs/Web/CSS/@color-profile) @규칙
+- [`color-gamut`](/ko/docs/Web/CSS/@media/color-gamut) @미디어 규칙
+- [`forced-colors`](/ko/docs/Web/CSS/@media/forced-colors) @미디어 규칙
 
 ## 명세서
 
