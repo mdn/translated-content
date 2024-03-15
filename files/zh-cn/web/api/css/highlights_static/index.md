@@ -1,6 +1,5 @@
 ---
 title: CSS：highlights 静态属性
-short-title: highlights
 slug: Web/API/CSS/highlights_static
 l10n:
   sourceCommit: 47ed48a36b456f8ea9ab6aaa5969c55d2912edcb
@@ -51,5 +50,5 @@ CSS.highlights.set("my-custom-highlight", myCustomHighlight);
 
 ## 参见
 
-- {{domxref("css_custom_highlight_api", "The CSS Custom Highlight API", "", "nocode")}}
-- [CSS 自定义高亮 API：网页文本范围高亮的未来](https://css-tricks.com/css-custom-highlight-api-early-look/)
+- {{domxref("css_custom_highlight_api", "CSS Custom Highlight API", "", "nocode")}}
+- [CSS Custom Highlight API：网页文本范围高亮的未来](https://css-tricks.com/css-custom-highlight-api-early-look/)
