@@ -1,36 +1,27 @@
 ---
 title: 103 Early Hints
 slug: Web/HTTP/Status/103
-page-type: http-status-code
-browser-compat: http.status.103
 ---
 
 {{HTTPSidebar}}
 
-The HTTP **`103 Early Hints`** [information response](/en-US/docs/Web/HTTP/Status#information_responses) may be sent by a server while it is still preparing a response, with hints about the sites and resources that the server is expecting the final response will link.
-This allows a browser to [preconnect](/en-US/docs/Web/HTML/Attributes/rel/preconnect) to sites or start [preloading](/en-US/docs/Web/HTML/Attributes/rel/preload) resources even before the server has prepared and sent that final response.
-
 HTTP **`103 Early Hints`** [資訊回應](/zh-TW/docs/Web/HTTP/Status#information_responses)可能在伺服器仍在準備回應時傳送，並包含有關伺服器預期最終回應將連結的網站和資源的提示。
 讓瀏覽器可以在伺服器準備並傳送最終回應之前，[預先連接](/zh-TW/docs/Web/HTML/Attributes/rel/preconnect)網站或開始[預先載入](/zh-TW/docs/Web/HTML/Attributes/rel/preload)資源。
 
-提前提示回應主要用於 {{HTTPHeader("Link")}} 標頭，指示了要載入的資源。
+提前提示回應主要用於 {{HTTPHeader("Link", "連結")}} 標頭，指示了要載入的資源。
 它可能也會包含在處理提前提示時強制執行的 [`Content-Security-Policy`](/zh-TW/docs/Web/HTTP/CSP) 標頭。
-
-A server might send multiple `103` responses, for example, following a redirect.
-Browsers only process the first early hint response, and this response must be discarded if the request results in a cross-origin redirect.
-Preloaded resources from the early hint are effectively pre-pended to the `Document`'s head element, and then followed by the resources loaded in the final response.
 
 伺服器可能會傳送多個 `103` 回應，例如在重新導向後。
 瀏覽器僅會處理首個提前提示回應，如果要求導致跨源重新導向，則必須丟棄此回應。
-提前提示的預先載入資源實際上是預先加入到 `Document` 的 head 元素中，然後是最終回應中載入的資源。
+提前提示的預先載入資源實際上是預先加入到 `Document` 的 head 元素中，然後才是最終回應中載入的資源。
 
-> **Note:** For compatibility reasons [it is recommended](https://www.rfc-editor.org/rfc/rfc8297#section-3) to only send HTTP `103 Early Hints` responses over HTTP/2 or later, unless the client is known to handle informational responses correctly.
+> **附註：** 由於相容性原因，[建議](https://www.rfc-editor.org/rfc/rfc8297#section-3)僅在 HTTP/2 以上版本上傳送 HTTP `103 Early Hints` 回應，除非已知客戶端能正確處理資訊回應。
 >
-> Most browsers limit support to HTTP/2 or later for this reason. See [browser compatibility](#browser_compatibility) below.
+> 大多數瀏覽器因此限制支援到 HTTP/2 以上版本。請參閱下方的[瀏覽器相容性](#browser_compatibility)。
 >
-> Despite this, the examples below use HTTP/1.1-style notation as per usual convention.
+> 儘管如此，以下的範例依照慣例仍使用了 HTTP/1.1 樣式的表示法。
 
-## Syntax
+## 語法
 
 ```http
 103 Early Hints
@@ -52,7 +43,6 @@ Link: <https://cdn.example.com>; rel=preconnect, <https://cdn.example.com>; rel=
 
 - 首次連線將用於載入無需 CORS 的資源，例如圖片。
 - 第二次連線包含了 [`crossorigin`](/zh-TW/docs/Web/HTML/Attributes/crossorigin) 屬性，將用於載入受 [CORS](/zh-TW/docs/Web/HTTP/CORS) 保護的資源，例如字型。
-
 
 受 CORS 保護的資源必須透過完全獨立的連線來擷取。如果你只需要從來源擷取一種類型的資源，則只需要預先連接一次。
 
@@ -80,11 +70,8 @@ Content-Type: text/html
 Link: </style.css>; rel=preload; as=style
 ```
 
-Subsequently the server sends the final response.
-This includes a link to the stylesheet, which may already have been preloaded from the early hint.
-
 接著伺服器會傳送最終回應。
-包含了樣式表連結，這個樣式表可能已經從提前提示中預先載入。
+包含了可能已經從提前提示中預先載入的樣式表連結。
 
 ```http
 200 OK
@@ -96,9 +83,9 @@ Content-Type: text/html
 ...
 ```
 
-### Early hint response with CSP
+### 帶 CSP 的提前提示回應
 
-The following example shows the same early hint response but with a `Content-Security-Policy` header included.
+以下是跟上一段一樣的提前提示，但包含了 `Content-Security-Policy` 標頭。
 
 ```http
 103 Early Hint
@@ -106,11 +93,11 @@ Content-Security-Policy: style-src: self;
 Link: </style.css>; rel=preload; as=style
 ```
 
-The early response restricts preloading to the same origin as the request.
-The stylesheet will preload if the origin matches.
+提前回應限制了只能預先載入與請求相同的來源。
+如果來源相符，樣式表將會預先載入。
 
-The final response might set the CSP to `none`, as shown below.
-The stylesheet has already preloaded, but will not be used when rendering the page.
+最終回應可能會將 CSP 設置為 `none`，如下所示。
+樣式表已經預先載入，但在轉譯頁面時不會使用。
 
 ```http
 200 OK
@@ -123,11 +110,11 @@ Content-Type: text/html
 ...
 ```
 
-## Specifications
+## 規範
 
 {{Specifications}}
 
-## Browser compatibility
+## 瀏覽器相容性
 
 {{Compat}}
 
