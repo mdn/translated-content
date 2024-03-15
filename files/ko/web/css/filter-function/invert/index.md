@@ -1,6 +1,8 @@
 ---
 title: invert()
 slug: Web/CSS/filter-function/invert
+l10n:
+  sourceCommit: 66944f622b6b51bc9c24bebbbea242138d910600
 ---
 
 {{CSSRef}}
