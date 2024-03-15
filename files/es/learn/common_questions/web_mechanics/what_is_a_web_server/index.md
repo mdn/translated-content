@@ -1,5 +1,5 @@
 ---
-title: Que es un servidor WEB?
+title: ¿Qué es un servidor WEB?
 slug: Learn/Common_questions/Web_mechanics/What_is_a_web_server
 ---
 
@@ -11,12 +11,12 @@ En este articulo veremos que son los servidores, cómo funcionan y por qué son 
       <th scope="row">Prerequisitos:</th>
       <td>
         Debes saber
-        <a href="/es/docs/Learn/How_the_Internet_works"
-          >como funciona internet</a
+        <a href="/es/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work"
+          >cómo funciona internet</a
         >, y
-        <a href="/es/docs/Learn/page_vs_site_vs_server_vs_search_engine"
-          >entendiendo la diferencia entre pagina web, sitio web, servidor y
-          motor de busqueda</a
+        <a href="/es/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines"
+          >entender la diferencia entre página web, sitio web, servidor y
+          motor de búsqueda</a
         >
       </td>
     </tr>
@@ -48,7 +48,7 @@ Por ejemplo, para producir las páginas web que finalmente ves en tu navegador, 
 
 ## Aprendizaje activo
 
-_No hay aprendizaje activo disponible. [**Por favor, considere colaborar.**](/es/docs/MDN/Getting_started)_
+_No hay aprendizaje activo disponible. [**Por favor, considere colaborar.**](/es/docs/MDN/Community/Contributing/Getting_started)_
 
 ## Inmersión más profunda
 
@@ -65,9 +65,9 @@ Técnicamente, puede alojar todos esos archivos en su propia computadora, pero e
 - tiene la misma dirección IP todo el tiempo.
 - es mantenido por un proveedor externo.
 
-Por todas estas razones, encontrar un buen proveedor de alojamiento es una parte clave del desarrollo de su sitio web. Investigue a través de los diversos servicios que ofrecen las compañías y elija uno que se ajuste a sus necesidades y a su presupuesto (los servicios van desde los gratuitos hasta los miles de dólares al mes). Puede encontrar mas información [en este artículo](/es/Learn/How_much_does_it_cost#Hosting).
+Por todas estas razones, encontrar un buen proveedor de alojamiento es una parte clave del desarrollo de su sitio web. Investigue a través de los diversos servicios que ofrecen las compañías y elija uno que se ajuste a sus necesidades y a su presupuesto (los servicios van desde los gratuitos hasta los miles de dólares al mes). Puede encontrar mas información [en este artículo](/es/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost#alojamiento).
 
-Una vez que configura una solución de alojamiento web, solo tiene que [cargar sus archivos en su servidor web](/es/docs/Learn/Upload_files_to_a_web_server).
+Una vez que configura una solución de alojamiento web, solo tiene que [cargar sus archivos en su servidor web](/es/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server).
 
 ### Comunicación a través de HTTP
 
@@ -86,7 +86,7 @@ HTTP proporciona reglas claras sobre cómo se comunican un cliente y un servidor
 - Al solicitar un archivo a través de HTTP, los clientes deben proporcionar la URL del archivo.
 - El servidor web debe responder a todas las solicitudes HTTP, al menos con un mensaje de error.
 
-[![The MDN 404 page as an example of such error page](mdn-404.jpg)](/es/404) En un servidor web, el servidor HTTP es responsable de procesar y responder las solicitudes entrantes.
+[![The MDN 404 page as an example of such error page](mdn-404.jpg)](/es/docs/Web/HTTP/Status/404) En un servidor web, el servidor HTTP es responsable de procesar y responder las solicitudes entrantes.
 
 1. Al recibir una solicitud, un servidor HTTP primero verifica si la URL solicitada coincide con un archivo existente.
 2. Si es así, el servidor web envía el contenido del archivo de nuevo al navegador. Si no, un servidor de aplicaciones construye el archivo necesario.
@@ -98,14 +98,16 @@ En términos generales, un servidor puede entregar contenido estático o dinámi
 
 "Dinámico" significa que el servidor procesa el contenido o incluso lo genera desde una base de datos. Esta solución proporciona más flexibilidad, pero se vuelve más difícil de manejar, lo que hace que sea mucho más complejo desarrollar el sitio web.
 
-Tomemos por ejemplo la página que estás leyendo en este momento. En el servidor web que lo aloja, hay un servidor de aplicaciones que toma el contenido del artículo de una base de datos, lo formatea, lo coloca dentro de algunas plantillas HTML y le envía los resultados. En este caso, el servidor de aplicaciones se llama [Kuma](/es/docs/MDN/Kuma) y está desarrollado con Python (utilizando el framework [Django](https://www.djangoproject.com/)). El equipo de Mozilla creó Kuma para las necesidades específicas de MDN, pero hay muchas aplicaciones similares basadas en otras tecnologías.
+Es imposible sugerir un único servidor de aplicaciones que sea la solución correcta para todos los casos de uso posibles. Algunos servidores de aplicaciones están diseñados para alojar y administrar blogs, wikis o soluciones de comercio electrónico, mientras que otros son más genéricos. Si está desarrollando un sitio web dinámico, tómese el tiempo para investigar sus requisitos y encontrar la tecnología que mejor se adapte a sus necesidades.
 
-Hay tantos servidores de aplicaciones que es resulta difícil sugerir uno en particular. Algunos servidores de aplicaciones se adaptan a categorías específicas de sitios web como blogs, wikis o tiendas electrónicas; otros, llamados CMS (Content Management Systems ó Sistemas de Gestión de Contenidos), son más genéricos. Si está desarrollando un sitio web dinámico, tómese el tiempo para elegir una herramienta que se adapte a sus necesidades. A menos que desee aprender algo de programación de servidores web (¡es un área emocionante!), no necesita crear su propio servidor de aplicaciones.
+La mayoría de los desarrolladores de sitios web no necesitarán crear un servidor de aplicaciones desde cero, porque hay muchas soluciones listas para usar, muchas de las cuales son altamente configurables.
+Pero si necesita crear su propio servidor, probablemente querrá utilizar un _framework_ de servidor, aprovechando su código y bibliotecas existentes, y extendiendo solo las partes que necesita para satisfacer su caso de uso.
+Solo un número relativamente pequeño de desarrolladores debería necesitar desarrollar un servidor completamente desde cero: por ejemplo, para cumplir con restricciones de recursos en un sistema integrado. Si desea experimentar con la creación de un servidor, eche un vistazo a los recursos en la [vía de aprendizaje de programación de sitios web del lado del servidor](/es/docs/Learn/Server-side).
 
 ## Próximos pasos
 
 Ahora que estás familiarizado con los servidores web, podrías:
 
-- leer sobre [cuánto cuesta hacer algo en la web](/es/docs/Learn/How_much_does_it_cost)
-- consultar otros artículos relacionados con[los diferentes software que puedes utilizar para crear un sitio web](/es/docs/Learn/What_software_do_I_need)
-- pasar a algo práctico tipo: [¿cómo subir archivos al servidor?](/es/docs/Learn/Upload_files_to_a_web_server).
+- leer sobre [cuánto cuesta hacer algo en la web](/es/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)
+- consultar otros artículos relacionados con[los diferentes software que puedes utilizar para crear un sitio web](/es/docs/Learn/Common_questions/Tools_and_setup/What_software_do_I_need)
+- pasar a algo práctico tipo: [¿cómo subir archivos al servidor?](/es/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server).
