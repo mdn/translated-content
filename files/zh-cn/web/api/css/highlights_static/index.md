@@ -1,5 +1,5 @@
 ---
-title: "CSS：highlights 静态属性"
+title: CSS：highlights 静态属性
 short-title: highlights
 slug: Web/API/CSS/highlights_static
 l10n:
