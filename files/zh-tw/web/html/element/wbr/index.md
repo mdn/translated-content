@@ -53,12 +53,12 @@ slug: Web/HTML/Element/wbr
     </tr>
     <tr>
       <th scope="row">允許的內容</th>
-      <td>空的</td>
+      <td>無</td>
     </tr>
     <tr>
       <th scope="row">標籤省略</th>
       <td>
-        它是一個 {{Glossary("void element")}}；它必須有一個開始標籤，但不得有結束標籤。
+        必須有一個開始標籤，但不得有結束標籤。
       </td>
     </tr>
     <tr>
