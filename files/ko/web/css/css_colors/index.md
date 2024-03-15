@@ -49,7 +49,6 @@ slug: Web/CSS/CSS_colors
 - [`device-cmyk()`](/ko/docs/Web/CSS/color_value/device-cmyk) {{Experimental_Inline}}
 - {{CSSXref("color_value/light-dark", "light-dark()")}} {{Experimental_Inline}}
 
-
 ### 자료형
 
 - {{cssxref("&lt;color&gt;")}}
