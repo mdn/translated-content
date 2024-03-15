@@ -1,10 +1,6 @@
 ---
 title: CSS colors
 slug: Web/CSS/CSS_colors
-page-type: css-module
-spec-urls:
-  - https://drafts.csswg.org/css-color/
-  - https://drafts.csswg.org/css-color-5/
 ---
 
 {{CSSRef}}
