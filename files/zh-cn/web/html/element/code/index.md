@@ -7,7 +7,7 @@ l10n:
 
 {{HTMLSidebar}}
 
-[HTML](/zh-CN/docs/Web/HTML) **`<code>`** 元素显示其内容的样式，旨在表明文本是一段简短的计算机代码。默认情况下，内容文本使用 {{Glossary("user agent", "用户代理")}}默认的等宽字体显示。
+[HTML](/zh-CN/docs/Web/HTML) **`<code>`** 元素显示其内容的样式，旨在表明文本是一段简短的计算机代码。默认情况下，内容文本使用{{Glossary("user agent", "用户代理")}}默认的等宽字体显示。
 
 {{EmbedInteractiveExample("pages/tabbed/code.html", "tabbed-shorter")}}
 
