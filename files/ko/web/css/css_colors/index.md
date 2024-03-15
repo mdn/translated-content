@@ -36,17 +36,17 @@ slug: Web/CSS/CSS_colors
 ### 함수
 
 - 절대 색상 함수:
-  - [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) 별칭 `rgba()`
-  - [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl) 별칭 `hsla()`
-  - [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb)
-  - [`lab()`](/en-US/docs/Web/CSS/color_value/lab)
-  - [`lch()`](/en-US/docs/Web/CSS/color_value/lch)
-  - [`oklab()`](/en-US/docs/Web/CSS/color_value/oklab)
-  - [`oklch()`](/en-US/docs/Web/CSS/color_value/oklch)
-  - [`color()`](/en-US/docs/Web/CSS/color_value/color)
-- [`color-contrast()`](/en-US/docs/Web/CSS/color_value/color-contrast) {{Experimental_Inline}}
-- [`color-mix()`](/en-US/docs/Web/CSS/color_value/color-mix)
-- [`device-cmyk()`](/en-US/docs/Web/CSS/color_value/device-cmyk) {{Experimental_Inline}}
+  - [`rgb()`](/ko/docs/Web/CSS/color_value/rgb) 별칭 `rgba()`
+  - [`hsl()`](/ko/docs/Web/CSS/color_value/hsl) 별칭 `hsla()`
+  - [`hwb()`](/ko/docs/Web/CSS/color_value/hwb)
+  - [`lab()`](/ko/docs/Web/CSS/color_value/lab)
+  - [`lch()`](/ko/docs/Web/CSS/color_value/lch)
+  - [`oklab()`](/ko/docs/Web/CSS/color_value/oklab)
+  - [`oklch()`](/ko/docs/Web/CSS/color_value/oklch)
+  - [`color()`](/ko/docs/Web/CSS/color_value/color)
+- [`color-contrast()`](/ko/docs/Web/CSS/color_value/color-contrast) {{Experimental_Inline}}
+- [`color-mix()`](/ko/docs/Web/CSS/color_value/color-mix)
+- [`device-cmyk()`](/ko/docs/Web/CSS/color_value/device-cmyk) {{Experimental_Inline}}
 - {{CSSXref("color_value/light-dark", "light-dark()")}} {{Experimental_Inline}}
 
 
