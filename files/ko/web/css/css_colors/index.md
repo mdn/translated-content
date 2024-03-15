@@ -72,7 +72,7 @@ slug: Web/CSS/CSS_colors
 
 ## 안내서
 
-- [CSS를 사용하여 HTML 요소에 색상 적용하기](/en-US/docs/Web/CSS/CSS_colors/Applying_color)
+- [CSS를 사용하여 HTML 요소에 색상 적용하기](/ko/docs/Web/CSS/CSS_colors/Applying_color)
   - : CSS를 사용하여 다양한 유형의 콘텐츠에 색상을 적용하는 방법에 대한 안내서입니다. 모든 색상 관련 CSS 속성이 적용됩니다.
 - [색상과 휘도 이해하기](/en-US/docs/Web/Accessibility/Understanding_Colors_and_Luminance)
   - : 색상 인식 및 불감증 (색맹) 사용자, 시력 저하 및 전정 또는 기타 신경학적 장애를 가진 사용자를 위해 색상을 인지하고 사용하는 것에 대한 문서입니다.
