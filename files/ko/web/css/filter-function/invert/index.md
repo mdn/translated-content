@@ -20,7 +20,7 @@ invert(amount)
 ### 매개변수
 
 - `amount`
-  - : {{cssxref("&lt;number&gt;")}} 또는 {{cssxref("&lt;percentage&gt;")}}를 지정한 변환할 양. `100%`는 완전하게 반전시켜주며, 값을 `0%`로 지정하면 입력값이 변경되지 않습니다. `0%` 과 `100%`의 사이의 값은 효과의 비율입니다. 보간({{Glossary("interpolation")}})의 초기값은 `0`입니다.
+  - : {{cssxref("&lt;number&gt;")}} 또는 {{cssxref("&lt;percentage&gt;")}}를 지정한 변환할 양. `100%`는 완전하게 반전시켜주며, 값을 `0%`로 지정하면 입력값이 변경되지 않습니다. `0%` 과 `100%`의 사이의 값은 효과의 비율입니다. [보간](/ko/docs/Glossary/Interpolation)의 초기값은 `0`입니다.
 
 ## 예제
 
