@@ -25,7 +25,6 @@ Tanto para números como para BigInts, `0` elevado a una potencia positiva devue
 
 `NaN ** 0` (y su equivalente `Math.pow(NaN, 0)`) es el único caso en el que {{jsxref("NaN")}} no se propaga a través de operaciónes matemáticas: devuelve `1` a pesar de que el operando sea `NAN`. Además, cuando la base es 1 y el exponente no es infinito, (±Infinity o `NaN`) el comportamiento es diferente a IEEE 754, el cual especifica que el resultado debería ser 1, sin embargo JavaScript retorna `NAN` para preservar la compatibilidad con versiones anteriores con su comportamiento original.
 
-
 Para exponenciación con BigInt, un {{jsxref("RangeError")}} es generado si el exponente `y` es negativo. Esto es porque cualquier exponente negativo probablemente daría como resultado un valor entre 0 y 1 (a menos que la base sea `1`, `-1` o `0`), que se redondea a cero y probablemente sea un error del desarrollador.
 
 El operador de exponenciación es [asociativo derecho](/es/docs/Web/JavaScript/Reference/Operators/Operator_precedence): `a ** b ** c` es igual a `a ** (b ** c)`.
