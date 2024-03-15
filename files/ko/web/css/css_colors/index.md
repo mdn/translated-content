@@ -15,7 +15,7 @@ slug: Web/CSS/CSS_colors
 
 {{EmbedGHLiveSample("css-examples/modules/colors.html", '100%', 450)}}
 
-[색상 선택기](/en-US/docs/Web/HTML/Element/input/color) 로 색상을 선택하고 [슬라이더](/en-US/docs/Web/HTML/Element/input/range) 로 투명도를 선택하면 RGB, HEX, HSL 및 HWB 값들이 업데이트됩니다. 새로운 색상이나 투명도 값을 선택하면, 배경의 색상과 슬라이더의 색상이 각각 {{cssxref("background-color")}} 과 {{cssxref("accent-color")}} CSS 속성을 통해 업데이트됩니다.
+[색상 선택기](/ko/docs/Web/HTML/Element/input/color) 로 색상을 선택하고 [슬라이더](/ko/docs/Web/HTML/Element/input/range) 로 투명도를 선택하면 RGB, HEX, HSL 및 HWB 값들이 업데이트됩니다. 새로운 색상이나 투명도 값을 선택하면, 배경의 색상과 슬라이더의 색상이 각각 {{cssxref("background-color")}} 과 {{cssxref("accent-color")}} CSS 속성을 통해 업데이트됩니다.
 
 이 색상 구문 변환기의 코드를 보려면, [GitHub 에서 소스 보기](https://github.com/mdn/css-examples/blob/main/modules/colors.html) 를 클릭하세요.
 
