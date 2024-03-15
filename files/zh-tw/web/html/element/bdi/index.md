@@ -180,8 +180,8 @@ body {
 
 ## 參見
 
-- [HTML中的內聯標記和雙向文本](https://www.w3.org/International/articles/inline-bidi-markup/)
-- [Unicode雙向算法基礎知識](https://www.w3.org/International/articles/inline-bidi-markup/uba-basics)
+- [HTML 中的內聯標記和雙向文本](https://www.w3.org/International/articles/inline-bidi-markup/)
+- [Unicode 雙向算法基礎知識](https://www.w3.org/International/articles/inline-bidi-markup/uba-basics)
 - {{Glossary("Localization")}}
 - 相關 HTML 元素：{{HTMLElement("bdo")}}
 - 相關 CSS 屬性：{{cssxref("direction")}}, {{cssxref("unicode-bidi")}}
