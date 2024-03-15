@@ -15,13 +15,13 @@ slug: Web/HTML/Element/wbr
 
 ## 注意事項
 
-在 UTF-8 編碼的頁面上，`<wbr>` 的行為類似於 `U+200B 零寬空格` 代碼點。特別是，它的行為類似於 Unicode 的雙向 BN 代碼點，意味著它對 {{Glossary("bidi")}} 排序沒有影響：`<div dir=rtl>123,<wbr>456</div>` 顯示為 `123,456` 而不是 `456,123`。
+在 UTF-8 編碼的頁面上，`<wbr>` 的行為類似於 `U+200B ZERO-WIDTH SPACE`（零寬空格）代碼點。特別是，它的行為類似於 Unicode 的雙向 BN 代碼點，意味著它對 {{Glossary("bidi")}} 排序沒有影響：`<div dir=rtl>123,<wbr>456</div>` 顯示為 `123,456` 而不是 `456,123`。
 
 出於相同的原因，`<wbr>` 元素在斷行點不引入連字符。要使連字符只出現在行末，請改用軟連字符字符實體（`&shy;`）。
 
 ## 範例
 
-*[雅虎風格指南](https://web.archive.org/web/20121014054923/http://styleguide.yahoo.com/)*建議[在標點符號之前斷開 URL](https://web.archive.org/web/20121105171040/http://styleguide.yahoo.com/editing/treat-abbreviations-capitalization-and-titles-consistently/website-names-and-addresses)，以避免在行末留下讓讀者誤以為是 URL 結尾的標點符號。
+[_雅虎風格指南_](https://web.archive.org/web/20121014054923/http://styleguide.yahoo.com/)建議[在標點符號之前斷開 URL](https://web.archive.org/web/20121105171040/http://styleguide.yahoo.com/editing/treat-abbreviations-capitalization-and-titles-consistently/website-names-and-addresses)，以避免在行末留下讓讀者誤以為是 URL 結尾的標點符號。
 
 ```html
 <p>
@@ -46,7 +46,7 @@ slug: Web/HTML/Element/wbr
       <td>
         <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
           >流內容</a
-        >，<a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
+        >、<a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
           >段落型內容</a
         >。
       </td>
@@ -64,8 +64,7 @@ slug: Web/HTML/Element/wbr
     <tr>
       <th scope="row">允許的父元素</th>
       <td>
-        任何接受
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
+        任何接受<a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
           >段落型內容</a
         >的元素。
       </td>
