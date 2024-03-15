@@ -29,9 +29,9 @@ slug: Web/CSS/CSS_colors
 ### @규칙과 설명자
 
 - {{cssxref("@color-profile")}}
-  - [`components`](/en-US/docs/Web/CSS/@color-profile#descriptors) descriptor
-  - [`rendering-intent`](/en-US/docs/Web/CSS/@color-profile#descriptors) descriptor
-  - [`src`](/en-US/docs/Web/CSS/@color-profile#descriptors) descriptor
+  - [`components`](/ko/docs/Web/CSS/@color-profile#descriptors) descriptor
+  - [`rendering-intent`](/ko/docs/Web/CSS/@color-profile#descriptors) descriptor
+  - [`src`](/ko/docs/Web/CSS/@color-profile#descriptors) descriptor
 
 ### 함수
 
