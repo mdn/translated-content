@@ -11,7 +11,7 @@ slug: Web/CSS/CSS_colors
 
 ### Colors 작용
 
-아래의 색상 구문 변환기는 현재 선택된 색상의 값을 [빨강-초록-파랑](/en-US/docs/Web/CSS/color_value/rgb) (RGB), [16진수](/en-US/docs/Web/CSS/hex-color) (HEX), [색상, 채도, 명도](/en-US/docs/Web/CSS/color_value/hsl) (HSL), 그리고 [색상, 백색, 검은색](/en-US/docs/Web/CSS/color_value/hwb) (HWB) CSS 색상 형식으로 표시합니다. 이 모든 RGB, HEX, HSL 그리고 HWB 색상 값들은 다르게 표기되었으나, 동일한 색상 값을 나타냅니다.
+아래의 색상 구문 변환기는 현재 선택된 색상의 값을 [빨강-초록-파랑](/ko/docs/Web/CSS/color_value/rgb) (RGB), [16진수](/ko/docs/Web/CSS/hex-color) (HEX), [색상, 채도, 명도](/ko/docs/Web/CSS/color_value/hsl) (HSL), 그리고 [색상, 백색, 검은색](/ko/docs/Web/CSS/color_value/hwb) (HWB) CSS 색상 형식으로 표시합니다. 이 모든 RGB, HEX, HSL 그리고 HWB 색상 값들은 다르게 표기되었으나, 동일한 색상 값을 나타냅니다.
 
 {{EmbedGHLiveSample("css-examples/modules/colors.html", '100%', 450)}}
 
