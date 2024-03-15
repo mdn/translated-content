@@ -1,6 +1,8 @@
 ---
 title: border-right-width
 slug: Web/CSS/border-right-width
+l10n:
+  sourceCommit: 42c1bb8c259f3f57de9f38600776cf273e3addda
 ---
 
 {{CSSRef}}
@@ -26,6 +28,7 @@ border-right-width: 6px;
 border-right-width: inherit;
 border-right-width: initial;
 border-right-width: revert;
+border-right-width: revert-layer;
 border-right-width: unset;
 ```
 
@@ -33,13 +36,13 @@ border-right-width: unset;
 
 - `<line-width>`
 
-  - : 明示的な負の値ではない {{cssxref("&lt;length&gt;")}} またはキーワードで、境界の幅を定義します。キーワードの場合、以下の値のうちの一つでなければなりません。
+  - : 境界の幅を、明示的な非負の {{cssxref("&lt;length&gt;")}} またはキーワードで定義します。キーワードの場合、以下の値のいずれかでなければなりません。
 
     - `thin`
     - `medium`
     - `thick`
 
-> **メモ:** 仕様書ではそれぞれのキーワードで示される正確な太さを定義していないため、何れか一つを使用した場合の詳細な結果は、実装に依存します。とは言っても、常に `thin ≤ medium ≤ thick` というパターンに従い、値は同じ文書の中では一貫しています。
+> **メモ:** 仕様書ではそれぞれのキーワードで示される正確な太さを定義していないため、いずれかを使用した場合の詳細な結果は、実装に依存します。とは言っても、常に `thin ≤ medium ≤ thick` というパターンに従い、値は同じ文書の中では一貫しています。
 
 ## 公式定義
 
@@ -51,7 +54,7 @@ border-right-width: unset;
 
 ## 例
 
-<h3 id="Comparing_border_widths">境界線の太さの比較</h3>
+### 境界線の太さの比較
 
 #### HTML
 
@@ -78,7 +81,7 @@ div:nth-child(2) {
 
 #### 結果
 
-{{EmbedLiveSample('Comparing_border_widths', '100%')}}
+{{EmbedLiveSample('境界線の太さの比較', '100%')}}
 
 ## 仕様書
 
@@ -90,5 +93,5 @@ div:nth-child(2) {
 
 ## 関連情報
 
-- その他の太さに関する境界の CSS プロパティ: {{Cssxref("border-bottom-width")}}, {{Cssxref("border-left-width")}}, {{Cssxref("border-top-width")}}, {{Cssxref("border-width")}}
-- 他の右側の境界に関する CSS プロパティ: {{Cssxref("border")}}, {{Cssxref("border-right")}}, {{Cssxref("border-right-style")}}, {{Cssxref("border-right-color")}}
+- 境界の太さに関する他の CSS プロパティ: {{Cssxref("border-bottom-width")}}, {{Cssxref("border-left-width")}}, {{Cssxref("border-top-width")}}, {{Cssxref("border-width")}}
+- 右の境界に関する他の CSS プロパティ: {{Cssxref("border")}}, {{Cssxref("border-right")}}, {{Cssxref("border-right-style")}}, {{Cssxref("border-right-color")}}

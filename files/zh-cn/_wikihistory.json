@@ -22280,10 +22280,6 @@
     "modified": "2020-10-15T21:37:25.983Z",
     "contributors": ["zhangchen", "xgqfrms", "eforegist", "AlexChao"]
   },
-  "Web/HTML/Global_attributes/contextmenu": {
-    "modified": "2020-10-15T21:51:27.709Z",
-    "contributors": ["SphinxKnight", "eforegist", "Ende93", "shuangya"]
-  },
   "Web/HTML/Global_attributes/data-*": {
     "modified": "2020-10-15T21:36:49.775Z",
     "contributors": [
