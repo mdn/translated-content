@@ -82,8 +82,7 @@ slug: Web/HTML/Element/i
     <tr>
       <th scope="row">允許的父元素</th>
       <td>
-        任何接受
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
+        任何接受<a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
           >段落型內容</a
         > 的元素。
       </td>

@@ -9,14 +9,14 @@ slug: Web/HTML/Element/bdi
 
 {{EmbedInteractiveExample("pages/tabbed/bdi.html", "tabbed-standard")}}
 
-雙向文本是可能包含從左到右（LTR）排列的字符序列和從右到左（RTL）排列的字符序列的文本，例如嵌入在英文字符串中的阿拉伯引用。瀏覽器實現了[Unicode雙向算法](https://www.w3.org/International/articles/inline-bidi-markup/uba-basics)來處理這一問題。在這個算法中，字符被賦予隱式方向性：例如，拉丁字符被視為LTR，而阿拉伯字符被視為RTL。一些其他字符（例如空格和一些標點符號）被視為中性，其方向性基於周圍字符的方向性而分配。
+雙向文本是可能包含從左到右（LTR）排列的字符序列和從右到左（RTL）排列的字符序列的文本，例如嵌入在英文字符串中的阿拉伯引用。瀏覽器實現了 [Unicode 雙向算法](https://www.w3.org/International/articles/inline-bidi-markup/uba-basics)來處理這一問題。在這個算法中，字符被賦予隱式方向性：例如，拉丁字符被視為 LTR，而阿拉伯字符被視為 RTL。一些其他字符（例如空格和一些標點符號）被視為中性，其方向性基於周圍字符的方向性而分配。
 
-通常，雙向算法會在不需要作者提供任何特殊標記的情況下正確執行，但偶爾，該算法需要幫助。這就是`<bdi>`的用途所在。
+通常，雙向算法會在不需要作者提供任何特殊標記的情況下正確執行，但偶爾，該算法需要幫助。這就是 `<bdi>` 的用途所在。
 
-`<bdi>`元素用於包裹一段文本，並指示雙向算法將此文本與其周圍的文本隔離處理。這有兩種方式：
+`<bdi>` 元素用於包裹一段文本，並指示雙向算法將此文本與其周圍的文本隔離處理。這有兩種方式：
 
-- 嵌入在`<bdi>`中的文本的方向性*不會影響*周圍文本的方向性。
-- 嵌入在`<bdi>`中的文本的方向性*不受*周圍文本的方向性的影響。
+- 嵌入在 `<bdi>` 中的文本的方向性*不會影響*周圍文本的方向性。
+- 嵌入在 `<bdi>` 中的文本的方向性*不受*周圍文本的方向性的影響。
 
 例如，考慮一些文本，如：
 
@@ -24,27 +24,27 @@ slug: Web/HTML/Element/bdi
 EMBEDDED-TEXT - 1st place
 ```
 
-如果`嵌入文本`是 LTR，這個例子可以正常工作。但是如果`嵌入文本`是 RTL，那麼 `- 1` 將被視為 RTL 文本（因為它由中性和弱字符組成）。結果將是亂碼：
+如果 `EMBEDDED-TEXT`（嵌入文本）是 LTR，這個例子可以正常工作。但是如果 `EMBEDDED-TEXT`（嵌入文本）是 RTL，那麼 `- 1` 將被視為 RTL 文本（因為它由中性和弱字符組成）。結果將是亂碼：
 
 ```plain
 1 - EMBEDDED-TEXTst place
 ```
 
-如果您事先知道 `EMBEDDED-TEXT`（嵌入文本）的方向性，則可以通過將 `EMBEDDED-TEXT`（嵌入文本）包裹在具有已知方向性的[`dir`](/zh-TW/docs/Web/HTML/Global_attributes#dir)屬性設置的{{HTMLElement("span")}}中來解決此問題。但是如果您不知道方向性 - 例如，因為 `EMBEDDED-TEXT`（嵌入文本）是從數據庫讀取的或由用戶輸入的 - 您應該使用 `<bdi>` 來防止 `EMBEDDED-TEXT`（嵌入文本）的方向性影響其周圍。
+如果您事先知道 `EMBEDDED-TEXT`（嵌入文本）的方向性，則可以通過將 `EMBEDDED-TEXT`（嵌入文本）包裹在具有已知方向性的 [`dir`](/zh-TW/docs/Web/HTML/Global_attributes#dir) 屬性設置的{{HTMLElement("span")}}中來解決此問題。但是如果您不知道方向性 - 例如，因為 `EMBEDDED-TEXT`（嵌入文本）是從數據庫讀取的或由用戶輸入的 - 您應該使用 `<bdi>` 來防止 `EMBEDDED-TEXT`（嵌入文本）的方向性影響其周圍。
 
-儘管可以通過在{{HTMLElement("span")}}或其他文本格式化元素上使用 CSS 規則{{cssxref("unicode-bidi")}}：isolate 來實現相同的視覺效果，但HTML作者不應該使用這種方法，因為它不是語義化的，並且瀏覽器允許忽略 CSS 樣式。
+儘管可以通過在 {{HTMLElement("span")}} 或其他文本格式化元素上使用 CSS 規則{{cssxref("unicode-bidi")}}：isolate 來實現相同的視覺效果，但 HTML 作者不應該使用這種方法，因為它不是語義化的，並且瀏覽器允許忽略 CSS 樣式。
 
-在`<span dir="auto">`中嵌入字符具有與使用`<bdi>`相同的效果，但其語義不太清晰。
+在 `<span dir="auto">` 中嵌入字符具有與使用 `<bdi>` 相同的效果，但其語義不太清晰。
 
 ## 屬性
 
-與所有其他HTML元素一樣，此元素支持[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)，只是[`dir`](/zh-TW/docs/Web/HTML/Global_attributes#dir)屬性的行為與正常情況不同：它的默認值為`auto`，這意味著其值永遠不會從父元素繼承。這意味著除非您為`dir`指定了`rtl`或`ltr`的值，否則{{Glossary("user agent")}}將根據`<bdi>`的內容確定要使用的正確方向性。
+與所有其他HTML元素一樣，此元素支持[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)，只是 [`dir`](/zh-TW/docs/Web/HTML/Global_attributes#dir) 屬性的行為與正常情況不同：它的默認值為 `auto`，這意味著其值永遠不會從父元素繼承。這意味著除非您為 `dir` 指定了 `rtl` 或 `ltr` 的值，否則{{Glossary("user agent")}}將根據 `<bdi>` 的內容確定要使用的正確方向性。
 
 ## 範例
 
 ### 沒有帶有僅 LTR 的 bdi
 
-此範例僅使用{{HTMLElement("span")}}元素列出了比賽的獲獎者。當名字僅包含LTR文本時，結果看起來不錯：
+此範例僅使用 {{HTMLElement("span")}} 元素列出了比賽的獲獎者。當名字僅包含 LTR 文本時，結果看起來不錯：
 
 ```html
 <ul>
@@ -90,7 +90,7 @@ body {
 
 ### 使用 LTR 和 RTL 文本的 bdi
 
-此範例使用`<bdi>`元素列出了比賽的獲獎者。這些元素指示瀏覽器將名稱與其嵌入上下文隔離，因此範例輸出是正確排序的：
+此範例使用 `<bdi>` 元素列出了比賽的獲獎者。這些元素指示瀏覽器將名稱與其嵌入上下文隔離，因此範例輸出是正確排序的：
 
 ```html
 <ul>
@@ -183,5 +183,5 @@ body {
 - [HTML中的內聯標記和雙向文本](https://www.w3.org/International/articles/inline-bidi-markup/)
 - [Unicode雙向算法基礎知識](https://www.w3.org/International/articles/inline-bidi-markup/uba-basics)
 - {{Glossary("Localization")}}
-- 相關HTML元素：{{HTMLElement("bdo")}}
-- 相關CSS屬性：{{cssxref("direction")}}, {{cssxref("unicode-bidi")}}
+- 相關 HTML 元素：{{HTMLElement("bdo")}}
+- 相關 CSS 屬性：{{cssxref("direction")}}, {{cssxref("unicode-bidi")}}
