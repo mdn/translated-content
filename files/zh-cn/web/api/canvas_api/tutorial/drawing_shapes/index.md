@@ -30,11 +30,11 @@ slug: Web/API/Canvas_API/Tutorial/Drawing_shapes
 
 下面的 draw() 函数是前一页中取得的，现在就来使用上面的三个函数。
 
-### 矩形（Rectangular）例子
+### 矩形示例
 
 ```html hidden
-<html>
-  <body onload="draw();">
+<html lang="en">
+  <body>
     <canvas id="canvas" width="150" height="150"></canvas>
   </body>
 </html>
@@ -42,9 +42,9 @@ slug: Web/API/Canvas_API/Tutorial/Drawing_shapes
 
 ```js
 function draw() {
-  var canvas = document.getElementById("canvas");
+  const canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    var ctx = canvas.getContext("2d");
+    const ctx = canvas.getContext("2d");
 
     ctx.fillRect(25, 25, 100, 100);
     ctx.clearRect(45, 45, 60, 60);
@@ -53,9 +53,13 @@ function draw() {
 }
 ```
 
+```js hidden
+draw();
+```
+
 该例子的输出如下图所示。
 
-{{EmbedLiveSample("矩形（Rectangular）例子", 160, 160, "canvas_rect.png")}}
+{{EmbedLiveSample("矩形示例", "", "160")}}
 
 `fillRect()`函数绘制了一个边长为 100px 的黑色正方形。`clearRect()`函数从正方形的中心开始擦除了一个 60\*60px 的正方形，接着`strokeRect()`在清除区域内生成一个 50\*50 的正方形边框。
 
@@ -122,7 +126,7 @@ function draw() {
 
 输出看上去如下：
 
-{{EmbedLiveSample("绘制一个三角形", 110, 110, "triangle.png")}}
+{{EmbedLiveSample("绘制一个三角形", "", "110")}}
 
 ### 移动笔触
 
@@ -164,7 +168,7 @@ function draw() {
 
 结果看起来是这样的：
 
-{{EmbedLiveSample("移动笔触", 160, 160, "canvas_smiley.png")}}
+{{EmbedLiveSample("移动笔触", "", "160")}}
 
 如果你想看到连续的线，你可以移除调用的 moveTo()。
 
@@ -177,7 +181,7 @@ function draw() {
 - {{domxref("CanvasRenderingContext2D.lineTo", "lineTo(x, y)")}}
   - : 绘制一条从当前位置到指定 x 以及 y 位置的直线。
 
-该方法有两个参数：x 以及 y，代表坐标系中直线结束的点。开始点和之前的绘制路径有关，之前路径的结束点就是接下来的开始点，等等。。。开始点也可以通过`moveTo()`函数改变。
+该方法有两个参数：x 以及 y，代表坐标系中直线结束的点。开始点和之前的绘制路径有关，之前路径的结束点就是接下来的开始点，以此类推。开始点也可以通过`moveTo()`函数改变。
 
 下面的例子绘制两个三角形，一个是填充的，另一个是描边的。
 
@@ -215,7 +219,7 @@ function draw() {
 
 这里从调用`beginPath()`函数准备绘制一个新的形状路径开始。然后使用`moveTo()`函数移动到目标位置上。然后下面，两条线段绘制后构成三角形的两条边。
 
-{{EmbedLiveSample("线", 160, 160, "canvas_lineto.png")}}
+{{EmbedLiveSample("线", "", "160")}}
 
 你会注意到填充与描边三角形步骤有所不同。正如上面所提到的，因为路径使用填充（fill）时，路径自动闭合，使用描边（stroke）则不会闭合路径。如果没有添加闭合路径`closePath()`到描边三角形函数中，则只绘制了两条线段，并不是一个完整的三角形。
 
@@ -281,18 +285,20 @@ function draw() {
 }
 ```
 
-{{EmbedLiveSample("圆弧", 160, 210, "canvas_arc.png")}}
+{{EmbedLiveSample("圆弧", "", "210")}}
 
 ### 二次贝塞尔曲线及三次贝塞尔曲线
 
-下一个十分有用的路径类型就是[贝塞尔曲线](https://zh.wikipedia.org/wiki/%E8%B2%9D%E8%8C%B2%E6%9B%B2%E7%B7%9A)。二次及三次贝塞尔曲线都十分有用，一般用来绘制复杂有规律的图形。
+下一个十分有用的路径类型就是[贝塞尔曲线](https://zh.wikipedia.org/wiki/貝茲曲線)。二次及三次贝塞尔曲线都十分有用，一般用来绘制复杂有规律的图形。
 
 - `quadraticCurveTo(cp1x, cp1y, x, y)`
   - : 绘制二次贝塞尔曲线，`cp1x,cp1y` 为一个控制点，`x,y` 为结束点。
 - `bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y)`
   - : 绘制三次贝塞尔曲线，`cp1x,cp1y`为控制点一，`cp2x,cp2y`为控制点二，`x,y`为结束点。
 
-![](canvas_curves.png)右边的图能够很好的描述两者的关系，二次贝塞尔曲线有一个开始点（蓝色）、一个结束点（蓝色）以及一个控制点（红色），而三次贝塞尔曲线有两个控制点。
+右边的图能够很好的描述两者的关系，二次贝塞尔曲线有一个开始点（蓝色）、一个结束点（蓝色）以及一个控制点（红色），而三次贝塞尔曲线有两个控制点。
+
+![二次曲线和贝塞尔曲线的比较。](canvas_curves.png)
 
 参数 x、y 在这两个方法中都是结束点坐标。`cp1x,cp1y`为坐标中的第一个控制点，`cp2x,cp2y`为坐标中的第二个控制点。
 
@@ -332,7 +338,7 @@ function draw() {
 }
 ```
 
-{{EmbedLiveSample("二次贝塞尔曲线", 160, 160, "canvas_quadratic.png")}}
+{{EmbedLiveSample("二次贝塞尔曲线", "", "160")}}
 
 #### 三次贝塞尔曲线
 
@@ -366,7 +372,7 @@ function draw() {
 }
 ```
 
-{{EmbedLiveSample("三次贝塞尔曲线", 160, 160, "canvas_bezier.png")}}
+{{EmbedLiveSample("三次贝塞尔曲线", "", "160")}}
 
 ### 矩形
 
@@ -477,7 +483,7 @@ function roundedRect(ctx, x, y, width, height, radius) {
 
 结果画面如下：
 
-{{EmbedLiveSample("组合使用", 160, 160, "combinations.png")}}
+{{EmbedLiveSample("组合使用", "", "160")}}
 
 我们不会很详细地讲解上面的代码，因为事实上这很容易理解。重点是绘制上下文中使用到了 fillStyle 属性，以及封装函数（例子中的`roundedRect()`）。使用封装函数对于减少代码量以及复杂度十分有用。
 
@@ -536,7 +542,7 @@ function draw() {
 }
 ```
 
-{{EmbedLiveSample("Path2D 示例", 130, 110, "path2d.png")}}
+{{EmbedLiveSample("Path2D 示例", "", "110")}}
 
 ### 使用 SVG paths
 

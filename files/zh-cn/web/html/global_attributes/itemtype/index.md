@@ -213,7 +213,7 @@ Google 和其他主流搜索引擎支持 [schema.org](http://schema.org/) 结构
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - [其他不同的全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
 - 其他 microdata 相关的全局属性

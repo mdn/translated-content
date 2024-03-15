@@ -6,26 +6,26 @@ slug: Learn/JavaScript/Asynchronous/Introducing_workers
 {{LearnSidebar}}
 {{PreviousMenuNext("Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous/Sequencing_animations", "Learn/JavaScript/Asynchronous")}}
 
-在"异步 JavaScript" 模块的最后一篇文章中，我们将介绍 workers，它使你能够在单独执行 {{Glossary("Thread", "线程")}} 中运行一些任务。
+在“异步 JavaScript”模块的最后一篇文章中，我们将介绍 worker，它使你能够在单独执行的{{Glossary("Thread", "线程")}}中运行一些任务。
 
 <table>
   <tbody>
     <tr>
-      <th scope="row">前置条件：</th>
+      <th scope="row">前提：</th>
       <td>
         基于计算机知识，对 JavaScript 基础有一个合理的了解，包括事件处理。
       </td>
     </tr>
     <tr>
       <th scope="row">目标：</th>
-      <td>了解如何使用 web workers。</td>
+      <td>了解如何使用 web worker。</td>
     </tr>
   </tbody>
 </table>
 
-在本模块的第一篇文章中，我们看到了当在你的程序中具有一个长期运行的的同步任务时发生了什么 ── 整个窗口变得完全没有响应。从根本上讲，出现这种情况的原因是程序是单线程的。一个线程是程序遵循的一系列指令。因为程序由一个线程组成，它在同一时间只能做一件事情：所以如果它正在等待我们的长期运行的同步调用返回，它就不能做其他任何事情。
+在本模块的第一篇文章中，我们看到了当在你的程序中具有一个长期运行的同步任务时发生了什么——整个窗口变得完全没有响应。从根本上讲，出现这种情况的原因是程序是单线程的。一个线程是程序遵循的一系列指令。因为程序由一个线程组成，它在同一时间只能做一件事情：所以如果它正在等待我们的长期运行的同步调用返回，它就不能做其他任何事情。
 
-Workers 给了你在不同线程中运行某些任务的能力，因此你可以启动任务，然后继续其他的处理（例如处理用户操作）。
+Worker 给了你在不同线程中运行某些任务的能力，因此你可以启动任务，然后继续其他的处理（例如处理用户操作）。
 
 但是这是要付出代价的。对于多线程代码，你永远不知道你的线程什么时候将会被挂起，其他线程将会得到运行的机会。因此，如果两个线程都可以访问相同的变量，那么变量就有可能在任何时候发生意外的变化，这将导致很难发现的 Bug。
 

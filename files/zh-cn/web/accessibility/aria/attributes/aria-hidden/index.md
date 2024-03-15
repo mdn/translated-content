@@ -63,7 +63,7 @@ slug: Web/Accessibility/ARIA/Attributes/aria-hidden
 
 {{Specifications}}
 
-## 另见
+## 参见
 
 - [使用展示角色](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role)
 - [role="none"](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_none_role)
