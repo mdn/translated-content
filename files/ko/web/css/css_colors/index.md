@@ -1,39 +1,132 @@
 ---
 title: CSS Color
 slug: Web/CSS/CSS_colors
+page-type: css-module
+spec-urls:
+  - https://drafts.csswg.org/css-color/
+  - https://drafts.csswg.org/css-color-5/
 ---
 
 {{CSSRef}}
 
-**CSS 색상**은 색상, 색상 유형, 색상 혼합, 투명도 및 이러한 색상 효과를 HTML에 적용하는 방법을 다루는 CSS 모듈입니다. {{cssxref("&lt;color&gt;")}} 값을 취하는 모든 CSS 속성이 이 모듈에 속하는건 아니지만 의존성은 가지고 있습니다.
+**CSS 색상**은 색상, 색상 유형, 색상 혼합, 투명도 그리고 이러한 색상과 효과를 HTML에 적용하는 방법을 다루는 CSS 모듈입니다.
+
+이 모듈은 {{cssxref("color")}} 와 {{cssxref("opacity")}} 단 두 개의 속성만을 가지고 있지만, 20개가 넘는 CSS 와 SVG 속성들, CSS 이미지, @규칙 그리고 @미디어 규칙들이 이 두 속성에 의존합니다.
+
+### Colors 작용
+
+아래의 색상 구문 변환기는 현재 선택된 색상의 값을 [빨강-초록-파랑](/en-US/docs/Web/CSS/color_value/rgb) (RGB), [16진수](/en-US/docs/Web/CSS/hex-color) (HEX), [색상, 채도, 명도](/en-US/docs/Web/CSS/color_value/hsl) (HSL), 그리고 [색상, 백색, 검은색](/en-US/docs/Web/CSS/color_value/hwb) (HWB) CSS 색상 형식으로 표시합니다. 이 모든 RGB, HEX, HSL 그리고 HWB 색상 값들은 다르게 표기되었으나, 동일한 색상 값을 나타냅니다.
+
+{{EmbedGHLiveSample("css-examples/modules/colors.html", '100%', 450)}}
+
+[색상 선택기](/en-US/docs/Web/HTML/Element/input/color) 로 색상을 선택하고 [슬라이더](/en-US/docs/Web/HTML/Element/input/range) 로 투명도를 선택하면 RGB, HEX, HSL 및 HWB 값들이 업데이트됩니다. 새로운 색상이나 투명도 값을 선택하면, 배경의 색상과 슬라이더의 색상이 각각 {{cssxref("background-color")}} 과 {{cssxref("accent-color")}} CSS 속성을 통해 업데이트됩니다.
+
+이 색상 구문 변환기의 코드를 보려면, [GitHub 에서 소스 보기](https://github.com/mdn/css-examples/blob/main/modules/colors.html) 를 클릭하세요.
 
 ## 참고서
 
 ### 속성
 
 - {{cssxref("color")}}
-- {{cssxref("color-adjust")}}
 - {{cssxref("opacity")}}
+
+### @규칙과 설명자
+
+- {{cssxref("@color-profile")}}
+  - [`components`](/en-US/docs/Web/CSS/@color-profile#descriptors) descriptor
+  - [`rendering-intent`](/en-US/docs/Web/CSS/@color-profile#descriptors) descriptor
+  - [`src`](/en-US/docs/Web/CSS/@color-profile#descriptors) descriptor
+
+### 함수
+
+- 절대 색상 함수:
+  - [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) 별칭 `rgba()`
+  - [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl) 별칭 `hsla()`
+  - [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb)
+  - [`lab()`](/en-US/docs/Web/CSS/color_value/lab)
+  - [`lch()`](/en-US/docs/Web/CSS/color_value/lch)
+  - [`oklab()`](/en-US/docs/Web/CSS/color_value/oklab)
+  - [`oklch()`](/en-US/docs/Web/CSS/color_value/oklch)
+  - [`color()`](/en-US/docs/Web/CSS/color_value/color)
+- [`color-contrast()`](/en-US/docs/Web/CSS/color_value/color-contrast) {{Experimental_Inline}}
+- [`color-mix()`](/en-US/docs/Web/CSS/color_value/color-mix)
+- [`device-cmyk()`](/en-US/docs/Web/CSS/color_value/device-cmyk) {{Experimental_Inline}}
+- {{CSSXref("color_value/light-dark", "light-dark()")}} {{Experimental_Inline}}
+
 
 ### 자료형
 
 - {{cssxref("&lt;color&gt;")}}
+- [`<color-function>`](#functions)
+- {{cssxref("hex-color")}}
+- {{cssxref("named-color")}}
+- {{cssxref("alpha-value")}}
+- {{cssxref("hue")}}
+- {{cssxref("system-color")}}
+- [`<colorspace-params>`](/en-US/docs/Web/CSS/color_value/color#using_predefined_colorspaces_with_color)
+
+
+### 용어 사전과 키워드
+
+- {{glossary("color space")}}
+- [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword)
+- [`transparent`](/en-US/docs/Web/CSS/named-color#transparent)
+
+### 인터페이스
+
+- `CSSColorProfileRule` {{Experimental_Inline}}
 
 ## 안내서
 
-- [CSS를 사용하여 HTML 요소에 색상 적용하기](/ko/docs/Web/HTML/Applying_color)
+- [CSS를 사용하여 HTML 요소에 색상 적용하기](/en-US/docs/Web/CSS/CSS_colors/Applying_color)
   - : CSS를 사용하여 다양한 유형의 콘텐츠에 색상을 적용하는 방법에 대한 안내서입니다. 모든 색상 관련 CSS 속성이 적용됩니다.
+- [색상과 휘도 이해하기](/en-US/docs/Web/Accessibility/Understanding_Colors_and_Luminance)
+  - : 색상 인식 및 불감증 (색맹) 사용자, 시력 저하 및 전정 또는 기타 신경학적 장애를 가진 사용자를 위해 색상을 인지하고 사용하는 것에 대한 문서입니다.
+- [WCAG 1.4.1: 색상 대비](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)
+  - : 가독성을 보장하기 위한 배경과 전경 컨텐츠 간의 대비 요구 사항에 대한 설명입니다.
+- [색상 선택 도구](/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool)
+  - : 이 도구는 사용자 정의 색상을 생성, 조정 및 실험하기 쉽게 만듭니다.
 
-## 도구
+## 관련 개념
 
-- [색상 선택 도구](/ko/docs/Web/CSS/CSS_Colors/Color_picker_tool)
-  - : 이 도구를 사용하면 맞춤 색상을 쉽게 만들고 조정하고 실험 할 수 있습니다.
+- 다른 명세서의 일부인 CSS 속성들:
+  - {{cssxref("accent-color")}}
+  - {{cssxref("background-color")}}
+  - {{cssxref("background-image")}}
+  - {{cssxref("border-color")}}
+  - {{cssxref("box-shadow")}}
+  - {{cssxref("caret-color")}}
+  - {{cssxref("color")}}
+  - {{cssxref("color-scheme")}}
+  - {{cssxref("column-rule-color")}}
+  - {{cssxref("outline-color")}}
+  - {{cssxref("scrollbar-color")}}
+  - {{cssxref("text-decoration-color")}}
+  - {{cssxref("text-emphasis-color")}}
+  - {{cssxref("text-shadow")}}
+  - {{cssxref("-webkit-tap-highlight-color")}}
+- 다른 명세서의 일부인 SVG 색상 속성들:
+  - [`fill`](/en-US/docs/Web/SVG/Attribute/fill)
+  - [`flood-color`](/en-US/docs/Web/SVG/Attribute/flood-color)
+  - [`lighting-color`](/en-US/docs/Web/SVG/Attribute/lighting-color)
+  - [`stop-color`](/en-US/docs/Web/SVG/Attribute/stop-color)
+  - [`stroke`](/en-US/docs/Web/SVG/Attribute/stroke)
+- SVG [`color`](/en-US/docs/Web/SVG/Attribute/color) 속성
+- {{glossary("Color wheel")}} 용어 사전
+- {{glossary("Interpolation")}} 용어 사전
+- [`@font-palette-values`](/en-US/docs/Web/CSS/@font-palette-values) @규칙 [`override-colors`](/en-US/docs/Web/CSS/@font-palette-values/override-colors) 설명자
+- [`@color-profile`](/en-US/docs/Web/CSS/@color-profile) @규칙
+- [`color-gamut`](/en-US/docs/Web/CSS/@media/color-gamut) @미디어 규칙
+- [`forced-colors`](/en-US/docs/Web/CSS/@media/forced-colors) @미디어 규칙
 
-## 명세
+## 명세서
 
 {{Specifications}}
 
 ## 같이 보기
 
-- 다른 사양의 일부 색상 관련 속성 : {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
-- CSS에서는 그레이디언트가 색상이 아니라 [이미지](/ko/docs/Web/CSS/CSS_Images)입니다.
+- [CSS color adjustment](/en-US/docs/Web/CSS/CSS_color_adjustment) 모듈과 {{cssxref("print-color-adjust")}} 속성.
+- [CSS images](/en-US/docs/Web/CSS/CSS_images), CSS [`<gradient>`](/en-US/docs/Web/CSS/gradient) 이미지가 정의되어 있는 곳의 모듈
+- [`VideoColorSpace`](/en-US/docs/Web/API/VideoColorSpace) 인터페이스
+- SVG [`<feColorMatrix>`](/en-US/docs/Web/SVG/Element/feColorMatrix) 요소
+- [Canvas API: applying styles and colors](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#colors)
