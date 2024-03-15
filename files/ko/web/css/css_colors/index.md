@@ -102,12 +102,12 @@ slug: Web/CSS/CSS_colors
   - {{cssxref("text-shadow")}}
   - {{cssxref("-webkit-tap-highlight-color")}}
 - 다른 명세서의 일부인 SVG 색상 속성들:
-  - [`fill`](/en-US/docs/Web/SVG/Attribute/fill)
-  - [`flood-color`](/en-US/docs/Web/SVG/Attribute/flood-color)
-  - [`lighting-color`](/en-US/docs/Web/SVG/Attribute/lighting-color)
-  - [`stop-color`](/en-US/docs/Web/SVG/Attribute/stop-color)
-  - [`stroke`](/en-US/docs/Web/SVG/Attribute/stroke)
-- SVG [`color`](/en-US/docs/Web/SVG/Attribute/color) 속성
+  - [`fill`](/ko/docs/Web/SVG/Attribute/fill)
+  - [`flood-color`](/ko/docs/Web/SVG/Attribute/flood-color)
+  - [`lighting-color`](/ko/docs/Web/SVG/Attribute/lighting-color)
+  - [`stop-color`](/ko/docs/Web/SVG/Attribute/stop-color)
+  - [`stroke`](/ko/docs/Web/SVG/Attribute/stroke)
+- SVG [`color`](/ko/docs/Web/SVG/Attribute/color) 속성
 - {{glossary("Color wheel")}} 용어 사전
 - {{glossary("Interpolation")}} 용어 사전
 - [`@font-palette-values`](/en-US/docs/Web/CSS/@font-palette-values) @규칙 [`override-colors`](/en-US/docs/Web/CSS/@font-palette-values/override-colors) 설명자
