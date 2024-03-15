@@ -46,8 +46,6 @@ slug: Web/CSS/CSS_colors
   - [`color()`](/ko/docs/Web/CSS/color_value/color)
 - [`color-contrast()`](/ko/docs/Web/CSS/color_value/color-contrast) {{Experimental_Inline}}
 - [`color-mix()`](/ko/docs/Web/CSS/color_value/color-mix)
-- [`device-cmyk()`](/ko/docs/Web/CSS/color_value/device-cmyk) {{Experimental_Inline}}
-- {{CSSXref("color_value/light-dark", "light-dark()")}} {{Experimental_Inline}}
 
 ### 자료형
 
