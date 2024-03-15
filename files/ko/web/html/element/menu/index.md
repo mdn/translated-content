@@ -2,7 +2,7 @@
 title: "<menu>: 메뉴 요소"
 slug: Web/HTML/Element/menu
 l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+  sourceCommit: fdd3ac5598c3ddceb71e59949b003936ae99f647
 ---
 
 {{HTMLSidebar}}
