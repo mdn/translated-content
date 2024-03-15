@@ -121,8 +121,8 @@ slug: Web/CSS/CSS_colors
 
 ## 같이 보기
 
-- [CSS color adjustment](/en-US/docs/Web/CSS/CSS_color_adjustment) 모듈과 {{cssxref("print-color-adjust")}} 속성.
-- [CSS images](/en-US/docs/Web/CSS/CSS_images), CSS [`<gradient>`](/en-US/docs/Web/CSS/gradient) 이미지가 정의되어 있는 곳의 모듈
-- [`VideoColorSpace`](/en-US/docs/Web/API/VideoColorSpace) 인터페이스
-- SVG [`<feColorMatrix>`](/en-US/docs/Web/SVG/Element/feColorMatrix) 요소
-- [Canvas API: applying styles and colors](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#colors)
+- [CSS color adjustment](/ko/docs/Web/CSS/CSS_color_adjustment) 모듈과 {{cssxref("print-color-adjust")}} 속성.
+- [CSS images](/ko/docs/Web/CSS/CSS_images), CSS [`<gradient>`](/ko/docs/Web/CSS/gradient) 이미지가 정의되어 있는 곳의 모듈
+- [`VideoColorSpace`](/ko/docs/Web/API/VideoColorSpace) 인터페이스
+- SVG [`<feColorMatrix>`](/ko/docs/Web/SVG/Element/feColorMatrix) 요소
+- [Canvas API: applying styles and colors](/ko/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#colors)
