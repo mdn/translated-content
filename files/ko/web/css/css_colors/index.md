@@ -58,8 +58,7 @@ slug: Web/CSS/CSS_colors
 - {{cssxref("alpha-value")}}
 - {{cssxref("hue")}}
 - {{cssxref("system-color")}}
-- [`<colorspace-params>`](/en-US/docs/Web/CSS/color_value/color#using_predefined_colorspaces_with_color)
-
+- [`<colorspace-params>`](/ko/docs/Web/CSS/color_value/color#using_predefined_colorspaces_with_color)
 
 ### 용어 사전과 키워드
 
