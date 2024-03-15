@@ -63,8 +63,8 @@ slug: Web/CSS/CSS_colors
 ### 용어 사전과 키워드
 
 - {{glossary("color space")}}
-- [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword)
-- [`transparent`](/en-US/docs/Web/CSS/named-color#transparent)
+- [`currentcolor`](/ko/docs/Web/CSS/color_value#currentcolor_keyword)
+- [`transparent`](/ko/docs/Web/CSS/named-color#transparent)
 
 ### 인터페이스
 
