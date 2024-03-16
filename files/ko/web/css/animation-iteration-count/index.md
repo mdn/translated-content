@@ -101,7 +101,7 @@ animation-iteration-count: unset;
 
 다른 예제들은 [CSS animations](/ko/docs/Web/CSS/CSS_animations/Using_CSS_animations)을 참조하세요.
 
-## 명세
+## 명세서
 
 {{Specifications}}
 
