@@ -32,9 +32,11 @@ slug: Web/HTML/Element/progress
 
 {{ EmbedLiveSample("範例", 200, 50) }}
 
+## 無障礙議題
+
 ### 標記
 
-在使用 `<progress>` 時，通常應提供可訪問的標籤。雖然可以使用標準的 ARIA 標記屬性 [`aria-labelledby`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) 或 [`aria-label`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-label)，就像對任何具有 `role="progressbar"` 的元素一樣，但在使用 `<progress>` 時，你還可以使用 {{htmlelement("label")}} 元素。
+在使用 `<progress>` 時，通常應提供無障礙的標籤。雖然可以使用標準的 ARIA 標記屬性 [`aria-labelledby`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) 或 [`aria-label`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-label)，就像對任何具有 `role="progressbar"` 的元素一樣，但在使用 `<progress>` 時，你還可以使用 {{htmlelement("label")}} 元素。
 
 > **備註：** 放置在元素標籤之間的文本不是可訪問的標籤，它只建議作為不支持該元素的舊瀏覽器的後備。
 
