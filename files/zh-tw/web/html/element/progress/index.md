@@ -18,9 +18,9 @@ slug: Web/HTML/Element/progress
 - `value`
   - : 此屬性指定已完成的任務量。它必須是介於 `0` 和 `max` 之間的有效浮點數，如果省略 `max`，則必須介於 `0` 和 `1` 之間。如果沒有 `value` 屬性，則進度條是不確定的；這表示正在進行一項活動，而沒有指示預計需要多長時間。
 
-> **注意：** 與 {{htmlelement("meter")}} 元素不同，最小值始終為 0，`<progress>` 元素不允許 `min` 屬性。
+> **備註：** 與 {{htmlelement("meter")}} 元素不同，最小值始終為 0，`<progress>` 元素不允許 `min` 屬性。
 
-> **注意：** 可以使用 {{cssxref(":indeterminate")}} 偽類來匹配不確定的進度條。要在給定值後將進度條更改為不確定，必須使用 {{domxref("Element.removeAttribute", "element.removeAttribute('value')")}} 刪除值屬性。
+> **備註：** 可以使用 {{cssxref(":indeterminate")}} 偽類來匹配不確定的進度條。要在給定值後將進度條更改為不確定，必須使用 {{domxref("Element.removeAttribute", "element.removeAttribute('value')")}} 刪除 value 屬性。。
 
 ## 範例
 
@@ -30,7 +30,7 @@ slug: Web/HTML/Element/progress
 
 ### 結果
 
-{{ EmbedLiveSample("Examples", 200, 50) }}
+{{ EmbedLiveSample("範例", 200, 50) }}
 
 ## 可及性注意事項
 
@@ -38,7 +38,7 @@ slug: Web/HTML/Element/progress
 
 在使用 `<progress>` 時，通常應提供可訪問的標籤。雖然可以使用標準的 ARIA 標記屬性 [`aria-labelledby`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) 或 [`aria-label`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-label)，就像對任何具有 `role="progressbar"` 的元素一樣，但在使用 `<progress>` 時，你還可以使用 {{htmlelement("label")}} 元素。
 
-> **注意：** 放置在元素標籤之間的文本不是可訪問的標籤，它只建議作為不支持該元素的舊瀏覽器的後備。
+> **備註：** 放置在元素標籤之間的文本不是可訪問的標籤，它只建議作為不支持該元素的舊瀏覽器的後備。
 
 #### 範例
 
@@ -56,9 +56,9 @@ slug: Web/HTML/Element/progress
 
 #### 結果
 
-{{EmbedLiveSample('Labelling')}}
+{{EmbedLiveSample('標籤')}}
 
-### 描述特定區域
+## 無障礙議題
 
 如果 `<progress>` 元素描述頁面的某個區域的載入進度，請使用 [`aria-describedby`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) 指向狀態，並在正在更新的部分上設置 [`aria-busy="true"`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-busy)，在載入完成後刪除 `aria-busy` 屬性。
 
@@ -76,7 +76,7 @@ slug: Web/HTML/Element/progress
 
 ##### 結果
 
-{{EmbedLiveSample('Describing a particular region')}}
+{{EmbedLiveSample('描述特定區域')}}
 
 ## 技術摘要
 

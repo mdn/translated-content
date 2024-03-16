@@ -51,7 +51,7 @@ var {
 
 #### 結果
 
-{{EmbedLiveSample("Basic_example", 650,80)}}
+{{EmbedLiveSample("基本範例", 650,80)}}
 
 ### 覆蓋默認樣式
 
@@ -81,7 +81,7 @@ var {
 
 #### 結果
 
-{{EmbedLiveSample("Overriding_the_default_style", 650, 140)}}
+{{EmbedLiveSample("覆蓋預設樣式", 650, 140)}}
 
 ## 技術摘要
 

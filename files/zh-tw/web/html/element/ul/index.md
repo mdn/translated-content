@@ -53,7 +53,7 @@ slug: Web/HTML/Element/ul
 
 #### 結果
 
-{{EmbedLiveSample("Simple_example", 400, 120)}}
+{{EmbedLiveSample("簡單範例", 400, 120)}}
 
 ### 嵌套清單
 
@@ -86,7 +86,7 @@ slug: Web/HTML/Element/ul
 
 #### 結果
 
-{{EmbedLiveSample("Nesting_a_list", 400, 340)}}
+{{EmbedLiveSample("嵌套列表", 400, 340)}}
 
 ### 無序清單內的有序清單
 
@@ -109,7 +109,7 @@ slug: Web/HTML/Element/ul
 
 #### 結果
 
-{{EmbedLiveSample("Ordered_list_inside_unordered_list", 400, 190)}}
+{{EmbedLiveSample("有序列表內部的無序列表", 400, 190)}}
 
 ## 技術摘要
 
@@ -133,7 +133,7 @@ slug: Web/HTML/Element/ul
     <tr>
       <th scope="row">允許的內容</th>
       <td>
-        零個或多個 {{HTMLElement("li")}},
+        零個或多個 {{HTMLElement("li")}}、
         {{HTMLElement("script")}} 和
         {{HTMLElement("template")}} 元素。
       </td>
@@ -145,8 +145,7 @@ slug: Web/HTML/Element/ul
     <tr>
       <th scope="row">允許的父元素</th>
       <td>
-        任何接受
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+        任何接受<a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
           >流內容</a
         >的元素。
       </td>
@@ -164,12 +163,7 @@ slug: Web/HTML/Element/ul
     <tr>
       <th scope="row">允許的 ARIA 角色</th>
       <td>
-        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/directory_role"><code>directory</code></a>, <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>,
-        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/listbox_role"><code>listbox</code></a>, <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/menu_role"><code>menu</code></a>,
-        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/menubar_role"><code>menubar</code></a>, <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>,
-        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>,
-        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/radiogroup_role"><code>radiogroup</code></a>, <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/tablist_role"><code>tablist</code></a>,
-        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/toolbar_role"><code>toolbar</code></a>, <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/tree_role"><code>tree</code></a>
+        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/directory_role"><code>directory</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/listbox_role"><code>listbox</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/menu_role"><code>menu</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/menubar_role"><code>menubar</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/radiogroup_role"><code>radiogroup</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/tablist_role"><code>tablist</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/toolbar_role"><code>toolbar</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/tree_role"><code>tree</code></a>
       </td>
     </tr>
     <tr>
