@@ -56,7 +56,7 @@ slug: Web/HTML/Element/progress
 
 {{EmbedLiveSample('標籤')}}
 
-## 無障礙議題
+## 描述特定區域
 
 如果 `<progress>` 元素描述頁面的某個區域的載入進度，請使用 [`aria-describedby`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) 指向狀態，並在正在更新的部分上設置 [`aria-busy="true"`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-busy)，在載入完成後刪除 `aria-busy` 屬性。
 
