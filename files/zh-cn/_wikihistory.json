@@ -2717,10 +2717,6 @@
       "sanxingming"
     ]
   },
-  "Learn/Front-end_web_developer": {
-    "modified": "2020-07-16T22:40:48.018Z",
-    "contributors": ["Ende93", "ex90rts"]
-  },
   "Learn/Getting_started_with_the_web": {
     "modified": "2020-09-24T11:26:23.243Z",
     "contributors": [
@@ -21554,10 +21550,6 @@
       "ZhangJianxiang"
     ]
   },
-  "Web/HTML/Element/image": {
-    "modified": "2019-03-30T00:32:55.632Z",
-    "contributors": ["raygift", "hoyt"]
-  },
   "Web/HTML/Element/img": {
     "modified": "2020-10-15T21:34:27.415Z",
     "contributors": [
@@ -22287,10 +22279,6 @@
   "Web/HTML/Global_attributes/contenteditable": {
     "modified": "2020-10-15T21:37:25.983Z",
     "contributors": ["zhangchen", "xgqfrms", "eforegist", "AlexChao"]
-  },
-  "Web/HTML/Global_attributes/contextmenu": {
-    "modified": "2020-10-15T21:51:27.709Z",
-    "contributors": ["SphinxKnight", "eforegist", "Ende93", "shuangya"]
   },
   "Web/HTML/Global_attributes/data-*": {
     "modified": "2020-10-15T21:36:49.775Z",

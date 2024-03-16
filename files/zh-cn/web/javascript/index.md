@@ -22,12 +22,6 @@ JavaScript 的核心语言特性（大部分是纯 [ECMAScript](/zh-CN/docs/Web/
 
 有关 JavaScript 规范和相关技术的更多信息，请参阅 [JavaScript 技术概述](/zh-CN/docs/Web/JavaScript/JavaScript_technologies_overview)。
 
-> **标注：** **想成为一名前端网页开发人员吗？**
->
-> 为了帮助你实现这个目标，我们总结了一条包含所有必要信息的学习路线。
->
-> [**从这里起步**](/zh-CN/docs/Learn/Front-end_web_developer)
-
 ## 教程
 
 借助指南和教程来学习如何用 JavaScript 编程。

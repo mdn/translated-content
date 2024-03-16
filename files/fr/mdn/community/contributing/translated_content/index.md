@@ -32,8 +32,8 @@ Nous avons actuellement dégelé les langues suivantes :
 
 ### Coréen (ko)
 
-- Discussions : [Kakao Talk (#MDN Korea)](https://open.kakao.com/o/gdfG288c)
-- Contributeurs actuels : [hochan222](https://github.com/hochan222), [yechoi42](https://github.com/yechoi42), [cos18](https://github.com/cos18), [GwangYeol-Im](https://github.com/GwangYeol-Im), [pje1740](https://github.com/pje1740), [nKiNk](https://github.com/nKiNk), [yujo11](https://github.com/yujo11)
+- Discussions : [Discord (`#korean`)](/discord), [Kakao Talk (#MDN Korea)](https://open.kakao.com/o/gdfG288c)
+- Contributeurs actuels : [hochan222](https://github.com/hochan222), [yechoi42](https://github.com/yechoi42), [cos18](https://github.com/cos18), [pje1740](https://github.com/pje1740), [wisedog](https://github.com/wisedog), [swimjiy](https://github.com/swimjiy), [jho2301](https://github.com/jho2301), [sunhpark42](https://github.com/sunhpark42), [1ilsang](https://github.com/1ilsang)
 
 ### Russe (ru)
 

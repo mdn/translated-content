@@ -1,5 +1,5 @@
 ---
-title: Understanding client-side JavaScript frameworks
+title: 클라이언트 사이드 JavaScript 프레임워크
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks
 ---
 
