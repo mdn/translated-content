@@ -43,8 +43,6 @@ document.body.innerHTML = contentString.sub();
 <sub>Hello, world</sub>
 ```
 
-Instead of using `sub()` and creating HTML text directly, you should use DOM APIs such as [`document.createElement()`](/ko/docs/Web/API/Document/createElement). For example:
-
 `sub()`를 사용하여 HTML 텍스트를 직접 작성하는 대신 [`document.createElement()`](/ko/docs/Web/API/Document/createElement)와 같은 DOM API를 사용해야 합니다. 아래의 예를 참고하세요.
 
 ```js
