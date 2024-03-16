@@ -34,7 +34,7 @@ slug: Web/HTML/Element/bdo
 
 {{EmbedLiveSample('範例')}}
 
-## 注意事項
+## 備註
 
 HTML 4 規範未為此元素指定事件；這可能是一個疏忽。
 

@@ -42,7 +42,7 @@ EMBEDDED-TEXT - 1st place
 
 ## 範例
 
-### 沒有帶有僅 LTR 的 bdi
+### 沒有 bdi 的 LTR 文本
 
 此範例僅使用 {{HTMLElement("span")}} 元素列出了比賽的獲獎者。當名字僅包含 LTR 文本時，結果看起來不錯：
 
@@ -63,9 +63,9 @@ body {
 }
 ```
 
-{{ EmbedLiveSample('No_bdi_with_only_LTR','','120','','','bdi-example') }}
+{{ EmbedLiveSample('沒有 bdi 的 LTR 文本','','120','','','bdi 範例') }}
 
-### 沒有帶有 RTL 文本的 bdi
+### 沒有 bdi 的 RTL 文本
 
 此範例僅使用 {{HTMLElement("span")}} 元素列出了比賽的獲獎者，其中一名獲獎者的名字包含 RTL 文本。在這種情況下，由中性或弱方向性字符組成的「- 1」將採用 RTL 文本的方向性，結果將是亂碼：
 
@@ -86,9 +86,9 @@ body {
 }
 ```
 
-{{ EmbedLiveSample('No_bdi_with_RTL_text','','120','','','bdi-example') }}
+{{ EmbedLiveSample('沒有 bdi 的 RTL 文本','','120','','','bdi 範例') }}
 
-### 使用 LTR 和 RTL 文本的 bdi
+### 使用 bdi 的 LTR 和 RTL 文本
 
 此範例使用 `<bdi>` 元素列出了比賽的獲獎者。這些元素指示瀏覽器將名稱與其嵌入上下文隔離，因此範例輸出是正確排序的：
 
@@ -109,7 +109,7 @@ body {
 }
 ```
 
-{{ EmbedLiveSample('Using_bdi_with_LTR_and_RTL_text','','120','','','bdi-example') }}
+{{ EmbedLiveSample('使用 bdi 的 LTR 和 RTL 文本','','120','','','bdi 範例') }}
 
 ## 技術摘要
 
@@ -184,4 +184,4 @@ body {
 - [Unicode 雙向算法基礎知識](https://www.w3.org/International/articles/inline-bidi-markup/uba-basics)
 - {{Glossary("Localization")}}
 - 相關 HTML 元素：{{HTMLElement("bdo")}}
-- 相關 CSS 屬性：{{cssxref("direction")}}, {{cssxref("unicode-bidi")}}
+- 相關 CSS 屬性：{{cssxref("direction")}}、{{cssxref("unicode-bidi")}}
