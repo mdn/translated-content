@@ -35,7 +35,6 @@ for (variable of iterable)
 
 如果 `for...of` 循环提前退出（例如遇到 `break` 语句或抛出错误），则会调用迭代器的 [`return()`](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#迭代器协议) 方法来执行任何清理任务。
 
-The `variable` part of `for...of` accepts anything that can come before the `=` operator. You can use {{jsxref("Statements/const", "const")}} to declare the variable as long as it's not reassigned within the loop body (it can change between iterations, because those are two separate variables). Otherwise, you can use {{jsxref("Statements/let", "let")}}.
 
 `for...of` 的 `variable` 部分可以接受任何在 `=` 运算符之前的内容。只要在循环体内部不重新赋值（可以在迭代之间更改，因为它们是两个独立的变量），你可以使用 {{jsxref("Statements/const", "const")}} 来声明变量。否则，你可以使用 {{jsxref("Statements/let", "let")}}。
 
