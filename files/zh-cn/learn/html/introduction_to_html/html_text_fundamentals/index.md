@@ -873,9 +873,7 @@ textarea.onkeyup = () => {
 
 ```html
 <p>
-  这杯液体<strong>毒性很大</strong>——如果饮用了它，你<strong
-    >可能<em>会死</em></strong
-  >。
+  这杯液体<strong>毒性很大</strong>——如果饮用了它，你<strong>可能<em>会死</em></strong>。
 </p>
 ```
 
