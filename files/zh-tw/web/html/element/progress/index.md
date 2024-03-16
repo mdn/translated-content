@@ -20,7 +20,7 @@ slug: Web/HTML/Element/progress
 
 > **備註：** 與 {{htmlelement("meter")}} 元素不同，最小值始終為 0，`<progress>` 元素不允許 `min` 屬性。
 
-> **備註：** 可以使用 {{cssxref(":indeterminate")}} 偽類來匹配不確定的進度條。要在給定值後將進度條更改為不確定，必須使用 {{domxref("Element.removeAttribute", "element.removeAttribute('value')")}} 刪除 value 屬性。。
+> **備註：** 可以使用 {{cssxref(":indeterminate")}} 偽類來匹配不確定的進度條。要在給定值後將進度條更改為不確定，必須使用 {{domxref("Element.removeAttribute", "element.removeAttribute('value')")}} 刪除 value 屬性。
 
 ## 範例
 
