@@ -52,7 +52,7 @@ l10n:
           >流式内容</a
         >、<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
           >短语内容</a
-        >、可感知内容
+        >、可感知内容。
       </td>
     </tr>
     <tr>
