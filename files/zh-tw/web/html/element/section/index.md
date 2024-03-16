@@ -28,7 +28,7 @@ slug: Web/HTML/Element/section
 
 ## 範例
 
-### 簡單使用示例
+### 簡單使用範例
 
 #### 之前
 
@@ -41,7 +41,7 @@ slug: Web/HTML/Element/section
 
 ##### 結果
 
-{{EmbedLiveSample('Before')}}
+{{EmbedLiveSample('之前')}}
 
 #### 之後
 
@@ -54,7 +54,7 @@ slug: Web/HTML/Element/section
 
 ##### 結果
 
-{{EmbedLiveSample('After')}}
+{{EmbedLiveSample('之後')}}
 
 ### 在不使用標題的情況下使用區段
 
@@ -82,7 +82,7 @@ slug: Web/HTML/Element/section
 
 #### 結果
 
-{{EmbedLiveSample('Using a section without a heading')}}
+{{EmbedLiveSample('使用沒有標題的 section')}}
 
 根據內容的不同，包含標題也可能對 SEO 有好處，因此這是需要考慮的選擇。
 

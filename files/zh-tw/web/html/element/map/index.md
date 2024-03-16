@@ -48,7 +48,7 @@ slug: Web/HTML/Element/map
 
 #### 結果
 
-{{ EmbedLiveSample('Image map with two areas', '', '250') }}
+{{ EmbedLiveSample('具有兩個區域的影像映射', '', '250') }}
 
 ## 技術摘要
 
@@ -71,11 +71,9 @@ slug: Web/HTML/Element/map
     <tr>
       <th scope="row">允許的內容</th>
       <td>
-        任何
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#透明內容模型"
+        任何<a href="/zh-TW/docs/Web/HTML/Content_categories#透明內容模型"
           >透明內容模型</a
-        >
-        元素。
+        >元素。
       </td>
     </tr>
     <tr>

@@ -26,7 +26,7 @@ slug: Web/HTML/Element/small
 
 #### 結果
 
-{{EmbedLiveSample("Basic_usage")}}
+{{EmbedLiveSample("基本用法")}}
 
 ### CSS 替代方法
 
@@ -39,7 +39,7 @@ slug: Web/HTML/Element/small
 
 #### 結果
 
-{{EmbedLiveSample("CSS_alternative")}}
+{{EmbedLiveSample("CSS 替代")}}
 
 ## 注意事項
 
