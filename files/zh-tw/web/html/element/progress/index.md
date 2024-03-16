@@ -98,7 +98,7 @@ slug: Web/HTML/Element/progress
     </tr>
     <tr>
       <th scope="row">標籤省略</th>
-      <td>無，開始標籤和結束標籤均為必需。</td>
+      <td>不允許，開始標籤和結束標籤均為必需。</td>
     </tr>
     <tr>
       <th scope="row">允許的父元素</th>

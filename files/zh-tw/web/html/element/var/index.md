@@ -96,9 +96,9 @@ var {
       <td>
         <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
           >流內容</a
-        >，<a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
+        >、<a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
           >段落型內容</a
-        >，可觸及的內容。
+        >、可觸及的內容。
       </td>
     </tr>
     <tr>
@@ -111,7 +111,7 @@ var {
     </tr>
     <tr>
       <th scope="row">標籤省略</th>
-      <td>無，開始標籤和結束標籤均為必需。</td>
+      <td>不允許，開始標籤和結束標籤均為必需。</td>
     </tr>
     <tr>
       <th scope="row">允許的父元素</th>
