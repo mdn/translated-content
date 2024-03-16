@@ -287,6 +287,7 @@
 /ko/docs/Learn/Common_questions/set_up_a_local_testing_server	/ko/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server
 /ko/docs/Learn/Common_questions/웹_사이트가_제대로_동작하는지_확인	/ko/docs/Learn/Common_questions/Tools_and_setup/Checking_that_your_web_site_is_working_properly
 /ko/docs/Learn/Common_questions/코딩하기_전에_생각하기	/ko/docs/Learn/Common_questions/Design_and_accessibility/Thinking_before_coding
+/ko/docs/Learn/Front-end_web_developer	/ko/docs/orphaned/Learn/Front-end_web_developer
 /ko/docs/Learn/Getting_started_with_the_web/CSS_기본	/ko/docs/Learn/Getting_started_with_the_web/CSS_basics
 /ko/docs/Learn/Getting_started_with_the_web/HTML_기본	/ko/docs/Learn/Getting_started_with_the_web/HTML_basics
 /ko/docs/Learn/Getting_started_with_the_web/기본_소프트웨어_설치하기	/ko/docs/Learn/Getting_started_with_the_web/Installing_basic_software
@@ -694,6 +695,7 @@
 /ko/docs/Web/HTML/Element/h6	/ko/docs/Web/HTML/Element/Heading_Elements
 /ko/docs/Web/HTML/Element/캔버스	/ko/docs/Web/HTML/Element/canvas
 /ko/docs/Web/HTML/Focus_management_in_HTML	/ko/docs/Web/API/Document/hasFocus
+/ko/docs/Web/HTML/Global_attributes/contextmenu	/ko/docs/conflicting/Web/HTML/Element/menu
 /ko/docs/Web/HTML/Global_attributes/클래스	/ko/docs/Web/HTML/Global_attributes/class
 /ko/docs/Web/HTML/HTML5/HTML5_element_list	/ko/docs/Web/HTML/Element
 /ko/docs/Web/HTML/HTML에서_폼	/ko/docs/Learn/Forms
