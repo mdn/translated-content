@@ -32,7 +32,7 @@ slug: Web/HTML/Element/progress
 
 {{ EmbedLiveSample("範例", 200, 50) }}
 
-## 可及性注意事項
+## 無障礙議題
 
 ### 標記
 
