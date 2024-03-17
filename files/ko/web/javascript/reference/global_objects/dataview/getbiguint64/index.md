@@ -8,7 +8,7 @@ l10n:
 {{JSRef}}
 
 {{jsxref("DataView")}} 인스턴스의 **`getBigUint64()`** 메서드는 이 `DataView`의 지정된 바이트 오프셋에서
-8바이트를 읽고 이를 부호없는 8비트 정수로 해석합니다. 정렬 제약 조건은 없으며, 범위 내의 모든 오프셋에서 멀티바이트 값을 가져올 수 있습니다.
+8바이트를 읽고 이를 부호없는 64비트 정수로 해석합니다. 정렬 제약 조건은 없으며, 범위 내의 모든 오프셋에서 멀티바이트 값을 가져올 수 있습니다.
 
 {{EmbedInteractiveExample("pages/js/dataview-getbiguint64.html")}}
 
@@ -24,7 +24,7 @@ getBigUint64(byteOffset, littleEndian)
 - `byteOffset`
   - : 데이터를 읽을 데이터 뷰의 시작점으로부터의 오프셋(바이트).
 - `littleEndian` {{optional_inline}}
-  - : [리틀 엔디언 혹은 빅 엔디언](/ko/docs/Glossary/Endianness) 형식으로 16비트 정수를 저장할지
+  - : [리틀 엔디언 혹은 빅 엔디언](/ko/docs/Glossary/Endianness) 형식으로 저장할지
     여부를 나타냅니다. `false` 혹은 `undefined`이라면 빅 엔디안 값을 읽습니다.
 
 ### 반환 값
