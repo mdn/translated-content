@@ -5,7 +5,6 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/toReversed
 
 {{JSRef}}
 
-
 Метод **`toReversed()`** возвращает новый массив с расположенными в обратном порядке элементами. Является **копирующей** версией метода {{jsxref("Array/reverse", "reverse()")}}.
 
 ## Синтаксис
