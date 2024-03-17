@@ -25,7 +25,7 @@ getInt16(byteOffset, littleEndian)
 - `byteOffset`
   - : 데이터를 읽을 데이터 뷰의 시작점으로부터의 오프셋(바이트).
 - `littleEndian` {{optional_inline}}
-  - : [리틀 엔디언 혹은 빅 앤디언](/ko/docs/Glossary/Endianness) 형식으로 저장되는지 여부를
+  - : [리틀 엔디언 혹은 빅 엔디언](/ko/docs/Glossary/Endianness) 형식으로 저장되는지 여부를
     나타냅니다. 만약 `false` 혹은 `undefined`라면 빅 엔디언 값을 읽습니다.
 
 ### 반환 값
