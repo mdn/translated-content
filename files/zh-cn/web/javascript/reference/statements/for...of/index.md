@@ -7,7 +7,7 @@ l10n:
 
 {{jsSidebar("Statements")}}
 
-**`for...of`** 语句执行的循环作用于从[可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)中获取的值序列。可迭代对象包括内置对象的实例，例如 {{jsxref("Array")}}、{{jsxref("String")}}、{{jsxref("TypedArray")}}、{{jsxref("Map")}}、{{jsxref("Set")}}、{{domxref("NodeList")}}（以及其他 DOM 集合），还包括 {{jsxref("Functions/arguments", "arguments")}} 对象、由[生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)生成的[生成器](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Generator)，以及用户定义的可迭代对象。
+**`for...of`** 语句执行一个循环，该循环处理来自[可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)的值序列。可迭代对象包括内置对象的实例，例如 {{jsxref("Array")}}、{{jsxref("String")}}、{{jsxref("TypedArray")}}、{{jsxref("Map")}}、{{jsxref("Set")}}、{{domxref("NodeList")}}（以及其他 DOM 集合），还包括 {{jsxref("Functions/arguments", "arguments")}} 对象、由[生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)生成的[生成器](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Generator)，以及用户定义的可迭代对象。
 
 {{EmbedInteractiveExample("pages/js/statement-forof.html")}}
 
@@ -51,7 +51,7 @@ for (let value of iterable) {
 
 > **备注：** 每次迭代都会创建一个新的变量。在循环体内部重新赋值变量不会影响可迭代对象（在本例中，是一个数组）的原始值。
 
-你可以使用[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)来分配多个局部变量，或者使用属性访问器（如 `for (x.y of iterable)`）来給对象属性赋值。
+你可以使用[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)来分配多个局部变量，或者使用属性访问器（如 `for (x.y of iterable)`）来给对象属性赋值。
 
 然而，有一条特别的规则禁止使用 `async` 作为变量名。这是无效语法：
 
@@ -336,7 +336,7 @@ iterable.foo = "hello";
 for (const i in iterable) {
   console.log(i);
 }
-// "0", "1", "2", "foo", "arrCustom", "objCustom"
+// "0"、"1"、"2"、"foo"、"arrCustom"、"objCustom"
 
 for (const i in iterable) {
   if (Object.hasOwn(iterable, i)) {
