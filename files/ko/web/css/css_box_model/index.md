@@ -1,7 +1,8 @@
 ---
 title: CSS box model
 slug: Web/CSS/CSS_box_model
-l10n: 8e595b9a3833765941374a5e75480a54fb337662
+l10n:
+  sourceCommit: 8e595b9a3833765941374a5e75480a54fb337662
 ---
 
 {{CSSRef}}
