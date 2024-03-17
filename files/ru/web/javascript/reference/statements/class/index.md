@@ -57,7 +57,7 @@ class Square extends Polygon {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

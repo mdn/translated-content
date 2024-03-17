@@ -3,7 +3,7 @@ title: bookmarks.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/remove
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 **`bookmarks.remove()`** は、ブックマークや空のブックマークフォルダを削除するメソッドです。
 

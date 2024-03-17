@@ -63,9 +63,9 @@ Promise<WebAssembly.Instance> WebAssembly.instantiate(module, importObject);
 
 ## 示例
 
-**提示**: 在大多数情况下，你可能需要使用{{jsxref("WebAssembly.instantiateStreaming()")}}，因为它比`instantiate()`更具效率。
+> **备注：** 在大多数情况下，你可能需要使用 {{jsxref("WebAssembly.instantiateStreaming()")}}，因为它比 `instantiate()` 更具效率。
 
-### 第一种重载例子
+### 第一种重载示例
 
 使用 fetch 获取一些 WebAssembly 二进制代码后，我们使用 {{jsxref("WebAssembly.instantiate()")}} 方法编译并实例化模块，在此过程中，导入了一个 Javascript 方法在 WebAssembly 模块中，接下来我们使用`Instance` 导出的 [Exported WebAssembly](/zh-CN/docs/WebAssembly/Exported_functions) 方法。
 
@@ -91,7 +91,7 @@ fetch("simple.wasm")
 
 > **备注：** 查看 GitHub（[在线实例](https://mdn.github.io/webassembly-examples/js-api-examples/)）的 [index.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index.html) 中一个相似的例子，使用了我们的 [`fetchAndInstantiate()`](https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js#L1) 库函数
 
-### 第二种重载例子
+### 第二种重载示例
 
 下面的例子（查看我们 GitHub 的 [index-compile.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index-compile.html) 例子，可在线演示）使用 `compile()` 方法编译了 simple.wasm 字节码，然后通过 [postMessage()](/zh-CN/docs/Web/API/Worker/postMessage) 发送给一个线程 [worker](/zh-CN/docs/Web/API/Web_Workers_API)。
 

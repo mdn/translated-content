@@ -224,7 +224,7 @@ function afficherCyclesAnterieurs() {
 
   // On parcourt la liste des tous les cycles et on
   // les affiche.
-  cycles.forEach((period) => {
+  cycles.forEach((cycle) => {
     const elementCycle = document.createElement("li");
     elementCycle.textContent = `Du ${formaterDate(
       cycle.dateDebut,

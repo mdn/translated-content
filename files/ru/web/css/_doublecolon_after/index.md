@@ -140,7 +140,7 @@ span[data-descr]:hover::after {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

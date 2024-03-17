@@ -3,7 +3,7 @@ title: find.highlightResults()
 slug: Mozilla/Add-ons/WebExtensions/API/find/highlightResults
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Souligne les résultats d'un précédent appel à {{WebExtAPIRef("find.find()")}}.
 

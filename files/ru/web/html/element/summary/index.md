@@ -99,7 +99,7 @@ This example adds some semantics to the `<summary>` element to indicate the labe
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

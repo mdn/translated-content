@@ -69,7 +69,7 @@ while (treeWalker.nextNode()) nodeList.push(treeWalker.currentNode);
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

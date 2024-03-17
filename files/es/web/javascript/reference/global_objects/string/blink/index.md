@@ -3,7 +3,7 @@ title: String.prototype.blink()
 slug: Web/JavaScript/Reference/Global_Objects/String/blink
 ---
 
-{{JSRef("Objetos_globales", "String")}}
+{{JSRef}}
 
 {{deprecated_header}}
 

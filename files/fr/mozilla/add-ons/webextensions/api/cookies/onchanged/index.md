@@ -3,7 +3,7 @@ title: cookies.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/onChanged
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 L'événement `onChanged` de l'API {{WebExtAPIRef("cookies")}} est déclenché lorsqu'un cookie est défini ou supprimé.
 

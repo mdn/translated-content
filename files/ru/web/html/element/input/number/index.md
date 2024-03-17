@@ -360,7 +360,7 @@ After declaring a few variables, we add an event listener to the button to contr
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

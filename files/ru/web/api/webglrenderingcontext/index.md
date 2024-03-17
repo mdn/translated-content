@@ -295,7 +295,7 @@ These methods manage WebGL extensions:
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

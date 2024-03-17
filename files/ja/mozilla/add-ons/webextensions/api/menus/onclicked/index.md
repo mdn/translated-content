@@ -3,7 +3,7 @@ title: menus.onClicked
 slug: Mozilla/Add-ons/WebExtensions/API/menus/onClicked
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 メニューアイテムがクリックされたときに発火します。
 

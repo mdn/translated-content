@@ -3,7 +3,7 @@ title: IntersectionObserver.observe()
 slug: Web/API/IntersectionObserver/observe
 ---
 
-{{APIRef("Intersection Observer API")}}{{SeeCompatTable}}
+{{APIRef("Intersection Observer API")}}
 
 {{domxref("IntersectionObserver")}} 对象的**`observe()`** 方法向 IntersectionObserver 对象监听的目标集合添加一个元素。一个监听者有一组阈值和一个根，但是可以监视多个目标元素，以查看这些目标元素可见区域的变化。调用{{domxref("IntersectionObserver.unobserve()")}}方法可以停止观察元素。
 

@@ -3,7 +3,7 @@ title: bookmarks.getChildren()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getChildren
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 **`bookmarks.getChildren()`** は、ブックマークフォルダの ID を {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} で指定し、その直下にあたる子要素をすべて取得します。
 
@@ -16,7 +16,7 @@ browser.bookmarks.getChildren(
 );
 ```
 
-### Parameters
+### 引数
 
 - `id`
   - : 取得したい子要素を持つフォルダ ID を指定する {{jsxref("string")}} です。

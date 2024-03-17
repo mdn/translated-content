@@ -80,7 +80,7 @@ Undefined 타입은 [`undefined`](/ko/docs/Web/JavaScript/Reference/Global_Objec
 
 ### Number 타입
 
-{{jsxref("Number")}} 타입은 [배정밀도 64비트 이진 형식 IEEE 754 값](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number#number_encoding)입니다. 2<sup>-1074</sup> ({{jsxref("Number.MIN_VALUE")}}) 와 2<sup>1024</sup> ({{jsxref("Number.MAX_VALUE")}}) 사이의 양수 부동 소수점 뿐만 아니라, -2<sup>-1074</sup> 와 -2<sup>1024</sup> 사이의 음수 부동 소수점 숫자도 저장할 수 있지만, (2<sup>53</sup> − 1) ({{jsxref("Number.MIN_SAFE_INTEGER")}}) 와 2<sup>53</sup> − 1 ({{jsxref("Number.MAX_SAFE_INTEGER")}}) 범위의 정수만 안전하게 저장할 수 있습니다. 이 범위를 벗어나면, JavaScript는 더 이상 정수를 안전하게 표시할 수 없습니다. 대신 배정밀도 부동 소수점 근사값으로 표시됩니다. {{jsxref("Number.isSafeInteger()")}}를 사용하여 숫자가 안전한 정수 범위 내에 있는지 확인할 수 있습니다.
+{{jsxref("Number")}} 타입은 [배정밀도 64비트 이진 형식 IEEE 754 값](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number#number_encoding)입니다. 2<sup>-1074</sup> ({{jsxref("Number.MIN_VALUE")}}) 와 2<sup>1024</sup> ({{jsxref("Number.MAX_VALUE")}}) 사이의 양수 부동 소수점 뿐만 아니라, -2<sup>-1074</sup> 와 -2<sup>1024</sup> 사이의 음수 부동 소수점 숫자도 저장할 수 있지만, -(2<sup>53</sup> − 1) ({{jsxref("Number.MIN_SAFE_INTEGER")}}) 와 2<sup>53</sup> − 1 ({{jsxref("Number.MAX_SAFE_INTEGER")}}) 범위의 정수만 안전하게 저장할 수 있습니다. 이 범위를 벗어나면, JavaScript는 더 이상 정수를 안전하게 표시할 수 없습니다. 대신 배정밀도 부동 소수점 근사값으로 표시됩니다. {{jsxref("Number.isSafeInteger()")}}를 사용하여 숫자가 안전한 정수 범위 내에 있는지 확인할 수 있습니다.
 
 ±(2<sup>-1074</sup> to 2<sup>1024</sup>) 범위를 벗어나는 값은 자동으로 변환됩니다.
 

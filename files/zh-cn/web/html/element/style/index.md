@@ -25,7 +25,7 @@ slug: Web/HTML/Element/style
 - `type`
   - : 该属性以 MIME 类型（不应该指定字符集）定义样式语言。如果该属性未指定，则默认为 `text/css`。
 - `media`
-  - : 该属性规定该样式适用于哪个媒体。属性的取值[CSS 媒体查询](/zh-CN/docs/Web/Guide/CSS/Media_queries)，默认值为 `all`。
+  - : 该属性规定该样式适用于哪个媒体。属性的取值 [CSS 媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)，默认值为 `all`。
 - `nonce`
   - : 一种加密的随机数（一次使用的数字），用于在[style-src Content-Security-Policy](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/style-src)中将内联样式列入白名单。服务器每次发送策略时都必须生成一个唯一的随机数值。提供一个无法猜测的随机数非常重要，因为绕开资源策略是微不足道的。
 - `title`

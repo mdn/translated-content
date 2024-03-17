@@ -3,7 +3,7 @@ title: Math.acos()
 slug: Web/JavaScript/Reference/Global_Objects/Math/acos
 ---
 
-{{JSRef("Global_Objects", "Math")}}
+{{JSRef}}
 
 ## Сводка
 

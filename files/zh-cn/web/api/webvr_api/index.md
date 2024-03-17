@@ -66,7 +66,6 @@ Many WebVR hardware setups feature controllers that go along with the headset. T
 - [建立 WebVR 的运行环境](/zh-CN/docs/Web/API/WebVR_API/WebVR_environment_setup)
 - [WebVR 的相关概念](/zh-CN/docs/Web/API/WebVR_API/WebVR_concepts)
 - [怎样使用 WebVR API](/zh-CN/docs/Web/API/WebVR_API/Using_the_WebVR_API)
-- [MozVr.com](http://mozvr.com/)——演示、下载，以及其他的来自 MOZILLA VR 团队的资源。
 - [Console Game on Web](http://dsmu.me/ConsoleGameOnWeb/)——一系列有趣的概念游戏演示的集合，其中有些包括了 WebVR。
 - [threejs-vr-boilerplate](https://github.com/MozVR/vr-web-examples/tree/master/threejs-vr-boilerplate)——一个当你编写 WebVR APP 时，非常有用的用于开始编程的模板。
 - [Oculus Rift 主页](https://developer.oculus.com/)

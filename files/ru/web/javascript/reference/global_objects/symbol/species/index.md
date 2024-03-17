@@ -35,7 +35,7 @@ console.log(mapped instanceof Array); // true
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

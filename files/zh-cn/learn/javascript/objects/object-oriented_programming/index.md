@@ -88,7 +88,7 @@ lillian = new Professor("丽莲", "诗歌");
 walsh.teaches; // '心理学'
 walsh.introduceSelf(); // '我是沃尔什，我是你们的心理学老师。'
 
-lillian.teaches; // '丽莲'
+lillian.teaches; // '诗歌'
 lillian.introduceSelf(); // '我是丽莲，我是你们的诗歌老师'
 ```
 

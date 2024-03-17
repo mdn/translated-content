@@ -59,7 +59,7 @@ This example shows a 'long' sentence that wraps within a div with a blue border,
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

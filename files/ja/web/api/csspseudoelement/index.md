@@ -18,7 +18,7 @@ l10n:
 - {{DOMxRef('CSSPseudoElement.type')}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : 擬似要素セレクターを文字列で返します。
 
-## インスタンスプロパティ
+## インスタンスメソッド
 
 _`CSSPseudoElement` は {{DOMxRef('EventTarget')}} から派生しているため、以下のメソッドを継承しています。_
 

@@ -3,7 +3,7 @@ title: Object
 slug: Web/JavaScript/Reference/Global_Objects/Object
 ---
 
-{{JSRef("Global_Objects", "Object")}}
+{{JSRef}}
 
 Тип **`Object`** представляет один из [типов данных JavaScript](/ru/docs/Web/JavaScript/Data_structures). Он используется для хранения различных коллекций с ключами и более сложных сущностей. Объекты могут быть созданы с использованием конструктора {{jsxref("Object/Object", "Object()")}} или [синтаксиса инициализатора / литерала объекта](/ru/docs/Web/JavaScript/Reference/Operators/Object_initializer).
 

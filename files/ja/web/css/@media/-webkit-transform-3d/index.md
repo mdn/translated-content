@@ -13,7 +13,7 @@ slug: Web/CSS/@media/-webkit-transform-3d
 
 `-webkit-transform-3d` は [CSS](/ja/docs/Web/CSS) の論理[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で [Chrome 拡張](/ja/docs/Web/CSS/WebKit_Extensions)であり、ベンダー接頭辞付きの CSS 3D {{cssxref("transform")}} に対応していれば値が `true` になります。
 
-### Values
+### 値
 
 - `true`
   - : ブラウザーは三次元の CSS 座標変換に `-webkit` の接頭辞つきで対応しています。

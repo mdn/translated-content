@@ -36,14 +36,8 @@ import("/module-name.js").then(module => {…}) // Динамический им
   - : Имя модуля для импорта. Это зачастую относительный или абсолютный путь к `.js` файлу модуля без указания расширения `.js`. Некоторые сборщики могут разрешать или даже требовать использования расширения; проверяйте своё рабочее окружение. Допускаются только строки с одиночными или двойными кавычками.
 - `name`
   - : Имя локального объекта, который будет использован как своего рода пространство имён, ссылающееся на импортируемые значения.
-
-<!---->
-
 - `export, exportN`
   - : Имена значений, которые будут импортированы.
-
-<!---->
-
 - `alias, aliasN`
   - : Имена, которые будут ссылаться на импортируемые значения.
 
@@ -138,40 +132,40 @@ import myDefault, { foo, bar } from "/modules/my-module.js";
 
 Такой код выведет ошибку:
 
-##### my-module.js
+- my-module.js:
 
-```js
-export let a = 2;
-export let b = 3;
-```
+  ```js
+  export let a = 2;
+  export let b = 3;
+  ```
 
-##### main.js
+- main.js:
 
-```js
-import { a, b } from "/modules/my-module.js";
-a = 5;
-b = 6;
-// Uncaught TypeError: Assignment to constant variable.
-```
+  ```js
+  import { a, b } from "/modules/my-module.js";
+  a = 5;
+  b = 6;
+  // Uncaught TypeError: Assignment to constant variable.
+  ```
 
 Для импорта можно воспользоваться объектом в котором хранятся эти переменные.
 
 Такой код будет рабочим:
 
-##### my-module.js
+- my-module.js:
 
-```js
-export let obj = { a: 2, b: 4 };
-```
+  ```js
+  export let obj = { a: 2, b: 4 };
+  ```
 
-##### main.js
+- main.js:
 
-```js
-import { obj } from "/modules/my-module.js";
+  ```js
+  import { obj } from "/modules/my-module.js";
 
-obj.a = 1;
-obj.b = 4;
-```
+  obj.a = 1;
+  obj.b = 4;
+  ```
 
 Учитывая, что `import` хранит именно ссылки на значения, экспортированные из внешнего модуля, то это можно использовать как замыкания.
 
@@ -249,7 +243,7 @@ for (const link of document.querySelectorAll("nav > a")) {
 
 {{Specifications}}
 
-## Совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

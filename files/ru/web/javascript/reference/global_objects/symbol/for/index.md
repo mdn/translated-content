@@ -57,7 +57,7 @@ Symbol.for("mdn.bar");
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

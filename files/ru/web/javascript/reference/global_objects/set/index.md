@@ -259,7 +259,7 @@ console.assert(set.size === array.length);
 
 {{Specifications}}
 
-## Браузерная поддержка
+## Совместимость с браузерами
 
 {{Compat}}
 

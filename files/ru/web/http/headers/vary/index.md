@@ -52,7 +52,7 @@ Vary: User-Agent
 | -------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "Vary", "7.1.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

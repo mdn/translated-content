@@ -3,7 +3,7 @@ title: Math.E
 slug: Web/JavaScript/Reference/Global_Objects/Math/E
 ---
 
-{{JSRef("Global_Objects", "Math")}}
+{{JSRef}}
 
 ## Сводка
 

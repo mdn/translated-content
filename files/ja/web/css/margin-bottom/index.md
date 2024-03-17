@@ -1,11 +1,13 @@
 ---
 title: margin-bottom
 slug: Web/CSS/margin-bottom
+l10n:
+  sourceCommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
 ---
 
 {{CSSRef}}
 
-**`margin-bottom`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の下側の[マージン領域](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#マージン領域)を設定します。正の数を指定すると、隣との間が遠くなるように配置され、負の数を指定すると、近くなるように配置します。
+**`margin-bottom`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の下側の[マージン領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#マージン領域)を設定します。正の数を指定すると、隣との間が遠くなるように配置され、負の数を指定すると、近くなるように配置します。
 
 {{EmbedInteractiveExample("pages/css/margin-bottom.html")}}
 
@@ -28,6 +30,7 @@ margin-bottom: auto;
 margin-bottom: inherit;
 margin-bottom: initial;
 margin-bottom: revert;
+margin-bottom: revert-layer;
 margin-bottom: unset;
 ```
 
@@ -38,7 +41,7 @@ margin-bottom: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : マージンの寸法を固定値で表したものです。
 - {{cssxref("&lt;percentage&gt;")}}
-  - : マージンの寸法を包含ブロックの*幅*に対するパーセント値で表したものです。
+  - : マージンの寸法を[包含ブロック](/ja/docs/Web/CSS/Containing_block)のインラインサイズ（{{cssxref("writing-mode")}} で横書き言語と定義されている場合は _width_）に対するパーセント値で示したものです。
 - `auto`
   - : ブラウザ―が適切な値を選択して使用します。 {{cssxref("margin")}} を参照してください。
 
@@ -52,7 +55,7 @@ margin-bottom: unset;
 
 ## 例
 
-<h3 id="Setting_positive_and_negative_bottom_margins">正および負の数の下側のマージンの設定</h3>
+### 正および負の数の下側のマージンの設定
 
 #### HTML
 
@@ -100,7 +103,7 @@ div {
 
 #### 結果
 
-{{ EmbedLiveSample('Setting_positive_and_negative_bottom_margins',350,200) }}
+{{ EmbedLiveSample('正および負の数の下側のマージンの設定',350,200) }}
 
 ## 仕様書
 

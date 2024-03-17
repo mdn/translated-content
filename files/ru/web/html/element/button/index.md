@@ -86,6 +86,6 @@ Whether clicking on a {{HTMLElement("button")}} causes it to (by default) become
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}

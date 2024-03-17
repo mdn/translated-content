@@ -96,7 +96,7 @@ TypeError: replaceAll must be called with a global RegExp
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

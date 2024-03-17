@@ -33,7 +33,7 @@ WebXR 仕様を設計しているチームは、WebXR API をサポートして�
 
 #### WebXR API エミュレーター拡張機能
 
-[Mozilla WebXR チーム](https://mixedreality.mozilla.org/)は、WebXR API をエミュレートし、HTC Vive、Oculus Go、Oculus Quest、Samsung Gear、Google Cardboard などの互換性のあるさまざまなデバイスをシミュレートする、Firefox と Chrome の両方と互換性のある [WebXR API Emulator](https://blog.mozvr.com/webxr-emulator-extension/) ブラウザー拡張機能を作成しました。 拡張機能を配置すると、ヘッドセットと任意のハンドコントローラーの位置と向き、およびコントローラーのボタンを制御できる開発者ツールパネルを開くことができます。
+Mozilla WebXR チームは、WebXR API をエミュレートし、HTC Vive、Oculus Go、Oculus Quest、Samsung Gear、Google Cardboard などの互換性のあるさまざまなデバイスをシミュレートする、Firefox と Chrome の両方と互換性のある [WebXR API Emulator](https://blog.mozvr.com/webxr-emulator-extension/) ブラウザー拡張機能を作成しました。 拡張機能を配置すると、ヘッドセットと任意のハンドコントローラーの位置と向き、およびコントローラーのボタンを制御できる開発者ツールパネルを開くことができます。
 
 ##### エミュレーターの使用
 

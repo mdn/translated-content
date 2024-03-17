@@ -3,7 +3,7 @@ title: bookmarks.onChildrenReordered
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onChildrenReordered
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 UI で表示されている順序に伴って子フォルダの順序も変更された際に発火します。{{WebExtAPIRef("bookmarks.move()")}} の実行後や、UI におけるドラッグの際には発火しません。
 

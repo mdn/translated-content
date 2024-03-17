@@ -3,11 +3,11 @@ title: CSS
 slug: Web/CSS
 ---
 
-**Hojas de Estilo en Cascada** (del inglés _**C**ascading **S**tyle **S**heets_) o **CSS** es el lenguaje de [estilos](/es/docs/Web/API/StyleSheet) utilizado para describir la presentación de documentos [HTML](/es/docs/HTML) o [XML](/es/docs/XML) (incluyendo varios lenguajes basados en XML como [SVG](/es/docs/Web/SVG), [MathML](/es/docs/Web/MathML) o {{Glossary("XHTML")}}). CSS describe como debe ser renderizado el elemento estructurado en la pantalla, en papel, en el habla o en otros medios.
+**Hojas de Estilo en Cascada** (del inglés _**C**ascading **S**tyle **S**heets_) o **CSS** es el lenguaje de [estilos](/es/docs/Web/API/StyleSheet) utilizado para describir la presentación de documentos [HTML](/es/docs/HTML) o [XML](/es/docs/XML) (incluyendo varios lenguajes basados en XML como [SVG](/es/docs/Web/SVG), [MathML](/es/docs/Web/MathML) o {{Glossary("XHTML")}}). CSS describe cómo debe ser renderizado el elemento estructurado en la pantalla, en papel, en el habla o en otros medios.
 
 **CSS** es uno de los lenguajes base de la _Open Web_ y posee una [especificación estandarizada](http://www.w3.org/Style/CSS/#specs) por parte del W3C. Anteriormente , el desarrollo de varias partes de las especificaciones de CSS era realizado de manera sincrónica, lo que permitía el versionado de las recomendaciones. Probablemente habrás escuchado acerca de CSS1, CSS2.1, CSS3. Sin embargo, CSS4 nunca se ha lanzado como una versión oficial.
 
-Desde CSS3, el alcance de las especificaciones se incrementó de forma significativa y el progreso de los diferentes módulos de CSS comenzó a mostrar varias diferencias, lo que hizo más efectivo [desarrollar y publicar recomendaciones separadas por módulos](https://www.w3.org/Style/CSS/current-work). En vez de versionar las especificaciones de CSS, la W3C actualmente realiza una captura de las [ultimas espcificaciones estables de CSS](https://www.w3.org/TR/css/).
+Desde CSS3, el alcance de las especificaciones se incrementó de forma significativa y el progreso de los diferentes módulos de CSS comenzó a mostrar varias diferencias, lo que hizo más efectivo [desarrollar y publicar recomendaciones separadas por módulos](https://www.w3.org/Style/CSS/current-work). En vez de versionar las especificaciones de CSS, la W3C actualmente realiza una captura de las [últimas especificaciones estables de CSS](https://www.w3.org/TR/css/).
 
 - Introducción a CSS
 
@@ -39,9 +39,9 @@ Nuestra [área de aprendizaje CSS](/es/docs/Learn/CSS) presenta múltiples módu
 - [Estilo de texto](/es/docs/Learn/CSS/Styling_text)
   - : Con los conceptos básicos del lenguaje CSS cubiertos, el siguiente tema de CSS en el que debes concentrarte es dar estilo al texto, una de las cosas más comunes que harás con CSS. Aquí veremos los fundamentos del estilo del texto, incluida la configuración de la fuente, negrita, cursiva, espaciado entre líneas y letras, sombras y otras características del texto. Terminaremos el módulo analizando la aplicación de fuentes personalizadas a tu página y en el estilo de listas y enlaces.
 - [Diseño de CSS](/es/docs/Learn/CSS/CSS_layout)
-  - : En este punto ya hemos analizado los fundamentos de CSS, cómo dar estilo al texto y cómo diseñar y manipular las cajas en las que se encuentra el contenido. Ahora es el momento de ver cómo colocar sus cajas en el lugar correcto en relación con la pantalla del dispositivo y entre sí. Hemos cubierto los requisitos previos necesarios para que ahora puedas profundizar en el diseño de CSS, mirando diferentes configuraciones de pantalla, métodos de diseño tradicionales que implican flotación y posicionamiento, y nuevas herramientas de diseño como flexbox, grid y posicionamiento, asi como algunas técnicas de herencia que quizas desees conocer.
+  - : En este punto ya hemos analizado los fundamentos de CSS, cómo dar estilo al texto y cómo diseñar y manipular las cajas en las que se encuentra el contenido. Ahora es el momento de ver cómo colocar sus cajas en el lugar correcto en relación con la pantalla del dispositivo y entre sí. Hemos cubierto los requisitos previos necesarios para que ahora puedas profundizar en el diseño de CSS, mirando diferentes configuraciones de pantalla, métodos de diseño tradicionales que implican flotación y posicionamiento, y nuevas herramientas de diseño como flexbox, grid y posicionamiento, así como algunas técnicas de herencia que quizás desees conocer.
 - [Uso de CSS para resolver problemas comunes](/es/docs/Learn/CSS/S%C3%A1bercomo)
-  - : proporciona enlaces a secciones de contenido que explican cómo usar CSS para resolver problemas muy comunes al crear una página web.
+  - : Proporciona enlaces a secciones de contenido que explican cómo usar CSS para resolver problemas muy comunes al crear una página web.
 
 ## Referencia
 

@@ -132,7 +132,7 @@ This gives the following result:
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

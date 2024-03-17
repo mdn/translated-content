@@ -13,7 +13,7 @@ slug: Web/HTML/Global_attributes/style
 
 {{Specifications}}
 
-## Совместимость с браузером
+## Совместимость с браузерами
 
 {{Compat}}
 

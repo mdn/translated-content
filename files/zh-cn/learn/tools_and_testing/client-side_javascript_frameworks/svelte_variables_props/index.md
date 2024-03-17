@@ -36,7 +36,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables
   </tbody>
 </table>
 
-## 和我们一起编写代码
+## 与我们一起编写代码
 
 ### Git
 

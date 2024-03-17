@@ -71,7 +71,7 @@ writing-mode: unset;
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

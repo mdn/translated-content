@@ -119,7 +119,7 @@ function changeGridAutoFlow() {
 
 {{cssinfo}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

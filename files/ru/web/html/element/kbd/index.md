@@ -159,7 +159,7 @@ The output from this HTML looks like this:
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

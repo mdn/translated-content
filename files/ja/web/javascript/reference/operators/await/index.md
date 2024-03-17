@@ -335,7 +335,7 @@ withAwait();
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 

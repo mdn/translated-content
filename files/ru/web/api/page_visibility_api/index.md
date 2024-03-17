@@ -155,7 +155,7 @@ document.addEventListener("visibilitychange", handleVisibilityChange, false);
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

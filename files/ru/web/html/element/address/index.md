@@ -47,7 +47,7 @@ slug: Web/HTML/Element/address
 
 {{Specifications}}
 
-## Совместимость в браузерах
+## Совместимость с браузерами
 
 {{Compat}}
 

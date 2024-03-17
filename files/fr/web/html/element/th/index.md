@@ -5,7 +5,7 @@ slug: Web/HTML/Element/th
 
 {{HTMLSidebar}}
 
-L'élément HTML **`<th>`** définit une cellule d'un tableau comme une cellule d'en-tête pour un groupe de cellule. La nature de ce groupe est définie grâce aux attributs [`scope`](#scope) et [`headers`](#headers).
+L'élément HTML **`<th>`** définit une cellule d'un tableau comme une cellule d'en-tête pour un groupe de cellules. La nature de ce groupe est définie grâce aux attributs [`scope`](#scope) et [`headers`](#headers).
 
 {{EmbedInteractiveExample("pages/tabbed/th.html","tabbed-taller")}}
 

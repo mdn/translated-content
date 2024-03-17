@@ -3,7 +3,7 @@ title: Column combinator
 slug: Web/CSS/Column_combinator
 ---
 
-{{CSSRef("Selectors")}}{{SeeCompatTable}}
+{{CSSRef}} {{SeeCompatTable}}
 
 通过**列合并符** (`||`) 链接两个元素时，它只会匹配被第二个 CSS 选择器匹配的元素，且此元素属于被第一个 CSS 选择器匹配的列元素。
 

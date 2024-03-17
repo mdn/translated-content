@@ -44,7 +44,7 @@ WebAssembly 是一门不同于 JavaScript 的语言，但是，它不是用来�
 
 随着 WebAssembly 出现在了浏览器中，我们前面提到的虚拟机将会加载和运行两种类型的代码——JavaScript 和 WebAssembly。
 
-不同类型的代码能够按照需要进行相互调用——WebAssembly 的 JavaScript API 使用能够被正常调用的 JavaScript 函数封装了导出的 WebAssembly 代码，并且 WebAssembly 代码能够导入和同步调用常规的 JavaScript 函数。事实上，WebAssembly 代码的基本单元被称作一个模块，并且 WebAssembly 的模块在很多方面都和 ES2015 的模块是等价的。
+不同类型的代码能够按需进行相互调用——WebAssembly JavaScript API 将需要导出的 WebAssebmly 代码包裹成 JavaScript 函数，使其能够像常规 JavaScript 函数一样被调用，并且 WebAssembly 代码还可以导入并同步调用常规 JavaScript 函数。事实上，WebAssembly 代码的基本单元被称作模块，并且 WebAssembly 的模块在很多方面都和 ES 的模块是等价的。
 
 ### WebAssembly 关键概念
 

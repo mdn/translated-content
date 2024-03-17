@@ -3,7 +3,7 @@ title: RegExp
 slug: Web/JavaScript/Reference/Global_Objects/RegExp
 ---
 
-{{JSRef("Global_Objects", "RegExp")}}
+{{JSRef}}
 
 ## Сводка
 

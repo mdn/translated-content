@@ -3,7 +3,7 @@ title: tabs.onReplaced
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onReplaced
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Lancé lorsqu'un onglet est remplacé par un autre en raison d'un prérendering ou d'un instantané.
 

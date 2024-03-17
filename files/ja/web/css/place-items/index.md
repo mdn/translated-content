@@ -91,13 +91,13 @@ place-items: unset;
 
 {{cssinfo}}
 
-## 関連情報
+## 形式文法
 
 {{csssyntax}}
 
 ## 例
 
-<h3 id="Placing_items_in_a_flex_container">フレックスコンテナー内でのアイテムの配置</h3>
+### フレックスコンテナー内でのアイテムの配置
 
 フレックスボックスでは、主軸のアイテムがグループとして扱われるため、{{cssxref("justify-self")}} や {{cssxref("justify-items")}} したがって、2 番目の値は無視されます。
 
@@ -209,9 +209,9 @@ values.addEventListener("change", function (evt) {
 
 #### 結果
 
-{{EmbedLiveSample("Placing_items_in_a_flex_container", 260, 290)}}
+{{EmbedLiveSample("フレックスコンテナー内でのアイテムの配置", 260, 290)}}
 
-<h3 id="Placing_items_in_a_grid_container">グリッドコンテナーでのアイテムの配置</h3>
+### グリッドコンテナーでのアイテムの配置
 
 以下のグリッドコンテナーのアイテムは、配置されるグリッド領域よりも小さいため、`place-items` はブロック方向とインライン方向にアイテムを移動します。
 
@@ -326,7 +326,7 @@ values.addEventListener("change", function (evt) {
 
 #### 結果
 
-{{EmbedLiveSample("Placing_items_in_a_grid_container", 260, 290)}}
+{{EmbedLiveSample("グリッドコンテナーでのアイテムの配置", 260, 290)}}
 
 ## 仕様書
 

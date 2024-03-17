@@ -25,7 +25,7 @@
 /zh-CN/docs/CSS/Adjacent_sibling_selectors	/zh-CN/docs/Web/CSS/Next-sibling_combinator
 /zh-CN/docs/CSS/At-rule	/zh-CN/docs/Web/CSS/At-rule
 /zh-CN/docs/CSS/Attribute_selectors	/zh-CN/docs/Web/CSS/Attribute_selectors
-/zh-CN/docs/CSS/Block_formatting_context	/zh-CN/docs/Web/Guide/CSS/Block_formatting_context
+/zh-CN/docs/CSS/Block_formatting_context	/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context
 /zh-CN/docs/CSS/CSS_Reference/Webkit_Extensions	/zh-CN/docs/Web/CSS/WebKit_Extensions
 /zh-CN/docs/CSS/CSS_animated_properties	/zh-CN/docs/Web/CSS/CSS_animated_properties
 /zh-CN/docs/CSS/CSS_reference	/zh-CN/docs/Web/CSS/Reference
@@ -446,7 +446,7 @@
 /zh-CN/docs/DOM/window.onbeforeunload	/zh-CN/docs/Web/API/Window/beforeunload_event
 /zh-CN/docs/DOM/window.oncontextmenu	/zh-CN/docs/Web/API/Element/contextmenu_event
 /zh-CN/docs/DOM/window.onhashchange	/zh-CN/docs/Web/API/Window/hashchange_event
-/zh-CN/docs/DOM/window.oninput	/zh-CN/docs/Web/API/HTMLElement/input_event
+/zh-CN/docs/DOM/window.oninput	/zh-CN/docs/Web/API/Element/input_event
 /zh-CN/docs/DOM/window.onpopstate	/zh-CN/docs/Web/API/Window/popstate_event
 /zh-CN/docs/DOM/window.onresize	/zh-CN/docs/Web/API/Window/resize_event
 /zh-CN/docs/DOM/window.onselect	/zh-CN/docs/Web/API/HTMLInputElement/select_event
@@ -1124,16 +1124,18 @@
 /zh-CN/docs/Localization	/zh-CN/docs/Glossary/Localization
 /zh-CN/docs/MDN/About	/zh-CN/docs/MDN/Writing_guidelines
 /zh-CN/docs/MDN/CSS	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties
+/zh-CN/docs/MDN/Community/MDN_content	/zh-CN/docs/MDN/Community/Contributing
 /zh-CN/docs/MDN/Community/Users_teams	/zh-CN/docs/MDN/Community/Roles_teams
+/zh-CN/docs/MDN/Contribute	/zh-CN/docs/MDN/Community/Contributing
 /zh-CN/docs/MDN/Contribute/Content	/zh-CN/docs/MDN/Writing_guidelines
 /zh-CN/docs/MDN/Contribute/Content/CSS_style_guide	/zh-CN/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
 /zh-CN/docs/MDN/Contribute/Content/Custom_macros	/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 /zh-CN/docs/MDN/Contribute/Content/Rules_Of_MDN_Documenting	/zh-CN/docs/MDN/Writing_guidelines/What_we_write
 /zh-CN/docs/MDN/Contribute/Content/Style_guide	/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide
 /zh-CN/docs/MDN/Contribute/Feedback	/zh-CN/docs/MDN/Community
-/zh-CN/docs/MDN/Contribute/Fixing_MDN_content_bugs	/zh-CN/docs/MDN/Community/MDN_content
+/zh-CN/docs/MDN/Contribute/Fixing_MDN_content_bugs	/zh-CN/docs/MDN/Community/Contributing
 /zh-CN/docs/MDN/Contribute/Getting_started	/zh-CN/docs/MDN/Community/Contributing/Getting_started
-/zh-CN/docs/MDN/Contribute/Howto	/zh-CN/docs/MDN/Contribute
+/zh-CN/docs/MDN/Contribute/Howto	/zh-CN/docs/MDN/Community/Contributing
 /zh-CN/docs/MDN/Contribute/Howto/Add_or_update_browser_compatibility_data	https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md
 /zh-CN/docs/MDN/Contribute/Howto/Compatibility_tables	/zh-CN/docs/MDN/Writing_guidelines/Page_structures
 /zh-CN/docs/MDN/Contribute/Howto/Convert_code_samples_to_be_live	/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Live_samples
@@ -1179,6 +1181,7 @@
 /zh-CN/docs/MDN/Structures/Macros/Custom_macros	/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 /zh-CN/docs/MDN/Structures/Macros/Other	/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Macros/Other
 /zh-CN/docs/MDN/Writing_guidelines/Howto/Tag	/zh-CN/docs/MDN/Writing_guidelines/Howto
+/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Quicklinks	/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Sidebars
 /zh-CN/docs/MDN/Yari	https://github.com/mdn/yari/tree/main/docs/what-yari-does.md
 /zh-CN/docs/MDN_at_ten	/zh-CN/docs/MDN/At_ten
 /zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus	/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/menus
@@ -1200,7 +1203,7 @@
 /zh-CN/docs/Mozilla_event_reference/beforescriptexecute	/zh-CN/docs/Web/API/Element/beforescriptexecute_event
 /zh-CN/docs/Mozilla_event_reference/change	/zh-CN/docs/Web/API/HTMLElement/change_event
 /zh-CN/docs/Mozilla_event_reference/hashchange	/zh-CN/docs/Web/API/Window/hashchange_event
-/zh-CN/docs/Mozilla_event_reference/input	/zh-CN/docs/Web/API/HTMLElement/input_event
+/zh-CN/docs/Mozilla_event_reference/input	/zh-CN/docs/Web/API/Element/input_event
 /zh-CN/docs/Mozilla_event_reference/popstate	/zh-CN/docs/Web/API/Window/popstate_event
 /zh-CN/docs/Mozilla_event_reference/touchend	/zh-CN/docs/Web/API/Element/touchend_event
 /zh-CN/docs/Mozilla_event_reference/touchstart	/zh-CN/docs/Web/API/Element/touchstart_event
@@ -1499,7 +1502,7 @@
 /zh-CN/docs/Web/API/GlobalEventHandlers.oncontextmenu	/zh-CN/docs/Web/API/Element/contextmenu_event
 /zh-CN/docs/Web/API/GlobalEventHandlers.ondblclick	/zh-CN/docs/Web/API/Element/dblclick_event
 /zh-CN/docs/Web/API/GlobalEventHandlers.onfocus	/zh-CN/docs/Web/API/Window/focus_event
-/zh-CN/docs/Web/API/GlobalEventHandlers.oninput	/zh-CN/docs/Web/API/HTMLElement/input_event
+/zh-CN/docs/Web/API/GlobalEventHandlers.oninput	/zh-CN/docs/Web/API/Element/input_event
 /zh-CN/docs/Web/API/GlobalEventHandlers.onkeydown	/zh-CN/docs/Web/API/Element/keydown_event
 /zh-CN/docs/Web/API/GlobalEventHandlers.onkeypress	/zh-CN/docs/Web/API/Element/keypress_event
 /zh-CN/docs/Web/API/GlobalEventHandlers.onkeyup	/zh-CN/docs/Web/API/Element/keyup_event
@@ -1534,7 +1537,7 @@
 /zh-CN/docs/Web/API/GlobalEventHandlers/onfocus	/zh-CN/docs/Web/API/Window/focus_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onformdata	/zh-CN/docs/Web/API/HTMLFormElement/formdata_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/ongotpointercapture	/zh-CN/docs/Web/API/Element/gotpointercapture_event
-/zh-CN/docs/Web/API/GlobalEventHandlers/oninput	/zh-CN/docs/Web/API/HTMLElement/input_event
+/zh-CN/docs/Web/API/GlobalEventHandlers/oninput	/zh-CN/docs/Web/API/Element/input_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/oninvalid	/zh-CN/docs/Web/API/HTMLInputElement/invalid_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onkeydown	/zh-CN/docs/Web/API/Element/keydown_event
 /zh-CN/docs/Web/API/GlobalEventHandlers/onkeypress	/zh-CN/docs/Web/API/Element/keypress_event
@@ -1595,6 +1598,8 @@
 /zh-CN/docs/Web/API/HTMLElement/animationend_event	/zh-CN/docs/Web/API/Element/animationend_event
 /zh-CN/docs/Web/API/HTMLElement/animationiteration_event	/zh-CN/docs/Web/API/Element/animationiteration_event
 /zh-CN/docs/Web/API/HTMLElement/animationstart_event	/zh-CN/docs/Web/API/Element/animationstart_event
+/zh-CN/docs/Web/API/HTMLElement/beforeinput_event	/zh-CN/docs/Web/API/Element/beforeinput_event
+/zh-CN/docs/Web/API/HTMLElement/input_event	/zh-CN/docs/Web/API/Element/input_event
 /zh-CN/docs/Web/API/HTMLElement/oncopy	/zh-CN/docs/Web/API/HTMLElement/copy_event
 /zh-CN/docs/Web/API/HTMLElement/oncut	/zh-CN/docs/Web/API/HTMLElement/cut_event
 /zh-CN/docs/Web/API/HTMLElement/onpaste	/zh-CN/docs/Web/API/HTMLElement/paste_event
@@ -1618,6 +1623,7 @@
 /zh-CN/docs/Web/API/HTMLVideoElement/autoPictureInPicture	/zh-CN/docs/Web/API/HTMLVideoElement
 /zh-CN/docs/Web/API/Headers/getAll	/zh-CN/docs/Web/API/Headers/get
 /zh-CN/docs/Web/API/History_API/Example	/zh-CN/docs/Web/API/History_API/Working_with_the_History_API
+/zh-CN/docs/Web/API/Houdini	/zh-CN/docs/Web/API/Houdini_APIs
 /zh-CN/docs/Web/API/IDBCursor.direction	/zh-CN/docs/Web/API/IDBCursor/direction
 /zh-CN/docs/Web/API/IDBDatabase/onversionchange	/zh-CN/docs/Web/API/IDBDatabase/versionchange_event
 /zh-CN/docs/Web/API/IDBFactory.open	/zh-CN/docs/Web/API/IDBFactory/open
@@ -2053,7 +2059,7 @@
 /zh-CN/docs/Web/CSS/Adjacent_sibling_combinator	/zh-CN/docs/Web/CSS/Next-sibling_combinator
 /zh-CN/docs/Web/CSS/Adjacent_sibling_selectors	/zh-CN/docs/Web/CSS/Next-sibling_combinator
 /zh-CN/docs/Web/CSS/All_About_The_Containing_Block	/zh-CN/docs/Web/CSS/Containing_block
-/zh-CN/docs/Web/CSS/Block_formatting_context	/zh-CN/docs/Web/Guide/CSS/Block_formatting_context
+/zh-CN/docs/Web/CSS/Block_formatting_context	/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context
 /zh-CN/docs/Web/CSS/CSS3中的关键帧	/zh-CN/docs/Web/CSS/@keyframes
 /zh-CN/docs/Web/CSS/CSSOM_View/坐标系	/zh-CN/docs/Web/CSS/CSSOM_view/Coordinate_systems
 /zh-CN/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator	/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator
@@ -2070,7 +2076,7 @@
 /zh-CN/docs/Web/CSS/CSS_Columns/Styling_Columns	/zh-CN/docs/Web/CSS/CSS_multicol_layout/Styling_columns
 /zh-CN/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts	/zh-CN/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
 /zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax	/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis
-/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Flexbox_的_向下_支持	/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox
+/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Flexbox_的_向下_支持	/zh-CN/docs/Glossary/Flexbox
 /zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/典型_用例_的_Flexbox	/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox
 /zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/弹性盒子与其他布局方法的联系	/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods
 /zh-CN/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts	/zh-CN/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts
@@ -2108,6 +2114,8 @@
 /zh-CN/docs/Web/CSS/CSS_Scrollbars	/zh-CN/docs/Web/CSS/CSS_scrollbars_styling
 /zh-CN/docs/Web/CSS/CSS_Selectors/Comparison_with_XPath	/zh-CN/docs/Web/XPath/Comparison_with_CSS_selectors
 /zh-CN/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes	/zh-CN/docs/Web/CSS/CSS_shapes/Overview_of_shapes
+/zh-CN/docs/Web/CSS/CSS_container_queries	/zh-CN/docs/Web/CSS/CSS_containment/Container_queries
+/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox	/zh-CN/docs/Glossary/Flexbox
 /zh-CN/docs/Web/CSS/CSS_reference	/zh-CN/docs/Web/CSS/Reference
 /zh-CN/docs/Web/CSS/CSS_values_syntax	/zh-CN/docs/Web/CSS
 /zh-CN/docs/Web/CSS/CSS_分片	/zh-CN/docs/Web/CSS/CSS_fragmentation
@@ -2233,7 +2241,7 @@
 /zh-CN/docs/Web/Events/gamepadconnected	/zh-CN/docs/Web/API/Window/gamepadconnected_event
 /zh-CN/docs/Web/Events/hashchange	/zh-CN/docs/Web/API/Window/hashchange_event
 /zh-CN/docs/Web/Events/icecandidate	/zh-CN/docs/Web/API/RTCPeerConnection/icecandidate_event
-/zh-CN/docs/Web/Events/input	/zh-CN/docs/Web/API/HTMLElement/input_event
+/zh-CN/docs/Web/Events/input	/zh-CN/docs/Web/API/Element/input_event
 /zh-CN/docs/Web/Events/keypress	/zh-CN/docs/Web/API/Element/keypress_event
 /zh-CN/docs/Web/Events/load	/zh-CN/docs/Web/API/Window/load_event
 /zh-CN/docs/Web/Events/loadeddata	/zh-CN/docs/Web/API/HTMLMediaElement/loadeddata_event
@@ -2289,6 +2297,7 @@
 /zh-CN/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges	/zh-CN/docs/Web/Media/Audio_and_video_delivery/buffering_seeking_time_ranges
 /zh-CN/docs/Web/Guide/Audio_and_video_manipulation	/zh-CN/docs/Web/Media/Audio_and_video_manipulation
 /zh-CN/docs/Web/Guide/CSS	/zh-CN/docs/Learn/CSS
+/zh-CN/docs/Web/Guide/CSS/Block_formatting_context	/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context
 /zh-CN/docs/Web/Guide/CSS/CSS_Image_Sprites	/zh-CN/docs/Web/CSS/CSS_images/Implementing_image_sprites_in_CSS
 /zh-CN/docs/Web/Guide/CSS/Consistent_list_indentation	/zh-CN/docs/Web/CSS/CSS_lists/Consistent_list_indentation
 /zh-CN/docs/Web/Guide/CSS/Counters	/zh-CN/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters
@@ -2344,7 +2353,9 @@
 /zh-CN/docs/Web/Guide/HTML/Introduction	/zh-CN/docs/learn/HTML/Introduction_to_HTML
 /zh-CN/docs/Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages	/zh-CN/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
 /zh-CN/docs/Web/Guide/HTML/Using_data_attributes	/zh-CN/docs/Learn/HTML/Howto/Use_data_attributes
+/zh-CN/docs/Web/Guide/Houdini	/zh-CN/docs/Web/API/Houdini_APIs
 /zh-CN/docs/Web/Guide/Introduction_to_Web_development	/zh-CN/docs/Learn
+/zh-CN/docs/Web/Guide/Mobile	/zh-CN/docs/Learn/CSS/CSS_layout/Responsive_Design
 /zh-CN/docs/Web/Guide/Parsing_and_serializing_XML	/zh-CN/docs/Web/XML/Parsing_and_serializing_XML
 /zh-CN/docs/Web/Guide/Performance	/zh-CN/docs/Web/Performance
 /zh-CN/docs/Web/Guide/Performance/Using_web_workers	/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers
@@ -2371,6 +2382,7 @@
 /zh-CN/docs/Web/HTML/Element/basefont	/zh-CN/docs/Web/CSS/CSS_fonts
 /zh-CN/docs/Web/HTML/Element/bgsound	/zh-CN/docs/Web/HTML/Element/audio
 /zh-CN/docs/Web/HTML/Element/content	/zh-CN/docs/Web/HTML/Element/slot
+/zh-CN/docs/Web/HTML/Element/image	/zh-CN/docs/Web/HTML/Element/img
 /zh-CN/docs/Web/HTML/Element/video/timeupdate_event	/zh-CN/docs/Web/API/HTMLMediaElement/timeupdate_event
 /zh-CN/docs/Web/HTML/Element/视频	/zh-CN/docs/Web/HTML/Element/video
 /zh-CN/docs/Web/HTML/Element/选项	/zh-CN/docs/Web/HTML/Element/option
@@ -2378,6 +2390,7 @@
 /zh-CN/docs/Web/HTML/Forms/How_to_build_custom_form_widgets	/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls
 /zh-CN/docs/Web/HTML/Forms/Sending_forms_through_JavaScript	/zh-CN/docs/Learn/Forms/Sending_forms_through_JavaScript
 /zh-CN/docs/Web/HTML/Forms/表单入门	/zh-CN/docs/Learn/Forms/Your_first_form
+/zh-CN/docs/Web/HTML/Global_attributes/contextmenu	/zh-CN/docs/Web/HTML/Element/menu
 /zh-CN/docs/Web/HTML/Global_attributes/摩缺	/zh-CN/docs/Web/HTML/Global_attributes/accesskey
 /zh-CN/docs/Web/HTML/Index	/zh-CN/docs/Web/HTML
 /zh-CN/docs/Web/HTML/Inline_elemente	/zh-CN/docs/Glossary/Inline-level_content
@@ -2439,7 +2452,7 @@
 /zh-CN/docs/Web/HTTP/策略特征	/zh-CN/docs/Web/HTTP/Permissions_Policy
 /zh-CN/docs/Web/HTTP/缓存_FAQ	/zh-CN/docs/Web/HTTP/Caching
 /zh-CN/docs/Web/HTTP/重定向	/zh-CN/docs/Web/HTTP/Redirections
-/zh-CN/docs/Web/Houdini	/zh-CN/docs/Web/Guide/Houdini
+/zh-CN/docs/Web/Houdini	/zh-CN/docs/Web/API/Houdini_APIs
 /zh-CN/docs/Web/JavaScript/A_re-introduction_to_JavaScript	/zh-CN/docs/Web/JavaScript/Language_overview
 /zh-CN/docs/Web/JavaScript/About_JavaScript	/zh-CN/docs/Web/JavaScript
 /zh-CN/docs/Web/JavaScript/Equality_comparisons_and_when_to_use_them	/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness
@@ -2681,8 +2694,9 @@
 /zh-CN/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Introduction	/zh-CN/docs/Web/Progressive_web_apps/Tutorials/js13kGames
 /zh-CN/docs/Web/Progressive_web_apps/加载	/zh-CN/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Loading
 /zh-CN/docs/Web/Progressive_web_apps/添加到主屏幕	/zh-CN/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable
+/zh-CN/docs/Web/SVG/Attribute/Styling	/zh-CN/docs/Web/SVG/Attribute
 /zh-CN/docs/Web/SVG/Attribute/文本锚点	/zh-CN/docs/Web/SVG/Attribute/text-anchor
-/zh-CN/docs/Web/SVG/Attribute/样式	/zh-CN/docs/Web/SVG/Attribute/Styling
+/zh-CN/docs/Web/SVG/Attribute/样式	/zh-CN/docs/Web/SVG/Attribute
 /zh-CN/docs/Web/SVG/Element/animateColor	/zh-CN/docs/Web/SVG/Element/animate
 /zh-CN/docs/Web/SVG/Element/圆	/zh-CN/docs/Web/SVG/Element/circle
 /zh-CN/docs/Web/SVG/Element/多边形	/zh-CN/docs/Web/SVG/Element/polygon

@@ -373,7 +373,7 @@ The example looks like this; have a play:
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

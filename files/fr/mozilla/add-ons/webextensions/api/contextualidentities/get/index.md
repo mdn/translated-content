@@ -3,7 +3,7 @@ title: contextualIdentities.get()
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/get
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Obtient des informations sur une identité contextuelle, compte tenu de son ID de cookie.
 

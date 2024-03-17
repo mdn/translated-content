@@ -59,7 +59,7 @@ p.thicker {
 
 - [Text content elements](/en/SVG/Element#Text_content_elements)
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

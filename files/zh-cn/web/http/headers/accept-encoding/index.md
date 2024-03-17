@@ -71,7 +71,7 @@ Accept-Encoding: br;q=1.0, gzip;q=0.8, *;q=0.1
 
 {{Compat}}
 
-## 相关内容
+## 参见
 
 - HTTP [内容协商](/zh-CN/docs/Web/HTTP/Content_negotiation)
 - 包含有内容协商结果的响应头： {{HTTPHeader("Content-Encoding")}}

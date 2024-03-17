@@ -120,7 +120,7 @@ const header = React.createElement(
 
 此外，請參閱以下內容以取得更多資訊：
 
-- ["What is npm" on nodejs.org](https://nodejs.org/en/knowledge/getting-started/npm/what-is-npm/)
+- ["About npm" on the npm blog](https://docs.npmjs.com/about-npm)
 - ["Introducing npx" on the npm blog](https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner)
 - [The create-react-app documentation](https://create-react-app.dev/)
 

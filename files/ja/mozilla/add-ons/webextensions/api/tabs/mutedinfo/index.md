@@ -3,7 +3,7 @@ title: tabs.MutedInfo
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/MutedInfo
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 This object contains a boolean indicating whether the tab is muted, and the reason for the last state change.
 

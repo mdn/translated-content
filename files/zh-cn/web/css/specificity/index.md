@@ -196,9 +196,7 @@ div:not(.outer) p {
 
 ### `:where()` 例外规则
 
-{{SeeCompatTable}}
-
-The specificity-adjustment pseudo-class {{CSSxRef(":where", ":where()")}} {{Experimental_Inline}} always has its specificity replaced with zero.
+优先级调整伪类 {{CSSxRef(":where", ":where()")}} 总是会将其优先级替换为零（`0-0-0`）。它使 CSS 选择器能够非常具体地确定目标元素，而不会提升优先级。
 
 有如下 CSS 样式声明：
 

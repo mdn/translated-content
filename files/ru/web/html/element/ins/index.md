@@ -36,7 +36,7 @@ slug: Web/HTML/Element/ins
 
 {{Specifications}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -17,7 +17,7 @@ slug: Web/HTML/Element/input/search
   </tr>
   <tr>
    <td><strong>事件</strong></td>
-   <td><code>{{domxref("HTMLElement/change_event", "change")}}</code> 和 <code>{{domxref("HTMLElement/input_event", "input")}}</code></td>
+   <td>{{domxref("HTMLElement/change_event", "change")}} 和 {{domxref("Element/input_event", "input")}}</td>
   </tr>
   <tr>
    <td><strong>支持的通用属性</strong></td>

@@ -1,6 +1,8 @@
 ---
-title: ハイパーリンクとは？
+title: ハイパーリンクとは
 slug: Learn/Common_questions/Web_mechanics/What_are_hyperlinks
+l10n:
+  sourceCommit: 8dfa0ecf5bda526ccd6244ca5c7720767e3f013f
 ---
 
 この記事では、ハイパーリンクとは何か、なぜ重要なのかを詳しく説明します。
@@ -10,7 +12,7 @@ slug: Learn/Common_questions/Web_mechanics/What_are_hyperlinks
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        まず<a href="/ja/docs/Learn/Common_questions/How_does_the_Internet_work">インターネットはどのように動くのか</a>を理解し、<a href="/ja/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines">ウェブページ、ウェブサイト、ウェブサーバー、検索エンジンの違い</a>についてよく理解している必要があります。
+        まず<a href="/ja/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work">インターネットはどのように動くのか</a>を理解し、<a href="/ja/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines">ウェブページ、ウェブサイト、ウェブサーバー、検索エンジンの違い</a>についてよく理解している必要があります。
       </td>
     </tr>
     <tr>
@@ -36,7 +38,7 @@ slug: Learn/Common_questions/Web_mechanics/What_are_hyperlinks
 
 下線が引かれ、青いテキストで囲まれていることで、リンクは周囲のテキストから目立っています。リンクをタップまたはクリックしてアクティブにするか、キーボードを使用している場合は、リンクがフォーカスされるまで Tab キーを押して Enter キーまたはスペースバーを押します。
 
-![Example of a basic display and effect of a link in a web page](link-1.png)
+![ウェブページにおけるリンクの基本的な表示と効果の例](link-1.png)
 
 リンクは、ウェブをとても便利で成功させた画期的なものです。この記事の残りの部分では、さまざまな種類のリンクと、それらが現代のウェブデザインにとって重要であることについて説明します。
 
@@ -47,7 +49,7 @@ slug: Learn/Common_questions/Web_mechanics/What_are_hyperlinks
 ### リンクの種類
 
 - 内部リンク
-  - : 両方ともあなたのウェブサイトに属している 2 つのウェブページ間のリンクは、内部リンクと呼ばれます。内部リンクがなければ、ウェブサイトのようなものはありません（もちろん、 1 ページのウェブサイトでもない限りはですが）。
+  - : 両方ともあなたのウェブサイトに属している 2 つのウェブページ間のリンクは、内部リンクと呼ばれます。内部リンクがなければ、ウェブサイトのようなものはありません（もちろん、 1 ページのウェブサイトは別です）。
 - 外部リンク
   - : あなたのウェブページから他の誰かのウェブページへのリンク。ウェブはウェブページのネットワークであるため、外部リンクがなければウェブはありません。あなたのウェブページを通して利用可能なコンテンツ以外の情報を提供するには外部リンクを使用してください。
 - 被リンク
@@ -78,5 +80,5 @@ slug: Learn/Common_questions/Web_mechanics/What_are_hyperlinks
 
 それでは、いくつかウェブページにリンクを設定しましょう。
 
-- すべてのリンクが URL を指しているので、より理論的な背景を得るには、[URL とその構造](/ja/docs/Learn/Common_questions/What_is_a_URL)について学びます。
+- すべてのリンクが URL を指しているので、より理論的な背景を得るには、[URL とその構造](/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)について学びます。
 - もう少し実用的なものが欲しいですか？ [HTML 入門](/ja/docs/Learn/HTML/Introduction_to_HTML)モジュールの記事「[ハイパーリンクの作成](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)」で、リンクの実装方法について詳しく説明しています。

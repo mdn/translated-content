@@ -3,7 +3,7 @@ title: pageAction.isShown()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/isShown
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Renvoie `true` si l'action de la page est affichée pour l'onglet donné..
 

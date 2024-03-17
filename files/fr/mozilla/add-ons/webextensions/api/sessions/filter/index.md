@@ -3,7 +3,7 @@ title: sessions.Filter
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/Filter
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 L'objet `Filter` permet de restreindre le nombre d'objets {{WebExtAPIRef("sessions.Session", "Session")}} retournés par un appel à {{WebExtAPIRef("sessions.getRecentlyClosed()")}}.
 

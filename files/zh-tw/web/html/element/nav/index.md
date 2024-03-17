@@ -39,7 +39,7 @@ slug: Web/HTML/Element/nav
 </nav>
 ```
 
-## 屬性
+## 規範
 
 {{Specifications}}
 

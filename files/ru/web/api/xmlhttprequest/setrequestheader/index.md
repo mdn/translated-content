@@ -30,7 +30,7 @@ XMLHttpRequest.setRequestHeader(header, value)
 
 {{Specifications}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -36,7 +36,7 @@ slug: Web/HTML/Element/option
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -54,7 +54,7 @@ slug: Web/HTML/Element/time
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

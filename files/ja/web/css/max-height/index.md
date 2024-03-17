@@ -87,6 +87,6 @@ form {
 
 ## 関連情報
 
-- [ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)、 {{cssxref("box-sizing")}}
+- [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)、 {{cssxref("box-sizing")}}
 - {{Cssxref("height")}}, {{Cssxref("min-height")}}
-- 対応する論理プロパティ: {{cssxref("max-inline-size")}}, {{cssxref("max-block-size")}}
+- 対応する論理的プロパティ: {{cssxref("max-inline-size")}}, {{cssxref("max-block-size")}}

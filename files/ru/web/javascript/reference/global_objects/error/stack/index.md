@@ -3,7 +3,7 @@ title: Error.prototype.stack
 slug: Web/JavaScript/Reference/Global_Objects/Error/stack
 ---
 
-{{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}} {{non-standard_header}}
+{{JSRef}} {{non-standard_header}}
 
 ## Сводка
 

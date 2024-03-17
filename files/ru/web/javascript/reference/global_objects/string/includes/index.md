@@ -75,7 +75,7 @@ if (!String.prototype.includes) {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

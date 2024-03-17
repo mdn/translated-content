@@ -210,7 +210,7 @@ td {
 
 {{EmbedLiveSample('', 660, 700)}}
 
-O segundo elemento a ser configurado é a posição do espectador, com a propriedade {{cssxref("perspective-origin")}}}. Por padrão, a perspectiva está centrada no telespectador, o que nem sempre é adequado.
+O segundo elemento a ser configurado é a posição do espectador, com a propriedade {{cssxref("perspective-origin")}}. Por padrão, a perspectiva está centrada no telespectador, o que nem sempre é adequado.
 
 #### Mudando a origem da perspectiva
 

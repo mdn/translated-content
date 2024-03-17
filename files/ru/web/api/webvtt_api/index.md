@@ -587,7 +587,7 @@ Where p and a are the tags which are used in HTML for paragraph and link, respec
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

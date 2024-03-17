@@ -114,5 +114,5 @@ if (window.Element && !Element.prototype.closest) {
 ## 参见
 
 - {{domxref("Element")}} 接口。
-- [选择器语法](/zh-CN/docs/Web/Guide/CSS/Getting_started/Selectors)
-- 其他相关选择器方法：{{domxref("element.querySelector()")}} and {{domxref("element.matches()")}}.
+- [选择器语法](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)
+- 其他相关选择器方法：{{domxref("element.querySelector()")}} 和 {{domxref("element.matches()")}}。

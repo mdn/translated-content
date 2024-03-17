@@ -2,7 +2,7 @@
 title: アイテムを中央揃えするには
 slug: Learn/CSS/Howto/Center_an_item
 l10n:
-  sourceCommit: 8e2641ebe076ab89299c77a51ece882de4ba5efb
+  sourceCommit: 45268b07c84a04b45d46bcdf104e2b33be00adcf
 ---
 
 {{LearnSidebar}}
@@ -11,7 +11,7 @@ l10n:
 
 ## ボックスの中央揃え
 
-CSS を使用して、あるボックスを別のボックスの中に配置するには、親コンテナーで [CSS ボックス配置](/ja/docs/Web/CSS/CSS_Box_Alignment)プロパティを使用する必要があります。これらの配置プロパティは、ブロックやインラインレイアウトにおいてはブラウザーがまだ対応していないので、配置を使用する機能を有効にするためには、親コンテナーを[フレックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)または[グリッド](/ja/docs/Web/CSS/CSS_grid_layout)にする必要があります。
+CSS を使用して、あるボックスを別のボックスの中に配置するには、親コンテナーで [CSS ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)プロパティを使用する必要があります。これらの配置プロパティは、ブロックやインラインレイアウトにおいてはブラウザーがまだ対応していないので、配置を使用する機能を有効にするためには、親コンテナーを[フレックス](/ja/docs/Web/CSS/CSS_flexible_box_layout)または[グリッド](/ja/docs/Web/CSS/CSS_grid_layout)にする必要があります。
 
 下記の例では、親コンテナーに `display: flex` を指定し、水平方向に配置するために {{cssxref("justify-content")}} を center に、垂直方向に配置するために {{cssxref("align-items")}} を center に設定しています。
 
@@ -21,5 +21,5 @@ CSS を使用して、あるボックスを別のボックスの中に配置す�
 
 ## 関連情報
 
-- [フレックスボックスでのボックス配置](/ja/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox)
-- [グリッドレイアウトでのボックス配置](/ja/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout)
+- [フレックスボックスでのボックス配置](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
+- [グリッドレイアウトでのボックス配置](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)

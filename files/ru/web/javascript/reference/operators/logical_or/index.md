@@ -138,7 +138,7 @@ bCondition1 && (bCondition2 || bCondition3);
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

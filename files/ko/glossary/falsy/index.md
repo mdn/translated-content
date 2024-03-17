@@ -1,5 +1,5 @@
 ---
-title: 거짓같은 값
+title: 거짓 같은 값
 slug: Glossary/Falsy
 l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
@@ -23,7 +23,7 @@ l10n:
 | `-0`                        | Number    | The {{jsxref("Number")}} 음수 0, `-0.0`, `-0x0` 등도 포함합니다.                                                                                              |
 | `0n`                        | BigInt    | The {{jsxref("BigInt")}} 0, `0x0n` 등도 포함합니다. Note that there is no {{jsxref("BigInt")}}에 음수 0가 없다는 것에 주목하세요. `0n`의 음수 0은 `0n`입니다. |
 | `""`                        | String    | 비어있는 [string](/ko/docs/Web/JavaScript/Reference/Global_Objects/String) 값, also `''` 및 ` `` `도 포함합니다..                                             |
-| {{domxref("document.all")}} | Object    | JavaScript의 유일한 거짓같은 객체는 내장 {{domxref("document.all")}}입니다.                                                                                   |
+| {{domxref("document.all")}} | Object    | JavaScript의 유일한 거짓 같은 객체는 내장 {{domxref("document.all")}}입니다.                                                                                  |
 
 `null` 및 `undefined` 값은 또한 [nullish](/ko/docs/Glossary/Nullish)입니다..
 

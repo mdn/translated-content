@@ -46,7 +46,7 @@ masonry-auto-flow: unset;
 
 {{cssinfo}}
 
-## 関連情報
+## 形式文法
 
 {{csssyntax}}
 
@@ -124,7 +124,7 @@ selectElem.addEventListener("change", changeMasonryFlow);
 
 #### 結果
 
-{{EmbedLiveSample("Using_the_next_keyword", "200px", "230px")}}
+{{EmbedLiveSample("next キーワードの使用", "200px", "230px")}}
 
 ## 仕様書
 

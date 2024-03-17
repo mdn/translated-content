@@ -98,7 +98,7 @@ slug: Web/API/PannerNode
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

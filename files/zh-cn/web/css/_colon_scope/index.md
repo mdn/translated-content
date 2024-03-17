@@ -52,7 +52,7 @@ if (paragraph.matches(":scope")) {
 
 ### Direct children
 
-当需要获取已检索到的的直接后代元素时，`:scope` 伪类很有用。
+当需要获取已检索到的直接后代元素时，`:scope` 伪类很有用。
 
 #### JavaScript
 

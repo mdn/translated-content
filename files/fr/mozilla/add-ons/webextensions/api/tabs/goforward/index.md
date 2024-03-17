@@ -3,7 +3,7 @@ title: tabs.goForward()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/goForward
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Passez à la page suivante dans l'historique de l'onglet, si disponible.
 

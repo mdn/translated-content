@@ -3,7 +3,7 @@ title: permissions.onAdded
 slug: Mozilla/Add-ons/WebExtensions/API/permissions/onAdded
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Activé lorsque l'extension a accordé de nouvelles permissions.
 

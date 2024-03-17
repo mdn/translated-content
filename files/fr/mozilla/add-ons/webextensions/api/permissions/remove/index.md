@@ -3,7 +3,7 @@ title: permissions.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/permissions/remove
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Demander d'abandonner les permissions listées dans l'objet {{WebExtAPIRef("permissions.Permissions")}}.
 

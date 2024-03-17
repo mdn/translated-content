@@ -117,6 +117,9 @@ jobs:
           echo "Running url locale checker"
           node ./scripts/check-url-locale.js --fix ${files_to_lint}
 
+          echo "Running autocorrect"
+          yarn autocorrect --fix ${files_to_lint}
+
           echo "Running Prettier"
           yarn prettier -w ${files_to_lint}
 

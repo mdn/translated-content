@@ -52,15 +52,15 @@ config({ duration: 125 }); // { duration: 125, speed: 25 }
 config({}); // { duration: 100, speed: 25 }
 ```
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 
-## See also
+## 関連情報
 
 - [Null 合体演算子 (`??`)](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
 - {{Glossary("Nullish")}}

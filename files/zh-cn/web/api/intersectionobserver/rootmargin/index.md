@@ -3,7 +3,7 @@ title: IntersectionObserver.rootMargin
 slug: Web/API/IntersectionObserver/rootMargin
 ---
 
-{{APIRef("Intersection Observer API")}}{{SeeCompatTable}}
+{{APIRef("Intersection Observer API")}}
 
 {{domxref("IntersectionObserver")}} 接口的只读属性 **`rootMargin`** 是与 CSS 属性{{cssxref("margin")}}语法相似的字符串 (string) 对象。在交叉检测开始之前，由`rootMargin 规定的矩形的每一边都会被添加至`{{domxref("IntersectionObserver.root", "root")}}元素的边框盒 ({{Glossary("bounding box")}}) 的相应边。例如，这可以让你向外调整边界，使得目标元素被认为是 100% 可见的，即使此元素得一部分长或宽被裁剪，或者在边缘过于靠近根边框盒边界的情况下，将目标视为部分隐藏。
 

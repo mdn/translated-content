@@ -22,11 +22,11 @@ Element.prepend((Node or DOMString)... nodes);
 
 `undefined`.
 
-### 错误
+### 异常
 
 - {{domxref("HierarchyRequestError")}}：节点不能插入当前层级内。
 
-## 例子
+## 示例
 
 ### Prepending an element
 
@@ -62,7 +62,7 @@ console.log(parent.childNodes); // NodeList [ #text "Some text", <p> ]
 
 ### `Element.prepend()` is unscopable
 
-`prepend() 不能在 with 语句内使用，详情参考`{{jsxref("Symbol.unscopables")}}。
+`prepend()` 不能在 with 语句内使用，详情参考 {{jsxref("Symbol.unscopables")}}。
 
 ```js
 var parent = document.createElement("div");
@@ -73,46 +73,19 @@ with (parent) {
 // ReferenceError: prepend is not defined
 ```
 
-## Polyfill
-
-使用下面的代码在 IE9 或更高版本中模拟`prepend()`方法：
-
-```js
-// from: https://github.com/jserz/js_piece/blob/master/DOM/Element/prepend()/prepend().md
-(function (arr) {
-  arr.forEach(function (item) {
-    item.prepend =
-      item.prepend ||
-      function () {
-        var argArr = Array.prototype.slice.call(arguments),
-          docFrag = document.createDocumentFragment();
-
-        argArr.forEach(function (argItem) {
-          var isNode = argItem instanceof Node;
-          docFrag.appendChild(
-            isNode ? argItem : document.createTextNode(String(argItem)),
-          );
-        });
-
-        this.insertBefore(docFrag, this.firstChild);
-      };
-  });
-})([Element.prototype, Document.prototype, DocumentFragment.prototype]);
-```
-
-## 说明
+## 规范
 
 {{Specifications}}
 
-## 兼容性
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- {{domxref("Element")}} and {{domxref("ChildNode")}}
 - {{domxref("Element.append()")}}
 - {{domxref("Node.appendChild()")}}
 - {{domxref("Node.insertBefore()")}}
-- {{domxref("ChildNode.before()")}}
+- {{domxref("Element.before()")}}
+- {{domxref("Element.insertAdjacentElement()")}}
 - {{domxref("NodeList")}}

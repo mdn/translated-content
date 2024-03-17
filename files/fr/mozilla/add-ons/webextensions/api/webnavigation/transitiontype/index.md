@@ -3,7 +3,7 @@ title: webNavigation.TransitionType
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/TransitionType
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Cause de la navigation: par exemple, l'utilisateur a cliqué sur un lien, ou a tapé une adresse, ou a cliqué sur un signet.
 

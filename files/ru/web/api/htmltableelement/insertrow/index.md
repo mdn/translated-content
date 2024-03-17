@@ -57,7 +57,7 @@ var row = HTMLTableElement.insertRow(optional index = -1);
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

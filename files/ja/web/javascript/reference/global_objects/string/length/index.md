@@ -27,11 +27,21 @@ l10n:
 - Firefox では、最大長は 2<sup>30</sup> - 2 (\~2GiB) です。Firefox 65 以前では、最大長は 2<sup>28</sup> - 1 (\~512MiB) でした。
 - Safari では、最大長は 2<sup>31</sup> - 1 (\~4GiB) です。
 
+他のエンコーディング (UTF-8 のファイルや blob) の巨大な文字列を扱っている場合は、データを JavaScript の文字列にロードすると、エンコーディングは常に UTF-16 になることに注意してください。文字列のサイズはもとのファイルのサイズと異なる可能性があります。
+
+```js
+const str1 = "a".repeat(2 ** 29 - 24); // 成功する
+const str2 = "a".repeat(2 ** 29 - 23); // RangeError: Invalid string length
+
+const buffer = new Uint8Array(2 ** 29 - 24).fill("a".codePointAt(0)); // このバッファのサイズは 512MiB
+const str = new TextDecoder().decode(buffer); // この文字列のサイズは 1GiB
+```
+
 空文字列の場合、`length` は 0 になります。
 
 静的プロパティの `String.length` は文字列の長さとは関係なく、 `String` 関数の[アリティ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/length)（簡単に言えば、それが持つ形式的な引数の数）であり、1 です。
 
-`length` は文字数ではなくコード単位で数えるため、文字数を取得したい場合は、まず文字列を[イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator)で分割し、文字ごとに反復処理をっしてください。
+`length` は文字数ではなくコード単位で数えるため、文字数を取得したい場合は、まず文字列を[イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator)で分割し、文字ごとに反復処理をしてください。
 
 ```js
 function getCharacterLength(str) {

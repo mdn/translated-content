@@ -1,6 +1,8 @@
 ---
 title: outline-width
 slug: Web/CSS/outline-width
+l10n:
+  sourceCommit: 7a9f9baa25d9a7313bd6c62ef5ef585b28459c58
 ---
 
 {{CSSRef}}
@@ -27,6 +29,7 @@ outline-width: 0.1em;
 outline-width: inherit;
 outline-width: initial;
 outline-width: revert;
+outline-width: revert-layer;
 outline-width: unset;
 ```
 
@@ -53,7 +56,7 @@ outline-width: unset;
 
 ## 例
 
-<h3 id="Setting_an_elements_outline_width">要素の輪郭線の幅の設定</h3>
+### 要素の輪郭線の幅の設定
 
 #### HTML
 

@@ -187,8 +187,8 @@ HTTP/2 在 HTTP/1.1 有几处基本的不同：
 随着 HTTP/2.的发布，就像先前的 HTTP/1.x 一样，HTTP 没有停止进化，HTTP 的扩展性依然被用来添加新的功能。特别的，我们能列举出 2016 年里 HTTP 的新扩展：
 
 - 对 Alt-Svc 的支持允许了给定资源的位置和资源鉴定，允许了更智能的 CDN 缓冲机制。
-- [客户端提示（client hint）](/zh-CN/docs/Web/HTTP/Client_hints) 的引入允许浏览器或者客户端来主动交流它的需求，或者是硬件约束的信息给服务端。
-- 在 Cookie 头中引入安全相关的的前缀，现在帮助保证一个安全的 Cookie 没被更改过。
+- [客户端提示（client hint）](/zh-CN/docs/Web/HTTP/Client_hints)的引入允许浏览器或者客户端来主动交流它的需求，或者是硬件约束的信息给服务端。
+- 在 Cookie 标头中引入安全相关的前缀，现在帮助保证一个安全的 Cookie 没被更改过。
 
 ## HTTP/3——基于 QUIC 的 HTTP
 

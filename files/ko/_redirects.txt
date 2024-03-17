@@ -287,6 +287,7 @@
 /ko/docs/Learn/Common_questions/set_up_a_local_testing_server	/ko/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server
 /ko/docs/Learn/Common_questions/웹_사이트가_제대로_동작하는지_확인	/ko/docs/Learn/Common_questions/Tools_and_setup/Checking_that_your_web_site_is_working_properly
 /ko/docs/Learn/Common_questions/코딩하기_전에_생각하기	/ko/docs/Learn/Common_questions/Design_and_accessibility/Thinking_before_coding
+/ko/docs/Learn/Front-end_web_developer	/ko/docs/orphaned/Learn/Front-end_web_developer
 /ko/docs/Learn/Getting_started_with_the_web/CSS_기본	/ko/docs/Learn/Getting_started_with_the_web/CSS_basics
 /ko/docs/Learn/Getting_started_with_the_web/HTML_기본	/ko/docs/Learn/Getting_started_with_the_web/HTML_basics
 /ko/docs/Learn/Getting_started_with_the_web/기본_소프트웨어_설치하기	/ko/docs/Learn/Getting_started_with_the_web/Installing_basic_software
@@ -320,15 +321,17 @@
 /ko/docs/Learn/접근성/What_is_accessibility	/ko/docs/Learn/Accessibility/What_is_accessibility
 /ko/docs/Localization	/ko/docs/Glossary/Localization
 /ko/docs/MDN/About	/ko/docs/MDN/Writing_guidelines
+/ko/docs/MDN/Contribute	/ko/docs/conflicting/MDN/Community/Contributing
 /ko/docs/MDN/Contribute/Content/Best_practices	/ko/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete
 /ko/docs/MDN/Contribute/Creating_and_editing_pages	/ko/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting
 /ko/docs/MDN/Contribute/Does_this_belong	/ko/docs/MDN/Writing_guidelines/What_we_write
 /ko/docs/MDN/Contribute/Feedback	/ko/docs/MDN/Community
 /ko/docs/MDN/Contribute/Getting_started	/ko/docs/MDN/Community/Contributing/Getting_started
 /ko/docs/MDN/Contribute/Guidelines/Code_guidelines/Code_guidelines	/ko/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
-/ko/docs/MDN/Contribute/Howto	/ko/docs/MDN/Contribute
+/ko/docs/MDN/Contribute/Howto	/ko/docs/conflicting/MDN/Community/Contributing
 /ko/docs/MDN/Contribute/Howto/Create_and_edit_pages	/ko/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting
 /ko/docs/MDN/Contribute/Howto/Report_a_problem	/ko/docs/MDN/Community/Issues
+/ko/docs/MDN/Contribute/Processes	/ko/docs/conflicting/MDN/Community/Contributing_6f769e24821efb7b69fc8d984aa30a77
 /ko/docs/MDN/Getting_started	/ko/docs/MDN/Community/Contributing/Getting_started
 /ko/docs/MDN/Guidelines/Best_practices	/ko/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete
 /ko/docs/MDN/Guidelines/Code_guidelines/Code_guidelines	/ko/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
@@ -448,6 +451,7 @@
 /ko/docs/Web/API/GlobalEventHandlers/oncontextmenu	/ko/docs/Web/API/Element/contextmenu_event
 /ko/docs/Web/API/GlobalEventHandlers/ondblclick	/ko/docs/Web/API/Element/dblclick_event
 /ko/docs/Web/API/GlobalEventHandlers/onsubmit	/ko/docs/Web/API/HTMLFormElement/submit_event
+/ko/docs/Web/API/HTMLElement/input_event	/ko/docs/Web/API/Element/input_event
 /ko/docs/Web/API/HTMLHyperlinkElementUtils/href	/ko/docs/Web/API/HTMLAnchorElement/href
 /ko/docs/Web/API/HTML_드래그_앤_드롭_API	/ko/docs/Web/API/HTML_Drag_and_Drop_API
 /ko/docs/Web/API/Media_Streams_API	/ko/docs/Web/API/Media_Capture_and_Streams_API
@@ -584,6 +588,7 @@
 /ko/docs/Web/CSS/CSS_Scrollbars	/ko/docs/Web/CSS/CSS_scrollbars_styling
 /ko/docs/Web/CSS/CSS_User_Interface	/ko/docs/Web/CSS/CSS_basic_user_interface
 /ko/docs/Web/CSS/CSS_Variables	/ko/docs/Web/CSS/CSS_cascading_variables
+/ko/docs/Web/CSS/CSS_charsets	/ko/docs/Web/CSS/CSS_syntax
 /ko/docs/Web/CSS/CSS_단위와_값	/ko/docs/Web/CSS/CSS_Values_and_Units
 /ko/docs/Web/CSS/Compositing_and_Blending	/ko/docs/Web/CSS/CSS_compositing_and_blending
 /ko/docs/Web/CSS/Filter_Effects	/ko/docs/Web/CSS/CSS_filter_effects
@@ -650,7 +655,6 @@
 /ko/docs/Web/Guide/CSS	/ko/docs/Learn/CSS
 /ko/docs/Web/Guide/CSS/Media_queries	/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries
 /ko/docs/Web/Guide/CSS/Using_CSS_transitions	/ko/docs/Web/CSS/CSS_transitions/Using_CSS_transitions
-/ko/docs/Web/Guide/CSS/Visual_formatting_model	/ko/docs/Web/CSS/Visual_formatting_model
 /ko/docs/Web/Guide/DOM/Using_full_screen_mode	/ko/docs/Web/API/Fullscreen_API
 /ko/docs/Web/Guide/Graphics	/ko/docs/conflicting/Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 /ko/docs/Web/Guide/HTML	/ko/docs/Learn/HTML
@@ -691,6 +695,7 @@
 /ko/docs/Web/HTML/Element/h6	/ko/docs/Web/HTML/Element/Heading_Elements
 /ko/docs/Web/HTML/Element/캔버스	/ko/docs/Web/HTML/Element/canvas
 /ko/docs/Web/HTML/Focus_management_in_HTML	/ko/docs/Web/API/Document/hasFocus
+/ko/docs/Web/HTML/Global_attributes/contextmenu	/ko/docs/conflicting/Web/HTML/Element/menu
 /ko/docs/Web/HTML/Global_attributes/클래스	/ko/docs/Web/HTML/Global_attributes/class
 /ko/docs/Web/HTML/HTML5/HTML5_element_list	/ko/docs/Web/HTML/Element
 /ko/docs/Web/HTML/HTML에서_폼	/ko/docs/Learn/Forms

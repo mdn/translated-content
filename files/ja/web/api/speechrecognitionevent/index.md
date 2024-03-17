@@ -11,7 +11,7 @@ l10n:
 
 {{InheritanceDiagram}}
 
-## Instance properties
+## インスタンスプロパティ
 
 _`SpeechRecognitionEvent` は親インターフェイスである {{domxref("Event")}} からプロパティを継承しています。_
 

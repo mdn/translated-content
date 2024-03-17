@@ -3,7 +3,7 @@ title: tabs.create()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/create
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Crée un nouvel onglet
 

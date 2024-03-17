@@ -3,7 +3,7 @@ title: tabs.get()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/get
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Étant donné un ID d'onglet, obtenez les détails de l'onglet en tant qu'objet {{WebExtAPIRef("tabs.Tab")}}.
 

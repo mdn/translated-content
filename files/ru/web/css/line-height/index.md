@@ -138,7 +138,7 @@ h1 {
 
 {{cssinfo}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

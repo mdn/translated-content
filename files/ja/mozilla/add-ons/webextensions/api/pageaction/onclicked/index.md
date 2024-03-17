@@ -3,7 +3,7 @@ title: pageAction.onClicked
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 ページアクションのアイコンがクリックされたときに発火します。ページアクションがポップアップを持っているならこのイベントは発火しません。
 

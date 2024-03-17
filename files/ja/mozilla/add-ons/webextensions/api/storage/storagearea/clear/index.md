@@ -3,7 +3,7 @@ title: StorageArea.clear()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/clear
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 全てのアイテムをストレージ領域から削除します。
 

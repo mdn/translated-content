@@ -3,7 +3,7 @@ title: storage.local
 slug: Mozilla/Add-ons/WebExtensions/API/storage/local
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 `local` ストレージ領域を指します。`local`ストレージ内のアイテムはその拡張機能がインストールされたマシン内で利用できます。
 

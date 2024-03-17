@@ -3,7 +3,7 @@ title: Math.cos()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cos
 ---
 
-{{JSRef("Global_Objects", "Math")}}
+{{JSRef}}
 
 ## Сводка
 
