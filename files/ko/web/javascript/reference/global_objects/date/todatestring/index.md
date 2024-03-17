@@ -27,8 +27,6 @@ toDateString()
 
 ## 설명
 
-{{jsxref("Date")}} instances refer to a specific point in time. `toDateString()` interprets the date in the local timezone and formats the _date_ part in English. It always uses the following format, separated by spaces:
-
 {{jsxref("Date")}} 인스턴스는 특정 시점을 참조합니다. `toDateString()`은 날짜를 현지 시간대로 해석하고 날짜 부분을 영어로 형식에 맞춰 출력합니다. 이 함수는 항상 공백으로 구분된 다음 형식을 사용합니다.
 
 1. 요일 이름의 처음 세 글자
