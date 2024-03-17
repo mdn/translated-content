@@ -220,7 +220,7 @@ l10n:
 
 ### ADTS
 
-**音频数据传输流**（**ADTS**）是 MPEG-4 第 3 部分为音频数据指定的一种容器格式，用于流式音频，如网络广播。从本质上讲，它是一种几乎裸露的 AAC 音频数据流，由带有最少标头的 ADTS 帧组成。
+**音频数据传输流**（**ADTS**）是 MPEG-4 第 3 部分为音频数据指定的一种容器格式，用于流式音频，如网络广播。从本质上讲，它是一种几乎裸露的 AAC 音频数据流，由带有最少报头的 ADTS 帧组成。
 
 | 音频         |
 | ------------ |
@@ -307,7 +307,7 @@ Firefox 对 AAC 的支持依赖于操作系统的媒体基础架构，因此只�
 
 ### <a id="MPEG" name="MPEG">MPEG</a>/MPEG-2
 
-**[MPEG-1](https://zh.wikipedia.org/wiki/MPEG-1)** 和 **[MPEG-2](https://zh.wikipedia.org/wiki/MPEG-2)** 文件格式基本相同。这些格式由移动图像专家组（MPEG）创建，广泛应用于物理媒体，包括 DVD 媒体的视频格式。
+**[MPEG-1](https://zh.wikipedia.org/wiki/MPEG-1)** 和 **[MPEG-2](https://zh.wikipedia.org/wiki/MPEG-2)** 文件格式基本相同。这些格式由动态影像专家组（MPEG）创建，广泛应用于物理媒体，包括 DVD 媒体的视频格式。
 
 在互联网上，MPEG 文件格式最常见的用途可能是包含 [Layer_III/MP3](https://zh.wikipedia.org/wiki/MPEG-1) 声音数据；由此产生的文件就是全球数字音乐设备广泛使用的 MP3 文件。除此之外，MPEG-1 和 MPEG-2 在 Web 内容中的应用并不广泛。
 
@@ -400,7 +400,7 @@ MPEG-1 和 MPEG-2 的主要区别在于媒体数据格式而非容器格式。MP
 
 **[MPEG-4](https://zh.wikipedia.org/wiki/MPEG-4)**（**MP4**）是 MPEG 文件格式的最新版本。该格式有两个版本，分别在规范的第 1 部分和第 14 部分中定义。MP4 是当今流行的容器，因为它支持几种最常用的编解码器，并得到广泛支持。
 
-最初的 MPEG-4 第 1 部分文件格式于 1999 年推出；第 14 部分定义的第 2 版格式于 2003 年加入。MP4 文件格式源于 [ISO 基本媒体文件格式](https://en.wikipedia.org/wiki/ISO_base_media_file_format)，而[ISO 基本媒体文件格式]直接源于 [Apple](https://www.apple.com/) 开发的 [QuickTime 文件格式](https://zh.wikipedia.org/wiki/QuickTime文件格式)。
+最初的 MPEG-4 第 1 部分文件格式于 1999 年推出；第 14 部分定义的第 2 版格式于 2003 年加入。MP4 文件格式源于 [ISO 基本媒体文件格式](https://en.wikipedia.org/wiki/ISO_base_media_file_format)，而后者直接源于 [Apple](https://www.apple.com/) 开发的 [QuickTime 文件格式](https://zh.wikipedia.org/wiki/QuickTime文件格式)。
 
 在指定 MPEG-4 媒体类型（`audio/mp4` 或 `video/mp4`）时，可在 MIME 类型字符串中[添加 `codecs` 参数](/zh-CN/docs/Web/Media/Formats/codecs_parameter#iso_base_media_file_format_mp4_quicktime_and_3gp)，以指明音频和/或视频轨道使用了哪些编解码器，并可选择提供有关配置文件、级别和/或其他编解码器配置细节的详细信息。
 
@@ -820,7 +820,7 @@ QuickTime 文件支持任何类型的基于时间的数据，包括音频和视�
   </tbody>
 </table>
 
-### WAVE (WAV)
+### WAVE（WAV）
 
 **波形音频文件格式**（**WAVE**）因其文件名扩展名为 `.wav`，通常被称为 WAV，是微软和 IBM 开发的一种用于存储音频比特流数据的格式。
 
