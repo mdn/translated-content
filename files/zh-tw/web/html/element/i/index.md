@@ -77,7 +77,7 @@ slug: Web/HTML/Element/i
     </tr>
     <tr>
       <th scope="row">標籤省略</th>
-      <td>無，起始和結束標籤均為必需的。</td>
+      <td>不允許，起始和結束標籤均為必需的。</td>
     </tr>
     <tr>
       <th scope="row">允許的父元素</th>
@@ -92,7 +92,7 @@ slug: Web/HTML/Element/i
       <td>
         <code
           ><a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/generic_role"
-            >通用</a
+            >generic</a
           ></code
         >
       </td>
@@ -102,7 +102,7 @@ slug: Web/HTML/Element/i
       <td>任何</td>
     </tr>
     <tr>
-      <th scope="row">DOM 接口</th>
+      <th scope="row">DOM 介面</th>
       <td>{{domxref("HTMLElement")}}</td>
     </tr>
   </tbody>

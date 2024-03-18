@@ -30,15 +30,15 @@ EMBEDDED-TEXT - 1st place
 1 - EMBEDDED-TEXTst place
 ```
 
-如果你事先知道 `EMBEDDED-TEXT`（嵌入文本）的方向性，則可以通過將 `EMBEDDED-TEXT`（嵌入文本）包裹在具有已知方向性的 [`dir`](/zh-TW/docs/Web/HTML/Global_attributes#dir) 屬性設置的{{HTMLElement("span")}}中來解決此問題。但是如果你不知道方向性 - 例如，因為 `EMBEDDED-TEXT`（嵌入文本）是從數據庫讀取的或由用戶輸入的 - 你應該使用 `<bdi>` 來防止 `EMBEDDED-TEXT`（嵌入文本）的方向性影響其周圍。
+如果你事先知道 `EMBEDDED-TEXT`（嵌入文本）的方向性，則可以通過將 `EMBEDDED-TEXT`（嵌入文本）包裹在具有已知方向性的 [`dir`](/zh-TW/docs/Web/HTML/Global_attributes#dir) 屬性設置的 {{HTMLElement("span")}} 中來解決此問題。但是如果你不知道方向性——例如，因為 `EMBEDDED-TEXT`（嵌入文本）是從數據庫讀取的或由用戶輸入的——你應該使用 `<bdi>` 來防止 `EMBEDDED-TEXT`（嵌入文本）的方向性影響其周圍。
 
-儘管可以通過在 {{HTMLElement("span")}} 或其他文本格式化元素上使用 CSS 規則{{cssxref("unicode-bidi")}}：isolate 來實現相同的視覺效果，但 HTML 作者不應該使用這種方法，因為它不是語義化的，並且瀏覽器允許忽略 CSS 樣式。
+儘管可以通過在 {{HTMLElement("span")}} 或其他文本格式化元素上使用 CSS 規則{{cssxref("unicode-bidi")}}`: isolate` 來實現相同的視覺效果，但 HTML 作者不應該使用這種方法，因為它不是語義化的，並且瀏覽器允許忽略 CSS 樣式。
 
 在 `<span dir="auto">` 中嵌入字符具有與使用 `<bdi>` 相同的效果，但其語義不太清晰。
 
 ## 屬性
 
-與所有其他HTML元素一樣，此元素支持[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)，只是 [`dir`](/zh-TW/docs/Web/HTML/Global_attributes#dir) 屬性的行為與正常情況不同：它的默認值為 `auto`，這意味著其值永遠不會從父元素繼承。這意味著除非你為 `dir` 指定了 `rtl` 或 `ltr` 的值，否則{{Glossary("user agent")}}將根據 `<bdi>` 的內容確定要使用的正確方向性。
+與所有其他 HTML 元素一樣，此元素支持[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)，只是 [`dir`](/zh-TW/docs/Web/HTML/Global_attributes#dir) 屬性的行為與正常情況不同：它的默認值為 `auto`，這意味著其值永遠不會從父元素繼承。這意味著除非你為 `dir` 指定了 `rtl` 或 `ltr` 的值，否則{{Glossary("user agent", "使用者代理")}}將根據 `<bdi>` 的內容確定要使用的正確方向性。
 
 ## 範例
 
@@ -67,7 +67,7 @@ body {
 
 ### 沒有 bdi 的 RTL 文本
 
-此範例僅使用 {{HTMLElement("span")}} 元素列出了比賽的獲獎者，其中一名獲獎者的名字包含 RTL 文本。在這種情況下，由中性或弱方向性字符組成的「- 1」將採用 RTL 文本的方向性，結果將是亂碼：
+此範例僅使用 {{HTMLElement("span")}} 元素列出了比賽的獲獎者，其中一名獲獎者的名字包含 RTL 文本。在這種情況下，由中性或弱方向性字符組成的「`- 1`」將採用 RTL 文本的方向性，結果將是亂碼：
 
 ```html
 <ul>
@@ -139,7 +139,7 @@ body {
     </tr>
     <tr>
       <th scope="row">標籤省略</th>
-      <td>無，起始和結束標籤均為必需的。</td>
+      <td>不允許，起始和結束標籤均為必需的。</td>
     </tr>
     <tr>
       <th scope="row">允許的父元素</th>
@@ -154,7 +154,7 @@ body {
       <td>
         <code
           ><a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/generic_role"
-            >通用</a
+            >generic</a
           ></code
         >
       </td>
@@ -164,8 +164,8 @@ body {
       <td>任何</td>
     </tr>
     <tr>
-      <th scope="row">DOM 接口</th>
-      <td>{{domxref("HTMLElement")}}</td>
+      <th scope="row">DOM 介面</th>
+        <td>{{domxref("HTMLElement")}}</td>
     </tr>
   </tbody>
 </table>
@@ -174,7 +174,7 @@ body {
 
 {{Specifications}}
 
-## 瀏覽器兼容性
+## 瀏覽器相容性
 
 {{Compat}}
 
@@ -182,6 +182,6 @@ body {
 
 - [HTML 中的內聯標記和雙向文本](https://www.w3.org/International/articles/inline-bidi-markup/)
 - [Unicode 雙向算法基礎知識](https://www.w3.org/International/articles/inline-bidi-markup/uba-basics)
-- {{Glossary("Localization")}}
+- {{Glossary("Localization", "在地化")}}
 - 相關 HTML 元素：{{HTMLElement("bdo")}}
 - 相關 CSS 屬性：{{cssxref("direction")}}、{{cssxref("unicode-bidi")}}

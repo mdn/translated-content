@@ -66,7 +66,7 @@ HTML 4 規範未為此元素指定事件；這可能是一個疏忽。
     </tr>
     <tr>
       <th scope="row">標籤省略</th>
-      <td>無，起始和結束標籤均為必需的。</td>
+      <td>不允許，起始和結束標籤均為必需的。</td>
     </tr>
     <tr>
       <th scope="row">允許的父元素</th>
@@ -81,7 +81,7 @@ HTML 4 規範未為此元素指定事件；這可能是一個疏忽。
       <td>
         <code
           ><a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/generic_role"
-            >通用</a
+            >generic</a
           ></code
         >
       </td>
@@ -91,7 +91,7 @@ HTML 4 規範未為此元素指定事件；這可能是一個疏忽。
       <td>任何</td>
     </tr>
     <tr>
-      <th scope="row">DOM 接口</th>
+      <th scope="row">DOM 介面</th>
       <td>
         {{domxref("HTMLElement")}} 在 Gecko 1.9.2（Firefox 4）及之前版本中，Firefox 使用 <code
           ><a href="/zh-TW/docs/Web/API/HTMLSpanElement"
@@ -107,7 +107,7 @@ HTML 4 規範未為此元素指定事件；這可能是一個疏忽。
 
 {{Specifications}}
 
-## 瀏覽器兼容性
+## 瀏覽器相容性
 
 {{Compat}}
 
