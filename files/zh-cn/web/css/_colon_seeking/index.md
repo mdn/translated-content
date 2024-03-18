@@ -10,7 +10,7 @@ slug: Web/CSS/:seeking
 **`:seeking`** 与 {{cssxref(":buffering")}} 不同，因为媒体元素当前不是在加载数据，而是在媒体资源中跳到一个新的位置。
 有关更多信息，请参考 [Media buffering, seeking, and time ranges](/zh-CN/docs/Web/Media/Audio_and_video_delivery/buffering_seeking_time_ranges#seekable) guide.
 
-## 用法
+## 语法
 
 ```css
 :seeking {
