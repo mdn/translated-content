@@ -7,8 +7,6 @@ l10n:
 
 {{HTMLSidebar}}
 
-## 概要
-
 [HTML](/zh-CN/docs/Web/HTML) 的 **`<style>`** 元素包含文档的样式信息或文档的部分内容。其中的 CSS 会应用于包含 `<style>` 元素的文档内容。
 
 {{EmbedInteractiveExample("pages/tabbed/style.html", "tabbed-standard")}}
