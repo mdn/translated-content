@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-{{jsxref("DataView")}} 인스턴스의 **`setUint32()`** 메서드는 숫자를 받아
+{{jsxref("DataView")}} 인스턴스의 **`setUint8()`** 메서드는 숫자를 받아
 이 `DataView`의 지정된 바이트 오프셋의 1 바이트의 공간에 8비트 부호 없는 정수로 저장합니다.
 
 {{EmbedInteractiveExample("pages/js/dataview-setuint8.html")}}
@@ -34,7 +34,7 @@ setUint8(byteOffset, value)
 - {{jsxref("RangeError")}}
   - : 뷰의 끝을 넘어 읽는 수도 있는 `byteOffset`이 설정된 경우 발생합니다.
 
-## 예쩨
+## 예제
 
 ### setUint8() 사용하기
 
