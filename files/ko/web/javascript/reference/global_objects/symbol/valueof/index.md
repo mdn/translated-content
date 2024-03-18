@@ -29,9 +29,9 @@ valueOf()
 
 {{jsxref("Symbol")}}의 `valueOf()` 메서드는 Symbol 객체의 원시 값을 Symbol 데이터 유형으로 반환합니다.
 
-JavaScript는 `valueOf()` 메서드를 호출하여 객체를 원시값으로 변환합니다. 사용자가 직접 `valueOf()` 메서드를 호출할 필요는 거의 없습니다. 원시값이 예상되는 객체를 만나면 JavaScript가 자동으로 호출합니다.
+JavaScript는 `valueOf()` 메서드를 호출하여 객체를 원시 값으로 변환합니다. 사용자가 직접 `valueOf()` 메서드를 호출할 필요는 거의 없습니다. 원시 값이 예상되는 객체를 만나면 JavaScript가 자동으로 호출합니다.
 
-## 예쩨
+## 예제
 
 ### valueOf() 사용하기
 
