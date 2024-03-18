@@ -5,7 +5,7 @@ slug: Web/HTML/Element/section
 
 {{HTMLSidebar}}
 
-**`<section>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表文檔中的通用獨立區段，它沒有更具體的語義元素來代表它。區段應始終具有標題，幾乎沒有例外。
+**`<section>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表文件中的通用獨立區段，它沒有更具體的語義元素來代表它。區段應始終具有標題，幾乎沒有例外。
 
 {{EmbedInteractiveExample("pages/tabbed/section.html", "tabbed-standard")}}
 
@@ -21,7 +21,7 @@ slug: Web/HTML/Element/section
 
 - 如果元素的內容代表作為獨立的、原子的內容單元，它作為獨立的部分進行合成是有意義的（例如，博客文章或評論，或者報紙文章），則 {{HTMLElement("article")}} 元素可能是更好的選擇。
 - 如果內容表示與主內容直接無關但又與其一起工作的有用的次要信息（如相關鏈接或作者簡介），請使用 {{HTMLElement("aside")}}。
-- 如果內容表示文檔的主內容區域，請使用 {{HTMLElement("main")}}。
+- 如果內容表示文件的主內容區域，請使用 {{HTMLElement("main")}}。
 - 如果你只將元素用作樣式包裝器，請改用 {{HTMLElement("div")}}。
 
 重申一下，每個 `<section>` 都應該是可識別的，通常通過在 `<section>` 元素的子元素中包含標題（{{HTMLElement("Heading_Elements", "h1")}} - {{HTMLElement("Heading_Elements", "h6")}} 元素）來實現。下面有一些可能看到沒有標題的 `<section>` 的示例。
@@ -56,9 +56,9 @@ slug: Web/HTML/Element/section
 
 {{EmbedLiveSample('之後')}}
 
-### 在不使用標題的情況下使用區段
+### 在不使用標題型內容的情況下使用章節
 
-在網絡應用程序/用戶界面部分，可能會看到 `<section>` 在傳統文檔結構中，將一個獨立的內容區段沒有標題並不是真的有意義。這樣的標題對所有讀者都有用，但對輔助技術（如屏幕閱讀器）的用戶特別有用，而且對於 SEO 也很有用。
+在網絡應用程序/用戶界面部分，可能會看到 `<section>` 在傳統文件結構中，將一個獨立的內容區段沒有標題並不是真的有意義。這樣的標題對所有讀者都有用，但對輔助技術（如屏幕閱讀器）的用戶特別有用，而且對於 SEO 也很有用。
 
 然而，考慮一下次要的導航機制。如果全局導航已經包裝在 `<nav>` 元素中，你可能可以將上一篇/下一篇菜單包裝在 `<section>` 中：
 
@@ -69,7 +69,7 @@ slug: Web/HTML/Element/section
 </section>
 ```
 
-或者你的應用程序的某種按鈕欄來控制應用程序？這可能不一定需要標題，但它仍然是文檔的一個獨立區段：
+或者你的應用程序的某種按鈕欄來控制應用程序？這可能不一定需要標題，但它仍然是文件的一個獨立區段：
 
 ```html
 <section>
@@ -82,7 +82,7 @@ slug: Web/HTML/Element/section
 
 #### 結果
 
-{{EmbedLiveSample('使用沒有標題的 section')}}
+{{EmbedLiveSample('在不使用標題型內容的情況下使用章節')}}
 
 根據內容的不同，包含標題也可能對 SEO 有好處，因此這是需要考慮的選擇。
 
@@ -106,7 +106,7 @@ slug: Web/HTML/Element/section
     </tr>
     <tr>
       <th scope="row">標籤省略</th>
-      <td>無，開始標籤和結束標籤都是必需的。</td>
+      <td>不允許，開始標籤和結束標籤都是必需的。</td>
     </tr>
     <tr>
       <th scope="row">允許的父元素</th>
@@ -152,6 +152,6 @@ slug: Web/HTML/Element/section
 ## 參見
 
 - 其他與區段相關的元素：{{HTMLElement("body")}}、{{HTMLElement("nav")}}、{{HTMLElement("article")}}、{{HTMLElement("aside")}}、{{HTMLElement("Heading_Elements", "h1")}}、{{HTMLElement("Heading_Elements", "h2")}}、{{HTMLElement("Heading_Elements", "h3")}}、{{HTMLElement("Heading_lements", "h4")}}、{{HTMLElement("Heading_Elements", "h5")}}、{{HTMLElement("Heading_Elements", "h6")}}、{{HTMLElement("hgroup")}}、{{HTMLElement("header")}}、{{HTMLElement("footer")}}、{{HTMLElement("address")}}
-- [使用 HTML 區段和大綱](/zh-TW/docs/Web/HTML/Element/Heading_Elements)
+- [使用 HTML 章節和大綱](/zh-TW/docs/Web/HTML/Element/Heading_Elements)
 - [ARIA: Region 角色](/zh-TW/docs/Web/Accessibility/ARIA/Roles/region_role)
 - [為什麼應該選擇 HTML5 article 而不是 section](https://www.smashingmagazine.com/2020/01/html5-article-section/)，作者：Bruce Lawson

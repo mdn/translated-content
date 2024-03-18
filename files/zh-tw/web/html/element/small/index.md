@@ -26,7 +26,7 @@ slug: Web/HTML/Element/small
 
 #### 結果
 
-{{EmbedLiveSample("基本用法")}}
+{{EmbedLiveSample("基本使用")}}
 
 ### CSS 替代方法
 
@@ -39,7 +39,7 @@ slug: Web/HTML/Element/small
 
 #### 結果
 
-{{EmbedLiveSample("CSS 替代")}}
+{{EmbedLiveSample("CSS 替代方法")}}
 
 ## 注意事項
 
@@ -69,7 +69,7 @@ slug: Web/HTML/Element/small
     </tr>
     <tr>
       <th scope="row">標籤省略</th>
-      <td>無；必須有開始標籤和結束標籤。</td>
+      <td>不允許，必須有開始標籤和結束標籤。</td>
     </tr>
     <tr>
       <th scope="row">允許的父元素</th>

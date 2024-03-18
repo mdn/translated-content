@@ -14,7 +14,7 @@ slug: Web/HTML/Element/map
 此元素包括[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
 
 - `name`
-  - : `name` 屬性給映射一個名稱，以便可以引用它。該屬性必須存在，並且必須具有非空值，沒有空格字符。`name` 屬性的值不能等於同一文檔中另一個 `<map>` 元素的 `name` 屬性的值。如果還指定了 [`id`](/zh-TW/docs/Web/HTML/Global_attributes#id) 屬性，則兩個屬性的值必須相同。
+  - : `name` 屬性給映射一個名稱，以便可以引用它。該屬性必須存在，並且必須具有非空值，沒有空格字符。`name` 屬性的值不能等於同一文件中另一個 `<map>` 元素的 `name` 屬性的值。如果還指定了 [`id`](/zh-TW/docs/Web/HTML/Global_attributes#id) 屬性，則兩個屬性的值必須相同。
 
 ## 範例
 
@@ -78,7 +78,7 @@ slug: Web/HTML/Element/map
     </tr>
     <tr>
       <th scope="row">標籤省略</th>
-      <td>無；必須有開始標籤和結束標籤。</td>
+      <td>不允許，必須有開始標籤和結束標籤。</td>
     </tr>
     <tr>
       <th scope="row">允許的父元素</th>
@@ -98,7 +98,7 @@ slug: Web/HTML/Element/map
     </tr>
     <tr>
       <th scope="row">允許的 ARIA 角色</th>
-      <td>不允許 <code>role</code></td>
+      <td>沒有允許的 <code>role</code></td>
     </tr>
     <tr>
       <th scope="row">DOM 介面</th>
