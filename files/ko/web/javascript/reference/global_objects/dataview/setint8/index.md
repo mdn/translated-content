@@ -17,7 +17,7 @@ l10n:
 setInt8(byteOffset, value)
 ```
 
-### 매개 변수
+### 매개변수
 
 - `byteOffset`
   - : 데이터를 저장할 데이터 뷰의 시작점으로부터의 바이트 단위의 오프셋.
