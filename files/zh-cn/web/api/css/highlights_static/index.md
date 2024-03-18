@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSSOM")}}
 
-{{domxref("CSS")}} 接口的静态、只读属性 **`highlights`** 提供对 `HighlightRegistry` 的访问，用于使用 {{domxref("css_custom_highlight_api", "CSS Custom Highlight API", "", "nocode")}} 为任意文本范围添加样式。
+{{domxref("CSS")}} 接口的静态只读属性 **`highlights`** 提供访问 `HighlightRegistry` 的能力，通过使用 {{domxref("css_custom_highlight_api", "CSS 自定义高亮 API", "", "nocode")}} 为任意文本范围添加样式。
 
 ## 值
 
@@ -50,5 +50,5 @@ CSS.highlights.set("my-custom-highlight", myCustomHighlight);
 
 ## 参见
 
-- {{domxref("css_custom_highlight_api", "CSS Custom Highlight API", "", "nocode")}}
-- [CSS Custom Highlight API：网页文本范围高亮的未来](https://css-tricks.com/css-custom-highlight-api-early-look/)
+- {{domxref("css_custom_highlight_api", "CSS 自定义高亮 API", "", "nocode")}}
+- [CSS 自定义高亮 API：网页文本范围高亮的未来](https://css-tricks.com/css-custom-highlight-api-early-look/)
