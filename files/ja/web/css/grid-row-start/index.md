@@ -1,11 +1,13 @@
 ---
 title: grid-row-start
 slug: Web/CSS/grid-row-start
+l10n:
+  sourceCommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
 ---
 
 {{CSSRef}}
 
-**`grid-row-start`** は CSS のプロパティで、グリッドの配置に線または区間を使用したり、使用しなかったりして (自動)、グリッド行内のグリッドアイテムの先頭位置、すなわち{{Glossary("grid areas", "グリッド領域")}}のインラインの先頭側の端を指定します。
+**`grid-row-start`** は CSS のプロパティで、グリッド行の中におけるグリッドアイテムの先頭の位置を指定します。グリッド配置に線や区間を指定したり、何も指定しなかったり（自動）することで、{{glossary("grid areas", "グリッド領域")}}のインライン方向の先頭の端を指定します。
 
 {{EmbedInteractiveExample("pages/css/grid-row-start.html")}}
 
@@ -31,6 +33,7 @@ grid-row-start: 5 somegridarea span;
 grid-row-start: inherit;
 grid-row-start: initial;
 grid-row-start: revert;
+grid-row-start: revert-layer;
 grid-row-start: unset;
 ```
 
@@ -148,7 +151,7 @@ grid-row-start: unset;
 
 #### 結果
 
-{{ EmbedLiveSample('Setting_row_start_for_a_grid_item', '230', '420') }}
+{{ EmbedLiveSample('グリッドアイテムの行の開始位置の設定', '230', '420') }}
 
 ## 仕様書
 
