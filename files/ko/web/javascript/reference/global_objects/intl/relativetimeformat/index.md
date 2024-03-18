@@ -21,6 +21,15 @@ l10n:
 - {{jsxref("Intl/RelativeTimeFormat/supportedLocalesOf", "Intl.RelativeTimeFormat.supportedLocalesOf()")}}
   - : 실패시 런타임의 기본 로케일로 돌아가지 않아도 되는 로케일의 배열을 반환합니다. 지정된 로케일 중, 실행시의 디폴트의 로케일에 폴백 하지 않고 대응되는 것을 배열에 넣어 돌려줍니다.
 
+## 인스턴스 속성
+
+아래 속성은 `Intl.RelativeTimeFormat.prototype`에 정의되어 있으며 모든 `Intl.RelativeTimeFormat` 인스턴스가 공유합니다.
+
+- {{jsxref("Object/constructor", "Intl.RelativeTimeFormat.prototype.constructor")}}
+  - : 인스턴스 객체를 생성한 생성자 함수입니다. `Intl.RelativeTimeFormat` 인스턴스의 경우, 초기 값은 {{jsxref("Intl/RelativeTimeFormat/RelativeTimeFormat", "Intl.RelativeTimeFormat")}} 생성자입니다.
+- `Intl.RelativeTimeFormat.prototype[@@toStringTag]`
+  - : [`@@toStringTag`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 속성의 초기 값은 문자열 `"Intl.RelativeTimeFormat"`입니다. 이 속성은 {{jsxref("Object.prototype.toString()")}}에서 사용됩니다.
+
 ## 인스턴스 메서드
 
 - {{jsxref("Intl/RelativeTimeFormat/format", "Intl.RelativeTimeFormat.prototype.format()")}}
