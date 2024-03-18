@@ -13,9 +13,9 @@ l10n:
 
 `<style>` 元素必须包含在文档的 {{htmlelement("head")}} 内。一般来说，最好将样式放在外部样式表中，然后使用 {{htmlelement("link")}} 元素应用它们。
 
-如果在文档中包含多个 `<style>` 和 `<link>` 元素，它们将按照在文档中包含的顺序应用到 DOM，请确保按照正确的顺序包含它们，以避免出现意想不到的级联问题。
+如果在文档中包含多个 `<style>` 和 `<link>` 元素，它们将按照在文档中包含的顺序应用到 DOM，请确保按照正确的顺序包含它们，以避免出现意想不到的层叠问题。
 
-与 `<link>` 元素的方式相同，`<style>` 元素可以包含包含[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)的 `media` 属性，这样就可以根据视口宽度等媒体特性，有选择性地将内部样式表应用到文档中。
+与 `<link>` 元素的方式相同，`<style>` 元素可以包含用于[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)的 `media` 属性，这样就可以根据视口宽度等媒体特性，有选择性地将内部样式表应用到文档中。
 
 ## 属性
 
@@ -25,13 +25,13 @@ l10n:
   - : 该属性明确指出在获取关键子资源时应阻止某些操作。通常，[`@import`](/zh-CN/docs/Web/CSS/@import) 样式表被视为关键子资源，而 [`background-image`](/zh-CN/docs/Web/CSS/background-image) 和字体则不被视为关键子资源。
     - `render`：屏幕上的内容渲染被阻断。
 - `media`
-  - : 该属性规定该样式适用于哪个媒体。属性的取值为 [CSS 媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)，如果属性缺失，则默认为 `all`。
+  - : 该属性规定该样式适用于哪个媒体。属性的取值为[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)，如果属性缺失，则默认为 `all`。
 - `nonce`
-  - : 用于允许在 [style-src Content-Security-Policy](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/style-src) 中使用内联样式的加密 nonce（只使用一次的数字）。每次传输策略时，服务器都必须生成一个唯一的 nonce 值。提供一个无法猜测的 nonce 值至关重要，否则绕过资源策略将变得微不足道。
+  - : 用于允许在 [style-src Content-Security-Policy](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/style-src) 中使用内联样式的密码学 nonce（只使用一次的数字）。每次传输策略时，服务器都必须生成一个唯一的 nonce 值。提供一个无法猜测的 nonce 值至关重要，否则绕过资源策略将变得微不足道。
 - `title`
   - : 该属性指定[替代样式表](/zh-CN/docs/Web/CSS/Alternative_style_sheets)集。
 
-### 已废弃属性
+### 已弃用的属性
 
 - `type` {{deprecated_inline}}
   - : 不应提供该属性：如果提供，唯一允许的值是空字符串或不区分大小写匹配的 `text/css`。
