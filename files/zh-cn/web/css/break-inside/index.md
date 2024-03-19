@@ -36,7 +36,7 @@ break-inside: unset;
 1. 如果这三个中断属性的值有一个是*强制中断值*（`always`、`left`、`right`、`page`、`column` 或 `region`），则该属性具有优先权。如果其中有多个这样的中断，则使用流中最后出现的元素的值。因此，`break-before` 值优先于 `break-after` 值，而后者又优先于 `break-inside` 值。
 2. 如果三个相关值中的任何一个是*避免中断值*（`avoid`、`avoid-page`、`avoid-region` 或 `avoid-column`），则不在该点应用此类中断。
 
-一旦应用了强制中断，如果需要，可以添加软中断，但不能在元素边界上添加相应的 `avoid` 值。
+一旦应用了强制中断，如果需要，可以添加软中断，除了相应值解析为 `avoid` 的元素边界。
 
 {{cssinfo}}
 
@@ -76,7 +76,7 @@ break-inside: unset;
 
 在下面的示例中，我们有一个容器，其中包含一个横跨所有栏的 `<h1>`（使用 `column-span: all` 实现），以及在多栏中使用 `column-width: 200px` 布局的一系列段落。我们还有一个包含图像和标题的 `<figure>`。
 
-默认情况下，图像和其标题之间可能会发生中断，这不是我们想要的。为了避免这种情况，我们在 `<figure>` 上设置了 `break-inside: avoid`，这样它们就会始终在一起。
+默认情况下，图像和其标题之间可能会发生中断，这不是我们想要的。为了避免这种情况，我们在 `<figure>` 上设置了 `break-inside: avoid`，这样它们就会始终保持在一起。
 
 #### HTML
 
