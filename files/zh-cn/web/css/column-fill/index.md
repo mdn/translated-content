@@ -25,7 +25,7 @@ column-fill: revert-layer;
 column-fill: unset;
 ```
 
-`column-fill` 属性可指定为下列关键字值之一。 初始值为 `balance` ，这样内容就会在各栏之间中保持平衡。
+`column-fill` 属性可指定为下列关键字值之一。初始值为 `balance` ，这样内容就会在各栏之间中保持平衡。
 
 ### 取值
 
@@ -92,9 +92,9 @@ p.fill-balance {
 
 {{Compat}}
 
-> **警告:** 由于规范中的一些问题尚未解决， `column-fill` 在不同浏览器之间存在一些交互操作性问题和错误。
+> **警告：** 由于规范中的一些问题尚未解决， `column-fill` 在不同浏览器之间存在一些交互操作性问题和错误。
 >
-> 特别是在使用 `column-fill: auto` 按顺序填充列时，Chrome浏览器只有在多列容器具有区块尺寸（例如水平书写模式下的高度）时才会参考此属性。而Firefox浏览器则会始终查询该属性，因此在没有尺寸的情况下，会在第一列填充所有内容。
+> 特别是在使用 `column-fill: auto` 按顺序填充列时，Chrome 浏览器只有在多列容器具有区块尺寸（例如水平书写模式下的高度）时才会参考此属性。而 Firefox 浏览器则会始终查询该属性，因此在没有尺寸的情况下，会在第一列填充所有内容。
 ## 参见
 
 - [多列布局](/zh-CN/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
