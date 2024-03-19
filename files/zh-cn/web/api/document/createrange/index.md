@@ -10,15 +10,21 @@ slug: Web/API/Document/createRange
 ## 语法
 
 ```plain
-range = document.createRange();
+createRange();
 ```
 
-`range` 是一个 {{domxref("Range")}} 对象。
+## 参数
 
-## 例子
+无
+
+## 返回值
+
+一个 {{domxref("Range")}} 对象。
+
+## 示例
 
 ```js
-var range = document.createRange();
+const range = document.createRange();
 
 range.setStart(startNode, startOffset);
 range.setEnd(endNode, endOffset);
@@ -26,8 +32,12 @@ range.setEnd(endNode, endOffset);
 
 ## 注意
 
-一旦一个 Range 对象被建立，在使用他的大多数方法之前需要去设置他的临界点。
+一旦一个 Range 对象被建立，在使用它的大多数方法之前需要设置它的临界点。
 
-## Specification
+## 规范
 
-- [DOM Level 2 Range: DocumentRange.createRange](http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-DocumentRange-method-createRange)
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
