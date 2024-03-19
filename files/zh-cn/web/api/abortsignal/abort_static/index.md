@@ -1,6 +1,9 @@
 ---
-title: AbortSignal.abort()
+title: "AbortSignal: abort() 静态方法"
+short-title: abort()
 slug: Web/API/AbortSignal/abort_static
+page-type: web-api-static-method
+browser-compat: api.AbortSignal.abort_static
 ---
 
 {{APIRef("DOM")}}
@@ -17,7 +20,7 @@ return controller.signal;
 
 例如，将它传递给一个 fetch 方法，以运行它的中止逻辑（也就是说，可能其代码的执行顺序是即使预期的 fetch 操作还没有启动，也应该运行中止逻辑）。
 
-> **备注：** 该方法在目的上类似于 {{JSxRef("Promise.reject")}}。
+> **备注：** 该方法类似于 {{JSxRef("Promise.reject")}} 的作用。
 
 ## 语法
 
@@ -29,11 +32,11 @@ AbortSignal.abort(reason)
 ### 参数
 
 - `reason`
-  - : 操作被中止的原因，可以是任意的 JavaScript 值。如果没有指定原因，则默认设置为"AbortError"{{domxref("DOMException")}}。
+  - : 操作被中止的原因，可以是任意的 JavaScript 值。如果没有指定原因，则默认设置为 “AbortError” {{domxref("DOMException")}}。
 
 ### 返回值
 
-一个 {{domxref("AbortSignal.aborted")}} 属性设置为 `true` 的 `AbortSignal` 实例，并且 {{domxref("AbortSignal.reason")}} 设置为指定的或者默认的原因值。
+返回一个 {{domxref("AbortSignal.aborted")}} 属性设置为 `true` 的 `AbortSignal` 实例，并且 {{domxref("AbortSignal.reason")}} 设置为指定的或者默认的原因值。
 
 ## 参数
 

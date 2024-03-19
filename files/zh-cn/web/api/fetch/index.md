@@ -1,17 +1,21 @@
 ---
-title: fetch()
+title: 全局函数 fetch()
+short-title: fetch()
 slug: Web/API/fetch
+page-type: web-api-global-function
+browser-compat: api.fetch
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
-全局的 **`fetch()`** 方法用于发起获取资源的请求。它返回一个 promise，这个 promise 会在请求响应后被 resolve，并传回 {{domxref("Response")}} 对象。
+全局 **`fetch()`** 方法用于发起获取资源的请求，它会返回一个 promise，该 promise 会在请求响应后 fullfilled。
 
-{{domxref("Window")}} 和 {{domxref("WorkerGlobalScope")}} 都实现了 WorkerOrGlobalScope。——这意味着基本在任何场景下只要你想获取资源，都可以使用 位于 WorkerOrGlobalScope 中的 `fetch()` 方法。
+该 promise 会 resolve 一个表示请求响应的 {{domxref("Response")}} 对象。
 
-当遇到网络错误时，{{domxref("fetch()")}} 返回的 promise 会被 reject，并传回 {{jsxref("TypeError")}}，虽然这也可能因为权限或其他问题导致。成功的 fetch() 检查不仅要包括 promise 被 resolve，还要包括 {{domxref("Response.ok")}} 属性为 true。HTTP 404 状态并不被认为是网络错误。
+当遇到网络错误（因为权限或其他类似的问题）时，{{domxref("fetch()")}} 返回的 promise 才会被 reject。
+{{domxref("fetch()")}} 的 promise **不会**因为 HTTP 错误而 reject（比如 `404`），其在 `then()` 里必须检查 {{domxref("Response.ok")}} 和/或 {{domxref("Response.status")}} 属性。
 
-`fetch()` 方法由 [Content Security Policy](/zh-CN/docs/Security/CSP/CSP_policy_directives) 的 `connect-src`指令控制，而不是它请求的资源。
+`fetch()` 方法由 [Content Security Policy](/zh-CN/docs/Security/CSP/CSP_policy_directives) 的 `connect-src` 指令控制，而不是它请求的资源。
 
 > **备注：** {{domxref("fetch()")}} 方法的参数与 {{domxref("Request.Request","Request()")}} 构造器是一样的。
 
