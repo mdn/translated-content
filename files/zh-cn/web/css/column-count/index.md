@@ -76,7 +76,7 @@ column-count: unset;
 
 ## 参见
 
-- {{CSSXref("column-width")}} ， {{CSSXref("columns")}} 速记
-- {{CSSXref("column-rule-color")}} ， {{CSSXref("column-rule-style")}} ， {{CSSXref("column-rule-width")}} ， {{CSSXref("column-rule")}} 速记
+- {{CSSXref("column-width")}} ， {{CSSXref("columns")}} 简写属性
+- {{CSSXref("column-rule-color")}} ， {{CSSXref("column-rule-style")}} ， {{CSSXref("column-rule-width")}} ， {{CSSXref("column-rule")}} 简写属性
 - [多列布局](/zh-CN/docs/Learn/CSS/CSS_layout/Multiple-column_Layout) （学习多列布局）
 - [多栏式布局的基础概念](/zh-CN/docs/Web/CSS/CSS_multicol_layout/Basic_concepts)
