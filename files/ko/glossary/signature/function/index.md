@@ -7,7 +7,7 @@ slug: Glossary/Signature/Function
 
 **함수 시그니처**(_타입_ 시그니처, _메소드_ 시그니처)는 {{Glossary("Function", "functions")}} 그리고 {{Glossary("Method", "methods")}}의 입력과 출력을 정의합니다.
 
-시그니처는 다음을 포함합니다:
+시그니처는 다음을 포함합니다.
 
 - {{Glossary("Parameter", "parameters")}}와 그들의 {{Glossary("Type", "types")}}
 - 반환값과 타입
@@ -18,7 +18,7 @@ slug: Glossary/Signature/Function
 
 ### Signatures in JavaScript
 
-{{Glossary("JavaScript")}}는 _약한 타입_ 혹은 _동적_ 언어입니다. 이것은 여러분이 변수의 타입을 미리 선언하지 않아도 됨을 의미합니다. 타입은 프로그램이 실행되는 동안 자동으로 결정됩니다. 하지만 JavaScript에서의 시그니처는 여전히 여러분에게 메소드에 대한 몇 가지 정보를 제공해줄 수 있습니다:
+{{Glossary("JavaScript")}}는 _약한 타입_ 혹은 _동적_ 언어입니다. 이것은 여러분이 변수의 타입을 미리 선언하지 않아도 됨을 의미합니다. 타입은 프로그램이 실행되는 동안 자동으로 결정됩니다. 하지만 JavaScript에서의 시그니처는 여전히 여러분에게 메소드에 대한 몇 가지 정보를 제공해줄 수 있습니다.
 
 ```js
 MyObject.prototype.myFunction(value);
