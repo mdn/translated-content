@@ -5,9 +5,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/parse
 
 {{JSRef}}
 
-Метод **`Date.parse()`** разбирает строковое представление даты и возвращает количество миллисекунд, прошедших с 1 января 1970 года 00:00:00 по UTC.
+Статический метод **`Date.parse()`** разбирает строковое представление даты и возвращает [временную метку](/ru/docs/Web/JavaScript/Reference/Global_Objects/Date#описание).
 
-В явном виде поддерживается только формат [date time string](/ru/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format). Другие форматы определяются реализацией и могут работать не во всех браузерах. Если необходимо обеспечить работу с большим количеством различных форматов, можно воспользоваться библиотекой.
+В явном виде поддерживается только формат [date time string](/ru/docs/Web/JavaScript/Reference/Global_Objects/Date#описание). Другие форматы определяются реализацией и могут работать не во всех браузерах. Если необходимо обеспечить работу с большим количеством различных форматов, можно воспользоваться библиотекой.
 
 {{EmbedInteractiveExample("pages/js/date-parse.html")}}
 
@@ -20,11 +20,11 @@ Date.parse(dateString)
 ### Параметры
 
 - `dateString`
-  - : Строка в формате [date time string](/ru/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format). См. указанный источник для получения информации об использовании различных форматов.
+  - : Строка в формате [date time string](/ru/docs/Web/JavaScript/Reference/Global_Objects/Date#описание). См. указанный источник для получения информации об использовании различных форматов.
 
 ### Возвращаемое значение
 
-Число, представляющее [временную метку](/ru/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date) (англ. _timestamp_) заданной даты. Если `dateString` не удается преобразовать в правильную дату, то возвращается {{jsxref("NaN")}}.
+Число, представляющее [временную метку](/ru/docs/Web/JavaScript/Reference/Global_Objects/Date#описание) (англ. _timestamp_) заданной даты. Если `dateString` не удается преобразовать в правильную дату, то возвращается {{jsxref("NaN")}}.
 
 ## Описание
 
