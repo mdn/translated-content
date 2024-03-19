@@ -37,11 +37,11 @@ body {
 
 #### 結果
 
-{{EmbedLiveSample("Using_ruby_annotations", 600, 60)}}
+{{EmbedLiveSample("使用 ruby 注釋", 600, 60)}}
 
 請參見 {{HTMLElement("ruby")}} 元素的文章以獲取更多範例。
 
-### 沒有 ruby 支援
+### 不支援 ruby 
 
 如果你的瀏覽器不支援 ruby 注釋，結果將如下所示：
 
@@ -55,7 +55,7 @@ body {
 }
 ```
 
-{{EmbedLiveSample("Without_ruby_support", 600, 60)}}
+{{EmbedLiveSample("不支援 ruby", 600, 60)}}
 
 ## 技術摘要
 

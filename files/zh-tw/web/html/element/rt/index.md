@@ -33,7 +33,7 @@ body {
 
 #### 結果
 
-{{EmbedLiveSample("Using_ruby_annotations", 600, 60)}}
+{{EmbedLiveSample("使用 ruby 注釋", 600, 60)}}
 
 ## 技術摘要
 

@@ -33,7 +33,7 @@ slug: Web/HTML/Element/rb
 
 #### 結果
 
-{{EmbedLiveSample("Using_rb", "100%", 60)}}
+{{EmbedLiveSample("使用 rb", "100%", 60)}}
 
 ### 分開注釋
 
@@ -47,7 +47,7 @@ slug: Web/HTML/Element/rb
 
 #### 結果
 
-{{EmbedLiveSample('Separate annotations')}}
+{{EmbedLiveSample('分開注釋')}}
 
 請參見 {{HTMLElement("ruby")}} 元素的文章以獲取更多範例。
 
