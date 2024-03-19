@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-{{jsxref("Object")}} 객체의 메서드인 **`toString()`** 은 해당 object를 표현하는 문자열을 반환합니다. 이 메서드는 사용자가 [타입 강제 변환](/ko/docs/Web/JavaScript/Data_structures#type_coercion)을 통해 파생된 객체에서 재정의할 수 있습니다.
+{{jsxref("Object")}} 객체의 메서드인 **`toString()`** 은 해당 object를 표현하는 문자열을 반환합니다. 이 메서드는 사용자가 [타입 강제 변환](/ko/docs/Web/JavaScript/Data_structures#타입_강제_변환)을 통해 파생된 객체에서 재정의할 수 있습니다.
 
 {{EmbedInteractiveExample("pages/js/object-prototype-tostring.html")}}
 
@@ -27,9 +27,9 @@ toString();
 
 ## 설명
 
-자바스크립트는 [객체를 원시 값으로 변환](/ko/docs/Web/JavaScript/Data_structures#type_coercion)하기 위해 `toString` 메서드를 호출합니다. 당신은 `toString` 메서드를 직접 부를 일이 거의 없습니다; 자바스크립트는 원시 값이 있어야 할 곳에 객체를 마주치면 자동으로 해당 메서드를 호출합니다.
+자바스크립트는 [객체를 원시 값으로 변환](/ko/docs/Web/JavaScript/Data_structures#타입_강제_변환)하기 위해 `toString` 메서드를 호출합니다. 당신은 `toString` 메서드를 직접 부를 일이 거의 없습니다. 자바스크립트는 원시 값이 있어야 할 곳에서 객체를 마주치면 자동으로 해당 메서드를 호출합니다.
 
-이 메서드는 [문자열 변환](/ko/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion)에 의해 우선적으로 호출되지만, [숫자 변환](/ko/docs/Web/JavaScript/Data_structures#numeric_coercion)과 [원시 자료형 변환](/ko/docs/Web/JavaScript/Data_structures#primitive_coercion)은 `valueOf()`를 우선적으로 호출합니다. 그러나 기본 [`valueOf()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf) 메서드는 객체를 반환하므로, 그 객체가 `valueOf()`를 재정의하지 않았다면 보통 `toString()` 메서드가 마지막에 호출됩니다. 예를들어, `+[1]`은 `1`을 반환하는데, 그 이유는 `+[1]`의 [`toString()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/toString) 메서드가 `"1"` 을 반환하고 이 값이 숫자로 변환되기 때문입니다.
+이 메서드는 [문자열 변환](/ko/docs/Web/JavaScript/Reference/Global_Objects/String#문자열_변환)에 의해 우선적으로 호출되지만, [숫자 변환](/ko/docs/Web/JavaScript/Data_structures#숫자_강제_변환)과 [원시 타입 변환](/ko/docs/Web/JavaScript/Data_structures#원시_타입_강제_변환)은 `valueOf()`를 우선적으로 호출합니다. 그러나 기본 [`valueOf()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf) 메서드는 객체를 반환하므로, 그 객체가 `valueOf()`를 재정의하지 않았다면 보통 `toString()` 메서드가 마지막에 호출됩니다. 예를들어, `+[1]`은 `1`을 반환하는데, 그 이유는 `+[1]`의 [`toString()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/toString) 메서드가 `"1"` 을 반환하고 이 값이 숫자로 변환되기 때문입니다.
 
 `Object.prototype`를 상속받는 모든 객체([`null`-프로토타입 객체](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects)를 제외한)들은 `toString()` 메서드를 상속받습니다. 커스텀 객체를 만들 때 `toString()`를 재정의할 수 있고, 재정의된 메서드를 호출하여 커스텀 객체를 문자열 값으로 변환할 수 있습니다. 또 다른방법으로는 [`@@toPrimitive`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) 메서드를 추가하여 타입 변환 과정을 넘어서는 조정을 할 수 있고, 이는 타입 변환 과정에서 항상 `valueOf` 또는 `toString` 보다 우선시됩니다.
 
@@ -42,7 +42,7 @@ arr.toString(); // "1,2,3"
 Object.prototype.toString.call(arr); // "[object Array]"
 ```
 
-`Object.prototype.toString()`은 `"[object Type]"`을 반환하는데, 여기서 `Type`은 객체의 타입입니다. 만약 객체가 문자열 값인 [`Symbol.toStringTag`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 특성을 가지고 있다면 그 특성이 `Type`이 됩니다. [`Map`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Map) 과 [`Symbol`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol)을 포함한 많은 내장 객체들이 `Symbol.toStringTag`를 가지고 있습니다. ES6 이전에 생성된 몇몇 객체들은 `Symbol.toStringTag`가 없지만 특별한 태그를 가지고 있습니다. 이는 아래와 같습니다(아래에 제공된 타입 이름과 동일한 태그를 가지고 있습니다):
+`Object.prototype.toString()`은 `"[object Type]"`을 반환하는데, 여기서 `Type`은 객체의 타입입니다. 만약 객체가 문자열 값인 [`Symbol.toStringTag`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 특성을 가지고 있다면 그 값이 `Type`이 됩니다. [`Map`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Map) 과 [`Symbol`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol)을 포함한 많은 내장 객체들이 `Symbol.toStringTag`를 가지고 있습니다. ES6 이전에 생성된 몇몇 객체들은 `Symbol.toStringTag`가 없지만 특별한 태그를 가지고 있습니다. 이는 아래와 같습니다(아래에 제공된 타입 이름과 동일한 태그를 가지고 있습니다).
 
 - [`Array`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array)
 - [`Function`](/ko/docs/Web/JavaScript/Reference/Functions) ([`typeof`](/ko/docs/Web/JavaScript/Reference/Operators/typeof)가 `"function"`으로 반환되는 모든 것)
@@ -53,7 +53,7 @@ Object.prototype.toString.call(arr); // "[object Array]"
 - [`Date`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Date)
 - [`RegExp`](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
 
-[`arguments`](/ko/docs/Web/JavaScript/Reference/Functions/arguments) 객체는 `"[object Arguments]"`를 반환합니다. `Symbol.toStringTag`가 재정의 되지 않은 사용자-정의된 클래스들을 포함한 다른 객체들은 `"[object Object]"`를 반환할 것 입니다.
+[`arguments`](/ko/docs/Web/JavaScript/Reference/Functions/arguments) 객체는 `"[object Arguments]"`를 반환합니다. `Symbol.toStringTag`가 재정의되지 않은 사용자 정의된 클래스들을 포함한 다른 객체들은 `"[object Object]"`를 반환할 것입니다.
 
 `Object.prototype.toString()`이 [`null`](/ko/docs/Web/JavaScript/Reference/Operators/null) 과 {{jsxref("undefined")}}에서 호출되면 각각 `[object Null]` 과 `[object Undefined]`를 반환합니다.
 
