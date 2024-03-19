@@ -1,6 +1,8 @@
 ---
 title: Date.parse()
 slug: Web/JavaScript/Reference/Global_Objects/Date/parse
+l10n:
+  sourceCommit: bcad8171fa4acb38d2b9069fdff134da1d36c7ee
 ---
 
 {{JSRef}}
