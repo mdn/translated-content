@@ -58,7 +58,6 @@ column-count: unset;
 
 ```css
 .content-box {
-  border: 10px solid #000000;
   column-count: 3;
 }
 ```
