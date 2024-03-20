@@ -61,7 +61,7 @@ Promise<Response> fetch(input[, init]);
 
       - : 任意你想要加到请求上的头部，可以是 {{domxref("Headers")}} 对象或者带有{{jsxref("String", "字符串")}}值的对象字面量。注意[有些头部是被禁止的](/zh-CN/docs/Glossary/Forbidden_header_name)。
 
-        > **注意：**请求里可能会有 [`Authorization`](/zh-CN/docs/Web/HTTP/Headers/Authorization) HTTP 头，但是如果请求跨源重定向的话就会被删除。
+        > **备注：** 请求中可能会有 [`Authorization`](/zh-CN/docs/Web/HTTP/Headers/Authorization) HTTP 标头，但是如果请求跨源重定向的话就会被删除。
 
     - `integrity`
 
