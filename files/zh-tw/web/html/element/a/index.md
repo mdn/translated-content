@@ -155,7 +155,7 @@ a {
 
 {{EmbedLiveSample('鏈接到同一頁面上的元素')}}
 
-> **備註：** 您可以使用 `href="#top"` 或空片段 (`href="#"`) 來鏈接到當前頁面的頂部，[如 HTML 規範中所定義](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier)。
+> **備註：** 你可以使用 `href="#top"` 或空片段 (`href="#"`) 來鏈接到當前頁面的頂部，[如 HTML 規範中所定義](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier)。
 
 ### 鏈接到電子郵件地址
 
@@ -193,7 +193,7 @@ a {
 
 ### 使用 download 屬性將 \<canvas> 另存為 PNG
 
-要將 {{HTMLElement("canvas")}} 元素的內容保存為圖像，您可以創建一個鏈接，其中 `href` 是使用 JavaScript 創建的 `data:` URL 的畫布數據，而 `download` 屬性提供下載的 PNG 文件的文件名：
+要將 {{HTMLElement("canvas")}} 元素的內容保存為圖像，你可以創建一個鏈接，其中 `href` 是使用 JavaScript 創建的 `data:` URL 的畫布數據，而 `download` 屬性提供下載的 PNG 文件的文件名：
 
 #### 具有處存鏈接的範例繪畫應用程式
 
@@ -331,7 +331,7 @@ document
 <a href="2017-annual-report.ppt">2017 Annual Report (PowerPoint)</a>
 ```
 
-如果使用圖標來表示鏈接行為，請確保它具有 [*alt 文本*](/zh-TW/docs/Web/HTML/Element/img#alt)：
+如果使用圖標來表示鏈接行為，請確保它具有 [_alt 文本_](/zh-TW/docs/Web/HTML/Element/img#alt)：
 
 ```html
 <a target="_blank" href="https://www.wikipedia.org">
