@@ -12,13 +12,13 @@ slug: Web/CSS/column-count
 ## 语法
 
 ```css
-/* Keyword value */
+/* 关键字值 */
 column-count: auto;
 
-/* <integer> value */
+/* <integer> 值 */
 column-count: 3;
 
-/* Global values */
+/* 全局值 */
 column-count: inherit;
 column-count: initial;
 column-count: revert;
@@ -31,7 +31,7 @@ column-count: unset;
 - `auto`
   - : 用来表示列的数量由其他 CSS 属性指定，例如 {{cssxref("column-width")}} 。
 - {{cssxref("&lt;integer&gt;")}}
-  - : 是个严格的正整型 {{cssxref("&lt;integer&gt;")}} ，用来描述元素内容被划分的理想列数。假如 {{cssxref("column-width")}} 也被设置为非零值，此参数仅表示所允许的最大列数。
+  - : 是个严格的正整型 {{cssxref("&lt;integer&gt;")}}，用来描述元素内容被划分的理想列数。假如 {{cssxref("column-width")}} 也被设置为非零值，此参数仅表示所允许的最大列数。
 
 ## 形式定义
 
@@ -49,8 +49,8 @@ column-count: unset;
 
 ```html
 <p class="content-box">
-  This is a bunch of text split into three columns using the CSS `column-count`
-  property. The text is equally distributed over the columns.
+  这是一段使用 CSS
+  <code>column-count</code> 属性分割成三列的文字。文字平均分布在各栏中。
 </p>
 ```
 
@@ -64,7 +64,7 @@ column-count: unset;
 
 #### 结果
 
-{{EmbedLiveSample('Splitting_a_paragraph_across_three_columns', 'auto', 120)}}
+{{EmbedLiveSample('将段落拆分为三列', 'auto', 120)}}
 
 ## 规范
 
@@ -76,7 +76,7 @@ column-count: unset;
 
 ## 参见
 
-- {{CSSXref("column-width")}} ， {{CSSXref("columns")}} 简写属性
-- {{CSSXref("column-rule-color")}} ， {{CSSXref("column-rule-style")}} ， {{CSSXref("column-rule-width")}} ， {{CSSXref("column-rule")}} 简写属性
+- {{CSSXref("column-width")}}、{{CSSXref("columns")}} 简写属性
+- {{CSSXref("column-rule-color")}}、{{CSSXref("column-rule-style")}}、{{CSSXref("column-rule-width")}}、{{CSSXref("column-rule")}} 简写属性
 - [多列布局](/zh-CN/docs/Learn/CSS/CSS_layout/Multiple-column_Layout) （学习多列布局属性）
 - [多栏式布局的基础概念](/zh-CN/docs/Web/CSS/CSS_multicol_layout/Basic_concepts)
