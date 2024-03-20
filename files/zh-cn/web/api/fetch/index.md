@@ -101,8 +101,7 @@ Promise<Response> fetch(input[, init]);
       - : 一个指定请求的引用者的字符串。这可以是同源 URL、`about:client` 或空字符串。
 
     - `referrerPolicy`
-      - : 指定请求所使用的 [referrer policy](https://w3c.github.io/webappsec-referrer-policy/#referrer-policies)。
-        可能是以下其中之一 `no-referrer`、`no-referrer-when-downgrade`、`same-origin`、`origin`、`strict-origin`、`origin-when-cross-origin`、`strict-origin-when-cross-origin` 或者 `unsafe-url`。
+      - : 指定请求所使用的 [referrer policy](https://w3c.github.io/webappsec-referrer-policy/#referrer-policies)。可能是以下其中之一 `no-referrer`、`no-referrer-when-downgrade`、`same-origin`、`origin`、`strict-origin`、`origin-when-cross-origin`、`strict-origin-when-cross-origin` 或者 `unsafe-url`。
     - `signal`
       - : 一个 {{domxref("AbortSignal")}} 对象实例；允许你通过 {{domxref("AbortController")}} 与 fetch 请求进行通信，并在需要时中止请求。
 
