@@ -1,5 +1,5 @@
 ---
-title: <a>: 超連結元素
+title: <a>：超連結元素
 slug: Web/HTML/Element/a
 ---
 
