@@ -41,7 +41,7 @@ Promise<Response> fetch(input[, init]);
 
     - `browsingTopics` {{experimental_inline}}
 
-      - : 布尔值，表示当前用户选择的主题是否应该在关联请求的 {{httpheader("Sec-Browsing-Topics")}} 头中发送。参考[使用 Topics API](/zh-CN/docs/Web/API/Topics_API/Using)。
+      - : 布尔值，表示当前用户选择的主题是否应该在关联请求的 {{httpheader("Sec-Browsing-Topics")}} 标头中发送。有关更多详细信息，请参阅[使用 Topics API](/zh-CN/docs/Web/API/Topics_API/Using)。
 
     - `cache`
 
