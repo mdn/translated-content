@@ -33,7 +33,7 @@ AbortSignal.abort(reason)
 
 ### 返回值
 
-返回一个 {{domxref("AbortSignal.aborted")}} 属性设置为 `true` 的 `AbortSignal` 实例，并且 {{domxref("AbortSignal.reason")}} 设置为指定的或者默认的原因值。
+一个 {{domxref("AbortSignal.aborted")}} 属性设置为 `true` 的 `AbortSignal` 实例，并且 {{domxref("AbortSignal.reason")}} 设置为指定的或者默认的原因值。
 
 ## 参数
 
