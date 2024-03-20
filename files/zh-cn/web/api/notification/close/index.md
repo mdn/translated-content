@@ -1,13 +1,17 @@
 ---
 title: Notification：close() 方法
 slug: Web/API/Notification/close
+l10n:
+  sourceCommit: e97f2c3cca98616a37003005ddc149d370c40fd0
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{APIRef("Web Notifications")}}{{securecontext_header}}
 
-{{domxref("Notification")}} 接口的 `close()` 的方法用于关闭或移除一个先前显示的通知。
+{{domxref("Notification")}} 接口的 **`close()`** 方法用于关闭或移除一个先前显示的通知。
 
 > **备注：** 此 API 不应仅用于在固定延迟后从屏幕上移除通知，因为此方法还将从任何通知托盘中删除该通知，阻止用户在最初显示后与其交互。此 API 的有效用途是移除不再相关的通知（例如，如果是消息应用程序，则用户已经阅读了网页上的通知；或者音乐应用程序中已经在播放下一首歌曲）。
+
+{{AvailableInWorkers}}
 
 ## 语法
 
@@ -17,15 +21,15 @@ close()
 
 ### 参数
 
-无（{{jsxref("undefined")}}）。
+无。
 
 ### 返回值
 
-无。
+无（{{jsxref("undefined")}}）。
 
 ## 示例
 
-在下面的代码片段中，我们有一个简单的函数，当调用时创建一个 `options` 对象，然后是一个新的通知。在函数的最后，它在 {{domxref("EventTarget.addEventListener","addEventListener()")}} 函数中调用 `close()` 以在网页上阅读相关内容后移除该通知。
+在下面的代码片段中，我们有一个简单的函数，当调用时创建一个 `options` 对象，然后创建一个新的通知。在函数的最后，它在 {{domxref("EventTarget.addEventListener","addEventListener()")}} 函数中调用 `close()` 以在网页上阅读相关内容后移除该通知。
 
 ```js
 function spawnNotification(theBody, theIcon, theTitle) {

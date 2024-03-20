@@ -176,7 +176,7 @@ foo.bar = "baz";
 
 除非你紧接着使用 `obj = obj`，否则 Svelte 不会更新对 `obj.foo.bar` 的引用。这是因为 Svelte 无法跟踪对象引用，所以我们必须通过执行赋值操作，来明确告诉它 `obj` 已经改变了。
 
-> **备注：** 如果 `foo` 是顶级变量，你可以使用以下反应语句轻松地告诉 Svelte 在 `foo` 更改时更新 `obj`：`$: foo, obj = obj`。通过这样做，我们将 `foo` 定义为依赖项，每当它更改时，Svelte 将运行 `obj = obj`。
+> **备注：** 如果 `foo` 是顶级变量，你可以使用以下响应式语句轻松地告诉 Svelte 在 `foo` 更改时更新 `obj`：`$: foo, obj = obj`。通过这样做，我们将 `foo` 定义为依赖项，每当它更改时，Svelte 将运行 `obj = obj`。
 
 在我们的 `checkAllTodos()` 函数中，当我们运行：
 

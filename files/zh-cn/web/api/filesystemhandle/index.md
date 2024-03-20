@@ -30,7 +30,7 @@ slug: Web/API/FileSystemHandle
 - {{domxref('FileSystemHandle.queryPermission()', 'queryPermission()')}} {{Experimental_Inline}}
   - : 查询当前句柄目前的权限状态。
 - {{domxref('FileSystemHandle.remove', 'remove()')}} {{Experimental_Inline}} {{Non-standard_Inline}}
-  - : 向底层文件系统请求移除句柄所代表的的条目。
+  - : 向底层文件系统请求移除句柄所代表的条目。
 - {{domxref('FileSystemHandle.requestPermission', 'requestPermission()')}} {{Experimental_Inline}}
   - : 为文件句柄请求读取或读写权限。
 

@@ -41,7 +41,7 @@ var texture = gl.createTexture();
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{domxref("WebGLRenderingContext.bindTexture()")}}
 - {{domxref("WebGLRenderingContext.deleteTexture()")}}

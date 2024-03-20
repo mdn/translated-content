@@ -69,13 +69,13 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
     - `center`, centraliza o conteúdo ao centro da célula
     - `right`, alinha o conteúdo do elemento a direita da célula
     - `justify`, insere espaços ao texto para que o mesmo fique centralizado na célula
-    - `char`, alinha o texto em um alinhamento especial com um deslocamento mínimo definido pelos atributos [`char`](/pt-BR/docs/Web/HTML/Element/tbody#char) e [`charoff`](/pt-BR/docs/Web/HTML/Element/tbody#charoff) atributos {{unimplemented_inline("2212")}}.
+    - `char`, alinha o texto em um alinhamento especial com um deslocamento mínimo definido pelos atributos [`char`](/pt-BR/docs/Web/HTML/Element/tbody#char) e [`charoff`](/pt-BR/docs/Web/HTML/Element/tbody#charoff).
 
     Se nenhum atributo for definido o valor `left` é passado por padrão
 
     > **Note:**Não use esse atributo o mesmo está obsoleto (não suportado) no último padrão.- Para obter os mesmo efeitos `left`, `center`, `right` ou `justify`, use a propriedade {{cssxref("text-align")}} do CSS.
     >
-    > - Para obter o mesmo efeito no CSS3, você pode usar os valores [`char`](/pt-BR/docs/Web/HTML/Element/tfoot#char) com o valor de {{cssxref("text-align")}} propriedade {{unimplemented_inline}}.
+    > - Para obter o mesmo efeito no CSS3, você pode usar os valores [`char`](/pt-BR/docs/Web/HTML/Element/tfoot#char) com o valor da propriedade {{cssxref("text-align")}}.
 
 - `bgcolor` {{Non-standard_inline}}
 

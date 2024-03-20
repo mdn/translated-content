@@ -77,41 +77,6 @@ function fixedCharCodeAt(str, idx) {
 }
 ```
 
-### Corrigindo o `charCodeAt()` para manipular caracteres de Plano Multilingual não Básico se sua presença na string é desconhecida
-
-```js
-function knownCharCodeAt(str, idx) {
-  str += "";
-  var code,
-    end = str.length;
-
-  var surrogatePairs = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
-  while (surrogatePairs.exec(str) != null) {
-    var li = surrogatePairs.lastIndex;
-    if (li - 2 < idx) {
-      idx++;
-    } else {
-      break;
-    }
-  }
-
-  if (idx >= end || idx < 0) {
-    return NaN;
-  }
-
-  code = str.charCodeAt(idx);
-
-  var hi, low;
-  if (0xd800 <= code && code <= 0xdbff) {
-    hi = code;
-    low = str.charCodeAt(idx + 1);
-    // Vá um adiante, já que um dos "characters" é parte de um par substituto
-    return (hi - 0xd800) * 0x400 + (low - 0xdc00) + 0x10000;
-  }
-  return code;
-}
-```
-
 ## Especificações
 
 {{Specifications}}

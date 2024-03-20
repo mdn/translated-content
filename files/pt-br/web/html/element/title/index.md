@@ -42,8 +42,6 @@ Uma técnica comum de navegação para usuários de tecnologias assistivas é le
 
 Para ajudar o usuário, atualize o valor do `title` para refletir mudanças significativas no estado da página (como problemas de validação em formulários).
 
-#### Exemplo
-
 ```
 <title>2 erros - Seu pedido - Casa Azul Comida Chinesa - FoodYum: Faça seu pedido online!</title>
 ```

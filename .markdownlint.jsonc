@@ -15,11 +15,9 @@
     "spaces_per_tab": 2,
   },
   "line-length": false,
-  "no-duplicate-heading": false,
-  // XXX Replace with the following when ready:
-  // "no-duplicate-heading": {
-  //   "allow_different_nesting": true
-  // },
+  "no-duplicate-heading": {
+    "siblings_only": true,
+  },
   "single-title": {
     "front_matter_title": "^\\s*title\\s*[:=]",
   },

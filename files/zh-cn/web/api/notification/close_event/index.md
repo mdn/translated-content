@@ -1,11 +1,15 @@
 ---
 title: Notification：close 事件
 slug: Web/API/Notification/close_event
+l10n:
+  sourceCommit: 10b9d1a207b2bf467150b0ec72e2e5f09429d2d9
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{APIRef("Web Notifications")}}{{securecontext_header}}
 
-{{domxref("Notification")}} 接口上的 **`close`** 事件在一个 {{domxref("Notification")}} 被关闭时触发。
+{{domxref("Notification")}} 接口的 **`close`** 事件在一个 {{domxref("Notification")}} 被关闭时触发。
+
+{{AvailableInWorkers}}
 
 ## 语法
 
@@ -19,7 +23,11 @@ onclose = (event) => {};
 
 ## 事件类型
 
-一个通用 {{domxref("Event")}}。
+一个通用的 {{domxref("Event")}}。
+
+## 规范
+
+{{Specifications}}
 
 ## 浏览器兼容性
 
@@ -27,5 +35,4 @@ onclose = (event) => {};
 
 ## 参见
 
-- {{domxref("Notification")}}
 - [使用 Notification API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)

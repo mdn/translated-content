@@ -73,7 +73,7 @@ console.log(p(1, 2, 3)); // "called: 1, 2, 3"; outputs 6
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{jsxref("Proxy")}}
 - {{jsxref("Proxy.handler", "handler")}}

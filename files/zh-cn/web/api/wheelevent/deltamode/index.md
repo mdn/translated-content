@@ -38,7 +38,7 @@ console.log(syntheticEvent.deltaMode);
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - [`wheel`](/zh-CN/docs/Web/API/Element/wheel_event)
 - {{domxref("WheelEvent")}}

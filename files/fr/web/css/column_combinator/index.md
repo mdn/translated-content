@@ -3,7 +3,7 @@ title: Combinateur de colonne
 slug: Web/CSS/Column_combinator
 ---
 
-{{CSSRef("Selectors")}}{{SeeCompatTable}}
+{{CSSRef}} {{SeeCompatTable}}
 
 Le **combinateur de colonne** (`||`) est placé entre deux sélecteurs CSS. Les éléments ciblés sont ceux ciblés par le deuxième sélecteur et qui appartiennent à un élément en colonne qui correspond au premier sélecteur.
 

@@ -18,7 +18,7 @@ ctx.miterLimit = value;
 ### 选项
 
 - `value`
-  - : 斜接面限制比例的的数字。0、负数、{{jsxref("Infinity")}} 和 {{jsxref("NaN")}} 都会被忽略。
+  - : 斜接面限制比例的数字。0、负数、{{jsxref("Infinity")}} 和 {{jsxref("NaN")}} 都会被忽略。
 
 ## 简释
 
@@ -32,50 +32,7 @@ ctx.lineJoin = "miter"  // "miter" >   "round" )   "bevel" ]
 
 ### 使用 `miterLimit` 属性
 
-查看 [Canvas Tutorial](/zh-CN/docs/Web/API/Canvas_API/Tutorial) 中的 [Applying styles and color](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#A_demo_of_the_miterLimit_property) 章节，获取更多信息。
-
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
-</div>
-<textarea id="code" class="playable-code">
-ctx.beginPath();
-ctx.moveTo(0,0);
-ctx.lineWidth = 15;
-ctx.lineTo(100, 100);
-ctx.stroke();</textarea
->
-```
-
-```js hidden
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
-const textarea = document.getElementById("code");
-const reset = document.getElementById("reset");
-const edit = document.getElementById("edit");
-const code = textarea.value;
-
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
-}
-
-reset.addEventListener("click", () => {
-  textarea.value = code;
-  drawCanvas();
-});
-
-edit.addEventListener("click", () => {
-  textarea.focus();
-});
-
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
-```
-
-{{EmbedLiveSample("使用 miterLimit 属性", "400", "180", "canvas_miterlimit.png", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}
+参见 [Canvas 教程](/zh-CN/docs/Web/API/Canvas_API/Tutorial)中的[应用样式和色彩](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#miterlimit_属性的演示示例)章节以获取更多信息。
 
 ## 规范
 
@@ -87,6 +44,6 @@ window.addEventListener("load", drawCanvas);
 
 ## 参见
 
-- 接口定义， {{domxref("CanvasRenderingContext2D")}}
+- 定义了该属性的接口：{{domxref("CanvasRenderingContext2D")}}
 - {{domxref("CanvasRenderingContext2D.lineCap")}}
 - {{domxref("CanvasRenderingContext2D.lineJoin")}}

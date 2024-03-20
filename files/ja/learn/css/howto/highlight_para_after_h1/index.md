@@ -2,7 +2,7 @@
 title: 見出しの直後に来た段落を強調表示するには
 slug: Learn/CSS/Howto/Highlight_para_after_h1
 l10n:
-  sourceCommit: b85bf9fcc2c0062a765d104799d7d45d9e9b13bb
+  sourceCommit: bb652aaf3e38f3c7fef970a62f813047dffac879
 ---
 
 {{LearnSidebar}}

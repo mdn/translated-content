@@ -256,6 +256,6 @@ body {
 ## 参见
 
 - [CSS 局限](/zh-CN/docs/Web/CSS/CSS_containment)
-- [CSS 容器查询](/zh-CN/docs/Web/CSS/CSS_container_queries)
+- [CSS 容器查询](/zh-CN/docs/Web/CSS/CSS_containment/Container_queries)
 - CSS 属性 {{CSSXref("content-visibility")}}
 - CSS 属性 {{CSSXref("position")}}

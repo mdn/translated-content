@@ -2,7 +2,7 @@
 title: Firefox 122 for developers
 slug: Mozilla/Firefox/Releases/122
 l10n:
-  sourceCommit: 5468d1f2fffd33b0c76194c6187488cb4487ec69
+  sourceCommit: 6f56b2dbc0229d381a5e63cf763a77883ee23906
 ---
 
 {{FirefoxSidebar}}
@@ -30,6 +30,8 @@ l10n:
 
 - {{jsxref("ArrayBuffer.prototype.transfer()")}} および {{jsxref("ArrayBuffer.prototype.transferToFixedLength()")}} メソッドを、ある {{jsxref("ArrayBuffer")}} から別の ArrayBuffer へメモリーの [所有権を転送する](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer#transferring_arraybuffers) ために使用できるようになりました。転送後は、元のバッファーが元のメモリーから切り離されて使用できなくなります。状態は {{jsxref("ArrayBuffer.prototype.detached")}} を使用して確認できます (詳しくは [Firefox bug 1865103](https://bugzil.la/1865103) をご覧ください)。
 
+- ほかのブラウザーに合わせるため [`Date.parse()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/parse) および [`Date()` コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/Date) は、[標準外の日付文字列](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/parse#標準外の日付文字列) を解析するときに、指定された月の最初の 3 文字だけを考慮するようになりました。以前は、完全な月の名前を 3 文字以上に切り詰めた値だけを受け入れていました (詳しくは [Firefox bug 1862910](https://bugzil.la/1862910) をご覧ください)。
+
 ### SVG
 
 #### 廃止
@@ -45,6 +47,10 @@ l10n:
 #### DOM
 
 - ユーザー操作によって発生したときに {{HTMLElement("select")}} 要素のブラウザーの選択ツールをプログラムから起動できるようにする、{{domxref("HTMLSelectElement.showPicker()")}} メソッドをサポートしました ([Firefox bug 1865207](https://bugzil.la/1865207))。
+
+#### 廃止
+
+- CSS の [`-moz-user-focus`](/ja/docs/Web/CSS/-moz-user-focus) プロパティのサポートを廃止しました ([Firefox bug 1871745](https://bugzil.la/1871745) および [Firefox bug 1868552](https://bugzil.la/1868552))。
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 

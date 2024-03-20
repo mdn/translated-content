@@ -1,117 +1,134 @@
 ---
-title: 高级设计 HTML 表单
+title: 表单样式化进阶
 slug: Learn/Forms/Advanced_form_styling
+l10n:
+  sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Styling_web_forms", "Learn/Forms/UI_pseudo-classes", "Learn/Forms")}}
 
-在本文中，我们将看到[HTML](/zh-CN/docs/HTML)表单怎样使用[CSS](/zh-CN/docs/CSS)装饰难以定制的表单小部件。如[前面章节](/zh-CN/docs/HTML/Forms/Styling_HTML_forms)所示，文本域和按钮完全可以使用 CSS，现在我们将深入探索 HTML 表单样式。
+在本文中，我们将介绍如何使用 CSS 来为较难样式化的表单控件类型添加样式，即“糟糕的（bad）”和“丑陋的（ugly）”类型。正如我们在[上一篇文章](/zh-CN/docs/Learn/Forms/Styling_web_forms)中所看到的，文本字段和按钮的样式完全可以轻松实现；现在我们将深入研究问题较多的样式。
+
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">前提：</th>
+      <td>
+        对 <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">HTML</a> 和
+        <a href="/zh-CN/docs/Learn/CSS/First_steps">CSS</a> 的基本理解。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">目标：</th>
+      <td>
+        了解表单中哪些部分难以进行样式设计以及原因；学习如何自定义表单。
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 在继续之前，让我们回忆一下两种表单小部件：
 
-- bad
-  - : 这个元素很难设计，需要一些复杂的技巧，有时还涉及到高级的 CSS3 的知识。
-- ugly
-  - : 忘记使用 CSS 来设计这些元素吧。你最多能做一点点事情，还不能保证可以跨浏览器，而且在它们出现时永远不能做到完全的受控。
+**糟糕的**：有些元素的样式更难设计，需要更复杂的 CSS 或更特殊的技巧：
 
-## CSS 表现力
+- 复选框和单选框
+- [`<input type="search">`](/zh-CN/docs/Web/HTML/Element/input/search)
 
-除了文本框和按钮之外，使用其他表单小部件的主要问题是在许多情况下，CSS 的表现不能满足设计复杂的小部件的要求。
+**丑陋的**：有些元素无法使用 CSS 进行彻底样式化。这些元素包括：
 
-HTML 和 CSS 最新的发展扩展了 CSS 的表现力：
+- 创建下拉部件时涉及的元素，包括 {{HTMLElement("select")}}、{{HTMLElement("option")}}、{{HTMLElement("optgroup")}} 和 {{HTMLElement("datalist")}}。
+- [`<input type="color">`](/zh-CN/docs/Web/HTML/Element/input/color)
+- 与日期有关的控件，如 [`<input type="datetime-local">`](/zh-CN/docs/Web/HTML/Element/input/datetime-local)
+- [`<input type="range">`](/zh-CN/docs/Web/HTML/Element/input/range)
+- [`<input type="file">`](/zh-CN/docs/Web/HTML/Element/input/file)
+- {{HTMLElement("progress")}} 和 {{HTMLElement("meter")}}
 
-- [CSS 2.1](http://www.w3.org/TR/CSS21/selector.html#dynamic-pseudo-classes) 非常受限，只给出三个伪类：
+我们先来谈谈 [`appearance`](/zh-CN/docs/Web/CSS/appearance) 属性，它对于使上述所有内容更具风格化相当有用。
 
-  - {{cssxref(":active")}}
-  - {{cssxref(":focus")}}
-  - {{cssxref(":hover")}}
+## appearance：控制操作系统层面的样式化
 
-- [CSS Selector Level 3](http://www.w3.org/TR/css3-selectors/) 增加了三个与 HTML 表单相关的伪类：
+在上一篇文章中，我们提到，从历史上看，web 表单控件的样式大多来自底层操作系统，这也是自定义这些控件外观的部分问题所在。
 
-  - {{cssxref(":enabled")}}
-  - {{cssxref(":disabled")}}
-  - {{cssxref(":checked")}}
-  - {{cssxref(":indeterminate")}}
+创建 {{cssxref("appearance")}} 属性是为了控制应用于 web 表单控件的操作系统或系统级样式。到目前为止，最有用的值是 `none`，也可能是你唯一会用到的值。这将尽可能阻止任何应用该属性的控件使用系统级样式，并允许你使用 CSS 自行创建样式。
 
-- [CSS Basic UI Level 3](http://dev.w3.org/csswg/css3-ui/#pseudo-classes) 也增加了几个伪类用于描述小部件的状态：
-
-  - {{cssxref(":default")}}
-  - {{cssxref(":valid")}}
-  - {{cssxref(":invalid")}}
-  - {{cssxref(":in-range")}}
-  - {{cssxref(":out-of-range")}}
-  - {{cssxref(":required")}}
-  - {{cssxref(":optional")}}
-  - {{cssxref(":read-only")}}
-  - {{cssxref(":read-write")}}
-
-- [CSS Selector Level 4](http://dev.w3.org/csswg/selectors4/) 目前处于积极应用和重点讨论的状态，但并不打算为表单做更多的改善：
-
-  - {{cssxref(":user-error")}} 只是改进了伪类{{cssxref(":invalid")}}。
-
-所有这一切是一个好的开端，但是有两个问题。首先，一些浏览器不需要实现 CSS 2.1 之上的特性。其次在设计像日期选择器这样的复杂的小部件时，这些实在不够好。
-
-浏览器厂家在 CSS 表现力在表单方面的扩展做了一些尝试，在某些情况下，知道什么可用也挺不错的。
-
-> **警告：** 尽管 这些尝试很有趣，但**它们是非标准的，也就是不可靠的。**. 如果你使用它们 (也许你并不常用)，你要自己承担风险，使用非标准的属性[对于 Web 并不是好事](http://www.alistapart.com/articles/every-time-you-call-a-proprietary-feature-css3-a-kitten-dies/) 。
-
-- [Mozilla CSS 扩展](/zh-CN/docs/CSS/CSS_Reference/Mozilla_Extensions)
-
-  - {{cssxref(":-moz-placeholder")}}
-  - {{cssxref(":-moz-submit-invalid")}}
-  - {{cssxref(":-moz-ui-invalid")}}
-  - {{cssxref(":-moz-ui-valid")}}
-
-- [WebKit CSS 扩展](/zh-CN/docs/CSS/CSS_Reference/Webkit_Extensions)
-
-  - {{cssxref("::-webkit-input-placeholder")}}
-  - [其他](http://trac.webkit.org/wiki/Styling%20Form%20Controls)
-
-- [Microsoft CSS 扩展](http://msdn.microsoft.com/en-us/library/ie/hh869403%28v=vs.85%29.aspx)
-
-  - [`:-ms-input-placeholder`](http://msdn.microsoft.com/en-us/library/ie/hh772745%28v=vs.85%29.aspx)
-
-### 控制表单元素的外观
-
-基于 WebKit(Chrome, Safari) 和 Gecko(Firefox) 的浏览器提供更高级的 HTML 部件定制。它们也实现了跨平台，因此需要一种方式把原生小部件转换为用户可设置样式的小部件。
-
-为此，它们使用了专有属性：{{cssxref("-webkit-appearance")}}或{{cssxref("-moz-appearance")}}。**这些属性是非标准的，不应该使用**。事实上，它们在 WebKit 和 Gecko 中的表现也是不相同的。然而，有一个值很好用：`none`，用这个值，你（几乎完全）能控制一个已知小部件的样式。
-
-因此，如果你在应用一个元素的样式时遇到麻烦，可以尝试使用那些专有属性。我们下面有一些例子，这个属性最成功的例子是 WebKit 浏览器中的搜索域的样式：
+例如，我们来看看下面的控件：
 
 ```html
 <form>
-  <input type="search" />
+  <p>
+    <label for="search">search: </label>
+    <input id="search" name="search" type="search" />
+  </p>
+  <p>
+    <label for="text">text: </label>
+    <input id="text" name="text" type="text" />
+  </p>
+  <p>
+    <label for="date">date: </label>
+    <input id="date" name="date" type="datetime-local" />
+  </p>
+  <p>
+    <label for="radio">radio: </label>
+    <input id="radio" name="radio" type="radio" />
+  </p>
+  <p>
+    <label for="checkbox">checkbox: </label>
+    <input id="checkbox" name="checkbox" type="checkbox" />
+  </p>
+  <p><input type="submit" value="submit" /></p>
+  <p><input type="button" value="button" /></p>
 </form>
 ```
 
-```css
-<style>
-input[type=search] {
-    border: 1px dotted #999;
-    border-radius: 0;
+对它们应用以下 CSS 可以删除系统级样式。
 
-    -webkit-appearance: none;
+```css
+input {
+  appearance: none;
 }
-</style>
 ```
 
-{{EmbedLiveSample("控制表单元素的外观", 250, 40)}}
+下面的实时示例展示了它们在你的系统中的样子——左边是默认情况，右边是应用了上述 CSS 后的样子（如果你想在其他系统上测试，[也可以在这里找到](https://mdn.github.io/learning-area/html/forms/styling-examples/appearance-tester.html)）。
 
-> **备注：** 当我们谈及 Web 技术的时总是很难预测未来。扩展 CSS 表现力是很困难的，其他规范也做了一些探索性的工作，如[Shadow DOM](http://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/shadow/index.html)提供了一些观点。可完全设置样式的表单的问题还远未结束。
+{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/appearance-tester.html", '100%', 400)}}
 
-## 举例
+在大多数情况下，它的作用是移除样式化边框，从而使得添加 CSS 样式更容易，但其实并不重要。在搜索和单选按钮/复选框等几种情况下，它的作用就大得多了。我们现在就来看看这些情况。
 
-### 复选框和单选按钮
+### 驯服搜索框
 
-独自设计复选框或单选按钮的样式是让人抓狂的。例如由于浏览器反应各不相同，在修改复选框和单选按钮的大小时，并不保证确实能改变它们。
+[`<input type="search">`](/zh-CN/docs/Web/HTML/Element/input/search) 基本上只是一个文本输入框，那么为什么 `appearance: none;` 在这里有用呢？答案是 Safari 搜索框有一些样式限制，例如不能随意调整其 `height` 或 `font-size`。
 
-#### 一个简单的测试用例
+可以使用我们的朋友 `appearance: none;`，禁用默认外观来解决这个问题：
 
-让我们研究一下下面的测试用例：
+```css
+input[type="search"] {
+  appearance: none;
+}
+```
+
+在下面的示例中，可以看到两个样式相同的搜索框。右边的应用了 `appearance: none;`，左边的则没有。如果在 macOS 的 Safari 中查看，你会发现左边的搜索框大小不合适。
+
+{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/search-appearance.html", '100%', 200)}}
+
+有趣的是，设置搜索栏的边框/背景也能解决这个问题。下面的样式化搜索没有应用 `appearance: none;`，但在 Safari 中却没有出现与上例相同的问题。
+
+{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/styled-search.html", '100%', 200)}}
+
+> **备注：** 你可能已经注意到，在搜索字段中，“x”删除图标会在搜索值不为空时出现，但在 Edge 和 Chrome 浏览器中，当输入失去焦点时，该图标就会消失，而在 Safari 浏览器中则会保持不变。要通过 CSS 删除，可以使用 `input[type="search"]:not(:focus, :active)::-webkit-search-cancel-button { display: none; }`。
+
+### 为复选框和单选钮添加样式
+
+默认情况下，复选框或单选按钮的样式设计非常棘手。复选框和单选按钮的大小并不能按照默认设计进行更改，而且在尝试更改时浏览器的反应也大相径庭。
+
+例如，请看这个简单的测试案例：
 
 ```html
-<span><input type="checkbox" /></span>
+<label
+  ><span><input type="checkbox" name="q5" value="true" /></span> True</label
+>
+<label
+  ><span><input type="checkbox" name="q5" value="false" /></span> False</label
+>
 ```
 
 ```css
@@ -126,428 +143,372 @@ input[type="checkbox"] {
 }
 ```
 
-这里是不同的浏览器的处理方式：
+不同的浏览器对复选框和 span 的处理方式各不相同，往往很难看：
 
-| 浏览器                            | 视图                              |
-| --------------------------------- | --------------------------------- |
-| Firefox 57 (Mac OSX)              | ![](firefox-mac-checkbox.png)     |
-| Firefox 57 (Windows 10)           | ![](firefox-windows-checkbox.png) |
-| Chrome 63 (Mac OSX)               | ![](chrome-mac-checkbox.png)      |
-| Chrome 63 (Windows 10)            | ![](chrome-windows-checkbox.png)  |
-| Internet Explorer 11 (Windows 10) | ![](ie11-checkbox.png)            |
-| Edge 16 (Windows 10)              | ![](edge-checkbox.png)            |
+| 浏览器                               | 渲染情况                                                           |
+| ------------------------------------ | ------------------------------------------------------------------ |
+| Firefox 71（macOS）                  | ![圆角和 1px 浅灰色边框](firefox-mac-checkbox.png)                 |
+| Firefox 57（Windows 10）             | ![带 1px 中灰色边框的矩形角](firefox-windows-checkbox.png)         |
+| Chrome 77（macOS）、Safari 13、Opera | ![圆角，带 1px 中灰色边框](chrome-mac-checkbox.png)                |
+| Chrome 63（Windows 10）              | ![矩形边框的背景略带灰色，而不是白色](chrome-windows-checkbox.png) |
+| Edge 16（Windows 10）                | ![矩形边框的背景略带灰色，而不是白色。](edge-checkbox.png)         |
 
-#### 更复杂的例子
+#### 在单选框/复选框上使用 appearance: none
 
-由于 Opera 和 Internet Explorer 没有像{{cssxref("-webkit-appearance")}}或{{cssxref("-moz-appearance")}}这样的特性，使用它们是不合适的。幸运的是，CSS 有足够多的表现方式可以找到解决方法。让我们做一个很普通的例子：
+如前所述，可以使用 {{cssxref('appearance')}}`:none;` 完全删除复选框或单选按钮的默认外观。让我们以该 HTML 为例：
 
 ```html
 <form>
   <fieldset>
+    <legend>Fruit preferences</legend>
+
     <p>
-      <input type="checkbox" id="first" name="fruit-1" value="cherry" />
-      <label for="first">I like cherry</label>
+      <label>
+        <input type="checkbox" name="fruit" value="cherry" />
+        I like cherry
+      </label>
     </p>
     <p>
-      <input
-        type="checkbox"
-        id="second"
-        name="fruit-2"
-        value="banana"
-        disabled />
-      <label for="second">I can't like banana</label>
+      <label>
+        <input type="checkbox" name="fruit" value="banana" disabled />
+        I can't like banana
+      </label>
     </p>
     <p>
-      <input type="checkbox" id="third" name="fruit-3" value="strawberry" />
-      <label for="third">I like strawberry</label>
+      <label>
+        <input type="checkbox" name="fruit" value="strawberry" />
+        I like strawberry
+      </label>
     </p>
   </fieldset>
 </form>
 ```
 
-带有一些基本的样式：
+现在，让我们为这些复选框设计自定义样式。首先，我们先取消原来的复选框样式：
+
+```css
+input[type="checkbox"] {
+  appearance: none;
+}
+```
+
+我们可以使用 {{cssxref(":checked")}} 和 {{cssxref(":disabled")}} 伪类，随着自定义复选框状态的改变而改变其外观：
+
+```css
+input[type="checkbox"] {
+  position: relative;
+  width: 1em;
+  height: 1em;
+  border: 1px solid gray;
+  /* 调整文本基线上复选框的位置 */
+  vertical-align: -2px;
+  /* 在此设置，以便 Windows 的高对比度模式可以覆盖 */
+  color: green;
+}
+
+input[type="checkbox"]::before {
+  content: "✔";
+  position: absolute;
+  font-size: 1.2em;
+  right: -1px;
+  top: -0.3em;
+  visibility: hidden;
+}
+
+input[type="checkbox"]:checked::before {
+  /* 使用 `visibility` 而不是 `display`，以避免重新计算布局 */
+  visibility: visible;
+}
+
+input[type="checkbox"]:disabled {
+  border-color: black;
+  background: #ddd;
+  color: gray;
+}
+```
+
+在[下一篇文章](/zh-CN/docs/Learn/Forms/UI_pseudo-classes)中，你将了解到更多关于此类伪类的信息和更多内容；上述伪类的作用如下：
+
+- `:checked`——复选框（或单选按钮）处于选中状态（用户已单击/激活它）。
+- `:disabled`——复选框（或单选按钮）处于禁用状态（无法与之交互）。
+
+你可以查看实时结果：
+
+{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/checkboxes-styled.html", '100%', 200)}}
+
+- [已添加样式的单选按钮](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html)：自定义单选按钮样式。
+- [切换开关示例](https://mdn.github.io/learning-area/html/forms/toggle-switch-example/)：复选框样式，看起来像一个拨动开关。
+
+如果你在不支持 {{cssxref("appearance")}} 的浏览器中查看这些复选框，你的自定义设计将丢失，但它们看起来仍像复选框，并且可以使用。
+
+## 对于“丑陋”的元素可以做些什么？
+
+现在，让我们把目光转向“丑陋”的控件——那些很难彻底添加样式的控件。简而言之，这些控件包括下拉框、[`color`](/zh-CN/docs/Web/HTML/Element/input/color) 和 [`datetime-local`](/zh-CN/docs/Web/HTML/Element/input/datetime-local) 等复杂控件类型，以及 {{HTMLElement("progress")}} 和 {{HTMLElement("meter")}} 等面向反馈的控件。
+
+问题所在是，这些元素在不同浏览器中的默认外观大相径庭，虽然你可以通过某些方式对它们进行样式化，但它们内部的某些部分实际上是无法样式化的。
+
+如果你愿意接受一些外观和感觉上的差异，你可以使用一些简单的样式使大小一致，统一背景颜色等样式，以及使用外观来摆脱一些系统级样式。
+
+下面的示例展示了一些“丑陋”的表单特性：
+
+{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/ugly-controls.html", '100%', 750)}}
+
+这个示例应用了如下 CSS 样式：
 
 ```css
 body {
-  font: 1em sans-serif;
+  font-family: "Josefin Sans", sans-serif;
+  margin: 20px auto;
+  max-width: 400px;
 }
 
-form {
-  display: inline-block;
+form > div {
+  margin-bottom: 20px;
+}
 
-  padding: 0;
+select {
+  appearance: none;
+  width: 100%;
+  height: 100%;
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper::after {
+  content: "▼";
+  font-size: 1rem;
+  top: 3px;
+  right: 10px;
+  position: absolute;
+}
+
+button,
+label,
+input,
+select,
+progress,
+meter {
+  display: block;
+  font-family: inherit;
+  font-size: 100%;
   margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+  height: 30px;
 }
 
-fieldset {
-  border: 1px solid #ccc;
+input[type="text"],
+input[type="datetime-local"],
+input[type="color"],
+select {
+  box-shadow: inset 1px 1px 3px #ccc;
   border-radius: 5px;
-  margin: 0;
-  padding: 1em;
 }
 
 label {
-  cursor: pointer;
+  margin-bottom: 5px;
 }
 
-p {
+button {
+  width: 60%;
+  margin: 0 auto;
+}
+```
+
+> **备注：** 如果你想同时在多个浏览器上测试这些示例，可以[在此找到实时演示](https://mdn.github.io/learning-area/html/forms/styling-examples/ugly-controls.html)（也可以[在此查看源代码](https://github.com/mdn/learning-area/blob/main/html/forms/styling-examples/ugly-controls.html)）。
+>
+> 另外请注意，我们在页面中添加了一些 JavaScript，用于在控件本身下方列出文件选择器选择的文件。这是 [`<input type="file">`](/zh-CN/docs/Web/HTML/Element/input/file#示例) 参考页面上示例的简化版本。
+
+正如你所看到的，我们在让这些控件在现代浏览器中保持一致方面做得相当不错。
+
+我们对所有控件及其标签应用了一些全局规范化 CSS，使它们以相同的方式显示大小、采用父字体等，这在上一篇文章中已经提到过：
+
+```css
+button,
+label,
+input,
+select,
+progress,
+meter {
+  display: block;
+  font-family: inherit;
+  font-size: 100%;
   margin: 0;
-}
-
-p + p {
-  margin: 0.5em 0 0;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+  height: 30px;
 }
 ```
 
-> **备注：** 下面的内容（仅限样式化 checkbox 部分）与英文版出入极大，猜测已经是过时内容
-
-现在，让我们设计一个定制复选框的样式
-
-计划用自己的图像替换原生的复选框，首先需要准备复选框在所有状态下的图像，那些状态是：未选、已选、禁用不选、禁用已选。该图像将用作 CSS 精灵：
-
-![Check box CSS Sprite](/files/4173/checkbox-sprite.png)
-
-一开始要隐藏初始复选框。可以简单的把它们从页面视图中拿开。这里要考虑两个重要的事情：
-
-- 不能用`display:none`来隐藏复选框，因为后面我们需要把复选框对用户可见。而使用`display:none`，用户不能再访问这个复选框，这就表示复选框不能选择或不选择。
-- 我们将使用 CSS3 选择器来实现定制的样式，为了支持旧版浏览器，可以在所有选择器前设置{{cssxref(":root")}}伪类。目前所有我们需要支持的浏览器都支持{{cssxref(":root")}}伪类，但是其他的并不能保证。这是一个过滤旧的 Internet Explorer 的便利方式的例子。那些旧版浏览器将看到传统的复选框，而新式的浏览器可以看到定制的复选框。
+我们还为控件添加了一些统一的阴影和圆角：
 
 ```css
-:root input[type="checkbox"] {
-  /* original check box are push outside the viexport */
-  position: absolute;
-  left: -1000em;
+input[type="text"],
+input[type="datetime-local"],
+input[type="color"],
+select {
+  box-shadow: inset 1px 1px 3px #ccc;
+  border-radius: 5px;
 }
 ```
 
-现在加上自己的图像就可以摆脱原来的复选框了，为此，要在初始的复选框后面加上{{HTMLElement("label")}}元素，并使用它的{{cssxref(":before")}}伪元素。因此在下面章节中，要使用[selector 属性](/zh-CN/docs/CSS/Attribute_selectors)来选择复选框，然后使用[adjacent sibling selector](/zh-CN/docs/CSS/Adjacent_sibling_selectors)来选择原有复选框后面的`label`。最后，访问{{cssxref(":before")}}伪元素来设计复选框显示定制样式。
+至于其他控件，如 range 类型、进度条和仪表，它们只是在控件区域周围添加了一个难看的方框，因此没有任何意义。
 
-```css
-:root input[type="checkbox"] + label:before {
-  content: "";
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  margin: 0 0.5em 0 0;
-  background: url("https://developer.mozilla.org/files/4173/checkbox-sprite.png")
-    no-repeat 0 0;
+下面我们就来谈谈这些类型控件的一些具体细节，并重点介绍其中的难点。
 
-  /* The following is used to adjust the position of
-   the check boxes on the text baseline */
+### 选择（select）组件和数据列表（datalist）组件
 
-  vertical-align: bottom;
-  position: relative;
-  bottom: 2px;
-}
-```
+在现代浏览器中，选择和数据列表的样式一般都不会太差，前提是你不想让它们的外观和感觉与默认值相差太多。
 
-在初始复选框上使用{{cssxref(":checked")}}和{{cssxref(":disabled")}}伪类来改变定制复选框的状态。因为使用了 CSS 精灵，我们需要做的只是修改背景的位置。
+我们已经设法使这些框的基本外观看起来相当统一和一致。反正数据列表控件是 `<input type="text">`，所以我们知道这不是问题。
 
-```css
-:root input[type="checkbox"]:checked + label:before {
-  background-position: 0 -16px;
-}
-
-:root input[type="checkbox"]:disabled + label:before {
-  background-position: 0 -32px;
-}
-
-:root input[type="checkbox"]:checked:disabled + label:before {
-  background-position: 0 -48px;
-}
-```
-
-最后一件（但是很重要的）事情：当用户使用键盘从一个表单小部件导航到另一个表单小部件时，每个小部件都应该被显式聚焦。因为我们隐藏了初始的复选框，我们必须自己实现这个特性，让用户知道定制复选框在表单中的位置，下列的 CSS 实现了它们聚焦。
-
-```css
-:root input[type="checkbox"]:focus + label:before {
-  outline: 1px dotted black;
-}
-```
-
-你可以在线查看结果：
-
-{{EmbedLiveSample("更复杂的例子", 250, 130)}}
-
-### Dealing with the select nightmare
-
-{{HTMLElement("select")}} 元素被认为是一个 "丑陋的" 组件，因为不可能保证它在跨平台时样式化的一致性。然而，有些事情是可能的。废话少说，让我们来看一个例子：
-
-```html
-<select>
-  <option>Cherry</option>
-  <option>Banana</option>
-  <option>Strawberry</option>
-</select>
-```
+有两件事稍微有点问题。首先，在不同的浏览器中，表示选择是下拉的“箭头”图标是不同的。如果你增大选择框的大小，或者以一种难看的方式调整大小，它也会发生变化。为了在示例中解决这个问题，我们首先使用我们的老朋友 `appearance: none` 来完全去除该图标：
 
 ```css
 select {
-  width: 80px;
-  padding: 10px;
-}
-
-option {
-  padding: 5px;
-  color: red;
+  appearance: none;
 }
 ```
 
-下面的表格显示了在两种情况下不同浏览器的处理方式。头两列就是上面的例子。后面两列使用了其他的定制 CSS，可以对小部件的外观进行更多的控制：
+然后，我们利用生成内容创建了自己的图标。由于 [`::before`](/zh-CN/docs/Web/CSS/::before)/[`::after`](/zh-CN/docs/Web/CSS/::after) 并不适用于 `<select>` 元素（这是因为生成的内容是相对于元素的格式框放置的，而表单输入的工作方式更像是被替换的元素——它们的显示是由浏览器生成并放置的，因此没有格式框），因此我们在控件周围添加了一个额外的封装：
+
+```html
+<label for="select">Select a fruit</label>
+<div class="select-wrapper">
+  <select id="select" name="select">
+    <option>Banana</option>
+    <option>Cherry</option>
+    <option>Lemon</option>
+  </select>
+</div>
+```
+
+然后，我们使用生成内容生成一个向下的小箭头，并通过定位将其放在正确的位置：
 
 ```css
-select,
-option {
-  -webkit-appearance: none; /* To gain control over the appearance on WebKit/Chromium */
-  -moz-appearance: none; /* To gain control over the appearance on Gecko */
+.select-wrapper {
+  position: relative;
+}
 
-  /* To gain control over the appearance on and Trident (IE)
-     Note that it also works on Gecko and has partial effects on WebKit */
-  background: none;
+.select-wrapper::after {
+  content: "▼";
+  font-size: 1rem;
+  top: 6px;
+  right: 10px;
+  position: absolute;
 }
 ```
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="1" rowspan="2" scope="col">Browser</th>
-      <th colspan="2" scope="col">Regular rendering</th>
-      <th colspan="2" scope="col">Tweaked rendering</th>
-    </tr>
-    <tr>
-      <th scope="col">closed</th>
-      <th scope="col">open</th>
-      <th scope="col">closed</th>
-      <th scope="col">open</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Firefox 57 (Mac OSX)</td>
-      <td>
-        <img
-          alt=""
-          src="firefox-mac-select-1-closed.png"
-        />
-      </td>
-      <td>
-        <img
-          alt=""
-          src="firefox-mac-select-1-open.png"
-        />
-      </td>
-      <td>
-        <img
-          alt=""
-          src="firefox-mac-select-2-closed.png"
-        />
-      </td>
-      <td>
-        <img
-          alt=""
-          src="firefox-mac-select-2-open.png"
-        />
-      </td>
-    </tr>
-    <tr>
-      <td>Firefox 57 (Windows 10)</td>
-      <td>
-        <img
-          alt=""
-          src="firefox-windows-select-1-closed.png"
-        />
-      </td>
-      <td>
-        <img
-          alt=""
-          src="firefox-windows-select-1-open.png"
-        />
-      </td>
-      <td>
-        <img
-          alt=""
-          src="firefox-windows-select-2-closed.png"
-        />
-      </td>
-      <td>
-        <img
-          alt=""
-          src="firefox-windows-select-2-open.png"
-        />
-      </td>
-    </tr>
-    <tr>
-      <td>Chrome 63 (Mac OSX)</td>
-      <td>
-        <img
-          alt=""
-          src="chrome-mac-select-1-closed.png"
-        />
-      </td>
-      <td>
-        <img
-          alt=""
-          src="chrome-mac-select-1-open.png"
-        />
-      </td>
-      <td>
-        <img
-          alt=""
-          src="chrome-windows-select-2-closed.png"
-        />
-      </td>
-      <td>
-        <img
-          alt=""
-          src="chrome-mac-select-2-open.png"
-        />
-      </td>
-    </tr>
-    <tr>
-      <td>Chrome 63 (Windows 10)</td>
-      <td>
-        <img
-          alt=""
-          src="chrome-windows-select-1-closed.png"
-        />
-      </td>
-      <td>
-        <img
-          alt=""
-          src="chrome-windows-select-1-open.png"
-        />
-      </td>
-      <td>
-        <img
-          alt=""
-          src="chrome-windows-select-2-closed.png"
-        />
-      </td>
-      <td>
-        <img
-          alt=""
-          src="chrome-windows-select-2-open.png"
-        />
-      </td>
-    </tr>
-    <tr>
-      <td>Opera 49 (Mac OSX)</td>
-      <td>
-        <img
-          alt=""
-          src="opera-mac-select-1-closed.png"
-        />
-      </td>
-      <td>
-        <img
-          alt=""
-          src="opera-mac-select-1-open.png"
-        />
-      </td>
-      <td>
-        <img
-          alt=""
-          src="opera-mac-select-2-closed.png"
-        />
-      </td>
-      <td>
-        <img
-          alt=""
-          src="opera-mac-select-2-open.png"
-        />
-      </td>
-    </tr>
-    <tr>
-      <td>IE11 (Windows 10)</td>
-      <td>
-        <img
-          alt=""
-          src="ie11-select-1-closed.png"
-        />
-      </td>
-      <td>
-        <img
-          alt=""
-          src="ie11-select-1-open.png"
-        />
-      </td>
-      <td>
-        <img
-          alt=""
-          src="ie11-select-2-closed.png"
-        />
-      </td>
-      <td>
-        <img
-          alt=""
-          src="ie11-select-2-open.png"
-        />
-      </td>
-    </tr>
-    <tr>
-      <td>Edge 16 (Windows 10)</td>
-      <td>
-        <img
-          alt=""
-          src="edge-select-1-closed.png"
-        />
-      </td>
-      <td>
-        <img
-          alt=""
-          src="edge-select-1-open.png"
-        />
-      </td>
-      <td>
-        <img
-          alt=""
-          src="edge-select-2-closed.png"
-        />
-      </td>
-      <td>
-        <img
-          alt=""
-          src="edge-select-2-open.png"
-        />
-      </td>
-    </tr>
-  </tbody>
-</table>
+第二个稍微重要的问题是，当你单击 `<select>` 框打开它时，无法控制包含选项的框。你可以继承父代的字体设置，但无法设置间距和颜色等。使用 {{HTMLElement("datalist")}} 出现的自动完成列表也是如此。
 
-如你所见，计时使用了`-*-appearance`属性的帮助，任然有一些遗留的问题：
+如果你真的需要完全控制选项的样式，要么使用某种库来生成自定义控件，要么创建自己的自定义控件，或者在 select 中使用 `multiple` 属性，它可以使所有选项都显示在页面上，从而避免了这个特殊问题：
 
-- 不同的操作系统和浏览器对属性{{cssxref("padding")}} 属性的处理各不相同。
-- Internet Explorer 旧版本不允许平滑样式
-- Firefox 没有实现下拉箭头的样式。
-- 如果要在下拉列表内实现{{HTMLElement("option")}}元素样式，Chrome 和 Opera 浏览器的表现在不同的系统中是不一样的。
+```html
+<label for="select">Select fruits</label>
+<select id="select" name="select" multiple>
+  …
+</select>
+```
 
-在我们的例子中，只使用了三个 CSS 属性，在考虑使用更多 CSS 属性时，可以想象是很混乱的。正如我们看到的，CSS 始终不适合用来修改这些小部件的外观，但是仍然可以用来稍微做一些事情。如果愿意的话，可以演示一下在不同操作系统和浏览器之间的区别。
+当然，这也可能与设计不符，但值得注意！
 
-我们也可以帮助了解在下一章节中哪个属性更合适：[Properties compatibility table for form widgets](/zh-CN/docs/Properties_compatibility_table_for_forms_widgets)
+### 日期输入类型
 
-## 走向更完美表单之路：有用的库和 polyfills（腻子）
+日期/时间输入类型（[`datetime-local`](/zh-CN/docs/Web/HTML/Element/input/datetime-local)、[`time`](/zh-CN/docs/Web/HTML/Element/input/time)、[`week`](/zh-CN/docs/Web/HTML/Element/input/week)、[`month`](/zh-CN/docs/Web/HTML/Element/input/month)）都有相同的主要相关问题。实际的包含框与任何文本输入一样容易设计样式，我们在此演示中使用的样式看起来很好。
 
-虽然对于复选框和单选按钮而言，CSS 的表示方式足够丰富，但是对更高级的小部件来说差距仍然很大。即使可以用{{HTMLElement("select")}}元素作一些事情，但是对 file 小部件的样式完全没用。对于日期选择器也同样如此。
+但是，该控件的内部部分（例如，用于选择日期的弹出日历、用于递增/递减值的旋转器）完全不可样式化，而且无法使用`"appearance: none;` 将其删除。如果你真的需要完全控制样式，必须使用某种库来生成自定义控件，或者创建自己的控件。
 
-要实现对表单小部件的完全控制，你别无选择，只能选择依靠 JavaScript。在文章[How to build custom form widgets](/zh-CN/docs/HTML/Forms/How_to_build_custom_form_widgets)中，我们将看到具体的做法，其中还有一些非常有用的库：
+> **备注：** 值得一提的还有 [`<input type="number">`](/zh-CN/docs/Web/HTML/Element/input/number) ——它也有一个可以用来递增/递减数值的控制按钮，因此也可能存在同样的问题。不过，`number` 类型收集的数据比较简单，使用 `tel` 输入类型就可以了，它的外观与 `text` 相似，但会在使用触摸键盘的设备上显示数字键盘。
 
-- [Uni-form](http://sprawsm.com/uni-form/)是一个对采用 CSS 样式的表单标记实现标准化的框架，在使用 jQuery 时，还提供一些附加特性，但这是可选的。
-- [Formalize](http://formalize.me/)是对公共 JavaScript 框架的扩展（如 jQuery, Dojo, YUI 等），有助于规范和定制表单。
-- [Niceforms](http://www.emblematiq.com/lab/niceforms/)是一个独立的 JavaScript 方法，能提供 web 表单的完整定制。
+### Range 输入类型
 
-下面的库不止应用于表单，他们在处理 HTML 表单时是非常有趣的：
+[`<input type="range">`](/zh-CN/docs/Web/HTML/Element/input/range) 的样式很烦人。你可以使用类似下面的方法完全移除默认的滑块轨道，代之以自定义样式（在本例中为细长的红色轨迹）：
 
-- [jQuery UI](http://jqueryui.com/)做了一些有趣的改进，可以定制象日期选择器（特别关注无障碍）这样的小部件。
-- [Twitter Bootstrap](http://twitter.github.com/bootstrap/base-css.html#forms)在规范表单时是非常有用的。
-- [WebShim](http://afarkas.github.com/webshim/demos/demos/webforms.html)是一个大型工具，可以用来处理浏览器对 HTML5 的支持。对 web 表单部分确实有用。
+```css
+input[type="range"] {
+  appearance: none;
+  background: red;
+  height: 2px;
+  padding: 0;
+  outline: 1px solid transparent;
+}
+```
 
-记住，使用 CSS 和 JavaScript 是有副作用的。所以在选择使用那些库时，应该在脚本失败的情况下能回滚样式表。脚本失败的原因很多，尤其在手机应用中，因此你需要尽可能好的设计你的 Web 站点或应用。
+不过，要自定义范围控件拖动柄的样式非常困难——要完全控制 range 样式，你需要使用一大堆复杂的 CSS 代码，包括多个非标准的、特定于浏览器的伪元素。请查看 CSS 技巧上的[使用 CSS 创建跨浏览器兼容的范围输入样式](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)，了解所需的详细内容。
+
+### 颜色输入类型
+
+颜色类型的输入控件还不错。在支持的浏览器中，它们往往只提供一个带小边框的纯色块。
+
+你可以使用类似下面的方法去掉边框，只留下颜色块：
+
+```css
+input[type="color"] {
+  border: 0;
+  padding: 0;
+}
+```
+
+然而，定制解决方案是获得明显不同效果的唯一途径。
+
+### 文件输入类型
+
+文件类型的输入一般都没问题——正如你在我们的示例中看到的那样，创建与页面其他部分相匹配的输入是相当容易的——如果你告诉输入这样做，作为控件一部分的输出行将继承父字体，而且你可以以任何你想要的方式对文件名和大小的自定义列表进行样式设置；毕竟它是我们创建的。
+
+文件选取器的唯一问题是，用于打开文件选取器的按钮是完全不可样式化的，它不能调整大小或颜色，甚至不能接受不同的字体。
+
+解决这个问题的一个办法是利用这样一个事实，即如果表单控件关联了一个标签，点击标签就会激活该控件。因此，你可以使用类似下面的方法隐藏实际的表单输入：
+
+```css
+input[type="file"] {
+  height: 0;
+  padding: 0;
+  opacity: 0;
+}
+```
+
+然后将标签设计成按钮的样式，按下按钮后就会打开文件选取器：
+
+```css
+label[for="file"] {
+  box-shadow: 1px 1px 3px #ccc;
+  background: linear-gradient(to bottom, #eee, #ccc);
+  border: 1px solid rgb(169, 169, 169);
+  border-radius: 5px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+label[for="file"]:hover {
+  background: linear-gradient(to bottom, #fff, #ddd);
+}
+
+label[for="file"]:active {
+  box-shadow: inset 1px 1px 3px #ccc;
+}
+```
+
+你可以在下面的实时示例中看到上述 CSS 样式的效果（参见 [styled-file-picker.html](https://mdn.github.io/learning-area/html/forms/styling-examples/styled-file-picker.html) 实时示例和 [源代码](https://github.com/mdn/learning-area/blob/main/html/forms/styling-examples/styled-file-picker.html)）。
+
+{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/styled-file-picker.html", '100%', 200)}}
+
+### 计量表和进度条
+
+[`<meter>`](/zh-CN/docs/Web/HTML/Element/meter) 和 [`<progress>`](/zh-CN/docs/Web/HTML/Element/progress) 可能是最糟糕的。正如你在前面的示例中看到的，我们可以相对准确地将它们设置为所需的宽度。但除此之外，就很难对它们进行任何样式设置了。它们不能在不同浏览器之间一致地处理高度设置，你可以给背景上色，但不能给前景栏上色，而且对它们设置 `appearance: none` 只会让情况更糟，而不会更好。
+
+如果想控制样式，为这些功能创建自己的自定义解决方案，或使用第三方解决方案（如 [progressbar.js](https://kimmobrunfeldt.github.io/progressbar.js/#examples)）会更方便。
+
+文章[如何构建自定义表单控件](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls)提供了一个如何使用 HTML、CSS 和 JavaScript 构建自定义设计的选择控件的示例。
 
 ## 总结
 
-虽然 HTML 表单使用 CSS 仍有一些困难，但通常也有方法绕过它们。即使没有清楚的，通用的解决方案，但新式的浏览器也提供了新的可能性。目前最好的方法是更多的学习不同浏览器支持 CSS 的方式，并应用于 HTML 表单小部件。
+虽然在 HTML 表单中使用 CSS 仍有一些困难，但有一些方法可以解决许多问题。虽然没有一劳永逸的通用解决方案，但现代浏览器提供了新的可能性。目前，最好的解决办法是进一步了解不同浏览器在 HTML 表单控件中应用 CSS 时的支持方式。
 
-在本指南的下一章节中，我们将探讨现代浏览器中用于为不同表单状态添加样式的可用的 [UI 伪类](/zh-CN/docs/Learn/Forms/UI_pseudo-classes)。
+在本模块的下一篇文章中，我们将探讨现代浏览器中不同的 [UI 伪类](/zh-CN/docs/Learn/Forms/UI_pseudo-classes)，以便为不同状态的表单设计样式。
 
 {{PreviousMenuNext("Learn/Forms/Styling_web_forms", "Learn/Forms/UI_pseudo-classes", "Learn/Forms")}}
 

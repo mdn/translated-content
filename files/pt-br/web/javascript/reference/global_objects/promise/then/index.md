@@ -3,7 +3,7 @@ title: Promise.prototype.then()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/then
 ---
 
-{{JSRef("Global_Objects", "Promise")}}
+{{JSRef}}
 
 ## Resumo
 

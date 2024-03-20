@@ -3,7 +3,7 @@ title: Símbolo
 slug: Web/JavaScript/Reference/Global_Objects/Symbol
 ---
 
-{{JSRef("Global_Objects", "Symbol")}}
+{{JSRef}}
 
 ## Sumário
 
