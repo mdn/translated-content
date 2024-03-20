@@ -25,27 +25,86 @@ Promise<Response> fetch(input[, init]);
 
 ### 参数
 
-- _?input_
+- `resource`
 
-  - : 定义要获取的资源。这可能是：
+  - : 定义你想要获取的资源。这可能是：
 
-    - 一个 {{domxref("USVString")}} 字符串，包含要获取资源的 URL。一些浏览器会接受 `blob:` 和 `data:` 作为 schemes.
+    - 一个字符串或任何其他具有 {{Glossary("stringifier")}} 的对象，包括 {{domxref("URL")}} 对象——给你提供想要获取的资源的 URL。
     - 一个 {{domxref("Request")}} 对象。
 
-- _init_ {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : 一个配置项对象，包括所有对请求的设置。可选的参数有：
 
-    - `method`: 请求使用的方法，如 `GET`、`POST`。
-    - `headers`: 请求的头信息，形式为 {{domxref("Headers")}} 的对象或包含 {{domxref("ByteString")}} 值的对象字面量。
-    - `body`: 请求的 body 信息：可能是一个 {{domxref("Blob")}}、{{domxref("BufferSource")}}、{{domxref("FormData")}}、{{domxref("URLSearchParams")}} 或者 {{domxref("USVString")}} 对象。注意 GET 或 HEAD 方法的请求不能包含 body 信息。
-    - `mode`: 请求的模式，如 `cors`、`no-cors` 或者 `same-origin`。
-    - `credentials`: 请求的 credentials，如 `omit`、`same-origin` 或者 `include`。为了在当前域名内自动发送 cookie，必须提供这个选项，从 Chrome 50 开始，这个属性也可以接受 {{domxref("FederatedCredential")}} 实例或是一个 {{domxref("PasswordCredential")}} 实例。
-    - `cache`: 请求的 cache 模式：`default`、 `no-store`、 `reload` 、 `no-cache`、 `force-cache` 或者 `only-if-cached`。
-    - `redirect`: 可用的 redirect 模式：`follow` (自动重定向), `error` (如果产生重定向将自动终止并且抛出一个错误），或者 `manual` (手动处理重定向)。在 Chrome 中默认使用 `follow`（Chrome 47 之前的默认值是 `manual`）。
-    - `referrer`: 一个 {{domxref("USVString")}} 可以是 `no-referrer`、`client` 或一个 URL。默认是 `client`。
-    - `referrerPolicy`: 指定了 HTTP 头部 referer 字段的值。可能为以下值之一：`no-referrer`、 `no-referrer-when-downgrade`、`origin`、`origin-when-cross-origin`、 `unsafe-url`。
-    - `integrity`: 包括请求的 [subresource integrity](/zh-CN/docs/Web/Security/Subresource_Integrity) 值（例如： `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`）。
+    - `body`
+      - : 请求的 body 信息：可能是一个 {{domxref("Blob")}}、{{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}}、{{jsxref("DataView")}}、{{domxref("FormData")}}、{{domxref("URLSearchParams")}}、字符串对象或者字符串，或者 {{domxref("ReadableStream")}} 对象。注意 `GET` 或 `HEAD` 方法的请求不能包含 body 信息。
+
+    - `browsingTopics` {{experimental_inline}}
+
+      - : 布尔值，表示当前用户选择的主题是否应该在关联请求的 {{httpheader("Sec-Browsing-Topics")}} 头中发送。参考[使用 Topics API](/zh-CN/docs/Web/API/Topics_API/Using)。
+
+    - `cache`
+
+      - : 字符串，表示请求如何与浏览器的 [HTTP 缓存](/zh-CN/docs/Web/HTTP/Caching)进行交互。可能的值有 `default`、`no-store`、`reload`、`no-cache`、`force-cache` 和 `only-if-cached`，这些取值在 {{domxref("Request")}} 对象的 {{domxref("Request/cache", "cache")}} 属性的文档中有记录。
+
+    - `credentials`
+
+      - : 控制浏览器如何处理（[cookies](/zh-CN/docs/Web/HTTP/Cookies)、[HTTP authentication](/zh-CN/docs/Web/HTTP/Authentication) 条目和 TLS 客户端凭据）。必须是以下字符串之一：
+
+        - `omit`：告诉浏览器在请求中排除凭据，并忽略响应中发送的任何凭据（例如，任何 {{HTTPHeader("Set-Cookie")}} 头）。
+        - `same-origin`：告诉浏览器在请求同源 URL 时包含凭据，并使用来自同源 URL 响应中返回的凭据。**这是默认值。**
+        - `include`：告诉浏览器在同源和跨源请求中都包含凭据，并始终使用响应中返回的凭据。
+
+          > **注意：**凭据可以包含在简单和“最终”的跨源请求中，但不应包含在 [CORS 预检请求](/zh-CN/docs/Web/HTTP/CORS#预检请求)中。
+
+    - `headers`
+
+      - : 任意你想要加到请求上的头部，可以是 {{domxref("Headers")}} 对象或者带有{{jsxref("String", "字符串")}}值的对象字面量。注意[有些头部是被禁止的](/zh-CN/docs/Glossary/Forbidden_header_name)。
+
+        > **注意：**请求里可能会有 [`Authorization`](/zh-CN/docs/Web/HTTP/Headers/Authorization) HTTP 头，但是如果请求跨源重定向的话就会被删除。
+
+    - `integrity`
+
+      - : 包含请求的[子资源完整性](/zh-CN/docs/Web/Security/Subresource_Integrity)值（比如 `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`）。
+
+    - `keepalive`
+      - : `keepalive` 选项可以允许请求持续保持连接，甚至页面已经关闭的情况。使用 `keepalive` 标志的 Fetch 是 {{domxref("Navigator.sendBeacon()")}} API 的一种替代方案。 
+    - `method`
+
+      - : 请求的方法，比如 `"GET"`、`"POST"`，默认值是 `"GET"`。注意 {{HTTPMethod("HEAD")}} 或者 {{HTTPMethod("GET")}} 的 Fetch 请求不会设置 {{httpheader("Origin")}} 头（此行为已在 Firefox 65 中修正——参见 [Firefox bug 1508661](https://bugzil.la/1508661)）。
+        不区分大小写的情况下能匹配上 [RFC 9110](https://www.rfc-editor.org/rfc/rfc9110#name-overview) 中的任意字符串都会自动被转成大小。
+        如果你想使用自定义的方法（比如 `PATCH`），你应该将它变为大写。
+
+    - `mode`
+      - : 你想要使用的模式，比如 `cors`、`no-cors` 或 `same-origin`。
+    - `priority`
+      - : 指定相对于其他同类型的请求的 fetch 请求的优先级。必须是以下字符串之一：
+        - `high`
+          - : 相对于其他同类型的请求而言，这是一个高优先级的 fetch 请求。
+        - `low`
+          - : 相对于其他同类型的请求而言，这是一个低优先级的 fetch 请求。
+        - `auto`
+          - : 自动确定相对于同类型的其他请求的 fetch 请求的优先级（默认）。
+    - `redirect`
+
+      - : 如何处理**重定向**响应：
+
+        - `follow`
+          - : 自动跟随重定向。除非另有说明，否则重定向模式设置为 `follow`。
+        - `error`
+          - : 如果发生重定向，则中止并显示错误。
+        - `manual`
+          - : 调用者打算在另一个上下文中处理响应。详细信息请参阅 [WHATWG fetch standard](https://fetch.spec.whatwg.org/#concept-request-redirect-mode)。
+
+    - `referrer`
+
+      - : 一个指定请求的引用者的字符串。这可以是同源 URL、`about:client` 或空字符串。
+
+    - `referrerPolicy`
+      - : 指定请求所使用的 [referrer policy](https://w3c.github.io/webappsec-referrer-policy/#referrer-policies)。
+      可能是以下其中之一 `no-referrer`、`no-referrer-when-downgrade`、`same-origin`、`origin`、`strict-origin`、`origin-when-cross-origin`、`strict-origin-when-cross-origin` 或者 `unsafe-url`。
+    - `signal`
+      - : 一个 {{domxref("AbortSignal")}} 对象实例；允许您通过 {{domxref("AbortController")}} 与 fetch 请求进行通信，并在需要时中止请求。
 
 ### 返回值
 
