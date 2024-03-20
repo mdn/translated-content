@@ -1,6 +1,8 @@
 ---
 title: 全局函数 fetch()
 slug: Web/API/fetch
+l10n:
+  sourceCommit: 272cd2b471705d5071dd63764ba13b4c46a260d7
 ---
 
 {{APIRef("Fetch API")}}{{AvailableInWorkers}}
