@@ -1,6 +1,8 @@
 ---
-title: CSS Miscellaneous
+title: CSS miscellaneous
 slug: Web/CSS/CSS_miscellaneous
+l10n:
+  sourceCommit: f79a491594ebb5634949ed31b26155973a39166e
 ---
 
 {{CSSRef}}
