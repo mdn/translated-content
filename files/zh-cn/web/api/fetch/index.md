@@ -9,8 +9,7 @@ slug: Web/API/fetch
 
 该 promise 会兑现一个表示请求响应的 {{domxref("Response")}} 对象。
 
-当遇到网络错误（因为权限或其他类似的问题）时，`fetch()` 返回的 promise 才会被 reject。
-`fetch()` 的 promise **不会**因为 HTTP 错误而 reject（比如 `404`），其在 `then()` 里必须检查 {{domxref("Response.ok")}} 和/或 {{domxref("Response.status")}} 属性。
+当遇到网络错误（因为权限或其他类似的问题）时，`fetch()` 返回的 promise 才会被 reject。`fetch()` 的 promise **不会**因为 HTTP 错误而 reject（比如 `404`），其在 `then()` 里必须检查 {{domxref("Response.ok")}} 和/或 {{domxref("Response.status")}} 属性。
 
 `fetch()` 方法由 [Content Security Policy](/zh-CN/docs/Security/CSP/CSP_policy_directives) 的 `connect-src` 指令控制，而不是它请求的资源。
 
