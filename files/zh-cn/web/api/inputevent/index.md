@@ -3,29 +3,37 @@ title: InputEvent
 slug: Web/API/InputEvent
 ---
 
-{{APIRef("DOM Events")}}
-
-{{SeeCompatTable}}<
+{{APIRef("UI Events")}}
 
 **`InputEvent`** 接口用来构造和字符输入相关的事件对象。
+
+{{InheritanceDiagram}}
 
 ## 构造函数
 
 - {{domxref("InputEvent.InputEvent", "InputEvent()")}}
   - : 创建一个 `InputEvent` 对象。
 
-## 属性
+## 实例属性
 
-除继承自 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 接口的属性外，还有以下属性：
+_接口从其父级 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 继承属性。_
 
-- {{domxref("InputEvent.data")}} {{readOnlyInline}}
-  - : 返回当前输入的字符串，如果是删除操作，则该值为空字符串。
-- {{domxref("InputEvent.isComposing")}}{{readOnlyInline}}
-  - : 返回一个布尔值，表明该事件是在触发 [`compositionstart`](/zh-CN/docs/Web/API/Element/compositionstart_event) 事件之后且触发 [`compositionend`](/zh-CN/docs/Web/API/Element/compositionend_event) 事件之前触发的，也就是表明当前输入的字符是输入法的中途输入。
+- {{domxref("InputEvent.data")}} {{ReadOnlyInline}}
+  - : 返回当前输入的字符串，如果插入文本（例如，当删除字符时）则该值为空字符串。
+- {{domxref("InputEvent.dataTransfer")}} {{ReadOnlyInline}}
+  - : 返回一个 {{domxref("DataTransfer")}} 对象，该对象包含有关要添加到可编辑内容，或从可编辑内容中删除的富文本或纯文本数据的信息。
+- {{domxref("InputEvent.inputType")}} {{ReadOnlyInline}}
+  - : 返回对可编辑内容所做更改的类型，可能的更改包括插入、删除和格式化文本等。
+- {{domxref("InputEvent.isComposing")}} {{ReadOnlyInline}}
+  - : 返回一个 {{JSxRef("Boolean")}} 值，表明该事件是在触发 {{domxref("Element/compositionstart_event", "compositionstart")}} 事件之后且触发 {{domxref("Element/compositionend_event", "compositionend")}} 事件之前触发的。
 
-## 方法
+## 实例方法
 
-除继承自 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 接口的方法外，没有其他自身方法。
+_接口从其父级 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 继承方法。_
+
+- {{DOMxRef('InputEvent.getTargetRanges()')}}
+  - : 返回一个 {{domxref("StaticRange")}} 数组，如果不取消输入事件，该数组将受到DOM更改的影响。
+
 
 ## 规范
 
