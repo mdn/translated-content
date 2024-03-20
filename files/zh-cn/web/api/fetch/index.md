@@ -1,6 +1,5 @@
 ---
 title: 全局函数 fetch()
-short-title: fetch()
 slug: Web/API/fetch
 ---
 
