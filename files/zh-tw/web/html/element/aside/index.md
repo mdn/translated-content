@@ -38,7 +38,7 @@ slug: Web/HTML/Element/aside
 
 #### 結果
 
-{{EmbedLiveSample("使用 \<aside>")}}
+{{EmbedLiveSample("使用 aside")}}
 
 ## 技術摘要
 
