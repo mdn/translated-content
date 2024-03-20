@@ -5,7 +5,7 @@ slug: Web/API/fetch
 
 {{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
-全局 **`fetch()`** 方法用于发起获取资源的请求，它会返回一个 promise，该 promise 会在请求响应后 fullfilled。
+全局 **`fetch()`** 方法用于发起获取资源的请求，它会返回一个会在请求响应后兑现的 promise。
 
 该 promise 会 resolve 一个表示请求响应的 {{domxref("Response")}} 对象。
 
