@@ -68,7 +68,7 @@ Promise<Response> fetch(input[, init]);
       - : 包含请求的[子资源完整性](/zh-CN/docs/Web/Security/Subresource_Integrity)值（比如 `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`）。
 
     - `keepalive`
-      - : `keepalive` 选项可以允许请求持续保持连接，甚至页面已经关闭的情况。使用 `keepalive` 标志的 Fetch 是 {{domxref("Navigator.sendBeacon()")}} API 的一种替代方案。 
+      - : `keepalive` 选项可以允许请求持续保持连接，甚至页面已经关闭的情况。使用 `keepalive` 标志的 Fetch 是 {{domxref("Navigator.sendBeacon()")}} API 的一种替代方案。
     - `method`
 
       - : 请求的方法，比如 `"GET"`、`"POST"`，默认值是 `"GET"`。注意 {{HTTPMethod("HEAD")}} 或者 {{HTTPMethod("GET")}} 的 Fetch 请求不会设置 {{httpheader("Origin")}} 头（此行为已在 Firefox 65 中修正——参见 [Firefox bug 1508661](https://bugzil.la/1508661)）。
