@@ -53,7 +53,7 @@ slug: Web/HTML/Element/area
     - `origin`：發送的引用網址將被限制為引用頁面的原始位置：其 [scheme](/zh-TW/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)、{{Glossary("host")}} 和 {{Glossary("port")}}。
     - `origin-when-cross-origin`：發送到其他來源的引用網址將被限制為方案、主機和端口。相同來源的導航仍將包括路徑。
     - `same-origin`：對於 {{Glossary("Same-origin policy", "相同源策略")}}，將發送一個引用網址，但跨來源請求將不包含引用網址信息。
-    - `strict-origin`：僅在協議安全等級保持不變（HTTPS→HTTPS）時發送文檔的原始位置作為引用網址，但不要將其發送到較不安全的目的地（HTTPS→HTTP）。
+    - `strict-origin`：僅在協議安全等級保持不變（HTTPS→HTTPS）時發送文件的原始位置作為引用網址，但不要將其發送到較不安全的目的地（HTTPS→HTTP）。
     - `strict-origin-when-cross-origin`（默認）：在執行同源請求時發送完整 URL，只有在協議安全等級保持不變時（HTTPS→HTTPS）才發送原始位置，並且不將標頭發送到較不安全的目的地（HTTPS→HTTP）。
     - `unsafe-url`：引用網址將包括原始位置和路徑（但不包括[片段](/zh-TW/docs/Web/API/HTMLAnchorElement/hash)、[密碼](/zh-TW/docs/Web/API/HTMLAnchorElement/password)或[用戶名](/zh-TW/docs/Web/API/HTMLAnchorElement/username)）。
       **此值不安全**，因為它會將來自 TLS 保護資源的原始位置和路徑洩漏給不安全的來源。
@@ -61,7 +61,7 @@ slug: Web/HTML/Element/area
 - `rel`
   - ：對包含 [`href`](#href) 屬性的錨點，此屬性指定了目標對象與鏈接對象的關係。
     值是一個以空格分隔的鏈接類型列表。
-    這些值及其語義將由一些可能對文檔作者有意義的機構註冊。
+    這些值及其語義將由一些可能對文件作者有意義的機構註冊。
     如果未給出其他關係，則默認關係是空。只有在 [`href`](#href) 屬性存在時才使用此屬性。
 - `shape`
   - ：關聯熱點的形狀。 HTML 的規範定義了 `rect`，它定義了矩形區域； `circle`，它定義了圓形區域； `poly`，它定義了多邊形；以及 `default`，它表示任何已定義形狀之外的整個區域。
