@@ -1,7 +1,6 @@
 ---
 title: CSS Miscellaneous
 slug: Web/CSS/CSS_miscellaneous
-page-type: css-module
 ---
 
 {{CSSRef}}
