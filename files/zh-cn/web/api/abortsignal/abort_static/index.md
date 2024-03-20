@@ -2,8 +2,6 @@
 title: "AbortSignal: abort() 静态方法"
 short-title: abort()
 slug: Web/API/AbortSignal/abort_static
-page-type: web-api-static-method
-browser-compat: api.AbortSignal.abort_static
 ---
 
 {{APIRef("DOM")}}
