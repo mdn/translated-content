@@ -2,8 +2,6 @@
 title: 全局函数 fetch()
 short-title: fetch()
 slug: Web/API/fetch
-page-type: web-api-global-function
-browser-compat: api.fetch
 ---
 
 {{APIRef("Fetch API")}}{{AvailableInWorkers}}
