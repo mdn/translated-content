@@ -7,7 +7,7 @@ slug: Web/API/fetch
 
 全局 **`fetch()`** 方法用于发起获取资源的请求，它会返回一个会在请求响应后兑现的 promise。
 
-该 promise 会 resolve 一个表示请求响应的 {{domxref("Response")}} 对象。
+该 promise 会兑现一个表示请求响应的 {{domxref("Response")}} 对象。
 
 当遇到网络错误（因为权限或其他类似的问题）时，{{domxref("fetch()")}} 返回的 promise 才会被 reject。
 {{domxref("fetch()")}} 的 promise **不会**因为 HTTP 错误而 reject（比如 `404`），其在 `then()` 里必须检查 {{domxref("Response.ok")}} 和/或 {{domxref("Response.status")}} 属性。
