@@ -49,7 +49,8 @@ column-count: unset;
 
 ```html
 <p class="content-box">
-  这是一段使用 CSS<code>column-count</code> 属性分割成三列的文字。文字平均分布在各栏中。
+  这是一段使用了 CSS<code>column-count</code>
+  属性分割成三列的文字。文字平均分布在各列中，这是最后一段内容。
 </p>
 ```
 
@@ -78,4 +79,4 @@ column-count: unset;
 - {{CSSXref("column-width")}}、{{CSSXref("columns")}} 简写属性
 - {{CSSXref("column-rule-color")}}、{{CSSXref("column-rule-style")}}、{{CSSXref("column-rule-width")}}、{{CSSXref("column-rule")}} 简写属性
 - [多列布局](/zh-CN/docs/Learn/CSS/CSS_layout/Multiple-column_Layout) （学习多列布局属性）
-- [多栏式布局的基础概念](/zh-CN/docs/Web/CSS/CSS_multicol_layout/Basic_concepts)
+- [多列式布局的基础概念](/zh-CN/docs/Web/CSS/CSS_multicol_layout/Basic_concepts)
