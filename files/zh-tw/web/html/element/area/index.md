@@ -104,7 +104,7 @@ slug: Web/HTML/Element/area
 
 ### 結果
 
-{{ EmbedLiveSample('範例', 360, 160) }}
+{{EmbedLiveSample('範例', 360, 160) }}
 
 ## 技術摘要
 
