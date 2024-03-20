@@ -12,7 +12,7 @@ slug: Web/CSS/CSS_miscellaneous
 ### 속성
 
 - {{cssxref("all")}}
-- {{cssxre("text-rendering")}}
+- {{cssxref("text-rendering")}}
 
 ## 명세서
 
