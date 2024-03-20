@@ -28,7 +28,7 @@ Promise<Response> fetch(input[, init]);
 
   - : 定义你想要获取的资源。这可能是：
 
-    - 一个字符串或任何其他具有 {{Glossary("stringifier")}} 的对象，包括 {{domxref("URL")}} 对象——给你提供想要获取的资源的 URL。
+    - 一个字符串或任何其他具有 {{Glossary("stringifier")}} 的对象，包括 {{domxref("URL")}} 对象——提供你想要获取的资源的 URL。
     - 一个 {{domxref("Request")}} 对象。
 
 - `options` {{optional_inline}}
