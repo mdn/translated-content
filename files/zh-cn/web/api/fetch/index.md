@@ -55,7 +55,7 @@ Promise<Response> fetch(input[, init]);
         - `same-origin`：告诉浏览器在请求同源 URL 时包含凭据，并使用来自同源 URL 响应中返回的凭据。**这是默认值。**
         - `include`：告诉浏览器在同源和跨源请求中都包含凭据，并始终使用响应中返回的凭据。
 
-          > **注意：**凭据可以包含在简单和“最终”的跨源请求中，但不应包含在 [CORS 预检请求](/zh-CN/docs/Web/HTTP/CORS#预检请求)中。
+          > **备注：** 凭据可以包含在简单和“最终”的跨源请求中，但不应包含在 [CORS 预检请求](/zh-CN/docs/Web/HTTP/CORS#预检请求)中。
 
     - `headers`
 
