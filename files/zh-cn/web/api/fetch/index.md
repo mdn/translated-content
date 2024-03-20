@@ -37,6 +37,7 @@ Promise<Response> fetch(input[, init]);
   - : 一个配置项对象，包括所有对请求的设置。可选的参数有：
 
     - `body`
+
       - : 请求的 body 信息：可能是一个 {{domxref("Blob")}}、{{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}}、{{jsxref("DataView")}}、{{domxref("FormData")}}、{{domxref("URLSearchParams")}}、字符串对象或者字符串，或者 {{domxref("ReadableStream")}} 对象。注意 `GET` 或 `HEAD` 方法的请求不能包含 body 信息。
 
     - `browsingTopics` {{experimental_inline}}
