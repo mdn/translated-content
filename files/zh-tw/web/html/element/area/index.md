@@ -120,7 +120,7 @@ slug: Web/HTML/Element/area
     </tr>
     <tr>
       <th scope="row">允許內容</th>
-      <td>無；它是一個 {{Glossary("void element", "空元素")}}。</td>
+      <td>無，它是一個 {{Glossary("void element")}}。</td>
     </tr>
     <tr>
       <th scope="row">標籤省略</th>
@@ -129,7 +129,7 @@ slug: Web/HTML/Element/area
     <tr>
       <th scope="row">允許的父元素</th>
       <td>
-        任何接受<a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容">段落型內容</a>的元素。 <code>&#x3C;area></code> 元素必須具有祖先 {{HTMLElement("map")}}，但不必是直接父元素。
+        任何接受<a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容">段落型內容</a>的元素。<code>&#x3C;area></code> 元素必須具有祖先 {{HTMLElement("map")}}，但不必是直接父元素。
       </td>
     </tr>
     <tr>

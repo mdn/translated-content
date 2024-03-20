@@ -5,13 +5,13 @@ slug: Web/HTML/Element/big
 
 {{HTMLSidebar}}{{deprecated_header}}
 
-**`<big>`** [HTML](/en-US/docs/Web/HTML) 廢棄的元素會將所包含的文字呈現為比周圍文字大一個級別的字體大小（例如 `medium` 變為 `large`）。該大小限制在瀏覽器允許的最大字體大小之內。
+**`<big>`** [HTML](/zh-TW/docs/Web/HTML) 廢棄的元素會將所包含的文字呈現為比周圍文字大一個級別的字體大小（例如 `medium` 變為 `large`）。該大小限制在瀏覽器允許的最大字體大小之內。
 
 > **警告：** 這個元素已從規範中刪除，不應再使用。請使用 CSS {{cssxref("font-size")}} 屬性來調整字體大小。
 
 ## 屬性
 
-這個元素除了[全域屬性](/en-US/docs/Web/HTML/Global_attributes) 之外，沒有其他屬性，這些屬性對所有元素都通用。
+這個元素除了[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes) 之外，沒有其他屬性，這些屬性對所有元素都通用。
 
 ## 範例
 
