@@ -94,7 +94,7 @@ Promise<Response> fetch(input[, init]);
         - `error`
           - : 如果发生重定向，则中止并显示错误。
         - `manual`
-          - : 调用者打算在另一个上下文中处理响应。详细信息请参阅 [WHATWG fetch standard](https://fetch.spec.whatwg.org/#concept-request-redirect-mode)。
+          - : 调用者打算在另一个上下文中处理响应。详细信息请参阅 [WHATWG fetch 规范](https://fetch.spec.whatwg.org/#concept-request-redirect-mode)。
 
     - `referrer`
 
