@@ -1,6 +1,5 @@
 ---
-title: "AbortSignal: abort() 静态方法"
-short-title: abort()
+title: AbortSignal：abort() 静态方法
 slug: Web/API/AbortSignal/abort_static
 ---
 
