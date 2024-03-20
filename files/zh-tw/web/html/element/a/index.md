@@ -61,7 +61,7 @@ slug: Web/HTML/Element/a
     - `origin`：發送的引用者將僅限於引用頁面的來源：其 [協定](/zh-TW/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)、{{Glossary("host")}} 和 {{Glossary("port")}}。
     - `origin-when-cross-origin`：發送給其他來源的引用者將僅限於協定、主機和端口。對同一來源的導航仍將包含路徑。
     - `same-origin`：對於 {{Glossary("Same-origin policy", "同一來源")}}，將發送引用者，但跨來源請求將不包含引用者信息。
-    - `strict-origin`：僅在協定安全級別保持不變時（HTTPS→HTTPS）發送文檔的源作為引用者，但不要將其發送給不太安全的目的地（HTTPS→HTTP）。
+    - `strict-origin`：僅在協定安全級別保持不變時（HTTPS→HTTPS）發送文件的源作為引用者，但不要將其發送給不太安全的目的地（HTTPS→HTTP）。
     - `strict-origin-when-cross-origin`（默認值）：對於同一來源請求，發送完整的 URL；僅在協定安全級別保持不變時（HTTPS→HTTPS）發送源；對於不太安全的目的地（HTTPS→HTTP），不發送標頭。
     - `unsafe-url`：引用者將包括來源*和*路徑（但不包括 [片段](/zh-TW/docs/Web/API/HTMLAnchorElement/hash)、[密碼](/zh-TW/docs/Web/API/HTMLAnchorElement/password) 或 [用戶名](/zh-TW/docs/Web/API/HTMLAnchorElement/username)）。**此值不安全**，因為它將來自 TLS 保護資源的來源和路徑洩露給不安全的來源。
 
