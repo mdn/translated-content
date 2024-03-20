@@ -51,7 +51,7 @@ Promise<Response> fetch(input[, init]);
 
       - : 控制浏览器如何处理凭据（[cookie](/zh-CN/docs/Web/HTTP/Cookies)、[HTTP authentication](/zh-CN/docs/Web/HTTP/Authentication) 条目和 TLS 客户端证书）。必须是以下字符串之一：
 
-        - `omit`：告诉浏览器在请求中排除凭据，并忽略响应中发送的任何凭据（例如，任何 {{HTTPHeader("Set-Cookie")}} 头）。
+        - `omit`：告诉浏览器在请求中排除凭据，并忽略响应中发送的任何凭据（例如，任何 {{HTTPHeader("Set-Cookie")}} 标头）。
         - `same-origin`：告诉浏览器在请求同源 URL 时包含凭据，并使用来自同源 URL 响应中返回的凭据。**这是默认值。**
         - `include`：告诉浏览器在同源和跨源请求中都包含凭据，并始终使用响应中返回的凭据。
 
