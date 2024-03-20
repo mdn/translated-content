@@ -196,7 +196,7 @@ CSSOM 树包括来自用户代理样式表的样式。浏览器从适用于节�
 
 一旦主线程绘制页面完成，你会认为我们已经“准备好了”，但事实并非如此。如果加载包括正确延迟加载的 JavaScript，并且仅在 [`onload`](/zh-CN/docs/Web/API/Window/load_event) 事件触发后执行，那么主线程可能会忙于执行脚本，无法用于滚动、触摸和其他交互操作。
 
-{{glossary('Time to Interactive', '可交互时间（TTI）')}}是测量从第一个请求导致 DNS 查询和 SSL 连接到页面可交互时所用的时间——可交互是在 {{glossary('First Contentful Paint')}} 之后页面在 50ms 内响应用户的交互。如果主线程正在解析、编译和执行 JavaScript，则无法及时（小于 50 毫秒）响应用户交互。
+{{glossary('Time to Interactive', '可交互时间（TTI）')}}是测量从第一个请求导致 DNS 查询和 SSL 连接到页面可交互时所用的时间——可交互是在{{glossary('First Contentful Paint', '首次内容绘制')}}之后页面在 50ms 内响应用户的交互。如果主线程正在解析、编译和执行 JavaScript，则无法及时（小于 50ms）响应用户交互。
 
 在我们的示例中，可能图像加载很快，但 `anotherscript.js` 文件的大小可能是 2MB，而且用户的网络连接很慢。在这种情况下，用户可以非常快地看到页面，但是在下载、解析和执行脚本之前，就无法滚动。这不是一个好的用户体验。避免占用主线程，如下面的网页测试示例所示：
 
