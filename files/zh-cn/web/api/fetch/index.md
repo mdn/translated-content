@@ -87,7 +87,7 @@ Promise<Response> fetch(input[, init]);
           - : 自动确定相对于同类型的其他请求的 fetch 请求的优先级（默认）。
     - `redirect`
 
-      - : 如何处理**重定向**响应：
+      - : 如何处理重定向（`redirect`）响应：
 
         - `follow`
           - : 自动跟随重定向。除非另有说明，否则重定向模式设置为 `follow`。
