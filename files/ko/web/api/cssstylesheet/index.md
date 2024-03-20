@@ -22,7 +22,7 @@ h2 {
 }
 ```
 
-또 다른 규칙은 {{cssxref("@import")}} 또는 {{cssxref("@media")}} 등과 같은 @규칙일 수 있습니다.
+또 다른 규칙은 {{cssxref("@import")}} 또는 {{cssxref("@media")}} 등과 같은 규칙일 수 있습니다.
 
 `CSSStyleSheet` 객체를 얻을 수 있는 다양한 방법을 알아보려면 [스타일 시트 얻기](#스타일_시트_얻기) 부분을 살펴보세요. 또한 `CSSStyleSheet`는 직접 생성될 수 있습니다. 그 생성자와 {{domxref("CSSStyleSheet.replace()")}}, {{domxref("CSSStyleSheet.replaceSync()")}} 메서드들은 새롭게 추가된 명세들로, '생성가능한 스타일 시트'를 사용가능하게 합니다.
 
@@ -70,7 +70,7 @@ h2 {
 
 - {{domxref("CSSStyleSheet.addRule", "addRule()")}} {{Deprecated_Inline}}
 
-  - : 적용될 셀렉터와 일치하는 요소들에 적용할 스타일을 고려하여 새로운 규칙을 스타일 시트에 추가합니다.
+  - : 적용될 선택자와 일치하는 요소들에 적용할 스타일을 고려하여 새로운 규칙을 스타일 시트에 추가합니다.
 
     이 메서드는 모든 규칙의 텍스트 표현을 하나의 문자열로 받는 {{domxref("CSSStyleSheet.insertRule", "insertRule()")}}과는 다릅니다.
 
