@@ -288,7 +288,7 @@ td {
 
 {{domxref("HTMLDocument", "文档")}}中的每个 {{HTMLElement("table")}} 的每个表头（{{HTMLElement("th")}}元素）都添加了一个点击事件处理程序；它会根据行中包含的数据单元格（{{HTMLElement("td")}} 元素）的内容对 {{HTMLElement("tbody")}} 的所有行（`<tr>` 元素）进行排序。
 
-> **备注:** 此解决方案假设 {{HTMLElement("td")}} 元素由原始文本填充，没有后代元素。
+> **备注：** 此解决方案假设 {{HTMLElement("td")}} 元素由原始文本填充，没有后代元素。
 
 ```js
 const allTables = document.querySelectorAll("table");
@@ -369,7 +369,7 @@ th {
     <tr>
       <th scope="row">允许的父元素</th>
       <td>
-        {{HTMLElement("table")}}（仅当表格没有 {{HTMLElement("tbody")}} 子元素时，即便如此，也只能在任何 {{HTMLElement("caption")}}、{{HTMLElement("colgroup")}} 和 {{HTMLElement("thead")}} 元素之后）；否则，父元素必须是  {{HTMLElement("thead")}}、{{HTMLElement("tbody")}} 或 {{HTMLElement("tfoot")}} 元素。
+        {{HTMLElement("table")}}（仅当表格没有 {{HTMLElement("tbody")}} 子元素时，即便如此，也只能在任何 {{HTMLElement("caption")}}、{{HTMLElement("colgroup")}} 和 {{HTMLElement("thead")}} 元素之后）；否则，父元素必须是 {{HTMLElement("thead")}}、{{HTMLElement("tbody")}} 或 {{HTMLElement("tfoot")}} 元素。
       </td>
     </tr>
     <tr>
