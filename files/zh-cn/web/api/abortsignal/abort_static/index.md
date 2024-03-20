@@ -32,7 +32,7 @@ AbortSignal.abort(reason)
 ### 参数
 
 - `reason`
-  - : 操作被中止的原因，可以是任意的 JavaScript 值。如果没有指定原因，则默认设置为 “AbortError” {{domxref("DOMException")}}。
+  - : 操作被中止的原因，可以是任意的 JavaScript 值。如果没有指定原因，则默认设置为“AbortError” {{domxref("DOMException")}}。
 
 ### 返回值
 
