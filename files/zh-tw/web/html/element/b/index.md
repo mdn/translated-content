@@ -51,16 +51,16 @@ Keywords are displayed with the default style of the
         <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
           >流內容</a
         >、
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#段落型内容"
-          >段落型内容</a
+        <a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
+          >段落型內容</a
         >、捫及內容。
       </td>
     </tr>
     <tr>
       <th scope="row">允許的內容</th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#段落型内容"
-          >段落型内容</a
+        <a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
+          >段落型內容</a
         >。
       </td>
     </tr>
@@ -71,8 +71,8 @@ Keywords are displayed with the default style of the
     <tr>
       <th scope="row">允許的父元素</th>
       <td>
-        任何接受<a href="/zh-TW/docs/Web/HTML/Content_categories#段落型内容"
-          >段落型内容</a
+        任何接受<a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
+          >段落型內容</a
         >的元素。
       </td>
     </tr>
