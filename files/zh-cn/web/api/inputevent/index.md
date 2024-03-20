@@ -32,8 +32,7 @@ _接口从其父级 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 继承属性
 _接口从其父级 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 继承方法。_
 
 - {{DOMxRef('InputEvent.getTargetRanges()')}}
-  - : 返回一个 {{domxref("StaticRange")}} 数组，如果不取消输入事件，该数组将受到DOM更改的影响。
-
+  - : 返回一个 {{domxref("StaticRange")}} 数组，如果不取消输入事件，该数组将受到 DOM 更改的影响。
 
 ## 规范
 
