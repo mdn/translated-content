@@ -7,15 +7,15 @@ l10n:
 
 {{APIRef("CSS Custom Highlight API")}}
 
-[CSS Custom Highlight API](/zh-CN/docs/Web/API/CSS_Custom_Highlight_API) 的 **`Highlight`** 接口用于表示使用此 API 在文档上设置样式的 {{domxref("Range")}} 集合。
+[CSS 自定义高亮 API](/zh-CN/docs/Web/API/CSS_Custom_Highlight_API) 的 **`Highlight`** 接口用于表示使用此 API 在文档上设置样式的 {{domxref("Range")}} 实例集合。
 
 要为页面中的任意范围添加样式，可实例化一个新的 `Highlight` 对象，向其中添加一个或多个 `Range` 对象，然后使用 {{domxref("HighlightRegistry")}} 注册该对象。
 
-`Highlight` 是一个 [类 Set 对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_browser_apis)，可以容纳一个或多个 `Range` 对象。
+`Highlight` 实例是一个 [类 `Set` 对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set#类_set_浏览器_api)，可以容纳一个或多个 `Range` 对象。
 
 {{InheritanceDiagram}}
 
-## 构造器
+## 构造函数
 
 - {{domxref("Highlight.Highlight()", "Highlight()")}}
   - : 返回新创建的 `Highlight` 对象。
@@ -27,7 +27,7 @@ _`Highlight` 接口不继承任何属性。_
 - {{domxref("Highlight.priority")}}
   - : 表示此 `Highlight` 对象优先级的数字。当多个高亮重叠时，浏览器会根据该优先级来决定如何为重叠部分添加样式。
 - {{domxref("Highlight.size")}} {{ReadOnlyInline}}
-  - : 返回 `Highlight` 对象中范围的数量。
+  - : 返回 `Highlight` 对象中 range 的数量。
 - {{domxref("Highlight.type")}}
   - : 用于说明该高亮语义的可枚举 {{jsxref("String")}}。这样，辅助技术在向用户展示高亮时就能包含该语义。
 
@@ -48,7 +48,7 @@ _`Highlight` 接口不继承任何方法。_
 - {{domxref("Highlight.has()")}}
   - : 返回一个布尔值来指示对应的范围是否存在于该高亮对象中。
 - {{domxref("Highlight.keys()")}}
-  - : 是 {{domxref("Highlight.values()")}} 方法的别名。
+  - : {{domxref("Highlight.values()")}} 方法的别名。
 - {{domxref("Highlight.values()")}}
   - : 返回一个新的迭代器对象，该对象包含此高亮对象中每个范围，按插入顺序排列。
 
