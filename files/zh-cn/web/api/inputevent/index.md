@@ -3,6 +3,8 @@ title: InputEvent
 slug: Web/API/InputEvent
 l10n:
   sourceCommit: 8ca15ba7933a738cf632a9bbf5cfd4e90d1a97b1
+l10n:
+  sourceCommit: 8ca15ba7933a738cf632a9bbf5cfd4e90d1a97b1
 ---
 
 {{APIRef("UI Events")}}
