@@ -757,7 +757,7 @@ Object.hasOwn(g, "addVertex"); // falso
 Object.getPrototypeOf(g).hasOwnProperty("addVertex"); // verdadero
 ```
 
-Nota: **no** es suficiente verificar si una propiedad es [`undefinida`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined). Es muy posible que la propiedad exista, pero resulta que su valor está establecido en `undefined`.
+Nota: **no** es suficiente verificar si una propiedad es [`undefinida`](/es/docs/Web/JavaScript/Reference/Global_Objects/undefined). Es muy posible que la propiedad exista, pero resulta que su valor está establecido en `undefined`.
 
 ## Conclusión
 
