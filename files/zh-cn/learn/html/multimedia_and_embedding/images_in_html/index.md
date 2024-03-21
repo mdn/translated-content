@@ -222,9 +222,7 @@ https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-e
 <div class="output" style="min-height: 50px;"></div>
 
 <h2>可编辑代码</h2>
-<p class="a11y-label">
-  按 ESC 退出编辑区域（按 Tab 可插入制表符）
-</p>
+<p class="a11y-label">按 ESC 退出编辑区域（按 Tab 可插入制表符）</p>
 
 <textarea id="code" class="input" style="min-height: 100px; width: 95%">
 <img>
