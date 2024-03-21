@@ -5,7 +5,7 @@ slug: Web/API/InputEvent
 
 {{APIRef("UI Events")}}
 
-**`InputEvent`** 接口用来构造和字符输入相关的事件对象。
+**`InputEvent`** 接口表示通知用户可编辑内容更改的事件。
 
 {{InheritanceDiagram}}
 
