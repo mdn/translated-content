@@ -5,7 +5,7 @@ slug: Web/CSS/column-rule-color
 
 {{CSSRef}}
 
-**`column-rule-color`** [CSS](/zh-CN/docs/Web/CSS) 属性中设置在多列布局中列与列之间绘制的线的颜色。
+**`column-rule-color`** [CSS](/zh-CN/docs/Web/CSS) 属性设置在多列布局中列与列之间绘制的线的颜色。
 
 {{EmbedInteractiveExample("pages/css/column-rule-color.html")}}
 
@@ -31,7 +31,7 @@ column-rule-color: unset;
 ### 取值
 
 - {{cssxref("&lt;color&gt;")}}
-  - : 用于单独设立列的规则的颜色。
+  - : 用于单独设置列之间分割线的颜色。
 
 ## 形式定义
 
@@ -43,13 +43,15 @@ column-rule-color: unset;
 
 ## 示例
 
-### 设置列的颜色为蓝色
+### 设置列分割线为蓝色
 
 #### HTML
 
 ```html
 <p>
-  这是分成三列的文本。在<code>column-rule-color</code>属性中用于更改列与列之间的线条颜色。修改列之间线条的颜色。你不觉得这很棒吗？
+  这是分成三列的文本。用
+  <code>column-rule-color</code>
+  属性更改了列与列之间的线条颜色。你不觉得这很棒吗？
 </p>
 ```
 
@@ -65,7 +67,7 @@ p {
 
 #### 结果
 
-{{EmbedLiveSample("设置列的颜色为蓝色")}}
+{{EmbedLiveSample("设置列分割线为蓝色")}}
 
 ## 规范
 
@@ -78,5 +80,5 @@ p {
 ## 参见
 
 - 颜色 {{cssxref("&lt;color&gt;")}} 数据类型
-- 其他颜色相关属性：{{cssxref("background-color")}}、{{cssxref("border-color")}}、{{cssxref("outline-color")}}、{{cssxref("text-decoration-color")}}、{{cssxref("text-emphasis-color")}}、{{cssxref("text-shadow")}}、{{cssxref("caret-color")}}、{{cssxref("print-color-adjust")}}
+- 其他颜色相关属性：{{cssxref("color")}}、{{cssxref("background-color")}}、{{cssxref("border-color")}}、{{cssxref("outline-color")}}、{{cssxref("text-decoration-color")}}、{{cssxref("text-emphasis-color")}}、{{cssxref("text-shadow")}} 和 {{cssxref("caret-color")}}
 - [使用 CSS 为 HTML 元素应用颜色](/zh-CN/docs/Web/CSS/CSS_colors/Applying_color)
