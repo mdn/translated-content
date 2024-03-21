@@ -71,7 +71,7 @@ console.log(o.d); // undefined (indefinido)
 // No se encontró la propiedad, se devuelve undefined (indefinido)
 ```
 
-Dar valor a una propiedad de un objeto crea una propiedad. La única excepción a las reglas de funcionamiento de obtener y dar valores ocurre cuando hay una propiedad heredada con un [getter o un setter](/en-US/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters).
+Dar valor a una propiedad de un objeto crea una propiedad. La única excepción a las reglas de funcionamiento de obtener y dar valores ocurre cuando hay una propiedad heredada con un [getter o un setter](/es/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters).
 
 De manera similar, puede crear cadenas de prototipos más largas y se buscará una propiedad en todas ellas.
 
