@@ -10,7 +10,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/with
 ## 语法
 
 ```js-nolint
-with(index, value)
+arrayInstance.with(index, value)
 ```
 
 ### 参数
