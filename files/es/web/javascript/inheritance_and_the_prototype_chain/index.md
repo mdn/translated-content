@@ -23,7 +23,7 @@ Los objetos en JavaScript son "contenedores" dinámicos de propiedades (referida
 >
 > No debe confundirse con la propiedad de funciones `func.prototype`, que en cambio especifican el `[[Prototype]]` que se asigna a todas las _instancias_ de los objetos creados por la función dada cuando se usa como constructor. Discutiremos la propiedad `prototype` de las funciones constructoras en [una sección posterior](#constructores).
 
-Hay varias formas de especificar el `[[Prototype]]` de un objeto, que se enumeran en [una sección posterior](# Different_ways_of_creating_and_mutating_prototype_chains). Por ahora, usaremos la sintaxis [`__proto__`](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#prototype_setter) como ilustración. Vale la pena señalar que la sintaxis `{ __proto__: ... }` es diferente del descriptor de acceso `obj.__proto__`: el primero es estándar y no está obsoleto.
+Hay varias formas de especificar el `[[Prototype]]` de un objeto, que se enumeran en [una sección posterior](# Different_ways_of_creating_and_mutating_prototype_chains). Por ahora, usaremos la sintaxis [`__proto__`](/es/docs/Web/JavaScript/Reference/Operators/Object_initializer#prototype_setter) como ilustración. Vale la pena señalar que la sintaxis `{ __proto__: ... }` es diferente del descriptor de acceso `obj.__proto__`: el primero es estándar y no está obsoleto.
 
 En un objeto literal como `{ a: 1, b: 2, __proto__: c }`, el valor `c` (que tiene que ser `null` u otro objeto) se convertirá en el `[[Prototype]]` de el objeto representado por el literal, mientras que las otras claves como `a` y `b` se convertirán en las _propias propiedades_ del objeto. Esta sintaxis se lee de forma muy natural, ya que `[[Prototype]]` es sólo una "propiedad interna" del objeto.
 
