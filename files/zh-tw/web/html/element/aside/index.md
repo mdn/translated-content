@@ -76,9 +76,9 @@ slug: Web/HTML/Element/aside
     <tr>
       <th scope="row">允許的父元素</th>
       <td>
-        任何接受 <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+        任何接受<a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
           >流內容</a
-        > 的元素。請注意，<code>&#x3C;aside></code> 元素不能是 {{HTMLElement("address")}} 元素的後代。
+        >的元素。請注意，<code>&#x3C;aside></code> 元素不能是 {{HTMLElement("address")}} 元素的後代。
       </td>
     </tr>
     <tr>
