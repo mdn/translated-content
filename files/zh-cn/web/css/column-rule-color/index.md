@@ -49,7 +49,9 @@ column-rule-color: unset;
 
 ```html
 <p>
-    这是分成三列的文本。用 <code>column-rule-color</code> 属性更改了列与列之间的线条颜色。你不觉得这很棒吗？
+  这是分成三列的文本。用
+  <code>column-rule-color</code>
+  属性更改了列与列之间的线条颜色。你不觉得这很棒吗？
 </p>
 ```
 
