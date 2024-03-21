@@ -67,11 +67,11 @@ l10n:
 <img src="https://www.example.com/images/dinosaur.jpg" alt="恐龙" />
 ```
 
-然而，不建议使用绝对 URL 进行链接。你需要托管你想要在网站上使用的图像，在比较简单的情况下，通常我们会把网站的图像保存在与 HTML 相同的服务器上。此外，从维护的角度来说，使用相对 URL 比绝对 URL 更有效率（当你将网站迁移到不同的域名时，你不需要更新所有 URL，使其包含新域名）。在更高级的设置中，你可能会使用[内容分发网络（CDN）](https://developer.mozilla.org/zh-CN/docs/Glossary/CDN)来传递图像。
+然而，不建议使用绝对 URL 进行链接。你需要托管你想要在网站上使用的图像，在比较简单的情况下，通常我们会把网站的图像保存在与 HTML 相同的服务器上。此外，从维护的角度来说，使用相对 URL 比绝对 URL 更有效率（当你将网站迁移到不同的域名时，你不需要更新所有 URL，使其包含新域名）。在更高级的设置中，你可能会使用[内容分发网络（CDN）](/zh-CN/docs/Glossary/CDN)来传递图像。
 
 如果这些图像并非由你创建，你应该查看它们发布的许可证条款，确保自己有使用它们的权限（有关更多信息，请参阅下面的[媒体资产和许可证](#media_assets_and_licensing)）。
 
-> **警告：** *未经许可*，*绝不要*将 `src` 属性指向其他网站上的图像。这被称为“热链接（hotlinking）”。大多数人认为这是不道德的，因为这会导致每当有人访问你的页面，都会有另一些不知情的人为图像交付带宽费用。这也导致你无法掌控图像，图像有可能在你不知情的情况下，被删除或替换为尴尬的内容。
+> **警告：** _未经许可_，*绝不要*将 `src` 属性指向其他网站上的图像。这被称为“热链接（hotlinking）”。大多数人认为这是不道德的，因为这会导致每当有人访问你的页面，都会有另一些不知情的人为图像交付带宽费用。这也导致你无法掌控图像，图像有可能在你不知情的情况下，被删除或替换为尴尬的内容。
 
 无论是使用绝对 URL 还是相对 URL，上述代码片段将会得到以下结果：
 
@@ -79,7 +79,7 @@ l10n:
 
 > **备注：** 像 {{htmlelement("img")}} 和 {{htmlelement("video")}} 这样的元素有时被称为**替换元素（replaced elements）**。这是因为元素的内容和大小由外部资源（如图像或视频文件）定义，而不是由元素本身的内容定义。你可以在[替换元素](/zh-CN/docs/Web/CSS/Replaced_element)中了解更多相关信息。
 
->**备注：** 你也可以在 [“在 GitHub 上运行”教程](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html)找到本节中的完成示例（请参阅[源代码](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/images-in-html/index.html)）。
+> **备注：** 你也可以在 [“在 GitHub 上运行”教程](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html)找到本节中的完成示例（请参阅[源代码](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/images-in-html/index.html)）。
 
 ### 备选文本
 
@@ -173,8 +173,8 @@ l10n:
 
 > **备注：** 虽然如我们所说，使用 HTML 属性来指定图片的*实际*大小是一个好的实践，但你不应该使用它们来*调整*图片的大小。
 >
-> 如果设置的图片大小过大，你的图片将看起来粗糙、模糊或太小，不仅浪费带宽而且图片还不符合用户需求。如果[长宽比](https://zh.wikipedia.org/wiki/長寬比_(影像))不正确，图片也可能会变形。在将图片放到网页上之前，你应使用图像编辑器将其设置为正确的大小。
-> 
+> 如果设置的图片大小过大，你的图片将看起来粗糙、模糊或太小，不仅浪费带宽而且图片还不符合用户需求。如果[长宽比](<https://zh.wikipedia.org/wiki/長寬比_(影像)>)不正确，图片也可能会变形。在将图片放到网页上之前，你应使用图像编辑器将其设置为正确的大小。
+>
 > 如果确实需要更改图片的大小，应该使用 [CSS](/zh-CN/docs/Learn/CSS) 来实现。
 
 ### 图像标题
@@ -223,7 +223,7 @@ https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-e
 
 <h2>可编辑代码</h2>
 <p class="a11y-label">
-  按 ESC 退出编辑区域（按 Tab 可插入制表符）.
+  按 ESC 退出编辑区域（按 Tab 可插入制表符）
 </p>
 
 <textarea id="code" class="input" style="min-height: 100px; width: 95%">
@@ -330,8 +330,8 @@ function insertAtCaret(text) {
 // 每当用户更新文本区域的代码时，更新保存的 userCode
 
 textarea.onkeyup = function () {
-// 我们只希望在显示用户代码时保存状态，
-// 而不保存解决方案，以防止解决方案覆盖用户代码
+  // 我们只希望在显示用户代码时保存状态，
+  // 而不保存解决方案，以防止解决方案覆盖用户代码
   if (solution.value === "显示答案") {
     userEntry = textarea.value;
   } else {
@@ -431,9 +431,7 @@ Copyleft 许可在软件界中很常见。其基本思想是使用 copyleft 许�
     width="400"
     height="341" />
 
-  <figcaption>
-    曼彻斯特大学博物馆展出的一只霸王龙的化石
-  </figcaption>
+  <figcaption>曼彻斯特大学博物馆展出的一只霸王龙的化石</figcaption>
 </figure>
 ```
 
@@ -464,9 +462,7 @@ figure 可以是几张图片、一段代码、音视频、方程、表格或类�
 <div class="output" style="min-height: 50px;"></div>
 
 <h2>可编辑代码</h2>
-<p class="a11y-label">
-  按 ESC 退出编辑区域，按 Tab 可插入制表符
-</p>
+<p class="a11y-label">按 ESC 退出编辑区域，按 Tab 可插入制表符</p>
 
 <textarea
   id="code"
