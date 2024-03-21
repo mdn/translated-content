@@ -1,6 +1,8 @@
 ---
 title: const
 slug: Web/JavaScript/Reference/Statements/const
+l10n:
+  sourceCommit: 4f86aad2b0b66c0d2041354ec81400c574ab56ca
 ---
 
 {{jsSidebar("Statements")}}
@@ -46,7 +48,7 @@ const FOO; // SyntaxError: Missing initializer in const declaration
 
 许多代码风格指南（包括 [MDN 的指南](/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript#变量声明)建议当变量在其作用域中不会重新赋值时使用 `const` 而不是 {{jsxref("Statements/let", "let")}}。这样可以清晰地表达变量的类型（或值，如果是原始类型的情况下）永远不会改变的意图。对非原始值可能改变的情况下其他人可能更喜欢使用 `let`。
 
-紧跟在 `const` 关键字后面的列表被称为*{{Glossary("绑定")}}列表*，用逗号分隔，其中逗号*不是*[逗号运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comma_operator)，`=` 符号*不是*[赋值运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment)。后面变量的初始值可以引用列表中的前面变量。
+紧跟在 `const` 关键字后面的列表被称为[_绑定_](/zh-CN/docs/Glossary/Binding)_列表_，用逗号分隔，其中逗号*不是*[逗号运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comma_operator)，`=` 符号*不是*[赋值运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment)。后面变量的初始值可以引用处在列表前面的变量。
 
 ## 示例
 
@@ -58,11 +60,10 @@ const FOO; // SyntaxError: Missing initializer in const declaration
 // 定义常量 MY_FAV 并赋值为 7
 const MY_FAV = 7;
 
-console.log("我最喜欢的数字是：" + MY_FAV);
+console.log(`我最喜欢的数字是：${MY_FAV}`);
 ```
 
 ```js-nolint example-bad
-// Re-assigning to a constant variable throws an error
 // 对常量变量重新赋值会引发错误
 MY_FAV = 20; // TypeError: Assignment to constant variable
 
