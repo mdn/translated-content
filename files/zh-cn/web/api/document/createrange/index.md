@@ -9,7 +9,7 @@ slug: Web/API/Document/createRange
 
 ## 语法
 
-```plain
+```js-nolint
 createRange();
 ```
 
