@@ -19,7 +19,7 @@ createRange();
 
 ## 返回值
 
-一个 {{domxref("Range")}} 对象。
+所创建的 {{domxref("Range")}} 对象。
 
 ## 示例
 
