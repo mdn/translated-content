@@ -1,11 +1,13 @@
 ---
 title: Document：createRange() 方法
 slug: Web/API/Document/createRange
+l10n:
+  sourceCommit: 73016bea54a98f70dc2aaad0724d0d421ef9839c
 ---
 
 {{APIRef("DOM")}}
 
-返回一个 {{domxref("Range")}} 对象。
+**`Docuemnt.createRange()`** 方法返回一个新的 {{domxref("Range")}} 对象。
 
 ## 语法
 
