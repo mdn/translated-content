@@ -1,5 +1,5 @@
 ---
-title: Document.createRange()
+title: Document：createRange() 方法
 slug: Web/API/Document/createRange
 ---
 
