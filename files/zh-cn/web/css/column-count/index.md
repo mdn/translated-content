@@ -49,7 +49,7 @@ column-count: unset;
 
 ```html
 <p class="content-box">
-  这是一段使用了 CSS<code>column-count</code>
+  这是一段使用了 CSS <code>column-count</code>
   属性分割成三列的文字。文字平均分布在各列中，这是最后一段内容。
 </p>
 ```
