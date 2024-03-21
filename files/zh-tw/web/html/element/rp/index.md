@@ -21,7 +21,7 @@ slug: Web/HTML/Element/rp
 
 ### 使用 ruby 注釋
 
-此示例使用 ruby 注釋顯示每個字符的[羅馬拼音](https://en.wikipedia.org/wiki/Romaji) 等價詞。
+此範例使用 ruby 注釋顯示每個字符的[羅馬拼音](https://zh.wikipedia.org/zh-tw/日语罗马字) 等價詞。
 
 ```html
 <ruby>

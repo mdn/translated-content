@@ -19,7 +19,7 @@ slug: Web/HTML/Element/rt
 
 ### 使用 ruby 注釋
 
-此簡單示例為 {{HTMLElement("ruby")}} 元素中的漢字字符提供了羅馬字音譯：
+此簡單範例為 {{HTMLElement("ruby")}} 元素中的漢字字符提供了羅馬字音譯：
 
 ```html
 <ruby> 漢 <rt>Kan</rt> 字 <rt>ji</rt> </ruby>
