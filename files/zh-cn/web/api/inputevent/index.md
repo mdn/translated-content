@@ -19,13 +19,13 @@ slug: Web/API/InputEvent
 _接口从其父级 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 继承属性。_
 
 - {{domxref("InputEvent.data")}} {{ReadOnlyInline}}
-  - : 返回当前输入的字符串，如果插入文本（例如，当删除字符时）则该值为空字符串。
+  - : 返回包含插入字符的字符串，如果更改没有插入文本（例如删除字符时）则该值为空字符串。
 - {{domxref("InputEvent.dataTransfer")}} {{ReadOnlyInline}}
   - : 返回一个 {{domxref("DataTransfer")}} 对象，该对象包含有关要添加到可编辑内容，或从可编辑内容中删除的富文本或纯文本数据的信息。
 - {{domxref("InputEvent.inputType")}} {{ReadOnlyInline}}
-  - : 返回对可编辑内容所做更改的类型，可能的更改包括插入、删除和格式化文本等。
+  - : 返回对可编辑内容所做更改的类型，例如插入、删除或格式化文本。
 - {{domxref("InputEvent.isComposing")}} {{ReadOnlyInline}}
-  - : 返回一个 {{JSxRef("Boolean")}} 值，表明该事件是在触发 {{domxref("Element/compositionstart_event", "compositionstart")}} 事件之后且触发 {{domxref("Element/compositionend_event", "compositionend")}} 事件之前触发的。
+  - : 返回一个 {{JSxRef("Boolean")}} 值，表明该事件是否在触发 {{domxref("Element/compositionstart_event", "compositionstart")}} 事件之后且触发 {{domxref("Element/compositionend_event", "compositionend")}} 事件之前触发的。
 
 ## 实例方法
 
