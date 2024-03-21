@@ -13,7 +13,35 @@ slug: Web/CSS/:blank
 
 ## 语法
 
-{{CSSSyntax}}
+```css
+:blank {
+  /* ... */
+}
+```
+
+## 示例
+
+### 一个简单使用:blank 的示例
+
+在最终支持该功能的浏览器中，`:blank` 伪类将使开发人员能够以某种方式突出显示那些不是必填项，但仍然没有填入内容的输入控件，可能作为对用户的提醒。
+
+#### HTML
+
+```html
+<textarea></textarea>
+```
+
+#### CSS
+
+```css
+textarea:blank {
+  border: 3px solid red;
+}
+```
+
+#### 结果
+
+{{EmbedLiveSample('一个简单使用:blank 的示例', '100%', 150)}}
 
 ## 规范
 
