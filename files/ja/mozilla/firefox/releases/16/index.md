@@ -5,7 +5,7 @@ slug: Mozilla/Firefox/Releases/16
 
 Firefox 16 は、2012 年 10 月 9 日にリリースされました。この記事では、ウェブ開発者に知らせるだけでなく、Firefox や Gecko 開発者、アドオン開発者にも役立つ主な変更点のリストを掲載しています。
 
-## Web 開発者向けの変更点一覧
+## ウェブ開発者向けの変更点一覧
 
 ### HTML
 
@@ -33,11 +33,11 @@ Firefox 16 は、2012 年 10 月 9 日にリリースされました。この記
 
 ### API/DOM
 
-- `width` と `height` の 2 つの新しいプロパティが {{ domxref("HTMLInputElement") }} インタフェースに追加されました。([bug 683855](https://bugzilla.mozilla.org/show_bug.cgi?id=683855))
+- `width` と `height` の 2 つの新しいプロパティが {{ domxref("HTMLInputElement") }} インターフェイスに追加されました。([bug 683855](https://bugzilla.mozilla.org/show_bug.cgi?id=683855))
 - IndexedDB プロパティとメソッドが接頭辞無しになりました。([bug 726378](https://bugzilla.mozilla.org/show_bug.cgi?id=726378))
 - [Battery API](/ja/docs/DOM/window.navigator.battery) が接頭辞なしになりました。
 - Vibration API が接頭辞なしになりました。
-- 現在も接頭辞付きの `mozKeyboard` である {{domxref("Keyboard")}} インタフェースが、{{domxref("Keyboard.setSelectedOption()")}} および {{domxref("Keyboard.setValue()")}} メソッドと {{domxref("Keyboard.onfocuschange")}} プロパティを持つようになりました。
+- 現在も接頭辞付きの `mozKeyboard` である {{domxref("Keyboard")}} インターフェイスが、{{domxref("Keyboard.setSelectedOption()")}} および {{domxref("Keyboard.setValue()")}} メソッドと {{domxref("Keyboard.onfocuschange")}} プロパティを持つようになりました。
 - `Window.java` および `Window.packages` 属性を削除しました。これらは文書化されたことがなく、おそらく皆さんは使用していないでしょう!
 - {{ domxref("CSSNamespaceRule") }} に結びつけられている `CSSRule.type` を、`UNKNOWN_RULE` (`0`) から `NAMESPACE_RULE` (`10`) に更新しました。([bug 765590](https://bugzilla.mozilla.org/show_bug.cgi?id=765590))
 - WebSMS API: {{domxref("SmsRequest")}} は、より一般的な {{domxref("DOMRequest")}} に置き換えられました。
@@ -66,8 +66,8 @@ _変更なし。_
 
 ### 開発者ツール
 
-- 便利な開発ツールバーを実装しており、ツール > Web 開発 > 開発ツールバー から、あるいは Ctrl-Shift-V (Mac OS X では Cmd-Opt-V) を押して呼び出すことができます。このツールバーは、ボタンと同じように便利なツールをすばやく呼び出せるコマンドラインインタフェースを提供します。Graphical command line interface ([GCLI](/ja/docs/Tools/GCLI)) は、将来の拡張やコマンドの追加が容易であると期待されています。"help" と入力すると、サポートしているコマンドの一覧を得られます。
-- Web コンソールがエラーの回数を表示するようになり、この先あなたの作業がどれだけあるかをすばやく見ることができます。
+- 便利な開発ツールバーを実装しており、ツール > ウェブ開発 > 開発ツールバー から、あるいは Ctrl-Shift-V (Mac OS X では Cmd-Opt-V) を押して呼び出すことができます。このツールバーは、ボタンと同じように便利なツールをすばやく呼び出せるコマンドラインインターフェイスを提供します。Graphical command line interface ([GCLI](/ja/docs/Tools/GCLI)) は、将来の拡張やコマンドの追加が容易であると期待されています。"help" と入力すると、サポートしているコマンドの一覧を得られます。
+- ウェブコンソールがエラーの回数を表示するようになり、この先あなたの作業がどれだけあるかをすばやく見ることができます。
 - スクラッチパッドが、最近開いたファイルの一覧を提供するようになりました。
 
 ## Open Web App 開発者向けの変更点
@@ -76,12 +76,12 @@ _変更なし。_
 
 ## アドオンと Mozilla 開発者向け
 
-### インタフェースの変更点
+### インターフェイスの変更点
 
 `nsIPrivateDOMEvent` が `nsIDOMEvent` に併合されました ([Firefox バグ 761613](https://bugzil.la/761613))。
 
-#### 新しいインタフェース
+#### 新しいインターフェイス
 
-#### 削除されたインタフェース
+#### 削除されたインターフェイス
 
-以下のインタフェースが削除されました。
+以下のインターフェイスが削除されました。

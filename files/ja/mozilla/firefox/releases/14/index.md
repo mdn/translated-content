@@ -65,7 +65,7 @@ Gecko で新しい [HTTP](/ja/docs/Web/HTTP) [`308 Permanent Redirect`](/ja/docs
 
 - `nsILocalFile` インターフェイスは `nsIFile` にマージされました ([bug 682360](https://bugzilla.mozilla.org/show_bug.cgi?id=682360))。
 - ブックマークをインポートするための `nsIPlacesImportExportService` におけるメソッドは [`BookmarkHTMLUtils.jsm`](/ja/docs/JavaScript_code_modules/BookmarkHTMLUtils.jsm) JavaScript コードモジュールの利用を促すために削除されました。
-- `nsIDOMGeoPositionAddress` インターフェースは削除されました。
+- `nsIDOMGeoPositionAddress` インターフェイスは削除されました。
 - `getItemGUID`, `setItemGUID`, `getItemIdForGUID` の各メソッドが `nsINavBookmarksService` から削除されました ([Firefox バグ 715355](https://bugzil.la/715355))。
 
 ### スペルチェック

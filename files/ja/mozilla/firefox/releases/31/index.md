@@ -55,7 +55,7 @@ l10n:
 - `InputEvent` インターフェイスを実装しました ([Firefox バグ 993253](https://bugzil.la/993253))。
 - `InputEvent.isComposing` 属性を実装しました ([Firefox バグ 993253](https://bugzil.la/993253))。
 - {{domxref("CSS.escape", "CSS.escape()")}} を実装しました ([Firefox バグ 955860](https://bugzil.la/955860))。
-- 他のブラウザと同様に {{domxref("Element/mousemove_event", "mousemove")}} がキャンセル可能になりました ([Firefox バグ 704423](https://bugzil.la/704423))。`preventDefault()` の呼び出しは `defaultPrevented` 属性に `true` を設定するだけであり、他の動作は変わりません。たとえば、`:hover` ステートの設定を抑止することはできません。
+- 他のブラウザーと同様に {{domxref("Element/mousemove_event", "mousemove")}} がキャンセル可能になりました ([Firefox バグ 704423](https://bugzil.la/704423))。`preventDefault()` の呼び出しは `defaultPrevented` 属性に `true` を設定するだけであり、他の動作は変わりません。たとえば、`:hover` ステートの設定を抑止することはできません。
 - {{domxref("Path2D")}} インターフェイスが実装されました。
 - {{domxref("CanvasRenderingContext2D.isPointInPath()")}}、{{domxref("CanvasRenderingContext2D.isPointInStroke()")}}、{{domxref("CanvasRenderingContext2D.clip()")}}、{{domxref("CanvasRenderingContext2D.fill()")}}、{{domxref("CanvasRenderingContext2D.stroke()")}} メソッドがオプションで {{domxref("Path2D")}} オブジェクトを受け付けるように更新されました。
 - {{domxref("HTMLMediaElement.fastSeek()")}} を実装しました。
