@@ -16,9 +16,9 @@ l10n:
 initial-letter: normal;
 
 /* 数值 */
-initial-letter: 1.5; /* 初始字母占据了 1.5 行 */
-initial-letter: 3; /* 初始字母占据了 3 行 */
-initial-letter: 3 2; /* 初始字母占据了 3 行
+initial-letter: 1.5; /* 首字母占据了 1.5 行 */
+initial-letter: 3; /* 首字母占据了 3 行 */
+initial-letter: 3 2; /* 首字母占据了 3 行
                         并下沉了 2 行 */
 
 /* 全局值 */
