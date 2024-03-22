@@ -33,7 +33,7 @@ l10n:
 ## 인스턴스 메서드
 
 - {{jsxref("Intl/RelativeTimeFormat/format", "Intl.RelativeTimeFormat.prototype.format()")}}
-  - : 주어진 `Intl.RelativeTimeFormat` 객체의 로케일과 형식 옵션에 따라 `value` 과 `unit`의 형식을 맞춥니다. value및 unit를, 지정된 Intl.RelativeTimeFormat오브젝트의 로케일과 서식화 옵션에 따라 서식화합니다.
+  - : 주어진 `Intl.RelativeTimeFormat` 객체의 로케일과 형식 옵션에 따라 `value` 과 `unit`의 형식을 맞춥니다.
 - {{jsxref("Intl/RelativeTimeFormat/formatToParts", "Intl.RelativeTimeFormat.prototype.formatToParts()")}}
   - : 사용자 지정 로케일 형식에 사용할 수 있는 상대 시간의 형식을 부분적으로 표현한 {{jsxref("Array")}} 객체를 반환합니다.
 - {{jsxref("Intl/RelativeTimeFormat/resolvedOptions", "Intl.RelativeTimeFormat.prototype.resolvedOptions()")}}
@@ -43,7 +43,7 @@ l10n:
 
 ### 기본 포맷 사용하기
 
-다음 예제는 `locales` 매개변수가 영어로 지정된 `Intl.RelativeTimeFormat(locales, options)`의 작동 예시를 보여줍니다.
+다음 예제는 영어를 사용한 상대 시간 형식을 변환하는 객체를 보여줍니다.
 
 ```js
 // 상대 시간 형식을 변환하는 객체를 명시적인 기본 값과 함께 만듭니다.
@@ -62,7 +62,7 @@ rtf.format(1, "day"); // "in 1 day"
 
 ### formatToParts 사용하기
 
-다음 예제는 `Intl.RelativeTimeFormat()`이 부분별로 형식화된 결과 값을 반환하는 방법을 보여줍니다.
+다음 예제는 요소 형식으로 반환하는 상대 시간 형식을 변환하는 객체를 보여줍니다.
 
 ```js
 const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
