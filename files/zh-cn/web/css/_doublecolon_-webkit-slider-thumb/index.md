@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}{{SeeCompatTable}}
 
-**`::-webkit-slider-thumb`** CSS [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements) 代表“拇指”，用户可以在 {{HTMLElement("input")}} 中 `type="range"` 的“凹槽”内移动它来更改其数值。
+**`::-webkit-slider-thumb`** CSS [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)代表 {{HTMLElement("input")}} 元素的滑块按钮，用户可以拖动 `type="range"` 按钮来改变其数值。
 
 ## 语法
 
