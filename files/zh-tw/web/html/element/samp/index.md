@@ -5,7 +5,7 @@ slug: Web/HTML/Element/samp
 
 {{HTMLSidebar}}
 
-**`<samp>`** [HTML](/zh-TW/docs/Web/HTML) 元素用於封裝代表電腦程式的樣本（或引用）輸出的內嵌文本。其內容通常使用瀏覽器的預設等寬字體呈現（如 [Courier](<https://en.wikipedia.org/wiki/Courier_(typeface)>) 或 Lucida Console）。
+**`<samp>`** [HTML](/zh-TW/docs/Web/HTML) 元素用於封裝代表電腦程式的樣本（或引用）輸出的內嵌文本。其內容通常使用瀏覽器的預設等寬字體呈現（如 [Courier](https://zh.wikipedia.org/wiki/Courier) 或 Lucida Console）。
 
 {{EmbedInteractiveExample("pages/tabbed/samp.html", "tabbed-shorter")}}
 
