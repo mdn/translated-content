@@ -21,7 +21,7 @@ l10n:
 
 例如，如果一家公司的 [wordmark](https://en.wikipedia.org/wiki/Wordmark) 中使用了改变的基线，那么使用 `<sub>` 对公司名称进行样式调整就不合适；相反，应该使用 CSS。例如，可以使用 {{cssxref("vertical-align")}} 属性，并声明 `vertical-align: sub`，或者更精确地控制基线移动，使用 `vertical-align: -25%`。
 
-<sub>` 的适当用例包括（但不限于）：
+`<sub>` 的适当用例包括（但不限于）：
 
 - 标记脚注编号。参见[脚注编号](#脚注编号)以了解示例。
 - 标注数学变量编号中的下标（当然，也可以考虑使用 [MathML](/zh-CN/docs/Web/MathML) 公式来标注）。参见[变量下标](#变量下标)。
