@@ -43,7 +43,7 @@ textarea:blank {
 
 #### 结果
 
-{{EmbedLiveSample('使用 :blank 的简单示例, '100%', 150)}}
+{{EmbedLiveSample('使用 :blank 的简单示例', '100%', 150)}}
 
 ## 规范
 
