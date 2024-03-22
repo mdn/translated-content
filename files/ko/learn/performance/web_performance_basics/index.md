@@ -15,13 +15,13 @@ l10n:
 - [`rel=preconnect`](/ko/docs/Web/HTML/Attributes/rel/preconnect), [`rel=dns-prefetch`](/ko/docs/Web/HTML/Attributes/rel/dns-prefetch), [`rel=prefetch`](/ko/docs/Web/HTML/Attributes/rel/prefetch), [`rel=preload`](/ko/docs/Web/HTML/Attributes/rel/preload)와 같은 리소스 힌트를 사용하세요.
 - JavaScript의 크기를 [최소화](https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4)하세요. 현재 페이지에 필요한 JavaScript만 사용하세요.
 - [CSS](/ko/docs/Learn/Performance/CSS) 성능 요소 고려.
-- 서버 (또는 CDN에) {{Glossary("HTTP_2", "HTTP/2")}}를 사용하세요.
+- 서버(또는 CDN)에 {{Glossary("HTTP_2", "HTTP/2")}}를 사용하세요.
 - [gzip](https://www.gnu.org/software/gzip/), [Brotli](https://github.com/google/brotli), and [Zopfli](https://github.com/google/zopfli)를 사용하여 리소스를 압축하세요.
 - 이미지 최적화 (CSS 애니메이션 또는 가능하다면 SVG 사용하기).
 - 뷰포트 외부의 애플리케이션 부분을 지연 로딩하기. 그렇게 할 경우, SEO를 위한 백업 계획을 마련하세요 (예: 봇 트래픽에 대해 전체 페이지 렌더). 예를 들어, {{HTMLElement("img")}} 요소에 [`loading`](/ko/docs/Web/HTML/Element/img#loading) 속성 사용하기.
 - 사용자에게 정말 중요한 것이 무엇인지 인지하는 것도 중요합니다. 절대적인 타이밍이 아닌 [사용자 인식](/ko/docs/Learn/Performance/Perceived_performance)이 중요할 수 있습니다.
 
-## 빠르게 적용해보기
+## 빠르게 적용해 보기
 
 ### CSS
 
@@ -52,7 +52,7 @@ CSS를 비동기적으로 로드하려면 media 타입을 print로 설정한 다
 
 ### 웹 폰트
 
-EOT와 TTF 형식은 기본적으로 압축되지 않습니다. 이러한 파일 유형들에 대해 GZIP 또는 Brotli와 같은 압축을 적용하세요. WOFF와 WOFF2를 사용하세요. 이 형식들은 내장 압축을 가지고 있습니다.
+EOT와 TTF 형식은 기본적으로 압축되지 않습니다. 이러한 파일 유형들에 대해 GZIP 또는 Brotli와 같은 압축을 적용하세요. WOFF와 WOFF2를 사용하세요. 이 형식들은 압축이 내장되어 있습니다.
 
 @font-face 내에서 font-display: swap을 사용하세요. font display swap을 사용하면 브라우저는 렌더링을 차단하지 않고 정의된 백업 시스템 폰트를 사용할 것입니다. 웹 폰트와 가능한 한 유사하도록 [font weight](/ko/docs/Web/CSS/font-weight)를 최적화하세요.
 
