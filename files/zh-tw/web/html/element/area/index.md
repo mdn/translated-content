@@ -28,11 +28,11 @@ slug: Web/HTML/Element/area
     值為 CSS 像素的數字。
 
 - `download`
-  - : 如果存在此屬性，則表示作者打算使用該超鏈接下載資源。有關 [`download`](/zh-TW/docs/Web/HTML/Element/a#download) 屬性的詳細描述，請參見 {{HTMLElement("a")}}。
+  - : 如果存在此屬性，則表示作者打算使用該超連結下載資源。有關 [`download`](/zh-TW/docs/Web/HTML/Element/a#download) 屬性的詳細描述，請參見 {{HTMLElement("a")}}。
 - `href`
-  - : 區域的超鏈接目標。它的值是有效的 URL。如果省略此屬性，則 `<area>` 元素不表示超鏈接。
+  - : 區域的超連結目標。它的值是有效的 URL。如果省略此屬性，則 `<area>` 元素不表示超連結。
 - `ping`
-  - : 包含一個以空格分隔的 URL 列表，當點擊超鏈接時，瀏覽器（後台）將發送帶有 `PING` 主體的 {{HTTPMethod("POST")}} 請求到這些 URL。通常用於跟蹤。
+  - : 包含一個以空格分隔的 URL 列表，當點擊超連結時，瀏覽器（後台）將發送帶有 `PING` 主體的 {{HTTPMethod("POST")}} 請求到這些 URL。通常用於跟蹤。
 - `referrerpolicy`
 
   - : 指示在提取資源時使用哪個引用網址的字符串：
