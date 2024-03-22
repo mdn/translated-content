@@ -5,7 +5,7 @@ slug: Web/API/FileSystemHandle/remove
 
 {{securecontext_header}}{{APIRef("File System Access API")}}{{SeeCompatTable}}{{Non-standard_header}}
 
-{{domxref("FileSystemHandle")}} 接口的 **`remove()`** 方法用于向底层文件系统请求移除句柄所代表的的条目。
+{{domxref("FileSystemHandle")}} 接口的 **`remove()`** 方法用于向底层文件系统请求移除句柄所代表的条目。
 
 `remove()` 方法允许你用对应的句柄直接移除一个文件或一个目录。如果没有这个方法，你就必须先获取句柄的父目录，然后调用其上的 {{domxref("FileSystemDirectoryHandle.removeEntry()")}} 来移除文件或目录。
 

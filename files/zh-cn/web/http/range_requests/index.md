@@ -117,7 +117,7 @@ If-Range: Wed, 21 Oct 2015 07:28:00 GMT
 
 {{HTTPHeader("Transfer-Encoding")}} 首部允许分块编码，这在数据量很大，并且在请求未能完全处理完成之前无法知晓响应的体积大小的情况下非常有用。服务器会直接把数据发送给客户端而无需进行缓冲或确定响应的精确大小——后者会增加延迟。范围请求与分块传输是兼容的，可以单独或搭配使用。
 
-## 相关内容
+## 参见
 
 - 相关状态码： {{HTTPStatus("200")}}, {{HTTPStatus("206")}}, {{HTTPStatus("416")}}.
 - 相关首部： {{HTTPHeader("Accept-Ranges")}}, {{HTTPHeader("Range")}}, {{HTTPHeader("Content-Range")}}, {{HTTPHeader("If-Range")}}, {{HTTPHeader("Transfer-Encoding")}}.

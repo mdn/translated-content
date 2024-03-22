@@ -40,7 +40,7 @@ Django 是使用 Python 语言编写的一个广受欢迎且功能完整的服�
 - [Django Tutorial Part 9: 使用表单](/zh-CN/docs/Learn/Server-side/Django/Forms)
   - : 本教程，我们将向你展示如何使用 Django 中的[HTML 表单](/zh-CN/docs/Web/Guide/HTML/Forms)，特别是编写创建表单，更新和删除模型实例的最简单方法。作为此次演示的一部分，我们将扩展本地图书馆网站，以便图书馆员可以使用我们自己的表单 (而不是使用管理应用程序) 来更新书籍，创建，更新和删除作者。
 - [Django Tutorial Part 10:测试 Django Web 应用程序](/zh-CN/docs/Learn/Server-side/Django/Testing)
-  - : 随着网站的的发展，手工测试越来越难测试—不仅要测试更多，而且随着组件之间的相互作用变得越来越复杂，一个领域的一个小的变化可能需要许多额外的测试来验证其对其他领域的影响。减轻这些问题的一种方法是编写自动化测试，每次更改时都可以轻松可靠地运行。本教程将介绍如何使用 Django 的测试框架对你的网站进行**单元测试**自动化。
+  - : 随着网站的发展，手工测试越来越难测试—不仅要测试更多，而且随着组件之间的相互作用变得越来越复杂，一个领域的一个小的变化可能需要许多额外的测试来验证其对其他领域的影响。减轻这些问题的一种方法是编写自动化测试，每次更改时都可以轻松可靠地运行。本教程将介绍如何使用 Django 的测试框架对你的网站进行**单元测试**自动化。
 - [Django Tutorial Part 11: 将 Django 部署到生产](/zh-CN/docs/Learn/Server-side/Django/Deployment)
   - : 现在，你已创建（并测试）一个酷的 本地图书馆网站，你将要把它安装在公共 Web 服务器上，以便图书馆员工和成员可以通过 Internet 访问。本文概述了如何找到主机来部署你的网站，以及你需要做什么才能使你的网站准备好进行生产。
 - [Django web 应用程序安全](/zh-CN/docs/Learn/Server-side/Django/web_application_security)

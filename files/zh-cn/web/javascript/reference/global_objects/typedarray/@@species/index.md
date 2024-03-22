@@ -58,7 +58,7 @@ class MyTypedArray extends Uint8Array {
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{jsxref("TypedArray")}}
 - {{jsxref("Symbol.species")}}

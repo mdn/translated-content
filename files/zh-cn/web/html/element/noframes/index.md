@@ -31,7 +31,7 @@ slug: Web/HTML/Element/noframes
 </frameset>
 ```
 
-## 另见
+## 参见
 
 - {{HTMLElement("frameset")}}
 - {{HTMLElement("frame")}}

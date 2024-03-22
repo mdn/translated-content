@@ -77,7 +77,7 @@ console.log(result); // 3
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{jsxref("String.prototype.search()")}}
 - {{jsxref("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}

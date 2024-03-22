@@ -2382,6 +2382,7 @@
 /zh-CN/docs/Web/HTML/Element/basefont	/zh-CN/docs/Web/CSS/CSS_fonts
 /zh-CN/docs/Web/HTML/Element/bgsound	/zh-CN/docs/Web/HTML/Element/audio
 /zh-CN/docs/Web/HTML/Element/content	/zh-CN/docs/Web/HTML/Element/slot
+/zh-CN/docs/Web/HTML/Element/image	/zh-CN/docs/Web/HTML/Element/img
 /zh-CN/docs/Web/HTML/Element/video/timeupdate_event	/zh-CN/docs/Web/API/HTMLMediaElement/timeupdate_event
 /zh-CN/docs/Web/HTML/Element/视频	/zh-CN/docs/Web/HTML/Element/video
 /zh-CN/docs/Web/HTML/Element/选项	/zh-CN/docs/Web/HTML/Element/option
@@ -2389,6 +2390,7 @@
 /zh-CN/docs/Web/HTML/Forms/How_to_build_custom_form_widgets	/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls
 /zh-CN/docs/Web/HTML/Forms/Sending_forms_through_JavaScript	/zh-CN/docs/Learn/Forms/Sending_forms_through_JavaScript
 /zh-CN/docs/Web/HTML/Forms/表单入门	/zh-CN/docs/Learn/Forms/Your_first_form
+/zh-CN/docs/Web/HTML/Global_attributes/contextmenu	/zh-CN/docs/Web/HTML/Element/menu
 /zh-CN/docs/Web/HTML/Global_attributes/摩缺	/zh-CN/docs/Web/HTML/Global_attributes/accesskey
 /zh-CN/docs/Web/HTML/Index	/zh-CN/docs/Web/HTML
 /zh-CN/docs/Web/HTML/Inline_elemente	/zh-CN/docs/Glossary/Inline-level_content
@@ -2692,8 +2694,9 @@
 /zh-CN/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Introduction	/zh-CN/docs/Web/Progressive_web_apps/Tutorials/js13kGames
 /zh-CN/docs/Web/Progressive_web_apps/加载	/zh-CN/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Loading
 /zh-CN/docs/Web/Progressive_web_apps/添加到主屏幕	/zh-CN/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable
+/zh-CN/docs/Web/SVG/Attribute/Styling	/zh-CN/docs/Web/SVG/Attribute
 /zh-CN/docs/Web/SVG/Attribute/文本锚点	/zh-CN/docs/Web/SVG/Attribute/text-anchor
-/zh-CN/docs/Web/SVG/Attribute/样式	/zh-CN/docs/Web/SVG/Attribute/Styling
+/zh-CN/docs/Web/SVG/Attribute/样式	/zh-CN/docs/Web/SVG/Attribute
 /zh-CN/docs/Web/SVG/Element/animateColor	/zh-CN/docs/Web/SVG/Element/animate
 /zh-CN/docs/Web/SVG/Element/圆	/zh-CN/docs/Web/SVG/Element/circle
 /zh-CN/docs/Web/SVG/Element/多边形	/zh-CN/docs/Web/SVG/Element/polygon
