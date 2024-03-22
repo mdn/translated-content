@@ -31,7 +31,7 @@ l10n:
 - `media-document()`
   - : 根据参数中的字符串匹配媒体查询，匹配其中之一：`video`、 `image`、 `plugin` 或 `all`。
 - `regexp()` {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : 匹配文档的 URL 是否和参数中指定的 [正则表达式](zh-CN/docs/Web/JavaScript/Guide/Regular_expressions) 匹配，该表达式必须匹配整个 URL。
+  - : 匹配文档的 URL 是否和参数中指定的 [正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions) 匹配，该表达式必须匹配整个 URL。
 
 提供给 `url()`、 `url-prefix()`、 `domain()` 和 `media-document() ` 函数的参数可以不使用引号括起来。但提供给 `regexp()` 函数的参数必须用引号括起来。
 
