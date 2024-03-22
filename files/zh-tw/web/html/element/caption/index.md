@@ -5,7 +5,7 @@ slug: Web/HTML/Element/caption
 
 {{HTMLSidebar}}
 
-**`<caption>`** [HTML](/zh-TW/docs/Web/HTML) 元素用於指定表格的標題或標題，為表格提供了一個{{glossary("accessible description"),("無障礙描述")}}。
+**`<caption>`** [HTML](/zh-TW/docs/Web/HTML) 元素用於指定表格的標題或標題，為表格提供了一個{{glossary("accessible description", "無障礙描述")}}。
 
 {{EmbedInteractiveExample("pages/tabbed/caption.html", "tabbed-taller")}}
 
