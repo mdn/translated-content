@@ -16,7 +16,11 @@ div:target-within {
 
 ## Syntaxe
 
-{{CSSSyntax}}
+```css
+:target-within {
+  /* ... */
+}
+```
 
 ## Exemples
 
