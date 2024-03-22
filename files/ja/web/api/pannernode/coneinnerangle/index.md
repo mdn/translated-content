@@ -1,6 +1,9 @@
 ---
-title: PannerNode.coneInnerAngle
+title: "PannerNode: coneInnerAngle プロパティ"
+short-title: coneInnerAngle
 slug: Web/API/PannerNode/coneInnerAngle
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
 {{ APIRef("Web Audio API") }}

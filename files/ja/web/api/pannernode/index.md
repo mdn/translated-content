@@ -1,6 +1,8 @@
 ---
 title: PannerNode
 slug: Web/API/PannerNode
+l10n:
+  sourceCommit: 4e9294d45c5d338be7799cc6d65f1867b87d7fc0
 ---
 
 {{ APIRef("Web Audio API") }}
@@ -43,7 +45,7 @@ slug: Web/API/PannerNode
 - {{domxref("PannerNode.PannerNode", "PannerNode()")}}
   - : 新しい `PannerNode` オブジェクトを作成します。
 
-## プロパティ
+## インスタンスプロパティ
 
 _親である {{domxref("AudioNode")}} からプロパティを継承しています。_
 
@@ -78,7 +80,7 @@ _親である {{domxref("AudioNode")}} からプロパティを継承してい�
 - {{domxref("PannerNode.rolloffFactor")}}
   - : 音源が聴取者から離れていく際に起きる音量の低減量を定めます。この値は、全ての距離モデルで利用されます。
 
-## メソッド
+## インスタンスメソッド
 
 _親である {{domxref("AudioNode")}} のメソッドを継承しています。_
 
@@ -86,12 +88,10 @@ _親である {{domxref("AudioNode")}} のメソッドを継承しています�
   - : 聞き手（{{domxref("BaseAudioContext.listener")}} 属性に格納された {{domxref("AudioListener")}} オブジェクトで表される）からの音源の相対位置を定義します。
 - {{domxref("PannerNode.setOrientation()")}} {{deprecated_inline}}
   - : 音源が再生されている方向を設定します。
-- {{domxref("PannerNode.setVelocity()")}} {{deprecated_inline}}
-  - : 音源の速度を表したベクトルです。移動する速さと方向を表しています。以前の仕様では下流に接続された{{domxref("AudioBufferSourceNode")}} のピッチを上げ下げするために、{{domxref("PannerNode")}} は速度を表す属性を持っていました。この機能は明確に定義されておらず、問題も多かったため、現在の仕様からは削除されています。
 
 ## 例
 
-コード例については [`BaseAudioContext.createPanner()`](/ja/docs/Web/API/BaseAudioContext/createPanner#example) を参照してください。
+コード例については [`BaseAudioContext.createPanner()`](/ja/docs/Web/API/BaseAudioContext/createPanner#例) を参照してください。
 
 ## 仕様書
 
