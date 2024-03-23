@@ -57,16 +57,16 @@ The following changes were made to the [`CanvasRenderingContext2D`](/ja/docs/Web
   - : 新しい CSS transitions サポートが Firefox 4 では利用できるようになりました。
 - CSS での算出値
   - : [`-moz-calc`](/ja/docs/Web/CSS/-moz-calc) のサポートが追加されました。これを用いることで、[`<length>`](/ja/docs/Web/CSS/length) の値を数式で指定できます。
-- セレクタのグルーピング
-  - : セレクタをグループ化しコンビネータを分解する [`:-moz-any`](/ja/docs/Web/CSS/:-moz-any) がサポートされました。
+- セレクターのグルーピング
+  - : セレクターをグループ化しコンビネータを分解する [`:-moz-any`](/ja/docs/Web/CSS/:-moz-any) がサポートされました。
 - 背景画像の部分領域のサポート
   - : [`-moz-image-rect`](/ja/docs/Web/CSS/-moz-image-rect) 関数を用いることで、画像の一部分の領域 (subrectangle)を背景画像として利用できるようになります。
 - CSS touch プロパティ群
   - : touch プロパティ群が追加されました。詳細と正式な記事名は後日追記予定です。
 - [CSS 背景として任意の要素を使用する](/ja/docs/CSS/-moz-element)
   - : [`-moz-element`](/ja/docs/Web/CSS/-moz-element) CSS 関数と [`document.mozSetImageElement()`](/ja/docs/Web/API/Document/mozSetImageElement) DOM 関数を用いることで、任意の HTML 要素を背景として使用することができます。
-- [プライバシーと :visited セレクタ](/ja/docs/CSS/Privacy_and_the_:visited_selector)
-  - : CSS セレクタを用いた訪問済みリンクのスタイルについて取得できる情報が変更されました。これはいくつかのウェブアプリケーションに影響するかもしれません。
+- [プライバシーと :visited セレクター](/ja/docs/CSS/Privacy_and_the_:visited_selector)
+  - : CSS セレクターを用いた訪問済みリンクのスタイルについて取得できる情報が変更されました。これはいくつかのウェブアプリケーションに影響するかもしれません。
 
 #### 新しい CSS プロパティ
 
@@ -89,9 +89,9 @@ The following changes were made to the [`CanvasRenderingContext2D`](/ja/docs/Web
 | [`:required`](/ja/docs/Web/CSS/:required)                         | `required` 属性を指定している [`<input>`](/ja/docs/Web/HTML/Element/input) フィールドに自動的に適用されます。   |
 | [`:valid`](/ja/docs/Web/CSS/:valid)                               | 入力が妥当であると判断された [`<input>`](/ja/docs/Web/HTML/Element/input) フィールドに自動的に適用されます。    |
 
-#### 新しい CSS 擬似セレクタ
+#### 新しい CSS 擬似セレクター
 
-| 擬似セレクタ                                          | 説明                                                                             |
+| 擬似セレクター                                          | 説明                                                                             |
 | ----------------------------------------------------- | -------------------------------------------------------------------------------- |
 | [`:-moz-focusring`](/ja/docs/Web/CSS/:-moz-focusring) | Gecko がフォーカスインジケータを描画すべきとしている要素の見え方を指定できます。 |
 
@@ -99,7 +99,7 @@ The following changes were made to the [`CanvasRenderingContext2D`](/ja/docs/Web
 
 | 関数                                                  | 説明                                                                                                                                               |
 | ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`:-moz-any`](/ja/docs/Web/CSS/:-moz-any)             | セレクタをグループ化しコンビネータを分解できます。                                                                                                 |
+| [`:-moz-any`](/ja/docs/Web/CSS/:-moz-any)             | セレクターをグループ化しコンビネータを分解できます。                                                                                                 |
 | [`-moz-calc`](/ja/docs/Web/CSS/-moz-calc)             | `<length> の値を数式で指定できます。`                                                                                                              |
 | [`-moz-element`](/ja/docs/Web/CSS/-moz-element)       | 任意の要素を [`background-image`](/ja/docs/Web/CSS/background-image) および [`background`](/ja/docs/Web/CSS/background) の背景として使用できます。 |
 | [`-moz-image-rect`](/ja/docs/Web/CSS/-moz-image-rect) | 画像の一部分を [`background-image`](/ja/docs/Web/CSS/background-image) もしくは [`background`](/ja/docs/Web/CSS/background)で利用できます。        |
@@ -186,7 +186,7 @@ The following changes were made to the [`CanvasRenderingContext2D`](/ja/docs/Web
 - [Mouse イベント](/ja/docs/DOM/Event/UIEvent/MouseEvent) に `mozPressure` プロパティが追加されました。このプロパティは圧力感知をサポートする入力デバイスでの圧力を示します。
 - ~~window\.createBlobURL()~~ [`window.URL.createObjectURL()`](/ja/docs/Web/API/Window/URL/createObjectURL) および [`window.URL.revokeObjectURL()`](/ja/docs/Web/API/Window/URL/revokeObjectURL) メソッドを用いることで、ローカルファイルを参照する BLOB ("Binary Large OBject") URL を作成できます。
 - [`DOMImplementation.createHTMLDocument()`](/ja/docs/Web/API/DOMImplementation/createHTMLDocument) メソッドを用いることで、新しい HTML 文書を作成できます。
-- [`Node.mozMatchesSelector()`](/ja/docs/Web/API/Node/mozMatchesSelector) が指定セレクタ文字列が妥当ではない場合に正しくない `false` を返すのではなく、`SYNTAX_ERR` 例外を投げるようになりました。
+- [`Node.mozMatchesSelector()`](/ja/docs/Web/API/Node/mozMatchesSelector) が指定セレクター文字列が妥当ではない場合に正しくない `false` を返すのではなく、`SYNTAX_ERR` 例外を投げるようになりました。
 - CSS 同様の省略構文を用いて 要素の SVG プロパティの値を設定できるようになりました。例: `element.style.fill = 'lime'`。詳細は [`element.style`](/ja/docs/Web/API/Element/style) を参照してください。
 - ドキュメントルートに [`privatebrowsingmode` 属性](/ja/docs/Supporting_private_browsing_mode#Detecting_whether_private_browsing_mode_is_permanent) が追加されました。これはプライベートブラウジングがセッションで一時的であるか永続的であるかの状態を含む、プライベートブラウジングモードの状態を示します。
 - [`window.getComputedStyle()`](/ja/docs/Web/API/Window/getComputedStyle) メソッドの 2 番目のパラメータが、他の主なブラウザーと同様に省略可能になりました。
@@ -329,7 +329,7 @@ Firefox 4 向けに既存の拡張を更新する上で役立つ Tips は、[Upd
 
 ### Places
 
-- Places クエリの結果が複数のオブザーバによって提供されるようになり、それらのクエリは非同期で実行される可能性があります。このことにより、[`nsINavHistoryResult`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryResult)、[`nsINavHistoryQueryOptions`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryQueryOptions)、および[`nsINavHistoryContainerResultNode`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryContainerResultNode) インターフェイスにいくつかの変更があります。より大きな変更は、[`nsINavHistoryResultViewer`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryResultViewer) インターフェイスが [`nsINavHistoryResultObserver`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryResultObserver) に改名されたことです。
+- Places クエリーの結果が複数のオブザーバによって提供されるようになり、それらのクエリーは非同期で実行される可能性があります。このことにより、[`nsINavHistoryResult`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryResult)、[`nsINavHistoryQueryOptions`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryQueryOptions)、および[`nsINavHistoryContainerResultNode`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryContainerResultNode) インターフェイスにいくつかの変更があります。より大きな変更は、[`nsINavHistoryResultViewer`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryResultViewer) インターフェイスが [`nsINavHistoryResultObserver`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryResultObserver) に改名されたことです。
 - いくつかの [新しい通知](/ja/docs/Observer_Notifications#Places) が追加されました。この通知を用いると、ブラウザーが Places サービスのシャットダウンプロセスをより確実に追跡できます。これらのうち、ほとんどは内部での利用のためにのみ用意されたものですが、`places-connection-closed` 通知は Places サービスが自身のシャットダウンプロセスを完了したときを知るために利用可能です。
 - いくつかの Places のメソッドで配列サイズ出力を指定する引数がオプションになりました。
 - `<menupopup type="places">` のサポートが削除されました。代わりに、以前は自動で行なわれていた Places の情報を持つメニューを手動で作成して配置する必要があります。詳細は[メニュービューを用いて Places 情報を表示する](/ja/docs/Displaying_Places_information_using_views#Menu_view)を参照してください。

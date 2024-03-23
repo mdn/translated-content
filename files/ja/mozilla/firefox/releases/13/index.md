@@ -101,7 +101,7 @@ Firefox 13 より、Windows 版の Firefox は Windows XP Service Pack 2 以降�
 - `nsIScreen` インターフェイスが、新たに引数 `rotation` を通して回転の制御をサポートしました。
 - `nsIPrefBranch2` インターフェイスを `nsIPrefBranch` に統合しました ([Firefox バグ 718255](https://bugzil.la/718255))。
 - 以前のバージョンの Gecko で削除されたエイリアス `MozOpacity`、`MozOutline`、`MozOutlineStyle`、`MozOutlineWidth`、`MozOutlineOffset`、および `MozOutlineColor` を、`nsIDOMCSS2Properties` から削除しました。これは、エイリアスを削除した当初に行うべきでした。
-- `nsINavHistoryQueryOptions` の属性 `excludeItemIfParentHasAnnotation` を、対応するクエリ操作と共に削除しました。これはライブブックマークのサポート用に存在しましたが、もはや存在しません。
+- `nsINavHistoryQueryOptions` の属性 `excludeItemIfParentHasAnnotation` を、対応するクエリー操作と共に削除しました。これはライブブックマークのサポート用に存在しましたが、もはや存在しません。
 
 ## 関連記事
 

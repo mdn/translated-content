@@ -11,7 +11,7 @@ Firefox 15 は 2012 年 8 月 28 日にリリースされました。この記�
 
 - {{HTMLElement("font")}} 要素の `size` 属性が HTML5 仕様に従って扱われるようになりました。つまり、`10` より大きい、または、`-10` より小さい整数はすべて `10` か `-10` であるとみなされるようになりました。
 - `<font>` 要素の `font-weight` および `point-size` 属性のサポートが削除されました。これらは非標準であり、Gecko はそれらをサポートする唯一のレンダリングエンジンでした。
-- {{HTMLElement("audio")}} および {{HTMLElement("video")}} 要素のための Ogg コンテナで音声向けの [Opus コーデック](http://www.opus-codec.org/) がサポートされました。
+- {{HTMLElement("audio")}} および {{HTMLElement("video")}} 要素のための Ogg コンテナーで音声向けの [Opus コーデック](http://www.opus-codec.org/) がサポートされました。
 - {{HTMLElement("source")}} 要素で `media` 属性がサポートされました。
 - {{HTMLElement("audio")}} および {{HTMLElement("video")}} 要素で `played` 属性がサポートされました。この属性の値はこれまで再生したメディアの時間を一覧化した {{domxref("TimeRanges")}} オブジェクトです。
 
