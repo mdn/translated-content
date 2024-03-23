@@ -256,13 +256,14 @@ import AuthorCredit from "./components/AuthorCredit";
 
 Angular では、このプロセスを[依存関係の注入](https://angular.io/guide/dependency-injection)と呼びます。 Vue には [`provide()` および `inject()` コンポーネントメソッド](https://v2.vuejs.org/v2/api/#provide-inject)があります。 React には[ Context API](https://react.dev/learn/passing-data-deeply-with-context) があります。 Ember は [サービス](https://guides.emberjs.com/release/services/)を通じて状態を共有します。
 
-### Lifecycle
+### ライフサイクル
 
-In the context of a framework, a component's **lifecycle** is a collection of phases a component goes through from the time it is appended to the DOM and then rendered by the browser (often called _mounting_) to the time that it is removed from the DOM (often called _unmounting_). Each framework names these lifecycle phases differently, and not all give developers access to the same phases. All of the frameworks follow the same general model: they allow developers to perform certain actions when the component _mounts_, when it _renders_, when it _unmounts_, and at many phases in between these.
+フレームワークのコンテキストでは、コンポーネントの **ライフサイクル** は、コンポーネントが DOM に追加されてブラウザーによってレンダリングされる時点 (_mounting_ と呼ばれることが多い)から削除される時点まで、コンポーネントが通過するフェーズの集合です。 DOM から (_unmounting_ と呼ばれることが多い)。各フレームワークはこれらのライフサイクルフェーズに異なる名前を付けており、すべてのフレームワークで開発者が同じフェーズにアクセスできるわけではありません。すべてのフレームワークは同じ一般的なモデルに従います。開発者は、コンポーネントの _mounts_, _renders_, _unmounts_ およびそれらの間の多くのフェーズで特定のアクションを実行できます。
 
-The _render_ phase is the most crucial to understand, because it is repeated the most times as your user interacts with your application. It's run every time the browser needs to render something new, whether that new information is an addition to what's in the browser, a deletion, or an edit of what's there.
+_render_ フェーズは、ユーザーがアプリケーションを操作するときに最も頻繁に繰り返されるため、理解することが最も重要です。これは、ブラウザーが何か新しい情報を表示する必要があるたびに実行されます。その新しい情報がブラウザー内の情報への追加、削除、または編集であるかどうかに関係ありません。
 
-This [diagram of a React component's lifecycle](https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/) offers a general overview of the concept.
+この [React コンポーネントのライフサイクルの図](https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)は、概念の概要を示しています。
+
 
 ## Rendering elements
 
