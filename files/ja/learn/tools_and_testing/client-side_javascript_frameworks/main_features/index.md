@@ -270,11 +270,11 @@ _render_ フェーズは、ユーザーがアプリケーションを操作す�
 
 [仮想 DOM の詳細については、React ドキュメントをご覧ください](https://reactjs.org/docs/faq-internals.html#what-is-the-virtual-dom)。
 
-**増分 DOM** は、何をレンダリングするかを決定するために DOM diff を構築するという点で仮想 DOM に似ていますが、 JavaScript メモリー内に DOM の完全なコピーを作成しないという点で異なります。変更する必要のない DOM の部分は無視されます。 Angular は、このモジュールでこれまで説明した、インクリメンタル DOM を使用する唯一のフレームワークです。
+**増分 DOM** は、何をレンダリングするかを決定するために DOM diff を構築するという点で仮想 DOM に似ていますが、 JavaScript メモリー内に DOM の完全なコピーを作成しないという点で異なります。変更する必要のない DOM の部分は無視されます。 Angular は、このモジュールでこれまで説明した、増分 DOM を使用する唯一のフレームワークです。
 
 [Incremental DOM の詳細については、Auth0 ブログをご覧ください](https://auth0.com/blog/incremental-dom/)。
 
-**Glimmer VM** は Ember に固有のものです。これは仮想 DOM やインクリメンタル DOM ではありません。これは、 Ember のテンプレートを、 JavaScript よりも読みやすく高速に読み取れる一種の「バイトコード」にトランスパイルする別のプロセスです。
+**Glimmer VM** は Ember に固有のものです。これは仮想 DOM や増分 DOM ではありません。これは、 Ember のテンプレートを、 JavaScript よりも読みやすく高速に読み取れる一種の「バイトコード」にトランスパイルする別のプロセスです。
 
 ## ルーティング
 
