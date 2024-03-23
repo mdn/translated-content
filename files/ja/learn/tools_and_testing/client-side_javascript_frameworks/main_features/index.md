@@ -265,19 +265,19 @@ _render_ フェーズは、ユーザーがアプリケーションを操作す�
 この [React コンポーネントのライフサイクルの図](https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)は、概念の概要を示しています。
 
 
-## Rendering elements
+## レンダリング要素(Rendering elements)
 
-Just as with lifecycles, frameworks take different-but-similar approaches to how they render your applications. All of them track the current rendered version of your browser's DOM, and each makes slightly different decisions about how the DOM should change as components in your application re-render. Because frameworks make these decisions for you, you typically don't interact with the DOM yourself. This abstraction away from the DOM is more complex and more memory-intensive than updating the DOM yourself, but without it, frameworks could not allow you to program in the declarative way they're known for.
+ライフサイクルと同様に、フレームワークはアプリケーションをレンダリングする方法に対して、異なるものの同様のアプローチを採用します。これらはすべて、ブラウザーの DOM の現在レンダリングされたバージョンを追跡し、アプリケーションのコンポーネントが再レンダリングされるときに DOM がどのように変更されるべきかについて、それぞれわずかに異なる決定を下します。これらの決定はフレームワークが行うため、通常は自分で DOM を操作することはありません。 DOM から離れたこの抽象化は、 DOM を自分で更新するよりも複雑でメモリを大量に消費しますが、これがなければ、フレームワークでよく知られている宣言型の方法でプログラミングすることはできません。
 
-The **Virtual DOM** is an approach whereby information about your browser's DOM is stored in JavaScript memory. Your application updates this copy of the DOM, then compares it to the "real" DOM — the DOM that is actually rendered for your users — in order to decide what to render. The application builds a "diff" to compare the differences between the updated virtual DOM and the currently rendered DOM, and uses that diff to apply updates to the real DOM. Both React and Vue utilize a virtual DOM model, but they do not apply the exact same logic when diffing or rendering.
+**仮想 DOM** は、ブラウザの DOM に関する情報を JavaScript メモリに保存するアプローチです。アプリケーションは、 DOM のこのコピーを更新し、それを「実際の」 DOM (ユーザーに対して実際にレンダリングされる DOM) と比較して、何をレンダリングするかを決定します。アプリケーションは、更新された仮想 DOM と現在レンダリングされている DOM の違いを比較する「差分」を構築し、その差分を使用して実際の DOM に更新を適用します。 React と Vue はどちらも仮想 DOM モデルを利用しますが、差分分析やレンダリング時にまったく同じロジックを適用するわけではありません。
 
-You can [read more about the Virtual DOM in the React docs](https://reactjs.org/docs/faq-internals.html#what-is-the-virtual-dom).
+[仮想 DOM の詳細については、React ドキュメントをご覧ください](https://reactjs.org/docs/faq-internals.html#what-is-the-virtual-dom)。
 
-The **Incremental DOM** is similar to the virtual DOM in that it builds a DOM diff to decide what to render, but different in that it doesn't create a complete copy of the DOM in JavaScript memory. It ignores the parts of the DOM that do not need to be changed. Angular is the only framework discussed so far in this module that uses an incremental DOM.
+**増分 DOM** は、何をレンダリングするかを決定するために DOM diff を構築するという点で仮想 DOM に似ていますが、 JavaScript メモリ内に DOM の完全なコピーを作成しないという点で異なります。変更する必要のない DOM の部分は無視されます。 Angular は、このモジュールでこれまで説明した、インクリメンタル DOM を使用する唯一のフレームワークです。
 
-You can [read more about the Incremental DOM on the Auth0 blog](https://auth0.com/blog/incremental-dom/).
+[Incremental DOM の詳細については、Auth0 ブログをご覧ください](https://auth0.com/blog/incremental-dom/)。
 
-The **Glimmer VM** is unique to Ember. It is not a virtual DOM nor an incremental DOM; it is a separate process through which Ember's templates are transpiled into a kind of "byte code" that is easier and faster to read than JavaScript.
+**Glimmer VM** は Ember に固有のものです。これは仮想 DOM やインクリメンタル DOM ではありません。これは、 Ember のテンプレートを、 JavaScript よりも読みやすく高速に読み取れる一種の「バイトコード」にトランスパイルする別のプロセスです。
 
 ## Routing
 
