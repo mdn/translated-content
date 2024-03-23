@@ -283,15 +283,15 @@ _render_ フェーズは、ユーザーがアプリケーションを操作す�
 
 [前の章で述べたように、ルーティング](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction#routing)は Web エクスペリエンスの重要な部分です。多数のビューを備えた非常に複雑なアプリでの操作性の低下を避けるために、このモジュールで説明する各フレームワークは、開発者がアプリケーションにクライアント側ルーティングを実装するのに役立つライブラリ(または複数のライブラリ)を提供します。
 
-## Testing
+## テスト
 
-All applications benefit from test coverage that ensures your software continues to behave in the way that you'd expect, and web applications are no different. Each framework's ecosystem provides tooling that facilitates the writing of tests. Testing tools are not built into the frameworks themselves, but the command-line interface tools used to generate framework apps give you access to the appropriate testing tools.
+すべてのアプリケーションは、ソフトウェアが期待どおりに動作し続けることを保証するテストカバレッジの恩恵を受けます。 Web アプリケーションも例外ではありません。各フレームワークのエコシステムは、テストの作成を容易にするツールを提供します。テストツールはフレームワーク自体には組み込まれていませんが、フレームワークアプリの生成に使用される CLI ツールを使用すると、適切なテストツールにアクセスできます。
 
-Each framework has extensive tools in its ecosystem, with capabilities for unit and integration testing alike.
+各フレームワークには、そのエコシステム内に単体テストと統合テストの機能を備えた広範なツールがあります。
 
-[Testing Library](https://testing-library.com/) is a suite of testing utilities that has tools for many JavaScript environments, including React, Vue, and Angular. The Ember docs cover the [testing of Ember apps](https://guides.emberjs.com/release/testing/).
+[Testing Library](https://testing-library.com/) は、 React 、 Vue 、 Angular などの多くの JavaScript 環境用のツールを備えたテストユーティリティのスイートです。 Ember ドキュメントでは、[Ember アプリのテスト](https://guides.emberjs.com/release/testing/)について説明しています。
 
-Here's a quick test for our `CounterButton` written with the help of React Testing Library — it tests a number of things, such as the button's existence, and whether the button is displaying the correct text after being clicked 0, 1, and 2 times:
+これは、 React テスト ライブラリの助けを借りて書かれた `CounterButton` の簡単なテストです。ボタンの存在や、ボタンが 0 、1 、 2 回クリックされた後に正しいテキストが表示されているかどうかなど、さまざまなことをテストします。
 
 ```jsx
 import { fireEvent, render, screen } from "@testing-library/react";
