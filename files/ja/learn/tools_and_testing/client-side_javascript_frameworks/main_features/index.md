@@ -288,7 +288,7 @@ _render_ フェーズは、ユーザーがアプリケーションを操作す�
 
 [Testing Library](https://testing-library.com/) は、 React 、 Vue 、 Angular などの多くの JavaScript 環境用のツールを備えたテストユーティリティのスイートです。 Ember ドキュメントでは、[Ember アプリのテスト](https://guides.emberjs.com/release/testing/)について説明しています。
 
-これは、 React テスト ライブラリの助けを借りて書かれた `CounterButton` の簡単なテストです。ボタンの存在や、ボタンが 0 、1 、 2 回クリックされた後に正しいテキストが表示されているかどうかなど、さまざまなことをテストします。
+これは、 React テストライブラリーの助けを借りて書かれた `CounterButton` の簡単なテストです。ボタンの存在や、ボタンが 0 、1 、 2 回クリックされた後に正しいテキストが表示されているかどうかなど、さまざまなことをテストします。
 
 ```jsx
 import { fireEvent, render, screen } from "@testing-library/react";
