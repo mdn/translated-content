@@ -1,26 +1,28 @@
 ---
-title: Framework main features
+title: フレームワークの主な機能
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features
 page-type: learn-module-chapter
+l10n:
+  sourceCommit: 03f247507ae02105bcfe822b8e97ae8e0006bc19
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-Each major JavaScript framework has a different approach to updating the DOM, handling browser events, and providing an enjoyable developer experience. This article will explore the main features of "the big 4" frameworks, looking at how frameworks tend to work from a high level, and the differences between them.
+主要な JavaScript フレームワークごとに、 DOM の更新、ブラウザイベントの処理、楽しい開発者エクスペリエンスの提供に関して、異なるアプローチが採用されています。この記事では、「ビッグ 4」フレームワークの主な特徴を探り、フレームワークがどのように機能する傾向があるかを高いレベルから見ていき、それらの違いを見ていきます。
 
 <table>
   <tbody>
     <tr>
-      <th scope="row">Prerequisites:</th>
+      <th scope="row">前提条件:</th>
       <td>
-        Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>,
-        <a href="/en-US/docs/Learn/CSS">CSS</a>, and
-        <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages.
+          <a href="/ja/docs/Learn/HTML">HTML</a>、
+          <a href="/ja/docs/Learn/CSS">CSS</a>、
+          <a href="/ja/docs/Learn/JavaScript">JavaScript</a> に精通していること。
       </td>
     </tr>
     <tr>
-      <th scope="row">Objective:</th>
-      <td>To understand the main code features of frameworks.</td>
+      <th scope="row">目的:</th>
+      <td>フレームワークの主なコード機能を理解します。</td>
     </tr>
   </tbody>
 </table>
