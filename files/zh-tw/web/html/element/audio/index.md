@@ -51,6 +51,7 @@ slug: Web/HTML/Element/audio
     在 Safari 中，你可以使用 [`x-webkit-airplay="deny"`](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) 作為回退。
 
 - `loop`
+
   - : 一個布林屬性：如果指定，音訊播放器將在達到音訊結束時自動回到開頭。
 
 - `muted`
@@ -62,7 +63,7 @@ slug: Web/HTML/Element/audio
     - `none`：表示不應預先載入音訊。
     - `metadata`：表示僅應提取音訊後設資料（例如長度）。
     - `auto`：表示即使用戶不預期使用它，也可以下載整個音訊文件。
-    - *空字符串*：`auto` 值的同義詞。
+    - _空字符串_：`auto` 值的同義詞。
 
     默認值對於每個瀏覽器是不同的。規範建議將其設置為 `metadata`。
 
