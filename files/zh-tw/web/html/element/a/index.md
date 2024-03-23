@@ -5,7 +5,7 @@ slug: Web/HTML/Element/a
 
 {{HTMLSidebar}}
 
-**`<a>`** [HTML](/zh-TW/docs/Web/HTML) 元素（或稱*錨點*元素），具有 [其 `href` 屬性](#href)，用於創建指向網頁、文件、電子郵件地址、同一頁面中的位置或任何其他 URL 可定位的超連結。
+**`<a>`** [HTML](/zh-TW/docs/Web/HTML) 元素（或稱*錨點*元素），具有[其 `href` 屬性](#href)，用於創建指向網頁、文件、電子郵件地址、同一頁面中的位置或任何其他 URL 可定位的東西。
 
 每個 `<a>` 元素內的內容*應該*指示連結的目的地。如果存在 `href` 屬性，則在焦點位於 `<a>` 元素上時按下 Enter 鍵將激活它。
 
@@ -13,7 +13,7 @@ slug: Web/HTML/Element/a
 
 ## 屬性
 
-此元素的屬性包括 [全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
+此元素的屬性包括[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
 
 - `download`
 
@@ -22,14 +22,14 @@ slug: Web/HTML/Element/a
     - 沒有值時，瀏覽器將從各種來源生成的文件名/擴展名提供建議：
 
       - {{HTTPHeader("Content-Disposition")}} HTTP 標頭
-      - URL [路徑](/zh-TW/docs/Web/API/URL/pathname) 中的最終段落
-      - {{HTTPHeader("Content-Type")}} 標頭中的 {{Glossary("MIME_type", "媒體類型")}}，以及 [`data:` URL](/zh-TW/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) 的開頭，或是 [`blob:` URL](/zh-TW/docs/Web/API/URL/createObjectURL_static) 的 {{domxref("Blob.type")}}。
+      - URL [路徑](/zh-TW/docs/Web/API/URL/pathname)中的最終段落
+      - {{HTTPHeader("Content-Type")}} 標頭中的{{Glossary("MIME_type", "媒體類型")}}，以及 [`data:` URL](/zh-TW/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) 的開頭，或是 [`blob:` URL](/zh-TW/docs/Web/API/URL/createObjectURL_static) 的 {{domxref("Blob.type")}}。
 
-    - `filename`：定義值可建議作為文件名。 `/` 和 `\` 字符將轉換為底線 (`_`)。檔案系統可能禁止文件名中的其他字符，因此如果需要，瀏覽器將調整建議的名稱。
+    - `filename`：定義值可建議作為文件名。 `/` 和 `\` 字符將轉換為底線（`_`）。檔案系統可能禁止文件名中的其他字符，因此如果需要，瀏覽器將調整建議的名稱。
 
     > **備註：**
     >
-    > - `download` 只適用於 [同源 URL](/zh-TW/docs/Web/Security/Same-origin_policy)，或者 `blob:` 和 `data:` 方案。
+    > - `download` 只適用於[同源 URL](/zh-TW/docs/Web/Security/Same-origin_policy)，或者 `blob:` 和 `data:` 方案。
     > - 瀏覽器如何處理下載因瀏覽器、用戶設置和其他因素而異。用戶在下載開始之前可能會收到提示，文件可能會自動保存，或者它可能會自動打開，無論是在外部應用程序中還是在瀏覽器本身中。
     > - 如果 `Content-Disposition` 標頭與 `download` 屬性的信息不同，則結果行為可能不同：
     >
@@ -41,7 +41,7 @@ slug: Web/HTML/Element/a
   - : 超連結指向的 URL。連結不限於基於 HTTP 的 URL——它們可以使用瀏覽器支持的任何 URL 方案：
 
     - 具有文件片段的頁面部分
-    - 具有 [文字片段](/zh-TW/docs/Web/Text_fragments) 的特定文本部分
+    - 具有[文字片段](/zh-TW/docs/Web/Text_fragments)的特定文本部分
     - 具有媒體片段的媒體文件部分
     - 使用 `tel:` URL 的電話號碼
     - 使用 `mailto:` URL 的電子郵件地址
@@ -49,21 +49,21 @@ slug: Web/HTML/Element/a
     - 儘管網頁瀏覽器可能不支持其他 URL 方案，但網站可以使用 [`registerProtocolHandler()`](/zh-TW/docs/Web/API/Navigator/registerProtocolHandler) 進行設置
 
 - `hreflang`
-  - : 指示連結 URL 的人類語言的提示。沒有內建功能。允許的值與 [全域 `lang` 屬性](/zh-TW/docs/Web/HTML/Global_attributes/lang) 相同。
+  - : 指示連結 URL 的人類語言的提示。沒有內建功能。允許的值與[全域 `lang` 屬性](/zh-TW/docs/Web/HTML/Global_attributes/lang)相同。
 - `ping`
   - : URL 的空格分隔列表。當點擊連結時，瀏覽器將向這些 URL 發送 {{HTTPMethod("POST")}} 請求，內容為 `PING`。通常用於跟蹤。
 - `referrerpolicy`
 
-  - : 跟隨連結時發送的 [引用者](/zh-TW/docs/Web/HTTP/Headers/Referer) 的程度。
+  - : 跟隨連結時發送的[引用者](/zh-TW/docs/Web/HTTP/Headers/Referer)的程度。
 
     - `no-referrer`：不發送 {{HTTPHeader("Referer")}} 標頭。
-    - `no-referrer-when-downgrade`：不發送 {{HTTPHeader("Referer")}} 標頭至沒有 {{Glossary("TLS")}}（{{Glossary("HTTPS")}}）的 [來源](/zh-TW/docs/Web/Security/Same-origin_policy)。
-    - `origin`：發送的引用者將僅限於引用頁面的來源：其 [協定](/zh-TW/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)、{{Glossary("host")}} 和 {{Glossary("port")}}。
+    - `no-referrer-when-downgrade`：不發送 {{HTTPHeader("Referer")}} 標頭至沒有 {{Glossary("TLS")}}（{{Glossary("HTTPS")}}）的[來源](/zh-TW/docs/Web/Security/Same-origin_policy)。
+    - `origin`：發送的引用者將僅限於引用頁面的來源：其[協定](/zh-TW/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)、{{Glossary("host")}} 和 {{Glossary("port")}}。
     - `origin-when-cross-origin`：發送給其他來源的引用者將僅限於協定、主機和端口。對同一來源的導航仍將包含路徑。
-    - `same-origin`：對於 {{Glossary("Same-origin policy", "同一來源")}}，將發送引用者，但跨來源請求將不包含引用者信息。
+    - `same-origin`：對於{{Glossary("Same-origin policy", "同一來源")}}，將發送引用者，但跨來源請求將不包含引用者信息。
     - `strict-origin`：僅在協定安全級別保持不變時（HTTPS→HTTPS）發送文件的源作為引用者，但不要將其發送給不太安全的目的地（HTTPS→HTTP）。
     - `strict-origin-when-cross-origin`（默認值）：對於同一來源請求，發送完整的 URL；僅在協定安全級別保持不變時（HTTPS→HTTPS）發送源；對於不太安全的目的地（HTTPS→HTTP），不發送標頭。
-    - `unsafe-url`：引用者將包括來源*和*路徑（但不包括 [片段](/zh-TW/docs/Web/API/HTMLAnchorElement/hash)、[密碼](/zh-TW/docs/Web/API/HTMLAnchorElement/password) 或 [用戶名](/zh-TW/docs/Web/API/HTMLAnchorElement/username)）。**此值不安全**，因為它將來自 TLS 保護資源的來源和路徑洩露給不安全的來源。
+    - `unsafe-url`：引用者將包括來源*和*路徑（但不包括[片段](/zh-TW/docs/Web/API/HTMLAnchorElement/hash)、[密碼](/zh-TW/docs/Web/API/HTMLAnchorElement/password)或[用戶名](/zh-TW/docs/Web/API/HTMLAnchorElement/username)）。**此值不安全**，因為它將來自 TLS 保護資源的來源和路徑洩露給不安全的來源。
 
 - `rel`
   - : 連結 URL 的關係，作為空格分隔的連結類型。
@@ -75,7 +75,7 @@ slug: Web/HTML/Element/a
     - `_blank`：通常是一個新選項卡，但用戶可以配置瀏覽器以打開新窗口。
     - `_parent`：當前瀏覽上下文的父級。如果沒有父級，則與 `_self` 行為相同。
     - `_top`：最上層的瀏覽上下文。具體來說，這意味著當前上下文的祖先中的「最高」上下文。如果沒有祖先，則與 `_self` 行為相同。
-    - `_unfencedTop`：允許嵌入的 [有圍欄框架](/zh-TW/docs/Web/API/Fenced_frame_API) 導航到最頂層框架（即超出有圍欄框架根的遍歷，與其他保留目標不同）。請注意，如果在有圍欄框架上下文之外使用此選項，則導航仍將成功，但它不會像保留關鍵字那樣運作。
+    - `_unfencedTop`：允許嵌入的[有圍欄框架](/zh-TW/docs/Web/API/Fenced_frame_API)導航到最頂層框架（即超出有圍欄框架根的遍歷，與其他保留目標不同）。請注意，如果在有圍欄框架上下文之外使用此選項，則導航仍將成功，但它不會像保留關鍵字那樣運作。
 
     > **備註：** 將 `target="_blank"` 設置在 `<a>` 元素上，隱含提供了與設置 [`rel="noopener"`](/zh-TW/docs/Web/HTML/Attributes/rel/noopener) 相同的 `rel` 行為，它不設置 `window.opener`。
 
@@ -155,7 +155,7 @@ a {
 
 {{EmbedLiveSample('鏈接到同一頁面上的元素')}}
 
-> **備註：** 你可以使用 `href="#top"` 或空片段 (`href="#"`) 來鏈接到當前頁面的頂部，[如 HTML 規範中所定義](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier)。
+> **備註：** 你可以使用 `href="#top"` 或空片段（`href="#"`）來鏈接到當前頁面的頂部，[如 HTML 規範中所定義](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier)。
 
 ### 鏈接到電子郵件地址
 
@@ -265,7 +265,7 @@ document
 
 `<a>` 元素可能對用戶的安全性和隱私造成影響。有關信息，請參見 [Referer 標頭：隱私和安全問題](/zh-TW/docs/Web/Security/Referer_header:_privacy_and_security_concerns)。
 
-在不使用 [`rel="noreferrer"`](/zh-TW/docs/Web/HTML/Attributes/rel/noreferrer) 和 [`rel="noopener"`](/zh-TW/docs/Web/HTML/Attributes/rel/noopener) 的情況下使用 `target="_blank"` 會使網站容易受到 {{domxref("window.opener")}} API 攻擊，但請注意，在新版瀏覽器中，設置 `target="_blank"` 隱含地提供了與設置 `rel="noopener"` 相同的保護機制。詳細信息請參閱[瀏覽器相容性](#browser_compatibility)。
+在不使用 [`rel="noreferrer"`](/zh-TW/docs/Web/HTML/Attributes/rel/noreferrer) 和 [`rel="noopener"`](/zh-TW/docs/Web/HTML/Attributes/rel/noopener) 的情況下使用 `target="_blank"` 會使網站容易受到 {{domxref("window.opener")}} API 攻擊，但請注意，在新版瀏覽器中，設置 `target="_blank"` 隱含地提供了與設置 `rel="noopener"` 相同的保護機制。詳細信息請參見[瀏覽器相容性](#browser_compatibility)。
 
 ## 無障礙議題
 
@@ -356,7 +356,7 @@ document
 
 ### 跳轉鏈接
 
-**跳轉鏈接** 是一個盡可能放在 {{HTMLElement("body")}} 內容的最前面的鏈接，指向頁面主要內容的開頭。通常，CSS 將跳轉鏈接隱藏在螢幕之外，直到被聚焦為止。
+**跳轉鏈接**是一個盡可能放在 {{HTMLElement("body")}} 內容的最前面的鏈接，指向頁面主要內容的開頭。通常，CSS 將跳轉鏈接隱藏在螢幕之外，直到被聚焦為止。
 
 ```html
 <body>
@@ -516,4 +516,4 @@ document
 - {{CSSxRef(":link")}} 是一個 CSS 虛擬類，將匹配 `<a>` 元素，其中 `href` 屬性中的 URL 尚未被用戶訪問過。
 - {{CSSxRef(":visited")}} 是一個 CSS 虛擬類，將匹配 `<a>` 元素，其中 `href` 屬性中的 URL 曾經被用戶訪問過。
 - {{CSSxRef(":any-link")}} 是一個 CSS 虛擬類，將匹配具有 `href` 屬性的 `<a>` 元素。
-- [文字片段](/zh-TW/docs/Web/Text_fragments) 是添加到 URL 中的用戶代理指令，允許內容作者鏈接到頁面上的特定文本，而不需要 ID。
+- [文字片段](/zh-TW/docs/Web/Text_fragments)是添加到 URL 中的用戶代理指令，允許內容作者鏈接到頁面上的特定文本，而不需要 ID。
