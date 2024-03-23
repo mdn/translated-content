@@ -2,7 +2,7 @@
 title: Firefox 124 for developers
 slug: Mozilla/Firefox/Releases/124
 l10n:
-    sourceCommit: 4c8b53d6a760f60f7d3d7a7704d35f1c7b8f5693
+  sourceCommit: 4c8b53d6a760f60f7d3d7a7704d35f1c7b8f5693
 ---
 
 {{FirefoxSidebar}}
