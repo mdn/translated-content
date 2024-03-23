@@ -279,9 +279,9 @@ _render_ フェーズは、ユーザーがアプリケーションを操作す�
 
 **Glimmer VM** は Ember に固有のものです。これは仮想 DOM やインクリメンタル DOM ではありません。これは、 Ember のテンプレートを、 JavaScript よりも読みやすく高速に読み取れる一種の「バイトコード」にトランスパイルする別のプロセスです。
 
-## Routing
+## ルーティング
 
-As [mentioned in the previous chapter, routing](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction#routing) is an important part of the web experience. To avoid a broken experience in sufficiently complex apps with lots of views, each of the frameworks covered in this module provides a library (or more than one library) that helps developers implement client-side routing in their applications.
+[前の章で述べたように、ルーティング](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction#routing)は Web エクスペリエンスの重要な部分です。多数のビューを備えた非常に複雑なアプリでの操作性の低下を避けるために、このモジュールで説明する各フレームワークは、開発者がアプリケーションにクライアント側ルーティングを実装するのに役立つライブラリ(または複数のライブラリ)を提供します。
 
 ## Testing
 
