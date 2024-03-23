@@ -73,11 +73,11 @@ const header = React.createElement(
 
 ### Handlebars
 
-The [Handlebars](https://handlebarsjs.com/) templating language is not specific to Ember applications, but it is heavily utilized in Ember apps. Handlebars code resembles HTML, but it has the option of pulling data in from elsewhere. This data can be used to influence the HTML that an application ultimately builds.
+[Handlebars](https://handlebarsjs.com/)  テンプレート言語は Ember アプリケーションに固有のものではありませんが、 Ember アプリケーションで頻繁に利用されています。 Handlebars コードは HTML に似ていますが、他の場所からデータを取り込むオプションがあります。このデータは、アプリケーションが最終的に構築する HTML に影響を与えるために使用できます。
 
-Like JSX, Handlebars uses curly braces to inject the value of a variable. Handlebars uses a double-pair of curly braces, instead of a single pair.
+JSX と同様に、 Handlebars は中括弧を使用して変数の値を挿入します。ハンドルバーは、単一ペアではなく、二重ペアの中括弧を使用します。
 
-Given this Handlebars template:
+このハンドルバー テンプレートを考慮すると、次のようになります。
 
 ```html
 <header>
@@ -85,7 +85,7 @@ Given this Handlebars template:
 </header>
 ```
 
-And this data:
+そしてこのデータは次のようになります。
 
 ```js
 {
@@ -93,7 +93,7 @@ And this data:
 }
 ```
 
-Handlebars will build HTML like this:
+Handlebars は次のような HTML を構築します。
 
 ```html
 <header>
