@@ -207,7 +207,7 @@ function CounterButton() {
 
 ## Styling components
 
-Each framework offers a way to define styles for your components — or for the application as a whole. Although each framework's approach to defining the styles of a component is slightly different, all of them give you multiple ways to do so. With the addition of some helper modules, you can style your framework apps in [Sass](https://sass-lang.com/) or [Less](https://lesscss.org/), or transpile your CSS stylesheets with [PostCSS](https://postcss.org/).
+各フレームワークは、コンポーネント、またはアプリケーション全体のスタイルを定義する方法を提供します。コンポーネントのスタイルを定義するための各フレームワークのアプローチは若干異なりますが、いずれのフレームワークでも複数の方法が提供されています。いくつかのヘルパーモジュールを追加すると、 [Sass](https://sass-lang.com/) または [Less](https://lesscss.org/) でフレームワークアプリのスタイルを設定したり、 CSS スタイルシートを [PostCSS](https://postcss.org/) を使用してトランスパイルしたりできます。
 
 ## Handling dependencies
 
