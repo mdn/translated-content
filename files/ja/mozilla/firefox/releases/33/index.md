@@ -19,11 +19,11 @@ Gecko 33 を搭載した Firefox 33 は、米国時間 2014 年 10 月 14 日に
 - @media サイドバー
 - 新たな CSS 規則の追加
 - keyframes の編集
-- 3 次ベジェ曲線エディタ
+- 3 次ベジェ曲線エディター
 - Transform のハイライト表示
 - 持続的にキャッシュを無効化
 - 新たなコマンド
-- エディタの設定
+- エディターの設定
 - WebIDE
 
 詳しくは [hacks ブログの記事](https://hacks.mozilla.org/2014/07/event-listeners-popup-media-sidebar-cubic-bezier-editor-more-firefox-developer-tools-episode-33/)をご覧ください。このリリースで[機能追加や修正](http://mzl.la/1pGLFDs)を行った 33 名の貢献者に感謝します。

@@ -58,7 +58,7 @@ Firefox 11 は米国時間 2012 年 3 月 13 日にリリースされました�
 ### 開発ツール
 
 - システムが [WebGL](/ja/docs/WebGL) をサポートしている場合は、[ページ調査ツール](/ja/docs/Tools/Page_Inspector) で [3D ビュー](/ja/docs/Tools/Page_Inspector/3D_view) を提供します。
-- 新しいツールである [スタイルエディタ](/ja/docs/Tools/Style_Editor) は、リアルタイムな CSS スタイルシートの変更や作成を自由自在に行う機能を提供します。
+- 新しいツールである [スタイルエディター](/ja/docs/Tools/Style_Editor) は、リアルタイムな CSS スタイルシートの変更や作成を自由自在に行う機能を提供します。
 - [ソース表示機能](/ja/docs/View_source) が従来の HTML パーサーに代わり新しい HTML5 パーサーを使用するようになりました。
 
 ## Mozilla 開発者とアドオン開発者向けの変更点
@@ -72,7 +72,7 @@ Firefox 11 は米国時間 2012 年 3 月 13 日にリリースされました�
 #### 新しい JavaScript code modules
 
 - [`source-editor.jsm`](/ja/docs/JavaScript_code_modules/source-editor.jsm)
-  - : アドオンで利用可能な、便利で使いやすいソースコードエディタを提供します。これは [スクラッチパッド](/ja/docs/Tools/Scratchpad) など Firefox に統合している開発ツールで使用しているものと同じです。
+  - : アドオンで利用可能な、便利で使いやすいソースコードエディターを提供します。これは [スクラッチパッド](/ja/docs/Tools/Scratchpad) など Firefox に統合している開発ツールで使用しているものと同じです。
 
 ### インターフェイスの変更
 

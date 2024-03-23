@@ -67,7 +67,7 @@ Firefox 13 は 米国時間 2012 年 6 月 5 日にリリースされました�
 
 #### スタイルパネルの改良
 
-- [スタイルパネル](/ja/Tools/Page_Inspector/Style_panel) でルールの見出しをクリックすると、対応する CSS を [スタイルエディタ](/ja/Tools/Style_Editor) で開くようになりました。
+- [スタイルパネル](/ja/Tools/Page_Inspector/Style_panel) でルールの見出しをクリックすると、対応する CSS を [スタイルエディター](/ja/Tools/Style_Editor) で開くようになりました。
 - [スタイルパネル](/ja/Tools/Page_Inspector/Style_panel) でルールを右クリックすると、そのルールをクリップボードへコピーできるようになりました。
 - 未知のプロパティ名や誤った値を入力すると、プロパティの隣に警告アイコンを表示します。
 
@@ -85,11 +85,11 @@ Firefox 13 より、Windows 版の Firefox は Windows XP Service Pack 2 以降�
 
 #### source-editor.jsm
 
-- ソースエディタの API に、ダーティフラグのサポートを追加しました。
-- ソースエディタは、Orion を利用せずに {{ HTMLElement("textarea") }} へフォールバックする動作をサポートしなくなりました。
-- エディタが focus と blue のイベントを公開するようになりました。
-- [`getIndentationString()`](/ja/JavaScript_code_modules/source-editor.jsm#getIndentationString%28%29) メソッドを追加しました。これは、エディタでテキストのインデントに使用する文字を返します。
-- ソースエディタで、ブレークポイントのリストの管理とブレークポイントのオン・オフを切り替えるユーザーインターフェイスの表示をサポートしました。ただし実際は、ブレークポイントを実装していません。そのためのデバッガのコードを記述するのはあなた次第です。
+- ソースエディターの API に、ダーティフラグのサポートを追加しました。
+- ソースエディターは、Orion を利用せずに {{ HTMLElement("textarea") }} へフォールバックする動作をサポートしなくなりました。
+- エディターが focus と blue のイベントを公開するようになりました。
+- [`getIndentationString()`](/ja/JavaScript_code_modules/source-editor.jsm#getIndentationString%28%29) メソッドを追加しました。これは、エディターでテキストのインデントに使用する文字を返します。
+- ソースエディターで、ブレークポイントのリストの管理とブレークポイントのオン・オフを切り替えるユーザーインターフェイスの表示をサポートしました。ただし実際は、ブレークポイントを実装していません。そのためのデバッガのコードを記述するのはあなた次第です。
 - `highlightCurrentLine` 設定オプションを用いて、カレント行をハイライトする機能をサポートしました。
 
 ### ARIA

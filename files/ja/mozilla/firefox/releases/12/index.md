@@ -27,7 +27,7 @@ Firefox 12 は 米国時間 2012 年 4 月 24 日にリリースされました�
 - {{ domxref("XMLHttpRequest") }} が[`data:` URI](/ja/docs/data_URIs) から読み込めるようになりました。
 - {{ domxref("XMLHttpRequest") }} で巨大なデータをダウンロードしているとき、`responseType` に "moz-blob" を設定していると、 これまでに受信したデータのすべてを含む {{ domxref("Blob") }} であるレスポンスを参照できる progress イベントハンドラが定期的に呼び出されるようになりました。これによって、progress ハンドラでデータのすべてが到着するまで待つことなしにデータを処理し始められます。
 - Gecko が Android 上で [マルチタッチ](/ja/docs/DOM/Touch_events) をサポートしました。今までは一度に一つのタッチ操作しか認識しかできませんでした。
-- エディタ (フォーム) 上で IME を使った文字入力を行っている場合、従来は確定後に `input` イベントが発生していましたが、Firefox 12 では、IME で編集中の文字列が変更されたことを示す `compositionupdate` イベントの直後にも `input` イベントが発生するようになりました。これにより、`input` イベントハンドラを使って、日本語入力中にも未確定文字列を含めたフォームの入力内容を取得することが可能となりました。
+- エディター (フォーム) 上で IME を使った文字入力を行っている場合、従来は確定後に `input` イベントが発生していましたが、Firefox 12 では、IME で編集中の文字列が変更されたことを示す `compositionupdate` イベントの直後にも `input` イベントが発生するようになりました。これにより、`input` イベントハンドラを使って、日本語入力中にも未確定文字列を含めたフォームの入力内容を取得することが可能となりました。
 - DOM 4 仕様で定義されている {{ domxref("DOMError") }} が実装されました。
 - {{ domxref("Document.createNodeIterator()") }} メソッドが DOM 4 仕様に適合するように更新されました。これにより、`whatToShow` および `filter` 引数がオプションになり、非標準の 4 番目の引数である `entityReferenceExpansion` が削除されます。
 - {{ domxref("Blob") }} インターフェイスの `slice()` メソッドは符号付き 64 ビット整数の範囲外の `start` の値と `end` の値を正しく受け取れないバグによる影響を受けていましたが、この問題は修正されました。`
@@ -58,7 +58,7 @@ Firefox 12 は 米国時間 2012 年 4 月 24 日にリリースされました�
 - [Web Console](/ja/docs/Tools/Web_Console) がコンソールが開いていない状態の場合にエラーメッセージと {{ domxref("console.log()") }} を用いて追加したログエントリをキャッシュし、コンソールが開いたときにそれらを表示するようになりました。
 - [3D view](/ja/docs/Tools/Page_Inspector/3D_view) で "r" キーを押すことにより、ズームレベル、移動、回転をリセットできるようになりました。
 - [3D view](/ja/docs/Tools/Page_Inspector/3D_view) でノードを選択した後に "x" キーを押すことにより、そのノードを隠すことができるようになりました。
-- [ソースエディタ](/ja/docs/Tools/Using_the_Source_Editor) にいくつかの新しい編集機能とキーボードショートカットが追加されました。詳細は、[ソースエディタの利用](/ja/docs/Tools/Using_the_Source_Editor) を参照してください。
+- [ソースエディター](/ja/docs/Tools/Using_the_Source_Editor) にいくつかの新しい編集機能とキーボードショートカットが追加されました。詳細は、[ソースエディターの利用](/ja/docs/Tools/Using_the_Source_Editor) を参照してください。
 
 Mozilla は人気のアドオン [Firebug](http://getfirebug.com/) に依存するだけではなく、自身のウェブ開発者ツールの統合作業を進めています。これらのツールについてのさらなる情報および Firefox でのウェブ開発を支援する外部リソースの一覧は、[Web developer tools](/ja/docs/Tools) にあります。
 

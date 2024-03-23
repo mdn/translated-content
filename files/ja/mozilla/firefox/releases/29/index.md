@@ -16,8 +16,8 @@ Gecko 29 を搭載した Firefox 29 は、米国時間 2014 年 4 月 29 日に�
 - [ネットワークモニタ](/ja/docs/Tools/Network_Monitor)が、円グラフを使用してパフォーマンス統計を表示するようになりました ([Firefox バグ 846601](https://bugzil.la/846601))。
 - [インスペクタ](/ja/docs/Tools/Page_Inspector)で、CSS transform のプレビューツールチップが使用可能になりました ([Firefox バグ 726427](https://bugzil.la/726427))。
 - デバッガやコンソールでみられる DOM 要素は、変数リストの右側に新設したボタンを使用して直接削除または調査することが可能になりました。
-- CSS ソースマップを[スタイルエディタ](/ja/docs/Tools/Style_Editor)でサポートしました ([Firefox バグ 926014](https://bugzil.la/926014))。
-- CSS プロパティおよび値のオートコンプリート機能を[スタイルエディタ](/ja/docs/Tools/Style_Editor)に追加しました ([Firefox バグ 717369](https://bugzil.la/717369))。
+- CSS ソースマップを[スタイルエディター](/ja/docs/Tools/Style_Editor)でサポートしました ([Firefox バグ 926014](https://bugzil.la/926014))。
+- CSS プロパティおよび値のオートコンプリート機能を[スタイルエディター](/ja/docs/Tools/Style_Editor)に追加しました ([Firefox バグ 717369](https://bugzil.la/717369))。
 
 _詳細および他の小規模な変更点については [Mozilla Hacks ブログの記事](https://hacks.mozilla.org/2014/02/css-source-map-support-network-performance-analysis-more-firefox-developer-tools-episode-29/)をご覧ください。_
 
