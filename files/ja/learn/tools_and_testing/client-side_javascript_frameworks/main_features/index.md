@@ -236,7 +236,6 @@ import AuthorCredit from "./components/AuthorCredit";
 
 私たちが構築している雑誌サイトが次のような構造になっているとします。
 
-
 ```jsx
 <App>
   <Home>
