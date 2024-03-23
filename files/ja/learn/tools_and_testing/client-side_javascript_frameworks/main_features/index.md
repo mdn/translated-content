@@ -318,9 +318,9 @@ it("Increments the count when clicked", () => {
 });
 ```
 
-## Summary
+## まとめ
 
-At this point you should have more of an idea about the actual languages, features, and tools you'll be using as you create applications with frameworks. I'm sure you're enthusiastic to get going and actually do some coding, and that's what you are going to do next! At this point you can choose which framework you'd like to start learning first:
+この時点で、フレームワークを使用してアプリケーションを作成するときに使用する実際の言語、機能、ツールについてさらに理解できるはずです。あなたはきっと、実際にコーディングをしてみたいと熱意を持って取り組んでいると思います。それが次に行うことです。この時点で、最初に学習を開始するフレームワークを選択できます。
 
 - [React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
 - [Ember](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
