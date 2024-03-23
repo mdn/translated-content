@@ -7,7 +7,7 @@ l10n:
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-主要な JavaScript フレームワークごとに、 DOM の更新、ブラウザーイベントの処理、楽しい開発者エクスペリエンスの提供に関して、異なるアプローチが採用されています。この記事では、「ビッグ 4」フレームワークの主な特徴を探り、フレームワークがどのように機能する傾向があるかを高いレベルから見ていき、それらの違いを見ていきます。
+主要な JavaScript フレームワークはそれぞれ、 DOM の更新、ブラウザーイベントの処理、楽しい開発者エクスペリエンスの提供に関して、異なるアプローチが採用されています。この記事では、「ビッグ 4」フレームワークの主な特徴を探り、フレームワークがどのように機能する傾向があるかを高いレベルから見ていき、それらの違いを見ていきます。
 
 <table>
   <tbody>
