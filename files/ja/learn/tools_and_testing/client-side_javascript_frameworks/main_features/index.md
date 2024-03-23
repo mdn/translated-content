@@ -123,13 +123,13 @@ function add(a: number, b: number) {
 
 ここで各パラメータの後に書かれた `: number` は、TypeScript に `a` と `b` の両方が数字でなければならないことを伝えます。この関数を使用して引数として `'2'` を渡すと、 TypeScript はコンパイル中にエラーを発生させ、間違いを修正する必要があります。これらのエラーを発生させる独自の JavaScript を作成することもできますが、ソースコードが大幅に冗長になります。 TypeScript にそのようなチェックを処理させる方がおそらく合理的です。
 
-## Writing components
+## コンポーネントの作成
 
-As mentioned in the previous chapter, most frameworks have some kind of component model. React components can be written with JSX, Ember components with Handlebars, and Angular and Vue components with a templating syntax that lightly extends HTML.
+前の章で述べたように、ほとんどのフレームワークには何らかのコンポーネントモデルがあります。 React コンポーネントは JSX で、 Ember コンポーネントは Handlebars で、 Angular コンポーネントと Vue コンポーネントは HTML を軽く拡張したテンプレート構文で作成できます。
 
-Regardless of their opinions on how components should be written, each framework's components offer a way to describe the external properties they may need, the internal state that the component should manage, and the events a user can trigger on the component's markup.
+コンポーネントをどのように記述するべきかについての意見に関係なく、各フレームワークのコンポーネントは、必要となる可能性のある外部プロパティ、コンポーネントが管理する必要がある内部状態、およびユーザーがコンポーネントのマークアップでトリガーできるイベントを記述する方法を提供します。
 
-The code snippets in the rest of this section will use React as an example, and are written with JSX.
+このセクションの残りのコードスニペットは例として React を使用し、 JSX で書かれています。
 
 ### Properties
 
