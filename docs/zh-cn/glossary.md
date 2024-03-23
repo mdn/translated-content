@@ -45,9 +45,11 @@
 | ------------------ | ---------------- | ---------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
 | bare module        | 裸模块           | Vite.js 官方将其翻译为“裸模块”，其意为“没有任何路径的模块”。                             | https://github.com/mdn/translated-content/pull/12852#discussion_r1174339277 |
 | brand check        | 特定类型检查     | 通过一段代码来对特定的数据类型进行检查。                                                 | https://github.com/mdn/translated-content/pull/13381#discussion_r1205437483 |
+| constructor        | 构造函数         |                                                                                          | https://github.com/mdn/translated-content/issues/18211                      |
 | exotic object      | 特异对象         |                                                                                          |                                                                             |
-| normative optional | 可选标准         |                                                                                          | https://github.com/mdn/translated-content/pull/13627#discussion_r1224014687 |
+| handler            | 处理器           |                                                                                          | https://github.com/mdn/translated-content/issues/18211                      |
 | interface          | 接口             |                                                                                          | https://zh.wikipedia.org/wiki/介面_(資訊科技)                               |
+| normative optional | 可选标准         |                                                                                          | https://github.com/mdn/translated-content/pull/13627#discussion_r1224014687 |
 | primitive          | 原始值/类型      | 基本类型包括对象，而原始类型不包括对象。                                                 | https://github.com/mdn/translated-content/pull/14040#discussion_r1276966303 |
 | unscopable         | 非作用域（属性） |                                                                                          | https://github.com/mdn/translated-content/pull/12793#discussion_r1170694183 |
 | well-known symbol  | 内置通用符号     |                                                                                          | https://github.com/mdn/translated-content/pull/10338#discussion_r1036997921 |
@@ -61,12 +63,10 @@
 | Active learning        | 动手练习     |                    | https://github.com/mdn/translated-content/pull/12696#discussion_r1164859935 |
 | Browser compatibility  | 浏览器兼容性 |                    |                                                                             |
 | Conclusion             | 总结         |                    | https://github.com/mdn/translated-content/pull/13329#discussion_r1199677894 |
-| Constructor            | 构造函数     |                    | https://github.com/mdn/translated-content/issues/18211                      |
 | Examples               | 示例         |                    |                                                                             |
 | Exceptions             | 异常         |                    |                                                                             |
 | Formal Definition      | 形式定义     |                    | https://zh.wikipedia.org/zh-cn/形式文法                                     |
 | Formal syntax          | 形式语法     |                    | https://zh.wikipedia.org/zh-cn/形式文法                                     |
-| Handler                | 处理器       |                    | https://github.com/mdn/translated-content/issues/18211                      |
 | Objective              | 目标         | 在学习区表格中使用 |                                                                             |
 | Parameters             | 参数         |                    |                                                                             |
 | Prerequisites          | 前提         | 在学习区表格中使用 |                                                                             |
