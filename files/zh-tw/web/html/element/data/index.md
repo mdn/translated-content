@@ -14,7 +14,7 @@ slug: Web/HTML/Element/data
 此元素的屬性包括[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
 
 - `value`
-  - ：此屬性指定元素內容的可機器讀取的翻譯。
+  - : 此屬性指定元素內容所對應的數據，或說「機器可讀的翻譯」。
 
 ## 範例
 
