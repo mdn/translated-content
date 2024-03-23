@@ -1,5 +1,5 @@
 ---
-title:ウェブページから拡張機能とテーマをインストールする
+title: ウェブページから拡張機能とテーマをインストールする
 slug: orphaned/Installing_Extensions_and_Themes_From_Web_Pages
 ---
 
