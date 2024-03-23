@@ -5,7 +5,7 @@ slug: Web/CSS/:placeholder-shown
 
 {{CSSRef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:placeholder-shown`** permet de représenter n'importe quel élément {{htmlElement("input")}} ou {{htmlElement("textarea")}} affichant [un texte de substitution](fr/docs/Web/HTML/Element/input#placeholder).
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:placeholder-shown`** permet de représenter n'importe quel élément {{htmlElement("input")}} ou {{htmlElement("textarea")}} affichant [un texte de substitution](/fr/docs/Web/HTML/Element/input#placeholder).
 
 ```css
 /* Cible tout élément <input> ou <textarea> avec un */
