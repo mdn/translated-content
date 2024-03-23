@@ -213,17 +213,17 @@ function CounterButton() {
 
 すべての主要なフレームワークは、他のコンポーネント内のコンポーネントを使用して、場合によっては複数の階層レベルを使用して、依存関係を処理するためのメカニズムを提供します。他の機能と同様、正確なメカニズムはフレームワークによって異なりますが、最終的な結果は同じです。コンポーネントは、標準の [JavaScript モジュール構文](/en-US/docs/Web/JavaScript/Guide/Modules) 、または少なくともそれに類似したものを使用して、コンポーネントを他のコンポーネントにインポートする傾向があります。
 
-### Components in components
+### コンポーネント内のコンポーネント
 
-One key benefit of component-based UI architecture is that components can be composed together. Just like you can write HTML tags inside each other to build a website, you can use components inside other components to build a web application. Each framework allows you to write components that utilize (and thus depend on) other components.
+コンポーネントベースの UI アーキテクチャの主な利点の 1 つは、コンポーネントを一緒に構成できることです。 HTML タグを相互に記述して Web サイトを構築できるのと同じように、他のコンポーネント内でコンポーネントを使用して Web アプリケーションを構築できます。 各フレームワークを使用すると、他のコンポーネントを利用する (したがって依存する) コンポーネントを作成できます。
 
-For example, our `AuthorCredit` React component might be utilized inside an `Article` component. That means that `Article` would need to import `AuthorCredit`.
+たとえば、 `AuthorCredit` React コンポーネントは、 `Article` コンポーネント内で利用される可能性があります。 つまり、 `Article` は `AuthorCredit` をインポートする必要があります。
 
 ```js
 import AuthorCredit from "./components/AuthorCredit";
 ```
 
-Once that's done, `AuthorCredit` could be used inside the `Article` component like this:
+それが完了すると、 `AuthorCredit` を `Article` コンポーネント内で次のように使用できます。
 
 ```jsx
 <Article>
