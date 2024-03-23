@@ -190,9 +190,9 @@ function CounterButton() {
 
 ### Events
 
-In order to be interactive, components need ways to respond to browser events, so our applications can respond to our users. Frameworks each provide their own syntax for listening to browser events, which reference the names of the equivalent native browser events.
+インタラクティブであるためには、アプリケーションがユーザーに応答できるように、コンポーネントがブラウザイベントに応答する方法が必要です。フレームワークはそれぞれ、ブラウザイベントをリッスンするための独自の構文を提供し、同等のネイティブブラウザイベントの名前を参照します。
 
-In React, listening for the [`click`](/en-US/docs/Web/API/Element/click_event) event requires a special property, `onClick`. Let's update our `CounterButton` code from above to allow it to count clicks:
+React では、[`click`](/en-US/docs/Web/API/Element/click_event) イベントをリッスンするには、特別なプロパティ `onClick` が必要です。上記の `CounterButton` コードを更新して、クリック数をカウントできるようにしましょう。
 
 ```jsx
 function CounterButton() {
@@ -203,7 +203,7 @@ function CounterButton() {
 }
 ```
 
-In this version we are using additional `useState()` functionality to create a special `setCount()` function, which we can invoke to update the value of `count`. We call this function inside the `onClick` event handler to set `count` to whatever its current value is, plus one.
+このバージョンでは、追加の `useState()` 機能を使用して特別な `setCount()` 関数を作成し、これを呼び出して `count` の値を更新します。この関数をe `onClick` イベントハンドラ内で呼び出して、「count」を現在の値に 1 を加えた値に設定します。
 
 ## Styling components
 
