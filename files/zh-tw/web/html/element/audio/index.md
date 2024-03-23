@@ -35,7 +35,7 @@ slug: Web/HTML/Element/audio
 
 - `crossorigin`
 
-  - : 此[列舉](/zh-TW/docs/Glossary/Enumerated)屬性指示是否使用 CORS 來獲取相關音訊文件。[啟用 CORS 的資源](/zh-TW/docs/Web/HTML/CORS_enabled_image)可以在 {{HTMLElement("canvas")}} 元素中重複使用而不會被 _tainted_。允許的值有：
+  - : 此[列舉](/zh-TW/docs/Glossary/Enumerated)屬性指示是否使用 CORS 來獲取相關音訊文件。[啟用 CORS 的資源](/zh-TW/docs/Web/HTML/CORS_enabled_image)可以在 {{HTMLElement("canvas")}} 元素中重複使用而不會被*汙染*。允許的值有：
 
     - `anonymous`
       - : 發送沒有憑據的跨源請求。換句話說，它發送了沒有 cookie、X.509 憑證或執行 HTTP 基本身份驗證的 `Origin:` HTTP 標頭。如果伺服器沒有向源站提供憑證（通過不設置 `Access-Control-Allow-Origin:` HTTP 標頭），資源將是*汙染*的，並限制其使用。
@@ -54,7 +54,7 @@ slug: Web/HTML/Element/audio
   - : 一個布林屬性：如果指定，音訊播放器將在達到音訊結束時自動回到開頭。
 
 - `muted`
-  - : 一個布林屬性，指示音訊是否初始靜音。其默認值為 `false`。 
+  - : 一個布林屬性，指示音訊是否初始靜音。其默認值為 `false`。
 - `preload`
 
   - : 此[列舉](/zh-TW/docs/Glossary/Enumerated)屬性旨在為瀏覽器提供有助於獲得最佳用戶體驗的提示。它可能具有以下值之一：
@@ -221,7 +221,7 @@ slug: Web/HTML/Element/audio
 </table>
 ## 使用注意事項
 
-不同的瀏覽器不支援相同的[檔案類型](/zh-TW/docs/Web/Media/Formats/Containers) 和[音訊編解碼器](/zh-TW/docs/Web/Media/Formats/Audio_codecs)，你可以在嵌套的 {{htmlelement("source")}} 元素中提供多個來源，然後瀏覽器將使用它了解的第一個：
+不同的瀏覽器不支援相同的[檔案類型](/zh-TW/docs/Web/Media/Formats/Containers)和[音訊編解碼器](/zh-TW/docs/Web/Media/Formats/Audio_codecs)，你可以在嵌套的 {{htmlelement("source")}} 元素中提供多個來源，然後瀏覽器將使用它了解的第一個：
 
 ```html
 <audio controls>
@@ -244,7 +244,7 @@ slug: Web/HTML/Element/audio
 - `<audio>` 元素無法像 `<video>` 元素那樣與字幕或標題關聯。有關一些有用的信息和解決方法，請參見 Ian Devlin 的 [WebVTT 和音訊](https://www.iandevlin.com/blog/2015/12/html5/webvtt-and-audio/)。
 - 為了測試在支援該元素的瀏覽器中的回退內容，你可以將 `<audio>` 替換為一個不存在的元素，例如 `<notanaudio>`。
 
-有關使用 HTML `<audio>` 的一般信息，請參見初學者教程 [影片和音訊內容](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)。
+有關使用 HTML `<audio>` 的一般信息，請參見初學者教程[影片和音訊內容](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)。
 
 ### 使用 CSS 進行樣式設定
 
@@ -256,7 +256,7 @@ slug: Web/HTML/Element/audio
 
 為了在各種瀏覽器中獲得一致的外觀和感覺，你需要創建自定義控制項；這些可以以你想要的方式標記和設置樣式，然後可以使用 JavaScript 和 {{domxref("HTMLMediaElement")}} API 來連接其功能。
 
-[影片播放器樣式基礎知識](/zh-TW/docs/Web/Media/Audio_and_video_delivery/Video_player_styling_basics) 提供了一些有用的樣式技巧——雖然它是在 `<video>` 的上下文中撰寫的，但其中的許多內容同樣適用於 `<audio>`。
+[影片播放器樣式基礎知識](/zh-TW/docs/Web/Media/Audio_and_video_delivery/Video_player_styling_basics)提供了一些有用的樣式技巧——雖然它是在 `<video>` 的上下文中撰寫的，但其中的許多內容同樣適用於 `<audio>`。
 
 ### 檢測音軌的添加和移除
 
