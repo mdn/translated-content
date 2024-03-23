@@ -36,14 +36,11 @@ slug: Web/HTML/Element/col
 
 - `char` {{deprecated_inline}}
 
-  - ：指定每個列單元格的內容對齊到一個字符的方式```html
-  。當將 [`align`](#align) 未設置為 `char` 時，此屬性將被忽略，但仍將覆蓋其 {{HTMLElement("colgroup")}} 父元素的指定 [`char`](/zh-TW/docs/Web/HTML/Element/colgroup#char)。
-
+  - ：指定每個列單元格的內容對齊到一個字符的方式。當將 [`align`](#align) 未設置為 `char` 時，此屬性將被忽略，但仍將覆蓋其 {{HTMLElement("colgroup")}} 父元素的指定 [`char`](/zh-TW/docs/Web/HTML/Element/colgroup#char)。
 
 - `charoff` {{deprecated_inline}}
 
   - ：指定列單元格內容從由 [`char`](#char) 屬性指定的對齊字符的偏移量的字符數。
-
 
 - `valign` {{deprecated_inline}}
 
@@ -55,11 +52,9 @@ slug: Web/HTML/Element/col
     >
     > 如果表格使用了 [`colspan`](/zh-TW/docs/Web/HTML/Element/td#colspan) 屬性，則可以通過組合適當的 CSS 屬性選擇器，如 `[colspan=n]` 來達到效果，雖然這不是一個簡單的過程。
 
-
 - `width` {{deprecated_inline}}
 
   - ：為每個列指定默認寬度。除了標準像素和百分比值外，此屬性還可以採用特殊形式 `0*`，表示每個跨度的列的寬度應該是足以容納列內容的最小寬度。也可以使用相對寬度，如 `5*`。請注意，此屬性會覆蓋其 {{HTMLElement("colgroup")}} 父元素的指定 [`width`](/zh-TW/docs/Web/HTML/Element/colgroup#width)。請改用 {{cssxref("width")}} CSS 屬性，因為此屬性已棄用。
-
 
 ## 使用注意事項
 
@@ -70,7 +65,6 @@ slug: Web/HTML/Element/col
   - {{cssxref("border")}}：各種 `border` 屬性適用，但僅當 `<table>` 具有 {{cssxref("border-collapse", "border-collapse: collapse")}} 設置時。
   - {{cssxref("visibility")}}：對於一列，`collapse` 值導致該列的所有單元格不被呈現，並且跨入其他列的單元格被剪切。這些列將佔用的空間被移除。但是，其他列的大小仍然被計算，就好像摺疊列中的單元格存在一樣。`visibility` 的其他值沒有效果。
   - {{cssxref("width")}}：`width` 屬性定義了列的最小寬度，就像 {{cssxref("min-width")}} 被設置一樣。
-
 
 ## 範例
 
