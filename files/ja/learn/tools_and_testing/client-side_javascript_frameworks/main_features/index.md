@@ -1,7 +1,6 @@
 ---
 title: フレームワークの主な機能
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features
-page-type: learn-module-chapter
 l10n:
   sourceCommit: 03f247507ae02105bcfe822b8e97ae8e0006bc19
 ---
