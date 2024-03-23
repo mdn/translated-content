@@ -15,7 +15,7 @@ l10n:
 
 ## 課題
 
-[この課題の出発点をダウンロード](https://github.com/mdn/css-examples/blob/main/learn/tasks/rwd/rwd-download.html )してください。ダウンロードした HTML ファイルをブラウザーで開くと、モバイル端末で読み取り可能な方法でダウンロードするワイヤーフレームのサイトが見つかります。ウィンドウを小さくドラッグするか、[Firefox 開発者ツールのレスポンシブデザインビュー](https://firefox-source-docs.mozilla.org/devtools-user/index.html#responsive-design-mode) を使用することができます。
+[この課題の出発点をダウンロード](https://github.com/mdn/css-examples/blob/main/learn/tasks/rwd/rwd-download.html)してください。ダウンロードした HTML ファイルをブラウザーで開くと、モバイル端末で読み取り可能な方法でダウンロードするワイヤーフレームのサイトが見つかります。ウィンドウを小さくドラッグするか、[Firefox 開発者ツールのレスポンシブデザインビュー](https://firefox-source-docs.mozilla.org/devtools-user/index.html#responsive-design-mode) を使用することができます。
 
 課題は、このレイアウトのデスクトップ版を作成し、画面の幅に余裕があるときに表示することです。最終結果は下記の画像のようになるはずです。
 
