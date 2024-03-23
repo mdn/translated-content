@@ -72,7 +72,7 @@ const header = React.createElement(
 
 ### Handlebars
 
-[Handlebars](https://handlebarsjs.com/)  テンプレート言語は Ember アプリケーションに固有のものではありませんが、 Ember アプリケーションで頻繁に利用されています。 Handlebars コードは HTML に似ていますが、他の場所からデータを取り込むオプションがあります。このデータは、アプリケーションが最終的に構築する HTML に影響を与えるために使用できます。
+[Handlebars](https://handlebarsjs.com/) テンプレート言語は Ember アプリケーションに固有のものではありませんが、 Ember アプリケーションで頻繁に利用されています。 Handlebars コードは HTML に似ていますが、他の場所からデータを取り込むオプションがあります。このデータは、アプリケーションが最終的に構築する HTML に影響を与えるために使用できます。
 
 JSX と同様に、 Handlebars は中括弧を使用して変数の値を挿入します。ハンドルバーは、単一ペアではなく、二重ペアの中括弧を使用します。
 
