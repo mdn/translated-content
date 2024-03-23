@@ -133,9 +133,9 @@ function add(a: number, b: number) {
 
 ### Properties
 
-Properties, or **props**, are external data that a component needs in order to render. Suppose you're building a website for an online magazine, and you need to be sure that each contributing writer gets credit for their work. You might create an `AuthorCredit` component to go with each article. This component needs to display a portrait of the author and a short byline about them. In order to know what image to render, and what byline to print, `AuthorCredit` needs to accept some props.
+Properties 、または **props** は、コンポーネントがレンダリングするために必要な外部データです。オンラインマガジンの Web サイトを構築していて、各寄稿者が自分の作品に対してクレジットを取得できるようにする必要があるとします。各記事に付随する `AuthorCredit` コンポーネントを作成することもできます。このコンポーネントは、著者の肖像と著者に関する短い署名文を表示する必要があります。どの画像をレンダリングするか、どの署名欄を印刷するかを知るために、 `AuthorCredit` はいくつかの props を受け入れる必要があります。
 
-A React representation of this `AuthorCredit` component might look something like this:
+この `AuthorCredit` コンポーネントの React 表現は次のようになります。
 
 ```jsx
 function AuthorCredit(props) {
@@ -148,7 +148,7 @@ function AuthorCredit(props) {
 }
 ```
 
-`{props.src}`, `{props.alt}`, and `{props.byline}` represent where our props will be inserted into the component. To render this component, we would write code like this in the place where we want it rendered (which will probably be inside another component):
+`{props.src}`, `{props.alt}`, および `{props.byline}` は、 props がコンポーネントに挿入される場所を表します。このコンポーネントをレンダリングするには、レンダリングしたい場所(おそらく別のコンポーネント内にあるでしょう）)に次のようなコードを記述します。
 
 ```jsx
 <AuthorCredit
@@ -158,7 +158,7 @@ function AuthorCredit(props) {
 />
 ```
 
-This will ultimately render the following [`<figure>`](/en-US/docs/Web/HTML/Element/figure) element in the browser, with its structure as defined in the `AuthorCredit` component, and its content as defined in the props included on the `AuthorCredit` component call:
+これにより、最終的に次の [`<figure>`](/en-US/docs/Web/HTML/Element/figure) 要素がブラウザにレンダリングされます。その構造は `AuthorCredit` コンポーネントで定義されているとおりであり、そのコンテンツは次のようになります。 `AuthorCredit` コンポーネント呼び出しに含まれる props で定義されます。
 
 ```html
 <figure>
