@@ -169,9 +169,9 @@ function AuthorCredit(props) {
 
 ### State
 
-We talked about the concept of **state** in the previous chapter — a robust state-handling mechanism is key to an effective framework, and each component may have data that needs its state controlled. This state will persist in some way as long as the component is in use. Like props, state can be used to affect how a component is rendered.
+前の章で **state** の概念について説明しました。効果的なフレームワークの鍵となるのは堅牢な状態処理メカニズムであり、各コンポーネントには状態の制御が必要なデータが含まれる場合があります。この state は、コンポーネントが使用されている限り、何らかの形で持続します。 props と同様に、 state を使用してコンポーネントのレンダリング方法に影響を与えることができます。
 
-As an example, consider a button that counts how many times it has been clicked. This component should be responsible for tracking its own _count_ state, and could be written like this:
+例として、クリックされた回数をカウントするボタンについて考えてみましょう。このコンポーネントは、自身の _count_ 状態を追跡する必要があり、次のように記述できます。
 
 ```jsx
 function CounterButton() {
@@ -180,13 +180,13 @@ function CounterButton() {
 }
 ```
 
-[`useState()`](https://react.dev/reference/react/useState) is a **[React hook](https://react.dev/reference/react)** which, given an initial data value, will keep track of that value as it is updated. The code will be initially rendered like so in the browser:
+[`useState()`](https://react.dev/reference/react/useState) は **[React フック](https://react.dev/reference/react)**です。データ値は、更新されるたびにその値を追跡します。コードは最初、ブラウザーで次のように表示されます。
 
 ```html
 <button>Clicked 0 times</button>
 ```
 
-The `useState()` call keeps track of the `count` value in a robust way across the app, without you needing to write code to do that yourself.
+`useState()` 呼び出しは、アプリ全体にわたって堅牢な方法で `count` 値を追跡します。そのためのコードを自分で記述する必要はありません。
 
 ### Events
 
