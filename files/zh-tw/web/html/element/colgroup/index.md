@@ -5,7 +5,7 @@ slug: Web/HTML/Element/colgroup
 
 {{HTMLSidebar}}
 
-**`<colgroup>`**是 [HTML](/zh-TW/docs/Web/HTML) 中定義表格內的一組列的元素。
+**`<colgroup>`** [HTML](/zh-TW/docs/Web/HTML) 中定義表格內的一組列的元素。
 
 {{EmbedInteractiveExample("pages/tabbed/colgroup.html","tabbed-taller")}}
 
