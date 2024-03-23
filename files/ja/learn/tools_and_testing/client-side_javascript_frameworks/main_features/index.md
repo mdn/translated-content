@@ -103,9 +103,9 @@ Handlebars は次のような HTML を構築します。
 
 ### TypeScript
 
-[TypeScript](https://www.typescriptlang.org/) is a _superset_ of JavaScript, meaning it extends JavaScript — all JavaScript code is valid TypeScript, but not the other way around. TypeScript is useful for the strictness it allows developers to enforce on their code. For instance, consider a function `add()`, which takes integers `a` and `b` and returns their sum.
+[TypeScript](https://www.typescriptlang.org/) は JavaScript の「スーパーセット」です。つまり、 JavaScript を拡張したものです。すべての JavaScript コードは有効な TypeScript ですが、その逆はありません。 TypeScript は、開発者がコードに厳密性を適用できるという点で役立ちます。たとえば、整数 `a` と `b` を受け取り、その合計を返す関数 `add()` について考えてみましょう。
 
-In JavaScript, that function could be written like this:
+JavaScript では、この関数は次のように記述できます。
 
 ```js
 function add(a, b) {
@@ -113,7 +113,7 @@ function add(a, b) {
 }
 ```
 
-This code might be trivial for someone accustomed to JavaScript, but it could still be clearer. JavaScript lets us use the `+` operator to concatenate strings together, so this function would technically still work if `a` and `b` were strings — it just might not give you the result you'd expect. What if we wanted to only allow numbers to be passed into this function? TypeScript makes that possible:
+このコードは JavaScript に慣れている人にとっては簡単かもしれませんが、さらに明確になる可能性があります。 JavaScript では `+` 演算子を使用して文字列を連結できるため、 `a` と `b` が文字列の場合でもこの関数は技術的には機能しますが、期待する結果が得られない可能性があります。この関数に数値のみを渡すことを許可したい場合はどうすればよいでしょうか? TypeScript を使用すると、次のことが可能になります。
 
 ```ts
 function add(a: number, b: number) {
@@ -121,7 +121,7 @@ function add(a: number, b: number) {
 }
 ```
 
-The `: number` written after each parameter here tells TypeScript that both `a` and `b` must be numbers. If we were to use this function and pass `'2'` into it as an argument, TypeScript would raise an error during compilation, and we would be forced to fix our mistake. We could write our own JavaScript that raises these errors for us, but it would make our source code significantly more verbose. It probably makes more sense to let TypeScript handle such checks for us.
+ここで各パラメータの後に書かれた `: number` は、TypeScript に `a` と `b` の両方が数字でなければならないことを伝えます。この関数を使用して引数として `'2'` を渡すと、 TypeScript はコンパイル中にエラーを発生させ、間違いを修正する必要があります。これらのエラーを発生させる独自の JavaScript を作成することもできますが、ソースコードが大幅に冗長になります。 TypeScript にそのようなチェックを処理させる方がおそらく合理的です。
 
 ## Writing components
 
