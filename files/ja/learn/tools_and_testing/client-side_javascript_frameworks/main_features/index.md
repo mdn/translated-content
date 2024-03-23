@@ -231,11 +231,12 @@ import AuthorCredit from "./components/AuthorCredit";
 </Article>
 ```
 
-### Dependency injection
+### 依存関係の注入( Dependency injection )
 
-Real-world applications can often involve component structures with multiple levels of nesting. An `AuthorCredit` component nested many levels deep might, for some reason, need data from the very root level of our application.
+実際のアプリケーションには、多くの場合、複数レベルのネストを含むコンポーネント構造が含まれることがあります。多くのレベルでネストされた `AuthorCredit` コンポーネントは、何らかの理由で、アプリケーションのまさにルートレベルからのデータを必要とする場合があります。
 
-Let's say that the magazine site we're building is structured like this:
+私たちが構築している雑誌サイトが次のような構造になっているとします。
+
 
 ```jsx
 <App>
@@ -247,13 +248,13 @@ Let's say that the magazine site we're building is structured like this:
 </App>
 ```
 
-Our `App` component has data that our `AuthorCredit` component needs. We could rewrite `Home` and `Article` so that they know to pass props down, but this could get tedious if there are many, many levels between the origin and destination of our data. It's also excessive: `Home` and `Article` don't actually make use of the author's portrait or byline, but if we want to get that information into the `AuthorCredit`, we will need to change `Home` and `Article` to accommodate it.
+`App` コンポーネントには、`AuthorCredit` コンポーネントが必要とするデータが含まれています。 `Home` と `Article` を書き換えて、 props を渡すことができるようにすることもできます。しかし、データの送信元と送信先の間に非常に多くのレベルがある場合、これは面倒になる可能性があります。これも行き過ぎです。 `Home` と `Article` では、実際には著者の肖像画や署名が使用されていません。しかし、その情報を `AuthorCredit` に取り込みたい場合は、それに合わせて `Home` と `Article` を変更する必要があります。
 
-The problem of passing data through many layers of components is called prop drilling, and it's not ideal for large applications.
+多くのコンポーネント層を介してデータを渡す問題はプロップドリルと呼ばれ、大規模なアプリケーションには理想的ではありません。
 
-To circumvent prop drilling, frameworks provide functionality known as dependency injection, which is a way to get certain data directly to the components that need it, without passing it through intervening levels. Each framework implements dependency injection under a different name, and in a different way, but the effect is ultimately the same.
+プロップドリルを回避するために、フレームワークは依存関係注入として知られる機能を提供します。これは、特定のデータを、介在するレベルを介さずに、必要なコンポーネントに直接取得する方法です。各フレームワークは、異なる名前で異なる方法で依存性注入を実装しますが、結果は最終的には同じです。
 
-Angular calls this process [dependency injection](https://angular.io/guide/dependency-injection); Vue has [`provide()` and `inject()` component methods](https://v2.vuejs.org/v2/api/#provide-inject); React has a [Context API](https://react.dev/learn/passing-data-deeply-with-context); Ember shares state through [services](https://guides.emberjs.com/release/services/).
+Angular では、このプロセスを[依存関係の注入](https://angular.io/guide/dependency-injection)と呼びます。 Vue には [`provide()` および `inject()` コンポーネントメソッド](https://v2.vuejs.org/v2/api/#provide-inject)があります。 React には[ Context API](https://react.dev/learn/passing-data-deeply-with-context) があります。 Ember は [サービス](https://guides.emberjs.com/release/services/)を通じて状態を共有します。
 
 ### Lifecycle
 
