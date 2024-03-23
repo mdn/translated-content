@@ -61,10 +61,12 @@
 | Active learning        | 动手练习     |                    | https://github.com/mdn/translated-content/pull/12696#discussion_r1164859935 |
 | Browser compatibility  | 浏览器兼容性 |                    |                                                                             |
 | Conclusion             | 总结         |                    | https://github.com/mdn/translated-content/pull/13329#discussion_r1199677894 |
+| Constructor            | 构造函数     |                    | https://github.com/mdn/translated-content/issues/18211                      |
 | Examples               | 示例         |                    |                                                                             |
 | Exceptions             | 异常         |                    |                                                                             |
 | Formal Definition      | 形式定义     |                    | https://zh.wikipedia.org/zh-cn/形式文法                                     |
 | Formal syntax          | 形式语法     |                    | https://zh.wikipedia.org/zh-cn/形式文法                                     |
+| Handler                | 处理器       |                    | https://github.com/mdn/translated-content/issues/18211                      |
 | Objective              | 目标         | 在学习区表格中使用 |                                                                             |
 | Parameters             | 参数         |                    |                                                                             |
 | Prerequisites          | 前提         | 在学习区表格中使用 |                                                                             |
