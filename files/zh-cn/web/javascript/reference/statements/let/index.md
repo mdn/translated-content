@@ -1,6 +1,8 @@
 ---
 title: let
 slug: Web/JavaScript/Reference/Statements/let
+l10n:
+  sourceCommit: 66149c2238e1beb7fc65dd998968aa0638c874a3
 ---
 
 {{jsSidebar("Statements")}}
