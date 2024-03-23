@@ -39,7 +39,7 @@ l10n:
 
 ## 怎样将图片放到网页上？
 
-要想在网页上放置简单的图像，我们需要使用 {{htmlelement("img")}} 元素。这个元素是 {{Glossary("void element, 空元素")}}（即无法包含任何子内容和结束标签），它需要两个属性才能起作用：`src` 和 `alt`。`src` 属性包含一个 URL，该 URL 指向要嵌入页面的图像。`src` 属性可以是相对 URL 或绝对 URL，这与 {{htmlelement("a")}} 元素的 `href` 属性类似。如果没有 `src` 属性，`img` 元素就没有图像可加载。
+要想在网页上放置简单的图像，我们需要使用 {{htmlelement("img")}} 元素。这个元素是{{Glossary("void element", "空元素")}}（即无法包含任何子内容和结束标签），它需要两个属性才能起作用：`src` 和 `alt`。`src` 属性包含一个 URL，该 URL 指向要嵌入页面的图像。`src` 属性可以是相对 URL 或绝对 URL，这与 {{htmlelement("a")}} 元素的 `href` 属性类似。如果没有 `src` 属性，`img` 元素就没有图像可加载。
 
 ['alt' 属性的描述如下](#备选文本).
 
