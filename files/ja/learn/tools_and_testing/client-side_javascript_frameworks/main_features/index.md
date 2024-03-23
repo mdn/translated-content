@@ -37,9 +37,9 @@ DSL はブラウザで直接読み取ることはできません。最初に Jav
 
 ### JSX
 
-[JSX](https://react.dev/learn/writing-markup-with-jsx), which stands for JavaScript and XML, is an extension of JavaScript that brings HTML-like syntax to a JavaScript environment. It was invented by the React team for use in React applications, but can be used to develop other applications — like Vue apps, for instance.
+[JSX](https://react.dev/learn/writing-markup-with-jsx) は、JavaScript と XML の略で、JavaScript 環境に HTML のような構文をもたらす JavaScript の拡張機能です。これは React アプリケーションで使用するために React チームによって発明されましたが、 Vue アプリなどの他のアプリケーションの開発にも使用できます。
 
-The following shows a simple JSX example:
+以下に簡単な JSX の例を示します。
 
 ```jsx
 const subject = "World";
@@ -50,9 +50,9 @@ const header = (
 );
 ```
 
-This expression represents an HTML [`<header>`](/en-US/docs/Web/HTML/Element/header) element with an [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) element inside. The curly braces around `{subject}` tell the application to read the value of the `subject` constant and insert it into our `<h1>`.
+この式は、 [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) 要素を持つ HTML [`<header>`](/en-US/docs/Web/HTML/Element/header) 要素の内部を表します。 `{subject}` を囲む中括弧は、アプリケーションに `subject` 定数の値を読み取り、それを `<h1>` に挿入するように指示します。
 
-When used with React, the JSX from the previous snippet would be compiled into this:
+React で使用すると、前のスニペットの JSX は次のようにコンパイルされます。
 
 ```js
 const subject = "World";
@@ -63,7 +63,7 @@ const header = React.createElement(
 );
 ```
 
-When ultimately rendered by the browser, the above snippet will produce HTML that looks like this:
+最終的にブラウザーによってレンダリングされると、上記のスニペットは次のような HTML を生成します。
 
 ```html
 <header>
