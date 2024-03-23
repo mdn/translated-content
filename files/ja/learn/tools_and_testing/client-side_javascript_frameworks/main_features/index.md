@@ -209,9 +209,9 @@ function CounterButton() {
 
 各フレームワークは、コンポーネント、またはアプリケーション全体のスタイルを定義する方法を提供します。コンポーネントのスタイルを定義するための各フレームワークのアプローチは若干異なりますが、いずれのフレームワークでも複数の方法が提供されています。いくつかのヘルパーモジュールを追加すると、 [Sass](https://sass-lang.com/) または [Less](https://lesscss.org/) でフレームワークアプリのスタイルを設定したり、 CSS スタイルシートを [PostCSS](https://postcss.org/) を使用してトランスパイルしたりできます。
 
-## Handling dependencies
+## 依存関係の処理
 
-All major frameworks provide mechanisms for handling dependencies — using components inside other components, sometimes with multiple hierarchy levels. As with other features, the exact mechanism will differ between frameworks, but the end result is the same. Components tend to import components into other components using the standard [JavaScript module syntax](/en-US/docs/Web/JavaScript/Guide/Modules), or at least something similar.
+すべての主要なフレームワークは、他のコンポーネント内のコンポーネントを使用して、場合によっては複数の階層レベルを使用して、依存関係を処理するためのメカニズムを提供します。他の機能と同様、正確なメカニズムはフレームワークによって異なりますが、最終的な結果は同じです。コンポーネントは、標準の [JavaScript モジュール構文](/en-US/docs/Web/JavaScript/Guide/Modules) 、または少なくともそれに類似したものを使用して、コンポーネントを他のコンポーネントにインポートする傾向があります。
 
 ### Components in components
 
