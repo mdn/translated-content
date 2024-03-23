@@ -27,13 +27,13 @@ l10n:
   </tbody>
 </table>
 
-## Domain-specific languages
+## ドメイン固有言語
 
-All of the frameworks discussed in this module are powered by JavaScript, and all allow you to use domain-specific languages (DSLs) in order to build your applications. In particular, React has popularized the use of **JSX** for writing its components, while Ember utilizes **Handlebars**. Unlike HTML, these languages know how to read data variables, and this data can be used to streamline the process of writing your UI.
+このモジュールで説明するすべてのフレームワークは JavaScript を利用しており、アプリケーションを構築するためにドメイン固有言語 (DSL) を使用できます。特に、 React はコンポーネントの作成に **JSX** の使用を普及させ、一方、 Ember は **Handlebars** を利用します。 HTML とは異なり、これらの言語はデータ変数の読み取り方法を知っており、このデータを使用して UI を作成するプロセスを合理化できます。
 
-Angular apps often make heavy use of **TypeScript**. TypeScript is not concerned with the writing of user interfaces, but it is a domain-specific language, and has significant differences to vanilla JavaScript.
+Angular アプリでは、**TypeScript** が頻繁に使用されます。 TypeScript はユーザーインターフェイスの記述には関与しませんが、ドメイン固有の言語であり、通常の JavaScript とは大きな違いがあります。
 
-DSLs can't be read by the browser directly; they must be transformed into JavaScript or HTML first. [Transformation is an extra step in the development process](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview#transformation), but framework tooling generally includes the required tools to handle this step, or can be adjusted to include this step. While it is possible to build framework apps without using these domain-specific languages, embracing them will streamline your development process and make it easier to find help from the communities around those frameworks.
+DSL はブラウザで直接読み取ることはできません。最初に JavaScript または HTML に変換する必要があります。[変換は開発プロセスの追加のステップです](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview#transformation)しかし、フレームワークツールには通常、このステップを処理するために必要なツールが含まれているか、または次のように調整できます。このステップを含めてください。これらのドメイン固有言語を使用せずにフレームワークアプリを構築することも可能ですが、これらの言語を採用すると、開発プロセスが合理化され、それらのフレームワークに関するコミュニティからのヘルプを見つけやすくなります。
 
 ### JSX
 
