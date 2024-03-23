@@ -252,7 +252,7 @@ import AuthorCredit from "./components/AuthorCredit";
 
 プロップドリルを回避するために、フレームワークは依存関係注入として知られる機能を提供します。これは、特定のデータを、介在するレベルを介さずに、必要なコンポーネントに直接取得する方法です。各フレームワークは、異なる名前で異なる方法で依存性注入を実装しますが、結果は最終的には同じです。
 
-Angular では、このプロセスを[依存関係の注入](https://angular.io/guide/dependency-injection)と呼びます。 Vue には [`provide()` および `inject()` コンポーネントメソッド](https://v2.vuejs.org/v2/api/#provide-inject)があります。 React には[ Context API](https://react.dev/learn/passing-data-deeply-with-context) があります。 Ember は [サービス](https://guides.emberjs.com/release/services/)を通じて状態を共有します。
+Angular では、このプロセスを[依存関係の注入](https://angular.io/guide/dependency-injection)と呼びます。 Vue には [`provide()` および `inject()` コンポーネントメソッド](https://v2.vuejs.org/v2/api/#provide-inject)があります。 React には[Context API](https://react.dev/learn/passing-data-deeply-with-context) があります。 Ember は [サービス](https://guides.emberjs.com/release/services/)を通じて状態を共有します。
 
 ### ライフサイクル
 
