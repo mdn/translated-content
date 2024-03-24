@@ -102,7 +102,7 @@ function fillTableWithParameters(tbl) {
 
 ## 같이 보기
 
-- [Fetch API](/en-US/docs/Web/API/Fetch_API)
+- [Fetch API](/ko/docs/Web/API/Fetch_API)
 - CSS {{cssxref("&lt;url&gt;")}} type
 - {{jsxref("encodeURI", "encodeURI()")}}
 - {{jsxref("encodeURIComponent", "encodeURIComponent()")}}
