@@ -30,7 +30,7 @@ Map[Symbol.species]
 
 ### 일반 객체에서의 species
 
-`@@species` 속성은 `Map`의 `Map` 생성자인 기본 생성자 함수를 반환합니다.
+`@@species` 속성은 `Map`의 기본 생성자 함수인 `Map` 을 반환합니다.
 
 ```js
 Map[Symbol.species]; // function Map()
@@ -43,7 +43,7 @@ Map[Symbol.species]; // function Map()
 
 ```js
 class MyMap extends Map {
-  // 부모 Map 생성자 MyMap species로 덮어쓰기
+  // 부모 Map 생성자로 MyMap species 덮어쓰기
   static get [Symbol.species]() {
     return Map;
   }
