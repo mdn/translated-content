@@ -20,7 +20,7 @@ URL 표준의 대부분은 [URL의 정의](/ko/docs/Learn/Common_questions/Web_m
 지정된 {{domxref("URL")}}에 대한 URL 객체를 생성하면 URL을 구문 분석하고 해당 속성을 통해 구성 요소에 빠르게 접근할 수 있습니다.
 
 ```js
-let addr = new URL("https://developer.mozilla.org/en-US/docs/Web/API/URL_API");
+let addr = new URL("https://developer.mozilla.org/ko/docs/Web/API/URL_API");
 let host = addr.host;
 let path = addr.pathname;
 ```
