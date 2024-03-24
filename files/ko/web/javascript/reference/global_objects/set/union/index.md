@@ -35,10 +35,7 @@ union(other)
 
 ![두 개의 원이 겹치는 벤 다이어그램입니다. A와 B의 대칭차집합은 두 원 중 하나 또는 두 원이 포함하는 영역입니다.](diagram.svg)
 
-`union()`은 `other` 매개변수로 [유사 집합](/ko/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects) 객체를 받습니다.
-사용자 코드를 호출하지 않고 `this`에 저장된 기본 데이터를 직접 검색하기 때문에 실제 {{jsxref("Set")}} 인스턴스가 되기
-위해 {{jsxref("Operators/this", "this")}}가 필요합니다. 그런 다음 `keys()` 메서드를 호출하여
-`other`을 순회하고 `this`의 모든 요소와 `other`에 없는 모든 요소로 새로운 집합을 구성합니다.
+`union()`은 `other` 매개변수로 [유사 집합](/ko/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects) 객체를 받습니다. 사용자 코드를 호출하지 않고 `this`에 저장된 기본 데이터를 직접 검색하기 때문에 {{jsxref("Operators/this", "this")}}는 실제 {{jsxref("Set")}} 인스턴스여야합니다. 그런 다음 `keys()` 메서드를 호출하여 `other`을 순회하고 `this`의 모든 요소와 `other`에 없는 모든 요소로 새로운 집합을 구성합니다.
 
 반환하는 집합의 요소의 순서는 `this`에 있는 요소가 먼저이며, 그 이후에 `other` 요소입니다.
 
