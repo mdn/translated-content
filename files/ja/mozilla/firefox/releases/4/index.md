@@ -99,7 +99,7 @@ The following changes were made to the [`CanvasRenderingContext2D`](/ja/docs/Web
 
 | 関数                                                  | 説明                                                                                                                                               |
 | ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`:-moz-any`](/ja/docs/Web/CSS/:-moz-any)             | セレクターをグループ化しコンビネータを分解できます。                                                                                                 |
+| [`:-moz-any`](/ja/docs/Web/CSS/:-moz-any)             | セレクターをグループ化しコンビネータを分解できます。                                                                                               |
 | [`-moz-calc`](/ja/docs/Web/CSS/-moz-calc)             | `<length> の値を数式で指定できます。`                                                                                                              |
 | [`-moz-element`](/ja/docs/Web/CSS/-moz-element)       | 任意の要素を [`background-image`](/ja/docs/Web/CSS/background-image) および [`background`](/ja/docs/Web/CSS/background) の背景として使用できます。 |
 | [`-moz-image-rect`](/ja/docs/Web/CSS/-moz-image-rect) | 画像の一部分を [`background-image`](/ja/docs/Web/CSS/background-image) もしくは [`background`](/ja/docs/Web/CSS/background)で利用できます。        |
