@@ -20,7 +20,6 @@ slug: Web/HTML/Element/dir
 - `compact` {{Deprecated_Inline}}
   - ：這個布林屬性暗示列表應以緊湊樣式呈現。此屬性的解釋取決於使用者代理程式，並且它在所有瀏覽器中都不起作用。
 
-
 ## 規範
 
 不屬於任何目前的規範。
