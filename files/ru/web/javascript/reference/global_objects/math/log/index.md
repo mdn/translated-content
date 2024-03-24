@@ -3,7 +3,7 @@ title: Math.log()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log
 ---
 
-{{JSRef("Global_Objects", "Math")}}
+{{JSRef}}
 
 ## Сводка
 
@@ -53,11 +53,7 @@ function getBaseLog(x, y) {
 
 ## Спецификации
 
-| Спецификация                                        | Статус             | Комментарии                                            |
-| --------------------------------------------------- | ------------------ | ------------------------------------------------------ |
-| ECMAScript 1-е издание.                             | Стандарт           | Изначальное определение. Реализована в JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.2.10', 'Math.log')}} | {{Spec2('ES5.1')}} |                                                        |
-| {{SpecName('ES6', '#sec-math.log', 'Math.log')}}    | {{Spec2('ES6')}}   |                                                        |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

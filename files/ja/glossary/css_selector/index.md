@@ -5,6 +5,8 @@ l10n:
   sourceCommit: ed947b2c608428b62a60f07d09dc543f732dc09b
 ---
 
+{{GlossarySidebar}}
+
 **CSS セレクター**は CSS のルールの一部で、文書中のどの要素がルールと一致するかを記述します。一致した要素にはルールで指定されたスタイルが適用されます。
 
 ## 例
@@ -75,8 +77,8 @@ div.warning {
 
 - 結合子
 
-  - [隣接兄弟セレクター](/ja/docs/Web/CSS/Adjacent_sibling_combinator) `A + B`
-  - [一般兄弟セレクター](/ja/docs/Web/CSS/General_sibling_combinator) `A ~ B`
+  - [次兄弟結合子](/ja/docs/Web/CSS/Next-sibling_combinator) `A + B`
+  - [後続兄弟結合子](/ja/docs/Web/CSS/Subsequent-sibling_combinator) `A ~ B`
   - [子セレクター](/ja/docs/Web/CSS/Child_combinator) `A > B`
   - [子孫セレクター](/ja/docs/Web/CSS/Descendant_combinator) `A B`
 

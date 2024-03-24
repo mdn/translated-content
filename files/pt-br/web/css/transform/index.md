@@ -212,9 +212,7 @@ Translates the element by the given amount along the Y axis.
 
 ## Specifications
 
-| Specification                                                | Status                         | Comment |
-| ------------------------------------------------------------ | ------------------------------ | ------- |
-| {{ SpecName('CSS3 Transforms', '#transform', 'transform') }} | {{ Spec2('CSS3 Transforms') }} |         |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

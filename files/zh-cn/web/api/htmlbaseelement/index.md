@@ -9,7 +9,7 @@ slug: Web/API/HTMLBaseElement
 
 ## 属性
 
-_继承了其父级 {{domxref("HTMLElement")}} 的所有属性_
+_继承了其父级 {{domxref("HTMLElement")}} 的所有属性。_
 
 - {{domxref("HTMLBaseElement.href")}}
   - : 映射自 {{domxref("DOMString")}} HTML [`href`](/zh-CN/docs/Web/HTML/Element/base#href) 特性，包含了当前文档中所有相对 URL 地址的基准 URL。
@@ -20,14 +20,14 @@ _继承了其父级 {{domxref("HTMLElement")}} 的所有属性_
 
 _没有特殊的方法，继承了其父级 {{domxref("HTMLElement")}} 的所有特性。_
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- HTML element implementing this interface: {{ HTMLElement("base") }}
+- 实现了该接口的 HTML 元素：{{ HTMLElement("base") }}

@@ -5,7 +5,7 @@ slug: Web/API/WebGLRenderingContext/isBuffer
 
 {{APIRef("WebGL")}}
 
-La méthode **`WebGLRenderingContext.isBuffer()`** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) renvoie `true` si le {{domxref ("WebGLBuffer")}} passé est valide et `false` dans le cas contraire.
+La méthode **`WebGLRenderingContext.isBuffer()`** de l'[API WebGL](/fr/docs/Web/API/WebGL_API) renvoie `true` si le {{domxref ("WebGLBuffer")}} passé est valide et `false` dans le cas contraire.
 
 ## Syntaxe
 

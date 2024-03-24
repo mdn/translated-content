@@ -16,7 +16,7 @@ slug: Web/CSS/background-origin
 ## Синтаксис
 
 ```css
-/* Ключевые значения */
+/* Ключевые слова */
 background-origin: border-box;
 background-origin: padding-box;
 background-origin: content-box;
@@ -80,7 +80,7 @@ div {
 
 {{cssinfo}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 

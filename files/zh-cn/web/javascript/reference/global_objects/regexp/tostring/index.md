@@ -3,7 +3,7 @@ title: RegExp.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/toString
 ---
 
-{{JSRef("Global_Objects", "RegExp")}}
+{{JSRef}}
 
 ## 概述
 
@@ -45,6 +45,6 @@ alert(foo.toString());         // 显示 "/bar/g"
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Object.prototype.toString()")}}

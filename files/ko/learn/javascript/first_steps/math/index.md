@@ -322,7 +322,7 @@ function updateBtn() {
 
 `updateBtn()` 함수 내부에서 동등 연산자가 사용되는걸 볼 수 있습니다. 원리는 동일하지만, 이 경우엔 두 수식이 같은 값을 가지고 있는지 테스트하는 것이 아닌 버튼의 텍스트 콘텐츠가 특정 문자열을 포함하고 있는지를 테스트합니다. 버튼이 "Start machine"이라고 표시되어 있을 때 누르면 "Stop machine"으로 바꾸고 라벨을 변경합니다. 버튼이 "Stop machine"이라고 표시되어 있을 때 누르면 다시 표시를 바꿉니다.
 
-> **참고:** 두 상태 사이를 전환하는 이러한 컨트롤을 일반적으로 **토글(toggle)**이라고 합니다. 토글은 조명 켜기, 조명 끄기 등 한 상태와 다른 상태 사이를 전환합니다.
+> **참고:** 두 상태 사이를 전환하는 이러한 컨트롤을 일반적으로 **토글(toggle)** 이라고 합니다. 토글은 조명 켜기, 조명 끄기 등 한 상태와 다른 상태 사이를 전환합니다.
 
 ## 실력 테스트!
 
@@ -334,6 +334,6 @@ function updateBtn() {
 
 다음 글에서는 텍스트와 JavaScript에서 텍스트를 조작하는 방법에 대해 알아보겠습니다.
 
-> **참고:** 수학을 좋아하고 자바스크립트에서 수학이 어떻게 구현되는지 더 자세히 알고 싶으시다면 MDN의 메인 자바스크립트 섹션에서 더 자세한 내용을 확인할 수 있습니다. [숫자와 날짜](/ko/docs/Web/JavaScript/Guide/Numbers_and_dates), [표현식 및 연산자](/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators) 문서에서 시작하기 좋습니다.
+> **참고:** 수학을 좋아하고 JavaScript에서 수학이 어떻게 구현되는지 더 자세히 알고 싶으시다면 MDN의 메인 JavaScript 섹션에서 더 자세한 내용을 확인할 수 있습니다. [숫자와 날짜](/ko/docs/Web/JavaScript/Guide/Numbers_and_dates), [표현식 및 연산자](/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators) 문서에서 시작하기 좋습니다.
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}

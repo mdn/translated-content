@@ -120,7 +120,7 @@ foo('outside');  // TypeError: foo is not a function
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Statements/while", "while")}}
 - {{jsxref("Statements/if...else", "if...else")}}

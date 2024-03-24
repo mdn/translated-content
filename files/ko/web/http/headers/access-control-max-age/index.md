@@ -2,17 +2,17 @@
 title: Access-Control-Max-Age
 slug: Web/HTTP/Headers/Access-Control-Max-Age
 l10n:
-  sourceCommit: 0bab33c90b3808a0c4f0d1aa1e9cd5cb350ce894
+  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
 {{HTTPSidebar}}
 
-**`Access-Control-Max-Age`** 응답 헤더는 {{glossary("preflight request")}} 결과, 즉 {{HTTPHeader("Access-Control-Allow-Methods")}} 과 {{HTTPHeader("Access-Control-Allow-Headers")}} 헤더에 포함된 정보가 캐시될 수 있는 시간을 나타냅니다.
+**`Access-Control-Max-Age`** 응답 헤더는 {{glossary("preflight request")}}의 결과(즉, {{HTTPHeader("Access-Control-Allow-Methods")}} 및 {{HTTPHeader("Access-Control-Allow-Headers")}} 헤더에 포함된 정보)를 얼마나 오래 캐시할 수 있는지를 나타냅니다.
 
 <table class="properties">
   <tbody>
     <tr>
-      <th scope="row">Header type</th>
+      <th scope="row">헤더 유형</th>
       <td>{{Glossary("Response header")}}</td>
     </tr>
     <tr>
@@ -28,18 +28,14 @@ l10n:
 Access-Control-Max-Age: <delta-seconds>
 ```
 
-## 지시자
+## 지시어
 
 - \<delta-seconds>
-  - : 최대로 결과를 캐싱할 수 있는 시간을 초 단위로 나타낸 것으로, 부호 없는 음이 아닌 정수입니다.
-    Firefox 의 경우 [최대 24 시간](https://searchfox.org/mozilla-central/source/netwerk/protocol/http/nsCORSListenerProxy.cpp#1207)으로 제한합니다. (86400 초)
-    Chromium (v76 이전) 의 경우 [최대 10 분](https://source.chromium.org/chromium/chromium/src/+/main:services/network/public/cpp/cors/preflight_result.cc;drc=52002151773d8cd9ffc5f557cd7cc880fddcae3e;l=36)으로 제한합니다. (600 초)
-    Chromium (v76 이후) 의 경우 [최대 2 시간](https://source.chromium.org/chromium/chromium/src/+/main:services/network/public/cpp/cors/preflight_result.cc;drc=49e7c0b4886cac1f3d09dc046bd528c9c811a0fa;l=31)으로 제한합니다. (7200 초)
-    고정값은 5 초 입니다.
+  - : 결과를 부호가 없는 음수가 아닌 정수로 캐시할 수 있는 최대 시간(초)입니다. Firefox는 [24시간(86400초)으로 제한](https://searchfox.org/mozilla-central/source/netwerk/protocol/http/nsCORSListenerProxy.cpp#1207)합니다. 크롬(v76 이전 버전)은 [10분(600초)으로 제한](https://source.chromium.org/chromium/chromium/src/+/main:services/network/public/cpp/cors/preflight_result.cc;drc=52002151773d8cd9ffc5f557cd7cc880fddcae3e;l=36)됩니다. 크롬(v76부터)은 [2시간(7200초)으로 제한](https://source.chromium.org/chromium/chromium/src/+/main:services/network/public/cpp/cors/preflight_result.cc;drc=49e7c0b4886cac1f3d09dc046bd528c9c811a0fa;l=31)됩니다. 기본값은 5초입니다.
 
 ## 예제
 
-이 예시는 preflight 요청 결과를 10 분동안 캐싱하는 예제입니다.:
+preflight 요청의 결과를 10분 동안 캐시합니다.
 
 ```http
 Access-Control-Max-Age: 600

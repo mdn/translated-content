@@ -195,7 +195,7 @@ ul li::before {
 ```
 
 - [VoiceOver and list-style-type: none – Unfettered Thoughts](https://unfetteredthoughts.net/2017/09/26/voiceover-and-list-style-type-none/)
-- [MDN WCAG の理解、ガイドライン 1.3 の説明](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways)
+- [MDN WCAG の理解、ガイドライン 1.3 の説明](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.3_—_さまざまな方法で提示できるコンテンツの作成)
 - [Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
 
 ## 公式定義
@@ -208,7 +208,7 @@ ul li::before {
 
 ## 例
 
-<h3 id="Setting_list_item_markers">リスト項目マーカーの設定</h3>
+### リスト項目マーカーの設定
 
 #### HTML
 
@@ -244,9 +244,9 @@ ol.shortcut {
 
 #### 結果
 
-{{EmbedLiveSample("Setting_list_item_markers","200","300")}}
+{{EmbedLiveSample("リスト項目マーカーの設定","200","300")}}
 
-<h3 id="All_list_style_types">リストスタイルのすべての種類</h3>
+### リストスタイルのすべての種類
 
 #### HTML
 
@@ -704,7 +704,7 @@ container.addEventListener("change", (event) => {
 
 #### 結果
 
-{{EmbedLiveSample("All_list_style_types", "600", "800")}}
+{{EmbedLiveSample("リストスタイルのすべての種類", "600", "800")}}
 
 ## 仕様書
 

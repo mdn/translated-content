@@ -46,21 +46,9 @@ ul.addEventListener('click', hide, false);
 
 {{Specifications}}
 
-## Поддержка браузеров
+## Совместимость с браузерами
 
 {{Compat}}
-
-## Примечания
-
-В IE 6-8 модель событий отличается. Обработчики событий назначаются с помощью нестандартного {{domxref('EventTarget.attachEvent')}} метода. При этом в объекте события есть свойство {{domxref('Event.srcElement')}}, вместо `target` свойства, но по смыслу оно идентично `event.target`.
-
-```js
-function hide(e) {
-  // Поддержка IE 6-8
-  var target = e.target || e.srcElement;
-  target.style.visibility = "hidden";
-}
-```
 
 ## Смотрите также
 

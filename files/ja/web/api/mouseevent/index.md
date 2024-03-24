@@ -2,7 +2,7 @@
 title: MouseEvent
 slug: Web/API/MouseEvent
 l10n:
-  sourceCommit: a6390b5024f29bcd6bdab5eedade24e3b446b37b
+  sourceCommit: 381c51574a3e6a07ee09c63493452440f046038d
 ---
 
 {{APIRef("UI Events")}}
@@ -23,10 +23,10 @@ l10n:
 
 ## 静的プロパティ
 
-- {{domxref("MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN")}} {{non-standard_inline}} {{ReadOnlyInline}}
+- {{domxref("MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN_static", "MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN")}} {{non-standard_inline}} {{ReadOnlyInline}}
   - : 通常のクリックに必要な最小圧力。
-- {{domxref("MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN")}} {{non-standard_inline}} {{ReadOnlyInline}}
-  - : 強めのクリック (force click)に必要な最小圧力。
+- {{domxref("MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN_static", "MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN")}} {{non-standard_inline}} {{ReadOnlyInline}}
+  - : 強めのクリック (force click) に必要な最小圧力。
 
 ## インスタンスプロパティ
 
@@ -70,9 +70,6 @@ _このインターフェイスは、親インターフェイスである {{domx
   - : グローバル (スクリーン) 座標における、マウスポインターの Y 座標。
 - {{domxref("MouseEvent.shiftKey")}} {{ReadOnlyInline}}
   - : マウスイベントが発行されたときに <kbd>shift</kbd> キーが押下されていれば、`true` を返します。
-- {{domxref("MouseEvent.mozPressure")}} {{non-standard_inline()}} {{deprecated_inline}} {{ReadOnlyInline}}
-  - : イベントが発行されたとき、タッチ機器やタブレット機器に与えられた圧力の大きさです。この値の範囲は、`0.0` (最小圧力) から `1.0` (最大圧力) の間です。
-    このプロパティは非推奨 (かつ標準外) であり、代わりに {{domxref("PointerEvent")}} を使用し、 {{domxref("PointerEvent.pressure", "pressure")}} プロパティを参照してください。
 - {{domxref("MouseEvent.mozInputSource")}} {{non-standard_inline()}} {{ReadOnlyInline}}
   - : イベントを生成した機器の種類 (`MOZ_SOURCE_*` 定数のいずれか)。
     これにより、例えばマウスイベントが実際のマウスによって発行されたのか、あるいはタッチイベントによって発行されたのかを識別できます (これは、イベントに関連する座標を解釈する際の正確さに影響を与えるでしょう)。

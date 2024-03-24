@@ -80,7 +80,7 @@ events.forEach((eventName) => window.addEventListener(eventName, eventLogger));
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.pageshow_event")}}
+{{Compat}}
 
 ## 関連情報
 

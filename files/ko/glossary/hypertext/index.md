@@ -2,8 +2,10 @@
 title: Hypertext (하이퍼텍스트)
 slug: Glossary/Hypertext
 l10n:
-  sourceCommit: 4bd65a01204446af2254bb8864bd22ad87bc86b0
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
+
+{{GlossarySidebar}}
 
 하이퍼텍스트는 다른 텍스트에 링크를 포함하는 텍스트로, 소설과 같은 단일 선형 흐름과 반대입니다.
 

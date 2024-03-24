@@ -3,7 +3,7 @@ title: Number.isInteger()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isInteger
 ---
 
-{{JSRef("Global_Objects", "Number")}}
+{{JSRef}}
 
 Метод **`Number.isInteger()`** определяет, является ли переданное значение целым числом.
 

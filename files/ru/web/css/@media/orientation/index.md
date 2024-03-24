@@ -60,11 +60,8 @@ div {
 
 ## Характеристики
 
-| Спецификация                                                      | Статус                          | Комментарий            |
-| ----------------------------------------------------------------- | ------------------------------- | ---------------------- |
-| {{SpecName('CSS4 Media Queries', '#orientation', 'orientation')}} | {{Spec2('CSS4 Media Queries')}} | Бе изменений.          |
-| {{SpecName('CSS3 Media Queries', '#orientation', 'orientation')}} | {{Spec2('CSS3 Media Queries')}} | Начальное определение. |
+{{Specifications}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}

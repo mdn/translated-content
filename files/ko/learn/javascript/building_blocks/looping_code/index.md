@@ -5,7 +5,7 @@ slug: Learn/JavaScript/Building_blocks/Looping_code
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals", "Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
 
-다수의 기본적인 계산에서부터 완료해야 할 비슷한 작업들을 가지고 있는 상황들에 대해서까지, 프로그래밍 언어는 반복적인 작업을 빠르게 완료하는 데 대단히 유용합니다. 여기서 우리는 그러한 필요를 다루는 자바스크립트에서 이용 가능한 반복문 구조를 살펴볼 것입니다.
+다수의 기본적인 계산에서부터 완료해야 할 비슷한 작업들을 가지고 있는 상황들에 대해서까지, 프로그래밍 언어는 반복적인 작업을 빠르게 완료하는 데 대단히 유용합니다. 여기서 우리는 그러한 필요를 다루는 JavaScript에서 이용 가능한 반복문 구조를 살펴볼 것입니다.
 
 <table class="learn-box standard-table">
   <tbody>

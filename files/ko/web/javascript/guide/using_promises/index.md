@@ -46,7 +46,7 @@ promise.then(successCallback, failureCallback);
 
 콜백 함수를 전달해주는 고전적인 방식과는 달리, Promise는 아래와 같은 특징을 보장합니다.
 
-- 콜백은 자바스크립트 Event Loop가 [현재 실행중인 콜 스택을 완료](/ko/docs/Web/JavaScript/EventLoop#Run-to-completion)하기 이전에는 절대 호출되지 않습니다.
+- 콜백은 JavaScript Event Loop가 [현재 실행중인 콜 스택을 완료](/ko/docs/Web/JavaScript/EventLoop#Run-to-completion)하기 이전에는 절대 호출되지 않습니다.
 - 비동기 작업이 성공하거나 실패한 뒤에 [`then()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) 을 이용하여 추가한 콜백의 경우에도 위와 같습니다.
 - [`then()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise/then)을 여러번 사용하여 여러개의 콜백을 추가 할 수 있습니다. 그리고 각각의 콜백은 주어진 순서대로 하나 하나 실행되게 됩니다.
 

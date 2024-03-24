@@ -1,8 +1,9 @@
 ---
-title: CSSRule.parentStyleSheet
+title: "CSSRule: parentStyleSheet プロパティ"
+short-title: parentStyleSheet
 slug: Web/API/CSSRule/parentStyleSheet
 l10n:
-  sourceCommit: d44ea6b0f1f4acae9c49790d0160960e67212d58
+  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
 ---
 
 {{ APIRef("CSSOM") }}

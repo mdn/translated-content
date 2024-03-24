@@ -3,7 +3,7 @@ title: Intl.DateTimeFormat.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions
 ---
 
-{{JSRef("Global_Objects", "DateTimeFormat", "Intl,Collator,NumberFormat")}}
+{{JSRef}}
 
 ## Сводка
 
@@ -53,9 +53,7 @@ dateTimeFormat.resolvedOptions()
 
 ## Спецификации
 
-| Спецификация                                                                               | Статус                  | Комментарии              |
-| ------------------------------------------------------------------------------------------ | ----------------------- | ------------------------ |
-| {{SpecName('ES Int 1.0', '#sec-12.3.3', 'Intl.DateTimeFormat.prototype.resolvedOptions')}} | {{Spec2('ES Int 1.0')}} | Изначальное определение. |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

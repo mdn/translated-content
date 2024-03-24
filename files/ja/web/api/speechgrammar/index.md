@@ -41,7 +41,7 @@ console.log(speechRecognitionList[0].weight); // 4 行目で設定された weig
 
 ## ブラウザーの実装状況
 
-{{Compat("api.SpeechGrammar")}}
+{{Compat}}
 
 ## 関連項目
 

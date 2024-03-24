@@ -73,7 +73,7 @@ slug: Web/SVG/Element/feBlend
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

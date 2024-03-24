@@ -3,7 +3,7 @@ title: RegExp.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/toString
 ---
 
-{{JSRef("Global_Objects", "RegExp")}}
+{{JSRef}}
 
 ## Сводка
 
@@ -39,11 +39,7 @@ console.log(foo.toString()); // отобразит '/bar/g'
 
 ## Спецификации
 
-| Спецификация                                                                       | Статус             | Комментарии                                            |
-| ---------------------------------------------------------------------------------- | ------------------ | ------------------------------------------------------ |
-| ECMAScript 3-е издание.                                                            | Стандарт           | Изначальное определение. Реализована в JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.9.5.2', 'RegExp.prototype.toString')}}                | {{Spec2('ES5.1')}} |                                                        |
-| {{SpecName('ES6', '#sec-regexp.prototype.tostring', 'RegExp.prototype.toString')}} | {{Spec2('ES6')}}   |                                                        |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

@@ -264,7 +264,7 @@ function cached(getter) {
 const getImage = cached((url) => fetch(url).then((res) => res.blob()));
 ```
 
-[`FinalizationRegistry`](/ja/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry) は、ガベージコレクションを監視するさらに強力なメカニズムを提供します。これは、オブジェクトを登録し、それらがガベージコレクションされたときに通知されるようにするものです。例えば、上記のキャッシュシステムでは、Blob 自体が集合に無料であっても、それを保持する `WeakRef` オブジェクトはそうではなく、時間とともに `Map` に多くの無駄な項目が蓄積される可能性があります。FinalizationRegistry`を使用することで、このような用途のクリーンアップを行うことができます。
+[`FinalizationRegistry`](/ja/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry) は、ガベージコレクションを監視するさらに強力なメカニズムを提供します。これは、オブジェクトを登録し、それらがガベージコレクションされたときに通知されるようにするものです。例えば、上記のキャッシュシステムでは、Blob 自体が集合に無料であっても、それを保持する `WeakRef` オブジェクトはそうではなく、時間とともに `Map` に多くの無駄な項目が蓄積される可能性があります。`FinalizationRegistry`を使用することで、このような用途のクリーンアップを行うことができます。
 
 ```js
 function cached(getter) {
@@ -297,4 +297,4 @@ const getImage = cached((url) => fetch(url).then((res) => res.blob()));
 
 パフォーマンスとセキュリティの関係で、コールバックがいつ呼び出されるか、あるいはすべて呼び出されるかどうかは保証されていません。コールバックはクリーンアップにのみ使用すべきであり、しかも重要でないクリーンアップにのみ使用すべきです。他にも、[`try...finally`](/ja/docs/Web/JavaScript/Reference/Statements/try...catch) で常に実行される `finally` ブロックで実行するなど、より決定的にリソースを管理する方法があります。`WeakRef` と `FinalizationRegistry` は、長時間実行するプログラムのメモリー使用量を最適化するためだけに存在します。
 
-F[`WeakRef`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WeakRef) および [`FinalizationRegistry`](/ja/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry) の API について詳しくは、それぞれのリファレンスページを参照してください。
+[`WeakRef`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WeakRef) および [`FinalizationRegistry`](/ja/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry) の API について詳しくは、それぞれのリファレンスページを参照してください。

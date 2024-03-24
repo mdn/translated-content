@@ -21,5 +21,5 @@ _WebSocket_ 是允許{{Glossary("Server", "伺服器")}}與用戶端之間發起
 
 ### 學習之
 
-- [製作 WebSocket 客戶端應用程式](/zh-TW/docs/WebSockets/Writing_WebSocket_client_applications)
+- [製作 WebSocket 客戶端應用程式](/zh-TW/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
 - [製作 WebSocket 伺服器](/zh-TW/docs/WebSockets/Writing_WebSocket_servers)

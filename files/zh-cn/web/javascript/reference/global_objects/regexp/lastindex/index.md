@@ -3,7 +3,7 @@ title: RegExp.lastIndex
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex
 ---
 
-{{JSRef("Global_Objects", "RegExp")}}
+{{JSRef}}
 
 ## 概述
 
@@ -59,7 +59,7 @@ console.log(re.lastIndex);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("RegExp.prototype.ignoreCase")}}
 - {{jsxref("RegExp.prototype.global")}}

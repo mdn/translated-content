@@ -46,11 +46,8 @@ Se obtém resultados como este:
 
 ## Especificações
 
-| Especificação                                           | Status                        | Comentário                                                   |
-| ------------------------------------------------------- | ----------------------------- | ------------------------------------------------------------ |
-| {{ SpecName('CSS4 Selectors', '#negation', ':not()') }} | {{ Spec2('CSS4 Selectors') }} | Extende seus argumentos para permitir seletores não-simples. |
-| {{ SpecName('CSS3 Selectors', '#negation', ':not()') }} | {{ Spec2('CSS3 Selectors') }} | Definição inicial.                                           |
+{{Specifications}}
 
 ## Compatibilidade em Navegadores
 
-{{Compat("css.selectors.not")}}
+{{Compat}}

@@ -9,7 +9,7 @@ slug: Web/CSS/box-sizing
 
 {{EmbedInteractiveExample("pages/css/box-sizing.html")}}
 
-[CSS ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)の既定では、要素に割り当てられた `width` および `height` は、要素のコンテンツ領域のみに適用されます。要素に境界やパディングがある場合、画面に表示される矩形の大きさは `width` および `height` にこれらを加えたものになります。つまり、`width` および `height` を設定する際には、境界やパディングが加えられるように値を調整しなければなりません。例えば、`width: 25%;` で左や右のパディングまたは左や右の境界がある 4 つのボックスを並べた場合、既定では親コンテナーの制約の中で 1 行には並びません。
+[CSS ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)の既定では、要素に割り当てられた `width` および `height` は、要素のコンテンツ領域のみに適用されます。要素に境界やパディングがある場合、画面に表示される矩形の大きさは `width` および `height` にこれらを加えたものになります。つまり、`width` および `height` を設定する際には、境界やパディングが加えられるように値を調整しなければなりません。例えば、`width: 25%;` で左や右のパディングまたは左や右の境界がある 4 つのボックスを並べた場合、既定では親コンテナーの制約の中で 1 行には並びません。
 
 `box-sizing` プロパティは上記の振る舞いを調整するために使用できます。
 
@@ -113,4 +113,4 @@ div {
 
 ## 関連情報
 
-- [CSS 基本ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- [CSS 基本ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)

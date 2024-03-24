@@ -1,38 +1,23 @@
 ---
-title: Navigator.vendorSub
+title: "Navigator: vendorSub プロパティ"
+short-title: vendorSub
 slug: Web/API/Navigator/vendorSub
+l10n:
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{ApiRef}}{{deprecated_header}}
+{{ApiRef}} {{Deprecated_Header}}
 
-**`Navigator.vendorSub`** プロパティは読み取り専用で、ベンダーバージョン番号が付いたベンダーの部分文字列です。仕様書ではブラウザーが常に空文字列を返して良いことになっているため、このプロパティから頼れる回答を期待しないでください。
-
-## 構文
-
-```
-venSub = window.navigator.vendorSub
-```
+**`Navigator.vendorSub`** プロパティの値は、どのブラウザーでも常に空文字列です。
 
 ### 値
 
-- _venSub_ は {{domxref("DOMString")}} です。
-
-## 例
-
-```js
-window.navigator.vendorSub;
-// "6.1" を返す場合、userAgent のべンダー名は、
-// Netscape6/6.1 などです。
-```
-
-## メモ
-
-`vendorSub` は、ユーザーエージェント文字列全体の一部分です。バージョン番号は、ベンダー自身がそのブラウザーに与えたものです (製品のバージョンとは異なるかもしれません)。 Netscape 6.1 では、 `productSub` は `"5.0"` ですが、 `vendorSub` は `"6.1"` です。 {{domxref("window.navigator.productSub","navigator.productSub")}}, {{domxref("window.navigator.userAgent","navigator.userAgent")}}, {{domxref("window.navigator.vendor","navigator.vendor")}} も参照してください。
+- 空文字列です。
 
 ## 仕様書
 
 {{Specifications}}
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
-{{Compat("api.Navigator.vendorSub")}}
+{{Compat}}

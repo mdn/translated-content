@@ -388,6 +388,6 @@ CSS を整理する 1 つの方法は、スタイルシートを小さなスタ�
 
 CSS のレイアウトの詳細については、「[CSS レイアウトの学習](/ja/docs/Learn/CSS/CSS_layout)」部分を参照してください。
 
-また、これで [MDN の CSS の資料](/ja/docs/Web/CSS)の残りの部分を探索するためのスキルを身につけることができます。プロパティや値を調べたり、[CSS 料理帳](/ja/docs/Web/CSS/Layout_cookbook)で使用するパターンを調べたり、[CSS グリッドレイアウトのガイド](/ja/docs/Web/CSS/CSS_Grid_Layout)などの特定のガイドを読んだりすることができます。
+また、これで [MDN の CSS の資料](/ja/docs/Web/CSS)の残りの部分を探索するためのスキルを身につけることができます。プロパティや値を調べたり、[CSS 料理帳](/ja/docs/Web/CSS/Layout_cookbook)で使用するパターンを調べたり、[CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)などの特定のガイドを読んだりすることができます。
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks/Fundamental_CSS_comprehension", "Learn/CSS/Building_blocks")}}

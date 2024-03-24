@@ -69,7 +69,7 @@ SVG `script` 要素は、HTML の [`script`](/ja/HTML/Element/Script) 要素と�
 
 ## ブラウザー互換性
 
-{{Compat("svg.elements.script")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -7,7 +7,7 @@ slug: Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Extra_lives", "Games/Workflows/2D_Breakout_game_Phaser/Buttons")}}
 
-这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser) 16 的**第 14 步**。您可以在[Gamedev-Phaser-Content-Kit / demos / lesson14.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson14.html)完成本课程后找到源代码。
+这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser) 16 的**第 14 步**。你可以在[Gamedev-Phaser-Content-Kit / demos / lesson14.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson14.html)完成本课程后找到源代码。
 
 为了使游戏看起来更加多汁和活泼，我们可以使用动画和补间。这将导致更好，更有趣的体验。让我们来探讨如何在游戏中实现 Phaser 动画和补间。
 
@@ -15,7 +15,7 @@ slug: Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens
 
 在 Phaser，动画中，涉及从外部来源获取 spritesheet 并依次显示 sprites。作为一个例子，当碰到一些东西时，我们会让球摇摆。
 
-首先，[从 Github 抓取 spritesheet](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/img/wobble.png)并将其保存在您的`/img`目录中。
+首先，[从 Github 抓取 spritesheet](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/img/wobble.png)并将其保存在你的`/img`目录中。
 
 接下来，我们将加载 spritesheet - 将以下行放在`preload()`函数的底部：
 
@@ -37,7 +37,7 @@ ball.animations.add("wobble", [0, 1, 0, 2, 0, 1, 0, 2, 0], 24);
 要向对象添加动画，我们使用该`animations.add()`方法，其中包含以下参数
 
 - 我们为动画选择的名称
-- 一个数组，定义在动画过程中显示帧的顺序。如果您再次查看`wobble.png`图像，您会看到有三个框架。Phaser 提取它们并将它们存储在数组中 - 位置 0，1 和 2.上面的数组表示我们显示帧 0，然后是 1，然后是 0 等。
+- 一个数组，定义在动画过程中显示帧的顺序。如果你再次查看`wobble.png`图像，你会看到有三个框架。Phaser 提取它们并将它们存储在数组中 - 位置 0，1 和 2.上面的数组表示我们显示帧 0，然后是 1，然后是 0 等。
 - 帧速率，以 fps 为单位。由于我们以 24fps 运行动画，有 9 帧，动画每秒将显示三次以下。
 
 ## 当球击中桨时应用动画
@@ -66,7 +66,7 @@ function ballHitPaddle(ball, paddle) {
 
 而动画依次播放外部精灵，补间游戏中物体的属性平滑，如宽度或不透明度。
 
-让我们在游戏中增加一个补间，使砖块在被球击中时顺利消失。转到您的`ballhitBrick()`功能，找到您的`brick.kill();`行，并将其替换为以下内容：
+让我们在游戏中增加一个补间，使砖块在被球击中时顺利消失。转到你的`ballhitBrick()`功能，找到你的`brick.kill();`行，并将其替换为以下内容：
 
 ```js
 var killTween = game.add.tween(brick.scale);
@@ -96,7 +96,7 @@ game.add
 
 ## 比较你的代码
 
-您可以在下面的现场演示中查看本课程的完成代码，并使用它来更好地了解它的工作原理：
+你可以在下面的现场演示中查看本课程的完成代码，并使用它来更好地了解它的工作原理：
 
 {{JSFiddleEmbed("https://jsfiddle.net/end3r/9o4pakrb/","","400")}}
 

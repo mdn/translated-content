@@ -252,13 +252,3 @@ teacher1.farewell();
 - [You Don't Know JS: this & Object Prototypes](https://github.com/getify/You-Dont-Know-JS/blob/master/this%20&%20object%20prototypes/README.md#you-dont-know-js-this--object-prototypes) — Part of Kyle Simpson's excellent series of JavaScript manuals, Chapter 5 in particular looks at prototypes in much more detail than we do here. We've presented a simplified view in this series of articles aimed at beginners, whereas Kyle goes into great depth and provides a more complex but more accurate picture.
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
-
-## В этом модуле
-
-- [Основы объекта](/ru/docs/Learn/JavaScript/Объекты/Основы)
-- [Объектно-ориентированный JavaScript для начинающих](/ru/docs/Learn/JavaScript/Объекты/Object-oriented_JS)
-- [Прототипы объектов](/ru/docs/Learn/JavaScript/Объекты/Object_prototypes)
-- [Наследование в JavaScript](/ru/docs/Learn/JavaScript/Объекты/Inheritance)
-- [Работа с данными JSON](/ru/docs/Learn/JavaScript/Объекты/JSON)
-- [Практика построения объектов](/ru/docs/Learn/JavaScript/Объекты/Object_building_practice)
-- [Добавление функций в нашу демонстрацию прыгающих шаров](/ru/docs/Learn/JavaScript/Объекты/Adding_bouncing_balls_features)

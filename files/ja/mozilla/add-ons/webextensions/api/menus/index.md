@@ -156,7 +156,7 @@ browser.menus.create(
 
 ## ブラウザーの互換性
 
-{{ Compat("webextensions.api.menus", 1, "true") }}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

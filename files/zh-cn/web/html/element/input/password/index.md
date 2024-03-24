@@ -247,7 +247,7 @@ ssn.oninput = (event) => {
       <td><strong>Events</strong></td>
       <td>
         {{domxref("HTMLElement/change_event", "change")}} 和
-        {{domxref("HTMLElement/input_event", "input")}}
+        {{domxref("Element/input_event", "input")}}
       </td>
     </tr>
     <tr>

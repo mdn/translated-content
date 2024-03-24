@@ -89,7 +89,7 @@ DIGIT = %x30-39            ; 0-9
       ; DIGIT equivalent to DIGIT rule in [RFC5234]
 ```
 
-重要でない{{glossary("whitespace", "ホワイトスペース")}}は、基本的に任意の場所に置くことができますが、 `JSONNumber` (数値に空白を含んではいけません) や `JSONString` (対応する文字であると解釈されるか、エラーが発生します) の内部を除きます。ホワイトスペースとして有効な文字はタブ文字 ([U+0009](https://unicode-table.com/en/0009/))、キャリッジリターン ([U+000D](https://unicode-table.com/en/000D/))、ラインフィード ([U+000A](https://unicode-table.com/en/000A/))、空白 ([U+0020](https://unicode-table.com/en/0020/)) のみです。
+重要でない{{glossary("whitespace", "ホワイトスペース")}}は、基本的に任意の場所に置くことができますが、 `JSONNumber` (数値に空白を含んではいけません) や `JSONString` (対応する文字であると解釈されるか、エラーが発生します) の内部を除きます。ホワイトスペースとして有効な文字はタブ文字 ([U+0009](https://symbl.cc/jp/0009/))、キャリッジリターン ([U+000D](https://symbl.cc/jp/000D/))、ラインフィード ([U+000A](https://symbl.cc/jp/000A/))、空白 ([U+0020](https://symbl.cc/jp/0020/)) のみです。
 
 ## 静的メソッド
 

@@ -3,6 +3,8 @@ title: ECMAScript
 slug: Glossary/ECMAScript
 ---
 
+{{GlossarySidebar}}
+
 **ECMAScript** est le langage de script sur lequel {{glossary("JavaScript")}} est basé. [Ecma International](http://www.ecma-international.org) a pour tâche la standardisation d'ECMAScript.
 
 ## Pour en savoir plus

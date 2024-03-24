@@ -53,7 +53,7 @@ slug: Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow
 
 {{EmbedGHLiveSample("css-examples/flow/block-inline/normal-flow-collapsing.html", '100%', 500)}}
 
-マージンの相殺については、[マージンの相殺](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)の記事で詳しく解説しています。
+マージンの相殺については、[マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)の記事で詳しく解説しています。
 
 > **メモ:** マージンが相殺されているかどうか分からない場合は、ブラウザーのの DevTools でボックスモデルの値を確認してください。これにより、マージンの実際のサイズが表示されるので、何が起こっているかを特定するのに役立ちます。
 >
@@ -101,7 +101,7 @@ CSS 2.1 に存在する規則に加えて、新しい水準の CSS では、ブ�
 
 ## 関連情報
 
-- [CSS 基本ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model)
+- [CSS 基本ボックスモデル](/ja/docs/Web/CSS/CSS_box_model)
 - _[通常フロー](/ja/docs/Learn/CSS/CSS_layout/Normal_Flow)_ - レイアウトの学習
 - [インライン要素](/ja/docs/Web/HTML/Inline_elements)
 - [ブロックレベル要素](/ja/docs/Web/HTML/Block-level_elements)

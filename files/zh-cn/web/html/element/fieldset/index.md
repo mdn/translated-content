@@ -29,7 +29,7 @@ slug: Web/HTML/Element/fieldset
 
 `<fieldset>` 有几种特别的样式方案。
 
-它的 {{cssxref("display")}} 值默认为 `block`，因此建立了一个[块级格式化上下文](/zh-CN/docs/Web/Guide/CSS/Block_formatting_context)。如果将 `<fieldset>` 的 `display` 值设置为行内级别，则会表现为 `inline-block`，否则会表现为 `block`。默认情况下 `<fieldset>` 会有 `2px` `groove` 的边界围绕着内容，还有一个默认的小的内边距，还有 {{cssxref("min-inline-size", "min-inline-size: min-content")}} 。
+它的 {{cssxref("display")}} 值默认为 `block`，因此建立了一个[区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)。如果将 `<fieldset>` 的 `display` 值设置为行内级别，则会表现为 `inline-block`，否则会表现为 `block`。默认情况下 `<fieldset>` 会有 `2px` `groove` 的边界围绕着内容，还有一个默认的小的内边距，还有 {{cssxref("min-inline-size", "min-inline-size: min-content")}} 。
 
 如果其中有 {{htmlelement("legend")}} 元素，会放在块级框起始处的边界上。`<legend>` 的宽度会根据内容尽量收缩（shrink-wrap），同时也建立了一个格式化上下文。`display` 值会块级化（例如 `display: inline` 表现为 `block`）。
 

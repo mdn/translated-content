@@ -3,6 +3,8 @@ title: Canonical order (正規順序)
 slug: Glossary/Canonical_order
 ---
 
+{{GlossarySidebar}}
+
 CSS では、正規順序は、別々の値を指定（または{{Glossary("parse", "解析")}}）すべき順序、または CSS のプロパティ値の一部として{{Glossary("serialization", "シリアライズ")}}される順序を参照するために使用されます。 これはプロパティの形式的{{Glossary("syntax","構文")}}によって定義され、通常、長い表現（longhand）の値を単一の一括指定（shorthand）の値の一部として指定する順序を指します。
 
 たとえば、{{cssxref("background")}} の一括指定のプロパティー値は、いくつかの `background-*` の長い表現のプロパティーで構成されています。 これらの長い表現の値の正規順序は、次のように定義されます。

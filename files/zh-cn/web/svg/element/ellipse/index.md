@@ -53,7 +53,7 @@ svg {
 
 ## DOM 接口
 
-该元素实现了[`SVGEllipseElement`](/zh-CN/DOM/SVGEllipseElement)接口。
+该元素实现了 [`SVGEllipseElement`](/zh-CN/DOM/SVGEllipseElement) 接口。
 
 ## 浏览器兼容性
 

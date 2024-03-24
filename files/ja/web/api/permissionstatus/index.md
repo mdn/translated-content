@@ -44,4 +44,4 @@ navigator.permissions
 
 ## ブラウザーの互換性
 
-{{Compat("api.PermissionStatus")}}
+{{Compat}}

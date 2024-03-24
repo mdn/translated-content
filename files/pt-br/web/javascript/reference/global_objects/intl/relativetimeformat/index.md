@@ -131,7 +131,7 @@ rtf.formatToParts(100, "day");
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Intl.RelativeTimeFormat")}}
+{{Compat}}
 
 ## Veja também
 

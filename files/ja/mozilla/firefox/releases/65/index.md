@@ -74,7 +74,7 @@ l10n:
 
 ### SVG
 
-_変更なし_
+_変更なし。_
 
 ### JavaScript
 
@@ -140,7 +140,7 @@ _変更なし。_
 
 ### プラグイン
 
-_変更なし_
+_変更なし。_
 
 ### WebDriver conformance (Marionette)
 

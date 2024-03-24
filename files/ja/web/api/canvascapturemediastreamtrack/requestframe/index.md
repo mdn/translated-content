@@ -42,7 +42,7 @@ stream.getVideoTracks()[0].requestFrame();
 
 ## ブラウザー実装状況
 
-{{Compat("api.CanvasCaptureMediaStreamTrack.requestFrame")}}
+{{Compat}}
 
 ## 関連情報
 

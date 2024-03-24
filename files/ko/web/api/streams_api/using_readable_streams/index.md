@@ -5,7 +5,7 @@ slug: Web/API/Streams_API/Using_readable_streams
 
 {{apiref("Streams")}}
 
-자바스크립트 개발자로서, 프로그래밍적으로 네트워크로부터 받은 데이터 스트림을 Chunk단위로 읽고 다루는 것은 매우 유용합니다! 그러나 어떻게 스트림 API의 Readable stream을 잘 사용할수 있을까요. 이번 내용은 그것을 설명하고 있습니다.
+JavaScript 개발자로서, 프로그래밍적으로 네트워크로부터 받은 데이터 스트림을 Chunk단위로 읽고 다루는 것은 매우 유용합니다! 그러나 어떻게 스트림 API의 Readable stream을 잘 사용할수 있을까요. 이번 내용은 그것을 설명하고 있습니다.
 
 > **참고:** This article assumes that you understand the use cases of readable streams, and are aware of the high-level concepts. If not, we suggest that you first read the [Streams concepts and usage overview](/ko/docs/Web/API/Streams_API#Concepts_and_usage) and dedicated [Streams API concepts](/ko/docs/Web/API/Streams_API/Concepts) article, then come back.
 
@@ -13,7 +13,7 @@ slug: Web/API/Streams_API/Using_readable_streams
 
 ## Browser support
 
-파이어폭스 65+ 와 크롬 42+ 에서 Fetch Body 객체를 스트림으로서 사용 할수 있고, custom readable 스트림을 만들수 있습니다. 현재 [Pipe chains](/ko/docs/Web/API/Streams_API/Concepts#Pipe_chains)의 경우 오직 크롬에서만 지원하고 있고 그 기능은 변경될 수 있습니다.
+Firefox 65+ 와 크롬 42+ 에서 Fetch Body 객체를 스트림으로서 사용 할수 있고, custom readable 스트림을 만들수 있습니다. 현재 [Pipe chains](/ko/docs/Web/API/Streams_API/Concepts#Pipe_chains)의 경우 오직 크롬에서만 지원하고 있고 그 기능은 변경될 수 있습니다.
 
 ## Finding some examples
 

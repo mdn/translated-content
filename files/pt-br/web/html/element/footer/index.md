@@ -38,7 +38,7 @@ Este elemento implementa a interface [`HTMLElement`](/pt-BR/docs/DOM/element).
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.footer")}}
+{{Compat}}
 
 ## Veja também
 

@@ -10,7 +10,7 @@ slug: Learn/Server-side/Django/Generic_views
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">先决条件：</th>
+      <th scope="row">前提：</th>
       <td>
         完成所有先前的教程主题，包含<a
           href="/zh-CN/docs/Learn/Server-side/Django/Home_page"
@@ -30,7 +30,7 @@ slug: Learn/Server-side/Django/Generic_views
 
 ## 概览
 
-本教程中，通过为书本和作者添加列表和详细信息页面，我们将完成第一个版本的[LocalLibrary](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website) 网站（或者更准确地说，我们将向您展示如何实现书页，并让您自己创建作者页面！）
+本教程中，通过为书本和作者添加列表和详细信息页面，我们将完成第一个版本的[LocalLibrary](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website) 网站（或者更准确地说，我们将向你展示如何实现书页，并让你自己创建作者页面！）
 
 该过程类似于创建索引页面，我们在上一个教程中展示了该页面。我们仍然需要创建 URL 地图，视图和模板。主要区别在于，对于详细信息页面，我们还有一个额外的挑战，即从 URL 中的模式中提取信息，并将其传递给视图。对于这些页面，我们将演示一种完全不同的视图类型：基于类别的通用列表和详细视图。这些可以显着减少所需的视图代码量，使其更易于编写和维护。
 
@@ -68,11 +68,11 @@ class BookListView(generic.ListView):
     model = Book
 ```
 
-就是这样！通用视图将查询数据库，以获取指定模型（`Book`）的所有记录，然后呈现位于 **/locallibrary/catalog/templates/catalog/book_list.html** 的模板（我们将在下面创建）。在模板中，您可以使用名为`object_list` 或 `book_list`的模板变量（即通常为“`the_model_name_list`”），以访问书本列表。
+就是这样！通用视图将查询数据库，以获取指定模型（`Book`）的所有记录，然后呈现位于 **/locallibrary/catalog/templates/catalog/book_list.html** 的模板（我们将在下面创建）。在模板中，你可以使用名为`object_list` 或 `book_list`的模板变量（即通常为“`the_model_name_list`”），以访问书本列表。
 
 > **备注：** 模板位置的这个尴尬路径不是印刷错误 - 通用视图在应用程序的`/application_name/templates/`目录中`（/catalog/templates/`），查找模板`/application_name/the_model_name_list.html`（在本例中为`catalog/book_list.html`）。
 
-您可以添加属性，以更改上面的默认行为。例如，如果需要使用同一模型的多个视图，则可以指定另一个模板文件，或者如果`book_list`对于特定模板用例不直观，则可能需要使用不同的模板变量名称。可能最有用的变更，是更改/过滤返回的结果子集 - 因此，您可能会列出其他用户阅读的前 5 本书，而不是列出所有书本。
+你可以添加属性，以更改上面的默认行为。例如，如果需要使用同一模型的多个视图，则可以指定另一个模板文件，或者如果`book_list`对于特定模板用例不直观，则可能需要使用不同的模板变量名称。可能最有用的变更，是更改/过滤返回的结果子集 - 因此，你可能会列出其他用户阅读的前 5 本书，而不是列出所有书本。
 
 ```python
 class BookListView(generic.ListView):
@@ -84,7 +84,7 @@ class BookListView(generic.ListView):
 
 #### 覆盖基于类别的视图中的方法
 
-虽然我们不需要在这里执行此操作，但您也可以覆盖某些类别方法。
+虽然我们不需要在这里执行此操作，但你也可以覆盖某些类别方法。
 
 例如，我们可以覆盖`get_queryset()`方法，来更改返回的记录列表。这比仅仅设置`queryset`属性更灵活，就像我们在前面的代码片段中所做的那样（尽管在这种情况下没有真正的好处）：
 
@@ -158,7 +158,7 @@ class BookListView(generic.ListView):
 {% endif %}
 ```
 
-上述条件仅检查一种情况，但您可以使用 `elif` 模板标记（例如`{% elif var2 %}` ）测试其他条件。有关条件运算符的更多信息，请参阅：[if](https://docs.djangoproject.com/en/2.0/ref/templates/builtins/#if)， [ifequal/ifnotequal](https://docs.djangoproject.com/en/2.0/ref/templates/builtins/#ifequal-and-ifnotequal)，以及[内置模板标记和过滤器](https://docs.djangoproject.com/en/2.0/ref/templates/builtins)（Django Docs）中的 [ifchanged](https://docs.djangoproject.com/en/2.0/ref/templates/builtins/#ifchanged) 。
+上述条件仅检查一种情况，但你可以使用 `elif` 模板标记（例如`{% elif var2 %}` ）测试其他条件。有关条件运算符的更多信息，请参阅：[if](https://docs.djangoproject.com/en/2.0/ref/templates/builtins/#if)， [ifequal/ifnotequal](https://docs.djangoproject.com/en/2.0/ref/templates/builtins/#ifequal-and-ifnotequal)，以及[内置模板标记和过滤器](https://docs.djangoproject.com/en/2.0/ref/templates/builtins)（Django Docs）中的 [ifchanged](https://docs.djangoproject.com/en/2.0/ref/templates/builtins/#ifchanged) 。
 
 #### For 循环/回圈
 
@@ -170,7 +170,7 @@ class BookListView(generic.ListView):
 {% endfor %}
 ```
 
-虽然这里没有使用，但在循环中，Django 还会创建其他可用于跟踪迭代的变量。例如，您可以测试`forloop.last` 变量，以运行最后一次循环当中的条件处理代码。
+虽然这里没有使用，但在循环中，Django 还会创建其他可用于跟踪迭代的变量。例如，你可以测试`forloop.last` 变量，以运行最后一次循环当中的条件处理代码。
 
 #### 访问变量
 
@@ -198,7 +198,7 @@ class BookListView(generic.ListView):
 
 ### 它看起来是什么样子？
 
-您将无法构建书本清单，因为我们仍然缺少依赖项 - 书本详细信息页面的 URL 地图，这是创建单个书本的超链接所必需的。我们将在下一节之后，说明列表和详细视图的部分。
+你将无法构建书本清单，因为我们仍然缺少依赖项 - 书本详细信息页面的 URL 地图，这是创建单个书本的超链接所必需的。我们将在下一节之后，说明列表和详细视图的部分。
 
 ## 书本详细信息页面
 
@@ -216,23 +216,23 @@ urlpatterns = [
 ]
 ```
 
-对于书本详细信息路径，URL 模式使用特殊语法，来捕获我们想要查看的书本的特定 id。语法非常简单：尖括号定义要捕获的 URL 部分，包含视图可用于访问捕获数据的变量的名称。例如，<**something**> 将捕获标记的模式，并将值作为变量“something” ，传递给视图。您可以选择在变量名称前，加上一个定义数据类型的[转换器规范](https://docs.djangoproject.com/en/2.0/topics/http/urls/#path-converters)（int，str，slug，uuid，path）。
+对于书本详细信息路径，URL 模式使用特殊语法，来捕获我们想要查看的书本的特定 id。语法非常简单：尖括号定义要捕获的 URL 部分，包含视图可用于访问捕获数据的变量的名称。例如，<**something**> 将捕获标记的模式，并将值作为变量“something” ，传递给视图。你可以选择在变量名称前，加上一个定义数据类型的[转换器规范](https://docs.djangoproject.com/en/2.0/topics/http/urls/#path-converters)（int，str，slug，uuid，path）。
 
 在这里，我们使用 `'<int:pk>'` 来捕获 book id，它必须是一个整数，并将其作为名为 `pk` 的参数（主键的缩写）传递给视图。
 
 > **备注：** 如前所述，我们匹配的 URL 实际上是 `catalog/book/<digits>`（因为我们在应用程序 **catalog** 中，假定使用`/catalog/`）。
 
-> **警告：** 基于类的通用详细信息视图，需要传递一个名为 **pk** 的参数。如果您正在编写自己的函数视图，则可以使用您喜欢的任何参数名称，或者，确实也可以，在未命名的参数中传递信息。
+> **警告：** 基于类的通用详细信息视图，需要传递一个名为 **pk** 的参数。如果你正在编写自己的函数视图，则可以使用你喜欢的任何参数名称，或者，确实也可以，在未命名的参数中传递信息。
 
 #### 高级路径匹配/正则表达式入门
 
-> **备注：** 完成教程并不需要此部分说明！我们提供它，是因为了解此可选的部分，未来可能对您使用 Django 有帮助。
+> **备注：** 完成教程并不需要此部分说明！我们提供它，是因为了解此可选的部分，未来可能对你使用 Django 有帮助。
 
-`path()`提供的模式匹配非常简单，对于您只想捕获任何字符串或整数的（非常常见的）情况非常有用。如果需要更精细的过滤（例如，仅过滤具有一定数量字符的字符串），则可以使用 [re_path()](https://docs.djangoproject.com/en/2.0/ref/urls/#django.urls.re_path) 方法。
+`path()`提供的模式匹配非常简单，对于你只想捕获任何字符串或整数的（非常常见的）情况非常有用。如果需要更精细的过滤（例如，仅过滤具有一定数量字符的字符串），则可以使用 [re_path()](https://docs.djangoproject.com/en/2.0/ref/urls/#django.urls.re_path) 方法。
 
 此方法与
 
-`path()`的使用一样，除了它允许您使用[正则表达式](https://docs.python.org/3/library/re.html)，以指定模式。例如，上面的路径可以编写为如下所示：
+`path()`的使用一样，除了它允许你使用[正则表达式](https://docs.python.org/3/library/re.html)，以指定模式。例如，上面的路径可以编写为如下所示：
 
 ```python
 re_path(r'^book/(?P<pk>\d+)$', views.BookDetailView.as_view(), name='book-detail'),
@@ -275,14 +275,14 @@ re_path(r'^book/(?P<pk>\d+)$', views.BookDetailView.as_view(), name='book-detail
     <tr>
       <td>+</td>
       <td>
-        匹配前面一个或多个字符。例如，要匹配一个或多个位数的数字，您将使用<code>\d+</code>。要匹配一个或多个“a”字符，您可以使用
+        匹配前面一个或多个字符。例如，要匹配一个或多个位数的数字，你将使用<code>\d+</code>。要匹配一个或多个“a”字符，你可以使用
         <code>a+</code>
       </td>
     </tr>
     <tr>
       <td>*</td>
       <td>
-        匹配前面字符的零个或多个。例如，要匹配没有内容或单词，您可以使用<code
+        匹配前面字符的零个或多个。例如，要匹配没有内容或单词，你可以使用<code
           >\w*</code
         >
       </td>
@@ -296,7 +296,7 @@ re_path(r'^book/(?P<pk>\d+)$', views.BookDetailView.as_view(), name='book-detail
     <tr>
       <td>(?P&#x3C;<em>name</em>>...)</td>
       <td>
-        捕获模式（由...表示）作为命名变量（在本例中为“name”）。捕获的值，将传递给具有指定名称的视图。因此，您的视图，必须声明具有相同名称的参数！
+        捕获模式（由...表示）作为命名变量（在本例中为“name”）。捕获的值，将传递给具有指定名称的视图。因此，你的视图，必须声明具有相同名称的参数！
       </td>
     </tr>
     <tr>
@@ -355,7 +355,7 @@ re_path(r'^book/(?P<pk>\d+)$', views.BookDetailView.as_view(), name='book-detail
         </p>
         <p>
           这是“stub”的一种相当典型的模式。存根 stub 是用于数据的、URL
-          友好的、基于单词的主键。如果您希望本书网址提供更多信息，则可以使用
+          友好的、基于单词的主键。如果你希望本书网址提供更多信息，则可以使用
           stub。例如
           <code>/catalog/book/the-secret-garden</code>
           ，而不是<code>/catalog/book/33</code>。
@@ -365,13 +365,13 @@ re_path(r'^book/(?P<pk>\d+)$', views.BookDetailView.as_view(), name='book-detail
   </tbody>
 </table>
 
-您可以在一个匹配中捕获多个模式，从而在 URL 中，编码许多不同的信息。
+你可以在一个匹配中捕获多个模式，从而在 URL 中，编码许多不同的信息。
 
 > **备注：** 作为一项挑战，请考虑如何对网址进行编码，以列出特定年份，月份，日期的所有图书，以及可用于匹配它的规则表达式 RE。
 
 #### 在 URL 地图中传递其他选项
 
-我们在这里没有使用、但您可能觉得有价值的一个功能是，您可以向视图声明并传递[其他选项](https://docs.djangoproject.com/en/2.0/topics/http/urls/#views-extra-options)。这些选项被声明为一个字典，您将其作为第三个未命名参数，传递给 `path()`函数。
+我们在这里没有使用、但你可能觉得有价值的一个功能是，你可以向视图声明并传递[其他选项](https://docs.djangoproject.com/en/2.0/topics/http/urls/#views-extra-options)。这些选项被声明为一个字典，你将其作为第三个未命名参数，传递给 `path()`函数。
 
 如果要对多个资源，使用相同的视图，并在每种情况下，传递数据以配置其行为，则此方法非常有用（下面我们在每种情况下提供不同的模板）。
 
@@ -391,15 +391,15 @@ class BookDetailView(generic.DetailView):
     model = Book
 ```
 
-就是这样！您现在需要做的就是创建一个名为 **/locallibrary/catalog/templates/catalog/book_detail.html** 的模板，该视图将向此模板，传递 URL 映射器提取的特定 `Book` 记录的数据库信息。在模板中，您可以使用名为 `object` 或 `book`的模板变量（即通常为“`the_model_name`”），以访问书本列表。
+就是这样！你现在需要做的就是创建一个名为 **/locallibrary/catalog/templates/catalog/book_detail.html** 的模板，该视图将向此模板，传递 URL 映射器提取的特定 `Book` 记录的数据库信息。在模板中，你可以使用名为 `object` 或 `book`的模板变量（即通常为“`the_model_name`”），以访问书本列表。
 
-如果需要，可以更改使用的模板，以及用于在模板中，引用该书本的上下文对象的名称。您还可以覆盖方法，例如，向上下文添加其他信息。
+如果需要，可以更改使用的模板，以及用于在模板中，引用该书本的上下文对象的名称。你还可以覆盖方法，例如，向上下文添加其他信息。
 
 #### 如果记录不存在会怎样？
 
-如果请求的记录不存在，那么基于类的通用详细信息视图，将自动为您引发 `Http404` 异常 - 在生产环境中，这将自动显示适当的“未找到资源”页面，您可以根据需要自定义该页面。
+如果请求的记录不存在，那么基于类的通用详细信息视图，将自动为你引发 `Http404` 异常 - 在生产环境中，这将自动显示适当的“未找到资源”页面，你可以根据需要自定义该页面。
 
-为了让您了解其工作原理，下面的代码片段，演示了如何在**不使用**基于类的详细信息视图的情况下，将基于类的视图实现为函数。
+为了让你了解其工作原理，下面的代码片段，演示了如何在**不使用**基于类的详细信息视图的情况下，将基于类的视图实现为函数。
 
 ```python
 def book_detail_view(request,pk):
@@ -451,7 +451,7 @@ def book_detail_view(request,pk):
 {% endblock %}
 ```
 
-> **备注：** 上面模板中的作者链接，有一个空 URL，因为我们尚未创建作者详细信息页面。一旦创建了，您应该像这样更新 URL：
+> **备注：** 上面模板中的作者链接，有一个空 URL，因为我们尚未创建作者详细信息页面。一旦创建了，你应该像这样更新 URL：
 >
 > ```python
 > <a href="{% url 'author-detail' book.author.pk %}">\{{ book.author }}</a>
@@ -472,11 +472,11 @@ def book_detail_view(request,pk):
 {% endfor %}
 ```
 
-需要此方法，是因为您仅在关系的“一”侧声明 `ForeignKey`（一对多）字段。由于您没有做任何事情，来声明其他（“多”）模型中的关系，因此它没有任何字段，来获取相关记录集。为了解决这个问题，Django 构造了一个适当命名的“反向查找”函数，您可以使用它。函数的名称，是通过对声明 `ForeignKey` 的模型名称，转化为小写来构造的，然后是`_set`（即，在 `Book`中创建的函数是 `bookinstance_set()`）。
+需要此方法，是因为你仅在关系的“一”侧声明 `ForeignKey`（一对多）字段。由于你没有做任何事情，来声明其他（“多”）模型中的关系，因此它没有任何字段，来获取相关记录集。为了解决这个问题，Django 构造了一个适当命名的“反向查找”函数，你可以使用它。函数的名称，是通过对声明 `ForeignKey` 的模型名称，转化为小写来构造的，然后是`_set`（即，在 `Book`中创建的函数是 `bookinstance_set()`）。
 
-> **备注：** 这里我们使用`all()`来获取所有记录（默认值）。虽然您可以使用`filter()`方法获取代码中的记录子集，但您无法直接在模板中执行此操作，因为您无法指定函数的参数。
+> **备注：** 这里我们使用`all()`来获取所有记录（默认值）。虽然你可以使用`filter()`方法获取代码中的记录子集，但你无法直接在模板中执行此操作，因为你无法指定函数的参数。
 >
-> 还要注意，如果您没有定义顺序（在基于类的视图或模型上），您还会看到开发服务器中的错误，如下所示：
+> 还要注意，如果你没有定义顺序（在基于类的视图或模型上），你还会看到开发服务器中的错误，如下所示：
 >
 > ```
 > [29/May/2017 18:37:53] "GET /catalog/books/?page=1 HTTP/1.1" 200 1637
@@ -492,7 +492,7 @@ def book_detail_view(request,pk):
 > 2. Add a `queryset` attribute in your custom class-based view, specifying a `order_by()`.在自定义基于类的视图中添加 queryset 属性，指定 order_by（）。
 > 3. Adding a `get_queryset` method to your custom class-based view and also specify the `order_by()`.将 get_queryset 方法添加到基于类的自定义视图中，并指定 order_by（）。
 >
-> 如果您决定使用`class Meta` 作为作者模型`Author`（可能不像定制基于类的视图那样灵活，但很容易），您最终会得到这样的结果：
+> 如果你决定使用`class Meta` 作为作者模型`Author`（可能不像定制基于类的视图那样灵活，但很容易），你最终会得到这样的结果：
 >
 > ```python
 > class Author(models.Model):
@@ -513,27 +513,27 @@ def book_detail_view(request,pk):
 >
 > 当然，该字段不需要是`last_name`：它可以是任何其他字段。
 >
-> 最后，但并非最不重要的是，您应该按照实际上在数据库上具有索引（唯一或非唯一）的属性/栏位进行排序，以避免性能问题。当然，如果这么少量的书本（和用户！），这里就没有必要（我们可能会让自己提前做太多事情），但是对于未来的项目来说，这是需要考虑的事情。
+> 最后，但并非最不重要的是，你应该按照实际上在数据库上具有索引（唯一或非唯一）的属性/栏位进行排序，以避免性能问题。当然，如果这么少量的书本（和用户！），这里就没有必要（我们可能会让自己提前做太多事情），但是对于未来的项目来说，这是需要考虑的事情。
 
 ## 它看起来是什么样子？
 
 此时，我们应该创建了显示书本列表，和书本详细信息页面所需的所有内容。运行服务器（`python3 manage.py runserver`），并打开浏览器到 <http://127.0.0.1:8000/>。
 
-> **警告：** 请还不要点击任何作者、或作者详细信息链接 - 您将在挑战练习中，创建这些链接！
+> **警告：** 请还不要点击任何作者、或作者详细信息链接 - 你将在挑战练习中，创建这些链接！
 
 单击所有书籍链接 **All books** ，以显示书籍列表。
 
 ![Book List Page](book_list_page_no_pagination.png)
 
-然后点击指向您的某本图书的链接。如果一切设置正确，您应该看到类似下面的屏幕截图。
+然后点击指向你的某本图书的链接。如果一切设置正确，你应该看到类似下面的屏幕截图。
 
 ![Book Detail Page](book_detail_page_no_pagination.png)
 
 ## 分页
 
-如果您刚刚获得了一些记录，我们的图书清单页面看起来会很好。但是，当您进入数十或数百条记录的页面时，页面将逐渐花费更长时间加载（并且有太多内容无法合理浏览）。此问题的解决方案，是为列表视图添加分页，减少每页上显示的项目数。
+如果你刚刚获得了一些记录，我们的图书清单页面看起来会很好。但是，当你进入数十或数百条记录的页面时，页面将逐渐花费更长时间加载（并且有太多内容无法合理浏览）。此问题的解决方案，是为列表视图添加分页，减少每页上显示的项目数。
 
-Django 在分页方面，拥有出色的内置支持。更好的是，它内置于基于类的通用列表视图中，因此您无需执行太多操作即可启用它！
+Django 在分页方面，拥有出色的内置支持。更好的是，它内置于基于类的通用列表视图中，因此你无需执行太多操作即可启用它！
 
 ### 视图
 
@@ -545,7 +545,7 @@ class BookListView(generic.ListView):
     paginate_by = 10
 ```
 
-通过添加这行，只要您有超过 10 条记录，视图就会开始对它发送到模板的数据，进行分页。使用 GET 参数访问不同的页面 - 要访问第 2 页，您将使用 URL：`/catalog/books/?page=2`。
+通过添加这行，只要你有超过 10 条记录，视图就会开始对它发送到模板的数据，进行分页。使用 GET 参数访问不同的页面 - 要访问第 2 页，你将使用 URL：`/catalog/books/?page=2`。
 
 ### 模板
 
@@ -575,7 +575,7 @@ class BookListView(generic.ListView):
 {% endblock %}
 ```
 
-`page_obj` 是一个 [Paginator](https://docs.djangoproject.com/en/2.0/topics/pagination/#paginator-objects) 对象，如果在当前页面上使用分页，它将存在。它允许您获取有关当前页面，之前页面，有多少页面等的所有信息。
+`page_obj` 是一个 [Paginator](https://docs.djangoproject.com/en/2.0/topics/pagination/#paginator-objects) 对象，如果在当前页面上使用分页，它将存在。它允许你获取有关当前页面，之前页面，有多少页面等的所有信息。
 
 我们使用 `\{{ request.path }}`，来获取用于创建分页链接的当前页面 URL。这很有用，因为它独立于我们正在分页的对象。
 
@@ -583,9 +583,9 @@ class BookListView(generic.ListView):
 
 ### 它看起来是什么样子的？
 
-下面的屏幕截图，显示了分页的样子 - 如果您没有在数据库中输入超过 10 个标题，那么您可以通过降低 **catalog/views.py** 文件中 `paginate_by` 行指定的数量，来更轻松地测试它。为了得到以下结果，我们将其更改为 `paginate_by = 2`。
+下面的屏幕截图，显示了分页的样子 - 如果你没有在数据库中输入超过 10 个标题，那么你可以通过降低 **catalog/views.py** 文件中 `paginate_by` 行指定的数量，来更轻松地测试它。为了得到以下结果，我们将其更改为 `paginate_by = 2`。
 
-分页链接显示在底部，根据您所在的页面，显示下一个/上一个链接。
+分页链接显示在底部，根据你所在的页面，显示下一个/上一个链接。
 
 ![Book List Page - paginated](book_list_paginated.png)
 
@@ -610,7 +610,7 @@ URL 映射器和视图所需的代码，应与我们上面创建的`Book`列表�
 >   </p>
 >   ```
 
-完成后，您的页面应该类似于下面的屏幕截图。
+完成后，你的页面应该类似于下面的屏幕截图。
 
 ![Author List Page](author_list_page_no_pagination.png)
 

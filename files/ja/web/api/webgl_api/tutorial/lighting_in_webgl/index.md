@@ -153,9 +153,9 @@ gl.uniformMatrix4fv(
 
 以上で完成です!
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample7/index.html', 670, 510)}}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample7/index.html', 670, 510)}}
 
-[コードを確認する](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample7) | [新しいページでデモを開く](http://mdn.github.io/webgl-examples/tutorial/sample7/)
+[コードを確認する](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample7) | [新しいページでデモを開く](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample7/)
 
 ## 読者への課題
 

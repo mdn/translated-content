@@ -1,6 +1,8 @@
 ---
 title: outline-offset
 slug: Web/CSS/outline-offset
+l10n:
+  sourceCommit: 7a9f9baa25d9a7313bd6c62ef5ef585b28459c58
 ---
 
 {{CSSRef}}
@@ -20,6 +22,7 @@ outline-offset: 0.2em;
 outline-offset: inherit;
 outline-offset: initial;
 outline-offset: revert;
+outline-offset: revert-layer;
 outline-offset: unset;
 ```
 

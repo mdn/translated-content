@@ -1,114 +1,73 @@
 ---
 title: <math>
 slug: Web/MathML/Element/math
+l10n:
+  sourceCommit: 8eece0b998c23e8ea35f936d7371a169974130f5
 ---
 
 {{MathMLRef}}
 
-MathML における最上位の要素は `<math>` です。有効な MathML のインスタンスはすべて `<math>` タグに囲まれています。加えて、 `<math>` 要素を入れ子状に配置してはなりませんが、中にその他の子要素をいくつでも持つことができます。
+**`<math>`** は最上位の [MathML](/ja/docs/Web/MathML) 要素で、一つの数式を記述するのに使われます。これは[フローコンテンツ](/ja/docs/Web/HTML/Content_categories#フローコンテンツ)が許可されている HTML コンテンツに置くことができます。
+
+> **メモ:** MathML の数式をウェブページに適切に統合するためのヒントについては [MathML の記述ページ](/ja/docs/Web/MathML/Authoring#using_mathml)を、その他のデモについては [例](/ja/docs/Web/MathML/Examples)ページを参照してください。
 
 ## 属性
 
-以下に示す属性に加え、 `<math>` 要素は {{ MathMLElement("mstyle") }} 要素のすべての属性を受け入れます。
+この要素の属性には、[グローバル MathML 属性](/ja/docs/Web/MathML/Global_attributes)の他に以下の属性があります。
 
-- class, id, style
-  - : [スタイルシート](/ja/docs/CSS)と一緒に使用するために提供されます。
-- dir
-  - : 数式全体の書字方向。値として `ltr` (左書き) と `rtl` (右書き) が指定可能です。
-- href
-  - : 指定された URI へのハイパーリンクの設定に使用されます。
-- mathbackground
-  - : 背景色。 `#rgb`, `#rrggbb`, [HTML 色名](/ja/docs/CSS/color_value#Color_Keywords)が使用できます。
-- mathcolor
-  - : 文字色。 `#rgb`, `#rrggbb`, [HTML 色名](/ja/docs/CSS/color_value#Color_Keywords)が使用できます。
-- display
+- `display`
 
-  - : この列挙属性は、囲まれた MathML マークアップをレンダリングする方法を指定します。これは、次のいずれかの値を持つことができます。
+  - : この[列挙](/ja/docs/Glossary/Enumerated)属性は、囲まれた MathML マークアップをレンダリングする方法を指定します。これは、次のいずれかの値を取ることができます。
 
-    - `block` は、この要素が現在のテキストの区間の外に、テキストの意味を変えることなく任意の場所に配置することができるブロックとして表示されることを意味します。
-    - `inline` は、この要素が現在のテキストの区間の内側に表示され、そのテキストの意味を変えることなくその区間の外に移動することができないことを意味します。
+    - `block` は、この要素が現在のテキストのスパンの外にある独自のブロックに表示され、 [`math-style`](/ja/docs/Web/CSS/math-style) が `normal` に設定されていることを意味します。
+    - `inline` は、この要素が現在のテキストのスパンの中に表示され、 [`math-style`](/ja/docs/Web/CSS/math-style) が `compact` に設定されていることを意味します。
 
     存在しない場合、既定値は `inline` です。
 
-- mode {{deprecated_inline}}
-  - : 非推奨であり、 [display 属性](/ja/docs/MathML/Element/math#attr-display)で置き換えられました。
-    取りうる値は `display` (これは `display="block"` と同じ効果を持ちます) および `inline` です。
-- overflow
-  - : 許可された幅に収まらないほど長い場合に、式がどのように動作するかを指定します。
-    取りうる値は `linebreak` (既定値), `scroll`, `elide`, `truncate`, `scale` です。
-
 ## 例
 
-### HTML5 表記
+この例には 2 つの MathML 式が含まれています。最初のものは、必要なだけのスペースをとって、中央のブロック内に表示されます。 2 番目のものは、高さを最小にするためにサイズと間隔を狭めて、テキストの段落の中に表示されます。
 
 ```html
-<!doctype html>
-<html>
-  <head>
-    <title>MathML in HTML5</title>
-  </head>
-  <body>
-    <math>
-      <mrow>
-        <mrow>
-          <msup>
-            <mi>a</mi>
-            <mn>2</mn>
-          </msup>
-          <mo>+</mo>
-          <msup>
-            <mi>b</mi>
-            <mn>2</mn>
-          </msup>
-        </mrow>
-        <mo>=</mo>
-        <msup>
-          <mi>c</mi>
-          <mn>2</mn>
-        </msup>
-      </mrow>
-    </math>
-  </body>
-</html>
-```
-
-### XHTML 表記
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN" "http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
- <title>MathML in XHTML</title>
-</head>
-<body>
-
-  <math xmlns="http://www.w3.org/1998/Math/MathML">
+<p>
+  The infinite sum
+  <math display="block">
     <mrow>
-      <mrow>
+      <munderover>
+        <mo>∑</mo>
+        <mrow>
+          <mi>n</mi>
+          <mo>=</mo>
+          <mn>1</mn>
+        </mrow>
+        <mrow>
+          <mo>+</mo>
+          <mn>∞</mn>
+        </mrow>
+      </munderover>
+      <mfrac>
+        <mn>1</mn>
         <msup>
-          <mi>a</mi>
+          <mi>n</mi>
           <mn>2</mn>
         </msup>
-        <mo>+</mo>
-        <msup>
-          <mi>b</mi>
-          <mn>2</mn>
-        </msup>
-      </mrow>
-      <mo>=</mo>
-      <msup>
-        <mi>c</mi>
-        <mn>2</mn>
-      </msup>
+      </mfrac>
     </mrow>
   </math>
-
-</body>
-</html>
+  is equal to the real number
+  <math display="inline">
+    <mfrac>
+      <msup>
+        <mi>π</mi>
+        <mn>2</mn>
+      </msup>
+      <mn>6</mn>
+    </mfrac></math
+  >.
+</p>
 ```
 
-**メモ**: MathML をもつ XHTML 文書は `application/xhtml+xml` として配信しなければなりません。これは、ローカルファイルに `.xhtml` 拡張子を追加することで、簡単に達成できます。 Apache サーバーの場合は、 [`.htaccess` ファイルを設定する](http://httpd.apache.org/docs/2.4/mod/mod_mime.html#addtype)ことで拡張子を正しい MIME タイプに対応付けることができます。 XML 文書で MathML を表記するので、整形式の XML 文書を必ず記述してください。
+{{ EmbedLiveSample('math_example', 700, 200, "", "") }}
 
 ## 仕様書
 
@@ -116,16 +75,9 @@ MathML における最上位の要素は `<math>` です。有効な MathML の�
 
 ## ブラウザーの互換性
 
-{{Compat("mathml.elements.math")}}
-
-## Firefox 固有のメモ
-
-Firefox 7 では、最上位の math 要素がすべての MathML 属性を受け入れる対応を導入しました (すなわち {{ MathMLElement("mstyle") }} 要素と同じ動作)。しかし、 `displaystyle` 属性が含まれておらず、 Firefox 8 で[追加されました](https://bugzilla.mozilla.org/show_bug.cgi?id=669719)。
-
-テキストの代替 (`alttext`) または `altimg`, `altimg-width`, `altimg-height`, `altimg-valign` の各属性を使用する代替画像の参照は、現在は Firefox に実装されていません。
+{{Compat}}
 
 ## 関連情報
 
 - HTML の最上位要素: {{ HTMLElement("html") }}
 - SVG の最上位要素: {{ SVGElement("svg") }}
-- [MathML ブラウザーテスト](http://eyeasme.com/Joe/MathML/MathML_browser_test.html)

@@ -13,7 +13,7 @@ Este tutorial estende nosso website [LocalLibrary](/pt-BR/docs/Learn/Server-side
       <th scope="row">Pré-requisitos:</th>
       <td>
         Conclua todos os tópicos do tutorial anterior, incluindo
-        <a href="/pt-br/docs/Learn/Server-side/Django/Home_page"
+        <a href="/pt-BR/docs/Learn/Server-side/Django/Home_page"
           >Django Tutorial Part 5: Creating our home page</a
         >.
       </td>

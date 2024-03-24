@@ -3,14 +3,14 @@ title: 组织 CSS
 slug: Learn/CSS/Building_blocks/Organizing
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks/Fundamental_CSS_comprehension", "Learn/CSS/Building_blocks")}}
 
 在开始在更大的样式表和大项目上作业的时候，你会发现维护一个大型的 CSS 文件很有挑战性。在本文中，我们将会简要看一下在编写你的 CSS 时，让它更加易于维护的一些最佳实践，以及你会在其他人那里看到的，用来增强可维护性的解决方案。
 
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         电脑的基本操作，<a
           href="/zh-CN/Learn/Getting_started_with_the_web/Installing_basic_software"
@@ -45,7 +45,7 @@ slug: Learn/CSS/Building_blocks/Organizing
 
 如果你在和一个小组共同协作完成一个已有的项目，需要检查的第一件事是这一项目是否已经有了 CSS 的代码风格规范。小组的代码风格规范应当总是优先于的个人喜好。做事情很多时候没有对错之分，但是统一是很重要的。
 
-例如你可以看下[MDN 的 CSS 代码规范的示例。](/zh-CN/docs/MDN/Contribute/Guidelines/Code_guidelines/CSS).
+例如你可以看下 [MDN 的 CSS 代码规范的示例](/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS)。
 
 ### 保持统一
 
@@ -366,4 +366,4 @@ $base-color: #c6538c;
 
 你应该也有了探索[MDN CSS](/zh-CN/docs/Web/CSS)学习材料的剩余部分的技能。你可以查阅属性和值，探索我们的[CSS Cookbook](/zh-CN/docs/Web/CSS/Layout_cookbook)来了解可用的排布，在诸如[Guide to CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_grid_layout)的一些更加专门的指导里阅读更多。.
 
-{{PreviousMenu("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks/Fundamental_CSS_comprehension", "Learn/CSS/Building_blocks")}}

@@ -3,6 +3,8 @@ title: Head (Заголовок)
 slug: Glossary/Head
 ---
 
+{{GlossarySidebar}}
+
 **Head** (**Заголовок**) это часть {{glossary("HTML")}} документа, которая содержит {{glossary("metadata","метаданные")}} о документе, такие как автор, описание, ссылки на {{glossary("CSS")}} или {{glossary("JavaScript")}} файлы, которые должны быть применены в HTML.
 
 ## Смотрите также

@@ -1,6 +1,8 @@
 ---
 title: position
 slug: Web/CSS/position
+l10n:
+  sourceCommit: 00a72fc5f2984139f7bf3fb3360be365606fe4e5
 ---
 
 {{CSSRef}}
@@ -22,6 +24,7 @@ position: sticky;
 position: inherit;
 position: initial;
 position: revert;
+position: revert-layer;
 position: unset;
 ```
 
@@ -33,29 +36,31 @@ position: unset;
 
   - : 要素は文書の通常のフローに従って配置され、 `top`, `right`, `bottom`, `left` の値に基づいて*自分自身からの相対*オフセットで配置されます。オフセットは他の要素の配置には影響を与えません。つまり、ページレイアウト内で要素に与えられる空間は、位置が `static` であった時と同じです。
 
-    `z-index` の値が `auto` でない場合、新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)を生成します。 `table-*-group`, `table-row`, `table-column`, `table-cell`, `table-caption` の要素における効果は未定義です。
+    `z-index` の値が `auto` でない場合、新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)を生成します。 `table-*-group`, `table-row`, `table-column`, `table-cell`, `table-caption` の要素における効果は未定義です。
 
 - `absolute`
 
-  - : 要素は文書の通常のフローから除外され、ページレイアウト内に要素のための空間が作成されません。直近の配置されている祖先があれば、それに対して相対配置されます。そうでなければ、初期の[包含ブロック](/ja/docs/Web/CSS/Containing_block)に対して相対配置されます。最終的な位置は `top`, `right`, `bottom`, `left` の値によって決定されます。
+  - : 要素は文書の通常のフローから除外され、ページレイアウト内にこの要素のための空間が作成されません。この要素に直近の位置指定されている祖先があればそれに対して、そうでなければ、初期の[包含ブロック](/ja/docs/Web/CSS/Containing_block#包含ブロックの識別)に対して相対配置されます。最終的な位置は `top`, `right`, `bottom`, `left` の値によって決定されます。
 
-    この値では、 `z-index` の値が `auto` ではない場合、新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)を作成します。絶対位置指定ボックスのマージンは、他の要素のマージンと[相殺](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)されません。
+    この値では、 `z-index` の値が `auto` ではない場合、新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)を作成します。絶対位置指定ボックスのマージンは、他の要素のマージンと[相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)されません。
 
 - `fixed`
 
-  - : 要素は文書の通常のフローから除外され、ページレイアウト内に要素のための空間が作成されません。{{glossary("viewport", "ビューポート")}}によって定められた初期の[包含ブロック](/ja/docs/Web/CSS/Containing_block)に対して相対配置されますが、祖先の一つに `transform`, `perspective`, `filter` の何れかのプロパティが `none` 以外 ([CSS Transforms 仕様書](https://www.w3.org/TR/css-transforms-1/#propdef-transform)を参照) に設定されている場合は例外で、その場合は祖先が包含ブロックとしてふるまいます。 (なお、包含ブロック形成に寄与している `perspective` と `filter` に矛盾のあるブラウザーがあります。) 最終的な位置は `top`, `right`, `bottom`, `left` の値によって決定されます。
+  - : 要素は文書の通常のフローから除外され、ページレイアウト内に要素のための空間が作成されません。要素は最初の[包含ブロック](/ja/docs/Web/CSS/Containing_block#包含ブロックの識別)（視覚メディア要素の場合はビューポート）から相対的に配置されます。最終的な位置は `top`、`right`、`bottom`、`left` の値によって決まります。
 
-    この値は、常に新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)を作成します。印刷文書の場合、要素は*各ページ*の同じ位置に配置されます。
+    この値は、常に新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)を作成します。印刷文書の場合、要素は*各ページ*の同じ位置に配置されます。
 
 - `sticky`
 
-  - : 要素は文書の通常のフローに従って配置され、*直近のスクロールする祖先*および[包含ブロック](/ja/docs/Web/CSS/Containing_block) (直近のブロックレベル祖先、表関連要素を含む) に対して `top`, `right`, `bottom`, `left` の値に基づいて相対配置されます。オフセットは他の要素の配置には影響を与えません。
+  - : 要素は文書の通常のフローに従って配置され、*直近のスクロールする祖先*および[包含ブロック](/ja/docs/Web/CSS/Containing_block)（直近のブロックレベル祖先、表関連要素を含む）に対して `top`, `right`, `bottom`, `left` の値に基づいて相対配置されます。このオフセットは他の要素の配置には影響を与えません。
 
-    この値は、常に新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)を生成します。なお粘着要素は、直近の祖先がスクロールしない場合でも、「スクロールの仕組み」を持つ直近の祖先 (`overflow` が `hidden`, `scroll`, `auto`, `overlay` として作成されたもの) に「粘着」します。これによって「粘着」のふるまいを効果的に抑止します ([GitHub issue on W3C CSSWG](https://github.com/w3c/csswg-drafts/issues/865) を参照)。
+    この値は、常に新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)を生成します。なお粘着要素は、直近の祖先がスクロールしない場合でも、「スクロールの仕組み」を持つ直近の祖先（`overflow` が `hidden`, `scroll`, `auto`, `overlay` として作成されたもの）に「粘着」します。
+
+    > **メモ:** 要素を粘着させる必要がある軸に対して、少なくとも 1 つの [inset](/ja/docs/Web/CSS/inset) プロパティ（{{cssxref("top")}}, {{cssxref("inset-block-start")}}, {{cssxref("right")}}, {{cssxref("inset-inline-end")}} など）を `auto` 以外の値に設定する必要があります。軸の `inset` プロパティが両方とも `auto` に設定されている場合、その軸では `sticky` 値は `relative` として動作します。
 
 ## 解説
 
-<h3 id="Types_of_positioning">位置の種類</h3>
+### 位置指定の種類
 
 - **位置指定要素** (positioned element) とは、 `position` の[計算値](/ja/docs/Web/CSS/computed_value)が `relative`, `absolute`, `fixed`, `sticky` のいずれかである要素です。 (言い換えれば、 `static` 以外の全てです。)
 - **相対位置指定要素** (relatively positioned element) とは、 `position` の[計算値](/ja/docs/Web/CSS/computed_value)が `relative` である要素です。 {{Cssxref("top")}} および {{Cssxref("bottom")}} プロパティは、通常の位置からの垂直方向のオフセットを指定します。 {{Cssxref("left")}} および {{Cssxref("right")}} プロパティは、水平方向のオフセットを指定します。
@@ -73,7 +78,7 @@ position: unset;
 
 `absolute` または `fixed` の値で配置された要素は、ページがズームしてテキストの大きさを大きくしたら、その他の要素を妨害していないかどうかを確認してください。
 
-- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
 - [Visual Presentation: Understanding SC 1.4.8 | Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
 
 ### パフォーマンスとアクセシビリティ
@@ -90,7 +95,7 @@ position: unset;
 
 ## 例
 
-<h3 id="Relative_positioning">相対位置指定</h3>
+### 相対位置指定
 
 相対位置指定の要素は文書中の通常の配置から、指定された量だけオフセットしますが、ほかの要素にはオフセットの影響を与えません。以下の例では、 "Two" が通常の位置に空間を得ているように他の要素が配置されることに注意してください。
 
@@ -126,11 +131,11 @@ position: unset;
 }
 ```
 
-{{EmbedLiveSample('Relative_positioning', '', '200px')}}
+{{EmbedLiveSample('相対位置指定', '', '200px')}}
 
-<h3 id="Absolute_positioning">絶対位置指定</h3>
+### 絶対位置指定
 
-相対位置指定の要素も、文書の通常のフローの中に配置されます。それに対して、絶対位置指定の要素はフローから除外されます。つまり、他の要素はこの要素が存在しないかのように配置されます。絶対位置指定の要素は*配置された直近の祖先* (つまり、 `static` ではない直近の祖先) に対して相対的に配置されます。配置された祖先がない場合は、 ICB (initial containing block — [W3C の定義](https://www.w3.org/TR/CSS2/visudet.html#containing-block-details)も御覧ください) すなわち文書のルート要素の包含ブロックに対する相対的な配置になります。
+相対位置指定の要素も、文書の通常のフローの中に配置されます。それに対して、絶対位置指定の要素はフローから除外されます。つまり、他の要素はこの要素が存在しないかのように配置されます。絶対位置指定の要素は*配置された直近の祖先*（つまり、 `static` ではない直近の祖先) に対して相対的に配置されます。配置された祖先がない場合は、 ICB (initial containing block — [W3C の定義](https://www.w3.org/TR/CSS2/visudet.html#containing-block-details)も参照）すなわち文書のルート要素の包含ブロックに対する相対的な配置になります。
 
 #### HTML
 
@@ -197,11 +202,11 @@ span {
 
 #### 結果
 
-{{EmbedLiveSample('Absolute_positioning', '', '420px')}}
+{{EmbedLiveSample('絶対位置指定', '', '420px')}}
 
-<h3 id="Fixed_positioning">固定位置指定</h3>
+### 固定位置指定
 
-固定位置指定は絶対位置指定に似ていますが、要素の[包含ブロック](/ja/docs/Web/CSS/Containing_block)が*ビューポート*によって定義される初期包含ブロックであるという点が異なり、祖先の一つに `transform`, `perspective`, `filter` の何れかのプロパティが `none` 以外 ([CSS Transforms Spec](https://www.w3.org/TR/css-transforms-1/#propdef-transform) を参照) に設定されている場合は例外で、その場合は祖先が[包含ブロック](/ja/docs/Web/CSS/Containing_block)としてふるまいます。これはよく、ページをスクロールしても同位置に留まり続けるような「浮く」要素 ("floating" element) を作るのに使われます。下の例ではボックス "One" はページの上から 80px、左から 10px の位置に固定されます。スクロールしても、ビューポートに対して同じ位置に留まり続けます。
+固定位置指定は絶対位置指定に似ていますが、要素の[包含ブロック](/ja/docs/Web/CSS/Containing_block)が*ビューポート*によって定義される初期包含ブロックであるという点が異なり、祖先の一つに `transform`, `perspective`, `filter` の何れかのプロパティが `none` 以外 ([CSS Transforms Spec](https://www.w3.org/TR/css-transforms-1/#propdef-transform) を参照) に設定されている場合は例外で、その場合は祖先が[包含ブロック](/ja/docs/Web/CSS/Containing_block)としてふるまいます。これはよく、ページをスクロールしても同位置に留まり続けるような「浮く」要素 ("floating" element) を作るのに使われます。下の例ではボックス "One" はページの上から 80px、左から 10px の位置に固定されます。スクロールしても、ビューポートに対して同じ位置に留まり続けます。また、 [`will-change`](/ja/docs/Web/CSS/will-change) プロパティに `transform` を設定すると、新しい包含ブロックが設定されます。
 
 #### HTML
 
@@ -268,11 +273,11 @@ span {
 
 #### 結果
 
-{{EmbedLiveSample('Fixed_positioning', '', '300px')}}
+{{EmbedLiveSample('固定位置指定', '', '300px')}}
 
-<h3 id="Sticky_positioning">粘着位置指定</h3>
+### 粘着位置指定
 
-粘着位置指定は、相対位置指定と固定位置指定を組み合わせたものです。粘着位置指定された要素は、指定したしきい値に達するまでは相対位置指定として、しきい値に達したら固定位置指定として扱われます。例えば・・・
+粘着位置指定は、直近のスクロールする祖先がビューポート内にある場合に、相対位置指定と固定位置指定を組み合わせたものです。粘着位置指定された要素は、指定したしきい値に達するまでは相対位置指定として、しきい値に達したら固定位置指定として扱われます。例えば次のようになっていたとします。
 
 ```css
 #one {
@@ -281,7 +286,7 @@ span {
 }
 ```
 
-例えば上記のスタイルは、ビューポートをスクロールして要素の位置が上端から 10px より小さくなるまでは、相対位置指定の要素としてふるまいます。それ以降はしきい値を超えるほどビューポートのスクロールを戻すまで、上端から 10px で固定位置指定になります。
+上記の CSS ルールはは、ビューポートをスクロールして要素の位置が上端から 10px より小さくなるまでは、相対位置指定の要素としてふるまいます。それ以降はしきい値を超えるほどビューポートのスクロールを戻すまで、上端から 10px で固定位置指定になります。
 
 粘着位置指定は一般的に、アルファベット順や五十音順のリストの見出しに使用されます。見出し A の項目をスクリーン外にスクロールするまで、見出し B は A の項目の後ろに表示されています。見出し B はコンテンツの残りの部分とともにスクリーン外に移動するのではなく、見出し B のすべての項目をスクリーン外にスクロールして見出し C に含まれる部分に達するまで、ビューポートの上部に固定されます。
 
@@ -367,7 +372,7 @@ dd + dd {
 
 #### 結果
 
-{{EmbedLiveSample('Sticky_positioning', '', '300px')}}
+{{EmbedLiveSample('粘着位置指定', '', '300px')}}
 
 ## 仕様書
 
@@ -379,4 +384,4 @@ dd + dd {
 
 ## 関連情報
 
-- [CSS を学ぶ: 位置指定](/ja/docs/Learn/CSS/CSS_layout/Positioning)
+- [CSS の学習: 位置指定](/ja/docs/Learn/CSS/CSS_layout/Positioning)

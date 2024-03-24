@@ -60,7 +60,7 @@ A (possibly incomplete) list of ways a style sheet can be associated with a docu
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

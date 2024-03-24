@@ -54,7 +54,7 @@ window.onbeforeprint = (event) => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.beforeprint_event")}}
+{{Compat}}
 
 ## 関連情報
 

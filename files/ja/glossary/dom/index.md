@@ -3,6 +3,8 @@ title: DOM
 slug: Glossary/DOM
 ---
 
+{{GlossarySidebar}}
+
 DOM (Document Object Model) とは、すべての {{glossary("HTML")}} または {{glossary("XML")}} 文書を表現・操作する {{glossary("API")}} です。 DOM はブラウザーで文書構造をノードのツリーとして読み込み、それぞれのノードを文書の一部 (例えば{{Glossary("element", "要素")}}、テキスト文字列、コメント) として表します。
 
 DOM は文書内のすべてのノードにアクセスし操作するためにコードをブラウザー内で実行することができるので、{{glossary("World Wide Web","ウェブ")}}上で最も使用されいる {{Glossary("API")}} のひとつです。ノードの生成や移動、変更が可能です。イベントリスナーをノードに追加し、特定のイベントの発生時に実行させることもできます。

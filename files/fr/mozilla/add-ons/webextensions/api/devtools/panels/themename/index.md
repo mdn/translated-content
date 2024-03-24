@@ -3,7 +3,7 @@ title: devtools.panels.themeName
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/themeName
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Le nom du thème de **devtools** actuellement sélectionné.
 

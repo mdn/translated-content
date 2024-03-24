@@ -125,14 +125,11 @@ p3.then(
 
 ## Especificações
 
-| Especificação                                                      | Status               | Comentário                        |
-| ------------------------------------------------------------------ | -------------------- | --------------------------------- |
-| {{SpecName('ES6', '#sec-promise.resolve', 'Promise.resolve')}}     | {{Spec2('ES2015')}}  | Definição inicial no padrão ECMA. |
-| {{SpecName('ESDraft', '#sec-promise.resolve', 'Promise.resolve')}} | {{Spec2('ESDraft')}} |                                   |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Promise.resolve")}}
+{{Compat}}
 
 ## Veja também
 

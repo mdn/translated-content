@@ -13,7 +13,7 @@ slug: Web/CSS/Layout_mode
 - [_位置指定レイアウト_](/ja/docs/Web/CSS/CSS_Positioning)は、他要素とほとんど相互作用のない位置指定要素のためのものです。
 - [_段組みレイアウト_](/ja/docs/Web/CSS/CSS_Columns)は、新聞のように複数の段でコンテンツをレイアウトするためのものです。
 - [_フレックスボックスレイアウト_](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)は、滑らかに大きさが変更できる複雑なページのレイアウトに使われます。
-- [_グリッドレイアウト_](/ja/docs/Web/CSS/CSS_Grid_Layout)は、固定グリッドを基準にした要素配置に使われます。
+- [_グリッドレイアウト_](/ja/docs/Web/CSS/CSS_grid_layout)は、固定グリッドを基準にした要素配置に使われます。
 
 > **メモ:** レイアウトモードによって、使える [CSS プロパティ](/ja/docs/Web/CSS/Reference)に制限があります。多くは 1 つか 2 つのレイアウトモードで用いられ、別のレイアウトモードに関わる要素に設定しても効果がありません。
 
@@ -24,10 +24,10 @@ slug: Web/CSS/Layout_mode
   - [アットルール](/ja/docs/Web/CSS/At-rule)
   - [コメント](/ja/docs/Web/CSS/Comments)
   - [詳細度](/ja/docs/Web/CSS/Specificity)
-  - [継承](/ja/docs/Web/CSS/inheritance)
-  - [ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [継承](/ja/docs/Web/CSS/Inheritance)
+  - [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
-  - [マージンの相殺](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 値
     - [初期値](/ja/docs/Web/CSS/initial_value)
     - [計算値](/ja/docs/Web/CSS/computed_value)

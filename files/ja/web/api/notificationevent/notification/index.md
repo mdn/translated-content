@@ -47,4 +47,4 @@ self.addEventListener("notificationclick", function (event) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.NotificationEvent.notification")}}
+{{Compat}}

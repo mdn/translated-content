@@ -37,7 +37,7 @@ if (window.matchMedia("(min-width: 400px)").matches) {
 
 ## ブラウザ互換性
 
-{{Compat("api.Window.matchMedia")}}
+{{Compat}}
 
 ## 関連記事
 

@@ -24,7 +24,7 @@ var o = new Object();
 o.toString(); // returns [object Object]
 ```
 
-> **참고:** 자바스크립트 1.8.5부터 {{jsxref("null")}}의 `toString()`을 호출하는 경우 `[object Null]`을 반환하며, {{jsxref("undefined")}}는 `[object Undefined]`를 반환합니다. 이는 ECMAScript 제 5판과 후속 정오표에 정의되어 있습니다. See [toString으로 객체 클래스 검사](#tostring으로_객체_클래스_검사).
+> **참고:** JavaScript 1.8.5부터 {{jsxref("null")}}의 `toString()`을 호출하는 경우 `[object Null]`을 반환하며, {{jsxref("undefined")}}는 `[object Undefined]`를 반환합니다. 이는 ECMAScript 제 5판과 후속 정오표에 정의되어 있습니다. See [toString으로 객체 클래스 검사](#tostring으로_객체_클래스_검사).
 
 ## 매개변수
 
@@ -95,7 +95,7 @@ Dog.prototype.toString = function dogToString() {
 };
 ```
 
-앞선 코드를 사용하면 문자열 컨텍스트에서 `theDog`가 사용될 때마다 자바스크립트는 자동으로 `dogToString()` 함수를 호출하여 다음 문자열을 반환합니다:
+앞선 코드를 사용하면 문자열 컨텍스트에서 `theDog`가 사용될 때마다 JavaScript는 자동으로 `dogToString()` 함수를 호출하여 다음 문자열을 반환합니다:
 
 ```js
 "Dog Gabby is a female chocolate Lab";

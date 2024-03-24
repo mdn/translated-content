@@ -99,7 +99,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/runtime
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.runtime")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

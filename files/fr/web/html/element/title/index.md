@@ -49,8 +49,6 @@ Les personnes utilisant des outils d'assistance peuvent utiliser le titre de la 
 
 Mettre à jour la valeur de `title` afin de refléter un changement d'état important (un problème de validation d'un formulaire par exemple) peut également s'avérer utile :
 
-#### Exemple
-
 ```html
 <title>
   2 erreurs sur votre commande - Restaurant chinois Maison bleue - Commande en

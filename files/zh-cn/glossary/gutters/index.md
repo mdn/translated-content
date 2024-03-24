@@ -57,7 +57,7 @@ slug: Glossary/Gutters
 
 能够导致轨道被间隔开来的，除了网格间距属性，还有 margins，padding 或者使用[盒模型对齐](/zh-CN/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)中的空间分布属性。这些方法都会导致可见间距的产生，因此网格间距属性不等价于”间距大小“，除非你没有使用这些能够产生间距的方法。
 
-## 了解更多
+## 参见
 
 ### 属性参考
 

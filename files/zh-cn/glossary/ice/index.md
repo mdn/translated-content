@@ -14,14 +14,9 @@ slug: Glossary/ICE
 3. 直接的 TCP 连接，通过 HTTPS 端口
 4. 间接的连接通过中继器／{{glossary("TURN")}}服务器 (如果一个直接连接失败了，比如当一个主机端位于防火墙之后阻止了 NAT 穿越)
 
-## 学习更多
-
-### 通用知识
+## 参见
 
 - [WebRTC](/zh-CN/docs/Web/API/WebRTC_API), 重要的使用 ICE 的网络相关协议
 - [WebRTC 协议](/zh-CN/docs/Web/API/WebRTC_API/Protocols)
-
-### 技术参考
-
-- {{rfc("5245")}}, ICE 的 IETF 详细说明书
-- {{domxref("RTCIceCandidate")}}, ICE candidate 的展现接口
+- {{rfc("5245")}}，ICE 的 IETF 详细说明书
+- {{domxref("RTCIceCandidate")}}，ICE candidate 的展现接口

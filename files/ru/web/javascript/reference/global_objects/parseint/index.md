@@ -148,7 +148,7 @@ console.log(filterInt("1.61803398875")); // NaN
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -55,12 +55,9 @@ class Square extends Polygon {
 
 ## Спецификации
 
-| Спецификация                                                           | Статус               | Комментарий         |
-| ---------------------------------------------------------------------- | -------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-class-definitions', 'Class definitions')}}     | {{Spec2('ES6')}}     | Initial definition. |
-| {{SpecName('ESDraft', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

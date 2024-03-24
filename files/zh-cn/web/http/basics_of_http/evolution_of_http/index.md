@@ -187,12 +187,12 @@ HTTP/2 在 HTTP/1.1 有几处基本的不同：
 随着 HTTP/2.的发布，就像先前的 HTTP/1.x 一样，HTTP 没有停止进化，HTTP 的扩展性依然被用来添加新的功能。特别的，我们能列举出 2016 年里 HTTP 的新扩展：
 
 - 对 Alt-Svc 的支持允许了给定资源的位置和资源鉴定，允许了更智能的 CDN 缓冲机制。
-- [客户端提示（client hint）](/zh-CN/docs/Web/HTTP/Client_hints) 的引入允许浏览器或者客户端来主动交流它的需求，或者是硬件约束的信息给服务端。
-- 在 Cookie 头中引入安全相关的的前缀，现在帮助保证一个安全的 Cookie 没被更改过。
+- [客户端提示（client hint）](/zh-CN/docs/Web/HTTP/Client_hints)的引入允许浏览器或者客户端来主动交流它的需求，或者是硬件约束的信息给服务端。
+- 在 Cookie 标头中引入安全相关的前缀，现在帮助保证一个安全的 Cookie 没被更改过。
 
 ## HTTP/3——基于 QUIC 的 HTTP
 
-HTTP 的下一个主要版本，HTTP/3 有这与 HTTP 早期版本的相同语义，但在传输层部分使用 {{Glossary("QUIC")}} 而不是 {{Glossary("TCP")}}。到 2022 年 10 月，[26% 的网站正在使用 HTTP/3](https://w3techs.com/technologies/details/ce-http3)。
+HTTP 的下一个主要版本，HTTP/3 有着与 HTTP 早期版本的相同语义，但在传输层部分使用 {{Glossary("QUIC")}} 而不是 {{Glossary("TCP")}}。到 2022 年 10 月，[26% 的网站正在使用 HTTP/3](https://w3techs.com/technologies/details/ce-http3)。
 
 QUIC 旨在为 HTTP 连接设计更低的延迟。类似于 HTTP/2，它是一个多路复用协议，但是 HTTP/2 通过单个 TCP 连接运行，所以在 TCP 层处理的数据包丢失检测和重传可以阻止所有流。QUIC 通过 {{Glossary("UDP")}} 运行多个流，并为每个流独立实现数据包丢失检测和重传，因此如果发生错误，只有该数据包中包含数据的流才会被阻止。
 

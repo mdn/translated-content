@@ -84,7 +84,7 @@ button.addEventListener(
 
 만약 여러분이 오디오를 켜고 끄는 버튼을 가지고 있다면, ARIA [`role="switch"`](/ko/docs/Web/Accessibility/ARIA/Roles/Switch_role) 특성을 그것에 사용하는 것은 보조 기술에 그 버튼의 정확한 목적이 무엇인지에 대한 신호를 보내고, 그럼으로써 앱을 더욱 접근 가능하게 만들기 위한 좋은 옵션입니다. [여기 어떻게 이것을 사용하는지에 대한 데모](https://codepen.io/Wilto/pen/ZoGoQm?editors=1100)가 있습니다.
 
-여러분은 Web Audio API 내에서 많은 변화하는 값들을 가지고 작업하고 유저에게 이것들에 대한 제어를 제공하기를 원할 것이므로, [`range input`](/ko/docs/Web/HTML/Element/input/range)은 종종 사용할 제어의 좋은 선택입니다. 이것은 여러분이 최소와 최대값 뿐만 아니라 [`step`](/ko/docs/Web/HTML/Element/input#attr-step) 특성으로 증가량 또한 설정할 수 있으므로 좋은 옵션입니다.
+여러분은 Web Audio API 내에서 많은 변화하는 값들을 가지고 작업하고 유저에게 이것들에 대한 제어를 제공하기를 원할 것이므로, [`range input`](/ko/docs/Web/HTML/Element/input/range)은 종종 사용할 제어의 좋은 선택입니다. 이것은 여러분이 최소와 최대값 뿐만 아니라 [`step`](/ko/docs/Web/HTML/Element/input#step) 특성으로 증가량 또한 설정할 수 있으므로 좋은 옵션입니다.
 
 ## AudioParam 값 설정하기
 

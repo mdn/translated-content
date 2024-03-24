@@ -39,6 +39,6 @@ slug: Web/MathML
 - [HTML](/ru/docs/Web/HTML)
 - [SVG](/ru/docs/Web/SVG)
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
-{{Compat("mathml.elements.math", 0)}}
+{{Compat}}

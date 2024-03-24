@@ -59,5 +59,4 @@ navigator.getVRDisplays().then(function (displays) {
 
 ## 같이 보기
 
-- [WebVR API homepage](/ko/docs/Web/API/WebVR_API)
-- [MozVr.com](http://mozvr.com/) — demos, downloads, and other resources from the Mozilla VR team.
+- [WebVR API](/ko/docs/Web/API/WebVR_API)

@@ -68,11 +68,9 @@ div {
 
 ## Specification
 
-| Specification                                                                             | Status                              | Comment            |
-| ----------------------------------------------------------------------------------------- | ----------------------------------- | ------------------ |
-| {{SpecName("CSS Logical Properties", "#propdef-margin-inline-end", "margin-inline-end")}} | {{Spec2("CSS Logical Properties")}} | Initial definition |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

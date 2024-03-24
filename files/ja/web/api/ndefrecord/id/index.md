@@ -1,9 +1,12 @@
 ---
-title: NDEFRecord.id
+title: "NDEFRecord: id プロパティ"
+short-title: id
 slug: Web/API/NDEFRecord/id
+l10n:
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
+{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef("Web NFC API")}}
 
 **`id`** は {{DOMxRef("NDEFRecord")}} インターフェイスのプロパティで、このレコードを識別するのに使用される絶対または相対 URL をレコード識別子として返します。
 
@@ -11,13 +14,13 @@ slug: Web/API/NDEFRecord/id
 
 ## 構文
 
-```js
-NDEFRecord.id;
+```js-nolint
+NDEFRecord.id
 ```
 
 ### 値
 
-{{DOMxRef("USVString")}} です。
+文字列です。
 
 ## 仕様書
 

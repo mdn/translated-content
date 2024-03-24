@@ -7,12 +7,12 @@ slug: Web/API/XMLHttpRequest/XMLHttpRequest
 
 The **`XMLHttpRequest()`** 构造器初始化一个新的 {{domxref("XMLHttpRequest")}} 对象。
 
-关于 `XMLHttpRequest` 的具体用法，请参考[使用 XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)。
+关于 `XMLHttpRequest` 的具体用法，请参考[使用 XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)。
 
 ## 语法
 
-```plain
-const request = new XMLHttpRequest();
+```js-nolint
+new XMLHttpRequest()
 ```
 
 ### 参数
@@ -46,5 +46,5 @@ const request = new XMLHttpRequest(paramsDictionary);
 
 ## 参见
 
-- [使用 XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-- [XMLHttpRequest 中的 HTML](/zh-CN/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+- [使用 XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [XMLHttpRequest 中的 HTML](/zh-CN/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)

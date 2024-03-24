@@ -1,11 +1,14 @@
 ---
 title: "Navigator: mediaCapabilities プロパティ"
+short-title: mediaCapabilities
 slug: Web/API/Navigator/mediaCapabilities
 l10n:
-  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-**`Navigator.mediaCapabilities`** プロパティは読み取り専用で、 [Media Capabilities API](/ja/docs/Web/API/Media_Capabilities_API) で定義されています。
+{{APIRef("HTML DOM")}}
+
+**`Navigator.mediaCapabilities`** プロパティは読み取り専用で、[メディア能力 API](/ja/docs/Web/API/Media_Capabilities_API) で定義されています。
 指定された形式のエンコードとデコードおよび出力能力についての情報が取得できる {{domxref("MediaCapabilities")}} オブジェクトを返します。
 
 ## 値
@@ -38,13 +41,11 @@ navigator.mediaCapabilities
 
 {{Specifications}}
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
-{{Compat()}}
+{{Compat}}
 
 ## 関連情報
 
-- [Media Capabilities API](/ja/docs/Web/API/Media_Capabilities_API)
+- [メディア能力 API](/ja/docs/Web/API/Media_Capabilities_API)
 - {{domxref("Navigator")}}
-
-{{APIRef("HTML DOM")}}

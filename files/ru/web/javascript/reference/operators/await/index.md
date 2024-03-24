@@ -80,7 +80,7 @@ var response = await promisedFunction().catch((err) => {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -16,12 +16,7 @@ slug: Glossary/Percent-encoding
 
 根据上下文，空白符 `' '` 将会转换为 `'+'` （必须在 HTTP 的 POST 方法中使定义 `application/x-www-form-urlencoded` 传输方式），或者将会转换为 `'%20'` 的 URL。
 
-## 学习更多
-
-### 基本知识
+## 参见
 
 - 维基百科中 [percent-encoding](https://en.wikipedia.org/wiki/Percent-encoding) 的相关定义。
-
-### 技术规范
-
 - {{RFC(3986)}}, 第 2.1 节，其中定义了这种编码方式。

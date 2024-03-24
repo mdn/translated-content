@@ -29,4 +29,4 @@ if (screen.pixelDepth < 8) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.screen")}}
+{{Compat}}

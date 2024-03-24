@@ -1,8 +1,9 @@
 ---
-title: ReadableStream.cancel()
+title: "ReadableStream: cancel() メソッド"
+short-title: cancel()
 slug: Web/API/ReadableStream/cancel
 l10n:
-  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("Streams")}}
@@ -61,7 +62,7 @@ fetch(url)
 
     return reader.read().then(function process(result) {
       if (result.done) {
-        console.log("一致が見つかりませんでした");
+        console.log("一致するものが見つかりませんでした");
         return;
       }
 
@@ -96,7 +97,7 @@ fetch(url)
         console.log("一致が見つかりましたが、さらにコンテキストが必要です…");
       }
 
-      // 読み続けます
+      // 読み続ける
       return reader.read().then(process);
     });
   })
@@ -115,3 +116,8 @@ fetch(url)
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} コンストラクター
+- [読み取り可能なストリームの使用](/ja/docs/Web/API/Streams_API/Using_readable_streams)

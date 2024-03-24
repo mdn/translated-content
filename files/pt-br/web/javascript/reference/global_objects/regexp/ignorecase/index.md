@@ -27,13 +27,11 @@ console.log(regex.ignoreCase); // true
 
 ## Especificações
 
-| Especificação                                                                                  |
-| ---------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-get-regexp.prototype.ignorecase', 'RegExp.prototype.ignoreCase')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.RegExp.ignoreCase")}}
+{{Compat}}
 
 ## See also
 

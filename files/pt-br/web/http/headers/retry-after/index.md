@@ -56,7 +56,7 @@ Retry-After: 120
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Retry-After")}}
+{{Compat}}
 
 ## Veja também
 

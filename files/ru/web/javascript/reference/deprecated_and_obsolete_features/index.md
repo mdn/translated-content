@@ -80,10 +80,10 @@ The following are now properties of `RegExp` instances, no longer of the `RegExp
 - [Proxy.create](/ru/docs/Archive/Web/Old_Proxy_API) and [Proxy.createFunction](/ru/docs/Archive/Web/Old_Proxy_API) are deprecated. Use {{jsxref("Proxy")}} instead.
 - The following traps are obsolete:
 
-  - `hasOwn` ({{bug(980565)}}, Firefox 33).
-  - `getEnumerablePropertyKeys` ({{bug(783829)}}, Firefox 37)
-  - `getOwnPropertyNames` ({{bug(1007334)}}, Firefox 33)
-  - `keys` ({{bug(1007334)}}, Firefox 33)
+  - `hasOwn` ([Firefox bug 980565](https://bugzil.la/980565), Firefox 33).
+  - `getEnumerablePropertyKeys` ([Firefox bug 783829](https://bugzil.la/783829), Firefox 37)
+  - `getOwnPropertyNames` ([Firefox bug 1007334](https://bugzil.la/1007334), Firefox 33)
+  - `keys` ([Firefox bug 1007334](https://bugzil.la/1007334), Firefox 33)
 
 ### Escape sequences
 

@@ -86,11 +86,11 @@ slug: Web/HTML/Element/meta
 
 > **참고:** [`name`](/ko/docs/Web/HTML/Element/meta#name) 특성은 `<meta>` 요소에 대해 특정한 의미를 가집니다. 하나의 `<meta>` 요소에서, [`itemprop`](/ko/docs/Web/HTML/Element/meta#itemprop) 특성을 [`name`](/ko/docs/Web/HTML/Element/meta#name), [`http-equiv`](/ko/docs/Web/HTML/Element/meta#http-equiv) 또는 [`charset`](/ko/docs/Web/HTML/Element/meta#charset) 특성과 함께 설정할 수 없습니다.
 
-- {{htmlattrdef("charset")}}
+- `charset`
   - : 페이지의 문자 인코딩을 선언합니다. 이 특성이 존재할 경우, 그 값은 반드시 문자열 "`utf-8`"의 대소문자 구분 없는 {{glossary("ASCII")}} 표현이어야 합니다.
-- {{htmlattrdef("content")}}
+- `content`
   - : [`http-equiv`](/ko/docs/Web/HTML/Element/meta#http-equiv) 또는 [`name`](/ko/docs/Web/HTML/Element/meta#name) 특성의 값을 담습니다.
-- {{htmlattrdef("http-equiv")}}
+- `http-equiv`
 
   - : 프래그마 지시문을 정의합니다. 특성의 이름(`http-equiv(alent)`)에서 알 수 있듯이, 가능한 값은 특정 HTTP 헤더입니다.
 
@@ -125,7 +125,7 @@ slug: Web/HTML/Element/meta
       > - [Understanding Success Criterion 2.2.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-postponed.html)
       > - [Understanding Success Criterion 3.2.5 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-no-extreme-changes-context.html)
 
-- {{htmlattrdef("name")}}
+- `name`
 
   - : `name`과 `content` 특성을 함께 사용하면 문서의 메타데이터를 이름-값 쌍으로 제공할 수 있습니다. `name`은 이름, `content`는 값을 담당합니다.
 

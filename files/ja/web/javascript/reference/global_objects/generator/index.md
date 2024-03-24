@@ -7,6 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Generator
 
 **`Generator`** オブジェクトは{{JSxRef("Statements/function*", "ジェネレーター関数", "", 1)}}によって返され、[反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)と[イテレータープロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#イテレータープロトコル)の両方に準拠しています。
 
+{{EmbedInteractiveExample("pages/js/expressions-functionasteriskexpression.html", "taller")}}
+
 ## コンストラクター
 
 このオブジェクトを直接インスタンス化することはできません。代わりに、[ジェネレーター関数](/ja/docs/Web/JavaScript/Reference/Statements/function*)から `Generator` のインスタンスを返すことができます。
@@ -57,7 +59,7 @@ console.log(generator.next().value); // 2
 
 ## ブラウザー実装状況
 
-{{Compat("javascript.builtins.Generator")}}
+{{Compat}}
 
 ## 関連情報
 

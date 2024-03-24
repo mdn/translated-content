@@ -67,7 +67,7 @@ Object.getOwnPropertyDescriptor("foo", 0);
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Reflect.getOwnPropertyDescriptor")}}
+{{Compat}}
 
 ## 関連情報
 

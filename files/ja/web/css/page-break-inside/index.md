@@ -21,6 +21,8 @@ page-break-inside: revert;
 page-break-inside: unset;
 ```
 
+{{EmbedInteractiveExample("pages/css/page-break-inside.html")}}
+
 ## 構文
 
 ### 値

@@ -5,11 +5,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/proxy
 
 {{AddonSidebar}}
 
-> **Attention :**
->
-> Vous ne devez pas utiliser la fonction {{WebExtAPIRef("proxy.register()")}} ou la fonction {{WebExtAPIRef("proxy.unregister()")}} pour enregistrer et supprimer le fichier [Proxy Auto-Configuration (PAC)](/fr/Add-ons/WebExtensions/API/proxy/register#PAC_file_specification). Cette API était dépréciée dans Firefox 68 et sera supprimée de Firefox 71.
-
-Utilisez l'API proxy pour les requêtes Web proxy. Vous pouvez utiliser l'écouteur d'événement {{WebExtAPIRef("proxy.onRequest")}}} pour intercepter les requêtes web, et retourner un objet qui décrit si et comment les proxyer.
+Utilisez l'API proxy pour les requêtes Web proxy. Vous pouvez utiliser l'écouteur d'événement {{WebExtAPIRef("proxy.onRequest")}} pour intercepter les requêtes web, et retourner un objet qui décrit si et comment les proxyer.
 
 L'avantage de l'approche `proxy.onRequest` est que le code qui implémente votre stratégie de proxy s'exécute dans le script d'arrière-plan de votre extension pour accéder aux API WebExtension disponibles pour votre extension (y compris, par exemple, l'accès au [`stockage`](/fr/Add-ons/WebExtensions/API/storage) et au réseau de votre extension APIs comme [`dns`](/fr/Add-ons/WebExtensions/API/dns)).
 
@@ -26,19 +22,12 @@ Pour utiliser cette API, vous devez disposer de la [permission](/fr/Add-ons/WebE
 - {{WebExtAPIRef("proxy.RequestDetails")}}
   - : Contient des informations sur une requête Web que le navigateur est sur le point de faire.
 
-## Properties
+## Propriétés
 
 - {{WebExtAPIRef("proxy.settings")}}
   - : Obtenir et définir les paramètres de proxy.
 
-## Functions
-
-- {{WebExtAPIRef("proxy.register()")}}
-  - : Enregistre le script proxy donné.
-- {{WebExtAPIRef("proxy.unregister()")}}
-  - : Annule l'inscription du script proxy.
-
-## Events
+## Évènements
 
 - {{WebExtAPIRef("proxy.onError")}}
   - : Lancé lorsque le système rencontre une erreur lors de l'exécution du script PAC ou de l'écouteur `onRequest`.

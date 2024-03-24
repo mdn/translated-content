@@ -59,9 +59,9 @@ block content
 
 ![Author List Page - Express Local Library site](locallibary_express_author_list.png)
 
-> **备注：** 作者生命日期的外观是丑陋的！您可以使用我们用于`BookInstance` 列表的[相同方法](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data#date_formatting)（将生命周期的虚拟属性，添加到 `Author` 模型），来改进此方法。
+> **备注：** 作者生命日期的外观是丑陋的！你可以使用我们用于`BookInstance` 列表的[相同方法](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data#date_formatting)（将生命周期的虚拟属性，添加到 `Author` 模型），来改进此方法。
 >
-> 但是，这次缺少日期，除非严格模式生效，否则将忽略对不存在的属性的引用。`moment()`返回当前时间，并且您不希望将缺少的日期格式化为就像今天一样。
+> 但是，这次缺少日期，除非严格模式生效，否则将忽略对不存在的属性的引用。`moment()`返回当前时间，并且你不希望将缺少的日期格式化为就像今天一样。
 >
 > 解决此问题的一种方法，是定义返回格式化日期的函数内容，以便返回空字符串，除非日期实际存在。例如：
 >
@@ -75,7 +75,7 @@ block content
 
 种类列表控制器功能，需要获取所有种类实例的列表，然后将这些实例传递给模板进行渲染。
 
-1. 您需要在 **/controllers/genreController.js** 中编辑`genre_list()`。
+1. 你需要在 **/controllers/genreController.js** 中编辑`genre_list()`。
 2. 实现方式几乎与`author_list()`控制器完全相同。
 
    - 按名称以上升顺序，对结果进行排序。

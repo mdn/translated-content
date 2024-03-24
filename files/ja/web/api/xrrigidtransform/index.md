@@ -58,4 +58,4 @@ xrSession.requestReferenceSpace(refSpaceType)
 
 ## ブラウザーの互換性
 
-{{Compat("api.XRRigidTransform")}}
+{{Compat}}

@@ -39,7 +39,7 @@ escape("@*_+-./"); // "@*_+-./"
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

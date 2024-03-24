@@ -3,7 +3,7 @@ title: webNavigation.onCreatedNavigationTarget
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onCreatedNavigationTarget
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Lancé lorsqu'une nouvelle fenêtre ou un nouvel onglet dans une fenêtre existante est créé pour héberger la cible d'une navigation. Par exemple, cet événement est envoyé lorsque :
 

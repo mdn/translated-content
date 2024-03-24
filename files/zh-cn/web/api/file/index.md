@@ -32,7 +32,7 @@ slug: Web/API/File
   - : 返回文件的大小。
 - {{domxref("File.webkitRelativePath")}} {{readonlyinline}} {{non-standard_inline}}
   - : 返回 {{domxref("File")}} 相关的 path 或 URL。
-- {{domxref("File.type")}} {{readonlyinline}}
+- {{domxref("Blob.type")}} {{readonlyinline}}
   - : 返回文件的 [多用途互联网邮件扩展类型（MIME Type）](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types)
 
 ## 方法

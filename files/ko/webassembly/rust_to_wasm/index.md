@@ -311,11 +311,11 @@ npm 계정명을 한번 더 입력해야 합니다.
 파일들을 모두 만들었으니, 한번 보도록 합시다.
 
 ```bash
-    npm install
-    npm run serve
+npm install
+npm run serve
 ```
 
-이것은 간단한 웹 서버를 시작합니다. [http://localhost:8080](http://localhost:8080/)을 열면 화면에 `Hello, WebAssembly!` 라고 쓰여진 alert box가 나타납니다. 우리는 성공적으로 JavaScript로부터 Rust를, Rust로부터 JavaScript를 호출하였습니다.
+이것은 간단한 웹 서버를 시작합니다. `http://localhost:8080` 을 열면 화면에 `Hello, WebAssembly!` 라고 쓰여진 alert box가 나타납니다. 우리는 성공적으로 JavaScript로부터 Rust를, Rust로부터 JavaScript를 호출하였습니다.
 
 ## 결론
 

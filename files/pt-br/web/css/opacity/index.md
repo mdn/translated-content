@@ -113,14 +113,11 @@ img.opacity:hover {
 
 ## Especificações
 
-| Especificação                                                  | Status                        | Comentário                    |
-| -------------------------------------------------------------- | ----------------------------- | ----------------------------- |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'opacity')}} | {{Spec2('CSS3 Transitions')}} | Define opacity como animável. |
-| {{SpecName('CSS3 Colors', '#opacity', 'opacity')}}             | {{Spec2('CSS3 Colors')}}      | Definição inicial.            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.opacity")}}
+{{Compat}}
 
 ## Veja também
 

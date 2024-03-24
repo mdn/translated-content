@@ -3,7 +3,7 @@ title: column-rule-color
 slug: Web/CSS/column-rule-color
 ---
 
-{{CSSRef("CSS Multi-columns")}}
+{{CSSRef}}
 
 CSS 特性 `column-rule-color` 让你可以设置在多列布局中被画在两列之间的规则（线条）的颜色。
 

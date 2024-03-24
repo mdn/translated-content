@@ -11,16 +11,8 @@ slug: Glossary/URL
 
 URL 也可用于文件传输（{{Glossary("FTP")}}） ，电子邮件（{{Glossary("SMTP")}}）和其他应用。
 
-## 了解更多
+## 参见
 
-### 基本知识
-
+- [理解 URL 及其结构](/zh-CN/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
+- URL 的语法，在 [URL 动态标准](https://url.spec.whatwg.org/)中定义。
 - 在维基百科的 [URL](https://zh.wikipedia.org/wiki/URL)
-
-### 了解
-
-- [什么是 URL？](/zh-CN/docs/Learn/Common_questions/What_is_a_URL)
-
-### 规范
-
-- URL 的语法，在[URL Living Standard](https://url.spec.whatwg.org/)中定义。

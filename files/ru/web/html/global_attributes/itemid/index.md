@@ -66,7 +66,7 @@ slug: Web/HTML/Global_attributes/itemid
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

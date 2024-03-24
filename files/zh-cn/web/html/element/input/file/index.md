@@ -17,7 +17,7 @@ slug: Web/HTML/Element/input/file
   </tr>
   <tr>
    <td><strong>事件</strong></td>
-   <td>{{domxref("HTMLElement/change_event", "change")}} 和 {{domxref("HTMLElement/input_event", "input")}}</td>
+   <td>{{domxref("HTMLElement/change_event", "change")}} 和 {{domxref("Element/input_event", "input")}}</td>
   </tr>
   <tr>
    <td><strong>支持的公共属性</strong></td>
@@ -162,7 +162,7 @@ div {
 
 ### 限制可接受的文件类型
 
-通常，你不希望用户能够选择任意类型的文件；相反，你通常希望它们选择特定类型的文件。例如，如果你的文件输入让用户上传个人资料图片，您可能希望他们选择 Web 兼容的图像格式，如 {{Glossary("JPEG")}} 或 {{Glossary("PNG")}}。
+通常，你不希望用户能够选择任意类型的文件；相反，你通常希望它们选择特定类型的文件。例如，如果你的文件输入让用户上传个人资料图片，你可能希望他们选择 Web 兼容的图像格式，如 {{Glossary("JPEG")}} 或 {{Glossary("PNG")}}。
 
 可以用 [`accept`](/zh-CN/docs/Web/HTML/Element/input/file#accept) 属性指定可接受的文件类型，它是一个以逗号间隔的文件扩展名和 MIME 类型列表。一些例子如下所示：
 

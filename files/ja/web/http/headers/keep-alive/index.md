@@ -69,7 +69,7 @@ Server: Apache
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Keep-Alive")}}
+{{Compat}}
 
 ## 関連情報
 

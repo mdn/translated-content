@@ -61,7 +61,7 @@ Reflect.setPrototypeOf(target, proto); // false
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Reflect")}}
 - {{jsxref("Object.setPrototypeOf()")}}

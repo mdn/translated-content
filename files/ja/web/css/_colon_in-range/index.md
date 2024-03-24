@@ -15,6 +15,8 @@ input:in-range {
 }
 ```
 
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-in-range.html", "tabbed-shorter")}}
+
 この擬似クラスは、入力欄の現在の値が許可された範囲内にあることをユーザーに視覚的に示すのに便利です。
 
 > **メモ:** この擬似クラスは範囲制限を持つ（または設定できる）要素にのみ適用されます。そのような制限がない場合は、要素は "in-range" にも "out-of-range" にもなりません。

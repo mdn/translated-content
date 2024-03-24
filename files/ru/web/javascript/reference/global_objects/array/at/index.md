@@ -95,7 +95,7 @@ console.log(Array.prototype.at.call(arrayLike, -1)); // "b"
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

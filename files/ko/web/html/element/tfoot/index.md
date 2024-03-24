@@ -70,7 +70,7 @@ slug: Web/HTML/Element/tfoot
 
 다음 특성은 더 이상 사용되지 않으므로 사용해서는 안 됩니다. 이 특성들은 기존 코드를 업데이트할 때 참조하는 용도와, 역사적인 흥미를 위해서만 작성되어 있습니다.
 
-- {{htmlattrdef("align")}} {{deprecated_inline}}
+- `align` {{deprecated_inline}}
 
   - : 아래에 나열된 속성들은 각 셀 컨텐츠의 수평 정렬 방법을 지정합니다. 가능한 값:
 
@@ -86,14 +86,14 @@ slug: Web/HTML/Element/tfoot
     > - `left`, `center`, `right` 또는 `justify` 값과 같은 효과를 내고 싶다면, CSS {{cssxref("text-align")}} 속성을 적용하세요.
     > - `char` 값과 같은 효과를 내고 싶다면, CSS3에서 [`char`](/ko/docs/Web/HTML/Element/tfoot#char)의 값을 {{cssxref("text-align")}} 속성의 {{unimplemented_inline}} 값으로 사용할 수 있습니다.
 
-- {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
+- `bgcolor` {{Deprecated_inline}}
   - : 표의 배경 색입니다. '`#`'이 앞에 붙는 [6자리의 16진수 RGB 코드](/ko/docs/Web/CSS/color_value#rgb_colors) 형식으로 작성합니다. 이미 정의되어 있는 [color keywords](/ko/docs/Web/CSS/color_value#color_keywords) 도 사용할 수 있습니다.
     비슷한 효과를 적용하고 싶다면 CSS {{cssxref("background-color")}} 속성을 사용합니다.
-- {{htmlattrdef("char")}} {{deprecated_inline}}
+- `char` {{deprecated_inline}}
   - : 이 특성은 열을 특정 문자에 대해 정렬하도록 지정합니다. 숫자 또는 통화 값을 정렬할 때에는 일반적으로 마침표(.)가 포함됩니다. 만약 [`align`](/ko/docs/Web/HTML/Element/tfoot#align) 이 `char`로 설정되어 있지 않으면, 이 특성은 무시됩니다.
-- {{htmlattrdef("charoff")}} {{deprecated_inline}}
+- `charoff` {{deprecated_inline}}
   - : 이 특성은 `char` 특성으로 지정된 정렬 문자에서 열 데이터를 오프셋할 문자의 수를 나타내는 데 사용됩니다.
-- {{htmlattrdef("valign")}} {{deprecated_inline}}
+- `valign` {{deprecated_inline}}
   - : 이 특성은 표 바닥글의 각 행 내에 있는 텍스트의 수직 정렬 방식을 지정합니다. 이 특성에 사용 가능한 값:
 - `baseline`, 텍스트를 가능한 한 셀의 하단에 가깝게, 하지만 텍스트의 [baseline](https://en.wikipedia.org/wiki/Baseline_%28typography%29) 에 맞춰 배치합니다. 만약 문자들의 크기가 모두 같다면, 이것은 `bottom`과 같은 효과를 가집니다.
 - `bottom`, 텍스트를 가능한 한 셀의 하단에 가깝게 배치합니다.

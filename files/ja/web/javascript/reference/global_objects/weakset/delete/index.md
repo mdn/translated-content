@@ -46,7 +46,7 @@ ws.has(window); // false を返します。 window はもう WeakSet の中に�
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.WeakSet.delete")}}
+{{Compat}}
 
 ## 関連情報
 

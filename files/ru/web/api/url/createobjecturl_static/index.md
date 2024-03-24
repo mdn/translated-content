@@ -34,7 +34,7 @@ objectURL = URL.createObjectURL(blob);
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

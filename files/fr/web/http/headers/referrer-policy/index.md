@@ -39,12 +39,8 @@ Referrer-Policy: unsafe-url
 
 - `no-referrer`
   - : L'en-tête {{HTTPHeader("Referer")}} sera entièrement omis. Aucune information sur le référent ne sera envoyée avec les requêtes.
-- `no-referrer-when-downgrade` (default)
-
-  - : C'est le comportement par défaut si aucune valeur n'est spécifiée ou quelle celle donnée est invalide. L'{{glossary("origin")}}, le {{glossary("path")}}, et la {{glossary("querystring")}} de l'URL sont envoyés comme référent quand le niveau de sécurité du protocole reste le même (HTTP vers HTTP, HTTPS vers HTTPS) ou s'améliore (HTTP vers HTTPS) mais ne sont pas envoyés quand si la destination est moins sécurisée (HTTPS vers HTTP).
-
-    > **Note :** Les navigateurs tentent d'adopter une valeur par défaut plus stricte, précisément `strict-origin-when-cross-origin` (voir <https://github.com/whatwg/fetch/pull/952>), envisagez d'utiliser cette valeur (ou une autre encore plus stricte) si possible si vous définissez la valeur de Referrer-Policy.
-
+- `no-referrer-when-downgrade`
+  - : [L'origine](/fr/docs/Glossary/Origin), le chemin et les paramètres de requête (<i lang="en">querystring</i>) présents dans l'URL sont envoyés comme référent quand le niveau de sécurité du protocole reste le même (HTTP vers HTTP, HTTPS vers HTTPS) ou s'améliore (HTTP vers HTTPS), mais ne sont pas envoyés si la destination est moins sécurisée que l'origine (HTTPS vers HTTP).
 - `origin`
   - : N'envoie que l'{{glossary("origin")}} du document comme référent.
     Par exemple, un document à l'adresse `https://example.com/page.html` enverra le référent `https://example.com/`.
@@ -54,8 +50,8 @@ Referrer-Policy: unsafe-url
   - : Un référent sera envoyé aux [page de même origine](/fr/docs/Web/Security/Same-origin_policy), mais des requêtes vers des adresses externes n'enverront aucune information sur le référent.
 - `strict-origin`
   - : N'envoie que l'origine du document comme référent quand le niveau de sécurité du protocole reste le même (HTTPS vers HTTPS) mais n'envoie rien si la destination est moins sécurisée (HTTPS vers HTTP).
-- `strict-origin-when-cross-origin`
-  - : Envoie l'origine, le chemin et les paramètres de requête pour les requêtes de même origine, n'envoie que l'origine quand le niveau de sécurité du protocole reste le même pour les requêtes vers des adresses externes (HTTPS vers HTTPS) et n'envoie rien si la destination est moins sécurisée (HTTPS vers HTTP).
+- `strict-origin-when-cross-origin` (_valeur par défaut_)
+  - : Envoie l'origine, le chemin et les paramètres de requête pour les requêtes de même origine. N'envoie que l'origine quand le niveau de sécurité du protocole reste le même pour les requêtes vers d'autres origines (HTTPS vers HTTPS) et n'envoie aucun en-tête [`Referer`](/fr/docs/Web/HTTP/Headers/Referer) si la destination est moins sécurisée (HTTPS vers HTTP).
 - `unsafe-url`
 
   - : Envoie l'origine, le chemin et les paramètres de requête pour toutes les requêtes sans tenir compte du niveau de sécurité.
@@ -76,7 +72,7 @@ Ou le définit pour des requêtes spécifiques avec l'attribut `referrerpolicy` 
 <a href="http://example.com" referrerpolicy="origin"></a>
 ```
 
-Autrement, une [relation de lien](/fr/docs/Web/HTML/Link_types) définie à `noreferrer` sur un élément `a`, `area`, ou `link` peut être défini :
+Autrement, une [relation de lien](/fr/docs/Web/HTML/Attributes/rel) définie à `noreferrer` sur un élément `a`, `area`, ou `link` peut être défini :
 
 ```html
 <a href="http://example.com" rel="noreferrer"></a>

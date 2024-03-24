@@ -52,7 +52,7 @@ Firefox 7 は 2011 年 9 月 27 日にリリースされました。このペー
 - `index` が範囲外の場合、{{ domxref("DOMTokenList.item") }} が `undefined` を返すようになりました。これまでは `null` を返していました。
 - `Node.getFeature` が削除されました。
 - `HTMLInsElement` インターフェースと `HTMLDelElement` インターフェースが削除されました。これは {{ HTMLElement("ins") }} と {{ HTMLElement("del") }} 要素が実際には {{ domxref("HTMLModElement") }} を使用していたためです。
-- 新しい [DOM4](http://www.w3.org/TR/dom/) 仕様にある {{ domxref("Attr") }} が {{ domxref("Node") }} を継承しない (DOM Core 1, 2, 3 まではしていた) という定義に準拠するため、{{ domxref("Attr") }} インターフェース上の {{ domxref("Node") }}} プロパティやメソッドについて、将来的にこれらを削除するといった意味の [警告を出す](/ja/docs/DOM/Attr#Deprecated_properties_and_methods) ようになりました。
+- 新しい [DOM4](http://www.w3.org/TR/dom/) 仕様にある {{ domxref("Attr") }} が {{ domxref("Node") }} を継承しない (DOM Core 1, 2, 3 まではしていた) という定義に準拠するため、{{ domxref("Attr") }} インターフェース上の {{ domxref("Node") }} プロパティやメソッドについて、将来的にこれらを削除するといった意味の [警告を出す](/ja/docs/DOM/Attr#Deprecated_properties_and_methods) ようになりました。
 - {{ domxref("Window") }} オブジェクトに {{ domxref("window.ondeviceorientation") }} プロパティと {{ domxref("window.ondevicemotion") }} プロパティのサポートを追加しました。
 - {{ domxref("window.resizeTo") }}、{{ domxref("window.resizeBy") }}、{{ domxref("window.moveTo") }}、{{ domxref("window.moveBy") }} はメインウィンドウに適用されなくなりました。
 
@@ -117,7 +117,7 @@ Firefox 7 は 2011 年 9 月 27 日にリリースされました。このペー
 ### インタフェースの変更
 
 - [`nsISocketTransport`](/ja/docs/XPCOM_Interface_Reference/nsISocketTransport) に新しい接続フラグ `DISABLE_IPV6` が追加されました。これは、利用可能な IPv6 アドレスがあってもそれを無視して、IPv4 アドレスのみに接続するようソケットを設定するものです。また、[`nsIDNSService`](/ja/docs/XPCOM_Interface_Reference/nsIDNSService) に新しい解決フラグ `RESOLVE_DISABLE_IPV6` が追加されました。これは、利用可能な IPv6 アドレスがあってもそれを無視して、IPv4 ホストのみを考慮してドメイン名解決を行うものです。これらの変更は、IPv4 と IPv6 の両方に対応している (その中でも特に IPv6 接続がうまくいかない) ホストへ接続する際の応答時間を短縮する [「幸せな目玉」戦略](http://tools.ietf.org/html/draft-wing-http-new-tech-00) を実装するために使われます。
-- [`inIDOMUtils`](/ja/docs/XPCOM_Interface_Reference/inIDOMUtils) に 2 つのメソッドが追加されました。あるノードの子ノード一覧を返す [`getChildrenForNode()`](/ja/docs/XPCOM_Interface_Reference/inIDOMUtils#getChildrenForNode%28%29) と、選択範囲内で使用されているフォントフェース一覧を返す [`getUsedFontFaces()`](/ja/docs/XPCOM_Interface_Reference/inIDOMUtils#getUsedFontFaces%28%29) です。
+- [`inIDOMUtils`](/ja/docs/XPCOM_Interface_Reference/inIDOMUtils) に 2 つのメソッドが追加されました。あるノードの子ノード一覧を返す [`getChildrenForNode()`](/ja/docs/XPCOM_Interface_Reference/inIDOMUtils#getChildrenForNode%28%29) と、選択範囲内で使用されているフォントフェイス一覧を返す [`getUsedFontFaces()`](/ja/docs/XPCOM_Interface_Reference/inIDOMUtils#getUsedFontFaces%28%29) です。
 - `nsIMarkupDocumentViewer_MOZILLA_2_0_BRANCH` インタフェースは [`nsIMarkupDocumentViewer`](/ja/docs/XPCOM_Interface_Reference/nsIMarkupDocumentViewer) インタフェースへ統合されました。
 - `nsIDOMWindow2` インタフェースは [`nsIDOMWindow`](/ja/docs/XPCOM_Interface_Reference/nsIDOMWindow) インタフェースへ統合されました。
 - `nsIDOMWindow_2_0_BRANCH` インタフェースは [`nsIDOMWindowInternal`](/ja/docs/XPCOM_Interface_Reference/nsIDOMWindowInternal) インタフェースへ統合されました。
@@ -133,9 +133,9 @@ Firefox 7 は 2011 年 9 月 27 日にリリースされました。このペー
 #### 新しいインタフェース
 
 - [`nsIDOMFontFace`](/ja/docs/XPCOM_Interface_Reference/nsIDOMFontFace)
-  - : ひとつのフォントフェースを表します。
+  - : ひとつのフォントフェイスを表します。
 - [`nsIDOMFontFaceList`](/ja/docs/XPCOM_Interface_Reference/nsIDOMFontFaceList)
-  - : [`nsIDOMFontFace`](/ja/docs/XPCOM_Interface_Reference/nsIDOMFontFace) で表されたフォントフェースの一覧を表します。
+  - : [`nsIDOMFontFace`](/ja/docs/XPCOM_Interface_Reference/nsIDOMFontFace) で表されたフォントフェイスの一覧を表します。
 
 #### 削除されたインタフェース
 

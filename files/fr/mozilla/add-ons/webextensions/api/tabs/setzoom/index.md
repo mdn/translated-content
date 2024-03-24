@@ -3,7 +3,7 @@ title: tabs.setZoom()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/setZoom
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Effectue un zoom sur l'onglet spécifié.
 

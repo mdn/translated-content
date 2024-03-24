@@ -31,7 +31,7 @@ delete(name)
 
 なし ({{jsxref("undefined")}})。
 
-## Example
+## 例
 
 空の `Headers` オブジェクトの作成は簡単です。
 

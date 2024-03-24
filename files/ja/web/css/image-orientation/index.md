@@ -18,6 +18,8 @@ image-orientation: revert-layer;
 image-orientation: unset;
 ```
 
+{{EmbedInteractiveExample("pages/css/image-orientation.html")}}
+
 ## 構文
 
 ### 値

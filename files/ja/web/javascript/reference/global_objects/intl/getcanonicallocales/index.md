@@ -42,7 +42,7 @@ Intl.getCanonicalLocales("EN_US");
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Intl.getCanonicalLocales")}}
+{{Compat}}
 
 ## 関連情報
 

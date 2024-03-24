@@ -14,6 +14,8 @@ input:disabled {
 }
 ```
 
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-disabled.html", "tabbed-standard")}}
+
 ## 構文
 
 ```

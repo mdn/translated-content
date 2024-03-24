@@ -75,9 +75,9 @@ form {
 
 ## ブラウザーの互換性
 
-{{Compat("css.properties.min-height")}}
+{{Compat}}
 
 ## 関連情報
 
-- [ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), {{cssxref("box-sizing")}}
+- [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{cssxref("box-sizing")}}
 - {{cssxref("height")}}, {{cssxref("max-height")}}

@@ -2,14 +2,14 @@
 title: TypedArray.prototype.length
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/length
 l10n:
-  sourceCommit: 194d3e00cb93a6e5ea44812548f4131cb17f0381
+  sourceCommit: c2445ce1dc3a0170e2fbfdbee10e18a7455c2282
 ---
 
 {{JSRef}}
 
-**`length`** アクセサープロパティは、型付き配列の長さを（要素数で）表します。
+**`length`** は {{jsxref("TypedArray")}} インスタンスのアクセサープロパティで、型付き配列の長さを（要素数で）返します。
 
-{{EmbedInteractiveExample("pages/js/typedarray-length.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/typedarray-length.html", "shorter")}}
 
 ## 解説
 
@@ -42,5 +42,5 @@ uint8.length; // 6 （構築された Uint8Array のオフセットによる）
 
 ## 関連情報
 
-- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("TypedArray")}}

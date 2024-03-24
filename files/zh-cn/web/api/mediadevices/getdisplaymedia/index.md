@@ -77,6 +77,6 @@ async function startCapture(displayMediaOptions) {
 
 - [Screen Capture API](/zh-CN/docs/Web/API/Screen_Capture_API)
 - [Using the Screen Capture API](/zh-CN/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
-- [Media Capture and Streams API](/zh-CN/docs/Web/API/Media_Streams_API)
+- [媒体捕捉与媒体流 API](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API)
 - [WebRTC API](/zh-CN/docs/Web/API/WebRTC_API)
 - {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}: Capturing media from a camera and/or microphone

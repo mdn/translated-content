@@ -67,7 +67,7 @@ if (typeof globalThis.setTimeout !== "function") {
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.globalThis")}}
+{{Compat}}
 
 ## 関連情報
 

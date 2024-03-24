@@ -86,7 +86,7 @@ Network\r\n
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Transfer-Encoding")}}
+{{Compat}}
 
 ## 関連情報
 

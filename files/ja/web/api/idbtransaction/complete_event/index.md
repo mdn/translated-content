@@ -130,7 +130,7 @@ DBOpenRequest.onsuccess = (event) => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.IDBTransaction.complete_event")}}
+{{Compat}}
 
 ## 関連情報
 

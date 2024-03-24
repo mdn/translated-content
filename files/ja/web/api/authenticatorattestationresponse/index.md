@@ -61,7 +61,7 @@ navigator.credentials.create({ publicKey })
 
 ## ブラウザーの互換性
 
-{{Compat("api.AuthenticatorAttestationResponse")}}
+{{Compat}}
 
 ## 関連情報
 

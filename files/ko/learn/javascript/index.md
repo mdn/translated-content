@@ -25,14 +25,14 @@ JavaScript 는 [HTML](/ko/docs/Learn/HTML) 이나 [CSS](/ko/docs/Learn/CSS) 와 
 
 JavaScript 의 기본적인 것들이 익숙해진 이후에, 여러분은 더 고급 주제들을 배울 준비가 되어 있어야 합니다. 예를 들면 다음과 같습니다.
 
-- JavaScript 심화, [자바스크립트 안내서](/ko/docs/Web/JavaScript/Guide)
+- JavaScript 심화, [JavaScript 안내서](/ko/docs/Web/JavaScript/Guide)
 - [웹 APIs 참조문서](/ko/docs/Web/API)
 
 ## 과정
 
 이 주제에는 다음 과정들이 제안된 순서대로 포함되어 있습니다.
 
-- [자바스크립트 첫걸음](/ko/docs/Learn/JavaScript/First_steps)
+- [JavaScript 첫걸음](/ko/docs/Learn/JavaScript/First_steps)
   - : JavaScript 과정에서, JavaScript를 이용해 첫번째 경험을 쌓기 이전에 "JavaScript 는 무엇인가요?", "어떻게 생겼나요?", 그리고 "그것으로 무엇을 할 수 있죠?" 와 같은 질문에 대답 할 수 있어야 합니다. 그 이후에, 변수, 문자열, 숫자 그리고 배열과 같은 JavaScript 의 기능에 대해 살펴봅시다.
 - [JavaScript 구성 요소](/ko/docs/Learn/JavaScript/Building_blocks)
   - : 이 과정에서는, 조건문, 반복문, 함수, 그리고 이벤트와 같이 일반적으로 쓰이며 괄호로 감싸여진 형태인 JavaScript 의 핵심적인 기본 기능들을 살펴볼 것입니다. 여러분은 이미 이것들에 대해 이미 보셨겟지만, 그저 지나쳤을 것이니, 우리는 이것에 대해 자세히 살펴볼 것입니다.

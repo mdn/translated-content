@@ -18,6 +18,8 @@ scroll-snap-type: initial;
 scroll-snap-type: unset;
 ```
 
+{{EmbedInteractiveExample("pages/css/scroll-snap-stop.html")}}
+
 ## 構文
 
 ### 値

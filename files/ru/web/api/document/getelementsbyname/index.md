@@ -49,7 +49,7 @@ The returned {{domxref("NodeList")}} Collection contains _all_ elements with the
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

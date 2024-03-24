@@ -37,6 +37,8 @@ break-after: revert;
 break-after: unset;
 ```
 
+{{EmbedInteractiveExample("pages/css/break-after.html")}}
+
 区切り位置になる可能性のある場所 (言い換えれば、要素の境界) は、3 つのプロパティに影響されます。前の要素の `break-after` の値、次の要素の {{cssxref("break-before")}} の値、包含要素の {{cssxref("break-inside")}} の値です。
 
 分割が行われるかどうかを判断するためには、以下の規則が適用されます。

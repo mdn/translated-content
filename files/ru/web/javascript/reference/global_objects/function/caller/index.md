@@ -3,7 +3,7 @@ title: Function.caller
 slug: Web/JavaScript/Reference/Global_Objects/Function/caller
 ---
 
-{{JSRef("Global_Objects", "Function")}} {{non-standard_header}}
+{{JSRef}} {{non-standard_header}}
 
 ## Сводка
 
@@ -86,4 +86,4 @@ function myFunc() {
 
 ## Смотрите также
 
-- Ошибка реализации в SpiderMonkey: {{bug(65683)}}
+- Ошибка реализации в SpiderMonkey: [Firefox bug 65683](https://bugzil.la/65683)

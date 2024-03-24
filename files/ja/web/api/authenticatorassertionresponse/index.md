@@ -55,7 +55,7 @@ navigator.credentials
 
 ## ブラウザーの互換性
 
-{{Compat("api.AuthenticatorAssertionResponse")}}
+{{Compat}}
 
 ## 関連情報
 

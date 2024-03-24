@@ -73,7 +73,7 @@ inputForm.onsubmit = function (event) {
 
 ## ブラウザーの実装状況
 
-{{Compat("api.Window.speechSynthesis")}}
+{{Compat}}
 
 ## 関連項目
 

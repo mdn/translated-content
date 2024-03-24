@@ -155,4 +155,4 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/background
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.manifest.background", 10)}}
+{{Compat}}

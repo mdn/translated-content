@@ -65,4 +65,4 @@ drawGLObject("magic-lamp", transform.matrix);
 
 ## ブラウザーの互換性
 
-{{Compat("api.XRRigidTransform.matrix")}}
+{{Compat}}

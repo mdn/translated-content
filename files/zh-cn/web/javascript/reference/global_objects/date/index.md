@@ -187,7 +187,7 @@ new Date(year, monthIndex [, day [, hours [, minutes [, seconds [, milliseconds]
 - {{jsxref("Date.prototype.toLocaleString()")}}
   - : 返回一个表述指定 {{jsxref("Date")}} 对象的字符串。该字符串格式因不同语言而不同。
 - {{jsxref("Date.prototype.toLocaleTimeString()")}}
-  - : 返回一个表述指定 {{jsxref("Date")}} 对象时间部分的的字符串。该字符串格式因不同语言而不同。
+  - : 返回一个表述指定 {{jsxref("Date")}} 对象时间部分的字符串。该字符串格式因不同语言而不同。
 - {{jsxref("Date.prototype.toString()")}}
   - : 返回一个字符串，表示该 {{jsxref("Date")}} 对象。覆盖了 {{jsxref("Object.prototype.toString()")}} 方法。
 - {{jsxref("Date.prototype.toTimeString()")}}

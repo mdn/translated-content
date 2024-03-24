@@ -33,7 +33,7 @@ if (frameEl) {
 
 ## ブラウザー互換性
 
-{{Compat("api.Window.frameElement")}}
+{{Compat}}
 
 ## 関連項目
 

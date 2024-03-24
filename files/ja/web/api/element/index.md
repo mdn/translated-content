@@ -2,7 +2,7 @@
 title: Element
 slug: Web/API/Element
 l10n:
-  sourceCommit: 930683b0618a36a5bb497cfaedced2f4de767889
+  sourceCommit: 56c76424a5edb45f6716ac4ee48861dac8e7ae38
 ---
 
 {{APIRef("DOM")}}
@@ -291,15 +291,11 @@ _`Element` は親である {{DOMxRef("Node")}}、およびその親である {{D
 - {{domxref("HTMLDialogElement/cancel_event", "cancel")}}
   - : ユーザーがブラウザーに、現在開いているモーダルダイアログを閉じたいと指示したときに {{HTMLElement("dialog")}} に発行されます。ブラウザーがこのイベントを発行させる可能性があるのは、例えばユーザーが <kbd>Esc</kbd> キーを押してモーダルダイアログを閉じた時です。
 - {{domxref("Element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} {{Experimental_Inline}}
-  - : {{cssxref("content-visibility", "content-visibility: auto")}} が設定されている要素が[ユーザーに関連する](/ja/docs/Web/CSS/CSS_Containment#relevant_to_the_user)、[コンテンツのスキップ](/ja/docs/Web/CSS/CSS_Containment#skips_its_contents)を開始または終了するときに、その要素を対象に発行されます。
-- {{domxref("Element/error_event", "error")}}
-  - : リソースの読み込みに失敗したか、利用できなかった場合に発行されます。例えば、スクリプトに実行エラーがあった場合や、画像が見つからなかった場合、無効であった場合などです。
+  - : {{cssxref("content-visibility", "content-visibility: auto")}} が設定されている要素が[ユーザーに関連する](/ja/docs/Web/CSS/CSS_containment#relevant_to_the_user)、[コンテンツのスキップ](/ja/docs/Web/CSS/CSS_containment#skips_its_contents)を開始または終了するときに、その要素を対象に発行されます。
 - {{domxref("Element/scroll_event", "scroll")}}
   - : 文書のビューまたは要素がスクロールしたときに発行されます。
 - {{domxref("Element/securitypolicyviolation_event","securitypolicyviolation")}}
   - : [コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/CSP)に違反したときに発生します。
-- {{domxref("Element/select_event", "select")}}
-  - : いくらかのテキストが選択されたときに発行されます。
 - {{domxref("Element/wheel_event","wheel")}}
   - : ユーザーがポインティングデバイス（普通はマウス）のホイールボタンを回転させたときに発行されます。
 

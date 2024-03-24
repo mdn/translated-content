@@ -69,7 +69,6 @@ Você pode encontrar uma série de exemplos nesses repositórios Github:
 
 - [webvr.info](https://webvr.info)- Informações atualizadas sobre WebVR, configuração do navegador e comunidade.
 - [webvr.rocks](https://iswebvrready.com)- Informações atualizadas sobre o suporte ao navegador WebVR (incluindo compilações experimentais).
-- [MozVr.com](http://mozvr.com/)- Demos, downloads, outros recursos da equipe de VR da Mozilla.
 - [A-Frame](https://aframe.io)- A web framework para a construção de experiências VR (com HTML), a partir da equipe Mozilla VR.
 - [Console Game on Web](http://dsmu.me/ConsoleGameOnWeb/)- Uma coleção de demonstrações interessantes conceito de jogo, alguns dos quais incluem WebVR.
 - [threejs-vr-boilerplate](https://github.com/MozVR/vr-web-examples/tree/master/threejs-vr-boilerplate)- Um modelo de iniciador muito útil para escrever aplicações WebVR.

@@ -1,33 +1,37 @@
 ---
-title: ReadableStreamDefaultReader.read()
+title: "ReadableStreamDefaultReader: read() メソッド"
+short-title: read()
 slug: Web/API/ReadableStreamDefaultReader/read
+l10n:
+  sourceCommit: d41c5446d4ef257280fae9b78e2298ced8954a95
 ---
 
 {{APIRef("Streams")}}
 
-{{domxref("ReadableStreamDefaultReader")}} インターフェイスの **`read()`** メソッドは、ストリームの内部キュー内の次のチャンクへのアクセスを提供する promise を返します。
+**`read()`** は {{domxref("ReadableStreamDefaultReader")}} インターフェイスのメソッドで、ストリームの内部キュー内の次のチャンクへのアクセスを提供するプロミスを返します。
 
 ## 構文
 
-```
-var promise = readableStreamDefaultReader.read();
+```js-nolint
+read()
 ```
 
-### パラメーター
+### 引数
 
 なし。
 
-### 戻り値
+### 返値
 
-{{jsxref("Promise")}}。ストリームの状態に応じて結果を充足/拒否します。 異なる可能性は次のとおりです。
+{{jsxref("Promise")}} です。ストリームの状態に応じて、結果にて履行または拒否されます。
+ありうる状況ものは次の通りです。
 
-- チャンクが使用可能な場合、`{ value: theChunk, done: false }` の形式のオブジェクトで promise が満たされます。
-- ストリームが閉じられると、`{ value: undefined, done: true }` という形式のオブジェクトで promise が満たされます。
-- ストリームがエラーになると、関連するエラーで promise が拒否されます。
+- チャンクが使用可能な場合、プロミスが `{ value: theChunk, done: false }` の形式のオブジェクトで履行されます。
+- ストリームが閉じられると、プロミスが `{ value: undefined, done: true }` という形式のオブジェクトで履行されます。
+- ストリームがエラーになると、プロミスが関連するエラーでプロミスが拒否されます。
 
 ### 例外
 
-- TypeError
+- {{jsxref("TypeError")}}
   - : ソースオブジェクトが `ReadableStreamDefaultReader` ではないか、ストリームに所有者がいません。
 
 ## 例
@@ -46,7 +50,7 @@ function fetchStream() {
   // read() は、値を受け取ったときに解決する promise を返します
   reader.read().then(function processText({ done, value }) {
     // 結果オブジェクトには2つのプロパティが含まれます
-    // done  - ストリームがすべてのデータを既に提供している場合は true
+    // done - ストリームがすべてのデータを既に提供している場合は true
     // value - 一部のデータ。 done が true の場合、常に undefined
     if (done) {
       console.log("Stream complete");
@@ -58,11 +62,7 @@ function fetchStream() {
     charsReceived += value.length;
     const chunk = value;
     let listItem = document.createElement("li");
-    listItem.textContent =
-      "Received " +
-      charsReceived +
-      " characters so far. Current chunk = " +
-      chunk;
+    listItem.textContent = `Received ${charsReceived} characters so far. Current chunk = ${chunk}`;
     list2.appendChild(listItem);
 
     result += chunk;
@@ -83,11 +83,10 @@ async function* makeTextFileLineIterator(fileURL) {
   let response = await fetch(fileURL);
   let reader = response.body.getReader();
   let { value: chunk, done: readerDone } = await reader.read();
-  chunk = chunk ? utf8Decoder.decode(chunk) : "";
+  chunk = chunk ? utf8Decoder.decode(chunk, { stream: true }) : "";
 
-  let re = /\n|\r|\r\n/gm;
+  let re = /\r\n|\n|\r/gm;
   let startIndex = 0;
-  let result;
 
   for (;;) {
     let result = re.exec(chunk);
@@ -97,7 +96,8 @@ async function* makeTextFileLineIterator(fileURL) {
       }
       let remainder = chunk.substr(startIndex);
       ({ value: chunk, done: readerDone } = await reader.read());
-      chunk = remainder + (chunk ? utf8Decoder.decode(chunk) : "");
+      chunk =
+        remainder + (chunk ? utf8Decoder.decode(chunk, { stream: true }) : "");
       startIndex = re.lastIndex = 0;
       continue;
     }
@@ -115,10 +115,15 @@ for await (let line of makeTextFileLineIterator(urlOfFile)) {
 }
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.ReadableStreamDefaultReader.read")}}
+{{Compat}}
+
+## 関連情報
+
+- {{domxref("ReadableStreamDefaultReader.ReadableStreamDefaultReader", "ReadableStreamDefaultReader()")}} コンストラクター
+- [読み取り可能なストリームの使用](/ja/docs/Web/API/Streams_API/Using_readable_streams)

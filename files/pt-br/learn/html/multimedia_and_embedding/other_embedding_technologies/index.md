@@ -235,17 +235,17 @@ Existem algumas sérias [preocupações de segurança](/pt-BR/docs/Learn/HTML/Mu
 
 Este exemplo inclui os fundamentos básicos necessários para usar um `<iframe>`:
 
-- [`allowfullscreen`](/pt-BR/docs/Web/HTML/Element/iframe#attr-allowfullscreen)
+- [`allowfullscreen`](/pt-BR/docs/Web/HTML/Element/iframe#allowfullscreen)
   - : Se definido, ele `<iframe>`poderá ser colocado no modo de tela cheia usando a [API de tela cheia](/pt-BR/docs/Web/API/Fullscreen_API) (um pouco além do escopo deste artigo).
-- [`frameborder`](/pt-BR/docs/Web/HTML/Element/iframe#attr-frameborder)
+- [`frameborder`](/pt-BR/docs/Web/HTML/Element/iframe#frameborder)
   - : Se definido como 1, isso indica ao navegador para desenhar uma borda entre esse quadro e outros quadros, que é o comportamento padrão. 0 remove a borda. Usar isso não é mais recomendado, pois o mesmo efeito pode ser melhor alcançado usando em seu [CSS](/pt-BR/docs/Glossary/CSS) .[`border`](/pt-BR/docs/Web/CSS/border)`: none;`
-- [`src`](/pt-BR/docs/Web/HTML/Element/iframe#attr-src)
+- [`src`](/pt-BR/docs/Web/HTML/Element/iframe#src)
   - : Este atributo, como [`<video>`](/pt-BR/docs/Web/HTML/Element/video)/ [`<img>`](/pt-BR/docs/Web/HTML/Element/img), contém um caminho apontando para o URL do documento a ser incorporado.
-- [`width`](/pt-BR/docs/Web/HTML/Element/iframe#attr-width) e [`height`](/pt-BR/docs/Web/HTML/Element/iframe#attr-height)
+- [`width`](/pt-BR/docs/Web/HTML/Element/iframe#width) e [`height`](/pt-BR/docs/Web/HTML/Element/iframe#height)
   - : Esses atributos especificam a largura e a altura que você deseja que o iframe seja.
 - Conteúdo alternativo
   - : Da mesma forma que outros elementos semelhantes [`<video>`](/pt-BR/docs/Web/HTML/Element/video), você pode incluir conteúdo de fallback entre as `<iframe></iframe>`tags de abertura e fechamento que aparecerão se o navegador não suportar `<iframe>`. Nesse caso, incluímos um link para a página. É improvável que você encontre qualquer navegador que não suporte `<iframe>`s atualmente.
-- [`sandbox`](/pt-BR/docs/Web/HTML/Element/iframe#attr-sandbox)
+- [`sandbox`](/pt-BR/docs/Web/HTML/Element/iframe#sandbox)
   - : Esse atributo, que funciona em navegadores um pouco mais modernos que o restante dos `<iframe>`recursos (por exemplo, IE 10 e superior), requer configurações de segurança mais elevadas; falaremos mais sobre isso na próxima seção.
 
 > **Nota:** Para melhorar a velocidade, é uma boa ideia definir o `src`atributo do iframe com JavaScript após o carregamento do conteúdo principal. Isso torna sua página utilizável mais cedo e diminui o tempo de carregamento da página oficial (uma importante métrica de [SEO](/pt-BR/docs/Glossary/SEO) ).

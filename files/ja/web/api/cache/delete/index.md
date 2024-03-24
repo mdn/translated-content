@@ -1,8 +1,9 @@
 ---
-title: Cache.delete()
+title: "Cache: delete() メソッド"
+short-title: delete()
 slug: Web/API/Cache/delete
 l10n:
-  sourceCommit: 418f9cf461de0c7845665c0c677ad0667740f52a
+  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
 {{APIRef("Service Workers API")}}

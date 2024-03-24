@@ -7,7 +7,7 @@ slug: Games/Tutorials/2D_breakout_game_Phaser/Player_paddle_and_controls
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Bounce_off_the_walls", "Games/Workflows/2D_Breakout_game_Phaser/Game_over")}}
 
-这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser) 16 的**第 7 步**。您可以在[Gamedev-Phaser-Content-Kit / demos / lesson07.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson07.html)完成本课程后找到源代码。
+这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser) 16 的**第 7 步**。你可以在[Gamedev-Phaser-Content-Kit / demos / lesson07.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson07.html)完成本课程后找到源代码。
 
 我们有球从墙上移动并弹跳，但它很快变得无聊 - 没有互动！我们需要一种介绍游戏的方法，所以在这篇文章中，我们将创建一个桨来移动并击中球。
 
@@ -96,7 +96,7 @@ function update() {
 paddle.x = game.input.x || game.world.width * 0.5;
 ```
 
-如果您还没有这样做，请重新加载`index.html`并尝试！
+如果你还没有这样做，请重新加载`index.html`并尝试！
 
 ## 定位球
 
@@ -117,7 +117,7 @@ ball.body.velocity.set(150, -150);
 
 ## 比较你的代码
 
-您可以在下面的现场演示中查看本课程的完成代码，并使用它来更好地了解它的工作原理：
+你可以在下面的现场演示中查看本课程的完成代码，并使用它来更好地了解它的工作原理：
 
 {{JSFiddleEmbed("https://jsfiddle.net/end3r/ogqza0ye/","","400")}}
 

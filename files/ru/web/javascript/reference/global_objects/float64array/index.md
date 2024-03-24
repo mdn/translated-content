@@ -84,8 +84,6 @@ All `Float64Array` objects inherit from {{jsxref("TypedArray.prototype", "%Typed
   - : Returns the last (greatest) index of an element within the array equal to the specified value, or -1 if none is found. See also {{jsxref("Array.prototype.lastIndexOf()")}}.
 - {{jsxref("TypedArray.map", "Float64Array.prototype.map()")}}
   - : Creates a new array with the results of calling a provided function on every element in this array. See also {{jsxref("Array.prototype.map()")}}.
-- {{jsxref("TypedArray.move", "Float64Array.prototype.move()")}} {{non-standard_inline}} {{unimplemented_inline}}
-  - : Former non-standard version of {{jsxref("TypedArray.copyWithin", "Float64Array.prototype.copyWithin()")}}.
 - {{jsxref("TypedArray.reduce", "Float64Array.prototype.reduce()")}}
   - : Apply a function against an accumulator and each value of the array (from left-to-right) as to reduce it to a single value. See also {{jsxref("Array.prototype.reduce()")}}.
 - {{jsxref("TypedArray.reduceRight", "Float64Array.prototype.reduceRight()")}}
@@ -146,13 +144,9 @@ var float64 = new Float64Array(iterable);
 
 ## Specifications
 
-| Specification                                                   | Status                   | Comment                                                                                                                          |
-| --------------------------------------------------------------- | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Typed Array')}}                                     | {{Spec2('Typed Array')}} | Superseded by ECMAScript 2015.                                                                                                   |
-| {{SpecName('ES2015', '#table-49', 'TypedArray constructors')}}  | {{Spec2('ES2015')}}      | Initial definition in an ECMA standard. Specified that `new` is required.                                                        |
-| {{SpecName('ESDraft', '#table-49', 'TypedArray constructors')}} | {{Spec2('ESDraft')}}     | ECMAScript 2017 changed the `Float64Array` constructor to use the `ToIndex` operation and allows constructors with no arguments. |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

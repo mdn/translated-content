@@ -26,7 +26,7 @@ slug: Web/API/WebSockets_API
 
 ## Совместимость с браузерами
 
-{{Compat("api.WebSocket")}}
+{{Compat}}
 
 ## Смотрите также
 

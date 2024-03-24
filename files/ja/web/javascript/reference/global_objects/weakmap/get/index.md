@@ -42,7 +42,7 @@ wm.get("baz"); // undefined を返す
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.WeakMap.get")}}
+{{Compat}}
 
 ## 関連情報
 

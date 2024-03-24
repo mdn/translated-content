@@ -26,7 +26,7 @@ let absolute = new URL(relative, window.location.href);
 
 ## Решение
 
-В Firefox 60 и далее, Mozilla сопоставляет относительный URL с глобальным, которой принадлежит используемой функции `fetch()` (смотри {{bug(1432272)}}). Таким образом в случае описанном выше, он разрешается в зависимости от расположения iframe:
+В Firefox 60 и далее, Mozilla сопоставляет относительный URL с глобальным, которой принадлежит используемой функции `fetch()` (смотри [Firefox bug 1432272](https://bugzil.la/1432272)). Таким образом в случае описанном выше, он разрешается в зависимости от расположения iframe:
 
 ```js
 let absolute = new URL(relative, frame.contentWindow.location.href);

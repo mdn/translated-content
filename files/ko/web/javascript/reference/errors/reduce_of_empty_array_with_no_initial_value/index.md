@@ -17,7 +17,7 @@ slug: Web/JavaScript/Reference/Errors/Reduce_of_empty_array_with_no_initial_valu
 
 ## What went wrong?
 
-자바스크립트에는 reduce 함수가 여럿 있습니다.
+JavaScript에는 reduce 함수가 여럿 있습니다.
 
 - {{jsxref("Array.prototype.reduce()")}}, {{jsxref("Array.prototype.reduceRight()")}} and
 - {{jsxref("TypedArray.prototype.reduce()")}}, {{jsxref("TypedArray.prototype.reduceRight()")}}).

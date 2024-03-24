@@ -1,11 +1,12 @@
 ---
-title: XMLHttpRequest.withCredentials
+title: "XMLHttpRequest: withCredentials プロパティ"
+short-title: withCredentials
 slug: Web/API/XMLHttpRequest/withCredentials
 l10n:
-  sourceCommit: b5b33acd44e7bb9c7be2efc75ba9a04b8bf8b2b2
+  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{APIRef("XMLHttpRequest API")}}
 
 **`XMLHttpRequest.withCredentials`** プロパティは論理値で、サイト間の `Access-Control` リクエストが Cookie、認証ヘッダー、 TLS クライアント証明書などの資格情報を使用して行うべきかどうかを示します。 `withCredentials` を設定しても、同じオリジンへのリクエストには影響しません。
 

@@ -329,4 +329,4 @@ otherCheckbox.addEventListener("change", () => {
 
 - Les sélecteurs CSS qui permettent de mettre en forme les cases à cocher en fonction de leur état actuel&nbsp;: [`:checked`](/fr/docs/Web/CSS/:checked), [`:indeterminate`](/fr/docs/Web/CSS/:indeterminate)
 - L'interface du DOM qui représente cet élément&nbsp;: [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement)
-- [Tableau de compatibilité des propriétés CSS pour les contrôles de formulaires](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [Tableau de compatibilité des propriétés CSS pour les contrôles de formulaires](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

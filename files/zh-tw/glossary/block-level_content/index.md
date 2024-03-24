@@ -5,7 +5,7 @@ slug: Glossary/Block-level_content
 
 {{GlossarySidebar}}
 
-HTML（超文字標記語言, **Hypertext Markup Language**）元素通常為『區塊級』元素或是[『行內級』元素](/zh-TW/docs/HTML/Inline_elements)。一個區塊級元素會藉由建立『區塊』的動作，完全佔滿其父元素（容器）的空間。本文將為您說明其意涵.
+HTML（超文字標記語言, **Hypertext Markup Language**）元素通常為『區塊級』元素或是[『行內級』元素](/zh-TW/docs/HTML/Inline_elements)。一個區塊級元素會藉由建立『區塊』的動作，完全佔滿其父元素（容器）的空間。本文將為你說明其意涵.
 
 瀏覽器預設以在元素前後換行的方式，表現區塊級元素。視覺上會呈現為一排縱向堆疊的方塊。
 

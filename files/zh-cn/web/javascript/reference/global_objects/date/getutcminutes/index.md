@@ -3,7 +3,7 @@ title: Date.prototype.getUTCMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMinutes
 ---
 
-{{JSRef("Global_Objects", "Date")}}
+{{JSRef}}
 
 **`getUTCMinutes()`** 方法以世界时为标准，返回一个指定的日期对象的分钟数。
 
@@ -42,7 +42,7 @@ var minutes = today.getUTCMinutes();
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.getMinutes()")}}
 - {{jsxref("Date.prototype.setUTCMinutes()")}}

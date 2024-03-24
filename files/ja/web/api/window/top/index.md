@@ -25,4 +25,4 @@ var topWindow = window.top;
 
 ## ブラウザー互換性
 
-{{Compat("api.Window.top")}}
+{{Compat}}

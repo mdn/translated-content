@@ -3,7 +3,7 @@ title: storage.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/storage/onChanged
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Lancé lorsqu'un ou plusieurs éléments changent.
 

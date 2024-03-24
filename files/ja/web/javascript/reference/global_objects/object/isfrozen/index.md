@@ -138,7 +138,7 @@ Object.isFrozen(1);
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Object.isFrozen")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -3,7 +3,7 @@ title: String.prototype.match()
 slug: Web/JavaScript/Reference/Global_Objects/String/match
 ---
 
-{{JSRef("Global_Objects", "String")}}
+{{JSRef}}
 
 ## Сводка
 

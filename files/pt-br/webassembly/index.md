@@ -62,13 +62,11 @@ E o que é ainda melhor é que ele está sendo desenvolvido como um padrão web 
 
 ## Especificações
 
-| Especificações                 | Status                      | Comentários                                        |
-| ------------------------------ | --------------------------- | -------------------------------------------------- |
-| {{SpecName('WebAssembly JS')}} | {{Spec2('WebAssembly JS')}} | Definição inicial do projeto da API do JavaScript. |
+{{Specifications}}
 
 ## Compatibilidade do navegador
 
-{{Compat("javascript.builtins.WebAssembly")}}
+{{Compat}}
 
 ## Veja também
 

@@ -27,39 +27,39 @@ slug: Mozilla/Firefox/Releases/31
 
 ### CSS
 
-- Префикс «var-» у CSS-переменных изменён на «--» ({{Bug(985838)}}).
-- Исправлен нежелательный пробел для кратного 10 000 в корейских стилях счётчика ({{Bug(985186)}}).
-- Исправлены переходы CSS-прозрачности при псевдоклассе родителя :before и значении auto свойства overflow ({{Bug(990340)}}).
-- Псевдоэлемент ::-moz-math-stretchy удалён ({{Bug(1000879)}}).
+- Префикс «var-» у CSS-переменных изменён на «--» ([Firefox bug 985838](https://bugzil.la/985838)).
+- Исправлен нежелательный пробел для кратного 10 000 в корейских стилях счётчика ([Firefox bug 985186](https://bugzil.la/985186)).
+- Исправлены переходы CSS-прозрачности при псевдоклассе родителя :before и значении auto свойства overflow ([Firefox bug 990340](https://bugzil.la/990340)).
+- Псевдоэлемент ::-moz-math-stretchy удалён ([Firefox bug 1000879](https://bugzil.la/1000879)).
 
 ### HTML
 
-- Реализован элемент \<track> ({{Bug(629350)}}).
+- Реализован элемент \<track> ([Firefox bug 629350](https://bugzil.la/629350)).
 
 ### JavaScript
 
 Реализована новая функциональность ECMAScript 6:
 
-- Новый метод экземпляров `Array`: {{jsxref("Array.prototype.fill()")}} ({{Bug(911147)}})
-- Новая `Math`-функция: {{jsxref("Math.clz32()")}} ({{Bug(925123)}})
-- Новый метод экземпляров `String`: {{jsxref("String.prototype.normalize()")}} доступен в Firefox Desktop ({{Bug(918987)}}).
+- Новый метод экземпляров `Array`: {{jsxref("Array.prototype.fill()")}} ([Firefox bug 911147](https://bugzil.la/911147))
+- Новая `Math`-функция: {{jsxref("Math.clz32()")}} ([Firefox bug 925123](https://bugzil.la/925123))
+- Новый метод экземпляров `String`: {{jsxref("String.prototype.normalize()")}} доступен в Firefox Desktop ([Firefox bug 918987](https://bugzil.la/918987)).
 - Новый метод `Object` {{jsxref("Object.setPrototypeOf()")}}.
 - Новые константы `Number`: {{jsxref("Number.MAX_SAFE_INTEGER")}} and {{jsxref("Number.MIN_SAFE_INTEGER")}}.
 
 ### Интерфейсы/API/DOM
 
-- Реализован конструктор для `KeyboardEvent` ({{Bug(930893)}}).
-- Реализован атрибут `KeyboardEvent.isComposing` ({{Bug(993234)}}).
-- Реализован интерфейс `InputEvent` ({{Bug(993253)}}).
-- Реализован атрибут `InputEvent.isComposing` ({{Bug(993253)}}).
-- Реализован {{domxref("CSS.escape", "CSS.escape()")}} ({{Bug(955860)}}).
-- Событие `mousemove` теперь отменяемое, как в других браузерах ({{Bug(704423)}}). Вызов `preventDefault()` только выставляет атрибут `defaultPrevented` в `true`. То есть остальное поведение не изменилось. Например, это не может предотвратить выставление состояния `:hover`.
+- Реализован конструктор для `KeyboardEvent` ([Firefox bug 930893](https://bugzil.la/930893)).
+- Реализован атрибут `KeyboardEvent.isComposing` ([Firefox bug 993234](https://bugzil.la/993234)).
+- Реализован интерфейс `InputEvent` ([Firefox bug 993253](https://bugzil.la/993253)).
+- Реализован атрибут `InputEvent.isComposing` ([Firefox bug 993253](https://bugzil.la/993253)).
+- Реализован {{domxref("CSS.escape", "CSS.escape()")}} ([Firefox bug 955860](https://bugzil.la/955860)).
+- Событие `mousemove` теперь отменяемое, как в других браузерах ([Firefox bug 704423](https://bugzil.la/704423)). Вызов `preventDefault()` только выставляет атрибут `defaultPrevented` в `true`. То есть остальное поведение не изменилось. Например, это не может предотвратить выставление состояния `:hover`.
 
 ### MathML
 
-- Частичная реализация [OpenType MATH table](http://mpeg.chiariglione.org/standards/mpeg-4/open-font-format/text-isoiec-cd-14496-22-3rd-edition), раздел 6.3.6 ({{Bug(407059)}}). Подробнее см. [шрифты для Mozilla-всякого движка MathML](/ru/docs/Mozilla/MathML_Project/Fonts) и [MathML torture test](/ru/docs/Mozilla/MathML_Project/MathML_Torture_Test) .
-- Псевдоэлемент `::-moz-math-stretchy` удалён ({{Bug(1000879)}}).
-- Если они доступны, юникодовские математические буквенно-цифровые символы используются для полужирных, курсивных и полужирно-курсивных mathvariants ({{Bug(930504)}}).
+- Частичная реализация [OpenType MATH table](http://mpeg.chiariglione.org/standards/mpeg-4/open-font-format/text-isoiec-cd-14496-22-3rd-edition), раздел 6.3.6 ([Firefox bug 407059](https://bugzil.la/407059)). Подробнее см. [шрифты для Mozilla-всякого движка MathML](/ru/docs/Mozilla/MathML_Project/Fonts) и [MathML torture test](/ru/docs/Mozilla/MathML_Project/MathML_Torture_Test) .
+- Псевдоэлемент `::-moz-math-stretchy` удалён ([Firefox bug 1000879](https://bugzil.la/1000879)).
+- Если они доступны, юникодовские математические буквенно-цифровые символы используются для полужирных, курсивных и полужирно-курсивных mathvariants ([Firefox bug 930504](https://bugzil.la/930504)).
 
 ### SVG
 

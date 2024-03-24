@@ -92,7 +92,7 @@ Of course, this request header is not at all standardized, and it may change in 
 
 ### 是否有禁用链接预取的首选项？
 
-是的，您可以设置一个隐藏的首选项来禁用链接预取。将此行添加到位于配置文件目录中的 prefs.js 文件中（或通过[about:config](/about:config)进行适当的更改）：
+是的，你可以设置一个隐藏的首选项来禁用链接预取。将此行添加到位于配置文件目录中的 prefs.js 文件中（或通过[about:config](/about:config)进行适当的更改）：
 
 ```plain
 user_pref("network.prefetch-next", false);
@@ -112,11 +112,11 @@ It is important that websites adopt `<link>` tag based prefetching instead of tr
 
 ### 哪些浏览器支持链接预取？
 
-基于 Mozilla 1.2（或更高版本）的浏览器以及基于 Mozilla 1.0.2（或更高版本）的浏览器均支持预取。这包括 Firefox 和 Netscape 7.01+。截至 2003 年 3 月，Camino 构建基于 Mozilla 1.0.1，因此不支持预取。测试您的浏览器是否支持链接预取。
+基于 Mozilla 1.2（或更高版本）的浏览器以及基于 Mozilla 1.0.2（或更高版本）的浏览器均支持预取。这包括 Firefox 和 Netscape 7.01+。截至 2003 年 3 月，Camino 构建基于 Mozilla 1.0.1，因此不支持预取。测试你的浏览器是否支持链接预取。
 
 ### 隐私问题
 
-除了上面已经提到的引用和 URL 跟随含义外，预取通常会导致访问预取站点的 cookie。（例如，如果您使用 google amazon，则 google 结果页面将预取 www\.amazon.com，从而导致 amazon cookie 来回发送。您可以在 Firefox 中阻止第三方 cookie，请参参阅 [Disabling third party cookies](http://support.mozilla.com/en-US/kb/Disabling%20third%20party%20cookies)。）
+除了上面已经提到的引用和 URL 跟随含义外，预取通常会导致访问预取站点的 cookie。（例如，如果你使用 google amazon，则 google 结果页面将预取 www\.amazon.com，从而导致 amazon cookie 来回发送。你可以在 Firefox 中阻止第三方 cookie，请参参阅 [Disabling third party cookies](http://support.mozilla.com/en-US/kb/Disabling%20third%20party%20cookies)。）
 
 ## 参见
 

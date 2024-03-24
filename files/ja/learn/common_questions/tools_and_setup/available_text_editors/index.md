@@ -1,7 +1,11 @@
 ---
-title: どんなテキストエディターが利用可能？
+title: どんなテキストエディターが利用できるか
 slug: Learn/Common_questions/Tools_and_setup/Available_text_editors
+l10n:
+  sourceCommit: 8906ca75f60f205a6dd18fe3c824bbee228802b2
 ---
+
+{{QuicklinksWithSubPages("/ja/Learn/Common_questions")}}
 
 この記事ではウェブ開発向けのテキストエディターをインストールする際に考慮すべき点をいくつか取り上げます。
 
@@ -10,8 +14,9 @@ slug: Learn/Common_questions/Tools_and_setup/Available_text_editors
     <tr>
       <th scope="row">前提知識:</th>
       <td>
-        <a href="/ja/docs/Learn/Common_questions/What_software_do_I_need"
-        >ウェブサイトを構築するために必要な各種ソフトウェア</a>について理解していること。
+        <a href="/ja/docs/Learn/Common_questions/Tools_and_setup/What_software_do_I_need"
+        >ウェブサイトを構築するために必要な各種ソフトウェア</a
+        >について理解していること。
       </td>
     </tr>
     <tr>
@@ -56,18 +61,7 @@ slug: Learn/Common_questions/Tools_and_setup/Available_text_editors
   </thead>
   <tbody>
     <tr>
-      <td><a href="https://atom.io/">Atom</a></td>
-      <td>MIT/BSD</td>
-      <td>無料</td>
-      <td>Windows, Mac, Linux</td>
-      <td>
-        <a href="https://github.com/atom/atom/issues" rel="external">GitHub Issues</a>
-      </td>
-      <td><a href="https://atom.io/docs/latest/">オンラインマニュアル</a></td>
-      <td><a href="https://atom.io/packages">あり</a></td>
-    </tr>
-    <tr>
-      <td><a href="http://bluefish.openoffice.nl">Bluefish</a></td>
+      <td><a href="https://bluefish.openoffice.nl">Bluefish</a></td>
       <td>GPL 3</td>
       <td>無料</td>
       <td>Windows, Mac, Linux</td>
@@ -76,11 +70,11 @@ slug: Learn/Common_questions/Tools_and_setup/Available_text_editors
           >メーリングリスト</a
         >, <a href="https://bfwiki.tellefsen.net/index.php/Main_Page">wiki</a>
       </td>
-      <td><a href="http://bluefish.openoffice.nl/manual/">オンラインマニュアル</a></td>
+      <td><a href="https://bluefish.openoffice.nl/manual/">オンラインマニュアル</a></td>
       <td>あり</td>
     </tr>
     <tr>
-      <td><a href="http://brackets.io/" rel="external">Brackets</a></td>
+      <td><a href="https://brackets.io/" rel="external">Brackets</a></td>
       <td>MIT/BSD</td>
       <td>無料</td>
       <td>Windows, Mac, Linux</td>
@@ -116,12 +110,12 @@ slug: Learn/Common_questions/Tools_and_setup/Available_text_editors
       <td><a href="https://extensions.panic.com/">あり</a></td>
     </tr>
     <tr>
-      <td><a href="http://www.codelobster.com">CodeLobster</a></td>
+      <td><a href="https://www.codelobster.com">CodeLobster</a></td>
       <td>クローズドソース</td>
       <td>無料</td>
       <td>Windows, Mac, Linux</td>
       <td>
-        <a href="http://www.codelobster.com/forum/index.php" rel="external"
+        <a href="https://www.codelobster.com/forum/index.php" rel="external"
           >フォーラム</a
         >, <a href="mailto:support@codelobster.com">メール</a>
       </td>
@@ -207,13 +201,13 @@ slug: Learn/Common_questions/Tools_and_setup/Available_text_editors
       <td>MPL</td>
       <td>無料</td>
       <td>Windows, Mac, Linux</td>
-      <td><a href="http://forum.komodoide.com/" rel="external">Forum</a></td>
+      <td><a href="https://community.komodoide.com/" rel="external">フォーラム</a></td>
       <td>
         <a href="https://docs.activestate.com/komodo" rel="external"
           >オンラインマニュアル</a
         >
       </td>
-      <td><a href="https://community.komodoide.com/packages/addons/">あり</a></td>
+      <td><a href="https://docs.activestate.com/komodo/12/manual/extensions.html">あり</a></td>
     </tr>
     <tr>
       <td>
@@ -248,10 +242,10 @@ slug: Learn/Common_questions/Tools_and_setup/Available_text_editors
       <td>無料</td>
       <td>Windows</td>
       <td>
-        <a href="http://gogogadgetscott.info/pspad/dotazy.htm">FAQ</a>,
-        <a href="https://forum.pspad.com/" rel="external">Forum</a>
+        <a href="https://www.pspad.com/en/faq.htm">FAQ</a>,
+        <a href="https://forum.pspad.com/" rel="external">フォーラム</a>
       </td>
-      <td><a href="http://gogogadgetscott.info/pspad/">Online Help</a></td>
+      <td><a href="https://www.pspad.com/en/helpfiles.htm">オンラインヘルプ</a></td>
       <td><a href="https://www.pspad.com/en/pspad-extensions.php">あり</a></td>
     </tr>
     <tr>
@@ -331,7 +325,7 @@ slug: Learn/Common_questions/Tools_and_setup/Available_text_editors
       <td><a href="https://www.vim.org/" rel="external">Vim</a></td>
       <td>
         <a
-          href="http://vimdoc.sourceforge.net/htmldoc/uganda.html#license"
+          href="https://vimdoc.sourceforge.net/htmldoc/uganda.html#license"
           rel="external"
           >固有のオープンライセンス</a
         >
@@ -373,12 +367,12 @@ slug: Learn/Common_questions/Tools_and_setup/Available_text_editors
 
 ## アクティブラーニング
 
-このアクティブラーニングのコーナーでは、あなたが選択したエディターを使用したりインストールしたりすることを試していただきたいと思います。あなたのコンピューターには、上記で提案したエディターが既にインストールされているかもしれません（例： GNOMEデスクトップを使用している場合は Gedit、KDE を使用している場合は Kate など）が、そうでなければ、あなたが選んだ一つまたは複数のテキストエディターを使用してみてください。
+このアクティブラーニングのコーナーでは、あなたが選択したエディターを使用したりインストールしたりすることを試していただきたいと思います。あなたのコンピューターには、上記で提案したエディターが既にインストールされているかもしれません（例： GNOME デスクトップを使用している場合は Gedit、KDE を使用している場合は Kate など）が、そうでなければ、あなたが選んだ一つまたは複数のテキストエディターを使用してみてください。
 
 お使いのエディターの設定を掘り下げ、マニュアルや文書を読んで、その機能を確認してみてください。特に（エディターで可能であれば）、以下のことを試してみてください。
 
-- 構文強調表示の設定や色の変更
-- [インデント](<https://en.wikipedia.org/wiki/Indentation_(typesetting)#Indentation_in_programming>)の幅をいじって、ニーズに合わせて適切な設定にする。
+- 構文ハイライト表示の設定や色の変更
+- [インデント](https://ja.wikipedia.org/wiki/%E5%AD%97%E4%B8%8B%E3%81%92)の幅をいじって、ニーズに合わせて適切な設定にする。
 - 自動保存とセッション保存の設定を確認する
 - 何らかの利用できる[プラグイン](https://ja.wikipedia.org/wiki/プラグイン)を設定し、新しいプラグインの入手方法を調査する
 - カラースキームの変更
@@ -393,25 +387,25 @@ slug: Learn/Common_questions/Tools_and_setup/Available_text_editors
 
 それでは、テキストエディターを選ぶとき何を考慮すべきでしょうか？
 
-#### どの OS (オペレーティングシステム) を使用するか？
+#### どの OS (オペレーティングシステム) を使用するか
 
-もちろん、それは自分の選択です。しかし、エディターによっては特定の OS でしか稼働率がないものもあるので、切り替えが好きな人は可能性を狭めることになります。お使いのシステムで動作するのであれば、どんなエディターでも仕事をすることができますが、クロスプラットフォームのエディターは他の OS への移行を容易にします。
+もちろん、あなたの自由です。しかし、エディターの中には特定の OS でしか利用できないものもあるので、もしあなたが行ったり来たりするのが好きなら、選択肢が限られてしまいます。あなたのシステムで動作するのであれば、どんなエディターでも仕事を取得することができますが、クロスプラットフォームのエディターであれば、 OS から OS への移行が容易になります。
 
-最初に、あなたが使う OS を選びます。次に、検討中のエディターがその OS に対応しているか確認してください。ほとんどのエディターは Windows や Mac のサポート状況を、そのウェブサイトで公開しています。 OS のバージョンが限定されている 場合もあります。 Ubuntu を使うのなら、 Ubuntu ソフトウェアセンター内を検索することをお勧めします。ただし、 Linux/UNIX の世界には多様性があり、ディストリビューションが違うと動作も異なったり、パッケージ間の互換性がなかったりします。あまり流通していないテキストエディターに関心を抱いたりすると、自分でソースからコンパイルする羽目になるかもしれません （気の弱い人にはお勧めできません）。
+そのため、最初に使用する OS を探し、指定されたエディターが対応しているかどうかを調べます。ほとんどのエディターはウェブサイトで Windows と Mac のどちらに対応しているかを明記していますが、特定のバージョンにしか対応していないエディターもあります。 Ubuntu を実行している場合は、 Ubuntu Software Center で検索するのが最善の方法です。もちろん一般的に、 Linux/UNIX の世界はかなり多様で、さまざまなディストリビューションが互換性のない異なるパッケージングシステムで作業しています。つまり、あなたが無名のエディターに心を定めた場合、自分でソースからコンパイルする必要があるかもしれないということです（気の弱い人には向きません）。
 
 #### どのような技術を操りたいのか
 
 一般論を言えば、テキストエディターなら、どんなテキストファイルでも開くことができます。自分のメモ書き程度なら、それで十分です。しかし、ウェブ開発を行い、{{Glossary("HTML")}}、{{Glossary("CSS")}}、{{Glossary("JavaScript")}} を使ったりすると、ファイルはかなり大きくて複雑なものになります。ウェブで扱う技術情報に基づいテキストエディターを選択して、作業を簡単にしましょう。多くのテキストエディターには次のような支援機能があります。
 
-- **[構文強調](https://ja.wikipedia.org/wiki/シンタックスハイライト)**。使用する技術のキーワードを着色表示することで、ファイルが読みやすくなります。
+- **[構文ハイライト](https://ja.wikipedia.org/wiki/シンタックスハイライト)**。使用する技術のキーワードを着色表示することで、ファイルが読みやすくなります。
 - **[コードの補完](https://ja.wikipedia.org/wiki/自動補完#ソースコードエディタ)**。よく出てくる構造を自動的に補完して、入力を手助けしてくれます（例えば、 HTML のタグを自動的に閉じたり、正しい CSS 属性の候補を挙げるなど）。
-- **[コードスニペット](https://ja.wikipedia.org/wiki/スニペット)**。新規に HTML 文書を作成していると、同じ構文が何度も出てきます。コードスニペットとして登録した文書の断片を埋めていくことで、何度も入力する労苦から解放されます。
+- **[コードスニペット](https://ja.wikipedia.org/wiki/スニペット)**。新しい HTML 文書を作り始めるときに見られたように、多くの技術は同じ文書構造を何度も使用します。コードスニペットを文書にあらかじめ記入しておくことで、すべてを入力し直す手間を省くことができます。
 
-構文強調はほとんどのテキストエディターが対応していますが、他の 2 つの機能はまだのものが多いのが現状です。使用する予定のテキストエディターが、 {{Glossary("HTML")}}、 {{Glossary("CSS")}}、それに {{Glossary("JavaScript")}} を強調できるか確認しておきましょう。
+構文ハイライトはほとんどのテキストエディターが対応していますが、他の 2 つの機能はまだのものが多いのが現状です。使用する予定のテキストエディターが、 {{Glossary("HTML")}}、 {{Glossary("CSS")}}、それに {{Glossary("JavaScript")}} をハイライトできるか確認しておきましょう。
 
-#### テキストエディターに、どのような基本機能を求めるか？
+#### テキストエディターにどのような基本機能を求めるか
 
-あなたのニーズと計画によりますが、以下の機能は多くの場合に有用です。
+ニーズと計画によりますが、以下の機能は多くの場合に有用です。
 
 - 文字列の検索と置換。単一ファイル、あるいは複数ファイルにわたって実行できるとよい。検索には{{Glossary("Regular Expression", "正規表現")}}、必要なら他のパターンを使う。
 - 指定した行へ移動する。
@@ -423,51 +417,48 @@ slug: Learn/Common_questions/Tools_and_setup/Available_text_editors
 - 英文などのスペルチェックを行う。
 - インデント設定に基づきコードを自動インデントする。
 
-#### テキストエディターの機能を拡張したいか？
+#### テキストエディターの機能を拡張したいか
 
 拡張型のテキストエディターは、標準で組み込まれた機能こそ少ないが、必要に応じて機能を拡張することができます。
 
 どのような機能が必要かわからない場合、またはお気に入りのエディターにそのような機能がない場合、拡張可能なエディターを探してみてください。最高のエディターは多くのプラグインを提供しており、新しいプラグインを自動的に探してインストールする方法が理想的です。
 
-もし、たくさんの機能が好きで、すべてのプラグインのためにエディターが遅くなるなら、 [IDE](https://ja.wikipedia.org/wiki/統合開発環境) （統合開発環境）を使用してみてください。IDE は多くのツールを一つのインターフェイスで提供しており、初心者には少し難しいですが、 テキストエディターに制限が多いと感じる場合は常に選択肢の一つになります。ここでは、いくつかの人気のある IDE を紹介します。
+もしあなたが豊富な機能が好きで、プラグインのためにエディターの動作が遅くなりがちなら、 [IDE](https://ja.wikipedia.org/wiki/統合開発環境) （統合開発環境）を使用してみてください。 IDE は 1 つのインターフェイスで多くのツールを提供し、初心者には少し大変ですが、エディターの制限が多いと感じるなら常にオプションです。人気のある IDE をいくつか紹介します。
 
-- [Aptana Studio](http://www.aptana.com/)
+- [Aptana Studio](https://www.axway.com/en/aptana)
 - [Eclipse](https://www.eclipse.org/)
 - [Komodo IDE](https://www.activestate.com/products/komodo-ide/)
 - [NetBeans IDE](https://netbeans.apache.org//)
 - [Visual Studio](https://visualstudio.microsoft.com/)
 - [WebStorm](https://www.jetbrains.com/webstorm/)
 
-#### テキストエディターを使用している間、サポートやヘルプが必要か？
+#### テキストエディターを使用している間、サポートやヘルプが必要か
 
 テキストエディターの場合、 2 種類の対応をしているかどうかを確認しましょう。
 
 - ユーザー向けのコンテンツ（FAQ、マニュアル、オンラインヘルプなど）
 - 開発者や他のユーザーとのディスカッション（フォーラム、メール、チャットなど）
 
-エディターの使用方法を学ぶときは、文書化されたドキュメントを使用しましょう。エディターをインストールしたり使用したりする際にトラブルシューティングが発生した場合は、他のユーザーと連絡を取りましょう。
+エディターの使用方法を学ぶときは、書かれているドキュメントを使用しましょう。エディターをインストールしたり使用したりする際にトラブルシューティングが発生した場合は、他のユーザーと連絡を取りましょう。
 
-#### テキストエディターの使い勝手は重要か？
+#### テキストエディターの使い勝手は重要か
 
-たしかに、好みの問題かもしれません。いっぽうでは、表示色やボタンの位置など、UI（ユーザーインターフェース）のそこかしこをカスタマイズしたがる人もいます。変更可能な範囲はエディターごとに異なるので、導入前に調べておきましょう。色遣いを変えられるエディターは多くあります。しかし、カスタマイズしたいことがあまり多いようなら、統合開発環境を選んだ方が賢明です。
+たしかに、好みの問題かもしれません。いっぽうでは、表示色やボタンの位置など、 UI （ユーザーインターフェース）のそこかしこをカスタマイズしたがる人もいます。変更可能な範囲はエディターごとに異なるので、導入前に調べておきましょう。色遣いを変えられるエディターは多くあります。しかし、カスタマイズしたいことがあまり多いようなら、統合開発環境を選んだ方が賢明です。
 
 ### インストールとセットアップ
 
 テキストエディターのインストールは、非常に分かりやすいのが普通です。その方法はプラットフォーム（OS）によって変わりますが、それほど難しいものではありません。:
 
-- **Windows:** インストールファイルは通常、 `.exe` や `.msi` の実行可能ファイルとして提供されます。また、圧縮ファイル（`.zip`、`.7z`、`.rar`など）として提供されることもあります。その場合は、解凍するソフトウエアが別途必要になりますが、`.zip` ファイルの解凍ソフトは Windows に標準で付属してきます。
+- **Windows:** インストールファイルは通常、 `.exe` や `.msi` の実行可能ファイルとして提供されます。また、圧縮ファイル（`.zip`、`.7z`、`.rar` など）として提供されることもあります。その場合は、解凍するソフトウエアが別途必要になりますが、`.zip` ファイルの解凍ソフトは Windows に標準で付属してきます。
 - **Mac:** エディターのウェブサイトから、 `.dmg` ファイルをダウンロードします。 Apple Store から簡単にインストールできるエディターもあります。
-- **Linux:** 主要なディストリビューションについては、グラフィカルインターフェースのあるパッケージマネージャー（Ubuntu ソフトウエアセンター、mintInstall、GNOME Software、 \&c など）からインストールできます。また、 パッケージ済みの`.deb` や`.rpm` ファイルとして入手できることもできます。リポジトリーサーバーからインストールすることも多いし、最悪の場合ソースコードを自分でコンパイルしなければならないこともあります。テキストエディターのウェブサイトにあるインストール手順の説明を、じっくり調べることをお勧めします。
+- **Linux:** 主要なディストリビューションについては、グラフィカルインターフェースのあるパッケージマネージャー（Ubuntu ソフトウエアセンター、mintInstall、GNOME Software、 \&c など）からインストールできます。また、パッケージ化された `.deb` や `.rpm` ファイルとして入手できることもできます。リポジトリーサーバーからインストールすることも多いし、最悪の場合ソースコードを自分でコンパイルしなければならないこともあります。テキストエディターのウェブサイトにあるインストール手順の説明を、じっくり調べることをお勧めします。
 
-新しいエディターをインストールしても、**[ファイルの関連付け](https://en.wikipedia.org/wiki/File_association)**を変更するまで、 OS は既定のエディターでテキストファイルを開き続けるでしょう。この手順は、あなたがファイルをダブルクリックしたときに、 OS があなたの好みのエディターで開くように設定するのに役立ちます。
+新しいエディターをインストールしても、**[ファイルの関連付け](https://en.wikipedia.org/wiki/File_association)**を変更するまで、 OS は既定のエディターでテキストファイルを開き続けるでしょう。これは、あなたがファイルをダブルクリックしたときに、 OS があなたの好みのエディターで開くように設定するのに役立ちます。
 
-- Windows
+- [Windows](https://support.microsoft.com/ja/windows)
 
-  - [Windows 8](https://support.microsoft.com/en-us/windows?ui=en-US&rs=en-US&ad=US)
-  - [Windows 7](https://support.microsoft.com/en-us/windows/change-which-programs-windows-7-uses-by-default-62fd162f-8c82-0436-806f-c60d69dcf495)
-  - [older systems](https://www.lifewire.com/how-to-change-file-associations-in-windows-2624477)
+- [macOS](https://support.apple.com/guide/mac-help/choose-an-app-to-open-a-file-on-mac-mh35597/mac)
 
-- [macOS](https://osxdaily.com/2013/08/08/change-default-application-open-files-mac-os-x/)
 - Linux
 
   - [Ubuntu Unity](https://askubuntu.com/questions/289337/how-can-i-change-file-association-globally)
@@ -476,4 +467,4 @@ slug: Learn/Common_questions/Tools_and_setup/Available_text_editors
 
 ## 次のステップ
 
-良いテキストエディターが見つかったら、[基本的な作業環境](/ja/docs/Learn/Common_questions/set_up_a_local_testing_server)（テストサーバー）の構築に着手しましょう。あるいは、[最初のウェブページ](/ja/docs/Learn/Getting_started_with_the_web)を書いてみるのもいいでしょう。
+良いテキストエディターが見つかったら、[基本的な作業環境](/ja/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)（テストサーバー）の構築に着手しましょう。あるいは、[最初のウェブページ](/ja/docs/Learn/Getting_started_with_the_web)を書いてみるのもいいでしょう。

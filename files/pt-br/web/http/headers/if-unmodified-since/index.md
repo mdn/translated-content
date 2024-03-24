@@ -66,7 +66,7 @@ If-Unmodified-Since: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.If-Unmodified-Since")}}
+{{Compat}}
 
 ## Veja também
 

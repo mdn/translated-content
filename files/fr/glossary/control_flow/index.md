@@ -3,6 +3,8 @@ title: Structure de contrôle
 slug: Glossary/Control_flow
 ---
 
+{{GlossarySidebar}}
+
 Les _structures de contrôle_ déterminent l'ordre dans lequel l'ordinateur exécute les instructions d'un script.
 
 Le code est exécuté dans l'ordre de la première ligne du fichier jusqu'à la dernière ligne, sauf si l'ordinateur parcourt une des (très fréquentes) structures qui modifie le cours d'exécution du programme, comme des conditions et des boucles.

@@ -3,7 +3,7 @@ title: Math.cos()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cos
 ---
 
-{{JSRef("Global_Objects", "Math")}}
+{{JSRef}}
 
 ## 概述
 
@@ -46,6 +46,11 @@ Math.cos(2 * Math.PI); // 1
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- The {{jsxref("Global_Objects/Math", "Math")}} object it belongs to.
+- {{jsxref("Math.acos()")}}
+- {{jsxref("Math.asin()")}}
+- {{jsxref("Math.atan()")}}
+- {{jsxref("Math.atan2()")}}
+- {{jsxref("Math.sin()")}}
+- {{jsxref("Math.tan()")}}

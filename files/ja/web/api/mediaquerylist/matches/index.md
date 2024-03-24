@@ -41,7 +41,7 @@ addMQListener(window.matchMedia("(orientation:landscape)"), (event) => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.MediaQueryList.matches")}}
+{{Compat}}
 
 ## 関連情報
 

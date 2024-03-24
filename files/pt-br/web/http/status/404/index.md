@@ -35,7 +35,7 @@ Para um exemplo de uma página 404 personalizada, veja [MDN's 404 page](/pt-BR/4
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.status.404")}}
+{{Compat}}
 
 ## Veja também
 

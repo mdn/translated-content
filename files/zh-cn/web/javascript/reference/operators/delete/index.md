@@ -45,7 +45,7 @@ delete identifier;
 delete object.#privateProperty;
 ```
 
-因为[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)自动处于严格模式，而[私有属性](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_class_fields)只能在类体内合法引用，这意味着私有属性永远不能被删除。虽然 `delete identifier` 在 `identifier` 指的是全局对象的可配置属性时[可能有效](#删除全局属性)，但是你应该避免这种形式，而是用 [`globalThis`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/globalThis) 作为前缀。
+因为[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)自动处于严格模式，而[私有属性](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)只能在类体内合法引用，这意味着私有属性永远不能被删除。虽然 `delete identifier` 在 `identifier` 指的是全局对象的可配置属性时[可能有效](#删除全局属性)，但是你应该避免这种形式，而是用 [`globalThis`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/globalThis) 作为前缀。
 
 虽然其他表达式是可以接受的，但是它们并不导致有意义的行为：
 

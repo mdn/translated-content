@@ -56,7 +56,7 @@ field.addEventListener("change", function () {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

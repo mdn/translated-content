@@ -3,33 +3,39 @@ title: Number.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Number/valueOf
 ---
 
-{{JSRef("Global_Objects", "Number")}}
+{{JSRef}}
 
-## 概述
+{{jsxref("Number")}} 值的 **`valueOf()`** 方法返回该数字的值。
 
-**`valueOf()`** 方法返回一个被 {{jsxref("Global_Objects/Number", "Number")}} 对象包装的原始值。
+{{EmbedInteractiveExample("pages/js/number-valueof.html")}}
 
 ## 语法
 
-```plain
-numObj.valueOf()
+```js-nolint
+valueOf()
 ```
+
+### 参数
+
+无。
 
 ### 返回值
 
-表示指定 {{jsxref("Number")}} 对象的原始值的数字
+一个表示指定 {{jsxref("Number")}} 对象的原始值的数字。
 
 ## 描述
 
-该方法通常是由 JavaScript 引擎在内部隐式调用的，而不是由用户在代码中显式调用的。
+该方法通常由 JavaScript 在内部调用，而非在 Web 代码中显式调用。
 
 ## 示例
 
+### 使用 valueOf
+
 ```js
-var numObj = new Number(10);
+const numObj = new Number(10);
 console.log(typeof numObj); // object
 
-var num = numObj.valueOf();
+const num = numObj.valueOf();
 console.log(num); // 10
 console.log(typeof num); // number
 ```
@@ -42,6 +48,6 @@ console.log(typeof num); // number
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{jsxref("Number.prototype.toSource()")}}
+- {{jsxref("Object.prototype.valueOf()")}}

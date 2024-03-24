@@ -5,11 +5,11 @@ slug: Web/OpenSearch
 
 {{AddonSidebar}}
 
-[OpenSearch 描述語法](http://www.opensearch.org/Specifications/OpenSearch/1.1#OpenSearch_description_document)敘述了搜尋引擎，以便網站用戶透過瀏覽器或其他用戶端程式使用之。OpenSearch 支援最新版的 Firefox、Internet Explorer、Safari、Chrome.
+[OpenSearch 描述語法](https://www.opensearch.org/Specifications/OpenSearch/1.1#OpenSearch_description_document)敘述了搜尋引擎，以便網站用戶透過瀏覽器或其他用戶端程式使用之。OpenSearch 支援最新版的 Firefox、Internet Explorer、Safari、Chrome.
 
 Firefox 還支援搜尋建議與 `<SearchForm>` 元素……等 OpenSearch 標準內尚未包含的功能。這篇文章會聚焦在如何撰寫可支援 Firefox 特殊功能、且和 OpenSearch 格式相容的搜尋套件。
 
-OpenSearch 描述檔能由網站[自動提示安裝](#.E8.87.AA.E5.8B.95.E6.B8.AC.E7.9F.A5.E6.90.9C.E5.B0.8B.E6.A8.A1.E7.B5.84)，或是藉[從網頁安裝搜尋模組](/zh-tw/%e5%be%9e%e7%b6%b2%e9%a0%81%e5%ae%89%e8%a3%9d%e6%90%9c%e5%b0%8b%e6%a8%a1%e7%b5%84)中描述的方式安裝。
+OpenSearch 描述檔能[從網頁安裝搜尋模組](#自動測知搜尋模組)中描述的方式安裝。
 
 ## OpenSearch 描述檔
 
@@ -40,7 +40,7 @@ OpenSearch 描述檔能由網站[自動提示安裝](#.E8.87.AA.E5.8B.95.E6.B8.A
   - : 搜尋引擎資料輸入時的編碼方式，例如說：`<InputEncoding>UTF-8</InputEncoding>`。
 - Image
 
-  - : URI to an icon representative of the search engine. When possible, search engines should offer a 16×16 image of type "image/x-icon" and a 64×64 image of type `image/jpeg` or `image/png`. The URI may also use the [`data:` URI scheme](/zh-TW/docs/Web/HTTP/data_URIs). You can generate a `data:` URI from an icon file at [The `data:` URI kitchen](http://software.hixie.ch/utilities/cgi/data/data).
+  - : URI to an icon representative of the search engine. When possible, search engines should offer a 16×16 image of type "image/x-icon" and a 64×64 image of type `image/jpeg` or `image/png`. The URI may also use the [`data:` URI scheme](/zh-TW/docs/Web/HTTP/data_URIs). You can generate a `data:` URI from an icon file at [The `data:` URI kitchen](https://software.hixie.ch/utilities/cgi/data/data).
 
     ```xml
     <Image height="16" width="16" type="image/x-icon">https://example.com/favicon.ico</Image>
@@ -126,7 +126,7 @@ OpenSearch 描述檔能由網站[自動提示安裝](#.E8.87.AA.E5.8B.95.E6.B8.A
      template="http://example.com/mysearchdescription.xml" />
 ```
 
-> **備註：** 目前的[addons.mozilla.org](http://addons.mozilla.org)（AMO）不支援自動更新 OpenSearch 套件。如果要把搜尋套件放到 AMO，請不要用上自動更新的功能。
+> **備註：** 目前的 [addons.mozilla.org](https://addons.mozilla.org)（AMO）不支援自動更新 OpenSearch 套件。如果要把搜尋套件放到 AMO，請不要用上自動更新的功能。
 
 ## 除錯技巧
 
@@ -142,8 +142,8 @@ In addition, the search plugin service provides a logging mechanism that may be 
 
 ## 參考
 
-- [OpenSearch Documentation](http://opensearch.org/), [OpenSearch Documentation about the Url and Param element](http://www.opensearch.org/Specifications/OpenSearch/Extensions/Parameter/1.0)
+- [OpenSearch Documentation](http://opensearch.org/), [OpenSearch Documentation about the Url and Param element](https://www.opensearch.org/Specifications/OpenSearch/Extensions/Parameter/1.0)
 - imdb.com has a [working osd.xml](http://i.media-imdb.com/images/SFccbe1e4d909ef8b8077201c3c5aac349/imdbsearch.xml)
 - [`data:` URI scheme](http://en.wikipedia.org/wiki/Data:_URI_scheme)
 - [OpenSearch Plugin Generator](http://www.7is7.com/software/firefox/opensearch.html)
-- [Ready2Search](http://ready.to/search/en) - create OpenSearch plugins. [Customized Search through Ready2Search](http://ready.to/search/make/en_make_plugin.htm)
+- [Ready2Search](https://ready.to/search/en) - create OpenSearch plugins. [Customized Search through Ready2Search](https://ready.to/search/make/en_make_plugin.htm)

@@ -55,7 +55,7 @@ slug: Glossary/Grid_Cell
 
 {{ EmbedLiveSample('示例', '300', '280') }}
 
-## 了解更多
+## 参见
 
 ### 属性参考
 

@@ -90,7 +90,7 @@ animation:
 - [움직임 민감성을 위한 더 안전한 웹 애니메이션 설계 · A List Apart 기사](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity/)
 - [움직임 감소 미디어 쿼리 소개 | CSS-Tricks](https://css-tricks.com/introduction-reduced-motion-media-query/)
 - [반응형 움직임 디자인 | WebKit](https://webkit.org/blog/7551/responsive-design-for-motion/)
-- [MDN WCAG 이해하기, 가이드라인 2.2 설명](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.2_%e2%80%94_enough_time_provide_users_enough_time_to_read_and_use_content)
+- [MDN WCAG 이해하기, 가이드라인 2.2 설명](/ko/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.2_%e2%80%94_enough_time_provide_users_enough_time_to_read_and_use_content)
 - [Success Criterion 2.2.2 이해하기 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html)
 
 ## 형식 정의

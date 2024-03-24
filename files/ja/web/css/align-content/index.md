@@ -3,7 +3,9 @@ title: align-content
 slug: Web/CSS/align-content
 ---
 
-[CSS](/ja/docs/Web/CSS) の **`align-content`** プロパティは、[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)の交差軸または[グリッド](/ja/docs/Web/CSS/CSS_Grid_Layout)のブロック軸方向の内部のアイテムの間または周囲の空間の配分方法を設定します。
+{{CSSRef}}
+
+[CSS](/ja/docs/Web/CSS) の **`align-content`** プロパティは、[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)の交差軸または[グリッド](/ja/docs/Web/CSS/CSS_grid_layout)のブロック軸方向の内部のアイテムの間または周囲の空間の配分方法を設定します。
 
 下記のインタラクティブデモでは、グリッドレイアウトを使用してこのプロパティの値のいくつかを説明しています。
 
@@ -95,11 +97,11 @@ align-content: unset;
 
 {{CSSInfo}}
 
-## 関連情報
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples">例</h2>
+## 例
 
 ### CSS
 
@@ -239,11 +241,11 @@ display.addEventListener("change", function (evt) {
 
 ### 結果
 
-{{EmbedLiveSample("Examples", 260, 290)}}
+{{EmbedLiveSample("例", 260, 290)}}
 
 ## 仕様書
 
-{{Specifications("css.properties.align-content.grid_context")}}
+{{Specifications}}
 
 ## ブラウザーの互換性
 
@@ -251,9 +253,7 @@ display.addEventListener("change", function (evt) {
 
 ## 関連情報
 
-- CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS フレックスボックスガイド: _[フレックスコンテナー内でのアイテムの配置](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
-- CSS グリッドガイド: _[CSS グリッドレイアウト内でのボックス配置](/ja/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
+- CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS フレックスボックスガイド: _[フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
+- CSS グリッドガイド: _[グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
 - [CSS ボックス配置](/ja/docs/Web/CSS/CSS_Box_Alignment)
-
-{{CSSRef}}

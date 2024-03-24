@@ -84,7 +84,7 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility
 
 Firefox 中一个[久已存在的 bug](https://bugzilla.mozilla.org/show_bug.cgi?id=812687) 因此变得非常显眼。虽然这个问题在 Firefox 的 CSS 网格布局实现中不存在，但它确实暴露了一个我们在使用网格时需要考虑的问题。
 
-目前，在使用 flex 布局时，Firefox 将遵循视觉顺序而不是逻辑顺序浏览文档。[有人认为](http://tink.uk/flexbox-the-keyboard-navigation-disconnect/)，这实际上是一个更好的方法 —— 使 tab 键顺序遵循文档的视觉顺序。然而，事实证明，这是 Firefox 实现中的一个 bug。两种规范都声明逻辑顺序就是源文档的结构顺序，而 tab 键顺序和语音浏览器应遵循文档的逻辑顺序。
+目前，在使用 flex 布局时，Firefox 将遵循视觉顺序而不是逻辑顺序浏览文档。[有人认为](http://tink.uk/flexbox-the-keyboard-navigation-disconnect/)，这实际上是一个更好的方法——使 tab 键顺序遵循文档的视觉顺序。然而，事实证明，这是 Firefox 实现中的一个 bug。两种规范都声明逻辑顺序就是源文档的结构顺序，而 tab 键顺序和语音浏览器应遵循文档的逻辑顺序。
 
 ## 如何处理网格布局的无障碍？
 
@@ -111,4 +111,4 @@ CSS 网格布局中需要注意的另一个问题（在 CSS Flex 布局中程度
 
 依据文档源代码顺序进行可视化显示的概念在 _WCAG（无障碍网页内容指引）成熟标准技巧 - [技巧 C27](https://www.w3.org/TR/WCAG20-TECHS/C27.html)_ 中有详细描述。
 
-作为一种开始思考这些问题的方式，当使用 CSS 网格布局时，建议阅读 Leonie Watson 的 _[Flexbox & the Keyboard Navigation Disconnect](http://tink.uk/flexbox-the-keyboard-navigation-disconnect/)。[来自 ffconf 的 Leoie 的演示视频](https://www.youtube.com/watch?v=spxT2CmHoPk)有助于了解屏幕阅读器如何使用 CSS 的视觉表示进行工作。Adrian Roselli 也发表了 [tab order in various browsers](http://adrianroselli.com/2015/10/html-source-order-vs-css-display-order.html) —— 尽管这是在 Firefox 完全实现网格支持之前。_
+作为一种开始思考这些问题的方式，当使用 CSS 网格布局时，建议阅读 Leonie Watson 的 _[Flexbox & the Keyboard Navigation Disconnect](http://tink.uk/flexbox-the-keyboard-navigation-disconnect/)。[来自 ffconf 的 Leoie 的演示视频](https://www.youtube.com/watch?v=spxT2CmHoPk)有助于了解屏幕阅读器如何使用 CSS 的视觉表示进行工作。Adrian Roselli 也发表了 [tab order in various browsers](http://adrianroselli.com/2015/10/html-source-order-vs-css-display-order.html)——尽管这是在 Firefox 完全实现网格支持之前。_

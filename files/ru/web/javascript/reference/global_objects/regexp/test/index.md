@@ -3,7 +3,7 @@ title: RegExp.prototype.test()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/test
 ---
 
-{{JSRef("Global_Objects", "RegExp")}}
+{{JSRef}}
 
 ## Сводка
 

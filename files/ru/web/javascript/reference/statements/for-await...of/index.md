@@ -112,7 +112,7 @@ getResponseSize("https://jsonplaceholder.typicode.com/photos");
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

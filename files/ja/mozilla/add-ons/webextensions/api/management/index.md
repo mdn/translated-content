@@ -56,7 +56,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/management
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.management")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

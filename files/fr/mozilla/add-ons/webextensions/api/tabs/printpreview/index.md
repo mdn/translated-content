@@ -3,7 +3,7 @@ title: tabs.printPreview()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/printPreview
 ---
 
-{{AddonSidebar()}}Ouvre l'aperçu avant impression pour l'onglet actif.C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).Une extension peut détecter lorsque l'aperçu d'impression a été fermé en écoutant l'événement [afterprint](/fr/docs/Web/Events/afterprint) :
+{{AddonSidebar}}Ouvre l'aperçu avant impression pour l'onglet actif.C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).Une extension peut détecter lorsque l'aperçu d'impression a été fermé en écoutant l'événement [afterprint](/fr/docs/Web/Events/afterprint) :
 
 ```js
 window.addEventListener("afterprint", resumeFunction, false);

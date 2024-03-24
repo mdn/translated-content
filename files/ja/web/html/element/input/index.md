@@ -298,41 +298,41 @@ l10n:
 
 `<input>` 要素の属性には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)が含まれ、さらに次のものがあります。
 
-| 属性                           | 型                                                           | 説明                                                                           |
-| ----------------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| [`accept`](#accept)                 | `file`                                                                  | ファイルアップロードコントロールで期待されるファイル形式のヒント                                   |
-| [`alt`](#alt)                       | `image`                                                                 | image 型の alt 属性です。アクセシビリティのために必要です。                         |
-| [`autocomplete`](#autocomplete)     | `checkbox`、`radio`、ボタンを除くすべて                             | フォームの自動補完機能のためのヒント                                                        |
-| [`capture`](#capture)               | `file`                                                                  | ファイルアップロードコントロールのメディアキャプチャ入力方法                                    |
-| [`checked`](#checked)               | `checkbox`, `radio`                                                     | コマンドやコントロールがチェックされているか                                             |
-| [`dirname`](#dirname)               | `search`, `text`                                                        | フォーム送信時に要素の書字方向を送信するために使用するフォームフィールドの名前 |
-| [`disabled`](#disabled)             | すべて                                                                     | コントロールが無効であるかどうか                                                  |
-| [`form`](#form)                     | すべて                                                                     | コントロールを form 要素に関連付ける                                            |
-| [`formaction`](#formaction)         | `image`, `submit`                                                       | フォームの送信に使用する URL                                                        |
-| [`formenctype`](#formenctype)       | `image`, `submit`                                                       | フォームの送信に使用するデータセットのエンコード種別                                |
-| [`formmethod`](#formmethod)         | `image`, `submit`                                                       | フォームの送信に使用する HTTP メソッド                                                |
-| [`formnovalidate`](#formnovalidate) | `image`, `submit`                                                       | フォームの送信でフォームの検証をバイパス                                    |
-| [`formtarget`](#formtarget)         | `image`, `submit`                                                       | フォーム送信に使用する閲覧コンテキスト                                                  |
-| [`height`](#height)                 | `image`                                                                 | {{htmlelement('img')}} の height 属性と同じで、垂直方向の大きさ               |
-| [`list`](#list)                     | `hidden`, `password`, `checkbox`, `radio`, ボタンを除くすべて       | 自動補完の選択肢の入った {{htmlelement('datalist')}} の id 属性の値  |
-| [`max`](#max)                       | `date`, `month`, `week`, `time`, `datetime-local`, `range`              | 最大値                                                                         |
-| [`maxlength`](#maxlength)           | `text`, `search`, `url`, `tel`, `email`, `password`                     | `value` の最大長（文字数）                                      |
-| [`min`](#min)                       | `date`, `month`, `week`, `time`, `datetime-local`, `range`              | 最小値                                                                         |
-| [`minlength`](#minlength)           | `text`, `search`, `url`, `tel`, `email`, `password`                     | `value` の最短長（文字数）                                      |
-| [`multiple`](#multiple)             | `email`, `file`                                                         | 論理属性。複数の値を許可するかどうか                                             |
-| [`name`](#name)                     | すべて                                                                     | 入力欄コントロールの名前。名前/値の組の部分としてフォームと一緒に送信される        |
-| [`pattern`](#pattern)               | `text`, `search`, `url`, `tel`, `email`, `password`                     | 有効になるために `value` が一致する必要があるパターン                                            |
-| [`placeholder`](#placeholder)       | `text`, `search`, `url`, `tel`, `email`, `password`, `number`           | フォームコントロールが空の時にフォームコントロール内に表示される内容                        |
-| [`popovertarget`](#popovertarget)             | `button`                                                                | `<input type="button">` がポップオーバー要素の制御用として指定する              |
-| [`popovertargetaction`](#popovertargetaction) | `button`                                                                | ポップオーバー制御で実行するアクションを指定する                            |
-| [`readonly`](#readonly)             | `hidden`, `range`, `color`, `checkbox`, `radio`, ボタンを除くすべて | 論理属性。値が編集できない                                                    |
-| [`required`](#required)             | `hidden`, `range`, `color`, ボタンを除くすべて                      | 論理属性。フォームが送信できるようにするためには値が必要          |
-| [`size`](#size)                     | `text`, `search`, `url`, `tel`, `email`, `password`                     | コントロールの大きさ                                                                   |
-| [`src`](#src)                       | `image`                                                                 | {{htmlelement('img')}} の `src` 属性と同じで、画像リソースのアドレス         |
-| [`step`](#step)                     | `date`, `month`, `week`, `time`, `datetime-local`, `range`              | 有効と見なされる増分                                                     |
-| [`type`](#type)                     | すべて                                                                     | フォームコントロールの型                                                                  |
-| [`value`](#value)                   | すべて                                                                     | コントロールの初期値                                                      |
-| [`width`](#width)                   | `image`                                                                 | {{htmlelement('img')}} の `width` 属性と同じで、水平方向の大きさ                                  |
+| 属性                                          | 型                                                                  | 説明                                                                           |
+| --------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| [`accept`](#accept)                           | `file`                                                              | ファイルアップロードコントロールで期待されるファイル形式のヒント               |
+| [`alt`](#alt)                                 | `image`                                                             | image 型の alt 属性です。アクセシビリティのために必要です。                    |
+| [`autocomplete`](#autocomplete)               | `checkbox`、`radio`、ボタンを除くすべて                             | フォームの自動補完機能のためのヒント                                           |
+| [`capture`](#capture)                         | `file`                                                              | ファイルアップロードコントロールのメディアキャプチャ入力方法                   |
+| [`checked`](#checked)                         | `checkbox`, `radio`                                                 | コマンドやコントロールがチェックされているか                                   |
+| [`dirname`](#dirname)                         | `search`, `text`                                                    | フォーム送信時に要素の書字方向を送信するために使用するフォームフィールドの名前 |
+| [`disabled`](#disabled)                       | すべて                                                              | コントロールが無効であるかどうか                                               |
+| [`form`](#form)                               | すべて                                                              | コントロールを form 要素に関連付ける                                           |
+| [`formaction`](#formaction)                   | `image`, `submit`                                                   | フォームの送信に使用する URL                                                   |
+| [`formenctype`](#formenctype)                 | `image`, `submit`                                                   | フォームの送信に使用するデータセットのエンコード種別                           |
+| [`formmethod`](#formmethod)                   | `image`, `submit`                                                   | フォームの送信に使用する HTTP メソッド                                         |
+| [`formnovalidate`](#formnovalidate)           | `image`, `submit`                                                   | フォームの送信でフォームの検証をバイパス                                       |
+| [`formtarget`](#formtarget)                   | `image`, `submit`                                                   | フォーム送信に使用する閲覧コンテキスト                                         |
+| [`height`](#height)                           | `image`                                                             | {{htmlelement('img')}} の height 属性と同じで、垂直方向の大きさ                |
+| [`list`](#list)                               | `hidden`, `password`, `checkbox`, `radio`, ボタンを除くすべて       | 自動補完の選択肢の入った {{htmlelement('datalist')}} の id 属性の値            |
+| [`max`](#max)                                 | `date`, `month`, `week`, `time`, `datetime-local`, `range`          | 最大値                                                                         |
+| [`maxlength`](#maxlength)                     | `text`, `search`, `url`, `tel`, `email`, `password`                 | `value` の最大長（文字数）                                                     |
+| [`min`](#min)                                 | `date`, `month`, `week`, `time`, `datetime-local`, `range`          | 最小値                                                                         |
+| [`minlength`](#minlength)                     | `text`, `search`, `url`, `tel`, `email`, `password`                 | `value` の最短長（文字数）                                                     |
+| [`multiple`](#multiple)                       | `email`, `file`                                                     | 論理属性。複数の値を許可するかどうか                                           |
+| [`name`](#name)                               | すべて                                                              | 入力欄コントロールの名前。名前/値の組の部分としてフォームと一緒に送信される    |
+| [`pattern`](#pattern)                         | `text`, `search`, `url`, `tel`, `email`, `password`                 | 有効になるために `value` が一致する必要があるパターン                          |
+| [`placeholder`](#placeholder)                 | `text`, `search`, `url`, `tel`, `email`, `password`, `number`       | フォームコントロールが空の時にフォームコントロール内に表示される内容           |
+| [`popovertarget`](#popovertarget)             | `button`                                                            | `<input type="button">` がポップオーバー要素の制御用として指定する             |
+| [`popovertargetaction`](#popovertargetaction) | `button`                                                            | ポップオーバー制御で実行するアクションを指定する                               |
+| [`readonly`](#readonly)                       | `hidden`, `range`, `color`, `checkbox`, `radio`, ボタンを除くすべて | 論理属性。値が編集できない                                                     |
+| [`required`](#required)                       | `hidden`, `range`, `color`, ボタンを除くすべて                      | 論理属性。フォームが送信できるようにするためには値が必要                       |
+| [`size`](#size)                               | `text`, `search`, `url`, `tel`, `email`, `password`                 | コントロールの大きさ                                                           |
+| [`src`](#src)                                 | `image`                                                             | {{htmlelement('img')}} の `src` 属性と同じで、画像リソースのアドレス           |
+| [`step`](#step)                               | `date`, `month`, `week`, `time`, `datetime-local`, `range`          | 有効と見なされる増分                                                           |
+| [`type`](#type)                               | すべて                                                              | フォームコントロールの型                                                       |
+| [`value`](#value)                             | すべて                                                              | コントロールの初期値                                                           |
+| [`width`](#width)                             | `image`                                                             | {{htmlelement('img')}} の `width` 属性と同じで、水平方向の大きさ               |
 
 標準的な属性の説明の後に、いくつかの非標準的な属性を追加で記載しています。
 
@@ -358,7 +358,7 @@ l10n:
 
   - : 論理属性で、指定された場合は、ページの読み込みが完了したとき（またはその要素を含む {{HTMLElement("dialog")}} が表示されたとき）に、自動的にその入力欄がフォーカスを持つことを示します。
 
-    > **メモ:** `autofocus` 属性がついた要素は、{{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}} イベントが発生する前にフォーカスを得ることがあります。
+    > **メモ:** `autofocus` 属性がついた要素は、{{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} イベントが発生する前にフォーカスを得ることがあります。
 
     文書中で一つの要素だけが `autofocus` 属性を持つことができます。複数の要素に付けた場合は、最初にこの属性を持つ要素がフォーカスを受け取ります。
 
@@ -509,7 +509,7 @@ l10n:
 
     > **メモ:** `pattern` 属性を使用する場合は、期待される書式をユーザーに知らせる説明文を近くに配置してください。また、パターンに一致させるための要件が何であるかを説明するために、[`title`](#title) 属性を含めることもできます。ほとんどのブラウザーはこのタイトルをツールチップとして表示します。ツールチップは改善手段です。
 
- 詳しくは[クライアントサイドの検証](#クライアントサイドの検証)を参照してください。
+詳しくは[クライアント側の検証](#クライアント側の検証)を参照してください。
 
 - `placeholder`
 
@@ -542,7 +542,7 @@ l10n:
 
   - : `required` は論理属性であり、所有するフォームが送信される前に、ユーザーが入力欄の値を指定しなければならないことを示します。`required` 属性は `text`, `search`, `url`, `tel`, `email`, `date`, `month`, `week`, `time`, `datetime-local`, `number`, `password`, `checkbox`, `radio`, `file` の各入力型で対応しています。
 
-    詳しくは[クライアントサイドの検証](#クライアントサイドの検証)および [HTML 属性: `required`](/ja/docs/Web/HTML/Attributes/required) を参照してください。
+    詳しくは[クライアント側の検証](#クライアント側の検証)および [HTML 属性: `required`](/ja/docs/Web/HTML/Attributes/required) を参照してください。
 
 - `size`
 
@@ -569,7 +569,7 @@ l10n:
 
     > **メモ:** ユーザーが入力したデータが刻みの設定に従っていない場合、その値は制約検証で無効とみなされ、`:invalid` 擬似クラスに一致するようになります。
 
-    詳しくは[クライアントサイドの検証](#クライアントサイドの検証)を参照してください。
+    詳しくは[クライアント側の検証](#クライアント側の検証)を参照してください。
 
 - `tabindex`
 
@@ -844,7 +844,9 @@ l10n:
 
 ```html hidden
 <input id="checkboxInput" type="checkbox" />
-<label for="checkboxInput">このチェックボックスのオンとオフを切り替えてください</label>
+<label for="checkboxInput"
+  >このチェックボックスのオンとオフを切り替えてください</label
+>
 ```
 
 ```css
@@ -910,7 +912,10 @@ input[pattern] {
 ```css
 input.custom {
   caret-color: red;
-  font: 16px "Helvetica", "Arial", "sans-serif";
+  font:
+    16px "Helvetica",
+    "Arial",
+    "sans-serif";
 }
 ```
 
@@ -952,7 +957,9 @@ HTML の要素に色を追加することの関する詳しい情報は、次の
 
 <!-- 暗黙的なラベル -->
 <p>
-  <label>名前を入力してください: <input id="name" type="text" size="30" /></label>
+  <label
+    >名前を入力してください: <input id="name" type="text" size="30"
+  /></label>
 </p>
 
 <!-- 明示的なラベル -->
@@ -980,7 +987,7 @@ HTML の要素に色を追加することの関する詳しい情報は、次の
 
 > **警告:** クライアント側の検証は便利ですが、サーバーが有効なデータを受け取ることを保証するものではありません。データが特定の形式でなければならない場合は、必ずサーバー側でも検証を行い、形式が無効な場合は [HTTP の `400` レスポンス](/ja/docs/Web/HTTP/Status/400)を返してください。
 
-上記の [UI 擬似クラス](#ui_擬似クラス)の節で述べたように、CSS を用いて、それぞれの入力欄の現在の状態に基づく {{cssxref(":valid")}} または {{cssxref(":invalid")}} の UI 状態に基づいて入力欄にスタイル設定をすることに加え、フォームを送信（しようと）したときに、ブラウザーはクライアントサイドの検証を行います。フォームを送信する時に、制約検証に不合格になったフォームコントロールがある場合、対応しているブラウザーは、最初の無効なフォームコントロールにエラーメッセージを表示します。エラー種別に基づいた既定のメッセージを表示したり、ユーザーが設定したメッセージを表示したりします。
+上記の [UI 擬似クラス](#ui_擬似クラス)の節で述べたように、CSS を用いて、それぞれの入力欄の現在の状態に基づく {{cssxref(":valid")}} または {{cssxref(":invalid")}} の UI 状態に基づいて入力欄にスタイル設定をすることに加え、フォームを送信（しようと）したときに、ブラウザーはクライアント側の検証を行います。フォームを送信する時に、制約検証に不合格になったフォームコントロールがある場合、対応しているブラウザーは、最初の無効なフォームコントロールにエラーメッセージを表示します。エラー種別に基づいた既定のメッセージを表示したり、ユーザーが設定したメッセージを表示したりします。
 
 一部の入力型やその他の属性によっては、入力に対して有効な値を制限するものがあります。例えば、`<input type="number" min="2" max="10" step="2">` の場合、2、4、6、8、10 の数値のみが有効になります。様々なエラーが発生する可能性があります。例えば、`rangeUnderflow` エラー（値が 2 より小さい場合）、`rangeOverflow` （10 より大きい場合）、`stepMismatch` （値が 2 から 10 の間の数字で偶数の整数でない (`step` 属性の要件に合わない) 場合）、`typeMismatch` （値が数値ではない場合）などです。
 
@@ -1108,7 +1115,9 @@ function validate(input) {
 
 ```html
 <form>
-  <label for="name">ユーザー名を入力してください（英大文字および小文字）: </label>
+  <label for="name"
+    >ユーザー名を入力してください（英大文字および小文字）:
+  </label>
   <input type="text" name="name" id="name" required pattern="[A-Za-z]+" />
   <button>Submit</button>
 </form>
@@ -1131,7 +1140,7 @@ nameInput.addEventListener("invalid", () => {
     nameInput.setCustomValidity("名前を入力してください。");
   } else {
     nameInput.setCustomValidity(
-      "ユーザー名には英大文字と小文字のみが使えます。入力しなおしてください。"
+      "ユーザー名には英大文字と小文字のみが使えます。入力しなおしてください。",
     );
   }
 });

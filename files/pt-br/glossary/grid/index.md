@@ -3,6 +3,8 @@ title: Grade
 slug: Glossary/Grid
 ---
 
+{{GlossarySidebar}}
+
 Uma _grade no CSS_ é definida usando o valor `grid` da propriedade {{cssxref("display")}}; você pode definir colunas e linhas na sua grade usando as propridades {{cssxref("grid-template-rows")}} e {{cssxref("grid-template-columns")}}.
 
 A grade que você define usando essas propriedades é descrita como uma _grade explícita_.

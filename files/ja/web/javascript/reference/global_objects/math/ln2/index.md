@@ -35,7 +35,7 @@ getNatLog2(); // 0.6931471805599453
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Math.LN2")}}
+{{Compat}}
 
 ## 関連情報
 

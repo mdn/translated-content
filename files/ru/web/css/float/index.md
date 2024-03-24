@@ -91,8 +91,6 @@ As mentioned above, when an element is floated it is taken out of the normal flo
 
 In the image below, there are three red squares. Two are floated left and one is floated right. Note that the second "left" red square is placed to the right of the first. Additional squares would continue to stack to the right until they filled the containing box, after which they would wrap to the next line.
 
-![](/@api/deki/files/4927/=floats.png)
-
 ### Clearing floats
 
 In the example above, the floated elements are shorter vertically than the block of text they're floated within. However, if the text was not long enough to wrap below the bottom of all the floats, we might see unanticipated effects. If the paragraph above, for instance, only read "Lorem ipsum dolor sit amet," and was followed by another heading of the same style as the "Floats Example" heading, the second heading would appear between the red boxes. Most likely, we want the next heading to be aligned all the way to the left. To accomplish that, we'd need to clear the floats.
@@ -120,13 +118,9 @@ p.withRedBoxes {
 
 ## Specifications
 
-| Specification                                                  | Status                | Comment                                                                                                                                                 |
-| -------------------------------------------------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Box', '#float', 'float')}}                    | {{Spec2('CSS3 Box')}} | Lots of new values, not all clearly defined yet. Any differences in behavior unrelated to new features are expected to be unintentional; please report. |
-| {{SpecName('CSS2.1', 'visuren.html#float-position', 'float')}} | {{Spec2('CSS2.1')}}   | No change.                                                                                                                                              |
-| {{SpecName('CSS1', '#float', 'float')}}                        | {{Spec2('CSS1')}}     | Initial definition.                                                                                                                                     |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

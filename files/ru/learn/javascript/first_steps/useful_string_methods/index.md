@@ -612,15 +612,3 @@ textarea.onkeyup = function () {
 Нельзя не согласиться с тем, что способность обрабатывать слова и предложения в программировании очень важна — особенно в JavaScript, поскольку веб-сайты — все связаны с людьми. Эта статья дала вам основы, которые вам нужно знать о манипуляции строками на данный момент. Это пойдёт вам на пользу, когда вы займётесь более сложными темами в будущем. Далее мы рассмотрим последний важный тип данных, на который нам нужно сосредоточиться в краткосрочной перспективе — массивы.
 
 {{PreviousMenuNext("Learn/JavaScript/Первые_шаги/Строки", "Learn/JavaScript/Первые_шаги/Arrays", "Learn/JavaScript/Первые_шаги")}}
-
-## В этом модуле
-
-- [Что такое JavaScript?](/ru/docs/Learn/JavaScript/%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B5_%D1%88%D0%B0%D0%B3%D0%B8/What_is_JavaScript)
-- [Знакомство с JavaScript](/ru/docs/Learn/JavaScript/%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B5_%D1%88%D0%B0%D0%B3%D0%B8/A_first_splash)
-- [Устранение ошибок в JavaScript](/ru/docs/Learn/JavaScript/%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B5_%D1%88%D0%B0%D0%B3%D0%B8/%D0%A7%D1%82%D0%BE_%D0%BF%D0%BE%D1%88%D0%BB%D0%BE_%D0%BD%D0%B5_%D1%82%D0%B0%D0%BA)
-- [Переменные — место хранения необходимой информации](/ru/docs/Learn/JavaScript/%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B5_%D1%88%D0%B0%D0%B3%D0%B8/Variables)
-- [Базовая математика в JavaScript](/ru/docs/Learn/JavaScript/%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B5_%D1%88%D0%B0%D0%B3%D0%B8/Math)
-- [Работа с текстом — строки в JavaScript](/ru/docs/Learn/JavaScript/%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B5_%D1%88%D0%B0%D0%B3%D0%B8/%D0%A1%D1%82%D1%80%D0%BE%D0%BA%D0%B8)
-- [Полезные методы для строк](/ru/docs/Learn/JavaScript/%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B5_%D1%88%D0%B0%D0%B3%D0%B8/Useful_string_methods)
-- [Массивы](/ru/docs/Learn/JavaScript/%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B5_%D1%88%D0%B0%D0%B3%D0%B8/Arrays)
-- [Генератор глупых историй](/ru/docs/Learn/JavaScript/%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B5_%D1%88%D0%B0%D0%B3%D0%B8/%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D1%82%D0%B5%D0%BB%D1%8C_%D0%B3%D0%BB%D1%83%D1%8B%D1%85_%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D0%B9)

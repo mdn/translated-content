@@ -37,6 +37,6 @@ p {
 ## 参见
 
 - [行级内容](/zh-CN/docs/Glossary/Inline-level_content)
-- [块格式化上下文](/zh-CN/docs/Web/Guide/CSS/Block_formatting_context)
+- [区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)
 - {{cssxref("display")}}
 - [`writing-mode`](/zh-CN/docs/Web/CSS/writing-mode)

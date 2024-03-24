@@ -40,7 +40,7 @@ const writableStream = new WritableStream({
     // コントローラーで何かをする
 
     // 必要に応じてストリームをエラーにする
-    controller.error('My error is broken');
+    controller.error("My error is broken");
   },
   write(chunk, controller) {
     // ...

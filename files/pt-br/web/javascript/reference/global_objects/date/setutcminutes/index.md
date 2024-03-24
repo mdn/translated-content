@@ -45,13 +45,11 @@ theBigDay.setUTCMinutes(43);
 
 ## Especificações
 
-| Especificação                                                                                |
-| -------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date.prototype.setutcminutes', 'Date.prototype.setUTCMinutes')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.setUTCMinutes")}}
+{{Compat}}
 
 ## Veja também
 

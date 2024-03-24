@@ -403,7 +403,7 @@ class Bar extends calculatorMixin(randomizerMixin(Foo)) {}
 
 Класс не может быть переопределён. Попытка этого приведёт к `SyntaxError` .
 
-Если мы запускаете код в веб браузере, к примеру в Firefox Web Console (**Tools** > **Web Developer** > **Web Console**) и вы используете ('Run') определение класса с одним и тем же именем дважды, вы получите `SyntaxError: redeclaration of let ClassName;`. (Обсуждение по ошибке можно посмотреть в {{Bug(1428672)}}.) Chrome Developer Tools возвращает сообщение типа `Uncaught SyntaxError: Identifier 'ClassName' has already been declared at <anonymous>:1:1`.
+Если мы запускаете код в веб браузере, к примеру в Firefox Web Console (**Tools** > **Web Developer** > **Web Console**) и вы используете ('Run') определение класса с одним и тем же именем дважды, вы получите `SyntaxError: redeclaration of let ClassName;`. (Обсуждение по ошибке можно посмотреть в [Firefox bug 1428672](https://bugzil.la/1428672).) Chrome Developer Tools возвращает сообщение типа `Uncaught SyntaxError: Identifier 'ClassName' has already been declared at <anonymous>:1:1`.
 
 ## Смотрите также
 

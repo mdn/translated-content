@@ -66,18 +66,13 @@ var myObj = new MyNumberType(4);
 myObj + 3; // 7
 ```
 
-## Espeficações
+## Especificações
 
-| Especificação                                                                        | Status               | Cometário                                          |
-| ------------------------------------------------------------------------------------ | -------------------- | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                  | {{Spec2('ES1')}}     | Initial definition. Implemented in JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.2.4.4', 'Object.prototype.valueOf')}}                   | {{Spec2('ES5.1')}}   |                                                    |
-| {{SpecName('ES6', '#sec-object.prototype.valueof', 'Object.prototype.valueOf')}}     | {{Spec2('ES6')}}     |                                                    |
-| {{SpecName('ESDraft', '#sec-object.prototype.valueof', 'Object.prototype.valueOf')}} | {{Spec2('ESDraft')}} |                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Object.valueOf")}}
+{{Compat}}
 
 ## Veja também
 

@@ -1,21 +1,26 @@
 ---
-title: Response.body
+title: "Response: body プロパティ"
+short-title: body
 slug: Web/API/Response/body
 l10n:
-  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
+  sourceCommit: 84b1729de4f527c8d81e44a38fca70ea4db97922
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 **`body`** は {{domxref("Response")}} インターフェイスの読み取り専用プロパティで、本体コンテンツの {{domxref("ReadableStream")}} です。
 
 ## 値
 
-{{domxref("ReadableStream")}}、または [`body`](/ja/docs/Web/API/Response/Response#body) プロパティが null で構築された `Response` オブジェクト、あるいは[本体](/ja/docs/Web/HTTP/Messages#body_2)を持たない実際の [HTTP レスポンス](/ja/docs/Web/HTTP/Messages#http_responses)に対しては [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) です。
+{{domxref("ReadableStream")}}、または `Response` オブジェクトが[構築](/ja/docs/Web/API/Response/Response)時に [`body`](/ja/docs/Web/API/Response/Response#body) プロパティが null であった場合、あるいは [HTTP レスポンス](/ja/docs/Web/HTTP/Messages#http_レスポンス)に[本体](/ja/docs/Web/HTTP/Messages#本体_2)がなかった場合には [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) になります。
+
+ストリームは[読み取り可能なバイトストリーム](/ja/docs/Web/API/Streams_API/Using_readable_byte_streams)で、 {{domxref("ReadableStreamBYOBReader")}} を用いたゼロコピー移譲に対応しています。
 
 > **メモ:** 現在のブラウザーは、本体なしのレスポンス（例えば、 [`HEAD`](/ja/docs/Web/HTTP/Methods/HEAD) リクエストに対するレスポンスや、 [`204 No Content`](/ja/docs/Web/HTTP/Status/204) レスポンス）には `body` プロパティを `null` に設定するという仕様に実際には適合していません。
 
 ## 例
+
+### 画像の複製
 
 [単純なストリームポンプ](https://mdn.github.io/dom-examples/streams/simple-pump/)の例では、画像を読み取り、 `response.body` を使用してレスポンスのストリームを公開し、{{domxref("ReadableStream.getReader()", "ReadableStream.getReader()")}} を使用してリーダーを作成し、そのストリームのチャンクを 2 番目のカスタム読み取り可能なストリームのキューに入れます。画像の同一コピーを効果的に作成します。
 
@@ -54,6 +59,22 @@ fetch("./tortoise.png")
   .then((blob) => URL.createObjectURL(blob))
   .then((url) => console.log((image.src = url)))
   .catch((err) => console.error(err));
+```
+
+### BYOB リーダーの作成
+
+この例では、 {{domxref("ReadableStreamBYOBReader")}} を使用して本体から {{domxref("ReadableStream.getReader()", "ReadableStream.getReader({mode: 'byob'})")}} を構築します。このリーダーを使用して、レスポンスデータのゼロコピー移譲を実装することができます。
+
+```js
+async function getProducts(url) {
+  const response = await fetch(url);
+  const reader = response.body.getReader({ mode: "byob" });
+  // このレスポンスを読む
+}
+
+getProducts(
+  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+);
 ```
 
 ## 仕様書

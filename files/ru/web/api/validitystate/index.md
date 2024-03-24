@@ -38,7 +38,7 @@ slug: Web/API/ValidityState
 
 {{Specifications}}
 
-## Совместимость с браузером
+## Совместимость с браузерами
 
 {{Compat}}
 

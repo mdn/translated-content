@@ -3,7 +3,7 @@ title: extension.getViews()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/getViews
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Renvoie un tableau des objets [Window](/fr/docs/Web/API/Window) pour chacune des pages exécutées dans l'extension en cours. Cela inclut, par exemple :
 

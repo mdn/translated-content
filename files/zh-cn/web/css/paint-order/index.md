@@ -3,7 +3,7 @@ title: paint-order
 slug: Web/CSS/paint-order
 ---
 
-{{CSSRef}}{{seecompattable}}
+{{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS) **`paint-order`** 属性可以让你控制文本区域和图形绘制的填充和绘制（和 markers）的顺序
 

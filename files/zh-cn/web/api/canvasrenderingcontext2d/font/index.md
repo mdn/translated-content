@@ -46,7 +46,7 @@ ctx.strokeText("Hello world", 50, 100);
 
 ### 使用 CSS 字体加载 API 加载字体
 
-借助{{domxref("FontFace")}} API 的帮助，您可以在画布中使用字体之前显式加载字体。
+借助{{domxref("FontFace")}} API 的帮助，你可以在画布中使用字体之前显式加载字体。
 
 ```
 let f = new FontFace('test', 'url(x)');

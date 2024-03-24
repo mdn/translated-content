@@ -9,7 +9,7 @@ l10n:
 
 Web Bluetooth API は、Bluetooth Low Energy の周辺機器に接続して操作する機能を提供します。
 
-> **メモ:** この API は [Web Workers](/ja/docs/Web/API/Web_Workers_API) (not exposed via {{domxref("WorkerNavigator")}}) では _使用できません_ 。({{domxref("WorkerNavigator")}} 経由では公開されていません)
+> **メモ:** この API は [Web Workers](/ja/docs/Web/API/Web_Workers_API) では _使用できません_ 。({{domxref("WorkerNavigator")}} 経由では公開されていません)
 
 ## インターフェイス
 

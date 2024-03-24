@@ -134,8 +134,8 @@ block_1: {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Statements/continue", "continue")}}
-- {{jsxref("Statements/label", "label")}}
+- {{jsxref("Statements/label", "label", "", 1)}}
 - {{jsxref("Statements/switch", "switch")}}

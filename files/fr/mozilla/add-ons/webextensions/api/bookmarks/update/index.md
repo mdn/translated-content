@@ -3,7 +3,7 @@ title: bookmarks.update()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/update
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 **`bookmarks.update()`** met à jour le titre et / ou l'URL d'un signet ou le nom d'un dossier de signets.
 

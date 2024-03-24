@@ -1,8 +1,9 @@
 ---
 title: "WebSocket: message イベント"
+short-title: message
 slug: Web/API/WebSocket/message_event
 l10n:
-  sourceCommit: 4f0f7386262363103a3e9cf482bb348d8570b331
+  sourceCommit: 6a0f22ee0b3a854ed37271373cbc1d1099c0d361
 ---
 
 {{APIRef}}
@@ -30,15 +31,19 @@ onmessage = (event) => {};
 _以下に示したプロパティに加え、親インターフェイスである {{domxref("Event")}} から継承したプロパティも利用できます。_
 
 - {{domxref("MessageEvent.data", "data")}} {{ReadOnlyInline}}
-  - : メッセージ送信者から送信されたデータです。
+  - : メッセージ送信者から送信されたデータです。このプロパティの型は、WebSocket メッセージの種類と {{domxref("WebSocket.binaryType")}} の値によって変わります。
+    - メッセージの種類が "text" の場合、このフィールドは文字列です。
+    - メッセージの種類が "binary" 型の場合、このプロパティの型はこのソケットの `binaryType` から推測することができます。
+      - {{jsxref("ArrayBuffer")}}: `binaryType` が `"arraybuffer"` の場合
+      - {{domxref("Blob")}}: `binaryType` が `"blob"` の場合、これは関連付けられたメディア型がありません（{{domxref("Blob.type")}} は `""` です）.
 - {{domxref("MessageEvent.origin", "origin")}} {{ReadOnlyInline}}
   - : 文字列で、メッセージ送信者のオリジンを表します。
+
+{{domxref("MessageEvent")}} インターフェイスのその他のプロパティは存在しますが、 WebSocket API には関係ないため、既定値のままにしています。
+
 - {{domxref("MessageEvent.lastEventId", "lastEventId")}} {{ReadOnlyInline}}
-  - : 文字列で、このイベントの固有の ID を表します。
 - {{domxref("MessageEvent.source", "source")}} {{ReadOnlyInline}}
-  - : `MessageEventSource` （{{domxref("Window")}}, {{domxref("MessagePort")}}, {{domxref("ServiceWorker")}} オブジェクトが成ることができる）で、メッセージ送信者を表します。
 - {{domxref("MessageEvent.ports", "ports")}} {{ReadOnlyInline}}
-  - : {{domxref("MessagePort")}} オブジェクトの配列で、メッセージが送信されるチャネルに関連するポートを表します（チャネルメッセージングや共有ワーカーにメッセージを送信する場合など、適切な場合）。
 
 ## 例
 

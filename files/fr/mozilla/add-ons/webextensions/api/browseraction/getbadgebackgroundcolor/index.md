@@ -3,7 +3,7 @@ title: browserAction.getBadgeBackgroundColor()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/getBadgeBackgroundColor
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Obtient la couleur d'arrière plan du badge de l'action du navigateur.
 

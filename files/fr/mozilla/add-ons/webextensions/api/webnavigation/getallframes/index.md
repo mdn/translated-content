@@ -3,7 +3,7 @@ title: webNavigation.getAllFrames()
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/getAllFrames
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Étant donné un ID d'onglet, récupère des informations sur toutes les images qu'il contient.
 

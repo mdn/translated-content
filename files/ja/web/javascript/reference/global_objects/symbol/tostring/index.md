@@ -51,7 +51,7 @@ Symbol.for("foo").toString(); // "Symbol(foo)"
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Symbol.toString")}}
+{{Compat}}
 
 ## 関連情報
 

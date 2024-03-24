@@ -3,7 +3,7 @@ title: Date.prototype.getYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getYear
 ---
 
-{{JSRef("Global_Objects", "Date")}} {{Deprecated_header("")}}
+{{JSRef}} {{Deprecated_header("")}}
 
 **`getYear()`** 方法返回指定的本地日期的年份。因为 `getYear()` 不返回千禧年（"year 2000 problem"），所以这个方法不再被使用，现在替换为 {{jsxref("Date.getFullYear", "getFullYear")}}。
 

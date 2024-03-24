@@ -73,7 +73,7 @@ fetch(minhaRequisicao)
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Promise.finally")}}
+{{Compat}}
 
 ## Veja também
 

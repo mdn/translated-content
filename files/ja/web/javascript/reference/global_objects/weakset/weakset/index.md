@@ -46,7 +46,7 @@ ws.has(bar); // true, bar は残っている
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.WeakSet.WeakSet")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -142,6 +142,5 @@ Este elemento incluye los [global attributes](/es/docs/Web/HTML/Global_attribute
 
 ## See also
 
-- {{HTMLElement("applet")}} {{deprecated_inline}}
 - {{HTMLElement("embed")}}
 - {{HTMLElement("param")}}

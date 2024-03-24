@@ -55,7 +55,7 @@ Host: developer.mozilla.org
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Host")}}
+{{Compat}}
 
 ## 関連情報
 

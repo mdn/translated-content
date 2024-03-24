@@ -1,13 +1,14 @@
 ---
-title: Navigator.serial
+title: "Navigator: serial プロパティ"
+short-title: serial
 slug: Web/API/Navigator/serial
 l10n:
-  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
-{{domxref("Navigator")}} インターフェイスの読み取り専用プロパティ **`serial`** は、{{domxref("Web Serial API")}} のエントリーポイントを表す {{domxref("Serial")}} オブジェクトを返します。
+**`serial`** は {{domxref("Navigator")}} インターフェイスの読み取り専用プロパティで、{{domxref("Web Serial API", "ウェブシリアル API", "", 1)}} のエントリーポイントを表す {{domxref("Serial")}} オブジェクトを返します。
 
 読み取り時、常に同じ {{domxref("Serial")}} オブジェクトのインスタンスが返ります。
 

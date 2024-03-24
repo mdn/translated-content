@@ -1,6 +1,8 @@
 ---
 title: 全画面 API のガイド
 slug: Web/API/Fullscreen_API/Guide
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{DefaultAPISidebar("Fullscreen API")}}
@@ -67,6 +69,10 @@ if (elem.requestFullscreen) {
 - {{DOMxRef("Document.fullscreenEnabled")}}
   - : `fullscreenEnabled` プロパティは、現在文書内の全画面モードがリクエストされる状態であるかどうかを指示します。
 
+### モバイルブラウザーのビューポートの拡大縮小
+
+モバイルブラウザーによっては、全画面モードのときにビューポートメタタグの設定を無視し、ユーザーによる拡大縮小をブロックするものがあります。例えば、全画面モードでないときにピンチ操作で拡大縮小することができたとしても、全画面モードで表示されたページではピンチ操作で拡大縮小するジェスチャーが動作しないことがあります。
+
 ## ユーザーが知りたいこと
 
 ユーザーには、<kbd>Esc</kbd> キー（または <kbd>F11</kbd>）を押して全画面モードを終了できることを必ず伝えておくとよいでしょう。
@@ -109,9 +115,9 @@ function toggleFullScreen() {
 }
 ```
 
-これは {{DOMxRef("document")}} の `fullscreenElement` 属性の値を調べることから始まります（`moz`, `ms`, `webkit` のいずれかを接頭辞に持つものをチェックします）。もし `null` ならば、文書内のモードは現在ウィンドウモードなので、フルスクリーンモードに切り替える必要があります。全画面モードへの切り替えは {{DOMxRef("element.requestFullscreen()")}} を呼び出すことで行われます。
+これは {{DOMxRef("document")}} の `fullscreenElement` 属性の値を調べることから始まります。もし `null` ならば、文書内のモードは現在ウィンドウモードなので、全画面モードに切り替える必要があります。全画面モードへの切り替えは {{DOMxRef("element.requestFullscreen()")}} を呼び出すことで行われます。
 
-もし既に全画面モードが有効な場合（`fullscreenElement` が non`null`）、 {{DOMxRef("document.exitFullscreen()")}} を呼び出すことになります。
+もし既に全画面モードが有効な場合（`fullscreenElement` が `null` でない場合）、 {{DOMxRef("document.exitFullscreen()")}} を呼び出すことになります。
 
 ## 接頭辞
 

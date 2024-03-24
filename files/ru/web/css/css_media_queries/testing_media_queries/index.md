@@ -67,11 +67,9 @@ function handleOrientationChange(evt) {
 mediaQueryList.removeListener(handleOrientationChange);
 ```
 
-## Поддержка браузеров
+## Совместимость с браузерами
 
-### `MediaQueryList` interface
-
-{{Compat("api.MediaQueryList")}}
+{{Compat}}
 
 ## See also
 

@@ -37,7 +37,7 @@ Essencialmente todos navegadores (Firefox, Internet Explorer, versões recentes 
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Element.getAttribute")}}
+{{Compat}}
 
 ## Especificação
 

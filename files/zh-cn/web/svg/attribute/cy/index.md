@@ -38,10 +38,22 @@ svg {
 
 对于 {{SVGElement('circle')}}，`cy` 用来定义图形中心的 y 轴坐标。
 
-| 值     | **[\<length>](/zh-CN/docs/Web/SVG/Content_type#Length)** \| **[\<percentage>](/zh-CN/docs/Web/SVG/Content_type#Percentage)** |
-| ------ | ---------------------------------------------------------------------------------------------------------------------------- |
-| 默认值 | `0`                                                                                                                          |
-| 可变性 | Yes                                                                                                                          |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">值</th>
+      <td>{{cssxref("length-percentage")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">默认值</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">可变性</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
 
 **注：**起始于 SVG2，`cy` 是一个几何属性，意味着该属性也可以用作圆的 CSS 属性。
 
@@ -49,10 +61,22 @@ svg {
 
 对于 {{SVGElement('ellipse')}}，`cy` 用来定义图形中心的 y 轴坐标。
 
-| 值     | **[\<length>](/zh-CN/docs/Web/SVG/Content_type#Length)** \| **[\<percentage>](/zh-CN/docs/Web/SVG/Content_type#Percentage)** |
-| ------ | ---------------------------------------------------------------------------------------------------------------------------- |
-| 默认值 | `0`                                                                                                                          |
-| 可变性 | Yes                                                                                                                          |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">值</th>
+      <td>{{cssxref("length-percentage")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">默认值</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">可变性</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
 
 **注：**起始于 SVG2，`cy` 是一个几何属性，意味着该属性也可以用作椭圆的 CSS 属性。
 
@@ -60,10 +84,22 @@ svg {
 
 对于 {{SVGElement('radialGradient')}}，`cy` 用来定义径向渐变终止圆的 y 轴坐标。
 
-| 值     | **[\<length>](/zh-CN/docs/Web/SVG/Content_type#Length)** |
-| ------ | -------------------------------------------------------- |
-| 默认值 | `50%`                                                    |
-| 可变性 | Yes                                                      |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">值</th>
+      <td>{{cssxref("length-percentage")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">默认值</th>
+      <td><code>50%</code></td>
+    </tr>
+    <tr>
+      <th scope="row">可变性</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
 
 #### 示例
 
@@ -126,3 +162,8 @@ svg {
 ## 规范
 
 {{Specifications}}
+
+## 参见
+
+- {{SVGAttr("cx")}}
+- {{SVGAttr("r")}}

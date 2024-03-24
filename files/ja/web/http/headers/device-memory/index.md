@@ -55,7 +55,7 @@ Device-Memory: 1
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Device-Memory")}}
+{{Compat}}
 
 ## 関連情報
 

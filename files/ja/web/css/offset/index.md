@@ -9,6 +9,8 @@ slug: Web/CSS/offset
 
 > **メモ:** 仕様書の早期の版では、このプロパティを `motion` と呼んでいました。
 
+{{EmbedInteractiveExample("pages/css/offset.html")}}
+
 ## 構成要素のプロパティ
 
 このプロパティは以下の CSS プロパティの一括指定です。

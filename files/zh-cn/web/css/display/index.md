@@ -80,10 +80,10 @@ display: unset;
 
         如果它的外部显示类型是 `inline` 或 `run-in`，并且它参与一个块或者内联格式上下文，那么它将生成一个内联盒子。否则它将生成一个块容器盒。
 
-        根据其他属性的值（例如 {{CSSxRef("position")}}、{{CSSxRef("float")}} 或 {{CSSxRef("overflow")}}）以及它自身是否参与到块或者内联格式化上下文，它要么为它的内容建立新的[块级格式化上下文](/zh-CN/docs/Web/Guide/CSS/Block_formatting_context)（BFC），要么将其内容集成到其父元素的格式化上下文中。
+        根据其他属性的值（例如 {{CSSxRef("position")}}、{{CSSxRef("float")}} 或 {{CSSxRef("overflow")}}）以及它自身是否参与到块或者内联格式化上下文，它要么为它的内容建立新的[区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)（BFC），要么将其内容集成到其父元素的格式化上下文中。
 
     - `flow-root`
-      - : 该元素生成一个块级元素盒，其会建立一个新的[块级格式化上下文](/zh-CN/docs/Web/Guide/CSS/Block_formatting_context)，定义格式化上下文的根元素。
+      - : 该元素生成一个块级元素盒，其会建立一个新的[区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)，定义格式化上下文的根元素。
     - `table`
       - : 该元素的行为类似于 HTML 中的 {{HTMLElement("table")}} 元素。它定义了一个块级别的盒子。
     - `flex`
@@ -232,11 +232,9 @@ display: unset;
 - [弹性盒基础概念](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
 - [对齐弹性容器中的弹性项目](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
 - [控制 Flex 子元素在主轴上的比例](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
-- [跨浏览器弹性盒的混合](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox)
 - [掌握弹性物件的包装](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)
 - [弹性元素排序](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)
 - [弹性盒子与其他布局方法的联系](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods)
-- [弹性盒的向后兼容](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox)
 - [弹性盒的典型用例](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)
 
 ### display: grid

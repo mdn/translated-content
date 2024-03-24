@@ -77,7 +77,7 @@ Não faz parte de nenhuma especificação ou rascunho.
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.X-XSS-Protection")}}
+{{Compat}}
 
 ## Veja também
 

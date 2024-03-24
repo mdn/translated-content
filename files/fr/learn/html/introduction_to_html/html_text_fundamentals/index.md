@@ -831,7 +831,7 @@ Ce liquide est **hautement toxique**.
 
 Je compte sur vous. **Ne soyez pas en retard** !
 
-En HTML, nous utilisons l'élément {{htmlelement("strong")}} (forte importance) comme balise de telles circonstances. En plus de rendre le document plus lisible, ces balises sont reconnues par les lecteurs d'écran et énoncées avec des intonations différentes. Par défaut, les navigateurs mettent le texte marqué en gras, mais il ne faut pas utiliser cette balise pour mettre en gras. Pour cela, utilisez un élément {{htmlelement("span")}}} et du CSS, ou plus simplement un élément {{htmlelement("b")}} (voir ci-dessous).
+En HTML, nous utilisons l'élément [`<strong>`](/fr/docs/Web/HTML/Element/strong) (forte importance) comme balise de telles circonstances. En plus de rendre le document plus lisible, ces balises sont reconnues par les lecteurs d'écran et énoncées avec des intonations différentes. Par défaut, les navigateurs mettent le texte marqué en gras, mais il ne faut pas utiliser cette balise pour mettre en gras. Pour cela, utilisez un élément [`<span>`](/fr/docs/Web/HTML/Element/span) et du CSS, ou plus simplement un élément [`<b>`](/fr/docs/Web/HTML/Element/b) (voir ci-dessous).
 
 ```html
 <p>Ce liquide est <strong>hautement toxique</strong>.</p>

@@ -3,7 +3,7 @@ title: String.prototype.fixed()
 slug: Web/JavaScript/Reference/Global_Objects/String/fixed
 ---
 
-{{JSRef("Global_Objects", "String")}} {{deprecated_header}}
+{{JSRef}} {{deprecated_header}}
 
 ## Сводка
 
@@ -39,9 +39,7 @@ document.write(worldString.fixed());
 
 ## Спецификации
 
-| Спецификация                                                                 | Статус           | Комментарии                                                                                                                                                 |
-| ---------------------------------------------------------------------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES6', '#sec-string.prototype.fixed', 'String.prototype.fixed')}} | {{Spec2('ES6')}} | Изначальное определение. Реализована в JavaScript 1.0. Определена в (нормативном) Приложении B по Дополнительным возможностям ECMAScript для веб-браузеров. |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

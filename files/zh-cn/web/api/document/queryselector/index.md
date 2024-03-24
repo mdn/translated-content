@@ -26,7 +26,7 @@ element = document.querySelector(selectors);
 
 表示文档中与指定的一组 CSS 选择器匹配的第一个元素，一个 {{domxref("Element")}}对象。如果没有匹配到，则返回 null。
 
-如果您需要与指定选择器匹配的所有元素的列表，则应该使用{{domxref("Document.querySelectorAll", "querySelectorAll()")}} 。
+如果你需要与指定选择器匹配的所有元素的列表，则应该使用{{domxref("Document.querySelectorAll", "querySelectorAll()")}} 。
 
 ### 异常
 
@@ -88,7 +88,7 @@ var el = document.querySelector("div.user-panel.main input[name='login']");
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - [Locating DOM elements using selectors](/zh-CN/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
 - {{domxref("Element.querySelector()")}}

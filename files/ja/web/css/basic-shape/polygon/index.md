@@ -7,6 +7,8 @@ slug: Web/CSS/basic-shape/polygon
 
 **`polygon()`** は [CSS](/ja/docs/Web/CSS) の関数で、{{cssxref("&lt;basic-shape&gt;")}} [データ型](/ja/docs/Web/CSS/CSS_Types)の一つです。
 
+{{EmbedInteractiveExample("pages/css/function-polygon.html")}}
+
 ## 構文
 
 ```css

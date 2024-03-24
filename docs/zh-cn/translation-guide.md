@@ -8,31 +8,20 @@
 
 ## 元数据
 
-每个文档的开头都会有元数据，大致的结构如下：
+每个文档的开头都会有元数据，但在翻译本地化文档时，我们不需要将上游文档中的所有元数据字段都复制到本地化文档中。对于 `page-type`、`browser-compat` 和 `spec-urls` 等元数据被用于站点管理和自动化数据处理，本地化文档中无需包含它们。此外，出于追踪文档同步情况的目的，我们在基本的元数据类别的基础上引入了 `l10n.sourceCommit`，用于记录对应英文文档的最新提交。本地化文档中应该使用的元数据说明如下：
 
-```yaml
----
-title: Fetch API
-slug: Web/API/Fetch_API
-page-type: web-api-overview
-browser-compat: api.fetch
----
-```
-
-其中：
-
-- `title` 为文档的大标题
-- `slug` 为与网页 URL 相关的元数据（URL path 部分的规则为：`/<locale>/docs/<slug>`）
-- `page-type` 为页面的类型，将被用于站点管理和自动化数据处理
-- `browser-compat` 为[**浏览器兼容性表**][]对应的宏所使用的元数据。
-
-在简体中文文档翻译中，请适当翻译 `title` 元数据，以方便他人根据标题检索内容，`slug` 元数据则应与翻译对应的英文文档保持不变。对于 `page-type`、`browser-compat` 以及部分文档中使用的 `spec-urls` 元数据，它们被用于站点管理和自动化数据处理，而 yari 平台会自动将这些元数据由英文文档合并到本地化文档中。若没有特殊的需要，请将这些元数据从简体中文文档中移除。
+- `title`（必须）：为文档的大标题
+- `short-title`（可选）：为显示在侧边栏和面包屑中的短标题，若本地化文档采用的短标题与英文文档相同，则无需添加该元数据
+- `slug`（必须）：为与网页 URL 相关的元数据（URL path 部分的规则为：`/<locale>/docs/<slug>`），请与对应的英文文档保持一致
+- `l10n.sourceCommit`（可选）：为对应英文文档的最新提交的 SHA 值，请在完整同步英文文档翻译后更新或添加该元数据
 
 最终在简体中文文档中呈现的元数据如下所示：
 
 ```yaml
-title: Fetch API
-slug: Web/API/Fetch_API
+title: HTMLAnchorElement：hash 属性
+slug: Web/API/HTMLAnchorElement/hash
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ```
 
 ## 翻译标题和 ID
@@ -78,13 +67,13 @@ If you are new to HTML, CSS, JavaScript, etc., try our [Learn web development](/
 例如，对于以下链接：
 
 ```md
-Reference to [Live sample macros](/en-US/docs/MDN/Structures/Live_samples#live_sample_macros).
+Reference to [Live sample macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples#live_sample_macros).
 ```
 
 请对应中文文档，更新其片段标识：
 
 ```md
-参考：[运行实例宏](/zh-CN/docs/MDN/Structures/Live_samples#运行实例宏)。
+参考：[运行实例宏](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Live_samples#运行实例宏)。
 ```
 
 > 请注意，无论指向的本地化文档是否存在，都请让链接指向本地化文档。yari 平台可以在指向本地化文档的链接不存在的情况下，自动将其回落到对应英文版本的链接。
@@ -127,7 +116,7 @@ Reference to [Live sample macros](/en-US/docs/MDN/Structures/Live_samples#live_s
 
 简体中文标点符号参考资源：
 
-- [教育部《标点符号用法》](https://www.moe.gov.cn/ewebeditor/uploadfile/2015/01/13/20150113091548267.pdf)
+- [GB/T 15834―2011 标点符号用法](<https://people.ubuntu.com/~happyaron/l10n/GB(T)15834-2011.html>)
 - [维基百科：标点符号](https://zh.wikipedia.org/zh-cn/标点符号)
 
 ### 中文和拉丁语系文字间加空格
@@ -180,7 +169,11 @@ Like this.
 
 ### 代名词
 
+<!-- markdownlint-disable search-replace -->
+
 我们无需将“you”翻译为“您”，在文档正文部分的翻译中，请统一使用“你”。
+
+<!-- markdownlint-enable search-replace -->
 
 ### 复数形式
 
@@ -202,5 +195,4 @@ Like this.
 英文文档中使用了一些常见标题，为了保持简体中文文档的一致性，请在翻译时参考术语表中的[标题和表格的翻译](glossary.md#标题表格)。
 
 [如何使用 markdown 来撰写文档]: https://developer.mozilla.org/zh-CN/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
-[**浏览器兼容性表**]: https://developer.mozilla.org/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables
 [运行实例]: https://developer.mozilla.org/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Live_samples

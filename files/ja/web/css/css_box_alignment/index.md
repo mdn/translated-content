@@ -17,7 +17,7 @@ CSS は伝統的に、配置機能がとても制約されていました。{{cs
 
 ## 基本的な例
 
-次の例は、ボックス配置のプロパティの一部が[グリッド](/ja/docs/Web/CSS/CSS_Grid_Layout)と[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)にどのように適用されるかを示しています。
+次の例は、ボックス配置のプロパティの一部が[グリッド](/ja/docs/Web/CSS/CSS_grid_layout)と[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)にどのように適用されるかを示しています。
 
 ## CSS グリッドレイアウトの配置の例
 
@@ -196,9 +196,9 @@ CSS ボックス配置のプロパティは、相互作用する仕様に応じ�
 
 ## ガイド
 
-- CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS Flexbox guide: _[フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
-- CSS グリッド guide: _[CSS グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
+- CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS フレックスボックスガイド: _[フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
+- CSS グリッドガイド: _[グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
 
 ## 外部リソース
 

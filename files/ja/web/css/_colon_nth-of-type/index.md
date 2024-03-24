@@ -15,6 +15,8 @@ p:nth-of-type(4n) {
 }
 ```
 
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-nth-of-type.html", "tabbed-shorter")}}
+
 ## 構文
 
 `nth-of-type` 擬似クラスは、要素を選択する最後から数えるパターンを表す引数を 1 つ取ります。

@@ -1,11 +1,12 @@
 ---
-title: XMLHttpRequest.mozBackgroundRequest
+title: "XMLHttpRequest: mozBackgroundRequest プロパティ"
+short-title: mozBackgroundRequest
 slug: Web/API/XMLHttpRequest/mozBackgroundRequest
 l10n:
-  sourceCommit: 5288fecd2bcd65bde5ecef008684d3cb343c7b34
+  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{APIRef("XMLHttpRequest API")}}
 
 > **メモ:** このメソッドは、ウェブコンテンツからは使用できません。アクセスするには管理者特権が必要です。
 

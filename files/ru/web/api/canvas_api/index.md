@@ -94,8 +94,6 @@ window.addEventListener("load", drawCanvas);
   - : Подробный учебник, охватывающий как основное использование `<canvas>`, так и его расширенные функции.
 - [Фрагменты кода: Canvas](/en-US/Add-ons/Code_snippets/Canvas)
   - : Некоторые фрагменты кода, ориентированные на разработчиков, с использованием `<canvas>`.
-- [Demo: A basic ray-caster](/ru/docs/Web/API/Canvas_API/A_basic_ray-caster)
-  - : Демо анимации трассировки-лучей используя canvas.
 - [Drawing DOM objects into a canvas](/ru/docs/Web/API/Canvas_API/Drawing_DOM_objects_into_a_canvas)
   - : Как рисовать DOM контент, таких как HTML-элементы, в canvas.
 - [Manipulating video using canvas](/ru/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)

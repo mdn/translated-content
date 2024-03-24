@@ -3,7 +3,7 @@ title: Number.prototype.toFixed()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toFixed
 ---
 
-{{JSRef("Global_Objects", "Number")}}
+{{JSRef}}
 
 ## Сводка
 

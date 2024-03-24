@@ -3,6 +3,8 @@ title: Estructura de datos
 slug: Glossary/Data_structure
 ---
 
+{{GlossarySidebar}}
+
 **Estructura de datos** es una forma particular de organizar datos para que puedan ser usados eficientemente.
 
 ## Aprende más

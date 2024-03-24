@@ -518,7 +518,7 @@ function applyViewerControls(refSpace) {
 
 `renderScene()` 関数は、ユーザーがその瞬間に見える世界の部分を実際にレンダリングするために呼び出されます。 XR ギアに必要な 3D 効果を確立するために、それぞれの目でわずかに異なる位置を使用し、それぞれの目に対して 1 回ずつ呼び出されます。
 
-このコードのほとんどは、[WebGL でのライティング](/ja/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL)の記事の `drawScene()` 関数から直接取得した典型的な WebGL レンダリングコードであり、この例の WebGL レンダリング部分の詳細についてはそこを参照してください（[GitHub でコードを見る](https://github.com/mdn/webgl-examples/blob/gh-pages/tutorial/sample7/webgl-demo.js)）。 しかし、ここでは、この例に固有のコードから始まっているので、その部分について詳しく見ていきます。
+このコードのほとんどは、[WebGL でのライティング](/ja/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL)の記事の `drawScene()` 関数から直接取得した典型的な WebGL レンダリングコードであり、この例の WebGL レンダリング部分の詳細についてはそこを参照してください（[GitHub でコードを見る](https://github.com/mdn/dom-examples/tree/main/webgl-examples/blob/gh-pages/tutorial/sample7/webgl-demo.js)）。 しかし、ここでは、この例に固有のコードから始まっているので、その部分について詳しく見ていきます。
 
 ```js
 const normalMatrix = mat4.create();

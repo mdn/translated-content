@@ -1,17 +1,21 @@
 ---
 title: Notification：data 属性
 slug: Web/API/Notification/data
+l10n:
+  sourceCommit: e97f2c3cca98616a37003005ddc149d370c40fd0
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{APIRef("Web Notifications")}}{{securecontext_header}}
 
-{{domxref("Notification")}} 接口的 **`data`** 只读属性返回一个在 {{domxref("Notification.Notification","Notification()")}} 构造函数的 `data` 选项中指定的、结构化的通知的数据。
+{{domxref("Notification")}} 接口的 **`data`** 只读属性返回一个在 {{domxref("Notification.Notification","Notification()")}} 构造函数的 `data` 选项中指定的结构化克隆的通知的数据。
 
 通知的数据可以是任意你希望与通知关联的数据。
 
+{{AvailableInWorkers}}
+
 ## 值
 
-一个结构化的克隆数据。
+一个结构化克隆的数据。
 
 ## 示例
 
@@ -19,7 +23,7 @@ slug: Web/API/Notification/data
 
 ```js
 const options = {
-  body: "您提交的代码收到了 3 条新的审阅意见。",
+  body: "你提交的代码收到了 3 条新的审阅意见。",
   data: {
     url: "https://example.com/review/12345",
     status: "open",
@@ -31,7 +35,7 @@ const n = new Notification("新评论活动", options);
 console.log(n.data); // 打印 data 对象
 ```
 
-## 参见
+## 规范
 
 {{Specifications}}
 

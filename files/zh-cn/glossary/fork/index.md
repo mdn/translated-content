@@ -9,19 +9,12 @@ slug: Glossary/Fork
 
 Fork 在自由和开源软件的开发中很常见。因为使用 Git 或 Github 平台的贡献模式，Fork 是现在比较流行的术语。
 
-## 了解更多
+## 参见
 
-### 各种 "知名的" forks
+- 维基百科上的[分叉](<https://zh.wikipedia.org/wiki/分叉_(软件开发)>)
+- 在 Git 上下文中：[如何分叉 GitHub 仓库](https://help.github.com/articles/fork-a-repo/)
+- 各种“知名的”fork
 
-- [Linux distributions](https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg)
-- [Node.js and io.js (which have been merged together back)](https://nodejs.org/en/blog/announcements/foundation-v4-announce/)
-- [LibreOffice, a fork of OpenOffice](https://www.libreoffice.org/about-us/who-are-we/)
-
-- 基本知识
-
-  - [Fork](<https://zh.wikipedia.org/wiki/Fork_(software_development)>) on Wikipedia
-  - [How to fork a GitHub repo](https://help.github.com/articles/fork-a-repo/) (fork as in a Git context)
-
-- [MDN 术语表](/zh-CN/docs/Glossary)
-
-  - {{Glossary("Fork")}}
+  - [Linux distributions](https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg)
+  - [Node.js and io.js (which have been merged together back)](https://nodejs.org/en/blog/announcements/foundation-v4-announce/)
+  - [LibreOffice, a fork of OpenOffice](https://www.libreoffice.org/about-us/who-are-we/)

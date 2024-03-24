@@ -10,7 +10,7 @@ slug: Web/CSS/-webkit-mask-box-image
 - {{ Xref_cssinitial() }}: なし
 - 適用先: すべての要素
 - {{ Xref_cssinherited() }}: なし
-- メディア: {{ Xref_cssvisual() }}
+- メディア: {{cssxref("Media/Visual", "visual")}}
 - {{ Xref_csscomputed() }}: 指定通り
 
 ## 構文

@@ -3,7 +3,7 @@ title: tabs.onDetached
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onDetached
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Lancé lorsqu'un onglet est détaché d'une fenêtre, par exemple parce qu'il est déplacé entre des fenêtres.
 

@@ -30,7 +30,7 @@ slug: Learn/Server-side/Django/Generic_views
 
 ## Overview
 
-本教程中，通過為書本和作者添加列表和詳細信息頁面，我們將完成第一個版本的 [LocalLibrary](/zh-TW/docs/Learn/Server-side/Django/Tutorial_local_library_website) 網站（或者更準確地說，我們將向您展示如何實現書頁，並讓您自己創建作者頁面！） ）
+本教程中，通過為書本和作者添加列表和詳細信息頁面，我們將完成第一個版本的 [LocalLibrary](/zh-TW/docs/Learn/Server-side/Django/Tutorial_local_library_website) 網站（或者更準確地說，我們將向你展示如何實現書頁，並讓你自己創建作者頁面！） ）
 
 該過程在創建索引頁面，我們在上一個教程中展示了該頁面。我們仍然需要創建 URL 地圖，視圖和模板。主要區別在於，對於詳細信息頁面，我們還有一個額外的挑戰，即從 URL 對於這些頁面，我們將演示一種完全不同的視圖類型：基於類別的通用列表和詳細視圖。這些可以顯著減少所需的視圖代碼量，有助於更容易編寫和維護。
 
@@ -68,11 +68,11 @@ class BookListView(generic.ListView):
     model = Book
 ```
 
-就是這樣！通用 view 將查詢數據庫，以獲取指定模型（Book）的所有記錄，然後呈現/locallibrary/catalog/templates/catalog/book_list.html 的模板（我們將在下面創建）。在模板中，您可以使用所謂的 object_list 或 book_list 的模板變量（即通常為「 the_model_name_list」），以訪問書本列表。
+就是這樣！通用 view 將查詢數據庫，以獲取指定模型（Book）的所有記錄，然後呈現/locallibrary/catalog/templates/catalog/book_list.html 的模板（我們將在下面創建）。在模板中，你可以使用所謂的 object_list 或 book_list 的模板變量（即通常為「 the_model_name_list」），以訪問書本列表。
 
 > **備註：** This awkward path for the template location isn't a misprint — the generic views look for templates in `/application_name/the_model_name_list.html` (`catalog/book_list.html` in this case) inside the application's `/application_name/templates/` directory (`/catalog/templates/)`.
 
-您可以添加屬性，以更改上面的某種行為。例如，如果需要使用同一模型的多個視圖，則可以指定另一個模板文件，或者如果 book_list 對於特定模板用例不直觀，則可能需要使用不同的模板變量名稱。可能最有用的變更，是更改/過濾返回的結果子集-因此，您可能會列出其他用戶閱讀的前 5 本書，而不是列出所有書本。
+你可以添加屬性，以更改上面的某種行為。例如，如果需要使用同一模型的多個視圖，則可以指定另一個模板文件，或者如果 book_list 對於特定模板用例不直觀，則可能需要使用不同的模板變量名稱。可能最有用的變更，是更改/過濾返回的結果子集-因此，你可能會列出其他用戶閱讀的前 5 本書，而不是列出所有書本。
 
 ```python
 class BookListView(generic.ListView):
@@ -84,7 +84,7 @@ class BookListView(generic.ListView):
 
 #### Overriding methods in class-based views
 
-雖然我們不需要在這裡執行此操作，但您也可以覆寫某些類別方法。
+雖然我們不需要在這裡執行此操作，但你也可以覆寫某些類別方法。
 
 例如，我們可以覆寫 get_queryset（）方法，來更改返回的記錄列表。這比單獨設置 queryset 屬性更靈活，就像我們在前面的代碼片段中進行的那樣（儘管在這案例中沒有太大用處）：
 

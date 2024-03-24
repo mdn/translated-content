@@ -3,7 +3,9 @@ title: browsingData
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData
 ---
 
-{{AddonSidebar}}拡張機能がユーザーの閲覧中に蓄積したデータをクリアできるようにします。
+{{AddonSidebar}}
+
+拡張機能がユーザーの閲覧中に蓄積したデータをクリアできるようにします。
 
 `browsingData` API では、閲覧データは下記の型に分けられます。
 
@@ -59,7 +61,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/browsingData
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.browsingData", 2)}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

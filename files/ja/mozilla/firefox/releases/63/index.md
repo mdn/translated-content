@@ -33,14 +33,14 @@ Firefox 63 は、米国時間 2018 年 10 月 23 日 にリリースされまし
 - {{Cssxref(":defined")}} 疑似クラスをサポートしました ([Firefox バグ 1331334](https://bugzil.la/1331334))。
 - [Flexbox レイアウト](/ja/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox#The_gap_properties) で {{cssxref("row-gap")}}、{{cssxref("column-gap")}}、{{cssxref("gap")}} をサポートしました ([Firefox バグ 1398483](https://bugzil.la/1398483))。
 - [webkit 接頭辞付きの画素密度に関する @media クエリー](/ja/docs/Web/CSS/@media/-webkit-device-pixel-ratio) のサポートを再び有効化しました ([Firefox バグ 1444139](https://bugzil.la/1444139))。
-- Firefox で [CSS Flexible Box レイアウト](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout) (Flexbox) の {{cssxref("align-self")}}、{{cssxref("align-content")}}、{{cssxref("align-items")}}、{{cssxref("justify-content")}} プロパティをサポートしました ([Firefox バグ 1472843](https://bugzil.la/1472843))。
+- Firefox で [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout) (Flexbox) の {{cssxref("align-self")}}、{{cssxref("align-content")}}、{{cssxref("align-items")}}、{{cssxref("justify-content")}} プロパティをサポートしました ([Firefox バグ 1472843](https://bugzil.la/1472843))。
 - {{cssxref("offset-path")}} の `path()` 関数を実装しました ([Firefox バグ 1429298](https://bugzil.la/1429298))。
 - [Media Queries Level 4 仕様で改良された構文](/ja/docs/Web/CSS/Media_Queries/Using_media_queries#level_4_での構文の拡張) を実装しました ([Firefox バグ 1472843](https://bugzil.la/1472843))。
 - `offset-*` プロパティを {{cssxref("inset-block-start")}}、{{cssxref("inset-block-end")}}、{{cssxref("inset-inline-start")}}、{{cssxref("inset-inline-end")}} に改名しました ([Firefox バグ 1464782](https://bugzil.la/1464782))。
 - [prefers-reduced-motion](/ja/docs/Web/CSS/@media/prefers-reduced-motion) メディア特性をサポートしました ([Firefox バグ 1365045](https://bugzil.la/1365045)、[Firefox バグ 1475462](https://bugzil.la/1475462))。
 - {{cssxref("resize")}} プロパティにフロー関連の値 (`block`、`inline`) を追加しました ([Firefox バグ 1464786](https://bugzil.la/1464786))。
 - {{cssxref("align-self")}}、{{cssxref("align-content")}}、{{cssxref("justify-content")}} で、`safe` および `unsafe` 値の flexbox レイアウトを実装しました ([Firefox バグ 1297774](https://bugzil.la/1297774))。
-- 適切な [論理プロパティ](/ja/docs/Web/CSS/CSS_Logical_Properties) がアニメーション可能になりました ([Firefox バグ 1309752](https://bugzil.la/1309752))。
+- 適切な [論理的プロパティ](/ja/docs/Web/CSS/CSS_Logical_Properties) がアニメーション可能になりました ([Firefox バグ 1309752](https://bugzil.la/1309752))。
 
 #### 廃止
 
@@ -64,7 +64,7 @@ _変更なし。_
 
 #### 新規 API
 
-- Shadow DOM ([Firefox バグ 1471947](https://bugzil.la/1471947)) および Custom Elements ([Firefox バグ 1471948](https://bugzil.la/1471948)) API をデフォルトで有効にしました。詳しくは [Web components](/ja/docs/Web/Web_Components) をご覧ください。
+- Shadow DOM ([Firefox バグ 1471947](https://bugzil.la/1471947)) および Custom Elements ([Firefox バグ 1471948](https://bugzil.la/1471948)) API をデフォルトで有効にしました。詳しくは [Web components](/ja/docs/Web/API/Web_components) をご覧ください。
 - {{domxref("Media_Capabilities_API", "Media Capabilities API", "", "1")}} を実装しました ([Firefox バグ 1409664](https://bugzil.la/1409664))。
 - {{domxref("Clipboard", "Async Clipboard API", "", "1")}} を実装して、デフォルトですべてのチャンネルで有効化しました。Chrome および Firefox では現在 {{domxref("Clipboard.writeText", "writeText()")}} および {{domxref("Clipboard.readText", "readText()")}} メソッドのみ実装しています。ただし、`readText()` が [ブラウザー拡張機能](/ja/docs/Mozilla/Add-ons/WebExtensions) に限り使用可能であることが Chrome とは異なります。
 - {{domxref("SecurityPolicyViolationEvent")}} インターフェイスをサポートしました。{{HTTPHeader("Content-Security-Policy")}} に違反したときにイベントを送信できます ([Firefox バグ 1472661](https://bugzil.la/1472661))。

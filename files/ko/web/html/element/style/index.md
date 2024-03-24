@@ -19,22 +19,22 @@ slug: Web/HTML/Element/style
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
-- {{htmlattrdef("type")}}
+- `type`
 
   - : 스타일 언어의 MIME 유형. 문자셋은 지정하지 않아야 합니다. 선택 사항이며, 기본값은 `text/css`입니다. 빈 문자열과 `text/css` 외의 값은 사용하지 않습니다.
 
     > **참고:** 현대적인 웹 문서에서 이 특성을 포함할 이유는 거의 존재하지 않습니다.
 
-- {{htmlattrdef("media")}}
+- `media`
   - : 스타일을 적용할 매체. 값은 [미디어 쿼리](/ko/docs/Web/Guide/CSS/Media_queries)이며, 누락할 경우 기본값은 `all`입니다.
-- {{htmlattrdef("nonce")}}
+- `nonce`
   - : [`style-src Content-Security-Policy`](/ko/docs/Web/HTTP/Headers/Content-Security-Policy/style-src)에서 인라인 스타일을 화이트리스트에 추가할 때 사용하는 논스(임시 값). 서버는 매번 정책을 전송할 때마다 새로운 고유 논스를 생성해야 합니다. 논스 값을 알고 있는 공격자라면 리소스 정책을 우회하는 것은 매우 간단한 일이므로, 사전에 유추할 수 없는 값을 생성하는 것이 중요합니다.
-- {{htmlattrdef("title")}}
+- `title`
   - : [대체 스타일 시트](/ko/docs/Web/CSS/Alternative_style_sheets) 세트를 지정합니다.
 
 ### 사용 중단된 특성
 
-- {{htmlattrdef("scoped")}} {{non-standard_inline}} {{deprecated_inline}}
+- `scoped` {{non-standard_inline}} {{deprecated_inline}}
 
   - : 지정한 경우, `<style>` 요소의 부모 및 부모의 자식에만 스타일을 적용합니다.
 

@@ -3,7 +3,7 @@ title: pkcs11.getModuleSlots()
 slug: Mozilla/Add-ons/WebExtensions/API/pkcs11/getModuleSlots
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Enumérer les emplacements d'un module. Cette fonction renvoie un tableau contenant une entrée pour chaque emplacement. Chaque entrée contient le nom de l'emplacement et, si l'emplacement contient un jeton, des informations sur le jeton.
 

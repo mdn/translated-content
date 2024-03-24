@@ -107,7 +107,7 @@ lots of text...<p><a name="bottom">bottom</a>?arg=val
 
 ## ブラウザーの互換性
 
-{{compat("http.data-url")}}
+{{Compat}}
 
 ## 関連情報
 

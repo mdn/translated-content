@@ -1,5 +1,5 @@
 ---
-title: Examples of web and XML development using the DOM
+title: Примеры использования DOM в web-разработке и XML
 slug: Web/API/Document_Object_Model/Examples
 ---
 

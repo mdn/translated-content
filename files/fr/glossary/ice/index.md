@@ -3,6 +3,8 @@ title: ICE
 slug: Glossary/ICE
 ---
 
+{{GlossarySidebar}}
+
 **ICE** (_Interactive Connectivity Establishment_) est un framework utilisé par {{glossary("WebRTC")}} (parmi d'autres technologies) pour connecter deux pairs ensemble, indépendamment de la topologie réseau (en général pour des conversations audio et/ou vidéo). Ce protocole laisse les deux pairs chercher et établir une connexion avec l'autre même s'ils utilisent tous les deux de la translation d'adresses ({{glossary("NAT")}}) pour partager une adresse IP globale avec d'autres périphériques sur leurs réseaux locaux respectifs.
 
 L'algorithme du framework recherche le chemin avec la plus faible latence pour connecter les deux pairs, en essayant ces possibilités dans cet ordre :

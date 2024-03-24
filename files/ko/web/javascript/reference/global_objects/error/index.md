@@ -68,13 +68,13 @@ JavaScript에는 일반적인 `Error` 생성자 외에도 여러 개의 중요 �
 - {{jsxref("Error.prototype.number")}}
   - : 오류 번호를 위한 비표준 마이크로소프트 속성
 - {{jsxref("Error.prototype.fileName")}}
-  - : 해당 오류를 발생시킨 파일의 경로를 표시하기 위한 비표준 모질라 속성
+  - : 해당 오류를 발생시킨 파일의 경로를 표시하기 위한 비표준 Mozilla 속성
 - {{jsxref("Error.prototype.lineNumber")}}
-  - : 해당 오류를 발생시킨 파일의 줄 번호를 표시하기 위한 비표준 모질라 속성
+  - : 해당 오류를 발생시킨 파일의 줄 번호를 표시하기 위한 비표준 Mozilla 속성
 - {{jsxref("Error.prototype.columnNumber")}}
-  - : 해당 오류를 발생시킨 파일의 칸 번호를 표시하기 위한 비표준 모질라 속성
+  - : 해당 오류를 발생시킨 파일의 칸 번호를 표시하기 위한 비표준 Mozilla 속성
 - {{jsxref("Error.prototype.stack")}}
-  - : 스택 추적을 위한 비표준 모질라 속성
+  - : 스택 추적을 위한 비표준 Mozilla 속성
 
 ## 인스턴스 메서드
 

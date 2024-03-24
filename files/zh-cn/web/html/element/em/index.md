@@ -1,39 +1,21 @@
 ---
-title: <em>
+title: <em>：强调元素
 slug: Web/HTML/Element/em
 ---
 
-## 简介
+{{HTMLSidebar}}
 
-**HTML 着重元素** (**`<em>`**) 标记出需要用户着重阅读的内容， `<em>` 元素是可以嵌套的，嵌套层次越深，则其包含的内容被认定为越需要着重阅读。
+[HTML](/zh-CN/docs/Web/HTML) **`<em>`** 元素将文本标记为强调（emphasis）格式。`<em>` 元素可以嵌套，嵌套层次越深，则强调的程度越深。
 
-> **备注：** 通常地，该元素会被浏览器展示为斜体文本，但是，它不应该仅仅用于应用斜体样式；为此目的，请使用 CSS 样式。使用 {{HTMLElement("cite")}} 元素标记作品的标题（书籍，戏剧，歌曲等）；它通常也采用斜体样式，但具有不同的含义。使用 {{HTMLElement("strong")}} 元素标记比周围文本更重要的文本。
-
-- _内容类别_
-  流内容，推辞内容，可触及内容
-- _Permitted content_ [Phrasing content](/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content).
-- _Tag omission_ {{no_tag_omission}}
-- _Permitted parent elements_ Any element that accepts [phrasing content](/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content).
-- _DOM interface_ {{domxref("HTMLElement")}} Up to Gecko 1.9.2 (Firefox 4) inclusive, Firefox implements the {{domxref("HTMLSpanElement")}} interface for this element.
+{{EmbedInteractiveExample("pages/tabbed/em.html", "tabbed-shorter")}}
 
 ## 属性
 
 此元素只包括[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-## 示例
+## 使用说明
 
-`<em>` 元素通常被用于指示一个隐式或显式的对比。
-
-```html
-<p>
-  In HTML 5, what was previously called <em>block-level</em> content is now
-  called <em>flow</em> content.
-</p>
-```
-
-### 结果
-
-In HTML 5, what was previously called _block-level_ content is now called _flow_ content.
+通常地，该元素会被浏览器展示为斜体文本，但是，它不应该仅仅用于应用斜体样式；为此目的，请使用 CSS {{cssxref("font-style")}} 样式。使用 {{HTMLElement("cite")}} 元素标记作品的标题（书籍、戏剧、歌曲等）；它通常也采用斜体样式，但具有不同的含义。使用 {{HTMLElement("strong")}} 元素标记比周围文本更重要的文本。
 
 ## \<i> vs. \<em>
 
@@ -47,6 +29,83 @@ In HTML 5, what was previously called _block-level_ content is now called _flow_
 
 一个 `<i>` 的例子可能是："The _Queen Mary_ sailed last night"。在这里，没有对 "Queen Mary" 这个词添加强调或重要性。它只是表明，谈论的对象不是一个名叫玛丽的女王，而是一艘名字叫玛丽的船。另一个 `<i>` 的例子可能是："The word _the_ is an article"。
 
+## 示例
+
+在此示例中，`<em>` 元素用于突出显示两个成分列表之间的隐式或显式的对比。
+
+```html
+<p>
+  冰淇淋是用牛奶、甜味剂和奶油制成的。而冷冻蛋奶冻则由牛奶、奶油、甜味剂和<em>蛋黄</em>制成。
+</p>
+```
+
+### 结果
+
+{{EmbedLiveSample("示例")}}
+
+## 技术概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/zh-CN/docs/Web/HTML/Content_categories"
+          >内容类别</a
+        >
+      </th>
+      <td>
+        <a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+          >流式内容</a
+        >、<a
+          href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+          >短语内容</a
+        >和可感知内容。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允许的内容</th>
+      <td>
+        <a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+          >短语内容</a
+        >。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">标签省略</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">允许的父元素</th>
+      <td>
+        任何接受<a
+          href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+          >短语内容</a
+        >的元素。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">隐式 ARIA 角色</th>
+      <td>
+        <code
+          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/structural_roles#structural_roles_with_html_equivalents">emphasis</a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允许的 ARIA 角色</th>
+      <td>任何角色</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM 接口</th>
+      <td>
+        {{domxref("HTMLElement")}}。Firefox 在直至但不包含 Gecko 1.9.2（Firefox 4）的版本中为这个元素实现了
+        {{domxref("HTMLSpanElement")}} 接口。
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 ## 规范
 
 {{Specifications}}
@@ -55,8 +114,6 @@ In HTML 5, what was previously called _block-level_ content is now called _flow_
 
 {{Compat}}
 
-## 了解更多
+## 参见
 
 - {{HTMLElement("i")}}
-
-{{HTMLSidebar}}

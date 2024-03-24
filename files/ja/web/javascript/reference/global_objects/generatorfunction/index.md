@@ -13,6 +13,8 @@ slug: Web/JavaScript/Reference/Global_Objects/GeneratorFunction
 Object.getPrototypeOf(function* () {}).constructor;
 ```
 
+{{EmbedInteractiveExample("pages/js/functionasterisk-function.html", "taller")}}
+
 ## 構文
 
 ```
@@ -57,7 +59,7 @@ console.log(iterator.next().value); // 20
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.GeneratorFunction")}}
+{{Compat}}
 
 ## 関連情報
 

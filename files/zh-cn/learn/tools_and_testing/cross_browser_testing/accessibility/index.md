@@ -173,11 +173,11 @@ select:focus {
 
 替代文本对于无障碍非常重要 — 如果一个人有视觉或听觉障碍使他们无法看到或听到某些内容，那么这就是一个问题。可用的最简单的文本替代方法是`alt`属性，我们应该在所有包含相关内容的图像上包括该属性。其中应包含对图像的描述，该描述可在页面上成功传达其含义和内容，并由屏幕阅读器读取并读出给用户。
 
-> **备注：** 更多信息请阅读[Text alternatives](/zh-CN/docs/learn/Accessibility/HTML:%E4%B8%BA%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%80%A7%E6%8F%90%E4%BE%9B%E4%B8%80%E4%B8%AA%E8%89%AF%E5%A5%BD%E7%9A%84%E5%9F%BA%E7%A1%80#%E6%96%87%E6%9C%AC%E6%9B%BF%E4%BB%A3%E5%93%81)
+> **备注：** 更多信息请阅读[替代文本](/zh-CN/docs/Learn/Accessibility/HTML#替代文本)。
 
 可以通过多种方法来测试缺少的替代文本，例如，使用无障碍[审计工具](#审计工具)。
 
-对于视频和音频内容，Alt 文本稍微复杂一些。有一种方法可以定义文本轨道（例如，字幕）并在播放视频时以{{htmlelement("track")}}元素和[WebVTT](/zh-CN/docs/Web/API/WebVTT_API)格式的形式显示它们（请参见[Adding captions and subtitles to HTML5 video](/zh-CN/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)以获取详细信息）。这些功能的[浏览器兼容性](/zh-CN/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video#%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9)相当好，但是如果你想提供音频的替代文本或支持较旧的浏览器，则在页面某处或单独页面上显示一个简单的文本记录可能是个好主意。
+对于视频和音频内容，Alt 文本稍微复杂一些。有一种方法可以定义文本轨道（例如，字幕）并在播放视频时以 {{htmlelement("track")}} 元素和 [WebVTT](/zh-CN/docs/Web/API/WebVTT_API) 格式的形式显示它们（请参见[向 HTML 视频中添加字幕](/zh-CN/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video#浏览器兼容性)相当好，但是如果你想提供音频的替代文本或支持较旧的浏览器，则在页面某处或单独页面上显示一个简单的文本记录可能是个好主意。
 
 #### 元素关系和上下文
 

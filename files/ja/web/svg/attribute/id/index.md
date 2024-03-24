@@ -1,6 +1,8 @@
 ---
 title: id
 slug: Web/SVG/Attribute/id
+l10n:
+  sourceCommit: b4f998244660723175f8e06b5d77f68cfb1d1f1a
 ---
 
 {{SVGRef}}
@@ -9,13 +11,15 @@ slug: Web/SVG/Attribute/id
 
 すべての要素がこの属性を使用します。
 
+## 例
+
 ```html
 <svg
   width="120"
   height="120"
   viewBox="0 0 120 120"
   xmlns="http://www.w3.org/2000/svg">
-  <style type="text/css">
+  <style>
     <![CDATA[
       #smallRect {
         stroke: #000066;
@@ -28,7 +32,7 @@ slug: Web/SVG/Attribute/id
 </svg>
 ```
 
-{{EmbedLiveSample("topExample", "120", "120")}}
+{{EmbedLiveSample("Example", "120", "120")}}
 
 ## 使用上の注意
 

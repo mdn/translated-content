@@ -135,6 +135,8 @@ For example, consider the [JavaScript](/en-US/docs/Web/JavaScript) guide, which 
 | --------------------- | ------------ |
 | Browser compatibility | 瀏覽器相容性 |
 | Examples              | 範例         |
+| Formal definition     | 形式定義     |
+| Formal syntax         | 形式語法     |
 | See also              | 參見         |
 | Specifications        | 規範         |
 

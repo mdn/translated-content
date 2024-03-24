@@ -3,7 +3,7 @@ title: String
 slug: Web/JavaScript/Reference/Global_Objects/String
 ---
 
-{{JSRef("Global_Objects", "String")}}
+{{JSRef}}
 
 ## Sumário
 
@@ -224,15 +224,11 @@ for (let i = 0, n = inputValues.length; i < n; ++i) {
 
 ## Especificações
 
-| Specification                                        | Status             | Comment              |
-| ---------------------------------------------------- | ------------------ | -------------------- |
-| ECMAScript 1st Edition.                              | Standard           | Definições iniciais. |
-| {{SpecName('ES5.1', '#sec-15.5', 'String')}}         | {{Spec2('ES5.1')}} |                      |
-| {{SpecName('ES6', '#sec-string-objects', 'String')}} | {{Spec2('ES6')}}   |                      |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.String")}}
+{{Compat}}
 
 ## Veja também
 

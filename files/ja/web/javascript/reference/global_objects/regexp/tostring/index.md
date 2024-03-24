@@ -54,7 +54,7 @@ new RegExp("\n").toString() === "/\\n/"; // true, starting with ES5
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.RegExp.toString")}}
+{{Compat}}
 
 ## 関連情報
 

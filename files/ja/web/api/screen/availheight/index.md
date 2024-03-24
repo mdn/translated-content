@@ -24,7 +24,11 @@ slug: Web/API/Screen/availHeight
 メインウィンドウでは、パネルを開くときに以下のようなコードを使用します。
 
 ```js
-let paletteWindow = window.open("panels.html", "Panels", "left=0, top=0, width=200");
+let paletteWindow = window.open(
+  "panels.html",
+  "Panels",
+  "left=0, top=0, width=200",
+);
 ```
 
 Panels ウィンドウの HTML (`panels.html`) には、独自の JavaScript コードがあり、ウィンドウが作成されるとすぐに実行されます。このコードは、特定のイベント（あらゆるイベント）を待つ必要もありません。このコードは、利用可能な空間に基づいてウィンドウの寸法の変更を処理します。

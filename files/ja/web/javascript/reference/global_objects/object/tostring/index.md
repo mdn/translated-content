@@ -152,7 +152,7 @@ Object.prototype.toString.call(new Date()); // [object prototype polluted]
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Object.toString")}}
+{{Compat}}
 
 ## 関連情報
 

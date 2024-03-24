@@ -61,7 +61,7 @@ slug: Web/HTML/Element/map
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
-- {{htmlattrdef("name")}}
+- `name`
   - : 맵을 참조할 때 사용할 수 있는 이름. 반드시 존재해야 하고, 값이 비면 안되며, 값에 공백 문자가 포함되어도 안됩니다. `name` 특성은 문서 내의 모든 `<map>`에서 유일해야 합니다. [`id`](/ko/docs/Web/HTML/Global_attributes#id) 특성이 존재하는 경우 `name`과 값이 동일해야 합니다.
 
 ## 예제

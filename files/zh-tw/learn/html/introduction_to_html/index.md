@@ -11,7 +11,7 @@ slug: Learn/HTML/Introduction_to_HTML
 
 在開始閱讀之前，你並不需要具備任何 HTML 知識，你只要能夠操作電腦、瀏覽網頁並消化其中的內容即可。你需要[建立一個基礎工作環境](/zh-TW/docs/Learn/Getting_started_with_the_web/Installing_basic_software)，並且了解[如何建立與管理檔案](/zh-TW/docs/Learn/Getting_started_with_the_web/Dealing_with_files)── 這些都屬於我們 [Web 入門](/zh-TW/docs/Learn/Getting_started_with_the_web) 的一部分。
 
-> **備註：** 如果您是在某些無法建立個人檔案的電腦/平板/其他裝置上進行，您可以在一些線上 coding program（如 [JSBin](http://jsbin.com/) 或 [Glitch](https://glitch.com/)）上測試程式碼範例。
+> **備註：** 如果你是在某些無法建立個人檔案的電腦/平板/其他裝置上進行，你可以在一些線上 coding program（如 [JSBin](http://jsbin.com/) 或 [Glitch](https://glitch.com/)）上測試程式碼範例。
 
 ## 導覽
 
@@ -34,7 +34,7 @@ slug: Learn/HTML/Introduction_to_HTML
 
 ## 評量
 
-下面的評量將測試您對於以上的 HTML 基礎是否已經了解。
+下面的評量將測試你對於以上的 HTML 基礎是否已經了解。
 
 - [標記信件內容](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
   - : 我們都學過怎麼寫信，而信件也是用來測試我們格式化文字技巧的好例子。在這份測驗中，你將需要以 HTML 將一封信標記成題目要求的樣子。

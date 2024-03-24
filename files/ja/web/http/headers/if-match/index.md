@@ -63,7 +63,7 @@ If-Match: *
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.If-Match")}}
+{{Compat}}
 
 ## 関連情報
 
