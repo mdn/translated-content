@@ -131,7 +131,7 @@ console.log("immediate logging");
 
 ### Thenables
 
-JavaScript 생태계는 프로미스가 언어의 일부가 되기 훨씬 전부터 여러 가지 프로미스 구현을 만들어왔습니다. 내부적으로 다르게 표현되기는 하지만, 최소한 모든 프로미스와 유사한 객체는 _Thenable_ 인터페이스를 구현합니다. thenable은 두 개의 콜백(하나는 프로미스가 이행될 때, 다른 하나는 거부될 때)과 함께 호출되는 [`.then()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) 메서드를 구현합니다. 프로미스 또한 thenable입니다.
+JavaScript 생태계는 프로미스가 언어의 일부가 되기 훨씬 전부터 여러 가지 프로미스 구현을 만들어왔습니다. 내부적으로 다르게 표현되기는 하지만, 최소한 모든 프로미스와 유사한 객체는 Thenable 인터페이스를 구현합니다. thenable은 두 개의 콜백(하나는 프로미스가 이행될 때, 다른 하나는 거부될 때)과 함께 호출되는 [`.then()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) 메서드를 구현합니다. 프로미스 또한 thenable입니다.
 
 기존 프로미스 구현과 상호 운용하기 위해 언어에서는 프로미스 대신 thenables을 사용할 수 있습니다. 예를 들어 [`Promise.resolve`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve)는 프로미스를 해결할 뿐만 아니라 thenables도 추적합니다.
 
