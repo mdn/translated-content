@@ -114,7 +114,7 @@ const promiseB = promiseA.then(handleFulfilled1, handleRejected1);
 const promiseC = promiseA.then(handleFulfilled2, handleRejected2);
 ```
 
-이미 "settled"된 프로미스에 동작을 할당할 수 있습니다. 이 경우, 해당 동작이 적절하다면 첫 번째 비동기 기회에 수행됩니다. 프로미스는 비동기적으로 실행되는 것이 보장되므로, 이미 "settled"된 프로미스에 대한 동작은 스택이 해제되고 시간이 경과한 후에만 발생합니다.  이 효과는 setTimeout(action, 0)와 유사합니다.
+이미 "settled"된 프로미스에 동작을 할당할 수 있습니다. 이 경우, 해당 동작이 적절하다면 첫 번째 비동기 기회에 수행됩니다. 프로미스는 비동기적으로 실행되는 것이 보장되므로, 이미 "settled"된 프로미스에 대한 동작은 스택이 해제되고 시간이 경과한 후에만 발생합니다. 이 효과는 setTimeout(action, 0)와 유사합니다.
 
 ```js
 const promiseA = new Promise((resolve, reject) => {
