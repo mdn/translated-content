@@ -60,29 +60,29 @@ function changeColor(newColor) {
 
 {{domxref("Document.querySelector()")}} や {{domxref("Document.querySelectorAll()")}} などの他の要素検索メソッドとは異なり、 `getElementById()` はグローバルの `document` オブジェクトに対してのみ利用可能であり、 DOM のすべての要素オブジェクトのメソッドとしては利用*できません*。 ID の値は文書全体を通して固有でなければならないため、機能の「ローカル」バージョンは必要ないのです。
 
-## 例
+### 例
 
-```
+```html
 <!doctype html>
 <html>
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="parent-id">
-        <p>hello word1</p>
-        <p id="test1">hello word2</p>
-        <p>hello word3</p>
-        <p>hello word4</p>
+      <p>hello word1</p>
+      <p id="test1">hello word2</p>
+      <p>hello word3</p>
+      <p>hello word4</p>
     </div>
     <script>
-        var parentDOM = document.getElementById('parent-id');
-        var test1 = parentDOM.getElementById('test1');
-        //throw error
-        //Uncaught TypeError: parentDOM.getElementById is not a function
+      var parentDOM = document.getElementById("parent-id");
+      var test1 = parentDOM.getElementById("test1");
+      // throw error
+      // Uncaught TypeError: parentDOM.getElementById is not a function
     </script>
-</body>
+  </body>
 </html>
 ```
 

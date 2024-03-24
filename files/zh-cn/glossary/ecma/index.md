@@ -9,7 +9,7 @@ slug: Glossary/ECMA
 
 在网络上该组织因维护 {{Glossary("JavaScript")}} 语言的核心规范 [the ECMA-262 specification](https://www.ecma-international.org/publications/standards/Ecma-262.htm)（即 {{Glossary("ECMAScript")}}）而为人所知。
 
-## 了解更多
+## 参见
 
 - Wikipedia 页面 [Ecma International](https://zh.wikipedia.org/wiki/Ecma_International)
 - [The Ecma International web site](https://www.ecma-international.org/)

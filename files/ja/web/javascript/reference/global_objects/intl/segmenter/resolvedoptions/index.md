@@ -60,8 +60,8 @@ console.log(options.granularity); // "grapheme"
 const banSegmenter = new Intl.Segmenter("ban");
 const options = banSegmenter.resolvedOptions();
 console.log(options.locale);
-// "fr" on a runtime where the Balinese locale
-// is not supported and French is the default locale
+// Balinese ロケールに対応しておらず、
+// デフォルトのロケールが French であるランタイムでは、"fr"
 console.log(options.granularity); // "grapheme"
 ```
 

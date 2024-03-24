@@ -57,7 +57,7 @@ animation-timing-function: unset;
     非阶跃（non-step）关键字值（如 ease、linear、ease-in-out 等）代表了固定的四点值的三次贝塞尔曲线，而 cubic-bezier() 函数允许使用非预定义值。而阶跃时间函数将输入时间分成一定数量相等的间隔，由步数和步骤位置定义。
 
 - `ease`
-  - : 等同于 `cubic-bezier(0.25, 0.1, 0.25, 1.0)`，即默认值，表示动画在中间加速，在结束时减速。。
+  - : 等同于 `cubic-bezier(0.25, 0.1, 0.25, 1.0)`，即默认值，表示动画在中间加速，在结束时减速。
 - `linear`
   - : 等同于 `cubic-bezier(0.0, 0.0, 1.0, 1.0)`，表示动画以匀速运动。
 - `ease-in`

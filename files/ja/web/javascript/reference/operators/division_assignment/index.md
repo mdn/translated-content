@@ -39,5 +39,5 @@ bar /= "foo"; // NaN
 
 ## 関連情報
 
-- [JavaScript ガイドの代入演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#代入演算子)
+- [JavaScript ガイドの代入演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#代入演算子)
 - [除算演算子](/ja/docs/Web/JavaScript/Reference/Operators/Division)

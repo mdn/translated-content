@@ -100,7 +100,7 @@ Object.isSealed(1);
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Object.isSealed")}}
+{{Compat}}
 
 ## 関連情報
 

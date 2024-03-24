@@ -34,12 +34,12 @@ MathML の `<msqrt>` 要素は平方根（根指数のついていない累乗�
 
 ## ブラウザーの互換性
 
-{{Compat("mathml.elements.msqrt")}}
+{{Compat}}
 
 ## 仕様
 
 {{Specifications}}
 
-## See also
+## 関連情報
 
 - {{ MathMLElement("mroot") }} (Radical with an index)

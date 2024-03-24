@@ -29,4 +29,4 @@ slug: Web/API/TimeRanges
 
 ## ブラウザーの互換性
 
-{{Compat("api.TimeRanges")}}
+{{Compat}}

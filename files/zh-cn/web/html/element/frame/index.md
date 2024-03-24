@@ -39,7 +39,7 @@ slug: Web/HTML/Element/frame
 </frameset>
 ```
 
-## 另见
+## 参见
 
 - {{HTMLElement("frameset")}}
 - {{HTMLElement("iframe")}}

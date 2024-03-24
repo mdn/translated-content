@@ -45,6 +45,6 @@ numbers.toString(); // "[object Uint8Array]"
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("TypedArray.prototype.join()")}}

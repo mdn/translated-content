@@ -117,8 +117,8 @@ Ici, on charge 10 modules, `/modules/module-0.js`, `/modules/module-1.js`, etc.,
 
 ```js
 Promise.all(
-  Array.from({ length: 10 }).map((_, index) =>
-    import(`/modules/module-${index}.js`),
+  Array.from({ length: 10 }).map(
+    (_, index) => import(`/modules/module-${index}.js`),
   ),
 ).then((modules) => modules.forEach((module) => module.load()));
 ```

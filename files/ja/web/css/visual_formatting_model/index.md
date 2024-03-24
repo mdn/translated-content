@@ -1,11 +1,13 @@
 ---
 title: 視覚整形モデル
 slug: Web/CSS/Visual_formatting_model
+l10n:
+  sourceCommit: f75fd658f627b5730a14ada901120cfa4ee01bda
 ---
 
 {{CSSRef}}
 
-CSS の**視覚整形モデル** (Visual Formatting Model) は、ユーザーエージェントが文書ツリーをどのように受け取り、視覚メディア用に処理して表示するかを説明するものです。これには、コンピューター画面のような{{glossary("continuous media", "連続メディア")}}と、ブラウザーの印刷機能によって印刷された本や文書のような{{glossary("paged media", "ページ付きメディア")}}が含まれます。情報の大部分は、連続メディアとページ付きメディアに等しく適用されます。
+CSS の**視覚整形モデル** (visual formatting model) は、ユーザーエージェントが文書ツリーをどのように受け取り、視覚メディア用に処理して表示するかを説明するものです。これには、コンピューター画面のような{{glossary("continuous media", "連続メディア")}}と、ブラウザーの印刷機能によって印刷された本や文書のような[ページメディア](/ja/docs/Web/CSS/CSS_paged_media)が含まれます。情報の大部分は、連続メディアとページメディアに等しく適用されます。
 
 視覚整形モデルでは、文書ツリーの各要素は、モデルに応じてゼロ個以上のボックスを生成します。これらのボックスのレイアウトは、次のようにして制御されます。
 
@@ -54,11 +56,11 @@ CSS はソース文書を読み取り、キャンバスにレンダリングし�
 
 文字列はボックスツリーの中で3つのボックスに分割されます。段落要素の前の文字列の部分は無名ボックスに包まれ、次にボックスを生成する `<p>` があり、さらに別の無名ボックスがあります。
 
-これらの無名ボックスについて考慮すべきことは、直接の親からスタイルを継承するということですが、無名ボックスを対象にして、それらがどのように見えるかを変更することはできません。この例では、コンテナーの子を対象にするために直接子セレクターを使用しています。これは、無名ボックスは親ブロックの子ではないので、無名ボックスを変更するものではありません。
+これらの無名ボックスについて考慮すべきことは、直接の親からスタイルを継承するということですが、無名ボックスを対象にして、それらがどのように見えるかを変更することはできません。この例では、コンテナーの子を対象にするために直接子セレクターを使用しています。これは、無名ボックスは「要素」ではないので、無名ボックスを変更するものではありません。
 
 **インライン無名ボックス**は、文字列がインライン要素によって分割されたとき、例えば文に `<em></em>` で囲まれた区間がある場合に作成されます。これにより、文が3つのインラインボックスに分割されます。強調された区間の前の無名インラインボックス、 `<em>` 要素で包まれた区間、そして最後の無名インラインボックスです。無名ブロックボックスと同様に、これらの無名インラインボックスは `<em>` の場合とは異なり、独立してスタイルを設定することはできず、コンテナーのスタイルを継承するだけです。
 
-他にも無名ボックスを生成する整形コンテキストがあります。[グリッドレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout)は上記の[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)の例と同様に動作し、テキストの文字列を無名ボックス付きのグリッドアイテムに変換します。[段組み](/ja/docs/Web/CSS/CSS_Columns)レイアウトは段の周りに無名の段ボックスを生成します。これらもスタイル付けなどの対象にすることはできません。[表レイアウト](/ja/docs/Web/CSS/CSS_Table)は適切な表構造を生成するために無名ボックスを追加します。例えば、 `display: table-row` が付いたボックスがない場合、無名の表の行を追加するなどです。
+他にも無名ボックスを生成する整形コンテキストがあります。[グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)は上記の[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout)の例と同様に動作し、テキストの文字列を無名ボックス付きのグリッドアイテムに変換します。[段組み](/ja/docs/Web/CSS/CSS_multicol_layout)レイアウトは段の周りに無名の段ボックスを生成します。これらもスタイル付けなどの対象にすることはできません。[表レイアウト](/ja/docs/Web/CSS/CSS_table)は適切な表構造を生成するために無名ボックスを追加します。例えば、 `display: table-row` が付いたボックスがない場合、無名の表の行を追加するなどです。
 
 ### 行ボックス
 
@@ -76,7 +78,7 @@ CSS では、ボックスをレイアウトするための配置の仕組みが 
 
 CSS において、**通常フロー** (normal flow) にはブロックボックスのブロックレベル整形、インラインボックスのインラインレベル整形、それにブロックレベルおよびインラインレベルボックスの相対位置指定と粘着位置指定があります。
 
-詳しくは [フローレイアウト](/ja/docs/Web/CSS/CSS_Flow_Layout)を参照してください。
+詳しくは [フローレイアウト](/ja/docs/Web/CSS/CSS_flow_layout)を参照してください。
 
 ## 浮動要素
 
@@ -90,7 +92,7 @@ CSS において、**通常フロー** (normal flow) にはブロックボック
 
 要素が浮動要素、絶対位置指定、ルート要素のいずれかであれば、**フロー外**と呼ばれます。フロー外ではない要素は**フロー内**と呼ばれます。
 
-詳しくは[CSS 位置指定レイアウト](/ja/docs/Web/CSS/CSS_Positioning)を参照してください。
+詳しくは[CSS 位置指定レイアウト](/ja/docs/Web/CSS/CSS_positioned_layout)を参照してください。
 
 ## 整形コンテキストと display プロパティ
 
@@ -98,16 +100,16 @@ CSS において、**通常フロー** (normal flow) にはブロックボック
 
 ボックスには内部表示型もあり、これは子がどのように動作するかを示します。通常ブロックかつインラインレイアウト、または通常フローであれば、この表示型は `flow` です。これは、子要素が `block` または `inline` のどちらかであることを示します。
 
-しかし、内部表示型は `grid` や `flex` になる可能性もあり、この場合は直接の子がグリッドまたはフレックスアイテムとして表示されます。このような場合、要素はグリッドやフレックスの[整形コンテキスト](/ja/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts)を生成しているといいます。多くの点でこれはブロックの整形コンテキストに似ていますが、子要素は通常のフローのアイテムではなく、フレックスやグリッドのアイテムとして動作します。
+しかし、内部表示型は `grid` や `flex` になる可能性もあり、この場合は直接の子がグリッドまたはフレックスアイテムとして表示されます。このような場合、要素はグリッドやフレックスの[整形コンテキスト](/ja/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts)を生成しているといいます。多くの点でこれはブロックの整形コンテキストに似ていますが、子要素は通常のフローのアイテムではなく、フレックスやグリッドのアイテムとして動作します。
 
 ブロックレベルとインラインレベルの各ボックスの相互作用は、 {{cssxref("display")}} の MDN ドキュメントで説明しています。
 
 また、 display の特定の値については、ボックスレイアウトの観点から、これらの整形コンテキストがどのように機能するかを以下のリファレンスで説明しています。
 
-- [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout)
-- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)
-- [CSS 表レイアウト](/ja/docs/Web/CSS/CSS_Table)
-- [リスト](/ja/docs/Web/CSS/CSS_Lists_and_Counters)
+- [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)
+- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout)
+- [CSS 表](/ja/docs/Web/CSS/CSS_table)モジュール
+- [CSS リストとカウンター](/ja/docs/Web/CSS/CSS_lists)モジュール
 
 ### 独立整形コンテキスト
 
@@ -117,7 +119,7 @@ CSS において、**通常フロー** (normal flow) にはブロックボック
 
 次の例は、`display: flow-root` の効果を示しています。黒い背景のボックスが、浮動アイテムとテキストを包み込むように見えます。編集可能な CSS から `display: flow-root` を削除すると、浮動アイテムがボックスの底から突き出てしまい、アイテムが収まらなくなります。
 
-{{EmbedGHLiveSample("css-examples/display/two-value/block-flow-root.html", '100%', 720)}}
+{{EmbedGHLiveSample("css-examples/display/multi-keyword/block-flow-root.html", '100%', 720)}}
 
 ### ブロックボックス
 
@@ -137,10 +139,20 @@ CSS において、**通常フロー** (normal flow) にはブロックボック
 
 ## 関連情報
 
-- CSS の主要概念: [CSS の構文](/ja/docs/Web/CSS/Syntax), [アットルール](/ja/docs/Web/CSS/At-rule), [コメント](/ja/docs/Web/CSS/Comments),
-  [詳細度](/ja/docs/Web/CSS/Specificity), [継承](/ja/docs/Web/CSS/inheritance), [ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model),
-  [レイアウトモード](/ja/docs/Web/CSS/Layout_mode), [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model),
-  [マージンの相殺](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing),
-  [初期値](/ja/docs/Web/CSS/initial_value), [計算値](/ja/docs/Web/CSS/computed_value), [解決値](/ja/docs/Web/CSS/resolved_value),
-  [指定値](/ja/docs/Web/CSS/specified_value), [使用値](/ja/docs/Web/CSS/used_value), [実効値](/ja/docs/Web/CSS/actual_value)。
-  [値の定義構文](/ja/docs/Web/CSS/Value_definition_syntax), [一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties), [置換要素](/ja/docs/Web/CSS/Replaced_element)
+- CSS の主要概念:
+  - [CSS の構文](/ja/docs/Web/CSS/Syntax)
+  - [コメント](/ja/docs/Web/CSS/Comments)
+  - [詳細度](/ja/docs/Web/CSS/Specificity)
+  - [継承](/ja/docs/Web/CSS/Inheritance)
+  - [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+  - [レイアウトモード](/ja/docs/Web/CSS/Layout_mode)
+  - **視覚整形モデル**
+  - [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+  - 値
+    - [初期値](/ja/docs/Web/CSS/initial_value)
+    - [計算値](/ja/docs/Web/CSS/computed_value)
+    - [使用値](/ja/docs/Web/CSS/used_value)
+    - [実効値](/ja/docs/Web/CSS/actual_value)
+  - [値の定義構文](/ja/docs/Web/CSS/Value_definition_syntax)
+  - [一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)
+  - [置換要素](/ja/docs/Web/CSS/Replaced_element)

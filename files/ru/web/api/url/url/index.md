@@ -66,7 +66,7 @@ new URL("//foo.com", "https://example.com"); // => 'https://foo.com' (см. от
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

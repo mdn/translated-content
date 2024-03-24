@@ -33,7 +33,7 @@ window.scrollByLines(lines);
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.scrollByLines")}}
+{{Compat}}
 
 ## 関連情報
 

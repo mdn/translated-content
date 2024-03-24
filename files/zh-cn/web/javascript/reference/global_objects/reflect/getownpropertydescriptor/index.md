@@ -67,7 +67,7 @@ Object.getOwnPropertyDescriptor("foo", 0);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Reflect")}}
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}

@@ -216,8 +216,11 @@ console.log(/[^.]+/.exec(url)[0].substr(7)); // logs "xxx"
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide)中的[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)一节
-- [String.prototype.match()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/match)
-- [String.prototype.replace()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace)
+- [`core-js` 中很多现代 `RegExp` 特性（`dotAll`、`sticky` 标志、具名捕获组等）的 polyfill](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)指南
+- [正则表达式](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions)参考
+- {{jsxref("String.prototype.match()")}}
+- {{jsxref("String.prototype.replace()")}}
+- {{jsxref("String.prototype.split()")}}

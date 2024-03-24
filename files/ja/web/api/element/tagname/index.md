@@ -1,6 +1,9 @@
 ---
-title: Element.tagName
+title: "Element: tagName プロパティ"
+short-title: tagName
 slug: Web/API/Element/tagName
+l10n:
+  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
 {{ApiRef("DOM")}}
@@ -9,13 +12,7 @@ slug: Web/API/Element/tagName
 
 例えば、この要素が {{HTMLElement("img")}} であれば、 `tagName` プロパティは `"IMG"` となります（HTML 文書の場合。 XML/XHTML 文書では大文字小文字が違うかもしれません）。
 
-## 構文
-
-```js
-elementName = Element.tagName;
-```
-
-### 値
+## 値
 
 この要素のタグ名を示す文字列です。文字列が大文字であるかどうかは、文書型によって変わります。
 
@@ -29,17 +26,17 @@ elementName = Element.tagName;
 ### HTML
 
 ```html
-<span id="born">When I was born...</span>
+<span id="born">When I was born…</span>
 ```
 
 ### JavaScript
 
 ```js
-var span = document.getElementById("born");
+const span = document.getElementById("born");
 console.log(span.tagName);
 ```
 
-XHTML (および他の XML 形式) では、元の大文字小文字が保持されるので、元のタグ名が小文字で生成されている場合は `"span"` が出力されます。
+XHTML（および他の XML 形式）では、元の大文字小文字が保持されるので、元のタグ名が小文字で生成されている場合は `"span"` が出力されます。
 HTML では、元の文書を生成したときに大文字小文字のどちらが使われたかに関わらず、 `"SPAN"` と出力されます。
 
 ## 仕様書

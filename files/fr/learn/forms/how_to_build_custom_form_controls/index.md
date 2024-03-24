@@ -15,7 +15,7 @@ Dans cet article, nous verrons comment construire un tel widget. Pour cela, nous
 
 Avant de créer un widget personnalisé, il faut commencer par déterminer exactement ce que vous voulez. Vous gagnerez ainsi un temps précieux. En particulier, il est important de définir clairement tous les états de votre widget. Pour ce faire, il est bon de commencer par un widget existant dont les états et le comportement sont bien connus, afin que vous puissiez simplement les imiter autant que possible.
 
-Dans notre exemple, nous allons reconstruire l'élément {{HTMLElement("select")}}}. Voici le résultat que nous voulons atteindre :
+Dans notre exemple, nous allons reconstruire l'élément {{HTMLElement("select")}}. Voici le résultat que nous voulons atteindre :
 
 ![The three states of a select box](custom-select.png)
 

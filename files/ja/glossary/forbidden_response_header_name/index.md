@@ -5,6 +5,8 @@ l10n:
   sourceCommit: ed947b2c608428b62a60f07d09dc543f732dc09b
 ---
 
+{{GlossarySidebar}}
+
 禁止レスポンスヘッダー名は、プログラムから変更することができない [HTTP ヘッダー](/ja/docs/Web/HTTP/Headers)の名前 (`Set-Cookie`) です。
 
 ## 関連情報

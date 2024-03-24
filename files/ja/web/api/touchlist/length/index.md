@@ -1,8 +1,9 @@
 ---
-title: TouchList.length
+title: "TouchList: length プロパティ"
+short-title: length
 slug: Web/API/TouchList/length
 l10n:
-  sourceCommit: fe0ae190fa37469b28ebe39cb33013d89c3a69e6
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{ APIRef("Touch Events") }}

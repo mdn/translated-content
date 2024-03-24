@@ -87,7 +87,7 @@ Clear-Site-Data: "cookies"
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Clear-Site-Data")}}
+{{Compat}}
 
 ## Veja também
 

@@ -66,7 +66,7 @@ ctx.fill(p1);
 
 ## ブラウザー互換性
 
-{{Compat("api.Path2D.addPath")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -36,7 +36,7 @@ let myMap = new Map([
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Map.Map")}}
+{{Compat}}
 
 ## 関連情報
 

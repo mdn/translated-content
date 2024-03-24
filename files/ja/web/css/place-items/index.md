@@ -5,7 +5,7 @@ slug: Web/CSS/place-items
 
 {{CSSRef}}
 
-[CSS](/ja/docs/Web/CSS) の **`place-items`** は[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、アイテムのブロック軸およびインライン軸に沿ったアイテムの配置 (すなわち {{CSSxRef("align-items")}} および {{CSSxRef("justify-items")}} プロパティ) を、[グリッド](/ja/docs/Web/CSS/CSS_Grid_Layout)や[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)などのレイアウトシステムにおいて、一度に指定することができます。2 番目の値が設定されていない場合、最初の値がそちらにも使用されます。
+[CSS](/ja/docs/Web/CSS) の **`place-items`** は[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、アイテムのブロック軸およびインライン軸に沿ったアイテムの配置 (すなわち {{CSSxRef("align-items")}} および {{CSSxRef("justify-items")}} プロパティ) を、[グリッド](/ja/docs/Web/CSS/CSS_grid_layout)や[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)などのレイアウトシステムにおいて、一度に指定することができます。2 番目の値が設定されていない場合、最初の値がそちらにも使用されます。
 
 {{EmbedInteractiveExample("pages/css/place-items.html")}}
 
@@ -91,13 +91,13 @@ place-items: unset;
 
 {{cssinfo}}
 
-## 関連情報
+## 形式文法
 
 {{csssyntax}}
 
 ## 例
 
-<h3 id="Placing_items_in_a_flex_container">フレックスコンテナー内でのアイテムの配置</h3>
+### フレックスコンテナー内でのアイテムの配置
 
 フレックスボックスでは、主軸のアイテムがグループとして扱われるため、{{cssxref("justify-self")}} や {{cssxref("justify-items")}} したがって、2 番目の値は無視されます。
 
@@ -209,9 +209,9 @@ values.addEventListener("change", function (evt) {
 
 #### 結果
 
-{{EmbedLiveSample("Placing_items_in_a_flex_container", 260, 290)}}
+{{EmbedLiveSample("フレックスコンテナー内でのアイテムの配置", 260, 290)}}
 
-<h3 id="Placing_items_in_a_grid_container">グリッドコンテナーでのアイテムの配置</h3>
+### グリッドコンテナーでのアイテムの配置
 
 以下のグリッドコンテナーのアイテムは、配置されるグリッド領域よりも小さいため、`place-items` はブロック方向とインライン方向にアイテムを移動します。
 
@@ -326,7 +326,7 @@ values.addEventListener("change", function (evt) {
 
 #### 結果
 
-{{EmbedLiveSample("Placing_items_in_a_grid_container", 260, 290)}}
+{{EmbedLiveSample("グリッドコンテナーでのアイテムの配置", 260, 290)}}
 
 ## 仕様書
 
@@ -338,9 +338,9 @@ values.addEventListener("change", function (evt) {
 
 ## 関連情報
 
-- CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS フレックスボックスガイド: _[フレックスコンテナー内でのアイテムの配置](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
-- CSS グリッドガイド: _[CSS グリッドレイアウト内でのボックス配置](/ja/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
+- CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS フレックスボックスガイド: _[フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
+- CSS グリッドガイド: _[グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
 - [CSS ボックス配置](/ja/docs/Web/CSS/CSS_Box_Alignment)
 - {{CSSxRef("align-items")}} プロパティ
 - {{CSSxRef("align-self")}} プロパティ

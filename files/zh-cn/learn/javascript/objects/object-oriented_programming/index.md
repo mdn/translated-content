@@ -14,7 +14,7 @@ slug: Learn/JavaScript/Objects/Object-oriented_programming
 <table>
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         理解 JavaScript 函数，熟悉 JavaScript 基础
         （参见
@@ -88,7 +88,7 @@ lillian = new Professor("丽莲", "诗歌");
 walsh.teaches; // '心理学'
 walsh.introduceSelf(); // '我是沃尔什，我是你们的心理学老师。'
 
-lillian.teaches; // '丽莲'
+lillian.teaches; // '诗歌'
 lillian.introduceSelf(); // '我是丽莲，我是你们的诗歌老师'
 ```
 

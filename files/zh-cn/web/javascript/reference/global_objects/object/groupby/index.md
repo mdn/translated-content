@@ -61,7 +61,7 @@ const inventory = [
 <!-- autocorrect-disable -->
 
 ```js
-const result = inventory.group(({ type }) => type);
+const result = Object.groupBy(inventory, ({ type }) => type);
 
 /* 结果是：
 {
@@ -91,7 +91,7 @@ function myCallback({ quantity }) {
   return quantity > 5 ? "ok" : "restock";
 }
 
-const result2 = inventory.group(myCallback);
+const result2 = Object.groupBy(inventory, myCallback);
 
 /* 结果是：
 {

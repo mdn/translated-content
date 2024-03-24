@@ -10,7 +10,7 @@ l10n:
 **`[@@iterator]()`** は {{jsxref("String")}} 値のメソッドで、[反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を実装しており、[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)や{{jsxref("Statements/for...of", "for...of")}}ループ
 文字列値のコードポイントを走査し、それぞれのコードポイントを文字列値として返すイテレーターオブジェクトを返します。
 
-{{EmbedInteractiveExample("pages/js/string-iterator.html")}}
+{{EmbedInteractiveExample("pages/js/string-prototype-@@iterator.html")}}
 
 ## 構文
 
@@ -41,7 +41,7 @@ string[Symbol.iterator]()
 
 ### for...of ループを用いた反復処理
 
-このメソッドを直接呼び出す必要はほとんどないことに注意してください。`iterator` メソッドが存在することで、文字列は[反復処理可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)になり、`for...of` ループのような反復処理構文は自動的にこのメソッドを呼び出して、ループするイテレーターを取得します。
+このメソッドを直接呼び出す必要はほとんどないことに注意してください。`iterator` メソッドが存在することで、文字列は[反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)になり、`for...of` ループのような反復処理構文は自動的にこのメソッドを呼び出して、ループするイテレーターを取得します。
 
 ```js
 const str = "A\uD835\uDC68B\uD835\uDC69C\uD835\uDC6A";

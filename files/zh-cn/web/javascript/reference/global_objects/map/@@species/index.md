@@ -5,31 +5,41 @@ slug: Web/JavaScript/Reference/Global_Objects/Map/@@species
 
 {{JSRef}}
 
-**`Map[@@species]`** 访问器属性会返回一个 `Map` 构造函数。
+**`Map[@@species]`** 静态访问器属性是一个未使用的访问器属性，指定了如何复制 `Map` 对象。
 
 ## 语法
 
-```plain
+```js-nolint
 Map[Symbol.species]
 ```
 
+### 返回值
+
+调用 `get @@species` 的构造函数的值（`this`）。返回值用于构造复制的 `Map` 实例。
+
 ## 描述
 
-The species accessor property returns the default constructor for `Map` objects. Subclass constructors may over-ride it to change the constructor assignment.
+`@@species` 访问器属性返回 `Map` 对象的默认构造函数。子类构造函数可以覆盖它以更改构造函数赋值。
 
-## 案例
+> **备注：** 目前所有 `Map` 方法均未使用此属性。
 
-The species property returns the default constructor function, which is the `Map` constructor for `Map` objects:
+## 示例
+
+### 普通对象的 species
+
+`@@species` 属性返回默认构造函数，即 `Map` 的构造函数。
 
 ```js
-Map[Symbol.species]; // function Map()
+Map[Symbol.species]; // 函数 Map()
 ```
 
-In a derived collection object (e.g. your custom map `MyMap`), the `MyMap` species is the `MyMap` constructor. However, you might want to overwrite this, in order to return parent `Map` objects in your derived class methods:
+### 派生对象的 species
+
+在一个自定义的 `Map` 子类（如 `MyMap`）的实例中，`MyMap` 的 `species` 是 `MyMap` 构造函数。但是，你可能希望覆盖它，以便在派生类方法中返回父 `Map` 对象：
 
 ```js
 class MyMap extends Map {
-  // 重写覆盖 MyMap species to the parent Map constructor
+  // 用父类 Map 构造函数覆盖 MyMap 的 species
   static get [Symbol.species]() {
     return Map;
   }
@@ -44,7 +54,7 @@ class MyMap extends Map {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Map")}}
 - {{jsxref("Symbol.species")}}

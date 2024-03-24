@@ -45,7 +45,7 @@ re[Symbol.match] = false;
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Symbol.replace")}}
 - {{jsxref("Symbol.search")}}

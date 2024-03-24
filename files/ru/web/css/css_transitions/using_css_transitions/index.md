@@ -1132,9 +1132,7 @@ p {
 
 ## Спецификации
 
-| Specification                            | Status                        | Comment            |
-| ---------------------------------------- | ----------------------------- | ------------------ |
-| {{SpecName('CSS3 Transitions', '', '')}} | {{Spec2('CSS3 Transitions')}} | Initial definition |
+{{Specifications}}
 
 ## Смотрите также
 

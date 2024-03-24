@@ -1,78 +1,76 @@
 ---
-title: Console
+title: console
 slug: Web/API/console
 ---
 
 {{APIRef("Console API")}}
 
-**`Console`** 对象提供了浏览器控制台调试的接口（如：Firefox 的 [Web Console](/zh-CN/docs/Tools/Web_Console)）。在不同浏览器上它的工作方式可能不一样，但通常都会提供一套共性的功能。
+**`console`** 对象提供了浏览器控制台调试的接口（如：Firefox 的 [Web console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)）。在不同浏览器上它的工作方式可能不一样，但通常都会提供一套共性的功能。
 
-`Console` 对象可以从任何全局对象中访问到，如 浏览器作用域上的 {{domxref("Window")}}，以及通过属性控制台作为 workers 中的特定变体的 {{domxref("WorkerGlobalScope")}}。可以通过 {{domxref("Window.console")}} 引用，也可以简单的通过 `console` 引用。例：
+`console` 对象可以从任何全局对象中访问到，如 浏览器作用域上的 {{domxref("Window")}}，以及通过属性控制台作为 worker 中的特定变体的 {{domxref("WorkerGlobalScope")}}。可以通过 {{domxref("Window.console")}} 引用，也可以简单的通过 `console` 引用。例：
 
 ```js
 console.log("Failed to open the specified link");
 ```
 
-本页面记录了 `Console` 对象上的[方法](#方法)并给出了几个 [Usage](#usage) （用例）。
+本页面记录了 `console` 对象上的[方法](#方法)并给出了几个 [Usage](#usage) （用例）。
 
 {{AvailableInWorkers}}
 
-> **备注：** 实际的 `console` 接口被定义为全小写的形式（比如不是这种形式 `Console` ），这是历史原因导致的。
-
 ## 方法
 
-- {{domxref("Console.assert()")}}
+- {{domxref("console/assert_static", "console.assert()")}}
   - : 如果第一个参数为 `false` ，则将消息和堆栈跟踪记录到控制台。
-- {{domxref("Console.clear()")}}
+- {{domxref("console.clear_static", "console.clear()")}}
   - : 清空控制台，并输出 `Console was cleared`。
-- {{domxref("Console.count()")}}
+- {{domxref("console.count_static", "console.count()")}}
   - : 以参数为标识记录调用的次数，调用时在控制台打印标识以及调用次数。
-- {{domxref("Console.countReset()")}}
+- {{domxref("console.countreset_static", "console.countReset()")}}
   - : 重置指定标签的计数器值。
-- {{domxref("Console.debug()")}}
+- {{domxref("console.debug_static", "console.debug()")}}
   - : 在控制台打印一条 `"debug"` 级别的消息。
-- {{domxref("Console.dir()")}}
-  - : 显示一个由特定的 Javascript 对象列表组成的可交互列表。这个列表可以使用三角形隐藏和显示来审查子对象的内容。.
-- {{domxref("Console.dirxml()")}}
+- {{domxref("console.dir_static", "console.dir()")}}
+  - : 显示一个由特定的 Javascript 对象列表组成的可交互列表。这个列表可以使用三角形隐藏和显示来审查子对象的内容。
+- {{domxref("console.dirxml_static", "console.dirxml()")}}
   - : 打印 XML/HTML 元素表示的指定对象，否则显示 JavaScript 对象视图。
-- {{domxref("Console.error()")}}
-  - : 打印一条错误信息，使用方法可以参考 [string substitution](/zh-CN/docs/Web/API/console#Using_string_substitutions)。
-- {{domxref("Console.exception()")}} {{Non-standard_inline}} {{deprecated_inline}}
+- {{domxref("console.error_static", "console.error()")}}
+  - : 打印一条错误信息，使用方法可以参考[使用字符串替换](#使用字符串替换)。
+- `console.exception()` {{Non-standard_inline}} {{deprecated_inline}}
   - : `error()` 方法的别称。
-- {{domxref("Console.group()")}}
-  - : 创建一个新的内联 [group](/zh-CN/docs/Web/API/console#Using_groups_in_the_console), 后续所有打印内容将会以子层级的形式展示。调用 `groupEnd()`来闭合组。
-- {{domxref("Console.groupCollapsed()")}}
-  - : 创建一个新的内联 [group](/zh-CN/docs/Web/API/console#Using_groups_in_the_console)。使用方法和 `group()` 相同，不同的是，`groupCollapsed()` 方法打印出来的内容默认是折叠的。调用`groupEnd()`来闭合组。
-- {{domxref("Console.groupEnd()")}}
-  - : 闭合当前内联 [group](/zh-CN/docs/Web/API/console#Using_groups_in_the_console)。
-- {{domxref("Console.info()")}}
-  - : 打印资讯类说明信息，使用方法可以参考 [string substitution](/zh-CN/docs/Web/API/console#Using_string_substitutions)。
-- {{domxref("Console.log()")}}
-  - : 打印内容的通用方法，使用方法可以参考 [string substitution](/zh-CN/docs/Web/API/console#Using_string_substitutions)。
-- {{domxref("Console.profile()")}} {{Non-standard_inline}}
-  - : Starts the browser's built-in profiler (for example, the [Firefox performance tool](/zh-CN/docs/Tools/Performance)). You can specify an optional name for the profile.
-- {{domxref("Console.profileEnd()")}} {{Non-standard_inline}}
-  - : Stops the profiler. You can see the resulting profile in the browser's performance tool (for example, the [Firefox performance tool](/zh-CN/docs/Tools/Performance)).
-- {{domxref("Console.table()")}}
+- {{domxref("console.group_static", "console.group()")}}
+  - : 创建一个新的内联[分组](#在_console_中使用编组), 后续所有打印内容将会以子层级的形式展示。调用 `groupEnd()`来闭合组。
+- {{domxref("console.groupcollapsed_static", "console.groupCollapsed()")}}
+  - : 创建一个新的内联[分组](#在_console_中使用编组)。使用方法和 `group()` 相同，不同的是，`groupCollapsed()` 方法打印出来的内容默认是折叠的。调用`groupEnd()`来闭合组。
+- {{domxref("console.groupend_static", "console.groupEnd()")}}
+  - : 闭合当前内联[分组](#在_console_中使用编组)。
+- {{domxref("console.info_static", "console.info()")}}
+  - : 打印资讯类说明信息，使用方法可以参考[使用字符串替换](#使用字符串替换)。
+- {{domxref("console.log_static", "console.log()")}}
+  - : 打印内容的通用方法，使用方法可以参考[使用字符串替换](#使用字符串替换)。
+- {{domxref("console.profile_static", "console.profile()")}} {{Non-standard_inline}}
+  - : Starts the browser's built-in profiler (for example, the [Firefox performance tool](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)). You can specify an optional name for the profile.
+- {{domxref("console.profileend_static", "console.profileEnd()")}} {{Non-standard_inline}}
+  - : Stops the profiler. You can see the resulting profile in the browser's performance tool (for example, the [Firefox performance tool](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)).
+- {{domxref("console.table_static", "console.table()")}}
   - : 将列表型的数据打印成表格。
-- {{domxref("Console.time()")}}
-  - : 启动一个以入参作为特定名称的[计时器](/zh-CN/docs/Web/API/console#Timers)，在显示页面中可同时运行的计时器上限为 10,000.
-- {{domxref("Console.timeEnd()")}}
-  - : 结束特定的 [计时器](/zh-CN/docs/Web/API/console#Timers) 并以毫秒打印其从开始到结束所用的时间。
-- {{domxref("Console.timeLog()")}}
-  - : 打印特定 [计时器](/zh-CN/docs/Web/API/console#Timers) 所运行的时间。
-- {{domxref("Console.timeStamp()")}} {{Non-standard_inline}}
-  - : 添加一个标记到浏览器的 [Timeline](https://developer.chrome.com/devtools/docs/timeline) 或 [Waterfall](/zh-CN/docs/Tools/Performance/Waterfall) 工具。
-- {{domxref("Console.trace()")}}
-  - : 输出一个 [stack trace](/zh-CN/docs/Web/API/console#Stack_traces)。
-- {{domxref("Console.warn()")}}
-  - : 打印一个警告信息，可以使用 [string substitution](/zh-CN/docs/Web/API/console#Using_string_substitutions) 和额外的参数。
+- {{domxref("console.time_static", "console.time()")}}
+  - : 启动一个以入参作为特定名称的[定时器](#定时器)，在显示页面中可同时运行的定时器上限为 10,000.
+- {{domxref("console.timeend_static", "console.timeEnd()")}}
+  - : 结束特定的[定时器](#定时器)并以毫秒打印其从开始到结束所用的时间。
+- {{domxref("console.timelog_static", "console.timeLog()")}}
+  - : 打印特定[定时器](#定时器)所运行的时间。
+- {{domxref("console.timestamp_static", "console.timeStamp()")}} {{Non-standard_inline}}
+  - : 添加一个标记到浏览器的 [Timeline](https://developer.chrome.com/devtools/docs/timeline) 或 [Waterfall](https://profiler.firefox.com/docs/) 工具。
+- {{domxref("console.trace_static", "console.trace()")}}
+  - : 输出[堆栈跟踪](#堆栈跟踪)。
+- {{domxref("console.warn_static", "console.warn()")}}
+  - : 打印一个警告信息，可以使用[字符串替换](#使用字符串替换)和额外的参数。
 
 ## 示例
 
 ### 输出文本到控制台
 
-console 对象中较多使用的主要有四个方法 {{domxref("console.log()")}}, {{domxref("console.info()")}}, {{domxref("console.warn()")}}, 和{{domxref("console.error()")}}。每一个结果在日志中都有不同的样式，可以使用浏览器控制台的日志筛选功能筛选出感兴趣的日志信息。
+console 对象中较多使用的主要有四个方法 {{domxref("console.log_static", "console.log()")}}、{{domxref("console.info_static", "console.info()")}}、{{domxref("console.warn_static", "console.warn()")}} 和{{domxref("console.error_static", "console.error()")}}。每一个结果在日志中都有不同的样式，可以使用浏览器控制台的日志筛选功能筛选出感兴趣的日志信息。
 
 有两种途径使用这些方法，可以简单的传入一组对象，其中的字符串对象会被连接到一起，输出到控制台。或者可以传入包含零个或多个的替换的字符串，后面跟着被替换的对象列表。
 
@@ -221,7 +219,7 @@ console.timeEnd("answer time");
 
 ### 堆栈跟踪
 
-控制台也支持输出堆栈，其将会显示到调用 {{domxref("console.trace()")}} 的点的调用路径。如下所示：
+控制台也支持输出堆栈，其将会显示到调用 {{domxref("console.trace_static")}} 的点的调用路径。如下所示：
 
 ```js
 function foo() {
@@ -252,9 +250,9 @@ foo();
 
 ## 相关文档
 
-- [Tools](/zh-CN/docs/Tools)
-- [Web Console](/zh-CN/docs/Tools/Web_Console) - Firefox 浏览器控制台如何处理 console API 的调用
-- [Remote debugging](/zh-CN/docs/Tools/Remote_Debugging) - 如何在调试移动设备时查看控制台输出。
+- [Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
+- [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) - Firefox 浏览器控制台如何处理 console API 的调用
+- [Remote debugging](https://profiler.firefox.com/docs/) - 如何在调试移动设备时查看控制台输出。
 
 ### 其他实现
 

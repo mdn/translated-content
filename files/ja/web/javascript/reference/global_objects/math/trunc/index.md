@@ -1,6 +1,8 @@
 ---
 title: Math.trunc()
 slug: Web/JavaScript/Reference/Global_Objects/Math/trunc
+l10n:
+  sourceCommit: fcd80ee4c8477b6f73553bfada841781cf74cf46
 ---
 
 {{JSRef}}
@@ -11,7 +13,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/trunc
 
 ## 構文
 
-```
+```js-nolint
 Math.trunc(x)
 ```
 
@@ -22,65 +24,54 @@ Math.trunc(x)
 
 ### 返値
 
-The integer part of the given number.
+`x` の整数部です。
 
 ## 解説
 
-他の 3 つの `Math` メソッド、 {{jsxref("Math.floor()")}}、 {{jsxref("Math.ceil()")}}、 {{jsxref("Math.round()")}} とは異なり、 `Math.trunc()` の動作は非常にシンプルで分かりやすいです。引数が正の数または負の数であるかに関わらず、ただ小数点とそれ以降にある数字を*切り捨て*ます。
-
-このメソッドに渡された引数は暗黙のうちに数値型に変換されることに注意して下さい。
+他の 3 つの `Math` メソッド、{{jsxref("Math.floor()")}}、{{jsxref("Math.ceil()")}}、{{jsxref("Math.round()")}} とは異なり、 `Math.trunc()` の動作は非常にシンプルで分かりやすいです。引数が正の数または負の数であるかに関わらず、ただ小数点とそれ以降にある数字を*切り捨て*ます。
 
 `trunc()` は `Math` オブジェクトの静的なメソッドなので、自ら生成した `Math` オブジェクトのメソッドとしてではなく、常に、`Math.trunc()` として使用してください (`Math` オブジェクトにはコンストラクタがありません)。
-
-## ポリフィル
-
-```js
-if (!Math.trunc) {
-  Math.trunc = function (v) {
-    v = +v;
-    if (!isFinite(v)) return v;
-
-    return v - (v % 1) || (v < 0 ? -0 : v === 0 ? v : 0);
-
-    // returns:
-    //  0        ->  0
-    // -0        -> -0
-    //  0.2      ->  0
-    // -0.2      -> -0
-    //  0.7      ->  0
-    // -0.7      -> -0
-    //  Infinity ->  Infinity
-    // -Infinity -> -Infinity
-    //  NaN      ->  NaN
-    //  null     ->  0
-  };
-}
-```
-
-または
-
-```js
-if (!Math.trunc) {
-  Math.trunc = function (v) {
-    return v < 0 ? Math.ceil(v) : Math.floor(v);
-  };
-}
-```
 
 ## 例
 
 ### Math.trunc() の使用
 
 ```js
+Math.trunc(-Infinity); // -Infinity
+Math.trunc("-1.123"); // -1
+Math.trunc(-0.123); // -0
+Math.trunc(-0); // -0
+Math.trunc(0); // 0
+Math.trunc(0.123); // 0
 Math.trunc(13.37); // 13
 Math.trunc(42.84); // 42
-Math.trunc(0.123); //  0
-Math.trunc(-0.123); // -0
-Math.trunc("-1.123"); // -1
-Math.trunc(NaN); // NaN
-Math.trunc("foo"); // NaN
-Math.trunc(); // NaN
+Math.trunc(Infinity); // Infinity
 ```
+
+### ビット単位の no-op を使った数値の切り捨て
+
+> **警告:** 無視できないエッジケースがあるため、これは `Math.trunc()` のポリフィルにはなりません。
+
+ビット演算はオペランドを 32 ビット整数に変換します。一般的なテクニックは以下の通りです。
+
+```js
+const original = 3.14;
+const truncated1 = ~~original; // 二重否定
+const truncated2 = original & -1; // Bitwise AND with -1
+const truncated3 = original | 0; // Bitwise OR with 0
+const truncated4 = original ^ 0; // Bitwise XOR with 0
+const truncated5 = original >> 0; // Bitwise shifting by 0
+```
+
+これは本質的に `toInt32` であり、 `Math.trunc` とは異なることに注意してください。値が -2<sup>31</sup> - 1 < `value` < 2<sup>31</sup> (-2147483649 < `value` < 2147483648) を満たさない場合、変換がオーバーフローしてしまいます。
+
+```js
+const a = ~~2147483648; // -2147483648
+const b = ~~-2147483649; // 2147483647
+const c = ~~4294967296; // 0
+```
+
+`Math.trunc()` の代用として `~~` を使うのは、入力の範囲が 32 ビット整数の範囲に収まっていると確信できる場合だけにしてください。
 
 ## 仕様書
 
@@ -88,10 +79,11 @@ Math.trunc(); // NaN
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Math.trunc")}}
+{{Compat}}
 
 ## 関連情報
 
+- [`Math.trunc` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-math)
 - {{jsxref("Math.abs()")}}
 - {{jsxref("Math.ceil()")}}
 - {{jsxref("Math.floor()")}}

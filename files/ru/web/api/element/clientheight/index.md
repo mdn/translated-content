@@ -21,7 +21,7 @@ var h = element.clientHeight;
 
 ## Пример
 
-![Image:Dimensions-client.png](/@api/deki/files/185/=Dimensions-client.png)
+![Как свойство clientHeight определяет внутреннюю высоту элемента с учетом высоты и заполнения](dimensions-client.png)
 
 ## Спецификации
 

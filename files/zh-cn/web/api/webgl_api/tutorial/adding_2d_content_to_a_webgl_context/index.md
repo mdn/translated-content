@@ -56,7 +56,7 @@ slug: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 
 顶点着色器根据需要，也可以完成其他工作。例如，决定哪个包含 {{Glossary("texel")}} 面部纹理的坐标，可以应用于顶点；通过法线来确定应用到顶点的光照因子等。然后将这些信息存储在[变量（varyings)](/zh-CN/docs/Web/API/WebGL_API/Data#varyings)或[属性 (attributes)](/zh-CN/docs/Web/API/WebGL_API/Data#Attributes)属性中，以便与片段着色器共享
 
-以下的顶点着色器接收一个我们定义的属性（aVertexPosition）的顶点位置值。之后这个值与两个 4x4 的矩阵（uProjectionMatrix 和 uModelMatrix）相乘; 乘积赋值给 gl_Position。有关投影和其他矩阵的更多信息，[在这里您可能可以找到有帮助的文章](https://webglfundamentals.org/webgl/lessons/webgl-3d-perspective.html)。
+以下的顶点着色器接收一个我们定义的属性（aVertexPosition）的顶点位置值。之后这个值与两个 4x4 的矩阵（uProjectionMatrix 和 uModelMatrix）相乘; 乘积赋值给 gl_Position。有关投影和其他矩阵的更多信息，[在这里你可能可以找到有帮助的文章](https://webglfundamentals.org/webgl/lessons/webgl-3d-perspective.html)。
 
 > **备注：** 添加下面代码到 `main()` 函数中：
 
@@ -231,7 +231,7 @@ export { initBuffers };
 
 当上一步完成，我们创建一个 Javascript 数组去记录每一个正方体的每一个顶点。然后将其转化为 WebGL 浮点型类型的数组，并将其传到 gl 对象的 {{domxref("WebGLRenderingContext.bufferData()", "bufferData()")}} 方法来建立对象的顶点。
 
-**绘制场景**
+## 绘制场景
 
 当着色器和物体都创建好后，我们可以开始渲染这个场景了。因为我们这个例子不会产生动画，所以 drawScene() 方法非常简单。它还使用了几个工具函数，稍后我们会介绍。
 
@@ -349,7 +349,7 @@ export { drawScene };
 
 第一步，用背景色擦除画布，接着建立摄像机透视矩阵。设置 45 度的视图角度，并且设置一个适合实际图像的宽高比。指定在摄像机距离 0.1 到 100 单位长度的范围内的物体可见。
 
-接着加载特定位置，并把正方形放在距离摄像机 6 个单位的的位置。然后，我们绑定正方形的顶点缓冲到上下文，并配置好，再通过调用 {{domxref("WebGLRenderingContext.drawArrays()", "drawArrays()")}} 方法来画出对象。
+接着加载特定位置，并把正方形放在距离摄像机 6 个单位的位置。然后，我们绑定正方形的顶点缓冲到上下文，并配置好，再通过调用 {{domxref("WebGLRenderingContext.drawArrays()", "drawArrays()")}} 方法来画出对象。
 
 最后，让我们引入 `initBuffers()` 和 `drawScene()`。
 

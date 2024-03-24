@@ -64,7 +64,7 @@ svg {
 
 ## DOM 接口
 
-该元素实现了[`SVGLinearGradientElement`](/zh-CN/DOM/SVGLinearGradientElement)接口。
+该元素实现了 [`SVGLinearGradientElement`](/zh-CN/DOM/SVGLinearGradientElement) 接口。
 
 ## 浏览器兼容性
 

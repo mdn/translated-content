@@ -127,12 +127,7 @@ td {
 
 ## Спецификация
 
-| Specification                                                      | Status                        | Comment                                                    |
-| ------------------------------------------------------------------ | ----------------------------- | ---------------------------------------------------------- |
-| {{SpecName('CSS3 Flexbox', '#visibility-collapse', 'visibility')}} | {{Spec2('CSS3 Flexbox')}}     | Определяет значение `collapse` применимым к flex элементам |
-| {{SpecName('CSS3 Box', '#the-visibility-property', 'visibility')}} | {{Spec2('CSS3 Box')}}         | Без изменений                                              |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'visibility')}}  | {{Spec2('CSS3 Transitions')}} | Определяет `visibility` как анимируемое.                   |
-| {{SpecName('CSS2.1', 'visufx.html#visibility', 'visibility')}}     | {{Spec2('CSS2.1')}}           | Изначальное определение                                    |
+{{Specifications}}
 
 {{cssinfo}}
 

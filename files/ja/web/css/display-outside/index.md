@@ -47,7 +47,7 @@ span {
 
 ## ブラウザーの互換性
 
-{{Compat("css.properties.display.display-outside", 10)}}
+{{Compat}}
 
 ## 関連情報
 

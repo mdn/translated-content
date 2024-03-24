@@ -22,7 +22,7 @@ void gl.enableVertexAttribArray(index);
 ### 参数
 
 - `index`
-  - : 类型为{{domxref("GLuint")}} 的索引，指向要激活的顶点属性。如果您只知道属性的名称，不知道索引，您可以使用以下方法来获取索引{{domxref("WebGLRenderingContext.getAttribLocation", "getAttribLocation()")}}.
+  - : 类型为{{domxref("GLuint")}} 的索引，指向要激活的顶点属性。如果你只知道属性的名称，不知道索引，你可以使用以下方法来获取索引{{domxref("WebGLRenderingContext.getAttribLocation", "getAttribLocation()")}}.
 
 ### 返回值
 
@@ -30,7 +30,7 @@ void gl.enableVertexAttribArray(index);
 
 ### 错误
 
-您可以使用{{domxref("WebGLRenderingContext.getError", "getError()")}}方法，来检查使用`enableVertexAttribArray()`时发生的错误。
+你可以使用{{domxref("WebGLRenderingContext.getError", "getError()")}}方法，来检查使用`enableVertexAttribArray()`时发生的错误。
 
 - `WebGLRenderingContext.INVALID_VALUE`
   - : 非法的 `index` 。一般是 `index` 大于或等于了顶点属性列表允许的最大值。该值可以通过 `WebGLRenderingContext.MAX_VERTEX_ATTRIBS`获取。
@@ -57,7 +57,7 @@ gl.vertexAttribPointer(
 gl.drawArrays(gl.TRIANGLES, 0, vertexCount);
 ```
 
-该段代码来自于 "A basic 2D WebGL animation example." 中的 [the function `animateScene()`](/zh-CN/docs/Web/API/WebGL_API/Basic_2D_animation_example#Drawing_and_animating_the_scene) 。通过连接来查看全文，您可以查看产生的动画效果。
+该段代码来自于 "A basic 2D WebGL animation example." 中的 [the function `animateScene()`](/zh-CN/docs/Web/API/WebGL_API/Basic_2D_animation_example#Drawing_and_animating_the_scene) 。通过连接来查看全文，你可以查看产生的动画效果。
 
 以上代码中，使用了{{domxref("WebGLRenderingContext.bindBuffer", "bindBuffer()")}}来设置将用于绘图的顶点数据的缓存。然后使用{{domxref("WebGLRenderingContext.getAttribLocation", "getAttribLocation()")}}来获取顶点数据在 shader 函数中的索引。
 

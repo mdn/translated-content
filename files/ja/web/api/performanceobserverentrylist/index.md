@@ -38,4 +38,4 @@ var observe_all = new PerformanceObserver(function(list, obs) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.PerformanceObserverEntryList")}}
+{{Compat}}

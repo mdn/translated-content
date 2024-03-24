@@ -281,7 +281,7 @@ slug: Web/JavaScript/Reference
 
 ## 函數
 
-本章節說明如何使用 [JavaScript 函數](/zh-TW/docs/Web/JavaScript/Reference/Functions) 來開發您的應用程式。
+本章節說明如何使用 [JavaScript 函數](/zh-TW/docs/Web/JavaScript/Reference/Functions) 來開發你的應用程式。
 
 - [`arguments`](/zh-TW/docs/Web/JavaScript/Reference/Functions/arguments)
 - [Arrow functions](/zh-TW/docs/Web/JavaScript/Reference/Functions/Arrow_functions)

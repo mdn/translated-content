@@ -28,7 +28,7 @@ Edge 的 `month` 控制器看起来像这样的：
   <tr>
    <td><strong>事件</strong></td>
    <td>
-     {{domxref("HTMLElement/change_event", "change")}} 和 {{domxref("HTMLElement/input_event", "input")}}
+     {{domxref("HTMLElement/change_event", "change")}} 和 {{domxref("Element/input_event", "input")}}
     </td>
   </tr>
   <tr>

@@ -1,8 +1,9 @@
 ---
-title: IntersectionObserver.thresholds
+title: "IntersectionObserver: thresholds プロパティ"
+short-title: thresholds
 slug: Web/API/IntersectionObserver/thresholds
 l10n:
-  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
+  sourceCommit: 65d1caf63ed58fee4c52d9ad31d79bc830297fef
 ---
 
 {{APIRef("Intersection Observer API")}}
@@ -17,7 +18,8 @@ l10n:
 
 `threshold` オプションを指定せずに `IntersectionObserver()` でオブザーバーをインスタンス化した場合、 `thresholds` の値は `[0]` となります。
 
-> **メモ:** {{domxref("IntersectionObserver")}} を作成するときに指定することができる `options` オブジェクトには `threshold` というフィールドがありますが、このプロパティは `thresholds` と呼ばれています。紛らわしい？そうです。もし `options` のフィールド名として誤って `thresholds` を使用してしまうと、 `thresholds` の配列は `[0.0]` になってしまい、おそらく期待したものとは異なるものになってしまいます。デバッグは大混乱に陥るかもしれません。
+> **メモ:** {{domxref("IntersectionObserver")}} を作成するときに指定することができる `options` オブジェクトには `threshold` というフィールドがありますが、このプロパティは `thresholds` と呼ばれています。紛らわしい？そうです。
+> もし `options` のフィールド名として誤って `thresholds` を使用してしまうと、 `thresholds` の配列は `[0.0]` になってしまい、おそらく期待したものとは異なるものになってしまいます。デバッグは大混乱に陥るかもしれません。
 
 ## 仕様書
 

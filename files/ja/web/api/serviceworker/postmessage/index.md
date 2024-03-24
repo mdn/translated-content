@@ -66,9 +66,9 @@ navigator.serviceWorker.ready.then((registration) => {
 
 ```js
 // これは `service-worker.s`` になる
-addEventListener("message", (event) =>
+addEventListener("message", (event) => {
   console.log(`Message received: ${event.data}`);
-);
+});
 ```
 
 サービスワーカーは、{{domxref("Client.postMessage()", "postMessage()")}} メソッドを用いてメインスレッドにメッセージを送り返すことができることに注意してください。これを受け取るには、メインスレッドは {{domxref("ServiceWorkerContainer.message_event", "message")}} オブジェクトの {{domxref("ServiceWorkerContainer")}} イベントを待ち受けする必要があります。

@@ -1,164 +1,120 @@
 ---
-title: MDN convenciones y definiciones
+title: Experimental, desaprobado y obsoleto
 slug: MDN/Writing_guidelines/Experimental_deprecated_obsolete
+l10n:
+  sourceCommit: 8d0cbeacdc1872f7e4d966177151585c58fb879e
 ---
 
 {{MDNSidebar}}
 
-Este artículo define algunas convenciones y definiciones que se usan comúnmente en MDN, que pueden no ser obvias para algunas personas cuando las encuentran en la documentación.
+Estos términos se asocian comúnmente con tecnologías y especificaciones y se utilizan en MDN Web Docs para etiquetar el estado de una tecnología. Para la definición de estos términos, MDN Web Docs se alinea con el repositorio [Browser Compatibility Data (BCD)](https://github.com/mdn/browser-compat-data/blob/main/schemas/compat-data-schema.md#status-information).
+Estos términos se describen a continuación en el contexto de su uso en MDN Web Docs.
 
-## Definiciones
+## Experimental
 
-### Desaprobado y obsoleto
+Cuando una tecnología se describe como experimental en MDN Web Docs, significa que la tecnología es emergente e inmadura y actualmente está _en proceso_ de ser añadida a la plataforma web (o de ser considerada para su adición).
+Marcar una tecnología como experimental indica que los lectores deben pensar cuidadosamente antes de usar esa tecnología en cualquier tipo de proyecto en producción (es decir, un proyecto que no sea solo una demostración o un experimento). Se [anima a los lectores a probar funciones experimentales](https://github.com/mdn/browser-compat-data/blob/main/schemas/compat-data-schema.md#status-information) y proporcionar comentarios a los proveedores de navegadores y autores de estándares.
 
-**Desaprobado** y **obsoleto** son términos comunes asociados con tecnologías y especificaciones, pero ¿qué significan?
+Para una tecnología marcada como **experimental**, se aplican una o más de las siguientes condiciones:
 
-- Desaprobado
-  - En MDN, el término **desaprobado** se usa para marcar una API o tecnología que ya no se recomienda, pero que aún está implementada y puede funcionar. Recientemente, la hemos actualizado a la definición utilizada en nuestro [proyecto de datos de compatibilidad del navegador](https://github.com/mdn/browser-compat-data/blob/master/schemas/compat-data-schema.md#status-information), que esa "característica ya no se recomienda. Es posible que se elimine en el futuro o que solo se conserve por motivos de compatibilidad. Evita el uso de esta funcionalidad."
-- Obsoleto
-  - En MDN, el término **obsoleto** se utiliza para marcar una API o tecnología que no solo ya no se recomienda, sino que ya no se implementa en los navegadores. Sin embargo, esto fue confuso — es similar a desaprobado, y la distinción no es muy útil (aún no debes usarlo en un sitio de producción). Por lo tanto, ya no la usamos, y cualquier instancia con la que te encuentres se debe eliminar/reemplazar por desaprobada.
+- Se implementa y habilita de forma predeterminada en la compilación de la versión de **solo un** motor de renderizado de los navegadores principales modernos.
+- Solo se admite a través de cambios de configuración como preferencias o parámetros, independientemente del número de motores de renderizado admitidos.
+- Es probable que su especificación definitiva cambie significativamente en formas incompatibles con versiones anteriores (es decir, puede romper el código existente que se basa en la característica).
 
-### Experimental
+> **Nota:** Una función que solo se publica en un motor de renderizado se sigue considerando experimental, incluso si está disponible en compilaciones de vista previa de otros motores de renderizado (o estableciendo una preferencia o indicador).
 
-**Experimental** puede significar diferentes cosas según el contexto en el que lo escuches o lo leas. Cuando una tecnología se describe como experimental en MDN, significa que la tecnología es incipiente e inmadura, y actualmente está en proceso de ser agregada a la plataforma web (o considerada para agregarla).
+El estado **experimental** de una tecnología puede caducar si se cumple una o más de las siguientes condiciones:
 
-Uno o ambos de estos serán ciertos:
+- Es compatible de forma predeterminada en **dos o más** de los principales motores de renderizado de los navegadores.
+- Es compatible de forma predeterminada con un único motor de renderizado de navegador durante dos o más años y no sufre cambios importantes.
+- Es poco probable que su especificación definitiva cambie de manera que rompa la compatibilidad.
 
-- Está implementado y habilitado de forma predeterminada en menos de dos de los principales navegadores modernos.
-- Su especificación definitoria no es estable y es probable que cambie significativamente. Por lo tanto, su sintaxis y comportamiento están sujetos a cambios en futuras versiones de navegadores a medida que cambie la especificación.
+Para ver ejemplos de estas condiciones, consulte la documentación de [bandera experimental](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines/index.md#setting-experimental) de BCD.
 
-Si una o ambas de estas definiciones es cierta, entonces debes pensar detenidamente antes de comenzar a usar esa tecnología en cualquier tipo de proyecto de producción (es decir, no solo en una demostración o experimento). Consulta también la definición de experimental en nuestro [proyecto de datos de compatibilidad del navegador](https://github.com/mdn/browser-compat-data/blob/master/schemas/compat-data-schema.md#status-information).
+Usualmente, si una tecnología es soportada a través de varios de los navegadores principales, la especificación será estable, pero este no es siempre el caso.
+Por otro lado, algunas tecnologías pueden tener una especificación estable, pero no tienen soporte nativo en los navegadores. [IMSC](/es/docs/Related/IMSC), por ejemplo, se utiliza mediante un polyfill de JavaScript. <!-- need to revisit link -->
 
-Por el contrario, un elemento ya no es experimental cuando:
+Una característica o tecnología que forma parte de una especificación activa o un proceso de estandarización y no está marcada como **obsoleta** se dice que está en **vía de estandarización**.
 
-- Está implementado en dos o más navegadores principales; o
-- Su especificación definitoria es estable y es poco probable que cambie.
+## Desaprobada
 
-El _or_ es importante aquí — por lo general, si una tecnología es compatible con varios navegadores importantes, la especificación será estable, pero no siempre es así. Y algunas tecnologías tendrán una especificación estable y se usarán bien, pero no tendrán soporte nativo en los navegadores ([IMSC](/es/docs/Related/IMSC), por ejemplo).
+El término **desaprobado** en MDN Web Docs se utiliza para marcar una API o tecnología que ya no se recomienda. Una API o tecnología obsoleta podría eliminarse en el futuro o podría conservarse solo por motivos de compatibilidad y seguir funcionando. Recomendamos evitar el uso de las funcionalidades marcadas como desaprobadas.
 
-### Páginas archivadas
+Para más información en la definición de **desaprobado**, vea la [la bandera desaprobado](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines/index.md#encuadre-deprecated) de la documentación de BCD.
 
-Las páginas archivadas son páginas que se almacenan en el [Archivo de contenido obsoleto](/es/docs/Archive) de MDN. Estas páginas contienen información lo suficientemente desactualizada como para que ya no sea directamente útil para nadie.
+## Obsoleto
 
-Por lo general, estas se refieren a proyectos de Mozilla que han sido descontinuados y ya no se debe confiar en ellos. Pero no las eliminamos simplemente porque forman un registro histórico útil, y algunos de los patrones o ideas contenidos en ellos podrían ser útiles para trabajos futuros. Un buen ejemplo es el [proyecto B2G (Firefox OS)](/es/docs/Archive/B2G_OS).
+En MDN Web Docs, el término **obsoleto** se usaba históricamente para indicar una API o tecnología que ya no solo ya no se recomienda, sino que ya no se implementa en los navegadores.
+Debido a que la distinción entre **obsoleto** y **desaprobado** no es muy útil, ya no usamos el término **obsoleto** en MDN Web Docs.
 
-#### ¿Cuándo se debe archivar una página?
+> **Nota:** Si te encuentras con algún caso de **obsoleto**, debes eliminarlo o reemplazarlo con el término **desaprobado**.
 
-Una página se debe archivar si se ajusta a la descripción anterior. Para archivar una página, debes utilizar la "función Mover página" (_Avanzado > Mover este artículo_) para mover la página al árbol de páginas de archivo (/es/docs/Archive). Es posible que no tengas los permisos para usar esta función, y antes de comenzar a archivar páginas, primero debas discutirlo con la comunidad MDN; habla con nosotros en nuestro [Foro de discusión](https://discourse.mozilla.org/c/mdn).
+## Pautas para eliminar contenido
 
-### Páginas eliminadas
+A veces, durante el desarrollo de una nueva especificación o en el transcurso de la evolución de los estándares, como en HTML, se agregan nuevos elementos, métodos, propiedades, etc., a la especificación, se mantienen allí durante un tiempo y luego se eliminan. A veces esto sucede muy rápidamente, y a veces estos nuevos elementos permanecen en la especificación durante meses o incluso años antes de ser eliminados. Esto puede hacer que sea difícil decidir cómo manejar la eliminación del elemento de la especificación.
 
-Las páginas eliminadas son páginas que se eliminaron explícitamente de MDN — consulta, por ejemplo, la interfaz [`SharedKeyframeList`](/es/docs/Web/API/SharedKeyframeList) y el constructor [`SharedKeyframeList()`](/es/docs/Web/API/SharedKeyframeList/SharedKeyframeList). Estas páginas contienen información que ya no es útil de ninguna manera y/o puede ser incorrecta hasta el punto en que mantenerla disponible puede ser confuso o malo para la gente.
+Aquí hay algunas pautas para ayudarlo a decidir qué hacer cuando se elimina algo de la especificación.
 
-Estas pueden ser:
+> **Nota:** A los efectos de esta discusión, la palabra "elemento" se utiliza para referirse a cualquier cosa que pueda ser parte de una especificación: un elemento o un atributo de un elemento, una interfaz o cualquier método individual, una propiedad u otro miembro de una interfaz, y así sucesivamente.
 
-- Páginas de referencia para funciones de API que se eliminaron de la especificación antes de que se implementaran en cualquier navegador.
-- Artículos que cubren técnicas que luego se demostró que eran malas prácticas y fueron reemplazadas por mejores técnicas.
-- Artículos que contienen información que luego fue reemplazada por otros artículos de mejor calidad.
-- Artículos que contienen contenido inapropiado para MDN.
-- Traducciones antiguas, desactualizadas y difíciles de arreglar, lo que significa que la versión en inglés es preferible y comenzar una nueva traducción sería una opción más fácil.
+### Si el elemento nunca se implementó
 
-#### ¿Cuándo se debe eliminar una página?
+Si el elemento _nunca_ fue implementado en una versión de _cualquier_ navegador, ni siquiera detrás de una preferencia o un parámetro, elimine cualquier referencia al elemento de la documentación.
 
-Se debe eliminar una página si se ajusta a la descripción anterior. Para eliminar una página, debes utilizar la función "Eliminar esta página" (_Avanzado> Eliminar esta página_) para eliminar la página. Probablemente no tengas los permisos para usar esta función, y cuando pienses en eliminar páginas, primero debes discutirlo con la comunidad de MDN; habla con nosotros en nuestro [Foro de discusión](https://discourse.mozilla.org/c/mdn).
+- Si el artículo tiene alguna página de documentación que describa solo ese artículo (como {{domxref("RTCPeerConnection.close()")}}), elimina esa página.
+  Si el elemento eliminado es una interfaz, esto significa eliminar también cualquier subpágina que describa las propiedades y los métodos en esa interfaz.
+- Elimine el elemento de cualquier lista de propiedades, atributos, métodos, etc. Para los métodos de una interfaz, por ejemplo, esto significa eliminarla de la sección "Métodos" en la página de descripción general de la interfaz.
+- Busque en el texto de la página de resumen de esa interfaz, elemento, etc., cualquier referencia al elemento eliminado. Elimine esas referencias, asegurándose de no dejar problemas gramaticales extraños u otros problemas con el texto. Esto puede significar no solo eliminar palabras, sino reescribir una oración o párrafo para que tenga más sentido. También puede significar eliminar secciones enteras de contenido si la descripción del uso del artículo es larga.
+- Del mismo modo, busca cualquier discusión sobre el tema en las guías y tutoriales sobre la API o tecnología relevante. Elimine esas referencias, asegurándose de no dejar problemas gramaticales extraños u otros problemas con el texto. Esto puede significar no solo eliminar palabras, sino reescribir una oración o párrafo para que tenga más sentido. También puede significar eliminar secciones enteras de contenido si la descripción del uso del artículo es larga.
+- Busque en MDN Web Docs referencias al elemento eliminado, en caso de que haya discusiones en otro lugar. Es poco probable que los haya, ya que si nunca se implementó, es poco probable que se discuta ampliamente. Elimina esas menciones también.
+- Si los archivos JSON en el [repositorio de datos de compatibilidad del navegador](https://github.com/mdn/browser-compat-data) contienen datos de los elementos eliminados, elimine esos objetos del código JSON y envíe una solicitud de revisión con ese cambio, explicando el motivo en el mensaje de confirmación y la descripción. Tenga cuidado de no romper la sintaxis JSON mientras lo hace.
 
-### Cuando documentar nuevas tecnologías
+### Si el elemento se implementó en un navegador detrás de un argumento
 
-En MDN, buscamos constantemente documentar nuevas tecnologías de estándares web según corresponda. Intentamos lograr un equilibrio entre publicar la documentación lo suficientemente temprano para que los desarrolladores puedan aprender sobre las nuevas funciones tan pronto como lo necesiten y publicarla lo suficientemente tarde para que la tecnología sea madura y estable para que los documentos no necesiten actualizaciones constantes o rápida eliminación.
+Si el elemento se implementó en cualquier versión de lanzamiento de uno o más navegadores pero _solo_ detrás de una preferencia o un argumento, no lo elimine de la documentación de inmediato. En su lugar, marca el artículo como **desaprobado** de la siguiente manera:
 
-En general, nuestra definición de lo más temprano que consideraremos para documentar una nueva tecnología es:
+- Si el artículo tiene alguna página de documentación que describa solo ese artículo (como {{domxref ("RTCPeerConnection.close()")}}), agrega la macro [`deprecated_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Header.ejs) a la parte superior de la página y agrega la siguiente entrada de metadato `status:`:
 
-_"Cuando la función está en una pista de estándares y se implementa en algún lugar."_
+  ```yaml
+  status:
+    - deprecated
+  ```
 
-Definitivamente deberías considerar documentar una nueva tecnología si:
+- En la página de descripción general del elemento, interfaz o API, busca la lista de elementos que incluye el elemento que se ha eliminado de la especificación y agrega la macro [`deprecated_inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Inline.ejs) después del nombre del elemento en esa lista.
+- Buscar en el texto informativo de la página de resumen de esa interfaz, elemento, etc., cualquier referencia al elemento eliminado. Agregue cuadros de advertencia en los lugares apropiados con texto como "\[item] se ha eliminado de la especificación y se eliminará pronto de los navegadores. Consulta \[enlace a página] para obtener una nueva forma de hacerlo."
+- Del mismo modo, busca cualquier discusión sobre el tema en las guías y tutoriales sobre la API o tecnología relevante. Añade advertencias similares.
+- Busque en MDN Web Docs referencias al elemento eliminado, en caso de que haya discusiones en otro lugar. Añade mensajes de advertencia similares allí también.
+- En algún momento en el futuro, se puede tomar la decisión de eliminar el artículo de la documentación; normalmente no lo hacemos, pero si el artículo estaba especialmente inutilizado o no era interesante, podemos decidir hacerlo.
+- Actualizar cualquier entrada relevante en el [Repositorio de datos de compatibilidad del navegador](https://github.com/mdn/browser-compat-data) para reflejar la obsolescencia de los artículos afectados.
 
-- Se especifica en un documento de especificación publicado bajo una organización de estándares confiable (como W3C, WHATWG, Khronos, IETF, etc.), que ha alcanzado un nivel razonable de estabilidad (por ejemplo, un borrador de trabajo del W3C o una recomendación candidata, o la especificación está buscando ser bastante estable a juzgar por el flujo de asuntos presentados en su contra).
-- Se implementa de manera consistente en al menos un navegador, y otros desarrolladores de navegadores muestran signos de interés (como un boleto activo o un proceso de "intención de implementar" en vigor).
+### Si el elemento se implementó en un navegador sin un parámetro
 
-Deberías tener más cuidado al documentar una nueva tecnología (pero deberías considerarla si tiene sentido) si:
+Si el elemento se implementó en una o más compilaciones de versiones de navegadores sin requerir una preferencia o un parámetro, marque el elemento como **desaprobado**, de la siguiente manera:
 
-- No tiene una especificación, o la especificación es una nota aproximada que parece estar sujeta a cambios.
-- Uno o cero navegadores lo implementan actualmente, y los navegadores que no lo admiten no muestran signos de interés en implementarlo (puedes evaluar esto preguntando a los ingenieros que trabajan en esos navegadores, buscando rastreadores de errores del navegador y listas de correo, etc.).
+- Si el artículo tiene alguna página de documentación que describa solo ese artículo (como {{domxref ("RTCPeerConnection.close()")}}), agrega la macro [`deprecated_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Header.ejs) a la parte superior de la página y agrega la siguiente entrada de metadato `status:`:
 
-No debes considerar documentar una nueva tecnología si:
+  ```yaml
+  status:
+    - deprecated
+  ```
 
-- No es una tecnología expuesta a la web y/o es completamente propietaria.
-- Ya muestra signos de estar obsoleto o reemplazado por una característica similar.
+- En la página de descripción general del elemento, interfaz o API, busca la lista de elementos que incluye el elemento que se ha eliminado de la especificación y agrega la macro [`deprecated_inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Inline.ejs) después del nombre del elemento en esa lista.
+- Buscar en el texto informativo de la página de resumen de esa interfaz, elemento, etc., cualquier referencia al elemento eliminado. Agregue mensajes de advertencia en los lugares apropiados con texto como "\[item] ha sido eliminado de la especificación y está desaprobado. Es posible que se elimine de los navegadores en el futuro, por lo que no debes usarlo. Consulta \[enlace a página] para obtener una nueva forma de hacerlo."
+- Del mismo modo, busca cualquier discusión sobre el tema en las guías y tutoriales sobre la API o tecnología relevante. Añade advertencias similares.
+- Busque en MDN Web Docs referencias al elemento eliminado, en caso de que haya discusiones en otro lugar. Añade mensajes de advertencia similares allí también.
+- Es poco probable que estos artículos se eliminen de la documentación en el corto plazo, si es que se eliminan alguna vez.
+- Actualizar cualquier entrada relevante en el [Repositorio de datos de compatibilidad del navegador](https://github.com/mdn/browser-compat-data) para reflejar la caducidad de los artículos afectados.
 
-## Convenciones
+Utilice el sentido común con la redacción de los mensajes de advertencia y otros cambios en el texto sugeridos en las pautas anteriores.
+Diferentes elementos requerirán una redacción y un manejo diferente de la situación.
+En caso de duda, no dudes en pedir consejo en las [salas de chat de MDN Web Docs](/es/docs/MDN/Community/Communication_channels#chat_rooms).
 
-### Cuando se elimina algo de la especificación
+## Pautas para documentar un conflicto de especificaciones
 
-A veces, durante el desarrollo de una nueva especificación, o en el transcurso de la evolución de los estándares como HTML, se agregan nuevos elementos, métodos, propiedades, etc. a la especificación, permanecen allí por un tiempo y luego se eliminan nuevamente. A veces, esto sucede muy rápido y, a veces, estos nuevos elementos permanecen en la especificación durante meses o incluso años antes de ser eliminados. Esto puede hacer que sea complicado decidir cómo manejar la eliminación del artículo de la especificación. Aquí hay algunas pautas que te ayudarán a decidir qué hacer.
+A veces, pero rara vez, puede haber un conflicto entre diferentes versiones de especificaciones (generalmente W3C versus WHATWG). Por ejemplo, una versión puede tener una función que aparece como obsoleta, mientras que la otra no.
+En tales casos, considere cuál es la realidad, es decir, considere qué están haciendo realmente los navegadores y escriba una nota "importante" para resumir ese último estado.
+Por ejemplo, a partir de enero de 2019, el atributo global [`inputmode`](/es/docs/Web/HTML/Global_attributes/inputmode) tiene un conflicto, que se resumió así: <!--este ejemplo de advertencia de conflicto de especificaciones ya no existe en esa página. no pude encontrar ningún otro ejemplo-->
 
-> **Nota:** Para los propósitos de esta discusión, la palabra "elemento" se usa para significar cualquier cosa que pueda ser parte de una especificación: un elemento o un atributo de un elemento, una interfaz o cualquier método individual, propiedad u otro miembro de una interfaz, etcétera.
-
-- Si el elemento _nunca_ se implementó en una versión de lanzamiento de _cualquier_ navegador, incluso detrás de una preferencia o marca, simplemente elimina cualquier referencia al elemento de la documentación.
-
-  - Si el elemento tiene páginas de documentación que describen solo ese elemento (como {{domxref("RTCPeerConnection.close()")}}), elimina esa página. Si el elemento eliminado es una interfaz, esto significa eliminar también las subpáginas que describen las propiedades y los métodos de esa interfaz.
-  - Elimina el elemento de cualquier lista de propiedades, atributos, métodos, etc. Para los métodos de una interfaz, eso significa eliminarlo de la sección "Métodos" en la página de descripción general de la interfaz, por ejemplo.
-  - Busca en el texto de la página de descripción general para esa interfaz, elemento, etc., cualquier referencia al elemento eliminado. Elimina esas referencias, asegurándote de no dejar extraños problemas gramaticales u otros problemas con el texto. Esto puede significar no solo borrar palabras, sino reescribir una oración o párrafo para que tenga más sentido. También puede significar eliminar secciones enteras de contenido si la descripción del uso del elemento es extensa.
-  - Del mismo modo, busca cualquier discusión sobre el tema en las guías y tutoriales sobre la API o tecnología relevante. Elimina esas referencias, asegurándote de no dejar extraños problemas gramaticales u otros problemas con el texto. Esto puede significar no solo borrar palabras, sino reescribir una oración o párrafo para que tenga más sentido. También puede significar eliminar secciones enteras de contenido si la descripción del uso del elemento es extensa.
-  - Busca en MDN referencias al elemento eliminado, en caso de que haya discusiones en otro lugar. Es poco probable que las haya, ya que si nunca se implementó, es poco probable que se discuta ampliamente. Elimina también esas menciones.
-  - Si el [repositorio de datos de compatibilidad del navegador](https://github.com/mdn/browser-compat-data) contienen datos de los elementos eliminados, elimina esos objetos del código JSON y envía una SE con ese cambio, explicando por qué en el mensaje de confirmación y la descripción de la SE. Ten cuidado de no romper la sintaxis JSON mientras haces esto.
-
-- Si el elemento se implementó en cualquier versión de lanzamiento de uno o más navegadores, pero _solo_ detrás de una preferencia o marca, no elimines el elemento de la documentación inmediatamente. En su lugar, marca el artículo como obsoleto de la siguiente manera:
-
-  - Si el elemento tiene páginas de documentación que describen solo ese elemento (como {{domxref("RTCPeerConnection.close()")}}), agrega la macro [`deprecated_header`](https://github.com/mdn/yari/tree/main/kumascript/macros/deprecated_header.ejs) en la parte superior de la página y agrega la etiqueta `Deprecated` a la lista de etiquetas de la página.
-  - En la página de descripción general del elemento, la interfaz o la API, busca la lista de elementos que incluyan el elemento que se ha eliminado de la especificación y agrega la macro [`deprecated_inline`](https://github.com/mdn/yari/tree/main/kumascript/macros/deprecated_inline.ejs) después del nombre del elemento en esa lista.
-  - Busca en el texto informativo de la página de descripción general de esa interfaz, elemento, etc., cualquier referencia al elemento eliminado. Agrega cuadros de advertencia en los lugares apropiados con texto del tipo "\[lo que sea] se ha eliminado de la especificación y pronto se eliminará de los navegadores. Consulta \[enlace a la página] para conocer una nueva forma de hacer esto."
-  - Del mismo modo, busca cualquier discusión sobre el tema en las guías y tutoriales sobre la API o tecnología relevante. Agrega advertencias similares.
-  - Busca en MDN referencias al elemento eliminado, en caso de que haya discusiones en otro lugar. Agrega también cuadros de advertencia similares allí.
-  - En algún momento en el futuro, se puede tomar la decisión de eliminar el elemento de la documentación; Normalmente no hacemos esto, pero si el artículo no se utilizó o no fue interesante, podemos decidir hacerlo.
-  - Actualiza cualquier entrada relevante en el [repositorio de datos de compatibilidad del navegador](https://github.com/mdn/browser-compat-data) para reflejar la obsolescencia de los elementos afectados.
-
-- Si el elemento se implementó en una o más versiones de publicaciones de navegadores, sin que sea necesario cambiar una preferencia o una marca, marca el elemento como obsoleto, de la siguiente manera:
-
-  - Si el elemento tiene páginas de documentación que describen solo ese elemento (como {{domxref("RTCPeerConnection.close()")}}), agrega la macro [`deprecated_header`](https://github.com/mdn/yari/tree/main/kumascript/macros/deprecated_header.ejs) en la parte superior de la página y agrega la etiqueta `Deprecated` a la lista de etiquetas de la página.
-  - En la página de descripción general del elemento, la interfaz o la API, busca la lista de elementos que incluyan el elemento que se ha eliminado de la especificación y agrega la macro [`deprecated_inline`](https://github.com/mdn/yari/tree/main/kumascript/macros/deprecated_inline.ejs) después del nombre del elemento en esa lista.
-  - Busca en el texto informativo de la página de descripción general de esa interfaz, elemento, etc., cualquier referencia al elemento eliminado. Agrega recuadros de advertencia en los lugares apropiados con texto del tipo "\[lo que sea] se ha eliminado de la especificación y está obsoleto. Es posible que se elimine de los navegadores en el futuro, por lo que no debes usarlo. Consulta \[enlace a la página] para conocer una nueva forma de hacer esto."
-  - Del mismo modo, busca cualquier discusión sobre el tema en las guías y tutoriales sobre la API o tecnología relevante. Agrega advertencias similares.
-  - Busca en MDN referencias al elemento eliminado, en caso de que haya discusiones en otro lugar. Agrega también cuadros de advertencia similares allí.
-  - Es poco probable que estos elementos se eliminen de la documentación pronto, si es que alguna vez lo hacen. Sin embargo, es posible que parte o todo el material se mueva a la sección [Archivo](/es/docs/Archive) del sitio.
-  - Actualiza todas las entradas relevantes en el [repositorio de datos de compatibilidad del navegador](https://github.com/mdn/browser-compat-data) para reflejar la obsolescencia de los elementos afectados.
-
-Utiliza el sentido común con la redacción de los mensajes de advertencia y otros cambios en el texto sugeridos por las pautas anteriores. Los diferentes elementos requerirán una redacción y un manejo diferentes de la situación. En caso de duda, no dudes en pedir consejo en la [sala del chat de Docs Web de MDN](https://chat.mozilla.org/#/room/#mdn:mozilla.org) en [Matrix](https://wiki.mozilla.org/Matrix), o en el [foro de debate de Docs Web de MDN](https://discourse.mozilla.org/c/mdn).
-
-### Copiar contenido dentro de MDN
-
-A veces, necesitas reutilizar el mismo texto en varias páginas (o deseas usar el contenido de una página como plantilla para otra página). Tienes tres opciones:
-
-- Si deseas copiar una página completa:
-
-  1. Mientras visualizas la página que deseas copiar, en el menú **Avanzado** (engrane), elige [**Clona esta página**](/es/docs/MDN/Contribute/Creating_and_editing_pages#Clone_of_an_existing_page). Esto abre la interfaz de usuario del editor para una nueva página, con el contenido de la página clonada ya poblada.
-  2. Introduce un **título** y un **`slug`** nuevo para la página clonada.
-  3. Edita el contenido de la página según sea necesario y guárdalo como usualmente lo haces.
-
-- Si deseas copiar solo una parte de una página, **no solo visites la página y la copies**. Esto introduce bits adicionales de HTML no deseados en la página destino, y alguien tendrá que limpiar eso, tú u otro editor. Nadie quiere eso. Para copiar parte de una página MDN a otra página:
-
-  1. En la página fuente, haz clic en el botón **Editar** en la página de fuente.
-  2. **Copia el contenido que deseas reutilizar desde la interfaz de usuario del editor.**
-  3. Haz clic en **Descartar** para salir de la interfaz de usuario del editor de esa página.
-  4. Abre la interfaz de usuario del editor de la página donde deseas pegar.
-  5. Pega el contenido del portapapeles.
-
-  > **Nota:** Chrome generalmente no incluye las clases aplicadas al contenido al copiar y pegar documentos en nuestro editor. Debes revisar el contenido después de hacer esto y volver a aplicar los estilos perdidos. Checa las tablas, cuadros de sintaxis, resaltado de sintaxis y secciones ocultas de contenido en particular.
-
-- A veces, literalmente, deseas utilizar el mismo contenido en muchas páginas. En este caso, es mejor que coloques el contenido en una página y luego uses la macro [`Page`](https://github.com/mdn/yari/tree/main/kumascript/macros/Page.ejs) para trasladar el material de una página a otra. De esta forma, siempre que se actualice el texto de la página fuente, la página de destino también se actualizará (es decir, esto sucederá en una actualización forzada o cuando la página destino pase por una reconstrucción programada).
-
-#### Copiar contenido de otro lugar
-
-A menudo, hay contenido útil sobre un tema en algún lugar de la web además de MDN. Sin embargo, copiar dicho contenido puede plantear dificultades, tanto legales como técnicas.
-
-En el nivel técnico, los motores de búsqueda suelen penalizar a un sitio en su clasificación por reproducir contenido disponible en otros lugares. Por lo tanto, es preferible tener contenido original en MDN, para mejorar la clasificación del contenido de MDN en los motores de búsqueda. Puedes vincular al contenido existente de MDN.
-
-A nivel legal, debes estar autorizado para contribuir con el contenido, y debes tener licencia y atribución de una manera que sea compatible con [licencia de MDN](/es/docs/MDN/About#Copyrights_and_licenses).
-
-- **Si creaste el contenido existente** (para tus propios fines y no como trabajo por encargo) y estás dispuesto a contribuir a MDN con la licencia de MDN, este es el caso más fácil y estás libre de contribuir con el contenido.
-- **Si los derechos de autor del contenido pertenecen a otra persona**, debes tener licencia y atribuir de manera compatible con la licencia de MDN. A menudo, no es fácil para alguien que no es abogado determinar qué licencias son compatibles. Para estar seguro, comunícate con un miembro del [equipo de personal de MDN](https://wiki.mozilla.org/MDN#Staff_Team), quien puede consultar al equipo legal de Mozilla para obtener orientación si es necesario .
-
-#### Cómo comunicar un conflicto de especificaciones
-
-Ten en cuenta que a veces (pero rara vez) hay un conflicto entre diferentes versiones de especificaciones (generalmente W3C versus WHATWG), p. ej. una versión puede tener una característica listada como obsoleta, mientras que la otra no. En tales casos, considera cuál es la realidad, es decir, qué están haciendo los navegadores, y escribe una nota "importante" para resumir ese último estado. Por ejemplo, a enero de 2019, el atributo global [`inputmode`](/es/docs/Web/HTML/Global_attributes/inputmode) tiene un conflicto, que se resumió al igual que:
-
-> **Advertencia:** **Conflicto de especificaciones**: La [lista de especificaciones de WHATWG `inputmode`](https://html.spec.whatwg.org/multipage/interaction.html#attr-inputmode), y los navegadores modernos están trabajando para admitirlo. Sin embargo, la [especificación W3C HTML 5.2](https://www.w3.org/TR/html52/index.html#contents) ya no la incluye (es decir, la marca como desaprobada). Debes considerar que la definición del WHATWG es correcta, hasta que se logre un consenso.
+> **Advertencia:** Conflicto de especificación: La especificación WHATWG enumera [`inputmode`](https://html.spec.whatwg.org/multipage/interaction.html#attr-inputmode) y los navegadores modernos están trabajando para soportarlo.
+> La [especificación HTML 5.2 del W3C](https://html.spec.whatwg.org/multipage/index.html#contents), sin embargo, ya no la enumera (es decir, la marca como obsoleta).
+> Debe considerar la definición de WHATWG como correcta, hasta que se llegue a un consenso.

@@ -1,51 +1,57 @@
 ---
 title: Comment rendre les PWA installables
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
+l10n:
+  sourceCommit: e74627e6fd9ba19696b918c2bdddfff8aa160787
 ---
 
-{{PreviousMenuNext("Web/Apps/Progressive/Offline_Service_workers", "Web/Apps/Progressive/Re-engageable_Notifications_Push", "Web/Apps/Progressive")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers", "Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
 
-Dans l'article précédent, nous avons vu comment [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) fonctionne en mode déconnecté grâce à son [service worker](/fr/docs/Web/API/Service_Worker_API), mais nous pouvons aller encore plus loin et permettre aux utilisateurs d'installer l'application web sur les navigateurs mobiles pris en charge, comme s'il s'agissait d'une application native. Cet article explique comment réaliser ceci en utilisant un manifeste web et une fonctionnalité appelée "ajouter à l'écran d'accueil".
+{{PWASidebar}}
 
-Ces technologies permettent à l'application d'être directement lancée depuis l'écran d'accueil de l'appareil au lieu de lancer manuellement le navigateur puis de saisir l'URL. Votre application web peut se trouver à côté des applications natives en tant qu'application de première catégorie. De ce fait, il est plus facile d'y accéder et vous pouvez également spécifier qu'une application doit s'exécuter en plein écran sans l'encadrement du navigateur hôte, ce qui la fait ressembler encore plus à une application native.
+Dans l'article précédent, nous avons vu comment [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) fonctionne en mode hors connexion grâce à son [<i lang="en">service worker</i>](/fr/docs/Web/API/Service_Worker_API), mais nous pouvons aller encore plus loin et permettre aux utilisatrices et utilisateurs d'installer l'application web sur leur appareil. L'application web installée peut ensuite être lancée comme s'il s'agissait d'une application native du système d'exploitation. Cet article explique comment y parvenir à l'aide du manifeste de l'application web.
+
+Ces technologies permettent à l'application d'être directement lancée depuis l'écran d'accueil, la barre de tâche, ou le dock de l'appareil, plutôt que d'ouvrir le navigateur, puis d'accéder au site en utilisant un marque-page ou en tapant l'URL. Votre application web peut être placée à côté d'applications natives, ce qui en facilite l'accès. De plus, vous pouvez spécifier que l'application soit lancée en mode plein écran ou autonome, supprimant ainsi l'interface utilisateur du navigateur par défaut qui serait autrement présente, créant ainsi une sensation encore plus transparente et native.
+
+Pour en savoir plus, consultez [Rendre les PWA installables](/fr/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable).
 
 ## Prérequis
 
-Pour rendre un site web installable, il a besoin que les éléments suivants soient mis en place:
+Pour rendre notre exemple d'application installable, les éléments suivants sont nécessaires&nbsp;:
 
-- Un manifeste web, avec les [bons champs renseignés](/fr/Apps/Progressive/Add_to_home_screen#Manifest)
-- Le site web à servir depuis un domaine sécurisé (HTTPS)
-- Un icone représentant l'application sur l'appareil
-- Un service worker enregistré pour permettre à l'application de fonctionner en mode déconnecté (ceci n'est actuellement imposé que par Chrome pour Android)
+- Un manifeste de l'application web, avec les [bons champs renseignés](/fr/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#manifest).
+- Le site web à servir depuis un domaine sécurisé (HTTPS).
+- Une icône représentant l'application sur l'appareil.
+- Un [<i lang="en">service worker</i>](/fr/docs/Web/API/Service_Worker_API) enregistré pour permettre à l'application de fonctionner en mode hors connexion.
 
-### Le fichier manifeste
+### Le manifeste de l'application web
 
-L'élément clef est un fichier manifeste web qui liste toutes les informations concernant le site web au format JSON.
+L'élément clef est un fichier qui représente le manifeste de l'application web et qui liste toutes les informations concernant le site web au format JSON.
 
-Il se trouve habituellement dans le dossier racine de l'application web. Il contient des informations utiles telles que le nom de l'application, le chemin vers les icones de différentes tailles à utiliser pour représenter l'application sur un système d'exploitation mobile (par exemple, en tant qu'icone sur l'écran d'accueil) et une couleur de fond à utiliser pour les écrans de chargement ou surgissant. Cette information est nécessaire pour que le navigateur puisse présenter correctement l'application lors de l'installation et sur l'écran d'accueil.
+Il se trouve habituellement dans le dossier racine de l'application web. Il contient des informations utiles, telles que le titre de l'application, des chemins d'accès vers des icônes de différentes tailles pouvant être utilisées pour représenter l'application sur un système d'exploitation (comme une icône sur l'écran d'accueil, une entrée dans le menu Démarrer ou une icône sur le bureau) et une couleur d'arrière-plan à utiliser dans les écrans de chargement ou de démarrage. Ces informations sont nécessaires au navigateur pour présenter correctement l'application web pendant le processus d'installation, dans l'interface de lancement de l'application de l'appareil (par exemple l'écran d'accueil d'un appareil mobile).
 
-Le fichier `js13kpwa.webmanifest` de l'application web [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) est inclus dans la section {{htmlelement("head")}} du fichier `index.html` via la ligne de code suivante:
+Le fichier `js13kpwa.webmanifest` de l'application web [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) est inclus dans la section [`<head>`](/fr/docs/Web/HTML/Element/head) du fichier `index.html` via la ligne de code suivante&nbsp;:
 
 ```html
 <link rel="manifest" href="js13kpwa.webmanifest" />
 ```
 
-> **Note :** Il existe quelques extensions courantes qui ont été utilisées pour les manifestes par le passé: `manifest.webapp` fut populaire pour les manifestes des applications Firefox OS et nombreux sont ceux qui utilisent `manifest.json` pour les manifestes web attendu que le contenu est organisé sous forme d'une structure JSON. Cependant, l'extension `.webmanifest` est explicitement mentionnée dans la [W3C relative au manifeste](https://w3c.github.io/manifest/), donc conformons nous à cela.
+> **Note :** Beaucoup utilisent `manifest.json` pour les manifestes d'applications web, car le contenu est organisé dans une structure JSON. Cependant, le format de fichier `.webmanifest` est explicitement mentionné dans la spécification [W3C relative au manifeste](https://w3c.github.io/manifest/), c'est donc ce que nous utiliserons ici.
 
-Le contenu d'un fichier ressemble à ceci:
+Le contenu d'un manifeste ressemble à ceci&nbsp;:
 
 ```json
 {
-  "name": "Application Web progressive js13kGames",
+  "name": "js13kGames Progressive Web App",
   "short_name": "js13kPWA",
-  "description": "Application web progressive qui liste les jeux soumis dans la catégorie A-Frame dans la compétition js13kGames 2017.",
+  "description": "Progressive Web App that lists games submitted to the A-Frame category in the js13kGames 2017 competition.",
   "icons": [
     {
       "src": "icons/icon-32.png",
       "sizes": "32x32",
       "type": "image/png"
     },
-    // ...
+    // …
     {
       "src": "icons/icon-512.png",
       "sizes": "512x512",
@@ -59,57 +65,45 @@ Le contenu d'un fichier ressemble à ceci:
 }
 ```
 
-La plupart des champs sont explicites, mais décortiquons le document et expliquons-le en détail:
+La plupart des champs sont explicites, mais décortiquons le document et expliquons-le en détail&nbsp;:
 
-- `name`: Le nom complet de l'application.
-- `short_name`: Nom résumé à afficher sur l'écran d'accueil.
-- `description`: Une phrase ou deux expliquant ce que fait l'application.
-- `icons`: Un paquet d'informations relatives aux icones — URL sources, tailles et types. Assurez-vous d'en indiquer au moins quelques unes de façon à ce que celle qui est la mieux adaptée soit choisie pour l'appareil de l'utilisateur.
-- `start_url`: Le document index document à lancer au démarrage de l'application.
-- `display`: Comment l'application est affichée; ce peut être fullscreen, standalone, minimal-ui ou browser.
-- `theme_color`: Une couleur primaire pour l'interface utilisateur et qui sera utilisée par le système d'exploitation.
-- `background_color`: Une couleur de fond utilisée lors de l'installation et pour l'écran de chargement.
+- `name`
+  - : Le nom complet de l'application.
+- `short_name`
+  - : Le nom court ou résumé à afficher sur l'écran d'accueil.
+- `description`
+  - : Une phrase ou deux qui explique(nt) ce que fait l'application.
+- `icons`
+  - : Un paquet d'informations relatives aux icônes dont les URL sources, tailles et types. Assurez-vous d'en indiquer au moins quelques-unes de façon à ce que celle qui est la mieux adaptée soit choisie pour l'appareil de la personne. Voir [Définir les icônes de votre application](/fr/docs/Web/Progressive_web_apps/How_to/Define_app_icons).
+- `start_url`
+  - : Le document à lancer au démarrage de l'application.
+- `display`
+  - : La façon dont l'application est affichée&nbsp;; cela peut être `fullscreen`, `standalone`, `minimal-ui`, ou `browser`.
+- `theme_color`
+  - : Une couleur primaire pour l'interface utilisateur, qui sera utilisée par le système d'exploitation.
+- `background_color`
+  - : Une couleur de fond utilisée lors de l'installation et pour l'écran de chargement.
 
-Le minimum requis pour un manifeste web est le nom (`name`) et au moins un icone (avec `src`, `size` et `type`). `description`, `short_name` et `start_url` sont recommandés. Il existe même plus de champs que ceux listés ci-dessus et que vous pouvez utiliser — voir [la réference du Manifeste des Web Apps](/fr/docs/Web/Manifest) pour avoir davatange de détails.
+Il existe de nombreux autres paramètres que vous pouvez utiliser. Référez-vous à [la référence sur les manifestes d'applications web](/fr/docs/Web/Manifest) pour plus de détails.
 
-## Ajout à l'écran d'accueil
+## Installer une PWA
 
-"Ajout à l'écran d'accueil" ("Add to home screen" ou a2hs pour faire court) est une fonctionnalité implémentée par les navigateurs mobiles qui récupèrent les informations trouvées dans le manifeste de l'application web et les utilisent pour représenter l'application sur l'écran d'accueil de l'appareil avec un icone et un nom. Ceci ne fonctionne que si l'application s'est conformées à tous les prérequis décrits plus haut.
+À l'aide des informations trouvées dans le manifeste de notre application web, les navigateurs compatibles peuvent afficher une invite d'installation à l'utilisateur. Lorsque l'utilisatrice ou l'utilisateur visite la PWA, il peut être invité à l'installer sur son appareil. Lorsque la personne accepte l'invite, la PWA est installée comme les autres applications natives du système d'exploitation et on peut alors lancer et utiliser l'application web normalement.
 
-Quand l'utilisateur navigue sur la PWA en utilisant un navigateur les prenant en charge, il doit voir s'afficher une banière indiquant qu'il est possible d'installer l'application en tant que PWA.
+Pour en savoir plus sur la manière dont on peut installer des PWA, consultez [Installation et désinstallation d'applications web](/fr/docs/Web/Progressive_web_apps/Guides/Installing).
 
-![Add to Home screen popup of js13kPWA.](js13kpwa-icon.png)
+### Écran de démarrage
 
-Après que l'utilisateur a cliqué sur cette banière, la banière d'installation est affichée. Cette banière est automatiquement créée par le navigateur en se basant sur les informations contenues dans le fichier manifeste — le nom et l'icone sont visibles dans la boîte de dialogue.
+Sur certains appareils, un écran de démarrage est également généré à partir des informations contenues dans le manifeste. Cet écran s'affiche quand on lance la PWA et que son chargement a lieu.
 
-![Install banner of js13kPWA.](js13kpwa-banner.png)
+![Capture d'écran de l'écran de démarrage de l'application sur un téléphone mobile. Il s'agit d'une page entièrement rouge avec le logo de l'application au milieu et son nom en dessous : « js13kGames Progressive Web App »](js13kpwa-splash.png)
 
-Si l'utilisateur clique sur le bouton, il y a une dernière étape montrant à quoi l'application ressemble et permettant à l'utilisateur de confirmer qu'il veut vraiment ajouter l'application.
-
-![Add to Home screen popup of js13kPWA.](js13kpwa-add.png)
-
-Une fois la confirmation donnée, l'application sera installée sur l'écran d'accueil.
-
-![](js13kpwa-installed.png)
-
-APrès cela, l'utlisateur peut la lancer et commencer à l'utiliser immédiatement. Notez que parfois (selon le navigateur ou le système d'exploitation mobile que vous utilisez) les PWA ont une petite image de navigateur dans le coin inférieur droit de leur icone pour informer l'utilisateur de leur nature web.
-
-### Ecran de démarrage
-
-Avec certains navigateurs, un écran de démarrage est également généré à partir des informations issues du manifeste et qui est affiché quand la PWA est lancée.
-
-![](js13kpwa-splash.png)
-
-L'icone et les couleurs du thème et du fond sont utilisés pour créer cet écran.
+L'icône et les couleurs du thème et d'arrière-plan sont utilisés pour créer cet écran.
 
 ## Résumé
 
-Dans cet article, nous avons appris comment nous pouvons rendre une PWA installable en utilisant un manisfeste web et l'écran "Ajouter à l'écran d'accueil".
+Dans cet article, nous avons appris comment rendre les PWA installables avec un manifeste d'application web correctement configuré, et comment toute personne peut ensuite installer la PWA sur ses appareils.
 
-Pour plus d'information sur l'écran "Ajout à l'écran d'accueil", reportez-vous au [guide d'ajout à l'écran d'accueil](/fr/docs/Web/Apps/Progressive/Add_to_home_screen). La prise en charge des navigateurs est actuellement limitée à Firefox pour Android 58+, Mobile Chrome et Android Webview 31+ et Opera pour Android 32+, mais ceci doit s'améliorer dans un proche avenir.
+Passons maintenant à la dernière étape de notre tutoriel sur les PWA&nbsp;: utiliser les notifications push pour partager des annonces avec l'utilisatrice ou l'utilisateur et l'aider à revenir sur notre application lorsque c'est pertinent.
 
-Maintenant voyons la dernière pièce du puzzle PWA puzzle — ré-engagement via les notifications poussées.
-
-{{PreviousMenuNext("Web/Apps/Progressive/Offline_Service_workers", "Web/Apps/Progressive/Re-engageable_Notifications_Push", "Web/Apps/Progressive")}}
-
-{{QuickLinksWithSubpages("/fr/docs/Web/Progressive_web_apps/")}}
+{{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers", "Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push", "Web/Progressive_web_apps/Tutorials/js13kGames")}}

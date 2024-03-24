@@ -22,8 +22,6 @@ Para saber cómo implementar PWA, lee la [guía para desarrolladores de PWA](/es
 
 ## Documentación
 
-**<-- La lista automática temporal a continuación se reemplazará pronto -->**
-
 {{LandingPageListSubpages}}
 
 > **Advertencia:** **Todo lo que se encuentra debajo de este punto es un remanente de la versión anterior de esta página y se renovará a medida que se revise el resto del contenido.**
@@ -79,4 +77,4 @@ Las siguientes guías te muestran lo que debes hacer para implementar una PWA, e
 - _[Colección de recursos, laboratorios de código y herramientas que necesitas para crear PWAs por parte del equipo de pwafire.org](https://pwafire.org)_
 - _[Configuración de tu entorno de desarrollo de aplicaciones web progresivas](https://github.com/pwafire/pwadev-tips)_
 
-_{{QuickLinksWithSubpages("/es/docs/Web/Progressive_web_apps/")}}_
+{{QuickLinksWithSubpages("/es/docs/Web/Progressive_web_apps/")}}

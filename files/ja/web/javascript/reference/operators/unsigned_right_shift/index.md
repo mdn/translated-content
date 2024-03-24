@@ -54,5 +54,5 @@ a >>> b;
 
 ## 関連情報
 
-- [ビット演算子 (JavaScript ガイド)](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#ビット演算子)
+- [ビット演算子 (JavaScript ガイド)](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#ビット演算子)
 - [符号なし右シフト代入演算子](/ja/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment)

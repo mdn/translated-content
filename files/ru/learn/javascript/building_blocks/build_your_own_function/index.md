@@ -274,13 +274,3 @@ btn.onclick = displayMessage();
 В этой статье мы познакомились со всем процессом создания практической пользовательской функции, которую с небольшими доработками можно перенести в реальный проект. В следующей статье мы рассмотрим ещё одну важную концепцию — возвращаемые значения функций.
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn/JavaScript/Building_blocks/Return_values", "Learn/JavaScript/Building_blocks")}}
-
-## В этом модуле
-
-- [Принятие решений в вашем коде — условные конструкции](/ru/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [Зацикливание кода](/ru/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [Функции — Переиспользуемые блоки кода](/ru/docs/Learn/JavaScript/Building_blocks/Functions)
-- [Создайте свою собственную функцию](/ru/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [Возвращаемое значение функции](/ru/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [Введение в события](/ru/docs/Learn/JavaScript/Building_blocks/События)
-- [Создание галереи](/ru/docs/Learn/JavaScript/Building_blocks/Image_gallery)

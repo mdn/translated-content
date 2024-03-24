@@ -38,7 +38,7 @@ l10n:
 const str = "吾輩は猫である。名前はたぬき。";
 console.table(str.split(" "));
 // ['吾輩は猫である。名前はたぬき。']
-// The two sentences are not correctly segmented.
+// この 2 文をきちんと分割できていません。
 ```
 
 ```js example-good

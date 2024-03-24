@@ -36,5 +36,4 @@ function showActive() {
 
 ## 相关链接
 
-- [WebVR API 主页](/zh-CN/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/>——示例、下载和其他来自于 Mozilla VR 团队的资源。
+- [WebVR API](/zh-CN/docs/Web/API/WebVR_API)

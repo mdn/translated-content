@@ -328,7 +328,7 @@ y = 42 + " is the answer"; // "42 is the answer"
 
 ## 字面值（Literals）
 
-您能使用字面值來表示 JavaScript 中的值。這些是您在腳本中實際提供的固定值，而不是變量。本節描述以下類型的字面值：
+你能使用字面值來表示 JavaScript 中的值。這些是你在腳本中實際提供的固定值，而不是變量。本節描述以下類型的字面值：
 
 - [Array literals](#陣列字面值_array_literals)
 - [Boolean literals](#布林字面值_boolean_literals)
@@ -466,7 +466,7 @@ console.log(car.getCar); // Honda
 console.log(car.special); // Toyota
 ```
 
-此外，您可以使用數字或字串字面值作為屬性名，也可將物件嵌套在另一個物件中。如下範例：
+此外，你可以使用數字或字串字面值作為屬性名，也可將物件嵌套在另一個物件中。如下範例：
 
 ```js
 var car = { manyCars: { a: "Saab", b: "Jeep" }, 7: "Mazda" };
@@ -540,7 +540,7 @@ var re = /ab+c/;
 "John's cat";
 ```
 
-你可以在字串字面值上調用 String 物件的任何方法 - JavaScript 將自動轉換字串字面值為臨時 String 物件並調用該方法，然後丟棄該臨時 String 物件。您還可以將 String.length 屬性與字串字面值一起使用：
+你可以在字串字面值上調用 String 物件的任何方法 - JavaScript 將自動轉換字串字面值為臨時 String 物件並調用該方法，然後丟棄該臨時 String 物件。你還可以將 String.length 屬性與字串字面值一起使用：
 
 ```js
 console.log("John's cat".length);

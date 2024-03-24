@@ -67,7 +67,7 @@ var float32 = new Float32Array(iterable);
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Float32Array.Float32Array")}}
+{{Compat}}
 
 ### 互換性ノート
 

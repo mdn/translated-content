@@ -64,7 +64,7 @@ Proxy-Authorization: basic aGVsbG86d29ybGQ=
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.methods.CONNECT")}}
+{{Compat}}
 
 ## Veja também
 

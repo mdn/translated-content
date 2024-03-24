@@ -3,6 +3,8 @@ title: Grid Areas
 slug: Glossary/Grid_Areas
 ---
 
+{{GlossarySidebar}}
+
 Um **grid area** é um ou mais {{glossary("grid cell", "grid cells")}} que compõem uma área retangular do grid. As Grid Areas quando se coloca um item usando [line-based placement](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid) (posicionamento baseado em colunas e linha)ou quando define áreas usando [named grid areas](/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)(substituindo o nome).
 
 ![Image showing a highlighted grid area](1_grid_area.png)

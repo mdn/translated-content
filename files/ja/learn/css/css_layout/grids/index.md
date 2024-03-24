@@ -742,9 +742,9 @@ aside {
 
 ![私たちのデザインの上に重ねられた12列のグリッド。](learn-grids-inspector.png)
 
-## スキルをテストしましょう!
+## スキルテスト
 
-この記事の最後に到達しましたが、最も大事な情報を覚えていますか？次に移動する前に、この情報を保持しているか検証するテストがあります — [Test your skills: Grids](/ja/docs/Learn/CSS/CSS_layout/Grid_skills) を見てください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[Test your skills: Grids](/ja/docs/Learn/CSS/CSS_layout/Grid_skills) を見てください。
 
 ## まとめ
 
@@ -752,7 +752,7 @@ aside {
 
 ## 関連情報
 
-- [CSS グリッドのガイド](/ja/docs/Web/CSS/CSS_Grid_Layout#ガイド)
+- [CSS グリッドのガイド](/ja/docs/Web/CSS/CSS_grid_layout#ガイド)
 - [CSS グリッドインスペクター: グリッドレイアウトを調査する](/ja/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout")}}

@@ -84,8 +84,6 @@ All `Int8Array` objects inherit from {{jsxref("TypedArray.prototype", "%TypedArr
   - : Returns the last (greatest) index of an element within the array equal to the specified value, or -1 if none is found. See also {{jsxref("Array.prototype.lastIndexOf()")}}.
 - {{jsxref("TypedArray.map", "Int8Array.prototype.map()")}}
   - : Creates a new array with the results of calling a provided function on every element in this array. See also {{jsxref("Array.prototype.map()")}}.
-- {{jsxref("TypedArray.move", "Int8Array.prototype.move()")}} {{non-standard_inline}} {{unimplemented_inline}}
-  - : Former non-standard version of {{jsxref("TypedArray.copyWithin", "Int8Array.prototype.copyWithin()")}}.
 - {{jsxref("TypedArray.reduce", "Int8Array.prototype.reduce()")}}
   - : Apply a function against an accumulator and each value of the array (from left-to-right) as to reduce it to a single value. See also {{jsxref("Array.prototype.reduce()")}}.
 - {{jsxref("TypedArray.reduceRight", "Int8Array.prototype.reduceRight()")}}
@@ -146,13 +144,9 @@ var int8 = new Int8Array(iterable);
 
 ## Specifications
 
-| Specification                                                   | Status                   | Comment                                                                                                                       |
-| --------------------------------------------------------------- | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Typed Array')}}                                     | {{Spec2('Typed Array')}} | Superseded by ECMAScript 2015.                                                                                                |
-| {{SpecName('ES2015', '#table-49', 'TypedArray constructors')}}  | {{Spec2('ES2015')}}      | Initial definition in an ECMA standard. Specified that `new` is required.                                                     |
-| {{SpecName('ESDraft', '#table-49', 'TypedArray constructors')}} | {{Spec2('ESDraft')}}     | ECMAScript 2017 changed the `Int8Array` constructor to use the `ToIndex` operation and allows constructors with no arguments. |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

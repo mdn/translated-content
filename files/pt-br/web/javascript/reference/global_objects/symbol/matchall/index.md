@@ -45,13 +45,11 @@ Veja {{jsxref("String.prototype.matchAll()")}} e {{jsxref("RegExp.@@matchAll", "
 
 ## Especificações
 
-| Especificação                                                      |
-| ------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-symbol.matchall', 'Symbol.matchAll')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Symbol.matchAll")}}
+{{Compat}}
 
 ## Veja também
 

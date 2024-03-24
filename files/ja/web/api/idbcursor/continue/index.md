@@ -92,7 +92,7 @@ function displayData() {
 
 ## ブラウザーの互換性
 
-{{Compat("api.IDBCursor.continue")}}
+{{Compat}}
 
 ## 関連情報
 

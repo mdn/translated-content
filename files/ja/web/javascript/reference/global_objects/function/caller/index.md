@@ -80,7 +80,7 @@ function myFunc() {
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Function.caller")}}
+{{Compat}}
 
 ## 関連情報
 

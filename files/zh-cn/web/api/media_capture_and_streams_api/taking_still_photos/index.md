@@ -442,7 +442,7 @@ function takepicture() {
 
 由于我们通过从 {{HTMLElement("video")}} 元素中抓取帧来捕获用户网络摄像头的图像，因此我们可以非常轻松地将过滤器和有趣的效果应用于视频。事实证明，使用 {{cssxref("filter")}} 属性应用于元素的任何 CSS 过滤器都会影响捕获的照片。这些过滤器可以从简单（使图像黑白）到复杂（高斯模糊和色调旋转）。
 
-您可以使用例如 Firefox 开发者工具的[样式编辑器](https://firefox-source-docs.mozilla.org/devtools-user/style_editor/index.html)来播放此效果；有关如何执行此操作的详细信息，请参阅[编辑 CSS 过滤器](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_filters/index.html)。
+你可以使用例如 Firefox 开发者工具的[样式编辑器](https://firefox-source-docs.mozilla.org/devtools-user/style_editor/index.html)来播放此效果；有关如何执行此操作的详细信息，请参阅[编辑 CSS 过滤器](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_filters/index.html)。
 
 ## 使用特定设备
 

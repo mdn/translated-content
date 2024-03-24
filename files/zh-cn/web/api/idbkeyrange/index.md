@@ -5,7 +5,7 @@ slug: Web/API/IDBKeyRange
 
 {{APIRef("IndexedDB")}}
 
-[IndexedDB API](/zh-CN/docs/Web/API/IndexedDB_API) 的 **`IDBKeyRange`** 接口表示一些数据类型上的键的连续间隔。可以使用一个键或某个范围的键从{{domxref("IDBObjectStore")}} 和{{domxref("IDBIndex")}} 对象中检索记录。您也可以指定键的上界和下界来限制范围。例如，您可以遍历值范围 a - z 中的键的所有值。
+[IndexedDB API](/zh-CN/docs/Web/API/IndexedDB_API) 的 **`IDBKeyRange`** 接口表示一些数据类型上的键的连续间隔。可以使用一个键或某个范围的键从{{domxref("IDBObjectStore")}} 和{{domxref("IDBIndex")}} 对象中检索记录。你也可以指定键的上界和下界来限制范围。例如，你可以遍历值范围 a - z 中的键的所有值。
 
 键范围可以是单个值，也可以是具有上界、下界或端点的范围。如果键范围同时有上界或下界，那么它是有界的，否则是无界的。有界键范围可以是开放的（不包含端点）或闭合的（包含了端点）。要检索一定范围内的所有键值，可以使用以下的代码结构：
 

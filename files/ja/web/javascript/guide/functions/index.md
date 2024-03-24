@@ -3,7 +3,7 @@ title: 関数
 slug: Web/JavaScript/Guide/Functions
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_Operators")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_operators")}}
 
 関数は、 JavaScript の基本的な構成要素のひとつです。 JavaScript の関数は、プロシージャに似ています。 — タスクを実行したり値を計算したりする一連の文ですが、プロシージャが関数として認められるためには、何らかの入力を受け取り、入力と出力の間に何らかの明白な関係がある出力を返す必要があります。関数を使用するには、呼び出したいスコープのどこかで関数を定義する必要があります。
 
@@ -118,7 +118,7 @@ if (num === 0) {
 
 これまで説明してきた関数の定義に加えて、{{jsxref("Function")}} コンストラクターを、{{jsxref("Global_Objects/eval", "eval()")}} のような文字列からの関数作成に用いることができます。
 
-**メソッド**は、オブジェクトのプロパティである関数のことです。オブジェクトとメソッドについて詳しくは、「[オブジェクトを利用する](/ja/docs/Web/JavaScript/Guide/Working_with_Objects)」の章をご覧ください。
+**メソッド**は、オブジェクトのプロパティである関数のことです。オブジェクトとメソッドについて詳しくは、「[オブジェクトを利用する](/ja/docs/Web/JavaScript/Guide/Working_with_objects)」の章をご覧ください。
 
 ## 関数の呼び出し
 
@@ -156,7 +156,7 @@ function square(n) {
 > };
 > ```
 
-関数の引数は、文字列や数値に限られてはいません。オブジェクト全体を関数に渡すこともできます。`show_props` 関数 ([オブジェクトを利用する](/ja/docs/Web/JavaScript/Guide/Working_with_Objects#objects_and_properties)の章で定義) は、オブジェクトを引数にとる関数の例です。
+関数の引数は、文字列や数値に限られてはいません。オブジェクト全体を関数に渡すこともできます。`show_props` 関数 ([オブジェクトを利用する](/ja/docs/Web/JavaScript/Guide/Working_with_objects#オブジェクトとプロパティ)の章で定義) は、オブジェクトを引数にとる関数の例です。
 
 関数はその関数自身を呼び出すこともできます。例えば、ここに階乗を計算する関数を示します。
 
@@ -701,4 +701,4 @@ JavaScript には、定義済みの最上位関数がいくつかあります。
 - {{jsxref("Global_Objects/unescape", "unescape()")}}
   - : 非推奨の **`unescape()`** メソッドはある文字列中の 16 進数によるエスケープシーケンスを、それが表す所定の文字に置換した新しい文字列を計算します。エスケープシーケンスは {{jsxref("Global_Objects/escape", "escape")}} といった関数によって提供されているかもしれません。 `unescape()` は非推奨なので、代わりに {{jsxref("Global_Objects/decodeURI", "decodeURI()")}} または {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent")}} を使用してください。
 
-{{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_Operators")}}
+{{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_operators")}}

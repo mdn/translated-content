@@ -18,6 +18,8 @@ p:read-write {
 }
 ```
 
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-read-write.html", "tabbed-shorter")}}
+
 ## 構文
 
 ```

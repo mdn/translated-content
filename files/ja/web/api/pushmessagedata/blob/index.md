@@ -1,16 +1,19 @@
 ---
-title: PushMessageData.blob()
+title: "PushMessageData: blob() メソッド"
+short-title: blob()
 slug: Web/API/PushMessageData/blob
+l10n:
+  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{APIRef("Push API")}}{{SeeCompatTable()}}
+{{APIRef("Push API")}}
 
-{{domxref("PushMessageData")}} インターフェイスの **`blob()`** メソッドは、プッシュメッセージデータを {{domxref("Blob")}} オブジェクトとして抽出します。
+**`blob()`** は {{domxref("PushMessageData")}} インターフェイスのメソッドで、プッシュメッセージデータを {{domxref("Blob")}} オブジェクトとして抽出します。
 
 ## 構文
 
-```js
-var myBlob = PushEvent.data.blob();
+```js-nolint
+blob()
 ```
 
 ### 引数
@@ -19,13 +22,13 @@ var myBlob = PushEvent.data.blob();
 
 ### 返値
 
-{{domxref("Blob")}}。
+{{domxref("Blob")}} です。
 
 ## 例
 
 ```js
-self.addEventListener("push", function (event) {
-  var blob = event.data.blob();
+self.addEventListener("push", (event) => {
+  const blob = event.data.blob();
 
   // Blob を使用して何かを実行する。
 });
@@ -37,8 +40,4 @@ self.addEventListener("push", function (event) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.PushMessageData.blob")}}
-
-## 関連項目
-
-- [Using the Push API](/ja/docs/Web/API/Push_API/Using_the_Push_API)
+{{Compat}}

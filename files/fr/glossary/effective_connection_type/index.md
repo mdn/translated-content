@@ -5,6 +5,8 @@ l10n:
   sourceCommit: 6fcbba930a3d72f4373a376012db37aa75d1518f
 ---
 
+{{GlossarySidebar}}
+
 Le **type de connexion réel**, ou «&nbsp;<i lang="en">effective connection type</i>&nbsp;» en anglais (abrégé en ECT), fait référence aux performances mesurées du réseau, renvoyant un type de connexion cellulaire, comme la 3G, même si la connexion réelle est effectuée en haut débit ou Wi-Fi, en fonction du temps entre le navigateur demandant une page et le type de connexion réel.
 
 Les valeurs de `"slow-2g"`, `"2g"`, `"3g"` et `"4g"` sont déterminées en utilisant le temps d'aller-retour de la requête et des valeurs de liaison descendante.

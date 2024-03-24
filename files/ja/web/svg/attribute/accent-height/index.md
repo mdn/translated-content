@@ -36,7 +36,7 @@ slug: Web/SVG/Attribute/accent-height
 
 ## ブラウザー実装状況
 
-{{Compat("svg.elements.font-face.accent-height")}}
+{{Compat}}
 
 ## 関連情報
 

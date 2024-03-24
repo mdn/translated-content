@@ -79,4 +79,4 @@ observer.observe(elementToObserve, { subtree: true, childList: true });
 
 ## ブラウザ互換性
 
-{{Compat("api.MutationObserver.observe")}}
+{{Compat}}

@@ -50,7 +50,7 @@ fetch(myRequest)
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)
 - [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Access_control_CORS)

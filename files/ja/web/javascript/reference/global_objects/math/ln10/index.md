@@ -35,7 +35,7 @@ getNatLog10(); // 2.302585092994046
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Math.LN10")}}
+{{Compat}}
 
 ## 関連情報
 

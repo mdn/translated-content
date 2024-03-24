@@ -139,7 +139,7 @@ if (!Object.keys) {
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Object.keys")}}
+{{Compat}}
 
 ## 関連情報
 

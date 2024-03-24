@@ -2,7 +2,7 @@
 title: CSS 生成コンテンツの使用
 slug: Learn/CSS/Howto/Generated_content
 l10n:
-  sourceCommit: 8e2641ebe076ab89299c77a51ece882de4ba5efb
+  sourceCommit: 751d58669499de0c6ea0d5b356e0e1448418c5d3
 ---
 
 {{LearnSidebar}}

@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/has
 
 {{JSRef}}
 
-**`has()`** 方法返回一个布尔值来指示对应的值是否存在于 `Set` 对象中。
+{{jsxref("Set")}} 实例的 **`has()`** 方法返回一个布尔值来指示对应的值是否存在于该集合中。
 
 {{EmbedInteractiveExample("pages/js/set-prototype-has.html")}}
 

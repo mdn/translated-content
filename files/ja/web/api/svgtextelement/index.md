@@ -25,7 +25,7 @@ slug: Web/API/SVGTextElement
 
 ## ブラウザ実装状況
 
-{{Compat("api.SVGTextElement")}}
+{{Compat}}
 
 ## 関連情報
 

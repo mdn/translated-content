@@ -46,7 +46,7 @@ console.log(function (a, b = 1, c) {}.length);
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Function.length")}}
+{{Compat}}
 
 ## 関連情報
 

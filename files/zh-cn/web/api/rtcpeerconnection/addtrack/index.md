@@ -41,11 +41,11 @@ rtpSender = rtcPeerConnection.addTrack(track, stream...);
 
 ### 向多个流添加轨道
 
-在 **`track`** 参数之后，您可以选择指定一个或多个{{domxref("MediaStream")}}对象来添加**`track`**。只有轨道从一个点发送到另一个点，而不是一个媒体流。由于流是特定于每个对等点的，因此指定一个或多个流意味着另一个对等点将在连接的另一端自动创建一个相应的流 (或多个流)，然后自动将接收到的轨道添加到这些流中。
+在 **`track`** 参数之后，你可以选择指定一个或多个{{domxref("MediaStream")}}对象来添加**`track`**。只有轨道从一个点发送到另一个点，而不是一个媒体流。由于流是特定于每个对等点的，因此指定一个或多个流意味着另一个对等点将在连接的另一端自动创建一个相应的流 (或多个流)，然后自动将接收到的轨道添加到这些流中。
 
 #### 无流承载的轨道
 
-如果没有指定媒体流，则轨道是无流的。这是完全可以接受的，尽管要由远程对等点决定将轨道插入到哪个流 (如果有的话)。当构建一个多类型的简单应用只有一个媒体流时，使用 **`addTrack()`** 是一个非常常用的办法。例如，如果您与远程对等点共享的只是带有音频轨道和视频轨道的单个流，那么您不需要管理流中的哪个轨道，所以您不妨让**transceriver**为您处理它。
+如果没有指定媒体流，则轨道是无流的。这是完全可以接受的，尽管要由远程对等点决定将轨道插入到哪个流 (如果有的话)。当构建一个多类型的简单应用只有一个媒体流时，使用 **`addTrack()`** 是一个非常常用的办法。例如，如果你与远程对等点共享的只是带有音频轨道和视频轨道的单个流，那么你不需要管理流中的哪个轨道，所以你不妨让**transceriver**为你处理它。
 
 下面是一个使用{{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}从用户的摄像机和麦克风获取一个流，然后将流中的每条轨迹添加到对等连接，而不为每条轨迹指定一个流：
 
@@ -94,7 +94,7 @@ pc.ontrack = (ev) => {
 
 #### 将**track**与特定的 stream 相关联
 
-通过指定一个流并允许{{domxref("RTCPeerConnection")}}为您创建流，流的跟踪关联将由 WebRTC 基础设施自动为您管理。这包括对收发器的{{domxref("RTCRtpTransceiver.direction","direction")}} 的更改和被停止使用{{domxref("RTCPeerConnection.removeTrack","removeTrack()")}}。
+通过指定一个流并允许{{domxref("RTCPeerConnection")}}为你创建流，流的跟踪关联将由 WebRTC 基础设施自动为你管理。这包括对收发器的{{domxref("RTCRtpTransceiver.direction","direction")}} 的更改和被停止使用{{domxref("RTCPeerConnection.removeTrack","removeTrack()")}}。
 
 例如，考虑应用程序可能使用的这个函数，通过{{domxref("RTCPeerConnection")}}将设备的摄像头和麦克风输入流化为远程对等点：
 

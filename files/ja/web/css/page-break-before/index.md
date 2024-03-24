@@ -28,6 +28,8 @@ page-break-before: revert;
 page-break-before: unset;
 ```
 
+{{EmbedInteractiveExample("pages/css/page-break-before.html")}}
+
 ## 構文
 
 ### 値

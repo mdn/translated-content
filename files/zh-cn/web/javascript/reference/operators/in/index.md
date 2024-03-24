@@ -100,10 +100,10 @@ trees[3] = undefined;
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - [`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in)
 - [`delete`](/zh-CN/docs/JavaScript/Reference/Operators/delete)
-- {{jsxref("Object.prototype.hasOwnProperty()")}}
+- {{jsxref("Object.hasOwn()")}}
 - {{jsxref("Reflect.has()")}}
-- [属性的可枚举性和所有权](/zh-CN/docs/Enumerability_and_ownership_of_properties)
+- [属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)

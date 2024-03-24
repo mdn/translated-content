@@ -66,7 +66,7 @@ window.addEventListener("beforeunload", (event) => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.beforeunload_event")}}
+{{Compat}}
 
 ## 関連情報
 

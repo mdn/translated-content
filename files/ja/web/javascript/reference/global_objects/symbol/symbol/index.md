@@ -63,7 +63,7 @@ typeof symObj; // => "object"
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Symbol.Symbol")}}
+{{Compat}}
 
 ## 関連情報
 

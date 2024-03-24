@@ -3,18 +3,18 @@ title: 一个漂亮的盒子
 slug: Learn/CSS/Building_blocks/A_cool_looking_box
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper", "Learn/CSS/Styling_boxes")}}
+{{LearnSidebar}}{{PreviousMenu("Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper", "Learn/CSS/Building_blocks")}}
 
 在这个评估里，通过尝试创造一个引人瞩目的盒子，你将得到更多关于如何创造酷炫盒子的练习。
 
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">前提条件：</th>
+      <th scope="row">前提：</th>
       <td>在开始这个评估之前你应该已经学习过这个模块里的所有其他文章。</td>
     </tr>
     <tr>
-      <th scope="row">目的：</th>
+      <th scope="row">目标：</th>
       <td>测试对 CSS 盒模型和其他盒相关特性的掌握程度，比如背景和边框。</td>
     </tr>
   </tbody>
@@ -38,7 +38,7 @@ slug: Learn/CSS/Building_blocks/A_cool_looking_box
 
 ### 样式化盒子
 
-给 {{htmlelement("p")}} 添加样式：
+给 {{htmlelement("div")}} 添加样式：
 
 - 一个对于大按钮来说合理的宽度，200 像素左右。
 - 一个对于大按钮来说合理的高度，并使文本纵向居中。
@@ -61,4 +61,4 @@ slug: Learn/CSS/Building_blocks/A_cool_looking_box
 
 如果这个评估是一系列课程的一部分，你应该可以让你的老师或导师为你批改。如果你是自学，可以很容易地在[Learning Area Discourse thread](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294)或[Mozilla IRC](https://wiki.mozilla.org/IRC)的[#mdn](irc://irc.mozilla.org/mdn) IRC 频道回复得到批改指南。请先自己试着做——作弊学不到任何东西！
 
-{{PreviousMenu("Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper", "Learn/CSS/Styling_boxes")}}
+{{PreviousMenu("Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper", "Learn/CSS/Building_blocks")}}

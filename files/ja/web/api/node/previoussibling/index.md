@@ -14,7 +14,7 @@ l10n:
 >
 > [DOM でのホワイトスペース](/ja/docs/Web/API/Document_Object_Model/Whitespace)の記事に、この動作に関する詳しい情報があります。
 >
-> [`previousElementSibling`](/ja/docs/Web/API/Element/previousElementSibling) を使用すると、（テキストノードやその他の要素以外のノードを飛ばして）次の要素を取得することができます。
+> [`previousElementSibling`](/ja/docs/Web/API/Element/previousElementSibling) を使用すると、（テキストノードやその他の要素以外のノードを飛ばして）前の要素を取得することができます。
 >
 > 子ノードのリストで反対方向に移動する場合は、 [Node.nextSibling](/ja/docs/Web/API/Node/nextSibling) を使用してください。
 

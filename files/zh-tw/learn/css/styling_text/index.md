@@ -9,7 +9,7 @@ slug: Learn/CSS/Styling_text
 
 ## 先備知識
 
-在開始這個單元之前，你應該先熟悉基礎的 HTML，如 [HTML 介紹](/zh-TW/docs/Learn/HTML/Introduction_to_HTML) 這個單元所討論的，並且要對 CSS 的基礎感到輕鬆，如 [CSS 介紹](/zh-TW/docs/Learn/CSS/Introduction_to_CSS) 討論的。
+在開始這個單元之前，你應該先熟悉基礎的 HTML，如 [HTML 介紹](/zh-TW/docs/Learn/HTML/Introduction_to_HTML) 這個單元所討論的，並且要對 CSS 的基礎感到輕鬆，如 [CSS 介紹](/zh-TW/docs/Learn/CSS/First_steps) 討論的。
 
 > **備註：** If you are working on a computer/tablet/other device where you don't have the ability to create your own files, you could try out (most of) the code examples in an online coding program such as [JSBin](http://jsbin.com/), [CodePen](https://codepen.io/) or [Glitch](https://glitch.com/).
 
@@ -30,5 +30,5 @@ slug: Learn/CSS/Styling_text
 
 The following assessments will test your understanding of the text styling techniques covered in the guides above.
 
-- [Typesetting a community school homepage](/zh-TW/Learn/CSS/Styling_text/Typesetting_a_homepage)
+- [Typesetting a community school homepage](/zh-TW/docs/Learn/CSS/Styling_text/Typesetting_a_homepage)
   - : In this assessment we'll test your understanding of styling text by getting you to style the text for a community school's homepage.

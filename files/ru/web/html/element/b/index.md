@@ -50,7 +50,7 @@ slug: Web/HTML/Element/b
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

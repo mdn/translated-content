@@ -48,6 +48,6 @@ slug: Web/API/WebGL_API/Types
 
 {{Specifications}}
 
-## 另见
+## 参见
 
 - {{domxref("WebGLRenderingContext")}}

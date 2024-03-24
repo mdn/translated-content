@@ -40,7 +40,7 @@ Il existe trois types de <i lang="en">workers</i>&nbsp;:
 
 Dans cet article, nous allons voir un exemple décrivant le premier type, puis discuter brièvement des deux autres.
 
-## Utiliser les <i lang="en>web workers</i>
+## Utiliser les <i lang="en">web workers</i>
 
 Vous souvenez-vous du premier article où nous avions une page qui calculait les nombres premiers&nbsp;? Nous allons ici utiliser un <i lang="en">worker</i> pour calculer les nombres premiers afin que notre page reste réactive aux actions des utilisatrices et utilisateurs.
 
@@ -75,9 +75,8 @@ function generatePrimes(quota) {
 document.querySelector("#generate").addEventListener("click", () => {
   const quota = document.querySelector("#quota").value;
   const primes = generatePrimes(quota);
-  document.querySelector(
-    "#output",
-  ).textContent = `Génération de ${quota} nombres premiers terminée !`;
+  document.querySelector("#output").textContent =
+    `Génération de ${quota} nombres premiers terminée !`;
 });
 
 document.querySelector("#reload").addEventListener("click", () => {
@@ -159,9 +158,8 @@ document.querySelector("#generate").addEventListener("click", () => {
 // du message, on met à jour la zone de sortie avec un texte, indiquant aussi
 // le quantité de nombres premiers générés.
 worker.addEventListener("message", (message) => {
-  document.querySelector(
-    "#output",
-  ).textContent = `Génération de ${message.data} nombres premiers terminée !`;
+  document.querySelector("#output").textContent =
+    `Génération de ${message.data} nombres premiers terminée !`;
 });
 
 document.querySelector("#reload").addEventListener("click", () => {

@@ -44,7 +44,7 @@ Um valor único de `list-item` fará com que o elemento se comporte como um item
 
 ### Suporte de`list-item`
 
-{{Compat("css.properties.display.list-item", 10)}}
+{{Compat}}
 
 ## Veja também
 

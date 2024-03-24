@@ -47,7 +47,7 @@ Edge 的 `time` 选择控件有点复杂，打开一个小时和分钟的滚动�
    <td><strong>事件</strong></td>
    <td>
      {{domxref("HTMLElement/change_event", "change")}} 和
-     {{domxref("HTMLElement/input_event", "input")}}
+     {{domxref("Element/input_event", "input")}}
    </td>
   </tr>
   <tr>
@@ -117,7 +117,7 @@ timeControl.value = "15:30";
 </form>
 ```
 
-这段 JavaScript 代码将代码添加到时间 input 中，以监听 {{domxref("HTMLElement/input_event", "input")}} 事件，每次 input 元素的内容发生变化时都会触发该事件。每次事件触发时，`<span>` 元素的内容都会替换为 input 元素的最新值。
+这段 JavaScript 代码将代码添加到时间 input 中，以监听 {{domxref("Element/input_event", "input")}} 事件，每次 input 元素的内容发生变化时都会触发该事件。每次事件触发时，`<span>` 元素的内容都会替换为 input 元素的最新值。
 
 ```js
 const startTime = document.getElementById("startTime");

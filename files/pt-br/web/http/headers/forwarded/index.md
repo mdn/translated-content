@@ -86,7 +86,7 @@ Forwarded: for=192.0.2.43, for="[2001:db8:cafe::17]"
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Forwarded")}}
+{{Compat}}
 
 ## Veja também
 

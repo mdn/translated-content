@@ -55,18 +55,11 @@ element {
 
 ### Especificaciones
 
-- [CSS 1](http://www.w3.org/TR/CSS1#border-width)
-- [CSS 2.1](http://www.w3.org/TR/CSS21/box.html#border-width-properties)
-- [CSS 3](http://www.w3.org/TR/css3-background/#border-width)
+{{Specifications}}
 
-### Compatibilidad
+### Compatibilidad con navegadores
 
-| Navegador         | Versión mínima |
-| ----------------- | -------------- |
-| Internet Explorer | 4.0            |
-| Firefox           | 1.0            |
-| Netscape          |                |
-| Opera             | 3.5            |
+{{Compat}}
 
 ### Ver también
 

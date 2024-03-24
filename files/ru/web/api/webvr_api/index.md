@@ -107,13 +107,12 @@ WebVR API расширяет следующие API, добавляя переч
 
 ## Совместимость с браузерами
 
-{{Compat("api.Navigator.getVRDisplays")}}
+{{Compat}}
 
 ## Смотрите также
 
 - [vr.mozilla.org](https://vr.mozilla.org) — Основная посадочная площадка Mozilla для WebVR с демонстрационными материалами, утилитами и другой информацией.
 - [A-Frame](https://aframe.io/) — Веб-платформа с открытым исходным кодом для создания опыта VR.
 - [webvr.info](https://webvr.info) — Актуальная информация о WebVR, настройке браузера и сообществе.
-- [MozVr.com](http://mozvr.com/) — Демонстрации, загрузки и другие ресурсы от команды Mozilla VR.
 - [threejs-vr-boilerplate](https://github.com/MozVR/vr-web-examples/tree/master/threejs-vr-boilerplate) — Полезный стартовый шаблон для написания приложений WebVR.
 - [Web VR polyfill](https://github.com/googlevr/webvr-polyfill/) — JavaScript-реализация WebVR.

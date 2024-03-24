@@ -80,11 +80,9 @@ TBD
 
 ## Specifications
 
-| Specification                                            | Status                   | Comment             |
-| -------------------------------------------------------- | ------------------------ | ------------------- |
-| {{SpecName("CSS4 Values", "#calc-notation", "clamp()")}} | {{Spec2('CSS4 Values')}} | Initial definition. |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

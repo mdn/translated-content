@@ -1,61 +1,59 @@
 ---
-title: SpeechSynthesisUtterance.lang
+title: "SpeechSynthesisUtterance: lang プロパティ"
+short-title: lang
 slug: Web/API/SpeechSynthesisUtterance/lang
+l10n:
+  sourceCommit: 101ffc9479db6aaa530f2aac3992734dd97d1b86
 ---
 
-{{APIRef("Web Speech API")}} {{SeeCompatTable}}
-{{domxref("SpeechSynthesisUtterance")}}インターフェースの**lang**プロパティは、発話の言語を取得、設定します。
+{{APIRef("Web Speech API")}}
 
-If unset, the app's (i.e. the {{htmlelement("html")}} [`lang`](/ja/docs/Web/HTML/Element/html#lang) value) lang will be used, or the user-agent default if that is unset too.
+**`lang`** は {{domxref("SpeechSynthesisUtterance")}} インターフェイスのプロパティで、発話の言語を取得および設定します。
 
-## Syntax
+設定されていない場合、アプリ（すなわち {{htmlelement("html")}} の [`lang`](/ja/docs/Web/HTML/Element/html#lang) 値）の言語が使用されるか、こちらも未設定であればユーザーエージェントの既定の言語が使用されます。
 
-```
-var myLang = speechSynthesisUtteranceInstance.lang;
-speechSynthesisUtteranceInstance.lang = 'en-US';
-```
+## 値
 
-### Value
+BCP 47 言語タグを表す文字列です。
 
-A {{domxref("DOMString")}} representing a BCP 47 language tag.
-
-## Examples
+## 例
 
 ```js
-var synth = window.speechSynthesis;
+const synth = window.speechSynthesis;
 
-var inputForm = document.querySelector('form');
-var inputTxt = document.querySelector('input');
-var voiceSelect = document.querySelector('select');
+const inputForm = document.querySelector("form");
+const inputTxt = document.querySelector("input");
+const voiceSelect = document.querySelector("select");
 
-var voices = synth.getVoices();
+const voices = synth.getVoices();
 
-  ...
+// ...
 
-inputForm.onsubmit = function(event) {
+inputForm.onsubmit = (event) => {
   event.preventDefault();
 
-  var utterThis = new SpeechSynthesisUtterance(inputTxt.value);
-  var selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-  for(i = 0; i < voices.length ; i++) {
-    if(voices[i].name === selectedOption) {
+  const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
+  const selectedOption =
+    voiceSelect.selectedOptions[0].getAttribute("data-name");
+  for (let i = 0; i < voices.length; i++) {
+    if (voices[i].name === selectedOption) {
       utterThis.voice = voices[i];
     }
   }
-  utterThis.lang = 'en-US';
+  utterThis.lang = "en-US";
   synth.speak(utterThis);
   inputTxt.blur();
-}
+};
 ```
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
-{{Compat("api.SpeechSynthesisUtterance.lang")}}
+{{Compat}}
 
-## See also
+## 関連情報
 
-- [Web Speech API](/ja/docs/Web/API/Web_Speech_API)
+- [ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API)

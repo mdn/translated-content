@@ -70,14 +70,3 @@ _Как работает Веб_ даст упрощённое представ�
 Фото улицы: [Street composing](https://www.flickr.com/photos/kdigga/9110990882/in/photolist-cXrKFs-c1j6hQ-mKrPUT-oRTUK4-7jSQQq-eT7daG-cZEZrh-5xT9L6-bUnkip-9jAbvr-5hVkHn-pMfobT-dm8JuZ-gjwYYM-pREaSM-822JRW-5hhMf9-9RVQNn-bnDMSZ-pL2z3y-k7FRM4-pzd8Y7-822upY-8bFN4Y-kedD87-pzaATg-nrF8ft-5anP2x-mpVky9-ceKc9W-dG75mD-pY62sp-gZmXVZ-7vVJL9-h7r9AQ-gagPYh-jvo5aM-J32rC-ibP2zY-a4JBcH-ndxM5Y-iFHsde-dtJ15p-8nYRgp-93uCB1-o6N5Bh-nBPUny-dNJ66P-9XWmVP-efXhxJ), [Kevin D](https://www.flickr.com/photos/kdigga/).
 
 {{PreviousMenu("Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
-
-## В этом модуле
-
-- [Установка базового программного обеспечения](/ru/docs/Learn/Getting_started_with_the_web/%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0_%D0%B1%D0%B0%D0%B7%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BE%D0%B1%D0%B5%D1%81%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D1%8F)
-- [Каким должен быть ваш веб-сайт?](/ru/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [Работа с файлами](/ru/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [Основы HTML](/ru/docs/Learn/Getting_started_with_the_web/HTML_basics)
-- [Основы CSS](/ru/docs/Learn/Getting_started_with_the_web/CSS_basics)
-- [Основы JavaScript](/ru/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [Публикация вашего веб-сайта](/ru/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [Как работает Веб](/ru/docs/Learn/Getting_started_with_the_web/How_the_Web_works)

@@ -67,7 +67,7 @@ var int32 = new Int32Array(iterable);
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Int32Array.Int32Array")}}
+{{Compat}}
 
 ### 互換性メモ
 

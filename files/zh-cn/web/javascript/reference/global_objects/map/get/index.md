@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Map/get
 
 {{JSRef}}
 
-**`get()`** 方法从 `Map` 对象返回指定的元素。如果与所提供的键相关联的值是一个对象，那么你将获得该对象的引用，对该对象所做的任何更改都会有效地在 `Map` 对象中修改它。
+{{jsxref("Map")}} 实例的 **`get()`** 方法返回该 map 中的指定元素。如果与所提供的键相关联的值是一个对象，那么你将获得该对象的引用，对该对象所做的任何更改都会有效地在 `Map` 对象中修改它。
 
 {{EmbedInteractiveExample("pages/js/map-prototype-get.html")}}
 
@@ -36,7 +36,7 @@ console.log(myMap.get("bar")); // 返回 "foo"
 console.log(myMap.get("baz")); // 返回 undefined
 ```
 
-### 使用 get() 检索对对象的引用
+### 使用 get() 获取对对象的引用
 
 ```js
 const arr = [];
@@ -49,7 +49,7 @@ console.log(arr); // ["foo"]
 console.log(myMap.get("bar")); // ["foo"]
 ```
 
-注意，持有原始对象引用的映射实际上意味着对象不能被垃圾回收，这可能会导致意外的内存问题。如果你希望存储在映射中的对象具有与原始对象相同的生命周期，请考虑使用 {{jsxref("WeakMap")}}。
+注意，持有原始对象引用的映射实际上意味着对象不能被垃圾回收，这可能会导致意外的内存问题。如果你希望存储在 map 中的对象具有与原始对象相同的生命周期，请考虑使用 {{jsxref("WeakMap")}}。
 
 ## 规范
 

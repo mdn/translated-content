@@ -57,9 +57,7 @@ slug: Web/SVG/Attribute/stroke-linejoin
 </svg>
 ```
 
-**Live sample**
-
-{{ EmbedLiveSample('Example','120','300') }}
+{{ EmbedLiveSample('例','120','300') }}
 
 ## 要素
 

@@ -32,7 +32,7 @@ toLocaleLowerCase(locales)
 
 ## 설명
 
-`theLocaleLowerCase()` 메서드는 지역 특정 대/소문자 맴핑에 따른 소문자로 변환된 문자열 값을 반환합니다. `toLocaleUpperCase()`는 문자열 자체 값에 영향을 미치지 않습니다. 대부분의 경우, {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}}와 같은 결과를 제공하지만 터키와 같은 일부 지역에서는 대/소문자 매핑이 유니코드의 기존 대/소문자 매핑을 따르지 않아 다른 결과가 있을 수 있습니다.
+`theLocaleLowerCase()` 메서드는 지역 특정 대/소문자 매핑에 따른 소문자로 변환된 문자열 값을 반환합니다. `toLocaleUpperCase()`는 문자열 자체 값에 영향을 미치지 않습니다. 대부분의 경우, {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}}와 같은 결과를 제공하지만 터키와 같은 일부 지역에서는 대/소문자 매핑이 유니코드의 기존 대/소문자 매핑을 따르지 않아 다른 결과가 있을 수 있습니다.
 
 ## 예제
 

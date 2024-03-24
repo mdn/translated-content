@@ -52,7 +52,7 @@ _Inherits methods from its parent,_ _{{domxref("HTMLMediaElement")}}, and_ _{{do
 
 {{Specifications}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -15,7 +15,7 @@ xMax = window.scrollMaxX;
 
 - `xMax` はピクセル数です。
 
-## Example
+## 例
 
 ```js
 // ページの右端までスクロールする
@@ -34,4 +34,4 @@ window.scrollTo(maxX, 0);
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.scrollMaxX")}}
+{{Compat}}

@@ -12,7 +12,7 @@ slug: Web/CSS/word-spacing
 ## Синтаксис
 
 ```css
-/* Значение ключевым словом */
+/* Ключевые слова */
 word-spacing: normal;
 
 /* <length> значения */
@@ -80,6 +80,6 @@ word-spacing: unset;
 
 {{cssinfo}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}

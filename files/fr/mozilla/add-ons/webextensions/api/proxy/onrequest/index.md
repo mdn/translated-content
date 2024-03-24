@@ -3,7 +3,7 @@ title: proxy.onRequest
 slug: Mozilla/Add-ons/WebExtensions/API/proxy/onRequest
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Déclenché lorsqu'une requête Web est sur le point d'être effectuée, pour donner à l'extension la possibilité de l'utiliser comme proxy.
 

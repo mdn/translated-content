@@ -71,9 +71,9 @@ first.onchange = function () {
 
 浏览器的早期版本中，加载跨域的执行者脚本导致 `SecurityError`事件。根据规范的变更，而新版本的浏览器只有[`error`](/zh-CN/docs/Web/API/Element/error_event)事件发生
 
-## 相关链接
+## 参见
 
-- [Using web workers](/En/Using_web_workers)
-- [Functions available to workers](/En/DOM/Worker/Functions_available_to_workers)
-- Other kind of workers: {{ domxref("SharedWorker") }} and [ServiceWorker](/zh-CN/docs/Web/API/ServiceWorker_API).
-- Non-standard, Gecko-specific workers: {{ domxref("ChromeWorker") }}, used by extensions.
+- [使用 Web Worker](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [Web Worker 可用的函数和类](/zh-CN/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)
+- 其他类型的 worker：{{ domxref("SharedWorker") }} 和 [ServiceWorker](/zh-CN/docs/Web/API/Service_Worker_API).
+- [`OffscreenCanvas`](/zh-CN/docs/Web/API/OffscreenCanvas) 接口

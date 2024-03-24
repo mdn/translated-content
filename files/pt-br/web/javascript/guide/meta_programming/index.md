@@ -269,7 +269,7 @@ A tabela a seguir resume as traps disponíveis aos objetos do tipo Proxy. Veja a
           <li>
             No modo estrito, um valor de retorno <code>false</code> do
             manipulador <code>set</code> lançará uma exceção
-            {{jsxref ("TypeError")}}}.
+            {{jsxref ("TypeError")}}.
           </li>
         </ul>
       </td>

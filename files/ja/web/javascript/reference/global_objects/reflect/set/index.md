@@ -70,7 +70,7 @@ Reflect.getOwnPropertyDescriptor(obj, "undefined");
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Reflect.set")}}
+{{Compat}}
 
 ## 関連情報
 

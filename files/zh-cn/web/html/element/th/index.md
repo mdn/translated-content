@@ -61,7 +61,7 @@ slug: Web/HTML/Element/th
     > **备注：** 不要使用这个属性，因为它已经在最新标准中过时。
     >
     > - `left`, `center`, `right` 或 `justify` 这些对齐效果，应该使用 CSS 的{{cssxref("text-align")}} 来实现。
-    > - `char` 的对齐效果使用 CSS 的 {{cssxref("text-align")}} 实现， [`char`](/zh-CN/docs/Web/HTML/Element/th#char)亦同。{{unimplemented_inline}} in CSS3.
+    > - `char` 的对齐效果使用 CSS 的 {{cssxref("text-align")}} 实现，[`char`](/zh-CN/docs/Web/HTML/Element/th#char) 亦同。
 
 - `axis` {{Deprecated_Inline}}
 
@@ -77,9 +77,7 @@ slug: Web/HTML/Element/th
 
 - `char` {{Deprecated_inline}}
 
-  - : 列中的内容与`<th>` 元素中的字母对齐。通常其值包含一个 (.) 来排列数字或者货币值。如果 [`align`](/zh-CN/docs/Web/HTML/Element/th#align)没有被设置为`char`，这个属性就会被忽略。
-
-    > **备注：** 不要使用这个属性，因为它已经在最新标准中过时。为了达到同样的效果，你可以指定该字母为{{cssxref("text-align")}} 属性中的第一个值，或通过 CSS3 中的{{unimplemented_inline}}。
+  - : 列中的内容与 `<th>` 元素中的字母对齐。通常其值包含一个句点（`.`）来排列数字或者货币值。如果 [`align`](/zh-CN/docs/Web/HTML/Element/th#align) 没有被设置为 `char`，这个属性就会被忽略。
 
 - `charoff` {{Deprecated_inline}}
 

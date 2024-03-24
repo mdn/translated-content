@@ -72,7 +72,7 @@ decodeQueryParam("search+query%20%28correct%29");
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.decodeURIComponent")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -64,7 +64,7 @@ _HTML 引用标签_ (**\<q>**) 表示一个封闭的并且是短的行内引用�
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - The {{HTMLElement("blockquote")}} element for long quotations.
 - The {{HTMLElement("cite")}} element for source citations.

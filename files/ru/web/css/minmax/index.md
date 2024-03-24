@@ -102,7 +102,7 @@ minmax(auto, 300px)
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

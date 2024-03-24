@@ -54,7 +54,7 @@ An up-to-date informal list of constants can be found on the [CSSWG Wiki](http:/
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

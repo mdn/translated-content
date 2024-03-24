@@ -19,7 +19,7 @@ slug: Web/API/Window/outerWidth
 
 ## ブラウザーの対応
 
-{{Compat("api.Window.outerWidth")}}
+{{Compat}}
 
 ## 関連情報
 

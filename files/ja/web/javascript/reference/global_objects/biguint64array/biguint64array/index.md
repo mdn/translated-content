@@ -67,7 +67,7 @@ var biguint64 = new BigUint64Array(iterable);
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.BigUint64Array.BigUint64Array")}}
+{{Compat}}
 
 ## 関連情報
 

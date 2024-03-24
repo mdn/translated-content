@@ -1,25 +1,22 @@
 ---
-title: Storage.length
+title: "Storage: length プロパティ"
+short-title: length
 slug: Web/API/Storage/length
+l10n:
+  sourceCommit: 101ffc9479db6aaa530f2aac3992734dd97d1b86
 ---
 
 {{APIRef("Web Storage API")}}
 
-{{domxref("Storage")}} インターフェイスの読み取り専用プロパティ `length` は、`Storage` オブジェクトに保存されているデータアイテムの数を表す整数を返します。
+**`length`** は {{domxref("Storage")}} インターフェイスの読み取り専用プロパティで、`Storage` オブジェクトに保存されているデータアイテムの数を表す整数を返します。
 
-## 構文
+## 値
 
-```js
-var aLength = storage.length;
-```
-
-### 返値
-
-整数
+`Storage` オブジェクトに格納されているアイテムの数です。
 
 ## 例
 
-以下の関数はカレントドメインのローカルストレージに 3 個のデータアイテムを追加して、ストレージ内のアイテムの数を返します:
+以下の関数は現在のドメインのローカルストレージに 3 個のデータアイテムを追加して、ストレージ内のアイテムの数を返します。
 
 ```js
 function populateStorage() {
@@ -31,7 +28,7 @@ function populateStorage() {
 }
 ```
 
-> **メモ:** 実際の例として、[Web Storage Demo](https://github.com/mdn/web-storage-demo) をご覧ください。
+> **メモ:** 現実世界の例として、 [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/) をご覧ください。
 
 ## 仕様書
 
@@ -39,8 +36,8 @@ function populateStorage() {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Storage.length")}}
+{{Compat}}
 
 ## 関連情報
 
-- [Web Storage API を使用する](/ja/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+- [ウェブストレージ API の使用](/ja/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)

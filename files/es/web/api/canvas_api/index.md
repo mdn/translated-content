@@ -96,8 +96,6 @@ Las interfaces relacionadas con `WebGLRenderingContext` están en [WebGL](/es/do
   - : Tutorial exhaustivo que cubre tanto el uso básico de `<canvas>` como sus características avanzadas.
 - [Fragmentos de código: Canvas](/es/Add-ons/Code_snippets/Canvas)
   - : Algunos fragmentos de código orientados al desarrollador de extensiones usando `<canvas>`.
-- [Demo: Un laberinto básico](/es/docs/Web/API/Canvas_API/A_basic_ray-caster)
-  - : Una demo de una animación de laberinto usando canvas.
 - [Dibujar objetos DOM en un canvas](/es/docs/Web/API/Canvas_API/Drawing_DOM_objects_into_a_canvas)
   - : Cómo dibujar contenido DOM, como elementos HTML, en un canvas.
 - [Manipulación de vídeo usando canvas](/es/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)

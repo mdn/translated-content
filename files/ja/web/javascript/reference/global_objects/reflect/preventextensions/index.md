@@ -66,7 +66,7 @@ Object.preventExtensions(1);
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Reflect.preventExtensions")}}
+{{Compat}}
 
 ## 関連情報
 

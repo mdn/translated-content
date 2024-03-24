@@ -3,7 +3,7 @@ title: cookies.CookieStore
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Le type `CookieStore` de l'API {{WebExtAPIRef("cookies")}} représente un cookie store dans le navigateur.
 

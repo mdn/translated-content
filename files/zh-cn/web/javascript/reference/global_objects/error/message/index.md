@@ -3,7 +3,7 @@ title: Error.prototype.message
 slug: Web/JavaScript/Reference/Global_Objects/Error/message
 ---
 
-{{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}}
+{{JSRef}}
 
 ## 概述
 
@@ -32,7 +32,7 @@ throw e;
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Error.prototype.name")}}
 - {{jsxref("Error.prototype.toString()")}}

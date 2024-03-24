@@ -29,6 +29,8 @@ WebUSB は、これらの標準化されていない USB デバイスサービ�
   - : ペアリングした USB デバイスのメタデータと、制御用のメソッドを提供します。
 - {{domxref("USBInTransferResult")}}
   - : USB デバイスから USB ホストへのデータ転送要求の結果を表します。
+- {{domxref("USBOutTransferResult")}}
+  - : USB ホストから USB デバイスへのデータ転送要求の結果を表します。
 - {{domxref("USBIsochronousInTransferPacket")}}
   - : アイソクロナス転送用のエンドポイントにおける USB デバイスから USB ホストへのデータ転送要求による個々のパケットの状態を表します。
 - {{domxref("USBIsochronousInTransferResult")}}

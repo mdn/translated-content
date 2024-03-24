@@ -3,6 +3,8 @@ title: HTML
 slug: Glossary/HTML
 ---
 
+{{GlossarySidebar}}
+
 HTML (HyperText Markup Language) é uma linguagem descritiva que especifica a estrutura de uma página web.
 
 ## Breve história

@@ -54,4 +54,4 @@ function print_nav_timing_data() {
 
 ## ブラウザーの互換性
 
-{{Compat("api.PerformanceNavigationTiming.loadEventEnd")}}
+{{Compat}}

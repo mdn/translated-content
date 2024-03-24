@@ -34,8 +34,8 @@ p {
 ### 技術參考
 
 - [MDN 的 CSS 文件](/zh-TW/docs/Web/CSS)
-- [CSS 工作小組當前的工作進度](http://www.w3.org/Style/CSS/current-work)
+- [CSS 工作小組當前的工作進度](https://www.w3.org/Style/CSS/current-work)
 
 ### 深入了解 CSS
 
-- [codecademy.com 的課程](http://www.codecademy.com/en/tracks/web)
+- [codecademy.com 的課程](https://www.codecademy.com/en/tracks/web)

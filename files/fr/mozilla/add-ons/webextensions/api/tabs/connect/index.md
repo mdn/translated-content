@@ -3,7 +3,7 @@ title: tabs.connect()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/connect
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Appelez cette fonction pour configurer une connexion entre les scripts d'arrière-plan de l'extension (ou d'autres scripts privilégiés, tels que les scripts d'arrière-plan de l'extrension (ou d'autres scripts privilégiés, tels que les scripts de pages d'options) et les [scripts de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) appartenant à cette extension et s'exécutant dans l'onglet spécifié. Cette fonction renvoie un objet {{WebExtAPIRef("runtime.Port")}}.
 

@@ -1,17 +1,14 @@
 ---
-title: Navigator.buildID
+title: "Navigator: buildID プロパティ"
+short-title: buildID
 slug: Web/API/Navigator/buildID
+l10n:
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{ ApiRef("HTML DOM") }}
+{{ApiRef("HTML DOM")}}{{Non-standard_Header}}
 
 ブラウザーのビルド識別子を返します。最近のブラウザーでは、このプロパティはプライバシーの目的で、固定のタイムスタンプを返すようになり、例えば Firefox 64 系列では `20181001000000` となります。
-
-## 構文
-
-```
-buildID = navigator.buildID;
-```
 
 ### 値
 
@@ -19,14 +16,14 @@ buildID = navigator.buildID;
 
 ## 例
 
-```
-console.log(window.navigator.buildID);
+```js
+console.log(navigator.buildID);
 ```
 
 ## 仕様書
 
 どの公的な標準にも属していません。
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
-{{Compat("api.Navigator.buildID")}}
+{{Compat}}

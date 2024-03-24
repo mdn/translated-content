@@ -3,7 +3,7 @@ title: String
 slug: Web/JavaScript/Reference/Global_Objects/String
 ---
 
-{{JSRef("Global_Objects", "String")}}
+{{JSRef}}
 
 Объект **`String`** используется, чтобы представить и конструировать последовательность символов.
 

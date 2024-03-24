@@ -111,7 +111,7 @@ slug: Web/SVG/Tutorial/Basic_Shapes
 
 ### 折线
 
-[Polyline](/zh-CN/Web/SVG/Element/polyline)是一组连接在一起的直线。因为它可以有很多的点，折线的的所有点位置都放在一个 points 属性中：
+[Polyline](/zh-CN/Web/SVG/Element/polyline)是一组连接在一起的直线。因为它可以有很多的点，折线的所有点位置都放在一个 points 属性中：
 
 ```xml
 <polyline points="60, 110 65, 120 70, 115 75, 130 80, 125 85, 140 90, 135 95, 150 100, 145"/>
@@ -140,6 +140,6 @@ slug: Web/SVG/Tutorial/Basic_Shapes
 ```
 
 - d
-  - : 一个点集数列以及其他关于如何绘制路径的信息。请阅读[Paths](/zh-CN/Web/SVG/Tutorial/Paths) 章节以了解更多信息。
+  - : 一个点集数列以及其他关于如何绘制路径的信息。请阅读[路径](/zh-CN/Web/SVG/Tutorial/Paths)章节以了解更多信息。
 
 {{ PreviousNext("Web/SVG/Tutorial/Positions", "Web/SVG/Tutorial/Paths") }}

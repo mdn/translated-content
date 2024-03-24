@@ -3,6 +3,8 @@ title: WebP
 slug: Glossary/WebP
 ---
 
+{{GlossarySidebar}}
+
 **WebP** é um formato de compressão de imagem lossless e lossy desenvolvido pelo Google.
 
 ## Saiba mais

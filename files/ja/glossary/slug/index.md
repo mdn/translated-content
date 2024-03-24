@@ -3,6 +3,8 @@ title: Slug (スラグ)
 slug: Glossary/Slug
 ---
 
+{{GlossarySidebar}}
+
 スラグは、通常は URL の最後にある Web アドレスの固有の識別部分です。
 MDN のコンテキストでは、"\<locale> / docs /" に続く URL の部分です。
 

@@ -3,7 +3,7 @@ title: Date.prototype.setDate()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setDate
 ---
 
-{{JSRef("Global_Objects", "Date")}}
+{{JSRef}}
 
 **`setDate()`** 方法根据本地时间来指定一个日期对象的天数。
 
@@ -46,7 +46,7 @@ theBigDay.setDate(32); // 1962-08-01
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.getDate()")}}
 - {{jsxref("Date.prototype.setUTCDate()")}}

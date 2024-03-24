@@ -38,7 +38,7 @@ La version "complète" la plus récente de SVG est la 1.1 (devenue recommendatio
 
 SVG 1.2 devait être la prochaine version majeure de SVG mais celle-ci a été abandonnée pour le prochain [SVG 2.0](http://www.w3.org/TR/SVG2/), qui est actuellement en cours de développement. SVG 2.0 suit une approche similaire à CSS3: il divise les composants en plusieurs spécifications librement couplées.
 
-Outre les recommendations complètes de SVG, le groupe de travail du W3C a introduit SVG Tiny et SVG basic en 2003. Ces deux profils d'adressent principalement aux mobiles. SVG Tiny devrait permettre d'obtenir des graphiques simples pour les périphériques qui ont de faibles capacités. SVG Basic, lui, offre de nombreuses fonctionnalités de SVG, mais n'inclut pas celles qui sont difficiles à implémenter ou lourdes à restituer (comme les animations). En 2008, SVG Tiny 1.2 est devenu une recommendation du W3C.
+Outre les recommendations complètes de SVG, le groupe de travail du W3C a introduit SVG Tiny et SVG basic en 2003. Ces deux profils s'adressent principalement aux mobiles. SVG Tiny devrait permettre d'obtenir des graphiques simples pour les périphériques qui ont de faibles capacités. SVG Basic, lui, offre de nombreuses fonctionnalités de SVG, mais n'inclut pas celles qui sont difficiles à implémenter ou lourdes à restituer (comme les animations). En 2008, SVG Tiny 1.2 est devenu une recommendation du W3C.
 
 Une spécification SVG Print était prévue, qui ajouterait la prise en charge de plusieurs pages et une gestion améliorée des couleurs. Ce travail a été interrompu.
 

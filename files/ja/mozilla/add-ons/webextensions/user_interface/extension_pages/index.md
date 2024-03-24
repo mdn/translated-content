@@ -3,7 +3,7 @@ title: 拡張機能ページ
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 拡張機能には、フォーム、ヘルプ、その他拡張機能が必要とするコンテンツを提供するために、 HTML ページを設置することができます。
 

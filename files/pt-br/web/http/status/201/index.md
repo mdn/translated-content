@@ -23,7 +23,7 @@ Comumente, este status é utilizado em requisições do tipo {{HTTPMethod("POST"
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.status.201")}}
+{{Compat}}
 
 ## Veja mais
 

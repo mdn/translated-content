@@ -3,7 +3,7 @@ title: Страницы расширения
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 В расширение можно добавить HTML-страницы, чтобы предоставить пользователю формы, помощь или другое необходимое содержимое.
 

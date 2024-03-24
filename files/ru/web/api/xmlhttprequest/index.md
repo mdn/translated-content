@@ -15,7 +15,7 @@ XMLHttpRequest изначально был разработан Microsoft и п�
 var myRequest = new XMLHttpRequest();
 ```
 
-более детальное описание создание объекта, можно увидеть в разделе [Using XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest).
+более детальное описание создание объекта, можно увидеть в разделе [Using XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest).
 
 ## Список методов объекта
 

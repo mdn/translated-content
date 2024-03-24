@@ -186,7 +186,7 @@ Você pode dar uma olhada na tabela de referência de seletores abaixo para obte
 
 A tabela a seguir fornece uma visão geral dos seletores disponíveis para uso, juntamente com links para as páginas deste guia que mostram como usar cada tipo de seletor. Também incluí um link para a página MDN de cada seletor, onde você pode verificar as informações de suporte do navegador. Você pode usar isso como uma referência para voltar quando precisar consultar os seletores mais tarde no material, ou quando você experimentar CSS em geral.
 
-| Selector                                                                       | Example             | Learn CSS tutorial                                                                                                             |
+| Seletor                                                                        | Exemplo             | Tutorial CSS                                                                                                                   |
 | ------------------------------------------------------------------------------ | ------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | [Type selector](/pt-BR/docs/Web/CSS/Type_selectors)                            | `h1 { }`            | [Type selectors](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors#Type_selectors)                   |
 | [Universal selector](/pt-BR/docs/Web/CSS/Universal_selectors)                  | `* { }`             | [The universal selector](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors#The_universal_selector)   |

@@ -3,7 +3,7 @@ title: Date.prototype.setFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setFullYear
 ---
 
-{{JSRef("Global_Objects", "Date")}}
+{{JSRef}}
 
 **`setFullYear()`** 方法根据本地时间为一个日期对象设置年份。
 
@@ -47,7 +47,7 @@ theBigDay.setFullYear(1997);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.getUTCFullYear()")}}
 - {{jsxref("Date.prototype.setUTCFullYear()")}}

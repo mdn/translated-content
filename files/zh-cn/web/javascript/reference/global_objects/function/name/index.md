@@ -3,19 +3,25 @@ title: Function.name
 slug: Web/JavaScript/Reference/Global_Objects/Function/name
 ---
 
-{{JSRef("Global_Objects", "Function")}}`function.name` 属性返回函数实例的名称。
+{{JSRef}}
+
+{{jsxref("Function")}} 实例的 **`name`** 数据属性表示函数在创建时指定的名称，或者如果函数是匿名函数，则名称可以是 `anonymous` 或 `''`（空字符串）。
 
 {{EmbedInteractiveExample("pages/js/function-name.html")}}
 
-{{js_property_attributes(0,0,1)}}
+## 值
 
-> **备注：** 在非标准的 ES2015 之前的实现中，`configurable` 属性也是 `false`。
+一个字符串。
+
+{{js_property_attributes(0, 0, 1)}}
+
+> **备注：** 在非标准的、ES2015 之前的实现中，`configurable` 属性也是 `false`。
 
 ## 描述
 
 函数的 `name` 属性可用于在调试工具或错误消息中标识该函数。它对语言本身没有任何意义。
 
-`name` 属性是只读的，不能用赋值操作符修改：
+`name` 属性是只读的，不能用赋值运算符修改：
 
 ```js
 function someFunction() {}
@@ -24,36 +30,75 @@ someFunction.name = "otherFunction";
 console.log(someFunction.name); // someFunction
 ```
 
-想要改变它，请使用 {{jsxref("Object.defineProperty()")}}.
+想要改变它，请使用 {{jsxref("Object.defineProperty()")}}。
 
 `name` 属性通常是从函数的定义方式推断出来的。在下面的部分中，我们将描述推断它的各种方法。
 
-## 示例
+### 函数声明
 
-### 函数声明的名称
-
-`name` 属性会返回函数的名称。
+`name` 属性会返回函数声明的名称。
 
 ```js
 function doSomething() {}
 doSomething.name; // "doSomething"
 ```
 
-### 构造函数的名称
+### 默认导出的函数声明
 
-使用`new Function(...)`语法创建的函数或只是 `Function(...) create` {{jsxref("Function")}}对象及其名称为“anonymous”。
+一个 [`export default`](/zh-CN/docs/Web/JavaScript/Reference/Statements/export) 声明将函数作为声明导出，而不是表达式。如果声明是匿名的，则名称为 `"default"`。
+
+```js
+// -- someModule.js --
+export default function () {}
+
+// -- main.js --
+import someModule from "./someModule.js";
+
+someModule.name; // "default"
+```
+
+### 构造函数
+
+使用 [`Function()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/Function) 构造函数创建的函数的名称是“anonymous”。
 
 ```js
 new Function().name; // "anonymous"
 ```
 
-### 推断函数名称
+### 函数表达式
 
-变量和方法可以从句法位置推断匿名函数的名称（ECMAScript 2015 中新增）。
+如果函数表达式被命名，则该名称将用作 `name` 属性的值。
 
 ```js
-var f = function () {};
-var object = {
+const someFunction = function someFunctionName() {};
+someFunction.name; // "someFunctionName"
+```
+
+使用关键字 `function` 或箭头函数创建的匿名函数表达式将以 `""`（空字符串）作为名称。
+
+```js
+(function () {}).name; // ""
+(() => {}).name; // ""
+```
+
+然而，这种情况很少见——通常，为了在其他地方引用表达式，函数表达式在创建时会附加到一个标识符上（例如在变量声明中）。在这种情况下，名称可以被推断出来，正如下面的几个小节所示。
+
+一个实际情况是，从另一个函数返回的函数无法推断其名称：
+
+```js
+function getFoo() {
+  return () => {};
+}
+getFoo().name; // ""
+```
+
+### 变量声明和方法
+
+变量和方法可以从其语法位置推断出匿名函数的名称。
+
+```js
+const f = function () {};
+const object = {
   someMethod: function () {},
 };
 
@@ -61,84 +106,130 @@ console.log(f.name); // "f"
 console.log(object.someMethod.name); // "someMethod"
 ```
 
-你可以在 {{jsxref("Operators/Function", "函数表达式", "", 1)}}中定义函数的名称：
+这同样适用于赋值：
 
 ```js
-var object = {
-  someMethod: function object_someMethod() {},
-};
+let f;
+f = () => {};
+f.name; // "f"
+```
 
-console.log(object.someMethod.name); // "object_someMethod"
+### 初始化器和默认值
 
-try {
-  object_someMethod;
-} catch (e) {
-  alert(e);
+在[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#默认值)、[默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)、[类字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)等的初始化器（默认值）中的函数，将继承绑定标识符的名称作为它们的 `name`。
+
+```js
+const [f = () => {}] = [];
+f.name; // "f"
+
+const { someMethod: m = () => {} } = {};
+m.name; // "m"
+
+function foo(f = () => {}) {
+  console.log(f.name);
 }
-// ReferenceError: object_someMethod is not defined
+foo(); // "f"
+
+class Foo {
+  static someMethod = () => {};
+}
+Foo.someMethod.name; // someMethod
 ```
 
-你不能更改函数的名称，此属性是只读的：
+### 简写方法
 
 ```js
-var object = {
-  // anonymous
-  someMethod: function () {},
-};
-
-object.someMethod.name = "otherMethod";
-console.log(object.someMethod.name); // someMethod
-```
-
-要更改它，可以使用{{jsxref("Object.defineProperty()")}}。
-
-### 简写方法的名称
-
-```js
-var o = {
+const o = {
   foo() {},
 };
 o.foo.name; // "foo";
 ```
 
-### 绑定函数的名称
+### 绑定函数
 
-{{jsxref("Function.bind()")}} 所创建的函数将会在函数的名称前加上"bound " 。
+{{jsxref("Function.prototype.bind()")}} 所创建的函数将会在函数的名称前加上“bound”。
 
 ```js
 function foo() {}
 foo.bind({}).name; // "bound foo"
 ```
 
-### getters 和 setters 的函数名
+### getter 和 setter
 
-当通过 [`get`](/zh-CN/docs/Web/JavaScript/Reference/Functions/get) 和 [`set`](/zh-CN/docs/Web/JavaScript/Reference/Functions/set) 访问器来存取属性时，"get" 或 "set" 会出现在函数名称前。
+当使用 [`get`](/zh-CN/docs/Web/JavaScript/Reference/Functions/get) 和 [`set`](/zh-CN/docs/Web/JavaScript/Reference/Functions/set) 访问器属性时，函数名称中将出现“get”或“set”。
 
 ```js
-var o = {
+const o = {
   get foo() {},
   set foo(x) {},
 };
 
-var descriptor = Object.getOwnPropertyDescriptor(o, "foo");
+const descriptor = Object.getOwnPropertyDescriptor(o, "foo");
 descriptor.get.name; // "get foo"
 descriptor.set.name; // "set foo";
 ```
 
-### 类中的函数名称
+### 类
 
-你可以使用`obj.constructor.name`来检查对象的“类”（但请务必阅读以下警告）：
+类的名称遵循与函数声明和表达式相同的算法。
 
 ```js
-function Foo() {} // ES2015 Syntax: class Foo {}
-
-var fooInstance = new Foo();
-console.log(fooInstance.constructor.name); // logs "Foo"
+class Foo {}
+Foo.name; // "Foo"
 ```
 
-> **警告：** 脚本解释器只有在函数没有名为 name 的属性时才会设置内置的`Function.name`属性（参见 [9.2.11 of the ECMAScript2015 Language Specification](https://www.ecma-international.org/ecma-262/6.0/#sec-setfunctionname)）。但是，ES2015 规定由关键字*static*修饰的静态方法也会被认为是类的属性（ECMAScript2015, [14.5.14.21.b](https://www.ecma-international.org/ecma-262/6.0/#sec-runtime-semantics-classdefinitionevaluation) + [12.2.6.9](https://www.ecma-international.org/ecma-262/6.0/#sec-object-initializer-runtime-semantics-propertydefinitionevaluation)）。
+> **警告：** JavaScript 只会在函数没有自有的 `name` 属性时才设置函数的 `name` 属性。然而，类的[静态成员](/zh-CN/docs/Web/JavaScript/Reference/Classes/static)将被设置为类构造函数的自有属性，从而阻止内置的 `name` 属性生效。请参阅下面的示例。
 
-因此，我们无法获取具有静态方法属性`name()`的几乎任何类的类名称：
+### 以 Symbol 为函数名称
+
+如果使用一个 {{jsxref("Symbol")}} 作为函数名，并且该 symbol 有一个描述，那么该方法的名称将是方括号中的描述。
+
+```js
+const sym1 = Symbol("foo");
+const sym2 = Symbol();
+
+const o = {
+  [sym1]() {},
+  [sym2]() {},
+};
+
+o[sym1].name; // "[foo]"
+o[sym2].name; // "[]"
+```
+
+### 私有属性
+
+私有字段和私有方法的名称中包含哈希符号（`#`）。
+
+```js
+class Foo {
+  #field = () => {};
+  #method() {}
+  getNames() {
+    console.log(this.#field.name);
+    console.log(this.#method.name);
+  }
+}
+
+new Foo().getNames();
+// "#field"
+// "#method"
+```
+
+## 示例
+
+### 获取对象的构造函数名称
+
+你可以使用 `obj.constructor.name` 来检查对象的“类”名。
+
+```js
+function Foo() {} // 或：class Foo {}
+
+const fooInstance = new Foo();
+console.log(fooInstance.constructor.name); // "Foo"
+```
+
+然而，由于静态成员将成为类的自有属性，我们几乎无法获取具有静态方法属性 `name()` 的任何类的类名：
 
 ```js
 class Foo {
@@ -147,77 +238,61 @@ class Foo {
 }
 ```
 
-使用`static name()`方法`Foo.name`不再保存实际的类名称，而是引用`name()`函数对象。ES2015 语法中的上述类定义将在 Chrome 或 Firefox 中运行，类似于 ES5 语法中的以下代码段：
+使用 `static name()` 方法后，`Foo.name` 不再保存实际的类名，而是一个对 `name()` 函数对象的引用。尝试通过 `fooInstance.constructor.name` 获取 `fooInstance` 的类名将无法得到类名，而是得到一个对静态类方法的引用。示例：
 
 ```js
-function Foo() {}
-Object.defineProperty(Foo, "name", { writable: true });
-Foo.name = function () {};
+const fooInstance = new Foo();
+console.log(fooInstance.constructor.name); // ƒ name() {}
 ```
 
-通过`fooInstance.constructor.name`获取`fooInstance`类不会给我们所有的类名，而是静态类方法的引用。例如：
+由于静态字段的存在，`name` 也可能不是一个函数。
 
 ```js
-var fooInstance = new Foo();
-console.log(fooInstance.constructor.name); // logs function name()
+class Foo {
+  static name = 123;
+}
+console.log(new Foo().constructor.name); // 123
 ```
 
-你也可以从 ES5 语法示例中看到，在 Chrome 或 Firefox 的中静态定义的`Foo.name`变得可写。内置定义在没有自定义静态定义时是只读的：
+如果类有一个静态属性名为 `name`，它也将变为*可写的*。在没有自定义静态定义的情况下，内置定义是*只读的*:
 
 ```js
 Foo.name = "Hello";
-console.log(Foo.name);
-//如果 Foo 具有静态 name() 属性，则输出“Hello”，否则为“Foo”
+console.log(Foo.name); // 如果 Foo 类有一个静态的“name”属性，则为“Hello”；但如果没有，则为“Foo”。
 ```
 
-因此，你不能依赖内置的`Function.name`属性来保持一个类的名称。
+因此，你可能不会依赖内置的 `name` 属性来始终保存类的名称。
 
-### Symbol 作为函数名称
+### JavaScript 压缩器和缩小器
 
-如果{{jsxref("Symbol")}} 被用于函数名称，并且这个 symbol 具有相应的描述符，那么方法的名字就是方括号中的描述符。
+> **警告：** 在使用 JavaScript 压缩器（缩小器）或混淆器等源码转换工具时，要小心使用 `name` 属性。这些工具通常作为 JavaScript 构建流程的一部分使用，以减小程序在部署到生产环境之前的大小。此类转换通常会在构建时更改函数的名称。
 
-```js
-var sym1 = Symbol("foo");
-var sym2 = Symbol();
-var o = {
-  [sym1]: function () {},
-  [sym2]: function () {},
-};
-
-o[sym1].name; // "[foo]"
-o[sym2].name; // ""
-```
-
-## JavaScript 压缩和 minifiers
-
-> **警告：** 当使用`Function.name`和那些 JavaScript 压缩器（minifiers）或混淆器进行源码转换时要小心。这些工具通常用作 JavaScript 构建管道的一部分，以在程序部署到生产之前减少程序的大小。但这种转换通常会在构建时更改函数的名称。
-
-例如下面的代码：
+例如有这样的一段源码：
 
 ```js
 function Foo() {}
-var foo = new Foo();
+const foo = new Foo();
 
 if (foo.constructor.name === "Foo") {
-  console.log("'foo' is an instance of 'Foo'");
+  console.log("“foo”是“Foo”一个的实例");
 } else {
   console.log("Oops!");
 }
 ```
 
-可能被压缩为：
+可以压缩为：
 
 ```js
 function a() {}
-var b = new a();
+const b = new a();
 if (b.constructor.name === "Foo") {
-  console.log("'foo' is an instance of 'Foo'");
+  console.log("“foo”是“Foo”一个的实例");
 } else {
   console.log("Oops!");
 }
 ```
 
-在未压缩版本中，程序运行到真实分支并打印`'foo' is an instance of 'Foo'`。而在压缩版本中，它的行为不同，并且进入 else 分支。如果您依赖于`Function.name`，就像上面的示例一样，确保您的构建管道不会更改函数名称，也不要假定函数具有特定的名称。
+在未压缩的版本中，程序进入了真值分支并打印了 "“foo”是“Foo”一个的实例"。而在压缩后的版本中，它的行为不同，并进入了 else 分支。如果你依赖于 `name` 属性，就像上面的示例一样，请确保你的构建流程不会更改函数名称，或者不要假设函数具有特定的名称。
 
 ## 规范
 
@@ -226,3 +301,8 @@ if (b.constructor.name === "Foo") {
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- [`core-js` 中 `Function: name` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-function)
+- {{jsxref("Function")}}

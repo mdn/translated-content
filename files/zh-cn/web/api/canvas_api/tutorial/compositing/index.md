@@ -14,10 +14,6 @@ slug: Web/API/Canvas_API/Tutorial/Compositing
 - {{domxref("CanvasRenderingContext2D.globalCompositeOperation", "globalCompositeOperation = type")}}
   - : 这个属性设定了在画新图形时采用的遮盖策略，其值是一个标识 12 种遮盖方式的字符串。
 
-查看下面[Compositing 示例](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Compositing/Example)的代码。
-
-{{EmbedLiveSample("合成示例", 750, 6750, "")}}
-
 ## 裁切路径
 
 ![](canvas_clipping_path.png)裁切路径和普通的 canvas 图形差不多，不同的是它的作用是遮罩，用来隐藏不需要的部分。如右图所示。红边五角星就是裁切路径，所有在路径以外的部分都不会在 canvas 上绘制出来。
@@ -33,7 +29,7 @@ slug: Web/API/Canvas_API/Tutorial/Compositing
 
 默认情况下，canvas 有一个与它自身一样大的裁切路径（也就是没有裁切效果）。
 
-### `clip` 的例子
+### `clip` 的示例
 
 这个例子，我会用一个圆形的裁切路径来限制随机星星的绘制区域。
 
@@ -98,6 +94,6 @@ draw();
 
 裁切路径创建之后所有出现在它里面的东西才会画出来。在画线性渐变时我们就会注意到这点。然后会绘制出 50 颗随机位置分布（经过缩放）的星星，当然也只有在裁切路径里面的星星才会绘制出来。
 
-{{EmbedLiveSample("clip 的例子", "180", "180", "canvas_clip.png")}}
+{{EmbedLiveSample("clip 的示例", "", "160")}}
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}

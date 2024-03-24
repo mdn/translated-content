@@ -96,7 +96,7 @@ function fillTableWithParameters(tbl) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.URL")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -1,98 +1,123 @@
 ---
-title: Node.removeChild()
+title: "Node: Método removeChild()"
+short-title: removeChild()
 slug: Web/API/Node/removeChild
+l10n:
+  sourceCommit: 56c76424a5edb45f6716ac4ee48861dac8e7ae38
 ---
 
-{{APIRef ( "DOM")}}
+{{APIRef("DOM")}}
 
-El método **`Node.removeChild()`** elimina un nodo hijo del DOM y puede devolver el nodo eliminado.
+El método **`removeChild()`** de la interfaz {{domxref("Node")}} elimina un nodo hijo del DOM y devuelve el nodo eliminado.
+
+> **Nota:** Mientras se mantenga una referencia sobre el elemento hijo eliminado, seguirá existiendo en la memoria, pero ya no forma parte del DOM. Todavía se puede reutilizar más adelante en el código.
+>
+> Si el valor devuelto de `removeChild()` no se almacena y no se guarda ninguna otra referencia, se [eliminará automáticamente](/es/docs/Web/JavaScript/Memory_management) de la memoria al cabo de un breve tiempo.
+
+A diferencia de {{domxref("Node.cloneNode()")}}, el valor devuelto conserva los objetos `EventListener` asociados con él.
 
 ## Sintaxis
 
-```
-var antiguoHijo = elemento.removeChild(child);
-O
-elemento.removeChild(child);
+```js-nolint
+removeChild(child)
 ```
 
-- `child` es el nodo hijo a eliminar del DOM.
-- `elemento` es el nodo padre de `hijo`.(ver nota mas abajo)
-- `antiguoHijo` tiene una referencia al hijo eliminado. `antiguoHijo === child`.
+### Parámetros
 
-El hijo(child) eliminado aún existe en memoria pero ya no es parte del DOM. Con la primera forma de sintaxis mostrada, se puede reutilizar el nodo eliminado más tarde en el código, por medio de la referencia al objeto `antiguoHijo`. Sin embargo, en la segunda forma, la referencia a `antiguoHijo` se pierde, y suponiendo que el código no mantenga una referencia a ese objeto en alguna otra parte, inmediatamente será inutilizable e irrecuperable y será [eliminada automáticamente](/es/docs/Web/JavaScript/Gestion_de_Memoria)de memoria después de poco tiempo.
+- `child`
+  - : Un {{domxref("Node")}} que es el nodo hijo que se eliminará del DOM.
 
-Si hijo(`child)` no es en realidad hijo del nodo `elemento`, el método lanza una excepción. Esto también sucederá si `child` es en realidad hijo de `elemento` al momento de llamar al método, pero fue eliminado por un controlador(manejador) de eventos(event handler) invocado en el curso de tratar de eliminar el elemento. (e.g. blur).
+### Excepción
 
-Por lo tanto el método removeChild(child) lanza una excepción de 2 casos diferentes:
-
-1\. Si child es un hijo del elemento y por lo tanto existe en el DOM, pero se retiró el método lanza la siguiente excepción:
-
-`Uncaught NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node`.
-
-2\. Si `child` no existe en el DOM de la página, el método emite la siguiente excepción:
-
-`Uncaught TypeError: Failed to execute 'removeChild' on 'Node': parameter 1 is not of type 'Node'.`
+- `NotFoundError` {{domxref("DOMException")}}
+  - : Se lanza si `child` no es un hijo del nodo.
+- {{jsxref("TypeError")}}
+  - : Se lanza si `child` es `null`.
 
 ## Ejemplos
 
-```html
-<!--Ejemplo 1 HTML-->
-<div id="top" align="center"></div>
-```
+### Ejemplos simples
 
-```js
-<!--Javascript-->
-// El método lanza la excepción correspondiente al (caso 2)
-var top = document.getElementById("top");
-var nested = document.getElementById("nested");
-var garbage = top.removeChild(nested);
-```
+Dado este HTML:
 
 ```html
-<!--Ejemplo 2 HTML-->
-<div id="top">
-  <div id="anidados"></div>
+<div id="parent">
+  <div id="child"></div>
 </div>
 ```
 
-```js
-<!--Javascript-->
-// Eliminando un elemento específico cuando se conoce su nodo padre
-var d = document.getElementById("top");
-var d_nested = document.getElementById("anidados");
-var throwawayNode = d.removeChild(d_nested);
-```
+Para eliminar un elemento específico cuando se conoce su nodo principal:
 
 ```js
-<!--Javascript-->
-// Eliminando un elemento específico utilizando la propiedad parentNode, que siempre hace referencia al nodo padre de un nodo (nodoHijo.parentNode.).
-nodo var = document.getElementById("anidados");
+const parent = document.getElementById("parent");
+const child = document.getElementById("child");
+const throwawayNode = parent.removeChild(child);
+```
+
+Para eliminar un elemento específico sin tener que especificar su nodo principal:
+
+```js
+const node = document.getElementById("child");
 if (node.parentNode) {
-  node.parentNode.removeChild(nodo);
+  node.parentNode.removeChild(node);
 }
 ```
 
+Para eliminar todos los hijos de un elemento:
+
 ```js
-<!--Javascript-->
-// Eliminando todos los hijos de un elemento
-elemento var = document.getElementById("top");
+const element = document.getElementById("idOfParent");
 while (element.firstChild) {
   element.removeChild(element.firstChild);
 }
 ```
 
-## Notas
+### Causar un TypeError
 
-**`removeChild()`** se debe invocar sobre el nodo padre del nodo que se va a eliminar.
+```html
+<!--Código HTML de muestra-->
+<div id="parent"></div>
+```
 
-## Especificación
+```js
+const parent = document.getElementById("parent");
+const child = document.getElementById("child");
 
-- [DOM Nivel 1 Core: removeChild](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeChild)
-- [DOM Nivel 2 Core: removeChild](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1734834066)
-- [DOM Nivel 3 Core: removeChild](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1734834066)
+// Arroja Uncaught TypeError
+const garbage = parent.removeChild(child);
+```
 
-## Vea también
+### Causar un NotFoundError
 
-- {{Domxref ( "Node.replaceChild")}}
-- {{Domxref ( "Node.parentNode")}}
-- {{Domxref ( "ChildNode.remove")}}
+```html
+<!--Código HTML de muestra-->
+<div id="parent">
+  <div id="child"></div>
+</div>
+```
+
+```js
+const parent = document.getElementById("parent");
+const child = document.getElementById("child");
+
+// Esta primera llamada elimina correctamente el nodo.
+const garbage = parent.removeChild(child);
+
+// Arroja NotFoundError
+garbage = parent.removeChild(child);
+```
+
+## Especificaciones
+
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
+
+## Véase también
+
+- {{domxref("Node.replaceChild()")}}
+- {{domxref("Node.parentNode")}}
+- {{domxref("Element.remove()")}}
+- {{domxref("Node.cloneNode()")}}

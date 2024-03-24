@@ -46,7 +46,7 @@ Symbol.keyFor(Symbol.iterator); // undefined
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Symbol.keyFor")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -5,7 +5,7 @@ slug: Web/API/WebGLRenderingContext/createProgram
 
 {{APIRef("WebGL")}}
 
-La méthode **`WebGLRenderingContext.createProgram()`** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) crée et initialise un objet {{domxref("WebGLProgram")}}.
+La méthode **`WebGLRenderingContext.createProgram()`** de l'[API WebGL](/fr/docs/Web/API/WebGL_API) crée et initialise un objet {{domxref("WebGLProgram")}}.
 
 ## Syntaxe
 

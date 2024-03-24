@@ -62,7 +62,7 @@ Math.acosh =
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Math.acosh")}}
+{{Compat}}
 
 ## 関連情報
 

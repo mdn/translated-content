@@ -3,6 +3,8 @@ title: XQuery
 slug: Glossary/XQuery
 ---
 
+{{GlossarySidebar}}
+
 **XQuery** は {{glossary("XML")}} データベースでデータを更新、検索、計算するためのコンピューター言語です。
 
 ## より詳しく学ぶ

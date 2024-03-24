@@ -3,7 +3,7 @@ title: browsingData.removeCache()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeCache
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 ブラウザのキャッシュを消去します。
 
@@ -30,7 +30,7 @@ var removing = browser.browsingData.removeCache(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.browsingData.removeCache")}}
+{{Compat}}
 
 ## 例
 

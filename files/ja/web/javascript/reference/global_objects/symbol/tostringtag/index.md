@@ -72,7 +72,7 @@ test[Symbol.toStringTag]; // Returns HTMLButtonElement
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Symbol.toStringTag")}}
+{{Compat}}
 
 ## 関連情報
 

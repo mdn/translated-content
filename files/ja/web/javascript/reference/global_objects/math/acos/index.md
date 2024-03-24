@@ -53,7 +53,7 @@ Math.acos(2); // NaN
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Math.acos")}}
+{{Compat}}
 
 ## 関連情報
 

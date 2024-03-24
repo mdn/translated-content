@@ -126,7 +126,7 @@ Content-Location: /my-receipts/38
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Content-Location")}}
+{{Compat}}
 
 ## 関連情報
 

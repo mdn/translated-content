@@ -9,9 +9,7 @@ slug: Glossary/Type
 
 值的数据类型也影响哪个操作对该值有效。例如，一个整数可以乘以一个整数，而不是一个字符串。
 
-## 了解更多
-
-### 基本知识
+## 参见
 
 - 维基百科的 [Data type](https://zh.wikipedia.org/wiki/Data_type)
 - [JavaScript 的数据类型](/zh-CN/docs/Web/JavaScript/Data_structures)

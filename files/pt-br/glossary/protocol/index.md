@@ -3,6 +3,8 @@ title: Protocolo
 slug: Glossary/Protocol
 ---
 
+{{GlossarySidebar}}
+
 Um **protocolo** é um sistema de regras que define como o dado é trafegado dentro ou entre computadores. Comunicações entre dispositivos requer que estes concordem com o formato do dado que estiver sendo trafegado. O conjunto de regras que define esse formato é chamado de protocolo.
 
 ## Saiba mais

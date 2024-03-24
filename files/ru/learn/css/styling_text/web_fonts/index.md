@@ -165,11 +165,3 @@ font-family: "zantrokeregular", serif;
 Теперь, когда вы ознакомились с нашими статьями об основах стилизации текста, пришло время проверить ваше понимание нашей оценкой модуля «Задание: стилизация школьного сайта».
 
 {{PreviousMenuNext("Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text/Typesetting_a_homepage", "Learn/CSS/Styling_text")}}
-
-## В этом модуле
-
-- [Фундаментальная стилизация текста и шрифта](/ru/docs/Learn/CSS/Styling_text/Fundamentals)
-- [Стилизация списков](/ru/docs/Learn/CSS/Styling_text/Styling_lists)
-- [Стилизация ссылок](/ru/docs/Learn/CSS/Styling_text/Styling_links)
-- [Веб-шрифты](/ru/docs/Learn/CSS/Styling_text/Web_fonts)
-- [Задание: Стилизация школьного сайта](/en-US/Learn/CSS/Styling_text/Typesetting_a_homepage)

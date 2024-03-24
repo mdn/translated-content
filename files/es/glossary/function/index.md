@@ -3,6 +3,8 @@ title: Función
 slug: Glossary/Function
 ---
 
+{{GlossarySidebar}}
+
 Una **función** es un fragmento de código que puede ser llamado por otro código o por sí mismo, o por una {{Glossary("variable")}} que haga referencia a la función. Cuando se llama a una función, los {{Glossary("Argument", "argumentos")}} se pasan a la función como entrada, y la función puede devolver opcionalmente una salida. Una función en {{glossary("JavaScript")}} es también un {{glossary("object", "objeto")}}.
 
 El nombre de la función es un {{Glossary("identifier", "identificador")}} declarado como parte de una declaración de función o expresión de función. El {{Glossary("scope", "ámbito")}} de la función depende de si el nombre de la función es una declaración o una expresión.

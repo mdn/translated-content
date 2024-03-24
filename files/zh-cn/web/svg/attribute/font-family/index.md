@@ -43,6 +43,6 @@ p.class2{font-family:Arial,Helvetica;}
 
 {{Specifications}}
 
-## 另见
+## 参见
 
 - {{ cssxref("font-family","CSS font-family") }}

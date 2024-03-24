@@ -1,69 +1,57 @@
 ---
-title: 书本详细信息页面
+title: 书籍详细信息页面
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Book_detail_page
 ---
 
-书本细节页面需要呈现一本指定书本 (`Book`) 的信息，使用它的 `_id` 字段值 (自动产生) 做为识别，接着是图书馆中书本实例 (`BookInstance`) 的信息。无论我们在哪里呈现一个作者、种类、或书本实例，都应该连结到它的细节页面。
+*书籍详细信息页面*需要呈现指定书籍（`Book`，使用自动生成的 `_id` 字段值进行标识）的信息，以及图书馆中每一个关联的副本（`BookInstance`）的信息。无论我们在哪里呈现一个作者、种类，或书籍实例，都应该链接到关联的详细信息页面。
 
 ## 控制器
 
-打开 **/controllers/bookController.js**. ，找到 exported `book_detail()` 控制器方法，用底下的代码置换。
+打开 **/controllers/bookController.js**，找到导出的 `book_detail()` 控制器方法，并将其替换为以下代码。
 
 ```js
-// Display detail page for a specific book.
-exports.book_detail = function (req, res, next) {
-  async.parallel(
-    {
-      book: function (callback) {
-        Book.findById(req.params.id)
-          .populate("author")
-          .populate("genre")
-          .exec(callback);
-      },
-      book_instance: function (callback) {
-        BookInstance.find({ book: req.params.id }).exec(callback);
-      },
-    },
-    function (err, results) {
-      if (err) {
-        return next(err);
-      }
-      if (results.book == null) {
-        // No results.
-        var err = new Error("Book not found");
-        err.status = 404;
-        return next(err);
-      }
-      // Successful, so render.
-      res.render("book_detail", {
-        title: "Title",
-        book: results.book,
-        book_instances: results.book_instance,
-      });
-    },
-  );
-};
+// 显示特定书籍的详细信息页面。
+exports.book_detail = asyncHandler(async (req, res, next) => {
+  // 获取书籍的详细信息，以及特定书籍的实例
+  const [book, bookInstances] = await Promise.all([
+    Book.findById(req.params.id).populate("author").populate("genre").exec(),
+    BookInstance.find({ book: req.params.id }).exec(),
+  ]);
+
+  if (book === null) {
+    // 没有结果。
+    const err = new Error("Book not found");
+    err.status = 404;
+    return next(err);
+  }
+
+  res.render("book_detail", {
+    title: book.title,
+    book: book,
+    book_instances: bookInstances,
+  });
+});
 ```
 
-> **备注：** 我们不需要用 require 导入 async 和 BookInstance，当我们实作主页面控制器的时候，我们就已经引入这些模组。
+> **备注：** 我们不需要用 require 导入任何额外的模块，因为我们在实现主页控制器时已经导入了依赖项。
 
-此处的控制器方法使用 `async.parallel()`，用平行的方式找到 `Book` 以及它的相应复本 (`BookInstances`) 。这样的处理方式，就跟上面的 种类细节页面 所说明的完全相同。
+此方法与[类别详细信息页面](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page)描述的方法完全相同。路由控制器函数使用 `Promise.all()` 并行查询指定的书籍（`Book`）以及它的相关副本（`BookInstance`）。如果没有找到匹配的书籍，就会返回一个带有“404: Not Found”错误的 Error 对象。如果找到了书籍，那么就会使用“book_detail”模板呈现检索到的数据库信息。由于“title”键用于给网页命名（如“layout.pug”中定义的标题），所以这次我们在渲染网页时传递了 `results.book.title`。
 
 ## 视图
 
-创建 **/views/book_detail.pug** 并加入底下文字。
+创建 **/views/book_detail.pug** 并添加以下文本。
 
-```js
+```pug
 extends layout
 
 block content
-  h1 #{title}: #{book.title}
+  h1 Title: #{book.title}
 
   p #[strong Author:]
     a(href=book.author.url) #{book.author.name}
   p #[strong Summary:] #{book.summary}
   p #[strong ISBN:] #{book.isbn}
-  p #[strong Genre:]&nbsp;
+  p #[strong Genre:]
     each val, index in book.genre
       a(href=val.url) #{val.name}
       if index < book.genre.length - 1
@@ -83,18 +71,18 @@ block content
       p #[strong Imprint:] #{val.imprint}
       if val.status!='Available'
         p #[strong Due back:] #{val.due_back}
-      p #[strong Id:]&nbsp;
+      p #[strong Id:]
         a(href=val.url) #{val._id}
 
     else
       p There are no copies of this book in the library.
 ```
 
-在这个模板里，几乎每个东西都在先前的章节演示过了。
+在这个模板中，几乎所有内容都在先前的章节演示过了。
 
-> **备注：** 与该书相关的種類列表，在模板中的实作，如以下代碼。除了最后一本书之外，在与本书相关的每个种類之后，都会添加一个逗号。
+> **备注：** 与本书相关的类别列表在模板中的实现如下。除了最后一个之外，这会在与本书相关的每个类别后面添加一个逗号。
 >
-> ```plain
+> ```pug
 >   p #[strong Genre:]
 >     each val, index in book.genre
 >       a(href=val.url) #{val.name}
@@ -102,13 +90,13 @@ block content
 >         |,
 > ```
 
-## 它看起來像是？
+## 它看起来像是？
 
-运行本应用，并打开浏览器访问 <http://localhost:3000/>。选择 All books 连结，然后选择其中一本书。如果每个东西都设定正确了，你的页面看起来应该像是底下的截图。
+运行本应用，并打开浏览器访问 `http://localhost:3000/`。选择 _All books_ 链接，然后选择其中某一书籍。如果所有内容都设置正确了，你的页面应类似于以下屏幕截图。
 
-![Book Detail Page - Express Local Library site](locallibary_express_book_detail.png)
+![书籍详细信息页面——Express 本地图书馆网站](locallibary_express_book_detail.png)
 
 ## 下一步
 
-- 回到 [Express 教程 5: 呈现图书馆数据](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- 继续教程 5 的下一个部分：[作者细节页面](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_detail_page)
+- 回到 [Express 教程 5：呈现图书馆数据](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
+- 继续教程 5 的下一个部分：[作者详细信息页面](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_detail_page)

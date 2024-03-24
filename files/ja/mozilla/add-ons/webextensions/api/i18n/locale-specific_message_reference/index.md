@@ -77,7 +77,7 @@ name には、次の文字が使用できます:
 - ロケール文字列が使用される時に、`/\$\d+/` と一致するトークンは、{{WebExtAPIRef("i18n.getMessage()")}} に渡される replacement に置き換えられます。
 - `getMessage()` は、placeholder/substitution の呼び出しを 9 個までしか処理しません。
 
-### description
+### 解説
 
 {{optional_inline}}
 

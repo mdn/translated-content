@@ -7,13 +7,13 @@ slug: Mozilla/Add-ons/WebExtensions/API/browserAction
 
 添加按钮到浏览器的工具栏。
 
-您可以为该按钮指派一个弹出窗。弹出窗可采用 HTML、CSS 和 JavaScript 编写，就像是一个普通的网页。运行在该弹出窗中的 JavaScript 可以同您的后台脚本一样访问所有的 WebExtension API，但它的全局上下文是该弹出窗，而不是浏览器中的当前页面。要影响网页，您需要通过[消息](/zh-CN/Add-ons/WebExtensions/Modify_a_web_page#Messaging)通信。
+你可以为该按钮指派一个弹出窗。弹出窗可采用 HTML、CSS 和 JavaScript 编写，就像是一个普通的网页。运行在该弹出窗中的 JavaScript 可以同你的后台脚本一样访问所有的 WebExtension API，但它的全局上下文是该弹出窗，而不是浏览器中的当前页面。要影响网页，你需要通过[消息](/zh-CN/Add-ons/WebExtensions/Modify_a_web_page#Messaging)通信。
 
-如果您指定了弹出窗，它将显示——内容将在用户点击该图标时被加载。如果您没有指定一个弹出窗，用户单击该图标的事件将派发到您的扩展。
+如果你指定了弹出窗，它将显示——内容将在用户点击该图标时被加载。如果你没有指定一个弹出窗，用户单击该图标的事件将派发到你的扩展。
 
-您可以用 manifest.json 中的 [`browser_action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) 键值声明定义大多数浏览器动作属性。
+你可以用 manifest.json 中的 [`browser_action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) 键值声明定义大多数浏览器动作属性。
 
-使用 `browserAction` API，您可以：
+使用 `browserAction` API，你可以：
 
 - 使用 {{WebExtAPIRef("browserAction.onClicked")}} 监听该图标的点击事件。
 - 获取和设置该图标的属性——图标、标题、弹出窗等。You can get and set these globally across all tabs, or for a specific tab by passing the tab ID as an additional argument.

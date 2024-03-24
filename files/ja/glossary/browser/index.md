@@ -3,6 +3,8 @@ title: Browser (ブラウザー)
 slug: Glossary/Browser
 ---
 
+{{GlossarySidebar}}
+
 **ウェブブラウザー**または**ブラウザー**は、{{Glossary("World Wide Web","ウェブ")}}からページを取得して表示するプログラムで、ユーザーが{{Glossary("hyperlink","ハイパーリンク")}}を通して更に他のページへアクセスできます。ブラウザーは{{Glossary("user agent","ユーザーエージェント")}}の最もなじみ深い形です。
 
 ## 詳細情報

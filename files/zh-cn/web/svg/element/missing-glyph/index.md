@@ -32,7 +32,7 @@ slug: Web/SVG/Element/missing-glyph
 
 ## DOM 接口
 
-该元素实现了[`SVGMissingGlyphElement`](/zh-CN/DOM/SVGMissingGlyphElement)接口。
+该元素实现了 [`SVGMissingGlyphElement`](/zh-CN/DOM/SVGMissingGlyphElement) 接口。
 
 ## 相关内容
 

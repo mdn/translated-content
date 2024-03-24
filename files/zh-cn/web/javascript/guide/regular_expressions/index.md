@@ -41,16 +41,14 @@ var re = new RegExp("ab+c");
 
 下面的页面与表格列出了一个正则表达式中可以利用的特殊字符的完整列表和描述。
 
-- [断言（Assertions）](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
+- [断言](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)指南
   - : 表示一个匹配在某些条件下发生。断言包含先行断言、后行断言和条件表达式。
-- [字符类（Character Classes）](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
+- [字符类](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)指南
   - : 区分不同类型的字符，例如区分字母和数字。
-- [组和范围（Groups and Ranges）](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_Ranges)
-  - : 表示表达式字符的分组和范围。
-- [量词（Quantifiers）](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
+- [组和反向引用](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)指南
+  - : 当使用正则表达式模式与字符串匹配时，组会将多个模式组合成一个整体，捕获组会提供额外的子匹配信息。反向引用指的是同一正则表达式中以前捕获的组。
+- [量词](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)指南
   - : 表示匹配的字符或表达式的数量。
-- [Unicode 属性转义（Unicode Property Escapes）](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
-  - : 基于 unicode 字符属性区分字符。例如大写和小写字母、数学符号和标点。
 
 <table class="standard-table">
   <caption>
@@ -485,7 +483,7 @@ var re = new RegExp("ab+c");
         </p>
         <p>例如，<code>/\s\w*/</code> 匹配"foo bar."中的' bar'。</p>
         <p>
-          经测试，\s不匹配"<a href="https://unicode-table.com/cn/180E/"
+          经测试，\s不匹配"<a href="https://symbl.cc/cn/180E/"
             >\u180e</a
           >"，在当前版本 Chrome(v80.0.3987.122) 和 Firefox(76.0.1)
           控制台输入/\s/.test("\u180e") 均返回 false。
@@ -598,11 +596,11 @@ var re = new RegExp("ab+c");
 
 如果你需要使用任何特殊字符的字面值（例如，搜索字符'\*'），你必须通过在它前面放一个反斜杠来转义它。例如，要搜索'a'后跟'\*'后跟'b'，你应该使用`/a\*b/`- 反斜杠“转义”字符'\*'，使其成为文字而非特殊符号。
 
-类似地，如果您正在编写正则表达式文字并且需要匹配斜杠（'/'），那么需要转义它（否则，斜杠是正则终止符）。例如，要搜索字符串“/ example /”后跟一个或多个字母字符，您需要使用`/\/example\/[a-z]+/i`——每个斜杠之前使用反斜杠使它们成为普通字符。
+类似地，如果你正在编写正则表达式文字并且需要匹配斜杠（'/'），那么需要转义它（否则，斜杠是正则终止符）。例如，要搜索字符串“/ example /”后跟一个或多个字母字符，你需要使用`/\/example\/[a-z]+/i`——每个斜杠之前使用反斜杠使它们成为普通字符。
 
-要匹配文本符号反斜杠，您需要转义反斜杠。例如，要匹配字符串“C:\”，其中“C”可以是任何字母，您将使用`/[A-Z]:\\/` —— 第一个反斜杠转义后面的那个反斜杠，因此表达式搜索单个普通字符反斜杠。
+要匹配文本符号反斜杠，你需要转义反斜杠。例如，要匹配字符串“C:\”，其中“C”可以是任何字母，你将使用`/[A-Z]:\\/`——第一个反斜杠转义后面的那个反斜杠，因此表达式搜索单个普通字符反斜杠。
 
-如果将 RegExp 构造函数与字符串文字一起使用，请记住反斜杠是字符串文字中的转义，因此要在正则表达式中使用它，您需要在字符串文字级别转义它。 `/a\*b/` 和`new RegExp("a\\*b")`创建的表达式是相同的，搜索“a”后跟文字“\*”后跟“b”。
+如果将 RegExp 构造函数与字符串文字一起使用，请记住反斜杠是字符串文字中的转义，因此要在正则表达式中使用它，你需要在字符串文字级别转义它。 `/a\*b/` 和`new RegExp("a\\*b")`创建的表达式是相同的，搜索“a”后跟文字“\*”后跟“b”。
 
 将用户输入转义为正则表达式中的一个字面字符串，可以通过简单的替换来实现：
 
@@ -821,7 +819,7 @@ var re = new RegExp("\\w+\\s", "g");
 
 并且能获取到相同的结果。
 
-使用`.exec()`方法时，与'`g`'标志关联的行为是不同的。（“class”和“argument”的作用相反：在`.match()`的情况下，字符串类（或数据类型）拥有该方法，而正则表达式只是一个参数，而在`.exec()`的情况下，它是拥有该方法的正则表达式，其中字符串是参数。对比*`str.match(re)`*与*`re.exec(str)`* ), '`g`'标志与`.exec()`方法一起使用获得迭代进展。
+使用 `.exec()` 方法时，与 `g` 标志关联的行为是不同的。（“class”和“argument”的作用相反：在 `.match()` 的情况下，字符串类（或数据类型）拥有该方法，而正则表达式只是一个参数，而在 `.exec()` 的情况下，它是拥有该方法的正则表达式，其中字符串是参数。）对比 `str.match(re)` _与_ `re.exec(str)`，`g` 标志与 `.exec()` 方法一起使用获得迭代进展。
 
 ```js
 var xArray;

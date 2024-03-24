@@ -50,4 +50,4 @@ function closeCurrentWindow() {
 
 ## ブラウザーの実装状況
 
-{{Compat("api.Window.close")}}
+{{Compat}}

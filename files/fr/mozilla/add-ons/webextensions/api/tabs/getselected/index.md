@@ -3,7 +3,7 @@ title: tabs.getSelected()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/getSelected
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 > **Attention :** Cette méthode est dépréciée. utilisez {{WebExtAPIRef("tabs.query", "tabs.query({active: true})")}} à la place.
 

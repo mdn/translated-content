@@ -258,13 +258,3 @@ Test.prototype.y = function() { ... };
 В следующей статье мы рассмотрим то, как вы можете реализовать наследование функциональности между двумя собственными настраиваемыми объектами.
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects")}}
-
-## В этом модуле
-
-- [Основы объекта](/ru/docs/Learn/JavaScript/Объекты/Основы)
-- [Объектно-ориентированный JavaScript для начинающих](/ru/docs/Learn/JavaScript/Объекты/Object-oriented_JS)
-- [Прототипы объектов](/ru/docs/Learn/JavaScript/Объекты/Object_prototypes)
-- [Наследование в JavaScript](/ru/docs/Learn/JavaScript/Объекты/Inheritance)
-- [Работа с данными JSON](/ru/docs/Learn/JavaScript/Объекты/JSON)
-- [Практика построения объектов](/ru/docs/Learn/JavaScript/Объекты/Object_building_practice)
-- [Добавление функций в нашу демонстрацию прыгающих шаров](/ru/docs/Learn/JavaScript/Объекты/Adding_bouncing_balls_features)

@@ -60,7 +60,7 @@ Referer: https://example.com/
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Referer")}}
+{{Compat}}
 
 ## 関連情報
 

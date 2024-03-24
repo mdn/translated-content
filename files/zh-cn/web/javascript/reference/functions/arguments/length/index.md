@@ -33,7 +33,7 @@ function adder(base /*, n2, ... */) {
 }
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
@@ -41,6 +41,6 @@ function adder(base /*, n2, ... */) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - [Function.length](/zh-CN/docs/JavaScript/Reference/Global_Objects/Function/length)

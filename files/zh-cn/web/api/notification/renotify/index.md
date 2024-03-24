@@ -1,15 +1,19 @@
 ---
 title: Notification：renotify 属性
 slug: Web/API/Notification/renotify
+l10n:
+  sourceCommit: 10b9d1a207b2bf467150b0ec72e2e5f09429d2d9
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{APIRef("Web Notifications")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 {{domxref("Notification")}} 接口的 **`renotify`** 只读属性指定在新通知替换旧通知后是否应当通知用户，在 {{domxref("Notification.Notification","Notification()")}} 构造函数的 `renotify` 选项中指定。
 
+{{AvailableInWorkers}}
+
 ## 值
 
-一个布尔值。默认值为 `false`；设为 `true` 将会重新通知用户。
+一个布尔值。默认值为 `false`；设为 `true` 将会使通知重新通知用户。
 
 ## 示例
 
@@ -17,13 +21,13 @@ slug: Web/API/Notification/renotify
 
 ```js
 const options = {
-  body: "您提交的代码收到了 3 条新的审阅意见。",
+  body: "你提交的代码收到了 3 条新的审阅意见。",
   renotify: true,
 };
 
 const n = new Notification("新评论活动", options);
 
-console.log(n.renotify); // "true"
+console.log(n.renotify); // true
 ```
 
 ## 规范

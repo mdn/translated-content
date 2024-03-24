@@ -3,7 +3,7 @@ title: Web Speech API
 slug: Web/API/Web_Speech_API
 ---
 
-{{DefaultAPISidebar("Web Speech API")}}{{seecompattable}}
+{{DefaultAPISidebar("Web Speech API")}}
 
 Web Speech API позволяет взаимодействовать с голосовыми интерфейсами в ваших веб приложениях. Web Speech API состоит из двух частей: SpeechSynthesis (Текст-в-Речь), и SpeechRecognition (Асинхронное распознавание речи)
 
@@ -65,38 +65,9 @@ Web Speech API позволяет веб приложениям управлят
 | -------------- |
 | Web Speech API |
 
-## Browser compatibility
+## Совместимость с браузерами
 
-### `SpeechRecognition`
-
-{{Compat("api.SpeechRecognition", 0)}}
-
-### `SpeechSynthesis`
-
-{{Compat("api.SpeechSynthesis", 0)}}
-
-## Firefox OS permissions
-
-To use speech recognition in an app, you need to specify the following permissions in your [manifest](/ru/docs/Web/Apps/Build/Manifest):
-
-```json
-"permissions": {
-  "audio-capture" : {
-    "description" : "Audio capture"
-  },
-  "speech-recognition" : {
-    "description" : "Speech recognition"
-  }
-}
-```
-
-You also need a privileged app, so you need to include this as well:
-
-```json
-  "type": "privileged"
-```
-
-Speech synthesis needs no permissions to be set.
+{{Compat}}
 
 ## Смотрите также
 

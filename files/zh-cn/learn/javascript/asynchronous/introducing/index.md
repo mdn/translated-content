@@ -10,7 +10,7 @@ slug: Learn/JavaScript/Asynchronous/Introducing
 <table>
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         基本的计算机素养，以及对 JavaScript 基础知识的一定了解，包括函数和事件处理程序。
       </td>
@@ -110,9 +110,8 @@ function generatePrimes(quota) {
 document.querySelector("#generate").addEventListener("click", () => {
   const quota = document.querySelector("#quota").value;
   const primes = generatePrimes(quota);
-  document.querySelector(
-    "#output",
-  ).textContent = `完成！已生成素数${quota}个。`;
+  document.querySelector("#output").textContent =
+    `完成！已生成素数${quota}个。`;
 });
 document.querySelector("#reload").addEventListener("click", () => {
   document.location.reload();
@@ -170,9 +169,8 @@ function generatePrimes(quota) {
 document.querySelector("#generate").addEventListener("click", () => {
   const quota = document.querySelector("#quota").value;
   const primes = generatePrimes(quota);
-  document.querySelector(
-    "#output",
-  ).textContent = `完成！已生成素数${quota}个。`;
+  document.querySelector("#output").textContent =
+    `完成！已生成素数${quota}个。`;
 });
 document.querySelector("#reload").addEventListener("click", () => {
   document.querySelector("#user-input").value =

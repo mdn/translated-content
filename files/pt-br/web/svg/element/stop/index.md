@@ -66,7 +66,7 @@ Este elemento implementa a interface do [`SVGStopElement`](/pt-BR/docs/Web/API/S
 
 ## Compatibilidade com navegadores
 
-{{Compat("svg.elements.stop")}}
+{{Compat}}
 
 ## Veja também
 

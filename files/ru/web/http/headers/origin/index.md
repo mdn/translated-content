@@ -44,12 +44,9 @@ Origin: https://developer.mozilla.org
 
 ## Спецификации
 
-| Specification                                          | Comment                                              |
-| ------------------------------------------------------ | ---------------------------------------------------- |
-| {{RFC("6454", "Origin", "7")}}                         | The Web Origin Concept                               |
-| {{SpecName('Fetch','#origin-header','Origin header')}} | Supplants the `Origin` header as defined in RFC6454. |
+{{Specifications}}
 
-## Совместимость с браузером
+## Совместимость с браузерами
 
 {{Compat}}
 

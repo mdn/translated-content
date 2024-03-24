@@ -70,13 +70,11 @@ if (!Array.of) {
 
 ## Especificações
 
-| Especificação                                    | Status           | Comentário         |
-| ------------------------------------------------ | ---------------- | ------------------ |
-| {{SpecName('ES6', '#sec-array.of', 'Array.of')}} | {{Spec2('ES6')}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Array.of")}}
+{{Compat}}
 
 ## Ver também
 

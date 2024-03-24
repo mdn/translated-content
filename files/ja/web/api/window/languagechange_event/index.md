@@ -54,7 +54,7 @@ window.onlanguagechange = function (event) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.languagechange_event")}}
+{{Compat}}
 
 ## 関連情報
 

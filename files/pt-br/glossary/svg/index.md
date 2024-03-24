@@ -3,6 +3,8 @@ title: SVG
 slug: Glossary/SVG
 ---
 
+{{GlossarySidebar}}
+
 _Scalable Vector Graphics_ (**SVG**) é um formato de imagem vetorial 2D baseado em uma sintaxe {{Glossary("XML")}}.
 
 A {{Glossary("W3C")}} iniciou o trabalho no SVG no final dos anos 1990, mas o SVG só se tornou popular quando o {{Glossary("Microsoft Internet Explorer", "Internet Explorer")}} 9 foi lançado com suporte a SVG. Atualmente a maioria dos {{Glossary("browser","navegadores")}} suportam SVG.

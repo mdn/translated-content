@@ -3,6 +3,8 @@ title: IMAP
 slug: Glossary/IMAP
 ---
 
+{{GlossarySidebar}}
+
 IMAP (Internet Message Access Protocol) は、電子メールの取得と保存に使用される{{Glossary("protocol","プロトコル")}}です。 {{Glossary("POP3")}} より新しい IMAP では、サーバー上のフォルダとルールが可能です。
 
 POP3 とは異なり IMAP では、1 つのメールボックスへの複数同時接続が可能です。 メールボックスにアクセスするクライアントは、他のクライアントからの状態変更に関する情報を受け取ることができます。 IMAP はまた、クライアントが接続を維持し、必要に応じて情報を受け取るモードを提供します。

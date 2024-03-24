@@ -7,7 +7,7 @@ Uma **media query** consiste de um _media type_ e pelo menos uma expressão que 
 
 ## Sintaxe
 
-_Media queries_ consistem de um _[media type](/en-US/docs/Web/CSS/@media)_ e podem, a partir de uma especificação CSS3, contendo uma ou mais expressões, expressa em _media features_, que determinam ou verdadeiro ou falso. Os resultados da _query_ são verdadeiros se o _media type_ especificado na _media query_ corresponde ao tipo do documento exibido no dispositivo e todas as expressões na _media query_ são verdadeiras.
+_Media queries_ consistem de um _[media type](/pt-BR/docs/Web/CSS/@media)_ e podem, a partir de uma especificação CSS3, contendo uma ou mais expressões, expressa em _media features_, que determinam ou verdadeiro ou falso. Os resultados da _query_ são verdadeiros se o _media type_ especificado na _media query_ corresponde ao tipo do documento exibido no dispositivo e todas as expressões na _media query_ são verdadeiras.
 
 ```html
 <!-- CSS media query em um elemento de link -->

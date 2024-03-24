@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Classes
 
 {{JsSidebar("Classes")}}
 
-Class는 객체를 생성하기 위한 템플릿입니다. 클래스는 데이터와 이를 조작하는 코드를 하나로 추상화합니다. 자바스크립트에서 클래스는 프로토타입을 이용해서 만들어졌지만 ES5의 클래스 의미와는 다른 문법과 의미를 가집니다.
+Class는 객체를 생성하기 위한 템플릿입니다. 클래스는 데이터와 이를 조작하는 코드를 하나로 추상화합니다. JavaScript에서 클래스는 프로토타입을 이용해서 만들어졌지만 ES5의 클래스 의미와는 다른 문법과 의미를 가집니다.
 
 ## Class 정의
 
@@ -201,11 +201,11 @@ Rectangle.prototype.prototypeWidth = 25;
 
 ### Field 선언
 
-> **Warning:** public과 private 필드 선언은 자바스크립트 표준화 위원회에 [실험적 기능 (stage 3)](https://github.com/tc39/proposal-class-fields) [TC39](https://tc39.es/) 로 제안되어있습니다. 현재 이를 지원하는 브라우져는 제한적인 상태입니다만, [Babel](https://babeljs.io/) 과 같은 build 시스템을 사용한다면 이 기능을 사용해볼 수 있습니다.
+> **Warning:** public과 private 필드 선언은 JavaScript 표준화 위원회에 [실험적 기능 (stage 3)](https://github.com/tc39/proposal-class-fields) [TC39](https://tc39.es/) 로 제안되어있습니다. 현재 이를 지원하는 브라우져는 제한적인 상태입니다만, [Babel](https://babeljs.io/) 과 같은 build 시스템을 사용한다면 이 기능을 사용해볼 수 있습니다.
 
 #### Public 필드 선언
 
-자바스크립트의 필드 선언 문법을 사용해서 위의 예제는 아래와 같이 다시 쓰여질 수 있습니다.
+JavaScript의 필드 선언 문법을 사용해서 위의 예제는 아래와 같이 다시 쓰여질 수 있습니다.
 
 ```js
 class Rectangle {

@@ -87,26 +87,26 @@ slug: Web/CSS/Layout_cookbook/Column_layouts
 
 #### column-width
 
-{{Compat("css.properties.column-width")}}
+{{Compat}}
 
 #### column-rule
 
-{{Compat("css.properties.column-rule")}}
+{{Compat}}
 
 #### flex
 
-{{Compat("css.properties.flex")}}
+{{Compat}}
 
 #### flex-wrap
 
-{{Compat("css.properties.flex-wrap")}}
+{{Compat}}
 
 #### grid-template-columns
 
-{{Compat("css.properties.grid-template-columns")}}
+{{Compat}}
 
 ## MDN の関連資料
 
 - [段組みレイアウトのガイド](/ja/docs/Web/CSS/CSS_Columns)
 - [フレックスボックスのガイド](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)
-- [CSS グリッドレイアウトのガイド](/ja/docs/Web/CSS/CSS_Grid_Layout)
+- [CSS グリッドレイアウトのガイド](/ja/docs/Web/CSS/CSS_grid_layout)

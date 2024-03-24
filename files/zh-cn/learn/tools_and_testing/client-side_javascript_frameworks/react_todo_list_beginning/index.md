@@ -231,7 +231,7 @@ function App(props) {
 <label className="todo-label" htmlFor="todo-0"> Eat </label>
 ```
 
-`<input/ >` 标签中的 `defaultChecked` 属性告诉 React 最初要检查这个复选框。如果我们像在普通的 HTML 中那样使用 `checked`，React 会在浏览器控制台中记录一些与处理复选框事件有关的警告，这是我们不想要的。现在不用太担心这个问题——我们将在以后使用事件的时候讨论这个问题。
+`<input />` 标签中的 `defaultChecked` 属性告诉 React 最初要检查这个复选框。如果我们像在普通的 HTML 中那样使用 `checked`，React 会在浏览器控制台中记录一些与处理复选框事件有关的警告，这是我们不想要的。现在不用太担心这个问题——我们将在以后使用事件的时候讨论这个问题。
 
 `htmlFor` 属性对应于 HTML 中使用的 `for` 属性。因为 `for` 是一个保留词，我们不能在 JSX 中使用 `for` 作为属性，所以 React 使用 `htmlFor` 代替。
 

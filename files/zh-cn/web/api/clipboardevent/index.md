@@ -31,6 +31,6 @@ _同样是从其父类_ _{{domxref("Event")}}_ _继承的属性。_
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - Copy-related events: [`copy`](/zh-CN/docs/Web/API/Element/copy_event), [`cut`](/zh-CN/docs/Web/API/Element/cut_event), [`paste`](/zh-CN/docs/Web/API/Element/paste_event)

@@ -130,17 +130,13 @@ Object.isFrozen(1);
 // true                          (ES2015 code)
 ```
 
-## Specifications
+## Especificações
 
-| Specification                                                      | Status               | Comment                                              |
-| ------------------------------------------------------------------ | -------------------- | ---------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.2.3.12', 'Object.isFrozen')}}         | {{Spec2('ES5.1')}}   | Initial definition. Implemented in JavaScript 1.8.5. |
-| {{SpecName('ES6', '#sec-object.isfrozen', 'Object.isFrozen')}}     | {{Spec2('ES6')}}     |                                                      |
-| {{SpecName('ESDraft', '#sec-object.isfrozen', 'Object.isFrozen')}} | {{Spec2('ESDraft')}} |                                                      |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Object.isFrozen")}}
+{{Compat}}
 
 ## Veja também
 

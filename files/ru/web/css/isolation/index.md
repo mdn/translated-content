@@ -14,7 +14,7 @@ slug: Web/CSS/isolation
 ## Синтаксис
 
 ```css
-/* Значения ключевого слова */
+/* Ключевые слова */
 isolation: auto;
 isolation: isolate;
 
@@ -81,7 +81,7 @@ isolation: unset;
 
 {{cssinfo}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

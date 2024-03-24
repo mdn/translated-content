@@ -185,7 +185,7 @@ console.log(obj); // { a: 1 }
 
 값을 할당하지 않고 변수를 선언하면, 그 값은 `undefined`입니다. 어차피 나중에 변경할 수 없기 때문에, 초기화해주는 것없이 `const` 변수를 선언할 수 없습니다.
 
-`let` 및 `const` 선언 변수는 여전히 정의된 전체 범위를 차지하며, 실제 선언 줄 이전의 [시간상 사각지대(temporal dead zone)](/ko/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)으로 알려진 영역에 있습니다. 여기에는 다른 언어에서는 발생하지 않는 변수 섀도잉과 흥미로운 상호 작용이 있습니다.
+`let` 및 `const` 선언 변수는 여전히 정의된 전체 범위를 차지하며, 실제 선언 줄 이전의 [일시적 사각지대(temporal dead zone)](/ko/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)으로 알려진 영역에 있습니다. 여기에는 다른 언어에서는 발생하지 않는 변수 섀도잉과 흥미로운 상호 작용이 있습니다.
 
 ```js
 function foo(x, condition) {

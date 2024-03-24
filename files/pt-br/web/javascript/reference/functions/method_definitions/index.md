@@ -172,14 +172,11 @@ console.log(bar.foo2()); // 2
 
 ## Especificações
 
-| Especificações                                                           | Estado               | Comentário          |
-| ------------------------------------------------------------------------ | -------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-method-definitions', 'Method definitions')}}     | {{Spec2('ES6')}}     | Initial definition. |
-| {{SpecName('ESDraft', '#sec-method-definitions', 'Method definitions')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.functions.method_definitions")}}
+{{Compat}}
 
 ## Veja também
 

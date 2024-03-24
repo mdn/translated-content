@@ -9,7 +9,7 @@ l10n:
 
 **`fontcolor()`** メソッドは、文字列を {{HTMLElement("font")}} 要素に埋め込み (`<font size="...">str</font>`)、文字列が指定されたフォントサイズで表示されるようにする文字列を生成します。
 
-> **メモ:** [HTML ラッパーメソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods)はすべて非推奨となっており、互換性目的のみで標準化されています。`fontsize()` の場合、`<font>` 要素は [HTML5](/ja/docs/Glossary/HTML5) で廃止されており、今後使用するべきではありません。代わりにウェブ開発者は [CSS](/ja/docs/Web/CSS) プロパティを使用してください。
+> **メモ:** [HTML ラッパーメソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#html_ラッパーメソッド)はすべて非推奨となっており、互換性目的のみで標準化されています。`fontsize()` の場合、`<font>` 要素は [HTML5](/ja/docs/Glossary/HTML5) で廃止されており、今後使用するべきではありません。代わりにウェブ開発者は [CSS](/ja/docs/Web/CSS) プロパティを使用してください。
 
 ## 構文
 

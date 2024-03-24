@@ -78,7 +78,7 @@ new Date().toUTCString();
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Date")}}
+{{Compat}}
 
 ## 関連情報
 

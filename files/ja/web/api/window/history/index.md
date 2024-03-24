@@ -30,4 +30,4 @@ history.go(-1); // history.back(); と同等
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.history")}}
+{{Compat}}

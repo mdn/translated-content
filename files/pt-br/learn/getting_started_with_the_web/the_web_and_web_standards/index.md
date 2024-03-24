@@ -112,7 +112,7 @@ A sintaxe real para mensagens HTTP (chamadas de solicitações e respostas) não
 
   Na analogia da casa, o JavaScript é como o fogão, a TV, o microondas ou o secador de cabelo - as coisas que fornecem funcionalidade útil à sua casa
 
-### Ferramental
+### Ferramentas
 
 Depois de aprender as tecnologias "brutas" que podem ser usadas para construir páginas da web (como HTML, CSS e JavaScript), você logo começará a encontrar várias ferramentas que podem ser usadas para tornar seu trabalho mais fácil ou mais eficiente. Exemplos incluem:
 

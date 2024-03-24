@@ -3,7 +3,7 @@ title: StorageArea.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/remove
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Supprime un ou plusieurs éléments de la zone de stockage.
 

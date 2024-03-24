@@ -19,7 +19,7 @@ var intElemClientWidth = element.clientWidth;
 
 ## Пример
 
-![Image:Dimensions-client.png](/@api/deki/files/185/=Dimensions-client.png)
+![Пример элемента с большими отступами, границей и полем. clientWidth — это внутренняя ширина элемента, включая его отступы и исключая поля, границы и вертикальную полосу прокрутки.](dimensions-client.png)
 
 ## Спецификации
 

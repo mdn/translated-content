@@ -399,7 +399,7 @@ if ("function" == typeof window.noFunc) {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

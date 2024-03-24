@@ -28,4 +28,4 @@ O código de resposta HTTP **`501 Not Implemented`** indica que o servidor não 
 
 The information shown below has been pulled from MDN's GitHub (<https://github.com/mdn/browser-compat-data>).
 
-{{Compat("http.status.501")}}
+{{Compat}}

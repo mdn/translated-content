@@ -52,7 +52,7 @@ channel.port1.start();
 
 ## ブラウザの実装状況
 
-{{Compat("api.MessagePort.start")}}
+{{Compat}}
 
 ## 関連情報
 

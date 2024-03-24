@@ -10,7 +10,7 @@ slug: Learn/HTML/Introduction_to_HTML/Getting_started
 <table>
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         具备计算机基础知识，安装了<a
           href="/zh-CN/Learn/Getting_started_with_the_web/Installing_basic_software"

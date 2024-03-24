@@ -1,5 +1,5 @@
 ---
-title: "BackgroundFetchRegistration: progress event"
+title: "BackgroundFetchRegistration: progress イベント"
 slug: Web/API/BackgroundFetchRegistration/progress_event
 l10n:
   sourceCommit: 418f9cf461de0c7845665c0c677ad0667740f52a

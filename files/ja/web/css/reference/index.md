@@ -80,9 +80,9 @@ div.menu-bar li:hover > ul {
 
 結合子 (Combinator) は 2 つ以上の単純セレクターの関係、例えば「`A` は `B` の子である」や「`A` は `B` の子孫である」などを確立し、複合セレクターを作成するためのセレクターです。
 
-- [隣接兄弟結合子](/ja/docs/Web/CSS/Adjacent_sibling_combinator) `A + B`
+- [次兄弟結合子](/ja/docs/Web/CSS/Next-sibling_combinator) `A + B`
   - : `A` と `B` のそれぞれで選択された要素が同じ親を持ち、かつ `B` で選択された要素が `A` で選択された要素の水平的な直後にあることを指定します。
-- [一般兄弟結合子](/ja/docs/Web/CSS/General_sibling_combinator) `A ~ B`
+- [後続兄弟結合子](/ja/docs/Web/CSS/Subsequent-sibling_combinator) `A ~ B`
   - : `A` と `B` のそれぞれで選択された要素が同じ親を共有しており、かつ `A` で選択された要素が `B` の前に — ただし直前である必要はありませんが — 来た場合を指定します。
 - [子結合子](/ja/docs/Web/CSS/Child_combinator) `A > B`
   - : `B` で選択された要素のうち、 `A` で選択された要素の直接の子であるものを指定します。
@@ -109,7 +109,7 @@ div.menu-bar li:hover > ul {
 - [カスケード](/ja/docs/Web/CSS/Cascade)
 - [コメント](/ja/docs/Web/CSS/Comments)
 - [記述子](/ja/docs/Glossary/CSS_Descriptor)
-- [継承](/ja/docs/Web/CSS/inheritance)
+- [継承](/ja/docs/Web/CSS/Inheritance)
 - [一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)
 - [優先度](/ja/docs/Web/CSS/Specificity)
 - [値定義構文](/ja/docs/Web/CSS/Value_definition_syntax)
@@ -128,12 +128,12 @@ div.menu-bar li:hover > ul {
 ### レイアウト
 
 - [ブロック整形コンテキスト](/ja/docs/Web/Guide/CSS/Block_formatting_context)
-- [ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
 - [包含ブロック](/ja/docs/Web/CSS/Containing_block)
 - [レイアウトモード](/ja/docs/Web/CSS/Layout_mode)
-- [マージンの相殺](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+- [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
 - [置換要素](/ja/docs/Web/CSS/Replaced_element)
-- [重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)
+- [重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)
 - [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
 
 ## DOM-CSS / CSSOM

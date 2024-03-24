@@ -50,7 +50,7 @@ function handleMessage(e) {
 
 ## ブラウザの実装状況
 
-{{Compat("api.MessageChannel.MessageChannel")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -2,7 +2,7 @@
 title: Récupérer des données du serveur
 slug: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 l10n:
-  sourceCommit: 2b649ca83589bf827d99db5d450c0c65a9de7a24
+  sourceCommit: 9f24be2de6158053df593b9b466f5da96e31f928
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
@@ -262,7 +262,6 @@ Cet article illustre comment débuter avec l'API <i lang="en">Fetch</i> afin de 
 
 De nombreux sujets sont abordés dans cet article et nous n'en avons qu'effleurée la surface. Pour plus de détails sur chacun de ces thèmes, n'hésitez pas à parcourir les articles suivants&nbsp;:
 
-- [AJAX](/fr/docs/Web/Guide/AJAX)
 - [Utiliser l'API <i lang="en">Fetch</i>](/fr/docs/Web/API/Fetch_API/Using_Fetch)
 - [Les promesses JavaScript](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - [Manipuler des données en JSON](/fr/docs/Learn/JavaScript/Objects/JSON)

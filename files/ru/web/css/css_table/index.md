@@ -24,6 +24,4 @@ _Нет._
 
 ## Спецификации
 
-| Specification                         | Status              | Comment            |
-| ------------------------------------- | ------------------- | ------------------ |
-| {{SpecName("CSS2.1", "tables.html")}} | {{Spec2("CSS2.1")}} | Initial definition |
+{{Specifications}}

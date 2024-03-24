@@ -3,7 +3,7 @@ title: downloads.DownloadItem
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadItem
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 {{WebExtAPIRef("downloads")}} API 的 `DownloadItem` 类代表了一个被下载的文件。
 

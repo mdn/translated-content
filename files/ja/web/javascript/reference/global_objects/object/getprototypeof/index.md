@@ -51,7 +51,7 @@ Object.getPrototypeOf("foo");
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Object.getPrototypeOf")}}
+{{Compat}}
 
 ### Opera 固有のメモ
 

@@ -63,7 +63,7 @@ RTCDataChannel 接口代表在两者之间建立了一个双向数据通道的�
 - {{domxref("RTCDataChannel.send()")}}
   - : 将参数中的数据通过 channel 发送。这个数据可以是{{domxref("DOMString")}}, {{domxref("Blob")}}, {{domxref("ArrayBuffer")}}或者是 {{domxref("ArrayBufferView")}}类型。
 
-## Example
+## 示例
 
 ```js
 var pc = new RTCPeerConnection();
@@ -82,14 +82,14 @@ dc.onclose = function () {
 };
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [WebRTC](/zh-CN/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/zh-CN/docs/Web/API/WebRTC_API)

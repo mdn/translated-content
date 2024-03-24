@@ -45,11 +45,9 @@ Atomics.load(ta, 0); // 36
 
 ## Спецификации
 
-| Specification                                              | Status               | Comment                       |
-| ---------------------------------------------------------- | -------------------- | ----------------------------- |
-| {{SpecName('ESDraft', '#sec-atomics.sub', 'Atomics.sub')}} | {{Spec2('ESDraft')}} | Initial definition in ES2017. |
+{{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

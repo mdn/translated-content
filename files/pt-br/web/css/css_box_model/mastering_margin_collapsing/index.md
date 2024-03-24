@@ -30,12 +30,6 @@ Algumas coisas podem ser observadas:
 
 Margens de [elementos flutuantes](/pt-BR/docs/Web/CSS/float) e [posicionados de forma absoluta](/pt-BR/docs/Web/CSS/position#Absolute_positioning) nunca colapsam.
 
-## Especificações
-
-| Espeficicações                                                             | Status              | Comentário        |
-| -------------------------------------------------------------------------- | ------------------- | ----------------- |
-| {{SpecName("CSS2.1", "box.html#collapsing-margins", "margin collapsing")}} | {{Spec2("CSS2.1")}} | Definição inicial |
-
 ## Veja Também
 
 - [CSS Reference](/pt-BR/docs/Web/CSS/CSS_Reference)

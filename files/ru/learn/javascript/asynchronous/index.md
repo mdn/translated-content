@@ -11,8 +11,6 @@ slug: Learn/JavaScript/Asynchronous
 
 Асинхронный JavaScript довольно сложная тема, и мы советуем пройти [Первые шаги в JavaScript](/ru/docs/Learn/JavaScript/First_steps) и [Блоки в JavaScript](/ru/docs/Learn/JavaScript/Building_blocks) прежде чем начать эту тему.
 
-Если вы ещё не знакомы с концепциями асинхронного программирования, вам стоит начать со статьи [Основные концепции асинхронного программирования](/ru/docs/Learn/JavaScript/Asynchronous/Concepts) в этом модуле. А если уже знакомы, то можете сразу переходить к статье [Введение в асинхронный JavaScript](/ru/docs/Learn/JavaScript/Asynchronous/Introducing).
-
 > **Примечание:** Если вы работаете за компьютером/планшетом/другим устройством где у вас нет возможности создавать собственные файлы, вы можете попробовать(почти все) примеры кода в одном из веб-приложений, таких, как [JSBin](http://jsbin.com/) или [Thimble](https://thimble.mozilla.org/).
 
 ## Руководства

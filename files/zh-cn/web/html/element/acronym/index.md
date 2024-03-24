@@ -1,44 +1,44 @@
 ---
 title: <acronym>
 slug: Web/HTML/Element/acronym
+l10n:
+  sourceCommit: 93cdfac022b2a46b2b1297e4d0cda4ebb0eca147
 ---
 
-{{deprecated_header}}
+{{HTMLSidebar}}{{deprecated_header}}
 
-## 简介
+[HTML](/zh-CN/docs/Web/HTML) **`<acronym>`** 元素允许作者明确声明一个构成单词首字母缩略字或缩写的字符序列。
 
-HTML Acronym 元素 (`<acronym>)` 允许作者明确地声明一个字符序列，，它们构成一个单词的首字母缩写或简略语。
-
-> **备注：** 该元素已从 HTML5 中移除，不应再被使用。Web 开发者应使用 {{HTMLElement("abbr")}} 元素。
+> **警告：** 请不要使用该元素，而应使用 {{HTMLElement("abbr")}} 元素代替。
 
 ## 属性
 
-该元素除了 [global attributes](/zh-CN/docs/HTML/global_attributes), 所有其他元素的公共属性之外没有其他属性。
+该元素仅具有所有元素所共有的[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
 ## DOM 接口
 
 该元素实现了 {{domxref('HTMLElement')}} 接口。
 
-> **备注：** 直到 Gecko 1.9.2（包含），Firefox 为这个元素实现了 {{domxref('HTMLSpanElement')}} 接口。
-
-## 例子
+## 示例
 
 ```html
 <p>
-  The <acronym title="World Wide Web">WWW</acronym> is only one component of the
-  Internet.
+  万维网（<acronym title="World Wide Web">WWW</acronym>）是因特网的组成部分。
 </p>
 ```
 
+### 结果
+
+{{EmbedLiveSample('示例')}}
+
 ## 默认样式
 
-尽管这个标签的目的纯粹是为了方便作者，它的默认样式却在各个浏览器中不尽相同：
+尽管这个标签的目的纯粹是为了方便作者，但其默认样式因浏览器而异：
 
-- 一些浏览器，像 Internet Explorer，赋予它和 {{HTMLElement("span")}} 元素相同的样式。
-- Opera, Firefox，和 一些其他的浏览器在元素内容下方添加了一条点状的下划线。
-- 一小部分浏览器不仅添加了点状下划线，而且 put it in small caps; 为避免这种样式，可以在 CSS 中添加{{cssxref('font-variant')}}`: none` 处理这种情况。
+- Opera、Firefox、Chrome 和其他的一些浏览器在元素内容添加一条点状下划线。
+- 一小部分浏览器不仅添加点状下划线，而且将其设为小型大写字母；为避免这种样式，可以在 CSS 中添加类似 {{cssxref('font-variant')}}`: none` 的内容来处理这种情况。
 
-因此强烈建议 Web 作者们不要依赖默认的样式。
+因此强烈建议 Web 作者明确设置此元素的样式，或选择接受浏览器之间的差异。
 
 ## 规范
 
@@ -48,8 +48,6 @@ HTML Acronym 元素 (`<acronym>)` 允许作者明确地声明一个字符序列�
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{HTMLElement("abbr")}} HTML 元素
-
-{{HTMLSidebar}}

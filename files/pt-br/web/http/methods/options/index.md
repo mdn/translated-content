@@ -109,7 +109,7 @@ Content-Type: text/plain
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.methods.OPTIONS")}}
+{{Compat}}
 
 ## Veja também
 

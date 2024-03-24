@@ -52,13 +52,8 @@ padding-right: unset;
 
 ## Specifications
 
-| Specification                                                            | Status                          | Comment                                               |
-| ------------------------------------------------------------------------ | ------------------------------- | ----------------------------------------------------- |
-| {{ SpecName('CSS3 Box', '#the-padding', 'padding-right') }}              | {{ Spec2('CSS3 Box') }}         | Без изменений.                                        |
-| {{ SpecName('CSS3 Transitions', '#animatable-css', 'padding-right') }}   | {{ Spec2('CSS3 Transitions') }} | Определяет `padding-right`, как анимируемое свойство. |
-| {{ SpecName('CSS2.1', 'box.html#padding-properties', 'padding-right') }} | {{ Spec2('CSS2.1') }}           | Без изменений.                                        |
-| {{ Specname('CSS1', '#padding-right', 'padding-right') }}                | {{ Spec2('CSS1') }}             | Исходное определение.                                 |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}

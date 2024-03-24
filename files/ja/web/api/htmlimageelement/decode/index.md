@@ -2,6 +2,8 @@
 title: "HTMLImageElement: decode() メソッド"
 short-title: decode()
 slug: Web/API/HTMLImageElement/decode
+l10n:
+  sourceCommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
 ---
 
 {{APIRef("HTML DOM")}}
@@ -12,8 +14,8 @@ slug: Web/API/HTMLImageElement/decode
 
 ## 構文
 
-```js
-decode();
+```js-nolint
+decode()
 ```
 
 ### 引数
@@ -35,7 +37,7 @@ decode();
 
 ## 例
 
-次の例では、`decode()` メソッドを使って、画像が DOM に追加されるタイミングを制御する方法を示しています。{{jsxref('Promise')}} を返すメソッドがなければ、 {{domxref("Window/load_event", "load")}} イベントのハンドラーで、 {{domxref("HTMLImageElement.load_event", "img.onload")}} イベントハンドラーを使うなどして画像を DOM に追加します。エラーは {{domxref("HTMLElement/error_event", "error")}} イベントのハンドラーで処理します。
+次の例では、 `decode()` メソッドを使って、画像が DOM に追加されるタイミングを制御しています。 {{jsxref('Promise')}} を返すメソッドがなければ、 {{domxref("Window/load_event", "load")}} イベントハンドラーで画像を DOM に追加し、 {{domxref("HTMLImageElement.load_event", "img.onload")}} イベントのハンドラでエラーを処理するなどの方法で、画像を追加することになります。
 
 ```js
 const img = new Image();

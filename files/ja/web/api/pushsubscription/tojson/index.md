@@ -1,16 +1,19 @@
 ---
-title: PushSubscription.toJSON()
+title: "PushSubscription: toJSON() メソッド"
+short-title: toJSON()
 slug: Web/API/PushSubscription/toJSON
+l10n:
+  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{SeeCompatTable}}{{APIRef("Push API")}}
+{{APIRef("Push API")}}
 
-{{domxref("PushSubscription")}} インターフェイスの **`toJSON()`** メソッドは、スタンダードなシリアライザーです：これは、便利なショートカットを提供するサブスクリプションプロパティの JSON 表記を返します。
+**`toJSON()`** は {{domxref("PushSubscription")}} インターフェイスの メソッドで、標準のシリアライザーです。これは、このサブスクリプションのプロパティの JSON 表現を返す、便利なショートカットを提供します。
 
 ## 構文
 
 ```js-nolint
-mySubscription = subscription.toJSON()
+toJSON()
 ```
 
 ### 引数
@@ -19,15 +22,15 @@ mySubscription = subscription.toJSON()
 
 ### 返値
 
-JSON オブジェクト。現在、`endpoint` メンバーとしてサブスクリプションエンドポイントのみを含みます。
+JSON オブジェクトです。現在は、`endpoint` メンバーとしてサブスクリプションエンドポイントのみを含みます。
 
 ## 例
 
 ```js
-navigator.serviceWorker.ready.then(function (reg) {
-  reg.pushManager.getSubscription().then(function (subscription) {
-    var mySubscription = subscription.toJSON();
-    // サブスクリプションの詳細を使用して何かを実行する。
+navigator.serviceWorker.ready.then((reg) => {
+  reg.pushManager.getSubscription().then((subscription) => {
+    const mySubscription = subscription.toJSON();
+    // サブスクリプションの詳細を使用して何かを実行する
   });
 });
 ```
@@ -38,8 +41,4 @@ navigator.serviceWorker.ready.then(function (reg) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.PushSubscription.toJSON")}}
-
-## 関連項目
-
-- [Using the Push API](/ja/docs/Web/API/Push_API/Using_the_Push_API)
+{{Compat}}

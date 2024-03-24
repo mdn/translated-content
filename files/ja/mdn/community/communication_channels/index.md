@@ -20,7 +20,7 @@ MDN Web Docs コミュニティの Discord サーバーは、一般に公開さ�
 
 質問を依頼したり、説明を求めたり、どうすれば取得できるかを探すことができます。また、自分の興味や専門分野に基づいた特定のチャンネルに参加することもできます。
 
-MDN Web Docs の Discord コミュニティには[ここ](https://discord.gg/apa6Rn7uEj)から参加してください。
+MDN Web Docs の Discord コミュニティには[ここ](/discord)から参加してください。
 
 ### Matrix チャットルーム
 

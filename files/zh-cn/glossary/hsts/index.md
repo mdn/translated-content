@@ -9,7 +9,7 @@ slug: Glossary/HSTS
 
 换句话说，它告诉浏览器将 URL 协议从 HTTP 更改为 HTTPS（会更安全），并要求浏览器对每个请求执行此操作。
 
-## 了解更多
+## 参见
 
 - {{HTTPHeader("Strict-Transport-Security")}}
 - OWASP 文章：[HTTP Strict Transport Security](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security)

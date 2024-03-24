@@ -53,7 +53,7 @@ console.log(newString);
 
 ### 在自定义的函数中使用返回值
 
-要从自定义函数返回值，您需要使用…等待它… [return](/zh-CN/docs/Web/JavaScript/Reference/Statements/return) 关键字。我们最近在[random-canvas-circles.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/random-canvas-circles.html)示例中看到了这一点。我们的 `draw()` 函数绘制 100 随机圆在 HTML 的{{htmlelement("canvas")}}:
+要从自定义函数返回值，你需要使用…等待它… [return](/zh-CN/docs/Web/JavaScript/Reference/Statements/return) 关键字。我们最近在[random-canvas-circles.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/random-canvas-circles.html)示例中看到了这一点。我们的 `draw()` 函数绘制 100 随机圆在 HTML 的{{htmlelement("canvas")}}:
 
 ```js
 function draw() {
@@ -159,11 +159,11 @@ ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 
    如果测试返回 false，则数值是一个数字，所以我们在段落元素中打印出一个句子，说明数字的平方、立方体和阶乘是什么。这句话叫 squared()，cubed()，和 factorial() 函数来获得所需的值。
 
-4. 保存您的代码，将其加载到浏览器中，然后尝试。
+4. 保存你的代码，将其加载到浏览器中，然后尝试。
 
 > **备注：** 如果你有麻烦让例子工作，对比[GitHub 的已完成版](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-library-finished.html)检查你的代码（或[看它在线运行](http://mdn.github.io/learning-area/javascript/building-blocks/functions/function-library-finished.html)），或寻求我们的帮助。
 
-在这一点上，我们希望您编写一个自己的几个函数，并将它们添加到库中。这个数的平方根或立方根，或一个圆的周长和半径是多少？
+在这一点上，我们希望你编写一个自己的几个函数，并将它们添加到库中。这个数的平方根或立方根，或一个圆的周长和半径是多少？
 
 这个练习提出了一些重要的观点，除了研究如何使用返回语句之外。此外，我们还有：
 
@@ -174,7 +174,7 @@ ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 
 因此，我们让它 - 功能是有趣的，非常有用的，虽然有很多要谈论他们的语法和功能，相当容易理解的正确的文章学习。
 
-如果您有什么不明白的地方，可以再通读一遍，或者[联系我们](/zh-CN/Learn#Contact_us)寻求帮助。
+如果你有什么不明白的地方，可以再通读一遍，或者[联系我们](/zh-CN/Learn#Contact_us)寻求帮助。
 
 ## 参见
 

@@ -67,7 +67,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
 Os seguintes atributos são obsoletos e não devem ser usados. Estão documentados abaixo apenas como referência ao atualizar o código, e interesse histórico.
 
-- {{htmlattrdef("align")}} {{deprecated_inline}}
+- `align` {{deprecated_inline}}
 
   - : Esse atributo [enumerado](/pt-BR/docs/Glossary/Enumerated) indica como a legenda deve ser alinhada em relação à tabela. Ele pode ter um dos seguintes valores:
 

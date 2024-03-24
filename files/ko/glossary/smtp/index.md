@@ -6,6 +6,11 @@ l10n:
 ---
 
 {{GlossarySidebar}}
+<<<<<<< HEAD
+=======
+
+**SMTP**(Simple Mail Transfer Protocol)는 새로운 이메일을 전송할 때 사용하는 {{glossary("protocol", "프로토콜")}}입니다. {{glossary("POP3")}}나 {{glossary("NNTP")}}처럼, SMTP도 {{glossary("state machine", "상태 기계")}} 기반 프로토콜입니다.
+>>>>>>> upstream/main
 
 **SMTP**(Simple Mail Transfer Protocol)는 새로운 이메일을 전송할 때 사용하는 {{glossary("protocol", "프로토콜")}}입니다. {{glossary("POP")}}나 {{glossary("NNTP")}}처럼, SMTP도 {{glossary("state machine", "상태 기계")}} 기반 프로토콜입니다.
 

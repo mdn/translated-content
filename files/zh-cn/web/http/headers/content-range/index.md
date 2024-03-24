@@ -48,7 +48,7 @@ Content-Range: bytes 200-1000/67589
 
 {{Compat}}
 
-## 相关内容
+## 参见
 
 - {{HTTPHeader("If-Range")}}
 - {{HTTPHeader("Range")}}

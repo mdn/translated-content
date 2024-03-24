@@ -11,7 +11,7 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 <table>
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         熟练使用 <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a href="/zh-CN/docs/Learn/CSS">CSS</a> 和 <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言，了解<a href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
           >跨浏览器测试的核心概念</a
@@ -31,9 +31,21 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 
 从历史上看，JavaScript 早就已经受到跨浏览器兼容性问题的困扰。早在 20 世纪 90 年代，当时的主要浏览器选择（Internet Explorer 和 Netscape）的脚本以不同的语言风格实现（Netscape 使用 JavaScript，IE 使用 JScript，还提供 VBScript 作为选项），虽然至少 JavaScript 和 JScript 在某种程度上是兼容的（都基于 {{glossary("ECMAScript")}} 规范），但往往以相互冲突、不兼容的方式实现，给开发者带来很多恶梦。
 
-这种不兼容问题一直持续到 21 世纪初，因为旧的浏览器仍然在使用，仍然需要支持。这也是 [jQuery](https://jquery.com/) 这样的库出现的主要原因之一——抽象出浏览器实现的差异（例如见[如何进行 HTTP 请求](/zh-CN/docs/Web/Guide/AJAX#第一步——发送_http_请求)中的代码片段），所以开发人员只需要写一点简单的代码（见 [`jQuery.ajax()`](https://api.jquery.com/jquery.ajax/)），jQuery（或你使用的任何库）将在底层处理这些差异，而无需开发人员考虑这些。
+这种不兼容问题一直持续到 21 世纪初，因为旧的浏览器仍然在使用，仍然需要支持。例如，创建 {{domxref("XMLHttpRequest")}} 对象的代码必须对 IE 6 进行特殊处理：
 
-从那时起，情况有了明显的改善；现代浏览器在支持“经典的 JavaScript 功能”方面做得很好，而且随着支持老式浏览器的要求降低，使用这种代码的要求也在减少（尽管这样，请记住，它们并没有完全消失）。
+```js
+if (window.XMLHttpRequest) {
+  // Mozilla、Safari、IE7+……
+  httpRequest = new XMLHttpRequest();
+} else if (window.ActiveXObject) {
+  // IE 6 和更老的浏览器
+  httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+}
+```
+
+这也是 [jQuery](https://jquery.com/) 这样的库出现的主要原因之一——抽象出浏览器实现的差异，所以开发人员只需要使用像 [`jQuery.ajax()`](https://api.jquery.com/jquery.ajax/)（会在后台处理这些差异）这样的代码。
+
+从那时起，情况有了明显的改善；现代浏览器在支持“经典的 JavaScript 特性”方面做得很好，而且随着支持老式浏览器的要求降低，使用这种代码的要求也在减少（尽管这样，请记住，它们并没有完全消失）。
 
 这些天来，大多数的跨浏览器 JavaScript 问题是这样的：
 
@@ -371,8 +383,6 @@ function loadScript(src, done) {
 请注意，polyfills.js 基本上是把我们正在使用的两个 polyfill 放在一个文件里。我们是手动完成的，但也有更聪明的解决方案可以为你自动生成捆绑文件——见 [Browserify](https://browserify.org/)（见[开始学习 Browserify](https://www.sitepoint.com/getting-started-browserify/) 基本教程）。把多个 JavaScript 文件捆绑成这样是个好主意，它通过减少你需要进行的 HTTP 请求的数量来提高你网站的性能。
 
 你可以在 [fetch-polyfill-only-when-needed.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-only-when-needed.html) 中看到这段代码的运行情况（也请看[源代码](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-polyfill-only-when-needed.html)）。我们想说明的是，我们不能为这段代码邀功，它最初是由 Philip Walton 写的。请看他的文章[只在需要时加载 Polyfill](https://philipwalton.com/articles/loading-polyfills-only-when-needed/)，了解原始代码，以及围绕这个更广泛主题的许多有用的解释）。
-
-> **备注：** 有一些第三方选项可以考虑，例如 [Polyfill.io](https://polyfill.io/v3/api/)。这是一个元 polyfill 库，它将查看每个浏览器的功能，并根据需要应用 polyfill，这取决于你在代码中使用的 API 和 JS 特性。
 
 #### 转译 JavaScript
 

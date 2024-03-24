@@ -35,6 +35,6 @@ bc.close();
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{domxref("BroadcastChannel")}}, the interface it belongs to.

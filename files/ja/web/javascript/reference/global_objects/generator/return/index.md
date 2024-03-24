@@ -68,7 +68,7 @@ g.return(1); // { value: 1, done: true }
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Generator.return")}}
+{{Compat}}
 
 ## 関連情報
 

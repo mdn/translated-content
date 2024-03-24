@@ -124,11 +124,7 @@ function lockError(e) {
 
 ## シンプルな例のウォークスルー
 
-ポインターロックの使用方法やシンプルな制御システムの設定方法を示すため、[シンプルな ポインターロックのデモ](https://mdn.github.io/dom-examples/pointer-lock/) を作成しました ([ソースコードを確認する](https://github.com/mdn/dom-examples/tree/master/pointer-lock))。デモは以下のようなものです:
-
-![黒地に赤い丸が描かれている。](pointer-lock.png)
-
-このデモでは、JavaScript を使用して {{htmlelement("canvas")}} 要素上にボールを描画します。canvas をクリックすると ポインターロックがマウスポインターを取り除いて、マウスを使用してボールを直接動かすことができます。このデモの仕組みを見ていきましょう。
+ポインターロックの使用方法やシンプルな制御システムの設定方法を示すため、[シンプルな ポインターロックのデモ](https://mdn.github.io/dom-examples/pointer-lock/) を作成しました ([ソースコードを確認する](https://github.com/mdn/dom-examples/tree/master/pointer-lock))。このデモでは、JavaScript を使用して {{htmlelement("canvas")}} 要素上にボールを描画します。canvas をクリックすると ポインターロックがマウスポインターを取り除いて、マウスを使用してボールを直接動かすことができます。このデモの仕組みを見ていきましょう。
 
 canvas 内の、x および y の初期位置を設定します。
 
