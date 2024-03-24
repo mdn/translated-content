@@ -220,6 +220,7 @@ slug: Web/HTML/Element/audio
     </tr>
   </tbody>
 </table>
+
 ## 使用注意事項
 
 不同的瀏覽器不支援相同的[檔案類型](/zh-TW/docs/Web/Media/Formats/Containers)和[音訊編解碼器](/zh-TW/docs/Web/Media/Formats/Audio_codecs)，你可以在嵌套的 {{htmlelement("source")}} 元素中提供多個來源，然後瀏覽器將使用它了解的第一個：
