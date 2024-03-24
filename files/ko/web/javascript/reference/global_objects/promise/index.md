@@ -152,7 +152,7 @@ Promise.resolve(aThenable); // 프로미스는 42로 채워집니다.
 
 ### 프로미스 동시성
 
-`Promise` 클래스는 비동기 작업 [동시성](https://en.wikipedia.org/wiki/Concurrent_computing)을 촉진하는 네 가지 정적 메서드를 제공합니다.
+`Promise` 클래스는 비동기 작업 [동시성](https://en.wikipedia.org/wiki/Concurrent_computing)을 용이하게 하기 위해 네 가지 정적 메서드를 제공합니다.
 
 - {{jsxref("Promise.all()")}}
   - : **모든** 프로미스가 이행되면 이행되고, 프로미스 중 **하나**라도 거부되면 거부됩니다.
