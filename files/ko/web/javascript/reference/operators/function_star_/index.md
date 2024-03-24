@@ -35,8 +35,8 @@ slug: Web/JavaScript/Reference/Operators/function*
 아래의 예제는 이름이 없는 generator function 을 정의하고 이를 x 에 할당합니다. function 은 인자로 들어온 값의 제곱을 생산(yield)합니다.
 
 ```js
-var x = function*(y) {
-   yield y * y;
+var x = function* (y) {
+  yield y * y;
 };
 ```
 

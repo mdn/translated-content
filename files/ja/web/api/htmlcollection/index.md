@@ -27,6 +27,7 @@ HTML DOM 内の `HTMLCollection` は生きて (live) います。元になった
   - : リスト内の指定された `index` (先頭はゼロ) 位置にある特定のノードを返します。`index` が範囲外なら `null` を返します。
 
     これは `collection[i]` のアクセスの代替手段です（こちらは `i` が範囲外の場合は `undefined` を返します）。これは主に、 JavaScript 以外の DOM 実装で有用です。
+
 - {{domxref("HTMLCollection.namedItem()")}}
 
   - : `name` で指定した文字列に ID、または代替として name が一致するノードを返します。name とのマッチングは HTML 限定で、参照した要素が `name` 属性をサポートする場合に限って、最終手段として行われます。指定した名前のノードがない場合は `null` を返します。

@@ -1,26 +1,32 @@
 ---
 title: "HTML 属性: multiple"
 slug: Web/HTML/Attributes/multiple
+l10n:
+  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
 ---
 
 {{HTMLSidebar}}
 
 論理属性の **`multiple`** 属性は、設定されている場合、フォームコントロールが 1 つ以上の値を受け入れることを意味します。 {{HTMLElement("input/email", "email")}} と {{HTMLElement("input/file", "file")}} の入力型と {{HTMLElement("select")}} に対して有効で、ユーザーが複数の値を選択する方法はフォームコントロールに依存します。
 
+{{EmbedInteractiveExample("pages/tabbed/attribute-multiple.html", "tabbed-standard")}}
+
+## 概要
+
 型によっては、`multiple` 属性が設定されている場合、フォームコントロールの外観が変わる場合があります。 file 入力型については、ブラウザーが提供するネイティブのメッセージが異なります。 Firefox では、ファイルが選択されていないとき、この属性が設定されていると「ファイルが選択されていません」、設定されていない場合は「ファイルが選択されていません」となります（訳注：英語では file と files の違いがありますが、日本語ではメッセージの違いはありません）。ほとんどのブラウザーでは、 {{HTMLElement("select")}} コントロールに `multiple` 属性が設定されていると、スクロールするリストボックスを表示するのに対し、設定されていない場合は単一行のドロップダウンを表示します。 {{HTMLElement("input/email", "email")}} 入力は同じ表示ですが、この属性が設定されていない場合は、カンマ区切りで複数のメールアドレスが設定されていると {{cssxref(':invalid')}} 擬似クラスに一致します。
 
-`multiple` が {{HTMLElement("input/email", "email")}} 入力型に設定されている場合、ユーザーは 0 個 ([`required`](/ja/docs/Web/HTML/Attributes/required) がない場合)、1 個、またはそれ以上のカンマ区切りのメールアドレスを入れることができます。
+`multiple` が {{HTMLElement("input/email", "email")}} 入力型に設定されている場合、ユーザーは 0 個（[`required`](/ja/docs/Web/HTML/Attributes/required) がない場合）、1 個、またはそれ以上のカンマ区切りのメールアドレスを入れることができます。
 
 ```html
-<input type="email" multiple name="emails" id="emails">
+<input type="email" multiple name="emails" id="emails" />
 ```
 
-`multiple` 属性が指定された場合のみ、値はカンマで区切られた適切な形式のメールアドレスのリストになります。リスト内の各アドレスから、末尾と先頭の空白はすべて削除されます。
+`multiple` 属性が指定された場合のみ、値はカンマで区切られた適切な形式のメールアドレスのリストになります。リスト内の各アドレスから、末尾と先頭のホワイトスペースはすべて削除されます。
 
-`multiple` が {{HTMLElement("input/file", "file")}} 入力型に設定された場合、ユーザーは 1 つ以上のファイルを選択することができます。ユーザーはファイルピッカーから複数のファイルを、選択したプラットフォームが許可する任意の方法 (<kbd>Shift</kbd> か <kbd>Control</kbd> を押したまま、それからクリックするなど) で選択することができます。
+`multiple` が {{HTMLElement("input/file", "file")}} 入力型に設定された場合、ユーザーは 1 つ以上のファイルを選択することができます。ユーザーはファイルピッカーから複数のファイルを、選択したプラットフォームが許可する任意の方法（<kbd>Shift</kbd> か <kbd>Control</kbd> を押したまま、それからクリックするなど）で選択することができます。
 
 ```html
-<input type="file" multiple name="uploads" id="uploads">
+<input type="file" multiple name="uploads" id="uploads" />
 ```
 
 この属性を省略した場合は、 `<input>` あたりに 1 つのファイルしか選択することができません。
@@ -28,7 +34,7 @@ slug: Web/HTML/Attributes/multiple
 `multiple` 属性を {{HTMLElement("select")}} 要素に設定すると、選択肢のリストから 0 個以上の選択肢を選択するためのコントロールを表します。それ以外の場合、 {{HTMLElement("select")}} 要素は、選択肢のリストから単一の {{HTMLElement("option")}} を選択するためのコントロールを表します。
 
 ```html
-<select multiple name="drawfs" id="drawfs">
+<select multiple name="dwarfs" id="dwarfs">
   <option>Grumpy</option>
   <option>Happy</option>
   <option>Sleepy</option>
@@ -53,9 +59,16 @@ slug: Web/HTML/Attributes/multiple
 
 ```html
 <label for="emails">誰にメールしますか？</label>
-<input type="email" multiple name="emails" id="emails" list="drawfemails" required size="64">
+<input
+  type="email"
+  multiple
+  name="emails"
+  id="emails"
+  list="dwarf-emails"
+  required
+  size="64" />
 
-<datalist id="drawfemails">
+<datalist id="dwarf-emails">
   <option value="grumpy@woodworkers.com">Grumpy</option>
   <option value="happy@woodworkers.com">Happy</option>
   <option value="sleepy@woodworkers.com">Sleepy</option>
@@ -67,7 +80,9 @@ slug: Web/HTML/Attributes/multiple
 ```
 
 ```css hidden
-input:invalid {border: red solid 3px;}
+input:invalid {
+  border: red solid 3px;
+}
 ```
 
 `multiple` 属性が指定された場合のみ、値はカンマで区切られた適切な形式のメールアドレスのリストになります。リスト内の各アドレスから、末尾の空白と先頭の空白はすべて削除されます。 [`required`](/ja/docs/Web/HTML/Attributes/required) 属性が存在する場合、少なくとも 1 つのメールアドレスが必要です。
@@ -83,17 +98,22 @@ input:invalid {border: red solid 3px;}
 ```html
 <form method="post" enctype="multipart/form-data">
   <p>
-    <label for="uploads">
-       アップロードする画像を選択してください:
-    </label>
-    <input type="file" id="uploads" name="uploads" accept=".jpg, .jpeg, .png, .svg, .gif" multiple>
+    <label for="uploads">アップロードする画像を選択してください: </label>
+    <input
+      type="file"
+      id="uploads"
+      name="uploads"
+      accept=".jpg, .jpeg, .png, .svg, .gif"
+      multiple />
   </p>
   <p>
-    <label for="text">アップロードするテキストファイルを選択してください: </label>
-    <input type="file" id="text" name="text" accept=".txt">
- </p>
+    <label for="text"
+      >アップロードするテキストファイルを選択してください:
+    </label>
+    <input type="file" id="text" name="text" accept=".txt" />
+  </p>
   <p>
-    <input type="submit" value="Submit">
+    <input type="submit" value="Submit" />
   </p>
 </form>
 ```
@@ -102,7 +122,7 @@ input:invalid {border: red solid 3px;}
 
 `multiple` が設定された `file` 入力欄と、設定されていない入力欄との外見の違いに注意してください。
 
-フォームが送信されたとき、 [`method="get"`](/ja/docs/Web/HTML/Element/form) を使用していれば、選択された各ファイルの名前が URL パラメータに`?uploads=img1.jpg&uploads=img2.svg` のように追加されていたはずです。しかし、[マルチパート](/ja/docs/Web/API/XMLHttpRequest/multipart)のフォームデータを送信しているので、post を多用しています。詳しくは {{htmlelement('form')}} 要素と[フォームデータの送信](/ja/docs/Learn/Forms/Sending_and_retrieving_form_data#The_method_attribute)を参照してください。
+フォームが送信されたとき、 [`method="get"`](/ja/docs/Web/HTML/Element/form) を使用していれば、選択された各ファイルの名前が URL 引数に `?uploads=img1.jpg&uploads=img2.svg` のように追加されていたはずです。しかし、[マルチパート](/ja/docs/Web/API/XMLHttpRequest/multipart)のフォームデータを送信しているので、post を使用しています。詳しくは {{htmlelement('form')}} 要素と[フォームデータの送信](/ja/docs/Learn/Forms/Sending_and_retrieving_form_data#method_属性)を参照してください。
 
 ### select
 
@@ -110,33 +130,33 @@ input:invalid {border: red solid 3px;}
 
 ```html
 <form method="get" action="#">
-<p>
- <label for="dwarfs">好きな木こりを選ぶ:</label>
-  <select multiple name="drawfs" id="drawfs">
-    <option>grumpy@woodworkers.com</option>
-    <option>happy@woodworkers.com</option>
-    <option>sleepy@woodworkers.com</option>
-    <option>bashful@woodworkers.com</option>
-    <option>sneezy@woodworkers.com</option>
-    <option>dopey@woodworkers.com</option>
-    <option>doc@woodworkers.com</option>
-  </select>
-</p>
-<p>
- <label for="favoriteOnly">好きなものを選ぶ:</label>
-  <select name="favoriteOnly" id="favoriteOnly">
-    <option>grumpy@woodworkers.com</option>
-    <option>happy@woodworkers.com</option>
-    <option>sleepy@woodworkers.com</option>
-    <option>bashful@woodworkers.com</option>
-    <option>sneezy@woodworkers.com</option>
-    <option>dopey@woodworkers.com</option>
-    <option>doc@woodworkers.com</option>
-  </select>
-</p>
-<p>
-  <input type="submit" value="Submit">
-</p>
+  <p>
+    <label for="dwarfs">好きなドワーフの木こりを選んでください:</label>
+    <select multiple name="dwarfs" id="dwarfs">
+      <option>grumpy@woodworkers.com</option>
+      <option>happy@woodworkers.com</option>
+      <option>sleepy@woodworkers.com</option>
+      <option>bashful@woodworkers.com</option>
+      <option>sneezy@woodworkers.com</option>
+      <option>dopey@woodworkers.com</option>
+      <option>doc@woodworkers.com</option>
+    </select>
+  </p>
+  <p>
+    <label for="favoriteOnly">好きなものを選んでください:</label>
+    <select name="favoriteOnly" id="favoriteOnly">
+      <option>grumpy@woodworkers.com</option>
+      <option>happy@woodworkers.com</option>
+      <option>sleepy@woodworkers.com</option>
+      <option>bashful@woodworkers.com</option>
+      <option>sneezy@woodworkers.com</option>
+      <option>dopey@woodworkers.com</option>
+      <option>doc@woodworkers.com</option>
+    </select>
+  </p>
+  <p>
+    <input type="submit" value="Submit" />
+  </p>
 </form>
 ```
 
@@ -169,4 +189,4 @@ select[multiple]:active {
 
 - {{htmlelement('input')}}
 - {{htmlelement('select')}}
-- [複数のメールアドレスの許可](/ja/docs/Web/HTML/Element/input/email#Allowing_multiple_e-mail_addresses)
+- [複数のメールアドレスの許可](/ja/docs/Web/HTML/Element/input/email#複数のメールアドレスの許可)

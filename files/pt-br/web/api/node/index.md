@@ -96,7 +96,6 @@ _Herda propriedades de seus pais, {{domxref("EventTarget")}}_.\[1]
 - {{domxref("Node.isDefaultNamespace")}}
 - {{domxref("Node.isEqualNode")}}
 - {{domxref("Node.isSameNode")}} {{deprecated_inline}}
-- {{domxref("Node.isSupported")}}
 - {{domxref("Node.lookupPrefix")}}
 - {{domxref("Node.lookupNamespaceURI")}}
 - {{domxref("Node.normalize")}}
@@ -136,7 +135,7 @@ Veja também {{domxref("Node.nodeType")}}
 A função a seguir percorre todos os nós filhos de um nó recursivamente e executa uma função de callback em cada um deles (e no nó pai também).
 
 ```js
-function DOMComb (oParent, oCallback) {
+function DOMComb(oParent, oCallback) {
   if (oParent.hasChildNodes()) {
     for (var oNode = oParent.firstChild; oNode; oNode = oNode.nextSibling) {
       DOMComb(oNode, oCallback);
@@ -168,8 +167,10 @@ Percorre todos os nós filhos de `parentNode` recursivamente e o próprio `paren
 O exemplo a seguir envia para a função `console.log` o conteúdo textual do body:
 
 ```js
-function imprimeConteudo () {
-  if (this.nodeValue) { console.log(this.nodeValue); }
+function imprimeConteudo() {
+  if (this.nodeValue) {
+    console.log(this.nodeValue);
+  }
 }
 
 onload = function () {
@@ -179,7 +180,8 @@ onload = function () {
 
 ## Especificações
 
-- [DOM Level 1 Core: Node interface](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-1950641247)
-- [DOM Level 2 Core: Node interface](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1950641247)
-- [DOM Level 3 Core: Node interface](https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1950641247)
-- [DOM Standard: Node Interface](http://dom.spec.whatwg.org/#interface-node)
+{{Specifications}}
+
+## Compatibilidade com navegadores
+
+{{Compat}}

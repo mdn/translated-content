@@ -23,9 +23,9 @@ HTML 仕様書は、以下の一連の標準メタデータ名を定義してい
 - `keywords`: ページのコンテンツに関連する語句で、カンマ区切りです。
 - `referrer`: この文書からリクエストを送信するための HTTP の {{httpheader("Referer")}} ヘッダーの内容です。
 
-  | `no-referrer`                     | HTTP の {{httpheader("Referer")}} ヘッダーを送信しません。                                                                                                                                    |
+  | `no-referrer`                     | HTTP の {{httpheader("Referer")}} ヘッダーを送信しません。                                                                                                                                           |
   | --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-  | `origin`                          | 文書の{{glossary("origin", "オリジン")}}を送信します。                                                                                                                             |
+  | `origin`                          | 文書の{{glossary("origin", "オリジン")}}を送信します。                                                                                                                                               |
   | `no-referrer-when-downgrade`      | 現在のページと同等の安全性の URL (HTTP(S)→HTTPS) にはリファラーとして URL 全体を送信しますが、安全性が低い URL (HTTPS→HTTP) には送信しません。これは既定の動作です。                                 |
   | `origin-when-cross-origin`        | 同一オリジンへのリクエストでは URL 全体 (引数を除く) を送信しますが、他の場合はオリジンのみ送信します。                                                                                              |
   | `same-origin`                     | 同一オリジンにはリファラーを送信しますが、オリジン間リクエストにはリファラーを含めません。                                                                                                           |
@@ -54,7 +54,7 @@ HTML 仕様書は、以下の一連の標準メタデータ名を定義してい
   例えば、この文書はダークモードを推奨するが、ライトモードでも機能的にはレンダリングできることを示すためには、次のようにします。
 
   ```html
-  <meta name="color-scheme" content="dark light">
+  <meta name="color-scheme" content="dark light" />
   ```
 
   これは、CSS の {{cssxref("color-scheme")}} プロパティで個々の要素が好みの配色と受け入れられる配色を指定できるのと同じように、文書レベルで機能します。スタイルは、 {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}} という CSS メディア機能を使って、現在の配色に合わせることができます。
@@ -84,7 +84,7 @@ CSS Device Adaptation 仕様書は、以下のメタデータ名を定義して�
 
 `user-scalable` を `no` に設定して拡大縮小機能を無効にすると、弱視の人がページの内容を読んだり理解したりすることができなくなります。
 
-- [MDN WCAG を理解する、ガイドライン 1.4 の説明](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN WCAG を理解する、ガイドライン 1.4 の説明](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
 - [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
 ### その他のメタデータ名

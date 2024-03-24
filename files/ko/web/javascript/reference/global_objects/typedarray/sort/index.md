@@ -10,7 +10,7 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/sort
 ## 구문
 
 ```js
-typedarray.sort([compareFunction])
+typedarray.sort([compareFunction]);
 ```
 
 ### 매개변수

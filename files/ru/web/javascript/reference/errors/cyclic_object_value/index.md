@@ -26,7 +26,7 @@ TypeError: циклическая ссылка в аргументе значе�
 В круговой структуре как эта
 
 ```js
-var circularReference = {otherData: 123};
+var circularReference = { otherData: 123 };
 circularReference.myself = circularReference;
 ```
 

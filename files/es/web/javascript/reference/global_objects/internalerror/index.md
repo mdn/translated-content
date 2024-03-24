@@ -42,7 +42,8 @@ Esta función recursiva se ejecuta 10 veces, según la condición de salida.
 
 ```js
 function loop(x) {
-  if (x >= 10) // "x >= 10" es la condición de salida
+  if (x >= 10)
+    // "x >= 10" es la condición de salida
     return;
   // hacer cosas
   loop(x + 1); // la llamada recursiva
@@ -54,8 +55,7 @@ Establecer esta condición en un valor extremadamente alto, no funcionará:
 
 ```js example-bad
 function loop(x) {
-  if (x >= 1000000000000)
-    return;
+  if (x >= 1000000000000) return;
   // hacer cosas
   loop(x + 1);
 }

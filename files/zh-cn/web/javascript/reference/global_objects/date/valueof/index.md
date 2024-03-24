@@ -44,7 +44,7 @@ var myVar = x.valueOf(); // assigns -424713600000 to myVar
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Object.prototype.valueOf()")}}
 - {{jsxref("Date.prototype.getTime()")}}

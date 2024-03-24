@@ -1,6 +1,8 @@
 ---
 title: 공 움직이기
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
+l10n:
+  sourceCommit: 56db19e6b8d19932c1b6150bc42e752e12a2b21f
 ---
 
 {{GamesSidebar}}
@@ -43,8 +45,8 @@ ctx.closePath();
 x와 y를 정의하기 위해서 다음 두 줄을 여러분의 `draw()` 함수위에 추가해주세요.
 
 ```js
-var x = canvas.width / 2;
-var y = canvas.height - 30;
+let x = canvas.width / 2;
+let y = canvas.height - 30;
 ```
 
 그 다음에는 `draw()` 함수를 갱신할 것입니다. 아래 코드에서 강조된 줄에서 처럼, {{domxref("CanvasRenderingContext2D.arc()","arc()")}}메소드안에서 x와 y 변수를 사용하게 됩니다.
@@ -62,8 +64,8 @@ function draw() {
 이제 중요한 부분입니다. 공을 움직이는 것을 표현하기 위해 x와 y에 작은 값을 매 프레임마다 더해줄 것입니다. 그 작은 값을 dx와 dy라 정의하고, 각각 2와 -2로 그 값을 정해보겠습니다. 다음 코드를 여러분의 x와 y변수가 정의된 코드 아래에 추가하세요.
 
 ```js
-var dx = 2;
-var dy = -2;
+let dx = 2;
+let dy = -2;
 ```
 
 마지막으로 할 일은 dx와 dy변수를 이용해서 매 프레임마다 x와 y변수를 갱신해 주는 것입니다. 그렇게 하면 매 갱신마다 공은 새 위치에 그려지게 됩니다. 다음 코드에 표시된 새로운 두 줄의 코드를 여러분의 `draw()` 함수에 추가해주세요.
@@ -82,7 +84,7 @@ function draw() {
 
 여러분의 코드를 다시 저장하고, 브라우저를 열어 실행해보세요. 공은 잘 움직이는군요. 뒤에 흔적이 남기는 하지만 말이죠.
 
-![](ball-trail.png)
+![A blue line that indicates where the ball has been](ball-trail.png)
 
 ## 다음 프레임 전에 캔버스를 지우기
 
@@ -132,7 +134,7 @@ function draw() {
 
 아래의 라이브 데모에서 이 강의의 완성된 코드를 확인할 수 있습니다. 어떻게 작동하는지 더 잘 이해하기 위해 플레이 해보세요.
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/3x5foxb1/","","415")}}
+{{JSFiddleEmbed("https://jsfiddle.net/end3r/3x5foxb1/","","395")}}
 
 연습해보기: 움직이는 공의 속도를 바꾸거나, 움직이는 방향을 바꿔보세요.
 

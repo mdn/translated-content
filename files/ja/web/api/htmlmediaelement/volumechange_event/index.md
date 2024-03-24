@@ -16,9 +16,9 @@ l10n:
 このイベントを {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('volumechange', (event) => {});
+addEventListener("volumechange", (event) => {});
 
-onvolumechange = (event) => { };
+onvolumechange = (event) => {};
 ```
 
 ## イベント型
@@ -32,20 +32,20 @@ onvolumechange = (event) => { };
 `addEventListener()` を使用した例:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('volumechange', (event) => {
-  console.log('The volume changed.');
+video.addEventListener("volumechange", (event) => {
+  console.log("The volume changed.");
 });
 ```
 
 `onvolumechange` イベントハンドラープロパティを使用した例:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.onvolumechange = (event) => {
-  console.log('The volume changed.');
+  console.log("The volume changed.");
 };
 ```
 

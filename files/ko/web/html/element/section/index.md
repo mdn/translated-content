@@ -9,8 +9,6 @@ slug: Web/HTML/Element/section
 
 {{EmbedInteractiveExample("pages/tabbed/section.html", "tabbed-standard")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
-
 > **참고:** 요소의 콘텐츠를 외부와 구분하여 단독으로 묶는 것이 나아보인다면 {{htmlelement("article")}} 요소가 더 좋은 선택일 수 있습니다.
 
 <table class="properties">

@@ -47,9 +47,9 @@ slug: Learn/Tools_and_testing/Understanding_client-side_tools/Package_management
 - 找到所有包正确的 Javascript 文件
 - 对它们进行检查以确保没有任何已知的漏洞
 - 下载它们井将它们放在项目的正确位置
-- 编写代码，将包引入你的项目并使用它们（这通常使用 [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)完成， 这是另一个值得深入了解的主题）。
+- 编写代码，将包引入你的项目并使用它们（这通常使用 [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)完成，这是另一个值得深入了解的主题）。
 - 对所有包子依赖项——可能有数十个或数百个，执行上述相同的操作。
-- 如果你想删除这些软件包， 则需要再次手动删除所有文件。
+- 如果你想删除这些软件包，则需要再次手动删除所有文件。
 
 此外，软件包管理器处理重复的依赖项（这在前端开发中非常重要和常见）。
 
@@ -192,7 +192,7 @@ Server running at http://localhost:1234
 
 现在来添加一些页面内容。假设我们想要显示易于理解的相对日期，例如“2 小时前”，“4 天前”等。[`date-fns`](https://date-fns.org/) 包的 `formatDistanceToNow()` 方法非常适合此用途（也有其他包提供相同的功能）。
 
-在 `index.js` 文件中添加一下代码并保存：
+在 `index.js` 文件中添加以下代码并保存：
 
 ```js
 import { formatDistanceToNow } from "date-fns";

@@ -3,7 +3,7 @@ title: management.onDisabled()
 slug: Mozilla/Add-ons/WebExtensions/API/management/onDisabled
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Action quand l'extension est désactivée.
 

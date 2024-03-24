@@ -1,7 +1,6 @@
 ---
 title: HTMLContentElement.select
 slug: conflicting/Web/API/HTMLSlotElement_ded38e17cacb3809f7af4fec22adcc56
-original_slug: Web/API/HTMLContentElement/select
 ---
 
 {{ APIRef("Web Components") }}
@@ -23,13 +22,11 @@ myContentObject.select = "h1 .error";
 
 ## Especificações
 
-| Especificações                                                                   | Status                           | Commentário |
-| -------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('Shadow DOM', '#the-content-element', 'content')}} | {{Spec2('Shadow DOM')}} |             |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.HTMLContentElement.select")}}
+{{Compat}}
 
 ## Veja também
 

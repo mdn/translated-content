@@ -3,7 +3,7 @@ title: WeakSet.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/delete
 ---
 
-{{JSRef("Global_Objects", "WeakSet")}}
+{{JSRef}}
 
 Метод **`delete()`** удаляет указанный элемент из объекта `WeakSet`.
 
@@ -32,10 +32,10 @@ var obj = {};
 
 ws.add(window);
 
-ws.delete(obj);    // Вернёт false. Удаляемый объект не найден в WeakSet.
+ws.delete(obj); // Вернёт false. Удаляемый объект не найден в WeakSet.
 ws.delete(window); // Вернёт true.  Объект успешно удалён.
 
-ws.has(window);    // Вернёт false. Объект window был удалён из WeakSet.
+ws.has(window); // Вернёт false. Объект window был удалён из WeakSet.
 ```
 
 ## Спецификации

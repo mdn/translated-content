@@ -71,7 +71,7 @@ l10n:
 - {{domxref("EventTarget.addEventListener()")}} の `once` オプションをサポートしました ([Firefox バグ 1287706](https://bugzil.la/1287706))。
 - {{domxref("NodeList")}} インターフェイスがイテレート可能になり、{{domxref("NodeList.forEach()", "forEach()")}}、{{domxref("NodeList.values()", "values()")}}、{{domxref("NodeList.entries()")}}、{{domxref("NodeList.keys()")}} の各メソッドが使用可能になりました ([Firefox バグ 1290636](https://bugzil.la/1290636))。
 - {{domxref("DOMTokenList")}} インターフェイスがイテレート可能になり、{{domxref("DOMTokenList.forEach()", "forEach()")}}、{{domxref("DOMTokenList.values()", "values()")}}、{{domxref("DOMTokenList.entries()")}}、{{domxref("DOMTokenList.keys()")}} の各メソッドが使用可能になりました ([Firefox バグ 1290636](https://bugzil.la/1290636))。
-- {{domxref("Document.createElement()")}} および {{domxref("Document.createElementNS()")}} メソッドで、[カスタム要素](/ja/docs/Web/Web_Components/Using_custom_elements)を作成するための省略可能な引数 `options` を追加しました ([Firefox バグ 1276579](https://bugzil.la/1276579))。
+- {{domxref("Document.createElement()")}} および {{domxref("Document.createElementNS()")}} メソッドで、[カスタム要素](/ja/docs/Web/API/Web_components/Using_custom_elements)を作成するための省略可能な引数 `options` を追加しました ([Firefox バグ 1276579](https://bugzil.la/1276579))。
 
 ### SVG
 

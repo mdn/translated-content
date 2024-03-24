@@ -127,7 +127,7 @@ event.dataTransfer.mozSetDataAt("application/x-moz-file", file, 0);
 その結果、[contains](/ja/docs/Web/API/Node/contains) メソッドはもう機能しません。代わりに [includes](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) メソッドを使用し、以下のようなコードで特定の形式のデータが提供されているかどうかを確認する必要があります。
 
 ```js
-if ([...event.dataTransfer.types].includes('text/html')) {
+if ([...event.dataTransfer.types].includes("text/html")) {
   // 実行するコード
 }
 ```
@@ -175,52 +175,79 @@ dt.setData("text/plain", imageurl);
 
 currentEvent.dataTransfer.setData("text/x-moz-url", URL);
 currentEvent.dataTransfer.setData("application/x-moz-file-promise-url", URL);
-currentEvent.dataTransfer.setData("application/x-moz-file-promise-dest-filename", leafName);
-currentEvent.dataTransfer.mozSetDataAt('application/x-moz-file-promise',
-                  new dataProvider(success,error),
-                  0, Components.interfaces.nsISupports);
+currentEvent.dataTransfer.setData(
+  "application/x-moz-file-promise-dest-filename",
+  leafName,
+);
+currentEvent.dataTransfer.mozSetDataAt(
+  "application/x-moz-file-promise",
+  new dataProvider(success, error),
+  0,
+  Components.interfaces.nsISupports,
+);
 
-function dataProvider(){}
+function dataProvider() {}
 
 dataProvider.prototype = {
   QueryInterface(iid) {
-    if (iid.equals(Components.interfaces.nsIFlavorDataProvider)
-                  || iid.equals(Components.interfaces.nsISupports))
+    if (
+      iid.equals(Components.interfaces.nsIFlavorDataProvider) ||
+      iid.equals(Components.interfaces.nsISupports)
+    )
       return this;
     throw Components.results.NS_NOINTERFACE;
   },
   getFlavorData(aTransferable, aFlavor, aData, aDataLen) {
-    if (aFlavor === 'application/x-moz-file-promise') {
+    if (aFlavor === "application/x-moz-file-promise") {
+      const urlPrimitive = {};
+      const dataSize = {};
 
-       const urlPrimitive = {};
-       const dataSize = {};
+      aTransferable.getTransferData(
+        "application/x-moz-file-promise-url",
+        urlPrimitive,
+        dataSize,
+      );
+      const url = urlPrimitive.value.QueryInterface(
+        Components.interfaces.nsISupportsString,
+      ).data;
+      console.log(`URL file original is = ${url}`);
 
-       aTransferable.getTransferData('application/x-moz-file-promise-url', urlPrimitive, dataSize);
-       const url = urlPrimitive.value.QueryInterface(Components.interfaces.nsISupportsString).data;
-       console.log(`URL file original is = ${url}`);
+      const namePrimitive = {};
+      aTransferable.getTransferData(
+        "application/x-moz-file-promise-dest-filename",
+        namePrimitive,
+        dataSize,
+      );
+      const name = namePrimitive.value.QueryInterface(
+        Components.interfaces.nsISupportsString,
+      ).data;
 
-       const namePrimitive = {};
-       aTransferable.getTransferData('application/x-moz-file-promise-dest-filename', namePrimitive, dataSize);
-       const name = namePrimitive.value.QueryInterface(Components.interfaces.nsISupportsString).data;
+      console.log(`target filename is = ${name}`);
 
-       console.log(`target filename is = ${name}`);
+      const dirPrimitive = {};
+      aTransferable.getTransferData(
+        "application/x-moz-file-promise-dir",
+        dirPrimitive,
+        dataSize,
+      );
+      const dir = dirPrimitive.value.QueryInterface(
+        Components.interfaces.nsILocalFile,
+      );
 
-       const dirPrimitive = {};
-       aTransferable.getTransferData('application/x-moz-file-promise-dir', dirPrimitive, dataSize);
-       const dir = dirPrimitive.value.QueryInterface(Components.interfaces.nsILocalFile);
+      console.log(`target folder is = ${dir.path}`);
 
-       console.log(`target folder is = ${dir.path}`);
+      const file = Cc["@mozilla.org/file/local;1"].createInstance(
+        Components.interfaces.nsILocalFile,
+      );
+      file.initWithPath(dir.path);
+      file.appendRelativePath(name);
 
-       const file = Cc['@mozilla.org/file/local;1'].createInstance(Components.interfaces.nsILocalFile);
-       file.initWithPath(dir.path);
-       file.appendRelativePath(name);
+      console.log(`output final path is = ${file.path}`);
 
-       console.log(`output final path is = ${file.path}`);
-
-       // now you can write or copy the file yourself…
+      // now you can write or copy the file yourself…
     }
-  }
-}
+  },
+};
 ```
 
 ## 関連情報

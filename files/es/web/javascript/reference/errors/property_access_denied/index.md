@@ -22,15 +22,17 @@ Se ha intentado acceder a un objeto al cual no tienes permiso. Probablemente es 
 ## Ejemplos
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <iframe id="myframe" src="http://www1.w3c-test.org/common/blank.html"></iframe>
+    <iframe
+      id="myframe"
+      src="http://www1.w3c-test.org/common/blank.html"></iframe>
     <script>
-      onload = function() {
+      onload = function () {
         console.log(frames[0].document);
         // Error: Permission denied to access property "document"
-      }
+      };
     </script>
   </head>
   <body></body>

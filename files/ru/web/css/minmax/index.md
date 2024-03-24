@@ -86,15 +86,11 @@ minmax(auto, 300px)
 ```html
 <div id="container">
   <div>
-    Item as wide as the content,<br/>
+    Item as wide as the content,<br />
     but at most 300 pixels.
   </div>
-  <div>
-    Item with flexible width but a minimum of 200 pixels.
-  </div>
-  <div>
-    Inflexible item of 150 pixels width.
-  </div>
+  <div>Item with flexible width but a minimum of 200 pixels.</div>
+  <div>Inflexible item of 150 pixels width.</div>
 </div>
 ```
 
@@ -106,7 +102,7 @@ minmax(auto, 300px)
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

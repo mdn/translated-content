@@ -3,6 +3,8 @@ title: Cross-site scripting (クロスサイトスクリプティング)
 slug: Glossary/Cross-site_scripting
 ---
 
+{{GlossarySidebar}}
+
 クロスサイトスクリプティング (XSS) とは、悪意あるクライアントサイドのコードをウェブサイトに挿入するセキュリティ攻撃です。挿入されたコードは被害者のブラウザー上で実行され、アクセス制限の回避やユーザーへのなりすましなどにつながります。Open Web Application Security Project の調べによると、XSS は 2017 年において [7 番目に多いウェブアプリの脆弱性](<https://owasp.org/www-project-top-ten/OWASP_Top_Ten_2017/Top_10-2017_A7-Cross-Site_Scripting_(XSS)>)でした。
 
 この攻撃が成功してしまうのは、ウェブアプリにバリデーションとエンコーディングが十分に実装されていない場合です。ユーザーのブラウザーは、悪意あるスクリプトを信頼できないものとして検知できません。そのため、任意の Cookie やセッショントークン、ウェブサイト固有の機密情報などにアクセスされたり、悪意あるスクリプトによって {{glossary("HTML")}} のコンテンツが書き換えられてしまったりします。

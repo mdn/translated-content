@@ -14,9 +14,9 @@ l10n:
 {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドでイベント名を使うか､イベントハンドラープロパティを設定します｡
 
 ```js
-addEventListener('disconnect', (event) => { })
+addEventListener("disconnect", (event) => {});
 
-ondisconnect = (event) => { }
+ondisconnect = (event) => {};
 ```
 
 ## イベント型
@@ -27,7 +27,7 @@ ondisconnect = (event) => { }
 
 ## イベントプロパティ
 
-_以下に挙げるプロパティに加え､親インターフェイス {{domxref("Event")}} のプロパティも利用できます｡_
+_以下に挙げるプロパティに加え､親インターフェイス {{domxref("Event")}} のプロパティも利用できます。_
 
 - {{domxref("USBConnectionEvent.device", "device")}} {{ReadOnlyInline}}
   - : イベントが発火した対象の {{domxref("USBDevice")}} です｡
@@ -37,7 +37,7 @@ _以下に挙げるプロパティに加え､親インターフェイス {{domx
 USB デバイスが切断された時､UI を更新したいかもしれません｡
 
 ```js
-navigator.usb.addEventListener('disconnect', (event) => {
+navigator.usb.addEventListener("disconnect", (event) => {
   // UI から event.device を取り除く
 });
 ```

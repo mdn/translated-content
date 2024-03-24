@@ -66,7 +66,7 @@ for (c = 0; c < brickColumnCount; c++) {
 }
 ```
 
-接下来，我们将在绘制之前在 `drawBricks()` 中检查每个砖块的 `status`属性的值 - 如果 `status`是 `1`，然后画它，但是如果它是 `0`，那么它被球击中，我们不再希望它在屏幕上。更新您的 `drawBricks()` 函数如下：
+接下来，我们将在绘制之前在 `drawBricks()` 中检查每个砖块的 `status`属性的值 - 如果 `status`是 `1`，然后画它，但是如果它是 `0`，那么它被球击中，我们不再希望它在屏幕上。更新你的 `drawBricks()` 函数如下：
 
 ```js
 function drawBricks() {
@@ -90,7 +90,7 @@ function drawBricks() {
 
 ## 跟踪并更新在撞击侦测函数中的状态
 
-现在我们需要将砖块 `status` 属性包含在 `collisionDetection()`函数中：如果砖块是活动的（它的状态是 `1`），我们将检查碰撞是否发生；如果发生碰撞，我们将给定砖块的状态设置为 `0`，这样它就不会被绘制在屏幕上。更新您的 `collisionDetection()` 函数，如下所示：
+现在我们需要将砖块 `status` 属性包含在 `collisionDetection()`函数中：如果砖块是活动的（它的状态是 `1`），我们将检查碰撞是否发生；如果发生碰撞，我们将给定砖块的状态设置为 `0`，这样它就不会被绘制在屏幕上。更新你的 `collisionDetection()` 函数，如下所示：
 
 ```js
 function collisionDetection() {

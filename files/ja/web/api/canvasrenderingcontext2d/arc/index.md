@@ -47,8 +47,8 @@ void ctx.arc(x, y, radius, startAngle, endAngle [, counterclockwise]);
 円弧の X 座標は 100、 Y 座標は 75、半径は 50 です。円弧を一周させるには、 0 ラジアン（0**°**）の角度で始まり、 2π ラジアン（360**°**）の角度で終わります。
 
 ```js
-const canvas = document.querySelector('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.beginPath();
 ctx.arc(100, 75, 50, 0, 2 * Math.PI);
@@ -68,19 +68,19 @@ ctx.stroke();
 ```
 
 ```js
-const canvas = document.querySelector('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
 
 // Draw shapes
 for (let i = 0; i <= 3; i++) {
   for (let j = 0; j <= 2; j++) {
     ctx.beginPath();
-    let x             = 25 + j * 50;                 // x 座標
-    let y             = 25 + i * 50;                 // y 座標
-    let radius        = 20;                          // 円弧の半径
-    let startAngle    = 0;                           // 円弧の開始位置
-    let endAngle      = Math.PI + (Math.PI * j) / 2; // 円弧の終了位置
-    let counterclockwise = i % 2 == 1;                  // 円弧を描く方向
+    let x = 25 + j * 50; // x 座標
+    let y = 25 + i * 50; // y 座標
+    let radius = 20; // 円弧の半径
+    let startAngle = 0; // 円弧の開始位置
+    let endAngle = Math.PI + (Math.PI * j) / 2; // 円弧の終了位置
+    let counterclockwise = i % 2 == 1; // 円弧を描く方向
 
     ctx.arc(x, y, radius, startAngle, endAngle, counterclockwise);
 

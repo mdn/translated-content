@@ -119,7 +119,7 @@ l10n:
 - {{domxref("AudioDestinationNode")}}
   - : **`AudioDestinationNode`** はコンテキスト内での出力先を表します。通常はスピーカーとなっています。
 - {{domxref("MediaStreamAudioDestinationNode")}}
-  - : **`MediaStreamAudioDestinationNode`** インターフェイスは、単一の `AudioMediaStreamTrack` を持つ [WebRTC](/en-US/docs/Web/API/WebRTC_API) {{domxref("MediaStream")}} からなる音声出力先を表現し、 {{ domxref("MediaDevices.getUserMedia", "getUserMedia()") }} から得られる {{domxref("MediaStream") }}と同様の方法で使用することができます。 音声の出力先として動作する {{domxref("AudioNode")}} です。
+  - : **`MediaStreamAudioDestinationNode`** インターフェイスは、単一の `AudioMediaStreamTrack` を持つ [WebRTC](/ja/docs/Web/API/WebRTC_API) {{domxref("MediaStream")}} からなる音声出力先を表現し、 {{ domxref("MediaDevices.getUserMedia", "getUserMedia()") }} から得られる {{domxref("MediaStream") }}と同様の方法で使用することができます。 音声の出力先として動作する {{domxref("AudioNode")}} です。
 
 ### 分析と可視化
 

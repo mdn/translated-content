@@ -10,7 +10,7 @@ slug: Learn/HTML/Tables/Advanced
 <table>
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         HTML 的基础知识（参见
         <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
@@ -218,27 +218,27 @@ slug: Learn/HTML/Tables/Advanced
 ```html
 <table id="table1">
   <tr>
-    <th>标题1</th>
-    <th>标题2</th>
-    <th>标题3</th>
+    <th>标题 1</th>
+    <th>标题 2</th>
+    <th>标题 3</th>
   </tr>
   <tr>
     <td id="nested">
       <table id="table2">
         <tr>
-          <td>单元格1</td>
-          <td>单元格2</td>
-          <td>单元格3</td>
+          <td>单元格 1</td>
+          <td>单元格 2</td>
+          <td>单元格 3</td>
         </tr>
       </table>
     </td>
-    <td>单元格2</td>
-    <td>单元格3</td>
+    <td>单元格 2</td>
+    <td>单元格 3</td>
   </tr>
   <tr>
-    <td>单元格4</td>
-    <td>单元格5</td>
-    <td>单元格6</td>
+    <td>单元格 4</td>
+    <td>单元格 5</td>
+    <td>单元格 6</td>
   </tr>
 </table>
 ```

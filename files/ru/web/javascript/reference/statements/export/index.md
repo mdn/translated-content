@@ -44,7 +44,7 @@ export { import1 as name1, import2 as name2, …, nameN } from …;
 - Дефолтный экспорт (экспорт по умолчанию) (один на скрипт):
 
   ```js
-  export default function() {} // или 'export default class {}'
+  export default function () {} // или 'export default class {}'
   // тут не ставится точка с запятой
   ```
 
@@ -70,9 +70,9 @@ export { cube, foo };
 Таким образом в другом скрипте при помощи импорта (см. [`import`](/ru/docs/Web/JavaScript/Reference/Statements/import)) мы могли бы получить следующее:
 
 ```js
-import { cube, foo } from 'my-module';
+import { cube, foo } from "my-module";
 console.log(cube(3)); // 27
-console.log(foo);    // 4.555806215962888
+console.log(foo); // 4.555806215962888
 ```
 
 ### Использование export default
@@ -89,7 +89,7 @@ export default function cube(x) {
 Затем, в другом скрипте можно импортировать это значение по умолчанию таким образом:
 
 ```js
-import cube from 'my-module';
+import cube from "my-module";
 console.log(cube(3)); // 27
 ```
 

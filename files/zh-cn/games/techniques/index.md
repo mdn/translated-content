@@ -1,23 +1,23 @@
 ---
-title: Techniques for game development
+title: 游戏开发技术
 slug: Games/Techniques
+l10n:
+  sourceCommit: 56db19e6b8d19932c1b6150bc42e752e12a2b21f
 ---
 
 {{GamesSidebar}}
 
-这个页面为想要使用开放的网页技术来开发游戏的人列举出了必要的核心技术。
+这个页面为想要使用开放的 web 技术来开发游戏的人列举出了必要的核心技术。
 
 - [使用 asm.js 中的异步脚本](/zh-CN/docs/Games/Techniques/Async_scripts)
-  - : 尤其在制作中大型游戏时，异步脚本是一项必备技术，你游戏中的 JavaScript 因此可以在主进程之外被编译，并被缓存以之后游戏的运行，这会带来显著的性能提升。这篇文章解释了如何做到。
-- [Optimizing startup performance](/zh-CN/docs/Apps/Developing/Optimizing_startup_performance)
-  - : How to make sure your game starts up quickly, smoothly, and without appearing to lock up the user's browser or device.
-- [Using WebRTC peer-to-peer data channels](/zh-CN/docs/Games/WebRTC_data_channels)
-  - : In addition to providing support for audio and video communication, WebRTC lets you set up peer-to-peer data channels to exchange text or binary data actively between your players. This article explains what this can do for you, and shows how to use libraries that make this easy.
-- [Efficient animation for web games](/zh-CN/docs/Games/Techniques/Efficient_animation_for_web_games)
-  - : This article covers techniques and advice for creating efficient animation for web games, with a slant towards supporting lower end devices such as mobile phones. We touch on CSS transitions and CSS animations, and JavaScript loops involving {{ domxref("window.requestAnimationFrame") }}.
-- [Audio for Web Games](/zh-CN/docs/Games/Techniques/Audio_for_Web_Games)
-  - : Audio is an important part of any game — it adds feedback and atmosphere. Web-based audio is maturing fast, but there are still many browser differences to negotiate. This article provides a detailed guide to implementing audio for web games, looking at what works currently across as wide a range of platforms as possible.
-- [2D collision detection](/zh-CN/docs/Games/Techniques/2D_collision_detection)
-  - : A concise introduction to collision detection in 2D games.
-- [Tilemaps](/zh-CN/docs/Games/Techniques/Tilemaps)
-  - : Tiles are a very popular technique in 2D games for building the game world. These articles provide an introduction to tilemaps and how to implement them with the Canvas API.
+  - : 尤其在制作中大型游戏时，异步脚本是一项必备技术，它可以让游戏的 JavaScript 脱离主线程进行编译，并在以后运行游戏时缓存起来，从而显著提高用户的性能。本文将介绍如何使用异步脚本。
+- [优化启动性能](/zh-CN/docs/Web/Performance/Optimizing_startup_performance)
+  - : 如何确保游戏启动快速、流畅，并且不会占用用户的浏览器或设备太久。
+- [使用 WebRTC 点对点数据通道](/zh-CN/docs/Games/Techniques/WebRTC_data_channels)
+  - : 除了支持音频和视频通信外，WebRTC 还能建立点对点数据通道，在播放器之间主动交换文本或二进制数据。本文将解释 WebRTC 的功能，并介绍如何使用库来轻松实现这一功能。
+- [Web 游戏音频](/zh-CN/docs/Games/Techniques/Audio_for_Web_Games)
+  - : 音频是任何游戏的重要组成部分——它能增加反馈，活跃气氛。基于 web 的音频技术正在迅速成熟，但仍有许多浏览器差异需要解决。本文提供了实现 web 游戏音频的详细指南，尽可能广泛地介绍了目前在各种平台上都能使用的音频。
+- [2D 碰撞检测](/zh-CN/docs/Games/Techniques/2D_collision_detection)
+  - : 简明介绍 2D 游戏中的碰撞检测。
+- [平铺贴图](/zh-CN/docs/Games/Techniques/Tilemaps)
+  - : 在 2D 游戏中，贴图是一种非常流行的构建游戏世界的技术。这些文章介绍了平铺贴图是什么，以及如何使用 Canvas API 实现平铺贴图。

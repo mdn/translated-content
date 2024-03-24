@@ -28,10 +28,10 @@ slug: Web/JavaScript/Reference/Classes/static
 ```js
 class StaticMethodCall {
   static staticMethod() {
-    return 'Static method has been called';
+    return "Static method has been called";
   }
   static anotherStaticMethod() {
-    return this.staticMethod() + ' from another static method';
+    return this.staticMethod() + " from another static method";
   }
 }
 StaticMethodCall.staticMethod();
@@ -56,7 +56,7 @@ class StaticMethodCall {
   }
 
   static staticMethod() {
-    return 'static method has been called.';
+    return "static method has been called.";
   }
 }
 ```
@@ -83,8 +83,8 @@ class BiggerTriple extends Triple {
   }
 }
 
-console.log(Triple.triple());        // 3
-console.log(Triple.triple(6));       // 18
+console.log(Triple.triple()); // 3
+console.log(Triple.triple(6)); // 18
 console.log(BiggerTriple.triple(3)); // 81
 var tp = new Triple();
 console.log(BiggerTriple.triple(3)); // 81 (부모의 인스턴스에 영향을 받지 않습니다.)

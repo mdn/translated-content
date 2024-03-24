@@ -16,20 +16,20 @@ slug: Web/API/VRDisplay/isConnected
 ## 例
 
 ```js
-navigator.getVRDisplays().then(function(displays) {
+navigator.getVRDisplays().then(function (displays) {
   // ディスプレイがある場合は、それを使ってシーンを表示する
-  if(displays.length > 0) {
+  if (displays.length > 0) {
     vrDisplay = displays[0];
 
     // ボタンがクリックされたときに表示を開始。ユーザーのジェスチャーに応答してのみ呼び出すことができます。
-    btn.addEventListener('click', function() {
+    btn.addEventListener("click", function () {
       // ディスプレイが接続されている場合のみ、表示を要求します。
-      if(vrDisplay.isConnected) {
-        vrDisplay.requestPresent([{ source: canvas }]).then(function() {
+      if (vrDisplay.isConnected) {
+        vrDisplay.requestPresent([{ source: canvas }]).then(function () {
           // アプリの描画を開始するなど。
         });
       } else {
-        console.log('Connection to display lost');
+        console.log("Connection to display lost");
       }
     });
   }
@@ -48,5 +48,4 @@ navigator.getVRDisplays().then(function(displays) {
 
 ## 関連情報
 
-- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — Mozilla VR チームによるデモ、ダウンロード、その他のリソース。
+- [WebVR API](/ja/docs/Web/API/WebVR_API)

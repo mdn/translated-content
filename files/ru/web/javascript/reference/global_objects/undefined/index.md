@@ -31,10 +31,15 @@ undefined
 
 ```js
 // печатает 'foo string'
-(function(){ var undefined = 'foo'; console.log(undefined, typeof undefined); })();
+(function () {
+  var undefined = "foo";
+  console.log(undefined, typeof undefined);
+})();
 
 // печатает 'foo string'
-(function(undefined){ console.log(undefined, typeof undefined); })('foo');
+(function (undefined) {
+  console.log(undefined, typeof undefined);
+})("foo");
 ```
 
 ## Примеры
@@ -47,8 +52,7 @@ undefined
 var x;
 if (x === undefined) {
   // эти инструкции будут выполнены
-}
-else {
+} else {
   // эти инструкции не будут выполнены
 }
 ```
@@ -61,7 +65,7 @@ else {
 
 ```js
 var x;
-if (typeof x === 'undefined') {
+if (typeof x === "undefined") {
   // эти инструкции будут выполнены
 }
 ```
@@ -70,12 +74,13 @@ if (typeof x === 'undefined') {
 
 ```js
 // переменная x не была определена ранее
-if (typeof x === 'undefined') { // вычислится в true без ошибок
+if (typeof x === "undefined") {
+  // вычислится в true без ошибок
   // эти инструкции будут выполнены
 }
 
-if (x === undefined) { // выкинет ReferenceError
-
+if (x === undefined) {
+  // выкинет ReferenceError
 }
 ```
 

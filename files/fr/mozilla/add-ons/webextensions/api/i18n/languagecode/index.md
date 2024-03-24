@@ -3,7 +3,7 @@ title: i18n.LanguageCode
 slug: Mozilla/Add-ons/WebExtensions/API/i18n/LanguageCode
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Une [balise de langue](https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.10) telle que `"en-US"` ou "`fr`".
 

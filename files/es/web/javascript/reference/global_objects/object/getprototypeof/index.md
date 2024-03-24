@@ -3,7 +3,7 @@ title: Object.getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
 ---
 
-{{JSRef("Global_Objects", "Object")}}
+{{JSRef}}
 
 ## Resumen
 
@@ -28,7 +28,7 @@ El prototipo del objeto dado. Si no existen propiedades heredadas se devolverá 
 
 ```js
 var proto = {};
-var obj= Object.create(proto);
+var obj = Object.create(proto);
 Object.getPrototypeOf(obj) === proto; // true
 ```
 

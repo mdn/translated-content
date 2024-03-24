@@ -44,7 +44,11 @@ class A {
   }
 }
 
-class B extends A { constructor() { super(); } }
+class B extends A {
+  constructor() {
+    super();
+  }
+}
 
 var a = new A(); // вернёт "A"
 var b = new B(); // вернёт "B"

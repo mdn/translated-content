@@ -11,7 +11,7 @@ l10n:
 
 {{InheritanceDiagram}}
 
-## Instance properties
+## インスタンスプロパティ
 
 _`SpeechRecognitionEvent` は親インターフェイスである {{domxref("Event")}} からプロパティを継承しています。_
 
@@ -42,7 +42,7 @@ recognition.onresult = (event) => {
   const color = event.results[0][0].transcript;
   diagnostic.textContent = `Result received: ${color}.`;
   bg.style.backgroundColor = color;
-}
+};
 ```
 
 ## 仕様書

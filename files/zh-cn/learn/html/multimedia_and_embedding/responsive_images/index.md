@@ -10,7 +10,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         你应该知道
         <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">HTML 基础</a>以及如何<a href="/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">在网站上添加静态图片</a>。
@@ -100,7 +100,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 2. 一个空格
 3. 当媒体条件为真时，图像将填充的**槽的宽度**（`480px`）
 
-> **备注：** 对于槽的宽度，你也许会提供一个固定值（如 `480px`）， 或者是一个相对于视口的宽度 （如 `50vw`），但不是百分比。你也许已经注意到最后一个槽的宽度是没有媒体条件的（当没有任何一个媒体条件为真时，它默认生效）。当浏览器成功匹配第一个媒体条件的时候，剩下所有的条件都会被忽略，所以要注意媒体条件的顺序。
+> **备注：** 对于槽的宽度，你也许会提供一个固定值（如 `480px`），或者是一个相对于视口的宽度（如 `50vw`），但不是百分比。你也许已经注意到最后一个槽的宽度是没有媒体条件的（当没有任何一个媒体条件为真时，它默认生效）。当浏览器成功匹配第一个媒体条件的时候，剩下所有的条件都会被忽略，所以要注意媒体条件的顺序。
 
 有了这些属性后，浏览器会：
 

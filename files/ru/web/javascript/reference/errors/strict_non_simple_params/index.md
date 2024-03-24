@@ -66,7 +66,7 @@ function sum(a = 1, b = 2) {
 Если функция должна находиться в строгом режиме, и весь скрипт или заключающая функция также в порядке, чтобы быть в строгом режиме, вы можете переместить директиву "use strict" за пределы функции:
 
 ```js example-good
-'use strict';
+"use strict";
 function sum(a = 1, b = 2) {
   return a + b;
 }
@@ -87,8 +87,8 @@ var sum = function sum([a, b]) {
 Это может быть преобразовано в следующее выражение:
 
 ```js example-good
-var sum = (function() {
-  'use strict';
+var sum = (function () {
+  "use strict";
   return function sum([a, b]) {
     return a + b;
   };
@@ -111,7 +111,7 @@ var callback = (...args) => {
 
 ```js example-good
 var callback = (() => {
-  'use strict';
+  "use strict";
   return (...args) => {
     return this.run(args);
   };

@@ -44,7 +44,7 @@ dateObj.toDateString()
 ```js
 var d = new Date(1993, 5, 28, 14, 39, 7);
 
-console.log(d.toString());     // logs Mon Jun 28 1993 14:39:07 GMT-0600 (PDT)
+console.log(d.toString()); // logs Mon Jun 28 1993 14:39:07 GMT-0600 (PDT)
 console.log(d.toDateString()); // logs Mon Jun 28 1993
 ```
 

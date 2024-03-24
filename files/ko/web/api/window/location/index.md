@@ -1,124 +1,115 @@
 ---
-title: Window.location
+title: "Window: location 속성"
+short-title: location
 slug: Web/API/Window/location
+l10n:
+  sourceCommit: c35cc9cdf8712f0400fb646b33465b295230b7b2
 ---
 
 {{APIRef}}
 
-**`Window.location`** 프로퍼티에 접근하면 읽기 전용인 {{domxref("Location")}} 오브젝트를 얻어올 수 있습니다. 이는 현재 도큐먼트의 로케이션에 대한 정보를 담고 있습니다.
+**`Window.location`** 은 읽기 전용 속성으로, 문서의 현재 위치에 대한 정보가 담긴 {{domxref("Location")}} 객체를 반환합니다.
 
-Though `Window.location` is a _read-only_ `Location` object, you can also assign a {{domxref("DOMString")}} to it. This means that you can work with `location` as if it were a string in most cases: `location = 'http://www.example.com'` is a synonym of `location.href = 'http://www.example.com'`.
+`Window.location`은 `Location` 객체의 읽기 전용 형태이지만, 이 객체에 문자열 할당이 가능합니다.
+즉, 대부분의 경우에 `location`을 문자열처럼 사용할 수 있습니다.
+예를 들어 `location = 'http://www.example.com'`은 `location.href = 'http://www.example.com'`와 같습니다.
 
-## 문법
+사용 가능한 모든 속성을 보려면 {{domxref("Location")}}을 확인하세요.
 
-```js
-var oldLocation = location;
-location = newLocation;
-```
+## 값
+
+{{domxref("Location")}} 객체.
 
 ## 예제
 
-### Basic Example
+### 기본 예제
 
 ```js
-alert(location); // alerts "https://developer.mozilla.org/ko/docs/Web/API/Window.location"
+alert(location); // "https://developer.mozilla.org/ko/docs/Web/API/Window/location" 문구가 포함된 경고창이 나타납니다.
 ```
 
-### 예제 #1: 새 페이지로 이동하기
+### 예제 1: 새로운 페이지로 이동하기
 
-Whenever a new value is assigned to the location object, a document will be loaded using the URL as if `location.assign()` had been called with the modified URL. Note that security settings, like CORS, may prevent this to effectively happen.
+location 객체에 새로운 값이 할당될 때마다, 수정된 URL을 사용하여 마치 `location.assign()`이 호출된 것처럼 문서가 로드될 것입니다.
+
+[navigation 관련 샌드박스 플래그](https://html.spec.whatwg.org/multipage/browsers.html#allowed-to-navigate)는 예외를 던지고, 페이지 이동에 실패할 것이라는 것을 참고하세요.
 
 ```js
-location.assign("http://www.mozilla.org"); // 또는
-location = "http://www.mozilla.org";
+location.assign("https://www.mozilla.org"); // 또는
+location = "https://www.mozilla.org";
 ```
 
-### 예제 #2: 서버로부터 현재 페이지 강제로 다시 로드하기
+### 예제 2: 현재 페이지를 다시 로드하기
 
 ```js
-location.reload(true);
+location.reload();
 ```
 
-### 예제 #3
+### 예제 3
 
-Consider the following example, which will reload the page by using the [`replace()`](/ko/docs/Web/API/Location.replace) method to insert the value of `location.pathname` into the hash:
+페이지를 다시 로드하기 위해 [`replace()`](/ko/docs/Web/API/Location/replace) 메서드를 사용해서 해시에 `location.pathname`의 값을 삽입합니다.
 
 ```js
 function reloadPageWithHash() {
-  var initialPage = location.pathname;
-  location.replace("http://example.com/#" + initialPage);
+  location.replace(`https://example.com/#${location.pathname}`);
 }
 ```
 
-> **참고:** The example above works in situations where `location.hash` does not need to be retained. However, in Gecko-based browsers, setting `location.pathname` in this manner will erase any information in `location.hash`, whereas in WebKit (and possibly other browsers), setting the pathname will not alter the hash. If you need to change pathname but keep the hash as is, use the `replace()` method instead, which should work consistently across browsers.
-
-### 예제 #4: Display the properties of the current URL in an alert dialog
+### 예제 4: 경고 대화상자에 현재 URL의 속성들을 표시하기
 
 ```js
 function showLoc() {
-  var oLocation = location,
-    aLog = [
-      "Property (Typeof): Value",
-      "location (" + typeof oLocation + "): " + oLocation,
-    ];
-  for (var sProp in oLocation) {
-    aLog.push(
-      sProp +
-        " (" +
-        typeof oLocation[sProp] +
-        "): " +
-        (oLocation[sProp] || "n/a"),
+  const logLines = [
+    "속성 (Typeof): 값",
+    `location (${typeof location}): ${location}`,
+  ];
+  for (const prop in location) {
+    logLines.push(
+      `${prop} (${typeof location[prop]}): ${location[prop] || "n/a"}`,
     );
   }
-  alert(aLog.join("\n"));
+  alert(logLines.join("\n"));
 }
 
-// in html: <button onclick="showLoc();">Show location properties</button>
+// html에서는 다음과 같이 사용하세요.
+// <button onclick="showLoc();">location 속성 표시하기</button>
 ```
 
-### 예제 #5: Send a string of data to the server by modifying the `search` property
+### 예제 5: `search` 속성을 수정해서 서버로 문자열 데이터 전송하기
 
 ```js
-function sendData(sData) {
-  location.search = sData;
+function sendData(data) {
+  location.search = data;
 }
 
-// in html: <button onclick="sendData('Some data');">Send data</button>
+// html에서는 다음과 같이 사용하세요.
+// <button onclick="sendData('Some data');">데이터 전송</button>
 ```
 
-The current URL with "?Some%20data" appended is sent to the server (if no action is taken by the server, the current document is reloaded with the modified search string).
+현재 URL에서 "?Some%20data"가 추가된 URL이 서버로 전송됩니다. (서버에서 별 다른 처리가 구현되어 있지 않다면, 수정된 검색 문자열이 있는 현재 문서가 다시 로드됩니다)
 
-### 예제 #6: Using bookmarks without changing the `hash` property
+### 예제 6: `hash` 속성을 변경하지 않고 북마크 사용하기
 
 ```html
 <!doctype html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="UTF-8" />
-    <title>MDN Example</title>
+    <title>MDN 예제</title>
     <script>
-      function showNode(oNode) {
-        var nLeft = 0,
-          nTop = 0;
-        for (
-          var oItNode = oNode;
-          oItNode;
-          nLeft += oItNode.offsetLeft,
-            nTop += oItNode.offsetTop,
-            oItNode = oItNode.offsetParent
-        );
-        document.documentElement.scrollTop = nTop;
-        document.documentElement.scrollLeft = nLeft;
+      function showNode(node) {
+        document.documentElement.scrollTop = node.offsetTop;
+        document.documentElement.scrollLeft = node.offsetLeft;
       }
 
-      function showBookmark(sBookmark, bUseHash) {
-        if (arguments.length === 1 || bUseHash) {
-          location.hash = sBookmark;
+      function showBookmark(bookmark, useHash) {
+        if (arguments.length === 1 || useHash) {
+          location.hash = bookmark;
           return;
         }
-        var oBookmark = document.querySelector(sBookmark);
-        if (oBookmark) {
-          showNode(oBookmark);
+        const bookmarkElement = document.querySelector(bookmark);
+        if (bookmarkElement) {
+          showNode(bookmarkElement);
         }
       }
     </script>
@@ -159,7 +150,7 @@ The current URL with "?Some%20data" appended is sent to the server (if no action
     </p>
     <p id="myBookmark1">
       [&nbsp;<span class="intLink" onclick="showBookmark('#myBookmark2');"
-        >Go to bookmark #2</span
+        >2번 북마크로 이동</span
       >&nbsp;]
     </p>
     <p>
@@ -227,15 +218,15 @@ The current URL with "?Some%20data" appended is sent to the server (if no action
     </p>
     <p id="myBookmark2">
       [&nbsp;<span class="intLink" onclick="showBookmark('#myBookmark1');"
-        >Go to bookmark #1</span
+        >1번 북마크로 이동</span
       >
       |
       <span class="intLink" onclick="showBookmark('#myBookmark1', false);"
-        >Go to bookmark #1 without using location.hash</span
+        >location.hash를 이용하지 않고 1번 북마크로 이동</span
       >
       |
       <span class="intLink" onclick="showBookmark('#myBookmark3');"
-        >Go to bookmark #3</span
+        >3번 북마크로 이동</span
       >&nbsp;]
     </p>
     <p>
@@ -258,7 +249,7 @@ The current URL with "?Some%20data" appended is sent to the server (if no action
       ipsum, rhoncus posuere mauris lectus in eros. Nullam feugiat ultrices
       augue, ac sodales sem mollis in.
     </p>
-    <p id="myBookmark3"><em>Here is the bookmark #3</em></p>
+    <p id="myBookmark3"><em>여기가 3번 북마크입니다</em></p>
     <p>
       Proin vitae sem non lorem pellentesque molestie. Nam tempus massa et
       turpis placerat sit amet sollicitudin orci sodales. Pellentesque enim
@@ -379,41 +370,38 @@ The current URL with "?Some%20data" appended is sent to the server (if no action
 </html>
 ```
 
-> **참고:** The function `showNode` is also an example of the use of the [`for`](/en/JavaScript/Reference/Statements/for) cycle without a `statement` section. In this case **a semicolon is always put immediately after the declaration of the cycle**.
-
-아래는 같은 역할을 하지만, 애니메이션 스크롤이 들어간 버전…:
+…아래는 위 예제와 동일하지만, JS 코드로 페이지 스크롤에 애니메이션만 추가된 예제입니다.
 
 ```js
-var showBookmark = (function () {
-  var _useHash,
-    _scrollX,
-    _scrollY,
-    _nodeX,
-    _nodeY,
-    _itFrame,
-    _scrollId = -1,
-    _bookMark,
-    /*
-     * nDuration: the duration in milliseconds of each frame
-     * nFrames: number of frames for each scroll
-     */
-    nDuration = 200,
-    nFrames = 10;
+const showBookmark = (() => {
+  let _useHash;
+  let _scrollX;
+  let _scrollY;
+  let _nodeX;
+  let _nodeY;
+  let _itFrame;
+  let _scrollId = -1;
+  let _bookMark;
+
+  // duration: 각 프레임의 지속 시간(밀리초)
+  // frames: 각 스크롤의 프레임 수
+  let duration = 200;
+  let frames = 10;
 
   function _next() {
-    if (_itFrame > nFrames) {
+    if (_itFrame > frames) {
       clearInterval(_scrollId);
       _scrollId = -1;
       return;
     }
     _isBot = true;
     document.documentElement.scrollTop = Math.round(
-      _scrollY + ((_nodeY - _scrollY) * _itFrame) / nFrames,
+      _scrollY + ((_nodeY - _scrollY) * _itFrame) / frames,
     );
     document.documentElement.scrollLeft = Math.round(
-      _scrollX + ((_nodeX - _scrollX) * _itFrame) / nFrames,
+      _scrollX + ((_nodeX - _scrollX) * _itFrame) / frames,
     );
-    if (_useHash && _itFrame === nFrames) {
+    if (_useHash && _itFrame === frames) {
       location.hash = _bookMark;
     }
     _itFrame++;
@@ -430,33 +418,25 @@ var showBookmark = (function () {
     }
   }
 
-  if (window.addEventListener) {
-    window.addEventListener("scroll", _chkOwner, false);
-  } else if (window.attachEvent) {
-    window.attachEvent("onscroll", _chkOwner);
-  }
+  window.addEventListener("scroll", _chkOwner, false);
 
-  return function (sBookmark, bUseHash) {
+  return (bookmark, useHash) => {
+    const node = document.querySelector(bookmark);
     _scrollY = document.documentElement.scrollTop;
     _scrollX = document.documentElement.scrollLeft;
-    _bookMark = sBookmark;
-    _useHash = arguments.length === 1 || bUseHash;
-    for (
-      var nLeft = 0, nTop = 0, oNode = document.querySelector(sBookmark);
-      oNode;
-      nLeft += oNode.offsetLeft,
-        nTop += oNode.offsetTop,
-        oNode = oNode.offsetParent
-    );
-    (_nodeX = nLeft), (_nodeY = nTop), (_itFrame = 1);
+    _bookMark = bookmark;
+    _useHash = useHash === true;
+    _nodeX = node.offsetLeft;
+    _nodeY = node.offsetTop;
+    _itFrame = 1;
     if (_scrollId === -1) {
-      _scrollId = setInterval(_next, Math.round(nDuration / nFrames));
+      _scrollId = setInterval(_next, Math.round(duration / frames));
     }
   };
 })();
 ```
 
-## 명세서
+## 명세
 
 {{Specifications}}
 
@@ -466,7 +446,8 @@ var showBookmark = (function () {
 
 ## 같이 보기
 
-- The interface of the returned value, {{domxref("Location")}}.
-- A similar information, but attached to the document, {{domxref("Document.location")}}.
-- [Manipulating the browser history](/en/DOM/Manipulating_the_browser_history)
-- [hashchange](/ko/docs/DOM/Mozilla_event_reference/hashchange)
+- 이 속성의 반환 값 인터페이스인 {{domxref("Location")}}
+- 이 속성과 유사하며, 문서(document)에 추가된 형태인
+  {{domxref("Document.location")}}
+- [브라우저 히스토리 조작하기](/ko/docs/Web/API/History_API)
+- {{domxref("Window/hashchange_event", "hashchange")}}

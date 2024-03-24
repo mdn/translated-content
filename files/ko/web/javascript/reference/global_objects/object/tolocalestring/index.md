@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/toLocaleString
 ## 구문
 
 ```js
-obj.toLocaleString()
+obj.toLocaleString();
 ```
 
 ### 반환 값

@@ -7,7 +7,7 @@ slug: Web/API/Element/clientLeft
 
 `clientLeft` не включает в себя ни левый padding ни margin с той же стороны. `clientLeft` только для чтения.
 
-[Gecko](en/Gecko)-based applications support `clientLeft` starting with Gecko 1.9 ([Firefox 3](en/Firefox_3), implemented in {{ Bug(111207) }}). This property is not supported in Firefox 2 and earlier.
+[Gecko](en/Gecko)-based applications support `clientLeft` starting with Gecko 1.9 ([Firefox 3](en/Firefox_3), implemented in [Firefox bug 111207](https://bugzil.la/111207)). This property is not supported in Firefox 2 and earlier.
 
 Когда [`layout.scrollbar.side`](http://kb.mozillazine.org/Layout.scrollbar.side) значение установлено от 1 до 3 и направление текста справа налево, **то вертикальный scrollbar будет спозиционирован слева** и как следствие будет вычислен clientLeft.
 

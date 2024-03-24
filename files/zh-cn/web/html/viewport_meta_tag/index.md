@@ -30,29 +30,17 @@ slug: Web/HTML/Viewport_meta_tag
 "viewport" `<meta>` 标签的基本属性如下所示：
 
 - `width`
-
   - : 控制视口的大小。这可以设置为特定像素数（如'width=600'），也可以设置为特殊值`device-width`，即 [100vw](/zh-CN/docs/Web/CSS/length#视口_viewport_比例的长度)，100% 的视口宽度。最小值为 `1`。最大值为 `10000`。负值会被忽略。
-
 - `height`
-
-  - : 控制视口的大小。 这可以设置为特定像素数（如 `width=600`），也可以设置为特殊值 `device-height`，即 [100vh](/zh-CN/docs/Web/CSS/length#视口_viewport_比例的长度)，100% 的视口高度。最小值为 `1`。最大值为 `10000`。负值会被忽略。
-
+  - : 控制视口的大小。这可以设置为特定像素数（如 `width=600`），也可以设置为特殊值 `device-height`，即 [100vh](/zh-CN/docs/Web/CSS/length#视口_viewport_比例的长度)，100% 的视口高度。最小值为 `1`。最大值为 `10000`。负值会被忽略。
 - `initial-scale`
-
   - : 控制页面首次加载时显示的缩放倍数。最小值是 `0.1`。最大值是 `10`。默认值为 `1`。负值会被忽略。
-
 - `minimum-scale`
-
   - : 控制页面允许缩小的倍数。最小值是 `0.1`。最大值是 `10`。默认值为 `1`。负值会被忽略。
-
 - `maximum-scale`
-
   - : 控制页面允许放大的倍数。设置一个低于 `3` 的值将不具备无障碍访问性。最小值是 `0.1`。最大值是 `10`。默认值为 `1`。负值会被忽略。
-
 - `user-scalable`
-
   - : 控制是否允许页面上的放大和缩小操作。有效值为 `0`、`1`、`yes` 或 `no`。默认值为 `1`，与 `yes` 相同。将值设置为 `0`（即与 `no` 相同）将违反 Web 内容无障碍指南（WCAG）。
-
 - `interactive-widget`
   - : 指定交互式 UI 组件（如虚拟键盘）对页面视口的影响。有效值：`resizes-visual`、`resizes-content` 或 `overlays-content`。默认值：`resizes-visual`。
 
@@ -64,7 +52,7 @@ slug: Web/HTML/Viewport_meta_tag
 
 在高 dpi 屏幕上，初始情况为 `initial-scale=1` 的页面将被浏览器有效放大。它们的文本将是平滑和清晰的，但它们的位图图像可能无法利用全屏幕分辨率。为了在这些屏幕上获得更清晰的图像，网站开发人员可能希望以高于其最终尺寸的比例设计图像——或整个布局，然后使用 CSS 或视口属性将其缩小。
 
-默认的像素比取决于显示器的密度。在密度小于 200dpi 的显示器上，比率是 1.0。在密度介于 200 和 300dpi 之间的显示器上，比率是1.5。对于密度超过 300dpi 的显示器，比率是整数底线（_屏幕密度_/150dpi）。注意，只有当视口比例等于 1 时，默认比例才是真的。否则，CSS 像素和设备像素之间的关系取决于当前的缩放级别。
+默认的像素比取决于显示器的密度。在密度小于 200dpi 的显示器上，比率是 1.0。在密度介于 200 和 300dpi 之间的显示器上，比率是 1.5。对于密度超过 300dpi 的显示器，比率是整数底线（_屏幕密度_/150dpi）。注意，只有当视口比例等于 1 时，默认比例才是真的。否则，CSS 像素和设备像素之间的关系取决于当前的缩放级别。
 
 ## 视口宽度和屏幕宽度
 
@@ -85,17 +73,13 @@ slug: Web/HTML/Viewport_meta_tag
 允许的值为：
 
 - `resizes-visual`
-
-  - : [虚拟视口](/zh-CN/docs/Glossary/Viewport)被交互式组件调整大小。
-
+  - : {{Glossary("visual viewport", "可视视口")}}会被交互式组件调整大小。
 - `resizes-content`
-
-  - : [视口](/zh-CN/docs/Glossary/Viewport)被交互式组件调整大小。
-
+  - : {{Glossary("viewport", "视口")}}会被交互式组件调整大小。
 - `overlays-content`
-  - : [虚拟视口](/zh-CN/docs/Glossary/Viewport)和[视口](/zh-CN/docs/Glossary/Viewport)都不会被交互式组件调整大小。
+  - : {{Glossary("viewport", "视口")}}和{{Glossary("visual viewport", "可视视口")}}都不会被交互式组件调整大小。
 
-当[视口](/zh-CN/docs/Glossary/Viewport)的大小被调整时，初始[布局和包含块](/zh-CN/docs/Web/CSS/Containing_block)的大小也会被调整，从而影响[视口单位](/zh-CN/docs/Web/CSS/length)的计算所得的大小。
+当{{Glossary("viewport", "视口")}}的大小被调整时，初始[布局和包含块](/zh-CN/docs/Web/CSS/Containing_block)的大小也会被调整，从而影响[视口单位](/zh-CN/docs/Web/CSS/length)的计算所得的大小。
 
 ## 移动和平板电脑设备的常见视口大小
 

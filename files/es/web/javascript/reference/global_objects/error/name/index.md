@@ -16,9 +16,9 @@ De forma predeterminada, las instancias {{JSxRef("Error")}} reciben el nombre "E
 ### Lanzar un error personalizado
 
 ```js
-var e = new Error('Entrada mal formada'); // e.name es 'Error'
+var e = new Error("Entrada mal formada"); // e.name es 'Error'
 
-e.name = 'ParseError';
+e.name = "ParseError";
 throw e;
 // e.toString() devolverá 'ParseError: Entrada mal formada'
 ```

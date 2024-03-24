@@ -10,7 +10,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction
 <table class="learn-box standard-table">
  <tbody>
   <tr>
-   <th scope="row">先决条件：</th>
+   <th scope="row">前提：</th>
    <td>熟悉 <a href="/zh-CN/docs/Learn/HTML">HTML</a>, <a href="/zh-CN/docs/Learn/CSS">CSS</a>, 以及 <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言的核心。</td>
   </tr>
   <tr>

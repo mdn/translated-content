@@ -2,7 +2,10 @@
 title: ":placeholder-shown"
 slug: Web/CSS/:placeholder-shown
 ---
-{{CSSRef}}{{SeeCompatTable}}[CSS псевдокласс](/ru/docs/Web/CSS) **`:placeholder-shown`** представляет любой {{htmlElement("input")}} или {{htmlElement("textarea")}} элемент, который отображает в данный момент [текст заполнитель (плейсхолдер)](/ru/docs/Web/HTML/Element/input#attr-placeholder).
+
+{{CSSRef}}{{SeeCompatTable}}
+
+[CSS псевдокласс](/ru/docs/Web/CSS) **`:placeholder-shown`** представляет любой {{htmlElement("input")}} или {{htmlElement("textarea")}} элемент, который отображает в данный момент [текст заполнитель (плейсхолдер)](/ru/docs/Web/HTML/Element/input#placeholder).
 
 ```css
 /* Выбирает любой элемент с активным плейсхолдером */
@@ -22,7 +25,7 @@ slug: Web/CSS/:placeholder-shown
 #### HTML
 
 ```html
-<input placeholder="Type something here!">
+<input placeholder="Type something here!" />
 ```
 
 #### CSS
@@ -59,7 +62,7 @@ input:placeholder-shown {
 #### HTML
 
 ```html
-<input placeholder="Enter something into this field, if you please!">
+<input placeholder="Enter something into this field, if you please!" />
 ```
 
 #### CSS
@@ -89,7 +92,7 @@ input:placeholder-shown {
 #### HTML
 
 ```html
-<input placeholder="Type something here!">
+<input placeholder="Type something here!" />
 ```
 
 #### CSS
@@ -127,17 +130,23 @@ input:placeholder-shown {
 <form id="test">
   <p>
     <label for="name">Enter Student Name:</label>
-    <input id="name" placeholder="Student Name"/>
+    <input id="name" placeholder="Student Name" />
   </p>
   <p>
     <label for="branch">Enter Student Branch:</label>
-    <input id="branch" placeholder="Student Branch"/>
+    <input id="branch" placeholder="Student Branch" />
   </p>
   <p>
     <label for="sid">Enter Student ID:</label>
-    <input type="number" pattern="[0-9]{8}" title="8 digit ID" id="sid" class="studentid" placeholder="8 digit id"/>
+    <input
+      type="number"
+      pattern="[0-9]{8}"
+      title="8 digit ID"
+      id="sid"
+      class="studentid"
+      placeholder="8 digit id" />
   </p>
-  <input type="submit"/>
+  <input type="submit" />
 </form>
 ```
 
@@ -159,7 +168,7 @@ input.studentid:-moz-placeholder {
 
 ```css
 input {
-  background-color: #E8E8E8;
+  background-color: #e8e8e8;
   color: black;
 }
 

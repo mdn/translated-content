@@ -1,6 +1,8 @@
 ---
 title: String.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/String/slice
+l10n:
+  sourceCommit: f3df52530f974e26dd3b14f9e8d42061826dea20
 ---
 
 {{JSRef}}
@@ -11,7 +13,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/slice
 
 ## 構文
 
-```js
+```js-nolint
 slice(indexStart)
 slice(indexStart, indexEnd)
 ```
@@ -47,15 +49,15 @@ slice(indexStart, indexEnd)
 以下の例では、新しい文字列を生成するために `slice()` を使っています。
 
 ```js
-const str1 = 'The morning is upon us.', // the length of str1 is 23.
-      str2 = str1.slice(1, 8),
-      str3 = str1.slice(4, -2),
-      str4 = str1.slice(12),
-      str5 = str1.slice(30);
-console.log(str2);  // OUTPUT: he morn
-console.log(str3);  // OUTPUT: morning is upon u
-console.log(str4);  // OUTPUT: is upon us.
-console.log(str5);  // OUTPUT: ""
+const str1 = "The morning is upon us."; // The length of str1 is 23.
+const str2 = str1.slice(1, 8);
+const str3 = str1.slice(4, -2);
+const str4 = str1.slice(12);
+const str5 = str1.slice(30);
+console.log(str2); // he morn
+console.log(str3); // morning is upon u
+console.log(str4); // is upon us.
+console.log(str5); // ""
 ```
 
 ### 負の位置で slice() を使う
@@ -63,29 +65,29 @@ console.log(str5);  // OUTPUT: ""
 下記の例では負の位置で `slice()` を使っています。
 
 ```js
-const str = 'The morning is upon us.';
-str.slice(-3);     // returns 'us.'
-str.slice(-3, -1); // returns 'us'
-str.slice(0, -1);  // returns 'The morning is upon us'
-str.slice(4, -1);  // returns 'morning is upon us'
+const str = "The morning is upon us.";
+str.slice(-3); // 'us.'
+str.slice(-3, -1); // 'us'
+str.slice(0, -1); // 'The morning is upon us'
+str.slice(4, -1); // 'morning is upon us'
 ```
 
 この例では、文字列の末尾から前方に `11` 番目を開始位置とし、先頭から後方に `16` 番目を終了位置とします。
 
 ```js
-console.log(str.slice(-11, 16)); // => "is u"
+console.log(str.slice(-11, 16)); // "is u"
 ```
 
 こちらは先頭から後方に `11` 番目を開始位置とし、末尾から前方に `7` 番目を終了位置とします。
 
 ```js
-console.log(str.slice(11, -7)); // => " is u"
+console.log(str.slice(11, -7)); // " is u"
 ```
 
 これらの引数は、末尾から前方に `5` 番目を開始位置とし、末尾から前方に `1` 番目を終了位置とします。
 
 ```js
-console.log(str.slice(-5, -1)); // => "n us"
+console.log(str.slice(-5, -1)); // "n us"
 ```
 
 ## 仕様書

@@ -91,7 +91,7 @@ As implementações atuais na maioria dos navegadores removerão da árvore de a
 
 ### Support of `contents`
 
-{{Compat("css.properties.display.contents", 10)}}
+{{Compat}}
 
 ## Veja também
 

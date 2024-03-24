@@ -1,7 +1,6 @@
 ---
 title: Content Editable
 slug: conflicting/Web/HTML/Global_attributes/contenteditable
-original_slug: Web/Guide/HTML/Editable_content
 ---
 
 No HTML5 qualquer elemento pode ser editado. Usando alguns eventos de JavaScript podemos transformar sua web page em um editor de texto completo e rápido. Este artigo fornece algumas informações sobre esta funcionalidade.

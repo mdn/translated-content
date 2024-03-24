@@ -81,19 +81,19 @@ No hay ningún método en un Objeto que sirva para borrar sus propiedades (como 
 
 - {{jsxref("Object.prototype.constructor")}}
   - : Especifica la función que crea el prototipo de un objeto.
-- [`Object.prototype.__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__proto__)
+- [`Object.prototype.__proto__`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
   - : Apunta al objeto que fue usado como prototipo cuando el objeto fue instanciado.
 
 ## Métodos de instancia
 
-- [`Object.prototype.__defineGetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
+- [`Object.prototype.__defineGetter__()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
   - : Asocia una función a una propiedad que, cuando es accedida, ejecuta la función y retorna su valor de retorno.
-- [`Object.prototype.__defineSetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
+- [`Object.prototype.__defineSetter__()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
   - : Asocia una función a una propiedad que, cuando es estipulada, ejecuta la función que modificará dicha propiedad.
-- [`Object.prototype.__lookupGetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)
-  - : Devuelve la función asociada a la propiedad establecida por el método [`Object.prototype.__defineGetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__).
-- [`Object.prototype.__lookupSetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
-  - : Devuelve la función asociada a la propiedad establecida por el método [`Object.prototype.__defineSetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__).
+- [`Object.prototype.__lookupGetter__()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)
+  - : Devuelve la función asociada a la propiedad establecida por el método [`Object.prototype.__defineGetter__()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__).
+- [`Object.prototype.__lookupSetter__()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
+  - : Devuelve la función asociada a la propiedad establecida por el método [`Object.prototype.__defineSetter__()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__).
 - {{jsxref("Object.prototype.hasOwnProperty()")}}
   - : Devuelve un booleano que indica si el objeto contiene una propiedad determinada como una propiedad directa del objeto y que no haya sido heredada a través de la cadena de prototipos.
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
@@ -162,7 +162,7 @@ Object.prototype.valueOf = function () {
     // A pesar de que valueOf() no tome ningún argumento, puede hacerlo.
     return current.apply(this, arguments);
   }
-}
+};
 ```
 
 Ya que JavaScript no tiene exactamente objetos sub-clase, el prototipo sirve para crear objetos que actúen como "clase base" para ciertas funciones que actúan como objetos y así mitigar esta limitación. Por ejemplo:

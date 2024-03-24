@@ -50,7 +50,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/acos
 ## 구문
 
 ```js
-    Math.acos(x)
+Math.acos(x);
 ```
 
 ### 매개변수
@@ -73,12 +73,12 @@ Because `acos()` is a static method of `Math`, you always use it as `Math.acos()
 ### Using `Math.acos()`
 
 ```js
-Math.acos(-2);  // NaN
-Math.acos(-1);  // 3.141592653589793
-Math.acos(0);   // 1.5707963267948966
+Math.acos(-2); // NaN
+Math.acos(-1); // 3.141592653589793
+Math.acos(0); // 1.5707963267948966
 Math.acos(0.5); // 1.0471975511965979
-Math.acos(1);   // 0
-Math.acos(2);   // NaN
+Math.acos(1); // 0
+Math.acos(2); // NaN
 ```
 
 For values less than -1 or greater than 1, `Math.acos()` returns {{jsxref("NaN")}}.

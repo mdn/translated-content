@@ -1,7 +1,6 @@
 ---
-title: 'Document: keyup event'
+title: "Document: keyup event"
 slug: conflicting/Web/API/Element/keyup_event_c3958d9a752bb3f2d72ac974b4e226ea
-original_slug: Web/API/Document/keyup_event
 ---
 
 {{APIRef}}

@@ -32,16 +32,16 @@ var re = /patrón/indicadores;
 o
 
 ```js
-var re = new RegExp('patrón', 'indicadores');
+var re = new RegExp("patrón", "indicadores");
 ```
 
-| Bandera | Descripción                                                                                                                                                    |
-| ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `g`     | Búsqueda global.                                                                                                                                               |
-| i       | Búsqueda que no distingue entre mayúsculas y minúsculas.                                                                                                       |
-| m       | Búsqueda multilínea.                                                                                                                                           |
-| s       | Permite que el punto (`.`) coincida con las nuevas líneas (agregado en ECMAScript 2018)                                                                        |
-| u       | Unicode; trata el patrón como una secuencia de puntos de código Unicode                                                                                        |
+| Bandera | Descripción                                                                                                                                         |
+| ------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `g`     | Búsqueda global.                                                                                                                                    |
+| i       | Búsqueda que no distingue entre mayúsculas y minúsculas.                                                                                            |
+| m       | Búsqueda multilínea.                                                                                                                                |
+| s       | Permite que el punto (`.`) coincida con las nuevas líneas (agregado en ECMAScript 2018)                                                             |
+| u       | Unicode; trata el patrón como una secuencia de puntos de código Unicode                                                                             |
 | y       | Realiza una búsqueda "pegajosa" que coincida a partir de la posición actual en la cadena de destino. Consulta {{jsxref("RegExp.sticky", "sticky")}} |
 
 ## Ejemplos
@@ -68,7 +68,7 @@ let obj = {
 
 ```js example-good
 let obj = {
-  url: '/docs/Web'
+  url: "/docs/Web",
 };
 ```
 

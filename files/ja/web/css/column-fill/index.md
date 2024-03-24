@@ -49,7 +49,7 @@ column-fill: unset;
 
 #### HTML
 
-```html
+```html-nolint
 <p class="fill-auto">
   この段落では、段を 1 つずつ埋めていきます。すべてのテキストが最初の段に収まるので、他の段は空白になります。
 </p>

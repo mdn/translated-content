@@ -37,12 +37,10 @@ Na declaração `if` você deve usar um operador de comparação ("=="), e para 
 
 ```js example-good
 if (Math.PI == 3 || Math.PI == 4) {
-  console.log('de modo algum!');
+  console.log("de modo algum!");
 }
 
-var str = 'Olá, '
-+ 'do '
-+ 'outro lado!';
+var str = "Olá, " + "do " + "outro lado!";
 ```
 
 ## Veja também

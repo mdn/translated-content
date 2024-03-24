@@ -118,7 +118,7 @@ setTimeout(() => {
   console.log(foreverPendingPromise);
 });
 
-// 按顺序打印:
+// 按顺序打印：
 // Promise { <state>: "pending" }
 // 堆栈现在为空
 // Promise { <state>: "pending" }

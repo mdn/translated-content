@@ -60,7 +60,7 @@ slug: Web/HTML/Element/iframe
 
 - `sandbox`
 
-  - : 该属性对呈现在 iframe 框架中的内容启用一些额外的限制条件。属性值可以为空字符串（这种情况下会启用所有限制），也可以是用空格分隔的一系列指定的字符串。有效的值有：
+  - : 控制应用于嵌入在 `<iframe>` 中的内容的限制。该属性的值可以为空以应用所有限制，也可以为空格分隔的标记以解除特定的限制：
 
     - `allow-downloads-without-user-activation` {{experimental_inline}}: 允许在没有征求用户同意的情况下下载文件。
     - `allow-forms`: 允许嵌入的浏览上下文提交表单。如果没有使用该关键字，则无法提交表单。

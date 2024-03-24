@@ -12,8 +12,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/parseInt
 ## 구문
 
 ```js
-Number.parseInt(string)
-Number.parseInt(string, radix)
+Number.parseInt(string);
+Number.parseInt(string, radix);
 ```
 
 ### 매개변수
@@ -21,6 +21,7 @@ Number.parseInt(string, radix)
 - `string`
   - : 파싱할 값입니다. 문자열이 아닐 경우 [`ToString`](https://tc39.es/ecma262/#sec-tostring) 추상 연산을 사용해 문자열로 변환합니다. 문자열의 선행 공백은 무시합니다.
 - `radix` {{optional_inline}}
+
   - : `string`의 진수를 나타내는 `2`부터 `36`까지의 정수입니다.
 
     `radix`를 생략하거나 `0`을 지정한 경우, `string`이 `0x` 또는 `0X`로 시작하는 경우 `16`을 지정한 것으로 취급하고, 그 외의 경우 `10`으로 취급합니다.

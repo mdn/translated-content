@@ -3,7 +3,7 @@ title: Array.prototype.concat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/concat
 ---
 
-{{JSRef("Global_Objects", "Array")}}
+{{JSRef}}
 
 O método **`concat()`** é utilizado para mesclar dois ou mais arrays.
 Esse método não altera os arrays existentes, mas, em vez disso, retorna um novo array.
@@ -81,7 +81,7 @@ const letras = ["a", "b", "c"];
 const alfaNumerico = letras.concat(1, [2, 3]);
 
 console.log(alfaNumerico);
-// resulta em ['a', 'b', 'c' , 1, 2, 3] 
+// resulta em ['a', 'b', 'c' , 1, 2, 3]
 ```
 
 ### Concatenando arrays aninhados

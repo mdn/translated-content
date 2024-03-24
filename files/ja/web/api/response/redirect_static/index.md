@@ -39,7 +39,7 @@ redirect(url, status)
 ## 例
 
 ```js
-Response.redirect('https://www.example.com', 302);
+Response.redirect("https://www.example.com", 302);
 ```
 
 ## 仕様書

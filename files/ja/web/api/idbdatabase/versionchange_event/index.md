@@ -14,8 +14,8 @@ l10n:
 {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドでイベント名を使うか、イベントハンドラープロパティを設定します。
 
 ```js
-addEventListener('versionchange', (event) => { });
-onversionchange = (event) => { };
+addEventListener("versionchange", (event) => {});
+onversionchange = (event) => {};
 ```
 
 ## イベント型
@@ -28,27 +28,28 @@ onversionchange = (event) => { };
 
 ```js
 // データベースを開きます
-const dBOpenRequest = window.indexedDB.open('Nonexistent', 4);
+const dBOpenRequest = window.indexedDB.open("Nonexistent", 4);
 
 dBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
   // このデータベース用の objectStore を作成します
-  const objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
-
-  // objectStore に格納するデータアイテムを定義します
-  objectStore.createIndex('hours', 'hours', { unique: false });
-  objectStore.createIndex('minutes', 'minutes', { unique: false });
-  objectStore.createIndex('day', 'day', { unique: false });
-  objectStore.createIndex('month', 'month', { unique: false });
-  objectStore.createIndex('year', 'year', { unique: false });
-};
-
-dBOpenRequest.addEventListener('success', (event) => {
-  const db = event.target.result;
-  db.addEventListener('versionchange', (event) => {
-    console.log('このデータベースのバージョンが変更されました');
+  const objectStore = db.createObjectStore("toDoList", {
+    keyPath: "taskTitle",
   });
 
+  // objectStore に格納するデータアイテムを定義します
+  objectStore.createIndex("hours", "hours", { unique: false });
+  objectStore.createIndex("minutes", "minutes", { unique: false });
+  objectStore.createIndex("day", "day", { unique: false });
+  objectStore.createIndex("month", "month", { unique: false });
+  objectStore.createIndex("year", "year", { unique: false });
+};
+
+dBOpenRequest.addEventListener("success", (event) => {
+  const db = event.target.result;
+  db.addEventListener("versionchange", (event) => {
+    console.log("このデータベースのバージョンが変更されました");
+  });
 });
 ```
 
@@ -56,25 +57,27 @@ dBOpenRequest.addEventListener('success', (event) => {
 
 ```js
 // データベースを開きます
-const dBOpenRequest = window.indexedDB.open('Nonexistent', 4);
+const dBOpenRequest = window.indexedDB.open("Nonexistent", 4);
 
 dBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
   // このデータベース用の objectStore を作成します
-  const objectStore = db.createObjectStore('toDoList', { keyPath: 'taskTitle' });
+  const objectStore = db.createObjectStore("toDoList", {
+    keyPath: "taskTitle",
+  });
 
   // objectStore に格納するデータアイテムを定義します
-  objectStore.createIndex('hours', 'hours', { unique: false });
-  objectStore.createIndex('minutes', 'minutes', { unique: false });
-  objectStore.createIndex('day', 'day', { unique: false });
-  objectStore.createIndex('month', 'month', { unique: false });
-  objectStore.createIndex('year', 'year', { unique: false });
+  objectStore.createIndex("hours", "hours", { unique: false });
+  objectStore.createIndex("minutes", "minutes", { unique: false });
+  objectStore.createIndex("day", "day", { unique: false });
+  objectStore.createIndex("month", "month", { unique: false });
+  objectStore.createIndex("year", "year", { unique: false });
 };
 
 dBOpenRequest.onsuccess = (event) => {
   const db = event.target.result;
   db.onversionchange = (event) => {
-    console.log('このデータベースのバージョンが変更されました');
+    console.log("このデータベースのバージョンが変更されました");
   };
 };
 ```

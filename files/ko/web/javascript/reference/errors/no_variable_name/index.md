@@ -60,11 +60,12 @@ var second = document.getElementById('two'),
 올바르게 수정한 버전:
 
 ```js example-good
-var x, y = "foo";
+var x,
+  y = "foo";
 var x = "foo";
 
-var first = document.getElementById('one');
-var second = document.getElementById('two');
+var first = document.getElementById("one");
+var second = document.getElementById("two");
 ```
 
 ### 배열
@@ -79,7 +80,7 @@ var arr = 1,2,3,4,5;
 이렇게 해야 맞습니다:
 
 ```js example-good
-var arr = [1,2,3,4,5];
+var arr = [1, 2, 3, 4, 5];
 ```
 
 ## 더 보기

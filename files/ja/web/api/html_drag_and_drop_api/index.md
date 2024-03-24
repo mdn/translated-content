@@ -23,15 +23,15 @@ HTML ドラッグ & ドロップ では {{domxref("Event", "DOM イベントモ�
 
 それぞれの[ドラッグイベントの種類](/ja/docs/Web/API/DragEvent#イベントの種類)には、関連したイベントハンドラーがあります。
 
-| イベント                                             | 発生する条件…                                                                                                                                                                  |
-| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{domxref('HTMLElement/drag_event', 'drag')}}           | …ドラッグ項目（要素や選択テキスト）がドラッグされた場合                                                                                                                        |
-| {{domxref('HTMLElement/dragend_event', 'dragend')}}     | …ドラッグ操作の終了（マウスボタンを離したり、Esc キーを押したりした場合。詳しくは[ドラッグの終了](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragend)を参照。）   |
-| {{domxref('HTMLElement/dragenter_event', 'dragenter')}} | …ドラッグ項目が有効なドロップ対象に入った場合（[ドラッグターゲットの特定](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#droptargets)を参照）                         |
-| {{domxref('HTMLElement/dragleave_event', 'dragleave')}} | …ドラッグ項目が有効なドロップ対象を離れた場合                                                                                                                                  |
-| {{domxref('HTMLElement/dragover_event', 'dragover')}}   | …ドラッグ項目が有効なドロップ対象にドラッグされた場合、数百ミリ秒ごとに                                                                                                        |
-| {{domxref('HTMLElement/dragstart_event', 'dragstart')}} | …ユーザーが項目をドラッグ開始した場合（[ドラッグ操作の開始](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragstart) を参照）                                        |
-| {{domxref('HTMLElement/drop_event', 'drop')}}           | …項目が有効なドロップ対象にドロップされた場合（[ドロップの実行](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#drop) を参照）                                         |
+| イベント                                                | 発生する条件…                                                                                                                                                                |
+| ------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{domxref('HTMLElement/drag_event', 'drag')}}           | …ドラッグ項目（要素や選択テキスト）がドラッグされた場合                                                                                                                      |
+| {{domxref('HTMLElement/dragend_event', 'dragend')}}     | …ドラッグ操作の終了（マウスボタンを離したり、Esc キーを押したりした場合。詳しくは[ドラッグの終了](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragend)を参照。） |
+| {{domxref('HTMLElement/dragenter_event', 'dragenter')}} | …ドラッグ項目が有効なドロップ対象に入った場合（[ドラッグターゲットの特定](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#droptargets)を参照）                       |
+| {{domxref('HTMLElement/dragleave_event', 'dragleave')}} | …ドラッグ項目が有効なドロップ対象を離れた場合                                                                                                                                |
+| {{domxref('HTMLElement/dragover_event', 'dragover')}}   | …ドラッグ項目が有効なドロップ対象にドラッグされた場合、数百ミリ秒ごとに                                                                                                      |
+| {{domxref('HTMLElement/dragstart_event', 'dragstart')}} | …ユーザーが項目をドラッグ開始した場合（[ドラッグ操作の開始](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragstart) を参照）                                      |
+| {{domxref('HTMLElement/drop_event', 'drop')}}           | …項目が有効なドロップ対象にドロップされた場合（[ドロップの実行](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#drop) を参照）                                       |
 
 > **メモ:** `dragstart` と `dragend` イベントは、どちらも OS からブラウザーにファイルをドラッグしたときには発生しません。
 
@@ -97,7 +97,7 @@ function dragstart_handler(ev) {
   ev.dataTransfer.setData("text/html", ev.target.outerHTML);
   ev.dataTransfer.setData(
     "text/uri-list",
-    ev.target.ownerDocument.location.href
+    ev.target.ownerDocument.location.href,
   );
 }
 ```

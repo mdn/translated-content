@@ -1,5 +1,5 @@
 ---
-title: "ARIA: listbox role"
+title: ARIA：listbox 角色
 slug: Web/Accessibility/ARIA/Roles/listbox_role
 ---
 
@@ -9,7 +9,7 @@ slug: Web/Accessibility/ARIA/Roles/listbox_role
 
 `listbox` 角色用于标识创建列表的元素，用户可以从中选择一个或多个静态选项，类似于 HTML {{HTMLElement("select")}} 元素。与 {{HTMLElement("select")}} 不同，`listbox` 可以包含图像。`listbox` 的每个子项都应该有一个 [`option`](https://www.w3.org/TR/2010/WD-wai-aria-20100916/roles#option) role。
 
-强烈建议使用 HTML {{HTMLElement("select")}} 元素，如果只能选择一个选项，则使用一组单选按钮，如果可以选择多个选项，则使用一组复选框，因为有很多键盘交互来管理所有后代的焦点和原生 HTML 元素为您提供相关的功能。
+强烈建议使用 HTML {{HTMLElement("select")}} 元素，如果只能选择一个选项，则使用一组单选按钮，如果可以选择多个选项，则使用一组复选框，因为有很多键盘交互来管理所有后代的焦点和原生 HTML 元素为你提供相关的功能。
 
 具有 `listbox` 角色的元素含有隐式的 `aria-orientation` 和 `vertical` 值。
 
@@ -139,7 +139,7 @@ slug: Web/Accessibility/ARIA/Roles/listbox_role
 2. 更改选项的外观以反映其选定状态
 3. 将列表框上的 aria-activedescendant 值更新为用户刚刚与之交互的选项的 id，即使他们将选项切换为取消选择。
 
-> **备注：** ARIA 使用的第一原则是您可以使用具有内置语义和行为的原生功能，而不是重新利用元素并**添加** ARIA 角色、状态或属性使其可访问。含有后代 {{HTMLElement("option")}} 元素的 {{HTMLElement("select")}} 元素带有所有需要的交互的原生处理方法。
+> **备注：** ARIA 使用的第一原则是你可以使用具有内置语义和行为的原生功能，而不是重新利用元素并**添加** ARIA 角色、状态或属性使其可访问。含有后代 {{HTMLElement("option")}} 元素的 {{HTMLElement("select")}} 元素带有所有需要的交互的原生处理方法。
 
 ## 例子
 
@@ -201,10 +201,6 @@ slug: Web/Accessibility/ARIA/Roles/listbox_role
 
 {{Specifications}}
 
-## 屏幕阅读器支持
-
-TBD
-
 ## 参见
 
 - {{HTMLElement("select")}} 元素
@@ -217,4 +213,10 @@ TBD
 - [ARIA Best Practices – Listbox](https://www.w3.org/TR/wai-aria-practices/#Listbox)
 - [ARIA Role Model – Listbox](https://www.w3.org/TR/wai-aria-1.1/#listbox)
 
-<section id="Quick_links"><ol><li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/zh-CN/docs/Web/Accessibility/ARIA/Roles")}}</li></ol></section>
+<section id="Quick_links">
+
+1. [**WAI-ARIA 角色**](/zh-CN/docs/Web/Accessibility/ARIA/Roles)
+
+   {{ListSubpagesForSidebar("/zh-CN/docs/Web/Accessibility/ARIA/Roles")}}
+
+</section>

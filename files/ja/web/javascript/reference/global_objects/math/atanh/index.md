@@ -63,7 +63,7 @@ Math.atanh =
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Math.atanh")}}
+{{Compat}}
 
 ## 関連情報
 

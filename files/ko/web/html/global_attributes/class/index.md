@@ -9,8 +9,6 @@ slug: Web/HTML/Global_attributes/class
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-class.html","tabbed-standard")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
-
 명세서가 클래스의 명칭에 대한 요구사항을 제시하지는 않았지만, 웹 개발자는 해당 요소의 표시 방식보다는 요소의 의미와 목적을 설명하는 명칭을 사용하는 것이 좋습니다. 예를 들어, 클래스 특성을 가진 어떤 요소가 기울임꼴로 나타난다 하더라도, 클래스 이름은 "기울임꼴"을 설명하는 것이 아니라 요소를 설명하는 것입니다. 의미를 가진 이름은 해당 페이지의 표현 방식이 바뀌더라도 논리성을 잃지 않습니다.
 
 ## 명세

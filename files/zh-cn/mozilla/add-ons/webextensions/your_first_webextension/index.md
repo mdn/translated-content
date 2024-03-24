@@ -70,7 +70,7 @@ cd borderify
 
 在“borderify”目录下直接创建“icons”目录，并在“icons”目录下保存一个名为“border-48.png”的图标。你可以使用[我们示例](https://github.com/mdn/webextensions-examples/blob/main/borderify/icons/border-48.png)中的图标，来自谷歌 Material Design 的图标库，遵循 [Creative Commons Attribution-ShareAlike](http://creativecommons.org/licenses/by-sa/3.0/) 协议。
 
-如果您选择使用自己的图标，它也应该是 48×48 像素的。你也可以为高分辨率显示器提供一个 96x96 的像素图标，在 manifest.json 的 `icons` 对象中添加 `96` 属性即可：
+如果你选择使用自己的图标，它也应该是 48×48 像素的。你也可以为高分辨率显示器提供一个 96x96 的像素图标，在 manifest.json 的 `icons` 对象中添加 `96` 属性即可：
 
 ```json
 "icons": {

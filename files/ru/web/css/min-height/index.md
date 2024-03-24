@@ -2,6 +2,7 @@
 title: min-height
 slug: Web/CSS/min-height
 ---
+
 {{CSSRef}}
 
 Свойство [CSS](/ru/docs/Web/CSS) **`min-height`** устанавливает минимальную высоту элемента. Оно предотвращает [используемое значение](/ru/docs/Web/CSS/used_value) свойства {{ Cssxref("height") }} от становления меньше, чем значение, указанное для `min-height`.
@@ -13,17 +14,17 @@ slug: Web/CSS/min-height
 ## Синтаксис
 
 ```css
+/* Ключевые слова */
+min-height: max-content;
+min-height: min-content;
+min-height: fit-content;
+min-height: fill-available;
+
 /* <length> значения */
 min-height: 3.5em;
 
 /* <percentage> значения */
 min-height: 10%;
-
-/* Значения-ключевые слова */
-min-height: max-content;
-min-height: min-content;
-min-height: fit-content;
-min-height: fill-available;
 
 /* Глобальные значения */
 min-height: inherit;
@@ -61,9 +62,13 @@ min-height: unset;
 ## Примеры
 
 ```css
-table { min-height: 75%; }
+table {
+  min-height: 75%;
+}
 
-form { min-height: 0; }
+form {
+  min-height: 0;
+}
 ```
 
 ## Спецификации
@@ -72,7 +77,7 @@ form { min-height: 0; }
 
 {{cssinfo}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

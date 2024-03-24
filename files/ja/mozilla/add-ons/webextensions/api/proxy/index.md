@@ -137,7 +137,7 @@ browser.runtime.onMessage.addListener(handleMessage);
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.proxy")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

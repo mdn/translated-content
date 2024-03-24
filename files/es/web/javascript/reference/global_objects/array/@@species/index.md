@@ -34,7 +34,9 @@ In a derived collection object (e.g. your custom array `MyArray`), the `MyArray`
 ```js
 class MyArray extends Array {
   // Overwrite MyArray species to the parent Array constructor
-  static get [Symbol.species]() { return Array; }
+  static get [Symbol.species]() {
+    return Array;
+  }
 }
 ```
 

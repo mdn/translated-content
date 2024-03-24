@@ -94,31 +94,31 @@ Não é parte de nenhum padrão.
 
 ### `::-webkit-scrollbar`
 
-{{Compat("css.selectors.-webkit-scrollbar")}}
+{{Compat}}
 
 ### `::-webkit-scrollbar-button`
 
-{{Compat("css.selectors.-webkit-scrollbar-button")}}
+{{Compat}}
 
 ### `::-webkit-scrollbar-thumb`
 
-{{Compat("css.selectors.-webkit-scrollbar-thumb")}}
+{{Compat}}
 
 ### `::-webkit-scrollbar-track`
 
-{{Compat("css.selectors.-webkit-scrollbar-track")}}
+{{Compat}}
 
 ### `::-webkit-scrollbar-track-piece`
 
-{{Compat("css.selectors.-webkit-scrollbar-track-piece")}}
+{{Compat}}
 
 ### `::-webkit-scrollbar-corner`
 
-{{Compat("css.selectors.-webkit-scrollbar-corner")}}
+{{Compat}}
 
 ### `::-webkit-resizer`
 
-{{Compat("css.selectors.-webkit-resizer")}}
+{{Compat}}
 
 ## Veja Também
 

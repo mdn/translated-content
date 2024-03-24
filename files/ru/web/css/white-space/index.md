@@ -10,7 +10,7 @@ slug: Web/CSS/white-space
 ## Сводка
 
 ```css
-/* Ключевые значения */
+/* Ключевые слова */
 white-space: normal;
 white-space: nowrap;
 white-space: pre;
@@ -77,8 +77,8 @@ code {
 
 ```css
 pre {
-  word-wrap: break-word;      /* IE 5.5-7 */
-  white-space: pre-wrap;      /* текущие браузеры */
+  word-wrap: break-word; /* IE 5.5-7 */
+  white-space: pre-wrap; /* текущие браузеры */
 }
 ```
 
@@ -86,6 +86,6 @@ pre {
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}

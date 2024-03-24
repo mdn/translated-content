@@ -29,13 +29,13 @@ TypeError(Ошибка Типа): 'callee' и 'caller' (не может быть
 {{jsxref("Function.caller")}} и [`arguments.callee.caller`](/ru/docs/Web/JavaScript/Reference/Functions/arguments/callee) являются устаревшими (Дополнительные сведения см. в справочных статьях).
 
 ```js example-bad
-'use strict';
+"use strict";
 
 function myFunc() {
   if (myFunc.caller == null) {
-    return 'The function was called from the top!';
+    return "The function was called from the top!";
   } else {
-    return 'This function\'s caller was ' + myFunc.caller;
+    return "This function's caller was " + myFunc.caller;
   }
 }
 
@@ -49,19 +49,23 @@ myFunc();
 {{jsxref("Function.arguments")}} является устаревшим (Дополнительные сведения см. в справочной статье).
 
 ```js example-bad
-'use strict';
+"use strict";
 
-function f(n) { g(n - 1); }
+function f(n) {
+  g(n - 1);
+}
 
 function g(n) {
-  console.log('before: ' + g.arguments[0]);
-  if (n > 0) { f(n); }
-  console.log('after: ' + g.arguments[0]);
+  console.log("before: " + g.arguments[0]);
+  if (n > 0) {
+    f(n);
+  }
+  console.log("after: " + g.arguments[0]);
 }
 
 f(2);
 
-console.log('returned: ' + g.arguments);
+console.log("returned: " + g.arguments);
 // Warning: ReferenceError: использование устаревших аргументов
 ```
 

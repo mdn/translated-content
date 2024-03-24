@@ -7,7 +7,7 @@ slug: Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Load_the_assets_and_print_them_on_screen", "Games/Workflows/2D_Breakout_game_Phaser/Physics")}}
 
-这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser) 16 的**第 4 步**。在[Gamedev-Phaser-Content-Kit / demos / lesson04.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson04.html)完成本课后，您可以找到源代码。
+这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Workflows/2D_Breakout_game_Phaser) 16 的**第 4 步**。在[Gamedev-Phaser-Content-Kit / demos / lesson04.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson04.html)完成本课后，你可以找到源代码。
 
 我们在屏幕上打印了我们的蓝色球，但它什么都不做，这样做会很酷。本文介绍如何做到这一点。
 
@@ -26,7 +26,7 @@ function update() {
 
 ## 比较你的代码
 
-您可以在下面的现场演示中查看本课程的完成代码，并使用它来更好地了解它的工作原理：
+你可以在下面的现场演示中查看本课程的完成代码，并使用它来更好地了解它的工作原理：
 
 {{JSFiddleEmbed("https://jsfiddle.net/end3r/g1cfp0vv/","","400")}}
 

@@ -76,14 +76,14 @@ provista por su propiedad {{jsxref("Collator.prototype.compare", "compare")}}.
 
 ```js
 // La letra "a" va antes que "c" por lo que entrega un valor negativo
-'a'.localeCompare('c'); // -2 o -1 (o cualquier otro valor negativo)
+"a".localeCompare("c"); // -2 o -1 (o cualquier otro valor negativo)
 
 // Alfabéticamente la palabra "check" va después que "against" por lo que resulta
 // en un valor positivo.
-'check'.localeCompare('against'); // 2 o 1 (u otro valor positivo)
+"check".localeCompare("against"); // 2 o 1 (u otro valor positivo)
 
 // "a" y "a" son equivalentes por lo que resulta en un valor neutral de cero.
-'a'.localeCompare('a'); // 0
+"a".localeCompare("a"); // 0
 ```
 
 ### Ordenar un arreglo
@@ -92,8 +92,8 @@ provista por su propiedad {{jsxref("Collator.prototype.compare", "compare")}}.
 minúsculas.
 
 ```js
-let items = ['réservé', 'Premier', 'Cliché', 'communiqué', 'café', 'Adieu'];
-items.sort((a, b) => a.localeCompare(b, 'fr', { ignorePunctuation: true }));
+let items = ["réservé", "Premier", "Cliché", "communiqué", "café", "Adieu"];
+items.sort((a, b) => a.localeCompare(b, "fr", { ignorePunctuation: true }));
 // ['Adieu', 'café', 'Cliché', 'communiqué', 'Premier', 'réservé']
 ```
 
@@ -109,9 +109,9 @@ verifica si se lanza una excepción {{jsxref("RangeError")}}:
 ```js
 function localeCompareSupportsLocales() {
   try {
-    'foo'.localeCompare('bar', 'i');
+    "foo".localeCompare("bar", "i");
   } catch (e) {
-    return e.name === 'RangeError';
+    return e.name === "RangeError";
   }
   return false;
 }
@@ -125,8 +125,8 @@ se debe asegurar de especificar dicho lenguaje (y posiblemente algunos lenguajes
 por defecto) usando el argumento `locales`:
 
 ```js
-console.log('ä'.localeCompare('z', 'de')); // un valor negativo: en alemán, ä se ordena antes que z
-console.log('ä'.localeCompare('z', 'sv')); // un valor positivo: en sueco, ä se ordena después que z
+console.log("ä".localeCompare("z", "de")); // un valor negativo: en alemán, ä se ordena antes que z
+console.log("ä".localeCompare("z", "sv")); // un valor positivo: en sueco, ä se ordena después que z
 ```
 
 ### Uso de `options`
@@ -136,23 +136,23 @@ argumento `options`:
 
 ```js
 // en alemán, ä tiene a a como letra base
-console.log('ä'.localeCompare('a', 'de', { sensitivity: 'base' })); // 0
+console.log("ä".localeCompare("a", "de", { sensitivity: "base" })); // 0
 
 // en sueco, ä y a son letras base separadas
-console.log('ä'.localeCompare('a', 'sv', { sensitivity: 'base' })); // un valor positivo
+console.log("ä".localeCompare("a", "sv", { sensitivity: "base" })); // un valor positivo
 ```
 
 ### Ordenamiento numérico
 
 ```js
 // por defecto, "2" > "10"
-console.log('2'.localeCompare('10')); // 1
+console.log("2".localeCompare("10")); // 1
 
 // numérico usando options:
-console.log('2'.localeCompare('10', undefined, { numeric: true })); // -1
+console.log("2".localeCompare("10", undefined, { numeric: true })); // -1
 
 // numérico usando la etiqueta de locales:
-console.log('2'.localeCompare('10', 'en-u-kn-true')); // -1
+console.log("2".localeCompare("10", "en-u-kn-true")); // -1
 ```
 
 ## Especificaciones

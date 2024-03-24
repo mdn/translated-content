@@ -3,7 +3,7 @@ title: 字串
 slug: Web/JavaScript/Reference/Global_Objects/String
 ---
 
-{{JSRef("Global_Objects", "String")}}
+{{JSRef}}
 
 **`String`** 全域物件為字串的構造函數，或是一個字符序列。
 

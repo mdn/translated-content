@@ -1,8 +1,9 @@
 ---
-title: Cache.add()
+title: "Cache: add() メソッド"
+short-title: add()
 slug: Web/API/Cache/add
 l10n:
-  sourceCommit: dcc90b47b1a262061dfc980db59e6254527ad48c
+  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
 {{APIRef("Service Workers API")}}

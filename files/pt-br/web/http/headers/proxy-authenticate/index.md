@@ -52,7 +52,7 @@ Proxy-Authenticate: Basic realm="Access to the internal site"
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Proxy-Authenticate")}}
+{{Compat}}
 
 ## Veja também
 

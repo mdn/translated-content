@@ -33,21 +33,21 @@ str.indexOf(searchValue[, fromIndex])
 문자열 내에 있는 문자들은 왼쪽에서 오른쪽 방향으로 순번이 매겨집니다. 제일 처음 문자는 0번째 순번(index)이며, `stringName` 문자열의 마지막 문자의 순번 `stringName.length -1` 입니다.
 
 ```js
-'Blue Whale'.indexOf('Blue');     // returns  0
-'Blue Whale'.indexOf('Blute');    // returns -1
-'Blue Whale'.indexOf('Whale', 0); // returns  5
-'Blue Whale'.indexOf('Whale', 5); // returns  5
-'Blue Whale'.indexOf('Whale', 7); // returns -1
-'Blue Whale'.indexOf('');         // returns  0
-'Blue Whale'.indexOf('', 9);      // returns  9
-'Blue Whale'.indexOf('', 10);     // returns 10
-'Blue Whale'.indexOf('', 11);     // returns 10
+"Blue Whale".indexOf("Blue"); // returns  0
+"Blue Whale".indexOf("Blute"); // returns -1
+"Blue Whale".indexOf("Whale", 0); // returns  5
+"Blue Whale".indexOf("Whale", 5); // returns  5
+"Blue Whale".indexOf("Whale", 7); // returns -1
+"Blue Whale".indexOf(""); // returns  0
+"Blue Whale".indexOf("", 9); // returns  9
+"Blue Whale".indexOf("", 10); // returns 10
+"Blue Whale".indexOf("", 11); // returns 10
 ```
 
 `indexOf()` 메서드는 대소문자를 구분합니다. 예를 들면, 아래 예제는 일치하는 문자열이 없으므로 `-1`을 반환합니다.
 
 ```js
-'Blue Whale'.indexOf('blue'); // returns -1
+"Blue Whale".indexOf("blue"); // returns -1
 ```
 
 ### 존재 여부 확인
@@ -55,8 +55,8 @@ str.indexOf(searchValue[, fromIndex])
 '0'을 평가했을 때 `true`가 아니고, -1을 평가했을 때 `false`가 아닌 것에 주의해야 합니다. 따라서, 임의의 문자열에 특정 문자열이 있는지를 확인하는 올바른 방법은 다음과 같습니다.
 
 ```js
-'Blue Whale'.indexOf('Blue') !== -1; // true
-'Blue Whale'.indexOf('Bloe') !== -1; // false
+"Blue Whale".indexOf("Blue") !== -1; // true
+"Blue Whale".indexOf("Bloe") !== -1; // false
 ```
 
 ## 예제
@@ -66,16 +66,24 @@ str.indexOf(searchValue[, fromIndex])
 아래 예제는 `"Brave new world"` 문자열의 위치를 확인하기 위해 `indexOf()`와 {{jsxref("String.prototype.lastIndexOf()", "lastIndexOf()")}} 를 사용하고 있습니다.
 
 ```js
-var anyString = 'Brave new world';
+var anyString = "Brave new world";
 
-console.log('The index of the first w from the beginning is ' + anyString.indexOf('w'));
+console.log(
+  "The index of the first w from the beginning is " + anyString.indexOf("w"),
+);
 // 첫번째 w 문자 위치는 8
-console.log('The index of the first w from the end is ' + anyString.lastIndexOf('w'));
+console.log(
+  "The index of the first w from the end is " + anyString.lastIndexOf("w"),
+);
 // 마지막 w 문자 위치는 10
 
-console.log('The index of "new" from the beginning is ' + anyString.indexOf('new'));
+console.log(
+  'The index of "new" from the beginning is ' + anyString.indexOf("new"),
+);
 // 첫번째 new 문자열 위치는 6
-console.log('The index of "new" from the end is ' + anyString.lastIndexOf('new'));
+console.log(
+  'The index of "new" from the end is ' + anyString.lastIndexOf("new"),
+);
 // 마지막 new 문자열 위치는 6
 ```
 
@@ -84,12 +92,14 @@ console.log('The index of "new" from the end is ' + anyString.lastIndexOf('new')
 아래 예제에서는 2개의 문자열 변수를 정의하고 있습니다. 이 변수들 내에 있는 문자열들은 모두 같지만 두 번째 변수에 포함되어 있는 문자열은 대문자를 포함하고 있습니다. 첫 번째 {{domxref("console.log()")}} 메서드의 결과값은 19입니다. 하지만, 두 번째 `console.log()` 메서드의 결과값은 `-1`입니다. 왜냐하면, indexOf() 메서드는 대소문자를 구분하기 때문에 `myCapString`에서 "`cheddar`" 문자열을 찾을 수 없기 때문입니다.
 
 ```js
-var myString    = 'brie, pepper jack, cheddar';
-var myCapString = 'Brie, Pepper Jack, Cheddar';
+var myString = "brie, pepper jack, cheddar";
+var myCapString = "Brie, Pepper Jack, Cheddar";
 
-console.log('myString.indexOf("cheddar") is ' + myString.indexOf('cheddar'));
+console.log('myString.indexOf("cheddar") is ' + myString.indexOf("cheddar"));
 // 로그에 19를 출력합니다.
-console.log('myCapString.indexOf("cheddar") is ' + myCapString.indexOf('cheddar'));
+console.log(
+  'myCapString.indexOf("cheddar") is ' + myCapString.indexOf("cheddar"),
+);
 // 로그에 -1을 출력합니다.
 ```
 
@@ -98,13 +108,13 @@ console.log('myCapString.indexOf("cheddar") is ' + myCapString.indexOf('cheddar'
 아래 예제는 `str` 문자열에서 `e` 문자의 총 숫자를 확인하는 프로그램입니다:
 
 ```js
-var str = 'To be, or not to be, that is the question.';
+var str = "To be, or not to be, that is the question.";
 var count = 0;
-var pos = str.indexOf('e'); //pos는 4의 값을 가집니다.
+var pos = str.indexOf("e"); //pos는 4의 값을 가집니다.
 
 while (pos !== -1) {
   count++;
-  pos = str.indexOf('e', pos + 1); // 첫 번째 e 이후의 인덱스부터 e를 찾습니다.
+  pos = str.indexOf("e", pos + 1); // 첫 번째 e 이후의 인덱스부터 e를 찾습니다.
 }
 
 console.log(count); // 로그에 4를 출력합니다.

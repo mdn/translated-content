@@ -2,6 +2,7 @@
 title: Reflect.construct()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/construct
 ---
+
 {{JSRef}}
 
 **`Reflect.construct()`** 정적 메서드는 [`new` 연산자](/ko/docs/Web/JavaScript/Reference/Operators/new)처럼 동작하는 함수입니다. `new target(...args)`를 호출하는 것과 같습니다. 추가 기능으로 다른 프로토타입을 지정할 수도 있습니다.
@@ -46,11 +47,11 @@ var obj = Reflect.construct(Foo, args);
 
 ```js
 function OneClass() {
-    this.name = 'one';
+  this.name = "one";
 }
 
 function OtherClass() {
-    this.name = 'other';
+  this.name = "other";
 }
 
 // Calling this:
@@ -76,12 +77,12 @@ console.log(obj2 instanceof OtherClass); // true
 
 ```js
 function OneClass() {
-    console.log('OneClass');
-    console.log(new.target);
+  console.log("OneClass");
+  console.log(new.target);
 }
 function OtherClass() {
-    console.log('OtherClass');
-    console.log(new.target);
+  console.log("OtherClass");
+  console.log(new.target);
 }
 
 var obj1 = Reflect.construct(OneClass, args);

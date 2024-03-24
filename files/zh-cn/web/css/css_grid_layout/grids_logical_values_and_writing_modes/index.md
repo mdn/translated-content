@@ -9,7 +9,7 @@ slug: Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes
 
 ## 逻辑属性与物理属性及逻辑值与物理值
 
-CSS 中布满了**物理**位置的关键字 —— left 和 right，top 和 bottom。当使用绝对位置来定位项目时，就要使项目围绕上用物理关键字描述的偏移量。在下面的代码片断中，项目被定位到距容器顶部 20 像素，并且距容器左侧 30 像素：
+CSS 中布满了**物理**位置的关键字——left 和 right，top 和 bottom。当使用绝对位置来定位项目时，就要使项目围绕上用物理关键字描述的偏移量。在下面的代码片断中，项目被定位到距容器顶部 20 像素，并且距容器左侧 30 像素：
 
 ```css
 .container {
@@ -62,7 +62,7 @@ CSS 中布满了**物理**位置的关键字 —— left 和 right，top 和 bot
 - `sideways-rl`
 - `sideways-lr`
 
-属性值 `horizontal-tb` 是 web 上显示文本的默认效果，也就是你现在正在阅读的这篇文章的方向，其他的属性值将会改变文字的流动方向，能匹配世界各地不同的书写模式，这些细节你都可以在 [Jen 的文章](https://24ways.org/2016/css-writing-modes/)中看到。下面用两个段落展示一个简单的例子，第一个段落使用默认的 `horizontal-tb`，第二个段落使用 `vertical-rl`，这种模式下文本仍然从左到右排列，不过文本的方向却是垂直的 —— 现在行内文本是从页面的顶部到底部向下流动的。
+属性值 `horizontal-tb` 是 web 上显示文本的默认效果，也就是你现在正在阅读的这篇文章的方向，其他的属性值将会改变文字的流动方向，能匹配世界各地不同的书写模式，这些细节你都可以在 [Jen 的文章](https://24ways.org/2016/css-writing-modes/)中看到。下面用两个段落展示一个简单的例子，第一个段落使用默认的 `horizontal-tb`，第二个段落使用 `vertical-rl`，这种模式下文本仍然从左到右排列，不过文本的方向却是垂直的——现在行内文本是从页面的顶部到底部向下流动的。
 
 ```css hidden
 .wrapper > p {

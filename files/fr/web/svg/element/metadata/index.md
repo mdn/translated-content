@@ -20,7 +20,7 @@ L'élément [SVG](/fr/docs/Web/SVG) **`<metadata>`** permet d'ajouter des metado
 
 ### Attributs spécifiques
 
-_Aucun_
+_Aucun._
 
 ## Interface DOM
 

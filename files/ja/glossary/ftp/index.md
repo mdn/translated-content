@@ -1,13 +1,17 @@
 ---
 title: FTP
 slug: Glossary/FTP
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-**FTP** (File Transfer Protocol、ファイル転送プロトコル) は、ある{{glossary("host","ホスト")}}から別のホストに、インターネットを介してファイルを転送するための長年の標準的な{{glossary("protocol","プロトコル")}}でした。しかし、チームやホスティングアカウントは FTP を許可せず、代わりに Git などのバージョン管理システムに依存することが増えています。古いホスティングアカウントでも使用されていますが、もはや FTP はベストプラクティスとは見なされていないと言っても過言ではありません。
+{{GlossarySidebar}}
 
-## もっと学ぶ
+**FTP** (File Transfer Protocol、ファイル転送プロトコル) は安全ではない{{glossary("protocol", "プロトコル")}}で、ある{{glossary("host","ホスト")}}から別のホストに、インターネットを介してファイルを転送するためのものです。
 
-### 一般知識
+長年の間、ファイルを転送する事実上の標準的な方法でしたが、本質的に安全ではないため、多くのホスティングアカウントでは対応しなくなりました。代わりに、 SFTP （FTP の安全な暗号化バージョン）または SSH 経由で Rsync のようなファイルを転送するための別の安全な方法を使用する必要があります。
 
-- [FTP を介してファイルをアップロードする初心者向けのガイド](/ja/docs/Learn/Common_questions/Upload_files_to_a_web_server)
-- Wikipedia の [FTP](https://ja.wikipedia.org/wiki/File_Transfer_Protocol) 記事
+## 関連情報
+
+- [FTP を介してファイルをアップロードする初心者向けのガイド](/ja/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)
+- [FTP](https://ja.wikipedia.org/wiki/File_Transfer_Protocol) （ウィキペディア）

@@ -1,15 +1,17 @@
 ---
-title: Java で WebSocket サーバーを記述する
+title: Java による WebSocket サーバーの記述
 slug: Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java
+l10n:
+  sourceCommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
 ---
 
-## はじめに
+{{DefaultAPISidebar("Websockets API")}}
 
 この例では、Oracle Java を使用して WebSocket API サーバーを作成する方法を示します。
 
 他のサーバーサイドの言語を使用して WebSocket サーバーを作成することもできますが、この例では Oracle Java を使用してサンプルコードを簡略化しています。
 
-このサーバーは [RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455rfc6455) に準拠しているため、 Chrome バージョン 16、Firefox 11、IE 10 以降の接続のみを処理します。
+このサーバーは [RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455) に準拠しているため、 Chrome バージョン 16、Firefox 11、IE 10 以降の接続のみを処理します。
 
 ## 最初のステップ
 
@@ -17,9 +19,7 @@ WebSocket は [TCP (伝送制御プロトコル)](http://en.wikipedia.org/wiki/T
 
 ### ServerSocket
 
-コンストラクター:
-
-ServerSocket`(int port)`
+`ServerSocket` コンストラクターは、単一の引数 `port` を `int` 型で取ります。
 
 ServerSocket クラスをインスタンス化すると、port 引数で指定したポート番号にバインドされます。
 
@@ -42,23 +42,19 @@ public class WebSocket {
   public static void main(String[] args) throws IOException, NoSuchAlgorithmException {
     ServerSocket server = new ServerSocket(80);
     try {
-      System.out.println("Server has started on 127.0.0.1:80.\r\nWaiting for a connection...");
+      System.out.println("Server has started on 127.0.0.1:80.\r\nWaiting for a connection…");
       Socket client = server.accept();
       System.out.println("A client connected.");
 ```
 
-### Socket
+### Socket のメソッド
 
-メソッド:
-
-- `java.net.`[Socket](https://docs.oracle.com/javase/jp/8/docs/api/java/net/Socket.html) `getInputStream()`
+- `java.net.Socket.getInputStream()`
   このソケットの入力ストリームを返します。
-- `java.net.`[Socket](https://docs.oracle.com/javase/jp/8/docs/api/java/net/Socket.html) `getOutputStream`
+- `java.net.Socket.getOutputStream()`
   このソケットの出力ストリームを返します。
 
-### OutputStream
-
-メソッド:
+### OutputStream のメソッド
 
 ```java
 write(byte[] b, int off, int len)
@@ -66,11 +62,9 @@ write(byte[] b, int off, int len)
 
 指定された byte 配列からオフセット `off` で始まる `len` バイトをこの出力ストリームに書き込みます。
 
-### InputStream
+### InputStream のメソッド
 
-メソッド:
-
-```cpp
+```java
 read(byte[] b, int off, int len)
 ```
 
@@ -122,24 +116,24 @@ if (get.find()) {
 
 "abcdef" を送信すると、次のバイトが得られます。
 
-```
+```plain
 129 134 167 225 225 210 198 131 130 182 194 135
 ```
 
-\- 129:
+- 129:
 
-| FIN (これがメッセージ全体であるかどうか) | RSV1 | RSV2 | RSV3 | Opcode   |
-| -------------------------------- | ---- | ---- | ---- | -------- |
-| 1                                | 0    | 0    | 0    | 0x1=0001 |
+  | FIN (これがメッセージ全体であるかどうか) | RSV1 | RSV2 | RSV3 | Opcode   |
+  | ---------------------------------------- | ---- | ---- | ---- | -------- |
+  | 1                                        | 0    | 0    | 0    | 0x1=0001 |
 
-FIN: メッセージをフレームで送ることができますが、単純化します。
-Opcode _0x1_ はテキストであることを意味します。 [Opcode の完全なリスト](https://datatracker.ietf.org/doc/html/rfc6455#section-5.2)
+  FIN: メッセージをフレームで送ることができますが、単純化します。
+  Opcode _0x1_ はテキストであることを意味します。 [Opcode の完全なリスト](https://datatracker.ietf.org/doc/html/rfc6455#section-5.2)
 
-\- 134:
+  - 134:
 
-2 番目のバイトから 128 を引いた値が 0 〜 125 の場合、これはメッセージの長さです。 126 の場合は、次の 2 バイト (16 ビット符号なし整数)、127 の場合、次の 8 バイト (64 ビット符号なし整数、最上位ビットは 0 でなければならない) が長さです。
+  2 番目のバイトから 128 を引いた値が 0 〜 125 の場合、これはメッセージの長さです。 126 の場合は、次の 2 バイト (16 ビット符号なし整数)、127 の場合、次の 8 バイト (64 ビット符号なし整数、最上位ビットは 0 でなければならない) が長さです。
 
-> **メモ:** 最初のビットは常に 1 なので、 128 を取ることができます。
+  > **メモ:** 最初のビットは常に 1 なので、 128 を取ることができます。
 
 - 167、225、225、および 210 はデコードするキーのバイトです。それは毎回変わります。
 

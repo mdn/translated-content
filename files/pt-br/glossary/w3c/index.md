@@ -3,6 +3,8 @@ title: W3C
 slug: Glossary/W3C
 ---
 
+{{GlossarySidebar}}
+
 O Consórcio da Rede Mundial (tradução livre de _World Wide Web Consortium_), ou simplesmente W3C é uma sociedade internacional que mantém as regras e frameworks {{Glossary("World Wide Web", "relacionadas à Web")}}
 
 Consiste de mais de 350 membros e organizações que, conjuntamente, desenvolvem a padronização da Internet, coordenam programas de divulgação, e mantém um fórum aberto para falar de Internet. O W3C coordena empresas na indústria para certificar que elas implementam os mesmos padrões da W3C.

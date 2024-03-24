@@ -21,13 +21,13 @@ l10n:
 
 ```js
 const options = {
-  body: 'Do you like my body?',
-  data: 'I like peas.'
-}
+  body: "Do you like my body?",
+  data: "I like peas.",
+};
 
-const n = new Notification('Test notification',options);
+const n = new Notification("Test notification", options);
 
-console.log(n.data) // should return 'I like peas.'
+console.log(n.data); // should return 'I like peas.'
 ```
 
 ## 仕様書

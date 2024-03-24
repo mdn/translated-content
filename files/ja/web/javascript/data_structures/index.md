@@ -39,15 +39,15 @@ console.log(result); // 421
 
 [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) と [`undefined`](/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined) を除くすべてのプリミティブ型には、対応するオブジェクトラッパー型があり、そのオブジェクトはプリミティブ値の操作を行うために有用なメソッドを提供しています。例えば、[`Number`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number) オブジェクトは [`toExponential()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/toExponential) などのメソッドを提供しています。プリミティブ値に対してプロパティでアクセスすると、JavaScript は自動的に値を対応するラッパーオブジェクトにラップし、代わりにそのオブジェクトのプロパティにアクセスします。しかし、`null` や `undefined` のプロパティにアクセスすると `TypeError` 例外が発生するため、[オプショナルチェーン](/ja/docs/Web/JavaScript/Reference/Operators/Optional_chaining)演算子を導入する必要があります。
 
-| 型                         | `typeof` の返値 | オブジェクトラッパー        |
-| ---------------------------- | --------------------- | --------------------- |
-| [Null 型](#null_型)           | `"object"`            | なし                  |
-| [Undefined 型](#undefined_型) | `"undefined"`         | なし                  |
-| [論理型](#論理型)     | `"boolean"`           | {{jsxref("Boolean")}} |
-| [数値型](#数値型)       | `"number"`            | {{jsxref("Number")}}  |
-| [長整数型](#長整数型)       | `"bigint"`            | {{jsxref("BigInt")}}  |
-| [文字列型](#文字列型)       | `"string"`            | {{jsxref("String")}}  |
-| [シンボル型](#シンボル型)       | `"symbol"`            | {{jsxref("Symbol")}}  |
+| 型                            | `typeof` の返値 | オブジェクトラッパー  |
+| ----------------------------- | --------------- | --------------------- |
+| [Null 型](#null_型)           | `"object"`      | なし                  |
+| [Undefined 型](#undefined_型) | `"undefined"`   | なし                  |
+| [論理型](#論理型)             | `"boolean"`     | {{jsxref("Boolean")}} |
+| [数値型](#数値型)             | `"number"`      | {{jsxref("Number")}}  |
+| [長整数型](#長整数型)         | `"bigint"`      | {{jsxref("BigInt")}}  |
+| [文字列型](#文字列型)         | `"string"`      | {{jsxref("String")}}  |
+| [シンボル型](#シンボル型)     | `"symbol"`      | {{jsxref("Symbol")}}  |
 
 オブジェクトラッパークラスのリファレンスページには、プリミティブ型そのものの意味づけの詳細な説明だけでなく、それぞれの型で利用できるメソッドやプロパティの詳細な情報が掲載されています。
 
@@ -74,7 +74,7 @@ Undefined 型には、値が [`undefined`](/ja/docs/Web/JavaScript/Reference/Glo
 
 論理型 ({{jsxref("Boolean")}}) は論理の状態を表すもので、 `true` と `false` の 2 つの値があります。
 
-論理値は通常、[三項演算子](/ja/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)、[`if...else`](/ja/docs/Web/JavaScript/Reference/Statements/if...else)、[`while`](/ja/docs/Web/JavaScript/Reference/Statements/while) などの条件操作に用いられます。
+論理値は通常、[三項演算子](/ja/docs/Web/JavaScript/Reference/Operators/Conditional_operator)、[`if...else`](/ja/docs/Web/JavaScript/Reference/Statements/if...else)、[`while`](/ja/docs/Web/JavaScript/Reference/Statements/while) などの条件操作に用いられます。
 
 ### 数値型
 
@@ -98,7 +98,7 @@ console.log(42 / -0); // -Infinity
 
 {{jsxref("NaN")}} ("**N**not **a** **N**umber") は、特殊な数値の一種で、演算操作の結果が数値として発生しない場合によく遭遇します。また、JavaScript で唯一、それ自身と等しくない値でもあります。
 
-数値は概念的には「数学的な値」であり、常に暗黙のうちに浮動小数点`でエンコードされていますが、JavaScriptでは[ビット演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#ビット演算子)を提供しています。ビット演算子を運営する場合、最初の数値は 32 ビット整数に変換されます。
+数値は概念的には「数学的な値」であり、常に暗黙のうちに浮動小数点`でエンコードされていますが、JavaScriptでは[ビット演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#ビット演算子)を提供しています。ビット演算子を運営する場合、最初の数値は 32 ビット整数に変換されます。
 
 > **メモ:** ビット演算子で[ビットマスク](https://ja.wikipedia.org/wiki/マスク_%28情報工学%29)を使用すれば、 1 つの数値で複数の論理値を表現することも可能ですが、 JavaScript は（論理型の配列や名前付きプロパティに論理値が割り当てられたオブジェクトのような）論理値の集合を表現する手段を提供しているため、この行いは悪い習慣として見なされています。ビットマスクはコードの可読性、わかりやすさ、保守性を大きく損ないます。
 

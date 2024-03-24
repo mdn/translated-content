@@ -19,9 +19,9 @@ slug: Web/HTML/Element/optgroup
 
 Элемент `<optgroup>` допускает использование [глобальных атрибутов](/ru/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("disabled")}}
+- `disabled`
   - : Если установить этот атрибут, опции, находящиеся внутри элемента станут недоступными для выбора. Часто браузеры отображают эти опции серым цветом и игнорируют срабатывающие на них события, такие как события мыши или события получения фокуса.
-- {{htmlattrdef("label")}}
+- `label`
   - : Имя группы, которое будет отображено браузером в выпадающем списке. Этот атрибут обязателен.
 
 ## Пример
@@ -57,6 +57,6 @@ slug: Web/HTML/Element/optgroup
 
 ## Смотрите также
 
-- Элементы, имеющие отношение к формам: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("option")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} и {{HTMLElement("meter")}}.
+- Элементы, имеющие отношение к формам: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("option")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} и {{HTMLElement("meter")}}.
 
 {{HTMLSidebar}}

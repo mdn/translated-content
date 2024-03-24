@@ -15,12 +15,10 @@ Quando clique é usado com elementos que o suportam (por exemplo, um dos {{HTMLE
 elt.click()
 ```
 
-## Especificação
+## Especificações
 
-| Specification                                                    | Status                       | Comentário         |
-| ---------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('DOM2 HTML', 'html.html#ID-2651361')}} | {{Spec2('DOM2 HTML')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.HTMLElement.click")}}
+{{Compat}}

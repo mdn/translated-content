@@ -65,7 +65,7 @@ var foo = { baz: "bar" };
 Будьте осторожны при использовании оператора для поиска {{jsxref("Array")}} объекты. the `in` оператор проверяет номер индекса, а не его значение.
 
 ```js
-var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
+var trees = ["redwood", "bay", "cedar", "oak", "maple"];
 3 in trees; // true
 "oak" in trees; // false
 ```

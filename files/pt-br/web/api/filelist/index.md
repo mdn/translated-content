@@ -81,7 +81,7 @@ for (var i = 0; i < files.length; i++) {
 A seguir, um exemplo completo.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head> </head>
 

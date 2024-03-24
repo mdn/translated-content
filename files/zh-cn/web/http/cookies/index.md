@@ -101,7 +101,7 @@ Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT; Secure; HttpOnly
 
 #### Path 属性
 
-`Path` 属性指定了一个 URL 路径，该 URL 路径必须存在于请求的 URL中，以便发送 `Cookie` 标头。以字符 `%x2F` (“/”) 作为路径分隔符，并且子路径也会被匹配。
+`Path` 属性指定了一个 URL 路径，该 URL 路径必须存在于请求的 URL 中，以便发送 `Cookie` 标头。以字符 `%x2F` (“/”) 作为路径分隔符，并且子路径也会被匹配。
 
 例如，设置 `Path=/docs`，则以下地址都会匹配：
 

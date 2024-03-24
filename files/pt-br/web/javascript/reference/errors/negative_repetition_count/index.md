@@ -26,16 +26,16 @@ O método {{jsxref("String.prototype.repeat()")}} foi usado. Ele tem um parâmet
 ### Errado
 
 ```js example-bad
-'abc'.repeat(-1); // RangeError
+"abc".repeat(-1); // RangeError
 ```
 
 ### Certo
 
 ```js example-good
-'abc'.repeat(0);    // ''
-'abc'.repeat(1);    // 'abc'
-'abc'.repeat(2);    // 'abcabc'
-'abc'.repeat(3.5);  // 'abcabcabc' (count será convertido para inteiro)
+"abc".repeat(0); // ''
+"abc".repeat(1); // 'abc'
+"abc".repeat(2); // 'abcabc'
+"abc".repeat(3.5); // 'abcabcabc' (count será convertido para inteiro)
 ```
 
 ## Veja também

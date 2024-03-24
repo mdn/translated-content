@@ -25,11 +25,11 @@ slug: Web/SVG/Element/feMerge
 
 ### 专有属性
 
-_无_
+_无。_
 
 ## DOM 接口
 
-该元素实现了[`SVGFEMergeElement`](/zh-CN/DOM/SVGFEMergeElement)接口。
+该元素实现了 [`SVGFEMergeElement`](/zh-CN/DOM/SVGFEMergeElement) 接口。
 
 ## 参见
 

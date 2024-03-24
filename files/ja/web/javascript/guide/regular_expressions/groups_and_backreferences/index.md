@@ -9,7 +9,7 @@ l10n:
 
 グループは複数のパターンを全体としてグループ化し、グループをキャプチャすることで、正規表現パターンを使用して文字列と一致する場合に、追加の副一致情報を提供します。後方参照は、同じ正規表現で以前に捕捉したグループを参照します。
 
-{{EmbedInteractiveExample("pages/js/regexp-groups-ranges.html")}}
+{{EmbedInteractiveExample("pages/js/regexp-groups-backreferences.html")}}
 
 ## 種類
 
@@ -107,7 +107,7 @@ l10n:
 const personList = `First_Name: John, Last_Name: Doe
 First_Name: Jane, Last_Name: Smith`;
 
-const regexpNames =  /First_Name: (\w+), Last_Name: (\w+)/mg;
+const regexpNames = /First_Name: (\w+), Last_Name: (\w+)/gm;
 for (const match of personList.matchAll(regexpNames)) {
   console.log(`Hello ${match[1]} ${match[2]}`);
 }
@@ -119,7 +119,8 @@ for (const match of personList.matchAll(regexpNames)) {
 const personList = `First_Name: John, Last_Name: Doe
 First_Name: Jane, Last_Name: Smith`;
 
-const regexpNames =  /First_Name: (?<firstname>\w+), Last_Name: (?<lastname>\w+)/mg;
+const regexpNames =
+  /First_Name: (?<firstname>\w+), Last_Name: (?<lastname>\w+)/gm;
 for (const match of personList.matchAll(regexpNames)) {
   console.log(`Hello ${match.groups.firstname} ${match.groups.lastname}`);
 }
@@ -151,7 +152,7 @@ lines.splice(
   1,
   0,
   " ".repeat(match.indices[1][1] - match.indices[1][0]) +
-    "^".repeat(match.indices.groups.name[1] - match.indices.groups.name[0])
+    "^".repeat(match.indices.groups.name[1] - match.indices.groups.name[0]),
 );
 console.log(lines.join("\n"));
 // function add(x, y) {

@@ -73,13 +73,13 @@ Firefox 18 已于 2013 年 1 月 8 日发布。
 
 - `nsIEditorObserver`
 
-## 相关链接
+## 参见
 
 - [Firefox 18 发行说明](http://www.mozilla.org/zh-CN/firefox/18.0/releasenotes/)
 - [Aurora 18: HiDPI & Touch Events](https://hacks.mozilla.org/2012/10/aurora-18-hidpi-touch-events/) (Mozilla Hacks)
 - [Firefox 18 网站兼容性](/zh-CN/docs/Site_Compatibility_for_Firefox_18)
 - [Firefox 18 附加组件兼容性](https://blog.mozilla.org/addons/2012/12/28/compatibility-for-firefox-18/)
 
-### 更早版本
+### 更早期的版本
 
-{{Firefox_for_developers('17')}}
+{{Firefox_for_developers}}

@@ -14,9 +14,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('soundend', (event) => { })
+addEventListener("soundend", (event) => {});
 
-onsoundend = (event) => { }
+onsoundend = (event) => {};
 ```
 
 ## イベント型
@@ -30,8 +30,8 @@ onsoundend = (event) => { }
 ```js
 const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
 
-recognition.addEventListener('soundend', (event) => {
-  console.log('音が受信できなくなりました');
+recognition.addEventListener("soundend", (event) => {
+  console.log("音が受信できなくなりました");
 });
 ```
 
@@ -39,8 +39,8 @@ recognition.addEventListener('soundend', (event) => {
 
 ```js
 recognition.onsoundend = (event) => {
-  console.log('音が受信できなくなりました');
-}
+  console.log("音が受信できなくなりました");
+};
 ```
 
 ## 仕様書

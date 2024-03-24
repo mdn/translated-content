@@ -41,7 +41,7 @@ Vary: DPR, Viewport-Width, Width
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Accept-CH")}}
+{{Compat}}
 
 ## Veja também
 

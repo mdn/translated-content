@@ -1,6 +1,9 @@
 ---
-title: Document.activeElement
+title: "Document: activeElement プロパティ"
+short-title: activeElement
 slug: Web/API/Document/activeElement
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("Shadow DOM")}}
@@ -8,7 +11,7 @@ slug: Web/API/Document/activeElement
 **`activeElement`** は {{domxref("Document")}} インターフェイスの読み取り専用プロパティで、DOM 内で現在フォーカスを持っている要素 ({{domxref("Element")}}) を返します。
 
 多くの場合、 `activeElement` はその時点でテキストが選択されていれば {{domxref("HTMLInputElement")}} または {{domxref("HTMLTextAreaElement")}} オブジェクトを返します。もしそうなら、そのオブジェクトの `selectionStart` と `selectionEnd` プロパティを使用することで、より詳細な情報を得ることができます。
-その他、フォーカスされている要素が {{HTMLElement("select")}} 要素（メニュー）や {{HTMLElement("input")}} 要素（ `type` `"button"`, `"checkbox"`, `"radio"`） である場合もあります。
+その他、フォーカスされている要素が {{HTMLElement("select")}} 要素（メニュー）や {{HTMLElement("input")}} 要素である場合もあります。
 
 通常、ユーザーはタブキーを押して、フォーカス可能な要素間でページ内のフォーカスを移動させ、スペースバーを使用して 1 つの要素をアクティブにします（つまり、ボタンを押したり、ラジオボタンをトグル切り替えしたりします）。どの要素にフォーカスが当たるかは、プラットフォームやブラウザーの現在の設定によって異なります。例えば、 macOS システムでは通常、既定では、テキスト入力要素以外の要素はフォーカスされません。
 
@@ -34,8 +37,8 @@ slug: Web/API/Document/activeElement
   >
 </form>
 
-<p>アクティブな要素の ID: <b id="output-element"></b></p>
-<p>選択されているテキスト: <b id="output-text"></b></p>
+<p>アクティブな要素の ID: <em id="output-element"></em></p>
+<p>選択されているテキスト: <em id="output-text"></em></p>
 ```
 
 ### JavaScript
@@ -62,7 +65,7 @@ textarea2.addEventListener("mouseup", onMouseUp, false);
 
 ### 結果
 
-{{ EmbedLiveSample('Example', '400', '400') }}
+{{ EmbedLiveSample('Examples', '400', '400') }}
 
 ## 仕様書
 
@@ -71,3 +74,7 @@ textarea2.addEventListener("mouseup", onMouseUp, false);
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- {{domxref("Document.hasFocus")}}

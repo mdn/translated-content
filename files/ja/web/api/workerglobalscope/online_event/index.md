@@ -14,9 +14,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('online', (event) => { });
+addEventListener("online", (event) => {});
 
-ononline = (event) => { };
+ononline = (event) => {};
 ```
 
 ## イベント型
@@ -29,15 +29,15 @@ ononline = (event) => { };
 
 ```js
 self.ononline = () => {
-  console.log('Your worker is now online');
-}
+  console.log("Your worker is now online");
+};
 ```
 
 同じスニペットですが、 `addEventListener()` を使用したものです。
 
 ```js
-self.addEventListener('online', () => {
-  console.log('Your worker is now online');
+self.addEventListener("online", () => {
+  console.log("Your worker is now online");
 });
 ```
 

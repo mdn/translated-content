@@ -14,7 +14,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/compare
 ## 構文
 
 ```js
-compare(string1, string2)
+compare(string1, string2);
 ```
 
 ### 引数
@@ -33,10 +33,10 @@ compare(string1, string2)
 配列の並べ替えのために `compare` ゲッター関数を使用します。なお、この関数は、取得元の collator にバインドされているので、直接 {{jsxref("Array.prototype.sort()")}} に渡すことができます。
 
 ```js
-var a = ['Offenbach', 'Österreich', 'Odenwald'];
-var collator = new Intl.Collator('de-u-co-phonebk');
+var a = ["Offenbach", "Österreich", "Odenwald"];
+var collator = new Intl.Collator("de-u-co-phonebk");
 a.sort(collator.compare);
-console.log(a.join(', '));
+console.log(a.join(", "));
 // → "Odenwald, Österreich, Offenbach"
 ```
 
@@ -45,11 +45,14 @@ console.log(a.join(', '));
 配列内の文字列の検索のために `compare` ゲッター関数を使用します。
 
 ```js
-var a = ['Congrès', 'congres', 'Assemblée', 'poisson'];
-var collator = new Intl.Collator('fr', { usage: 'search', sensitivity: 'base' });
-var s = 'congres';
-var matches = a.filter(v => collator.compare(v, s) === 0);
-console.log(matches.join(', '));
+var a = ["Congrès", "congres", "Assemblée", "poisson"];
+var collator = new Intl.Collator("fr", {
+  usage: "search",
+  sensitivity: "base",
+});
+var s = "congres";
+var matches = a.filter((v) => collator.compare(v, s) === 0);
+console.log(matches.join(", "));
 // → "Congrès, congres"
 ```
 

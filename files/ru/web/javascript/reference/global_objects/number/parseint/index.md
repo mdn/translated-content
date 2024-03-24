@@ -3,7 +3,7 @@ title: Number.parseInt()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseInt
 ---
 
-{{JSRef("Global_Objects", "Number")}}
+{{JSRef}}
 
 ## Сводка
 
@@ -40,7 +40,7 @@ Number.parseInt === parseInt; // true
 
 ```js
 if (Number.parseInt === undefined) {
-    Number.parseInt = window.parseInt;
+  Number.parseInt = window.parseInt;
 }
 ```
 

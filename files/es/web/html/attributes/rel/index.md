@@ -171,8 +171,8 @@ En HTML, los siguientes tipos de enlaces indican la relación entre dos document
       <td>Hints the browser to fetch in advance the linked resource, as it will likely be requested by the user.<br>
        <br>
        <strong>Note:</strong> the <a href="/es/docs/Link_prefetching_FAQ">Link Prefetch FAQ</a> has details on which links can be prefetched and on alternative methods.</td>
-      <td>{{HTMLElement("a")}} {{unimplemented_inline}},<br>
-       {{HTMLElement("area")}} {{unimplemented_inline}},<br>
+      <td>{{HTMLElement("a")}},<br>
+       {{HTMLElement("area")}},<br>
        {{HTMLElement("link")}}</td>
       <td><em>None.</em></td>
      </tr>

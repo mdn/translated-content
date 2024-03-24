@@ -42,8 +42,10 @@ slug: Web/JavaScript/Reference/Global_Objects/InternalError
 
 ```js
 function loop(x) {
-  if (x >= 10) // "x >= 10" 는 종료 조건입니다.
+  if (x >= 10) {
+    // "x >= 10" 는 종료 조건입니다.
     return;
+  }
   // 어떤 코드
   loop(x + 1); // 재귀 호출
 }
@@ -54,8 +56,7 @@ loop(0);
 
 ```js example-bad
 function loop(x) {
-  if (x >= 1000000000000)
-    return;
+  if (x >= 1000000000000) return;
   // 어떤 코드
   loop(x + 1);
 }

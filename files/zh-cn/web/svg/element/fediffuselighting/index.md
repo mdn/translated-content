@@ -112,7 +112,7 @@ slug: Web/SVG/Element/feDiffuseLighting
 
 ## DOM 接口
 
-该元素实现了[`SVGFEDiffuseLightingElement`](/zh-CN/DOM/SVGFEDiffuseLightingElement)接口。
+该元素实现了 [`SVGFEDiffuseLightingElement`](/zh-CN/DOM/SVGFEDiffuseLightingElement) 接口。
 
 ## 参见
 

@@ -144,7 +144,7 @@ function defineProperties(obj, properties) {
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Object.defineProperties")}}
+{{Compat}}
 
 ## 関連情報
 

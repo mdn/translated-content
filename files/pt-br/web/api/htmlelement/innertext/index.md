@@ -11,15 +11,13 @@ slug: Web/API/HTMLElement/innerText
 
 {{domxref("Node.textContent")}} é uma alternativa similar, embora existam diferenças significativas entre as duas.
 
-## Especificação
+## Especificações
 
-| Especificação                                                                                                | Status                           | Comentário                                                                                                                                                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'dom.html#the-innertext-idl-attribute', 'innerText')}} | {{Spec2('HTML WHATWG')}} | Introduzida, baseado no [rascunho da especifição de innerText](https://github.com/rocallahan/innerText-spec). Ver [whatwg/html#465](https://github.com/whatwg/html/issues/465) e [whatwg/compat#5](https://github.com/whatwg/compat/issues/5) para histórico. |
+{{Specifications}}
 
-## Compatibilidade de navegadores
+## Compatibilidade com navegadores
 
-{{Compat("api.HTMLElement.innerText")}}
+{{Compat}}
 
 ## Ver também
 

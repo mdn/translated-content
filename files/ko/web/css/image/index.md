@@ -2,6 +2,7 @@
 title: <image>
 slug: Web/CSS/image
 ---
+
 {{CSSRef}}
 
 **`<image>`** [CSS](/ko/docs/Web/CSS) [자료형](/ko/docs/Web/CSS/CSS_Types)은 2차원 이미지를 나타냅니다. 이미지는 {{cssxref("&lt;url&gt;")}}로 참조하는 일반 이미지, {{cssxref("&lt;gradient&gt;")}} 또는 {{cssxref("element")}}를 사용해 동적으로 생성하는 이미지 두 종류가 있습니다. 다른 이미지 함수로는 {{cssxref("imagefunction", "image()")}}, {{cssxref("image-set")}}, {{cssxref("cross-fade")}} 등이 있습니다. 이미지는 {{CSSxRef("background-image")}}, {{CSSxRef("border-image")}}, {{CSSxRef("content")}}, {{CSSxRef("cursor")}}, {{CSSxRef("list-style-image")}} 등 많은 속성에 사용할 수 있습니다.
@@ -17,16 +18,16 @@ CSS는 다음 이미지 종류를 처리할 수 있습니다.
 
 CSS는 객체의 구체적인 크기를 (1) 그 본질적인 크기, (2) {{CSSxRef("width")}}, {{CSSxRef("height")}}, {{CSSxRef("background-size")}} 등 CSS 속성으로 설정한 크기, (3) 아래 표에 나열한, 이미지를 설정한 속성에 따른 기본값을 통해 결정합니다.
 
-| 객체 유형 (CSS 속성)                                                                                     | 객체 크기의 기본값                                                                 |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| {{CSSxRef("background-image")}}                                                                 | 요소의 배경 위치 영역 크기                                                         |
-| {{CSSxRef("list-style-image")}}                                                                 | `1em` 문자의 크기                                                                  |
-| {{CSSxRef("border-image-source")}}                                                             | 요소의 테두리 이미지 영역 크기                                                     |
-| {{CSSxRef("cursor")}}                                                                             | 브라우저가 정의한, 클라이언트 시스템의 일반적인 커서 사이즈                        |
-| {{CSSxRef("mask-image")}}                                                                         | ?                                                                                  |
-| {{CSSxRef("shape-outside")}}                                                                     | ?                                                                                  |
-| {{CSSxRef("mask-border-source")}}                                                             | ?                                                                                  |
-| {{cssxref("@counter-style")}}의 {{CSSxRef("symbols")}}                                  | 실험적 기능. 지원 시엔 브라우저가 정의한, 클라이언트 시스템의 일반적인 커서 사이즈 |
+| 객체 유형 (CSS 속성)                                                                | 객체 크기의 기본값                                                                 |
+| ----------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| {{CSSxRef("background-image")}}                                                     | 요소의 배경 위치 영역 크기                                                         |
+| {{CSSxRef("list-style-image")}}                                                     | `1em` 문자의 크기                                                                  |
+| {{CSSxRef("border-image-source")}}                                                  | 요소의 테두리 이미지 영역 크기                                                     |
+| {{CSSxRef("cursor")}}                                                               | 브라우저가 정의한, 클라이언트 시스템의 일반적인 커서 사이즈                        |
+| {{CSSxRef("mask-image")}}                                                           | ?                                                                                  |
+| {{CSSxRef("shape-outside")}}                                                        | ?                                                                                  |
+| {{CSSxRef("mask-border-source")}}                                                   | ?                                                                                  |
+| {{cssxref("@counter-style")}}의 {{CSSxRef("symbols")}}                              | 실험적 기능. 지원 시엔 브라우저가 정의한, 클라이언트 시스템의 일반적인 커서 사이즈 |
 | 의사 요소의 {{CSSxRef("content")}} ({{CSSxRef("::after")}}/{{CSSxRef("::before")}}) | 300px × 150px 사각형                                                               |
 
 구체적인 크기는 다음 알고리즘을 사용해 계산합니다.

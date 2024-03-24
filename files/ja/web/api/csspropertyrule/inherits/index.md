@@ -1,8 +1,9 @@
 ---
-title: CSSPropertyRule.inherits
+title: "CSSPropertyRule: inherits プロパティ"
+short-title: inherits
 slug: Web/API/CSSPropertyRule/inherits
 l10n:
-  sourceCommit: bf30e32f3b51f59080f2c76795beadb247a551eb
+  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
 ---
 
 {{APIRef("CSS Properties and Values API")}}

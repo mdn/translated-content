@@ -32,7 +32,7 @@ MDN Web Docs で、ある技術が実験的 (experimental) と記述されてい
 これらの条件の例については、[experimental flag](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines/index.md#setting-experimental)（BCD ドキュメント）を参照してください。
 
 通常、ある技術が複数の主要なブラウザーで対応している場合、仕様が安定していることになりますが、常にそうであるとは限りません。
-他にも、仕様が安定していても、ブラウザーのネイティブ対応がされていない技術もあるかもしれません。例えば、[IMSC](/en-US/docs/Related/IMSC) は JavaScript のポリフィルで使用されています。<!-- リンクを見直す必要があります -->
+他にも、仕様が安定していても、ブラウザーのネイティブ対応がされていない技術もあるかもしれません。例えば、[IMSC](/ja/docs/Related/IMSC) は JavaScript のポリフィルで使用されています。<!-- リンクを見直す必要があります -->
 
 アクティブな仕様や標準化プロセスの一部であり、**非推奨**とマークされていない機能または技術は、**標準化路線**にあると言います。
 

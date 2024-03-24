@@ -29,14 +29,14 @@ Puede usar esta función para determinar si un número es un número finito. La 
 ## Ejemplos
 
 ```js
-isFinite(Infinity);    // falso
-isFinite(NaN);         // falso
-isFinite(-Inifinity);  // falso
+isFinite(Infinity); // falso
+isFinite(NaN); // falso
+isFinite(-Inifinity); // falso
 
-isFinite(0);           // verdadero
-isFinite(2e64);        // verdadero
+isFinite(0); // verdadero
+isFinite(2e64); // verdadero
 
-isFinite("0");         // verdadero, hubiera sido falso en el caso de usar Number.isFinite("0") que es mas robusta
+isFinite("0"); // verdadero, hubiera sido falso en el caso de usar Number.isFinite("0") que es mas robusta
 ```
 
 ## Especificaciones

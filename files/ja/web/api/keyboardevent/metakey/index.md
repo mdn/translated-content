@@ -1,8 +1,9 @@
 ---
-title: KeyboardEvent.metaKey
+title: "KeyboardEvent: metaKey プロパティ"
+short-title: metaKey
 slug: Web/API/KeyboardEvent/metaKey
 l10n:
-  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("UI Events")}}
@@ -27,7 +28,8 @@ l10n:
 
 ```js
 function ismetaKey(e) {
-  document.querySelector("#output").textContent = `metaKey pressed? ${e.metaKey}`;
+  document.querySelector("#output").textContent =
+    `metaKey pressed? ${e.metaKey}`;
 }
 ```
 

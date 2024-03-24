@@ -38,11 +38,11 @@ str.slice(beginIndex[, endIndex])
 아래 예시는 새 문자열을 생성하기 위해 `slice()`를 사용합니다.
 
 ```js
-var str1 = 'The morning is upon us.', // the length of str1 is 23.
-    str2 = str1.slice(1, 8),
-    str3 = str1.slice(4, -2),
-    str4 = str1.slice(12),
-    str5 = str1.slice(30);
+var str1 = "The morning is upon us.", // the length of str1 is 23.
+  str2 = str1.slice(1, 8),
+  str3 = str1.slice(4, -2),
+  str4 = str1.slice(12),
+  str5 = str1.slice(30);
 console.log(str2); // OUTPUT: he morn
 console.log(str3); // OUTPUT: morning is upon u
 console.log(str4); // OUTPUT: is upon us.
@@ -54,28 +54,28 @@ console.log(str5); // OUTPUT: ""
 아래 예시는 `slice()`에 음수 인덱스를 사용합니다.
 
 ```js
-var str = 'The morning is upon us.';
-str.slice(-3);     // returns 'us.'
+var str = "The morning is upon us.";
+str.slice(-3); // returns 'us.'
 str.slice(-3, -1); // returns 'us'
-str.slice(0, -1);  // returns 'The morning is upon us'
+str.slice(0, -1); // returns 'The morning is upon us'
 ```
 
 아래의 예시는 시작 인덱스를 찾기 위해 문자열의 끝에서부터 역방향으로 `11`개를 세고 끝 인덱스를 찾기 위해 문자열의 시작에서부터 정방향으로 `16`개를 셉니다.
 
 ```js
-console.log(str.slice(-11, 16)) // => "is u";
+console.log(str.slice(-11, 16)); // => "is u";
 ```
 
 아래에서는 시작 인덱스를 찾기 위해 문자열의 처음부터 정방향으로 `11`개를 세고 끝 인덱스를 찾기 위해 끝에서부터 `7`개를 셉니다.
 
 ```js
-console.log(str.slice(11, -7)) // => "is u";
+console.log(str.slice(11, -7)); // => "is u";
 ```
 
 이 인수는 끝에서부터 5로 역순으로 계산하여 시작 인덱스를 찾은 다음 끝에서부터 1을 거쳐 끝 인덱스를 찾습니다.
 
 ```js
-console.log(str.slice(-5, -1)) // => "n us";
+console.log(str.slice(-5, -1)); // => "n us";
 ```
 
 ## 명세서

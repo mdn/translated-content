@@ -75,7 +75,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
     > **Nota:** No usar este atributo, ya que está obsoleto en el último estándar.
     >
     > - Para lograr el mismo efecto que con los valores `left`, `center`, `right` o `justify`, aplicar la propiedad CSS {{cssxref("text-align")}} al elemento.
-    > - Para lograr el mismo efecto que con el valor `char`, dar a la propiedad {{cssxref("text-align")}} el mismo valor que usarías para [`char`](/es/docs/Web/HTML/Element/th#char). {{unimplemented_inline}} in CSS3.
+    > - Para lograr el mismo efecto que con el valor `char`, dar a la propiedad {{cssxref("text-align")}} el mismo valor que usarías para [`char`](/es/docs/Web/HTML/Element/th#char).
 
 - `axis` {{deprecated_inline}} in HTML5
 
@@ -105,7 +105,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 
   - : El contenido de la celda se alinea con un caracter en el elemento `<th>`. Los valores típicos incluyen un punto (.) para alinear números o valores monetarios. Si no se establece [`align`](/es/docs/Web/HTML/Element/th#align) como char, el atributo es ignorado.
 
-    > **Nota:** No usar este atributo, ya que no está soportado por el último estándar. Para lograr el mismo efecto, puedes especificar el caracter como el primer valor de la propiedad {{cssxref("text-align")}}, {{unimplemented_inline}} en CSS3.
+    > **Nota:** No usar este atributo, ya que no está soportado por el último estándar. Para lograr el mismo efecto, puedes especificar el caracter como el primer valor de la propiedad {{cssxref("text-align")}}.
 
 <!---->
 

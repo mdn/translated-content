@@ -2,6 +2,7 @@
 title: Reflect.get()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/get
 ---
+
 {{JSRef}}
 
 **`Reflect.get()`** 정적 메서드는 객체의 속성을 가져오는 함수입니다. `target[propertyKey]`와 비슷합니다.
@@ -42,17 +43,19 @@ Reflect.get(target, propertyKey[, receiver])
 ```js
 // Object
 var obj = { x: 1, y: 2 };
-Reflect.get(obj, 'x'); // 1
+Reflect.get(obj, "x"); // 1
 
 // Array
-Reflect.get(['zero', 'one'], 1); // "one"
+Reflect.get(["zero", "one"], 1); // "one"
 
 // handler 매개변수와 Proxy
-var x = {p: 1};
+var x = { p: 1 };
 var obj = new Proxy(x, {
-  get(t, k, r) { return k + 'bar'; }
+  get(t, k, r) {
+    return k + "bar";
+  },
 });
-Reflect.get(obj, 'foo'); // "foobar"
+Reflect.get(obj, "foo"); // "foobar"
 ```
 
 ## 명세

@@ -1,6 +1,7 @@
 ---
 title: Consejos básicos para formularios
 slug: conflicting/Web/Accessibility/ARIA_64707ba1917a56654679cbe273e2f4ea
+original_slug: Web/Accessibility/ARIA/forms/Basic_form_hints
 ---
 
 Cuando se implementan formularios utilizando elementos relacionados con los formularios HTML tradicionales, es importante proveer etiquetas para los controles y explicitamente asociar una etiqueta con su control. Cuando un usuario de lector de pantalla navega una página, el lector de pantalla describirá los controles del formulario. Sin una asociación directa entre el control y su etiqueta, el lector de pantalla no tiene forma de saber que etiqueta es la correcta para el control.

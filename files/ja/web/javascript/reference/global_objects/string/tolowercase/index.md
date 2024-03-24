@@ -1,6 +1,8 @@
 ---
 title: String.prototype.toLowerCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toLowerCase
+l10n:
+  sourceCommit: f3df52530f974e26dd3b14f9e8d42061826dea20
 ---
 
 {{JSRef}}
@@ -11,8 +13,8 @@ slug: Web/JavaScript/Reference/Global_Objects/String/toLowerCase
 
 ## 構文
 
-```
-str.toLowerCase()
+```js-nolint
+toLowerCase()
 ```
 
 ### 返値
@@ -28,7 +30,7 @@ str.toLowerCase()
 ### `toLowerCase()` メソッドの使用
 
 ```js
-console.log('ALPHABET'.toLowerCase()); // 'alphabet'
+console.log("ALPHABET".toLowerCase()); // 'alphabet'
 ```
 
 ## 仕様書
@@ -37,7 +39,7 @@ console.log('ALPHABET'.toLowerCase()); // 'alphabet'
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.String.toLowerCase")}}
+{{Compat}}
 
 ## 関連情報
 

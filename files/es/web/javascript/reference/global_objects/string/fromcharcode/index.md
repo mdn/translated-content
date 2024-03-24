@@ -3,7 +3,7 @@ title: String.fromCharCode()
 slug: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
 ---
 
-{{JSRef("Objetos_globales", "String")}}
+{{JSRef}}
 
 ## Resumen
 
@@ -33,7 +33,7 @@ Debido a que `fromCharCode` es un método estático de `String`, usted siempre l
 El siguiene ejemplo devuelve la cadena "ABC".
 
 ```js
-String.fromCharCode(65,66,67)
+String.fromCharCode(65, 66, 67);
 ```
 
 ## Especificaciones

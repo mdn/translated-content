@@ -2,6 +2,7 @@
 title: grid-template-rows
 slug: Web/CSS/grid-template-rows
 ---
+
 {{CSSRef}}
 
 CSS-свойство **`grid-template-rows`** определяет имена линий и размеры полос {{glossary("grid rows", "грид-рядов")}}.
@@ -11,7 +12,7 @@ CSS-свойство **`grid-template-rows`** определяет имена л
 ## Синтаксис
 
 ```css
-/* Ключевое слово в качестве значения */
+/* Ключевые слова */
 grid-template-rows: none;
 
 /* Значения <track-list> */
@@ -26,13 +27,16 @@ grid-template-rows: masonry;
 
 /* Значения <auto-track-list> */
 grid-template-rows: 200px repeat(auto-fill, 100px) 300px;
-grid-template-rows: minmax(100px, max-content)
-                       repeat(auto-fill, 200px) 20%;
-grid-template-rows: [linename1] 100px [linename2]
-                       repeat(auto-fit, [linename3 linename4] 300px)
-                       100px;
-grid-template-rows: [linename1 linename2] 100px
-                       repeat(auto-fit, [linename1] 300px) [linename3];
+grid-template-rows:
+  minmax(100px, max-content)
+  repeat(auto-fill, 200px) 20%;
+grid-template-rows:
+  [linename1] 100px [linename2]
+  repeat(auto-fit, [linename3 linename4] 300px)
+  100px;
+grid-template-rows:
+  [linename1 linename2] 100px
+  repeat(auto-fit, [linename1] 300px) [linename3];
 
 /* Глобальные значения */
 grid-template-rows: inherit;
@@ -136,7 +140,7 @@ grid-template-rows: unset;
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

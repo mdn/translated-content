@@ -34,8 +34,8 @@ Debido a que `expm1()` es un método estático de `Math`, uselo siempre como `Ma
 
 ```js
 Math.expm1(-1); // -0.6321205588285577
-Math.expm1(0);  // 0
-Math.expm1(1);  // 1.718281828459045
+Math.expm1(0); // 0
+Math.expm1(1); // 1.718281828459045
 ```
 
 ## Polyfill
@@ -43,9 +43,11 @@ Math.expm1(1);  // 1.718281828459045
 Esto puede ser emulado con la ayuda de la función {{jsxref("Math.exp()")}}:
 
 ```js
-Math.expm1 = Math.expm1 || function(x) {
-  return Math.exp(x) - 1;
-};
+Math.expm1 =
+  Math.expm1 ||
+  function (x) {
+    return Math.exp(x) - 1;
+  };
 ```
 
 ## Especificaciones

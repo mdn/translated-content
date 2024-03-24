@@ -42,7 +42,7 @@ El método `concat` no altera `this` el array original, ni ninguno de los que fu
 En el siguiente código se concatenan dos arrays:
 
 ```js
-const letters = ['a', 'b', 'c'];
+const letters = ["a", "b", "c"];
 const numbers = [1, 2, 3];
 
 letters.concat(numbers);
@@ -69,7 +69,7 @@ console.log(numbers);
 En el siguiente código se concatenan tres valores a un array:
 
 ```js
-var alpha = ['a', 'b', 'c'];
+var alpha = ["a", "b", "c"];
 
 var alphaNumeric = alpha.concat(1, [2, 3]);
 

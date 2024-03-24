@@ -24,14 +24,14 @@ caretRangeFromPoint(x, y)
 
 ### 返回值
 
-以下之一:
+以下之一：
 
 - 一个 {{domxref("Range")}}。
 - `Null`，当 _x_ 或 _y_ 为负数，超出视口范围或者没有包含文本的节点。
 
 ## 示例
 
-访问 {{domxref("Document.caretPositionFromPoint#Examples", "Document.caretPositionFromPoint")}} 页面查看此方法的实时示例。
+访问 {{domxref("Document.caretPositionFromPoint#示例", "Document.caretPositionFromPoint")}} 页面查看此方法的实时示例。
 
 ## 浏览器兼容性
 

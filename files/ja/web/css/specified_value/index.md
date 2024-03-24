@@ -18,13 +18,17 @@ slug: Web/CSS/specified_value
 ```html
 <p>ここに指定された色は、 CSS で明示的に与えられています。</p>
 
-<div>この要素では、 CSS で何も指定されていないため、
-    すべてのプロパティの指定値は既定で初期値になっています。</div>
+<div>
+  この要素では、 CSS で何も指定されていないため、
+  すべてのプロパティの指定値は既定で初期値になっています。
+</div>
 
 <div class="fun">
-  <p>このフォントファミリーは CSS で明示的に指定されていないため、
-      指定値は親から継承されます。
-      ただし、 border は継承されたプロパティではありません。</p>
+  <p>
+    このフォントファミリーは CSS で明示的に指定されていないため、
+    指定値は親から継承されます。 ただし、 border
+    は継承されたプロパティではありません。
+  </p>
 </div>
 ```
 
@@ -56,11 +60,11 @@ p {
   - [アットルール](/ja/docs/Web/CSS/At-rule)
   - [コメント](/ja/docs/Web/CSS/Comments)
   - [詳細度](/ja/docs/Web/CSS/Specificity)
-  - [継承](/ja/docs/Web/CSS/inheritance)
-  - [ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [継承](/ja/docs/Web/CSS/Inheritance)
+  - [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [レイアウトモード](/ja/docs/Web/CSS/Layout_mode)
   - [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
-  - [マージンの相殺](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 値
     - [初期値](/ja/docs/Web/CSS/initial_value)
     - [計算値](/ja/docs/Web/CSS/computed_value)

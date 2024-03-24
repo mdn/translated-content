@@ -2,6 +2,7 @@
 title: isFinite()
 slug: Web/JavaScript/Reference/Global_Objects/isFinite
 ---
+
 {{jsSidebar("Objects")}}
 
 Глобальная **`isFinite()`** функция определяет, является ли переданное значение конечным числом. Если необходимо, параметр сначала преобразуется в число.
@@ -28,16 +29,15 @@ isFinite(testValue)
 ## Примеры
 
 ```js
-isFinite(Infinity);  // false
-isFinite(NaN);       // false
+isFinite(Infinity); // false
+isFinite(NaN); // false
 isFinite(-Infinity); // false
 
-isFinite(0);         // true
-isFinite(2e64);      // true
+isFinite(0); // true
+isFinite(2e64); // true
 
-
-isFinite("0");       // true, но было бы false если использовать
-                     // более надёжный вариант Number.isFinite("0")
+isFinite("0"); // true, но было бы false если использовать
+// более надёжный вариант Number.isFinite("0")
 ```
 
 ## Спецификации

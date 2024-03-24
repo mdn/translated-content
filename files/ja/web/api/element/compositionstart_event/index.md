@@ -1,6 +1,9 @@
 ---
 title: "Element: compositionstart イベント"
+short-title: compositionstart
 slug: Web/API/Element/compositionstart_event
+l10n:
+  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
 {{APIRef}}
@@ -9,26 +12,30 @@ slug: Web/API/Element/compositionstart_event
 
 例えば、このイベントはユーザーが[ピン音](https://ja.wikipedia.org/wiki/ピン音) IME を使用して漢字の入力を開始した後に発生します。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th>バブリング</th>
-      <td>あり</td>
-    </tr>
-    <tr>
-      <th>キャンセル</th>
-      <td>可</td>
-    </tr>
-    <tr>
-      <th>インターフェイス</th>
-      <td>{{domxref("CompositionEvent")}}</td>
-    </tr>
-    <tr>
-      <th>イベントハンドラープロパティ</th>
-      <td>なし</td>
-    </tr>
-  </tbody>
-</table>
+## 構文
+
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener("compositionstart", (event) => {});
+
+oncompositionstart = (event) => {};
+```
+
+## イベント型
+
+{{domxref("CompositionEvent")}} です。 {{domxref("Event")}} を継承しています。
+
+{{InheritanceDiagram("CompositionEvent")}}
+
+## イベントプロパティ
+
+_親である {{domxref("UIEvent")}} および {{domxref("Event")}} から継承したプロパティもあります_。
+
+- {{domxref("CompositionEvent.data")}} {{ReadOnlyInline}}
+  - : イベントを発生させたインプットメソッドによって生成された文字を返します。これは `CompositionEvent` オブジェクトを生成したイベントの種類によって異なります。
+- {{domxref("CompositionEvent.locale")}} {{ReadOnlyInline}} {{deprecated_inline}}
+  - : 現在の入力メソッドのロケール（例えば、変換が IME に関連付けられている場合はキーボードレイアウトのロケール）を返します。
 
 ## 例
 
@@ -46,16 +53,24 @@ inputElement.addEventListener("compositionstart", (event) => {
 
 ```html
 <div class="control">
-  <label for="name"
-    >On macOS, click in the textbox below,<br />
-    then type <kbd>option</kbd> + <kbd>`</kbd>, then <kbd>a</kbd>:</label
-  >
+  <label for="example">
+    最初にテキストボックスを選択して、IME を開いてください。
+    <ul>
+      <li>macOS では <kbd>option</kbd> + <kbd>`</kbd></li>
+      <li>Windows では <kbd>windows</kbd> + <kbd>.</kbd></li>
+    </ul>
+  </label>
   <input type="text" id="example" name="example" />
 </div>
 
 <div class="event-log">
-  <label>Event log:</label>
-  <textarea readonly class="event-log-contents" rows="8" cols="25"></textarea>
+  <label for="eventLog">イベントログ:</label>
+  <textarea
+    readonly
+    class="event-log-contents"
+    rows="8"
+    cols="25"
+    id="eventLog"></textarea>
   <button class="clear-log">Clear</button>
 </div>
 ```
@@ -64,7 +79,7 @@ inputElement.addEventListener("compositionstart", (event) => {
 body {
   padding: 0.2rem;
   display: grid;
-  grid-template-areas: "control  log";
+  grid-template-areas: "control log";
 }
 
 .control {
@@ -95,7 +110,7 @@ kbd {
 }
 ```
 
-#### JS
+#### JavaScript
 
 ```js
 const inputElement = document.querySelector('input[type="text"]');
@@ -107,7 +122,7 @@ clearLog.addEventListener("click", () => {
 });
 
 function handleEvent(event) {
-  log.textContent = log.textContent + `${event.type}: ${event.data}\n`;
+  log.textContent += `${event.type}: ${event.data}\n`;
 }
 
 inputElement.addEventListener("compositionstart", handleEvent);

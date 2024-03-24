@@ -11,8 +11,6 @@ slug: Web/HTML/Element/input/date
 
 {{EmbedInteractiveExample("pages/tabbed/input-date.html", "tabbed-shorter")}}
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
-
 입력 UI는 브라우저마다 다릅니다. [브라우저 호환성](#브라우저_호환성)에서 더 자세한 정보를 알아보세요. 날짜 입력 유형을 지원하지 않는 브라우저에서는 우아하게 [`<input type="text">`](/ko/docs/Web/HTML/Element/input/text)로 저하됩니다.
 
 날짜 선택을 위한 별도의 인터페이스를 갖춘 브라우저 중, Chrome과 Opera는 다음과 같은 모양의 달력을 보여줍니다.
@@ -107,19 +105,19 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a UNIX timestam
 | [`min`](#min)   | 허용하는 가장 이른 날짜                                                      |
 | [`step`](#step) | 위/아래 조절 버튼을 눌렀을 때와, 날짜 유효성을 검증할 때 사용하는 스텝 간격. |
 
-### {{htmlattrdef("max")}}
+### `max`
 
 받을 수 있는 제일 나중 날짜. 입력받은 [`value`](/ko/docs/Web/HTML/Element/input#value)가 `max`보다 더 나중이라면 유효성 검증에 실패합니다. `max`의 값이 `yyyy-mm-dd` 형식의 유효한 날짜 문자열이 아니면 최댓값을 지정하지 않은 것으로 간주합니다.
 
 `max`와 `min` 특성을 모두 사용할 경우, `max`는 `min`과 **동일하거나 이후**인 날짜 문자열이어야 합니다.
 
-### {{htmlattrdef("min")}}
+### `min`
 
 받을 수 있는 제일 이전 날짜. 입력받은 [`value`](/ko/docs/Web/HTML/Element/input#value)가 `min`보다 더 이전이라면 유효성 검증에 실패합니다. `min`의 값이 `yyyy-mm-dd` 형식의 유효한 날짜 문자열이 아니면 최솟값을 지정하지 않은 것으로 간주합니다.
 
 `max`와 `min` 특성을 모두 사용할 경우, `min`은 `max`와 **동일하거나 이전**인 날짜 문자열이어야 합니다.
 
-### {{htmlattrdef("step")}}
+### `step`
 
 The `step` attribute is a number that specifies the granularity that the value must adhere to, or the special value `any`, which is described below. Only values which are equal to the basis for stepping ([`min`](#min) if specified, [`value`](/ko/docs/Web/HTML/Element/input#value) otherwise, and an appropriate default value if neither of those is provided) are valid.
 

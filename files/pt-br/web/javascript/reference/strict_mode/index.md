@@ -151,7 +151,8 @@ Primeiro, strict mode proíbe `with`. O problema com `with` é que qualquer nome
 ```js
 "use strict";
 var x = 17;
-with (obj) { // !!! erro de sintaxe
+with (obj) {
+  // !!! erro de sintaxe
   // Se isto não fosse strict mode, isso seria var x ou obj.x?
   // No geral, é impossível saber sem executar o código, então
   // o nome não pode ser otimizado.
@@ -352,11 +353,7 @@ Os principais navegadores agora implementam strict mode. Entretanto, não depend
 
 ## Especificações
 
-| Especificação                                                        | Status               | Comentário                                                                                                                       |
-| -------------------------------------------------------------------- | -------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-10.1.1', 'Strict Mode Code')}}             | {{Spec2('ES5.1')}}   | Definição inicial. Veja também: [Strict mode restriction and exceptions](https://www.ecma-international.org/ecma-262/5.1/#sec-C) |
-| {{SpecName('ES6', '#sec-strict-mode-code', 'Strict Mode Code')}}     | {{Spec2('ES6')}}     | [Strict mode restriction and exceptions](https://www.ecma-international.org/ecma-262/6.0/#sec-strict-mode-of-ecmascript)         |
-| {{SpecName('ESDraft', '#sec-strict-mode-code', 'Strict Mode Code')}} | {{Spec2('ESDraft')}} | [Strict mode restriction and exceptions](https://tc39.github.io/ecma262/#sec-strict-mode-of-ecmascript)                          |
+{{Specifications}}
 
 ## Veja também
 

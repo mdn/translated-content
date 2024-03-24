@@ -2,6 +2,7 @@
 title: grid-column
 slug: Web/CSS/grid-column
 ---
+
 {{CSSRef}}
 
 [Сокращённое CSS-свойство](/ru/docs/Web/CSS/Shorthand_properties) **`grid-column`** задаёт размер и положение элемента, находящегося внутри {{glossary("grid column", "грид-колонки")}}, путём размещения его по грид-линии, расширяя его при необходимости, тем самым определяя начальную и конечную границу {{glossary("grid areas", "грид-области")}}, в пределах которой он должен находиться.
@@ -18,7 +19,7 @@ slug: Web/CSS/grid-column
 ## Syntax
 
 ```css
-/* Значения с ключевыми словами */
+/* Ключевые слова */
 grid-column: auto;
 grid-column: auto / auto;
 
@@ -141,7 +142,7 @@ grid-column: unset;
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

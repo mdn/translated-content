@@ -333,7 +333,7 @@ The [`splice()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) 
 const myArray = ["1", "2", "3", "4", "5"];
 myArray.splice(1, 3, "a", "b", "c", "d");
 // myArray 는 이제 ["1", "a", "b", "c", "d", "5"] 가 됩니다.
-// 이 코드는 첫 번째 인덱스("2"값이 있는 곳)에서 시작하여 
+// 이 코드는 첫 번째 인덱스("2"값이 있는 곳)에서 시작하여
 // 3개의 요소를 삭제한 후 그 자리에 연속된 모든 요소를 모두 삽입합니다.
 ```
 

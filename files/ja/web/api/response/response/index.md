@@ -50,7 +50,7 @@ new Response(body, options)
 
 ```js
 const myBlob = new Blob();
-const myOptions = { status: 200, statusText: 'SuperSmashingGreat!' };
+const myOptions = { status: 200, statusText: "SuperSmashingGreat!" };
 const myResponse = new Response(myBlob, myOptions);
 ```
 

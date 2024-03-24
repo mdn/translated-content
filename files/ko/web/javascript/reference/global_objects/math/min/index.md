@@ -37,7 +37,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/min
 아래 수식은 `x` 와`y` 중 작은 값을 찾아 `z` 에 할당 합니다.
 
 ```js
-var x = 10, y = -20;
+var x = 10,
+  y = -20;
 var z = Math.min(x, y);
 ```
 

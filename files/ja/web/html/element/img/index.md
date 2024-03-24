@@ -2,7 +2,7 @@
 title: "<img>: 画像埋め込み要素"
 slug: Web/HTML/Element/img
 l10n:
-  sourceCommit: fa8a44b8bff24a4032181c4fd155c459c0dc9161
+  sourceCommit: 585be2ddd6df151effd900af9fb0dea8d28a8623
 ---
 
 {{HTMLSidebar}}
@@ -45,7 +45,7 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
 
 ## 画像読み込みエラー
 
-画像の読み込みまたは描画の間にエラーが発生した場合で、かつ `onerror` イベントハンドラーが {{domxref("Element/error_event", "error")}} イベントを扱うよう設定されていた場合は、イベントハンドラーが呼び出されます。これは例えば次のように、様々な状況で発生します。
+画像の読み込みまたは描画の間にエラーが発生した場合で、かつ `onerror` イベントハンドラーが {{domxref("HTMLElement/error_event", "error")}} イベントを扱うよう設定されていた場合は、イベントハンドラーが呼び出されます。これは例えば次のように、様々な状況で発生します。
 
 - `src` 属性が空 (`""`) または `null` である。
 - 指定された `src` の {{glossary("URL")}} が現在ユーザーがいるページの URL と同じである。
@@ -69,7 +69,7 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
     >
     > このような場合、ブラウザーは、画像をこの要素の `alt` 属性で定義された文字列に置き換えます。このような理由から、 `alt` には可能な限り役に立つ値を指定するべきです。
 
-    この属性に空文字列を設定すると (`alt=""`)、この画像がコンテンツにおいて重要な箇所*ではない*ことを示し、視覚ブラウザーではない場合は{{glossary("Rendering engine", "レンダリング")}}を省略することがあります。視覚ブラウザーでは、 `alt` が空欄で画像の表示に失敗した場合は、壊れた画像のアイコンの表示が省略される場合もあります。
+    この属性に空文字列を設定すると (`alt=""`)、この画像がコンテンツにおいて重要な箇所*ではない*ことを示し、視覚ブラウザーではない場合は{{glossary("Rendering engine", "レンダリング")}}を省略することがあります。視覚ブラウザーでは、 `alt` 属性が空欄で、画像の表示に失敗した場合は、壊れた画像のアイコンの表示が省略される場合もあります。
 
     この属性は画像をテキストにコピー＆ペーストした場合や、リンクされた画像をブックマークに保存したときにも使用されます。
 
@@ -92,14 +92,20 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
 
 - `decoding`
 
-  - : ブラウザーに画像のデコードのヒントを提供します。次のような値が使用できます。
+  - : この属性は、ブラウザーが画像のデコードを他の DOM コンテンツのレンダリングと一緒に行い、より「正しく」見えるようにするのか (`sync`)、それとも他の DOM コンテンツを先にレンダリングして表示し、画像をデコードして後で表示するのか (`async`) のヒントを提供します。実際には、`async` は次の描画が画像のデコードを待たないことを意味します。
+
+    静的な `<img>` 要素に `decoding` を使用した場合、顕著な効果を認識することは困難です。画像ファイルが（ネットワークやキャッシュから）取得される間、最初は空の画像としてレンダリングされ、その後は独立して処理されるため、コンテンツの更新の「同期」はあまり意識されません。しかし、デコード中にレンダリングがブロックされることは、非常に小さいことが多いものの、計測可能です。より詳細な分析については、[画像デコード属性は実際に何をしているのか](https://www.tunetheweb.com/blog/what-does-the-image-decoding-attribute-actually-do/) を参照してください (tunetheweb.com, 2023)。
+
+    異なる `decoding` タイプを使用すると、 JavaScript を使って動的に `<img>` 要素を DOM に挿入する際に、より顕著な違いが生じます - 詳しくは {{domxref("HTMLImageElement.decoding")}} を参照してください。
+
+    許可されている値は次の通りです。
 
     - `sync`
-      - : 他のコンテンツと不可分の表示として、画像を同期的にデコードします。
+      - : 他の DOM コンテンツのレンダリングと同期して画像をデコードし、すべてを一緒に表示します。
     - `async`
-      - : 他のコンテンツの表示が遅れないように、画像を非同期的にデコードします。
+      - : 他の DOM コンテンツをレンダリングして表示した後、非同期に画像をデコードします。
     - `auto`
-      - : 既定のモードで、デコード方式を指定しません。ブラウザーはユーザーのために最良の方法を選択します。
+      - : デコードモードの優先順位はありません。ブラウザーがユーザーにとって最適なものを決定します。これは既定値です。
 
 - `elementtiming`
 
@@ -135,6 +141,7 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
     - `eager`
       - : 画像が現在可視ビューポートに入っているかどうかにかかわらず、直ちに画像を読み込みます (これが既定値です)。
     - `lazy`
+
       - : 画像がブラウザーで定義されたビューポートからの距離に達するまで、画像の読み込みを遅延させます。これは、画像が必要とされるのが合理的に確実になるまで、処理に必要なネットワークやストレージの帯域幅を使用しないようにするためです。これは一般的に、ほとんどの典型的な使用法において、コンテンツの性能を向上させることができます。
 
       > **メモ:** 読み込みが延期されるのは JavaScript が有効になっているときだけです。これはトラッキング対策であり、スクリプトが無効になっているときにユーザーエージェントが遅延読み込みに対応している場合でも、サーバーがいつ何枚の画像が要求されたかを追跡できるようにページのマークアップに画像を戦略的に配置することで、サイトがセッション全体を通してユーザーのおおよそのスクロール位置を追跡することが可能になるからです。
@@ -156,7 +163,7 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
 
   - : ソースのサイズのセットを示す、カンマ区切りの文字列を1個以上並べたリストです。それぞれのソースサイズの構成は以下のとおりです。
 
-    1. [メディア条件](/ja/docs/Web/CSS/Media_Queries/Using_media_queries#構文)。リスト内の最後のアイテムでは省略しなければなりません。
+    1. [メディア条件](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries#構文)。リスト内の最後のアイテムでは省略しなければなりません。
     2. ソースサイズ値。
 
     メディアの状態は*ビューポート*のプロパティで記述するものであり、*画像*のプロパティではありません。例えば、 `(max-height: 500px) 1000px` は、*ビューポート*の高さが 500px 以下であれば 1000px 幅のソースを使用することを提案します。
@@ -221,7 +228,7 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
 - `name` {{deprecated_inline}}
   - : 要素の名前です。代わりに [`id`](/ja/docs/Web/HTML/Global_attributes#id) 属性を使用してください。
 - `vspace` {{deprecated_inline}}
-  - : 画像の上下に挿入する空間の幅をピクセル単位で指定します。HTML5 では、代わりに CSS の {{cssxref('margin')}} プロパティを使用してください。
+  - : 画像の上下に挿入する空間の幅をピクセル単位で指定します。代わりに CSS の {{cssxref('margin')}} プロパティを使用してください。
 
 ## CSS でのスタイル付け
 
@@ -247,7 +254,7 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
 
 ### 画像リンク
 
-この例は前回のを土台に、画像をリンクにする方法を示しています。これを行うのはとても単純です。 — `<img>` タグを {{HTMLElement("a")}} の中に組み込むだけです。一つの考慮事項として、リンクが指すリソースを説明する代替テキストを作成するようにしてください。
+この例は前回のを土台に、画像をリンクにする方法を示しています。これを行うのはとても単純です。 `<img>` タグを {{HTMLElement("a")}} の中に組み込むだけです。一つの考慮事項として、リンクが指すリソースを説明する代替テキストを作成するようにしてください。
 
 ```html
 <a href="https://developer.mozilla.org">
@@ -262,7 +269,7 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
 この例では、 `srcset` 属性によって高解像度版のロゴの参照を指定しています。これで、高解像度の端末では `src` 画像の代わりにこちらが読み込まれます。 `src` で参照される画像は、 `srcset` に対応している{{glossary("User agent", "ユーザーエージェント")}}では、 `1x` の候補としてカウントされます。
 
 ```html
-<img src="favicon72.png" alt="MDN ロゴ" srcset="favicon144.png 2x">
+<img src="favicon72.png" alt="MDN ロゴ" srcset="favicon144.png 2x" />
 ```
 
 {{EmbedLiveSample("Using_the_srcset_attribute", "100%", "160")}}
@@ -310,7 +317,7 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
 - [An alt Decision Tree • Images • WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/images/decision-tree/)
 - [Alt-texts: The Ultimate Guide — Axess Lab](https://axesslab.com/alt-texts/)
 - [How to Design Great Alt Text: An Introduction | Deque](https://www.deque.com/blog/great-alt-text-introduction/)
-- [MDN "WCAG を理解する ― ガイドライン 1.1 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
+- [MDN "WCAG を理解する ― ガイドライン 1.1 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.1_—_非テキストコンテンツのための代替テキストの提供)
 - [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html)
 
 ### SVG を画像として識別
@@ -456,8 +463,8 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
 
 ## 関連情報
 
+- {{HTMLElement("picture")}}, {{HTMLElement("object")}}, {{HTMLElement("embed")}} 要素
+- その他の画像に関する CSS プロパティ: {{cssxref("object-fit")}}, {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}
 - [HTML の画像](/ja/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
 - [画像のファイル形式のガイド](/ja/docs/Web/Media/Formats/Image_types)
 - [レスポンシブ画像](/ja/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- {{HTMLElement("picture")}}, {{HTMLElement("object")}}, {{HTMLElement("embed")}} 要素
-- その他の画像に関する CSS プロパティ: {{cssxref("object-fit")}}, {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}

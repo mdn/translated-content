@@ -3,6 +3,8 @@ title: CRLF
 slug: Glossary/CRLF
 ---
 
+{{GlossarySidebar}}
+
 CR и LF это [управляющие символы](https://en.wikipedia.org/wiki/Control_character) или [байт-код](https://en.wikipedia.org/wiki/Bytecode) которые можно использовать для обозначения разрыва строки в текстовых файлах.
 
 - CR = **Возврат каретки (Carriage Return)** (`\r`, `0x0D` в шестнадцатеричной, 13 в десятичной системе счисления) — перемещает курсор в начало строки, не переходя на следующую строку.

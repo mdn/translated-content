@@ -3,6 +3,8 @@ title: STUN
 slug: Glossary/STUN
 ---
 
+{{GlossarySidebar}}
+
 **STUN** (Session Traversal Utilities for NAT) est un protocole auxiliaire servant à transmettre des données dans un environnement avec du {{glossary("NAT")}} (Network Address Translator). STUN retourne l'{{glossary("IP address","adresse IP")}}, le {{glossary("port")}} et l'état de la connectivité d'un ordinateur en réseau derrière un NAT.
 
 ## Voir aussi

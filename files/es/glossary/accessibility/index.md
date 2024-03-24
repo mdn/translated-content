@@ -3,6 +3,8 @@ title: Accesibilidad
 slug: Glossary/Accessibility
 ---
 
+{{GlossarySidebar}}
+
 _La accesibilidad web_ (**A11Y**) hace referencia a las buenas prácticas para mantener la usabilidad de un sitio web a pesar de las restricciones físicas y técnicas. La accesibilidad web se define formalmente y es discutida en el {{Glossary("W3C")}} a través del {{Glossary("WAI","Web Accessibility Initiative")}} (WAI).
 
 ## Saber más

@@ -2,6 +2,7 @@
 title: font-size
 slug: Web/CSS/font-size
 ---
+
 {{CSSRef}}
 
 **`font-size`** [CSS](/ko/docs/CSS) 속성은 폰트의 크기(대문자 "M"의 크기)를 지정합니다. 폰트 크기를 바꾸면 `em` 과 `ex` {{cssxref("&lt;length&gt;")}} 단위로 계산된 다른 항목들의 크기를 바꿉니다.
@@ -51,8 +52,8 @@ The `font-size` property is specified in one of the following ways:
   - : 키워드에 따라 부모 엘리먼트의 폰트 크기에서 일정 비율로 늘이거나 줄입니다.
 - {{cssxref("&lt;length&gt;")}}
   - : {{cssxref("&lt;length&gt;")}}는 항상 양수입니다. 만약 단위가 `em` 이나 `ex` 로 표현되어 있으면, 부모 엘리먼트의 크기에 상대적으로
-      정해집니다. 예를 들어, 0.5em 은 부모 엘리먼트 폰트 크기의 절반이 현재 엘리먼트의 폰트 크기입니다. 만약 단위가 `rem` 으로 지정되어 있다면, 폰트 크기는
-      `html` (루트) 엘리먼트의 폰트 크기에 따라 상대적으로 정해집니다.
+    정해집니다. 예를 들어, 0.5em 은 부모 엘리먼트 폰트 크기의 절반이 현재 엘리먼트의 폰트 크기입니다. 만약 단위가 `rem` 으로 지정되어 있다면, 폰트 크기는
+    `html` (루트) 엘리먼트의 폰트 크기에 따라 상대적으로 정해집니다.
 - `{{cssxref("&lt;percentage&gt;")}}
   - : 양수인 {{cssxref("&lt;percentage&gt;")}} 는, 부모 엘리먼트의 폰트 크기의 비율입니다.
 
@@ -105,7 +106,7 @@ em 은 자동적으로 폰트의 크기를 적용해주기 때문에 CSS 에서 
 
 ```html
 <div>
-<span>Outer <span>inner</span> outer</span>
+  <span>Outer <span>inner</span> outer</span>
 </div>
 ```
 
@@ -146,13 +147,19 @@ span {
 
 ```css
 /* 문단 텍스트의 크기를 매우 크게 설정 */
-p { font-size: xx-large }
+p {
+  font-size: xx-large;
+}
 
 /* h1 (제목 1)을 주변 텍스트보다 2.5배 큼 */
-h1 { font-size: 250% }
+h1 {
+  font-size: 250%;
+}
 
 /* span 태그 안의 텍스트를 16px 로 설정 */
-span { font-size: 16px; }
+span {
+  font-size: 16px;
+}
 ```
 
 ### 예제 2

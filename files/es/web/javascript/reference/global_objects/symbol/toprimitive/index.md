@@ -26,25 +26,25 @@ El siguiente ejemplo describe cómo la propiedad `Symbol.toPrimitive` puede modi
 ```js
 // Un objeto sin la propiedad Symbol.toPrimitive.
 const obj1 = {};
-console.log(+obj1);     // NaN
+console.log(+obj1); // NaN
 console.log(`${obj1}`); // "[object Object]"
-console.log(obj1 + ''); // "[object Object]"
+console.log(obj1 + ""); // "[object Object]"
 
 // Un objeto con la propiedad Symbol.toPrimitive.
 const obj2 = {
   [Symbol.toPrimitive](hint) {
-    if (hint === 'number') {
+    if (hint === "number") {
       return 10;
     }
-    if (hint === 'string') {
-      return 'hello';
+    if (hint === "string") {
+      return "hello";
     }
     return true;
-  }
+  },
 };
-console.log(+obj2);     // 10        — hint es "number"
+console.log(+obj2); // 10        — hint es "number"
 console.log(`${obj2}`); // "hello"   — hint es "string"
-console.log(obj2 + ''); // "true"    — hint es "default"
+console.log(obj2 + ""); // "true"    — hint es "default"
 ```
 
 ## Especificaciones

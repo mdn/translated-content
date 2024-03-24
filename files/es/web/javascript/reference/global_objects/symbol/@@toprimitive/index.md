@@ -12,7 +12,7 @@ El método **`[@@toPrimitive]()`** convierte un objeto Symbol en un valor primit
 ## Sintaxis
 
 ```js
-Symbol()[Symbol.toPrimitive](hint)
+Symbol()[Symbol.toPrimitive](hint);
 ```
 
 ### Valor de retorno

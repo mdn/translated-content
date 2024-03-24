@@ -31,7 +31,7 @@ slug: Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow
 
 {{EmbedGHLiveSample("css-examples/flow/in-flow/float.html", '100%', 800)}}
 
-你可以看到下面段落的背景颜色在下面运行，只是该段落的行框已被缩短以导致在浮动周围包裹内容的效果。我们段落的方框仍然按照正常流程规则显示。这就是为什么要在浮动项目周围留出空间，必须为项目添加边距，以便将线框推离它。您无法对以下内插内容应用任何内容来实现此目的。
+你可以看到下面段落的背景颜色在下面运行，只是该段落的行框已被缩短以导致在浮动周围包裹内容的效果。我们段落的方框仍然按照正常流程规则显示。这就是为什么要在浮动项目周围留出空间，必须为项目添加边距，以便将线框推离它。你无法对以下内插内容应用任何内容来实现此目的。
 
 ### Absolute Positioning
 
@@ -53,7 +53,7 @@ slug: Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow
 
 ## Summary
 
-In this guide we have covered the ways to take an element out of flow in order to achieve some very specific types of positioning. In the next guide we will look at a related issue, that of creating a [Block Formatting Context](/zh-CN/docs/Web/Guide/CSS/Block_formatting_context), in [Formatting Contexts Explained](/zh-CN/docs/Web/CSS/CSS_flow_layout/Formatting_Contexts_Explained).
+In this guide we have covered the ways to take an element out of flow in order to achieve some very specific types of positioning. In the next guide we will look at a related issue, that of creating a [Block Formatting Context](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context), in [Formatting Contexts Explained](/zh-CN/docs/Web/CSS/CSS_flow_layout/Formatting_Contexts_Explained).
 
 ## See Also
 

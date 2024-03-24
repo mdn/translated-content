@@ -37,22 +37,24 @@ Debido a que `trunc()` es un método estático de `Math`, siempre úsalo como `M
 ### Usando `Math.trunc()`
 
 ```js
-Math.trunc(13.37);    // 13
-Math.trunc(42.84);    // 42
-Math.trunc(0.123);    //  0
-Math.trunc(-0.123);   // -0
-Math.trunc('-1.123'); // -1
-Math.trunc(NaN);      // NaN
-Math.trunc('foo');    // NaN
-Math.trunc();         // NaN
+Math.trunc(13.37); // 13
+Math.trunc(42.84); // 42
+Math.trunc(0.123); //  0
+Math.trunc(-0.123); // -0
+Math.trunc("-1.123"); // -1
+Math.trunc(NaN); // NaN
+Math.trunc("foo"); // NaN
+Math.trunc(); // NaN
 ```
 
 ## Polyfill
 
 ```js
-Math.trunc = Math.trunc || function (x) {
-    return (x < 0 ? Math.ceil(x) : Math.floor(x));
-}
+Math.trunc =
+  Math.trunc ||
+  function (x) {
+    return x < 0 ? Math.ceil(x) : Math.floor(x);
+  };
 ```
 
 ## Especificaciones

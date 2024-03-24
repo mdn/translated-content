@@ -1,6 +1,7 @@
 ---
 title: Comunidad
 slug: conflicting/Web/Accessibility
+original_slug: Web/Accessibility/Community
 ---
 
 Si conoces alguna lista de correo, grupo de noticias, foro, o comunidad relacionada con la _accesibilidad_ que pueda ser de interés. Por favor, pon aquí un enlace.

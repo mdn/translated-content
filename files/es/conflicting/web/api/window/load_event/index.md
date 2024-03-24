@@ -1,6 +1,7 @@
 ---
 title: window.onload
 slug: conflicting/Web/API/Window/load_event
+original_slug: Web/API/GlobalEventHandlers/onload
 ---
 
 {{ ApiRef() }}

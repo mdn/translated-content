@@ -92,11 +92,11 @@ Content-Security-Policy-Report-Only: default-src 'none'; style-src cdn.example.c
 The HTML of `signup.html` looks like this:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>Sign Up</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     ... Content ...
@@ -127,7 +127,7 @@ As you can see, the report includes the full path to the violating resource in `
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Content-Security-Policy-Report-Only")}}
+{{Compat}}
 
 ## 関連情報
 

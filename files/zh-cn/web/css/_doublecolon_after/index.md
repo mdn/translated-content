@@ -29,7 +29,7 @@ CSS[伪元素](/zh-CN/CSS/Pseudo-elements)`::after`用来创建一个伪元素�
 <p class="boring-text">这是些无聊的文字</p>
 <p>这是不无聊也不有趣的文字</p>
 <p class="exciting-text">
-  在 MDN 上做贡献简单又轻松。 按右上角的编辑按钮添加新示例或改进旧示例！
+  在 MDN 上做贡献简单又轻松。按右上角的编辑按钮添加新示例或改进旧示例！
 </p>
 ```
 

@@ -46,5 +46,5 @@ function load(url, callback) {
 
 ## 参见
 
-- [使用 XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [使用 XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
 - 获取文本和 HTML/XML 数据：{{domxref("XMLHttpRequest.responseText")}} 和 {{domxref("XMLHttpRequest.responseXML")}}

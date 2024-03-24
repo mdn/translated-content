@@ -52,7 +52,7 @@ slug: Web/CSS/CSS_colors/Applying_color
 ### 境界線
 
 あらゆる要素で、周囲に[境界線](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)を描画することができます。基本的な要素の境界線は、要素の内容物の辺を囲むように描かれた線です。
-基本的な要素の境界は、要素の内容の端に描かれている線です。要素とその境界線の関係性については、[ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)の[ボックスのプロパティ](/ja/docs/Learn/CSS/Building_blocks/The_box_model#ボックスのプロパティ)を、より詳しい境界線へのスタイルの適用については [CSS での境界線のスタイル付け](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) を参照してください。
+基本的な要素の境界は、要素の内容の端に描かれている線です。要素とその境界線の関係性については、[ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)の[ボックスのプロパティ](/ja/docs/Learn/CSS/Building_blocks/The_box_model#境界)を、より詳しい境界線へのスタイルの適用については [CSS での境界線のスタイル付け](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) を参照してください。
 
 {{cssxref("border")}} 一括指定プロパティを使用することもできます。これは、境界線に関する (色以外の[線幅](/ja/docs/Web/CSS/border-width)、[線種](/ja/docs/Web/CSS/border-style) (実線、破線など) などの特性も含んだ) すべての設定をこれ一つで行えます。
 
@@ -122,7 +122,7 @@ RGB (赤/緑/青) 関数表記法は、16 進文字列表記法と同様に赤�
 
 例えば、不透明度 50% の明るい赤は `rgb(255, 0, 0, 0.5)` や `rgb(100%, 0, 0, 50%)` のように表現できます。
 
-<h3 id="HSL_functional_notation">HSL 関数表記</h3>
+### HSL 関数表記
 
 デザイナーやアーティストは [HSL](https://en.wikipedia.org/wiki/HSL_and_HSV) (Hue/Saturation/Luminosity) で作業しようとすることがあります。ウェブにおける HSL 色は、HSL 関数表記で表現します。CSS の `hsl()` 関数の表現方法は、`rgb()` 関数とよく似ています。
 
@@ -147,14 +147,19 @@ HSL カラーの色相 (H) 成分の値は、赤から黄、緑、水、青、�
 ```css hidden
 table {
   border: 1px solid black;
-  font: 16px "Open Sans", Helvetica, Arial, sans-serif;
+  font:
+    16px "Open Sans",
+    Helvetica,
+    Arial,
+    sans-serif;
   border-spacing: 0;
   border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
   border: 1px solid black;
-  padding:4px 6px;
+  padding: 4px 6px;
   text-align: left;
 }
 
@@ -165,42 +170,42 @@ th {
 
 ```html
 <table>
- <thead>
-  <tr>
-   <th scope="col">Color in HSL notation</th>
-   <th scope="col">Example</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>hsl(90deg, 100%, 50%)</code></td>
-   <td style="background-color: hsl(90deg, 100%, 50%);">&nbsp;</td>
-  </tr>
-  <tr>
-   <td><code>hsl(90, 100%, 50%)</code></td>
-   <td style="background-color: hsl(90, 100%, 50%);">&nbsp;</td>
-  </tr>
-  <tr>
-   <td><code>hsl(0.15turn, 50%, 75%)</code></td>
-   <td style="background-color: hsl(0.15turn, 50%, 75%);">&nbsp;</td>
-  </tr>
-  <tr>
-   <td><code>hsl(0.15turn, 90%, 75%)</code></td>
-   <td style="background-color: hsl(0.15turn, 90%, 75%);">&nbsp;</td>
-  </tr>
-  <tr>
-   <td><code>hsl(0.15turn, 90%, 50%)</code></td>
-   <td style="background-color: hsl(0.15turn, 90%, 50%);">&nbsp;</td>
-  </tr>
-  <tr>
-   <td><code>hsl(270deg, 90%, 50%)</code></td>
-   <td style="background-color: hsl(270deg, 90%, 50%);">&nbsp;</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Color in HSL notation</th>
+      <th scope="col">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>hsl(90deg, 100%, 50%)</code></td>
+      <td style="background-color: hsl(90deg, 100%, 50%);">&nbsp;</td>
+    </tr>
+    <tr>
+      <td><code>hsl(90, 100%, 50%)</code></td>
+      <td style="background-color: hsl(90, 100%, 50%);">&nbsp;</td>
+    </tr>
+    <tr>
+      <td><code>hsl(0.15turn, 50%, 75%)</code></td>
+      <td style="background-color: hsl(0.15turn, 50%, 75%);">&nbsp;</td>
+    </tr>
+    <tr>
+      <td><code>hsl(0.15turn, 90%, 75%)</code></td>
+      <td style="background-color: hsl(0.15turn, 90%, 75%);">&nbsp;</td>
+    </tr>
+    <tr>
+      <td><code>hsl(0.15turn, 90%, 50%)</code></td>
+      <td style="background-color: hsl(0.15turn, 90%, 50%);">&nbsp;</td>
+    </tr>
+    <tr>
+      <td><code>hsl(270deg, 90%, 50%)</code></td>
+      <td style="background-color: hsl(270deg, 90%, 50%);">&nbsp;</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
-{{EmbedLiveSample("HSL_functional_notation", 300, 260)}}
+{{EmbedLiveSample("HSL 関数表記", 300, 260)}}
 
 > **メモ:** 色相の単位を省略した場合は度 (`deg`) と見なされます。
 
@@ -208,13 +213,13 @@ th {
 
 要素に色を適用する CSS プロパティの存在と、色の記述に使用可能な形式が分かったので、これをまとめて色を活用し始めてみましょう。[着色できる物](#着色できる物)のリストを見て把握できたと思いますが、CSS で色を付けられる物はたくさんあります。ここでは、{{Glossary("stylesheet", "スタイルシート")}}内で色を使う場合と、{{Glossary("JavaScript")}} コードで要素のスタイルを変更するために色を追加したり変更したりする場合の、2 つの側面から見ていきます。
 
-<h3 id="Specifying_colors_in_stylesheets">スタイルシートでの色指定</h3>
+### スタイルシートでの色指定
 
 要素に色を適用する最も簡単な方法は、要素の描画に使用する CSS で色を指定することです。前述のプロパティをすべて使用するわけではありませんが、いくつかの例を見てみましょう。色を使う場所によらず、考え方は同じです。
 
 先にこれからやることの結果を見てから、サンプルを見ていきます。
 
-{{EmbedLiveSample("Specifying_colors_in_stylesheets", 650, 150)}}
+{{EmbedLiveSample("スタイルシートでの色指定", 650, 150)}}
 
 #### HTML
 
@@ -223,14 +228,10 @@ th {
 ```html
 <div class="wrapper">
   <div class="box boxLeft">
-    <p>
-      This is the first box.
-    </p>
+    <p>This is the first box.</p>
   </div>
   <div class="box boxRight">
-    <p>
-      This is the second box.
-    </p>
+    <p>This is the second box.</p>
   </div>
 </div>
 ```
@@ -265,7 +266,10 @@ th {
   height: 100px;
   margin: 0;
   padding: 4px 6px;
-  font: 28px "Marker Felt", "Zapfino", cursive;
+  font:
+    28px "Marker Felt",
+    "Zapfino",
+    cursive;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -309,17 +313,17 @@ th {
 - {{cssxref("text-decoration")}} でテキストの下に緑の波線を引いています。
 - 最後に、{{cssxref("text-shadow")}} を使用してテキストに少しだけ影をつけています。この `color` 引数は `black` にしています。
 
-<h2 id="Letting_the_user_pick_a_color">ユーザーに色を選択させる</h2>
+## ユーザーに色を選択させる
 
 ウェブサイト上では、ユーザーに色を選択させる必要がある場合があります。カスタマイズ可能なユーザーインターフェースがある場合や、お絵かきアプリを実装している場合などが考えられるでしょう。編集可能なテキストがあってユーザーにテキストの色を選択させる、あるいはアプリでフォルダーやアイテムに色を割り当てることができる場合があるかもしれません。古くは、独自の[カラーピッカー](https://en.wikipedia.org/wiki/Color_picker)を実装する必要がありましたが、HTML では {{HTMLElement("input")}} 要素を通じて [`type`](/ja/docs/Web/HTML/Element/input#type) 属性の値を `"color"` にすれば、ブラウザーがカラーピッカーを提供できるようになりました。
 
 `<input>` 要素は、先で取り上げた [16 進数文字列表記](#16_進数文字列表記)でのみ色を表します。
 
-<h3 id="Example_Picking_a_color">例: 色の選択</h3>
+### 例: 色の選択
 
 ユーザーが色を選択できる簡単な例を見てみましょう。ユーザーが色を調整すると、サンプルの周囲の境界線が新しい色を反映するように変化します。色を選び終えると、カラーピッカーの値が表示されます。
 
-{{EmbedLiveSample("Example_Picking_a_color", 525, 275)}}
+{{EmbedLiveSample("例: 色の選択", 525, 275)}}
 
 > **メモ:** macOS では、カラーピッカーウインドウを閉じると色の選択が完了したことになります。
 
@@ -330,7 +334,7 @@ th {
 ```html
 <div id="box">
   <label for="colorPicker">Border color:</label>
-  <input type="color" value="#8888ff" id="colorPicker">
+  <input type="color" value="#8888ff" id="colorPicker" />
   <p id="output"></p>
 </div>
 ```
@@ -345,7 +349,11 @@ th {
   height: 200px;
   border: 2px solid rgb(245, 220, 225);
   padding: 4px 6px;
-  font: 16px "Lucida Grande", "Helvetica", "Arial", "sans-serif"
+  font:
+    16px "Lucida Grande",
+    "Helvetica",
+    "Arial",
+    "sans-serif";
 }
 ```
 
@@ -360,13 +368,21 @@ let output = document.getElementById("output");
 
 box.style.borderColor = colorPicker.value;
 
-colorPicker.addEventListener("input", function(event) {
-  box.style.borderColor = event.target.value;
-}, false);
+colorPicker.addEventListener(
+  "input",
+  function (event) {
+    box.style.borderColor = event.target.value;
+  },
+  false,
+);
 
-colorPicker.addEventListener("change", function(event) {
-  output.innerText = "Color set to " + colorPicker.value + ".";
-}, false);
+colorPicker.addEventListener(
+  "change",
+  function (event) {
+    output.innerText = "Color set to " + colorPicker.value + ".";
+  },
+  false,
+);
 ```
 
 この {{domxref("HTMLElement/input_event", "input")}} イベントは要素の値が変更されるたびに送信されます。このイベントが来るたびに、ボックスの境界線の色をカラーピッカーの現在値に合わせます。

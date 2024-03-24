@@ -424,7 +424,7 @@ A _grid cell_ is the smallest unit on a grid, conceptually it is like a table ce
 
 ## Grid areas
 
-Items can span one or more cells both by row or by column, and this creates a _grid area_. Grid areas have to be rectangular – it isn’t possible to create an L-shaped area for example. The highlighted grid area spans two row and two column tracks.
+Items can span one or more cells both by row or by column, and this creates a _grid area_. Grid areas have to be rectangular – it isn't possible to create an L-shaped area for example. The highlighted grid area spans two row and two column tracks.
 
 ![A grid area](1_grid_area.png)
 

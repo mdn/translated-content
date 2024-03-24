@@ -81,13 +81,11 @@ a(10, 20).then((v) => {
 
 ## Especificações
 
-| Especificação                                                                  | Situação             | Comentário                   |
-| ------------------------------------------------------------------------------ | -------------------- | ---------------------------- |
-| {{SpecName('ESDraft', '#sec-async-function-objects', 'AsyncFunction object')}} | {{Spec2('ESDraft')}} | Definição inicial no ES2017. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.AsyncFunction")}}
+{{Compat}}
 
 ## Veja também
 

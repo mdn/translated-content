@@ -38,4 +38,4 @@ Isto é um [propriedade localizável](/pt-BR/Add-ons/WebExtensions/International
 
 ## Compatibilidade com navegadores
 
-{{Compat("webextensions.manifest.short_name")}}
+{{Compat}}

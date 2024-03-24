@@ -3,7 +3,7 @@ title: browsingData.removeDownloads()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeDownloads
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Limpa o histórico de objetos baixados no navegador. Note que isto não deleta os arquivos baixados de fato, apenas os registros no histórico do navegador.
 

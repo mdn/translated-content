@@ -2,6 +2,7 @@
 title: arguments.callee
 slug: Web/JavaScript/Reference/Functions/arguments/callee
 ---
+
 {{jsSidebar("Functions")}}
 
 **`arguments.callee`** 속성(property)은 현재 실행 중인 함수를 포함합니다.
@@ -21,26 +22,26 @@ slug: Web/JavaScript/Reference/Functions/arguments/callee
 예를 들어, 이 구문은 작동됩니다:
 
 ```js
-function factorial (n) {
-    return !(n > 1) ? 1 : factorial(n - 1) * n;
+function factorial(n) {
+  return !(n > 1) ? 1 : factorial(n - 1) * n;
 }
 
-[1,2,3,4,5].map(factorial);
+[1, 2, 3, 4, 5].map(factorial);
 ```
 
 하지만 다음은:
 
 ```js
-[1,2,3,4,5].map(function (n) {
-    return !(n > 1) ? 1 : /* what goes here? */ (n - 1) * n;
+[1, 2, 3, 4, 5].map(function (n) {
+  return !(n > 1) ? 1 : /* what goes here? */ (n - 1) * n;
 });
 ```
 
 아닙니다. 이를 우회하기 위해 `arguments.callee`가 추가되었고 이와 같이 할 수 있습니다
 
 ```js
-[1,2,3,4,5].map(function (n) {
-    return !(n > 1) ? 1 : arguments.callee(n - 1) * n;
+[1, 2, 3, 4, 5].map(function (n) {
+  return !(n > 1) ? 1 : arguments.callee(n - 1) * n;
 });
 ```
 
@@ -50,13 +51,15 @@ function factorial (n) {
 var global = this;
 
 var sillyFunction = function (recursed) {
-    if (!recursed) { return arguments.callee(true); }
-    if (this !== global) {
-        alert("This is: " + this);
-    } else {
-        alert("This is the global");
-    }
-}
+  if (!recursed) {
+    return arguments.callee(true);
+  }
+  if (this !== global) {
+    alert("This is: " + this);
+  } else {
+    alert("This is the global");
+  }
+};
 
 sillyFunction();
 ```
@@ -64,8 +67,8 @@ sillyFunction();
 ECMAScript 3은 유명(named) 함수 식을 허용해서 이 문제를 해결했습니다. 예를 들면:
 
 ```js
-[1,2,3,4,5].map(function factorial (n) {
-    return !(n > 1) ? 1 : factorial(n-1)*n;
+[1, 2, 3, 4, 5].map(function factorial(n) {
+  return !(n > 1) ? 1 : factorial(n - 1) * n;
 });
 ```
 
@@ -78,7 +81,9 @@ ECMAScript 3은 유명(named) 함수 식을 허용해서 이 문제를 해결했
 사라지게 됐던 또 다른 기능은 `arguments.callee.caller` 또는 더 명확하게 `Function.caller`였습니다. 이는 왜일까요? 자, 어느 시점에서든 당신은 모든 함수의 스택 상 가장 깊은 caller를 찾을 수 있고 위에서 말했듯이 호출 스택 보기는 한 가지 주요 효과가 있습니다: 이는 큰 수의 최적화를 불가능 또는 훨씬 훨씬 더 어렵게 합니다. 예를 들어, 함수 `f`가 익명(unknown) 함수를 호출하지 않음을 보장할 수 없는 경우, `f`를 인라인하는 게 가능하지 않습니다. 원래 사소하게 인라인 가능했을 지도 모를 모든 호출 사이트가 다수의 guard를 축적함을 뜻합니다:
 
 ```js
-function f (a, b, c, d, e) { return a ? b * c : d * e; }
+function f(a, b, c, d, e) {
+  return a ? b * c : d * e;
+}
 ```
 
 JavaScript 인터프리터가 제공된 모든 인수가 호출이 행해진 그 시점에 숫자임을 보장할 수 없다면, 인라인된 코드 앞에 모든 인수에 대한 검사 삽입이 필요합니다. 그렇지 않으면 그 함수를 인라인할 수 없습니다. 이제 이 특정한 경우에 스마트 인터프리터는 더 최적이고 사용되지 않을 값은 확인하지 않을 검사를 재배열할 수 있어야 합니다. 그러나 많은 경우에 그건 그냥 가능하지 않고 그러므로 인라인은 불가능하게 됩니다.
@@ -93,11 +98,10 @@ JavaScript 인터프리터가 제공된 모든 인수가 호출이 행해진 그
 
 ```js
 function create() {
-   return function(n) {
-      if (n <= 1)
-         return 1;
-      return n * arguments.callee(n - 1);
-   };
+  return function (n) {
+    if (n <= 1) return 1;
+    return n * arguments.callee(n - 1);
+  };
 }
 
 var result = create()(5); // 반환값 120 (5 * 4 * 3 * 2 * 1)
@@ -108,10 +112,10 @@ var result = create()(5); // 반환값 120 (5 * 4 * 3 * 2 * 1)
 그러나, 다음과 같은 경우에는 `arguments.callee`에 대안이 없습니다. 그래서 그 사라짐(deprecation)은 버그가 될 수 있습니다 ([Firefox bug 725398](https://bugzil.la/725398) 참조):
 
 ```js
-function createPerson (sIdentity) {
-    var oPerson = new Function("alert(arguments.callee.identity);");
-    oPerson.identity = sIdentity;
-    return oPerson;
+function createPerson(sIdentity) {
+  var oPerson = new Function("alert(arguments.callee.identity);");
+  oPerson.identity = sIdentity;
+  return oPerson;
 }
 
 var john = createPerson("John Smith");

@@ -1,6 +1,9 @@
 ---
-title: History.forward()
+title: "History: forward() メソッド"
+short-title: forward()
 slug: Web/API/History/forward
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef("History API")}}
@@ -11,9 +14,17 @@ slug: Web/API/History/forward
 
 ## 構文
 
-```js
-history.forward()
+```js-nolint
+forward()
 ```
+
+### 引数
+
+なし。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
@@ -22,15 +33,15 @@ history.forward()
 ### HTML
 
 ```html
-<button id='go-forward'>Go Forward!</button>
+<button id="go-forward">Go Forward!</button>
 ```
 
 ### JavaScript
 
 ```js
-document.getElementById('go-forward').addEventListener('click', e => {
-  window.history.forward();
-})
+document.getElementById("go-forward").addEventListener("click", (e) => {
+  history.forward();
+});
 ```
 
 ## 仕様書
@@ -44,4 +55,5 @@ document.getElementById('go-forward').addEventListener('click', e => {
 ## 関連情報
 
 - {{domxref("History")}}
-- [履歴 API での作業](/ja/docs/Web/API/History_API/Working_with_the_History_API)
+- {{domxref("Window/popstate_event", "popstate")}}
+- [履歴 API の操作](/ja/docs/Web/API/History_API/Working_with_the_History_API)

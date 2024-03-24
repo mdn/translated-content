@@ -75,7 +75,7 @@ slug: Web/SVG/Element/mpath
 
 ## DOM 接口
 
-该元素实现了[`SVGMPathElement`](/zh-CN/DOM/SVGMPathElement)接口。
+该元素实现了 [`SVGMPathElement`](/zh-CN/DOM/SVGMPathElement) 接口。
 
 ## 相关的内容
 

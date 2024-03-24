@@ -14,7 +14,7 @@ slug: Web/API/Window/print
 ## 構文
 
 ```js
-print()
+print();
 ```
 
 ### 引数

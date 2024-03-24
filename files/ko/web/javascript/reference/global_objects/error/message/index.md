@@ -2,6 +2,7 @@
 title: Error.prototype.message
 slug: Web/JavaScript/Reference/Global_Objects/Error/message
 ---
+
 {{JSRef}}
 
 **`message`** 속성은 사람이 읽을 수 있는 오류의 설명입니다.
@@ -17,7 +18,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Error/message
 ### 사용자 정의 오류 발생시키기
 
 ```js
-var e = new Error('Could not parse input');
+var e = new Error("Could not parse input");
 // e.message is 'Could not parse input'
 throw e;
 ```

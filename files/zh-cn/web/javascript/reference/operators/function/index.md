@@ -44,9 +44,9 @@ var notHoisted = function () {
 };
 ```
 
-### 命名函数表达式（Named function expression）
+### 具名函数表达式
 
-如果你想在函数体内部引用当前函数，则需要创建一个命名函数表达式。**然后函数名称将会（且只会）作为函数体（作用域内）的本地变量**。这样也可以避免使用非标准的 [arguments.callee](/zh-CN/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments/callee) 属性。
+如果你想在函数体内部引用当前函数，则需要创建一个具名函数表达式。**然后函数名称将会（且只会）作为函数体（作用域内）的本地变量**。这样也可以避免使用非标准的 [arguments.callee](/zh-CN/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments/callee) 属性。
 
 ```js
 var math = {
@@ -100,11 +100,9 @@ button.addEventListener("click", function (event) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{jsxref("Functions_and_function_scope", "Functions and function scope")}}
+- {{jsxref("Functions/Arrow_functions", "箭头函数", "", 1)}}
+- {{jsxref("Functions", "函数", "", 1)}}
 - {{jsxref("Function")}}
-- {{jsxref("Statements/function", "function statement")}}
-- {{jsxref("Statements/function*", "function* statement")}}
-- {{jsxref("Operators/function*", "function* expression")}}
-- {{jsxref("GeneratorFunction")}}
+- {{jsxref("Statements/function", "function 语句", "", 1)}}

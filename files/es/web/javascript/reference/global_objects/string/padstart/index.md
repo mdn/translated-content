@@ -27,9 +27,9 @@ Un {{jsxref("String")}} de la longitud específicada con la cadena de relleno ap
 ## Ejemplos
 
 ```js
-'abc'.padStart(10);         // "       abc"
-'abc'.padStart(10, "foo");  // "foofoofabc"
-'abc'.padStart(6,"123465"); // "123abc"
+"abc".padStart(10); // "       abc"
+"abc".padStart(10, "foo"); // "foofoofabc"
+"abc".padStart(6, "123465"); // "123abc"
 ```
 
 ## Especificaciones

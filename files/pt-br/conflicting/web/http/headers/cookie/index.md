@@ -1,7 +1,6 @@
 ---
 title: Cookie2
 slug: conflicting/Web/HTTP/Headers/Cookie
-original_slug: Web/HTTP/Headers/Cookie2
 ---
 
 {{HTTPSidebar}}
@@ -35,7 +34,7 @@ Cookie2: $Version="1"
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Cookie2")}}
+{{Compat}}
 
 ## Veja também
 

@@ -14,8 +14,8 @@ l10n:
 ## 構文
 
 ```js
-getComputedStyle(element)
-getComputedStyle(element, pseudoElt)
+getComputedStyle(element);
+getComputedStyle(element, pseudoElt);
 ```
 
 ### 引数
@@ -64,10 +64,13 @@ p {
 ### JavaScript
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 const compStyles = window.getComputedStyle(para);
-para.textContent = `My computed font-size is ${compStyles.getPropertyValue('font-size')},\n` +
-  `and my computed line-height is ${compStyles.getPropertyValue('line-height')}.`;
+para.textContent =
+  `My computed font-size is ${compStyles.getPropertyValue("font-size")},\n` +
+  `and my computed line-height is ${compStyles.getPropertyValue(
+    "line-height",
+  )}.`;
 ```
 
 ### 結果
@@ -94,17 +97,17 @@ para.textContent = `My computed font-size is ${compStyles.getPropertyValue('font
 ```html
 <style>
   h3::after {
-    content: ' rocks!';
+    content: " rocks!";
   }
 </style>
 
 <h3>Generated content</h3>
 
 <script>
-  const h3 = document.querySelector('h3');
-  const result = getComputedStyle(h3, ':after').content;
+  const h3 = document.querySelector("h3");
+  const result = getComputedStyle(h3, ":after").content;
 
-  console.log('the generated content is: ', result); // returns ' rocks!'
+  console.log("the generated content is: ", result); // returns ' rocks!'
 </script>
 ```
 

@@ -1,68 +1,94 @@
 ---
-title: performance.mark()
+title: "Performance: mark() メソッド"
+short-title: mark()
 slug: Web/API/Performance/mark
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{APIRef("User Timing API")}}
+{{APIRef("Performance API")}}
 
-**`mark()`** メソッドは、ブラウザーのパフォーマンスエントリーバッファーに、指定された名前で{{domxref("DOMHighResTimeStamp","timestamp")}} を作成します。
-
-アプリケーション定義のタイムスタンプは、{{domxref("Performance")}} インタフェースの `getEntries*()` メソッド ({{domxref("Performance.getEntries","getEntries()")}}、{{domxref("Performance.getEntriesByName","getEntriesByName()")}} または{{domxref("Performance.getEntriesByType","getEntriesByType()")}}) のいずれかによって取得できます。
-
-`mark()` は内部的にデータを {{domxref("PerformanceEntry")}} として格納します。
-
-{{AvailableInWorkers}}
+**`mark()`** メソッドは、名前付き {{domxref("PerformanceMark")}} オブジェクトを生成し、ブラウザーのパフォーマンスタイムラインに高解像度のタイムスタンプマーカーを表示します。
 
 ## 構文
 
-```js
-performance.mark(name);
-performance.mark(measureName, markOptions)
+```js-nolint
+mark(name)
+mark(name, markOptions)
 ```
 
 ### 引数
 
-- name
-  - : {{domxref("DOMString")}} で、マークの名前を表します。このメソッドで指定された `name` がすでに {{domxref("PerformanceTiming")}} インターフェイスに存在していた場合は、 {{jsxref("SyntaxError")}} が発生します。
-
+- `name`
+  - : 文字列で、マークの名前を表します。非推奨の {{domxref("PerformanceTiming")}} インターフェイスのプロパティのいずれかと同じ名前であってはいけません。
 - `markOptions` {{optional_inline}}
   - : このマークのためにタイムスタンプと追加のメタデータを指定するためのオブジェクトです。
-
-    - `detail`
-      - : マークに含める任意のメタデータです。
-    - `startTime`
-      - : マークの時刻として使用する {{domxref("DOMHighResTimeStamp")}} です。
+    - `detail` {{optional_inline}}
+      - : マークに含める任意のメタデータです。既定値は `null` です。[構造化クローン可能](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)でなければなりません。
+    - `startTime` {{optional_inline}}
+      - : マークの時刻として使用する {{domxref("DOMHighResTimeStamp")}} です。既定値は {{domxref("performance.now()")}} です。
 
 ### 返値
 
-- entry
-  - : 生成された {{domxref("PerformanceMark")}} エントリーです。
+生成された {{domxref("PerformanceMark")}} 項目です。
+
+### 例外
+
+- {{jsxref("SyntaxError")}}: `name` が非推奨の {{domxref("PerformanceTiming")}} インターフェイスのプロパティのいずれかである場合に発生します。[下記の例](#予約済みの名前)を参照してください。
+- {{jsxref("TypeError")}}: `startTime` が負の場合に発生します。
 
 ## 例
 
-次の例は、`mark()` を使用して {{domxref("PerformanceMark")}} エントリーを作成および取得する方法を示しています。
+### 名前付きのマーカーを生成
+
+次の例では、`mark()` を使用して名前付き {{domxref("PerformanceMark")}} 項目を作成しています。同じ名前のマークを複数作成することができます。また、それらを割り当てて、作成した {{domxref("PerformanceMark")}} オブジェクトへの参照を保有することもできます。
 
 ```js
-// たくさんの mark を作成します。
-performance.mark("squirrel");
-performance.mark("squirrel");
-performance.mark("monkey");
-performance.mark("monkey");
-performance.mark("dog");
-performance.mark("dog");
+performance.mark("login-started");
+performance.mark("login-started");
+performance.mark("login-finished");
+performance.mark("form-sent");
 
-// PerformanceMark エントリーをすべて取得します。
-const allEntries = performance.getEntriesByType("mark");
-console.log(allEntries.length);
-// 6
+const videoMarker = performance.mark("video-loaded");
+```
 
-// "monkey" PerformanceMark エントリーをすべて入手します。
-const monkeyEntries = performance.getEntriesByName("monkey");
-console.log(monkeyEntries.length);
-// 2
+### 詳細付きのマーカーを生成
 
-// すべての mark を消去します。
-performance.clearMarks();
+パフォーマンスマークは `markOptions` オブジェクトを使用して設定することができ、`detail` プロパティに任意の型の追加情報を入力することができます。
+
+```js
+performance.mark("login-started", {
+  detail: "ログインはトップメニューのログインボタンを使用して開始されました。",
+});
+
+performance.mark("login-started", {
+  detail: { htmlElement: myElement.id },
+});
+```
+
+### 開始時刻付きのマーカーを作成
+
+`mark()` メソッドの既定では、タイムスタンプは {{domxref("performance.now()")}} です。`markOptions` の `startTime` オプションを使用すると、別の時刻に設定することができます。
+
+```js
+performance.mark("start-checkout", {
+  startTime: 20.0,
+});
+
+performance.mark("login-button-pressed", {
+  startTime: myEvent.timeStamp,
+});
+```
+
+### 予約済みの名前
+
+後方互換性を保つため、非推奨の {{domxref("PerformanceTiming")}} インターフェイスの一部である名前は使用できないことに注意してください。次の例は例外が発生します。
+
+```js example-bad
+performance.mark("navigationStart");
+// SyntaxError: "navigationStart" is part of
+// the PerformanceTiming interface,
+// and cannot be used as a mark name
 ```
 
 ## 仕様書

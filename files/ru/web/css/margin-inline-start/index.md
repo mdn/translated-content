@@ -9,9 +9,9 @@ slug: Web/CSS/margin-inline-start
 
 ```css
 /* <length> values */
-margin-inline-start: 10px;  /* абсолютная величина */
-margin-inline-start: 1em;   /* относительно размера текста */
-margin-inline-start: 5%;    /* относительно ширины ближайшего контейнера */
+margin-inline-start: 10px; /* абсолютная величина */
+margin-inline-start: 1em; /* относительно размера текста */
+margin-inline-start: 5%; /* относительно ширины ближайшего контейнера */
 
 /* Keyword values */
 margin-inline-start: auto;

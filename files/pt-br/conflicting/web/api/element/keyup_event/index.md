@@ -1,7 +1,6 @@
 ---
 title: GlobalEventHandlers.onkeyup
 slug: conflicting/Web/API/Element/keyup_event
-original_slug: Web/API/GlobalEventHandlers/onkeyup
 ---
 
 {{ApiRef("HTML DOM")}}
@@ -35,4 +34,4 @@ O evento keyup é iniciado quando o usuário libera a tecla é pressionada.
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.GlobalEventHandlers.onkeyup")}}
+{{Compat}}

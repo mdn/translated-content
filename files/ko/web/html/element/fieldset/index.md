@@ -9,19 +9,17 @@ slug: Web/HTML/Element/fieldset
 
 {{EmbedInteractiveExample("pages/tabbed/fieldset.html", "tabbed-standard")}}
 
-The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone [https://github.com/mdn/interactive-examples](https://github.com/mdn/interactive-examples) and send us a pull request.
-
 위의 예제에서 보듯, `<fieldset>` 요소는 HTML 양식 속에서 그룹을 만들 수 있으며 {{htmlelement("legend")}} 요소로 그룹의 설명을 제공할 수 있습니다. 여러 특성을 지정할 수 있는데, 그 중 중요한 것 하나는 페이지 내 {{htmlelement("form")}} 요소의 `id`를 받을 수 있는 `form` 특성으로, `<form>` 바깥의 `<fieldset>` 요소를 해당 양식에 포함해야 할 때 사용합니다. 다른 하나는 `disabled`로, `<fieldset>`의 모든 콘텐츠를 한 번에 비활성화할 수 있습니다.
 
 ## 특성
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
-- {{htmlattrdef("disabled")}}
+- `disabled`
   - : 지정한 경우, 모든 자손 컨트롤을 비활성화합니다. 비활성 컨트롤은 편집할 수 없고, {{htmlelement("form")}}을 제출할 때 데이터에 포함되지 않습니다. 마우스 클릭, 포커스 등 브라우저 이벤트도 모두 받지 않습니다. 브라우저는 비활성 컨트롤을 주로 회색으로 표시합니다. 단, {{htmlelement("legend")}} 안의 양식 요소는 비활성 상태로 전환되지 않습니다.
-- {{htmlattrdef("form")}}
+- `form`
   - : `<fieldset>` 요소와 연결할 {{htmlelement("form")}} 요소("양식 소유자")의 [`id`](/ko/docs/Web/HTML/Global_attributes#id). `<fieldset>`이 해당 `<form>` 안에 위치하지 않아도 연결할 수 있습니다.
-- {{htmlattrdef("name")}}
+- `name`
 
   - : 그룹과 연관지을 이름.
 

@@ -2,6 +2,7 @@
 title: Reflect.preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/preventExtensions
 ---
+
 {{JSRef}}
 
 **`Reflect.preventExtensions()`** 정적 메서드는 새로운 속성을 객체에 추가하지 못하도록 완전히 막습니다. 즉, 미래의 객체 확장을 막습니다. {{jsxref("Object.preventExtensions()")}}와 유사하지만 [차이점](#object.preventextensions_와의_차이점)도 있습니다.
@@ -11,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/preventExtensions
 ## 구문
 
 ```js
-Reflect.preventExtensions(target)
+Reflect.preventExtensions(target);
 ```
 
 ### 매개변수

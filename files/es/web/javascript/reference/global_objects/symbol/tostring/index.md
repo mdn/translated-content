@@ -14,7 +14,7 @@ El método **`toString()`** devuelve una cadena que representa el objeto {{jsxre
 ## Sintaxis
 
 ```js
-toString()
+toString();
 ```
 
 ### Valor de retorno
@@ -30,7 +30,7 @@ El objeto {{jsxref("Symbol")}} reemplaza el método `toString` del objeto {{jsxr
 Aunque se puede llamar a `toString()` en los símbolos, no se puede utilizar la concatenación de cadenas con ellos:
 
 ```js
-Symbol('foo') + 'bar'        // TypeError: No se puede convertir el símbolo en cadena
+Symbol("foo") + "bar"; // TypeError: No se puede convertir el símbolo en cadena
 ```
 
 ## Ejemplos
@@ -38,13 +38,13 @@ Symbol('foo') + 'bar'        // TypeError: No se puede convertir el símbolo en 
 ### Usando toString()
 
 ```js
-Symbol('desc').toString()    // "Symbol(desc)"
+Symbol("desc").toString(); // "Symbol(desc)"
 
 // símbolos conocidos
-Symbol.iterator.toString()   // "Symbol(Symbol.iterator)
+Symbol.iterator.toString(); // "Symbol(Symbol.iterator)
 
 // símbolos globales
-Symbol.for('foo').toString() // "Symbol(foo)"
+Symbol.for("foo").toString(); // "Symbol(foo)"
 ```
 
 ## Especificaciones

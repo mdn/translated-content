@@ -12,9 +12,9 @@ slug: Web/JavaScript/Reference/Statements/for...of
 ## 구문
 
 ```js
-    for (variable of iterable) {
-      statement
-    }
+for (variable of iterable) {
+  statement;
+}
 ```
 
 - `variable`
@@ -78,7 +78,11 @@ for (let value of iterable) {
 ### {{jsxref("Map")}}에 대해 반복
 
 ```js
-let iterable = new Map([["a", 1], ["b", 2], ["c", 3]]);
+let iterable = new Map([
+  ["a", 1],
+  ["b", 2],
+  ["c", 3],
+]);
 
 for (let entry of iterable) {
   console.log(entry);
@@ -127,7 +131,8 @@ for (let paragraph of articleParagraphs) {
 [생성기](/ko/docs/Web/JavaScript/Reference/Statements/function*)에 대해서도 반복할 수 있습니다:
 
 ```js
-function* fibonacci() { // 생성기 함수
+function* fibonacci() {
+  // 생성기 함수
   let [prev, curr] = [1, 1];
   while (true) {
     [prev, curr] = [curr, prev + curr];
@@ -158,9 +163,9 @@ var iterable = {
           return { value: this.i++, done: false };
         }
         return { value: undefined, done: true };
-      }
+      },
     };
-  }
+  },
 };
 
 for (var value of iterable) {

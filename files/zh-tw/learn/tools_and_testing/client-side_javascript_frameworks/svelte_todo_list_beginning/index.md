@@ -306,7 +306,7 @@ npx degit opensas/mdn-svelte-tutorial/02-starting-our-todo-app
   aria-labelledby="list-heading"></ul>
 ```
 
-`role` 屬性則幫助輔助技術去解釋元素具有什麼種類的語義數值——或它的目的。預設情況下，`<ul>` 會被視為清單，但在加上樣式之後會破壞原有性質。明確定義規則為「list」將能復原 `<ul>` 元素本身意義。假如你想要知道更多為什麼需要明確定義的話，可以去參考 Scott O'Hara’s 的「Fixing Lists」文章。
+`role` 屬性則幫助輔助技術去解釋元素具有什麼種類的語義數值——或它的目的。預設情況下，`<ul>` 會被視為清單，但在加上樣式之後會破壞原有性質。明確定義規則為「list」將能復原 `<ul>` 元素本身意義。假如你想要知道更多為什麼需要明確定義的話，可以去參考 Scott O'Hara 的「Fixing Lists」文章。
 
 `aria-labelledby` 屬性則告訴輔助技術，我們把 `<h2>` 且 `id` 為 `list-heading` 作為描述下面清單用途的標籤。建立這種關聯為清單提供更多上下文資訊，這可以幫助螢幕閱讀器使用者更好地去了解它的目的。
 

@@ -3,7 +3,7 @@ title: i18n.getMessage()
 slug: Mozilla/Add-ons/WebExtensions/API/i18n/getMessage
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 指定したメッセージのローカライズされた文字列を取得します。
 
@@ -35,7 +35,7 @@ browser.i18n.getMessage(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.i18n.getMessage")}}
+{{Compat}}
 
 ## 例
 

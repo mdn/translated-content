@@ -149,9 +149,9 @@ div {
 
 {{EmbedLiveSample("Используя_два_угла", 200, 200)}}
 
-## Поддержка браузеров
+## Совместимость с браузерами
 
-Please see the [`<transform-function>`](/ru/docs/Web/CSS/transform-function#Browser_compatibility) data type for compatibility info.
+{{Compat}}
 
 ## Смотрите также
 

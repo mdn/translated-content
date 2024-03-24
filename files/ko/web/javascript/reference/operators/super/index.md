@@ -47,7 +47,7 @@ super[expression]
 
 ### 클래스에서 super 사용하기
 
-이 코드 스니펫은 [클래스 샘플](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html) ([라이브 데모]((https://googlechrome.github.io/samples/classes-es6/index.html)))에서 가져왔습니다. 여기서 `super()`는 `Rectangle`과 `Square` 사이에 공통적인 생성자 부분의 중복을 피하기 위해 호출됩니다.
+이 코드 스니펫은 [클래스 샘플](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html) ([라이브 데모](<(https://googlechrome.github.io/samples/classes-es6/index.html)>))에서 가져왔습니다. 여기서 `super()`는 `Rectangle`과 `Square` 사이에 공통적인 생성자 부분의 중복을 피하기 위해 호출됩니다.
 
 ```js
 class Rectangle {
@@ -247,7 +247,7 @@ const e = new Extended();
 // 인스턴스 상속 재설정
 Object.setPrototypeOf(Extended.prototype, AnotherBase.prototype);
 console.log(e.getX()); // 프로토타입 체인이 변경되었기 때문에 "1" 대신 "2"가 로그됩니다.
-console.log(Extended.staticGetX()); // 정적 부분을 아직 수정하지 않았기 때문에, 여전히 "3"이 로그됩니다. 
+console.log(Extended.staticGetX()); // 정적 부분을 아직 수정하지 않았기 때문에, 여전히 "3"이 로그됩니다.
 // 정적 상속 재설정
 Object.setPrototypeOf(Extended, AnotherBase);
 console.log(Extended.staticGetX()); // 이제 "4"가 로그됩니다.

@@ -22,7 +22,7 @@ new AudioWorkletNode(context, name, options)
   - : このノードを関連付ける {{domxref("BaseAudioContext")}} のインスタンスです。
 - `name`
   - : このノードのもととなる {{domxref("AudioWorkletProcessor")}} の名前を表す文字列です。
-      指定の名前の処理器が {{domxref("AudioWorkletGlobalScope.registerProcessor()")}} メソッドで登録されている必要があります。
+    指定の名前の処理器が {{domxref("AudioWorkletGlobalScope.registerProcessor()")}} メソッドで登録されている必要があります。
 - `options` {{optional_inline}}
 
   - : 以下の任意のプロパティのうち 0 個以上を持ち、新しいノードの設定をするオブジェクトです。

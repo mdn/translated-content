@@ -18,9 +18,9 @@ slug: Web/CSS/angle
 ### 単位
 
 - `deg`
-  - : 角度を[度数法 (度)](https://ja.wikipedia.org/wiki/%E5%BA%A6_(%E8%A7%92%E5%BA%A6)) で表します。円一周は `360deg` です。例: `0deg`, `90deg`, `14.23deg`
+  - : 角度を[度数法 (度)](<https://ja.wikipedia.org/wiki/%E5%BA%A6_(%E8%A7%92%E5%BA%A6)>) で表します。円一周は `360deg` です。例: `0deg`, `90deg`, `14.23deg`
 - `grad`
-  - : 角度を[グラード](https://ja.wikipedia.org/wiki/%E3%82%B0%E3%83%A9%E3%83%BC%E3%83%89_(%E5%8D%98%E4%BD%8D))で表します。円一周は `400grad` です。例: `0grad`, `100grad`, `38.8grad`
+  - : 角度を[グラード](<https://ja.wikipedia.org/wiki/%E3%82%B0%E3%83%A9%E3%83%BC%E3%83%89_(%E5%8D%98%E4%BD%8D)>)で表します。円一周は `400grad` です。例: `0grad`, `100grad`, `38.8grad`
 - `rad`
   - : 角度を[弧度法 (ラジアン)](https://ja.wikipedia.org/wiki/%E3%83%A9%E3%82%B8%E3%82%A2%E3%83%B3) で表します。円一周は 2π ラジアンで、およそ `6.2832rad` です。 `1rad` は 180/π 度です。例: `0rad`, `1.0708rad`, `6.2832rad`
 - `turn`

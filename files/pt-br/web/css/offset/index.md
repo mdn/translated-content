@@ -76,10 +76,8 @@ offset: url(arc.svg) 30deg / 50px 100px;
 
 ## Especificações
 
-| Especificação                                                                            | Status                                       | Comentário        |
-| ---------------------------------------------------------------------------------------- | -------------------------------------------- | ----------------- |
-| {{SpecName('Motion Path Level 1', '#offset-shorthand', 'offset')}} | {{Spec2('Motion Path Level 1')}} | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.offset")}}
+{{Compat}}

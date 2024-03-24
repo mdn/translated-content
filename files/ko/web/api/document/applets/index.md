@@ -22,7 +22,7 @@ nodeList = document.applets;
 my_java_app = document.applets[1];
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

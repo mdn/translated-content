@@ -1,6 +1,8 @@
 ---
 title: WebSocket クライアントアプリケーションの記述
 slug: Web/API/WebSockets_API/Writing_WebSocket_client_applications
+l10n:
+  sourceCommit: 50e215d730cd173d93b9bf75785c0d8ed2f67cb0
 ---
 
 {{APIRef("Websockets API")}}
@@ -30,7 +32,7 @@ webSocket = new WebSocket(url, protocols);
 
 ### 接続エラー
 
-接続中にエラーが発生した場合、最初に `error` という名前の単純なイベントが {{domxref("WebSocket")}} オブジェクトに送信され（その結果、その {{domxref("WebSocket.onerror", "onerror")}} ハンドラーが呼び出されます）、次に {{domxref("CloseEvent")}} が `WebSocket` オブジェクトに送信され（{{domxref("WebSocket.onclose", "onclose")}} ハンドラーが呼び出されます）接続の終了の理由を示します。
+接続中にエラーが発生した場合、最初に `error` という名前の単純なイベントが {{domxref("WebSocket")}} オブジェクトに送信され（その結果、その {{domxref("WebSocket/error_event", "onerror")}} ハンドラーが呼び出されます）、次に {{domxref("CloseEvent")}} が `WebSocket` オブジェクトに送信され（{{domxref("WebSocket/close_event", "onclose")}} ハンドラーが呼び出されます）接続の終了の理由を示します。
 
 ブラウザーは {{domxref("CloseEvent")}} 経由で、コンソールにも [RFC 6455 第 7.4 節]で定義されている終了コードと同時に、もっと説明的なエラーメッセージを出力するができます。
 
@@ -39,7 +41,10 @@ webSocket = new WebSocket(url, protocols);
 この簡単な例では新しい WebSocket を作成し、 `wss://www.example.com/socketserver` のサーバーに接続します。この例では、ソケットのリクエストで "protocolOne" のカスタムプロトコルが指定されていますが、省略することもできます。
 
 ```js
-var exampleSocket = new WebSocket("wss://www.example.com/socketserver", "protocolOne");
+const exampleSocket = new WebSocket(
+  "wss://www.example.com/socketserver",
+  "protocolOne",
+);
 ```
 
 返されると、 {{domxref("WebSocket.readyState", "exampleSocket.readyState")}} は `CONNECTING` です。 `readyState` は接続がデータを転送する準備ができたら `OPEN`になります。
@@ -47,7 +52,10 @@ var exampleSocket = new WebSocket("wss://www.example.com/socketserver", "protoco
 接続を開き、サポートしているプロトコルについて柔軟に対応したい場合は、プロトコルの配列を指定することができます。
 
 ```js
-var exampleSocket = new WebSocket("wss://www.example.com/socketserver", ["protocolOne", "protocolTwo"]);
+const exampleSocket = new WebSocket("wss://www.example.com/socketserver", [
+  "protocolOne",
+  "protocolTwo",
+]);
 ```
 
 接続が確立されると（つまり `readyState` が `OPEN`）、 {{domxref("WebSocket.protocol", "exampleSocket.protocol")}} は、サーバーが選択したプロトコルを通知します。
@@ -64,10 +72,10 @@ exampleSocket.send("Here's some text that the server is urgently awaiting!");
 
 データは文字列、 {{ domxref("Blob") }}、 {{jsxref("ArrayBuffer")}} のいずれかで送信することができます。
 
-接続の確立は非同期であり、失敗しやすいため、 `send()` メソッドの呼び出しが WebSocket オブジェクトの作成直後に成功するという保証はありません。データの送信を試みるのは、少なくともいったん接続が確立してからでなければならないので、作業を行うための {{domxref("WebSocket.onopen", "onopen")}} イベントハンドラーを定義してその中で行います。
+接続の確立は非同期であり、失敗しやすいため、 `send()` メソッドの呼び出しが WebSocket オブジェクトの作成直後に成功するという保証はありません。データの送信を試みるのは、少なくともいったん接続が確立してからでなければならないので、作業を行うための {{domxref("WebSocket/open_event", "onopen")}} イベントハンドラーを定義してその中で行います。
 
 ```js
-exampleSocket.onopen = function (event) {
+exampleSocket.onopen = (event) => {
   exampleSocket.send("Here's some text that the server is urgently awaiting!");
 };
 ```
@@ -80,11 +88,11 @@ exampleSocket.onopen = function (event) {
 // Send text to all users through the server
 function sendText() {
   // Construct a msg object containing the data the server needs to process the message from the chat client.
-  var msg = {
+  const msg = {
     type: "message",
     text: document.getElementById("text").value,
-    id:   clientID,
-    date: Date.now()
+    id: clientID,
+    date: Date.now(),
   };
 
   // Send the msg object as a JSON-formatted string.
@@ -97,12 +105,12 @@ function sendText() {
 
 ## サーバーからのメッセージの受信
 
-WebSockets はイベント駆動型 API です。メッセージを受信すると、 `message` イベント `WebSocket` オブジェクトに送信されます。これを処理するには、 `message` イベントのイベントリスナーを追加するか、 {{domxref("WebSocket.onmessage", "onmessage")}} イベントハンドラーを使用するかします。受信データの待ち受けを開始するには、次のようにします。
+WebSockets はイベント駆動型 API です。メッセージを受信すると、 `message` イベント `WebSocket` オブジェクトに送信されます。これを処理するには、 `message` イベントのイベントリスナーを追加するか、 {{domxref("WebSocket/message_event", "onmessage")}} イベントハンドラーを使用するかします。受信データの待ち受けを開始するには、次のようにします。
 
 ```js
-exampleSocket.onmessage = function (event) {
+exampleSocket.onmessage = (event) => {
   console.log(event.data);
-}
+};
 ```
 
 ### JSON オブジェクトの受信と解釈
@@ -116,33 +124,29 @@ exampleSocket.onmessage = function (event) {
 これらの受信メッセージを解釈するコードは、次のようになります。
 
 ```js
-exampleSocket.onmessage = function(event) {
-  var f = document.getElementById("chatbox").contentDocument;
-  var text = "";
-  var msg = JSON.parse(event.data);
-  var time = new Date(msg.date);
-  var timeStr = time.toLocaleTimeString();
+exampleSocket.onmessage = (event) => {
+  const f = document.getElementById("chatbox").contentDocument;
+  let text = "";
+  const msg = JSON.parse(event.data);
+  const time = new Date(msg.date);
+  const timeStr = time.toLocaleTimeString();
 
-  switch(msg.type) {
+  switch (msg.type) {
     case "id":
       clientID = msg.id;
       setUsername();
       break;
     case "username":
-      text = "<b>User <em>" + msg.name + "</em> signed in at " + timeStr + "</b><br>";
+      text = `User <em>${msg.name}</em> signed in at ${timeStr}<br>`;
       break;
     case "message":
-      text = "(" + timeStr + ") <b>" + msg.name + "</b>: " + msg.text + "<br>";
+      text = `(${timeStr}) ${msg.name} : ${msg.text} <br>`;
       break;
     case "rejectusername":
-      text = "<b>Your username has been set to <em>" + msg.name + "</em> because the name you chose is in use.</b><br>"
+      text = `Your username has been set to <em>${msg.name}</em> because the name you chose is in use.<br>`;
       break;
     case "userlist":
-      var ul = "";
-      for (i=0; i < msg.users.length; i++) {
-        ul += msg.users[i] + "<br>";
-      }
-      document.getElementById("userlistbox").innerHTML = ul;
+      document.getElementById("userlistbox").innerHTML = msg.users.join("<br>");
       break;
   }
 

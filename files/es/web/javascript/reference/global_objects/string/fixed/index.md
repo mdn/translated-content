@@ -3,7 +3,7 @@ title: String.prototype.fixed()
 slug: Web/JavaScript/Reference/Global_Objects/String/fixed
 ---
 
-{{JSRef("Objetos_globales", "String")}}
+{{JSRef}}
 
 {{deprecated_header}}
 
@@ -28,8 +28,8 @@ Usa el método `fixed` para formatear y mostrar unacadena en un documento.
 El siguiente ejemplo usa el método `fixed` para cambiar el formateado de una cadena:
 
 ```js
-var cadenaMundo="¡Hola Mundo!"
-console.log(cadenaMundo.fixed())
+var cadenaMundo = "¡Hola Mundo!";
+console.log(cadenaMundo.fixed());
 ```
 
 Este ejemplo produce el mismo resultado que el siguiente código HTML:

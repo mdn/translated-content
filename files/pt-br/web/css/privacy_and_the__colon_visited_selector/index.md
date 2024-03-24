@@ -42,9 +42,9 @@ Aqui está um exemplo de como estilizar com as restrições acima mencionadas:
 }
 
 :visited {
-  outline-color: orange;    /* Links visitados tem contornos laranja */
-  background-color: green;  /* Links visitados tem um fundo verde */
-  color: yellow;            /* Links visitados tem texto amarelo */
+  outline-color: orange; /* Links visitados tem contornos laranja */
+  background-color: green; /* Links visitados tem um fundo verde */
+  color: yellow; /* Links visitados tem texto amarelo */
 }
 ```
 

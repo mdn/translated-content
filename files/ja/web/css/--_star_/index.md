@@ -35,16 +35,10 @@ l10n:
 ### HTML
 
 ```html
-<p id="firstParagraph">
-  この段落は青色の背景で黄色のテキストとなります。
-</p>
-<p id="secondParagraph">
-  この段落は黄色の背景で青色のテキストとなります。
-</p>
+<p id="firstParagraph">この段落は青色の背景で黄色のテキストとなります。</p>
+<p id="secondParagraph">この段落は黄色の背景で青色のテキストとなります。</p>
 <div id="container">
-  <p id="thirdParagraph">
-    この段落は緑色の背景で黄色のテキストとなります。
-  </p>
+  <p id="thirdParagraph">この段落は緑色の背景で黄色のテキストとなります。</p>
 </div>
 ```
 

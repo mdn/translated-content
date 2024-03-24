@@ -22,8 +22,8 @@ text-decoration-line: line-through;
 text-decoration-line: blink;
 
 /* 複数のキーワード */
-text-decoration-line: underline overline;               /* 2 つの装飾線 */
-text-decoration-line: overline underline line-through;  /* 複数の装飾線 */
+text-decoration-line: underline overline; /* 2 つの装飾線 */
+text-decoration-line: overline underline line-through; /* 複数の装飾線 */
 
 /* グローバル値 */
 text-decoration-line: inherit;

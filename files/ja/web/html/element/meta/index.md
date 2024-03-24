@@ -111,7 +111,7 @@ l10n:
 
     - `default-style`
 
-     既定の [CSS スタイルシート](/ja/docs/Web/CSS)セットの名前を設定します。
+    既定の [CSS スタイルシート](/ja/docs/Web/CSS)セットの名前を設定します。
 
     - `x-ua-compatible`
 

@@ -37,17 +37,17 @@ Hemos _congelado_ todo el contenido localizado (lo que significa que no aceptare
 
 ### Coreano (ko)
 
-- Discusiones: [Kakao Talk (#MDN Korea)](https://open.kakao.com/o/gdfG288c)
-- Current contributors: [hochan222](https://github.com/hochan222), [yechoi42](https://github.com/yechoi42), [cos18](https://github.com/cos18), [GwangYeol-Im](https://github.com/GwangYeol-Im), [pje1740](https://github.com/pje1740), [yujo11](https://github.com/yujo11)
+- Discusiones: [Discord (`#korean`)](/discord), [Kakao Talk (#MDN Korea)](https://open.kakao.com/o/gdfG288c)
+- Current contributors: [hochan222](https://github.com/hochan222), [yechoi42](https://github.com/yechoi42), [cos18](https://github.com/cos18), [pje1740](https://github.com/pje1740), [wisedog](https://github.com/wisedog), [swimjiy](https://github.com/swimjiy), [jho2301](https://github.com/jho2301), [sunhpark42](https://github.com/sunhpark42), [1ilsang](https://github.com/1ilsang)
 
 ### Ruso (ru)
 
 - Discusiones: [Matrix (canal #mdn-l10n-ru)](https://chat.mozilla.org/#/room/#mdn-l10n-ru:mozilla.org)
-- Colaboradores actuales: [yanaklose](https://github.com/yanaklose), [myshov](https://github.com/myshov), [Saionaro](https://github.com/Saionaro), [sashasushko](https://github.com/sashasushko), [lex111](https://github.com/lex111)
+- Colaboradores actuales: [leon-win](https://github.com/leon-win), [sashasushko](https://github.com/sashasushko), [Saionaro](https://github.com/Saionaro), [yanaklose](https://github.com/yanaklose), [myshov](https://github.com/myshov), [lex111](https://github.com/lex111)
 
 ### Español (es)
 
-- Discusiones: [Matrix (canal #mdn-l10n-es)](https://chat.mozilla.org/#/room/#mdn-l10n-es:mozilla.org), [Telegram (canal MDN l10n ES)](https://t.me/+Dr6qKQCAepw4MjFj), [Discord (MDN Web Docs Community ,canal #spanish)](https://discord.gg/aZqEtMrbr7)
+- Discusiones: [Matrix (canal #mdn-l10n-es)](https://chat.mozilla.org/#/room/#mdn-l10n-es:mozilla.org), [Telegram (canal MDN l10n ES)](https://t.me/+Dr6qKQCAepw4MjFj), [Discord (MDN Web Docs Community ,canal #spanish)](/discord)
 - Colaboradores actuales: [Graywolf9](https://github.com/Graywolf9), [JuanVqz](https://github.com/JuanVqz), [Jalkhov](https://github.com/Jalkhov), [marcelozarate](https://github.com/marcelozarate), [davbrito](https://github.com/davbrito), [Vallejoanderson](https://github.com/Vallejoanderson).
 
 > **Nota:** Si quiere hablar sobre la posibilidad de _descongelar_ una localización, las [directrices sobre lo que se requiere se pueden encontrar aquí](https://github.com/mdn/translated-content/blob/main/PEERS_GUIDELINES.md#activating-a-locale)

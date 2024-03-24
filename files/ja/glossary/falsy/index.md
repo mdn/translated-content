@@ -5,6 +5,8 @@ l10n:
   sourceCommit: 19036f6d79250ddc254d17e2b08bd0c45944b0ef
 ---
 
+{{GlossarySidebar}}
+
 **偽値** (**falsy** または **falsey**) な値とは、論理型コンテキストに現れたときに偽とみなされる値です。
 
 {{Glossary("JavaScript")}} は{{Glossary("Conditional", "条件文")}}や{{Glossary("Loop", "繰り返し")}}などの場面で、任意の値を強制的に論理型に{{Glossary("Type_Conversion", "型変換")}}します。
@@ -23,7 +25,7 @@ l10n:
 | `""`                        | 文字列型     | 空[文字列](/ja/docs/Web/JavaScript/Data_structures#文字列型)値。`''` や ` `` ` も含みます。                                                                                |
 | {{domxref("document.all")}} | オブジェクト | JavaScript で唯一の偽値のオブジェクトは、組み込みの {{domxref("document.all")}} です。                                                                                     |
 
-`null` および `undefined` は[ヌル値](/en-US/docs/Glossary/Nullish)でもあります。
+`null` および `undefined` は[ヌル値](/ja/docs/Glossary/Nullish)でもあります。
 
 ## 例
 

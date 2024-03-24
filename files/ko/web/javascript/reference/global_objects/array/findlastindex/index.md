@@ -23,6 +23,7 @@ findLastIndex(callbackFn, thisArg)
 ### 매개변수
 
 - `callbackFn`
+
   - : 배열의 각 요소에 대해 실행할 함수입니다. 이 함수는 매칭된 요소가 발견되었음을 나타내기 위해 [참 값](/ko/docs/Glossary/Truthy)을 반환해야하며, 그렇지 않으면 [거짓 값](/ko/docs/Glossary/Falsy)을 반환해야 합니다. 이 함수는 다음과 같은 인수와 함께 호출됩니다.
 
     - `element`
@@ -89,7 +90,7 @@ console.log([1, , 3].findLastIndex((x) => x === undefined)); // 1
 
 ### 배열이 아닌 객체에서 findLastIndex() 사용
 
-`findLastIndex()`  메서드는 `this`의 `length` 속성을 읽은 다음 각 정수 인덱스에 접근합니다.
+`findLastIndex()` 메서드는 `this`의 `length` 속성을 읽은 다음 각 정수 인덱스에 접근합니다.
 
 ```js
 const arrayLike = {

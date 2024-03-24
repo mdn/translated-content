@@ -59,7 +59,7 @@ Vous pouvez aussi écrire des données vers les flux en utilisant {{domxref("Wri
 - {{domxref("Request")}}
   - : Quand un nouvel objet `Request` est construit, vous pouvez lui passer un {{domxref("ReadableStream")}} dans la propriété `body` de son dictionnaire `RequestInit`. Cette `Request` peut alors être envoyée à un [`fetch()`](/fr/docs/Web/API/fetch) pour initier l'appel vers le flux.
 - {{domxref("Body")}}
-  - : La réponse {{domxref("Body")}} retrouné par un [appel fetch](/fr-FR/docs/Web/API/WindowOrWorkerGlobalScope/fetch) réussi est exposée par défaut comme un {{domxref("ReadableStream")}}, et peut être ratachée à un reader, etc.
+  - : La réponse {{domxref("Body")}} retrouné par un [appel fetch](/fr/docs/Web/API/fetch) réussi est exposée par défaut comme un {{domxref("ReadableStream")}}, et peut être ratachée à un reader, etc.
 
 ### Interfaces liées aux flux d'octets
 

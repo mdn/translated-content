@@ -75,7 +75,7 @@ function getRandomIntInclusive(min, max) {
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Math.random")}}
+{{Compat}}
 
 ## 関連情報
 

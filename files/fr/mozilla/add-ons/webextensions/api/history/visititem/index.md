@@ -3,7 +3,7 @@ title: history.VisitItem
 slug: Mozilla/Add-ons/WebExtensions/API/history/VisitItem
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Un objet décrivant une seule visite sur une page.
 

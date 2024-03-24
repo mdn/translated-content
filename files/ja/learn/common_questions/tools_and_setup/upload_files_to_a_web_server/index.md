@@ -1,7 +1,11 @@
 ---
-title: ウェブサーバーにファイルをアップロードするには？
+title: ウェブサーバーにファイルをアップロードするには
 slug: Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server
+l10n:
+  sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
+
+{{QuicklinksWithSubPages("/ja/Learn/Common_questions")}}
 
 この記事では、ファイル転送ツールを使用してオンラインでサイトを公開する方法を説明します。
 
@@ -10,8 +14,15 @@ slug: Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        <a href="/ja/docs/Learn/Common_questions/What_is_a_web_server">ウェブサーバとは何か</a>と<a href="/ja/docs/Learn/Common_questions/What_is_a_domain_name">ドメイン名の仕組み</a>を知っている必要があります。<a href="/ja/docs/Learn/Common_questions/set_up_a_local_testing_server"
-          >基本的な環境設定方法</a>と<a href="/ja/docs/Learn/Getting_started_with_the_web">簡単なウェブページの作成方法</a>も理解しておく必要があります。
+        <a href="/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server"
+          >ウェブサーバとは何か</a
+        >と<a href="/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name"
+          >ドメイン名の仕組み</a
+        >を知っている必要があります。<a href="/ja/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server"
+          >基本的な環境設定方法</a
+          >と<a href="/ja/docs/Learn/Getting_started_with_the_web"
+          >簡単なウェブページの作成方法</a
+        >も理解しておく必要があります。
     </tr>
     <tr>
       <th scope="row">目標:</th>
@@ -30,11 +41,11 @@ slug: Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server
 
 SFTP クライアントには、いくつもの選択肢があります。ここのデモは [FileZilla](https://filezilla-project.org/) を使うことにします。 Windows、macOS、Linux で使え、無料だからです。 FileZilla をインストールするには、 [FileZilla ダウンロードページ](https://filezilla-project.org/download.php?type=client)に移動し、大きなダウンロードボタンをクリックしてから、通常の方法でインストーラーファイルからインストールします。
 
-> **メモ:** もちろん他にもたくさんの選択肢があります。詳しくは[公開ツール](/ja/docs/Learn/Common_questions/How_much_does_it_cost#公開ツール)を参照してください。
+> **メモ:** もちろん他にもたくさんの選択肢があります。詳しくは[公開ツール](/ja/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost#公開ツール)を参照してください。
 
 FileZilla アプリケーションを開きます。次のようなものが表示されます。
 
-![](filezilla-ui.png)
+![Filezilla FTP アプリケーションのユーザーインターフェイスのスクリーンショット。ホスト入力にフォーカスがあります。](filezilla-ui.png)
 
 ### ログイン
 
@@ -58,7 +69,7 @@ FileZilla アプリケーションを開きます。次のようなものが表�
 
 最初に `http://demozilla.examplehostingprovider.net/` を見てみましょう。見ての通り、まだそこには何もありません。
 
-![Our demozilla personal website, seen in a browser: it's empty](demozilla-empty.png)
+![ブラウザーで見たデモジラの個人ウェブサイト。空っぽです。](demozilla-empty.png)
 
 > **メモ:** ホスティングプロバイダーによっては、最初にあなたのウェブアドレスに行ったときに、「このウェブサイトは[ホスティングサービス]によってホストされています。」というようなページが表示されます。
 
@@ -72,7 +83,7 @@ SFTP クライアントを遠隔のサーバーに接続するには、次の手
 
 ウィンドウは次のようになります。
 
-![](site-manager.png)
+![ファイルディレクトリーが空の場合の、架空のウェブサイトの既定ランディングページのスクリーンショット](site-manager.png)
 
 次に Connect を押して SFTP サーバーに接続します。
 
@@ -82,9 +93,9 @@ SFTP クライアントを遠隔のサーバーに接続するには、次の手
 
 一度接続すると、画面は次のようになります（私たち自身の例と結びつけて、イメージをつかんでください。）
 
-![](connected.png)
+![SFTP サーバーに接続するとウェブサイトのコンテンツが表示される SFTP クライアント。左側がローカルファイル。右側がリモートファイルです。](connected.png)
 
-あなたが見ているものを調べてみましょう。
+見えているものを調べてみましょう。
 
 - 中央の左ペインには、ローカルファイルが表示されます。ウェブサイトを保存しているディレクトリー (例: `mdn`) に移動します
 - 中央の右ペインには、リモートファイルが表示されます。遠くの FTP ルート (このケースでは、`users/demozilla`) にログインしています
@@ -100,13 +111,13 @@ SFTP クライアントを遠隔のサーバーに接続するには、次の手
 
 これまでのところとても良いですが、ファイルは本当にオンラインですか？ ブラウザーでウェブサイト (例えば `http://demozilla.examplehostingprovider.net/`) に戻って再確認することができます。
 
-![Here we go: our website is live!](here-we-go.png)
+![ウェブサイトを開設しました！](here-we-go.png)
 
 やりました！ウェブサイトは動いています！
 
 ## Rsync
 
-{{Glossary("Rsync")}} はローカルからリモートへのファイル同期ツールで、ほとんどの Unix ベースのシステム (macOS や Linux など) で一般的に利用可能ですが、Windows 版も存在します。
+{{Glossary("Rsync")}} はローカルからリモートへのファイル同期ツールで、ほとんどの Unix ベースのシステム (macOS や Linux など) で一般的に利用可能ですが、 Windows 版も存在します。
 
 既定ではコマンドラインで使用されるため、SFTP よりも高度なツールと見なされています。基本的なコマンドはこんな感じです。
 
@@ -120,9 +131,9 @@ rsync [-options] SOURCE user@x.x.x.x:DESTINATION
 - `x.x.x.x` はリモートサーバーの IP アドレスです。
 - `DESTINATION` は、リモートサーバー上のディレクトリーまたはファイルをコピーする場所へのパスです。
 
-あなたはホスティングプロバイダーからそのような詳細を得る必要があるでしょう。
+ホスティングプロバイダーからそのような詳細情報を取得する必要があります。
 
-詳細およびその他の例については、 [How to Use Rsync to Copy/Sync Files Between Servers](https://www.atlantic.net/hipaa-compliant-cloud-hosting-services/how-to-use-rsync-copy-sync-files-servers/) を参照してください。
+詳細およびその他の例については、 [How to Use Rsync to Copy/Sync Files Between Servers](https://www.atlantic.net/vps-hosting/how-to-use-rsync-copy-sync-files-servers/) を参照してください。
 
 もちろん、FTP の時と同じように安全な接続のもとで使用することをお勧めします。Rsync の場合は `-e` オプションを使用して、SSH を介した接続を確立するための SSH 詳細を指定します。
 
@@ -130,11 +141,11 @@ rsync [-options] SOURCE user@x.x.x.x:DESTINATION
 rsync [-options] -e "ssh [SSH DETAILS GO HERE]" SOURCE user@x.x.x.x:DESTINATION
 ```
 
-必要なものの詳細については、[How To Copy Files With Rsync Over SSH](https://www.digitalocean.com/community/tutorials/how-to-copy-files-with-rsync-over-ssh) を参照してください。
+必要なものの詳細については、 [How To Copy Files With Rsync Over SSH](https://www.digitalocean.com/community/tutorials/how-to-copy-files-with-rsync-over-ssh) を参照してください。
 
 ### Rsync GUI ツール
 
-他のコマンドラインツールと同様に、コマンドラインの使用に慣れていない人向けに Rsync 用の GUI ツールもあります。 [Acrosync](https://acrosync.com/mac.html) はそのようなツールの1つで、Windows と macOS で利用可能です。
+他のコマンドラインツールと同様に、コマンドラインの使用に慣れていない人向けに Rsync 用の GUI ツールもあります。 [Acrosync](https://acrosync.com/mac.html) はそのようなツールの 1 つで、Windows と macOS で利用可能です。
 
 繰り返しになりますが、ホスティングプロバイダーから接続認証情報を取得する必要がありますが、この方法でそれらを入力するための GUI が得られます。
 

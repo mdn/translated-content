@@ -68,7 +68,7 @@ slug: Web/HTML/Element/script
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
-- {{htmlattrdef("async")}}
+- `async`
 
   - : 일반 스크립트에 `async` 속성이 존재하면 HTML 구문 분석 중에도 스크립트를 가져오며, 사용 가능해지는 즉시 평가를 수행합니다.
 
@@ -80,9 +80,9 @@ slug: Web/HTML/Element/script
 
     [브라우저 호환성](#브라우저_호환성)을 참고하세요.
 
-- {{htmlattrdef("crossorigin")}}
+- `crossorigin`
   - : 일반 `script` 요소는 표준 {{glossary("CORS")}}를 통과하지 못했을 때 {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}}에 최소한의 정보만 넘깁니다. `crossorigin` 속성은 정적 미디어에 대해 별도의 도메인을 사용하는 사이트의 오류 기록을 허용하기 위해 사용할 수 있습니다. 유효한 인수에 대한 보다 자세한 설명은 [CORS 설정 속](/ko/docs/Web/HTML/Attributes/crossorigin)성 문서를 참고하세요.
-- {{htmlattrdef("defer")}}
+- `defer`
 
   - : 브라우저가 스크립트를 문서 분석 이후에, 그러나 {{event("DOMContentLoaded")}} 발생 이전에 실행해야 함을 나타내는 불리언 속성입니다.
 
@@ -96,15 +96,15 @@ slug: Web/HTML/Element/script
 
     기존 방식은 브라우저가 HTML 분석을 계속하기 전에 스크립트를 불러오고 평가했어야 하므로, `defer` 속성을 사용하면 **분석기를 멈추는 JavaScript**를 제거할 수 있습니다. `async`도 비슷한 효과를 가집니다.
 
-- {{htmlattrdef("integrity")}}
+- `integrity`
   - : {{glossary("user agent", "사용자 에이전트")}}가 가져온 리소스에 예기치 못한 변형이 존재하는지 검사할 때 사용할 인라인 메타데이터입니다. [하위 리소스 무결성](/ko/docs/Web/Security/Subresource_Integrity) 문서를 참고하세요.
-- {{htmlattrdef("nomodule")}}
+- `nomodule`
 
   - : [ES2015 모듈](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/)을 지원하는 브라우저에서는 실행하지 않을 스크립트임을 나타내는 불리언 특성입니다. 모듈화 JavaScript를 지원하지 않는 오래된 브라우저가 사용할 대체 스크립트에 사용할 수 있습니다.
 
-- {{htmlattrdef("nonce")}}
+- `nonce`
   - : [`script-src` `Content-Security-Policy`](/ko/docs/Web/HTTP/Headers/Content-Security-Policy/script-src)의 화이트리스트에 스크립트를 등록하기 위한, 암호화된 일회용 숫자(논스, nonce)입니다. 서버는 고유한 일회용 숫자값을 정책을 전송할 때마다 생성해야 합니다. 자원의 정책을 우회할 수 없도록, 추측할 수 없는 임시값을 제공하는 것이 중요합니다.
-- {{htmlattrdef("referrerpolicy")}}
+- `referrerpolicy`
 
   - : 스크립트를 가져올 때, 또는 스크립트가 다른 리소스를 가져올 때 전송할 [리퍼러](/ko/docs/Web/API/Document/referrer)를 나타냅니다.
 
@@ -119,9 +119,9 @@ slug: Web/HTML/Element/script
 
     > **참고:** 빈 문자열 값(`""`)은 기본값이자 `referrerpolicy` 특성을 지원하지 않는 경우 사용하는 대체값입니다. `referrerpolicy`를 `<script>` 요소에 명시하지 않은 경우 더 상위 단계의 정책, 즉 문서 자체나 도메인의 정책을 따라갑니다. 상위 단계 정책도 사용할 수 없을 땐 빈 문자열을 `no-referrer-when-downgrade`로 간주합니다.
 
-- {{htmlattrdef("src")}}
+- `src`
   - : 외부 스크립트를 가리키는 {{glossary("URI")}}입니다. 문서 내에 스크립트를 직접 삽입하는 것 대신 사용할 수 있습니다.
-- {{htmlattrdef("type")}}
+- `type`
 
   - : 스크립트의 유형을 나타냅니다. 다음 다섯개의 범주 중 하나에 속할 수 있습니다.
 
@@ -129,7 +129,12 @@ slug: Web/HTML/Element/script
     - **`module`:** 스크립트를 JavaScript 모듈로 간주합니다. 스크립트 콘텐츠 처리가 `charset`과 `defer` 특성의 영향을 받지 않습니다. `module`의 더 자세한 사용법은 MDN의 [JavaScript 모듈 안내서](/ko/docs/Web/JavaScript/Guide/Modules)를 참고하세요. 기존 스크립트와 달리, 모듈 스크립트는 교차 출처 가져오기 시 CORS 프로토콜을 사용해야 합니다.
     - **다른 모든 값:** 내장 콘텐츠를 브라우저가 처리하지 않을 데이터 블록으로 간주합니다. 개발자는 반드시 유효하면서 JavaScript가 아닌 MIME 유형을 지정해야 합니다. `src` 특성을 무시합니다.
 
-<div class="hidden"><h3 id="Deprecated_attributes">Deprecated attributes</h3><dl><dt>{{htmlattrdef("charset")}} {{Deprecated_inline}}</dt><dd>If present, its value must be an ASCII case-insensitive match for "<code>utf-8</code>". It's unnecessary to specify the <code>charset</code> attribute, because documents must use UTF-8, and the <code>script</code> element inherits its character encoding from the document.</dd><dt>{{htmlattrdef("language")}} {{Deprecated_inline}}</dt><dd>Like the <code>type</code> attribute, this attribute identifies the scripting language in use. Unlike the <code>type</code> attribute, however, this attribute's possible values were never standardized. The <code>type</code> attribute should be used instead.</dd></dl></div>
+### Deprecated attributes
+
+- `charset` {{Deprecated_inline}}
+  - : If present, its value must be an ASCII case-insensitive match for "`utf-8`". It's unnecessary to specify the `charset` attribute, because documents must use UTF-8, and the `script` element inherits its character encoding from the document.
+- `language` {{Deprecated_inline}}
+  - : Like the `type` attribute, this attribute identifies the scripting language in use. Unlike the `type` attribute, however, this attribute's possible values were never standardized. The `type` attribute should be used instead.
 
 ## 참고
 

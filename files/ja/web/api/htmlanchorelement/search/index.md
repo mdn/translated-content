@@ -9,7 +9,7 @@ l10n:
 
 **`HTMLAnchorElement.search`** プロパティは、*クエリー文字列*とも呼ばれる検索文字列、つまり `'?'` とその後に続く URL の引数の入った文字列です。
 
-最新のブラウザーでは、[`URLSearchParams`](/ja/docs/Web/API/URLSearchParams/get#examples) と [`URL.searchParams`](/ja/docs/Web/API/URL/searchParams#examples) を提供して、クエリー文字列から引数を簡単に解析できるようにしています。
+最新のブラウザーでは、[`URLSearchParams`](/ja/docs/Web/API/URLSearchParams/get#例) と [`URL.searchParams`](/ja/docs/Web/API/URL/searchParams#例) を提供して、クエリー文字列から引数を簡単に解析できるようにしています。
 
 ## 値
 
@@ -20,14 +20,14 @@ l10n:
 ### アンカーリンクから検索文字列を取得
 
 ```js
-// <a id="myAnchor" href="/en-US/docs/HTMLAnchorElement?q=123"> 要素が文書内にあったとします
+// <a id="myAnchor" href="/ja/docs/HTMLAnchorElement?q=123"> 要素が文書内にあったとします
 const anchor = document.getElementById("myAnchor");
 anchor.search; // '?q=123' を返す
 ```
 
 ### URLSearchParams を使用した高度な解釈
 
-他にも、 [`URLSearchParams`](/ja/docs/Web/API/URLSearchParams/get#examples) が使われる場面があります。
+他にも、 [`URLSearchParams`](/ja/docs/Web/API/URLSearchParams/get#例) が使われる場面があります。
 
 ```js
 let params = new URLSearchParams(queryString);

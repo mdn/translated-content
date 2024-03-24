@@ -9,8 +9,6 @@ slug: Web/HTML/Element/ol
 
 {{EmbedInteractiveExample("pages/tabbed/ol.html", "tabbed-shorter")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
-
 <table class="properties">
   <tbody>
     <tr>
@@ -67,11 +65,11 @@ slug: Web/HTML/Element/ol
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
-- {{htmlattrdef("reversed")}}
+- `reversed`
   - : 목록의 순서 역전 여부. 즉, 내부에 지정한 항목이 역순으로 배열된 것인지 나타냅니다.
-- {{htmlattrdef("start")}}
+- `start`
   - : 항목을 셀 때 시작할 수. `type`이 로마 숫자나 영어 문자인 경우에도 아라비아 숫자로 나타낸 정수(1, 2, 3...)만 가능합니다. 그러므로 영어 문자 "d"나 로마 숫자 "iv"부터 세려고 한다면 `start="4"`를 사용하세요.
-- {{htmlattrdef("type")}}
+- `type`
 
   - : 항목을 셀 때 사용할 카운터 유형.
 

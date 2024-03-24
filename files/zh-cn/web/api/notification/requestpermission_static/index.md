@@ -1,11 +1,11 @@
 ---
 title: Notification：requestPermission() 静态方法
 slug: Web/API/Notification/requestPermission_static
+l10n:
+  sourceCommit: eb61adfd5ca85cd5cb2143353f82fe0520a9c66e
 ---
 
 {{APIRef("Web Notifications")}}{{securecontext_header}}
-
-> **备注：** Safari 仍然使用回调函数语法来请求权限。[使用 Notifications API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API) 的例子说明了如何检测需使用回调函数语法的情况并以适当的方式运行代码。
 
 {{domxref("Notification")}} 接口的 **`requestPermission()`** 静态方法向用户为当前来源请求显示通知的权限。
 
@@ -22,15 +22,18 @@ Notification.requestPermission(callback)
 ### 参数
 
 - `callback` {{optional_inline}} {{deprecated_inline}}
-  - : 一个可选的参数为权限请求的结果的回调函数。此参数已废弃，请使用 Promise 的语法。
+  - : 一个可选的参数为权限请求的结果的回调函数。此参数已废弃，请使用 Promise 返回值的语法。
 
 ### 返回值
 
 一个 {{jsxref("Promise")}}，会兑现为一个表示用户选择的权限的字符串。该字符串的可能值为：
 
 - `granted`
+  - : 用户已明确授予当前源显示系统通知的权限。
 - `denied`
+  - : 用户已明确拒绝当前源显示系统通知的权限。
 - `default`
+  - : 用户决定未知；在这种情况下，应用程序的行为就像权限被“拒绝”一样。
 
 ## 示例
 
@@ -66,7 +69,7 @@ function notifyMe() {
 }
 ```
 
-我们不再在此页面上展示实时示例，因为 Chrome 和 Firefox 不再允许从跨源 {{htmlelement("iframe")}} 请求通知权限， 并且其他浏览器也将效仿。要查看实际示例，请查看我们的[待办事项列表示例](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)（参见[实时运行用例](https://mdn.github.io/dom-examples/to-do-notifications/)）。
+我们不再在此页面上展示实时示例，因为 Chrome 和 Firefox 不再允许从跨源 {{htmlelement("iframe")}} 请求通知权限，并且其他浏览器也将效仿。要查看实际示例，请查看我们的[待办事项列表示例](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)（参见[实时运行用例](https://mdn.github.io/dom-examples/to-do-notifications/)）。
 
 > **备注：** 在上面的示例中，我们生成通知以响应用户手势（单击按钮）。这不仅仅是最佳实践——你不应该向用户滥发他们不同意的通知——而且未来的浏览器将明确禁止未响应用户手势而触发的通知。例如，Firefox 已经从版本 72 开始这样做了。
 
@@ -80,4 +83,4 @@ function notifyMe() {
 
 ## 参见
 
-- [使用 Notifications API](/zh-CN/docs/Web/API/notification/Using_Web_Notifications)
+- [使用 Notification API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)

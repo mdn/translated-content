@@ -18,17 +18,15 @@ Dado que `MAX_VALUE` es una propiedad estática de {{jsxref("Number")}}, siempre
 La función _verificarValorMaximo_ recibe un número como parámetro que se compara con _Number.MAX_VALUE._ Si el número es menor se imprime por consola _"El número no es infinito"_, de ser mayor _"El número es infinito"_.
 
 ```js
-var numero1 = 1.79E+307;
-var numero2 = 1.79E+310;
+var numero1 = 1.79e307;
+var numero2 = 1.79e310;
 
-function verificarValorMaximo(num){
-
+function verificarValorMaximo(num) {
   if (num <= Number.MAX_VALUE) {
     console.log("El número no es infinito");
   } else {
     console.log("El número es infinito");
   }
-
 }
 
 verificarValorMaximo(numero1); // El número no es infinito

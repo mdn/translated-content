@@ -1,24 +1,26 @@
 ---
 title: HTMLDListElement
 slug: Web/API/HTMLDListElement
+l10n:
+  sourceCommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
 ---
 
 {{ApiRef("HTML DOM")}}
 
-**`HTMLDListElement`** インターフェイスは、（継承によって使用できる通常の {{domxref("HTMLElement")}} インターフェイスのものに加えて）定義リスト要素 ({{HtmlElement("dl")}}) を操作するための特別なプロパティを提供します。
+**`HTMLDListElement`** インターフェイスは、（継承によって使用できる通常の {{domxref("HTMLElement")}} インターフェイスのものの他に）定義リスト要素 ({{HtmlElement("dl")}}) を操作するための特別なプロパティを提供します。
 
 {{InheritanceDiagram}}
 
-## プロパティ
+## インスタンスプロパティ
 
-_親である {{domxref("HTMLElement")}} からプロパティを継承しています。_
+_親である {{domxref("HTMLElement")}} から継承したプロパティがあります。_
 
 - {{domxref("HTMLDListElement.compact")}} {{deprecated_inline}}
   - : 論理値で、リスト項目間の間隔を縮小することを示します。
 
-## メソッド
+## インスタンスメソッド
 
-_固有のメソッドはありません。親である {{domxref("HTMLElement")}} からメソッドを継承しています。_
+_固有のメソッドはありません。親である {{domxref("HTMLElement")}} から継承したメソッドがあります。_
 
 ## 仕様書
 

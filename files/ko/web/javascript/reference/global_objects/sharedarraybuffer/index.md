@@ -14,7 +14,7 @@ slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 ## 구문
 
 ```js
-new SharedArrayBuffer(length)
+new SharedArrayBuffer(length);
 ```
 
 ### 파라미터

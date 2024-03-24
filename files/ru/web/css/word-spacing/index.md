@@ -2,6 +2,7 @@
 title: word-spacing
 slug: Web/CSS/word-spacing
 ---
+
 {{CSSRef}}
 
 [CSS](/ru/docs/Web/CSS)-свойство **`word-spacing`** устанавливает длину пробела между словами и между тегами.
@@ -11,7 +12,7 @@ slug: Web/CSS/word-spacing
 ## Синтаксис
 
 ```css
-/* Значение ключевым словом */
+/* Ключевые слова */
 word-spacing: normal;
 
 /* <length> значения */
@@ -79,6 +80,6 @@ word-spacing: unset;
 
 {{cssinfo}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}

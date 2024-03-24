@@ -10,7 +10,7 @@ slug: Web/API/Navigator/getVRDisplays
 ## 構文
 
 ```js
-getVRDisplays()
+getVRDisplays();
 ```
 
 ### 引数
@@ -35,5 +35,4 @@ getVRDisplays()
 
 ## 関連情報
 
-- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — Mozilla VR チームによるデモ、ダウンロード、その他のリソース。
+- [WebVR API](/ja/docs/Web/API/WebVR_API)

@@ -138,7 +138,7 @@ CSS {{cssxref("background")}} 属性是本课程中我们将遇到的一些普�
 }
 ```
 
-最后，你还可以使用四值语法来指示到盒子的某些边的距离——在本例中，长度单位是与其前面的值的偏移量。所以在下面的 CSS 中，我们将背景定位在距顶部 20px 和右侧 10px 处:
+最后，你还可以使用四值语法来指示到盒子的某些边的距离——在本例中，长度单位是与其前面的值的偏移量。所以在下面的 CSS 中，我们将背景定位在距顶部 20px 和右侧 10px 处：
 
 ```css
 .box {
@@ -290,9 +290,9 @@ background-position:
 
 {{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/corners.html", '100%', 800)}}
 
-## 测试你的技能！
+## 技能测试！
 
-你已经到了本文的结尾，还能记住最重要的信息吗？你可以在继续之前找到一些进一步的测试来验证你是否记住了这些重要知识——参见[测试你的技能：背景和边框](/zh-CN/docs/Learn/CSS/Building_blocks/Test_your_skills_backgrounds_and_borders)。
+你已经到了本文的结尾，还能记住最重要的信息吗？你可以在继续之前找到一些进一步的测试来验证你是否记住了这些重要知识——参见[技能测试：背景和边框](/zh-CN/docs/Learn/CSS/Building_blocks/Test_your_skills_backgrounds_and_borders)。
 
 ## 总结
 

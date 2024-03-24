@@ -24,7 +24,7 @@ slug: Glossary/Fetch_directive
 - {{CSP("style-src")}}
 - {{CSP("worker-src")}}
 
-## 了解更多
+## 参见
 
 - {{HTTPHeader("Content-Security-Policy")}}
 - 其他类型的 CSP 指令：

@@ -1,27 +1,31 @@
 ---
 title: ClipboardEvent
 slug: Web/API/ClipboardEvent
+l10n:
+  sourceCommit: e811fc31b67e145c5882e8e3f128d1938c627a51
 ---
 
-{{APIRef("Clipboard API")}} {{SeeCompatTable}}
+{{APIRef("Clipboard API")}}
 
-The **`ClipboardEvent`** interface represents events providing information related to modification of the clipboard, that is [`cut`](/es/docs/Web/Reference/Events/cut), [`copy`](/es/docs/Web/Reference/Events/copy), and [`paste`](/es/docs/Web/Reference/Events/paste) events.
+La interfaz **`ClipboardEvent`** representa eventos que brindan información relacionada con la modificación del portapapeles, es decir, eventos {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/copy_event", "copy")}} y {{domxref("Element/paste_event", "paste")}}.
+
+{{InheritanceDiagram}}
 
 ## Constructor
 
 - {{domxref("ClipboardEvent.ClipboardEvent", "ClipboardEvent()")}}
-  - : Creates a `ClipboardEvent` event with the given parameters.
+  - : Crea un evento `ClipboardEvent` con los parámetros proporcionados.
 
-## Properties
+## Propiedades de instancia
 
-_Also inherits properties from its parent {{domxref("Event")}}_.
+_También hereda propiedades de su padre {{domxref("Event")}}_.
 
-- {{domxref("ClipboardEvent.clipboardData")}} {{readonlyInline}}
-  - : Is a {{domxref("DataTransfer")}} object containing the data affected by the user-initiated [`cut`](/es/docs/Web/Reference/Events/cut), [`copy`](/es/docs/Web/Reference/Events/copy), or [`paste`](/es/docs/Web/Reference/Events/paste) operation, along with its MIME type.
+- {{domxref("ClipboardEvent.clipboardData")}} {{ReadOnlyInline}}
+  - : Un objeto {{domxref("DataTransfer")}} que contiene los datos afectados por el evento {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/copy_event", "copy")}}, o {{domxref("Element/paste_event", "paste")}} iniciado por el usuario, junto con su tipo MIME.
 
-## Methods
+## Métodos de instancia
 
-_No specific methods; inherits methods from its parent {{domxref("Event")}}_.
+_Sin métodos específicos; hereda métodos de su padre {{domxref("Event")}}_.
 
 ## Especificaciones
 
@@ -31,6 +35,9 @@ _No specific methods; inherits methods from its parent {{domxref("Event")}}_.
 
 {{Compat}}
 
-## See also
+## Véase también
 
-- Copy-related events: [`copy`](/es/docs/Web/Reference/Events/copy), [`cut`](/es/docs/Web/Reference/Events/cut), [`paste`](/es/docs/Web/Reference/Events/paste)
+- Eventos relacionados con copiar: {{domxref("Element/copy_event", "copy")}}, {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/paste_event", "paste")}}
+- [API del portapapeles](/es/docs/Web/API/Clipboard_API)
+- [Demostración de la API del portapapeles asíncrono en Glitch](https://async-clipboard-api.glitch.me/)
+- [Compatibilidad con imágenes para el artículo Portapapeles asíncrono](https://web.dev/async-clipboard/)

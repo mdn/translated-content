@@ -3,7 +3,7 @@ title: popover
 slug: Web/HTML/Global_attributes/popover
 ---
 
-{{HTMLSidebar("Global_attributes")}}{{SeeCompatTable}}
+{{HTMLSidebar("Global_attributes")}}
 
 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes) **`popover`** 用来指定一个元素为弹出式元素（popover element）。
 

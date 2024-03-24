@@ -32,9 +32,9 @@ slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 為了在網頁上放置一個簡單的圖像，我們使用\<img>元素。 這是一個空元素（意味著它沒有文本內容或結束標記），並需要至少一個屬性（src）（有時稱為其完整標題，source）才有用。 src 屬性包含指向要嵌入頁面的圖像的路徑，該路徑可以是相對路徑或絕對路徑 URL，與\<a>元素中的 href 屬性相同。
 
-> **備註：** 在繼續之前，您應該閱讀有關 URL 和路徑的快速入門，以複習[相對路徑和絕對路徑 URL](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#A_quick_primer_on_URLs_and_paths)。
+> **備註：** 在繼續之前，你應該閱讀有關 URL 和路徑的快速入門，以複習[相對路徑和絕對路徑 URL](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#A_quick_primer_on_URLs_and_paths)。
 
-舉例來說, 如果您的圖片名為 dinosaur.jpg 且與 HTML 檔案位於同一資料夾中，可以這樣嵌入圖片：
+舉例來說, 如果你的圖片名為 dinosaur.jpg 且與 HTML 檔案位於同一資料夾中，可以這樣嵌入圖片：
 
 ```html
 <img src="dinosaur.jpg" />
@@ -48,7 +48,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 像這樣.
 
-> **備註：** 搜索引擎還會讀取圖片名稱，並將其納入 SEO 中。 因此您應該為圖片提供一個描述性的檔名。 例如 dinosaur.jpg 的命名方式會比 img835.png 更好。
+> **備註：** 搜索引擎還會讀取圖片名稱，並將其納入 SEO 中。 因此你應該為圖片提供一個描述性的檔名。 例如 dinosaur.jpg 的命名方式會比 img835.png 更好。
 
 你也可以用絕對路徑 URL 來嵌入圖片，例如
 
@@ -56,15 +56,15 @@ slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 <img src="https://www.example.com/images/dinosaur.jpg" />
 ```
 
-但這麼做是沒有意義的，因為它只會使瀏覽器執行更多工作，瀏覽器需重複執行從 DNS 服務器中搜尋 IP 地址等等工作。您應將網站上的圖片與 HTML 存放在同一個伺服器上。
+但這麼做是沒有意義的，因為它只會使瀏覽器執行更多工作，瀏覽器需重複執行從 DNS 服務器中搜尋 IP 地址等等工作。你應將網站上的圖片與 HTML 存放在同一個伺服器上。
 
 > **警告：** 大多數圖像均受版權保護。 請勿在你的網站上隨意顯示圖片，除非：
 >
 > - 你是圖片的擁有者.
-> - 您已收到圖片所有者的白紙黑字認可。
-> - 您有充分的證據證明該圖片實際上是大家皆能使用。
+> - 你已收到圖片所有者的白紙黑字認可。
+> - 你有充分的證據證明該圖片實際上是大家皆能使用。
 >
-> 侵犯版權是違法及不道德的。 此外，切勿將 src 屬性指向您未被授權的他人網站上的圖便。 這稱為「熱連結」。再次重申，竊取某人的頻寬是違法的，且這會減慢您網站的速度。此外當別人變更、移除或換上令人尷尬的內容時你將無法做出改變。
+> 侵犯版權是違法及不道德的。 此外，切勿將 src 屬性指向你未被授權的他人網站上的圖便。 這稱為「熱連結」。再次重申，竊取某人的頻寬是違法的，且這會減慢你網站的速度。此外當別人變更、移除或換上令人尷尬的內容時你將無法做出改變。
 
 我們上面的程式碼將有以下結果：
 
@@ -72,7 +72,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 > **備註：** \<img>和\<video>之類的元素有時也稱為替換元素。 這是因為元素的內容和圖片大小是由外部（例如圖片或影音檔）所定義的，而不是由元素的內容定義。
 
-> **備註：** 您可以從在 [Github](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html) 上找到本節完成的示例（參見[開源碼](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/images-in-html/index.html)。）
+> **備註：** 你可以從在 [Github](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html) 上找到本節完成的示例（參見[開源碼](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/images-in-html/index.html)。）
 
 ### 替代性文字
 
@@ -87,22 +87,22 @@ slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 測試替代文字最簡單方法是故意拼錯檔名。 例如，如果我們的圖片名稱為 dinosooooor.jpg，則瀏覽器將不會顯示該圖片，而是顯示 alt 文本：![The Images in HTML title, but this time the dinosaur image is not displayed, and alt text is in its place.](alt-text.png)
 
-那麼，為什麼您會看到或需要替代文字？ 它可以派上用場的原因有很多：
+那麼，為什麼你會看到或需要替代文字？ 它可以派上用場的原因有很多：
 
 - 使用者視力不佳，正在使用[螢幕閱讀器](https://zh.wikipedia.org/wiki/%E8%9E%A2%E5%B9%95%E9%96%B1%E8%AE%80%E5%99%A8)向他們朗讀網頁。 實際上，對於大多數使用者而言，擁有可用於描述圖像的替代文字是很有用的。
 - 如上所述，文件或路徑名的拼寫可能不正確。
 - 瀏覽器不支持圖像類型。 有些人仍然使用純文字瀏覽器，例如[Lynx](https://zh.wikipedia.org/wiki/Lynx)，它可顯示圖片的替代文字。
-- 您可能希望提供文字供搜索引擎使用； 例如，搜索引擎可以將替代文字與搜索查詢匹配。
+- 你可能希望提供文字供搜索引擎使用； 例如，搜索引擎可以將替代文字與搜索查詢匹配。
 - 使用者已關閉圖像以減少數據傳輸量和干擾。 這在手機以及網路頻寬有限或成本昂貴的國家中尤其常見。
 
-您應該在`alt`屬性中確切寫些什麼？ 這取決於圖片為何而出現；也就是說，如果圖片不顯示，您將損失什麼：
+你應該在`alt`屬性中確切寫些什麼？ 這取決於圖片為何而出現；也就是說，如果圖片不顯示，你將損失什麼：
 
 - **裝飾：** 你可以用 [CSS 背景圖片](#css_背景圖片) 加入裝飾圖片，但如果必須使用 HTML，可以添加一個空的 `alt=""`。如果圖片不是內容的一部分，那麼就不應該讓螢幕閱讀器浪費時間去閱讀它。
-- **內容：** 如果您的圖片提供了重要的資訊，請在簡短的`alt`文字中提供相同的資訊，甚至最好在所有人都能看到的主要文字中提供相同的資訊。請不要撰寫冗餘替代文字，試想如果所有段落都在主要內容中寫了兩次，對於用視力觀看的使用者有多煩人。如果圖像在正文中已充分敘述，請使用 `alt=""`。
-- **連結：** 如果你在{{htmlelement("a")}} 標籤中放了圖片使其轉入連結，你仍應該提供[明確的字詞](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#%E4%BD%BF%E7%94%A8%E6%98%8E%E7%A2%BA%E7%9A%84%E5%AD%97%E8%A9%9E)。在这种情况下，您可以根據適合你的情況，将其写在相同的`<a>`元素内，或是写在图像的`alt` 属性内。
+- **內容：** 如果你的圖片提供了重要的資訊，請在簡短的`alt`文字中提供相同的資訊，甚至最好在所有人都能看到的主要文字中提供相同的資訊。請不要撰寫冗餘替代文字，試想如果所有段落都在主要內容中寫了兩次，對於用視力觀看的使用者有多煩人。如果圖像在正文中已充分敘述，請使用 `alt=""`。
+- **連結：** 如果你在{{htmlelement("a")}} 標籤中放了圖片使其轉入連結，你仍應該提供[明確的字詞](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#%E4%BD%BF%E7%94%A8%E6%98%8E%E7%A2%BA%E7%9A%84%E5%AD%97%E8%A9%9E)。在这种情况下，你可以根據適合你的情況，将其写在相同的`<a>`元素内，或是写在图像的`alt` 属性内。
 - **文字：** 請不要在圖片中寫字。如果你的主要目的是為標題加上下拉式陰影，你可以[使用 CSS](/zh-TW/docs/Web/CSS/text-shadow)更甚於在圖片中描繪文字。 但如果你無法避免這麼做，也請將文字敘述加在`alt` 属性内。
 
-本質上，關鍵是即使在看不見圖片的情況下也能提供相同的體驗。這樣可以確保所有使用者都不會丟失任何內容。嘗試在瀏覽器中關閉圖像，然後查看外觀。您很快就會意識到，如果看不到圖片，替代文字會很有幫助。
+本質上，關鍵是即使在看不見圖片的情況下也能提供相同的體驗。這樣可以確保所有使用者都不會丟失任何內容。嘗試在瀏覽器中關閉圖像，然後查看外觀。你很快就會意識到，如果看不到圖片，替代文字會很有幫助。
 
 > **備註：** For more information, see our guide to [Text Alternatives](/zh-TW/docs/Learn/Accessibility/HTML#Text_alternatives).
 
@@ -485,7 +485,7 @@ textarea.onkeyup = function () {
 
 ## CSS 背景圖片
 
-您還可以使用 CSS 將圖像嵌入網頁（JavaScript 也可以，但這完全是另一回事了）。CSS [`background-image`](/zh-TW/docs/Web/CSS/background-image) 屬性和其他 background-\* 屬性用於控制背景圖片的放置。 例如要將背景圖片放置在頁面的每個段落上，可以執行以下操作：
+你還可以使用 CSS 將圖像嵌入網頁（JavaScript 也可以，但這完全是另一回事了）。CSS [`background-image`](/zh-TW/docs/Web/CSS/background-image) 屬性和其他 background-\* 屬性用於控制背景圖片的放置。 例如要將背景圖片放置在頁面的每個段落上，可以執行以下操作：
 
 ```css
 p {
@@ -493,11 +493,11 @@ p {
 }
 ```
 
-這種嵌入圖片的方式比 HTML 圖像更容易定位和控制。 那麼，為什麼還要用 HTML 嵌入圖片呢？ 如上所述，CSS 背景圖像僅用於裝飾。 如果您只是想在頁面上添加一些漂亮的東西以增強視覺效果，那很好。 但是，此類圖像根本沒有語義。 它們與文字不同，對於螢幕閱讀器是不可見的，依此類推。 這裡需要的是 HTML 圖片！
+這種嵌入圖片的方式比 HTML 圖像更容易定位和控制。 那麼，為什麼還要用 HTML 嵌入圖片呢？ 如上所述，CSS 背景圖像僅用於裝飾。 如果你只是想在頁面上添加一些漂亮的東西以增強視覺效果，那很好。 但是，此類圖像根本沒有語義。 它們與文字不同，對於螢幕閱讀器是不可見的，依此類推。 這裡需要的是 HTML 圖片！
 
 總結來說，如果圖片在內容上具有含義，則應使用 HTML 圖像。 如果圖像純粹是裝飾性的，則應使用 CSS 背景圖片。
 
-> **備註：** 在我們的 CSS 主題中，您將學到更多關於 CSS 背景圖片的知識。
+> **備註：** 在我們的 CSS 主題中，你將學到更多關於 CSS 背景圖片的知識。
 
 ## 試試看!
 

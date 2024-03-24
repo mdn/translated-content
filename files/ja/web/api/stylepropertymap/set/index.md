@@ -32,10 +32,10 @@ set(property, value)
 
 ```js
 // button 属性を取得
-const buttonEl = document.querySelector('button');
+const buttonEl = document.querySelector("button");
 
 // button の style 属性で padding-top を設定
-buttonEl.attributeStyleMap.set('padding-top', CSS.px(10));
+buttonEl.attributeStyleMap.set("padding-top", CSS.px(10));
 ```
 
 ## 仕様書

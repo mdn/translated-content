@@ -26,6 +26,6 @@ instanceOfFileReader.abort();
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{domxref("FileReader")}}

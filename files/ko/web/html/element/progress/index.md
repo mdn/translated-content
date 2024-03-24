@@ -9,8 +9,6 @@ slug: Web/HTML/Element/progress
 
 {{EmbedInteractiveExample("pages/tabbed/progress.html", "tabbed-standard")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
-
 <table class="properties">
   <tbody>
     <tr>
@@ -65,9 +63,9 @@ slug: Web/HTML/Element/progress
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
-- {{ htmlattrdef("max") }}
+- `max`
   - : `<progress>` 요소가 나타내는 작업에 필요한 작업량. 지정하는 경우, 반드시 0보다 크고 유효한 부동소수점 숫자여야 합니다. 기본값은 1입니다.
-- {{ htmlattrdef("value") }}
+- `value`
   - : `<progress>` 요소가 나타내는 작업을 완료한 양. 유효한 부동소수점 숫자여야 하고, `max` 특성을 지정한 경우 0 이상 `max` 이하, 그렇지 않으면 0 이상 1 이하여야 합니다. `value` 특성이 없으면 미결정 상태로, 현재 작업의 종료 시점을 예측할 수 없음을 나타냅니다.
 
 > **참고:** {{htmlelement("meter")}} 요소와 달리, 최솟값은 항상 0이며 `min` 특성을 지정할 수 없습니다.

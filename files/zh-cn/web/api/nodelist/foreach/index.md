@@ -33,10 +33,6 @@ someNodeList.forEach(callback[, thisArg]);
 
 {{jsxref('undefined')}}.
 
-## Exceptions
-
-None.
-
 ## 示例
 
 ```js
@@ -64,40 +60,15 @@ list.forEach(function (currentValue, currentIndex, listObj) {
 [object HTMLSpanElement], 2, myThisArg
 ```
 
-## Polyfill
-
-{{Glossary("Polyfill","polyfill")}} 增加了对所有支持[ES5](https://caniuse.com/#search=es5)的浏览器的兼容性：
-
-```js
-if (window.NodeList && !NodeList.prototype.forEach) {
-  NodeList.prototype.forEach = function (callback, thisArg) {
-    thisArg = thisArg || window;
-    for (var i = 0; i < this.length; i++) {
-      callback.call(thisArg, this[i], i, this);
-    }
-  };
-}
-```
-
-或者
-
-```js
-if (window.NodeList && !NodeList.prototype.forEach) {
-  NodeList.prototype.forEach = Array.prototype.forEach;
-}
-```
-
-上面的代码是大部分浏览器实现的 `NodeList.prototype.forEach()`（例如 Chrome）。
-
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser Compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
 - {{domxref("Node")}}
 - {{domxref("NodeList")}}

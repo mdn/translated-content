@@ -1,6 +1,7 @@
 ---
 title: JavaScript shells
 slug: conflicting/Web/JavaScript/JavaScript_technologies_overview_0191f05ec18a4ee4d771b548feb0701d
+original_slug: Web/JavaScript/Shells
 ---
 
 {{JsSidebar}}

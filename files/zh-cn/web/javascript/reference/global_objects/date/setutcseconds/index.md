@@ -49,7 +49,7 @@ theBigDay.setUTCSeconds(20);
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{jsxref("Date.prototype.getUTCSeconds()")}}
 - {{jsxref("Date.prototype.setSeconds()")}}

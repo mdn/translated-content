@@ -62,7 +62,7 @@ Accept-Charset: utf-8, iso-8859-1;q=0.5, *;q=0.1
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Accept-Charset")}}
+{{Compat}}
 
 ## Veja também
 

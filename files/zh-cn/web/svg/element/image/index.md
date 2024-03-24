@@ -42,7 +42,7 @@ SVG 文件是这样的一种图像：不被当做外部资源加载，不可以�
 
 ## DOM 接口
 
-该元素实现[`SVGImageElement`](/zh-CN/DOM/SVGImageElement) 接口。
+该元素实现 [`SVGImageElement`](/zh-CN/DOM/SVGImageElement) 接口。
 
 ## 示例
 

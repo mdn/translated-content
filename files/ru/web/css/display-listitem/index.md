@@ -18,14 +18,12 @@ slug: Web/CSS/display-listitem
 ### `HTML`
 
 ```html
-
 <div class="fake-list">I will display as a list item</div>
 ```
 
 ### `CSS`
 
 ```css
-
 .fake-list {
   display: list-item;
   list-style-position: inside;
@@ -40,4 +38,4 @@ slug: Web/CSS/display-listitem
 
 ### `Поддержка list-item`
 
-{{Compat("css.properties.display.list-item", 10)}}
+{{Compat}}

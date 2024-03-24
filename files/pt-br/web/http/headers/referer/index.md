@@ -54,7 +54,7 @@ Referer: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Referer")}}
+{{Compat}}
 
 ## Veja também
 

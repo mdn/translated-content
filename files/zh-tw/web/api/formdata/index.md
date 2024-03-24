@@ -48,6 +48,6 @@ slug: Web/API/FormData
 ## 參見
 
 - {{domxref("XMLHTTPRequest")}}
-- [使用 XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-- [使用 FormData 物件](/zh-TW/docs/Web/API/FormData/Using_FormData_Objects)
+- [使用 XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [使用 FormData 物件](/zh-TW/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

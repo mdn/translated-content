@@ -35,10 +35,10 @@ var wm = new WeakMap();
 var obj = {};
 
 // Add new elements to the WeakMap
-wm.set(obj, 'foo').set(window, 'bar'); // chainable
+wm.set(obj, "foo").set(window, "bar"); // chainable
 
 // Update an element in the WeakMap
-wm.set(obj, 'baz');
+wm.set(obj, "baz");
 ```
 
 ## 仕様書
@@ -47,7 +47,7 @@ wm.set(obj, 'baz');
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.WeakMap.set")}}
+{{Compat}}
 
 ## 関連情報
 

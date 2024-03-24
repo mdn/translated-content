@@ -3,6 +3,8 @@ title: Grid
 slug: Glossary/Grid
 ---
 
+{{GlossarySidebar}}
+
 _CSS Гриды (они же сетки или CSS Grid)_ устанавливаются с помощью значения `grid` в свойстве `display`; вы можете определить колонки и строки в сетке с помощью свойств {{cssxref("grid-template-columns")}} и {{cssxref("grid-template-rows")}} соответственно.
 
 Сетка, которую вы создаёте, используя эти свойства, является явной сеткой.
@@ -10,6 +12,8 @@ _CSS Гриды (они же сетки или CSS Grid)_ устанавлива
 If you place content outside of this explicit grid, or if you are relying on auto-placement and the grid algorithm needs to create additional row or column {{glossary("grid tracks", "tracks")}} to hold {{glossary("grid item", "grid items")}}, then extra tracks will be created in the implicit grid. The _implicit grid_ is the grid created automatically due to content being added outside of the tracks defined.
 
 В примере ниже отображена _точная сетка_ из трёх колонок и двух рядов. The _third_ row on the grid is an _implicit grid_ row track, formed due to their being more than the six items which fill the explicit tracks.
+
+## Пример
 
 ```css hidden
 * {
@@ -52,7 +56,7 @@ If you place content outside of this explicit grid, or if you are relying on aut
 </div>
 ```
 
-{{ EmbedLiveSample('example', '500', '330') }}
+{{ EmbedLiveSample('Пример', '500', '330') }}
 
 ## Дополнительные материалы
 
@@ -65,4 +69,4 @@ If you place content outside of this explicit grid, or if you are relying on aut
 
 ### Что почитать ещё
 
-- Руководство по CSS Grid: _[Базовые принципы CSS сеток](/ru/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)_
+- Руководство по CSS Grid: _[Базовые принципы CSS сеток](/ru/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)_

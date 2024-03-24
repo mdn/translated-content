@@ -21,7 +21,7 @@ void expression;
 
 `void` 演算子は、よく単にプリミティブ値 `undefined` を得る目的で使われ、一般的に "`void(0)`" と書かれます（これは "`void 0`" と等価です）。この目的であれば、グローバル変数 {{jsxref("undefined")}} を使用することができます。
 
-なお、`void` 演算子の [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) を考慮するべきであり、括弧は `void` 演算子に続く式の解決を明確にするのに役立つとされています。
+なお、`void` 演算子の [優先順位](/ja/docs/Web/JavaScript/Reference/Operators/Operator_precedence) を考慮するべきであり、括弧は `void` 演算子に続く式の解決を明確にするのに役立つとされています。
 
 ```js
 void 2 == "2"; // (void 2) == '2', false を返す

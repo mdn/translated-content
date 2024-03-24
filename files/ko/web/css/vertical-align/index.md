@@ -153,20 +153,20 @@ img.middle {
 
 ```html
 <p>
-top: <img style="vertical-align: top" src="star.png"/><br />
-middle: <img style="vertical-align: middle" src="star.png"/><br />
-bottom: <img style="vertical-align: bottom" src="star.png"/><br />
-super: <img style="vertical-align: super" src="star.png"/><br />
-sub: <img style="vertical-align: sub" src="star.png"/><br />
+  top: <img style="vertical-align: top" src="star.png" /><br />
+  middle: <img style="vertical-align: middle" src="star.png" /><br />
+  bottom: <img style="vertical-align: bottom" src="star.png" /><br />
+  super: <img style="vertical-align: super" src="star.png" /><br />
+  sub: <img style="vertical-align: sub" src="star.png" /><br />
 </p>
 
 <p>
-text-top: <img style="vertical-align: text-top" src="star.png"/><br />
-text-bottom: <img style="vertical-align: text-bottom" src="star.png"/><br />
-0.2em: <img style="vertical-align: 0.2em" src="star.png"/><br />
--1em: <img style="vertical-align: -1em" src="star.png"/><br />
-20%: <img style="vertical-align: 20%" src="star.png"/><br />
--100%: <img style="vertical-align: -100%" src="star.png"/><br />
+  text-top: <img style="vertical-align: text-top" src="star.png" /><br />
+  text-bottom: <img style="vertical-align: text-bottom" src="star.png" /><br />
+  0.2em: <img style="vertical-align: 0.2em" src="star.png" /><br />
+  -1em: <img style="vertical-align: -1em" src="star.png" /><br />
+  20%: <img style="vertical-align: 20%" src="star.png" /><br />
+  -100%: <img style="vertical-align: -100%" src="star.png" /><br />
 </p>
 ```
 

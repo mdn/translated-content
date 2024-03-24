@@ -1,45 +1,51 @@
 ---
-title: History
+title: Historial
 slug: Web/API/History
+l10n:
+  sourceCommit: 55de68017f98094f45addb3ebaa0f7f52024f60b
 ---
 
 {{ APIRef("History API") }}
 
-The **`History`** interface allows manipulation of the browser _session history_, that is the pages visited in the tab or frame that the current page is loaded in.
+La interfaz **`History`** (Historial) permite la manipulación del historial de sesiones del navegador, es decir, las páginas visitadas en la pestaña o marco en el que se carga la página actual.
 
-## Properties
+Solo hay una instancia de `history` (es un _singleton_.) accesible a través del objeto global {{domxref("Window.history", "history")}}.
 
-_The `History`_ _interface doesn't inherit any property._
+> **Nota:** Esta interfaz solo está disponible en el hilo principal de ({{domxref("Window")}}). No se puede acceder a él en los contextos {{domxref("Worker")}} o {{domxref("Worklet")}}.
 
-- {{domxref("History.length","length")}} {{readOnlyInline}}
-  - : Returns an `Integer` representing the number of elements in the session history, including the currently loaded page. For example, for a page loaded in a new tab this property returns `1`.
+## Propiedades de instancia
+
+_La interfaz `History` no hereda ninguna propiedad._
+
+- {{domxref("History.length","length")}} {{ReadOnlyInline}}
+  - : Devuelve un `Integer` que representa el número de elementos en el historial de la sesión, incluida la página cargada actualmente. Por ejemplo, para una página cargada en una nueva pestaña, esta propiedad devuelve `1`.
 - {{domxref("History.scrollRestoration","scrollRestoration")}}
-  - : Allows web applications to explicitly set default scroll restoration behavior on history navigation. This property can be either `auto` or `manual`.
-- {{domxref("History.state","state")}} {{readOnlyInline}}
-  - : Returns an `any` value representing the state at the top of the history stack. This is a way to look at the state without having to wait for a [`popstate`](/es/docs/Web/Reference/Events/popstate) event.
+  - : Permite que las aplicaciones web establezcan explícitamente el comportamiento de restauración de desplazamiento predeterminado en la navegación del historial. Esta propiedad puede ser `auto` o `manual`.
+- {{domxref("History.state","state")}} {{ReadOnlyInline}}
+  - : Devuelve un valor `any` que representa el estado en la parte superior de la pila de historial. Esta es una forma de ver el estado sin tener que esperar un evento {{domxref("Window/popstate_event", "popstate")}}.
 
-## Methods
+## Métodos de instancia
 
-_The `History`_ _interface doesn't inherit any methods._
+_La interfaz `History` no hereda ningún método._
 
 - {{domxref("History.back","back()")}}
 
-  - : This asynchronous method goes to the previous page in session history, the same action as when the user clicks the browser's <kbd>Back</kbd> button. Equivalent to `history.go(-1)`.
+  - : Este método asíncrono va a la página anterior en el historial de la sesión, la misma acción que cuando el usuario hace clic en el botón <kbd>Atrás</kbd> del navegador. Equivalente a `history.go(-1)`.
 
-    > **Nota:** Calling this method to go back beyond the first page in the session history has no effect and doesn't raise an exception.
+    Llamar a este método para volver más allá de la primera página en el historial de la sesión no tiene ningún efecto y no genera una excepción.
 
 - {{domxref("History.forward","forward()")}}
 
-  - : This asynchronous method goes to the next page in session history, the same action as when the user clicks the browser's <kbd>Forward</kbd> button; this is equivalent to `history.go(1)`.
+  - : Este método asincrónico va a la página siguiente en el historial de la sesión, la misma acción que cuando el usuario hace clic en el botón <kbd>Adelante</kbd> del navegador; esto es equivalente a `history.go(1)`.
 
-    > **Nota:** Calling this method to go forward beyond the most recent page in the session history has no effect and doesn't raise an exception.
+    Llamar a este método para avanzar más allá de la página más reciente en el historial de la sesión no tiene ningún efecto y no genera una excepción.
 
 - {{domxref("History.go","go()")}}
-  - : Asynchronously loads a page from the session history, identified by its relative location to the current page, for example `-1` for the previous page or `1` for the next page. If you specify an out-of-bounds value (for instance, specifying `-1` when there are no previously-visited pages in the session history), this method silently has no effect. Calling `go()` without parameters or a value of `0` reloads the current page. Internet Explorer lets you specify a string, instead of an integer, to go to a specific URL in the history list.
+  - : Carga asíncronamente una página del historial de la sesión, identificada por su ubicación relativa a la página actual, por ejemplo, `-1` para la página anterior o `1` para la página siguiente. Si especifica un valor fuera de los límites (por ejemplo, si especifica "-1" cuando no hay páginas visitadas anteriormente en el historial de la sesión), este método no tiene ningún efecto. Llamar a `go()` sin parámetros o un valor de `0` vuelve a cargar la página actual.
 - {{domxref("History.pushState","pushState()")}}
-  - : Pushes the given data onto the session history stack with the specified title (and, if provided, URL). The data is treated as opaque by the DOM; you may specify any JavaScript object that can be serialized. Note that all browsers but Safari currently ignore the _title_ parameter. For more information, see [Working with the History API](/es/docs/Web/API/History_API/Working_with_the_History_API).
+  - : Inserta los datos proporcionados en la pila del historial de la sesión con el título especificado (y, si se proporciona, la URL). El DOM trata los datos como opacos; puede especificar cualquier objeto de JavaScript que se pueda serializar. Tenga en cuenta que todos los navegadores, excepto Safari, actualmente ignoran el parámetro _title_. Para obtener más información, consulte [Trabajar con la API History](/es/docs/Web/API/History_API/Working_with_the_History_API).
 - {{domxref("History.replaceState","replaceState()")}}
-  - : Updates the most recent entry on the history stack to have the specified data, title, and, if provided, URL. The data is treated as opaque by the DOM; you may specify any JavaScript object that can be serialized. Note that all browsers but Safari currently ignore the _title_ parameter. For more information, see [Working with the History API](/es/docs/Web/API/History_API/Working_with_the_History_API).
+  - : Actualiza la entrada más reciente en la pila de historial para tener los datos, el título y, si se proporciona, la URL especificada. El DOM trata los datos como opacos; puede especificar cualquier objeto de JavaScript que se pueda serializar. Tenga en cuenta que todos los navegadores, excepto Safari, actualmente ignoran el parámetro _title_. Para obtener más información, consulte [Trabajar con la API History](/es/docs/Web/API/History_API/Working_with_the_History_API).
 
 ## Especificaciones
 
@@ -49,6 +55,6 @@ _The `History`_ _interface doesn't inherit any methods._
 
 {{Compat}}
 
-## See also
+## Véase también
 
-- The {{domxref("Window.history")}} property returning the history of the current session.
+- Objeto global {{domxref("Window.history", "history")}}

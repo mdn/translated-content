@@ -2,6 +2,7 @@
 title: isolation
 slug: Web/CSS/isolation
 ---
+
 {{CSSRef}}
 
 [CSS](/ru/docs/Web/CSS)-свойство **`isolation`** определяет должен ли элемент создавать новый [контекст наложения](/ru/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context) {{glossary("stacking context")}}.
@@ -13,7 +14,7 @@ slug: Web/CSS/isolation
 ## Синтаксис
 
 ```css
-/* Значения ключевого слова */
+/* Ключевые слова */
 isolation: auto;
 isolation: isolate;
 
@@ -51,7 +52,7 @@ isolation: unset;
 
 ```css
 .a {
-  background-color: rgb(0,255,0);
+  background-color: rgb(0, 255, 0);
 }
 #b {
   width: 200px;
@@ -80,7 +81,7 @@ isolation: unset;
 
 {{cssinfo}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -10,7 +10,7 @@ slug: Learn/JavaScript/First_steps/What_went_wrong
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>计算机基础知识，初步理解 HTML 和 CSS，了解 JavaScript。</td>
     </tr>
     <tr>
@@ -83,7 +83,7 @@ slug: Learn/JavaScript/First_steps/What_went_wrong
    lowOrHi.textContent = "你猜高了！";
    ```
 
-5. 该行试图将 `lowOrHi` 变量中的 `textContent` 属性设置为一个字符串，但是失败了，这是因为 `lowOrHi` 并不包含预期的内容。为了一探究竟，你可以在代码中查找一下该变量的的其他实例。`lowOrHi` 最早出现于第 48 行：
+5. 该行试图将 `lowOrHi` 变量中的 `textContent` 属性设置为一个字符串，但是失败了，这是因为 `lowOrHi` 并不包含预期的内容。为了一探究竟，你可以在代码中查找一下该变量的其他实例。`lowOrHi` 最早出现于第 48 行：
 
    ```js
    const lowOrHi = document.querySelector("lowOrHi");

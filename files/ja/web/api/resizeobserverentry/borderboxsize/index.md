@@ -1,6 +1,9 @@
 ---
-title: ResizeObserverEntry.borderBoxSize
+title: "ResizeObserverEntry: borderBoxSize プロパティ"
+short-title: borderBoxSize
 slug: Web/API/ResizeObserverEntry/borderBoxSize
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("Resize Observer API")}}
@@ -21,19 +24,26 @@ slug: Web/API/ResizeObserverEntry/borderBoxSize
 ## 例
 
 ```js
-const resizeObserver = new ResizeObserver(entries => {
-  for (let entry of entries) {
-    if(entry.borderBoxSize && entry.borderBoxSize.length > 0) {
-      entry.target.style.borderRadius = Math.min(100, (entry.borderBoxSize[0].inlineSize/10) +
-                                                      (entry.borderBoxSize[0].blockSize/10)) + 'px';
+const resizeObserver = new ResizeObserver((entries) => {
+  const calcBorderRadius = (size1, size2) =>
+    `${Math.min(100, size1 / 10 + size2 / 10)}px`;
+
+  for (const entry of entries) {
+    if (entry.borderBoxSize?.length > 0) {
+      entry.target.style.borderRadius = calcBorderRadius(
+        entry.borderBoxSize[0].inlineSize,
+        entry.borderBoxSize[0].blockSize,
+      );
     } else {
-      entry.target.style.borderRadius = Math.min(100, (entry.contentRect.width/10) +
-                                                      (entry.contentRect.height/10)) + 'px';
+      entry.target.style.borderRadius = calcBorderRadius(
+        entry.contentRect.width,
+        entry.contentRect.height,
+      );
     }
   }
 });
 
-resizeObserver.observe(document.querySelector('div'));
+resizeObserver.observe(document.querySelector("div"));
 ```
 
 ## 仕様書

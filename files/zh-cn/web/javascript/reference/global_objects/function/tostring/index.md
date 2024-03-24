@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/toString
 
 {{JSRef}}
 
-**`toString()`** 方法返回一个表示当前函数源代码的字符串。
+{{jsxref("Function")}} 实例的 **`toString()`** 方法返回一个表示该函数源码的字符串。
 
 {{EmbedInteractiveExample("pages/js/function-tostring.html")}}
 
@@ -15,26 +15,30 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/toString
 toString()
 ```
 
+### 参数
+
+无。
+
 ### 返回值
 
 一个表示函数源代码的字符串。
 
 ## 描述
 
-{{jsxref("Function")}} 对象覆盖了从 {{jsxref("Object")}} 继承来的 `toString()` 方法，而没有继承 {{jsxref("Object.prototype.toString", "toString")}}。对于用户定义的 `Function` 对象，`toString` 方法返回一个字符串，其中包含用于定义函数的源文本段。
+{{jsxref("Function")}} 对象重写了从 {{jsxref("Object")}} 继承来的 `toString()` 方法，而没有继承 {{jsxref("Object.prototype.toString", "toString")}}。对于用户定义的 `Function` 对象，`toString` 方法返回一个字符串，其中包含用于定义函数的源文本段。
 
-在 `Function` 需要表示为字符串时，JavaScript 会自动调用函数的 `toString` 方法，例如：函数与一个字符串进行拼接。
+当 `Function` 需要表示为文本值时，JavaScript 会自动调用函数的 `toString` 方法，例如：函数与一个字符串进行拼接。
 
-若 `this` 不是 `Function` 对象，则 `toString()` 方法将抛出 {{jsxref("TypeError")}}（"Function.prototype.toString called on incompatible object"）异常。
+若 `this` 不是 `Function` 对象，则 `toString()` 方法将抛出 {{jsxref("TypeError")}} 异常（"Function.prototype.toString called on incompatible object"）。
 
 ```js example-bad
-Function.prototype.toString.call("foo"); // throws TypeError
+Function.prototype.toString.call("foo"); // 抛出 TypeError
 ```
 
-如果是在内置函数或由 `Function.prototype.bind` 返回的函数上调用 `toString()`，则`toString()` 返回原生代码字符串，如下
+如果在内置函数对象上调用 `toString()` 方法，或者在由 {{jsxref("Function.prototype.bind()")}} 创建的函数以及在其他非 JavaScript 函数上调用 `toString()`，那么 `toString()` 将返回一个看起来*像原函数的字符串*，类似于：
 
-```js
-"function someName() { [native code] }";
+```plain
+function someName() { [native code] }
 ```
 
 对于内部对象方法和函数，`someName` 是函数的初始名称；否则其可能是实现定义（implementation-defined）的，但始终以属性名称语法的形式呈现，如：`[1 + 1]`、`someName` 或 `1`。
@@ -43,8 +47,11 @@ Function.prototype.toString.call("foo"); // throws TypeError
 
 若是在由 `Function` 构造函数生成的函数上调用 `toString()`，则 `toString()` 返回创建后的函数源码，包括形参和函数体，函数名为“anonymous”。例如：对于 `Function("a", "b", "return a + b").toString()`，则会返回：
 
-```js
-"function anonymous(a,b\n) {\nreturn a + b\n}";
+```plain
+function anonymous(a,b
+) {
+return a + b
+}
 ```
 
 从 ES2018 开始，规范要求 `toString()` 的返回值与声明的源代码完全相同，包括空格和注释；或者因某种原因，主机没有源代码，则要求返回一个原生函数字符串。参见[兼容性表格](#浏览器兼容性)以查询对这一修改后的行为的支持情况。
@@ -71,22 +78,8 @@ test((a) => a); // "(a) => a"
 test({ a() {} }.a); // "a() {}"
 test({ *a() {} }.a); // "*a() {}"
 test({ [0]() {} }[0]); // "[0]() {}"
-test(
-  Object.getOwnPropertyDescriptor(
-    {
-      get a() {},
-    },
-    "a",
-  ).get,
-); // "get a() {}"
-test(
-  Object.getOwnPropertyDescriptor(
-    {
-      set a(x) {},
-    },
-    "a",
-  ).set,
-); // "set a(x) {}"
+test(Object.getOwnPropertyDescriptor({ get a() {} }, "a").get); // "get a() {}"
+test(Object.getOwnPropertyDescriptor({ set a(x) {} }, "a").set); // "set a(x) {}"
 test(Function.prototype.toString); // "function toString() { [native code] }"
 test(function f() {}.bind(0)); // "function () { [native code] }"
 test(Function("a", "b")); // function anonymous(a\n) {\nb\n}
@@ -102,7 +95,10 @@ test(Function("a", "b")); // function anonymous(a\n) {\nb\n}
 function foo() {
   return "bar";
 }
-console.log(`${foo}`); // "function foo() { return 'bar' }"
+console.log(`${foo}`);
+// function foo() {
+//   return "bar";
+// }
 ```
 
 得到的源文本是*准确的*，包括其中的注释（否则引擎的内部表示不会存储这些注释）。
@@ -111,7 +107,10 @@ console.log(`${foo}`); // "function foo() { return 'bar' }"
 function foo /* a comment */() {
   return "bar";
 }
-console.log(foo.toString()); // "function foo/* a comment */() { return 'bar' }"
+console.log(foo.toString());
+// function foo /* a comment */() {
+//   return "bar";
+// }
 ```
 
 ## 规范

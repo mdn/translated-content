@@ -32,13 +32,13 @@ Nous avons actuellement dégelé les langues suivantes :
 
 ### Coréen (ko)
 
-- Discussions : [Kakao Talk (#MDN Korea)](https://open.kakao.com/o/gdfG288c)
-- Contributeurs actuels : [hochan222](https://github.com/hochan222), [yechoi42](https://github.com/yechoi42), [cos18](https://github.com/cos18), [GwangYeol-Im](https://github.com/GwangYeol-Im), [pje1740](https://github.com/pje1740), [nKiNk](https://github.com/nKiNk), [yujo11](https://github.com/yujo11)
+- Discussions : [Discord (`#korean`)](/discord), [Kakao Talk (#MDN Korea)](https://open.kakao.com/o/gdfG288c)
+- Contributeurs actuels : [hochan222](https://github.com/hochan222), [yechoi42](https://github.com/yechoi42), [cos18](https://github.com/cos18), [pje1740](https://github.com/pje1740), [wisedog](https://github.com/wisedog), [swimjiy](https://github.com/swimjiy), [jho2301](https://github.com/jho2301), [sunhpark42](https://github.com/sunhpark42), [1ilsang](https://github.com/1ilsang)
 
 ### Russe (ru)
 
 - Discussions : [Matrix (#mdn-l10n-ru channel)](https://chat.mozilla.org/#/room/#mdn-l10n-ru:mozilla.org)
-- Contributeurs actuels : [yanaklose](https://github.com/yanaklose), [myshov](https://github.com/myshov), [Saionaro](https://github.com/Saionaro), [sashasushko](https://github.com/sashasushko), [lex111](https://github.com/lex111)
+- Contributeurs actuels : [leon-win](https://github.com/leon-win), [sashasushko](https://github.com/sashasushko), [Saionaro](https://github.com/Saionaro), [yanaklose](https://github.com/yanaklose), [myshov](https://github.com/myshov), [lex111](https://github.com/lex111)
 
 ## Autres sujets de localisation sur MDN
 

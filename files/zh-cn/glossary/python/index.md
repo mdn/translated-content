@@ -11,7 +11,7 @@ slug: Glossary/Python
 
 Python 是根据 OSI 批准的开源许可证开发的，使其免费使用和分发，即使是商业用途也是如此。Python 的许可证是由 [Python 软件基金会](https://www.python.org/psf) 管理的。
 
-## 了解更多
+## 参见
 
 - 在维基百科上的 [Python](https://zh.wikipedia.org/wiki/Python)
 - [python 的入门教程](https://www.tutorialspoint.com/python/index.htm)

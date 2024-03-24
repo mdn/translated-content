@@ -3,7 +3,7 @@ title: Math.exp()
 slug: Web/JavaScript/Reference/Global_Objects/Math/exp
 ---
 
-{{JSRef("Global_Objects", "Math")}}
+{{JSRef}}
 
 ## 概述
 
@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/exp
 
 ## 语法
 
-```plain
+```js-nolint
 Math.exp(x)
 ```
 
@@ -42,9 +42,12 @@ Math.exp(1); // 2.718281828459045
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- The {{jsxref("Global_Objects/Math", "Math")}} object it belongs to.
 - {{jsxref("Math.E")}}
+- {{jsxref("Math.expm1()")}}
 - {{jsxref("Math.log()")}}
+- {{jsxref("Math.log10()")}}
+- {{jsxref("Math.log1p()")}}
+- {{jsxref("Math.log2()")}}
 - {{jsxref("Math.pow()")}}

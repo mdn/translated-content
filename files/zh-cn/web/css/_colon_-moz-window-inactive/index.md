@@ -47,7 +47,7 @@ slug: Web/CSS/:-moz-window-inactive
 
 ### 结果
 
-此代码的结果如下所示。 你也可以打开一个{{LiveSampleLink('示例', '单独的页面')}}查看。
+此代码的结果如下所示。你也可以打开一个{{LiveSampleLink('示例', '单独的页面')}}查看。
 
 {{EmbedLiveSample('示例', 220, 220)}}
 

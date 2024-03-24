@@ -1,6 +1,8 @@
 ---
 title: image()
 slug: Web/CSS/image/image
+l10n:
+  sourceCommit: 06bb246b52a759cc0b70c0bc2f72531afa7f8c6a
 ---
 
 {{CSSRef}}
@@ -11,15 +13,15 @@ La [fonction](/fr/docs/Web/CSS/CSS_Functions) [CSS](/fr/docs/Web/CSS) **`image()
 
 ## Syntaxe
 
-{{CSSSyntax("image()")}}
+{{CSSSyntax}}
 
-### Paramètres
+où&nbsp;:
 
-- `image-tags` {{Optional_Inline}}
+- `image-tags` {{optional_inline}}
   - : La directionnalité de l'image, la valeur `ltr` pourra être utilisée afin d'indiquer que l'image est orientée de gauche à droite ou la valeur `rtl` pour indiquer une orientation de droite à gauche.
-- `image-src` {{Optional_Inline}}
+- `image-src` {{optional_inline}}
   - : Zéro, une ou plusieurs [URL](/fr/docs/Web/CSS/url) ou chaînes de caractères ([`<string>`](/fr/docs/Web/CSS/string)) indiquant des sources d'image et qui contiennent éventuellement des identifiants de fragment
-- `color` {{Optional_Inline}}
+- `color` {{optional_inline}}
   - : Une couleur par défaut. Cette couleur sera utilisée par défaut si aucune image n'est trouvée ou prise en charge parmi les images fournies via `image-src`.
 
 ### Gestion de la directionnalité
@@ -40,7 +42,7 @@ La syntaxe pour l'identifiant de fragment `#xywh=#,#,#,#` prend quatre arguments
 
 ```css
 xywh=160,120,320,240        /* créera une image sur 320x240 à x=160 et y=120 */
-xywh=pixel:160,120,320,240  /* créera une image sur 320x240 à x=160 et y=120 */
+xywh=pixel:160,120,320,240 /* créera une image sur 320x240 à x=160 et y=120 */
 xywh=percent:25,25,50,50    /* créera une image sur 50%x50% à x=25% et y=25% */
 ```
 
@@ -86,7 +88,7 @@ ul {
 }
 ```
 
-Pour les éléments de la liste allant de gauche à droite (ceux avec `dir="ltr"` ou qui héritent de cette direction depuis leur ancêtre), l'image pour la puce sera utilisée telle quelle. Les éléments de la liste avec `dir="rtl"` (que ce soit explicitement défini comme ici ou que cette direction provienne de la direction par défaut du document, par exemple un document en arabe ou en hébreu), l'image sera affichée à droite et sera renversée horizontalement (de la même façon qu'avec `transform: scalex(-1)`). Le texte sera également affiché de gauche à droite.
+Pour les éléments de la liste allant de gauche à droite (ceux avec `dir="ltr"` ou qui héritent de cette direction depuis leur ancêtre), l'image pour la puce sera utilisée telle quelle. Les éléments de la liste avec `dir="rtl"` (que ce soit explicitement défini comme ici ou que cette direction provienne de la direction par défaut du document, par exemple un document en arabe ou en hébreu), l'image sera affichée à droite et sera renversée horizontalement (de la même façon qu'avec `transform: scaleX(-1)`). Le texte sera également affiché de gauche à droite.
 
 {{EmbedLiveSample("", "100%", 200)}}
 
@@ -132,7 +134,7 @@ Lorsqu'on survole la boîte, le curseur changera pour afficher une section d'un 
 </div>
 ```
 
-Dans l'exemple précédent, on placera un masque noir semi-transparent sur le logo Firefox utilisé comme image d'arrière-plan. Si on avait utilisé la propriété `background-color` à la place, la couleur aurait été placée sous le logo et non sur lui. De plus, le conteneur entier aurait eu cette couleur en arrière-plan. Avec `image()` et [`background-size`](/fr/docs/Web/CSS/background-size) (tout en empêchant l'image de se répéter grâce à [`background-repeat`](/fr/docs/Web/CSS/background-repeat)), le voile noir ne couvrira qu'un quart du conteneur.
+Dans l'exemple précédent, on placera un masque noir semi-transparent sur le logo Firefox utilisé comme image d'arrière-plan. Si on avait utilisé la propriété [`background-color`](/fr/docs/Web/CSS/background-color) à la place, la couleur aurait été placée sous le logo et non sur lui. De plus, le conteneur entier aurait eu cette couleur en arrière-plan. Avec `image()` et [`background-size`](/fr/docs/Web/CSS/background-size) (tout en empêchant l'image de se répéter grâce à [`background-repeat`](/fr/docs/Web/CSS/background-repeat)), le voile noir ne couvrira qu'un quart du conteneur.
 
 {{EmbedLiveSample("","100%","220")}}
 

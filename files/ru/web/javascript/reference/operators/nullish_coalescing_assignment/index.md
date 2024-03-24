@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment
 ## Синтаксис
 
 ```js
-expr1 ??= expr2
+expr1 ??= expr2;
 ```
 
 ## Описание
@@ -56,7 +56,7 @@ config({}); // { duration: 100, speed: 25 }
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

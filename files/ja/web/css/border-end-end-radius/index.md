@@ -23,6 +23,8 @@ border-end-end-radius: revert;
 border-end-end-radius: unset;
 ```
 
+{{EmbedInteractiveExample("pages/css/border-end-end-radius.html")}}
+
 このプロパティは、要素の block-end と inline-end の間の角に影響します。すなわち、書字方向が `horizontal-tb` で `ltr` の方向であれば、 {{CSSxRef("border-bottom-right-radius")}} プロパティに対応します。
 
 ## 構文

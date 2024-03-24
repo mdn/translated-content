@@ -38,6 +38,6 @@ window.addEventListener("beforeinstallprompt", function(e) {
 });
 ```
 
-## Совместимость с браузером
+## Совместимость с браузерами
 
 {{Compat}}

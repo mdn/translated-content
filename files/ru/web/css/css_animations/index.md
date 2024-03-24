@@ -9,7 +9,7 @@ slug: Web/CSS/CSS_animations
 
 ## Reference
 
-### CSS Properties
+### Свойства
 
 - {{cssxref("animation")}}
 - {{cssxref("animation")}}
@@ -22,26 +22,22 @@ slug: Web/CSS/CSS_animations
 - {{cssxref("animation-play-state")}}
 - {{cssxref("animation-timing-function")}}
 
-### CSS At-rules
+### @-правила
 
 - {{cssxref("@keyframes")}}
 
 ## Guides
 
-- [Как определить, поддерживаются ли CSS-анимации](/ru/docs/Web/CSS/CSS_Animations/Detecting_CSS_animation_support)
-  - : Описаны техники определения того, поддерживает ли браузер CSS-анимации.
 - [Использование CSS-анимаций](/ru/docs/Web/CSS/CSS_Animations/Ispolzovanie_CSS_animatciy)
   - : Пошаговое руководство по созданию анимаций с помощью CSS. Статья описывает все касающиеся анимации CSS-свойства и @-правила и объясняет, как они взаимодействуют друг с другом.
 
 ## Specifications
 
-| Specification                                | Status                                   | Comment             |
-| -------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{ SpecName('CSS3 Animations') }} | {{ Spec2('CSS3 Animations') }} | Initial definition. |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
-{{Compat("css.properties.animation")}}
+{{Compat}}
 
 ## See also
 

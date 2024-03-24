@@ -61,7 +61,7 @@ for (var i = 0; i < inputs.length; i++) {
 }
 ```
 
-### Resultado
+#### Resultado
 
 {{EmbedLiveSample('Checkbox_y_radio_button', 'auto', 50)}}
 
@@ -87,7 +87,7 @@ progress:indeterminate {
 }
 ```
 
-### Resultado
+#### Resultado
 
 {{EmbedLiveSample('Barra_de_progreso', 'auto', 30)}}
 

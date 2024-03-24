@@ -178,7 +178,7 @@ ARIA の第一のルールは、要素を転用して、ARIA のロール、ス�
 ## 関連情報
 
 - [role="row"](/ja/docs/Web/Accessibility/ARIA/Roles/row_role)
-- [`role="gridcell"`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role)
+- [`role="gridcell"`](/ja/docs/Web/Accessibility/ARIA/Roles/gridcell_role)
 - [HTML `<td>` 要素](/ja/docs/Web/HTML/Element/td)
 - [HTML `<th>` 要素](/ja/docs/Web/HTML/Element/th)
 - [HTML 表の高度な機能とアクセシビリティ](/ja/docs/Learn/HTML/Tables/Advanced)

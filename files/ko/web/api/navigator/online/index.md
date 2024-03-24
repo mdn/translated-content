@@ -43,7 +43,7 @@ Firefox 2는 윈도우와 리눅스에서 브라우저의 온라인/오프라인
 널리 알려진 몇 가지 방법으로 해당 이벤트에 대한 리스너(listener)를 등록할 수 있습니다.
 
 - `window`, `document`, `document.body`에서 [`addEventListener`](/ko/DOM/element.addEventListener)를 이용
-- 자바스크립트의 `Function` 개체에서 `document`나 `document.body`에 `.ononline` 혹은 `.onoffline` 속성을 설정 (**참고:** 호환성 때문에`window.ononline`이나 `window.onoffline`은 올바로 동작하지 않습니다.)
+- JavaScript의 `Function` 개체에서 `document`나 `document.body`에 `.ononline` 혹은 `.onoffline` 속성을 설정 (**참고:** 호환성 때문에`window.ononline`이나 `window.onoffline`은 올바로 동작하지 않습니다.)
 - HTML 마크업의 `<body>` 태그에 `ononline="..."` 혹은 `onoffline="..."` 속성을 지정
 
 ### 예제

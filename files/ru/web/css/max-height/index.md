@@ -2,6 +2,7 @@
 title: max-height
 slug: Web/CSS/max-height
 ---
+
 {{CSSRef}}
 
 Свойство [CSS](/ru/docs/Web/CSS) **`max-height`** устанавливает максимальную высоту элемента. Оно предотвращает [используемое значение](/ru/docs/Web/CSS/used_value) свойства {{ Cssxref("height") }} от становления больше, чем значение, указанное для `max-height`.
@@ -13,18 +14,18 @@ slug: Web/CSS/max-height
 ## Синтаксис
 
 ```css
-/* <length> значения */
-max-height: 3.5em;
-
-/* <percentage> значения */
-max-height: 75%;
-
-/* Значения-ключевые слова */
+/* Ключевые слова */
 max-height: none;
 max-height: max-content;
 max-height: min-content;
 max-height: fit-content;
 max-height: fill-available;
+
+/* Значения длины */
+max-height: 3.5em;
+
+/* <percentage> значения */
+max-height: 75%;
 
 /* Глобальные значения */
 max-height: inherit;
@@ -59,9 +60,13 @@ max-height: unset;
 ## Примеры
 
 ```css
-table { max-height: 75%; }
+table {
+  max-height: 75%;
+}
 
-form { max-height: none; }
+form {
+  max-height: none;
+}
 ```
 
 ## Проблемы доступности
@@ -77,7 +82,7 @@ form { max-height: none; }
 
 {{cssinfo}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

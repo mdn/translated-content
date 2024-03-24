@@ -19,13 +19,11 @@ O objeto {{domxref("Clients")}} associado ao _service worker_ específico.
 
 ## Especificações
 
-| Specification                                                                                                                                    | Status                               | Comment             |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName('Service Workers', '#service-worker-global-scope-clients', 'ServiceWorkerRegistration.clients')}} | {{Spec2('Service Workers')}} | Initial definition. |
+{{Specifications}}
 
-## Compatibilidade
+## Compatibilidade com navegadores
 
-{{Compat("api.ServiceWorkerGlobalScope.clients")}}
+{{Compat}}
 
 ## Veja também
 

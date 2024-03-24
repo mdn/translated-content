@@ -29,19 +29,17 @@ O método `fixed()` cria uma string dentro de uma tag `<tt>`:
 O exemplo a seguir usa o método `fixed()` para alterar a formatação de uma string:
 
 ```js
-var worldString = 'Olá, mundo';
+var worldString = "Olá, mundo";
 console.log(worldString.fixed()); // "<tt>Olá, mundo</tt>"
 ```
 
 ## Especificações
 
-| Specification                                                                                                |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-string.prototype.fixed', 'String.prototype.fixed')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.String.fixed")}}
+{{Compat}}
 
 ## Veja também
 

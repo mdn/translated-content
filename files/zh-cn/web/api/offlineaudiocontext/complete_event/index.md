@@ -34,7 +34,7 @@ slug: Web/API/OfflineAudioContext/complete_event
 
 ## 例子
 
-处理完成后，您可能希望使用`oncomplete`处理程序提示用户现在可以播放音频，并启用播放按钮：
+处理完成后，你可能希望使用`oncomplete`处理程序提示用户现在可以播放音频，并启用播放按钮：
 
 ```js
 offlineAudioCtx.addEventListener("complete", () => {

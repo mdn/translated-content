@@ -2,6 +2,7 @@
 title: Reflect.deleteProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/deleteProperty
 ---
+
 {{JSRef}}
 
 Статический метод **`Reflect.deleteProperty()`** позволяет удалять свойства из объекта. Реализация данной функции схожа с оператором [`delete`](/ru/docs/Web/JavaScript/Reference/Operators/delete).
@@ -39,18 +40,18 @@ Reflect.deleteProperty(target, propertyKey)
 
 ```js
 var obj = { x: 1, y: 2 };
-Reflect.deleteProperty(obj, 'x'); // true
+Reflect.deleteProperty(obj, "x"); // true
 obj; // { y: 2 }
 
 var arr = [1, 2, 3, 4, 5];
-Reflect.deleteProperty(arr, '3'); // true
+Reflect.deleteProperty(arr, "3"); // true
 arr; // [1, 2, 3, , 5]
 
 // Возвращает true даже если такого свойства не существует
-Reflect.deleteProperty({}, 'foo'); // true
+Reflect.deleteProperty({}, "foo"); // true
 
 // Возвращает false если такое свойство ненастраиваемое
-Reflect.deleteProperty(Object.freeze({foo: 1}), 'foo'); // false
+Reflect.deleteProperty(Object.freeze({ foo: 1 }), "foo"); // false
 ```
 
 ## Спецификации

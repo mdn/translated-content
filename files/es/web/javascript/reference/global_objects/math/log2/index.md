@@ -39,11 +39,11 @@ Esta función es equivalente a Math.log(x) / Math.log(2). Para log2(e) use la co
 ### Usando `Math.log2()`
 
 ```js
-Math.log2(3);    // 1.584962500721156
-Math.log2(2);    // 1
-Math.log2(1);    // 0
-Math.log2(0);    // -Infinity
-Math.log2(-2);   // NaN
+Math.log2(3); // 1.584962500721156
+Math.log2(2); // 1
+Math.log2(1); // 0
+Math.log2(0); // -Infinity
+Math.log2(-2); // NaN
 Math.log2(1024); // 10
 ```
 
@@ -52,9 +52,11 @@ Math.log2(1024); // 10
 This Polyfill emulates the `Math.log2` function. Note that it returns imprecise values on some inputs (like 1 << 29), wrap into {{jsxref("Math.round()")}} if working with bit masks.
 
 ```js
-Math.log2 = Math.log2 || function(x) {
-  return Math.log(x) * Math.LOG2E;
-};
+Math.log2 =
+  Math.log2 ||
+  function (x) {
+    return Math.log(x) * Math.LOG2E;
+  };
 ```
 
 ## Especificaciones

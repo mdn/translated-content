@@ -3,7 +3,7 @@ title: Function.arguments
 slug: Web/JavaScript/Reference/Global_Objects/Function/arguments
 ---
 
-{{JSRef("Global_Objects", "Function")}} {{deprecated_header}}
+{{JSRef}} {{deprecated_header}}
 
 ## Сводка
 
@@ -18,16 +18,19 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/arguments
 ## Примеры
 
 ```js
-function f(n) { g(n - 1); }
+function f(n) {
+  g(n - 1);
+}
 
 function g(n) {
-  console.log('до: ' + g.arguments[0]);
-  if (n > 0) { f(n); }
-  console.log('после: ' + g.arguments[0]);
+  console.log("до: " + g.arguments[0]);
+  if (n > 0) {
+    f(n);
+  }
+  console.log("после: " + g.arguments[0]);
 }
 
 f(2);
-
 
 // Вывод
 

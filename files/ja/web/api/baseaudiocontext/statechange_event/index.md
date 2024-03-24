@@ -12,9 +12,9 @@ slug: Web/API/BaseAudioContext/statechange_event
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('statechange', event => { })
+addEventListener("statechange", (event) => {});
 
-onstatechange = event => { }
+onstatechange = (event) => {};
 ```
 
 ## イベント型
@@ -26,9 +26,9 @@ onstatechange = event => { }
 次のスニペットは [AudioContext states のデモ](https://github.com/mdn/webaudio-examples)（[ライブ実行を確認](https://mdn.github.io/webaudio-examples/audiocontext-states/)）の一部です。 `onstatechange` ハンドラーは現在の {{domxref("BaseAudioContext.state", "state")}} を、変化するたびにコンソールへログ出力します。
 
 ```js
-audioCtx.onstatechange = function() {
+audioCtx.onstatechange = function () {
   console.log(audioCtx.state);
-}
+};
 ```
 
 ## 仕様書

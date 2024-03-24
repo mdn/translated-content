@@ -222,11 +222,11 @@ textarea.onkeyup = function () {
 <p>sixth</p>
 ```
 
-{{htmlelement("em")}} 是一個行內元素，所以你可以看到下面的例子中，前三個元素互相緊鄰在同一行，兩兩中間並無任何空白。另一方面，{{htmlelement("p")}} 是一個區塊級元素，所以每個元素都自成一行，並且上下都有一些空間（這些空間是由於瀏覽器套用預設的[CSS styling](/zh-TW/docs/Learn/CSS/Introduction_to_CSS)到這些段落上的緣故）。
+{{htmlelement("em")}} 是一個行內元素，所以你可以看到下面的例子中，前三個元素互相緊鄰在同一行，兩兩中間並無任何空白。另一方面，{{htmlelement("p")}} 是一個區塊級元素，所以每個元素都自成一行，並且上下都有一些空間（這些空間是由於瀏覽器套用預設的[CSS styling](/zh-TW/docs/Learn/CSS/First_steps)到這些段落上的緣故）。
 
 {{ EmbedLiveSample('區塊級元素_vs._行內元素Block_versus_inline_elements', 700, 200, "", "") }}
 
-> **備註：** HTML5 重新定義了元素類別：請見 [Element content categories](http://www.whatwg.org/specs/web-apps/current-work/complete/section-index.html#element-content-categories)。新的定義比先前所定義的更為準確且少歧義性，因此它們也同時比 block 和 inline 還來得複雜，所以我們選擇在這裡繼續使用這個觀念。
+> **備註：** HTML5 重新定義了元素類別：請見 [Element content categories](https://www.whatwg.org/specs/web-apps/current-work/complete/section-index.html#element-content-categories)。新的定義比先前所定義的更為準確且少歧義性，因此它們也同時比 block 和 inline 還來得複雜，所以我們選擇在這裡繼續使用這個觀念。
 
 > **備註：** 在本主題所使用的區塊級（block）與行內級（inline）這兩個名詞，不應與 CSS 的 box 種類混淆。它們在預設時是很像的，但改變 CSS 的顯示型態（display type）並不會改變元素的類別，也不會影響該元素能包含或被包含的元素類別。HTML5 之所以會重新定義元素類別，部分也是基於此一原因。
 
@@ -405,7 +405,7 @@ window.addEventListener("load", drawOutput);
 >
 ```
 
-不過，如果你想要包裹相同種類的引號，你就必須要用到 [HTML entities](/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Getting_started#Entity_references_including_special_characters_in_HTML)。例如，以下範例是錯的：
+不過，如果你想要包裹相同種類的引號，你就必須要用到 [HTML entities](#實體參照（entity_reference）：引用_html_中的特殊字元)。例如，以下範例是錯的：
 
 ```html
  <a href='http://www.example.com' title='Isn't this fun?'>A link to my example.</a>
@@ -470,8 +470,8 @@ window.addEventListener("load", drawOutput);
 - 在 {{htmlelement("body")}} 之後，加入這個文件的主要標題。這應該由一個 `<h1>` 以及一個 `</h1>` 包著。
 - 撰寫段落的內容，這些內容可以是一些你感興趣的事物。
 - 讓其中重要的字詞以粗體顯示，讓它們更加搶眼，你可以用一個 `<strong>` 以及一個 `</strong>` 包著它們來達成這件事情。
-- 加入一個連結到你的文章段落中，像[前面所講過的那樣](/zh-TW/Learn/HTML/Introduction_to_HTML/Getting_started#Active_learning_Adding_attributes_to_an_element)。
-- 在這段文字的下面加入一張圖片，[像前面所說的那樣](/zh-TW/Learn/HTML/Introduction_to_HTML/Getting_started#Empty_elements)。如果你可以使用不同的圖片（你電腦裡的或網路上的都可以），你就能獲得加分！！
+- 加入一個連結到你的文章段落中，像[前面所講過的那樣](#主動學習：在元素中加入屬性)。
+- 在這段文字的下面加入一張圖片，[像前面所說的那樣](#空元素)。如果你可以使用不同的圖片（你電腦裡的或網路上的都可以），你就能獲得加分！！
 
 如果你不小心打錯了，你可以用 _Reset_ 鍵重置。如果你卡關了，可以點擊 _Show solution_ 鍵來偷看答案。
 

@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/assign
 ## 구문
 
 ```js
-Object.assign(target, ...sources)
+Object.assign(target, ...sources);
 ```
 
 ### 매개변수
@@ -58,9 +58,9 @@ console.log(copy); // { a: 1 }
 
 ```js
 function test() {
-  'use strict';
+  "use strict";
 
-  let obj1 = { a: 0 , b: { c: 0}};
+  let obj1 = { a: 0, b: { c: 0 } };
   let obj2 = Object.assign({}, obj1);
   console.log(JSON.stringify(obj2)); // { a: 0, b: { c: 0}}
 
@@ -77,7 +77,7 @@ function test() {
   console.log(JSON.stringify(obj2)); // { a: 2, b: { c: 3}}
 
   // 깊은 복사
-  obj1 = { a: 0 , b: { c: 0}};
+  obj1 = { a: 0, b: { c: 0 } };
   let obj3 = JSON.parse(JSON.stringify(obj1));
   obj1.a = 4;
   obj1.b.c = 4;
@@ -96,7 +96,7 @@ const o3 = { c: 3 };
 
 const obj = Object.assign(o1, o2, o3);
 console.log(obj); // { a: 1, b: 2, c: 3 }
-console.log(o1);  // { a: 1, b: 2, c: 3 }, 목표 객체 자체가 변경됨.
+console.log(o1); // { a: 1, b: 2, c: 3 }, 목표 객체 자체가 변경됨.
 ```
 
 ### 같은 속성을 가진 객체 병합
@@ -116,7 +116,7 @@ console.log(obj); // { a: 1, b: 2, c: 3 }
 
 ```js
 const o1 = { a: 1 };
-const o2 = { [Symbol('foo')]: 2 };
+const o2 = { [Symbol("foo")]: 2 };
 
 const obj = Object.assign({}, o1, o2);
 console.log(obj); // { a : 1, [Symbol("foo")]: 2 } (cf. bug 1207182 on Firefox)
@@ -126,15 +126,19 @@ Object.getOwnPropertySymbols(obj); // [Symbol(foo)]
 ### 프로토타입 체인의 속성과 열거 불가능한 속성은 복사 불가
 
 ```js
-const obj = Object.create({ foo: 1 }, { // foo는 obj의 프로토타입 체인에 있음
-  bar: {
-    value: 2  // bar는 열거 불가능
+const obj = Object.create(
+  { foo: 1 },
+  {
+    // foo는 obj의 프로토타입 체인에 있음
+    bar: {
+      value: 2, // bar는 열거 불가능
+    },
+    baz: {
+      value: 3,
+      enumerable: true, // baz는 열거 가능한 자체 속성
+    },
   },
-  baz: {
-    value: 3,
-    enumerable: true  // baz는 열거 가능한 자체 속성
-  }
-});
+);
 
 const copy = Object.assign({}, obj);
 console.log(copy); // { baz: 3 }
@@ -143,10 +147,10 @@ console.log(copy); // { baz: 3 }
 ### 원시 값은 객체로 래핑
 
 ```js
-const v1 = 'abc';
+const v1 = "abc";
 const v2 = true;
 const v3 = 10;
-const v4 = Symbol('foo');
+const v4 = Symbol("foo");
 
 const obj = Object.assign({}, v1, null, v2, undefined, v3, v4);
 // 원시 값은 래핑하고, null과 undefined는 무시
@@ -157,20 +161,20 @@ console.log(obj); // { "0": "a", "1": "b", "2": "c" }
 ### 예외로 인한 복사 작업 중단
 
 ```js
-const target = Object.defineProperty({}, 'foo', {
+const target = Object.defineProperty({}, "foo", {
   value: 1,
-  writable: false
+  writable: false,
 }); // target.foo는 읽기 전용 속성
 
 Object.assign(target, { bar: 2 }, { foo2: 3, foo: 3, foo3: 3 }, { baz: 4 });
 // TypeError: "foo" is read-only
 // target.foo에 할당할 때 예외 발생
 
-console.log(target.bar);  // 2, 첫 번째 출처 객체는 성공적으로 복사함
+console.log(target.bar); // 2, 첫 번째 출처 객체는 성공적으로 복사함
 console.log(target.foo2); // 3, 두 번째 출처 객체 중 첫 번째 속성도 성공적으로 복사함
-console.log(target.foo);  // 1, 여기에서 예외가 발생했음
+console.log(target.foo); // 1, 여기에서 예외가 발생했음
 console.log(target.foo3); // undefined, assign 메서드가 종료됨, foo3은 복사되지 않음
-console.log(target.baz);  // undefined, 세 번째 출처 객체도 복사되지 않음
+console.log(target.baz); // undefined, 세 번째 출처 객체도 복사되지 않음
 ```
 
 ### 접근자 복사
@@ -180,7 +184,7 @@ const obj = {
   foo: 1,
   get bar() {
     return 2;
-  }
+  },
 };
 
 let copy = Object.assign({}, obj);
@@ -189,14 +193,14 @@ console.log(copy);
 
 // 속성의 온전한 기술자를 복사해 할당하는 함수
 function completeAssign(target, ...sources) {
-  sources.forEach(source => {
+  sources.forEach((source) => {
     let descriptors = Object.keys(source).reduce((descriptors, key) => {
       descriptors[key] = Object.getOwnPropertyDescriptor(source, key);
       return descriptors;
     }, {});
 
     // 기본적으로 Object.assign은 열거 가능한 심볼도 복사함
-    Object.getOwnPropertySymbols(source).forEach(sym => {
+    Object.getOwnPropertySymbols(source).forEach((sym) => {
       let descriptor = Object.getOwnPropertyDescriptor(source, sym);
       if (descriptor.enumerable) {
         descriptors[sym] = descriptor;

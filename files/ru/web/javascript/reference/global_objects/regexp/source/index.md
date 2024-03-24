@@ -3,7 +3,7 @@ title: RegExp.prototype.source
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/source
 ---
 
-{{JSRef("Global_Objects", "RegExp")}}
+{{JSRef}}
 
 ## Сводка
 
@@ -14,7 +14,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/source
 ### Пример: использование свойства `source`
 
 ```js
-var regex = /fooBar/ig;
+var regex = /fooBar/gi;
 
 console.log(regex.source); // 'fooBar', не содержит прямые слеши /.../ и флаги 'ig'.
 ```

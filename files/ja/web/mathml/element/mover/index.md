@@ -56,7 +56,7 @@ Rendering in your browser: <math><mover accent="true"><mrow><mi>x </mi><mo>+ </m
 
 ## ブラウザ実装状況
 
-{{Compat("mathml.elements.mover")}}
+{{Compat}}
 
 ## 関連情報
 

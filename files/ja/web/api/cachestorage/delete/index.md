@@ -1,8 +1,9 @@
 ---
-title: CacheStorage.delete()
+title: "CacheStorage: delete() メソッド"
+short-title: delete()
 slug: Web/API/CacheStorage/delete
 l10n:
-  sourceCommit: 418f9cf461de0c7845665c0c677ad0667740f52a
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("Service Workers API")}}
@@ -42,9 +43,9 @@ this.addEventListener("activate", (event) => {
           if (!cachesToKeep.includes(key)) {
             return caches.delete(key);
           }
-        })
-      )
-    )
+        }),
+      ),
+    ),
   );
 });
 ```

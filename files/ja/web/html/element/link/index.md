@@ -160,10 +160,10 @@ l10n:
 
     - `anonymous`
       - : オリジン間リクエスト (つまり、 HTTP の {{HTTPHeader("Origin")}} ヘッダーを持つリクエスト) が実行されます。ただし、信用情報は送信されません (Cookie、X.509 証明書、 HTTP ベーシック認証は利用されません)。
-      サーバーが元のサイトに信用情報を付与しない (HTTP の {{HTTPHeader("Access-Control-Allow-Origin")}} ヘッダーの設定がない) 場合、リソースが汚染され、その使用も制限されます。
+        サーバーが元のサイトに信用情報を付与しない (HTTP の {{HTTPHeader("Access-Control-Allow-Origin")}} ヘッダーの設定がない) 場合、リソースが汚染され、その使用も制限されます。
     - `use-credentials`
       - : オリジン間リクエスト (つまり、 HTTP の `Origin` ヘッダーを持つリクエスト) が実行され、信用情報が送信されます (Cookie、証明書、HTTP ベーシック認証が利用されます)。
-      サーバーが元のサイトに信用情報を付与しない場合 (HTTP の {{HTTPHeader("Access-Control-Allow-Credentials")}} ヘッダーに関わらず)、画像が<em>汚染</em>され、その使用も制限されます。
+        サーバーが元のサイトに信用情報を付与しない場合 (HTTP の {{HTTPHeader("Access-Control-Allow-Credentials")}} ヘッダーに関わらず)、画像が<em>汚染</em>され、その使用も制限されます。
 
     この属性が存在しない場合、リソースは {{Glossary("CORS")}} リクエストなしで (`Origin` HTTP ヘッダーを送信せずに) 取得され、汚染されない使用が妨げられます。これが無効な場合、列挙型のキーワード **anonymous** が指定されたものとして扱われます。
     それ以上の情報は [CORS 設定属性](/ja/docs/Web/HTML/Attributes/crossorigin) を参照してください。

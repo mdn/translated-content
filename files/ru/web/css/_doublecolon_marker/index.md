@@ -2,6 +2,7 @@
 title: "::marker"
 slug: Web/CSS/::marker
 ---
+
 {{CSSRef}}
 
 Псевдоэлемент **`::marker`** применяет стили к маркеру элемента списка, которые обычно содержит значок или номер. Работает с любым элементом или псевдоэлементом, к которого установлен [`display: list-item`](/ru/docs/Web/CSS/display), например, у такого как {{HTMLElement("li")}} или {{HTMLElement("summary")}}.
@@ -57,12 +58,9 @@ ul li::marker {
 
 ## Specifications
 
-| Specification                                                                            | Status                                       | Comment                |
-| ---------------------------------------------------------------------------------------- | -------------------------------------------- | ---------------------- |
-| {{SpecName('CSS4 Pseudo-Elements', '#marker-pseudo', '::marker')}} | {{Spec2('CSS4 Pseudo-Elements')}} | No significant change. |
-| {{SpecName('CSS3 Lists', '#marker-pseudo', '::marker')}}             | {{Spec2('CSS3 Lists')}}             | Initial definition.    |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

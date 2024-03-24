@@ -3,7 +3,7 @@ title: sidebarAction.setPanel()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setPanel
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Définit le panneau de la barre latérale: c'est-à-dire le document HTML qui définit le contenu de cette barre latérale.
 

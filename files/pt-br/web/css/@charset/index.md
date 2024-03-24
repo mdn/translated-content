@@ -41,10 +41,8 @@ onde :
 
 ## Especificações
 
-| Especificação                                            | Status                | Comentário |
-| -------------------------------------------------------- | --------------------- | ---------- |
-| {{ SpecName('CSS2.1', 'syndata.html#x57', '@charset') }} | {{ Spec2('CSS2.1') }} |            |
+{{Specifications}}
 
 ## Compatibilidade de navegadores
 
-{{Compat("css.at-rules.charset")}}
+{{Compat}}

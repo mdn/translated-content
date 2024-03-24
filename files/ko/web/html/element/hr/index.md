@@ -59,15 +59,15 @@ slug: Web/HTML/Element/hr
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
-- {{htmlattrdef("align")}} {{deprecated_inline}}
+- `align` {{deprecated_inline}}
   - : 줄의 정렬을 지정합니다. 기본값은 `left`입니다.
-- {{htmlattrdef("color")}} {{Non-standard_inline}}
+- `color` {{Non-standard_inline}}
   - : 색깔 이름 또는 16 진수의 값으로 줄의 색깔을 지정합니다.
-- {{htmlattrdef("noshade")}} {{deprecated_inline}}
+- `noshade` {{deprecated_inline}}
   - : Sets the rule to have no shading.
-- {{htmlattrdef("size")}} {{deprecated_inline}}
+- `size` {{deprecated_inline}}
   - : 줄의 높이를 픽셀 단위로 지정합니다.
-- {{htmlattrdef("width")}} {{deprecated_inline}}
+- `width` {{deprecated_inline}}
   - : 줄의 가로 길이를 픽셀이나 퍼센트 값으로 지정합니다.
 
 ## 예제

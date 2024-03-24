@@ -229,7 +229,7 @@ block content
 
 ## 它看起來像是？
 
-运行应用程序，将浏览器打开到[http://localhost:3000](http://localhost:3000/)，然后选择 Create new book 链接。如果一切设置正确，您的网站应该类似于以下屏幕截图。提交有效的图书后，应将其保存，然后您将进入图书详细信息页面。
+运行应用程序，将浏览器打开到 `http://localhost:3000/`，然后选择 Create new book 链接。如果一切设置正确，你的网站应该类似于以下屏幕截图。提交有效的图书后，应将其保存，然后你将进入图书详细信息页面。
 
 ![](locallibary_express_book_create_empty.png)
 

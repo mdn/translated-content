@@ -54,7 +54,7 @@ _このインターフェイスは {{domxref("EventTarget")}} からもメソッ
 以下の例は、新しい `TextTrack` を動画に追加し、 {{domxref("TextTrack.mode")}} を使用して表示するように設定します。
 
 ```js
-let video = document.querySelector('video');
+let video = document.querySelector("video");
 let track = video.addTextTrack("captions", "Captions", "en");
 track.mode = "showing";
 ```

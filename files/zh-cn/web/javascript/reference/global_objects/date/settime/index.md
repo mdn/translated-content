@@ -3,7 +3,7 @@ title: Date.prototype.setTime()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setTime
 ---
 
-{{JSRef("Global_Objects", "Date")}}
+{{JSRef}}
 
 **`setTime()`** 方法以一个表示从 1970-1-1 00:00:00 UTC 计时的毫秒数为来为 `Date` 对象设置时间。
 
@@ -46,7 +46,7 @@ sameAsBigDay.setTime(theBigDay.getTime());
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.getTime()")}}
 - {{jsxref("Date.prototype.setUTCHours()")}}

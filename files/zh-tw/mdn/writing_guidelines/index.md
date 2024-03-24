@@ -7,9 +7,9 @@ slug: MDN/Writing_guidelines
 
 MDN Web Docs 是個針對網路技術和基於網路的軟體，持續發展的學習平台。它包含了：
 
-- 諸如 [CSS](/zh-TW/docs/CSS)、[HTML](/zh-TW/docs/HTML)、[JavaScript](/zh-TW/docs/JavaScript) 的網路標準
-- [Open Web app 開發](/zh-TW/docs/Apps)
-- [Firefox 附加元件開發](/zh-TW/docs/Add-ons)
+- 諸如 [CSS](/zh-TW/docs/Web/CSS)、[HTML](/zh-TW/docs/Web/HTML)、[JavaScript](/zh-TW/docs/Web/JavaScript) 的網路標準
+- [Open Web app 開發](/zh-TW/docs/Web/Apps)
+- [Firefox 附加元件開發](/zh-TW/docs/Mozilla/Add-ons)
 
 ## 我們的使命
 
@@ -21,7 +21,7 @@ MDN 的使命非常簡單：提供開發者在[開放網站](/zh-TW/docs/Web)上
 
 ## 如何幫忙
 
-想要幫忙 MDN 更加完善，你不需要寫得一手很好的程式碼！你可以透過很多種方式幫忙我們，從檢查文件是否合理、到隨手增添一些文字或是範例程式碼都行。根據你的興趣和時間，你可以到[開始入門 MDN](/zh-TW/docs/MDN/Getting_started) 頁面看看有幾種方法可以幫忙我們。
+想要幫忙 MDN 更加完善，你不需要寫得一手很好的程式碼！你可以透過很多種方式幫忙我們，從檢查文件是否合理、到隨手增添一些文字或是範例程式碼都行。根據你的興趣和時間，你可以到[開始入門 MDN](/zh-TW/docs/MDN/Community/Contributing/Getting_started) 頁面看看有幾種方法可以幫忙我們。
 
 你也可以在你自己的部落格或網站上[推廣 MDN](/zh-TW/docs/MDN/About/Promote)。
 
@@ -33,9 +33,9 @@ MDN 的使命非常簡單：提供開發者在[開放網站](/zh-TW/docs/Web)上
 
 ### 著作權授權
 
-**MDN wiki 文件** 是許多 Mozilla 基金會內外作者的心血結晶。除另有註明，所有內容皆採用[創用 CC 姓名標示-相同方式分享](http://creativecommons.org/licenses/by-sa/2.5/)授權條款（CC BY-SA）的第 2.5 版或任何更新的版本釋出。在引用內容時請務必標示作者為「Mozilla Contributors」、並附上該篇 wiki 的超連結或印出網址。你可以標示如下：
+**MDN wiki 文件** 是許多 Mozilla 基金會內外作者的心血結晶。除另有註明，所有內容皆採用[創用 CC 姓名標示-相同方式分享](https://creativecommons.org/licenses/by-sa/2.5/)授權條款（CC BY-SA）的第 2.5 版或任何更新的版本釋出。在引用內容時請務必標示作者為「Mozilla Contributors」、並附上該篇 wiki 的超連結或印出網址。你可以標示如下：
 
-> [關於 MDN](/zh-TW/docs/MDN/About) 由 [Mozilla Contributors](/zh-TW/docs/MDN/About$history) 製作，以 [CC-BY-SA 2.5](http://creativecommons.org/licenses/by-sa/2.5/) 釋出。
+> [關於 MDN](/zh-TW/docs/MDN/Writing_guidelines) 由 [Mozilla Contributors](/zh-TW/docs/MDN/About$history) 製作，以 [CC-BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/) 釋出。
 
 請注意在以上範例中，「Mozilla Contributors」連結到該頁面的編輯歷史。參閱 [Best practices for attribution](http://wiki.creativecommons.org/Marking/Users) 獲得更多資訊。
 
@@ -43,9 +43,9 @@ MDN 的使命非常簡單：提供開發者在[開放網站](/zh-TW/docs/Web)上
 
 在 2010 年 8 月 20 日以前新增到這個 wiki 的範例程式碼，是採用 [MIT 授權條款](http://www.opensource.org/licenses/mit-license.php)釋出。你應該在 MIT 模板中增加這些作者資訊：「© <最新的 wiki 更新日期> <寫下這段程式碼的人>」
 
-在 2010 年 8 月 20 日（含）以後新增到這個 wiki 的範例程式碼，是採用 [公有領域](http://creativecommons.org/publicdomain/zero/1.0/)授權。你不需要註明任何授權文字。不過你要的話，可以註明：「Any copyright is dedicated to the Public Domain. <http://creativecommons.org/publicdomain/zero/1.0/>」
+在 2010 年 8 月 20 日（含）以後新增到這個 wiki 的範例程式碼，是採用 [公有領域](https://creativecommons.org/publicdomain/zero/1.0/)授權。你不需要註明任何授權文字。不過你要的話，可以註明：「Any copyright is dedicated to the Public Domain. <http://creativecommons.org/publicdomain/zero/1.0/>」
 
-如果你希望貢獻到這個 wiki，你必須讓你的文件採用姓名標示-相同方式分享（或是你正在編輯的頁面上已經指定好的其他替代授權），同時你的程式碼必須採用[Creative Commons CC-0](http://creativecommons.org/publicdomain/zero/1.0/)（公有領域）授權。在你編輯這個 wiki 的同時即表示你同意採用這些授權。
+如果你希望貢獻到這個 wiki，你必須讓你的文件採用姓名標示-相同方式分享（或是你正在編輯的頁面上已經指定好的其他替代授權），同時你的程式碼必須採用[Creative Commons CC-0](https://creativecommons.org/publicdomain/zero/1.0/)（公有領域）授權。在你編輯這個 wiki 的同時即表示你同意採用這些授權。
 
 有些比較舊的內容可能會採用和上述不同的授權條款。這些授權條款都會在每個頁面最下方透過 [Alternate License Block](/Archive/Meta_docs/Examples/Alternate_License_Block) 列明。
 
@@ -83,8 +83,8 @@ Mozilla 基金會的商標、Logo、服務標誌，以及這個網站的風格�
 
 MDN Web Docs（前身為*Mozilla Developer Network (MDN)*，更前身為 Mozilla Developer Center (MDC) 或 _Devmo_）專案始於 2005 年初，[Mozilla 基金會](http://www.mozillafoundation.org)從 AOL 得到了原始的 Netscape [DevEdge](https://web.archive.org/web/*/devedge.netscape.com) 授權。DevEdge 內容仍被視為可用，之後由志願者合併到今天的這個 wiki 以便日後的更新與維護。
 
-你可以從我們的[十週年慶祝](/zh-TW/docs/MDN_at_ten)頁面看到更多 MDN 的歷史，包含一些參與者的口述歷史。
+你可以從我們的[十週年慶祝](/zh-TW/docs/MDN/At_ten)頁面看到更多 MDN 的歷史，包含一些參與者的口述歷史。
 
 ## 關於 Mozilla
 
-無論你是想更認識我們、了解如何成為 _Mozilla_ 的一份子，又或是單純想找我們聊天，那你都來對地方了。想知道是什麼驅使我們、讓我們更加與眾不同，請造訪我們的[使命](http://www.mozilla.org/zh-TW/mission/)一頁。
+無論你是想更認識我們、了解如何成為 _Mozilla_ 的一份子，又或是單純想找我們聊天，那你都來對地方了。想知道是什麼驅使我們、讓我們更加與眾不同，請造訪我們的[使命](https://www.mozilla.org/zh-TW/mission/)一頁。

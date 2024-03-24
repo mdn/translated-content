@@ -49,14 +49,14 @@ Proxy-Authenticate: Basic realm="Access to the internal site"
 
 ## 仕様書
 
-| 仕様書                                                       | 題名                                   |
-| ------------------------------------------------------------ | -------------------------------------- |
+| 仕様書                                       | 題名                                   |
+| -------------------------------------------- | -------------------------------------- |
 | {{RFC("7235", "Proxy-Authenticate", "4.3")}} | HTTP/1.1: Authentication               |
-| {{RFC("7617")}}                                         | The 'Basic' HTTP Authentication Scheme |
+| {{RFC("7617")}}                              | The 'Basic' HTTP Authentication Scheme |
 
 ## ブラウザーの対応
 
-{{Compat("http.headers.Proxy-Authenticate")}}
+{{Compat}}
 
 ## 関連情報
 

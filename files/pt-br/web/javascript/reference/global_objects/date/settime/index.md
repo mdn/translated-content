@@ -36,16 +36,11 @@ sameAsBigDay.setTime(theBigDay.getTime());
 
 ## Especificações
 
-| Especificação                                                                    | Status               | Comentário                                         |
-| -------------------------------------------------------------------------------- | -------------------- | -------------------------------------------------- |
-| {{SpecName('ES1')}}                                                              | {{Spec2('ES1')}}     | Definição inicial. Implementado no JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.9.5.27', 'Date.prototype.setTime')}}                | {{Spec2('ES5.1')}}   |                                                    |
-| {{SpecName('ES6', '#sec-date.prototype.settime', 'Date.prototype.setTime')}}     | {{Spec2('ES6')}}     |                                                    |
-| {{SpecName('ESDraft', '#sec-date.prototype.settime', 'Date.prototype.setTime')}} | {{Spec2('ESDraft')}} |                                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.setTime")}}
+{{Compat}}
 
 ## Veja também
 

@@ -22,12 +22,12 @@ parentNode = node.parentNode
 parente = node.parentNode; // Retorna o elemento pai
 
 // Obtém o primeiro <li> de uma lista
-var li = document.getElementsById('li-first');
+var li = document.getElementsById("li-first");
 // A partir do <li> obtido, obtém o element <ul>
 var ul = li.parentNode;
 
 // Estrutura com parágrafos dentro de uma div
-var p = document.getElementsByTagName('p');
+var p = document.getElementsByTagName("p");
 var div = p[0].parentNode;
 
 if (node.parentNode) {
@@ -41,14 +41,13 @@ if (node.parentNode) {
 
 `Document` e `DocumentFragment` [nodes](/pt-BR/docs/DOM/Node.nodeType) nunca podem ter um node parent, sendo assim `parentNode` sempre retornará `null`. Também retornará null se o node já tiver sido criado e não ainda não estiver anexado à estrutura DOM.
 
+## Especificações
+
+{{Specifications}}
+
 ## Compatibilidade com navegadores
 
-{{Compat("api.Node.parentNode")}}
-
-## Specificações
-
-- [DOM nível 2 Core: Node.parentNode](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1060184317)
-- [DOM nível 3 Core: Node.parentNode](https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1060184317)
+{{Compat}}
 
 ## Veja também
 

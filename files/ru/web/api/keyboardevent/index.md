@@ -155,7 +155,7 @@ _Этот интерфейс также наследует свойства от
 
 > **Примечание:** В Linux Firefox 12 и более ранних также обрабатывается событие `keypress`.
 
-Но в связи с ограничениями Mac OS X модель событий клавиши <kbd>Caps Lock</kbd> включает в себя только `keydown`. События <kbd>Num Lock</kbd> поддерживались на старых ноутбуках (2007 года и старше), но затем Mac OS X их перестала поддерживать, даже на внешних клавиатурах. На совсем старых MacBooks клавиша <kbd>Num Lock</kbd> вообще не генерирует никаких событий. Движок Gecko не поддерживает клавишу <kbd>Scroll Lock</kbd>, если это внешняя клавиатура с клавишей <kbd>F14</kbd>. В некоторых старых версиях Firefox эта клавиша генерирует событие `keypress`; это являлось нестабильным поведением и описано в {{bug(602812)}}.
+Но в связи с ограничениями Mac OS X модель событий клавиши <kbd>Caps Lock</kbd> включает в себя только `keydown`. События <kbd>Num Lock</kbd> поддерживались на старых ноутбуках (2007 года и старше), но затем Mac OS X их перестала поддерживать, даже на внешних клавиатурах. На совсем старых MacBooks клавиша <kbd>Num Lock</kbd> вообще не генерирует никаких событий. Движок Gecko не поддерживает клавишу <kbd>Scroll Lock</kbd>, если это внешняя клавиатура с клавишей <kbd>F14</kbd>. В некоторых старых версиях Firefox эта клавиша генерирует событие `keypress`; это являлось нестабильным поведением и описано в [Firefox bug 602812](https://bugzil.la/602812).
 
 ### Обработка автоповтора нажатой клавиши
 
@@ -201,44 +201,50 @@ _Этот интерфейс также наследует свойства от
 ## Пример
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-<script>
-'use strict';
+  <head>
+    <script>
+      "use strict";
 
-document.addEventListener('keydown', (event) => {
-  const keyName = event.key;
+      document.addEventListener(
+        "keydown",
+        (event) => {
+          const keyName = event.key;
 
-  if (keyName === 'Control') {
-    // not alert when only Control key is pressed.
-    return;
-  }
+          if (keyName === "Control") {
+            // not alert when only Control key is pressed.
+            return;
+          }
 
-  if (event.ctrlKey) {
-    // Хотя event.key это не 'Control' (например, нажата клавиша 'a'),
-    // то всё же event.ctrlKey может быть true, если ударживается клавиша Ctrl.
-    alert(`Combination of ctrlKey + ${keyName}`);
-  } else {
-    alert(`Key pressed ${keyName}`);
-  }
-}, false);
+          if (event.ctrlKey) {
+            // Хотя event.key это не 'Control' (например, нажата клавиша 'a'),
+            // то всё же event.ctrlKey может быть true, если ударживается клавиша Ctrl.
+            alert(`Combination of ctrlKey + ${keyName}`);
+          } else {
+            alert(`Key pressed ${keyName}`);
+          }
+        },
+        false,
+      );
 
-document.addEventListener('keyup', (event) => {
-  const keyName = event.key;
+      document.addEventListener(
+        "keyup",
+        (event) => {
+          const keyName = event.key;
 
-  // Как только пользователь отпустит клавишу Ctrl, то она больше не будет активной.
-  // Поэтому event.ctrlKey = false.
-  if (keyName === 'Control') {
-    alert('Control key was released');
-  }
-}, false);
+          // Как только пользователь отпустит клавишу Ctrl, то она больше не будет активной.
+          // Поэтому event.ctrlKey = false.
+          if (keyName === "Control") {
+            alert("Control key was released");
+          }
+        },
+        false,
+      );
+    </script>
+  </head>
 
-</script>
-</head>
-
-<body>
-</body>
+  <body></body>
 </html>
 ```
 

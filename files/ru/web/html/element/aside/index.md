@@ -46,7 +46,7 @@ slug: Web/HTML/Element/aside
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

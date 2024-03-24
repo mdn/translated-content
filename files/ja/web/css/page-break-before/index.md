@@ -28,6 +28,8 @@ page-break-before: revert;
 page-break-before: unset;
 ```
 
+{{EmbedInteractiveExample("pages/css/page-break-before.html")}}
+
 ## 構文
 
 ### 値
@@ -76,7 +78,7 @@ page-break-before: unset;
 ```css
 /* div の前で改ページされないようにします */
 div.note {
-    page-break-before: avoid;
+  page-break-before: avoid;
 }
 ```
 

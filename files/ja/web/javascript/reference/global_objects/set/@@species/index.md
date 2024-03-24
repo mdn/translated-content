@@ -1,6 +1,8 @@
 ---
-title: get Set[@@species]
+title: Set[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/Set/@@species
+l10n:
+  sourceCommit: bf81c9ed7de8cfd94cf1fc7f77e23b987f753a8b
 ---
 
 {{JSRef}}
@@ -15,32 +17,34 @@ Set[Symbol.species]
 
 ### 返値
 
-`get @@species` が呼び出されたコンストラクタ (`this`) の値です。この返値は、コピーされた `Set` インスタンスを生成するために使用されます。
+`get @@species` が呼び出されたコンストラクター (`this`) の値です。この返値は、コピーされた `Set` インスタンスを生成するために使用されます。
 
 ## 解説
 
 `@@species` アクセサープロパティは、 `Set` オブジェクトの既定のコンストラクターを返します。サブクラスのコンストラクターはコンストラクターに代入することで、これをオーバーライドすることができます。
 
-> **Note:** このプロパティは現在、いずれの `Set` のメソッドでも使用されていません。
+> **メモ:** このプロパティは現在、 `Set` のどのメソッドでも使用されていません。
 
 ## 例
 
-### 通常のオブジェクトの spicies
+### 通常のオブジェクトの species
 
-`@@species` プロパティは、`Set` オブジェクトの既定のコンストラクター関数である `Set` コンストラクターを返します。
+`@@species` プロパティは、既定のコンストラクター関数、すなわち `Set` の `Set` コンストラクターを返します。
 
 ```js
 Set[Symbol.species]; // Set() 関数
 ```
 
-### 派生オブジェクトの spicies
+### 派生オブジェクトの species
 
-派生コレクションオブジェクト（たとえば、独自の集合である `MySet`）では、`MySet` の species は `MySet` コンストラクターです。しかし、派生クラスのメソッドで、親である `Set` オブジェクトを返すためにこれをオーバーライドしたいかもしれません。
+独自の `Set` のサブクラス、例えば `MySet` のインスタンス内では、 `MySet` の species は `MySet` コンストラクターです。しかし、派生クラスのメソッドで、親である `Set` オブジェクトを返すためにこれをオーバーライドしたいかもしれません。
 
 ```js
 class MySet extends Set {
   // MySet species を親である Set コンストラクターにオーバーライド。
-  static get [Symbol.species]() { return Set; }
+  static get [Symbol.species]() {
+    return Set;
+  }
 }
 ```
 

@@ -235,7 +235,7 @@ selector {
 
 ## 计数器函数
 
-CSS计数器函数通常与 {{CSSxRef("content")}} 属性一起使用，不过理论上，只要支持 {{CSSxRef("&lt;string&gt;")}}，就可以使用。
+CSS 计数器函数通常与 {{CSSxRef("content")}} 属性一起使用，不过理论上，只要支持 {{CSSxRef("&lt;string&gt;")}}，就可以使用。
 
 - {{CSSxRef("counter", "counter()")}}
   - : 如果存在计数器，返回一个代表指定计数器当前值的字符串。

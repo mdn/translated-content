@@ -46,7 +46,7 @@ slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 然而，你也可以先載入一個後台頁面，然後在後台頁面中載入腳本。這樣的做法能為後台腳本提供 ES 6 模組的支援，算是一个優點。
 
-**manifest.json**
+manifest.json：
 
 ```json
 // manifest.json
@@ -56,7 +56,7 @@ slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 }
 ```
 
-**background-page.html**
+background-page.html：
 
 ```html
 <!doctype html>

@@ -13,9 +13,9 @@ Este objeto no puede ser instanciado directamente. En su lugar, una instancia de
 
 ```js
 function* gen() {
-    yield 1;
-    yield 2;
-    yield 3;
+  yield 1;
+  yield 2;
+  yield 3;
 }
 
 var g = gen(); // "Generator { }"
@@ -23,7 +23,7 @@ var g = gen(); // "Generator { }"
 
 ## Métodos de instanciación
 
-_Tambien hereda propiedades de {{JSxRef("Iterator")}}_
+_Tambien hereda propiedades de {{JSxRef("Iterator")}}._
 
 - {{jsxref("Generator.prototype.next()")}}
   - : Retorna el valor ofrecido por la expresión {{jsxref("Operators/yield", "yield")}}
@@ -34,9 +34,10 @@ _Tambien hereda propiedades de {{JSxRef("Iterator")}}_
 
 ## Propiedades
 
-_Tambien hereda propiedades de {{JSxRef("Iterator")}}_
+_Tambien hereda propiedades de {{JSxRef("Iterator")}}._
 
 - `Generator.prototype.constructor`
+
   - : Especifica la funciòn que construye el prototipo del objeto.
 
 - `Generator.prototype[@@toStringTag]`
@@ -49,8 +50,7 @@ _Tambien hereda propiedades de {{JSxRef("Iterator")}}_
 ```js
 function* idMaker() {
   var index = 0;
-  while(true)
-    yield index++;
+  while (true) yield index++;
 }
 
 var gen = idMaker(); // "Generator { }"

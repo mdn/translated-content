@@ -38,11 +38,13 @@ font-variation-settings: "xhgt" 0.7;
 
 ```css
 @font-face {
-  font-family: 'OpenTypeFont';
-  src: url('open_type_font.woff2') format('woff2');
+  font-family: "OpenTypeFont";
+  src: url("open_type_font.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
-  font-variation-settings: 'wght' 400, 'wdth' 300;
+  font-variation-settings:
+    "wght" 400,
+    "wdth" 300;
 }
 ```
 

@@ -29,7 +29,7 @@ element {
 }
 ```
 
-> **Примечание:** В более ранней спецификации префикс для переменных был `var-` , но позже был изменён на `--`. Firefox 31 и выше следуют новой спецификации.({{bug(985838)}})
+> **Примечание:** В более ранней спецификации префикс для переменных был `var-` , но позже был изменён на `--`. Firefox 31 и выше следуют новой спецификации.([Firefox bug 985838](https://bugzil.la/985838))
 
 ## Первый шаг с CSS Переменными
 
@@ -75,10 +75,10 @@ element {
 
 ```html
 <div>
-    <div class="one"></div>
-    <div class="two">Text <span class="five">- more text</span></div>
-    <input class="three">
-    <textarea class="four">Lorem Ipsum</textarea>
+  <div class="one"></div>
+  <div class="two">Text <span class="five">- more text</span></div>
+  <input class="three" />
+  <textarea class="four">Lorem Ipsum</textarea>
 </div>
 ```
 
@@ -130,10 +130,10 @@ element {
 
 ```html hidden
 <div>
-    <div class="one"></div>
-    <div class="two">Text <span class="five">- more text</span></div>
-    <input class="three">
-    <textarea class="four">Lorem Ipsum</textarea>
+  <div class="one"></div>
+  <div class="two">Text <span class="five">- more text</span></div>
+  <input class="three" />
+  <textarea class="four">Lorem Ipsum</textarea>
 </div>
 ```
 
@@ -181,11 +181,18 @@ element {
 }
 
 .three {
-  background-color: var(--my-var, var(--my-background, pink)); /* pink если --my-var и --my-background не определены */
+  background-color: var(
+    --my-var,
+    var(--my-background, pink)
+  ); /* pink если --my-var и --my-background не определены */
 }
 
 .three {
-  background-color: var(--my-var, --my-background, pink); /* "--my-background, pink" будет воспринят как значение в случае, если --my-var не определена */
+  background-color: var(
+    --my-var,
+    --my-background,
+    pink
+  ); /* "--my-background, pink" будет воспринят как значение в случае, если --my-var не определена */
 }
 ```
 
@@ -201,4 +208,4 @@ element {
 
 ## Совместимость с браузерами
 
-{{Compat("css.properties.custom-property")}}
+{{Compat}}

@@ -7,6 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/supportedLocalesO
 
 **`Intl.PluralRules.supportedLocalesOf()`** メソッドは、ランタイムの既定のロケールのうち、代替する必要なく複数形の書式で対応されているものが入った配列を返します。
 
+{{EmbedInteractiveExample("pages/js/intl-pluralrules-supportedlocalesof.html")}}
+
 ## 構文
 
 ```js

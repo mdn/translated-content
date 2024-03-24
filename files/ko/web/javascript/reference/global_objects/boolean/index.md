@@ -34,17 +34,17 @@ if (x) {
 불리언이 아닌 값을 변환할 때 `Boolean` 객체를 사용해선 안됩니다. 대신 `Boolean` 함수를 사용하세요.
 
 ```js
-var x = Boolean(expression);     // 추천
+var x = Boolean(expression); // 추천
 var x = new Boolean(expression); // 사용하지 말것
 ```
 
 값이 `false`인 `Boolean` 객체를 포함한 어떠한 객체를 `Boolean` 객체의 초기값으로 넘겨주더라도 새로운 `Boolean` 객체는 `true`를 가집니다.
 
 ```js
-var myFalse = new Boolean(false);   // 초기값 거짓
-var g = Boolean(myFalse);           // 초기값 참
-var myString = new String('Hello'); // 문자열 객체
-var s = Boolean(myString);          // 초기값 참
+var myFalse = new Boolean(false); // 초기값 거짓
+var g = Boolean(myFalse); // 초기값 참
+var myString = new String("Hello"); // 문자열 객체
+var s = Boolean(myString); // 초기값 참
 ```
 
 `Boolean` 원시 값의 자리에서 `Boolean` 객체를 이용해선 안됩니다.
@@ -69,7 +69,7 @@ var s = Boolean(myString);          // 초기값 참
 var bNoParam = new Boolean();
 var bZero = new Boolean(0);
 var bNull = new Boolean(null);
-var bEmptyString = new Boolean('');
+var bEmptyString = new Boolean("");
 var bfalse = new Boolean(false);
 ```
 
@@ -77,9 +77,9 @@ var bfalse = new Boolean(false);
 
 ```js
 var btrue = new Boolean(true);
-var btrueString = new Boolean('true');
-var bfalseString = new Boolean('false');
-var bSuLin = new Boolean('Su Lin');
+var btrueString = new Boolean("true");
+var bfalseString = new Boolean("false");
+var bSuLin = new Boolean("Su Lin");
 var bArrayProto = new Boolean([]);
 var bObjProto = new Boolean({});
 ```

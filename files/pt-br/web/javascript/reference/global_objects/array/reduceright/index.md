@@ -3,7 +3,7 @@ title: Array.prototype.reduceRight()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reduceRight
 ---
 
-{{JSRef("Global_Objects", "Array")}}
+{{JSRef}}
 
 ## Sumário
 
@@ -160,14 +160,11 @@ if ("function" !== typeof Array.prototype.reduceRight) {
 
 ## Especificações
 
-| Especificação                                                                          | Status             | Comentário                                         |
-| -------------------------------------------------------------------------------------- | ------------------ | -------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.4.4.22', 'Array.prototype.reduceRight')}}                 | {{Spec2('ES5.1')}} | Definição inicial. Implementado em JavaScript 1.8. |
-| {{SpecName('ES6', '#sec-array.prototype.reduceright', 'Array.prototype.reduceRight')}} | {{Spec2('ES6')}}   |                                                    |
+{{Specifications}}
 
 ## Compatibilidade com os navegadores
 
-{{Compat("javascript.builtins.Array.reduceRight")}}
+{{Compat}}
 
 ## Ver também
 

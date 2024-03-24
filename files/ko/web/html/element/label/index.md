@@ -9,8 +9,6 @@ slug: Web/HTML/Element/label
 
 {{EmbedInteractiveExample("pages/tabbed/label.html", "tabbed-shorter")}}
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</div>
-
 `<label>` 을 {{htmlelement("input")}} 요소와 연결하면 몇 가지 이점이 있습니다:
 
 - label 텍스트는 텍스트 입력과 시각적으로 관련이 있을뿐만 아니라 프로그래밍적으로도 관련이 있습니다. 예를 들어, 화면리더기(screenreader) 는 폼 입력(form input)에서 label 을 읽어서 보조기술(assistive technology) 사용자가 입력해야하는 텍스트가 무엇인지 더 쉽게 이해할 수 있게 합니다.
@@ -36,13 +34,13 @@ slug: Web/HTML/Element/label
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
-- {{htmlattrdef("for")}}
+- `for`
 
   - : 같은 문서 내의 `<label>` 요소로서, [레이블 가능](/ko/docs/Web/Guide/HTML/Content_categories#레이블_가능)한 form-related 요소의 [`id`](/ko/docs/Web/HTML/Global_attributes#id). 레이블 가능한 요소일 때, `for` 속성값과 일치하는 `id`를 가진 문서의 첫 번째 요소는 그 label 요소의 *라벨 제어(labeled control)*라고 합니다. label을 지정할 수 없으면 `for` 속성은 영향을 미치지 않습니다. 문서의 뒷부분에 `id` 값과 일치하는 다른 요소들은 무시합니다.
 
     > **참고:** `<label>` 요소는 `for` 속성과 제어control 요소를 동시에 가질 수 있습니다. 이 때 `for` 속성은 포함되어있는 제어control 요소를 가리키고 있어야 합니다.
 
-- {{htmlattrdef("form")}}
+- `form`
   - : label과 연관된 {{htmlelement ( "form")}} 요소(_양식 소유자 form owner_). 이 속성이 지정된 경우, 이 속성 값은 동일한 문서의 {{HTMLElement ( "form")}} 요소의 id입니다. 따라서 label 요소를 양식 요소의 자손이 아닌 문서의 어느 곳에나 배치 할 수 있습니다.
 
 ## CSS 스타일링

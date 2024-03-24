@@ -58,7 +58,7 @@ slug: Learn/Server-side/Express_Nodejs/forms
 - `method`: 用於發送數據的 HTTP 方法：`POST` 或 `GET`。
 
   - `POST` 方法。如果數據將導致服務器數據庫的更改，則始終應該使用 `POST`方法，因為這更加可以抵抗跨站點偽造請求攻擊。
-  - `GET` 方法只應用於不更改用戶數據的表單（例如，搜索表單）。當您希望能夠為 URL 添加書籤或共享時，建議使用此選項。
+  - `GET` 方法只應用於不更改用戶數據的表單（例如，搜索表單）。當你希望能夠為 URL 添加書籤或共享時，建議使用此選項。
 
 ### 表單處理流程
 
@@ -72,7 +72,7 @@ slug: Learn/Server-side/Express_Nodejs/forms
 
 1. 在用戶第一次請求時顯示默認表單。
 
-   - 表單可能包含空白字段（例如，如果您正在創建新記錄），或者可能預先填充了初始值（例如，如果您要更改記錄，或者俱有有用的默認初始值）。
+   - 表單可能包含空白字段（例如，如果你正在創建新記錄），或者可能預先填充了初始值（例如，如果你要更改記錄，或者俱有有用的默認初始值）。
 
 2. 接收用戶提交的數據，通常是在 HTTP `POST`請求中。
 3. 驗證並清理數據。
@@ -103,7 +103,7 @@ npm install express-validator
 
 #### 使用 express-validator
 
-> **備註：** Github 上的 [express-validator](https://github.com/ctavan/express-validator#express-validator) 指南，提供了 API 的良好概述。我們建議您閱讀該內容，以了解其所有功能（包括創建自定義驗證程序）。下面我們只介紹一個對 LocalLibrary 有用的子集。
+> **備註：** Github 上的 [express-validator](https://github.com/ctavan/express-validator#express-validator) 指南，提供了 API 的良好概述。我們建議你閱讀該內容，以了解其所有功能（包括創建自定義驗證程序）。下面我們只介紹一個對 LocalLibrary 有用的子集。
 
 要在我們的控制器中使用驗證器，我們必須從 'e**xpress-validator/check**'和'**express-validator/filter**'模塊中，導入我們想要使用的函數，如下所示：
 
@@ -112,7 +112,7 @@ const { body, validationResult } = require("express-validator/check");
 const { sanitizeBody } = require("express-validator/filter");
 ```
 
-有許多可用的功能，允許您一次檢查和清理請求參數，正文，標頭，cookie 等數據，或所有數據。對於本教程，我們主要使用 `body`， `sanitizeBody`，和 `validationResult`（如上面 required 導入的 ）。
+有許多可用的功能，允許你一次檢查和清理請求參數，正文，標頭，cookie 等數據，或所有數據。對於本教程，我們主要使用 `body`， `sanitizeBody`，和 `validationResult`（如上面 required 導入的 ）。
 
 功能定義如下：
 
@@ -123,14 +123,14 @@ const { sanitizeBody } = require("express-validator/filter");
   body('age', 'Invalid age').optional({ checkFalsy: true }).isISO8601(),
   ```
 
-  您還可以用菊花鍊式連接不同的驗證器，並添加前面驗證器為真時顯示的消息。
+  你還可以用菊花鍊式連接不同的驗證器，並添加前面驗證器為真時顯示的消息。
 
   ```js
   body('name').isLength({ min: 1 }).trim().withMessage('Name empty.')
       .isAlpha().withMessage('Name must be alphabet letters.'),
   ```
 
-  > **備註：** 您還可以添加內聯清理器，如`trim()`，如上所示。但是，此處應用清理器，僅適用於驗證步驟。如果要對最終輸出進行消毒，則需要使用單獨的清理器方法，如下所示。
+  > **備註：** 你還可以添加內聯清理器，如`trim()`，如上所示。但是，此處應用清理器，僅適用於驗證步驟。如果要對最終輸出進行消毒，則需要使用單獨的清理器方法，如下所示。
 
 - [`sanitizeBody(fields)`](https://github.com/ctavan/express-validator#sanitizebodyfields): 指定一個正文要清理的字段。然後將清理操作，以菊花鏈形式連接到此方法。例如，下面的 `escape()`清理操作，會從名稱變量中，刪除可能在 JavaScript 跨站點腳本攻擊中使用的 HTML 字符。
 
@@ -172,9 +172,9 @@ const { sanitizeBody } = require("express-validator/filter");
 在這個項目，我們為了簡化實作，將聲明表單只能：
 
 - 使用已存在的對象創建對象（因此用戶在嘗試創建任何 `Book`對象之前，必須創建任何所需的 `Author`和 `Genre`實例）。
-- 如果對象未被其他對象引用，則刪除該對象（例如，在刪除所有關聯的 `BookInstance`對象之前，您將無法刪除該書）。
+- 如果對象未被其他對象引用，則刪除該對象（例如，在刪除所有關聯的 `BookInstance`對象之前，你將無法刪除該書）。
 
-> **備註：** 更「牢固」的實現，可能允許您在創建新對象時，創建依賴對象，並隨時刪除任何對象（例如，通過刪除依賴對象，或從數據庫中，刪除對已刪除對象的引用） 。
+> **備註：** 更「牢固」的實現，可能允許你在創建新對象時，創建依賴對象，並隨時刪除任何對象（例如，通過刪除依賴對象，或從數據庫中，刪除對已刪除對象的引用） 。
 
 ### 路由
 
@@ -194,7 +194,7 @@ router.post("/genre/create", genre_controller.genre_create_post);
 
 ## Express 表單子文件
 
-以下子文件，將帶我們完成向示例應用程序添加所需表單的過程。在進入下一個文件之前，您需要依次閱讀並解決每個問題。
+以下子文件，將帶我們完成向示例應用程序添加所需表單的過程。在進入下一個文件之前，你需要依次閱讀並解決每個問題。
 
 1. [創建種類表單](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms/Create_genre_form) — 定義我們的頁面以創建種類對象 `Genre`。
 2. [創建作者表單](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms/Create_author_form) — 定義用於創建作者對象 `Author` 的頁面。
@@ -213,8 +213,8 @@ router.post("/genre/create", genre_controller.genre_create_post);
 一些提示：
 
 - 刪除種類 `Genre`就像刪除作者`Author`一樣，因為兩個對像都是 `Book`的依賴項（因此在這兩種情況下，只有在刪除相關書本時，才能刪除對象）。
-- 刪除書本 `Book`也很相似，但您需要檢查是否沒有關聯的書本實例 `BookInstances`。
-- 刪除書本實例 `BookInstances`是最簡單的，因為沒有依賴對象。在這種情況下，您只需找到相關記錄並將其刪除即可。
+- 刪除書本 `Book`也很相似，但你需要檢查是否沒有關聯的書本實例 `BookInstances`。
+- 刪除書本實例 `BookInstances`是最簡單的，因為沒有依賴對象。在這種情況下，你只需找到相關記錄並將其刪除即可。
 
 實現 `BookInstance`, `Author`, 和 `Genre`模型的更新頁面，以與我們的書本更新頁面相同的方式，將它們與關聯的詳細信息頁面，鏈接起來。
 
@@ -222,11 +222,11 @@ router.post("/genre/create", genre_controller.genre_create_post);
 
 - 我們剛剛實施的圖書更新頁面是最難的！相同的模式可用於其他對象的更新頁面。
 - 作者`Author`的死亡日期和出生日期字段，以及書本實例`BookInstance` 的 due_date 字段，是輸入到表單上日期輸入字段的錯誤格式（它需要 「YYYY-MM-DD」 形式的數據）。解決此問題的最簡單方法，是為適當格式化的日期，定義新的虛擬屬性，然後在關聯的視圖模板中，使用此字段。
-- 如果您遇到困難，此處示例中的更新頁面有一些示例[的連結。](https://github.com/mdn/express-locallibrary-tutorial)
+- 如果你遇到困難，此處示例中的更新頁面有一些示例[的連結。](https://github.com/mdn/express-locallibrary-tutorial)
 
 ## 總結
 
-Express, node, 與 NPM 上面的第三方套件，提供你需要的每樣東西 ，可用於新增表單到你的網站上。在本文中，您學習如何使用 Pug 創建表單，使用 express-validator 驗證和清理輸入，以及添加，刪除和修改數據庫中的記錄。
+Express, node, 與 NPM 上面的第三方套件，提供你需要的每樣東西 ，可用於新增表單到你的網站上。在本文中，你學習如何使用 Pug 創建表單，使用 express-validator 驗證和清理輸入，以及添加，刪除和修改數據庫中的記錄。
 
 你現在應該了解如何新增基本表單，以及表單處理代碼到你的 node 網站！
 

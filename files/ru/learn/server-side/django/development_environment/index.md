@@ -354,21 +354,3 @@ Quit the server with CONTROL-C.
 Теперь у вас на компьютере установлена и запущена среда разработки Django.
 
 В разделе проверки вам коротко был показан способ создания нового сайта на Django при помощи `django-admin startproject` и его запуск в вашем браузере при помощи веб-сервера разработки (**`python3 manage.py runserver`**). В следующей статье мы подробнее рассмотрим этот процесс создания простого, но полноценного веб-приложения.
-
-## В этом модуле
-
-- [Введение в Django](/ru/docs/Learn/Server-side/Django/Introduction)
-- [Установка среды разработки Django](/ru/docs/Learn/Server-side/Django/development_environment)
-- [Руководство Django: Сайт локальной библиотеки](/ru/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Руководство Django Часть 2: Создание основы веб-сайта](/ru/docs/Learn/Server-side/Django/skeleton_website)
-- [Руководство Django Часть 3: Использование моделей](/ru/docs/Learn/Server-side/Django/Models)
-- [Руководство Django Часть 4: Панель администрирования Django](/ru/docs/Learn/Server-side/Django/Admin_site)
-- [Руководство Django Часть 5: Создание домашней страницы](/ru/docs/Learn/Server-side/Django/Home_page)
-- [Руководство Django Часть 6: Основной список и детали представлений](/ru/docs/Learn/Server-side/Django/Generic_views)
-- [Руководство Django Часть 7: Фреймворк сеансов](/ru/docs/Learn/Server-side/Django/Sessions)
-- [Руководство Django Часть 8: Авторизация пользователей и уровни доступа](/ru/docs/Learn/Server-side/Django/Authentication)
-- [Руководство Django Часть 9: Работа с формами](/ru/docs/Learn/Server-side/Django/Forms)
-- [Руководство Django Часть 10: Тестирование веб-приложений Django](/ru/docs/Learn/Server-side/Django/Testing)
-- [Руководство Django Часть 11: Развёртывание Django в производство](/ru/docs/Learn/Server-side/Django/Deployment)
-- [Безопасность веб-приложения Django](/ru/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Мини-блог на Django](/ru/docs/Learn/Server-side/Django/django_assessment_blog)

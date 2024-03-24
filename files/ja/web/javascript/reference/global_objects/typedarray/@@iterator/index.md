@@ -2,14 +2,16 @@
 title: TypedArray.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator
 l10n:
-  sourceCommit: 194d3e00cb93a6e5ea44812548f4131cb17f0381
+  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
 {{JSRef}}
 
-**`@@iterator`** は `TypedArray` オブジェクトのプロパティで、[反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を実装し、型付き配列を[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)や [`for...of`](/ja/docs/Web/JavaScript/Reference/Statements/for...of) ループのような反復可能オブジェクトを想定するほとんどの構文で利用できるようにするためのものです。配列の各要素の値を返すイテレーターを返します。
+**`[@@iterator]()`** は {{jsxref("TypedArray")}} インスタンスのプロパティで、[反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を実装し、型付き配列を[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)や {{jsxref("Statements/for...of", "for...of")}} ループのような反復可能オブジェクトを想定するほとんどの構文で利用できるようにするためのものです。この型付き配列の各要素の値を返す[配列イテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)を返します。
 
 このプロパティの初期値は {{jsxref("TypedArray.prototype.values")}} プロパティの初期値と同じ関数オブジェクトです。
+
+{{EmbedInteractiveExample("pages/js/typedarray-prototype-@@iterator.html")}}
 
 ## 構文
 
@@ -17,15 +19,19 @@ l10n:
 typedArray[Symbol.iterator]()
 ```
 
+### 引数
+
+なし。
+
 ### 返値
 
-{{jsxref("TypedArray.prototype.values()")}} と同じ返値で、この型付き配列のすべての要素の値を返す、新しい反復可能イテレーターオブジェクトを返します。
+{{jsxref("TypedArray.prototype.values()")}} と同じ返値で、この型付き配列のすべての要素の値を返す、新しい[反復可能イテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)を返します。
 
 ## 例
 
 ### for...of ループを使用した反復処理
 
-このメソッドを直接呼び出す必要はめったにないことに注意してください。`@@iterator` メソッドの存在により、型付き配列は[反復可能] (/ja/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)となり、 `for...of` ループのような反復処理構文は、ループするために自動的にこのメソッドを呼び出し、イテレータを取得します。
+このメソッドを直接呼び出す必要はめったにないことに注意してください。`@@iterator` メソッドの存在により、型付き配列は[反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)となり、 `for...of` ループのような反復処理構文は、ループするために自動的にこのメソッドを呼び出し、イテレータを取得します。
 
 ```js
 const arr = new Uint8Array([10, 20, 30, 40, 50]);
@@ -59,8 +65,10 @@ console.log(arrIter.next().value); // 50
 ## 関連情報
 
 - [`TypedArray.prototype[@@iterator]` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.entries()")}}
 - {{jsxref("TypedArray.prototype.keys()")}}
 - {{jsxref("TypedArray.prototype.values()")}}
+- {{jsxref("Symbol.iterator")}}
+- [反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)

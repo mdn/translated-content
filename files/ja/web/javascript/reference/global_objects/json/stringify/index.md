@@ -406,7 +406,7 @@ JSON.stringify("\uD800"); // '"\\ud800"'
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.JSON.stringify")}}
+{{Compat}}
 
 ## 関連情報
 

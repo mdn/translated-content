@@ -133,7 +133,7 @@ The value of the `origin` property when the sending window contains a `javascrip
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

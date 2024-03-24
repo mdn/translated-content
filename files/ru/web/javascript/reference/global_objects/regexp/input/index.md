@@ -26,19 +26,19 @@ RegExp.$_
 
 ```js
 var re = /hi/g;
-re.test('hi there!');
-RegExp.input;         // "hi there!"
-re.test('foo');       // новая проверка, совпадений нет
-RegExp.$_;            // "hi there!"
-re.test('hi world!'); // новая проверка, совпадение есть
-RegExp.$_;            // "hi world!"
+re.test("hi there!");
+RegExp.input; // "hi there!"
+re.test("foo"); // новая проверка, совпадений нет
+RegExp.$_; // "hi there!"
+re.test("hi world!"); // новая проверка, совпадение есть
+RegExp.$_; // "hi world!"
 ```
 
 ## Спецификация
 
 Не стандартизированной. Не является частью какой-либо спецификации.
 
-## Поддержка в браузерах
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Boolean/toString
 ## 구문
 
 ```js
-    bool.toString()
+bool.toString();
 ```
 
 ### 반환 값

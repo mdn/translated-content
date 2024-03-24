@@ -23,6 +23,8 @@ ruby-position: revert;
 ruby-position: unset;
 ```
 
+{{EmbedInteractiveExample("pages/css/ruby-position.html")}}
+
 ### 値
 
 - `over`
@@ -44,7 +46,7 @@ ruby-position: unset;
 
 ## 例
 
-<h3 id="Ruby_positioned_over_the_text">テキストの上に配置したルビ</h3>
+### テキストの上に配置したルビ
 
 #### HTML
 
@@ -59,15 +61,15 @@ ruby-position: unset;
 
 ```css
 ruby {
-    ruby-position:over;
+  ruby-position: over;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Ruby_positioned_over_the_text", 100, 40)}}
+{{EmbedLiveSample("テキストの上に配置したルビ", 100, 40)}}
 
-<h3 id="Ruby_positioned_under_the_text">テキストの下に配置したルビ</h3>
+### テキストの下に配置したルビ
 
 #### HTML
 
@@ -82,21 +84,21 @@ ruby {
 
 ```css
 ruby {
-    ruby-position:under;
+  ruby-position: under;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Ruby_positioned_under_the_text", 100, 40)}}
+{{EmbedLiveSample("テキストの下に配置したルビ", 100, 40)}}
 
-<h3 id="Ruby_alternate">交互のルビ</h3>
+### 交互のルビ
 
 #### HTML
 
 ```html
 <ruby>
-  <rb>A<rb>B<rb>C</rb>
+  <rb>A</rb><rb>B</rb><rb>C</rb>
   <rtc>Above</rtc>
   <rtc>Below</rtc>
 </ruby>
@@ -106,13 +108,13 @@ ruby {
 
 ```css
 ruby {
-    ruby-position: alternate; /* 初期値でもある */
+  ruby-position: alternate; /* 初期値でもある */
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Ruby_alternate", 100, 40)}}
+{{EmbedLiveSample("交互のルビ", 100, 40)}}
 
 ## 仕様書
 

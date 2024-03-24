@@ -3,7 +3,7 @@ title: bookmarks.onMoved
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onMoved
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Lancé lorsqu'un signet ou un dossier est déplacé vers un autre dossier parent et / ou position dans un dossier.
 

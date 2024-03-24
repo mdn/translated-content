@@ -5,6 +5,8 @@ l10n:
   sourceCommit: ed947b2c608428b62a60f07d09dc543f732dc09b
 ---
 
+{{GlossarySidebar}}
+
 非公式には、 _サイト_ はウェブサイト、すなわちウェブページの集合であり、同じドメインから提供されるもので、単一の組織によって管理されているものです。
 
 ブラウザーは時として、異なるサイト同士を正確に区別する必要があります。例えば、ブラウザーは [SameSite](/ja/docs/Web/HTTP/Headers/Set-Cookie/SameSite) クッキーを、それを設定した同じサイトにしか送信してはなりません。
@@ -19,8 +21,8 @@ l10n:
 
 これらは、登録可能なドメインが `mozilla.org` であることから、同じサイトであると考えられます。
 
-- `https://developer.mozilla.org/en-US/docs/`
-- `https://support.mozilla.org/en-US/`
+- `https://developer.mozilla.org/ja/docs/`
+- `https://support.mozilla.org/ja/`
 
 これらは、ポートは関係ないので、同じサイトです。
 
@@ -29,7 +31,7 @@ l10n:
 
 これらは、 2 つの URL の登録可能なドメインが異なるため、同じサイトではありません。
 
-- `https://developer.mozilla.org/en-US/docs/`
+- `https://developer.mozilla.org/ja/docs/`
 - `https://example.com`
 
 これらは、同じサイトであったり、スキームが考慮されれば異なるサイトであったりします。

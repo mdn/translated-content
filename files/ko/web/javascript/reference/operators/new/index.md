@@ -11,8 +11,8 @@ slug: Web/JavaScript/Reference/Operators/new
 
 ## 구문
 
-```js
-    new constructor[([arguments])]
+```js-nolint
+new constructor[([arguments])];
 ```
 
 ### 매개변수
@@ -48,18 +48,18 @@ function Car() {}
 car1 = new Car();
 car2 = new Car();
 
-console.log(car1.color);    // undefined
+console.log(car1.color); // undefined
 
 Car.prototype.color = "original color";
-console.log(car1.color);    // original color
+console.log(car1.color); // original color
 
-car1.color = 'black';
-console.log(car1.color);   // black
+car1.color = "black";
+console.log(car1.color); // black
 
-console.log(car1.__proto__.color) //original color
-console.log(car2.__proto__.color) //original color
-console.log(car1.color)  // black
-console.log(car2.color) // original color
+console.log(car1.__proto__.color); //original color
+console.log(car2.__proto__.color); //original color
+console.log(car1.color); // black
+console.log(car2.color); // original color
 ```
 
 ## 예제
@@ -130,7 +130,7 @@ var car2 = new Car("Nissan", "300ZX", 1992, ken);
 새로운 객체를 생성할 때 문자열이나 숫자 값을 넘겨주는 대신에, 위의 구문은 owner를 위한 매개변수로 `rand`와 `ken` 객체를 넘겨준다. `car2`의 owner name을 확인해보기 위해서, 다음의 속성에 접근할 수 있다:
 
 ```js
-car2.owner.name
+car2.owner.name;
 ```
 
 ## 명세서

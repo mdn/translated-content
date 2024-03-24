@@ -97,7 +97,7 @@ style containment 는 이름에도 불구하고 [Shadow DOM](/ko/docs/Web/Web_Co
 
 `contain: style` 을 사용하면 {{cssxref("counter-increment")}} 와 {{cssxref("counter-set")}} 속성이 해당 하위 트리로만 범위가 지정된 새 카운터를 만들 수 있습니다.
 
-> **참고:** **주의**: `style` containment 는 사양에서 "at-risk" 이며, 모든 곳에서 지원하지 않을 수 있습니다(현재 파이어폭스는 지원하지 않음).
+> **참고:** **주의**: `style` containment 는 사양에서 "at-risk" 이며, 모든 곳에서 지원하지 않을 수 있습니다(현재 Firefox는 지원하지 않음).
 
 ### Special values
 

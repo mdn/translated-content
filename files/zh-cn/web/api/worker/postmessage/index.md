@@ -135,7 +135,7 @@ message from worker received in main:                    MessageEvent { ... }  m
 buf.byteLength in main AFTER transfer back from worker:  8                     main.js:10
 ```
 
-`ArrayBuffer` 在传输后, 其 `byteLength` 将变为 0。要查看此 Firefox 演示插件的完整可运行示例，请参阅此处：[GitHub :: ChromeWorker - demo-transfer-arraybuffer](https://github.com/Noitidart/ChromeWorker/tree/aca57d9cadc4e68af16201bdecbfb6f9a6f9ca6b)
+`ArrayBuffer` 在传输后，其 `byteLength` 将变为 0。要查看此 Firefox 演示插件的完整可运行示例，请参阅此处：[GitHub :: ChromeWorker - demo-transfer-arraybuffer](https://github.com/Noitidart/ChromeWorker/tree/aca57d9cadc4e68af16201bdecbfb6f9a6f9ca6b)
 
 ## 规范
 

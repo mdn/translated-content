@@ -34,7 +34,7 @@ var foo = 'Tom's bar';
 
 문자열을 묶어줄 때 쌍 따옴표를 사용하거나, 역슬래시를 이용해서 홑따옴표를 사용 할 수 있습니다. :
 
-```js example-good
+```js-nolint example-good
 var foo = "Tom's bar";
 var foo = 'Tom\'s bar';
 ```
@@ -55,10 +55,10 @@ var array[0] = 'there'; // SyntaxError missing ; before statement
 
 ```js example-good
 var obj = {};
-obj.foo = 'hi';
+obj.foo = "hi";
 
 var array = [];
-array[0] = 'there';
+array[0] = "there";
 ```
 
 ## 참조 문서

@@ -3,6 +3,8 @@ title: Parser (パーサー)
 slug: Glossary/Parser
 ---
 
+{{GlossarySidebar}}
+
 **パーサー**は、ソースコードファイルを{{glossary("parse","解析")}}するコンパイラまたはインタプリタのモジュールです。
 
 より一般的に言えば、テキストを解析して内容を別の表現に変換するソフトウェアです。

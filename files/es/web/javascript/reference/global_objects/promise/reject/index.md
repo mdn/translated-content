@@ -33,11 +33,14 @@ La función estática `Promise.reject` retorna un objecto {{jsxref("Promise")}} 
 ### Usando el método estático Promise.reject()
 
 ```js
-Promise.reject(new Error('fail')).then(function() {
-  // no entra en esta función
-}, function(error) {
-  console.log(error); // Stacktrace
-});
+Promise.reject(new Error("fail")).then(
+  function () {
+    // no entra en esta función
+  },
+  function (error) {
+    console.log(error); // Stacktrace
+  },
+);
 ```
 
 ## Especificaciones

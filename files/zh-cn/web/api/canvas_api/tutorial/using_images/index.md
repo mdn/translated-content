@@ -111,8 +111,6 @@ function getMyVideo() {
 
 ### 示例：一个简单的线图
 
-![](canvas_backdrop.png)
-
 下面一个例子我用一个外部图像作为一线性图的背景。用背景图我们就不需要绘制复杂的背景，省下不少代码。这里只用到一个 image 对象，于是就在它的 `onload` 事件响应函数中触发绘制动作。`drawImage` 方法将背景图放置在 canvas 的左上角 (0,0) 处。
 
 ```html hidden
@@ -142,9 +140,9 @@ function draw() {
 
 结果看起来是这样的：
 
-{{EmbedLiveSample("示例：一个简单的线图", 220, 160, "canvas_backdrop.png")}}
+{{EmbedLiveSample("示例：一个简单的线图", "", "160")}}
 
-## 缩放 Scaling
+## 缩放
 
 `drawImage` 方法的又一变种是增加了两个用于控制图像在 canvas 中缩放的参数。
 
@@ -153,11 +151,9 @@ function draw() {
 
 ### 示例：平铺图像
 
-![](canvas_scale_image.png)
-
 在这个例子里，我会用一张图片像背景一样在 canvas 中以重复平铺开来。实现起来也很简单，只需要循环铺开经过缩放的图片即可。见下面的代码，第一层 `for` 循环是做行重复，第二层是做列重复的。图像大小被缩放至原来的三分之一，50x38 px。这种方法可以用来很好的达到背景图案的效果，在下面的教程中会看到。
 
-> **备注：** 图像可能会因为大幅度的缩放而变得起杂点或者模糊。如果您的图像里面有文字，那么最好还是不要进行缩放，因为那样处理之后很可能图像里的文字就会变得无法辨认了。
+> **备注：** 图像可能会因为大幅度的缩放而变得起杂点或者模糊。如果你的图像里面有文字，那么最好还是不要进行缩放，因为那样处理之后很可能图像里的文字就会变得无法辨认了。
 
 ```html hidden
 <html>
@@ -184,9 +180,9 @@ function draw() {
 
 结果看起来像这样：
 
-{{EmbedLiveSample("示例：平铺图像", 160, 160, "canvas_scale_image.png")}}
+{{EmbedLiveSample("示例：平铺图像", "", "160")}}
 
-## 切片 Slicing
+## 切片
 
 `drawImage` 方法的第三个也是最后一个变种有 8 个新参数，用于控制做切片显示的。
 
@@ -198,8 +194,6 @@ function draw() {
 切片是个做图像合成的强大工具。假设有一张包含了所有元素的图像，那么你可以用这个方法来合成一个完整图像。例如，你想画一张图表，而手上有一个包含所有必需的文字的 PNG 文件，那么你可以很轻易的根据实际数据的需要来改变最终显示的图表。这方法的另一个好处就是你不需要单独装载每一个图像。
 
 ### 示例：相框
-
-![](canvas_drawimage2.jpg)
 
 在这个例子里面我用到上面已经用过的犀牛图像，不过这次我要给犀牛头做个切片特写，然后合成到一个相框里面去。相框带有阴影效果，是一个以 24-bit PNG 格式保存的图像。因为 24-bit PNG 图像带有一个完整的 8-bit alpha 通道，与 GIF 和 8-bit PNG 不同，我可以将它放成背景而不必担心底色的问题。
 
@@ -240,7 +234,7 @@ function draw() {
 }
 ```
 
-{{EmbedLiveSample("示例：相框", 160, 160, "canvas_drawimage2.jpg")}}
+{{EmbedLiveSample("示例：相框", "", "160")}}
 
 ## 画廊示例
 
@@ -321,7 +315,7 @@ function draw() {
 
 ## 控制图像的缩放行为
 
-如同前文所述，过度缩放图像可能会导致图像模糊或像素化。您可以通过使用绘图环境的{{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}}属性来控制是否在缩放图像时使用平滑算法。默认值为`true`，即启用平滑缩放。您也可以像这样禁用此功能：
+如同前文所述，过度缩放图像可能会导致图像模糊或像素化。你可以通过使用绘图环境的{{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}}属性来控制是否在缩放图像时使用平滑算法。默认值为`true`，即启用平滑缩放。你也可以像这样禁用此功能：
 
 ```js
 ctx.mozImageSmoothingEnabled = false;

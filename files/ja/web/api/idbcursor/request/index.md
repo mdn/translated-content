@@ -21,25 +21,25 @@ l10n:
 
 ```js
 function displayData() {
-  list.textContent = '';
-  const transaction = db.transaction(['rushAlbumList'], 'readonly');
-  const objectStore = transaction.objectStore('rushAlbumList');
+  list.textContent = "";
+  const transaction = db.transaction(["rushAlbumList"], "readonly");
+  const objectStore = transaction.objectStore("rushAlbumList");
 
   const request = objectStore.openCursor();
 
   request.onsuccess = (event) => {
     const cursor = event.target.result;
-      if (cursor) {
-        const listItem = document.createElement('li');
-        listItem.textContent = `${cursor.value.albumTitle}, ${cursor.value.year}`;
-        list.appendChild(listItem);
-        console.log(cursor.request);
-        cursor.continue();
-      } else {
-        console.log('全エントリーを表示しました。');
-      }
+    if (cursor) {
+      const listItem = document.createElement("li");
+      listItem.textContent = `${cursor.value.albumTitle}, ${cursor.value.year}`;
+      list.appendChild(listItem);
+      console.log(cursor.request);
+      cursor.continue();
+    } else {
+      console.log("全エントリーを表示しました。");
+    }
   };
-};
+}
 ```
 
 ## 仕様書

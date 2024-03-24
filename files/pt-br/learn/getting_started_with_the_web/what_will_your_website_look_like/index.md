@@ -1,5 +1,5 @@
 ---
-title: Com será o seu site?
+title: Como será o seu site?
 slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
 ---
 

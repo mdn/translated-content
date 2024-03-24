@@ -30,7 +30,7 @@ Si una `Promise` se pasa a una expresión `await`, espera a que la `Promise` se 
 
 ```js
 function resolveAfter2Seconds(x) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve(x);
     }, 2000);
@@ -60,7 +60,7 @@ Si la `Promise` es rechazada, se lanza una excepción con dicho el valor.
 async function f3() {
   try {
     var z = await Promise.reject(30);
-  } catch(e) {
+  } catch (e) {
     console.log(e); // 30
   }
 }

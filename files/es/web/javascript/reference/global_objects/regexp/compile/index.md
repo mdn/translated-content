@@ -39,8 +39,8 @@ El método `compile` es obsoleto. Puedes simplemente utilizar el constructor `Re
 El siguiente ejemplo muestra como recompilar una expresión regultar con un nuevo patrón y nuevas flags.
 
 ```js
-var regexObj = new RegExp('foo', 'gi');
-regexObj.compile('new foo', 'g');
+var regexObj = new RegExp("foo", "gi");
+regexObj.compile("new foo", "g");
 ```
 
 ## Especificaciones

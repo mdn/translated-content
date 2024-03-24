@@ -42,5 +42,4 @@ console.log(audioCtx.destination.numberOfOutputs); // 0
 
 ## 같이 보기
 
-- [Web Audio
-  API 사용하기](/ko/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Web Audio API 사용하기](/ko/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

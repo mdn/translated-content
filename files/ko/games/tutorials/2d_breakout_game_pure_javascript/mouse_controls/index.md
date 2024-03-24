@@ -1,6 +1,8 @@
 ---
 title: 마우스로 패들 조종하기
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
+l10n:
+  sourceCommit: 56db19e6b8d19932c1b6150bc42e752e12a2b21f
 ---
 
 {{GamesSidebar}}
@@ -25,7 +27,7 @@ document.addEventListener("mousemove", mouseMoveHandler, false);
 
 ```js
 function mouseMoveHandler(e) {
-  var relativeX = e.clientX - canvas.offsetLeft;
+  const relativeX = e.clientX - canvas.offsetLeft;
   if (relativeX > 0 && relativeX < canvas.width) {
     paddleX = relativeX - paddleWidth / 2;
   }
@@ -42,7 +44,7 @@ function mouseMoveHandler(e) {
 
 {{JSFiddleEmbed("https://jsfiddle.net/raymondjplante/vt7y5hcp/","","395")}}
 
-연습: 패들이 캔버스 양쪽 가장자리에서 반만 잘려나가 보일 것입니다. 패들 이동 제한 경계를 조정해 보세요.
+> **참고:** 패들이 캔버스 양쪽 가장자리에서 반만 잘려나가 보일 것입니다. 패들 이동 제한 경계를 조정해 보세요.
 
 ## 다음 단계
 

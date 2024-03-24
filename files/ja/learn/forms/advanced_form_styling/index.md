@@ -506,9 +506,9 @@ label[for="file"]:active {
 
 スタイル設定を制御したい場合は、この機能のカスタムソリューションを作ったり、[progressbar.js](https://kimmobrunfeldt.github.io/progressbar.js/#例) のようなサードパーティのソリューションを使ったりした方が簡単です。
 
-## スキルをテストしましょう!
+## スキルテスト
 
-この記事の最後に到達しましたが、重要な情報を覚えていますか？次に進む前に、この情報を保持しているか検証するテストがあります — [Test your skills: Advanced styling](/ja/docs/Learn/Forms/Test_your_skills:_Advanced_styling) を見てください。心に留めておくこととして、この評価シリーズでの質問は、[次の記事](/ja/docs/Learn/Forms/UI_pseudo-classes)の知識も前提していてるので、試す前にその記事に取り組むとよいかもしれません。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[Test your skills: Advanced styling](/ja/docs/Learn/Forms/Test_your_skills:_Advanced_styling) を見てください。心に留めておくこととして、この評価シリーズでの質問は、[次の記事](/ja/docs/Learn/Forms/UI_pseudo-classes)の知識も前提していてるので、試す前にその記事に取り組むとよいかもしれません。
 
 ## まとめ
 

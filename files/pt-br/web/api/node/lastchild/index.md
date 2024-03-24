@@ -17,7 +17,7 @@ var last_child = element.lastChild
 
 ```js
 // Obtém um elemento <ul>
-var ul = document.getElementById('lista');
+var ul = document.getElementById("lista");
 
 // Obtém o último <li> pertencente a estrutura <ul> obtida
 var li_last = ul.lastChild;

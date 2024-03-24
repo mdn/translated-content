@@ -11,7 +11,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 <table>
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         基本的计算机知识、<a
           href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
@@ -83,7 +83,8 @@ slug: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 
 ```html hidden
 <p>
-  可以试着引入B站（哔哩哔哩视频网站）的“改革春风吹满地”视频吗？（其BV号为BV1bW411n7fY）
+  可以试着引入 B 站（哔哩哔哩视频网站）的“改革春风吹满地”视频吗？（其 BV 号为
+  BV1bW411n7fY）
 </p>
 <h2>实时输出</h2>
 <div class="output" style="min-height: 250px;"></div>

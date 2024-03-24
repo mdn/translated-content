@@ -2,6 +2,7 @@
 title: Обрезка и маска
 slug: Web/SVG/Tutorial/Clipping_and_masking
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/Basic_Transformations", "Web/SVG/Tutorial/Other_content_in_SVG") }}
 
 На первый взгляд, странно стирать то, что было только что нарисовано. Но когда вы попытаетесь создать полукруг в SVG, то сразу столкнётесь со следующими свойствами.
@@ -15,7 +16,10 @@ slug: Web/SVG/Tutorial/Clipping_and_masking
 Мы можем создать полукруг на основе окружности:
 
 ```html
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <clipPath id="cut-off-bottom">
       <rect x="0" y="0" width="200" height="100" />
@@ -39,14 +43,19 @@ slug: Web/SVG/Tutorial/Clipping_and_masking
 Хороший пример использования маски - это градиент. В разных местах изображения с помощью масок можно добиться разной степени прозрачности.
 
 ```html
-<svg width="200" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  width="200"
+  height="200"
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <linearGradient id="Gradient">
       <stop offset="0" stop-color="white" stop-opacity="0" />
       <stop offset="1" stop-color="white" stop-opacity="1" />
     </linearGradient>
     <mask id="Mask">
-      <rect x="0" y="0" width="200" height="200" fill="url(#Gradient)"  />
+      <rect x="0" y="0" width="200" height="200" fill="url(#Gradient)" />
     </mask>
   </defs>
 
@@ -70,9 +79,21 @@ slug: Web/SVG/Tutorial/Clipping_and_masking
 Вышеуказанный прямоугольник будет полупрозрачным. Для того, чтобы задать непрозрачность заливке или контуру мы можем использовать 2 отдельных атрибута `fill-opacity` и `stroke-opacity`. Обратите внимание, что заполнение контура будет перекрывать основную заливку. Следовательно, если установить прозрачность контура у элемента, который также имеет заливку, половина контура наложится на цвет заливки, а другая на фон:
 
 ```html
-<svg width="200" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  width="200"
+  height="200"
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <rect x="0" y="0" width="200" height="200" fill="blue" />
-  <circle cx="100" cy="100" r="50" stroke="yellow" stroke-width="40" stroke-opacity=".5" fill="red" />
+  <circle
+    cx="100"
+    cy="100"
+    r="50"
+    stroke="yellow"
+    stroke-width="40"
+    stroke-opacity=".5"
+    fill="red" />
 </svg>
 ```
 

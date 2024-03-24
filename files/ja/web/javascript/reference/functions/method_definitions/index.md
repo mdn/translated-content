@@ -38,13 +38,13 @@ const obj = {
 
 ```js
 const obj = {
-  foo: function() {
+  foo: function () {
     // ...
   },
-  bar: function() {
+  bar: function () {
     // ...
-  }
-}
+  },
+};
 ```
 
 これを以下のように短縮することができます。
@@ -56,8 +56,8 @@ const obj = {
   },
   bar() {
     // ...
-  }
-}
+  },
+};
 ```
 
 ### ジェネレーターメソッド
@@ -73,26 +73,26 @@ const obj = {
 // 名前付きプロパティを使用
 const obj2 = {
   g: function* () {
-    let index = 0
+    let index = 0;
     while (true) {
-      yield index++
+      yield index++;
     }
-  }
+  },
 };
 
 // 簡略構文を使用して同じオブジェクトを生成
 const obj2 = {
-  * g() {
-    let index = 0
+  *g() {
+    let index = 0;
     while (true) {
-      yield index++
+      yield index++;
     }
-  }
+  },
 };
 
-const it = obj2.g()
-console.log(it.next().value)  // 0
-console.log(it.next().value)  // 1
+const it = obj2.g();
+console.log(it.next().value); // 0
+console.log(it.next().value); // 1
 ```
 
 ### 非同期メソッド
@@ -103,16 +103,16 @@ console.log(it.next().value)  // 1
 // 名前付きプロパティ
 const obj3 = {
   f: async function () {
-    await some_promise
-  }
-}
+    await some_promise;
+  },
+};
 
 // 簡略構文を使用して同じオブジェクトを生成
 const obj3 = {
   async f() {
-    await some_promise
-  }
-}
+    await some_promise;
+  },
+};
 ```
 
 ### 非同期ジェネレーターメソッド
@@ -122,20 +122,20 @@ const obj3 = {
 ```js
 const obj4 = {
   f: async function* () {
-    yield 1
-    yield 2
-    yield 3
-  }
+    yield 1;
+    yield 2;
+    yield 3;
+  },
 };
 
 // 簡略構文を使用して同じオブジェクトを生成
 const obj4 = {
-  async* f() {
-   yield 1
-   yield 2
-   yield 3
-  }
-}
+  async *f() {
+    yield 1;
+    yield 2;
+    yield 3;
+  },
+};
 ```
 
 ### メソッド定義はコンストラクターではない
@@ -144,14 +144,14 @@ const obj4 = {
 
 ```js example-bad
 const objA = {
-  method() {}
-}
-new objA.method  // TypeError: obj.method is not a constructor
+  method() {},
+};
+new objA.method(); // TypeError: obj.method is not a constructor
 
 const objB = {
-  * g() {}
-}
-new objB.g       // TypeError: obj.g is not a constructor (ES2016 で変更)
+  *g() {},
+};
+new objB.g(); // TypeError: obj.g is not a constructor (ES2016 で変更)
 ```
 
 ## 例
@@ -160,10 +160,12 @@ new objB.g       // TypeError: obj.g is not a constructor (ES2016 で変更)
 
 ```js
 const obj = {
-  a: 'foo',
-  b() { return this.a }
+  a: "foo",
+  b() {
+    return this.a;
+  },
 };
-console.log(obj.b())  // "foo"
+console.log(obj.b()); // "foo"
 ```
 
 ### 計算されたプロパティ名
@@ -172,22 +174,28 @@ console.log(obj.b())  // "foo"
 
 ```js
 const bar = {
-  foo0: function() { return 0 },
-  foo1() { return 1 },
-  ['foo' + 2]() { return 2 }
-}
+  foo0: function () {
+    return 0;
+  },
+  foo1() {
+    return 1;
+  },
+  ["foo" + 2]() {
+    return 2;
+  },
+};
 
-console.log(bar.foo0())  // 0
-console.log(bar.foo1())  // 1
-console.log(bar.foo2())  // 2
+console.log(bar.foo0()); // 0
+console.log(bar.foo1()); // 1
+console.log(bar.foo2()); // 2
 
 // A global function
 function foo() {
-  return 1
+  return 1;
 }
 
-let name = 'foo'
-console.log(window[name]())  // 1
+let name = "foo";
+console.log(window[name]()); // 1
 ```
 
 ## 仕様書

@@ -42,9 +42,9 @@ max ()는 Math의 정적 메서드이기 때문에 만든 Math 개체의 메서�
 ### `Math.max()함수 사용하기`
 
 ```js
-Math.max(10, 20);   //  20
+Math.max(10, 20); //  20
 Math.max(-10, -20); // -10
-Math.max(-10, 20);  //  20
+Math.max(-10, 20); //  20
 ```
 
 ### 배열의 최대값 가져오기
@@ -55,9 +55,9 @@ Math.max(-10, 20);  //  20
 최대값을 찾는 데 사용할 수 있습니다.
 
 ```js
-var arr = [1,2,3];
-var max = arr.reduce(function(a, b) {
-    return Math.max(a, b);
+var arr = [1, 2, 3];
+var max = arr.reduce(function (a, b) {
+  return Math.max(a, b);
 }, -Infinity);
 ```
 
@@ -76,8 +76,7 @@ function getMaxOfArray(numArray) {
 
 ```js
 var arr = [1, 2, 3];
-  var max = Math.max(...arr);
-
+var max = Math.max(...arr);
 ```
 
 또한 {{jsxref("Operators/Spread_syntax", "spread operator")}}이 함수를 사용하면 배열의 숫자들 중 가장 큰 숫자를 쉽게 얻을 수 있습니다.

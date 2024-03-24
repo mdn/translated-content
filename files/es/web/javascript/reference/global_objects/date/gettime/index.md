@@ -3,7 +3,7 @@ title: Date.prototype.getTime()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getTime
 ---
 
-{{JSRef("Global_Objects", "Date")}}
+{{JSRef}}
 
 ## Resumen
 
@@ -46,7 +46,7 @@ for (var i = 0; i < 1000; i++) {
 }
 end = new Date();
 
-console.log('Operation took ' + (end.getTime() - start.getTime()) + ' msec');
+console.log("Operation took " + (end.getTime() - start.getTime()) + " msec");
 ```
 
 ## Especificaciones

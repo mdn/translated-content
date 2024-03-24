@@ -36,7 +36,7 @@ obj.dispatchEvent(dogFound);
 // 콘솔에 "cat"과 "dog"가 기록됨
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

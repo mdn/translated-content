@@ -2,46 +2,50 @@
 title: Array.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
 l10n:
-  sourceCommit: 968e6f1f3b6f977a09e116a0ac552459b741eac3
+  sourceCommit: 5c3c25fd4f2fbd7a5f01727a65c2f70d73f1880a
 ---
 
 {{JSRef}}
 
-**`@@iterator`** メソッドは[反復プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)の一部であり、値の列を同期的に反復する方法を定義します。
+**`[@@iterator]()`** は {{jsxref("Array")}} インスタンスのメソッドで、[反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols) を実装しており、[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax) や {{jsxref("Statements/for...of", "for...of")}} ループのような反復可能オブジェクトを期待するほとんどの構文で配列を利用することができます。配列の各インデックスの値を返す[配列イテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)を返します。
 
-{{EmbedInteractiveExample("pages/js/array-iterator.html")}}
+このプロパティの初期値は {{jsxref("Array.prototype.values")}} プロパティの初期値と同じ関数オブジェクトです。
 
-**`@@iterator`** プロパティの初期値は {{jsxref("Array.prototype.values()", "values()")}} プロパティの初期値と同じ関数オブジェクトです。
+{{EmbedInteractiveExample("pages/js/array-prototype-@@iterator.html")}}
 
 ## 構文
 
-```js
-[Symbol.iterator]()
+```js-nolint
+array[Symbol.iterator]()
 ```
+
+### 引数
+
+なし。
 
 ### 返値
 
-{{jsxref("Array.prototype.values()", "values()")}} **イテレーター**によって与えられる初期値です。既定では、 `arr[Symbol.iterator]` を使うと {{jsxref("Array.prototype.values()", "values()")}} を返します。
+{{jsxref("Array.prototype.values()")}} の返値と同じです。これは配列内のすべてのインデックスの値を生成する新しい[反復可能イテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)です。
 
 ## 例
 
-### for...of ループを用いた反復
+### for...of ループを用いた反復処理
+
+このメソッドを直接呼び出す必要はほとんどないことに注意してください。 `@@iterator` メソッドが存在することで、配列を[反復処理可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)にすることができ、 `for...of` ループのような反復処理構文では、自動的にこのメソッドを呼び出して、ループするイテレーターを取得します。
 
 #### HTML
 
 ```html
-<ul id="letterResult">
-</ul>
+<ul id="letterResult"></ul>
 ```
 
 #### JavaScript
 
 ```js
-const arr = ['a', 'b', 'c'];
-const arrIter = arr[Symbol.iterator]();
-const letterResult = document.getElementById('letterResult');
-for (const letter of arrIter) {
-  const li = document.createElement('li');
+const arr = ["a", "b", "c"];
+const letterResult = document.getElementById("letterResult");
+for (const letter of arr) {
+  const li = document.createElement("li");
   li.textContent = letter;
   letterResult.appendChild(li);
 }
@@ -49,12 +53,14 @@ for (const letter of arrIter) {
 
 #### 結果
 
-{{EmbedLiveSample('Iteration_using_for...of_loop')}}
+{{EmbedLiveSample("Iteration_using_for...of_loop", "", "")}}
 
-### 他の反復方法
+### イテレーターを手動で手繰る
+
+返されたイテレーターオブジェクトの `next()` メソッドを手動で呼び出すことで、反復処理を最大限に制御することもできます。
 
 ```js
-const arr = ['a', 'b', 'c', 'd', 'e'];
+const arr = ["a", "b", "c", "d", "e"];
 const arrIter = arr[Symbol.iterator]();
 console.log(arrIter.next().value); // a
 console.log(arrIter.next().value); // b
@@ -63,37 +69,36 @@ console.log(arrIter.next().value); // d
 console.log(arrIter.next().value); // e
 ```
 
-### 括弧表記の使用法
+### 文字列と文字列配列を同じ関数で処理
 
-この構文をドット記法 (`Array.prototype.values()`) よりも優先して使用する場合は、事前にどのようなオブジェクトになるのかが分からない場合です。イテレーターを受け取り、その値を反復処理する関数があるが、そのオブジェクトが \[Iterable].prototype.values メソッドを持っているかどうかわからない場合です。これは [String](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator) オブジェクトのような組み込みオブジェクトや、独自オブジェクトである可能性があります。
+[文字列](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator)と配列はどちらもイテレータープロトコルを実装しているので、汎用関数は両方の入力を同じ方法で処理するように設計することができます。これは、 {{jsxref("Array.prototype.values()")}} を直接呼び出すよりも優れており、入力が配列であるか、少なくともそのようなメソッドを持つオブジェクトであることを要求されます。
 
 ```js
 function logIterable(it) {
-  if (!(Symbol.iterator in it)) {
-    console.log(it, ' is not an iterable object.');
+  if (typeof it[Symbol.iterator] !== "function") {
+    console.log(it, "is not iterable.");
     return;
   }
-
-  const iterator = it[Symbol.iterator]();
-  for (const letter of iterator) {
+  for (const letter of it) {
     console.log(letter);
   }
 }
 
 // Array
-logIterable(['a', 'b', 'c']);
+logIterable(["a", "b", "c"]);
 // a
 // b
 // c
 
-// string
-logIterable('abc');
+// String
+logIterable("abc");
 // a
 // b
 // c
 
+// Number
 logIterable(123);
-// 123 is not an iterable object.
+// 123 is not iterable.
 ```
 
 ## 仕様書
@@ -106,10 +111,13 @@ logIterable(123);
 
 ## 関連情報
 
-- [`core-js` による `Array.prototype[@@iterator]` のポリフィル](https://github.com/zloirock/core-js#ecmascript-array)
+- [`Array.prototype[@@iterator]` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)ガイド
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.keys()")}}
 - {{jsxref("Array.prototype.entries()")}}
-- {{jsxref("Array.prototype.forEach()")}}
-- {{jsxref("Array.prototype.every()")}}
-- {{jsxref("Array.prototype.some()")}}
 - {{jsxref("Array.prototype.values()")}}
+- [`TypedArray.prototype[@@iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator)
+- [`String.prototype[@@iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator)
+- {{jsxref("Symbol.iterator")}}
+- [反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)

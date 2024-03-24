@@ -56,7 +56,7 @@ Math.expm1 =
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Math.expm1")}}
+{{Compat}}
 
 ## 関連情報
 

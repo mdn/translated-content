@@ -156,7 +156,7 @@ Asocia una clave con un valor y tiene los siguientes atributos:
 | [[Enumerable]]   | `Boolean`                    | Si es `true`, la propiedad se enumerará en bucles [`for...in`](/es/docs/Web/JavaScript/Reference/Statements/for...in). Consulta también [Enumerabilidad y posesión de propiedades](/es/docs/Web/JavaScript/Enumerability_and_ownership_of_properties). | `false`              |
 | [[Configurable]] | `Boolean`                    | Si es `false`, la propiedad no se puede eliminar, no se puede cambiar a una propiedad de acceso descriptor y los atributos que no sean [[Value]] y [[Writable]] no se pueden cambiar.                                                                  | `false`              |
 
-**Atributos obsoletos (a partir de ECMAScript 3, renombrado en ECMAScript 5)**
+**Atributos obsoletos (a partir de ECMAScript 3, renombrado en ECMAScript 5).**
 
 | Atributo     | Tipo      | Descripción                                       |
 | ------------ | --------- | ------------------------------------------------- |

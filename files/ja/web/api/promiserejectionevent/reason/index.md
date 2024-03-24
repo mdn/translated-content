@@ -18,7 +18,7 @@ l10n:
 ```js
 window.onunhandledrejection = (e) => {
   console.log(e.reason);
-}
+};
 ```
 
 ## 仕様書

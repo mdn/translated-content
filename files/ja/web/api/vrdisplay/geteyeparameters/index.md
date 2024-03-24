@@ -12,7 +12,7 @@ slug: Web/API/VRDisplay/getEyeParameters
 ## 構文
 
 ```js
-getEyeParameters(whichEye)
+getEyeParameters(whichEye);
 ```
 
 ### 引数
@@ -22,7 +22,7 @@ getEyeParameters(whichEye)
 
 ### 返値
 
- {{domxref("VREyeParameters")}} オブジェクト、または VR コンテンツを表示できない場合（例えば {{domxref("VRDisplayCapabilities.canPresent")}} が `false` を返す場合）は null です。
+{{domxref("VREyeParameters")}} オブジェクト、または VR コンテンツを表示できない場合（例えば {{domxref("VRDisplayCapabilities.canPresent")}} が `false` を返す場合）は null です。
 
 ## 例
 
@@ -40,5 +40,4 @@ getEyeParameters(whichEye)
 
 ## 関連情報
 
-- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — Mozilla VR チームによるデモ、ダウンロード、その他のリソース。
+- [WebVR API](/ja/docs/Web/API/WebVR_API)

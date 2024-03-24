@@ -39,12 +39,12 @@ var foo = {};
 
 // Define a propriedade bar
 
-foo.bar = 'moon';
+foo.bar = "moon";
 console.log(foo.bar); // "moon"
 
 // Teste para ter certeza se bar existe antes de acessa-lo
 
-if (foo.hasOwnProperty('bar')) {
+if (foo.hasOwnProperty("bar")) {
   console.log(foo.bar);
 }
 ```

@@ -7,6 +7,8 @@ slug: Web/CSS/basic-shape/ellipse
 
 **`ellipse()`** は [CSS](/ja/docs/Web/CSS) の関数で、{{cssxref("&lt;basic-shape&gt;")}} [データ型](/ja/docs/Web/CSS/CSS_Types)の一つです。
 
+{{EmbedInteractiveExample("pages/css/function-ellipse.html")}}
+
 ## 構文
 
 ```css

@@ -27,39 +27,34 @@ slug: Web/CSS/display-outside
 
 ## Пример
 
-В следующем примере элементы span (обычно отображаемые как строковые элементы) устанавливаются в `display: block и поэтому разбиваются на новые строки и расширяются, чтобы заполнить их контейнер в строковом измерении.`
+В следующем примере элементы span (обычно отображаемые как строковые элементы) устанавливаются в `display: block` и поэтому разбиваются на новые строки и расширяются, чтобы заполнить их контейнер в строковом измерении.
 
-### `HTML`
+### HTML
 
 ```html
-
-<span>span 1</span>
-<span>span 2</span>
+<span>span 1</span> <span>span 2</span>
 ```
 
-### `CSS`
+### CSS
 
 ```css
-
 span {
-    display: block;
-    border: 1px solid rebeccapurple;
+  display: block;
+  border: 1px solid rebeccapurple;
 }
 ```
 
-### `Result`
+### Result
 
-`{{EmbedLiveSample("Пример", 300, 60)}}`
+{{EmbedLiveSample("Пример", 300, 60)}}
 
 ## Совместимость с браузерами
 
-### `Support of run-in`
+{{Compat}}
 
-`{{Compat("css.properties.display.display-outside", 10)}}`
+## Смотрите также
 
-## `Смотрите также`
-
-- `{{CSSxRef("display")}}`
-- `{{CSSxRef("&lt;display-inside&gt;")}}`
-- [`Block and Inline layout in Normal Flow`](/ru/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
-- [`Formatting Contexts explained`](/ru/docs/Web/CSS/CSS_Flow_Layout/Formatting_Contexts_Explained)
+- {{CSSxRef("display")}}
+- {{CSSxRef("&lt;display-inside&gt;")}}
+- [Block and Inline layout in Normal Flow](/ru/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
+- [Formatting Contexts explained](/ru/docs/Web/CSS/CSS_Flow_Layout/Formatting_Contexts_Explained)

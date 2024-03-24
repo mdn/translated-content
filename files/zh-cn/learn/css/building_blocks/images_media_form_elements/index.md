@@ -10,7 +10,7 @@ slug: Learn/CSS/Building_blocks/Images_media_form_elements
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         计算机基础知识、<a
           href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
@@ -176,9 +176,9 @@ textarea {
 - [Styling HTML Forms](/zh-CN/docs/Learn/HTML/Forms/Styling_HTML_forms)
 - [Advanced Styling for HTML Forms](/zh-CN/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms)
 
-## 测试你的技能
+## 技能测试
 
-我们在本文中介绍了很多内容，但是您记住最重要的内容了么？在继续之前，您可以通过一些其他测试来验证您是否真正学习到了这些知识，参见[技能测试](/zh-CN/docs/Learn/CSS/Building_blocks/Images_tasks)
+我们在本文中介绍了很多内容，但是你记住最重要的内容了么？在继续之前，你可以通过一些其他测试来验证你是否真正学习到了这些知识，参见[技能测试](/zh-CN/docs/Learn/CSS/Building_blocks/Images_tasks)
 
 ## 小结
 

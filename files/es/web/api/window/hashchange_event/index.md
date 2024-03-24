@@ -88,4 +88,3 @@ En [esta página](https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browse
 ## Ver también
 
 - [`popstate`](/es/docs/Mozilla_event_reference/popstate)
-- [WindowEventHandlers.onhashchange](/es/docs/Web/API/WindowEventHandlers/onhashchange)

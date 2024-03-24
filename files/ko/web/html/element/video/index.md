@@ -9,8 +9,6 @@ slug: Web/HTML/Element/video
 
 {{EmbedInteractiveExample("pages/tabbed/video.html", "tabbed-standard")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
-
 위 예제는 `<video>` 요소의 간단한 사용법을 보입니다. `<video>` 또한 {{htmlelement("img")}} 요소와 비슷하게, 표시하고자 하는 미디어로의 경로를 `src` 특성에 제공합니다. 또한 비디오의 너비와 높이, 자동재생과 반복 여부, 브라우저 기본 컨트롤 노출 여부 등 다른 정보도 특성을 통해 지정할 수 있습니다.
 
 `<video></video>` 태그 안의 콘텐츠는 브라우저가 `<video>` 요소를 지원하지 않을 때 보여집니다.
@@ -19,14 +17,14 @@ slug: Web/HTML/Element/video
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
-- {{htmlattrdef("autoplay")}}
+- `autoplay`
   - : 부울 속성(boolean); 해당 속성이 지정된 경우 비디오가 데이터 로드를 완료하기 위해 중지하지 않고 재생할 수 있는 가장 빠른 시점에 재생되기 시작합니다.
     autoplay를 비활성화시킬 때 autoplay="false"는 동작하지 않습니다. `<video>`태그 내부에 autoplay 속성이 존재한다면 비디오가 자동재생 됩니다. autoplay를 비활성화하려면 해당 속성을 완전히 제거해야 합니다.
-- {{htmlattrdef("buffered")}}
+- `buffered`
   - : 미디어의 어느 시간대가 버퍼에 들어 있는지 확인할 수 있는 속성입니다. 이 속성은 {{domxref("TimeRanges")}} 객체를 포함합니다.
-- {{htmlattrdef("controls")}}
+- `controls`
   - : 이 속성이 존재하면, 소리 조절(volume), 동영상 탐색(seek), 일시 정지(pause)/재시작(resume)을 할 수 있는 컨트롤러를 제공합니다.
-- {{htmlattrdef("crossorigin")}}
+- `crossorigin`
 
   - : crossorigin 속성은 CORS를 사용해서 관련 이미지를 패치해야 하는지 여부를 나타냅니다. [CORS-enabled resources](/ko/docs/CORS_Enabled_Image) 는 {{HTMLElement("canvas")}} 요소에서 재사용 될 수 있으며 오염되지 않습니다. 허용되는 값은 다음과 같습니다:
 
@@ -37,15 +35,15 @@ slug: Web/HTML/Element/video
 
     crossorigin이 존재하지 않는 경우, CORS 요청 없이 (즉, `Origin:` HTTP 헤더를 사용 보내지 않고), 리소스를 가져와 {{HTMLElement('canvas')}} 요소에 오염되는 것을 방지합니다. 값을 설정하지 않을 경우 **anonymous**가 사용 됩니다. 추가 정보는 [CORS settings attributes](/ko/docs/HTML/CORS_settings_attributes) 를 참조하십시오.
 
-- {{htmlattrdef("height")}}
+- `height`
   - : 비디오의 출력 영역 높이이며, CSS 픽셀 단위 입니다.
-- {{htmlattrdef("loop")}}
+- `loop`
   - : 부울(boolean) 속성, 이 값이 설정되면, 동영상 재생이 마친 후(동영상의 마지막에 도달하면) 자동으로 처음으로 돌아갑니다.
-- {{htmlattrdef("muted")}}
+- `muted`
   - : 비디오에 포함되어 있는 오디오의 기본 설정을 나타내는 부울 속성입니다. 설정하면 오디오가 나오지 않습니다. 기본 값은 false이며 이는 비디오가 재생되면 오디오도 같이 재생됨을 의미합니다.
-- {{htmlattrdef("played")}}
+- `played`
   - : 재생된 동영상 영역을 나타내는 {{domxref("TimeRanges")}} 객체 입니다.
-- {{htmlattrdef("preload")}}
+- `preload`
 
   - : 이 속성은 저작자가 생각하는 가장 좋은 사용자 경험이 어떠한 것인지 브라우저에 미리 정보를 알려주는 용도록 사용됩니다. 다음 값들 중 하나를 가질 수 있습니다:
 
@@ -60,11 +58,11 @@ slug: Web/HTML/Element/video
     >
     > - 브라우저가 이 속성을 반드시 스팩대로 따라야 하는 것은 아닙니다. 단지 힌트일 뿐입니다.
 
-- {{htmlattrdef("poster")}}
+- `poster`
   - : 사용자가 동영상을 재생하거나 탐색하기 전까지 출력되는 포스터 프레임 주소입니다. 이 속성이 명시되지 않으면, 첫 번째 프레임이 사용 가능하게 될때까지 아무것도 출력되지 않다가, 가능하게 되면 첫 번째 프레임을 포스터 프레임으로 출력합니다.
-- {{htmlattrdef("src")}}
+- `src`
   - : 삽입(embed)할 동영상의 주소(url)입니다. 이 속성은 선택 사항으로, 비디오 블록 내의 {{HTMLElement("source")}} 요소를 사용하여 삽입할 동영상을 명시할 수도 있습니다.
-- {{htmlattrdef("width")}}
+- `width`
   - : 비디오의 출력 영역 너비이며, CSS 픽셀 단위입니다.
 
 ## 이벤트

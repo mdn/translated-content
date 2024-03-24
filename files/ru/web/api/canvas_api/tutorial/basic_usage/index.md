@@ -54,8 +54,8 @@ slug: Web/API/Canvas_API/Tutorial/Basic_usage
 Холст изначально пустой и прозрачный. Первым делом скрипт получает доступ к контексту и отрисовывает его. Элемент {{HTMLElement("canvas")}} имеет [метод](/ru/docs/Web/API/HTMLCanvasElement#Method) `getContext()`, используется для получения контекста визуализации и её функции рисования. `getContext()` принимает один параметр, тип контекста. Для 2D графики, которая охвачена этим руководством будем использовать метку "2d".
 
 ```js
-var canvas = document.getElementById("tutorial");
-var ctx = canvas.getContext("2d");
+const canvas = document.getElementById("tutorial");
+const ctx = canvas.getContext("2d");
 ```
 
 В первой строке скрипта мы получаем узел нашего холста {{HTMLElement("canvas")}}, далее с помощью {{domxref("document.getContext()")}} метода мы присваиваем ему контекст. Имея узел элемента , вы всегда можете получить для рисования контекст при помощи метода `getContext()`.
@@ -65,10 +65,10 @@ var ctx = canvas.getContext("2d");
 Ранее уже упоминалось, что в браузерах, которые не поддерживают {{HTMLElement("canvas")}} отображается запасное содержимое. Но помимо этого, определить, поддерживает ли браузер `canvas`, можно прямо из кода, проверив наличие метода `getContext()`. Код с запасным содержимым, который мы приводили Выше, становится следующим:
 
 ```js
-var canvas = document.getElementById("tutorial");
+const canvas = document.getElementById("tutorial");
 
 if (canvas.getContext) {
-  var ctx = canvas.getContext("2d");
+  const ctx = canvas.getContext("2d");
   // drawing code here
 } else {
   // canvas-unsupported code here
@@ -88,9 +88,9 @@ if (canvas.getContext) {
     <title>Canvas tutorial</title>
     <script type="text/javascript">
       function draw() {
-        var canvas = document.getElementById("tutorial");
+        const canvas = document.getElementById("tutorial");
         if (canvas.getContext) {
-          var ctx = canvas.getContext("2d");
+          const ctx = canvas.getContext("2d");
         }
       }
     </script>
@@ -122,9 +122,9 @@ if (canvas.getContext) {
   <head>
     <script type="application/javascript">
       function draw() {
-        var canvas = document.getElementById("canvas");
+        const canvas = document.getElementById("canvas");
         if (canvas.getContext) {
-          var ctx = canvas.getContext("2d");
+          const ctx = canvas.getContext("2d");
 
           ctx.fillStyle = "rgb(200,0,0)";
           ctx.fillRect(10, 10, 55, 50);

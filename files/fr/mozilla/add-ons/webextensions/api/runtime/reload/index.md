@@ -3,7 +3,7 @@ title: runtime.reload()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/reload
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Recharge une extension.
 

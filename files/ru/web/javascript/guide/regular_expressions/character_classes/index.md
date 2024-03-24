@@ -256,7 +256,8 @@ console.table(randomData.match(regexpFourDigits));
 ### Поиск слов (латинский алфавит), начинающих с A
 
 ```js
-var aliceExcerpt = "I’m sure I’m not Ada,’ she said, ‘for her hair goes in such long ringlets, and mine doesn’t go in ringlets at all.";
+var aliceExcerpt =
+  "I’m sure I’m not Ada,’ she said, ‘for her hair goes in such long ringlets, and mine doesn’t go in ringlets at all.";
 var regexpWordStartingWithA = /\b[aA]\w+/g;
 // \b определяет границу поиска (например, не начинает поиск с середины слова)
 // [aA] определяет букву a или A
@@ -276,12 +277,8 @@ var regexpBMPWord = /([\u0000-\u0019\u0021-\uFFFF])+/gu;
 // BMP goes through U+0000 to U+FFFF but space is U+0020
 
 console.table(nonEnglishText.match(regexpBMPWord));
-[ 'Приключения', 'Алисы', 'в', 'Стране', 'чудес' ]
+["Приключения", "Алисы", "в", "Стране", "чудес"];
 ```
-
-## Совместимость с браузерами
-
-Для информации о совместимости с браузерами, посмотрите [основную таблицу совместимости Regular Expressions](/ru/docs/Web/JavaScript/Guide/Regular_Expressions#Browser_compatibility).
 
 ## Смотрите по теме
 

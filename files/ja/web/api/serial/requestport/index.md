@@ -47,13 +47,16 @@ requestPort(options)
 この例では、`requestPort()` に USB ベンダー ID を入れたフィルターを渡し、ユーザーに提示するデバイスのリストを特定の製造元によって作られた USB デバイスのみに絞り込んでいます。フィルターが省略された場合、ユーザーは利用可能なすべてのポートから選択できます。
 
 ```js
-button.addEventListener('click', () => {
-  const usbVendorId = 0xABCD;
-  navigator.serial.requestPort({ filters: [{ usbVendorId }]}).then((port) => {
-    // `port` に接続する、すなわち利用可能なポートのリストに加えます。
-  }).catch((e) => {
-    // ユーザーがポートを選択しませんでした。
-  });
+button.addEventListener("click", () => {
+  const usbVendorId = 0xabcd;
+  navigator.serial
+    .requestPort({ filters: [{ usbVendorId }] })
+    .then((port) => {
+      // `port` に接続する、すなわち利用可能なポートのリストに加えます。
+    })
+    .catch((e) => {
+      // ユーザーがポートを選択しませんでした。
+    });
 });
 ```
 

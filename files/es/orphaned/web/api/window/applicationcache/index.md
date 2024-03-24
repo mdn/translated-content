@@ -1,6 +1,7 @@
 ---
 title: Window.applicationCache
 slug: orphaned/Web/API/Window/applicationCache
+original_slug: Web/API/Window/applicationCache
 ---
 
 {{APIRef}}{{Deprecated_Header}}{{Non-standard_Header}}{{securecontext_header}}

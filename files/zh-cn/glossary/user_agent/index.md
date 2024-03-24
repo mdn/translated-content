@@ -15,12 +15,16 @@ slug: Glossary/User_agent
 
 典型的用户代理字符串如下所示： `"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:35.0) Gecko/20100101 Firefox/35.0"`.
 
-## 了解更多
-
-### 基础知识
+## 参见
 
 - 在维基百科上的 [User agent](https://en.wikipedia.org/wiki/User_agent)
+- {{domxref("Navigator/userAgent", "NavigatorID.userAgent")}}
+- [使用用户代理检测浏览器](/zh-CN/docs/Web/HTTP/Browser_detection_using_the_user_agent)
+- {{RFC(2616, "", "14.43")}}：`User-Agent` 标头
+- [术语表：](/zh-CN/docs/Glossary)
 
-### 技术参考
+  - {{Glossary("Browser")}}
 
-- 在 RFC 2616 的 [User agent](https://tools.ietf.org/html/rfc2616#section-14.43) 协议头
+- HTTP 标头
+
+  - {{HTTPHeader("User-agent")}}

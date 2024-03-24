@@ -18,10 +18,10 @@ optional chaining은 선언되지 않은 루트 객체에 사용할 수 없지�
 ## 문법
 
 ```js
-    obj?.prop
-    obj?.[expr]
-    arr?.[index]
-    func?.(args)
+obj?.prop;
+obj?.[expr];
+arr?.[index];
+func?.(args);
 ```
 
 ## 설명
@@ -42,13 +42,13 @@ let nestedProp = obj.first && obj.first.second;
 let nestedProp = obj.first?.second;
 ```
 
-`.` 대신에 `?.` 연산자를 사용함으로써, 자바스크립트는 `obj.first.second`에 접근하기 전에 `obj.first`가 `null` 또는 `undefined`가 아니라는 것을 암묵적으로 확인하는 것을 알고 있다. 만약 `obj.first`가 `null` 또는 `undefined`이라면, 그 표현식은 자동으로 단락되어 `undefined`가 반환된다.
+`.` 대신에 `?.` 연산자를 사용함으로써, JavaScript는 `obj.first.second`에 접근하기 전에 `obj.first`가 `null` 또는 `undefined`가 아니라는 것을 암묵적으로 확인하는 것을 알고 있다. 만약 `obj.first`가 `null` 또는 `undefined`이라면, 그 표현식은 자동으로 단락되어 `undefined`가 반환된다.
 
 이는 임시 변수가 실제로 생성되지 않는다는 점을 제외하고 다음과 동일하다.
 
 ```js
 let temp = obj.first;
-let nestedProp = ((temp === null || temp === undefined) ? undefined : temp.second);
+let nestedProp = temp === null || temp === undefined ? undefined : temp.second;
 ```
 
 ### 함수의 호출과 Optional chaining
@@ -74,9 +74,9 @@ let result = someInterface.customMethod?.();
 function doSomething(onContent, onError) {
   try {
     // ... do something with the data
-  }
-  catch (err) {
-    if (onError) { // Testing if onError really exists
+  } catch (err) {
+    if (onError) {
+      // Testing if onError really exists
       onError(err.message);
     }
   }
@@ -87,9 +87,8 @@ function doSomething(onContent, onError) {
 // Using optional chaining with function calls
 function doSomething(onContent, onError) {
   try {
-   // ... do something with the data
-  }
-  catch (err) {
+    // ... do something with the data
+  } catch (err) {
     onError?.(err.message); // no exception if onError is undefined
   }
 }
@@ -100,7 +99,7 @@ function doSomething(onContent, onError) {
 optional chaining 연산자를 속성에 표현식으로 접근할 때 대괄호 표기법([the bracket notation of the property accessor](/ko/docs/Web/JavaScript/Reference/Operators/Property_Accessors#bracket_notation))을 사용할 수 있다:
 
 ```js
-let nestedProp = obj?.['prop' + 'Name'];
+let nestedProp = obj?.["prop" + "Name"];
 ```
 
 ### Optional chaining은 할당자 왼쪽에서 유효하지 않습니다
@@ -124,7 +123,7 @@ let arrayItem = arr?.[42];
 
 ```js
 let myMap = new Map();
-myMap.set("foo", {name: "baz", desc: "inga"});
+myMap.set("foo", { name: "baz", desc: "inga" });
 
 let nameBar = myMap.get("bar")?.name;
 ```
@@ -150,8 +149,8 @@ let customer = {
   name: "Carl",
   details: {
     age: 82,
-    location: "Paradise Falls" // detailed address is unknown
-  }
+    location: "Paradise Falls", // detailed address is unknown
+  },
 };
 let customerCity = customer.details?.address?.city;
 
@@ -166,7 +165,7 @@ let duration = vacations.trip?.getTime?.();
 ```js
 let customer = {
   name: "Carl",
-  details: { age: 82 }
+  details: { age: 82 },
 };
 const customerCity = customer?.city ?? "Unknown city";
 console.log(customerCity); // Unknown city

@@ -3,7 +3,7 @@ title: Function() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Function/Function
 ---
 
-{{JSRef("Objetos_globales", "Function")}}
+{{JSRef}}
 
 El constructor **`Function`** crea un nuevo **objeto** `Function`. Llamar al constructor directamente puede crear funciones dinámicamente, pero tiene problemas de seguridad y de rendimiento similares (pero mucho menos importantes) para {{jsxref("eval")}}. Sin embargo, a diferencia de eval, el constructor `Function` crea funciones que solo se ejecutan en el ámbito global.
 
@@ -42,7 +42,7 @@ El siguiente código crea un objeto `Function` que toma dos argumentos.
 // El ejemplo se puede ejecutar directamente en tu consola JavaScript
 
 // Crea una función que toma dos argumentos y devuelve la suma de esos argumentos
-const adder = new Function('a', 'b', 'return a + b');
+const adder = new Function("a", "b", "return a + b");
 
 // Llama a la función
 adder(2, 6);

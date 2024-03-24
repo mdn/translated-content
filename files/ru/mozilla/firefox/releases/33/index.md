@@ -13,10 +13,10 @@ _Нет изменений._
 
 ### CSS
 
-- Реализовано **@counter-style** правило({{bug(966166)}}).
-- Больше нет необходимости использовать префикс **-moz-ethiopic-numeric**({{bug(985825)}}).
-- Добавлена поддержка **disclosure-open/disclosure-closed** стилей счётчиков({{bug(982355)}}).
-- CSS-анимация с пустыми keyframes свойствами обрабатывает события по умолчанию({{bug(1004377)}}).
+- Реализовано **@counter-style** правило([Firefox bug 966166](https://bugzil.la/966166)).
+- Больше нет необходимости использовать префикс **-moz-ethiopic-numeric**([Firefox bug 985825](https://bugzil.la/985825)).
+- Добавлена поддержка **disclosure-open/disclosure-closed** стилей счётчиков([Firefox bug 982355](https://bugzil.la/982355)).
+- CSS-анимация с пустыми keyframes свойствами обрабатывает события по умолчанию([Firefox bug 1004377](https://bugzil.la/1004377)).
 
 ### HTML
 
@@ -24,16 +24,16 @@ _Нет изменений._
 
 ### JavaScript
 
-- Удалён нестандартный метод {{jsxref("Number.toInteger()")}} ({{bug(1022396)}}).
-- Методы {{jsxref("Map.prototype.set()")}}, {{jsxref("WeakMap.prototype.set()")}} and {{jsxref("Set.prototype.add()")}} можно использовать последовательно, больше не возвращают `undefined` в место этого возвращают объект. ({{bug(1031632)}}).
-- Добавлена поддержка типа данных "Symbol" из стандарта ECMAScript 6 ({{bug(645416)}}):
+- Удалён нестандартный метод {{jsxref("Number.toInteger()")}} ([Firefox bug 1022396](https://bugzil.la/1022396)).
+- Методы {{jsxref("Map.prototype.set()")}}, {{jsxref("WeakMap.prototype.set()")}} and {{jsxref("Set.prototype.add()")}} можно использовать последовательно, больше не возвращают `undefined` в место этого возвращают объект. ([Firefox bug 1031632](https://bugzil.la/1031632)).
+- Добавлена поддержка типа данных "Symbol" из стандарта ECMAScript 6 ([Firefox bug 645416](https://bugzil.la/645416)):
 
   - {{jsxref("Symbol")}}
   - {{jsxref("Symbol.for()")}}
   - {{jsxref("Symbol.keyFor()")}}
   - {{jsxref("Object.getOwnPropertySymbols()")}}
 
-- Параметры по умолчанию инициализированные до инициализации функции или в теле функции не могут быть использованы в качестве параметров по умолчанию ({{bug(1022962)}}).
+- Параметры по умолчанию инициализированные до инициализации функции или в теле функции не могут быть использованы в качестве параметров по умолчанию ([Firefox bug 1022962](https://bugzil.la/1022962)).
 
 ### Interfaces/APIs/DOM
 
@@ -41,7 +41,7 @@ _Нет изменений._
 
 ### MathML
 
-- Используются [Open Type MATH](https://wiki.mozilla.org/MathML:Open_Type_MATH_Table#Implementation_Status) для задания констант fractions, stacks, radicals и скриптов ({{bug(961365)}}).
+- Используются [Open Type MATH](https://wiki.mozilla.org/MathML:Open_Type_MATH_Table#Implementation_Status) для задания констант fractions, stacks, radicals и скриптов ([Firefox bug 961365](https://bugzil.la/961365)).
 
 ### SVG
 

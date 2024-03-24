@@ -11,6 +11,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 >
 > この機能は言語の一部であるため、その機能の実装による負荷は (理念上は) エンジンの開発者によります。エンジンの開発者がこの問題に対処するまでの間、性能が気になる場合は、オブジェクトの `[[Prototype]]` を変更することは避けるべきです。代わりに、 {{jsxref("Object.create()")}} を使用して必要な `[[Prototype]]` をもつオブジェクトを生成してください。
 
+{{EmbedInteractiveExample("pages/js/object-setprototypeof.html")}}
+
 ## 構文
 
 ```
@@ -193,7 +195,7 @@ if (!Object.setPrototypeOf) {
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Object.setPrototypeOf")}}
+{{Compat}}
 
 ## 関連情報
 

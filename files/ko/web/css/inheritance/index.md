@@ -14,7 +14,9 @@ MDN 내 각 [CSS 속성(property) 정의](/ko/docs/Web/CSS/CSS_Reference) 페이
 상속되는 속성의 대표적인 예는 {{ Cssxref("color") }} 속성입니다. 주어진 스타일 규칙:
 
 ```css
-p { color: green }
+p {
+  color: green;
+}
 ```
 
 과 마크업:
@@ -32,13 +34,15 @@ p { color: green }
 상속되지 않는 속성의 대표적인 예는 {{ Cssxref("border") }} 속성입니다. 주어진 스타일 규칙:
 
 ```css
- p { border: medium solid }
+p {
+  border: medium solid;
+}
 ```
 
 과 마크업:
 
 ```html
-  <p>This paragraph has <em>emphasized text</em> in it.</p>
+<p>This paragraph has <em>emphasized text</em> in it.</p>
 ```
 
 "emphasized text"는 테두리가 없습니다({{ Cssxref("border-style") }}의 초기값이 `none`이기 때문에).

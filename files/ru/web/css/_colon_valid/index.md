@@ -2,6 +2,7 @@
 title: ":valid"
 slug: Web/CSS/:valid
 ---
+
 {{ CSSRef() }}
 
 ## Описание
@@ -21,7 +22,7 @@ CSS [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы) `:valid
   <br />
   <br />
   <label>Введите адрес эл. почты:</label>
-  <input type="email" required/>
+  <input type="email" required />
 </form>
 ```
 
@@ -56,7 +57,7 @@ input:required {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

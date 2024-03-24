@@ -1,6 +1,7 @@
 ---
 title: String.prototype.toSource()
 slug: conflicting/Web/JavaScript/Reference/Global_Objects/String/toString
+original_slug: Web/JavaScript/Reference/Global_Objects/String/toSource
 ---
 
 {{JSRef}} {{non-standard_header}}
@@ -33,14 +34,6 @@ function String() {
 Para instancias de {{jsxref("String")}} o cadenas literales, `toSource()` devuelve una cadena representando el código fuente.
 
 Este método usualmente es llamado internamente por JavaScript y no explícitamente en código.
-
-## Especificaciones
-
-{{Specifications}}
-
-## Compatibilidad con navegadores
-
-{{Compat}}
 
 ## Véase también
 

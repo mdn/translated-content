@@ -33,9 +33,15 @@ slug: Web/SVG/Attribute/font-weight
 ### css
 
 ```css
-p.normal {font-weight:normal;}
-p.thick {font-weight:bold;}
-p.thicker {font-weight:900;}
+p.normal {
+  font-weight: normal;
+}
+p.thick {
+  font-weight: bold;
+}
+p.thicker {
+  font-weight: 900;
+}
 ```
 
 ### html
@@ -53,7 +59,7 @@ p.thicker {font-weight:900;}
 
 - [Text content elements](/en/SVG/Element#Text_content_elements)
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

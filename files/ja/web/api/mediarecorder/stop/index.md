@@ -40,7 +40,7 @@ stop()
 stop.onclick = () => {
   mediaRecorder.stop();
   console.log("レコーダー停止、データ使用可能");
-}
+};
 ```
 
 ## 仕様書

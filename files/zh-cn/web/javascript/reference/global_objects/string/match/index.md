@@ -124,7 +124,7 @@ const str1 =
   "NaN 表示不是一个数字。在 JavaScript 中 Infinity 包括了 -Infinity 和 +Infinity。";
 const str2 = "我的爷爷已经 65 岁了，我的奶奶已经 63 岁";
 const str3 = "该合同被声明为 null 且 void。";
-str1.match("数字"); // “数字” 是一个字符串。返回 ["数字"]
+str1.match("数字"); // “数字”是一个字符串。返回 ["数字"]
 str1.match(NaN); // NaN 的类型是数字。返回 ["NaN"]
 str1.match(Infinity); // Infinity 的类型是数字。返回 ["Infinity"]
 str1.match(+Infinity); // 返回 ["Infinity"]

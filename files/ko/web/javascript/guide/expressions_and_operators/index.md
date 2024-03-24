@@ -84,7 +84,7 @@ obj.x = 3;
 console.log(obj.x); // 3 출력.
 console.log(obj); // { x: 3 } 출력.
 
-const key = 'y';
+const key = "y";
 obj[key] = 5;
 console.log(obj[key]); // 5 출력.
 console.log(obj); // { x: 3, y: 5 } 출력.
@@ -109,11 +109,11 @@ console.log(val); // 0 출력.
 [구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) 구문은 JavaScript 표현식 중 하나로, 객체나 배열을 생성할 때와 비슷한 구문으로 사용해서 어떤 객체나 배열에서 데이터를 추출할 수 있습니다.
 
 ```js
-var foo = ['one', 'two', 'three'];
+var foo = ["one", "two", "three"];
 
 // 구조 분해 없음
-var one   = foo[0];
-var two   = foo[1];
+var one = foo[0];
+var two = foo[1];
 var three = foo[2];
 
 // 구조 분해 사용
@@ -174,11 +174,11 @@ console.log(f(0, (x = f()), 0));
 
 ```js
 function f() {
-  console.log('F!');
+  console.log("F!");
   return 2;
 }
 function g() {
-  console.log('G!');
+  console.log("G!");
   return 3;
 }
 let x, y;
@@ -187,9 +187,9 @@ let x, y;
 다음 세 예제를 확인해 보세요.
 
 ```js
-y = x = f()
-y = [ f(), x = g() ]
-x[f()] = g()
+y = x = f();
+y = [f(), (x = g())];
+x[f()] = g();
 ```
 
 ##### 평가 예제 1
@@ -243,7 +243,7 @@ x[f()] = g()
 특히 [`const`][], [`let`][], [`var`][] 명령문에 변수 체인을 사용하면 종종 제대로 동작하지 않고, 가장 바깥 (왼쪽) 변수만 선언되며 나머지는 `const`/`let`/`var`가 선언하지 않을 것입니다. 예를 들어,
 
 ```js
-let z = y = x = f();
+let z = (y = x = f());
 ```
 
 위 명령문은 얼핏 봤을 땐 `x`, `y`, `z` 세 변수를 선언하는 모습처럼 보입니다. 하지만 사실 위 코드는 변수 `z`만 선언합니다. 나머지 두 `y`와 `x`는 ([엄격 모드][/ko/docs/web/javascript/reference/strict_mode]에선) 존재하지 않는 변수를 향하는 유효하지 않은 참조거나, 심지어 ([느슨한 모드](/ko/docs/Glossary/Sloppy_mode)에선) `x`와 `y`를 암묵적인 [전역 변수][/ko/docs/glossary/global_variable]로 선언할 수도 있습니다
@@ -652,33 +652,33 @@ JavaScript는 표준 산술 연산자(`+`, `-`, `*`, `/`) 외에도 아래의 �
 다음 코드는 `&&` (논리 AND) 연산자의 예제입니다.
 
 ```js
-var a1 = true && true;      // t && t는 true 반환
-var a2 = true && false;     // t && f는 false 반환
-var a3 = false && true;     // f && t는 false 반환
-var a4 = false && (3 == 4); // f && f는 false 반환
-var a5 = 'Cat' && 'Dog';    // t && t는 Dog 반환
-var a6 = false && 'Cat';    // f && t는 false 반환
-var a7 = 'Cat' && false;    // t && f는 false 반환
+var a1 = true && true; // t && t는 true 반환
+var a2 = true && false; // t && f는 false 반환
+var a3 = false && true; // f && t는 false 반환
+var a4 = false && 3 == 4; // f && f는 false 반환
+var a5 = "Cat" && "Dog"; // t && t는 Dog 반환
+var a6 = false && "Cat"; // f && t는 false 반환
+var a7 = "Cat" && false; // t && f는 false 반환
 ```
 
 다음 코드는 `||` (논리 OR) 연산자의 예제입니다.
 
 ```js
-var o1 = true || true;      // t || t는 true 반환
-var o2 = false || true;     // f || t는 true 반환
-var o3 = true || false;     // t || f는 true 반환
-var o4 = false || (3 == 4); // f || f는 false 반환
-var o5 = 'Cat' || 'Dog';    // t || t는 Cat 반환
-var o6 = false || 'Cat';    // f || t는 Cat 반환
-var o7 = 'Cat' || false;    // t || f는 Cat 반환
+var o1 = true || true; // t || t는 true 반환
+var o2 = false || true; // f || t는 true 반환
+var o3 = true || false; // t || f는 true 반환
+var o4 = false || 3 == 4; // f || f는 false 반환
+var o5 = "Cat" || "Dog"; // t || t는 Cat 반환
+var o6 = false || "Cat"; // f || t는 Cat 반환
+var o7 = "Cat" || false; // t || f는 Cat 반환
 ```
 
 다음 코드는 `!` (논리 NOT) 연산자의 예제입니다.
 
 ```js
-var n1 = !true;  // !t는 false 반환
+var n1 = !true; // !t는 false 반환
 var n2 = !false; // !f는 true 반환
-var n3 = !'Cat'; // !t는 false 반환
+var n3 = !"Cat"; // !t는 false 반환
 ```
 
 #### 단락 평가
@@ -705,7 +705,7 @@ var n3 = !'Cat'; // !t는 false 반환
 예를 들어,
 
 ```js
-console.log('나만의 ' + '문자열'); // 콘솔에 "나만의 문자열"을 기록
+console.log("나만의 " + "문자열"); // 콘솔에 "나만의 문자열"을 기록
 ```
 
 단축 할당 연산자인 `+=` 또한 문자열을 연결결할 때 사용할 수 있습니다.
@@ -713,8 +713,8 @@ console.log('나만의 ' + '문자열'); // 콘솔에 "나만의 문자열"을 �
 예를 들어,
 
 ```js
-var mystring = '한';
-mystring += '글'; // "한글"로 평가되며, mystring에 "한글"을 할당함
+var mystring = "한";
+mystring += "글"; // "한글"로 평가되며, mystring에 "한글"을 할당함
 ```
 
 ### 조건 (삼항) 연산자
@@ -731,7 +731,7 @@ condition ? val1 : val2;
 에들 들어,
 
 ```js
-var status = age >= 18 ? '성인' : '미성년자';
+var status = age >= 18 ? "성인" : "미성년자";
 ```
 
 위의 명령문은 `age`가 18 이상이라면 `status` 변수에 "성인"을 할당하고, 그렇지 않으면
@@ -748,8 +748,8 @@ var x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 var a = [x, x, x, x, x];
 
 for (var i = 0, j = 9; i <= j; i++, j--);
-//                                   ^
-  console.log('a[' + i + '][' + j + ']= ' + a[i][j]);
+//                                  ^
+console.log("a[" + i + "][" + j + "]= " + a[i][j]);
 ```
 
 ### 단항 연산자
@@ -776,7 +776,7 @@ delete objectName[index];
 ```js
 delete Math.PI; // false 반환 (설정 불가한 속성 삭제 불가)
 
-const myObj = {h: 4};
+const myObj = { h: 4 };
 delete myobj.h; // true 반환 (사용자 정의 속성 삭제 가능)
 ```
 
@@ -792,9 +792,9 @@ delete myobj.h; // true 반환 (사용자 정의 속성 삭제 가능)
 [`typeof` 연산자](/ko/docs/Web/JavaScript/Reference/Operators/typeof)는 다음과 같은 방법으로
 사용합니다.
 
-```js
-typeof operand
-typeof (operand)
+```js-nolint
+typeof operand;
+typeof (operand);
 ```
 
 `typeof` 연산자는 평가 전의 피연산자 타입을 나타내는 문자열을 반환합니다. `operand`는 문자열,
@@ -803,21 +803,21 @@ typeof (operand)
 다음과 같은 변수를 가정하겠습니다.
 
 ```js
-var myFun = new Function('5 + 2');
-var shape = 'round';
+var myFun = new Function("5 + 2");
+var shape = "round";
 var size = 1;
-var foo = ['Apple', 'Mango', 'Orange'];
+var foo = ["Apple", "Mango", "Orange"];
 var today = new Date();
 ```
 
 `typeof` 연산자는 위의 변수들에 대해서 다음과 같은 값을 반환합니다.
 
 ```js
-typeof myFun;     // "function" 반환
-typeof shape;     // "string" 반환
-typeof size;      // "number" 반환
-typeof foo;       // "object" 반환
-typeof today;     // "object" 반환
+typeof myFun; // "function" 반환
+typeof shape; // "string" 반환
+typeof size; // "number" 반환
+typeof foo; // "object" 반환
+typeof today; // "object" 반환
 typeof dontExist; // "undefined" 반환
 ```
 
@@ -831,44 +831,44 @@ typeof null; // "object" 반환
 숫자와 문자열에서는 다음과 같은 결과를 반환합니다.
 
 ```js
-typeof 62;            // "number" 반환
-typeof 'Hello world'; // "string" 반환
+typeof 62; // "number" 반환
+typeof "Hello world"; // "string" 반환
 ```
 
 객체의 속성에 사용하면 속성이 갖고 있는 값의 타입을 반환합니다.
 
 ```js
 typeof document.lastModified; // "string" 반환
-typeof window.length;         // "number" 반환
-typeof Math.LN2;              // "number" 반환
+typeof window.length; // "number" 반환
+typeof Math.LN2; // "number" 반환
 ```
 
 메서드와 함수에 대해선 다음과 같은 결과를 반환합니다.
 
 ```js
-typeof blur;        // "function" 반환
-typeof eval;        // "function" 반환
-typeof parseInt;    // "function" 반환
+typeof blur; // "function" 반환
+typeof eval; // "function" 반환
+typeof parseInt; // "function" 반환
 typeof shape.split; // "function" 반환
 ```
 
 사전 정의된 객체에 대해선 다음과 같은 결과를 반환합니다.
 
 ```js
-typeof Date;     // "function" 반환
+typeof Date; // "function" 반환
 typeof Function; // "function" 반환
-typeof Math;     // "object" 반환
-typeof Option;   // "function" 반환
-typeof String;   // "function" 반환
+typeof Math; // "object" 반환
+typeof Option; // "function" 반환
+typeof String; // "function" 반환
 ```
 
 #### `void`
 
 [`void` 연산자](/ko/docs/Web/JavaScript/Reference/Operators/void)는 다음과 같이 사용합니다.
 
-```js
-void (expression)
-void expression
+```js-nolint
+void (expression);
+void expression;
 ```
 
 `void` 연산자는 표현식을 평가할 때 값을 반환하지 않도록 지정합니다. `expression`은 평가할
@@ -884,7 +884,7 @@ JavaScript 표현식입니다. 주위 괄호는 선택 사항이지만, 사용�
 존재할 경우 `true`를 반환합니다. 구문은 다음과 같습니다.
 
 ```js
-propNameOrNumber in objectName
+propNameOrNumber in objectName;
 ```
 
 `propNameOrNumber`는 속성이나 배열 인덱스를 나타내는 문자열, 숫자, 심볼 표현식이며
@@ -894,23 +894,23 @@ propNameOrNumber in objectName
 
 ```js
 // 배열
-var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
-0 in trees;        // true 반환
-3 in trees;        // true 반환
-6 in trees;        // false 반환
-'bay' in trees;    // false 반환 (인덱스에 위치한 값이 아니라
-                   // 인덱스 자체를 지정해야 함)
-'length' in trees; // true 반환 (length는 Array의 속성임)
+var trees = ["redwood", "bay", "cedar", "oak", "maple"];
+0 in trees; // true 반환
+3 in trees; // true 반환
+6 in trees; // false 반환
+"bay" in trees; // false 반환 (인덱스에 위치한 값이 아니라
+// 인덱스 자체를 지정해야 함)
+"length" in trees; // true 반환 (length는 Array의 속성임)
 
 // 내장 객체
-'PI' in Math;         // true 반환
-var myString = new String('coral');
-'length' in myString; // true 반환
+"PI" in Math; // true 반환
+var myString = new String("coral");
+"length" in myString; // true 반환
 
 // 사용자 정의 객체
-var mycar = { make: 'Honda', model: 'Accord', year: 1998 };
-'make' in mycar;  // true 반환
-'model' in mycar; // true 반환
+var mycar = { make: "Honda", model: "Accord", year: 1998 };
+"make" in mycar; // true 반환
+"model" in mycar; // true 반환
 ```
 
 #### `instanceof`
@@ -919,7 +919,7 @@ var mycar = { make: 'Honda', model: 'Accord', year: 1998 };
 지정한 객체 타입에 속하면 `true`를 반환합니다.
 
 ```js
-objectName instanceof objectType
+objectName instanceof objectType;
 ```
 
 `objectName`은 `objectType`과 비교할 객체의 이름이고, `objectType`은
@@ -946,25 +946,25 @@ if (theDay instanceof Date) {
 
 아래 표는 우선순위가 높은 순서에서 낮은 순서로 연산자를 나열합니다.
 
-| 연산자 유형          | 개별 연산자                                                                               |
-| -------------------- | ----------------------------------------------------------------------------------------- |
-| 맴버 접근            | `.` `[]`                                                                                  |
-| 인스턴스 호출/생성   | `()` `new`                                                                                |
-| 증감                 | `!` `~` `-` `+` `++` `--` `typeof` `void` `delete`                                        |
-| 거듭제곱             | `**`                                                                                      |
-| 곱하기/나누기        | `*` `/` `%`                                                                               |
-| 더하기/빼기          | `+` `-`                                                                                   |
-| 비트 시프트          | `<<` `>>` `>>>`                                                                           |
-| 관계                 | `<` `<=` `>` `>=` `in` `instanceof`                                                       |
-| 동등/일치            | `==` `!=` `===` `!==`                                                                     |
-| 비트 AND             | `&`                                                                                       |
-| 비트 XOR             | `^`                                                                                       |
-| 비트 OR              | `\|`                                                                                      |
-| 논리 AND             | `&&`                                                                                      |
-| 논리 OR              | `\|\|`                                                                                    |
-| 조건                 | `?:`                                                                                      |
-| 할당                 | `=` `+=` `-=` `**=` `*=` `/=` `%=` `<<=` `>>=` `>>>=` `&=` `^=` `\|=` `&&=` `\|\|=` `??=` |
-| 쉼표                 | `,`                                                                                       |
+| 연산자 유형        | 개별 연산자                                                                               |
+| ------------------ | ----------------------------------------------------------------------------------------- |
+| 맴버 접근          | `.` `[]`                                                                                  |
+| 인스턴스 호출/생성 | `()` `new`                                                                                |
+| 증감               | `!` `~` `-` `+` `++` `--` `typeof` `void` `delete`                                        |
+| 거듭제곱           | `**`                                                                                      |
+| 곱하기/나누기      | `*` `/` `%`                                                                               |
+| 더하기/빼기        | `+` `-`                                                                                   |
+| 비트 시프트        | `<<` `>>` `>>>`                                                                           |
+| 관계               | `<` `<=` `>` `>=` `in` `instanceof`                                                       |
+| 동등/일치          | `==` `!=` `===` `!==`                                                                     |
+| 비트 AND           | `&`                                                                                       |
+| 비트 XOR           | `^`                                                                                       |
+| 비트 OR            | `\|`                                                                                      |
+| 논리 AND           | `&&`                                                                                      |
+| 논리 OR            | `\|\|`                                                                                    |
+| 조건               | `?:`                                                                                      |
+| 할당               | `=` `+=` `-=` `**=` `*=` `/=` `%=` `<<=` `>>=` `>>>=` `&=` `^=` `\|=` `&&=` `\|\|=` `??=` |
+| 쉼표               | `,`                                                                                       |
 
 각각의 연산자로 향하는 링크를 포함한 더 자세한 표는
 [JavaScript 참고서](/ko/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table)에서 찾을 수
@@ -1003,8 +1003,8 @@ JavaScript의 키워드와 일반 표현식입니다.
 사용하세요.
 
 ```js
-this['propertyName']
-this.propertyName
+this["propertyName"];
+this.propertyName;
 ```
 
 최대와 최소 값을 받아서, 어떤 객체의 `value` 속성 유효성을 검증하는 `validate`라는 함수를
@@ -1012,8 +1012,7 @@ this.propertyName
 
 ```js
 function validate(obj, lowval, hival) {
-  if ((obj.value < lowval) || (obj.value > hival))
-    console.log('잘못된 값!');
+  if (obj.value < lowval || obj.value > hival) console.log("잘못된 값!");
 }
 ```
 
@@ -1021,7 +1020,7 @@ function validate(obj, lowval, hival) {
 
 ```html
 <p>18과 99 사이의 수를 입력:</p>
-<input type="text" name="age" size="3" onchange="validate(this, 18, 99);">
+<input type="text" name="age" size="3" onchange="validate(this, 18, 99);" />
 ```
 
 #### 그룹 연산자
@@ -1029,13 +1028,13 @@ function validate(obj, lowval, hival) {
 그룹연산자 `()`는 표현식 평가의 우선순위를 조절합니다. 예를 들어, 곱하기와 나누기보다 더하기와 빼기 연산을
 먼저 수행할 수 있습니다.
 
-```js
+```js-nolint
 var a = 1;
 var b = 2;
 var c = 3;
 
 // 기본 우선순위에서는
-a + b * c;   // 7
+a + b * c; // 7
 // 이런 순서로 평가함
 a + (b * c); // 7
 

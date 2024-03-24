@@ -138,7 +138,7 @@ if (user.authenticated) {
 
 JavaScript 还具有内置的 API，用于生成 `null` 原型对象，特别是那些将对象用作临时键值对集合的 API。例如：
 
-- {{jsxref("Array.prototype.group()")}} 方法的返回值
+- {{jsxref("Object.groupBy()")}} 方法的返回值
 - {{jsxref("RegExp.prototype.exec()")}} 方法返回结果中的 `groups` 和 `indices.groups` 属性
 - [`Array.prototype[@@unscopables]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/@@unscopables) 属性（所有 `@@unscopables` 对象原型都应该为 `null`）
 - [`import.meta`](/zh-CN/docs/Web/JavaScript/Reference/Operators/import.meta) 对象

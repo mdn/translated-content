@@ -2,6 +2,7 @@
 title: Promise.all()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/all
 ---
+
 {{JSRef}}
 
 ## Общее описание
@@ -42,7 +43,7 @@ var p3 = new Promise((resolve, reject) => {
   setTimeout(resolve, 100, "foo");
 });
 
-Promise.all([p1, p2, p3]).then(values => {
+Promise.all([p1, p2, p3]).then((values) => {
   console.log(values);
 });
 
@@ -68,15 +69,18 @@ var p4 = new Promise((resolve, reject) => {
   setTimeout(resolve, 4000, "four");
 });
 var p5 = new Promise((resolve, reject) => {
-// Этот промис прервёт Promise.all
+  // Этот промис прервёт Promise.all
   reject("reject");
 });
 
-Promise.all([p1, p2, p3, p4, p5]).then(value => {
-  console.log(value);
-}, reason => {
-  console.log(reason)
-});
+Promise.all([p1, p2, p3, p4, p5]).then(
+  (value) => {
+    console.log(value);
+  },
+  (reason) => {
+    console.log(reason);
+  },
+);
 
 //Выведет:
 //"reject"

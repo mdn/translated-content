@@ -39,8 +39,8 @@ Los elementos del array son convertidos a strings usando sus métodos `toLocaleS
 Siempre mostrar la moneda para los strings y números en el array `precios`:
 
 ```js
-var precios = ['$7', 500, 8123, 12];
-precios.toLocaleString('es-AR', { style: 'currency', currency: 'ARS' });
+var precios = ["$7", 500, 8123, 12];
+precios.toLocaleString("es-AR", { style: "currency", currency: "ARS" });
 
 // "$7, $500, $8.123, $12"
 ```
@@ -52,8 +52,8 @@ Para más ejemplos, ver también {{jsxref("Intl")}}, {{jsxref("NumberFormat")}},
 ```js
 // https://tc39.github.io/ecma402/#sup-array.prototype.tolocalestring
 if (!Array.prototype.toLocaleString) {
-  Object.defineProperty(Array.prototype, 'toLocaleString', {
-    value: function(locales, options) {
+  Object.defineProperty(Array.prototype, "toLocaleString", {
+    value: function (locales, options) {
       // 1. Let O be ? ToObject(this value).
       if (this == null) {
         throw new TypeError('"this" is null or not defined');
@@ -69,11 +69,11 @@ if (!Array.prototype.toLocaleString) {
       //    host environment's current locale (this is
       //    derived in an implementation-defined way).
       // NOTE: In this case, we will use a comma
-      var separator = ',';
+      var separator = ",";
 
       // 4. If len is zero, return the empty String.
       if (len === 0) {
-        return '';
+        return "";
       }
 
       // 5. Let firstElement be ? Get(A, "0").
@@ -89,8 +89,10 @@ if (!Array.prototype.toLocaleString) {
       //        « locales, options »
       //       )
       //     )
-      var r = firstElement == null ?
-        '' : firstElement.toLocaleString(locales, options);
+      var r =
+        firstElement == null
+          ? ""
+          : firstElement.toLocaleString(locales, options);
 
       // 8. Let k be 1.
       var k = 1;
@@ -115,8 +117,10 @@ if (!Array.prototype.toLocaleString) {
         //        « locales, options »
         //       )
         //     )
-        r = nextElement == null ?
-          '' : nextElement.toLocaleString(locales, options);
+        r =
+          nextElement == null
+            ? ""
+            : nextElement.toLocaleString(locales, options);
 
         // e. Let R be a String value produced by
         //   concatenating S and R.
@@ -128,7 +132,7 @@ if (!Array.prototype.toLocaleString) {
 
       // 10. Return R.
       return r;
-    }
+    },
   });
 }
 ```

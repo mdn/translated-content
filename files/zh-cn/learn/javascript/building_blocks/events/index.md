@@ -105,7 +105,7 @@ HTML {{HTMLElement("button")}} 元素将在用户点击按钮时触发一个事�
 - 字符串 `"click"`，表示我们要监听点击事件。按钮可以触发很多其他的事件，比如当用户将鼠标移到按钮上时（[`"mouseover"`](/zh-CN/docs/Web/API/Element/mouseover_event) 事件），或者当用户按下一个键并且按钮被聚焦时（[`"keydown"`](/zh-CN/docs/Web/API/Element/keydown_event) 事件）。
 - 当事件发生时所调用的函数。在我们的例子中，该函数生成一个随机的 RGB 颜色，并将页面 [`<body>`](/zh-CN/docs/Web/CSS/background-color) 的 [`background-color`](/zh-CN/docs/Web/HTML/Element/body) 设置为该颜色。
 
-把处理函数作为一个单独的命名函数也是可以的，像这样：
+把处理函数作为一个单独的具名函数也是可以的，像这样：
 
 ```js
 const btn = document.querySelector("button");
@@ -734,7 +734,7 @@ container.addEventListener("click", (event) => {
 
 在这个学习阶段，你不需要了解其他此类环境的情况；我们只是想让你明白，在不同的编程环境中，事件会有所不同。
 
-## 测试你的技能！
+## 技能测试！
 
 你已经到了本文的结尾，但你能记住最重要的信息吗？在你继续前进之前，要验证你是否记住了这些信息，请前往[技能测试：事件](/zh-CN/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Events)页面进行测试。
 

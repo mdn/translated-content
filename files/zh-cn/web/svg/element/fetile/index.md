@@ -29,7 +29,7 @@ slug: Web/SVG/Element/feTile
 
 ## DOM 接口
 
-该元素实现了[`SVGFETileElement`](/zh-CN/DOM/SVGFETileElement)接口。
+该元素实现了 [`SVGFETileElement`](/zh-CN/DOM/SVGFETileElement) 接口。
 
 ## 参见
 

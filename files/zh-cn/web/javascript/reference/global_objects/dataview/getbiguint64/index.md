@@ -5,55 +5,56 @@ slug: Web/JavaScript/Reference/Global_Objects/DataView/getBigUint64
 
 {{JSRef}}
 
-**`getBigUint64()`** 方法，从 {{jsxref("DataView")}} 的指定偏移量位置获取一个无符号 64 位整数 (unsigned long long)。
+{{jsxref("DataView")}} 的 **`getBigUint64()`** 方法，从 `DataView` 的指定的字节偏移量位置读取 8 个字节，并将其解析为一个无符号 64 位整数（unsigned long long）。
 
 {{EmbedInteractiveExample("pages/js/dataview-getbiguint64.html")}}
 
 ## 语法
 
-```plain
-dataview.getBigUint64(byteOffset [, littleEndian])
+```js-nolint
+getBigUint64(byteOffset)
+getBigUint64(byteOffset, littleEndian)
 ```
 
 ### 参数
 
 - byteOffset
-  - : 偏移量，按**字节**偏移，从 DataView 读取一个整数
-- littleEndian
-  - : {{optional_inline}} 指出 64 位整数以 {{Glossary("Endianness", "little- or big-endian")}} 类型存储。如果值为 `false` or `undefined`, 读取一个大端数值。
+  - : 表示从视图的开始位置到要读取数据位置的偏移量，以字节为单位。
+- `littleEndian` {{optional_inline}}
+  - : 指示 64 位整数是以{{Glossary("Endianness", "小端还是大端")}}格式存储。如果值为 `false` 或 `undefined`，则以大端格式读取。
 
 ### 返回值
 
-A {{jsxref("BigInt")}}.
+一个 {{jsxref("BigInt")}}。
 
 ### 异常
 
 - {{jsxref("RangeError")}}
-  - : Thrown if the `byteOffset` is set such that it would read beyond the end of the view.
+  - : 如果 `byteOffset` 设置导致读取时超出了视图的末尾位置，则抛出该错误。
 
-## Description
+## 描述
 
-There is no alignment constraint; multi-byte values may be fetched from any offset.
+没有对齐约束，可以从任意偏移量获取多字节值。
 
-## Examples
+## 示例
 
-### Using the `getBigUint64` method
+### 使用 `getBigUint64` 方法
 
 ```js
-var buffer = new ArrayBuffer(8);
-var dataview = new DataView(buffer);
+const buffer = new ArrayBuffer(8);
+const dataview = new DataView(buffer);
 dataview.getBigUint64(0); // 0n
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
 - {{jsxref("DataView")}}
 - {{jsxref("ArrayBuffer")}}

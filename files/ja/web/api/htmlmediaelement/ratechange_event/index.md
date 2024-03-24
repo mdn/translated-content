@@ -16,9 +16,9 @@ l10n:
 このイベントを {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('ratechange', (event) => {});
+addEventListener("ratechange", (event) => {});
 
-onratechange = (event) => { };
+onratechange = (event) => {};
 ```
 
 ## イベント型
@@ -32,20 +32,20 @@ onratechange = (event) => { };
 `addEventListener()` を使用する場合:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('ratechange', (event) => {
-  console.log('再生レートが変わりました。');
+video.addEventListener("ratechange", (event) => {
+  console.log("再生レートが変わりました。");
 });
 ```
 
 `onratechange` イベントハンドラープロパティを使用する場合:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.onratechange = (event) => {
-  console.log('再生レートが変わりました。');
+  console.log("再生レートが変わりました。");
 };
 ```
 

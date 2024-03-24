@@ -29,12 +29,12 @@ JavaScript のオブジェクトに解決する {{jsxref("Promise")}} です。�
 ## 例
 
 ```js
-const obj = {hello: 'world'};
+const obj = { hello: "world" };
 
-const request = new Request('/myEndpoint', {
-  method: 'POST',
-  body: JSON.stringify(obj)
- });
+const request = new Request("/myEndpoint", {
+  method: "POST",
+  body: JSON.stringify(obj),
+});
 
 request.json().then((data) => {
   // do something with the data sent in the request

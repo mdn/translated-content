@@ -3,7 +3,7 @@ title: Object.prototype.__proto__
 slug: Web/JavaScript/Reference/Global_Objects/Object/proto
 ---
 
-{{JSRef("Global_Objects", "Object")}}
+{{JSRef}}
 
 > **Предупреждение:** Изменение прототипа `[[Prototype]]` объекта является, по самой природе оптимизации доступа к свойствам в современных движках JavaScript, очень медленной операцией, это справедливо для **_любого_** браузера и движка JavaScript. Изменение прототипов очень тонко и обширно влияет на производительность, причём это влияние не ограничивается просто временем для операции присваивания `obj.__proto__ = ...`, оно может распространяться на **_любой_** код, который имеет доступ к **_любому_** объекту, чей прототип `[[Prototype]]` был изменён. Если вы заботитесь о производительности, вы никогда не должны изменять прототип `[[Prototype]]` объекта. Вместо этого создайте объект с нужным прототипом `[[Prototype]]`, с помощью метода {{jsxref("Object.create()")}}.
 
@@ -20,7 +20,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/proto
 ## Синтаксис
 
 ```js
-var shape = {}, circle = new Circle();
+var shape = {},
+  circle = new Circle();
 
 // Установка прототипа объекта
 shape.__proto__ = circle;
@@ -52,8 +53,12 @@ console.log(noProto.__proto__); // 17
 console.log(Object.getPrototypeOf(noProto)); // null
 
 var protoHidden = {};
-Object.defineProperty(protoHidden, '__proto__',
-                      { value: 42, writable: true, configurable: true, enumerable: true });
+Object.defineProperty(protoHidden, "__proto__", {
+  value: 42,
+  writable: true,
+  configurable: true,
+  enumerable: true,
+});
 
 console.log(protoHidden.__proto__); // 42
 console.log(Object.getPrototypeOf(protoHidden) === Object.prototype); // true
@@ -103,9 +108,16 @@ obj.__proto__ = {}; // выкинет TypeError
 ```js
 var b = {};
 
-Object.prototype.__proto__ =
-  Object.create(null, // [[Prototype]]
-                { hi: { value: function() { alert('hi'); } } });
+Object.prototype.__proto__ = Object.create(
+  null, // [[Prototype]]
+  {
+    hi: {
+      value: function () {
+        alert("hi");
+      },
+    },
+  },
+);
 
 b.hi();
 ```

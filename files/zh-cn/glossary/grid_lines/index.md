@@ -156,7 +156,7 @@ slug: Glossary/Grid_Lines
 
 {{ EmbedLiveSample('命名网格线', '500', '250') }}
 
-## 了解更多
+## 参见
 
 ### 属性参考
 

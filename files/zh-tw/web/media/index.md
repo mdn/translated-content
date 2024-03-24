@@ -18,7 +18,7 @@ slug: Web/Media
 
 ### APIs
 
-- [Media Capture and Streams API](/zh-TW/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API](/zh-TW/docs/Web/API/Media_Capture_and_Streams_API)
   - : 這是一個參考資料，關於串流，記錄，管控媒體資料，無論是本地的，透過網路的。這些包括本地的攝錄機及來捕流視訊，音效或圖像的麥克風。
 - [Web Audio API](/zh-TW/docs/Web/API/Web_Audio_API)
   - : 你可以藉由此 API 產出、篩選及操作即時的聲音或是預先錄製好的材料，然後將音效送至`<audio>`元件、影音串流或是儲存起來。

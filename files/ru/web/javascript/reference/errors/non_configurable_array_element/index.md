@@ -2,6 +2,7 @@
 title: "TypeError: can't delete non-configurable array element(Тип ошибки:не удаётся удалить настраиваемый элемент массива)"
 slug: Web/JavaScript/Reference/Errors/Non_configurable_array_element
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Сообщения
@@ -31,8 +32,8 @@ The {{jsxref("Object.defineProperty()")}} создаёт не настраива
 
 ```js example-bad
 var arr = [];
-Object.defineProperty(arr, 0, {value: 0});
-Object.defineProperty(arr, 1, {value: "1"});
+Object.defineProperty(arr, 0, { value: 0 });
+Object.defineProperty(arr, 1, { value: "1" });
 
 arr.length = 1;
 // TypeError: не удаётся удалить не настраиваемый элемент массива
@@ -42,8 +43,8 @@ arr.length = 1;
 
 ```js example-good
 var arr = [];
-Object.defineProperty(arr, 0, {value: 0, configurable: true});
-Object.defineProperty(arr, 1, {value: "1", configurable: true});
+Object.defineProperty(arr, 0, { value: 0, configurable: true });
+Object.defineProperty(arr, 1, { value: "1", configurable: true });
 
 arr.length = 1;
 ```
@@ -53,7 +54,7 @@ arr.length = 1;
 The {{jsxref("Object.seal()")}} функция помечает все существующие элементы как не настраиваемые.
 
 ```js example-bad
-var arr = [1,2,3];
+var arr = [1, 2, 3];
 Object.seal(arr);
 
 arr.length = 1;
@@ -63,7 +64,7 @@ arr.length = 1;
 Вам или нужно извлечь {{jsxref("Object.seal()")}} позвоните или сделайте копию. В случае копирования сокращение копии массива не изменяет длину исходного массива.
 
 ```js example-good
-var arr = [1,2,3];
+var arr = [1, 2, 3];
 Object.seal(arr);
 
 // Скопируйте исходный массив, чтобы сократить копию

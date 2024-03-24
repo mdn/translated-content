@@ -19,13 +19,13 @@ l10n:
 
 インターネット越しに二つのデバイス間で WebRTC 接続を確立するためには **シグナリングサーバ** が必要になります。シグナリングサーバの仕事は、出来得る限り最小のプライベートな情報の露出で、ピア同士がお互いを発見し接続するよう仲介者となることです。どうやってこのサーバを作れるのでしょうか、また、シグナリングのプロセスはどのように行われるのでしょうか？
 
-まずシグナリングサーバ自体が必要です。 WebRTC はシグナリング情報に特定の伝送プロトコルを指定していません。 [WebSocket](/en-US/docs/Web/API/WebSockets_API) や {{domxref("XMLHttpRequest")}} から伝書鳩だって構いません。好きなものを使用して二つのピア間でシグナリング情報を交換できます。
+まずシグナリングサーバ自体が必要です。 WebRTC はシグナリング情報に特定の伝送プロトコルを指定していません。 [WebSocket](/ja/docs/Web/API/WebSockets_API) や {{domxref("XMLHttpRequest")}} から伝書鳩だって構いません。好きなものを使用して二つのピア間でシグナリング情報を交換できます。
 
 サーバはシグナリング情報の中身を理解したり解釈したりする必要はない、と把握しておくことが重要です。 {{Glossary("SDP")}} ですが、これもそれほど大事な情報ではありません。シグナリングサーバを通過するメッセージの内容は、事実上、ブラックボックスです。重要なのは、 {{Glossary("ICE")}} サブシステムであるピアに対して、もう一方のピアにシグナリング情報を送信するよう指示する場合です。もしピアがシグナリング情報を送信すると、他方のピアはその情報を受信して独自の ICE サブシステムへと渡す方法を知ることが出来ます。 シグナリングサーバの役割は、こうした情報を仲介することだけです。情報の中身は内容はサーバにとってまったく関係ありません。
 
 ### Readying the chat server for signaling
 
-Our [chat server](https://github.com/mdn/samples-server/tree/master/s/websocket-chat) uses the [WebSocket API](/en-US/docs/Web/API/WebSockets_API) to send information as {{Glossary("JSON")}} strings between each client and the server. The server supports several message types to handle tasks, such as registering new users, setting usernames, and sending public chat messages.
+Our [chat server](https://github.com/mdn/samples-server/tree/master/s/websocket-chat) uses the [WebSocket API](/ja/docs/Web/API/WebSockets_API) to send information as {{Glossary("JSON")}} strings between each client and the server. The server supports several message types to handle tasks, such as registering new users, setting usernames, and sending public chat messages.
 
 To allow the server to support signaling and ICE negotiation, we need to update the code. We'll have to allow directing messages to one specific user instead of broadcasting to all connected users, and ensure unrecognized message types are passed through and delivered, without the server needing to know what they are. This lets us send signaling messages using this same server, instead of needing a separate server.
 
@@ -82,7 +82,7 @@ When starting the signaling process, an **offer** is created by the user initiat
 - `sdp`
   - : The SDP (Session Description Protocol) string describing the local end of the connection from the perspective of the sender (or the remote end of the connection from the receiver's point of view).
 
-At this point, the two participants know which [codecs](/en-US/docs/Web/Media/Formats/WebRTC_codecs) and [codec parameters](/en-US/docs/Web/Media/Formats/codecs_parameter) are to be used for this call. They still don't know how to transmit the media data itself though. This is where {{Glossary('ICE', 'Interactive Connectivity Establishment (ICE)')}} comes in.
+At this point, the two participants know which [codecs](/ja/docs/Web/Media/Formats/WebRTC_codecs) and [codec parameters](/ja/docs/Web/Media/Formats/codecs_parameter) are to be used for this call. They still don't know how to transmit the media data itself though. This is where {{Glossary('ICE', 'Interactive Connectivity Establishment (ICE)')}} comes in.
 
 ### Exchanging ICE candidates
 
@@ -105,13 +105,13 @@ Each ICE candidate is sent to the other peer by sending a JSON message of type `
 
 Each ICE message suggests a communication protocol (TCP or UDP), IP address, port number, connection type (for example, whether the specified IP is the peer itself or a relay server), along with other information needed to link the two computers together. This includes NAT or other networking complexity.
 
-> **Note:** The important thing to note is this: the only thing your code is responsible for during ICE negotiation is accepting outgoing candidates from the ICE layer and sending them across the signaling connection to the other peer when your {{domxref("RTCPeerConnection.icecandidate_event", "onicecandidate")}} handler is executed, and receiving ICE candidate messages from the signaling server (when the `"new-ice-candidate"` message is received) and delivering them to your ICE layer by calling {{domxref("RTCPeerConnection.addIceCandidate()")}}. That's it.
+> **メモ:** The important thing to note is this: the only thing your code is responsible for during ICE negotiation is accepting outgoing candidates from the ICE layer and sending them across the signaling connection to the other peer when your {{domxref("RTCPeerConnection.icecandidate_event", "onicecandidate")}} handler is executed, and receiving ICE candidate messages from the signaling server (when the `"new-ice-candidate"` message is received) and delivering them to your ICE layer by calling {{domxref("RTCPeerConnection.addIceCandidate()")}}. That's it.
 >
 > The contents of the SDP are irrelevant to you in essentially all cases. Avoid the temptation to try to make it more complicated than that until you really know what you're doing. That way lies madness.
 
 All your signaling server now needs to do is send the messages it's asked to. Your workflow may also demand login/authentication functionality, but such details will vary.
 
-> **Note:** The {{domxref("RTCPeerConnection.icecandidate_event", "onicecandidate")}} Event and {{domxref("RTCPeerConnection.createAnswer", "createAnswer()")}} Promise are both async calls which are handled separately. Be sure that your signaling does not change order! For example {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} with the server's ice candidates must be called after setting the answer with {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}}.
+> **メモ:** The {{domxref("RTCPeerConnection.icecandidate_event", "onicecandidate")}} Event and {{domxref("RTCPeerConnection.createAnswer", "createAnswer()")}} Promise are both async calls which are handled separately. Be sure that your signaling does not change order! For example {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} with the server's ice candidates must be called after setting the answer with {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}}.
 
 ### Signaling transaction flow
 
@@ -126,7 +126,7 @@ The signaling process involves this exchange of messages among a number of point
 
 Imagine that Naomi and Priya are engaged in a discussion using the chat software, and Naomi decides to open a video call between the two. Here's the expected sequence of events:
 
-[![Diagram of the signaling process](webrtc_-_signaling_diagram.svg)](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling/webrtc_-_signaling_diagram.svg)
+[![Diagram of the signaling process](webrtc_-_signaling_diagram.svg)](/ja/docs/Web/API/WebRTC_API/Signaling_and_video_calling/webrtc_-_signaling_diagram.svg)
 
 We'll see this detailed more over the course of this article.
 
@@ -138,7 +138,7 @@ When each peer's ICE layer begins to send candidates, it enters into an exchange
 
 Each side sends candidates to the other as it receives them from their local ICE layer; there is no taking turns or batching of candidates. As soon as the two peers agree upon one candidate that they can both use to exchange the media, media begins to flow. Each peer continues to send candidates until it runs out of options, even after the media has already begun to flow. This is done in hopes of identifying even better options than the one initially selected.
 
-If conditions change (for example, the network connection deteriorates), one or both peers might suggest switching to a lower-bandwidth media resolution, or to an alternative codec. That triggers a new exchange of candidates, after which another media format and/or codec change may take place. In the guide [Codecs used by WebRTC](/en-US/docs/Web/Media/Formats/WebRTC_codecs) you can learn more about the codecs which WebRTC requires browsers to support, which additional codecs are supported by which browsers, and how to choose the best codecs to use.
+If conditions change (for example, the network connection deteriorates), one or both peers might suggest switching to a lower-bandwidth media resolution, or to an alternative codec. That triggers a new exchange of candidates, after which another media format and/or codec change may take place. In the guide [Codecs used by WebRTC](/ja/docs/Web/Media/Formats/WebRTC_codecs) you can learn more about the codecs which WebRTC requires browsers to support, which additional codecs are supported by which browsers, and how to choose the best codecs to use.
 
 Optionally, see {{RFC(8445, "Interactive Connectivity Establishment")}}, [section 2.3 ("Negotiating Candidate Pairs and Concluding ICE")](https://datatracker.ietf.org/doc/html/rfc5245#section-2.3) if you want greater understanding of how this process is completed inside the ICE layer. You should note that candidates are exchanged and media starts to flow as soon as the ICE layer is satisfied. This is all taken care of behind the scenes. Our role is to send the candidates, back and forth, through the signaling server.
 
@@ -174,7 +174,7 @@ We'll divide this code into functional areas to more easily describe how it work
 
 #### Sending messages to the signaling server
 
-Throughout our code, we call `sendToServer()` in order to send messages to the signaling server. This function uses the [WebSocket](/en-US/docs/Web/API/WebSockets_API) connection to do its work:
+Throughout our code, we call `sendToServer()` in order to send messages to the signaling server. This function uses the [WebSocket](/ja/docs/Web/API/WebSockets_API) connection to do its work:
 
 ```js
 function sendToServer(msg) {
@@ -210,7 +210,7 @@ function handleUserlistMsg(msg) {
 
 After getting a reference to the {{HTMLElement("ul")}} which contains the list of user names into the variable `listElem`, we empty the list by removing each of its child elements.
 
-> **Note:** Obviously, it would be more efficient to update the list by adding and removing individual users instead of rebuilding the whole list every time it changes, but this is good enough for the purposes of this example.
+> **メモ:** Obviously, it would be more efficient to update the list by adding and removing individual users instead of rebuilding the whole list every time it changes, but this is good enough for the purposes of this example.
 
 Then we iterate over the array of user names using {{jsxref("Array.forEach", "forEach()")}}. For each name, we create a new {{HTMLElement("li")}} element, then create a new text node containing the user name using {{domxref("Document.createTextNode", "createTextNode()")}}. That text node is added as a child of the `<li>` element. Next, we set a handler for the {{domxref("Element/click_event", "click")}} event on the list item, that clicking on a user name calls our `invite()` method, which we'll look at in the next section.
 
@@ -234,7 +234,7 @@ function invite(evt) {
 
     if (clickedUsername === myUsername) {
       alert(
-        "I'm afraid I can't let you talk to yourself. That would be weird."
+        "I'm afraid I can't let you talk to yourself. That would be weird.",
       );
       return;
     }
@@ -261,7 +261,7 @@ Then we copy the name of the user we're calling into the variable `targetUsernam
 
 Once the `RTCPeerConnection` has been created, we request access to the user's camera and microphone by calling {{domxref("MediaDevices.getUserMedia()")}}, which is exposed to us through the {{domxref("MediaDevices.getUserMedia")}} property. When this succeeds, fulfilling the returned promise, our `then` handler is executed. It receives, as input, a {{domxref("MediaStream")}} object representing the stream with audio from the user's microphone and video from their webcam.
 
-> **Note:** We could restrict the set of permitted media inputs to a specific device or set of devices by calling {{domxref("MediaDevices.enumerateDevices", "navigator.mediaDevices.enumerateDevices()")}} to get a list of devices, filtering the resulting list based on our desired criteria, then using the selected devices' {{domxref("MediaTrackConstraints.deviceId", "deviceId")}} values in the `deviceId` field of the `mediaConstraints` object passed into `getUserMedia()`. In practice, this is rarely if ever necessary, since most of that work is done for you by `getUserMedia()`.
+> **メモ:** We could restrict the set of permitted media inputs to a specific device or set of devices by calling {{domxref("MediaDevices.enumerateDevices", "navigator.mediaDevices.enumerateDevices()")}} to get a list of devices, filtering the resulting list based on our desired criteria, then using the selected devices' {{domxref("MediaTrackConstraints.deviceId", "deviceId")}} values in the `deviceId` field of the `mediaConstraints` object passed into `getUserMedia()`. In practice, this is rarely if ever necessary, since most of that work is done for you by `getUserMedia()`.
 
 We attach the incoming stream to the local preview {{HTMLElement("video")}} element by setting the element's {{domxref("HTMLMediaElement.srcObject", "srcObject")}} property. Since the element is configured to automatically play incoming video, the stream begins playing in our local preview box.
 
@@ -283,7 +283,7 @@ function handleGetUserMediaError(e) {
     case "NotFoundError":
       alert(
         "Unable to open your call because no camera and/or microphone" +
-          "were found."
+          "were found.",
       );
       break;
     case "SecurityError":
@@ -332,7 +332,7 @@ function createPeerConnection() {
 
 When using the {{domxref("RTCPeerConnection.RTCPeerConnection", "RTCPeerConnection()")}} constructor, we will specify an object providing configuration parameters for the connection. We use only one of these in this example: `iceServers`. This is an array of objects describing STUN and/or TURN servers for the {{Glossary("ICE")}} layer to use when attempting to establish a route between the caller and the callee. These servers are used to determine the best route and protocols to use when communicating between the peers, even if they're behind a firewall or using {{Glossary("NAT")}}.
 
-> **Note:** You should always use STUN/TURN servers which you own, or which you have specific authorization to use. This example is using a known public STUN server but abusing these is bad form.
+> **メモ:** You should always use STUN/TURN servers which you own, or which you have specific authorization to use. This example is using a known public STUN server but abusing these is bad form.
 
 Each object in `iceServers` contains at least a `urls` field providing URLs at which the specified server can be reached. It may also provide `username` and `credential` values to allow authentication to take place, if needed.
 
@@ -380,7 +380,7 @@ To start the negotiation process, we need to create and send an SDP offer to the
 
 When `createOffer()` succeeds (fulfilling the promise), we pass the created offer information into {{domxref("RTCPeerConnection.setLocalDescription", "myPeerConnection.setLocalDescription()")}}, which configures the connection and media configuration state for the caller's end of the connection.
 
-> **Note:** Technically speaking, the string returned by `createOffer()` is an {{RFC(3264)}} offer.
+> **メモ:** Technically speaking, the string returned by `createOffer()` is an {{RFC(3264)}} offer.
 
 We know the description is valid, and has been set, when the promise returned by `setLocalDescription()` is fulfilled. This is when we send our offer to the other peer by creating a new `"video-offer"` message containing the local description (now the same as the offer), then sending it through our signaling server to the callee. The offer has the following members:
 
@@ -449,7 +449,7 @@ Once the answer has been created using {{domxref("RTCPeerConnection.createAnswer
 
 Any errors are caught and passed to `handleGetUserMediaError()`, described in [Handling getUserMedia() errors](#handling_getusermedia_errors).
 
-> **Note:** As is the case with the caller, once the `setLocalDescription()` fulfillment handler has run, the browser begins firing {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} events that the callee must handle, one for each candidate that needs to be transmitted to the remote peer.
+> **メモ:** As is the case with the caller, once the `setLocalDescription()` fulfillment handler has run, the browser begins firing {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} events that the callee must handle, one for each candidate that needs to be transmitted to the remote peer.
 
 ##### Sending ICE candidates
 
@@ -480,11 +480,11 @@ This builds an object containing the candidate, then sends it to the other peer 
 
 The format of this message (as is the case with everything you do when handling signaling) is entirely up to you, depending on your needs; you can provide other information as required.
 
-> **Note:** It's important to keep in mind that the {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} event is **not** sent when ICE candidates arrive from the other end of the call. Instead, they're sent by your own end of the call so that you can take on the job of transmitting the data over whatever channel you choose. This can be confusing when you're new to WebRTC.
+> **メモ:** It's important to keep in mind that the {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} event is **not** sent when ICE candidates arrive from the other end of the call. Instead, they're sent by your own end of the call so that you can take on the job of transmitting the data over whatever channel you choose. This can be confusing when you're new to WebRTC.
 
 ##### Receiving ICE candidates
 
-The signaling server delivers each ICE candidate to the destination peer using whatever method it chooses; in our example this is as JSON objects, with a `type` property containing the string `"new-ice-candidate"`. Our `handleNewICECandidateMsg()` function is called by our main [WebSocket](/en-US/docs/Web/API/WebSockets_API) incoming message code to handle these messages:
+The signaling server delivers each ICE candidate to the destination peer using whatever method it chooses; in our example this is as JSON objects, with a `type` property containing the string `"new-ice-candidate"`. Our `handleNewICECandidateMsg()` function is called by our main [WebSocket](/ja/docs/Web/API/WebSockets_API) incoming message code to handle these messages:
 
 ```js
 function handleNewICECandidateMsg(msg) {
@@ -632,7 +632,7 @@ function handleICEConnectionStateChangeEvent(event) {
 
 Here, we apply our `closeVideoCall()` function when the ICE connection state changes to `"closed"` or `"failed"`. This handles shutting down our end of the connection so that we're ready start or accept a call once again.
 
-> **Note:** We don't watch the `disconnected` signaling state here as it can indicate temporary issues and may go back to a `connected` state after some time. Watching it would close the video call on any temporary network issue.
+> **メモ:** We don't watch the `disconnected` signaling state here as it can indicate temporary issues and may go back to a `connected` state after some time. Watching it would close the video call on any temporary network issue.
 
 ##### ICE signaling state
 
@@ -648,7 +648,7 @@ function handleSignalingStateChangeEvent(event) {
 }
 ```
 
-> **Note:** The `closed` signaling state has been deprecated in favor of the `closed` {{domxref("RTCPeerConnection.iceConnectionState", "iceConnectionState")}}. We are watching for it here to add a bit of backward compatibility.
+> **メモ:** The `closed` signaling state has been deprecated in favor of the `closed` {{domxref("RTCPeerConnection.iceConnectionState", "iceConnectionState")}}. We are watching for it here to add a bit of backward compatibility.
 
 ##### ICE gathering state
 
@@ -667,12 +667,12 @@ You can now [try out this example on Glitch](https://webrtc-from-chat.glitch.me/
 
 Another obvious improvement would be to add a "ringing" feature, so that instead of just asking the user for permission to use the camera and microphone, a "User X is calling. Would you like to answer?" prompt appears first.
 
-## See also
+## 関連情報
 
-- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
-- [Web media technologies](/en-US/docs/Web/Media)
-- [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
-- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
-- [Media Capabilities API](/en-US/docs/Web/API/Media_Capabilities_API)
-- [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API)
-- The [Perfect Negotiation](/en-US/docs/Web/API/WebRTC_API/Perfect_negotiation) pattern
+- [WebRTC API](/ja/docs/Web/API/WebRTC_API)
+- [Web media technologies](/ja/docs/Web/Media)
+- [Guide to media types and formats on the web](/ja/docs/Web/Media/Formats)
+- [Media Capture and Streams API](/ja/docs/Web/API/Media_Capture_and_Streams_API)
+- [Media Capabilities API](/ja/docs/Web/API/Media_Capabilities_API)
+- [MediaStream Recording API](/ja/docs/Web/API/MediaStream_Recording_API)
+- The [Perfect Negotiation](/ja/docs/Web/API/WebRTC_API/Perfect_negotiation) pattern

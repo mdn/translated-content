@@ -2,7 +2,7 @@
 title: Array.prototype.pop()
 slug: Web/JavaScript/Reference/Global_Objects/Array/pop
 l10n:
-  sourceCommit: 968e6f1f3b6f977a09e116a0ac552459b741eac3
+  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
 {{JSRef}}
@@ -13,9 +13,13 @@ l10n:
 
 ## 構文
 
+```js-nolint
+pop()
 ```
-arrName.pop()
-```
+
+### 引数
+
+なし。
 
 ### 返値
 
@@ -25,11 +29,11 @@ arrName.pop()
 
 `pop()` メソッドは配列の最後の要素を取り除き、呼び出し元にその値を返します。 `pop()` を空の配列に対して呼び出すと、 {{jsxref("undefined")}} を返します。
 
-{{jsxref("Array.prototype.shift()")}} は `pop` と同様の動作をしますが、配列の最初の要素に適用されます。
+{{jsxref("Array.prototype.shift()")}} は `pop()` と同様の動作をしますが、配列の最初の要素に適用されます。
 
 `pop()` は変更を行うメソッドです。 `this` の長さと内容を変更します。 `this` の値は変更せずに、最後の要素を取り除いた新しい配列を返したい場合は、代わりに [`arr.slice(0, -1)`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) を使用することができます。
 
-`pop` は意図的に汎用性を持たせています。つまり、このメソッドは配列に類似したオブジェクトに対して呼び出すことができます。オブジェクトが、連続したゼロベースの数値プロパティの最後のものを反映した `length` プロパティを含んでいない場合、意味のある動作をしないことがあります。
+`pop()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#汎用的な配列メソッド)です。これは `this` 値に `length` プロパティと整数キーのプロパティがあることだけを期待します。文字列も配列風ですが、文字列は不変であるため、このメソッドを適用するのは適切ではありません。
 
 ## 例
 
@@ -38,7 +42,7 @@ arrName.pop()
 以下のコードは、4 つの要素を含んだ配列 `myFish` を生成し、その後その最後の要素を取り除き、変数に代入しています。
 
 ```js
-const myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+const myFish = ["angel", "clown", "mandarin", "sturgeon"];
 
 const popped = myFish.pop();
 
@@ -47,22 +51,26 @@ console.log(myFish); // ['angel', 'clown', 'mandarin' ]
 console.log(popped); // 'sturgeon'
 ```
 
-### 配列風のオブジェクトでの apply() や call () の使用
+### 配列以外のオブジェクトに対する pop() の呼び出し
 
-以下のコードは、4 つの要素と長さの値を含む配列風の `myFish` オブジェクトを作成し、最後の要素を削除して長さの値をデクリメントします。
+`pop()` メソッドは `this` の `length` プロパティを読み込みます。[正規化された長さ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#length_プロパティの正規化)が 0 の場合、`length` は再び `0` に設定されます（以前は負の値または `undefined` であった可能性があります）。そうでない場合は、`length - 1` のプロパティが返され、[削除](/ja/docs/Web/JavaScript/Reference/Operators/delete)されます。
 
 ```js
-const myFish = {
-  0: 'angel',
-  1: 'clown',
-  2: 'mandarin',
-  3: 'sturgeon',
-  length: 4,
+const arrayLike = {
+  length: 3,
+  unrelated: "foo",
+  2: 4,
 };
+console.log(Array.prototype.pop.call(arrayLike));
+// 4
+console.log(arrayLike);
+// { length: 2, unrelated: 'foo' }
 
-const popped = Array.prototype.pop.call(myFish); // same syntax when using apply()
-console.log(myFish); // { 0: 'angel', 1: 'clown', 2: 'mandarin', length: 3 }
-console.log(popped); // 'sturgeon'
+const plainObj = {};
+// length プロパティがないので、長さは 0
+Array.prototype.pop.call(plainObj);
+console.log(plainObj);
+// { length: 0 }
 ```
 
 ### 配列風のオブジェクトの使用
@@ -89,13 +97,13 @@ const collection = {
     // push が返す値を返します。つまり、
     // 取り除かれた要素です。
     return [].pop.call(this);
-  }
-}
+  },
+};
 
 collection.addElements(10, 20, 30);
-console.log(collection.length);  // 3
+console.log(collection.length); // 3
 collection.removeElement();
-console.log(collection.length);  // 2
+console.log(collection.length); // 2
 ```
 
 ## 仕様書
@@ -108,6 +116,7 @@ console.log(collection.length);  // 2
 
 ## 関連情報
 
+- [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
 - {{jsxref("Array.prototype.push()")}}
 - {{jsxref("Array.prototype.shift()")}}
 - {{jsxref("Array.prototype.unshift()")}}

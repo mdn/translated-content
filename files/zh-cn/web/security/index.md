@@ -3,7 +3,7 @@ title: Web 安全
 slug: Web/Security
 ---
 
-确保你的 Web 站点或 Web 应用安全是十分重要的，即使是代码中很小的 bug 也可能导致隐私信息被泄露，黑客会尝试偷窃数据。这些文档提供信息帮助您使代码更安全。此处列出的面向 Web 安全的文章提供的信息可以帮助你保护站点及其代码免受攻击和数据窃取。
+确保你的 Web 站点或 Web 应用安全是十分重要的，即使是代码中很小的 bug 也可能导致隐私信息被泄露，黑客会尝试偷窃数据。这些文档提供信息帮助你使代码更安全。此处列出的面向 Web 安全的文章提供的信息可以帮助你保护站点及其代码免受攻击和数据窃取。
 
 ## 内容安全
 
@@ -80,7 +80,7 @@ slug: Web/Security
 
 - {{Glossary("Block cipher mode of operation")}}
 - {{Glossary("Certificate authority","认证机构")}}
-- {{Glossary("challenge", "挑战-响应认证")}}
+- {{Glossary("challenge", "挑战—响应认证")}}
 - {{Glossary("Cipher","密码")}}
 - {{Glossary("Cipher suite","密码套件")}}
 - {{Glossary("Ciphertext","密文")}}

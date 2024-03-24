@@ -33,8 +33,8 @@ slug: Web/API/Window/paste_event
 ## 例
 
 ```js
-document.addEventListener('paste', (event) => {
-    console.log('paste action initiated')
+document.addEventListener("paste", (event) => {
+  console.log("paste action initiated");
 });
 ```
 

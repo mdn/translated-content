@@ -22,7 +22,9 @@ mask-position: 10% 8em;
 
 /* 複数の値 */
 mask-position: top right;
-mask-position: 1rem 1rem, center;
+mask-position:
+  1rem 1rem,
+  center;
 
 /* グローバル値 */
 mask-position: inherit;

@@ -47,7 +47,7 @@ locallibrary/         # Website folder
 
 ## 創建專案項目
 
-首先打開命令提示符/終端，確保您在[虛擬環境](/zh-TW/docs/Learn/Server-side/Django/development_environment#Using_a_virtual_environment)中，導航到您要存放 Django 應用程序的位置（在文檔文件夾中，輕鬆找到它的位置），並為您的新網站，創建一個文件夾（在這種情況下：locallibrary）。然後使用 cd 命令進入該文件夾：
+首先打開命令提示符/終端，確保你在[虛擬環境](/zh-TW/docs/Learn/Server-side/Django/development_environment#Using_a_virtual_environment)中，導航到你要存放 Django 應用程序的位置（在文檔文件夾中，輕鬆找到它的位置），並為你的新網站，創建一個文件夾（在這種情況下：locallibrary）。然後使用 cd 命令進入該文件夾：
 
 ```bash
 mkdir locallibrary
@@ -84,7 +84,7 @@ locallibrary 項目的子文件夾是整個網站的進入點：
 
 ## 創建 catalog 應用
 
-接下來，在 locallibrary 項目裡，使用下面的命令創建 catalog 應用（和您項目的**manage.py**在同一個文件夾下）
+接下來，在 locallibrary 項目裡，使用下面的命令創建 catalog 應用（和你項目的**manage.py**在同一個文件夾下）
 
 ```bash
 python3 manage.py startapp catalog
@@ -94,7 +94,7 @@ python3 manage.py startapp catalog
 >
 > 如果你是 windows 系統，在這個部分用`py -3`替代`python3`。
 >
-> 如果您使用的是 Python 3.7.0，則應使用`py manage.py startapp catalog`
+> 如果你使用的是 Python 3.7.0，則應使用`py manage.py startapp catalog`
 
 這個工具創建了一個新的文件夾，並為該應用創建了不同的文件（下面黑體所示）。絕大多數文件的命名和它們的目的有關（比如視圖函數就是**views.py，**模型就是**models.py，**測試是**tests.py，**網站管理設置是**admin.py，**註冊應用是**apps.py）**，並且還包含了為項目所用的最小模板。
 
@@ -231,7 +231,7 @@ urlpatterns += [
 ]
 ```
 
-將路徑函數的第一個參數留空，用以表示'/'。如果您將第一個參數寫為'/'，Django 會在您啟動開發服務器時給出以下警告：
+將路徑函數的第一個參數留空，用以表示'/'。如果你將第一個參數寫為'/'，Django 會在你啟動開發服務器時給出以下警告：
 
 ```python
 System check identified some issues:
@@ -242,7 +242,7 @@ Remove this slash as it is unnecessary.
 If this pattern is targeted in an include(), ensure the include() pattern has a trailing '/'.
 ```
 
-Django 默認不提供 CSS，JavaScript 和圖像等靜態文件，但在創建站點時，開發 Web 服務器這樣做是有用的。作為此 URL 映射器的最終添加，您可以通過附加以下幾行，在開發期間啟用靜態文件的提供。
+Django 默認不提供 CSS，JavaScript 和圖像等靜態文件，但在創建站點時，開發 Web 服務器這樣做是有用的。作為此 URL 映射器的最終添加，你可以通過附加以下幾行，在開發期間啟用靜態文件的提供。
 
 現在將以下最終區塊，添加到文件的底部：
 

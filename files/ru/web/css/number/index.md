@@ -2,6 +2,7 @@
 title: <number>
 slug: Web/CSS/number
 ---
+
 {{CSSRef}}
 
 **`<number>`** - [тип хранения данных](/ru/docs/Web/CSS/CSS_Types) в [CSS](/ru/docs/Web/CSS) представляющий собой число: либо целое, либо с дробной частью.

@@ -12,7 +12,9 @@ slug: Web/CSS/:first-of-type
 ## Синтаксис
 
 ```css
-element:first-of-type { /* стили */ }
+element:first-of-type {
+  /* стили */
+}
 ```
 
 ## Пример
@@ -43,7 +45,7 @@ div :first-of-type {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

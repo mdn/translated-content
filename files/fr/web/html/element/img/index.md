@@ -32,7 +32,7 @@ Les formats d'image qu'on rencontre le plus fréquemment sur le Web sont&nbsp;:
 - [AVIF (<i lang="en">AV1 Image File Format</i>)](/fr/docs/Web/Media/Formats/Image_types#avif) pour les images et les images animées avec de hautes performances
 - [GIF (<i lang="en">Graphics Interchange Format</i>)](/fr/docs/Web/Media/Formats/Image_types#gif_graphics_interchange_format) pour les images et animations _simples_
 - [JPEG (<i lang="en">Joint Photographic Expert Group image</i>)](/fr/docs/Web/Media/Formats/Image_types#jpeg_joint_photographic_experts_group_image) pour une compression avec pertes d'images statiques, il s'agit du format le plus utilisé
-- [PNG (<i lang="en">Portable Network Graphics</i>)](/fr/docs/Web/Media/Formats/Image_types#png_portable_network_graphics) pour une compression avec pertes d'images statiques, de meilleure qualité que le JPEG
+- [PNG (<i lang="en">Portable Network Graphics</i>)](/fr/docs/Web/Media/Formats/Image_types#png_portable_network_graphics) pour une compression sans perte d'images statiques, de meilleure qualité que le JPEG
 - [SVG (<i lang="en">Scalable Vector Graphics</i>)](/fr/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics) pour un format d'image vectorielle (qui permet de dessiner une image précisément à différentes échelles)
 - [WebP (<i lang="en">Web Picture format</i>)](/fr/docs/Web/Media/Formats/Image_types#webp) pour les images statiques et animées
 

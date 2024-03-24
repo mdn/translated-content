@@ -22,7 +22,7 @@ slug: Web/HTML/Global_attributes/contenteditable
 
 {{Specifications}}
 
-## Совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

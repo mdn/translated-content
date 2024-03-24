@@ -22,13 +22,14 @@ widthConstraintSupported = supportedConstraintsDictionary.width;
 ## 例
 
 ```html hidden
-<div id="result">
-</div>
+<div id="result"></div>
 ```
 
 ```css hidden
 #result {
-  font: 14px "Arial", sans-serif;
+  font:
+    14px "Arial",
+    sans-serif;
 }
 ```
 

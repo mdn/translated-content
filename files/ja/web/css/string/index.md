@@ -25,7 +25,7 @@ slug: Web/CSS/string
 
 ### 有効な文字列の例
 
-```js
+```js-nolint
 /* 単純な文字列 */
 "This string is demarcated by double quotes."
 'This string is demarcated by single quotes.'

@@ -86,7 +86,7 @@ l10n:
     - `allow-scripts`: ページがスクリプトを実行することを許可します（ただし、ポップアップウィンドウは作成しません）。このキーワードが使用されない場合、この操作は許可されません。
     - `allow-storage-access-by-user-activation` {{experimental_inline}}: `<iframe>` で読み込んだ文書が{{domxref("Storage Access API", "ストレージアクセス API", "", "nocode")}} を使用して、分離されていないクッキーへのアクセスをリクエストできるようにします。
     - `allow-top-navigation`: リソースが最上位の閲覧コンテキスト（`_top` という名前のもの
-    に移動できるようにします。
+      に移動できるようにします。
     - `allow-top-navigation-by-user-activation`: リソースが最上位の閲覧コンテキストに移動できるようにしますが、ユーザーの操作によって開始されたものに限ります。
     - `allow-top-navigation-to-custom-protocols`: ブラウザーに組み込まれている、または[ウェブサイトによって登録された](/ja/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers) `http` 以外のプロトコルへのナビゲーションを可能にします。この機能は `allow-popups` や `allow-top-navigation` キーワードでも有効になります。
 

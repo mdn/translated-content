@@ -1,11 +1,12 @@
 ---
-title: XMLHttpRequest.getAllResponseHeaders()
+title: "XMLHttpRequest: getAllResponseHeaders() メソッド"
+short-title: getAllResponseHeaders()
 slug: Web/API/XMLHttpRequest/getAllResponseHeaders
 l10n:
   sourceCommit: b5b33acd44e7bb9c7be2efc75ba9a04b8bf8b2b2
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{APIRef("XMLHttpRequest API")}}
 
 {{domxref("XMLHttpRequest")}} の **`getAllResponseHeaders()`** メソッドは、すべてのレスポンスヘッダーを {{Glossary('CRLF')}} で区切った文字列として返し、レスポンスを受信していない場合は `null` を返します。
 
@@ -58,7 +59,6 @@ request.send();
 
 request.onreadystatechange = () => {
   if (request.readyState === this.HEADERS_RECEIVED) {
-
     // 生のヘッダー文字列を取得
     const headers = request.getAllResponseHeaders();
 
@@ -69,13 +69,13 @@ request.onreadystatechange = () => {
     // ヘッダー名と値のマップを生成
     const headerMap = {};
     arr.forEach((line) => {
-      const parts = line.split(': ');
+      const parts = line.split(": ");
       const header = parts.shift();
-      const value = parts.join(': ');
+      const value = parts.join(": ");
       headerMap[header] = value;
     });
   }
-}
+};
 ```
 
 いったんこれを行えば、次のようなことができます。
@@ -96,5 +96,5 @@ const contentType = headerMap["content-type"];
 
 ## 関連情報
 
-- [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
 - リクエストヘッダーの設定: {{domxref("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}}

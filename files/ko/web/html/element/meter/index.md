@@ -9,8 +9,6 @@ slug: Web/HTML/Element/meter
 
 {{EmbedInteractiveExample("pages/tabbed/meter.html", "tabbed-shorter")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
-
 <table class="properties">
   <tbody>
     <tr>
@@ -64,23 +62,23 @@ slug: Web/HTML/Element/meter
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
-- {{htmlattrdef("value")}}
+- `value`
 
   - : 현재의 값. 최소와 최댓값(`min`과 `max` 특성)을 지정한 경우, 그 사이여야 합니다. 지정하지 않았거나 잘못된 값인 경우 `0`으로 간주합니다. 지정했으나 범위 바깥인 경우, 범위에 맞춰 나머지 값을 버립니다.
 
     > **참고:**`value`가 `0` 이상 `1` 이하가 아닌 이상, `min`과 `max`를 정의해 `value` 값이 그 안에 들어가도록 해야 합니다.
 
-- {{htmlattrdef("min")}}
+- `min`
   - : 측정 범위의 가능한 최솟값. 지정할 경우 최댓값(`max` 특성) 미만이어야 합니다. 지정하지 않은 경우 `0`입니다.
-- {{htmlattrdef("max")}}
+- `max`
   - : 측정 범위의 가능한 최댓값. 지정할 경우 최솟값(`min` 특성)을 초과해야 합니다. 지정하지 않은 경우 `1`입니다.
-- {{htmlattrdef("low")}}
+- `low`
   - : 측정 범위 중 낮은 범위의 최댓값. 지정할 경우 전체 범위 최솟값(`min` 특성)을 초과해야 하며, 높은 범위 최댓값과 전체 범위 최댓값(각각 `high`와 `max` 특성) 미만이어야 합니다. 지정하지 않았거나 전체 범위 최솟값 미만인 경우, 전체 범위 최솟값과 같아집니다.
-- {{htmlattrdef("high")}}
+- `high`
   - : 측정 범위 중 높은 범위의 최솟값. 지정할 경우 전체 범위 최댓값(`max` 특성) 미만이어야 하며, 낮은 범위의 최댓값과 전체 범위 최솟값(각각 `low`와 `min` 특성)을 초과해야 합니다. 지정하지 않았거나 전체 범위 최댓값을 초과할 경우 전체 범위 최댓값과 같아집니다.
-- {{htmlattrdef("optimum")}}
+- `optimum`
   - : 이상적인 값. `min`과 `max` 특성으로 정의한 범위 내에 위치해야 합니다. `low`와 `high` 특성을 함께 사용한 경우, `optimum`은 어느 범위가 이상적인지 나타냅니다. 예를 들어, 값이 `min`과 `low` 사이에 위치한 경우, 측정 범위 중 낮은 범위가 이상적인 범위입니다.
-- {{htmlattrdef("form")}}
+- `form`
   - : `<meter>`와 연결할 {{htmlelement("form")}} 요소("양식 소유자"). 같은 문서에 존재하는 `<form>` 요소의 [`id`](/ko/docs/Web/HTML/Global_attributes#id) 특성 값을 사용해야 합니다. `form` 특성을 지정하지 않았으나 조상 중 `<form>` 요소가 존재하면 해당 `<form>`과 연결됩니다. [`<input type="number">`](/ko/docs/Web/HTML/Element/input/number)의 값 범위를 보여주는 등 `<meter>`를 양식 관련 콘텐츠로서 사용할 때만 지정하세요.
 
 ## 예제

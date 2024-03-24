@@ -12,7 +12,7 @@ La propiedad `-webkit-mask-composite` especifica la forma en la que múltiples i
 - {{ Xref_cssinitial() }}: source-over
 - Se aplica a : todos los elementos
 - {{ Xref_cssinherited() }}: no
-- Media: {{ Xref_cssvisual() }}
+- Media: {{cssxref("Media/Visual", "visual")}}
 - {{ Xref_csscomputed() }}: tal y como se especifica.
 
 ## Síntaxis

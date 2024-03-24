@@ -3,13 +3,13 @@ title: Комбинатор столбцов
 slug: Web/CSS/Column_combinator
 ---
 
-{{CSSRef("Selectors")}}{{SeeCompatTable}}
+{{CSSRef}} {{SeeCompatTable}}
 
 **Комбинатор столбцов** (`||`) помещается между двумя селекторами CSS. Он соответствует только тем элементам, которым соответствует второй селектор, которые принадлежат элементам столбца, соответствующим первому.
 
 ```css
 /* Ячейки таблицы, принадлежащие к столбцу "выделено" */
-col.selected || td {
+col.selected||td {
   background: gray;
 }
 ```
@@ -29,14 +29,14 @@ column-selector || cell-selector {
 ```html
 <table border="1">
   <colgroup>
-    <col span="2"/>
-    <col class="selected"/>
+    <col span="2" />
+    <col class="selected" />
   </colgroup>
   <tbody>
     <tr>
-      <td>A
-      <td>B
-      <td>C
+      <td>A</td>
+      <td>B</td>
+      <td>C</td>
     </tr>
     <tr>
       <td colspan="2">D</td>
@@ -53,7 +53,7 @@ column-selector || cell-selector {
 ### CSS
 
 ```css
-col.selected || td {
+col.selected||td {
   background: gray;
   color: white;
   font-weight: bold;
@@ -68,7 +68,7 @@ col.selected || td {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

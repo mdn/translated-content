@@ -10,7 +10,7 @@ slug: Web/API/ShadowRoot/fullscreenElement
 ## 構文
 
 ```js
-shadowRoot.fullscreenElement
+shadowRoot.fullscreenElement;
 ```
 
 ### 値
@@ -20,7 +20,7 @@ shadowRoot.fullscreenElement
 ## 例
 
 ```js
-let customElem = document.querySelector('my-shadow-dom-element');
+let customElem = document.querySelector("my-shadow-dom-element");
 let shadow = customElem.shadowRoot;
 let fullscreenElem = shadow.fullscreenElement;
 ```

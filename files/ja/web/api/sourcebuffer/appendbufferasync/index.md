@@ -31,7 +31,7 @@ appendBufferAsync(source)
 ```js
 async function fillSourceBuffer(buffer, msBuffer) {
   try {
-    while(true) {
+    while (true) {
       await msBuffer.appendBufferAsync(buffer);
     }
   } catch (e) {

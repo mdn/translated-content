@@ -91,8 +91,6 @@ Los siguientes metodos ahora son obsoletos.
   - : Estra propiedad ahora devuelve `false`.
 - `insertBefore()`
   - : Modify the value of {{domxref("Attr.value")}} instead.
-- `isSupported()`
-  - : Seguramente nunca usaste esta propiedad asi que no deberias preocuparte si esque ya no está disponible.
 - `isEqualNode()`
   - : Seguramente nunca usaste esta propiedad asi que no deberias preocuparte si esque ya no está disponible.
 - `normalize()`

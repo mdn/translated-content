@@ -2,6 +2,7 @@
 title: 결정값
 slug: Web/CSS/resolved_value
 ---
+
 {{cssref}}
 
 [CSS](/ko/docs/Web/CSS) 속성의 **결정값**은 {{domxref("Window.getComputedStyle", "getComputedStyle()")}}이 반환하는 값입니다.

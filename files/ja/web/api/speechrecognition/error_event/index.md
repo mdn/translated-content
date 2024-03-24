@@ -15,9 +15,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('error', (event) => { })
+addEventListener("error", (event) => {});
 
-onerror = (event) => { }
+onerror = (event) => {};
 ```
 
 ## イベント型
@@ -42,7 +42,7 @@ _以下に列挙したプロパティに加えて、親インターフェイス�
 ```js
 const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
 
-recognition.addEventListener('error', (event) => {
+recognition.addEventListener("error", (event) => {
   console.error(`音声認識エラーが発生しました: ${event.error}`);
 });
 ```
@@ -52,7 +52,7 @@ recognition.addEventListener('error', (event) => {
 ```js
 recognition.onerror = (event) => {
   console.error(`音声認識エラーが発生しました: ${event.error}`);
-}
+};
 ```
 
 ## 仕様書

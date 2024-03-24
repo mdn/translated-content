@@ -16,9 +16,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('languagechange', (event) => { });
+addEventListener("languagechange", (event) => {});
 
-onlanguagechange = (event) => { };
+onlanguagechange = (event) => {};
 ```
 
 ## イベント型
@@ -30,16 +30,16 @@ onlanguagechange = (event) => { };
 `languagechange` は {{domxref("EventTarget/addEventListener", "addEventListener")}} メソッドで使用することができます。
 
 ```js
-worker.addEventListener('languagechange', () => {
-  console.log('languagechange event detected!');
+worker.addEventListener("languagechange", () => {
+  console.log("languagechange event detected!");
 });
 ```
 
-または、 `onlanguagechange`  イベントハンドラープロパティを使用します。
+または、 `onlanguagechange` イベントハンドラープロパティを使用します。
 
 ```js
 worker.onlanguagechange = (event) => {
-  console.log('languagechange event detected!');
+  console.log("languagechange event detected!");
 };
 ```
 

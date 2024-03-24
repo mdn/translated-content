@@ -3,7 +3,7 @@ title: notifications.clear()
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/clear
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Efface une notification, compte tenu de son identifiant.
 

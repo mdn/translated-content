@@ -9,8 +9,6 @@ slug: Web/HTML/Element/option
 
 {{EmbedInteractiveExample("pages/tabbed/option.html", "tabbed-standard")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
-
 <table class="properties">
   <tbody>
     <tr>
@@ -56,13 +54,13 @@ slug: Web/HTML/Element/option
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
-- {{htmlattrdef("disabled")}}
+- `disabled`
   - : 지정한 경우 이 옵션을 선택할 수 없습니다. 브라우저에서, 비활성화 옵션은 주로 회색으로 보이며, 클릭과 포커스 등 모든 이벤트를 받지 않습니다. `<option>`에 `disabled` 특성을 추가하지 않더라도, {{HTMLElement("optgroup")}} 등 조상 요소로 인해 비활성화될 수 있습니다.
-- {{htmlattrdef("label")}}
+- `label`
   - : 옵션의 뜻을 나타내는 텍스트. 지정하지 않은 경우, 요소의 텍스트 콘텐츠를 대신 사용합니다.
-- {{htmlattrdef("selected")}}
+- `selected`
   - : 지정한 경우 초기에 이 옵션을 선택한 상태로 설정합니다. [`multiple`](/ko/docs/Web/HTML/Element/select#multiple)를 지정하지 않은 {{HTMLElement("select")}} 요소의 자손인 경우, 하나의 `<option>`만 `selected` 특성을 가질 수 있습니다.
-- {{htmlattrdef("value")}}
+- `value`
   - : 양식 데이터를 구성할 때 사용할 값. 지정하지 않은 경우, 요소의 텍스트 콘텐츠를 대신 사용합니다.
 
 ## 예제

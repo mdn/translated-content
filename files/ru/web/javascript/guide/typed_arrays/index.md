@@ -23,8 +23,6 @@ slug: Web/JavaScript/Guide/Typed_arrays
 
 Название типизированного представления массива говорит само за себя. Оно представляет массив в распространённых числовых форматах, таких как `Int8`, `Uint32`, `Float64` и так далее. Среди прочих, существует специальное представление `Uint8ClampedArray`. Оно ограничивает значения интервалом от 0 до 255. Это полезно, например, при [Обработке данных изображения в Canvas](/ru/docs/Web/API/ImageData).
 
-{{page("/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray", "Объект TypedArray")}}
-
 ### DataView
 
 Объект {{jsxref("DataView")}} –– это низкоуровневый интерфейс, предоставляющий API для записи/чтения произвольных данных в буфер. Это полезно при работе с различными типами данных, например. В то время как типизированные представления всегда имеют порядок байт (смотрите {{Glossary("Endianness")}}) соответствующий используемому в вашей операционной системе, `DataView` позволяет контроллировать порядок байт (byte-order). По умолчанию это big-endian, но через API можно установить little-endian.
@@ -82,7 +80,7 @@ for (var i = 0; i < int32View.length; i++) {
 var int16View = new Int16Array(buffer);
 
 for (var i = 0; i < int16View.length; i++) {
-  console.log('Entry ' + i + ': ' + int16View[i]);
+  console.log("Entry " + i + ": " + int16View[i]);
 }
 ```
 
@@ -92,7 +90,7 @@ for (var i = 0; i < int16View.length; i++) {
 
 ```js
 int16View[0] = 32;
-console.log('Элемент 0 в 32-битном представлении теперь равен ' + int32View[0]);
+console.log("Элемент 0 в 32-битном представлении теперь равен " + int32View[0]);
 ```
 
 Результатом выполнения станет текст: "Элемент 0 в 32-битном представлении теперь равен 32". Другими словами, два массива на самом деле являются лишь разными представлениями одного и того же буфера данных в разных форматах. Вы можете повторить это с [представлениями](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) любого типа.
@@ -133,7 +131,7 @@ var amountDueView = new Float32Array(buffer, 20, 1);
 
 ```js
 var typedArray = new Uint8Array([1, 2, 3, 4]),
-    normalArray = Array.prototype.slice.call(typedArray);
+  normalArray = Array.prototype.slice.call(typedArray);
 normalArray.length === 4;
 normalArray.constructor === Array;
 ```

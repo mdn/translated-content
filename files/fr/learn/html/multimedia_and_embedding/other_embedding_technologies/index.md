@@ -44,13 +44,13 @@ Il y a longtemps, sur le Web, il était courant d'utiliser des **cadres** pour c
 
 Un peu plus tard (fin des années 90, début des années 2000), la technique des greffons est devenue très populaire, citons les [applets Java](/fr/docs/Glossary/Java) et [Flash](/fr/docs/Glossary/Adobe_Flash) — ils permettaient aux développeurs web d'intégrer du contenu riche dans des pages web telles que des vidéos et des animations, ce qui n'était tout simplement pas possible avec le HTML. L'intégration de ces techniques a été réalisée grâce à des éléments comme {{htmlelement("object")}} et {{htmlelement("embed")}}, un peu moins utilisé. Ils étaient très utiles à l'époque. Ils sont depuis tombés en désuétude en raison de nombreux problèmes&nbsp;: accessibilité, sécurité, taille de fichier et autres ; de nos jours, la plupart des mobiles ne prennent plus en charge de tels greffons, et les ordinateurs de bureau sont en train de les abandonner.
 
-Enfin, l'élément {{htmlelement("iframe")}} est apparu (avec d'autres moyens d'intégration de contenu, comme {{htmlelement("canvas")}}, {{htmlelement("video")}}, etc). Cet élément permet d'intégrer un document web entier dans un autre, comme s'il s'agissait d'un élément {{htmlelement("img")}}} ou d'un autre élément de ce type. Il est régulièrement utilisé aujourd'hui.
+Enfin, l'élément {{htmlelement("iframe")}} est apparu (avec d'autres moyens d'intégration de contenu, comme {{htmlelement("canvas")}}, {{htmlelement("video")}}, etc). Cet élément permet d'intégrer un document web entier dans un autre, comme s'il s'agissait d'un élément {{htmlelement("img")}} ou d'un autre élément de ce type. Il est régulièrement utilisé aujourd'hui.
 
 Maintenant que la leçon d'histoire est terminée, passons à autre chose et voyons comment utiliser certains d'entre eux.
 
 ## Apprentissage actif&nbsp;: utilisations classiques de l'intégration
 
-Dans cet article, passons directement à l'apprentissage actif pour vous donner tout de suite une idée concrète de l'utilité des techniques d'intégration. Le monde en ligne connaît très bien [Youtube](https://www.youtube.com/), mais beaucoup de gens ne connaissent pas les facilités de partage dont il dispose. Voyons comment Youtube nous permet d'intégrer une vidéo dans toute page qui nous plairait à l'aide d'un élément {{htmlelement("iframe")}}}.
+Dans cet article, passons directement à l'apprentissage actif pour vous donner tout de suite une idée concrète de l'utilité des techniques d'intégration. Le monde en ligne connaît très bien [Youtube](https://www.youtube.com/), mais beaucoup de gens ne connaissent pas les facilités de partage dont il dispose. Voyons comment Youtube nous permet d'intégrer une vidéo dans toute page qui nous plairait à l'aide d'un élément {{htmlelement("iframe")}}.
 
 1. D'abord, allez sur Youtube et choisissez une vidéo qui vous plaise.
 2. Au‑dessous de la vidéo, vous devez trouver un bouton _Share (Partager)_ — cliquez‑le pour afficher les options de partage.
@@ -238,7 +238,7 @@ Cet exemple inclut les éléments de base essentiels nécessaires à l'utilisati
 
 ### Problèmes de sécurité
 
-Nous avons dit plus haut qu'il y avait des problèmes en matière de sécurité — entrons maintenant un peu plus dans le détail. Nous ne nous attendons pas à cette problèmatique vous soit parfaiment claire dès la première lecture&nbsp;; nous voulons simplement vous y sensibiliser et fournir un point de référence auquel vous pourrez revenir quand vous aurez plus d'expérience et commencerez à prévoir l'utilisation de `<iframe>` dans vos travaux et expérimentations. Car, il n'y a pas de craintes inutiles à avoir et refuser d'utiliser `<iframe>` — il faut juste être prudent. Poursuivons ...
+Nous avons dit plus haut qu'il y avait des problèmes en matière de sécurité — entrons maintenant un peu plus dans le détail. Nous ne nous attendons pas à cette problèmatique vous soit parfaitement claire dès la première lecture&nbsp;; nous voulons simplement vous y sensibiliser et fournir un point de référence auquel vous pourrez revenir quand vous aurez plus d'expérience et commencerez à prévoir l'utilisation de `<iframe>` dans vos travaux et expérimentations. Car, il n'y a pas de craintes inutiles à avoir et refuser d'utiliser `<iframe>` — il faut juste être prudent. Poursuivons ...
 
 Fabricants de navigateurs et développeurs Web ont appris à la dure que `<iframe>` constitue sur le Web une cible commune (terme officiel : un **vecteur d'attaque**) pour des personnes mal intentionnées. `<iframe>` est une porte d'entrée pour les attaques de ces personnes quand ils essaient de modifier malicieusement une page Web ou d'amener des utilisateurs à faire quelque chose qu'ils ne voudraient pas faire, comme révéler des informations confidentielles comme noms d'utilisateur et mots de passe. Pour cette raison, les ingénieurs spécialistes et les développeurs de navigateurs ont développé divers mécanismes de sécurité pour rendre `<iframe>` plus sûr. De meilleures pratiques sont aussi à prendre en compte — nous allons développer certaines d'entre elles ci-dessous.
 
@@ -283,7 +283,7 @@ Si c'est absolument nécessaire, vous pouvez ajouter des permissions une à une 
 
 ## Les éléments \<embed> et \<object>
 
-Les éléments {{htmlelement("embed")}} et {{htmlelement("object")}} ont une fonction différente de {{htmlelement("iframe")}}} — ces éléments sont des outils d'intégration à caractère général pour importer plusieurs types de contenu externe&nbsp;; cela comprend des technologies de greffons comme Java Applets ou Flash, PDF (affichable dans le navigateur avec un greffon PDF) et même du contenu comme des vidéos, du SVG ou des images&nbsp;!
+Les éléments {{htmlelement("embed")}} et {{htmlelement("object")}} ont une fonction différente de {{htmlelement("iframe")}} — ces éléments sont des outils d'intégration à caractère général pour importer plusieurs types de contenu externe&nbsp;; cela comprend des technologies de greffons comme Java Applets ou Flash, PDF (affichable dans le navigateur avec un greffon PDF) et même du contenu comme des vidéos, du SVG ou des images&nbsp;!
 
 > **Note :** Un **greffon** est un logiciel qui permet d'avoir accès à des contenus que le navigateur n'est pas capable de lire de manière native.
 
@@ -353,6 +353,6 @@ Alors, que faire ? Si vous avez besoin d'interactivité, HTML et {{glossary("Jav
 
 Le problème de l'intégration de contenus tiers dans des documents web peut rapidement devenir très complexe&nbsp;: dans cet article nous avons donc essayé de le présenter de manière simple et classique — en espérant la méthode pertinente même si elle touche à certaines fonctionnalités parmi les plus avancées des techniques impliquées. Pour commencer, il est peu probable que vous utilisiez l'intégration pour autre chose que l'intégration de contenu tiers de cartes ou vidéos dans vos pages. L'expérience grandissant, il est vraisemblable que vous lui trouverez d'autres utilisations.
 
-D'autres techniques impliquent l'intégration de contenu externe en plus de celles discutées ici. Nous en avons vu dans des articles précédents, comme {{htmlelement("video")}}}, {{htmlelement("audio")}}, et {{htmlelement("img")}}}, mais il y en a d'autres à découvrir, comme {{htmlelement("canvas")}} pour les graphiques 2D et 3D générés en JavaScript, et {{htmlelement("svg")}} pour intégrer des graphiques vectoriels. Nous verrons SVG dans le prochain article de ce module.
+D'autres techniques impliquent l'intégration de contenu externe en plus de celles discutées ici. Nous en avons vu dans des articles précédents, comme {{htmlelement("video")}}, {{htmlelement("audio")}}, et {{htmlelement("img")}}, mais il y en a d'autres à découvrir, comme {{htmlelement("canvas")}} pour les graphiques 2D et 3D générés en JavaScript, et {{htmlelement("svg")}} pour intégrer des graphiques vectoriels. Nous verrons SVG dans le prochain article de ce module.
 
 {{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}

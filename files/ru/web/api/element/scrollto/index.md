@@ -43,7 +43,7 @@ element.scrollTo({
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

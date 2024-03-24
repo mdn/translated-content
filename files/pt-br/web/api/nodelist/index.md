@@ -12,10 +12,10 @@ Objetos **`NodeList`** são coleções de nodos semelhantes aos objetos retornad
 Em alguns casos, `NodeList` é uma _coleção viva_, ou seja, toda alteração feita no {{ Glossary("DOM") }} reflete nos elementos da coleção. Por exemplo, {{ domxref("Node.childNodes") }} é uma coleção viva:
 
 ```js
-var parent = document.getElementById('parent');
+var parent = document.getElementById("parent");
 var child_nodes = parent.childNodes;
 console.log(child_nodes.length); // let's assume "2"
-parent.appendChild(document.createElement('div'));
+parent.appendChild(document.createElement("div"));
 console.log(child_nodes.length); // should output "3"
 ```
 
@@ -47,7 +47,7 @@ Já em outros casos `NodeList` é um _coleção estática_, significando que tod
 
 ```js
 for (var i = 0; i < myNodeList.length; ++i) {
-  var item = myNodeList[i];  // Calling myNodeList.item(i) isn't necessary in JavaScript
+  var item = myNodeList[i]; // Calling myNodeList.item(i) isn't necessary in JavaScript
 }
 ```
 
@@ -56,7 +56,7 @@ Não caia na tentação de usar [for...in](/pt-BR/docs/Web/JavaScript/Reference/
 [`for...of`](/pt-BR/docs/JavaScript/Reference/Statements/for...of) iterará sobre os objetos da `NodeList` de maneira correta:
 
 ```js
-var list = document.querySelectorAll( 'input[type=checkbox]' );
+var list = document.querySelectorAll("input[type=checkbox]");
 for (var item of list) {
   item.checked = true;
 }
@@ -67,7 +67,7 @@ Navegadores modernos suportam métodos de iteração, {{ domxref("NodeList.forEa
 Há também um jeito compatível com o Internet Explorer de usar {{ jsxref("Array.forEach()", "Array.prototype.forEach") }} para iteração.
 
 ```js
-var list = document.querySelectorAll( 'input[type=checkbox]' );
+var list = document.querySelectorAll("input[type=checkbox]");
 Array.prototype.forEach.call(list, function (item) {
   item.checked = true;
 });
@@ -80,20 +80,20 @@ Você também pode adicionar protótipos para `NodeList`:
 ```js
 var elements = document.querySelectorAll(".suggestions");
 
-NodeList.prototype.addEventListener = function(event, func) {
-    this.forEach(function(content, item) {
-       content.addEventListener(event, func);
-    });
-}
+NodeList.prototype.addEventListener = function (event, func) {
+  this.forEach(function (content, item) {
+    content.addEventListener(event, func);
+  });
+};
 
 function log() {
-    console.log(this, " was clicked");
+  console.log(this, " was clicked");
 }
 
 elements.addEventListener("click", log);
 //or
-elements.addEventListener("click", function() {
-    console.log(this, "  awas clicked");
+elements.addEventListener("click", function () {
+  console.log(this, "  awas clicked");
 });
 // output from both will be element was clicked the element would be HTML Element
 ```
@@ -102,14 +102,8 @@ Para mais informações sobre forEach veja {{ jsxref("Array.forEach()", "Array.p
 
 ## Especificações
 
-| Specification                                                                                | Status                           | Comment             |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('DOM WHATWG', '#interface-nodelist', 'NodeList')}}             | {{ Spec2('DOM WHATWG') }} |                     |
-| {{SpecName('DOM4', '#interface-nodelist', 'NodeList')}}                     | {{ Spec2('DOM4') }}         |                     |
-| {{SpecName('DOM3 Core', 'core.html#ID-536297177', 'NodeList')}}         | {{ Spec2('DOM3 Core') }} |                     |
-| {{SpecName('DOM2 Core', 'core.html#ID-536297177', 'NodeList')}}         | {{ Spec2('DOM2 Core') }} |                     |
-| {{SpecName('DOM1', 'level-one-core.html#ID-536297177', 'NodeList')}} | {{ Spec2('DOM1') }}         | Initial definition. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.NodeList")}}
+{{Compat}}

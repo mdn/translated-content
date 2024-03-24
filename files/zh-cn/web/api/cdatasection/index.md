@@ -9,14 +9,16 @@ slug: Web/API/CDATASection
 
 在 XML 中，一个 CDATA 片段格式如下：
 
-```plain
-<![CDATA[  ... ]]>
+```xml
+<![CDATA[ … ]]>
 ```
 
 例如：
 
-```xml
-<foo>这是一个CDATA section: <![CDATA[  < > & ]]> 其中包含了一些没有转义的字符。 </foo>
+```html
+<foo>
+  这是一个 CDATA 片段：<![CDATA[ < > & ]]> 其中包含了一些没有转义的字符。
+</foo>
 ```
 
 唯一的例外就是，在一个 CDATA 片段中不可以使用 CDATA 片段本身的闭合标签片段：

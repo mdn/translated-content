@@ -2,6 +2,7 @@
 title: shape-rendering
 slug: Web/SVG/Attribute/shape-rendering
 ---
+
 « [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)
 
 При создании SVG есть возможность указать браузеру, как рекомендуется рендерить (отрисовывать) элементы {{ SVGElement("path") }} или базовые фигуры. `shape-rendering` предоставляет возможность указывать данные рекомендации.

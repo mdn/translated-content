@@ -127,7 +127,7 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
       // 制約 - 音声のみがこのアプリでは必要
       {
         audio: true,
-      }
+      },
     )
 
     // 成功コールバック

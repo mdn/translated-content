@@ -1,8 +1,9 @@
 ---
-title: Document.createExpression()
+title: "Document: createExpression() メソッド"
+short-title: createExpression()
 slug: Web/API/Document/createExpression
 l10n:
-  sourceCommit: 57431cfc632ffb8b989cb7ce6bb59f5d529031db
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
 {{APIRef("DOM")}}

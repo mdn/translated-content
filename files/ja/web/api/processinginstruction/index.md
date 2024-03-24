@@ -30,6 +30,7 @@ l10n:
 _このインターフェイスは親インターフェイスである {{domxref("CharacterData")}}, {{domxref("Node")}}, {{domxref("EventTarget")}} からプロパティを継承しています。_
 
 - {{domxref("ProcessingInstruction.sheet")}} {{ReadOnlyInline}}
+
   - : 存在すれば、関連付けられた {{domxref("StyleSheet")}} オブジェクトを返します。なければ `null` を返します。
 
 - {{domxref("ProcessingInstruction.target")}} {{ReadOnlyInline}}

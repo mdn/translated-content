@@ -10,7 +10,7 @@ slug: Learn/CSS/First_steps/Styling_a_biography_page
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">先决条件：</th>
+      <th scope="row">前提：</th>
       <td>
         <p>
           基本熟悉使用计算机，<a
@@ -33,13 +33,13 @@ slug: Learn/CSS/First_steps/Styling_a_biography_page
   </tbody>
 </table>
 
-## 先决条件
+## 前提
 
 你可以使用下面的实时编辑器，或者下载这个[download the starting point](https://github.com/mdn/css-examples/blob/master/learn/getting-started/biog-download.html/)在自己的编辑器中进行编辑。这是一个独立的 HTML 文件，在 head 中包含了初始 CSS 样式。你可以将这些 CSS 样式从 HTML 文件中移出，保存为另一个独立文件。你可以选择 CodePen、jsFiddle 或 Glitch 中的任意一个完成这些工作。
 
 > **备注：** 如果遇到困难，你可以向我求助——参见本页下面的[测评或请求帮助](#测评或请求帮助)部分。
 
-**让我们来学一些 CSS 样式**
+### 让我们来学一些 CSS 样式
 
 接下来的实例是一个个人主页，我们用 CSS 设定它的样式。以下是我用到的一些 CSS 属性，通过这些链接，你可以打开相应的 MDN 页面了解更多。
 
@@ -83,7 +83,7 @@ slug: Learn/CSS/First_steps/Styling_a_biography_page
 - 你希望测试的例子的在网络编辑器上的链接。这是很好的做法，因为如果不让帮助你的看到你的程序，他们就很难帮助你解决程序的问题。
 - 你的网页的测评页面链接，这样我们就可以找到你所求助的问题。
 
-**接下来是什么？**
+## 接下来是什么？
 
 恭喜你完成了第一个模块的学习。现在你应该对 CSS 有了一个大致的了解 并且能够了解在样式表中发生的大多数事情。在下一个模块[CSS 构建](/zh-CN/docs/Learn/CSS/Building_blocks)中，我们将对一些关键区域进行深入的学习。
 

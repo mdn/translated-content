@@ -57,7 +57,7 @@ HEAD /index.html
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.methods.HEAD")}}
+{{Compat}}
 
 ## Veja também
 

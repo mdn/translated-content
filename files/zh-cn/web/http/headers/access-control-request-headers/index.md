@@ -36,6 +36,6 @@ Access-Control-Request-Headers: X-PINGOTHER, Content-Type
 
 {{Compat}}
 
-## 相关内容
+## 参见
 
 - {{HTTPHeader("Access-Control-Request-Method")}}

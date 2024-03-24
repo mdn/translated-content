@@ -43,17 +43,23 @@ slug: Web/CSS/Specificity
 1. Лучше использовать каскадные свойства CSS
 2. Использовать более специфичные правила. Чтобы сделать правило более специфичным и повысить его приоритет, укажите один элемент или несколько перед нужным вам элементом:
 
-    ```html
-    <div id="test">
-      <span>Text</span>
-    </div>
-    ```
+   ```html
+   <div id="test">
+     <span>Text</span>
+   </div>
+   ```
 
-    ```css
-    div#test span { color: green }
-    div span { color: blue }
-    span { color: red }
-    ```
+   ```css
+   div#test span {
+     color: green;
+   }
+   div span {
+     color: blue;
+   }
+   span {
+     color: red;
+   }
+   ```
 
 Вне зависимости от порядка следования правил, текст всегда будет зелёным, поскольку у этого правила наибольшая специфичность (при этом, правило для голубого цвета имеет преимущество перед правилом для красного, несмотря на порядок следования).
 
@@ -72,32 +78,40 @@ slug: Web/CSS/Specificity
 
 ```css
 #someElement p {
-    color: blue;
+  color: blue;
 }
 
 p.awesome {
-    color: red;
+  color: red;
 }
 ```
 
 Как сделать цвет текста в абзацах `awesome` красным всегда, даже если они расположены внутри `#someElement`? Без `!important` у первого правила специфичность больше и оно имеет преимущество перед вторым.
 
-**Как преодолеть !important**
+**Как преодолеть !important:**
 
 A) Просто добавьте ещё одно правило с модификатором `!important`, у которого селектор имеет большую специфичность (благодаря добавлению типа элемента (тэга), идентификатора (атрибута id) или класса к селектору).
 
 Пример большей специфичности:
 
 ```css
-table td    {height: 50px !important;}
-.myTable td {height: 50px !important;}
-#myTable td {height: 50px !important;}
+table td {
+  height: 50px !important;
+}
+.myTable td {
+  height: 50px !important;
+}
+#myTable td {
+  height: 50px !important;
+}
 ```
 
 Б) Или добавьте правило с модификатором `!important` и таким же селектором, но расположенное в файле после существующего (при прочих равных выигрывает последнее объявленное правило):
 
 ```css
-td {height: 50px !important;}
+td {
+  height: 50px !important;
+}
 ```
 
 В) Или перепишите первоначальное правило без использования `!important`.
@@ -190,9 +204,9 @@ html h1 {
 
 ```html
 <html>
-<body>
-  <h1>Вот заголовок!</h1>
-</body>
+  <body>
+    <h1>Вот заголовок!</h1>
+  </body>
 </html>
 ```
 
@@ -219,9 +233,9 @@ h1 {
 
 ```html
 <html>
-<body id="parent">
-  <h1>Вот заголовок!</h1>
-</body>
+  <body id="parent">
+    <h1>Вот заголовок!</h1>
+  </body>
 </html>
 ```
 

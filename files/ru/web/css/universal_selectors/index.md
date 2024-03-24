@@ -3,7 +3,7 @@ title: Универсальные селекторы
 slug: Web/CSS/Universal_selectors
 ---
 
-{{CSSRef("Selectors")}}
+{{CSSRef}}
 
 ## Краткое описание
 
@@ -18,9 +18,15 @@ slug: Web/CSS/Universal_selectors
 ## Пример
 
 ```css
-*[lang^=en]{color:green;}
-*.warning {color:red;}
-*#maincontent {border: 1px solid blue;}
+*[lang^="en"] {
+  color: green;
+}
+*.warning {
+  color: red;
+}
+*#maincontent {
+  border: 1px solid blue;
+}
 ```
 
 ```html
@@ -38,6 +44,6 @@ slug: Web/CSS/Universal_selectors
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}

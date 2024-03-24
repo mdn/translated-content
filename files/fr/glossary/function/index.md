@@ -5,6 +5,8 @@ l10n:
   sourceCommit: 7fd56d044d3469659bbe5c04b004e87b13dee352
 ---
 
+{{GlossarySidebar}}
+
 Une **fonction** est une portion de code qui peut être appelée par d'autres codes ou par elle-même ou par une [variable](/fr/docs/Glossary/Variable) qui se réfère à la fonction. Lorsqu'une fonction est appelée, des [arguments](/fr/docs/Glossary/Argument) lui sont généralement donnés en entrée. La fonction peut également retourner une valeur de sortie. En [JavaScript](/fr/docs/Glossary/JavaScript), une fonction est aussi un [objet](/fr/docs/Glossary/Object).
 
 Un nom de fonction est un [identifiant](/fr/docs/Glossary/Identifier) déclaré dans le cadre d'une déclaration de fonction ou d'une expression de fonction. Le fait que le nom de fonction soit déclaré ou exprimé impacte [la portée](/fr/docs/Glossary/Scope) du nom de fonction.

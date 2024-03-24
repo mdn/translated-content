@@ -12,7 +12,7 @@ slug: Web/API/BaseAudioContext/createWaveShaper
 ## 構文
 
 ```js
-createWaveShaper()
+createWaveShaper();
 ```
 
 ### 引数

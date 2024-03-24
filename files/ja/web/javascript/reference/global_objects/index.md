@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects
 
 後者の『グローバルオブジェクト』自体は、グローバルスコープ中で {{JSxRef("Operators/this", "this")}} 演算子を使ってアクセスすることができます。実際、グローバルスコープは『グローバルオブジェクト』のプロパティと、もしあれば継承されたプロパティから**構成されています**。
 
-グローバルスコープ内のその他のオブジェクトは、[ユーザースクリプトによって作られたり](/ja/docs/Web/JavaScript/Guide/Working_with_Objects#creating_new_objects)、ホストアプリケーションによって提供されたりします。ブラウザー上で提供されている利用可能なオブジェクトについては、[API リファレンス](/ja/docs/Web/API)で文書化されています。
+グローバルスコープ内のその他のオブジェクトは、[ユーザースクリプトによって作られたり](/ja/docs/Web/JavaScript/Guide/Working_with_objects#新しいオブジェクトの作成)、ホストアプリケーションによって提供されたりします。ブラウザー上で提供されている利用可能なオブジェクトについては、[API リファレンス](/ja/docs/Web/API)で文書化されています。
 
 [DOM](/ja/docs/Web/API/Document_Object_Model) と中核の [JavaScript](/ja/docs/Web/JavaScript) との違いについての詳しい情報は、[JavaScript 技術概説](/ja/docs/Web/JavaScript/JavaScript_technologies_overview)をご覧ください。
 

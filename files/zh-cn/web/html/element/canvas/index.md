@@ -28,7 +28,7 @@ slug: Web/HTML/Element/canvas
 
 直接在 html 标签中设置 width 和 height 属性或者使用 JavaScript 来指定画布尺寸，这将改变一个画布的水平像素和垂直像素数，就像定义了一张图片的大小一样。
 
-可以使用 CSS 的 width 和 height 以在渲染期间缩放图像以适应样式大小，就像\<img>元素一样。如果您发现\<canvas>元素中展示的内容变形，您可以通过\<canvas>自带的 height 和 width 属性进行相关设置，而不要使用 CSS。
+可以使用 CSS 的 width 和 height 以在渲染期间缩放图像以适应样式大小，就像\<img>元素一样。如果你发现\<canvas>元素中展示的内容变形，你可以通过\<canvas>自带的 height 和 width 属性进行相关设置，而不要使用 CSS。
 
 ### 最大的画布尺寸
 
@@ -47,7 +47,7 @@ slug: Web/HTML/Element/canvas
 
 ```html
 <canvas id="canvas" width="300" height="300">
-  抱歉，您的浏览器不支持 canvas 元素
+  抱歉，你的浏览器不支持 canvas 元素
   （这些内容将会在不支持&lt;canvas%gt;元素的浏览器或是禁用了 JavaScript
   的浏览器内渲染并展现）
 </canvas>
@@ -70,7 +70,7 @@ ctx.fillRect(10, 10, 100, 100);
 
 ## 无障碍
 
-`<canvas>` 元素本身只是一个位图，不提供任何绘制对象的信息。画布内容不像 HTML 那样具有语义并能暴露给无障碍工具。以下指南可以帮助您更方便地访问它。
+`<canvas>` 元素本身只是一个位图，不提供任何绘制对象的信息。画布内容不像 HTML 那样具有语义并能暴露给无障碍工具。以下指南可以帮助你更方便地访问它。
 
 - [MDN Hit regions and accessability](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility)
 - [Canvas accessibility use cases](https://www.w3.org/WAI/PF/HTML/wiki/Canvas_Accessibility_Use_Cases)

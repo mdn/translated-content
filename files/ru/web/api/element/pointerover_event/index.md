@@ -60,7 +60,7 @@ para.onpointerover = (event) => {
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

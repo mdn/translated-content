@@ -10,7 +10,7 @@ slug: Web/API/Window/resizeBy
 ## 構文
 
 ```js
-resizeBy(xDelta, yDelta)
+resizeBy(xDelta, yDelta);
 ```
 
 ### 引数
@@ -41,7 +41,11 @@ window.resizeBy(-200, -200);
 
 ```js
 // リサイズ可能なウィンドウを作成
-myExternalWindow = window.open("http://myurl.domain", "myWindowName", "resizable");
+myExternalWindow = window.open(
+  "http://myurl.domain",
+  "myWindowName",
+  "resizable",
+);
 
 // ウィンドウを 500x500 にリサイズ
 myExternalWindow.resizeTo(500, 500);

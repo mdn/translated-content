@@ -10,8 +10,8 @@ slug: Web/API/Worklet/addModule
 ## 構文
 
 ```js
-addModule(moduleURL)
-addModule(moduleURL, options)
+addModule(moduleURL);
+addModule(moduleURL, options);
 ```
 
 ### 引数
@@ -45,15 +45,17 @@ addModule(moduleURL, options)
 ```js
 const audioCtx = new AudioContext();
 const audioWorklet = audioCtx.audioWorklet;
-audioWorklet.addModule('modules/bypassFilter.js', {
-  credentials: 'omit',
+audioWorklet.addModule("modules/bypassFilter.js", {
+  credentials: "omit",
 });
 ```
 
 ### PaintWorklet の例
 
 ```js
-CSS.paintWorklet.addModule('https://mdn.github.io/houdini-examples/cssPaint/intro/worklets/hilite.js');
+CSS.paintWorklet.addModule(
+  "https://mdn.github.io/houdini-examples/cssPaint/intro/worklets/hilite.js",
+);
 ```
 
 {{domxref('paintWorklet')}} がインクルードされると、 CSS の {{cssxref('image/paint()')}} 関数を使用して、ワークレットが作成した画像を引用することができます。
@@ -61,7 +63,7 @@ CSS.paintWorklet.addModule('https://mdn.github.io/houdini-examples/cssPaint/intr
 ```css
 @supports (background-image: paint(id)) {
   h1 {
-      background-image: paint(hollowHighlights, filled, 3px);
+    background-image: paint(hollowHighlights, filled, 3px);
   }
 }
 ```

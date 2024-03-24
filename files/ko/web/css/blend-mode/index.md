@@ -17,15 +17,15 @@ slug: Web/CSS/blend-mode
 
 - `normal`
   - : 배경색에 상관하지 않고 최상단 색을 사용합니다.
-      두 장의 불투명한 종이를 겹친 것과 같습니다.
+    두 장의 불투명한 종이를 겹친 것과 같습니다.
 - `multiply`
   - : 최종 색은 전경과 배경색을 곱한 값입니다.
-      검은 레이어는 최종 레이어를 검은 색으로 만들고, 하얀 레이어는 아무런 변화도 주지 않습니다.
-      투명한 필름에 프린트한 이미지를 서로 겹친 것과 같습니다.
+    검은 레이어는 최종 레이어를 검은 색으로 만들고, 하얀 레이어는 아무런 변화도 주지 않습니다.
+    투명한 필름에 프린트한 이미지를 서로 겹친 것과 같습니다.
 - `screen`
   - : 최종 색은 전경과 배경색을 각각 반전한 후 서로 곱해 나온 값을 다시 반전한 값입니다.
-      검은 레이어는 아무런 변화도 주지 않고, 하얀 레이어는 최종 레이어를 하얗게 만듭니다.
-      프로젝터 두 대로 이미지를 겹친 것과 같습니다.
+    검은 레이어는 아무런 변화도 주지 않고, 하얀 레이어는 최종 레이어를 하얗게 만듭니다.
+    프로젝터 두 대로 이미지를 겹친 것과 같습니다.
 - `overlay`
   - : 배경색이 더 어두운 경우 `multiply`, 더 밝은 경우 `screen`을 적용합니다.
     `hard-light`와 같지만 배경과 전경을 뒤집은 것입니다.
@@ -35,37 +35,37 @@ slug: Web/CSS/blend-mode
   - : 최종 색은 각각의 색상 채널에 대해 제일 밝은 값을 취한 결과입니다.
 - `color-dodge`
   - : 최종 색은 배경색을 전경색의 역으로 나눈 결과입니다.
-      검은 전경색은 아무런 변화도 주지 않습니다. 전경색이 배경색의 역인 경우 제일 밝은 색이 됩니다.
-      `screen`과 유사하지만, 전경색의 밝기가 배경색과 동일하기만 해도 최대의 밝기를 가진 색을 반환합니다.
+    검은 전경색은 아무런 변화도 주지 않습니다. 전경색이 배경색의 역인 경우 제일 밝은 색이 됩니다.
+    `screen`과 유사하지만, 전경색의 밝기가 배경색과 동일하기만 해도 최대의 밝기를 가진 색을 반환합니다.
 - `color-burn`
   - : 최종 색은 배경색을 반전한 후 전경색으로 나누고, 다시 반전한 결과입니다.
-      하얀 전경색은 아무런 변화도 주지 않습니다. 전경색이 배경색의 역인 경우 결과는 검은색입니다.
-      `multiply`와 유사하지만, 전경색의 밝기가 배경색의 역과 동일하기만 해도 검은색을 반환합니다.
+    하얀 전경색은 아무런 변화도 주지 않습니다. 전경색이 배경색의 역인 경우 결과는 검은색입니다.
+    `multiply`와 유사하지만, 전경색의 밝기가 배경색의 역과 동일하기만 해도 검은색을 반환합니다.
 - `hard-light`
   - : 전경색이 더 어두운 경우 `multiply`, 더 밝은 경우 `screen`을 적용합니다.
-      `overlay`와 같지만 배경과 전경을 뒤집은 것입니다.
-      배경색에 스포트라이트를 "강렬하게" 비춘 효과와 유사합니다.
+    `overlay`와 같지만 배경과 전경을 뒤집은 것입니다.
+    배경색에 스포트라이트를 "강렬하게" 비춘 효과와 유사합니다.
 - `soft-light`
   - : `hard-light`와 유사하지만 더 부드럽습니다.
-      `hard-light`와 비슷하게 동작합니다.
-      배경색에 스포트라이트를 산란시켜 비춘 효과와 유사합니다.
+    `hard-light`와 비슷하게 동작합니다.
+    배경색에 스포트라이트를 산란시켜 비춘 효과와 유사합니다.
 - `difference`
   - : 최종 색은 두 색상 중 더 어두운 색을 밝은 색에서 뺀 결과입니다.
-      검은 레이어는 아무런 변화도 주지 않고, 흰 레이어로는 다른 레이어의 색을 반전한 효과를 냅니다.
+    검은 레이어는 아무런 변화도 주지 않고, 흰 레이어로는 다른 레이어의 색을 반전한 효과를 냅니다.
 - `exclusion`
   - : `difference`와 유사하지만 더 적은 대비를 가진 색을 반환합니다.
-      `difference`와 마찬가지로 검은 레이어는 아무런 변화도 주지 않고, 흰 레이어로는 다른 레이어의 색을 반전한 효과를 냅니다.
+    `difference`와 마찬가지로 검은 레이어는 아무런 변화도 주지 않고, 흰 레이어로는 다른 레이어의 색을 반전한 효과를 냅니다.
 - `hue`
   - : 최종 색은 전경색의 색조를 가지며 배경색의 채도와 밝기를 가집니다.
 - `saturation`
   - : 최종 색은 전경색의 채도를 가지며 배경색의 색조와 밝기를 가집니다.
-      색조 없는 순수한 회색 배경으로는 아무런 효과도 없습니다.
+    색조 없는 순수한 회색 배경으로는 아무런 효과도 없습니다.
 - `color`
   - : 최종 색은 전경색의 색조와 채도를 가지며 배경색의 밝기를 가집니다.
-      회색조를 유지하므로 전경을 색칠할 때 사용할 수 있습니다.
+    회색조를 유지하므로 전경을 색칠할 때 사용할 수 있습니다.
 - `luminosity`
   - : 최종 색은 전경색의 밝기를 가지며 배경색의 색조와 채도를 가집니다.
-      `color`와 동일하지만 배경과 전경을 뒤집은 것입니다.
+    `color`와 동일하지만 배경과 전경을 뒤집은 것입니다.
 
 ## Description
 
@@ -89,8 +89,7 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: normal;
 }
 ```
@@ -107,8 +106,7 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: multiply;
 }
 ```
@@ -125,8 +123,7 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: screen;
 }
 ```
@@ -143,8 +140,7 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: overlay;
 }
 ```
@@ -161,8 +157,7 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: darken;
 }
 ```
@@ -179,8 +174,7 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: lighten;
 }
 ```
@@ -197,8 +191,7 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: color-dodge;
 }
 ```
@@ -215,8 +208,7 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: color-burn;
 }
 ```
@@ -233,8 +225,7 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: hard-light;
 }
 ```
@@ -251,8 +242,7 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: soft-light;
 }
 ```
@@ -269,8 +259,7 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: difference;
 }
 ```
@@ -287,8 +276,7 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: exclusion;
 }
 ```
@@ -305,8 +293,7 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: hue;
 }
 ```
@@ -323,8 +310,7 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: saturation;
 }
 ```
@@ -341,8 +327,7 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: color;
 }
 ```
@@ -359,8 +344,7 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: luminosity;
 }
 ```
@@ -402,18 +386,20 @@ In the following example, we have a `<div>` with two background images set on it
 div {
   width: 300px;
   height: 300px;
-  background: url(https://mdn.dev/archives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png) no-repeat center,
-  linear-gradient(to bottom, blue, orange);
+  background:
+    url(https://mdn.dev/archives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png)
+      no-repeat center,
+    linear-gradient(to bottom, blue, orange);
 }
 ```
 
 #### JavaScript
 
 ```js
-const selectElem = document.querySelector('select');
-const divElem = document.querySelector('div');
+const selectElem = document.querySelector("select");
+const divElem = document.querySelector("div");
 
-selectElem.addEventListener('change', () => {
+selectElem.addEventListener("change", () => {
   divElem.style.backgroundBlendMode = selectElem.value;
 });
 ```

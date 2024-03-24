@@ -77,7 +77,7 @@ slug: Web/HTML/Element/textarea
 
 ## 使用 CSS 样式
 
-`<textarea>` 是 [可被替换的元素](/zh-CN/docs/CSS/Replaced_element)——其有自己的固有尺寸，像。默认情况下，其 {{cssxref("display")}} 值为 `block`。与其他表单元素相比，这个元素相对比较容易设置样式，使用常规的 CSS 就可以轻松设置它的盒模型、字体、颜色方案等。
+`<textarea>` 是[可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)——其有自己的固有尺寸，像位图一样。默认情况下，其 {{cssxref("display")}} 值为 `inline-block`。与其他表单元素相比，这个元素相对比较容易设置样式，使用常规的 CSS 就可以轻松设置它的盒模型、字体、颜色方案等。
 
 [Styling HTML forms](/zh-CN/docs/Learn/HTML/Forms/Styling_HTML_forms) 这个页面提供了一些关于 `<textarea>` 样式的有用提示。
 

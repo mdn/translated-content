@@ -47,7 +47,7 @@ async function initPaymentRequest() {
 
   const supportsApplePay = new PaymentRequest(
     [{ supportedMethods: "https://apple.com/apple-pay" }],
-    details
+    details,
   ).canMakePayment();
 
   // Supports Apple Pay?
@@ -59,7 +59,7 @@ async function initPaymentRequest() {
   // Otherwise, let's see if we can use Example Pay
   const supportsExamplePay = await new PaymentRequest(
     [{ supportedMethods: "https://example.com/pay" }],
-    details
+    details,
   ).canMakePayment();
 
   if (supportsExamplePay) {

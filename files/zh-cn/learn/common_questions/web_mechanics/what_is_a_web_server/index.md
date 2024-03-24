@@ -3,7 +3,7 @@ title: 什么是 web 服务器？
 slug: Learn/Common_questions/Web_mechanics/What_is_a_web_server
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{QuicklinksWithSubPages("/zh-CN/docs/Learn/Common_questions")}}
 
 在这篇文章中我们会重温什么是 web 服务器，它们如何工作，以及为什么它们很重要。
 
@@ -85,7 +85,7 @@ HTTP 为客户和服务器间的如何沟通提供清晰的规则。我们会在
 
 1. 当收到一个请求时，HTTP 服务器首先要检查所请求的 URL 是否与一个存在的文件相匹配。
 2. 如果是，网络服务器会传送文件内容回到浏览器。如果不是，服务器会检查是否应该动态生成请求所需的文件（参见[静态和动态内容](#静态和动态内容)）。
-3. 如果两种处理都不可能，网络服务器会返回一个错误信息到浏览器，最常见的是 {{HTTPStatus("404", "404 Not Found")}}。404 错误太常见以至于很多网页设计者花费许多时间去设计 404 错误页面 。
+3. 如果两种处理都不可能，网络服务器会返回一个错误信息到浏览器，最常见的是 {{HTTPStatus("404", "404 Not Found")}}。404 错误太常见以至于很多网页设计者花费许多时间去设计 404 错误页面。
    [![MDN 404 页面示例](mdn-404.jpg)](/zh-CN/docs/Web/HTTP/Status/404)
 
 ### 静态和动态内容

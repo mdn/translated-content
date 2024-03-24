@@ -12,13 +12,13 @@ slug: Web/CSS/column-count
 ## Синтаксис
 
 ```css
-/* Значение, заданное ключевым словом */
+/* Ключевые слова */
 column-count: auto;
 
 /* целое значение */
 column-count: 3;
 
-/* глобальные значения */
+/* Глобальные значения */
 column-count: inherit;
 column-count: initial;
 column-count: unset;
@@ -41,9 +41,8 @@ column-count: unset;
 
 ```html
 <p class="content-box">
-  This is a bunch of text split into three columns
-  using the CSS `column-count` property. The text
-  is equally distributed over the columns.
+  This is a bunch of text split into three columns using the CSS `column-count`
+  property. The text is equally distributed over the columns.
 </p>
 ```
 
@@ -65,7 +64,7 @@ column-count: unset;
 
 {{cssinfo}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

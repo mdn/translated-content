@@ -18,7 +18,7 @@ l10n:
 この例では、{{domxref("HID.getDevices()")}} でデバイスを取得し、`opened` の値をコンソールに出力します。
 
 ```js
-document.addEventListener('DOMContentLoaded', async () => {
+document.addEventListener("DOMContentLoaded", async () => {
   let devices = await navigator.hid.getDevices();
   devices.forEach((device) => {
     console.log(`HID: ${device.opened}`);

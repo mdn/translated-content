@@ -22,7 +22,7 @@ Un nuevo objeto iterador {{jsxref("Array")}}.
 ### Usando un bucle [for…of](/es/docs/Web/JavaScript/Reference/Statements/for...of)
 
 ```js
-var a = ['a', 'b', 'c'];
+var a = ["a", "b", "c"];
 var iterator = a.entries();
 
 for (let e of iterator) {

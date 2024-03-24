@@ -87,27 +87,32 @@ margin: unset;
 ### 더 많은 예제
 
 ```css
-margin: 5%;                 /* 모두 5% */
+margin: 5%; /* 모두 5% */
 
-margin: 10px;               /* 모두 10px */
+margin: 10px; /* 모두 10px */
 
-margin: 1.6em 20px;         /* 상하: 1.6em */
-                            /* 좌우: 20px  */
+margin: 1.6em 20px;
+/* 상하: 1.6em */
+/* 좌우: 20px  */
 
-margin: 10px 3% -1em;       /* 상: 10px */
-                            /* 좌우: 3% */
-                            /* 하: -1em */
+margin: 10px 3% -1em;
+/* 상: 10px */
+/* 좌우: 3% */
+/* 하: -1em */
 
-margin: 10px 3px 30px 5px;  /* 상: 10px */
-                            /* 우:  3px */
-                            /* 하: 30px */
-                            /* 좌:  5px */
+margin: 10px 3px 30px 5px;
+/* 상: 10px */
+/* 우:  3px */
+/* 하: 30px */
+/* 좌:  5px */
 
-margin: 2em auto;           /* 상하: 2em */
-                            /* 수평 중앙정렬 */
+margin: 2em auto;
+/* 상하: 2em */
+/* 수평 중앙정렬 */
 
-margin: auto;               /* 상하: 0 */
-                            /* 수평 중앙정렬 */
+margin: auto;
+/* 상하: 0 */
+/* 수평 중앙정렬 */
 ```
 
 ## 참고

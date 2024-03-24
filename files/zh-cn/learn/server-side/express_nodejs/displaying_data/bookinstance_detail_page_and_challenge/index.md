@@ -76,7 +76,7 @@ block content
 
 目前，我们网站上显示的大多数日期，都使用默认的 JavaScript 格式（例如 _Tue Dec 06 2016 15:49:58 GMT+1100_（AUS 东部夏令时间）。本文的挑战，是改善作者`Author`生命周期日期显示的外观信息（死亡/出生日期）和 BookInstance 详细信息页面，使用格式：December 6th, 2016。
 
-> **备注：** 您可以使用与我们用于 Book Instance List 的相同方法（将生命周期的虚拟属性，添加到`Author`模型，并使用[moment](https://www.npmjs.com/package/moment)来设置日期字符串的格式）。
+> **备注：** 你可以使用与我们用于 Book Instance List 的相同方法（将生命周期的虚拟属性，添加到`Author`模型，并使用[moment](https://www.npmjs.com/package/moment)来设置日期字符串的格式）。
 
 这一挑战的要求：
 

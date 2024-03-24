@@ -1044,17 +1044,187 @@ WebM은 2010년 처음 소개되었습니다..
 
 {{EmbedInteractiveExample("pages/tabbed/source.html", "tabbed-standard")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
-
 첫번째 비디오는 WebM 포맷입니다([`type`](/ko/docs/Web/HTML/Element/video#type) 어트리뷰트가 `video/webm`). {{Glossary("user agent")}}는 재생이 불가능 한 경우 `type` 이 `video/mp4` 인 다음 옵션으로넘어갑니다. 둘 다 재생이 불가능 할 경우 "This browser does not support the HTML5 video element." 문구가 표시됩니다.
 
 ## 명세서
 
-{{Specifications}}
+| 명세서                                                                                                                                                       | 설명                                                                                                            |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------- |
+| [ETSI 3GPP](https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=1441)                                            | 컨테이너 포멧을 정의                                                                                            |
+| [ISO/IEC 14496-3](https://www.iso.org/standard/53943.html) (MPEG-4 Part 3 오디오)                                                                            | ADTS를 포함한 MP4 오디오를 정의                                                                                 |
+| [FLAC Format](https://xiph.org/flac/format.html)                                                                                                             | FLAC 포멧 명세서                                                                                                |
+| [ISO/IEC 11172-1](https://www.iso.org/standard/19180.html) (MPEG-1 Part 1 시스템)                                                                            | MPEG-1 컨테이너 포멧을 정의                                                                                     |
+| [ISO/IEC 13818-1](https://www.iso.org/standard/74427.html) (MPEG-2 Part 1 시스템)                                                                            | MPEG-2 컨테이너 포멧을 정의                                                                                     |
+| [ISO/IEC 14496-14](https://www.iso.org/standard/75929.html) (MPEG-4 Part 14: MP4 파일 포멧)                                                                  | MPEG-4 (MP4) version 2 컨테이너 포멧을 정의                                                                     |
+| [ISO/IEC 14496-1](https://www.iso.org/standard/55688.html) (MPEG-4 Part 1 시스템)                                                                            | original MPEG-4 (MP4) 컨테이너 포멧을 정의                                                                      |
+| {{RFC(3533)}}                                                                                                                                                | Ogg 컨테이너 포멧                                                                                               |
+| {{RFC(5334)}}                                                                                                                                                | Ogg 미디어 형식과 파일 확장자                                                                                   |
+| [QuickTime File Format Specification](https://developer.apple.com/library/archive/documentation/QuickTime/QTFF/QTFFPreface/qtffPreface.html)                 | QuickTime movie (MOV) 포멧                                                                                      |
+| [Multimedia Programming Interface and Data Specifications 1.0](https://web.archive.org/web/20090417165828/http://www.kk.iij4u.or.jp/~kondo/wave/mpidata.txt) | 공식 WAVE 사양에 가장 가까운 것                                                                                 |
+| [Resource Interchange File Format](https://docs.microsoft.com/windows/win32/xaudio2/resource-interchange-file-format--riff-) (WAV가 씀)                      | RIFF 포멧을 정의. WAVE 파일은 RIFF의 형식                                                                       |
+| [WebM Container Guidelines](https://www.webmproject.org/docs/container/)                                                                                     | WebM을 위한 Matroska 적용 안내서                                                                                |
+| [Matroska Specifications](https://matroska.org/index.html)                                                                                                   | WebM을 기반으로 하는 Matroska 컨테이너 포멧에 대한 명세서                                                       |
+| [WebM Byte Stream Format](https://w3c.github.io/media-source/webm-byte-stream-format.html)                                                                   | [미디어 소스 확장자](/ko/docs/Web/API/Media_Source_Extensions_API)와 함께 사용하기 위한 WebM 바이트 스트림 포멧 |
 
 ## 브라우저 호환성
 
-{{compat}}
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th rowspan="2" scope="row" style="vertical-align: bottom">
+        컨테이너 형식 이름
+      </th>
+      <th
+        colspan="3"
+        scope="col"
+        style="text-align: center; border-right: 2px solid #d4dde4"
+      >
+        오디오
+      </th>
+      <th colspan="3" scope="col" style="text-align: center">비디오</th>
+    </tr>
+    <tr>
+      <th scope="col" style="vertical-align: bottom">MIME 형식</th>
+      <th scope="col" style="vertical-align: bottom">확장자</th>
+      <th
+        scope="col"
+        style="vertical-align: bottom; border-right: 2px solid #d4dde4"
+      >
+        브라우저 지원
+      </th>
+      <th scope="col" style="vertical-align: bottom">MIME 형식</th>
+      <th scope="col" style="vertical-align: bottom">확장자</th>
+      <th
+        scope="col"
+        style="vertical-align: bottom; border-right: 2px solid #d4dde4"
+      >
+        브라우저 지원
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row" style="vertical-align: bottom">3GP</th>
+      <td style="vertical-align: top"><code>audio/3gpp</code></td>
+      <td style="vertical-align: top"><code>.3gp</code></td>
+      <td style="vertical-align: top; border-right: 2px solid #d4dde4">
+        Firefox
+      </td>
+      <td style="vertical-align: top"><code>video/3gpp</code></td>
+      <td style="vertical-align: top"><code>.3gp</code></td>
+      <td style="vertical-align: top">Firefox</td>
+    </tr>
+    <tr>
+      <th scope="row" style="vertical-align: top">
+        ADTS (Audio Data Transport Stream)
+      </th>
+      <td style="vertical-align: top"><code>audio/aac</code></td>
+      <td style="vertical-align: top"><code>.aac</code></td>
+      <td style="vertical-align: top; border-right: 2px solid #d4dde4">
+        Firefox
+      </td>
+      <td style="vertical-align: top">—</td>
+      <td style="vertical-align: top">—</td>
+      <td style="vertical-align: top">—</td>
+    </tr>
+    <tr>
+      <th scope="row" style="vertical-align: top">FLAC</th>
+      <td style="vertical-align: top"><code>audio/flac</code></td>
+      <td style="vertical-align: top"><code>.flac</code></td>
+      <td style="vertical-align: top; border-right: 2px solid #d4dde4">
+        Firefox
+      </td>
+      <td style="vertical-align: top">—</td>
+      <td style="vertical-align: top">—</td>
+      <td style="vertical-align: top">—</td>
+    </tr>
+    <tr>
+      <th rowspan="2" scope="row" style="vertical-align: top">
+        MPEG-1 / MPEG-2 (MPG or MPEG)
+      </th>
+      <td style="vertical-align: top"><code>audio/mpeg</code></td>
+      <td style="vertical-align: top">
+        <code>.mpg</code><br /><code>.mpeg</code>
+      </td>
+      <td style="vertical-align: top; border-right: 2px solid #d4dde4">
+        Firefox
+      </td>
+      <td rowspan="2" style="vertical-align: top"><code>video/mpeg</code></td>
+      <td rowspan="2" style="vertical-align: top">
+        <code>.mpg</code><br /><code>.mpeg</code>
+      </td>
+      <td rowspan="2" style="vertical-align: top">Firefox</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top"><code>audio/mp3</code></td>
+      <td style="vertical-align: top"><code>.mp3</code></td>
+      <td style="vertical-align: top; border-right: 2px solid #d4dde4">
+        Firefox
+      </td>
+    </tr>
+    <tr>
+      <th scope="row" style="vertical-align: top">MPEG-4 (MP4)</th>
+      <td style="vertical-align: top"><code>audio/mp4</code></td>
+      <td style="vertical-align: top">
+        <code>.mp4</code><br /><code>.m4a</code>
+      </td>
+      <td style="vertical-align: top; border-right: 2px solid #d4dde4">
+        Firefox
+      </td>
+      <td style="vertical-align: top"><code>video/mp4</code></td>
+      <td style="vertical-align: top">
+        <code>.mp4</code><br /><code>.m4v</code><br /><code>.m4p</code>
+      </td>
+      <td style="vertical-align: top">Firefox</td>
+    </tr>
+    <tr>
+      <th scope="row" style="vertical-align: top">Ogg</th>
+      <td style="vertical-align: top"><code>audio/ogg</code></td>
+      <td style="vertical-align: top">
+        <code>.oga</code><br /><code>.ogg</code>
+      </td>
+      <td style="vertical-align: top; border-right: 2px solid #d4dde4">
+        Firefox
+      </td>
+      <td style="vertical-align: top"><code>video/ogg</code></td>
+      <td style="vertical-align: top">
+        <code>.ogv</code><br /><code>.ogg</code>
+      </td>
+      <td style="vertical-align: top">Firefox</td>
+    </tr>
+    <tr>
+      <th scope="row" style="vertical-align: top">QuickTime Movie (MOV)</th>
+      <td style="vertical-align: top">—</td>
+      <td style="vertical-align: top">—</td>
+      <td style="vertical-align: top; border-right: 2px solid #d4dde4">—</td>
+      <td style="vertical-align: top"><code>video/quicktime</code></td>
+      <td style="vertical-align: top"><code>.mov</code></td>
+      <td style="vertical-align: top">Safari</td>
+    </tr>
+    <tr>
+      <th scope="row" style="vertical-align: top">WAV (Waveform Audiofile)</th>
+      <td style="vertical-align: top"><code>audio/wav</code></td>
+      <td style="vertical-align: top"><code>.wav</code></td>
+      <td style="vertical-align: top; border-right: 2px solid #d4dde4">
+        Firefox
+      </td>
+      <td style="vertical-align: top">—</td>
+      <td style="vertical-align: top">—</td>
+      <td style="vertical-align: top">—</td>
+    </tr>
+    <tr>
+      <th scope="row" style="vertical-align: top">WebM</th>
+      <td style="vertical-align: top"><code>audio/webm</code></td>
+      <td style="vertical-align: top"><code>.webm</code></td>
+      <td style="vertical-align: top; border-right: 2px solid #d4dde4">
+        Firefox
+      </td>
+      <td style="vertical-align: top"><code>video/webm</code></td>
+      <td style="vertical-align: top"><code>.webm</code></td>
+      <td style="vertical-align: top">Firefox</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 더 보기
 

@@ -151,34 +151,34 @@ function sameValueZero(x, y) {
 
 しかし、この考え方は、等価性の比較が一次元の「スペクトル」を形成し、「完全に厳密な」ものが一端にあり、「完全に緩い」ものが他にもあることを意味します。このモデルは{{jsxref("Object.is")}}では不十分で、二重等号よりも「緩い」、三重等号よりも「厳しい」ものではなく、その中間（つまり、二重等号よりも厳しく、三重等号よりも緩い）にも当てはまらないからです。同一性を比較した以下の表から、{{jsxref("Object.is")}} が {{jsxref("NaN")}} を扱う方法が原因であることがわかります。`Object.is(NaN, NaN)` が `false` に評価されるのであれば、`-0` と `+0` を区別することにより、三重等号より厳密であることから緩い/厳密のスペクトルに*含めることができる*ことに注目してください。しかし {{jsxref("NaN")}} の扱いは、これが正しくないことを表します。残念ながら、{{jsxref("Object.is")}} は等価演算子に関する緩さや厳密さではなく、単純に固有の特性の観点から考えなければなりません。
 
-| x                   | y                   | `==`       | `===`      | `Object.is` | 同値ゼロ |
-| ------------------- | ------------------- | ---------- | ---------- | ----------- | --------------- |
-| `undefined`         | `undefined`         | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`       |
-| `null`              | `null`              | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`       |
-| `true`              | `true`              | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`       |
-| `false`             | `false`             | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`       |
-| `'foo'`             | `'foo'`             | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`       |
-| `0`                 | `0`                 | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`       |
-| `+0`                | `-0`                | `✅ true`  | `✅ true`  | `❌ false`  | `✅ true`       |
-| `+0`                | `0`                 | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`       |
-| `-0`                | `0`                 | `✅ true`  | `✅ true`  | `❌ false`  | `✅ true`       |
-| `0n`                | `-0n`               | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`       |
-| `0`                 | `false`             | `✅ true`  | `❌ false` | `❌ false`  | `❌ false`      |
-| `""`                | `false`             | `✅ true`  | `❌ false` | `❌ false`  | `❌ false`      |
-| `""`                | `0`                 | `✅ true`  | `❌ false` | `❌ false`  | `❌ false`      |
-| `'0'`               | `0`                 | `✅ true`  | `❌ false` | `❌ false`  | `❌ false`      |
-| `'17'`              | `17`                | `✅ true`  | `❌ false` | `❌ false`  | `❌ false`      |
-| `[1, 2]`            | `'1,2'`             | `✅ true`  | `❌ false` | `❌ false`  | `❌ false`      |
-| `new String('foo')` | `'foo'`             | `✅ true`  | `❌ false` | `❌ false`  | `❌ false`      |
-| `null`              | `undefined`         | `✅ true`  | `❌ false` | `❌ false`  | `❌ false`      |
-| `null`              | `false`             | `❌ false` | `❌ false` | `❌ false`  | `❌ false`      |
-| `undefined`         | `false`             | `❌ false` | `❌ false` | `❌ false`  | `❌ false`      |
-| `{ foo: 'bar' }`    | `{ foo: 'bar' }`    | `❌ false` | `❌ false` | `❌ false`  | `❌ false`      |
-| `new String('foo')` | `new String('foo')` | `❌ false` | `❌ false` | `❌ false`  | `❌ false`      |
-| `0`                 | `null`              | `❌ false` | `❌ false` | `❌ false`  | `❌ false`      |
-| `0`                 | `NaN`               | `❌ false` | `❌ false` | `❌ false`  | `❌ false`      |
-| `'foo'`             | `NaN`               | `❌ false` | `❌ false` | `❌ false`  | `❌ false`      |
-| `NaN`               | `NaN`               | `❌ false` | `❌ false` | `✅ true`   | `✅ true`       |
+| x                   | y                   | `==`       | `===`      | `Object.is` | 同値ゼロ   |
+| ------------------- | ------------------- | ---------- | ---------- | ----------- | ---------- |
+| `undefined`         | `undefined`         | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`  |
+| `null`              | `null`              | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`  |
+| `true`              | `true`              | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`  |
+| `false`             | `false`             | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`  |
+| `'foo'`             | `'foo'`             | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`  |
+| `0`                 | `0`                 | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`  |
+| `+0`                | `-0`                | `✅ true`  | `✅ true`  | `❌ false`  | `✅ true`  |
+| `+0`                | `0`                 | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`  |
+| `-0`                | `0`                 | `✅ true`  | `✅ true`  | `❌ false`  | `✅ true`  |
+| `0n`                | `-0n`               | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`  |
+| `0`                 | `false`             | `✅ true`  | `❌ false` | `❌ false`  | `❌ false` |
+| `""`                | `false`             | `✅ true`  | `❌ false` | `❌ false`  | `❌ false` |
+| `""`                | `0`                 | `✅ true`  | `❌ false` | `❌ false`  | `❌ false` |
+| `'0'`               | `0`                 | `✅ true`  | `❌ false` | `❌ false`  | `❌ false` |
+| `'17'`              | `17`                | `✅ true`  | `❌ false` | `❌ false`  | `❌ false` |
+| `[1, 2]`            | `'1,2'`             | `✅ true`  | `❌ false` | `❌ false`  | `❌ false` |
+| `new String('foo')` | `'foo'`             | `✅ true`  | `❌ false` | `❌ false`  | `❌ false` |
+| `null`              | `undefined`         | `✅ true`  | `❌ false` | `❌ false`  | `❌ false` |
+| `null`              | `false`             | `❌ false` | `❌ false` | `❌ false`  | `❌ false` |
+| `undefined`         | `false`             | `❌ false` | `❌ false` | `❌ false`  | `❌ false` |
+| `{ foo: 'bar' }`    | `{ foo: 'bar' }`    | `❌ false` | `❌ false` | `❌ false`  | `❌ false` |
+| `new String('foo')` | `new String('foo')` | `❌ false` | `❌ false` | `❌ false`  | `❌ false` |
+| `0`                 | `null`              | `❌ false` | `❌ false` | `❌ false`  | `❌ false` |
+| `0`                 | `NaN`               | `❌ false` | `❌ false` | `❌ false`  | `❌ false` |
+| `'foo'`             | `NaN`               | `❌ false` | `❌ false` | `❌ false`  | `❌ false` |
+| `NaN`               | `NaN`               | `❌ false` | `❌ false` | `✅ true`   | `✅ true`  |
 
 ### Object.is() と三重等号の使いどころ
 

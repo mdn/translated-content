@@ -2,6 +2,7 @@
 title: grid-auto-flow
 slug: Web/CSS/grid-auto-flow
 ---
+
 CSS-свойство управляет поведением автоматически размещаемых элементов, точно указывая, как они попадают в сетку.
 
 {{EmbedInteractiveExample("pages/css/grid-auto-flow.html")}}
@@ -9,7 +10,7 @@ CSS-свойство управляет поведением автоматич�
 ## Синтаксис
 
 ```css
-/* Ключевые свойства и значения */
+/* Ключевые слова */
 grid-auto-flow: row;
 grid-auto-flow: column;
 grid-auto-flow: dense;
@@ -56,7 +57,7 @@ grid-auto-flow: unset;
   <option value="column">column</option>
   <option value="row">row</option>
 </select>
-<input id="dense" type="checkbox" onchange="changeGridAutoFlow()">
+<input id="dense" type="checkbox" onchange="changeGridAutoFlow()" />
 <label for="dense">dense</label>
 ```
 
@@ -69,7 +70,7 @@ grid-auto-flow: unset;
   display: grid;
   grid-gap: 10px;
   grid-template: repeat(4, 1fr) / repeat(2, 1fr);
-  grid-auto-flow: column;  /* or 'row', 'row dense', 'column dense' */
+  grid-auto-flow: column; /* or 'row', 'row dense', 'column dense' */
 }
 
 #item1 {
@@ -118,7 +119,7 @@ function changeGridAutoFlow() {
 
 {{cssinfo}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

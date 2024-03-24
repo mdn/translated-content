@@ -38,7 +38,7 @@ Este elemento implementa a interface do [`SVGPolylineElement`](/pt-BR/DOM/SVGPol
 
 ## Compatibilidade com navegadores
 
-{{Compat("svg.elements.polyline")}}
+{{Compat}}
 
 ## Veja também
 

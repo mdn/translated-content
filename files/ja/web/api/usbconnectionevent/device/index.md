@@ -18,7 +18,7 @@ l10n:
 USB デバイスを接続すると、`connect` イベントが発火します。`event.device` を呼び出すと、接続された {{domxref("USBDevice")}} が返ります。
 
 ```js
-navigator.usb.addEventListener('connect', (event) => {
+navigator.usb.addEventListener("connect", (event) => {
   console.log(event.device);
 });
 ```

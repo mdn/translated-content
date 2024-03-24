@@ -28,7 +28,7 @@ var curElement = document.activeElement;
 ## Exemplo
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <script type="text/javascript" charset="utf-8">

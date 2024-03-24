@@ -179,7 +179,7 @@ String readAsDataURL(
 - `EncodingError`
   - : 当资源是一个 data URL，并且超过了浏览器的限制大小时触发该异常。
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
@@ -187,7 +187,8 @@ String readAsDataURL(
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [File API Specification: FileReaderSync](https://www.w3.org/TR/FileAPI/#FileReaderSync)
-- Related interfaces: {{ domxref("FileReader") }}, {{ domxref("BlobBuilder") }}, {{ domxref("File") }}, {{ domxref("Blob") }}
+- {{DOMxRef("FileReader")}}
+- {{DOMxRef("Blob")}}
+- {{DOMxRef("File")}}

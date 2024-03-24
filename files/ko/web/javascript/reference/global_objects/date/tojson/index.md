@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/toJSON
 ## 구문
 
 ```js
-    dateObj.toJSON()
+dateObj.toJSON();
 ```
 
 ### 반환 값
@@ -28,7 +28,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/toJSON
 ### `toJSON()` 사용하기
 
 ```js
-const jsonDate = (new Date()).toJSON();
+const jsonDate = new Date().toJSON();
 const backToDate = new Date(jsonDate);
 
 console.log(jsonDate); //2015-10-26T07:46:36.611Z

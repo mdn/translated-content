@@ -31,10 +31,12 @@ isDefaultNamespace(namespaceURI)
 ## 例
 
 ```html
-"" が &lt;output&gt; の既定の名前空間であるか: <output>未検査</output><br/>
-"http://www.w3.org/2000/svg" が &lt;output&gt; の既定の名前空間であるか: <output>未検査</output><br/>
-"" が &lt;svg&gt; の既定の名前空間であるか: <output>未検査</output><br/>
-"http://www.w3.org/2000/svg" が &lt;svg&gt; の既定の名前空間であるか: <output>未検査</output><br/>
+"" が &lt;output&gt; の既定の名前空間であるか: <output>未検査</output><br />
+"http://www.w3.org/2000/svg" が &lt;output&gt; の既定の名前空間であるか:
+<output>未検査</output><br />
+"" が &lt;svg&gt; の既定の名前空間であるか: <output>未検査</output><br />
+"http://www.w3.org/2000/svg" が &lt;svg&gt; の既定の名前空間であるか:
+<output>未検査</output><br />
 <svg xmlns="http://www.w3.org/2000/svg" height="1"></svg>
 <button>結果を見るにはクリック</button>
 ```

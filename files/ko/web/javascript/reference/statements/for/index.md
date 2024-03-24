@@ -5,15 +5,15 @@ slug: Web/JavaScript/Reference/Statements/for
 
 {{jsSidebar("Statements")}}
 
-**for 문**은 괄호로 감싸고 세미콜론으로 구분한 세 개의 선택식과, 반복을 수행할 문(주로 {{jsxref("Statements/block", "블럭문", "", 0)}})으로 이루어져 있습니다.
+**`for` 문**은 괄호로 감싸고 세미콜론으로 구분한 세 개의 선택식과, 반복을 수행할 문(주로 {{jsxref("Statements/block", "블럭문", "", 0)}})으로 이루어져 있습니다.
 
 {{EmbedInteractiveExample("pages/js/statement-for.html")}}
 
 ## 구문
 
-```js
-    for ([initialization]; [condition]; [final-expression])
-       statement
+```js-nolint
+for ([initialization]; [condition]; [final-expression])
+   statement
 ```
 
 - `initialization`
@@ -37,8 +37,8 @@ slug: Web/JavaScript/Reference/Statements/for
 
 ```js
 for (var i = 0; i < 9; i++) {
-   console.log(i);
-   // 기타 등등
+  console.log(i);
+  // 기타 등등
 }
 ```
 
@@ -51,18 +51,18 @@ for (var i = 0; i < 9; i++) {
 ```js
 var i = 0;
 for (; i < 9; i++) {
-    console.log(i);
-    // 기타 등등
+  console.log(i);
+  // 기타 등등
 }
 ```
 
 `initialization` 블럭처럼 `condition` 블럭도 선택 사항입니다. 다만 이 경우, 반복문 본문에 무한 반복을 탈출할 수 있는 장치를 추가해야 합니다.
 
 ```js
-for (var i = 0;; i++) {
-   console.log(i);
-   if (i > 3) break;
-   // 기타 등등
+for (var i = 0; ; i++) {
+  console.log(i);
+  if (i > 3) break;
+  // 기타 등등
 }
 ```
 
@@ -83,26 +83,37 @@ for (;;) {
 다음 `for` 반복 사이클은 노드의 위치 오프셋을 `final-expression`에서 계산해 문이나 블럭문이 필요하지 않으므로 세미콜론을 사용합니다.
 
 ```js
-    function showOffsetPos(sId) {
-      var nLeft = 0, nTop = 0;
+function showOffsetPos(sId) {
+  var nLeft = 0,
+    nTop = 0;
 
-      for (
-        var oItNode = document.getElementById(sId); /* initialization */
-        oItNode; /* condition */
-        nLeft += oItNode.offsetLeft, nTop += oItNode.offsetTop, oItNode = oItNode.offsetParent /* final-expression */
-      ); /* semicolon */
+  for (
+    var oItNode = document.getElementById(sId) /* initialization */;
+    oItNode /* condition */;
+    nLeft += oItNode.offsetLeft,
+      nTop += oItNode.offsetTop,
+      oItNode = oItNode.offsetParent /* final-expression */
+  ); /* semicolon */
 
-      console.log('Offset position of \'' + sId + '\' element:\n left: ' + nLeft + 'px;\n top: ' + nTop + 'px;');
-    }
+  console.log(
+    "Offset position of '" +
+      sId +
+      "' element:\n left: " +
+      nLeft +
+      "px;\n top: " +
+      nTop +
+      "px;",
+  );
+}
 
-    /* Example call: */
+/* Example call: */
 
-    showOffsetPos('content');
+showOffsetPos("content");
 
-    // Output:
-    // "Offset position of "content" element:
-    // left: 0px;
-    // top: 153px;"
+// Output:
+// "Offset position of "content" element:
+// left: 0px;
+// top: 153px;"
 ```
 
 > **참고:** 여기서 쓰인 세미콜론은, JavaScript가 **필수로 요구하는 몇 안되는 세미콜론**입니다. 물론 세미콜론 없이는 반복 사이클 선언의 바로 다음 줄을 반복 본문으로 인식합니다.

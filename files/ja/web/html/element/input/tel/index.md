@@ -98,8 +98,8 @@ Mozilla 拡張で、ユーザーがフィールドを編集中に <kbd>Enter</kb
 
 `<input type="tel">` の主な利点の一つは、携帯電話のブラウザーに電話番号を入力するための特別なキーボードを表示させることです。例えば、いくつかの端末でキーパッドがどのように表示されるかを示します。
 
-| Android 版 Firefox                                    | WebKit iOS (Safari/Chrome/Firefox)                           |
-| ------------------------------------------------------ | ------------------------------------------------------------ |
+| Android 版 Firefox                                             | WebKit iOS (Safari/Chrome/Firefox)                                    |
+| -------------------------------------------------------------- | --------------------------------------------------------------------- |
 | ![Android 版 Firefox のスクリーンショット](fx-android-tel.png) | ![iOS 版 Firefox のスクリーンショット](iphone-tel-keyboard-50pct.png) |
 
 ### 単純な tel 入力欄
@@ -331,7 +331,7 @@ input:valid + span::after {
     </select>
   </div>
   <div>
-    <p>電話番号を入力してください: </p>
+    <p>電話番号を入力してください:</p>
     <span class="areaDiv">
       <input
         id="areaNo"

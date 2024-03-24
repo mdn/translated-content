@@ -22,9 +22,9 @@ slug: Web/API/BaseAudioContext/state
 次のスニペットは [AudioContext states のデモ](https://github.com/mdn/webaudio-examples)（[ライブ実行で確認](https://mdn.github.io/webaudio-examples/audiocontext-states/)）の一部です。 {{domxref("BaseAudioContext.statechange_event", "onstatechange")}} ハンドラーは、状態が変わるたびにコンソールにログを出力するために使われています。
 
 ```js
-audioCtx.onstatechange = function() {
+audioCtx.onstatechange = function () {
   console.log(audioCtx.state);
-}
+};
 ```
 
 ### iOS Safari における一時停止した再生の再開の状態
@@ -33,7 +33,7 @@ iOS の Safari では、ユーザーが（タブの切り替え、ブラウザ�
 
 ```js
 function play() {
-  if (audioCtx.state === 'interrupted') {
+  if (audioCtx.state === "interrupted") {
     audioCtx.resume().then(() => play());
     return;
   }

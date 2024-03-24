@@ -67,13 +67,13 @@ l10n:
 画像をリクエストされているので、レスポンスに正しい MIME タイプを与えるために {{domxref("Response.blob")}} を実行する必要があることにお気づきでしょう。
 
 ```js
-const image = document.querySelector('.my-image');
-fetch('flowers.jpg')
-.then((response) => response.blob())
-.then((blob) => {
-  const objectURL = URL.createObjectURL(blob);
-  image.src = objectURL;
-});
+const image = document.querySelector(".my-image");
+fetch("flowers.jpg")
+  .then((response) => response.blob())
+  .then((blob) => {
+    const objectURL = URL.createObjectURL(blob);
+    image.src = objectURL;
+  });
 ```
 
 {{domxref("Response.Response", "Response()")}} コンストラクターを使用して、独自の `Response` オブジェクトを生成することもできます。
@@ -89,14 +89,14 @@ const response = new Response();
 ```js
 // Ajax 呼び出しを行う関数
 const doAjax = async () => {
-  const response = await fetch('Ajax.php'); // Response オブジェクトを生成する
+  const response = await fetch("Ajax.php"); // Response オブジェクトを生成する
   if (response.ok) {
     const jsonValue = await response.json(); // レスポンスの本体から JSON の値を取得
     return Promise.resolve(jsonValue);
   } else {
-    return Promise.reject('*** PHP file not found');
+    return Promise.reject("*** PHP file not found");
   }
-}
+};
 
 // 関数を呼び出され、値やエラーメッセージをコンソールに出力する
 doAjax().then(console.log).catch(console.log);

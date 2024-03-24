@@ -9,8 +9,6 @@ slug: Web/HTML/Element/input/file
 
 {{EmbedInteractiveExample("pages/tabbed/input-file.html", "tabbed-shorter")}}
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
-
 <table class="properties">
   <tbody>
     <tr>
@@ -75,7 +73,7 @@ slug: Web/HTML/Element/input/file
 | [`files`](#files)       | 선택한 파일을 나열하는 {{domxref("FileList")}}                                            |
 | [`multiple`](#multiple) | 지정할 경우 사용자가 여러 개의 파일을 선택할 수 있음                                      |
 
-### {{htmlattrdef("accept")}}
+### `accept`
 
 [`accept`](/ko/docs/Web/HTML/Attributes/accept) 특성은 파일 입력 칸이 허용할 파일 유형을 나타내는 문자열로, 쉼표로 구분한 [**고유 파일 유형 지정자**](#고유_파일_유형_지정자)의 목록입니다. 주어진 파일 유형의 식별 방법이 여러 가지일 수도 있으므로, 특정 파일 형식이 필요할 땐 유형의 집합을 제공하는 것이 좋습니다.
 
@@ -88,17 +86,17 @@ slug: Web/HTML/Element/input/file
   accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
 ```
 
-### {{htmlattrdef("capture")}}
+### `capture`
 
 [`accept`](/ko/docs/Web/HTML/Attributes/accept) 특성이 이미지나 비디오 캡처 데이터를 요구할 경우, [`capture`](/ko/docs/Web/HTML/Attributes/capture) 특성으로는 어떤 카메라를 사용할지 지정할 수 있습니다. `user` 값은 전면 카메라(사용자를 향한 카메라)와 마이크를, `environment` 값은 후면 카메라와 마이크를 사용해야 함을 나타냅니다. `capture` 특성을 누락한 경우 {{Glossary("user agent", "사용자 에이전트")}}가 어떤 쪽을 선택할지 스스로 결정합니다. 요청한 방향의 카메라를 사용할 수 없는 경우 사용자 에이전트는 자신이 선호하는 기본 모드로 대체할 수 있습니다.
 
 > **참고:** `capture`는 과거 불리언 특성이었으며, 존재할 경우 파일 선택 창을 요청하는 대신 장치의 카메라나 마이크 등 미디어 캡처 장치를 요청했었습니다.
 
-### {{htmlattrdef("files")}}
+### `files`
 
 선택한 모든 파일을 나열하는 {{domxref("FileList")}} 객체입니다. [`multiple`](/ko/docs/Web/HTML/Element/input/file#multiple) 특성을 지정하지 않았다면 두 개 이상의 파일을 포함하지 않습니다.
 
-### {{htmlattrdef("multiple")}}
+### `multiple`
 
 [`multiple`](/ko/docs/Web/HTML/Attributes/multiple) 불리언 특성을 지정한 경우 사용자가 파일 선택 창에서 복수의 파일을 선택할 수 있습니다.
 
@@ -110,7 +108,7 @@ slug: Web/HTML/Element/input/file
 | ------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 | [`webkitdirectory`](#webkitdirectory) | 사용자가 디렉토리를 선택할 수 있는지 나타내는 불리언 특성. [`multiple`](#multiple) 특성을 지정한 경우 복수 선택 가능 |
 
-### {{htmlattrdef("webkitdirectory")}} {{non-standard_inline}}
+### `webkitdirectory` {{non-standard_inline}}
 
 `webkitdirectory` 불리언 특성이 존재할 경우 사용자의 파일 선택 창에서 디렉토리만 선택 가능해야 함을 나타냅니다. {{domxref("HTMLInputElement.webkitdirectory")}} 문서를 방문해 보다 자세한 정보와 예제를 알아보세요.
 

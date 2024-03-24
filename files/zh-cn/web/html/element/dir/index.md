@@ -23,7 +23,7 @@ slug: Web/HTML/Element/dir
 
     > **备注：** 用法注解：不要使用这个属性，因为它已经废除了： {{HTMLElement("dir")}} 元素应该使用 CSS 来设计。为了提供 `compact` 属性的相似效果，可以使用 [CSS](/zh-CN/docs/CSS) 属性 {{cssxref("line-height")}}，值为 `80%`。
 
-## 另见
+## 参见
 
 - 其他和列表相关的 HTML 元素： {{HTMLElement("ol")}}，{{HTMLElement("ul")}}，{{HTMLElement("li")}}，{{HTMLElement("menu")}}；
 - 特定用于 `<dir>` 元素的 CSS 属性：

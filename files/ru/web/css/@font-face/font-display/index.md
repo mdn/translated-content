@@ -2,6 +2,7 @@
 title: font-display
 slug: Web/CSS/@font-face/font-display
 ---
+
 {{CSSRef}}
 
 ## Описание
@@ -24,7 +25,7 @@ slug: Web/CSS/@font-face/font-display
 ## Синтаксис
 
 ```css
-/* Значения свойства */
+/* Ключевые слова */
 font-display: auto;
 font-display: block;
 font-display: swap;
@@ -54,8 +55,9 @@ font-display: optional;
 ```css
 @font-face {
   font-family: ExampleFont;
-  src: url(/path/to/fonts/examplefont.woff) format('woff'),
-       url(/path/to/fonts/examplefont.eot) format('eot');
+  src:
+    url(/path/to/fonts/examplefont.woff) format("woff"),
+    url(/path/to/fonts/examplefont.eot) format("eot");
   font-weight: 400;
   font-style: normal;
   font-display: fallback;
@@ -66,6 +68,6 @@ font-display: optional;
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}

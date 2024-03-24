@@ -14,6 +14,8 @@ p::first-line {
 }
 ```
 
+{{EmbedInteractiveExample("pages/tabbed/pseudo-element-first-line.html", "tabbed-shorter")}}
+
 > **メモ:** CSS3 では `::first-line` という (二重コロン付き) 表記が、[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)と[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)を見分けやすくするために導入されました。ブラウザーでは CSS2 で導入された `:first-line` も使用できます。
 
 ## 利用可能なプロパティ
@@ -35,11 +37,15 @@ p::first-line {
 ### HTML
 
 ```html
-<p>スタイルはこの段落の最初の行にのみ適用されます。
-その後のすべての文字列は普通のスタイルになります。分かりますか？</p>
+<p>
+  スタイルはこの段落の最初の行にのみ適用されます。
+  その後のすべての文字列は普通のスタイルになります。分かりますか？
+</p>
 
-<span>ブロックレベル要素ではないので、この文字列の最初の行は、
-特殊なスタイルになりません。</span>
+<span
+  >ブロックレベル要素ではないので、この文字列の最初の行は、
+  特殊なスタイルになりません。</span
+>
 ```
 
 ### CSS

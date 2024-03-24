@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4b10cb28d5eee0e952b2d84bd1b23cc53daa93b7
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 このイベントを使って、拡張機能の別の部品からのメッセージを受け取ることができます。
 

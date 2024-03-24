@@ -194,13 +194,10 @@ Las `promesas` resuelven un fallo fundamental de la pirámide de funciones callb
 
 Cuando una `promesa` es rechazada, uno de los dos eventos se envía al ámbito global (generalmente, éste es el {{domxref("window")}}, o, si se utiliza en un trabajador web, es el {{domxref("Worker")}} u otra interfaz basada en un trabajador). Los dos eventos son:
 
-**{{domxref("Window.rejectionhandled_event", "rejectionhandled")}}**
-
-Se envía cuando se rechaza una promesa, una vez que el rechazo ha sido manejado por la función `reject` del ejecutor.
-
-**{{domxref("Window.unhandledrejection_event", "unhandledrejection")}}**
-
-Se envía cuando se rechaza una promesa pero no hay un controlador de rechazo disponible.
+- {{domxref("Window.rejectionhandled_event", "rejectionhandled")}}
+  - : Se envía cuando se rechaza una promesa, una vez que el rechazo ha sido manejado por la función `reject` del ejecutor.
+- {{domxref("Window.unhandledrejection_event", "unhandledrejection")}}
+  - : Se envía cuando se rechaza una promesa pero no hay un controlador de rechazo disponible.
 
 En ambos casos, el evento (del tipo {{domxref("PromiseRejectionEvent")}}) tiene como miembros una propiedad {{domxref("PromiseRejectionEvent.promise", "promise")}} que indica que la promesa fue rechazada, y una propiedad {{domxref("PromiseRejectionEvent.reason", "reason")}} que proporciona el motivo por el cuál se rechaza la promesa.
 
@@ -365,7 +362,7 @@ El primer error es no encadenar las acciones adecuadamente. Esto sucede cuando c
 
 El segundo error es el anidamiento innecesario, que da lugar al primer error. La anidación también limita el alcance de los manejadores de errores internos, que - si no son deseados - pueden llevar a errores no detectados. Una variante de esto es el [constructor anti-patrón de promesas](https://stackoverflow.com/questions/23803743/what-is-the-explicit-promise-construction-antipattern-and-how-do-i-avoid-it), el cuál combina el anidamiento con el uso redundante del constructor de promesa para envolver el código que ya usa promesas.
 
-El tercer error es olvidar cerrar las cadenas con catch.Las cadenas de promesas no terminadas conducen a errores no capturados en la mayoría de los navegadores.
+El tercer error es olvidar cerrar las cadenas con catch. Las cadenas de promesas no terminadas conducen a errores no capturados en la mayoría de los navegadores.
 
 Una buena regla es devolver o terminar siempre las cadenas de promesas, y tan pronto como obtenga una nueva promesa, devolverla de inmediato, para aplanar las cosas:
 
