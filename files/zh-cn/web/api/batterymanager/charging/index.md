@@ -31,6 +31,7 @@ navigator.getBattery().then((battery) => {
 
   document.querySelector("#charging").textContent = charging;
 });
+```
 
 {{ EmbedLiveSample('示例', '100%', 30) }}
 
@@ -46,4 +47,3 @@ navigator.getBattery().then((battery) => {
 
 - {{domxref("BatteryManager")}}
 - {{domxref("Navigator.getBattery")}}
-```
