@@ -100,7 +100,7 @@ myPromise
 (promise D, (promise C, (promise B, (promise A) ) ) )
 ```
 
-`nextValue`이 프로미스인 경우, 그 효과는 동적 교체입니다. 반환으로 인해 프로미스가 나오게 되지만 `nextValue` 프로미스가 그 자리에 들어가게 됩니다. 위에 표시된 중첩의 경우, "프로미스 B"와 연결된 `.then()`이 "프로미스 X"의 `nextValue`를 반환한다고 가정합니다. 결과는 다음과 같습니다.
+`nextValue`이 프로미스인 경우, 그 결과는 동적으로 대체됩니다. `return`은 프로미스를 빠져나가게 하지만 `nextValue` 프로미스는 그 자리에 밀어넣게 됩니다. 위에 표시된 중첩에서 "promise B"와 관련된 `.then()`이 "promise X"의 `nextValue`를 반환하는 경우, 결과 중첩 구조는 다음과 같이 보일 것입니다.
 
 ```
 (promise D, (promise C, (promise X) ) )
