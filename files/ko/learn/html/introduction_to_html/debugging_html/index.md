@@ -153,7 +153,7 @@ HTML은 Rust만큼 복잡하지 않습니다. HTML은 브라우저가 구문 분
 - "End tag `li` implied, but there were open elements" (2 instances): 이러한 메시지는 닫아야 할 요소가 열려 있음을 나타냅니다. 종료 태그가 암시되어 있지만 실제로는 없습니다. 줄/열 정보는 실제로 닫는 태그가 있어야 하는 줄 뒤의 첫 번째 줄을 가리키지만, 이 정도면 무엇이 잘못되었는지 알 수 있는 충분한 단서입니다.
 - "Unclosed element `strong`": {{htmlelement("strong")}} 요소는 닫히지 않고 줄/열 정보가 해당 위치를 바로 가리키기 때문에 이해하기 매우 쉽습니다.
 - "End tag `strong` violates nesting rules": 이렇게 하면 잘못 중첩된 요소가 지적되고 줄/열 정보가 해당 위치를 알려줍니다.
-- "End of file reached when inside an attribute value. Ignoring tag": 이것은 다소 모호합니다.; 파일의 끝이 속성 값 안에 나타나기 때문에 파일의 끝 근처 어딘가에 속성 값이 제대로 형성되지 않았다는 사실을 나타냅니다. 브라우저가 링크를 렌더링하지 않는다는 사실은 어떤 요소에 문제가 있는지 알 수 있는 좋은 단서가 됩니다.
+- "End of file reached when inside an attribute value. Ignoring tag": 이것은 다소 모호합니다. 파일의 끝이 속성 값 안에 나타나기 때문에 파일의 끝 근처 어딘가에 속성 값이 제대로 형성되지 않았다는 사실을 나타냅니다. 브라우저가 링크를 렌더링하지 않는다는 사실은 어떤 요소에 문제가 있는지 알 수 있는 좋은 단서가 됩니다.
 - "End of file seen and there were open elements": 이것은 약간 모호하지만 기본적으로 제대로 닫아야 하는 열린 요소가 있다는 사실을 나타냅니다. 줄 번호는 파일의 마지막 몇 줄을 가리키며, 이 오류 메시지에는 열려 있는 요소의 예를 나타내는 코드 줄이 함께 제공됩니다.
 
   ```
