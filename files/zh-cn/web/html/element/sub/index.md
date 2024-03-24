@@ -19,7 +19,7 @@ l10n:
 
 `<sub>` 元素只能用于排版原因，即改变文本的位置以符合排版惯例或标准，而不能仅用于呈现或外观目的。
 
-例如，如果一家公司的 [wordmark](https://en.wikipedia.org/wiki/Wordmark) 中使用了改变的基线，那么使用 `<sub>` 对公司名称进行样式调整就不合适；相反，应该使用 CSS。例如，可以使用 {{cssxref("vertical-align")}} 属性，并声明 `vertical-align: sub`；或使用 `vertical-align: -25%`，以更精确地控制基线移动，。
+例如，如果一家公司的 [wordmark](https://en.wikipedia.org/wiki/Wordmark) 中使用了改变的基线，那么使用 `<sub>` 对公司名称进行样式调整就不合适；相反，应该使用 CSS。例如，可以使用 {{cssxref("vertical-align")}} 属性，并声明 `vertical-align: sub`；或使用 `vertical-align: -25%`，以更精确地控制基线移动。
 
 `<sub>` 的适当用例包括（但不限于）：
 
