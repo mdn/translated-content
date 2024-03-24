@@ -36,7 +36,7 @@ const ws = new WeakSet();
 const obj = {};
 ws.add(window);
 
-ws.has(window); // true 성공
+ws.has(window); // true 반환
 ws.has(obj); // false 반환
 
 // 등록되지 않은 symbol 저장
