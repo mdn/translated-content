@@ -106,7 +106,7 @@ main.js というファイルを新規作成し、同じディレクトリーに
 
 最初に、映像プレイヤーの HTML を見てみましょう。 HTML の中は次のようになっています。
 
-```html
+```html-nolint
 <section class="player">
   <video controls>
     <source src="rabbit320.mp4" type="video/mp4" />
