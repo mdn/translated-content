@@ -61,8 +61,8 @@ try {
 
 URL API는 이름에 몇 가지 인터페이스만 있는 간단한 API입니다.
 
-- [`URL`](/en-US/docs/Web/API/URL)
-- [`URLSearchParams`](/en-US/docs/Web/API/URLSearchParams)
+- [`URL`](/ko/docs/Web/API/URL)
+- [`URLSearchParams`](/ko/docs/Web/API/URLSearchParams)
 
 ## 예제
 
