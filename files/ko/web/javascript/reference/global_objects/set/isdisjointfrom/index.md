@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-{{jsxref("Set")}} 인스턴스의 **`isDisjointFrom()`** 메소드는 집합을 받아서 집합을 받아 이 집합이 주어진 집합과 공통 요소가 없는지 여부를 나타내는 부울을 반환합니다.
+{{jsxref("Set")}} 인스턴스의 **`isDisjointFrom()`** 메소드는 집합을 받아서 집합을 받아 이 집합이 주어진 집합과 공통 요소가 없는지 여부를 나타내는 불리언을 반환합니다.
 
 ## 구문
 
@@ -34,15 +34,12 @@ isDisjointFrom(other)
 
 ![두 개의 원이 있는 벤 다이어그램입니다. 두 원은 겹치는 영역이 없기 때문에 A와 B는 분리되어 있습니다.](diagram.svg)
 
-`union()`은 `other` 매개변수로 [유사 집합](/ko/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects) 객체를 받습니다.
-사용자 코드를 호출하지 않고 `this`에 저장된 기본 데이터를 직접 검색하기 때문에 실제 {{jsxref("Set")}} 인스턴스가 되기
-위해 {{jsxref("Operators/this", "this")}}가 필요합니다. 그 다음의 행동은 `this`와 `other`의 크기에 달려있습니다.
+`union()`은 `other` 매개변수로 [유사 집합](/ko/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects) 객체를 받습니다. 사용자 코드를 호출하지 않고 `this`에 저장된 기본 데이터를 직접 검색하기 때문에 {{jsxref("Operators/this", "this")}}는 실제 {{jsxref("Set")}} 인스턴스여야합니다. 그 다음의 행동은 `this`와 `other`의 크기에 달려있습니다.
 
 - `this`가 `other.size`보다 요소가 많다면 `other`의 `keys()` 메서드를 호출하여 `other`을 순회하고, `other`의 어떤 요소라도 `this`에 있으면 `false`를 반환합니다(그리고 `return()` 메서드를 호출하여 `keys()` 순회를 닫습니다). 그렇지 않으면 `true`를 반환합니다.
 - 그렇지 않으면, `this`의 요소를 순회하고 `this`의 어떤 요소 `e`에 대해 `other.has(e)`가 [참 같은 값](/ko/docs/Glossary/Truthy) 값을 반환하는 경우 `false`를 반환합니다. 그렇지 않으면 `true`를 반환합니다.
 
-이 구현으로 인해 `isDisjointFrom()`의 효율성은 대부분 `this`와 `other` 중 더 작은 집합의 크기에 따라
-달라집니다(집합을 선형 이하 시간 내에 액세스할 수 있다고 가정할 때).
+이 구현으로 인해 `isDisjointFrom()`의 효율성은 대부분 `this`와 `other` 중 더 작은 집합의 크기에 따라 달라집니다(집합을 선형 이하 시간 내에 접근할 수 있다고 가정할 때).
 
 ## 예제
 
