@@ -10,7 +10,7 @@ HTML을 작성을 할 수 있지만, 문제가 생겼을 때 코드의 오류가
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">선행사항:</th>
+      <th scope="row">필요한 사전 지식:</th>
       <td>
         HTML이 익숙해야 합니다. 다음문서를 이해하는 정도면 충분합니다.
         <a href="/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
