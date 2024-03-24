@@ -73,7 +73,7 @@ slug: Web/HTML/Element/audio
     > - 規範並不強制要求瀏覽器遵循此屬性的值；它僅僅是一個提示。
 
 - `src`
-  - : 要嵌入的音訊的 URL。這受到 [HTTP 存取控制](/zh-TW/docs/Web/HTTP/CORS) 的限制。這是可選的；你可以在音訊塊中使用 {{htmlelement("source")}} 元素來指定要嵌入的音訊。
+  - : 要嵌入的音訊的 URL。這受到 [HTTP 存取控制](/zh-TW/docs/Web/HTTP/CORS)的限制。這是可選的；你可以在音訊塊中使用 {{htmlelement("source")}} 元素來指定要嵌入的音訊。
 
 ## 事件
 
@@ -385,13 +385,14 @@ Welcome to the Time Keeper's podcast! In this episode we're discussing which Swi
       <td>
         <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
           >流內容</a
-        >、段落型內容、嵌入型內容。如果有<a href="/zh-TW/docs/Web/HTML/Element/audio#controls"><code>controls</code></a> 屬性：互動型內容和捫及內容。
+        >、段落型內容、嵌入型內容。如果有
+      <a href="#controls"><code>controls</code></a> 屬性：互動型內容和捫及內容。
       </td>
     </tr>
     <tr>
       <th scope="row">允許內容</th>
       <td>
-        如果元素有一個 <a href="/zh-TW/docs/Web/HTML/Element/audio#src"><code>src</code></a>
+        如果元素有一個 <a href="#src"><code>src</code></a>
         屬性：零個或多個 {{HTMLElement("track")}} 元素，並包含不包含 {{HTMLElement("audio")}} 或 {{HTMLElement("video")}} 媒體元素的透明型內容。<br />否則：零個或多個 {{HTMLElement("source")}} 元素，零個或多個 {{HTMLElement("track")}} 元素，並包含不包含 {{HTMLElement("audio")}} 或 {{HTMLElement("video")}} 媒體元素的透明內容。
       </td>
     </tr>
