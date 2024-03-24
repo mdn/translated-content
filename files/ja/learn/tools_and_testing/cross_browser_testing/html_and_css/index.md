@@ -1,32 +1,51 @@
 ---
 title: 一般的な HTML と CSS の問題への対処
 slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
+l10n:
+  sourceCommit: f7c186696980fee97e72261370d7b5a8c1cd9302
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies","Learn/Tools_and_testing/Cross_browser_testing/JavaScript", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
-ここでは、HTML と CSS のコードで発生する可能性のある一般的なクロスブラウザーの問題、および問題の発生を防ぐため、または発生する問題を修正するために使用できるツールについて具体的に説明します。これには、コードのリンティング、CSS プレフィックスの処理、問題を追跡するためのブラウザーの開発者ツールの使用、ブラウザーにサポートを追加するための polyfill の使用、レスポンシブデザイン問題への取り組みなどが含まれます。
+ここでは、HTML と CSS のコードで発生する可能性のある一般的なブラウザー間の問題、および問題の発生を防ぐため、または発生する問題を修正するために使用できるツールについて具体的に説明します。これには、コードのリンティング、CSS プレフィックスの処理、問題を追跡するためのブラウザーの開発者ツールの使用、ブラウザーにサポートを追加するための polyfill の使用、レスポンシブデザイン問題への取り組みなどが含まれます。
 
-| 前提条件: | 主要な [HTML](/ja/docs/Learn/HTML)、[CSS](/ja/docs/Learn/CSS)、および [JavaScript](/ja/docs/Learn/JavaScript) 言語に精通していること。[クロスブラウザーテストの原則](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)の高水準のアイデア。 |
-| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 目標:     | 一般的な HTML と CSS のクロスブラウザーの問題を診断し、それらを修正するための適切なツールとテクニックを使うことができるようにする。                                                                                                                           |
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">前提条件:</th>
+      <td>
+        <a href="/ja/docs/Learn/HTML">HTML</a>、<a href="/ja/docs/Learn/CSS">CSS</a>、<a href="/ja/docs/Learn/JavaScript">JavaScript</a> 言語の主要部に通じていること。
+        <a
+          href="/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
+          >ブラウザー横断テストの基本</a
+        >について高水準の考えを持っていること。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">目標:</th>
+      <td>
+        一般的な HTML と CSS のブラウザー間の問題を診断し、それらを修正するための適切なツールとテクニックを使うことができるようにする。
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## HTML と CSS の問題
 
-一部の HTML と CSS の問題は、両方の言語がかなり単純で、コードがうまく作成され、効率的であり、ページ上に「機能の目的」を意味的に記述していることを確認するという意味で開発者がそれらについて真剣に考えていないという事実にあります。最悪の場合、JavaScript を使用して Web ページのコンテンツとスタイル全体を生成するため、ページにアクセスできなくなり、パフォーマンスが低下します (DOM 要素の生成にはコストがかかります)。他のケースでは、初期の機能がブラウザー間で一貫してサポートされていないため、一部の機能やスタイルが一部のユーザには機能しないことがあります。
+一部の HTML と CSS の問題は、両方の言語がかなり単純で、コードがうまく作成され、効率的であり、ページ上に「機能の目的」を意味的に記述していることを確認するという意味で開発者がそれらについて真剣に考えていないという事実にあります。最悪の場合、JavaScript を使用してウェブページのコンテンツとスタイル全体を生成するため、ページにアクセスできなくなり、パフォーマンスが低下します（DOM 要素の生成にはコストがかかります）。他のケースでは、初期の機能がブラウザー間で一貫してサポートされていないため、一部の機能やスタイルが一部のユーザには機能しないことがあります。
 レスポンシブデザインの問題も一般的です。デスクトップブラウザーで見栄えの良いサイトはモバイル端末だとひどい経験を提供するかもしれません、内容が読むには小さすぎるか、高精細なアニメーションのせいで遅いでしょう。
 
-HTML/CSS に起因するクロスブラウザーエラーを減らす方法を見てみましょう。
+HTML/CSS に起因するブラウザー間のエラーを減らす方法を見てみましょう。
 
 ## まず最初に：一般的な問題を解決する
 
-[このシリーズの最初の記事](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction#Testingdiscovery)では、まずクロスブラウザーの問題に集中する前に、デスクトップ/モバイルの最新ブラウザーでいくつかテストしてコードが正常に機能するか確認することをお勧めします。
+[このシリーズの最初の記事](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction#テスト発見)では、まずブラウザー間の問題に集中する前に、デスクトップ/モバイルの最新ブラウザーでいくつかテストしてコードが正常に機能するか確認することをお勧めします。
 
-[HTML のデバッグ](/ja/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)および [CSS のデバッグ](/ja/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS)の記事では、HTML/CSS のデバッグに関する基本的なガイダンスをいくつか提供しました。基本に慣れていない場合は、先に進む前に必ずこれらの記事をよく読んでください。
+[HTML のデバッグ](/ja/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)および [CSS のデバッグ](/ja/docs/Learn/CSS/Building_blocks/Debugging_CSS)の記事では、HTML/CSS のデバッグに関する基本的なガイダンスをいくつか提供しました。基本に慣れていない場合は、先に進む前に必ずこれらの記事をよく読んでください。
 
 基本的には、HTML と CSS のコードが整形式で、構文エラーがないかどうかをチェックすることです。
 
-> **メモ:** CSS と HTML に関する一般的な問題の 1 つは、異なる CSS ルールが互いに矛盾が生じるときに発生します。 サードパーティのコードを使用している場合、これは特に問題になる可能性があります。たとえば、CSS フレームワークを使用して、それが使用しているクラス名の 1 つが別の目的ですでに使用されているものと衝突しているとします。 または、ある種のサードパーティ API (たとえば広告バナーの生成) によって生成された HTML に、すでに別の目的で使用されているクラス名または ID が含まれていることもあります。これが起こらないようにするには、最初に使用しているツールを調べて、それらを中心にコードを設計する必要があります。また、"名前空間" CSS も価値があります。ウィジェットがある場合は、それが明確なクラスを持っていることを確認してから、このクラスでウィジェット内の要素を選択するセレクタを起動します。そうすれば競合は起こりにくくなります。例えば、 `.audio-player ul a` です。
+> **メモ:** CSS と HTML に関する一般的な問題の 1 つは、異なる CSS ルールが互いに矛盾が生じるときに発生します。 サードパーティのコードを使用している場合、これは特に問題になる可能性があります。たとえば、CSS フレームワークを使用して、それが使用しているクラス名の 1 つが別の目的ですでに使用されているものと衝突しているとします。 または、ある種のサードパーティ API (たとえば広告バナーの生成) によって生成された HTML に、すでに別の目的で使用されているクラス名または ID が含まれていることもあります。これが起こらないようにするには、最初に使用しているツールを調べて、それらを中心にコードを設計する必要があります。また、「名前空間付き」 CSS も価値があります。ウィジェットがある場合は、それが明確なクラスを持っていることを確認してから、このクラスでウィジェット内の要素を選択するセレクタを起動します。そうすれば競合は起こりにくくなります。例えば、 `.audio-player ul a` です。
 
 ### 検証
 
@@ -34,65 +53,55 @@ HTML の検証では、すべてのタグが適切に閉じられてネストさ
 
 ![The HTML validator homepage](validator.png)
 
-CSS にも同様の話があります — プロパティ名が正しくつづられていること、プロパティ値が正しくつづられていて、それらが使われているプロパティに対して有効であること、中括弧を見逃していないということです。この目的のために、W3C には [CSS Validator](http://jigsaw.w3.org/css-validator/) も用意されています。
+CSS にも同様の話があります — プロパティ名が正しくつづられていること、プロパティ値が正しくつづられていて、それらが使われているプロパティに対して有効であること、中括弧を見逃していないということです。この目的のために、W3C には [CSS Validator](https://jigsaw.w3.org/css-validator/) も用意されています。
 
-### Linters
+### リンター
 
-取りうるもう一つの良い選択肢は、エラーを指摘するだけでなく、CSS の悪いプラクティスについての警告、および他の点にもフラグを立てることができる、いわゆる Linter アプリケーションです。Linter は一般的に、エラー/警告の報告においてより厳格またはより緩やかになるようにカスタマイズできます。
+取りうるもう一つの良い選択肢は、エラーを指摘するだけでなく、CSS の悪いプラクティスについての警告、および他の点にもフラグを立てることができる、いわゆるリンターアプリケーションです。リンターは一般的に、エラー/警告の報告においてより厳格またはより緩やかになるようにカスタマイズできます。
 
 オンラインリンターアプリケーションは多数ありますが、そのうち最良のものはおそらく [Dirty Markup](https://www.dirtymarkup.com/) (HTML、CSS、JavaScript)、および [CSS Lint](http://csslint.net/) (CSS のみ) です。これらはコードをウィンドウに貼り付けることができ、十字でどんなエラーにでもフラグを立てるでしょう、そしてそれは問題が何であるかを知らせるエラーメッセージを得るためにそれから隠されることができます。Dirty Markup では、_Clean_ ボタンを使用してマークアップを修正することもできます。
 
-![Dirty Markup application displaying the message "Unexpected character in unquoted attribute" over the following incorrect HTML markup: <div id=combinators">](dirty-markup.png)
+![Dirty Markupアプリケーションで、以下の不正なHTMLマークアップに対して「引用符で囲まれていない属性に予期しない文字が含まれています」というメッセージが、 <div id=combinators"> という正確でないマークアップに表示されています。](dirty-markup.png)
 
-However, it is not very convenient to have to copy and paste your code over to a web page to check its validity several times. What you really want is a linter that will fit into your standard workflow with the minimum of hassle.
+しかし、コードをコピーしてウェブページに貼り付け、その有効性を何度も調べなければならないのはとても不便です。本当に欲しいのは、最小限の手間で標準的なワークフローに適合するリンターです。
 
-Many code editors have linter plugins. GitHub's [Atom](https://atom.io/) code editor for example has a rich plugin ecosystem available, with many linting options. To show you an example of how such plugins generally work:
+多くのコードエディターにはリンタープラグインがあります。例えば、以下をご覧ください。
 
-1. Install Atom (if you haven't got an up-to-date version already installed) — download it from the Atom page linked above.
-2. Go to Atom's _Preferences…_ dialog (e.g. by Choosing _Atom > Preferences…_ on Mac, or _File > Preferences…_ on Windows/Linux) and choose the _Install_ option in the left-hand menu.
-3. In the _Search packages_ text field, type "lint" and press Enter/Return to search for linting-related packages.
-4. You should see a package called **lint** at the top of the list. Install this first (using the _Install_ button), as other linters rely on it to work. After that, install the **linter-csslint** plugin for linting CSS, and the **linter-tidy** plugin for linting HTML.
-5. After the packages have finished installing, try loading up an HTML file and a CSS file: you'll see any issues highlighted with green (for warnings) and red (for errors) circles next to the line numbers, and a separate panel at the bottom provides line numbers, error messages, and sometimes suggested values or other fixes.
-
-![Screen shot showing how html tidy points out a missing quote.](atom-htmltidy.png)![CSSLint lists errors including missing brackets, and warning such as too high specificity.](atom-csslint.png)
-
-Other popular editors have similar linting packages available. For example, see:
-
-- [SublimeLinter](https://www.sublimelinter.com/) for Sublime Text
+- [SublimeLinter](https://www.sublimelinter.com/) (Sublime Text)
 - [Notepad++ linter](https://sourceforge.net/projects/notepad-linter/)
 - [VSCode linters](https://marketplace.visualstudio.com/search?target=vscode&category=Linters&sortBy=Installs)
 
-### Browser developer tools
+### ブラウザーの開発者ツール
 
-The developer tools built into most browsers also feature useful tools for hunting down errors, mainly for CSS.
+ほとんどのブラウザーに使用されている開発者ツールは、主に CSS のエラーを発見するための有益なツールも備えています。
 
-> **メモ:** ブラウザーが不正な形式のマークアップを自動的に修正しようとするため、HTML エラーは開発ツールではそれほど簡単には表示されない傾向があります。W3C バリデータは HTML エラーを取得するための最良の方法です — 上の [Validation](#validation) を見てください。
+> **メモ:** ブラウザーが不正な形式のマークアップを自動的に修正しようとするため、 HTML エラーは開発ツールではそれほど簡単には表示されない傾向があります。 W3C バリデーターは HTML エラーを取得するための最良の方法です — 上の[検証](#検証)をご覧ください。
 
-As an example, in Firefox the CSS inspector will show CSS declarations that aren't applied crossed out, with a warning triangle. Hovering the warning triangle will provide a descriptive error message:
+例えば、Firefox の CSSインスペクターでは、適用されていない CSS 宣言が警告の三角形とともに反転して表示されます。警告の三角形にカーソルを合わせると、説明的なエラーメッセージが提供されます。
 
-![The developer tools cross out invalid CSS and add a hoverable warning icon](css-message-devtools.png)
+![開発者ツールは不正な CSS を除外し、ホバー可能な警告アイコンを追加しています。](css-message-devtools.png)
 
-Other browser devtools have similar features.
+他にもブラウザー開発ツールにも同様の機能があります。
 
-## Common cross browser problems
+## よくあるブラウザー間の問題
 
-Now let's move on to look at some of the most common cross browser HTML and CSS problems. The main areas we'll look at are lack of support for modern features, and layout issues.
+それでは、よくある HTML と CSS のブラウザー間の問題について見ていきましょう。主に見ていくのは、現行の機能に対応していないことと、レイアウトの問題です。
 
-### Browsers not supporting modern features
+### 現行機能に対応していないブラウザー
 
-This is a common problem, especially when you need to support old browsers (such as Internet Explorer) or you are using features that are implemented in some browsers but not yet in all. In general, most core HTML and CSS functionality (such as basic HTML elements, CSS basic colors and text styling) works across all the browsers you'll want to support; more problems are uncovered when you start wanting to use newer HTML, CSS, and APIs. MDN displays browser compatibility data for each feature documented; for example, see the [browser support table for the `:has()` pseudo-class](/ja/docs/Web/CSS/:has#browser_compatibility).
+これは、特に古いブラウザーの対応が必要な場合や、一部のブラウザーでは実装されているものの、まだすべてに実装されていない機能を使用している場合によくある問題です。一般に、ほとんどの主要な HTML と CSS の機能（基本的な HTML 要素、CSS の基本色、テキストのスタイル設定など）は、対応したいすべてのブラウザーでうまく動作します。新しい HTML、CSS、API を使用し始めたときには、さらに多くの問題が発覚します。 MDN では、文書化されている各機能について、ブラウザー互換性データを表示しています。例えば、[`:has()` 擬似クラスのブラウザーの互換性表](/ja/docs/Web/CSS/:has#ブラウザーの互換性)を参照してください。
 
-Once you've identified a list of technologies you will be using that are not universally supported, it is a good idea to research what browsers they are supported in, and what related techniques are useful. See [Finding help](#finding_help) below.
+使用する技術のうち、広く対応していないもののリストが載っていた場合は、それらがどのブラウザーのどのような技術に対応しているのか、また、関連する技術にはどのような有益なものがあるのかを調べておくのはよい考えです。下記の[ヘルプを探す](#ヘルプを探す)を参照してください。
 
-#### HTML fallback behavior
+#### HTML のフォールバック動作
 
-Some problems can be solved by just taking advantage of the natural way in which HTML/CSS work.
+問題によっては、 HTML/CSS が自然に動作する方法を利用するだけで解決できることもあります。
 
-Unrecognized HTML elements are treated by the browser as anonymous inline elements (effectively inline elements with no semantic value, similar to {{htmlelement("span")}} elements). You can still refer to them by their names, and style them with CSS, for example — you just need to make sure they are behaving as you want them to. Style them just as you would any other element, including setting the `display` property to something other than `inline` if needed.
+認識されない HTML 要素は、ブラウザーに無名インライン要素（意味づけのないインライン要素、{{htmlelement("span")}}要素に似ています）として扱われます。例えば、それらを名前付きで参照し、CSS でスタイル設定することはできます。望むようにそれらが動作していることを確認する必要があるだけです。必要に応じて `display` プロパティを `inline` 以外に設定するなど、他の要素と同じようにスタイル設定してください。
 
-More complex elements like HTML [`<video>`](/ja/docs/Web/HTML/Element/video), [`<audio>`](/ja/docs/Web/HTML/Element/audio), [`<picture>`](/ja/docs/Web/HTML/Element/picture), [`<object>`](/ja/docs/Web/HTML/Element/object),and [`<canvas>`](/ja/docs/Web/HTML/Element/canvas) (and other features besides) have natural mechanisms for fallbacks to be added incase the resources linked to are not supported. You can add fallback content in between the opening and closing tags, and non-supporting browsers will effectively ignore the outer element and run the nested content.
+HTML の [`<video>`](/ja/docs/Web/HTML/Element/video), [`<audio>`](/ja/docs/Web/HTML/Element/audio), [`<picture>`](/ja/docs/Web/HTML/Element/picture), [`<object>`](/ja/docs/Web/HTML/Element/object), [`<canvas>`](/ja/docs/Web/HTML/Element/canvas) など（他にもあります）のようなより複雑な要素は、リンクされているリソースに対応していない場合に代替手段を追加するための自然なメカニズムを持っています。開始タグと閉じられたタグの間に代替コンテンツを追加することができ、対応していないブラウザーでは、効果的に外側の要素を無視して内側のコンテンツを実行します。
 
-For example:
+例えば次のようなものです。
 
 ```html
 <video id="video" controls preload="metadata" poster="img/poster.jpg">
@@ -101,196 +110,169 @@ For example:
     type="video/webm" />
   <!-- Offer download -->
   <p>
-    Your browser does not support WebM video; here is a link to
+    このブラウザーは WebM 動画に対応していません。こちらが
     <a href="video/tears-of-steel-battle-clip-medium.mp4"
-      >view the video directly</a
+      >動画を見る直接リンクです</a
     >
   </p>
 </video>
 ```
 
-This example includes a simple link allowing you to download the video if even the HTML video player doesn't work, so at least the user can still access the video.
+この例では、HTML 動画プレイヤーでも動作しない場合に動画をダウンロードできる単純リンクを記載しているので、少なくともユーザーは動画にアクセスすることができます。
 
-Another example is form elements. When new [`<input>`](/ja/docs/Web/HTML/Element/input) types were introduced for inputting specific information into forms, such as times, dates, colors, numbers, etc., if a browser didn't support the new feature, the browser used the default of `type="text"`. Input types were added, which are very useful, particularly on mobile platforms, where providing a pain-free way of entering data is very important for the user experience. Platforms provide different UI widgets depending on the input type, such as a calendar widget for entering dates. Should a browser not support an input type, the user can still enter the required data.
+もう一つの例はフォーム要素です。新しい [`<input>`](/ja/docs/Web/HTML/Element/input) 型が、時間、日付、色、数字など、フォームに固有の情報を入力するために導入されたとき、ブラウザーがその新しい機能に対応していなかった場合、ブラウザーは `type="text"` の既定を使用しました。 入力型が追加されましたが、これはとても有益なものです。特にモバイルプラットフォームでは、データを入力するのに苦労しない方法を提供することが、使い勝手としてとても重要です。プラットフォームは、日付入力用のカレンダーウィジェットのように、入力型によって異なる UI ウィジェットを提供します。ブラウザーが入力型に対応していなくても、ユーザーは必要なデータを入力することができます。
 
-The following example shows date and time inputs:
+次の例は日付と時刻の入力の例です。
 
 ```html
 <form>
   <div>
-    <label for="date">Enter a date:</label>
+    <label for="date">日付を入力:</label>
     <input id="date" type="date" />
   </div>
   <div>
-    <label for="time">Enter a time:</label>
+    <label for="time">時刻を入力:</label>
     <input id="time" type="time" />
   </div>
 </form>
 ```
 
-The output of this code is as follows:
+このコードの出力は以下の通りです。
 
 {{EmbedGHLiveSample("learning-area/tools-testing/cross-browser-testing/html-css/forms-test", '100%', 150)}}
 
-> **メモ:** You can also see this running live as [forms-test.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/forms-test.html) on GitHub (see the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/forms-test.html) also).
+> **メモ:** GitHub で [forms-test.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/forms-test.html) として実行することもできます（[ソースコード](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/forms-test.html)も参照してください）。
 
-If you view the example on a supporting browser, you'll see the UI features in action as you try to input data. On devices with dynamic keyboards, type-specific keypads will be displayed. On a non-supporting browser like Internet Explorer, the inputs will just default to normal text inputs, meaning the user can still enter the correct information.
+例を表示すると、データを入力しようとして、 UI 機能が動作しているのがわかります。動的キーボードを備えた端末では、型専用のキーパッドが表示されます。対応していないブラウザーでは、入力は通常のテキスト入力に既定され、ユーザーは正しい情報を入力することができます。
 
-#### CSS fallback behavior
+#### CSS のフォールバック動作
 
-CSS is arguably better at fallbacks than HTML. If a browser encounters a declaration or rule it doesn't understand, it just skips it completely without applying it or throwing an error. This might be frustrating for you and your users if such a mistake slips through to production code, but at least it means the whole site doesn't come crashing down because of one error, and if used cleverly you can use it to your advantage.
+CSS は間違いなく HTML よりも代替性に優れています。ブラウザーが理解できない宣言やルールに遭遇した場合、それを適用したりエラーを発生させたりすることなく、完全にスキップします。このようなミスが本番コードに紛れ込んでしまった場合、あなたやユーザーにとってはフラストレーションが溜まるかもしれませんが、少なくとも 1 つのエラーのためにサイト全体がクラッシュすることはありませんし、これまでエラーとされていたものを賢く使用することができます。
 
-Let's look at an example — a simple box styled with CSS, which has some styling provided by various CSS features:
+例えば、 CSS でスタイル設定された単純なボックスを見てみましょう。このボックスには、様々な CSS 機能によって指定されたスタイル設定があります。
 
-![A red pill button with rounded corners, inset shadow, and drop shadow](blingy-button.png)
+![角丸、インセットシャドウ、ドロップシャドウの赤い錠剤型ボタン](blingy-button.png)
 
-> **メモ:** You can also see this example running live on GitHub as [button-with-fallback.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html) (also see the [source code](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html)).
+> **メモ:** GitHub で [forms-test.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html) として実行することもできます（[ソースコード](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/button-with-fallback.html)も参照してください）。
 
-The button has a number of declarations that style, but the two we are most interested in are as follows:
+ボタンにはスタイル設定をする宣言がいくつもありますが、最も興味深いのは以下の 2 つです。
 
 ```css
 button {
   /* … */
 
   background-color: #ff0000;
-  background-color: rgba(255 0 0 / 1);
+  background-color: rgb(255 0 0 / 100%);
   box-shadow:
-    inset 1px 1px 3px rgba(255 255 255 / 0.4),
-    inset -1px -1px 3px rgba(0 0 0 / 0.4);
+    inset 1px 1px 3px rgb(255 255 255 / 40%),
+    inset -1px -1px 3px rgb(0 0 0 / 40%);
 }
 
 button:hover {
-  background-color: rgba(255 0 0 / 0.5);
+  background-color: rgb(255 0 0 / 50%);
 }
 
 button:active {
   box-shadow:
-    inset 1px 1px 3px rgba(0 0 0 / 0.4),
-    inset -1px -1px 3px rgba(255 255 255 / 0.4);
+    inset 1px 1px 3px rgb(0 0 0 / 40%),
+    inset -1px -1px 3px rgb(255 255 255 / 40%);
 }
 ```
 
-Here we are providing an [RGBA](/ja/docs/Web/CSS/color_value/rgba) {{cssxref("background-color")}} that changes opacity on hover to give the user a hint that the button is interactive, and some semi-transparent inset {{cssxref("box-shadow")}} shades to give the button a bit of texture and depth. While now fully supported, RGBA colors and box shadows haven't been around forever; starting in IE9. Browsers that didn't support RGBA colors would ignore the declaration meaning in old browsers the background just wouldn't show up at all so the text would be unreadable, no good at all!
+ここでは、 [RGB](/ja/docs/Web/CSS/color_value/rgb) で {{cssxref("background-color")}} を提供し、ボタンが操作可能であることをユーザーに示唆するために、ホバー時に不透明度を変更し、半透明の影 {{cssxref("box-shadow")}} でボタンに質感と奥行きを与えています。これで完全に対応しているとはいえ、 RGB 色とボックスシャドウはずっと存在していたわけではありません。 IE9 から始まったものです。 RGB 色に対応していないブラウザーは宣言を無視します。つまり、古いブラウザーでは背景がまったく表示されないので、テキストが読めなくなり、まったく意味がありません！
 
-![Hard to see pill button with white text on an almost white background](unreadable-button.png)
+![ほぼ白い背景に白い文字の見づらい錠剤型ボタン](unreadable-button.png)
 
-To sort this out, we have added a second `background-color` declaration, which just specifies a hex color — this is supported way back in really old browsers, and acts as a fallback if the modern shiny features don't work. What happens is a browser visiting this page first applies the first `background-color` value; when it gets to the second `background-color` declaration, it will override the initial value with this value if it supports RGBA colors. If not, it will just ignore the entire declaration and move on.
+これを解決するために、 2 つ目の `background-color` 宣言を追加しました。これは 16 進数の色を指定します。これは実に古いブラウザーに対応しており、現行の輝かしい機能が動作しない場合の予備として機能します。このページを訪れたブラウザーは、まず最初の `background-color` 値を適用します。 2 つ目の `background-color` 宣言まで取得すると、 RGB カラーに対応している場合は、最初の値をこの値で上書きします。そうでない場合は、宣言全体を無視して移動します。
 
-> **メモ:** The same is true for other CSS features like [media queries](/ja/docs/Web/CSS/Media_Queries/Using_media_queries), [`@font-face`](/ja/docs/Web/CSS/@font-face) and [`@supports`](/ja/docs/Web/CSS/@supports) blocks — if they are not supported, the browser just ignores them.
+> **メモ:** [メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)、[`@font-face`](/ja/docs/Web/CSS/@font-face)、[`@supports`](/ja/docs/Web/CSS/@supports) ブロックのような他の CSS 機能についても同様で、対応していない場合、ブラウザーはそれらを無視します。
 
-#### Selector support
+#### セレクターの対応
 
-Of course, no CSS features will apply at all if you don't use the right [selectors](/ja/docs/Learn/CSS/Building_blocks/Selectors) to select the element you want to style!
+もちろん、正しい[セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)を使用してスタイル設定したい要素を選択しなければ、 CSS の特性はまったく適用されません。
 
-In a comma separated list of selectors, if you just write a selector incorrectly, it may not match any element. If, however, a selector is invalid, the entire list of selectors and the selector block are ignored. For this reason, you never want to include a :-moz- prefixed pseudo class or pseudo-element in a group of selectors as all browsers other than Firefox will ignore the entire block.
+カンマ区切りのセレクターリストでは、セレクターの書き方を間違えただけで、どの要素にも一致しなくなることがあります。しかし、セレクターが不正な場合は、スタイルブロック全体とともに、セレクターの**リスト全体**が無視されます。このため、 `:-moz-` 接頭辞のついた擬似クラスや擬似要素は、[寛容なセレクターリスト](/ja/docs/Web/CSS/Selector_list#forgiving_selector_list) の中で、 `:where(::-moz-thumb)` のようにのみ記載してください。 Firefox 以外のすべてのウェブブラウザーはブロック全体を無視するので、 [`:is()`](/ja/docs/Web/CSS/:is) または [`:where()`](/ja/docs/Web/CSS/:where) の寛容なセレクターリストの外側のカンマ区切りのセレクターグループ内に、接頭辞 `:-moz-` が付いた擬似クラスまたは擬似要素を記載しないでください。 `is()` と `:where()` は、他にも [`:has()`](/ja/docs/Web/CSS/:has) や [`:not()`](/ja/docs/Web/CSS/:not) などのセレクターリストの引数として渡すことができることに注意してください。
 
-We find that it is helpful to inspect the element you are trying to style using your browser's dev tools, then look at the DOM tree breadcrumb trail that DOM inspectors tend to provide to see if your selector makes sense compared to it.
+ブラウザー開発ツールを使用してスタイルを設定しようとしている要素を検査し、 DOM インスペクターが提供する傾向がある DOM ツリーのパンくずトレイルを見て、あなたのセレクターがそれと比較して意味があるかどうかを確認することが有益であることがわかります。
 
-For example, in the Firefox dev tools, you get this kind of output at the bottom of the DOM inspector:
+例えば、Firefox の開発者ツールでは、 DOM インスペクターの下部にこのような出力が得られたとします。
 
-![The breadcrumb of elements is html > body > form > div.form > input#date](dom-breadcrumb-trail.png)
+![要素のパンくずは html > body > form > div.form > input#date です。](dom-breadcrumb-trail.png)
 
-If for example you were trying to use this selector, you'd be able to see that it wouldn't select the input element as desired:
+例えばこのセレクターを使用しようとした場合、思い通りに入力要素を選択できないことがわかるでしょう。
 
 ```css
 form > #date
 ```
 
-(The `date` form input isn't a direct child of the `<form>`; you'd be better off using a general descendant selector instead of a child selector).
+（`date` フォーム入力は `<form>` の直接の子ではありません。子セレクターではなく、一般的な子孫セレクターを使用した方がよいでしょう。）
 
-#### Handling CSS prefixes
+#### CSS 接頭辞の扱い
 
-Another set of problems comes with CSS prefixes — these are a mechanism originally used to allow browser vendors to implement their own version of a CSS (or JavaScript) feature while the technology is in an experimental state, so they can play with it and get it right without conflicting with other browser's implementations, or the final unprefixed implementations. So for example:
+他の問題点として、 CSS 接頭辞があります。接頭辞は元々、ブラウザーベンダーが CSS （または JavaScript）の機能を実験的な状態で自分自身で実装できるようにするために使用することができる仕組みで、他のブラウザーの実装や接頭辞のない最終的な実装と競合することなく、正しく実装することができます。
 
-- Mozilla uses `-moz-`
-- Chrome/Opera/Safari use `-webkit-`
-- Microsoft uses `-ms-`
+例えば、 Firefox は `-moz-` を、 Chrome/Edge/Opera/Safari は `-webkit-` を使用しています。他にも、インターネットエクスプローラーと Edge の初期バージョンで使用されていた `-ms-` や、 Opera の元バージョンで使用されていた `-o` など、古いコードで遭遇する接頭辞があります。
 
-Here's some examples:
+接頭辞機能は、本番のウェブサイトで使用することは想定されていません。警告なしに変更または削除される可能性があり、それを要求される古いバージョンのブラウザーではパフォーマンスの問題を引き起こす可能性があり、ブラウザー間の問題を発生させることもあります。この例は具体的な問題で、例えば開発者がプロパティの `-webkit-` バージョンだけを使用することにした場合、他のブラウザーではサイトが動作しないことを意味します。このようなことが実際に起こったため、他にもいくつかのブラウザーが `-webkit-` 接頭辞付きバージョンの CSS プロパティを実装しました。ブラウザーは今でもいくつかの接頭辞付きプロパティ名、プロパティ値、擬似クラスに対応していますが、これで実験的な機能はフラグの後ろに置かれ、ウェブ開発者が開発中にテストできるようになりました。
+
+接頭辞を使用する場合は、それが必要であること、つまりそのプロパティがいくつか残っている接頭辞付きの機能の一つであることを確認してください。どのブラウザーが接頭辞を要求しているかは、 MDN のリファレンスページや [caniuse.com](https://caniuse.com/) のようなサイトで見ていくことができます。不明な場合は、ブラウザーで直接テストして調べることもできます。接頭辞付きスタイル宣言の後に接頭辞なしの標準バージョンを記載してください。対応していない場合は無視され、対応している場合は使用します。
 
 ```css
--webkit-transform: rotate(90deg);
-
-background-image: -moz-linear-gradient(left, green, yellow);
-background-image: -webkit-gradient(
-  linear,
-  left center,
-  right center,
-  from(green),
-  to(yellow)
-);
-background-image: linear-gradient(to right, green, yellow);
+.masked {
+  -webkit-mask-image: url(MDN.svg);
+  mask-image: url(MDN.svg);
+  -webkit-mask-size: 50%;
+  mask-size: 50%;
+}
 ```
 
-While none of these properties requires a prefix, you may encounter this old CSS in a codebase. The first line shows a {{cssxref("transform")}} property with a `-webkit-` prefix — this was needed to make transforms work in older versions of Safari and Chrome until the prefix-free feature was supported.
+この単純な例を試してみてください。
 
-The last three lines show three different versions of the [`linear-gradient()`](/ja/docs/Web/CSS/gradient/linear-gradient) function, which is originally how linear gradient were written:
-
-The first one has a `-moz-` prefix, the second a `-webkit-` prefix, and the third one has no prefix. This third version shows the final version of the syntax supported in all evergreen browsers.
-
-Prefixed features were never supposed to be used in production websites — they are subject to change or removal without warning, and cause cross browser issues. This is particularly a problem when developers decide to only use say, the `-webkit-` version of a property — meaning that the site won't work in other browsers. This actually happened so much that other browsers implemented `-webkit-` prefixed versions of several CSS properties. While browsers still support some prefixed property names, property values, and pseudo classes, now experimental features are put behind flags so developers can test them during development.
-
-If you insist on using prefixed features, make sure you use the right ones. You can look up what browsers require prefixes on MDN reference pages, and sites like [caniuse.com](https://caniuse.com/). If you are unsure, you can also find out by doing some testing directly in browsers.
-
-Try this simple example:
-
-1. Open up google.com, or another site that has a prominent heading or other block-level element.
-2. Right/Cmd + click on the element in question and choose Inspect/Inspect element (or whatever the option is in your browser) — this should open up the dev tools in your browser, with the element highlighted in the DOM inspector.
-3. Look for a feature you can use to select that element. For example, at the time of writing, the main Google logo had an ID of `hplogo`.
-4. Store a reference to this element in a variable, for example:
+1. このページ、または目立つ見出しや他のブロックレベルの要素を有する他のサイトを使用してください。
+2. 問題の要素を右/Cmd + クリックし、要素の検査/調査（またはブラウザーでの同様のオプション）を選びます。これでブラウザーに開発ツールが開き、 DOM インスペクターに要素がハイライトされるはずです。
+3. その要素を選択するために使用することができます。例えば、この例では MDN でこのページには `mdn-docs-logo` という ID のロゴがあります。
+4. 例えばこの要素への参照を変数に格納します。
 
    ```js
-   const test = document.getElementById("hplogo");
+   const test = document.getElementById("mdn-docs-logo");
    ```
 
-5. Now try to set a new value for the CSS property you are interested in on that element; you can do this using the [style](/ja/docs/Web/API/HTMLElement/style) property of the element, for example try typing these into the JavaScript console:
+5. これで、その要素で関心のある CSS プロパティに新しい値を設定することができます。これを行うには、要素の [style](/ja/docs/Web/API/HTMLElement/style) プロパティを使用することができます。例えば、 JavaScript コンソールでこの例を入力してみてください。
 
    ```js
    test.style.transform = "rotate(90deg)";
-   test.style.webkitTransform = "rotate(90deg)";
    ```
 
-As you start to type the property name representation after the second dot (note that in JavaScript, CSS property names are written in lower camel case, not hyphenated), the JavaScript console should begin to autocomplete the names of the properties that exist in the browser and match what you've written so far. This is useful for finding out what versions of the property are implemented in that browser.
+2 つ目のドットの後にプロパティ名の表現を入力し始めると（JavaScript では、 CSS のプロパティ名は{{Glossary("kebab_case", "ケバブケース")}}ではなく、{{Glossary("camel_case", "小文字のキャメルケース")}}で記述されることに注意してください）、 JavaScript コンソールは、ブラウザーに存在し、これまでに書いたものと一致するプロパティの名前を自動補完し始めるはずです。これは、そのブラウザーで実装されているプロパティを探すのに有益です。
 
-At the time of writing, both Firefox and Chrome implemented `-webkit-` prefixed and non-prefixed versions of {{cssxref("transform")}}. As a general rule, put the prefixed version of a property name before the unprefixed version so that the unprefixed version overrides the prefixed version. Prefixed properties aren't guaranteed to perform well; unprefixed properties are.
+現行の機能を含める必要がある場合は、 [`@supports`](/ja/docs/Web/CSS/@supports) を使用して機能対応テストをしてください。これによりネイティブの機能検出テストを実装することができ、接頭辞や新しい機能を `@supports` ブロックの中に入れることができます。
 
-Once you've found out which prefixes you need to support, you should write them all out in your CSS, for example:
+#### レスポンスデザインの問題
 
-```css
--webkit-appearance: none;
-appearance: none;
-```
+レスポンシブデザインとは、例えば画面の幅や向き（縦長か横長か）、解像度が異なるなど、異なる端末の形態に応じて変化するウェブレイアウトを作成することです。例えばデスクトップ用のレイアウトはモバイル端末で見るとひどいことになるので、[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)を使って適切なモバイル用レイアウトを提供し、[ビューポート](/ja/docs/Web/HTML/Viewport_meta_tag)を使ってそれが正しく適用されるようにする必要があります。[レスポンシブデザインのガイド](/ja/docs/Learn/CSS/CSS_layout/Responsive_Design)にそのような実践の詳細な説明があります。
 
-Generally, you will rarely need to include a prefix; and you may want to delete them from old code basis you inherit as a maintainer. If you do need to include prefixed features or super modern features, test for feature support using [`@supports`](/ja/docs/Web/CSS/@supports), which allows you to implement native feature detection tests, and nest the prefixed or new feature within the `@supports` block.
+解像度も大きな課題です。例えば、モバイル端末は大きな重い画像を必要とする可能性がデスクトップコンピューターよりも低く、インターネット接続が遅く、場合によっては帯域幅の無駄が問題になるような高価なデータプランを利用している可能性もあります。さらに、端末によって解像度の範囲があるため、小さな画像がピクセル化して現れる意味もあります。このような問題を作業するためのテクニックは、[メディアクエリー](/ja/docs/Learn/CSS/CSS_layout/Responsive_Design#メディアクエリー)からより複雑な[レスポンシブ画像テクニック](/ja/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#解像度の切り替え_様々な寸法)、 {{HTMLElement('picture')}} および {{HTMLElement('img')}} 要素の [`srcset`](/ja/docs/Web/HTML/Element/img#srcset) や [`sizes`](/ja/docs/Web/HTML/Element/img#sizes) 属性を含め、たくさんあります。
 
-#### Responsive design problems
+## ヘルプを探す
 
-Responsive design is the practice of creating web layouts that change to suit different device form factors — for example, different screen widths, orientations (portrait or landscape), or resolutions. A desktop layout for example will look terrible when viewed on a mobile device, so you need to provide a suitable mobile layout using [media queries](/ja/docs/Web/CSS/Media_Queries), and make sure it is applied correctly using [viewport](/ja/docs/Web/HTML/Viewport_meta_tag). You can find a detailed account of such practices in [The building blocks of responsive design](/ja/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks).
+HTML と CSS で遭遇する課題は他にもたくさんあり、オンラインで答えを探す方法の知識は非常に貴重です。
 
-Resolution is a big issue too — for example, mobile devices are less likely to need big heavy images than desktop computers, and are more likely to have slower internet connections and possibly even expensive data plans that make wasted bandwidth more of a problem. In addition, different devices can have a range of different resolutions, meaning that smaller images could appear pixelated. There are a number of techniques that allow you to work around such problems, from simple [mobile first media queries](/ja/docs/Web/Progressive_web_apps/Responsive/Mobile_first), to more complex [responsive image techniques](/ja/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#解像度の切り替え_様々な寸法).
+サポート情報の最良の情報源としては、[Mozilla Developer Network]（今いる場所です）、[stackoverflow.com](https://stackoverflow.com/)、[caniuse.com](https://caniuse.com/) などがあります。
 
-Another difficulty that can present problems is browser support for the features that make the above techniques possible. media queries are not supported in IE 8 or less, so if you want to use a mobile first layout and have the desktop layout then apply to old IE versions, you'll have to apply a media query {{glossary("polyfill")}} to your page, like [css3-mediaqueries-js](https://code.google.com/archive/p/css3-mediaqueries-js/), or [Respond.js](https://github.com/scottjehl/Respond).
+Mozilla Developer Network (MDN) を使用するために、ほとんどの人は検索エンジンで情報を探そうとしている技術に "MDN" という単語を加えて検索します（例えば "MDN HTML video"）。MDN にはいくつかの有益な種類のコンテンツが収められています。
 
-## Finding help
+- クライアント側ウェブ技術のブラウザーの対応情報を参照する素材、例えば [\<video> リファレンスページ](/ja/docs/Web/HTML/Element/video)など。
+- その他の補助的なリファレンス素材、例えば[ウェブ上のメディア型と形式のガイド](/ja/docs/Web/Media/Formats)など。
+- 特定の問題を解決する有益なチュートリアル、例えば[ブラウザー横断の動画プレーヤーの作成](/ja/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player)。
 
-There are many other issues you'll encounter with HTML and CSS, making knowledge of how to find answers online invaluable.
+[caniuse.com](https://caniuse.com/) は、いくつかの有益な外部リソースリンクとともに、対応する情報を提供しています。例えば、 <https://caniuse.com/#search=video> をご覧ください）テキストボックスに検索したい機能を入力してください）。
 
-Among the best sources of support information are the Mozilla Developer Network (that's where you are now!), [stackoverflow.com](https://stackoverflow.com/), and [caniuse.com](https://caniuse.com/).
+[stackoverflow.com](https://stackoverflow.com/) (SO) は、質問をしたり、開発者仲間に解決策を共有してもらったり、前回の投稿を調べたり、他の開発者を助けたりすることができるフォーラムサイトです。新しい質問を投稿する前に、あなたの質問に対する答えがすでにあるかどうか見ていくことをお勧めします。例えば、SOで "disabling autofocus on HTML dialog" と検索したところ、すかさず [Disable showModal auto-focusing using HTML attributes](https://stackoverflow.com/questions/63267581/disable-showmodal-auto-focusing-using-html-attributes) がヒットしました。
 
-To use the Mozilla Developer Network (MDN), most people do a search engine search of the technology they are trying to find information on, plus the term "mdn", for example, "mdn HTML video". MDN contains several useful types of content:
-
-- Reference material with browser support information for client-side web technologies, e.g. the [\<video> reference page](/ja/docs/Web/HTML/Element/video).
-- Other supporting reference material, e.g. the [Guide to media types and formats on the web](/ja/docs/Web/Media/Formats),
-- Useful tutorials that solve specific problems, for example, [Creating a cross-browser video player](/ja/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player).
-
-[caniuse.com](https://caniuse.com/) provides support information, along with a few useful external resource links. For example, see <https://caniuse.com/#search=video> (you just have to enter the feature you are searching for into the text box).
-
-[stackoverflow.com](https://stackoverflow.com/) (SO) is a forum site where you can ask questions and have fellow developers share their solutions, look up previous posts, and help other developers. You are advised to look and see if there is an answer to your question already, before posting a new question. For example, we searched for "disabling autofocus on HTML dialog" on SO, and very quickly came up with [Disable showModal auto-focusing using HTML attributes](https://stackoverflow.com/questions/63267581/disable-showmodal-auto-focusing-using-html-attributes).
-
-Aside from that, try searching your favorite search engine for an answer to your problem. It is often useful to search for specific error messages if you have them — other developers will be likely to have had the same problems as you.
+それとは別に、お好きな検索エンジンで問題の答えを検索してみてください。具体的なエラーメッセージを検索すると有益なことが多いです。他にもあなたと同じ問題を抱えている開発者がいる可能性が高いからです。
 
 ## まとめ
 
-Now you should be familiar with the main types of cross browser HTML and CSS problems that you'll meet in web development, and how to go about fixing them.
+これで、ウェブ開発者が直面する主要なブラウザー間の HTML と CSS の問題の種類、およびそれらを修正する方法について習熟したことでしょう。
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies","Learn/Tools_and_testing/Cross_browser_testing/JavaScript", "Learn/Tools_and_testing/Cross_browser_testing")}}
