@@ -31,7 +31,7 @@ setInt8(byteOffset, value)
 ### 예외
 
 - {{jsxref("RangeError")}}
-  - : 뷰의 끝을 넘어 읽는 수도 있는 `byteOffset`이 설정된 경우 발생합니다.
+  - : 뷰의 끝을 넘어서 저장하려고 하는 경우에 byteOffset이 설정되면 발생합니다.
 
 ## 예제
 
