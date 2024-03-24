@@ -37,7 +37,7 @@ let addr = new URL("https://example.com/login");
 addr.username = myUsername;
 ```
 
-{{domxref("URL.username", "username")}}값을 설정하면 해당 속성의 값만 설정되는 것이 아니라 전체 URL이 업데이트 됩니다. 위의 코드를 실행한 후 {{domxref("URL.href", "addr.href")}}가 반환하는 값은 `https://someguy@example.com/login`입니다. 이것은 쓰기 가능한 모든 속성에 해당됩니다.
+{{domxref("URL.username", "username")}}값을 설정하면 해당 속성의 값만 설정되는 것이 아니라 전체 URL이 갱신 됩니다. 위의 코드를 실행한 후 {{domxref("URL.href", "addr.href")}}가 반환하는 값은 `https://someguy@example.com/login`입니다. 이것은 쓰기 가능한 모든 속성에 해당됩니다.
 
 ### 쿼리
 
