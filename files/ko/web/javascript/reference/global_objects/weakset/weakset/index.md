@@ -1,5 +1,5 @@
 ---
-title: WeakSet() constructor
+title: WeakSet() 생성자
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/WeakSet
 l10n:
   sourceCommit: d6f92678c704b5bf4807e69bb7a234446dd33575
@@ -43,7 +43,7 @@ ws.has(foo); // false, foo는 이미 삭제되었습니다
 ws.has(bar); // true, bar는 유지 중입니다
 ```
 
-명심하실 점은 `foo !== bar`라는 점입니다. 둘은 서로 비슷한 객체지만 **같은 객체가 아닙니다** . 그래서 두 객체 모두 set에 추가 가능합니다.
+명심하실 점은 `foo !== bar`라는 점입니다. 둘은 서로 비슷한 객체지만 **같은 객체가 아닙니다**. 그래서 두 객체 모두 set에 추가 가능합니다.
 
 ## 명세서
 
