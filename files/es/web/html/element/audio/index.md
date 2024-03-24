@@ -27,7 +27,7 @@ Puedes usar las características API de audio mejoradas - que son específicas d
   - : Un atributo que se puede leer para determinar qué intervalos de tiempo del multimedia se han almacenado en búfer. Este atributo contiene un objeto {{ domxref("TimeRanges") }}.
 - controls
   - : Si está presente este atributo, el navegador ofrecerá controles para permitir que el usuario controle la reproducción de audio, incluyendo volumen, búsqueda y pausar/reanudar reproducción.
-- loop {{ unimplemented_inline() }} [Error 449157 en Firefox](https://bugzil.la/449157)
+- loop [Error 449157 en Firefox](https://bugzil.la/449157)
   - : Un atributo booleano; si se especifica, al alcanzar el final del audio, realizaremos la búsqueda automáticamente hasta el principio.
 - mozCurrentSampleOffset {{ non-standard_inline() }}
   - : La posición de desplazamiento, que se especifica como el número de muestras desde el comienzo de la secuencia de audio, en la cual el audio se está reproduciendo actualmente.

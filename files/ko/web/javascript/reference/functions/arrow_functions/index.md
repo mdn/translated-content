@@ -39,7 +39,7 @@ param => {
 }
 ```
 
-매개변수 내 [나머지 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters), [기본값 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/Default_parameters), [구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)가 지원되며 항상 괄호 안에 넣어야 합니다:
+매개변수 내 [나머지 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters), [기본값 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/Default_parameters), [구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)가 지원되며 항상 괄호 안에 넣어야 합니다.
 
 ```js-nolint
 (a, b, ...r) => expression
@@ -382,7 +382,7 @@ setTimeout(() => {
 
 ### call, bind, apply 메서드 사용하기
 
-[`call()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/call), [`apply()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/apply), [`bind()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) 메서드는 각 메서드의 범위를 설정하므로 기존 함수에서 예상되는 대로 작동합니다:
+[`call()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/call), [`apply()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/apply), [`bind()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) 메서드는 각 메서드의 범위를 설정하므로 기존 함수에서 예상되는 대로 작동합니다.
 
 ```js
 const obj = {

@@ -68,7 +68,7 @@ svg {
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{SVGElement("marker")}}
 - {{SVGAttr("marker-end")}}

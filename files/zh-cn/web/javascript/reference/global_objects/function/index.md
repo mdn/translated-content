@@ -10,7 +10,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Function
 ## 构造函数
 
 - {{jsxref("Function.Function", "Function()")}}
-  - : 创建一个新的 `Function` 对象。直接调用此构造函数可以动态创建函数，但会遇到和 {{jsxref("Global_Objects/eval", "eval()")}} 类似的的安全问题和（相对较小的）性能问题。然而，与 `eval()` 不同的是，`Function` 构造函数创建的函数只能在全局作用域中运行。
+  - : 创建一个新的 `Function` 对象。直接调用此构造函数可以动态创建函数，但会遇到和 {{jsxref("Global_Objects/eval", "eval()")}} 类似的安全问题和（相对较小的）性能问题。然而，与 `eval()` 不同的是，`Function` 构造函数创建的函数只能在全局作用域中运行。
 
 ## 实例属性
 

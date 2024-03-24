@@ -3,7 +3,7 @@ title: 접근성
 slug: Web/Accessibility
 ---
 
-웹 개발에서의 **접근성**은 사람들의 능력이 어느 정도 제한되어 있더라도, 가능한 많은 사람이 웹사이트를 사용 할 수 있도록 하는 것 입니다.
+웹 개발에서의 **접근성** 은 사람들의 능력이 어느 정도 제한되어 있더라도, 가능한 많은 사람이 웹사이트를 사용 할 수 있도록 하는 것 입니다.
 
 많은 사람에게, 기술은 일을 더 쉽게 만들어줍니다. 장애를 가진 사람들에게, 기술은 일을 가능하게 만들어줍니다. 접근성은 개인의 신체적, 인지적 능력 및 웹에 접근하는 방법과 관계없이 가능한 한 접근할 수 있도록 콘텐츠를 개발하는 것을 의미합니다.
 
@@ -33,7 +33,7 @@ MDN은(는) [접근성 학습 영역](/ko/docs/Learn/Accessibility) 접근성에
 - [색상 및 접근성 소개](/ko/docs/Web/Accessibility/Understanding_Colors_and_Luminance)
   - : 이 글에서는 빛과 색에 대한 우리의 인식을 논하고, 접근하기 쉬운 디자인에 색을 사용하는 기초를 제공하며, 시각적이고 읽을 수 있는 콘텐츠에 대한 모범 사례를 보여줍니다.
 - [키보드 탐색 가능한 JavaScript 위젯](/ko/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
-  - : 지금까지 스타일링 된 &lt;div&gt; 및 &lt;span&gt; 기반의 접근하기 쉬운 위젯들을 만들고자 하는 웹 개발자들은 적절한 기술이 부족했습니다. **키보드 접근성**은 개발자가 인지해야 할 최소 접근성 요구사항의 일부입니다.
+  - : 지금까지 스타일링 된 &lt;div&gt; 및 &lt;span&gt; 기반의 접근하기 쉬운 위젯들을 만들고자 하는 웹 개발자들은 적절한 기술이 부족했습니다. **키보드 접근성** 은 개발자가 인지해야 할 최소 접근성 요구사항의 일부입니다.
 - [ARIA](/ko/docs/Web/Accessibility/ARIA)
   - : ARIA를 사용하여 HTML 문서를 더 접근성 있게 만들 방법을 학습하는 글 모음입니다.
 - [모바일 접근성 점검표](/ko/docs/Web/Accessibility/Mobile_accessibility_checklist)

@@ -12,7 +12,7 @@ slug: Web/CSS/orphans
 orphans: 2;
 orphans: 3;
 
-/* Global values */
+/* グローバル値 */
 orphans: inherit;
 orphans: initial;
 orphans: revert;

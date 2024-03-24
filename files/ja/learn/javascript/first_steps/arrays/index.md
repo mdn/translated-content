@@ -102,7 +102,7 @@ console.log(shopping.length); // 5
 
 ```js
 const birds = ["オウム", "鷹", "フクロウ"];
-console.log(birds.indexOf("フクロウ")); //  2
+console.log(birds.indexOf("フクロウ")); // 2
 console.log(birds.indexOf("ウサギ")); // -1
 ```
 

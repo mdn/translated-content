@@ -67,7 +67,7 @@ background-position-y: unset;
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{cssxref("background-position")}}
 - {{cssxref("background-position-x")}}

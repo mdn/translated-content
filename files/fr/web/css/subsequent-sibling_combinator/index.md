@@ -5,7 +5,7 @@ l10n:
   sourceCommit: bb652aaf3e38f3c7fef970a62f813047dffac879
 ---
 
-{{CSSRef("Selectors")}}
+{{CSSRef}}
 
 Le **combinateur de voisins suivants** (`~`) permet de séparer deux sélecteurs et de cibler _toutes les instances_ du deuxième élément qui suivent le premier (qui ne sont pas nécessairement voisins immédiats) et qui partagent le même élément parent.
 

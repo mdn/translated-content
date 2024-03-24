@@ -13,8 +13,8 @@ La _etiqueta de presentación_ es usada para describir la estructura y el diseñ
 ### A
 
 - {{ MathMLElement("maction") }} (Acciones enlazadas a sub-expresiones)
-- {{ MathMLElement("maligngroup") }} (Grupo de alineación) {{ unimplemented_inline(122253) }}
-- {{ MathMLElement("malignmark") }} (Puntos de alineación) {{ unimplemented_inline(122253) }}
+- {{ MathMLElement("maligngroup") }} (Grupo de alineación)
+- {{ MathMLElement("malignmark") }} (Puntos de alineación)
 
 ### E
 
@@ -28,7 +28,7 @@ La _etiqueta de presentación_ es usada para describir la estructura y el diseñ
 
 ### G
 
-- {{ MathMLElement("mglyph") }} (Mostrar símbolos no estándar) {{ unimplemented_inline(297465) }}
+- {{ MathMLElement("mglyph") }} (Mostrar símbolos no estándar)
 
 ### I
 
@@ -36,8 +36,8 @@ La _etiqueta de presentación_ es usada para describir la estructura y el diseñ
 
 ### L
 
-- {{ MathMLElement("mlabeledtr") }} (Fila etiquetada en una tabla o matriz) {{ unimplemented_inline(689641) }}
-- {{ MathMLElement("mlongdiv") }} (Notación de la división larga) {{ unimplemented_inline(534967) }}
+- {{ MathMLElement("mlabeledtr") }} (Fila etiquetada en una tabla o matriz)
+- {{ MathMLElement("mlongdiv") }} (Notación de la división larga)
 
 ### M
 
@@ -65,14 +65,14 @@ La _etiqueta de presentación_ es usada para describir la estructura y el diseñ
 ### S
 
 - {{ MathMLElement("ms") }} (String literal)
-- {{ MathMLElement("mscarries") }} (Annotations such as carries) {{ unimplemented_inline(534967) }}
-- {{ MathMLElement("mscarry") }} (Single carry, child element of {{ MathMLElement("mscarries") }}) {{ unimplemented_inline(534967) }}
-- {{ MathMLElement("msgroup") }} (Grouped rows of {{ MathMLElement("mstack") }} and {{ MathMLElement("mlongdiv") }} elements) {{ unimplemented_inline(534967) }}
-- {{ MathMLElement("msline") }} (Horizontal lines inside {{ MathMLElement("mstack") }} elements) {{ unimplemented_inline(534967) }}
+- {{ MathMLElement("mscarries") }} (Annotations such as carries)
+- {{ MathMLElement("mscarry") }} (Single carry, child element of {{ MathMLElement("mscarries") }})
+- {{ MathMLElement("msgroup") }} (Grouped rows of {{ MathMLElement("mstack") }} and {{ MathMLElement("mlongdiv") }} elements)
+- {{ MathMLElement("msline") }} (Horizontal lines inside {{ MathMLElement("mstack") }} elements)
 - {{ MathMLElement("mspace") }} (Space)
 - {{ MathMLElement("msqrt") }} (Square root without an index)
-- {{ MathMLElement("msrow") }} (Rows in {{ MathMLElement("mstack") }} elements) {{ unimplemented_inline(534967) }}
-- {{ MathMLElement("mstack") }} (Stacked alignment) {{ unimplemented_inline(534967) }}
+- {{ MathMLElement("msrow") }} (Rows in {{ MathMLElement("mstack") }} elements)
+- {{ MathMLElement("mstack") }} (Stacked alignment)
 - {{ MathMLElement("mstyle") }} (Style change)
 - {{ MathMLElement("msub") }} (Subscript)
 - {{ MathMLElement("msup") }} (Superscript)

@@ -50,6 +50,6 @@ slug: Mozilla/Firefox/Releases/25
 
 - [Firefox 25 网站兼容性](/zh-CN/docs/Mozilla/Firefox/Releases/25/Site_Compatibility)
 
-### 更早版本
+### 更早期的版本
 
-{{Firefox_for_developers('24')}}
+{{Firefox_for_developers}}

@@ -12,7 +12,7 @@ A complexidade do tempo de execução ou a quantidade de memória utilizada pela
 ## Sintaxe
 
 ```
-arr.sort([funcaoDeComparacao])
+arr.sort(funcaoDeComparacao)
 ```
 
 ### Parâmetros
@@ -47,7 +47,7 @@ things.sort(); // ['1 Word', '2 Words', 'Word', 'word']
 // as quais vêem antes das minúsculas.
 ```
 
-Se o parametro `funcaoDeComparacao` é fornecido, o array será ordenado de acordo com o valor de retorno da `funcaoDeComparacao`. Considerando que `a` e `b` são dois elementos sendo comparados, então:
+Se o parâmetro `funcaoDeComparacao` for fornecido, o array será ordenado de acordo com o valor de retorno da `funcaoDeComparacao`. Considerando que `a` e `b` são dois elementos sendo comparados, então:
 
 - Se `funcaoDeComparacao(a, b)` for menor que 0, ordena `a` para um índice anterior a `b`, i.e. a vem primeiro.
 - Se `funcaoDeComparacao(a, b)` retornar 0, deixa `a` e `b` inalterados em relação um ao outro, mas ordenado em relação a todos os outros elementos. Nota: O padrão ECMAscript não garante este comportamento, e, portanto, nem todos os navegadores (e.g. Versões do Mozilla anteriores a 2003) respeitarão isto.

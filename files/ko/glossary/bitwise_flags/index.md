@@ -17,18 +17,18 @@ usage: GPUBufferUsage.COPY_SRC | GPUBufferUsage.MAP_WRITE;
 
 이러한 값은 동일한 네임스페이스 내에 정의되며, 각 값은 16진수 값을 갖습니다.
 
-| 사용 플래그                    | 16진수 표현 | 10진수 변환값 |
-| ------------------------------ | ----------- | ------------- |
-| `GPUBufferUsage.MAP_READ`      | 0x0001      | 1             |
-| `GPUBufferUsage.MAP_WRITE`     | 0x0002      | 2             |
-| `GPUBufferUsage.COPY_SRC`      | 0x0004      | 4             |
-| `GPUBufferUsage.COPY_DST`      | 0x0008      | 8             |
-| `GPUBufferUsage.INDEX`         | 0x0010      | 16            |
-| `GPUBufferUsage.VERTEX`        | 0x0020      | 32            |
-| `GPUBufferUsage.UNIFORM`       | 0x0040      | 64            |
-| `GPUBufferUsage.STORAGE`       | 0x0080      | 128           |
-| `GPUBufferUsage.INDIRECT`      | 0x0100      | 256           |
-| `GPUBufferUsage.QUERY_RESOLVE` | 0x0200      | 512           |
+| 사용 플래그                    | 16진수 표현 | 10진수 변환 값 |
+| ------------------------------ | ----------- | -------------- |
+| `GPUBufferUsage.MAP_READ`      | 0x0001      | 1              |
+| `GPUBufferUsage.MAP_WRITE`     | 0x0002      | 2              |
+| `GPUBufferUsage.COPY_SRC`      | 0x0004      | 4              |
+| `GPUBufferUsage.COPY_DST`      | 0x0008      | 8              |
+| `GPUBufferUsage.INDEX`         | 0x0010      | 16             |
+| `GPUBufferUsage.VERTEX`        | 0x0020      | 32             |
+| `GPUBufferUsage.UNIFORM`       | 0x0040      | 64             |
+| `GPUBufferUsage.STORAGE`       | 0x0080      | 128            |
+| `GPUBufferUsage.INDIRECT`      | 0x0100      | 256            |
+| `GPUBufferUsage.QUERY_RESOLVE` | 0x0200      | 512            |
 
 {{domxref("GPUBuffer.usage")}} 속성을 쿼리하면, 단일 10진수가 반환됩니다. 이 단일 10진수는 다양한 사용 플래그에 대한 다양한 10진수 값의 합계입니다. 위의 예제로 돌아가서, 이전에 지정한 사용법으로 생성된 `GPUBuffer`에 대해 `GPUBuffer.usage`를 조회하면 다음과 같은 결과가 반환됩니다.
 
