@@ -58,7 +58,7 @@ slug: Web/HTML/Element/a
 
     - `no-referrer`：不發送 {{HTTPHeader("Referer")}} 標頭。
     - `no-referrer-when-downgrade`：不發送 {{HTTPHeader("Referer")}} 標頭至沒有 {{Glossary("TLS")}}（{{Glossary("HTTPS")}}）的[來源](/zh-TW/docs/Web/Security/Same-origin_policy)。
-    - `origin`：發送的引用者將僅限於引用頁面的來源：其[協定](/zh-TW/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)、{{Glossary("host")}} 和 {{Glossary("port")}}。
+    - `origin`：發送的引用者將僅限於引用頁面的來源：其[協定](/zh-TW/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)、{{Glossary("host", "主機")}}和{{Glossary("port", "通訊埠")}}。
     - `origin-when-cross-origin`：發送給其他來源的引用者將僅限於協定、主機和端口。對同一來源的導航仍將包含路徑。
     - `same-origin`：對於{{Glossary("Same-origin policy", "同一來源")}}，將發送引用者，但跨來源請求將不包含引用者信息。
     - `strict-origin`：僅在協定安全級別保持不變時（HTTPS→HTTPS）發送文件的源作為引用者，但不要將其發送給不太安全的目的地（HTTPS→HTTP）。
@@ -80,7 +80,7 @@ slug: Web/HTML/Element/a
     > **備註：** 將 `target="_blank"` 設置在 `<a>` 元素上，隱含提供了與設置 [`rel="noopener"`](/zh-TW/docs/Web/HTML/Attributes/rel/noopener) 相同的 `rel` 行為，它不設置 `window.opener`。
 
 - `type`
-  - : 提示連結 URL 的格式，使用 {{Glossary("MIME type")}}。沒有內建功能。
+  - : 提示連結 URL 的格式，使用 {{Glossary("MIME type", "MIME 類型")}}。沒有內建功能。
 
 ### 已棄用的屬性
 
@@ -91,7 +91,7 @@ slug: Web/HTML/Element/a
     > **備註：** 這個屬性已棄用，**不應該被作者使用**。請在連結的 URL 上使用 HTTP {{HTTPHeader("Content-Type")}} 標頭。
 
 - `coords` {{Deprecated_Inline}}
-  - : 與[形狀屬性](#shape)一起使用。逗號分隔的座標列表。
+  - : 與 [`shape` 屬性](#shape)一起使用。逗號分隔的座標列表。
 - `name` {{Deprecated_Inline}}
 
   - : 用於在頁面中定義可能的目標位置。在 HTML 4.01 中，`id` 和 `name` 都可以在 `<a>` 上使用，只要它們具有相同的值。
@@ -265,7 +265,7 @@ document
 
 `<a>` 元素可能對用戶的安全性和隱私造成影響。有關信息，請參見 [Referer 標頭：隱私和安全問題](/zh-TW/docs/Web/Security/Referer_header:_privacy_and_security_concerns)。
 
-在不使用 [`rel="noreferrer"`](/zh-TW/docs/Web/HTML/Attributes/rel/noreferrer) 和 [`rel="noopener"`](/zh-TW/docs/Web/HTML/Attributes/rel/noopener) 的情況下使用 `target="_blank"` 會使網站容易受到 {{domxref("window.opener")}} API 攻擊，但請注意，在新版瀏覽器中，設置 `target="_blank"` 隱含地提供了與設置 `rel="noopener"` 相同的保護機制。詳細信息請參見[瀏覽器相容性](#browser_compatibility)。
+在不使用 [`rel="noreferrer"`](/zh-TW/docs/Web/HTML/Attributes/rel/noreferrer) 和 [`rel="noopener"`](/zh-TW/docs/Web/HTML/Attributes/rel/noopener) 的情況下使用 `target="_blank"` 會使網站容易受到 {{domxref("window.opener")}} API 攻擊，但請注意，在新版瀏覽器中，設置 `target="_blank"` 隱含地提供了與設置 `rel="noopener"` 相同的保護機制。詳細信息請參見[瀏覽器相容性](#瀏覽器相容性)。
 
 ## 無障礙議題
 
@@ -273,7 +273,7 @@ document
 
 **鏈接內容應指示鏈接的目的地**，即使是在上下文之外。
 
-#### 無法訪問，弱鏈接文字
+#### 無障礙性差的弱鏈接文字
 
 一個常見的錯誤是只將「點擊此處」或「這裡」之類的詞作為鏈接：
 
@@ -283,7 +283,7 @@ document
 
 ##### 結果
 
-{{EmbedLiveSample('無法訪問，弱鏈接文字')}}
+{{EmbedLiveSample('無障礙性差的弱鏈接文字')}}
 
 #### 強鏈接文字
 
@@ -428,8 +428,7 @@ document
           >流內容</a
         >、<a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
           >段落型內容</a
-        >、
-        <a
+        >、 <a
           href="/zh-TW/docs/Web/HTML/Content_categories#互動型內容"
           >互動型內容</a
         >、捫及內容。
@@ -441,8 +440,7 @@ document
         <a
           href="/zh-TW/docs/Web/HTML/Content_categories#透明內容模型"
           >透明內容模型</a
-        >，除了沒有子孫可以是
-        <a
+        >，除了沒有子孫可以是<a
           href="/zh-TW/docs/Web/HTML/Content_categories#互動型內容"
           >互動型內容</a
         >或一個 <a href="/zh-TW/docs/Web/HTML/Element/a"
