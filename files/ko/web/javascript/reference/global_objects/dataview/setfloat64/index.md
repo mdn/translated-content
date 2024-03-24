@@ -25,7 +25,7 @@ setFloat64(byteOffset, value, littleEndian)
 - `value`
   - : 저장할 값. 어떻게 값이 바이트로 인코딩되는지는 [값 인코딩 및 정규화](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#value_encoding_and_normalization)를 보시기 바랍니다.
 - `littleEndian` {{optional_inline}}
-  - : {{Glossary("Endianness", "리틀 엔디언 혹은 빅 엔디언")}} 형식으로 16비트 정수를 저장할지 여부를 나타냅니다. `false` 혹은 `undefined`이라면 빅 엔디언 값으로 저장합니다.
+  - : {{Glossary("Endianness", "리틀 엔디언 혹은 빅 엔디언")}} 형식으로 숫자를 저장할지 여부를 나타냅니다. `false` 혹은 `undefined`이라면 빅 엔디언 값으로 저장합니다.
 
 ### 반환 값
 
@@ -34,7 +34,7 @@ setFloat64(byteOffset, value, littleEndian)
 ### 예외
 
 - {{jsxref("RangeError")}}
-  - : 뷰의 끝을 넘어 읽는 수도 있는 `byteOffset`이 설정된 경우 발생합니다.
+  - : 뷰의 끝을 넘어서 저장하려고 하는 `byteOffset`이 설정되면 발생합니다.
 
 ## 예제
 
