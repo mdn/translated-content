@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-전역 **`setTimeout()`** 메서드는 만료된 후 함수나 지정한 코드 조각을 실행하는 타이머를 설정합니다.
+전역 **`setTimeout()`** 메서드는 만료된 후 함수나 지정한 코드 조각을 한 번 실행하는 타이머를 설정합니다.
 
 ## 구문
 
@@ -26,9 +26,9 @@ setTimeout(functionRef, delay, param1, param2, /* … ,*/ paramN)
 ### 매개변수
 
 - `functionRef`
-  - : 타임아웃이 만료된 뒤 실행할 {{jsxref("function")}}입니다.
+  - : 타이머가 만료된 뒤 실행할 {{jsxref("function")}}입니다.
 - `code`
-  - : 함수 대신 문자열을 지정하는 대체 구문으로, 타임아웃이 만료될 때 코드로 컴파일 후 실행합니다. {{jsxref("Global_Objects/eval", "eval()")}}이 보안 취약점인 것과 같은 이유로 **사용을 권장하지 않습니다**.
+  - : 함수 대신 문자열을 지정하는 대체 구문으로, 타이머가 만료될 때 코드로 컴파일 후 실행합니다. {{jsxref("Global_Objects/eval", "eval()")}}이 보안 취약점인 것과 같은 이유로 **사용을 권장하지 않습니다**.
 - `delay` {{optional_inline}}
   - : 주어진 함수 또는 코드를 실행하기 전에 기다릴 밀리초 단위 시간입니다. 생략하거나 0을 지정할 경우 "즉시", 더 정확히는 다음 이벤트 사이클에 실행한다는 뜻입니다. 그러나 실제 지연 시간는 의도했던 것보다 더 길 수 있습니다. 아래의 [지연 시간이 지정한 값보다 더 긴 이유](#지연_시간이_지정한_값보다_더_긴_이유)를 참고하세요.
 - `param1`, …, `paramN` {{optional_inline}}
@@ -36,7 +36,7 @@ setTimeout(functionRef, delay, param1, param2, /* … ,*/ paramN)
 
 ### 반환 값
 
-반환하는 `timeoutID`는 양의 정수로서 `setTimeout()`이 생성한 타임아웃을 식별할 때 사용합니다. 이 값을 {{domxref("clearTimeout()")}}에 전달하면 타임아웃을 취소할 수 있습니다.
+반환하는 `timeoutID`는 양의 정수로서 `setTimeout()`이 생성한 타이머를 식별할 때 사용합니다. 이 값을 {{domxref("clearTimeout()")}}에 전달하면 타임아웃을 취소할 수 있습니다.
 
 같은 객체(창이나 워커)에서 반복해 호출하는 `setTimeout()` 또는 {{domxref("setInterval()")}} 메서드는 절대 같은 `timeoutID`를 사용하지 않습니다. 그러나 다른 객체끼리는 다른 ID 풀을 사용합니다.
 
@@ -96,7 +96,7 @@ setTimeout(() => {
 // 첫 번째 메시지
 ```
 
-첫 번째 `setTimeout()` 호출이 두 번째 호출 전에 5초의 "정지" 구간을 만들지 않음에 주의하세요. 그 대신, 위 코드는 첫 함수 실행을 5초간 대기하는 동시에 두 번째 함수 실행을 3초간 대기하고, 다시 동시에 세 번째 함수의 실행도 1초간 대기합니다. 그 후 1초가 지나면 첫 함수와 두 번째 함수 모두 아직 타임아웃이 끝나지 않았기 때문에 세 번째 함수 먼저 실행됩니다. 그 후에 두 번째, 그리고 마지막으로 첫 번째 함수가 각자의 타임아웃 만료 후 실행됩니다.
+첫 번째 `setTimeout()` 호출이 두 번째 호출 전에 5초의 "정지" 구간을 만들지 않음에 주의하세요. 그 대신, 위 코드는 첫 함수 실행을 5초간 대기하는 동시에 두 번째 함수 실행을 3초간 대기하고, 다시 동시에 세 번째 함수의 실행도 1초간 대기합니다. 그 후 1초가 지나면 첫 함수와 두 번째 함수 모두 아직 타이머가 끝나지 않았기 때문에 세 번째 함수 먼저 실행됩니다. 그 후에 두 번째, 그리고 마지막으로 첫 번째 함수가 각자의 타이머 만료 후 실행됩니다.
 
 함수의 실행이 완료된 후에 다른 함수를 호출하는 구조가 필요하면 [프로미스](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise) 문서를 살펴보세요.
 
@@ -315,9 +315,9 @@ foo 호출
 
 #### 페이지 로드 중 타임아웃 지연
 
-Firefox는 현재 탭이 로딩 중일 땐 `setTimeout()` 타임아웃 실행을 지연시킵니다. 실제 실행은 메인 스레드가 대기 상태에 들어가기 전까지({{domxref("window.requestIdleCallback()")}}과 비슷), 또는 `load` 이벤트가 발생하기 전까지 미뤄집니다.
+Firefox는 현재 탭이 로딩 중일 땐 `setTimeout()` 타이머 실행을 지연시킵니다. 실제 실행은 메인 스레드가 대기 상태에 들어가기 전까지({{domxref("window.requestIdleCallback()")}}과 비슷), 또는 `load` 이벤트가 발생하기 전까지 미뤄집니다.
 
-### WebExtension 백그라운드 페이지와 타임아웃
+### WebExtension 백그라운드 페이지와 타이머들
 
 [WebExtensions](/ko/docs/Mozilla/Add-ons/WebExtensions)에서는 `setTimeout()`을 신뢰할 수 없습니다. 확장 개발자는 `setTimeout()` 대신 [`alarms`](/ko/docs/Mozilla/Add-ons/WebExtensions/API/alarms) API를 사용해야 합니다.
 
