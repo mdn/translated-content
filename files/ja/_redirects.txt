@@ -122,7 +122,7 @@
 /ja/docs/Accessibility:Community	/ja/docs/Web/Accessibility
 /ja/docs/Accessibility_FAQ	/ja/docs/Web/Accessibility
 /ja/docs/Accessible_DHTML	/ja/docs/Web/Accessibility/ARIA
-/ja/docs/Adapting_XUL_Applications_for_Firefox_1.5	/ja/docs/Mozilla/Firefox/Releases/1.5/Adapting_XUL_Applications_for_Firefox_1.5
+/ja/docs/Adapting_XUL_Applications_for_Firefox_1.5	/ja/docs/Mozilla/Firefox/Releases/1.5
 /ja/docs/Adding_feed_readers_to_Firefox	/ja/docs/Mozilla/Firefox/Releases/2/Adding_feed_readers_to_Firefox
 /ja/docs/Adding_feed_readers_to_Firefox-redirect-1	/ja/docs/Mozilla/Firefox/Releases/2/Adding_feed_readers_to_Firefox
 /ja/docs/Addons	/ja/docs/Mozilla/Add-ons
@@ -2276,6 +2276,7 @@
 /ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications	/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
 /ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action	/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button
 /ja/docs/Mozilla/Add-ons/WebExtensions/デバッグ	https://extensionworkshop.com/documentation/develop/debugging/
+/ja/docs/Mozilla/Firefox/Releases/1.5/Adapting_XUL_Applications_for_Firefox_1.5	/ja/docs/Mozilla/Firefox/Releases/1.5
 /ja/docs/Mozilla/Firefox/Releases/Firefox_47_for_developers	/ja/docs/Mozilla/Firefox/Releases/47
 /ja/docs/Mozilla_Addons_FAQ_(external)	https://addons.mozilla.org/faq.php
 /ja/docs/NPAPI/Constants	/ja/docs/Glossary/Plugin
@@ -2705,10 +2706,10 @@
 /ja/docs/Web/API/Document/pointerover_event	/ja/docs/Web/API/Element/pointerover_event
 /ja/docs/Web/API/Document/pointerup_event	/ja/docs/Web/API/Element/pointerup_event
 /ja/docs/Web/API/Document/selectstart_event	/ja/docs/Web/API/Node/selectstart_event
-/ja/docs/Web/API/Document/touchcancel_event	/ja/docs/conflicting/Web/API/Element/touchcancel_event
-/ja/docs/Web/API/Document/touchend_event	/ja/docs/conflicting/Web/API/Element/touchend_event
+/ja/docs/Web/API/Document/touchcancel_event	/ja/docs/Web/API/Element/touchcancel_event
+/ja/docs/Web/API/Document/touchend_event	/ja/docs/Web/API/Element/touchend_event
 /ja/docs/Web/API/Document/touchmove_event	/ja/docs/Web/API/Element/touchmove_event
-/ja/docs/Web/API/Document/touchstart_event	/ja/docs/conflicting/Web/API/Element/touchstart_event
+/ja/docs/Web/API/Document/touchstart_event	/ja/docs/Web/API/Element/touchstart_event
 /ja/docs/Web/API/Document/transitioncancel_event	/ja/docs/Web/API/Element/transitioncancel_event
 /ja/docs/Web/API/Document/transitionend_event	/ja/docs/Web/API/Element/transitionend_event
 /ja/docs/Web/API/Document/transitionrun_event	/ja/docs/Web/API/Element/transitionrun_event
@@ -4051,6 +4052,7 @@
 /ja/docs/Web/HTML/Forms/Styling_HTML_forms	/ja/docs/Learn/Forms/Styling_web_forms
 /ja/docs/Web/HTML/Forms/The_native_form_widgets	/ja/docs/Learn/Forms/Basic_native_form_controls
 /ja/docs/Web/HTML/Forms_in_HTML	/ja/docs/Learn/Forms/HTML5_input_types
+/ja/docs/Web/HTML/Global_attributes/contextmenu	/ja/docs/Web/HTML/Element/menu
 /ja/docs/Web/HTML/HTML5/Constraint_validation	/ja/docs/Web/HTML/Constraint_validation
 /ja/docs/Web/HTML/HTML5/Forms_in_HTML5	/ja/docs/Learn/Forms/HTML5_input_types
 /ja/docs/Web/HTML/HTML5/HTML5_element_list	/ja/docs/Web/HTML/Element
