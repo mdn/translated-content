@@ -31,7 +31,7 @@ column-rule-width: unset;
 
 `column-rule-width` 属性被指定为单个 `<'border-width'>` 值。
 
-### 取值
+### 值
 
 - `<'border-width'>`
   - : 是由 {{ cssxref("border-width") }} 定义的关键字，定义列规则的宽度。它可以是 {{cssxref("&lt;length&gt;")}} 或 `thin`、 `medium`、或 `thick` 关键字之一。
@@ -52,7 +52,7 @@ column-rule-width: unset;
 
 ```html
 <p>
-  这是分成三列的文本。在<code>column-rule-width</code>属性中用于更改列与列之间的线条宽度。修改列之间线条的宽度。你不觉得这很棒吗？
+  这是分成三列的文本。在 `column-rule-width` 属性中用于更改列与列之间的线条宽度。修改列之间线条的宽度。你不觉得这很棒吗？
 </p>
 ```
 
