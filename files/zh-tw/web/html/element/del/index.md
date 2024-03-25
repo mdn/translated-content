@@ -97,7 +97,7 @@ del::after {
       <td>
         任何接受<a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
           >段落型內容</a
-        > 的元素。
+        >的元素。
       </td>
     </tr>
     <tr>
