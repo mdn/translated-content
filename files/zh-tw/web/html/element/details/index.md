@@ -11,7 +11,7 @@ slug: Web/HTML/Element/details
 
 {{EmbedInteractiveExample("pages/tabbed/details.html", "tabbed-shorter")}}
 
-`<details>` 小部件可以處於兩種狀態之一。默認的「關閉」狀態僅顯示三角形和 `<summary>` 內的標籤（或如果沒有 `<summary>`，則是 {{Glossary("user agent")}} 定義的默認字符串）。
+`<details>` 小部件可以處於兩種狀態之一。默認的「關閉」狀態僅顯示三角形和 `<summary>` 內的標籤（或如果沒有 `<summary>`，則是{{Glossary("user agent", "使用者代理")}}定義的默認字符串）。
 
 當用戶點擊小部件或將焦點放在小部件上並按空格鍵時，它會「扭曲」開啟，顯示其內容。常見的使用旋轉或扭曲三角形來表示打開或關閉小部件的用法，這就是為什麼有時被稱為「扭曲」的原因。
 
