@@ -11,7 +11,7 @@ l10n:
 
 ## 值
 
-{{domxref("navigator")}} 对象
+一个 {{domxref("navigator")}} 对象
 
 ## 示例
 
