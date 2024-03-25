@@ -20,9 +20,9 @@ browser.runtime.onInstalled.hasListener(listener);
 Les événements ont trois fonctions :
 
 - `addListener(callback)`
-  - : Ajouterun écouteur à cet événement.
+  - : Ajoute un écouteur à cet événement.
 - `removeListener(listener)`
-  - : Arrêtez d'écoutercet événement. L'argument `listener` est l'écouteur à supprimer.
+  - : Arrête d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
 - `hasListener(listener)`
   - : Vérifie si un `écouteur` est enregistré pour cet événement. Renvoie `true` s'il écoute, `false` sinon.
 
@@ -53,7 +53,7 @@ Les événements ont trois fonctions :
 
 ## Exemples
 
-Lorsque l'extensin est installé, connectez-vous à la raison de l'installon et ouvrez <https://www.reddit.com/r/CatGifs/>:
+Lorsque l'extension est installée, enregistrer la raison de l'installation dans la console et ouvrez <https://www.reddit.com/r/CatGifs/>:
 
 ```js
 function handleInstalled(details) {
