@@ -1,6 +1,8 @@
 ---
-title: HTMLSelectElement.checkValidity()
+title: HTMLSelectElement：checkValidity() 方法
 slug: Web/API/HTMLSelectElement/checkValidity
+l10n:
+  sourceCommit: 8f3daa06271fa91d351d40ee59c2f07377025108
 ---
 
 {{ APIRef("HTML DOM") }}
