@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}{{SeeCompatTable}}
 
-**`::-webkit-slider-thumb`** CSS [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)代表 {{HTMLElement("input")}} 元素的滑块按钮，用户可以拖动 `type="range"` 按钮来改变其数值。
+**`::-webkit-slider-thumb`** CSS [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)代表 `type="range"` 的 {{HTMLElement("input")}} 元素的滑块按钮，用户可以拖动按钮来改变其数值。
 
 ## 语法
 
@@ -28,7 +28,7 @@ l10n:
 ## 参见
 
 - {{cssxref("::-webkit-slider-runnable-track")}}
-- 其他浏览器与该功能类似的伪类：
+- 其他浏览器与之类似的伪元素：
 
   - {{cssxref("::-moz-range-thumb")}}
 
