@@ -45,7 +45,7 @@ Les événements ont trois fonctions :
         - `reason`
           - : Une valeur {{WebExtAPIRef('runtime.OnInstalledReason')}}, indiquant la raison pour laquelle cet événement est distribué.
         - `temporary`
-          - : `boolean`. Vrai si le module complémentaire a été installé temporairement. Par exemple, en utilisant la page "about:debugging" dans Firefox ou en utilisant [web-ext run](/fr/Add-ons/WebExtensions/Getting_started_with_web-ext). Sinon faux.
+          - : `boolean`. Vrai si le module complémentaire a été installé temporairement. Par exemple, en utilisant la page "about:debugging" dans Firefox ou en utilisant [web-ext run](/fr/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext). Sinon faux.
 
 ## Compatibilité des navigateurs
 
