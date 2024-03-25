@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`animation-duration`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 1 回のアニメーション周期が完了するまでの所要時間を設定します。
+**`animation-duration`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 1 回のアニメーション周期が完了するまでの再生時間を設定します。
 
 {{EmbedInteractiveExample("pages/css/animation-duration.html")}}
 

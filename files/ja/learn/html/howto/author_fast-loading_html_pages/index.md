@@ -1,7 +1,11 @@
 ---
 title: 読み込みが速い HTML ページを作成するための豆知識
 slug: Learn/HTML/Howto/Author_fast-loading_HTML_pages
+l10n:
+  sourceCommit: 8d766d1d1c60a2d6d2c95bd2aa9d0b297d9c70ac
 ---
+
+{{QuickLinksWithSubpages("/ja/docs/Learn/HTML/Howto")}}
 
 これらの豆知識は、一般の知識や実験に基づくものです。
 
@@ -31,11 +35,11 @@ CSS で多数の背景画像を使用している場合は、画像スプライ�
 
 この記事の目的のために、CDN はサーバーと訪問者の間の物理的な距離を縮めるための手段です。サーバーの起点と訪問者の間の距離が長くなると、読み込み時間が長くなります。ウェブサイトのサーバーがアメリカにあり、インドからの訪問者がいるとします。米国からの訪問者と比較して、ページの読み込み時間はインドの訪問者の方がはるかに長くなります。
 
-CDN は地理的に分散したサーバーネットワークで、ユーザーとウェブサイトの距離を縮めるために連携して機能します。CDN はキャッシュされたウェブサイトのバージョンを保存し、それらをユーザーに最も近いネットワークノードを介して訪問者に提供するので、[待ち時間](http://www.webperformancetoday.com/2012/04/02/latency-101-what-is-latency-and-why-is-it-such-a-big-deal/)が短縮されます。
+CDN は地理的に分散したサーバーネットワークで、ユーザーとウェブサイトの距離を縮めるために連携して機能します。CDN はキャッシュされたウェブサイトのバージョンを保存し、それらをユーザーに最も近いネットワークノードを介して訪問者に提供するので、[レイテンシー](/ja/docs/Web/Performance/Understanding_latency)が短縮されます。
 
 参考文献:
 
-- [Understanding CDNs](https://www.incapsula.com/cdn-guide/what-is-cdn-how-it-works.html)
+- [Understanding CDNs](https://www.imperva.com/learn/performance/what-is-cdn-how-it-works/)
 
 ### ドメイン検索の削減
 
@@ -54,7 +58,7 @@ CDN は地理的に分散したサーバーネットワークで、ユーザー�
 詳細情報:
 
 1. [HTTP Conditional Get for RSS Hackers](https://fishbowl.pastiche.org/2002/10/21/http_conditional_get_for_rss_hackers)
-2. [HTTP 304: Not Modified](https://annevankesteren.nl/archives/2005/05/http-304)
+2. [HTTP 304: Not Modified](https://annevankesteren.nl/2005/05/http-304)
 3. [Wikipedia の HTTP ETag の記事](https://ja.wikipedia.org/wiki/HTTP_ETag)
 4. [Caching in HTTP](https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html)
 
@@ -66,7 +70,7 @@ CDN は地理的に分散したサーバーネットワークで、ユーザー�
 
 ### インラインスクリプト数の削減
 
-インラインスクリプトがあると、インラインスクリプトのパース中にページの構造が変わる可能性があるとパーサーが想定しなければならないため、ページの読み込みにおいて重荷になることがあります。一般的にはインラインスクリプトの使用を減らし、また特に `document.write()` を用いたコンテンツの出力を減らすことで、ページ読み込みのパフォーマンスが向上するでしょう。 `document.write()` に基づく旧来のコンテンツ操作方法ではなく、最新のブラウザー向けの方法である [AJAX](/ja/docs/Web/Guide/AJAX) を使用してください。
+インラインスクリプトがあると、インラインスクリプトのパース中にページの構造が変わる可能性があるとパーサーが想定しなければならないため、ページの読み込みにおいて重荷になることがあります。一般的にはインラインスクリプトの使用を減らし、また特に `document.write()` を用いたコンテンツの出力を減らすことで、ページ読み込みのパフォーマンスが向上するでしょう。 `document.write()` ではなく、[ページのコンテンツを操作する DOM API](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents) を使用してください。
 
 ### 最新の CSS と正しいマークアップの使用
 
@@ -74,32 +78,38 @@ CDN は地理的に分散したサーバーネットワークで、ユーザー�
 
 正しいマークアップを使用することは、ほかにも利点があります。第一に、ブラウザーが HTML を解釈する際にエラー訂正を行う必要がなくなります (ユーザーの記述法の多様性を認めるかどうかという哲学的な問題とは別です。厳密な、許容範囲のない書式を強制するというより、プログラム的に「正しく」または正規化しましょう)
 
-さらに、正しいマークアップをすることによって、ウェブページを*プリプロセス*ができる他のツールが自由に利用できるようになります。例えば、[HTML Tidy](http://tidy.sourceforge.net/) はホワイトスペースや省略可能な終了タグを除去することができます。しかし、重大なマークアップの誤りがあるページではツールを実行できません。
+さらに、正しいマークアップをすることによって、ウェブページを*プリプロセス*ができる他のツールが自由に利用できるようになります。例えば、 [HTML Tidy](https://www.html-tidy.org/) はホワイトスペースや省略可能な終了タグを除去することができます。しかし、重大なマークアップの誤りがあるページではツールを実行できません。
 
 ### コンテンツをまとめる
 
-テーブルをレイアウトのために使うのは陳腐化した方法であり、もはや使うべきではありません。レイアウトを行うには、代わりに[浮動要素](/ja/docs/Learn/CSS/CSS_layout/Floats)、[位置指定](/ja/docs/Learn/CSS/CSS_layout/Positioning)、[フレックスボックス](/ja/docs/Learn/CSS/CSS_layout/Flexbox)、[グリッド](/ja/docs/Learn/CSS/CSS_layout/Grids)を使用してください。
+表をレイアウトのために使うのは陳腐化した方法であり、もはや使うべきではありません。レイアウトを行うには、代わりに[浮動要素](/ja/docs/Learn/CSS/CSS_layout/Floats)、[位置指定](/ja/docs/Learn/CSS/CSS_layout/Positioning)、[フレックスボックス](/ja/docs/Learn/CSS/CSS_layout/Flexbox)、[グリッド](/ja/docs/Learn/CSS/CSS_layout/Grids)を使用してください。
 
-テーブルは現在でも妥当なマークアップと考えられていますが、表形式のデータを表示するために用いるべきです。ブラウザーがページを迅速に表示するためには、テーブルを入れ子にしないようにしてください。
+表は現在でも妥当なマークアップと考えられていますが、表形式のデータを表示するために用いるべきです。ブラウザーがページを迅速に表示するためには、表を入れ子にしないようにしてください。
 
-以下のように深い入れ子のテーブルを使用する代わりに、
+以下のように深い入れ子の表を使用する代わりに、
 
-```
+```html
 <table>
   <table>
     <table>
-          ...
+      …
     </table>
   </table>
 </table>
 ```
 
-以下のように入れ子にしないテーブルや div を用いてください。
+以下のように入れ子にしない表や div を用いてください。
 
-```
-<table>...</table>
-<table>...</table>
-<table>...</table>
+```html
+<table>
+  …
+</table>
+<table>
+  …
+</table>
+<table>
+  …
+</table>
 ```
 
 [CSS Flexible Box Layout](https://www.w3.org/TR/css-flexbox-1/) と [CSS Grid Layout](https://www.w3.org/TR/css-grid-1/) の仕様書も参照してください。
@@ -112,26 +122,26 @@ CDN は地理的に分散したサーバーネットワークで、ユーザー�
 
 画像が大きいと、ページの読み込みに時間がかかります。画像をページに追加する前に、圧縮することを検討してください。 [Compress Jpeg](https://compressjpeg.com/)、[Tiny PNG](https://tinypng.com)、その他多くのツールがオンラインで利用可能です。photoshop などのオフラインツールも使用できます。
 
-### 画像やテーブルのサイズ指定
+### 画像や表のサイズ指定
 
-ブラウザーが直ちに画像やテーブルの高さや幅を決めることができれば、ブラウザーはコンテンツの再配置を行うことなくウェブページを表示できます。これはページの表示を高速化するだけでなく、ページの読み込みが完了するまでにレイアウトが不安定に変化することを防ぎます。よって、可能な限り画像には `height` と `width` を指定するべきです。
+ブラウザーが直ちに画像や表の高さや幅を決めることができれば、ブラウザーはコンテンツの再配置を行うことなくウェブページを表示できます。これはページの表示を高速化するだけでなく、ページの読み込みが完了するまでにレイアウトが不安定に変化することを防ぎます。よって、可能な限り画像には `height` と `width` を指定するべきです。
 
-テーブルは以下のセレクターとプロパティの組み合わせを用いるべきです:
+表は以下のセレクターとプロパティの組み合わせを用いるべきです。
 
-```
-  table-layout: fixed;
+```css
+table-layout: fixed;
 ```
 
 そして、 [`<col>`](/ja/docs/Web/HTML/Element/col) 要素および [`<colgroup>`](/ja/docs/Web/HTML/Element/colgroup) 要素を用いて列の幅を指定しましょう。
 
 ### 画像の遅延読み込みを使用する
 
-既定では、画像は**熱心に**読み込まれます。つまり、 HTML で処理されると同時に画像が読み込まれ、表示されます。熱心に読み込まれた画像は、文書の {{domxref("Document.load_event", "load")}} イベントが送られる前に表示されます。画像の遅延読み込みに切り替えるとブラウザーは、{{Glossary("visual viewport", "視覚的ビューポート")}}の描画に必要になるまで、画像の読み込みを保留します。
+既定では、画像は**熱心に**読み込まれます。つまり、 HTML で処理されると同時に画像が読み込まれ、表示されます。熱心に読み込まれた画像は、ウィンドウの [`load`](/ja/docs/Web/API/Window/load_event) イベントが送られる前に表示されます。画像の遅延読み込みに切り替えるとブラウザーは、{{Glossary("visual viewport", "視覚的ビューポート")}}の描画に必要になるまで、画像の読み込みを保留します。
 
 画像に遅延読み込みのマークを付けるには、 [`loading`](/ja/docs/Web/HTML/Element/img#loading) 属性に `lazy` という値を指定してください。この設定により、画像は必要なときにのみ読み込まれます。
 
 ```html
-<img href="./images/footerlogo.jpg" loading="lazy" />
+<img src="./images/footerlogo.jpg" loading="lazy" alt="MDN logo" />
 ```
 
 ただし、遅延読み込みされた画像は、 `load` イベントが発生した時点では利用できない場合があります。画像がロードされているかどうかは、論理的プロパティの {{domxref("HTMLImageElement.complete", "complete")}} の値が `true` であるかどうかを確認することで判断できます。
@@ -140,7 +150,7 @@ CDN は地理的に分散したサーバーネットワークで、ユーザー�
 
 ページデザインを最大限に改善するには、プロジェクトのユーザーエージェントの要件を合理的なものにしましょう。すべてのブラウザー、特に古いバージョンのブラウザーでコンテンツがピクセル単位で正確に見えるように要求しないでください。
 
-理想的には、適切な標準仕様に対応している最新のブラウザーを最低要件にするよう考慮するべきです。これには、最近のバージョンの Firefox、Internet Explorer、Google Chrome、Opera、Safari が含まれます。
+理想的には、適切な標準仕様に対応している最新のブラウザーを最低要件にするよう考慮するべきです。これには、最近のバージョンの Firefox、Google Chrome、Opera、Safari が含まれます。
 
 ただし、この記事に記載している秘訣の多くはあらゆるユーザーエージェントに適用できる汎用的なテクニックであり、かつブラウザーの対応要件にかかわらずどのようなウェブページにでも適用できます。
 
@@ -155,28 +165,30 @@ CDN は地理的に分散したサーバーネットワークで、ユーザー�
 ## ページ構造の例
 
 - `{{htmlelement('html')}}`
-- `{{htmlelement('head')}}`
 
-  - : &#x20;
+  - `{{htmlelement('head')}}`
 
-    - `{{htmlelement('link')}}` ...
-      - : ページの外観に必要な CSS ファイルです。管理しやすくするため、関連性のない CSS は別のファイルに分けるとともに、パフォーマンスのためにファイル数は最小限にしてください。
-    - `{{htmlelement('script')}}` ...
-      - : ページの読み込み中に**必要な**機能の JavaScript ファイルですが、ページの読み込み後にしか実行しない対話操作に関するものは含めないようにしてください。
-        管理のために関連性のない JavaScript は別のファイルに分けるとともに、パフォーマンスのためにファイル数は最小限にしてください。
+    - `{{htmlelement('link')}}`
 
-- `{{htmlelement('body')}}`
+      ページの外観に必要な CSS ファイルです。管理しやすくするため、関連性のない CSS は別のファイルに分けるとともに、パフォーマンスのためにファイル数は最小限にしてください。
 
-  - : ユーザーが閲覧可能なページコンテンツを小さな塊 ( `{{htmlelement('header')}}`/ `{{htmlelement('main')}}/` `{{htmlelement('table')}}`) にまとめると、ページ全体のダウンロードを待たずに表示できるようにすることができる。
+    - `{{htmlelement('script')}}`
 
-    - `{{htmlelement('script')}}` ...
-      - : 対話操作を実行するのに用いるスクリプトです。対話操作のスクリプトはたいてい、ページが完全に読み込まれて必要なオブジェクトがすべて初期化された後にのみ実行されます。よって、ページのコンテンツより先に読み込む必要はありません。先に読み込むと、ページが最初に表示されるのが遅くなります。
-        管理のために関連性のない JavaScript は別のファイルに分けるとともに、パフォーマンスのためにファイル数は最小限にしてください。
-        ロールオーバー効果で用いる画像がある場合は、ページのコンテンツをダウンロードした後に画像の先読みをしておきましょう。
+      ページの読み込み中に**必要な**機能の JavaScript ファイルですが、ページの読み込み後にしか実行しない対話操作に関するものは含めないようにしてください。
+      管理のために関連性のない JavaScript は別のファイルに分けるとともに、パフォーマンスのためにファイル数は最小限にしてください。
+
+  - `{{htmlelement('body')}}`
+
+    ユーザーが閲覧可能なページコンテンツを小さな塊 ( `{{htmlelement('header')}}`/ `{{htmlelement('main')}}/` `{{htmlelement('table')}}`) にまとめると、ページ全体のダウンロードを待たずに表示できるようにすることができる。
+
+    - `{{htmlelement('script')}}`
+
+      対話操作を実行するのに用いるスクリプトです。対話操作のスクリプトはたいてい、ページが完全に読み込まれて必要なオブジェクトがすべて初期化された後にのみ実行されます。よって、ページのコンテンツより先に読み込む必要はありません。先に読み込むと、ページが最初に表示されるのが遅くなります。
+
+      管理のために関連性のない JavaScript は別のファイルに分けるとともに、パフォーマンスのためにファイル数は最小限にしてください。
 
 ## 関連リンク
 
 - 書籍: ["Speed Up Your Site" by Andy King](http://www.websiteoptimization.com/) (英語)
 - Yahoo! によるすばらしい完成された [ウェブサイト高速化のためのベストプラクティス](https://developer.yahoo.com/performance/rules.html) (英語)
-- パフォーマンス解析・最適化向けツール: [Google PageSpeed Tools](https://developers.google.com/speed/pagespeed/)
-- [Paint Flashing Tool](/ja/docs/Tools/Paint_Flashing_Tool)
+- パフォーマンス解析・最適化向けツール: [Google PageSpeed Tools](https://developers.google.com/speed/)

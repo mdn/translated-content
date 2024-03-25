@@ -112,7 +112,7 @@ ARIA 角色共分为 6 类：
 
 ### 4. 实时区域角色
 
-实时区域（Live Region）角色用于定义带有动态更改的内容的元素。动态变化在视觉上明显时，具有视力的的用户可以看到。这些角色可帮助低视力和盲人用户了解内容是否更新。辅助技术，例如屏幕阅读器，可以告知动态内容变更：
+实时区域（Live Region）角色用于定义带有动态更改的内容的元素。动态变化在视觉上明显时，具有视力的用户可以看到。这些角色可帮助低视力和盲人用户了解内容是否更新。辅助技术，例如屏幕阅读器，可以告知动态内容变更：
 
 - [alert](/zh-CN/docs/Web/Accessibility/ARIA/Roles/alert_role)
 - [log](/zh-CN/docs/Web/Accessibility/ARIA/Roles/log_role)

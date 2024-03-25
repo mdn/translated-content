@@ -98,7 +98,7 @@ If the requested method isn't supported, the server will respond with an error.
   - Servo: [Issue 13283](https://github.com/servo/servo/issues/13283)
   - WebKit: [Issue 165508](https://bugs.webkit.org/show_bug.cgi?id=165508)
 
-## 相关内容
+## 参见
 
 - {{HTTPHeader("Access-Control-Allow-Origin")}}
 - {{HTTPHeader("Access-Control-Expose-Headers")}}

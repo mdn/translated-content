@@ -1,7 +1,11 @@
 ---
-title: 一般的なウェブレイアウトには何が含まれているのか？
+title: 一般的なウェブレイアウトには何が含まれているのか
 slug: Learn/Common_questions/Design_and_accessibility/Common_web_layouts
+l10n:
+  sourceCommit: cbd8527cf4df0464c4724b73161e4f7721301616
 ---
+
+{{QuicklinksWithSubPages("ja/Learn/Common_questions")}}
 
 ウェブサイトのページをデザインする際、最も一般的なレイアウトを把握しておくとよいでしょう。
 
@@ -10,7 +14,7 @@ slug: Learn/Common_questions/Design_and_accessibility/Common_web_layouts
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        ウェブプロジェクトで<a href="/ja/docs/Learn/Common_questions/Thinking_before_coding">何を実現したいのか</a>について既に考えていること。
+        ウェブプロジェクトで<a href="/ja/docs/Learn/Common_questions/Design_and_accessibility/Thinking_before_coding">何を実現したいのか</a>について既に考えていること。
       </td>
     </tr>
     <tr>
@@ -47,7 +51,7 @@ slug: Learn/Common_questions/Design_and_accessibility/Common_web_layouts
 
 ![基本的な 2 列レイアウトの例。左列にサイド記事、右列に本文を配置。](2-col-layout-right.png) ![基本的な 2 列レイアウトの例。右列にサイド記事、左列に本文を配置。](2-col-layout-left.png)
 
-**3 列レイアウト**。画面の大きなデスクトップのみに適しています。（ただし、デスクトップユーザーの多くも、全画面表示よりも小さなウィンドウで見ることを好みます）。
+**3 列レイアウト**。画面の大きなデスクトップのみに適しています。（ただし、デスクトップユーザーのの多くは、全画面表示よりも小さなウィンドウで見ることを好みます）。
 
 ![基本的な 3 列レイアウトの例。左右の列にサイド記事、中央の列に本文。](3-col-layout.png) ![もう一つの 3 列レイアウトの例。左側が横並び、右側の列が本文です。](3-col-layout-alt.png) ![もう一つの 3 列レイアウトの例。右側が横並び、左側の列が本文です。](3-col-layout-alt2.png)
 
@@ -61,7 +65,7 @@ slug: Learn/Common_questions/Design_and_accessibility/Common_web_layouts
 
 ## アクティブラーニング
 
-_利用可能なアクティブラーニングはまだありません。[ぜひ協力をご検討ください](/ja/docs/MDN/Contribute/Getting_started)。_
+_利用可能なアクティブラーニングはまだありません。[ぜひ協力をご検討ください](/ja/docs/MDN/Community/Contributing/Getting_started)。_
 
 ## より深く掘り下げる
 
@@ -73,21 +77,21 @@ _利用可能なアクティブラーニングはまだありません。[ぜひ
 
 ![1　列レイアウトの例](screenshot-product.jpg) ![ヘッダー、本文、サイド記事の積み重ね、フッターの1列レイアウト](screenshot-product-overlay.jpg)
 
-とても簡単です。ただ、多くの人がデスクトップからサイトを閲覧することに変わりはないので、デスクトップでも使いやすく、読みやすいコンテンツにしてください。
+とても簡単です。ただ、たくさんの人がデスクトップ PC からサイトを閲覧することに変わりはないので、デスクトップでも使いやすく、読みやすいコンテンツにしてください。
 
 ### 2 列レイアウト
 
 **[Abduzeedo](https://abduzeedo.com/typography-mania-261)** はシンプルなブログレイアウトです。ブログは通常、 2 つの列を持っています。太い列は本分用で、細い列は横に並べるもの（ウィジェット、副次ナビゲーションレベル、広告など）用の列です。
 
-![Example of a 2 column layout for a blog](screenshot-blog.jpg) ![A 2 column layout with the main content on the left column](screenshot-blog-overlay.jpg)
+![ブログの 2 列レイアウトの例](screenshot-blog.jpg) ![左列に本文を配置した 2 列組みのレイアウト。](screenshot-blog-overlay.jpg)
 
-この例では、ヘッダーのすぐ下にある画像（B1）を見てください。これは本文と関係がありますが、本文はこれがなくても意味をなすので、この画像を本文と考えることも、横に並んでいるコンテンツと考えることもできます。それはどうでもいいことです。重要なのは、ヘッダーの下に何かを置く場合、それは本文か、本文に直接関連するものでなければならないということです。
+この例では、ヘッダーのすぐ下にある画像 (B1) を見てください。これは本文と関係がありますが、本文はこれがなくても意味をなすので、この画像を本文と考えることも、横に並んでいるコンテンツと考えることもできます。それはどうでもいいことです。重要なのは、ヘッダーの下に何かを置く場合、それは本文か、本文に直接関連するものでなければならないということです。
 
 ### 罠
 
-**[MICA](https://www.mica.edu/about-mica/)**. これはちょっとやっかいですね。3 列レイアウトのようです。
+**[MICA](https://www.mica.edu/about-mica/)**. これはちょっとやっかいですね。3 列レイアウトのように見えます。
 
-![Example of a false 3 columns layout](screenshot-education.jpg) ![It looks like a 3 columns layout but actually, the aside content is floating around.](screenshot-education-overlay.jpg)
+![偽の 3 列レイアウトの例](screenshot-education.jpg) ![3 列組みのレイアウトに見えますが、実は補助的なものが浮動しています。](screenshot-education-overlay.jpg)
 
 しかし、そうではありません。 B1 と B2 は本文の周りに浮かんでいるのです。 "float" という単語を覚えておいてください。 {{Glossary("CSS")}} について学び始めると、ピンとくるはずです。
 
@@ -99,7 +103,7 @@ _利用可能なアクティブラーニングはまだありません。[ぜひ
 
 **The Opera de Paris**.
 
-![An example of a tricky layout.](screenshot-opera.jpg) ![This is a 2 column layout but the header is overlapping the main content.](screenshot-opera-overlay.jpg)
+![巧妙なレイアウトの例。](screenshot-opera.jpg) ![これは 2 列レイアウトですが、ヘッダーが本文コンテンツに重なっています。](screenshot-opera-overlay.jpg)
 
 基本的には 2 列レイアウトですが、視覚的にレイアウトを崩すような工夫があちこちに見受けられます。特に、ヘッダーが本文の画像に重なっていること。ヘッダーのメニューの曲線と画像の下部の曲線が結びついて、ヘッダーと本文は技術的には完全に別物であるにもかかわらず、一つのもののように見えます。 Opera の例は MICA の例よりも複雑に見えますが、実際には簡単に実装できます（正確には、「簡単」というのは相対的な概念です）。
 

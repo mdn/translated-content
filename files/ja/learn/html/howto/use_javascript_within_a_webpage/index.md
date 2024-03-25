@@ -1,80 +1,93 @@
 ---
-title: ウェブページで JavaScript を使う方法
+title: ウェブページで JavaScript を使う
 slug: Learn/HTML/Howto/Use_JavaScript_within_a_webpage
+l10n:
+  sourceCommit: 751d58669499de0c6ea0d5b356e0e1448418c5d3
 ---
 
-Take your webpages to the next level by harnessing JavaScript. Learn in this article how to trigger JavaScript right from your HTML documents.
+{{QuickLinksWithSubpages("/ja/docs/Learn/HTML/Howto")}}
 
-| 前提条件: | [基本的な HTML 文書の作成](/ja//Learn/HTML/Write_a_simple_page_in_HTML)方法を習熟している必要があります。 |
-| --------- | --------------------------------------------------------------------------------------------------------- |
-| 目的:     | HTML ファイルから JavaScript を起動する方法と、JavaScript にアクセスできるようにする最も良い習慣を学ぶ。  |
+JavaScript を活用して、あなたのウェブページを次のレベルに引き上げましょう。この記事では、 HTML 文書から JavaScript を正しく起動する方法を学びます。
+
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">前提条件:</th>
+      <td>
+        <a href="/ja/docs/Learn/Getting_started_with_the_web"
+          >基本的な HTML 文書の作成</a
+        >方法を習熟している必要があります。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">目標:</th>
+      <td>
+        HTML ファイルから JavaScript を起動する方法と、 JavaScript にアクセスできるようにする最も良い習慣を学ぶ。
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## JavaScript について
 
 {{Glossary("JavaScript")}} はウェブページをインタラクティブにするための、主にクライアントサイドで使われるプログラミング言語です。 JavaScript を使わなくてもすばらしいウェブページを作ることが*できます*が、JavaScript は全く新しいレベルの可能性を開きます。
 
-> **メモ:** In this article we're going over the HTML code you need to make JavaScript take effect. If you want to learn JavaScript itself, you can start with our [JavaScript basics](/ja//Learn/Getting_started_with_the_web/JavaScript_basics) article. If you already know something about JavaScript or if you have a background with other プログラミング言語 s, we suggest you jump directly into our [JavaScript Guide](/ja//docs/Web/JavaScript/Guide).
+> **メモ:** この記事では、 JavaScript が効果を発揮するために必要な HTML コードに取り組みます。 JavaScript そのものを学びたい場合は、 [JavaScript の基本](/ja/docs/Learn/Getting_started_with_the_web/JavaScript_basics)の記事から始めることができます。JavaScript についてすでに知っている場合や、他にもプログラミング言語の経験がある場合は、[JavaScript ガイド](/ja/docs/Web/JavaScript/Guide)に直接進むことをお勧めします。
 
 ## HTML から JavaScript を起動する方法
 
-Within a browser, JavaScript doesn't do anything by itself. You run JavaScript from inside your HTML webpages. To call JavaScript code from within HTML, you need the {{htmlelement("script")}} element. There are two ways to use `script`, depending on whether you're linking to an external script or embedding a script right in your webpage.
+ブラウザー内で、 JavaScript それ自体は何もしません。 JavaScript は HTML ウェブページの中から実行します。 HTML の中から JavaScript コードを呼び出すには {{htmlelement("script")}} 要素が必要です。 `script` の使い方には、外部スクリプトにリンクするか、ウェブページにスクリプトを正しく埋め込むか、 2 つの方法があります。
 
-### Linking an external script
+### 外部スクリプトのリンク
 
-Usually, you'll be writing scripts in their own .js files. If you want to execute a .js script from your webpage, just use {{HTMLElement ('script')}} with an `src` attribute pointing to the script file, using its [URL](/ja//Learn/Understanding_URLs):
+通常、スクリプトは自分自身で .js ファイルに書きます。ウェブページから .js スクリプトを実行したい場合は、 {{HTMLElement ('script')}} を使用し、スクリプトファイルを指す `src` 属性にその [URL](/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL) を指定してください。
 
 ```html
 <script src="path/to/my/script.js"></script>
 ```
 
-> **メモ:** **Pro tip:** In many cases it's a good idea to put your {{HTMLElement('script')}} elements at the end of your HTML document (right before the `</body>` closing {{Glossary("tag")}}).
->
-> Loading and running scripts is blocking and immediate. That means, every time the browser comes across a `<script>` element, the browser stops reading the HTML and instead loads and runs the script. The browser continues reading and rendering the HTML code after running the script.
->
-> When you put {{htmlelement("script")}} elements at the end, you don't run the risk of manipulating {{Glossary("DOM")}} nodes that are not yet initialized. In addition, your webpages will finish displaying faster.
+### HTML の中で JavaScript を書く
 
-### Writing JavaScript within HTML
-
-You may also add JavaScript code between `<script>` tags rather than providing an `src` attribute.
+`src` 属性を提供する代わりに `<script>` タグの間に JavaScript コードを追加することもできます。
 
 ```html
 <script>
-  window.addEventListener("load", function () {
-    console.log("This function is executed once the page is fully loaded");
+  window.addEventListener("load", () => {
+    console.log("この関数は、ページが完全に読み込まれた時点で実行されます。");
   });
 </script>
 ```
 
-That's convenient when you just need a small bit of JavaScript, but if you keep JavaScript in separate files you'll find it easier to
+ちょっとした JavaScript が必要なときには便利ですが、 JavaScript を別個のファイルで管理すると、次のようなことが簡単にできることがわかります。
 
-- focus on your work
-- write self-sufficient HTML
-- write structured JavaScript applications
+- 作業に集中する
+- 自給自足の HTML を書く
+- 構造化した JavaScript アプリケーションを書く
 
-## Use scripting accessibly
+## アクセシビリティに配慮したスクリプトの使用
 
-Accessibility is a major issue in any software development. JavaScript can make your website more accessible if you use it wisely, or it can become a disaster if you use scripting without care. To make JavaScript work in your favor, it's worth knowing about certain best practices for adding JavaScript:
+アクセシビリティは、あらゆるソフトウェア開発において大きな課題です。 JavaScript を賢く使用すればウェブサイトをよりアクセシビリティの高いものにできますし、スクリプトを無頓着に使用すれば大惨事になることもあります。 JavaScript が意図通りに動くようにするには、JavaScript を追加するための最善の手法について知っておく価値があります。
 
-- **Make all content available as (structured) text.** Rely on HTML for your content as much as possible. 例えば、 if you've implemented a nice JavaScript progress bar, make sure to supplement it with matching text percentages inside the HTML. Likewise, your drop-down menus should be structured as [unordered lists](/ja//Learn/HTML/Howto/Create_list_of_items_with_HTML) of [links](/ja//Learn/HTML/Howto/Create_a_hyperlink).
-- **Make all functionality accessible from the keyboard.**
+- **すべてのコンテンツを（構造化された）テキストとして利用できるようにしましょう。** コンテンツは可能な限り HTML に頼ってください。例えば、 JavaScript で素敵な進捗バーを実装した場合、HTML 内で一致するテキストのパーセント表示で補完するようにしてください。同様に、ドロップダウンメニューは[リンク](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#lists)の[順序なしリスト](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)として構造化すべきです。
+- **すべての機能をキーボードからアクセスできるようにしましょう。**
 
-  - Let users Tab through all controls (e.g., links and form input) in a logical order.
-  - If you use pointer events (like mouse events or touch events), duplicate the functionality with keyboard events.
-  - Test your site using a keyboard only.
+  - ユーザーがすべてのコントロール（リンクやフォーム入力など）を合理的な順序で移動できるようにしましょう。
+  - ポインターイベント（マウスイベントやタッチイベントなど）を使用している場合は、キーボードイベントで機能を複製しましょう。
+  - キーボードのみを使用してサイトをテストしましょう。
 
-- **Don't set nor even guess time limits.** It takes extra time to navigate with the keyboard or hear content read out. You can hardly ever predict just how long it will take for users or browsers to complete an process (especially asynchronous actions such as loading resources).
-- **Keep animations subtle and brief with no flashing.** Flashing is annoying and can [cause seizures](http://www.w3.org/TR/UNDERSTANDING-WCAG20/seizure-does-not-violate.html). Additionally, if an animation lasts more than a couple seconds, give the user a way to cancel it.
-- **Let users initiate interactions.** That means, don't update content, redirect, or refresh automatically. Don't use carousels or display popups without warning.
-- **Have a plan B for users without JavaScript.** People may have JavaScript turned off to improve speed and security, and users often face network issues that prevent loading scripts. Moreover, third-party scripts (ads, tracking scripts, browser extensions) might break your scripts.
+- **制限時間を設定したり、予測したりしないでください。** キーボードで操作したり、コンテンツが読み上げられたりするのに余計な時間がかかります。ユーザーやブラウザーがある処理（特にリソースの読み込みなどの非同期操作）を完了するのにかかる時間は、ほとんど予測できません。
+- **アニメーションは控えめで短く、点滅しないようにしましょう。** 点滅は煩わしく、[発作を発生させます](https://www.w3.org/TR/UNDERSTANDING-WCAG20/seizure-does-not-violate.html)。さらに、アニメーションが数秒以上続く場合は、ユーザーがキャンセルできるようにしましょう。
+- **ユーザーに対話をさせましょう。** 意味しているのは、コンテンツを自動的に更新したり、リダイレクトしたり、再表示したりしないことです。カルーセルを使用したり、警告なしにポップアップを表示したりしないでください。
+- **JavaScript のないユーザーのためにプラン B を用意しましょう。** スピードとセキュリティを向上させるためにJavaScriptをオフに設定していることがあり、ユーザーはネットワークの問題によってスクリプトを読み込むことができないことがよくあります。さらに、サードパーティーのスクリプト（広告、トラッキングスクリプト、ブラウザー拡張機能）がブラウザースクリプトを壊す可能性もあります。
 
-  - At a minimum, leave a short message with {{HTMLElement("noscript")}} like this: `<noscript>To use this site, please enable JavaScript.</noscript>`
-  - Ideally, replicate the JavaScript functionality with HTML and server-side scripting when possible.
-  - If you're only looking for simple visual effects, CSS can often get the job done even more intuitively.
-  - _Since almost everybody **does** have JavaScript enabled, `<noscript>` is no excuse for writing inaccessible scripts._
+  - 少なくとも、 {{HTMLElement("noscript")}} で `<noscript>このサイトを使用するには、 JavaScript を有効にしてください</noscript>` というような短いメッセージを残してください。
+  - 可能な限り、JavaScript の機能を HTML とサーバーサイドスクリプトで再現するのが理想的です。
+  - 単純な視覚効果だけなら、 CSS の方が直感的に実現できることが多いでしょう。
+  - ほとんどの人が JavaScript を有効にしているので、 `<noscript>` はアクセシビリティのないスクリプトを書く言い訳にはなりません。
 
-## Learn more
+## もっと学ぶ
 
 - {{htmlelement("script")}}
 - {{htmlelement("noscript")}}
-- [James Edwards' introduction to using JavaScript accessibly](http://www.sitepoint.com/javascript-accessibility-101/)
-- [Accessibility guidelines from W3C](http://www.w3.org/TR/WCAG20/)
+- [James Edwards' introduction to using JavaScript accessibly](https://www.sitepoint.com/javascript-accessibility-101/)
+- [Accessibility guidelines from W3C](https://www.w3.org/TR/WCAG20/)

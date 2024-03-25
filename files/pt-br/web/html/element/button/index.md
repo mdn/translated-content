@@ -98,7 +98,7 @@ Note que esse botão possui CSS aplicado.
 
 {{Compat}}
 
-## Notas
+### Notas
 
 Elementos `<button>` são muito mais fáceis estilizá-los do que elementos {{HTMLElement("input")}}. Você pode adicionar dentro do conteúdo do HTML (imagine em `<em>`, `<strong>` ou mesmo `<img>`), e fazer uso do pseudo-elemento {{Cssxref(":after")}} e {{Cssxref(":before")}} para realizar renderizações complexas enquanto {{HTMLElement("input")}} apenas aceita um atributo com valor textual.
 

@@ -47,7 +47,7 @@ Revoyons le document HTML de base de l' [article précédent](/fr/docs/Learn/HTM
 </html>
 ```
 
-Le contenu de l'en-tête HTML {{htmlelement("head")}} — à la difference du contenu de l'élément {{htmlelement("body")}} (affiché quand la page est chargée par le navigateur) — n'est pas affiché dans la page du navigateur. Le travail de la balise \<head> est de contenir les {{glossary("Metadata", "métadonnées")}} à propos du document. Dans l'exemple ci-dessus, l'en-tête est plutôt petit :
+Le contenu de l'en-tête HTML {{htmlelement("head")}} — à la différence du contenu de l'élément {{htmlelement("body")}} (affiché quand la page est chargée par le navigateur) — n'est pas affiché dans la page du navigateur. Le travail de la balise \<head> est de contenir les {{glossary("Metadata", "métadonnées")}} à propos du document. Dans l'exemple ci-dessus, l'en-tête est plutôt petit :
 
 ```html
 <head>
@@ -60,7 +60,7 @@ Toutefois dans les pages plus importantes, l'en-tête peut contenir un grand nom
 
 ## Ajouter un titre
 
-Nous avons déjà vu l'élément {{htmlelement ("title")}} — qui peut être utilisé pour ajouter un intitulé au document. Il peut toutefois être confondu avec l'élément {{htmlelement ("h1")}}, pour ajouter un en‑tête de haut nieau au contenu de votre page dans l'élément {{htmlelement("body")}} — quelquefois désigné comme étant le « titre de la page ». Mais ce sont des choses différentes !
+Nous avons déjà vu l'élément {{htmlelement ("title")}} — qui peut être utilisé pour ajouter un intitulé au document. Il peut toutefois être confondu avec l'élément {{htmlelement ("h1")}}, pour ajouter un en‑tête de haut niveau au contenu de votre page dans l'élément {{htmlelement("body")}} — quelquefois désigné comme étant le « titre de la page ». Mais ce sont des choses différentes !
 
 - L'élément {{htmlelement("h1")}} apparaît dans la page quand elle est chargée dans le navigateur — généralement, il devrait être utilisé une fois par page, pour marquer le titre du contenu de votre page (le titre d'une histoire, ou d'une actualité, ou tout ce qui vous paraît approprié).
 - L'élément {{htmlelement("title")}} est une métadonnée qui représente l'intitulé du document HTML global (non le contenu du document).
@@ -102,7 +102,7 @@ Cet élément définit l'encodage des caractères du document - le jeu de caract
 
 ![Une page Web contenant des caractères français et japonais, l'encodage des caractères étant réglé sur ISO latin. Les caractères japonais ne s'affichent pas correctement.](fr-meta-iso.png)
 
-> **Note :** Certains navigateurs (par ex. Chrome) corrigent automatiquement les encodages incorrects, ainsi selon le navigateur utilisé, ce problème pourrait vous passer totalement inaperçu. Vous devriez quand même définir un encodage `utf-8` sur votre page de toutes façons pour éviter tout problème potentiel avec d'autres navigateurs.
+> **Note :** Certains navigateurs (par ex. Chrome) corrigent automatiquement les encodages incorrects, ainsi selon le navigateur utilisé, ce problème pourrait vous passer totalement inaperçu. Vous devriez quand même définir un encodage `utf-8` sur votre page de toute façon pour éviter tout problème potentiel avec d'autres navigateurs.
 
 ### Apprentissage actif : expérience avec l'encodage des caractères
 
@@ -114,7 +114,7 @@ Pour cela, reportez-vous au modèle HTML simple que vous avez obtenu dans la sec
 
 ### Ajouter le nom de l'auteur et une description
 
-De nombreux éléments `<meta>` icontiennent les attributs `name` et `content` :
+De nombreux éléments `<meta>` contiennent les attributs `name` et `content` :
 
 - `name` définit le type de méta élément ; le type d'informations contenu.
 - `content` définit le contenu réel de la métadonnée.
@@ -143,7 +143,7 @@ La description est aussi utilisée dans le résultat des moteurs de recherche. F
 
    <kbd>Ctrl</kbd>
 
-   , choissisez « _Code source de la page_ » dans le menu contextuel.)
+   , choisissez « _Code source de la page_ » dans le menu contextuel.)
 
 3. Trouvez la balise méta `description`. Elle ressemble à ceci :
 

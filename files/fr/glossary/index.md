@@ -1,6 +1,8 @@
 ---
 title: "Glossaire MDN : définitions des termes du Web"
 slug: Glossary
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
 {{GlossarySidebar}}
@@ -9,10 +11,4 @@ Les technologies Web font l'objet d'un important jargon et utilisent des abrévi
 
 Vous pouvez parcourir les termes du glossaire en utilisant la barre latérale.
 
-> **Note :** Le glossaire et sa traduction en français sont en constante évolution. Vous pouvez aider en [traduisant les pages correspondantes depuis l'anglais](/fr/docs/MDN/Contribute/Localize) ou en améliorant les pages existantes.
-
-<section id="Quick_links">
- <ol>
-  <li><strong><a href="/fr/docs/Glossary">Glossaire MDN</a></strong>{{ListSubpagesForSidebar("/fr/docs/Glossary", 1)}}</li>
- </ol>
-</section>
+> **Note :** Le glossaire et sa traduction en français sont en constante évolution. Vous pouvez aider en [traduisant les pages correspondantes depuis l'anglais](/fr/docs/MDN/Community/Contributing/Translated_content) ou en améliorant les pages existantes.

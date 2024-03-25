@@ -1,21 +1,32 @@
 ---
 title: Large-Allocation
 slug: Web/HTTP/Headers/Large-Allocation
+l10n:
+  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
+{{HTTPSidebar}}{{Deprecated_Header}}{{Non-standard_header}}
 
-非标准的**`Large-Allocation`** 响应头部是用来告诉浏览器加载该页面可能需要申请大内存。当前只有 Firefox 实现该特性，但是对其他浏览器也无损害。
+非标准的 **`Large-Allocation`** 响应标头用于告知浏览器加载该页面可能需要申请大内存块。它没有被任何当前版本的浏览器实现，但将它发送到任何浏览器都是安全的。
 
-[WebAssembly](/zh-CN/docs/WebAssembly) 或者 asm.js 会使用比较大的连续内存空间。例如，对于一些复杂的游戏，其申请的空间将会非常大，甚至会达到 1GB。`Large-Allocation` 告诉浏览器其将要加载的页面可能需要申请一个大的连续内存空间，浏览器依据该头部可能会单独启动一个专有的进程用于处理该页面。
+[WebAssembly](/zh-CN/docs/WebAssembly) 或者 asm.js 应用会使用大量连续的已分配内存块。例如，对于一些复杂的游戏，其申请的空间将会非常大，有时甚至会达到 1GB。`Large-Allocation` 告知浏览器其将要加载的页面可能需要申请一个大的连续内存空间，浏览器依据该标头可能会单独启动一个专有的进程用于处理该页面。
 
-| Header type                           | {{Glossary("Response header")}} |
-| ------------------------------------- | ------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                              |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">标头类型</th>
+      <td>{{Glossary("Response header", "响应标头")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name", "禁止修改的标头")}}</th>
+      <td>否</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 语法
 
-```plain
+```http
 Large-Allocation: 0
 Large-Allocation: <megabytes>
 ```
@@ -23,41 +34,39 @@ Large-Allocation: <megabytes>
 ## 指令
 
 - `0`
-  - : 0 是一个特殊的值，代表给它分配的大小是不确定的 (动态允许).
+  - : 0 是一个特殊的值，代表分配的大小是不确定的。
 - `<megabytes>`
-  - : 预期需要申请的内存大小，以 M 为单位
+  - : 预期需要申请的内存大小，以兆字节为单位。
 
 ## 示例
 
-```plain
+```http
 Large-Allocation: 0
 Large-Allocation: 500
 ```
 
 ## 排除错误
 
-如果使用不当， `Large-Allocation` 会抛出警告或者错误信息，你可以在 [web console](/zh-CN/docs/Tools/Web_Console) 查看它们。
+如果使用不当，`Large-Allocation` 标头会抛出警告或者错误信息，你可以在 [web 控制台](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)中查看它们。
 
-- 由于`Large-Allocation 报头存在，这个页面会在一个新的进程处理和加载`
-  - : This message means that the browser saw the `Large-Allocation` header, and was able to reload the page into a new process which should have more available contiguous memory.
-- `Large-Allocation` 报头由于非`non-GET 请求而直接忽略`
-  - : 当一个 {{HTTPMethod("POST")}} 请求用语加载文档，that load cannot currently be redirected into a new process. This error is displayed when loading a document with a `Large-Allocation` header with a non-GET HTTP method. This could be caused due to the document being loaded by a form submission, for example.
-- A `Large-Allocation` header was ignored due to the presence of windows which have a reference to this browsing context through the frame hierarchy or {{domxref("window.opener")}}.
+- 由于存在 `Large-Allocation` 标头，当前页面会在一个新的进程加载。
+  - : 该消息意味着浏览器遇到了 `Large-Allocation` 标头，并且能够在一个新的进程中重新加载页面，这个进程应该有更多的可用连续内存。
+- `Large-Allocation` 标头由非 GET 请求触发而被直接忽略。
+  - : 当使用 {{HTTPMethod("POST")}} 请求加载文档时，加载目前无法被重定向到新的进程中。这个错误会在使用非 GET HTTP 方法加载带有 `Large-Allocation` 标头的文档时显示。例如，这可能是由于当前文档是通过表单提交加载的。
+- 由于存在通过框架层级或者 {{domxref("window.opener")}} 引用当前浏览上下文的窗口，`Large-Allocation` 标头被直接忽略。
 
-  - : This error means that the document was not loaded at the top level of an user-opened or noopener-opened tab or window. It can occur in these situations:
+  - : 该错误意味着文档不是在用户打开的或者 noopener 打开的标签或窗口的顶层加载的。它可能在以下情况下出现：
 
-    - The document with the `Large-Allocation` header was loaded in an {{HTMLElement("iframe")}}. Firefox cannot move an iframe into a new process currently, so the document must load in the current process.
-    - The document with the `Large-Allocation` header was loaded in a window which was opened by {{domxref("window.open()")}}, `<a target="_blank">` or other similar methods without `rel="noopener"` or the `"noopener"` feature being set. These windows must remain in the same process as their opener, as they can communicate, meaning that we cannot allow them to switch processes.
-    - The document with the `Large-Allocation header` has opened another window with {{domxref("window.open()")}}, `<a target="_blank">` or other similar methods without `rel="noopener"` or the `"noopener"` feature being set. This is for the same reason as above, namely that they can communicate and thus we cannot allow them to switch processes.
+    - 带有 `Large-Allocation` 标头的文档是在 {{HTMLElement("iframe")}} 中加载的。Firefox 目前无法将 iframe 移动到新的进程中，所以文档必须在当前进程中加载。
+    - 带有 `Large-Allocation` 标头的文档是在由 {{domxref("window.open()")}}、`<a target="_blank">` 或者其他类似方法在没有设置 `rel="noopener"` 或者 `"noopener"` 特性的情况下打开的窗口中加载的。这些窗口必须与其打开的窗口保持在同一进程中，因为它们可以相互通信，这意味着我们不能允许它们切换进程。
+    - 带有 `Large-Allocation` 标头的文档已经使用 {{domxref("window.open()")}}、`<a target="_blank">` 或其他类似方法在没有设置 `rel="noopener"` 或者 `"noopener"` 特性的情况下打开了另一个窗口。这与上面的原因相同，即它们可以相互通信，因此我们不能允许它们切换进程。
 
-- `Large-Allocation` 报头由于 文档在加载过程没有被加载而直接忽略
-  - : Firefox has moved to a [multiprocess architecture](/zh-CN/docs/Mozilla/Firefox/Multiprocess_Firefox), and this architecture is required in order to support the `Large-Allocation` header. Some [legacy Addons](/zh-CN/docs/Mozilla/Add-ons/SDK) can prevent Firefox from using this new, faster, multiprocess architecture. If you have one of these Addons installed, then we will continue to use the old single process architecuture for compatibility, and cannot handle the `Large-Allocation` header.
-- 由于`Large-Allocation`头部，此页面应将被加载到新进程中，但是在非 Win32 平台上禁用此选项。
-  - : 由于在 64 位系统里内存碎片不是问题，Firefox 只在 32 位系统支持`Large-Allocation`头部。如果你运行一个非 32 位的程序，这类信息就会出现。可以设置 about:config 里面的"dom.largeAllocation.forceEnable"布尔值来关闭此检查。
+- 由于存在 `Large-Allocation` 标头，当前页面会在一个新的进程加载，然而 `Large-Allocation` 进程创建在非 Win32 平台上被禁用了。
+  - : Firefox 目前仅在 32 位 Windows 构建中支持 `Large-Allocation` 标头，因为内存碎片化在 64 位构建中不是问题。如果你正在运行非 win32 版本的 Firefox，这个错误会出现。你可以在 about:config 中使用 `dom.largeAllocation.forceEnable` 布尔首选项来禁用该检查。
 
 ## 规范
 
-现还不属于任何规范，可以通过[这篇文档](https://gist.github.com/mystor/5739e222e398efc6c29108be55eb6fe3)了解该头部的背后思想。
+现还不属于任何规范，可以通过[这篇文档](https://gist.github.com/mystor/5739e222e398efc6c29108be55eb6fe3)了解该标头的背后思想。
 
 ## 浏览器兼容性
 

@@ -157,6 +157,6 @@ _没有变化。_
 
 - [Site Compatibility for Firefox 41](/zh-CN/docs/Mozilla/Firefox/Releases/41/Site_Compatibility)
 
-## 之前版本
+## 更早期的版本
 
-{{Firefox_for_developers('40')}}
+{{Firefox_for_developers}}

@@ -275,7 +275,7 @@ e.addEventListener("animationiteration", listener, false);
 e.className = "slidein";
 ```
 
-以上是非常标准的代码写法，setup() 最后设置动画元素的 `class` 为 slidein，启动动画。为什么这样做？因为`animationstart`事件在动画一开始时就被触发，在我们的示例中，该事件在我们的代码执行前就被触发，所以我们自己通过设置元素的的`class`来启动动画。
+以上是非常标准的代码写法，setup() 最后设置动画元素的 `class` 为 slidein，启动动画。为什么这样做？因为 `animationstart` 事件在动画一开始时就被触发，在我们的示例中，该事件在我们的代码执行前就被触发，所以我们自己通过设置元素的 `class` 来启动动画。
 
 #### 接收事件
 
