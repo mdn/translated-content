@@ -71,13 +71,13 @@ slug: Web/CSS/CSS_colors
 ## 안내서
 
 - [CSS를 사용하여 HTML 요소에 색상 적용하기](/ko/docs/Web/CSS/CSS_colors/Applying_color)
-  - : CSS를 사용하여 다양한 유형의 콘텐츠에 색상을 적용하는 방법에 대한 안내서입니다. 모든 색상 관련 CSS 속성이 적용됩니다.
+  - : CSS를 사용하여 다양한 유형의 콘텐츠에 색상을 적용하는 방법에 대한 안내서입니다. 모든 색상 관련 CSS 속성이 다루고 있습니다.
+- [상대적인 색상 사용](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
+  - : 이 문서는 상대적인 CSS 색상 구문을 설명하며, 각 옵션의 차이를 보여주고, 몇 가지 예시를 살펴봅니다.
 - [색상과 휘도 이해하기](/ko/docs/Web/Accessibility/Understanding_Colors_and_Luminance)
   - : 색상 인식 및 불감증 (색맹) 사용자, 시력 저하 및 전정 또는 기타 신경학적 장애를 가진 사용자를 위해 색상을 인지하고 사용하는 것에 대한 문서입니다.
 - [WCAG 1.4.1: 색상 대비](/ko/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)
   - : 가독성을 보장하기 위한 배경과 전경 컨텐츠 간의 대비 요구 사항에 대한 설명입니다.
-- [색상 선택 도구](/ko/docs/Web/CSS/CSS_colors/Color_picker_tool)
-  - : 이 도구는 사용자 정의 색상을 생성, 조정 및 실험하기 쉽게 만듭니다.
 
 ## 관련 개념
 
@@ -117,8 +117,9 @@ slug: Web/CSS/CSS_colors
 
 ## 같이 보기
 
-- [CSS color adjustment](/ko/docs/Web/CSS/CSS_color_adjustment) 모듈과 {{cssxref("print-color-adjust")}} 속성.
-- [CSS images](/ko/docs/Web/CSS/CSS_images), CSS [`<gradient>`](/ko/docs/Web/CSS/gradient) 이미지가 정의되어 있는 곳의 모듈
+- [CSS 색상 조정](/ko/docs/Web/CSS/CSS_color_adjustment) 모듈과 {{cssxref("print-color-adjust")}} 속성.
+- [CSS 이미지](/ko/docs/Web/CSS/CSS_images), CSS [`<gradient>`](/ko/docs/Web/CSS/gradient) 이미지가 정의되어 있는 곳의 모듈
 - [`VideoColorSpace`](/ko/docs/Web/API/VideoColorSpace) 인터페이스
 - SVG [`<feColorMatrix>`](/ko/docs/Web/SVG/Element/feColorMatrix) 요소
-- [Canvas API: applying styles and colors](/ko/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#colors)
+- [Canvas API: 스타일과 색상 적용](/ko/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#colors)
+- [색상 선택 도구](/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool): 이 도구는 사용자 정의 색상을 만들고, 조정하고 실험하는 것을 쉽게 만들어줍니다.
