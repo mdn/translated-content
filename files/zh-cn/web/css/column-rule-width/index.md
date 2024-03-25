@@ -1,6 +1,8 @@
 ---
 title: column-rule-width
 slug: Web/CSS/column-rule-width
+l10n:
+  sourceCommit: 489dbd4d8e2e099733d3bb04ad3f97678c54ac8e
 ---
 
 {{CSSRef}}
@@ -52,7 +54,8 @@ column-rule-width: unset;
 
 ```html
 <p>
-  这是分成三列的文本。在 `column-rule-width` 属性中用于更改列与列之间的线条宽度。修改列之间线条的宽度。你不觉得这很棒吗？
+  这是分成三列的文本。在 `column-rule-width`
+  属性中用于更改列与列之间的线条宽度。修改列之间线条的宽度。你不觉得这很棒吗？
 </p>
 ```
 
