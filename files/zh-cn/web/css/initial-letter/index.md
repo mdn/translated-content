@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}{{SeeCompatTable}}
 
-`initial-letter` CSS 属性用于设置首字母的样式，包括下降、升起和下沉。
+`initial-letter` CSS 属性用于设置首字符的样式，包括嵌入、凸起和下沉。
 
 ## 语法
 
@@ -18,8 +18,7 @@ initial-letter: normal;
 /* 数值 */
 initial-letter: 1.5; /* 首字母占据了 1.5 行 */
 initial-letter: 3; /* 首字母占据了 3 行 */
-initial-letter: 3 2; /* 首字母占据了 3 行
-                        并下沉了 2 行 */
+initial-letter: 3 2; /* 首字母占据了 3 行并下沉了 2 行 */
 
 /* 全局值 */
 initial-letter: inherit;
@@ -38,7 +37,7 @@ initial-letter: unset;
 - `<number>`
   - : 该属性定义首字母的大小，以其占据的行数为单位，不允许使用负值。
 - `<integer>`
-  - : 该属性定义首字母缩进的行数（当指定其尺寸时）。数值必须大于零。如果省略，则会复制尺寸值，并向下取整到最接近的正整数。
+  - : 该属性定义首字母下沉的行数（当指定其尺寸时）。数值必须大于零。如果省略，则会复制尺寸值，并向下取整到最接近的正整数。
 
 ## 形式定义
 
