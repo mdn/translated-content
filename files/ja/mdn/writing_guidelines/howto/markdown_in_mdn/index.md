@@ -601,4 +601,5 @@ HTML の {{HTMLElement("sup")}} および {{HTMLElement("sub")}} 要素を必要
 
 上下のマージンは置換インライン要素、例えば \{{HTMLElement("span")}} や \{{HTMLElement("code")}} では効果がありません。
 ```
+
 マクロについてのより詳しい情報は、[マクロの使用](/ja/docs/MDN/Writing_guidelines/Page_structures/Macros)を参照してください。
