@@ -29,7 +29,7 @@ column-count: unset;
 ### 取值
 
 - `auto`
-  - : 用来表示列的数量由其他 CSS 属性指定，例如 {{cssxref("column-width")}} 。
+  - : 用来表示列的数量由其他 CSS 属性指定，例如 {{cssxref("column-width")}}。
 - {{cssxref("&lt;integer&gt;")}}
   - : 是个严格的正整型 {{cssxref("&lt;integer&gt;")}}，用来描述元素内容被划分的理想列数。假如 {{cssxref("column-width")}} 也被设置为非零值，此参数仅表示所允许的最大列数。
 
@@ -49,7 +49,7 @@ column-count: unset;
 
 ```html
 <p class="content-box">
-  这是一段使用了 CSS<code>column-count</code>
+  这是一段使用了 CSS <code>column-count</code>
   属性分割成三列的文字。文字平均分布在各列中，这是最后一段内容。
 </p>
 ```
@@ -78,5 +78,5 @@ column-count: unset;
 
 - {{CSSXref("column-width")}}、{{CSSXref("columns")}} 简写属性
 - {{CSSXref("column-rule-color")}}、{{CSSXref("column-rule-style")}}、{{CSSXref("column-rule-width")}}、{{CSSXref("column-rule")}} 简写属性
-- [多列布局](/zh-CN/docs/Learn/CSS/CSS_layout/Multiple-column_Layout) （学习多列布局属性）
+- [多列布局](/zh-CN/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)（学习多列布局属性）
 - [多列式布局的基础概念](/zh-CN/docs/Web/CSS/CSS_multicol_layout/Basic_concepts)
