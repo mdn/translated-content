@@ -53,7 +53,7 @@ Les événements ont trois fonctions :
 
 ## Exemples
 
-Lorsque l'extension est installée, enregistrer la raison de l'installation dans la console et ouvrez <https://www.reddit.com/r/CatGifs/>:
+Lorsque l'extension est installée, enregistrer la raison de l'installation dans la console et ouvrir <https://www.reddit.com/r/CatGifs/>:
 
 ```js
 function handleInstalled(details) {
