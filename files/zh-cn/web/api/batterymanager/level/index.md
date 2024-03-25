@@ -2,7 +2,7 @@
 title: BatteryManager：level 属性
 slug: Web/API/BatteryManager/level
 l10n:
-  sourceCommit: cf05364b23bc44af37a350319a1dd47485746a9c
+  sourceCommit: 8d54a21ae2677dba11569e7b7d918eac828af0b3
 ---
 
 {{ApiRef("Battery API")}}{{securecontext_header}}
