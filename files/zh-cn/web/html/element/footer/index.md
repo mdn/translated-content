@@ -19,7 +19,7 @@ l10n:
 
 - 在 {{HTMLElement("address")}} 元素中包含有关作者的信息，该元素可以包含在 `<footer>` 元素中。
 - 当最近的祖先分段内容或分段根元素是 body 元素时，页脚适用于整个页面。
-- `<footer>` 元素不是分节内容，因此不会在[大纲](/zh-CN/docs/Web/HTML/Element/Heading_Elements)中引入新的分节。
+- `<footer>` 元素不是分段内容，因此不会在[大纲](/zh-CN/docs/Web/HTML/Element/Heading_Elements)中引入新的分段。
 
 ## 示例
 
