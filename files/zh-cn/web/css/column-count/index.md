@@ -1,6 +1,8 @@
 ---
 title: column-count
 slug: Web/CSS/column-count
+l10n:
+  sourceCommit: f30eb42442f75f493ebb5ff1f119abf263592d54
 ---
 
 {{CSSRef}}
