@@ -2,7 +2,7 @@
 title: BatteryManager：chargingtimechange 事件
 slug: Web/API/BatteryManager/chargingtimechange
 l10n:
-  sourceCommit: cf05364b23bc44af37a350319a1dd47485746a9c
+  sourceCommit: 8d54a21ae2677dba11569e7b7d918eac828af0b3
 ---
 
 {{ApiRef("Battery API")}}{{securecontext_header}}
