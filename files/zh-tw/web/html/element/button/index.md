@@ -7,7 +7,7 @@ slug: Web/HTML/Element/button
 
 **`<button>`** [HTML](/zh-TW/docs/Web/HTML) 元素是一個由使用者使用滑鼠、鍵盤、手指、語音命令或其他輔助技術啟動的互動元素。一旦啟動，它將執行一個動作，例如提交一個[表單](/zh-TW/docs/Learn/Forms)或打開對話框。
 
-預設情況下，HTML 按鈕會呈現為與 {{Glossary("user agent")}}所在平台類似的樣式，但你可以使用 [CSS](/zh-TW/docs/Web/CSS) 更改按鈕的外觀。
+預設情況下，HTML 按鈕會呈現為與{{Glossary("user agent", "使用者代理")}}所在平台類似的樣式，但你可以使用 [CSS](/zh-TW/docs/Web/CSS) 更改按鈕的外觀。
 
 {{EmbedInteractiveExample("pages/tabbed/button.html", "tabbed-shorter")}}
 
@@ -44,7 +44,7 @@ slug: Web/HTML/Element/button
   - : 如果按鈕是提交按鈕（它在 `<form>` 內部且沒有 `type="button"`），則此屬性指定用於提交表單的 [HTTP 方法](/zh-TW/docs/Web/HTTP/Methods)。可能的值有：
 
     - `post`：當將數據提交到服務器時，表單的數據將包含在 HTTP 請求的主體中。在表單包含不應該是公開的信息（例如登錄憑證）時使用。
-    - `get`：將表單數據附加到表單的 `action` URL 中，使用 `?` 作為分隔符，並將生成的 URL 發送到服務器。當表單 [沒有副作用](/zh-TW/docs/Glossary/Idempotent) 時使用，例如搜索表單。
+    - `get`：將表單數據附加到表單的 `action` URL 中，使用 `?` 作為分隔符，並將生成的 URL 發送到服務器。當表單[沒有副作用](/zh-TW/docs/Glossary/Idempotent)時使用，例如搜索表單。
     - `dialog`：此方法用於指示按鈕關聯的 [dialog](/zh-TW/docs/Web/HTML/Element/dialog) 應該關閉，並且根本不傳輸表單數據。
 
     如果指定了此屬性，則它將覆蓋按鈕的表單所有者的 [`method`](/zh-TW/docs/Web/HTML/Element/form#method) 屬性。
@@ -57,10 +57,10 @@ slug: Web/HTML/Element/button
 
 - `formtarget`
 
-  - : 如果按鈕是提交按鈕，則此屬性是作者定義的名稱或標準化的、下劃線前綴的關鍵字，指示提交表單後要在哪裡顯示來自提交的回應。這是一個*瀏覽上下文*（一個標籤、窗口或 {{HTMLElement("iframe")}}）的 `name` 或關鍵字。如果指定了此屬性，則它將覆蓋按鈕的表單所有者的 [`target`](/zh-TW/docs/Web/HTML/Element/form#target) 屬性。以下關鍵字具有特殊含義：
+  - : 如果按鈕是提交按鈕，則此屬性是作者定義的名稱或標準化的、下劃線前綴的關鍵字，指示提交表單後要在哪裡顯示來自提交的回應。這是一個*瀏覽上下文*（一個分頁、窗口或 {{HTMLElement("iframe")}}）的 `name` 或關鍵字。如果指定了此屬性，則它將覆蓋按鈕的表單所有者的 [`target`](/zh-TW/docs/Web/HTML/Element/form#target) 屬性。以下關鍵字具有特殊含義：
 
     - `_self`：將回應加載到與當前瀏覽上下文相同的地方。如果未指定此屬性，則為默認值。
-    - `_blank`：將回應加載到新的未命名瀏覽上下文中——通常是一個新的標籤或窗口，具體取決於用戶的瀏覽器設置。
+    - `_blank`：將回應加載到新的未命名瀏覽上下文中——通常是一個新的分頁或窗口，具體取決於用戶的瀏覽器設置。
     - `_parent`：將回應加載到當前瀏覽上下文的父瀏覽上下文中。如果沒有父瀏覽上下文，則此選項的行為與 `_self` 相同。
     - `_top`：將回應加載到頂級瀏覽上下文中（即當前瀏覽上下文的祖先，並且沒有父瀏覽上下文）。如果沒有父瀏覽上下文，則此選項的行為與 `_self` 相同。
 
@@ -116,7 +116,7 @@ slug: Web/HTML/Element/button
 
 ### 圖標按鈕
 
-僅顯示圖標以表示的按鈕沒有*可訪問名稱*。可訪問名稱提供了輔助技術（例如螢幕閱讀器）在解析文件並生成[無障礙樹](/zh-TW/docs/Learn/Accessibility/What_is_accessibility#無障礙網頁_API)時使用的信息。然後，輔助技術使用無障礙樹來導航和操作頁面內容。
+僅顯示圖標以表示的按鈕沒有*可訪問名稱*。可訪問名稱提供了輔助技術（例如螢幕閱讀器）在解析文件並生成[無障礙樹](/zh-TW/docs/Learn/Accessibility/What_is_accessibility#無障礙網頁_api)時使用的信息。然後，輔助技術使用無障礙樹來導航和操作頁面內容。
 
 要為圖標按鈕提供可訪問名稱，請在 `<button>` 元素中放置簡要描述按鈕功能的文本。
 
@@ -200,12 +200,12 @@ Firefox 會在焦點位於按鈕上時添加一個小虛點邊框。這個邊框
           >listed</a
         >、<a href="/zh-TW/docs/Web/HTML/Content_categories#labelable"
           >labelable</a
-        >，和<a href="/zh-TW/docs/Web/HTML/Content_categories#submittable"
+        > 和 <a href="/zh-TW/docs/Web/HTML/Content_categories#submittable"
           >submittable</a
         > <a
           href="/zh-TW/docs/Web/HTML/Content_categories#表單相關內容"
           >表單相關內容</a
-        >元素，<a href="/zh-TW/docs/Web/HTML/Content_categories#捫及內容"
+        >元素、<a href="/zh-TW/docs/Web/HTML/Content_categories#捫及內容"
           >捫及內容</a
         >。
       </td>
