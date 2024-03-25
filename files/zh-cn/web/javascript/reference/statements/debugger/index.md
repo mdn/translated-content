@@ -1,11 +1,13 @@
 ---
 title: debugger
 slug: Web/JavaScript/Reference/Statements/debugger
+l10n:
+  sourceCommit: a71b8929628a2187794754c202ad399fe357141b
 ---
 
 {{jsSidebar("Statements")}}
 
-**`debugger` 语句**调用任何可用的调试功能，例如设置断点。如果没有调试功能可用，则此语句不起作用。
+**`debugger`** 语句会调用任何可用的调试功能，例如设置断点。如果没有任何调试功能可用，则此语句不会产生任何效果。
 
 ## 语法
 
@@ -15,18 +17,20 @@ debugger;
 
 ## 示例
 
-下面的例子演示了一个包含 `debugger` 语句的函数，当函数被调用时，会尝试调用一个可用的调试器进行调试。
+### 使用 debugger 语句
+
+以下示例展示了在函数调用时插入 `debugger` 语句以调用调试器（如果存在）的代码。
 
 ```js
 function potentiallyBuggyCode() {
   debugger;
-  // do potentially buggy stuff to examine, step through, etc.
+  // 做一些可能会出现错误的检查、步骤等。
 }
 ```
 
-当 debugger 被调用时，执行暂停在 `debugger` 语句的位置。就像在脚本源代码中的断点一样。
+当调试器被调用时，将在 `debugger` 执行语句处暂停，这类似于脚本元素中的断点。
 
-![开发人员工具打开到调试器面板的浏览器，显示如何在调试器语句处暂停执行，以允许仔细检查变量、作用域、事件等。](screen_shot_2014-02-07_at_9.14.35_am.png)
+!['浏览器打开了开发者工具，并显示了调试器面板。该面板展示了如何在调试器语句处暂停执行，以便仔细检查变量、范围、事件等。'](screen_shot_2014-02-07_at_9.14.35_am.png)
 
 ## 规范
 
@@ -38,4 +42,4 @@ function potentiallyBuggyCode() {
 
 ## 参见
 
-- [在火狐开发者工具中调试](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)
+- [火狐浏览器 JavaScript 调试器¶](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) 在 Firefox 火狐浏览器源文档中
