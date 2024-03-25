@@ -41,7 +41,7 @@ request(type)
     - 使用此功能被 [权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy) 阻止。
     - 文档未完全激活。
     - 文档的可见性状态为 `hidden`。
-    - {{Glossary("用户代理")}} 无法获取平台的屏幕唤醒锁。例如，如果设备电池电量过低。
+    - {{Glossary("User Agent")}} 无法获取平台的屏幕唤醒锁。例如，如果设备电池电量过低。
 
 ## 示例
 
