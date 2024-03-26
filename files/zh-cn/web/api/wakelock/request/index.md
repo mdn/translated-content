@@ -1,5 +1,5 @@
 ---
-title: "WakeLock: request() method"
+title: WakeLock：request() 方法
 slug: Web/API/WakeLock/request
 l10n:
   sourceCommit: 0d9c7bb3574c48373ad96e2efc6701f306a9a3af
@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Screen Wake Lock API")}}{{SecureContext_Header}}
 
-**`request()`** 方法是 {{domxref("WakeLock")}} 接口的方法，用于请求系统屏幕唤醒锁。如果请求成功，该方法会返回一个 {{jsxref("Promise")}} 对象，该对象会用一个 {{domxref("WakeLockSentinel")}} 对象来兑现。
+{{domxref("WakeLock")}} 接口的 **`request()`** 方法用于请求系统屏幕唤醒锁。如果请求成功，该方法会返回一个兑现为 {{domxref("WakeLockSentinel")}} 对象的 {{jsxref("Promise")}}。
 
 屏幕唤醒锁可阻止设备屏幕在应用程序中需要保持运行时变暗或锁定。
 
@@ -26,7 +26,7 @@ request(type)
     - `screen`
       - : 阻止屏幕关闭，只有可见文档才能获取屏幕唤醒锁。
 
-如果未明确指定 `type` 参数，否则 `request()` 方法会默认使用 `screen` 类型。
+如果未明确指定 `type` 参数，`request()` 方法会默认使用 `screen` 类型。
 
 ### 返回值
 
@@ -38,10 +38,10 @@ request(type)
 
   - : 当无法获取屏幕唤醒锁时抛出异常，可能有以下原因：
 
-    - 使用此功能被 [权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy) 阻止。
+    - 使用此功能被[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)阻止。
     - 文档未完全激活。
     - 文档的可见性状态为 `hidden`。
-    - {{Glossary("User Agent")}} 无法获取平台的屏幕唤醒锁。例如，如果设备电池电量过低。
+    - {{Glossary("User Agent", "用户代理")}}无法获取平台的屏幕唤醒锁。例如设备电池电量过低。
 
 ## 示例
 
@@ -60,7 +60,7 @@ const requestWakeLock = async () => {
 requestWakeLock();
 ```
 
-设备可能会在授予屏幕唤醒锁后撤销它，返回的 {{domxref("WakeLockSentinel")}} 对象可用于检查屏幕唤醒锁的状态，和/或者手动取消持有的屏幕唤醒锁。
+设备可能会在授予屏幕唤醒锁后撤销它，返回的 {{domxref("WakeLockSentinel")}} 对象可用于检查屏幕唤醒锁的状态，以及手动取消持有的屏幕唤醒锁。
 
 ## 规范
 
