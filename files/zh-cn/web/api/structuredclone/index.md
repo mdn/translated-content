@@ -114,7 +114,7 @@ const object1 = {
   buffer: buffer1,
 };
 
-// Clone the object containing the buffer, and transfer it
+// 克隆包含 buffer 的对象，并将其转移
 const object2 = structuredClone(object1, { transfer: [buffer1] });
 
 // Create an array from the cloned buffer
