@@ -1,5 +1,5 @@
 ---
-title: window.navigator
+title: window：navigator 属性
 slug: Web/API/Window/navigator
 l10n:
   sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
@@ -11,7 +11,7 @@ l10n:
 
 ## 值
 
-一个 {{domxref("navigator")}} 对象
+一个 {{domxref("navigator")}} 对象。
 
 ## 示例
 
@@ -38,17 +38,17 @@ function getBrowserName(userAgent) {
     return "Microsoft Edge (Chromium)";
   } else if (userAgent.includes("Chrome")) {
     // "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36"
-    return "Google Chrome or Chromium";
+    return "Google Chrome 或 Chromium";
   } else if (userAgent.includes("Safari")) {
     // "Mozilla/5.0 (iPhone; CPU iPhone OS 15_6_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.6 Mobile/15E148 Safari/604.1"
     return "Apple Safari";
   } else {
-    return "unknown";
+    return "未知";
   }
 }
 
 const browserName = getBrowserName(navigator.userAgent);
-console.log(`You are using: ${browserName}`);
+console.log(`你正在使用的浏览器名称为“${browserName}”`);
 ```
 
 ## 规范
