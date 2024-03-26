@@ -48,7 +48,7 @@ function getBrowserName(userAgent) {
 }
 
 const browserName = getBrowserName(navigator.userAgent);
-console.log(`你正在使用的浏览器名称为“${browserName}”`);
+console.log(`你正在使用 ${browserName} 浏览器`);
 ```
 
 ## 规范
