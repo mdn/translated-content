@@ -9,7 +9,7 @@ slug: Glossary/DNS
 
 DNS 主要的功能，是將人類易於辨識的域名（例如 mozilla.org）轉換成數字格式的 {{Glossary("IP address","IP 地址")}}（例如 192.0.2.172）；透過將域名與特定 IP 地址對應的過程被稱為 **DNS 查詢**（DNS lookup）。與之相反的是：透過 IP 地址與特定 DNS 對應的過程則稱為**反向 DNS 查詢**（reverse DNS lookup，又稱為 rDNS）。
 
-## 另可參閱
+## 參見
 
 - [什麼是域名?](/zh-TW/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)
 - 維基百科上的[域名系統](https://zh.wikipedia.org/wiki/域名系统)
