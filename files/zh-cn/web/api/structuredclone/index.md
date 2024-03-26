@@ -7,7 +7,7 @@ slug: Web/API/structuredClone
 
 全局的 **`structuredClone()`** 方法使用[结构化克隆算法](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)将给定的值进行[深拷贝](/zh-CN/docs/Glossary/Deep_copy)。
 
-该方法还支持把原值中的[可转移对象](/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects)*转移*（而不是拷贝）到新对象上。可转移对象与原始对象分离并附加到新对象；它们将无法在原始对象中被访问。
+该方法还支持把原值中的[可转移对象](/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects)_转移_（而不是拷贝）到新对象上。可转移对象与原始对象分离并附加到新对象；它们将无法在原始对象中被访问。
 
 ## 语法
 
