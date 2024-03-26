@@ -42,4 +42,4 @@ function potentiallyBuggyCode() {
 
 ## 参见
 
-- Firefox 源代码文档中的 [Firefox JavaScript 调试器¶](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)
+- Firefox 源代码文档中的 [Firefox JavaScript 调试器](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)
