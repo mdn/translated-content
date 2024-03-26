@@ -19,7 +19,7 @@ break label;
 ```
 
 - `label` {{optional_inline}}
-  - : 中止到的语句的标签关联的标识符。如果 `break` 语句未嵌套在循环或 {{jsxref("Statements/switch", "switch")}} 中，则需要标签标识符。
+  - : 与语句标签相关联的标识符。如果 `break` 语句未嵌套在循环或 {{jsxref("Statements/switch", "switch")}} 中，则需要标签标识符。
 
 ## 描述
 
