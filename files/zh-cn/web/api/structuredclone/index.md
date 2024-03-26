@@ -122,7 +122,7 @@ const int32View2 = new Int32Array(object2.buffer);
 int32View2[0] = 42;
 console.log(int32View2[0]);
 
-// Creating an array from the original buffer throws a TypeError
+// 从原 buffer 创建数组将抛出 TypeError
 const int32View1 = new Int32Array(object1.buffer);
 ```
 
