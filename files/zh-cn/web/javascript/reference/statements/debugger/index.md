@@ -19,7 +19,7 @@ debugger;
 
 ### 使用 debugger 语句
 
-以下示例展示了在函数调用时插入 `debugger` 语句以调用调试器（如果存在）的代码。
+以下示例显示了插入了 `debugger` 语句的代码，以便在调用函数时调用调试器（如果存在）。
 
 ```js
 function potentiallyBuggyCode() {
@@ -42,4 +42,4 @@ function potentiallyBuggyCode() {
 
 ## 参见
 
-- Firefox 源代码文档中的 [火狐开发者工具中调试](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)
+- Firefox 源代码文档中的 [Firefox JavaScript 调试器¶](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)
