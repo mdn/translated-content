@@ -67,4 +67,4 @@ li {
 
 - CSS {{cssxref("relative-size")}} 数据类型
 - CSS {{cssxref("font")}} 和 {{cssxref("font-size")}} 属性
-- [CSS 字体](/zh-CN/docs/Web/CSS/CSS_fonts) 模块
+- [CSS 字体](/zh-CN/docs/Web/CSS/CSS_fonts)模块
