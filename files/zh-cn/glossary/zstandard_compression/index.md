@@ -2,7 +2,7 @@
 title: Zstandard 压缩
 slug: Glossary/Zstandard_compression
 l10n:
-  sourceCommit: 5fea7c9593f5e4b4ef13ec65064acf1eabf01e4e
+  sourceCommit: 6f55a0897b5511a2a78bbd70dc611c76eae911ff
 ---
 
 {{GlossarySidebar}}
