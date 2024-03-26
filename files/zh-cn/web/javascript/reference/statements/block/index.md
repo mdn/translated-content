@@ -7,7 +7,7 @@ l10n:
 
 {{jsSidebar("Statements")}}
 
-**块语句** 用于将零个或多个语句组合在一起。块由一对大括号（“花括号”）界定，并包含零个或多个语句和声明。
+**块语句**用于将零个或多个语句组合在一起。块由一对大括号（“花括号”）界定，并包含零个或多个语句和声明。
 
 {{EmbedInteractiveExample("pages/js/statement-block.html", "taller")}}
 
