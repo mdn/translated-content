@@ -1,7 +1,6 @@
 ---
 title: Comment documenter une propriété CSS
 slug: MDN/Writing_guidelines/Howto/Document_a_CSS_property
-page-type: mdn-writing-guide
 ---
 
 {{MDNSidebar}}
