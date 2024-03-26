@@ -23,7 +23,7 @@ break label;
 
 ## 描述
 
-执行到 `break;` 时，程序会跳出最内层的 `switch` 或 [语句和声明](/zh-CN/docs/Web/JavaScript/Reference/Statements#迭代)，并继续执行其后的下一条语句。
+执行到 `break;` 时，程序会跳出最内层的 `switch` 或[语句和声明](/zh-CN/docs/Web/JavaScript/Reference/Statements#迭代)，并继续执行其后的下一条语句。
 
 执行到 `break label;` 时，程序会跳出标记为 `label` 的语句，并继续执行其后的下一条语句。`break` 语句需要嵌套在引用的标签内。标记语句可以是任何语句（通常是 {{jsxref("Statements/block", "block", "", 1)}} 语句），它不一定是另一个循环语句。
 
