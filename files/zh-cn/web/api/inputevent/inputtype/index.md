@@ -1,21 +1,17 @@
 ---
-title: InputEvent.inputType
+title: InputEvent：inputType 属性
 slug: Web/API/InputEvent/inputType
+l10n:
+  sourceCommit: 72ca3d725e3e56b613de3ac9727bd0d6d619c38a
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 {{domxref("InputEvent")}} 接口中的只读属性 **`inputType`** 返回对可编辑内容所做更改的类型。可能的更改包括插入、删除和格式化文本。
 
-## 语法
+## 值
 
-```js
-var aString = inputEvent.inputType;
-```
-
-### 返回值
-
-一个包含所做输入的类型的字符串。有许多可能的值，例如 `insertText`、`deleteContentBackward`、`insertFromPaste` 和 `formatBold`。有关可用输入类型的完整列表，请参阅 [Input Events Level 1 规范的属性部分](https://rawgit.com/w3c/input-events/v1/index.html#interface-InputEvent-Attributes)。
+一个包含所做输入的类型的字符串。有许多可能的值，例如 `insertText`、`deleteContentBackward`、`insertFromPaste` 和 `formatBold`。有关可用输入类型的完整列表，请参阅 [Input Events Level 2 规范的属性部分](https://w3c.github.io/input-events/#interface-InputEvent-Attributes)。
 
 ## 示例
 
