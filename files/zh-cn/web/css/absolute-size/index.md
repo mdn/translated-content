@@ -22,33 +22,19 @@ l10n:
 `<absolute-size>` 数据类型使用以下列表中的关键字值进行定义：
 
 - `xx-small`
-
   - : 绝对大小：等于 `medium` 字体的 60%，对应已弃用的属性 `size="1"`。
-
 - `x-small`
-
   - : 绝对大小：等于 `medium` 字体的 75%。
-
 - `small`
-
   - : 绝对大小：等于 `medium` 字体的 89%，对应已弃用的属性 `size="2"`。
-
 - `medium`
-
   - : 绝对大小：用户首选的字体大小，此值用作参考中等值。对应到属性 `size="3"`。
-
 - `large`
-
   - : 绝对大小：等于 `medium` 字体大 20%，对应已弃用的属性 `size="4"`。
-
 - `x-large`
-
   - : 绝对大小：等于 `medium` 字体大 50%，对应已弃用的属性 `size="5"`。
-
 - `xx-large`
-
   - : 绝对大小：等于 `medium` 字体的两倍，对应已弃用的属性 `size="6"`。
-
 - `xxx-large`
   - : 绝对大小：等于 `medium` 字体的三倍，对应已弃用的属性 `size="7"`。
 
@@ -58,7 +44,7 @@ l10n:
 
 在 CSS1（1996）中，相邻关键字值索引之间的缩放比例为 1.5，这太大了。在 CSS2（1998）中，相邻关键字值索引之间的缩放比例为 1.2，这对细小的值造成了问题。由于发现相邻绝对大小关键字之间的单一固定比例存在问题，因此不再推荐使用固定比例，为了保持可读性，唯一的建议是最小字体大小不应小于 `9px`。
 
-下表列出了每个 `<absolute-size>` 关键字值的缩放比例、映射到 [`<h1>` to `<h6>`](/zh-CN/docs/Web/HTML/Element/Heading_Elements) 标题以及映射到已弃用的 [HTML `size` 属性](#html_size_属性)。
+下表列出了每个 `<absolute-size>` 关键字值的缩放比例、映射到 [`<h1>` 至 `<h6>`](/zh-CN/docs/Web/HTML/Element/Heading_Elements) 标题以及映射到已弃用的 [HTML `size` 属性](#html_size_属性)。
 
 | `<absolute-size>` | xx-small | x-small | small | medium | large | x-large | xx-large | xxx-large |
 | ----------------- | -------- | ------- | ----- | ------ | ----- | ------- | -------- | --------- |
