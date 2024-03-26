@@ -19,7 +19,7 @@ break label;
 ```
 
 - `label` {{optional_inline}}
-  - : 与要中断到的语句的标签关联的标识符。如果 `break` 语句未嵌套在循环或 {{jsxref("Statements/switch", "switch")}} 中，则需要标签标识符。
+  - : 与要中止到的语句的标签关联的标识符。如果 `break` 语句未嵌套在循环或 {{jsxref("Statements/switch", "switch")}} 中，则需要标签标识符。
 
 ## 描述
 
@@ -70,24 +70,24 @@ switch (food) {
 }
 ```
 
-### 带标签块中的 break 语句
+### 带标签中的 break 语句
 
-The following code uses `break` statements with labeled blocks. By using `break outerBlock`, control is transferred to the end of the block statement marked as `outerBlock`.
+以下代码展示了如何使用带 `break` 语句的标签。通过使用 `break outerBlock` 语句，可以跳出标记为 `outerBlock` 的嵌套循环或块语句。
 
 ```js
 outerBlock: {
   innerBlock: {
     console.log("1");
-    break outerBlock; // breaks out of both innerBlock and outerBlock
-    console.log(":-("); // skipped
+    break outerBlock; // 同时跳出 innerBlock 和 outerBlock
+    console.log(":-("); // 跳过这一行
   }
-  console.log("2"); // skipped
+  console.log("2"); // 跳过这一行
 }
 ```
 
-### Unsyntactic break statements
+### 非法 break 语句
 
-A `break` statement must be nested within any label it references. The following code also uses `break` statements with labeled blocks, but generates a syntax error because its `break` statement references `block2` but it's not nested within `block2`.
+以下代码也使用了带 `break` 语句的标签，会生成语法错误，因为其 `break` 语句引用了 `block2`，但它未嵌套在 `block2` 内。
 
 ```js-nolint example-bad
 block1: {
@@ -100,7 +100,7 @@ block2: {
 }
 ```
 
-Syntax errors are also generated in the following code examples which use `break` statements within functions that are nested within a loop, or labeled block that the `break` statements are intended to break out of.
+以下代码示例中，在嵌套在循环或带标签块中的函数内使用 `break` 语句也会生成语法错误，而 `break` 语句旨在跳出这些循环或带标签块。
 
 ```js-nolint example-bad
 function testBreak(x) {
