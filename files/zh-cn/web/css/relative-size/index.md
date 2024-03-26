@@ -29,7 +29,7 @@ l10n:
 
 ## 描述
 
-`<relative-size>` 关键字相对于元素的当前大小，如果继承大小使用 {{cssxref("absolute-size")}} 关键字来定义，否则 `<relative-size>` 值等于 [`<absolute-size>` 说明](/zh-CN/docs/Web/CSS/absolute-size#说明)中相邻的大小。否则，相对大小的增加或减少在 120% 到 150% 之间。
+`<relative-size>` 关键字定义了相对元素当前尺寸的大小。如果继承的尺寸使用 {{cssxref("absolute-size")}} 关键字定义，`<relative-size>` 值等同于 [`<absolute-size>` 说明](/zh-CN/docs/Web/CSS/absolute-size#说明)中的相邻尺寸。否则，尺寸的相对增减幅度在 120% 到 150% 之间。
 
 ## 示例
 
