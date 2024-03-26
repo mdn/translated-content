@@ -3,12 +3,11 @@ title: structuredClone()
 slug: Web/API/structuredClone
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{AvailableInWorkers}}
 
 全局的 **`structuredClone()`** 方法使用[结构化克隆算法](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)将给定的值进行[深拷贝](/zh-CN/docs/Glossary/Deep_copy)。
 
-该方法还支持把原始值中的[可转移对象](/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects)转移到新对象，而不是把属性引用拷贝过去。
-可转移对象与原始对象分离并附加到新对象;它们不可以在原始对象中访问被访问到。
+该方法还支持把原始值中的[可转移对象](/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects)转移到新对象，而不是把属性引用拷贝过去。可转移对象与原始对象分离并附加到新对象;它们不可以在原始对象中访问被访问到。
 
 ## 语法
 
@@ -81,6 +80,50 @@ const transferred = structuredClone(
   { x: { y: { z: arrayBuffer1, w: arrayBuffer2 } } },
   { transfer: [arrayBuffer1] },
 );
+```
+
+## 示例
+
+### 克隆一个对象
+
+在本示例中，我们会克隆对象的一个数组属性。在克隆之后，修改任何一个对象都不会影响到另一个。
+
+```js
+const mushrooms1 = {
+  amanita: ["muscaria", "virosa"],
+};
+
+const mushrooms2 = structuredClone(mushrooms1);
+
+mushrooms2.amanita.push("pantherina");
+mushrooms1.amanita.pop();
+
+console.log(mushrooms2.amanita); // ["muscaria", "virosa", "pantherina"]
+console.log(mushrooms1.amanita); // ["muscaria"]
+```
+
+### 转移一个对象
+
+在本示例中我们创建了一个 {{jsxref("ArrayBuffer")}} 然后克隆将它作为属性的对象，将它转移。我们可以使用克隆对象里的 buffer，但是如果我们尝试使用原有的 buffer 的话就会产生异常。
+
+```js
+// Create an ArrayBuffer with a size in bytes
+const buffer1 = new ArrayBuffer(16);
+
+const object1 = {
+  buffer: buffer1,
+};
+
+// Clone the object containing the buffer, and transfer it
+const object2 = structuredClone(object1, { transfer: [buffer1] });
+
+// Create an array from the cloned buffer
+const int32View2 = new Int32Array(object2.buffer);
+int32View2[0] = 42;
+console.log(int32View2[0]);
+
+// Creating an array from the original buffer throws a TypeError
+const int32View1 = new Int32Array(object1.buffer);
 ```
 
 ## 规范
