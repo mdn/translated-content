@@ -5,7 +5,7 @@ slug: Web/HTML/Element/cite
 
 {{HTMLSidebar}}
 
-**`<cite>`** [HTML](/zh-TW/docs/Web/HTML) 元素用於標記被引用的創意作品的標題。引用可能根據與引用元數據相關的上下文適當的慣例而以縮寫形式表示。
+**`<cite>`** [HTML](/zh-TW/docs/Web/HTML) 元素用於標記被引用的創意作品的標題。引用可能根據與引用後設資料相關的上下文適當的慣例而以縮寫形式表示。
 
 {{EmbedInteractiveExample("pages/tabbed/cite.html", "tabbed-standard")}}
 
@@ -94,7 +94,7 @@ slug: Web/HTML/Element/cite
       <td>
         任何接受<a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
           >段落型內容</a
-        > 的元素。
+        >的元素。
       </td>
     </tr>
     <tr>
