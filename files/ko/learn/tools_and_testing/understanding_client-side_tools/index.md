@@ -11,7 +11,7 @@ l10n:
 
 ## 필요한 사전 지식
 
-여기에 설명된 도구를 사용하기 전에 먼저 [HTML](/ko/docs/Learn/HTML), [CSS](/ko/docs/Learn/CSS), 그리고 [JavaScript](/ko/docs/Learn/JavaScript) 핵심 언어의 기본을 배워야 합니다.
+여기에 설명된 도구를 사용하기 전에 먼저 핵심 언어인 [HTML](/ko/docs/Learn/HTML), [CSS](/ko/docs/Learn/CSS), 그리고 [JavaScript](/ko/docs/Learn/JavaScript)의 기본을 배워야 합니다.
 
 ## 안내서
 
