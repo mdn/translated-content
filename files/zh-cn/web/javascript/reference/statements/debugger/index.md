@@ -28,7 +28,7 @@ function potentiallyBuggyCode() {
 }
 ```
 
-当调试器被调用时，将在 `debugger` 执行语句处暂停，这类似于脚本元素中的断点。
+当 debugger 被调用时，执行暂停在 `debugger` 语句的位置。就像在脚本源代码中的断点一样。
 
 ![打开浏览器及其开发者工具，并显示了调试器面板。该面板展示了如何在 debugger 语句处暂停执行，以便仔细检查变量、作用域、事件等。](screen_shot_2014-02-07_at_9.14.35_am.png)
 
@@ -42,4 +42,4 @@ function potentiallyBuggyCode() {
 
 ## 参见
 
-- [火狐浏览器 JavaScript 调试器¶](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) 在 Firefox 火狐浏览器源文档中
+- Firefox 源代码文档中的 [火狐开发者工具中调试](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)
