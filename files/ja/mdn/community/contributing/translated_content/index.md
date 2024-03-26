@@ -22,8 +22,8 @@ l10n:
 
 ### 中国語 (zh-CN, zh-TW)
 
-- ディスカッション: [Telegram (MozTW L10n channel)](https://moztw.org/community/telegram/), [Telegram (Mozilla China channel)](https://t.me/mozilla_china)
-- 現在の貢献者: [Irvin](https://github.com/irvin), [t7yang](https://github.com/t7yang), [yin1999](https://github.com/yin1999)
+- ディスカッション: [Telegram (`Mozilla China`)](https://t.me/mozilla_china), [Telegram (`MozTW L10n`)](https://moztw.org/community/telegram/)
+- 現在の貢献者: [Irvin](https://github.com/irvin), [t7yang](https://github.com/t7yang), [yin1999](https://github.com/yin1999), [jasonren0403](https://github.com/jasonren0403), [JasonLamv-t](https://github.com/JasonLamv-t)
 
 ### フランス語 (fr)
 
