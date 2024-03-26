@@ -2,7 +2,7 @@
 title: テスト実行のための戦略
 slug: Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies
 l10n:
-  sourceCommit: 4a5ceb89ac004d087669aeee3c26475c2207787f
+  sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Introduction","Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS", "Learn/Tools_and_testing/Cross_browser_testing")}}
@@ -17,14 +17,14 @@ l10n:
         <a href="/ja/docs/Learn/HTML">HTML</a>、<a href="/ja/docs/Learn/CSS">CSS</a>、<a href="/ja/docs/Learn/JavaScript">JavaScript</a> 言語の主要部に通じていること。
         <a
           href="/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
-          >クロスブラウザーブラウザーテストの基本</a
+          >ブラウザー横断テストの基本</a
         >について高水準の考えを持っていること。
       </td>
     </tr>
     <tr>
-      <th scope="row">Objective:</th>
+      <th scope="row">目標:</th>
       <td>
-        クロスブラウザーテストに関わる高いレベルの概念を理解すること。
+        ブラウザー横断テストに関わる高いレベルの概念を理解すること。
       </td>
     </tr>
   </tbody>
@@ -52,8 +52,6 @@ l10n:
 
 この層のほとんどの人は、iOS または Android の携帯電話も使用しているので、iOS の Safari の最新バージョン、Android の古い純正ブラウザーの最後の数バージョン、iOS と Android 用の Chrome と Firefox をテストするのがよいでしょう。また、レスポンシブデザインが確実に動作するように、携帯電話とタブレットの両方でテストすることが理想的です。
 
-IE の場合、最後の 2、3 バージョンをテストするのがよいでしょう。まだ IE 9 を使用している人もいます。IE は古くて能力が低く、マイクロソフトは IE のサポートを段階的に縮小しているので、B グレードの階層に入れましょう。
-
 Opera Mini は[複雑な JavaScript を実行する能力がとても低い](https://dev.opera.com/articles/opera-mini-and-javascript/)ので、これも B ランクにしましょう。
 
 このように、どのブラウザーでテストを行うかは、ユーザーが使用すると予想されるブラウザーに基づいて決定します。
@@ -61,7 +59,7 @@ Opera Mini は[複雑な JavaScript を実行する能力がとても低い](htt
 
 1. A グレード: Windows/Mac 用の Chrome と Firefox、Mac 用の Safari、Windows 用の Edge、iPhone/iPad 用の iOS Safari、スマートフォン/タブレット用の Android 内蔵ブラウザー（最新 2 バージョン）、スマートフォン/タブレット用の Chrome と Firefox（最新 2 バージョン）。
 2. B グレード: Windows 用 IE、Opera Mini
-3. C グレード: ナシ
+3. C グレード: なし
 
 もし、対象となるユーザーがほとんど別の場所にいる場合は、一般的なブラウザーや OS が上記とは異なる形になる可能性があります。
 
@@ -99,7 +97,7 @@ Opera Mini は[複雑な JavaScript を実行する能力がとても低い](htt
 様々なカテゴリーでカスタマイズされたレポートなど、Google アナリティクスを使用して見ることができるデータは膨大で、そのすべてについて説明する時間はありません。
 [アナリティクスをはじめよう](https://support.google.com/analytics/answer/9306384?visit_id=637855964517698041-2103767437&rd=1)では、初心者に有益なレポート（など）についてのガイダンスを提供しています。
 
-左側のメニューから _ユーザー > テクノロジー > ブラウザと OS_ を選択すると、ユーザーが使用するブラウザーや演算子を確認することができます。
+左側のメニューから _ユーザー > テクノロジー > ブラウザーと OS_ を選択すると、ユーザーが使用するブラウザーや演算子を確認することができます。
 
 > **メモ:** Google アナリティクスを使用する場合、誤解を招くような偏見に注意する必要があります。例えば、「Firefox モバイルのユーザーがいない」という情報は、Firefox モバイルにわざわざ対応していないということにつながるかもしれません。しかし、最初の段階でサイトが Firefox モバイルで壊れていた場合、Firefox モバイルユーザーは一人もいないことになります。
 
@@ -113,8 +111,8 @@ Opera Mini は[複雑な JavaScript を実行する能力がとても低い](htt
 
 ですから、最終的な対応表は次のようなものに仕上がります。
 
-1. A グレード: Windows/Mac 版 Chrome と Firefox、Mac 版Safari、Windows 版 Edge と IE（それぞれ最新 2 バージョン）、iPhone/iPad 版 iOS Safari、スマホ/タブレット版 Android 純正ブラウザー（最新 2 バージョン）、スマホタブレット版 Chrome と Android 版 Firefox（最新 2 バージョン）。アクセシビリティは一般的なテストに合格していること。
-2. B グレード: Windows 版 IE 8 および 9、Opera Mini。
+1. A グレード: Windows/Mac 版 Chrome と Firefox、Mac 版Safari、Edge（それぞれ最新 2 バージョン）、iPhone/iPad 版 iOS Safari、スマホ/タブレット版 Android 純正ブラウザー（最新 2 バージョン）、スマホタブレット版 Chrome と Android 版 Firefox（最新 2 バージョン）。アクセシビリティは一般的なテストに合格していること。
+2. B グレード: Opera Mini。
 3. C グレード: Opera などのニッチな現代のブラウザー。
 
 ## これから何をテストしていくのか？
@@ -146,7 +144,7 @@ A グレード:
 これらのテスト基準は、以下の理由で有益なものです。
 
 - テストを実施する際に、以下に従うべき手順の集合を与えます。
-- これらは、ユーザーグループがテストを行う際に従うべき指示の集合に簡単に変えることができます（例えば、「マウスを使ってボタンをアクティブにしてみて、次にキーボードを使って...」など） - 下記の [ユーザーテスト](#ユーザーテスト) を参照ください。
+- これらは、ユーザーグループがテストを行う際に従うべき指示の集合に簡単に変えることができます（例えば、「マウスを使ってボタンを有効化してみて、次にキーボードを使って...」など） - 下記の [ユーザーテスト](#ユーザーテスト) を参照ください。
 - これらはまた、自動化されたテストを書くための基礎となります。何をテストしたいのか、そして成功条件は何なのかを正確に知っていれば、そのようなテストを書くのはより簡単です（このシリーズの後の [Selenium](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment#selenium) を見てください）。
 
 ## テストラボを用意する
@@ -155,7 +153,7 @@ A グレード:
 
 ### 物理的な端末
 
-一般的には、テストしたいブラウザを実行する実機があった方がよいでしょう。この方が、動作や全体的な使い勝手の面で最も高い精度が提供されます。低レベルの機器ラボとしては、おそらく以下のようなものが必要でしょう。
+一般的には、テストしたいブラウザーを実行する実機があった方がよいでしょう。この方が、動作や全体的な使い勝手の面で最も高い精度が提供されます。低レベルの機器ラボとしては、おそらく以下のようなものが必要でしょう。
 
 - テストが必要なブラウザーがインストールされた Mac - Firefox、Chrome、Opera、Safari を含めることができます。
 - テストに必要なブラウザーがインストールされた Windows PC - Edge（または IE）、Chrome、Firefox、Opera を含めることができます。
@@ -185,7 +183,7 @@ A グレード:
 
 しかし、多くの場合、何らかのエミュレーターを保有しなければならないでしょう。最も一般的にテストしたい端末/ブラウザーは以下の通りです。
 
-- Android アプリを開発するための公式の [Android Studio IDE](https://developer.android.com/studio/) は、Google Chrome や古い純正 Android ブラウザーでウェブサイトをテストするには少し重いですが、しっかりとした [emulator](https://developer.android.com/studio/run/emulator.html) が実行されています。もう少し軽量なものをお望みなら、Windows と Mac の両方で動作する [Andy](https://www.andyroid.net/) が合理的なオプションとなります。
+- Android アプリを開発するための公式の [Android Studio IDE](https://developer.android.com/studio/) は、Google Chrome や古い純正 Android ブラウザーでウェブサイトをテストするには少し重いですが、しっかりとした[エミュレーター](https://developer.android.com/studio/run/emulator.html)が実行されています。もう少し軽量なものをお望みなら、Windows と Mac の両方で動作する [Andy](https://www.andyroid.net/) が合理的なオプションとなります。
 - Apple は、[XCode](https://developer.apple.com/xcode/) 開発環境の上で動作し、iPad/iPhone/Apple Watch/Apple TV をエミュレートする [Simulator](https://help.apple.com/simulator/mac/current/) というアプリを提供されています。これには iOS ネイティブのブラウザー Safari が搭載されています。これは残念ながら Mac 上でしか動作しません。
 
 他にもモバイル端末環境用のシミュレーターなどもよく見つかります。
@@ -197,7 +195,7 @@ A グレード:
 
 ### 仮想マシン
 
-仮想マシンは、デスクトップコンピューター上で動作するアプリケーションで、自分自身で仮想ハードディスク（多くはホストマシンのハードディスク上に存在する単一の大きなファイルで表される）に区分されたオペレーティングシステム全体のエミュレーションを実行することができる。[Parallels](www.parallels.com/)、[VMWare](https://www.vmware.com/)、[Virtual Box](https://www.virtualbox.org/wiki/Downloads) などの有名な仮想マシンアプリが利用でき、個人的には後者が無料なので気に入っています。
+仮想マシンは、デスクトップコンピューター上で動作するアプリケーションで、自分自身で仮想ハードディスク（多くはホストマシンのハードディスク上に存在する単一の大きなファイルで表される）に区分されたオペレーティングシステム全体のエミュレーションを実行することができます。 [Parallels](https://www.parallels.com/)、[VMWare](https://www.vmware.com/)、[Virtual Box](https://www.virtualbox.org/wiki/Downloads) などの有名な仮想マシンアプリが利用でき、個人的には後者が無料なので気に入っています。
 
 > **メモ:** 仮想マシンのエミュレーションを実行するには、多くのハードディスク空間が利用できる必要があります。エミュレートする各オペレーティングシステムは、多くのメモリーを占めることがあります。インストールするたびに必要なハードディスク空間を選ぶ傾向があります。10GB 程度でも十分ですが、オペレーティングシステムを確実に実行するために 50GB 以上を推奨する情報もあります。ほとんどの仮想マシンアプリで提供された良いオプションは、**動的に割り当てられた**ハードドライブを作成し、必要に応じて拡大・縮小させることです。
 
@@ -270,7 +268,7 @@ Virtual Box を使用するには、次のことを行う必要があります�
 
 ## まとめ
 
-この記事を読んで、ターゲット顧客/ブラウザーの表を特定して、その表に載っているクロスブラウザーテストを効率的に実行することが良くわかったでしょう。
+この記事を読んで、ターゲット顧客/ブラウザーの表を特定して、その表に載っているブラウザー横断テストを効率的に実行することが良くわかったでしょう。
 
 次には HTML と CSS から始めて、テストで見つけにくいコードの問題に注目していきましょう。
 
