@@ -29,7 +29,7 @@ sub()
 
 ### sub() 사용하기
 
-아래 코드는 HTML 문자열을 생성한 다음 문서 본문을 해당 문자열로 대체합니다.
+아래 코드는 HTML 문자열을 생성한 다음 document의 body를 해당 문자열로 대체합니다.
 
 ```js
 const contentString = "Hello, world";
