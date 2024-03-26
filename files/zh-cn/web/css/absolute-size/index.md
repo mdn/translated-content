@@ -9,7 +9,7 @@ l10n:
 
 **`<absolute-size>`** [CSS](/zh-CN/docs/Web/CSS) [基本数据类型](/zh-CN/docs/Web/CSS/CSS_Types) 描述了绝对大小关键字。此数据类型用于 {{cssxref("font")}} 简写属性和 {{cssxref("font-size")}} 属性。
 
-字体大小关键字映射到已过时的 HTML `size` 属性，请参阅下面的 [HTML size 属性](#HTML size 属性) 部分。
+字体大小关键字映射到已过时的 HTML `size` 属性，请参阅下面的 [HTML size 属性](#HTML size 属性)部分。
 
 ## 语法
 
@@ -129,4 +129,4 @@ li {
 
 - CSS {{cssxref("relative-size")}} 数据类型
 - CSS {{cssxref("font")}} 和 {{cssxref("font-size")}} 属性
-- [CSS 字体](/zh-CN/docs/Web/CSS/CSS_fonts) 模块
+- [CSS 字体](/zh-CN/docs/Web/CSS/CSS_fonts)模块
