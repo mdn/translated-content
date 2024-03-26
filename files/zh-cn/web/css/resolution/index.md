@@ -79,4 +79,3 @@ ten dpi    只能使用十进制数字。
 - [resolution](/zh-CN/docs/Web/CSS/@media/resolution) 媒体特性
 - {{cssxref("image-resolution")}} 属性
 - [使用 @media 查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-
