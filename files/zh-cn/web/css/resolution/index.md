@@ -13,7 +13,7 @@ l10n:
 
 ## 语法
 
-`<resolution>` 数据类型由一个严格意义上的正数 {{cssxref("&lt;number&gt;")}}} 和下面列出的一个单位组成。与所有 CSS 尺寸一样，单位字面量和数字之间没有空格。
+`<resolution>` 数据类型由一个严格意义上的正数 {{cssxref("&lt;number&gt;")}} 和下面列出的一个单位组成。与所有 CSS 尺寸一样，单位字面量和数字之间没有空格。
 
 ### 单位
 
@@ -50,7 +50,7 @@ l10n:
 }
 ```
 
-### 合法的 resolution 值
+### 有效的 resolution 值
 
 ```plain example-good
 96dpi
@@ -58,7 +58,7 @@ l10n:
 3dppx
 ```
 
-### 非法的 resolution 值
+### 无效的 resolution 值
 
 ```plain example-bad
 72 dpi     不允许在数字和单位之间使用空格。
