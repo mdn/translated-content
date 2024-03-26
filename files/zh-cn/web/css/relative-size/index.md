@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`<relative-size>`** [CSS](/zh-CN/docs/Web/CSS) [基本数据类型](/zh-CN/docs/Web/CSS/CSS_Types) 描述了相对大小关键字，`<relative-size>` 关键字定义相对于父元素计算大小的大小，此数据类型用于 {{cssxref("font")}} 简写属性和 {{cssxref("font-size")}} 属性。
+**`<relative-size>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types)描述了相对大小关键字。`<relative-size>` 关键字定义相对于父元素计算尺寸的大小，此数据类型用于 {{cssxref("font")}} 简写属性和 {{cssxref("font-size")}} 属性。
 
 ## 语法
 
@@ -27,7 +27,7 @@ l10n:
 
   - : 比继承大小大一个单位的相对大小。
 
-## 说明
+## 描述
 
 `<relative-size>` 关键字相对于元素的当前大小，如果继承大小使用 {{cssxref("absolute-size")}} 关键字来定义，否则 `<relative-size>` 值等于 [`<absolute-size>` 说明](/zh-CN/docs/Web/CSS/absolute-size#说明)中相邻的大小。否则，相对大小的增加或减少在 120% 到 150% 之间。
 
@@ -38,7 +38,7 @@ l10n:
 ```html
 <ul>
   <li class="smaller">font-size: smaller;</li>
-  <li>font-size is not specified</li>
+  <li>未指定 font-size</li>
   <li class="larger">font-size: larger;</li>
 </ul>
 ```
