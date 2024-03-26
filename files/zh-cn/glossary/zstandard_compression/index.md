@@ -1,5 +1,5 @@
 ---
-title: Zstandard compression
+title: Zstandard 压缩
 slug: Glossary/Zstandard_compression
 l10n:
   sourceCommit: 5fea7c9593f5e4b4ef13ec65064acf1eabf01e4e
@@ -9,9 +9,9 @@ l10n:
 
 **Zstandard** 是一种通用的无损压缩算法。
 
-Zstandard，简称 `zstd`。是一种快速无损压缩算法，针对实时压缩场景，在 zlib 级别中提供更好的压缩比。它采用了[Huff0 和 FSE 库](https://github.com/Cyan4973/FiniteStateEntropy)提供的高效熵编码阶段。在相同的 CPU 成本下，它通常比 {{glossary("Brotli_compression", "brotli", "Brotli 压缩")}} 提供更好的压缩比，或者在相同的压缩比下提供更低的 CPU 成本。
+Zstandard（简称 `zstd`）是一种快速无损压缩算法，针对 zlib 级别的实时压缩场景提供更好的压缩比。它采用了[Huff0 和 FSE 库](https://github.com/Cyan4973/FiniteStateEntropy)提供的高效熵编码阶段。在相同的 CPU 开销下，它通常比 {{glossary("Brotli_compression", "brotli")}} 提供更好的压缩比，或者在相同的压缩比下提供更低的 CPU 开销。
 
-关于浏览器兼容性，请参考 [实体消息首部：浏览器兼容性](/zh-CN/docs/Web/HTTP/Headers/Content-Encoding#浏览器兼容性)。
+关于浏览器兼容性，请参考 [Content-Encoding：浏览器兼容性](/zh-CN/docs/Web/HTTP/Headers/Content-Encoding#浏览器兼容性)。
 
 ## 参见
 
@@ -20,5 +20,5 @@ Zstandard，简称 `zstd`。是一种快速无损压缩算法，针对实时压�
 - [Zstandard RFC](https://tools.ietf.org/html/rfc8878)
 - [Zstandard 主页](https://facebook.github.io/zstd/)
 - [Zstandard GitHub 仓库](https://github.com/facebook/zstd)
-- 维基百科上的 [Zstandard](https://en.wikipedia.org/wiki/Zstandard)
-- [关于 Caniuse 的 Zstandard](https://caniuse.com/#feat=zstandard)
+- 维基百科上的 [Zstandard](https://zh.wikipedia.org/zh-cn/Zstandard)
+- [Caniuse 中的 Zstandard](https://caniuse.com/#feat=zstandard)
