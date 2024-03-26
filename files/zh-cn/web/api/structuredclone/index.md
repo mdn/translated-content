@@ -117,7 +117,7 @@ const object1 = {
 // 克隆包含 buffer 的对象，并将其转移
 const object2 = structuredClone(object1, { transfer: [buffer1] });
 
-// Create an array from the cloned buffer
+// 从克隆后的 buffer 创建数组
 const int32View2 = new Int32Array(object2.buffer);
 int32View2[0] = 42;
 console.log(int32View2[0]);
