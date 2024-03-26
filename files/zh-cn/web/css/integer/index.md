@@ -21,7 +21,7 @@ l10n:
 
 ## 示例
 
-### 合法整型
+### 有效的 integer 值
 
 ```plain example-good
 12          正整数（没有前导 + 号）
@@ -32,7 +32,7 @@ l10n:
 -0          有前导 - 号的零
 ```
 
-### 非法整型
+### 无效的 integer 值
 
 ```plain example-bad
 12.0        这是 <number> 值，而不是 <integer> 值，即使它代表了一个整数。
