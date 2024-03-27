@@ -22,7 +22,7 @@ _也从其父接口 {{domxref("EventTarget")}} 继承属性。_
 - {{domxref("BatteryManager.chargingTime")}} {{ReadOnlyInline}}
   - : 一个表示电池距离充电完毕还需多少秒的数字，或为 0 则表示电池已充电完毕。
 - {{domxref("BatteryManager.dischargingTime")}} {{ReadOnlyInline}}
-  - : 一个表示距离电池耗电至空且系统挂起需要多少秒的数字。
+  - : 一个表示距离电池完全耗电且系统挂起需要多少秒的数字。
 - {{domxref("BatteryManager.level")}} {{ReadOnlyInline}}
   - : 一个表示系统的电池电量水平的数字，其值介于 0.0 和 1.0 之间。
 
