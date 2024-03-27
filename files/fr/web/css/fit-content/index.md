@@ -29,8 +29,8 @@ block-size: fit-content;
   <div class="item">Texte</div>
   <div class="item">Un peu plus de texte</div>
   <div class="item">
-    Voyons maintenant le comportement avec du texte long, permettant ainsi de montrer 
-    le fonctionnement de fit-content !
+    Voyons maintenant le comportement avec du texte long, permettant ainsi de
+    montrer le fonctionnement de fit-content !
   </div>
 </div>
 ```
