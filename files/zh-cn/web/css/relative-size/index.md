@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`<relative-size>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types)描述了相对大小关键字。`<relative-size>` 关键字定义相对于父元素计算尺寸的大小，此数据类型用于 {{cssxref("font")}} 简写属性和 {{cssxref("font-size")}} 属性。
+**`<relative-size>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types)描述了相对尺寸关键字。`<relative-size>` 关键字定义相对于父元素计算尺寸的大小，此数据类型用于 {{cssxref("font")}} 简写属性和 {{cssxref("font-size")}} 属性。
 
 ## 语法
 
@@ -21,15 +21,15 @@ l10n:
 
 - `smaller`
 
-  - : 比继承大小小一个单位的相对大小。
+  - : 比继承尺寸小一个单位的相对尺寸。
 
 - `larger`
 
-  - : 比继承大小大一个单位的相对大小。
+  - : 比继承尺寸大一个单位的相对尺寸。
 
 ## 描述
 
-`<relative-size>` 关键字定义了相对元素当前尺寸的大小。如果继承的尺寸使用 {{cssxref("absolute-size")}} 关键字定义，`<relative-size>` 值等同于 [`<absolute-size>` 说明](/zh-CN/docs/Web/CSS/absolute-size#说明)中的相邻尺寸。否则，尺寸的相对增减幅度在 120% 到 150% 之间。
+`<relative-size>` 关键字定义了相对元素当前尺寸的大小。如果继承的尺寸使用 {{cssxref("absolute-size")}} 关键字定义，`<relative-size>` 值等同于 [`<absolute-size>` 表格](/zh-CN/docs/Web/CSS/absolute-size#描述)中的相邻尺寸。否则，尺寸的相对增减幅度在 120% 到 150% 之间。
 
 ## 示例
 
