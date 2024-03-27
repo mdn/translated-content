@@ -17,7 +17,7 @@ slug: Web/HTML/Element/colgroup
 
   - : 指定`<colgroup>`元素跨越的連續欄數。該值必須是大於零的正整數。如果沒有指定，預設值為 `1`。
 
-    > **備註：** 如果在 `<colgroup>`n內有一個或多個 {{HTMLElement("col")}} 元素，則不允許使用 `span` 屬性。
+    > **備註：** 如果在 `<colgroup>` 內有一個或多個 {{HTMLElement("col")}} 元素，則不允許使用 `span` 屬性。
 
 ### 已棄用屬性
 
@@ -173,7 +173,7 @@ table {
     <tr>
       <th scope="row">允許的內容</th>
       <td>
-        如果存在 <a href="/zh-TW/docs/Web/HTML/Element/colgroup#span"><code>span</code></a> 屬性：無。<br />如果未指定該屬性：零個或多個 {{HTMLElement("col")}} 元素。
+        如果存在 <a href="#span"><code>span</code></a> 屬性：無。<br />如果未指定該屬性：零個或多個 {{HTMLElement("col")}} 元素。
       </td>
     </tr>
     <tr>
