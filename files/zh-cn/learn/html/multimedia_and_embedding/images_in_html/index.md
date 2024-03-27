@@ -88,13 +88,13 @@ l10n:
 ```html
 <img
   src="images/dinosaur.jpg"
-  alt="一具恐龙骨架的头部和躯干；
-          它的头很大，有长长的尖牙" />
+  alt="The head and torso of a dinosaur skeleton;
+          it has a large head with long sharp teeth" />
 ```
 
 测试 `alt` 文本的最简单方法是故意拼错文件名。如果我们的图片名字拼成 `dinosooooor.jpg`，浏览器就不会显示图片，而会显示 `alt` 文本：
 
-![标题为“Images in HTML”，但是这次恐龙图片没有显示，在它原有的位置只有 alt 文本。](alt-text.png)
+![标题为“Images in HTML title”，但是这次恐龙图片没有显示，在它原有的位置只有 alt 文本。](alt-text.png)
 
 那么，为什么我们需要备选文本呢？它可以派上用场的地方有很多：
 
@@ -124,7 +124,8 @@ l10n:
 ```html
 <img
   src="images/dinosaur.jpg"
-  alt="恐龙骨架的头部和躯干，它的头很大，长着锋利的牙齿。"
+  alt="The head and torso of a dinosaur skeleton;
+          it has a large head with long sharp teeth"
   width="400"
   height="341" />
 ```
@@ -138,8 +139,8 @@ l10n:
 
 <img
   src="dinosaur.jpg"
-  alt="一副恐龙骨架的头和躯干；它的头很大，有长而锋利的牙齿"
-  title="一只霸王龙，展示在曼彻斯特大学博物馆" />
+  alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"
+  title="A T-Rex on display in the Manchester University Museum" />
 <blockquote>
   <p>
     But down there it would be dark now, and not the lovely lighted aquarium she
@@ -184,15 +185,16 @@ l10n:
 ```html
 <img
   src="images/dinosaur.jpg"
-  alt="一只恐龙头部和躯干的骨架，它有一个巨大的头，长着锋利的牙齿。"
+  alt="The head and torso of a dinosaur skeleton;
+          it has a large head with long sharp teeth"
   width="400"
   height="341"
-  title="曼彻斯特大学博物馆展出的霸王龙" />
+  title="A T-Rex on display in the Manchester University Museum" />
 ```
 
 这会给我们一个鼠标悬停提示，和链接标题一样：
 
-![恐龙图片，上面的提示标题为“曼彻斯特大学博物馆展出的霸王龙”](image-with-title.png)
+![恐龙图片，上面的提示标题为“A T-Rex on display in the Manchester University Museum”](image-with-title.png)
 
 然而，我们并不推荐它——`title` 有很多无障碍问题，这些问题主要是基于这样一个事实，即屏幕阅读器的支持并不完善，除此之外大多数浏览器都不会显示它，除非你将鼠标悬停在上面（例如：无法使用键盘的用户），如果你对更多的信息感兴趣，请阅读 Scott O'Hara 写的 [title 属性的考验与磨难](https://www.24a11y.com/2017/the-trials-and-tribulations-of-the-title-attribute/)。
 
@@ -269,7 +271,7 @@ function updateCode() {
 }
 
 const htmlSolution =
-  '<img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"\n alt="一只恐龙头部和躯干的骨架，它有一个巨大的头，长着锋利的牙齿。"\n width="200"\n height="171"\n title="曼彻斯特大学博物馆展出的一只霸王龙的化石">';
+  '<img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"\n alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"\n width="200"\n height="171"\n title="A T-Rex on display in the Manchester University Museum">';
 let solutionEntry = htmlSolution;
 
 reset.addEventListener("click", () => {
@@ -408,12 +410,13 @@ Copyleft 许可在软件界中很常见。其基本思想是使用 copyleft 许�
 ```html
 <div class="figure">
   <img
-    src="/images/dinosaur_small.jpg"
-    alt="一只恐龙头部和躯干的骨架，它有一个巨大的头，长着锋利的牙齿。"
+    src="images/dinosaur.jpg"
+    alt="The head and torso of a dinosaur skeleton;
+            it has a large head with long sharp teeth"
     width="400"
     height="341" />
 
-  <p>曼彻斯特大学博物馆展出的一只霸王龙的化石</p>
+  <p>A T-Rex on display in the Manchester University Museum.</p>
 </div>
 ```
 
@@ -425,11 +428,14 @@ Copyleft 许可在软件界中很常见。其基本思想是使用 copyleft 许�
 <figure>
   <img
     src="images/dinosaur.jpg"
-    alt="一只恐龙头部和躯干的骨架，它有一个巨大的头，长着锋利的牙齿。"
+    alt="The head and torso of a dinosaur skeleton;
+            it has a large head with long sharp teeth"
     width="400"
     height="341" />
 
-  <figcaption>曼彻斯特大学博物馆展出的一只霸王龙的化石</figcaption>
+  <figcaption>
+    A T-Rex on display in the Manchester University Museum.
+  </figcaption>
 </figure>
 ```
 
@@ -508,7 +514,7 @@ function updateCode() {
 }
 
 const htmlSolution =
-  '<figure>\n <img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"\n alt="一只恐龙头部和躯干的骨架，它有一个巨大的头，长着锋利的牙齿。"\n width="200"\n height="171">\n <figcaption>曼彻斯特大学博物馆展出的一只霸王龙的化石</figcaption>\n</figure>';
+  '<figure>\n <img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"\n alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"\n width="200"\n height="171">\n <figcaption>A T-Rex on display in the Manchester University Museum</figcaption>\n</figure>';
 let solutionEntry = htmlSolution;
 
 reset.addEventListener("click", () => {
