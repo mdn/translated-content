@@ -14,7 +14,7 @@ Vous devrez avoir des connaissances en [HTTP](/fr/docs/Web/HTTP) ou être prêt 
 - De nombreux en-têtes HTTP sont définis dans diverses normes de l'IETF.
 - L'IANA tient un [registre des champs d'en-tête HTTP](https://www.iana.org/assignments/http-fields/http-fields.xhtml) et Wikipédia répertorie [les champs d'en-tête connus](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields), mais tous ne sont pas pertinents pour les développeurs web ou ne font pas partie d'une norme officielle.
 - S'il existe des **liens rouges** sur la page de [référence des en-têtes HTTP](/fr/docs/Web/HTTP/Headers), ces en-têtes sont un bon choix à documenter.
-- En cas de doute, [demandez à l'équipe de MDN Web Docs](/en-US/docs/MDN/Community/Communication_channels) s'il est judicieux d'écrire sur l'en-tête que vous avez choisi.
+- En cas de doute, [demandez à l'équipe de MDN Web Docs](/fr/docs/MDN/Community/Communication_channels) s'il est judicieux d'écrire sur l'en-tête que vous avez choisi.
 
 ## Étape 2 - Vérifier les pages d'en-tête HTTP existantes
 
