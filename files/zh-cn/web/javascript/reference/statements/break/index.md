@@ -1,5 +1,5 @@
 ---
-title: break 语句
+title: break
 slug: Web/JavaScript/Reference/Statements/break
 l10n:
   sourceCommit: 4c26e8a3fb50d06963b06017f51ce19364350564
@@ -7,7 +7,7 @@ l10n:
 
 {{jsSidebar("Statements")}}
 
-**`break`** 语句中止当前循环或中止 {{jsxref("Statements/switch", "switch")}} 语句，并将程序控制权转移到中止语句后的语句。当在使用[标记语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/label)时，它也可以用来跳过标记语句。
+**`break`** 语句终止当前循环或 {{jsxref("Statements/switch", "switch")}} 语句，并将程序控制权转移到终止语句后的语句。当在带有标签的语句内部使用时，它还可以用于跳过该[标记语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/label)。
 
 {{EmbedInteractiveExample("pages/js/statement-break.html")}}
 
@@ -19,11 +19,11 @@ break label;
 ```
 
 - `label` {{optional_inline}}
-  - : 与语句标签相关联的标识符。如果 `break` 语句未嵌套在循环或 {{jsxref("Statements/switch", "switch")}} 中，则需要标签标识符。
+  - : 与要中断的语句的标签关联的标识符。如果 `break` 语句未嵌套在循环或 {{jsxref("Statements/switch", "switch")}} 中，则需要标签标识符。
 
 ## 描述
 
-执行到 `break;` 时，程序会跳出最内层的 `switch` 或[语句和声明](/zh-CN/docs/Web/JavaScript/Reference/Statements#迭代)，并继续执行其后的下一条语句。
+执行到 `break;` 时，程序会跳出最内层的 `switch` 或[循环](/zh-CN/docs/Web/JavaScript/Reference/Statements#迭代)语句，并继续执行其后的下一条语句。
 
 执行到 `break label;` 时，程序会跳出标记为 `label` 的语句，并继续执行其后的下一条语句。`break` 语句需要嵌套在引用的标签内。标记语句可以是任何语句（通常是 {{jsxref("Statements/block", "block", "", 1)}} 语句），它不一定是另一个循环语句。
 
@@ -31,9 +31,9 @@ break label;
 
 ## 示例
 
-### 中止 while 循环
+### 中断 while 循环
 
-以下函数有一个 `break` 语句，当 `i` 等于 3 时中止 {{jsxref("Statements/while", "while")}} 循环，然后返回 `3 * x` 的值。
+以下函数有一个 `break` 语句，当 `i` 等于 3 时终止 {{jsxref("Statements/while", "while")}} 循环，然后返回值 `3 * x`。
 
 ```js
 function testBreak(x) {
@@ -87,7 +87,7 @@ outerBlock: {
 
 ### 非法 break 语句
 
-以下代码也使用了带 `break` 语句的标签，但是会生成语法错误，因为其 `break` 语句引用了 `block2`，但它并未嵌套在 `block2` 内。
+一个 `break` 语句必须嵌套在它引用的任何标签内部。以下代码也使用了带 `break` 语句的标签，但是会产生语法错误，因为其 `break` 语句引用了 `block2`，但它并未嵌套在 `block2` 内。
 
 ```js-nolint example-bad
 block1: {
@@ -100,7 +100,7 @@ block2: {
 }
 ```
 
-以下代码示例中，在嵌套在循环或带标签块中的函数内使用 `break` 语句也会生成语法错误，而 `break` 语句旨在跳出这些循环或带标签块。
+以下代码示例中，在嵌套在循环或带标签块中的函数内使用 `break` 语句也会产生语法错误，而 `break` 语句旨在跳出这些循环或带标签块。
 
 ```js-nolint example-bad
 function testBreak(x) {
