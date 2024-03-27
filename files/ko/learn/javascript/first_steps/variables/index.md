@@ -166,7 +166,7 @@ var myName;
 
 > **참고:** 위의 코드는 JavaScript 콘솔에 개별 줄을 입력할 때는 작동하지 않으며, 웹 문서에서 여러 줄의 JavaScript를 실행할 때만 작동합니다.
 
-이 기능은 **호이스팅** 때문에 작동합니다. 이에 대한 자세한 내용은 [var 호이스팅](/ko/docs/Web/JavaScript/Reference/Statements/var#var_호이스팅(hoisting))을 참고하시면 됩니다.
+이 기능은 **호이스팅** 때문에 작동합니다. 이에 대한 자세한 내용은 [var 호이스팅](/ko/docs/Web/JavaScript/Reference/Statements/var#var_호이스팅hoisting)을 참고하시면 됩니다.
 
 호이스팅은 더 이상 `let`으로 작동하지 않습니다. 위의 예제에서 `var`를 `let`으로 변경하면 오류와 함께 실패합니다. 변수를 초기화한 후에 선언하면 코드가 혼란스럽고 이해하기 어려워지므로 이 점이 좋은 점입니다.
 
