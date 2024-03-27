@@ -5,43 +5,43 @@ slug: Web/Security/Types_of_attacks
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
 
-This article describes various types of security attacks and techniques to mitigate them.
+本文介绍了各种类型的安全攻击以及缓解这些攻击的技术。
 
-## Click-jacking
+## 点击劫持
 
-[Clickjacking](/zh-CN/docs/Glossary/Clickjacking) is the practice of tricking a user into clicking on a link, button, etc. that is other than what the user thinks it is. This can be used, for example, to steal login credentials or to get the user's unwitting permission to install a piece of malware. (Click-jacking is sometimes called "user interface redressing", though this is a misuse of the term "redress".)
+[点击劫持](/zh-CN/docs/Glossary/Clickjacking)是欺骗用户点击一个并不是用户认知上的链接、按钮等的行为。这可用于窃取登录凭据或在用户不知情的情况下获取安装恶意软件的权限。点击劫持有时被称为“用户界面纠正”，尽管这是对“纠正”一词的误用。
 
-## Cross-site scripting (XSS)
+## 跨站脚本（XSS）
 
-Cross-site scripting (XSS) is a security exploit which allows an attacker to inject into a website malicious client-side code. This code is executed by the victims and lets the attackers bypass access controls and impersonate users. According to the Open Web Application Security Project, XSS was the [seventh most common Web app vulnerability](https://owasp.org/www-project-top-ten/2017/Top_10) in 2017.
+跨站脚本（XSS）是一种安全漏洞，允许攻击者向网站注入恶意客户端代码。该代码由受害者执行从而让攻击者绕过访问控制并冒充用户。根据开放 Web 应用程序安全项目（Open Web Application Security Project），XSS 是 2017 年[第七大常见 Web 应用程序漏洞](https://owasp.org/www-project-top-ten/2017/Top_10)。
 
-These attacks succeed if the Web app does not employ enough validation or encoding. The user's browser cannot detect the malicious script is untrustworthy, and so gives it access to any cookies, session tokens, or other sensitive site-specific information, or lets the malicious script rewrite the {{glossary("HTML")}} content.
+如果 Web 应用程序没有充足的校验或加密，这些攻击就会成功。用户的浏览器无法检测到恶意脚本是否不可信，因此会授予其访问任何 cookie、会话令牌或其他敏感站点特定信息的权限，或者让恶意脚本重写 {{glossary("HTML")}} 内容。
 
-Cross-site scripting attacks usually occur when 1) data enters a Web app through an untrusted source (most often a Web request) or 2) dynamic content is sent to a Web user without being validated for malicious content.
+跨站脚本攻击通常在以下情况中发生：1) 数据通过不受信任的来源（通常是 Web 请求）进入 Web 应用程序，或者 2) 动态内容未经恶意内容验证就发送给 Web 用户。
 
-The malicious content often includes {{glossary("JavaScript")}}, but sometimes HTML, Flash, or any other code the browser can execute. The variety of attacks based on XSS is almost limitless, but they commonly include transmitting private data like cookies or other session information to the attacker, redirecting the victim to a webpage controlled by the attacker, or performing other malicious operations on the user's machine under the guise of the vulnerable site.
+恶意内容通常包括 {{glossary("JavaScript")}}，但有时也包括 HTML、Flash 或浏览器可以执行的任何其他代码。基于 XSS 的攻击种类几乎是无限的，但它们通常包括向攻击者传输 Cookie 等隐私数据或其他会话信息、将受害者重定向到攻击者控制的网页，或者以易受攻击的站点为幌子在用户的计算机上执行其他恶意操作。
 
-XSS attacks can be put into three categories: stored (also called persistent), reflected (also called non-persistent), or DOM-based.
+XSS 攻击可以分为三类：存储（也称为持久）、反射（也称为非持久）或基于 DOM。
 
-- Stored XSS Attacks
-  - : The injected script is stored permanently on the target servers. The victim then retrieves this malicious script from the server when the browser sends a request for data.
-- Reflected XSS Attacks
-  - : When a user is tricked into clicking a malicious link, submitting a specially crafted form, or browsing to a malicious site, the injected code travels to the vulnerable website. The Web server reflects the injected script back to the user's browser, such as in an error message, search result, or any other response that includes data sent to the server as part of the request. The browser executes the code because it assumes the response is from a "trusted" server which the user has already interacted with.
-- DOM-based XSS Attacks
-  - : The payload is executed as a result of modifying the DOM environment (in the victim's browser) used by the original client-side script. That is, the page itself does not change, but the client side code contained in the page runs in an unexpected manner because of the malicious modifications to the DOM environment.
+- 存储型 XSS 攻击
+  - ：注入的脚本永久存储在目标服务器上。当浏览器发送数据请求时，受害者会从服务器接收到该恶意脚本。
+- 反射型 XSS 攻击
+  - ：当用户被诱骗点击恶意链接、提交特制表单或浏览恶意网站时，注入的代码就会传输到易受攻击的网站。Web 服务器将注入的脚本传回用户的浏览器，例如在错误消息、搜索结果或包含作为请求的一部分发送到服务器的数据的任何其他响应中。浏览器执行恶意代码是因为它假设来自用户已经与之交互的服务器的响应是“可信”的。
+- 基于 DOM 的 XSS 攻击
+  - ：其是指通过修改原始客户端脚本所使用的 DOM 环境（在受害者浏览器中）而执行的。也就是说，页面本身没有改变，但是页面中包含的客户端代码由于对 DOM 环境的恶意修改而以期望之外的方式运行。
 
-## Cross-site request forgery (CSRF)
+## 跨站请求伪造（CSRF）
 
-CSRF (sometimes also called XSRF) is a related class of attack. The attacker causes the user's browser to perform a request to the website's backend without the user's consent or knowledge. An attacker can use an XSS payload to launch a CSRF attack.
+CSRF（有时也称为 XSRF）是一类相关的攻击。攻击者使用户的浏览器在用户不知情的情况下向网站的后端发送请求。攻击者可以使用 XSS 载荷发起 CSRF 攻击。
 
-Wikipedia mentions a good example for CSRF. In this situation, someone includes an image that isn't really an image (for example in an unfiltered chat or forum), instead it really is a request to your bank's server to withdraw money:
+维基百科提到了一个很好的 CSRF 示例。在这种情况下，某人访问了一个实际上并不是图像的图像（例如在未经过滤的聊天或论坛中），而是向银行服务器发出取款请求：
 
 ```html
 <img
   src="https://bank.example.com/withdraw?account=bob&amount=1000000&for=mallory" />
 ```
 
-Now, if you are logged into your bank account and your cookies are still valid (and there is no other validation), you will transfer money as soon as you load the HTML that contains this image. For endpoints that require a POST request, it's possible to programmatically trigger a \<form> submit (perhaps in an invisible \<iframe>) when the page is loaded:
+现在如果你登录银行帐户并且你的 cookie 仍然有效（并且没有其他验证），那么在加载包含此图像的 HTML 后你将立即转账。对于需要 POST 请求的端点，可以在加载页面时以编程方式触发 \<form> 提交（可能在不可见的 \<iframe> 中）：
 
 ```html
 <form action="https://bank.example.com/withdraw" method="POST">
@@ -56,41 +56,40 @@ Now, if you are logged into your bank account and your cookies are still valid (
 </script>
 ```
 
-There are a few techniques that should be used to prevent this from happening:
+下面有一些技术可以用来防止这种情况发生：
 
-- GET endpoints should be idempotent—actions that enact a change and do not retrieve data should require sending a POST (or other HTTP method) request. POST endpoints should not interchangeably accept GET requests with parameters in the query string.
-- A session-unique CSRF token should be provided by the server to the browser. This token can then be included whenever a form is posted by the browser (in a hidden input field in the `<form>` element). For all non-GET requests that have the potential to perform an action, the server compares the sent token against its stored value for the session. If there is a mismatch, the request is aborted.
-- This method of protection relies on an attacker being unable to predict the user's assigned CSRF token. The token should be regenerated on sign-in.
-- Cookies that are used for sensitive actions (such as session cookies) should have a short lifetime with the SameSite attribute set to Strict or Lax. (See the [SameSite](/zh-CN/docs/Web/HTTP/Cookies#samesite_attribute) cookie attribute). In supporting browsers, this will have the effect of ensuring that the session cookie is not sent along with cross-site requests and so the request is effectively unauthenticated to the application server.
-- Both CSRF tokens and SameSite cookies should be deployed. This ensures all browsers are protected and provides protection where SameSite cookies cannot help (such as attacks originating from a separate subdomain).
+- GET 端点应该是幂等的——执行更改但不检索数据的操作应该要发送 POST（或其他 HTTP 方法）请求。POST 端点不应接受带有查询字符串参数的 GET 请求。
+- 服务器应向浏览器提供会话唯一的 CSRF 令牌。然后，只要浏览器提交表单（在 `<form>` 元素的隐藏输入字段中），就可以包含此令牌。对于所有可能执行操作的非 GET 请求，服务器会将接收到的令牌与其存储的会话值进行比较。如果令牌不匹配，请求将被中止。
+- 这种保护方法依赖于攻击者无法预测用户分配的 CSRF 令牌。应在登录时重新生成令牌。
+- 用于敏感操作的 Cookie（例如会话 Cookie）应具有较短的生命周期，并且 SameSite 属性设置为 Strict 或 Lax。 （参见 [SameSite](/zh-CN/docs/Web/HTTP/Cookies#samesite_attribute) cookie 属性）。在支持的浏览器中，这将确保会话 cookie 不会随跨站请求一起发送，因此对应用程序服务器来说这个请求是未经验证的。
+- 应一起部署 CSRF 令牌和 SameSite cookie。这可确保所有浏览器都受到保护，并在 SameSite cookie 无法提供帮助的情况下提供保护（例如来自单独子域的攻击）。
 
-For more prevention tips, see the OWASP CSRF prevention cheat sheet.
+要了解更多防御技巧，请参阅 OWASP CSRF 防御备忘单。
 
-## Man-in-the-middle (MitM)
+## 中间人（MitM）
 
-A third party intercepts traffic between a web server and a client (browser), and impersonates the web server in order to capture data (such as login credentials or credit card information). The traffic is passed through, possibly with alterations. Open Wi-Fi networks are typical means of executing this attack.
+第三方拦截了 Web 服务器和客户端（浏览器）之间的流量，并冒充 Web 服务器以捕获数据（例如登录凭据或信用卡信息）。流量被传递，可能会进行修改。公共 Wi-Fi 网络是执行此类攻击的典型手段。
 
-## Session hijacking
+## 会话劫持
 
-Session hijacking consists of gaining access to and misusing a user's authenticated session. This may happen by stealing a cookie for an existing session, or by fooling the user (or their browser) into setting a cookie with a predetermined session ID.
+会话劫持是指获取并滥用用户的已验证会话。这可能是通过窃取现有会话的 cookie，或者通过欺骗用户（或其浏览器）设置可预测的会话 ID 的 cookie 来实现的。
 
-Exfiltration avenues can be limited by deploying a strict Content-Security-Policy.
+通过部署严格的内容安全策略（Content-Security-Policy），可以限制数据泄露途径。
 
-### Session fixation
+### 会话固定
 
-A third party is able to determine a user's session identifier (i.e., by reading it or setting it), and therefore interact with the server as that user. Stealing cookies is one way to do this.
+第三方能够确定用户的会话标识符（例如，通过读取或设置它），因此可以作为用户与服务器进行交互。窃取 cookie 是实现这一目的的一种方法。
 
-Recall that a subdomain such as application.example.com can set a cookie to be sent with requests to example.com or other subdomains by setting the `Domain` attribute:
+请注意，子域名（例如 application.example.com）可以通过设置 Domain 属性来设置一个 cookie，以便在发送请求到 example.com 或其他子域名时将其发送出去：
 
 ```http
 Set-Cookie: CSRF=e8b667; Secure; Domain=example.com
 ```
 
-If a vulnerable application is available on a subdomain, this mechanism can be abused in a session fixation attack. When the user visits a page on the parent domain (or another subdomain), the application may trust the existing value sent in the user's cookie. This could allow an attacker to bypass CSRF protection or hijack a session after the user logs in.
-Alternatively, if the parent domain does not use [HTTP Strict-Transport-Security](/zh-CN/docs/Glossary/HSTS) with `includeSubdomains` set, a user subject to an active MitM (perhaps connected to an open Wi-Fi network) could be served a response with a Set-Cookie header from a non-existent subdomain. The end result would be much the same, with the browser storing the illegitimate cookie and sending it to all other pages under example.com.
+如果子域上存在易受攻击的应用程序，那么此机制就会被会话固定攻击滥用。当用户访问父域（或另一个子域）上的页面时，应用程序可能会信任用户 cookie 中发送的现有值。这可能允许攻击者绕过 CSRF 保护或在用户登录后劫持会话。或者，如果父域不使用带有 `includeSubdomains` 设置的 [HTTP Strict-Transport-Security](/zh-CN/docs/Glossary/HSTS)，则用户将受到活动 MitM 的约束（可能连接到公共 Wi-Fi 网络）可能会收到来自不存在的子域的带有 Set-Cookie 标头的响应。最终结果大致相同，浏览器存储了非法 cookie 并将其发送到 example.com 下的所有其他页面。
 
-Session fixation should primarily be mitigated by regenerating session cookie values when the user authenticates (even if a cookie already exists) and by tying any CSRF token to the user.
+通过在用户进行身份验证时重新生成会话 cookie 值（即使 cookie 已存在）以及用 CSRF 令牌与用户绑定是防御会话固定的主要方法。
 
-### Session side-jacking
+### 会话侧劫持
 
-### Browser hijacking malware
+### 浏览器恶意劫持软件
