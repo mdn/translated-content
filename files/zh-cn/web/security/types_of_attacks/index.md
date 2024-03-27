@@ -5,7 +5,7 @@ slug: Web/Security/Types_of_attacks
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
 
-本文介绍了各种类型的安全攻击以及缓解这些攻击的技术。
+本文介绍了各种类型的安全攻击以及防御这些攻击的技术。
 
 ## 点击劫持
 
