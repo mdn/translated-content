@@ -48,4 +48,4 @@ Early-Data: 1
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Early-Data")}}
+{{Compat}}

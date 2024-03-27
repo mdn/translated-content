@@ -406,9 +406,9 @@ slug: Web/Events
       <td>媒体</td>
       <td>
         <p>
-          与媒体使用（包括
-          <a href="/zh-CN/docs/Web/API/Media_Streams_API#events"
-            >Media Capture and Streams API</a
+          与媒体使用（包括<a
+            href="/zh-CN/docs/Web/API/Media_Capture_and_Streams_API#事件"
+            >媒体捕捉与媒体流 API</a
           >、<a href="/zh-CN/docs/Web/API/Web_Audio_API#events">Web Audio API</a>、<a href="/zh-CN/docs/Web/API/Picture-in-Picture_API#事件"
             >画中画 API</a
           >，等等）相关的事件。
@@ -941,10 +941,10 @@ slug: Web/Events
   - [animationend 事件](/zh-CN/docs/Web/API/HTMLElement/animationend_event)
   - [animationiteration 事件](/zh-CN/docs/Web/API/HTMLElement/animationiteration_event)
   - [animationstart 事件](/zh-CN/docs/Web/API/HTMLElement/animationstart_event)
-  - [beforeinput 事件](/zh-CN/docs/Web/API/HTMLElement/beforeinput_event)
+  - [beforeinput 事件](/zh-CN/docs/Web/API/Element/beforeinput_event)
   - [change 事件](/zh-CN/docs/Web/API/HTMLElement/change_event)
   - [gotpointercapture 事件](/zh-CN/docs/Web/API/HTMLElement/gotpointercapture_event)
-  - [input 事件](/zh-CN/docs/Web/API/HTMLElement/input_event)
+  - [input 事件](/zh-CN/docs/Web/API/Element/input_event)
   - [lostpointercapture 事件](/zh-CN/docs/Web/API/HTMLElement/lostpointercapture_event)
   - [pointercancel 事件](/zh-CN/docs/Web/API/HTMLElement/pointercancel_event)
   - [pointerdown 事件](/zh-CN/docs/Web/API/HTMLElement/pointerdown_event)

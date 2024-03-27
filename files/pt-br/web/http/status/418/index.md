@@ -21,7 +21,7 @@ O código de erro HTTP para o cliente **`418 I'm a teapot`** indica que o servid
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.status.418")}}
+{{Compat}}
 
 ## Veja também
 

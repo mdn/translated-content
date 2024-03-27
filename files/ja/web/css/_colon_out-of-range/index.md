@@ -15,6 +15,8 @@ input:out-of-range {
 }
 ```
 
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-out-of-range.html", "tabbed-shorter")}}
+
 この擬似クラスは。入力欄の現在の値が許可された範囲外にあることをユーザーに視覚的に示すのに便利です。
 
 > **メモ:** この擬似クラスは範囲制限を持つ (または設定できる) 要素にのみ適用されます。そのような制限がない場合は、要素は "in-range" にも "out-of-range" にもなりません。
@@ -31,10 +33,17 @@ input:out-of-range {
 
 ```html
 <form action="" id="form1">
- <p>1 から 10の間の値が有効です。</p>
+  <p>1 から 10の間の値が有効です。</p>
   <ul>
     <li>
-      <input id="value1" name="value1" type="number" placeholder="1 to 10" min="1" max="10" value="12">
+      <input
+        id="value1"
+        name="value1"
+        type="number"
+        placeholder="1 to 10"
+        min="1"
+        max="10"
+        value="12" />
       <label for="value1">あなたの値は</label>
     </li>
   </ul>
@@ -63,11 +72,11 @@ input:out-of-range {
 }
 
 input:in-range + label::after {
-  content: '範囲内です。';
+  content: "範囲内です。";
 }
 
 input:out-of-range + label::after {
-  content: '範囲外です！';
+  content: "範囲外です！";
 }
 ```
 

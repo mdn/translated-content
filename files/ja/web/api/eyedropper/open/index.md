@@ -1,5 +1,6 @@
 ---
-title: EyeDropper.open()
+title: "EyeDropper: open() メソッド"
+short-title: open()
 slug: Web/API/EyeDropper/open
 l10n:
   sourceCommit: 4e233c16c6f0d347972c5c762f5b836318a46124
@@ -7,7 +8,7 @@ l10n:
 
 {{APIRef("EyeDropper API")}}{{SeeCompatTable}}
 
-**`EyeDropper.open()`** メソッドは、スポイトモードを開始し、ユーザーが色を選択するかスポイトモードをキャンセルすると解決する {{jsxref("Promise")}} を返します。
+**`EyeDropper.open()`** メソッドは、スポイトモードを開始し、ユーザーが色を選択してスポイトモードを終了したときに履行されるプロミスを返します。
 
 ## 構文
 

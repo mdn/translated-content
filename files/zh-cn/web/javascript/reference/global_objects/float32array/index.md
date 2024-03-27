@@ -81,8 +81,8 @@ new Float32Array(buffer [, byteOffset [, length]]);
   - : 返回数组中等于给定值的元素的最后（最大）位置，没有找到则返回 -1。参见{{jsxref("Array.prototype.lastIndexOf()")}}。
 - {{jsxref("TypedArray.map", "Float32Array.prototype.map()")}}
   - : 创建一个新的数组，数据由原数组每个元素依次传入给定函数后返回的值组成。参见{{jsxref("Array.prototype.map()")}}。
-- {{jsxref("TypedArray.move", "Float32Array.prototype.move()")}} {{non-standard_inline}} {{unimplemented_inline}}
-  - : {{jsxref("TypedArray.copyWithin", "Float32Array.prototype.copyWithin()")}}以前的一个非标准版本。
+- {{jsxref("TypedArray.move", "Float32Array.prototype.move()")}} {{non-standard_inline}}
+  - : {{jsxref("TypedArray.copyWithin", "Float32Array.prototype.copyWithin()")}} 以前的一个非标准版本。
 - {{jsxref("TypedArray.reduce", "Float32Array.prototype.reduce()")}}
   - : 传入一个函数作为累加器，从左到右遍历，最终得到一个值。参见{{jsxref("Array.prototype.reduce()")}}。
 - {{jsxref("TypedArray.reduceRight", "Float32Array.prototype.reduceRight()")}}

@@ -3,7 +3,7 @@ title: runtime.onUpdateAvailable
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onUpdateAvailable
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Déclenché quand une mise à jour de l'extension est disponible. Cet événement permet à une extension de retarder une mise à jour : par exemple, car elle est au milieu d'une opération qui ne doit pas être interrompue.
 

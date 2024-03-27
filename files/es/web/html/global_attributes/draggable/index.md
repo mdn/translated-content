@@ -24,6 +24,6 @@ Por default , unicamente el texto , las imagenes y los vínculos pueden ser arra
 
 {{Compat}}
 
-**Ver también**
+## Ver también
 
 - [atributos globales](/es/docs/Web/HTML/Atributos_Globales)

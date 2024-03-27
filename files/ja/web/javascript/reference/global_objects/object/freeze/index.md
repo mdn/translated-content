@@ -214,7 +214,7 @@ obj2.internal.a; // null
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Object.freeze")}}
+{{Compat}}
 
 ## 関連情報
 

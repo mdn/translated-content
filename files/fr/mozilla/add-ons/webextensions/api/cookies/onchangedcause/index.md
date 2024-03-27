@@ -3,7 +3,7 @@ title: cookies.OnChangedCause
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/OnChangedCause
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Le type `OnChangedCause` de l'API {{WebExtAPIRef("cookies")}} représente la raison pour laquelle un cookie a été modifié.
 

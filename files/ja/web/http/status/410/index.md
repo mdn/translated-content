@@ -27,7 +27,7 @@ HyperText Transfer Protocol (HTTP) の **`410 Gone`** クライエントエラ�
 
 以下に示す情報は、 MDN の GitHub から取得したものです。 (<https://github.com/mdn/browser-compat-data>).
 
-{{Compat("http.status.410")}}
+{{Compat}}
 
 ## 関連情報
 

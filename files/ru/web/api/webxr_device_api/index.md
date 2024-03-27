@@ -160,9 +160,9 @@ WebGL API расширяется спецификацией WebXR для тог�
 | [**WebXR Layers API**](https://immersive-web.github.io/layers/) ([Source](https://github.com/immersive-web/layers), [Issues](https://github.com/immersive-web/layers/issues), [Explainer](https://github.com/immersive-web/layers/blob/master/explainer.md))                                                                                      |
 | [**WebXR Lighting Estimation API**](https://immersive-web.github.io/lighting-estimation/) ([Source](https://github.com/immersive-web/lighting-estimation), [Issues](https://github.com/immersive-web/lighting-estimation/issues), [Explainer](https://github.com/immersive-web/lighting-estimation/blob/master/lighting-estimation-explainer.md)) |
 
-## Совместимость
+## Совместимость с браузерами
 
-{{Compat("api.Navigator.xr")}}
+{{Compat}}
 
 ## See also
 

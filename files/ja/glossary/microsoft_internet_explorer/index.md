@@ -3,6 +3,8 @@ title: Microsoft Internet Explorer
 slug: Glossary/Microsoft_Internet_Explorer
 ---
 
+{{GlossarySidebar}}
+
 Internet Explorer (IE) は、レガシーエンタープライズ向けに Microsoft が管理している無料のグラフィカル{{glossary("browser","ブラウザー")}}です。{{glossary("Microsoft Edge")}} が現在、デフォルトの Windows ブラウザーです。
 
 Microsoft は、1995 年に「Microsoft Plus!」と呼ばれるパッケージの一部として IE を Windows に初めて同梱しました。2002 年頃までに、Internet Explorer は世界で最も使用されていたブラウザーになりましたが、その後 Chrome、Firefox、Edge、Safari に押されています。

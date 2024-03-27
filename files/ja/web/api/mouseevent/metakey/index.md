@@ -1,8 +1,9 @@
 ---
-title: MouseEvent.metaKey
+title: "MouseEvent: metaKey プロパティ"
+short-title: metaKey
 slug: Web/API/MouseEvent/metaKey
 l10n:
-  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
 {{APIRef("UI Events")}}
@@ -26,15 +27,17 @@ l10n:
 ### HTML
 
 ```html
-<p><code>metaKey</code> プロパティを試験するためにどこかをクリックしてください。</p>
+<p>
+  <code>metaKey</code> プロパティを試験するためにどこかをクリックしてください。
+</p>
 <p id="log"></p>
 ```
 
 ### JavaScript
 
 ```js
-let log = document.querySelector('#log');
-document.addEventListener('click', logKey);
+let log = document.querySelector("#log");
+document.addEventListener("click", logKey);
 
 function logKey(e) {
   log.textContent = `Meta キーの押下状態: ${e.metaKey}`;

@@ -14,7 +14,7 @@ slug: Web/API/Navigator/getUserMedia
 ## 構文
 
 ```js
-getUserMedia(constraints, successCallback, errorCallback)
+getUserMedia(constraints, successCallback, errorCallback);
 ```
 
 ### 引数
@@ -49,25 +49,27 @@ getUserMedia(constraints, successCallback, errorCallback)
 これは、様々のブラウザーの接頭辞に対処したコードを含む、 `getUserMedia()` の使用例です。ただし、これは非推奨の使用方法なので注意してください。現在の API の使用例は、{{domxref("MediaDevices.getUserMedia()")}} 下の[例](/ja/docs/Web/API/MediaDevices/getUserMedia#フレームレート)の節を参照してください。
 
 ```js
-navigator.getUserMedia = navigator.getUserMedia ||
-                         navigator.webkitGetUserMedia ||
-                         navigator.mozGetUserMedia;
+navigator.getUserMedia =
+  navigator.getUserMedia ||
+  navigator.webkitGetUserMedia ||
+  navigator.mozGetUserMedia;
 
 if (navigator.getUserMedia) {
-   navigator.getUserMedia({ audio: true, video: { width: 1280, height: 720 } },
-      function(stream) {
-         const video = document.querySelector('video');
-         video.srcObject = stream;
-         video.onloadedmetadata = function(e) {
-           video.play();
-         };
-      },
-      function(err) {
-         console.log("The following error occurred: " + err.name);
-      }
-   );
+  navigator.getUserMedia(
+    { audio: true, video: { width: 1280, height: 720 } },
+    function (stream) {
+      const video = document.querySelector("video");
+      video.srcObject = stream;
+      video.onloadedmetadata = function (e) {
+        video.play();
+      };
+    },
+    function (err) {
+      console.log("The following error occurred: " + err.name);
+    },
+  );
 } else {
-   console.log("getUserMedia not supported");
+  console.log("getUserMedia not supported");
 }
 ```
 

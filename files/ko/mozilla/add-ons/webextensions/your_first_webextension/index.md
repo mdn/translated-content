@@ -10,7 +10,7 @@ slug: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 이 예제의 소스코드는 GitHub에서 받을 수 있습니다.
 <https://github.com/mdn/webextensions-examples/tree/master/borderify>
 
-우선, 파이어폭스의 버전이 45 이상이여야 합니다.
+우선, Firefox의 버전이 45 이상이여야 합니다.
 
 ## 확장기능 만들기
 

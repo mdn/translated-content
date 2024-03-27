@@ -3,7 +3,7 @@ title: Elemento de reemplazo
 slug: Web/CSS/Replaced_element
 ---
 
-{{CSSRef()}}
+{{CSSRef}}
 
 ## Summary
 

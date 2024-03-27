@@ -34,7 +34,7 @@ slug: Web/JavaScript/Reference/Operators/function
 
 ### Function expression 끌어올리기
 
-자바스크립트에서 함수 표현식은 {{jsxref("Statements/function", "함수 선언", "#Function_declaration_hoisting")}}과는 달리 끌어올려지지 않습니다. 함수 표현식을 정의하기 전에는 사용할 수 없습니다.
+JavaScript에서 함수 표현식은 {{jsxref("Statements/function", "함수 선언", "#Function_declaration_hoisting")}}과는 달리 끌어올려지지 않습니다. 함수 표현식을 정의하기 전에는 사용할 수 없습니다.
 
 ```js
 console.log(notHoisted); // undefined

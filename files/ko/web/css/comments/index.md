@@ -43,7 +43,7 @@ span {
 
 ## 명세
 
-{{Specifications}}
+- [CSS 2.1 구문과 기본 데이터 형식 #comments](https://www.w3.org/TR/CSS21/syndata.html#comments)
 
 ## 같이 보기
 

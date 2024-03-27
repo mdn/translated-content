@@ -66,7 +66,7 @@ if (done is true) {
 
 ```js example-good
 if (done === true) {
- console.log("we are done!");
+  console.log("we are done!");
 }
 ```
 

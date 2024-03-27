@@ -15,9 +15,7 @@ slug: Glossary/Character_encoding
 
 这就确保你在 HTML 文档中可以使用几乎任何一种人类语言中的字符，并且会稳定显示。
 
-## 了解更多
-
-### 常识
+## 参见
 
 - [Character encoding on W3C](https://www.w3.org/International/articles/definitions-characters/)
 - [Character encoding](https://zh.wikipedia.org/wiki/Character_encoding) on Wikipedia

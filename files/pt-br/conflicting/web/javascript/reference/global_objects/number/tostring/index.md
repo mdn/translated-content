@@ -40,7 +40,7 @@ Não é parte de nenhuma especificação padrão. Implementado no JavaScript 1.3
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Number.toSource")}}
+{{Compat}}
 
 ## Veja também
 

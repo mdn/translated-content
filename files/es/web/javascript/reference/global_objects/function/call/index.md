@@ -3,7 +3,7 @@ title: Function.prototype.call()
 slug: Web/JavaScript/Reference/Global_Objects/Function/call
 ---
 
-{{JSRef("Objetos_globales", "Function")}}
+{{JSRef}}
 
 ## Resumen
 

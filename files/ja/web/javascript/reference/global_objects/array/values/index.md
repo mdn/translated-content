@@ -2,24 +2,28 @@
 title: Array.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Array/values
 l10n:
-  sourceCommit: dadaa03da92fc616814454b761a6c783100f7e3b
+  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
 {{JSRef}}
 
-**`values()`** メソッドは、配列の各インデックスの値を含む新しい「配列[イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#イテレータープロトコル)」オブジェクトを返します。
+**`values()`** は {{jsxref("Array")}} インスタンスのメソッドで、配列の各インデックスの値を含む新しい「[配列イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#イテレータープロトコル)」オブジェクトを返します。
 
 {{EmbedInteractiveExample("pages/js/array-values.html")}}
 
 ## 構文
 
-```js
+```js-nolint
 values()
 ```
 
+### 引数
+
+なし。
+
 ### 返値
 
-新しい反復可能なイテレーターオブジェクトです。
+新しい[反復可能なイテレーターオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)です。
 
 ## 解説
 
@@ -28,6 +32,10 @@ values()
 ```js
 Array.prototype.values === Array.prototype[Symbol.iterator]; // true
 ```
+
+[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays)に使用された場合、 `values()` メソッドは空のスロットを `undefined` の値である可能用に反復処理します。
+
+`values()` メソッドは[汎用的](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#汎用的な配列メソッド)です。このメソッドは `this` 値に `length` プロパティと整数キーのプロパティがあることだけを期待します。
 
 ## 例
 
@@ -64,7 +72,7 @@ console.log(iterator.next().value); // undefined
 
 > **警告:** 配列イテレーターオブジェクトは、一回のみ使用可能なオブジェクトになります。再利用しないでください。
 
-`values()` で返される反復可能オブジェクトは再利用できません。 `next().done = true` または `currentIndex > length` になった場合、 [`for...of` ループは終了](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#interactions_between_the_language_and_iteration_protocols)し、それ以降の反復処理は効果がありません。
+`values()` で返される反復可能オブジェクトは再利用できません。 `next().done = true` または `currentIndex > length` になった場合、 [`for...of` ループは終了](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#言語と反復処理プロトコルの対話)し、それ以降の反復処理は効果がありません。
 
 ```js
 const arr = ["a", "b", "c", "d", "e"];
@@ -111,6 +119,38 @@ arr[1] = "n";
 console.log(iterator.next().value); // "n"
 ```
 
+### 疎配列の反復処理
+
+`values()` は空のスロットを `undefined` であるかのように処理します。
+
+```js
+for (const element of [, "a"].values()) {
+  console.log(element);
+}
+// undefined
+// 'a'
+```
+
+### 配列以外のオブジェクトに対する values() の呼び出し
+
+`values()` メソッドは `this` の `length` プロパティを読み込み、そのキーが `length` より小さい非負の整数である各プロパティにアクセスします。
+
+```js
+const arrayLike = {
+  length: 3,
+  0: "a",
+  1: "b",
+  2: "c",
+  3: "d", // length が 3 であるため values() からは無視される
+};
+for (const entry of Array.prototype.values.call(arrayLike)) {
+  console.log(entry);
+}
+// a
+// b
+// c
+```
+
 ## 仕様書
 
 {{Specifications}}
@@ -122,9 +162,10 @@ console.log(iterator.next().value); // "n"
 ## 関連情報
 
 - [`Array.prototype.values` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
-- {{jsxref("Array.prototype.keys()")}}
+- [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.entries()")}}
-- {{jsxref("Array.prototype.forEach()")}}
-- {{jsxref("Array.prototype.every()")}}
-- {{jsxref("Array.prototype.some()")}}
-- [ポリフィル](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)
+- {{jsxref("Array.prototype.keys()")}}
+- [`Array.prototype[@@iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)
+- {{jsxref("TypedArray.prototype.values()")}}
+- [反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)

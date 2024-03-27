@@ -136,7 +136,7 @@ function replaceString(oldS, newS, fullS) {
         fullS.substring(i + oldS.length, fullS.length);
     }
   }
-  return fullS
+  return fullS;
 }
 
 replaceString("World", "Web", "Brave New World");

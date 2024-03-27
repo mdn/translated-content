@@ -26,7 +26,7 @@ l10n:
 ## 例
 
 ```js
-const video = document.createElement('video');
+const video = document.createElement("video");
 console.log(video.currentTime);
 ```
 

@@ -62,7 +62,7 @@ assert(Object.isFrozen(obj) === true);
 obj.foo = "quux"; // No hace nada de manera silenciosa
 obj.quaxxor = "the friendly duck"; // No agrega una nueva propiedad, de manera silenciosa
 
-// ...y en modo estrico tal intento arrojará TypeErrors
+// ...y en modo estricto tal intento arrojará TypeErrors
 function fail() {
   "use strict";
   obj.foo = "sparky"; // arroja un TypeError

@@ -181,8 +181,6 @@ Think of an extension as compressing a file before e-mailing it to someone. What
 
 > **참고:** Extensions are explained in sections 5.8, 9, 11.3.2, and 11.4 of the spec.
 
-_TODO_
-
 ### 서브프로토콜
 
 Think of a subprotocol as a custom [XML schema](https://en.wikipedia.org/wiki/XML_schema) or [doctype declaration](https://en.wikipedia.org/wiki/Document_Type_Definition). You're still using XML and its syntax, but you're additionally restricted by a structure you agreed on. WebSocket subprotocols are just like that. They do not introduce anything fancy, they just establish structure. Like a doctype or schema, both parties must agree on the subprotocol; unlike a doctype or schema, the subprotocol is implemented on the server and cannot be externally refered to by the client.

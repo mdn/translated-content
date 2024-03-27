@@ -39,7 +39,7 @@ Location: http://www.example.org/cars/id/123456
 | --------------------------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "307 Temporary Redirect" , "6.4.7")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-## Совместимость с браузером
+## Совместимость с браузерами
 
 {{Compat}}
 

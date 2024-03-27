@@ -3,7 +3,7 @@ title: HTMLAnchorElement.referrer
 slug: Web/API/HTMLAnchorElement/referrerPolicy
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef}}
 
 **`HTMLAnchorElement.referrer`** 属性对应于 HTML 中 {{HTMLElement("a")}} 标签的 [`referrer`](/zh-CN/docs/Web/HTML/Element/a#referrer) 属性，它可以控制用户在点击这个链接时所发出的 HTTP 请求的 Referer 请求头的值。
 
@@ -41,6 +41,6 @@ div.appendChild(elt); // 点击该链接接时不会发送 Referer 请求头
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{domxref("HTMLImageElement.referrer")}}、{{domxref("HTMLAreaElement.referrer")}}、{{domxref("HTMLIFrameElement.referrer")}}
+- {{domxref("HTMLImageElement.referrerPolicy")}}、{{domxref("HTMLAreaElement.referrerPolicy")}} 和 {{domxref("HTMLIFrameElement.referrerPolicy")}}

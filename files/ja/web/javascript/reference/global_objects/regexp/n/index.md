@@ -1,41 +1,35 @@
 ---
-title: RegExp.$1-$9
+title: RegExp.$1, …, RegExp.$9
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/n
+l10n:
+  sourceCommit: f3df52530f974e26dd3b14f9e8d42061826dea20
 ---
 
-{{JSRef}}
+{{JSRef}} {{deprecated_header}}
 
-旧来の **$1, $2, $3, $4, $5, $6, $7, $8, $9** プロパティは、正規表現の静的かつ読み取り専用プロパティで、括弧で括られた部分文字列に一致したものを含みます。
+> **メモ:** グローバルに最後の一致状態を公開する `RegExp` の静的プロパティは、すべて非推奨です。詳しくは[非推奨の RegExp 機能](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp)を参照してください。
+
+**`RegExp.$1, …, RegExp.$9`** は静的アクセサープロパティで、括弧で括られた部分文字列に一致したものを返します。
 
 ## 解説
 
-$1, ..., $9 プロパティは静的です。個々の正規表現オブジェクトのプロパティではありません。そのため、常に `RegExp.$1`, ..., `RegExp.$9`として使用してください。
+`$1`–`$9` は {{jsxref("RegExp")}} の静的プロパティであり、常に `RegExp.$1`, `RegExp.$2`, のように扱います。作成した `RegExp` オブジェクトのプロパティとしては使用できません。
 
-これらのプロパティの値は読み取り専用で、一致に成功するたびに変更されます。
+`$1, …, $9` の値は `RegExp` の（ただし `RegExp` のサブクラスではない）インスタンスが一致に成功するたびに更新されます。一致したものがなかったか、最後に一致したものに対応するキャプチャグループがなかった場合、それぞれのプロパティは空文字列になります。それぞれのプロパティの設定アクセサーは `undefined` ですので、直接プロパティを変更することはできません。
 
-括弧で括られた部分文字列の数に制限はありませんが、 `RegExp` オブジェクトは最初の 9 つの部分文字列しか保持できません。返された配列の添字を使用すると、すべての括弧付き部分文字列にアクセスすることができます。
+括弧で括られた部分文字列の数に制限はありませんが、 `RegExp` オブジェクトは最初の 9 つの部分文字列しか保持できません。返された配列のインデックスを使用すると、すべての括弧付き部分文字列にアクセスすることができます。
 
-これらのプロパティは、 {{jsxref("String.replace")}} メソッドの置換テキストで使用することができます。この方法で使用する場合は、これらのプロパティの前に RegExp を付けないでください。以下の例は、これを示しています。正規表現に括弧が含まれていない場合、スクリプトは `$n` を文字通り解釈します (ここで `n` は正の整数です)。
+`$1, …, $9` は {{jsxref("String.prototype.replace()")}} メソッドの置換テキストでも使用することができますが、古い `RegExp.$n` には関係しません。
 
 ## 例
 
-### $n を String.replace で使用
+### $n と RegExp.prototype.test() の使用
 
-次のスクリプトは、 {{jsxref("String")}} インスタンスの {{jsxref("String.prototype.replace()", "replace()")}} メソッドを使用して、名前を _first last_ の形式で一致させ、 _last, first_ の形式で出力します。置換テキストでは、スクリプトは `$1` と `$2` を使用して、正規表現パターンで対応する一致する括弧の結果を示しています。
-
-```js
-var re = /(\w+)\s(\w+)/;
-var str = 'John Smith';
-str.replace(re, '$2, $1'); // "Smith, John"
-RegExp.$1; // "John"
-RegExp.$2; // "Smith"
-```
-
-次のスクリプトは、 {{jsxref("RegExp")}} インスタンスの {{jsxref("RegExp.prototype.test()", "test()")}} メソッドを使用して、一般的な文字列で数値を取得しています。
+次のスクリプトは、{{jsxref("RegExp")}} インスタンスの {{jsxref("RegExp.prototype.test()", "test()")}} メソッドを使用して、一般的な文字列で数値を取得しています。
 
 ```js
-var str = 'Test 24';
-var number = /(\d+)/.test(str) ? RegExp.$1 : '0';
+const str = "Test 24";
+const number = /(\d+)/.test(str) ? RegExp.$1 : "0";
 number; // "24"
 ```
 
@@ -47,7 +41,7 @@ number; // "24"
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.RegExp.n")}}
+{{Compat}}
 
 ## 関連情報
 

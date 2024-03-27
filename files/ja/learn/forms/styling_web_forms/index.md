@@ -267,7 +267,7 @@ form {
 }
 ```
 
-注意として、フォームのレイアウトに [CSS グリッド](/ja/docs/Web/CSS/CSS_Grid_Layout)と[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout) を使っています。これで、タイトルやフォーム要素といった各要素を配置できます。
+注意として、フォームのレイアウトに [CSS グリッド](/ja/docs/Web/CSS/CSS_grid_layout)と[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout) を使っています。これで、タイトルやフォーム要素といった各要素を配置できます。
 
 ```css
 h1 {

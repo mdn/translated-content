@@ -51,7 +51,7 @@ Firefox doesn't currently enforce this rule (it did for a while during the devel
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

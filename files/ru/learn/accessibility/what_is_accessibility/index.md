@@ -38,7 +38,7 @@ slug: Learn/Accessibility/What_is_accessibility
 
 - Некоторые платные коммерческие продукты, такие как [JAWS](http://www.freedomscientific.com/Products/Blindness/JAWS) (Windows) и [Window Eyes](http://www.gwmicro.com/window-eyes/) (Windows).
 - Некоторые бесплатные продукты, такие как [NVDA](http://www.nvaccess.org/) (для Windows), [ChromeVox](http://www.chromevox.com/) (браузер Chrome, Windows и Mac ОС Х) и [Orca](https://wiki.gnome.org/Projects/Orca) (Linux).
-- Некоторые из них встроены в операционную систему, например [VoiceOver](http://www.apple.com/accessibility/osx/voiceover/) (Mac OS X и iOS), [Экранный диктор](https://support.microsoft.com/en-us/help/22798/windows-10-narrator-get-started)([Narrator](https://support.microsoft.com/en-us/help/22798/windows-10-narrator-get-started)) (Microsoft Windows), [ChromeVox](http://www.chromevox.com/) (в Chrome OS) и [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android).
+- Некоторые из них встроены в операционную систему, например [VoiceOver](http://www.apple.com/accessibility/osx/voiceover/) (Mac OS X и iOS), [Экранный диктор](https://support.microsoft.com/en-us/help/22798/windows-10-narrator-get-started)([Narrator](https://support.microsoft.com/en-us/help/22798/windows-10-narrator-get-started)) (Microsoft Windows), [ChromeVox](http://www.chromevox.com/) (в ChromeOS) и [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android).
 
 Хорошая идея ознакомиться с экранными дикторами; вы можете настроить экранный считыватель и поиграть с ним, чтобы получить представление о том, как это работает. Более подробную информацию об их использовании см. в [руководстве по кросс-браузерному тестированию](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders). Видео ниже предоставляет краткий пример взаимодействия с экранными читателями.
 
@@ -148,13 +148,3 @@ slug: Learn/Accessibility/What_is_accessibility
 Эта статья должна была дать вам полезный обзор специальных возможностей, показать, почему это так важно, и посмотреть, как вы можете вписать его в свой рабочий процесс. Теперь у вас также должна быть жажда узнать о деталях реализации, которые помогут сделать сайты доступными, и мы начнём с этого в следующем разделе, рассматривая, почему HTML является хорошей основой для доступности.
 
 {{NextMenu("Learn/Accessibility/HTML", "Learn/Accessibility")}}
-
-## В этом модуле
-
-- [Что такое доступность?](/ru/docs/Learn/Доступность/What_is_accessibility)
-- [HTML: Хорошая основа для доступности](/ru/docs/Learn/Accessibility/HTML)
-- [CSS и JavaScript доступность - лучшие практики](/ru/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [Основы WAI-ARIA](/ru/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [Доступность мультимедиа](/ru/docs/Learn/Accessibility/Multimedia)
-- [Мобильная доступность](/ru/docs/Learn/Accessibility/Mobile)
-- [Устранение проблем доступности](/ru/docs/Learn/Accessibility/Accessibility_troubleshooting)

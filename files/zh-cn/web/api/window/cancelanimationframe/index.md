@@ -3,44 +3,52 @@ title: window.cancelAnimationFrame
 slug: Web/API/Window/cancelAnimationFrame
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef}}
 
-## 概述
-
-取消一个先前通过调用{{ domxref("window.requestAnimationFrame()") }}方法添加到计划中的动画帧请求。
+**`window.cancelAnimationFrame()`** 方法取消一个先前通过调用 {{domxref("window.requestAnimationFrame()")}} 方法添加到计划中的动画帧请求。
 
 ## 语法
 
-```
-window.mozCancelAnimationFrame(requestID);               // Firefox
+```js-nolint
+cancelAnimationFrame(requestID)
 ```
 
-## 参数
+### 参数
 
 - `requestID`
-  - : 先前调用{{ domxref("window.requestAnimationFrame()") }}方法时返回的 ID.
+  - : 先前调用 {{domxref("window.requestAnimationFrame()")}} 方法时返回的 ID。
+
+### 返回值
+
+无（{{jsxref("undefined")}}）。
 
 ## 示例
 
-```
-var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
-                            window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+```js
+const requestAnimationFrame =
+  window.requestAnimationFrame ||
+  window.mozRequestAnimationFrame ||
+  window.webkitRequestAnimationFrame ||
+  window.msRequestAnimationFrame;
 
-var cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame;
+const cancelAnimationFrame =
+  window.cancelAnimationFrame || window.mozCancelAnimationFrame;
 
-var start = window.mozAnimationStartTime;  // 只有 Firefox 支持 mozAnimationStartTime 属性，其他浏览器可以使用 Date.now() 来替代。
+const start = Date.now();
 
-var myReq;
+let myReq;
+
 function step(timestamp) {
-  var progress = timestamp - start;
-  d.style.left = Math.min(progress/10, 200) + "px";
+  const progress = timestamp - start;
+  d.style.left = `${Math.min(progress / 10, 200)}px`;
   if (progress < 2000) {
+    // 在每次调用 requestAnimationFrame 时，注意更新 requestId
     myReq = requestAnimationFrame(step);
   }
 }
 myReq = requestAnimationFrame(step);
-
-window.cancelAnimationFrame(myReq);
+// 取消操作使用的是最后一个 requestId
+cancelAnimationFrame(myReq);
 ```
 
 ## 规范
@@ -51,7 +59,7 @@ window.cancelAnimationFrame(myReq);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{ domxref("window.mozAnimationStartTime") }}
-- {{ domxref("window.requestAnimationFrame()") }}
+- {{domxref("Window.requestAnimationFrame()")}}
+- {{domxref("DedicatedWorkerGlobalScope.cancelAnimationFrame()")}}

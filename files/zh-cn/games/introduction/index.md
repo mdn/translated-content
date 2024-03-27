@@ -50,22 +50,22 @@ slug: Games/Introduction
 - [IndexedDB](/zh-CN/docs/IndexedDB)
   - : 一个强大的数据存储 API，用来在电脑或者设备上保存用户自己的数据。一个很好的方法用来保存游戏的状态和其他最近的信息，这样在需要的时候不用每次重新下载。也可以用来让你的游戏即使用户没有链接到网络也能继续玩（例如在飞机上的数小时）。
 - [JavaScript](/zh-CN/docs/JavaScript)
-  - : JavaScript 是网络上使用的编程语言，在现代浏览器中正在快速发展，而且一直在快速发展。使用它的力量为您的游戏编写代码，或者使用[Emscripten](https://github.com/kripken/emscripten/wiki)或[Asm.js](http://asmjs.org/spec/latest/)等技术轻松移植您现有的游戏。
+  - : JavaScript 是网络上使用的编程语言，在现代浏览器中正在快速发展，而且一直在快速发展。使用它的力量为你的游戏编写代码，或者使用[Emscripten](https://github.com/kripken/emscripten/wiki)或[Asm.js](http://asmjs.org/spec/latest/)等技术轻松移植你现有的游戏。
 - [Pointer Lock API](/zh-CN/docs/API/Pointer_Lock_API)
-  - : 指针锁定 API 允许您在游戏界面中锁定鼠标或其他指针设备，以便您不用绝对定位光标就可以获得坐标变化值，从而准确地判断用户正在做什么，并且还可以防止用户意外地进入另一块屏幕或别的什么地方，从而导致误操作。
+  - : 指针锁定 API 允许你在游戏界面中锁定鼠标或其他指针设备，以便你不用绝对定位光标就可以获得坐标变化值，从而准确地判断用户正在做什么，并且还可以防止用户意外地进入另一块屏幕或别的什么地方，从而导致误操作。
 - [SVG](/zh-CN/docs/SVG) (可缩放矢量图形)
   - : 无论用户显示器的大小或分辨率如何，都可以构建平滑缩放的矢量图形。
 - [Typed Arrays](/zh-CN/docs/JavaScript/Typed_arrays)
-  - : JavaScript 中的类型数组可以让您访问原始二进制数据；这使您可以操纵 GL 纹理，游戏数据或其他任何东西，即使它不是原生 JavaScript 数据格式。
+  - : JavaScript 中的类型数组可以让你访问原始二进制数据；这使你可以操纵 GL 纹理，游戏数据或其他任何东西，即使它不是原生 JavaScript 数据格式。
 - [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API)
-  - : 这个 API 用于控制 JavaScript 代码中的音频的回放，合成和处理，使您可以创建出色的音效，以及实时播放和操作音乐。
+  - : 这个 API 用于控制 JavaScript 代码中的音频的回放，合成和处理，使你可以创建出色的音效，以及实时播放和操作音乐。
 - [WebGL](/zh-CN/docs/WebGL)
-  - : 允许您从 Web 内容创建高性能，硬件加速的 3D（和 2D）图形。这是一个 Web 支持的[OpenGL ES](https://www.khronos.org/opengles/) 2.0 实现。
+  - : 允许你从 Web 内容创建高性能，硬件加速的 3D（和 2D）图形。这是一个 Web 支持的[OpenGL ES](https://www.khronos.org/opengles/) 2.0 实现。
 - [WebRTC](/zh-CN/docs/WebRTC)
-  - : WebRTC（实时通信）API 使您能够控制音频和视频数据，包括远程会议以及两个用户之间来回传输其他应用程序数据。希望你的玩家能够在殴打怪物的同时互相交流？这是你的 API，快使用它吧。
+  - : WebRTC（实时通信）API 使你能够控制音频和视频数据，包括远程会议以及两个用户之间来回传输其他应用程序数据。希望你的玩家能够在殴打怪物的同时互相交流？这是你的 API，快使用它吧。
 - [WebSockets](/zh-CN/docs/Web/API/WebSockets_API)
-  - : WebSocket API 使您可以将您的应用程序或站点连接到服务器，实时传输数据。构建完美的多人游戏动作，聊天服务等必备。
+  - : WebSocket API 使你可以将你的应用程序或站点连接到服务器，实时传输数据。构建完美的多人游戏动作，聊天服务等必备。
 - [Web Workers](/zh-CN/docs/DOM/Using_web_workers)
-  - : Workers API 能够让您生成运行 JavaScript 代码的后台线程，以充分利用现代的多核 CPU。
+  - : Workers API 能够让你生成运行 JavaScript 代码的后台线程，以充分利用现代的多核 CPU。
 - [XMLHttpRequest](/zh-CN/docs/DOM/XMLHttpRequest) 和 [File API](/zh-CN/docs/Web/API/File_and_Directory_Entries_API)
-  - : XMLHttpRequest 和 File API 的组合使您可以从 Web 服务器发送和接收任何类型的数据。比如下载新的游戏关卡，文件，以及传递非实时游戏状态信息等。
+  - : XMLHttpRequest 和 File API 的组合使你可以从 Web 服务器发送和接收任何类型的数据。比如下载新的游戏关卡，文件，以及传递非实时游戏状态信息等。

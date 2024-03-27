@@ -1,7 +1,11 @@
 ---
 title: Percent-encoding(퍼센트 인코딩)
 slug: Glossary/Percent-encoding
+l10n:
+  sourceCommit: 6c7cb932f7a0735ec2ac64732c9a947510fd1303
 ---
+
+{{GlossarySidebar}}
 
 **Percent-encoding** 은 {{Glossary("URL", "URL")}} 맥락에서 특정 의미를 갖는 8비트 문자로 인코딩하는 메커니즘입니다. URL 인코딩이라고도 합니다. 인코딩은 '%' 다음에 변경할 문자를 ASCII 값으로 표현되는 16진수가 위치하는 대체 문자열로 구성됩니다.
 
@@ -35,4 +39,5 @@ slug: Glossary/Percent-encoding
 ## 같이 보기
 
 - 위키피디아 [퍼센트 인코딩](https://ko.wikipedia.org/wiki/%ED%8D%BC%EC%84%BC%ED%8A%B8_%EC%9D%B8%EC%BD%94%EB%94%A9)의 정의
-- {{RFC(3986)}}, section 2.1, where this encoding is defined.
+- 이 인코딩이 정의된 {{RFC(3986)}}의, section 2.1
+- URL을 퍼센트 인코딩하는 기능인 [`encodeURI()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/encodeURI)와 [`encodeURIComponent()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent)

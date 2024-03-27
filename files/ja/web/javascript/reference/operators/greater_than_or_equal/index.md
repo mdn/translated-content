@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Operators/Greater_than_or_equal
 ## 構文
 
 ```js
-x >= y
+x >= y;
 ```
 
 ## 解説
@@ -24,56 +24,56 @@ x >= y
 ### 文字列と文字列の比較
 
 ```js
-console.log("a" >= "b");     // false
-console.log("a" >= "a");     // true
-console.log("a" >= "3");     // true
+console.log("a" >= "b"); // false
+console.log("a" >= "a"); // true
+console.log("a" >= "3"); // true
 ```
 
 ### 文字列と数値の比較
 
 ```js
-console.log("5" >= 3);       // true
-console.log("3" >= 3);       // true
-console.log("3" >= 5);       // false
+console.log("5" >= 3); // true
+console.log("3" >= 3); // true
+console.log("3" >= 5); // false
 
-console.log("hello" >= 5);   // false
-console.log(5 >= "hello");   // false
+console.log("hello" >= 5); // false
+console.log(5 >= "hello"); // false
 ```
 
 ### 数値と数値の比較
 
 ```js
-console.log(5 >= 3);         // true
-console.log(3 >= 3);         // true
-console.log(3 >= 5);         // false
+console.log(5 >= 3); // true
+console.log(3 >= 3); // true
+console.log(3 >= 5); // false
 ```
 
 ### Number と BigInt の比較
 
 ```js
-console.log(5n >= 3);        // true
-console.log(3 >= 3n);        // true
-console.log(3 >= 5n);        // false
+console.log(5n >= 3); // true
+console.log(3 >= 3n); // true
+console.log(3 >= 5n); // false
 ```
 
 ### 論理値、null、undefined、NaN の比較
 
 ```js
-console.log(true >= false);  // true
-console.log(true >= true);   // true
-console.log(false >= true);  // false
+console.log(true >= false); // true
+console.log(true >= true); // true
+console.log(false >= true); // false
 
-console.log(true >= 0);      // true
-console.log(true >= 1);      // true
+console.log(true >= 0); // true
+console.log(true >= 1); // true
 
-console.log(null >= 0);      // true
-console.log(1 >= null);      // true
+console.log(null >= 0); // true
+console.log(1 >= null); // true
 
 console.log(undefined >= 3); // false
 console.log(3 >= undefined); // false
 
-console.log(3 >= NaN);       // false
-console.log(NaN >= 3);       // false
+console.log(3 >= NaN); // false
+console.log(NaN >= 3); // false
 ```
 
 ## 仕様書

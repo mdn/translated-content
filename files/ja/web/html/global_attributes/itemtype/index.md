@@ -164,7 +164,8 @@ Google などの主要な検索エンジンは、構造化データのために 
       <meta itemprop="priceCurrency" content="USD" />
       <span itemprop="price">Sale price: $119.99<br /></span>
       (Sale ends
-      <time itemprop="priceValidUntil" datetime="2020-11-05"> 5 November!</time>)<br />
+      <time itemprop="priceValidUntil" datetime="2020-11-05"> 5 November!</time
+      >)<br />
       Available from:
       <span
         itemprop="seller"

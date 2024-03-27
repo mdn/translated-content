@@ -91,7 +91,7 @@ En este ejemplo, hay tres cuadrados de color. Dos flotan hacia la izquierda, y u
 
 Un elemento flotante es al menos tan alto como su elemento hijo flotante más alto. En el ejemplo se le da al elemento padre `width: 100%` y la propiedad de flotante para asegurar que es lo suficientemente alto para encajar con sus hijos flotantes, y asegurar que ocupa el ancho -width- del padre de modo de no tener que limpiar su pariente adyacente.
 
-**HTML**
+#### HTML
 
 ```html
 <section>
@@ -108,7 +108,7 @@ Un elemento flotante es al menos tan alto como su elemento hijo flotante más al
 </section>
 ```
 
-**CSS**
+#### CSS
 
 ```css
 section {
@@ -144,21 +144,12 @@ A veces querrás forzar un item a moverse por debajo de elementos flotantes. Por
 
 ### Especificaciones
 
-- [CSS 1](http://www.w3.org/TR/CSS1#float)
-- [CSS 2.1](http://www.w3.org/TR/CSS21/visuren.html#propdef-float)
+{{Specifications}}
 
-### Compatibilidad de navegadores
+### Compatibilidad con navegadores
 
-| Navegador         | Versión mínima |
-| ----------------- | -------------- |
-| Internet Explorer | 4              |
-| Netscape          | 4              |
-| Opera             | 3.5            |
+{{Compat}}
 
 ### Ver también
 
 {{ Cssxref("clear") }}, {{ Cssxref("display") }}, {{ Cssxref("position") }}
-
-Categorías
-
-Interwiki Language

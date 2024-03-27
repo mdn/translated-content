@@ -73,7 +73,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/cookies
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.cookies")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

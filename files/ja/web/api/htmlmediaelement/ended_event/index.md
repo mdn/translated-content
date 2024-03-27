@@ -18,9 +18,9 @@ l10n:
 このイベントを {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('ended', (event) => {});
+addEventListener("ended", (event) => {});
 
-onended = (event) => { };
+onended = (event) => {};
 ```
 
 ## イベント型
@@ -34,22 +34,26 @@ onended = (event) => { };
 `addEventListener()` を使用する場合:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('ended', (event) => {
-  console.log('1）動画が終了した、または 2）それ以上データがない' +
-      'ため、動画が停止しました。');
+video.addEventListener("ended", (event) => {
+  console.log(
+    "1）動画が終了した、または 2）それ以上データがない" +
+      "ため、動画が停止しました。",
+  );
 });
 ```
 
 `onended` イベントハンドラープロパティを使用する場合:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.onended = (event) => {
-  console.log('1）動画が終了した、または 2）それ以上データがない' +
-      'ため、動画が停止しました。');
+  console.log(
+    "1）動画が終了した、または 2）それ以上データがない" +
+      "ため、動画が停止しました。",
+  );
 };
 ```
 

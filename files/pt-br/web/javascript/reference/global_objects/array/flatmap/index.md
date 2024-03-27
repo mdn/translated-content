@@ -95,7 +95,7 @@ arr1.reduce((acc, x) => acc.concat([x * 2]), []);
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Array.flatMap")}}
+{{Compat}}
 
 ## Veja também
 

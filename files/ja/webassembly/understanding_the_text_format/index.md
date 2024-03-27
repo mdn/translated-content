@@ -1,7 +1,7 @@
 ---
 title: WebAssembly テキスト形式の理解
 slug: WebAssembly/Understanding_the_text_format
-i10n:
+l10n:
   sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 

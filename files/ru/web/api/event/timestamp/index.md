@@ -74,6 +74,6 @@ In Firefox, you can also enabled `privacy.resistFingerprinting`, the precision w
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}

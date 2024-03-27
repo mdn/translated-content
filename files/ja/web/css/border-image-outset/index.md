@@ -1,6 +1,8 @@
 ---
 title: border-image-outset
 slug: Web/CSS/border-image-outset
+l10n:
+  sourceCommit: 2adfb8760ac42c80966080e2e84211b14e43b589
 ---
 
 {{CSSRef}}
@@ -33,6 +35,7 @@ border-image-outset: 7px 12px 14px 5px;
 border-image-outset: inherit;
 border-image-outset: initial;
 border-image-outset: revert;
+border-image-outset: revert-layer;
 border-image-outset: unset;
 ```
 
@@ -60,7 +63,7 @@ border-image-outset: unset;
 
 ## 例
 
-<h3 id="Outsetting_a_border_image">境界画像をはみ出させる</h3>
+### 境界画像をはみ出させる
 
 #### HTML
 
@@ -76,14 +79,14 @@ border-image-outset: unset;
   background: #cef;
   border: 1.4rem solid;
   border-image: radial-gradient(#ff2, #55f) 40;
-  border-image-outset: 1.5;  /* 1.5 × 1.4rem = 2.1rem */
+  border-image-outset: 1.5; /* 1.5 × 1.4rem = 2.1rem */
   margin: 2.1rem;
 }
 ```
 
 #### 例
 
-{{EmbedLiveSample("Outsetting_a_border_image", "auto", 200)}}
+{{EmbedLiveSample("境界画像をはみ出させる", "auto", 200)}}
 
 ## 仕様書
 
@@ -95,5 +98,5 @@ border-image-outset: unset;
 
 ## 関連情報
 
-- [背景と境界](/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders)
+- [背景と境界](/ja/docs/Web/CSS/CSS_backgrounds_and_borders)
 - [CSS の学習: 背景と境界](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)

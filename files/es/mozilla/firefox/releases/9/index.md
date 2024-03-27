@@ -1,249 +1,144 @@
 ---
 title: Firefox 9 for developers
 slug: Mozilla/Firefox/Releases/9
+l10n:
+  sourceCommit: 75d6ce4e2e752b8577012aea96abc766659ed3e2
 ---
 
-Firefox 9 was released for Windows on December 20, 2011. Mac and Linux version 9.0.1, which fixed a crashing bug discovered at the last minute, were released on December 21, 2011.
+{{FirefoxSidebar}}
 
-## Changes for web developers
+Firefox 9 se lanzó para Windows el 20 de diciembre de 2011. El 21 de diciembre de 2011 se lanzó la versión 9.0.1 para Mac y Linux, que corrigió un error de bloqueo descubierto en el último minuto.
+
+## Cambios para desarrolladores web
 
 ### HTML
 
-- The `value` attribute of [`<li>`](/es/docs/Web/HTML/Element/li) now can be negative as specified in HTML5. Previously negative values were converted to 0.
-- You can now [specify the start and stop time of media](/es/docs/Using_HTML5_audio_and_video#Specifying_playback_range) in the URI of the media when using [`<audio>`](/es/docs/Web/HTML/Element/audio) and [`<video>`](/es/docs/Web/HTML/Element/video) elements.
-- [`<input>`](/es/docs/Web/HTML/Element/input) and [`<textarea>`](/es/docs/Web/HTML/Element/textarea) elements [now respect the value of the `lang` attribute](/es/docs/HTML/Controlling_spell_checking_in_HTML_forms#Controlling_the_spellchecker_language) when invoking the spell checker.
-- Firefox on Android now lets users snap photos with their phone's camera without leaving the browser when the [`<input>`](/es/docs/Web/HTML/Element/input) element is used with `type="file"` and `accept="image/*"`.
-- Windows Vista style PNG ICO images are now supported.
-- Drawing images that use the [`crossorigin`](/es/docs/HTML/CORS_settings_attributes) attribute to request CORS access no longer incorrectly [taint the canvas](/es/docs/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F) when CORS is granted.
-- The value of the [`rowspan`](/es/docs/Web/HTML/Element/td#attr-rowspan) attribute may now be as large as 65,534, up from 8190.
+- El atributo `value` de {{ HTMLElement("li") }} ahora puede ser negativo. Los valores negativos anteriores se convertian a 0.
+- Ahora puede [especificar la hora de inicio y finalización de los medios](/es/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content#specifying_playback_range) en la URI de los medios cuando usa los elementos {{ HTMLElement("audio") }} y {{ HTMLElement("video") }}.
+- Los elementos {{ HTMLElement("input") }} y {{ HTMLElement("textarea") }} [ahora respetan el valor del atributo `lang`](/es/docs/Web/HTML/Global_attributes/spellcheck#controlling_the_spellchecker_language) al invocar el corrector ortográfico.
+- Firefox en Android ahora permite a los usuarios tomar fotos con la cámara de su teléfono sin salir del navegador cuando se usa el elemento {{ HTMLElement("input") }} con `type="file"` y `accept="image/*"` .
+- Las imágenes PNG ICO de estilo Windows Vista ahora son compatibles.
+- Dibujar imagenes que usan el atributo [`crossorigin`](/es/docs/Web/HTML/Attributes/crossorigin) para solicitar acceso CORS ya no [contaminan el lienzo](/es/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f) cuando se otorga CORS.
+- El valor del atributo [`rowspan`](/es/docs/Web/HTML/Element/td#rowspan) ahora puede ser tan grande como 65 534, en lugar de 8190.
 
 ### CSS
 
-- The [`font-stretch`](/es/docs/Web/CSS/font-stretch) property is now supported.
-- The [`columns`](/es/docs/Web/CSS/columns) property is now supported, with the `-moz` prefix. This is a shorthand for the following properties: [`column-width`](/es/docs/Web/CSS/column-width) and [`column-count`](/es/docs/Web/CSS/column-count).
-- When a stylesheet included using the [`<link>`](/es/docs/Web/HTML/Element/link) element has been fully loaded and parsed (but not yet applied to the document), a [`load` event](/es/docs/HTML/Element/link#Stylesheet_load_events) is now fired. Also, if an error occurs processing a style sheet, an `error` event is fired.
-- You can now specify overflow settings for both the left and right edges of content using a new two-value syntax for [`text-overflow`](/es/docs/Web/CSS/text-overflow).
+- La propiedad {{ cssxref("font-stretch") }} ahora es compatible.
+- La propiedad {{ cssxref("columns") }} ahora es compatible, con el prefijo `-moz`. Esta es una forma abreviada de las siguientes propiedades: {{ cssxref("column-width") }} y {{ cssxref("column-count") }}.
+- Cuando una hoja de estilo incluida usando el elemento {{ HTMLElement("link") }} ha sido completamente cargada y analizada (pero aún no aplicada al documento), un [evento `load`](/es/docs/Web/HTML/Element/link#stylesheet_load_events) ahora se activa. Además, si se produce un error al procesar una hoja de estilo, se activa un evento de `error`.
+- Ahora puede especificar configuraciones de desbordamiento para los bordes izquierdo y derecho del contenido usando una nueva sintaxis de dos valores para {{ cssxref("text-overflow") }}.
 
 ### JavaScript
 
-_No change._
+_Ningún cambio._
 
 ### DOM
 
-- [Using full-screen mode](/es/docs/DOM/Using_full-screen_mode)
-  - : The new full-screen API provides a way to present content using the entire screen, with no browser interface. This is great for video and games. This API is currently experimental and prefixed.
+- [Uso del modo de pantalla completa](/es/docs/Web/API/Fullscreen_API)
+  - : La nueva API de pantalla completa proporciona una forma de presentar contenido utilizando toda la pantalla, sin interfaz de navegador. Esto es genial para video y juegos. Esta API es actualmente experimental y prefijada.
 
 <!---->
 
-- The [`Node.contains()`](/es/docs/Web/API/Node/contains) method is now implemented; this lets you determine if a given node is a descendant of another node.
-- The [`Node.parentElement`](/es/docs/Web/API/Node/parentElement) attribute has been implemented; this returns the parent [`Element`](/es/docs/Web/API/Element) of a DOM node, or `null` if the parent isn't an element.
-- DOM Level 3 [composition events](/es/docs/DOM/CompositionEvent) are now supported.
-- The [`Document.scripts`](/es/docs/Web/API/Document/scripts) attribute has been implemented; this returns an [`HTMLCollection`](/es/docs/Web/API/HTMLCollection) of all the [`<script>`](/es/docs/Web/HTML/Element/script) elements on the document.
-- The [`Document.queryCommandSupported()`](/es/docs/Web/API/Document/queryCommandSupported) method has been implemented.
-- The set of events that can be listened for on [`<body>`](/es/docs/Web/HTML/Element/body) elements has been revised to match the latest draft of the HTML5 specification. The list of events in the [DOM event reference](/es/docs/DOM/DOM_event_reference) reflects which events can be listened for on [`<body>`](/es/docs/Web/HTML/Element/body).
-- The `readystatechange` event is now fired only on the [`Document`](/es/docs/Web/API/Document), as intended.
-- Event handlers are now implemented as standard IDL interfaces. For most cases, this won't affect content, but [there are exceptions](/es/docs/DOM/DOM_event_handlers#Event_handler_changes_in_Firefox_9).
-- A new response type, "`moz-json`", has been added to `XMLHttpRequest`, letting `XMLHttpRequest` automatically parse [JSON](/es/docs/JSON) strings for you; when you request this type, a returned JSON string is parsed, so that the value of the `response` property is the resulting JavaScript object.
-- [`XMLHttpRequest` "progress" events](/es/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress) are now reliably sent for every chunk of data received; in the past it was possible for the last chunk of data received to not fire a "progress" event. Now you can track progress by following only "progress" events, instead of also having to monitor "load" events to detect the receipt of the last chunk of data.
-- In the past, calling [`addEventListener()`](/es/docs/DOM/element.addEventListener) with a `null` listener would throw an exception. Now it returns without error and with no effect.
-- The new [`navigator.doNotTrack`](/es/docs/Web/API/Navigator/doNotTrack) property lets your content easily determine whether or not the user has enabled their do-no-track preference; if this value is "yes", you should not track the user.
-- [`Range`](/es/docs/Web/API/Range) and [`Selection`](/es/docs/Web/API/Selection) objects now behave according to their specifications when [`splitText()`](/es/docs/Web/API/Text/splitText) and [`normalize()`](/es/docs/Web/API/Node/normalize) are called.
-- The value of [`Node.ownerDocument`](/es/docs/Web/API/Node/ownerDocument) for doctype nodes is now the document on which [`createDocumentType()`](/es/docs/DOM/DOMImplementation.createDocumentType) was called to create the node, instead of `null`.
-- `window.navigator.taintEnabled` has been removed; it has not been supported in many years.
+- El método {{ domxref("Node.contains()") }} ahora está implementado; esto le permite determinar si un nodo dado es descendiente de otro nodo.
+- Se implementó el atributo {{ domxref("Node.parentElement") }}; esto devuelve el padre {{ domxref("Element") }} de un nodo DOM, o `null` si el padre no es un elemento.
+- Los [eventos de composición](/es/docs/Web/API/CompositionEvent) de DOM Nivel 3 ahora son compatibles.
+- Se implementó el atributo {{ domxref("Document.scripts") }}; esto devuelve un {{ domxref("HTMLCollection") }} de todos los elementos {{ HTMLElement("script") }} del documento.
+- Se implementó el método {{ domxref("Document.queryCommandSupported()") }}.
+- El conjunto de eventos que se pueden escuchar en los elementos {{ HTMLElement("body") }} se ha revisado para que coincida con el último borrador de la especificación HTML5. La lista de eventos en la [referencia de eventos DOM](/es/docs/Web/Events) refleja qué eventos se pueden detectar en {{ HTMLElement("body") }}.
+- El evento `readystatechange` ahora solo se activa en {{ domxref("Document") }}, según lo previsto.
+- Los manejadores de eventos ahora se implementan como interfaces IDL estándar. En la mayoría de los casos, esto no afectará el contenido, pero hay excepciones.
+- Se ha agregado un nuevo tipo de respuesta, "`moz-json`", a `XMLHttpRequest`, lo que permite que `XMLHttpRequest` analice automáticamente cadenas [JSON](/es/docs/Glossary/JSON); cuando solicita este tipo, se analiza una cadena JSON devuelta, de modo que el valor de la propiedad `response` es el objeto JavaScript resultante.
+- [Eventos de "progreso" `XMLHttpRequest`](/es/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#monitoring_progress) ahora se envían de manera confiable para cada fragmento de datos recibido; en el pasado, era posible que la última parte de los datos recibidos no activará un evento de "progreso". Ahora puede realizar un seguimiento del progreso siguiendo solo los eventos de "progreso", en lugar de tener que monitorear también los eventos de "carga" para detectar la recepción de la última porción de datos.
+- En el pasado, llamar a [`addEventListener()`](/es/docs/Web/API/EventTarget/addEventListener) con un detector `null` generaba una excepción. Ahora devuelve sin error y sin efecto.
+- La nueva propiedad {{ domxref("navigator.doNotTrack") }} permite que su contenido determine fácilmente si el usuario ha habilitado o no su preferencia de no rastrear; si este valor es "sí", no debe rastrear al usuario.
+- Los objetos {{ domxref("Range") }} y {{ domxref("Selection") }} ahora se comportan según sus especificaciones cuando {{ domxref("Text.splitText()", "splitText()") }} y {{domxref("Node.normalize", "normalize()") }} son llamados.
+- El valor de {{ domxref("Node.ownerDocument") }} para los nodos doctype ahora es el documento en el que se llamó a [`createDocumentType()`](/es/docs/Web/API/DOMImplementation/createDocumentType) para crear el nodo, en lugar de `null`.
+- Se ha eliminado `window.navigator.taintEnabled`; no ha sido compatible en muchos años.
 
 ### Workers
 
-- Workers implemented in blob URLs were broken in Firefox 8, and work again starting in Firefox 9.
+- Los _workers_ implementados en las URL de blob se rompieron en Firefox 8 y volvieron a funcionar a partir de Firefox 9.
 
 ### WebGL
 
-- The [WebGL](/es/docs/WebGL) context `drawingBufferWidth` and `drawingBufferHeight` attributes are now supported.
+- Los atributos de contexto [WebGL](/es/docs/Web/API/WebGL_API) `drawingBufferWidth` y `drawingBufferHeight` ahora son compatibles.
 
 ### MathML
 
-- The non-standard `restyle` value for the `actiontype` attribute on [`<maction>`](/es/docs/Web/MathML/Element/maction) elements has been removed.
-- While still unsupported, using the [`<mlabeledtr>`](/es/docs/Web/MathML/Element/mlabeledtr) element no longer breaks rendering completely. See [error 689641](https://bugzilla.mozilla.org/show_bug.cgi?id=689641) for progress on actual support of this element.
+- Se eliminó el valor `restyle` no estándar para el atributo `actiontype` en los elementos {{ MathMLElement("maction") }}.
+- Si bien aún no es compatible, el uso del elemento `mlabeledtr` ya no interrumpe el renderizado por completo. Consulte el [error 689641, en Firefox](https://bugzil.la/689641) para ver el progreso en el soporte real de este elemento.
 
-### Networking
+### Redes
 
-- You can now send the contents of [JavaScript typed arrays](/es/docs/JavaScript_typed_arrays) (that is, the contents of an [`ArrayBuffer`](/es/docs/JavaScript_typed_arrays/ArrayBuffer) object) [using XMLHttpRequest](/es/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Sending_typed_arrays_as_binary_data).
-- WebSocket connections now permit non-characters in otherwise valid UTF-8 data frames to be received, instead of failing.
-- The HTTP `Accept` header for XSLT requests has been changed to simply "\*/\*" for simplicity. Since fetching XSLT has always fallen back to "\*/\*" anyway, it made sense to simplify the initial request.
-- Attempts by a server to use the `301 Moved Permanently` or `307 Temporary Redirect` response codes to redirect the user to a `javascript:` URI now [result in a "bad connection" error](/es/docs/HTTP#More_on_redirection_responses) instead of actually redirecting. This prevents certain types of cross-site scripting attacks.
-- Content served with an empty [`Content-Disposition`](/es/docs/Web/HTTP/Headers/Content-Disposition) were previously treated as if the [`Content-Disposition`](/es/docs/Web/HTTP/Headers/Content-Disposition) were "attachment"; this didn't always work as expected. These are now handled as if the [`Content-Disposition`](/es/docs/Web/HTTP/Headers/Content-Disposition) were "inline".
-- The default maximum size of an item in the disk cache has been increased to 50 MB; previously, only items up to 5 MB were cached.
+- Ahora puede enviar el contenido de [matrices tipadas en JavaScript](/es/docs/Web/JavaScript/Guide/Typed_arrays) (es decir, el contenido de un [`ArrayBuffer`](/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)) [usando XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#sending_typed_arrays_as_binary_data).
+- Las conexiones WebSocket ahora permiten que no se reciban caracteres en marcos de datos UTF-8 válidos, en lugar de fallar.
+- La cabecera HTTP `Accept` para solicitudes XSLT se ha cambiado a "\*/\*" para simplificar. Dado que recuperar XSLT siempre ha vuelto a "\*/\*", tenía sentido simplificar la solicitud inicial.
+- Los intentos por parte de un servidor de usar los códigos de respuesta `301 Moved Permanently` (Movido permanentemente) o `307 Temporary Redirect` (Redirección temporal) para redirigir al usuario a un URI `javascript:` ahora [resultan en un error de "mala conexión"](/es/docs/Web/HTTP#more_on_redirection_responses) en lugar de redirigir. Esto evita ciertos tipos de ataques de secuencias de comandos entre sitios.
+- El contenido entregado con un {{ HTTPHeader("Content-Disposition") }} se trataba previamente como si el {{ HTTPHeader("Content-Disposition") }} fuera un "archivo adjunto"; esto no siempre funcionó como se esperaba. Ahora se manejan como si {{ HTTPHeader("Content-Disposition") }} estuviera "en línea".
+- El tamaño máximo predeterminado de un elemento en la memoria caché del disco se ha aumentado a 50 MB; anteriormente, solo se almacenaban en caché los elementos de hasta 5 MB.
 
-### Developer tools
+### Herramientas de desarrollador
 
-- The web console now supports basic [string substitutions](/es/docs/Using_the_Web_Console#String_substitutions) in its logging methods.
-- You can now [create visually nested blocks of output](/es/docs/Using_the_Web_Console#Using_groups_in_the_console) in the web console, to help make it easier to read.
+- La consola web ahora admite [sustituciones de cadenas](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#string-substitutions) básicas en sus métodos de registro.
+- Ahora puede [crear bloques de salida anidados visualmente](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#using-groups-in-the-console) en la consola web, para ayudar a que sea más fácil de leer.
 
-## Changes for Mozilla and add-on developers
+## Cambios para Mozilla y desarrolladores de complementos
 
-See [Updating add-ons for Firefox 9](/es/docs/Firefox/Updating_add-ons_for_Firefox_9) for an overview of the changes you may need to make to get your add-ons working in Firefox 9.
+Consulte [Actualización de complementos para Firefox 9](/es/docs/Mozilla/Firefox/Updating_add-ons_for_Firefox_9) para obtener una descripción general de los cambios que puede necesitar realizar para que sus complementos funcionen en Firefox 9.
 
 ### XUL
 
-- The [`tab`](/es/docs/Mozilla/Tech/XUL/tab) element now has a [`pending`](/es/docs/Mozilla/Tech/XUL/Attribute/pending) attribute, whose value is `true`, when the tab is in the process of being restored by the session store service. This can be used for styling the tab in themes. The attribute isn't present on tabs that aren't pending.
-- The [`tab`](/es/docs/Mozilla/Tech/XUL/tab) element now has an [`unread`](/es/docs/Mozilla/Tech/XUL/Attribute/unread) attribute, whose value is `true`, when the tab has changed since the last time it was the active tab or if it hasn't been selected since the current session began. The attribute isn't present on tabs that are not unread.
-- You can now use a [`panel`](/es/docs/Mozilla/Tech/XUL/panel) as a drag image for DOM drag and drop operations. This lets you use the standard drag & drop API for [drag and drop of XUL content](/es/docs/DragDrop/Drag_Operations#Using_XUL_panels_as_drag_images).
-- The [`notificationbox`](/es/docs/Mozilla/Tech/XUL/notificationbox) element's [`appendNotification`](/es/docs/Mozilla/Tech/XUL/Method/appendNotification) method now lets you specify a callback that gets called for interesting events related to the notification box. Currently, the only event is "removed", which tells you the box has been removed from its window.
+- El elemento [`<xul:tab>`](/es/docs/Mozilla/Tech/XUL/tab) ahora tiene un elemento [`pending`](/es/docs/Mozilla/Tech/XUL/Attribute/pending) atributo, cuyo valor es `true`, cuando la pestaña está en proceso de ser restaurada por el servicio de almacenamiento de sesiones. Esto se puede usar para diseñar la pestaña en los temas. El atributo no está presente en las pestañas que no están pendientes.
+- El elemento [`<xul:tab>`](/es/docs/Mozilla/Tech/XUL/tab) ahora tiene un elemento [`unread`](/es/docs/Mozilla/Tech/XUL/Attribute/unread) atributo, cuyo valor es `true`, cuando la pestaña ha cambiado desde la última vez que fue la pestaña activa o si no se ha seleccionado desde que comenzó la sesión actual. El atributo no está presente en las pestañas que no están sin leer.
+- Ahora puede usar un [`<xul:panel>`](/es/docs/Mozilla/Tech/XUL/panel) como una imagen de arrastre para las operaciones de arrastrar y soltar del DOM. Esto le permite usar la API estándar de arrastrar y soltar para [arrastrar y soltar contenido XUL](/es/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#using_xul_panels_as_drag_images).
+- El método [`appendNotification`](/es/docs/Mozilla/Tech/XUL/Method/appendNotification) del elemento [`<xul:notificationbox>`](/es/docs/Mozilla/Tech/XUL/notificationbox) ahora permite especificar una devolución de llamada que se llama para eventos interesantes relacionados con el cuadro de notificación. Actualmente, el único evento es "eliminado", que le indica que el cuadro se eliminó de su ventana.
 
-### JavaScript code module changes
+### Cambios en el módulo de código JavaScript
 
-- [`FileUtils.jsm`](/es/docs/JavaScript_code_modules/FileUtils.jsm) now has a `File` constructor that returns an [`nsIFile`](/es/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFile) object representing a file specified by its pathname.
+- [`FileUtils.jsm`](/es/docs/JavaScript_code_modules/FileUtils.jsm) ahora tiene un constructor `File` que devuelve un objeto `nsIFile` que representa un archivo especificado por su nombre de ruta.
 
-### Service changes
+### Cambios de servicios
 
-- The content preference service now [handles private mode browsing](/es/docs/Using_content_preferences#private-browsing) (see [error 679784](https://bugzilla.mozilla.org/show_bug.cgi?id=679784)).
+- El servicio de preferencias de contenido ahora [maneja la navegación en modo privado](/es/docs/Using_content_preferences#private-browsing) (vea [error 679784, en Firefox](https://bugzil.la/679784)).
 
 ### NSPR
 
-- NSPR now has an "append" module, which lets you append new data to the end of an existing log.
+- NSPR ahora tiene un módulo "agregar", que le permite agregar nuevos datos al final de un registro existente.
 
-### Interface changes
+### Cambios de interfaz
 
-#### Removed interfaces
+#### Interfaces eliminadas
 
-- [`nsIGlobalHistory3`](/es/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIGlobalHistory3) has been removed during streamlining of the Places and DocShell code.
+- `nsIGlobalHistory3` se eliminó durante la simplificación del código de Places y DocShell.
 
-#### Miscellaneous interface changes
+#### Varios cambios en la interfaz
 
-- The [`nsISound`](/es/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISound) interface has a new constant, `EVENT_EDITOR_MAX_LEN`. The allows for playing the system sound for when more characters than the maximum allowed are typed into a text field. Currently, this is only used on Windows.
-- The [`nsIScriptError2`](/es/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIScriptError2) interface has new `timeStamp` and `innerWindowID` properties; in addition, the `initWithWindowID()` method now takes an inner window ID instead of an outer window ID.
-- The [`nsIBidiKeyboard.haveBidiKeyboards`](/es/docs/XPCOM_Interface_Reference/nsIBidiKeyboard#haveBidiKeyboards) attribute has been added; this lets you determine if the system has at least one keyboard installed for each direction: left-to-right and right-to-left.
-- The new [`nsIEditor.isSelectionEditable`](/es/docs/XPCOM_Interface_Reference/nsIEditor#isSelectionEditable) attribute lets you determine if the current selection anchor is editable. This helps to support cases where only parts of the document are editable, by letting you see if the current selection is in an editable section.
-- The [`nsIBrowserHistory.registerOpenPage()`](</es/docs/XPCOM_Interface_Reference/nsIBrowserHistory#registerOpenPage()>) and [`nsIBrowserHistory.unregisterOpenPage()`](</es/docs/XPCOM_Interface_Reference/nsIBrowserHistory#unregisterOpenPage()>) methods have been removed as part of a performance overhaul in the Places system. You can use the corresponding methods in [`mozIPlacesAutoComplete`](/es/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIPlacesAutoComplete) instead.
-- The [`nsIDOMWindowUtils.wrapDOMFile()`](</es/docs/XPCOM_Interface_Reference/nsIDOMWindowUtils#wrapDOMFile()>) method has been added; this returns a DOM [`File`](/es/docs/Web/API/File) object for a given [`nsIFile`](/es/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFile).
-- The [`nsIChromeFrameMessageManager.removeDelayedFrameScript()`](</es/docs/XPCOM_Interface_Reference/nsIChromeFrameMessageManager#removeDelayedFrameScript()>) method was added to support removing delayed load scripts. Bootstrapped add-ons should use this, at shutdown, to remove any scripts it loaded using [`nsIChromeFrameMessageManager.loadFrameScript()`](</es/docs/XPCOM_Interface_Reference/nsIChromeFrameMessageManager#loadFrameScript()>) with the delayed load flag set. This is exposed to add-ons as `browser.messageManager.removeDelayedFrameScript()`.
-- The [`nsIAppStartup`](/es/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAppStartup) interface has a new `interrupted` attribute, which lets you know if the startup process was interrupted at any point by an interactive prompt. This can be helpful, for example, when timing startups during performance evaluation, to be able to drop numbers from sessions that were interrupted.
-- The [`nsIEditorSpellCheck`](/es/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIEditorSpellCheck) interface has been revised to support per-site selection of spell checker dictionaries.
+- La interfaz `nsISound` tiene una nueva constante, `EVENT_EDITOR_MAX_LEN`. Permite reproducir el sonido del sistema cuando se escriben más caracteres que el máximo permitido en un campo de texto. Actualmente, esto solo se usa en Windows.
+- La interfaz `nsIScriptError2` tiene nuevas propiedades `timeStamp` e `innerWindowID`; además, el método `initWithWindowID()` ahora toma una ID de ventana interna en lugar de una ID de ventana externa.
+- Se agregó el atributo `nsIBidiKeyboard.haveBidiKeyboards`; esto le permite determinar si el sistema tiene al menos un teclado instalado para cada dirección: de izquierda a derecha y de derecha a izquierda.
+- El nuevo atributo `nsIEditor.isSelectionEditable` le permite determinar si el ancla de selección actual es editable. Esto ayuda a respaldar los casos en los que solo se pueden editar partes del documento, al permitirle ver si la selección actual está en una sección editable.
+- Los métodos `nsIBrowserHistory.registerOpenPage()` y `nsIBrowserHistory.unregisterOpenPage()` se han eliminado como parte de una revisión de rendimiento en el sistema de Lugares. Puede usar los métodos correspondientes en `mozIPlacesAutoComplete` en su lugar.
+- Se agregó el método `nsIDOMWindowUtils.wrapDOMFile()`; esto devuelve un objeto DOM {{ domxref("File") }} para un `nsIFile` dado.
+- Se agregó el método `nsIChromeFrameMessageManager.removeDelayedFrameScript()` para admitir la eliminación de código de carga retrasada. Los complementos con arranque deben usar esto, al apagar, para eliminar cualquier código que haya cargado usando `nsIChromeFrameMessageManager.loadFrameScript()` con el indicador de carga retrasada establecido. Esto está expuesto a complementos como `browser.messageManager.removeDelayedFrameScript()`.
+- La interfaz `nsIAppStartup` tiene un nuevo atributo `interrupted`, que le permite saber si el proceso de inicio se interrumpió en algún momento mediante un aviso interactivo. Esto puede ser útil, por ejemplo, cuando se cronometran los inicios durante la evaluación del rendimiento, para poder eliminar los números de las sesiones que se interrumpieron.
+- La interfaz `nsIEditorSpellCheck` se ha revisado para admitir la selección por sitio de diccionarios del corrector ortográfico.
 
-### IDL parser
+### Analizador IDL
 
-The IDL parser no longer includes support for the never fully-implemented notion of unique pointers.
+El analizador IDL ya no incluye soporte para la noción nunca completamente implementada de punteros únicos.
 
-### Build system changes
+### Cambios en el sistema de compilación
 
-- The `--enable-application=standalone` option for building standalone XPConnect has been removed; it hasn't worked since 2007 anyway.
-- Support for building Necko and Transformiix XSLT standalone has been removed; you can no longer use `--enable-application=network` or `--enable-application=content/xslt`.
-- The build system now looks for `.mozconfig` at `$topsrcdir/.mozconfig` or `$topsrcdir/mozconfig`, and nowhere else, unless you override the `.mozconfig` path using the `MOZCONFIG` environment variable.
-- The `xpidl` utility has been replaced in the SDK with [pyxpidl](/es/docs/XPIDL/pyxpidl).
+- Se eliminó la opción `--enable-application=standalone` para construir un XPConnect independiente; no ha funcionado desde 2007 de todos modos.
+- Se eliminó la compatibilidad con la creación independiente de Necko y Transformiix XSLT; ya no puede usar `--enable-application=network` o `--enable-application=content/xslt`.
+- El sistema de compilación ahora busca `.mozconfig` en `$topsrcdir/.mozconfig` o `$topsrcdir/mozconfig`, y en ningún otro lugar, a menos que anule la ruta `.mozconfig` usando la variable de entorno `MOZCONFIG`.
+- Se ha sustituido la utilidad `xpidl` en el SDK por [pyxpidl](/es/docs/XPIDL/pyxpidl).
 
-### Other changes
+### Otros cambios
 
-- The spell checker no longer has an arbitrary 130-character word-length limit on the length of words it will attempt to spell check. This limit was previously in place to prevent crashes that were occurring in the spell checker, but the underlying bugs have since been fixed.
-- You can now register components to add features to the [`window.navigator`](/es/docs/Web/API/Window/navigator) object by using the "JavaScript-navigator-property" category. See [Adding APIs to the navigator object](/es/docs/Developer_Guide/Adding_APIs_to_the_navigator_object) for details and examples.
+- El corrector ortográfico ya no tiene un límite arbitrario de longitud de palabra de 130 caracteres en la longitud de las palabras que intentará revisar. Este límite se estableció anteriormente para evitar bloqueos que ocurrían en el corrector ortográfico, pero los errores subyacentes se han solucionado desde entonces.
+- Ahora puede registrar componentes para agregar funciones al objeto {{ domxref("window.navigator") }} mediante la categoría "JavaScript-navigator-property". Vea [Agregar APIs al objeto navegador](/es/docs/Mozilla/Developer_guide/Adding_APIs_to_the_navigator_object) para detalles y ejemplos.
 
-## See also
+## Véase también
 
-- [Firefox 8 for developers](/es/docs/Mozilla/Firefox/Releases/8)
-- [Firefox 7 for developers](/es/docs/Mozilla/Firefox/Releases/7)
-- [Firefox 6 for developers](/es/docs/Mozilla/Firefox/Releases/6)
-- [Firefox 5 for developers](/es/docs/Mozilla/Firefox/Releases/5)
-- [Firefox 4 for developers](/es/docs/Mozilla/Firefox/Releases/4)
-- [Firefox 3.6 for developers](/es/docs/Mozilla/Firefox/Releases/3.6)
-- [Firefox 3.5 for developers](/es/docs/Mozilla/Firefox/Releases/3.5)
-- [Firefox 3 for developers](/es/docs/Mozilla/Firefox/Releases/3)
-- [Firefox 2 for developers](/es/docs/Mozilla/Firefox/Releases/2)
-- [Firefox 1.5 for developers](/es/docs/Mozilla/Firefox/Releases/1.5)
-
-<section id="Quick_links">
-  <ol>
-    <li class="toggle">
-      <details>
-        <summary>Notas de la Versión para Desarrolladores de Firefox</summary>
-        <ol>
-          <li>
-            <a href="/es/docs/Mozilla/Firefox/Releases"
-              >Notas de la Versión para Desarrolladores de Firefox</a
-            >
-          </li>
-        </ol>
-      </details>
-    </li>
-    <li class="toggle">
-      <details>
-        <summary>Complementos</summary>
-        <ol>
-          <li>
-            <a href="/es/Add-ons/WebExtensions">Extensiones del navegador</a>
-          </li>
-          <li><a href="/es/Add-ons/Themes">Temas</a></li>
-        </ol>
-      </details>
-    </li>
-    <li class="toggle">
-      <details>
-        <summary>Firefox por dentro</summary>
-        <ol>
-          <li><a href="/es/docs/Mozilla/">Proyecto Mozilla (Inglés)</a></li>
-          <li><a href="/es/docs/Mozilla/Gecko">Gecko</a></li>
-          <li>
-            <a href="/es/docs/Mozilla/Firefox/Headless_mode">Headless mode</a>
-          </li>
-          <li>
-            <a href="/es/docs/Mozilla/JavaScript_code_modules"
-              >Modulos de código JavaScript (Inglés)</a
-            >
-          </li>
-          <li><a href="/es/docs/Mozilla/js-ctypes">JS-ctypes (Inglés)</a></li>
-          <li><a href="/es/docs/Mozilla/MathML_Project">Proyecto MathML</a></li>
-          <li><a href="/es/docs/Mozilla/MFBT">MFBT (Inglés)</a></li>
-          <li>
-            <a href="/es/docs/Mozilla/Projects">Proyectos Mozilla (Inglés)</a>
-          </li>
-          <li>
-            <a href="/es/docs/Mozilla/Preferences"
-              >Sistema de Preferencias (Inglés)</a
-            >
-          </li>
-          <li>
-            <a href="/es/docs/Mozilla/WebIDL_bindings"
-              >Ataduras WebIDL (Inglés)</a
-            >
-          </li>
-          <li><a href="/es/docs/Mozilla/Tech/XPCOM">XPCOM</a></li>
-          <li><a href="/es/docs/Mozilla/Tech/XUL">XUL</a></li>
-        </ol>
-      </details>
-    </li>
-    <li class="toggle">
-      <details>
-        <summary>Crear y contribuir</summary>
-        <ol>
-          <li>
-            <a href="/es/docs/Mozilla/Developer_guide/Build_Instructions"
-              >Instrucciones para la compilación</a
-            >
-          </li>
-          <li>
-            <a
-              href="/es/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options"
-              >Configurar las opciones de compilación</a
-            >
-          </li>
-          <li>
-            <a
-              href="/es/docs/Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works"
-              >Cómo funciona el sistema de compilación (Inglés)</a
-            >
-          </li>
-          <li>
-            <a href="/es/docs/Mozilla/Developer_guide/Source_Code/Mercurial"
-              >Código fuente de Mozilla</a
-            >
-          </li>
-          <li><a href="/es/docs/Mozilla/Localization">Localización</a></li>
-          <li><a href="/es/docs/Mozilla/Mercurial">Mercurial (Inglés)</a></li>
-          <li><a href="/es/docs/Mozilla/QA">Garantía de Calidad</a></li>
-          <li>
-            <a href="/es/docs/Mozilla/Using_Mozilla_code_in_other_projects"
-              >Usar Mozilla en otros proyectos (Inglés)</a
-            >
-          </li>
-        </ol>
-      </details>
-    </li>
-  </ol>
-</section>
+{{Firefox_for_developers('8')}}

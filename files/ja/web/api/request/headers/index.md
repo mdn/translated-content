@@ -18,7 +18,7 @@ l10n:
 次のスニペットは、{{domxref("Request.Request()")}} コンストラクターを使って（スクリプトと同じディレクトリーにある画像ファイルのために）新しいリクエストを生成してから、リクエストの headers を変数に保存しています。
 
 ```js
-const myRequest = new Request('flowers.jpg');
+const myRequest = new Request("flowers.jpg");
 const myHeaders = myRequest.headers; // Headers {}
 ```
 
@@ -26,18 +26,18 @@ const myHeaders = myRequest.headers; // Headers {}
 
 ```js
 const myHeaders = new Headers();
-myHeaders.append('Content-Type', 'image/jpeg');
+myHeaders.append("Content-Type", "image/jpeg");
 
 const myInit = {
-  method: 'GET',
+  method: "GET",
   headers: myHeaders,
-  mode: 'cors',
-  cache: 'default'
+  mode: "cors",
+  cache: "default",
 };
 
-const myRequest = new Request('flowers.jpg', myInit);
+const myRequest = new Request("flowers.jpg", myInit);
 
-const myContentType = myRequest.headers.get('Content-Type'); // returns 'image/jpeg'
+const myContentType = myRequest.headers.get("Content-Type"); // returns 'image/jpeg'
 ```
 
 ## 仕様書

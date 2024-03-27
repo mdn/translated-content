@@ -96,13 +96,3 @@ overlay.style.backgroundColor = xxx;
 Если вы проводите эту оценку в рамках организованного курса, вы должны уметь отдать свою работу своему учителю/наставнику для маркировки. Если вы самообучаетесь, то вы можете получить руководство по маркировке довольно легко, задав тему [обсуждения об этом упражнении](https://discourse.mozilla.org/t/image-gallery-assessment/24687) или в IRC-канале [#mdn](irc://irc.mozilla.org/mdn) в [Mozilla IRC](https://wiki.mozilla.org/IRC). Сначала попробуйте упражнение - ничего не выиграть от обмана!
 
 {{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
-
-## В этом модуле
-
-- [Принятие решений в вашем коде — условные конструкции](/ru/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [Зацикливание кода](/ru/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [Функции — Переиспользуемые блоки кода](/ru/docs/Learn/JavaScript/Building_blocks/Functions)
-- [Создайте свою собственную функцию](/ru/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [Возвращаемое значение функции](/ru/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [Введение в события](/ru/docs/Learn/JavaScript/Building_blocks/%D0%A1%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D1%8F)
-- [Создание галереи](/ru/docs/Learn/JavaScript/Building_blocks/Image_gallery)

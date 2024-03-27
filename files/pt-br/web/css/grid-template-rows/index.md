@@ -113,15 +113,13 @@ Esta propriedade pode ser especificada como:
 
 ## Specifications
 
-| Specification                                                                  | Status                 | Comment            |
-| ------------------------------------------------------------------------------ | ---------------------- | ------------------ |
-| {{SpecName("CSS3 Grid", "#propdef-grid-template-rows", "grid-template-rows")}} | {{Spec2("CSS3 Grid")}} | Initial definition |
+{{Specifications}}
 
 {{cssinfo}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.grid-template-rows")}}
+{{Compat}}
 
 ## See also
 

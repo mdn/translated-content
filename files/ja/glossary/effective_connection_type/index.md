@@ -3,6 +3,8 @@ title: Effective connection type (有効接続種別)
 slug: Glossary/Effective_connection_type
 ---
 
+{{GlossarySidebar}}
+
 **有効接続種別** (ECT) とは、測定されたネットワーク性能のことで、実際の接続がテザリングされたブロードバンドや WiFi であっても、ブラウザーのページのリクエストの時間とと有効接続種別に基づいて、 3G などの携帯通信接続種別を返します。
 
 観測されたラウンドトリップと下り接続速度の値を使用して、 '`slow-2g`', '`2g`', '`3g`', '`4g`' の値が特定されます。
@@ -20,7 +22,7 @@ slug: Glossary/Effective_connection_type
 navigator.connection.effectiveType;
 ```
 
-## See Also
+## 関連情報
 
 - [Network Information API](/ja/docs/Web/API/Network_Information_API)
 - {{domxref('NetworkInformation')}}

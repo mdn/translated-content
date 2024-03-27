@@ -62,4 +62,4 @@ slug: Web/XSLT/Element/stylesheet
 
 ## ブラウザーの互換性
 
-{{Compat("xslt.elements.stylesheet")}}
+{{Compat}}

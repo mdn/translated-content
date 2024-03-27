@@ -106,7 +106,7 @@ lots of text...<p><a name="bottom">bottom</a>?arg=val
 
 ## Совместимость с браузерами
 
-{{compat("http.data-url")}}
+{{Compat}}
 
 ## Смотрите также
 

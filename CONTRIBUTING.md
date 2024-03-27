@@ -63,7 +63,7 @@ Once that is done, you will also need to fork and clone this repository by follo
    cd /path/to/content
    ```
 
-2. Next, define an environment variable in a `.env` file called `CONTENT_TRANSLATED_ROOT` containing the path to the _translated-content_ repo’s `files` directory:
+2. Next, define an environment variable in a `.env` file called `CONTENT_TRANSLATED_ROOT` containing the path to the _translated-content_ repo's `files` directory:
 
    ```bash
    echo CONTENT_TRANSLATED_ROOT=/path/to/translated-content/files >> .env

@@ -30,7 +30,7 @@ captureStream()
 この例では、イベントハンドラーが確立されているため、ボタンをクリックすると、ID が `"playback"` のメディア要素のコンテンツの {{domxref("MediaStream")}} へのキャプチャを開始します。 これにより、WebRTC を介したストリーミングのソースなど、他の目的にストリームを使用して、動画通話中に録画済みの動画を他の人と共有できるようになります。
 
 ```js
-document.querySelector('.playAndRecord').addEventListener('click', () => {
+document.querySelector(".playAndRecord").addEventListener("click", () => {
   const playbackElement = document.getElementById("playback");
   const captureStream = playbackElement.captureStream();
   playbackElement.play();

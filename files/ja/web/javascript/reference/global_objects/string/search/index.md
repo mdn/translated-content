@@ -33,7 +33,7 @@ search(regexp)
 
 `String.prototype.search()` 自体の実装はとてもシンプルです。引数の文字列を最初の引数として `Symbol.search` メソッドを呼び出すだけです。実際の実装は [`RegExp.prototype[@@search]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@search) から来ています。
 
-`regexp` の `g` フラグは `search()` の結果には影響がなく、検索は常に正規表現の `lastIndex` が 0 である可能用に行われます。`search()` の動作についての詳しい情報は、[`RegExp.prototype[@@search]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@search) を参照してください。
+`regexp` の `g` フラグは `search()` の結果には影響がなく、検索は常に正規表現の `lastIndex` が 0 であるかのように行われます。`search()` の動作についての詳しい情報は、[`RegExp.prototype[@@search]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@search) を参照してください。
 
 パターンが見つかるかどうかを知りたい場合、かつ、文字列内のインデックスを知りたい場合は、`search()` を使用してください。
 
@@ -68,4 +68,4 @@ console.log(str.search(reDot)); // ドット記号 '.' が見つからないの�
 - [JavaScript の正規表現の使用](/ja/docs/Web/JavaScript/Guide/Regular_expressions)
 - {{jsxref("String.prototype.match()")}}
 - {{jsxref("RegExp.prototype.exec()")}}
-- [`RegExp.prototype[@@search]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@search)
+- [`RegExp.prototype[@@search]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@search)

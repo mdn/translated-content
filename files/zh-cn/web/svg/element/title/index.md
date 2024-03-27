@@ -37,11 +37,11 @@ SVG 绘图中的每个窗口元素或图形元素都可以提供一个`title`描
 
 ### 专有属性
 
-_没有专有属性_
+_没有专有属性。_
 
 ## DOM 接口
 
-该元素实现了[`SVGTitleElement`](/zh-CN/DOM/SVGTitleElement)接口。
+该元素实现了 [`SVGTitleElement`](/zh-CN/DOM/SVGTitleElement) 接口。
 
 ## 浏览器兼容性
 

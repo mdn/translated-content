@@ -30,7 +30,7 @@ TypeError: Circular reference in value argument not supported (Edge)
 次のような循環構造体では、
 
 ```js
-var circularReference = {otherData: 123};
+var circularReference = { otherData: 123 };
 circularReference.myself = circularReference;
 ```
 

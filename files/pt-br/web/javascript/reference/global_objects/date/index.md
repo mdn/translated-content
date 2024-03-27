@@ -3,7 +3,7 @@ title: Date
 slug: Web/JavaScript/Reference/Global_Objects/Date
 ---
 
-{{JSRef("Global_Objects", "Date")}}
+{{JSRef}}
 
 ## Resumo
 
@@ -167,13 +167,8 @@ retornoDaSuaFuncao = imprimirTempoDecorrido(suaFuncao);
 
 ## Especificações
 
-| Especificação                                        | Estado               | Comentário                                         |
-| ---------------------------------------------------- | -------------------- | -------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date-objects', 'Date')}} | {{Spec2('ESDraft')}} |                                                    |
-| {{SpecName('ES6', '#sec-date-objects', 'Date')}}     | {{Spec2('ES6')}}     |                                                    |
-| {{SpecName('ES5.1', '#sec-15.9', 'Date')}}           | {{Spec2('ES5.1')}}   |                                                    |
-| {{SpecName('ES1')}}                                  | {{Spec2('ES1')}}     | Definição inicial. Implementado no JavaScript 1.1. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date")}}
+{{Compat}}

@@ -1,6 +1,8 @@
 ---
 title: transform
 slug: Web/CSS/transform
+l10n:
+  sourceCommit: fca9bb892a6016c09620a1e3aed3d84ce3780615
 ---
 
 {{CSSRef}}
@@ -9,9 +11,9 @@ slug: Web/CSS/transform
 
 {{EmbedInteractiveExample("pages/css/transform.html")}}
 
-このプロパティに `none` 以外の値が設定されていると、[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)が作成されます。この場合、その要素はその中に含まれる `position: fixed;` または `position: absolute;` であるすべての要素の[包含ブロック](/ja/docs/Web/CSS/Containing_block)として扱われます。
+このプロパティに `none` 以外の値が設定されていると、[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)が作成されます。この場合、その要素はその中に含まれる `position: fixed;` または `position: absolute;` であるすべての要素の[包含ブロック](/ja/docs/Web/CSS/Containing_block)として扱われます。
 
-> **警告:** 座標変換可能な要素のみが `transform` の対象になります。つまり、レイアウトが CSS ボックスモデルによって管理される、[置換要素でないインラインボックス](/ja/docs/Web/CSS/Visual_formatting_model#inline-level_elements_and_inline_boxes)、[表の列ボックス](/ja/docs/Web/HTML/Element/col)、[表の列グループボックス](/ja/docs/Web/HTML/Element/colgroup)を除くすべての要素です。
+> **警告:** 座標変換可能な要素のみが `transform` の対象になります。つまり、レイアウトが CSS ボックスモデルによって管理される、[置換要素でないインラインボックス](/ja/docs/Glossary/Inline-level_content)、[表の列ボックス](/ja/docs/Web/HTML/Element/col)、[表の列グループボックス](/ja/docs/Web/HTML/Element/colgroup)を除くすべての要素です。
 
 ## 構文
 
@@ -50,17 +52,18 @@ transform: perspective(500px) translate(10px, 0, 20px) rotateY(3deg);
 transform: inherit;
 transform: initial;
 transform: revert;
+transform: revert-layer;
 transform: unset;
 ```
 
 `transform` プロパティには、キーワード値 `none` か 1 つ以上の `<transform-function>` の値のいずれかが指定されます。
 
-複数の関数値に {{cssxref("transform-function/perspective()", "perspective()")}} が含まれる場合は、先頭に置く必要があります。
+複数の関数値に {{cssxref("transform-function/perspective", "perspective()")}} が含まれる場合は、先頭に置く必要があります。
 
 ### 値
 
 - {{cssxref("&lt;transform-function&gt;")}}
-  - : 適用される 1 つ以上の [CSS 座標変換関数](/ja/docs/Web/CSS/transform-function)です。座標変換関数は、左から右へ順に重ねられ、つまり右から左の順に座標変換の合成の効果が適用されます。
+  - : 適用される 1 つ以上の [CSS 座標変換関数](/ja/docs/Web/CSS/transform-function)です。座標変換関数は、左から右へ順に重ねられ、つまり[右から左の順に座標変換の合成の効果が適用されます](#座標変換の順序)。
 - `none`
   - : 座標変換を何も適用しないことを指定します。
 
@@ -68,11 +71,11 @@ transform: unset;
 
 拡大や縮小のアニメーションは、特定の種類の偏頭痛を引き起こす原因になりやすいので、アクセシビリティの問題になることがあります。ウェブサイトにこのようなアニメーションを含める必要がある場合は、できればサイト全体で、ユーザーがアニメーションを止める制御ができるようしてください。
 
-また、 {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} メディア特性を使用することを検討してください。これを使用して[メディアクエリー](/ja/docs/Web/CSS/Media_queries)を書けば、ユーザーがシステムの設定でアニメーションを減らすよう指定した場合にアニメーションを止めることができます。
+また、 {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} メディア特性を使用することを検討してください。これを使用して[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)を書けば、ユーザーがシステムの設定でアニメーションを減らすよう指定した場合にアニメーションを止めることができます。
 
 詳しくは以下の文書を参照してください。
 
-- [MDN WCAG の理解、ガイドライン 2.3 の解説](/ja/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.3_%E2%80%94_Seizures_and_Physical_Reactions_Do_not_design_content_in_a_way_that_is_known_to_cause_seizures_or_physical_reactions)
+- [MDN WCAG の理解、ガイドライン 2.3 の解説](/ja/docs/Web/Accessibility/Understanding_WCAG/Operable#ガイドライン_2.3_—_発作と身体的反応_発作や身体的反応を引き起こすことが知られている方法でコンテンツをデザインしないでください)
 - [Understanding Success Criterion 2.3.3 | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions)
 
 ## 公式定義
@@ -85,12 +88,12 @@ transform: unset;
 
 ## 例
 
-<h3 id="Translating_and_rotating_an_element">要素の移動と回転</h3>
+### 要素の移動と回転
 
 #### HTML
 
 ```html
-<div>Transformed element</div>
+<div>座標変換された要素</div>
 ```
 
 #### CSS
@@ -106,11 +109,75 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("Translating_and_rotating_an_element", "400", "160")}}
+{{EmbedLiveSample("要素の移動と回転", "400", "160")}}
+
+### 座標変換の順序
+
+座標変換関数の順番は重要です。この例では、 2 つのボックスが同じ値で回転および平行移動されています。座標変換関数の順序だけが異なっています。
+
+#### HTML
+
+```html
+<div class="original"></div>
+<div class="one">1</div>
+<div class="two">2</div>
+```
+
+#### CSS
+
+```css hidden
+div {
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  left: 200px;
+  top: 50px;
+  font-size: 4rem;
+  line-height: 200px;
+  text-align: center;
+}
+.original {
+  border: 1px dashed;
+}
+.original:before,
+.original:after {
+  content: "";
+  position: absolute;
+  top: 100px;
+  width: 500px;
+  left: -150px;
+  height: 1px;
+  border-top: 2px dotted;
+}
+.original:after {
+  transform: rotate(135deg);
+}
+.one {
+  background-color: #ccc;
+}
+.two {
+  background-color: #d6bb72;
+}
+```
+
+```css
+.one {
+  transform: translateX(200px) rotate(135deg);
+}
+.two {
+  transform: rotate(135deg) translateX(200px);
+}
+```
+
+#### 結果
+
+{{EmbedLiveSample("Transform_order", "400", "460")}}
+
+要素が平行移動される前に回転された場合、平行移動の方向は回転された軸になります。この軸は点線で示されています。
 
 ### その他の例
 
-その他の例は、[CSS 座標変換の使用](/ja/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)および {{cssxref("&lt;transform-function&gt;")}} をご覧ください。
+その他の例は、[CSS 座標変換の使用](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)および {{cssxref("&lt;transform-function&gt;")}} をご覧ください。
 
 ## 仕様書
 
@@ -122,6 +189,7 @@ div {
 
 ## 関連情報
 
-- [CSS 座標変換の使用](/ja/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- [CSS 座標変換の使用](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
 - {{cssxref("&lt;transform-function&gt;")}} データ型にすべての座標変換関数の説明があります
+- 独立した CSS プロパティ: {{cssxref('translate')}}, {{cssxref('rotate')}}, {{cssxref('scale')}} （`skew` プロパティはありません）
 - CSS 座標変換機能を視覚化するオンラインツール: [CSS Transform Playground](https://css-transform.moro.es/)

@@ -17,6 +17,6 @@ slug: Web/HTML/Global_attributes/style
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - 所有[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)

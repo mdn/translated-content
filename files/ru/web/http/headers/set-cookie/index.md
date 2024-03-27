@@ -159,7 +159,7 @@ Set-Cookie: __Host-id=1; Secure; Path=/; domain=example.com
 | {{RFC("6265", "Set-Cookie", "4.1")}}                                                             | HTTP State Management Mechanism                               |
 | [draft-ietf-httpbis-rfc6265bis-02](https://tools.ietf.org/html/draft-ietf-httpbis-rfc6265bis-02) | Cookie Prefixes, Same-Site Cookies, and Strict Secure Cookies |
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -115,9 +115,8 @@ function generatePrimes(quota) {
 document.querySelector("#generate").addEventListener("click", () => {
   const quota = document.querySelector("#quota").value;
   const primes = generatePrimes(quota);
-  document.querySelector(
-    "#output",
-  ).textContent = `Finished generating ${quota} primes!`;
+  document.querySelector("#output").textContent =
+    `Finished generating ${quota} primes!`;
 });
 
 document.querySelector("#reload").addEventListener("click", () => {
@@ -183,9 +182,8 @@ function generatePrimes(quota) {
 document.querySelector("#generate").addEventListener("click", () => {
   const quota = document.querySelector("#quota").value;
   const primes = generatePrimes(quota);
-  document.querySelector(
-    "#output",
-  ).textContent = `Finished generating ${quota} primes!`;
+  document.querySelector("#output").textContent =
+    `Finished generating ${quota} primes!`;
 });
 
 document.querySelector("#reload").addEventListener("click", () => {

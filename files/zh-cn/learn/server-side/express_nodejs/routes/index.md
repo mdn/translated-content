@@ -10,7 +10,7 @@ slug: Learn/Server-side/Express_Nodejs/routes
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         回顾
         <a href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction"
@@ -392,28 +392,28 @@ app.use("/catalog", catalogRouter); // 将 catalog 路由添加进中间件链
   DEBUG=express-locallibrary-tutorial:* npm run devstart
   ```
 
-> **备注：** 以上命令只对 bash 有效，要在 Windows 上使用 bash，最简单的方法就是安装 Git。（详情参见 [教程 2 相关译注](/zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website#使用应用生成器)）
+> **备注：** 以上命令只对 bash 有效，要在 Windows 上使用 bash，最简单的方法就是安装 Git。（详情参见[教程 2 相关译注](/zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website#使用应用生成器)）
 
 接下来浏览上面一些 URL，确保不会收到错误页面（HTTP 404）。可以尝试以下示例：
 
-- <http://localhost:3000/>
-- <http://localhost:3000/catalog>
-- <http://localhost:3000/catalog/books>
-- [http://localhost:3000/catalog/bookinstances](http://localhost:3000/catalog/bookinstances/)
-- [http://localhost:3000/catalog/authors](http://localhost:3000/catalog/authors/)
-- [http://localhost:3000/catalog/genres](http://localhost:3000/catalog/genres/)
-- [http://localhost:3000/catalog/book/5846437593935e2f8c2aa226](http://localhost:3000/catalog/book/5846437593935e2f8c2aa226/)
-- <http://localhost:3000/catalog/book/create>
+- `http://localhost:3000/`
+- `http://localhost:3000/catalog`
+- `http://localhost:3000/catalog/books`
+- `http://localhost:3000/catalog/bookinstances/`
+- `http://localhost:3000/catalog/authors/`
+- `http://localhost:3000/catalog/genres/`
+- `http://localhost:3000/catalog/book/5846437593935e2f8c2aa226`
+- `http://localhost:3000/catalog/book/create`
 
 ## 小结
 
 网站的路由已创建完毕，接下来的教程将把完整的实现填入控制器框架中。藉此来学习 Express 路由的基础知识，以及组织路由和控制器的一些方式。
 
-下一节将使用视图 (模板) 和模型里的信息创建一个欢迎页面。
+下一节将使用视图（模板）和模型里的信息创建一个欢迎页面。
 
 ## 参见
 
-- [路由基础](http://www.expressjs.com.cn/starter/basic-routing.html) (Express 官方文档)
-- [路由简介](http://expressjs.com/en/guide/routing.html) (Express 官方文档)
+- [基本路由](https://expressjs.com/zh-cn/starter/basic-routing.html)（Express 文档）
+- [路由指南](https://expressjs.com/zh-cn/guide/routing.html)（Express 文档）
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs")}}

@@ -2,7 +2,7 @@
 title: String.prototype.isWellFormed()
 slug: Web/JavaScript/Reference/Global_Objects/String/isWellFormed
 l10n:
- sourceCommit: 5635446aa0127d686183ddd4fd5adcc34be567da
+  sourceCommit: 5635446aa0127d686183ddd4fd5adcc34be567da
 ---
 
 {{JSRef}}

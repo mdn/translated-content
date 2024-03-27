@@ -9,6 +9,8 @@ slug: Web/CSS/overflow-anchor
 
 スクロールアンカリングの動作は、対応しているすべてのブラウザーで既定で有効になっています。したがって、このプロパティを変更するのは通常、文書または文書の一部でスクロールアンカリングによって操作上の問題が発生し、この動作をオフにする必要がある場合のみです。
 
+{{EmbedInteractiveExample("pages/css/overflow-anchor.html")}}
+
 ## 構文
 
 ```css

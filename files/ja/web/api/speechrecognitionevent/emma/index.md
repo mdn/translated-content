@@ -23,7 +23,7 @@ recognition.onresult = (event) => {
   diagnostic.textContent = `Result received: ${color}.`;
   bg.style.backgroundColor = color;
   console.log(event.emma);
-}
+};
 ```
 
 ## ブラウザーの互換性

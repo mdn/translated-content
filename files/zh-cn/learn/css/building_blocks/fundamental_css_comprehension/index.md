@@ -3,14 +3,14 @@ title: 基本的 CSS 理解
 slug: Learn/CSS/Building_blocks/Fundamental_CSS_comprehension
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/CSS/Introduction_to_CSS/Debugging_CSS", "Learn/CSS/Introduction_to_CSS")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper", "Learn/CSS/Building_blocks")}}
 
 你已经在这个模块中了解到了很多内容，所以当你达到这个模块的最后一篇文章的时候，感觉一定非常不错吧！在你继续之前的最后一步，就是完成对于这个模块的测验。本次测验涉及到几个相关的练习，你必须按顺序完成，这样你才能设计出最终的成品：一张名片/游戏玩家卡片/社交媒体的简介。
 
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">学习本章的前提条件：</th>
+      <th scope="row">前提：</th>
       <td>在尝试这个测验之前，你应该已经完成了这个模块中所有文章的学习。</td>
     </tr>
     <tr>
@@ -61,7 +61,7 @@ slug: Learn/CSS/Building_blocks/Fundamental_CSS_comprehension
 - 为页脚中的 `<p>` 编写一个规则集，使它的有效字体大小为 15px (使用 `em`表达) 以及一个适当的行高将其放置在页面的内容框的中央。回想起来，内容框高度应该是 30px，你所有需要的数字都已经给你了，所以可以计算出行高。
 - 最为最后一步，为 `<article>` 中的段落设置一个合适的 padding 值，让它和 `<h2>` 以及页脚的段落左边缘对齐，并将其颜色设置得便于阅读。
 
-> **备注：** 记住第二条规则集会将 `font-size: 10px;` 设置在 `<html>` 元素上 — 这意味着 `<html>` 的任何后代中，一个 em 将会等于 10px 而不是默认的 16px。(这是当然的，如果在层次结构中，有不同的 `font-size` 设置于其上，问题中的后代没有任何的祖先位于 em 元素和 `<html>` 之间。这可能会影响您所需要的值，尽管在这个简单的示例中，这不是问题。)
+> **备注：** 记住第二条规则集会将 `font-size: 10px;` 设置在 `<html>` 元素上 — 这意味着 `<html>` 的任何后代中，一个 em 将会等于 10px 而不是默认的 16px。(这是当然的，如果在层次结构中，有不同的 `font-size` 设置于其上，问题中的后代没有任何的祖先位于 em 元素和 `<html>` 之间。这可能会影响你所需要的值，尽管在这个简单的示例中，这不是问题。)
 
 其他事情要考虑：
 
@@ -81,6 +81,6 @@ slug: Learn/CSS/Building_blocks/Fundamental_CSS_comprehension
 
 ## 评估
 
-如果您将此评估作为有组织的课程的一部分，您应该能够将您的工作交给您的老师/导师进行打分。如果您是自学的，那么您可以通过询问 [Learning Area Discourse thread](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294), 或在 [#mdn](irc://irc.mozilla.org/mdn)的 IRC 频道 [Mozilla IRC](https://wiki.mozilla.org/IRC) 中轻松获得打分指南。首先尝试练习 - 作弊学不到什么！
+如果你将此评估作为有组织的课程的一部分，你应该能够将你的工作交给你的老师/导师进行打分。如果你是自学的，那么你可以通过询问 [Learning Area Discourse thread](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294), 或在 [#mdn](irc://irc.mozilla.org/mdn)的 IRC 频道 [Mozilla IRC](https://wiki.mozilla.org/IRC) 中轻松获得打分指南。首先尝试练习 - 作弊学不到什么！
 
-{{PreviousMenu("Learn/CSS/Introduction_to_CSS/Debugging_CSS", "Learn/CSS/Introduction_to_CSS")}}
+{{PreviousMenuNext("Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper", "Learn/CSS/Building_blocks")}}

@@ -49,7 +49,7 @@ paymentRequest.addEventListener(
     };
     event.updateWith({ total });
   },
-  false
+  false,
 );
 ```
 

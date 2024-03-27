@@ -24,7 +24,7 @@ HTTP の **`418 I'm a teapot`** クライアントエラーレスポンスコー
 
 ## ブラウザーの互換性
 
-{{Compat("http.status.418")}}
+{{Compat}}
 
 ## 関連情報
 

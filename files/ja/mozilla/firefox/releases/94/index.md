@@ -1,6 +1,8 @@
 ---
 title: Firefox 94 for developers
 slug: Mozilla/Firefox/Releases/94
+l10n:
+  sourceCommit: 381c51574a3e6a07ee09c63493452440f046038d
 ---
 
 {{FirefoxSidebar}}
@@ -11,15 +13,15 @@ slug: Mozilla/Firefox/Releases/94
 
 ### HTML
 
-変更なし。
+重要な変更なし。
 
 ### CSS
 
-変更なし。
+重要な変更なし。
 
 ### JavaScript
 
-変更なし。
+重要な変更なし。
 
 ### API
 
@@ -27,13 +29,18 @@ slug: Mozilla/Firefox/Releases/94
 
 #### DOM
 
-- 開発者が [`HTMLElement.enterkeyhint`](/ja/docs/Web/API/HTMLElement/enterkeyhint) または [`enterkeyhint`](/ja/docs/Web/HTML/Global_attributes/enterkeyhint) グローバル属性を使用して、仮想キーボードで使用する Enter キーのラベルやアイコンのヒントを与えられるようになりました ([Firefox バグ 1648332](https://bugzil.la/1648332))。
-- {{domxref("HTMLScriptElement.supports()")}} 静的メソッドをサポートしました。JavaScript モジュールやクラシックスクリプトのような、特定の種類のスクリプトをブラウザーがサポートしているかを確認するための、シンプルかつ統一された手段を提供をします ([Firefox バグ 1729239](https://bugzil.la/1729239))。
+- 開発者が [`HTMLElement.enterkeyhint`](/ja/docs/Web/API/HTMLElement/enterKeyHint) または [`enterkeyhint`](/ja/docs/Web/HTML/Global_attributes/enterkeyhint) グローバル属性を使用して、仮想キーボードで使用する Enter キーのラベルやアイコンのヒントを与えられるようになりました ([Firefox バグ 1648332](https://bugzil.la/1648332))。
+- {{domxref("HTMLScriptElement.supports_static", "HTMLScriptElement.supports()")}} 静的メソッドをサポートしました。JavaScript モジュールやクラシックスクリプトのような、特定の種類のスクリプトをブラウザーがサポートしているかを確認するための、シンプルかつ統一された手段を提供をします ([Firefox バグ 1729239](https://bugzil.la/1729239))。
 - {{domxref("ShadowRoot.delegatesFocus")}} プロパティをサポートしました。[shadow DOM を追加したとき](/ja/docs/Web/API/Element/attachShadow) に `delegatesFocus` プロパティが設定されていたかをコードで確認できます ([Firefox バグ 1413836](https://bugzil.la/1413836))。
 
 ### WebDriver conformance (Marionette)
 
 - chrome スコープが有効であるときに、`WebDriver:GetWindowHandle` および `WebDriver:GetWindowHandles` がタブの代わりにブラウザーウィンドウのハンドラーを返すようになりました ([Firefox バグ 1729291](https://bugzil.la/1729291))。
+
+### HTTP
+
+- [`Clear-Site-Data`](/ja/docs/Web/HTTP/Headers/Clear-Site-Data) レスポンスヘッダーの `cache` ディレクティブは既定では無効になっています。
+  これは環境設定 `privacy.clearsitedata.cache.enabled` ([Firefox bug 1729291](https://bugzil.la/1729291)) を使って有効にできます。
 
 ## アドオン開発者向けの変更点一覧
 

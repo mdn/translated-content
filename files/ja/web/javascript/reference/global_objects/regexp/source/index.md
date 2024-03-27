@@ -1,33 +1,36 @@
 ---
 title: RegExp.prototype.source
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/source
+l10n:
+  sourceCommit: 16bacf2194dc9e9ff6ee5bcc65316547cf88a8d9
 ---
 
 {{JSRef}}
 
-**`source`** プロパティは、正規表現オブジェクトのソーステキストを含む {{jsxref("String")}} を返します。これには、両端の 2 つのスラッシュやフラグは含まれません。
+**`source`** は {{jsxref("RegExp")}} のアクセサープロパティで、正規表現オブジェクトのソーステキストの入った文字列を返します。これには、両端の 2 つのスラッシュやフラグは含まれません。
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-source.html")}}{{js_property_attributes(0, 0, 1)}}
+{{EmbedInteractiveExample("pages/js/regexp-prototype-source.html")}}
+
+## 解説
+
+概念的には、`source` プロパティは正規表現リテラルの 2 つのスラッシュの間のテキストです。この言語では、返される文字列が適切にエスケープされている必要があり、`source` の両端にスラッシュを連結すると、解析可能な正規表現リテラルが形成されます。例えば、`new RegExp("/")` の場合、`source` は `\\/` です。これは `/` を生成し、結果のリテラルは `///` です。同様に、[改行文字](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#改行文字)はすべてエスケープされます。結果が解析可能である限り、他にも文字は必要ありません。空文字列の正規表現では `(?:)` という文字列を返します。
 
 ## 例
 
 ### source の使用
 
 ```js
-var regex = /fooBar/ig;
+const regex = /fooBar/gi;
 
-console.log(regex.source); // "fooBar", /.../ と "ig" は含まれません。
+console.log(regex.source); // "fooBar", /.../ と "gi" は含まれません。
 ```
 
 ### 空の正規表現とエスケープ
 
-ECMAScript 5 から、`source` プロパティは空の正規表現に対して空文字を返さなくなりました。代わりに、`(?:)` 文字列を返します。加えて、 ("\n" のような) 行区切りはエスケープされます。
-
 ```js
 new RegExp().source; // "(?:)"
 
-new RegExp('\n').source === '\n';  // ES5 以前で、true
-new RegExp('\n').source === '\\n'; // ES5 から、true
+new RegExp("\n").source === "\\n"; // true。ES5 以降
 ```
 
 ## 仕様書
@@ -36,7 +39,7 @@ new RegExp('\n').source === '\\n'; // ES5 から、true
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.RegExp.source")}}
+{{Compat}}
 
 ## 関連情報
 

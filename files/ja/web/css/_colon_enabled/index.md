@@ -14,6 +14,8 @@ input:enabled {
 }
 ```
 
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-enabled.html", "tabbed-standard")}}
+
 ## 構文
 
 ```

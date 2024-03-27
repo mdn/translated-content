@@ -1,8 +1,9 @@
 ---
 title: "WebSocket: close イベント"
+short-title: close
 slug: Web/API/WebSocket/close_event
 l10n:
-  sourceCommit: 4f0f7386262363103a3e9cf482bb348d8570b331
+  sourceCommit: eda49877b9078b24cd18f794470e5e225add9b94
 ---
 
 {{APIRef}}
@@ -14,9 +15,9 @@ l10n:
 イベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('close', (event) => { })
+addEventListener("close", (event) => {});
 
-onclose = (event) => { }
+onclose = (event) => {};
 ```
 
 ## イベント型
@@ -41,8 +42,8 @@ _下記に示したプロパティに加えて、親インターフェイスで�
 接続が閉じられる時が分かれば、 UI を更新させたり、閉じた接続についてのデータを保存したりすることができます。以下の例では `exampleSocket` と呼ばれる変数が開かれた `WebSocket` を参照しており、このハンドラーが、ソケットが閉じられた場面を扱います。
 
 ```js
-exampleSocket.addEventListener('close', (event) => {
-  console.log('The connection has been closed successfully.');
+exampleSocket.addEventListener("close", (event) => {
+  console.log("The connection has been closed successfully.");
 });
 ```
 
@@ -50,7 +51,7 @@ exampleSocket.addEventListener('close', (event) => {
 
 ```js
 exampleSocket.onclose = (event) => {
-  console.log('The connection has been closed successfully.');
+  console.log("The connection has been closed successfully.");
 };
 ```
 

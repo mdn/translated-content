@@ -1,5 +1,5 @@
 ---
-title: 변수
+title: 필요한 정보를 저장하기 - 변수
 slug: Learn/JavaScript/First_steps/Variables
 l10n:
   sourceCommit: 8d0cbeacdc1872f7e4d966177151585c58fb879e
@@ -24,7 +24,7 @@ l10n:
 
 ## 필요한 도구
 
-이번 수업에서 콘텐츠에 대한 이해도를 테스트하고자, 코드를 입력하라는 요청을 받게 될 것입니다. 만약 데스크탑 브라우저를 사용한다면, 코드를 실행하기 가장 좋은 프로그램은 브라우저의 자바스크립트 콘솔창입니다. 콘솔창의 사용법에 대해 알고자 한다면 [브라우저 개발자 도구](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools)를 참고하시면 됩니다.
+이번 수업에서 콘텐츠에 대한 이해도를 테스트하고자, 코드를 입력하라는 요청을 받게 될 것입니다. 만약 데스크탑 브라우저를 사용한다면, 코드를 실행하기 가장 좋은 프로그램은 브라우저의 JavaScript 콘솔창입니다. 콘솔창의 사용법에 대해 알고자 한다면 [브라우저 개발자 도구](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools)를 참고하시면 됩니다.
 
 ## 변수란?
 
@@ -35,19 +35,22 @@ l10n:
 간단한 예시를 살펴보겠습니다.
 
 ```html
-<button>Press me</button>
+<button id="button_A">Press me</button>
+<h3 id="heading_A"></h3>
 ```
 
 ```js
-const button = document.querySelector("button");
+const buttonA = document.querySelector("#button_A");
+const headingA = document.querySelector("#heading_A");
 
-button.onclick = function () {
-  let name = prompt("What is your name?");
-  alert("Hello " + name + ", nice to see you!");
+buttonA.onclick = () => {
+  const name = prompt("What is your name?");
+  alert(`Hello ${name}, nice to see you!`);
+  headingA.textContent = `Welcome ${name}`;
 };
 ```
 
-{{ EmbedLiveSample('What_is_a_variable', '100%', 50, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('Variable_example', '100%', 120) }}
 
 이 예제에서 버튼을 누르면 일부 코드가 실행됩니다. 첫 번째 줄은 사용자가 이름을 입력하도록 요청한 화면에 창을 띄운 다음, name 변수에 입력 값을 저장하는 코드입니다. 두 번째 줄은 변수 값에서 가져온, 사용자가 입력한 이름이 포함된 환영 메시지를 창에 띄어주는 코드입니다. 세 번째 줄은 해당 이름이 페이지에 표시되는 것을 보여줍니다.
 
@@ -61,22 +64,16 @@ button.onclick = function () {
 ```
 
 ```js example-bad
-let name = prompt("What is your name?");
+const buttonB = document.querySelector("#button_B");
+const headingB = document.querySelector("#heading_B");
 
-if (name === "Adam") {
-  alert("Hello Adam, nice to see you!");
-} else if (name === "Alan") {
-  alert("Hello Alan, nice to see you!");
-} else if (name === "Bella") {
-  alert("Hello Bella, nice to see you!");
-} else if (name === "Bianca") {
-  alert("Hello Bianca, nice to see you!");
-} else if (name === "Chris") {
-  alert("Hello Chris, nice to see you!");
-}
-
-// 등등...
+buttonB.onclick = () => {
+  alert(`Hello ${prompt("What is your name?")}, nice to see you!`);
+  headingB.textContent = `Welcome ${prompt("What is your name?")}`;
+};
 ```
+
+{{ EmbedLiveSample('Without_a_variable', '100%', 120) }}
 
 우리가 사용하는 구문을 완전히 이해하지는 못했지만, 대략적인 개념은 이해할 수 있습니다. 변수를 사용할 수 없다면, 변수를 사용해야할 때마다 사용자에게 이름을 물어봐야 합니다.
 
@@ -169,7 +166,7 @@ var myName;
 
 > **참고:** 위의 코드는 JavaScript 콘솔에 개별 줄을 입력할 때는 작동하지 않으며, 웹 문서에서 여러 줄의 JavaScript를 실행할 때만 작동합니다.
 
-이 기능은 **호이스팅** 때문에 작동합니다. 이에 대한 자세한 내용은 [var 호이스팅](</ko/docs/Web/JavaScript/Reference/Statements/var#var_호이스팅(hoisting)>)을 참고하시면 됩니다.
+이 기능은 **호이스팅** 때문에 작동합니다. 이에 대한 자세한 내용은 [var 호이스팅](/ko/docs/Web/JavaScript/Reference/Statements/var#var_호이스팅(hoisting))을 참고하시면 됩니다.
 
 호이스팅은 더 이상 `let`으로 작동하지 않습니다. 위의 예제에서 `var`를 `let`으로 변경하면 오류와 함께 실패합니다. 변수를 초기화한 후에 선언하면 코드가 혼란스럽고 이해하기 어려워지므로 이 점이 좋은 점입니다.
 
@@ -212,7 +209,7 @@ myName = "Bob";
 
 ## 변수 변경
 
-변수가 값으로 초기화되면 다른 값을 지정하여 해당 값을 변경 또는 업데이트할 수 있습니다. 콘솔에 다음 줄을 입력합니다.
+변수가 어떤 값으로 초기화되면 다른 값을 지정하여 해당 값을 변경 또는 업데이트할 수 있습니다. 콘솔에 다음 줄을 입력합니다.
 
 ```js
 myName = "Bob";
@@ -226,7 +223,7 @@ myAge = 40;
 - 다른 문자는 오류를 유발하거나 해외 사용자가 이해하기 어려울 수 있으므로 사용해서는 안 됩니다.
 - 변수 이름의 맨 앞에 밑줄(\_)을 사용하면 안 됩니다. JavaScript 구조에서 특별한 의미를 나타내는 데 사용되므로 혼동될 수 있습니다.
 - 변수 이름의 맨 앞에 숫자를 사용하면 안 됩니다. 이는 허용되지 않으며 오류가 발생합니다.
-- 안전한 명명법은 소위 [소문자 camel case](https://en.wikipedia.org/wiki/CamelCase#Variations_and_synonyms)입니다. 여러 단어를 함께 붙일 때 첫 단어 전체에 소문자를 사용하고 그다음 단어는 대문자로 시작합니다. 지금까지 이 문서에서 변수 이름에 이 방식을 사용했습니다.
+- 안전한 명명법은 소위 {{Glossary("camel_case", "lower camel case")}} 입니다. 여러 단어를 함께 붙일 때 첫 단어 전체에 소문자를 사용하고 그다음 단어는 대문자로 시작합니다. 지금까지 이 문서에서 변수 이름에 이 방식을 사용했습니다.
 - 변수 이름은 포함된 데이터를 설명할 수 있도록 직관적으로 만들어야 합니다. 단일 문자 / 숫자 또는 긴 구절을 사용하면 안 됩니다.
 - 변수는 대소문자를 구분합니다. 따라서 `myage` 와 `myAge` 는 다른 변수입니다.
 - 마지막으로 JavaScript 예약어를 변수 이름으로 사용하면 안 됩니다. 여기서 예약어란 JavaScript의 실제 구문을 구성하는 단어를 의미합니다. 따라서 변수 이름으로 `var`, `function`, `let`, `for`와 같은 단어를 사용할 수 없습니다. 브라우저는 이러한 단어를 다른 코드 항목으로 인식하므로 오류가 발생합니다.

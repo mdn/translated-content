@@ -442,7 +442,7 @@ CSS 그리드 레이아웃을 배우면서 작업하실 때 이 도구를 사용
 
 {{ EmbedLiveSample('라인을_이용한_아이템_배치', '230', '420') }}
 
-파이어폭스 개발자 도구에 있는 [Grid Inspector](/ko/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)를 사용하면 아이템이 그리드 라인에 어떻게 배치되어 있는지 이해하기 훨씬 쉽다는 점도 잊지 마십시오.
+Firefox 개발자 도구에 있는 [Grid Inspector](/ko/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)를 사용하면 아이템이 그리드 라인에 어떻게 배치되어 있는지 이해하기 훨씬 쉽다는 점도 잊지 마십시오.
 
 ## 그리드 셀
 

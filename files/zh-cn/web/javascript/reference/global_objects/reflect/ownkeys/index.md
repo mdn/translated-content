@@ -67,7 +67,7 @@ Reflect.ownKeys(obj);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Reflect")}}
 - {{jsxref("Object.getOwnPropertyNames()")}}

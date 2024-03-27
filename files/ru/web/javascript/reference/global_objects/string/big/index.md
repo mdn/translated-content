@@ -3,7 +3,7 @@ title: String.prototype.big()
 slug: Web/JavaScript/Reference/Global_Objects/String/big
 ---
 
-{{JSRef("Global_Objects", "String")}} {{deprecated_header}}
+{{JSRef}} {{deprecated_header}}
 
 ## Сводка
 
@@ -43,9 +43,7 @@ document.getElementById("yourElemId").style.fontSize = "2em";
 
 ## Спецификации
 
-| Спецификация                                                             | Статус           | Комментарии                                                                                                                                                 |
-| ------------------------------------------------------------------------ | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES6', '#sec-string.prototype.big', 'String.prototype.big')}} | {{Spec2('ES6')}} | Изначальное определение. Реализована в JavaScript 1.0. Определена в (нормативном) Приложении B по Дополнительным возможностям ECMAScript для веб-браузеров. |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

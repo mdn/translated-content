@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Statements/export
 
 在创建 JavaScript 模块时，**`export`** 语句用于从模块中导出实时绑定的函数、对象或原始值，以便其他程序可以通过 {{jsxref("Statements/import", "import")}} 语句使用它们。被导出的绑定值依然可以在本地进行修改。在使用 import 进行导入时，这些绑定值只能被导入模块所读取，但在 export 导出模块中对这些绑定值进行修改，所修改的值也会实时地更新。
 
-无论您是否声明，导出的模块都处于{{jsxref("Strict_mode","严格模式")}}。export 语句不能用在嵌入式脚本中。
+无论你是否声明，导出的模块都处于{{jsxref("Strict_mode","严格模式")}}。export 语句不能用在嵌入式脚本中。
 
 ## 语法
 

@@ -14,9 +14,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('change', (event) => { });
+addEventListener("change", (event) => {});
 
-onchange = (event) => { };
+onchange = (event) => {};
 ```
 
 ## イベント型
@@ -30,7 +30,7 @@ onchange = (event) => { };
 const type = navigator.connection.type;
 
 function changeHandler(e) {
-   // ここで接続型の変更を操作する
+  // ここで接続型の変更を操作する
 }
 
 // change イベントの登録

@@ -47,7 +47,7 @@ Access-Control-Request-Method: POST
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Access-Control-Request-Method")}}
+{{Compat}}
 
 ## 関連情報
 

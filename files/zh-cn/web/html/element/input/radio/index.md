@@ -291,7 +291,7 @@ button:active {
     </tr>
     <tr>
       <td><strong>事件</strong></td>
-      <td>{{domxref("HTMLElement/change_event", "change")}} 和 {{domxref("HTMLElement/input_event", "input")}}</td>
+      <td>{{domxref("HTMLElement/change_event", "change")}} 和 {{domxref("Element/input_event", "input")}}</td>
     </tr>
     <tr>
       <td><strong>支持的通用属性</strong></td>

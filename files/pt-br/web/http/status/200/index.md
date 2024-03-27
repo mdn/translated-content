@@ -30,7 +30,7 @@ O resultado de sucesso de um {{HTTPMethod("PUT")}} ou {{HTTPMethod("DELETE")}} g
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.status.200")}}
+{{Compat}}
 
 ## Veja também
 

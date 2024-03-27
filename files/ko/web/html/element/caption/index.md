@@ -54,7 +54,7 @@ slug: Web/HTML/Element/caption
 
 The following attributes are deprecated and should not be used. They are documented below for reference when updating existing code and for historical interest only.
 
-- {{htmlattrdef("align")}} {{deprecated_inline}}
+- `align` {{deprecated_inline}}
 
   - : This enumerated attribute indicates how the caption must be aligned with respect to the table. It may have one of the following values:
 

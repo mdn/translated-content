@@ -2,14 +2,14 @@
 title: String.prototype.italics()
 slug: Web/JavaScript/Reference/Global_Objects/String/italics
 l10n:
- sourceCommit: f3df52530f974e26dd3b14f9e8d42061826dea20
+  sourceCommit: f3df52530f974e26dd3b14f9e8d42061826dea20
 ---
 
 {{JSRef}} {{deprecated_header}}
 
 **`italics()`** メソッドは、文字列を {{HTMLElement("i")}} 要素に埋め込んだ文字列 (`<i>str</i>`) を生成し、文字列がイタリック体で表示されるようにします。
 
-> **警告:** [HTML ラッパーメソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods)はすべて非推奨となっており、互換性目的のみで標準化されています。代わりに [DOM API](/ja/docs/Web/API/Document_Object_Model) の [`document.createElement()`](/ja/docs/Web/API/Document/createElement) などを使用してください。
+> **警告:** [HTML ラッパーメソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#html_ラッパーメソッド)はすべて非推奨となっており、互換性目的のみで標準化されています。代わりに [DOM API](/ja/docs/Web/API/Document_Object_Model) の [`document.createElement()`](/ja/docs/Web/API/Document/createElement) などを使用してください。
 
 ## 構文
 

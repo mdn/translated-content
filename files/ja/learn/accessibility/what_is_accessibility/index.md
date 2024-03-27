@@ -51,7 +51,7 @@ l10n:
 
 - 有償の商用製品、例えば [JAWS](https://www.freedomscientific.com/Products/software/JAWS/) (Windows) や [Dolphin Screen Reader](https://yourdolphin.com/en-gb/products/individuals/screen-reader) (Windows).
 - 無償の製品、例えば [NVDA](https://www.nvaccess.org/) (Windows), [ChromeVox](https://support.google.com/chromebook/answer/7031755) (Chrome, Windows Mac OS X), や [Orca](https://wiki.gnome.org/Projects/Orca) (Linux).
-- OS に組み込まれたもの、例えば [VoiceOver](https://www.apple.com/accessibility/vision/) (Mac OS X と iPadOS と iOS), [Narrator](https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1) (Windows), [ChromeVox](http://www.chromevox.com/) (Chrome OS), や [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android).
+- OS に組み込まれたもの、例えば [VoiceOver](https://www.apple.com/accessibility/vision/) (Mac OS X と iPadOS と iOS), [Narrator](https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1) (Windows), [ChromeVox](http://www.chromevox.com/) (ChromeOS), や [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android).
 
 スクリーンリーダーに精通するのは良い考えです; スクリーンリーダーをセットアップして試してみて、その動作方法を理解するべきです。 [クロスブラウザーテストのスクリーンリーダーのガイド](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screen_readers) を見ると詳しい使い方がわかります。下記の動画も、その体験がどのようなものかの簡単な例です。
 

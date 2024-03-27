@@ -3,7 +3,7 @@ title: browsingData.removeLocalStorage()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeLocalStorage
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Efface tout le [stockage local](/fr/docs/Web/API/Window/localStorage) créé par des sites Web.
 

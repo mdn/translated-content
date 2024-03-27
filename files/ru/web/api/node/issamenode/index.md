@@ -30,7 +30,7 @@ var isSameNode = node.isSameNode(other);
 
 {{Specifications}}
 
-## Совместимость в браузерах
+## Совместимость с браузерами
 
 {{Compat}}
 

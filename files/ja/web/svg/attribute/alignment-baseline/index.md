@@ -132,7 +132,7 @@ SVG 2 introduces some changes to the definition of this property. In particular:
 
 ## ブラウザーの互換性
 
-{{Compat("svg.attributes.presentation.alignment-baseline")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -58,7 +58,7 @@ Vary: User-Agent
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Vary")}}
+{{Compat}}
 
 ## 互換性メモ
 

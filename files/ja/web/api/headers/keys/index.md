@@ -30,12 +30,12 @@ keys()
 ```js
 // テスト用の Headers オブジェクトを作成
 const myHeaders = new Headers();
-myHeaders.append('Content-Type', 'text/xml');
-myHeaders.append('Vary', 'Accept-Language');
+myHeaders.append("Content-Type", "text/xml");
+myHeaders.append("Vary", "Accept-Language");
 
 // キーを表示
 for (const key of myHeaders.keys()) {
-   console.log(key);
+  console.log(key);
 }
 ```
 

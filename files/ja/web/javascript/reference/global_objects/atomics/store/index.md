@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Atomics/store
 ## 構文
 
 ```js
-Atomics.store(typedArray, index, value)
+Atomics.store(typedArray, index, value);
 ```
 
 ### 引数

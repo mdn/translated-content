@@ -36,7 +36,11 @@ const types = [
 ];
 
 for (const type of types) {
-  console.log(`${type} に対応している? ${MediaRecorder.isTypeSupported(type) ? "たぶん!" : "いいえ :("}`);
+  console.log(
+    `${type} に対応している? ${
+      MediaRecorder.isTypeSupported(type) ? "たぶん!" : "いいえ :("
+    }`,
+  );
 }
 ```
 

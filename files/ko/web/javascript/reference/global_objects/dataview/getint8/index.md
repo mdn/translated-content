@@ -2,13 +2,13 @@
 title: DataView.prototype.getInt8()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getInt8
 l10n:
-  sourceCommit: 6b728699f5f38f1070a94673b5e7afdb1102a941
+  sourceCommit: 3a006e92b14a2733e485a26d0dc3a1472968fd9b
 ---
 
 {{JSRef}}
 
-**`getInt8()`** 메서드는 {{jsxref("DataView")}}의 시작 부분에서 주어진 오프셋(바이트)만큼 떨어진 곳에서부터
-부호화된 8비트 정수(바이트)를 가져옵니다.
+{{jsxref("DataView")}} 인스턴스의 **`getInt8()`** 메서드는 이 `DataView`의 지정된 바이트 오프셋에서
+1바이트를 읽고 이를 8비트 부호 있는 정수로 해석합니다.
 
 {{EmbedInteractiveExample("pages/js/dataview-getint8.html")}}
 

@@ -59,10 +59,8 @@ loadImage(imageUrl);
 <div class="container">
   <p>
     ここに 1 つの段落があります。とても面白い段落です。
-    あなたはこの段落に魅了されています。
-    この段落を読み続けてください。
-    じゃあ、もうこの段落を読むのはやめていいよ。
-    読んでくれてありがとう。
+    あなたはこの段落に魅了されています。 この段落を読み続けてください。
+    じゃあ、もうこの段落を読むのはやめていいよ。 読んでくれてありがとう。
   </p>
 </div>
 ```
@@ -71,7 +69,10 @@ loadImage(imageUrl);
 
 ```css
 body {
-  font: 1.125rem/1.5, Helvetica, sans-serif;
+  font:
+    1.125rem/1.5,
+    Helvetica,
+    sans-serif;
 }
 
 .container {

@@ -161,7 +161,8 @@ _現時点で、 `datetime-local` 入力欄で `step` に `any` の値が何を�
 <form>
   <div>
     <label for="party">
-      希望するパーティーの日時を選択して下さい (必須、 6 月 1 日午前 8:30 ～ 6 月 30 日午後 4:30)
+      希望するパーティーの日時を選択して下さい (必須、 6 月 1 日午前 8:30 ～ 6
+      月 30 日午後 4:30)
     </label>
     <input
       id="party"
@@ -230,7 +231,8 @@ input:valid + span::after {
 <form>
   <div>
     <label for="party">
-      希望するパーティーの日時を選択して下さい (必須、 6 月 1 日午前 8:30 ～ 6 月 30 日午後 4:30)
+      希望するパーティーの日時を選択して下さい (必須、 6 月 1 日午前 8:30 ～ 6
+      月 30 日午後 4:30)
     </label>
     <input
       id="party"
@@ -332,8 +334,7 @@ HTML は次のようになります。
   <div class="fallbackDateTimePicker">
     <div>
       <span>
-        <select id="year" name="year">
-        </select>
+        <select id="year" name="year"></select>
         <label for="year">年</label>
       </span>
       <span>
@@ -354,20 +355,19 @@ HTML は次のようになります。
         <label for="month">月</label>
       </span>
       <span>
-        <select id="day" name="day">
-        </select>
+        <select id="day" name="day"></select>
         <label for="day">日</label>
       </span>
     </div>
     <div>
       <span>
         <select id="hour" name="hour">
-        <label for="hour">時</label>
+          <label for="hour">時</label>
         </select>
       </span>
       <span>
         <select id="minute" name="minute">
-        <label for="minute">分</label>
+          <label for="minute">分</label>
         </select>
       </span>
     </div>
@@ -457,22 +457,12 @@ function populateDays(month) {
   let dayNum;
 
   // 31 か 30 日か
-  if (
-    [
-      "1",
-      "3",
-      "5",
-      "7",
-      "8",
-      "10",
-      "12",
-    ].includes(month)
-  ) {
+  if (["1", "3", "5", "7", "8", "10", "12"].includes(month)) {
     dayNum = 31;
   } else if (["4", "6", "9", "11"].includes(month)) {
     dayNum = 30;
   } else {
-  // 2 月の場合は、閏年かどうかを計算する
+    // 2 月の場合は、閏年かどうかを計算する
     const year = yearSelect.value;
     const isLeap = new Date(year, 1, 29).getMonth() === 1;
     dayNum = isLeap ? 29 : 28;

@@ -37,17 +37,17 @@ _以下のプロパティに加え、 `Node` は親である {{DOMxRef("EventTar
 
   - : ノードの型を表す `unsigned short` を返します。使用できる値は次の通りです。
 
-    | 名前                          | 値 |
-    | ----------------------------- | ----- |
-    | `ELEMENT_NODE`                | `1`   |
-    | `ATTRIBUTE_NODE`              | `2`   |
-    | `TEXT_NODE`                   | `3`   |
-    | `CDATA_SECTION_NODE`          | `4`   |
-    | `PROCESSING_INSTRUCTION_NODE` | `7`   |
-    | `COMMENT_NODE`                | `8`   |
-    | `DOCUMENT_NODE`               | `9`   |
-    | `DOCUMENT_TYPE_NODE`          | `10`  |
-    | `DOCUMENT_FRAGMENT_NODE`      | `11`  |
+    | 名前                          | 値   |
+    | ----------------------------- | ---- |
+    | `ELEMENT_NODE`                | `1`  |
+    | `ATTRIBUTE_NODE`              | `2`  |
+    | `TEXT_NODE`                   | `3`  |
+    | `CDATA_SECTION_NODE`          | `4`  |
+    | `PROCESSING_INSTRUCTION_NODE` | `7`  |
+    | `COMMENT_NODE`                | `8`  |
+    | `DOCUMENT_NODE`               | `9`  |
+    | `DOCUMENT_TYPE_NODE`          | `10` |
+    | `DOCUMENT_FRAGMENT_NODE`      | `11` |
 
 - {{DOMxRef("Node.nodeValue")}}
   - : 現在のノードの値を取得または設定します。

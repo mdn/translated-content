@@ -26,8 +26,8 @@ slug: Web/CSS/CSS_filter_effects
 
 ### `backdrop-filter` プロパティ
 
-{{Compat("css.properties.backdrop-filter")}}
+{{Compat}}
 
 ### `filter` プロパティ
 
-{{Compat("css.properties.filter")}}
+{{Compat}}

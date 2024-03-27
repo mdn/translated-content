@@ -3,6 +3,8 @@ title: Wrapper (ラッパー)
 slug: Glossary/Wrapper
 ---
 
+{{GlossarySidebar}}
+
 JavaScript のようなプログラミング言語において、ラッパー (wrapper) は 1 つ以上の他の関数を呼び出すための関数であり、時には純粋に利便性のために、時にはプロセス中でまったく異なるタスクに合わせるために使用されます。
 
 例えば、AWS の SDK ライブラリはラッパーの例になります。

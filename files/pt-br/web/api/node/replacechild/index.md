@@ -9,7 +9,7 @@ slug: Web/API/Node/replaceChild
 
 Substitui o elemento filho especificado por outro.
 
-**Sintaxe**
+## Sintaxe
 
 ```
 replacedNode = parentNode.replaceChild(newChild, oldChild);

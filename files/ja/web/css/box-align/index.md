@@ -73,7 +73,7 @@ box-align =
 ### ボックス配置の設定
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />

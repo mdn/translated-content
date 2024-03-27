@@ -33,7 +33,7 @@ target.addEventListener(
       process_secondary_pointer(event);
     }
   },
-  false
+  false,
 );
 ```
 

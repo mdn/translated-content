@@ -5,7 +5,7 @@ slug: Learn/JavaScript/Client-side_web_APIs
 
 {{LearnSidebar}}
 
-当你给网页或者网页应用编写客户端的 JavaScript 时，你很快会遇上应用程序接口（API）—— 这些编程特性可用来操控网站所基于的浏览器与操作系统的不同方面，或是操控由其他网站或服务端传来的数据。在这个单元里，我们将一同探索什么是 API，以及如何使用一些在你开发中将经常遇见的 API。
+当你给网页或者网页应用编写客户端的 JavaScript 时，你很快会遇上应用程序接口（API）——这些编程特性可用来操控网站所基于的浏览器与操作系统的不同方面，或是操控由其他网站或服务端传来的数据。在这个单元里，我们将一同探索什么是 API，以及如何使用一些在你开发中将经常遇见的 API。
 
 ## 预备知识
 
@@ -28,6 +28,6 @@ slug: Learn/JavaScript/Client-side_web_APIs
 - [绘制图形](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
   - : 浏览器包含多种强大的图形编程工具，从可缩放矢量图形语言 Scalable Vector Graphics ([SVG](/zh-CN/docs/Web/SVG)) language，到 HTML 绘制元素 {{htmlelement("canvas")}} 元素 ([The Canvas API](/zh-CN/docs/Web/API/Canvas_API) and [WebGL](/zh-CN/docs/Web/API/WebGL_API)). 这篇文章提供了部分 canvas 的简介，以及让你更深入学习的资源。
 - [视频和音频 API](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-  - : HTML5 能够通过元素标签嵌入富媒体——{{htmlelement("video")}} and {{htmlelement("audio")}}——而将有自己的 API 来控制回放，搜索等功能。本文向您展示了如何创建自定义播放控制等常见的任务。
+  - : HTML5 能够通过元素标签嵌入富媒体——{{htmlelement("video")}} and {{htmlelement("audio")}}——而将有自己的 API 来控制回放，搜索等功能。本文向你展示了如何创建自定义播放控制等常见的任务。
 - [客户端存储](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)
   - : 现代 web 浏览器拥有很多不同的技术，能够让你存储与网站相关的数据，并在需要时调用它们，能够让你长期保存数据、保存离线网站及其他实现其他功能。本文解释了这些功能的基本原理。

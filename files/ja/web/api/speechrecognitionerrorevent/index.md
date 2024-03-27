@@ -21,10 +21,10 @@ _`SpeechRecognitionError` は、親インターフェイスである {{domxref("
 ```js
 var recognition = new SpeechRecognition();
 
-recognition.onerror = function(event) {
-  console.log('Speech recognition error detected: ' + event.error);
-  console.log('Additional information: ' + event.message);
-}
+recognition.onerror = function (event) {
+  console.log("Speech recognition error detected: " + event.error);
+  console.log("Additional information: " + event.message);
+};
 ```
 
 ## 仕様

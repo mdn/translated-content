@@ -150,19 +150,19 @@ buggyMultiline = `tey, ihe light-greon apple
 tangs on ihe greon traa`;
 
 // 1) 文字列の最初と改行の直後の一致を修正するために ^ を利用します。
-buggyMultiline = buggyMultiline.replace(/^t/gim,'h');
+buggyMultiline = buggyMultiline.replace(/^t/gim, "h");
 console.log(1, buggyMultiline); // 'tey', 'tangs' を 'hey', 'hangs' に修正します。 'traa' は対象外です。
 
 // 2) テキストの末尾を修正するために $ を利用します。
-buggyMultiline = buggyMultiline.replace(/aa$/gim,'ee.');
+buggyMultiline = buggyMultiline.replace(/aa$/gim, "ee.");
 console.log(2, buggyMultiline); // 'traa' を 'tree' に修正します。
 
 // 3) 単語と空白の間の境界の右の文字に一致させるために \b を利用します。
-buggyMultiline = buggyMultiline.replace(/\bi/gim,'t');
+buggyMultiline = buggyMultiline.replace(/\bi/gim, "t");
 console.log(3, buggyMultiline); // 'ihe' を修正しますが、'light'は対象外です。
 
 // 4) エンティティの境界内の文字に一致するために \B を利用します。
-fixedMultiline = buggyMultiline.replace(/\Bo/gim,'e');
+fixedMultiline = buggyMultiline.replace(/\Bo/gim, "e");
 console.log(4, fixedMultiline); // 'greon' を修正しますが、'on' は対象外です。
 ```
 
@@ -202,7 +202,9 @@ console.log(fruitsStartsWithNotA); // [ 'Watermelon', 'Orange', 'Strawberry' ]
 const fruitsWithDescription = ["Red apple", "Orange orange", "Green Avocado"];
 
 // 単語の終わりに 'en' または 'ed' を含む記述を選択します。
-const enEdSelection = fruitsWithDescription.filter((descr) => /(en|ed)\b/.test(descr));
+const enEdSelection = fruitsWithDescription.filter((descr) =>
+  /(en|ed)\b/.test(descr),
+);
 
 console.log(enEdSelection); // [ 'Red apple', 'Green Avocado' ]
 ```
@@ -214,10 +216,10 @@ console.log(enEdSelection); // [ 'Red apple', 'Green Avocado' ]
 
 const regex = /First(?= test)/g;
 
-console.log('First test'.match(regex)); // [ 'First' ]
-console.log('First peach'.match(regex)); // null
-console.log('This is a First test in a year.'.match(regex)); // [ 'First' ]
-console.log('This is a First peach in a month.'.match(regex)); // null
+console.log("First test".match(regex)); // [ 'First' ]
+console.log("First peach".match(regex)); // null
+console.log("This is a First test in a year.".match(regex)); // [ 'First' ]
+console.log("This is a First peach in a month.".match(regex)); // null
 ```
 
 ### 基本的な否定先読みアサーション
@@ -225,7 +227,7 @@ console.log('This is a First peach in a month.'.match(regex)); // null
 例えば、`/\d+(?!\.)/` は小数点が後に続かない数値にだけ一致します。`/\d+(?!\.)/.exec('3.141')` は "141" に一致しますが、 "3" には一致しません。
 
 ```js
-console.log(/\d+(?!\.)/g.exec('3.141')); // [ '141', index: 2, input: '3.141' ]
+console.log(/\d+(?!\.)/g.exec("3.141")); // [ '141', index: 2, input: '3.141' ]
 ```
 
 ### アサーションと範囲における '?!' の組み合わせの異なる意味での利用
@@ -233,20 +235,21 @@ console.log(/\d+(?!\.)/g.exec('3.141')); // [ '141', index: 2, input: '3.141' ]
 `?!` の組み合わせを利用するとき、アサーション（`/x(?!y)/` など）と[文字クラス](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes) （`[^?!]` など）では異なる意味を持ちます。
 
 ```js
-const orangeNotLemon = "Do you want to have an orange? Yes, I do not want to have a lemon!";
+const orangeNotLemon =
+  "Do you want to have an orange? Yes, I do not want to have a lemon!";
 
 // アサーション /x(?!y)/ と範囲 /[^?!]/ では '?!' の組み合わせの利用は異なる意味を持ちます。
-const selectNotLemonRegex = /[^?!]+have(?! a lemon)[^?!]+[?!]/gi
+const selectNotLemonRegex = /[^?!]+have(?! a lemon)[^?!]+[?!]/gi;
 console.log(orangeNotLemon.match(selectNotLemonRegex)); // [ 'Do you want to have an orange?' ]
 
-const selectNotOrangeRegex = /[^?!]+have(?! an orange)[^?!]+[?!]/gi
+const selectNotOrangeRegex = /[^?!]+have(?! an orange)[^?!]+[?!]/gi;
 console.log(orangeNotLemon.match(selectNotOrangeRegex)); // [ ' Yes, I do not want to have a lemon!' ]
 ```
 
 ### 後読みアサーション
 
 ```js
-const oranges = ['ripe orange A ', 'green orange B', 'ripe orange C'];
+const oranges = ["ripe orange A ", "green orange B", "ripe orange C"];
 
 const ripeOranges = oranges.filter((fruit) => fruit.match(/(?<=ripe )orange/));
 console.log(ripeOranges); // [ 'ripe orange A ', 'ripe orange C' ]

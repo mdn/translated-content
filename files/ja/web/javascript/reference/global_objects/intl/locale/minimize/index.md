@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/minimize
 ## 構文
 
 ```js
-minimize()
+minimize();
 ```
 
 ### 返値
@@ -28,7 +28,10 @@ minimize()
 ### minimize の使用
 
 ```js
-let myLocale = new Intl.Locale("ja-Jpan-JP", {hourCycle: "h24", calendar: "gregory"});
+let myLocale = new Intl.Locale("ja-Jpan-JP", {
+  hourCycle: "h24",
+  calendar: "gregory",
+});
 console.log(myLocale.baseName); // "ja-Jpan-JP" と表示
 console.log(myLocale.toString()); // "ja-Jpan-JP-u-ca-gregory-hc-h24" と表示
 

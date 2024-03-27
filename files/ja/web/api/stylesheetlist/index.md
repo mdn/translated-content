@@ -42,4 +42,4 @@ const allCSS = [...document.styleSheets]
 
 ## ブラウザーの互換性
 
-{{Compat("api.StyleSheetList")}}
+{{Compat}}

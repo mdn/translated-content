@@ -56,7 +56,7 @@ Math.atan(y / x);
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Math.atan")}}
+{{Compat}}
 
 ## 関連情報
 

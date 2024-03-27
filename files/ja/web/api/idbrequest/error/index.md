@@ -36,7 +36,9 @@ l10n:
 const title = "Walk dog";
 
 // 通常通りトランザクションを開始します
-const objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
+const objectStore = db
+  .transaction(["toDoList"], "readwrite")
+  .objectStore("toDoList");
 
 // 指定したタイトルの TO-DO リストを取得します
 const objectStoreTitleRequest = objectStore.get(title);
@@ -60,7 +62,9 @@ objectStoreTitleRequest.onsuccess = () => {
 
 objectStoreTitleRequest.onerror = () => {
   // 要求でエラーが発生したら、発生したエラーを記録します
-  console.log(`データの取得中にエラーが発生しました: ${objectStoreTitleRequest.error}`);
+  console.log(
+    `データの取得中にエラーが発生しました: ${objectStoreTitleRequest.error}`,
+  );
 };
 ```
 

@@ -72,7 +72,7 @@ CSS 特性查询是 [CSS Conditional Rules module](https://drafts.csswg.org/css-
 
 ## 如何使用特性查询进行渐进式增强
 
-在逐步增强一个站点时，特性查询是一个非常有用的工具。它们使您能够为所有浏览器提供良好的解决方案，并为那些支持新特性的浏览器提供增强的解决方案。
+在逐步增强一个站点时，特性查询是一个非常有用的工具。它们使你能够为所有浏览器提供良好的解决方案，并为那些支持新特性的浏览器提供增强的解决方案。
 
 然而，某些浏览器既不支持特性查询，也不支持我们希望使用的特性。例如，我们也许希望使用 CSS Grid，但 IE11 不支持它。我们也不能为其创建一个针对没有 Grid 支持的浏览器的后备样式，因为 IE11 也不支持特性查询。然而在实践中，当使用特性查询进行渐进增强时，然而这并不重要。你确实需要有一个组织 CSS 的方式，那么应当先为不支持新特性的浏览器编写 CSS 样式，然后在特性查询中进行覆盖。
 
@@ -102,7 +102,7 @@ CSS 特性查询是 [CSS Conditional Rules module](https://drafts.csswg.org/css-
 
 ## 总结
 
-功能查询可以帮助您开始使用更新的功能，它可以增强旧浏览器使用的简单的站点的显示。由于可以针对其支持的浏览器而打包 CSS，因此不会有后退显示使用的样式漏出的风险（原文：you do not run the risk of styles used for the fallback display leaking through），就像上面的 Grid 示例那样。
+功能查询可以帮助你开始使用更新的功能，它可以增强旧浏览器使用的简单的站点的显示。由于可以针对其支持的浏览器而打包 CSS，因此不会有后退显示使用的样式漏出的风险（原文：you do not run the risk of styles used for the fallback display leaking through），就像上面的 Grid 示例那样。
 
 ### 参见
 

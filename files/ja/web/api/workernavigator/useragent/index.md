@@ -35,7 +35,7 @@ Application-Name Application-Name-version
 ## 例
 
 ```js
-alert(navigator.userAgent)
+alert(navigator.userAgent);
 // alerts "Mozilla/5.0 (Windows; U; Win98; en-US; rv:0.9.2) Gecko/20010725 Netscape6/6.1"
 ```
 

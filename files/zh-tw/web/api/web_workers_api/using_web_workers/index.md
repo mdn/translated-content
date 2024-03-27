@@ -1,9 +1,11 @@
 ---
-title: 使用 Web Workers
+title: 使用 Web Worker
 slug: Web/API/Web_Workers_API/Using_web_workers
 ---
 
-Web Workers 提供簡單的方法讓網頁在背景執行緒 (Thread) 中執行程式，而不干擾使用者介面運行，另外，Worker 也可以利用 [XMLHttpRequest](/zh-TW/nsIXMLHttpRequest) 執行輸出/輸入(但是 responseXML 和 channel 這兩個屬性為 null)；一個 worker 可以藉由事件處理器來和 web worker 創造端互相傳送訊息，接下來本文會提供使用 web worker 的詳細說明。
+{{DefaultAPISidebar("Web Workers API")}}
+
+Web Worker 提供簡單的方法讓網頁在背景執行緒（Thread）中執行程式，而不干擾使用者介面運行，另外，Worker 也可以利用 {{domxref("XMLHttpRequest")}} 執行輸出/輸入（但是 responseXML 和 channel 這兩個屬性為 null）；一個 worker 可以藉由事件處理器來和 web worker 創造端互相傳送訊息，接下來本文會提供使用 web worker 的詳細說明。
 
 ## Web Workers API
 
@@ -17,7 +19,7 @@ Dedicated worker (專有 worker) 是一般 worker，只能被產生它的檔案�
 
 主執行緒和 worker 執行緒之間用 postMessage() 方法發送訊息，然後透過 `onmessage` 事件接受訊息 (訊息存在 {{domxref("Worker/message_event", "message")}} 事件的 data 屬性之中)，其中被傳送的資料並非共享而是複製一份後傳送。
 
-worker 可以產生新 worker，只要新 worker 的來源 (origin) 和父頁面相同，也可以利用 [XMLHttpRequest](/zh-TW/nsIXMLHttpRequest) 執行輸出/輸入(但是 responseXML 和 channel 這兩個屬性為 null)。
+worker 可以產生新 worker，只要新 worker 的來源 (origin) 和父頁面相同，也可以利用 {{domxref("XMLHttpRequest")}} 執行輸出/輸入（但是 responseXML 和 channel 這兩個屬性為 null）。
 
 ## Dedicated workers
 

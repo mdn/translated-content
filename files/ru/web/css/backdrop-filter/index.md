@@ -75,7 +75,7 @@ body {
 }
 
 body {
-  background-image: url("./anemones.jpg");
+  background-image: url("anemones.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;

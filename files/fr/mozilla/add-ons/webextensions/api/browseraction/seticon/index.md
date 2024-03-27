@@ -3,7 +3,7 @@ title: browserAction.setIcon()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/setIcon
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Définit l'icône pour l'action du navigateur.
 

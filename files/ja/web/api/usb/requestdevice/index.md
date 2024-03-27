@@ -47,7 +47,8 @@ const filters = [
   { vendorId: 0x1209, productId: 0xa800 },
   { vendorId: 0x1209, productId: 0xa850 },
 ];
-navigator.usb.requestDevice({ filters })
+navigator.usb
+  .requestDevice({ filters })
   .then((usbDevice) => {
     console.log(`製品名: ${usbDevice.productName}`);
   })

@@ -14,7 +14,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Atomics/isLockFree
 ## 構文
 
 ```js
-Atomics.isLockFree(size)
+Atomics.isLockFree(size);
 ```
 
 ### 引数

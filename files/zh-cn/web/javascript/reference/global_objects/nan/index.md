@@ -37,7 +37,7 @@ slug: Web/JavaScript/Reference/Global_Objects/NaN
 
 ### 针对 NaN 的测试
 
-要判断一个值是否为 `NaN`，可以使用 {{jsxref("Number.isNaN()")}} 或 {{jsxref("Global_Objects/isNaN", "isNaN()")}} 来最清楚地确定一个值是否为 `NaN` ——或者，因为 `NaN` 是唯一与自身不相等的值，所以你可以执行类似 `x !== x` 这样的自我比较。
+要判断一个值是否为 `NaN`，可以使用 {{jsxref("Number.isNaN()")}} 或 {{jsxref("Global_Objects/isNaN", "isNaN()")}} 来最清楚地确定一个值是否为 `NaN`——或者，因为 `NaN` 是唯一与自身不相等的值，所以你可以执行类似 `x !== x` 这样的自我比较。
 
 ```js
 NaN === NaN; // false

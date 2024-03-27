@@ -94,9 +94,7 @@ l10n:
 #### HTML
 
 ```html
-<p>
-  オーブンの温度: <meter min="200" max="500" value="350">350 度</meter>
-</p>
+<p>オーブンの温度: <meter min="200" max="500" value="350">350 度</meter></p>
 ```
 
 #### 結果
@@ -115,7 +113,8 @@ Google Chrome での表示結果は以下のようになります。
 
 ```html
 <p>
-  彼は試験で <meter low="69" high="80" max="100" value="84">B</meter> を取りました。
+  彼は試験で
+  <meter low="69" high="80" max="100" value="84">B</meter> を取りました。
 </p>
 ```
 

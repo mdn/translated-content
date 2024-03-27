@@ -61,7 +61,7 @@ The two methods `blur()` and `focus()` are inherited from {{domxref("HTMLElement
 
 Listen to these events using [`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface:
 
-- [`input` event](/zh-CN/docs/Web/API/HTMLElement/input_event)
+- [`input` 事件](/zh-CN/docs/Web/API/Element/input_event)
   - : Fires when the `value` of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element has been changed.
 
 ## 示例

@@ -25,7 +25,7 @@ O método de requisição e o corpo não será alterado, onde talvez o status {{
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.status.308")}}
+{{Compat}}
 
 ## Veja também
 

@@ -3,8 +3,6 @@ title: "ARIA: table ロール"
 slug: Web/Accessibility/ARIA/Roles/table_role
 ---
 
-\\{{ariaref}}
-
 ARIA の role 属性の table 値は、このロールを含む要素を、ネイティブの {{htmlelement("table")}} HTML 要素と同様に、行と列に配置されたデータを含む非インタラクティブな表構造を持つものとして識別します。
 
 ```html
@@ -38,23 +36,23 @@ ARIA の role 属性の table 値は、このロールを含む要素を、ネ�
 
 `role="table"` を持つ要素はセルを含む行を持つ静的な表構造です。 表の個々のセル内のウィジェットはインタラクティブになることがありますが、セルはフォーカス可能または選択可能ではありません。 可能な限りネイティブの HTML {{htmlelement("table")}} 要素を使用することを強くお勧めします。
 
-> **警告:** 表が選択状態を維持している場合、2 次元ナビゲーションを使用している場合、またはユーザーがセルの順序を並べ替えることができる場合は、代わりにグリッド（[`grid`](/ja/docs/Web/Accessibility/ARIA/Roles/Grid_Role)）またはツリーグリッド（[`treegrid`](/ja/docs/)）を使用します。
+> **警告:** 表が選択状態を維持している場合、2 次元ナビゲーションを使用している場合、またはユーザーがセルの順序を並べ替えることができる場合は、代わりにグリッド（[`grid`](/ja/docs/Web/Accessibility/ARIA/Roles/grid_role)）またはツリーグリッド（[`treegrid`](/ja/docs/Web)）を使用します。
 
-ARIA の表を作成するには、`role="table"` をコンテナ要素に追加します。 そのコンテナ内では、各行に `role="row"` を設定し、子セルを含ませます。 各セルには、列ヘッダー（`columnheader`）、行ヘッダー（`rowheader`）、または単なるセル（[`cell`](/ja/docs/Web/Accessibility/ARIA/Roles/Cell_Role)）のいずれかのロールがあります。 行は、表の子になることも、行グループ（[`rowgroup`](/ja/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role)）内になることもあります。
+ARIA の表を作成するには、`role="table"` をコンテナ要素に追加します。 そのコンテナ内では、各行に `role="row"` を設定し、子セルを含ませます。 各セルには、列ヘッダー（`columnheader`）、行ヘッダー（`rowheader`）、または単なるセル（[`cell`](/ja/docs/Web/Accessibility/ARIA/Roles/cell_role)）のいずれかのロールがあります。 行は、表の子になることも、行グループ（[`rowgroup`](/ja/docs/Web/Accessibility/ARIA/Roles/rowgroup_role)）内になることもあります。
 
 表のキャプションは、`aria-labelledby`、`aria-label`、または `aria-describeby` によって定義できます。 {{htmlelement("tbody")}}、{{htmlelement("thead")}}、{{htmlelement("tr")}}、{{htmlelement("th")}}、{{htmlelement("td")}} など、他のすべての意味論的な表の要素は、`rowgroup`、`row`、`columnheader`、`cell` などの関連するロールを介して追加する必要があります。
 
 表にソート可能な列または行が含まれる場合は、`aria-sort` 属性をヘッダーのセル要素に追加する必要があります（表自体ではありません）。 ある行または列が隠されている場合は、それぞれのセルの `aria-colindex` または `aria-rowindex` とともに、それぞれ列または行の総数を示す `aria-colcount` または `aria-rowcount` を含める必要があります。 `aria-colindex` または `aria-rowindex` は、それぞれ行または列内のセルの位置に設定します。 表に複数行または複数列にわたるセルが含まれる場合は、`aria-rowspan` または `aria-colspan` も含める必要があります。 すべての支援技術でサポートされているすべての関連する意味論的な要素および属性と共に、{{htmlelement("table")}} 要素を単純に使用する方がはるかに簡単です。
 
-表構造を持つインタラクティブなウィジェットを作成するには、代わりにグリッドパターンを使用してください。 インタラクションが個々のセルの選択状態を提供する場合、左から右へ、上から下へのナビゲーションを提供する場合、またはユーザーインターフェイスでセルの順序の並べ替えやドラッグアンドドロップなどの個々のセルの順序の変更を許可する場合、代わりに [`grid`](/ja/docs/Web/Accessibility/ARIA/Roles/Grid_Role) または [`treegrid`](/ja/docs/) を使用してください。
+表構造を持つインタラクティブなウィジェットを作成するには、代わりにグリッドパターンを使用してください。 インタラクションが個々のセルの選択状態を提供する場合、左から右へ、上から下へのナビゲーションを提供する場合、またはユーザーインターフェイスでセルの順序の並べ替えやドラッグアンドドロップなどの個々のセルの順序の変更を許可する場合、代わりに [`grid`](/ja/docs/Web/Accessibility/ARIA/Roles/grid_role) または [`treegrid`](/ja/docs/Web) を使用してください。
 
 > **メモ:** 可能な限りネイティブの [HTML の表要素](/ja/docs/Learn/HTML/Tables/Advanced)を使用することを強くお勧めします。
 
 ### 関連する WAI-ARIA のロール、ステート、プロパティ
 
-- [role="rowgroup"](/ja/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role)
+- [role="rowgroup"](/ja/docs/Web/Accessibility/ARIA/Roles/rowgroup_role)
   - : 表のオプションの子である行グループは、{{htmlelement("thead")}}、{{htmlelement("tbody")}}、および {{htmlelement("tfoot")}} と同様に、行のグループをカプセル化します。
-- [role="row"](/ja/docs/Web/Accessibility/ARIA/Roles/Row_Role)
+- [role="row"](/ja/docs/Web/Accessibility/ARIA/Roles/row_role)
   - : 表内の行、およびオプションで行グループ（`rowgroup`）内の行、つまり 1 つ以上のセル（`cell`）、列ヘッダー（`columnheader`）、または行ヘッダー（`rowheader`）のコンテナです。
 - aria-describedby 属性
   - : 値として、表のキャプションとして機能する要素の `id` を取ります。
@@ -130,4 +128,4 @@ ARIA の表を作成するには、`role="table"` をコンテナ要素に追加
 ## 関連情報
 
 - [HTML の表要素](/ja/docs/Learn/HTML/Tables/Advanced)
-- [ARIA: grid ロール](/ja/docs/Web/Accessibility/ARIA/Roles/Grid_Role)
+- [ARIA: grid ロール](/ja/docs/Web/Accessibility/ARIA/Roles/grid_role)

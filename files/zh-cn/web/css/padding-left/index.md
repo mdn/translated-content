@@ -68,7 +68,7 @@ padding-left: unset;
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - [Introduction to the CSS basic box model](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
 - {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}} and the {{cssxref("padding")}} shorthand

@@ -1,7 +1,11 @@
 ---
 title: Latency
 slug: Glossary/Latency
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
+
+{{GlossarySidebar}}
 
 **Latency**는 요청된 리소스가 대상에 도달하는데 걸리는 네트워크 시간입니다. 지연 시간이 짧으면 기다리는 시간이 거의 없거나, 아예 없습니다. 지연 시간이 길면 요청된 리소스가 대상에 도달하는 데 오랜 시간이 걸려 좋지 않습니다.
 

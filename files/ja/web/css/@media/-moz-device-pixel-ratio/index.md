@@ -28,10 +28,11 @@ slug: Web/CSS/@media/-moz-device-pixel-ratio
 例:
 
 ```css
-@media (-webkit-min-device-pixel-ratio: 2), /* Webkit ベースのブラウザー */
-       (min--moz-device-pixel-ratio: 2),    /* 古い Firefox ブラウザー (Firefox 16 以前) */
-       (min-resolution: 2dppx),             /* 標準の方法 */
-       (min-resolution: 192dpi)             /* dppx のフォールバック */
+/* Webkit ベースのブラウザー */
+@media (-webkit-min-device-pixel-ratio: 2),
+  (min--moz-device-pixel-ratio: 2) /* 古い Firefox ブラウザー (firefox 16 以前) */,
+  (min-resolution: 2dppx) /* 標準の方法 */,
+  (min-resolution: 192dpi); /* dppx のフォールバック */
 ```
 
 > **メモ:** `resolution` および `dppx` に関わる互換性の良い習慣については、 [CSSWG の記事](http://www.w3.org/blog/CSS/2012/06/14/unprefix-webkit-device-pixel-ratio/)を参照してください。

@@ -93,4 +93,4 @@ _path_ の値は、URL パスに [URL クエリーストリング](https://en.wi
 
 ### scheme
 
-{{Compat("webextensions.match_patterns.scheme",10)}}
+{{Compat}}

@@ -3,7 +3,7 @@ title: tabs.Tab
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Le type **`tabs.Tab`** contient des informations sur un onglet. Cela donne accès à des informations sur le contenu de l'onglet, la taille du contenu, les états spéciaux ou les restrictions en vigueur, etc.
 

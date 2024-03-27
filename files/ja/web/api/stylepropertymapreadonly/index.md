@@ -35,7 +35,9 @@ slug: Web/API/StylePropertyMapReadOnly
 
 ```html
 <p>
-   これは、いくつかのテキストを含む段落です。 CSS を追加することもできますし、しないこともできます。スタイルマップには、既定のものと継承されたすべての CSS プロパティ値が含まれます。
+  これは、いくつかのテキストを含む段落です。 CSS
+  を追加することもできますし、しないこともできます。スタイルマップには、既定のものと継承されたすべての
+  CSS プロパティ値が含まれます。
 </p>
 <dl id="output"></dl>
 ```
@@ -44,10 +46,10 @@ slug: Web/API/StylePropertyMapReadOnly
 
 ```css
 p {
-   --someVariable: 1.6em;
-   --someOtherVariable: translateX(33vw);
-   --anotherVariable: 42;
-   line-height: var(--someVariable);
+  --someVariable: 1.6em;
+  --someOtherVariable: translateX(33vw);
+  --anotherVariable: 42;
+  line-height: var(--someVariable);
 }
 ```
 
@@ -55,10 +57,10 @@ JavaScript を追加して段落を取得し、 {{domxref('Element.computedStyle
 
 ```js
 // 要素を取得
-const myElement = document.querySelector('p');
+const myElement = document.querySelector("p");
 
 // 入力する <dl> を取得
-const stylesList = document.querySelector('#output');
+const stylesList = document.querySelector("#output");
 
 // computedStyleMap() ですべての計算済みスタイルを取得
 const stylePropertyMap = myElement.computedStyleMap();
@@ -66,12 +68,12 @@ const stylePropertyMap = myElement.computedStyleMap();
 // すべてのプロパティと値のマップを反復処理して、それぞれ <dt> と <dd> を追加
 for (const [prop, val] of stylePropertyMap) {
   // プロパティ
-  const cssProperty = document.createElement('dt');
+  const cssProperty = document.createElement("dt");
   cssProperty.innerText = prop;
   stylesList.appendChild(cssProperty);
 
   // 値
-  const cssValue = document.createElement('dd');
+  const cssValue = document.createElement("dd");
   cssValue.innerText = val;
   stylesList.appendChild(cssValue);
 }

@@ -84,7 +84,10 @@ p {
 .container {
   width: 100vh;
   height: 95vh;
-  font: 16px Arial, Helvetica, sans-serif;
+  font:
+    16px Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .left-margin {
@@ -224,7 +227,11 @@ p {
 
 .contents {
   margin-top: 1em;
-  font: 16px Arial, Helvetica, Verdana, sans-serif;
+  font:
+    16px Arial,
+    Helvetica,
+    Verdana,
+    sans-serif;
 }
 ```
 

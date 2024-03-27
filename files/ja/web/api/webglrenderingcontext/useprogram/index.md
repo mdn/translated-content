@@ -41,7 +41,7 @@ gl.useProgram(program);
 
 ## ブラウザーの対応
 
-{{Compat("api.WebGLRenderingContext.useProgram")}}
+{{Compat}}
 
 ## 関連項目
 

@@ -13,7 +13,7 @@ La propiedad [CSS](/es/docs/Web/CSS) `line-height` establece la altura de una ca
 - Aplicable a: todos los elementos.
 - {{ Cssxref("inheritance", "Valor heredado") }}: sí
 - Porcentajes: se refieren a tamaño de la fuente del elemento mismo.
-- Medio: {{ Xref_cssvisual() }}
+- Medio: {{cssxref("Media/Visual", "visual")}}
 - {{ Cssxref("computed value", "Valor calculado") }}: para los valores \<length> y \<percentage>, el valor absoluto, en otro caso, como se especifica.
 
 ## Syntax

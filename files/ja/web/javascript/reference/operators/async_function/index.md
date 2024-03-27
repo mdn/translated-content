@@ -2,7 +2,7 @@
 title: async function 式
 slug: Web/JavaScript/Reference/Operators/async_function
 l10n:
-  sourceCommit: 40574fa665cd58de35cc2d30de2a46f5e9d3b484
+  sourceCommit: a71b8929628a2187794754c202ad399fe357141b
 ---
 
 {{jsSidebar("Operators")}}
@@ -20,7 +20,7 @@ async function (param0) {
 async function (param0, param1) {
   statements
 }
-async function (param0, param1, /* … ,*/ paramN) {
+async function (param0, param1, /* …, */ paramN) {
   statements
 }
 
@@ -30,7 +30,7 @@ async function name(param0) {
 async function name(param0, param1) {
   statements
 }
-async function name(param0, param1, /* … ,*/ paramN) {
+async function name(param0, param1, /* …, */ paramN) {
   statements
 }
 ```
@@ -42,7 +42,7 @@ async function name(param0, param1, /* … ,*/ paramN) {
 - `name` {{optional_inline}}
   - : 関数名です。関数が*無名*の場合は省略可能です。名前は関数の本体内のみのローカルです。
 - `paramN` {{optional_inline}}
-  - : 関数に渡される引数名です。
+  - : 関数に渡される引数名です。引数の構文については、[関数リファレンス](/ja/docs/Web/JavaScript/Guide/Functions#function_parameters)を参照してください。
 - `statements` {{optional_inline}}
   - : 関数本体を構成する文です。
 
@@ -95,5 +95,5 @@ add(10).then((v) => {
 ## 関連情報
 
 - {{jsxref("Statements/async_function", "async function")}}
-- {{jsxref("AsyncFunction")}} オブジェクト
+- {{jsxref("AsyncFunction")}}
 - {{jsxref("Operators/await", "await")}}

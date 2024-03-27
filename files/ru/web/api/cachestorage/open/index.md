@@ -57,7 +57,7 @@ var cachedResponse = caches
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

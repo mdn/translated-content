@@ -1,8 +1,9 @@
 ---
-title: Cache.matchAll()
+title: "Cache: matchAll() メソッド"
+short-title: matchAll()
 slug: Web/API/Cache/matchAll
 l10n:
-  sourceCommit: 418f9cf461de0c7845665c0c677ad0667740f52a
+  sourceCommit: 633a8bf8d2bb80d29f417e4ef6cd53fdeeda940d
 ---
 
 {{APIRef("Service Workers API")}}
@@ -40,14 +41,14 @@ matchAll(request, options)
 
 ## 例
 
-以下の例では、 `v1` キャッシュにある、URL `/` に一致するすべての項目を、潜在的な引数も含めて削除しています。`{ ignoreSearch: true }` を使用することで、 `matchAll` を使用すると、 `/` だけでなく `/?value=bar` も取得することができます。
+以下の例では、 `v1` キャッシュにある、URL `/` と潜在的な引数に一致するすべてのレスポンスを受け取ります。 `{ ignoreSearch: true }` を使用することで、 `matchAll` を使用すると、 `/` だけでなく `/?value=bar` も取得することができます。
+
+そして、一致したレスポンスの数をログ出力します。
 
 ```js
 caches.open("v1").then((cache) => {
   cache.matchAll("/", { ignoreSearch: true }).then((responses) => {
-    for (const response of responses) {
-      cache.delete(response);
-    }
+    console.log(`Found ${responses.length} matching responses`);
   });
 });
 ```

@@ -55,7 +55,7 @@ slug: Web/CSS/::grammar-error
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

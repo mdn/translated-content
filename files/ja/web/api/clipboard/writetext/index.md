@@ -13,7 +13,7 @@ slug: Web/API/Clipboard/writeText
 ## 構文
 
 ```js
-writeText(newClipText)
+writeText(newClipText);
 ```
 
 ### 引数
@@ -30,11 +30,14 @@ writeText(newClipText)
 この例では、クリップボードの内容を "\<empty clipboard>" という文字列に設定します。
 
 ```js
-navigator.clipboard.writeText("<empty clipboard>").then(() => {
-  /* clipboard successfully set */
-}, () => {
-  /* clipboard write failed */
-});
+navigator.clipboard.writeText("<empty clipboard>").then(
+  () => {
+    /* clipboard successfully set */
+  },
+  () => {
+    /* clipboard write failed */
+  },
+);
 ```
 
 ## 仕様書

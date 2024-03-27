@@ -58,13 +58,11 @@ with (obj) {
 
 ## Especificações
 
-| Especificação                                                            |
-| ------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-symbol.unscopables', 'Symbol.unscopables')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Symbol.unscopables")}}
+{{Compat}}
 
 ## Veja também
 

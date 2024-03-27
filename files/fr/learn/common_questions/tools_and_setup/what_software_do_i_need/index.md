@@ -144,7 +144,7 @@ Tous les systèmes d'exploitations possèdent un éditeur de texte basique par d
       </td>
     </tr>
     <tr>
-      <td>Chrome OS</td>
+      <td>ChromeOS</td>
       <td></td>
       <td>
         <ul>

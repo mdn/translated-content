@@ -3,7 +3,7 @@ title: bookmarks.create()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/create
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Crée un signet ou un dossier en tant qu'enfant de {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} avec `parentId` spécifié. Pour créer un dossier, omettez ou laissez vide le paramètre {{WebExtAPIRef("bookmarks.CreateDetails", "CreateDetails", "url")}}.
 

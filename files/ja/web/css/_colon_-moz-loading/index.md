@@ -11,7 +11,7 @@ slug: Web/CSS/:-moz-loading
 
 ## 構文
 
-```css
+```css-nolint
 :-moz-loading {}
 ```
 

@@ -18,7 +18,7 @@ slug: Learn/Tools_and_testing/GitHub
 
 版本控制系統提供了能夠滿足以上需求的工具。 [Git](https://git-scm.com/) 是版本控制系統的範例，而[GitHub](https://github.com/)是一個為個人或團隊操作 Git 儲存庫( Git Repositories) 提供了 Git 伺服器和一系列非常實用的工具的網站+基礎設施。它提供了回報程式碼錯誤、檢查工具以及分配任務和任務狀態等項目管理工具等等。
 
-> **備註：** Git 實際上是一個*分散式*版本控制系統，這意味著包含程式碼庫的儲存庫的完整副本是在您的電腦上（以及其他所有人）上創建的。 您可以對自己的副本進行更改，然後將這些更改推送回伺服器，管理員將決定是否將您的更改與主副本合併到主幹上。
+> **備註：** Git 實際上是一個*分散式*版本控制系統，這意味著包含程式碼庫的儲存庫的完整副本是在你的電腦上（以及其他所有人）上創建的。 你可以對自己的副本進行更改，然後將這些更改推送回伺服器，管理員將決定是否將你的更改與主副本合併到主幹上。
 
 > **標註：**
 >
@@ -36,22 +36,22 @@ slug: Learn/Tools_and_testing/GitHub
 - 一個工具來使用 Git，取決於你喜歡用哪類型工具，你可以使用一個 [Git GUI client](https://git-scm.com/downloads/guis/)（我們建議使用 GitHub Desktop, SourceTree or Git Kraken）或就使用 terminal window。即便你傾向使用 GUI，實際上使用 terminal window 可以幫助你學習一些 git 的基本指令。
 - 一個 [GitHub 帳號](https://github.com/join)。如果你還沒有帳號，建議使用提供的連結去註冊一個帳號並開始用。
 
-就事前必備知識而言，您無需了解所有有關 Web 開發，Git /GitHub 的知識即可開始使用此版本控制系統。 但是，建議您了解一些開發程式碼的知識，並嘗試把一些程式碼存儲在你的儲存庫中！
+就事前必備知識而言，你無需了解所有有關 Web 開發，Git /GitHub 的知識即可開始使用此版本控制系統。 但是，建議你了解一些開發程式碼的知識，並嘗試把一些程式碼存儲在你的儲存庫中！
 
 最好還具有一些基本的終端機知識，例如在目錄之間移動，創立文件以及修改系統的 `PATH`。
 
-> **備註：** Github 不是唯一網站/工具集讓你使用 Git。 您可以嘗試其它替代方法，例如 [GitLab](https://about.gitlab.com/)，也可以嘗試設置自己的 Git 伺服器並使用它來取代 GitHub。在本章節中，我們僅停留在 GitHub 使用教學上。
+> **備註：** Github 不是唯一網站/工具集讓你使用 Git。 你可以嘗試其它替代方法，例如 [GitLab](https://about.gitlab.com/)，也可以嘗試設置自己的 Git 伺服器並使用它來取代 GitHub。在本章節中，我們僅停留在 GitHub 使用教學上。
 
 ## 其它指南
 
-請注意，下面的連結將您帶到外部站點上的資源。最終，我們的目標是開設自己的專屬 Git / GitHub 課程，但目前，這些課程將幫助您掌握相關主題。
+請注意，下面的連結將你帶到外部站點上的資源。最終，我們的目標是開設自己的專屬 Git / GitHub 課程，但目前，這些課程將幫助你掌握相關主題。
 
 - [Hello, World（來自 GitHub）](https://guides.github.com/activities/hello-world/)
-  - : 這是一個很好的起點-本實用指南可讓您直接使用 GitHub，學習 Git 的基礎知識，例如創建儲存庫和分支，進行提交以及合併提取要求。
+  - : 這是一個很好的起點-本實用指南可讓你直接使用 GitHub，學習 Git 的基礎知識，例如創建儲存庫和分支，進行提交以及合併提取要求。
 - [Git 使用手冊（來自 GitHub）](https://guides.github.com/introduction/git-handbook/)
   - : 這本 Git 手冊更深入地介紹了版本控制系统是什麼，儲存庫是什麼，基本 GitHub 模如何運行，Git 命令和範例等等。
 - [Forking Projects 分叉專案（來自 GitHub）](https://guides.github.com/activities/forking/)
-  - : 當您想為別人的程式碼做貢獻時，Forking Projects 分叉專案是必不可少的。本指南說明了方法。
+  - : 當你想為別人的程式碼做貢獻時，Forking Projects 分叉專案是必不可少的。本指南說明了方法。
 - [關於提取要求（來自 GitHub）](https://help.github.com/en/articles/about-pull-requests)
   - : 有用的指南，用於管理請求請求，將建議的程式碼更改傳遞給人們的儲存庫以供考慮。
 - [掌握問題（來自 GitHub）](https://guides.github.com/features/issues/)

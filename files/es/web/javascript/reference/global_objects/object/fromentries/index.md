@@ -61,7 +61,7 @@ console.log(obj); // { 0: "a", 1: "b", 2: "c" }
 
 ### Transformación de Objetos
 
-Con `Object.fromEntries`, su método inverso {{jsxref("Object.entries()")}}, y [array métodos de manipulaciín de arreglos](/es/docs/Web/JavaScript/Reference/Global_Objects/Array#Methods_2), puedes transformar objetos así:
+Con `Object.fromEntries`, su método inverso {{jsxref("Object.entries()")}}, y [array métodos de manipulación de arreglos](/es/docs/Web/JavaScript/Reference/Global_Objects/Array#Methods_2), puedes transformar objetos así:
 
 ```js
 const object1 = { a: 1, b: 2, c: 3 };

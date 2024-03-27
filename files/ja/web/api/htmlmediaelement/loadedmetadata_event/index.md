@@ -14,9 +14,9 @@ l10n:
 このイベントを {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('loadedmetadata', (event) => {});
+addEventListener("loadedmetadata", (event) => {});
 
-onloadedmetadata = (event) => { };
+onloadedmetadata = (event) => {};
 ```
 
 ## イベント型
@@ -30,20 +30,20 @@ onloadedmetadata = (event) => { };
 `addEventListener()` を使用する場合:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('loadedmetadata', (event) => {
-  console.log('メディアとトラックの長さと寸法は現在わかっています。');
+video.addEventListener("loadedmetadata", (event) => {
+  console.log("メディアとトラックの長さと寸法は現在わかっています。");
 });
 ```
 
 `onloadedmetadata` イベントハンドラープロパティを使用する場合:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.onloadedmetadata = (event) => {
-  console.log('メディアとトラックの長さと寸法は現在わかっています。');
+  console.log("メディアとトラックの長さと寸法は現在わかっています。");
 };
 ```
 

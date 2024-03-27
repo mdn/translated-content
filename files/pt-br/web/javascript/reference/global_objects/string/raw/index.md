@@ -80,14 +80,11 @@ String.raw(
 
 ## Especificações
 
-| Especificação                                            | Status               | Comentário         |
-| -------------------------------------------------------- | -------------------- | ------------------ |
-| {{SpecName('ES2015', '#sec-string.raw', 'String.raw')}}  | {{Spec2('ES2015')}}  | Definição inicial. |
-| {{SpecName('ESDraft', '#sec-string.raw', 'String.raw')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.String.raw")}}
+{{Compat}}
 
 ## Veja também
 

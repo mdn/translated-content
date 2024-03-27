@@ -2,7 +2,7 @@
 title: CacheStorage
 slug: Web/API/CacheStorage
 l10n:
-  sourceCommit: 164d2b6e6c9ce32fcb8ad19436fe44766cb5c3eb
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("Service Workers API")}}

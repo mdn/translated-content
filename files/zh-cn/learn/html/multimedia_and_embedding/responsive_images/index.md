@@ -10,7 +10,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         你应该知道
         <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">HTML 基础</a>以及如何<a href="/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">在网站上添加静态图片</a>。

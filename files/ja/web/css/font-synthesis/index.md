@@ -23,6 +23,8 @@ font-synthesis: revert;
 font-synthesis: unset;
 ```
 
+{{EmbedInteractiveExample("pages/css/font-synthesis.html")}}
+
 ### 値
 
 - `none`
@@ -54,7 +56,7 @@ font-synthesis: unset;
 
 ```html
 <em class="syn">Synthesize me! 站直。</em>
-<br/>
+<br />
 <em class="no-syn">Don't synthesize me! 站直。</em>
 ```
 

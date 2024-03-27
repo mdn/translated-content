@@ -72,16 +72,11 @@ Foo.name; // "NamedFoo"
 
 ## Especificações
 
-| Especificação                                                          | Situação             | Comentário         |
-| ---------------------------------------------------------------------- | -------------------- | ------------------ |
-| {{SpecName('ES2015', '#sec-class-definitions', 'Class definitions')}}  | {{Spec2('ES2015')}}  | Definição inicial. |
-| {{SpecName('ES2016', '#sec-class-definitions', 'Class definitions')}}  | {{Spec2('ES2016')}}  |                    |
-| {{SpecName('ES2017', '#sec-class-definitions', 'Class definitions')}}  | {{Spec2('ES2017')}}  |                    |
-| {{SpecName('ESDraft', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.operators.class")}}
+{{Compat}}
 
 ## Veja também
 

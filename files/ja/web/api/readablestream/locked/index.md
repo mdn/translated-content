@@ -1,8 +1,9 @@
 ---
-title: ReadableStream.locked
+title: "ReadableStream: locked プロパティ"
+short-title: locked
 slug: Web/API/ReadableStream/locked
 l10n:
-  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
+  sourceCommit: d41c5446d4ef257280fae9b78e2298ced8954a95
 ---
 
 {{APIRef("Streams")}}
@@ -25,7 +26,7 @@ const stream = new ReadableStream({
 
 const reader = stream.getReader();
 
-stream.locked
+stream.locked;
 // ストリームがリーダーにロックされているため、true が返されるはずです
 ```
 
@@ -36,3 +37,8 @@ stream.locked
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} constructor
+- [読み取り可能なストリームの使用](/ja/docs/Web/API/Streams_API/Using_readable_streams)

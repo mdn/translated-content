@@ -3,7 +3,7 @@ title: tabs.query()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/query
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 指定されたプロパティを持つ全てのタブを取得します。何も指定しない場合、全てのタブを取得します。
 
@@ -66,7 +66,7 @@ var querying = browser.tabs.query(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.tabs.query", 10)}}
+{{Compat}}
 
 ## 例
 

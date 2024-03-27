@@ -99,8 +99,8 @@ let classes = "header";
 classes += isLargeScreen()
   ? ""
   : item.isCollapsed
-  ? " icon-expander"
-  : " icon-collapser";
+    ? " icon-expander"
+    : " icon-collapser";
 ```
 
 ES2015 で入れ子なしのテンプレートリテラルの場合:

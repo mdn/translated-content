@@ -20,9 +20,8 @@ async function startCapture(displayMediaOptions) {
   let captureStream = null;
 
   try {
-    captureStream = await navigator.mediaDevices.getDisplayMedia(
-      displayMediaOptions,
-    );
+    captureStream =
+      await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
   } catch (err) {
     console.error("Error: " + err);
   }
@@ -139,10 +138,6 @@ const gdmOptions = {
 
 The {{jsxref("promise")}} returned by {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} resolves to a {{domxref("MediaStream")}} that contains at least one video stream that contains the screen or screen area, and which is adjusted or filtered based upon the constraints specifed when `getDisplayMedia()` was called.
 
-## Security
-
-As is always the case when sharing content over a network, it's important to consider the privacy and safety implications of screen sharing.
-
 ### Potential risks
 
 Privacy and security issues surrounding screen sharing are usually not overly serious, but they do exist. The largest potential issue is users inadvertently sharing content they did not wish to share.
@@ -233,9 +228,8 @@ async function startCapture() {
   logElem.innerHTML = "";
 
   try {
-    videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia(
-      displayMediaOptions,
-    );
+    videoElem.srcObject =
+      await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
     dumpOptionsInfo();
   } catch (err) {
     console.error("Error: " + err);

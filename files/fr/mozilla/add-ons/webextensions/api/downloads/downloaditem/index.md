@@ -3,7 +3,7 @@ title: downloads.DownloadItem
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadItem
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Le type `DownloadItem` de l'API {{WebExtAPIRef("downloads")}} représente un fichier téléchargé.
 

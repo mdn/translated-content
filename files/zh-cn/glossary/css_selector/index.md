@@ -75,8 +75,8 @@ div.warning {
 
 - 关系选择器
 
-  - [邻近兄弟元素选择器](/zh-CN/docs/Web/CSS/Adjacent_sibling_combinator) `A + B`
-  - [兄弟元素选择器](/zh-CN/docs/Web/CSS/General_sibling_combinator) `A ~ B`
+  - [接续兄弟选择器](/zh-CN/docs/Web/CSS/Next-sibling_combinator) `A + B`
+  - [后续兄弟选择器](/zh-CN/docs/Web/CSS/Subsequent-sibling_combinator) `A ~ B`
   - [直接子元素选择器](/zh-CN/docs/Web/CSS/Child_combinator) `A > B`
   - [后代元素选择器](/zh-CN/docs/Web/CSS/Descendant_combinator) `A B`
 

@@ -5,7 +5,7 @@ slug: Web/API/IDBFactory
 
 {{APIRef("IndexedDB")}}
 
-[IndexedDB API](/zh-CN/docs/IndexedDB) 的`IDBFactory` 接口让程序可以异步存取 indexed databases。`window.indexedDB` 对象实现了这个接口。你可以通过这个对象而不是直接使用`IDBFactory`接口打开—— 创建或者连接 —— 和删除一个数据库。
+[IndexedDB API](/zh-CN/docs/IndexedDB) 的`IDBFactory` 接口让程序可以异步存取 indexed databases。`window.indexedDB` 对象实现了这个接口。你可以通过这个对象而不是直接使用`IDBFactory`接口打开——创建或者连接——和删除一个数据库。
 
 ## Methods
 

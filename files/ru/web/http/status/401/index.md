@@ -31,7 +31,7 @@ WWW-Authenticate: Basic realm="Access to staging site"
 | ------------------------------------------- | ------------------------ |
 | {{RFC("7235", "401 Unauthorized" , "3.1")}} | HTTP/1.1: Authentication |
 
-## Совместимость с браузером
+## Совместимость с браузерами
 
 {{Compat}}
 

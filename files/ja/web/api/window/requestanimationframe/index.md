@@ -38,14 +38,14 @@ requestAnimationFrame(callback)
 この例では、ある要素を 2 秒間（2000 ミリ秒）動作させています。要素は 0.1px/ms の速度で右に移動するので、その相対位置（CSS ピクセル単位）はアニメーションの開始からの経過時間（ミリ秒）の関数として `0.1 * elapsed` で計算することができます。要素の最終的な位置は、初期位置から右へ 200px （`0.1 * 2000`）となります。
 
 ```js
-const element = document.getElementById('some-element-you-want-to-animate');
+const element = document.getElementById("some-element-you-want-to-animate");
 let start, previousTimeStamp;
-let done = false
+let done = false;
 
 function step(timestamp) {
   if (start === undefined) {
     start = timestamp;
-    }
+  }
   const elapsed = timestamp - start;
 
   if (previousTimeStamp !== timestamp) {
@@ -55,7 +55,8 @@ function step(timestamp) {
     if (count === 200) done = true;
   }
 
-  if (elapsed < 2000) { // Stop the animation after 2 seconds
+  if (elapsed < 2000) {
+    // Stop the animation after 2 seconds
     previousTimeStamp = timestamp;
     if (!done) {
       window.requestAnimationFrame(step);

@@ -10,7 +10,7 @@ slug: Web/JavaScript/Reference/Functions/arguments/@@iterator
 ## 構文
 
 ```js
-arguments[Symbol.iterator]()
+arguments[Symbol.iterator]();
 ```
 
 ## 例
@@ -25,7 +25,7 @@ function f() {
     console.log(letter);
   }
 }
-f('w', 'y', 'k', 'o', 'p');
+f("w", "y", "k", "o", "p");
 ```
 
 ## 仕様書

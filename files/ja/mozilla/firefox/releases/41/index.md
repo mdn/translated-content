@@ -72,7 +72,7 @@ Firefox 41 は、米国時間 2015 年 9 月 22 日にリリースされまし�
 
 - 非標準の {{domxref("CloseEvent.initCloseEvent()")}} メソッド、および {{domxref("Event.createEvent", "Event.createEvent('CloseEvent')")}} メソッドを使用して {{domxref("CloseEvent")}} を生成する機能を削除しました。代わりに、標準のコンストラクタである {{domxref("CloseEvent.CloseEvent", "CloseEvent()")}} を使用してください ([Firefox バグ 1161950](https://bugzil.la/1161950))。
 - デスクトップ版の Nightly で、{{domxref("PointerEvent")}} がデフォルトで有効になりました。Developer Edition、Beta、Release では無効であり、少なくともいくつかのバージョンの間は有効化しない予定です。([Firefox バグ 1166347](https://bugzil.la/1166347))
-- 接頭辞なしの {{domxref("MouseEvent.movementX")}} および {{domxref("MouseEvent.movementY")}}}} を追加しました。接頭辞つきのプロパティは非推奨になり、将来のある時点で削除する予定です ([Firefox バグ 1164981](https://bugzil.la/1164981))。
+- 接頭辞なしの {{domxref("MouseEvent.movementX")}} および {{domxref("MouseEvent.movementY")}} を追加しました。接頭辞つきのプロパティは非推奨になり、将来のある時点で削除する予定です ([Firefox バグ 1164981](https://bugzil.la/1164981))。
 
 #### Web Crypto
 

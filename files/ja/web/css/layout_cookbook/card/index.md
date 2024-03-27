@@ -27,7 +27,7 @@ slug: Web/CSS/Layout_cookbook/Card
 
 ## 行った選択
 
-このカードは、 1 次元レイアウトであるにもかかわらず [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout)を使用してレイアウトされています。 これは、グリッドトラックに対してコンテンツのサイズ変更の使用が可能になるためです。 単一列グリッドを設定するときは、次のようにします。
+このカードは、 1 次元レイアウトであるにもかかわらず [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)を使用してレイアウトされています。 これは、グリッドトラックに対してコンテンツのサイズ変更の使用が可能になるためです。 単一列グリッドを設定するときは、次のようにします。
 
 ```css
 .card {
@@ -60,11 +60,11 @@ slug: Web/CSS/Layout_cookbook/Card
 
 #### grid-template-columns
 
-{{Compat("css.properties.grid-template-columns")}}
+{{Compat}}
 
 #### grid-template-rows
 
-{{Compat("css.properties.grid-template-rows")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -3,7 +3,7 @@ title: tabs.reload()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/reload
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Rechargez un onglet, en contournant éventuellement le cache Web local.
 

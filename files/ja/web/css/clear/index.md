@@ -1,27 +1,27 @@
 ---
 title: clear
 slug: Web/CSS/clear
+l10n:
+  sourceCommit: 2adfb8760ac42c80966080e2e84211b14e43b589
 ---
 
 {{CSSRef}}
 
- **`clear`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素をその前にある[浮動](/ja/docs/Web/CSS/float)要素の下に移動 (clear) する必要があるかどうかを設定します。`clear` プロパティは、浮動要素と非浮動要素のどちらにも適用されます。
+**`clear`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素をその前にある[浮動](/ja/docs/Web/CSS/float)要素の下に移動 (clear) する必要があるかどうかを設定します。`clear` プロパティは、浮動要素と非浮動要素のどちらにも適用されます。
 
 {{EmbedInteractiveExample("pages/css/clear.html")}}
 
-浮動でないブロックに適用された場合は、その要素の[境界の辺](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#border-area)が、関係するすべての浮動要素の[マージンの辺](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#margin-area)より下まで移動します。浮動でないブロックの上マージンは折り畳まれます。
+浮動でないブロックに適用された場合は、その要素の[境界の辺](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#border_area)が、関係するすべての浮動要素の[マージンの辺](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#margin_area)より下まで移動します。浮動でないブロックの上マージンは折り畳まれます。
 
 一方で、二つの浮動要素の垂直マージンは折り畳まれません。浮動要素に適用された場合、下の要素のマージンの辺が、すべての関連する浮動要素のマージンの辺よりも下に移動します。これは後の浮動要素が前のものよりも高い位置に配置されることがないため、後の浮動要素の位置に影響します。
 
 解除されることに関連する浮動要素は、その前の浮動要素と[同一のブロック整形コンテキスト](/ja/docs/Web/Guide/CSS/Block_formatting_context)内の先行する浮動要素です。
 
-> **メモ:** 浮動要素しか包含しない要素は、高さがなくなります。このような要素を常にリサイズ可能にして浮動要素を包含するようにしたい場合は、その子要素自身に clear を設定しなければなりません。これは **clearfix** と呼ばれます。また、実現方法のひとつとして、置換 {{cssxref("::after")}} [擬似要素](/ja/docs/Web/CSS/Pseudo-elements) に `clear` を使う方法があります。
+> **メモ:** 浮動要素しか包含しない要素は、高さがなくなります。このような要素を常にリサイズ可能にして浮動要素を包含するようにしたい場合は、その要素の [`display`](/ja/docs/Web/CSS/display) プロパティの値を [`flow-root`](/ja/docs/Web/CSS/display#flow-root) に設定してください。
 >
 > ```css
-> #container::after {
->   content: "";
->   display: block;
->   clear: both;
+> #container {
+>   display: flow-root;
 > }
 > ```
 
@@ -40,6 +40,7 @@ clear: inline-end;
 clear: inherit;
 clear: initial;
 clear: revert;
+clear: revert-layer;
 clear: unset;
 ```
 
@@ -74,7 +75,10 @@ clear: unset;
 
 ```html
 <div class="wrapper">
-  <p class="black">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.</p>
+  <p class="black">
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet
+    diam. Duis mattis varius dui. Suspendisse eget dolor.
+  </p>
   <p class="red">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
   <p class="left">This paragraph clears left.</p>
 </div>
@@ -83,9 +87,9 @@ clear: unset;
 #### CSS
 
 ```css
-.wrapper{
-  border:1px solid black;
-  padding:10px;
+.wrapper {
+  border: 1px solid black;
+  padding: 10px;
 }
 .left {
   border: 1px solid black;
@@ -102,7 +106,7 @@ clear: unset;
   float: left;
   margin: 0;
   background-color: pink;
-  width:20%;
+  width: 20%;
 }
 p {
   width: 50%;
@@ -117,7 +121,10 @@ p {
 
 ```html
 <div class="wrapper">
-  <p class="black">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.</p>
+  <p class="black">
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet
+    diam. Duis mattis varius dui. Suspendisse eget dolor.
+  </p>
   <p class="red">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
   <p class="right">This paragraph clears right.</p>
 </div>
@@ -126,9 +133,9 @@ p {
 #### CSS
 
 ```css
-.wrapper{
-  border:1px solid black;
-  padding:10px;
+.wrapper {
+  border: 1px solid black;
+  padding: 10px;
 }
 .right {
   border: 1px solid black;
@@ -139,13 +146,13 @@ p {
   margin: 0;
   background-color: black;
   color: #fff;
-  width:20%;
+  width: 20%;
 }
 .red {
   float: right;
   margin: 0;
   background-color: pink;
-  width:20%;
+  width: 20%;
 }
 p {
   width: 50%;
@@ -160,8 +167,15 @@ p {
 
 ```html
 <div class="wrapper">
-  <p class="black">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor. Fusce pulvinar lacus ac dui.</p>
-  <p class="red">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.</p>
+  <p class="black">
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet
+    diam. Duis mattis varius dui. Suspendisse eget dolor. Fusce pulvinar lacus
+    ac dui.
+  </p>
+  <p class="red">
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet
+    diam. Duis mattis varius dui. Suspendisse eget dolor.
+  </p>
   <p class="both">This paragraph clears both.</p>
 </div>
 ```
@@ -169,9 +183,9 @@ p {
 #### CSS
 
 ```css
-.wrapper{
-  border:1px solid black;
-  padding:10px;
+.wrapper {
+  border: 1px solid black;
+  padding: 10px;
 }
 .both {
   border: 1px solid black;
@@ -182,13 +196,13 @@ p {
   margin: 0;
   background-color: black;
   color: #fff;
-  width:20%;
+  width: 20%;
 }
 .red {
   float: right;
   margin: 0;
   background-color: pink;
-  width:20%;
+  width: 20%;
 }
 p {
   width: 45%;
@@ -207,4 +221,4 @@ p {
 
 ## 関連情報
 
-- [CSS 基本ボックスモデル](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- [CSS 基本ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)

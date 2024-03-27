@@ -68,7 +68,7 @@ l10n:
 ## 例
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <!-- … -->

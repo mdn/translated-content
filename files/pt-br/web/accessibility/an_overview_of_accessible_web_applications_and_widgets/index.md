@@ -33,7 +33,7 @@ _Exemplo 1: Marcação para um widget de abas construído sem as indicações AR
 ```
 
 _Exemplo 2: Como o widget de abas pode ser visto. Seus utilizadores podem reconhecer sua aparência, mas não há semântica legível por mecanismos de tecnologias assistivas._
-![Screenshot of the tabs widget](/@api/deki/files/4926/=Tabs_Widget.png)
+![Screenshot of the tabs widget](tabs_widget.png)
 
 ## ARIA
 

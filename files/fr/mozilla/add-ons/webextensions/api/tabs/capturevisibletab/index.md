@@ -3,7 +3,7 @@ title: tabs.captureVisibleTab()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/captureVisibleTab
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Crée une URI de données codant une image de la zone visible de l'onglet actuellement actif dans la fenêtre spécifiée. Vous devez avoir la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) `<all_urls>` pour utiliser cette méthode. (Alternativement, Chrome permet l'utilisation de cette méthode avec la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) `activeTab` et un geste utilisateur qualifiant).
 

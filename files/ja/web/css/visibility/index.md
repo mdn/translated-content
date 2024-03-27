@@ -140,7 +140,7 @@ td {
 
 ## ブラウザーの互換性
 
-{{Compat("css.properties.visibility")}}
+{{Compat}}
 
 ## 関連情報
 

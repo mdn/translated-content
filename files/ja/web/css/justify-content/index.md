@@ -17,13 +17,13 @@ slug: Web/CSS/justify-content
 
 ```css
 /* 位置による配置 */
-justify-content: center;     /* アイテムを中央に寄せる */
-justify-content: start;      /* アイテムを先頭に寄せる */
-justify-content: end;        /* アイテムを末尾に寄せる */
+justify-content: center; /* アイテムを中央に寄せる */
+justify-content: start; /* アイテムを先頭に寄せる */
+justify-content: end; /* アイテムを末尾に寄せる */
 justify-content: flex-start; /* フレックスアイテムを先頭に寄せる */
-justify-content: flex-end;   /* フレックスアイテムを末尾に寄せる */
-justify-content: left;       /* アイテムを左端に寄せる */
-justify-content: right;      /* アイテムを右端に寄せる */
+justify-content: flex-end; /* フレックスアイテムを末尾に寄せる */
+justify-content: left; /* アイテムを左端に寄せる */
+justify-content: right; /* アイテムを右端に寄せる */
 
 /* ベースラインによる配置 */
 /* justify-content はベースラインの値を取りません */
@@ -35,12 +35,12 @@ justify-content: normal;
 justify-content: space-between; /* 各アイテムを均等に配置し
                                    最初のアイテムは先頭に寄せ、
                                    最後のアイテムは末尾に寄せる */
-justify-content: space-around;  /* 各アイテムを均等に配置し
+justify-content: space-around; /* 各アイテムを均等に配置し
                                    各アイテムの両側に半分の大きさの
                                    間隔を置く */
-justify-content: space-evenly;  /* 各アイテムを均等に配置し
+justify-content: space-evenly; /* 各アイテムを均等に配置し
                                    各アイテムの周りに同じ大きさの間隔を置く */
-justify-content: stretch;       /* 各アイテムを均等に配置し
+justify-content: stretch; /* 各アイテムを均等に配置し
                                    サイズが 'auto' であるアイテムは、
                                    コンテナーに合わせて引き伸ばす */
 
@@ -99,13 +99,13 @@ justify-content: unset;
 
 {{cssinfo}}
 
-## 関連情報
+## 形式文法
 
 {{csssyntax}}
 
 ## 例
 
-<h3 id="Setting_flex_item_distribution">フレックスアイテムの配分の設定</h3>
+### フレックスアイテムの配分の設定
 
 #### CSS
 
@@ -149,18 +149,17 @@ justify-content: unset;
 ```js hidden
 var justifyContent = document.getElementById("justifyContent");
 justifyContent.addEventListener("change", function (evt) {
-  document.getElementById("container").style.justifyContent =
-      evt.target.value;
+  document.getElementById("container").style.justifyContent = evt.target.value;
 });
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Setting_flex_item_distribution", "100%", 180)}}
+{{EmbedLiveSample("フレックスアイテムの配分の設定", "100%", 180)}}
 
 ## 仕様書
 
-{{Specifications("css.properties.justify-content.grid_context")}}
+{{Specifications}}
 
 ## ブラウザーの互換性
 
@@ -168,7 +167,7 @@ justifyContent.addEventListener("change", function (evt) {
 
 ## 関連情報
 
-- CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS フレックスボックスガイド: _[フレックスコンテナー内でのアイテムの配置](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
-- CSS グリッドガイド: _[CSS グリッドレイアウト内でのボックス配置](/ja/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
+- CSS フレックスボックスガイド: _[フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS フレックスボックスガイド: _[フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
+- CSS グリッドガイド: _[グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
 - [CSS ボックス配置](/ja/docs/Web/CSS/CSS_Box_Alignment)

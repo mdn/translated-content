@@ -18,7 +18,7 @@ slug: Web/API/queueMicrotask
 ## 構文
 
 ```js
-queueMicrotask(callback)
+queueMicrotask(callback);
 ```
 
 ### 引数
@@ -48,11 +48,13 @@ MyElement.prototype.loadData = function (url) {
       this.dispatchEvent(new Event("load"));
     });
   } else {
-    fetch(url).then(res => res.arrayBuffer()).then(data => {
-      this._cache[url] = data;
-      this._setData(data);
-      this.dispatchEvent(new Event("load"));
-    });
+    fetch(url)
+      .then((res) => res.arrayBuffer())
+      .then((data) => {
+        this._cache[url] = data;
+        this._setData(data);
+        this.dispatchEvent(new Event("load"));
+      });
   }
 };
 ```
@@ -66,7 +68,11 @@ if (typeof self.queueMicrotask !== "function") {
   self.queueMicrotask = function (callback) {
     Promise.resolve()
       .then(callback)
-      .catch(e => setTimeout(() => { throw e; })); // 例外を通知
+      .catch((e) =>
+        setTimeout(() => {
+          throw e;
+        }),
+      ); // 例外を通知
   };
 }
 ```

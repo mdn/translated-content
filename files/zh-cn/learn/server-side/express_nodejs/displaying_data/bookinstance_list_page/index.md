@@ -35,9 +35,9 @@ exports.bookinstance_list = function (req, res, next) {
 
 ## 视图
 
-创建 **/views/bookinstance_list.pug** ，並複制貼上底下的文字。
+创建 **/views/bookinstance_list.pug**，并复制粘贴下面的文本。
 
-```js
+```pug
 extends layout
 
 block content
@@ -60,11 +60,11 @@ block content
     li There are no book copies in this library.
 ```
 
-这个視图与其他視图非常相似。它扩展了布局，替换内容區块，显示从控制器传入的标题 `title`，并遍历 `bookinstance_list` 中的所有书籍副本。对于每个副本，我们都会显示它的状态（用颜色编码），如果书本不可用，则显示其预期返回日期。這裡引入了一个新功能 — 我们可以在标签之后使用点符号表示法，來指定一個类別。因此，`span.text-success` 将被编译为 `<span class="text-success">`（也可以用 Pug 编写为 `span(class="text-success")`）.
+这个视图与其他视图非常相似。它扩展了布局，替换*内容*区块，显示从控制器传入的标题 `title`，并遍历 `bookinstance_list` 中的所有书籍副本。对于每个副本，我们都会显示它的状态（用颜色编码），如果书本不可用，则显示其预期返回日期。这里引入了一个新功能——我们可以在标签之后使用点符号表示法，来指定一个类别。因此，`span.text-success` 将被编译为 `<span class="text-success">`（也可以用 Pug 编写为 `span(class="text-success")`）。
 
-## 它看起來像是？
+## 它看起来像是？
 
-运行本应用，打开浏览器访问 <http://localhost:3000/>，然后选择 All book-instances 连结。假如每个东西都设定正确了，你的网站看起来应该像是底下的截图。
+运行本应用，打开浏览器访问 `http://localhost:3000/`，然后选择 _All book-instances_ 链接。假如每个东西都设置正确了，你的网站看起来应该像是底下的截图。
 
 ![BookInstance List Page - Express Local Library site](locallibary_express_bookinstance_list.png)
 

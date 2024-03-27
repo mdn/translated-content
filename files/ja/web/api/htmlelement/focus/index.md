@@ -76,8 +76,7 @@ document.getElementById("focusButton").addEventListener("click", () => {
 
 ```html
 <button id="myButton">クリックしてください</button>
-<button id="focusButton">クリックで
-「ボタン」にフォーカスを設定</button>
+<button id="focusButton">クリックで 「ボタン」にフォーカスを設定</button>
 <button id="focusButtonVisibleIndication">
   クリックで「Button」にフォーカスと focusVisible を設定
 </button>

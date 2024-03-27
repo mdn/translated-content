@@ -18,25 +18,25 @@ JavaScript において、オブジェクトはプロパティと型を持つ独
 JavaScript のオブジェクトは、自身に関連付けられたプロパティを持ちます。オブジェクトのプロパティは、オブジェクトに関連付けられている変数と捉えることができます。オブジェクトのプロパティは、オブジェクトに属するものという点を除けば、基本的に通常の JavaScript 変数と同じようなものです。オブジェクトのプロパティは、オブジェクトの特性を定義します。オブジェクトのプロパティには、単純なドット表記でアクセスします。
 
 ```js
-objectName.propertyName
+objectName.propertyName;
 ```
 
 すべての JavaScript の変数と同じく、オブジェクト名 (通常の変数にもなります) とプロパティ名では、大文字と小文字は厳密に区別されます。プロパティに値を代入することでプロパティを定義する事ができます。以下のようにして、`myCar` という名前のオブジェクトを作成し、`make`、`model`、`year` という名前のプロパティを付与することができます
 
 ```js
 var myCar = new Object();
-myCar.make = 'Ford';
-myCar.model = 'Mustang';
+myCar.make = "Ford";
+myCar.model = "Mustang";
 myCar.year = 1969;
 ```
 
-上記の例は、**[オブジェクト初期化子](/ja/docs/Web/JavaScript/Guide/Working_with_Objects#Object_initializers)**を使用して作成することもできます。オブジェクト初期化子は、中括弧 (`{}`) で囲まれたオブジェクトのプロパティ名と関連する値の 0 個以上のペアをカンマで区切ったリストです。
+上記の例は、**[オブジェクト初期化子](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer)**を使用して作成することもできます。オブジェクト初期化子は、中括弧 (`{}`) で囲まれたオブジェクトのプロパティ名と関連する値の 0 個以上のペアをカンマで区切ったリストです。
 
 ```js
 var myCar = {
-    make: 'Ford',
-    model: 'Mustang',
-    year: 1969
+  make: "Ford",
+  model: "Mustang",
+  year: 1969,
 };
 ```
 
@@ -49,9 +49,9 @@ myCar.color; // undefined
 JavaScript オブジェクトのプロパティは、ブラケット (角括弧) 記述法でもアクセスすることができます (詳しくは[プロパティのアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_Accessors)を参照してください)。個々のプロパティが文字列値と関連付けられてアクセスできるため、オブジェクトは*連想配列*と呼ばれることがあります。ですから例えば、`myCar` オブジェクトのプロパティに次のようにアクセスできます。
 
 ```js
-myCar['make'] = 'Ford';
-myCar['model'] = 'Mustang';
-myCar['year'] = 1969;
+myCar["make"] = "Ford";
+myCar["model"] = "Mustang";
+myCar["year"] = 1969;
 ```
 
 オブジェクトプロパティの名前には、あらゆる有効な JavaScript 文字列 (空文字列を含む) か、文字列に変換できるものが使用できます。しかしながら、JavaScript 識別子として有効ではないプロパティ名 (例えば空白やダッシュを含んでいたり、数字で始まったりするプロパティ名) には、ブラケット (角括弧) 表記法でのみアクセスできます。この表記法はプロパティ名を動的に決める場合 (プロパティ名が実行時に決まる場合) に便利です。例を示します。
@@ -60,16 +60,16 @@ myCar['year'] = 1969;
 // カンマで区切られた 4 つの変数が作成され、
 // 1 つに割り当てられます。
 var myObj = new Object(),
-    str = 'myString',
-    rand = Math.random(),
-    obj = new Object();
+  str = "myString",
+  rand = Math.random(),
+  obj = new Object();
 
-myObj.type              = 'ドット表記';
-myObj['date created']   = '空白入りの文字列';
-myObj[str]              = '文字列の値';
-myObj[rand]             = '乱数';
-myObj[obj]              = 'オブジェクト';
-myObj['']               = '空文字列も可能';
+myObj.type = "ドット表記";
+myObj["date created"] = "空白入りの文字列";
+myObj[str] = "文字列の値";
+myObj[rand] = "乱数";
+myObj[obj] = "オブジェクト";
+myObj[""] = "空文字列も可能";
 
 console.log(myObj);
 ```
@@ -79,22 +79,22 @@ console.log(myObj);
 変数内の文字列値を使ってプロパティにアクセスすることもできます。
 
 ```js
-var propertyName = 'make';
-myCar[propertyName] = 'Ford';
+var propertyName = "make";
+myCar[propertyName] = "Ford";
 
-propertyName = 'model';
-myCar[propertyName] = 'Mustang';
+propertyName = "model";
+myCar[propertyName] = "Mustang";
 ```
 
 ブラケット表記法を用いて [`for...in`](/ja/docs/Web/JavaScript/Reference/Statements/for...in) でオブジェクトの列挙可能なプロパティすべてを巡回することができます。どのように動作するかを説明するため、以下にオブジェクトとオブジェクト名を引数として渡すと、オブジェクトのプロパティを表示する関数を示します。
 
 ```js
 function showProps(obj, objName) {
-  var result = '';
+  var result = "";
   for (var i in obj) {
     // obj.hasOwnProperty() はオブジェクトのプロトタイプチェーンからプロパティを絞り込むために使用しています
     if (obj.hasOwnProperty(i)) {
-      result += objName + '.' + i + ' = ' + obj[i] + '\n';
+      result += objName + "." + i + " = " + obj[i] + "\n";
     }
   }
   return result;
@@ -104,9 +104,9 @@ function showProps(obj, objName) {
 そして、`showProps(myCar, "myCar")` のように関数を呼び出すと次の結果が返ります。
 
 ```js
-myCar.make = Ford
-myCar.model = Mustang
-myCar.year = 1969
+myCar.make = Ford;
+myCar.model = Mustang;
+myCar.year = 1969;
 ```
 
 ## オブジェクトの全プロパティの列挙
@@ -124,17 +124,18 @@ ECMAScript 5 よりも前では、オブジェクトの全プロパティを列�
 
 ```js
 function listAllProperties(o) {
-    var objectToInspect;
-    var result = [];
+  var objectToInspect;
+  var result = [];
 
-    for(objectToInspect = o; objectToInspect !== null;
-           objectToInspect = Object.getPrototypeOf(objectToInspect)) {
-        result = result.concat(
-            Object.getOwnPropertyNames(objectToInspect)
-        );
-    }
+  for (
+    objectToInspect = o;
+    objectToInspect !== null;
+    objectToInspect = Object.getPrototypeOf(objectToInspect)
+  ) {
+    result = result.concat(Object.getOwnPropertyNames(objectToInspect));
+  }
 
- return result;
+  return result;
 }
 ```
 
@@ -151,10 +152,12 @@ JavaScript には数多くの定義済みオブジェクトがあります。さ
 オブジェクト初期化子を使ったオブジェクトの構文は次のようになります。
 
 ```js
-var obj = { property_1:   value_1,   // property_# は識別子だったり、
-            2:            value_2,   // 数値だったり、
-            // ...,
-            'property n': value_n }; // 文字列だったりします
+var obj = {
+  property_1: value_1, // property_# は識別子だったり、
+  2: value_2, // 数値だったり、
+  // ...,
+  "property n": value_n, // 文字列だったりします
+};
 ```
 
 `obj` は新しいオブジェクトの名前、`property_i` は識別子 (名前、数値、または文字列リテラルのいずれか)、`value_i` は式で、その値が `property_i` に代入されます。`obj` と代入は任意です。もし他の場所でこのオブジェクトを参照する必要がないのなら、変数への代入は不要です。(なお、もしオブジェクトが文の書かれる場所に現れる場合は、リテラルがブロック文と混同されないように、オブジェクトリテラルを括弧で囲む必要がある場合があります。)
@@ -164,13 +167,13 @@ var obj = { property_1:   value_1,   // property_# は識別子だったり、
 次の文では、式 `cond` が true の場合にのみオブジェクトを作り、変数 `x` に代入します。
 
 ```js
-if (cond) var x = {greeting: 'hi there'};
+if (cond) var x = { greeting: "hi there" };
 ```
 
 次の例では 3 つのプロパティを持った `myHonda` を作ります。なお、`engine` プロパティもまた、プロパティを持つオブジェクトです。
 
 ```js
-var myHonda = {color: 'red', wheels: 4, engine: {cylinders: 4, size: 2.2}};
+var myHonda = { color: "red", wheels: 4, engine: { cylinders: 4, size: 2.2 } };
 ```
 
 配列を作るためにオブジェクト初期化子を使うこともできます。[配列リテラル](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#Array_literals)を参照してください。
@@ -197,7 +200,7 @@ function Car(make, model, year) {
 以下のようにして `mycar` と呼ばれるオブジェクトを作成できるようになりました。
 
 ```js
-var mycar = new Car('Eagle', 'Talon TSi', 1993);
+var mycar = new Car("Eagle", "Talon TSi", 1993);
 ```
 
 この文では `mycar` を作り、プロパティに指定した値を代入します。`mycar.make` の値は文字列 "Eagle" になり、`mycar.year` は整数 1993 になり、といった具合です。
@@ -205,8 +208,8 @@ var mycar = new Car('Eagle', 'Talon TSi', 1993);
 `new` を使って `car` オブジェクトをいくつでも作れます。例えば、
 
 ```js
-var kenscar = new Car('Nissan', '300ZX', 1992);
-var vpgscar = new Car('Mazda', 'Miata', 1990);
+var kenscar = new Car("Nissan", "300ZX", 1992);
+var vpgscar = new Car("Mazda", "Miata", 1990);
 ```
 
 オブジェクトは、別のオブジェクトをプロパティとして持つことができます。例えば、`person` という名前のオブジェクトを次のように定義しましょう。
@@ -222,8 +225,8 @@ function Person(name, age, sex) {
 それから、2 個の新しい `person` オブジェクトを次のようにインスタンス化します。
 
 ```js
-var rand = new Person('Rand McKinnon', 33, 'M');
-var ken = new Person('Ken Jones', 39, 'M');
+var rand = new Person("Rand McKinnon", 33, "M");
+var ken = new Person("Ken Jones", 39, "M");
 ```
 
 そして、`Car` の定義を `person` オブジェクトを取る `owner` プロパティを含むよう、以下のように書き換えることができます。
@@ -240,20 +243,20 @@ function Car(make, model, year, owner) {
 新しいオブジェクトをインスタンス化するには、以下のようにします。
 
 ```js
-var car1 = new Car('Eagle', 'Talon TSi', 1993, rand);
-var car2 = new Car('Nissan', '300ZX', 1992, ken);
+var car1 = new Car("Eagle", "Talon TSi", 1993, rand);
+var car2 = new Car("Nissan", "300ZX", 1992, ken);
 ```
 
 新しいオブジェクトを作成する際、上の文ではリテラル文字列や整数値を渡す代わりに、オブジェクト `rand` と `ken` を引数 owner として渡していることに注意してください。そして、car2 の owner の名前を知りたければ、以下のプロパティでアクセスできます。
 
 ```js
-car2.owner.name
+car2.owner.name;
 ```
 
 なお、既に定義されたオブジェクトにはいつでもプロパティを追加することができます。例えば、以下の文は、
 
 ```js
-car1.color = 'black';
+car1.color = "black";
 ```
 
 car1 にプロパティ `color` を追加し、そこに "black" という値を代入します。しかしながら、これは他のどのオブジェクトにも影響しません。同じ型のすべてのオブジェクトに新しいプロパティを追加するには、`car` オブジェクト型の定義にそのプロパティを追加する必要があります。
@@ -265,11 +268,12 @@ car1 にプロパティ `color` を追加し、そこに "black" という値を
 ```js
 // Animal のプロパティとメソッドをカプセル化
 var Animal = {
-  type: 'Invertebrates', // プロパティの既定値、「無脊椎動物」
-  displayType: function(){  // Animal の種類を表示するメソッド
+  type: "Invertebrates", // プロパティの既定値、「無脊椎動物」
+  displayType: function () {
+    // Animal の種類を表示するメソッド
     console.log(this.type);
-  }
-}
+  },
+};
 
 // animal1 という新しい animal 型を作成
 var animal1 = Object.create(Animal);
@@ -277,7 +281,7 @@ animal1.displayType(); // 出力 : Invertebrates
 
 // Fishes という新しい animal 型を作成
 var fish = Object.create(Animal);
-fish.type = 'Fishes';
+fish.type = "Fishes";
 fish.displayType(); // 出力 : Fishes
 ```
 
@@ -299,7 +303,7 @@ JavaScript のすべてのオブジェクトは、1 つ以上の他のオブジ�
 
 ```js
 Car.prototype.color = null;
-car1.color = 'black';
+car1.color = "black";
 ```
 
 詳しくは、[JavaScript リファレンス](/ja/docs/JavaScript/Reference)内にある、`Function` オブジェクトの [`prototype` プロパティ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype)を参照してください。
@@ -336,8 +340,7 @@ object.methodname(params);
 
 ```js
 function displayCar() {
-  var result = '美しい ' + this.year + '年式 ' + this.make
-    + ' ' + this.model;
+  var result = "美しい " + this.year + "年式 " + this.make + " " + this.model;
   pretty_print(result);
 }
 ```
@@ -378,34 +381,34 @@ JavaScript には、メソッド内で現在のオブジェクトを参照する
 const Manager = {
   name: "John",
   age: 27,
-  job: "Software Engineer"
-}
+  job: "Software Engineer",
+};
 const Intern = {
   name: "Ben",
   age: 21,
-  job: "Software Engineer Intern"
-}
+  job: "Software Engineer Intern",
+};
 
 function sayHi() {
-    console.log('Hello, my name is', this.name)
+  console.log("Hello, my name is", this.name);
 }
 
 // 両方のオブジェクトに sayHi 関数を追加
 Manager.sayHi = sayHi;
 Intern.sayHi = sayHi;
 
-Manager.sayHi() // Hello, my name is John'
-Intern.sayHi() // Hello, my name is Ben'
+Manager.sayHi(); // Hello, my name is John'
+Intern.sayHi(); // Hello, my name is Ben'
 ```
 
 `this` は自身が入っているオブジェクトを参照します。上記の例に `howOldAmI()` という新しい関数を作って、その人の年齢を示す文をログに出力できます。
 
 ```js
-function howOldAmI (){
-  console.log('I am ' + this.age + ' years old.')
+function howOldAmI() {
+  console.log("I am " + this.age + " years old.");
 }
 Manager.howOldAmI = howOldAmI;
-Manager.howOldAmI() // I am 27 years old.
+Manager.howOldAmI(); // I am 27 years old.
 ```
 
 ## ゲッターとセッターの定義
@@ -428,12 +431,12 @@ var o = {
   },
   set c(x) {
     this.a = x / 2;
-  }
+  },
 };
 
 console.log(o.a); // 7
 console.log(o.b); // 8 <-- この時点で get b() メソッドが開始されます。initiated.
-o.c = 50;         //   <-- この時点で set c(x) メソッドが開始されます。
+o.c = 50; //   <-- この時点で set c(x) メソッドが開始されます。
 console.log(o.a); // 25
 ```
 
@@ -451,8 +454,16 @@ console.log(o.a); // 25
 var o = { a: 0 };
 
 Object.defineProperties(o, {
-    'b': { get: function() { return this.a + 1; } },
-    'c': { set: function(x) { this.a = x / 2; } }
+  b: {
+    get: function () {
+      return this.a + 1;
+    },
+  },
+  c: {
+    set: function (x) {
+      this.a = x / 2;
+    },
+  },
 });
 
 o.c = 10; // 'a' プロパティに 10 / 2 (5) を代入するセッターを実行します
@@ -467,13 +478,13 @@ console.log(o.b); // a + 1 つまり 6 を与えるゲッターを実行しま�
 
 ```js
 // 2 つのプロパティ a と b を持つ新しいオブジェクト myobj を作成。
-var myobj = new Object;
+var myobj = new Object();
 myobj.a = 5;
 myobj.b = 12;
 
 // プロパティ a を削除すると、myobj には b プロパティだけが残る。
 delete myobj.a;
-console.log ('a' in myobj); // yields "false"
+console.log("a" in myobj); // yields "false"
 ```
 
 `delete` 演算子はまた、`var` キーワードを使わずに定義されたグローバル変数の削除にも使えます。
@@ -489,8 +500,8 @@ JavaScript では、オブジェクトは参照型です。2 つの異なるオ�
 
 ```js
 // 2 つの変数は、同じプロパティを持つ 2 つの異なるオブジェクト
-var fruit = {name: 'apple'};
-var fruitbear = {name: 'apple'};
+var fruit = { name: "apple" };
+var fruitbear = { name: "apple" };
 
 fruit == fruitbear; // false が返される
 fruit === fruitbear; // false が返される
@@ -498,14 +509,14 @@ fruit === fruitbear; // false が返される
 
 ```js
 // 2 つの変数、オブジェクトは 1 つ
-var fruit = {name: 'apple'};
-var fruitbear = fruit;  // fruitbear に fruit オブジェクトへの参照を代入
+var fruit = { name: "apple" };
+var fruitbear = fruit; // fruitbear に fruit オブジェクトへの参照を代入
 
 // fruit と fruitbear は同じオブジェクトを指している
 fruit == fruitbear; // true が返される
 fruit === fruitbear; // true が返される
 
-fruit.name = 'grape';
+fruit.name = "grape";
 console.log(fruitbear); // { name: "apple" } ではなく { name: "grape" } と出力される
 ```
 

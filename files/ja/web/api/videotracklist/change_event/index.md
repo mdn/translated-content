@@ -14,9 +14,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('change', (event) => { })
+addEventListener("change", (event) => {});
 
-onchange = (event) => { }
+onchange = (event) => {};
 ```
 
 ## イベント型
@@ -28,14 +28,14 @@ onchange = (event) => { }
 `addEventListener()` を使用する場合
 
 ```js
-const videoElement = document.querySelector('video');
-videoElement.videoTracks.addEventListener('change', (event) => {
-    console.log(`'${event.type}' イベント発生`);
+const videoElement = document.querySelector("video");
+videoElement.videoTracks.addEventListener("change", (event) => {
+  console.log(`'${event.type}' イベント発生`);
 });
 
 // `selected` の値を変更すると `change` イベントを引き起こします
-const toggleTrackButton = document.querySelector('.toggle-track');
-toggleTrackButton.addEventListener('click', () => {
+const toggleTrackButton = document.querySelector(".toggle-track");
+toggleTrackButton.addEventListener("click", () => {
   const track = videoElement.videoTracks[0];
   track.selected = !track.selected;
 });
@@ -44,14 +44,14 @@ toggleTrackButton.addEventListener('click', () => {
 `onchange` イベントハンドラープロパティを使用する場合
 
 ```js
-const videoElement = document.querySelector('video');
+const videoElement = document.querySelector("video");
 videoElement.videoTracks.onchange = (event) => {
-    console.log(`'${event.type}' イベント発生`);
+  console.log(`'${event.type}' イベント発生`);
 };
 
 // `selected` の値を変更すると `change` イベントを引き起こします
-const toggleTrackButton = document.querySelector('.toggle-track');
-toggleTrackButton.addEventListener('click', () => {
+const toggleTrackButton = document.querySelector(".toggle-track");
+toggleTrackButton.addEventListener("click", () => {
   const track = videoElement.videoTracks[0];
   track.selected = !track.selected;
 });

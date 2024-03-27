@@ -82,7 +82,7 @@ SVG 中使用了许多数据类型。本文列出了这些数据类型以及它�
 
   - : 基本类型\<color>是一个 CSS2 兼容的规范，针对 sRGB 颜色空间的颜色。\<color> 应用在 SVG 的属性 {{SVGAttr("color")}} 上，也是属性{{SVGAttr("fill")}}、属性{{SVGAttr("stroke")}}、属性{{SVGAttr("stop-color")}}、属性 {{SVGAttr("flood-color")}}和属性{{SVGAttr("lighting-color")}}的定义的组成部分，\<color> 还提供了可选的基于 ICC 的颜色规范。
 
-    SVG 支持所有的定义在[CSS2 句法和基本数据类型](http://www.w3.org/TR/2008/REC-CSS2-20080411/syndata.html#value-def-color)中的 \<color> 供选择的句法，而且还支持[CSS Color Module Level 3](http://www.w3.org/TR/css3-color/)中的 \<color> 句法（取决于编译器）。
+    SVG 支持所有的定义在 [CSS2 语法和基本数据类型](http://www.w3.org/TR/2008/REC-CSS2-20080411/syndata.html#value-def-color)中的 \<color> 供选择的语法，而且还支持 [CSS Color Module Level 3](http://www.w3.org/TR/css3-color/) 中的 \<color> 语法（取决于编译器）。
 
     一个 \<color> 可以是一个关键词，或者一个数字化的 RGB 规范。除了这些颜色关键词，用户可以利用用户环境中的对象指定对应于颜色的关键词。这些关键词的规范定义可以在[用户对颜色的引用](http://www.w3.org/TR/2008/REC-CSS2-20080411/ui.html#system-colors)（CSS2 规范第 18.2 节）中找到。
 
@@ -263,7 +263,7 @@ SVG 中使用了许多数据类型。本文列出了这些数据类型以及它�
 ## 涂色
 
 - \<paint>
-  - : 属性{{SVGAttr("fill")}}和属性{{SVGAttr("stroke")}}的值，是涂色类型的规范，用在要对一个给定元素填充或描边的时候。SVG 规范的[Specifying paint](http://www.w3.org/TR/SVG/painting.html#SpecifyingPaint)章节中描述了\<paint>可用的选项以及句法。在 SVG DOM 内部，\<paint> 值用{{domxref("SVGPaint")}}对象表达。
+  - : {{SVGAttr("fill")}} 属性和 {{SVGAttr("stroke")}} 属性的值，是涂色类型的规范，用在要对一个给定元素填充或描边的时候。SVG 规范的 [Specifying paint](http://www.w3.org/TR/SVG/painting.html#SpecifyingPaint) 章节中描述了\<paint>可用的选项以及句法。在 SVG DOM 内部，\<paint> 值用 {{domxref("SVGPaint")}} 对象表达。
 
 ## 百分数
 

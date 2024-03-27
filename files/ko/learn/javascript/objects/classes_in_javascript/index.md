@@ -12,7 +12,7 @@ OOJS에 대한 개념을 설명했으니, 이 글에서는 부모 클래스에�
     <tr>
       <th scope="row">선수조건:</th>
       <td>
-        컴퓨터 기본지식, HTML과 CSS에 대한 기본적인 이해,자바스크립트에 어느
+        컴퓨터 기본지식, HTML과 CSS에 대한 기본적인 이해,JavaScript에 어느
         정도 익숙할 것 (see
         <a href="/ko/docs/Learn/JavaScript/First_steps">First steps</a> and
         <a href="/ko/docs/Learn/JavaScript/Building_blocks">Building blocks</a

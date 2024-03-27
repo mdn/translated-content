@@ -333,8 +333,7 @@ input:valid + span::after {
   <div class="fallbackDatePicker">
     <div>
       <span>
-        <select id="year" name="year">
-        </select>
+        <select id="year" name="year"></select>
         <label for="year">年</label>
       </span>
       <span>

@@ -1,15 +1,18 @@
 ---
-title: NDEFRecord.data
+title: "NDEFRecord: data プロパティ"
+short-title: data
 slug: Web/API/NDEFRecord/data
+l10n:
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
+{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef("Web NFC API")}}
 
 **`data`** は {{DOMxRef("NDEFRecord")}} インターフェイスのプロパティで、このレコードのペイロードの生のバイト列が入った {{jsxref("DataView")}} を返します。
 
 ## 構文
 
-```js
+```js-nolint
 NDEFRecord.data
 ```
 
@@ -24,17 +27,17 @@ NDEFRecord.data
 
 ```js
 const ndef = new NDEFReader();
-  await ndef.scan();
-  ndef.onreading = (event) => {
-    const decoder = new TextDecoder();
-    for (const record of event.message.records) {
-      if (record.mediaType === "application/json") {
-        const json = JSON.parse(decoder.decode(record.data));
-        const article =/^[aeio]/i.test(json.title) ? "an" : "a";
-        console.log(`${json.name} is ${article} ${json.title}`);
-      }
+await ndef.scan();
+ndef.onreading = (event) => {
+  const decoder = new TextDecoder();
+  for (const record of event.message.records) {
+    if (record.mediaType === "application/json") {
+      const json = JSON.parse(decoder.decode(record.data));
+      const article = /^[aeio]/i.test(json.title) ? "an" : "a";
+      console.log(`${json.name} is ${article} ${json.title}`);
     }
-  };
+  }
+};
 ```
 
 ## 仕様書

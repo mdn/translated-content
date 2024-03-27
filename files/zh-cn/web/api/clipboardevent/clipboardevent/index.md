@@ -35,7 +35,7 @@ _`ClipboardEvent()` 构造函数也从_ _{{domxref("Event.Event", "Event()")}}_ 
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - 与复制相关的事件：[`copy`](/zh-CN/docs/Web/API/Element/copy_event), [`cut`](/zh-CN/docs/Web/API/Element/cut_event), [`paste`](/zh-CN/docs/Web/API/Element/paste_event)
 - 所属的 {{domxref("ClipboardEvent")}} 接口。

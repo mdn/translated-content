@@ -40,6 +40,6 @@ From: webmaster@example.org
 
 {{Compat}}
 
-## 相关内容
+## 参见
 
 - {{HTTPHeader("Host")}}

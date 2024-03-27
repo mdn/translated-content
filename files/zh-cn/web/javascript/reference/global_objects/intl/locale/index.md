@@ -64,7 +64,7 @@ let us = new Intl.Locale("zh-Hans-CN");
 
 ### 使用配置实例化
 
-构造函数支持传入 object 作为配置，object 中可包含多个配置属性。例如，设置 [`hourCycle`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle) 属性，用于设置您所需要的小时周期类型：
+构造函数支持传入 object 作为配置，object 中可包含多个配置属性。例如，设置 [`hourCycle`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle) 属性，用于设置你所需要的小时周期类型：
 
 ```js
 let zh12hour = new Intl.Locale("zh-Hans-CN", { hourCycle: "h12" });

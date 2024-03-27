@@ -3,7 +3,7 @@ title: proxy.onProxyError
 slug: Mozilla/Add-ons/WebExtensions/API/proxy/onError
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Lancé en cas d'erreur lors de l'évaluation du fichier PAC ou l'écouteur `onRequest`.
 

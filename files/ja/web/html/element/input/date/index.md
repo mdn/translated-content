@@ -99,7 +99,8 @@ console.log(dateControl.valueAsNumber); // 1496275200000 と JavaScript タイ�
 
 ```html
 <form>
-  <label>希望するパーティーの日を選んでください。
+  <label
+    >希望するパーティーの日を選んでください。
     <input type="date" name="party" min="2017-04-01" max="2017-04-30" />
   </label>
 </form>
@@ -188,7 +189,8 @@ input:valid + span::after {
 
 ```html
 <form>
-  <label>誕生日を入力してください。
+  <label
+    >誕生日を入力してください。
     <input type="date" name="bday" required pattern="\d{4}-\d{2}-\d{2}" />
     <span class="validity"></span>
   </label>
@@ -239,7 +241,7 @@ HTML は次のようになります。
 <form>
   <div class="nativeDatePicker">
     <label for="bday">誕生日を入力してください。</label>
-    <input type="date" id="bday" name="bday">
+    <input type="date" id="bday" name="bday" />
     <span class="validity"></span>
   </div>
   <p class="fallbackLabel">誕生日を入力してください。</p>
@@ -266,8 +268,7 @@ HTML は次のようになります。
       <label for="month">月</label>
     </span>
     <span>
-      <select id="day" name="day">
-      </select>
+      <select id="day" name="day"></select>
       <label for="day">日</label>
     </span>
   </div>
@@ -343,22 +344,12 @@ function populateDays(month) {
   let dayNum;
 
   // 31 日か 30 日か？
-  if (
-    [
-      "1",
-      "3",
-      "5",
-      "7",
-      "8",
-      "10",
-      "12",
-    ].includes(month)
-  ) {
+  if (["1", "3", "5", "7", "8", "10", "12"].includes(month)) {
     dayNum = 31;
   } else if (["4", "6", "9", "11"].includes(month)) {
     dayNum = 30;
   } else {
-  // 2 月の場合は、閏年かどうかを計算する
+    // 2 月の場合は、閏年かどうかを計算する
     const year = yearSelect.value;
     const isLeap = new Date(year, 1, 29).getMonth() === 1;
     dayNum = isLeap ? 29 : 28;

@@ -1,58 +1,137 @@
 ---
-title: PerformanceEntry.entryType
+title: "PerformanceEntry: entryType プロパティ"
+short-title: entryType
 slug: Web/API/PerformanceEntry/entryType
+l10n:
+  sourceCommit: 381c51574a3e6a07ee09c63493452440f046038d
 ---
 
-{{APIRef("Performance Timeline API")}}
+{{APIRef("Performance API")}} {{AvailableInWorkers}}
 
-**`entryType`** プロパティは、たとえば "`mark`" などのパフォーマンスメトリックの種類を表す {{domxref("DOMString")}} を返します。このプロパティは読み取り専用です。
+**`entryType`** プロパティは読み取り専用で、この項目が表すパフォーマンス指標の種類を表す文字列です。
 
-{{AvailableInWorkers}}
+対応している `entryTypes` はすべて、静的プロパティである {{domxref("PerformanceObserver.supportedEntryTypes_static", "PerformanceObserver.supportedEntryTypes")}} を使用して得ることができます。
 
-## 構文
+## 値
 
-```
-var type = entry.entryType;
-```
+文字列です。返値は `PerformanceEntry` オブジェクトのサブタイプに依存します。一部のサブタイプには複数の `entryType` があります。
 
-### 返値
+- `element`
 
-返値は `PerformanceEntry` オブジェクトのサブタイプに依存し、次の表に示すように {{domxref('PerformanceEntry.name')}} プロパティの値に影響します。
+  - : 要素の読み込み時間を報告します。
 
-### パフォーマンスエントリタイプの名前
+    項目のインスタンスは {{domxref("PerformanceElementTiming")}} オブジェクトです。
 
-| 値                    | サブタイプ                                                                                                 | name プロパティのタイプ          | name プロパティの説明                                                                                                              |
-| --------------------- | ---------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `frame`, `navigation` | {{domxref('PerformanceFrameTiming')}}, {{domxref('PerformanceNavigationTiming')}} | {{domxref("URL")}}         | ドキュメントのアドレス                                                                                                             |
-| `resource`            | {{domxref('PerformanceResourceTiming')}}                                                       | {{domxref("URL")}}         | リクエストされたリソースの解決された URL。リクエストがリダイレクトされても、この値は変わりません。                                 |
-| `mark`                | {{domxref('PerformanceMark')}}                                                                   | {{domxref("DOMString")}} | {{domxref("Performance.mark","performance.mark()")}} を呼び出してマークを作成したときに使用された名前              |
-| `measure`             | {{domxref('PerformanceMeasure')}}                                                               | {{domxref("DOMString")}} | メジャーが {{domxref("Performance.measure","performance.measure()")}} を呼び出して作成されたときに使用された名前 |
-| `paint`               | {{domxref('PerformancePaintTiming')}}                                                           | {{domxref("DOMString")}} | `'first-paint'` もしくは `'first-contentful-paint'` のいずれか                                                                     |
+- `event`
+
+  - : イベントの待ち時間を報告します。
+
+    項目のインスタンスは {{domxref("PerformanceEventTiming")}} オブジェクトです。
+
+- `first-input`
+
+  - : {{Glossary("first input delay")}} (FID) を報告します。
+
+    項目のインスタンスは {{domxref("PerformanceEventTiming")}} オブジェクトです。
+
+- `largest-contentful-paint`
+
+  - : 画面で起動された要素の最大の描画を報告します。
+
+    項目のインスタンスは {{domxref("LargestContentfulPaint")}} オブジェクトです。
+
+- `layout-shift`
+
+  - : ページ上の要素の動きに基づいて、ウェブページのレイアウトの安定性を報告します。
+
+    項目のインスタンスは {{domxref("LayoutShift")}} オブジェクトです。
+
+- `longtask`
+
+  - : 長いタスクのインスタンスを報告します。
+
+    項目のインスタンスは {{domxref("PerformanceLongTaskTiming")}} オブジェクトです。
+
+- `mark`
+
+  - : 独自のパフォーマンスマーカーを報告します。
+
+    項目のインスタンスは {{domxref("PerformanceMark")}} オブジェクトです。
+
+- `measure`
+
+  - : 独自のパフォーマンス指標を報告します。
+
+    項目のインスタンスは {{domxref("PerformanceMeasure")}} オブジェクトです。
+
+- `navigation`
+
+  - : 文書のナビゲーションタイミングを報告します。
+
+    項目のインスタンスは {{domxref("PerformanceNavigationTiming")}} オブジェクトです。
+
+- `paint`
+
+  - : ページ読み込み中の文書レンダリングの主要な瞬間（最初の描画、最初のコンテンツ描画）を報告します。
+
+    項目のインスタンスは {{domxref("PerformancePaintTiming")}} オブジェクトです。
+
+- `resource`
+
+  - : 文書内のリソースのタイミング情報を報告します。
+
+    項目のインスタンスは {{domxref("PerformanceResourceTiming")}} オブジェクトです。
+
+- `taskattribution`
+
+  - : 長いタスクに大きく貢献した作業タイプを報告します。
+
+    項目のインスタンスは {{domxref("TaskAttributionTiming")}} オブジェクトです。
+
+- `visibility-state`
+
+  - : タブがフォアグラウンドからバックグラウンドへ、またはその逆へ変化したときなど、ページの表示状態が変化した時刻を報告します。
+
+    項目のインスタンスは {{domxref("VisibilityStateEntry")}} オブジェクトです。
 
 ## 例
 
-次の例は、`entryType` プロパティの使用方法を示しています。
+### パフォーマンス項目を種類別に絞り込み
+
+`entryType` プロパティは、固有のパフォーマンス項目を絞り込みする際に有益なものです。例えば、すべてのスクリプトリソースを調べたい場合、 `entryType` が `"resource"` で {{domxref("PerformanceResourceTiming.initiatorType", "initiatorType")}} が `"script"` であることをチェックしてください。
 
 ```js
-function run_PerformanceEntry() {
+const scriptResources = performance
+  .getEntries()
+  .filter(
+    (entry) =>
+      entry.entryType === "resource" && entry.initiatorType === "script",
+  );
+console.log(scriptResources);
+```
 
-  // check for feature support before continuing
-  if (performance.mark === undefined) {
-    console.log("performance.mark not supported");
-    return;
-  }
+### パフォーマンス項目を種類別に取得
 
-  // Create a performance entry named "begin" via the mark() method
-  performance.mark("begin");
+{{domxref("Performance")}} と {{domxref("PerformanceObserver")}} はどちらも、パフォーマンス項目を種類別に直接取得するメソッドを提供します。代わりに {{domxref("Performance.getEntriesByType()")}} または {{domxref("PerformanceObserverEntryList.getEntriesByType()")}} を使用することができます。
 
-  // Check the entryType of all the "begin" entries
-  var entriesNamedBegin = performance.getEntriesByName("begin");
-  for (var i=0; i < entriesNamedBegin.length; i++) {
-      var typeOfEntry = entriesNamedBegin[i].entryType;
-      console.log("Entry is type: " + typeOfEntry);
-  }
+また、 {{domxref("PerformanceObserver")}} で監視する場合、 {{domxref("PerformanceObserver.observe", "observe()")}} メソッドはオプションオブジェクトに `entryTypes` の配列を受け取り、そこで監視する項目の種類を決めることができます。
 
+```js
+// この時点ですべてのリソース項目をログ出力
+const resources = performance.getEntriesByType("resource");
+resources.forEach((entry) => {
+  console.log(`${entry.name}'s duration: ${entry.duration}`);
+});
+
+// PerformanceObserver 版
+// 利用できるすべてのリソース項目をログ出力
+function perfObserver(list, observer) {
+  list.getEntriesByType("resource").forEach((entry) => {
+    console.log(`${entry.name}'s duration: ${entry.duration}`);
+  });
 }
+const observer = new PerformanceObserver(perfObserver);
+observer.observe({ entryTypes: ["resource", "navigation"] });
 ```
 
 ## 仕様書
@@ -61,4 +140,10 @@ function run_PerformanceEntry() {
 
 ## ブラウザーの互換性
 
-{{Compat("api.PerformanceEntry.entryType")}}
+{{Compat}}
+
+## 関連情報
+
+- {{domxref("PerformanceObserver.supportedEntryTypes_static", "PerformanceObserver.supportedEntryTypes")}}
+- {{domxref("Performance.getEntriesByType()")}}
+- {{domxref("PerformanceObserverEntryList.getEntriesByType()")}}

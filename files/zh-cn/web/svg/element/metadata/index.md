@@ -21,11 +21,11 @@ slug: Web/SVG/Element/metadata
 
 ### 专有属性
 
-_没有专有属性_
+_没有专有属性。_
 
 ## DOM 接口
 
-该元素实现了[`SVGMetadataElement`](/zh-CN/DOM/SVGMetadataElement)接口。
+该元素实现了 [`SVGMetadataElement`](/zh-CN/DOM/SVGMetadataElement) 接口。
 
 ## 浏览器兼容性
 

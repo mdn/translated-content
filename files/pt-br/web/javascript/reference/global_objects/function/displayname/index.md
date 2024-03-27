@@ -79,4 +79,4 @@ Não faz parte de denhuma especificação.
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Function.displayName")}}
+{{Compat}}

@@ -11,7 +11,7 @@ slug: Glossary/Grid_Column
 
 在[Grid 布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)中使用对齐方式时，网格列沿着纵轴运行。
 
-## 了解更多
+## 参见
 
 ### 属性参考
 

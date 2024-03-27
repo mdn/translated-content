@@ -239,7 +239,7 @@ Object.setPrototypeOf(Extended, AnotherBase);
 console.log(Extended.staticGetX()); //现在打印 "4"
 ```
 
-### 设置 super.prop 将在此基础上设置属性。
+### 设置 super.prop 将在此基础上设置属性
 
 设置 `super` 的属性，比如 `super.x = 1`，就像 `Reflect.set(Object.getPrototypeOf(objectLiteral), "x", 1, this)` 的行为。这是一个将 `super` 简单理解为“原型对象的引用”的情况，因为它实际上是在 `this` 上设置属性。
 

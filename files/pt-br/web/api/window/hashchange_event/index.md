@@ -9,19 +9,19 @@ O evento **hashchange** é disparado quando a _hash_ da _window_ muda. (ver {{do
 
 ## Sintaxe
 
-```
+```js
 window.onhashchange = funcRef;
 ```
 
-**ou**
+**ou:**
 
-```
-<body onhashchange="funcRef();">
+```html
+<body onhashchange="funcRef();"></body>
 ```
 
-**ou**
+**ou:**
 
-```
+```js
 window.addEventListener("hashchange", funcRef, false);
 ```
 

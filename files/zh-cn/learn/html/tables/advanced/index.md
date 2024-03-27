@@ -10,7 +10,7 @@ slug: Learn/HTML/Tables/Advanced
 <table>
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         HTML 的基础知识（参见
         <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"

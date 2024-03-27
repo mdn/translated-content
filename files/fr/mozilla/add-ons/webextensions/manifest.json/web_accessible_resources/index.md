@@ -38,7 +38,7 @@ Avec la clé `web_accessible_resources` liste toutes les ressources packagées q
 
 Notez que les scripts de contenu n'ont pas besoin d'être listés comme ressources accessibles sur le Web.
 
-Si une extension veut utiliser {{WebExtAPIRef("webRequest")}}} pour rediriger une URL publique (par exemple, HTTPS) vers une page qui est packagée dans l'extension, alors l'extension doit lister la page dans la clé `web_accessible_resources`.
+Si une extension veut utiliser {{WebExtAPIRef("webRequest")}} pour rediriger une URL publique (par exemple, HTTPS) vers une page qui est packagée dans l'extension, alors l'extension doit lister la page dans la clé `web_accessible_resources`.
 
 ### Utiliser web_accessible_resources
 

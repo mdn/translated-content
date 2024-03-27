@@ -3,7 +3,7 @@ title: sidebarAction.setIcon()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setIcon
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Définit l'icône de la barre latérale.
 

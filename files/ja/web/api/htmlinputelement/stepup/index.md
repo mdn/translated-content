@@ -115,9 +115,7 @@ stepUp(stepIncrement)
   <input type="number" step="5" id="theNumber" min="0" max="400" />
 </p>
 <p>
-  <label>
-    増加させたい段階の数を入力するか、空欄のままにしてください。
-  </label>
+  <label>増加させたい段階の数を入力するか、空欄のままにしてください。</label>
   <input type="number" step="1" id="incrementInput" min="0" max="25" />
 </p>
 <input type="button" value="Increment" id="theButton" />

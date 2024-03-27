@@ -35,7 +35,7 @@ importScripts(path0, path1, /* … ,*/ pathN)
 `foo.js` という別のスクリプトに書かれた機能を worker.js の中で使いたい場合は、次の行でインポートすることができます。
 
 ```js
-importScripts('foo.js');
+importScripts("foo.js");
 ```
 
 `importScripts()` と `self.importScripts()` は実質的に同じです。 — 両方とも `importScripts()` をワーカーの内部スコープの中から呼び出すことを表します。

@@ -39,7 +39,7 @@ Pragma: no-cache
 
 {{Compat}}
 
-## 相关内容
+## 参见
 
 - {{HTTPHeader("Cache-Control")}}
 - {{HTTPHeader("Expires")}}

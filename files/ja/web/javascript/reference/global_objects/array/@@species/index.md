@@ -1,17 +1,19 @@
 ---
-title: get Array[@@species]
+title: Array[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@species
 l10n:
-  sourceCommit: 968e6f1f3b6f977a09e116a0ac552459b741eac3
+  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
 {{JSRef}}
 
-**`Array[@@species]`** アクセサープロパティは、配列のメソッドからの返値を構築するのに使われたコンストラクターを返します。
+**`Array[@@species]`** 静的アクセサープロパティは、配列のメソッドからの返値を構築するのに使われたコンストラクターを返します。
+
+> **警告:** `@@species` が存在することで、任意のコードを実行でき、セキュリティの脆弱性を生み出す可能性があります。また、ある種の最適化が非常に難しくなります。エンジンの実装者は[この機能を除去するかどうかを調査しています](https://github.com/tc39/proposal-rm-builtin-subclassing)。使用可能であれば、この機能に頼ることは避けてください。 {{jsxref("Array/toReversed", "toReversed()")}} のような現代の配列メソッドは `@@species` を使用せず、常に新しい `Array` 基本クラスのインスタンスを返します。
 
 ## 構文
 
-```js
+```js-nolint
 Array[Symbol.species]
 ```
 
@@ -57,7 +59,7 @@ arr.concat([1, 2]); // NotAnArray { '0': 0, '1': 1, '2': 2, '3': 1, '4': 2, leng
 
 ## 例
 
-### 通常のオブジェクトの spicies
+### 通常のオブジェクトの species
 
 `@@species` プロパティは、`Array` オブジェクトの既定のコンストラクター関数である `Array` コンストラクターを返します。
 
@@ -72,7 +74,9 @@ Array[Symbol.species]; // [Function: Array]
 ```js
 class MyArray extends Array {
   // MyArray species を親である ArrayBuffer コンストラクタにオーバーライド。
-  static get [Symbol.species]() { return Array; }
+  static get [Symbol.species]() {
+    return Array;
+  }
 }
 ```
 
@@ -86,6 +90,7 @@ class MyArray extends Array {
 
 ## 関連情報
 
-- [`Array[Symbol.species]` と影響を受けるすべての `Array` メソッドで `Symbol.species` に対応するポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [`Array[@@species]` のポリフィルと、影響を受けるすべての `Array` メソッドでの `@@species` の対応 (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)ガイド
 - {{jsxref("Array")}}
 - {{jsxref("Symbol.species")}}

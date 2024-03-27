@@ -3,7 +3,7 @@ title: Math.expm1()
 slug: Web/JavaScript/Reference/Global_Objects/Math/expm1
 ---
 
-{{JSRef("Global_Objects", "Math")}}
+{{JSRef}}
 
 ## Сводка
 

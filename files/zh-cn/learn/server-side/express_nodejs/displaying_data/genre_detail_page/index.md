@@ -102,7 +102,7 @@ block content
 
 ![Genre Detail Page - Express Local Library site](locallibary_express_genre_detail.png)
 
-> **备注：** 您可能会收到与此类似的错误：
+> **备注：** 你可能会收到与此类似的错误：
 >
 > ```bash
 > Cast to ObjectId failed for value " 59347139895ea23f9430ecbb" at path "_id" for model "Genre"

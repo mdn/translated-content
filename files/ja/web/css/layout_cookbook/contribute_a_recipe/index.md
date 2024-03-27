@@ -19,13 +19,13 @@ slug: Web/CSS/Layout_cookbook/Contribute_a_recipe
 2. その例のダウンロード可能なバージョンも、CSS Examples リポジトリーに保存します。
 3. [CSS レイアウト料理帳](/ja/docs/Web/CSS/Layout_cookbook)内のページの詳細は次のとおりです。
 
-    1. 要件 (Requirements)
-    2. レシピ (Recipe)
-    3. 行った選択 (Choices made)
-    4. 有用な代替策または代替方法 (Useful fallbacks or alternative methods)
-    5. アクセシビリティの考慮 (Accessibility concerns)
-    6. ブラウザーの互換性 (Browser compatibility)
-    7. 関連資料 (Additional resources)
+   1. 要件 (Requirements)
+   2. レシピ (Recipe)
+   3. 行った選択 (Choices made)
+   4. 有用な代替策または代替方法 (Useful fallbacks or alternative methods)
+   5. アクセシビリティの考慮 (Accessibility concerns)
+   6. ブラウザーの互換性 (Browser compatibility)
+   7. 関連資料 (Additional resources)
 
 ### 1. パターンの作成
 

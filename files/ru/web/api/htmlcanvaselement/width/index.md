@@ -37,7 +37,7 @@ console.log(canvas.width); // 300
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

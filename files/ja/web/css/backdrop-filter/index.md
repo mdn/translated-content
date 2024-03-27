@@ -36,6 +36,8 @@ backdrop-filter: revert;
 backdrop-filter: unset;
 ```
 
+{{EmbedInteractiveExample("pages/css/backdrop-filter.html")}}
+
 ## 構文
 
 ### 値
@@ -64,7 +66,7 @@ backdrop-filter: unset;
   font-family: sans-serif;
   text-align: center;
   line-height: 1;
- -webkit-backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   max-width: 50%;
   max-height: 50%;
@@ -78,7 +80,8 @@ body {
 }
 
 body {
-  background-image: url(https://picsum.photos/id/1080/6858/4574), linear-gradient(rgb(219, 166, 166), rgb(0, 0, 172));
+  background-image: url(https://picsum.photos/id/1080/6858/4574),
+    linear-gradient(rgb(219, 166, 166), rgb(0, 0, 172));
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;

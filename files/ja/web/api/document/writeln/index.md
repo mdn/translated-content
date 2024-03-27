@@ -17,7 +17,7 @@ document.writeln(line);
 
 - `line` はテキストの行を含む文字列です。
 
-## Example
+## 例
 
 ```
 document.writeln("<p>パスワードを入力してください:</p>");

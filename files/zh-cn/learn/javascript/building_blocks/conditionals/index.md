@@ -10,7 +10,7 @@ slug: Learn/JavaScript/Building_blocks/conditionals
 <table>
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         基本的计算机知识，对 HTML 和 CSS 有基本的了解，已经阅读了 <a
           href="/zh-CN/docs/Learn/JavaScript/First_steps"
@@ -204,7 +204,7 @@ if (choice === "sunny") {
 
 ### 逻辑运算符：与、或、非
 
-如果要测试多个条件，而不需要编写嵌套 `if...else` 语句，[逻辑运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators)可以帮助您。当在条件下使用时，前两个执行以下操作：
+如果要测试多个条件，而不需要编写嵌套 `if...else` 语句，[逻辑运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators)可以帮助你。当在条件下使用时，前两个执行以下操作：
 
 - `&&`——逻辑与。允许你把两个或多个表达式连在一起，这样所有的表达式都必须单独评估为 `true`，整个表达式才能返回 `true`。
 - `||`——逻辑或。允许你把两个或多个表达式连在一起，其中一个或多个表达式必须单独评估为 `true`，整个表达式才能返回 `true`。
@@ -300,7 +300,7 @@ switch (表达式) {
 
 1. 关键字 `switch`, 后跟一组括号。
 2. 括号内可以是表达式或值。
-3. 关键字 `case`, 后跟一个选项的表达式/值，后面跟一个冒号.
+3. 关键字 `case`, 后跟一个选项的表达式/值，后面跟一个冒号。
 4. 如果选项与表达式匹配，则运行一些代码。
 5. 一个 `break` 语句，分号结尾。如果先前的选择与表达式/值匹配，则浏览器在此停止执行代码块，并执行 switch 语句之后的代码。
 6. 你可以添加任意的 case 选项（选项 3-5 个）。
@@ -830,9 +830,9 @@ textarea.onkeyup = function () {
 
 {{ EmbedLiveSample('主动学习：更多颜色选择！', '100%', 850) }}
 
-## 测试你的技能！
+## 技能测试！
 
-你已经阅读到了本篇文章的末尾，但还能记清楚最重要的部分吗？你可以做一些深入的测试，来验证你是否在进行下一步学习之前，记住了这些知识，请参阅[测试你的技能：条件语句](/zh-CN/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Conditionals)
+你已经阅读到了本篇文章的末尾，但还能记清楚最重要的部分吗？你可以做一些深入的测试，来验证你是否在进行下一步学习之前，记住了这些知识，请参阅[技能测试：条件语句](/zh-CN/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Conditionals)
 
 ## 结论
 

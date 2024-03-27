@@ -12,9 +12,9 @@ slug: Web/API/Screen/orientationchange_event
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('orientationchange', event => { });
+addEventListener("orientationchange", (event) => {});
 
-onorientationchange = event => { };
+onorientationchange = (event) => {};
 ```
 
 ## イベント型

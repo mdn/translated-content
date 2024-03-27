@@ -23,7 +23,7 @@ showOpenFilePicker()
 
     - `multiple`
       - : {{JSxRef("boolean")}} 値で、デフォルトは `false` です。
-          `true` に設定すると、複数のファイルを選択できるようになります。
+        `true` に設定すると、複数のファイルを選択できるようになります。
     - `excludeAcceptAllOption`
       - {{JSxRef("boolean")}} 値で、デフォルトは `false` です。
         通常、ピッカーは (以下の `type` オプションに基づく) ファイル形式フィルターを何も適用しない選択肢を含むはずです。このオプションを `true` にすると、この選択肢を利用 _不可能_ にします。

@@ -16,9 +16,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使うか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('click', (event) => { });
+addEventListener("click", (event) => {});
 
-onclick = (event) => { };
+onclick = (event) => {};
 ```
 
 ## イベント型
@@ -32,8 +32,8 @@ onclick = (event) => { };
 ```js
 notification.onclick = (event) => {
   event.preventDefault(); // prevent the browser from focusing the Notification's tab
-  window.open('http://www.mozilla.org', '_blank');
-}
+  window.open("http://www.mozilla.org", "_blank");
+};
 ```
 
 ## 仕様書

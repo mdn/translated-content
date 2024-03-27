@@ -73,9 +73,8 @@ function generatePrimes(quota) {
 document.querySelector("#generate").addEventListener("click", () => {
   const quota = document.querySelector("#quota").value;
   const primes = generatePrimes(quota);
-  document.querySelector(
-    "#output",
-  ).textContent = `Finished generating ${quota} primes!`;
+  document.querySelector("#output").textContent =
+    `Finished generating ${quota} primes!`;
 });
 
 document.querySelector("#reload").addEventListener("click", () => {
@@ -155,9 +154,8 @@ document.querySelector("#generate").addEventListener("click", () => {
 // update the output box with a message for the user, including the number of
 // primes that were generated, taken from the message data.
 worker.addEventListener("message", (message) => {
-  document.querySelector(
-    "#output",
-  ).textContent = `Finished generating ${message.data} primes!`;
+  document.querySelector("#output").textContent =
+    `Finished generating ${message.data} primes!`;
 });
 
 document.querySelector("#reload").addEventListener("click", () => {

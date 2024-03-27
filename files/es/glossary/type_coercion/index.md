@@ -3,6 +3,8 @@ title: Coerción
 slug: Glossary/Type_coercion
 ---
 
+{{GlossarySidebar}}
+
 La coerción es la conversión automática o implicita de valores de un tipo de dato a otro (Ejemplo: de cadena de texto a número). La conversión es similar a la coerción porque ambas convierten valores de un tipo de dato a otro pero con una diferencia clave - la coerción es implícita mientras que la conversión puede ser implícita o explícita.
 
 ## Examples

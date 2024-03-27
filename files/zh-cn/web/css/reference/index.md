@@ -78,9 +78,9 @@ div.menu-bar li:hover > ul {
 
 组合选择器是在两个或多个简单选择器之间建立关系的选择器，例如“`A` 是 `B` 的子代”或“`A` 与 `B` 相邻”，它们构成了比较复杂的选择器。
 
-- [相邻兄弟选择器](/zh-CN/docs/Web/CSS/Adjacent_sibling_combinator) `A + B`
+- [接续兄弟选择器](/zh-CN/docs/Web/CSS/Next-sibling_combinator) `A + B`
   - : 指定 `A` 和 `B` 选择的元素具有相同的父元素，并且 `B` 选择的元素在水平方向上紧随 `A` 选择的元素。
-- [普通兄弟选择器](/zh-CN/docs/Web/CSS/General_sibling_combinator) `A ~ B`
+- [后续兄弟选择器](/zh-CN/docs/Web/CSS/Subsequent-sibling_combinator) `A ~ B`
   - : 指定由 `A` 和 `B` 选择的元素共享相同的父元素，并指定 `A` 选择的元素在 `B` 选择的元素之前（但不一定紧接在 `B` 之前）。
 - [子选择器](/zh-CN/docs/Web/CSS/Child_combinator) `A > B`
   - : 指定 `B` 选择的元素是 `A` 选择的元素的直接子元素。
@@ -127,14 +127,14 @@ div.menu-bar li:hover > ul {
 
 ### 布局
 
-- [块级格式化上下文](/zh-CN/docs/Web/Guide/CSS/Block_formatting_context)
+- [区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)
 - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
 - [包含块](/zh-CN/docs/Web/CSS/Containing_block)
 - [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)
 - [外边距合并](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
 - [替换元素](/zh-CN/docs/Web/CSS/Replaced_element)
-- [层叠上下文](/zh-CN/docs/Web/Guide/CSS/Understanding_z-index/Stacking_context)
-- [视觉格式化模型](/zh-CN/docs/Web/Guide/CSS/Visual_formatting_model)
+- [层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)
+- [视觉格式化模型](/zh-CN/docs/Web/CSS/Visual_formatting_model)
 
 ## DOM-CSS / CSSOM
 

@@ -3,7 +3,7 @@ title: Object.prototype.hasOwnProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
 ---
 
-{{JSRef("Global_Objects", "Object")}}
+{{JSRef}}
 
 ## Resumo
 
@@ -112,15 +112,11 @@ Observe que neste ultimo caso nenhum novo objeto é criado.
 
 ## Especificações
 
-| Especificação                                                                                  | Status             | Comentário         |
-| ---------------------------------------------------------------------------------------------- | ------------------ | ------------------ |
-| ECMAScript 3rd Edition. Implemented in JavaScript 1.5                                          | Standard           | Definição inicial. |
-| {{SpecName('ES5.1', '#sec-15.2.4.5', 'Object.prototype.hasOwnProperty')}}                      | {{Spec2('ES5.1')}} |                    |
-| {{SpecName('ES6', '#sec-object.prototype.hasownproperty', 'Object.prototype.hasOwnProperty')}} | {{Spec2('ES6')}}   |                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Object.hasOwnProperty")}}
+{{Compat}}
 
 ## Veja Também
 

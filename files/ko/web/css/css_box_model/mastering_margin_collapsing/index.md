@@ -66,7 +66,3 @@ p {
 ### 결과
 
 {{EmbedLiveSample('예제', 'auto', 350)}}
-
-## 명세
-
-{{Specifications}}

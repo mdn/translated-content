@@ -48,7 +48,10 @@ ondevicechange = (event) => {};
 
 ```css hidden
 body {
-  font: 14px "Open Sans", "Arial", sans-serif;
+  font:
+    14px "Open Sans",
+    "Arial",
+    sans-serif;
 }
 
 video {
@@ -128,7 +131,7 @@ startButton.addEventListener(
         log(`${err.name}: ${err.message}`);
       });
   },
-  false
+  false,
 );
 ```
 

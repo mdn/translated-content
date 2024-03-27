@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/clear
 
 {{JSRef}}
 
-**`clear()`** 方法移除 `Set` 对象中所有元素。
+{{jsxref("Set")}} 实例的 **`clear()`** 方法移除该集合中的所有元素。
 
 {{EmbedInteractiveExample("pages/js/set-prototype-clear.html")}}
 
@@ -15,11 +15,17 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/clear
 clear()
 ```
 
+### 参数
+
+无。
+
 ### 返回值
 
-{{jsxref("undefined")}}。
+无（{{jsxref("undefined")}}）。
 
 ## 示例
+
+### 使用 clear() 方法
 
 ```js
 const mySet = new Set();

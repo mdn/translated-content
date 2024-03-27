@@ -37,7 +37,7 @@ if (
 在 Firefox 3.5 及更早版本中，HTML 文档中 HTML 属性的命名空间 URI 为 null。
 在后来的版本中，遵照 HTML5，就像在 XHTML 中一样是[`https://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml)
 
-您可以使用 DOM Level 2 方法 {{domxref("Element.setAttributeNS")}}创建具有指定 namespaceURI 的属性。
+你可以使用 DOM Level 2 方法 {{domxref("Element.setAttributeNS")}}创建具有指定 namespaceURI 的属性。
 
 根据 [Namespaces in XML](https://www.w3.org/TR/xml-names11/) 规范，属性不会从其附加的元素继承其命名空间。
 如果一个属性没有明确地给出一个命名空间，它没有命名空间。

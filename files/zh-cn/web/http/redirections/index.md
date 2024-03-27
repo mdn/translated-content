@@ -206,7 +206,7 @@ rewrite ^/images/(.*)$ http://images.example.com/$1 permanent;
 
 而 Chrome 则会呈现如下信息：
 
-> 该网页将您重定向的次数过多。
+> 该网页将你重定向的次数过多。
 
 无论哪个场景，用户对此都无能为力（除非客户端发生突变，比如说缓存或者 Cookie 不匹配）。
 

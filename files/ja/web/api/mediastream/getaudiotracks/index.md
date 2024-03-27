@@ -1,6 +1,9 @@
 ---
-title: MediaStream.getAudioTracks()
+title: "MediaStream: getAudioTracks() メソッド"
+short-title: getAudioTracks()
 slug: Web/API/MediaStream/getAudioTracks
+l10n:
+  sourceCommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
 ---
 
 {{APIRef("Media Capture and Streams")}}
@@ -9,8 +12,8 @@ slug: Web/API/MediaStream/getAudioTracks
 
 ## 構文
 
-```js
-var mediaStreamTracks = mediaStream.getAudioTracks()
+```js-nolint
+getAudioTracks()
 ```
 
 ### 引数
@@ -30,15 +33,16 @@ var mediaStreamTracks = mediaStream.getAudioTracks()
 この例では、ウェブカメラの音声と動画を {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} を使ってストリームとして取得し、そのストリームを {{HTMLElement("video")}} 要素に設定します。その後、終了時にストリーム内の最初の音声トラックを停止するタイマーを設定します。
 
 ```js
-navigator.mediaDevices.getUserMedia({audio: true, video: true})
-.then(mediaStream => {
-  document.querySelector('video').srcObject = mediaStream;
-  // Stop the audio stream after 5 seconds
-  setTimeout(() => {
-    const tracks = mediaStream.getAudioTracks()
-    tracks[0].stop()
-  }, 5000)
-})
+navigator.mediaDevices
+  .getUserMedia({ audio: true, video: true })
+  .then((mediaStream) => {
+    document.querySelector("video").srcObject = mediaStream;
+    // Stop the audio stream after 5 seconds
+    setTimeout(() => {
+      const tracks = mediaStream.getAudioTracks();
+      tracks[0].stop();
+    }, 5000);
+  });
 ```
 
 ## 仕様書

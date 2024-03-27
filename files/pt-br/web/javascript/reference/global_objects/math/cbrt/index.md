@@ -59,14 +59,11 @@ if (!Math.cbrt) {
 
 ## Especificações
 
-| Especificação                                          | Status               | Comentário        |
-| ------------------------------------------------------ | -------------------- | ----------------- |
-| {{SpecName('ES6', '#sec-math.cbrt', 'Math.cbrt')}}     | {{Spec2('ES6')}}     | Definição inicial |
-| {{SpecName('ESDraft', '#sec-math.cbrt', 'Math.cbrt')}} | {{Spec2('ESDraft')}} |                   |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Math.cbrt")}}
+{{Compat}}
 
 ## Veja também
 

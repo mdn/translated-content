@@ -30,7 +30,7 @@ slug: Web/API/Element/focusin_event
 | `cancelable` {{readonlyInline}}    | {{jsxref("Boolean")}}                    | Whether the event is cancellable or not.   |
 | `relatedTarget` {{readonlyInline}} | {{domxref("EventTarget")}} (DOM element) | Event target receiving focus.              |
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

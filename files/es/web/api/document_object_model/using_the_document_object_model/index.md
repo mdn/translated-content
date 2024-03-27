@@ -1,16 +1,20 @@
 ---
-title: Using the W3C DOM Level 1 Core
+title: Uso del modelo de objetos del documento
 slug: Web/API/Document_object_model/Using_the_Document_Object_Model
+l10n:
+  sourceCommit: 76600240fbe75e083e964bc3707cce81e99999c2
 ---
 
-The W3C's DOM Level 1 Core is a powerful object model for changing the content tree of documents. It is supported in all major browsers including Mozilla Firefox and Microsoft Internet Explorer. It is a powerful base for scripting on the web.
+{{DefaultAPISidebar("DOM")}}
 
-## What is a content tree?
+El _Modelo de Objetos del Documento_ (DOM, por sus siglas en inglés) es una API para manipular árboles DOM de documentos HTML y XML (entre otros documentos en forma de árbol). Esta API está en la raíz de la descripción de una página y sirve como base para la creación de aplicaciones en la web.
 
-Many HTML authors may think of HTML as something flat — a bunch of text with tags in the middle. However, it is something much more than that. Any HTML document (or for that matter any SGML document or XML document) is a tree structure. For example, the following document and tree structure are similar (although not identical — see the notes on [whitespace in the DOM](/es/docs/Whitespace_in_the_DOM)):
+## ¿Qué es un árbol DOM?
+
+Un **árbol DOM** es una [estructura de árbol](https://en.wikipedia.org/wiki/Tree_structure) cuyos nodos representan el contenido de un documento HTML o XML. Cada documento HTML o XML tiene una representación de árbol DOM. Por ejemplo, considere el siguiente documento:
 
 ```html
-<html>
+<html lang="en">
   <head>
     <title>My Document</title>
   </head>
@@ -21,68 +25,75 @@ Many HTML authors may think of HTML as something flat — a bunch of text with t
 </html>
 ```
 
-![image:Using_the_W3C_DOM_Level_1_Core-doctree.jpg](using_the_w3c_dom_level_1_core-doctree.jpg)
+Tiene un árbol DOM que se ve así:
 
-When Mozilla parses a document, it builds a content tree and then uses it to display the document.
+![El DOM como una representación en forma de árbol de un documento que tiene una raíz y elementos de nodo que contienen contenido](using_the_w3c_dom_level_1_core-doctree.jpg)
 
-The terms used to describe trees show up often in the DOM Level 1 Core. Each of the boxes I drew in the tree above is a node in the tree. The line above a node expresses a parent-child relationship: the node on top is the parent, and the node on the bottom is the child. Two children of the same parent are therefore siblings. Similarly, one can refer to ancestors and descendants. (Cousins are too messy, though.)
+Aunque el árbol anterior es similar al árbol DOM del documento anterior, no es idéntico, ya que [el árbol DOM real conserva los espacios en blanco](/es/docs/Web/API/Document_Object_Model/Whitespace).
 
-## What does the DOM Level 1 Core let me do?
+Cuando un navegador web analiza un documento HTML, crea un árbol DOM y luego lo usa para mostrar el documento.
 
-The W3C DOM Level 1 allows you to change the content tree _any way you want_. It is powerful enough to build any HTML document from scratch. It allows authors to change anything in the document from script, at any time. The easiest way for web page authors to change the DOM dynamically is using JavaScript. In JavaScript, the document is accessible the same way it has been in older browsers: from the `document` property of the global object. This `document` object implements the [Document interface](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#i-Document) from the W3C's DOM Level 1 spec.
+## ¿Qué hace la API de documentos?
 
-## A simple example
+La API de documentos, también llamada a veces API DOM, le permite modificar un árbol DOM _de la forma que desee_. Le permite crear cualquier documento HTML o XML desde cero o cambiar cualquier contenido de un documento HTML o XML determinado. Los autores de páginas web pueden editar el DOM de un documento usando JavaScript para acceder a la propiedad `document` del objeto global. Este objeto `document` implementa la interfaz {{domxref("Document")}}.
 
-Suppose the author wants to take the above document and change the contents of the header, and write two paragraphs instead of one. The following script would do the job:
+## Un ejemplo sencillo
 
-### HTML Content
+Supongamos que el autor quiere cambiar el encabezado del documento anterior y escribir dos párrafos en lugar de uno. El siguiente script haría el trabajo:
+
+### HTML
 
 ```html
-<body>
-  <input type="button" value="Change this document." onclick="change()" />
-  <h2>Header</h2>
-  <p>Paragraph</p>
-</body>
+<html lang="en">
+  <head>
+    <title>My Document</title>
+  </head>
+  <body>
+    <input type="button" value="Cambiar este documento." onclick="change()" />
+    <h2>Header</h2>
+    <p>Paragraph</p>
+  </body>
+</html>
 ```
 
-### JavaScript Content
+### JavaScript
 
 ```js
 function change() {
-  // document.getElementsByTagName("H2") returns a NodeList of the <h2>
-  // elements in the document, and the first is number 0:
+  // document.getElementsByTagName("h2") devuelve un NodeList de los elementos
+  // <h2> en el documento, el primero es el numero 0:
+  const header = document.getElementsByTagName("h2").item(0);
 
-  var header = document.getElementsByTagName("H2").item(0);
-  // the firstChild of the header is a Text node:
-  header.firstChild.data = "A dynamic document";
-  // now the header is "A dynamic document".
+  // El primer hijo del encabezado es un nodo de texto:
+  header.firstChild.data = "Un documento dinámico";
 
-  var para = document.getElementsByTagName("P").item(0);
-  para.firstChild.data = "This is the first paragraph.";
+  // Ahora el encabezado es "Un documento dinámico".
 
-  // create a new Text node for the second paragraph
-  var newText = document.createTextNode("This is the second paragraph.");
-  // create a new Element to be the second paragraph
-  var newElement = document.createElement("P");
-  // put the text in the paragraph
+  // Accede al primer párrafo
+  const para = document.getElementsByTagName("p").item(0);
+  para.firstChild.data = "Este es el primer párrafo.";
+
+  // Crear un nuevo nodo Texto para el segundo párrafo
+  const newText = document.createTextNode("Éste es el segundo párrafo.");
+
+  // Crea un nuevo elemento para que sea el segundo párrafo.
+  const newElement = document.createElement("p");
+
+  // Poner el texto en el párrafo.
   newElement.appendChild(newText);
-  // and put the paragraph on the end of the document by appending it to
-  // the BODY (which is the parent of para)
+
+  // Coloque el párrafo al final del documento agregándolo al cuerpo
+  // (que es el padre de para)
   para.parentNode.appendChild(newElement);
 }
 ```
 
-{{ EmbedLiveSample('A_simple_example', 800, 300) }}
+{{ EmbedLiveSample('Un_ejemplo_sencillo', 800, 300) }}
 
-You can see this script as [a complete example](example.html).
+## ¿Cómo puedo aprender más?
 
-## How can I learn more?
+Ahora que está familiarizado con los conceptos básicos del DOM, es posible que desee obtener más información sobre las características fundamentales de la API de Document leyendo [cómo recorrer una tabla HTML con interfaces JavaScript y DOM](/es/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces).
 
-Now that you are familiar with the basic concepts of the DOM, there is a document explaining the [DOM Level 1 fundamental methods](/es/docs/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces). It is the follow-up to this document.
+## Véase también
 
-See also the [DOM Level 1 Core specification](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html) from the W3C. It's a reasonably clear spec, although it is formal. The main thing that's useful to authors is the description of the different DOM objects and all their properties and methods. Also see our [other DOM documentation](/es/docs/DOM).
-
-**Original Document Information**
-
-- Author(s): L. David Baron \<dbaron at dbaron dot org>
-- Copyright Information: © 1998-2005 by individual mozilla.org contributors; content available under a [Creative Commons license](http://www.mozilla.org/foundation/licensing/website-content.html)
+- El [Modelo de objetos del documento](/es/docs/Web/API/Document_Object_Model) (DOM).

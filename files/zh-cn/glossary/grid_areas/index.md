@@ -61,7 +61,7 @@ slug: Glossary/Grid_Areas
 
 {{ EmbedLiveSample('示例', '300', '280') }}
 
-## 了解更多
+## 参见
 
 ### 属性参考
 

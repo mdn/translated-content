@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment
 
 逻辑空赋值运算符（`x ??= y`）仅在 `x` 是{{Glossary("nullish", "空值")}}（`null` 或 `undefined`）时对其赋值。
 
-{{EmbedInteractiveExample("pages/js/expressions-logical-nullish-assignment.html")}}
+{{EmbedInteractiveExample("pages/js/expressions-nullish-coalescing-assignment.html")}}
 
 ## 语法
 

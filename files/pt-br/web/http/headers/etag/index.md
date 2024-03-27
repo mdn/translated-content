@@ -79,7 +79,7 @@ O servidor irá comparar a `ETag` do cliente (enviada com `If-None-Match`) com a
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.ETag")}}
+{{Compat}}
 
 ## Veja também
 

@@ -11,7 +11,7 @@ Flexbox 是 [CSS Flexible Box Layout Module](https://www.w3.org/TR/css-flexbox-1
 
 Flexbox 还可以对齐主轴或交叉轴上的项目，从而提供对一组项目大小和对齐的高级控制。
 
-## 学习更多
+## 参见
 
 ### 属性引用
 

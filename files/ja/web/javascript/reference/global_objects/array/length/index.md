@@ -1,22 +1,28 @@
 ---
-title: Array.prototype.length
+title: "Array: length"
 slug: Web/JavaScript/Reference/Global_Objects/Array/length
 l10n:
-  sourceCommit: 968e6f1f3b6f977a09e116a0ac552459b741eac3
+  sourceCommit: 5c3c25fd4f2fbd7a5f01727a65c2f70d73f1880a
 ---
 
 {{JSRef}}
 
-**`length`** は `Array` 型のインスタンスであるオブジェクトのプロパティで、配列の要素の数を設定または取得します。値は符号なし 32 ビット整数で、常に配列の最も大きなインデックスよりも数値的に大きくなります。
+**`length`** は {{jsxref("Array")}} インスタンスのデータプロパティで、配列の要素の数を表します。値は符号なし 32 ビット整数で、常に配列の最も大きなインデックスよりも数値的に大きくなります。
 
-{{EmbedInteractiveExample("pages/js/array-length.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/array-length.html", "shorter")}}
+
+## 値
+
+非負の整数で、 2<sup>32</sup> 未満です。
+
+{{js_property_attributes(1, 0, 0)}}
 
 ## 解説
 
-`length` プロパティの値は正の符号を持つ整数で、2 の 32 乗 (2^32) 未満の値です。
+`length` プロパティの値は非負の整数で、 2<sup>32</sup> 未満の値です。
 
 ```js
-const listA = [1,2,3];
+const listA = [1, 2, 3];
 const listB = new Array(6);
 
 console.log(listA.length);
@@ -25,14 +31,20 @@ console.log(listA.length);
 console.log(listB.length);
 // 6
 
-listB.length = 4294967296; //2 の 32 乗 = 4294967296
+listB.length = 2 ** 32; // 4294967296
 // RangeError: Invalid array length
 
-const listC = new Array(-100) // 負の符号
+const listC = new Array(-100); // 負の数は許されない
 // RangeError: Invalid array length
 ```
 
-`length` プロパティに値をセットすることで、いつでも配列を短縮することができます。`length` プロパティの値を現在より大きな値に変更すると、配列内の要素数も増加します。例えば `length` が現在 2 のところに 3 をセットすると、配列内の要素数は 3 になり、3 番目の要素は反復処理できない空のスロットになります。
+配列オブジェクトは `length` プロパティを監視し、自動的に `length` 値を配列のコンテンツと同期させます。これは、次のことを意味します。
+
+- 新しい `length` を超えた要素は削除されます。
+- 配列のインデックス（2<sup>32</sup> より小さい非負の整数）を現在の `length` よりも大きい値に設定するには、配列を拡張します。 `length` プロパティは新しい最も大きいインデックスを反映するように増加します。
+- `length` に無効な値（例えば、負の数や非整数）を設定すると、 `RangeError` 例外が発生します。
+
+`length` に現在の長さよりも大きな値を設定すると、配列は実際の値が `undefined` ではなく、[空のスロット](/ja/docs/Web/JavaScript/Guide/Indexed_collections#疎配列)を追加することで拡張されます。空のスロットは配列メソッドと特別な対話をします。[配列メソッドと空のスロット](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#配列メソッドと空のスロット)を参照してください。
 
 ```js
 const arr = [1, 2];
@@ -48,13 +60,7 @@ arr.forEach((element) => console.log(element));
 // 2
 ```
 
-ご覧の通り、`length` プロパティは必ずしも配列内で定義された値の数を示しているわけではありません。詳細は [`length` と数値プロパティとの関係](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#length_と数値プロパティとの関係)をご覧ください。
-
-{{js_property_attributes(1, 0, 0)}}
-
-- `Writable`: この属性が `false` に設定されている場合、プロパティの値を変更することはできません。
-- `Configurable`: この属性が `false` に設定されている場合、プロパティの削除や属性 (`Writable`, `Configurable`, `Enumerable`) の変更の試みは失敗します。
-- `Enumerable`: この属性が `true` に設定されている場合、プロパティは [for](/ja/docs/Web/JavaScript/Reference/Statements/for) や [`for...in`](/ja/docs/Web/JavaScript/Reference/Statements/for...in) ループ中で反復処理の対象にされます。
+詳細は [`length` と数値プロパティとの関係](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#length_と数値プロパティとの関係)をご覧ください。
 
 ## 例
 
@@ -84,14 +90,30 @@ if (numbers.length > 3) {
 
 console.log(numbers); // [1, 2, 3]
 console.log(numbers.length); // 3
+console.log(numbers[3]); // undefined; the extra elements are deleted
 ```
 
 ### 固定長の空の配列を作成
+
+`length` に現在の長さ以上の値を設定すると、[疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#疎配列)を作成します。
 
 ```js
 const numbers = [];
 numbers.length = 3;
 console.log(numbers); // [empty x 3]
+```
+
+### length の書き込み不可の配列
+
+`length` プロパティは、現在の長さを超えて要素が追加されると、配列によって自動的に更新されます。もし `length` プロパティを書き込み不可にすると、配列はそれを更新できなくなります。これは[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)ではエラーが発生します。
+
+```js
+"use strict";
+
+const numbers = [1, 2, 3, 4, 5];
+Object.defineProperty(numbers, "length", { writable: false });
+numbers[5] = 6; // TypeError: Cannot assign to read only property 'length' of object '[object Array]'
+numbers.push(5); // // TypeError: Cannot assign to read only property 'length' of object '[object Array]'
 ```
 
 ## 仕様書
@@ -104,5 +126,8 @@ console.log(numbers); // [empty x 3]
 
 ## 関連情報
 
+- [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)ガイド
 - {{jsxref("Array")}}
+- [`TypedArray.prototype.length`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/length)
+- [`String`: `length`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/length)
 - [RangeError: invalid array length](/ja/docs/Web/JavaScript/Reference/Errors/Invalid_array_length)

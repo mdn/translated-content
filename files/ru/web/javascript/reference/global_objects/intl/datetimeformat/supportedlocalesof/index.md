@@ -3,7 +3,7 @@ title: Intl.DateTimeFormat.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/supportedLocalesOf
 ---
 
-{{JSRef("Global_Objects", "DateTimeFormat", "Intl,Collator,NumberFormat")}}
+{{JSRef}}
 
 ## Сводка
 
@@ -47,9 +47,7 @@ console.log(
 
 ## Спецификации
 
-| Спецификация                                                                        | Статус                  | Комментарии              |
-| ----------------------------------------------------------------------------------- | ----------------------- | ------------------------ |
-| {{SpecName('ES Int 1.0', '#sec-12.2.2', 'Intl.DateTimeFormat.supportedLocalesOf')}} | {{Spec2('ES Int 1.0')}} | Изначальное определение. |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

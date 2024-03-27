@@ -47,6 +47,8 @@ mix-blend-mode: unset;
 
 ## Примеры
 
+### Влияние различных значений режима смешивания
+
 ```html hidden
 <div class="grid">
   <div class="col">
@@ -624,7 +626,7 @@ body {
 }
 ```
 
-{{EmbedLiveSample("mix-blend-mode", "100%", 1600, "", "", "example-outcome-frame")}}
+{{EmbedLiveSample("Влияние_различных_значений_режима_смешивания", "100%", 1600)}}
 
 ### Пример HTML
 

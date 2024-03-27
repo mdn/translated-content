@@ -69,13 +69,11 @@ f3();
 
 ## Especificações
 
-| Especificação                                                                 | Status               | Comentário                   |
-| ----------------------------------------------------------------------------- | -------------------- | ---------------------------- |
-| {{SpecName('ESDraft', '#sec-async-function-definitions', 'async functions')}} | {{Spec2('ESDraft')}} | Definição inicial no ES2017. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.operators.await")}}
+{{Compat}}
 
 ## Veja também
 

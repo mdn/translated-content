@@ -11,7 +11,7 @@ slug: Web/API/DOMParser
 
 你可以使用{{domxref("XMLSerializer")}} 接口执行相反的操作 - 将 DOM 树转换为 XML 或 HTML 源。
 
-对于 HTML 文档，您还可以通过设置 {{domxref("Element.innerHTML")}} 和{{domxref("Element.outerHTML", "outerHTML")}} 属性的值，将部分 DOM 替换为从 HTML 构建的新 DOM 树。还可以读取这些属性以获取对应于相应 DOM 子树的 HTML 片段。
+对于 HTML 文档，你还可以通过设置 {{domxref("Element.innerHTML")}} 和{{domxref("Element.outerHTML", "outerHTML")}} 属性的值，将部分 DOM 替换为从 HTML 构建的新 DOM 树。还可以读取这些属性以获取对应于相应 DOM 子树的 HTML 片段。
 
 ## 语法
 
@@ -41,7 +41,7 @@ let doc = domparser.parseFromString(string, mimeType);
   - : 要解析的 {{domxref("DOMString")}}。它必须包含 {{Glossary("HTML")}}、{{Glossary("xml")}}、{{Glossary("xhtml+xml")}} 或 {{Glossary("svg")}} 文档。
 - `mimeType`
 
-  - : 一个 {{domxref("DOMString")}}。This string determines a class of the the method's return value. The possible values are the following:
+  - : 一个 {{domxref("DOMString")}}。这个字符串决定方法返回值的类。可能的取值有：
 
 | `mimeType`              | doc.constructor            |
 | ----------------------- | -------------------------- |

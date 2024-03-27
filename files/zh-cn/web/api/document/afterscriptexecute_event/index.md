@@ -33,7 +33,7 @@ document.addEventListener("afterscriptexecute", finished, true);
 
 - [HTML5](http://www.whatwg.org/specs/web-apps/current-work/#the-script-element)
 
-## 相关链接
+## 参见
 
 - {{domxref("element.onbeforescriptexecute")}}
 - {{domxref("document.currentScript")}}

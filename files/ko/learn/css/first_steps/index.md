@@ -9,7 +9,7 @@ CSS (Cascading Style Sheets) 는 콘텐츠의 글꼴, 색상, 크기 및 간격�
 
 ## 전제 조건
 
-이 모듈을 시작하기 전에, 다음이 있어야 합니다:
+이 모듈을 시작하기 전에, 다음이 있어야 합니다.
 
 1. 컴퓨터를 사용하고 웹을 수동적으로 사용하는 것에 대한 기본적인 친숙성 (예: 콘텐츠를 보는 것) 입니다.
 2. [기본 소프트웨어 설치](/ko/docs/Learn/Getting_started_with_the_web/Installing_basic_software) 에서 자세히 설명한 대로 설정된 기본 작업 환경과 [파일 다루기](/ko/docs/Learn/Getting_started_with_the_web/Dealing_with_files) 에서 자세히 설명한 대로 파일을 생성하고 관리하는 방법을 이해합니다.
@@ -35,4 +35,4 @@ CSS (Cascading Style Sheets) 는 콘텐츠의 글꼴, 색상, 크기 및 간격�
 ## 참고 항목
 
 - [중급자 웹 활용 능력 1: CSS 소개](https://teach.mozilla.org/activities/intermediate-web-lit/)
-  - _: CSS 소개_ 모듈에서 이야기 한 많은 기술을 탐구하고 테스트하는 훌륭한 모질라 기초 과정입니다. 웹 페이지, CSS 선택자, 속성 및 값의 HTML 요소 스타일 지정에 대해 학습합니다.
+  - _: CSS 소개_ 모듈에서 이야기 한 많은 기술을 탐구하고 테스트하는 훌륭한 Mozilla 기초 과정입니다. 웹 페이지, CSS 선택자, 속성 및 값의 HTML 요소 스타일 지정에 대해 학습합니다.

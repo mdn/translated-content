@@ -12,7 +12,7 @@ slug: Web/API/VRFrameData/VRFrameData
 ## 構文
 
 ```js
-new VRFrameData()
+new VRFrameData();
 ```
 
 ### 引数
@@ -21,8 +21,7 @@ new VRFrameData()
 
 ## 例
 
-例については [`VRDisplay.getFrameData()`](/ja/docs/Web/API/VRDisplay/getFrameData#例
-) を参照してください。
+例については [`VRDisplay.getFrameData()`](/ja/docs/Web/API/VRDisplay/getFrameData#例) を参照してください。
 
 ## 仕様書
 
@@ -36,5 +35,4 @@ new VRFrameData()
 
 ## 関連情報
 
-- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — Mozilla VR チームによるデモ、ダウンロード、その他のリソース。
+- [WebVR API](/ja/docs/Web/API/WebVR_API)

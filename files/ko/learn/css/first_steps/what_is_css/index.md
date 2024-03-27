@@ -31,7 +31,7 @@ l10n:
 
 **문서**는 일반적으로 마크 업 언어를 사용하여 구성된 텍스트 파일입니다 — {{Glossary("HTML")}} 이 가장 일반적인 마크 업 언어이지만, {{Glossary("SVG")}} 또는 {{Glossary("XML")}} 과 같은 다른 마크 업 언어를 사용할 수도 있습니다.
 
-사용자에게 문서를 **제공 한다는 것**은 대상이 사용 할 수 있는 형식으로 문서를 변환하는 것을 의미합니다. {{Glossary("browser","Browsers")}}, {{Glossary("Mozilla Firefox","Firefox")}}, {{Glossary("Google Chrome","Chrome")}} 또는 {{Glossary("Microsoft Edge","Edge")}} 는 컴퓨터 화면, 프로젝터 또는 프린터 등의 문서를 시각적으로 표시하도록 설계되었습니다.
+사용자에게 문서를 **제공 한다는 것** 은 대상이 사용 할 수 있는 형식으로 문서를 변환하는 것을 의미합니다. {{Glossary("browser","Browsers")}}, {{Glossary("Mozilla Firefox","Firefox")}}, {{Glossary("Google Chrome","Chrome")}} 또는 {{Glossary("Microsoft Edge","Edge")}} 는 컴퓨터 화면, 프로젝터 또는 프린터 등의 문서를 시각적으로 표시하도록 설계되었습니다.
 
 > **참고:**
 >
@@ -46,7 +46,7 @@ CSS 는 매우 기본적인 텍스트 문서 스타일링에 사용될 수 있�
 CSS는 규칙 기반 언어입니다 — 웹 페이지의 특정 요소 또는 요소 그룹에 적용할 스타일 그룹을 지정하는 규칙을 정의합니다.
 
 예를 들어 페이지의 주요 제목을 큰 빨간색 텍스트로 표시되도록 결정할 수 있습니다.
-다음 코드는 위에서 설명한 스타일을 실행 하는 매우 간단한 CSS 규칙을 보여줍니다:
+다음 코드는 위에서 설명한 스타일을 실행 하는 매우 간단한 CSS 규칙을 보여줍니다.
 
 ```css
 h1 {

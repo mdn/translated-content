@@ -75,7 +75,8 @@ if ("serviceWorker" in navigator) {
         const installingWorker = registration.installing;
         console.log(
           "新しいサービスワーカーをインストールしています:",
-          installingWorker);
+          installingWorker,
+        );
 
         // インストール中のサービスワーカーの状態の変更を、
         // installingWorker.onstatechange を介して待ち受けできます
@@ -85,7 +86,7 @@ if ("serviceWorker" in navigator) {
       console.error(`サービスワーカーの登録に失敗しました: ${error}`);
     });
 } else {
-  console.error('サービスワーカーに対応していません。');
+  console.error("サービスワーカーに対応していません。");
 }
 ```
 

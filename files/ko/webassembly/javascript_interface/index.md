@@ -5,7 +5,7 @@ slug: WebAssembly/JavaScript_interface
 
 {{WebAssemblySidebar}}
 
-**`WebAssembly`** 자바스크립트 객체는 모든 [WebAssembly](/ko/docs/WebAssembly)에 관계된 기능의 네임스페이스로서 역할합니다.
+**`WebAssembly`** JavaScript 객체는 모든 [WebAssembly](/ko/docs/WebAssembly)에 관계된 기능의 네임스페이스로서 역할합니다.
 
 대부분의 전역객체와 다르게, `WebAssembly`는 생성자가 아닙니다 (함수 객체가 아닙니다). 비슷한 예로 수학적인 상수나 함수들을 담고있는 {{jsxref("Math")}} 객체나, 국제화 관련 생성자나 언어에 민감한 다른 함수들을 담고있는 {{jsxref("Intl")}} 등이 있습니다.
 

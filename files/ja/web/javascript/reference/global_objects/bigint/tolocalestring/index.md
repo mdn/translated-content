@@ -12,9 +12,9 @@ slug: Web/JavaScript/Reference/Global_Objects/BigInt/toLocaleString
 ## 構文
 
 ```js
-toLocaleString()
-toLocaleString(locales)
-toLocaleString(locales, options)
+toLocaleString();
+toLocaleString(locales);
+toLocaleString(locales, options);
 ```
 
 ### 引数
@@ -53,24 +53,24 @@ bigint.toLocaleString();
 var bigint = 123456789123456789n;
 
 // ドイツ語では千の位の区切りにピリオドを使用
-console.log(bigint.toLocaleString('de-DE'));
+console.log(bigint.toLocaleString("de-DE"));
 // → 123.456.789.123.456.789
 
 // 多くのアラビア語を話す国ではアラビア語で東アラビア数字を使用
-console.log(bigint.toLocaleString('ar-EG'));
+console.log(bigint.toLocaleString("ar-EG"));
 // → ١٢٣٬٤٥٦٬٧٨٩٬١٢٣٬٤٥٦٬٧٨٩
 
 // インドでは千/十万/千万の区切りを使用
-console.log(bigint.toLocaleString('en-IN'));
+console.log(bigint.toLocaleString("en-IN"));
 // → 1,23,45,67,89,12,34,56,789
 
 // nu 拡張キーは数値体系を要求。例えば中国語の数字の場合
-console.log(bigint.toLocaleString('zh-Hans-CN-u-nu-hanidec'));
+console.log(bigint.toLocaleString("zh-Hans-CN-u-nu-hanidec"));
 // → 一二三,四五六,七八九,一二三,四五六,七八九
 
 // 要求した言語に対応していない場合、例えばバリ語の場合、
 // 予備の言語、この場合はインドネシア語を使用
-console.log(bigint.toLocaleString(['ban', 'id']));
+console.log(bigint.toLocaleString(["ban", "id"]));
 // → 123.456.789.123.456.789
 ```
 
@@ -82,15 +82,19 @@ console.log(bigint.toLocaleString(['ban', 'id']));
 var bigint = 123456789123456789n;
 
 // 通貨書式を要求
-console.log(bigint.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' }));
+console.log(
+  bigint.toLocaleString("de-DE", { style: "currency", currency: "EUR" }),
+);
 // → 123.456.789.123.456.789,00 €
 
 // 日本円には下位の単位がない
-console.log(bigint.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' }))
+console.log(
+  bigint.toLocaleString("ja-JP", { style: "currency", currency: "JPY" }),
+);
 // → ￥123,456,789,123,456,789
 
 // 有効数字を 3 桁に限定
-console.log(bigint.toLocaleString('en-IN', { maximumSignificantDigits: 3 }));
+console.log(bigint.toLocaleString("en-IN", { maximumSignificantDigits: 3 }));
 // → 1,23,00,00,00,00,00,00,000
 ```
 

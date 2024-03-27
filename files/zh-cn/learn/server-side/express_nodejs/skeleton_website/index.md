@@ -12,7 +12,7 @@ slug: Learn/Server-side/Express_Nodejs/skeleton_website
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         <a
           href="/zh-CN/docs/Learn/Server-side/Express_Nodejs/development_environment"
@@ -434,7 +434,7 @@ block content
 
 ## 挑战自我
 
-在 **/routes/users.js** 中添加一个新路由，在 URL `/users/cool/` 处显示文本 "你好酷"。运行服务器，并在浏览器中访问 [http://localhost:3000/users/cool/](http://localhost:3000/users/cool/)，测试一下是否成功。
+在 **/routes/users.js** 中添加一个新路由，在 URL `/users/cool/` 处显示文本“你好酷”。运行服务器，并在浏览器中访问 `http://localhost:3000/users/cool/`，测试一下是否成功。
 
 ## 小结
 
@@ -444,7 +444,7 @@ block content
 
 ## 参见
 
-- [Express 应用生成器](http://www.expressjs.com.cn/starter/generator.html) （Express 中文镜像文档）
-- [在 Express 中使用模板引擎](http://www.expressjs.com.cn/guide/using-template-engines.html)（Express 镜像文档）
+- [Express 应用程序生成器](https://expressjs.com/zh-cn/starter/generator.html)（Express 文档）
+- [将模板引擎用于 Express](https://expressjs.com/zh-cn/guide/using-template-engines.html)（Express 文档）
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs")}}

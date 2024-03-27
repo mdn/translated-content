@@ -158,13 +158,11 @@ if (!Math.clz32)
 
 ## Especificações
 
-| Especificação                                            |
-| -------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.clz32', 'Math.clz32')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Math.clz32")}}
+{{Compat}}
 
 ## Veja também
 

@@ -63,7 +63,7 @@ _このインターフェイスは、親インターフェイスである {{domx
 
 ## ブラウザの互換性
 
-{{Compat("api.FileSystemDirectoryEntry")}}
+{{Compat}}
 
 ## 関連情報
 

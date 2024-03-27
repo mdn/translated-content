@@ -14,7 +14,7 @@ l10n:
 ## 構文
 
 ```js
-dump(message)
+dump(message);
 ```
 
 ### 引数

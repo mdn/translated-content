@@ -59,7 +59,7 @@ myHeaders.append("compression", "gzip");
 // キーと値の組を表示
 myHeaders.forEach((value, key) => {
   console.log(`${key} ==> ${value}`);
-})
+});
 ```
 
 結果は次の通りです。

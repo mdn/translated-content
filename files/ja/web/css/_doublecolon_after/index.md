@@ -14,6 +14,8 @@ a::after {
 }
 ```
 
+{{EmbedInteractiveExample("pages/tabbed/pseudo-element-after.html", "tabbed-standard")}}
+
 > **メモ:** `::before` および `::after` によって作成される擬似要素は[要素の整形ボックスに含まれるため](https://www.w3.org/TR/CSS2/generate.html#before-after-content)、 {{htmlelement("img")}} や {{htmlelement("br")}} のような[置換要素](/ja/docs/Web/CSS/Replaced_element)には適用されません。
 
 ## 構文
@@ -68,12 +70,12 @@ a::after {
 
 ```css
 .ribbon {
-  background-color: #5BC8F7;
+  background-color: #5bc8f7;
 }
 
 .ribbon::after {
   content: "かわいいオレンジのボックスです。";
-  background-color: #FFBA10;
+  background-color: #ffba10;
   border-color: black;
   border-style: dotted;
 }
@@ -92,9 +94,15 @@ a::after {
 #### HTML
 
 ```html
-<p>Here we have some
-  <span tabindex="0" data-descr="collection of words and punctuation">text</span> with a few
-  <span tabindex="0" data-descr="small popups that appear when hovering">tooltips</span>.
+<p>
+  Here we have some
+  <span tabindex="0" data-descr="collection of words and punctuation"
+    >text</span
+  >
+  with a few
+  <span tabindex="0" data-descr="small popups that appear when hovering"
+    >tooltips</span
+  >.
 </p>
 ```
 
@@ -104,7 +112,7 @@ a::after {
 span[data-descr] {
   position: relative;
   text-decoration: underline;
-  color: #00F;
+  color: #00f;
   cursor: help;
 }
 

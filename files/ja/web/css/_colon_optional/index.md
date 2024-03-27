@@ -14,6 +14,8 @@ input:optional {
 }
 ```
 
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-optional.html", "tabbed-standard")}}
+
 この擬似クラスは。フォームを送信するにあたって必須ではない入力欄にスタイルを適用するのに便利です。
 
 > **メモ:** {{cssxref(":required")}} 擬似クラスは<em>必須</em>のフォーム欄を選択します。
@@ -34,12 +36,12 @@ input:optional {
 <form>
   <div class="field">
     <label for="url_input">Enter a URL:</label>
-    <input type="url" id="url_input">
+    <input type="url" id="url_input" />
   </div>
 
   <div class="field">
     <label for="email_input">Enter an email address:</label>
-    <input type="email" id="email_input" required>
+    <input type="email" id="email_input" required />
   </div>
 </form>
 ```

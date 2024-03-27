@@ -74,7 +74,7 @@ navigator.registerProtocolHandler(scheme, url, title);
 
 ## 示例
 
-如果您的网站是 `https://www.google.com/`，则可以为其注册一个协议处理程序来处理 `web+burger:`链接，如下所示：
+如果你的网站是 `https://www.google.com/`，则可以为其注册一个协议处理程序来处理 `web+burger:`链接，如下所示：
 
 ```js
 navigator.registerProtocolHandler(
@@ -84,11 +84,11 @@ navigator.registerProtocolHandler(
 );
 ```
 
-这将创建一个处理程序，该处理程序允许使用 `web+burger:` 链接将用户发送到您的网站，并将访问的 Burger URL 插入`%s`占位符。
+这将创建一个处理程序，该处理程序允许使用 `web+burger:` 链接将用户发送到你的网站，并将访问的 Burger URL 插入`%s`占位符。
 
 该脚本必须从与处理程序 URL 相同的源运行（因此， `https://www.google.com/`上的任何页面），并且处理程序 URL 必须为 `http`或 `https`。
 
-将通知用户您的代码要求注册协议处理程序，以便他们可以决定是否允许它。有关 `https://www.google.com/`上的示例，请参见以下屏幕截图：
+将通知用户你的代码要求注册协议处理程序，以便他们可以决定是否允许它。有关 `https://www.google.com/`上的示例，请参见以下屏幕截图：
 
 ![](protocolregister.png)
 

@@ -2,12 +2,12 @@
 title: JavaScript 첫걸음
 slug: Learn/JavaScript/First_steps
 l10n:
-  sourceCommit: 904cdf09c7e328b7a15a6a4db6bc6bd31f969cce
+  sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
 
 {{LearnSidebar}}
 
-우리의 첫 번째 JavaScript 과정에서는, 현실적인 첫 JavaScript 예제 작성에 앞서 "JavaScript란 뭘까", "JavaScript는 어떻게 생겼을까", "JavaScript는 뭘 할 수 있을까"와 같은 핵심적인 질문에 답을 하겠습니다. 그다음으로는 변수, 문자열, 숫자, 배열처럼 핵심 개념을 자세히 논의해 보겠습니다.
+우리의 첫 번째 JavaScript 과정에서는, 현실적인 첫 JavaScript 예제 작성에 앞서 "JavaScript란 뭘까", "JavaScript는 어떻게 생겼을까", "JavaScript는 뭘 할 수 있을까"와 같은 핵심적인 질문에 답을 하겠습니다. 그다음으로는 변수, 문자열, 숫자, 배열과 같은 핵심 개념을 자세히 논의해 보겠습니다.
 
 > **알림:**
 >
@@ -17,7 +17,7 @@ l10n:
 >
 > [**시작하기**](/ko/docs/Learn/Front-end_web_developer)
 
-## 준비 과정
+## 필요한 사전 지식
 
 JavaScript를 몰라도 이번 과정 시작에는 문제가 없지만, HTML과 CSS는 어느 정도 친숙해야 합니다. JavaScript를 시작하기 이전에 우선 다음 과정부터 진행하시는 게 좋습니다.
 
@@ -25,7 +25,7 @@ JavaScript를 몰라도 이번 과정 시작에는 문제가 없지만, HTML과 
 - [HTML 소개](/ko/docs/Learn/HTML/Introduction_to_HTML)
 - [CSS 소개](/ko/docs/Learn/CSS/Introduction_to_CSS)
 
-> **참고:** 파일을 만들 수 없는 컴퓨터나 태블릿, 기타 장치에서 작업을 하신다면 예제 코드의 대부분을 [JSBin](https://jsbin.com/)이나 [Thimble](https://thimble.mozilla.org/) 같은 온라인 코딩 프로그램에서도 시험할 수 있습니다.
+> **참고:** 파일을 만들 수 없는 컴퓨터나 태블릿, 기타 장치에서 작업을 하신다면 예제 코드의 대부분을 [JSBin](https://jsbin.com/)이나 [Glitch](https://glitch.com/) 같은 온라인 코딩 프로그램에서도 시험할 수 있습니다.
 
 ## 구성
 

@@ -60,7 +60,7 @@ JavaScript、CSS 和 HTML 可以被分割成较小的代码块。这样就可以
 
 #### Loading 属性
 
-{{HTMLElement("img")}} 元素上的 [`loading`](/zh-CN/docs/Web/HTML/Element/iframe#loading) 属性（或 {{HTMLElement("iframe")}} 上的 [`loading`](/zh-CN/docs/Web/Element/iframe#loading) 属性）可用于指示浏览器推迟加载屏幕外的图像/iframe，直到用户滚动到其附近。
+{{HTMLElement("img")}} 元素上的 [`loading`](/zh-CN/docs/Web/HTML/Element/img#loading) 属性（或 {{HTMLElement("iframe")}} 上的 [`loading`](/zh-CN/docs/Web/HTML/Element/iframe#loading) 属性）可用于指示浏览器推迟加载屏幕外的图像/iframe，直到用户滚动到其附近。
 
 ```html
 <img src="image.jpg" alt="..." loading="lazy" />
@@ -92,6 +92,5 @@ JavaScript、CSS 和 HTML 可以被分割成较小的代码块。这样就可以
 
 ## 参见
 
-- [渲染阻塞 CSS](https://web.dev/critical-rendering-path-render-blocking-css/)
-- [加载和渲染优化](https://web.dev/fast/#optimize-webfonts)
-- [懒加载图片和视频](https://web.dev/fast/#lazy-load-images-and-video)
+- [渲染阻塞 CSS](https://web.dev/articles/critical-rendering-path/render-blocking-css)
+- [使用延迟加载来提高加载速度](https://web.dev/articles/lazy-loading)

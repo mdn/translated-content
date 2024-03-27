@@ -49,7 +49,7 @@ slug: Web/SVG/Element/linearGradient
 
 ## ブラウザー互換性
 
-{{Compat("svg.elements.linearGradient")}}
+{{Compat}}
 
 ## 関連情報
 

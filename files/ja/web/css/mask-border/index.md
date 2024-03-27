@@ -22,18 +22,18 @@ slug: Web/CSS/mask-border
 
 ```css
 /* source | slice */
-mask-border: url('border-mask.png') 25;
+mask-border: url("border-mask.png") 25;
 
 /* source | slice | repeat */
-mask-border: url('border-mask.png') 25 space;
+mask-border: url("border-mask.png") 25 space;
 
 /* source | slice | width */
-mask-border: url('border-mask.png') 25 / 35px;
+mask-border: url("border-mask.png") 25 / 35px;
 
 /* source | slice | width | outset | repeat | mode */
-mask-border: url('border-mask.png') 25 / 35px / 12px space alpha;
+mask-border: url("border-mask.png") 25 / 35px / 12px space alpha;
 
-/* Global values */
+/* グローバル値 */
 mask-border: inherit;
 mask-border: initial;
 mask-border: revert;

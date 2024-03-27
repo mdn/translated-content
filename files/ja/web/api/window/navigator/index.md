@@ -16,7 +16,8 @@ slug: Web/API/Window/navigator
 ### 例 #1: ブラウザーを検出し文字列で返す
 
 ```js
-var sBrowser, sUsrAg = navigator.userAgent;
+var sBrowser,
+  sUsrAg = navigator.userAgent;
 
 // The order matters here, and this may report false positives for unlisted browsers.
 

@@ -61,7 +61,7 @@ slug: Web/SVG/Element/script
 
 ## DOM 接口
 
-该元素实现了[`SVGScriptElement`](/zh-CN/DOM/SVGScriptElement)接口。
+该元素实现了 [`SVGScriptElement`](/zh-CN/DOM/SVGScriptElement) 接口。
 
 ## 浏览器兼容性
 
@@ -69,6 +69,6 @@ slug: Web/SVG/Element/script
 
 ## 参见
 
-- [HTML 中的`script`元素](/zh-CN/HTML/Element/Script)
+- [HTML 中的 `script` 元素](/zh-CN/HTML/Element/Script)
 
 {{SVGRef}}

@@ -58,15 +58,9 @@ slug: Web/API/Push_API
 | ------------------------------------------- |
 | [Push API](https://w3c.github.io/push-api/) |
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
-### `PushEvent`
-
-{{Compat("api.PushEvent")}}
-
-### `PushMessageData`
-
-{{Compat("api.PushMessageData")}}
+{{Compat}}
 
 ## Смотрите также
 

@@ -20,7 +20,7 @@ La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feFuncG>`** doit être placé
 
 ### Attributs spécifiques
 
-_Aucun_
+_Aucun._
 
 ## Interface DOM
 

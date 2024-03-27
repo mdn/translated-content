@@ -185,7 +185,7 @@ CSS の仕様には、2 つのレイアウト方法が同じ項目に適用さ�
 
 CSS グリッド仕様は、当初 Internet Explorer 10 で試作されました。 つまり、IE10 と IE11 は*最新*のグリッドをサポートしていませんが、このサイトに記載されている最新の仕様とは異なり、非常に使いやすいバージョンのグリッドレイアウトを使用しています。 IE10 および IE11 の実装は、前に `-ms-` が付いています。 つまり、これらのブラウザーに使用でき、マイクロソフト以外のブラウザーでは無視されます。 Edge はまだ古い構文を理解しているので、最新のグリッド CSS ではすべてが安全に上書きされるように注意してください。
 
-[グリッドレイアウトのプログレッシブエンハンスメント](/ja/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)のガイドはグリッドの IE バージョンを理解するのを助けることができ、このレッスンの最後にいくつかの追加の役に立つリンクを含めました。 ただし、以前のバージョンの IE に非常に多くの訪問者がいない限り、サポートされていないすべてのブラウザーで機能する代替手段の作成に集中することをお勧めします。
+[CSS グリッドレイアウトとプログレッシブエンハンスメント](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)のガイドはグリッドの IE バージョンを理解するのを助けることができ、このレッスンの最後にいくつかの追加の役に立つリンクを含めました。 ただし、以前のバージョンの IE に非常に多くの訪問者がいない限り、サポートされていないすべてのブラウザーで機能する代替手段の作成に集中することをお勧めします。
 
 ## 古いブラウザーをテストする
 
@@ -201,7 +201,7 @@ CSS グリッド仕様は、当初 Internet Explorer 10 で試作されました
 
 - [CSS での機能クエリの使用](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/)（英語）
 - [フレックスボックスの後方互換性](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox)
-- [CSS グリッドレイアウトとプログレッシブエンハンスメント](/ja/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
+- [CSS グリッドレイアウトとプログレッシブエンハンスメント](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
 - [CSS グリッドを使用する: グリッドなしでブラウザーをサポートする](https://www.smashingmagazine.com/2017/11/css-grid-supporting-browsers-without-grid/)（英語）
 - [IE10 および IE11 バージョンのグリッドを使用するチュートリアル](https://24ways.org/2012/css3-grid-layout/)（英語）
 - [IE10 のグリッドレイアウトの実装を使おうとするべきですか？](https://rachelandrew.co.uk/archives/2016/11/26/should-i-try-to-use-the-ie-implementation-of-css-grid-layout/)（英語）

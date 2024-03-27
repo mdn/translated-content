@@ -110,14 +110,11 @@ Algumas pessoas que usam leitores de tela que desativam deliberadamente o anúnc
 
 ## Especificações
 
-| Especificação                                                                   | Estado                   | Comentário |
-| ------------------------------------------------------------------------------- | ------------------------ | ---------- |
-| {{SpecName('HTML WHATWG','semantics.html#the-s-element','s element')}}          | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C','text-level-semantics.html#the-s-element','s element')}} | {{Spec2('HTML5 W3C')}}   |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.s")}}
+{{Compat}}
 
 ## Veja mais
 

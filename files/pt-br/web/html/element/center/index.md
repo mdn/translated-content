@@ -48,7 +48,7 @@ Aplicar {{Cssxref("text-align")}}`:center` a um elemento {{HTMLElement("div")}} 
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.center")}}
+{{Compat}}
 
 Apesar de obsoleto, o elemento é aceito em todos os navegadores do mercado.
 

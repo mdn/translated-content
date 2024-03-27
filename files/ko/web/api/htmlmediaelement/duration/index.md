@@ -8,7 +8,7 @@ l10n:
 {{APIRef("HTML DOM")}}
 
 "읽기 전용" {{domxref("HTMLMediaElement")}} 속성
-**`duration`**은 요소의 미디어 길이를 초 단위로 나타냅니다.
+**`duration`** 은 요소의 미디어 길이를 초 단위로 나타냅니다.
 
 ## 값
 

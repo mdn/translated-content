@@ -72,13 +72,13 @@ Una **página web** es un simple documento que puede ser mostrado por un {{Gloss
 
 Todas las páginas web disponibles en la red son accesibles mediante una dirección única. Para acceder a una página, simplemente escribe su direcciones en la barra de búsqueda de tu navegador:
 
-![Example of a web page address in the browser address bar](web-page.jpg)
+![Ejemplo de dirección de una página web en la barra de direcciones del navegador](web-page.jpg)
 
 Un _sitio web_ es una colección de páginas web vinculadas (más sus recursos asociados) que comparten un único nombre de dominio. Cada página web de un sitio web determinado proporciona enlaces explícitos —habitualmente en forma de porciones del texto en que se puede hacer clic— que permiten al usuario moverse de una página del sitio a otra.
 
 Para acceder a un sitio web, escribe su nombre de dominio en la barra de direcciones de tu buscador, y él te mostrará la página principal del sitio web, o _homepage_ (informalmente denominada "el home"):
 
-![Example of a web site domain name in the browser address bar](web-site.jpg)
+![Ejemplo de nombre de dominio de un sitio web en la barra de direcciones del navegador](web-site.jpg)
 
 _Página web_ y _sitio web_ son especialmente fáciles de confundir cuando un _sitio_ contiene una única _página web_ Tales sitios son denominados _sitios de una sola página._
 
@@ -98,7 +98,7 @@ Muchos principiantes en la web confunden motores de búsqueda con navegadores. A
 
 Aquí hay una instancia de Firefox que muestra un cuadro de búsqueda de Google como su página de inicio predeterminada:
 
-![Example of Firefox nightly displaying a custom Google page as default](search-engine.jpg)
+![Ejemplo de Firefox Nightly mostrando una página personalizada de Google como predeterminada](search-engine.jpg)
 
 ## Próximos pasos
 

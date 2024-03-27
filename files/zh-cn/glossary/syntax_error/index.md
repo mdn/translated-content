@@ -9,7 +9,7 @@ slug: Glossary/Syntax_error
 
 例如，如果在定义一个 {{Glossary("JavaScript")}} 函数时遗漏了闭合花括号 (`}`)，则触发了一个语法错误。浏览器的开发者工具会在控制台输出 {{Glossary("JavaScript")}} 和 {{Glossary("CSS")}} 语法错误。
 
-## 更多
+## 参见
 
 ### 基础知识
 

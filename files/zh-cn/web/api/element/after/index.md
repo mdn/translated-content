@@ -75,7 +75,7 @@ console.log(container.outerHTML);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{domxref("Element.before()")}}
 - {{domxref("Element.append()")}}

@@ -34,7 +34,7 @@ foo.substring(1); // ReferenceError: foo is not defined
 "foo" と言う変数はどこにも宣言されていません。これは文字列である必要があり、それならば {{jsxref("String.prototype.substring()")}} メソッドが動作します。
 
 ```js example-good
-var foo = 'bar';
+var foo = "bar";
 foo.substring(1); // "ar"
 ```
 
@@ -45,7 +45,7 @@ foo.substring(1); // "ar"
 ```js example-bad
 function numbers() {
   var num1 = 2,
-      num2 = 3;
+    num2 = 3;
   return num1 + num2;
 }
 
@@ -56,7 +56,7 @@ console.log(num1); // ReferenceError num1 is not defined.
 
 ```js example-good
 var num1 = 2,
-    num2 = 3;
+  num2 = 3;
 
 function numbers() {
   return num1 + num2;

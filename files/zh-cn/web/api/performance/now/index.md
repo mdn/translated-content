@@ -59,9 +59,9 @@ performance.now();
 // ...
 ```
 
-在 Firefox 中，您还可以启用 `privacy.resistFingerprinting` 这将精度改为 100ms 或`privacy.resistFingerprinting.reduceTimerPrecision.microseconds` 的值，以较大者为准。
+在 Firefox 中，你还可以启用 `privacy.resistFingerprinting` 这将精度改为 100ms 或`privacy.resistFingerprinting.reduceTimerPrecision.microseconds` 的值，以较大者为准。
 
-从 Firefox 79 开始，如果您使用{{HTTPHeader("Cross-Origin-Opener-Policy")}}和{{HTTPHeader("Cross-Origin-Embedder-Policy")}}头来跨源隔离您的文档，就可以使用高分辨率定时器。
+从 Firefox 79 开始，如果你使用{{HTTPHeader("Cross-Origin-Opener-Policy")}}和{{HTTPHeader("Cross-Origin-Embedder-Policy")}}头来跨源隔离你的文档，就可以使用高分辨率定时器。
 
 ```
 Cross-Origin-Opener-Policy: same-origin

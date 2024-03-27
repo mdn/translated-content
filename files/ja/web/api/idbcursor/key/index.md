@@ -23,23 +23,23 @@ l10n:
 
 ```js
 function displayData() {
-  const transaction = db.transaction(['rushAlbumList'], "readonly");
-  const objectStore = transaction.objectStore('rushAlbumList');
+  const transaction = db.transaction(["rushAlbumList"], "readonly");
+  const objectStore = transaction.objectStore("rushAlbumList");
 
   objectStore.openCursor().onsuccess = (event) => {
     const cursor = event.target.result;
     if (cursor) {
-      const listItem = document.createElement('li');
+      const listItem = document.createElement("li");
       listItem.textContent = `${cursor.value.albumTitle}, ${cursor.value.year}`;
       list.appendChild(listItem);
 
       console.log(cursor.key);
       cursor.continue();
     } else {
-      console.log('全エントリーを表示しました。');
+      console.log("全エントリーを表示しました。");
     }
   };
-};
+}
 ```
 
 ## 仕様書

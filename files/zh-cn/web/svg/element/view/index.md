@@ -29,4 +29,4 @@ slug: Web/SVG/Element/view
 
 ## DOM 接口
 
-该元素实现了[`SVGViewElement`](/zh-CN/DOM/SVGViewElement)接口。
+该元素实现了 [`SVGViewElement`](/zh-CN/DOM/SVGViewElement) 接口。

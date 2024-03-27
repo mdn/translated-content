@@ -105,7 +105,7 @@ value2
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Content-Disposition")}}
+{{Compat}}
 
 ## Notas de compatibilidade
 

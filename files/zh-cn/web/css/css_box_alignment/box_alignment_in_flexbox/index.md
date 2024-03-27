@@ -15,9 +15,9 @@ slug: Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox
 
 ## 轴 与 flex-direction
 
-Flexbox 与文档的写入模式有关，因此如果您使用英语并将{{cssxref("justify-content")}}设置为 flex-end，则会将项目对齐到 Flex 容器的末尾。如果您将{{cssxref("flex-direction")}}设置为行，则此对齐将处于内联方向。
+Flexbox 与文档的写入模式有关，因此如果你使用英语并将{{cssxref("justify-content")}}设置为 flex-end，则会将项目对齐到 Flex 容器的末尾。如果你将{{cssxref("flex-direction")}}设置为行，则此对齐将处于内联方向。
 
-但是，在 Flexbox 中，您可以通过将 flex-direction 设置为 column 来更改主轴。在这种情况下，justify-content 将在块方向上对齐项目。因此，在 Flexbox 中工作时最容易考虑主轴和纵轴，如下所示：
+但是，在 Flexbox 中，你可以通过将 flex-direction 设置为 column 来更改主轴。在这种情况下，justify-content 将在块方向上对齐项目。因此，在 Flexbox 中工作时最容易考虑主轴和纵轴，如下所示：
 
 - 主轴由`flex-direction`设置方向，通过`justify-content` 属性对齐
 - 纵轴穿过主轴，通过`align-content`，`align-self` / `align-items`对齐

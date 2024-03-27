@@ -66,7 +66,7 @@ slug: Web/HTML/Element/dd
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
-- {{htmlattrdef("nowrap")}} {{Non-standard_inline}}
+- `nowrap` {{Non-standard_inline}}
   - : 값이 `yes`면 너비의 끝에서 정의 텍스트의 줄이 바뀌지 않습니다. 기본값은 `no`입니다.
 
 ## 예제

@@ -19,7 +19,7 @@ l10n:
 ## 構文
 
 ```js
-unescape(str)
+unescape(str);
 ```
 
 ### 引数
@@ -40,9 +40,9 @@ unescape(str)
 ### unescape の使用
 
 ```js
-unescape('abc123');     // "abc123"
-unescape('%E4%F6%FC');  // "äöü"
-unescape('%u0107');     // "ć"
+unescape("abc123"); // "abc123"
+unescape("%E4%F6%FC"); // "äöü"
+unescape("%u0107"); // "ć"
 ```
 
 ## 仕様書

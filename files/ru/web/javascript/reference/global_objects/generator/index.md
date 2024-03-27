@@ -56,7 +56,7 @@ console.log(gen.next().value); // 2
 
 {{Specifications}}
 
-## Совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

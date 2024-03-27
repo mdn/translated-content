@@ -10,7 +10,7 @@ slug: Web/API/ShadowRoot/pictureInPictureElement
 ## 構文
 
 ```js
-shadowRoot.pictureInPictureElement
+shadowRoot.pictureInPictureElement;
 ```
 
 ### 値
@@ -20,7 +20,7 @@ shadowRoot.pictureInPictureElement
 ## 例
 
 ```js
-let customElem = document.querySelector('my-shadow-dom-element');
+let customElem = document.querySelector("my-shadow-dom-element");
 let shadow = customElem.shadowRoot;
 let pipElem = shadow.pictureInPictureElement;
 ```

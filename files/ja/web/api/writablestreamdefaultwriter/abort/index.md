@@ -1,8 +1,9 @@
 ---
-title: WritableStreamDefaultWriter.abort()
+title: "WritableStreamDefaultWriter: abort() メソッド"
+short-title: abort()
 slug: Web/API/WritableStreamDefaultWriter/abort
 l10n:
-  sourceCommit: 87a9f73c410c9b9e91300695c8aa4931367243fb
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("Streams")}}
@@ -35,17 +36,20 @@ abort(reason)
 ## 例
 
 ```js
-const writableStream = new WritableStream({
-  write(chunk) {
-    // ...
+const writableStream = new WritableStream(
+  {
+    write(chunk) {
+      // ...
+    },
+    close() {
+      // ...
+    },
+    abort(err) {
+      // ...
+    },
   },
-  close() {
-    // ...
-  },
-  abort(err) {
-    // ...
-  }
-}, queuingStrategy);
+  queuingStrategy,
+);
 
 // ...
 
@@ -56,7 +60,7 @@ const writer = writableStream.getWriter();
 // 必要に応じてストリームを中止します
 writer.abort.then((reason) => {
   console.log(reason);
-})
+});
 ```
 
 ## 仕様書

@@ -140,7 +140,7 @@ console.log(dateString);
 
 ## Совместимость с браузерами
 
-{{Compat("javascript.builtins.Intl.DateTimeFormat.formatToParts")}}
+{{Compat}}
 
 ## Смотрите также
 

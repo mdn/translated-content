@@ -13,7 +13,7 @@ slug: Web/CSS/:-moz-locale-dir_rtl
 
 ## 構文
 
-```css
+```css-nolint
 :-moz-locale-dir(rtl) {}
 ```
 

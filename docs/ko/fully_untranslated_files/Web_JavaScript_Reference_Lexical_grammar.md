@@ -80,7 +80,7 @@ slug: Web/JavaScript/Reference/Lexical_grammar
 
 ## 개행 문자
 
-공백문자와 더불어, 개행 문자는 소스 본문의 가독성을 향상시킵니다. 하지만, 몇몇 상황에서 개행 문자는 코드 내부에 숨겨지기 때문에 자바스크립트 코드 실행에 영향을 미칩니다. 개행 문자는 자동 새미콜론 삽입([automatic semicolon insertion](#Automatic_semicolon_insertion)) 규칙에도 영향을 줍니다. 개행 문자는 표준 표현방식([regular expressions](/ko/docs/Web/JavaScript/Guide/Regular_Expressions))의 클래스인 \s로 매치됩니다.
+공백문자와 더불어, 개행 문자는 소스 본문의 가독성을 향상시킵니다. 하지만, 몇몇 상황에서 개행 문자는 코드 내부에 숨겨지기 때문에 JavaScript 코드 실행에 영향을 미칩니다. 개행 문자는 자동 새미콜론 삽입([automatic semicolon insertion](#Automatic_semicolon_insertion)) 규칙에도 영향을 줍니다. 개행 문자는 표준 표현방식([regular expressions](/ko/docs/Web/JavaScript/Guide/Regular_Expressions))의 클래스인 \s로 매치됩니다.
 
 아래의 유니코드 문자만이 ECMAScript에서 라인 종결자로 다뤄지며, 라인을 바꾸는 다른 문자들은 공백으로 생각하시면 됩니다(예를 들어, Next Line, NEL, U+0085는 공백으로 간주).
 
@@ -93,15 +93,15 @@ slug: Web/JavaScript/Reference/Lexical_grammar
 
 ## 주석
 
-주석은 힌트, 필기, 제안이나 주의할 점들을 자바스크립트 코드에 넣을 때 사용합니다. 이는 더 쉽게 읽고 이해할 수 있게 도와줍니다. 또한 특정 코드가 실행되지 않도록 막아주기도 합니다. 따라서 주석은 유용한 디버깅 도구라고도 할 수 있습니다.
+주석은 힌트, 필기, 제안이나 주의할 점들을 JavaScript 코드에 넣을 때 사용합니다. 이는 더 쉽게 읽고 이해할 수 있게 도와줍니다. 또한 특정 코드가 실행되지 않도록 막아주기도 합니다. 따라서 주석은 유용한 디버깅 도구라고도 할 수 있습니다.
 
-자바스크립트에는 코드 속에 주석을 쓰는 두 가지 방식이 있습니다.
+JavaScript에는 코드 속에 주석을 쓰는 두 가지 방식이 있습니다.
 
 첫 번째, '//'로 첨언하기입니다. 이는 아래의 예시처럼 같은 줄에 있는 모든 코드를 주석으로 바꿉니다.
 
 ```js
 function comment() {
-  // 자바스크립트의 각주 한 줄입니다.
+  // JavaScript의 각주 한 줄입니다.
   console.log("Hello world!");
 }
 comment();
@@ -113,7 +113,7 @@ comment();
 
 ```js
 function comment() {
-  /* 자바스크립트 각주 한 줄입니다. */
+  /* JavaScript 각주 한 줄입니다. */
   console.log("Hello world!");
 }
 comment();

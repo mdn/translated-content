@@ -3,7 +3,7 @@ title: notifications.onClicked
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/onClicked
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Lancé lorsque l'utilisateur clique sur une notification, mais pas sur l'un des boutons de la notification (pour cela, voir {{WebExtAPIRef("notifications.onButtonClicked")}}).
 

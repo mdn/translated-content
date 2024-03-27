@@ -281,7 +281,7 @@ While iframes work by default, "sandboxed" iframes block Pointer lock. The abili
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

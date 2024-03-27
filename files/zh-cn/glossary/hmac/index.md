@@ -9,12 +9,7 @@ HMAC（密钥散列消息认证码）是一个被用于{{Glossary("cryptography"
 
 HMAC 通常用于确保完整性和身份验证。
 
-## 了解更多
-
-### 基础知识
+## 参见
 
 - 维基百科上的 [HMAC](https://zh.wikipedia.org/wiki/密钥散列消息认证码)
-
-### 技术参考
-
 - IETF 的 [RFC 2104](https://www.ietf.org/rfc/rfc2104.txt)

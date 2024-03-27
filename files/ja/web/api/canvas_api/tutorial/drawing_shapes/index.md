@@ -44,9 +44,9 @@ slug: Web/API/Canvas_API/Tutorial/Drawing_shapes
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
+  var canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
+    var ctx = canvas.getContext("2d");
 
     ctx.fillRect(25, 25, 100, 100);
     ctx.clearRect(45, 45, 60, 60);
@@ -110,9 +110,9 @@ function draw() {
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
+  var canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
+    var ctx = canvas.getContext("2d");
 
     ctx.beginPath();
     ctx.moveTo(75, 50);
@@ -140,26 +140,26 @@ function draw() {
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
+  var canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-     var ctx = canvas.getContext('2d');
+    var ctx = canvas.getContext("2d");
 
     ctx.beginPath();
     ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // 外の円
     ctx.moveTo(110, 75);
-    ctx.arc(75, 75, 35, 0, Math.PI, false);  // 口 (時計回り)
+    ctx.arc(75, 75, 35, 0, Math.PI, false); // 口 (時計回り)
     ctx.moveTo(65, 65);
-    ctx.arc(60, 65, 5, 0, Math.PI * 2, true);  // 左目
+    ctx.arc(60, 65, 5, 0, Math.PI * 2, true); // 左目
     ctx.moveTo(95, 65);
-    ctx.arc(90, 65, 5, 0, Math.PI * 2, true);  // 右目
+    ctx.arc(90, 65, 5, 0, Math.PI * 2, true); // 右目
     ctx.stroke();
   }
 }
@@ -194,9 +194,9 @@ function draw() {
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
+  var canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
+    var ctx = canvas.getContext("2d");
 
     // 塗りつぶした三角形
     ctx.beginPath();
@@ -255,9 +255,9 @@ function draw() {
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
+  var canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
+    var ctx = canvas.getContext("2d");
 
     for (var i = 0; i < 4; i++) {
       for (var j = 0; j < 3; j++) {
@@ -308,17 +308,17 @@ function draw() {
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
+  var canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
+    var ctx = canvas.getContext("2d");
 
     // 二次曲線の例
     ctx.beginPath();
@@ -342,17 +342,17 @@ function draw() {
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
+  var canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
+    var ctx = canvas.getContext("2d");
 
     // 三次ベジェ曲線の例
     ctx.beginPath();
@@ -393,9 +393,9 @@ function draw() {
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
+  var canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
+    var ctx = canvas.getContext("2d");
 
     roundedRect(ctx, 12, 12, 150, 150, 15);
     roundedRect(ctx, 19, 19, 150, 150, 9);
@@ -435,7 +435,7 @@ function draw() {
     ctx.lineTo(83, 116);
     ctx.fill();
 
-    ctx.fillStyle = 'white';
+    ctx.fillStyle = "white";
     ctx.beginPath();
     ctx.moveTo(91, 96);
     ctx.bezierCurveTo(88, 96, 87, 99, 87, 101);
@@ -449,7 +449,7 @@ function draw() {
     ctx.bezierCurveTo(107, 99, 106, 96, 103, 96);
     ctx.fill();
 
-    ctx.fillStyle = 'black';
+    ctx.fillStyle = "black";
     ctx.beginPath();
     ctx.arc(101, 102, 2, 0, Math.PI * 2, true);
     ctx.fill();
@@ -489,9 +489,9 @@ function roundedRect(ctx, x, y, width, height, radius) {
   - : **`Path2D()`** コンストラクターは、新たにインスタンス化した `Path2D` オブジェクトを返します。任意で引数として別のパス、あるいは [SVG パス](/ja/docs/Web/SVG/Tutorial/Paths)データを構成する文字列を指定できます（コピーを作成）。
 
 ```js
-new Path2D();     // 空のパスオブジェクトを作成する
+new Path2D(); // 空のパスオブジェクトを作成する
 new Path2D(path); // 別の Path2D オブジェクトを複製する
-new Path2D(d);    // SVG パスデータからパスを作成する
+new Path2D(d); // SVG パスデータからパスを作成する
 ```
 
 これまで見てきたすべての[パスメソッド](/ja/docs/Web/API/CanvasRenderingContext2D#paths)、`moveTo`、`rect`、`arc`、`quadraticCurveTo` などを、 `Path2D` オブジェクトで使用することができます。
@@ -507,17 +507,17 @@ new Path2D(d);    // SVG パスデータからパスを作成する
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="130" height="100"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="130" height="100"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
+  var canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
+    var ctx = canvas.getContext("2d");
 
     var rectangle = new Path2D();
     rectangle.rect(10, 10, 50, 50);
@@ -540,7 +540,7 @@ function draw() {
 このパスはある点に移動して (`M10 10`) 、そこから右へ水平に 80 ポイント移動 (`h 80`)、下へ 80 ポイント移動 (`v 80`) 、 80 ポイント 左へ移動 (`h -80`) 、そして始点へ戻ります (`z`)。この例は [`Path2D` コンストラクター](/ja/docs/Web/API/Path2D/Path2D#using_svg_paths)のページで確認できます。
 
 ```js
-var p = new Path2D('M10 10 h 80 v 80 h -80 Z');
+var p = new Path2D("M10 10 h 80 v 80 h -80 Z");
 ```
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}

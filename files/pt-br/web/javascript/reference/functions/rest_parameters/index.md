@@ -98,13 +98,11 @@ a fim de usar o objeto `arguments`, você precisará converte-lo para um array a
 
 ## Especificações
 
-| Especificações                                                           | Status           | Comentário          |
-| ------------------------------------------------------------------------ | ---------------- | ------------------- |
-| {{SpecName('ES6', '#sec-function-definitions', 'Function Definitions')}} | {{Spec2('ES6')}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilidade
 
-{{Compat("javascript.functions.rest_parameters")}}
+{{Compat}}
 
 ## Veja também
 

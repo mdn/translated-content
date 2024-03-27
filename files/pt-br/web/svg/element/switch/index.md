@@ -38,4 +38,4 @@ Este elemento implementa a interface do [`SVGSwitchElement`](/pt-BR/docs/Web/DOM
 
 ## Compatibilidade com navegadores
 
-{{Compat("svg.elements.switch")}}
+{{Compat}}

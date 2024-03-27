@@ -1,5 +1,5 @@
 ---
-title: '-moz-outline-radius-topleft'
+title: "-moz-outline-radius-topleft"
 slug: conflicting/Web/CSS/outline_cb050209a619bd4beea569386863d484
 original_slug: Web/CSS/-moz-outline-radius-topleft
 ---

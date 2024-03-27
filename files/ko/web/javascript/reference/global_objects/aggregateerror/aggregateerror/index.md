@@ -1,7 +1,7 @@
 ---
 title: AggregateError() constructor
 slug: Web/JavaScript/Reference/Global_Objects/AggregateError/AggregateError
-i10n:
+l10n:
   sourceCommit: 6a0f9553932823cd0c4dcf695d4b4813474964fb
 ---
 

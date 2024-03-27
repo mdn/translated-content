@@ -5,6 +5,8 @@ l10n:
   sourceCommit: 04e75ce1f83a591a576f52b143f195133bfcbe96
 ---
 
+{{GlossarySidebar}}
+
 **Base64** とは、[バイナリーからテキストへの符号化](https://en.wikipedia.org/wiki/Binary-to-text_encoding)を行う手法のグループであり、バイナリーデータを 64 を基数とする表現に変換することで、 ASCII 文字列で表すことができます。_Base64_ という呼び方は、 [MIME の Content-Transfer-Encoding](https://ja.wikipedia.org/wiki/MIME#Content-Transfer-Encoding) における特定の符号化方式の名前に由来します。
 
 Base64 符号化方式がよく使われるのは、テキストデータを扱うよう設計されたメディア上で、バイナリーデータを格納または転送する必要がある場合です。Base64 符号化により、転送中に変換されることなく、バイナリーデータがそのままであることを保証できます。Base64 は、[MIME](https://ja.wikipedia.org/wiki/MIME) による電子メールや [XML](/ja/docs/Web/XML) における複合型データの格納など、多くのアプリケーションで幅広く使われています。
@@ -82,14 +84,14 @@ function b64ToUint6(nChr) {
   return nChr > 64 && nChr < 91
     ? nChr - 65
     : nChr > 96 && nChr < 123
-    ? nChr - 71
-    : nChr > 47 && nChr < 58
-    ? nChr + 4
-    : nChr === 43
-    ? 62
-    : nChr === 47
-    ? 63
-    : 0;
+      ? nChr - 71
+      : nChr > 47 && nChr < 58
+        ? nChr + 4
+        : nChr === 43
+          ? 62
+          : nChr === 47
+            ? 63
+            : 0;
 }
 
 function base64DecToArr(sBase64, nBlocksSize) {
@@ -126,14 +128,14 @@ function uint6ToB64(nUint6) {
   return nUint6 < 26
     ? nUint6 + 65
     : nUint6 < 52
-    ? nUint6 + 71
-    : nUint6 < 62
-    ? nUint6 - 4
-    : nUint6 === 62
-    ? 43
-    : nUint6 === 63
-    ? 47
-    : 65;
+      ? nUint6 + 71
+      : nUint6 < 62
+        ? nUint6 - 4
+        : nUint6 === 62
+          ? 43
+          : nUint6 === 63
+            ? 47
+            : 65;
 }
 
 function base64EncArr(aBytes) {
@@ -184,27 +186,27 @@ function UTF8ArrToStr(aBytes) {
             aBytes[++nIdx] -
             128
         : nPart > 247 && nPart < 252 && nIdx + 4 < nLen /* five bytes */
-        ? ((nPart - 248) << 24) +
-          ((aBytes[++nIdx] - 128) << 18) +
-          ((aBytes[++nIdx] - 128) << 12) +
-          ((aBytes[++nIdx] - 128) << 6) +
-          aBytes[++nIdx] -
-          128
-        : nPart > 239 && nPart < 248 && nIdx + 3 < nLen /* four bytes */
-        ? ((nPart - 240) << 18) +
-          ((aBytes[++nIdx] - 128) << 12) +
-          ((aBytes[++nIdx] - 128) << 6) +
-          aBytes[++nIdx] -
-          128
-        : nPart > 223 && nPart < 240 && nIdx + 2 < nLen /* three bytes */
-        ? ((nPart - 224) << 12) +
-          ((aBytes[++nIdx] - 128) << 6) +
-          aBytes[++nIdx] -
-          128
-        : nPart > 191 && nPart < 224 && nIdx + 1 < nLen /* two bytes */
-        ? ((nPart - 192) << 6) + aBytes[++nIdx] - 128
-        : /* nPart < 127 ? */ /* one byte */
-          nPart,
+          ? ((nPart - 248) << 24) +
+            ((aBytes[++nIdx] - 128) << 18) +
+            ((aBytes[++nIdx] - 128) << 12) +
+            ((aBytes[++nIdx] - 128) << 6) +
+            aBytes[++nIdx] -
+            128
+          : nPart > 239 && nPart < 248 && nIdx + 3 < nLen /* four bytes */
+            ? ((nPart - 240) << 18) +
+              ((aBytes[++nIdx] - 128) << 12) +
+              ((aBytes[++nIdx] - 128) << 6) +
+              aBytes[++nIdx] -
+              128
+            : nPart > 223 && nPart < 240 && nIdx + 2 < nLen /* three bytes */
+              ? ((nPart - 224) << 12) +
+                ((aBytes[++nIdx] - 128) << 6) +
+                aBytes[++nIdx] -
+                128
+              : nPart > 191 && nPart < 224 && nIdx + 1 < nLen /* two bytes */
+                ? ((nPart - 192) << 6) + aBytes[++nIdx] - 128
+                : /* nPart < 127 ? */ /* one byte */
+                  nPart,
     );
   }
   return sView;
@@ -228,14 +230,14 @@ function strToUTF8Arr(sDOMStr) {
       nChr < 0x80
         ? 1
         : nChr < 0x800
-        ? 2
-        : nChr < 0x10000
-        ? 3
-        : nChr < 0x200000
-        ? 4
-        : nChr < 0x4000000
-        ? 5
-        : 6;
+          ? 2
+          : nChr < 0x10000
+            ? 3
+            : nChr < 0x200000
+              ? 4
+              : nChr < 0x4000000
+                ? 5
+                : 6;
   }
 
   aBytes = new Uint8Array(nArrLen);

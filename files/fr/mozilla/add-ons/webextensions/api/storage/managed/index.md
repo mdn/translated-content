@@ -3,7 +3,7 @@ title: storage.managed
 slug: Mozilla/Add-ons/WebExtensions/API/storage/managed
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Un objet {{WebExtAPIRef("storage.StorageArea")}} qui représente la zone de stockage gérée. Les éléments de stockage `géré` sont définis par l'administrateur du domaine ou d'autres applications natives installées sur l'ordinateur de l'utilisateur et sont en lecture seule pour l'extension. Essayer de modifier cette zone de stockage entraîne une erreur.
 

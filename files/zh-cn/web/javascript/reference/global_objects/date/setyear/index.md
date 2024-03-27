@@ -48,7 +48,7 @@ theBigDay.setYear(2000);
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.getFullYear()")}}
 - {{jsxref("Date.prototype.getUTCFullYear()")}}

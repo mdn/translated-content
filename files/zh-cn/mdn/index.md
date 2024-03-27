@@ -11,7 +11,7 @@ slug: MDN
 
 同时，我们邀请所有人来提供帮助！MDN Web 文档是一个开源的项目，并接受来自社区的贡献。这里有许多从简单（校对和纠正拼写错误）到复杂（撰写 API 文档）的任务，你可以通过这些任务为我们提供帮助。
 
-如果要了解如何提供帮助，请访问我们的[入门](/zh-CN/docs/MDN/Contribute)页面。如果你想与我们交谈并提出问题，请加入 [Matrix](https://wiki.mozilla.org/Matrix) 上的 [MDN Web 文档聊天室](https://chat.mozilla.org/#/room/#mdn:mozilla.org)进行讨论。
+如果要了解如何提供帮助，请访问我们的[入门](/zh-CN/docs/MDN/Community/Contributing/Getting_started)页面。如果你想与我们交谈并提出问题，请加入 [Matrix](https://wiki.mozilla.org/Matrix) 上的 [MDN Web 文档聊天室](https://chat.mozilla.org/#/room/#mdn:mozilla.org)进行讨论。
 
 - [社区准则](/zh-CN/docs/MDN/Community)
 

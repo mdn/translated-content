@@ -39,5 +39,5 @@ pc.onaddstream = function (ev) {
 
 ## 参见
 
-- [WebRTC](/zh-CN/docs/Web/Guide/API/WebRTC)
-- Its usual target: {{domxref("RTCPeerConnection")}}.
+- [WebRTC](/zh-CN/docs/Web/API/WebRTC_API)
+- 它的常见目标：{{domxref("RTCPeerConnection")}}。

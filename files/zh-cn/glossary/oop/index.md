@@ -9,9 +9,7 @@ slug: Glossary/OOP
 
 {{glossary("JavaScript")}} 是高度面向对象的。它遵循基于原型的模型（[与基于类的模型相反](/zh-CN/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#Class-based_vs._prototype-based_languages)）。
 
-## 了解更多
-
-### 常识
+## 参见
 
 - 维基百科：[Object-oriented programming](https://zh.wikipedia.org/wiki/Object-oriented_programming)
 - [JavaScript 面向对象简介](/zh-CN/docs/Learn/JavaScript/Objects)

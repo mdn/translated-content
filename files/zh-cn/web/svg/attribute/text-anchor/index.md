@@ -62,8 +62,6 @@ slug: Web/SVG/Attribute/text-anchor
 </svg>
 ```
 
-**Live sample**
-
 {{ EmbedLiveSample('示例','120','120') }}
 
 ## 元素

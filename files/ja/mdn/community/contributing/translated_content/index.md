@@ -22,8 +22,8 @@ l10n:
 
 ### 中国語 (zh-CN, zh-TW)
 
-- ディスカッション: [Telegram (MozTW L10n channel)](https://moztw.org/community/telegram/), [Telegram (Mozilla China channel)](https://t.me/mozilla_china)
-- 現在の貢献者: [Irvin](https://github.com/irvin), [t7yang](https://github.com/t7yang), [yin1999](https://github.com/yin1999)
+- ディスカッション: [Telegram (`Mozilla China`)](https://t.me/mozilla_china), [Telegram (`MozTW L10n`)](https://moztw.org/community/telegram/)
+- 現在の貢献者: [Irvin](https://github.com/irvin), [t7yang](https://github.com/t7yang), [yin1999](https://github.com/yin1999), [jasonren0403](https://github.com/jasonren0403), [JasonLamv-t](https://github.com/JasonLamv-t)
 
 ### フランス語 (fr)
 
@@ -37,13 +37,13 @@ l10n:
 
 ### 韓国語 (ko)
 
-- ディスカッション: [Kakao Talk (#MDN Korea)](https://open.kakao.com/o/gdfG288c)
-- 現在の貢献者: [hochan222](https://github.com/hochan222), [yechoi42](https://github.com/yechoi42), [cos18](https://github.com/cos18), [GwangYeol-Im](https://github.com/GwangYeol-Im), [pje1740](https://github.com/pje1740), [yujo11](https://github.com/yujo11)
+- ディスカッション: [Discord (`#korean`)](/discord), [Kakao Talk (#MDN Korea)](https://open.kakao.com/o/gdfG288c)
+- 現在の貢献者: [hochan222](https://github.com/hochan222), [yechoi42](https://github.com/yechoi42), [cos18](https://github.com/cos18), [pje1740](https://github.com/pje1740), [wisedog](https://github.com/wisedog), [swimjiy](https://github.com/swimjiy), [jho2301](https://github.com/jho2301), [sunhpark42](https://github.com/sunhpark42), [1ilsang](https://github.com/1ilsang)
 
 ### ロシア語 (ru)
 
 - ディスカッション: [Matrix (#mdn-l10n-ru channel)](https://chat.mozilla.org/#/room/#mdn-l10n-ru:mozilla.org)
-- 現在の貢献者: [yanaklose](https://github.com/yanaklose), [myshov](https://github.com/myshov), [Saionaro](https://github.com/Saionaro), [sashasushko](https://github.com/sashasushko), [lex111](https://github.com/lex111)
+- 現在の貢献者: [leon-win](https://github.com/leon-win), [sashasushko](https://github.com/sashasushko), [Saionaro](https://github.com/Saionaro), [yanaklose](https://github.com/yanaklose), [myshov](https://github.com/myshov), [lex111](https://github.com/lex111)
 
 ### スペイン語 (es)
 

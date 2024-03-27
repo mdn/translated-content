@@ -19,7 +19,7 @@ slug: Web/HTML/Element/input/date
   </tr>
   <tr>
    <td><strong>事件</strong></td>
-   <td>{{domxref("HTMLElement/change_event", "change")}} 事件和 {{domxref("HTMLElement/input_event", "input")}} 事件</td>
+   <td>{{domxref("HTMLElement/change_event", "change")}} 事件和 {{domxref("Element/input_event", "input")}} 事件</td>
   </tr>
   <tr>
    <td><strong>支持的常用属性</strong></td>

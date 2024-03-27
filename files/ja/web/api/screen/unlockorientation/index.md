@@ -14,7 +14,7 @@ slug: Web/API/Screen/unlockOrientation
 ## 構文
 
 ```js
-unlockOrientation()
+unlockOrientation();
 ```
 
 ### 引数
@@ -28,7 +28,11 @@ unlockOrientation()
 ## 例
 
 ```js
-var unlockOrientation = screen.unlockOrientation || screen.mozUnlockOrientation || screen.msUnlockOrientation || (screen.orientation && screen.orientation.unlock);
+var unlockOrientation =
+  screen.unlockOrientation ||
+  screen.mozUnlockOrientation ||
+  screen.msUnlockOrientation ||
+  (screen.orientation && screen.orientation.unlock);
 
 if (unlockOrientation()) {
   // 向きのロックが解除されました
