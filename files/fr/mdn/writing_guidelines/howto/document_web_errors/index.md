@@ -21,7 +21,6 @@ Les erreurs JavaScript contiennent un lien "En savoir plus" qui vous renvoie à 
 - Selon le type d'erreur sur lequel vous souhaitez écrire, vous pouvez examiner de plus près ces pages.
 - Vous pourriez copier le contenu d'une page existante pour commencer votre nouvelle page.
 
-
 ## Étape 3 - Créer la nouvelle page d'erreur
 
 - Toutes les pages d'erreur se trouvent sous cette arborescence : [/docs/Web/JavaScript/Reference/Errors](/fr/docs/Web/JavaScript/Reference/Errors)
