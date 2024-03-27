@@ -1,6 +1,6 @@
 ---
 title: BatteryManager：levelchange 事件
-slug: Web/API/BatteryManager/levelchange
+slug: Web/API/BatteryManager/levelchange_event
 l10n:
   sourceCommit: 8d54a21ae2677dba11569e7b7d918eac828af0b3
 ---
