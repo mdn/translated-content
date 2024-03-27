@@ -14,7 +14,7 @@ slug: Web/HTML/Element/col
 此元素包括[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
 
 - `span`
-  - ：指定 `<col>` 元素橫跨的連續行數。該值必須是大於零的正整數。如果未指定，則其默認值為 `1`。
+  - : 指定 `<col>` 元素橫跨的連續行數。該值必須是大於零的正整數。如果未指定，則其默認值為 `1`。
 
 ### 已棄用的屬性
 
@@ -31,20 +31,14 @@ slug: Web/HTML/Element/col
     > 如果表格使用了 [`colspan`](/zh-TW/docs/Web/HTML/Element/td#colspan) 屬性，則可以通過組合適當的 CSS 屬性選擇器，如 `[colspan=n]` 來達到效果，雖然這不是一個簡單的過程。
 
 - `bgcolor` {{deprecated_inline}}
-
-  - ：定義每個行單元格的背景顏色。該值是一個 HTML 顏色，可以是一個以 '`#`' 為前綴的 [6 位十六進制 RGB 代碼](/zh-TW/docs/Web/CSS/hex-color)，或者是一個 [顏色關鍵字](/zh-TW/docs/Web/CSS/named-color)。不支持其他 CSS {{cssxref("color_value", "&lt;color&gt")}} 值。請改用 {{cssxref("background-color")}} CSS 屬性，因為此屬性已棄用。
-
+  - : 定義每個行單元格的背景顏色。該值是一個 HTML 顏色，可以是一個以 '`#`' 為前綴的 [6 位十六進制 RGB 代碼](/zh-TW/docs/Web/CSS/hex-color)，或者是一個 [顏色關鍵字](/zh-TW/docs/Web/CSS/named-color)。不支持其他 CSS {{cssxref("color_value", "&lt;color&gt")}} 值。請改用 {{cssxref("background-color")}} CSS 屬性，因為此屬性已棄用。
 - `char` {{deprecated_inline}}
-
-  - ：指定每個行單元格的內容對齊到一個字符的方式。當將 [`align`](#align) 未設置為 `char` 時，此屬性將被忽略，但仍將覆蓋其 {{HTMLElement("colgroup")}} 父元素的指定 [`char`](/zh-TW/docs/Web/HTML/Element/colgroup#char)。
-
+  - : 指定每個行單元格的內容對齊到一個字符的方式。當將 [`align`](#align) 未設置為 `char` 時，此屬性將被忽略，但仍將覆蓋其 {{HTMLElement("colgroup")}} 父元素的指定 [`char`](/zh-TW/docs/Web/HTML/Element/colgroup#char)。
 - `charoff` {{deprecated_inline}}
-
-  - ：指定行單元格內容從由 [`char`](#char) 屬性指定的對齊字符的偏移量的字符數。
-
+  - : 指定行單元格內容從由 [`char`](#char) 屬性指定的對齊字符的偏移量的字符數。
 - `valign` {{deprecated_inline}}
 
-  - ：指定每個行單元格的垂直對齊方式。可能的 {{Glossary("enumerated")}} 值包括 `baseline`、`bottom`、`middle` 和 `top`。請注意，此屬性會覆蓋其 {{HTMLElement("colgroup")}} 父元素的指定 [`valign`](/zh-TW/docs/Web/HTML/Element/colgroup#valign)。請改用 {{cssxref("vertical-align")}} CSS 屬性應用於 {{htmlelement("td")}} 和 {{htmlelement("th")}} 元素上，因為此屬性已棄用。
+  - : 指定每個行單元格的垂直對齊方式。可能的 {{Glossary("enumerated")}} 值包括 `baseline`、`bottom`、`middle` 和 `top`。請注意，此屬性會覆蓋其 {{HTMLElement("colgroup")}} 父元素的指定 [`valign`](/zh-TW/docs/Web/HTML/Element/colgroup#valign)。請改用 {{cssxref("vertical-align")}} CSS 屬性應用於 {{htmlelement("td")}} 和 {{htmlelement("th")}} 元素上，因為此屬性已棄用。
 
     > **備註：** 在 `<col>` 元素上設置 `vertical-align` 不起作用，因為 `<col>` 沒有後代元素，因此沒有元素繼承自它。
     >
@@ -54,7 +48,7 @@ slug: Web/HTML/Element/col
 
 - `width` {{deprecated_inline}}
 
-  - ：為每個行指定默認寬度。除了標準像素和百分比值外，此屬性還可以採用特殊形式 `0*`，表示每個跨度的行的寬度應該是足以容納行內容的最小寬度。也可以使用相對寬度，如 `5*`。請注意，此屬性會覆蓋其 {{HTMLElement("colgroup")}} 父元素的指定 [`width`](/zh-TW/docs/Web/HTML/Element/colgroup#width)。請改用 {{cssxref("width")}} CSS 屬性，因為此屬性已棄用。
+  - : 為每個行指定默認寬度。除了標準像素和百分比值外，此屬性還可以採用特殊形式 `0*`，表示每個跨度的行的寬度應該是足以容納行內容的最小寬度。也可以使用相對寬度，如 `5*`。請注意，此屬性會覆蓋其 {{HTMLElement("colgroup")}} 父元素的指定 [`width`](/zh-TW/docs/Web/HTML/Element/colgroup#width)。請改用 {{cssxref("width")}} CSS 屬性，因為此屬性已棄用。
 
 ## 使用注意事項
 
