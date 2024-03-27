@@ -21,7 +21,7 @@ new InputEvent(type, options)
 - `type`
   - : 表示事件名称的字符串。区分大小写，浏览器将其设置为 `beforeinput` 或者 `input`。
 - `options` {{optional_inline}}
-  - : 一个对象，_除了 {{domxref("UIEvent/UIEvent", "UIEvent()")}} 中定义的属性之外_，还具有以下属性:
+  - : 一个对象，_除了 {{domxref("UIEvent/UIEvent", "UIEvent()")}} 中定义的属性之外_，还具有以下属性：
     - `inputType` {{optional_inline}}
       - : 指定可编辑内容更改类型的字符串，例如插入、删除或格式化文本。
     - `data` {{optional_inline}}
