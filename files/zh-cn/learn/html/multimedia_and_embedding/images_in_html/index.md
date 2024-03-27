@@ -2,12 +2,12 @@
 title: HTML 中的图片
 slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 l10n:
-  sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
+  sourceCommit: 26aeffa549ae61cd863afcb8fdcb3ba0e1e33b0c
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
 
-最初，web 仅有文字，非常乏味。幸运的是，不久之后，我们就能在网页中嵌入图片和其他更有趣的内容类型了。尽管有多种多媒体类型，但 {{htmlelement("img")}} 元素比较简单，从它开始更加合适。在这篇文章中，我们将详细介绍如何使用 {{htmlelement("img")}} 元素，包括它的基本属性，如何用 {{htmlelement("figure")}} 元素为它添加标题，它与 {{glossary("CSS")}} 背景图片的关系，以及其他 web 平台上的图形类型。
+最初，web 仅有文字，非常乏味。幸运的是，不久之后，我们就能在网页中嵌入图片和其他更有趣的内容类型了。尽管有多种多媒体类型需要考虑，但是从在网页中嵌入简单图片的 {{htmlelement("img")}} 元素开始更加合理。在这篇文章中，我们将详细介绍如何使用 {{htmlelement("img")}} 元素，包括它的基本属性，如何用 {{htmlelement("figure")}} 元素为它添加标题，它与 {{glossary("CSS")}} 背景图片的关系，以及其他 web 平台上的图形类型。
 
 <table>
 <caption>多媒体和嵌入图片</caption>
@@ -41,9 +41,9 @@ l10n:
 
 要想在网页上放置简单的图像，我们需要使用 {{htmlelement("img")}} 元素。这个元素是{{Glossary("void element", "空元素")}}（即无法包含任何子内容和结束标签），它需要两个属性才能起作用：`src` 和 `alt`。`src` 属性包含一个 URL，该 URL 指向要嵌入页面的图像。`src` 属性可以是相对 URL 或绝对 URL，这与 {{htmlelement("a")}} 元素的 `href` 属性类似。如果没有 `src` 属性，`img` 元素就没有图像可加载。
 
-['alt' 属性的描述如下](#备选文本).
+['alt' 属性的描述如下](#备选文本)。
 
-> **备注：** 为了更容易理解下面的内容，建议你阅读 [URL 和路径简明入门](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#a_quick_primer_on_urls_and_paths)来复习一下相对和绝对 URL 的概念。
+> **备注：** 为了更容易理解下面的内容，建议你阅读 [URL 和路径简明入门](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#统一资源定位符（url）与路径（path）快速入门)来复习一下相对和绝对 URL 的概念。
 
 例如，如果你的图像叫做 `dinosaur.jpg`，并且它位于与 HTML 页面相同的目录中，你可以这样嵌入图像：
 
@@ -69,7 +69,7 @@ l10n:
 
 然而，不建议使用绝对 URL 进行链接。你需要托管你想要在网站上使用的图像，在比较简单的情况下，通常我们会把网站的图像保存在与 HTML 相同的服务器上。此外，从维护的角度来说，使用相对 URL 比绝对 URL 更有效率（当你将网站迁移到不同的域名时，你不需要更新所有 URL，使其包含新域名）。在更高级的设置中，你可能会使用[内容分发网络（CDN）](/zh-CN/docs/Glossary/CDN)来传递图像。
 
-如果这些图像并非由你创建，你应该查看它们发布的许可证条款，确保自己有使用它们的权限（有关更多信息，请参阅下面的[媒体资产和许可证](#media_assets_and_licensing)）。
+如果这些图像并非由你创建，你应该查看它们发布的许可证条款，确保自己有使用它们的权限（有关更多信息，请参阅下面的[媒体资产和许可证](#媒体资产和许可)）。
 
 > **警告：** _未经许可_，*绝不要*将 `src` 属性指向其他网站上的图像。这被称为“热链接（hotlinking）”。大多数人认为这是不道德的，因为这会导致每当有人访问你的页面，都会有另一些不知情的人为图像交付带宽费用。这也导致你无法掌控图像，图像有可能在你不知情的情况下，被删除或替换为尴尬的内容。
 
@@ -79,7 +79,7 @@ l10n:
 
 > **备注：** 像 {{htmlelement("img")}} 和 {{htmlelement("video")}} 这样的元素有时被称为**替换元素（replaced elements）**。这是因为元素的内容和大小由外部资源（如图像或视频文件）定义，而不是由元素本身的内容定义。你可以在[替换元素](/zh-CN/docs/Web/CSS/Replaced_element)中了解更多相关信息。
 
-> **备注：** 你也可以在 [“在 GitHub 上运行”教程](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html)找到本节中的完成示例（请参阅[源代码](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/images-in-html/index.html)）。
+> **备注：** 你也可以在 [GitHub](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html) 仓库中找到本节的完整示例（请参阅[源代码](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/images-in-html/index.html)）。
 
 ### 备选文本
 
@@ -104,16 +104,16 @@ l10n:
 - 这些文字描述可以提供给搜索引擎使用，例如搜索引擎可能会将图片的文字描述和查询条件进行匹配。
 - 用户可能会关闭图片显示以减少数据的传输，这在手机上是十分普遍的，因为在一些国家带宽有限且昂贵。
 
-你到底应该在 `alt` 里写点什么呢？这首先取决于*为什么*这张图片会在这儿，换句话说，如果这张图片没显示出来，会少了什么：
+到底应该在 `alt` 里写点什么呢？这首先取决于*为什么*这张图片会在这儿，换句话说，如果这张图片没显示出来，会少了什么：
 
-- **装饰** 如果图片仅用于装饰，你应该使用 [CSS 背景图片](#css_背景图片)，但如果必须使用 HTML，请添加空的 `alt=""`。如果图片不是内容的一部分，那么屏幕阅读器不应该浪费时间读取它。
+- **装饰**：如果图片仅用于装饰，你应该使用 [CSS 背景图片](#css_背景图片)，但如果必须使用 HTML，请添加空的 `alt=""`。如果图片不是内容的一部分，那么屏幕阅读器不应该浪费时间读取它。
 - **内容**：如果你的图片提供了重要的信息，就要在 `alt` 文本中*简要*的提供相同的信息，甚至更近一步，把这些信息写在主要的文本内容里，这样所有人都能看见。不要写冗余的备选文本（如果在主要文本中将所有的段落都重复两遍，对于没有失明的用户来说多烦啊！），如果在主要文本中已经对图片进行了充分的描述，写 `alt=""` 就好。
 - **链接**：如果你把图片嵌套在 {{htmlelement("a")}} 标签里，来把图片变成链接，那你还必须提供[无障碍的链接文本](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#使用清晰的链接措辞)。在这种情况下，你可以写在同一个 `<a>` 元素里，或者写在图片的 `alt` 属性里，随你喜欢。
-- **文本**：你不应该将文本放到图像里。例如，如果你的主标题需要有阴影，你可以[用 CSS](/zh-CN/docs/Web/CSS/text-shadow) 来达到这个目的，而不是把文本放到图片里。如果真的必须这么做，那就把文本也放到 `alt` 里。
+- **文本**：你不应该将文本放到图像里。例如，如果你的主标题需要有阴影，你可以[用 CSS](/zh-CN/docs/Web/CSS/text-shadow) 来达到这个目的，而不是把文本放到图片里。如果*真的必须这么做*，那就把文本也放到 `alt` 里。
 
 本质上，关键在于即使图片无法被看见，也能提供可用的体验，这确保了所有人都不会错失某部分内容。尝试在浏览器中使图片不可见然后看看网页变成什么样了，你会很快意识到在图片无法显示时备选文本能帮上多大忙。
 
-> **备注：** 想知道更多，可以看我们的[替代文本](/zh-CN/docs/Learn/Accessibility/HTML#替代文本)指南。
+> **备注：** 如需了解更多信息，请参阅我们的[替代文本](/zh-CN/docs/Learn/Accessibility/HTML#替代文本)指南。
 
 ### 宽度和高度
 
@@ -161,7 +161,7 @@ l10n:
 
 ![浏览器加载页面期间和加载完成后，未指定图片大小的页面布局对比。](no-size.png)
 
-这样移动文本对用户来说非常分散注意力，尤其是如果他们已经开始阅读文本的话。
+这样移动文本对用户来说非常分散注意力，尤其是如果他们已经开始阅读文本的情况下。
 
 如果你在 HTML 中使用 `width` 和 `height` 属性来指定图片的实际大小，那么在下载图片之前，浏览器就知道需要为其留出多少空间。
 
@@ -194,7 +194,7 @@ l10n:
 
 ![恐龙图片，上面的提示标题为“曼彻斯特大学博物馆展出的霸王龙”](image-with-title.png)
 
-然而，我们并不推荐它——`title` 有很多无障碍问题，这些问题主要是基于这样一个事实，即屏幕阅读器的支持并不完善，除此之外大多数浏览器都不会显示它，除非你将鼠标悬停在上面（例如：无法使用键盘的用户），如果你对更多的信息感兴趣，请阅读 Scott O'Hara 写的[title 属性的考验与磨难](https://www.24a11y.com/2017/the-trials-and-tribulations-of-the-title-attribute/)。
+然而，我们并不推荐它——`title` 有很多无障碍问题，这些问题主要是基于这样一个事实，即屏幕阅读器的支持并不完善，除此之外大多数浏览器都不会显示它，除非你将鼠标悬停在上面（例如：无法使用键盘的用户），如果你对更多的信息感兴趣，请阅读 Scott O'Hara 写的 [title 属性的考验与磨难](https://www.24a11y.com/2017/the-trials-and-tribulations-of-the-title-attribute/)。
 
 更好的做法是将这样的支持信息包含在主要文章文本中，而不是附加在图片上。
 
@@ -206,7 +206,7 @@ l10n:
 https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg
 ```
 
-早些时候我们说过不要链接到其他服务器上的图片，但这张图片只是为了学习目的，所以这一次不用太担心。
+早些时候我们说过不要热链接到其他服务器上的图片，但这张图片只是为了学习目的，所以这一次不用太担心。
 
 我们还希望你可以：
 
@@ -214,7 +214,7 @@ https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-e
 - 正确设置图片的 `width` 和 `height` 属性（提示：宽为 200px，高为 171px），然后再改变宽和高的值，看看会有什么影响。
 - 在图片上设置 `title` 属性。
 
-如果你遇到了错误，你可以按 _reset_ 按钮来重置。如果你遇到了困难无法完成，按下 _Show solution_ 按钮来看一下答案。
+如果你遇到了错误，你可以按*重置*按钮来重置。如果你遇到了困难无法完成，按下*显示答案*按钮来看一下答案。
 
 ```html hidden
 <h2>实时输出</h2>
@@ -329,7 +329,7 @@ function insertAtCaret(text) {
 
 textarea.onkeyup = function () {
   // 我们只希望在显示用户代码时保存状态，
-  // 而不保存解决方案，以防止解决方案覆盖用户代码
+  // 而不保存答案，以防止答案覆盖用户代码
   if (solution.value === "显示答案") {
     userEntry = textarea.value;
   } else {
@@ -362,7 +362,7 @@ textarea.onkeyup = function () {
 
 #### 自由许可
 
-如果图像是根据自由许可发布的，例如 [MIT](https://mit-license.org/)、[BSD](https://opensource.org/license/BSD-3-clause/) 或适当的[创作共用（CC）许可](https://creativecommons.org/choose/)，你无需支付许可费用或寻求许可即可使用它。但是，你仍需履行各种许可条件，这些条件因许可而异。
+如果图像是根据自由许可发布的，例如 [MIT](https://mit-license.org/)、[BSD](https://opensource.org/license/BSD-3-clause/) 或适当的[知识共享（CC）许可](https://creativecommons.org/choose/)，你无需支付许可费用或寻求许可即可使用它。但是，你仍需履行各种许可条件，这些条件因许可而异。
 
 例如，你可能需要：
 
@@ -450,9 +450,9 @@ figure 可以是几张图片、一段代码、音视频、方程、表格或类�
 在这个动手练习的部分中，我们希望你把上一个动手练习完成的代码拿过来，把它转换为一个 figure:
 
 1. 把之前的代码放入 {{htmlelement("figure")}} 元素中。
-2. 将 `title` 属性的文本复制出来，移除 `title` 元素，然后把文字放入 {{htmlelement("figcaption")}} 元素中，这个元素在 {{htmlelement("img")}} 的下面。
+2. 将 `title` 属性的文本复制出来，移除 `title` 属性，然后把文字放入 {{htmlelement("figcaption")}} 元素中，这个元素在 {{htmlelement("img")}} 的下面。
 
-如果你遇到了错误，可以按 _reset_ 按钮来重置。如果你遇到了困难无法完成，按下 _Show solution_ 按钮来看一下答案。
+如果你遇到了错误，可以按*重置*按钮来重置。如果你遇到了困难无法完成，按下*显示答案*按钮来看一下答案。
 
 ```html hidden
 <h2>实时输出</h2>
@@ -568,7 +568,7 @@ function insertAtCaret(text) {
 
 textarea.onkeyup = () => {
   // 我们只希望在显示用户代码时保存状态，
-  // 而不保存解决方案，以防止解决方案覆盖用户代码
+  // 而不保存答案，以防止答案覆盖用户代码
   if (solution.value === "显示答案") {
     userEntry = textarea.value;
   } else {
@@ -583,7 +583,7 @@ textarea.onkeyup = () => {
 
 ## CSS 背景图片
 
-你也可以使用 CSS 把图片嵌入网站中（JavaScript 也行，不过那是另外一个故事了）。CSS 属性 {{cssxref("background-image")}} 和其他的 `background-*` 属性是用来控制背景图片的。比如，要想为页面中的每个段落设置一个背景图片，你可以这样做：
+你也可以使用 CSS 把图片嵌入网站中（JavaScript 也行，不过那是另外一回事了）。CSS 属性 {{cssxref("background-image")}} 和其他的 `background-*` 属性是用来控制背景图片的。比如，要想为页面中的每个段落设置一个背景图片，你可以这样做：
 
 ```css
 p {
@@ -593,11 +593,11 @@ p {
 
 按理说，这种做法相对于 HTML 中插入图片的做法，可以更好地控制图片和设置图片的位置，那么为什么我们还要使用 HTML 图片呢？如上所述，CSS 背景图片只是为了装饰——如果你只是想要在你的页面上添加一些漂亮的东西，来提升视觉效果，那 CSS 的做法是可以的。但是这样插入的图片完全没有语义上的意义，它们不能有任何备选文本，也不能被屏幕阅读器识别，等等。这就是 HTML 图片有用的地方了。
 
-总而言之，如果图像对你的内容里有意义，则应使用 HTML 图像。如果图像纯粹是装饰，则应使用 CSS 背景图片。
+总而言之，如果图像对你的内容有意义，则应使用 HTML 图像。如果图像纯粹是装饰，则应使用 CSS 背景图片。
 
-> **备注：** 你可以在 [CSS](/zh-CN/docs/Learn/CSS) 模块里学到更多关于 [CSS 背景图片](/zh-CN/docs/Learn/CSS/Styling_boxes/背景)的知识。
+> **备注：** 你可以在 [CSS](/zh-CN/docs/Learn/CSS) 模块里学到更多关于 [CSS 背景图片](/zh-CN/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)的知识。
 
-## 网页上的其他图像
+## 网页上的其他图形
 
 我们已经了解到可以使用 {{HTMLElement("img")}} 元素显示静态图像，或者通过使用 {{cssxref("background-image")}} 属性来设置 HTML 元素的背景。你还可以动态生成图形，或在生成后对图像进行操作。浏览器提供了使用代码创建 2D 和 3D 图形的方法，以及包含来自上传文件或用户摄像头实时流的视频。以下是有关这些更高级图像主题的文章链接：
 
@@ -608,13 +608,13 @@ p {
 - [WebGL](/zh-CN/docs/Web/API/WebGL_API)
   - : WebGL API 指南将帮助你入门 WebGL，这是用于 Web 的 3D 图形 API，可让你在 Web 内容中使用标准的 OpenGL ES。
 - [使用 HTML 音频和视频](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-  - : 与 `<img>` 类似，你可以使用 HTML 将{{htmlelement("video")}} 和 {{htmlelement("audio")}} 嵌入到网页中，并控制其播放。
+  - : 与 `<img>` 类似，你可以使用 HTML 将 {{htmlelement("video")}} 和 {{htmlelement("audio")}} 嵌入到网页中，并控制其播放。
 - [WebRTC](/zh-CN/docs/Web/API/WebRTC_API)
   - : WebRTC 中的 RTC 代表实时通信（Real-Time Communications），这是一种可以在浏览器客户端（对等方）之间进行音频/视频流和数据共享的技术。
 
-## 测试你的技能！
+## 技能测试！
 
-你已经阅读完本文，但你能记住重要的信息吗？在继续之前，你可以进行一些进一步的测试，以验证你是否掌握了这些信息。请参阅[测试你的技能：HTML 图像](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML/Test_your_skills:_HTML_images)。
+你已经阅读完本文，但你能记住重要的信息吗？在继续之前，你可以进行一些进一步的测试，以验证你是否掌握了这些信息。请参阅[技能测试：HTML 图像](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML/Test_your_skills:_HTML_images)。
 
 ## 总结
 
