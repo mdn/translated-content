@@ -41,7 +41,7 @@ _也从其父接口 {{domxref("EventTarget")}} 继承事件。_
 - {{domxref("BatteryManager.dischargingtimechange_event", "dischargingtimechange")}}
   - : 当电池续航时间（{{domxref("BatteryManager.dischargingTime", "dischargingTime")}} 属性）更新时触发。
 - {{domxref("BatteryManager.levelchange_event", "levelchange")}}
-  - : 当电源电量（{{domxref("BatteryManager.level", "level")}} 属性）更新时触发。
+  - : 当电池电量（{{domxref("BatteryManager.level", "level")}} 属性）更新时触发。
 
 ## 规范
 
