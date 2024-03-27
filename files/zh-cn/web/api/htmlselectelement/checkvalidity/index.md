@@ -2,7 +2,7 @@
 title: HTMLSelectElement：checkValidity() 方法
 slug: Web/API/HTMLSelectElement/checkValidity
 l10n:
-  sourceCommit: 8f3daa06271fa91d351d40ee59c2f07377025108
+  sourceCommit: 02fd6de308678aaea8e971e4fe38c52aa55c7b26
 ---
 
 {{ APIRef("HTML DOM") }}
