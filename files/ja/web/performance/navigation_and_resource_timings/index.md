@@ -2,10 +2,10 @@
 title: ナビゲーションおよびリソースタイミング
 slug: Web/Performance/Navigation_and_resource_timings
 l10n:
-  sourceCommit: b69005a7ebb830a96a37ffcb2adf8b97f956469d
+  sourceCommit: 83f30ecaaeb6227dc0d4551f71eb8be1cacb8e94
 ---
 
-{{QuickLinksWithSubPages("Web/Performance")}}
+{{QuickLinksWithSubPages("/ja/docs/Web/Performance")}}
 
 **ナビゲーションタイミング**は、ブラウザーによる文書ナビゲーションイベントを測定する指標です。**リソースタイミング**は、アプリケーションのリソースの読み込みに関する詳細なネットワークタイミングの測定値です。どちらも同じ読み取り専用のプロパティを提供しますが、ナビゲーションタイミングはメイン文書の時間を測定するのに対し、リソースタイミングはそのメイン文書内の呼び出されるすべての資産やリソース、およびリソースのリクエストされたリソースの時刻を提供します。
 
@@ -222,7 +222,7 @@ let time = window.performance.timing;
 ```js
 const dns = time.domainLookupEnd - time.domainLookupStart;
 const tcp = time.connectEnd - time.connectStart;
-const ssl = time.requestStart - time.secureConnectionStart;
+const tls = time.requestStart - time.secureConnectionStart;
 ```
 
 ### 最初のバイトまでの時間
@@ -257,12 +257,12 @@ const dns = time.domainLookupEnd - time.domainLookupStart;
 const tcp = time.connectEnd - time.connectStart;
 ```
 
-### SSL ネゴシエーション
+### TLS ネゴシエーション
 
 [`secureConnectionStart`](/ja/docs/Web/API/PerformanceResourceTiming/secureConnectionStart) は利用できない場合は `undefined`、 [HTTPS](/ja/docs/Glossary/HTTPS) を用いない場合は `0`、利用可能で使用した場合はタイムスタンプになります。言い換えれば、安全な接続を使用した場合、 `secureConnectionStart` は[真値](/ja/docs/Glossary/Truthy)になり、 `secureConnectionStart` から `requestStart` までの時間は 0 より大きくなります。
 
 ```js
-const ssl = time.requestStart - time.secureConnectionStart;
+const tls = time.requestStart - time.secureConnectionStart;
 ```
 
 ## パフォーマンス項目 API
@@ -299,7 +299,7 @@ performance.getEntriesByType("frame").forEach((frame) => {
 
 ## ナビゲーションタイミング
 
-ユーザーがウェブサイトやアプリケーションをリクエストすると、[ブラウザーに表示するために](/ja/docs/Web/Performance/How_browsers_work)、ユーザーエージェントは {{glossary('DNS')}} 参照、 {{glossary('TCP handshake', 'TCP ハンドシェイク')}}、 SSL 交渉を含む一連の手順を経て、ユーザーエージェントが実際のリクエストを行い、サーバーがリクエストされた資産を返します。その後、ブラウザーは受け取ったコンテンツを解釈し、DOM、CSSOM、アクセシビリティ、レンダリングツリーを構築し、最終的にページをレンダリングします。ユーザーエージェントが文書の解釈をやめると、ユーザーエージェントは文書の準備状態を _interactive_ に設定します。解釈する必要のある遅延スクリプトがある場合は、それを実行し、[DOMContentLoaded](/ja/docs/Web/API/Document/DOMContentLoaded_event) を発行します。これで文書は読み込み後のタスクを処理できるようになり、この時点で文書は完全に読み込まれたとみなされます。
+ユーザーがウェブサイトやアプリケーションをリクエストすると、[ブラウザーに表示するために](/ja/docs/Web/Performance/How_browsers_work)、ユーザーエージェントは {{glossary('DNS')}} 参照、 {{glossary('TCP handshake', 'TCP ハンドシェイク')}}、 TLS ネゴシエーションを含む一連の手順を経て、ユーザーエージェントが実際のリクエストを行い、サーバーがリクエストされた資産を返します。その後、ブラウザーは受け取ったコンテンツを解釈し、DOM、CSSOM、アクセシビリティ、レンダリングツリーを構築し、最終的にページをレンダリングします。ユーザーエージェントが文書の解釈をやめると、ユーザーエージェントは文書の準備状態を _interactive_ に設定します。解釈する必要のある遅延スクリプトがある場合は、それを実行し、[DOMContentLoaded](/ja/docs/Web/API/Document/DOMContentLoaded_event) を発行します。これで文書は読み込み後のタスクを処理できるようになり、この時点で文書は完全に読み込まれたとみなされます。
 
 ```js
 const navigationTimings = performance.getEntriesByType("navigation");
