@@ -18,7 +18,7 @@ slug: Web/HTML/Element/del
 - `cite`
   - : 解釋更改的資源的 URI（例如會議記錄）。
 - `datetime`
-  - : 此屬性表示更改的時間和日期，必須是有效的日期字符串，帶有可選時間。如果值無法解析為帶有可選時間字符串的日期，則元素將沒有相關的時間戳。關於沒有時間的字符串的格式，請參見[日期字符串](/zh-TW/docs/Web/HTML/Date_and_time_formats#date_strings)。如果字符串包含日期和時間，則其格式在[本地日期和時間字符串](/zh-TW/docs/Web/HTML/Date_and_time_formats#local_date_and_time_strings)中有所介紹。
+  - : 此屬性表示更改的時間和日期，必須是有效的日期字串，帶有可選時間。如果值無法解析為帶有可選時間字符串的日期，則元素將沒有相關的時間戳。關於沒有時間的字串的格式，請參見[日期字串](/zh-TW/docs/Web/HTML/Date_and_time_formats#日期字串)。如果字串包含日期和時間，則其格式在[本地日期和時間字串](/zh-TW/docs/Web/HTML/Date_and_time_formats#本地日期和時間字串)中有所介紹。
 
 ## 範例
 

@@ -11,9 +11,9 @@ slug: Web/HTML/Element/details
 
 {{EmbedInteractiveExample("pages/tabbed/details.html", "tabbed-shorter")}}
 
-`<details>` 小部件可以處於兩種狀態之一。默認的「關閉」狀態僅顯示三角形和 `<summary>` 內的標籤（或如果沒有 `<summary>`，則是{{Glossary("user agent", "使用者代理")}}定義的默認字符串）。
+`<details>` 小部件可以處於兩種狀態之一。默認的「關閉」狀態僅顯示三角形和 `<summary>` 內的標籤（或如果沒有 `<summary>`，則是{{Glossary("user agent", "使用者代理")}}定義的默認字串）。
 
-當用戶點擊小部件或將焦點放在小部件上並按空格鍵時，它會「扭曲」開啟，顯示其內容。常見的使用旋轉或扭曲三角形來表示打開或關閉小部件的用法，這就是為什麼有時被稱為「扭曲」的原因。
+當用戶點擊小部件或將焦點放在小部件上並按空格鍵時，它會「扭轉」開啟，顯示其內容。常見的使用旋轉或扭曲三角形來表示打開或關閉小部件的用法，這就是為什麼有時被稱為「旋鈕」的原因。
 
 你可以使用 CSS 來設置揭露小部件的樣式，並且可以通過設置/刪除其 [`open`](#open) 屬性來以編程方式打開和關閉小部件。不幸的是，目前沒有內建的方法來在開啟和關閉之間實現過渡動畫。
 
@@ -78,7 +78,7 @@ details.addEventListener("toggle", (event) => {
 
 ### 創建打開的揭露框
 
-要在其打開狀態下開始 `<details>` 框，請添加布爾值 `open` 屬性：
+要在其打開狀態下開始 `<details>` 框，請添加布林值 `open` 屬性：
 
 ```html
 <details open>

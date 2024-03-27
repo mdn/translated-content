@@ -29,11 +29,11 @@ slug: Web/HTML/Element/dfn
 
 > **備註：** 如果 `<dfn>` 元素有 `title` 屬性，則它*必須*包含要定義的術語，並且不能包含其他文本。
 
-### 鏈接到 `<dfn>` 元素
+### 連結到 `<dfn>` 元素
 
-如果在 `<dfn>` 元素上包含 [`id`](/zh-TW/docs/Web/HTML/Global_attributes#id) 屬性，則可以使用 {{HTMLElement("a")}} 元素鏈接到它。這些鏈接應該是術語的使用，意在讓讀者如果尚不了解術語，就可以通過點擊術語的鏈接快速導航到術語的定義。
+如果在 `<dfn>` 元素上包含 [`id`](/zh-TW/docs/Web/HTML/Global_attributes#id) 屬性，則可以使用 {{HTMLElement("a")}} 元素連結到它。這些鏈接應該是術語的使用，意在讓讀者如果尚不了解術語，就可以通過點擊術語的連結快速導航到術語的定義。
 
-這在下面的[鏈接到定義](#鏈接到定義) 範例中顯示。
+這在下面的[連結到定義](#連結到定義)範例中顯示。
 
 ## 範例
 
@@ -59,9 +59,9 @@ slug: Web/HTML/Element/dfn
 
 {{EmbedLiveSample("基本識別術語", 650, 120)}}
 
-### 鏈接到定義
+### 連結到定義
 
-要添加到定義的鏈接，你可以像通常一樣使用 {{HTMLElement("a")}} 元素創建鏈接。
+要添加到定義的連結，你可以像通常一樣使用 {{HTMLElement("a")}} 元素創建連結。
 
 #### HTML
 
@@ -86,11 +86,11 @@ slug: Web/HTML/Element/dfn
 </p>
 ```
 
-這裡我們看到了定義，現在具有一個 [`id`](/zh-TW/docs/Web/HTML/Global_attributes#id) 屬性，`"definition-dfn"`，可以用作鏈接的目標。稍後，使用 `<a>` 元素創建了一個鏈接，將 [`href`](/zh-TW/docs/Web/HTML/Element/a#href) 屬性設置為 `"#definition-dfn"` 以設置回到定義的鏈接。
+這裡我們看到了定義，現在具有一個 [`id`](/zh-TW/docs/Web/HTML/Global_attributes#id) 屬性，`"definition-dfn"`，可以用作連結的目標。稍後，使用 `<a>` 元素創建了一個連結，將 [`href`](/zh-TW/docs/Web/HTML/Element/a#href) 屬性設置為 `"#definition-dfn"` 以設置回到定義的連結。
 
 #### 結果
 
-{{EmbedLiveSample("鏈接到定義", 650, 300)}}
+{{EmbedLiveSample("連結到定義", 650, 300)}}
 
 ### 同時使用縮寫和定義
 
