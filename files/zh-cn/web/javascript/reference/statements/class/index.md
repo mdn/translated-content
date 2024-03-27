@@ -7,7 +7,7 @@ l10n:
 
 {{jsSidebar("Statements")}}
 
-**`class`** 声明将新的[类](/zh-CN/docs/Web/JavaScript/Reference/Classes){{Glossary("binding", "绑定")}} 到指定的名称。
+**`class`** 声明将新的 [类](/zh-CN/docs/Web/JavaScript/Reference/Classes){{Glossary("binding", "绑定")}} 到指定的名称。
 
 你也可以使用[`class` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/class)来定义类。
 
