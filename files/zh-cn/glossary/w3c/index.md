@@ -1,5 +1,5 @@
 ---
-title: W3C（万维网联盟）
+title: W3C
 slug: Glossary/W3C
 l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
@@ -16,4 +16,4 @@ _万维网联盟_（World Wide Web Consortium）是一个维护 {{Glossary("Worl
 ## 参见
 
 - [万维网联盟 网站](https://www.w3.org/)
-- 维基百科上的 [万维网联盟](https://zh.wikipedia.org/wiki/%E4%B8%87%E7%BB%B4%E7%BD%91%E8%81%94%E7%9B%9F)
+- 维基百科上的[万维网联盟](https://zh.wikipedia.org/wiki/万维网联盟)
