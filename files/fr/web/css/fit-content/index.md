@@ -5,9 +5,9 @@ slug: Web/CSS/fit-content
 
 {{CSSRef}}
 
-La fonction **`fit-content`** se comporte comme `fit-content(stretch)`. En pratique, cela signifie que la boîte utilisera l'espace disponible, mais jamais plus que {{cssxref("max-content")}}.
+La fonction **`fit-content`** se comporte comme `fit-content(stretch)`. En pratique, cela signifie que le conteneur utilisera l'espace disponible, mais jamais plus que {{cssxref("max-content")}}.
 
-Lorsqu'elle est utilisée comme taille de boîte pour {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}} et {{cssxref("max-height")}}, les tailles maximale et minimale se réfèrent à la taille du contenu.
+Lorsqu'elle est utilisée comme taille de conteneur pour {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}} et {{cssxref("max-height")}}, les tailles maximale et minimale se réfèrent à la taille du contenu.
 
 > **Note:** La spécification CSS Sizing définit également la fonction {{cssxref("fit-content_function", "fit-content()")}}. Cette page détaille le mot-clé.
 
@@ -20,7 +20,7 @@ block-size: fit-content;
 
 ## Exemple
 
-### Utilisation de fit-content pour le dimensionnement des boîtes
+### Utilisation de fit-content pour le dimensionnement des conteneurs
 
 #### HTML
 
