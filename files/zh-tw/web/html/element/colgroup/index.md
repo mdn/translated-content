@@ -1,11 +1,11 @@
 ---
-title: <colgroup>：表格列群組元素
+title: <colgroup>：表格欄群組元素
 slug: Web/HTML/Element/colgroup
 ---
 
 {{HTMLSidebar}}
 
-**`<colgroup>`** [HTML](/zh-TW/docs/Web/HTML) 中定義表格內的一組列的元素。
+**`<colgroup>`** [HTML](/zh-TW/docs/Web/HTML) 中定義表格內的一組欄的元素。
 
 {{EmbedInteractiveExample("pages/tabbed/colgroup.html","tabbed-taller")}}
 
@@ -15,7 +15,7 @@ slug: Web/HTML/Element/colgroup
 
 - `span`
 
-  - : 指定`<colgroup>`元素跨越的連續列數。該值必須是大於零的正整數。如果沒有指定，預設值為 `1`。
+  - : 指定`<colgroup>`元素跨越的連續欄數。該值必須是大於零的正整數。如果沒有指定，預設值為 `1`。
 
     > **備註：** 如果在 `<colgroup>`n內有一個或多個 {{HTMLElement("col")}} 元素，則不允許使用 `span` 屬性。
 
@@ -25,21 +25,21 @@ slug: Web/HTML/Element/colgroup
 
 - `align` {{deprecated_inline}}
 
-  - : 指定每個列群組儲存格的水平對齊方式。可能的 {{Glossary("enumerated")}} 值包括 `left`、`center`、`right`、`justify` 和 `char`。當支援時，`char` 值將文字內容對齊到 [`char`](#char) 屬性中定義的字元和 [`charoff`](#charoff) 屬性中定義的偏移。請注意，後代{{HTMLElement("col")}}元素可能會使用其自己的 [`align`](/zh-TW/docs/Web/HTML/Element/col#align) 屬性覆蓋此值。請改用 {{cssxref("text-align")}} CSS 屬性應用於 {{htmlelement("td")}} 和 {{htmlelement("th")}} 元素，因為此屬性已棄用。
+  - : 指定每個欄群組儲存格的水平對齊方式。可能的 {{Glossary("enumerated")}} 值包括 `left`、`center`、`right`、`justify` 和 `char`。當支援時，`char` 值將文字內容對齊到 [`char`](#char) 屬性中定義的字元和 [`charoff`](#charoff) 屬性中定義的偏移。請注意，後代{{HTMLElement("col")}}元素可能會使用其自己的 [`align`](/zh-TW/docs/Web/HTML/Element/col#align) 屬性覆蓋此值。請改用 {{cssxref("text-align")}} CSS 屬性應用於 {{htmlelement("td")}} 和 {{htmlelement("th")}} 元素，因為此屬性已棄用。
 
     > **備註：** 在 `<colgroup>` 元素上設置 `text-align` 沒有效果，因為 {{HTMLElement("td")}} 和 {{HTMLElement("th")}} 元素不是 `<colgroup>` 元素的後代，因此不會繼承該屬性。
     >
-    > 如果表格不使用 [`colspan`](/zh-TW/docs/Web/HTML/Element/td#colspan) 屬性，可以使用 `td:nth-of-type(an+b)` CSS 選擇器進行每列的對齊，其中 `a` 是表格中列的總數，`b` 是列在表格中的序位位置，例如 `td:nth-of-type(7n+2) { text-align: right; }` 以使第二列儲存格向右對齊。
+    > 如果表格不使用 [`colspan`](/zh-TW/docs/Web/HTML/Element/td#colspan) 屬性，可以使用 `td:nth-of-type(an+b)` CSS 選擇器進行每欄的對齊，其中 `a` 是表格中欄的總數，`b` 是欄在表格中的序位位置，例如 `td:nth-of-type(7n+2) { text-align: right; }` 以使第二欄儲存格向右對齊。
     >
     > 如果表格使用了 [`colspan`](/zh-TW/docs/Web/HTML/Element/td#colspan) 屬性，可以通過組合適當的 CSS 屬性選擇器來達到效果，例如像 `[colspan=n]`，儘管這並不簡單。
 
 - `bgcolor` {{deprecated_inline}}
 
-  - : 定義每個列群組儲存格的背景顏色。該值是一個 HTML 顏色；可以是 [6 位十六進制 RGB 碼](/zh-TW/docs/Web/CSS/hex-color)，前綴為「`#`」'，或者是一個[顏色關鍵字](/zh-TW/docs/Web/CSS/named-color)。不支援其他 CSS {{cssxref("color_value", "&lt;color&gt")}} 值。請改用 {{cssxref("background-color")}} CSS 屬性，因為此屬性已棄用。
+  - : 定義每個欄群組儲存格的背景顏色。該值是一個 HTML 顏色；可以是 [6 位十六進制 RGB 碼](/zh-TW/docs/Web/CSS/hex-color)，前綴為「`#`」'，或者是一個[顏色關鍵字](/zh-TW/docs/Web/CSS/named-color)。不支援其他 CSS {{cssxref("color_value", "&lt;color&gt")}} 值。請改用 {{cssxref("background-color")}} CSS 屬性，因為此屬性已棄用。
 
 - `char` {{deprecated_inline}}
 
-  - : 指定每個列群組儲存格內容與字符的對齊方式。這個屬性的典型值包括當試圖對齊數字或貨幣值時使用的句點（`.`）。如果 [`align`](#align) 未設置為 `char`，則忽略此屬性，但它仍將作為屬於此列群組的 {{HTMLElement("col")}} 元素的 [`align`](/zh-TW/docs/Web/HTML/Element/col#align) 的默認值使用。
+  - : 指定每個欄群組儲存格內容與字符的對齊方式。這個屬性的典型值包括當試圖對齊數字或貨幣值時使用的句點（`.`）。如果 [`align`](#align) 未設置為 `char`，則忽略此屬性，但它仍將作為屬於此欄群組的 {{HTMLElement("col")}} 元素的 [`align`](/zh-TW/docs/Web/HTML/Element/col#align) 的默認值使用。
 
 - `charoff` {{deprecated_inline}}
 
@@ -47,36 +47,36 @@ slug: Web/HTML/Element/colgroup
 
 - `valign` {{deprecated_inline}}
 
-  - : 指定每個列群組儲存格的垂直對齊方式。可能的 {{Glossary("enumerated")}} 值包括 `baseline`、`bottom`、`middle` 和 `top`。請注意，後代 {{HTMLElement("col")}} 元素可能會使用其自己的 [`valign`](/zh-TW/docs/Web/HTML/Element/col#valign) 屬性覆蓋此值。請改用 {{cssxref("vertical-align")}} CSS 屬性應用於 {{htmlelement("td")}} 和 {{htmlelement("th")}} 元素，因為此屬性已棄用。
+  - : 指定每個欄群組儲存格的垂直對齊方式。可能的 {{Glossary("enumerated")}} 值包括 `baseline`、`bottom`、`middle` 和 `top`。請注意，後代 {{HTMLElement("col")}} 元素可能會使用其自己的 [`valign`](/zh-TW/docs/Web/HTML/Element/col#valign) 屬性覆蓋此值。請改用 {{cssxref("vertical-align")}} CSS 屬性應用於 {{htmlelement("td")}} 和 {{htmlelement("th")}} 元素，因為此屬性已棄用。
 
     > **備註：** 在 `<colgroup>` 元素上設置 `vertical-align` 沒有效果，因為 {{HTMLElement("td")}} 和 {{HTMLElement("th")}} 元素不是 `<colgroup>` 元素的後代，因此不會繼承該屬性。
     >
-    > 如果表格不使用 [`colspan`](/zh-TW/docs/Web/HTML/Element/td#colspan) 屬性，可以使用 [`td:nth-of-type()`](/zh-TW/docs/Web/CSS/:nth-of-type) CSS 選擇器進行每列的對齊，例如 `td:nth-of-type(2) { vertical-align: middle; }` 使第二列儲存格垂直居中。
+    > 如果表格不使用 [`colspan`](/zh-TW/docs/Web/HTML/Element/td#colspan) 屬性，可以使用 [`td:nth-of-type()`](/zh-TW/docs/Web/CSS/:nth-of-type) CSS 選擇器進行每欄的對齊，例如 `td:nth-of-type(2) { vertical-align: middle; }` 使第二欄儲存格垂直居中。
     >
     > 如果表格使用了 [`colspan`](/zh-TW/docs/Web/HTML/Element/td#colspan) 屬性，可以通過組合適當的 CSS 屬性選擇器來達到效果，例如像 `[colspan=n]`，儘管這並不簡單。
 
 - `width` {{deprecated_inline}}
 
-  - : 指定當前列群組中每個列的默認寬度。除了標準的像素和百分比值外，此屬性還可以採用特殊形式 `0*`，表示每個跨越的列的寬度應該是容納列內容所需的最小寬度。也可以使用相對寬度，如 `5*`。請注意，後代 {{HTMLElement("col")}} 元素可能會使用其自己的 [`width`](/zh-TW/docs/Web/HTML/Element/col#width) 屬性覆蓋此值。請改用 {{cssxref("width")}} CSS屬性，因為此屬性已棄用。
+  - : 指定當前欄群組中每個欄的默認寬度。除了標準的像素和百分比值外，此屬性還可以採用特殊形式 `0*`，表示每個跨越的欄的寬度應該是容納欄內容所需的最小寬度。也可以使用相對寬度，如 `5*`。請注意，後代 {{HTMLElement("col")}} 元素可能會使用其自己的 [`width`](/zh-TW/docs/Web/HTML/Element/col#width) 屬性覆蓋此值。請改用 {{cssxref("width")}} CSS屬性，因為此屬性已棄用。
 
 ## 使用說明
 
 - `<colgroup>` 應該出現在 {{HTMLElement("table")}} 內，位於任何 {{HTMLElement("caption")}} 元素之後（如果使用），但位於任何 {{HTMLElement("thead")}}、{{HTMLElement("tbody")}}、{{HTMLElement("tfoot")}} 和 {{HTMLElement("tr")}} 元素之前。
 - 只有有限數量的 CSS 屬性影響 `<colgroup>`：
-  - {{cssxref("background")}}：各種 `background` 屬性將為列群組內的儲存格設置背景。由於列群組的背景顏色是繪製在表格上方，但在背景顏色應用到列（{{HTMLElement("col")}}）、行群組（{{htmlelement("thead")}}、{{htmlelement("tbody")}} 和 {{htmlelement("tfoot")}}）、行（{{htmlelement("tr")}}）和個別儲存格（{{htmlelement("th")}} 和 {{htmlelement("td")}}）之後，只有當所有位於其上的層都有透明背景時，表格列群組的背景才可見。
+  - {{cssxref("background")}}：各種 `background` 屬性將為欄群組內的儲存格設置背景。由於欄群組的背景顏色是繪製在表格上方，但在背景顏色應用到欄（{{HTMLElement("col")}}）、行群組（{{htmlelement("thead")}}、{{htmlelement("tbody")}} 和 {{htmlelement("tfoot")}}）、行（{{htmlelement("tr")}}）和個別儲存格（{{htmlelement("th")}} 和 {{htmlelement("td")}}）之後，只有當所有位於其上的層都有透明背景時，表格欄群組的背景才可見。
   - {{cssxref("border")}}：各種 `border` 屬性適用，但僅當 `<table>` 具有 {{cssxref("border-collapse", "border-collapse: collapse")}} 設置時。
-  - {{cssxref("visibility")}}：對於列群組，`collapse` 值導致該列群組中所有列的儲存格都不呈現，並且跨越到其他列的儲存格會被剪切。這些列在列群組中原本佔用的空間將被移除。但是，仍會根據存在於列群組中折疊的列中的儲存格來計算其他列的大小。`visibility` 的其他值沒有效果。
-  - {{cssxref("width")}}：`width` 屬性定義了列群組內列的最小寬度，就好像設置了 {{cssxref("min-width")}} 一樣。
+  - {{cssxref("visibility")}}：對於欄群組，`collapse` 值導致該欄群組中所有欄的儲存格都不呈現，並且跨越到其他欄的儲存格會被剪切。這些欄在欄群組中原本佔用的空間將被移除。但是，仍會根據存在於欄群組中折疊的欄中的儲存格來計算其他欄的大小。`visibility` 的其他值沒有效果。
+  - {{cssxref("width")}}：`width` 屬性定義了欄群組內欄的最小寬度，就好像設置了 {{cssxref("min-width")}} 一樣。
 
 ## 範例
 
 請參見 {{HTMLElement("table")}} 以查看一個完整的表格範例，介紹常見的標準和最佳實踐。
 
-此範例演示了一個分成兩個 `<colgroup>` 元素的七列表格，跨越多個列。
+此範例演示了一個分成兩個 `<colgroup>` 元素的七欄表格，跨越多個欄。
 
 ### HTML
 
-使用兩個 `<colgroup>` 元素來結構化一個基本表格，創建列群組。每個列群組中的列數由 [`span`](#span) 屬性指定。
+使用兩個 `<colgroup>` 元素來結構化一個基本表格，創建欄群組。每個欄群組中的欄數由 [`span`](#span) 屬性指定。
 
 ```html
 <table>
@@ -117,7 +117,7 @@ slug: Web/HTML/Element/colgroup
 
 ### CSS
 
-可以使用分組的列來在 CSS 中視覺上突出顯示結構：
+可以使用分組的欄來在 CSS 中視覺上突出顯示結構：
 
 ```css
 table {
@@ -219,10 +219,10 @@ table {
 
 - [學習：HTML 表格](/zh-TW/docs/Learn/HTML/Tables)
 - {{HTMLElement("caption")}}、{{HTMLElement("col")}}、{{HTMLElement("table")}}、{{HTMLElement("tbody")}}、{{HTMLElement("td")}}、{{HTMLElement("tfoot")}}、{{HTMLElement("th")}}、{{HTMLElement("thead")}}、{{HTMLElement("tr")}}：其他與表格相關的元素
-- {{cssxref("background-color")}}：設置每個列群組儲存格的背景顏色的 CSS 屬性
-- {{cssxref("border")}}：控制列群組儲存格邊框的 CSS 屬性
-- {{cssxref("text-align")}}：水平對齊每個列群組儲存格內容的 CSS 屬性
-- {{cssxref("vertical-align")}}：垂直對齊每個列群組儲存格內容的 CSS 屬性
-- {{cssxref("visibility")}}：隱藏（或顯示）列群組的儲存格的 CSS 屬性
-- {{cssxref("width")}}：控制列群組中每個列的默認寬度的 CSS 屬性
-- {{cssxref(":nth-of-type")}}、{{cssxref(":first-of-type")}}、{{cssxref(":last-of-type")}}：CSS 偽類來選擇所需的列儲存格
+- {{cssxref("background-color")}}：設置每個欄群組儲存格的背景顏色的 CSS 屬性
+- {{cssxref("border")}}：控制欄群組儲存格邊框的 CSS 屬性
+- {{cssxref("text-align")}}：水平對齊每個欄群組儲存格內容的 CSS 屬性
+- {{cssxref("vertical-align")}}：垂直對齊每個欄群組儲存格內容的 CSS 屬性
+- {{cssxref("visibility")}}：隱藏（或顯示）欄群組的儲存格的 CSS 屬性
+- {{cssxref("width")}}：控制欄群組中每個欄的默認寬度的 CSS 屬性
+- {{cssxref(":nth-of-type")}}、{{cssxref(":first-of-type")}}、{{cssxref(":last-of-type")}}：CSS 偽類來選擇所需的欄儲存格
