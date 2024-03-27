@@ -1,6 +1,6 @@
 ---
 title: BatteryManager：dischargingtimechange 事件
-slug: Web/API/BatteryManager/dischargingtimechange
+slug: Web/API/BatteryManager/dischargingtimechange_event
 l10n:
   sourceCommit: 8d54a21ae2677dba11569e7b7d918eac828af0b3
 ---
