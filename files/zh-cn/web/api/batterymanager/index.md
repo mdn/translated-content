@@ -7,7 +7,7 @@ l10n:
 
 {{ApiRef("Battery API")}}{{securecontext_header}}
 
-{{domxref("Battery Status API", "", "", "nocode")}} 的 **`BatteryManager`** 接口提供了系统电源电量的一些信息。{{domxref("navigator.getBattery()")}} 方法返回一个 promise 对象，其兑现一个 `BatteryManager` 对象。
+{{domxref("Battery Status API", "", "", "nocode")}} 的 **`BatteryManager`** 接口提供了系统电池电量的一些信息。{{domxref("navigator.getBattery()")}} 方法返回一个 promise 对象，其兑现一个 `BatteryManager` 对象。
 
 自 Chrome 103 起，{{domxref("Battery Status API", "", "", "nocode")}} 的 `BatteryManager` 接口只在严格上下文中暴露。
 
@@ -18,13 +18,13 @@ l10n:
 _也从其父接口 {{domxref("EventTarget")}} 继承属性。_
 
 - {{domxref("BatteryManager.charging")}} {{ReadOnlyInline}}
-  - : 一个指示当前电源是否正在充电的布尔值。
+  - : 一个指示当前电池是否正在充电的布尔值。
 - {{domxref("BatteryManager.chargingTime")}} {{ReadOnlyInline}}
-  - : 一个表示距离充电完毕还需多少秒的数字，或为 0 若电源已充电完毕。
+  - : 一个表示电池距离充电完毕还需多少秒的数字，或为 0 则表示电池已充电完毕。
 - {{domxref("BatteryManager.dischargingTime")}} {{ReadOnlyInline}}
-  - : 一个表示距离电源耗电至空且系统挂起需要多少秒的数字。
+  - : 一个表示距离电池耗电至空且系统挂起需要多少秒的数字。
 - {{domxref("BatteryManager.level")}} {{ReadOnlyInline}}
-  - : 一个表示系统的电源电量水平的数字，其值介于 0.0 和 1.0 之间。
+  - : 一个表示系统的电池电量水平的数字，其值介于 0.0 和 1.0 之间。
 
 ## 实例方法
 
@@ -35,11 +35,11 @@ _也从其父接口 {{domxref("EventTarget")}} 继承方法。_
 _也从其父接口 {{domxref("EventTarget")}} 继承事件。_
 
 - {{domxref("BatteryManager.chargingchange_event", "chargingchange")}}
-  - : 当电源充电状态（{{domxref("BatteryManager.charging", "charging")}} 属性）更新时触发。
+  - : 当电池充电状态（{{domxref("BatteryManager.charging", "charging")}} 属性）更新时触发。
 - {{domxref("BatteryManager.chargingtimechange_event", "chargingtimechange")}}
-  - : 当电源充电时间（{{domxref("BatteryManager.chargingTime", "chargingTime")}} 属性）更新时触发。
+  - : 当电池充电时间（{{domxref("BatteryManager.chargingTime", "chargingTime")}} 属性）更新时触发。
 - {{domxref("BatteryManager.dischargingtimechange_event", "dischargingtimechange")}}
-  - : 当电源续航时间（{{domxref("BatteryManager.dischargingTime", "dischargingTime")}} 属性）更新时触发。
+  - : 当电池续航时间（{{domxref("BatteryManager.dischargingTime", "dischargingTime")}} 属性）更新时触发。
 - {{domxref("BatteryManager.levelchange_event", "levelchange")}}
   - : 当电源电量（{{domxref("BatteryManager.level", "level")}} 属性）更新时触发。
 
