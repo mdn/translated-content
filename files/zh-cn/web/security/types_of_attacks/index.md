@@ -3,7 +3,7 @@ title: 攻击类型
 slug: Web/Security/Types_of_attacks
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
+{{QuickLinksWithSubpages("/zh-CN/docs/Web/Security")}}
 
 本文介绍了各种类型的安全攻击以及防御这些攻击的技术。
 
