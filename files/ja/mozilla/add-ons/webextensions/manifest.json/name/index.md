@@ -22,7 +22,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/name
   </tbody>
 </table>
 
-拡張機能の名前です。これはブラウザーのユーザーインターフェースや addons.mozilla.org のようなサイトで拡張機能を識別するために使用されます。
+拡張機能の名前です。これはブラウザーのユーザーインターフェイスや addons.mozilla.org のようなサイトで拡張機能を識別するために使用されます。
 
 名前が UI に表示されるよう長すぎないようにするのは良い習慣です。Google Chrome と Microsoft Edge は名前を 45 文字に制限しています。
 

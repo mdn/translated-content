@@ -5,7 +5,7 @@ slug: Mozilla/Firefox/Releases/24
 
 Gecko 24 を搭載した Firefox 24 は米国時間 2013 年 9 月 17 日にリリースされました。このページでは、開発者に影響する Firefox 24 の変更点をまとめています。
 
-## Web 開発者向けの変更点一覧
+## ウェブ開発者向けの変更点一覧
 
 ### CSS
 
@@ -22,10 +22,10 @@ Gecko 24 を搭載した Firefox 24 は米国時間 2013 年 9 月 17 日にリ�
 
 ### DOM
 
-- {{domxref("Range.Range", "Range()")}} コンストラクタをサポートしました ([Firefox バグ 868999](https://bugzil.la/868999))。
-- {{domxref("Text.Text", "Text()")}} コンストラクタをサポートしました ([Firefox バグ 869000](https://bugzil.la/869000))。
-- {{domxref("Comment.Comment", "Comment()")}} コンストラクタをサポートしました ([Firefox バグ 869006](https://bugzil.la/869006))。
-- {{domxref("DocumentFragment.DocumentFragment", "DocumentFragment()")}} コンストラクタをサポートしました ([Firefox バグ 869002](https://bugzil.la/869002))。
+- {{domxref("Range.Range", "Range()")}} コンストラクターをサポートしました ([Firefox バグ 868999](https://bugzil.la/868999))。
+- {{domxref("Text.Text", "Text()")}} コンストラクターをサポートしました ([Firefox バグ 869000](https://bugzil.la/869000))。
+- {{domxref("Comment.Comment", "Comment()")}} コンストラクターをサポートしました ([Firefox バグ 869006](https://bugzil.la/869006))。
+- {{domxref("DocumentFragment.DocumentFragment", "DocumentFragment()")}} コンストラクターをサポートしました ([Firefox バグ 869002](https://bugzil.la/869002))。
 - {{domxref("FocusEvent")}} インターフェイスを実装しました ([Firefox バグ 855741](https://bugzil.la/855741))。
 - {{domxref("ChildNode.remove()")}} メソッドをサポートしました ([Firefox バグ 856629](https://bugzil.la/856629))。
 - {{HTMLElement("track")}} 要素に関するインターフェイスである {{domxref("HTMLTrackElement")}}、{{domxref("TextTrack")}}、{{domxref("TextTrackCue")}}、{{domxref("TextTrackList")}}、{{domxref("TextTrackCueList")}} を、既定値が `false` である設定 `media.webvtt.enabled` のもとに実装しました ([Firefox バグ 833385](https://bugzil.la/833385))。
@@ -37,7 +37,7 @@ Gecko 24 を搭載した Firefox 24 は米国時間 2013 年 9 月 17 日にリ�
 
 - ネットワークインスペクタで、コンテンツタイプ (CSS/画像/フォント など) による絞り込みと、絞り込み結果についてサイズや読み込み時間を確認できるようになりました。
 - 左側にある開発ツールのオプションパネルで、JavaScript を一時的に無効化/有効化できるようになりました。
-- 拡張機能の開発者は chrome レベルのスクリプトに対して、新たに[ブラウザコンソール](http://www.robodesign.ro/mihai/blog/the-browser-console-is-replacing-the-error-console)を使用できるようになりました (エラーコンソールを置き換えます)。
+- 拡張機能の開発者は chrome レベルのスクリプトに対して、新たに[ブラウザーコンソール](http://www.robodesign.ro/mihai/blog/the-browser-console-is-replacing-the-error-console)を使用できるようになりました (エラーコンソールを置き換えます)。
 
 ### MathML
 
