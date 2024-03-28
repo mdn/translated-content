@@ -1,5 +1,5 @@
 ---
-title: empty 语句
+title: 空语句
 slug: Web/JavaScript/Reference/Statements/Empty
 l10n:
   sourceCommit: c6f0f106b9083984dbf597678def6561729bb459
