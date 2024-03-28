@@ -1,5 +1,5 @@
 ---
-title: block 语句
+title: 块语句
 slug: Web/JavaScript/Reference/Statements/block
 l10n:
   sourceCommit: 8d538e9521d52d96f590b72101b4b50b0b259c4b
