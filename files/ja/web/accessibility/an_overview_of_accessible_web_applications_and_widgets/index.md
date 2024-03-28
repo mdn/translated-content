@@ -2,14 +2,14 @@
 title: アクセシブルなウェブアプリケーションやウィジェットの概要
 slug: Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
 l10n:
-  sourceCommit: fc294fbbf432b5b210e0394e23b5c8950e81d734
+  sourceCommit: acad5b9afc0a9e20144d49fd3fbb7f4fa92c9192
 ---
 
 <section id="Quick_links">
-  {{ListSubpagesForSidebar("Web/Accessibility", 1)}}
+  {{ListSubpagesForSidebar("/ja/docs/Web/Accessibility", 1)}}
 </section>
 
-ほとんどの JavaScript ライブラリーでは、デスクトップで慣れ親しんだインターフェースの動作を模倣した、クライアントサイドウィジェットのライブラリーが提供されています。スライダー、メニューバー、ファイルリストビューなどは、JavaScript、CSS、HTMLの組み合わせで構築することができます。HTML4 の規格では、この種のウィジェットを意味的に記述する組み込みタグが提供されていないため、開発者は一般に {{HTMLElement('div')}} や {{HTMLElement('span')}} などの汎用の要素を使用することになります。この結果、デスクトップと同じように見えるウィジェットができますが、通常、マークアップには支援技術で使用するのに十分な意味づけの情報がありません。
+ほとんどの JavaScript ライブラリーでは、デスクトップで慣れ親しんだインターフェイスの動作を模倣した、クライアントサイドウィジェットのライブラリーが提供されています。スライダー、メニューバー、ファイルリストビューなどは、JavaScript、CSS、HTMLの組み合わせで構築することができます。HTML4 の規格では、この種のウィジェットを意味的に記述する組み込みタグが提供されていないため、開発者は一般に {{HTMLElement('div')}} や {{HTMLElement('span')}} などの汎用の要素を使用することになります。この結果、デスクトップと同じように見えるウィジェットができますが、通常、マークアップには支援技術で使用するのに十分な意味づけの情報がありません。
 
 ## 問題点
 
@@ -178,4 +178,4 @@ ARIA では、開発者が要素の意味づけの役割を宣言することが
 - [ARIA](/ja/docs/Web/Accessibility/ARIA)
 - [キーボードで操作可能な JavaScript ウィジェットを書く](/ja/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
 - [WAI-ARIA Specification](https://www.w3.org/TR/wai-aria-1.1/)
-- [WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices/)
+- [WAI-ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/)
