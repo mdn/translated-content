@@ -15,7 +15,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/default_locale
       <th scope="row">必須</th>
       <td>
         条件次第: _locales
-        サブディレクトリがある場合は必要で、そうでない場合は不要。
+        サブディレクトリーがある場合は必要で、そうでない場合は不要。
       </td>
     </tr>
     <tr>
@@ -25,7 +25,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/default_locale
   </tbody>
 </table>
 
-このキーは拡張機能が \_locales ディレクトリを含んでいる場合は必要で、そうでない場合は不要です。これは \_locales のサブディレクトリを識別し、このサブディレクトリは拡張機能の既定の文字列を探すために使用されます。
+このキーは拡張機能が \_locales ディレクトリーを含んでいる場合は必要で、そうでない場合は不要です。これは \_locales のサブディレクトリーを識別し、このサブディレクトリーは拡張機能の既定の文字列を探すために使用されます。
 
 [国際化](/ja/Add-ons/WebExtensions/Internationalization)を見てください。
 
