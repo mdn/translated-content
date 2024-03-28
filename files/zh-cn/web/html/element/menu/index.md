@@ -85,7 +85,7 @@ button {
         <p>
           <a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
             >流式内容</a
-          >，如果元素的子元素包含至少一个
+          >。如果元素的子元素包含至少一个
           {{HTMLElement("li")}} 元素：<a
             href="/zh-CN/docs/Web/HTML/Content_categories#可感知内容"
             >可感知内容</a
