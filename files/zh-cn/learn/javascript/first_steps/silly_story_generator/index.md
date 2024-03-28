@@ -186,7 +186,8 @@ slug: Learn/JavaScript/First_steps/Silly_story_generator
   ```js
   document.querySelector("html").style.backgroundColor = "red";
   ```
-- 公制单位与美制单位之间的转换公式 `华氏度 = 32+ 摄氏度× 1.8`  `一磅 = 0.45359千克`
+
+- 公制单位与美制单位之间的转换公式 `华氏度 = 32+ 摄氏度× 1.8` `一磅 = 0.45359千克`
 - [`Math.round()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/round) 是 Javascript 的内建函数，可取得与传入小数最接近的整数。
 - 本示例中有三类字符串需要替换。可以多次重复 `replace()` 方法，也可使用正则表达式。例如：`var text = 'I am the biggest lover, I love my love';` 或 `text.replace(/love/g,'like');` 会将所有的“love”替换为“like”。记住，字符串本身是不可修改的！
 
