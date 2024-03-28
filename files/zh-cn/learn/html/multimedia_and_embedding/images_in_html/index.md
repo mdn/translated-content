@@ -94,7 +94,7 @@ l10n:
 
 测试 `alt` 文本的最简单方法是故意拼错文件名。如果我们的图片名字拼成 `dinosooooor.jpg`，浏览器就不会显示图片，而会显示 `alt` 文本：
 
-![标题为“Images in HTML title”，但是这次恐龙图片没有显示，在它原有的位置只有 alt 文本。](alt-text.png)
+![标题为“Images in HTML”，但是这次恐龙图片没有显示，在它原有的位置只有 alt 文本。](alt-text.png)
 
 那么，为什么我们需要备选文本呢？它可以派上用场的地方有很多：
 
@@ -204,7 +204,7 @@ l10n:
 
 好，轮到你了！在这个动手练习中，我们希望你可以做一个简单的嵌入图片练习。你有一个基本的 {{htmlelement("img")}} 标签；我们希望你可以把下面这个 URL 所指向的图片嵌入到 HTML 中：
 
-```
+```url
 https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg
 ```
 
