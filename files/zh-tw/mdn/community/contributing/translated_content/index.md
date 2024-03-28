@@ -24,7 +24,7 @@ l10n:
 - 討論群組：[Telegram（`MDN localization in Brazilian Portuguese`）](https://t.me/mdn_l10n_pt_br)
 - 目前的維護者：[Nathália Pissuti](https://github.com/nathipg), [Josiel Rocha](https://github.com/josielrocha), [Clóvis Lima Júnior](https://github.com/clovislima)
 
-### 中文（`zh-CN`, `zh-TW`）
+### 中文（`zh-CN`、`zh-TW`）
 
 - 討論群組：[Telegram（`Mozilla China`）](https://t.me/mozilla_china), [Telegram（`MozTW L10n`）](https://moztw.org/community/telegram/)
 - 目前的維護者：[Irvin](https://github.com/irvin), [t7yang](https://github.com/t7yang), [yin1999](https://github.com/yin1999), [jasonren0403](https://github.com/jasonren0403), [JasonLamv-t](https://github.com/JasonLamv-t)
