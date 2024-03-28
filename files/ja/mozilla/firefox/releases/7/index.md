@@ -5,7 +5,7 @@ slug: Mozilla/Firefox/Releases/7
 
 Firefox 7 は 2011 年 9 月 27 日にリリースされました。このページは Firefox 7 のリリースにあたり、開発者に関係する変更についてまとめたものです。
 
-## Web 開発者向けの変更点一覧
+## ウェブ開発者向けの変更点一覧
 
 ### HTML
 
@@ -43,16 +43,16 @@ Firefox 7 は 2011 年 9 月 27 日にリリースされました。このペー
 
 ### DOM
 
-- {{ domxref("File") }} インターフェースの非標準なメソッド `getAsBinary()`, `getAsDataURL()`, `getAsText()` が削除されました。あわせて、非標準なプロパティ `fileName` と `fileSize`も削除されました。
-- {{ domxref("Blob") }} によってデータが指定され、また `Content-Disposition` HTTP ヘッダが送信されたとき、{{ domxref("XMLHttpRequest/FormData", "FormData") }} インターフェースはファイル名を空文字列として報告しないようになりました。これによって幾つかのサーバに起こっていたエラーが解消されます。
+- {{ domxref("File") }} インターフェイスの非標準なメソッド `getAsBinary()`, `getAsDataURL()`, `getAsText()` が削除されました。あわせて、非標準なプロパティ `fileName` と `fileSize`も削除されました。
+- {{ domxref("Blob") }} によってデータが指定され、また `Content-Disposition` HTTP ヘッダが送信されたとき、{{ domxref("XMLHttpRequest/FormData", "FormData") }} インターフェイスはファイル名を空文字列として報告しないようになりました。これによって幾つかのサーバに起こっていたエラーが解消されます。
 - {{ domxref("element.dir") }} 属性が結果を常に小文字で返すようになりました。これは HTML 仕様の要件によるものです。
 - {{ domxref("FileReader") }} の `readAsArrayBuffer()` メソッドが実装されました。
-- {{ domxref("document.createEntityReference") }} が削除されました。このメソッドは適切に実装されておらず、他のブラウザのほとんどで実装されていませんでした。
+- {{ domxref("document.createEntityReference") }} が削除されました。このメソッドは適切に実装されておらず、他のブラウザーのほとんどで実装されていませんでした。
 - `document.normalizeDocument` が削除されました。今後は {{ domxref("Node.normalize") }} を利用してください。
 - `index` が範囲外の場合、{{ domxref("DOMTokenList.item") }} が `undefined` を返すようになりました。これまでは `null` を返していました。
 - `Node.getFeature` が削除されました。
-- `HTMLInsElement` インターフェースと `HTMLDelElement` インターフェースが削除されました。これは {{ HTMLElement("ins") }} と {{ HTMLElement("del") }} 要素が実際には {{ domxref("HTMLModElement") }} を使用していたためです。
-- 新しい [DOM4](http://www.w3.org/TR/dom/) 仕様にある {{ domxref("Attr") }} が {{ domxref("Node") }} を継承しない (DOM Core 1, 2, 3 まではしていた) という定義に準拠するため、{{ domxref("Attr") }} インターフェース上の {{ domxref("Node") }} プロパティやメソッドについて、将来的にこれらを削除するといった意味の [警告を出す](/ja/docs/DOM/Attr#Deprecated_properties_and_methods) ようになりました。
+- `HTMLInsElement` インターフェイスと `HTMLDelElement` インターフェイスが削除されました。これは {{ HTMLElement("ins") }} と {{ HTMLElement("del") }} 要素が実際には {{ domxref("HTMLModElement") }} を使用していたためです。
+- 新しい [DOM4](http://www.w3.org/TR/dom/) 仕様にある {{ domxref("Attr") }} が {{ domxref("Node") }} を継承しない (DOM Core 1, 2, 3 まではしていた) という定義に準拠するため、{{ domxref("Attr") }} インターフェイス上の {{ domxref("Node") }} プロパティやメソッドについて、将来的にこれらを削除するといった意味の [警告を出す](/ja/docs/DOM/Attr#Deprecated_properties_and_methods) ようになりました。
 - {{ domxref("Window") }} オブジェクトに {{ domxref("window.ondeviceorientation") }} プロパティと {{ domxref("window.ondevicemotion") }} プロパティのサポートを追加しました。
 - {{ domxref("window.resizeTo") }}、{{ domxref("window.resizeBy") }}、{{ domxref("window.moveTo") }}、{{ domxref("window.moveBy") }} はメインウィンドウに適用されなくなりました。
 
@@ -82,7 +82,7 @@ Firefox 7 は 2011 年 9 月 27 日にリリースされました。このペー
 
 これらの変更は、アドオン開発者と、Mozilla 本体のコードに関わっている開発者の双方に影響するものです。アドオン開発者は [アドオンの Firefox 7 対応](/ja/docs/Firefox/Updating_extensions_for_Firefox_7) に書かれている追加情報も参照してください。
 
-> **メモ:** Firefox 7 では、従来のメジャーリリースと同様に、バイナリコンポーネントをコンパイルし直す必要があります。詳しくは [バイナリインタフェース](/ja/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces) をご覧ください。
+> **メモ:** Firefox 7 では、従来のメジャーリリースと同様に、バイナリコンポーネントをコンパイルし直す必要があります。詳しくは [バイナリインターフェイス](/ja/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces) をご覧ください。
 
 ### JavaScript コードモジュール
 
@@ -97,49 +97,49 @@ Firefox 7 は 2011 年 9 月 27 日にリリースされました。このペー
 ### XUL
 
 - [`tree`](/ja/docs/XUL/tree) 要素で、[`datasources`](/ja/docs/XUL/Attribute/datasources) 属性によって参照されたノードがすべて `id` 属性で指定された固有 ID を持っていた場合、3 種類の公開状態を記憶できるようになりました。
-- [`panel`](/ja/docs/XUL/panel) 要素で、新しい [`backdrag`](/ja/docs/XUL/Attribute/backdrag) 属性を使って、[ユーザがバックグラウンドの任意の場所をクリックして、その要素をドラッグできるように](/ja/docs/XUL/PopupGuide/Panels#Letting_panels_be_dragged_by_grabbing_the_background) 設定することが可能となりました。
+- [`panel`](/ja/docs/XUL/panel) 要素で、新しい [`backdrag`](/ja/docs/XUL/Attribute/backdrag) 属性を使って、[ユーザーがバックグラウンドの任意の場所をクリックして、その要素をドラッグできるように](/ja/docs/XUL/PopupGuide/Panels#Letting_panels_be_dragged_by_grabbing_the_background) 設定することが可能となりました。
 
 ### XPCOM
 
 - [`Components.utils.schedulePreciseGC()`](/ja/docs/Components.utils.schedulePreciseGC) メソッドが追加されました。これは、以後どこかの時点で JavaScript コードが何も実行されていないときに、完全なガベージコレクション処理を行う予定を入れられるものです。
 - [`Components.utils.unload()`](/ja/docs/Components.utils.unload) メソッドが追加されました。これは、[`Components.utils.load()`](/ja/docs/Components.utils.load) で読み込まれた JavaScript コードモジュールを破棄できるようにするものです。
 
-### ユーザ体験の変更
+### ユーザー体験の変更
 
 - 拡張機能のオプションが、再起動不要型と従来型のいずれでも [アドオンマネージャ内に表示](/ja/docs/Extensions/Inline_Options) されるようになりました。
 - ダウンロードされたファイルの保存先がサイトごとに記憶されるようになりました。このデータは [DownloadLastDir.jsm](/ja/docs/JavaScript_code_modules/DownloadLastDir.jsm) を使ってアクセスできます。
 
 ### ビルドシステムの変更
 
-- ActiveX 組み込み API はビルドされなくなり、ビルドシステムでのサポートも削除されました。関連インタフェースも削除されました。下記 [削除されたインタフェース](#削除されたインタフェース) を参照してください。
+- ActiveX 組み込み API はビルドされなくなり、ビルドシステムでのサポートも削除されました。関連インターフェイスも削除されました。下記 [削除されたインターフェイス](#削除されたインターフェイス) を参照してください。
 - Windows でのビルド時に `-Zc:wchar_t-` を指定できなくなりました。詳しくは、更新された [ビルド手順](/ja/docs/Developer_Guide/Build_Instructions#Build_and_install) をご覧ください。
 
-### インタフェースの変更
+### インターフェイスの変更
 
 - [`nsISocketTransport`](/ja/docs/XPCOM_Interface_Reference/nsISocketTransport) に新しい接続フラグ `DISABLE_IPV6` が追加されました。これは、利用可能な IPv6 アドレスがあってもそれを無視して、IPv4 アドレスのみに接続するようソケットを設定するものです。また、[`nsIDNSService`](/ja/docs/XPCOM_Interface_Reference/nsIDNSService) に新しい解決フラグ `RESOLVE_DISABLE_IPV6` が追加されました。これは、利用可能な IPv6 アドレスがあってもそれを無視して、IPv4 ホストのみを考慮してドメイン名解決を行うものです。これらの変更は、IPv4 と IPv6 の両方に対応している (その中でも特に IPv6 接続がうまくいかない) ホストへ接続する際の応答時間を短縮する [「幸せな目玉」戦略](http://tools.ietf.org/html/draft-wing-http-new-tech-00) を実装するために使われます。
 - [`inIDOMUtils`](/ja/docs/XPCOM_Interface_Reference/inIDOMUtils) に 2 つのメソッドが追加されました。あるノードの子ノード一覧を返す [`getChildrenForNode()`](/ja/docs/XPCOM_Interface_Reference/inIDOMUtils#getChildrenForNode%28%29) と、選択範囲内で使用されているフォントフェイス一覧を返す [`getUsedFontFaces()`](/ja/docs/XPCOM_Interface_Reference/inIDOMUtils#getUsedFontFaces%28%29) です。
-- `nsIMarkupDocumentViewer_MOZILLA_2_0_BRANCH` インタフェースは [`nsIMarkupDocumentViewer`](/ja/docs/XPCOM_Interface_Reference/nsIMarkupDocumentViewer) インタフェースへ統合されました。
-- `nsIDOMWindow2` インタフェースは [`nsIDOMWindow`](/ja/docs/XPCOM_Interface_Reference/nsIDOMWindow) インタフェースへ統合されました。
-- `nsIDOMWindow_2_0_BRANCH` インタフェースは [`nsIDOMWindowInternal`](/ja/docs/XPCOM_Interface_Reference/nsIDOMWindowInternal) インタフェースへ統合されました。
+- `nsIMarkupDocumentViewer_MOZILLA_2_0_BRANCH` インターフェイスは [`nsIMarkupDocumentViewer`](/ja/docs/XPCOM_Interface_Reference/nsIMarkupDocumentViewer) インターフェイスへ統合されました。
+- `nsIDOMWindow2` インターフェイスは [`nsIDOMWindow`](/ja/docs/XPCOM_Interface_Reference/nsIDOMWindow) インターフェイスへ統合されました。
+- `nsIDOMWindow_2_0_BRANCH` インターフェイスは [`nsIDOMWindowInternal`](/ja/docs/XPCOM_Interface_Reference/nsIDOMWindowInternal) インターフェイスへ統合されました。
 - URI 引数付きで [`nsINavHistoryObserver`](/ja/docs/XPCOM_Interface_Reference/nsINavHistoryObserver) メソッドを使う場合、GUID も必要となります。
-- `nsISHistory_2_0_BRANCH` インタフェースは [`nsISHistory`](/ja/docs/XPCOM_Interface_Reference/nsISHistory) インタフェースへ統合されました。
+- `nsISHistory_2_0_BRANCH` インターフェイスは [`nsISHistory`](/ja/docs/XPCOM_Interface_Reference/nsISHistory) インターフェイスへ統合されました。
 - [`nsITelemetry`](/ja/docs/XPCOM_Interface_Reference/nsITelemetry) に、ID からヒストグラムを返す [`getHistogramById()`](/ja/docs/XPCOM_Interface_Reference/nsITelemetry#getHistogramById%28%29) メソッドと、`false` 設定時に [使用統計情報 (Telemetry)](http://mozilla.jp/legal/privacy/firefox/#telemetry) の記録を無効化できる `canRecord` 属性が追加されました。使用統計情報はプライベートブラウジングモードでは記録されなくなりました。([Firefox バグ 661574](https://bugzil.la/661574)、[Firefox バグ 661573](https://bugzil.la/661573))
   [`newHistogram()`](/ja/docs/XPCOM_Interface_Reference/nsITelemetry#newHistogram%28%29) で定義された使用統計ヒストグラムは、Mozilla への定期報告に含まれません。
-- [`nsIMemoryReporter`](/ja/docs/XPCOM_Interface_Reference/nsIMemoryReporter) インタフェースに大幅な変更が行われました。使用する場合はコードに変更を加える必要があるでしょう。
+- [`nsIMemoryReporter`](/ja/docs/XPCOM_Interface_Reference/nsIMemoryReporter) インターフェイスに大幅な変更が行われました。使用する場合はコードに変更を加える必要があるでしょう。
 - [`nsIXMLHttpRequest.setRequestHeader()`](/ja/docs/nsIXMLHttpRequest#setRequestHeader%28%29) によって設定されたヘッダが、リダイレクトを辿る際にもリクエストに含まれて送信されるようになりました。これまでこの方法で設定されたヘッダは送信されていませんでした。
 - [`nsIDocShell`](/ja/docs/XPCOM_Interface_Reference/nsIDocShell) に `allowWindowControl` 属性が追加されました。`true` を設定すると、docshell のコンテンツがウィンドウをコントロールできるようになります (ウィンドウの移動やサイズ変更など)。
-- `nsIThreadInternal2` インタフェースは [`nsIThreadInternal`](/ja/docs/XPCOM_Interface_Reference/nsIThreadInternal) インタフェースへ統合されました。
+- `nsIThreadInternal2` インターフェイスは [`nsIThreadInternal`](/ja/docs/XPCOM_Interface_Reference/nsIThreadInternal) インターフェイスへ統合されました。
 
-#### 新しいインタフェース
+#### 新しいインターフェイス
 
 - [`nsIDOMFontFace`](/ja/docs/XPCOM_Interface_Reference/nsIDOMFontFace)
   - : ひとつのフォントフェイスを表します。
 - [`nsIDOMFontFaceList`](/ja/docs/XPCOM_Interface_Reference/nsIDOMFontFaceList)
   - : [`nsIDOMFontFace`](/ja/docs/XPCOM_Interface_Reference/nsIDOMFontFace) で表されたフォントフェイスの一覧を表します。
 
-#### 削除されたインタフェース
+#### 削除されたインターフェイス
 
-以下のインタフェースは、不要となり削除された実装です。
+以下のインターフェイスは、不要となり削除された実装です。
 
 - `nsIDOM3Attr`
 - `nsIDOM3Node`
@@ -153,7 +153,7 @@ Firefox 7 は 2011 年 9 月 27 日にリリースされました。このペー
 - `nsIDOMNSHTMLHRElement`
 - `nsIDOMNSHTMLTextAreaElement`
 
-以下のインタフェースは、ActiveX 組み込み API 廃止の一環として削除されました。
+以下のインターフェイスは、ActiveX 組み込み API 廃止の一環として削除されました。
 
 - `DITestScriptHelper`
 - `DWebBrowserEvents`

@@ -13,7 +13,7 @@ slug: Mozilla/Firefox/Releases/90
 
 ### 開発者ツール
 
-- 応答ビューで [Web フォントのプレビュー](/ja/docs/Tools/Network_Monitor/request_details#response_tab) を表示するようになりました ([Firefox バグ 872078](https://bugzil.la/872078))。
+- 応答ビューで [ウェブフォントのプレビュー](/ja/docs/Tools/Network_Monitor/request_details#response_tab) を表示するようになりました ([Firefox バグ 872078](https://bugzil.la/872078))。
 
 ### HTML
 

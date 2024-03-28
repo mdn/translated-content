@@ -5,7 +5,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/update
 
 {{AddonSidebar}}
 
-**`bookmarks.update()`** は、ブックマークの URL やタイトル、またはフォルダの名前を更新するメソッドです。
+**`bookmarks.update()`** は、ブックマークの URL やタイトル、またはフォルダーの名前を更新するメソッドです。
 
 ブックマーク要素が見つからなかった場合には {{WebExtAPIRef("runtime.lastError")}} がセットされるので、エラーの有無をコールバックで確認できます。
 
@@ -22,13 +22,13 @@ browser.bookmarks.update(
 ### 引数
 
 - `id`
-  - : 更新したいブックマーク / フォルダの ID を表す {{jsxref("string")}} です。
+  - : 更新したいブックマーク / フォルダーの ID を表す {{jsxref("string")}} です。
 - `changes`
 
-  - : 適用したい変更内容を表す {{jsxref("object")}} であり、以下のプロパティから構成されます。指定しなかったプロパティについて、ブックマークやフォルダが変更されることはありません。
+  - : 適用したい変更内容を表す {{jsxref("object")}} であり、以下のプロパティから構成されます。指定しなかったプロパティについて、ブックマークやフォルダーが変更されることはありません。
 
     - `title`{{optional_inline}}
-      - : `id` がフォルダを表す場合、ブックマークの新しいタイトル / フォルダの新しい名前を指定する {{jsxref("string")}} です。
+      - : `id` がフォルダーを表す場合、ブックマークの新しいタイトル / フォルダーの新しい名前を指定する {{jsxref("string")}} です。
     - `url`{{optional_inline}}
       - : ブックマークの新しい URL を指定する {{jsxref("string")}} です。
 
@@ -45,9 +45,9 @@ browser.bookmarks.update(
 
 ## 使用例
 
-### フォルダのリネーム
+### フォルダーのリネーム
 
-以下の例は、"MDN" という名前のフォルダすべてを "MDN" to "Mozilla Developer Network (MDN)" にリネームするものです。
+以下の例は、"MDN" という名前のフォルダーすべてを "MDN" to "Mozilla Developer Network (MDN)" にリネームするものです。
 
 ```js
 function updateFolders(items) {

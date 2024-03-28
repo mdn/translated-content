@@ -1,8 +1,8 @@
 ---
-title: "HTML: アクセシビリティの基礎"
+title: "HTML: アクセシビリティの良き基本"
 slug: Learn/Accessibility/HTML
 l10n:
-  sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
+  sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
@@ -14,7 +14,7 @@ l10n:
     <tr>
       <th scope="row">前提知識:</th>
       <td>
-        基本的なコンピュータの知識、HTML に関する基本的な理解（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML"
+        HTML に関する基本的な理解（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 概論</a
         >を参照）、<a href="/ja/docs/Learn/Accessibility/What_is_accessibility"
           >アクセシビリティとは何か</a
@@ -101,7 +101,7 @@ HTML の `<button>` は、ある種の適切なスタイルが（おそらくそ
 
 スクリーンリーダーを使って試せるように、より長いテキストのバージョンを用意してあります ([good-semantics.html](https://mdn.github.io/learning-area/accessibility/html/good-semantics.html) を参照)。これの全体をナビゲートしてみれば、これはとても見通しが得やすいものだということがわかるでしょう。
 
-1. コンテンツの中を進んで行くのにつれて、スクリーンリーダーは各ヘッダを読み上げて、どれが見出しでどれが段落なのかといったことを知らせてくれます。
+1. コンテンツの中を進んで行くのにつれて、スクリーンリーダーは各ヘッダーを読み上げて、どれが見出しでどれが段落なのかといったことを知らせてくれます。
 2. どのような速度が快適であるにせよ、その速度で進んでいけるように、スクリーンリーダーは各要素の後で停止します。
 3. 多くのスクリーンリーダーでは、次の見出し / 前の見出しへとジャンプできます。
 4. 多くのスクリーンリーダーでは、すべての見出しの一覧を取り出せます。それらの見出しを、特定のコンテンツを見つけるための手軽な目次のようにも使えます。
