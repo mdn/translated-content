@@ -1,5 +1,5 @@
 ---
-title: Error：message
+title: "Error: message"
 slug: Web/JavaScript/Reference/Global_Objects/Error/message
 l10n:
   sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
