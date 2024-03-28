@@ -41,7 +41,7 @@ _There is no active learning available yet. [Please, consider contributing](/ko/
 
 웹사이트를 생성하고 편집하기 위해, 텍스트 에디터가 필요합니다. 텍스트 에디터는 무서식의 텍스트 파일을 생성하고 수정합니다. (**{{Glossary("RTF")}}** 같은 다른 형식(format)들은, 볼드체와 밑줄같은 포멧을 추가하게 합니다. 이런 포맷들은 웹 페이지를 쓰는 데 적합하지 않습니다.) 당신은 현명하게 텍스트 에디터를 선택해야 합니다. 왜냐하면, 웹사이트를 구축하는 동안에, 광범위하게 사용해야하기 때문입니다.
 
-모든 데스크탑 운영체제는 기본적인 텍스트 에디터가 딸려 있습니다. 이런 에디터들은 모두 간단하지만, 웹페이지 코딩에 특별한 기능들이 부족합니다. 만약 당신이 더 복잡한 것을 원한다면, 많은 이용가능한 다른(third-party) 툴들이 있습니다. 서드-파티 에디터들은 구문 색표시, 자동완성, 섹션접기, 코드검색을 포함하는 추가 기능이 딸려 있습니다. 에디터들의 간략한 리스트입니다:
+모든 데스크탑 운영체제는 기본적인 텍스트 에디터가 딸려 있습니다. 이런 에디터들은 모두 간단하지만, 웹페이지 코딩에 특별한 기능들이 부족합니다. 만약 당신이 더 복잡한 것을 원한다면, 많은 이용가능한 다른(third-party) 툴들이 있습니다. 서드-파티 에디터들은 구문 색표시, 자동완성, 섹션접기, 코드검색을 포함하는 추가 기능이 딸려 있습니다. 에디터들의 간략한 리스트입니다.
 
 | 운영 체제 | 내장 에디터                                                                                                                                                                                                                                | Third-party 에디터                                                                                                                                                                                              |
 | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -50,17 +50,17 @@ _There is no active learning available yet. [Please, consider contributing](/ko/
 | Linux     | [Vi](http://en.wikipedia.org/wiki/Vi) (All UNIX) [GEdit](http://en.wikipedia.org/wiki/Gedit) (Gnome) [Kate](http://en.wikipedia.org/wiki/Kate_%28text_editor%29) (KDE) [LeafPad](<http://en.wikipedia.org/wiki/Kate_(text_editor)>) (Xfce) | [Emacs](http://www.gnu.org/software/emacs/) [Vim](http://www.vim.org/)[Visual Studio Code](https://www.visualstudio.com/)[Brackets](http://brackets.io/)[ShiftEdit](https://shiftedit.net/)                     |
 | ChromeOS  |                                                                                                                                                                                                                                            | [ShiftEdit](https://shiftedit.net/)                                                                                                                                                                             |
 
-이것은 하나의 고급 텍스트 에디터의 스크린샷입니다:
+이것은 하나의 고급 텍스트 에디터의 스크린샷입니다.
 
 ![Screenshot of Notepad++.](notepadplusplus.png)
 
-이것은 온라인 텍스트 에디터의 스크린샷입니다:
+이것은 온라인 텍스트 에디터의 스크린샷입니다.
 
 ![Screenshot of ShiftEdit](shiftedit.png)
 
 ### 웹에 파일 업로드하기
 
-당신의 웹사이트가 대중들에게 보여지기 전에, 웹 서버에 웹페이지를 업로드 해야할 것입니다. 당신은 다양한 제공자로부터 서버의 공간을 살 수 있습니다. ([How much does it cost to do something on the web?](/ko/docs/Learn/How_much_does_it_cost)를 보십시오). 일단, 당신이 어떤 제공자를 사용할 지 정했다면, 제공자는 당신에게 FTP(파일 전송 프로토콜) 접근 정보를 이메일로 보낼 것입니다.웹 사이트를 만들 때, 웹 서버에 파일을 업로드 하는 것은 매우 중요한 단계입니다, 그래서 우리는 상세한 부분은 [a separate article(따로 분리한 글)](/ko/docs/Learn/Upload_files_to_a_web_server)에서 다루겠습니다. 아래는 무료 기본 FTP 클라이언트의 목록입니다:
+당신의 웹사이트가 대중들에게 보여지기 전에, 웹 서버에 웹페이지를 업로드 해야할 것입니다. 당신은 다양한 제공자로부터 서버의 공간을 살 수 있습니다. ([How much does it cost to do something on the web?](/ko/docs/Learn/How_much_does_it_cost)를 보십시오). 일단, 당신이 어떤 제공자를 사용할 지 정했다면, 제공자는 당신에게 FTP(파일 전송 프로토콜) 접근 정보를 이메일로 보낼 것입니다.웹 사이트를 만들 때, 웹 서버에 파일을 업로드 하는 것은 매우 중요한 단계입니다, 그래서 우리는 상세한 부분은 [a separate article(따로 분리한 글)](/ko/docs/Learn/Upload_files_to_a_web_server)에서 다루겠습니다. 아래는 무료 기본 FTP 클라이언트의 목록입니다.
 
 <table class="standard-table">
   <thead>

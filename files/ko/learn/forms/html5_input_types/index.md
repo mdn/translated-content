@@ -49,7 +49,7 @@ l10n:
 <input type="email" id="email" name="email" multiple />
 ```
 
-일부 장치에서 — 특히 동적 키보드가 있는 터치 장치인 스마트폰과 같은 장치에서 — `@` 키를 포함하여 이메일 주소를 입력하기에 더 적합한 다른 가상 키보드가 제공될 수 있습니다. 아래의 Firefox for Android 키보드 스크린샷은 예시입니다:
+일부 장치에서 — 특히 동적 키보드가 있는 터치 장치인 스마트폰과 같은 장치에서 — `@` 키를 포함하여 이메일 주소를 입력하기에 더 적합한 다른 가상 키보드가 제공될 수 있습니다. 아래의 Firefox for Android 키보드 스크린샷은 예시입니다.
 
 ![기본적으로 at 기호가 표시되는 Firefox for Android 이메일 키보드.](fx-android-email-type-keyboard.jpg)
 
