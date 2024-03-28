@@ -1,6 +1,8 @@
 ---
 title: Promise.prototype.catch()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/catch
+l10n:
+  sourceCommit: c08b415e28c07247ab8ef41c504f29d94f5bee6f
 ---
 
 {{JSRef}}
