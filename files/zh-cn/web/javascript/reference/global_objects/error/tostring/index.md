@@ -51,7 +51,7 @@ Error.prototype.toString = function () {
 
 ## 示例
 
-### 使用 toString() 方法
+### 使用 toString()
 
 ```js
 const e1 = new Error("致命错误");
@@ -86,4 +86,4 @@ console.log(e5.toString()); // "你好"
 
 ## 参见
 
-- [`core-js` 库中 `Error.prototype.toString` 方法的 Polyfill 修复的具体错误](https://github.com/zloirock/core-js#ecmascript-error)
+- [`core-js` 中 `Error.prototype.toString` 的 polyfill（修复了多个错误）](https://github.com/zloirock/core-js#ecmascript-error)
