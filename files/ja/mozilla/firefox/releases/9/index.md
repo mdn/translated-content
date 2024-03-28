@@ -5,14 +5,14 @@ slug: Mozilla/Firefox/Releases/9
 
 Firefox 9 は Windows 向けに 2011 年 12 月 20 日にリリースされました。その直後に見つかったクラッシュバグを修正した Mac 版および Linux 版のバージョン 9.0.1 は、2011 年 12 月 21 日にリリースされました。
 
-## Web 開発者向けの変更点一覧
+## ウェブ開発者向けの変更点一覧
 
 ### HTML
 
 - [`<li>`](/ja/docs/Web/HTML/Element/li) 要素の `value` 属性が負の値を取れるようになりました。これは HTML5 仕様に基づくもので、HTML5 以前は 0 に変換されていました。
 - [`<audio>`](/ja/docs/Web/HTML/Element/audio) と [`<video>`](/ja/docs/Web/HTML/Element/video) 要素を用いるときのメディアの URI において、[メディアの開始時間と終了時間を指定](/ja/docs/Using_HTML5_audio_and_video#Specifying_playback_range) できるようになりました。
 - [`<input>`](/ja/docs/Web/HTML/Element/input) 要素と [`<textarea>`](/ja/docs/Web/HTML/Element/textarea) 要素が、スペルチェッカーの実行において [`lang` 属性の値を加味](/ja/docs/HTML/Controlling_spell_checking_in_HTML_forms#Controlling_the_spellchecker_language)するようになりました。
-- Android 版 Firefox において、 `type="file"` と `accept="image/*" を指定している`[`<input>`](/ja/docs/Web/HTML/Element/input) 要素`のときに`、ユーザがブラウザからアプリを切り替えることなく電話のカメラを用いて写真を撮れるようになりました。
+- Android 版 Firefox において、 `type="file"` と `accept="image/*" を指定している`[`<input>`](/ja/docs/Web/HTML/Element/input) 要素`のときに`、ユーザーがブラウザーからアプリを切り替えることなく電話のカメラを用いて写真を撮れるようになりました。
 - Windows Vista スタイル PNG ICO イメージがサポートされるようになりました。
 - CORS が許可されているときに、CORS アクセスを要求するために [`crossorigin`](/ja/docs/HTML/CORS_settings_attributes) 属性 を用いた画像を描いても、不正に [Canvas を制限状態に](/ja/docs/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F)しないようになりました。
 - [`rowspan`](/ja/docs/Web/HTML/Element/td#attr-rowspan) 属性に指定できる値の最大値が 8190 から 65,534 になりました。
@@ -27,7 +27,7 @@ Firefox 9 は Windows 向けに 2011 年 12 月 20 日にリリースされま�
 ### DOM
 
 - [フルスクリーンモードの利用](/ja/docs/DOM/Using_full-screen_mode)
-  - : 新しい full-screen API は、ブラウザインターフェースを表示せずに、画面全体を用いてコンテンツを表示する方法を提供します。これはビデオおよびゲームにとって素晴らしいものです。この API は現在実験的かつプレフィックス付きです。
+  - : 新しい full-screen API は、ブラウザーインターフェイスを表示せずに、画面全体を用いてコンテンツを表示する方法を提供します。これはビデオおよびゲームにとって素晴らしいものです。この API は現在実験的かつプレフィックス付きです。
 
 <!---->
 
@@ -36,11 +36,11 @@ Firefox 9 は Windows 向けに 2011 年 12 月 20 日にリリースされま�
 - DOM Level 3 [Composition イベント](/ja/docs/DOM/CompositionEvent) がサポートされました。
 - [`Document.scripts`](/ja/docs/Web/API/Document/scripts) 属性が実装されました。このメソッドはドキュメントのすべての [`<script>`](/ja/docs/Web/HTML/Element/script) 要素の [`HTMLCollection`](/ja/docs/Web/API/HTMLCollection) を返します。
 - [`Document.queryCommandSupported()`](/ja/docs/Web/API/Document/queryCommandSupported) メソッドが実装されました。
-- 標準 IDL インターフェースとして Event ハンドラが実装されました。多くのケースで、これはコンテンツに影響を及ぼさないはずですが、[例外が存在します。](/ja/docs/DOM/DOM_event_handlers#Event_handler_changes_in_Firefox_9)
+- 標準 IDL インターフェイスとして Event ハンドラが実装されました。多くのケースで、これはコンテンツに影響を及ぼさないはずですが、[例外が存在します。](/ja/docs/DOM/DOM_event_handlers#Event_handler_changes_in_Firefox_9)
 - 新しいレスポンスタイプ、 "moz-json" が XMLHttpRequest に追加されました。 そのタイプを用いると、 XMLHttpRequest に自動的に [JSON](/ja/docs/JSON) 文字列をパースさせられます。つまり、このタイプをリクエストしたときはパースされた JSON 文字列が返るので、`response` プロパティの値がパース結果の JavaScript オブジェクトになります。
 - [XMLHttpRequest の progress イベント](/ja/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress) が受け取ったデータの各チャンクに対して確実に送信されるようになりました。つまり、以前のバージョンでは受け取ったデータの最後のチャンクが progeress イベントを発生させない可能性がありました。データの最後のチャンクを受け取ったかを判定するために load イベントも監視する必要はもう無くなり、progress イベントだけで進捗を追えるようになります。
 - 過去に、`null` のリスナーを指定した [`addEventListener()`](/ja/docs/DOM/element.addEventListener) の呼び出しは例外を投げていましたが、エラーを出すことなく、何の影響も及ぼさずに処理を戻すようになりました。
-- 新しい [`navigator.doNotTrack`](/ja/docs/Web/API/Navigator/doNotTrack 'ユーザーの do-not-track 設定を返します。ユーザーがウェブサイトやコンテンツ、広告にトラッキングされたくないと要求している場合、この値は "1" です。') プロパティを用いることで、コンテンツ中で簡単にユーザが do-no-track 設定を有効にしているかを判定できます。この値が "yes" ならば、ユーザを追跡するべきではありません。
+- 新しい [`navigator.doNotTrack`](/ja/docs/Web/API/Navigator/doNotTrack 'ユーザーの do-not-track 設定を返します。ユーザーがウェブサイトやコンテンツ、広告にトラッキングされたくないと要求している場合、この値は "1" です。') プロパティを用いることで、コンテンツ中で簡単にユーザーが do-no-track 設定を有効にしているかを判定できます。この値が "yes" ならば、ユーザーを追跡するべきではありません。
 - [`splitText()`](/ja/docs/Web/API/Text/splitText) や [`normalize()`](/ja/docs/Web/API/Node/normalize) が呼び出されたとき、[`Range`](/ja/docs/Web/API/Range) オブジェクトや [`Selection`](/ja/docs/Web/API/Selection) オブジェクトがとる挙動が仕様通りになりました。
 - doctype ノードに対しての [`Node.ownerDocument`](/ja/docs/Web/API/Node/ownerDocument) の値が、`null` ではなく、ノードを作成するために呼ばれた [`createDocumentType()`](/ja/docs/DOM/DOMImplementation.createDocumentType) 上のドキュメントになるようになりました。
 - `window.navigator.taintEnabled` が削除されました。このプロパティは長年サポートされていませんでした。
@@ -95,9 +95,9 @@ See [Updating add-ons for Firefox 9](/ja/docs/Firefox/Updating_add-ons_for_Firef
 
 #### Miscellaneous interface changes
 
-- [`nsISound`](/ja/docs/XPCOM_Interface_Reference/nsISound) インタフェースに新しい定数 `EVENT_EDITOR_MAX_LEN` が導入され、テキスト欄に入力された文字数が制限を超えた場合にシステム効果音を鳴らせるようになりました。今のところ、これは Windows のみで使用されています。
-- [`nsIScriptError2`](/ja/docs/XPCOM_Interface_Reference/nsIScriptError2) インタフェースに新しいプロパティ `timeStamp` と `innerWindowID` が追加されました。また、`initWithWindowID()` メソッドが、外部ウィンドウ ID の代わりに内部ウィンドウ ID を受け取るようになりました。
-- [`nsIBidiKeyboard`](/ja/docs/XPCOM_Interface_Reference/nsIBidiKeyboard) インタフェースに [`haveBidiKeyboards`](/ja/docs/XPCOM_Interface_Reference/nsIBidiKeyboard#haveBidiKeyboards) 属性が追加されました。これは、OS に少なくともひとつ各方向 (LTR もしくは RTL) のキーボードがインストールされているかどうかを判別できるものです。.
+- [`nsISound`](/ja/docs/XPCOM_Interface_Reference/nsISound) インターフェイスに新しい定数 `EVENT_EDITOR_MAX_LEN` が導入され、テキスト欄に入力された文字数が制限を超えた場合にシステム効果音を鳴らせるようになりました。今のところ、これは Windows のみで使用されています。
+- [`nsIScriptError2`](/ja/docs/XPCOM_Interface_Reference/nsIScriptError2) インターフェイスに新しいプロパティ `timeStamp` と `innerWindowID` が追加されました。また、`initWithWindowID()` メソッドが、外部ウィンドウ ID の代わりに内部ウィンドウ ID を受け取るようになりました。
+- [`nsIBidiKeyboard`](/ja/docs/XPCOM_Interface_Reference/nsIBidiKeyboard) インターフェイスに [`haveBidiKeyboards`](/ja/docs/XPCOM_Interface_Reference/nsIBidiKeyboard#haveBidiKeyboards) 属性が追加されました。これは、OS に少なくともひとつ各方向 (LTR もしくは RTL) のキーボードがインストールされているかどうかを判別できるものです。.
 - The new [`nsIEditor.isSelectionEditable`](/ja/docs/XPCOM_Interface_Reference/nsIEditor#isSelectionEditable) attribute lets you determine if the current selection anchor is editable. This helps to support cases where only parts of the document are editable, by letting you see if the current selection is in an editable section.
 - The [`nsIBrowserHistory.registerOpenPage()`](</ja/docs/XPCOM_Interface_Reference/nsIBrowserHistory#registerOpenPage()>) and [`nsIBrowserHistory.unregisterOpenPage()`](</ja/docs/XPCOM_Interface_Reference/nsIBrowserHistory#unregisterOpenPage()>) methods have been removed as part of a performance overhaul in the Places system. You can use the corresponding methods in [`mozIPlacesAutoComplete`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIPlacesAutoComplete) instead.
 - The [`nsIDOMWindowUtils.wrapDOMFile()`](</ja/docs/XPCOM_Interface_Reference/nsIDOMWindowUtils#wrapDOMFile()>) method has been added; this returns a DOM [`File`](/ja/docs/Web/API/File) object for a given [`nsIFile`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFile).
