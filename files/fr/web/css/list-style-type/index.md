@@ -247,7 +247,7 @@ ol.shortcut {
 
 #### Résultat
 
-{{EmbedLiveSample('',"200","300")}}
+{{EmbedLiveSample("Définition de l'apparence des puces","200","300")}}
 
 ### Tous les styles de liste
 
@@ -707,7 +707,7 @@ container.addEventListener("change", (event) => {
 
 #### Résultat
 
-{{EmbedLiveSample("", "600", "850")}}
+{{EmbedLiveSample("Tous les styles de liste", "600", "850")}}
 
 ## Spécifications
 
