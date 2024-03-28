@@ -1,5 +1,5 @@
 ---
-title: Empty statement
+title: empty 语句
 slug: Web/JavaScript/Reference/Statements/Empty
 l10n:
   sourceCommit: c6f0f106b9083984dbf597678def6561729bb459
@@ -41,7 +41,7 @@ console.log(arr);
 
 ### 非刻意使用
 
-*刻意*使用空语句时，建议添加注释说明，因为空语句与普通分号不易区分。
+*刻意*使用空语句时，最好在代码中添加注释说明，因为空语句很难与普通的分号区分开来。
 
 在下面的示例中，这种用法可能并非有意为之：
 
