@@ -182,5 +182,5 @@ GitHub ライブサンプルは、 [`EmbedGHLiveSample`](https://github.com/mdn/
 
 ### GitHub ライブサンプルを使用するためのヒント
 
-- まず最初に、適切なコードサンプルを [GitHub の mdn 組織](https://github.com/mdn/)に登録する必要があります。これは Git を使って行う必要があります。 Git に慣れていない方は、 [GitHub ページの使い方](/ja/docs/Learn/Common_questions/Using_Github_pages)の記事を参照してください。もっと慣れている人は[データを追加する準備](/ja/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables#preparing_to_add_the_data)を参照してください。
+- まず最初に、適切なコードサンプルを [GitHub の mdn 組織](https://github.com/mdn/)に登録する必要があります。これは Git を使って行う必要があります。 Git に慣れていない方は、 [GitHub ページの使い方](/ja/docs/Learn/Common_questions/Tools_and_setup/Using_Github_pages)の記事を参照してください。もっと慣れている人は[データを追加する準備](/ja/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables#preparing_to_add_the_data)を参照してください。
 - コードサンプルは、実証しようとしていることを示すのに適したものでなければなりません。 1 つのことをうまく行う簡単なサンプルが含まれていること、不快な内容が含まれていないこと、そして MDN の[コードサンプルガイドライン](/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)に従っている必要があります。

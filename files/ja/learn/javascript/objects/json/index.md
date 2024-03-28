@@ -250,7 +250,7 @@ function populateHeroes(obj) {
 
 始めに、JavaScript オブジェクトの `members` プロパティを新しい変数に保存します。この配列には複数のオブジェクトがあり、それぞれにヒーローについての情報が入ります。
 
-次に、[for...of ループ](/ja/docs/Learn/JavaScript/Building_blocks/Looping_code#the_for...of_loop)を使って配列のそれぞれのオブジェクトを反復処理します。それぞれの次のようなことを行います。
+次に、[for...of ループ](/ja/docs/Learn/JavaScript/Building_blocks/Looping_code#for...of_ループ)を使って配列のそれぞれのオブジェクトを反復処理します。それぞれの次のようなことを行います。
 
 1. 新しい要素をいくつか作成します。`<article>` 1 つ、 `<h2>` 1 つ、 `<p>` 3 つ、`<ul>` 1 つです。
 2. `<h2>` の中身を現在のヒーローの名前 (`name`) にします。

@@ -15,7 +15,7 @@ slug: Learn/Server-side/First_steps/Client-Server_overview
 
 ## Web サーバと HTTP (入門書)
 
-Web ブラウザーは、**H**yper**T**ext **T**ransfer **P**rotocol ([HTTP](/ja/docs/Web/HTTP)) を使用して [Web サーバ](/ja/docs/Learn/Common_questions/What_is_a_web_server)と通信します。Web ページのリンクをクリックしたり、フォームを送信したり、検索を実行したりすると、ブラウザーは *HTTP リクエスト*をサーバに送信します。
+Web ブラウザーは、**H**yper**T**ext **T**ransfer **P**rotocol ([HTTP](/ja/docs/Web/HTTP)) を使用して [Web サーバ](/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)と通信します。Web ページのリンクをクリックしたり、フォームを送信したり、検索を実行したりすると、ブラウザーは *HTTP リクエスト*をサーバに送信します。
 
 このリクエストに含まれるもの:
 

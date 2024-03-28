@@ -16,7 +16,7 @@ slug: Web/CSS/calc
 width: calc(100% - 80px);
 ```
 
-`calc()` 関数は1つの式を引数として取り、式の結果が値として使用されます。式は以下の演算子を組み合わせたもので、標準的な[演算子の優先順位の規則](/ja/docs/Learn/JavaScript/First_steps/Math#operator_precedence")を使用します。
+`calc()` 関数は1つの式を引数として取り、式の結果が値として使用されます。式は以下の演算子を組み合わせたもので、標準的な[演算子の優先順位の規則](/ja/docs/Learn/JavaScript/First_steps/Math#演算子の優先順位)を使用します。
 
 - `+`
   - : 加算です。
