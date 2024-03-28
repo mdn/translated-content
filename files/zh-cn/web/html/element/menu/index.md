@@ -146,4 +146,4 @@ button {
 
 ## 参见
 
-- Other list-related HTML Elements：{{HTMLElement("ol")}}、{{HTMLElement("ul")}} 和 {{HTMLElement("li")}}。
+- 其他与列表相关的 HTML 元素：{{HTMLElement("ol")}}、{{HTMLElement("ul")}} 和 {{HTMLElement("li")}}。
