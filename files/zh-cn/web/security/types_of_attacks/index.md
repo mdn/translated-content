@@ -1,6 +1,8 @@
 ---
 title: 攻击类型
 slug: Web/Security/Types_of_attacks
+l10n:
+  sourceCommit: a3f170ea965a6c436bc0aeb1fdfdf6f61e09c3c8
 ---
 
 {{QuickLinksWithSubpages("/zh-CN/docs/Web/Security")}}
