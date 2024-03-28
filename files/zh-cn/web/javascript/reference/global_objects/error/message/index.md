@@ -1,5 +1,5 @@
 ---
-title: "Error: message"
+title: Error：message
 slug: Web/JavaScript/Reference/Global_Objects/Error/message
 l10n:
   sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
@@ -11,7 +11,7 @@ l10n:
 
 ## 值
 
-一个字符串，对应于作为第一个参数传递给[`Error()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error/Error)构造函数的值。
+一个字符串，对应于作为第一个参数传递给 [`Error()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error/Error) 构造函数的值。
 
 {{js_property_attributes(1, 0, 1)}}
 
@@ -27,7 +27,7 @@ l10n:
 
 ```js
 const e = new Error("无法解析输入");
-// e.message is '无法解析输入'
+// e.message 是“无法解析输入”
 throw e;
 ```
 
