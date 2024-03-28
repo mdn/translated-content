@@ -39,7 +39,7 @@ column-rule-style: unset;
 ### 值
 
 - `<'border-style'>`
-  - : 是由 {{ cssxref("border-style") }} 定义的关键字用于描述规则的样式，样式必须按照合并边框模型进行解释。
+  - : 是由 {{ cssxref("border-style") }} 定义的关键字，用于描述规则的样式，样式必须按照合并边框模型进行解释。
 
 ## 形式定义
 
