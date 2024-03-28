@@ -1,6 +1,8 @@
 ---
 title: Promise.prototype.finally()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/finally
+l10n:
+  sourceCommit: 1766bc83f96aedb321f76068bdd51e9d4953c28d
 ---
 
 {{JSRef}}
