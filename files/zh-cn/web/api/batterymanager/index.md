@@ -7,9 +7,9 @@ l10n:
 
 {{ApiRef("Battery API")}}{{securecontext_header}}
 
-{{domxref("Battery Status API", "", "", "nocode")}} 的 **`BatteryManager`** 接口提供了系统电池电量的一些信息。{{domxref("navigator.getBattery()")}} 方法返回一个 promise 对象，其兑现一个 `BatteryManager` 对象。
+{{domxref("Battery Status API", "电池状态 API", "", "nocode")}} 的 **`BatteryManager`** 接口提供了系统电池电量的一些信息。{{domxref("navigator.getBattery()")}} 方法返回一个 promise 对象，其兑现一个 `BatteryManager` 接口。
 
-自 Chrome 103 起，{{domxref("Battery Status API", "", "", "nocode")}} 的 `BatteryManager` 接口只在严格上下文中暴露。
+自 Chrome 103 起，{{domxref("Battery Status API", "电池状态 API", "", "nocode")}} 的 `BatteryManager` 接口只在安全上下文中暴露。
 
 {{InheritanceDiagram}}
 
@@ -53,5 +53,5 @@ _也从其父接口 {{domxref("EventTarget")}} 继承事件。_
 
 ## 参见
 
-- {{domxref("Battery Status API", "", "", "nocode")}}
+- {{domxref("Battery Status API", "电池状态 API", "", "nocode")}}
 - {{domxref("Navigator.getBattery()")}}
