@@ -172,8 +172,8 @@ slug: Learn/JavaScript/First_steps/Silly_story_generator
 4. 在第一个 `if` 块中再次调用这个字符串替换方法，以使 `newStory` 字符串中的名字“李雷”替换为变量 `name` 的值。这里我们说：“如果 `customName` 中有值，就把故事里的“李雷”替换成它。”如果是汉化版将 newStory 中的“李雷”替换成 `name` 的值；
 5. 在第二个 `if` 块中检查 `american` 单选按钮是否被选中。如果选中，就要将故事中的重量和温度值从公斤和摄氏度转换为磅和华氏度，具体事项如下：
 
-   1. 确定英美单位的转换公式。
-   2. 定义变量 `weight`、`temperature` 的行中，分别将美制单位按公式转化为英制，用 `Math.round()` 对计算结果取整。然后将英式单位连接到末尾。
+   1. 确定公制和美制单位的转换公式。
+   2. 定义变量 `weight`、`temperature` 的行中，分别将公制单位按公式转化为美制，用 `Math.round()` 对计算结果取整。然后将美式单位连接到末尾。
    3. 就在上述两个变量的定义下方增加两个字符串置换操作，将“35 摄氏度”替换为 `temperature` 的值，将“140 公斤”替换为 `weight` 的值。
 
 6. 最后，在函数倒数第二行，将 `story.textContent`（程序中显示笑话结果的段落）赋值为 `newStory`。
@@ -186,7 +186,7 @@ slug: Learn/JavaScript/First_steps/Silly_story_generator
   ```js
   document.querySelector("html").style.backgroundColor = "red";
   ```
-
+- 公制单位与美制单位之间的转换公式 `华氏度 = 32+ 摄氏度× 1.8`  `一磅 = 0.45359千克`
 - [`Math.round()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/round) 是 Javascript 的内建函数，可取得与传入小数最接近的整数。
 - 本示例中有三类字符串需要替换。可以多次重复 `replace()` 方法，也可使用正则表达式。例如：`var text = 'I am the biggest lover, I love my love';` 或 `text.replace(/love/g,'like');` 会将所有的“love”替换为“like”。记住，字符串本身是不可修改的！
 
