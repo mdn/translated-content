@@ -5,7 +5,7 @@ slug: Web/HTML/Element/dl
 
 {{HTMLSidebar}}
 
-**`<dl>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表一個描述清單。該元素包含一組術語（使用 {{HTMLElement("dt")}} 元素指定）和描述（由 {{HTMLElement("dd")}} 元素提供）。此元素的常見用途包括實現詞彙表或顯示後設資料（一組鍵值對的列表）。
+**`<dl>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表一個描述清單。該元素包含一組術語（使用 {{HTMLElement("dt")}} 元素指定）和描述（由 {{HTMLElement("dd")}} 元素提供）。此元素的常見用途包括實現詞彙表或顯示後設資料（一組鍵值對的串列）。
 
 {{EmbedInteractiveExample("pages/tabbed/dl.html", "tabbed-standard")}}
 
@@ -81,7 +81,7 @@ slug: Web/HTML/Element/dl
 
 ### 後設資料
 
-描述清單可用於將後設資料顯示為鍵值對的列表。
+描述清單可用於將後設資料顯示為鍵值對的串列。
 
 ```html
 <dl>
