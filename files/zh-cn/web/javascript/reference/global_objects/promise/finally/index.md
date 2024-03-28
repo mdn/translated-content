@@ -1,6 +1,8 @@
 ---
 title: Promise.prototype.finally()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/finally
+l10n:
+  sourceCommit: 1766bc83f96aedb321f76068bdd51e9d4953c28d
 ---
 
 {{JSRef}}
@@ -24,7 +26,7 @@ finally(onFinally)
 
 ### 返回值
 
-返回等效的 {{jsxref("Promise")}}。如果处理程序抛出错误或返回被拒绝的 promise，那么 `finally()` 返回的 promise 将以该值被拒绝。否则，处理程序的返回值不会影响原始 promise 的状态。
+立即返回一个新的 {{jsxref("Promise")}}。无论当前 promise 的状态如何，此新的 promise 在返回时始终处于待定（pending）状态。如果 `onFinally` 抛出错误或返回被拒绝的 promise，则新的 promise 将使用该值进行拒绝。否则，新的 promise 将以与当前 promise 相同的状态敲定（settled）。
 
 ## 描述
 
