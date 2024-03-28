@@ -41,7 +41,7 @@ CSRF（有时也称为 XSRF）是一类相关的攻击。攻击者使用户的�
   src="https://bank.example.com/withdraw?account=bob&amount=1000000&for=mallory" />
 ```
 
-现在如果你登录银行帐户并且你的 cookie 仍然有效（并且没有其他验证），那么在加载包含此图像的 HTML 后你将立即转账。对于需要 POST 请求的端点，可以在加载页面时以编程方式触发 \<form> 提交（可能在不可见的 \<iframe> 中）：
+现在如果你登录银行账户并且你的 cookie 仍然有效（并且没有其他验证），那么在加载包含此图像的 HTML 后你将立即转账。对于需要 POST 请求的端点，可以在加载页面时以编程方式触发 \<form> 提交（可能在不可见的 \<iframe> 中）：
 
 ```html
 <form action="https://bank.example.com/withdraw" method="POST">
