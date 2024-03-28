@@ -54,7 +54,7 @@ input {
 
 #### Résultat
 
-{{EmbedLiveSample("Exemples", 200, 60)}}
+{{EmbedLiveSample("Exemple_simple", 200, 60)}}
 
 ### Dépassement du texte
 
