@@ -1,5 +1,5 @@
 ---
-title: "<menu>：菜单元素"
+title: <menu>：菜单元素
 slug: Web/HTML/Element/menu
 l10n:
   sourceCommit: 829db137a01feb14af7beaec178a3ea0118b4777
