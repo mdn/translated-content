@@ -80,7 +80,7 @@ CSRF（有时也称为 XSRF）是一类相关的攻击。攻击者使用户的�
 
 第三方能够确定用户的会话标识符（例如，通过读取或设置它），因此可以作为用户与服务器进行交互。窃取 cookie 是实现这一目的的一种方法。
 
-请注意，子域名（例如 application.example.com）可以通过设置 Domain 属性来设置一个 cookie，以便在发送请求到 example.com 或其他子域名时将其发送出去：
+请注意，子域名（例如 application.example.com）可以通过设置 `Domain` 属性来设置一个 cookie，以便在发送请求到 example.com 或其他子域名时将其发送出去：
 
 ```http
 Set-Cookie: CSRF=e8b667; Secure; Domain=example.com
