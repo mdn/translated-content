@@ -19,39 +19,39 @@ l10n:
 
 ## 活躍的語言
 
-### 巴西葡萄牙文 (`pt-BR`)
+### 巴西葡萄牙文（`pt-BR`）
 
-- 討論群組：[Telegram (`MDN localization in Brazilian Portuguese`)](https://t.me/mdn_l10n_pt_br)
+- 討論群組：[Telegram（`MDN localization in Brazilian Portuguese`）](https://t.me/mdn_l10n_pt_br)
 - 目前的維護者：[Nathália Pissuti](https://github.com/nathipg), [Josiel Rocha](https://github.com/josielrocha), [Clóvis Lima Júnior](https://github.com/clovislima)
 
-### 中文 (`zh-CN`, `zh-TW`)
+### 中文（`zh-CN`, `zh-TW`）
 
-- 討論群組：[Telegram (`Mozilla China`)](https://t.me/mozilla_china), [Telegram (`MozTW L10n`)](https://moztw.org/community/telegram/)
+- 討論群組：[Telegram（`Mozilla China`）](https://t.me/mozilla_china), [Telegram（`MozTW L10n`）](https://moztw.org/community/telegram/)
 - 目前的維護者：[Irvin](https://github.com/irvin), [t7yang](https://github.com/t7yang), [yin1999](https://github.com/yin1999), [jasonren0403](https://github.com/jasonren0403), [JasonLamv-t](https://github.com/JasonLamv-t)
 
-### 法文 (`fr`)
+### 法文（`fr`）
 
-- 討論群組：[Matrix (`#l10n-fr`)](https://chat.mozilla.org/#/room/#l10n-fr:mozilla.org)
+- 討論群組：[Matrix（`#l10n-fr`）](https://chat.mozilla.org/#/room/#l10n-fr:mozilla.org)
 - 目前的維護者：[cw118](https://github.com/cw118), [SphinxKnight](https://github.com/SphinxKnight), [tristantheb](https://github.com/tristantheb)
 
-### 日文 (`ja`)
+### 日文（`ja`）
 
-- 討論群組：[Slack (`#translation`)](https://mozillajp.slack.com/), [GitHub (`mozilla-japan`)](https://github.com/mozilla-japan/translation), [Google Group (`mozilla-translations-ja`)](https://groups.google.com/forum/#!forum/mozilla-translations-ja)
+- 討論群組：[Slack（`#translation`）](https://mozillajp.slack.com/), [GitHub（`mozilla-japan`）](https://github.com/mozilla-japan/translation), [Google Group（`mozilla-translations-ja`）](https://groups.google.com/forum/#!forum/mozilla-translations-ja)
 - 目前的維護者：[mfuji09](https://github.com/mfuji09), [hmatrjp](https://github.com/hmatrjp), [potappo](https://github.com/potappo), [dynamis](https://github.com/dynamis), [kenji-yamasaki](https://github.com/kenji-yamasaki)
 
-### 韓文 (`ko`)
+### 韓文（`ko`）
 
-- 討論群組：[Discord (`#korean`)](/discord), [Kakao Talk (`#MDN Korea`)](https://open.kakao.com/o/gdfG288c)
+- 討論群組：[Discord（`#korean`）](/discord), [Kakao Talk（`#MDN Korea`）](https://open.kakao.com/o/gdfG288c)
 - 目前的維護者：[hochan222](https://github.com/hochan222), [yechoi42](https://github.com/yechoi42), [cos18](https://github.com/cos18), [pje1740](https://github.com/pje1740), [wisedog](https://github.com/wisedog), [swimjiy](https://github.com/swimjiy), [jho2301](https://github.com/jho2301), [sunhpark42](https://github.com/sunhpark42), [1ilsang](https://github.com/1ilsang)
 
-### 俄文 (`ru`)
+### 俄文（`ru`）
 
-- 討論群組：[Matrix (`#mdn-l10n-ru`)](https://chat.mozilla.org/#/room/#mdn-l10n-ru:mozilla.org)
+- 討論群組：[Matrix（`#mdn-l10n-ru`）](https://chat.mozilla.org/#/room/#mdn-l10n-ru:mozilla.org)
 - 目前的維護者：[leon-win](https://github.com/leon-win), [sashasushko](https://github.com/sashasushko), [Saionaro](https://github.com/Saionaro), [yanaklose](https://github.com/yanaklose), [myshov](https://github.com/myshov), [lex111](https://github.com/lex111)
 
-### 西班牙文 (`es`)
+### 西班牙文（`es`）
 
-- 討論群組：[Matrix (`#mdn-l10n-es`)](https://chat.mozilla.org/#/room/#mdn-l10n-es:mozilla.org), [Telegram (`MDN l10n ES`)](https://t.me/+Dr6qKQCAepw4MjFj)
+- 討論群組：[Matrix（`#mdn-l10n-es`）](https://chat.mozilla.org/#/room/#mdn-l10n-es:mozilla.org), [Telegram（`MDN l10n ES`）](https://t.me/+Dr6qKQCAepw4MjFj)
 - 目前的維護者：[JuanVqz](https://github.com/JuanVqz), [davbrito](https://github.com/davbrito), [Graywolf9](https://github.com/Graywolf9), [Vallejoanderson](https://github.com/Vallejoanderson), [marcelozarate](https://github.com/marcelozarate), [Jalkhov](https://github.com/Jalkhov)
 
 ## 參見
