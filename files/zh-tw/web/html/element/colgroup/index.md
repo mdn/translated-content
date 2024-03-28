@@ -47,7 +47,7 @@ slug: Web/HTML/Element/colgroup
 
 - `valign` {{deprecated_inline}}
 
-  - : 指定每個欄群組儲存格的垂直對齊方式。可能的 {{Glossary("enumerated")}} 值包括 `baseline`、`bottom`、`middle` 和 `top`。請注意，後代 {{HTMLElement("col")}} 元素可能會使用其自己的 [`valign`](/zh-TW/docs/Web/HTML/Element/col#valign) 屬性覆蓋此值。請改用 {{cssxref("vertical-align")}} CSS 屬性應用於 {{htmlelement("td")}} 和 {{htmlelement("th")}} 元素，因為此屬性已棄用。
+  - : 指定每個欄群組儲存格的垂直對齊方式。可能的{{Glossary("enumerated", "列舉")}}值包括 `baseline`、`bottom`、`middle` 和 `top`。請注意，後代 {{HTMLElement("col")}} 元素可能會使用其自己的 [`valign`](/zh-TW/docs/Web/HTML/Element/col#valign) 屬性覆蓋此值。請改用 {{cssxref("vertical-align")}} CSS 屬性應用於 {{htmlelement("td")}} 和 {{htmlelement("th")}} 元素，因為此屬性已棄用。
 
     > **備註：** 在 `<colgroup>` 元素上設置 `vertical-align` 沒有效果，因為 {{HTMLElement("td")}} 和 {{HTMLElement("th")}} 元素不是 `<colgroup>` 元素的後代，因此不會繼承該屬性。
     >
