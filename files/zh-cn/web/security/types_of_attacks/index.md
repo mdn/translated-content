@@ -86,7 +86,7 @@ CSRF（有时也称为 XSRF）是一类相关的攻击。攻击者使用户的�
 Set-Cookie: CSRF=e8b667; Secure; Domain=example.com
 ```
 
-如果子域上存在易受攻击的应用程序，那么此机制就会被会话固定攻击滥用。当用户访问父域（或另一个子域）上的页面时，应用程序可能会信任用户 cookie 中发送的现有值。这可能允许攻击者绕过 CSRF 保护或在用户登录后劫持会话。或者，如果父域不使用带有 `includeSubdomains` 设置的 [HTTP Strict-Transport-Security](/zh-CN/docs/Glossary/HSTS)，则用户将受到活动 MitM 的约束（可能连接到公共 Wi-Fi 网络）可能会收到来自不存在的子域的带有 Set-Cookie 标头的响应。最终结果大致相同，浏览器存储了非法 cookie 并将其发送到 example.com 下的所有其他页面。
+如果子域上存在易受攻击的应用程序，那么此机制就会被会话固定攻击滥用。当用户访问父域（或另一个子域）上的页面时，应用程序可能会信任用户 cookie 中发送的现有值。这可能允许攻击者绕过 CSRF 保护或在用户登录后劫持会话。或者，如果父域不使用带有 `includeSubdomains` 设置的 [HTTP Strict-Transport-Security](/zh-CN/docs/Glossary/HSTS)，则受到主动 MitM 攻击的用户（可能连接到公共 Wi-Fi 网络）可能会收到来自不存在的子域的带有 Set-Cookie 标头的响应。最终结果大致相同，浏览器存储了非法 cookie 并将其发送到 example.com 下的所有其他页面。
 
 通过在用户进行身份验证时重新生成会话 cookie 值（即使 cookie 已存在）以及用 CSRF 令牌与用户绑定是防御会话固定的主要方法。
 
