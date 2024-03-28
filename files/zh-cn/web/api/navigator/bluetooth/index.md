@@ -1,5 +1,5 @@
 ---
-title: "Navigator: bluetooth 属性"
+title: Navigator：bluetooth 属性
 slug: Web/API/Navigator/bluetooth
 l10n:
   sourceCommit: 79776c322adb0524ffc83d49c7fd7b7801e413ec
@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}{{secureContext_header}}
 
-{{domxref("Navigator")}} 接口的只读属性 **`bluetooth`** 返回当前文档的 {{domxref("Bluetooth")}} 对象，提供对[Web Bluetooth API](/zh-CN/docs/Web/API/Web_Bluetooth_API)功能的访问。
+{{domxref("Navigator")}} 接口的只读属性 **`bluetooth`** 返回当前文档的 {{domxref("Bluetooth")}} 对象，提供对 [Web 蓝牙 API](/zh-CN/docs/Web/API/Web_Bluetooth_API) 功能的访问。
 
 ## 值
 
@@ -23,4 +23,4 @@ l10n:
 
 ## 参见
 
-- [Web Bluetooth API](/zh-CN/docs/Web/API/Web_Bluetooth_API)
+- [Web 蓝牙 API](/zh-CN/docs/Web/API/Web_Bluetooth_API)
