@@ -28,7 +28,7 @@ browser.pageAction.onClicked.hasListener(listener);
 
 ## addListener の書式
 
-### パラメータ
+### パラメーター
 
 - `callback`
 
@@ -43,7 +43,7 @@ browser.pageAction.onClicked.hasListener(listener);
 
 ## 例
 
-ユーザがページアクションをクリックしたとき、それを隠し、アクティブタブを"<http://chilloutandwatchsomecatgifs.com/>"に誘導します:
+ユーザーがページアクションをクリックしたとき、それを隠し、アクティブタブを"<http://chilloutandwatchsomecatgifs.com/>"に誘導します:
 
 ```js
 var CATGIFS = "http://chilloutandwatchsomecatgifs.com/";
