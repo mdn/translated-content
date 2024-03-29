@@ -16,22 +16,22 @@ Firefox 的用户代理字符串可被拆分为以下四个部分：
 `Mozilla/5.0 (platform; rv:geckoversion) Gecko/geckotrail Firefox/firefoxversion`
 
 - `Mozilla/5.0` 是表示浏览器与 Mozilla 兼容的通用标记，目前几乎所有浏览器都使用该标记。
-- `platform` 描述浏览器运行的本地平台（如 Windows、Mac、Linux 或 Android），以及是否是手机。Firefox OS 手机显示“`Mobile`”；web 就是平台。请注意，`platform` 可以由多个“;”分隔的标记组成。详情和示例请参阅下文。
-- `rv:geckoversion` 表示 Gecko 的发布版本（如“`17.0`”）。
+- `platform` 描述浏览器运行的本地平台（如 Windows、Mac、Linux 或 Android），以及是否是手机。Firefox OS 手机显示“`Mobile`”；web 就是它的平台。请注意，`platform` 可以由多个“;”分隔的标记组成。详情和示例请参阅下文。
+- `rv:geckoversion` 表示 Gecko 的发行版本（如“`17.0`”）。
 - `Gecko/geckotrail` 表示浏览器基于 Gecko。
 - 在桌面上，`geckotrail` 是固定字符串“`20100101`”。
 - `Firefox/firefoxversion` 表示浏览器是 Firefox，并提供版本（如“`17.0`”）。
 - 从移动版 Firefox 10 开始，`geckotrail` 与 `firefoxversion` 相同。
 
-> **备注：** 嗅探基于 Gecko 的浏览器（如果你*必须*嗅探浏览器引擎而不是使用特性检测）的推荐方法是通过“`Gecko`”和“`rv:`”字符串的存在，因为某些其他浏览器包含"`like Gecko`"标记。
+> **备注：** 嗅探基于 Gecko 的浏览器（如果你*必须*嗅探浏览器引擎而不是使用特性检测）的推荐方法是检测“`Gecko`”和“`rv:`”字符串是否存在，因为某些其他浏览器包含"`like Gecko`"标记。
 
 对于其他基于 Gecko 的产品，UA 字符串会符合以下两个规则中的一个，除了下面的描述外，其他字段与上面描述的意义相同。
 
 `Mozilla/5.0 (platform; rv:geckoversion) Gecko/geckotrail appname/appversion`
 `Mozilla/5.0 (platform; rv:geckoversion) Gecko/geckotrail Firefox/firefoxversion appname/appversion`
 
-- `appname/appversion` 标明了应用名与版本，举个例子，这个字段可以是“Camino/2.1.1”或“SeaMonkey/2.7.1”。
-- `Firefox/firefoxversion` 是一个可选的兼容字段，一些基于 Gecko 的浏览器选择加入，以使那些支持 Firefox 的网页进行最大的兼容。`firefoxversion` 应与其提供的 Gecko 版本对应的 Firefox 版本相同。一些基于 Gecko 的浏览器可能不会使用此标记，因此，在检测的时候，应当使用 Gecko 而非 Firefox。
+- `appname/appversion` 标明了应用名与版本，举个例子，它可以是“`Camino/2.1.1`”或“`SeaMonkey/2.7.1`”。
+- `Firefox/firefoxversion` 是一个可选的兼容标记，一些基于 Gecko 的浏览器选择加入，以达到对支持 Firefox 的网页的最大兼容。`firefoxversion` 应与其提供的 Gecko 版本对应的 Firefox 版本相同。一些基于 Gecko 的浏览器可能不会使用此标记，因此，在检测的时候，应当使用 Gecko 而非 Firefox。
 
 在 Firefox 4 和 Gecko 2.0 之前，扩展和插件可以添加用户代理部分，但自从 [Firefox bug 581008](https://bugzil.la/581008) 以来就不可能了。
 
@@ -48,7 +48,7 @@ Mozilla/5.0 (Android 4.4; Tablet; rv:41.0) Gecko/41.0 Firefox/41.0
 
 将内容定位到设备外形尺寸的首选方法是使用 CSS 媒体查询。但是，如果你使用 UA 嗅探将内容定位到设备外形，请在手机外形中查找 **Mobi**（包括使用 "Mobi "的 Opera Mobile），而**不要**假设“Android”与设备外形之间存在任何关联。这样，如果 Firefox 浏览器采用其他手机/平板电脑操作系统，或者笔记本电脑采用 Android 系统，你的代码也能正常工作。此外，请使用触摸检测来查找触摸设备，而不是查找“Mobi”或“Tablet”，因为可能存在不是平板电脑的触摸设备。
 
-> **备注：** Firefox OS 设备在标识自己时不标注任何操作系统，例如“Mozilla/5.0 (Mobile; rv:15.0) Gecko/15.0 Firefox/15.0”，web 就是平台。
+> **备注：** Firefox OS 设备在标识自己时不标注任何操作系统，例如“Mozilla/5.0 (Mobile; rv:15.0) Gecko/15.0 Firefox/15.0”。web 就是它的平台。
 
 ## Windows
 
@@ -150,9 +150,9 @@ Mozilla/5.0 (Linux; <Android version>) AppleWebKit/537.36 (KHTML, like Gecko) Ve
 | TV       | Mozilla/5.0 (TV; rv:44.0) Gecko/44.0 Firefox/44.0                 |
 | 设备特定 | Mozilla/5.0 (Mobile; **_nnnn;_** rv:26.0) Gecko/26.0 Firefox/26.0 |
 
-### 具有设备特征的 User Agent 值
+### 具有设备特征的用户代理字符串
 
-尽管 Mozilla **强烈反对**，然而一些手机制造商仍然会在其设备的 User Agent 值中包含标明设备 ID 的字段。在这种情况下，Firefox OS 的 User Agent 会与上表中所示的具有设备特征的字符串保持一致，其中 **_nnnn;_** 代表设备制造商的设备代码（参见[指南](https://wiki.mozilla.org/B2G/User_Agent/Device_Model_Inclusion_Requirements)）。其中一些是以下几个形式：“**NexusOne;**”、“**ZTEOpen;**”、“**Open C;**”（另请注意，同样不鼓励在其中加入空格）。我们提供这些信息是为了协助你的 UA 检测逻辑，但 Mozilla 不鼓励在 UA 字符串中检测设备 ID。
+尽管 Mozilla **强烈反对**，然而一些手机制造商仍然会在其设备的 UA 字符串中包含标明设备 ID 的字段。在这种情况下，Firefox OS 的 UA 字符串会与上表中所示的具有设备特征的字符串保持一致，其中 **_nnnn;_** 代表设备制造商的设备代码（参见[指南](https://wiki.mozilla.org/B2G/User_Agent/Device_Model_Inclusion_Requirements)）。其中一些是以下几个形式：“**NexusOne;**”、“**ZTEOpen;**”、“**Open C;**”（注意，同样不鼓励在其中加入空格）。我们提供这些信息是为了协助你的 UA 检测逻辑，但 Mozilla 不鼓励检测 UA 字符串中的设备 ID。
 
 这里有一个可以检测所有移动设备的 JavaScript 正则表达式，包含那些 UA 字符串中包含设备 id 的设备：
 
@@ -164,7 +164,7 @@ Mozilla/5.0 (Linux; <Android version>) AppleWebKit/537.36 (KHTML, like Gecko) Ve
 
 ### Firefox OS 版本号
 
-由于 Firefox OS 的版本号未被包含于 User Agent 值中，我们可以通过用户代理中的 Gecko 版本号来推断其版本信息。
+由于 Firefox OS 的版本号未被包含于 UA 字符串中，我们可以通过 UA 字符串中的 Gecko 版本号来推断其版本信息。
 
 | Firefox OS 版本号 | Gecko 版本号 |
 | ----------------- | ------------ |
