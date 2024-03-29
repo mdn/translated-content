@@ -24,17 +24,14 @@ l10n:
 <div
   contenteditable="true"
   style="margin: 20px;padding: 20px;border:2px dashed red;">
-  <p>
-    Some sample text. Try inserting line breaks, or deleting text in different
-    ways, or pasting different content in.
-  </p>
+  <p>一些示例文本。尝试插入换行符，或以不同方式删除文本，或粘贴不同内容。</p>
   <hr />
   <ul>
-    <li>A sample</li>
-    <li>bulleted</li>
-    <li>list.</li>
+    <li>一个例子</li>
+    <li>项目符号</li>
+    <li>列表</li>
   </ul>
-  <p>Another paragraph.</p>
+  <p>另一个段落。</p>
 </div>
 ```
 

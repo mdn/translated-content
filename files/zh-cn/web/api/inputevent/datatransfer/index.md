@@ -20,20 +20,13 @@ l10n:
 尝试复制并粘贴提供的部分内容以查看效果。
 
 ```html
-<p><span style="font-weight: bold; color: blue">Whoa, bold blue text!</span></p>
-<p>
-  <span style="font-weight: italic; color: red"
-    >Exciting: italic red text!</span
-  >
-</p>
-<p>Boring normal text ;-(</p>
+<p><span style="font-weight: bold; color: blue">哇，粗体的蓝色文本！</span></p>
+<p><span style="font-weight: italic; color: red">令人兴奋的斜体红色文本！</span></p>
+<p>令人厌倦的普通文本</p>
 
 <hr />
 
-<p contenteditable="true">
-  Go on, try pasting some content into this editable paragraph and see what
-  happens!
-</p>
+<p contenteditable="true">继续，尝试将一些内容粘贴到这个可编辑的段落中，看看会发生什么！</p>
 
 <p class="result"></p>
 ```
