@@ -5,7 +5,7 @@ slug: Mozilla/Firefox/Releases/30
 
 Gecko 30 を搭載した Firefox 30 は、米国時間 2014 年 6 月 10 日にリリースされました。このページでは、開発者に影響する Firefox 30 の変更点をまとめています。
 
-## Web 開発者向けの変更点一覧
+## ウェブ開発者向けの変更点一覧
 
 ### 開発者ツール
 
@@ -41,8 +41,8 @@ _変更なし。_
 - Web components の {{domxref("Document.register")}} を、最新版の仕様で説明されている動作に従うよう修正しました ([Firefox バグ 856140](https://bugzil.la/856140))。
 - Canvas の Hit resion の基本的なサポートを追加: {{domxref("CanvasRenderingContext2D.addHitRegion()")}} メソッドおよび {{domxref("CanvasRenderingContext2D.removeHitRegion()")}} メソッドを追加しました。これらはデフォルトで無効です。有効化するには設定項目 `canvas.hitregions.enabled` を `true` に変更してください。([Firefox バグ 966591](https://bugzil.la/966591))
 - 非標準であり Firefox 15 から非推奨であった {{domxref("Blob.mozSlice")}} を廃止しました ([Firefox バグ 961804](https://bugzil.la/961804))。
-- 非標準である {{domxref("ArchiveReader")}} および {{domxref("ArchiveRequest")}} は Web 向けに公開しないようになりました ([Firefox バグ 968883](https://bugzil.la/968883))。
-- [WebIDL コンストラクタ](http://dxr.mozilla.org/mozilla-central/source/dom/webidl/)を関数として呼び出すことが不可になりました。キーワード `new` を前につけることが必要です。([Firefox バグ 916644](https://bugzil.la/916644))
+- 非標準である {{domxref("ArchiveReader")}} および {{domxref("ArchiveRequest")}} はウェブ向けに公開しないようになりました ([Firefox バグ 968883](https://bugzil.la/968883))。
+- [WebIDL コンストラクター](http://dxr.mozilla.org/mozilla-central/source/dom/webidl/)を関数として呼び出すことが不可になりました。キーワード `new` を前につけることが必要です。([Firefox バグ 916644](https://bugzil.la/916644))
 - {{domxref("Canvas.getContext()")}} メソッドで、アルファブレンディングを保存しなければならないか否かを定義可能にする、省略可能な第 2 引数 (`alpha`) をサポートしました。設定しない場合、ピクセルごとのアルファ値は常に `1.0` になります。これによりバックエンドでファストトラックの実装が可能になります。([Firefox バグ 982480](https://bugzil.la/982480))
 
 ### MathML

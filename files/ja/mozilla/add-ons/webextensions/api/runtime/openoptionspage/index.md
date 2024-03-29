@@ -15,7 +15,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage
 var openingPage = browser.runtime.openOptionsPage();
 ```
 
-### パラメータ
+### パラメーター
 
 なし。
 
