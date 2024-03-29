@@ -15,7 +15,7 @@ l10n:
 
 ## 示例
 
-在下面的简单示例中，我们在 [input](/zh-CN/docs/Web/API/Element/input_event) 事件上设置了一个事件监听器，以便在将任何内容粘贴到 {{htmlelement("p")}} 元素时，通过 [`InputEvent.dataTransfer.getData()`](/zh-CN/docs/Web/API/DataTransfer/getData) 方法检索其 HTML 源代码，并在输入框下面的段落中报告。
+在下面的简单示例中，我们在 [input](/zh-CN/docs/Web/API/Element/input_event) 事件上设置了一个事件监听器，以便在将任何内容粘贴到可编辑的 {{htmlelement("p")}} 元素时，通过 [`InputEvent.dataTransfer.getData()`](/zh-CN/docs/Web/API/DataTransfer/getData) 方法获取其 HTML 源代码，并将其报告在输入框下面的段落中。
 
 尝试复制并粘贴提供的部分内容以查看效果。
 
