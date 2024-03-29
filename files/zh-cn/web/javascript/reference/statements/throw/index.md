@@ -7,7 +7,7 @@ l10n:
 
 {{jsSidebar("Statements")}}
 
-**`throw`** 语句用于抛出用户自定义异常。当前函数的执行将停止（`throw` 之后的语句不会被执行），并且控制权将传递给调用堆栈中第一个 [`catch`](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch) 块。如果调用函数中没有 `catch` 块，则程序将终止。
+**`throw`** 语句用于抛出用户自定义的异常。当前函数的执行将停止（`throw` 之后的语句不会被执行），并且控制权将传递给调用堆栈中第一个 [`catch`](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch) 块。如果调用函数中没有 `catch` 块，则程序将终止。
 
 {{EmbedInteractiveExample("pages/js/statement-throw.html")}}
 
@@ -22,7 +22,7 @@ throw expression;
 
 ## 描述
 
-`throw` 语句用于抛出一个异常，该异常会沿着调用堆栈向上传播。有关错误冒泡和处理的更多信息，请参阅[流程控制与错误处理](/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)。
+`throw` 语句在任何可以使用语句的上下文中都有效。它的执行会产生一个在调用堆栈传播的异常。有关错误冒泡和处理的更多信息，请参阅[流程控制与错误处理](/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)。
 
 `throw` 关键字后面可以跟任何类型的表达式，例如：
 
@@ -33,9 +33,9 @@ throw new Error("Required"); // 抛出一个新的错误对象
 
 在实践中，你抛出的异常应该*始终*是 {{jsxref("Error")}} 对象或 `Error` 子类的实例，例如 {{jsxref("RangeError")}}。这是因为捕获错误的代码可能期望捕获的值具有一些属性，例如 {{jsxref("Error/message", "错误信息")}}。例如，Web API 通常会抛出 {{domxref("DOMException")}} 实例，这些实例继承自 `Error.prototype`。
 
-### 自动分号补全（ASI）
+### 自动分号补全
 
-语法不允许在 `throw` 关键字和要抛出的表达式之间出现行终止符。
+语法不允许在 `throw` 关键字和要抛出的表达式之间出现换行。
 
 ```js-nolint example-bad
 throw
@@ -61,7 +61,7 @@ throw (
 
 ## 示例
 
-### 抛出用户自定义错误
+### 抛出用户自定义的错误
 
 此示例定义了一个函数，该函数在输入不是预期类型时抛出 {{jsxref("TypeError")}} 异常。
 
