@@ -1,30 +1,32 @@
 ---
-title: Navigator.doNotTrack
+title: Navigator：doNotTrack 属性
 slug: Web/API/Navigator/doNotTrack
+l10n:
+  sourceCommit: 44cf523714745d626317192bfbe849b47144f3ab
 ---
 
-{{ApiRef("HTML DOM")}}{{Deprecated_header}}
+{{ApiRef("HTML DOM")}}{{Deprecated_header}}{{non-standard_header}}
 
-**`Navigator.doNotTrack`** 属性返回用户的不跟踪（Do Not Track）设置，表示用户是否请求网站和广告商不进行跟踪。
+**`Navigator.doNotTrack`** 属性是一个只读属性，用于指示用户是否启用了请勿追踪。
 
-该属性的值反映了 {{httpheader("DNT")}} HTTP 标头的值，例如：`"1"`、`"0"` 或 `"unspecified"`。
+该属性的值与 {{httpheader("DNT")}} HTTP 标头一致，即 `"1"`、`"0"` 或 `null` 值。
 
 ## 值
 
-一个数字。
+字符串或 `null`。
 
 ## 示例
 
 ```js
 console.log(navigator.doNotTrack);
-// 若启用了 DNT，则为 "1"；若允许跟踪，则为 "0"；否则为 "unspecified"
+// 如果启用了 DNT，则返回 "1"；如果用户选择加入跟踪，则返回 "0"；否则返回 null。
 ```
 
 ## 规范
 
 {{Specifications}}
 
-## 浏览器兼容性
+## Browser compatibility
 
 {{Compat}}
 
