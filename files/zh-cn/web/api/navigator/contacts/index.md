@@ -18,7 +18,7 @@ l10n:
 以下代码检查是否支持联系人选择器 API。
 
 ```js
-const supported = "联系人" in navigator && "联系人管理" in window;
+const supported = "contacts" in navigator && "ContactsManager" in window;
 ```
 
 ## 规范
