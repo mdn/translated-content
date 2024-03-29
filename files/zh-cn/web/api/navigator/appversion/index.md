@@ -9,7 +9,7 @@ l10n:
 
 返回“`4.0`”或一个代表浏览器版本信息的字符串。
 
-> **注意：** 不要依赖此属性返回正确的浏览器版本。
+> **备注：** 不要依赖此属性返回正确的浏览器版本。
 
 ## 值
 
@@ -18,7 +18,7 @@ l10n:
 ## 示例
 
 ```js
-alert(`你的浏览器版本报告为 ${navigator.appVersion}`);
+alert(`你的浏览器版本为 ${navigator.appVersion}`);
 ```
 
 ## 注意
@@ -27,7 +27,7 @@ alert(`你的浏览器版本报告为 ${navigator.appVersion}`);
 
 `window.navigator.appVersion`、`window.navigator.appName` 和 `window.navigator.userAgent` 属性曾经被用于“浏览器嗅探”代码中：这些代码会尝试找出你使用的浏览器类型并根据此调整页面。这就造成了目前的局面，浏览器不得不返回这些属性的虚假值，以免被某些网站锁定。
 
-## 参见
+## 规范
 
 {{Specifications}}
 
