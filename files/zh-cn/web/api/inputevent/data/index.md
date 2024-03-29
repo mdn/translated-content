@@ -15,7 +15,7 @@ l10n:
 
 ## 示例
 
-在下面的简单示例中，我们在 [input](/zh-CN/docs/Web/API/Element/input_event) 事件上设置了一个事件监听器，**`InputEvent.data`** 检索 {{htmlelement("input")}} 元素的任何文本变化，使用 [`Node.textContent`](/zh-CN/docs/Web/API/Node/textContent) 属性将其插入到段落中。
+在下面的简单示例中，我们在 [input](/zh-CN/docs/Web/API/Element/input_event) 事件上设置了一个事件监听器，任何对 {{htmlelement("input")}} 元素的文本更改都会被 `InputEvent.data` 获取，使用 [`Node.textContent`](/zh-CN/docs/Web/API/Node/textContent) 属性将其插入到段落中。
 
 ```html
 <p>Some text to copy and paste.</p>
