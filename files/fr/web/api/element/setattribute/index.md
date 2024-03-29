@@ -56,20 +56,29 @@ b.setAttribute("disabled", "");
 
 Ceci démontre 2 choses :
 
-- le premier appel de `setAttribute()` ci-dessus montre la modification de la valeur de l'attribut `name` en "helloButton". Vous pouvez le voir en utilisant l'inspecteur de page de votre navigateur ([Chrome](https://developers.google.com/web/tools/chrome-devtools/inspect-styles), [Edge](https://docs.microsoft.com/en-us/microsoft-edge/f12-devtools-guide/dom-explorer), [Firefox](/fr/docs/Tools/Page_Inspector), [Safari](https://developer.apple.com/library/content/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Introduction/Introduction.html)).
+- le premier appel de `setAttribute()` ci-dessus montre la modification de la valeur de l'attribut `name` en "helloButton". Vous pouvez le voir en utilisant l'inspecteur de page de votre navigateur ([Chrome](https://developers.google.com/web/tools/chrome-devtools/inspect-styles), [Edge](https://docs.microsoft.com/en-us/microsoft-edge/f12-devtools-guide/dom-explorer), [Firefox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html), [Safari](https://developer.apple.com/library/content/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Introduction/Introduction.html)).
 - Pour définir la valeur d'un attribut booléen, tel que `disabled`, vous pouvez spécifier n'importe quelle valeur. Une chaîne vide ou le nom de l'attribut sont des valeurs recommandées. Tout ce qui compte est que si l'attribut est présent, quelle que soit sa valeur réelle, sa valeur est considérée comme `true` (_vraie_). L'absence de l'attribut signifie que sa valeur est `false` (_fausse_). En définissant la valeur de l'attribut `disabled` sur la chaîne vide (""), nous définissons `disabled` sur `true`, ce qui entraîne la désactivation du bouton.
 
 {{ EmbedLiveSample('Exemple', '300', '50') }}
 
-{{DOMAttributeMethods}}
-
 ## Spécifications
 
-- [DOM Level 2 Core&nbsp;: setAttribute](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-F68F082) — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2/core/core.html#ID-F68F082) (non normative)
-- [HTML5 : API dans les documents HTML](http://www.whatwg.org/specs/web-apps/current-work/#apis-in-html-documents)
+{{Specifications}}
+
+- [DOM Level 2 Core&nbsp;: setAttribute](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-F68F082) — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2/core/core.html#ID-F68F082) (non normative)
+- [HTML5 : API dans les documents HTML](https://www.whatwg.org/specs/web-apps/current-work/#apis-in-html-documents)
 
 ## Compatibilité des navigateurs
+
+{{Compat}}
 
 ### Gecko notes
 
 L'utilisation de `setAttribute()` pour modifier certains attributs, en particulier la valeur dans XUL, fonctionne de façon incohérente, car l'attribut spécifie la valeur par défaut. Pour accéder ou modifier la valeur courante, vous devez utiliser les propriétés. Par exemple, utilisez `Element.value` à la place de `Element.setAttribute()`.
+
+## Voir aussi
+
+- {{domxref("Element.hasAttribute()")}}
+- {{domxref("Element.getAttribute()")}}
+- {{domxref("Element.removeAttribute()")}}
+- {{domxref("Element.toggleAttribute()")}}

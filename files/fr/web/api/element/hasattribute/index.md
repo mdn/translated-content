@@ -39,10 +39,6 @@ if (foo.hasAttribute("bar")) {
 })(Element.prototype);
 ```
 
-## Notes
-
-{{DOMAttributeMethods}}
-
 ## Spécifications
 
 {{Specifications}}
@@ -50,3 +46,11 @@ if (foo.hasAttribute("bar")) {
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- {{domxref("Element.hasAttributes()")}}
+- {{domxref("Element.getAttribute()")}}
+- {{domxref("Element.setAttribute()")}}
+- {{domxref("Element.removeAttribute()")}}
+- {{domxref("Element.toggleAttribute()")}}

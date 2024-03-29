@@ -39,8 +39,18 @@ Si l'attribut spécifié existe déjà sur l'élément, cet attribut est remplac
 
 Notez que si vous essayez de définir sans cloner le noeud, Mozilla donne une erreur "Attribut déjà utilisé" NS_ERROR_DOM_INUSE_ATTRIBUTE_ERR, car le DOM nécessite que le clonage d'`Attr` soit réutilisé (contrairement aux autres Noeuds qui peuvent être déplacés).
 
-{{ DOMAttributeMethods() }}
-
 ## Spécification
 
-- [DOM Level 2 Core: setAttributeNodeNS (en)](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElSetAtNodeNS) — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-ElSetAtNodeNS) (non normative)
+{{Specifications}}
+
+- [DOM Level 2 Core: setAttributeNodeNS (en)](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElSetAtNodeNS) — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-ElSetAtNodeNS) (non normative)
+
+## Compatibilité des navigateurs
+
+{{Compat}}
+
+## Voir aussi
+
+- {{domxref("Document.createAttribute()")}}
+- {{domxref("Document.createAttributeNS()")}}
+- {{domxref("Element.getAttributeNodeNS()")}}

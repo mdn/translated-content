@@ -3,13 +3,13 @@ title: element.getAttributeNodeNS
 slug: Web/API/Element/getAttributeNodeNS
 ---
 
-{{ ApiRef() }}
+{{ APIRef("DOM") }}
 
-### Résumé
+## Résumé
 
 Renvoie le nœud `Attr` pour l'attribut avec l'espace de noms et le nom donnés.
 
-### Syntaxe
+## Syntaxe
 
 ```js
 attributeNode = element.getAttributeNodeNS(namespace, nodeName);
@@ -24,14 +24,22 @@ attributeNode = element.getAttributeNodeNS(namespace, nodeName);
 - `nodeName`
   - : Une chaîne spécifiant le nom de l'attribut.
 
-\== Example == TBD The example needs to be fixed // html: \<div id="top" /> t = document.getElementById("top"); specialNode = t.getAttributeNodeNS( "<http://www.mozilla.org/ns/specialspace>", "id"); // iNode.value = "full-top"
-
-### Notes
+## Notes
 
 `getAttributeNodeNS` est plus spécifique que {{ domxref("Element.getAttributeNode") }} en ce qu'il permet de spécifier les attributs faisant partis d'un espace de noms particulier. La méthode de réglage correspondante est {{ domxref("Element.setAttributeNodeNS") }}.
 
-{{ DOMAttributeMethods() }}
+## Spécifications
 
-### Spécification
+{{Specifications}}
 
-- [DOM Level 2 Core: getAttributeNodeNS (en)](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElGetAtNodeNS) — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-ElGetAtNodeNS) (non normative)
+- [DOM Level 2 Core: getAttributeNodeNS (en)](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElGetAtNodeNS) — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-ElGetAtNodeNS) (non normative)
+
+## Compatibilité des navigateurs
+
+{{Compat}}
+
+## Voir aussi
+
+- {{domxref("Document.createAttribute()")}}
+- {{domxref("Document.createAttributeNS()")}}
+- {{domxref("Element.setAttributeNodeNS()")}}

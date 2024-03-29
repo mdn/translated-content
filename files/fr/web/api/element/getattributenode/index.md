@@ -1,5 +1,5 @@
 ---
-title: element.getAttributeNode
+title: element.getAttributeNode()
 slug: Web/API/Element/getAttributeNode
 ---
 
@@ -31,13 +31,23 @@ alert(idAttr.value == "top");
 
 Lorsqu'elle est appelée sur un élément HTML dans un DOM marqué comme un document HTML, `getAttributeNode` passe en minuscules son argument avant de continuer.
 
-Les nœuds `Attr` héritent de `Node`, mais ne sont pas considérés comme faisant partie de l'arbre du document. Les attributs habituels des nœuds comme [parentNode](/fr/DOM/element.parentNode), [previousSibling](/fr/DOM/element.previousSibling), et [nextSibling](/fr/DOM/element.nextSibling) sont `null` pour un nœud `Attr`. Vous pouvez cependant accéder à l'élément auquel cet attribut appartient grâce à la propriété `ownerElement`.
+Les nœuds `Attr` héritent de `Node`, mais ne sont pas considérés comme faisant partie de l'arbre du document. Les attributs habituels des nœuds comme [parentNode](/fr/docs/Web/API/Node/parentNode), [previousSibling](/fr/docs/Web/API/Node/previousSibling), et [nextSibling](/fr/docs/Web/API/Node/nextSibling) sont `null` pour un nœud `Attr`. Vous pouvez cependant accéder à l'élément auquel cet attribut appartient grâce à la propriété `ownerElement`.
 
-[getAttribute](/fr/DOM/element.getAttribute) est habituellement utilisé à la place de `getAttributeNode` pour obtenir la valeur d'un attribut d'un élément.
+[getAttribute](/fr/docs/Web/API/Element/getAttribute) est habituellement utilisé à la place de `getAttributeNode` pour obtenir la valeur d'un attribut d'un élément.
 
-{{ DOMAttributeMethods() }}
+## Spécifications
 
-## Spécification
+{{Specifications}}
 
-- [DOM Level 2 Core&nbsp;: getAttributeNode](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-217A91B8) — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-217A91B8) (non normative)
-- [HTML 5: APIs in HTML documents](http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#apis-in-html-documents)
+- [DOM Level 2 Core&nbsp;: getAttributeNode](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-217A91B8) — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-217A91B8) (non normative)
+- [HTML 5: APIs in HTML documents](https://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#apis-in-html-documents)
+
+## Compatibilité des navigateurs
+
+{{Compat}}
+
+## Voir aussi
+
+- {{domxref("Document.createAttribute()")}}
+- {{domxref("Element.setAttributeNode()")}}
+- {{domxref("Element.removeAttributeNode()")}}

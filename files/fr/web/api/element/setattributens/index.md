@@ -24,13 +24,21 @@ var d = document.getElementById("d1");
 d.setAttributeNS("http://www.mozilla.org/ns/specialspace", "align", "center");
 ```
 
-## Notes
-
-{{ DOMAttributeMethods() }}
-
 `setAttributeNS` est la seule méthode pour les attributs d'espace nom qui attend le nom qualifié complet, c'est-à-dire `"namespace:localname"`.
 
-## Spécification
+## Spécifications
 
-- [DOM Level 2 Core: setAttributeNS (en)](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElSetAttrNS) — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-ElSetAttrNS) (non normative)
+{{Specifications}}
+
+- [DOM Level 2 Core: setAttributeNS (en)](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElSetAttrNS) — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-ElSetAttrNS) (non normative)
 - [DOM-Level-2-Core: glossary qualified name](https://www.w3.org/TR/DOM-Level-2-Core/glossary.html#dt-qualifiedname)
+
+## Compatibilité des navigateurs
+
+{{Compat}}
+
+## Voir aussi
+
+- {{domxref("Element.hasAttributeNS()")}}
+- {{domxref("Element.getAttributeNS()")}}
+- {{domxref("Element.removeAttributeNS()")}}

@@ -16,7 +16,7 @@ element.removeAttribute(nomAttribut);
 ### Paramètres
 
 - `nomAttribut`
-  - : Une chaîne de caractères ([`DOMString`](/fr/docs/Web/API/DOMString)) qui indique le nom de l'attribut à supprimer de l'élément. Si l'attribut indiqué n'existe pas, `removeAttribute()` finit son exécution sans générer d'erreur.
+  - : Une chaîne de caractères ([`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String)) qui indique le nom de l'attribut à supprimer de l'élément. Si l'attribut indiqué n'existe pas, `removeAttribute()` finit son exécution sans générer d'erreur.
 
 ### Valeur de retour
 
@@ -25,8 +25,6 @@ element.removeAttribute(nomAttribut);
 ## Notes d'utilisation
 
 `removeAttribute()` devrait être utilisée plutôt que de passer la valeur de l'attribut à `null` (que ce soit directement ou en appelant [`setAttribute()`](/fr/docs/Web/API/Element/setAttribute). De nombreux attributs ne fonctionneront pas comme espéré si on les passe à `null`.
-
-{{ DOMAttributeMethods() }}
 
 ## Exemple
 
@@ -43,3 +41,10 @@ document.getElementById("div1").removeAttribute("align");
 ## Compatibilité des navigateurs
 
 {{Compat}}
+
+## Voir aussi
+
+- {{domxref("Element.hasAttribute()")}}
+- {{domxref("Element.getAttribute()")}}
+- {{domxref("Element.setAttribute()")}}
+- {{domxref("Element.toggleAttribute()")}}

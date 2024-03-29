@@ -35,10 +35,18 @@ if (
 }
 ```
 
-## Notes
+## Spécifications
 
-{{ DOMAttributeMethods() }}
+{{Specifications}}
 
-## Spécification
+- [DOM Level 2 Core: hasAttributeNS (en)](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElHasAttrNS) — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-ElHasAttrNS) (non normative)
 
-- [DOM Level 2 Core: hasAttributeNS (en)](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElHasAttrNS) — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-ElHasAttrNS) (non normative)
+## Compatibilité des navigateurs
+
+{{Compat}}
+
+## Voir aussi
+
+- {{domxref("Element.getAttributeNS()")}}
+- {{domxref("Element.setAttributeNS()")}}
+- {{domxref("Element.removeAttributeNS()")}}
