@@ -1,5 +1,5 @@
 ---
-title: <fieldset>：字段集元素
+title: <fieldset>：欄集元素
 slug: Web/HTML/Element/fieldset
 ---
 
@@ -39,7 +39,7 @@ slug: Web/HTML/Element/fieldset
 
 ## 範例
 
-### 簡單的字段集
+### 簡單的欄集
 
 此範例展示了一個非常簡單的 `<fieldset>` 範例，帶有一個 `<legend>` 和一個內部的控件。
 
@@ -55,9 +55,9 @@ slug: Web/HTML/Element/fieldset
 
 #### 結果
 
-{{ EmbedLiveSample('簡單的字段集', '100%', '80') }}
+{{ EmbedLiveSample('簡單的欄集', '100%', '80') }}
 
-### 禁用的字段集
+### 禁用的欄集
 
 此範例展示了一個禁用的 `<fieldset>`，其中包含兩個控件。請注意，由於位於禁用的 `<fieldset>` 內部，因此兩個控件都被禁用。
 
@@ -79,7 +79,7 @@ slug: Web/HTML/Element/fieldset
 
 #### 結果
 
-{{ EmbedLiveSample('禁用的字段集', '100%', '110') }}
+{{ EmbedLiveSample('禁用的欄集', '100%', '110') }}
 
 ## 技術摘要
 

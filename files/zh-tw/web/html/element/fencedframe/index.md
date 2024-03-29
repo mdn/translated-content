@@ -25,6 +25,7 @@ slug: Web/HTML/Element/fencedframe
 - `height`
 
   - : 一個無單位的整數，表示圍欄頁框的高度，以 CSS 像素為單位。默認值為 `150`。
+
 - `width`
   - : 一個無單位的整數，表示圍欄頁框的寬度，以 CSS 像素為單位。默認值為 `300`。
 
