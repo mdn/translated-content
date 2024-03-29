@@ -112,7 +112,7 @@ _変更なし。_
 
 #### IndexedDB
 
-- {{domxref("IDBTransaction")}} は、デフォルトで永続的ではなくなりました ([Firefox バグ 1112702](https://bugzil.la/1112702))。これは信頼性よりパフォーマンスを重視するものであり、また他のブラウザの動作に合致します。詳しくは [durability の定義](/ja/docs/Web/API/IndexedDB_API/Basic_Terminology#durable)をご覧ください。
+- {{domxref("IDBTransaction")}} は、デフォルトで永続的ではなくなりました ([Firefox バグ 1112702](https://bugzil.la/1112702))。これは信頼性よりパフォーマンスを重視するものであり、また他のブラウザーの動作に合致します。詳しくは [durability の定義](/ja/docs/Web/API/IndexedDB_API/Basic_Terminology#durable)をご覧ください。
 
 #### 開発者ツール
 

@@ -17,7 +17,7 @@ var removing = browser.tabs.remove(
 );
 ```
 
-### パラメータ
+### パラメーター
 
 - `tabIds`
   - : `integer` または `array of integer`. 閉じるタブの ID を指定します。

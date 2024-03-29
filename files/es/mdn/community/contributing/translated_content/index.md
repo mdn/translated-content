@@ -22,8 +22,8 @@ Hemos _congelado_ todo el contenido localizado (lo que significa que no aceptare
 
 ### Chino (zh-CN, zh-TW)
 
-- Discusiones: [Telegram (canal MozTW L10n)](https://moztw.org/community/telegram/), [Telegram (canal Mozilla china)](https://t.me/mozilla_china)
-- Colaboradores actuales: [Irvin](https://github.com/irvin), [t7yang](https://github.com/t7yang), [yin1999](https://github.com/yin1999)
+- Discusiones: [Telegram (`Mozilla China`)](https://t.me/mozilla_china), [Telegram (`MozTW L10n`)](https://moztw.org/community/telegram/)
+- Colaboradores actuales: [Irvin](https://github.com/irvin), [t7yang](https://github.com/t7yang), [yin1999](https://github.com/yin1999), [jasonren0403](https://github.com/jasonren0403), [JasonLamv-t](https://github.com/JasonLamv-t)
 
 ### Francés (fr)
 

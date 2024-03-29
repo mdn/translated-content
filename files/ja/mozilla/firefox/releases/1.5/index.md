@@ -5,16 +5,16 @@ slug: Mozilla/Firefox/Releases/1.5
 
 {{FirefoxSidebar}}
 
-Gecko 1.8 エンジンに基づいて、Firefox 1.5 はクラス最高の標準サポートを改善し、次世代の Web アプリケーションを可能にする新しい機能を提供しました。Firefox 1.5 では、CSS2 と CSS3、SVG 1.1 と \<canvas>、XForms と XML イベント、さらに多くの DHTML、JavaScript、DOM 拡張を介したスクリプト可能でプログラム可能な 2D グラフィックスの API のサポートが強化されています。
+Gecko 1.8 エンジンに基づいて、Firefox 1.5 はクラス最高の標準サポートを改善し、次世代のウェブアプリケーションを可能にする新しい機能を提供しました。Firefox 1.5 では、CSS2 と CSS3、SVG 1.1 と \<canvas>、XForms と XML イベント、さらに多くの DHTML、JavaScript、DOM 拡張を介したスクリプト可能でプログラム可能な 2D グラフィックスの API のサポートが強化されています。
 
 ## 開発ツール
 
-Firefox 1.5 をサポートする開発者を助ける、さまざまなツールやブラウザ拡張機能が利用可能です。
+Firefox 1.5 をサポートする開発者を助ける、さまざまなツールやブラウザー拡張機能が利用可能です。
 
 - [DOM Inspector](/ja/docs/DOM_Inspector) : 開発者が、文書を直接編集しなくても文書を調査、編集可能なツールです。DOM Inspector は、カスタムインストールにある Firefox 1.5 の開発者ツールの中からインストール可能です。
 - JavaScript console : JavaScript コードを、JavaScript と CSS のエラーをみながら作成、試験可能なツールです。
 - ページのソースにてシンタックスハイライト、検索機能を利用できます。
-- [ブラウザ拡張](https://addons.mozilla.org/extensions/showlist.php?application=firefox&category=Developer%20Tools) には、[FireBug](http://www.joehewitt.com/software/firebug/), [ウェブ開発ツールバー](</ja/docs/Web_Developer_Extension_(external)>), [Live HTTP Headers](</ja/docs/Live_HTTP_Headers_(external)>), [HTML Validator](</ja/docs/HTML_Validator_(external)>) などさまざまな機能が含まれます。
+- [ブラウザー拡張](https://addons.mozilla.org/extensions/showlist.php?application=firefox&category=Developer%20Tools) には、[FireBug](http://www.joehewitt.com/software/firebug/), [ウェブ開発ツールバー](</ja/docs/Web_Developer_Extension_(external)>), [Live HTTP Headers](</ja/docs/Live_HTTP_Headers_(external)>), [HTML Validator](</ja/docs/HTML_Validator_(external)>) などさまざまな機能が含まれます。
 
 **注:** いくつかの拡張機能はいまのところ Firefox 1.5 をサポートしていません。これらは自動的に無効になります。
 
@@ -44,22 +44,22 @@ Firefox 1.5 での新機能のいくつかを紹介します。
 - [XUL JavaScript 内部文字コード](/ja/docs/International_characters_in_XUL_JavaScript)
   - : XUL JavaScript ファイルに、ASCII でない文字を含むことができるようになりました。
 - [Tree API の変更](/ja/docs/Tree_Widget_Changes)
-  - : XUL `<tree>` エレメントへのアクセスのインターフェースが変更されました。
+  - : XUL `<tree>` エレメントへのアクセスのインターフェイスが変更されました。
 - [Firefox 1.5 での XUL の変更](/ja/docs/XUL_Changes_for_Firefox_1.5)
   - : XUL についての変更のまとめです。[XUL アプリケーションを Firefox 1.5 に対応させる](/ja/docs/Adapting_XUL_Applications_for_Firefox_1.5) も参考にしてください。
 
 ### ネットワーク関係の変更
 
-- 証明書のプロンプトは、チャネルごとに上書き可能になりました。これは、[nsIChannel](/ja/docs/NsIChannel) の notificationCallbacks へインターフェースリクエスタとして設定し、[nsIBadCertListener](/ja/docs/NsIBadCertListener) へインターフェースを設定することで動作します。
-- nsIWebBrowserPersist のリスナは、[nsIInterfaceRequestor](/ja/docs/NsIInterfaceRequestor)::GetInterface を実装し、[nsIProgressEventSink](/ja/docs/NsIProgressEventSink) ([nsIWebProgressListener](/ja/docs/NsIWebProgressListener) と重複し、そう使い勝手がいいわけではありません) を含む問い合わせがくる可能性のあるチャネルのすべてのインターフェースを提供する機会をもちました。これには、[nsIChannelEventSink](/ja/docs/NsIChannelEventSink) と [nsIBadCertListener](/ja/docs/NsIBadCertListener) も含みます。
+- 証明書のプロンプトは、チャネルごとに上書き可能になりました。これは、[nsIChannel](/ja/docs/NsIChannel) の notificationCallbacks へインターフェイスリクエスタとして設定し、[nsIBadCertListener](/ja/docs/NsIBadCertListener) へインターフェイスを設定することで動作します。
+- nsIWebBrowserPersist のリスナは、[nsIInterfaceRequestor](/ja/docs/NsIInterfaceRequestor)::GetInterface を実装し、[nsIProgressEventSink](/ja/docs/NsIProgressEventSink) ([nsIWebProgressListener](/ja/docs/NsIWebProgressListener) と重複し、そう使い勝手がいいわけではありません) を含む問い合わせがくる可能性のあるチャネルのすべてのインターフェイスを提供する機会をもちました。これには、[nsIChannelEventSink](/ja/docs/NsIChannelEventSink) と [nsIBadCertListener](/ja/docs/NsIBadCertListener) も含みます。
 - XMLHttpRequest を含む、拡張機能や他の necko 利用側は、cookie ヘッダを明示的に設定でき、necko はそれを置き換えません。保存された cookie は、明示的に設定されたヘッダと組み合わされ、保存された cookie を上書きします。
 
-## 新しいエンドユーザ向け機能
+## 新しいエンドユーザー向け機能
 
-### ユーザ体験
+### ユーザー体験
 
-- **より早いブラウザナビゲーション** 戻る・進むボタンのパフォーマンス改善
-- **ブラウザタブのドラッグ・ドロップによる再配列**
+- **より早いブラウザーナビゲーション** 戻る・進むボタンのパフォーマンス改善
+- **ブラウザータブのドラッグ・ドロップによる再配列**
 - **検索エンジンリストへの Answers.com の追加** (辞書検索)
 - **製品利便性の向上** エラーページの記述の改善、オプションメニューの再配置、RSS 検出、"セーフモード"について
 - **よりよいアクセシビリティーのサポート** DHTML のアクセシビリティーを含む
