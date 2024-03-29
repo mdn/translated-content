@@ -1,11 +1,13 @@
 ---
-title: Navigator.gpu
+title: Navigator：gpu 属性
 slug: Web/API/Navigator/gpu
+l10n:
+  sourceCommit: 89c435da452257b944b403cc9e45036fcb22590e
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-**`Navigator.gpu`** 只读属性为当前浏览上下文返回 {{domxref("GPU")}} 对象，该对象是 {{domxref("WebGPU_API", "WebGPU API", "", 1)}} 的入口点。
+**`Navigator.gpu`** 只读属性返回当前浏览上下文的 {{domxref("GPU")}} 对象，该对象是 {{domxref("WebGPU_API", "WebGPU API", "", "nocode")}} 的入口点。
 
 ## 值
 
@@ -16,12 +18,12 @@ slug: Web/API/Navigator/gpu
 ```js
 async function init() {
   if (!navigator.gpu) {
-    throw Error("WebGPU not supported.");
+    throw Error("不支持 WebGPU。");
   }
 
   const adapter = await navigator.gpu.requestAdapter();
   if (!adapter) {
-    throw Error("Couldn't request WebGPU adapter.");
+    throw Error("无法请求 WebGPU 适配器。");
   }
 
   const device = await adapter.requestDevice();
@@ -40,4 +42,4 @@ async function init() {
 
 ## 参见
 
-- {{domxref("WebGPU_API", "WebGPU API", "", 1)}}
+- {{domxref("WebGPU_API", "WebGPU API", "", "nocode")}}

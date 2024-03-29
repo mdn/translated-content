@@ -21,7 +21,7 @@ original_slug: MDN/MDN_Product_Advisory_Board/Members
   **Head of Product CE, Marketing Operations, Mozilla**
   - : Hermina Condei は、Mozilla で MDN Web Docs のプロダクトマネジメントとエンジニアリング、SUMO のプラットフォームエンジニアリングを担当しています。過去数年間にわたり、従業員やコミュニティのためのアクセスおよびアイデンティティ管理に焦点を当てた全社的なプロジェクトを推進してきました。また、オープンイノベーショングループのプロダクトチームを率い、チームのプロジェクトポートフォリオに対する社内外のステークホルダーの管理に注力していました。
 - **Dominique Hazael-Massieux**
-  W3C ウェブ技術エキスパート、[電気通信分野のバーティカルチャンピオン](https://www.w3.org/Telco/)、[Web リアルタイムコミュニケーションワーキンググループ](https://www.w3.org/2011/04/webrtc/)、[デバイスおよびセンサーワーキンググループ](https://www.w3.org/das/)。
+  W3C ウェブ技術エキスパート、[電気通信分野のバーティカルチャンピオン](https://www.w3.org/Telco/)、[ウェブリアルタイムコミュニケーションワーキンググループ](https://www.w3.org/2011/04/webrtc/)、[デバイスおよびセンサーワーキンググループ](https://www.w3.org/das/)。
   - : Dominique Hazael-Massieux は W3C スタッフの一員で、開発者との関係における W3C の取り組みを率いています。Dom は 2000 年から W3C に取り組んでいて、devrel に加えて、現在 WebRTC、デバイス API、および WebVR の標準化に携わっています。
 - **Brian Kardell**
   Igalia の開発者アドボケート
