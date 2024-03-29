@@ -1,17 +1,36 @@
 ---
 title: 過去のレイアウト方法
 slug: Learn/CSS/CSS_layout/Legacy_Layout_Methods
+l10n:
+  sourceCommit: 860fb7609ef4cdba027840cc05f6dafc4dcbc19e
 ---
 
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}
 
-グリッドシステムは CSS レイアウトで使用される非常に一般的な機能で、CSS グリッドレイアウト以前はフロートや他のレイアウト機能を使用して実装される傾向がありました。 あなたはレイアウトをいくつかの列（例えば 4、6、または 12）として想像し、そしてコンテンツの列をこれらの想像上の列の内側に合わせます。 この記事では、古いプロジェクトで作業した場合に、それらがどう使われたかを理解するために、これらの古い方法がどのように機能するのかを説明します。
+グリッドシステムは CSS レイアウトで使用される非常に一般的な機能で、CSS グリッドレイアウト以前は浮動ブロックや他のレイアウト機能を使用して実装される傾向がありました。 あなたはレイアウトをいくつかの列（例えば 4、6、または 12）として想像し、そしてコンテンツの列をこれらの想像上の列の内側に合わせます。この記事では、古いプロジェクトで作業した場合に、それらがどう使われたかを理解するために、これらの古い方法がどのように機能するのかを説明します。
 
-| 前提知識: | HTML の基本（[HTML 入門](/ja/docs/Learn/HTML/Introduction_to_HTML)を学ぶ）、および CSS の機能の考え方（[CSS 入門](/ja/docs/Learn/CSS/Introduction_to_CSS)と[ボックスの装飾](/ja/docs/Learn/CSS/Styling_boxes)を学ぶ）。 |
-| --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 学習目標: | CSS グリッドレイアウトがブラウザーで利用可能になる前に使用されていたグリッドレイアウトシステムの背後にある基本概念を理解すること。                                                                                      |
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">前提知識:</th>
+      <td>
+        HTML の基礎（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML"
+          >HTML 入門</a
+        >で学習）、 CSS の動作の考え方（
+        <a href="/ja/docs/Learn/CSS/First_steps">CSS 入門</a>、
+        <a href="/ja/docs/Learn/CSS/Building_blocks">CSS の構成要素</a>で学習）
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">目的:</th>
+      <td>
+        CSS グリッドレイアウトがブラウザーで利用可能になる前に使用されていたグリッドレイアウトシステムの背後にある基本概念を理解すること。
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## CSS グリッドレイアウト以前のレイアウトとグリッドシステム
 
@@ -19,13 +38,13 @@ CSS がごく最近まで内蔵されたグリッドシステムを持ってい�
 
 新しいプロジェクトでは、ほとんどの場合、CSS グリッドレイアウトを他の 1 つ以上の最新のレイアウト方法と組み合わせて使用して、任意のレイアウトの基礎とします。 しかし、時々、これらの過去の方法を使用している「グリッドシステム」に遭遇するでしょう。 それらがどのように機能するのか、そしてなぜそれらが CSS グリッドレイアウトと異なるのかを理解するのは価値があります。
 
-このレッスンでは、フロートとフレックスボックスに基づいたグリッドシステムとグリッドフレームワークの仕組みについて説明します。 グリッドレイアウトを勉強してきたので、おそらくこれがどれほど複雑であるかに驚くことでしょう！ この種のシステムを使用する既存のプロジェクトで作業できるようにすることに加えて、新しい方法をサポートしないブラウザー用の代替コードを作成する必要がある場合に、この知識は役に立ちます。
+このレッスンでは、浮動ブロックとフレックスボックスに基づいたグリッドシステムとグリッドフレームワークの仕組みについて説明します。 グリッドレイアウトを勉強してきたので、おそらくこれがどれほど複雑であるかに驚くことでしょう。この種のシステムを使用する既存のプロジェクトで作業できるようにすることに加えて、新しい方法をサポートしないブラウザー用の代替コードを作成する必要がある場合に、この知識は役に立ちます。
 
 これらのシステムを検討する際には、それらのどれも実際には CSS グリッドレイアウトがグリッドを作成する方法でグリッドを作成しないことに、留意する価値があります。 それらは項目にサイズを与え、グリッドのように*見える*ように一列に並べることによって機能します。
 
 ## 2 列レイアウト
 
-最も簡単な例として、2 列のレイアウトから始めましょう。 コンピュータ上に新しい `index.html` ファイルを作成し、それを[単純な HTML テンプレート](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html)で埋め、適切な場所に以下のコードを挿入することで、従うことができます。 このセクションの一番下には、最終的なコードがどのようになっているべきかの実例があります。
+最も簡単な例として、2 列のレイアウトから始めましょう。 コンピューター上に新しい `index.html` ファイルを作成し、それを[単純な HTML テンプレート](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html)で埋め、適切な場所に以下のコードを挿入することで、従うことができます。 このセクションの一番下には、最終的なコードがどのようになっているべきかの実例があります。
 
 まず最初に、列に入れるためにいくつかのコンテンツが必要です。 次のもので `body` の中に現在あるものはすべて置き換えます。
 
@@ -73,7 +92,7 @@ body {
 }
 ```
 
-`body` の幅が 900px になるまで、`body` はビューポートの幅の 90% になります。 この場合、`body` はこの幅に固定され、ビューポートの中央に配置されます。 デフォルトでは、その子（{{htmlelement("h1")}} と 2 つの {{htmlelement("div")}}）は `body` の幅の 100% にわたります。 2 つの {{htmlelement("div")}} を互いに並べてフロートしたい場合は、それらの幅の合計をその親要素の幅の 100% 以下に設定して、互いに並んで収まるようにする必要があります。 CSS の最後に次を追加してください。
+`body` の幅が 900px になるまで、`body` はビューポートの幅の 90% になります。 この場合、`body` はこの幅に固定され、ビューポートの中央に配置されます。 デフォルトでは、その子（{{htmlelement("Heading_Elements", "h1")}} と 2 つの {{htmlelement("div")}}）は `body` の幅の 100% にわたります。 2 つの {{htmlelement("div")}} を互いに並べて浮動させたい場合は、それらの幅の合計をその親要素の幅の 100% 以下に設定して、互いに並んで収まるようにする必要があります。 CSS の最後に次を追加してください。
 
 ```css
 div:nth-of-type(1) {
@@ -85,7 +104,7 @@ div:nth-of-type(2) {
 }
 ```
 
-ここでは、両方とも親の幅の 48% に設定しました — これは合計 96% で、2 列の間のガターのために 4% の空きを残し、コンテンツに余裕を持たせることができます。 さらに次のようにして、列をフロートにする必要があります。
+ここでは、両方とも親の幅の 48% に設定しました — これは合計 96% で、2 列の間の溝のために 4% の空きを残し、コンテンツに余裕を持たせることができます。 さらに次のようにして、列を浮動ブロックにする必要があります。
 
 ```css
 div:nth-of-type(1) {
@@ -101,68 +120,17 @@ div:nth-of-type(2) {
 
 これらすべてをまとめると、次のような結果が得られます。
 
-```html hidden
-<h1>2 column layout example</h1>
-
-<div>
-  <h2>First column</h2>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
-    aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
-    pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at
-    ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer
-    ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur
-    vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus.
-    Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus
-    sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus.
-    Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis,
-    eget fermentum sapien.
-  </p>
-</div>
-
-<div>
-  <h2>Second column</h2>
-  <p>
-    Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
-    ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
-    est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
-    tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies
-    lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
-    vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
-    penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-  </p>
-</div>
-```
-
-```css hidden
-body {
-  width: 90%;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-div:nth-of-type(1) {
-  width: 48%;
-  float: left;
-}
-
-div:nth-of-type(2) {
-  width: 48%;
-  float: right;
-}
-```
-
-{{ EmbedLiveSample('Floated_Two_Col', '100%', 520) }}
+{{ EmbedLiveSample('A_two_column_layout', '100%', 520) }}
 
 ここでは、すべての幅にパーセントを使用していることに気付くでしょう。 これは、さまざまな画面サイズに合わせて調整し、小さい画面サイズで列幅に同じ比率を維持する、**リキッドレイアウト**（liquid layout）を作成するため、非常に良い戦略です。 ブラウザーウィンドウの幅を調整して確認してください。 これはレスポンシブウェブデザインのための貴重なツールです。
 
-> **メモ:** この例は [0_two-column-layout.html](http://mdn.github.io/learning-area/css/css-layout/floats/0_two-column-layout.html) で実行できます（[ソースコード](https://github.com/mdn/learning-area/blob/master/css/css-layout/floats/0_two-column-layout.html)も見る）。
+> **メモ:** この例は [0_two-column-layout.html](https://mdn.github.io/learning-area/css/css-layout/floats/0_two-column-layout.html) で実行できます（[ソースコード](https://github.com/mdn/learning-area/blob/main/css/css-layout/floats/0_two-column-layout.html)も見る）。
 
 ## 単純な過去のグリッドフレームワークを作成する
 
-過去のフレームワークの大部分は、グリッドのように見えるものを作成するために、{{cssxref("float")}} プロパティのふるまいを使用して、ある列を別の列の隣にフロートします。 フロートによるグリッドを作成するプロセスを通して、これがどのように機能するかを説明し、[フロートとクリア](/ja/docs/Learn/CSS/CSS_layout/Floats)のレッスンで学んだことを基にしてさらに高度な概念を紹介します。
+過去のフレームワークの大部分は、グリッドのように見えるものを作成するために、{{cssxref("float")}} プロパティのふるまいを使用して、ある列を別の列の隣に浮動します。 浮動ブロックによるグリッドを作成するプロセスを通して、これがどのように機能するかを説明し、[浮動ブロックとクリア](/ja/docs/Learn/CSS/CSS_layout/Floats)のレッスンで学んだことを基にしてさらに高度な概念を紹介します。
 
-作成する最も簡単な種類のグリッドフレームワークは固定幅のものです — デザインに必要な合計幅、列数、およびガター幅と列幅を求める必要があります。 ブラウザーの幅に合わせて増減する列を含むグリッドにデザインをレイアウトすることにした場合は、列とそれらの間のガターに対してパーセント幅を計算する必要があります。
+作成する最も簡単な種類のグリッドフレームワークは固定幅のものです — デザインに必要な合計幅、列数、および溝幅と列幅を求める必要があります。 ブラウザーの幅に合わせて増減する列を含むグリッドにデザインをレイアウトすることにした場合は、列とそれらの間の溝に対してパーセント幅を計算する必要があります。
 
 次のセクションでは、両方を作成する方法を見ていきます。 12 列のグリッドを作成します — 12 が 6、4、3、および 2 で割り切れることを考えると、さまざまな状況に非常に適応できると見られる非常に一般的な選択です。
 
@@ -170,7 +138,7 @@ div:nth-of-type(2) {
 
 最初に固定幅の列を使用するグリッドシステムを作成しましょう。
 
-サンプルの [simple-grid.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/simple-grid.html) ファイルのローカルコピーを作成することから始めます。 このファイルには、`body` に次のマークアップが含まれています。
+サンプルの [simple-grid.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/simple-grid.html) ファイルのローカルコピーを作成することから始めます。 このファイルには、`body` に次のマークアップが含まれています。
 
 ```html
 <div class="wrapper">
@@ -199,9 +167,9 @@ div:nth-of-type(2) {
 
 目的は、これを 12 列 2 行のグリッドのデモ用グリッドに変換することです — 一番上の行は個々の列のサイズを示し、2 番目の行はグリッド上のいくつかの異なるサイズの領域です。
 
-![](simple-grid-finished.png)
+![CSS グリッドで 16 個のグリッドアイテムが 12 列と 2 行にまたがる様子。一番上の行には、 12 列の同じ幅のグリッドアイテムがあります。 2 つ目には、異なるサイズのグリッドアイテムがあります。項目 13 は 1 列、項目 14 は 6 列、項目 15 は 3 列、項目 16 は 2 列にわたります。](simple-grid-finished.png)
 
-{{htmlelement("style")}} 要素に、次のコードを追加します。 これにより、`wrapper` コンテナの幅は 980 ピクセルになり、右側のパディングは 20 ピクセルになります。 これにより、列幅とガター幅の合計が 960 ピクセルになります — この場合、サイト上のすべての要素で {{cssxref("box-sizing")}} を `border-box` に設定しているため、パディングはコンテンツの幅の合計から差し引かれます（詳細については、[ボックスモデルの完全な変更](/ja/docs/Learn/CSS/Styling_boxes/Box_model_recap#Changing_the_box_model_completely)を参照）。
+{{htmlelement("style")}} 要素に、次のコードを追加します。 これにより、`wrapper` コンテナーの幅は 980 ピクセルになり、右側のパディングは 20 ピクセルになります。 これにより、列幅と溝幅の合計が 960 ピクセルになります — この場合、サイト上のすべての要素で {{cssxref("box-sizing")}} を `border-box` に設定しているため、パディングはコンテンツの幅の合計から差し引かれます（詳細については、[CSS 代替ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model#css_代替ボックスモデル)を参照）。
 
 ```css
 * {
@@ -218,7 +186,7 @@ body {
 }
 ```
 
-次に、グリッドの各行を囲む `row` コンテナを使用して、ある行を別の行からクリアします。 前の規則の下に次の規則を追加します。
+次に、グリッドの各行を囲む `row` コンテナーを使用して、ある行を別の行からクリアします。 前のルールの下に次のルールを追加します。
 
 ```css
 .row {
@@ -228,18 +196,18 @@ body {
 
 このクリアを適用すると、各行を 12 列の要素で完全に埋める必要がなくなります。 行は分離されたままになり、互いに干渉しません。
 
-列の間のガターは 20 ピクセル幅です。 最初の列を含め、各列の左側にマージンとしてこれらのガターを作成して、コンテナの右側にある 20 ピクセルのパディングとのバランスを取ります。 だから全部で 12 のガターを持っています — 12 x 20 = 240。
+列の間の溝は 20 ピクセル幅です。 最初の列を含め、各列の左側にマージンとしてこれらの溝を作成して、コンテナーの右側にある 20 ピクセルのパディングとのバランスを取ります。 だから全部で 12 の溝を持っています — 12 x 20 = 240。
 
 これを 960 ピクセルの合計幅から差し引いて、列に 720 ピクセルを与える必要があります。 これを 12 で割ると、各列の幅は 60 ピクセルになるはずです。
 
-次のステップは、`.col` クラスの規則を作成し、それを左にフロートして、ガターを形成する 20 ピクセルの {{cssxref("margin-left")}} と、60 ピクセルの {{cssxref("width")}} を与えることです。 CSS の最後に次の規則を追加してください。
+次のステップは、`.col` クラスのルールを作成し、それを左に浮動して、溝を形成する 20 ピクセルの {{cssxref("margin-left")}} と、60 ピクセルの {{cssxref("width")}} を与えることです。 CSS の最後に次のルールを追加してください。
 
 ```css
 .col {
   float: left;
   margin-left: 20px;
   width: 60px;
-  background: rgb(255, 150, 150);
+  background: rgb(255 150 150);
 }
 ```
 
@@ -247,7 +215,7 @@ body {
 
 > **メモ:** また、各列に薄い赤色を指定したので、各列がどれだけのスペースを占めているかを正確に確認できます。
 
-複数列にまたがるコンテナのレイアウトには、必要な列数（足す、その間のガター）に合わせて {{cssxref("width")}} の値を調整するための特別なクラスを指定する必要があります。 コンテナが 2〜12 列にまたがるようにするために、追加のクラスを作成する必要があります。 それぞれの幅は、その列数の列幅にガター幅を加えた結果です。 ガター幅は常に列数より 1 つ少なくなります。
+複数列にまたがるコンテナーのレイアウトには、必要な列数（足す、その間の溝）に合わせて {{cssxref("width")}} の値を調整するための特別なクラスを指定する必要があります。 コンテナーが 2〜12 列にまたがるようにするために、追加のクラスを作成する必要があります。 それぞれの幅は、その列数の列幅に溝幅を加えた結果です。 溝幅は常に列数より 1 つ少なくなります。
 
 CSS の最後に次を追加してください。
 
@@ -260,7 +228,7 @@ CSS の最後に次を追加してください。
 .col.span3 {
   width: 220px;
 }
-/* And so on... */
+/* And so on… */
 .col.span4 {
   width: 300px;
 }
@@ -290,20 +258,20 @@ CSS の最後に次を追加してください。
 }
 ```
 
-これらのクラスを作成したら、グリッド上にさまざまな幅の列を配置できます。 効果を確認するには、ページを保存してブラウザーでロードします。
+これらのクラスを作成したら、グリッド上にさまざまな幅の列を配置できます。 効果を確認するには、ページを保存してブラウザーで読み込みます。
 
-> **メモ:** 上記の例がうまくいかない場合は、GitHub の[完成版](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/simple-grid-finished.html)と比較してみてください（[ライブでも見られます](http://mdn.github.io/learning-area/css/css-layout/grids/simple-grid-finished.html)）。
+> **メモ:** 上記の例がうまくいかない場合は、GitHub の[完成版](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/simple-grid-finished.html)と比較してみてください（[ライブでも見られます](https://mdn.github.io/learning-area/css/css-layout/grids/simple-grid-finished.html)）。
 
-要素のクラスを変更したり、コンテナを追加したり削除したりして、レイアウトの変更方法を確認してください。 例えば、2 行目を次のようにすることができます。
+要素のクラスを変更したり、コンテナーを追加したり削除したりして、レイアウトの変更方法を確認してください。 例えば、2 行目を次のようにすることができます。
 
-```css
+```html
 <div class="row">
   <div class="col span8">13</div>
   <div class="col span4">14</div>
 </div>
 ```
 
-これで、グリッドシステムが機能したので、単純に行と各行の列数を定義してから、各コンテナに必要なコンテンツを埋めるだけです。 すばらしいです！
+これで、グリッドシステムが機能したので、単純に行と各行の列数を定義してから、各コンテナーに必要なコンテンツを埋めるだけです。 すばらしいです！
 
 ### フルードグリッドを作成する
 
@@ -311,31 +279,31 @@ CSS の最後に次を追加してください。
 
 固定幅を柔軟なパーセントベースのものに変換する式は次のとおりです。
 
-```
+```plain
 target / context = result
 ```
 
 列幅については、目標の幅（**target width**）は 60 ピクセル、コンテキスト（**context**）は 960 ピクセルの `wrapper` です。 パーセントを計算するために次のようにします。
 
-```
+```plain
 60 / 960 = 0.0625
 ```
 
 次に小数点を 2 桁移動して、6.25% のパーセントを得ます。 したがって、私たちの CSS では、60 ピクセルの列幅を 6.25% に置き換えることができます。
 
-ガター幅についても次のように同じことをする必要があります。
+溝幅についても次のように同じことをする必要があります。
 
-```
+```plain
 20 / 960 = 0.02083333333
 ```
 
-そのため、`.col` 規則の 20 ピクセルの {{cssxref("margin-left")}} と、`.wrapper` 規則の 20 ピクセルの {{cssxref("padding-right")}} を 2.08333333% に置き換える必要があります。
+そのため、`.col` ルールの 20 ピクセルの {{cssxref("margin-left")}} と、`.wrapper` ルールの 20 ピクセルの {{cssxref("padding-right")}} を 2.08333333% に置き換える必要があります。
 
 #### グリッドを更新する
 
-このセクションで始めるには、前のサンプルページの新しいコピーを作成するか、または出発点として使用するために [simple-grid-finished.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/simple-grid-finished.html) コードのローカルコピーを作成してください。
+このセクションで始めるには、前のサンプルページの新しいコピーを作成するか、または出発点として使用するために [simple-grid-finished.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/simple-grid-finished.html) コードのローカルコピーを作成してください。
 
-次のように（`.wrapper` セレクターの）2 番目の CSS 規則を更新します。
+次のように（`.wrapper` セレクターの）2 番目の CSS ルールを更新します。
 
 ```css
 body {
@@ -351,20 +319,20 @@ body {
 
 パーセントの {{cssxref("width")}} を指定しただけでなく、レイアウトが広くなり過ぎるのを防ぐために {{cssxref("max-width")}} プロパティも追加しました。
 
-次に、（`.col` セレクターの）4 番目の CSS 規則を次のように更新します。
+次に、（`.col` セレクターの）4 番目の CSS ルールを次のように更新します。
 
 ```css
 .col {
   float: left;
   margin-left: 2.08333333%;
   width: 6.25%;
-  background: rgb(255, 150, 150);
+  background: rgb(255 150 150);
 }
 ```
 
-もう少し面倒な部分があります。 ピクセル幅ではなくパーセントを使用するようにすべての `.col.span` 規則を更新する必要があります。 これは電卓で少し時間がかかります。 あなたの努力を節約するために、それを下に用意しました。
+もう少し面倒な部分があります。 ピクセル幅ではなくパーセントを使用するようにすべての `.col.span` ルールを更新する必要があります。 これは電卓で少し時間がかかります。 あなたの努力を節約するために、それを下に用意しました。
 
-次のように CSS 規則の一番下のブロックを更新します。
+次のように CSS ルールの一番下のブロックを更新します。
 
 ```css
 /* Two column widths (12.5%) plus one gutter width (2.08333333%) */
@@ -375,7 +343,7 @@ body {
 .col.span3 {
   width: 22.91666666%;
 }
-/* And so on... */
+/* And so on… */
 .col.span4 {
   width: 31.24999999%;
 }
@@ -405,15 +373,15 @@ body {
 }
 ```
 
-コードを保存してブラウザーにロードし、ビューポートの幅を変更してみます — 列の幅は適切に調整されるはずです。
+コードを保存してブラウザーに読み込み、ビューポートの幅を変更してみます — 列の幅は適切に調整されるはずです。
 
-> **メモ:** 上記の例がうまくいかない場合は、[GitHub の完成版](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid.html)と比較してみてください（[ライブでも見られます](http://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid.html)）。
+> **メモ:** 上記の例がうまくいかない場合は、[GitHub の完成版](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/fluid-grid.html)と比較してみてください（[ライブでも見られます](https://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid.html)）。
 
 ### calc() 関数を使ったより簡単な計算
 
-CSS のすぐ内側で {{cssxref("calc","calc()")}} 関数を使って数学を行うことができます — これは CSS の値に簡単な数学の方程式を挿入して、値が何であるべきかを計算することを可能にします。 複雑な計算が必要な場合に特に便利です。 例えば、「この要素の高さは、常に親の高さの 100% から 50px を引いた値です」など、さまざまな単位を使用した計算も計算できます。 [MediaRecorder API のチュートリアルからこの例](</ja/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API#Keeping_the_interface_constrained_to_the_viewport_regardless_of_device_height_with_calc()>)を参照してください。
+CSS のすぐ内側で {{cssxref("calc", "calc()")}} 関数を使って数学を行うことができます — これは CSS の値に簡単な数学の方程式を挿入して、値が何であるべきかを計算することを可能にします。 複雑な計算が必要な場合に特に便利です。 例えば、「この要素の高さは、常に親の高さの 100% から 50px を引いた値です」など、さまざまな単位を使用した計算も計算できます。 [MediaStream 収録 API のチュートリアルからこの例](/ja/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API#calc_で、機器の高さに関係なく、インターフェイスをビューポートに制限)を参照してください。
 
-とにかく、私たちのグリッドに戻りましょう！ グリッドの複数の列にまたがる列は、合計幅が 6.25% x またがる列の数 + 2.08333333% x ガターの数（常に列の数 - 1）になります。 `calc()` 関数を使用すると、`width` の値の内側でこの計算を実行できます。 そのため、例えば、4 列にまたがる項目であれば、次のようにします。
+とにかく、私たちのグリッドに戻りましょう！ グリッドの複数の列にまたがる列は、合計幅が 6.25% x またがる列の数 + 2.08333333% x 溝の数（常に列の数 - 1）になります。 `calc()` 関数を使用すると、`width` の値の内側でこの計算を実行できます。 そのため、例えば、4 列にまたがる項目であれば、次のようにします。
 
 ```css
 .col.span4 {
@@ -421,7 +389,7 @@ CSS のすぐ内側で {{cssxref("calc","calc()")}} 関数を使って数学を�
 }
 ```
 
-規則の一番下のブロックを次のように置き換えてから、ブラウザーにリロードして、同じ結果になるかどうかを確認します。
+ルールの一番下のブロックを次のように置き換えてから、ブラウザーに読み込んで、同じ結果になるかどうかを確認します。
 
 ```css
 .col.span2 {
@@ -459,15 +427,13 @@ CSS のすぐ内側で {{cssxref("calc","calc()")}} 関数を使って数学を�
 }
 ```
 
-> **メモ:** [fluid-grid-calc.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid-calc.html) で完成版を見ることができます（[ライブでも見られます](http://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-calc.html)）。
-
-> **メモ:** これがうまくいかない場合は、ブラウザーが `calc()` 関数をサポートしていないことが考えられます。 ブラウザー間ではかなりよくサポートされています — IE9 までさかのぼります。
+> **メモ:** [fluid-grid-calc.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/fluid-grid-calc.html) で完成版を見ることができます（[ライブでも見られます](https://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-calc.html)）。
 
 ### 意味論的グリッドシステム対「意味論的でない」グリッドシステム
 
 マークアップにクラスを追加してレイアウトを定義するということは、コンテンツとマークアップが視覚的表現に結び付くことを意味します。 この CSS クラスの使い方は、コンテンツを説明するクラスの意味論的な使い方ではなく、「意味論的でない」（コンテンツがどのように見えるかを説明する）ものとして説明されることがあります。 これは、`span2`、`span3` などのクラスの場合です。
 
-これらが唯一のアプローチではありません。 代わりにグリッドを決定してから、サイズ情報を既存の意味論的クラスの規則に追加することができます。 例えば、8 列にまたがる `content` のクラスが {{htmlelement("div")}} にある場合は、`span8` のクラスから `width` をコピーして、次のような規則を指定できます。
+これらが唯一のアプローチではありません。 代わりにグリッドを決定してから、サイズ情報を既存の意味論的クラスのルールに追加することができます。 例えば、8 列にまたがる `content` のクラスが {{htmlelement("div")}} にある場合は、`span8` のクラスから `width` をコピーして、次のようなルールを指定できます。
 
 ```css
 .content {
@@ -475,17 +441,17 @@ CSS のすぐ内側で {{cssxref("calc","calc()")}} 関数を使って数学を�
 }
 ```
 
-> **メモ:** [Sass](http://sass-lang.com/) などのプリプロセッサを使用する場合は、単純な mixin を作成してその値を挿入することができます。
+> **メモ:** [Sass](https://sass-lang.com/) などのプリプロセッサを使用する場合は、単純な mixin を作成してその値を挿入することができます。
 
-### グリッドでオフセットしたコンテナを使えるようにする
+### グリッドでオフセットしたコンテナーを使えるようにする
 
-作成したグリッドは、すべてのコンテナをグリッドの左側から始めてぴったり重ねる限り、うまく機能します。 最初のコンテナの前（または、コンテナ間）に空の列スペースを残したい場合は、視覚的にグリッドを横切って押すための左マージンを追加するためのオフセットクラスを作成する必要があります。 もっと数学！
+作成したグリッドは、すべてのコンテナーをグリッドの左側から始めてぴったり重ねる限り、うまく機能します。 最初のコンテナーの前（または、コンテナー間）に空の列スペースを残したい場合は、視覚的にグリッドを横切って押すための左マージンを追加するためのオフセットクラスを作成する必要があります。 もっと数学！
 
 これを試してみましょう。
 
-以前のコードから始めるか、出発点として [fluid-grid.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid.html) ファイルを使用してください。
+以前のコードから始めるか、出発点として [fluid-grid.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/fluid-grid.html) ファイルを使用してください。
 
-CSS でコンテナ要素を 1 列幅だけオフセットするクラスを作成しましょう。 CSS の最後に次を追加してください。
+CSS でコンテナー要素を 1 列幅だけオフセットするクラスを作成しましょう。 CSS の最後に次を追加してください。
 
 ```css
 .offset-by-one {
@@ -501,7 +467,7 @@ CSS でコンテナ要素を 1 列幅だけオフセットするクラスを作�
 }
 ```
 
-これで、このクラスを左側に 1 列幅の空きスペースに残したいコンテナに追加できます。 例えば、HTML に次のものがあるとします。
+これで、このクラスを左側に 1 列幅の空きスペースに残したいコンテナーに追加できます。 例えば、HTML に次のものがあるとします。
 
 ```html
 <div class="col span6">14</div>
@@ -515,15 +481,15 @@ CSS でコンテナ要素を 1 列幅だけオフセットするクラスを作�
 
 > **メモ:** オフセット用のスペースを確保するために、またがる列の数を減らす必要があることに注意してください！
 
-違いを確認するには、ロードとリフレッシュを試してみるか、[fluid-grid-offset.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid-offset.html) の例を確認してください（[ライブでも見られます](http://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-offset.html)）。 完成した例は次のようになります。
+違いを確認するには、ロードとリフレッシュを試してみるか、[fluid-grid-offset.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/fluid-grid-offset.html) の例を確認してください（[ライブでも見られます](https://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-offset.html)）。 完成した例は次のようになります。
 
-![](offset-grid-finished.png)
+![グリッドには 2 つの行があります。 1 行目には同じ幅の 12 個の項目があり、 2 行目には幅の異なる 4 個の項目があります。項目 13 は 1 列、項目 14 は 5 列、項目 15 は 3 列、項目 16 は 2 列にわたります。アイテム 14 は 'offset-by-one' クラスが適用されており、 2 つ目ではなく 3 つ目の列から始まり、 2 行目の 2 つ目の列に 1 列分の幅の空き空間が残ります。](offset-grid-finished.png)
 
 > **メモ:** 特別な演習として、`offset-by-two` クラスを実装できますか？
 
-### フロートのグリッドの制限
+### 浮動ブロックのグリッドの制限
 
-このようなシステムを使用するときは、合計幅が正しく加算され、行に含むことができるよりも多くの列にまたがる要素を行に含めないように注意する必要があります。 フロートの機能のために、グリッドの列の数がグリッドに対して広くなりすぎると、最後の要素が次のラインにドロップダウンされ、グリッドが壊れます。
+このようなシステムを使用するときは、合計幅が正しく加算され、行に含むことができるよりも多くの列にまたがる要素を行に含めないように注意する必要があります。 浮動ブロックの機能のために、グリッドの列の数がグリッドに対して広くなりすぎると、最後の要素が次のラインにドロップダウンされ、グリッドが壊れます。
 
 また、要素のコンテンツがそれらが占める行よりも広くなると、オーバーフローしてだらしなく見えることも覚えておいてください。
 
@@ -555,27 +521,27 @@ body {
   margin-bottom: 1em;
   width: 6.25%;
   flex: 1 1 auto;
-  background: rgb(255, 150, 150);
+  background: rgb(255 150 150);
 }
 ```
 
-あなた自身の例でこれらの置き換えをすることを試みるか、または [flexbox-grid.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/flexbox-grid.html) の例のコードを見ることができます（[ライブでも見られます](http://mdn.github.io/learning-area/css/css-layout/grids/flexbox-grid.html)）。
+あなた自身の例でこれらの置き換えをすることを試みるか、または [flexbox-grid.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/flexbox-grid.html) の例のコードを見ることができます（[ライブでも見られます](https://mdn.github.io/learning-area/css/css-layout/grids/flexbox-grid.html)）。
 
-ここで各行をフレックスコンテナに変えています。 フレックスボックスベースのグリッドでは、合計が 100% 未満の要素を持つことができるようにするために、まだ行が必要です。 そのコンテナを `display: flex` に設定します。
+ここで各行をフレックスコンテナーに変えています。 フレックスボックスベースのグリッドでは、合計が 100% 未満の要素を持つことができるようにするために、まだ行が必要です。 そのコンテナーを `display: flex` に設定します。
 
 `.col` では、{{cssxref("flex")}} プロパティの最初の値（{{cssxref("flex-grow")}}）を 1 に設定して項目を大きくできるようにし、2 番目の値（{{cssxref("flex-shrink")}}）を 1 にして項目を縮小できるようにし、3 番目の値（{{cssxref("flex-basis")}}）を `auto` に設定します。 この要素には {{cssxref("width")}} が設定されているので、`auto` はその幅を `flex-basis` の値として使用します。
 
 一番上のラインでは、グリッド上に 12 個のきちんとしたボックスが表示され、ビューポートの幅を変更すると、それらは均等に拡大および縮小されます。 しかし、次のラインでは、4 つの項目しかなく、これらも基本の 60px から増減しています。 それらのうちの 4 つだけで、それらは上の行の項目よりもはるかに大きく成長することができ、その結果、それらはすべて 2 番目の行で同じ幅を占めます。
 
-![](flexbox-grid-incomplete.png)
+![グリッドには 2 つの行があります。それぞれの行はフレックスコンテナーです。 1 行目には 12 個の等幅フレックスアイテムがあります。 2 つ目には 4 つの等幅フレックスアイテムがあります。](flexbox-grid-incomplete.png)
 
 これを修正するには、その要素に対して `flex-basis` によって使用される値を置き換える幅を提供するために、`span` クラスを含める必要があります。
 
 それらは、直上の項目について何も知らないので、直上の項目によって使用されるグリッドを尊重もしません。
 
-フレックスボックスは設計上**一次元**です。 それは単一の次元、つまり行または列の次元を扱います。 列と行に厳密なグリッドを作成することはできません。 つまり、グリッドにフレックスボックスを使用する場合でも、フロートのレイアウトの場合と同様にパーセントを計算する必要があります。
+フレックスボックスは設計上**一次元**です。 それは単一の次元、つまり行または列の次元を扱います。 列と行に厳密なグリッドを作成することはできません。 つまり、グリッドにフレックスボックスを使用する場合でも、浮動ブロックのレイアウトの場合と同様にパーセントを計算する必要があります。
 
-プロジェクトでは、フレックスボックスがフロートを介して提供する追加の位置合わせとスペース分配機能のために、フレックスボックスの「グリッド」を使用することを選択することもできます。 しかし、設計されたもの以外の何かのためのツールを使っているのだということを知っているべきです。 だからあなたは望む最終結果を得るために、それが追加の輪くぐりの輪を飛び越えさせているように感じているかもしれません。
+プロジェクトでは、フレックスボックスが浮動ブロックを介して提供する追加の位置合わせとスペース分配機能のために、フレックスボックスの「グリッド」を使用することを選択することもできます。 しかし、設計されたもの以外の何かのためのツールを使っているのだということを知っているべきです。 だからあなたは望む最終結果を得るために、それが追加の輪くぐりの輪を飛び越えさせているように感じているかもしれません。
 
 ## サードパーティのグリッドシステム
 
@@ -585,7 +551,7 @@ body {
 
 はじめに [Skeleton のウェブサイト](http://getskeleton.com/)にアクセスし、「Download」を選択して ZIP ファイルをダウンロードします。 これを解凍し、`skeleton.css` ファイルと `normalize.css` ファイルを新しいディレクトリーにコピーします。
 
-[html-skeleton.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/html-skeleton.html) ファイルのコピーを作成し、それを `skeleton.css` と `normalize.css` と同じディレクトリーに保存します。
+[html-skeleton.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/html-skeleton.html) ファイルのコピーを作成し、それを `skeleton.css` と `normalize.css` と同じディレクトリーに保存します。
 
 その `head` に次を追加することによって、`skeleton.css` と `normalize.css` を HTML ページに含めます。
 
@@ -640,9 +606,9 @@ Skeleton を使い始めるためには、ラッパーの {{htmlelement("div")}}
 }
 ```
 
-要素が行内にある場合にのみ要素をグリッドの一部にすることができます。 前の例と同様に、`content` `<div>` と実際のコンテンツコンテナの `<div>` の間にネストした `row` クラスを持つ追加の `<div>` またはその他の要素が必要です。 これも既に行ってあります。
+要素が行内にある場合にのみ要素をグリッドの一部にすることができます。 前の例と同様に、`content` `<div>` と実際のコンテンツコンテナーの `<div>` の間にネストした `row` クラスを持つ追加の `<div>` またはその他の要素が必要です。 これも既に行ってあります。
 
-それではコンテナボックスをレイアウトしましょう。 Skeleton は 12 列グリッドに基づいています。 一番上のラインのボックスはすべて、1 列にまたがるようにするために `one column` クラスが必要です。
+それではコンテナーボックスをレイアウトしましょう。 Skeleton は 12 列グリッドに基づいています。 一番上のラインのボックスはすべて、1 列にまたがるようにするために `one column` クラスが必要です。
 
 次のスニペットに示すように、これらを追加します。
 
@@ -657,7 +623,7 @@ Skeleton を使い始めるためには、ラッパーの {{htmlelement("div")}}
 </div>
 ```
 
-次に、2 番目の `row` クラスのコンテナに、それらがまたがるべき列数を説明します。
+次に、2 番目の `row` クラスのコンテナーに、それらがまたがるべき列数を説明します。
 
 ```html
 <div class="row">
@@ -668,11 +634,11 @@ Skeleton を使い始めるためには、ラッパーの {{htmlelement("div")}}
 </div>
 ```
 
-HTML ファイルを保存してブラウザーにロードして、効果を確認してください。
+HTML ファイルを保存してブラウザーに読み込んで、効果を確認してください。
 
-> **メモ:** この例がうまく動作しない場合は、[html-skeleton-finished.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/html-skeleton-finished.html) ファイルと比較してみてください（[ライブでも見られます](http://mdn.github.io/learning-area/css/css-layout/grids/html-skeleton-finished.html)）。
+> **メモ:** この例がうまく動作しない場合は、使用するウィンドウを広げてみてください（ウィンドウが狭すぎると、ここで記述されているようにグリッドが表示されません）。この例がうまく動作しない場合は、[html-skeleton-finished.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/html-skeleton-finished.html) ファイルと比較してみてください（[ライブでも見られます](https://mdn.github.io/learning-area/css/css-layout/grids/html-skeleton-finished.html)）。
 
-`skeleton.css` ファイルを見ると、これがどのように機能するかがわかります。 例えば、Skeleton には、「`three columns`」クラスを追加して要素をスタイルするための次の定義があります。
+`skeleton.css` ファイルを見ると、これがどのように機能するかがわかります。 例えば、Skeleton には、 "three columns" クラスを追加して要素をスタイルするための次の定義があります。
 
 ```css
 .three.columns {
@@ -682,7 +648,7 @@ HTML ファイルを保存してブラウザーにロードして、効果を確
 
 Skeleton（または他のグリッドフレームワーク）が行っていることはすべて、マークアップに追加することで使用できる定義済みクラスを設定することだけです。 これらのパーセントを自分で計算する作業を行ったのとまったく同じです。
 
-ご覧のとおり、Skeleton を使用するときには、CSS をほとんど書く必要がありません。 マークアップにクラスを追加すると、すべてのフロートが処理されます。 グリッドシステムのフレームワークを使用することを説得力のある選択にしたのは、レイアウトに対する責任を他に引き継ぐ、この能力です！ しかし最近では、CSS グリッドレイアウトを使用して、多くの開発者がこれらのフレームワークから CSS が提供する内蔵されたネイティブグリッドを使用するように移行しています。
+ご覧のとおり、Skeleton を使用するときには、CSS をほとんど書く必要がありません。 マークアップにクラスを追加すると、すべての浮動ブロックが処理されます。 グリッドシステムのフレームワークを使用することを説得力のある選択にしたのは、レイアウトに対する責任を他に引き継ぐ、この能力です！ しかし最近では、CSS グリッドレイアウトを使用して、多くの開発者がこれらのフレームワークから CSS が提供する内蔵されたネイティブグリッドを使用するように移行しています。
 
 ## まとめ
 

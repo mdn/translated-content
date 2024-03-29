@@ -2,7 +2,7 @@
 title: rel=dns-prefetch
 slug: Web/HTML/Attributes/rel/dns-prefetch
 l10n:
-  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
+  sourceCommit: 922c2b0f37e2f13887c50efe47e62bc23d94c3aa
 ---
 
 {{HTMLSidebar}}
@@ -18,3 +18,7 @@ l10n:
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- [投機的読み込み](/ja/docs/Web/Performance/Speculative_loading)で、`<link rel="dns-prefetch">` や他にも同様のパフォーマンス改善機能の比較ができます。
