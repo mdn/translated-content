@@ -7,7 +7,7 @@ l10n:
 
 {{securecontext_header}}{{APIRef("Credential Management API")}}
 
-{{domxref("Navigator")}} 接口的只读属性 **`credentials`** 返回与当前文档关联的 {{domxref("CredentialsContainer")}} 对象，该对象公开用于请求凭据的方法。{{domxref("CredentialsContainer")}} 接口还会在发生有趣事件时通知用户代理，例如成功登录或注销。此接口可用于功能检测。
+{{domxref("Navigator")}} 接口的只读属性 **`credentials`** 返回与当前文档关联的 {{domxref("CredentialsContainer")}} 对象，该对象暴露用于请求凭据的方法。{{domxref("CredentialsContainer")}} 接口还会在发生感兴趣的事件时通知用户代理，例如成功登录或注销。此接口可用于特性检测。
 
 ## 值
 
