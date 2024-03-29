@@ -28,7 +28,9 @@ l10n:
 
 <hr />
 
-<p contenteditable="true">继续，尝试将一些内容粘贴到这个可编辑的段落中，看看会发生什么！</p>
+<p contenteditable="true">
+  继续，尝试将一些内容粘贴到这个可编辑的段落中，看看会发生什么！
+</p>
 
 <p class="result"></p>
 ```
