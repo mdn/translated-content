@@ -136,7 +136,7 @@ new Promise((resolve, reject) => {
 
 但是在 `resolve(thenable)` 的情况中，有如下区别：
 
-1. `resolve` 函数是同步调用的，因此再次调用 `resolve` 或 `reject` 函数没有任何影响，即使通过 `anotherPromise.then()` 绑定的处理程序尚未被调用也没影响。
+1. `resolve` 函数是同步调用的，因此再次调用 `resolve` 或 `reject` 函数没有任何影响，即使通过 `anotherPromise.then()` 绑定的处理程序尚未被调用。
 2. `then` 方法是异步调用的，因此如果传入 thenable 对象，则该 `Promise` 对象不会被立即解决。
 
 因为 `resolve` 函数再次调用时使用 `thenable.then()` 传递给它的任何值作为 `value` 参数，所以解决函数能够展开嵌套的 thenable 对象，其中一个 thenable 对象调用其 `onFulfilled` 处理程序并返回另一个 thenable 对象。这样做的效果是，真实的 `Promise` 对象的兑现处理器永远不会接收到 thenable 对象作为其兑现值。
