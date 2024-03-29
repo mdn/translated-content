@@ -21,7 +21,9 @@ l10n:
 
 ```html
 <p><span style="font-weight: bold; color: blue">哇，粗体的蓝色文本！</span></p>
-<p><span style="font-weight: italic; color: red">令人兴奋的斜体红色文本！</span></p>
+<p>
+  <span style="font-weight: italic; color: red">令人兴奋的斜体红色文本！</span>
+</p>
 <p>令人厌倦的普通文本</p>
 
 <hr />
