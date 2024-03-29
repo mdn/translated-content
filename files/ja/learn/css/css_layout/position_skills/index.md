@@ -2,7 +2,7 @@
 title: "スキルテスト: 位置指定"
 slug: Learn/CSS/CSS_layout/Position_skills
 l10n:
-  sourceCommit: 751d58669499de0c6ea0d5b356e0e1448418c5d3
+  sourceCommit: c64e813d8ab9dbe22cbc049c26f7c6703370a2b7
 ---
 
 {{LearnSidebar}}
@@ -11,7 +11,7 @@ l10n:
 
 > **メモ:** 以下の対話型エディターで取り組むことができます。ただし、コードをダウンロードし、[CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/)などのオンラインツールを使用して作業したほうが便利な場合もあります。
 >
-> 行き詰まったら、助けを求めましょう。このページの最下部の[評価またはさらなるヘルプ](#評価またはさらなるヘルプ)の節をご覧ください。
+> 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
 
 ## 課題 1
 

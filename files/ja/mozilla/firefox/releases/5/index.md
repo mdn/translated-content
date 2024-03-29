@@ -3,9 +3,9 @@ title: Firefox 5 for developers
 slug: Mozilla/Firefox/Releases/5
 ---
 
-Firefox 5 は Gecko 5.0 ベースのブラウザで、2011 年 6 月 21 日にリリースされました。このページは Firefox 5 のリリースにあたり、開発者に影響する変更について情報をまとめたものです。
+Firefox 5 は Gecko 5.0 ベースのブラウザーで、2011 年 6 月 21 日にリリースされました。このページは Firefox 5 のリリースにあたり、開発者に影響する変更について情報をまとめたものです。
 
-## Web 開発者向けの変更点一覧
+## ウェブ開発者向けの変更点一覧
 
 ### HTML
 
@@ -57,7 +57,7 @@ Firefox 5 は Gecko 5.0 ベースのブラウザで、2011 年 6 月 21 日に�
 ### SVG
 
 - {{ SVGAttr("class") }} SVG アトリビュートを動的に変化させられるようになりました。
-- {{ domxref("SVGLengthList") }}, {{ domxref("SVGNumberList") }}, {{ domxref("SVGPathSegList") }}, {{ domxref("SVGPointList") }} など、オブジェクトのリストを表す SVG DOM インターフェースがインデックスされ、配列のようにアクセス可能となりました。加えて、リスト中の項目数を表す `length` も持ちます。
+- {{ domxref("SVGLengthList") }}, {{ domxref("SVGNumberList") }}, {{ domxref("SVGPathSegList") }}, {{ domxref("SVGPointList") }} など、オブジェクトのリストを表す SVG DOM インターフェイスがインデックスされ、配列のようにアクセス可能となりました。加えて、リスト中の項目数を表す `length` も持ちます。
 
 ### HTTP
 
@@ -71,13 +71,13 @@ Firefox 5 は Gecko 5.0 ベースのブラウザで、2011 年 6 月 21 日に�
 
 ### 開発者ツール
 
-- [Web コンソールの `Console` オブジェクト](/ja/docs/Using_the_Web_Console#The_console_object) に `debug()` メソッドが導入されました。これは `log()` のエイリアスで、導入によっていくつかの Web サイトとの互換性が向上します。
+- [ウェブコンソールの `Console` オブジェクト](/ja/docs/Using_the_Web_Console#The_console_object) に `debug()` メソッドが導入されました。これは `log()` のエイリアスで、導入によっていくつかのウェブサイトとの互換性が向上します。
 
 ## アドオン開発者向けの変更点一覧
 
 すでに開発済みのアドオンを Firefox 5 向けにアップデートを行う方法については [Firefox 5 へのアドオンのアップデート方法](/ja/docs/Firefox/Updating_add-ons_for_Firefox_5)をご覧ください。
 
-> **メモ:** Firefox 5 は他のメジャーリリース版の Firefox と同様に、再コンパイルされたバイナリコンポーネントが必要となります。詳しくは[バイナリインターフェース](/ja/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces)をご覧ください。
+> **メモ:** Firefox 5 は他のメジャーリリース版の Firefox と同様に、再コンパイルされたバイナリコンポーネントが必要となります。詳しくは[バイナリインターフェイス](/ja/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces)をご覧ください。
 
 ### JavaScript コードモジュールに対する変更点
 
@@ -89,22 +89,22 @@ Firefox 5 は Gecko 5.0 ベースのブラウザで、2011 年 6 月 21 日に�
 
 - [`asyncFetch()`](</ja/docs/JavaScript_code_modules/NetUtil.jsm#asyncFetch()>) メソッドは今回から`nsIInputStream` として入力ソースの特定をサポートします。
 
-### インターフェースの変更点
+### インターフェイスの変更点
 
-- `nsIHttpChannelInternal` インターフェースはチャネルの端点のアドレスとポートの情報にアクセスする新しい属性を持っています。この情報は主にデバッグに用いることができます。
+- `nsIHttpChannelInternal` インターフェイスはチャネルの端点のアドレスとポートの情報にアクセスする新しい属性を持っています。この情報は主にデバッグに用いることができます。
 - {{ HTMLElement("canvas") }} エレメントの [`width`](/ja/docs/Web/HTML/Element/canvas#width) と [`height`](/ja/docs/Web/HTML/Element/canvas#height) 属性は今回から符号付き整数から符合なし整数に変わり、IDL におけるリフレクトを行います（[`HTMLCanvasElement`](/ja/docs/DOM/HTMLCanvasElement) をご覧ください）。
-- `nsIAppStartup2` と `nsIAppStartup_MOZILLA_2_0` インターフェースは`nsIAppStartup` インターフェースに統合されました。
-- `nsIDocShell_MOZILLA_2_0_BRANCH は` `nsIDocShell` インターフェースに統合されました。
-- `nsIFocusManager_MOZILLA_2_0_BRANCH` インターフェースは `nsIFocusManager` インターフェースに統合されました。
-- `nsIHTMLEditor_MOZILLA_2_0_BRANCH` インターフェースは `nsIHTMLEditor` インターフェースに統合されました。
+- `nsIAppStartup2` と `nsIAppStartup_MOZILLA_2_0` インターフェイスは`nsIAppStartup` インターフェイスに統合されました。
+- `nsIDocShell_MOZILLA_2_0_BRANCH は` `nsIDocShell` インターフェイスに統合されました。
+- `nsIFocusManager_MOZILLA_2_0_BRANCH` インターフェイスは `nsIFocusManager` インターフェイスに統合されました。
+- `nsIHTMLEditor_MOZILLA_2_0_BRANCH` インターフェイスは `nsIHTMLEditor` インターフェイスに統合されました。
 
-#### 新しいインターフェース
+#### 新しいインターフェイス
 
 - `nsIDOMAnimationEvent` が追加されました。 {{domxref("AnimationEvent")}}
 
-#### 削除されたインターフェース
+#### 削除されたインターフェイス
 
-次にあげるインターフェースはもはや必要がないと判断されました。
+次にあげるインターフェイスはもはや必要がないと判断されました。
 
 - `nsICiter` （[Firefox バグ 633066](https://bugzil.la/633066) をご覧ください）
 - `nsIDOM3Document` （[Firefox バグ 639849](https://bugzil.la/639849) をご覧ください。）
