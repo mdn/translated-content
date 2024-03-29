@@ -101,7 +101,7 @@ readFilePromise("./data.txt")
   .catch((error) => console.error("读取文件失败"));
 ```
 
-`resolve` 和 `reject` 回调仅在 `executor` 函数的范围内可用，这意味着在构造 promise 之后无法访问它们。如果你想在决定如何解决之前构造 promise，可以使用 {{jsxref("Promise.withResolvers()")}} 方法，该方法公开了 `resolve` and `reject` 函数。
+`resolve` 和 `reject` 回调仅在 `executor` 函数的作用域内可用，这意味着在构造 promise 之后无法访问它们。如果你想在决定如何解决之前先构造 promise，可以使用 {{jsxref("Promise.withResolvers()")}} 方法，该方法暴露了 `resolve` and `reject` 函数。
 
 ### resolve 函数
 
