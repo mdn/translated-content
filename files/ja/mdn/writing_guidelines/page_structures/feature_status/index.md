@@ -20,10 +20,9 @@ l10n:
 
 ## 機能状態を追加または更新する方法
 
-MDNで文書化されたすべての機能状態は、付随する [@mdn/browser-compat-data](https://github.com/mdn/browser-compat-data) (BCD) リポジトリー項目で定義され、新しい[バージョンの BCD がリリースされる](https://github.com/mdn/browser-compat-data/releases)たびに `mdn/content` リポジトリーで自動的に更新されます。
+MDN で文書化されたすべての機能状態は、付随する [@mdn/browser-compat-data](https://github.com/mdn/browser-compat-data) (BCD) リポジトリー項目で定義され、新しい[バージョンの BCD がリリースされる](https://github.com/mdn/browser-compat-data/releases)たびに `mdn/content` リポジトリーで自動的に更新されます。
 
-> **警告:**
-> `mdn/content` リポジトリーで機能状態を手動で更新しないでください。機能状態を更新するには、BCD リポジトリーで[プルリクエストを送信する](https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md#updating-the-compat-data)必要があります。変更が BCD で承認されマージされた後、[自動プルリクエスト](https://github.com/search?q=repo%3Amdn%2Fcontent+Synchronize+with+BCD&type=pullrequests) が `mdn/content` リポジトリーの状態を更新します。
+> **警告:** `mdn/content` リポジトリーで機能状態を手動で更新しないでください。機能状態を更新するには、BCD リポジトリーで[プルリクエストを送信する](https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md#updating-the-compat-data)必要があります。変更が BCD で承認されマージされた後、[自動プルリクエスト](https://github.com/search?q=repo%3Amdn%2Fcontent+Synchronize+with+BCD&type=pullrequests) が `mdn/content` リポジトリーの状態を更新します。
 
 自動化にはフロントマターの [`browser-compat`](/ja/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables#using_bcd_data_in_mdn_pages) キーを使用します。このキーは、互換性データからその機能を探すために要求される BCD クエリーを保持します。もし `browser-compat` キーに複数の値がある場合、自動化は状態マクロをレンダリングするために最初の値のみを使用します。
 
