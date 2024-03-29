@@ -7,7 +7,7 @@ l10n:
 
 {{ApiRef("HTML DOM")}}{{Deprecated_header}}{{non-standard_header}}
 
-**`Navigator.doNotTrack`** 属性返回用户请勿追踪设置，该设置指示用户是否请求网站和广告商不要追踪它们。
+**`Navigator.doNotTrack`** 属性返回用户的请勿追踪设置，该设置指示用户是否请求网站和广告商不要追踪他们。
 
 该属性的值反映了 {{httpheader("DNT")}} HTTP 标头的值，即 `"1"`、`"0"` 或 `null` 值。
 
