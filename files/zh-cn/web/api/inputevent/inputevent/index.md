@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("UI Events")}}
 
-构造函数 **`InputEvent()`** 返回一个新创建的 {{domxref("InputEvent")}} 对象。
+**`InputEvent()`** 构造函数创建一个新的 {{domxref("InputEvent")}} 对象。
 
 ## 语法
 
