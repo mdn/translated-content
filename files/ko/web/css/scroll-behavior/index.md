@@ -1,8 +1,6 @@
 ---
 title: 스크롤 동작
 slug: Web/CSS/scroll-behavior
-page-type: css-property
-browser-compat: css.properties.scroll-behavior
 ---
 
 {{CSSRef}}
