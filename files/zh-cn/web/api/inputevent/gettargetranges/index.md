@@ -75,6 +75,7 @@ function isBeforeInputEventAvailable() {
   );
 }
 ```
+
 ### 基本用法
 
 下面的示例选择一个 `contenteditable` 元素，利用 [`beforeinput`](/zh-CN/docs/Web/API/Element/beforeinput_event) 事件输出 `getTargetRanges()` 的结果。
