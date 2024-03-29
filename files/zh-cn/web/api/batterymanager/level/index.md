@@ -7,7 +7,7 @@ l10n:
 
 {{ApiRef("Battery API")}}{{securecontext_header}}
 
-{{domxref("BatteryManager")}} 接口的 **`level`** 只读属性将当前电池电量指示为 `0.0` 和 `1.0` 之间的值。值 `0.0` 示电池电量耗尽且系统即将暂停。值 `1.0` 表示电池已充满或用户代理无法报告电池状态信息。当其值发生变化时，会触发 {{domxref("BatteryManager/levelchange_event", "levelchange")}} 事件。
+{{domxref("BatteryManager")}} 接口的 **`level`** 只读属性以 `0.0` 和 `1.0` 之间的值表示电池当前的电量。值 `0.0` 表示电池的电量耗尽且系统即将暂停。值 `1.0` 表示电池已充满或用户代理无法报告电池状态信息。当其值发生变化时，会触发 {{domxref("BatteryManager/levelchange_event", "levelchange")}} 事件。
 
 ## 值
 
