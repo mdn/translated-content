@@ -1,11 +1,11 @@
 ---
-title: <fencedframe>：圍欄框架元素
+title: <fencedframe>：圍欄頁框元素
 slug: Web/HTML/Element/fencedframe
 ---
 
 {{HTMLSidebar}}{{SeeCompatTable}}
 
-**`<fencedframe>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表了一個巢狀的{{Glossary("browsing context")}}，將另一個 HTML 頁面嵌入到當前頁面中。`<fencedframe>` 在形式和功能上與 {{htmlelement("iframe")}} 元素非常相似，不同之處在於：
+**`<fencedframe>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表了一個巢狀的{{Glossary("browsing context", "瀏覽上下文")}}，將另一個 HTML 頁面嵌入到當前頁面中。`<fencedframe>` 在形式和功能上與 {{htmlelement("iframe")}} 元素非常相似，不同之處在於：
 
 - `<fencedframe>` 內容和其嵌入站點之間的通信受限。
 - `<fencedframe>` 可以訪問跨站點數據，但只有在一個非常特定的一組受控情況下才能保護用戶隱私。
@@ -20,20 +20,19 @@ slug: Web/HTML/Element/fencedframe
 
 - `allow`
 
-  - : 為 `<fencedframe>` 指定一個[權限策略](/zh-TW/docs/Web/HTTP/Permissions_Policy)，該策略基於請求的原始位置定義了哪些功能對 `<fencedframe>` 可用。有關可以通過設置在圍欄框架上的策略來控制哪些功能的更多詳細信息，請參見[可用於圍欄框架權限策略](#可用於圍欄框架權限策略)。
+  - : 為 `<fencedframe>` 指定一個[權限策略](/zh-TW/docs/Web/HTTP/Permissions_Policy)，該策略基於請求的原始位置定義了哪些功能對 `<fencedframe>` 可用。有關可以通過設置在圍欄頁框上的策略來控制哪些功能的更多詳細信息，請參見[可用於圍欄頁框權限策略](#可用於圍欄頁框權限策略)。
 
 - `height`
 
-  - : 一個無單位的整數，表示圍欄框架的高度，以 CSS 像素為單位。默認值為 `150`。
-
+  - : 一個無單位的整數，表示圍欄頁框的高度，以 CSS 像素為單位。默認值為 `150`。
 - `width`
-  - : 一個無單位的整數，表示圍欄框架的寬度，以 CSS 像素為單位。默認值為 `300`。
+  - : 一個無單位的整數，表示圍欄頁框的寬度，以 CSS 像素為單位。默認值為 `300`。
 
-## 可用於圍欄框架權限策略
+## 可用於圍欄頁框權限策略
 
-從頂層上下文委派給圍欄框架的允許和拒絕功能的權限策略可以用作通信通道，因此構成一種隱私威脅。因此，標準 Web 功能可以通過[權限策略](/zh-TW/docs/Web/HTTP/Headers/Permissions-Policy)（例如 [`camera`](/zh-TW/docs/Web/HTTP/Headers/Permissions-Policy/camera) 或 [`geolocation`](/zh-TW/docs/Web/HTTP/Headers/Permissions-Policy/geolocation)）控制其可用性的**不可用**在圍欄框架內。
+從頂層上下文委派給圍欄頁框的允許和拒絕功能的權限策略可以用作通信通道，因此構成一種隱私威脅。因此，標準 Web 功能可以通過[權限策略](/zh-TW/docs/Web/HTTP/Headers/Permissions-Policy)（例如 [`camera`](/zh-TW/docs/Web/HTTP/Headers/Permissions-Policy/camera) 或 [`geolocation`](/zh-TW/docs/Web/HTTP/Headers/Permissions-Policy/geolocation)）控制其可用性的**不可用**在圍欄頁框內。
 
-可以通過策略在圍欄框架內啟用的唯一功能是專為在圍欄框架內使用而設計的特定功能：
+可以通過策略在圍欄頁框內啟用的唯一功能是專為在圍欄頁框內使用而設計的特定功能：
 
 - [受保護的受眾 API](https://developer.chrome.com/docs/privacy-sandbox/fledge/)
   - `attribution-reporting`
@@ -46,18 +45,17 @@ slug: Web/HTML/Element/fencedframe
   - `shared-storage`
   - `shared-storage-select-url`
 
-目前，在圍欄框架內始終啟用這些功能。將來，哪些功能被啟用將可以使用 `<fencedframe>` 的 `allow` 屬性來控制。通過這種方式阻止隱私沙箱功能還將阻止圍欄框架加載——完全沒有通信通道。
+目前，在圍欄頁框內始終啟用這些功能。將來，哪些功能被啟用將可以使用 `<fencedframe>` 的 `allow` 屬性來控制。通過這種方式阻止隱私沙箱功能還將阻止圍欄頁框加載——完全沒有通信通道。
 
-## 跨越圍欄框架邊界進行對焦
+## 跨越圍欄頁框邊界進行對焦
 
-將文檔的活動焦點從圍欄框架邊界（即從框框外的元素到內部元素，或反之）移動的能力受到限制。用戶啟動的操作，如單擊或切換，可以這樣做，因為那裡沒有指紋識別風險。
+將文檔的活動焦點從圍欄頁框邊界（即從框框外的元素到內部元素，或反之）移動的能力受到限制。用戶啟動的操作，如單擊或切換，可以這樣做，因為那裡沒有指紋識別風險。
 
-然而，試圖通過 API 調用（例如 {{domxref("HTMLElement.focus()")}}）```html
-是被禁止的 —— 惡意腳本可以使用一系列這樣的調用來跨越邊界洩露推斷的信息。
+然而，試圖通過 API 調用（例如 {{domxref("HTMLElement.focus()")}}）是被禁止的——惡意腳本可以使用一系列這樣的調用來跨越邊界洩露推斷的信息。
 
 ## 定位和縮放
 
-作為 [替換元素](/zh-TW/docs/Web/CSS/Replaced_element)，可以使用 {{cssxref("object-position")}} 和 {{cssxref("object-fit")}} 屬性來調整 `<iframe>` 元素框中嵌入文檔的位置、對齊和縮放。
+作為[替換元素](/zh-TW/docs/Web/CSS/Replaced_element)，可以使用 {{cssxref("object-position")}} 和 {{cssxref("object-fit")}} 屬性來調整 `<iframe>` 元素框中嵌入文檔的位置、對齊和縮放。
 
 嵌入內容的大小可以由 `<fencedframe>` 的 {{domxref("HTMLFencedFrameElement.config", "config")}} 對象的內部 `contentWidth` 和 `contentHeight` 屬性設置。在這種情況下，改變 `<fencedframe>` 的 `width` 或 `height` 將改變頁面上嵌入容器的大小，但容器內部的文檔將被視覺縮放以適應。嵌入文檔的報告寬度和高度（即 {{domxref("Window.innerWidth")}} 和 {{domxref("Window.innerHeight")}}）將保持不變。
 
@@ -166,6 +164,6 @@ frame.config = frameConfig;
 
 ## 參見
 
-- [圍欄框架 API](/zh-TW/docs/Web/API/Fenced_frame_API)
-- [在 developer.chrome.com 上的圍欄框架](https://developer.chrome.com/docs/privacy-sandbox/fenced-frame/)
+- [圍欄頁框 API](/zh-TW/docs/Web/API/Fenced_frame_API)
+- [在 developer.chrome.com 上的圍欄頁框](https://developer.chrome.com/docs/privacy-sandbox/fenced-frame/)
 - [隱私沙箱](https://developer.chrome.com/docs/privacy-sandbox/) 在 developer.chrome.com 上

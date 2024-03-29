@@ -1,5 +1,5 @@
 ---
-title: <embed>：嵌入外部內容的嵌入元素
+title: <embed>：嵌入外部內容元素
 slug: Web/HTML/Element/embed
 ---
 
@@ -71,7 +71,7 @@ slug: Web/HTML/Element/embed
     </tr>
     <tr>
       <th scope="row">允許的內容</th>
-      <td>無，它是一個 {{Glossary("void element")}}。</td>
+      <td>無，它是一個{{Glossary("void element", "置空元素")}}。</td>
     </tr>
     <tr>
       <th scope="row">標籤省略</th>
