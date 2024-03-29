@@ -1,5 +1,5 @@
 ---
-title: "Navigator：appCodeName 属性"
+title: Navigator：appCodeName 属性
 slug: Web/API/Navigator/appCodeName
 l10n:
   sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
