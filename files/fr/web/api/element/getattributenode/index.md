@@ -1,5 +1,5 @@
 ---
-title: element.getAttributeNode()
+title: element.getAttributeNode
 slug: Web/API/Element/getAttributeNode
 ---
 
