@@ -7,7 +7,7 @@ l10n:
 
 {{jsSidebar("Statements")}}
 
-**`throw`** 语句用于抛出用户自定义异常。当前函数的执行将停止（`throw` 之后的语句不会被执行），并且控制权将传递给调用堆栈中第一个[`catch`](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch)块。如果调用函数中没有 `catch` 块，则程序将终止。
+**`throw`** 语句用于抛出用户自定义异常。当前函数的执行将停止（`throw` 之后的语句不会被执行），并且控制权将传递给调用堆栈中第一个 [`catch`](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch) 块。如果调用函数中没有 `catch` 块，则程序将终止。
 
 {{EmbedInteractiveExample("pages/js/statement-throw.html")}}
 
@@ -81,7 +81,7 @@ console.log(sum(1, 2, 3)); // 6
 try {
   sum("1", "2");
 } catch (e) {
-  console.error(e); // TypeError: 只能添加数字
+  console.error(e); // TypeError：只能添加数字
 }
 ```
 
