@@ -30,7 +30,7 @@ const editable = document.querySelector("input");
 const result = document.querySelector(".result");
 
 editable.addEventListener("input", (e) => {
-  result.textContent = `Inputted text: ${e.data}`;
+  result.textContent = `输入的文字：${e.data}`;
 });
 ```
 
