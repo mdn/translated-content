@@ -28,7 +28,7 @@ browser.tabs.onCreated.hasListener(listener);
 
 ## addListener の書式
 
-### パラメータ
+### パラメーター
 
 - `callback`
 

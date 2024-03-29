@@ -66,7 +66,7 @@ RDF データ形式から [Storage](/ja/docs/Storage) API への移行にあた�
 
 ### パスワードマネージャー
 
-あなたの拡張機能からパスワードマネージャーを利用してユーザのログイン情報にアクセスしている場合、新しいログインマネージャー API を利用するように更新する必要があります。
+あなたの拡張機能からパスワードマネージャーを利用してユーザーのログイン情報にアクセスしている場合、新しいログインマネージャー API を利用するように更新する必要があります。
 
 - [nsILoginManager の使い方](/ja/docs/XPCOM_Interface_Reference/Using_nsILoginManager) という記事には、パスワードマネージャーとログインマネージャーの両方を用いることで、Firefox 3 とそれ以前のバージョンの両方で機能拡張を動作させるデモなど、コードサンプルが載っています。
 - `nsILoginInfo`
@@ -80,7 +80,7 @@ XUL のポップアップシステムは Firefox 3 で大幅に変更されま�
 
 #### 自動補完
 
-`nsIAutoCompleteController` インターフェイスの `handleEnter()` メソッドは、テキストが自動補完ポップアップから選択されたか、ユーザが自分で入力した後 Enter キーを押したかを示す引数を受け付けるよう変更が行われました。
+`nsIAutoCompleteController` インターフェイスの `handleEnter()` メソッドは、テキストが自動補完ポップアップから選択されたか、ユーザーが自分で入力した後 Enter キーを押したかを示す引数を受け付けるよう変更が行われました。
 
 ### DOMParser
 
@@ -101,9 +101,9 @@ XUL のポップアップシステムは Firefox 3 で大幅に変更されま�
 - [XPCOM Glue](/ja/docs/XPCOM_Glue)
 - [内部連携から凍結連携への移行について](/ja/docs/Migrating_from_Internal_Linkage_to_Frozen_Linkage)
 
-### 削除されたインタフェース
+### 削除されたインターフェイス
 
-以下のインタフェースは、Firefox 3 の基盤である Gecko 1.9 から削除されました。あなたの拡張機能でいずれかを使用している場合、コードを更新する必要があるでしょう。
+以下のインターフェイスは、Firefox 3 の基盤である Gecko 1.9 から削除されました。あなたの拡張機能でいずれかを使用している場合、コードを更新する必要があるでしょう。
 
 - `nsIDOMPaintListener`
 - `nsIDOMScrollListener`

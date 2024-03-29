@@ -2,7 +2,7 @@
 title: アクセシビリティとは
 slug: Learn/Accessibility/What_is_accessibility
 l10n:
-  sourceCommit: 3f24b87ec5ef32a046aa9cabd19a4ced0041385c
+  sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Accessibility/HTML", "Learn/Accessibility")}}
@@ -13,10 +13,10 @@ l10n:
   <tbody>
     <tr>
       <th scope="row">前提知識:</th>
-      <td>基本的なコンピューターの知識、HTML と CSS に関する基本的な理解</td>
+      <td>HTML と CSS に関する基本的な理解</td>
     </tr>
     <tr>
-      <th scope="row">目標:</th>
+      <th scope="row">目的:</th>
       <td>
         アクセシビリティとは何か、そしてそれがウェブ開発者としてのあなたにどう関わってくるかを含め、アクセシビリティに詳しくなる
       </td>
@@ -43,7 +43,7 @@ l10n:
 
 障碍のある人は障碍のない人と同じくらい多様であり、よってその障碍も同じくらい多様です。ここでの重要な教訓は、あなたがコンピューターの向こうでウェブをどのように使うかを考え、他の人がどのように使っているかを学習し始めることです — あなたはユーザーとは違います。考慮すべき障碍の主な種類を、ウェブコンテンツにアクセスするために使う特別なツール（**支援技術**、**assistive technology** や **AT** として知られるもの）とともに以下に説明します。
 
-> **メモ:** 世界保健機構(WHO)の[障碍と健康](https://www.who.int/en/news-room/fact-sheets/detail/disability-and-health)（英語）の報告によると、「10 億人以上の人(世界人口の約 15%)が何らかの障碍を持っています」し、「1 億～ 1 億 9000 万人の大人に目立った機能障碍があります」
+> **メモ:** 世界保健機構 (WHO) の[障碍と健康](https://www.who.int/en/news-room/fact-sheets/detail/disability-and-health)（英語）の報告によると、「10 億人以上の人（世界人口の約 15%）が何らかの障碍を持っています」し、「1 億～ 1 億 9000 万人の大人に目立った機能障碍があります」
 
 ### 視覚障碍者
 
@@ -51,9 +51,9 @@ l10n:
 
 - 有償の商用製品、例えば [JAWS](https://www.freedomscientific.com/Products/software/JAWS/) (Windows) や [Dolphin Screen Reader](https://yourdolphin.com/en-gb/products/individuals/screen-reader) (Windows).
 - 無償の製品、例えば [NVDA](https://www.nvaccess.org/) (Windows), [ChromeVox](https://support.google.com/chromebook/answer/7031755) (Chrome, Windows Mac OS X), や [Orca](https://wiki.gnome.org/Projects/Orca) (Linux).
-- OS に組み込まれたもの、例えば [VoiceOver](https://www.apple.com/accessibility/vision/) (Mac OS X と iPadOS と iOS), [Narrator](https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1) (Windows), [ChromeVox](http://www.chromevox.com/) (ChromeOS), や [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android).
+- OS に組み込まれたもの、例えば [VoiceOver](https://www.apple.com/accessibility/vision/) (Mac OS X と iPadOS と iOS), [Narrator](https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1) (Windows), [ChromeVox](https://support.google.com/chromebook/answer/7031755) (ChromeOS), や [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android).
 
-スクリーンリーダーに精通するのは良い考えです; スクリーンリーダーをセットアップして試してみて、その動作方法を理解するべきです。 [クロスブラウザーテストのスクリーンリーダーのガイド](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screen_readers) を見ると詳しい使い方がわかります。下記の動画も、その体験がどのようなものかの簡単な例です。
+スクリーンリーダーに精通するのは良い考えです; スクリーンリーダーをセットアップして試してみて、その動作方法を理解するべきです。 [ブラウザー横断テストのスクリーンリーダーのガイド](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screen_readers) を見ると詳しい使い方がわかります。下記の動画も、その体験がどのようなものかの簡単な例です。
 
 {{EmbedYouTube("IK97XMibEws")}}
 
@@ -73,7 +73,7 @@ l10n:
 
 この種の障碍は、特定のトラウマや状態ではなく、老年期の結果であることもあります。それに、ハードウェアの制限から生じることもあります — 一部のユーザーはマウスを持っていないかもしれません。
 
-これが通常ウェブ開発作業に影響するのは、コントロールがキーボードからアクセス可能であることという要件です — このモジュールの後の記事でキーボード・アクセシビリティを扱いますが、どのようにやるかを見るためにキーボードだけを使っていくつかのウェブサイトを試してみることは良い考えです。例えば、<kbd>Tab</kbd> キーを使ってウェブフォームのさまざまなコントロール間を移動できますか？ キーボードコントロールの詳細については、[クロスブラウザーテストのネイティブなキーボードアクセシビリティを使う](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#using_native_keyboard_accessibility)のセクションを参照してください。
+これが通常ウェブ開発作業に影響するのは、コントロールがキーボードからアクセス可能であることという要件です — このモジュールの後の記事でキーボード・アクセシビリティを扱いますが、どのようにやるかを見るためにキーボードだけを使っていくつかのウェブサイトを試してみることは良い考えです。例えば、<kbd>Tab</kbd> キーを使ってウェブフォームのさまざまなコントロール間を移動できますか？ キーボードコントロールの詳細については、[ブラウザー横断テストのネイティブなキーボードアクセシビリティを使う](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#using_native_keyboard_accessibility)のセクションを参照してください。
 
 統計では、有意な数の人が運動障碍を持っています。米国疾病管理予防センターの[障碍と機能 (施設に入らない 18 歳以上の大人)](https://www.cdc.gov/nchs/fastats/disability.htm)（英語）の報告によると、米国では "肉体的な機能障碍のある大人の割合は、16.1%" です。
 
@@ -99,7 +99,7 @@ l10n:
 - 知的障碍者の多くは身体的な障碍も持っています。ウェブサイトは W3C の[ウェブコンテンツアクセシビリティガイドライン](https://www.w3.org/WAI/standards-guidelines/wcag/)と、その中の[認知的アクセシビリティガイドライン](/ja/docs/Web/Accessibility/Cognitive_accessibility#wcag_guidelines)に従う必要があります。
 - W3C の [認知と学習障碍者のアクセシビリティタスクフォース](https://www.w3.org/WAI/GL/task-forces/coga/)では認知障碍者のためのウェブアクセシビリティガイドラインを制作しています。
 - WebAIM の[認知のページ](https://webaim.org/articles/cognitive/)には関連する情報やリソースがあります
-- アメリカ疾病予防管理センターの見積もりでは、2018 年以降、4 人に 1 人の米国市民には障碍があり、その中で、[若い人には認知障碍が最もよく見られます。](https://www.cdc.gov/media/releases/2018/p0816-disability.html)
+- アメリカ疾病予防管理センターの見積もりでは、2018 年以降、4 人に 1 人の米国市民には障碍があり、その中で、[若い人には認知障碍が最もよく見られます](https://archive.cdc.gov/www_cdc_gov/media/releases/2018/p0816-disability.html)。
 - 米国では、知的障碍の一部は、過去には「精神遅滞」と参照されてきました。これで多くの人がこの言葉を軽蔑的だと考えるようになったので、使用するのは避けるべきでしょう。
 - 英国では、一部の知的障碍は「学習障碍」または「学習困難」と呼ばれます。
 
