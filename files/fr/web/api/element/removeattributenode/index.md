@@ -32,7 +32,7 @@ Si l'attribut enlevé a une valeur par défaut, celle-ci remplace immédiatement
 
 Il n'y a pas de `removeAttributeNodeNS` (contrairement à la paire `setAttributeNode` et `setAttributeNodeNS` pour lesquels il est nécessaire de savoir quel attribut remplacer (le cas échéant), `removeAttributeNode` n'a pas cette exigence. `removeAttributeNode` peut supprimer des attributs, qu'ils soient d'espace de noms ou pas.
 
-## Spécification
+## Spécifications
 
 {{Specifications}}
 
