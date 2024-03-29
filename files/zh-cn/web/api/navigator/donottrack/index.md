@@ -26,7 +26,7 @@ console.log(navigator.doNotTrack);
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
