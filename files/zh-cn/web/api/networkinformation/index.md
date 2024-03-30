@@ -16,9 +16,9 @@ l10n:
 _此接口也从其父接口 {{domxref("EventTarget")}} 继承属性。_
 
 - {{domxref("NetworkInformation.downlink")}} {{ReadOnlyInline}}
-  - : 返回以每秒兆比特为单位的有效带宽估计，四舍五入到最接近的 25 千比特每秒的倍数。
+  - : 返回以兆比特每秒为单位的有效带宽估计，四舍五入到最接近的 25 千比特每秒的倍数。
 - {{domxref("NetworkInformation.downlinkMax")}} {{ReadOnlyInline}}
-  - : 返回底层连接技术的最大下行速度，以每秒兆比特（Mbps）为单位。
+  - : 返回底层连接技术的最大下行速度，以兆比特每秒（Mbps）为单位。
 - {{domxref("NetworkInformation.effectiveType")}} {{ReadOnlyInline}}
   - : 返回连接的有效类型（意思是“slow-2g”、“2g”、“3g”或“4g”中的一个）。此值是使用最近观察到的往返时间和下行链路值的组合来确定的。
 - {{domxref("NetworkInformation.rtt")}} {{ReadOnlyInline}}
