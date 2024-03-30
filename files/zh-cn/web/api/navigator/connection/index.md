@@ -1,11 +1,13 @@
 ---
 title: Navigator：connection 属性
 slug: Web/API/Navigator/connection
+l10n:
+  sourceCommit: 8bb6752a4d3ed3d54ab681636d16602e6bf1d74d
 ---
 
-{{APIRef("Network Information API")}}{{SeeCompatTable}}
+{{APIRef("Network Information API")}}
 
-**`Navigator.connection`** 只读属性返回一个包含有关系统网络连接信息的 {{domxref("NetworkInformation")}} 对象，例如用户设备的当前带宽或连接是否按流量计费。
+{{domxref("Navigator")}} 接口的 **`connection`** 只读属性返回一个包含有关系统网络连接信息的 {{domxref("NetworkInformation")}} 对象，例如用户设备的当前带宽或连接是否按流量计费。
 
 这可以用于基于用户的连接状态来选择高清晰度内容或低清晰度内容。
 
