@@ -25,4 +25,4 @@ l10n:
 
 ## 参见
 
-- [online 和 offline 事件](/zh-CN/docs/Web/API/Navigator/onLine)
+- [在线事件和离线事件](/zh-CN/docs/Web/API/Navigator/onLine)
