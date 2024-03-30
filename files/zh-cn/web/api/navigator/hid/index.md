@@ -7,9 +7,9 @@ l10n:
 
 {{APIRef("WebHID API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-只读属性 **`Navigator.hid`** 返回一个 {{domxref("HID")}} 对象，该对象提供用于连接 HID 设备、列出已连接的 HID 设备以及连接的 设备的事件处理程序的方法。
+**`Navigator.hid`** 只读属性返回一个 {{domxref("HID")}} 对象，该对象提供用于连接 HID 设备、列出已连接的 HID 设备以及连接的 HID 设备的事件处理程序的方法。
 
-如果已定义的 [权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy) 阻止使用 WebHID，则 `Navigator.hid` 属性将不可用。
+如果已定义的[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)阻止使用 WebHID，则 `Navigator.hid` 属性将不可用。
 
 ## 值
 
