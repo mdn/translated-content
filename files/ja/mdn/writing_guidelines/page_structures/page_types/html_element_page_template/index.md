@@ -36,6 +36,7 @@ l10n:
 >   - : `https://developer.mozilla.org/ja/docs/` の後にくる URL の末尾です。
 >     これは `Web/HTML/Element/NameOfTheElement` のような形式になります。
 >     例えば、 [`<video>`](/ja/docs/Web/HTML/Element/video) 要素の _slug_ は `Web/HTML/Element/video` となります。
+>
 > - **sourceCommit**
 >   - : （翻訳記事のみ）この記事の翻訳元となる英語版記事を GitHub にコミットした際のコミット ID を記述します。 GitHub 上で英語版記事のコミット ID を確認してください。
 >
