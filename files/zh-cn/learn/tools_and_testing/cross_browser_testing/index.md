@@ -7,14 +7,6 @@ slug: Learn/Tools_and_testing/Cross_browser_testing
 
 本模块的重点是在不同的浏览器上测试 web 项目。我们研究确定你的目标受众（例如，你最需要担心哪些用户、浏览器和设备），如何去做测试，不同类型的代码中会面临的主要问题以及如何缓解这些问题，哪些工具在帮助你测试和解决问题方面最有用，以及如何使用自动化来加速测试。
 
-> **标注：**
->
-> #### 想成为一名前端网页开发者？
->
-> 我们整理了一个课程，其中包含实现目标所需的所有基本内容。
->
-> [**开始使用**](/zh-CN/docs/Learn/Front-end_web_developer)
-
 ## 前提
 
 在你尝试使用这里详细介绍的工具时，你需要已经学习核心 [HTML](/zh-CN/docs/Learn/HTML)、[CSS](/zh-CN/docs/Learn/CSS) 和 [JavaScript](/zh-CN/docs/Learn/JavaScript) 语言。

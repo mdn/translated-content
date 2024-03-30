@@ -1,6 +1,8 @@
 ---
 title: HTML 소개
 slug: Learn/HTML/Introduction_to_HTML
+l10n:
+  sourceCommit: 751d58669499de0c6ea0d5b356e0e1448418c5d3
 ---
 
 {{LearnSidebar}}
@@ -12,6 +14,14 @@ slug: Learn/HTML/Introduction_to_HTML
 이번 과정을 시작하기 전에, HTML에 대한 사전 지식은 필요하지 않습니다만, 기본적으로 컴퓨터 사용에 친숙해야 하고, 웹사이트의 콘텐츠를 탐색하는 정도의 웹을 사용할 줄 알아야 합니다. [기본 소프트웨어 설치](/ko/docs/Learn/Getting_started_with_the_web/Installing_basic_software)에 있는 기본적인 작업 환경이 구축되어 있어야 하고, [파일 다루기](/ko/docs/Learn/Getting_started_with_the_web/Dealing_with_files)에 있는 파일을 생성하고 관리하는 방법을 이해하고 있어야 합니다. 이 두가지 내용은 [웹 시작하기](/ko/docs/Learn/Getting_started_with_the_web)를 위한 초급 과정입니다.
 
 > **참고:** 혹시, 파일을 생성하기 힘든 컴퓨터/테블릿 혹은 다른 기기에서 작업한다면, [JSBin](http://jsbin.com/) 이나 [Thimble](https://thimble.mozilla.org/) 같은 온라인 코딩 프로그램을 이용하여 대부분의 코드 예제를 작성해 볼 수 있습니다.
+
+> **알림:**
+>
+> #### 웹 프론트엔드 개발자가 되고싶나요?
+>
+> 목표를 위해 노력하는 데 필요한 모든 필수 정보를 포함하는 코스를 구성했습니다.
+>
+> [**시작하기**](/ko/docs/Learn/Front-end_web_developer)
 
 ## 안내서
 
@@ -40,8 +50,3 @@ slug: Learn/HTML/Introduction_to_HTML
   - : 우리는 모두 글자를 쓰는 법을 금방 배우게 됩니다. 텍스트를 꾸미고 조작하는 것을 테스트 해볼 수 있는 유용한 예제들이 있습니다. 여러분이 마크업 하는 것을 평가합니다.
 - [페이지 콘텐츠 구조화](/ko/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)
   - : 이 평가는 헤더, 푸터, 네비게이션 메뉴, 주요 콘텐츠, 사이드바를 담고 있는 간단한 웹 페이지의 구조를 HTML로 작성하는 능력을 테스트합니다.
-
-## 같이 보기
-
-- [웹 지식 기본 1](https://teach.mozilla.org/activities/web-lit-basics/)
-  - : HTML 소개 과정에서 논의된 많은 기법들을 살펴보고 테스트 해볼 수 있는 Mozilla 재단 과정이 있습니다. 학습자들은 이 여섯 가지의 과정에서 글을 읽고, 글을 작성하고, 참석하는데 친숙해 질 것입니다. 만들어 보고 협업하면서 탄탄한 웹의 토대를 찾아보세요.

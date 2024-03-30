@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools
 
 > **メモ:** このページでは、Firefox 55 に存在する devtools API について説明しています。この API は[Chrome devtools APIs](https://developer.chrome.com/extensions/devtools)に基づいていますが、まだ Firefox では実装されていないため、ここでは説明していません。現在欠けている機能を確認するには、[devtools API の制限](/ja/Add-ons/WebExtensions/Using_the_devtools_APIs#Limitations_of_the_devtools_APIs)を参照してください。
 
-WebExtensions API を使用して、ブラウザの組み込み開発者ツールを拡張できます。 devtools 拡張機能を作成するには、[manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) に "[devtools_page](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page)" キーを含めます:
+WebExtensions API を使用して、ブラウザーの組み込み開発者ツールを拡張できます。 devtools 拡張機能を作成するには、[manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) に "[devtools_page](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page)" キーを含めます:
 
 ```json
 "devtools_page": "devtools/devtools-page.html"
@@ -19,7 +19,7 @@ HTML ファイルは、devtools ページと呼ばれる特別なページを拡
 
 ## devtools ページ
 
-devtools ページはブラウザの devtools を開くとロードされ、閉じるとアンロードされます。devtools ウィンドウは単一のタブに関連付けられているため、複数の devtools ウィンドウ、つまり複数の devtools ページが同時に存在する可能性が非常に高いことに注意してください。
+devtools ページはブラウザーの devtools を開くとロードされ、閉じるとアンロードされます。devtools ウィンドウは単一のタブに関連付けられているため、複数の devtools ウィンドウ、つまり複数の devtools ページが同時に存在する可能性が非常に高いことに注意してください。
 
 devtools ページには目に見える DOM はありませんが、[`<script>`](/ja/docs/Web/HTML/Element/Script) タグを使用して JavaScript ソースを含めることができます。ソースは拡張機能自体にバンドルする必要があります。ソースは以下にアクセスできます:
 
@@ -70,7 +70,7 @@ browser.devtools.panels
 
 ## ターゲットウィンドウとのインタラクション
 
-開発者ツールは常に特定のブラウザタブに添付されます。これは開発者ツールの「ターゲット」または「検出済みウィンドウ」と呼ばれます。[`devtools.inspectedWindow`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow) を使用して、検出されたウィンドウとインタラクションできます。
+開発者ツールは常に特定のブラウザータブに添付されます。これは開発者ツールの「ターゲット」または「検出済みウィンドウ」と呼ばれます。[`devtools.inspectedWindow`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow) を使用して、検出されたウィンドウとインタラクションできます。
 
 ### ターゲットウィンドウでコードを実行する
 
@@ -148,6 +148,6 @@ browser.runtime.onMessage.addListener(handleMessage);
 
 ## 例
 
-GitHub の [webextensions-examples](https://github.com/mdn/webextensions-examples) リポジトリには、devtools パネルを使用する拡張機能のいくつかの例が含まれています。
+GitHub の [webextensions-examples](https://github.com/mdn/webextensions-examples) リポジトリーには、devtools パネルを使用する拡張機能のいくつかの例が含まれています。
 
 - [devtools-panels](https://github.com/mdn/webextensions-examples/blob/master/devtools-panels/) は devtools パネルを使用します:

@@ -11,14 +11,6 @@ slug: Learn
 
 从零开始学习 Web 开发极具挑战性，该教程将为你提供详细的资料，手把手帮助你轻松愉快地学习。无论你是正在学习 Web 开发的学生（自学或参与课程）、寻找材料的老师、编程爱好者，亦或是仅仅想了解一点点 Web 技术，我们都希望你能感到宾至如归。
 
-> **标注：**
->
-> #### 想要成为一名前端工程师？
->
-> 我们汇总了一门课程，其中包含你实现成为前端工程师目标所需要的所有基本信息。
->
-> [**点击开始**](/zh-CN/docs/Learn/Front-end_web_developer)
-
 ## 学习起点
 
 - 零基础的初学者
@@ -31,6 +23,14 @@ slug: Learn
   - : 在掌握了原生 HTML、CSS、JavaScript 的要领后，就可以继续学习[前端开发工具](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools)课程，并考虑开始研究 [JavaScript 前端框架](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)，以及[网站服务端编程](/zh-CN/docs/Learn/Server-side)了。
 
 > **备注：** 可在[术语表](/zh-CN/docs/Glossary)中查询术语。此外，如果你对 Web 开发有具体问题，可以尝试在[常见问题](/zh-CN/docs/Learn/Common_questions)寻找答案。
+
+> **标注：**
+>
+> #### 想要成为一名前端工程师？
+>
+> 如果你想要成为一名前端 Web 工程师而又不确定首先要学习什么，我们建议你使用 [MDN 教学课程](/en-US/curriculum/)来规划学习。它提供了结构化的学习路径，涵盖成为一名成功的前端开发人员所需的基本技能与实践，以及推荐的学习资源。
+>
+> [**现在开始**](/en-US/curriculum/)
 
 ## 涵盖的主题
 

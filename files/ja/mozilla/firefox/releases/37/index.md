@@ -5,7 +5,7 @@ slug: Mozilla/Firefox/Releases/37
 
 Firefox 37 は、米国時間 2015 年 3 月 31 日にリリースされました。このページでは、開発者に影響する Firefox 37 の変更点をまとめています。
 
-## Web 開発者向けの変更点一覧
+## ウェブ開発者向けの変更点一覧
 
 ### 開発者ツール
 
@@ -27,12 +27,12 @@ Firefox 37 は、米国時間 2015 年 3 月 31 日にリリースされまし�
 ### HTML
 
 - リンクを新しいタブで開く場合でも、`<a rel="noreferrer">` が機能するようになりました ([Firefox バグ 1031264](https://bugzil.la/1031264))。
-- `<input accept>` で、`'.'` の後に拡張子を記載する形式を受け入れるようになりました。これを指定するとファイル選択ダイアログをユーザに提示するとき、指定した拡張子でフィルタします ([Firefox バグ 826176](https://bugzil.la/826176))。
+- `<input accept>` で、`'.'` の後に拡張子を記載する形式を受け入れるようになりました。これを指定するとファイル選択ダイアログをユーザーに提示するとき、指定した拡張子でフィルタします ([Firefox バグ 826176](https://bugzil.la/826176))。
 
 ### JavaScript
 
-- {{jsxref("Map")}}、{{jsxref("Set")}}、{{jsxref("WeakMap")}}、{{jsxref("WeakSet")}} コンストラクタは、引数 iterable で値 null を無視するようになりました ([Firefox バグ 1092538](https://bugzil.la/1092538))。
-- {{jsxref("Map")}}、{{jsxref("Set")}}、{{jsxref("WeakMap")}}、{{jsxref("WeakSet")}} コンストラクタで、モンキーパッチを使用した `prototype.set` または `prototype.add` をサポートしました ([Firefox バグ 804279](https://bugzil.la/804279))。
+- {{jsxref("Map")}}、{{jsxref("Set")}}、{{jsxref("WeakMap")}}、{{jsxref("WeakSet")}} コンストラクターは、引数 iterable で値 null を無視するようになりました ([Firefox バグ 1092538](https://bugzil.la/1092538))。
+- {{jsxref("Map")}}、{{jsxref("Set")}}、{{jsxref("WeakMap")}}、{{jsxref("WeakSet")}} コンストラクターで、モンキーパッチを使用した `prototype.set` または `prototype.add` をサポートしました ([Firefox バグ 804279](https://bugzil.la/804279))。
 - 非標準の {{jsxref("String.quote","String.prototype.quote()")}} メソッドを削除しました ([Firefox バグ 1103181](https://bugzil.la/1103181))。
 - {{jsxref("RegExp.prototype.flags")}} プロパティを実装しました ([Firefox バグ 1108467](https://bugzil.la/1108467))。
 - {{jsxref("Array")}} のメソッドのいくつかを、[Typed Array](/ja/docs/Web/JavaScript/Typed_arrays) にも実装しました:
