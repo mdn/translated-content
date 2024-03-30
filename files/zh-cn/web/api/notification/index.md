@@ -2,16 +2,14 @@
 title: Notification
 slug: Web/API/Notification
 l10n:
-  sourceCommit: e97f2c3cca98616a37003005ddc149d370c40fd0
+  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
 ---
 
-{{APIRef("Web Notifications")}}{{securecontext_header}}
+{{APIRef("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
 
 {{domxref("Notifications API", "", "", "nocode")}} 的 **`Notification`** 接口用于向用户配置和显示桌面通知。
 
 这些通知的外观和功能因平台而异，但通常它们提供了一种异步向用户提供信息的方式。
-
-{{AvailableInWorkers}}
 
 {{InheritanceDiagram}}
 
