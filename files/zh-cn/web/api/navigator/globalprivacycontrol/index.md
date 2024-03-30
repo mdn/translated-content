@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("DOM")}}{{SeeCompatTable}}{{non-standard_header}}
 
-**`Navigator.globalPrivacyControl`** 属性是一个只读属性，返回用户当前网站的[全球隐私控制](https://globalprivacycontrol.org/)设置。此设置指示用户是否同意网站或服务将其个人信息出售或共享给第三方。
+**`Navigator.globalPrivacyControl`** 只读属性返回用户当前网站的[全球隐私控制](https://globalprivacycontrol.org/)设置。此设置指示用户是否同意网站或服务将其个人信息出售或共享给第三方。
 
 该属性的值反映了 {{httpheader("Sec-GPC")}} HTTP 标头中的值。
 
@@ -35,4 +35,4 @@ console.log(navigator.globalPrivacyControl);
 - {{HTTPHeader("Sec-GPC")}} 标头
 - [globalprivacycontrol.org](https://globalprivacycontrol.org/)
 - [全球隐私控制技术规范](https://privacycg.github.io/gpc-spec/)
-- 维基百科上的 [请勿追踪](https://zh.wikipedia.org/wiki/请勿追踪)
+- 维基百科上的[请勿追踪](https://zh.wikipedia.org/wiki/请勿追踪)
