@@ -2,10 +2,10 @@
 title: Window：queryLocalFonts() 方法
 slug: Web/API/Window/queryLocalFonts
 l10n:
-  sourceCommit: 800701224bc85a647803b1d364d5df5dd3fa2e0f
+  sourceCommit: 89c435da452257b944b403cc9e45036fcb22590e
 ---
 
-{{APIRef("Local Font Access API")}}{{SeeCompatTable}}
+{{APIRef("Local Font Access API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 **`window.queryLocalFonts()`** 方法返回一个兑现一个表示本地可用字体的 {{domxref("FontData")}} 对象数组的 {{jsxref("Promise")}}。
 
