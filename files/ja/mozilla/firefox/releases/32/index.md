@@ -15,7 +15,7 @@ l10n:
 
 - [Web Audio Editor](https://firefox-source-docs.mozilla.org/devtools-user/web_audio_editor/index.html)
 - _スクラッチパッドのコード補完とインラインドキュメント_
-- [インスペクターのルールビューでユーザエージェントのスタイルを表示](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#rules-view)
+- [インスペクターのルールビューでユーザーエージェントのスタイルを表示](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#rules-view)
 - [要素選択ボタンを移動](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#firefox-32-onwards-2)
 - [インスペクターの情報バーにノードの寸法を追加](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#firefox-32-onwards)
 - [ページ全体のスクリーンショットボタンを追加](https://firefox-source-docs.mozilla.org/devtools-user/tools_toolbox/index.html#extra-tools)

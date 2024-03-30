@@ -1,6 +1,8 @@
 ---
 title: Promise.prototype.catch()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/catch
+l10n:
+  sourceCommit: c08b415e28c07247ab8ef41c504f29d94f5bee6f
 ---
 
 {{JSRef}}
@@ -24,7 +26,7 @@ catch(onRejected)
 
 ### 返回值
 
-返回一个新的 {{jsxref("Promise")}}，无论当前的 promise 状态如何，这个新的 promise 在返回时总是处于待定状态。如果 `onRejected` 方法抛出了一个错误或者返回了一个被拒绝的 promise，那么这个新的 promise 也会被拒绝；否则它最终会被兑现。
+返回一个新的 {{jsxref("Promise")}}，无论当前的 promise 状态如何，这个新的 promise 在返回时总是处于待定（pending）状态。如果调用了 `onRejected`，则返回的 promise 将根据此调用的返回值进行兑现，或者使用此调用引发的错误进行拒绝。如果当前的 promise 已兑现，则 `onRejected` 不会被调用，并且返回的 promise 具有相同的兑现值。
 
 ## 描述
 
