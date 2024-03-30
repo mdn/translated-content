@@ -13,7 +13,7 @@ l10n:
 
 当用户首选语言发生变化时，{{domxref("Window.languagechange_event", "languagechange")}} 事件会在 {{domxref("Window")}} 对象上触发。
 
-用户浏览器发出的每个 HTTP 请求中的 `Accept-Language` HTTP 标头使用与 `navigator.languages` 属性相同的值，但额外包含 `qvalues`（质量值）字段（例如 `en-US;q=0.8`）。
+用户浏览器发出的每个 HTTP 请求中的 `Accept-Language` HTTP 标头使用与 `navigator.languages` 属性相同的值，但额外包含 `qvalues`（权重值）字段（例如 `en-US;q=0.8`）。
 
 ## 值
 
@@ -24,8 +24,8 @@ l10n:
 ### 列出 navigator.language 和 navigator.languages 的内容
 
 ```js
-navigator.language; // "en-US"
-navigator.languages; // ["en-US", "zh-CN", "ja-JP"]
+navigator.language; // "zh-CN"
+navigator.languages; // ["zh-CN", "en-US", "ja-JP"]
 ```
 
 ### 使用 Intl 构造函数进行语言特定格式化，并提供回退机制
@@ -50,5 +50,5 @@ const formattedDate = new Intl.DateTimeFormat(navigator.languages).format(date);
 
 - {{domxref("navigator.language")}}
 - {{domxref("navigator")}}
-- {{domxref("Window.languagechange_event", "languagechange")}} event
+- {{domxref("Window.languagechange_event", "languagechange")}} 事件
 - {{jsxref("Intl")}}
