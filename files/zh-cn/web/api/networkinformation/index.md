@@ -57,4 +57,4 @@ _此接口也从其父接口 {{domxref("EventTarget")}} 继承方法。_
 
 ## 参见
 
-- [在线和离线事件](/zh-CN/docs/Web/API/Navigator/onLine)
+- [在线事件和离线事件](/zh-CN/docs/Web/API/Navigator/onLine)
