@@ -7,7 +7,7 @@ l10n:
 
 {{SeeCompatTable}}{{APIRef("Ink API")}}
 
-{{domxref("Navigator")}} 接口的只读属性 **`ink`** 为当前文档返回一个 {{domxref("Ink")}} 对象，提供对 [Ink API](/zh-CN/docs/Web/API/Ink_API) 功能的访问。
+{{domxref("Navigator")}} 接口的 **`ink`** 只读属性为当前文档返回一个 {{domxref("Ink")}} 对象，提供对 [Ink API](/zh-CN/docs/Web/API/Ink_API) 功能的访问。
 
 ## 值
 
@@ -34,4 +34,4 @@ async function inkInit() {
 
 ## 参见
 
-- [在 Web 上改进手写笔输入](https://blogs.windows.com/msedgedev/2021/08/18/enhancing-inking-on-the-web/)
+- [在 Web 上改进墨迹输入](https://blogs.windows.com/msedgedev/2021/08/18/enhancing-inking-on-the-web/)
