@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("Navigator")}} 接口的只读属性 **`maxTouchPoints`** 返回当前设备支持的最大同时触摸接触点数。
+{{domxref("Navigator")}} 接口的 **`maxTouchPoints`** 只读属性返回当前设备支持的最大同时触摸接触点数。
 
 ## 值
 
