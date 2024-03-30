@@ -43,7 +43,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference
 
 ## ファイルの配置
 
-`messages.json` ファイルは、サポートされたロケール名 (`en`, `de`, `ja` など) のディレクトリー内に置く必要があります。さらにこれらは、拡張機能のルートディレクトリ内の `_locales` と呼ばれるディレクトリー内に置く必要があります。
+`messages.json` ファイルは、サポートされたロケール名 (`en`, `de`, `ja` など) のディレクトリー内に置く必要があります。さらにこれらは、拡張機能のルートディレクトリー内の `_locales` と呼ばれるディレクトリー内に置く必要があります。
 
 ## メンバーの詳細
 
