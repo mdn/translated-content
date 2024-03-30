@@ -2,7 +2,7 @@
 title: Element：getAttributeNodeNS() 方法
 slug: Web/API/Element/getAttributeNodeNS
 l10n:
-  sourceCommit: 990ab6637bb4d44f059597262cbf3c51abae79eb
+  sourceCommit: 2c7ff5fb33e462e72ceeab8e62dacad5a195a575
 ---
 
 {{APIRef("DOM")}}
