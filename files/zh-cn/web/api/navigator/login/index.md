@@ -35,4 +35,4 @@ navigator.login.setStatus("logged-out");
 
 ## 参见
 
-- [联合凭证管理 API（FedCM）](/zh-CN/docs/Web/API/FedCM_API)
+- [联合凭证管理（FedCM）API](/zh-CN/docs/Web/API/FedCM_API)
