@@ -61,7 +61,7 @@ var myAnimation = new Daemon(null, animateShape, 500, Infinity);
 
 在後面的範例我們主要將使用 window\.setInterval()方法控制動畫，然後於本頁底部是一些使用 widnow\.setTimeout()的範例連結。
 
-#### 太陽系動畫
+## 太陽系動畫
 
 本例會產生一個小型太陽系運行動畫。
 
@@ -127,7 +127,7 @@ init();
 
 {{EmbedLiveSample("太陽系動畫", "310", "340")}}
 
-#### 時鐘動畫
+## 時鐘動畫
 
 本例會產生一個時鐘指向現在時間。
 
@@ -245,98 +245,106 @@ init();
 
 {{EmbedLiveSample("時鐘動畫", "180", "200")}}
 
-#### 循環景色
+## 循環景色
 
-本例會產一個由左到右循環捲動[美國優勝美地國家公園](http://commons.wikimedia.org/wiki/File:Capitan_Meadows,_Yosemite_National_Park.jpg)景色，你也可以自行替換其他比畫布還大的圖片。
+本例會產一個由左到右循環捲動[美國優勝美地國家公園](https://commons.wikimedia.org/wiki/File:Capitan_Meadows,_Yosemite_National_Park.jpg)景色，你也可以自行替換其他比畫布還大的圖片。
+
+### HTML
+
+循環景色就是在下方的 {{HTMLElement("canvas")}} 中捲動，請注意其中的 width 和 height 和程式碼中的 `canvasXSize` 與 `canvasYSize` 一樣。
+
+```html
+<canvas id="canvas" width="800" height="200"
+  >Yosemite National Park, meadow at the base of El Capitan</canvas
+>
+```
+
+### JavaScript
 
 ```js
-var img = new Image();
+const img = new Image();
 
 // User Variables - customize these to change the image being scrolled, its
 // direction, and the speed.
-
-img.src = "/files/4553/Capitan_Meadows,_Yosemite_National_Park.jpg";
-var CanvasXSize = 800;
-var CanvasYSize = 200;
-var speed = 30; //lower is faster
-var scale = 1.05;
-var y = -4.5; //vertical offset
+img.src = "capitan_meadows_yosemite_national_park.jpg";
+const canvasXSize = 800;
+const canvasYSize = 200;
+const speed = 30; // lower is faster
+const scale = 1.05;
+const y = -4.5; // vertical offset
 
 // Main program
+const dx = 0.75;
+let imgW;
+let imgH;
+let x = 0;
+let clearX;
+let clearY;
+let ctx;
 
-var dx = 0.75;
-var imgW;
-var imgH;
-var x = 0;
-var clearX;
-var clearY;
-var ctx;
-
-img.onload = function () {
+img.onload = () => {
   imgW = img.width * scale;
   imgH = img.height * scale;
-  if (imgW > CanvasXSize) {
-    x = CanvasXSize - imgW;
-  } // image larger than canvas
-  if (imgW > CanvasXSize) {
-    clearX = imgW;
-  } // image larger than canvas
-  else {
-    clearX = CanvasXSize;
+
+  if (imgW > canvasXSize) {
+    // Image larger than canvas
+    x = canvasXSize - imgW;
   }
-  if (imgH > CanvasYSize) {
-    clearY = imgH;
-  } // image larger than canvas
-  else {
-    clearY = CanvasYSize;
-  }
-  //Get Canvas Element
+
+  // Check if image dimension is larger than canvas
+  clearX = Math.max(imgW, canvasXSize);
+  clearY = Math.max(imgH, canvasYSize);
+
+  // Get canvas context
   ctx = document.getElementById("canvas").getContext("2d");
-  //Set Refresh Rate
+
+  // Set refresh rate
   return setInterval(draw, speed);
 };
 
 function draw() {
-  //Clear Canvas
-  ctx.clearRect(0, 0, clearX, clearY);
-  //If image is <= Canvas Size
-  if (imgW <= CanvasXSize) {
-    //reset, start from beginning
-    if (x > CanvasXSize) {
-      x = 0;
+  ctx.clearRect(0, 0, clearX, clearY); // clear the canvas
+
+  // If image is <= canvas size
+  if (imgW <= canvasXSize) {
+    // Reset, start from beginning
+    if (x > canvasXSize) {
+      x = -imgW + x;
     }
-    //draw aditional image
-    if (x > CanvasXSize - imgW) {
-      ctx.drawImage(img, x - CanvasXSize + 1, y, imgW, imgH);
+
+    // Draw additional image1
+    if (x > 0) {
+      ctx.drawImage(img, -imgW + x, y, imgW, imgH);
     }
-  }
-  //If image is > Canvas Size
-  else {
-    //reset, start from beginning
-    if (x > CanvasXSize) {
-      x = CanvasXSize - imgW;
+
+    // Draw additional image2
+    if (x - imgW > 0) {
+      ctx.drawImage(img, -imgW * 2 + x, y, imgW, imgH);
     }
-    //draw aditional image
-    if (x > CanvasXSize - imgW) {
+  } else {
+    // Image is > canvas size
+    // Reset, start from beginning
+    if (x > canvasXSize) {
+      x = canvasXSize - imgW;
+    }
+
+    // Draw additional image
+    if (x > canvasXSize - imgW) {
       ctx.drawImage(img, x - imgW + 1, y, imgW, imgH);
     }
   }
-  //draw image
+
+  // Draw image
   ctx.drawImage(img, x, y, imgW, imgH);
-  //amount to move
+
+  // Amount to move
   x += dx;
 }
 ```
 
-循環景色就是在下方的{{HTMLElement("canvas")}}中捲動，請注意其中的 width 和 height 和程式碼中的 CanvasXZSize 與 CanvasYSize 一樣。
+### 結果
 
-```html
-<canvas id="canvas" width="800" height="200"></canvas>
-```
-
-##### 結果
-
-{{EmbedLiveSample("循環景色", "830", "230")}}
+{{EmbedLiveSample("循環景色", "830", "250")}}
 
 ## 其他範例
 
