@@ -564,9 +564,8 @@ class Person {
     this.pronouns = pronouns;
   }
 
-    greeting() {
-      console.log(`Hi! I'm ${this.name}`);
-    }
+  greeting() {
+    console.log(`Hi! I'm ${this.name}`);
   }
   ```
 
