@@ -17,10 +17,10 @@ slug: Web/HTML/Element/br
 
 此元素的屬性包括[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
 
-### 不建議使用的屬性
+### 已棄用的屬性
 
 - `clear` {{Deprecated_Inline}}
-  - : 指示在斷裂後的下一行從哪裡開始。
+  - : 指示中斷後下一行的開始位置。
 
 ## 使用 CSS 設計
 
@@ -30,7 +30,7 @@ slug: Web/HTML/Element/br
 
 ## 範例
 
-### 簡單的 `<br>`
+### 簡單的 `<br>` 範例
 
 在以下示例中，我們使用 `<br>` 元素在不同行的郵寄地址之間創建換行：
 
@@ -44,7 +44,7 @@ USA<br />
 
 #### 結果
 
-{{ EmbedLiveSample('簡單的 br', 640, 120) }}
+{{ EmbedLiveSample('簡單的 br 範例', 640, 120) }}
 
 ## 無障礙議題
 

@@ -5,7 +5,7 @@ slug: Web/HTML/Element/canvas
 
 {{HTMLSidebar}}
 
-使用 **HTML `<canvas>` 元素** 與 [canvas 腳本 API](/zh-TW/docs/Web/API/Canvas_API) 或 [WebGL API](/zh-TW/docs/Web/API/WebGL_API) 來繪製圖形和動畫。
+使用 **HTML `<canvas>` 元素**與 [canvas 腳本 API](/zh-TW/docs/Web/API/Canvas_API) 或 [WebGL API](/zh-TW/docs/Web/API/WebGL_API) 來繪製圖形和動畫。
 
 ## 屬性
 
@@ -112,8 +112,8 @@ ctx.fillRect(10, 10, 100, 100);
       <th scope="row">允許的內容</th>
       <td>
         透明，但不包含<a
-          href="/zh-TW/docs/Web/HTML/Content_categories#互動式內容"
-          >互動式內容</a
+          href="/zh-TW/docs/Web/HTML/Content_categories#互動型內容"
+          >互動型內容</a
         >的後代，除了 {{HTMLElement("a")}} 元素、{{HTMLElement("button")}} 元素和 <a href="/zh-TW/docs/Web/HTML/Element/input#type"><code>type</code></a> 屬性為 <code>checkbox</code>、<code>radio</code> 或 <code>button</code> 的
         {{HTMLElement("input")}} 元素。
       </td>
@@ -163,8 +163,8 @@ ctx.fillRect(10, 10, 100, 100);
 - [Canvas 教程](/zh-TW/docs/Web/API/Canvas_API/Tutorial)
 - [OffscreenCanvas](/zh-TW/docs/Web/API/OffscreenCanvas)
 - [Canvas 速查表](https://simon.html5.org/dump/html5-canvas-cheat-sheet.html) (2009)
-- [Canvas 速查表](https://websitesetup.org/wp-content/uploads/2015/11/Infopgraphic-CanvasCheatSheet-Final2.pdf) (pdf) (2015)
-- [Safari HTML 畫布指南](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/HTML-canvas-guide/Introduction/Introduction.html) 透過 Apple (2013)
+- [Canvas 速查表](https://websitesetup.org/wp-content/uploads/2015/11/Infopgraphic-CanvasCheatSheet-Final2.pdf)（pdf）（2015）
+- [Safari HTML 畫布指南](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/HTML-canvas-guide/Introduction/Introduction.html) 透過 Apple（2013）
 - [`CanvasRenderingContext2D` 畫布元素的 2D 繪圖上下文](https://developer.apple.com/documentation/webkitjs/canvasrenderingcontext2d) 透過 Apple.com
 - [WebGL](/zh-TW/docs/Web/API/WebGL_API) API
 - {{HTMLElement("img")}}

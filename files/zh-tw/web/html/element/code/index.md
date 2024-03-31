@@ -49,7 +49,7 @@ slug: Web/HTML/Element/code
           >流內容</a
         >、<a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
           >段落型內容</a
-        >，<a href="/zh-TW/docs/Web/HTML/Content_categories#捫及內容"
+        >、<a href="/zh-TW/docs/Web/HTML/Content_categories#捫及內容"
           >捫及內容</a
         >。
       </td>
