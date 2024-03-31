@@ -1,5 +1,5 @@
 ---
-title: beacon (ビーコン)
+title: Beacon (ビーコン)
 slug: Glossary/Beacon
 ---
 
