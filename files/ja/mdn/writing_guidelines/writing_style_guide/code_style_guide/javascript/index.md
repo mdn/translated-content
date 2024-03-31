@@ -754,11 +754,11 @@ age != 25;
 
 この例では、再代入される変数に `const` を使用しています。再代入されるとエラーが発生します。
 
-  ```js example-bad
-  const age = 40;
-  age++;
-  console.log("Happy birthday!");
-  ```
+```js example-bad
+const age = 40;
+age++;
+console.log("Happy birthday!");
+```
 
 - 下記の例では `var` を使用しており、グローバルスコープを汚染しています。
 
