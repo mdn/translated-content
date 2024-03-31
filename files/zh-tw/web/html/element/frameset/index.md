@@ -37,7 +37,7 @@ slug: Web/HTML/Element/frameset
 </html>
 ```
 
-如果您想要將另一個 HTML 頁面嵌入到文檔的 {{HTMLElement("body")}} 中，請使用 {{HTMLElement("iframe")}} 元素。
+如果你想要將另一個 HTML 頁面嵌入到文檔的 {{HTMLElement("body")}} 中，請使用 {{HTMLElement("iframe")}} 元素。
 
 ## 規範
 
