@@ -572,11 +572,11 @@ class Person {
 
 継承には `extends` を使用してください。
 
-  ```js example-good
-  class Teacher extends Person {
-    // …
-  }
-  ```
+```js example-good
+class Teacher extends Person {
+  // …
+}
+```
 
 ### メソッド
 
