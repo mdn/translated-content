@@ -30,9 +30,8 @@ l10n:
 > - **title**
 >   - : タイトルの見出しで、ページの最上部に表示されます。
 >     書式は `'<NameOfTheElement>: 要素の目的'` です。
->     For 例えば、 [`<video>`](/ja/docs/Web/HTML/Element/video) 要素の _title_ は **'\<video>: 埋め込み動画要素'** となります。
+>     例えば、 [`<video>`](/ja/docs/Web/HTML/Element/video) 要素の _title_ は **'\<video>: 埋め込み動画要素'** となります。
 > - **slug**
->
 >   - : `https://developer.mozilla.org/ja/docs/` の後にくる URL の末尾です。
 >     これは `Web/HTML/Element/NameOfTheElement` のような形式になります。
 >     例えば、 [`<video>`](/ja/docs/Web/HTML/Element/video) 要素の _slug_ は `Web/HTML/Element/video` となります。
