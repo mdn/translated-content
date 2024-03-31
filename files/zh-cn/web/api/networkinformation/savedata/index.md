@@ -1,21 +1,17 @@
 ---
-title: NetworkInformation.saveData
+title: NetworkInformation：saveData 属性
 slug: Web/API/NetworkInformation/saveData
+l10n:
+  sourceCommit: 650aeb25be848b88882f6011522d8e9b09b8c08e
 ---
 
-{{APIRef("Network Information API")}}{{SeeCompatTable}}
+{{APIRef("Network Information API")}} {{AvailableInWorkers}}
 
-**`NetworkInformation.saveData`** 是 {{domxref("NetworkInformation")}} 接口的只读属性，如果用户设备上设置了减少数据使用的选项时返回 `true` .
+{{domxref("NetworkInformation")}} 接口的 **`saveData`** 只读属性在用户在用户代理上设置了减少数据使用选项时返回 `true`。
 
-## 语法
+## 值
 
-```plain
-var saveData = NetworkInformation.saveData;
-```
-
-### 返回值
-
-A {{jsxref('Boolean')}}.
+一个布尔值。
 
 ## 规范
 
@@ -24,3 +20,7 @@ A {{jsxref('Boolean')}}.
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- {{HTTPHeader("Save-Data")}}
