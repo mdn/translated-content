@@ -15,4 +15,4 @@ Web ビーコンは、マークアップに埋め込まれた 1 ピクセル gif
 
 ## 関連情報
 
-- Real User Monitoring (RUM)
+- [Real User Monitoring (RUM)](/ja/docs/Glossary/Real_User_Monitoring)
