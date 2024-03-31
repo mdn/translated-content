@@ -12,11 +12,11 @@ slug: Web/HTML/Element/canvas
 此元素的屬性包括[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
 
 - `height`
-  - ：以 CSS 像素為單位的座標空間高度。默認值為 150。
+  - : 以 CSS 像素為單位的座標空間高度。默認值為 150。
 - `moz-opaque` {{non-standard_inline}} {{deprecated_inline}}
-  - ：讓畫布知道是否透明度將成為一個因素。如果畫布知道沒有透明度，繪圖性能可以優化。這僅受到基於 Mozilla 的瀏覽器支持；請改用標準化的 {{domxref("HTMLCanvasElement.getContext()", "canvas.getContext('2d', { alpha: false })")}}。
+  - : 讓畫布知道是否透明度將成為一個因素。如果畫布知道沒有透明度，繪圖性能可以優化。這僅受到基於 Mozilla 的瀏覽器支持；請改用標準化的 {{domxref("HTMLCanvasElement.getContext()", "canvas.getContext('2d', { alpha: false })")}}。
 - `width`
-  - ：以 CSS 像素為單位的座標空間寬度。默認值為 300。
+  - : 以 CSS 像素為單位的座標空間寬度。默認值為 300。
 
 ## 使用注意事項
 

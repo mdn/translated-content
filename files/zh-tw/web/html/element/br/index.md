@@ -20,7 +20,7 @@ slug: Web/HTML/Element/br
 ### 不建議使用的屬性
 
 - `clear` {{Deprecated_Inline}}
-  - ：指示在斷裂後的下一行從哪裡開始。
+  - : 指示在斷裂後的下一行從哪裡開始。
 
 ## 使用 CSS 設計
 
