@@ -139,10 +139,10 @@ color: red;
 
 もっと複雑な色には `rgb()` を使用してください（半透過のものも含む）。
 
-  ```css example-good
-  color: rgb(0 0 0 / 50%);
-  color: rgb(248 242 230);
-  ```
+```css example-good
+color: rgb(0 0 0 / 50%);
+color: rgb(248 242 230);
+```
 
 16 進の色を使用する必要がある場合は、小文字を使用してください。
 
