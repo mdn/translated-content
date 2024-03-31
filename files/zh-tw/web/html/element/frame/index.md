@@ -5,18 +5,18 @@ slug: Web/HTML/Element/frame
 
 {{HTMLSidebar}}{{Deprecated_Header}}
 
-**`<frame>`** [HTML](/en-US/docs/Web/HTML) 元素定義了另一個 HTML 文件可以顯示的特定區域。框架應該在 {{HTMLElement("frameset")}} 元素內使用。
+**`<frame>`** [HTML](/zh-TW/docs/Web/HTML) 元素定義了另一個 HTML 文件可以顯示的特定區域。框架應該在 {{HTMLElement("frameset")}} 元素內使用。
 
 由於某些缺點，例如性能問題和對螢幕閱讀器用戶的可訪問性不足，不建議使用 `<frame>` 元素。取而代之的是，可能更喜歡使用 {{HTMLElement("iframe")}}。
 
 ## 屬性
 
-與所有其他 HTML 元素一樣，此元素支持[全局屬性](/en-US/docs/Web/HTML/Global_attributes)。
+與所有其他 HTML 元素一樣，此元素支持[全局屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
 
 - `src` {{Deprecated_Inline}}
   - : 此屬性指定將由框架顯示的文件。
 - `name` {{Deprecated_Inline}}
-  - : 此屬性用於標記框架。如果不標記，則每個連結都將在其所在的框架中打開——最接近的父框架。有關更多信息，請參見 [`target`](/en-US/docs/Web/HTML/Element/a#target) 屬性。
+  - : 此屬性用於標記框架。如果不標記，則每個連結都將在其所在的框架中打開——最接近的父框架。有關更多信息，請參見 [`target`](/zh-TW/docs/Web/HTML/Element/a#target) 屬性。
 - `noresize` {{Deprecated_Inline}}
   - : 此屬性防止用戶調整框架的大小。
 - `scrolling` {{Deprecated_Inline}}
@@ -36,7 +36,7 @@ slug: Web/HTML/Element/frame
 
 ```html
 <!doctype html>
-<html lang="en-US">
+<html lang="zh-TW">
   <head>
     <!-- Document metadata goes here -->
   </head>

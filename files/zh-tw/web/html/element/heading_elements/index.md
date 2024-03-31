@@ -5,13 +5,13 @@ slug: Web/HTML/Element/Heading_Elements
 
 {{HTMLSidebar}}
 
-**`<h1>`** 到 **`<h6>`** [HTML](/en-US/docs/Web/HTML) 元素代表六個級別的章節標題。`<h1>` 是最高的章節級別，`<h6>` 是最低的。默認情況下，所有標題元素在佈局中創建一個[區塊級](/en-US/docs/Glossary/Block-level_content)區域，從新行開始並佔據其包含區塊中可用的全部寬度。
+**`<h1>`** 到 **`<h6>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表六個級別的章節標題。`<h1>` 是最高的章節級別，`<h6>` 是最低的。默認情況下，所有標題元素在佈局中創建一個[區塊級](/zh-TW/docs/Glossary/Block-level_content)區域，從新行開始並佔據其包含區塊中可用的全部寬度。
 
 {{EmbedInteractiveExample("pages/tabbed/h1-h6.html", "tabbed-standard")}}
 
 ## 屬性
 
-這些元素僅包括[全局屬性](/en-US/docs/Web/HTML/Global_attributes)。
+這些元素僅包括[全局屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
 
 ## 使用注意事項
 
@@ -21,9 +21,9 @@ slug: Web/HTML/Element/Heading_Elements
 
 ### 避免在一頁上使用多個 `<h1>` 元素
 
-雖然 HTML 標準允許在一個頁面上使用多個 `<h1>` 元素（只要它們不是 [嵌套](#嵌套) 的），但這不被認為是最佳實踐。一個頁面通常應該只有一個 `<h1>` 元素，用於描述頁面的內容（類似於文件的 [`<title> 元素`](/en-US/docs/Web/HTML/Element/title)）。
+雖然 HTML 標準允許在一個頁面上使用多個 `<h1>` 元素（只要它們不是 [嵌套](#嵌套) 的），但這不被認為是最佳實踐。一個頁面通常應該只有一個 `<h1>` 元素，用於描述頁面的內容（類似於文件的 [`<title> 元素`](/zh-TW/docs/Web/HTML/Element/title)）。
 
-> **備註：** 在舊版 HTML 標準中允許將多個 `<h1>` 元素嵌套在嵌套的[章節元素](/en-US/docs/Web/HTML/Element#content_sectioning)中。然而，這從未被視為最佳實踐，現在已不符合規範。詳情請參見 [There Is No Document Outline Algorithm](https://adrianroselli.com/2016/08/there-is-no-document-outline-algorithm.html)。
+> **備註：** 在舊版 HTML 標準中允許將多個 `<h1>` 元素嵌套在嵌套的[章節元素](/zh-TW/docs/Web/HTML/Element#content_sectioning)中。然而，這從未被視為最佳實踐，現在已不符合規範。詳情請參見 [There Is No Document Outline Algorithm](https://adrianroselli.com/2016/08/there-is-no-document-outline-algorithm.html)。
 
 請優先使用每頁僅有一個 `<h1>`，並且[嵌套標題](#嵌套)而不跳級。
 
@@ -121,16 +121,16 @@ slug: Web/HTML/Element/Heading_Elements
 當標題嵌套時，關閉子節時可能會“跳過”標題級別。
 
 - [標題 • 頁面結構 • WAI Web 無障礙教學](https://www.w3.org/WAI/tutorials/page-structure/headings/)
-- [MDN 了解 WCAG，第 1.3 條解釋](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.3_—_create_content_that_can_be_presented_in_different_ways)
+- [MDN 了解 WCAG，第 1.3 條解釋](/zh-TW/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.3_—_create_content_that_can_be_presented_in_different_ways)
 - [理解成功標準 1.3.1 | W3C 了解 WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
-- [MDN 了解 WCAG，第 2.4 條解釋](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_—_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
+- [MDN 了解 WCAG，第 2.4 條解釋](/zh-TW/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_—_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
 - [理解成功標準 2.4.1 | W3C 了解 WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
 - [理解成功標準 2.4.6 | W3C 了解 WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-descriptive.html)
 - [理解成功標準 2.4.10 | W3C 了解 WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-headings.html)
 
 ### 標記章節內容
 
-另一種螢幕閱讀軟體用戶常見的導航技術是生成[章節內容](/en-US/docs/Web/HTML/Element#content_sectioning)的列表並用它來確定頁面的佈局。
+另一種螢幕閱讀軟體用戶常見的導航技術是生成[章節內容](/zh-TW/docs/Web/HTML/Element#content_sectioning)的列表並用它來確定頁面的佈局。
 
 可以使用 `aria-labelledby` 和 `id` 屬性的組合為章節內容進行標記，標籤簡要描述章節內容的目的。此技術適用於同一頁面上有多個章節元素的情況。
 
@@ -158,7 +158,7 @@ slug: Web/HTML/Element/Heading_Elements
 
 在這個例子中，螢幕閱讀技術會宣佈有兩個 `nav` 章節，一個叫「主導航」，一個叫「頁腳導航」。如果沒有提供標籤，使用螢幕閱讀軟體的人可能需要調查每個 `nav` 元素的內容來確定它們的目的。
 
-- [使用 aria-labelledby 屬性](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
+- [使用 aria-labelledby 屬性](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
 - [標記區域 • 頁面結構 • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/page-structure/labels/#using-aria-labelledby)
 
 ## 技術摘要
@@ -167,16 +167,16 @@ slug: Web/HTML/Element/Heading_Elements
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
+        <a href="/zh-TW/docs/Web/HTML/Content_categories"
           >內容類型</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#流內容"
+        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
           >流內容</a
-        >、<a href="/en-US/docs/Web/HTML/Content_categories#標題型內容"
+        >、<a href="/zh-TW/docs/Web/HTML/Content_categories#標題型內容"
           >標題型內容</a
-        >、<a href="/en-US/docs/Web/HTML/Content_categories#捫及內容"
+        >、<a href="/zh-TW/docs/Web/HTML/Content_categories#捫及內容"
           >捫及內容</a
         >。
       </td>
@@ -184,7 +184,7 @@ slug: Web/HTML/Element/Heading_Elements
     <tr>
       <th scope="row">允許內容</th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#段落型內容"
+        <a href="/zh-TW/docs/Web/HTML/Content_categories#段落型內容"
           >段落型內容</a
         >。
       </td>
@@ -196,7 +196,7 @@ slug: Web/HTML/Element/Heading_Elements
     <tr>
       <th scope="row">允許的父元素</th>
       <td>
-        任何接受<a href="/en-US/docs/Web/HTML/Content_categories#流內容"
+        任何接受<a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
           >流內容</a
         >的元素。
       </td>
@@ -204,7 +204,7 @@ slug: Web/HTML/Element/Heading_Elements
     <tr>
       <th scope="row">隱含的 ARIA 角色</th>
       <td>
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/heading_role"
+        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/heading_role"
           >heading</a
         >
       </td>
@@ -212,8 +212,8 @@ slug: Web/HTML/Element/Heading_Elements
     <tr>
       <th scope="row">允許的 ARIA 角色</th>
       <td>
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role"><code>tab</code></a>、<a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a> 或
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>
+        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/tab_role"><code>tab</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a> 或
+        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>
       </td>
     </tr>
     <tr>
