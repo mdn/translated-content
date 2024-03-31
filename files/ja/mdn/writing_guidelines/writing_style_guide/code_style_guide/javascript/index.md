@@ -567,7 +567,8 @@ class Person {
   greeting() {
     console.log(`Hi! I'm ${this.name}`);
   }
-  ```
+}
+```
 
 継承には `extends` を使用してください。
 
