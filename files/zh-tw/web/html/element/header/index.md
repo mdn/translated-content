@@ -13,7 +13,7 @@ slug: Web/HTML/Element/header
 
 除了嵌套在章節內容中以外，`<header>` 元素的含義與站點範圍內的 [`banner`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/banner_role) 地標角色相同。然後，`<header>` 元素不是地標。
 
-`<header>` 元素可以定義全局網站頁首，描述為可存取樹中的 `banner`。它通常包括標誌、公司名稱、搜索功能，可能還有全局導覽或標語。它通常位於頁面的頂部。
+`<header>` 元素可以定義全域網站頁首，描述為可存取樹中的 `banner`。它通常包括標誌、公司名稱、搜索功能，可能還有全域導覽或標語。它通常位於頁面的頂部。
 
 否則，在可存取樹中它是一個 `section`，通常包含周圍章節的標題（一個 `h1` – `h6` 元素）和可選的副標題，但這**不是**必需的。
 
@@ -23,7 +23,7 @@ slug: Web/HTML/Element/header
 
 ## 屬性
 
-此元素僅包括[全局屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
+此元素僅包括[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
 
 ## 範例
 

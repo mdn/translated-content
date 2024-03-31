@@ -11,7 +11,7 @@ slug: Web/HTML/Element/frame
 
 ## 屬性
 
-與所有其他 HTML 元素一樣，此元素支持[全局屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
+與所有其他 HTML 元素一樣，此元素支持[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
 
 - `src` {{Deprecated_Inline}}
   - : 此屬性指定將由框架顯示的文件。

@@ -11,7 +11,7 @@ slug: Web/HTML/Element/Heading_Elements
 
 ## 屬性
 
-這些元素僅包括[全局屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
+這些元素僅包括[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
 
 ## 使用注意事項
 
