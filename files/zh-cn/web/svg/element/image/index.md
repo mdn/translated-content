@@ -23,8 +23,8 @@ SVG 软件必须支持的图像格式只有 {{glossary("JPEG")}}、{{glossary("P
 
 - {{SVGAttr("x")}}：图像水平方向上到原点的距离。
 - {{SVGAttr("y")}}：图像竖直方向上到原点的距离。
-- {{SVGAttr("width")}}：图像宽度。和 HTML `<img>` 不同，该属性是必须的。
-- {{SVGAttr("height")}}：图像高度。和 HTML `<img>` 不同，该属性是必须的。
+- {{SVGAttr("width")}}：图像宽度。和 HTML `<img>` 不同，该属性是必需的。
+- {{SVGAttr("height")}}：图像高度。和 HTML `<img>` 不同，该属性是必需的。
 - {{SVGAttr("href")}} 和 {{SVGAttr("xlink:href")}}{{deprecated_inline}}：指向图像文件的 URL。
 - {{SVGAttr("preserveAspectRatio")}}：控制图像的缩放比例。
 - {{SVGAttr("crossorigin")}}：定义 CORS 请求的凭据标志。
