@@ -15,7 +15,7 @@ l10n:
 
 ## 示例
 
-每个 {{domxref("Window")}} 对象都有自己的 {{domxref("Navigator")}} 实例，可以 {{domxref("Window.navigator","window.navigator")}} 或 {{domxref("Window.navigator", "navigator")}} 访问。同时，还会创建一个新的 {{domxref("XRSystem")}} 实例，并将其作为 {{domxref("Navigator.xr", "navigator.xr")}} 附加到 `navigator` 实例上。如果存在 `xr` 属性，你可以使用它来访问 [WebXR 设备 API](/zh-CN/docs/Web/API/WebXR_Device_API)。
+每个 {{domxref("Window")}} 对象都有自己的 {{domxref("Navigator")}} 实例，可以通过 {{domxref("Window.navigator","window.navigator")}} 或 {{domxref("Window.navigator", "navigator")}} 访问。同时，还会创建一个新的 {{domxref("XRSystem")}} 实例，并将其作为 {{domxref("Navigator.xr", "navigator.xr")}} 附加到 `navigator` 实例上。如果存在 `xr` 属性，你可以使用它来访问 [WebXR 设备 API](/zh-CN/docs/Web/API/WebXR_Device_API)。
 
 你可以使用以下代码判断 WebXR 是否可用：
 
