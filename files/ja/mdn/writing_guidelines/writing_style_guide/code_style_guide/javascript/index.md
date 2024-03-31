@@ -556,13 +556,13 @@ const object = new Object();
 
 例えば、これが推奨される方法です。
 
-  ```js example-good
-  class Person {
-    constructor(name, age, pronouns) {
-      this.name = name;
-      this.age = age;
-      this.pronouns = pronouns;
-    }
+```js example-good
+class Person {
+  constructor(name, age, pronouns) {
+    this.name = name;
+    this.age = age;
+    this.pronouns = pronouns;
+  }
 
     greeting() {
       console.log(`Hi! I'm ${this.name}`);
