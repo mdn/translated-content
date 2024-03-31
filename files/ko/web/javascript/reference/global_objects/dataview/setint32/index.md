@@ -9,7 +9,7 @@ l10n:
 
 {{jsxref("DataView")}} 인스턴스의 **`setInt32()`** 메서드는 숫자를 받아
 이 `DataView`의 지정된 바이트 오프셋의 4 바이트의 공간에 32비트 부호 있는 정수로 저장합니다.
-정렬 제약 조건은 없으며, 범위 내의 모든 오프셋에서 멀티바이트 값을 저장할 수 있습니다.
+정렬 제약 조건은 없으며, 범위 내의 모든 오프셋에서 멀티 바이트 값을 저장할 수 있습니다.
 
 {{EmbedInteractiveExample("pages/js/dataview-setint32.html")}}
 
@@ -27,8 +27,7 @@ setInt32(byteOffset, value, littleEndian)
 - `value`
   - : 저장할 값. 어떻게 값이 바이트로 인코딩되는지는 [값 인코딩 및 정규화](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#value_encoding_and_normalization)를 보시기 바랍니다.
 - `littleEndian` {{optional_inline}}
-  - : {{Glossary("Endianness", "리틀 엔디언 혹은 빅 엔디언")}} 형식으로 데이터를 저장할지
-    여부를 나타냅니다. `false` 혹은 `undefined`이라면 빅 엔디언 값을 씁니다.
+  - : [리틀 엔디언 혹은 빅 엔디언](/ko/docs/Glossary/Endianness) 형식으로 데이터를 저장할지 여부를 나타냅니다. `false` 혹은 `undefined`이라면 빅 엔디언 값을 씁니다.
 
 ### 반환 값
 
