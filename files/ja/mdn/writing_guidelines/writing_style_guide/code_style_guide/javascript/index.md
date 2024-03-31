@@ -418,7 +418,7 @@ if (test) {
   // …
   return;
 } else {
-// test が false の時に何かを行う
+  // test が false の時に何かを行う
   // …
 }
 ```
