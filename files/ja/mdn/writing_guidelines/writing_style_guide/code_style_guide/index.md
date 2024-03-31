@@ -131,11 +131,11 @@ const toolkitProfileService = Components.classes[
 
 下記のように、主要な色やその他の「基本的な」色はキーワードを使用することを推奨します。
 
-  ```css example-good
-  color: black;
-  color: white;
-  color: red;
-  ```
+```css example-good
+color: black;
+color: white;
+color: red;
+```
 
 もっと複雑な色には `rgb()` を使用してください（半透過のものも含む）。
 
