@@ -1,6 +1,8 @@
 ---
 title: Server-Sent Events 사용하기
 slug: Web/API/Server-sent_events/Using_server-sent_events
+l10n:
+  sourceCommit: c6dbc4ff96451887b908b46c8e70bcfec1c2c48c
 ---
 
 {{DefaultAPISidebar("Server Sent Events")}}
@@ -125,7 +127,7 @@ evtSource.close();
 - `data`
   - : 메시지의 데이터 필드다. `EventSource`가 `data:`로 시작된다. 복수의 연속된 행을 전달 받은 경우에는 [그것을 연결해](http://www.w3.org/TR/eventsource/#dispatchMessage) 각 항목의 사이에 개행 문자를 삽입한다. 이때, 마지막의 줄바꿈은 제외된다.
 - `id`
-  - : 메시지의 데이터 필드다. `EventSource`가 data:로 시작된다. 복수의 연속된 행을 전달 받은 경우에는 그것을 연결해 각 항목의 사이에 개행 문자를 삽입한다. 이때, 마지막의 줄바꿈은 제외된다.
+  - : [`EventSource`](/ko/docs/Web/API/EventSource) 객체의 마지막 이벤트 ID 값을 설정하는 이벤트 ID.
 - `retry`
   - : 이벤트 송신을 시도할 때에 사용하는 재연결 시간(reconnection time)이다. 이 값은 정수여야 하며 재연결 시간을 밀리초 단위로 지정한다. 정수가 아닌 값이 지정되면 이 필드는 무시된다.
 
