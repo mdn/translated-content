@@ -118,7 +118,7 @@ slug: Web/HTML/Element/Heading_Elements
       4. `h3` 翅膀
       5. `h3` 腹部
 
-當標題嵌套時，關閉子節時可能會“跳過”標題級別。
+當標題嵌套時，關閉子節時可能會「跳過」標題級別。
 
 - [標題 • 頁面結構 • WAI Web 無障礙教學](https://www.w3.org/WAI/tutorials/page-structure/headings/)
 - [MDN 了解 WCAG，第 1.3 條解釋](/zh-TW/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.3_—_create_content_that_can_be_presented_in_different_ways)
