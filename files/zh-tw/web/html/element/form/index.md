@@ -9,7 +9,7 @@ slug: Web/HTML/Element/form
 
 {{EmbedInteractiveExample("pages/tabbed/form.html", "tabbed-standard")}}
 
-可以使用 {{cssxref(':valid')}} 和 {{cssxref(':invalid')}} CSS [偽類](/zh-TW/docs/Web/CSS/Pseudo-classes)根據表單內的 {{domxref("HTMLFormElement.elements", "elements")}} 是否有效來設置 `<form>` 元素的樣式。
+可以使用 {{cssxref(':valid')}} 和 {{cssxref(':invalid')}} CSS [偽類](/zh-TW/docs/Web/CSS/Pseudo-classes)根據表單內的{{domxref("HTMLFormElement.elements", "元素", "", 1)}}是否有效來設置 `<form>` 元素的樣式。
 
 ## 屬性
 
@@ -23,7 +23,7 @@ slug: Web/HTML/Element/form
 
 - `accept-charset`
 
-  - : 伺服器接受的空格分隔的 {{Glossary("character encoding", "字元編碼")}}。瀏覽器將按照列出的順序使用它們。默認值表示[與頁面相同的編碼](/zh-TW/docs/Web/HTTP/Headers/Content-Encoding)。（在 HTML 的之前版本中，字符編碼也可以用逗號分隔。）
+  - : 伺服器接受的空格分隔的{{Glossary("character encoding", "字元編碼")}}。瀏覽器將按照列出的順序使用它們。默認值表示[與頁面相同的編碼](/zh-TW/docs/Web/HTTP/Headers/Content-Encoding)。（在 HTML 的之前版本中，字符編碼也可以用逗號分隔。）
 
 - `autocapitalize`
 
@@ -33,7 +33,7 @@ slug: Web/HTML/Element/form
 
   - : 指示瀏覽器是否可以默認情況下自動完成輸入元素的值。表單元素上的 `autocomplete` 屬性會覆蓋 `<form>` 上的它。可能的值：
 
-    - `off`：瀏覽器可能不會自動完成輸入。（瀏覽器傾向於忽略對懷疑的登錄表單的此屬性；請參見 [自動完成屬性和登入欄](/zh-TW/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#the_autocomplete_attribute_and_login_fields)）
+    - `off`：瀏覽器可能不會自動完成輸入。（瀏覽器傾向於忽略對懷疑的登錄表單的此屬性；請參見[自動完成屬性和登入欄](/zh-TW/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#the_autocomplete_attribute_and_login_fields)）
     - `on`：瀏覽器可能會自動完成輸入。
 
 - `name`
@@ -51,7 +51,7 @@ slug: Web/HTML/Element/form
   - : 處理表單提交的 URL。此值可以被 {{HTMLElement("button")}}、[`<input type="submit">`](/zh-TW/docs/Web/HTML/Element/input/submit) 或 [`<input type="image">`](/zh-TW/docs/Web/HTML/Element/input/image) 元素上的 [`formaction`](/zh-TW/docs/Web/HTML/Element/button#formaction) 屬性覆蓋。當設置 `method="dialog"` 時，將忽略此屬性。
 - `enctype`
 
-  - : 如果 `method` 屬性的值為 `post`，則 `enctype` 是表單提交的 [MIME 類型](https://en.wikipedia.org/wiki/Mime_type)。可能的值：
+  - : 如果 `method` 屬性的值為 `post`，則 `enctype` 是表單提交的 [MIME 類型](https://zh.wikipedia.org/wiki/互联网媒体类型)。可能的值：
 
     - `application/x-www-form-urlencoded`：默認值。
     - `multipart/form-data`：如果表單包含帶有 `type=file` 的 {{HTMLElement("input")}} 元素，請使用此值。
@@ -61,7 +61,7 @@ slug: Web/HTML/Element/form
 
 - `method`
 
-  - ：提交表單時使用的 [HTTP](/zh-TW/docs/Web/HTTP) 方法。
+  - : 提交表單時使用的 [HTTP](/zh-TW/docs/Web/HTTP) 方法。
     允許的方法/值只有（不區分大小寫）：
 
     - `post`：{{HTTPMethod("POST")}} 方法；表單數據作為[請求主體](/zh-TW/docs/Web/API/Request/body)發送。
@@ -80,7 +80,7 @@ slug: Web/HTML/Element/form
     - `_blank`：加載到新的未命名瀏覽上下文。這提供了與設置 [`rel="noopener"`](#rel) 相同的行為，該屬性不設置 [`window.opener`](/zh-TW/docs/Web/API/Window/opener)。
     - `_parent`：加載到當前瀏覽上下文的父級。如果沒有父級，則與 `_self` 的行為相同。
     - `_top`：加載到頂級瀏覽上下文（即，當前上下文的祖先，並且沒有父級）。如果沒有父級，則與 `_self` 的行為相同。
-    - `_unfencedTop`：將表單中的響應加載到嵌入式 [fenced frame](/zh-TW/docs/Web/API/Fenced_frame_API) 的頂級框架（即穿越 fenced frame 的根，與其他保留目的地不同）。僅在 fenced frame 內可用。
+    - `_unfencedTop`：將表單中的響應加載到嵌入式[圍欄頁框](/zh-TW/docs/Web/API/Fenced_frame_API)的頂級框架（即穿越圍欄頁框的根，與其他保留目的地不同）。僅在圍欄頁框內可用。
 
     這個值可以被 {{HTMLElement("button")}}、[`<input type="submit">`](/zh-TW/docs/Web/HTML/Element/input/submit) 或 [`<input type="image">`](/zh-TW/docs/Web/HTML/Element/input/image) 元素上的 [`formtarget`](/zh-TW/docs/Web/HTML/Element/button#formtarget) 屬性覆蓋。
 
