@@ -20,7 +20,7 @@ l10n:
 text-indent: 3mm;
 text-indent: 40px;
 
-/* <percentage> 值 相对于包含区块的宽度 */
+/* <percentage> 值，相对于包含区块的宽度 */
 text-indent: 15%;
 
 /* 关键字值 */
@@ -89,7 +89,7 @@ p {
 
 在段落缩进的情况下，一种常见的排版实践是跳过第一个段落的缩进。正如*芝加哥格式手册*所述，“紧跟标题后的第一行文本可以左对齐，也可以按照通常的段落缩进进行缩进。”
 
-使用 [接续兄弟组合器](/zh-CN/docs/Web/CSS/Next-sibling_combinator) 可以对首段与后续段落进行不同处理，如下例所示：
+使用[接续兄弟组合器](/zh-CN/docs/Web/CSS/Next-sibling_combinator)可以对首段与后续段落进行不同处理，如下例所示：
 
 #### HTML
 
@@ -170,7 +170,7 @@ p {
 
 ## 参见
 
-- [学习使用 CSS 美化 HTML](/zh-CN/docs/Learn/CSS)
+- [学习使用 CSS 为 HTML 添加样式](/zh-CN/docs/Learn/CSS)
 - 相关 CSS 属性：
 
   - [`text-justify`](/zh-CN/docs/Web/CSS/text-justify)
