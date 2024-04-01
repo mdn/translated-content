@@ -23,7 +23,7 @@ l10n:
   </thead>
   <tbody>
     <tr>
-      <td><code>"historyUndo"</code> or <code>"historyRedo"</code></td>
+      <td><code>"historyUndo"</code> 或 <code>"historyRedo"</code></td>
       <td>Any</td>
       <td>空数组</td>
     </tr>
