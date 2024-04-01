@@ -79,7 +79,7 @@ customElements.define(
 );
 ```
 
-当填充 `style` 元素生效时，你会看到我们选择了所有插槽元素（`::slotted(*)`），并给它们不同的字体和颜色。这将它们与尚未填充的插槽区分开来。我们对所有插槽  {{HTMLElement("span")}}（`::slotted(span)`）设置样式，从而区分 `<span>`元素 和 {{HTMLElement("p")}} 元素。
+当填充 `style` 元素生效时，你会看到我们选择了所有插槽元素（`::slotted(*)`），并给它们不同的字体和颜色。这将它们与尚未填充的插槽区分开来。我们对所有插槽 {{HTMLElement("span")}}（`::slotted(span)`）设置样式，从而区分 `<span>`元素 和 {{HTMLElement("p")}} 元素。
 
 标记三个自定义元素，其中包含一个具有无效槽名的自定义元素，该自定义元素与 `<template>` 不同：
 
