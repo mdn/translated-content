@@ -5,7 +5,7 @@ slug: Web/HTML/Element/figcaption
 
 {{HTMLSidebar}}
 
-**`<figcaption>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表其父級 {{HTMLElement("figure")}} 元素餘下內容的標題或圖例，提供 `<figure>` 一個 {{glossary("accessible description", "無障礙描述")}}。
+**`<figcaption>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表其父級 {{HTMLElement("figure")}} 元素餘下內容的標題或圖例，提供 `<figure>` 一個{{glossary("accessible description", "無障礙描述")}}。
 
 {{EmbedInteractiveExample("pages/tabbed/figcaption.html","tabbed-shorter")}}
 

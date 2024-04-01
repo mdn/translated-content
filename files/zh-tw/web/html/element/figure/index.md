@@ -119,7 +119,7 @@ function NavigatorExample() {
     <tr>
       <th scope="row">允許內容</th>
       <td>
-        一個 {{HTMLElement("figcaption")}} 元素，後跟 <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
+        一個 {{HTMLElement("figcaption")}} 元素，後跟<a href="/zh-TW/docs/Web/HTML/Content_categories#流內容"
           >流內容</a
         >；或者流內容後跟一個
         {{HTMLElement("figcaption")}} 元素；或者流內容。
