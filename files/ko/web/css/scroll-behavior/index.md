@@ -1,26 +1,28 @@
 ---
 title: 스크롤 동작
 slug: Web/CSS/scroll-behavior
+l10n:
+  sourceCommit: a1596fe065b9c726f9412999d2218b7b6e256e30
 ---
 
 {{CSSRef}}
 
-**`스크롤 동작`** [CSS](/ko/docs/Web/CSS) 속성은 문서 탐색 또는 CSSOM 스크롤링 API에 의하여 스크롤 동작이 발생할 때 스크롤링을 포함하는 박스의 동작을 설정합니다.
+**`scroll-behavior`** [CSS](/ko/docs/Web/CSS) 속성은 문서 탐색 또는 CSSOM 스크롤 API에 의하여 스크롤이 트리거될 때 스크롤을 포함하는 박스의 동작을 설정합니다.
 
 {{EmbedInteractiveExample("pages/css/scroll-behavior.html")}}
 
-사용자에 의해 실행되는 스크롤 등 이 속성에 영향을 받지 않는 다른 스크롤의 종류가 있을 수 있습니다. 이 속성이 root 요소에 지정된다면, 이 속성은 뷰포트 전체에 적용됩니다. `body` 요소에 특정된 이 속성은 뷰포트로 전파되지 _않을_ 수 있습니다.
+사용자에 의해 실행되는 스크롤 등 이 속성에 영향을 받지 않는 다른 스크롤의 종류가 있을 수 있습니다. 이 속성이 root 요소에 지정된다면, 이 속성은 뷰포트 전체에 적용됩니다. `body` 요소에 특정된 이 속성은 뷰포트로 전파되지 않을 수 있습니다.
 
 사용자 에이전트는 이 속성을 생략할 수 있습니다.
 
-## Syntax
+## 구문
 
 ```css
-/* Keyword values */
+/* 키워드 값 */
 scroll-behavior: auto;
 scroll-behavior: smooth;
 
-/* Global values */
+/* 전역 값 */
 scroll-behavior: inherit;
 scroll-behavior: initial;
 scroll-behavior: revert;
@@ -33,9 +35,9 @@ scroll-behavior: unset;
 ### 값
 
 - `auto`
-  - : 스크롤링 박스 내에서 스크롤을 즉각적으로 실행합니다.
+  - : 스크롤 박스가 즉시 스크롤 됩니다.
 - `smooth`
-  - : 스크롤링 박스 내에서 사용자 에이전트가 정의한 완화 함수를 사용하여 부드러운 효과로 스크롤을 실행시킵니다. 사용자 에이전트는 가능한 플랫폼 관례를 준수해야 합니다.
+  - : 스크롤 박스 내에서 사용자 에이전트가 정의한 완화 함수를 사용하여 부드러운 효과로 스크롤을 실행시킵니다. 사용자 에이전트는 가능한 플랫폼 관례를 준수해야 합니다.
 
 ## 형식 정의
 
@@ -102,7 +104,7 @@ nav {
 
 {{ EmbedLiveSample("Setting_smooth_scroll_behavior", "100%", 250) }}
 
-## 명세
+## 명세서
 
 {{Specifications}}
 
