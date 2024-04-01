@@ -264,16 +264,15 @@ init();
 ```js
 const img = new Image();
 
-// User Variables - customize these to change the image being scrolled, its
-// direction, and the speed.
+// 使用者變數——自訂這些變數以更改滾動的圖像、方向和速度。
 img.src = "capitan_meadows_yosemite_national_park.jpg";
 const canvasXSize = 800;
 const canvasYSize = 200;
-const speed = 30; // lower is faster
+const speed = 30; // 越小越快
 const scale = 1.05;
-const y = -4.5; // vertical offset
+const y = -4.5; // 垂直偏移
 
-// Main program
+// 主程式
 const dx = 0.75;
 let imgW;
 let imgH;
