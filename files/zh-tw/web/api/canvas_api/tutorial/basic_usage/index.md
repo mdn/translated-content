@@ -139,6 +139,6 @@ if (canvas.getContext) {
 
 本範例的結果如下:
 
-{{EmbedLiveSample("一個簡單的範例", 160, 160, "canvas_ex1.png")}}
+{{EmbedLiveSample("一個簡單的範例", 160, 160)}}
 
 {{PreviousNext("Web/Guide/HTML/Canvas_tutorial", "Web/Guide/HTML/Canvas_tutorial/Drawing_shapes")}}
