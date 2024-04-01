@@ -107,7 +107,7 @@ customElements.define(
 
 #### 结果
 
-{{EmbedLiveSample('Highlighting_slotted_elements', 500, 500)}}
+{{EmbedLiveSample('高亮插槽元素', 500, 500)}}
 
 ## 规范
 
