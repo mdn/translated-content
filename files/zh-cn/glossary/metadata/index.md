@@ -1,6 +1,8 @@
 ---
 title: Metadata
 slug: Glossary/Metadata
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
 {{GlossarySidebar}}
@@ -9,10 +11,6 @@ slug: Glossary/Metadata
 
 ## 参见
 
-### 通俗释义
-
-- [metadata](https://zh.wikipedia.org/wiki/metadata) 来自维基百科
-
-### HTML 中的 metadata 元素
-
-- {{htmlelement("meta")}} 来自 MDN
+- [学习元数据](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#元数据：meta_元素)
+- 维基百科上的 [元数据](https://zh.wikipedia.org/wiki/元数据)
+- MDN 上的 {{htmlelement("meta")}} 元素
