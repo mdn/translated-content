@@ -39,7 +39,7 @@ MDN Web Docs はオープンソースのプロジェクトです。以下のセ�
 
 - [執筆スタイルガイド](/ja/docs/MDN/Writing_guidelines/Writing_style_guide)
 
-  - : 執筆スタイルガイドは、MDN Web Docs で書くために使用する言語とスタイルに応じたものです。また、コード例をどのように書式化するかについても触れています。
+  - : 執筆スタイルガイドは、MDN Web Docs で書くために使用する言語とスタイルに応じたものです。また、サンプルコードをどのように書式化するかについても触れています。
 
 - [MDN Web Docs のページ種別](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types)
 
@@ -49,9 +49,9 @@ MDN Web Docs はオープンソースのプロジェクトです。以下のセ�
 
   - : この章では、MDN Web Docs で一貫した情報の表示を提供するために使用する、さまざまなページ構造について説明します。これには以下が含まれます。
 
-    - [コード例](/ja/docs/MDN/Writing_guidelines/Page_structures/Code_examples)
+    - [サンプルコード](/ja/docs/MDN/Writing_guidelines/Page_structures/Code_examples)
 
-      - : ページにコード例を入れるには、さまざまな方法があります。この章では、それらの概要を説明し、異なる言語のための構文ガイドラインを提供します。
+      - : ページにサンプルコードを入れるには、さまざまな方法があります。この章では、それらの概要を説明し、異なる言語のための構文ガイドラインを提供します。
 
     - [マクロ](/ja/docs/MDN/Writing_guidelines/Page_structures/Macros)
 
