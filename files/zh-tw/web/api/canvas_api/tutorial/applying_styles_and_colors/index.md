@@ -603,18 +603,18 @@ var ptrn = ctx.createPattern(img, "repeat");
 
 ### `createPattern` 範例
 
-這個範例中我們把 fillStyle 屬性值存為樣式物件，比較值得注意的是影像 onload 事件處理器，這是為了確保影像載入完成後再進行。
+這個範例中我們把 `fillStyle` 屬性值存為樣式物件，比較值得注意的是影像 `onload` 事件處理器，這是為了確保影像載入完成後再進行。
 
 ```js
 function draw() {
-  var ctx = document.getElementById("canvas").getContext("2d");
+  const ctx = document.getElementById("canvas").getContext("2d");
 
-  // create new image object to use as pattern
-  var img = new Image();
-  img.src = "/files/222/Canvas_createpattern.png";
-  img.onload = function () {
-    // create pattern
-    var ptrn = ctx.createPattern(img, "repeat");
+  // 建立新的、用作樣式的圖像物件
+  const img = new Image();
+  img.src = "canvas_createpattern.png";
+  img.onload = () => {
+    // 建立樣式
+    const ptrn = ctx.createPattern(img, "repeat");
     ctx.fillStyle = ptrn;
     ctx.fillRect(0, 0, 150, 150);
   };
@@ -622,7 +622,7 @@ function draw() {
 ```
 
 ```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
+<canvas id="canvas" width="150" height="150" role="presentation"></canvas>
 ```
 
 ```js hidden
@@ -631,7 +631,7 @@ draw();
 
 結果如下 :
 
-{{EmbedLiveSample("createPattern 範例", "180", "180", "canvas_createpattern.png")}}
+{{EmbedLiveSample("createPattern 範例", "180", "180")}}
 
 ## 陰影
 
