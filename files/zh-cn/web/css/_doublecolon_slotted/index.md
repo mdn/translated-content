@@ -126,4 +126,4 @@ customElements.define(
 - HTML [`slot`](/zh-CN/docs/Web/HTML/Global_attributes/slot) 属性
 - HTML {{HTMLElement("slot")}} 元素
 - HTML {{HTMLElement("template")}} 元素
-- [Web components](/zh-CN/docs/Web/API/Web_components)
+- [Web 组件](/zh-CN/docs/Web/API/Web_components)
