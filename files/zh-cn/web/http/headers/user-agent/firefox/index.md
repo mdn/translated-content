@@ -58,10 +58,10 @@ Windows 用户代理有以下变化，其中 _x.y_ 是 Windows NT 版本（例�
 
 Linux 是一个更加多样化的平台。你的 Linux 发行版可能包含一个可改变你的用户代理的扩展。下面是几个常见的例子。
 
-| Linux 版本                        | Gecko 用户代理字符串                                                 |
-| --------------------------------- | -------------------------------------------------------------------- |
-| 在 i686 CPU 运行的 Linux 桌面版   | Mozilla/5.0 (X11; Linux i686; rv:10.0) Gecko/20100101 Firefox/10.0   |
-| 在 x86_64 CPU 运行的 Linux 桌面版 | Mozilla/5.0 (X11; Linux x86_64; rv:10.0) Gecko/20100101 Firefox/10.0 |
+| Linux 版本                          | Gecko 用户代理字符串                                                 |
+| ----------------------------------- | -------------------------------------------------------------------- |
+| 在 i686 CPU 上运行的 Linux 桌面版   | Mozilla/5.0 (X11; Linux i686; rv:10.0) Gecko/20100101 Firefox/10.0   |
+| 在 x86_64 CPU 上运行的 Linux 桌面版 | Mozilla/5.0 (X11; Linux x86_64; rv:10.0) Gecko/20100101 Firefox/10.0 |
 
 ## Android（版本 40 及以下）
 
@@ -79,7 +79,7 @@ Linux 是一个更加多样化的平台。你的 Linux 发行版可能包含一�
 | Phone    | Mozilla/5.0 (Android 4.4; Mobile; rv:41.0) Gecko/41.0 Firefox/41.0 |
 | Tablet   | Mozilla/5.0 (Android 4.4; Tablet; rv:41.0) Gecko/41.0 Firefox/41.0 |
 
-## Focus for Android
+## Android 版 Focus
 
 从版本 1 开始，Focus 由 Android WebView 支持，并使用以下用户代理字符串格式：
 
@@ -97,9 +97,9 @@ WebView 上的平板电脑版本与手机版本基本相同，但不包含 `Mobi
 | 1.0 (WebView Tablet)   | Mozilla/5.0 (Linux; Android 7.0) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Focus/1.0 Chrome/59.0.3029.83 Safari/537.36        |
 | 6.0 (GeckoView)        | Mozilla/5.0 (Android 7.0; Mobile; rv:62.0) Gecko/62.0 Firefox/62.0                                                                     |
 
-## Klar for Android
+## Android 版 Klar
 
-自版本 4.1 起，Klar for Android 使用与 [Focus for Android](#focus_for_android) 相同的 UA 字符串。在版本 4.1 之前，它发送的是 _Klar/\<version>_ _product/version_ 标记。
+自版本 4.1 起，Android 版 Klar 使用与 [Android 版 Focus](#android_版_focus) 相同的 UA 字符串。在版本 4.1 之前，它发送的是 _Klar/\<version>_ _product/version_ 标记。
 
 | Klar 版本（渲染引擎） | 用户代理字符串                                                                                                                         |
 | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
@@ -107,7 +107,7 @@ WebView 上的平板电脑版本与手机版本基本相同，但不包含 `Mobi
 | 4.1+ (WebView)        | Mozilla/5.0 (Linux; Android 7.0) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Focus/4.1 Chrome/62.0.3029.83 Mobile Safari/537.36 |
 | 6.0+ (GeckoView)      | Mozilla/5.0 (Android 7.0; Mobile; rv:62.0) Gecko/62.0 Firefox/62.0                                                                     |
 
-## Focus for iOS
+## iOS 版 Focus
 
 iOS 版 Focus 7 使用的用户代理字符串格式如下：
 
@@ -117,7 +117,7 @@ Mozilla/5.0 (iPhone; CPU iPhone OS 12_1 like Mac OS X) AppleWebKit/605.1.15 (KHT
 
 注意：该用户代理是从 iPhone XR 模拟器上获取的，在不同设备上可能有所不同。
 
-## Firefox for Fire TV
+## Fire TV 版 Firefox
 
 Fire TV 版 Firefox 3（也可能是更早版本）使用的用户代理字符串格式如下：
 
@@ -129,17 +129,17 @@ Mozilla/5.0 (Linux; <Android version>) AppleWebKit/537.36 (KHTML, like Gecko) Ve
 | --------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
 | v3.0            | Mozilla/5.0 (Linux; Android 7.1.2) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Focus/3.0 Chrome/59.0.3017.125 Safari/537.36 |
 
-## Firefox for Echo Show
+## Echo Show 版 Firefox
 
-从版本 1.1 起，Firefox for Echo Show 使用的用户代理字符串格式如下：
+从版本 1.1 起，Echo Show 版 Firefox 使用的用户代理字符串格式如下：
 
 ```plain
 Mozilla/5.0 (Linux; <Android version>) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Focus/<firefoxversion> Chrome/<Chrome Rev> Safari/<WebKit Rev>
 ```
 
-| Firefox for Echo Show 版本 | 用户代理字符串                                                                                                                     |
-| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| v1.1                       | Mozilla/5.0 (Linux; Android 5.1.1) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Focus/1.1 Chrome/59.0.3017.125 Safari/537.36 |
+| Echo Show 版 Firefox 版本 | 用户代理字符串                                                                                                                     |
+| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| v1.1                      | Mozilla/5.0 (Linux; Android 5.1.1) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Focus/1.1 Chrome/59.0.3017.125 Safari/537.36 |
 
 ## Firefox OS
 
