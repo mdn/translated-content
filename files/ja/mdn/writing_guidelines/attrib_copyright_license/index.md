@@ -23,7 +23,7 @@ MDN Web Docs のコンテンツは無料で利用でき、様々なオープン�
 
 この例では、 "Mozilla Contributors" が引用ページの履歴にリンクしていることに注意してください。詳しい説明は[推奨される帰属表示の方法](https://wiki.creativecommons.org/wiki/Recommended_practices_for_attribution)を参照してください。
 
-### コード例
+### サンプルコード
 
 2010 年 8 月 20 日以降に追加された例は、[パブリックドメイン CC0](https://creativecommons.org/publicdomain/zero/1.0/) にあります。ライセンス表記は必要ありませんが、必要な場合は、 `すべての著作権はパブリックドメインに帰属します。https://creativecommons.org/publicdomain/zero/1.0/` が使用できます。
 
@@ -33,7 +33,7 @@ MDN Web Docs のコンテンツは無料で利用でき、様々なオープン�
 
 ### 貢献
 
-MDN Web Docs に協力したい場合は、 Attribution-ShareAlike ライセンス（または編集中のページで既に指定されている代替ライセンス）で文書を公開し、コード例は [Creative Commons CC-0](https://creativecommons.org/publicdomain/zero/1.0/) （パブリックドメインへの寄付）で公開する必要があります。
+MDN Web Docs に協力したい場合は、 Attribution-ShareAlike ライセンス（または編集中のページで既に指定されている代替ライセンス）で文書を公開し、サンプルコードは [Creative Commons CC-0](https://creativecommons.org/publicdomain/zero/1.0/) （パブリックドメインへの寄付）で公開する必要があります。
 
 > **警告:** 新しいページをその他のライセンスで作成してはいけません。
 
