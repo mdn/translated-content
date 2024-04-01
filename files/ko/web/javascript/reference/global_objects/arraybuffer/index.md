@@ -31,8 +31,7 @@ l10n:
 `ArrayBuffer`가 전송되면 원본은 더 이상 사용할 수 없게 되는 분리 상태가 됩니다. 어느 순간에든 실제로 메모리에 액세스할 수 있는 `ArrayBuffer`의 복사본은 하나만 존재하게 됩니다. 분리된 버퍼는 다음과 같은 동작을 합니다.
 
 - {{jsxref("ArrayBuffer/byteLength", "byteLength")}}는 0이 됩니다(버퍼와 연관된 형식화 배열 뷰 모두에서).
-- {{jsxref("ArrayBuffer/resize", "resize()")}}와 {{jsxref("ArrayBuffer/slice", "slice()")}}와 같은 메서드는 호출될 때 {{jsxref("TypeError")}}를 발생시킵니다.
-연관된 타입이 지정된 배열 뷰의 메서드도 `TypeError`를 던집니다. 연관된 형식화 배열 뷰의 메서드 역시 `TypeError`를 발생시킵니다.
+- {{jsxref("ArrayBuffer/resize", "resize()")}}와 {{jsxref("ArrayBuffer/slice", "slice()")}}와 같은 메서드는 호출될 때 {{jsxref("TypeError")}}를 발생시킵니다. 연관된 타입이 지정된 배열 뷰의 메서드도 `TypeError`를 던집니다. 연관된 형식화 배열 뷰의 메서드 역시 `TypeError`를 발생시킵니다.
 
 `ArrayBuffer`가 분리되었는지 여부는 {{jsxref("ArrayBuffer/detached", "detached")}} 속성으로 체크할 수 있습니다.
 
