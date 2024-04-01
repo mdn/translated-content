@@ -255,7 +255,7 @@ init();
 
 ```html
 <canvas id="canvas" width="800" height="200"
-  >Yosemite National Park, meadow at the base of El Capitan</canvas
+  >優勝美地國家公園，埃爾卡皮坦山腳下的草地</canvas
 >
 ```
 
@@ -287,57 +287,57 @@ img.onload = () => {
   imgH = img.height * scale;
 
   if (imgW > canvasXSize) {
-    // Image larger than canvas
+    // 圖像大於畫布
     x = canvasXSize - imgW;
   }
 
-  // Check if image dimension is larger than canvas
+  // 檢查圖像尺寸是否大於畫布
   clearX = Math.max(imgW, canvasXSize);
   clearY = Math.max(imgH, canvasYSize);
 
-  // Get canvas context
+  // 取得畫布上下文
   ctx = document.getElementById("canvas").getContext("2d");
 
-  // Set refresh rate
+  // 設定刷新率
   return setInterval(draw, speed);
 };
 
 function draw() {
   ctx.clearRect(0, 0, clearX, clearY); // clear the canvas
 
-  // If image is <= canvas size
+  // 如果圖像 <= 畫布大小
   if (imgW <= canvasXSize) {
-    // Reset, start from beginning
+    // 重置，從頭開始
     if (x > canvasXSize) {
       x = -imgW + x;
     }
 
-    // Draw additional image1
+    // 繪製附加圖片1
     if (x > 0) {
       ctx.drawImage(img, -imgW + x, y, imgW, imgH);
     }
 
-    // Draw additional image2
+    // 繪製附加圖片2
     if (x - imgW > 0) {
       ctx.drawImage(img, -imgW * 2 + x, y, imgW, imgH);
     }
   } else {
-    // Image is > canvas size
-    // Reset, start from beginning
+    // 圖片 > 畫布尺寸
+    // 重置，從頭開始
     if (x > canvasXSize) {
       x = canvasXSize - imgW;
     }
 
-    // Draw additional image
+    // 繪製附加圖片
     if (x > canvasXSize - imgW) {
       ctx.drawImage(img, x - imgW + 1, y, imgW, imgH);
     }
   }
 
-  // Draw image
+  // 繪製圖片
   ctx.drawImage(img, x, y, imgW, imgH);
 
-  // Amount to move
+  // 移動量
   x += dx;
 }
 ```
