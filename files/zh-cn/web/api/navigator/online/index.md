@@ -35,11 +35,11 @@ if (navigator.onLine) {
 }
 ```
 
-如果浏览器不支持 `navigator.onLine`属性，则上述示例始终会返回 `false` 或 `undefined`。
+如果浏览器不支持 `navigator.onLine` 属性，则上述示例始终会返回 `false` 或 `undefined`。
 
 ### 监听网络状态改变
 
-要监听网络状态变化，可以使用[`addEventListener`](/zh-CN/docs/Web/API/EventTarget/addEventListener)方法在 `window.online` 和 `window.offline` 事件上添加事件监听器，如下所示：
+要监听网络状态变化，可以使用 [`addEventListener`](/zh-CN/docs/Web/API/EventTarget/addEventListener) 方法在 `window.online` 和 `window.offline` 事件上添加事件监听器，如下所示：
 
 ```js
 window.addEventListener("offline", (e) => {
