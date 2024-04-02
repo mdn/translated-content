@@ -39,7 +39,7 @@ MDN Web Docs に協力できる方法の一覧です。
 - [課題](/ja/docs/MDN/Community/Issues)
 
   - : 課題は、すべてのバグと、明確で対応可能な結果がある作業を追跡するために使用されます
-  この記事は、課題を開き、作業するためのガイドラインが記述されており、[課題のトリアージ](/ja/docs/MDN/Community/Issues)や[コンテンツと機能の提案](/ja/docs/MDN/Community/Issues/Content_suggestions_feature_proposals)についても扱っています。
+    この記事は、課題を開き、作業するためのガイドラインが記述されており、[課題のトリアージ](/ja/docs/MDN/Community/Issues)や[コンテンツと機能の提案](/ja/docs/MDN/Community/Issues/Content_suggestions_feature_proposals)についても扱っています。
 
 - [プルリクエスト](/ja/docs/MDN/Community/Pull_requests)
 
