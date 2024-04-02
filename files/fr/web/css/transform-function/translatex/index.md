@@ -19,7 +19,7 @@ transform: translateX(200px);
 transform: translateX(50%);
 ```
 
-### Values
+### Valeurs
 
 - `<length-percentage>`
   - : Une valeur exprimant une longueur (type [`<length>`](/fr/docs/Web/CSS/length)) ou un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/percentage)) qui représente la composante horizontale du vecteur de translation. Lorsque la valeur est un pourcentage, elle est relative à la largeur de la boîte de référence définie par la propriété [`transform-box`](/fr/docs/Web/CSS/transform-box).
