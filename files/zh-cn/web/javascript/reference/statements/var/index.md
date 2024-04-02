@@ -7,7 +7,7 @@ l10n:
 
 {{jsSidebar("Statements")}}
 
-**`var` 语句** 用于声明一个函数作用域或全局作用域的变量，并且可以选择将其初始化为一个值。
+**`var` 语句**用于声明一个函数作用域或全局作用域的变量，并且可以选择将其初始化为一个值。
 
 {{EmbedInteractiveExample("pages/js/statement-var.html")}}
 
@@ -36,7 +36,7 @@ var name1 = value1, name2, /* …, */ nameN = valueN;
 如果不是以上这些情况则是：
 
 - 当前[模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)，如果代码以模块模式运行
-- 全局作用域，如果代码以脚本模式运行。
+- 全局作用域，如果代码以脚本模式运行
 
 ```js
 function foo() {
@@ -73,7 +73,7 @@ delete x; // 在严格模式下，将抛出 SyntaxError，否则静默失败。
 
 在 NodeJS [CommonJS](http://www.commonjs.org/) 模块以及原生 [ECMAScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)中，顶层变量声明的作用域仅限于模块中，而不会作为属性被添加到全局对象中。
 
-`var` 关键字后面的列表被称为*{{Glossary("binding", "绑定")}}列表*，用逗号分隔，其中逗号*不是*[逗号运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comma_operator)，`=` 号也*不是*[赋值运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment)。后续变量的初始化可以引用前面的变量，并获得初始化的值。
+`var` 关键字后面的列表被称为_{{Glossary("binding", "绑定")}}列表_，用逗号分隔，其中逗号*不是*[逗号运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comma_operator)，`=` 号也*不是*[赋值运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment)。后续变量的初始化可以引用前面的变量，并获得初始化的值。
 
 ### 提升
 
