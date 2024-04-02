@@ -47,21 +47,21 @@ function foo() {
     console.log(y); // 2（`y` 在作用域内）
   }
   bar();
-  console.log(x); // 1（`x` 在范围内）
+  console.log(x); // 1（`x` 在作用域内）
   console.log(y); // ReferenceError，`y` 的作用域限定在 `bar` 内
 }
 
 foo();
 ```
 
-重要的是，其他块级结构，包括[块语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/block)、{{jsxref("Statements/try...catch", "try...catch")}}、{{jsxref("Statements/switch", "switch")}}以及[其中一个 `for` 语句的头部](/zh-CN/docs/Web/JavaScript/Reference/Statements#迭代)，对于 `var` 并不创建作用域，而在这样的块内部使用 `var` 声明的变量仍然可以在块外部被引用。
+重要的是，其他块级结构，包括[块语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/block)、{{jsxref("Statements/try...catch", "try...catch")}}、{{jsxref("Statements/switch", "switch")}} 以及[其中一个 `for` 语句的头部](/zh-CN/docs/Web/JavaScript/Reference/Statements#迭代)，对于 `var` 并不创建作用域，而在这样的块内部使用 `var` 声明的变量仍然可以在块外部被引用。
 
 ```js
 for (var a of [1, 2, 3]);
 console.log(a); // 3
 ```
 
-在脚本中，使用 `var` 声明的变量将被添加为全局对象的**不可配置**属性。这意味着它的属性描述符无法被修改，也无法使用 {{JSxRef("Operators/delete", "delete")}} 删除。JavaScript 具有自动内存管理机制，因此在全局变量上使用 `delete` 运算符是没有意义的。
+在脚本中，使用 `var` 声明的变量将被添加为全局对象的不可配置属性。这意味着它的属性描述符无法被修改，也无法使用 {{JSxRef("Operators/delete", "delete")}} 删除。JavaScript 具有自动内存管理机制，因此在全局变量上使用 `delete` 运算符是没有意义的。
 
 ```js-nolint example-bad
 "use strict";
@@ -77,7 +77,7 @@ delete x; // 在严格模式下，将抛出 SyntaxError，否则静默失败。
 
 ### 提升
 
-`var` 声明，无论它们出现在脚本中的什么位置，都会在执行脚本中的任何代码之前进行处理。在代码中的任何位置声明变量都相当于在顶部声明它。这也意味着变量可以在其声明之前被使用。这种行为被称为[_提升_](/zh-CN/docs/Glossary/Hoisting)，因为变量声明似乎被移动到发生该行为的函数、静态初始化块或脚本源的顶部。
+`var` 声明，无论它们出现在脚本中的什么位置，都会在执行脚本中的任何代码之前进行处理。在代码中的任何位置声明变量都相当于在顶部声明它。这也意味着变量可以在其声明之前被使用。这种行为被称为[_提升_](/zh-CN/docs/Glossary/Hoisting)，因为变量声明似乎被移动到发生该行为的函数、静态初始化块或脚本源代码的顶部。
 
 > **备注：** `var` 声明仅提升到当前脚本的顶部。如果在一个 HTML 文件中有两个 `<script>` 元素，则第一个脚本无法访问第二个脚本声明的变量，直到第二个脚本已被处理和执行。
 
@@ -136,7 +136,7 @@ function a() {}
 console.log(a); // 1
 ```
 
-`var` 不能与 `let`、`const`、`class` 或 `import` 在同一作用域中声明同名变量。
+`var` 不能与 {{jsxref("Statements/let", "let")}}、{{jsxref("Statements/const", "const")}}、{{jsxref("Statements/class", "class")}} 或 {{jsxref("Statements/import", "import")}} 在同一作用域中声明同名变量。
 
 ```js-nolint example-bad
 var a = 1;
@@ -178,7 +178,7 @@ foo(2); // 输出 1
 try {
   throw 1;
 } catch (e) {
-  var e = 2; // Works
+  var e = 2; // 有效
 }
 console.log(e); // undefined
 ```
