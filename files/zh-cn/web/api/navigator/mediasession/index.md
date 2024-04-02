@@ -7,11 +7,11 @@ l10n:
 
 {{APIRef("Media Session API")}}
 
-{{domxref("Navigator")}} 接口的只读属性 **`mediaSession`** 返回一个 {{domxref("MediaSession")}} 对象，该对象可用于与浏览器共享元数据和其他有关文档正在处理的媒体的当前播放状态的信息。
+{{domxref("Navigator")}} 接口的只读属性 **`mediaSession`** 返回一个 {{domxref("MediaSession")}} 对象，该对象可用于与浏览器共享关于文档正在处理的媒体的当前播放状态的元数据和其他信息。
 
-此信息随后可与设备或与操作系统共享，以便为设备的标准媒体控制用户体验提供描述和控制媒体播放的功能。
+这些信息可以进一步与设备和/或操作系统共享，以便使用设备的标准媒体控制用户体验来描述和控制媒体的播放。
 
-此外，`MediaSession` 接口还提供了 {{domxref("MediaSession.setActionHandler", "setActionHandler()")}} 方法，该方法允许你在用户使用设备控制（例如屏幕上或物理上的播放、暂停、跳转和其他类似控制）时接收事件。例如，互联网广播应用程序可以使用 `setActionHandler()` 来让用户设备上的键盘或其他位置的媒体控制用于控制应用程序的媒体播放。
+此外，`MediaSession` 接口还提供了 {{domxref("MediaSession.setActionHandler", "setActionHandler()")}} 方法，该方法允许你在用户使用设备控制（例如屏幕上或物理上的播放、暂停、跳转和其他类似控制）时接收事件。例如，网络电台应用程序可以使用 `setActionHandler()` 来让用户设备上的键盘或其他位置的媒体控制用于控制应用程序的媒体播放。
 
 ## 值
 
