@@ -1,15 +1,15 @@
 ---
 title: 网络信息 API
 slug: Web/API/Network_Information_API
+l10n:
+  sourceCommit: f5de19a8b4a3ddaf1ab4e306dcc016ea04b26202
 ---
 
-{{DefaultAPISidebar("Network Information API")}}{{SeeCompatTable}}
+{{DefaultAPISidebar("Network Information API")}} {{AvailableInWorkers}}
 
 网络信息 API（Network Information API）提供关于系统连接的一般连接类型的信息（如“wifi”、“cellular”等）。应用程序可以根据此信息为用户展现不同清晰度的内容。
 
 该接口由一个 {{domxref("NetworkInformation")}} 对象组成，其实例由 {{domxref("Navigator.connection")}} 属性返回。
-
-{{AvailableInWorkers}}
 
 ## 接口
 
