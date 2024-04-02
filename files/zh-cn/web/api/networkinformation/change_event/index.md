@@ -2,7 +2,7 @@
 title: NetworkInformation：change 事件
 slug: Web/API/NetworkInformation/change_event
 l10n:
-  sourceCommit: 650aeb25be848b88882f6011522d8e9b09b8c08e
+  sourceCommit: 895129fb017e0bb86c61f688d99ac4c5c75f4934
 ---
 
 {{apiref("Network Information API")}} {{AvailableInWorkers}}
