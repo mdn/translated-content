@@ -35,7 +35,7 @@ CSS 中，**`::before`** 创建一个[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elem
 #### HTML
 
 ```html
-<q>有引号</q>，他说，<q>总比没有好。</q>
+<q>有引号，</q>他说，<q>总比没有好。</q>
 ```
 
 #### CSS
