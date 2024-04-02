@@ -28,32 +28,32 @@ CSS 中，**`::before`** 创建一个[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elem
 
 ## 示例
 
-### 加入引用标记
+### 加入引号标记
 
 使用 `::before` 伪元素的一个简单示例就是用于加入引号。此处同时使用了 `::before` 和 `{{Cssxref("::after")}}`来插入引用性文本。
 
 #### HTML
 
 ```html
-<q>一些引用</q>, 他说，<q>比没有好。</q>.
+<q>有引号</q>，他说，<q>总比没有好。</q>
 ```
 
 #### CSS
 
 ```css
 q::before {
-  content: "«";
+  content: "“";
   color: blue;
 }
 q::after {
-  content: "»";
+  content: "”";
   color: red;
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample('加入引用标记', '500', '50', '')}}
+{{EmbedLiveSample('加入引号标记', '500', '50')}}
 
 ### 修饰示例
 
