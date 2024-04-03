@@ -72,7 +72,7 @@ const myFish = ["angel", "clown", "mandarin", "sturgeon"];
 const removed = myFish.splice(2, 0, "drum");
 
 // myFish 是 ["angel", "clown", "drum", "mandarin", "sturgeon"]
-// removed 是 []，没有元素被删除
+// removed 是 []，没有移除的元素
 ```
 
 ### 在索引 2 处移除 0 个元素，并插入“drum”和“guitar”
@@ -82,7 +82,7 @@ const myFish = ["angel", "clown", "mandarin", "sturgeon"];
 const removed = myFish.splice(2, 0, "drum", "guitar");
 
 // myFish 是 ["angel", "clown", "drum", "guitar", "mandarin", "sturgeon"]
-// removed 是 []，没有元素被删除
+// removed 是 []，没有移除的元素
 ```
 
 ### 在索引 0 处移除 0 个元素，并插入“angel”
@@ -94,7 +94,7 @@ const myFish = ["clown", "mandarin", "sturgeon"];
 const removed = myFish.splice(0, 0, "angel");
 
 // myFish 是 ["angel", "clown", "mandarin", "sturgeon"]
-// 没有移除元素
+// 没有移除的元素
 ```
 
 ### 在最后一个索引处移除 0 个元素，并插入“sturgeon”
@@ -106,7 +106,7 @@ const myFish = ["angel", "clown", "mandarin"];
 const removed = myFish.splice(myFish.length, 0, "sturgeon");
 
 // myFish 是 ["angel", "clown", "mandarin", "sturgeon"]
-// 没有移除元素
+// 没有移除的元素
 ```
 
 ### 在索引 3 处移除 1 个元素
