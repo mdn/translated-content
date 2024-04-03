@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Media Session API")}}
 
-{{domxref("Navigator")}} 接口的只读属性 **`mediaSession`** 返回一个 {{domxref("MediaSession")}} 对象，该对象可用于与浏览器共享关于文档正在处理的媒体的当前播放状态的元数据和其他信息。
+{{domxref("Navigator")}} 接口的 **`mediaSession`** 只读属性返回一个 {{domxref("MediaSession")}} 对象，该对象可用于与浏览器共享关于文档正在处理的媒体的当前播放状态的元数据和其他信息。
 
 这些信息可以进一步与设备和/或操作系统共享，以便使用设备的标准媒体控制用户体验来描述和控制媒体的播放。
 
