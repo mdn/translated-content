@@ -25,7 +25,7 @@ Tout le reste peut être appris en cours de route.
 Les ressources utiles pour rédiger toute documentation comprennent&nbsp;:
 
 1. **Les [guides des bonnes pratiques](/fr/docs/MDN/Writing_guidelines/Howto) pour MDN Web Docs&nbsp;:** Vous êtes déjà ici, mais il est bon de parcourir tous les articles et de vous familiariser avec notre style d'écriture, les différents types de pages et les sections qu'elles incluent, ainsi que les différentes manières dont nous intégrons différentes parties de la page (comme les spécifications et la compatibilité des navigateurs).
-2. **La spécification la plus récente&nbsp;:** Différents organismes de normalisation créent des spécifications pour les technologies documentées sur MDN Web Docs. Par exemple, [TC39](https://tc39.es/fr/) pour JavaScript, [WHATWG (en anglais)](https://whatwg.org/) pour HTML et le [W3C (en anglais)](https://www.w3.org/) pour CSS, XML, et certaines Web APIs. Les spécifications sont liées aux pages de référence sur MDN Web Docs (consultez la section "Spécifications"). Alternativement, vous pouvez généralement effectuer une recherche sur le web. Travaillez toujours à partir de la spécification la plus récente et la plus à jour.
+2. **La spécification la plus récente&nbsp;:** Différents organismes de normalisation créent des spécifications pour les technologies documentées sur MDN Web Docs. Par exemple, [TC39](https://tc39.es/fr/) pour JavaScript, [WHATWG (en anglais)](https://whatwg.org/) pour HTML et le [W3C (en anglais)](https://www.w3.org/) pour CSS, XML, et certaines API Web. Les spécifications sont liées aux pages de référence sur MDN Web Docs (consultez la section «&nbsp;Spécifications&nbsp;»). Alternativement, vous pouvez généralement effectuer une recherche sur le web. Travaillez toujours à partir de la spécification la plus récente et la plus à jour.
 3. **Les navigateurs web modernes les plus récents&nbsp;:** Il s'agit généralement de versions expérimentales/alpha telles que [Firefox Nightly](https://www.mozilla.org/fr/firefox/channel/desktop/#nightly), [Chrome Canary](https://www.google.com/intl/fr/chrome/canary/) ou [Safari Technology Preview (en anglais)](https://webkit.org/downloads/), qui sont plus susceptibles de prendre en charge les fonctionnalités que vous documentez. Ceci est particulièrement pertinent si vous documentez une fonctionnalité «&nbsp;à venir&nbsp;».
 4. **Démos/articles de blog/autres infos&nbsp;:** Trouvez autant d'informations que possible. Si vous mettez à jour une technologie parce qu'elle a changé, assurez-vous que les ressources que vous utilisez pour apprendre ne sont pas obsolètes. C'est pourquoi les deux premiers points ci-dessus sont importants.
 
@@ -38,11 +38,11 @@ Cela peut sembler un peu étranger au début, mais plus vous le faites, plus vou
 - [How to read web specs part I – or: WebVR, how do you work? (en anglais)](https://surma.dev/things/reading-specs/) explique comment lire la spécification WebVR en particulier, mais c'est une excellente introduction à la lecture des spécifications des API Web.
 - [How to read web specs part IIa – or: ECMAScript Symbols (en anglais)](https://surma.dev/things/reading-specs-2/) deuxième partie du lien ci-dessus, contient des informations sur la compréhension de la spécification ECMAScript qui définit le langage JavaScript
 
-De plus, nous disposons du guide sur [les informations contenues dans un fichier WebIDL](/fr/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file), qui peut vraiment aider lors de la lecture des spécifications des Web API.
+De plus, nous disposons du guide sur [les informations contenues dans un fichier WebIDL](/fr/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file), qui peut vraiment aider lors de la lecture des spécifications des API Web.
 
 ## Exploration de la fonctionnalité
 
-Vous reviendrez souvent à l'écriture d'exemples de code ou à la création de démonstrations au cours de la documentation d'une technologie, mais il est très utile de commencer par se familiariser avec le fonctionnement de la technologie. C'est un exercice très utile car il vous permet de bien comprendre les cas d'utilisation (_pourquoi_ un développeur utiliserait cette technologie) et vous aide à créer des exemples de code en même temps.
+Vous reviendrez souvent à l'écriture d'exemples de code ou à la création de démonstrations au cours de la documentation d'une technologie, mais il est très utile de commencer par se familiariser avec le fonctionnement de la technologie. C'est un exercice très utile, car il vous permet de bien comprendre les cas d'utilisation (_pourquoi_ un développeur utiliserait cette technologie) et vous aide à créer des exemples de code en même temps.
 
 > **Note :** Si la spécification a été récemment mise à jour et que, par exemple, une méthode est désormais définie différemment, mais que l'ancienne méthode fonctionne toujours dans les navigateurs, vous devrez souvent documenter les deux au même endroit afin que l'ancienne et la nouvelle méthode soient couvertes.
 > Si vous avez besoin d'aide, référez-vous aux démonstrations que vous avez trouvées ou demandez à un ingénieur.
@@ -63,7 +63,7 @@ L'article sur les [exemples de code](/fr/docs/MDN/Writing_guidelines/Page_struct
 
 ### Exemple
 
-Si vous documentez une nouvelle Web API, votre liste initiale de sections à documenter pourrait ressembler à ceci&nbsp;:
+Si vous documentez une nouvelle API Web, votre liste initiale de sections à documenter pourrait ressembler à ceci&nbsp;:
 
 1. Page de vue d'ensemble
 2. Pages d'interfaces
