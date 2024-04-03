@@ -1,68 +1,84 @@
 ---
 title: RangeError
 slug: Web/JavaScript/Reference/Global_Objects/RangeError
+l10n:
+  sourceCommit: d19dc31570f62196a5837be38bd0b11c45e67b05
 ---
 
-{{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}}
+{{JSRef}}
 
-## Сводка
-
-Объект **`RangeError`** представляет ошибку, возникающую, когда значение не входит в множество или выходит за диапазон допустимых значений.
-
-## Синтаксис
-
-```
-new RangeError([message[, fileName[, lineNumber]]])
-```
-
-### Параметры
-
-- `message`
-  - : Необязательный параметр. Человеко-читаемое описание ошибки.
-- `fileName` {{non-standard_inline}}
-  - : Необязательный параметр. Имя файла, содержащего код, вызвавший исключение.
-- `lineNumber` {{non-standard_inline}}
-  - : Необязательный параметр. Номер строки кода, вызвавшей исключение.
+Объект **`RangeError`** представляет ошибку, возникающую, когда значение не входит в множество или диапазон допустимых значений.
 
 ## Описание
 
-Исключение `RangeError` выбрасывается при попытке передать аргументом в функцию число, которое не входит в допустимый диапазон значений аргумента этой функции. Оно может возникать при создании массива с неправильной длиной через конструктор {{jsxref("Array")}}, или при передаче плохих значений в методы числа {{jsxref("Number.toExponential()")}}, {{jsxref("Number.toFixed()")}} или {{jsxref("Number.toPrecision()")}}.
+`RangeError` возникает при попытке передать в качестве аргумента функции значение, которое не входит в диапазон допустимых значений.
 
-## Свойства
+Это может происходить в разных случаях:
 
-- {{jsxref("RangeError.prototype")}}
-  - : Позволяет добавлять свойства в объект `RangeError`.
+- при передаче значения, которое не является одной из допустимых строк, в {{jsxref("String.prototype.normalize()")}},
+- при попытке создать массив недопустимой длины с помощью конструктора {{jsxref("Array")}},
+- при передаче недопустимых значений в такие методы, как {{jsxref("Number.prototype.toExponential()")}}, {{jsxref("Number.prototype.toFixed()")}} или {{jsxref("Number.prototype.toPrecision()")}}.
 
-## Методы
+`RangeError` является {{Glossary("serializable object", "сериализуемым объектом")}}, поэтому он может быть клонирован с помощью {{domxref("structuredClone()")}} или передан между [воркерами](/ru/docs/Web/API/Worker) с использованием {{domxref("Worker/postMessage()", "postMessage()")}}.
 
-Глобальный объект `RangeError` не содержит собственных методов, однако, он наследует некоторые методы из цепочки прототипов.
+`RangeError` является подклассом {{jsxref("Error")}}.
 
-## Экземпляры объекта `RangeError`
+## Конструктор
 
-### Свойства
+- {{jsxref("RangeError/RangeError", "RangeError()")}}
+  - : Создаёт новый объект `RangeError`.
 
-{{page('/ru/Web/JavaScript/Reference/Global_Objects/RangeError/prototype', 'Properties')}}
+## Свойства экземпляра
 
-### Методы
+_Также наследует свойства экземпляра своего родителя {{jsxref("Error")}}_.
 
-{{page('/ru/Web/JavaScript/Reference/Global_Objects/RangeError/prototype', 'Methods')}}
+Эти свойства определены в `RangeError.prototype` и есть у всех экземпляров `RangeError`.
+
+- {{jsxref("Object/constructor", "RangeError.prototype.constructor")}}
+  - : Функция-конструктор, создающая экземпляр объекта. Для экземпляров `RangeError` начальным значением является конструктор {{jsxref("RangeError/RangeError", "RangeError")}}.
+- {{jsxref("Error/name", "RangeError.prototype.name")}}
+  - : Представляет название типа ошибки. Начальным значением `RangeError.prototype.name` является `"RangeError"`.
+
+## Методы экземпляра
+
+_Наследует методы экземпляра своего родителя {{jsxref("Error")}}_.
 
 ## Примеры
 
-### Пример: использование `RangeError`
+### Использование `RangeError` для цифровых значений
 
 ```js
-var check = function (num) {
-  if (num < MIN || num > MAX) {
-    throw new RangeError("Параметр должен быть между " + MIN + " и " + MAX);
+function check(n) {
+  if (!(n >= -500 && n <= 500)) {
+    throw new RangeError("Аргумент должен быть в диапазоне между -500 и 500.");
   }
-};
+}
 
 try {
-  check(500);
-} catch (e) {
-  if (e instanceof RangeError) {
-    // Обработка ошибки диапазона
+  check(2000);
+} catch (error) {
+  if (error instanceof RangeError) {
+    // Обработка ошибки
+  }
+}
+```
+
+### Использование `RangeError` для нецифровых значений
+
+```js
+function check(value) {
+  if (!["яблоко", "банан", "морковь"].includes(value)) {
+    throw new RangeError(
+      'Аргумент должен иметь значение "яблоко", "банан" или "морковь".',
+    );
+  }
+}
+
+try {
+  check("капуста");
+} catch (error) {
+  if (error instanceof RangeError) {
+    // Обработка ошибки
   }
 }
 ```
@@ -78,8 +94,8 @@ try {
 ## Смотрите также
 
 - {{jsxref("Error")}}
-- {{jsxref("RangeError.prototype")}}
 - {{jsxref("Array")}}
-- {{jsxref("Number.toExponential()")}}
-- {{jsxref("Number.toFixed()")}}
-- {{jsxref("Number.toPrecision()")}}
+- {{jsxref("Number.prototype.toExponential()")}}
+- {{jsxref("Number.prototype.toFixed()")}}
+- {{jsxref("Number.prototype.toPrecision()")}}
+- {{jsxref("String.prototype.normalize()")}}

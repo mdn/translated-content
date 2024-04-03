@@ -7,6 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/valueOf
 
 **`valueOf()`** メソッドは、 Symbol オブジェクトのプリミティブ値を返します。
 
+{{EmbedInteractiveExample("pages/js/symbol-prototype-valueof.html")}}
+
 ## 構文
 
 ```

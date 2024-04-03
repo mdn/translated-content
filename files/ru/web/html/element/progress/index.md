@@ -48,7 +48,7 @@ slug: Web/HTML/Element/progress
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

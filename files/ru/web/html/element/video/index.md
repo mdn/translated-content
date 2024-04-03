@@ -139,7 +139,7 @@ Your web host may provide an easy interface to MIME type configuration changes f
 
 Этот элемент реализует интерфейс [`HTMLVideoElement`](/ru/docs/Web/API/HTMLVideoElement).
 
-## Совместимость браузера
+## Совместимость с браузерами
 
 {{Compat}}
 

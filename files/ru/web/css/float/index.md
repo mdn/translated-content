@@ -120,7 +120,7 @@ p.withRedBoxes {
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

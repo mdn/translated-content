@@ -194,7 +194,7 @@ background-position:
 - `background-color` можно указывать только после последней запятой.
 - Значения `background-size` могут быть включены только сразу после `background-position`, разделённые символом '/', например: `center/80%`.
 
-Посетите страницу MDN свойства {{cssref ("background")}}, чтобы увидеть полное описание.
+Посетите страницу MDN свойства {{cssxref("background")}}, чтобы увидеть полное описание.
 
 {{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/background.html", '100%', 600)}}
 

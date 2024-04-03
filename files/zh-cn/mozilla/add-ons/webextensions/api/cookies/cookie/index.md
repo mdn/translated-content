@@ -3,7 +3,7 @@ title: cookies.Cookie
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/Cookie
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The `Cookie` type of the {{WebExtAPIRef("cookies")}} API represents information about an HTTP cookie.
 

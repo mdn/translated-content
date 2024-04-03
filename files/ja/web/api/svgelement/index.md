@@ -11,7 +11,7 @@ SVG 言語における要素に直接対応する SVG DOM インタフェース�
 
 ## 属性
 
-_Also inherits properties from: {{DOMxRef("Element")}}, {{DOMxRef("HTMLOrForeignElement")}}_
+_Also inherits properties from: {{DOMxRef("Element")}}, {{DOMxRef("HTMLOrForeignElement")}}。_
 
 - {{domxref("SVGElement.dataset")}}{{ ReadOnlyInline }}
   - : 要素に付与された[カスタム・データ属性](/ja/docs/Web/Guide/HTML/Using_data_attributes)に対応する名前つきデータ属性の、キーと値の対のリストを与える、{{domxref("DOMStringMap")}} オブジェクトです。{{SVGAttr("data-*")}} の形の属性を使って、これらの対を SVG で定義することもでき、ここで `*` は、その対のキーの名前です。これは、HTML の {{domxref("HTMLElement.dataset")}} 属性および HTML の [`data-*`](/ja/docs/Web/HTML/Global_attributes/data-*) グローバル属性とちょうど同様に、うまく機能します。

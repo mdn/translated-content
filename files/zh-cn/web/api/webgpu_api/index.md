@@ -33,7 +33,7 @@ WebGPU 解决了这些问题，其提供了与现代 GPU API 兼容的更新的�
 
   - 集显（Integrated GPU），与 CPU 位于同一主板上，并共享其内存。
   - 独显（Discrete GPU），位于单独的显卡上，与 CPU 分开。
-  - 核显（Software "GPU"），在 CPU 上实现。
+  - 软件 GPU（Software "GPU"），在 CPU 上实现。
 
   > **备注：** 上图假设仅有一个 CPU 设备。
 
@@ -181,7 +181,7 @@ const vertexBuffer = device.createBuffer({
 });
 ```
 
-我们将使用映射操作将我们的数据放入 `GPUBuffer`，就像我们在[计算管线实例](#基础的计算管线)中，将数据从 GPU 读回到 JavaScript。然而，在这种情况下，我们将使用便利的 {{domxref("GPUQueue.writeBuffer()")}} 方法，它将要写入缓冲区的、要写入数据源的、每个偏移值和要写入数据的的大小作为参数（我们已经指定了数据的整个长度）。然后浏览器会找出写入数据的最高效的方式。
+我们将使用映射操作将我们的数据放入 `GPUBuffer`，就像我们在[计算管线实例](#基础的计算管线)中，将数据从 GPU 读回到 JavaScript。然而，在这种情况下，我们将使用便利的 {{domxref("GPUQueue.writeBuffer()")}} 方法，它将要写入缓冲区的、要写入数据源的、每个偏移值和要写入数据的大小作为参数（我们已经指定了数据的整个长度）。然后浏览器会找出写入数据的最高效的方式。
 
 ```js
 device.queue.writeBuffer(vertexBuffer, 0, vertices, 0, vertices.length);

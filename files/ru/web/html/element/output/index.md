@@ -44,7 +44,7 @@ slug: Web/HTML/Element/output
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

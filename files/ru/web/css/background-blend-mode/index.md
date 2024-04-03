@@ -3,7 +3,7 @@ title: background-blend-mode
 slug: Web/CSS/background-blend-mode
 ---
 
-{{CSSRef()}}
+{{CSSRef}}
 
 [CSS-свойство](/ru/docs/Web/CSS) **`background-blend-mode`** описывает то, как фоновое изображение элемента должно накладываться на фоны других элементов.
 

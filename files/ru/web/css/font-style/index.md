@@ -71,6 +71,6 @@ font-style: unset;
 
 {{cssinfo}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}

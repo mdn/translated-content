@@ -53,7 +53,7 @@ slug: Web/HTML/Element/canvas
 
 {{Specifications}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 

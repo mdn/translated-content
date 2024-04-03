@@ -3,9 +3,9 @@ title: bookmarks.onCreated
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onCreated
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
-ブックマークやフォルダが作成された際に発火します。
+ブックマークやフォルダーが作成された際に発火します。
 
 ## 構文
 

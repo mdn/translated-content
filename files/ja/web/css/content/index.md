@@ -48,6 +48,8 @@ content: revert;
 content: unset;
 ```
 
+{{EmbedInteractiveExample("pages/tabbed/content.html", "tabbed-shorter")}}
+
 ## 構文
 
 ### 値

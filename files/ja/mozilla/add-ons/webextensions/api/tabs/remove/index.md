@@ -3,7 +3,7 @@ title: tabs.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/remove
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 １つ以上のタブを閉じます。
 
@@ -17,7 +17,7 @@ var removing = browser.tabs.remove(
 );
 ```
 
-### パラメータ
+### パラメーター
 
 - `tabIds`
   - : `integer` または `array of integer`. 閉じるタブの ID を指定します。

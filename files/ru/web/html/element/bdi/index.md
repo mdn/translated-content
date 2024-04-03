@@ -39,7 +39,7 @@ This arabic word REDLOHECALP_CIBARA is automatically displayed right-to-left.
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

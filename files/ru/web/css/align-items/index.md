@@ -67,12 +67,6 @@ align-items: unset;
 
 ## Совместимость с браузерами
 
-### Support in Flex layout
-
-{{Compat}}
-
-### Support in Grid layout
-
 {{Compat}}
 
 ## Смотрите также

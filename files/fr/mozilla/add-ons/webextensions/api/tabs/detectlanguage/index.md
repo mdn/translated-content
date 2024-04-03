@@ -3,7 +3,7 @@ title: tabs.detectLanguage()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/detectLanguage
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Détecte la langue principale du contenu dans un onglet, en utilisant le [détecteur de langue compact](https://github.com/CLD2Owners/cld2) (CLD).
 

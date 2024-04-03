@@ -63,7 +63,7 @@ function fixedEncodeURI(str) {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

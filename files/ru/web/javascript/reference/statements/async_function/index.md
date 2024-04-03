@@ -138,7 +138,7 @@ async function getProcessedData(url) {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

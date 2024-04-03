@@ -120,6 +120,6 @@ input.onkeypress = logKey;
 
 - 事件同样也适用于 {{domxref("Document")}} 接口。
 - 相关事件：
-  - [`input`](/zh-CN/docs/Web/API/HTMLElement/input_event)
+  - [`input`](/zh-CN/docs/Web/API/Element/input_event)
   - [`keydown`](/zh-CN/docs/Web/API/Element/keydown_event)
   - [`keyup`](/zh-CN/docs/Web/API/Element/keyup_event)

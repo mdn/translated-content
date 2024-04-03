@@ -1,6 +1,9 @@
 ---
-title: ResizeObserverEntry.devicePixelContentBoxSize
+title: "ResizeObserverEntry: devicePixelContentBoxSize プロパティ"
+short-title: devicePixelContentBoxSize
 slug: Web/API/ResizeObserverEntry/devicePixelContentBoxSize
+l10n:
+  sourceCommit: 835d6632d59993861a0458510402787f8a2c3cb3
 ---
 
 {{APIRef("Resize Observer API")}}
@@ -22,7 +25,7 @@ slug: Web/API/ResizeObserverEntry/devicePixelContentBoxSize
 
 ## 例
 
-以下の例は、 [Pixel-perfect rendering with devicePixelContentBox](https://web.dev/device-pixel-content-box/) の記事から取ったものです。
+以下の例は、 [Pixel-perfect rendering with devicePixelContentBox](https://web.dev/articles/device-pixel-content-box/) の記事から取ったものです。
 {{domxref("ResizeObserver")}} のコールバック関数は、レイアウトの後、描画の前に呼び出されるためです。
 このため、正確なサイズを物理ピクセルで記録し、 canvas のピクセルと物理ピクセルの 1 対 1 対応を確保する機会が提供されます。
 
@@ -34,7 +37,7 @@ const observer = new ResizeObserver((entries) => {
 
   /* … render to canvas … */
 });
-observer.observe(canvas, { box: ["device-pixel-content-box"] });
+observer.observe(canvas, { box: "device-pixel-content-box" });
 ```
 
 ## 仕様書

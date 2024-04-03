@@ -3,7 +3,7 @@ title: Math
 slug: Web/JavaScript/Reference/Global_Objects/Math
 ---
 
-{{JSRef("Global_Objects", "Math")}}
+{{JSRef}}
 
 Объект **`Math`** является встроенным объектом, хранящим в своих свойствах и методах различные математические константы и функции. Объект `Math` не является функциональным объектом.
 

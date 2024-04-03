@@ -1,11 +1,17 @@
 ---
 title: text-emphasis-position
 slug: Web/CSS/text-emphasis-position
+l10n:
+  sourceCommit: b82ff59aab7883b7bb2222cf9f9f9b6eed818e08
 ---
 
 {{CSSRef}}
 
 **`text-emphasis-position`** は [CSS](/ja/docs/Web/CSS) のプロパティで、圏点が描かれる位置を設定します。ルビのテキストと同様、圏点のために十分な空間がない場合は、行の高さが広げられます。
+
+{{EmbedInteractiveExample("pages/css/text-emphasis-position.html")}}
+
+## 構文
 
 ```css
 /* 初期値 */
@@ -23,11 +29,10 @@ text-emphasis-position: left under;
 /* グローバル値 */
 text-emphasis-position: inherit;
 text-emphasis-position: initial;
-text-emphasis-postition: revert;
+text-emphasis-position: revert;
+text-emphasis-position: revert-layer;
 text-emphasis-position: unset;
 ```
-
-## 構文
 
 ### 値
 
@@ -40,7 +45,7 @@ text-emphasis-position: unset;
 - `left`
   - : 縦書きモードでテキストの左に圏点を描きます。
 
-## Description
+## 解説
 
 圏点の望ましい位置は言語に依存します。例えば日本語では、望ましい位置は `over right` です。一方、中国語では、望ましい位置は `under right` となります。下記の情報の表は、日本語、モンゴル語、中国語における望ましい圏点の位置をまとめたものです。
 
@@ -110,7 +115,7 @@ text-emphasis-position: unset;
 
 {{csssyntax}}
 
-## Examples
+## 例
 
 ### ルビを圏点より優先させる場合
 
@@ -118,7 +123,6 @@ text-emphasis-position: unset;
 
 ```css
 ruby {
-  -webkit-text-emphasis: none;
   text-emphasis: none;
 }
 ```
@@ -129,7 +133,6 @@ ruby {
 
 ```css
 em {
-  -webkit-text-emphasis: dot;
   text-emphasis: dot; /* text-emphasis を <em> 要素に設定 */
 }
 

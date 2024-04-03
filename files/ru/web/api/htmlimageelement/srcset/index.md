@@ -109,7 +109,7 @@ For additional examples, see our guide to [responsive images](/ru/docs/Learn/HTM
 
 {{Specifications}}
 
-## Браузерная поддержка
+## Совместимость с браузерами
 
 {{Compat}}
 

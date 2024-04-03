@@ -3,7 +3,7 @@ title: extension.getExtensionTabs()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/getExtensionTabs
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 > **Attention :** Cette méthode a été dépréciée. Utilisez {{WebExtAPIRef("extension.getViews()")}} à la place.
 

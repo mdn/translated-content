@@ -13,6 +13,8 @@ slug: Web/CSS/::selection
 }
 ```
 
+{{EmbedInteractiveExample("pages/tabbed/pseudo-element-selection.html", "tabbed-shorter")}}
+
 ## 利用できるプロパティ
 
 `::selection` 擬似要素では、特定の CSS プロパティのみが利用できます。

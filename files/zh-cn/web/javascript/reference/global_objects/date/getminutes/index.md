@@ -3,7 +3,7 @@ title: Date.prototype.getMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getMinutes
 ---
 
-{{JSRef("Global_Objects", "Date")}}
+{{JSRef}}
 
 **`getMinutes()`** 方法根据本地时间，返回一个指定的日期对象的分钟数。
 

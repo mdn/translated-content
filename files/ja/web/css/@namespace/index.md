@@ -8,6 +8,8 @@ slug: Web/CSS/@namespace
 **`@namespace`** は[アットルール](/ja/docs/Web/CSS/At-rule)で、
 [CSS](/ja/docs/Glossary/CSS) [スタイルシート](/ja/docs/Web/API/StyleSheet) で使用する [XML 名前空間](/ja/docs/Namespaces)を定義します。
 
+{{EmbedInteractiveExample("pages/tabbed/at-rule-namespace.html", "tabbed-shorter")}}
+
 ## 構文
 
 ```css

@@ -139,7 +139,7 @@ The `'strict-dynamic`' source expression specifies that the trust explicitly giv
 script-src 'strict-dynamic' 'nonce-someNonce'
 ```
 
-_Or_
+_Or:_
 
 ```bash
 script-src 'strict-dynamic' 'sha256-base64EncodedHash'

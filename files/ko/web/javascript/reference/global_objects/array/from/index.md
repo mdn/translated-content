@@ -101,7 +101,7 @@ const sources = Array.from(images, (image) => image.src);
 const insecureSources = sources.filter((link) => link.startsWith("http://"));
 ```
 
-### 유사 배열 객체로 베열 만들기 (arguments)
+### 유사 배열 객체로 배열 만들기 (arguments)
 
 ```js
 function f() {

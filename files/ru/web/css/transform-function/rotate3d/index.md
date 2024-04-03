@@ -121,9 +121,9 @@ div {
 
 {{EmbedLiveSample("Rotating_on_a_custom_axis", "auto", 180)}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
-Please see the [`<transform-function>`](/ru/docs/Web/CSS/transform-function#Browser_compatibility) data type for compatibility info.
+{{Compat}}
 
 ## See also
 

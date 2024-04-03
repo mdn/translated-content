@@ -144,7 +144,7 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Automated_testing
 
 为了给 Gulp 添加一些真正的任务，我们需要思考我们想要做什么。在我们的项目上运行的一套合理的基本功能如下：
 
-- html-tidy、css-lint 和 js-hint来提示和报告/修复常见的 HTML/CSS/JS 错误（见 [gulp-htmltidy](https://www.npmjs.com/package/gulp-htmltidy)、[gulp-csslint](https://www.npmjs.com/package/gulp-csslint)、[gulp-jshint](https://www.npmjs.com/package/gulp-jshint)）。
+- html-tidy、css-lint 和 js-hint 来提示和报告/修复常见的 HTML/CSS/JS 错误（见 [gulp-htmltidy](https://www.npmjs.com/package/gulp-htmltidy)、[gulp-csslint](https://www.npmjs.com/package/gulp-csslint)、[gulp-jshint](https://www.npmjs.com/package/gulp-jshint)）。
 - Autoprefixer 扫描我们的 CSS，只在需要的地方添加供应商前缀（见 [gulp-autoprefixer](https://www.npmjs.com/package/gulp-autoprefixer)）。
 - babel 可以将任何新的 JavaScript 语法特征转译为传统的语法，在旧的浏览器中也可以使用（见 [gulp-babel](https://www.npmjs.com/package/gulp-babel)）。
 

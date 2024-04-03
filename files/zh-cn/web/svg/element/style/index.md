@@ -59,4 +59,4 @@ slug: Web/SVG/Element/style
 
 ## 参见
 
-- [HTML 中的`<style>`元素](/zh-CN/HTML/Element/style)
+- [HTML 中的 `<style>` 元素](/zh-CN/HTML/Element/style)

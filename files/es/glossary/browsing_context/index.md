@@ -9,7 +9,7 @@ Un **contexto de navegación** es el entorno en el que un {{glossary("navegador"
 
 Cada contexto de navegación tiene un {{glossary("origen")}} específico, el origen del documento activo y un historial que enumera todos los documentos mostrados en orden.
 
-La comunicación entre contextos de navegación está severamente restringida. Entre un contexto de navegación del mismo origen, se puede abrir y utilizar un {{domxref("BroadcastChannel")}}}.
+La comunicación entre contextos de navegación está severamente restringida. Entre un contexto de navegación del mismo origen, se puede abrir y utilizar un {{domxref("BroadcastChannel")}}.
 
 ## Aprende más
 

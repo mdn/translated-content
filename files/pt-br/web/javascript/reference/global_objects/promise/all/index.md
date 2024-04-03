@@ -86,7 +86,7 @@ setTimeout(function () {
 
 ### Assincronia ou sincronia da Promise.all
 
-O exemplo a seguir demonstra a assincronia (ou sincronia, se o iterável passado for fazio) de `Promise.all`:
+O exemplo a seguir demonstra a assincronia (ou sincronia, se o iterável passado for vazio) de `Promise.all`:
 
 ```js
 // Passamos o argumento como um array de promises que já estão resolvidas para disparar Promise.all a mais rápido possível

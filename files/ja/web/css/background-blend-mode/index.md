@@ -1,6 +1,8 @@
 ---
 title: background-blend-mode
 slug: Web/CSS/background-blend-mode
+l10n:
+  sourceCommit: 42c1bb8c259f3f57de9f38600776cf273e3addda
 ---
 
 {{CSSRef}}
@@ -13,7 +15,7 @@ slug: Web/CSS/background-blend-mode
 
 ## 構文
 
-```
+```css
 /* 1 値 */
 background-blend-mode: normal;
 
@@ -21,9 +23,10 @@ background-blend-mode: normal;
 background-blend-mode: darken, luminosity;
 
 /* グローバル値 */
-background-blend-mode: initial;
 background-blend-mode: inherit;
+background-blend-mode: initial;
 background-blend-mode: revert;
+background-blend-mode: revert-layer;
 background-blend-mode: unset;
 ```
 
@@ -32,15 +35,15 @@ background-blend-mode: unset;
 - {{cssxref("&lt;blend-mode&gt;")}}
   - : 適用する混合モードです。複数の値をカンマ区切りで置くことができます。
 
-## Formal definition
+## 公式定義
 
 {{cssinfo}}
 
-## Formal syntax
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples">例</h2>
+## 例
 
 ### 基本的な例
 
@@ -87,7 +90,7 @@ background-blend-mode: unset;
 ```
 
 ```js hidden
-document.getElementById("select").onchange = function (event) {
+document.getElementById("select").onchange = (event) => {
   document.getElementById("div").style.backgroundBlendMode =
     document.getElementById("select").selectedOptions[0].innerHTML;
 };

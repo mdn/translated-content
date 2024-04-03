@@ -110,7 +110,7 @@ _Inherits methods from its parent, {{domxref("Element")}}._
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

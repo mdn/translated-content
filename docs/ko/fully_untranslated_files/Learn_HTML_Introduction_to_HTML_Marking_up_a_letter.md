@@ -55,7 +55,7 @@ slug: Learn/HTML/Introduction_to_HTML/Marking_up_a_letter
 
 이 프로젝트에서 여러분은 대학 인트라넷에 호스팅 될 문서를 마크업 하게 될 겁니다. 이 문서는 미래 해당 대학에서 박사학위를 공부하려는 이들이 보내 온 질문에 대한 연구원들의 답변입니다.
 
-**블록/ 구조적인 시맨틱들**
+### 블록/ 구조적인 시맨틱들
 
 - 당신은 전체 문서를 doctype을 비롯해 {{htmlelement("html")}}, {{htmlelement("head")}}, {{htmlelement("body")}} elements 를 이용하여 다듬어야 합니다.
 - 일반적으로 이 서한은 아래의 점을 제외하고 단락과 표제의 구조로 표시되어야합니다. 가장 높은 단계의 heading(the "Re:" lin) 하나와 두 번째 단계의 heading 세 개를 사용합니다

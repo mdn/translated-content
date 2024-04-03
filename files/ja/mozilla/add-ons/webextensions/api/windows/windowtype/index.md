@@ -3,9 +3,9 @@ title: windows.WindowType
 slug: Mozilla/Add-ons/WebExtensions/API/windows/WindowType
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
-これはブラウザウィンドウの種類です。
+これはブラウザーウィンドウの種類です。
 
 ## 型
 

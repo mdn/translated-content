@@ -54,15 +54,13 @@ syntax: "*"; /* 任何有效字符 */
 - `"<transform-list>"`
   - : A list of valid {{cssxref("&lt;transform-function&gt;")}} 值。
 
-## 标准定义
+## 形式定义
 
 {{cssinfo}}
 
-## 标准语法
+## 形式语法
 
-```css
 {{csssyntax}}
-```
 
 ## 实例
 
@@ -89,10 +87,6 @@ window.CSS.registerProperty({
 });
 ```
 
-## 标准语法
-
-{{csssyntax}}
-
 ## 规范
 
 {{Specifications}}
@@ -101,7 +95,7 @@ window.CSS.registerProperty({
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - [CSS 属性与值 API](/zh-CN/docs/Web/API/CSS_Properties_and_值_API)
 - [CSS 绘图 API](/zh-CN/docs/Web/API/CSS_Painting_API)

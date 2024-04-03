@@ -58,7 +58,7 @@ gl.isEnabled(gl.DITHER);
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -101,7 +101,7 @@ It may not be obvious as to why the focus indicator is appearing and disappearin
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

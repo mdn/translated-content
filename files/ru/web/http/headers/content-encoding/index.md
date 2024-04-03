@@ -75,7 +75,7 @@ Note that the server is not obligated to use any compression method. Compression
 | {{RFC("7231", "Content-Encoding", "3.1.2.2")}}   | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 | {{RFC("2616", "Content-Encoding", "14.11")}}     | Content-Encoding                                              |
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

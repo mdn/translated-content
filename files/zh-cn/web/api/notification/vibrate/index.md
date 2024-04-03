@@ -1,11 +1,15 @@
 ---
 title: Notification：vibrate 属性
 slug: Web/API/Notification/vibrate
+l10n:
+  sourceCommit: 10b9d1a207b2bf467150b0ec72e2e5f09429d2d9
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{APIRef("Web Notifications")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
-{{domxref("Notification")}} 接口的 `vibrate` 只读属性指定当通知触发时设备振动硬件发出的[振动模式](/zh-CN/docs/Web/API/Vibration_API#振动模式)。此属性通过 {{domxref("Notification.Notification","Notification()")}} 构造函数的 `vibrate` 选项指定。
+{{domxref("Notification")}} 接口的 **`vibrate`** 只读属性指定当通知触发时设备振动硬件发出的[振动模式](/zh-CN/docs/Web/API/Vibration_API#振动模式)。此属性通过 {{domxref("Notification.Notification","Notification()")}} 构造函数的 `vibrate` 选项指定。
+
+{{AvailableInWorkers}}
 
 ## 值
 
@@ -23,7 +27,7 @@ const options = {
 
 const n = new Notification("新的评论活动", options);
 
-console.log(n.vibrate); // "[200, 100, 200]"
+console.log(n.vibrate); // [200, 100, 200]
 ```
 
 ## 规范

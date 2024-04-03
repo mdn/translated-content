@@ -3,7 +3,7 @@ title: runtime.onRestartRequired
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onRestartRequired
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Lancé lorsqu'une application ou le périphérique sur lequel elle s'exécute doit être redémarré. L'application devrait fermer toutes ses fenêtres dans les meilleurs délais pour permettre le redémarrage. Si l'application ne fait rien, un redémarrage sera appliqué après une période de grâce de 24 heures. Actuellement, cet événement est uniquement déclenché pour les applications de kiosque ChromeOS.
 

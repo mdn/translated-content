@@ -1,11 +1,11 @@
 ---
-title: WindowOrWorkerGlobalScope.setInterval()
+title: Глобальная функция setInterval()
 slug: Web/API/setInterval
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{AvailableInWorkers}}
 
-Метод **`setInterval()`** предложен для {{domxref("Window")}} и {{domxref("Worker")}} интерфейсов. Он циклически вызывает функцию или участок кода с фиксированной паузой между каждым вызовом. Уникальный идентификатор intervalID, возвращаемый методом, позволяет впоследствии удалить запущенный **`setInterval`** c помощью {{domxref("WindowOrWorkerGlobalScope.clearInterval", "clearInterval()")}}. Метод определён с помощью миксина {{domxref("WindowOrWorkerGlobalScope")}}.
+Метод **`setInterval()`** доступен из интерфейсов {{domxref("Window")}} и {{domxref("WorkerGlobalScope")}}. Он циклически вызывает функцию или участок кода с фиксированной паузой между каждым вызовом. Уникальный идентификатор intervalID, возвращаемый методом, позволяет впоследствии удалить запущенный **`setInterval`** c помощью {{domxref("clearInterval()")}}.
 
 ## Синтаксис
 
@@ -29,9 +29,9 @@ var intervalID = scope.setInterval(code, delay);
 
 ### Возвращаемое значение
 
-Возвращаемый `intervalID` представляет из себя ненулевое числовое значение, которое идентифицирует таймер, созданный вызовом `setInterval()`; Это значение может быть передано в {{domxref("WindowOrWorkerGlobalScope.clearInterval()")}} для отмены таймера.
+Возвращаемый `intervalID` представляет из себя ненулевое числовое значение, которое идентифицирует таймер, созданный вызовом `setInterval()`; Это значение может быть передано в {{domxref("clearInterval()")}} для отмены таймера.
 
-It may be helpful to be aware that `setInterval()` and {{domxref("WindowOrWorkerGlobalScope.setTimeout", "setTimeout()")}} share the same pool of IDs, and that `clearInterval()` and {{domxref("WindowOrWorkerGlobalScope.clearTimeout", "clearTimeout()")}} can technically be used interchangeably. For clarity, however, you should try to always match them to avoid confusion when maintaining your code.
+It may be helpful to be aware that `setInterval()` and {{domxref("setTimeout()")}} share the same pool of IDs, and that `clearInterval()` and {{domxref("clearTimeout()")}} can technically be used interchangeably. For clarity, however, you should try to always match them to avoid confusion when maintaining your code.
 
 > **Примечание:** The `delay` parameter is converted to a signed 32-bit integer. This effectively limits `delay` to 2147483647 ms, since it's specified as a signed integer in the IDL.
 
@@ -715,13 +715,13 @@ Returns a JavaScript [`Object`](/ru/docs/Web/JavaScript/Reference/Global_Objects
 
 The `setInterval()` function is commonly used to set a delay for functions that are executed again and again, such as animations.
 
-You can cancel the interval using {{domxref("WindowOrWorkerGlobalScope.clearInterval()")}}.
+You can cancel the interval using {{domxref("clearInterval()")}}.
 
-If you wish to have your function called _once_ after the specified delay, use {{domxref("WindowOrWorkerGlobalScope.setTimeout()")}}.
+If you wish to have your function called _once_ after the specified delay, use {{domxref("setTimeout()")}}.
 
 ### Ensure that execution duration is shorter than interval frequency
 
-If there is a possibility that your logic could take longer to execute than the interval time, it is recommended that you recursively call a named function using {{domxref("WindowOrWorkerGlobalScope.setTimeout")}}. For example, if using `setInterval` to poll a remote server every 5 seconds, network latency, an unresponsive server, and a host of other issues could prevent the request from completing in its allotted time. As such, you may find yourself with queued up XHR requests that won't necessarily return in order.
+If there is a possibility that your logic could take longer to execute than the interval time, it is recommended that you recursively call a named function using {{domxref("setTimeout")}}. For example, if using `setInterval` to poll a remote server every 5 seconds, network latency, an unresponsive server, and a host of other issues could prevent the request from completing in its allotted time. As such, you may find yourself with queued up XHR requests that won't necessarily return in order.
 
 In these cases, a recursive `setTimeout()` pattern is preferred:
 
@@ -739,7 +739,7 @@ In the above snippet, a named function `loop()` is declared and is immediately e
 
 ### Throttling of intervals
 
-`setInterval()` is subject to the same throttling restrictions in Firefox as {{domxref("WindowOrWorkerGlobalScope.setTimeout","setTimeout()")}}; see [Reasons for delays longer than specified](/ru/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout#Reasons_for_delays_longer_than_specified).
+`setInterval()` is subject to the same throttling restrictions in Firefox as {{domxref("setTimeout()")}}; see [Reasons for delays longer than specified](/ru/docs/Web/API/setTimeout#Reasons_for_delays_longer_than_specified).
 
 ## Спецификации
 
@@ -751,9 +751,8 @@ In the above snippet, a named function `loop()` is declared and is immediately e
 
 ## Смотрите также
 
-- [JavaScript timers](/en-US/Add-ons/Code_snippets/Timers)
-- {{domxref("WindowOrWorkerGlobalScope.setTimeout")}}
-- {{domxref("WindowOrWorkerGlobalScope.clearTimeout")}}
-- {{domxref("WindowOrWorkerGlobalScope.clearInterval")}}
-- {{domxref("window.requestAnimationFrame")}}
-- [_Daemons_ management](/en-US/Add-ons/Code_snippets/Timers/Daemons)
+- [Полифил `setInterval`, позволяющий передавать параметры в функцию обратного вызова](https://github.com/zloirock/core-js#settimeout-and-setinterval)
+- {{domxref("setTimeout()")}}
+- {{domxref("clearTimeout()")}}
+- {{domxref("clearInterval()")}}
+- {{domxref("window.requestAnimationFrame()")}}

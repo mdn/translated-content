@@ -314,7 +314,7 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
       <td><strong>事件</strong></td>
       <td>
         {{domxref("HTMLElement/change_event", "change")}} 和
-        {{domxref("HTMLElement/input_event", "input")}}
+        {{domxref("Element/input_event", "input")}}
       </td>
     </tr>
     <tr>

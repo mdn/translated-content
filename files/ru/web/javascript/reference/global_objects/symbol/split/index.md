@@ -15,7 +15,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/split
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

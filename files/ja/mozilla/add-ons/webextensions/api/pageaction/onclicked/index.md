@@ -3,7 +3,7 @@ title: pageAction.onClicked
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 ページアクションのアイコンがクリックされたときに発火します。ページアクションがポップアップを持っているならこのイベントは発火しません。
 
@@ -28,7 +28,7 @@ browser.pageAction.onClicked.hasListener(listener);
 
 ## addListener の書式
 
-### パラメータ
+### パラメーター
 
 - `callback`
 
@@ -43,7 +43,7 @@ browser.pageAction.onClicked.hasListener(listener);
 
 ## 例
 
-ユーザがページアクションをクリックしたとき、それを隠し、アクティブタブを"<http://chilloutandwatchsomecatgifs.com/>"に誘導します:
+ユーザーがページアクションをクリックしたとき、それを隠し、アクティブタブを"<http://chilloutandwatchsomecatgifs.com/>"に誘導します:
 
 ```js
 var CATGIFS = "http://chilloutandwatchsomecatgifs.com/";

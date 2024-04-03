@@ -3,7 +3,7 @@ title: CSS 选择器
 slug: Web/CSS/CSS_selectors
 ---
 
-{{CSSRef("Selectors")}}
+{{CSSRef}}
 
 **CSS 选择器**规定了 CSS 规则会被应用到哪些元素上。
 

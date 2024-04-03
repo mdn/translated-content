@@ -43,7 +43,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference
 
 ## ファイルの配置
 
-`messages.json` ファイルは、サポートされたロケール名 (`en`, `de`, `ja` など) のディレクトリー内に置く必要があります。さらにこれらは、拡張機能のルートディレクトリ内の `_locales` と呼ばれるディレクトリー内に置く必要があります。
+`messages.json` ファイルは、サポートされたロケール名 (`en`, `de`, `ja` など) のディレクトリー内に置く必要があります。さらにこれらは、拡張機能のルートディレクトリー内の `_locales` と呼ばれるディレクトリー内に置く必要があります。
 
 ## メンバーの詳細
 
@@ -77,7 +77,7 @@ name には、次の文字が使用できます:
 - ロケール文字列が使用される時に、`/\$\d+/` と一致するトークンは、{{WebExtAPIRef("i18n.getMessage()")}} に渡される replacement に置き換えられます。
 - `getMessage()` は、placeholder/substitution の呼び出しを 9 個までしか処理しません。
 
-### description
+### 解説
 
 {{optional_inline}}
 

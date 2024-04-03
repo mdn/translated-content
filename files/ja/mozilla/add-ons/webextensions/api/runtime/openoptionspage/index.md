@@ -3,7 +3,9 @@ title: runtime.openOptionsPage()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage
 ---
 
-{{AddonSidebar()}}拡張機能に[オプションページ](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages)が定義されている場合、このメソッドはそれを開きます。
+{{AddonSidebar}}
+
+拡張機能に[オプションページ](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages)が定義されている場合、このメソッドはそれを開きます。
 
 これは [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返す非同期関数です。
 
@@ -13,7 +15,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage
 var openingPage = browser.runtime.openOptionsPage();
 ```
 
-### パラメータ
+### パラメーター
 
 なし。
 

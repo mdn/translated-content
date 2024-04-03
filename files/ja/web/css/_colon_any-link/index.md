@@ -14,6 +14,8 @@ slug: Web/CSS/:any-link
 }
 ```
 
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-any-link.html", "tabbed-shorter")}}
+
 ## 構文
 
 ```

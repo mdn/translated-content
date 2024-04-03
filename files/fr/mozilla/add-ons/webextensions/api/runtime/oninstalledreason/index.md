@@ -3,7 +3,7 @@ title: runtime.OnInstalledReason
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/OnInstalledReason
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Les valeurs pour laquelle l'événement {{WebExtAPIRef("runtime.onInstalled")}} est en cours d'envoi.
 

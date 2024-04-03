@@ -146,7 +146,7 @@ var arr2 = [3, 4, 5];
 var arr3 = [...arr1, ...arr2];
 ```
 
-{{jsxref("Array.unshift")}} 方法常用于在数组的开头插入新元素/数组. 不使用展开语法，示例如下：
+{{jsxref("Array.unshift")}} 方法常用于在数组的开头插入新元素/数组。不使用展开语法，示例如下：
 
 ```js
 var arr1 = [0, 1, 2];

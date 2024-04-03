@@ -29,7 +29,7 @@ Proxy-Authenticate: Basic realm="Access to internal site"
 | ------------------------------------------------------------ | ------------------------ |
 | {{RFC("7235", "407 Proxy Authentication Required" , "3.2")}} | HTTP/1.1: Authentication |
 
-## Совместимость с браузером
+## Совместимость с браузерами
 
 {{Compat}}
 

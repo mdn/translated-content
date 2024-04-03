@@ -3,7 +3,7 @@ title: runtime.sendMessage()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 単一のメッセージを、自分や別の拡張機能が持つイベントリスナーに送信します。
 
@@ -50,7 +50,7 @@ var sending = browser.runtime.sendMessage(
 
   - 二番目の引数が次のいずれかである場合、引数は `(message, options)` と解釈され、メッセージは内部的に送信されます。
 
-    1. 有効な `options` オブジェクトである (つまり、ブラウザがサポートする `options` のプロパティのみを持つオブジェクト)
+    1. 有効な `options` オブジェクトである (つまり、ブラウザーがサポートする `options` のプロパティのみを持つオブジェクト)
     2. null
     3. undefined
 

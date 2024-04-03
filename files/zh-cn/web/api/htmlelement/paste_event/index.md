@@ -1,72 +1,85 @@
 ---
-title: element.onpaste
+title: HTMLElement：paste 事件
 slug: Web/API/HTMLElement/paste_event
+l10n:
+  sourceCommit: dea44952741f722ccf62f8e868d1bc988e953aa0
 ---
 
-{{ ApiRef() }}
+{{ APIRef("HTML DOM") }}
 
-### 概述
+**`paste`** 事件在用户通过浏览器的用户界面开始粘帖操作时触发。
 
-**onpaste** 属性用来获取或设置当前元素的`paste`事件的事件处理函数。
+## 语法
 
-### 语法
+在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
 
-```plain
-element.onpaste = functionRef;
+```js
+addEventListener("paste", (event) => {});
+
+onpaste = (event) => {};
 ```
 
-_functionRef_ 是一个函数名或者函数表达式。
+## 事件类型
 
-### 例子
+{{domxref("ClipboardEvent")}}。继承自 {{domxref("Event")}}。
 
-```plain
-<html>
-<head>
-<title>onpaste 示例演示</title>
-</head>
+{{InheritanceDiagram("ClipboardEvent")}}
 
-<body>
-<h3>按说明进行操作！</h3>
-<textarea id="editor" rows="3" cols="80">
-尝试在这里粘贴文本！
+## 事件属性
+
+_也从其父接口 {{domxref("Event")}} 继承属性。_
+
+- {{domxref("ClipboardEvent.clipboardData")}} {{ReadOnlyInline}}
+  - : 一个 {{domxref("DataTransfer")}} 对象，其包含用户发起的 {{domxref("HTMLElement/cut_event", "cut")}}、{{domxref("HTMLElement/copy_event", "copy")}} 或 `paste` 操作所影响的数据，以及它的 MIME 类型。
+
+## 示例
+
+此示例记录每一次对 {{htmlElement("textarea")}} 的复制和粘贴的尝试。
+
+### HTML
+
+```html
+<h3>试一下这个文本区域：</h3>
+<textarea id="editor" rows="3">
+尝试将文本复制并粘贴到该字段中！
 </textarea>
 
-<script type="text/javascript">
-  function log(txt)
-  {
-    document.getElementById("log").appendChild(document.createTextNode(txt + "\n"));
-  }
-
-  function pasteIntercept(evt)
-  {
-    evt.preventDefault();
-    log("粘贴被阻止");
-  }
-
-  document.getElementById("editor").addEventListener("paste", pasteIntercept, false);
-</script>
-
-<h3>Log</h3>
-<textarea rows="15" cols="80" id="log" readonly="true"></textarea>
-</body>
-</html>
+<h3>日志：</h3>
+<p id="log"></p>
 ```
 
-上例演示了如何禁止向一个文本域内粘贴文本。
+### JavaScript
 
-### 备注
+```js
+function logCopy(event) {
+  log.innerText = `已复制！\n${log.innerText}`;
+}
 
-当用户尝试粘贴文本时会触发`paste`事件。
+function logPaste(event) {
+  log.innerText = `已粘贴！\n${log.innerText}`;
+}
 
-### 规范
+const editor = document.getElementById("editor");
+const log = document.getElementById("log");
 
-不属于任何公开的规范。
+editor.oncopy = logCopy;
+editor.onpaste = logPaste;
+```
 
-### 备注
+### 结果
 
-没有任何 DOM 方法可以使用来获取将要粘贴的剪切板中的文字，你可以使用 XPCOM 接口`nsIClipboard`来进行这样的操作。
+{{EmbedLiveSample("示例", 700, 300)}}
 
-### 相关链接
+## 规范
 
-- [`oncopy`](/zh-CN/DOM/element.oncopy)
-- [`oncut`](/zh-CN/DOM/element.oncut)
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
+
+## 参见
+
+- 相关事件
+  - {{domxref("HTMLElement.copy_event")}}
+  - {{domxref("HTMLElement.cut_event")}}

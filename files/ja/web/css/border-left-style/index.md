@@ -1,15 +1,17 @@
 ---
 title: border-left-style
 slug: Web/CSS/border-left-style
+l10n:
+  sourceCommit: d73dd4355247934e6b3f7081d3c1189089ecdc1e
 ---
 
 {{CSSRef}}
 
-**`border-left-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の左側の {{cssxref("border")}} における線の形状を設定します。
+**`border-left-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の左側の境界線 ({{cssxref("border")}}) のスタイルを設定します。
 
 {{EmbedInteractiveExample("pages/css/border-left-style.html")}}
 
-> **メモ:** 仕様書では、異なる形状の境界線を角でどの様に接続するかを定義していません。
+> **メモ:** 仕様書では、異なるスタイルの境界線を角でどの様に接続するかを定義していません。
 
 ## 構文
 
@@ -30,10 +32,11 @@ border-left-style: outset;
 border-left-style: inherit;
 border-left-style: initial;
 border-left-style: revert;
+border-left-style: revert-layer;
 border-left-style: unset;
 ```
 
-`border-left-style` プロパティは、 {{cssxref("border-style")}} プロパティで利用できるキーワードのうちの一つで指定します。
+`border-left-style` プロパティは、単一の {{cssxref("line-style")}} キーワード値で指定します。
 
 ## 公式定義
 
@@ -43,7 +46,7 @@ border-left-style: unset;
 
 {{csssyntax}}
 
-<h2 id="Examples">例</h2>
+## 例
 
 ### border-left-style の設定
 
@@ -118,7 +121,7 @@ td {
 
 #### 結果
 
-{{ EmbedLiveSample('Examples', 300, 200) }}
+{{ EmbedLiveSample('例', 300, 200) }}
 
 ## 仕様書
 
@@ -130,5 +133,5 @@ td {
 
 ## 関連情報
 
-- その他の形状に関する境界のプロパティ: {{Cssxref("border-bottom-style")}}, {{Cssxref("border-right-style")}}, {{Cssxref("border-top-style")}}, {{Cssxref("border-style")}}
+- その他のスタイルに関する境界のプロパティ: {{Cssxref("border-bottom-style")}}, {{Cssxref("border-right-style")}}, {{Cssxref("border-top-style")}}, {{Cssxref("border-style")}}
 - その他の左側の境界に関するプロパティ: {{Cssxref("border-left")}}, {{Cssxref("border-left-color")}}, {{Cssxref("border-left-width")}}

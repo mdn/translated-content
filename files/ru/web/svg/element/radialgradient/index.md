@@ -68,7 +68,7 @@ slug: Web/SVG/Element/radialGradient
 
 {{Specifications}}
 
-## Совместимость с браузером
+## Совместимость с браузерами
 
 {{Compat}}
 

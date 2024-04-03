@@ -3,7 +3,7 @@ title: String.prototype.bold()
 slug: Web/JavaScript/Reference/Global_Objects/String/bold
 ---
 
-{{JSRef("Global_Objects", "String")}} {{deprecated_header}}
+{{JSRef}} {{deprecated_header}}
 
 ## Сводка
 

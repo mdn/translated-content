@@ -1,24 +1,25 @@
 ---
-title: Window.personalbar
+title: "Window: personalbar プロパティ"
+short-title: personalbar
 slug: Web/API/Window/personalbar
 l10n:
-  sourceCommit: c92127e297ef9448c4263e95109d0610e0ba4158
+  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
 {{APIRef}}
 
 `personalbar` オブジェクトを返します。
 
-これは `Window` プロパティのグループのひとつで、論理値である `visible` プロパティを保持し、ウェブブラウザーのユーザーインターフェイスの特定の部分が表示されているかどうかを表していました。
+これは `Window` プロパティのうちの論理値を持つ `visible` プロパティの 1 つであり、ウェブブラウザーのユーザーインターフェイスの特定の部分が可視であるかどうかを表すものでした。
 
-プライバシーと相互運用性の理由から、 `visible` プロパティの値は、この `Window` がポップアップである場合は `false` となり、そうでない場合は `true` となります。
+プライバシーと相互運用性の理由から、これで `visible` プロパティの値は、この `Window` がポップアップの場合は `false` となり、そうでない場合は `true` となるようになりました。
 
-## 値
+## 構文
 
-単一のプロパティを保持するオブジェクトです。
+単一のプロパティを持つオブジェクトです。
 
 - `visible` {{ReadOnlyInline}}
-  - : 論理プロパティで、 `false` はこの `Window` がポップアップであるとき、それ以外は `true` になります。
+  - : 論理値のプロパティで、 `false` は `Window` がポップアップの場合、 `true` はそれ以外を表します。
 
 ## 仕様書
 

@@ -262,7 +262,7 @@ The following values may be operational on historical browser versions using **`
 
 {{CSSInfo}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

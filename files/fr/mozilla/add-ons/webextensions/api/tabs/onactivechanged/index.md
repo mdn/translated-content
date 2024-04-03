@@ -3,7 +3,7 @@ title: tabs.onActiveChanged
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onActiveChanged
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 > **Attention :** Cet événement est obsolète. Utilisez {{WebExtAPIRef("tabs.onActivated")}} à la place.
 

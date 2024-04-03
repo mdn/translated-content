@@ -3,11 +3,11 @@ title: bookmarks.getSubTree()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getSubTree
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 **`bookmarks.getSubTree()`** は、ID を指定して {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}} を非同期に取得するメソッドです。
 
-対象がフォルダの場合、`children` プロパティを再帰的にたどることで、すべての子要素にアクセスすることができます。
+対象がフォルダーの場合、`children` プロパティを再帰的にたどることで、すべての子要素にアクセスすることができます。
 
 ## 構文
 

@@ -1,17 +1,21 @@
 ---
 title: Notification：timestamp 属性
 slug: Web/API/Notification/timestamp
+l10n:
+  sourceCommit: e97f2c3cca98616a37003005ddc149d370c40fd0
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{APIRef("Web Notifications")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 {{domxref("Notification")}} 接口的 **`timestamp`** 只读属性返回一个数字。此属性通过 {{domxref("Notification.Notification"," Notification()")}} 构造函数的 `timestamp` 选项指定。
 
 通知的时间戳可以表示创建通知的事件的时间（自 1970 年 1 月 1 日 00:00:00 UTC 时间以来的毫秒数），或者它可以是你希望与通知相关联的任意时间戳。例如，一个即将召开的会议的时间戳可以设置在未来，而一条错过的消息的时间戳可以设置在过去。
 
+{{AvailableInWorkers}}
+
 ## 值
 
-一个表示时间戳的数字，以 [Unix 时间](/zh-CN/docs/Glossary/Unix_time)形式按毫秒为单位给出。
+一个表示时间戳的数字，以 {{Glossary("Unix time", "Unix 时间")}}形式按毫秒为单位给出。
 
 ## 示例
 
@@ -27,7 +31,7 @@ const options = {
 
 const n = new Notification("新的评论活动", options);
 
-console.log(n.timestamp); // 输出 timestamp
+console.log(n.timestamp); // 打印 timestamp 属性值
 ```
 
 ## 规范

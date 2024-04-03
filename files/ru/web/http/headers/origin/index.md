@@ -46,7 +46,7 @@ Origin: https://developer.mozilla.org
 
 {{Specifications}}
 
-## Совместимость с браузером
+## Совместимость с браузерами
 
 {{Compat}}
 

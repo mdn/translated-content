@@ -3,7 +3,7 @@ title: tabs.query()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/query
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 指定されたプロパティを持つ全てのタブを取得します。何も指定しない場合、全てのタブを取得します。
 
@@ -17,7 +17,7 @@ var querying = browser.tabs.query(
 );
 ```
 
-### パラメータ
+### パラメーター
 
 - `queryInfo`
 
@@ -34,7 +34,7 @@ var querying = browser.tabs.query(
     - `currentWindow`{{optional_inline}}
       - : `boolean`. カレントウインドウの中のタブか。
     - `discarded`{{optional_inline}}
-      - : `boolean`. タブが discard されているか。 discard されたタブはコンテンツがメモリからアンロードされているが、タブの一覧には表示されたままになります。コンテンツはタブが次にアクティブになったときにリロードされます。
+      - : `boolean`. タブが discard されているか。 discard されたタブはコンテンツがメモリーからアンロードされているが、タブの一覧には表示されたままになります。コンテンツはタブが次にアクティブになったときにリロードされます。
     - `highlighted`{{optional_inline}}
       - : `boolean`. ハイライトされているか。
     - `index`{{optional_inline}}

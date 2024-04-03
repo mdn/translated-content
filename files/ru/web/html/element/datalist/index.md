@@ -42,7 +42,7 @@ slug: Web/HTML/Element/datalist
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

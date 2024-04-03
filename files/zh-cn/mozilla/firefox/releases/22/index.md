@@ -69,6 +69,6 @@ slug: Mozilla/Firefox/Releases/22
 - [Site Compatibility for Firefox 22](/zh-CN/docs/Site_Compatibility_for_Firefox_22)
 - [Add-on Compatibility for Firefox 22](https://blog.mozilla.org/addons/2013/06/03/compatibility-for-firefox-22/)
 
-### Older versions
+### 更早期的版本
 
-{{Firefox_for_developers('21')}}
+{{Firefox_for_developers}}

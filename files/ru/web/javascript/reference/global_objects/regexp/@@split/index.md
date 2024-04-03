@@ -75,7 +75,7 @@ console.log(result); // ["(2016)", "(01)", "(02)"]
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

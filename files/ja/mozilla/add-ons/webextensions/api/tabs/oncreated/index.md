@@ -3,7 +3,7 @@ title: tabs.onCreated
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onCreated
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 タブが生成されたときに発火します。
 
@@ -28,7 +28,7 @@ browser.tabs.onCreated.hasListener(listener);
 
 ## addListener の書式
 
-### パラメータ
+### パラメーター
 
 - `callback`
 

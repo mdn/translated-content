@@ -1,6 +1,8 @@
 ---
 title: AsyncGeneratorFunction
 slug: Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction
+l10n:
+  sourceCommit: e01fd6206ce2fad2fe09a485bb2d3ceda53a62de
 ---
 
 {{JSRef}}
@@ -49,7 +51,7 @@ _同时也从它的父类 {{jsxref("Function")}} 继承方法_。
 
 ## 参见
 
-- [`async function*` 声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function*)
+- [`async function*`](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function*)
 - [`async function*` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/async_function*)
 - {{jsxref("Function")}}
 - {{jsxref("AsyncFunction")}}

@@ -129,7 +129,7 @@ p {
 
 {{cssinfo}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

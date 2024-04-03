@@ -3,7 +3,7 @@ title: tabs.duplicate()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/duplicate
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 ID で指定されたタブを複製します。
 
@@ -17,7 +17,7 @@ var duplicating = browser.tabs.duplicate(
 );
 ```
 
-### パラメータ
+### パラメーター
 
 - `tabId`
   - : `integer`. 複製するタブの ID を指定します。

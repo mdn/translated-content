@@ -15,7 +15,7 @@ MDN Web Docs 的使命是提供*開發者*在*網站平台*上*輕鬆*建立專�
 
   你是 MDN 新人，想要學習該如何開始嗎？就從這起步吧！
 
-- [我是進階用戶](/zh-TW/docs/MDN/Contribute)
+- [我是進階用戶](/zh-TW/docs/MDN/Community/Contributing)
 
   當你覺得適當之時，閱讀我們的完整、深入 MDN 貢獻指引以學習更多
 

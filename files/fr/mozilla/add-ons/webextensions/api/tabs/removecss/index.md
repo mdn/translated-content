@@ -3,7 +3,7 @@ title: tabs.removeCSS()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/removeCSS
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Supprime d'une page CSS précédemment injectée par un appel à {{WebExtAPIRef("tabs.insertCSS()")}}.
 

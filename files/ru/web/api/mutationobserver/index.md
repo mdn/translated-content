@@ -86,7 +86,7 @@ observer.disconnect();
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

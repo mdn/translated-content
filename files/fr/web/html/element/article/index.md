@@ -146,7 +146,7 @@ Cet élément n'a pas d'autres attributs que les [attributs universels](/fr/docs
 
 ### Résultat
 
-{{EmbedLiveSample('')}}
+{{EmbedLiveSample('','','380')}}
 
 ## Spécifications
 

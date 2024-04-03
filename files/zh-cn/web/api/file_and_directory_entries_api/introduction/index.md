@@ -163,7 +163,7 @@ slug: Web/API/File_and_Directory_Entries_API/Introduction
 - Blob
   - : Blob（以大写 B 开头的）是一个不可变的数据结构，这意味着一个 blob 引用的二进制数据不能被直接修改。这使得当 Blobs 传入到异步 API 时它们的行为将是可预见的。
 - persistent storage | 固定存储
-  - : 固定存储是一种在浏览器中长期存在的的存储，除非用户永久删除它或应用删除它。
+  - : 固定存储是一种在浏览器中长期存在的存储，除非用户永久删除它或应用删除它。
 - temporary storage | 临时存储
   - : 临时存储是任何网络应用都拥有的。它是自动而不需要请求的，但浏览器可以没有任何警告地删除这些存储。
 

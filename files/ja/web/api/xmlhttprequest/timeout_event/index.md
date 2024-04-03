@@ -1,11 +1,12 @@
 ---
 title: "XMLHttpRequest: timeout イベント"
+short-title: timeout
 slug: Web/API/XMLHttpRequest/timeout_event
 l10n:
   sourceCommit: b5b33acd44e7bb9c7be2efc75ba9a04b8bf8b2b2
 ---
 
-{{APIRef}}
+{{APIRef("XMLHttpRequest API")}}
 
 **`timeout`** イベントは、設定された時間が経過したことで進行が終了すると発行されます。
 

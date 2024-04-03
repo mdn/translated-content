@@ -194,7 +194,7 @@ Firefox 和 Chrome 浏览器都包含代理 API。不过，这两个 API 的设�
 
 #### 通过内容脚本在网页中执行代码
 
-- **在 Firefox 中**：{{jsxref("Global_Objects/eval", "eval")}} 在内容脚本的上下文中运行代码，而 `window.eval` 在页面的上下文中运行代码。请参阅[在内容脚本中使用`eval`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#在内容脚本中使用_eval)。
+- **在 Firefox 中**：{{jsxref("Global_Objects/eval", "eval")}} 在内容脚本的上下文中运行代码，而 `window.eval` 在页面的上下文中运行代码。请参阅[在内容脚本中使用 `eval`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#在内容脚本中使用_eval)。
 - **在 Chrome 中**：{{jsxref("Global_Objects/eval", "eval")}} 和 `window.eval` 总是在内容脚本的上下文而非页面的上下文中运行代码。
 
 #### 在内容脚本之间共享变量

@@ -53,7 +53,7 @@ slug: Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow
 
 ## Summary
 
-In this guide we have covered the ways to take an element out of flow in order to achieve some very specific types of positioning. In the next guide we will look at a related issue, that of creating a [Block Formatting Context](/zh-CN/docs/Web/Guide/CSS/Block_formatting_context), in [Formatting Contexts Explained](/zh-CN/docs/Web/CSS/CSS_flow_layout/Formatting_Contexts_Explained).
+In this guide we have covered the ways to take an element out of flow in order to achieve some very specific types of positioning. In the next guide we will look at a related issue, that of creating a [Block Formatting Context](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context), in [Formatting Contexts Explained](/zh-CN/docs/Web/CSS/CSS_flow_layout/Formatting_Contexts_Explained).
 
 ## See Also
 

@@ -3,7 +3,7 @@ title: Intl.Collator.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/resolvedOptions
 ---
 
-{{JSRef("Global_Objects", "Collator", "Intl,DateTimeFormat,NumberFormat")}}
+{{JSRef}}
 
 ## Сводка
 

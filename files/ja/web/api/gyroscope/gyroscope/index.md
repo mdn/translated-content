@@ -16,7 +16,7 @@ new Gyroscope()
 new Gyroscope(options)
 ```
 
-### Parameters
+### 引数
 
 - `options` {{optional_inline}}
 

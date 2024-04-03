@@ -3,7 +3,7 @@ title: downloads.open()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/open
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 La fonction **`open()`** de l'API {{WebExtAPIRef("downloads")}} ouvre le fichier téléchargé avec son application associée. Un événement {{WebExtAPIRef("downloads.onChanged")}} se déclenche lorsque l'élément est ouvert pour la première fois.
 

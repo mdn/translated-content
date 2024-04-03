@@ -53,7 +53,7 @@ l10n:
 - [長さの単位 `q`](/ja/docs/Web/CSS/length#q) をサポートしました ([Firefox バグ 1274526](https://bugzil.la/1274526))。
 - {{cssxref("text-align-last")}} プロパティの接頭辞を削除しました ([Firefox バグ 1039541](https://bugzil.la/1039541))。
 - {{cssxref("overflow-wrap")}} をサポートしました。 `word-wrap` を置き換えるものですが、こちらも別名としてサポートを続けます ([Firefox バグ 955857](https://bugzil.la/955857))。
-- [CSS グリッド](/ja/docs/Web/CSS/CSS_Grid_Layout) の実験的な実装が進展しました。
+- [CSS グリッド](/ja/docs/Web/CSS/CSS_grid_layout) の実験的な実装が進展しました。
 
   - {{cssxref("&lt;percentage&gt;")}} を `grid-gap`、`grid-row-gap`、`grid-column-gap` プロパティで対応しました ([Firefox バグ 1266268](https://bugzil.la/1266268))。
   - {{cssxref("align")}}、{{cssxref("justify-self")}}`:baseline`、`last-baseline` ("baseline self-alignment" として知られる) でグリッドレイアウトをサポートしました ([Firefox バグ 1221525](https://bugzil.la/1221525))。
@@ -170,7 +170,7 @@ _変更なし。_
 
 ### プラグインと Flash
 
-Firefox 49 より、サイトが正しく機能するために必要ではない特定の種類の Flash コンテンツをデフォルトでブロックするようになりました。この動作は設定項目 `browser.safebrowsing.blockedURIs.enabled` で制御しており、サイトのユーザービリティに大きな影響を与えることなく、一般的にはサイトや Firefox のパフォーマンスを向上する助けになります。また、クラッシュの主要な原因を取り除くことにより、ブラウジング体験の安定性を向上する助けにもなります。ブロックされる Flash モジュールにはフィンガープリンティングのためだけに使用されるものやいくつかの "スーパー Cookie" モジュールが含まれまており、将来はより多くの種類のモジュールをブロックするように拡張するでしょう。詳しくは [Firefox バグ 1275591](https://bugzil.la/1275591) をご覧ください。
+Firefox 49 より、サイトが正しく機能するために必要ではない特定の種類の Flash コンテンツをデフォルトでブロックするようになりました。この動作は設定項目 `browser.safebrowsing.blockedURIs.enabled` で制御しており、サイトのユーザビリティに大きな影響を与えることなく、一般的にはサイトや Firefox のパフォーマンスを向上する助けになります。また、クラッシュの主要な原因を取り除くことにより、ブラウジング体験の安定性を向上する助けにもなります。ブロックされる Flash モジュールにはフィンガープリンティングのためだけに使用されるものやいくつかの "スーパー Cookie" モジュールが含まれまており、将来はより多くの種類のモジュールをブロックするように拡張するでしょう。詳しくは [Firefox バグ 1275591](https://bugzil.la/1275591) をご覧ください。
 
 これはプラグインがない未来への行程の、次のステップになります。機能を果たすためにプラグインを必要としない段階に、HTML はとても近づいています。
 

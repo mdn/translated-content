@@ -3,7 +3,7 @@ title: ファイルの操作
 slug: Mozilla/Add-ons/WebExtensions/Working_with_files
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 拡張機能にて完全な機能を提供するのにファイルを操作する必要があるかもしれません。この記事ではファイルを扱うための 5 つのメカニズムを見ていきます:
 

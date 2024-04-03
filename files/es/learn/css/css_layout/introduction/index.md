@@ -61,7 +61,7 @@ El flujo normal es el modo como el navegador presenta las páginas HTML de forma
 
 Por defecto, el navegador mostrará este código de la manera siguiente:
 
-{{ EmbedLiveSample('Normal_flow', '100%', 200) }}
+{{ EmbedLiveSample('Flujo normal', '100%', 200) }}
 
 Observa aquí cómo se muestra el HTML en el orden exacto en que aparece en el código fuente, con los elementos uno debajo del otro: el primer párrafo, seguido de la lista desordenada, y a continuación el segundo párrafo.
 
@@ -90,6 +90,8 @@ Además de poder cambiar la presentación predeterminada de un elemento `block` 
 ## Flexbox
 
 Flexbox es el nombre corto del [módulo de diseño de cajas flexibles](/es/docs/Web/CSS/CSS_Flexible_Box_Layout), pensado para facilitarnos la distribución de las cosas en una dimensión, ya sea como una fila o como una columna. Para usar el método Flexbox, aplica `display: flex` al elemento padre de los elementos que deseas distribuir; todos sus elementos hijo directos se convierten en elementos flexibles. Vamos a verlo en un ejemplo sencillo.
+
+### Establecer display: flex
 
 El marcado HTML siguiente nos proporciona un elemento contenedor con una clase `wrapper` dentro del cual hay tres elementos {{htmlelement ("div")}}. Por defecto, estos elementos se mostrarían como elementos de bloque, uno debajo del otro, en nuestro documento en español.
 
@@ -121,13 +123,13 @@ Sin embargo, si añadimos `display: flex` al elemento padre, los tres elementos 
 </div>
 ```
 
-{{ EmbedLiveSample('Flex_1', '300', '200') }}
+{{ EmbedLiveSample('Establecer display: flex', '300', '200') }}
+
+### Establecer la propiedad flex
 
 Además de las propiedades anteriores, que pueden aplicarse a contenedores flexibles, también hay propiedades que pueden aplicarse a los elementos flexibles. Estas propiedades, entre otras cosas, pueden cambiar el comportamiento de estos elementos flexibles y permitirles expandirse y contraerse para adaptarse al espacio disponible.
 
 Como un ejemplo sencillo de esto podemos añadir la propiedad {{cssxref ("flex")}} a todos nuestros elementos secundarios, con un valor de `1`. Esto hará que todos los elementos crezcan y llenen el contenedor, en lugar de dejar espacio al final. Si hay más espacio, los artículos se ensancharán; si hay menos espacio, se volverán más estrechos. Además, si añades al código otro elemento, todos los elementos se volverán más pequeños para dejarle espacio; ajustarán el tamaño para ocupar la misma cantidad de espacio, cualquiera que sea.
-
-## Ejemplo
 
 ```css hidden
 * {
@@ -159,13 +161,15 @@ Como un ejemplo sencillo de esto podemos añadir la propiedad {{cssxref ("flex")
 </div>
 ```
 
-{{ EmbedLiveSample('Flex_2', '300', '200') }}
+{{ EmbedLiveSample('Establecer la propiedad flex', '300', '200') }}
 
 > **Nota:** Esta ha sido una breve introducción de lo que permite el método Flexbox. Para obtener más información, consulta nuestro artículo sobre [Flexbox](/es/docs/Learn/CSS/CSS_layout/Flexbox).
 
 ## Diseño de cuadrícula
 
 Mientras que el método Flexbox está pensado para distribuir elementos unidimensionalmente, el diseño de cuadrícula está diseñado para distribuir elementos en dos dimensiones: alinear elementos en filas y columnas.
+
+### Establecer display: grid
 
 Una vez más, puedes activar el diseño de páginas web en cuadrícula con un valor de visualización específico: `display: grid`. El ejemplo siguiente utiliza un marcado similar al del ejemplo del método Flexbox, con un contenedor y algunos elementos secundarios. Además de usar `display: grid`, también definimos algunos tramos de filas y columnas en el elemento padre con las propiedades {{cssxref("grid-template-rows")}} y {{cssxref("grid-template-columns")}}. Hemos definido tres columnas, cada una de `1fr`, y dos filas de `100px`. No necesitamos poner ninguna regla sobre los elementos secundarios porque se colocan automáticamente en las celdas que nuestra cuadrícula ha creado.
 
@@ -201,11 +205,11 @@ Una vez más, puedes activar el diseño de páginas web en cuadrícula con un va
 </div>
 ```
 
-{{ EmbedLiveSample('Grid_1', '300', '330') }}
+{{ EmbedLiveSample('Establecer display: grid', '300', '330') }}
+
+### Colocar elementos en la cuadrícula
 
 Cuando ya tienes una cuadrícula, se puede colocar tus elementos en ella explícitamente en lugar de confiar en el comportamiento de colocación automática que hemos visto arriba. En el segundo ejemplo, hemos definido la misma cuadrícula, pero esta vez con tres elementos secundarios. Hemos establecido la línea de inicio y final de cada elemento con las propiedades {{cssxref ("grid-column")}} y {{cssxref ("grid-row")}}. Esto hace que los elementos abarquen varios tramos.
-
-## Ejemplo
 
 ```css hidden
 * {
@@ -251,7 +255,7 @@ Cuando ya tienes una cuadrícula, se puede colocar tus elementos en ella explíc
 </div>
 ```
 
-{{ EmbedLiveSample('Grid_2', '300', '330') }}
+{{ EmbedLiveSample('Colocar elementos en la cuadrícula', '300', '330') }}
 
 > **Nota:** Estos dos ejemplos son solo una pequeña parte del poder del diseño de cuadrículas; para obtener más información, consulta nuestro artículo sobre [Diseñar cuadrículas](/es/docs/Learn/CSS/CSS_layout/Grids).
 
@@ -317,7 +321,7 @@ p {
 }
 ```
 
-{{ EmbedLiveSample('Float_1', '100%', 600) }}
+{{ EmbedLiveSample('Floats', '100%', 600) }}
 
 > **Nota:** El método de flotación se explica al completo en nuestro artículo sobre [las propiedades float y clear](/es/docs/Learn/CSS/CSS_layout/Floats). El método de flotación es el que se usaba para crear diseños de columnas antes de la aparición de técnicas como los métodos Flexbox y diseño en rejillas. En la red aún puedes toparte con estos métodos. Vamos a exponer todo esto en el artículo sobre [métodos de diseño heredados](/es/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods).
 
@@ -366,7 +370,7 @@ p {
 
 La salida que se obtiene es la siguiente:
 
-{{ EmbedLiveSample('Simple_positioning_example', '100%', 300) }}
+{{ EmbedLiveSample('Ejemplo sencillo de posicionamiento', '100%', 300) }}
 
 ### El posicionamiento relativo
 
@@ -405,19 +409,14 @@ p {
   margin: 10px;
   border-radius: 5px;
 }
-```
 
-```css
 .positioned {
-  position: relative;
-  background: rgba(255, 84, 104, 0.3);
-  border: 2px solid rgb(255, 84, 104);
-  top: 30px;
-  left: 30px;
+  background: rgb(255 84 104 / 30%);
+  border: 2px solid rgb(255 84 104);
 }
 ```
 
-{{ EmbedLiveSample('Relative_1', '100%', 300) }}
+{{ EmbedLiveSample('El posicionamiento relativo', '100%', 300) }}
 
 ### El posicionamiento absoluto
 
@@ -456,19 +455,14 @@ p {
   margin: 10px;
   border-radius: 5px;
 }
-```
 
-```css
 .positioned {
-  position: absolute;
-  background: rgba(255, 84, 104, 0.3);
-  border: 2px solid rgb(255, 84, 104);
-  top: 30px;
-  left: 30px;
+  background: rgb(255 84 104 / 30%);
+  border: 2px solid rgb(255 84 104);
 }
 ```
 
-{{ EmbedLiveSample('Absolute_1', '100%', 300) }}
+{{ EmbedLiveSample('El posicionamiento absoluto', '100%', 300) }}
 
 ¡Este resultado es muy diferente! El elemento posicionado ahora se ha separado por completo del resto del diseño de la página y se superpone encima de este. Los otros dos párrafos ahora se asientan juntos, como si su hermano con posicionamiento absoluto no existiera. Las propiedades {{cssxref ("top")}} y {{cssxref ("left")}} tienen un efecto diferente en elementos con posicionamiento absoluto que en elementos con posicionamiento relativo. En este caso, los desplazamientos se han calculado desde la parte superior e izquierda de la página. Es posible cambiar el elemento padre para que se convierta en este tipo de contenedor, y lo veremos en el artículo sobre [posicionamiento](/es/docs/Learn/CSS/CSS_layout/Positioning).
 
@@ -479,18 +473,6 @@ El posicionamiento fijo elimina nuestro elemento del flujo de documentos de la m
 En este ejemplo nuestro HTML tiene tres párrafos de texto para poder tener una página que se desplace, y un cuadro al que asignamos la propiedad `position: fixed`.
 
 ```html
-<h1>Posicionamiento fijo</h1>
-
-<div class="positioned">Fijo</div>
-
-<p>Párrafo 1.</p>
-<p>Párrafo 2.</p>
-<p>Párrafo 3.</p>
-```
-
-## Ejemplo
-
-```html hidden
 <h1>Posicionamiento fijo</h1>
 
 <div class="positioned">Fijo</div>
@@ -553,7 +535,7 @@ body {
 }
 ```
 
-{{ EmbedLiveSample('Fixed_1', '100%', 200) }}
+{{ EmbedLiveSample('Posicionamiento fijo', '100%', 200) }}
 
 ### Posicionamiento pegajoso
 
@@ -622,7 +604,7 @@ body {
 }
 ```
 
-{{ EmbedLiveSample('Sticky_1', '100%', 200) }}
+{{ EmbedLiveSample('Posicionamiento pegajoso', '100%', 200) }}
 
 > **Nota:** para obtener más información sobre el posicionamiento, consulta nuestro artículo [Posicionamiento](/es/docs/Learn/CSS/CSS_layout/Positioning).
 
@@ -699,7 +681,7 @@ form p {
 
 Esto nos da el resultado siguiente:
 
-{{ EmbedLiveSample('Table_layout', '100%', '170') }}
+{{ EmbedLiveSample('Diseño de tablas', '100%', '170') }}
 
 También puedes ver este ejemplo en vivo en [css-tables-example.html](https://mdn.github.io/learning-area/css/styling-boxes/box-model-recap/css-tables-example.html) (ver el [código fuente](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/box-model-recap/css-tables-example.html)).
 
@@ -712,19 +694,6 @@ Para convertir un bloque en un contenedor, utilizamos la propiedad {{cssxref ("c
 En el ejemplo siguiente comenzamos con un bloque de HTML dentro de un elemento `<div>` que contiene una clase `container`.
 
 ```html
-<div class="container">
-  <h1>Diseño en columnas</h1>
-
-  <p>Párrafo 1.</p>
-  <p>Párrafo 2.</p>
-</div>
-```
-
-## Ejemplo
-
-Utilizamos un `column-width` de 200 píxeles en ese contenedor, que crea en el navegador tantas columnas de 200 píxeles como quepan en el contenedor y luego comparte el espacio restante entre las columnas creadas.
-
-```html hidden
 <div class="container">
   <h1>Diseño en columnas</h1>
 
@@ -766,7 +735,7 @@ body {
 }
 ```
 
-{{ EmbedLiveSample('Multicol_1', '100%', 200) }}
+{{ EmbedLiveSample('Diseño en columnas', '100%', 200) }}
 
 ## Resumen
 

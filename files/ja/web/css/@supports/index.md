@@ -23,6 +23,8 @@ slug: Web/CSS/@supports
 }
 ```
 
+{{EmbedInteractiveExample("pages/tabbed/at-rule-supports.html", "tabbed-standard")}}
+
 JavaScript では `@supports` は CSS オブジェクトモデルインターフェイスの {{DOMxRef("CSSSupportsRule")}} からアクセスできます。
 
 ## 構文

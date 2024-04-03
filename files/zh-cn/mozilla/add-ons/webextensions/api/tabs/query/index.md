@@ -3,7 +3,7 @@ title: tabs.query()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/query
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 获取具有指定属性的所有标签页，如果未指定任何属性，则获取所有标签页。
 

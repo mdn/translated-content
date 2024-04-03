@@ -89,6 +89,6 @@ slug: Web/Manifest
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}

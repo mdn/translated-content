@@ -462,7 +462,7 @@ textarea.onkeyup = function () {
 
 ## Abréviations
 
-Un autre élément assez commun rencontré en se promenant dans le Web est l'élément {{htmlelement("abbr")}}}}. Il s'utilise pour entourer une abréviation ou un acronyme et donner le développement complet du terme (inclus dans un attribut [`title`](/fr/docs/Web/HTML/Global_attributes#title)}. Voyons quelques exemples :
+Un autre élément assez commun rencontré en se promenant dans le Web est l'élément {{htmlelement("abbr")}}. Il s'utilise pour entourer une abréviation ou un acronyme et donner le développement complet du terme (inclus dans un attribut [`title`](/fr/docs/Web/HTML/Global_attributes#title)). Voyons quelques exemples :
 
 ```html
 <p>
@@ -703,7 +703,7 @@ Ce code se présente ainsi&nbsp;:
 
 ## Balisage des heures et dates
 
-HTML fournit également l'élément {{htmlelement("time")}}} pour marquer les heures et les dates dans un format lisible par machine. Par exemple :
+HTML fournit également l'élément {{htmlelement("time")}} pour marquer les heures et les dates dans un format lisible par machine. Par exemple :
 
 ```html
 <time datetime="2016-01-20">20 janvier 2016</time>
@@ -721,7 +721,7 @@ En quoi est-ce utile ? Eh bien, il y a beaucoup de façons différentes dont les
 - 2016 年 1 月 20 日
 - etc.
 
-Mais ces différents formes ne sont pas facilement reconnaissables par les ordinateurs — que se passerait‑il si vous vouliez saisir automatiquement les dates de tous les événements dans une page et les insérer dans un calendrier ? L'élément {{htmlelement("time")}}} vous permettra d'attacher un horodatage non ambigu lisible par machine à cette fin.
+Mais ces différents formes ne sont pas facilement reconnaissables par les ordinateurs — que se passerait‑il si vous vouliez saisir automatiquement les dates de tous les événements dans une page et les insérer dans un calendrier ? L'élément {{htmlelement("time")}} vous permettra d'attacher un horodatage non ambigu lisible par machine à cette fin.
 
 L'exemple de base ci-dessus ne fournit qu'une simple date lisible par machine, mais il y a beaucoup d'autres options possibles, par exemple :
 

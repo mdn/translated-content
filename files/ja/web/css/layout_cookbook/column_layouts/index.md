@@ -109,4 +109,4 @@ slug: Web/CSS/Layout_cookbook/Column_layouts
 
 - [段組みレイアウトのガイド](/ja/docs/Web/CSS/CSS_Columns)
 - [フレックスボックスのガイド](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)
-- [CSS グリッドレイアウトのガイド](/ja/docs/Web/CSS/CSS_Grid_Layout)
+- [CSS グリッドレイアウトのガイド](/ja/docs/Web/CSS/CSS_grid_layout)

@@ -56,7 +56,7 @@ console.log("Back to the outer level");
 
 {{Specifications}}
 
-## Поддержка в браузерах
+## Совместимость с браузерами
 
 {{Compat}}
 

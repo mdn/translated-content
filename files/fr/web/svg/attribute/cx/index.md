@@ -42,17 +42,9 @@ Pour un élément {{SVGElement('circle')}}, `cx` définit la coordonnée x de so
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
-      <td>
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
-        >
-        |
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Percentage"
-            >&#x3C;percentage></a
-          ></strong
-        >
-      </td>
+      <td><a href="/fr/docs/Web/CSS/length-percentage">
+        <code>&lt;length-percentage&gt;</code>
+      </a></td>
     </tr>
     <tr>
       <th scope="row">Valeur par défaut</th>
@@ -75,17 +67,9 @@ Pour un élément {{SVGElement('ellipse')}}, `cx` définit la coordonnées x de 
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
-      <td>
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
-        >
-        |
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Percentage"
-            >&#x3C;percentage></a
-          ></strong
-        >
-      </td>
+      <td><a href="/fr/docs/Web/CSS/length-percentage">
+        <code>&lt;length-percentage&gt;</code>
+      </a></td>
     </tr>
     <tr>
       <th scope="row">Valeur par défaut</th>
@@ -108,11 +92,9 @@ Pour un élément {{SVGElement('radialGradient')}}, `cx` définit la coordonnée
   <tbody>
     <tr>
       <th scope="row">Valeur</th>
-      <td>
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
-        >
-      </td>
+      <td><a href="/fr/docs/Web/CSS/length-percentage">
+        <code>&lt;length-percentage&gt;</code>
+      </a></td>
     </tr>
     <tr>
       <th scope="row">Valeur par défaut</th>
@@ -186,3 +168,8 @@ svg {
 ## Spécifications
 
 {{Specifications}}
+
+## Voir aussi
+
+- [`cy`](/fr/docs/Web/SVG/Attribute/cy)
+- [`r`](/fr/docs/Web/SVG/Attribute/r)

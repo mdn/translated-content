@@ -41,13 +41,7 @@ Web Storage API предоставляет механизмы, при помощ
 | ------------------------------------------------------------------------------------------------------ |
 | [HTML Living Standard # webstorage](https://html.spec.whatwg.org/multipage/webstorage.html#webstorage) |
 
-## Поддержка браузерами
-
-### `Window.localStorage`
-
-{{Compat}}
-
-### `Window.sessionStorage`
+## Совместимость с браузерами
 
 {{Compat}}
 

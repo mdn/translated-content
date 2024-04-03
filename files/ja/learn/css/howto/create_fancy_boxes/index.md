@@ -1,6 +1,8 @@
 ---
 title: 装飾的なボックスの作成
 slug: Learn/CSS/Howto/Create_fancy_boxes
+l10n:
+  sourceCommit: 289d6314f3368aa3e28524e7d090f6e9c704e3b1
 ---
 
 {{LearnSidebar}}
@@ -70,11 +72,11 @@ CSS ボックスは、CSS で装飾されたウェブページの構成要素で
 
 ## 背景
 
-装飾的なボックスについて話すとき、それを扱うための中心的なプロパティは [background-\* プロパティ](/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders)です。 背景をいじり始めると、CSS ボックスはあなたが満たすための空白のキャンバスになります。
+装飾的なボックスについて話すとき、それを扱うための中心的なプロパティは [background-\* プロパティ](/ja/docs/Web/CSS/CSS_backgrounds_and_borders)です。 背景をいじり始めると、CSS ボックスはあなたが満たすための空白のキャンバスになります。
 
 いくつかの実用的な例に進む前に、背景について知っておくべきことが 2 つあるので、少し後退しましょう。
 
-- 一つのボックスに[複数の背景](/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)を設定することが可能です。 それらは層のように互いの上に積み重ねられています。
+- 一つのボックスに[複数の背景](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)を設定することが可能です。 それらは層のように互いの上に積み重ねられています。
 - 背景は単色や画像のどちらでもかまいません。 単色は常に表面全体を塗りつぶしますが、画像は拡大縮小して配置することができます。
 
 ```html hidden
@@ -83,7 +85,7 @@ CSS ボックスは、CSS で装飾されたウェブページの構成要素で
 
 さて、背景を楽しんでみましょう。
 
-```css
+```css-nolint
 .fancy {
   padding: 1em;
   width: 100%;
@@ -99,34 +101,24 @@ CSS ボックスは、CSS で装飾されたウェブページの構成要素で
      お気づきのとおり、
      色のグラデーションは画像と見なされ、
      そのように操作することができます。 */
-  background-image: linear-gradient(175deg, rgba(0, 0, 0, 0) 95%, #8da389 95%),
-    linear-gradient(85deg, rgba(0, 0, 0, 0) 95%, #8da389 95%), linear-gradient(
-      175deg,
-      rgba(0, 0, 0, 0) 90%,
-      #b4b07f 90%
-    ), linear-gradient(85deg, rgba(0, 0, 0, 0) 92%, #b4b07f 92%),
-    linear-gradient(175deg, rgba(0, 0, 0, 0) 85%, #c5a68e 85%), linear-gradient(
-      85deg,
-      rgba(0, 0, 0, 0) 89%,
-      #c5a68e 89%
-    ), linear-gradient(175deg, rgba(0, 0, 0, 0) 80%, #ba9499 80%),
-    linear-gradient(85deg, rgba(0, 0, 0, 0) 86%, #ba9499 86%), linear-gradient(
-      175deg,
-      rgba(0, 0, 0, 0) 75%,
-      #9f8fa4 75%
-    ), linear-gradient(85deg, rgba(0, 0, 0, 0) 83%, #9f8fa4 83%),
-    linear-gradient(175deg, rgba(0, 0, 0, 0) 70%, #74a6ae 70%), linear-gradient(85deg, rgba(
-          0,
-          0,
-          0,
-          0
-        ) 80%, #74a6ae 80%);
+  background-image: linear-gradient(175deg, rgb(0 0 0 / 0%) 95%, #8da389 95%),
+                    linear-gradient( 85deg, rgb(0 0 0 / 0%) 95%, #8da389 95%),
+                    linear-gradient(175deg, rgb(0 0 0 / 0%) 90%, #b4b07f 90%),
+                    linear-gradient( 85deg, rgb(0 0 0 / 0%) 92%, #b4b07f 92%),
+                    linear-gradient(175deg, rgb(0 0 0 / 0%) 85%, #c5a68e 85%),
+                    linear-gradient( 85deg, rgb(0 0 0 / 0%) 89%, #c5a68e 89%),
+                    linear-gradient(175deg, rgb(0 0 0 / 0%) 80%, #ba9499 80%),
+                    linear-gradient( 85deg, rgb(0 0 0 / 0%) 86%, #ba9499 86%),
+                    linear-gradient(175deg, rgb(0 0 0 / 0%) 75%, #9f8fa4 75%),
+                    linear-gradient( 85deg, rgb(0 0 0 / 0%) 83%, #9f8fa4 83%),
+                    linear-gradient(175deg, rgb(0 0 0 / 0%) 70%, #74a6ae 70%),
+                    linear-gradient( 85deg, rgb(0 0 0 / 0%) 80%, #74a6ae 80%);
 }
 ```
 
 {{ EmbedLiveSample('Backgrounds', '100%', '200') }}
 
-> **メモ:** グラデーションは、非常に独創的な方法で使用できます。 あなたがクレイジーな例を見たいのなら、[Lea Verou の CSS パターン](https://projects.verou.me/css3patterns/)（英語）を見てください。グラデーションについてもっと知りたい場合は、気軽に[専用の記事](/ja/docs/Web/CSS/CSS_Images/Using_CSS_gradients)を見てください。
+> **メモ:** グラデーションは、非常に独創的な方法で使用できます。 あなたがクレイジーな例を見たいのなら、[Lea Verou の CSS パターン](https://projects.verou.me/css3patterns/)（英語）を見てください。グラデーションについてもっと知りたい場合は、気軽に[専用の記事](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients)を見てください。
 
 ## 擬似要素
 

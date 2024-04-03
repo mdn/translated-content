@@ -43,8 +43,6 @@ Como se puede observar, aunque primero llamamos a la función en el código, ant
 
 Hoisting se lleva también bien con otros tipos de datos y variables. Observemos el siguiente ejemplo:
 
-### Ejemplo técnico
-
 ```js
 var x = 5;
 

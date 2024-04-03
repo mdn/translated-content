@@ -3,7 +3,7 @@ title: management.getAll()
 slug: Mozilla/Add-ons/WebExtensions/API/management/getAll
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Récupère un ensemble d'objets {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}}, un pour chaque extension installé.
 

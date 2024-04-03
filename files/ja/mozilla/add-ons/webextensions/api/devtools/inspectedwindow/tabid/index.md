@@ -3,7 +3,7 @@ title: devtools.inspectedWindow.tabId
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/tabId
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 devtools のこのインスタンスがアタッチされる {{WebExtAPIRef("tabs.Tab", "tab")}} の ID。番号で表されます。
 
@@ -34,7 +34,7 @@ function handleMessage(request, sender, sendResponse) {
 browser.runtime.onMessage.addListener(handleMessage);
 ```
 
-## ブラウザの対応状況
+## ブラウザーの対応状況
 
 {{Compat}}
 

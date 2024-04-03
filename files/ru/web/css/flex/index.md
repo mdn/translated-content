@@ -116,7 +116,7 @@ flex.addEventListener("click", function () {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

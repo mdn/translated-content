@@ -3,7 +3,7 @@ title: Math.acosh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/acosh
 ---
 
-{{JSRef("Global_Objects", "Math")}}
+{{JSRef}}
 
 ## Сводка
 

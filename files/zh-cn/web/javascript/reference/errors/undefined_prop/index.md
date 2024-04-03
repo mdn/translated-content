@@ -1,11 +1,15 @@
 ---
 title: 'ReferenceError: reference to undefined property "x"'
 slug: Web/JavaScript/Reference/Errors/Undefined_prop
+l10n:
+  sourceCommit: 6d606174faaedaa5dee7b7ebd87602cd51e5dd7e
 ---
 
 {{jsSidebar("Errors")}}
 
-## 信息
+当脚本尝试去访问一个不存在的对象属性时，就会出现 JavaScript 警告“reference to undefined property”。
+
+## 消息
 
 ```plain
 ReferenceError: reference to undefined property "x" (Firefox)
@@ -13,48 +17,42 @@ ReferenceError: reference to undefined property "x" (Firefox)
 
 ## 错误类型
 
-仅在 [strict mode](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode) 下出现 {{jsxref("ReferenceError")}} 警告。
+（仅限 Firefox）仅在 `javascript.options.strict` 首选项设置为 `true` 的情况下会出现 {{jsxref("ReferenceError")}} 警告。
 
 ## 哪里出错了？
 
-脚本尝试去访问一个不存在的对象属性。[property accessors](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors) 页面描述了两种访问属性的方法。
-
-引用未定义属性的错误仅出现在 [strict mode](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode) 代码中。在非严格代码中，对不存在的属性的访问将被忽略。
+脚本尝试去访问一个不存在的对象属性。有两种方法可以访问属性，请参阅[属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)参考页以获取更多信息。
 
 ## 示例
 
 ### 无效的
 
-本例中，`bar` 属性是未定义的，隐藏 `ReferenceError` 会出现。
+本例中，`bar` 属性是未定义的，因此会出现 `ReferenceError`。
 
 ```js example-bad
-"use strict";
-
-var foo = {};
+const foo = {};
 foo.bar; // ReferenceError: reference to undefined property "bar"
 ```
 
-### 无效的
+### 有效的
 
-为了避免错误，你需要向对象添加 `bar` 的定义或在尝试访问 `bar` 属性之前检查 `bar` 属性的存在；一种检查的方式是使用 {{jsxref("Object.prototype.hasOwnProperty()")}} 方法。如下所示：
+为了避免错误，你需要向对象添加 `bar` 的定义或在尝试访问 `bar` 属性之前检查 `bar` 属性是否存在；可以使用 {{jsxref("Operators/in", "in")}} 运算符或 {{jsxref("Object.hasOwn()")}} 方法来实现，如下所示：
 
 ```js example-good
-"use strict";
+const foo = {};
 
-var foo = {};
-
-// Define the bar property
+// 定义 bar 属性
 
 foo.bar = "moon";
 console.log(foo.bar); // "moon"
 
-// Test to be sure bar exists before accessing it
+// 在访问 bar 属性之前测试其是否存在
 
-if (foo.hasOwnProperty("bar") {
+if (Object.hasOwn(foo, "bar")) {
   console.log(foo.bar);
 }
 ```
 
-## 相关
+## 参见
 
-- [Strict mode](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)
+- [属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)

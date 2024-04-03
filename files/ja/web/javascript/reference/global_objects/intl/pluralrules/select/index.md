@@ -7,6 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/select
 
 **`Intl.PluralRules.prototype.select()`** メソッドは、ロケールを考慮した書式設定に使用する複数形ルールを示す文字列を返します。
 
+{{EmbedInteractiveExample("pages/js/intl-pluralrules-prototype-select.html")}}
+
 ## 構文
 
 ```js

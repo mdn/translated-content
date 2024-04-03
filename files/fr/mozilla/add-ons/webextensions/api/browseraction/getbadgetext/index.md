@@ -3,7 +3,7 @@ title: browserAction.getBadgeText()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/getBadgeText
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Obtient le texte du badge de l'action du navigateur.
 

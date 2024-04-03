@@ -3,7 +3,7 @@ title: i18n.detectLanguage()
 slug: Mozilla/Add-ons/WebExtensions/API/i18n/detectLanguage
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 提供されたテキストの言語を [Compact Language Detector](https://github.com/CLD2Owners/cld2) (CLD) を利用して検出します。
 

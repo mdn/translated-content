@@ -106,5 +106,5 @@ document.querySelector(".runButton").addEventListener("click", play, false);
 
 ## 参见
 
-- [Using CSS transitions](/zh-CN/docs/Web/Guide/CSS/Using_CSS_transitions)
+- [使用 CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - {{domxref("Window.requestAnimationFrame()")}}

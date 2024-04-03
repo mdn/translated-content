@@ -129,7 +129,7 @@ slug: Web/HTML/Element/dialog
 
 {{Specifications}}
 
-## Совместимость в браузерах
+## Совместимость с браузерами
 
 {{Compat}}
 

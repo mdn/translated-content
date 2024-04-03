@@ -3,7 +3,7 @@ title: Math
 slug: Web/JavaScript/Reference/Global_Objects/Math
 ---
 
-{{JSRef("Global_Objects", "Math")}}
+{{JSRef}}
 
 **Math** é um objeto embutido que tem propriedades e métodos para constantes e funções matemáticas. Não é um objeto de função.
 

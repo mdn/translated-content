@@ -73,7 +73,7 @@ fetch(myRequest)
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -1,17 +1,21 @@
 ---
 title: unset
 slug: Web/CSS/unset
+l10n:
+  sourceCommit: 13c58b0430c3972566ea2d3a254129c18b1ed800
 ---
 
 {{CSSRef}}
 
-**`unset`** は CSS のキーワードで、プロパティをリセットし、親から自然に継承された場合は継承値、そうでなければ[初期値](/ja/docs/Web/CSS/initial_value)を設定します。言い換えれば、前者の[継承プロパティ](/ja/docs/Web/CSS/inheritance#inherited_properties)の場合は {{cssxref("inherit")}} キーワードのように動作し、後者の[非継承プロパティ](/ja/docs/Web/CSS/inheritance#non-inherited_properties)の場合は {{cssxref("initial")}} キーワードのように動作します。
+**`unset`** は CSS のキーワードで、プロパティをリセットし、親から自然に継承された場合は継承値、そうでなければ[初期値](/ja/docs/Web/CSS/initial_value)を設定します。言い換えれば、前者の[継承プロパティ](/ja/docs/Web/CSS/Inheritance#継承プロパティ)の場合は {{cssxref("inherit")}} キーワードのように動作し、後者の[非継承プロパティ](/ja/docs/Web/CSS/Inheritance#非継承プロパティ)の場合は {{cssxref("initial")}} キーワードのように動作します。
 
 **`unset`** は一括指定の {{cssxref("all")}} を含む、あらゆる CSS プロパティに対して適用することができます。
 
 ## 例
 
 ### 色
+
+[`color`](/ja/docs/Web/CSS/color#formal_definition) は継承プロパティです。
 
 #### HTML
 
@@ -31,6 +35,7 @@ slug: Web/CSS/unset
 .foo {
   color: blue;
 }
+
 .bar {
   color: green;
 }
@@ -38,6 +43,7 @@ slug: Web/CSS/unset
 p {
   color: red;
 }
+
 .bar p {
   color: unset;
 }
@@ -48,6 +54,8 @@ p {
 {{ EmbedLiveSample('Color') }}
 
 ### 境界線
+
+[`border`](/ja/docs/Web/CSS/border#formal_definition) は非継承プロパティです。
 
 #### HTML
 
@@ -92,6 +100,7 @@ p {
 ## 関連情報
 
 - {{cssxref("initial")}} を使用すると、プロパティを初期値に設定します。
-- {{cssxref("revert")}} を使用すると、プロパティをユーザーエージェントのスタイルシート（またはもしあれば、ユーザーのスタイル）で設定された値に初期化します。
-- {{cssxref("inherit")}} を使用すると、要素のプロパティを親と同じ値にします。
+- {{cssxref("inherit")}} キーワードを使用すると、要素のプロパティを親と同じ値にします。
+- {{cssxref("revert")}} キーワードを使用すると、プロパティをユーザーエージェントのスタイルシート（またはもしあれば、ユーザーのスタイル）で設定された値に初期化します。
+- {{cssxref("revert-layer")}} キーワードを使用すると、プロパティを直前のカスケードレイヤーで確立された値に戻します。
 - {{cssxref("all")}} プロパティは、すべてのプロパティを一度に initial, inherit, revert, unset の状態にします。

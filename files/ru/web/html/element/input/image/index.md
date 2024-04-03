@@ -63,7 +63,7 @@ slug: Web/HTML/Element/input/image
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

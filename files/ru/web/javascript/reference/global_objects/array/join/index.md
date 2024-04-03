@@ -3,7 +3,7 @@ title: Array.prototype.join()
 slug: Web/JavaScript/Reference/Global_Objects/Array/join
 ---
 
-{{JSRef("Global_Objects", "Array")}}
+{{JSRef}}
 
 ## Сводка
 

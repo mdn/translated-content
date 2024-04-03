@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 8d4f5dfc253d1d0181d72ce5debaf1bcc26112ef
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 새 탭을 만듭니다.
 

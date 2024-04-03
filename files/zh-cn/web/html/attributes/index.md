@@ -281,17 +281,6 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Global_attributes/contextmenu">contextmenu</a></code> {{non-standard_inline}} {{deprecated_inline}}
-      </td>
-      <td>
-        <a href="/zh-CN/docs/Web/HTML/Global_attributes">全局属性</a>
-      </td>
-      <td>
-        定义将用作元素上下文菜单的 {{ HTMLElement("menu") }} 元素的 ID。
-      </td>
-    </tr>
-    <tr>
-      <td>
         <code><a href="/zh-CN/docs/Web/HTML/Attributes/controls">controls</a></code>
       </td>
       <td>

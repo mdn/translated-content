@@ -385,7 +385,7 @@ STATIC_URL = '/static/'
 
 有关更多信息，请参阅 [Django 和静态资产](https://devcenter.heroku.com/articles/django-assets)（Heroku 文档）。
 
-Whitenoise
+#### Whitenoise
 
 有许多方法可以在生产环境中提供静态文件（我们在前面的部分中看到了相关的 Django 设置）。Heroku 建议在生产环境中使用 [WhiteNoise](https://warehouse.python.org/project/whitenoise/) 项目，直接从 Gunicorn 提供静态资产。
 
@@ -393,7 +393,7 @@ Whitenoise
 
 设置 WhiteNoise 以便在项目中使用的步骤如下：
 
-##### WhiteNoise
+##### 安装 WhiteNoise
 
 使用以下命令在本地安装 whitenoise：
 

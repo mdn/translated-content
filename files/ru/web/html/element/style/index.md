@@ -71,7 +71,7 @@ This element includes the [global attributes](/ru/docs/Web/HTML/Global_attribute
 
 {{Specifications}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 

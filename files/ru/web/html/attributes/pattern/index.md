@@ -142,7 +142,7 @@ While `title`s are used by some browsers to populate error messaging, because br
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

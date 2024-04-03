@@ -425,10 +425,6 @@ if (window.fetch) {
 }
 ```
 
-## Polyfill
-
-如果要在不支持的浏览器中使用 Fetch，可以使用 [Fetch Polyfill](https://github.com/github/fetch)。
-
 ## 参见
 
 - {{domxref("Service_Worker_API", "ServiceWorker API")}}

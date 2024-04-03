@@ -3,7 +3,7 @@ title: downloads.download()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/download
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 {{WebExtAPIRef("downloads")}} API 的 **`download()`** 函数根据给出的 URL 和其他首选项下载一个文件。
 

@@ -40,7 +40,7 @@ To avoid the default italic style from being used for the \<cite> element use th
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

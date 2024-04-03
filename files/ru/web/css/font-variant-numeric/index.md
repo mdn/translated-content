@@ -65,7 +65,7 @@ p {
 
 {{Specifications}}
 
-## Browser Compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

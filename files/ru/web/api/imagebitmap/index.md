@@ -23,7 +23,7 @@ slug: Web/API/ImageBitmap
 
 {{Specifications}}
 
-## Совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

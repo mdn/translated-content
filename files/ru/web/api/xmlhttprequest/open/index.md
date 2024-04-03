@@ -36,7 +36,7 @@ XMLHttpRequest.open(method, url[, async[, user[, password]]])
 
 {{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

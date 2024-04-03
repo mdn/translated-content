@@ -20,7 +20,7 @@ l10n:
 
 以下のコードでは、 {{domxref("History.pushState","pushState()")}} メソッドを使って値を履歴にプッシュしたときの `state` の値を記録しています。
 
-```js；
+```js
 // Log the state of
 addEventListener("popstate", (event) => {
   console.log("State received: ", event.state);

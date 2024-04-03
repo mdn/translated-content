@@ -1,44 +1,21 @@
 ---
 title: CSS グリッドレイアウトとプログレッシブエンハンスメント
 slug: Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement
+l10n:
+  sourceCommit: c51e0599ea09c0e6d035c635db9f48ad1f241490
 ---
 
 {{CSSRef}}
 
-2017 年春、グリッドのようなメジャーな仕様がほぼ同時にブラウザーに搭載されるのを初めて目の当たりにし、現在までに Firefox、Chrome、Opera、Safari、Edge の公式バージョンで CSS グリッドレイアウトに対応しています。しかし、現役のブラウザー、すなわち多くのユーザーがとてもすばやくグリッドレイアウトの対応にあずかれる一方で、古い対応していないブラウザーもあります。このガイドでは、対応のためのさまざまな戦略を説明します。
+2017 年春、グリッドのようなメジャーな仕様がほぼ同時にブラウザーに搭載されるのを初めて目の当たりにし、現在までに Firefox、Chrome、Opera、Safari、Edge の公式バージョンが CSS グリッドレイアウトに対応しています。しかし、現役のブラウザー、すなわち多くのユーザーがとてもすばやくグリッドレイアウトの対応にあずかれる一方で、古い対応していないブラウザーもあります。このガイドでは、対応のためのさまざまな戦略を説明します。
 
 ## 対応しているブラウザー
 
 Internet Explorer 以外の Safari、Chrome、Opera、Firefox、Edge では、CSS グリッドレイアウトはプリフィックスなしになっています。これらのガイドに記載されているすべてのプロパティと値は、ブラウザー間で相互運用可能です。つまり、Firefox でグリッドレイアウトのコードを書くと、 Chrome でも同じように動作するはずです。これはもはや実験的な仕様ではなく、本番環境でも安心して使用することができます。
 
-## Internet Explorer と Edge の状況
-
-CSS グリッドレイアウトの最初の実装は、 Internet Explorer 10 だったことを思い出してください。この初期の仕様には、最新の仕様が持つプロパティや値のすべてが含まれているわけではありませんでした。また、IE10 で実装されたものと現在の仕様では、プロパティや値が同じように見えても、かなりの違いがあります。このグリッドレイアウトの初期の実装は、バージョン 15 までの Edge でも実装されていました。
-
-IE/Edge (≤15) 版の仕様には、`-ms` という接頭辞がついており、IE/Edge (≤15) で実装されているプロパティは以下の通りです。
-
-- {{cssxref("grid-template-columns")}} は `-ms-grid-columns`
-- {{cssxref("grid-template-rows")}} は `-ms-grid-rows`
-- {{cssxref("grid-row-start")}} は `-ms-grid-row`
-- {{cssxref("grid-column-start")}} は `-ms-grid-column`
-- {{cssxref("align-self")}} は `-ms-grid-row-align`
-- {{cssxref("justify-self")}} は `-ms-grid-column-align`
-
-IE 版では、`-ms-grid-column-span` と `-ms-grid-row-span` の新しい仕様では必要のない追加のプロパティがあります。このバージョンには、自動配置機能や、グリッドのテンプレート領域は含まれていません。 IE10 から Edge 15 までは、`-ms` プロパティを使って、簡単なグリッドレイアウトを実装することができます。これらのプロパティはベンダーの接頭辞であるため、接頭辞なしの最新の仕様に対応しているブラウザーには影響しません。
-
-### Autoprefixer のグリッドレイアウトの対応
-
-人気のツール _[Autoprefixer](https://github.com/postcss/autoprefixer)_ が更新され、`-ms-` バージョンのグリッドに対応しました。既定ではグリッドの接頭辞は無効ですが、`grid: true` オプションで有効にすることができます。
-
-```js
-autoprefixer({ grid: "autoplace" });
-```
-
-グリッドの接頭辞は既定では無効になっています。なぜなら、接頭辞をつけることができないプロパティがあるからです。
-
 ## CSS のグリッドを使ってレイアウトしても大丈夫か
 
-他のフロントエンド技術の選択と同様に、 CSS グリッドレイアウトを使用するかどうかは、サイト訪問者が通常使用しているブラウザーによって決まります。 Firefox、Chrome、Opera、Safari の最新バージョンを使用している場合は、これらのブラウザーがアップデートされた時点で CSS グリッドの使用を開始するのがよいでしょう。しかし、サイトで古いブラウザーに縛られている市場を提供している場合は、まだ意味がないかもしれません。しかし、私が提案したいのは、過去にブラウザーで新しい仕様が展開されたことを前提にしないことです。 CSS Grid Layout は、開発期間の長さや、出荷されたものが誰でも同じように使えるようにするための各ブラウザベンダーの努力という点で、非常に異なっています。
+はい。他のフロントエンド技術と同様に、 CSS グリッドレイアウトを使用するかどうかは、サイト訪問者が通常使用しているブラウザーによります。
 
 ## 本番でグリッドの使用を始める
 
@@ -73,14 +50,16 @@ img {
   display: block;
   clear: both;
 }
+.media .text {
+  padding: 10px;
+  align-self: end;
+}
+
+/* old code we can't remove */
 .media .image {
   float: left;
   width: 150px;
   margin-right: 20px;
-}
-.media .text {
-  padding: 10px;
-  align-self: end;
 }
 ```
 
@@ -99,7 +78,7 @@ img {
 
 下の画像は、左が非対応のブラウザ、右が対応しているブラウザーでメディアオブジェクトを表示したものです。
 
-![グリッドを使って浮動レイアウトをオーバーライドする簡単な例です。](10-float-simple-override.png)
+![グリッドを使って浮動レイアウトを上書きする簡単な例です。どちらも画像は左に配置されています。テキストは、浮動要素の例では上部に、グリッドの例では下部に垂直に配置されています。](10-float-simple-override.png)
 
 ### 機能クエリーの使用
 
@@ -179,19 +158,19 @@ img {
 
 この例では、浮動レイアウトの典型的な問題として、 1 枚のカードにコンテンツを追加すると、レイアウトが崩れてしまいます。
 
-![浮動カードのレイアウトで、コンテンツの高さが不揃いになることによる問題を示しています。](10-floated-cards.png)
+![浮動カードのレイアウトで、コンテンツの高さが不揃いになることによる問題を示しています。最上段には 3 枚のカードがあります。 4 枚目のカードは 3 つ目のカードの下に浮いています。そして、下段には 5 枚目と 6 枚目のカードが格納されています。 4 枚目のカードの下には大きく空いた空間があります。](10-floated-cards.png)
 
 古いブラウザーへの配慮として、アイテムに {{cssxref("min-height")}} を設定し、コンテンツの編集者がコンテンツを追加しすぎてレイアウトを崩さないようにしています。
 
 次に、グリッドを使ってレイアウトを強化します。 {{HTMLElement("ul")}} を 3 列のトラックを持つグリッドコンテナーにすることができます。しかし、リストアイテムに割り当てた幅がまだ適用されており、それらのアイテムはトラックの幅の 3 分の 1 になってしまいます。
 
-![コンテナにグリッドを適用すると、アイテムの幅が正しくなく、アイテムの幅の 3 分の 1 で表示されるようになってしまいました。](10-float-width-problem.png)
+![6 つのとても背の高い、とても幅の狭いグリッドアイテムがあり、テキストが右に溢れています。コンテナーにグリッドを適用した後、アイテムの幅はアイテムの幅の 3 つ目で表示され、これで間違っています。](10-float-width-problem.png)
 
 幅を `auto` にリセットすると、古いブラウザーでは float の動作が行われなくなります。古いブラウザーでは幅を定義し、グリッドに対応しているブラウザーでは幅を削除できるようにする必要があります。[CSS 機能クエリー](/ja/docs/Web/CSS/@supports)のおかげで、CSS の中でこれを行うことができます。
 
 #### 機能クエリーを用いた解決策
 
-*機能クエリー*は、[メディアクエリー](/ja/docs/Web/CSS/Media_Queries)を使ってレスポンシブレイアウトを作成したことがある方にはとても親しみやすい形でしょう。ここでは、 {{glossary("viewport", "ビューポート")}}の幅や、ブラウザーや端末の機能をチェックするのではなく、 {{cssxref("@supports")}} のルールを使って、CSS のプロパティと値の組に対応しているかどうかをチェックします。機能クエリーの中では、最新のレイアウトを適用するために必要な CSS を記述し、古いレイアウトに必要なものは削除します。
+*機能クエリー*は、[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)を使ってレスポンシブレイアウトを作成したことがある方にはとても親しみやすい形でしょう。ここでは、 {{glossary("viewport", "ビューポート")}}の幅や、ブラウザーや端末の機能をチェックするのではなく、 {{cssxref("@supports")}} のルールを使って、CSS のプロパティと値の組に対応しているかどうかをチェックします。機能クエリーの中では、最新のレイアウトを適用するために必要な CSS を記述し、古いレイアウトに必要なものは削除します。
 
 ```css
 @supports (display: grid) {
@@ -378,7 +357,7 @@ img {
 
 ここでも必要なのはアイテムの幅であり、次に強化したいその他のプロパティです。この例では、マージンや負のマージンではなく、 `gap` を使用して溝を作成しています。
 
-## 仕様書ではどのようにオーバーライドを定義しているか
+## 仕様書ではどのように上書きを定義しているか
 
 CSS グリッドレイアウト仕様書では、グリッドアイテムになったときに、特定のプロパティの動作を上書きできる理由を詳しく説明しています。仕様書の主な項目は以下の通りです。
 
@@ -386,11 +365,11 @@ CSS グリッドレイアウト仕様書では、グリッドアイテムにな�
 - [グリッドアイテム](https://drafts.csswg.org/css-grid/#grid-items)
 - [グリッドアイテムの表示](https://drafts.csswg.org/css-grid/#grid-item-display)
 
-この動作は仕様に詳細が記載されているので、古いブラウザーに対応する際には、これらのオーバーライドを使用するのが安全です。ここで説明していることは何も「ハック」ではなく、グリッドの仕様が異なるレイアウトメソッド間の相互作用を詳細に説明していることを利用しています。
+この動作は仕様に詳細が記載されているので、古いブラウザーに対応する際には、これらの上書きを使用するのが安全です。ここで説明していることは何も「ハック」ではなく、グリッドの仕様が異なるレイアウトメソッド間の相互作用を詳細に説明していることを利用しています。
 
 ### display のその他の値
 
-要素の親が `display: grid` に設定されていると、 [CSS 表示仕様書](https://drafts.csswg.org/css-display-3/#blockify)で定義されているように、*ブロック化*になります。アイテムが `inline-block` に設定されている場合、 `display: inline-block` が適用されなくなったのはこのためです。
+要素の親が `display: grid` に設定されていると、 [CSS Display 仕様書](https://drafts.csswg.org/css-display-3/#blockify)で定義されているように、*ブロック化*になります。アイテムが `inline-block` に設定されている場合、 `display: inline-block` が適用されなくなったのはこのためです。
 
 古いレイアウトで `display: table` を使用している場合、 `display: table-cell` に設定されたアイテムは無名ボックスを生成します。そのため、親要素に `display-table` を設定せずに `display: table-cell` を使用すると、あたかも `display: table` を設定した div や他の要素でセルを囲んだかのように、隣接するセルの周りに無名の表のラッパーが生成されます。アイテムが `display: table-cell` に設定されていて、 機能クエリーでその親を `display: grid` に変更すると、 この無名ボックスの作成は行われません。つまり、`display: table` ベースのレイアウトを上書きしても、 無名ボックスが追加されることはありません。
 
@@ -408,7 +387,5 @@ CSS グリッドレイアウト仕様書では、グリッドアイテムにな�
 
 ## 参考資料
 
-- 機能クエリーの優れた説明と、その上手な使い方については、 [Using Feature Queries in CSS](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/) を参照してください。
-- IE/Edge (≤15) のグリッド実装と最新の実装の違いについて、_autoprefixer_ の対応も含めて書かれていますので、こちらもご覧ください。_[Should I try to use the IE implementation of CSS Grid Layout?](https://rachelandrew.co.uk/archives/2016/11/26/should-i-try-to-use-the-ie-implementation-of-css-grid-layout/)_
-- [Autoprefixer and Grid Autoplacement support in IE](https://github.com/postcss/autoprefixer#grid-autoplacement-support-in-ie)
-- [CSS Grid and the New Autoprefixer](https://css-tricks.com/css-grid-in-ie-css-grid-and-the-new-autoprefixer)
+- 機能クエリーの優れた説明と、その上手な使い方については、 [Using Feature Queries in CSS (2016)](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/) を参照してください。
+- [CSS Grid and the New Autoprefixer (2018)](https://css-tricks.com/css-grid-in-ie-css-grid-and-the-new-autoprefixer)

@@ -36,7 +36,7 @@ MathML の `<mtr>` 要素は表組・行列の行を表します。{{ MathMLElem
 
 {{Compat}}
 
-## See also
+## 関連情報
 
 - {{ MathMLElement("mtable") }}
 - {{ MathMLElement("mtd") }}

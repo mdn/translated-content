@@ -48,6 +48,6 @@ slug: Web/HTML/Element/bdo
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}

@@ -2,10 +2,10 @@
 title: "ProgressEvent: lengthComputable プロパティ"
 slug: Web/API/ProgressEvent/lengthComputable
 l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+  sourceCommit: 0a726c0a04ab286873ad91b5ddee478dd938832d
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{APIRef("XMLHttpRequest API")}}
 
 **`ProgressEvent.lengthComputable`** は読み取り専用のプロパティであり、論理値のフラグで、 {{domxref("ProgressEvent")}} が関係するリソースに計算可能な長さがあるかどうかを示します。そうでない場合、{{domxref("ProgressEvent")}}プロパティは重要な値を持ちません。
 

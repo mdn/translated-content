@@ -81,6 +81,6 @@ div.menu-bar li:hover > ul {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}

@@ -351,8 +351,8 @@ fetchAndInstantiate("logger2.wasm", importObject).then(function (instance) {
 为了了解为什么表格是必须的，我们首先需要观察前面看到的 call 指令，它接受一个静态函数索引，并且只调用了一个函数——但是，如果被调用者是一个运行时值呢？
 
 - 在 JavaScript 中，我们总是看到：函数是一等值。
-- 在 C/C++中，我们看到了函数指针。
-- 在 C++中，我们看到了虚函数。
+- 在 C/C++ 中，我们看到了函数指针。
+- 在 C++ 中，我们看到了虚函数。
 
 WebAssembly 需要一种做到这一点的调用指令，因此，我们有了接受一个动态函数操作数的 call_indirect 指令。问题是，在 WebAssembly 中，当前操作数的仅有的类型是 i32/i64/f32/f64。
 
@@ -544,7 +544,7 @@ Promise.all([
 
 以上我们概括浏览了，关于 WebAssembly 文本格式的主要部分，以及它们是如何映射到 WebAssembly JS API 中的。
 
-## 另见
+## 参见
 
 - 没有介绍的一个主要的部分是在函数体中会出现的所有指令的清单。参考 [WebAssembly 语义](http://webassembly.org/docs/semantics)来了解每条指令的含义。
 - 参考被规范解释器实现的[文本格式语法](https://github.com/WebAssembly/spec/blob/master/interpreter/README.md#s-expression-syntax)。

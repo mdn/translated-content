@@ -1,15 +1,17 @@
 ---
 title: margin-right
 slug: Web/CSS/margin-right
+l10n:
+  sourceCommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
 ---
 
 {{CSSRef}}
 
-**`margin-right`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の右側の[マージン領域](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#マージン領域)を設定します。正の数を指定すると、隣との間が遠くなるように配置され、負の数を指定すると、近くなるように配置します。
+**`margin-right`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の右側の[マージン領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#マージン領域)を設定します。正の数を指定すると、隣との間が遠くなるように配置され、負の数を指定すると、近くなるように配置します。
 
 {{EmbedInteractiveExample("pages/css/margin-right.html")}}
 
-隣り合う二つのボックスの垂直マージンは融合することがあります。これは[_マージンの相殺_](/ja/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)と呼ばれています。
+隣り合う二つのボックスの垂直マージンは融合することがあります。これは[_マージンの相殺_](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)と呼ばれています。
 
 ## 構文
 
@@ -26,6 +28,7 @@ margin-right: auto;
 margin-right: inherit;
 margin-right: initial;
 margin-right: revert;
+margin-right: revert-layer;
 margin-right: unset;
 ```
 
@@ -36,7 +39,7 @@ margin-right: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : マージンの寸法を固定値で表したものです。
 - {{cssxref("&lt;percentage&gt;")}}
-  - : マージンの寸法を包含ブロックの*幅*に対するパーセント値で表したものです。
+  - : マージンの寸法を[包含ブロック](/ja/docs/Web/CSS/Containing_block)のインラインサイズ（{{cssxref("writing-mode")}} で横書き言語と定義されている場合は _width_）に対するパーセント値で示したものです。
 - `auto`
 
   - : 右マージンは未使用の水平方向の余白を共有します。これは主に使用されているレイアウトモードによって決定されます。 `margin-left` と `margin-right` の両方が `auto` の場合は、両方に均等に割り当てられます。それ以外の場合は以下の表のとおりです。

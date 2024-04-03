@@ -3,7 +3,7 @@ title: transition-property
 slug: Web/CSS/transition-property
 ---
 
-{{CSSRef("CSS Transitions")}}
+{{CSSRef}}
 
 La propiedad CSS **`transition-property`** se usa para definir los nombres de las propiedades CSS en las que el efecto de la transición debe aplicarse.
 

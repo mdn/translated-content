@@ -1,11 +1,12 @@
 ---
-title: XMLHttpRequest.statusText
+title: "XMLHttpRequest: statusText プロパティ"
+short-title: statusText
 slug: Web/API/XMLHttpRequest/statusText
 l10n:
   sourceCommit: b5b33acd44e7bb9c7be2efc75ba9a04b8bf8b2b2
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{APIRef("XMLHttpRequest API")}}
 
 **`XMLHttpRequest.statusText`** は読み取り専用のプロパティで、文字列で HTTP サーバーから返されるステータスメッセージを示します。 [`XMLHTTPRequest.status`](/ja/docs/Web/API/XMLHttpRequest/status) が数値のステータスコードを示すのとは異なり、このプロパティはレスポンスステータスの*テキスト*を、 "OK" や "Not Found" のように示します。リクエストの [`readyState`](/ja/docs/Web/API/XMLHttpRequest/readyState) が `UNSENT` または `OPENED` の状態であった場合、 `statusText` の値は空文字列になります。
 

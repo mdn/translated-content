@@ -3,7 +3,7 @@ title: Intl.Collator.prototype.compare
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/compare
 ---
 
-{{JSRef("Global_Objects", "Collator", "Intl,DateTimeFormat,NumberFormat")}}
+{{JSRef}}
 
 ## Сводка
 

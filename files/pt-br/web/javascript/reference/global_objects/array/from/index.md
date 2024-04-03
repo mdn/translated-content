@@ -3,7 +3,7 @@ title: Array.from()
 slug: Web/JavaScript/Reference/Global_Objects/Array/from
 ---
 
-{{JSRef("Global_Objects", "Array")}}
+{{JSRef}}
 
 ## Resumo
 

@@ -110,6 +110,6 @@ slug: Web/SVG/Attribute/class
 - {{ SVGElement("tspan") }}
 - {{ SVGElement("use") }}
 
-## Совместимость с броузерами
+## Совместимость с браузерами
 
 {{Compat}}

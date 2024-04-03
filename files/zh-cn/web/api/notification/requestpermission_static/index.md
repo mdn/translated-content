@@ -1,11 +1,11 @@
 ---
 title: Notification：requestPermission() 静态方法
 slug: Web/API/Notification/requestPermission_static
+l10n:
+  sourceCommit: eb61adfd5ca85cd5cb2143353f82fe0520a9c66e
 ---
 
 {{APIRef("Web Notifications")}}{{securecontext_header}}
-
-> **备注：** Safari 仍然使用回调函数语法来请求权限。[使用 Notifications API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API) 的例子说明了如何检测需使用回调函数语法的情况并以适当的方式运行代码。
 
 {{domxref("Notification")}} 接口的 **`requestPermission()`** 静态方法向用户为当前来源请求显示通知的权限。
 
@@ -22,15 +22,18 @@ Notification.requestPermission(callback)
 ### 参数
 
 - `callback` {{optional_inline}} {{deprecated_inline}}
-  - : 一个可选的参数为权限请求的结果的回调函数。此参数已废弃，请使用 Promise 的语法。
+  - : 一个可选的参数为权限请求的结果的回调函数。此参数已废弃，请使用 Promise 返回值的语法。
 
 ### 返回值
 
 一个 {{jsxref("Promise")}}，会兑现为一个表示用户选择的权限的字符串。该字符串的可能值为：
 
 - `granted`
+  - : 用户已明确授予当前源显示系统通知的权限。
 - `denied`
+  - : 用户已明确拒绝当前源显示系统通知的权限。
 - `default`
+  - : 用户决定未知；在这种情况下，应用程序的行为就像权限被“拒绝”一样。
 
 ## 示例
 
@@ -80,4 +83,4 @@ function notifyMe() {
 
 ## 参见
 
-- [使用 Notifications API](/zh-CN/docs/Web/API/notification/Using_Web_Notifications)
+- [使用 Notification API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)
