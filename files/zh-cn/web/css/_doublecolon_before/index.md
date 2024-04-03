@@ -193,7 +193,7 @@ li[aria-current="step"]::after {
 
 {{EmbedLiveSample('特殊字符', 400, 200)}}
 
-## 有关无障碍的事
+## 无障碍考虑
 
 不鼓励使用 `::before` 伪元素添加内容，因为屏幕阅读器无法可靠地访问它。
 
