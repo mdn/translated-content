@@ -1799,6 +1799,7 @@
 /es/docs/Web/CSS/-moz-outline-radius-topright	/es/docs/conflicting/Web/CSS/outline_bfe8e66e2b112d3306d547388792b0af
 /es/docs/Web/CSS/-moz-user-modify	/es/docs/Web/CSS/user-modify
 /es/docs/Web/CSS/-webkit-mask	/es/docs/Web/CSS/mask
+/es/docs/Web/CSS/-webkit-mask-attachment	/es/docs/conflicting/Web/CSS_a6ba0198499c2f7f7947719c0dfd9166
 /es/docs/Web/CSS/-webkit-mask-clip	/es/docs/Web/CSS/mask-clip
 /es/docs/Web/CSS/-webkit-mask-image	/es/docs/Web/CSS/mask-image
 /es/docs/Web/CSS/-webkit-mask-origin	/es/docs/Web/CSS/mask-origin
