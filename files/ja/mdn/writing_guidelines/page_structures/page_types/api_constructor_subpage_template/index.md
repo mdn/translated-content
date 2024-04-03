@@ -1,6 +1,6 @@
 ---
-title: API メソッドサブページのテンプレート
-slug: MDN/Writing_guidelines/Page_structures/Page_types/API_method_subpage_template
+title: API コンストラクターサブページのテンプレート
+slug: MDN/Writing_guidelines/Page_structures/Page_types/API_constructor_subpage_template
 l10n:
   sourceCommit: cb1c745168764c4646631e7c4289319d782cc83b
 ---
@@ -16,12 +16,12 @@ l10n:
 > **ページのフロントマター:**
 >
 > ページ上部のフロントマターは「ページのメタデータ」を定義するために使用します。
-> 値は、個々のメソッドに応じて適切に更新してください。
+> 値は、コンストラクターに応じて適切に更新してください。
 >
 > ```md
 > ---
-> title: NameOfTheParentInterface: NameOfTheMethod() メソッド
-> slug: Web/API/NameOfTheParentInterface/NameOfTheMethod
+> title: NameOfTheParentInterface: NameOfTheConstructor() コンストラクター
+> slug: Web/API/NameOfTheParentInterface/NameOfTheConstructor
 > l10n:
 >   sourceCommit: 翻訳元コミットID
 > ---
@@ -29,17 +29,12 @@ l10n:
 >
 > - **title**
 >   - : タイトルの見出しは、ページの最上部に表示されます。
->     書式は `NameOfTheParentInterface: NameOfTheMethod() コンストラクター` です。
->     例えば、 [IDBIndex](/ja/docs/Web/API/IDBIndex) インターフェイスの [count()](/ja/docs/Web/API/IDBIndex/count) メソッドには `IDBIndex.count()` というタイトルを付けます。
+>     書式は `NameOfTheParentInterface: NameOfTheConstructor() コンストラクター` です。
+>     例えば、 [Request()](/ja/docs/Web/API/Request/Request) コンストラクターの _title_ は `Request: Request() コンストラクター` となります。
 > - **slug**
->
 >   - : `https://developer.mozilla.org/ja/docs/` の後にくる URL の末尾です。
->     これは `Web/API/NameOfTheParentInterface/NameOfTheMethod` のような形式になります。
->
->     静的メソッドの場合、スラッグには `_static` の接尾辞を付けて、 `Web/API/インターフェイス名/メソッド名_static` のようにしてください。これによって、インスタンスメソッドと静的メソッドが同じ名前の場合に対応することができます。
->
->     なお、スラッグでのメソッド名は括弧を省略してください（末尾は `NameOfTheMethod` であり `NameOfTheMethod()` ではありません）。
->
+>     これは `Web/API/NameOfTheParentInterface/NameOfTheConstructor` のような形式になります。
+>     なお、スラッグでのコンストラクター関数名は括弧を省略してください（末尾は `NameOfTheConstructor` であり `NameOfTheConstructor()` ではありません）。
 > - **sourceCommit**
 >   - : （翻訳記事のみ）この記事の翻訳元となる英語版記事を GitHub にコミットした際のコミット ID を記述します。 GitHub 上で英語版記事のコミット ID を確認してください。
 >
@@ -68,12 +63,12 @@ l10n:
 >
 > **安全なコンテキスト**、**実験的**、**非推奨**、**標準外** の各バナーは、このメモブロックの直後に表示しています。
 >
-> _公開前に、忘れずにこの説明文全体を削除してください。_
+> _公開する前に、この説明文全体を削除することを忘れないでください。_
 
 {{SecureContext_Header}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-ページのコンテンツは導入段落で始めてください。メソッドの名前で始め、それがどのインターフェイスに属しているかを示し、それが何をするのかを述べてください。
-これはできれば 1、2 の短い文にすべきです。対応する API リファレンスページのメソッドの概要から、この大部分をコピーすることができます。
+ページのコンテンツは導入段落で始めてください。コンストラクターの名前で始め、それが何をするのかを述べてください。
+これはできれば 1、2 の短い文にすべきです。対応する API リファレンスページのコンストラクターの概要から、この大部分をコピーすることができます。
 
 ## 構文
 
@@ -81,18 +76,18 @@ l10n:
 
 ### 引数
 
-- `parameter1` {{Optional_Inline}}
-  - : ここでは、引数の簡単な説明とその役割を記載してください。各引数につき 1 つの用語と定義を記載してください。引数が省略可能でない場合は、 \\{{optional_inline}} マクロ呼び出しを削除してください。
+- `parameter1` {{optional_inline}}
+  - : ここでは、引数の簡単な説明とその役割を記載してください。各引数につき 1 つの用語と定義を記載してください。
+    引数が省略可能でない場合は、 \\{{optional_inline}} マクロ呼び出しを削除してください。
 - `parameter2`
   - : 同様です。
 
-> **メモ:** この節は必須です。引数がない場合は、定義リストの代わりに「なし。」と記述してください。
-
 ### 返値
 
-メソッドの返値について、データ型や何を表すかなどの説明を記載してください。
+コンストラクターの返値について、データ型や何を表すかなどの説明を記載してください。
+普通は単に「`\{{domxref("NameOfTheParentInterface")}}` オブジェクトのインスタンスです。」となります。
 
-メソッドが何も返さない場合は、「なし ({{jsxref('undefined')}})」と記述してください。
+_このマクロを使用するには、 Markdown ファイルの逆引用符とバックスラッシュを除去してください。_
 
 ### 例外
 
@@ -103,23 +98,7 @@ l10n:
 - `Exception2`
   - : どのような場合に例外が発生するかをの説明を記述してください。
 
-例外には 2 種類あることに注意してください。それは {{domxref("DOMException")}} オブジェクトと {{jsxref("TypeError")}} や {{jsxref("RangeError")}} などの通常の JavaScript 例外です。ウェブ開発者は次のことを知る必要があります。
-
-- どのオブジェクトが投げられるか
-- `DOMException` オブジェクトの例外の場合、その例外の `name`
-
-ここでは、あるメソッドが `IndexSizeError` という名前の `DOMException` と、 `InvalidNodeTypeError` という名前の 2 つ目の `DOMException` 、そして `TypeError` という型の JavaScript 例外を発生させることができる例を示します。
-
-- `IndexSizeError` {{domxref("DOMException")}}
-  - : Thrown …
-- `InvalidNodeTypeError` {{domxref("DOMException")}}
-  - : Thrown …
-- {{jsxref("TypeError")}}
-  - : Thrown …
-
 ## 例
-
-ページ内に例が 1 つしかない場合でも、複数形の "Examples" を使用することに留意してください。
 
 ### 説明的な見出し
 
