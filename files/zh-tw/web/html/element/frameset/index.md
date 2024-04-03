@@ -7,22 +7,22 @@ slug: Web/HTML/Element/frameset
 
 **`<frameset>`** [HTML](/zh-TW/docs/Web/HTML) 元素用於包含 {{HTMLElement("frame")}} 元素。
 
-> **備註：** 由於現在不鼓勵使用框架，而更推薦使用 {{HTMLElement("iframe")}}，因此現代網站通常不會使用此元素。
+> **備註：** 由於現在不鼓勵使用頁框，而更推薦使用 {{HTMLElement("iframe")}}，因此現代網站通常不會使用此元素。
 
 ## 屬性
 
 與所有其他 HTML 元素一樣，此元素支援[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
 
 - `cols` {{Deprecated_Inline}}
-  - : 此屬性指定框架集中水平空間的數量和大小。
+  - : 此屬性指定頁框集中水平空間的數量和大小。
 - `rows` {{Deprecated_Inline}}
-  - : 此屬性指定框架集中垂直空間的數量和大小。
+  - : 此屬性指定頁框集中垂直空間的數量和大小。
 
 ## 範例
 
-### 框架集文件
+### 頁框集文件
 
-框架集文件使用 `<frameset>` 元素而不是 {{HTMLElement("body")}} 元素。 {{HTMLElement("frame")}} 元素放置在 `<frameset>` 內。
+頁框集文件使用 `<frameset>` 元素而不是 {{HTMLElement("body")}} 元素。 {{HTMLElement("frame")}} 元素放置在 `<frameset>` 內。
 
 ```html
 <!doctype html>
@@ -31,8 +31,10 @@ slug: Web/HTML/Element/frameset
     <!-- Document metadata goes here -->
   </head>
   <frameset cols="50%, 50%">
-    <frame src="https://developer.mozilla.org/en/HTML/Element/iframe" />
-    <frame src="https://developer.mozilla.org/en/HTML/Element/frame" />
+    <frame
+      src="https://developer.mozilla.org/zh-TW/docs/Web/HTML/Element/iframe" />
+    <frame
+      src="https://developer.mozilla.org/zh-TW/docs/Web/HTML/Element/frame" />
   </frameset>
 </html>
 ```
