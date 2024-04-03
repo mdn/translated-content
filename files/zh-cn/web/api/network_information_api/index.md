@@ -7,7 +7,7 @@ l10n:
 
 {{DefaultAPISidebar("Network Information API")}} {{AvailableInWorkers}}
 
-**网络信息 API** 提供关于系统连接的一般连接类型的信息（如“wifi”、“cellular”等）。应用程序可以根据用户的连接为用户展现不同清晰度的内容。
+**网络信息 API** 提供关于系统连接的一般连接类型（如“wifi”、“cellular”等）的信息。应用程序可以根据用户的连接为用户展现不同清晰度的内容。
 
 该接口由一个单例 {{domxref("NetworkInformation")}} 对象组成，其实例由 {{domxref("Navigator.connection")}} 属性或 {{domxref("WorkerNavigator.connection")}} 属性返回。
 
