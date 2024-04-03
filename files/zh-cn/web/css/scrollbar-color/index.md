@@ -7,7 +7,7 @@ slug: Web/CSS/scrollbar-color
 
 **`scrollbar-color`**  [CSS](/zh-CN/docs/Web/CSS) 属性设置滚动条轨道和滑块的颜色
 
-**track（轨道）** 是指滚动条，其一般是固定的而不管滚动位置的背景。
+**轨道**（track）是指滚动条，其一般是固定的而不管滚动位置的背景。
 
 **thumb**（**拇指**）是指滚动条通常漂浮在轨道的顶部上的移动部分。
 
