@@ -16528,10 +16528,6 @@
     "modified": "2020-10-15T22:24:06.241Z",
     "contributors": ["liuruiqi1993", "herotangabc", "litaoAurora"]
   },
-  "Web/CSS/-webkit-mask-attachment": {
-    "modified": "2019-03-18T21:45:10.830Z",
-    "contributors": ["mobiuskaikai"]
-  },
   "Web/CSS/-webkit-overflow-scrolling": {
     "modified": "2019-03-23T23:02:52.440Z",
     "contributors": ["teoli", "Ende93", "FrontENG", "limichange", "ccforward"]
