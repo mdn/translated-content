@@ -1,7 +1,7 @@
 ---
 title: Element：removeAttributeNode() 方法
 slug: Web/API/Element/removeAttributeNode
-l1on:
+l10n:
   sourceCommit: 990ab6637bb4d44f059597262cbf3c51abae79eb
 ---
 
