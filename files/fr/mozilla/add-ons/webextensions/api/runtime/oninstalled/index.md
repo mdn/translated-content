@@ -20,11 +20,11 @@ browser.runtime.onInstalled.hasListener(listener);
 Les événements ont trois fonctions :
 
 - `addListener(callback)`
-  - : Ajoute un écouteur à cet événement.
+  - : Ajoute un gestionnaire d'événement à cet événement.
 - `removeListener(listener)`
-  - : Arrête d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
+  - : Arrête d'écouter cet événement. L'argument `listener` est le gestionnaire d'événement à supprimer.
 - `hasListener(listener)`
-  - : Vérifie si un `écouteur` est enregistré pour cet événement. Renvoie `true` s'il écoute, `false` sinon.
+  - : Vérifie si un gestionnaire d'événement `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, `false` sinon.
 
 ## Syntaxe addListener
 

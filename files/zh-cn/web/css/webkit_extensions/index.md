@@ -430,7 +430,6 @@ slug: Web/CSS/WebKit_Extensions
 - `-webkit-highlight`
 - `-webkit-hyphenate-charset`
 - `-webkit-image-set`（参见 {{CSSxRef("image/image-set", "image-set")}}）
-- `-webkit-mask-attachment`
 - `-webkit-match-nearest-mail-blockquote-color`
 - `-webkit-margin-collapse`
 - `-webkit-margin-after-collapse`
