@@ -2052,6 +2052,7 @@
 /zh-CN/docs/Web/CSS/-moz-outline-radius-bottomright	/zh-CN/docs/Web/CSS/outline
 /zh-CN/docs/Web/CSS/-moz-outline-radius-topleft	/zh-CN/docs/Web/CSS/outline
 /zh-CN/docs/Web/CSS/-moz-outline-radius-topright	/zh-CN/docs/Web/CSS/outline
+/zh-CN/docs/Web/CSS/-webkit-mask-attachment	/zh-CN/docs/Web/CSS
 /zh-CN/docs/Web/CSS/:blank空白伪类	/zh-CN/docs/Web/CSS/:blank
 /zh-CN/docs/Web/CSS/:host()	/zh-CN/docs/Web/CSS/:host_function
 /zh-CN/docs/Web/CSS/:matches	/zh-CN/docs/Web/CSS/:is
