@@ -26,7 +26,7 @@ slug: Web/HTML/Element/frameset
 
 ```html
 <!doctype html>
-<html lang="en-US">
+<html lang="zh-TW">
   <head>
     <!-- Document metadata goes here -->
   </head>
