@@ -3548,6 +3548,7 @@
 /ja/docs/Web/CSS/-moz-zoom-in	/ja/docs/Web/CSS/cursor
 /ja/docs/Web/CSS/-moz-zoom-out	/ja/docs/Web/CSS/cursor
 /ja/docs/Web/CSS/-ms-scroll-snap-type	/ja/docs/Web/CSS/scroll-snap-type
+/ja/docs/Web/CSS/-webkit-mask-attachment	/ja/docs/conflicting/Web/CSS_a6ba0198499c2f7f7947719c0dfd9166
 /ja/docs/Web/CSS/-webkit-print-color-adjust	/ja/docs/Web/CSS/print-color-adjust
 /ja/docs/Web/CSS/:-moz-focusring	/ja/docs/Web/CSS/:focus-visible
 /ja/docs/Web/CSS/:-moz-list-bullet	/ja/docs/Web/CSS/::-moz-list-bullet

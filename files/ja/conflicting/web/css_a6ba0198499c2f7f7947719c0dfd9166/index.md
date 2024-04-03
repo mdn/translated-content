@@ -1,6 +1,7 @@
 ---
 title: "-webkit-mask-attachment"
-slug: Web/CSS/-webkit-mask-attachment
+slug: conflicting/Web/CSS_a6ba0198499c2f7f7947719c0dfd9166
+original_slug: Web/CSS/-webkit-mask-attachment
 ---
 
 {{CSSRef}}{{Non-standard_Header}}
