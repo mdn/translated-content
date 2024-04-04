@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}{{securecontext_header}}
 
-{{domxref("WorkerNavigator")}} 接口的 **`userAgentData`** 只读属性返回一个 {{domxref("NavigatorUAData")}} 对象，其可用于访问 {{domxref("User-Agent Client Hints API", "用户代理客户端提示 API", "", "nocode")}}。
+{{domxref("WorkerNavigator")}} 接口的 **`userAgentData`** 只读属性返回一个 {{domxref("NavigatorUAData")}} 对象，其可用于访问{{domxref("User-Agent Client Hints API", "用户代理客户端提示 API", "", "nocode")}}。
 
 ## 值
 

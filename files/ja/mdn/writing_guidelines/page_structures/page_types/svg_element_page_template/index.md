@@ -1,6 +1,6 @@
 ---
-title: API プロパティサブページのテンプレート
-slug: MDN/Writing_guidelines/Page_structures/Page_types/API_property_subpage_template
+title: SVG 要素ページのテンプレート
+slug: MDN/Writing_guidelines/Page_structures/Page_types/SVG_element_page_template
 l10n:
   sourceCommit: cb1c745168764c4646631e7c4289319d782cc83b
 ---
@@ -16,12 +16,12 @@ l10n:
 > **ページのフロントマター:**
 >
 > ページ上部のフロントマターは「ページのメタデータ」を定義するために使用します。
-> 値は、個々のプロパティに応じて適切に書き換える必要があります。
+> 値は、個々の要素に応じて適切に書き換える必要があります。
 >
 > ```md
 > ---
-> title: NameOfTheParentInterface: NameOfTheProperty プロパティ
-> slug: Web/API/NameOfTheParentInterface/NameOfTheProperty
+> title: <NameOfTheElement>
+> slug: Web/SVG/Element/NameOfTheElement
 > l10n:
 >   sourceCommit: 翻訳元コミットID
 > ---
@@ -29,15 +29,11 @@ l10n:
 >
 > - **title**
 >   - : タイトルの見出しで、ページの最上部に表示されます。
->     書式は `NameOfTheParentInterface: NameOfTheProperty プロパティ` です。
->     例えば、 [VRDisplay](/ja/docs/Web/API/VRDisplay) インターフェイスの [capabilities](/ja/docs/Web/API/VRDisplay/capabilities) プロパティの `title` は `VRDisplay: capabilities プロパティ` としてください。
+>     書式は **<**_NameOfTheElement_**>** です。
+>     例えば "[g](/ja/docs/Web/SVG/Element/g)" 要素の _title_ は `<g>` となります。
 > - **slug**
->
 >   - : `https://developer.mozilla.org/ja/docs/` の後にくる URL の末尾です。
->     これは `Web/API/NameOfTheParentInterface/NameOfTheProperty` のような形式になります。
->
->     静的プロパティの場合、スラッグには `_static` の接尾辞を付けて、 `Web/API/インターフェイス名/プロパティ名_static` のようにしてください。これによって、インスタンスプロパティと静的プロパティが同じ名前の場合に対応することができます。
->
+>     これは `Web/SVG/Element/NameOfTheElement` のような形式になります。
 > - **sourceCommit**
 >   - : （翻訳記事のみ）この記事の翻訳元となる英語版記事を GitHub にコミットした際のコミット ID を記述します。 GitHub 上で英語版記事のコミット ID を確認してください。
 >
@@ -58,31 +54,54 @@ l10n:
 > - `\{{SecureContext_Header}}` — これは **安全なコンテキスト** バナーを生成し、この技術が[安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)でのみ利用できることを示します。
 >   そうではない場合は、マクロ呼び出すを削除することができます。
 >   そうである場合は、[安全なコンテキストに制限されている機能](/ja/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)ページ内の項目も記入してください。
-> - `\{{APIRef("GroupDataName")}}` — これをクリックすると、現在のページに関連するすばやく参照できるリンクを表示する左側のリファレンスサイドバーが生成されます。
->   例えば、 [WebVR API](/ja/docs/Web/API/WebVR_API) の中の各ページは同じサイドバーを持ち、そこでこの API の別なページにアクセスできます。
->   API に適したサイドバーを生成するには、GitHub リポジトリーに `GroupData` エントリーを追加し、マクロ呼び出しの中で _GroupDataName_ の代わりにそのエントリーの名前を記載する必要があります。
->   この方法については、 [API リファレンスのサイドバー](/ja/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars)ガイドを参照してください。
+> - `\{{SVGRef}}` — これは、要素のための左側のリファレンスサイドバーを生成します。
+>   サイドバーのコンテンツはページメタデータのタグに依存します。
 > - このページをコピーする際には、 `\{{MDNSidebar}}` マクロを外すのを忘れないでください。
 >
 > **訳注:** 英語版では状態ヘッダーマクロは自動的に更新されますが、翻訳記事では更新されません。翻訳時に英語版に合わせて手動で更新してください。
 >
-> **安全なコンテキスト**、**実験的**、**非推奨**、**標準外** の各バナーは、このメモブロックの直後に表示しています。
+> **実験的**、**非推奨**、**標準外** の各バナーは、このメモブロックの直後に表示しています。
 >
 > _公開する前に、この説明文全体を削除することを忘れないでください。_
 
-{{SecureContext_Header}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SVGRef}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-ページのコンテンツは導入段落で始めてください。プロパティの名前で始め、それがどのインターフェイスに属しているかを示し、それが何をするのかを述べてください。
-これはできれば 1、2 の短い文にすべきです。
-対応する API リファレンスページのプロパティの概要から、この大部分をコピーすることができます。読み取り専用であるかどうかを記載してください。
+ページのコンテンツは導入段落から始めましょう。要素名から始め、それが何をするのかを買いてください。
+これはできれば 1 つか 2 つの短い文章にしてください。
 
-## 値
+## 使用コンテキスト
 
-プロパティの値について、データ型や何を表すかなどの説明を記載してください。
+`\{{svginfo}}`
+
+ここに正しい情報が現れるように、 `\{{svginfo}}` マクロにその要素の項目がなければ記入してください。
+
+_このマクロを使用するには、 Markdown ファイルの逆引用符とバックスラッシュを除去してください。_
+
+## 属性
+
+### グローバル属性
+
+- [条件処理属性](/ja/docs/Web/SVG/Attribute#条件処理属性)
+- [コア属性](/ja/docs/Web/SVG/Attribute#コア属性)
+- [グラフィックイベント属性](/ja/docs/Web/SVG/Attribute#グラフィックイベント属性)
+- [プレゼンテーション属性](/ja/docs/Web/SVG/Attribute#プレゼンテーション属性)
+- {{SVGAttr("class")}}
+- {{SVGAttr("style")}}
+- {{SVGAttr("transform")}}
+
+### 特有の属性
+
+- Include bulleted
+- list of all the
+- SVG attributes it can take
+
+## DOM インターフェイス
+
+この要素は `\{{domxref("NameOfSVGDOMElement")}}` インターフェイスを実装しています。
 
 ## 例
 
-ページ内に例が 1 つしかない場合でも、複数形の "Examples" を使用することに留意してください。
+英語版では、ページ内に例が 1 つしかない場合でも、複数形の "Examples" を使用していることに留意してください。
 
 ### 説明的な見出し
 
@@ -132,7 +151,7 @@ _このマクロを使用するには、 Markdown ファイルの逆引用符と
 
 ## 関連情報
 
-現在の API に関連するリファレンスページやガイドへのリンクを記述してください。その他のガイドラインについては、スタイル設定ガイドの[「関連情報」の節](/ja/docs/MDN/Writing_guidelines/Writing_style_guide#関連情報)を参照してください。
+現在の要素に関連するリファレンスページやガイドへのリンクを記述してください。その他のガイドラインについては、スタイル設定ガイドの[「関連情報」の節](/ja/docs/MDN/Writing_guidelines/Writing_style_guide#関連情報)を参照してください。
 
 - リンク1
 - リンク2
