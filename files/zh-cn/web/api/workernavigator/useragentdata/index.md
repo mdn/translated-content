@@ -1,5 +1,5 @@
 ---
-title: "WorkerNavigator: userAgentData property"
+title: WorkerNavigator：userAgentData 属性
 slug: Web/API/WorkerNavigator/userAgentData
 l10n:
   sourceCommit: 8ccdd482e4723b5393278bba686adc24d1769d0f
