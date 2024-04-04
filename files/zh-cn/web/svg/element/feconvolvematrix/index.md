@@ -121,7 +121,7 @@ slug: Web/SVG/Element/feConvolveMatrix
 
 ## 参见
 
-- [SVG 滤镜原始属性](/zh-CN/docs/Web/SVG/Attribute#filter_primitive_attributes)
+- [SVG 滤镜原语属性](/zh-CN/docs/Web/SVG/Attribute#滤镜原语属性)
 - {{SVGElement("filter")}}
 - {{SVGElement("animate")}}
 - {{SVGElement("set")}}
