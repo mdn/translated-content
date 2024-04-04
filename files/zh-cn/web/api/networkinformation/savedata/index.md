@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Network Information API")}} {{AvailableInWorkers}}
 
-{{domxref("NetworkInformation")}} 接口的 **`saveData`** 只读属性在用户在用户代理上设置了减少数据使用选项时返回 `true`。
+{{domxref("NetworkInformation")}} 接口的 **`saveData`** 只读属性当用户在用户代理上设置了减少数据使用选项时返回 `true`。
 
 ## 值
 
