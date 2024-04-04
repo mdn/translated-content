@@ -2,7 +2,7 @@
 title: <input type="color">
 slug: Web/HTML/Element/input/color
 l10n:
-  sourceCommit: 1995a9dbe407d9ee41c3b1b50f29e020a85e456a
+  sourceCommit: 005cc1fd55aadcdcbd9aabbed7d648a275f8f23a
 ---
 
 {{HTMLSidebar}}
@@ -35,11 +35,11 @@ type が `color` の入力欄は、対応する属性の数が限られている
 
 {{EmbedLiveSample("Providing_a_default_color", 700, 30)}}
 
-色を指定しない場合は、既定で黒を表す `#000000` になります。値は 7 文字の 16 進表記、つまり "#" の文字に続いて赤、緑、青を示す各 2 桁が並び、`#rrggbb` のようになります。他の形式の色を使う場合は (CSS の色名や、`rgb()` または `rgba()` のような CSS 色関数など)、`value` に設定する前に 16 進表記に変換する必要があります。
+色を指定していない場合、既定値は `#000000`、すなわち黒になります。値は 7 文字の 16 進表記、つまり "#" の文字に続いて赤、緑、青を示す各 2 桁が並び、`#rrggbb` のようになります。他の形式の色を使う場合は (CSS の色名や、`rgb()` または `hsl()` のような CSS 色関数など)、`value` に設定する前に 16 進表記に変換する必要があります。
 
 ### 色の変更の追跡
 
-ほかの {{HTMLElement("input")}} 型と同様に、{{domxref("HTMLElement/input_event", "input")}} および {{domxref("HTMLElement/change_event", "change")}} イベントで色の変化を検出することができます。`input` は `<input>` 要素で色が変更されるたびに実行されます。`change` イベントはユーザーがカラーピッカーを閉じたときに実行されます。どちらの場合も、新しい値は [`value`](/ja/docs/Web/HTML/Element/input#value) で調べることができます。
+ほかの {{HTMLElement("input")}} 型と同様に、{{domxref("Element/input_event", "input")}} および {{domxref("HTMLElement/change_event", "change")}} イベントで色の変化を検出することができます。`input` は `<input>` 要素で色が変更されるたびに実行されます。`change` イベントはユーザーがカラーピッカーを閉じたときに実行されます。どちらの場合も、新しい値は [`value`](/ja/docs/Web/HTML/Element/input#value) で調べることができます。
 
 次の例は、色の変更をずっと監視します。
 
@@ -56,7 +56,7 @@ function watchColorPicker(event) {
 
 ### 値の選択
 
-ブラウザーがカラーピッカーインターフェースに対応していない場合、カラー入力の実装はテキストボックスとなり、値が正しい形式であることを確認するために、自動的に中身を検証することになります。この場合、{{domxref("HTMLInputElement.select", "select()")}}メソッドを使用して、現在編集フィールドに使用されているテキストを選択することができます。
+ブラウザーがカラーピッカーインターフェイスに対応していない場合、カラー入力の実装はテキストボックスとなり、値が正しい形式であることを確認するために、自動的に中身を検証することになります。この場合、{{domxref("HTMLInputElement.select", "select()")}}メソッドを使用して、現在編集フィールドに使用されているテキストを選択することができます。
 
 ブラウザーがカラーピッカーなどを提供している場合、`select()` は何もしません。いずれの状況でもコードが動作するように気をつける必要があります。
 
@@ -70,7 +70,7 @@ colorPicker.select();
 
 ## 例
 
-{{domxref("HTMLElement/change_event", "change")}} および {{domxref("HTMLElement/input_event", "input")}} イベントを追跡して、新しい色を取得し、その度に文書の {{HTMLElement("p")}} 要素に適用する例をもう少し作成してみましょう。
+{{domxref("HTMLElement/change_event", "change")}} および {{domxref("Element/input_event", "input")}} イベントを追跡して、新しい色を取得し、その度に文書の {{HTMLElement("p")}} 要素に適用する例をもう少し作成してみましょう。
 
 ### HTML
 
@@ -116,7 +116,7 @@ function startup() {
 }
 ```
 
-これは color の `<input>` 要素の参照を取得して `colorPicker` という変数に格納し、色入力欄の値を `defaultColor` を設定します。次に、{{domxref("HTMLElement/input_event", "input")}} イベントに `updateFirst()` 関数を、{{domxref("HTMLElement/change_event", "change")}} イベントに `updateAll()` 関数を指定します。これらについては後述します。
+これは color の `<input>` 要素の参照を取得して `colorPicker` という変数に格納し、色入力欄の値を `defaultColor` を設定します。次に、{{domxref("Element/input_event", "input")}} イベントに `updateFirst()` 関数を、{{domxref("HTMLElement/change_event", "change")}} イベントに `updateAll()` 関数を指定します。これらについては後述します。
 
 最後に {{domxref("HTMLInputElement.select", "select()")}} を呼び出し、色入力のテキストコンテンツを選択します。これはカラーピッカーが提供されていないなどで、テキスト入力欄として表示された場合に利用します。
 
@@ -165,7 +165,7 @@ function updateAll(event) {
       <td><strong>イベント</strong></td>
       <td>
         {{domxref("HTMLElement/change_event", "change")}} および
-        {{domxref("HTMLElement/input_event", "input")}}
+        {{domxref("Element/input_event", "input")}}
       </td>
     </tr>
     <tr>
