@@ -119,9 +119,7 @@ l10n:
 <video controls>
   <source src="rabbit320.mp4" type="video/mp4" />
   <source src="rabbit320.webm" type="video/webm" />
-  <p>
-    你的浏览器不支持此视频。可点击<a href="rabbit320.mp4">此链接</a>观看
-  </p>
+  <p>你的浏览器不支持此视频。可点击<a href="rabbit320.mp4">此链接</a>观看</p>
 </video>
 ```
 
@@ -147,9 +145,7 @@ l10n:
   poster="poster.png">
   <source src="rabbit320.mp4" type="video/mp4" />
   <source src="rabbit320.webm" type="video/webm" />
-  <p>
-    你的浏览器不支持此视频。可点击<a href="rabbit320.mp4">此链接</a>观看
-  </p>
+  <p>你的浏览器不支持此视频。可点击<a href="rabbit320.mp4">此链接</a>观看</p>
 </video>
 ```
 
@@ -259,7 +255,7 @@ WEBVTT
 
 上面这串代码会显示一段带有字幕的视频，如下：
 
-![视频播放器带有标准的控制功能，如播放、停止、音量和字幕开关。播放的视频显示了一名男子手持长矛状武器的场景，标题为 “Esta hoja tiene pasado oscuro”。](video-player-with-captions.png)
+![视频播放器带有标准的控制功能，如播放、停止、音量和字幕开关。播放的视频显示了一名男子手持长矛状武器的场景，标题为“Esta hoja tiene pasado oscuro”。](video-player-with-captions.png)
 
 如果你想了解更多细节，你可以阅读[为 HTML 视频添加标题和字幕](/zh-CN/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)。在 Github 上你可以找到[与本文相关的样例](https://iandevlin.github.io/mdn/video-player-with-captions/)，它们由 Ian Devlin 编写（或者[查看源代码](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions)）。这个样例使用了 JavaScript 代码，用户借此可以选择不同的字幕。注意，若想要显示字幕，你需要点击“CC”按钮，并且选择某个选项（English，Deutsch 或 Español）。
 
