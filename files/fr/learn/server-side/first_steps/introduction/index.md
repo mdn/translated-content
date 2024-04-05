@@ -50,7 +50,7 @@ Le diagramme ci-dessous montre l'architecture d'un serveur web basique pour un _
 
 Le serveur récupère le document demandé du système de fichiers et retourne une réponse HTTP contenant le document et le [statut de la réponse](/fr/docs/Web/HTTP/Status#Réponses_de_succès) (habituellement, 200 OK). Si le fichier ne peut pas être recupéré pour une raison x ou y, le statut d'erreur est retourné (voir [réponses d'erreur client](/fr/docs/Web/HTTP/Status#Réponses_d'erreur_côté_client) et [réponse d'erreur serveur](/fr/docs/Web/HTTP/Status#Réponses_d'erreur_côté_serveur)).
 
-![A simplified diagram of a static web server.](Basic_Static_App_Server.png)
+![A simplified diagram of a static web server.](basic_static_app_server.png)
 
 ### Sites dynamiques
 
