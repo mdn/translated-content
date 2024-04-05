@@ -146,17 +146,17 @@ color: rgb(248 242 230);
 
 16 進の色を使用する必要がある場合は、小文字を使用してください。
 
-  ```css example-good
-  color: #058ed9;
-  color: #a39a92c1;
-  color: #ff0;
-  color: #fbfa;
-  ```
+```css example-good
+color: #058ed9;
+color: #a39a92c1;
+color: #ff0;
+color: #fbfa;
+```
 
-  ```css-nolint example-bad
-  color: #ffff00;
-  color: #ffbbffaa;
-  ```
+```css-nolint example-bad
+color: #ffff00;
+color: #ffbbffaa;
+```
 
 ### 良い例と悪い例の強調表示
 
