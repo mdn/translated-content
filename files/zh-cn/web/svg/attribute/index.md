@@ -2,7 +2,7 @@
 title: SVG 属性参考
 slug: Web/SVG/Attribute
 l10n:
-  sourceCommit: 667bbe712207f92681d4c995fd0f18a230e6c8e6
+  sourceCommit: 7f67f81c799f3afcff118661faec6cd391308a17
 ---
 
 {{SVGRef}}
