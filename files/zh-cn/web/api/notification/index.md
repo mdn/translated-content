@@ -44,7 +44,7 @@ _还继承了其父接口 {{domxref("EventTarget")}} 的属性。_
 - {{domxref("Notification.body")}} {{ReadOnlyInline}}
   - : 在构造函数的 `options` 参数中指定的通知的正文字符串。
 - {{domxref("Notification.data")}} {{ReadOnlyInline}}
-  - : 返回一个通知的结构化克隆的数据。
+  - : 返回一个通知数据的结构化克隆。
 - {{domxref("Notification.dir")}} {{ReadOnlyInline}}
   - : 在构造函数的 `options` 参数中指定的通知的文本方向。
 - {{domxref("Notification.icon")}} {{ReadOnlyInline}}
