@@ -5512,6 +5512,10 @@
     "modified": "2020-10-15T21:43:45.922Z",
     "contributors": ["SphinxKnight", "khrizenriquez"]
   },
+  "Web/API/Window/indexedDB": {
+    "modified": "2019-03-23T22:16:36.537Z",
+    "contributors": ["ivannieto"]
+  },
   "Web/API/Window/innerHeight": {
     "modified": "2020-07-23T18:50:37.998Z",
     "contributors": ["dongerardor", "alfredoWs"]
@@ -5767,10 +5771,6 @@
   "Web/API/fetch": {
     "modified": "2020-10-15T22:01:57.457Z",
     "contributors": ["fscholz", "jagomf"]
-  },
-  "Web/API/indexedDB": {
-    "modified": "2019-03-23T22:16:36.537Z",
-    "contributors": ["ivannieto"]
   },
   "Web/API/notification/icon": {
     "modified": "2019-03-23T22:59:32.492Z",
