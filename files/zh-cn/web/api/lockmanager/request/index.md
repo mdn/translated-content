@@ -2,10 +2,10 @@
 title: LockManager：request() 方法
 slug: Web/API/LockManager/request
 l10n:
-  sourceCommit: 585c3cd3756cf1a182857efddd98630ca980edc6
+  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
 ---
 
-{{APIRef("Web Locks API")}}{{securecontext_header}}
+{{APIRef("Web Locks API")}}{{securecontext_header}} {{AvailableInWorkers}}
 
 {{domxref("LockManager")}} 接口的 **`request()`** 方法请求一个 {{domxref('Lock')}} 对象，该方法发参数指定返回对象的名称和特征。请求的 `Lock` 对象被传递给回调，而函数本身返回一个 {{jsxref('Promise')}}，在锁被释放后解析（或拒绝）回调的结果，或者在请求被中止时拒绝。
 
@@ -16,8 +16,6 @@ l10n:
 当代码的多个实例可以共享对资源的访问时，请求 `"shared"` 锁。当持有给定名称的 `"shared"` 锁时，可以授予同名的其他 `"shared"` 锁，但不能持有或授予具有该名称的 `"exclusive"` 锁。
 
 这种共享/独占锁模式在数据库事务架构中很常见，例如允许多个并发读取器（每个读取器请求一个 `"shared"` 锁），但仅允许一个写入器（单个 `"exclusive"` 锁）。这称为读者——作者模式。在 [IndexedDB API](/zh-CN/docs/Web/API/IndexedDB_API) 中，这被暴露为具有相同语义的 `"readonly"` 和 `"readwrite"` 事务。
-
-{{AvailableInWorkers}}
 
 ## 语法
 
