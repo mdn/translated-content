@@ -5,7 +5,7 @@ slug: Web/HTML/Element/html
 
 {{HTMLSidebar}}
 
-**`<html>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表 HTML 文件的根（最上層元素），因此它也被稱為*根元素*。所有其他元素都必須是這個元素的後代。
+**`<html>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表 HTML 文件的根（頂層元素），因此它也被稱為*根元素*。所有其他元素都必須是這個元素的後代。
 
 ## 屬性
 
@@ -16,7 +16,7 @@ slug: Web/HTML/Element/html
 - `version` {{deprecated_inline}}
   - : 指定了管理當前文件的 HTML {{glossary("Doctype", "文件類型定義")}}的版本。這個屬性是不必要的，因為它與文件類型聲明中的版本訊息是多餘的。
 - `xmlns`
-  - : 指定了文件的 {{glossary("XML")}} {{glossary("Namespace", "命名空間")}}。默認值是 `"http://www.w3.org/1999/xhtml"`。在使用 XML {{glossary("parser", "解析器")}}解析的文件中是必需的，在 text/html 文件中是可選的。
+  - : 指定了文件的 {{glossary("XML")}} {{glossary("Namespace", "命名空間")}}。預設值是 `"http://www.w3.org/1999/xhtml"`。在使用 XML {{glossary("parser", "解析器")}}解析的文件中是必需的，在 text/html 文件中是可選的。
 
 ## 範例
 
@@ -34,9 +34,9 @@ slug: Web/HTML/Element/html
 
 ## 無障礙議題
 
-雖然 HTML 不要求作者指定 `<html>` 元素的開始和結束標籤，但作者這樣做是很重要的，因為這樣可以允許他們為網頁指定 [`lang`](/zh-TW/docs/Web/HTML/Global_attributes#lang)。在 `<html>` 元素上提供一個具有有效語言標籤的 `lang` 屬性，根據 {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}} ，將有助於螢幕閱讀技術確定正確的語言來宣佈。識別語言標籤應該描述頁面內容的大多數使用的語言。如果沒有，螢幕閱讀器通常會默認使用操作系統設置的語言，這可能導致發音錯誤。
+雖然 HTML 不要求作者指定 `<html>` 元素的開始和結束標籤，但作者這樣做是很重要的，因為這樣可以允許他們為網頁指定 [`lang`](/zh-TW/docs/Web/HTML/Global_attributes#lang)。在 `<html>` 元素上提供一個具有有效語言標籤的 `lang` 屬性，根據 {{RFC(5646, "語言識別標籤（或稱 BCP 47）")}}，將有助於螢幕閱讀技術確定正確的語言來宣佈。語言識別標籤應該描述頁面內容的大多數使用的語言。如果沒有，螢幕閱讀器通常會默認使用操作系統設置的語言，這可能導致發音錯誤。
 
-在 `<html>` 元素上包含有效的 `lang` 声明也確保了頁面的 {{HTMLElement("head")}} 中包含的重要元數據，例如頁面的 {{HTMLElement("title")}} ，也被正確宣告。
+在 `<html>` 元素上包含有效的 `lang` 声明也確保了頁面的 {{HTMLElement("head")}} 中包含的重要元數據，例如頁面的 {{HTMLElement("title")}}，也被正確宣告。
 
 - [MDN理解 WCAG，指南3.1解釋](/zh-TW/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.1_%e2%80%94_readable_make_text_content_readable_and_understandable)
 - [理解成功標準3.1.1 | W3C理解 WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/language-of-page.html)
