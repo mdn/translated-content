@@ -46,6 +46,6 @@ fetch(myRequest).then((response) => {
 
 ## Смотрите также
 
-- [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
-- [HTTP](/en-US/docs/Web/HTTP)
+- [ServiceWorker API](/ru/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/ru/docs/Web/HTTP/CORS)
+- [HTTP](/ru/docs/Web/HTTP)
