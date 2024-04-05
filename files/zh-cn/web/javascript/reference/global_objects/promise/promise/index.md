@@ -1,6 +1,8 @@
 ---
 title: Promise() 构造函数
 slug: Web/JavaScript/Reference/Global_Objects/Promise/Promise
+l10n:
+  sourceCommit: 3918b803fda416a26fc2b7a62976d2cd87187460
 ---
 
 {{JSRef}}
@@ -24,7 +26,7 @@ new Promise(executor)
 
 ### 返回值
 
-当通过 `new` 关键字调用 `Promise` 构造函数时，它会返回一个 Promise 对象。当 `resolutionFunc` 或者 `rejectionFunc` 被调用时，该 Promise 对象就会变为*已解决*（resolved）。请注意，如果你调用 `resolveFunc` 或 `rejectFunc` 并传入另一个 Promise 对象作为参数，可以说该 Promise 对象“已解决”，但仍未“敲定（settled）”。有关更多解释，请参阅 [Promise 描述](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise#描述)。
+当通过 `new` 关键字调用 `Promise` 构造函数时，它会返回一个 Promise 对象。当 `resolveFunc` 或者 `rejectFunc` 被调用时，该 Promise 对象就会变为*已解决*（resolved）。请注意，如果你调用 `resolveFunc` 或 `rejectFunc` 并传入另一个 Promise 对象作为参数，可以说该 Promise 对象“已解决”，但仍未“敲定（settled）”。有关更多解释，请参阅 [Promise 描述](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise#描述)。
 
 ## 描述
 
@@ -62,7 +64,7 @@ rejectFunc(reason); // 拒绝时调用
 
 `executor` 的完成状态对 Promise 的状态影响有限：
 
-- `executor` 函数的返回值会被忽略。`executor` 函数中的 `return` 语句仅影响控制流程，调整函数某个部分是否执行，但不会影响 Promise 的履行值。如果 `executor` 函数退出，且未来不可能调用 `resolveFunc` 或 `rejectFunc`（例如，没有安排异步任务），那么 Promise 将永远保持待定状态。
+- `executor` 函数的返回值会被忽略。`executor` 函数中的 `return` 语句仅影响控制流程，调整函数某个部分是否执行，但不会影响 Promise 的兑现值。如果 `executor` 函数退出，且未来不可能调用 `resolveFunc` 或 `rejectFunc`（例如，没有安排异步任务），那么 Promise 将永远保持待定状态。
 - 如果在 `executor` 函数中抛出错误，则 Promise 将被拒绝，除非 `resolveFunc` 或 `rejectFunc` 已经被调用。
 
 > **备注：** 待定的 Promise 的存在并不会阻止程序退出。如果事件循环为空，则程序会退出，尽管存在待定的 Promise（因为它们必然永远处于待定状态）。
@@ -99,9 +101,11 @@ readFilePromise("./data.txt")
   .catch((error) => console.error("读取文件失败"));
 ```
 
-### Resolver 函数
+`resolve` 和 `reject` 回调仅在 `executor` 函数的作用域内可用，这意味着在构造 promise 之后无法访问它们。如果你想在决定如何解决之前先构造 promise，可以使用 {{jsxref("Promise.withResolvers()")}} 方法，该方法暴露了 `resolve` and `reject` 函数。
 
-`resolveFunc` 解决函数有以下行为：
+### resolve 函数
+
+`resolve` 函数有以下行为：
 
 - 如果它被调用时传入了新建的 `Promise` 对象本身（即它所“绑定”的 Promise 对象），则 `Promise` 对象会被拒绝并抛出一个 {{jsxref("TypeError")}} 错误。
 - 如果它使用一个非 [thenable](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenable) 的值（基本类型，或一个没有 `then` 属性或 `then` 属性不可调用的对象），则该 Promise 对象会被立即以该值兑现。
@@ -213,4 +217,5 @@ const rejectedResolved2 = new Promise((resolve) => {
 ## 参见
 
 - [`core-js` 中 `Promise` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-promise)
-- [使用 Promise](/zh-CN/docs/Web/JavaScript/Guide/Using_promises)
+- [使用 Promise](/zh-CN/docs/Web/JavaScript/Guide/Using_promises) 指南
+- {{jsxref("Promise.withResolvers()")}}

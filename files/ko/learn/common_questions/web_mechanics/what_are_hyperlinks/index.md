@@ -28,7 +28,7 @@ slug: Learn/Common_questions/Web_mechanics/What_are_hyperlinks
 
 보통 링크라고 불리는 하이퍼링크는 웹에서 기본적인 개념이다. 링크가 무엇인 지 설명하기 위해, 웹의 매우 기본적인 구조로 돌아볼 필요가 있다.
 
-1989년으로 돌아가, 웹의 발명가인 Tim Berners-Lee는 웹을 대표하는 3가지 축에 대해 말하였다. :
+1989년으로 돌아가, 웹의 발명가인 Tim Berners-Lee는 웹을 대표하는 3가지 축에 대해 말하였다.
 
 1. {{Glossary("URL")}}, 웹 문서를 추적하는 주소 시스템
 2. {{Glossary("HTTP")}}, URL들이 주어졌을 때, 문서들을 찾는 전송 프로토콜

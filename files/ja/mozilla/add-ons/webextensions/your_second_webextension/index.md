@@ -394,7 +394,7 @@ browser.tabs
 
 最後に、動物の画像を用意しておく必要があります。
 
-拡張機能のルートディレクトリー配下に "beasts" という名前のディレクトリーを新しく作成し、その中に 3 つの画像を適切な名前で保存します。画像は [GitHub リポジトリ](https://github.com/mdn/webextensions-examples/tree/master/beastify/beasts) から、またはここからでも取得できます。
+拡張機能のルートディレクトリー配下に "beasts" という名前のディレクトリーを新しく作成し、その中に 3 つの画像を適切な名前で保存します。画像は [GitHub リポジトリー](https://github.com/mdn/webextensions-examples/tree/master/beastify/beasts) から、またはここからでも取得できます。
 
 ![茶色いカエル](frog.jpg)
 
