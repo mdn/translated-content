@@ -11,15 +11,15 @@ slug: Web/HTTP/Headers/Accept
   <tbody>
     <tr>
       <th scope="row">標頭類型</th>
-      <td>{{Glossary("Request header")}}</td>
+      <td>{{Glossary("Response header", "回應標頭")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden header name", "禁止修改的標頭")}}</th>
       <td>no</td>
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("CORS-safelisted request header")}}
+        {{Glossary("CORS-safelisted response header", "CORS-安全清單回應標頭")}}
       </th>
       <td>
         yes，附加限制為值不能包含不安全的 CORS 請求標頭字節：0x00-0x1F（除了 0x09 (HT)），<code>"():&#x3C;>?@[\]{}</code>，和 0x7F (DEL)。
