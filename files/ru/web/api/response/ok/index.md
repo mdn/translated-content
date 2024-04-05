@@ -2,8 +2,6 @@
 title: "Response: свойство ok"
 short-title: ok
 slug: Web/API/Response/ok
-page-type: web-api-instance-property
-browser-compat: api.Response.ok
 ---
 
 {{APIRef("Fetch API")}}
