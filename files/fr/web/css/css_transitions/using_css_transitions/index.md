@@ -77,38 +77,9 @@ Avec cette feuille de style, on opère une transition CSS sur la taille de polic
     height, background-color, transform. Survolez la boîte pour voir les
     animations.
   </p>
-  <div class="box">Sample</div>
+  <div class="box">Exemple</div>
 </body>
 ```
-
-#### CSS Content
-
-```css
-.box {
-  border-style: solid;
-  border-width: 1px;
-  display: block;
-  width: 100px;
-  height: 100px;
-  background-color: #0000ff;
-  transition:
-    width 2s,
-    height 2s,
-    background-color 2s,
-    transform 2s;
-}
-
-.box:hover {
-  background-color: #ffcccc;
-  width: 200px;
-  height: 200px;
-  transform: rotate(180deg);
-}
-```
-
-{{EmbedLiveSample('Exemple_avec_plusieurs_propriétés_animées', 600, 300)}}
-
-### Appliquer une transition sur plusieurs propriétés
 
 #### CSS
 
@@ -135,19 +106,7 @@ Avec cette feuille de style, on opère une transition CSS sur la taille de polic
 }
 ```
 
-#### HTML
-
-```html
-<p>
-  Cette boîte utilisera des transitions pour width, height, background-color,
-  transform. Survolez cette boîte pour voir l'effet.
-</p>
-<div class="box"></div>
-```
-
-#### Résultat
-
-{{EmbedLiveSample('Appliquer_une_transition_sur_plusieurs_propriétés', 600, 300)}}
+{{EmbedLiveSample('Exemple_avec_plusieurs_propriétés_animées', 600, 300)}}
 
 ### Le rôle de la taille des listes de valeurs
 
@@ -328,4 +287,4 @@ el.addEventListener("transitionstart", signalStart, true);
 ## Voir aussi
 
 - L'interface {{domxref("TransitionEvent")}} et l'événement [`transitionend`](/fr/docs/Web/API/Element/transitionend_event)
-- [Utiliser les animations CSS](/fr/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [Utiliser les animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations)
