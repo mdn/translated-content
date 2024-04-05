@@ -32,7 +32,7 @@ new KeyboardEvent(type, options)
     - `repeat` {{optional_inline}}
       - : `false` 를 기본값으로 가지는 불리언 형태이며, {{domxref("KeyboardEvent.repeat")}} 의 값을 설정합니다.
     - `isComposing` {{optional_inline}}
-      - : `false` 를 기본값으로 가지는 불리언 형태이며,  {{domxref("KeyboardEvent.isComposing")}} 의 값을 설정합니다.
+      - : `false` 를 기본값으로 가지는 불리언 형태이며, {{domxref("KeyboardEvent.isComposing")}} 의 값을 설정합니다.
     - `charCode` {{optional_inline}} {{deprecated_inline}}
       - : `0` 을 기본값으로 가지는 숫자 형태이며, 사용이 중단된 {{domxref("KeyboardEvent.charCode")}} 의 값을 설정합니다.
     - `keyCode` {{optional_inline}} {{deprecated_inline}}
