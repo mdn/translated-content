@@ -17,8 +17,8 @@ browser-compat: api.Response.ok
 ## Примеры
 
 В нашем примере [Fetch Response example](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-response) (см. [Fetch Response live](https://mdn.github.io/dom-examples/fetch/fetch-response/))
-мы создаем новый экземпляр объекта {{domxref("Request")}} используя {{domxref("Request.Request","Request()")}} конструктор, передавая ему путь к картинке формата JPG.
-Затем мы отправляем запрос используя {{domxref("fetch()")}}, получаем в ответе blob объект используя {{domxref("Response.blob")}}, создаем объект URL используя {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}}, и отображаем результат в теге {{htmlelement("img")}}.
+мы создаëм новый экземпляр объекта {{domxref("Request")}} используя {{domxref("Request.Request","Request()")}} конструктор, передавая ему путь к картинке формата JPG.
+Затем мы отправляем запрос используя {{domxref("fetch()")}}, получаем в ответе blob объект используя {{domxref("Response.blob")}}, создаëм объект URL используя {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}}, и отображаем результат в теге {{htmlelement("img")}}.
 
 > **Примечание:** в верхних строчках функции `fetch()` мы выводим в консоль значение `ok` из переменной `response`.
 
