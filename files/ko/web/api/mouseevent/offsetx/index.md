@@ -1,5 +1,5 @@
 ---
-title: "MouseEvent: offsetX property"
+title: "MouseEvent: offsetX"
 slug: Web/API/MouseEvent/offsetX
 l10n:
   sourceCommit: b965392d6e4f2c897e914a3b69dec3e2a4212782
