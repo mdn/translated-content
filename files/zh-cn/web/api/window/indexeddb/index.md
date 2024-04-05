@@ -1,5 +1,5 @@
 ---
-title: indexedDB
+title: Window：indexedDB 属性
 slug: Web/API/Window/indexedDB
 ---
 
