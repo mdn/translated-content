@@ -1,5 +1,5 @@
 ---
-title: <html>：HTML文件/根元素
+title: <html>：HTML 文件/根元素
 slug: Web/HTML/Element/html
 ---
 
