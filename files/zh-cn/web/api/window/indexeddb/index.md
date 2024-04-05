@@ -1,11 +1,11 @@
 ---
-title: indexedDB
-slug: Web/API/indexedDB
+title: Window：indexedDB 属性
+slug: Web/API/Window/indexedDB
 ---
 
-{{ APIRef() }}
+{{APIRef("IndexedDB")}}
 
-**`indexedDB`** 是 `WindowOrWorkerGlobalScope` 的一个只读属性，它集成了为应用程序提供异步访问索引数据库的功能的机制。.
+**`indexedDB`** 是 `WindowOrWorkerGlobalScope` 的一个只读属性，它集成了为应用程序提供异步访问索引数据库的功能的机制。
 
 ## 语法
 
