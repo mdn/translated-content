@@ -26,4 +26,4 @@ l10n:
 ## 같이 보기
 
 - {{ domxref("MouseEvent") }}
-- [좌표계](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems)
+- [좌표계](/ko/docs/Web/CSS/CSSOM_view/Coordinate_systems)
