@@ -34,7 +34,6 @@ l10n:
 > - **slug**
 >   - : `https://developer.mozilla.org/ja/docs/` の後にくる URL の末尾です。
 >     これは `Web/API/NameOfTheParentInterface/NameOfTheEvent_event` のような形式になります。
->
 > - **sourceCommit**
 >   - : （翻訳記事のみ）この記事の翻訳元となる英語版記事を GitHub にコミットした際のコミット ID を記述します。 GitHub 上で英語版記事のコミット ID を確認してください。
 >

@@ -31,7 +31,6 @@ l10n:
 >   - : タイトルの見出しは、ページの最上部に表示されます。これはインターフェイスの名前だけです。例えば、 [Request](/ja/docs/Web/API/Request) インターフェイスのページには _Request_ というタイトルを付けます。
 > - **slug**
 >   - : `https://developer.mozilla.org/ja/docs/` の後にくる URL の末尾です。これは `Web/API/インターフェイス名` のような形式になります。例えば、 [Request](/ja/docs/Web/API/Request) のスラッグは "Web/API/Request" になります。
->
 > - **sourceCommit**
 >   - : （翻訳記事のみ）この記事の翻訳元となる英語版記事を GitHub にコミットした際のコミット ID を記述します。 GitHub 上で英語版記事のコミット ID を確認してください。
 >
