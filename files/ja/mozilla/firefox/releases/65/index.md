@@ -161,7 +161,7 @@ _変更なし。_
 
 - [WebP](/ja/docs/Glossary/webp) 画像をサポートしました ([Firefox バグ 1294490](https://bugzil.la/1294490))。
 
-  - また、特定の状況でブラウザ間の互換性を向上するために、WebP の MIMEType (`image/webp`) を HTML ファイルの {{httpheader("Accept")}} 標準 HTTP 要求ヘッダーに追加しました ([Firefox バグ 1507691](https://bugzil.la/1507691))。
+  - また、特定の状況でブラウザー間の互換性を向上するために、WebP の MIMEType (`image/webp`) を HTML ファイルの {{httpheader("Accept")}} 標準 HTTP 要求ヘッダーに追加しました ([Firefox バグ 1507691](https://bugzil.la/1507691))。
 
 - Windows で、AV1 コーデックをデフォルトでサポートしました ([Firefox バグ 1452146](https://bugzil.la/1452146))。
 

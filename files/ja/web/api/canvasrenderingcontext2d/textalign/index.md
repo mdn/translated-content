@@ -1,23 +1,20 @@
 ---
-title: CanvasRenderingContext2D.textAlign
+title: "CanvasRenderingContext2D: textAlign プロパティ"
+short-title: textAlign
 slug: Web/API/CanvasRenderingContext2D/textAlign
+l10n:
+  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
 {{APIRef}}
 
 **`CanvasRenderingContext2D.textAlign`** はキャンバス 2D API のプロパティで、テキストを描画するときに用いられる現在のテキスト配置を指定します。
 
-配置は {{domxref("CanvasRenderingContext2D.fillText", "fillText()")}} メソッドの x の値からの相対になります。 `textAlign` が `"center"` であれば、テキストの左端は `x - (textWidth / 2)` になります。
+配置は {{domxref("CanvasRenderingContext2D.fillText", "fillText()")}} メソッドの x の値からの相対位置になります。 `textAlign` が `"center"` であれば、テキストの左端は `x - (textWidth / 2)` になります。
 
-## 構文
+## 値
 
-```js
-ctx.textAlign = "left" || "right" || "center" || "start" || "end";
-```
-
-### オプション
-
-指定可能な値は次の通りです。
+取りうる値は次の通りです。
 
 - `"left"`
   - : テキストを左揃えにします。
@@ -26,9 +23,9 @@ ctx.textAlign = "left" || "right" || "center" || "start" || "end";
 - `"center"`
   - : テキストを中央揃えにします。
 - `"start"`
-  - : テキストをその行の標準的な先頭位置に配置します（左書きロケールでは左揃え、右書きのロケールでは右揃え）。
+  - : テキストをその行の標準的な先頭位置に配置します（左書きロケールでは左揃え、右書きロケールでは右揃え）。
 - `"end"`
-  - : テキストをその行の標準的な末尾位置に配置します（左書きロケールでは右揃え、右書きのロケールでは左揃え）。
+  - : テキストをその行の標準的な末尾位置に配置します（左書きロケールでは右揃え、右書きロケールでは左揃え）。
 
 既定値は `"start"` です。
 
