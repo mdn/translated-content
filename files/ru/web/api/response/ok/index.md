@@ -6,19 +6,18 @@ slug: Web/API/Response/ok
 
 {{APIRef("Fetch API")}}
 
-Свойство **`ok`** это доступное только для чтения свойство объекта {{domxref("Response")}}. Оно содержит в себе значение типа Boolean, указывающее был ли ответ от сервера успешным (статус в диапазоне 200-299) или не был.
+Доступное только для чтения свойство **`ok`** объекта {{domxref("Response")}} содержит в себе значение логического типа, указывающее был ли ответ от сервера успешным (статус в диапазоне 200-299) или нет.
 
 ## Значение
 
-Значение типа Boolean.
+Логическое значение.
 
 ## Примеры
 
-В нашем примере [Fetch Response example](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-response) (см. [Fetch Response live](https://mdn.github.io/dom-examples/fetch/fetch-response/))
-мы создаëм новый экземпляр объекта {{domxref("Request")}} используя {{domxref("Request.Request","Request()")}} конструктор, передавая ему путь к картинке формата JPG.
-Затем мы отправляем запрос используя {{domxref("fetch()")}}, получаем в ответе blob объект используя {{domxref("Response.blob")}}, создаëм объект URL используя {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}}, и отображаем результат в теге {{htmlelement("img")}}.
+В нашем примере [Fetch Response](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-response) (см. [живой пример](https://mdn.github.io/dom-examples/fetch/fetch-response/)) мы создаëм новый экземпляр объекта {{domxref("Request")}} используя конструктор {{domxref("Request.Request","Request()")}}, передавая ему путь к изображению.
+Затем мы отправляем запрос используя {{domxref("fetch()")}}, извлекаем из ответа объект Blob используя {{domxref("Response.blob")}}, создаëм объект URL с помощью {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} и отображаем результат в теге {{htmlelement("img")}}.
 
-> **Примечание:** в верхних строчках функции `fetch()` мы выводим в консоль значение `ok` из переменной `response`.
+> **Примечание:** в верхних строчках функции `fetch()` мы выводим в консоль ответ `ok`.
 
 ```js
 const myImage = document.querySelector("img");
