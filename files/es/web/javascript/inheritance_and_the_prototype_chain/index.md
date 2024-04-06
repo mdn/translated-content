@@ -159,6 +159,7 @@ const boxes = [
   { value: 3, __proto__: boxPrototype },
 ];
 ```
+
 De esta manera, el método `getValue` de todas las cajas (boxes) se referirá a la misma función, lo que reducirá el uso de memoria. Sin embargo, vincular manualmente el `__proto__` para cada creación de objeto sigue siendo muy inconveniente. Aquí es cuando usaríamos una función _constructor_ _constructor_, que establece automáticamente el `[[Prototipo]]` para cada objeto fabricado. Los constructores son funciones llamadas con [`new`](/es/docs/Web/JavaScript/Reference/Operators/new).
 
 ```js
