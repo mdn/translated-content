@@ -7,9 +7,9 @@ l10n:
 
 {{jsSidebar("Advanced")}}
 
-En programación, _herencia_ se refiere a transmitir características de un padre a un hijo para que un nuevo fragmento de código pueda reutilizarse y desarrollarse a partir de las características de uno existente. JavaScript implementa la herencia mediante el uso de [objetos](/en-US/docs/Web/JavaScript/Data_structures#objects). Cada objeto tiene un enlace interno a otro objeto llamado _prototype_ (_prototipo_). Ese objeto prototipo tiene un prototipo propio, y así sucesivamente hasta llegar a un objeto con `null` como prototipo. Por definición, `null` no tiene prototipo y actúa como el eslabón final en esta **cadena de prototipos**. Es posible mutar cualquier miembro de la cadena de prototipos o incluso intercambiar el prototipo en tiempo de ejecución, por lo que conceptos como [static dispatching (despacho estático)](https://en.wikipedia.org/wiki/Static_dispatch) no existen en JavaScript.
+En programación, _herencia_ se refiere a transmitir características de un padre a un hijo para que un nuevo fragmento de código pueda reutilizarse y desarrollarse a partir de las características de uno existente. JavaScript implementa la herencia mediante el uso de [objetos](/es/docs/Web/JavaScript/Data_structures#objetos). Cada objeto tiene un enlace interno a otro objeto llamado _prototype_ (_prototipo_). Ese objeto prototipo tiene un prototipo propio, y así sucesivamente hasta llegar a un objeto con `null` como prototipo. Por definición, `null` no tiene prototipo y actúa como el eslabón final en esta **cadena de prototipos**. Es posible mutar cualquier miembro de la cadena de prototipos o incluso intercambiar el prototipo en tiempo de ejecución, por lo que conceptos como [static dispatching (despacho estático)](https://en.wikipedia.org/wiki/Static_dispatch) no existen en JavaScript.
 
-JavaScript es un poco confuso para los desarrolladores con experiencia en lenguajes basados en clases (como Java o C++), ya que es [dinámico](/en-US/docs/Web/JavaScript/Data_structures#dynamic_and_weak_typing) y no tiene tipos estáticos. Si bien esta confusión a menudo se considera una de las debilidades de JavaScript, el modelo de herencia prototípico en sí es, de hecho, más poderoso que el modelo clásico. Por ejemplo, es bastante trivial construir un modelo clásico sobre un modelo prototípico, que es como se implementan las [clases](/en-US/docs/Web/JavaScript/Reference/Classes).
+JavaScript es un poco confuso para los desarrolladores con experiencia en lenguajes basados en clases (como Java o C++), ya que es [dinámico](/es/docs/Web/JavaScript/Data_structures#tipado_dinámico) y no tiene tipos estáticos. Si bien esta confusión a menudo se considera una de las debilidades de JavaScript, el modelo de herencia prototípico en sí es, de hecho, más poderoso que el modelo clásico. Por ejemplo, es bastante trivial construir un modelo clásico sobre un modelo prototípico, que es como se implementan las [clases](/es/docs/Web/JavaScript/Reference/Classes).
 
 Aunque las clases ahora se adoptan ampliamente y se han convertido en un nuevo paradigma en JavaScript, las clases no aportan un nuevo patrón de herencia. Si bien las clases abstraen la mayor parte del mecanismo prototípico, sigue siendo útil comprender cómo funcionan los prototipos internamente.
 
@@ -19,7 +19,7 @@ Aunque las clases ahora se adoptan ampliamente y se han convertido en un nuevo p
 
 Los objetos en JavaScript son "contenedores" dinámicos de propiedades (referidas como sus **propiedades particulares**). Los objetos en JavaScript poseen un enlace a un objeto prototipo. Al intentar acceder a una propiedad de un objeto, la propiedad no sólo se buscará en el objeto sino en el prototipo del objeto, el prototipo del prototipo, y así sucesivamente hasta que se encuentre una propiedad con un nombre coincidente o el final de la cadena prototipo.
 
-> **Nota:** Siguiendo el estándar ECMAScript, la notación `algunObjeto.[[Prototype]]` se utiliza para designar el prototipo de `algunObjeto.` Se puede acceder y modificar la ranura interna `[[Prototype]]` con las funciones {{jsxref("Object.getPrototypeOf()")}} y {{jsxref("Object.setPrototypeOf()")}} respectivamente. Esto es equivalente al descriptor de acceso de JavaScript [`__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto), que no es estándar pero está implementado de facto por muchos motores de JavaScript. Para evitar confusiones y al mismo tiempo ser conciso, en nuestra notación evitaremos usar `obj.__proto__` y usaremos `obj.[[Prototype]]` en su lugar. Esto corresponde a `Object.getPrototypeOf(obj)`.
+> **Nota:** Siguiendo el estándar ECMAScript, la notación `algunObjeto.[[Prototype]]` se utiliza para designar el prototipo de `algunObjeto.` Se puede acceder y modificar la ranura interna `[[Prototype]]` con las funciones {{jsxref("Object.getPrototypeOf()")}} y {{jsxref("Object.setPrototypeOf()")}} respectivamente. Esto es equivalente al descriptor de acceso de JavaScript [`__proto__`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/proto), que no es estándar pero está implementado de facto por muchos motores de JavaScript. Para evitar confusiones y al mismo tiempo ser conciso, en nuestra notación evitaremos usar `obj.__proto__` y usaremos `obj.[[Prototype]]` en su lugar. Esto corresponde a `Object.getPrototypeOf(obj)`.
 >
 > No debe confundirse con la propiedad de funciones `func.prototype`, que en cambio especifican el `[[Prototype]]` que se asigna a todas las _instancias_ de los objetos creados por la función dada cuando se usa como constructor. Discutiremos la propiedad `prototype` de las funciones constructoras en [una sección posterior](#constructores).
 
@@ -71,7 +71,7 @@ console.log(o.d); // undefined (indefinido)
 // No se encontró la propiedad, se devuelve undefined (indefinido)
 ```
 
-Dar valor a una propiedad de un objeto crea una propiedad. La única excepción a las reglas de funcionamiento de obtener y dar valores ocurre cuando hay una propiedad heredada con un [getter o un setter](/en-US/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters).
+Dar valor a una propiedad de un objeto crea una propiedad. La única excepción a las reglas de funcionamiento de obtener y dar valores ocurre cuando hay una propiedad heredada con un [getter o un setter](/es/docs/Web/JavaScript/Guide/Working_with_objects#definición_de_captadores_getters_y_establecedores_setters).
 
 De manera similar, puede crear cadenas de prototipos más largas y se buscará una propiedad en todas ellas.
 
@@ -97,7 +97,7 @@ console.log(o.d); // 5
 
 ### Heredando "métodos"
 
-JavaScript no tiene "[métodos](/en-US/docs/Glossary/Method)" en la forma que los lenguajes basados en clases los define. En JavaScript, cualquier función puede añadirse a un objeto como una propiedad. Una función heredada se comporta como cualquier otra propiedad, incluído el solapamiento/sombreado de propiedades como se muestra anteriormente (siendo, en este caso, una especie de _redefinición de métodos_).
+JavaScript no tiene "[métodos](/es/docs/Glossary/Method)" en la forma que los lenguajes basados en clases los define. En JavaScript, cualquier función puede añadirse a un objeto como una propiedad. Una función heredada se comporta como cualquier otra propiedad, incluído el solapamiento/sombreado de propiedades como se muestra anteriormente (siendo, en este caso, una especie de _redefinición de métodos_).
 
 Cuando una función heredada se ejecuta, el valor de [`this`](/es/docs/Web/JavaScript/Reference/Operators/this) apunta al objeto heredado, no al prototipo en el que la función es una propiedad.
 
@@ -159,7 +159,7 @@ const boxes = [
   { value: 3, __proto__: boxPrototype },
 ];
 ```
-De esta manera, el método `getValue` de todas las cajas (boxes) se referirá a la misma función, lo que reducirá el uso de memoria. Sin embargo, vincular manualmente el `__proto__` para cada creación de objeto sigue siendo muy inconveniente. Aquí es cuando usaríamos una función _constructor_ _constructor_, que establece automáticamente el `[[Prototipo]]` para cada objeto fabricado. Los constructores son funciones llamadas con [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new).
+De esta manera, el método `getValue` de todas las cajas (boxes) se referirá a la misma función, lo que reducirá el uso de memoria. Sin embargo, vincular manualmente el `__proto__` para cada creación de objeto sigue siendo muy inconveniente. Aquí es cuando usaríamos una función _constructor_ _constructor_, que establece automáticamente el `[[Prototipo]]` para cada objeto fabricado. Los constructores son funciones llamadas con [`new`](/es/docs/Web/JavaScript/Reference/Operators/new).
 
 ```js
 // Una función constructora
@@ -176,11 +176,11 @@ Box.prototype.getValue = function () {
 const boxes = [new Box(1), new Box(2), new Box(3)];
 ```
 
-Decimos que `new Box(1)` es una _instancia_ creada a partir de la función constructora `Box`. `Box.prototype` no es muy diferente del objeto `boxPrototype` que creamos anteriormente; es simplemente un objeto simple. Cada instancia creada a partir de una función constructora tendrá automáticamente la propiedad [`prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) del constructor como su `[[Prototype]]` es decir, `Object.getPrototypeOf(new Box()) === Box.prototype`. `Constructor.prototype` por defecto tiene una propiedad: [`constructor`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor), que hace referencia a la misma función constructora, es decir,, `Box.prototype.constructor === Box`. Esto permite acceder al constructor original desde cualquier instancia.
+Decimos que `new Box(1)` es una _instancia_ creada a partir de la función constructora `Box`. `Box.prototype` no es muy diferente del objeto `boxPrototype` que creamos anteriormente; es simplemente un objeto simple. Cada instancia creada a partir de una función constructora tendrá automáticamente la propiedad [`prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) del constructor como su `[[Prototype]]` es decir, `Object.getPrototypeOf(new Box()) === Box.prototype`. `Constructor.prototype` por defecto tiene una propiedad: [`constructor`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor), que hace referencia a la misma función constructora, es decir,, `Box.prototype.constructor === Box`. Esto permite acceder al constructor original desde cualquier instancia.
 
 > **Nota:** Si la función constructora devuelve un valor no primitivo, ese valor se convertirá en el resultado de la expresión `new`. En este caso, es posible que el `[[Prototype]]` no esté correctamente vinculado, pero esto no debería suceder mucho en la práctica.
 
-La función constructora anterior se puede reescribir en [clases](/en-US/docs/Web/JavaScript/Reference/Classes) as:
+La función constructora anterior se puede reescribir en [clases](/es/docs/Web/JavaScript/Reference/Classes) as:
 
 ```js
 class Box {
@@ -243,11 +243,11 @@ const array = new Array(1, 2, 3);
 const regexp = new RegExp("abc");
 ```
 
-Por ejemplo, los "métodos de array" como [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) son simplemente métodos definidos en `Array.prototype`, por lo que están disponibles automáticamente en todas las instancias de la matriz.
+Por ejemplo, los "métodos de array" como [`map()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/map) son simplemente métodos definidos en `Array.prototype`, por lo que están disponibles automáticamente en todas las instancias de la matriz.
 
 > **Advertencia:** Hay un error que solía ser frecuente: extender `Object.prototype` o uno de los otros prototipos integrados. Un ejemplo de esta característica errónea es definir `Array.prototype.myMethod = function () {...}` y luego usar `myMethod` en todas las instancias de matriz.
 >
-> Esta característica errónea se llama _parche de mono_/_monkey patching_. Hacer parches de mono arriesga la compatibilidad futura, porque si el lenguaje agrega este método en el futuro pero con una firma diferente, su código se romperá. Ha provocado incidentes como el [SmooshGate](https://developer.chrome.com/blog/smooshgate/), y puede ser una gran molestia para que el lenguaje avance ya que JavaScript intenta "no romper la web".
+> Esta característica errónea se llama _parche de mono_/_monkey patching_. Hacer parches de mono arriesga la compatibilidad futura, porque si el lenguaje agrega este método en el futuro pero con una firma diferente, su código se romperá. Ha provocado incidentes como el [SmooshGate](https://developer.chrome.com/blog/smooshgate?hl=es-419), y puede ser una gran molestia para que el lenguaje avance ya que JavaScript intenta "no romper la web".
 >
 > La **única** buena razón para extender un prototipo integrado es respaldar las características de los motores JavaScript más nuevos, como `Array.prototype.forEach`.
 
@@ -279,7 +279,7 @@ const obj = new Constructor();
 // obj ---> Constructor.prototype ---> Object.prototype ---> null
 ```
 
-Para construir cadenas de prototipos más largas, podemos configurar el `[[Prototype]]` de `Constructor.prototype` a través de la función [`Object.setPrototypeOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf).
+Para construir cadenas de prototipos más largas, podemos configurar el `[[Prototype]]` de `Constructor.prototype` a través de la función [`Object.setPrototypeOf()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf).
 
 ```js
 function Base() {}
@@ -292,7 +292,7 @@ const obj = new Derived();
 // obj ---> Derived.prototype ---> Base.prototype ---> Object.prototype ---> null
 ```
 
-En términos de clase, esto es  [`extends`](/en-US/docs/Web/JavaScript/Reference/Classes/extends) equivalente a usar thentax.
+En términos de clase, esto es  [`extends`](/es/docs/Web/JavaScript/Reference/Classes/extends) equivalente a usar thentax.
 
 ```js
 class Base {}
@@ -302,7 +302,7 @@ const obj = new Derived();
 // obj ---> Derived.prototype ---> Base.prototype ---> Object.prototype ---> null
 ```
 
-También puede ver código heredado usando {{jsxref("Object.create()")}} para construir la cadena de herencia. Sin embargo, debido a que esto reasigna la propiedad `prototype` y elimina la propiedad [`constructor`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor), puede ser más propenso a errores, mientras que las mejoras de rendimiento es posible no sean evidentes si los constructores aún no han creado ninguna instancia.
+También puede ver código heredado usando {{jsxref("Object.create()")}} para construir la cadena de herencia. Sin embargo, debido a que esto reasigna la propiedad `prototype` y elimina la propiedad [`constructor`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor), puede ser más propenso a errores, mientras que las mejoras de rendimiento es posible no sean evidentes si los constructores aún no han creado ninguna instancia.
 
 ```js example-bad
 function Base() {}
@@ -620,7 +620,7 @@ const filledRectangle = new FilledRectangle(5, 10, "blue");
     <tr>
       <th scope="row">Pro(s)</th>
       <td>
-         Compatible con todos los motores modernos. Muy alta legibilidad y mantenibilidad. <a href="/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties">Propiedades privadas</a> son una característica sin reemplazo trivial en la herencia prototípica.
+         Compatible con todos los motores modernos. Muy alta legibilidad y mantenibilidad. <a href="/es/docs/Web/JavaScript/Reference/Classes/Private_properties">Propiedades privadas</a> son una característica sin reemplazo trivial en la herencia prototípica.
        </td>
     </tr>
     <tr>
@@ -640,7 +640,7 @@ const filledRectangle = new FilledRectangle(5, 10, "blue");
 
 ### Con Object.setPrototypeOf()
 
-Si bien todos los métodos anteriores establecerán la cadena de prototipos en el momento de la creación del objeto, [`Object.setPrototypeOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf) permite mutar el `[[Prototype]]` de la propiedad interna de un objeto existente.
+Si bien todos los métodos anteriores establecerán la cadena de prototipos en el momento de la creación del objeto, [`Object.setPrototypeOf()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf) permite mutar el `[[Prototype]]` de la propiedad interna de un objeto existente.
 
 ```js
 const obj = { a: 1 };
@@ -682,7 +682,7 @@ Object.setPrototypeOf(obj, anotherObj);
 
 ### Con el \_\_proto\_\_ accessor
 
-Todos los objetos heredan el setter [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto), que se puede utilizar para configurar el `[[Prototype]]` de un objeto existente (si la clave `__proto__` no es anulada en el objeto).
+Todos los objetos heredan el setter [`Object.prototype.__proto__`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/proto), que se puede utilizar para configurar el `[[Prototype]]` de un objeto existente (si la clave `__proto__` no es anulada en el objeto).
 
 > **Advertencia:** `Object.prototype.__proto__` accessors son **no estandar** y están en desuso. En su lugar usted debería  usar `Object.setPrototypeOf`.
 
@@ -730,7 +730,7 @@ console.log(obj.barProp);
 
 El tiempo de búsqueda de propiedades que es alto en la cadena del prototipo puede tener un impacto negativo en el rendimiento, y esto puede ser significativo en el código donde el rendimiento es crítico. Además, intentar acceder a propiedades inexistentes siempre recorrerá la cadena del prototipo completamente.
 
-Además, al iterar sobre las propiedades de un objeto, se enumerarán **todas** las propiedades enumerables que se encuentran en la cadena del prototipo. Para verificar si un objeto tiene una propiedad definida _en sí mismo_ y no en algún lugar de su cadena de prototipo, es necesario usar los métodos[`hasOwnProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) o [`Object.hasOwn`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn). Todos los objetos, excepto aquellos con `null` como `[[Prototype]]`, heredan [`hasOwnProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) de `Object.prototype` – a menos que haya sido sobre escrito más abajo en la cadena del prototipo. Para darle un ejemplo concreto, tomemos el código de ejemplo del gráfico anterior para ilustrarlo:
+Además, al iterar sobre las propiedades de un objeto, se enumerarán **todas** las propiedades enumerables que se encuentran en la cadena del prototipo. Para verificar si un objeto tiene una propiedad definida _en sí mismo_ y no en algún lugar de su cadena de prototipo, es necesario usar los métodos[`hasOwnProperty`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) o [`Object.hasOwn`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn). Todos los objetos, excepto aquellos con `null` como `[[Prototype]]`, heredan [`hasOwnProperty`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) de `Object.prototype` – a menos que haya sido sobre escrito más abajo en la cadena del prototipo. Para darle un ejemplo concreto, tomemos el código de ejemplo del gráfico anterior para ilustrarlo:
 
 ```js
 function Graph() {
@@ -757,7 +757,7 @@ Object.hasOwn(g, "addVertex"); // falso
 Object.getPrototypeOf(g).hasOwnProperty("addVertex"); // verdadero
 ```
 
-Nota: **no** es suficiente verificar si una propiedad es [`undefinida`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined). Es muy posible que la propiedad exista, pero resulta que su valor está establecido en `undefined`.
+Nota: **no** es suficiente verificar si una propiedad es [`undefinida`](/es/docs/Web/JavaScript/Reference/Global_Objects/undefined). Es muy posible que la propiedad exista, pero resulta que su valor está establecido en `undefined`.
 
 ## Conclusión
 
