@@ -225,7 +225,7 @@ console.log(parsed);
 >
 > Además, el ejemplo de arriba crea un objeto entero en el replacing y reviving, lo que probablemente tenga implicaciónes de rendimiento y almacenamiento para objetos más grandes que contienen muchos BigInts. Si conoces la forma de carga útil esperada, puede ser mejor simplemente serializarlas como strings y revivirlas basadas en el nombre de la key.
 
-De hecho, JSON permite números literales que son arbitrariamente largos; simplemente no se pueden analizar con total precisión en JavaScript. Si se está comunicando con otro programa en un lenguaje que admite enteros más largos (como enteros de 64 bits) y desea transmitir BigInt como un número en el JSON en lugar de una cadena de texto en el JSON, consulte sobre la [Serialización de números sin pérdida](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON#using_json_numbers).
+De hecho, JSON permite números literales que son arbitrariamente largos; simplemente no se pueden analizar con total precisión en JavaScript. Si se está comunicando con otro programa en un lenguaje que admite enteros más largos (como enteros de 64 bits) y desea transmitir BigInt como un número en el JSON en lugar de una cadena de texto en el JSON, consulte sobre la [Serialización de números sin pérdida](/es/docs/Web/JavaScript/Reference/Global_Objects/JSON#using_json_numbers).
 
 ### Coerción BigInt
 
