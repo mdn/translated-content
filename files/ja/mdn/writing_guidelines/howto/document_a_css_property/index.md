@@ -1,8 +1,8 @@
 ---
-title: CSS プロパティの記事を作成するには
+title: CSS プロパティの記事の作成方法
 slug: MDN/Writing_guidelines/Howto/Document_a_CSS_property
 l10n:
-  sourceCommit: a396a59cd4a044d8fa1310d241c933e5881c0cec
+  sourceCommit: aa66311219951396e7305df61eb31831360d2c79
 ---
 
 {{MDNSidebar}}

@@ -69,7 +69,7 @@ MDN の[ウェブ開発を学ぶ](/ja/docs/Learn)の章に関連する質問の�
 1. 一般的なページ構造に目を通してください。
 2. 特に、利用可能な評価の種類に注目してください。
 
-   - 数多くの「うでだめし」記事が用意されています（例えば [/ja/docs/Learn/JavaScript/Building_blocks/conditionals#Test_your_skills!](/ja/docs/Learn/JavaScript/Building_blocks/conditionals#test_your_skills!) を参照してください）。
+   - 数多くの「うでだめし」記事が用意されています（例えば [/ja/docs/Learn/JavaScript/Building_blocks/conditionals#スキルテスト](/ja/docs/Learn/JavaScript/Building_blocks/conditionals#スキルテスト) を参照してください）。
    - モジュールによっては、最後にもっと詳しい評価テストがあります（例えば [/ja/docs/Learn/JavaScript/Building_blocks/Image_gallery](/ja/docs/Learn/JavaScript/Building_blocks/Image_gallery) を参照してください）。
 
 3. 学習エリアに関連する GitHub リポジトリーを見てみましょう（ほとんどのファイルは <https://github.com/mdn/learning-area/> に、一部は <https://github.com/mdn/css-examples/tree/master/learn> で利用できます）。学習者が助けを求めている例のほとんどがここに含まれています。

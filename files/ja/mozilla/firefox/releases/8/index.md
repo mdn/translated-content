@@ -5,13 +5,13 @@ slug: Mozilla/Firefox/Releases/8
 
 Firefox 8 は 2011 年 11 月 8 日にリリースされました。このページでは、開発者に影響する Firefox 8 の変更点をまとめています。
 
-## Web 開発者向けの変更点一覧
+## ウェブ開発者向けの変更点一覧
 
 ### HTML
 
 - [`HTMLImageElement`](/ja/docs/Web/API/HTMLImageElement) に `crossOrigin` プロパティが追加され、また [`<img>`](/ja/docs/Web/HTML/Element/img) 要素に [`crossorigin`](/ja/docs/Web/HTML/Element/img#attr-crossorigin) 属性が追加されました。(参考: [バグ 664299](https://bugzilla.mozilla.org/show_bug.cgi?id=664299))
 - [`HTMLSelectElement.add()`](</ja/docs/Web/API/HTMLSelectElement#add()>) メソッドの引数に、インデックスが追加されました。インデックスが指す要素の前に、新たな項目が挿入されます。このメソッドはこれまで、項目のみがサポートされていました。(参考: [バグ 666200](https://bugzilla.mozilla.org/show_bug.cgi?id=666200))
-- `HTMLIsIndexElement` コンストラクタが削除されました。Firefox 4 以前から、どの要素もこのインターフェースをインプリメントしていませんでした。
+- `HTMLIsIndexElement` コンストラクターが削除されました。Firefox 4 以前から、どの要素もこのインターフェイスをインプリメントしていませんでした。
 - HTML5 のコンテキストメニュー機能 (contextmenu 属性) がサポートされました。この機能によって、要素固有のメニュー項目をネイティブのコンテキストメニューに追加できます。(この機能は HTML5 仕様の変更を待っている関係で、現時点では試験実装という扱いです。参考: [バグ 617528](https://bugzilla.mozilla.org/show_bug.cgi?id=617528 'FIXED: implement the HTML5 "context menu" feature (contextmenu attribute)'))
 - すべての要素に [`accesskeylabel`](/ja/docs/HTML/Global_attributes#attr-accesskeylabel) 属性がサポートされました。
 - [`<input>`](/ja/docs/Web/HTML/Element/input) と [`<textarea>`](/ja/docs/Web/HTML/Element/textarea) に `selectionDirection` アトリビュートが追加されました。また、`setSelectionRange()` メソッドが選択方向を指定できるようになりました。
@@ -26,7 +26,7 @@ Firefox 8 は 2011 年 11 月 8 日にリリースされました。このペー
 - [`element.contenteditable`](/ja/docs/Web/API/Element/contenteditable) な領域において、見出しで改行した際、もしくはリスト編集モードから 2 回開業して抜け出す際、段落が挿入されるようになりました。(これまでは[`<br>`](/ja/docs/Web/HTML/Element/br)でしたが、これからは[`<p>`](/ja/docs/Web/HTML/Element/p)が挿入されます。)
 - [`element.contenteditable`](/ja/docs/Web/API/Element/contenteditable) な領域において、1 行目に均等割付を与えたときに適切な処理を妨げるバグを修正しました。
 - [`element.contenteditable`](/ja/docs/Web/API/Element/contenteditable) な領域の最初で delete もしくは backspace を押した際に、前のブロックに影響するバグを修正しました。
-- [`document.getSelection()`](/ja/docs/Web/API/Document/getSelection "DOM の getSelection() メソッドは、 Window インタフェース及び Document インタフェースで利用可能です。
+- [`document.getSelection()`](/ja/docs/Web/API/Document/getSelection "DOM の getSelection() メソッドは、 Window インターフェイス及び Document インターフェイスで利用可能です。
 詳細については window.getSelection() の頁を参照して下さい。") が文字列化ではなく、[`window.getSelection()`](/ja/docs/Web/API/Window/getSelection) と同じ `Selection` オブジェクトを返すようになりました。
 - HTML5 の `selectionDirection` プロパティが実装されました。編集可能テキストで選択した方向を指定できます。
 - [`HTMLMediaElement`](/ja/docs/Web/API/HTMLMediaElement) の `seekable` プロパティが実装されました。このプロパティは [`TimeRanges`](/ja/docs/Web/API/TimeRanges) を返します。
@@ -59,13 +59,13 @@ Firefox 8 は 2011 年 11 月 8 日にリリースされました。このペー
 ### WebSocket
 
 - WebSocket オブジェクトの [`send()`](</ja/docs/WebSockets/WebSockets_reference/WebSocket#send()> "WebSockets/WebSockets_reference/WebSocket#send()") メソッドが不適切に真偽値を返していた挙動が修正されました。
-- [`WebSocket`](/ja/docs/WebSockets/WebSockets_reference/WebSocket) オブジェクトの [`close()`](</ja/docs/WebSockets/WebSockets_reference/WebSocket#close()> "WebSockets/WebSockets_reference/WebSocket#close()") メソッドが現在の標準草案に従ったものになりました。また、クローズイベントが適切に [`CloseEvent`](/ja/docs/WebSockets/WebSockets_reference/CloseEvent) インターフェースを利用するようになりました。
+- [`WebSocket`](/ja/docs/WebSockets/WebSockets_reference/WebSocket) オブジェクトの [`close()`](</ja/docs/WebSockets/WebSockets_reference/WebSocket#close()> "WebSockets/WebSockets_reference/WebSocket#close()") メソッドが現在の標準草案に従ったものになりました。また、クローズイベントが適切に [`CloseEvent`](/ja/docs/WebSockets/WebSockets_reference/CloseEvent) インターフェイスを利用するようになりました。
 - The [`WebSocket`](/ja/docs/WebSockets/WebSockets_reference/WebSocket) オブジェクトの `extensions` アトリビュートがサポートされました。
-- WebSocket コンストラクタがひとつのプロトコル文字列だけではなく、プロトコルの配列もサポートするようになりました。
+- WebSocket コンストラクターがひとつのプロトコル文字列だけではなく、プロトコルの配列もサポートするようになりました。
 - SSL と 非 SSL の混在が WebSocket で認められなくなりました。
 - WebSocket の接続エラーが `onerror` ハンドラをトリガーするようになりました。
 - [WebSocket](/ja/docs/WebSockets) API が最新版の仕様に追従しました。(参考: [バグ 674890](https://bugzilla.mozilla.org/show_bug.cgi?id=674890), [バグ 674527](https://bugzilla.mozilla.org/show_bug.cgi?id=674527), [バグ 674716](https://bugzilla.mozilla.org/show_bug.cgi?id=674716))
-- WebSocket の deflate-stream 拡張が無効にされました。この拡張は非推奨とされており、またいくつかの Web サイトとの互換性を損ねていました。
+- WebSocket の deflate-stream 拡張が無効にされました。この拡張は非推奨とされており、またいくつかのウェブサイトとの互換性を損ねていました。
 
 ### WebGL
 
@@ -85,7 +85,7 @@ Firefox 8 は 2011 年 11 月 8 日にリリースされました。このペー
 
 アドオンを Firefox 8 互換にする際に必要となりそうな変更点は [Updating add-ons for Firefox 8](/ja/docs/Firefox/Updating_add-ons_for_Firefox_8) にまとめられています。
 
-> **メモ:** Firefox 8 では、従来のメジャーリリースと同様に、バイナリコンポーネントをコンパイルし直す必要があります。詳しくは [バイナリインタフェース](/ja/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces) をご覧ください。
+> **メモ:** Firefox 8 では、従来のメジャーリリースと同様に、バイナリコンポーネントをコンパイルし直す必要があります。詳しくは [バイナリインターフェイス](/ja/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces) をご覧ください。
 
 ### XPCOM
 
@@ -126,27 +126,27 @@ ChromeWorkers から XPCOM オブジェクトにアクセスできなくなり�
 
 - Gecko のバージョン互換性を指定する [`platformversion`](/ja/docs/Chrome_Registration#platformversion) フラグが chrome.manifest でも使えるようになりました。
 
-### インタフェースの変更
+### インターフェイスの変更
 
 - [`mozIJSSubScriptLoader.loadSubScript()`](/ja/docs/XPCOM_Interface_Reference/mozIJSSubScriptLoader#loadSubScript%28%29) メソッドが、可能な場合、起動キャッシュからスクリプトを読み込むようになりました。
-- [`nsIAccessNode`](/ja/docs/XPCOM_Interface_Reference/NsIAccessNode) インタフェースから `ownerWindow` 属性が削除されました。
-- [`nsIDOMStorageWindow`](/ja/docs/XPCOM_Interface_Reference/nsIDOMStorageWindow) インタフェースは [`nsIDOMWindow`](/ja/docs/XPCOM_Interface_Reference/nsIDOMWindow) インタフェースへ統合されました。
-- [`nsIDOMWindowInternal`](/ja/docs/XPCOM_Interface_Reference/nsIDOMWindowInternal) インタフェースの全メンバーが [`nsIDOMWindow`](/ja/docs/XPCOM_Interface_Reference/nsIDOMWindow) インタフェースへ移動されました。インタフェース自体は互換性維持のため Firefox 9 まで (メンバーを持たない状態で) 残されます。
+- [`nsIAccessNode`](/ja/docs/XPCOM_Interface_Reference/NsIAccessNode) インターフェイスから `ownerWindow` 属性が削除されました。
+- [`nsIDOMStorageWindow`](/ja/docs/XPCOM_Interface_Reference/nsIDOMStorageWindow) インターフェイスは [`nsIDOMWindow`](/ja/docs/XPCOM_Interface_Reference/nsIDOMWindow) インターフェイスへ統合されました。
+- [`nsIDOMWindowInternal`](/ja/docs/XPCOM_Interface_Reference/nsIDOMWindowInternal) インターフェイスの全メンバーが [`nsIDOMWindow`](/ja/docs/XPCOM_Interface_Reference/nsIDOMWindow) インターフェイスへ移動されました。インターフェイス自体は互換性維持のため Firefox 9 まで (メンバーを持たない状態で) 残されます。
 - [`nsIMemoryReporter`](/ja/docs/XPCOM_Interface_Reference/nsIMemoryReporter) の `KIND_MAPPED` 属性が廃止され、代わりに `KIND_NONHEAP` 属性と新しい単位型 `UNITS_COUNT_CUMULATIVE`、`UNITS_PERCENTAGE` が追加されました。
-- [`nsINetworkLinkService`](/ja/docs/XPCOM_Interface_Reference/nsINetworkLinkService) インタフェースに `linkType` 属性が追加されました。この属性で使用中のネットワーク接続の種類を参照できます。ただし、今のところすべての OS で `LINK_TYPE_UNKNOWN` が返ります。Android 対応は、セキュリティの懸念が報告されたため、バックアウトされました。
-- [`nsISelection2`](/ja/docs/XPCOM_Interface_Reference/nsISelection2) インタフェースは [`nsISelectionPrivate`](/ja/docs/XPCOM_Interface_Reference/nsISelectionPrivate) インタフェースへ統合されました。
-- [`nsISelection3`](/ja/docs/XPCOM_Interface_Reference/nsISelection3) インタフェースは [`nsISelection`](/ja/docs/DOM/Selection) インタフェースへ統合されました。
+- [`nsINetworkLinkService`](/ja/docs/XPCOM_Interface_Reference/nsINetworkLinkService) インターフェイスに `linkType` 属性が追加されました。この属性で使用中のネットワーク接続の種類を参照できます。ただし、今のところすべての OS で `LINK_TYPE_UNKNOWN` が返ります。Android 対応は、セキュリティの懸念が報告されたため、バックアウトされました。
+- [`nsISelection2`](/ja/docs/XPCOM_Interface_Reference/nsISelection2) インターフェイスは [`nsISelectionPrivate`](/ja/docs/XPCOM_Interface_Reference/nsISelectionPrivate) インターフェイスへ統合されました。
+- [`nsISelection3`](/ja/docs/XPCOM_Interface_Reference/nsISelection3) インターフェイスは [`nsISelection`](/ja/docs/DOM/Selection) インターフェイスへ統合されました。
 - [`nsISessionStartup`](/ja/docs/XPCOM_Interface_Reference/nsISessionStartup) の属性の状態が、パフォーマンス上の理由から、文字列型ではなく [`jsval`](/ja/docs/SpiderMonkey/JSAPI_Reference/Jsval) 型になりました。
 - [`nsIDocShell`](/ja/docs/XPCOM_Interface_Reference/nsIDocShell) の `isActive` 属性は、最小化されたウィンドウでは `false` を返すようになりました。
 
-#### 削除されたインターフェース
+#### 削除されたインターフェイス
 
-次のインターフェースは内部で使用されていたもので、必要がなくなったため削除されました。
+次のインターフェイスは内部で使用されていたもので、必要がなくなったため削除されました。
 
 - `nsITimelineService`
 - `nsIDOMHTMLIsIndexElement`
 
-[`nsIWorkerFactory`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWorkerFactory) インターフェースも削除されました。ワーカーは `Worker`, `ChromeWorker` コンストラクタから生成可能です。
+[`nsIWorkerFactory`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWorkerFactory) インターフェイスも削除されました。ワーカーは `Worker`, `ChromeWorker` コンストラクターから生成可能です。
 
 ### その他の変更
 
