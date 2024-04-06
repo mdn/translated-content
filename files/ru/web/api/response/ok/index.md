@@ -2,6 +2,8 @@
 title: "Response: свойство ok"
 short-title: ok
 slug: Web/API/Response/ok
+l10n:
+  sourceCommit: 381c51574a3e6a07ee09c63493452440f046038d
 ---
 
 {{APIRef("Fetch API")}}
