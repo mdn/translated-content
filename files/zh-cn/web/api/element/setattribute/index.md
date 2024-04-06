@@ -2,12 +2,12 @@
 title: Element：setAttribute() 方法
 slug: Web/API/Element/setAttribute
 l10n:
-  sourceCommit: 990ab6637bb4d44f059597262cbf3c51abae79eb
+  sourceCommit: 674ac8f0b0c639967d29951b5e6f3f65c656f164
 ---
 
 {{APIRef("DOM")}}
 
-设置指定元素上的某个属性值。如果属性已经存在，则更新该值；否则，使用指定的名称和值添加一个新的属性。
+{{domxref("Element")}} 接口的 **`setAttribute()`** 方法用于设置指定元素上的某个属性值。如果属性已经存在，则更新该值；否则，使用指定的名称和值添加一个新的属性。
 
 要获取某个属性当前的值，请使用 {{domxref("Element.getAttribute", "getAttribute()")}}；要删除某个属性，请使用 {{domxref("Element.removeAttribute", "removeAttribute()")}}。
 
