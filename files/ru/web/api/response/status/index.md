@@ -1,5 +1,5 @@
 ---
-title: "Response: status property"
+title: "Response: свойство status"
 short-title: status
 slug: Web/API/Response/status
 l10n:
