@@ -2,7 +2,7 @@
 title: BigInt
 slug: Web/JavaScript/Reference/Global_Objects/BigInt
 l10n:
-  sourceCommit: 6fda526a693a8b64fc8ce92e37692aba3c5a5681
+  sourceCommit: e7fab5265b54dc9faeff7e8cf4972cc171ec856b
 ---
 
 {{JSRef}}
