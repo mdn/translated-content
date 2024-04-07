@@ -36,4 +36,4 @@ navigator.serial.getPorts().then((ports) => {
 ## 参见
 
 - [对串行端口执行读写操作](https://developer.chrome.com/docs/capabilities/serial)
-- [读取和写入串行端口 API](https://codelabs.developers.google.com/codelabs/web-serial#0)
+- [Web 串行 API 入门](https://codelabs.developers.google.com/codelabs/web-serial#0)
