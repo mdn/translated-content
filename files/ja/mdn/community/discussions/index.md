@@ -2,19 +2,22 @@
 title: コミュニティのディスカッション
 slug: MDN/Community/Discussions
 l10n:
-  sourceCommit: e7981a5962663764c953ef509d7a8f2d0f934885
+  sourceCommit: 87ca43c169a4fd3cbfa0c0301bcf0c013928325c
 ---
 
 {{MDNSidebar}}
 
 MDN Web Docs では、プロジェクト全体に関連するトピックについてディスカッションを始めたり、参加したりすることをコミュニティに奨励しています。ディスカッションは異なる形のトピックに分類されます。1 つのディスカッションで複数のトピックに応じるのではなく、それぞれのディスカッションをそのトピックに集中させるようお願いします。
 
-_メモ:_ `mdn-community/discussions` は問題を報告する場ではありません。 MDN Web Docs で遭遇した問題は、[関連するプロジェクト](https://github.com/mdn/)で課題を挙げるのが最良です。課題とディスカッションのどちらを始めるべきか迷ったときは、以下のガイドラインを参考にしてください。
+**メモ:** `mdn-community/discussions` は問題を報告する場ではありません。
+MDN Web Docs で何かおかしいと思ったら、[関連する MDN GitHub リポジトリー](https://github.com/mdn/) で GitHub の課題を開くのが一番です。
+課題を開くためのものか、ディスカッションを始めるためのものかわからない場合は、以下のガイドラインを参考にしてください。
 
-- 課題とは、バグを報告するためのもの、または明確に定義され、実行可能なタスクと結果を伴う作業項目を意味します。
-- ディスカッションは、行動方針に合意したり、作業内容を定義したりするためにディスカッションが必要な問題であれば、適切な場所です。
+- 課題は、バグや、明確に定義され、実行可能な課題と結果を伴う作業項目を報告するために使用しましょう。
+- ディスカッションを使用するのは、課題に対して行動方針の合意や作業項目を定義するための対話が要求される場合です。
+- ディスカッションが進まない場合や、次の段階がわからない場合は、[ディスカッションを管理し解決するためのガイドライン](/ja/docs/MDN/Community/Discussions/Managing_and_resolving_discussions) を参照し、スケジュールに関する期待も含め、前進するためのアドバイスが得られます。
 
-ディスカッションを適切な場所から開始するために、下記の各ディスカッションカテゴリーの定義を調べてみてください。
+ディスカッションを適切な場所から開始するために、下記の各ディスカッションカテゴリーの主題を調べてみてください。
 
 <table>
   <thead>
@@ -28,7 +31,7 @@ _メモ:_ `mdn-community/discussions` は問題を報告する場ではありま
       <td>
         📣
         <a
-          href="https://github.com/mdn/mdn-community/discussions/categories/announcements"
+          href="https://github.com/orgs/mdn/discussions/categories/announcements"
           >Announcements</a
         >
       </td>
@@ -40,11 +43,12 @@ _メモ:_ `mdn-community/discussions` は問題を報告する場ではありま
       <td>
         🔮
         <a
-          href="https://github.com/mdn/mdn-community/discussions/categories/browser-compatibility-data"
+          href="https://github.com/orgs/mdn/discussions/categories/browser-compatibility-data"
           >Browser compatibility data</a
         >
       </td>
       <td>
+        ブラウザーのウェブプラットフォームの互換性データを文書化する
         <a href="https://github.com/mdn/browser-compat-data"
           >browser-compat-data</a
         >
@@ -55,37 +59,22 @@ _メモ:_ `mdn-community/discussions` は問題を報告する場ではありま
       <td>
         ✏️
         <a
-          href="https://github.com/mdn/mdn-community/discussions/categories/content"
+          href="https://github.com/orgs/mdn/discussions/categories/content"
           >Content</a
         >
       </td>
       <td>
         MDN Web Docs の
         <a href="https://github.com/mdn/content">content</a> に関するディスカッションです。
-        <em>メモ:</em> ここはコード例で助けを求める場所ではありません。
-        コードに関して助けを求める場合は、
-        <a href="https://discourse.mozilla.org/c/mdn/learn/250"
-          >Discourse のコミュニティに参加してください</a
-        >。
-      </td>
-    </tr>
-    <tr>
-      <td>
-        🙋
-        <a
-          href="https://github.com/mdn/mdn-community/discussions/categories/content-suggestions"
-          >Content suggestions</a
-        >
-      </td>
-      <td>
-        MDN Web Docs の新しいコンテンツや既存のコンテンツの改善に関するアイディアについて話し合う場です。あなたのアイディアを、その変更が読者にとってどのように有益であるかについての説明や、関連するリソースへのリンクとともに、ここに提案することができます。私たちは、これらを一般に機会評価とラベル付けしています。
+        <em>メモ:</em> ここはコーディングの支援を依頼する場所ではありません。
+        もし行き詰まったら、良い開始場所は<a href="/ja/docs/Learn">ウェブ開発の学習</a>領域です。
       </td>
     </tr>
     <tr>
       <td>
         🎨
         <a
-          href="https://github.com/mdn/mdn-community/discussions/categories/design-system"
+          href="https://github.com/orgs/mdn/discussions/categories/design-system"
           >Design system</a
         >
       </td>
@@ -97,22 +86,22 @@ _メモ:_ `mdn-community/discussions` は問題を報告する場ではありま
       <td>
         👩‍💻
         <a
-          href="https://github.com/mdn/mdn-community/discussions/categories/interactive-examples"
+          href="https://github.com/orgs/mdn/discussions/categories/code-examples"
           >Code examples</a
         >
       </td>
       <td>
-        MDN Web Docs にあるすべてのコード例に関連するディスカッションです。これには、対話的な例、ライブサンプル、静的なコード例が含まれます。MDN Web Docs の一般的なコーディングの課題については、
-        <a href="https://discourse.mozilla.org/c/mdn/learn/250"
-          >Discourse 上のコミュニティに参加してください</a
-        >。
+        MDN Web Docs にあるすべてのサンプルコードに関連するディスカッションです。これには、対話的な例、ライブサンプル、静的なサンプルコードが含まれます。MDN Web Docs の一般的なコーディングの課題については、
+        <a href="/ja/docs/MDN/Community/Communication_channels"
+          >コミュニケーション手段</a
+        >を参照してください。
       </td>
     </tr>
     <tr>
       <td>
         🌐
         <a
-          href="https://github.com/mdn/mdn-community/discussions/categories/localisation"
+          href="https://github.com/orgs/mdn/discussions/categories/localization"
           >Translated content</a
         >
       </td>
@@ -123,7 +112,7 @@ _メモ:_ `mdn-community/discussions` は問題を報告する場ではありま
         リポジトリーの
         <a href="https://github.com/mdn/translated-content/#locales"
           >対応するロケール</a
-        >に関するディスカッションです。ここでは、よく<a href="https://github.com/mdn/mdn-community/discussions/67"
+        >に関するディスカッションです。ここでは、よく<a href="https://github.com/orgs/mdn/discussions/67"
           >マクロの非推奨化のアナウンス</a
         >が発生したときに使用されます。
       </td>
@@ -132,14 +121,14 @@ _メモ:_ `mdn-community/discussions` は問題を報告する場ではありま
       <td>
         👾
         <a
-          href="https://github.com/mdn/mdn-community/discussions/categories/mdn-plus"
+          href="https://github.com/orgs/mdn/discussions/categories/mdn-plus"
           >MDN Plus</a
         >
       </td>
       <td>
-        <a href="/ja/plus"
+        <a href="/en-US/plus"
           >MDN Plus の既存の機能集合</a
-        >に関するディスカッションや、機能のアイディアなど。定期契約などの MDN Plus のサポートについては、<a href="https://support.mozilla.org/ja/products/mdn-plus"
+        >に関するディスカッションや、機能のアイディアなど。定期契約などの MDN Plus のサポートについては、 Mozilla の<a href="https://support.mozilla.org/ja/products/mdn-plus"
           >公式サポートチャンネル</a
         >を参照してください。
       </td>
@@ -148,7 +137,7 @@ _メモ:_ `mdn-community/discussions` は問題を報告する場ではありま
       <td>
         🛠️
         <a
-          href="https://github.com/mdn/mdn-community/discussions/categories/platform"
+          href="https://github.com/orgs/mdn/discussions/categories/platform"
           >Platform</a
         >
       </td>
@@ -168,7 +157,7 @@ _メモ:_ `mdn-community/discussions` は問題を報告する場ではありま
       <td>
         🤖
         <a
-          href="https://github.com/mdn/mdn-community/discussions/categories/polls"
+          href="https://github.com/orgs/mdn/discussions/categories/polls"
           >Polls</a
         >
       </td>
@@ -176,5 +165,6 @@ _メモ:_ `mdn-community/discussions` は問題を報告する場ではありま
         このカテゴリーは、MDN Web Docs のスタッフが使用するためのものです。私たちはこのカテゴリーを使用して、皆さんの意見が必要なトピックに関する投票を実施する予定です。ご期待ください。👀
       </td>
     </tr>
+
   </tbody>
 </table>
