@@ -33,15 +33,15 @@ Une extension internationalisée peut contenir les mêmes fonctionnalités que n
 
   - manifest.json
 
-    - métadonnées qui dépendent de la région
+    - métadonnées qui dépendent des paramètres régionaux
 
   - myJavascript.js
 
-    - JavaScript pour récupérer la locale, des messages spécifiques à la locale, etc.
+    - JavaScript pour récupérer le paramètre de région du navigateur, des messages spécifiques à la région, etc.
 
   - myStyles.css
 
-    - CSS qui dépend de la locale
+    - CSS qui dépend des paramètres régionaux
 
 Examinons chacune des nouvelles fonctionnalités à tour de rôle — chacune des sections ci-dessous représente une étape à suivre lors de l'internationalisation de votre extension.
 
