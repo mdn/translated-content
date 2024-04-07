@@ -1,6 +1,8 @@
 ---
 title: GET
 slug: Web/HTTP/Methods/GET
+l10n:
+  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
 {{HTTPSidebar}}
@@ -16,19 +18,19 @@ slug: Web/HTTP/Methods/GET
       <td>否</td>
     </tr>
     <tr>
-      <th scope="row">成功響應是否有主體</th>
+      <th scope="row">成功回應是否有主體</th>
       <td>是</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Safe/HTTP", "Safe")}}</th>
+      <th scope="row">{{Glossary("Safe/HTTP", "安全")}}</th>
       <td>是</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Idempotent")}}</th>
+      <th scope="row">{{Glossary("Idempotent", "冪等")}}</th>
       <td>是</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Cacheable")}}</th>
+      <th scope="row">{{Glossary("Cacheable", "可緩存")}}</th>
       <td>是</td>
     </tr>
     <tr>
