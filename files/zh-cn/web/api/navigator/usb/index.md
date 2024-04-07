@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("WebUSB API")}}{{SecureContext_Header}}
 
-{{domxref("Navigator")}} 接口的 **`usb`** 只读属性返回当前文档的 {{domxref("USB")}} 对象，用于访问[WebUSB API](/zh-CN/docs/Web/API/WebUSB_API) 功能。
+{{domxref("Navigator")}} 接口的 **`usb`** 只读属性返回当前文档的 {{domxref("USB")}} 对象，用于访问 [WebUSB API](/zh-CN/docs/Web/API/WebUSB_API) 的功能。
 
 ## 值
 
