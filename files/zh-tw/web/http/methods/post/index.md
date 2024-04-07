@@ -32,19 +32,19 @@ l10n:
       <td>是</td>
     </tr>
     <tr>
-      <th scope="row">成功響應是否有主體</th>
+      <th scope="row">成功回應是否有主體</th>
       <td>是</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Safe/HTTP", "Safe")}}</th>
+      <th scope="row">{{Glossary("Safe/HTTP", "安全")}}</th>
       <td>否</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Idempotent")}}</th>
+      <th scope="row">{{Glossary("Idempotent", "冪等")}}</th>
       <td>否</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Cacheable")}}</th>
+      <th scope="row">{{Glossary("Cacheable", "可緩存")}}</th>
       <td>僅當包含新鮮度信息時</td>
     </tr>
     <tr>
