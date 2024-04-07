@@ -62,8 +62,8 @@ slug: Web/HTML/Attributes/rel
         title="High contrast" />
       ```
 
-    - [`hreflang`](/zh-CN/docs/Web/HTML/Element/link#attr-hreflang) 属性与文档所使用语言不同时，表示该页面的一个翻译。
-    - [`type`](/zh-CN/docs/Web/HTML/Element/link#attr-type) 属性值为 `"application/rss+xml"` 或 `"application/atom+xml"` 会创建一个 syndication feed 的参照链接。
+    - [`hreflang`](/zh-CN/docs/Web/HTML/Element/link#hreflang) 属性与文档所使用语言不同时，表示该页面的一个翻译。
+    - [`type`](/zh-CN/docs/Web/HTML/Element/link#type) 属性值为 `"application/rss+xml"` 或 `"application/atom+xml"` 会创建一个 syndication feed 的参照链接。
 
       ```html
       <link
@@ -73,7 +73,7 @@ slug: Web/HTML/Attributes/rel
         title="Blog" />
       ```
 
-    - 否则，它将创建一个超链接，引用当前文档的另一种表述，其性质由 [`hreflang`](/zh-CN/docs/Web/HTML/Element/link#attr-hreflang) 和 [`type`](/zh-CN/docs/Web/HTML/Element/link#attr-type) 属性赋予。
+    - 否则，它将创建一个超链接，引用当前文档的另一种表述，其性质由 [`hreflang`](/zh-CN/docs/Web/HTML/Element/link#hreflang) 和 [`type`](/zh-CN/docs/Web/HTML/Element/link#type) 属性赋予。
 
       - 如果一起给出 `hreflang` 和 `alternate`，并且 `hreflang` 的值与当前文档的语言不同，则表明引用的文档是一个翻译。
       - 如果一起给出 `type` 和 `alternate`，它表示被引用的文件是一种替代格式（如 PDF）。
@@ -125,11 +125,11 @@ slug: Web/HTML/Attributes/rel
     <link rel="icon" href="favicon.ico" />
     ```
 
-    如果有多个 `<link rel="icon">`，浏览器会使用它们的 [`media`](/zh-CN/docs/Web/HTML/Element/link#attr-media)、[`type`](/zh-CN/docs/Web/HTML/Element/link#attr-type) 和 [`sizes`](/zh-CN/docs/Web/HTML/Element/link#attr-sizes) 属性来选择最合适的图标。如果几个图标同样合适，则使用最后一个。如果后来发现最合适的图标不合适，例如使用了不支持的格式，浏览器就会继续选择下一个最合适的，以此类推。
+    如果有多个 `<link rel="icon">`，浏览器会使用它们的 [`media`](/zh-CN/docs/Web/HTML/Element/link#media)、[`type`](/zh-CN/docs/Web/HTML/Element/link#type) 和 [`sizes`](/zh-CN/docs/Web/HTML/Element/link#sizes) 属性来选择最合适的图标。如果几个图标同样合适，则使用最后一个。如果后来发现最合适的图标不合适，例如使用了不支持的格式，浏览器就会继续选择下一个最合适的，以此类推。
 
     > **备注：** 在 Firefox 83 之前，[crossorigin](/zh-CN/docs/Web/HTML/Attributes/crossorigin)属性不支持 `rel="icon"`，而 [Chrome 也仍有一个未解决的问题](https://bugs.chromium.org/p/chromium/issues/detail?id=1121645)。
 
-    > **备注：** 苹果的 iOS 系统不使用这种链接类型，也不像其他移动浏览器那样使用 [`sizes`](/zh-CN/docs/Web/HTML/Element/link#attr-sizes) 属性，来选择网页夹或启动占位符的网页图标。相反，它分别使用非标准的 [`apple-touch-icon`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4) 和 [`apple-touch-starttup-image`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6)。
+    > **备注：** 苹果的 iOS 系统不使用这种链接类型，也不像其他移动浏览器那样使用 [`sizes`](/zh-CN/docs/Web/HTML/Element/link#sizes) 属性，来选择网页夹或启动占位符的网页图标。相反，它分别使用非标准的 [`apple-touch-icon`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4) 和 [`apple-touch-starttup-image`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6)。
 
     > **备注：** `shortcut` 链接类型经常出现在 `icon` 之前，但这种链接类型是不符合规定的，该类型会被忽略，且**网站作者不得再使用它**。
 
@@ -155,7 +155,7 @@ slug: Web/HTML/Attributes/rel
 
   - : 与 {{htmlelement('form')}}、{{htmlelement('a')}} 和 {{htmlelement('area')}} 元素相关，如果超链接一开始就会创建其中之一（即有一个适当的 `target` 属性值），则会创建一个顶级浏览环境，而不是一个辅助浏览环境。换句话说，它使链接的行为如同 [`window.opener`](/zh-CN/docs/Web/API/Window/opener)是空的，并且 `target="_parent"` 被设置。
 
-    这与 [`opener`](#attr-opener) 具有的含义相反。
+    这与 [`opener`](#opener) 具有的含义相反。
 
 - `noreferrer`
   - : 与 {{htmlelement('form')}}、{{htmlelement('a')}} 和 {{htmlelement('area')}} 元素相关，包括这个值使得 referrer 未知（不会包含 `Referer` 标头），并创建一个顶级的浏览上下文，就像 `noopener` 也被设置一样。
@@ -168,12 +168,12 @@ slug: Web/HTML/Attributes/rel
 - `prefetch`
   - : 指定用户代理应预先获取并缓存目标资源，因为后续导航可能需要该资源。参见{{Glossary("prefetch", "链接预取")}}以了解详细信息
 - `preload`
-  - : 指定用户代理必须根据 [`as`](/zh-CN/docs/Web/HTML/Element/link#attr-as) 属性给出的潜在目的地（以及与相应目的地相关的优先级），为当前导航预先获取和缓存目标资源。参见 [`preload`](/zh-CN/docs/Web/HTML/Attributes/rel/preload) 值的页面。
+  - : 指定用户代理必须根据 [`as`](/zh-CN/docs/Web/HTML/Element/link#as) 属性给出的潜在目的地（以及与相应目的地相关的优先级），为当前导航预先获取和缓存目标资源。参见 [`preload`](/zh-CN/docs/Web/HTML/Attributes/rel/preload) 值的页面。
 - `prerender`
   - : 指定用户代理应抢先获取目标资源，并以有助于在未来提供更快的响应的方式对其进行处理，例如，获取其子资源或执行一些渲染。
 - `prev`
 
-  - : 与 [`next`](#attr-next) 关键字类似，与 {{htmlelement('form')}}、{{htmlelement('link')}}、{{htmlelement('a')}} 和 {{htmlelement('area')}} 元素相关，`prev` 值表示当前文档是一个系列的一部分，而链接引用该系列中的一个先前文档就是被引用的文档。
+  - : 与 [`next`](#next) 关键字类似，与 {{htmlelement('form')}}、{{htmlelement('link')}}、{{htmlelement('a')}} 和 {{htmlelement('area')}} 元素相关，`prev` 值表示当前文档是一个系列的一部分，而链接引用该系列中的一个先前文档就是被引用的文档。
 
     备注：同义词 `previous` 并不正确，不应被使用。
 
@@ -181,17 +181,17 @@ slug: Web/HTML/Attributes/rel
 
   - : 与 {{htmlelement('form')}}、{{htmlelement('link')}}、{{htmlelement('a')}} 和 {{htmlelement('area')}} 元素相关，`search` 关键字表示该超链接引用一个文档，其界面是专门为在当前文档、站点和相关资源中搜索而设计的，提供一个可以用来搜索的资源链接。
 
-    如果 [`type`](/zh-CN/docs/Web/HTML/Element/link#attr-type) 属性被设置为 `application/opensearchdescription+xml`，则该资源是一个 [OpenSearch](/zh-CN/docs/Web/OpenSearch) 插件，可以很容易地添加到一些浏览器（如 Firefox 或 Internet Explorer）的界面中。
+    如果 [`type`](/zh-CN/docs/Web/HTML/Element/link#type) 属性被设置为 `application/opensearchdescription+xml`，则该资源是一个 [OpenSearch](/zh-CN/docs/Web/OpenSearch) 插件，可以很容易地添加到一些浏览器（如 Firefox 或 Internet Explorer）的界面中。
 
 - `stylesheet`
 
-  - : 对 {{htmlelement('link')}} 元素有效，它导入一个外部资源作为样式表使用。`text/css` 的样式表不需要 [`type`](/zh-CN/docs/Web/HTML/Element/link#attr-type) 属性，因为这是该属性的默认值。如果它不是 `text/css` 类型的样式表，最好是声明这个类型。
+  - : 对 {{htmlelement('link')}} 元素有效，它导入一个外部资源作为样式表使用。`text/css` 的样式表不需要 [`type`](/zh-CN/docs/Web/HTML/Element/link#type) 属性，因为这是该属性的默认值。如果它不是 `text/css` 类型的样式表，最好是声明这个类型。
 
     虽然这个属性将链接定义为一个样式表，但与其他属性的交互以及 rel 值中的其他关键术语会影响样式表是否被下载和/或使用。
 
-    当与 [`alternate`](#attr-alternate) 关键字一起使用时，它定义了一个替代的样式表。在这种情况下，包括一个非空的 [`title`](/zh-CN/docs/Web/HTML/Element/link#attr-title)。
+    当与 [`alternate`](#alternate) 关键字一起使用时，它定义了一个替代的样式表。在这种情况下，包括一个非空的 [`title`](/zh-CN/docs/Web/HTML/Element/link#title)。
 
-    如果媒体与 [`media`](/zh-CN/docs/Web/HTML/Element/link#attr-media) 属性的值不匹配，外部样式表将不会被使用，甚至不会下载。
+    如果媒体与 [`media`](/zh-CN/docs/Web/HTML/Element/link#media) 属性的值不匹配，外部样式表将不会被使用，甚至不会下载。
 
     需要使用 CORS 协议进行跨源获取。
 
