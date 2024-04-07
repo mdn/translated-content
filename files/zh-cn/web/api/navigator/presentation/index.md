@@ -7,7 +7,7 @@ l10n:
 
 {{securecontext_header}}{{APIRef("Presentation API")}}
 
-{{DOMxRef("Navigator")}} 接口的 `presentation` 只读属性是 [演示 API](/zh-CN/docs/Web/API/Presentation_API) 的入口点，用于返回对 {{DOMxRef("Presentation")}} 对象的引用。
+{{DOMxRef("Navigator")}} 接口的 `presentation` 只读属性是[呈现 API](/zh-CN/docs/Web/API/Presentation_API) 的入口点，用于返回对 {{DOMxRef("Presentation")}} 对象的引用。
 
 ## 语法
 
@@ -17,7 +17,7 @@ const presentation = navigator.presentation
 
 ### 值
 
-参考 {{DOMxRef("Presentation")}} 对象。
+{{DOMxRef("Presentation")}} 对象的引用。
 
 ## 规范
 
@@ -29,5 +29,5 @@ const presentation = navigator.presentation
 
 ## 参见
 
-- [演示 API](/zh-CN/docs/Web/API/Presentation_API)
+- [呈现 API](/zh-CN/docs/Web/API/Presentation_API)
 - {{DOMxRef("Presentation")}}
