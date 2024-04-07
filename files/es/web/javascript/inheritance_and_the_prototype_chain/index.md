@@ -2,7 +2,7 @@
 title: Herencia y la cadena de prototipos
 slug: Web/JavaScript/Inheritance_and_the_prototype_chain
 l10n:
-  sourceCommit: 40d43c37f966d713bfdacbb90854ccacc354d60f
+  sourceCommit: 39b6b6c400f4ea334fb347240aeb4cfea8cf38ce
 ---
 
 {{jsSidebar("Advanced")}}
@@ -23,7 +23,7 @@ Los objetos en JavaScript son "contenedores" dinámicos de propiedades (referida
 >
 > No debe confundirse con la propiedad de funciones `func.prototype`, que en cambio especifican el `[[Prototype]]` que se asigna a todas las _instancias_ de los objetos creados por la función dada cuando se usa como constructor. Discutiremos la propiedad `prototype` de las funciones constructoras en [una sección posterior](#constructores).
 
-Hay varias formas de especificar el `[[Prototype]]` de un objeto, que se enumeran en [una sección posterior](# Different_ways_of_creating_and_mutating_prototype_chains). Por ahora, usaremos la sintaxis [`__proto__`](/es/docs/Web/JavaScript/Reference/Operators/Object_initializer#prototype_setter) como ilustración. Vale la pena señalar que la sintaxis `{ __proto__: ... }` es diferente del descriptor de acceso `obj.__proto__`: el primero es estándar y no está obsoleto.
+Hay varias formas de especificar el `[[Prototype]]` de un objeto, que se enumeran en [una sección posterior](#diferentes_formas_de_crear_y_mutar_cadenas_de_prototipos). Por ahora, usaremos la sintaxis [`__proto__`](/es/docs/Web/JavaScript/Reference/Operators/Object_initializer#prototype_setter) como ilustración. Vale la pena señalar que la sintaxis `{ __proto__: ... }` es diferente del descriptor de acceso `obj.__proto__`: el primero es estándar y no está obsoleto.
 
 En un objeto literal como `{ a: 1, b: 2, __proto__: c }`, el valor `c` (que tiene que ser `null` u otro objeto) se convertirá en el `[[Prototype]]` de el objeto representado por el literal, mientras que las otras claves como `a` y `b` se convertirán en las _propias propiedades_ del objeto. Esta sintaxis se lee de forma muy natural, ya que `[[Prototype]]` es sólo una "propiedad interna" del objeto.
 
@@ -41,7 +41,7 @@ const o = {
   },
 };
 
-// o.[[Prototype]] tiene propiedades b y c:
+// o.[[Prototype]] tiene propiedades b y c.
 // o.[[Prototype]].[[Prototype]] es Object.prototype (explicaremos
 // qué significa eso más adelante).
 // Finalmente, o.[[Prototype]].[[Prototype]].[[Prototype]] es nulo.
