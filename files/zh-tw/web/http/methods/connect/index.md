@@ -5,37 +5,60 @@ slug: Web/HTTP/Methods/CONNECT
 
 {{HTTPSidebar}}
 
-**HTTP `CONNECT`** 方法會利用請求資源啟動一個雙向通訊。這通常可用於建立隧道。
+**HTTP `CONNECT` 方法**用於與請求的資源建立雙向通訊。它可用於打開隧道。
 
-舉例來說，`CONNECT` 方法可以用於存取使用 {{Glossary("SSL")}} ({{Glossary("HTTPS")}}) 的網站。客戶端請求 HTTP Proxy 伺服器建立 TCP 連結的隧道到指定的位置。伺服器接著代表客戶端建立連結。一但連結建立，Proxy 伺服器會持續收送 TCP 流到客戶端。
+例如，`CONNECT` 方法可用於訪問使用 {{Glossary("TLS")}}（{{Glossary("HTTPS")}}）的網站。客戶端請求 HTTP {{Glossary("Proxy server")}} 將 [TCP](/zh-TW/docs/Glossary/TCP) 連接隧道到所需目的地。然後代理服務器代表客戶端建立連接。一旦連接建立，代理服務器將繼續將 TCP 流從客戶端轉發到客戶端。
 
-`CONNECT` 是個逐跳方法。
+`CONNECT` 是一個跳躍式方法。
 
-| 請求具有 Body                                        | 否  |
-| ---------------------------------------------------- | --- |
-| 成功回覆具有 Body                                    | 是  |
-| {{Glossary("Safe")}}                                 | 否  |
-| {{Glossary("Idempotent")}}                           | 否  |
-| {{Glossary("Cacheable")}}                            | 否  |
-| 可用於 [HTML 表單](/zh-TW/docs/Web/Guide/HTML/Forms) | 否  |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">請求是否有主體</th>
+      <td>否</td>
+    </tr>
+    <tr>
+      <th scope="row">成功響應是否有主體</th>
+      <td>否</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Safe/HTTP", "Safe")}}</th>
+      <td>否</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Idempotent")}}</th>
+      <td>否</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Cacheable")}}</th>
+      <td>否</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        HTML 表單中是否允許
+      </th>
+      <td>否</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 語法
 
-```plain
+```http
 CONNECT www.example.com:443 HTTP/1.1
 ```
 
 ## 範例
 
-有些 Proxy 伺服器也許需要授權以建立隧道。請見 {{HTTPHeader("Proxy-Authorization")}} 標頭。
+一些代理服務器可能需要授權來建立隧道。另請參見 {{HTTPHeader("Proxy-Authorization")}} 標頭。
 
-```plain
+```http
 CONNECT server.example.com:80 HTTP/1.1
 Host: server.example.com:80
 Proxy-Authorization: basic aGVsbG86d29ybGQ=
 ```
 
-## 規格
+## 規範
 
 {{Specifications}}
 
