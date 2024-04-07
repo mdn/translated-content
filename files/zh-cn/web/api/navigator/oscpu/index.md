@@ -13,31 +13,31 @@ l10n:
 
 一个字符串，用于标识浏览器所运行的操作系统。
 
-| 操作系统                      | `oscpuInfo` 字符串格式                        |
-| ----------------------------- | --------------------------------------------- |
-| OS/2                          | `OS/2 Warp x (either 3, 4 or 4.5)`            |
-| Windows CE                    | `WindowsCE x.y`                               |
-| Windows 64-bit (64-bit build) | `Windows NT x.y; Win64; x64`                  |
-| Windows 64-bit (32-bit build) | `Windows NT x.y; WOW64`                       |
-| Windows 32-bit                | `Windows NT x.y`                              |
-| Mac OS X (PPC build)          | `PowerPC Mac OS X version x.y`                |
-| Mac OS X (i386/x64 build)     | `Intel Mac OS X` 或 `macOS version x.y`       |
-| Linux 64-bit (32-bit build)   | 输出结果是 `uname -s` 然后是 `i686 on x86_64` |
-| Linux                         | 输出结果是 `uname -sm`                        |
+| 操作系统                      | `oscpuInfo` 字符串格式                         |
+| ----------------------------- | ---------------------------------------------- |
+| OS/2                          | `OS/2 Warp x (either 3, 4 or 4.5)`             |
+| Windows CE                    | `WindowsCE x.y`                                |
+| Windows 64-bit (64-bit build) | `Windows NT x.y; Win64; x64`                   |
+| Windows 64-bit (32-bit build) | `Windows NT x.y; WOW64`                        |
+| Windows 32-bit                | `Windows NT x.y`                               |
+| Mac OS X (PPC build)          | `PowerPC Mac OS X version x.y`                 |
+| Mac OS X (i386/x64 build)     | `Intel Mac OS X` 或 `macOS version x.y`        |
+| Linux 64-bit (32-bit build)   | `uname -s` 的输出结果，然后是 `i686 on x86_64` |
+| Linux                         | `uname -sm` 的输出结果                         |
 
-本表中，x.y 表示操作系统版本。
+本表中，`x.y` 表示操作系统版本。
 
-### 示例
+## 示例
 
 ```js
 function osInfo() {
   alert(navigator.oscpu);
 }
 
-osInfo(); // 来自示例提示 "Windows NT 10.0; Win64; x64"
+osInfo(); // 示例可能会输出“Windows NT 10.0; Win64; x64”
 ```
 
-## 基础用法
+## 使用说明
 
 除非你的代码具有特权（例如在 Chrome 中运行或至少具有 UniversalBrowserRead 权限），否则它可能会获取 `general.oscpu.override` 偏好设置的值，而不是真正的平台信息。
 
