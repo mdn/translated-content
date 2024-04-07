@@ -9,7 +9,7 @@ l10n:
 
 **`undefined`** 是一个 {{Glossary("primitive", "原始值")}}，自动分配给刚刚声明的 {{glossary("variable", "变量")}}，或者没有实际 {{Glossary("Argument", "Arguments")}} 的形式参数。
 
-## Example
+## 示例
 
 ```js
 let x; //创建一个变量但是没有赋值
