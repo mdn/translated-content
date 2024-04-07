@@ -5,7 +5,7 @@ slug: Web/HTTP/Headers/Accept-CH
 
 {{HTTPSidebar}}{{securecontext_header}}
 
-**`Accept-CH`** 標頭可以由伺服器設置，以指定客戶端應該在後續請求中包含哪些[客戶端提示](/zh-TW/docs/Web/HTTP/Client_hints)標頭。
+**`Accept-CH`** 標頭可以由伺服器設置，以指定客戶端應該在後續請求中包含哪些[用戶端提示](/zh-TW/docs/Web/HTTP/Client_hints)標頭。
 
 <table class="properties">
   <tbody>
@@ -15,13 +15,13 @@ slug: Web/HTTP/Headers/Accept-CH
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name", "禁止修改的標頭")}}</th>
-      <td>無</td>
+      <td>否</td>
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("CORS-safelisted response header", "CORS-安全清單回應標頭")}}
+        {{Glossary("CORS-safelisted response header", "CORS 安全清單回應標頭")}}
       </th>
-      <td>無</td>
+      <td>否</td>
     </tr>
   </tbody>
 </table>
@@ -41,7 +41,7 @@ Accept-CH: Viewport-Width, Width
 Vary: Viewport-Width, Width
 ```
 
-> **備註：** 請根據接受的客戶端提示來[變化響應](/zh-TW/docs/Web/HTTP/Client_hints#varying_client_hints)。
+> **備註：** 請根據接受的客戶端提示來[改變回應](/zh-TW/docs/Web/HTTP/Client_hints#改變用戶端提示)。
 
 ## 規範
 
