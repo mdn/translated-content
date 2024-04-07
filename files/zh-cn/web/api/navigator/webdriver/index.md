@@ -7,9 +7,9 @@ l10n:
 
 {{APIRef("WebDriver")}}
 
-{{domxref("navigator")}} 接口的只读属性 **`webdriver`** 表示用户代理是否由自动化控制。
+{{domxref("navigator")}} 接口的 **`webdriver`** 只读属性表示用户代理是否由自动化控制。
 
-它定义了一种让用户代理相互协作以通知文档它由 [WebDriver](/zh-CN/docs/Web/WebDriver) 控制的标准方法，例如，这样可以在自动化过程中触发备用代码路径。`navigator.webdriver` 属性在以下情况下为 true：
+该标准定义了用户代理之间协作的一种方式，用于通知文档由 [WebDriver](/zh-CN/docs/Web/WebDriver) 控制，例如，在自动化过程中触发替代代码路径。`navigator.webdriver` 属性在以下情况下为 true：
 
 - Chrome
   - : 使用了 `--remote-debugging-port` 或 `--headless` 标志或 `--enable-automation`。
@@ -18,7 +18,7 @@ l10n:
 
 ## 值
 
-A {{JSxRef("Boolean")}}
+一个{{JSxRef("Boolean", "布尔值", "", 1)}}
 
 ## 规范
 
