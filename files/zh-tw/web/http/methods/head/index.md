@@ -37,7 +37,7 @@ l10n:
     </tr>
     <tr>
       <th scope="row">
-        HTML 表單中是否允許
+        <a href="/zh-TW/docs/Learn/Forms">HTML 表單</a>中是否允許
       </th>
       <td>否</td>
     </tr>
