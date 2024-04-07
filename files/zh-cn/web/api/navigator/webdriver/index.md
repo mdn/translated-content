@@ -9,7 +9,7 @@ l10n:
 
 {{domxref("navigator")}} 接口的 **`webdriver`** 只读属性表示用户代理是否由自动化控制。
 
-该标准定义了用户代理之间协作的一种方式，用于通知文档由 [WebDriver](/zh-CN/docs/Web/WebDriver) 控制，例如，在自动化过程中触发替代代码路径。`navigator.webdriver` 属性在以下情况下为 true：
+它定义了一种标准的方法，使得被控用户代理可以通知文档当前用户代理是由 [WebDriver](/zh-CN/docs/Web/WebDriver) 控制的。例如，在自动化过程中触发替代代码路径。`navigator.webdriver` 属性在以下情况下为 true：
 
 - Chrome
   - : 使用了 `--remote-debugging-port` 或 `--headless` 标志或 `--enable-automation`。
