@@ -25,7 +25,7 @@ if (navigator.userActivation.isActive) {
 }
 ```
 
-### 检查用户是否曾经执行过操作
+### 检查用户曾经是否执行过操作
 
 使用 {{domxref("UserActivation.hasBeenActive")}} 检查用户是否曾经与页面进行过交互（{{Glossary("Sticky activation", "粘性激活")}}）。
 
