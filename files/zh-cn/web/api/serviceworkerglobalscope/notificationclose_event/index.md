@@ -2,10 +2,10 @@
 title: ServiceWorkerGlobalScope：notificationclose 事件
 slug: Web/API/ServiceWorkerGlobalScope/notificationclose_event
 l10n:
-  sourceCommit: 6cab93c7fbd381e36065794351e2d7fcc3ce64e8
+  sourceCommit: 0eaece3a8c265e9d396255c5fda094553d66eca2
 ---
 
-{{APIRef("Web Notifications")}}
+{{APIRef("Web Notifications")}}{{SecureContext_Header}}
 
 {{domxref("ServiceWorkerGlobalScope")}} 接口的 **`notificationclose`** 事件在用户关闭由 {{domxref("ServiceWorkerRegistration.showNotification()")}} 方法生成的显示的通知时触发。
 
