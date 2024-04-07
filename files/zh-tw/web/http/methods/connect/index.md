@@ -9,7 +9,7 @@ l10n:
 
 **HTTP `CONNECT` 方法**用於與請求的資源建立雙向通訊。它可用於打開隧道。
 
-例如，`CONNECT` 方法可用於訪問使用 {{Glossary("TLS")}}（{{Glossary("HTTPS")}}）的網站。用戶端請求 HTTP {{Glossary("Proxy server")}} 將 [TCP](/zh-TW/docs/Glossary/TCP) 連接隧道到所需目的地。然後代理服務器代表用戶端建立連接。一旦連接建立，代理服務器將繼續將 TCP 流從用戶端轉發到用戶端。
+例如，`CONNECT` 方法可用於訪問使用 {{Glossary("TLS")}}（{{Glossary("HTTPS")}}）的網站。用戶端請求 HTTP {{Glossary("Proxy server", "代理伺服器")}}將 [TCP](/zh-TW/docs/Glossary/TCP) 連接以隧道方式傳輸到所需目的地。然後代理伺服器代表用戶端建立連接。一旦連接建立，代理伺服器將繼續將 TCP 流從用戶端轉發到用戶端。
 
 `CONNECT` 是一個跳躍式方法。
 
@@ -52,7 +52,7 @@ CONNECT www.example.com:443 HTTP/1.1
 
 ## 範例
 
-一些代理服務器可能需要授權來建立隧道。另請參見 {{HTTPHeader("Proxy-Authorization")}} 標頭。
+一些代理伺服器可能需要授權來建立隧道。另請參見 {{HTTPHeader("Proxy-Authorization")}} 標頭。
 
 ```http
 CONNECT server.example.com:80 HTTP/1.1
@@ -70,5 +70,5 @@ Proxy-Authorization: basic aGVsbG86d29ybGQ=
 
 ## 參見
 
-- {{Glossary("Proxy server")}}
+- {{Glossary("Proxy server", "代理伺服器")}}
 - {{HTTPHeader("Proxy-Authorization")}}
