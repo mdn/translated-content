@@ -1,6 +1,8 @@
 ---
 title: CONNECT
 slug: Web/HTTP/Methods/CONNECT
+l10n:
+  sourceCommit: 8a9085b96d0135920be9b281d4500ff72a7a8369
 ---
 
 {{HTTPSidebar}}
@@ -18,19 +20,19 @@ slug: Web/HTTP/Methods/CONNECT
       <td>否</td>
     </tr>
     <tr>
-      <th scope="row">成功響應是否有主體</th>
+      <th scope="row">成功回應是否有主體</th>
       <td>否</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Safe/HTTP", "Safe")}}</th>
+      <th scope="row">{{Glossary("Safe/HTTP", "安全")}}</th>
       <td>否</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Idempotent")}}</th>
+      <th scope="row">{{Glossary("Idempotent", "冪等")}}</th>
       <td>否</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Cacheable")}}</th>
+      <th scope="row">{{Glossary("Cacheable", "可緩存")}}</th>
       <td>否</td>
     </tr>
     <tr>
