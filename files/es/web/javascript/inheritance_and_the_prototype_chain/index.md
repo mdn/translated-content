@@ -68,7 +68,7 @@ console.log(o.d); // undefined (indefinido)
 // o.[[Prototype]].[[Prototype]] es Objeto.Prototype y
 // no existe la propiedad 'd' por defecto, verifique su prototipo.
 // o.[[Prototype]].[[Prototype]].[[Prototype]] es null (nulo), paramos de buscar.
-// No se encontró la propiedad, se devuelve undefined (indefinido)
+// No se encontró la propiedad, se devuelve undefined (indefinido).
 ```
 
 Dar valor a una propiedad de un objeto crea una propiedad. La única excepción a las reglas de funcionamiento de obtener y dar valores ocurre cuando hay una propiedad heredada con un [getter o un setter](/es/docs/Web/JavaScript/Guide/Working_with_objects#definición_de_captadores_getters_y_establecedores_setters).
@@ -144,7 +144,7 @@ const boxes = [
 ];
 ```
 
-Esto es mediocre, porque cada instancia tiene su propia propiedad de función que hace lo mismo, lo cual es redundante e innecesario. En su lugar, podemos mover `getValue` al `[[Prototype]]` de todos los cuadros:
+Esto es mediocre, porque cada instancia tiene su propia propiedad de función que hace lo mismo, lo cual es redundante e innecesario. En su lugar, podemos mover `getValue` al `[[Prototype]]` de todos las cajas (boxes):
 
 ```js
 const boxPrototype = {
@@ -181,7 +181,7 @@ Decimos que `new Box(1)` es una _instancia_ creada a partir de la función const
 
 > **Nota:** Si la función constructora devuelve un valor no primitivo, ese valor se convertirá en el resultado de la expresión `new`. En este caso, es posible que el `[[Prototype]]` no esté correctamente vinculado, pero esto no debería suceder mucho en la práctica.
 
-La función constructora anterior se puede reescribir en [clases](/es/docs/Web/JavaScript/Reference/Classes) as:
+La función constructora anterior se puede reescribir en [clases](/es/docs/Web/JavaScript/Reference/Classes) de la siguiente manera:
 
 ```js
 class Box {
@@ -227,15 +227,15 @@ Un corolario es que _reasignar_ `Constructor.prototype` (`Constructor.prototype 
 // Literales de objetos (sin la clave `__proto__`) automáticamente
 // tenen `Object.prototype` como su `[[Prototype]]`
 const object = { a: 1 };
-Object.getPrototypeOf(object) === Object.prototype; // true
+Object.getPrototypeOf(object) === Object.prototype; // verdadero
 
 // Los literales de matriz tienen automáticamente `Array.prototype` como `[[Prototype]]`
 const array = [1, 2, 3];
-Object.getPrototypeOf(array) === Array.prototype; // true
+Object.getPrototypeOf(array) === Array.prototype; // verdadero
 
 // Los literales RegExp automáticamente tienen `RegExp.prototype` como `[[Prototype]]`
 const regexp = /abc/;
-Object.getPrototypeOf(regexp) === RegExp.prototype; // true
+Object.getPrototypeOf(regexp) === RegExp.prototype; // verdadero
 ```
 
 Podemos "desazúcarlos" hasta convertirlos en su forma constructora.
@@ -311,7 +311,7 @@ function Base() {}
 function Derived() {}
 // Reasigna `Derived.prototype` a un nuevo objeto
 // con `Base.prototype` como `[[Prototype]]`
-// NO HAGAS ESTO: usa Object.setPrototypeOf para mutarlo en su lugar
+// NO HAGAS ESTO - Usa Object.setPrototypeOf para mutarlo en su lugar
 Derived.prototype = Object.create(Base.prototype);
 ```
 
