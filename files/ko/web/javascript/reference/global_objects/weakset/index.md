@@ -78,7 +78,7 @@ execRecursively((obj) => console.log(obj), foo);
 - {{jsxref("WeakSet.prototype.add()")}}
   - : `WeakSet` 객체에 `value`를 추가합니다.
 - {{jsxref("WeakSet.prototype.delete()")}}
-  - : `WeakSet`에서 `value`를 제거합니다. 이 이후에 `WeakSet.prototype.has(value)`는 `false`를 반환합ㄴ디ㅏ.
+  - : `WeakSet`에서 `value`를 제거합니다. 이 이후에 `WeakSet.prototype.has(value)`는 `false`를 반환합니다.
 - {{jsxref("WeakSet.prototype.has()")}}
   - : `WeakSet` 객체에 `value` 값 존재 여부를 부울 값으로 반환합니다.
 
