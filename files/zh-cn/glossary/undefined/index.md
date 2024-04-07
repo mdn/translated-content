@@ -7,14 +7,14 @@ l10n:
 
 {{GlossarySidebar}}
 
-**`undefined`** 是一个 {{Glossary("primitive", "原始值")}}，自动分配给刚刚声明的 {{glossary("variable", "变量")}}，或者没有实际 {{Glossary("Argument", "Arguments")}} 的形式参数。
+**`undefined`** 是一个 {{Glossary("primitive", "原始值")}}，自动赋给刚刚声明的 {{glossary("variable", "变量")}}，或者给那些没有实际的 {{Glossary("Argument", "参数")}} 的形式参数。
 
 ## 示例
 
 ```js
-let x; //创建一个变量但是没有赋值
+let x; //声明变量但不赋值
 
-console.log(`x's value is ${x}`); //输出“x 的值是 undefined”
+console.log(`x's 的值是 ${x}`); //输出“x 的值是 undefined”
 ```
 
 ## 参见
