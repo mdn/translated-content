@@ -40,11 +40,11 @@ l10n:
 
 ## web 中的音频和视频
 
-最早的在线视频和音频的流行得益于专有的基于插件的技术，如 [Flash](https://zh.wikipedia.org/zh-cn/Adobe_Flash) 和 [Silverlight](https://zh.wikipedia.org/zh-cn/Microsoft_Silverlight)。这两种技术存在安全性和无障碍问题，现已过时，取而代之的是原生的 HTML 解决方案，该解决方案包括 {{htmlelement("video")}} 和 {{htmlelement("audio")}} 元素以及用于控制它们的 JavaScript {{Glossary("API")}}。在这里，我们不讨论有关 JavaScript 的问题，仅仅讲解有关 HTML 的基础。
+最早的在线视频和音频的流行得益于专有的基于插件的技术，如 [Flash](https://zh.wikipedia.org/zh-cn/Adobe_Flash) 和 [Silverlight](https://zh.wikipedia.org/zh-cn/Microsoft_Silverlight)。这两种技术存在安全性和无障碍问题，现已过时，取而代之的是原生的 HTML 解决方案，该解决方案包括 {{htmlelement("video")}} 和 {{htmlelement("audio")}} 元素以及用于控制它们的 {{Glossary("JavaScript")}} {{Glossary("API")}}。在这里，我们不讨论有关 JavaScript 的问题，仅仅讲解有关 HTML 的基础。
 
 我们不会教你如何制作音频和视频，因为那需要完全不同的技术。如果你没有音频和视频的话，也没有关系，我们为你提供了[示例音频和视频文件以及示例代码](https://github.com/mdn/learning-area/tree/main/html/multimedia-and-embedding/video-and-audio-content)供你实验。
 
-> **备注：** 在开始之前，你应当了解一些 {{glossary("OVP")}}（在线视频提供商），例如 [YouTube](https://www.youtube.com/) 、[Dailymotion](http://www.dailymotion.com) 、[Vimeo](https://vimeo.com/) 还有 [Bilibili](https://www.bilibili.com)，以及在线音频提供商，例如 [Soundcloud](https://soundcloud.com/)。这些公司可以让你以方便、简单的方式来托管和消费视频，所以你不必担心庞大的带宽消耗。在线视频提供商甚至提供现成的代码用于为你的 web 网页嵌入视频/音频。如果你使用这样的服务，你便可以避免在这篇文章中我们讨论的一些难题。在下一篇文章中，我们将会再讨论这样的服务。
+> **备注：** 在开始之前，你应当了解一些在线视频提供商，例如 [YouTube](https://www.youtube.com/) 、[Dailymotion](http://www.dailymotion.com) 、[Vimeo](https://vimeo.com/) 还有 [Bilibili](https://www.bilibili.com)，以及在线音频提供商，例如 [Soundcloud](https://soundcloud.com/)。这些公司可以让你以方便、简单的方式来托管和消费视频，所以你不必担心庞大的带宽消耗。在线视频提供商甚至提供现成的代码用于为你的 web 网页嵌入视频/音频。如果你使用这样的服务，你便可以避免在这篇文章中我们讨论的一些难题。在下一篇文章中，我们将会再讨论这样的服务。
 
 ### \<video> 元素
 
@@ -53,7 +53,7 @@ l10n:
 ```html
 <video src="rabbit320.webm" controls>
   <p>
-    你的浏览器不支持 HTML 视频。可点击<a href="rabbit320.mp4">此链接</a>观看
+    你的浏览器不支持 HTML 视频。可点击<a href="rabbit320.mp4">此链接</a>观看。
   </p>
 </video>
 ```
@@ -61,17 +61,17 @@ l10n:
 当中值得注意的有：
 
 - [`src`](/zh-CN/docs/Web/HTML/Element/video#src)
-  - : 同 {{htmlelement("img")}} 元素使用方式相同，`src` （来源）属性指向你想要嵌入网页当中的视频资源，他们的运作方式完全相同。
+  - : 同 {{htmlelement("img")}} 元素的使用方式相同，`src`（来源）属性指向你想要嵌入到网页中的视频资源，它们的运作方式完全相同。
 - [`controls`](/zh-CN/docs/Web/HTML/Element/video#controls)
-  - : 用户应当能够控制视频和音频的播放（这对于患有[癫痫](zh.wikipedia.org/zh-cn/癫痫)的人来说尤为重要）。你可以使用 `controls` 属性来让视频或音频包含浏览器自带的控制界面，或者使用适当的 [JavaScript API](/zh-CN/docs/Web/API/HTMLMediaElement) 构建自己的界面。至少，界面必须包括启动和停止媒体的方法，以及调整音量的方法。
-- `<video>` 元素内的内容
+  - : 用户应当能够控制视频和音频的播放（这对于患有[癫痫](https://zh.wikipedia.org/wiki/癫痫#病因)的人来说尤为重要）。你必须使用 `controls` 属性来让视频或音频包含浏览器自带的控制界面，或者使用适当的 [JavaScript API](/zh-CN/docs/Web/API/HTMLMediaElement) 构建自己的界面。至少，界面必须包括启动和停止媒体以及调整音量的方法。
+- `<video>` 元素内的段落
   - : 这个叫做**后备内容**，当浏览器不支持 `<video>` 元素的时候，就会显示这段内容，借此我们能够对旧的浏览器提供回退。你可以添加任何后备内容，在这个例子中我们提供了一个指向这个视频文件的链接，从而使用户至少可以访问到这个文件，而不会局限于浏览器的支持。
 
 已嵌入视频文件的网页样式如下：
 
 ![一个简单的视频播放器，播放关于小白兔的视频](simple-video.png)
 
-你可以[尝试实时实例](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/simple-video.html)，或者查看[源代码](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/video-and-audio-content/simple-video.html)。
+你可以[尝试实时示例](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/simple-video.html)，或者查看[源代码](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/video-and-audio-content/simple-video.html)。
 
 ### 使用多个播放源以提高兼容性
 
@@ -97,15 +97,15 @@ l10n:
 
 另一种情况是一直流行的 MP3 文件。“MP3 文件”实际上是存储在 MPEG 或 MPEG-2 容器中的 MPEG-1 音频层 III（MPEG-1 Audio Layer III，MP3）音频轨道。这一点特别有趣，因为尽管大多数浏览器不支持在 {{HTMLElement("video")}} 和 {{HTMLElement("audio")}} 元素中使用 MPEG 媒体，但由于 MP3 的流行，它们可能仍然支持 MP3。
 
-音频播放器倾向于会直接播放音轨，例如 MP3 和 Ogg 文件。这些不需要容器。
+音频播放器倾向于直接播放音轨，例如 MP3 和 Ogg 文件。它们不需要容器。
 
 #### 浏览器所支持的媒体文件
 
 > **备注：** 一些流行的格式，如 MP3 和 MP4/H.264，尽管非常出色，但它们受到专利的限制；也就是说，有一些专利涵盖了它们所基于的某些或全部技术。在美国，MP3 直到 2017 年都受到专利保护，而 H.264 至少到 2027 年仍受专利保护。
 >
-> 由于这些专利，浏览器如果希望实现对这些编解码器的支持，通常必须支付巨额的许可费用。此外，一些人更倾向于避免使用受限制的软件，而只使用开放格式。由于这些法律和偏好原因，网络开发人员往往不得不支持多种格式以满足他们的整个用户群。
+> 由于这些专利，浏览器如果希望实现对这些编解码器的支持，通常必须支付巨额的许可费用。此外，一些人更倾向于避免使用受限制的软件，而只使用开放格式。由于这些法律和偏好原因，web 开发者往往不得不支持多种格式以满足他们的整个用户群。
 
-刚刚所说的编解码器主要用于将音频和视频压缩成可管理的文件（原始的音频和视频文件非常大）。浏览器支持多种 **{{Glossary("Codec","编解码器")}}**，如 Vorbis 和 H.264，它们用来将已压缩的音频视频与二进制数据间相互转换。不同的编码器和不同的容器都有各自的优缺点，在更了解它们后，你可以依自己喜好选择使用哪个编码器和容器。
+刚刚所说的编解码器主要用于将音频和视频压缩成可管理的文件（原始的音频和视频文件非常大）。浏览器支持多种[**编解码器**](/zh-CN/docs/Glossary/Codec)，如 Vorbis 和 H.264，它们用于已压缩的音视频与二进制数据的相互转换。不同的编解码器和不同的容器都有各自的优缺点，这会影响你做出选择。
 
 由于每种浏览器支持的容器文件格式和编解码器都有所不同，情况变得更加复杂。为了尽可能确保你的网站或应用能在用户的浏览器上正常工作，你可能需要提供多种格式的媒体文件。如果你的网站没有提供任何用户的浏览器支持的格式，那么你的媒体内容将无法播放。
 
@@ -125,7 +125,7 @@ l10n:
 
 在这里我们将 `src` 属性从 `<video>` 元素中移除，转而将它放在几个单独的 {{htmlelement("source")}} 元素当中，这些元素分别指向各自的资源。在本例当中，浏览器会检查 {{HTMLElement("source")}} 元素，并且播放第一个与其自身 codec 相匹配的媒体。WebM 和 MP4 这两种格式在目前已经足够，只要视频支持这两种格式，那么其在大多数平台和浏览器上都能正确播放。
 
-每个 `<source>` 元素都含有 [`type`](/zh-CN/docs/Web/HTML/Element/source#type) 属性，这个属性是可选的，但是建议你添加这个属性——它包含了 `<source>` 指定的 {{glossary("MIME type","MIME 类型")}} ，同时浏览器也会通过检查这个属性来迅速的跳过那些不支持的格式。如果你没有添加 `type` 属性，浏览器会尝试加载每一个文件，直到找到一个能正确播放的格式，但是这样会消耗掉大量的时间和资源。
+每个 `<source>` 元素都含有 [`type`](/zh-CN/docs/Web/HTML/Element/source#type) 属性，这个属性是可选的，但是建议你添加这个属性——它包含了 `<source>` 指定的 {{glossary("MIME type","MIME 类型")}}，同时浏览器也会通过检查这个属性来迅速的跳过那些不支持的格式。如果你没有添加 `type` 属性，浏览器会尝试加载每一个文件，直到找到一个能正确播放的格式，但是这样会消耗掉大量的时间和资源。
 
 请参考我们的[媒体类型和格式指南](/zh-CN/docs/Web/Media/Formats)，以选择最适合你的需求的容器和编解码器，同时查找合适的 MIME 类型以指定每种媒体类型。
 
@@ -169,11 +169,11 @@ l10n:
 
   - : 这个属性被用来缓冲较大的文件，有三个值可选：
 
-    - `"none"` ：不缓冲
-    - `"auto"` ：页面加载后缓存媒体文件
-    - `"metadata"` ：仅缓冲文件的元数据
+    - `"none"`：不缓冲文件
+    - `"auto"`：页面加载后缓存媒体文件
+    - `"metadata"`：仅缓冲文件的元数据
 
-你可以[在 GitHub 体验以上的例子](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html)，也可以[查看源代码](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html)。注意我们在体验的版本中并没有使用 `autoplay` 属性——如果页面一加载就开始播放视频的话，就不会看到 poster 了。
+你可以[在 GitHub 体验以上的例子](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html)，也可以[查看源代码](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html)。注意我们在体验的版本中并没有使用 `autoplay` 属性——如果页面一加载就开始播放视频的话，就不会看到封面（poster）了。
 
 ### \<audio> 元素
 
@@ -213,7 +213,7 @@ l10n:
 
 > **备注：** “转录（transcribe）”是指将视频/音频中说的话记录成文字形式，转录的结果称为“文字记录（transcript）”。
 
-WebVTT 是一个格式，用来编写文本文件，这个文本文件包含了众多的字符串，这些字符串会带有一些元数据，它们可以用来描述这个字符串将会在视频中显示的时间，甚至可以用来描述这些字符串的样式以及定位信息（尽管有限制）。这些字符串叫做 **cues** ，你可以根据不同的需求来显示不同类型的 cues，最常见的如下：
+WebVTT 是一个格式，用来编写文本文件，这个文本文件包含了众多的字符串，这些字符串会带有一些元数据，它们可以用来描述这个字符串将会在视频中显示的时间，甚至可以用来描述这些字符串的样式以及定位信息（尽管有限制）。这些字符串叫做 **cue** ，你可以根据不同的需求来显示不同类型的 cue，最常见的如下：
 
 - subtitles
   - : 外语材料的翻译字幕，来帮助那些听不懂音频中说的什么的人理解音频当中的内容。
@@ -257,13 +257,13 @@ WEBVTT
 
 ![视频播放器带有标准的控制功能，如播放、停止、音量和字幕开关。播放的视频显示了一名男子手持长矛状武器的场景，标题为“Esta hoja tiene pasado oscuro”。](video-player-with-captions.png)
 
-如果你想了解更多细节，你可以阅读[为 HTML 视频添加标题和字幕](/zh-CN/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)。在 Github 上你可以找到[与本文相关的样例](https://iandevlin.github.io/mdn/video-player-with-captions/)，它们由 Ian Devlin 编写（或者[查看源代码](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions)）。这个样例使用了 JavaScript 代码，用户借此可以选择不同的字幕。注意，若想要显示字幕，你需要点击“CC”按钮，并且选择某个选项（English，Deutsch 或 Español）。
+如果你想了解更多细节，你可以阅读[为 HTML 视频添加标题和字幕](/zh-CN/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)。在 Github 上你可以找到[与本文相关的样例](https://iandevlin.github.io/mdn/video-player-with-captions/)，它们由 Ian Devlin 编写（或者[查看源代码](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions)）。这个样例使用了 JavaScript 代码，用户借此可以选择不同的字幕。注意，若想要显示字幕，你需要点击“CC”按钮，并且选择某个选项（English、Deutsch 或 Español）。
 
 > **备注：** 文本轨道还可以帮助你进行 {{glossary("SEO")}}，因为搜索引擎对文字特别感兴趣。搜索引擎甚至可以借助文本轨道直接链接到视频中的某个位置。
 
 ## 主动练习：嵌入你自己的视频与音频
 
-在这个实践学习当中，我们希望你能够走出去，并且记录一些你自己的视频和音频——如今，大多数手机都能够非常方便的记录视频和音频，并且如果你可以将它上传到你的电脑上面，你可以使用它。你可能需要做一些格式转换，如果是视频的话，你需要将它们转化为 WebM 或者 MP4，如果是音频的话，你需要将它们转化为 MP3 或者 Ogg。不过你并不需要担心，有许多的程序都能够帮你轻松解决这些问题，例如 [Miro 视频转换器](http://www.mirovideoconverter.com/) 和 [Audacity](https://sourceforge.net/projects/audacity/)。我们非常希望你能够亲自动手。
+在这个实践学习当中，我们希望你能够走出去，并且记录一些你自己的视频和音频——如今，大多数手机都能够非常方便的记录视频和音频，并且如果你可以将它上传到你的电脑上面，你可以使用它。你可能需要做一些格式转换，如果是视频的话，你需要将它们转化为 WebM 或者 MP4，如果是音频的话，你需要将它们转化为 MP3 或者 Ogg。不过你并不需要担心，有许多的程序都能够帮你轻松解决这些问题，例如 [Miro 视频转换器](http://www.mirovideoconverter.com/)和 [Audacity](https://sourceforge.net/projects/audacity/)。我们非常希望你能够亲自动手。
 
 如果你无法取得任何的音频或者视频，你可以使用我们为你提供的[示例音频和视频文件](https://github.com/mdn/learning-area/tree/main/html/multimedia-and-embedding/video-and-audio-content) 来练习。同时你也可以使用我们的代码来作为参考。
 
