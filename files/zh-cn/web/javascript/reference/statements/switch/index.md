@@ -7,7 +7,7 @@ l10n:
 
 {{jsSidebar("Statements")}}
 
-**`switch`** 语句会对[表达式](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators)进行评估，并将表达式的值与一系列 `case` 子句进行匹配，并执行第一个匹配值的 `case` 子句之后的[语句](/zh-CN/docs/Web/JavaScript/Reference/Statements)，直到遇到 `break` 语句。`switch` 语句将继续执行。如果没有任何 `case` 子句与表达式的值匹配，则会跳转到 `switch` 语句的 `default` 子句。
+**`switch`** 语句会对[表达式](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#表达式)进行评估，并将表达式的值与一系列 `case` 子句进行匹配，并执行第一个匹配值的 `case` 子句之后的[语句](/zh-CN/docs/Web/JavaScript/Reference/Statements)，直到遇到 `break` 语句。`switch` 语句将继续执行。如果没有任何 `case` 子句与表达式的值匹配，则会跳转到 `switch` 语句的 `default` 子句。
 
 {{EmbedInteractiveExample("pages/js/statement-switch.html", "taller")}}
 
