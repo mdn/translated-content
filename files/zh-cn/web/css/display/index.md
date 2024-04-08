@@ -345,7 +345,7 @@ display: unset;
 </article>
 
 <div>
-  <label for="display">选择一个 display 值:</label>
+  <label for="display">选择一个 display 值：</label>
   <select id="display">
     <option selected>block</option>
     <option>inline</option>
