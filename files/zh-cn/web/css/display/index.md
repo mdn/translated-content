@@ -125,7 +125,7 @@ display: unset;
 
 - {{CSSxRef("&lt;display-internal&gt;")}}
 
-  - : 一些布局模型，例如 `table` 和 `ruby` 有一个复杂的内置结构，它们的子孙后代可以扮演几个不同的角色。本节定义的这些“内部” display 值，仅在特定的布局模式下有用。
+  - : 一些布局模型，例如 `table` 和 `ruby` 有一个复杂的内置结构，它们的子孙后代可以扮演几个不同的角色。本节定义的这些“内部”display 值，仅在特定的布局模式下有用。
 
     - `table-row-group`
       - : 该元素的行为类似于 HTML 的 {{HTMLElement("tbody")}} 元素。
