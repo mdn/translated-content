@@ -287,7 +287,7 @@ display: unset;
 
 - [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/transition-behavior) 需要在 {{cssxref("transition-property")}} 声明上设置，已启用 `display` 过渡。
 
-对于 `display` 属性过渡的更多示例，请参见 [`@starting-style`](/en-US/docs/Web/CSS/@starting-style#examples) 和 [`transition-behavior`](/en-US/docs/Web/CSS/transition-behavior#examples)。
+对于 `display` 属性过渡的更多示例，请参见 [`@starting-style`](/zh-CN/docs/Web/CSS/@starting-style#examples) 和 [`transition-behavior`](/zh-CN/docs/Web/CSS/transition-behavior#examples)。
 
 ## 无障碍问题
 
