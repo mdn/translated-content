@@ -60,19 +60,6 @@ l10n:
 - {{SVGAttr("kernelUnitLength")}}
 - {{SVGAttr("preserveAlpha")}}
 
-### 专有属性
-
-- {{ SVGAttr("in") }}
-- {{ SVGAttr("order") }}
-- {{ SVGAttr("kernelMatrix") }}
-- {{ SVGAttr("divisor") }}
-- {{ SVGAttr("bias") }}
-- {{ SVGAttr("targetX") }}
-- {{ SVGAttr("targetY") }}
-- {{ SVGAttr("edgeMode") }}
-- {{ SVGAttr("kernelUnitLength") }}
-- {{ SVGAttr("preserveAlpha") }}
-
 ## DOM 接口
 
 该元素实现了 {{domxref("SVGFEConvolveMatrixElement")}} 接口。
