@@ -1,247 +1,289 @@
 ---
 title: switch
 slug: Web/JavaScript/Reference/Statements/switch
+l10n:
+  sourceCommit: 183bdfc3cb80f1962103233eb9827cb171863cf3
 ---
 
 {{jsSidebar("Statements")}}
 
-**`switch` 语句**评估一个[表达式](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#表达式)，将表达式的值与`case`子句匹配，并执行与该情况相关联的[语句](/zh-CN/docs/Web/JavaScript/Reference/Statements)。
+**`switch`** 语句会对[表达式](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators)进行评估，并将表达式的值与一系列 `case` 子句进行匹配，并执行第一个匹配值的 `case` 子句之后的[语句](/zh-CN/docs/Web/JavaScript/Reference/Statements)，直到遇到 `break` 语句。`switch` 语句将继续执行。如果没有任何 `case` 子句与表达式的值匹配，则会跳转到 `switch` 语句的 `default` 子句。
 
-{{EmbedInteractiveExample("pages/js/statement-switch.html")}}
+{{EmbedInteractiveExample("pages/js/statement-switch.html", "taller")}}
 
 ## 语法
 
-```js
+```js-nolint
 switch (expression) {
-  case value1:
-    // 当 expression 的结果与 value1 匹配时，执行此处语句
-    [break;]
-  case value2:
-    // 当 expression 的结果与 value2 匹配时，执行此处语句
-    [break;]
-  ...
-  case valueN:
-    // 当 expression 的结果与 valueN 匹配时，执行此处语句
-    [break;]
-  [default:
-    // 如果 expression 与上面的 value 值都不匹配，执行此处语句
-    [break;]]
+  case caseExpression1:
+    statements
+  case caseExpression2:
+    statements
+  // …
+  case caseExpressionN:
+    statements
+  default:
+    statements
 }
 ```
 
 - `expression`
-  - : 一个用来与 case 子语句匹配的表达式。
-- `case valueN` {{optional_inline}}
-  - : 用于匹配 `expression` 的 `case` 子句。如果 `expression` 与给定的 `valueN` 相匹配，则执行该 case 子句中的语句直到该 `switch` 语句结束或遇到一个 `break` 。
+  - : 一个表达式，其结果与每个 `case` 子句进行匹配。
+- `case caseExpressionN` {{optional_inline}}
+  - : `case` 子句用于与 `expression` 进行匹配。如果 `expression` 的值与任何 `caseExpressionN` 的值匹配，则执行将从该 `case`
+    子句之后的第一个语句开始，直到遇到 `switch` 语句的末尾或第一个遇到的 `break` 语句。
 - `default` {{optional_inline}}
-  - : 一个 `default` 子句；如果给定，这条子句会在 `expression` 的值与任一 `case` 语句均不匹配时执行。
+  - : `default` 子句；如果存在，则当 `expression` 的值与任何 `case` 句都不匹配时，会执行此子句。一个 `switch` 语句只能有一个 `default` 子句。
 
 ## 描述
 
-一个 switch 语句首先会计算其 expression。然后，它将从第一个 case 子句开始直到寻找到一个其表达式值与所输入的 expression 的值所相等的子句（使用 [严格运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)，`===`）并将控制权转给该子句，执行相关语句。（如果多个 case 与提供的值匹配，则选择匹配的第一个 case，即使这些 case 彼此间并不相等。）
+`switch` 语句首先评估其表达式。然后它会查找第一个 `case` 子句，该子句的表达式与输入表达式的结果（使用[严格相等](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality)进行比较）评估为相同的值，并将其控制权转移到该子句，执行该子句之后的所有语句。
 
-如果没有 `case` 子句相匹配，程序则会寻找那个可选的 `default` 子句，如果找到了，将控制权交给它，执行相关语句。若没有 `default` 子句，程序将继续执行直到 `switch` 结束。按照惯例，`default` 子句是最后一个子句，不过也不需要这样做。
+只有在必要时才会评估子句表达式——如果已经找到匹配项，即使后续的 `case` 子句表达式会被[跳出和穿透](#跳出和穿透)，也不会对其进行评估。
 
-可选的 [`break`](/zh-CN/docs/Web/JavaScript/Reference/Statements/break) 语句确保程序立即从相关的 case 子句中跳出 switch 并接着执行 switch 之后的语句。若 `break` 被省略，程序会继续执行 `switch` 语句中的下一条语句。
+```js
+switch (undefined) {
+  case console.log(1):
+  case console.log(2):
+}
+// 仅输出 1
+```
+
+如果没有找到匹配的 `case` 子句，程序会寻找可选的 `default` 子句，如果找到，则将控制权转移到该子句，执行该子句之后的语句。如果找不到 `default` 子句，程序将继续执行 `switch` 结束后的语句。根据惯例，`default` 子句是最后一个子句，但并非必须如此。一个 `switch` 语句只能有一个 `default` 子句；多个 `default` 子句会导致 {{jsxref("SyntaxError")}}。
+
+### 跳出和穿透
+
+你可以在 `switch` 语句的主体内部使用 [`break`](/zh-CN/docs/Web/JavaScript/Reference/Statements/break) 语句来提前跳出，通常是在两个 `case` 子句之间的所有语句都已执行完毕时。将继续执行到 `switch` 语句后的第一条语句。
+
+如果省略了 `break`，将继续执行到下一个 `case` 子句，甚至会继续到 `default` 子句，而不管该子句的表达式值是否匹配。这种行为称为“穿透”。
+
+```js
+const foo = 0;
+switch (foo) {
+  case -1:
+    console.log("负 1");
+    break;
+  case 0: // foo 的值匹配这个条件；执行从这里开始
+    console.log(0);
+  // 忘记了 break！执行穿透
+  case 1: // 'case 0:' 中没有 break 语句，所以这个 case 也会执行
+    console.log(1);
+    break; // 遇到 break，不会继续到 'case 2:'
+  case 2:
+    console.log(2);
+    break;
+  default:
+    console.log("default");
+}
+// 输出 0 和 1
+```
+
+在适当的上下文中，其他控制流语句也会导致 `switch` 语句中断。例如，如果 `switch` 语句包含在一个函数中，那么 [`return`](/zh-CN/docs/Web/JavaScript/Reference/Statements/return) 语句将终止函数体的执行，从而终止 `switch` 语句。如果 `switch` 语句包含在循环中，那么 [`continue`](/zh-CN/docs/Web/JavaScript/Reference/Statements/continue) 语句会终止 `switch` 语句并跳到循环的下一次迭代。
+
+### 词法作用域
+
+`case` 和 `default` 子句类似于[标记语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/label)：它们指示控制流可能跳转到的位置。然而，它们本身并不创建词法[作用域](/zh-CN/docs/Glossary/Scope)（也不会自动中断执行，正如上面所示）。例如：
+
+```js-nolint example-bad
+const action = "说你好";
+switch (action) {
+  case "说你好":
+    const message = "你好";
+    console.log(message);
+    break;
+  case "说嘿":
+    const message = "嘿";
+    console.log(message);
+    break;
+  default:
+    console.log("action 的声明为空。");
+}
+```
+
+这个例子会输出错误“Uncaught SyntaxError: Identifier 'message' has already been declared”，因为第一个 `const message = '你好';` 与第二个 `const message = '嘿';` 的声明冲突，即使它们在各自独立的 case 子句中。这主要是因为两个 `const` 声明都在同一个由 `switch` 体创建的块作用域内。
+
+要解决这个问题，当你需要在 `case` 子句中使用 `let` 或 `const` 声明时，请将其包装在一个块中。
+
+```js
+const action = "说你好";
+switch (action) {
+  case "说你好": {
+    const message = "你好";
+    console.log(message);
+    break;
+  }
+  case "说嘿": {
+    const message = "嘿";
+    console.log(message);
+    break;
+  }
+  default: {
+    console.log("action 的声明为空。");
+  }
+}
+```
+
+这段代码现在会在控制台输出 `你好`，正如预期的一样，而且没有任何错误。
 
 ## 示例
 
-### 使用 `switch`
+### 使用 switch
 
-下面的例子中，如果 `expr` 计算为 "Bananas"，程序就会匹配值为 "Bananas" 的 case 然后执行相关语句。当遇到 `break` 时，程序就跳出 `switch` 然后执行 `switch` 后的语句。若 `break` 被省略，值为 "Cherries" 的 case 中的语句就也将被执行。
+在以下示例中，如果 `expr` 的值为 `香蕉`，程序会将该值与 `case '香蕉'` 进行匹配，并执行相应的语句。当遇到 `break` 时，程序会跳出 `switch` 并执行紧随其后的 `switch` 语句。如果省略了 `break`，则 `case '樱桃'` 的语句也会被执行。
 
 ```js
 switch (expr) {
-  case "Oranges":
-    console.log("Oranges are $0.59 a pound.");
+  case "橙子":
+    console.log("橙子每磅 $0.59 美元。");
     break;
-  case "Apples":
-    console.log("Apples are $0.32 a pound.");
+  case "苹果":
+    console.log("苹果每磅 $0.32 美元。");
     break;
-  case "Bananas":
-    console.log("Bananas are $0.48 a pound.");
+  case "香蕉":
+    console.log("香蕉每磅 $0.48 美元。");
     break;
-  case "Cherries":
-    console.log("Cherries are $3.00 a pound.");
+  case "樱桃":
+    console.log("樱桃每磅 $3.00 美元。");
     break;
-  case "Mangoes":
-  case "Papayas":
-    console.log("Mangoes and papayas are $2.79 a pound.");
-    break;
-  default:
-    console.log("Sorry, we are out of " + expr + ".");
-}
-
-console.log("Is there anything else you'd like?");
-```
-
-### 如果忘记 break 会怎么样？
-
-如果你忘记添加 break，那么代码将会从值所匹配的 case 语句开始运行，然后持续执行下一个 case 语句而不论值是否匹配。例子如下：
-
-```js
-var foo = 0;
-switch (foo) {
-  case -1:
-    console.log("negative 1");
-    break;
-  case 0: // foo 的值为 0 所以匹配这里所以这一块会运行
-    console.log(0);
-  // 注意：那个没写的 break 原本在这儿
-  case 1: // 'case 0:' 里没有 break 语句所以这个 case 也会运行
-    console.log(1);
-    break; // 遇到了 break，所以不会再继续进入 'case 2:' 了
-  case 2:
-    console.log(2);
+  case "芒果":
+  case "木瓜":
+    console.log("芒果和木瓜每磅 $2.79 美元。");
     break;
   default:
-    console.log("default");
+    console.log(`抱歉，我们没有 ${expr} 了。`);
 }
+
+console.log("你还需要什么吗？");
 ```
 
-### 我能把 default 放到 case 之间吗？
+### 将 default 子句放在两个 case 子句之间
 
-可以啊！JavaScript 会在它找不到匹配项时跳回到那个 default：
+如果没有找到匹配项，将从 `default` 字句开始执行，并执行该子句之后的所有语句。
 
 ```js
-var foo = 5;
+const foo = 5;
 switch (foo) {
   case 2:
     console.log(2);
-    break; // 遇到 break，所以不会继续进入 'default:'
+    break; // 由于遇到了 break，因此不会继续执行 'default:'
   default:
     console.log("default");
-  // 掉到下面
+  // 穿透
   case 1:
     console.log("1");
 }
 ```
 
-即使你把 default 放到其他 case 之上，它仍有效。
+将 `default` 子句放在所有其他 `case` 子句之前也可以实现相同的效果。
 
-### 使用多准则 case 的方法
+### 利用代码穿透
 
-这个技术来源于此：
+这种方法利用了这样一个事实，如果在 `case` 子句下面没有 `break`，则执行将继续到下一个 `case` 子句，而不管该 `case` 是否满足条件。
 
-[Switch statement multiple cases in JavaScript (Stack Overflow)](http://stackoverflow.com/questions/13207927/switch-statement-multiple-cases-in-javascript)
-
-#### 多 case - 单一操作
-
-这种方法利用这样一个事实：如果 case 语句之下没有 break，它将继续执行下一个 case 语句，而不管 case 是否符合条件。请看“如果忘记 break 会怎么样？”部分。
-
-这是一个单操作顺序的 switch 语句，其中四个不同值的执行结果完全一样。
+以下是一个单操作顺序 `case` 语句的示例，其中四个不同的值执行完全相同的操作。
 
 ```js
-var Animal = "Giraffe";
+const Animal = "长颈鹿";
 switch (Animal) {
-  case "Cow":
-  case "Giraffe":
-  case "Dog":
-  case "Pig":
-    console.log("This animal will go on Noah's Ark.");
+  case "奶牛":
+  case "长颈鹿":
+  case "狗":
+  case "猪":
+    console.log("这类动物没有灭绝。");
     break;
-  case "Dinosaur":
+  case "恐龙":
   default:
-    console.log("This animal will not.");
+    console.log("这类动物已经灭绝。");
 }
 ```
 
-#### 多 case - 关联操作
-
-这是一个关联操作顺序的 switch 语句，其中，根据所输入的整数，你会得到不同的输出。这表示它将以你放置 case 语句的顺序遍历，并且不必是数字顺序的。在 JavaScript 中，你甚至可以将字符串定义到这些 case 语句里。
+这是一个多操作顺序的 `case` 子句示例，根据提供的整数，你可以获得不同的输出。这表明它会按照你放置 `case` 子句的顺序遍历，并且无需按照数字顺序排列。在 JavaScript 中，你甚至可以将字符串的定义混合到这些 `case` 语句中。
 
 ```js
-var foo = 1;
-var output = "Output: ";
+const foo = 1;
+let output = "输出：";
 switch (foo) {
   case 0:
-    output += "So ";
+    output += "所以";
   case 1:
-    output += "What ";
-    output += "Is ";
+    output += "你的";
+    output += "名字";
   case 2:
-    output += "Your ";
+    output += "叫";
   case 3:
-    output += "Name";
+    output += "什么";
   case 4:
-    output += "?";
+    output += "？";
     console.log(output);
     break;
   case 5:
-    output += "!";
+    output += "！";
     console.log(output);
     break;
   default:
-    console.log("Please pick a number from 0 to 5!");
+    console.log("请从 0 到 5 中选择一个数字！");
 }
 ```
 
-这个例子的输出：
+此示例的输出结果：
 
-| Value                                | Log text                          |
-| ------------------------------------ | --------------------------------- |
-| foo is NaN or not 1, 2, 3, 4, 5 or 0 | Please pick a number from 0 to 5! |
-| 0                                    | Output: So What Is Your Name?     |
-| 1                                    | Output: What Is Your Name?        |
-| 2                                    | Output: Your Name?                |
-| 3                                    | Output: Name?                     |
-| 4                                    | Output: ?                         |
-| 5                                    | Output: !                         |
+| 值                                                     | 输出文本                     |
+| ------------------------------------------------------ | ---------------------------- |
+| `foo` 是 `NaN` 或不等于 `1`、`2`、`3`、`4`、`5` 或 `0` | 请从 0 到 5 中选择一个数字！ |
+| `0`                                                    | 输出：所以你的名字叫什么？   |
+| `1`                                                    | 输出：你的名字叫什么？       |
+| `2`                                                    | 输出：叫什么？               |
+| `3`                                                    | 输出：什么？                 |
+| `4`                                                    | 输出：？                     |
+| `5`                                                    | 输出：！                     |
 
-### `switch` 语句内的块级作用域
+### if...else 链的替代方案
 
-随着绝大多数现代浏览器已支持 ECMAScript 2015 (ES6)，在某些场景下你可能需要使用 [let](/zh-CN/docs/Web/JavaScript/Reference/Statements/let) 和 [const](/zh-CN/docs/Web/JavaScript/Reference/Statements/const) 语句，以在块级作用域内声明变量。
-
-以这段代码为例：
+你可能经常需要一系列的 [`if...else`](/zh-CN/docs/Web/JavaScript/Reference/Statements/if...else) 条件匹配。
 
 ```js
-const action = "say_hello";
-switch (action) {
-  case "say_hello":
-    let message = "hello";
-    console.log("0 ~5");
+if ("fetch" in globalThis) {
+  // 使用 fetch 获取资源。
+} else if ("XMLHttpRequest" in globalThis) {
+  // 使用 XMLHttpRequest 获取资源。
+} else {
+  // 使用自定义 AJAX 逻辑获取资源
+}
+```
+
+这个模式并不是一系列的 `===` 比较，但你仍然可以将其转换为一个 `switch` 构造。
+
+```js
+switch (true) {
+  case "fetch" in globalThis:
+    // 使用 fetch 获取资源。
     break;
-  case "say_hi":
-    let message = "hi";
-  case 6:
-    console.log("6");
+  case "XMLHttpRequest" in globalThis:
+    // 使用 XMLHttpRequest 获取资源。
     break;
   default:
-    console.log("Empty action received.");
+    // 使用自定义 AJAX 逻辑获取资源
     break;
 }
 ```
 
-这个示例会导致意想不到的错误 `Uncaught SyntaxError: Identifier 'message' has already been declared`.
-
-这是因为第一个 `let message = 'hello';` 与第二个 `let message = 'hi';` 语句产生了冲突，虽然他们处于各自分隔的 case 语句中，即 `case 'say_hello':` 和 `case 'say_hi':`。导致这一问题的根本原因在于两个 `let` 语句处于同一个块级作用域，所以它们被认为是同一个变量名的重复声明。
-
-通过把 case 语句包装到括号里面，我们就可以轻松解决这个问题。
+这种 `switch (true)` 模式作为 `if...else` 的替代方案，特别适用于希望使用穿透行为的情况。
 
 ```js
-const action = "say_hello";
-switch (action) {
-  case "say_hello": {
-    // added brackets
-    let message = "hello";
-    console.log(message);
+switch (true) {
+  case isSquare(shape):
+    console.log("该形状是一个正方形。");
+  // 失败，因为正方形也是矩形的一种！
+  case isRectangle(shape):
+    console.log("该形状是一个矩形。");
+  case isQuadrilateral(shape):
+    console.log("该形状是一个四边形。");
     break;
-  } // added brackets
-  case "say_hi": {
-    // added brackets
-    let message = "hi";
-    console.log(message);
+  case isCircle(shape):
+    console.log("该形状是一个圆形。");
     break;
-  } // added brackets
-  default: {
-    // added brackets
-    console.log("Empty action received.");
-    break;
-  } // added brackets
 }
 ```
-
-此时，这段代码就会在控制台输出 `hello`，不会再有任何报错。
 
 ## 规范
 
