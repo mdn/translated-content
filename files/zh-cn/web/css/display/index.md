@@ -197,7 +197,7 @@ display: unset;
 
 ### 你现在应该使用什么语法？
 
-[CSS display 模型](/en-US/docs/Web/CSS/CSS_display) 描述了多关键字语法，你可以使用 `display` 属性明确地定义 **outer** 和 **inner** display 值。
+[CSS display 模型](/zh-CN/docs/Web/CSS/CSS_display) 描述了多关键字语法，你可以使用 `display` 属性明确地定义 **outer** 和 **inner** display 值。
 
 预组合 `<display-legacy>` 方法允许单关键字产生相同的结果，并且直到双关键值语法有着更好的支持之前，它应该被开发人员青睐。
 
