@@ -1,10 +1,24 @@
 ---
-title: Element.accessKey
+title: HTMLElement：accessKey 属性
 slug: Web/API/HTMLElement/accessKey
+l10n:
+  sourceCommit: d8f044429f2b6bb9edcf429b673e1efab49557f9
 ---
 
 {{APIRef("DOM")}}
 
-元素的 **Element.accessKey** 属性设置了这样一个按键——用户通过敲击这个键把焦点跳转到这个元素上。
+**`HTMLElement.accessKey`** 属性设置了用户按下的按键，以跳转到给定的元素。
 
-> **备注：** **Element.accessKey** 属性很少使用，因为它很容易与现代浏览器自带的快捷键冲突。为了解决这个问题，浏览器约定 accessKey 键与特定按键一起按（比如 Alt + accessKey）来生效快捷键行为。
+> **备注：** 由于 `HTMLElement.accessKey` 与浏览器中已存在的按键绑定存在多重冲突，属性很少被使用。为了解决这个问题，浏览器会在按下其他“限定”键（例如 <kbd>Alt</kbd> + accesskey）时实现访问键行为。
+
+## 规范
+
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
+
+## 参见
+
+- [HTML 全局属性：accesskey](/zh-CN/docs/Web/HTML/Global_attributes/accesskey)
