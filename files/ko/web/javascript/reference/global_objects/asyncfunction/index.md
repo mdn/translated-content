@@ -26,7 +26,7 @@ const AsyncFunction = async function () {}.constructor;
 
 부모 {{jsxref("Function")}}에서 인스턴스 속성을 상속합니다.
 
-`AsyncFunction.prototype`에 정의되어 있는 이 속성은 모든  `AsyncFunction` 인스턴스에 공유됩니다.
+`AsyncFunction.prototype`에 정의되어 있는 이 속성은 모든 `AsyncFunction` 인스턴스에 공유됩니다.
 
 - {{jsxref("Object/constructor", "AsyncFunction.prototype.constructor")}}
   - : 인스턴스 객체를 만드는 생성자 함수입니다. `AsyncFunction` 인스턴스의 경우 초기 값은 {{jsxref("AsyncFunction/AsyncFunction", "AsyncFunction")}} 생성자입니다.
