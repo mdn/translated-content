@@ -19,7 +19,7 @@ l10n:
 
 ## 예제
 
-### 디폴트 태그
+### 기본 태그
 
 일부 값에는 `Symbol.toStringTag`이 없지만 특수한 `toString()` 표현이 있습니다. 전체 목록은 {{jsxref("Object.prototype.toString()")}}을(를) 참조하십시오.
 
