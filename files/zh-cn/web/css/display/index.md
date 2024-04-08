@@ -1,6 +1,8 @@
 ---
 title: display
 slug: Web/CSS/display
+l10n:
+  sourceCommit: 69f98c69898886886f3267a4fa5f450f32133ca1
 ---
 
 {{CSSRef}}
@@ -9,12 +11,14 @@ slug: Web/CSS/display
 
 形式上，**`display`** 属性设置元素的内部和外部的*显示类型*。外部类型设置元素参与[流式布局](/zh-CN/docs/Web/CSS/CSS_flow_layout)；内部类型设置子元素的布局。一些 `display` 值在它们自己的单独规范中完整定义；例如，在 CSS 弹性盒模型的规范中，定义了声明 `display: flex` 时会发生的细节。
 
+{{EmbedInteractiveExample("pages/css/display.html")}}
+
 ## 语法
 
 CSS `display` 规定使用的关键字。
 
 ```css
-/* precomposed values */
+/* 预组合值 */
 display: block;
 display: inline;
 display: inline-block;
@@ -24,26 +28,26 @@ display: grid;
 display: inline-grid;
 display: flow-root;
 
-/* box generation */
+/* 生成盒子 */
 display: none;
 display: contents;
 
-/* two-value syntax */
+/* 多关键字语法 */
+display: block flex;
 display: block flow;
+display: block flow-root;
+display: block grid;
+display: inline flex;
 display: inline flow;
 display: inline flow-root;
-display: block flex;
-display: inline flex;
-display: block grid;
 display: inline grid;
-display: block flow-root;
 
-/* other values */
+/* 其他值 */
 display: table;
-display: table-row; /* all table elements have an equivalent CSS display value */
+display: table-row; /* 所有的 table 元素 都有等效的 CSS display 值 */
 display: list-item;
 
-/* Global values */
+/* 全局值 */
 display: inherit;
 display: initial;
 display: revert;
@@ -66,7 +70,18 @@ display: unset;
     - `inline`
       - : 该元素生成一个或多个内联元素盒，它们之前或者之后并不会产生换行。在正常的流中，如果有空间，下一个元素将会在同一行上。
 
-> **备注：** 浏览器支持双值语法，当仅发现外部值时，例如当指定 `display: block` 或 `display: inline`，其将内部值设置为 `flow`。这种行为是预期的；例如，如果你指定一个元素是块元素，你将期望该元素的子元素将同块和内联元素一样参与正常的流布局。
+> **备注：** 浏览器支持多关键字语法，当 `display` 属性仅有一个 **outer** 值（例如 `display: block` 或 `display: inline`），内部值设置为 `flow`（例如 `display: block flow` 和 `display: inline flow`）。
+
+> **备注：** 为了保证布局在旧浏览器生效，你可以使用单值语法，例如 `display: inline flex` 可能会出现下面的变化。
+>
+> ```css
+> .container {
+>   display: inline-flex;
+>   display: inline flex;
+> }
+> ```
+>
+> 参见 [CSS display 使用多值语法](/en-US/docs/Web/CSS/display/multi-keyword_syntax_of_display) 获得更多信息。
 
 ### 内部表现
 
@@ -74,7 +89,7 @@ display: unset;
 
   - : 这些关键字规定了元素的内部显示类型，其定义了该内容布局时的格式上下文的类型（假设它是一个非替换元素）：
 
-    - `flow` {{Experimental_Inline}}
+    - `flow`
 
       - : 该元素使用流式布局（块和内联布局）来排布它的内容。
 
@@ -90,10 +105,10 @@ display: unset;
       - : 该元素的行为类似块级元素并且根据[弹性盒模型](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)布局它的内容。
     - `grid`
       - : 该元素的行为类似块级元素并且根据[网格模型](/zh-CN/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)布局它的内容。
-    - `ruby` {{Experimental_Inline}}
+    - `ruby`
       - : 该元素的行为类似内联元素并且根据 ruby 格式化模型布局它的内容。它的行为像关联的 HTML 的 {{HTMLElement("ruby")}} 元素。
 
-> **备注：** 浏览器支持双值语法，当仅发现外部值时，例如当指定 `display: flex` 或 `display: grid`，其将外部值设置为 `block`。这种行为是预期的；例如，如果你指定一个元素是 `display: grid`，你将期望在网格容器中创建的盒子是块级别的盒子。
+> **备注：** 浏览器支持多关键字语法，当 `display` 属性仅有一个 **inner** 值（例如 `display: flex` 或 `display: grid`），外部值设置为 `block`（例如 `display: block flex` 和 `display: block grid`）。
 
 ### 列表元素
 
@@ -104,13 +119,13 @@ display: unset;
 
 `list-item` 也可以与任意的 {{CSSxRef("&lt;display-outside&gt;")}} 关键字和 {{CSSxRef("&lt;display-inside&gt;")}} 中的 `flow` 或 `flow-root` 关键字组合。
 
-> **备注：** 浏览器支持双值语法，如果没有指定内部值，默认为 `flow`。如果没有指定外部值，主体盒子将具有 `block` 的外部显示类型。
+> **备注：** 浏览器支持多关键字语法，如果没有指定内部值，默认为 `flow`。如果没有指定外部值，主体盒子将具有 `block` 的外部显示类型。
 
 ### 内部
 
 - {{CSSxRef("&lt;display-internal&gt;")}}
 
-  - : 一些布局模型，例如 `table` 和 `ruby` 有一个复杂的内置结构，它们的子孙后代可以扮演几个不同的角色。本节定义的这些“内部”display 值，仅在特定的布局模式下有用。
+  - : 一些布局模型，例如 `table` 和 `ruby` 有一个复杂的内置结构，它们的子孙后代可以扮演几个不同的角色。本节定义的这些“内部” display 值，仅在特定的布局模式下有用。
 
     - `table-row-group`
       - : 该元素的行为类似于 HTML 的 {{HTMLElement("tbody")}} 元素。
@@ -128,13 +143,13 @@ display: unset;
       - : 该元素的行为类似于 HTML {{HTMLElement("col")}} 元素。
     - `table-caption`
       - : 该元素的行为类似于 HTML 的 {{HTMLElement("caption")}} 元素。
-    - `ruby-base` {{Experimental_Inline}}
+    - `ruby-base`
       - : 该元素的行为类似于 HTML 的 {{HTMLElement("rb")}} 元素。
-    - `ruby-text` {{Experimental_Inline}}
+    - `ruby-text`
       - : 该元素的行为类似于 HTML 的 {{HTMLElement("rt")}} 元素。
-    - `ruby-base-container` {{Experimental_Inline}}
+    - `ruby-base-container`
       - : 该元素是作为匿名盒子生成的。
-    - `ruby-text-container` {{Experimental_Inline}}
+    - `ruby-text-container`
       - : 该元素的行为类似于 HTML 的 {{HTMLElement("rtc")}} 元素。
 
 ### 盒
@@ -146,8 +161,6 @@ display: unset;
     - `contents`
 
       - : 这些元素自身不会产生特定的盒子。它们被伪盒子（pseudo-box）和子盒子取代。请注意，CSS Display Level 3 规范中定义了 `contents` 值如何影响“异常元素”——这些元素不是纯粹由 CSS 盒模型概念呈现的（例如替换元素）。更多的细节请参见[附录 B：display 的影响：异常元素的内容](https://drafts.csswg.org/css-display/#unbox)。
-
-        _由于浏览器的一个错误，该元素目前不会被添加到无障碍树中——屏幕阅读器将不会看到里面的内容。更多细节，参见下面的[无障碍问题](#无障碍问题)。_
 
     - `none`
       - : 使元素不再显示，其对布局不会有影响（文档渲染得好像这个元素并不存在）。所有的后代元素也不会再显示。为了使元素占据一个它通常占据的空间，但实际上没有渲染任何东西，应该使用 {{CSSxRef("visibility")}} 属性。
@@ -184,9 +197,11 @@ display: unset;
 
 ### 你现在应该使用什么语法？
 
-Level 3 规范中详细描述了 `display` 的双值属性——明确地启用外部和内部显示类型的规范——但浏览器尚未很好地支持这一点。
+[CSS display 模型](/en-US/docs/Web/CSS/CSS_display) 描述了多关键字语法，你可以使用 `display` 属性明确地定义 **outer** 和 **inner** display 值。
 
-预组合 `<display-legacy>` 方法允许单关键字产生相同的结果，并且直到双关键值语法有着更好的支持之前，它应该被开发人员青睐。例如，你可以按以下方式使用双值语法指定一个内联的弹性容器：
+预组合 `<display-legacy>` 方法允许单关键字产生相同的结果，并且直到双关键值语法有着更好的支持之前，它应该被开发人员青睐。
+
+支持单个关键字值（预组合 `<display-legacy>` 值）以实现向后兼容性。例如，你可以按以下方式使用两个值指定一个内联的弹性容器：
 
 ```css
 .container {
@@ -194,7 +209,7 @@ Level 3 规范中详细描述了 `display` 的双值属性——明确地启用�
 }
 ```
 
-目前可以使用单个值来指定。
+也可以使用传统的单值来指定。
 
 ```css
 .container {
@@ -202,12 +217,12 @@ Level 3 规范中详细描述了 `display` 的双值属性——明确地启用�
 }
 ```
 
-有关规范中的这些更改的更多信息，请参考这篇文章[适应 display 的新的双值语法](/zh-CN/docs/Web/CSS/display/two-value_syntax_of_display).
+有关规范中的这些更改的更多信息，请参考这篇文章[CSS display 使用多值语法](/en-US/docs/Web/CSS/display/multi-keyword_syntax_of_display)。
 
 ### 全局值
 
 ```css
-/* Global values */
+/* 全局值 */
 display: inherit;
 display: initial;
 display: unset;
@@ -217,7 +232,8 @@ display: unset;
 
 `display` 为不同类型的值设置了单独的页面，其中包含这些值的多个示例——请参阅[语法](#语法)部分。此外，请参阅以下资料，其中深度展示了 display 的各种值。
 
-- [适应 display 的新双值语法](/zh-CN/docs/Web/CSS/display/two-value_syntax_of_display)
+### 多关键字值
+- [CSS display 使用多值语法](/en-US/docs/Web/CSS/display/multi-keyword_syntax_of_display)。
 
 ### CSS 流式布局（display: block、display: inline）
 
@@ -249,7 +265,29 @@ display: unset;
 - [网格、逻辑值和书写模式](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
 - [CSS 网格布局和无障碍](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
 - [CSS 网格布局和渐进增强](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
-- [利用网格布局实现常用布局](/zh-CN/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_CSS_grid_layout)
+- [利用网格布局实现常用布局](/zh-CN/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
+
+### Animating display
+
+[支持的浏览器](#浏览器兼容性)使用 [动画性 CSS 属性](/zh-CN/docs/Web/CSS/CSS_animated_properties#discrete) 设置 `display` 动画。这通常意味着，通过在两个值之间设置动画，属性将在这两个值之间交替出现。
+
+有一个例外，那就是设置动画到 `display: none`，或者从 `display: none` 设置动画。这种情况下，浏览器会在这两个值之间切换，以便于在整个动画持续时间内显示动画内容。例如：
+
+- 当将 `display` 从 `none` 设置为 `block`（或另一个可见的 `display` 值）时，该值将在动画持续时间的 `0%` 处，切换到 `block`，从而使其始终可见。
+
+- 当将 `display` 从 `block`（或另一个可见的 `display` 值）设置为 `none`时，该值将在动画持续时间的 `100%` 处，切换到 `none`，从而使其始终可见。
+
+此行为对于创建入口/出口动画非常有用，例如，你想要使用 `display: none` 从 DOM 中删除一个容器，但使用 [`opacity`](/zh-CN/docs/Web/CSS/opacity) 将其淡出，而不是立即消失。
+
+当使用 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations) 为 `display` 设置动画时，需要在明确的关键帧（例如使用 `0%` 或 `from`）中提供开始的 `display` 值。有关示例，请参见[使用 CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)。
+
+当使用 [CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions) 为 `display` 设置动画时，需要两个额外的附加条件：
+
+- [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) 提供了要从第一次显示动画元素时开始转换的属性的起始值。这是避免意外行为所必需的。默认情况下，CSS 过渡不会在元素的第一次样式更新时触发，也不会在 `display` 类型从 `none` 更改为另一种类型时触发。
+
+- [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/transition-behavior) 需要在 {{cssxref("transition-property")}} 声明上设置，已启用 `display` 过渡。
+
+对于 `display` 属性过渡的更多示例，请参见 [`@starting-style`](/en-US/docs/Web/CSS/@starting-style#examples) 和 [`transition-behavior`](/en-US/docs/Web/CSS/transition-behavior#examples)。
 
 ## 无障碍问题
 
@@ -264,11 +302,11 @@ display: unset;
 当前在大多数浏览器的实现是将任意 `display` 值为 `contents` 的元素从[无障碍树中](/zh-CN/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis)移除（但是保留后代元素）。这将导致该元素自身不再通过屏幕阅读器技术展示。根据 [CSS 规范](https://drafts.csswg.org/css-display/#valdef-display-contents)，这是错误的行为。
 
 - [更多带有 display: contents 的无障碍标记 | Hidde de Vries](https://hidde.blog/more-accessible-markup-with-display-contents/)
-- [Display: Contents Is Not a CSS Reset | Adrian Roselli](https://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html)
+- [Display: 内容不是 CSS 重置 | Adrian Roselli](https://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html)
 
 ### 表格
 
-将 {{HTMLElement("table")}} 元素的 `display` 值改为 `block`、`grid` 或 `flex`，这将改变它在[无障碍树](/zh-CN/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis)中的显示。这将导致表格不再通过屏幕阅读（screen reading）技术展示。
+有些浏览器，将 {{HTMLElement("table")}} 元素的 `display` 值改为 `block`、`grid` 或 `flex`，这将改变它在[无障碍树](/zh-CN/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis)中的显示。这将导致表格不再通过屏幕阅读（screen reading）技术展示。
 
 - [关于 CSS display 属性对表格语义的影响的简短说明——The Paciello Group](https://www.tpgi.com/short-note-on-what-css-display-properties-do-to-table-semantics/)
 - [隐藏内容以获得更好的无障碍 | Go Make Things](https://gomakethings.com/hidden-content-for-better-a11y/)
@@ -291,8 +329,6 @@ display: unset;
 
 我们在容器上以及它们的子元素中使用了 {{cssxref("padding")}} 和 {{cssxref("background-color")}}，以便更容易看到 display 值的影响。
 
-> **备注：** 我们没有包含任何现代化的双值语法，因为对此的支持仍然相当有限。
-
 #### HTML
 
 ```html
@@ -309,17 +345,21 @@ display: unset;
 </article>
 
 <div>
-  <label for="display">Choose a display value:</label>
+  <label for="display">选择一个 display 值:</label>
   <select id="display">
     <option selected>block</option>
     <option>inline</option>
     <option>inline-block</option>
+    <option>inline flow-root</option>
     <option>none</option>
     <option>flex</option>
     <option>inline-flex</option>
+    <option>inline flex</option>
     <option>grid</option>
     <option>inline-grid</option>
+    <option>inline grid</option>
     <option>table</option>
+    <option>block table</option>
     <option>list-item</option>
   </select>
 </div>
@@ -377,7 +417,14 @@ updateDisplay();
 
 {{EmbedLiveSample('比较 display 的值','100%', 440)}}
 
-> **备注：** 你可以在页面上找到上面链接的每个单独 display 数据类型的更多示例。
+请注意，为了便于说明，添加了一些多关键字值，下面这些值是相等的。
+
+- `inline-block` = `inline flow-root`
+- `inline-flex` = `inline flex`
+- `inline-grid` = `inline grid`
+- `table` = `block table`
+
+你可以在[分组的值](#分组的值)上找到上面链接的每个单独 display 数据类型的更多示例。
 
 ## 规范
 
