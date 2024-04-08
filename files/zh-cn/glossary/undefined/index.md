@@ -14,10 +14,10 @@ l10n:
 ```js
 let x; //声明变量但不赋值
 
-console.log(`x's 的值是 ${x}`); //输出“x 的值是 undefined”
+console.log(`x 的值是 ${x}`); //输出“x 的值是 undefined”
 ```
 
 ## 参见
 
-- 维基百科上的 [Undefined 值](https://zh.wikipedia.org/wiki/Undefined_value)
+- 维基百科上的 [Undefined 值](https://en.wikipedia.org/wiki/Undefined_value)
 - [JavaScript 数据类型和数据结构](/zh-CN/docs/Web/JavaScript/Data_structures)
