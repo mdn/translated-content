@@ -11,7 +11,7 @@ l10n:
 
 要素のアクセシブル説明は、{{glossary("accessibility tree", "アクセシビリティツリー")}}の一部であり、ウェブコンテンツを{{glossary("Screen_reader", "スクリーンリーダー")}}や他の支援技術に利用できるようにし、その結果、支援技術のユーザーもコンテンツを利用できるようにします。
 
-{{htmlelement("table")}} のアクセシブル説明は最初の {{htmlelement("caption")}} であり、{{htmlelement("figure")}} のアクセシブル説明は {{htmlelement("figcaption")}} であり、{{htmlelement("summary")}} は、それを囲む {{htmlelement("details")}} のコンテンツのアクセシブル説あり、ボタン型の {{htmlelement("input")}} 要素の場合は `value` 属性の値であり、要素に `aria-describedby` 属性または `aria-description` 属性がある場合はそちらが優先されます。
+{{htmlelement("table")}} のアクセシブル説明は最初の {{htmlelement("caption")}} であり、{{htmlelement("figure")}} のアクセシブル説明は {{htmlelement("figcaption")}} であり、{{htmlelement("summary")}} は、それを囲む {{htmlelement("details")}} のコンテンツのアクセシブル説明であり、ボタン型の {{htmlelement("input")}} 要素の場合は `value` 属性の値であり、要素に `aria-describedby` 属性または `aria-description` 属性がある場合はそちらが優先されます。
 
 他の要素では、説明を関連する要素にプログラム的に関連付ける必要があります。これらの場合、アクセシブル説明は [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) 属性、 [`aria-description`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-description) 属性、[`title`](/ja/docs/Web/HTML/Global_attributes#title) 属性のいずれかによって指定されます。 `title` がその要素の{{glossary("accessible name", "アクセシブル名")}}でもない場合、優先順位の高い順に指定します。
 
