@@ -233,7 +233,8 @@ display: unset;
 `display` 为不同类型的值设置了单独的页面，其中包含这些值的多个示例——请参阅[语法](#语法)部分。此外，请参阅以下资料，其中深度展示了 display 的各种值。
 
 ### 多关键字值
-- [CSS display 使用多值语法](/en-US/docs/Web/CSS/display/multi-keyword_syntax_of_display)。
+
+- [CSS display 使用多值语法](/zh-CN/docs/Web/CSS/display/multi-keyword_syntax_of_display)。
 
 ### CSS 流式布局（display: block、display: inline）
 
