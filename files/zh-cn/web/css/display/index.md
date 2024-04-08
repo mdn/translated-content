@@ -283,7 +283,7 @@ display: unset;
 
 当使用 [CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions) 为 `display` 设置动画时，需要两个额外的附加条件：
 
-- [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) 提供了要从第一次显示动画元素时开始转换的属性的起始值。这是避免意外行为所必需的。默认情况下，CSS 过渡不会在元素的第一次样式更新时触发，也不会在 `display` 类型从 `none` 更改为另一种类型时触发。
+- [`@starting-style`](/zh-CN/docs/Web/CSS/@starting-style) 提供了要从第一次显示动画元素时开始转换的属性的起始值。这是避免意外行为所必需的。默认情况下，CSS 过渡不会在元素的第一次样式更新时触发，也不会在 `display` 类型从 `none` 更改为另一种类型时触发。
 
 - [`transition-behavior: allow-discrete`](/zh-CN/docs/Web/CSS/transition-behavior) 需要在 {{cssxref("transition-property")}} 声明上设置，已启用 `display` 过渡。
 
