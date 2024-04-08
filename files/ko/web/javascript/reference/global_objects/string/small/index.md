@@ -17,7 +17,7 @@ l10n:
 small()
 ```
 
-### Parameters
+### 매개변수
 
 없음.
 
