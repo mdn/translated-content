@@ -9,7 +9,7 @@ l10n:
 
 **HTTP `GET` 方法**是用來請求指定資源的表示。使用 `GET` 的請求應僅用於請求數據（不應包含數據）。
 
-> **備註：** 在 `GET` 請求中發送主體/有效載荷可能會導致一些現有實現拒絕該請求——雖然規範沒有禁止，但語義是未定義的。最好只是避免在 `GET` 請求中發送有效載荷。
+> **備註：** 在 `GET` 請求中發送主體/有效載荷可能會導致一些現有實現拒絕該請求——雖然規範沒有禁止，但語義是未定義的。最好直接避免在 `GET` 請求中發送有效載荷。
 
 <table class="properties">
   <tbody>
@@ -56,6 +56,6 @@ GET /index.html
 
 ## 參見
 
-- [HTTP Headers](/zh-TW/docs/Web/HTTP/Headers)
+- [HTTP 標頭](/zh-TW/docs/Web/HTTP/Headers)
 - {{HTTPHeader("Range")}}
 - {{HTTPMethod("POST")}}
