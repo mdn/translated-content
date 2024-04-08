@@ -81,7 +81,7 @@ display: unset;
 > }
 > ```
 >
-> 参见 [CSS display 使用多值语法](/en-US/docs/Web/CSS/display/multi-keyword_syntax_of_display) 获得更多信息。
+> 参见 [CSS display 使用多值语法](/zh-CN/docs/Web/CSS/display/multi-keyword_syntax_of_display) 获得更多信息。
 
 ### 内部表现
 
