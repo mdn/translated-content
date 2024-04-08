@@ -57,13 +57,7 @@ const arr = [1, 2, 3];
 const max = arr.reduce((a, b) => Math.max(a, b), -Infinity);
 ```
 
-다음 함수는 {{jsxref ( "Function.prototype.apply ()")}}을 사용하여 숫자 배열에서 최대 요소를 찾습니다.
-`getMaxOfArray([1, 2, 3])`는 `Math.max(1, 2, 3)`와 동일하지만 프로그래밍 방식으로 생성된 모든 크기의
-배열에서 `getMaxOfArray()`를 사용할 수 있습니다.
-
-다음 함수는 {{jsxref("Function.prototype.apply()")}}를 사용하여 배열의 최대값을 가져옵니다.
-`getMaxOfArray([1, 2, 3])`는 `Math.max(1, 2, 3)`와 동일하지만, 프로그래밍 방식으로 배열을 생성하기 위해
-`getMaxOfArray()`를 사용할 수 있습니다. 이 함수는 상대적으로 요소가 적은 배열에만 사용해야 합니다.
+다음 함수는 {{jsxref("Function.prototype.apply()")}}를 사용하여 배열의 최대값을 가져옵니다. `getMaxOfArray([1, 2, 3])`는 `Math.max(1, 2, 3)`와 동일하지만, 프로그래밍 방식으로 배열을 생성하기 위해 `getMaxOfArray()`를 사용할 수 있습니다. 이 함수는 상대적으로 요소가 적은 배열에만 사용해야 합니다.
 
 ```js
 function getMaxOfArray(numArray) {
