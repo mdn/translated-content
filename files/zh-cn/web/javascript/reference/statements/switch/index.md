@@ -196,7 +196,7 @@ switch (Animal) {
 }
 ```
 
-这是一个多操作顺序的 `case` 子句示例，根据提供的整数，你可以获得不同的输出。这表明它会按照你放置 `case` 子句的顺序遍历，并且无需按照数字顺序排列。在 JavaScript 中，你甚至可以将字符串的定义混合到这些 `case` 语句中。
+以下是一个包含多个操作顺序排列的 `case` 子句示例，根据提供的整数值，可以获得不同的输出结果。这表明它会按照你放置 `case` 子句的顺序进行遍历，并且无需按照数字顺序排列。在 JavaScript 中，你甚至还可以在这些 `case` 中混合定义字符串。
 
 ```js
 const foo = 1;
@@ -238,7 +238,7 @@ switch (foo) {
 
 ### if...else 链的替代方案
 
-你可能经常需要一系列的 [`if...else`](/zh-CN/docs/Web/JavaScript/Reference/Statements/if...else) 条件匹配。
+你可能经常会遇到需要使用一系列 [`if...else`](/zh-CN/docs/Web/JavaScript/Reference/Statements/if...else) 条件判断的情况。
 
 ```js
 if ("fetch" in globalThis) {
@@ -250,7 +250,7 @@ if ("fetch" in globalThis) {
 }
 ```
 
-这个模式并不是一系列的 `===` 比较，但你仍然可以将其转换为一个 `switch` 构造。
+这种模式并非在执行一系列 `===` 等值比较操作，但仍然可以将其转换为 `switch` 结构来实现。
 
 ```js
 switch (true) {
@@ -266,7 +266,7 @@ switch (true) {
 }
 ```
 
-这种 `switch (true)` 模式作为 `if...else` 的替代方案，特别适用于希望使用穿透行为的情况。
+`switch (true)` 模式作为 `if...else` 结构的一种替代方案，在希望利用穿透行为时特别有用。
 
 ```js
 switch (true) {
