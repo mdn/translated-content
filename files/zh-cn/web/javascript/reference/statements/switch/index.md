@@ -36,7 +36,7 @@ switch (expression) {
 
 ## 描述
 
-`switch` 语句首先评估其表达式。然后它会查找第一个 `case` 子句，该子句的表达式与输入表达式的结果（使用[严格相等](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality)进行比较）评估为相同的值，并将其控制权转移到该子句，执行该子句之后的所有语句。
+`switch` 语句首先对表达式进行求值。然后它会查找第一个求值结果与输入表达式的结果相同（使用[严格相等](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality)进行比较）的 `case` 子句，并将其控制权转移到该子句，执行该子句之后的所有语句。
 
 只有在必要时才会评估子句表达式——如果已经找到匹配项，即使后续的 `case` 子句表达式会被[跳出和穿透](#跳出和穿透)，也不会对其进行评估。
 
