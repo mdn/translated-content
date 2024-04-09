@@ -1,6 +1,8 @@
 ---
 title: 强调色
 slug: Glossary/Accent
+l10n:
+  sourceCommit: 7cec92742c6a79071626cb0fbfd0acde425e5814
 ---
 
 {{GlossarySidebar}}
