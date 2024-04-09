@@ -7,7 +7,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-**HTTP `OPTIONS` 方法**用於請求給定 URL 或伺服器的允許通訊選項。用戶端可以使用此方法指定 URL，或使用星號（`*`）來參考整個伺服器。
+**HTTP `OPTIONS` 方法**用於請求給定 URL 或伺服器的允許通訊選項。用戶端可以使用此方法指定 URL，或使用星號（`*`）來指代整個伺服器。
 
 <table class="properties">
   <tbody>
@@ -49,7 +49,7 @@ OPTIONS * HTTP/1.1
 
 ### 辨識允許的請求方法
 
-要查找伺服器支援的請求方法，可以使用 `curl` 命令行程序發出 `OPTIONS` 請求：
+要查找伺服器支援的請求方法，可以使用 `curl` 命令列程序發出 `OPTIONS` 請求：
 
 ```bash
 curl -X OPTIONS https://example.org -i
@@ -93,7 +93,7 @@ Access-Control-Request-Headers: X-PINGOTHER, Content-Type
 - {{HTTPHeader("Access-Control-Allow-Headers")}}
   - : `X-PINGOTHER` 和 `Content-Type` 為 URL 的允許請求標頭。
 - {{HTTPHeader("Access-Control-Max-Age")}}
-  - : 上述許可權可以被緩存 86,400 秒（1 天）。
+  - : 上述許可權可以被緩存 86400 秒（1 天）。
 
 ```http
 HTTP/1.1 200 OK
