@@ -282,7 +282,7 @@ display: unset;
 
 当使用 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations) 为 `display` 设置动画时，需要在明确的关键帧（例如使用 `0%` 或 `from`）中提供开始的 `display` 值。有关示例，请参见[使用 CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)。
 
-当使用 [CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions) 为 `display` 设置动画时，需要两个额外的附加条件：
+在使用 [CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions)为 `display` 设置动画时，需要两个额外的附加条件：
 
 - [`@starting-style`](/zh-CN/docs/Web/CSS/@starting-style) 提供了要从第一次显示动画元素时开始转换的属性的起始值。这是避免意外行为所必需的。默认情况下，CSS 过渡不会在元素的第一次样式更新时触发，也不会在 `display` 类型从 `none` 更改为另一种类型时触发。
 
