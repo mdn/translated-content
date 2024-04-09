@@ -268,7 +268,7 @@ display: unset;
 - [CSS 网格布局和渐进增强](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
 - [利用网格布局实现常用布局](/zh-CN/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
 
-### Animating display
+### display 动画
 
 [支持的浏览器](#浏览器兼容性)使用 [动画性 CSS 属性](/zh-CN/docs/Web/CSS/CSS_animated_properties#discrete) 设置 `display` 动画。这通常意味着，通过在两个值之间设置动画，属性将在这两个值之间交替出现。
 
