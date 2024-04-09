@@ -2,7 +2,7 @@
 title: 理解 Web 内容无障碍指南
 slug: Web/Accessibility/Understanding_WCAG
 l10n:
-  sourceCommit: b0870830e4c02596ca6c501f8f8b468a917eafc2
+  sourceCommit: d52001165c52cca8a43c9bf2f021ac0d498fccb6
 ---
 
 {{QuicklinksWithSubPages}}
