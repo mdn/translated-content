@@ -1,6 +1,8 @@
 ---
 title: Accessibility（无障碍）
 slug: Glossary/Accessibility
+l10n:
+  sourceCommit: 141ed49ccb29726b8154148a990c4854d7af7d09
 ---
 
 {{GlossarySidebar}}
