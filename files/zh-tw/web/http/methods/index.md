@@ -7,7 +7,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP 定義了一組**請求方法**，用於指示對給定資源進行的期望操作。儘管它們也可以是名詞，這些請求方法有時被稱為 _HTTP 動詞_。它們中的每一個實現了不同的語義，但它們的一組常見特徵是共享的：例如，一個請求方法可以是 {{glossary("Safe/HTTP", "安全")}}、{{glossary("idempotent", "冪等")}} 或 {{glossary("cacheable", "可緩存")}}。
+HTTP 定義了一組**請求方法**，用於指示對給定資源進行的期望操作。儘管它們也可以是名詞，這些請求方法有時被稱為 _HTTP 動詞_。它們中的每一個實現了不同的語義，但它們的一組常見特徵是共享的：例如，一個請求方法可以是{{glossary("Safe/HTTP", "安全")}}、{{glossary("idempotent", "冪等")}}或{{glossary("cacheable", "可緩存")}}的。
 
 - [`GET`](/zh-TW/docs/Web/HTTP/Methods/GET)
   - : `GET` 方法請求指定資源的表示。使用 `GET` 的請求只應檢索數據。
