@@ -108,7 +108,7 @@ display: unset;
     - `ruby`
       - : 该元素的行为类似内联元素并且根据 ruby 格式化模型布局它的内容。它的行为像关联的 HTML 的 {{HTMLElement("ruby")}} 元素。
 
-> **备注：** 浏览器支持多关键字语法，当 `display` 属性仅有一个 **inner** 值（例如 `display: flex` 或 `display: grid`），外部值设置为 `block`（例如 `display: block flex` 和 `display: block grid`）。
+> **备注：** 在支持多关键字语法的浏览器中，当 `display` 属性仅有一个**内部**值（例如 `display: flex` 或 `display: grid`）时，外部值会被设置为 `block`（例如 `display: block flex` 和 `display: block grid`）。
 
 ### 列表元素
 
