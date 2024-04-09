@@ -280,7 +280,7 @@ display: unset;
 
 此行为对于创建入口/出口动画非常有用，例如，你想要使用 `display: none` 从 DOM 中删除一个容器，但使用 [`opacity`](/zh-CN/docs/Web/CSS/opacity) 将其淡出，而不是立即消失。
 
-当使用 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations) 为 `display` 设置动画时，需要在明确的关键帧（例如使用 `0%` 或 `from`）中提供开始的 `display` 值。有关示例，请参见[使用 CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)。
+在使用 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations)为 `display` 设置动画时，需要在明确的关键帧（例如使用 `0%` 或 `from`）中提供开始的 `display` 值。有关示例，请参见[使用 CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)。
 
 在使用 [CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions)为 `display` 设置动画时，需要两个额外的附加条件：
 
