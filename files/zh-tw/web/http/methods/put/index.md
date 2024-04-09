@@ -7,7 +7,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-**HTTP `PUT` 方法**創建新資源或用請求有效載荷替換目標資源的表示。
+**HTTP `PUT` 方法**用請求有效負載創建新資源或替換目標資源的表示。
 
 `PUT` 和 {{HTTPMethod("POST")}} 之間的區別在於 `PUT` 是幂等的：調用一次或多次連續調用具有相同效果（即沒有*副*作用），而連續相同的 {{HTTPMethod("POST")}} 請求可能會產生額外的效果，類似於多次下單。
 
@@ -63,14 +63,14 @@ Content-length: 16
 
 ### 回應
 
-如果目標資源沒有當前表示並且 `PUT` 請求成功創建了一個，那麼原始服務器必須通過發送 {{HTTPStatus("201")}} (`Created`) 回應來通知用戶代理。
+如果目標資源沒有當前表示並且 `PUT` 請求成功創建了一個，那麼原伺服器必須通過發送 {{HTTPStatus("201")}}（`Created`）回應來通知用戶代理。
 
 ```http
 HTTP/1.1 201 Created
 Content-Location: /new.html
 ```
 
-如果目標資源具有當前表示且該表示根據所附表示的狀態成功修改，則原始服務器必須發送 {{HTTPStatus("200")}} (`OK`) 或 {{HTTPStatus("204")}} (`No Content`) 回應以指示請求的成功完成。
+如果目標資源具有當前表示且該表示根據所附表示的狀態成功修改，則原伺服器必須發送 {{HTTPStatus("200")}}（`OK`）或 {{HTTPStatus("204")}}（`No Content`）回應以指示請求的成功完成。
 
 ```http
 HTTP/1.1 204 No Content
