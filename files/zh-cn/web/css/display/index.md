@@ -217,7 +217,7 @@ display: unset;
 }
 ```
 
-有关规范中的这些更改的更多信息，请参考这篇文章[CSS display 使用多值语法](/zh-CN/docs/Web/CSS/display/multi-keyword_syntax_of_display)。
+有关规范中的这些更改的更多信息，请参考指南 [CSS display 使用多值语法](/zh-CN/docs/Web/CSS/display/multi-keyword_syntax_of_display)。
 
 ### 全局值
 
