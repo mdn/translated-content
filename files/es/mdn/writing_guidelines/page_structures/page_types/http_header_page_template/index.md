@@ -59,8 +59,11 @@ l10n:
 > - `\{{Deprecated_Header}}` — esto genera un banner de **Obsoleto** que indica que el uso de la tecnología está [desaconsejado](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
 >   Si no lo está, puedes eliminar la llamada a la macro.
 > - `\{{Non-standard_Header}}` — esto genera un banner de no estándar que indica que la función no forma parte de ninguna especificación.
+>
 >   Debe actualizar o eliminar las siguientes macros de acuerdo con los siguientes consejos:
+>
 > - `\{{httpsidebar}}` — esto genera el menú lateral de HTTP que debe aparecer en cada página de referencia HTTP. Recuerde eliminar la macro {{MDNSidebar}} cuando copie esta página.
+>
 >   No proporcione macros de encabezado de estado manualmente. Consulte ["Cómo agregar o actualizar estados de funciones"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses). para agregar estos estados a la página.
 >
 > Se muestran muestras de los banners **Experimental** y **Obsoleto** justo después de este bloque de nota.
@@ -89,7 +92,7 @@ Idealmente, esto debería ser una o dos oraciones cortas.
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("Cabecera de respuesta permitida por CORS")}}
+        {{Glossary("CORS-safelisted response header", "Cabecera de respuesta permitida por CORS")}}
       </th>
       <td>sí o no</td>
     </tr>
@@ -133,7 +136,7 @@ Consulta nuestra guía sobre cómo agregar [ejemplos de código](/es/docs/MDN/Wr
 >
 > **Escenario 1:** Si tienes algunos ejemplos en esta página y algunos más en otra página:
 >
-> Incluye un encabezado H3 (###) para cada ejemplo en esta página y luego un encabezado H3 (###) final con el texto "Más ejemplos", debajo del cual puedes enlazar a los ejemplos en otras páginas. Por ejemplo:
+> Incluye un encabezado H3 (`###`) para cada ejemplo en esta página y luego un encabezado H3 (`###`) final con el texto "Más ejemplos", debajo del cual puedes enlazar a los ejemplos en otras páginas. Por ejemplo:
 >
 > ```md
 > ## Ejemplos
@@ -175,4 +178,4 @@ Incluye enlaces a páginas de referencia y guías relacionadas con el encabezado
 
 - enlace1
 - enlace2
-- external_link (año)
+- enlace_externo (año)
