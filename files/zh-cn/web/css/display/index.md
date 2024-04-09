@@ -72,7 +72,7 @@ display: unset;
 
 > **备注：** 浏览器支持多关键字语法，当 `display` 属性仅有一个 **outer** 值（例如 `display: block` 或 `display: inline`），内部值设置为 `flow`（例如 `display: block flow` 和 `display: inline flow`）。
 
-> **备注：** 为了保证布局在旧浏览器生效，你可以使用单值语法，例如 `display: inline flex` 可能会出现下面的变化。
+> **备注：** 为了保证布局在旧浏览器生效，你可以使用单值语法，例如，对于 `display: inline flex`，可以设置以下回退
 >
 > ```css
 > .container {
