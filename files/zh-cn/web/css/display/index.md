@@ -70,7 +70,7 @@ display: unset;
     - `inline`
       - : 该元素生成一个或多个内联元素盒，它们之前或者之后并不会产生换行。在正常的流中，如果有空间，下一个元素将会在同一行上。
 
-> **备注：** 浏览器支持多关键字语法，当 `display` 属性仅有一个 **outer** 值（例如 `display: block` 或 `display: inline`），内部值设置为 `flow`（例如 `display: block flow` 和 `display: inline flow`）。
+> **备注：** 在支持多关键字语法的浏览器中，当 `display` 属性仅有一个**外部**值（例如 `display: block` 或 `display: inline`）时，内部值会被设置为 `flow`（例如 `display: block flow` 和 `display: inline flow`）。
 
 > **备注：** 为了保证布局在旧浏览器生效，你可以使用单值语法，例如，对于 `display: inline flex`，可以设置以下回退
 >
