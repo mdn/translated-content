@@ -16,13 +16,13 @@ new KeyboardEvent(type)
 new KeyboardEvent(type, options)
 ```
 
-### 파라미터
+### 매개 변수
 
 - `type`
   - : 문자열 형식의 이벤트 이름입니다.
     대소문자를 구별하며 브라우저에서는 `keydown`, `keyup`, 그리고 `keypress` 로 설정합니다.
 - `options` {{optional_inline}}
-  - : {{domxref("UIEvent/UIEvent", "UIEvent()")}} 에 정의된 속성들과 더불어, 다음 속성들을 가질 수 있는 객체입니다:
+  - : {{domxref("UIEvent/UIEvent", "UIEvent()")}} 에 정의된 속성들과 더불어, 다음 속성들을 가질 수 있는 객체입니다.
     - `key` {{optional_inline}}
       - : `""` 를 기본값으로 가지는 문자열 형태이며, {{domxref("KeyboardEvent.key")}} 의 키를 설정합니다.
     - `code` {{optional_inline}}
