@@ -274,9 +274,8 @@ display: unset;
 
 有一个例外，那就是设置动画到 `display: none`，或者从 `display: none` 设置动画。这种情况下，浏览器会在这两个值之间切换，以便于在整个动画持续时间内显示动画内容。例如：
 
-- 当将 `display` 从 `none` 设置为 `block`（或另一个可见的 `display` 值）时，该值将在动画持续时间的 `0%` 处，切换到 `block`，从而使其始终可见。
-
-- 当将 `display` 从 `block`（或另一个可见的 `display` 值）设置为 `none`时，该值将在动画持续时间的 `100%` 处，切换到 `none`，从而使其始终可见。
+- 当将 `display` 动画设置为从 `none` 到 `block`（或另一个可见的 `display` 值）时，该值将在动画持续时间的 `0%` 处切换到 `block`，从而使其始终可见。
+- 当将 `display` 动画设置为从 `block`（或另一个可见的 `display` 值）到 `none`时，该值将在动画持续时间的 `100%` 处切换到 `none`，从而使其始终可见。
 
 此行为对于创建入场/出场动画非常有用，例如，你想要使用 `display: none` 从 DOM 中删除一个容器，但又同时使用 [`opacity`](/zh-CN/docs/Web/CSS/opacity) 将其淡出（而不是立即消失）。
 
