@@ -35,5 +35,5 @@ if (frameEl) {
 
 ## 参见
 
-- {{domxref("window.frames")}} returns an array-like object, listing the direct sub-frames of the current window.
-- {{domxref("window.parent")}} returns the parent window, which is the window containing the `frameElement` of the child window.
+- {{domxref("window.frames")}} 返回一个类似数组的对象, 该对象列出了当前窗口的下属的所有子框架。
+- {{domxref("window.parent")}} 返回一个返回父窗口，即包含子窗口 `frameElement` 的窗口。
