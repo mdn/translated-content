@@ -33,7 +33,7 @@ l10n:
 >   - : El título que se muestra en la parte superior de la página. Debe tener el formato _NombreDeLaCabecera_. Por ejemplo, la cabecera [Cache-Control](/es/docs/Web/HTTP/Headers/Cache-Control) tiene un _título_ de `Cache-Control`.
 > - **slug**
 >   - : El final de la ruta de URL después de `https://developer.mozilla.org/es/docs/`.
->     Esto se formateará como `Web/HTTP/Headers/NameOfTheHeader`. Por ejemplo, el de [Cache-Control](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control) es Web/HTTP/Headers/Cache-Control.
+>     Esto se formateará como `Web/HTTP/Headers/NameOfTheHeader`. Por ejemplo, el de [Cache-Control](/es/docs/Web/HTTP/Headers/Cache-Control) es Web/HTTP/Headers/Cache-Control.
 > - **page-type**
 >   - : Para cabeceras HTTP, debe ser `http-header`. Para otros valores HTTP de `page-type`, consulte la [sección HTTP](/es/docs/MDN/Writing_guidelines/Page_structures/Page_types/Page_type_key#http_page_types) de la documentación para el metadato `page-type`.
 > - **status**
@@ -59,9 +59,9 @@ l10n:
 > - `\{{Deprecated_Header}}` — esto genera un banner de **Obsoleto** que indica que el uso de la tecnología está [desaconsejado](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
 >   Si no lo está, puedes eliminar la llamada a la macro.
 > - `\{{Non-standard_Header}}` — esto genera un banner de no estándar que indica que la función no forma parte de ninguna especificación.
-> Debe actualizar o eliminar las siguientes macros de acuerdo con los siguientes consejos:
+>   Debe actualizar o eliminar las siguientes macros de acuerdo con los siguientes consejos:
 > - `\{{httpsidebar}}` — esto genera el menú lateral de HTTP que debe aparecer en cada página de referencia HTTP. Recuerde eliminar la macro {{MDNSidebar}} cuando copie esta página.
-> No proporcione macros de encabezado de estado manualmente. Consulte ["Cómo agregar o actualizar estados de funciones"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses). para agregar estos estados a la página.
+>   No proporcione macros de encabezado de estado manualmente. Consulte ["Cómo agregar o actualizar estados de funciones"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses). para agregar estos estados a la página.
 >
 > Se muestran muestras de los banners **Experimental** y **Obsoleto** justo después de este bloque de nota.
 >
