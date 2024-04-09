@@ -5,7 +5,7 @@ slug: Web/CSS/counter-reset
 
 {{CSSRef}}
 
-`counter-reset` 属性用于将 [CSS 计数器](/zh-CN/docs/CSS_Counters) 重置为制定值
+`counter-reset` 属性用于将 [CSS 计数器](/zh-CN/docs/CSS_Counters) 重置为指定值
 
 {{EmbedInteractiveExample("pages/css/counter-reset.html")}}
 
