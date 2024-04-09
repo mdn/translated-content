@@ -7,17 +7,17 @@ l10n:
 
 {{HTTPSidebar}}
 
-**HTTP `POST` 方法**將數據發送到服務器。請求的主體類型由 {{HTTPHeader("Content-Type")}} 標頭指示。
+**HTTP `POST` 方法**將數據發送到服務器。請求主體的類型由 {{HTTPHeader("Content-Type")}} 標頭指示。
 
-`PUT` 和 `POST` 之間的區別在於 `PUT` 是幂等的：調用一次或多次連續調用具有相同效果（即沒有*副*作用），而連續相同的 `POST` 可能會產生額外的效果，例如多次提交訂單。
+{{HTTPMethod("PUT")}} 和 `POST` 之間的區別在於 `PUT` 是幂等的：調用一次或多次連續調用具有相同效果（即沒有*副*作用），而連續相同的 `POST` 可能會產生額外的效果，例如多次提交訂單。
 
 `POST` 請求通常通過 [HTML 表單](/zh-TW/docs/Learn/Forms)發送，並導致服務器上的更改。在這種情況下，通過將適當的字串放入 {{HTMLElement("form")}} 元素的 [`enctype`](/zh-TW/docs/Web/HTML/Element/form#enctype) 屬性或 {{HTMLElement("input") }} 或 {{HTMLElement("button")}} 元素的 [`formenctype`](/zh-TW/docs/Web/HTML/Element/input#formenctype) 屬性來選擇內容類型：
 
 - `application/x-www-form-urlencoded`：鍵和值以 `'&'` 分隔的鍵值元組形式進行編碼，鍵和值之間有 `'='`。鍵和值中的非字母數字符號均已 [URL 編碼](https://en.wikipedia.org/wiki/URL_encoding)：這就是為什麼此類型不適用於二進制數據（請改用 `multipart/form-data`）。
-- `multipart/form-data`：每個值都作為一個數據塊（"主體部分"）發送，用用戶代理定義的分隔符（"邊界"）分隔每個部分。鍵在每個部分的 `Content-Disposition` 標頭中給出。
+- `multipart/form-data`：每個值都作為一個數據塊（"主體部分"）發送，由用戶代理定義的分隔符（"邊界"）分隔每個部分。鍵在每個部分的 `Content-Disposition` 標頭中給出。
 - `text/plain`
 
-當 `POST` 請求通過 HTML 表單之外的方法發送，例如 {{domxref("fetch()")}} 調用時，主體可以採用任何類型。如 HTTP 1.1 規範所述，`POST` 被設計為允許一個統一的方法來覆蓋以下功能：
+當 `POST` 請求通過 HTML 表單之外的方法發送，例如 {{domxref("fetch()")}} 調用時，主體可以採用任何類型。如 HTTP 1.1 規範所述，`POST` 被設計為允許一個統一的方法來涵蓋以下功能：
 
 - 對現有資源進行註釋
 - 將消息發佈到佈告板、新聞組、郵件列表或類似的文章組
