@@ -99,9 +99,9 @@ switch (action) {
 }
 ```
 
-这个例子会输出错误“Uncaught SyntaxError: Identifier 'message' has already been declared”，因为第一个 `const message = '你好';` 与第二个 `const message = '嘿';` 的声明冲突，即使它们在各自独立的 case 子句中。这主要是因为两个 `const` 声明都在同一个由 `switch` 体创建的块作用域内。
+此示例将抛出错误“Uncaught SyntaxError: Identifier 'message' has already been declared”，因为第一个 `const message = '你好';` 声明与第二个 `const message = '嘿';` 声明发生了冲突，即使它们分别位于各自的 case 子句内。从根本上说，这是因为两个 `const` 声明都在同一个由 `switch` 语句体所创建的块作用域内。
 
-要解决这个问题，当你需要在 `case` 子句中使用 `let` 或 `const` 声明时，请将其包装在一个块中。
+要修复这个问题，当你需要在 `case` 子句中使用 `let` 或 `const` 声明时，请将其包裹在一个代码块中。
 
 ```js
 const action = "说你好";
@@ -122,7 +122,7 @@ switch (action) {
 }
 ```
 
-这段代码现在会在控制台输出 `你好`，正如预期的一样，而且没有任何错误。
+现在，这段代码将正常在控制台输出 `你好`，不会再出现任何错误。
 
 ## 示例
 
