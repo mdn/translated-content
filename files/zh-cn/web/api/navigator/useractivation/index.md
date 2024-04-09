@@ -15,23 +15,23 @@ l10n:
 
 ## 示例
 
-### 检查用户最近是否进行了操作
+### 检查最近是否执行了用户手势
 
-使用 {{domxref("UserActivation.isActive")}} 检查用户是否正在与页面进行交互（{{Glossary("Transient activation", "瞬间激活")}}）。
+使用 {{domxref("UserActivation.isActive")}} 来检查用户是否正在与页面进行交互（{{Glossary("Transient activation", "短暂激活")}}）。
 
 ```js
 if (navigator.userActivation.isActive) {
-  // 继续请求播放媒体，例如
+  // 例如，继续请求播放媒体
 }
 ```
 
-### 检查用户曾经是否执行过操作
+### 检查是否曾执行过用户手势
 
 使用 {{domxref("UserActivation.hasBeenActive")}} 检查用户是否曾经与页面进行过交互（{{Glossary("Sticky activation", "粘性激活")}}）。
 
 ```js
 if (navigator.userActivation.hasBeenActive) {
-  // 自动播放动画，例如
+  // 例如，继续自动播放动画
 }
 ```
 
@@ -48,4 +48,4 @@ if (navigator.userActivation.hasBeenActive) {
 - {{domxref("UserActivation")}}
 - {{domxref("UserActivation.hasBeenActive")}}
 - {{domxref("UserActivation.isActive")}}
-- [基于用户激活的功能](/zh-CN/docs/Web/Security/User_activation)
+- [由用户激活控制的功能](/zh-CN/docs/Web/Security/User_activation)
