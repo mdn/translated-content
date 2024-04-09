@@ -289,7 +289,7 @@ display: unset;
 
 有关 `display` 属性过渡的更多示例，请参见 [`@starting-style`](/zh-CN/docs/Web/CSS/@starting-style#示例) 和 [`transition-behavior`](/zh-CN/docs/Web/CSS/transition-behavior#示例)。
 
-## 无障碍问题
+## 无障碍考虑
 
 ### display: none
 
