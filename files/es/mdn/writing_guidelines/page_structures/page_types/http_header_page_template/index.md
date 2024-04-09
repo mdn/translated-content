@@ -79,7 +79,7 @@ Idealmente, esto debería ser una o dos oraciones cortas.
       <td>
         Incluye la categoría de la cabecera (o categorías), por ejemplo,
         {{Glossary("Request header", "Cabecera de solicitud")}},
-        {{Glossary("Response header", Cabecera de respuesta)}},
+        {{Glossary("Response header", "Cabecera de respuesta")}},
         <a href="/es/docs/Web/HTTP/Headers">Cabecera de pista del cliente</a>
       </td>
     </tr>
