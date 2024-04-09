@@ -36,7 +36,7 @@ switch (expression) {
 
 ## 描述
 
-`switch` 语句首先对表达式进行求值。然后它会查找第一个求值结果与输入表达式的结果相同（使用[严格相等](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality)进行比较）的 `case` 子句，并将其控制权转移到该子句，执行该子句之后的所有语句。
+`switch` 语句首先对其表达式进行求值。然后，它会查找第一个与输入表达式的结果严格相等（通过[严格相等](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality)比较）的 `case` 子句，并将控制权转移到该子句，执行该子句之后的所有语句。
 
 只有在必要时才会评估子句表达式——如果已经找到匹配项，即使后续的 `case` 子句表达式会被[跳出和穿透](#跳出和穿透)，也不会对其进行评估。
 
@@ -48,13 +48,13 @@ switch (undefined) {
 // 仅输出 1
 ```
 
-如果没有找到匹配的 `case` 子句，程序会寻找可选的 `default` 子句，如果找到，则将控制权转移到该子句，执行该子句之后的语句。如果找不到 `default` 子句，程序将继续执行 `switch` 结束后的语句。根据惯例，`default` 子句是最后一个子句，但并非必须如此。一个 `switch` 语句只能有一个 `default` 子句；多个 `default` 子句会导致 {{jsxref("SyntaxError")}}。
+若找不到匹配的 `case` 子句，程序会查找可选的 `default` 子句，如果找到，则将控制权转移到该子句，并执行该子句后面的语句。如果找不到 `default` 子句，程序将继续执行 `switch` 结束后的语句。按照惯例，`default` 子句通常位于最后一个位置，但实际上并不强制要求如此。一个 `switch` 语句只能有一个 `default` 子句；多个 `default` 子句会导致 {{jsxref("SyntaxError")}} 错误。
 
 ### 跳出和穿透
 
-你可以在 `switch` 语句的主体内部使用 [`break`](/zh-CN/docs/Web/JavaScript/Reference/Statements/break) 语句来提前跳出，通常是在两个 `case` 子句之间的所有语句都已执行完毕时。将继续执行到 `switch` 语句后的第一条语句。
+你可以在 `switch` 语句体内部使用 [`break`](/zh-CN/docs/Web/JavaScript/Reference/Statements/break) 语句提前结束语句执行，通常是在两个 `case` 子句之间的所有语句都已经执行完毕的情况下。执行会从 `switch` 语句后的第一条语句继续进行。
 
-如果省略了 `break`，将继续执行到下一个 `case` 子句，甚至会继续到 `default` 子句，而不管该子句的表达式值是否匹配。这种行为称为“穿透”。
+如果省略了 `break` 语句，程序执行将会继续流向下一个 `case` 子句，甚至到达 `default` 子句，而不论该子句中的表达式值是否匹配。这种行为被称为“穿透”。
 
 ```js
 const foo = 0;
@@ -77,11 +77,11 @@ switch (foo) {
 // 输出 0 和 1
 ```
 
-在适当的上下文中，其他控制流语句也会导致 `switch` 语句中断。例如，如果 `switch` 语句包含在一个函数中，那么 [`return`](/zh-CN/docs/Web/JavaScript/Reference/Statements/return) 语句将终止函数体的执行，从而终止 `switch` 语句。如果 `switch` 语句包含在循环中，那么 [`continue`](/zh-CN/docs/Web/JavaScript/Reference/Statements/continue) 语句会终止 `switch` 语句并跳到循环的下一次迭代。
+在合适的上下文中，其他控制流语句同样具有跳出 `switch` 语句的效果。例如，如果 `switch` 语句嵌套在一个函数内部，那么 [`return`](/zh-CN/docs/Web/JavaScript/Reference/Statements/return) 语句将结束函数体的执行，因此也会结束 `switch` 语句的执行。如果 `switch` 语句位于循环体内，那么 [`continue`](/zh-CN/docs/Web/JavaScript/Reference/Statements/continue) 语句会停止 `switch` 语句的执行，并跳转到循环体的下一次迭代。
 
 ### 词法作用域
 
-`case` 和 `default` 子句类似于[标记语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/label)：它们指示控制流可能跳转到的位置。然而，它们本身并不创建词法[作用域](/zh-CN/docs/Glossary/Scope)（也不会自动中断执行，正如上面所示）。例如：
+`case` 和 `default` 子句类似于[标记语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/label)：它们指示了控制流可能跳转到的位置。然而，它们本身并不创建词法[作用域](/zh-CN/docs/Glossary/Scope)（也不会自动跳出——如上所述所示）。例如：
 
 ```js-nolint example-bad
 const action = "说你好";
@@ -128,7 +128,7 @@ switch (action) {
 
 ### 使用 switch
 
-在以下示例中，如果 `expr` 的值为 `香蕉`，程序会将该值与 `case '香蕉'` 进行匹配，并执行相应的语句。当遇到 `break` 时，程序会跳出 `switch` 并执行紧随其后的 `switch` 语句。如果省略了 `break`，则 `case '樱桃'` 的语句也会被执行。
+在以下示例中，如果 `expr` 的计算结果为 `香蕉`，则程序会将其值与 `case '香蕉'` 子句进行匹配，并执行相应的语句。当遇到 `break` 关键字时，程序会跳出 `switch` 语句，并执行紧随其后的 `switch` 语句。如果省略了 `break`，则 `case '樱桃'` 的语句也会被执行。
 
 ```js
 switch (expr) {
@@ -155,7 +155,7 @@ switch (expr) {
 console.log("你还需要什么吗？");
 ```
 
-### 将 default 子句放在两个 case 子句之间
+### 将 default 子句置于两个 case 子句之间
 
 如果没有找到匹配项，将从 `default` 字句开始执行，并执行该子句之后的所有语句。
 
@@ -173,13 +173,13 @@ switch (foo) {
 }
 ```
 
-将 `default` 子句放在所有其他 `case` 子句之前也可以实现相同的效果。
+即使将 `default` 子句放在所有其他 `case` 子句之前也可以实现相同的效果。
 
-### 利用代码穿透
+### 利用穿透特性
 
-这种方法利用了这样一个事实，如果在 `case` 子句下面没有 `break`，则执行将继续到下一个 `case` 子句，而不管该 `case` 是否满足条件。
+这种方法利用了这样一个事实，如果在某个 `case` 子句下方没有 `break` 语句，那么无论该 `case` 子句是否满足条件，程序都会继续执行下一个 `case` 子句。
 
-以下是一个单操作顺序 `case` 语句的示例，其中四个不同的值执行完全相同的操作。
+以下是一个单操作连续 `case` 语句的示例，其中四个不同的值执行完全相同的操作。
 
 ```js
 const Animal = "长颈鹿";
@@ -196,7 +196,7 @@ switch (Animal) {
 }
 ```
 
-以下是一个包含多个操作顺序排列的 `case` 子句示例，根据提供的整数值，可以获得不同的输出结果。这表明它会按照你放置 `case` 子句的顺序进行遍历，并且无需按照数字顺序排列。在 JavaScript 中，你甚至还可以在这些 `case` 中混合定义字符串。
+以下是一个涉及多个操作的连续 `case` 子句示例，根据提供的整数值，可以获得不同的输出结果。这表明 `case` 子句将会按照你编写时的顺序依次执行，而不必按照数值的大小顺序。在 JavaScript 中，这些 `case` 语句中甚至还可以混入字符串类型的定义。
 
 ```js
 const foo = 1;
@@ -236,7 +236,7 @@ switch (foo) {
 | `4`                                                    | 输出：？                     |
 | `5`                                                    | 输出：！                     |
 
-### if...else 链的替代方案
+### 一种替代 if...else 链的方法
 
 你可能经常会遇到需要使用一系列 [`if...else`](/zh-CN/docs/Web/JavaScript/Reference/Statements/if...else) 条件判断的情况。
 
