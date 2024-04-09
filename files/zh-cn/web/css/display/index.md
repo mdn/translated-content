@@ -119,7 +119,7 @@ display: unset;
 
 `list-item` 也可以与任意的 {{CSSxRef("&lt;display-outside&gt;")}} 关键字和 {{CSSxRef("&lt;display-inside&gt;")}} 中的 `flow` 或 `flow-root` 关键字组合。
 
-> **备注：** 浏览器支持多关键字语法，如果没有指定内部值，默认为 `flow`。如果没有指定外部值，主体盒子将具有 `block` 的外部显示类型。
+> **备注：** 在支持多关键字语法的浏览器中，如果没有指定内部值，其值默认为 `flow`。如果没有指定外部值，主体盒子将具有 `block` 的外部显示类型。
 
 ### 内部
 
