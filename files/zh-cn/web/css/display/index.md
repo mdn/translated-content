@@ -270,7 +270,7 @@ display: unset;
 
 ### display 动画
 
-[支持的浏览器](#浏览器兼容性)使用 [动画性 CSS 属性](/zh-CN/docs/Web/CSS/CSS_animated_properties#discrete) 设置 `display` 动画。这通常意味着，通过在两个值之间设置动画，属性将在这两个值之间交替出现。
+[支持的浏览器](#浏览器兼容性)使用[离散的动画类型](/zh-CN/docs/Web/CSS/CSS_animated_properties#离散)设置 `display` 动画。这通常意味着，属性的值将在动画播放到 `50%` 时在两个值之间切换。
 
 有一个例外，那就是设置动画到 `display: none`，或者从 `display: none` 设置动画。这种情况下，浏览器会在这两个值之间切换，以便于在整个动画持续时间内显示动画内容。例如：
 
