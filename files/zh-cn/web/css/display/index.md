@@ -199,8 +199,6 @@ display: unset;
 
 [CSS display 模块](/zh-CN/docs/Web/CSS/CSS_display)描述了多关键字语法，你可以使用 `display` 属性明确地定义**外部**和**内部** display 值。
 
-预组合 `<display-legacy>` 方法允许单关键字产生相同的结果，并且直到双关键值语法有着更好的支持之前，它应该被开发人员青睐。
-
 支持单个关键字值（预组合 `<display-legacy>` 值）以实现向后兼容性。例如，你可以按以下方式使用两个值指定一个内联的弹性容器：
 
 ```css
