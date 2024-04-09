@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) **`display`** 属性设置元素是否被视为[块或者内联元素](/zh-CN/docs/Web/CSS/CSS_flow_layout)以及用于子元素的布局，例如[流式布局](/zh-CN/docs/Web/CSS/CSS_flow_layout)、[网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)或[弹性布局](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)。
+[CSS](/zh-CN/docs/Web/CSS) **`display`** 属性设置元素是否被视为[块级或行级盒子](/zh-CN/docs/Web/CSS/CSS_flow_layout)以及用于子元素的布局，例如[流式布局](/zh-CN/docs/Web/CSS/CSS_flow_layout)、[网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)或[弹性布局](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)。
 
 形式上，**`display`** 属性设置元素的内部和外部的*显示类型*。外部类型设置元素参与[流式布局](/zh-CN/docs/Web/CSS/CSS_flow_layout)；内部类型设置子元素的布局。一些 `display` 值在它们自己的单独规范中完整定义；例如，在 CSS 弹性盒模型的规范中，定义了声明 `display: flex` 时会发生的细节。
 
@@ -66,9 +66,9 @@ display: unset;
   - : 这些关键字规定元素的外部显示类型，实际上就是其在流式布局中的角色：
 
     - `block`
-      - : 该元素生成一个块级元素盒，在正常的流中，该元素之前和之后产生换行。
+      - : 该元素生成一个块级盒子，在正常的流中，该元素之前和之后产生换行。
     - `inline`
-      - : 该元素生成一个或多个内联元素盒，它们之前或者之后并不会产生换行。在正常的流中，如果有空间，下一个元素将会在同一行上。
+      - : 该元素生成一个或多个行级盒子，它们之前或者之后并不会产生换行。在正常的流中，如果有空间，下一个元素将会在同一行上。
 
 > **备注：** 在支持多关键字语法的浏览器中，当 `display` 属性仅有一个**外部**值（例如 `display: block` 或 `display: inline`）时，内部值会被设置为 `flow`（例如 `display: block flow` 和 `display: inline flow`）。
 
@@ -91,11 +91,11 @@ display: unset;
 
     - `flow`
 
-      - : 该元素使用流式布局（块和内联布局）来排布它的内容。
+      - : 该元素使用流式布局（块向和行向布局）来排布它的内容。
 
-        如果它的外部显示类型是 `inline` 或 `run-in`，并且它参与一个块或者内联格式上下文，那么它将生成一个内联盒子。否则它将生成一个块容器盒。
+        如果它的外部显示类型是 `inline` 或 `run-in`，并且它参与一个区块或者行级格式上下文，那么它将生成一个块级盒子。否则它将生成一个块容器盒。
 
-        根据其他属性的值（例如 {{CSSxRef("position")}}、{{CSSxRef("float")}} 或 {{CSSxRef("overflow")}}）以及它自身是否参与到块或者内联格式化上下文，它要么为它的内容建立新的[区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)（BFC），要么将其内容集成到其父元素的格式化上下文中。
+        根据其他属性的值（例如 {{CSSxRef("position")}}、{{CSSxRef("float")}} 或 {{CSSxRef("overflow")}}）以及它自身是否参与到区块或者行级格式化上下文，它要么为它的内容建立新的[区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)（BFC），要么将其内容集成到其父元素的格式化上下文中。
 
     - `flow-root`
       - : 该元素生成一个块级元素盒，其会建立一个新的[区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)，定义格式化上下文的根元素。
@@ -106,14 +106,14 @@ display: unset;
     - `grid`
       - : 该元素的行为类似块级元素并且根据[网格模型](/zh-CN/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)布局它的内容。
     - `ruby`
-      - : 该元素的行为类似内联元素并且根据 ruby 格式化模型布局它的内容。它的行为像关联的 HTML 的 {{HTMLElement("ruby")}} 元素。
+      - : 该元素的行为类似行级元素并且根据 ruby 格式化模型布局它的内容。它的行为像关联的 HTML 的 {{HTMLElement("ruby")}} 元素。
 
 > **备注：** 在支持多关键字语法的浏览器中，当 `display` 属性仅有一个**内部**值（例如 `display: flex` 或 `display: grid`）时，外部值会被设置为 `block`（例如 `display: block flex` 和 `display: block grid`）。
 
 ### 列表元素
 
 - {{CSSxRef("&lt;display-listitem&gt;")}}
-  - : 该元素为内容生成一个块级盒子和一个单独的列表元素内联盒子。
+  - : 该元素为内容生成一个块级盒子和一个单独的列表元素行级盒子。
 
 `list-item` 的单独值将导致元素的行为类似于一个列表元素。其可以与 {{CSSxRef("list-style-type")}} 和 {{CSSxRef("list-style-position")}} 一起使用。
 
@@ -159,9 +159,7 @@ display: unset;
   - : 这些关键词定义一个元素到底是否产生 display 盒。
 
     - `contents`
-
       - : 这些元素自身不会产生特定的盒子。它们被伪盒子（pseudo-box）和子盒子取代。请注意，CSS Display Level 3 规范中定义了 `contents` 值如何影响“异常元素”——这些元素不是纯粹由 CSS 盒模型概念呈现的（例如替换元素）。更多的细节请参见[附录 B：display 的影响：异常元素的内容](https://drafts.csswg.org/css-display/#unbox)。
-
     - `none`
       - : 使元素不再显示，其对布局不会有影响（文档渲染得好像这个元素并不存在）。所有的后代元素也不会再显示。为了使元素占据一个它通常占据的空间，但实际上没有渲染任何东西，应该使用 {{CSSxRef("visibility")}} 属性。
 
@@ -169,29 +167,29 @@ display: unset;
 
 - {{CSSxRef("&lt;display-legacy&gt;")}}
 
-  - : CSS 2 为 `display` 属性使用单关键字的预组合的语法，对相同布局模式的块级和内联级变体需要单独的关键字。
+  - : CSS 2 为 `display` 属性使用单关键字的预组合的语法，对相同布局模式的块级和行级变体需要单独的关键字。
 
     - `inline-block`
 
-      - : 该元素生成块级元素盒，如果它是一个单独的内联盒，它将和周围的内容一起流动（行为类似于替换元素）。
+      - : 该元素生成块级元素盒，如果它是一个单独的行级盒，它将和周围的内容一起流动（行为类似于替换元素）。
 
         它等同于 `inline flow-root`。
 
     - `inline-table`
 
-      - : `inline-table` 值在 HTML 中没有直接的映射。它行为类似于 HTML 的 {{HTMLElement("table")}} 元素，但实际是一个内联盒，而不是一个块级盒子。table 盒内部是一个块级上下文。
+      - : `inline-table` 值在 HTML 中没有直接的映射。它行为类似于 HTML 的 {{HTMLElement("table")}} 元素，但实际是一个行级盒，而不是一个块级盒子。table 盒内部是一个块级上下文。
 
         它等同于 `inline table`。
 
     - `inline-flex`
 
-      - : 元素的行为类似于内联元素并且它的内容根据弹性盒模型布局。
+      - : 元素的行为类似于行级元素并且它的内容根据弹性盒模型布局。
 
         它等同于 `inline flex`。
 
     - `inline-grid`
 
-      - : 元素的行为类似于内联元素并且它的内容根据网格盒模型布局。
+      - : 元素的行为类似于行级元素并且它的内容根据网格盒模型布局。
 
         它等同于 `inline grid`。
 
@@ -199,7 +197,7 @@ display: unset;
 
 [CSS display 模块](/zh-CN/docs/Web/CSS/CSS_display)描述了多关键字语法，你可以使用 `display` 属性明确地定义**外部**和**内部** display 值。支持单个关键字值（预组合 `<display-legacy>` 值）以实现向后兼容性。
 
-例如，你可以按以下方式使用两个值指定一个内联的弹性容器：
+例如，你可以按以下方式使用两个值指定一个行级的弹性容器：
 
 ```css
 .container {
@@ -236,7 +234,7 @@ display: unset;
 
 ### CSS 流式布局（display: block、display: inline）
 
-- [常规流中的块和内联布局](/zh-CN/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow)
+- [常规流中的块向和行向布局](/zh-CN/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow)
 - [流布局和溢出](/zh-CN/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_overflow)
 - [流布局和书写模式](/zh-CN/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes)
 - [格式化上下文简介](/zh-CN/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts)
@@ -246,7 +244,7 @@ display: unset;
 
 - [弹性盒基础概念](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
 - [对齐弹性容器中的弹性项目](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
-- [控制 Flex 子元素在主轴上的比例](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
+- [控制弹性元素在主轴上的比例](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
 - [掌握弹性物件的包装](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)
 - [弹性元素排序](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)
 - [弹性盒子与其他布局方法的联系](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods)
@@ -290,13 +288,13 @@ display: unset;
 
 ### display: none
 
-在一个元素中使用 `display` 的值为 `none` 将会从[无障碍树中](/zh-CN/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis)移除它。这将导致该元素及其所有后代元素不再通过屏幕阅读器技术展示。
+在一个元素中使用 `display` 的值为 `none` 将会从[无障碍树中](/zh-CN/docs/Learn/Accessibility/What_is_accessibility#无障碍_api)移除它。这将导致该元素及其所有后代元素不再通过屏幕阅读器技术展示。
 
 如果你想要从视觉上隐藏元素，一个更好的替代方案是使用[属性的组合](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link)将其直观地从屏幕删除，但是通过屏幕阅读器等辅助技术依然可以解析。
 
 ### display: contents
 
-当前在大多数浏览器的实现是将任意 `display` 值为 `contents` 的元素从[无障碍树中](/zh-CN/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis)移除（但是保留后代元素）。这将导致该元素自身不再通过屏幕阅读器技术展示。根据 [CSS 规范](https://drafts.csswg.org/css-display/#valdef-display-contents)，这是错误的行为。
+当前在大多数浏览器的实现是将任意 `display` 值为 `contents` 的元素从[无障碍树中](/zh-CN/docs/Learn/Accessibility/What_is_accessibility#无障碍_api)移除（但是保留后代元素）。这将导致该元素自身不再通过屏幕阅读器技术展示。根据 [CSS 规范](https://drafts.csswg.org/css-display/#valdef-display-contents)，这是错误的行为。
 
 - [更多带有 display: contents 的无障碍标记 | Hidde de Vries](https://hidde.blog/more-accessible-markup-with-display-contents/)
 - [Display: 内容不是 CSS 重置 | Adrian Roselli](https://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html)
@@ -307,8 +305,8 @@ display: unset;
 
 - [关于 CSS display 属性对表格语义的影响的简短说明——The Paciello Group](https://www.tpgi.com/short-note-on-what-css-display-properties-do-to-table-semantics/)
 - [隐藏内容以获得更好的无障碍 | Go Make Things](https://gomakethings.com/hidden-content-for-better-a11y/)
-- [MDN Understanding WCAG，标准 1.3 解释](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.3_%e2%80%94_create_content_that_can_be_presented_in_different_ways)
-- [Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
+- [MDN 理解 WCAG，指南 1.3 解释](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#指南_1.3：创建可以以不同方式呈现的内容)
+- [了解成功标准 1.3.1 | W3C 理解 WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
 
 ## 形式定义
 
@@ -322,7 +320,7 @@ display: unset;
 
 ### 比较 display 的值
 
-在这个示例中，我们有两个块级的容器元素，每个元素有三个内联子元素。在下面，我们有一个选择菜单，允许你将不同的 `display` 值应用于容器，允许你去比较和对比不同的值如何影响元素及其他们子元素的布局。
+在这个示例中，我们有两个块级的容器元素，每个元素有三个行级子元素。在下面，我们有一个选择菜单，允许你将不同的 `display` 值应用于容器，允许你去比较和对比不同的值如何影响元素及其他们子元素的布局。
 
 我们在容器上以及它们的子元素中使用了 {{cssxref("padding")}} 和 {{cssxref("background-color")}}，以便更容易看到 display 值的影响。
 
@@ -330,15 +328,15 @@ display: unset;
 
 ```html
 <article class="container">
-  <span>First</span>
-  <span>Second</span>
-  <span>Third</span>
+  <span>一</span>
+  <span>二</span>
+  <span>三</span>
 </article>
 
 <article class="container">
-  <span>First</span>
-  <span>Second</span>
-  <span>Third</span>
+  <span>一</span>
+  <span>二</span>
+  <span>三</span>
 </article>
 
 <div>
@@ -433,7 +431,7 @@ updateDisplay();
 
 ## 参见
 
-- [常规流中的块和内联布局](/zh-CN/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow)
-- [介绍格式化上下文](/zh-CN/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts)
+- [常规流中的块向和行向布局](/zh-CN/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow)
+- [格式化上下文简介](/zh-CN/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts)
 - {{CSSxRef("visibility")}}、{{CSSxRef("float")}}、{{CSSxRef("position")}}
 - {{CSSxRef("grid")}}、{{CSSxRef("flex")}}
