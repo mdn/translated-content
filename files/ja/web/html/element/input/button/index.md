@@ -2,7 +2,7 @@
 title: <input type="button">
 slug: Web/HTML/Element/input/button
 l10n:
-  sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
+  sourceCommit: cc032eaae8b14c1253216ded69c076242c4f757c
 ---
 
 {{HTMLSidebar}}
@@ -17,7 +17,7 @@ l10n:
 
 ### value ありのボタン
 
-`<input type="button">` 要素の [`value`](/ja/docs/Web/HTML/Element/input#value) 属性には、ボタンのラベルとして使われる文字列を設定します。
+`<input type="button">` 要素の [`value`](/ja/docs/Web/HTML/Element/input#value) 属性には、ボタンのラベルとして使われる文字列を設定します。 `value` はボタンの{{glossary("accessible description", "アクセシブル説明")}}を指定します。
 
 ```html
 <input type="button" value="クリックしてね" />
@@ -169,7 +169,7 @@ function disableButton() {
 
 {{EmbedLiveSample("Inheriting_the_disabled_state", 650, 100)}}
 
-> **メモ:** Firefox は他のブラウザーとは異なり、既定でページの読み込み中に {{HTMLElement("button")}} に[動的に無効にされた状態を維持](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)します。この機能を制御するには [`autocomplete`](/ja/docs/Web/HTML/Element/button#autocomplete) 属性を使用してください。
+> **メモ:** Firefox は他のブラウザーと異なり、ページが再読み込みされた後でも `<input>` 要素の `disabled` 状態を維持します。回避するには、 `<input>` 要素の [`autocomplete`](/ja/docs/Web/HTML/Element/input#autocomplete) 属性を `off` に設定します。（詳しくは [Firefox バグ 654072](https://bugzil.la/654072) を参照してください。）
 
 ## 検証
 
@@ -233,7 +233,7 @@ const width = (canvas.width = window.innerWidth);
 const height = (canvas.height = window.innerHeight - 85);
 const ctx = canvas.getContext("2d");
 
-ctx.fillStyle = "rgb(0,0,0)";
+ctx.fillStyle = "rgb(0 0 0)";
 ctx.fillRect(0, 0, width, height);
 
 const colorPicker = document.querySelector('input[type="color"]');
@@ -272,7 +272,7 @@ canvas.onmouseup = () => {
 };
 
 clearBtn.onclick = () => {
-  ctx.fillStyle = "rgb(0,0,0)";
+  ctx.fillStyle = "rgb(0 0 0)";
   ctx.fillRect(0, 0, width, height);
 };
 

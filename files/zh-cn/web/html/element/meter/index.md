@@ -20,8 +20,8 @@ HTML **`<meter>`** 元素用来显示已知范围的标量值或者分数值。
    <td><a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">Phrasing content</a>, but there must be no <code>&lt;meter&gt;</code> element among its descendants.</td>
   </tr>
   <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
+   <th scope="row">标签省略</th>
+   <td>不允许，开始标签和结束标签都不能省略。</td>
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>
