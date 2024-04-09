@@ -7,7 +7,7 @@ l10n:
 
 {{jsSidebar("Statements")}}
 
-**`return`** 语句会终止函数执行并指定要返回给函数调用者的值。
+**`return`** 语句用于终止函数执行，并指定要返回给调用函数的值。
 
 {{EmbedInteractiveExample("pages/js/statement-return.html")}}
 
@@ -19,16 +19,16 @@ return expression;
 ```
 
 - `expression` {{optional_inline}}
-  - : 要返回的值的表达式。如果忽略，则返回 `undefined`。
+  - : 待返回其值的表达式。如果省略，则返回 `undefined`。
 
 ## 描述
 
-`return` 语句只能在函数体内使用。当在函数体中使用 `return` 语句时，函数的执行会停止。`return` 语句在不同类型的函数中具有不同的效果：
+`return` 语句只能在函数体内使用。当 `return` 出现在函数体内部时，该函数的执行将会停止。`return` 语句在不同类型的函数中具有不同的效果：
 
-- 在普通函数中，对该函数的调用会计算出返回值。
+- 在普通函数中，对该函数的调用会返回其返回值。
 - 在异步函数中，生成的 promise 将以返回的值解析。
-- 在生成器函数中，生成的生成器对象的 `next()` 方法返回 `{ done: true, value: returnedValue }`。
-- 在异步生成器函数中，生成的异步生成器对象的 `next()` 方法返回一个已兑现的 promise，其值为 `{ done: true, value: returnedValue }`。
+- 在生成器函数中，生成的生成器对象的 `next()` 方法将返回 `{ done: true, value: 返回的值 }`。
+- 在异步生成器函数中，生成的异步生成器对象的 `next()` 方法返回一个已兑现的 promise，其值为 `{ done: true, value: 返回的值 }`。
 
 如果在 {{jsxref("Statements/try...catch", "try")}} 块内执行了 `return` 语句，它会首先执行 `finally` 块然后才实际返回值（如果存在）。
 
