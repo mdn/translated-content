@@ -30,7 +30,6 @@ switch (expression) {
 - `expression`
   - : 结果将与每个 `case` 子句进行匹配的一个表达式。
 - `case caseExpressionN` {{optional_inline}}
-  - : `case` 子句用于与 `expression` 进行匹配。如果 `expression` 的值与任何 `caseExpressionN` 的值匹配，则执行将从该 `case`
   - : `case` 子句用于与 `expression` 进行匹配。如果 `expression` 的值与任何 `caseExpressionN` 的值匹配，则从该 `case` 子句之后的第一个语句开始执行，直到遇到 `switch` 语句结束或首个 `break` 语句为止。
 - `default` {{optional_inline}}
   - : `default` 子句；如果存在，则当 `expression` 的值与任何 `case` 句都不匹配时，会执行此子句。一个 `switch` 语句只能有一个 `default` 子句。
