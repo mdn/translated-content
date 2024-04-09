@@ -278,7 +278,7 @@ display: unset;
 
 - 当将 `display` 从 `block`（或另一个可见的 `display` 值）设置为 `none`时，该值将在动画持续时间的 `100%` 处，切换到 `none`，从而使其始终可见。
 
-此行为对于创建入口/出口动画非常有用，例如，你想要使用 `display: none` 从 DOM 中删除一个容器，但使用 [`opacity`](/zh-CN/docs/Web/CSS/opacity) 将其淡出，而不是立即消失。
+此行为对于创建入场/出场动画非常有用，例如，你想要使用 `display: none` 从 DOM 中删除一个容器，但又同时使用 [`opacity`](/zh-CN/docs/Web/CSS/opacity) 将其淡出（而不是立即消失）。
 
 在使用 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations)为 `display` 设置动画时，需要在明确的关键帧（例如使用 `0%` 或 `from`）中提供开始的 `display` 值。有关示例，请参见[使用 CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)。
 
