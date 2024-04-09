@@ -307,7 +307,7 @@ display: unset;
 
 ### 表格
 
-有些浏览器，将 {{HTMLElement("table")}} 元素的 `display` 值改为 `block`、`grid` 或 `flex`，这将改变它在[无障碍树](/zh-CN/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis)中的显示。这将导致表格不再通过屏幕阅读（screen reading）技术展示。
+有些浏览器，将 {{HTMLElement("table")}} 元素的 `display` 值改为 `block`、`grid` 或 `flex`，这将改变它在[无障碍树](/zh-CN/docs/Learn/Accessibility/What_is_accessibility#无障碍_api)中的显示。这将导致表格不再通过屏幕阅读技术展示。
 
 - [关于 CSS display 属性对表格语义的影响的简短说明——The Paciello Group](https://www.tpgi.com/short-note-on-what-css-display-properties-do-to-table-semantics/)
 - [隐藏内容以获得更好的无障碍 | Go Make Things](https://gomakethings.com/hidden-content-for-better-a11y/)
