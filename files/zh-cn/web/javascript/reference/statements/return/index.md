@@ -26,7 +26,7 @@ return expression;
 `return` 语句只能在函数体内使用。当 `return` 出现在函数体内部时，该函数的执行将会停止。`return` 语句在不同类型的函数中具有不同的效果：
 
 - 在普通函数中，对该函数的调用会返回其返回值。
-- 在异步函数中，生成的 promise 将以返回的值解析。
+- 在异步函数中，生成的 promise 将以返回的值敲定。
 - 在生成器函数中，生成的生成器对象的 `next()` 方法将返回 `{ done: true, value: 返回的值 }`。
 - 在异步生成器函数中，生成的异步生成器对象的 `next()` 方法返回一个已兑现的 promise，其值为 `{ done: true, value: 返回的值 }`。
 
@@ -34,7 +34,7 @@ return expression;
 
 ### 自动分号补全
 
-语法禁止在 `return` 关键字和要返回的表达式之间存在换行符。
+语法禁止在 `return` 关键字和要返回的表达式之间使用换行符。
 
 ```js-nolint example-bad
 return
@@ -48,7 +48,9 @@ return;
 a + b;
 ```
 
-这会使函数返回 `undefined`，而 `a + b` 表达式永远不会被计算。这可能会在[控制台中生成警告](/zh-CN/docs/Web/JavaScript/Reference/Errors/Stmt_after_return)，为避免此问题（防止 ASI），你可以使用括号：
+这会使函数返回 `undefined`，而 `a + b` 表达式永远不会被计算。这可能会在[控制台中生成警告](/zh-CN/docs/Web/JavaScript/Reference/Errors/Stmt_after_return)。
+
+为避免此问题（防止 ASI），你可以使用括号：
 
 ```js-nolint
 return (
