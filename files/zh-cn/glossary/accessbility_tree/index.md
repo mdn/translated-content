@@ -20,7 +20,7 @@ l10n:
 - [**角色**](/zh-CN/docs/Web/Accessibility/ARIA/Roles)
   - ：这个是什么？例如，这是一个按钮、是个导航栏、是一个列表。
 - **状态**
-  - ：它有状态吗？例如，复选框被选中与否、[`<summary>`](/en-US/docs/Web/HTML/Element/summary) 元素被展开与否。
+  - ：它有状态吗？例如，复选框被选中与否、[`<summary>`](/zh-CN/docs/Web/HTML/Element/summary) 元素被展开与否。
 
 除此之外，无障碍树经常包含可以对这个元素进行操作的行为：一个链接可以被"关注"，一个文本输入框可以被"输入"。
 
