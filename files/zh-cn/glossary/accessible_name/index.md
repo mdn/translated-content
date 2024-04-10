@@ -1,7 +1,7 @@
 ---
 title: 无障碍名称
 slug: Glossary/Accessible_name
-i10n:
+l10n:
     sourceCommit: d9c3dac231bb6cbc138d761dbe0ad2f9a38b864f
 ---
 
@@ -19,15 +19,15 @@ i10n:
 
 对于某些元素，它们的无障碍名称来源于它们的属性，比如说 {{HTMLElement("img")}} 的 `alt` 属性。给定 `<img src="grape.jpg" alt="banana"/>`，它的无障碍名称就是"banana"。
 
-要创建在可见内容和一个元素或者不同文本节点和一个元素之间的关系，可以使用 [`aria-labeledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)。如果没有可见的文本去和一个需要一个无障碍名称的元素相关联，就可以使用 [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性。内联文本不应该拥有无障碍名称，比如 {{HTMLElement("code")}}、{{HTMLElement("del")}} 和 {{HTMLElement("mark")}}。
+要创建在可见内容和一个元素或者不同文本节点和一个元素之间的关系，可以使用 [`aria-labeledby`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)。如果没有可见的文本去和一个需要一个无障碍名称的元素相关联，就可以使用 [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性。内联文本不应该拥有无障碍名称，比如 {{HTMLElement("code")}}、{{HTMLElement("del")}} 和 {{HTMLElement("mark")}}。
 
 大多数的元素，比如一节文本内容，不需要无障碍名称。所有的控制元素都应该有一个无障碍名称。所有的传递了信息且不纯粹是展示性质的图片也应该这样。
 
-协助技术会给用户提供无障碍名称属性（也就是无障碍名称以及元素的角色）。虽然很多元素不需要一个无障碍名称，一些内容的[角色](/en-US/docs/Web/Accessibility/ARIA/Roles)可以从它们的无障碍名称中受益。比如说，一个 [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role) 是一块会在用户激活了拥有 [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) 角色的与其关联的元素之后会展示出来的内容。这个角色可以被设置在一个不需要无障碍名称的元素上，而 `tabpanel` 是 `tab` 的子元素（或内容部分）。给 `tabpanel` 添加 `aria-labelledby` 是最佳操作。
+协助技术会给用户提供无障碍名称属性（也就是无障碍名称以及元素的角色）。虽然很多元素不需要一个无障碍名称，一些内容的[角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles)可以从它们的无障碍名称中受益。比如说，一个 [`tabpanel`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/tabpanel_role) 是一块会在用户激活了拥有 [`tab`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/tab_role) 角色的与其关联的元素之后会展示出来的内容。这个角色可以被设置在一个不需要无障碍名称的元素上，而 `tabpanel` 是 `tab` 的子元素（或内容部分）。给 `tabpanel` 添加 `aria-labelledby` 是最佳操作。
 
 ## 参见
 
-- [ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Roles)
-- [ARIA attribute](/en-US/docs/Web/Accessibility/ARIA/Attributes)
-- [Accessibility](/en-US/docs/Web/Accessibility)
-- [Learn accessibility](/en-US/docs/Learn/Accessibility)
+- [ARIA 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles)
+- [ARIA 属性](/zh-CN/docs/Web/Accessibility/ARIA/Attributes)
+- [无障碍](/zh-CN/docs/Web/Accessibility)
+- [学习无障碍](/zh-CN/docs/Learn/Accessibility)
