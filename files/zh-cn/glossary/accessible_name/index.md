@@ -1,5 +1,5 @@
 ---
-title: Accessible name
+title: 无障碍名称
 slug: Glossary/Accessible_name
 i10n:
     sourceCommit: d9c3dac231bb6cbc138d761dbe0ad2f9a38b864f
@@ -7,25 +7,25 @@ i10n:
 
 {{GlossarySidebar}}
 
-An **accessible name** is the name of a user interface element; it is the text associated with an HTML element that provides users of assistive technology with a label for the element.
+**无障碍名称**（Accessible Name）是一个用户界面元素的名字——一段文本，关联了一个可以通过一个与之相关的标签向用户提供协助技术 HTML 元素。
 
-Accessible names convey the purpose or intent of the element. This helps users understand what the element is for and how they can interact with it. In general, accessible names for elements should be unique to a page. This helps users distinguish an element from other elements and helps users identify the element they want to interact with.
+无障碍名称表达了这个元素的目的，帮助用户理解这个元素是干什么用的、怎么用的。一般来说，在一个页面之中，元素的无障碍名称应该是独一无二的。这可以帮助用户分辨元素开来、认出他们所希望与之交互的元素。
 
-Depending on the element and the HTML markup, the value of the accessible name may be derived from visible (e.g., the text within {{HTMLElement("figcaption")}}) or invisible (e.g., the `aria-label` attribute set on an element) content, or a combination of both. How an element's accessible name is determined is based on the [accessible name calculation](https://www.w3.org/WAI/ARIA/apg/practices/names-and-descriptions/#name_calculation), which is different for different elements.
+取决于元素以及 HTML 的标记，无障碍名称的值可能会源于可见的内容（比如，在 {{HTMLElement("figcaption")}} 中的文字）或不可见的内容（比如，设置在一个元素上的 `aria-label` 属性），或者它们两个的组合。一个元素的无障碍名称的确定，取决于[无障碍名称计算](https://www.w3.org/WAI/ARIA/apg/practices/names-and-descriptions/#name_calculation)（这种计算对于不同元素是不同的）。
 
-It is best to use visible text as the accessible name. Many elements, including {{HTMLElement("a")}}, {{HTMLElement("td")}} and {{HTMLElement("button")}}, can get their accessible name from their content. For example, given `<a href="foo.html">Bar</a>`, the accessible name of this hyperlink is "Bar."
+使用可见文本作为元素的无障碍名称，最好不过了。很多的元素，包括 {{HTMLElement("a")}}、{{HTMLElement("td")}} 还有 {{HTMLElement("button")}}，都能从它们的内容获取它们的无障碍名称。比如说，给定的 `<a href="foo.html">Bar</a>`，它所对应的无障碍名称就是"Bar"。
 
-Other elements get their accessible name from the content of associated elements. For example, when a {{HTMLElement("fieldset")}} or {{HTMLElement("table")}} element contains a descendant {{HTMLElement("legend")}} or {{HTMLElement("caption")}} element, respectively, the association of the nested element providing an accessible name for the parent is automatic. For form elements like {{HTMLElement("textarea")}} and {{HTMLElement("input")}}, the accessible name comes from the associated {{HTMLElement("label")}} element. The association needs to be explicitly defined by setting the `for` attribute in the `<label>` element to match the form element's `id`. Alternatively, an implicit association is created when the form control is directly nested within the `<label>` element.
+其他的元素从它们所关联的元素中获取无障碍名称。比如说，当一个 {{HTMLElement("fieldset")}} 或 {{HTMLElement("table")}} 元素分别包含一个子元素 {{HTMLElement("legend")}} 或 {{HTMLElement("caption")}}，这个嵌套元素的关系就会给父元素自动提供一个无障碍名称。对于表单元素，比如 {{HTMLElement("textarea")}}、{{HTMLElement("input")}}，它们的无障碍名称来源于与它们关联的 {{HTMLElement("label")}} 元素。这个关系需要被显式地定义 `<label>` 元素的 `for` 属性来与表单元素的 `id` 相匹配。又或者，一个显式的关系会在表单元素被直接嵌套在 `<label>` 元素之中的时候被创建。
 
-For some elements, the accessible name comes from the element's attributes; for example, the `alt` attribute in the case of {{HTMLElement("img")}}. Given `<img src="grape.jpg" alt="banana"/>`, the image's accessible name is "banana."
+对于某些元素，它们的无障碍名称来源于它们的属性，比如说 {{HTMLElement("img")}} 的 `alt` 属性。给定 `<img src="grape.jpg" alt="banana"/>`，它的无障碍名称就是"banana"。
 
-To create an association between visible content and an element or multiple text nodes and an element, the [`aria-labeledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) attribute can be used. If there is no visible text to associate with a UI element needing an accessible name, the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute can be used. Names should not be added to elements marking up inline text, like {{HTMLElement("code")}}, {{HTMLElement("del")}}, and {{HTMLElement("mark")}}.
+要创建在可见内容和一个元素或者不同文本节点和一个元素之间的关系，可以使用 [`aria-labeledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)。如果没有可见的文本去和一个需要一个无障碍名称的元素相关联，就可以使用 [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性。内联文本不应该拥有无障碍名称，比如 {{HTMLElement("code")}}、{{HTMLElement("del")}} 和 {{HTMLElement("mark")}}。
 
-Many elements, such as sections of textual content, don't need an accessible name. All controls should have an accessible name. All images that convey information and aren't purely presentational do too.
+大多数的元素，比如一节文本内容，不需要无障碍名称。所有的控制元素都应该有一个无障碍名称。所有的传递了信息且不纯粹是展示性质的图片也应该这样。
 
-Assistive technologies will provide the user with the accessibility name property, which is the accessible name along with the element's role. While many elements don't need an accessible name, some content [roles](/en-US/docs/Web/Accessibility/ARIA/Roles) can benefit from having an accessible name. For example, a [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role) is a section of content that appears after a user activates the associated element with a [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) role. This role can be set on an element with no needed name, like the {{HTMLElement("div")}} element. The `tab` is the control and must have an accessible name. The `tabpanel` is the child (content section) of the `tab`. Adding `aria-labelledby` to the `tabpanel` is a best practice.
+协助技术会给用户提供无障碍名称属性（也就是无障碍名称以及元素的角色）。虽然很多元素不需要一个无障碍名称，一些内容的[角色](/en-US/docs/Web/Accessibility/ARIA/Roles)可以从它们的无障碍名称中受益。比如说，一个 [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role) 是一块会在用户激活了拥有 [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) 角色的与其关联的元素之后会展示出来的内容。这个角色可以被设置在一个不需要无障碍名称的元素上，而 `tabpanel` 是 `tab` 的子元素（或内容部分）。给 `tabpanel` 添加 `aria-labelledby` 是最佳操作。
 
-## See also
+## 参见
 
 - [ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Roles)
 - [ARIA attribute](/en-US/docs/Web/Accessibility/ARIA/Attributes)
