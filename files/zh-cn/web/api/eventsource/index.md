@@ -1,6 +1,8 @@
 ---
 title: EventSource
 slug: Web/API/EventSource
+l10n:
+  sourceCommit: 0f2ed7ca7c759d5bbc5402548d83f5a1cf993407
 ---
 
 {{APIRef("Server Sent Events")}}
@@ -26,9 +28,9 @@ slug: Web/API/EventSource
 
 _此接口从其父接口 {{domxref("EventTarget")}} 继承属性。_
 
-- {{domxref("EventSource.readyState")}} {{readonlyinline}}
+- {{domxref("EventSource.readyState")}} {{ReadOnlyInline}}
   - : 一个代表连接状态的数字。可能值是 `CONNECTING`（`0`）、`OPEN`（`1`）或 `CLOSED`（`2`）。
-- {{domxref("EventSource.url")}} {{readonlyinline}}
+- {{domxref("EventSource.url")}} {{ReadOnlyInline}}
   - : 一个表示事件源的 URL 字符串。
 - {{domxref("EventSource.withCredentials")}} {{ReadOnlyInline}}
   - : 一个布尔值，表示 `EventSource` 对象是否使用跨源资源共享（[CORS](/zh-CN/docs/Web/HTTP/CORS)）凭据来实例化（`true`），或者不使用（`false`，即默认值）。
@@ -115,4 +117,4 @@ sse.addEventListener("message", (e) => {
 ## 参见
 
 - [服务器发送事件](/zh-CN/docs/Web/API/Server-sent_events)
-- [使用服务器发送事件](/zh-CN/Server-sent_events/Using_server-sent_events)
+- [使用服务器发送事件](/zh-CN/docs/Web/API/Server-sent_events/Using_server-sent_events)
