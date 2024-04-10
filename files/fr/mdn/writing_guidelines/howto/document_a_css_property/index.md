@@ -25,7 +25,7 @@ Si l'implémentation et la spécification divergent, n'hésitez pas à le mentio
 - Cela peut être dû à un retard dans la publication d'une nouvelle spécification.
 - Il peut s'agir d'une erreur dans la spécification (dans ce cas, un bogue de spécification mérite d'être déposé).
 
-## Étape 2 - Vérifier la base de données des propriétés CSS
+## Étape 2 - Vérifier la base de données des propriétés CSS dans `mdn/data`
 
 Plusieurs caractéristiques d'une propriété CSS, comme sa syntaxe ou le fait qu'elle puisse être animée, sont mentionnées dans plusieurs pages et sont donc stockées dans une base de données ad hoc. Les macros que vous utiliserez sur la page ont besoin d'informations sur la propriété qui y est stockée, commencez donc par [vérifier que ces informations s'y trouvent](https://github.com/mdn/data/blob/main/docs/updating_css_json.md).
 
