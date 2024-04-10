@@ -17,7 +17,7 @@ l10n:
   - ：我们可以如何描述这个东西呢？例如，一个包含"阅读更多"文本的链接会以"阅读更多"作为其名称（参见[无障碍名称及描述计算规范](https://www.w3.org/TR/accname-1.1/)）。
 - **描述**
   - ：我们可以如何在除了无障碍名称之外描述这个东西？一个表格的描述可以解释这个表格包含了什么样的信息。
-- [**角色**](/en-US/docs/Web/Accessibility/ARIA/Roles)
+- [**角色**](/zh-CN/docs/Web/Accessibility/ARIA/Roles)
   - ：这个是什么？例如，这是一个按钮、是个导航栏、是一个列表。
 - **状态**
   - ：它有状态吗？例如，复选框被选中与否、[`<summary>`](/en-US/docs/Web/HTML/Element/summary) 元素被展开与否。
