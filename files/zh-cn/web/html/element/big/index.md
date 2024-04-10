@@ -1,5 +1,5 @@
 ---
-title: <big>：大文本元素
+title: <big>：较大的文本元素
 slug: Web/HTML/Element/big
 l10n:
   sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
