@@ -89,6 +89,6 @@ merge 이후 자동 병합에 실패할 때 메시지는 아래와 같습니다.
 
 ```sh
 git add ---filename---.md
-git commit -m "---커밋 메세지---"
+git commit -m "---커밋 메시지---"
 git push
 ```
