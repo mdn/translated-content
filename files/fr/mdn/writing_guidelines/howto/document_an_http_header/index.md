@@ -29,7 +29,7 @@ Vous devrez avoir des connaissances en [HTTP](/fr/docs/Web/HTTP) ou être prêt 
 
 ## Étape 3 - Créer la page d'en-tête HTTP
 
-- Toutes les pages d'en-tête se trouvent sous cette arborescence : [/docs/Web/HTTP/Headers/](/fr/docs/Web/HTTP/Headers)
+- Toutes les pages d'en-tête se trouvent sous cette arborescence&nbsp;: [/docs/Web/HTTP/Headers/](/fr/docs/Web/HTTP/Headers)
 - Pour créer une nouvelle page, voir les instructions dans notre [guide de création de pages](/fr/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting).
 
 ## Étape 4 - Rédiger le contenu
