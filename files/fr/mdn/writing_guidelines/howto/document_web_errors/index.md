@@ -7,9 +7,9 @@ l10n:
 
 {{MDNSidebar}}
 
-La [référence des erreurs JavaScript](/fr/docs/Web/JavaScript/Reference/Errors) sur MDN Web Docs est un projet visant à aider les développeuses et développeurs web à résoudre les erreurs survenant dans la [console web des outils de développement](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html). Pour ce projet, nous avons besoin d'écrire plus de documentation sur les erreurs sur MDN Web Docs afin que les outils où les messages sont générés puissent renvoyer vers ces pages. Cet article explique comment documenter les erreurs web.
+La [référence des erreurs JavaScript](/fr/docs/Web/JavaScript/Reference/Errors) sur MDN Web Docs est un projet visant à aider les développeuses et développeurs web à résoudre les erreurs survenant dans la [console web des outils de développement](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html). Pour ce projet, nous avons besoin d'écrire plus de documentation sur les erreurs sur MDN Web Docs afin que les outils où les messages sont générés puissent renvoyer vers ces pages. Cet article explique comment documenter les erreurs javascript.
 
-Les erreurs JavaScript contiennent un lien «&nbsp;En savoir plus&nbsp;» qui renvoie à la référence de l'erreur JavaScript contenant des conseils supplémentaires pour résoudre les problèmes. Pour pouvoir documenter les erreurs web, vous devez connaître ou être capable de vous plonger dans le [JavaScript](/fr/docs/Web/JavaScript).
+Les erreurs JavaScript contiennent un lien «&nbsp;En savoir plus&nbsp;» qui renvoie à la référence de l'erreur JavaScript contenant des conseils supplémentaires pour résoudre les problèmes. Pour pouvoir documenter ces erreurs, vous devez connaître ou être capable de vous plonger dans le [JavaScript](/fr/docs/Web/JavaScript).
 
 > **Note :** La documentation de nouvelles erreurs doit d'abord avoir lieu en anglais avant de pouvoir traduire le nouveau contenu en français. L'organisation du contenu de MDN ne permet pas de créer du contenu en français si celui-ci n'existe pas déjà en anglais.
 
