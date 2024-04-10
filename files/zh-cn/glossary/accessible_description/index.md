@@ -1,5 +1,5 @@
 ---
-title: Accessible description
+title: 无障碍描述
 slug: Glossary/Accessible_description
 i10n:
     sourceCommit: 6d37e664f5981436dfbba7a67f008a30c5238e00
@@ -7,21 +7,21 @@ i10n:
 
 {{GlossarySidebar}}
 
-An **accessible description** is the description of a user interface element that provides additional information to help users of assistive technology understand the UI element and its context. It is a text description associated with an HTML element that provides users of assistive technology with a description for the element beyond what is provided by the element's {{glossary("accessible name")}}.
+**可访问描述** 是一个用户界面元素的描述，可以提供额外的信息给辅助技术，帮助用户理解 UI 元素及其上下文。它是一段与一个 HTML 元素相关联的文本描述，提供给辅助技术除这个元素的{{glossary("accessible name", "无障碍名称")}}之外的一个描述文本。
 
-An element's accessible description is part of the {{glossary("accessibility tree")}} that makes web content available to {{glossary("Screen_reader", "screen readers")}} and other assistive technologies, which, in turn, make that content available to the users of those technologies.
+一个元素的无障碍描述是{{glossary("accessibility tree", "无障碍树")}}的一部份，可使 Web 内容对{{glossary("Screen_reader", "屏幕阅读器")}}和其他辅助技术可用，从而让内容对使用这些技术的用户可用。
 
-The accessible description for a {{htmlelement("table")}} is its first {{htmlelement("caption")}}, for the {{htmlelement("figure")}}, is the {{htmlelement("figcaption")}}, for the {{htmlelement("summary")}}, is the content of the {{htmlelement("details")}} it is nested in, and for the button {{htmlelement("input")}} elements, it is the `value` attribute's value, unless the element also has a `aria-describedby` or `aria-description` attribute, which takes precedence.
+{{htmlelement("table")}} 的无障碍描述是其首个 {{htmlelement("caption")}} 的内容；{{htmlelement("figure")}} 的是 {{htmlelement("figcaption")}} 的内容；{{htmlelement("summary")}} 的是 {{htmlelement("details")}} 的内容；{{htmlelement("input")}} 按钮元素的是其 `value` 属性。除非元素有 `aria-describedby` 或者 `aria-description` 属性（这些属性优先）。
 
-For other elements, the description needs to be programmatically associated with the related element. In these cases, the accessible description is provided by the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) attribute, [`aria-description`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-description) attribute, or the [`title`](/en-US/docs/Web/HTML/Global_attributes#title) attribute, if the `title` would not otherwise also be the {{glossary("accessible name")}} for that element, in that order of precedence.
+对于其他的元素，它们的描述需要被程序化地与相关的元素关联。在这些例子中，无障碍描述由 [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) 属性、[`aria-description`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-description) 属性或者 [`title`](/en-US/docs/Web/HTML/Global_attributes#title) 属性提供如果 `title` 不是该元素的{{glossary("accessible name", "无障碍名称")}}。
 
-Descriptions are reduced to text strings. For example, if an element's `aria-describedby` attribute value is the `id` of an HTML {{htmlelement("img")}}, the description is the description of the image (usually the image's `alt` attribute).
+无障碍描述被简化为文本字符串。例如，如果元素的 `aria-describedby` 属性值是 HTML 元素 {{htmlelement("img")}} 的 `id`，那么无障碍描述就是图片的描述（通常是图片的 `alt` 属性）。
 
-You can inspect the accessible description for any element on your page: look at your browser's developer tools' accessibility tab, which provides the accessibility information for the currently selected element.
+你可以查看页面上任何元素的无障碍描述：查看浏览器开发工具的无障碍选项卡——它其中就提供了当前选定元素的无障碍信息。
 
 ## See also
 
-- {{glossary("accessible name")}} glossary term
+- {{glossary("accessible name")}} 术语
 - [ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Roles)
 - [ARIA attribute](/en-US/docs/Web/Accessibility/ARIA/Attributes)
 - [Accessibility](/en-US/docs/Web/Accessibility)
