@@ -7,21 +7,21 @@ l10n:
 
 {{APIRef("Fetch API")}}
 
-Доступное только для чтения свойство **`body`** интерфейса {{domxref("Response")}} представляет собой {{domxref("ReadableStream")}} содержимого тела.
+Доступное только для чтения свойство **`body`** интерфейса {{domxref("Response")}} представляет собой {{domxref("ReadableStream")}} содержимого тела ответа.
 
 ## Значение
 
-{{domxref("ReadableStream")}}, или иначе [`null`](/ru/docs/Web/JavaScript/Reference/Operators/null) для любого объекта `Response`, [созданного](/ru/docs/Web/API/Response/Response) с нулевым (`null`) свойством [`body`](/ru/docs/Web/API/Response/Response#body), или для любого фактического [HTTP ответа](/ru/docs/Web/HTTP/Messages#http_responses), в случае, если у него нет [тела](/ru/docs/Web/HTTP/Messages#body_2)..
+{{domxref("ReadableStream")}} или [`null`](/ru/docs/Web/JavaScript/Reference/Operators/null) для объектов `Response`, [созданных](/ru/docs/Web/API/Response/Response) с пустым свойством [`body`](/ru/docs/Web/API/Response/Response#body), и для [HTTP ответов](/ru/docs/Web/HTTP/Messages#http_responses) без [тела](/ru/docs/Web/HTTP/Messages#body_2).
 
-Поток представляет собой [читаемый поток байтов](/ru/docs/Web/API/Streams_API/Using_readable_byte_streams), который поддерживает zero-copy чтение используя {{domxref("ReadableStreamBYOBReader")}}.
+Поток представляет собой [поток байтов для чтения](/ru/docs/Web/API/Streams_API/Using_readable_byte_streams), который поддерживает чтение без копирования с использованием {{domxref("ReadableStreamBYOBReader")}}.
 
-> **Примечание:** В настоящее время браузеры не следуют требованию спецификации устанавливать свойству `body` значение `null` для ответов без тела (например, для ответов на [`HEAD`](/ru/docs/Web/HTTP/Methods/HEAD) запросы, или [`204 No Content`](/ru/docs/Web/HTTP/Status/204)).
+> **Примечание:** В настоящее время браузеры не следуют требованию спецификации устанавливать свойству `body` значение `null` для ответов без тела (например, для ответов на запросы [`HEAD`](/ru/docs/Web/HTTP/Methods/HEAD) или [`204 No Content`](/ru/docs/Web/HTTP/Status/204)).
 
 ## Примеры
 
 ### Копирование изображения
 
-В нашем простом примере [simple stream pump](https://mdn.github.io/dom-examples/streams/simple-pump/) мы получаем изображение, открываем поток ответа с помощью `response.body`, создаем читателя используя {{domxref("ReadableStream.getReader()", "ReadableStream.getReader()")}}, а затем помещаем фрагменты этого потока во второй пользовательский поток чтения — фактически создавая идентичную копию изображения.
+В нашем [простом примере](https://mdn.github.io/dom-examples/streams/simple-pump/) мы получаем изображение, открываем поток ответа используя `response.body`, создаем считыватель с помощью {{domxref("ReadableStream.getReader()")}}, а затем помещаем фрагменты этого потока во второй поток для чтения, фактически создавая идентичную копию изображения.
 
 ```js
 const image = document.getElementById("target");
@@ -62,7 +62,7 @@ fetch("./tortoise.png")
 
 ### Создание читателя BYOB
 
-В этом примере мы создаем {{domxref("ReadableStreamBYOBReader")}} из тела с помощью {{domxref("ReadableStream.getReader()", "ReadableStream.getReader({mode: 'byob'})")}}. Затем мы можем использовать этого читателя для реализации zero-copy передачи данных ответа.
+В этом примере мы создаем {{domxref("ReadableStreamBYOBReader")}} из тела ответа с помощью {{domxref("ReadableStream.getReader()", "ReadableStream.getReader({mode: 'byob'})")}}. Затем мы можем использовать этот считыватель для реализации передачи данных ответа без копирования.
 
 ```js
 async function getProducts(url) {
