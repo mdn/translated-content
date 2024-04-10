@@ -76,7 +76,7 @@ Content-Length: 100
 
 任何 [2xx](https://httpwg.org/specs/rfc9110.html#status.2xx) 狀態碼均表示成功的回應。
 
-在下面的範例中，使用了 {{HTTPStatus("204")}} 回應代碼，因為回應不包含有效載荷體。 {{HTTPStatus("200")}} 回應可以包含有效載荷體。
+在下面的範例中，使用了 {{HTTPStatus("204")}} 回應代碼，因為回應不包含有效負載體。{{HTTPStatus("200")}} 回應可以包含有效負載體。
 
 ```http
 HTTP/1.1 204 No Content
@@ -92,4 +92,4 @@ ETag: "e0023aa4f"
 
 - {{HTTPStatus("204")}}
 - {{HTTPHeader("Allow")}}、{{HTTPHeader("Access-Control-Allow-Methods")}}
-- {{HTTPHeader("Accept-Patch")}}––指定伺服器接受的修補程式文件格式。
+- {{HTTPHeader("Accept-Patch")}}——指定伺服器接受的修補程式文件格式。
