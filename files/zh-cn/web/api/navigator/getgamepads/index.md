@@ -23,12 +23,12 @@ getGamepads()
 
 ### 返回值
 
-一个由 {{domxref("Gamepad")}} 对象的 {{jsxref("Array")}}，最终可能为空。
+一个 {{domxref("Gamepad")}} 对象的{{jsxref("Array", "数组", "", 1)}}，最终可能为空。
 
 ### 异常
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : 使用此功能被[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)阻止。
+  - : [权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)阻止了此特性的使用。
 
 ## 示例
 
