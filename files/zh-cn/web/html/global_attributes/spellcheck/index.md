@@ -22,7 +22,7 @@ l10n:
 
 ## 安全和隐私问题
 
-使用拼写检查可能会对用户的安全性和隐私产生影响。规范没有规定 _如何_ 拼写检查，元素的内容可能会被发送到第三方进行拼写检查（请参见 [增强型拼写检查和拼写劫持](https://www.otto-js.com/news/article/chrome-and-edge-enhanced-spellcheck-features-expose-pii-even-your-passwords)）。
+使用拼写检查可能会对用户的安全性和隐私产生影响。规范没有规定*如何*进行拼写检查，元素的内容可能会被发送到第三方进行拼写检查（请参见[增强型拼写检查和拼写劫持](https://www.otto-js.com/news/article/chrome-and-edge-enhanced-spellcheck-features-expose-pii-even-your-passwords)）。
 
 对于可能包含敏感信息的元素，你应当考虑将 `spellcheck` 设置为 `false`。
 
