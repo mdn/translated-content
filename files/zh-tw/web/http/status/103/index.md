@@ -7,13 +7,13 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP **`103 Early Hints`** [資訊回應碼](/zh-TW/docs/Web/HTTP/Status#information_responses)可能會在伺服器仍在準備回應時發送，提供有關伺服器預期的最終回應將鏈接到的站點和資源的提示。這允許瀏覽器在伺服器準備和發送最終回應之前進行[預連接](/zh-TW/docs/Web/HTML/Attributes/rel/preconnect)到站點或開始[預加載](/zh-TW/docs/Web/HTML/Attributes/rel/preload)資源。
+HTTP **`103 Early Hints`** [資訊回應碼](/zh-TW/docs/Web/HTTP/Status#information_responses)可能會在伺服器仍在準備回應時發送，提供有關伺服器預期的最終回應將連接到的站點和資源的提示。這允許瀏覽器在伺服器準備和發送最終回應之前進行[預連接](/zh-TW/docs/Web/HTML/Attributes/rel/preconnect)到站點或開始[預加載](/zh-TW/docs/Web/HTML/Attributes/rel/preload)資源。
 
-早期提示回應主要用於 {{HTTPHeader("Link")}} 標頭，指示要加載的資源。它還可以包含一個 `Content-Security-Policy` 標頭，在處理早期提示時強制執行。
+早期提示回應主要用於 {{HTTPHeader("Link")}} 標頭，指示該標頭要加載的資源。它還可以包含一個 `Content-Security-Policy` 標頭，在處理早期提示時強制執行。
 
 伺服器可能會發送多個 `103` 回應，例如在重定向後。瀏覽器僅處理第一個早期提示回應，如果請求導致跨源重定向，則必須丟棄此回應。來自早期提示的預加載資源將有效地預先添加到 `Document` 的 head 元素中，然後是最終回應中加載的資源。
 
-> **備註：**出於兼容性原因，[建議](https://www.rfc-editor.org/rfc/rfc8297#section-3)只在 HTTP/2 或更高版本上發送 HTTP `103 Early Hints` 回應，除非已知用戶端正確處理信息回應。
+> **備註：** 出於兼容性原因，[建議](https://www.rfc-editor.org/rfc/rfc8297#section-3)只在 HTTP/2 或更高版本上發送 HTTP `103 Early Hints` 回應，除非已知用戶端正確處理信息回應。
 >
 > 由於這個原因，大多數瀏覽器限制支持到 HTTP/2 或更高版本。請參見下面的[瀏覽器相容性](#瀏覽器相容性)。
 >
@@ -39,7 +39,7 @@ Link: <https://cdn.example.com>; rel=preconnect, <https://cdn.example.com>; rel=
 這個例子預連接到 `https://cdn.example.com` 兩次：
 
 - 第一次連接將用於加載無需 CORS 的資源，例如圖像。
-- 第二次連接包括 [`crossorigin`](/zh-TW/docs/Web/HTML/Attributes/crossorigin) 屬性，將用於加載[CORS](/zh-TW/docs/Web/HTTP/CORS)保護的資源，例如字型。
+- 第二次連接包括 [`crossorigin`](/zh-TW/docs/Web/HTML/Attributes/crossorigin) 屬性，將用於加載 [CORS](/zh-TW/docs/Web/HTTP/CORS) 保護的資源，例如字型。
 
 受 CORS 保護的資源必須通過完全獨立的連接進行提取。如果你只需要從來源獲取一類資源，則只需預先連接一次。
 
@@ -66,7 +66,7 @@ Content-Type: text/html
 Link: </style.css>; rel=preload; as=style
 ```
 
-隨後伺服器發送最終回應。這包括指向樣式表的鏈接，該鏈接可能已經從早期提示中預加載。
+隨後伺服器發送最終回應。這包括指向樣式表的連接，該連接可能已經從早期提示中被預加載。
 
 ```http
 200 OK
@@ -88,9 +88,9 @@ Content-Security-Policy: style-src: self;
 Link: </style.css>; rel=preload; as=style
 ```
 
-早期回應將預加載限制在與請求相同的來源上。如果原始憑證匹配，則樣式表將預加載。
+早期回應將預加載限制在與請求相同的來源上。如果原始憑證匹配，則樣式表將被預加載。
 
-最終回應可能將 CSP 設置為 `none`，如下所示。樣式表已預加載，但在呈現頁面時將不會使用。
+最終回應可能將 CSP 設置為 `none`，如下所示。樣式表已被預加載，但在呈現頁面時將不會被使用。
 
 ```http
 200 OK
