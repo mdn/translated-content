@@ -1,7 +1,7 @@
 ---
 title: 无障碍描述
 slug: Glossary/Accessible_description
-i10n:
+l10n:
     sourceCommit: 6d37e664f5981436dfbba7a67f008a30c5238e00
 ---
 
@@ -13,7 +13,7 @@ i10n:
 
 {{htmlelement("table")}} 的无障碍描述是其首个 {{htmlelement("caption")}} 的内容；{{htmlelement("figure")}} 的是 {{htmlelement("figcaption")}} 的内容；{{htmlelement("summary")}} 的是 {{htmlelement("details")}} 的内容；{{htmlelement("input")}} 按钮元素的是其 `value` 属性。除非元素有 `aria-describedby` 或者 `aria-description` 属性（这些属性优先）。
 
-对于其他的元素，它们的描述需要被程序化地与相关的元素关联。在这些例子中，无障碍描述由 [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) 属性、[`aria-description`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-description) 属性或者 [`title`](/en-US/docs/Web/HTML/Global_attributes#title) 属性提供如果 `title` 不是该元素的{{glossary("accessible name", "无障碍名称")}}。
+对于其他的元素，它们的描述需要被程序化地与相关的元素关联。在这些例子中，无障碍描述由 [`aria-describedby`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) 属性、[`aria-description`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-description) 属性或者 [`title`](/zh-CN/docs/Web/HTML/Global_attributes#title) 属性提供如果 `title` 不是该元素的{{glossary("accessible name", "无障碍名称")}}。
 
 无障碍描述被简化为文本字符串。例如，如果元素的 `aria-describedby` 属性值是 HTML 元素 {{htmlelement("img")}} 的 `id`，那么无障碍描述就是图片的描述（通常是图片的 `alt` 属性）。
 
@@ -22,7 +22,7 @@ i10n:
 ## See also
 
 - {{glossary("accessible name")}} 术语
-- [ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Roles)
-- [ARIA attribute](/en-US/docs/Web/Accessibility/ARIA/Attributes)
-- [Accessibility](/en-US/docs/Web/Accessibility)
-- [Learn accessibility](/en-US/docs/Learn/Accessibility)
+- [ARIA 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles)
+- [ARIA 属性](/zh-CN/docs/Web/Accessibility/ARIA/Attributes)
+- [无障碍](/zh-CN/docs/Web/Accessibility)
+- [学习无障碍](/zh-CN/docs/Learn/Accessibility)
