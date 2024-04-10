@@ -36,7 +36,7 @@ Vous devrez avoir des connaissances en [HTTP](/fr/docs/Web/HTTP) ou être prêt 
 
 - Vous pouvez soit partir de notre [modèle de page d'en-tête HTTP](/fr/docs/MDN/Writing_guidelines/Page_structures/Page_types#http_header_reference_page), soit utiliser une structure copiée à partir de l'un des documents d'en-tête HTTP existants que vous avez trouvés à l'étape 2. C'est à vous de choisir.
 - Rédigez un texte sur le nouvel en-tête HTTP.
-- Assurez-vous d'avoir les sections suivantes :
+- Assurez-vous d'avoir les sections suivantes&nbsp;:
   - Texte d'introduction dont la première phrase mentionne le nom de l'en-tête (en gras) et résume son objectif.
   - Une boîte d'information contenant au moins le type d'en-tête et si l'en-tête est un {{Glossary("Forbidden header name","nom d'en-tête interdit")}}.
   - Un encart syntaxique contenant toutes les directives/paramètres/valeurs possibles de l'en-tête HTTP.
