@@ -1,6 +1,8 @@
 ---
 title: Comment documenter un en-tête HTTP
 slug: MDN/Writing_guidelines/Howto/Document_an_HTTP_header
+l10n:
+  sourceCommit: 17db3c03142f7077dc335f6f7c127388e2c64442
 ---
 
 {{MDNSidebar}}
