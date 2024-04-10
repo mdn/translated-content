@@ -2,7 +2,7 @@
 title: 抽象编程（Abstraction）
 slug: Glossary/Abstraction
 l10n:
-  sourceCommit: acf33012514328a403c162f65a73e9aec4e766f3
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
 {{GlossarySidebar}}
