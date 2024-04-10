@@ -1,6 +1,8 @@
 ---
 title: while
 slug: Web/JavaScript/Reference/Statements/while
+l10n:
+  sourceCommit: a13e4b5745274e14f7e1f5213522a4a39b228f81
 ---
 
 {{jsSidebar("Statements")}}
