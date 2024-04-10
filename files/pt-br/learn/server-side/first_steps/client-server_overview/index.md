@@ -188,7 +188,7 @@ X-Cache-Info: not cacheable; request wasn't a GET or HEAD
 Content-Length: 0
 ```
 
-> **Nota:** As respostas e solicitações HTTP mostradas nesse exemplo foram capturadas utilizando o aplicativo [Fiddler](https://www.telerik.com/download/fiddler) , mas você pode obter informações semelhantes utilizando web sniffers (e.g. [Websniffer](http://websniffer.cc/)) ou extensões de navegador como o [HttpFox](https://addons.mozilla.org/en-US/firefox/addon/httpfox/). Você pode tentar isso sozinho. Use qualquer uma das ferramentas vinculadas e navegue por um site e edite as informações de perfil para ver os diferentes tipos de solicitações e respostas. A maioria dos navegadores possuem ferramentas que monitoram solicitações de rede(por exemplo, a ferramenta [Network Monitor](/pt-BR/docs/Tools/Network_Monitor) no Firefox).
+> **Nota:** As respostas e solicitações HTTP mostradas nesse exemplo foram capturadas utilizando o aplicativo [Fiddler](https://www.telerik.com/download/fiddler) , mas você pode obter informações semelhantes utilizando web sniffers (e.g. [WebSniffer](https://websniffer.com/)) ou extensões de navegador como o [HttpFox](https://addons.mozilla.org/en-US/firefox/addon/httpfox/). Você pode tentar isso sozinho. Use qualquer uma das ferramentas vinculadas e navegue por um site e edite as informações de perfil para ver os diferentes tipos de solicitações e respostas. A maioria dos navegadores possuem ferramentas que monitoram solicitações de rede(por exemplo, a ferramenta [Network Monitor](/pt-BR/docs/Tools/Network_Monitor) no Firefox).
 
 ## Sites estáticos
 
