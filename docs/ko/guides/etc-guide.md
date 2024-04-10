@@ -4,7 +4,7 @@
 
 > **This branch has conflicts that must be resolved**
 
-충돌 발생 시 아래와 같은 방법으로 해결 할 수 있습니다.
+충돌 발생 시 아래와 같은 방법으로 해결할 수 있습니다.
 
 ### `Resolve conflicts` 버튼이 눌리는 경우
 
