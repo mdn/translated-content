@@ -85,7 +85,7 @@ merge 이후 자동 병합에 실패할 때 메세지는 아래와 같습니다.
 1       <td>현재 PR(ko/variables 브랜치)의 내용</td>
 ```
 
-(5) 현재 PR에 반영해줍니다.
+(5) 현재 PR에 반영합니다.
 
 ```sh
 git add ---filename---.md
