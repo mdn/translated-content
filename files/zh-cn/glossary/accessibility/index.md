@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**无障碍网页**（Web Accessibility，缩写：**A11Y**）指尽管在物理条件和技术条件限制下，仍能保证网站可用的最佳实践。{{Glossary("W3C")}} 组织的 {{Glossary("WAI","Web 无障碍倡议")}}（WAI）正式定义和论述了 Web 无障碍技术。
+_无障碍网页_（Web Accessibility，缩写：**A11Y**）指尽管在物理条件和技术条件限制下，仍能保证网站可用的最佳实践。{{Glossary("W3C")}} 组织的 {{Glossary("WAI","Web 无障碍倡议")}}（WAI）正式定义和论述了 Web 无障碍技术。
 
 ## 参见
 
