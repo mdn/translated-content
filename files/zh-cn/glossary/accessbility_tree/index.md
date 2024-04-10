@@ -28,6 +28,6 @@ l10n:
 
 ## 参见
 
-- [术语](/en-US/docs/Glossary)
+- [术语](/zh-CN/docs/Glossary)
   - {{Glossary("Accessibility", "无障碍")}}
   - {{Glossary("ARIA")}}
