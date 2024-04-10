@@ -21,7 +21,7 @@ HTTP **`206 Partial Content`** 成功回應碼表示請求已成功，並且主�
 
 ## 範例
 
-包含一個單一範圍的回應：
+包含單一範圍的回應：
 
 ```http
 HTTP/1.1 206 Partial Content
