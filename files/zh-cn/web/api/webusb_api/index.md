@@ -26,7 +26,7 @@ WebUSB 为这些非标准化的 USB 设备服务提供了一种在 web 中可用
 - {{domxref("USBConnectionEvent")}}
   - : 当用户代理检测到一个新的 USB 设备已经连接，或从主机断开时，传递给 `USB` {{domxref("USB.connect_event", "connect")}} 或 {{domxref("USB.disconnect_event", "disconnect")}} 事件的事件类型。
 - {{domxref("USBDevice")}}
-  - : 提供对已配对的 USB 设备的元数据的访问以及控制方法。 
+  - : 提供对已配对的 USB 设备的元数据的访问以及控制方法。
 - {{domxref("USBInTransferResult")}}
   - : 表示请求数据从 USB 设备传输到 USB 宿主的结果。
 - {{domxref("USBOutTransferResult")}}
