@@ -61,7 +61,7 @@ git fetch upstream
 git merge upstream/main
 ```
 
-merge 이후 자동 병합에 실패할 때 메세지는 아래와 같습니다.
+merge 이후 자동 병합에 실패할 때 메시지는 아래와 같습니다.
 
 > 자동 병합: files/ko/learn/javascript/---path---/---filename---.md
 > 충돌 (내용): files/ko/learn/javascript/---path---/---filename---.md에 병합 충돌
