@@ -1,5 +1,5 @@
 ---
-title: Advance measure
+title: 偏移量
 slug: Glossary/Advance_measure
 i10n:
     sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
@@ -7,12 +7,11 @@ i10n:
 
 {{GlossarySidebar}}
 
-The **advance measure** is the total space the glyph takes, either horizontally or vertically, depending on the current writing direction. It is equal to the distance traveled by the cursor, placed directly in front of and then shifted behind the character.
+**偏移量** 是字形在所占用的总空间（是水平还是竖直方向取决于当前的书写方向）。它等同于光标从字符正前方移动到字符后方的距离。
 
-This term is used in the definition of several CSS {{cssxref("&lt;length&gt;")}} units.
-The _advance measure_ of unit `ch` is either the width or height of character "0" in the given typeface, depending on whether the horizontal or vertical axis is currently used. A similar _advance measure_ of unit `ic` is the width or height of the "水" character.
+这个术语用于定义部分 CSS {{cssxref("&lt;length&gt;")}} 单位。单位 `ch` 的_偏移量_是在给定字体中字符"0"的长度或宽度（取决于当前的书写方向）；类似地，单位 `ic` 的_偏移量_则是字符"水"的宽度或高度。
 
-## See also
+## 参见
 
 - {{cssxref("&lt;length&gt;")}}
 - [Learn: CSS values and units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
