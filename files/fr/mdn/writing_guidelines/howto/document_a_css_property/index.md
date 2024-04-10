@@ -7,7 +7,7 @@ slug: MDN/Writing_guidelines/Howto/Document_a_CSS_property
 
 Au fur et à mesure que les normes [CSS](/fr/docs/Web/CSS) évoluent, de nouvelles propriétés sont ajoutées. La [référence CSS](/fr/docs/Web/CSS/Reference) sur MDN Web Docs doit être maintenue à jour avec ces développements. Cet article fournit des instructions pas à pas pour créer une page de référence des propriétés CSS.
 
-Chaque page de référence des propriétés CSS suit la même structure. Cela permet aux lecteurs de trouver plus facilement les informations, surtout lorsqu'ils sont familiarisés avec le format standard des pages de référence.
+Chaque page de référence des propriétés CSS suit la même structure. Cela permet au lectorat de trouver plus facilement les informations, surtout lorsqu'il est familiarisé avec le format standard des pages de référence.
 
 ## Étape 1 - Déterminer la propriété à documenter
 
