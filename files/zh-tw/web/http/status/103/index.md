@@ -2,7 +2,7 @@
 title: 103 Early Hints
 slug: Web/HTTP/Status/103
 l10n:
-  sourceCommit: ce9d9adaa19dbe18852257cd9d4dcc04fe5b8b3d
+  sourceCommit: 2b4c1cb95f139c96343d4bcd92dc7a4f7d534d04
 ---
 
 {{HTTPSidebar}}
@@ -15,7 +15,7 @@ HTTP **`103 Early Hints`** [資訊回應碼](/zh-TW/docs/Web/HTTP/Status#informa
 
 > **備註：** 出於兼容性原因，[建議](https://www.rfc-editor.org/rfc/rfc8297#section-3)只在 HTTP/2 或更高版本上發送 HTTP `103 Early Hints` 回應，除非已知用戶端正確處理信息回應。
 >
-> 由於這個原因，大多數瀏覽器限制支持到 HTTP/2 或更高版本。請參見下面的[瀏覽器相容性](#瀏覽器相容性)。
+> 由於這個原因，大多數瀏覽器限制在 HTTP/2 或更高版本中提供支持。請參見下面的[瀏覽器相容性](#瀏覽器相容性)。
 >
 > 儘管如此，以下範例使用了 HTTP/1.1 風格的表示法，依照通常的慣例。
 
