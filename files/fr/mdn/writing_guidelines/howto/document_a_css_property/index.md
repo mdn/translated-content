@@ -13,7 +13,7 @@ Chaque page de référence des propriétés CSS suit la même structure. Cela pe
 
 ## Étape 1 - Déterminer la propriété à documenter
 
-Tout d'abord, vous devez déterminer la propriété CSS que vous souhaitez documenter. Vous avez peut-être remarqué qu'une page est manquante, ou vous avez peut-être vu des contenus manquants signalés dans notre [liste de problèmes](https://github.com/mdn/translated-content/issues). Pour obtenir des détails sur la propriété CSS, vous devrez trouver une spécification pertinente (par exemple, une [spécification du W3C](https://www.w3.org/Style/CSS/) ou un rapport de bogue concernant une propriété non standard utilisée dans des moteurs de rendu tels que Gecko ou Blink).
+Tout d'abord, vous devez déterminer la propriété CSS que vous souhaitez documenter. Vous avez peut-être remarqué qu'une page est manquante, ou vous avez peut-être vu des contenus manquants signalés dans notre [liste de problèmes du dépôt anglophone `mdn/content`](https://github.com/mdn/content/issues). Pour obtenir des détails sur la propriété CSS, vous devrez trouver une spécification pertinente (par exemple, une [spécification du W3C](https://www.w3.org/Style/CSS/) ou un rapport de bogue concernant une propriété non standard utilisée dans des moteurs de rendu tels que Gecko ou Blink).
 
 > **Note:** Lorsque vous utilisez une spécification du W3C, utilisez toujours le **projet de l'éditeur** (notez la bannière rouge sur le côté gauche) et non une version publiée (par exemple, Working Draft). Le projet de l'éditeur est toujours plus proche de la version finale !
 
