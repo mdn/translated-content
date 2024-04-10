@@ -48,7 +48,7 @@ Vous devrez avoir des connaissances en [HTTP](/fr/docs/Web/HTTP) ou être prêt 
 ## Étape 5 - Ajouter des informations sur la compatibilité des navigateurs
 
 - Si vous avez consulté d'autres pages d'en-tête HTTP, vous verrez qu'il existe une macro `{{Compat}}` qui remplit une table du navigateur pour vous.
-- La page du tableau de compatibilité est générée à partir de données structurées. Si vous souhaitez contribuer à ces données, veuillez consulter les instructions à l'adresse <https://github.com/mdn/browser-compat-data/blob/main/README.md> et nous envoyer une Pull Request.
+- La page du tableau de compatibilité est générée à partir de données structurées. Si vous souhaitez contribuer à ces données, veuillez consulter les instructions à l'adresse <https://github.com/mdn/browser-compat-data/blob/main/README.md> et nous envoyer une <i lang="en">pull request</i>.
 
 ## Étape 6 - Mise à jour de la liste des en-têtes HTTP
 
