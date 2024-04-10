@@ -64,7 +64,9 @@ git merge upstream/main
 merge 이후 자동 병합에 실패할 때 메시지는 아래와 같습니다.
 
 > 자동 병합: files/ko/learn/javascript/---path---/---filename---.md
+>
 > 충돌 (내용): files/ko/learn/javascript/---path---/---filename---.md에 병합 충돌
+>
 > 자동 병합이 실패했습니다. 충돌을 바로잡고 결과물을 커밋하십시오.
 
 (4-1) 자동 병합에 실패했을 때, 발생한 모든 충돌을 해결합니다. 반영할 내용으로 수정합니다.
