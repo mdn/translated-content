@@ -13,7 +13,7 @@ AJAX 可以用于创建{{Glossary("SPA", "单页应用")}}——那些使用 AJA
 
 一开始的时候 AJAX 通过使用 {{domxref("XMLHttpRequest")}} 接口实现，但是 {{domxref("fetch()")}} API 更适合用于开发现代 Web 应用：更出色、更灵活、更好地与一些 Web 应用的基础技术相结合（如 [Service Worker](/zh-CN/docs/Web/API/Service_Worker_API)）。现代 Web 框架也为 AJAX 提供了抽象。
 
-AJAX 在现代网页开发中太过常见了，以至于 AJAX 这个术语很少被使用到。
+这项技术在现代 Web 开发中太过常见了，以至于 AJAX 这个术语很少被使用到。
 
 ## 参见
 
