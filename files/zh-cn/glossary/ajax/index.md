@@ -11,7 +11,7 @@ l10n:
 
 AJAX 可以被用来创建 {{Glossary("SPA", "单页应用")}}，那些使用 AJAX 来更新需要的内容的、由单一文档构成的一整个网页 App。
 
-一开始的时候 AJAX 通过使用 {{domxref("XMLHttpRequest")}} 接口实现，但是 {{domxref("fetch()")}} API 更适合用于开发现代网页 App：更出色、更灵活、更好地与一些网页 App 的基础技术相结合（如 [service workers](/zh-CN/docs/Web/API/Service_Worker_API)）。现代网页框架也为 AJAX 提供了抽象化概念。
+一开始的时候 AJAX 通过使用 {{domxref("XMLHttpRequest")}} 接口实现，但是 {{domxref("fetch()")}} API 更适合用于开发现代网页 App：更出色、更灵活、更好地与一些网页 App 的基础技术相结合（如 [Service Workers](/zh-CN/docs/Web/API/Service_Worker_API)）。现代网页框架也为 AJAX 提供了抽象化概念。
 
 AJAX 在现代网页开发中太过常见了，以至于 AJAX 这个术语很少被使用到。
 
