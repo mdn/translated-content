@@ -2,7 +2,7 @@
 title: 无障碍名称
 slug: Glossary/Accessible_name
 l10n:
-    sourceCommit: d9c3dac231bb6cbc138d761dbe0ad2f9a38b864f
+  sourceCommit: d9c3dac231bb6cbc138d761dbe0ad2f9a38b864f
 ---
 
 {{GlossarySidebar}}
