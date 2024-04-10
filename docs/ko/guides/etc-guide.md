@@ -48,7 +48,7 @@ git clone https://github.com/---user-id---/translated-content.git
 git switch ---기여한 PR의 브랜치 이름---
 ```
 
-(3) `mdn/translated-content` 저장소의 최신 내용을 현재 브랜치에 병합하기 위해 url을 `git remote`로 등록해 줍니다.
+(3) `mdn/translated-content` 저장소의 최신 내용을 현재 브랜치에 병합하기 위해 url을 `git remote`로 등록합니다.
 
 ```sh
 git remote add upstream https://github.com/mdn/translated-content
