@@ -17,7 +17,7 @@ Tout d'abord, vous devez déterminer la propriété CSS que vous souhaitez docum
 
 > **Note:** Lorsque vous utilisez une spécification du W3C, utilisez toujours la version **brouillon d'éditeur** (<i lang="en">Editor's draft</i>) (notez la bannière rouge sur le côté gauche) et non une version publiée (par exemple, <i lang="en">Working Draft</i>). La version en <i lang="en">Editor's Draft</i> est toujours plus proche de la version finale&nbsp;!
 
-Si l'implémentation et la spécification divergent, n'hésitez pas à le mentionner dans le bug d'implémentation. L'une des situations suivantes est possible :
+Si l'implémentation et la spécification divergent, n'hésitez pas à le mentionner dans le bug d'implémentation. L'une des situations suivantes est possible&nbsp;:
 
 - Il peut s'agir d'un bogue dans l'implémentation (et un bogue de suivi sera déposé).
 - Cela peut être dû à un retard dans la publication d'une nouvelle spécification.
