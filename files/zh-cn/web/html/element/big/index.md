@@ -7,9 +7,9 @@ l10n:
 
 {{HTMLSidebar}}{{deprecated_header}}
 
-**`<big>`** [HTML](/zh-CN/docs/Web/HTML) 已弃用的元素会使其中包裹的文字渲染为比周围文本大一级的字体大小（例如将 `medium` 变为 `large`）。字体大小的最大值受限于浏览器的允许范围。
+已弃用的 **`<big>`** [HTML](/zh-CN/docs/Web/HTML) 元素使其中包裹的文字会以比周围文本大一级的字体大小（例如将 `medium` 变为 `large`）渲染。字体大小的最大值受限于浏览器的允许范围。
 
-> **警告：** 该元素已被从规范中移除，不应再继续使用。请改用 CSS {{cssxref("font-size")}} 属性来调整字体大小。
+> **警告：** 该元素已从规范中移除，不应继续使用。请改用 CSS {{cssxref("font-size")}} 属性来调整字体大小。
 
 ## 属性
 
@@ -17,7 +17,7 @@ l10n:
 
 ## 示例
 
-在此处，我们展示了 `<big>` 标签的示例，然后紧随其后展示一个现代 CSS 语法实现相同效果的例子。
+在此处，我们展示了 `<big>` 的用法，然后紧随其后展示一个现代 CSS 语法实现相同效果的例子。
 
 ### 使用 big
 
@@ -63,9 +63,7 @@ l10n:
 
 ## DOM 接口
 
-该元素实现了{{domxref('HTMLElement')}} 接口。
-
-<!-- ## Technical summary -->
+该元素实现了 {{domxref('HTMLElement')}} 接口。
 
 ## 规范
 
