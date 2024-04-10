@@ -36,7 +36,7 @@ l10n:
 ```html
 <li>
   <span>
-    <a href="portfolio.html" target="_blank">看看我的文件夹</a>
+    <a href="portfolio.html" target="_blank">查看我的作品集</a>
   </span>
 </li>
 ```
