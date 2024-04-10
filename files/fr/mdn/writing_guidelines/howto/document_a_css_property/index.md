@@ -15,7 +15,7 @@ Chaque page de référence des propriétés CSS suit la même structure. Cela pe
 
 Tout d'abord, vous devez déterminer la propriété CSS que vous souhaitez documenter. Vous avez peut-être remarqué qu'une page est manquante, ou vous avez peut-être vu des contenus manquants signalés dans notre [liste de problèmes du dépôt anglophone `mdn/content`](https://github.com/mdn/content/issues). Pour obtenir des détails sur la propriété CSS, vous devrez trouver une spécification pertinente (par exemple, une [spécification du W3C](https://www.w3.org/Style/CSS/) ou un rapport de bogue concernant une propriété non standard utilisée dans des moteurs de rendu tels que Gecko ou Blink).
 
-> **Note:** Lorsque vous utilisez une spécification du W3C, utilisez toujours le **projet de l'éditeur** (notez la bannière rouge sur le côté gauche) et non une version publiée (par exemple, Working Draft). Le projet de l'éditeur est toujours plus proche de la version finale !
+> **Note:** Lorsque vous utilisez une spécification du W3C, utilisez toujours la version **brouillon d'éditeur** (<i lang="en">Editor's draft</i>) (notez la bannière rouge sur le côté gauche) et non une version publiée (par exemple, <i lang="en">Working Draft</i>). La version en <i lang="en">Editor's Draft</i> est toujours plus proche de la version finale&nbsp;!
 
 Si l'implémentation et la spécification divergent, n'hésitez pas à le mentionner dans le bug d'implémentation. L'une des situations suivantes est possible :
 
