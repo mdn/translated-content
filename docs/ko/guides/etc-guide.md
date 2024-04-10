@@ -34,7 +34,7 @@
 1       <p>main 브랜치의 내용</p>
 ```
 
-### `Resolve conflicts` 버튼 눌리지 않는 경우
+### `Resolve conflicts` 버튼이 눌리지 않는 경우
 
 (1) 기여한 PR의 저장소를 `git clone` 합니다.
 
