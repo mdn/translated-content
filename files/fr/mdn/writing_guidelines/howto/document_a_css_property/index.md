@@ -37,4 +37,6 @@ Lorsque vous créez une page de référence, vous devez ajouter des exemples. Po
 
 ## Étape 4 - Faire réviser le contenu
 
+> **Note :** Si l'anglais n'est pas votre langue maternelle ou que vous ne l'utilisez pas couramment, n'hésitez pas à demander une relecture en français via le canal [#l10n-fr](https://chat.mozilla.org/#/room/#l10n-fr:mozilla.org) pour assurer la clarté de votre contribution.
+
 Après avoir créé la page de la propriété, soumettez-la en tant que [<i lang="en">Pull Request</i>](https://docs.github.com/fr/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request). Un membre de notre équipe de révision sera automatiquement désigné pour réviser votre page.
