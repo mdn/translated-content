@@ -24,7 +24,7 @@ Vous devrez avoir des connaissances en [HTTP](/fr/docs/Web/HTTP) ou être prêt 
 
 - Les en-têtes HTTP existants sont documentés [ici](/fr/docs/Web/HTTP/Headers).
 - Il existe différentes catégories d'en-têtes&nbsp;: [en-tête de requête](/fr/docs/Glossary/Request_header), [en-tête de réponse](/en-US/docs/Glossary/Response_header), et [en-tête de représentation](/fr/docs/Glossary/Representation_header).
-- Trouvez la catégorie de l'en-tête que vous vous apprêtez à documenter (notez que certains en-têtes peuvent être à la fois des en-têtes de demande et des en-têtes de réponse, selon le contexte).
+- Trouvez la catégorie de l'en-tête que vous vous apprêtez à documenter (notez que certains en-têtes peuvent être à la fois des en-têtes de requête et des en-têtes de réponse, selon le contexte).
 - Accédez à une page de référence d'en-tête existant dans la même catégorie.
 
 ## Étape 3 - Créer la page d'en-tête HTTP
