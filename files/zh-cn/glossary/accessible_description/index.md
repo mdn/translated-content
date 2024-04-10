@@ -2,7 +2,7 @@
 title: 无障碍描述
 slug: Glossary/Accessible_description
 l10n:
-    sourceCommit: 6d37e664f5981436dfbba7a67f008a30c5238e00
+  sourceCommit: 6d37e664f5981436dfbba7a67f008a30c5238e00
 ---
 
 {{GlossarySidebar}}
