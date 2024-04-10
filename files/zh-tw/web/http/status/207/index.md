@@ -15,7 +15,7 @@ HTTP **`207 Multi-Status`** 成功回應碼表示可能存在多種回應。
 
 ## 狀態
 
-```plain
+```http
 207 Multi-Status
 ```
 
