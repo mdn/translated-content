@@ -2,7 +2,7 @@
 title: AJAX
 slug: Glossary/AJAX
 l10n:
-  sourceCommit: 5d6c210c89552b590f035e78b5c4f48cb48b32b6
+  sourceCommit: c215109b90da51435eaa2c94a8f6764909f628e0
 ---
 
 {{GlossarySidebar}}
@@ -17,8 +17,8 @@ AJAX 可以用于创建{{Glossary("SPA", "单页应用")}}——那些使用 AJA
 
 ## 参见
 
-- {{DOMxRef("XMLHttpRequest")}}
+- [从服务器获取数据](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
 - {{DOMxRef("Fetch API")}}
+- {{Glossary("SPA", "单页应用")}}
 - [使用 Fetch API](/zh-CN/docs/Web/API/Fetch_API/Using_Fetch)
 - 维基百科上的 [AJAX](https://zh.wikipedia.org/wiki/AJAX)
-- [同步与异步通信](https://peoplesofttutorial.com/difference-between-synchronous-and-asynchronous-messaging/)（2014）
