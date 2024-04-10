@@ -27,7 +27,7 @@ Si l'implémentation et la spécification divergent, n'hésitez pas à le mentio
 
 Plusieurs caractéristiques d'une propriété CSS, comme sa syntaxe ou le fait qu'elle puisse être animée, sont mentionnées dans plusieurs pages et sont donc stockées dans une base de données ad hoc. Les macros que vous utiliserez sur la page ont besoin d'informations sur la propriété qui y est stockée, commencez donc par [vérifier que ces informations s'y trouvent](https://github.com/mdn/data/blob/main/docs/updating_css_json.md).
 
-## Étape 3 - Créer la page de propriétés CSS
+## Étape 3 - Créer la page de propriété CSS
 
 Les préparatifs sont terminés ! Nous pouvons maintenant ajouter la page de propriété CSS proprement dite. La manière la plus simple de créer une nouvelle page de propriété CSS est de copier le contenu d'une page de propriété CSS existante et de l'éditer pour la nouvelle propriété. Pour créer une nouvelle page, reportez-vous aux instructions de notre [guide de création de pages](/fr/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting).
 
