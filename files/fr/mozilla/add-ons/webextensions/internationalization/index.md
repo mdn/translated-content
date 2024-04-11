@@ -290,19 +290,19 @@ Le tableau suivant indique les différents messages prédéfinis disponibles&nbs
     <tr>
       <td><code>@@bidi_reversed_dir</code></td>
       <td>
-        Si <code>@@bidi_dir</code> vaut <code>"ltr"</code>, alors cette chaîne vaudra <code>"rtl"<code>, sinon elle vaudra <code>"ltr"</code>.
+        Si <code>@@bidi_dir</code> vaut <code>"ltr"</code>, alors cette chaîne vaudra <code>"rtl"</code>, sinon elle vaudra <code>"ltr"</code>.
       </td>
     </tr>
     <tr>
       <td><code>@@bidi_start_edge</code></td>
       <td>
-        Si <code>@@bidi_dir</code> vaut <code>"ltr"</code>, alors cette chaîne vaudra <code>"left"<code>, sinon elle vaudra <code>"right"</code>.
+        Si <code>@@bidi_dir</code> vaut <code>"ltr"</code>, alors cette chaîne vaudra <code>"left"</code>, sinon elle vaudra <code>"right"</code>.
       </td>
     </tr>
     <tr>
       <td><code>@@bidi_end_edge</code></td>
       <td>
-        Si <code>@@bidi_dir</code> vaut <code>"ltr"</code>, alors cette chaîne vaudra <code>"right"<code>, sinon elle vaudra <code>"left"</code>.
+        Si <code>@@bidi_dir</code> vaut <code>"ltr"</code>, alors cette chaîne vaudra <code>"right"</code>, sinon elle vaudra <code>"left"</code>.
       </td>
     </tr>
   </tbody>
