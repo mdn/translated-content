@@ -1,6 +1,8 @@
 ---
 title: 类
 slug: Web/JavaScript/Reference/Classes
+l10n:
+  sourceCommit: d40917d744ecad97190fc92e8db659538c488d51
 ---
 
 {{JsSidebar("Classes")}}
