@@ -392,6 +392,7 @@ padding-left: 1.5em;
 ## Tester votre extension
 
 <!-- Cette section n'est plus en phase avec l'original anglais -->
+
 Depuis Firefox 45, vous pouvez installer temporairement des extensions à partir du disque — voir [Chargement depuis le disque](/fr/Add-ons/WebExtensions/Packaging_and_installation#Loading_from_disk). Pour ce faire, puis essayez de tester notre extension [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n). Accédez à l'un de vos sites Web préférés et cliquez sur un lien pour voir si une notification s'affiche indiquant l'URL du lien cliqué.
 
 Ensuite, changez les paramètres régionaux de Firefox en un supporté dans l'extension que vous voulez tester.
