@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Classes
 
 {{JsSidebar("Classes")}}
 
-类是用于创建对象的模板。它们用代码封装数据用以处理数据。JS 中的类建立在[原型](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)之上，同时还具有一些类独有的语法和语义。
+类是用于创建对象的模板。它们用代码封装数据以对其进行处理。JS 中的类建立在[原型](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)之上，同时还具有一些类独有的语法和语义。
 
 更多的示例和释义，参见[使用类](/zh-CN/docs/Web/JavaScript/Guide/Using_classes)教程。
 
@@ -41,7 +41,7 @@ const Rectangle = class Rectangle2 {
 };
 ```
 
-类似于函数表达式，类表达式可以是匿名的，或者也可以有一个不同于被赋值给的变量的名称的名字。然而，不同于函数声明的是，类声明具有与 `let` 和 `const` 相同的[暂时性死区](/zh-CN/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)限制，并且表现得像是[没有被提升](/zh-CN/docs/Web/JavaScript/Guide/Using_classes#类声明提升)一样。
+与函数表达式类似，类表达式可以是匿名的，或者也可以有一个不同于被赋值给的变量的名称的名字。然而，不同于函数声明的是，类声明具有与 `let` 和 `const` 相同的[暂时性死区](/zh-CN/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)限制，并且表现得像是[没有被提升](/zh-CN/docs/Web/JavaScript/Guide/Using_classes#类声明提升)一样。
 
 ### 类主体
 
@@ -55,7 +55,7 @@ const Rectangle = class Rectangle2 {
 - 位置：静态的或位于实例上
 - 可见性：公有或私有
 
-它们总共有16种可能的组合。为了更合理地划分参考文献，避免内容重叠，不同的元素会在不同的页面进行详细的介绍：
+它们总共有 16 种可能的组合。为了更合理地划分参考文献，避免内容重叠，不同的元素会在不同的页面进行详细的介绍：
 
 - [方法的定义](/zh-CN/docs/Web/JavaScript/Reference/Functions/Method_definitions)
   - : 公有的实例方法
@@ -76,7 +76,7 @@ const Rectangle = class Rectangle2 {
 
 #### 构造函数
 
-[constructor](/zh-CN/docs/Web/JavaScript/Reference/Classes/constructor) 方法是用于创建和初始化一个由类创建的对象的特殊方法。一个类只能拥有一个名为“constructor”的特殊方法。如果类包含多个 `constructor` 方法，将会抛出一个 {{jsxref("SyntaxError")}}。
+{{jsxref("Classes/constructor", "constructor")}} 方法是用于创建和初始化一个由类创建的对象的特殊方法。一个类只能拥有一个名为“constructor”的特殊方法。如果类包含多个 `constructor` 方法，将会抛出一个 {{jsxref("SyntaxError")}}。
 
 构造函数可以使用 [`super`](/zh-CN/docs/Web/JavaScript/Reference/Operators/super) 关键字来调用父类的构造函数。
 
@@ -133,7 +133,7 @@ console.log([...square.getSides()]); // [10, 10, 10, 10]
 
 #### 静态方法和字段
 
-{{jsxref("Classes/static", "static")}} 关键字用来定义类的静态方法或字段。静态属性（字段和方法）被定义在类的自身而不是类的实例上。静态方法通常用于为应用程序创建工具函数，而静态字段则多用于存放缓存、固定配置或其他不需要在跨实例复制的数据。
+{{jsxref("Classes/static", "static")}} 关键字用来定义类的静态方法或字段。静态属性（字段和方法）被定义在类的自身而不是类的实例上。静态方法通常用于为应用程序创建工具函数，而静态字段则多用于存放缓存、固定配置或其他不需要跨实例复制的数据。
 
 ```js
 class Point {
@@ -181,11 +181,11 @@ class Rectangle {
 
 如上文所示，声明字段时有没有默认值都可以。没有默认值的字段其值默认为 `undefined`。通过预先声明字段，类声明会变得自我文档化，并且字段始终显现，有助于优化代码。
 
-参见[类公有字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)获取更多信息。
+参见[公有类字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)获取更多信息。
 
 #### 私有属性
 
-使用私有字段，上文的声明可以精简为如下形式：
+使用私有字段，上文的声明可以细化为如下形式：
 
 ```js
 class Rectangle {
@@ -269,7 +269,7 @@ l.speak();
 4. 按照声明顺序安设方法和访问器。实例方法和访问器被安设在当前类的 `prototype` 属性上，静态方法和访问器被安设在类本身。私有实例方法和访问器会被保存，之后会直接安置到实例上，这个步骤不可被观察到。
 5. 类现在已经用 `extends` 指定的原型和 `constructor` 指定的实现初始化完成。对于上面的所有步骤，如果有表达式尝试访问类名，会抛出一个 {{jsxref("ReferenceError")}}，因为类还没有初始化完成。
 6. 按照声明顺序求取类元素的值：
-   - 对与每个[实例字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields) (public or private)，其初始化器表达式会被保存。初始化器会在实例创建期间被求值，时间点在构造函数开头（对于基类）或者在调用 `super()` 返回时立刻求值（对于派生类）。
+   - 对于每个[实例字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)（公有或私有），其初始化器表达式会被保存。初始化器会在实例创建期间被求值，时间点在构造函数开头（对于基类）或者在调用 `super()` 返回时立刻求值（对于派生类）。
    - 对于每个[静态字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/static)（公有的和私有的），其初始化器在被求值时，`this` 会指向类本身，并且属性会被创建到类上。
    - [静态初始化块](/zh-CN/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)在被求值时，`this` 会指向类本身。
 7. 类现在已经被完全初始化并且可以被作为构造函数使用。
@@ -336,5 +336,5 @@ eat(); // 全局对象（在非严格模式下）
 - [使用类](/zh-CN/docs/Web/JavaScript/Guide/Using_classes)教程
 - [`class`](/zh-CN/docs/Web/JavaScript/Reference/Statements/class)
 - [`class` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/class)
-- [Functions](/zh-CN/docs/Web/JavaScript/Reference/Functions)
+- [函数](/zh-CN/docs/Web/JavaScript/Reference/Functions)
 - [深入 ES6：类](https://hacks.mozilla.org/2015/07/es6-in-depth-classes/)——hacks.mozilla.org (2015)
