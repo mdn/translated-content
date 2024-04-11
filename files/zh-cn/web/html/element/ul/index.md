@@ -1,6 +1,8 @@
 ---
 title: <ul>：无序列表元素
 slug: Web/HTML/Element/ul
+l10n:
+  sourceCommit: 829db137a01feb14af7beaec178a3ea0118b4777
 ---
 
 {{HTMLSidebar}}
@@ -8,64 +10,6 @@ slug: Web/HTML/Element/ul
 [HTML](/zh-CN/docs/Web/HTML) **`<ul>`** 元素表示一系列无序的列表项目，通常渲染为项目符号列表。
 
 {{EmbedInteractiveExample("pages/tabbed/ul.html", "tabbed-standard")}}
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories"
-          >内容分类</a
-        >
-      </th>
-      <td>
-        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式内容"
-          >流式内容</a
-        >，如果 <code>&#x3C;ul></code> 元素的子元素包含至少一个 {{HTMLElement("li")}} 元素，则为
-        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#可感知内容"
-          >可感知内容</a
-        >。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">允许的内容</th>
-      <td>
-        0 或多个 {{HTMLElement("li")}} 元素、{{HTMLElement("script")}} 和 {{HTMLElement("template")}} 元素。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">标签省略</th>
-      <td>不允许，开始标签和结束标签都不能省略。</td>
-    </tr>
-    <tr>
-      <th scope="row">允许的父元素</th>
-      <td>
-        任何接受<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式内容"
-          >流式内容</a
-        >的元素。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">隐式 ARIA 角色</th>
-      <td>
-        <code
-          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/List_role"
-            >list</a
-          ></code
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">允许的 ARIA 角色</th>
-      <td>
-        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/directory_role"><code>directory</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/listbox_role"><code>listbox</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/menu_role"><code>menu</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/menubar_role"><code>menubar</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/radiogroup_role"><code>radiogroup</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/tablist_role"><code>tablist</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/toolbar_role"><code>toolbar</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/tree_role"><code>tree</code></a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">DOM 接口</th>
-      <td>{{domxref("HTMLUListElement")}}</td>
-    </tr>
-  </tbody>
-</table>
 
 ## 属性
 
@@ -109,7 +53,7 @@ slug: Web/HTML/Element/ul
 </ul>
 ```
 
-以上 HTML 将输出：
+#### 结果
 
 {{EmbedLiveSample("简单的示例", 400, 100)}}
 
@@ -141,7 +85,7 @@ slug: Web/HTML/Element/ul
 </ul>
 ```
 
-以上 HTML 输出：
+#### 结果
 
 {{EmbedLiveSample("嵌套列表", 400, 220)}}
 
@@ -164,9 +108,66 @@ slug: Web/HTML/Element/ul
 </ul>
 ```
 
-以上 HTML 将输出：
+#### 结果
 
 {{EmbedLiveSample("无序列表中的有序列表", 400, 150)}}
+
+## 技术概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories"
+          >内容分类</a
+        >
+      </th>
+      <td>
+        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式内容"
+          >流式内容</a
+        >，如果 <code>&#x3C;ul></code> 元素的子元素包含至少一个 {{HTMLElement("li")}} 元素，则为<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#可感知内容">可感知内容</a>。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允许的内容</th>
+      <td>
+        0 或多个 {{HTMLElement("li")}} 元素、{{HTMLElement("script")}} 和 {{HTMLElement("template")}} 元素。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">标签省略</th>
+      <td>不允许，开始标签和结束标签都不能省略。</td>
+    </tr>
+    <tr>
+      <th scope="row">允许的父元素</th>
+      <td>
+        任何接受<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式内容"
+          >流式内容</a
+        >的元素。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">隐含的 ARIA 角色</th>
+      <td>
+        <code
+          ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/List_role"
+            >list</a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允许的 ARIA 角色</th>
+      <td>
+        <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/directory_role"><code>directory</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/listbox_role"><code>listbox</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/menu_role"><code>menu</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/menubar_role"><code>menubar</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/radiogroup_role"><code>radiogroup</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/tablist_role"><code>tablist</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/toolbar_role"><code>toolbar</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/tree_role"><code>tree</code></a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">DOM 接口</th>
+      <td>{{domxref("HTMLUListElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 规范
 
