@@ -7,7 +7,7 @@ l10n:
 
 {{jsSidebar("Statements")}}
 
-**`switch`** 语句会求值一个[表达式](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#表达式)，并其值与一系列 `case` 子句进行匹配，一旦遇到与表达式值相匹配的第一个 `case` 子句后，将执行该子句后面的[语句](/zh-CN/docs/Web/JavaScript/Reference/Statements)，直到遇到 `break` 语句为止。若没有 `case` 子句与表达式的值匹配，如果没有任何 `case` 子句与表达式的值匹配，则会跳转至 `switch` 语句的 `default` 子句执行。
+**`switch`** 语句会对一个[表达式](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#表达式)求值，并将表达式的值与一系列 `case` 子句进行匹配，一旦遇到与表达式值相匹配的第一个 `case` 子句后，将执行该子句后面的[语句](/zh-CN/docs/Web/JavaScript/Reference/Statements)，直到遇到 `break` 语句为止。若没有 `case` 子句与表达式的值匹配，如果没有任何 `case` 子句与表达式的值匹配，则会跳转至 `switch` 语句的 `default` 子句执行。
 
 {{EmbedInteractiveExample("pages/js/statement-switch.html", "taller")}}
 
@@ -36,7 +36,7 @@ switch (expression) {
 
 ## 描述
 
-`switch` 语句首先对其表达式进行求值。然后，它会查找第一个与输入表达式的结果严格相等（通过[严格相等](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality)比较）的 `case` 子句，并将控制权转移到该子句，执行该子句之后的所有语句。
+`switch` 语句首先对其表达式进行求值。然后，它会查找第一个`case` 子句，该子句的表达式求值结果与输入表达式的结果相同（通过[严格相等](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality)比较） ，并将控制权转移到该子句，执行该子句之后的所有语句。
 
 仅当必要时才会对子句表达式进行求值——如果已经找到了匹配项，则后续的 `case` 子句表达式将不再进行求值，即使它们可能会因[跳出和穿透](#跳出和穿透)机制而被执行到。
 
@@ -52,7 +52,7 @@ switch (undefined) {
 
 ### 跳出和穿透
 
-你可以在 `switch` 语句体内部使用 [`break`](/zh-CN/docs/Web/JavaScript/Reference/Statements/break) 语句提前结束语句执行，通常是在两个 `case` 子句之间的所有语句都已经执行完毕的情况下。执行会从 `switch` 语句后的第一条语句继续进行。
+你可以在 `switch` 语句体内部使用 [`break`](/zh-CN/docs/Web/JavaScript/Reference/Statements/break) 语句提前跳出，通常是在执行完两个 `case` 子句之间的所有语句后。执行会从 `switch` 语句后的第一条语句继续进行。
 
 如果省略了 `break` 语句，程序执行将会继续流向下一个 `case` 子句，甚至到达 `default` 子句，而不论该子句中的表达式值是否匹配。这种行为被称为“穿透”。
 
