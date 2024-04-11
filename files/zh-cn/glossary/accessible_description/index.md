@@ -21,7 +21,7 @@ l10n:
 
 ## 参见
 
-- {{glossary("accessible name")}} 术语
+- {{glossary("accessible name", "无障碍名称")}}术语
 - [ARIA 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles)
 - [ARIA 属性](/zh-CN/docs/Web/Accessibility/ARIA/Attributes)
 - [无障碍](/zh-CN/docs/Web/Accessibility)
