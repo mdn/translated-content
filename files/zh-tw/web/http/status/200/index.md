@@ -1,24 +1,26 @@
 ---
 title: 200 OK
 slug: Web/HTTP/Status/200
+l10n:
+  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
 {{HTTPSidebar}}
 
-HTTP **`200 OK`** 成功狀態碼表明請求成功。200 回應預設上是緩存的（cacheable）。
+HTTP **`200 OK`** 成功回應碼表示請求已成功。默認情況下，200 回應是可緩存的。
 
-所謂「成功」的定義，取決於 HTTP 的請求方法：
+成功的含義取決於 HTTP 請求方法：
 
-- {{HTTPMethod("GET")}}：資源已取得，並傳送到訊息內文（message body）。
-- {{HTTPMethod("HEAD")}}：整個標已經放在訊息內文了。
-- {{HTTPMethod("POST")}}: 描述動作結果的資源已經傳送到訊息內文。
-- {{HTTPMethod("TRACE")}}：訊息內文包含了請求訊息，伺服器也接受了請求。
+- {{HTTPMethod("GET")}}：已檢索到資源並在消息主體中傳輸。
+- {{HTTPMethod("HEAD")}}：回應中包含表示標頭，但沒有消息主體。
+- {{HTTPMethod("POST")}}：傳輸了描述動作結果的資源。
+- {{HTTPMethod("TRACE")}}：消息主體包含伺服器接收到的請求消息。
 
-{{HTTPMethod("PUT")}} 或 {{HTTPMethod("DELETE")}} 的成功訊息，通常不是 `200 OK`，而是 {{HTTPStatus("204")}} `No Content`（或著在資源首次上傳時，{{HTTPStatus("201")}} `Created`）。
+{{HTTPMethod("PUT")}} 或 {{HTTPMethod("DELETE")}} 的成功結果通常不是 `200 OK`，而是 {{HTTPStatus("204")}} `No Content`（或在首次上傳資源時是 {{HTTPStatus("201")}} `Created`）。
 
 ## 狀態
 
-```plain
+```http
 200 OK
 ```
 
