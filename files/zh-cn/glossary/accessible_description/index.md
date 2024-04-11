@@ -9,7 +9,7 @@ l10n:
 
 **无障碍描述**（Accessible Description）是用户界面元素的描述，可以提供额外的信息给辅助技术，帮助用户理解该元素及其上下文。它是与 HTML 元素相关联的文本描述，可以为辅助技术提供元素除{{glossary("accessible name", "无障碍名称")}}之外的描述内容。
 
-一个元素的无障碍描述是{{glossary("accessibility tree", "无障碍树")}}的一部份，可使 Web 内容对{{glossary("Screen_reader", "屏幕阅读器")}}和其他辅助技术可用，从而让内容对使用这些技术的用户可用。
+元素的无障碍描述是{{glossary("accessibility tree", "无障碍树")}}的一部分，可使 Web 内容对{{glossary("Screen_reader", "屏幕阅读器")}}和其他辅助技术可用，从而让内容对使用这些技术的用户可用。
 
 {{htmlelement("table")}} 的无障碍描述是其首个 {{htmlelement("caption")}} 的内容；{{htmlelement("figure")}} 的是 {{htmlelement("figcaption")}} 的内容；{{htmlelement("summary")}} 的是 {{htmlelement("details")}} 的内容；而 {{htmlelement("input")}} 按钮元素，则是 `value` 属性的值，除非该元素有 `aria-describedby` 或者 `aria-description` 属性（这些属性优先）。
 
