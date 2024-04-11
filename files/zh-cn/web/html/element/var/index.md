@@ -1,6 +1,8 @@
 ---
 title: <var>：表示变量的元素
 slug: Web/HTML/Element/var
+l10n:
+  sourceCommit: fdd3ac5598c3ddceb71e59949b003936ae99f647
 ---
 
 {{HTMLSidebar}}
@@ -8,55 +10,6 @@ slug: Web/HTML/Element/var
 [HTML](/zh-CN/docs/Web/HTML) **`<var>`** 元素表示数学表达式或编程上下文中的变量名称。尽管该行为取决于浏览器，但通常使用当前字体的斜体形式显示。
 
 {{EmbedInteractiveExample("pages/tabbed/var.html", "tabbed-shorter")}}
-
-<table class="properties">
- <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories"
-          >内容分类</a
-        >
-      </th>
-      <td>
-        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式内容"
-          >流式内容</a
-        >、
-        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#短语内容"
-          >短语内容</a
-        >、可感知内容
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">允许的内容</th>
-      <td>
-        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#短语内容"
-          >短语内容</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">标签省略</th>
-      <td>不允许，开始标签和结束标签都不能省略。</td>
-    </tr>
-    <tr>
-      <th scope="row">显式 ARIA 角色</th>
-      <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >没有相应角色</a
-        >
-      </td>
-    </tr>
-  <tr>
-   <td>允许的 ARIA 角色</td>
-   <td>任何</td>
-  </tr>
-  <tr>
-    <tr>
-      <th scope="row">DOM 接口</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
- </tbody>
-</table>
 
 ## 属性
 
@@ -131,6 +84,64 @@ var {
 #### 运行结果
 
 {{EmbedLiveSample("覆盖默认样式", 650, 120)}}
+
+## 技术概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/zh-CN/docs/Web/HTML/Content_categories"
+          >内容分类</a
+        >
+      </th>
+      <td>
+        <a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+          >流式内容</a
+        >、
+        <a href="/zh-CN/docs/Web/HTML/Content_categories#phrasing_content"
+          >短语内容</a
+        >、可感知内容。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允许的内容</th>
+      <td>
+        <a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+          >短语内容</a
+        >。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">标签省略</th>
+      <td>不允许，开始标签和结束标签都不能省略。</td>
+    </tr>
+    <tr>
+      <th scope="row">允许的父元素</th>
+      <td>
+        任何接受<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+          >短语内容</a
+        >的元素。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">隐含的 ARIA 角色</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >没有对应的角色</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允许的 ARIA 角色</th>
+      <td>任意</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM 接口</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 规范
 
