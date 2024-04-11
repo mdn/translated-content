@@ -54,7 +54,7 @@ switch (undefined) {
 
 你可以在 `switch` 语句体内部使用 [`break`](/zh-CN/docs/Web/JavaScript/Reference/Statements/break) 语句提前跳出，通常是在执行完两个 `case` 子句之间的所有语句后。执行会从 `switch` 语句后的第一条语句继续进行。
 
-如果省略了 `break` 语句，程序执行将会继续流向下一个 `case` 子句，甚至到达 `default` 子句，而不论该子句中的表达式值是否匹配。这种行为被称为“穿透”。
+如果省略了 `break` 语句，程序执行将会继续流向下一个 `case` 子句，甚至到达 `default` 子句，而不论该子句中的表达式值是否匹配。这种行为被称为“穿透（fall-through）”。
 
 ```js
 const foo = 0;
