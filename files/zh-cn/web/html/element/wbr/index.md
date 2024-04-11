@@ -7,7 +7,7 @@ l10n:
 
 {{HTMLSidebar}}
 
-**`<wbr>`** [HTML](/zh-CN/docs/Web/HTML) 元素表示一个单词断行机会——文本中的一个位置，浏览器可以在此处选择性地断行，即使按照其常规断行规则此处原本不会产生换行。
+**`<wbr>`** [HTML](/zh-CN/docs/Web/HTML) 元素表示一个单词换行机会——文本中的一个位置，浏览器可以在此处选择性地换行，即使按照其常规换行规则此处原本不会产生换行。
 
 {{EmbedInteractiveExample("pages/tabbed/wbr.html", "tabbed-shorter")}}
 
@@ -17,7 +17,7 @@ l10n:
 
 ## 说明
 
-在使用 UTF-8 编码的页面中，`<wbr>` 元素表现得如同 `U+200B ZERO-WIDTH SPACE` 代码一样。特别是在表现为 Unicode 双向性（bidirectional, 简称 bidi）码点时，它对 {{Glossary("bidi")}} 排序并无影响。例如：`<div dir=rtl>123，<wbr>456</div>` 在未断行显示时呈现为 `123，456` 而非 `456，123`。
+在使用 UTF-8 编码的页面中，`<wbr>` 元素表现得如同 `U+200B ZERO-WIDTH SPACE` 代码一样。特别是在表现为 Unicode 双向性（bidirectional, 简称 bidi）码点时，它对 {{Glossary("bidi")}} 排序并无影响。例如：`<div dir=rtl>123，<wbr>456</div>` 在未换行显示时呈现为 `123，456` 而非 `456，123`。
 
 出于同样的原因，`<wbr>` 元素在换行处不会插入连字符。若要使连字符仅出现在行尾，请改用软连字符实体（`&shy;`）。
 
