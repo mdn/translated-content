@@ -11,7 +11,7 @@ l10n:
 
 一个元素的无障碍描述是{{glossary("accessibility tree", "无障碍树")}}的一部份，可使 Web 内容对{{glossary("Screen_reader", "屏幕阅读器")}}和其他辅助技术可用，从而让内容对使用这些技术的用户可用。
 
-{{htmlelement("table")}} 的无障碍描述是其首个 {{htmlelement("caption")}} 的内容；{{htmlelement("figure")}} 的是 {{htmlelement("figcaption")}} 的内容；{{htmlelement("summary")}} 的是 {{htmlelement("details")}} 的内容；{{htmlelement("input")}} 按钮元素的是其 `value` 属性。除非元素有 `aria-describedby` 或者 `aria-description` 属性（这些属性优先）。
+{{htmlelement("table")}} 的无障碍描述是其首个 {{htmlelement("caption")}} 的内容；{{htmlelement("figure")}} 的是 {{htmlelement("figcaption")}} 的内容；{{htmlelement("summary")}} 的是 {{htmlelement("details")}} 的内容；而 {{htmlelement("input")}} 按钮元素，则是 `value` 属性的值，除非该元素有 `aria-describedby` 或者 `aria-description` 属性（这些属性优先）。
 
 对于其他的元素，它们的描述需要被程序化地与相关的元素关联。在这些例子中，无障碍描述由 [`aria-describedby`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) 属性、[`aria-description`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-description) 属性或者 [`title`](/zh-CN/docs/Web/HTML/Global_attributes#title) 属性提供如果 `title` 不是该元素的{{glossary("accessible name", "无障碍名称")}}。
 
