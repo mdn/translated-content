@@ -7,7 +7,7 @@ l10n:
 
 {{HTMLSidebar}}
 
-**`<span>`** [HTML](/zh-CN/docs/Web/HTML) 元素是一个通用的行级容器，本身不具备特殊含义。它可被用于将元素分组，以便于进行样式化处理（通过使用 [`class`](/zh-CN/docs/Web/HTML/Global_attributes#class) 或 [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id) 属性），以便于添加样式，或共享属性值（例如 [`lang`](/zh-CN/docs/Web/HTML/Global_attributes#lang) 属性）。该元素仅应在无其他合适语义元素时使用。`<span>` 与 {{HTMLElement("div")}} 元素非常相似，但是 {{HTMLElement("div")}} 是一个[块级内容](/zh-CN/docs/Glossary/Block-level_content)，而 `<span>` 是一个[行级内容](/zh-CN/docs/Glossary/Inline-level_content)。
+**`<span>`** [HTML](/zh-CN/docs/Web/HTML) 元素是一个通用的行级容器，本身不具备特殊含义。它可被用于将元素分组，以便于添加样式（通过使用 [`class`](/zh-CN/docs/Web/HTML/Global_attributes#class) 或 [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id) 属性），或共享属性值（例如 [`lang`](/zh-CN/docs/Web/HTML/Global_attributes#lang) 属性）。该元素仅应在无其他合适语义元素时使用。`<span>` 与 {{HTMLElement("div")}} 元素非常相似，但是 {{HTMLElement("div")}} 是[块级元素](/zh-CN/docs/Glossary/Block-level_content)，而 `<span>` 是一个[行级元素](/zh-CN/docs/Glossary/Inline-level_content)。
 
 {{EmbedInteractiveExample("pages/tabbed/span.html", "tabbed-shorter")}}
 
