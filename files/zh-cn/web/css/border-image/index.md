@@ -9,7 +9,7 @@ slug: Web/CSS/border-image
 
 {{EmbedInteractiveExample("pages/css/border-image.html")}}
 
-> **注意：** 你应该另外指定 {{cssxref("border-style")}} 以防边框图像没能加载。虽然规范并没有严格要求这一点，但当 {{cssxref("border-style")}} 为 `none` 或 {{cssxref("border-width")}} 为 `0` 时，某些浏览器不会渲染边框图像。
+> **备注：** 你应该另外指定 {{cssxref("border-style")}} 以防边框图像没能加载。虽然规范并没有严格要求这一点，但当 {{cssxref("border-style")}} 为 `none` 或 {{cssxref("border-width")}} 为 `0` 时，某些浏览器不会渲染边框图像。
 
 ## 成分属性
 
@@ -46,7 +46,7 @@ border-image: unset;
 
 `border-image` 属性可以用下面列出的 1 到 5 个值中的任意值指定。
 
-> **注意：** 如果 {{cssxref("border-image-source")}} 的[计算值](/zh-CN/docs/Web/CSS/computed_value)为 `none`，或图像无法显示，则将显示 {{cssxref("border-style")}}。
+> **备注：** 如果 {{cssxref("border-image-source")}} 的[计算值](/zh-CN/docs/Web/CSS/computed_value)为 `none`，或图像无法显示，则将显示 {{cssxref("border-style")}}。
 
 ### 值
 
@@ -87,9 +87,7 @@ border-image: unset;
 #### HTML
 
 ```html
-<div id="bitmap">
-  这个元素被基于位图的边框图像围绕！
-</div>
+<div id="bitmap">这个元素被基于位图的边框图像围绕！</div>
 ```
 
 #### CSS
@@ -118,9 +116,7 @@ border-image: unset;
 #### HTML
 
 ```html
-<div id="gradient">
-  这个元素被基于渐变的边框图像围绕！
-</div>
+<div id="gradient">这个元素被基于渐变的边框图像围绕！</div>
 ```
 
 #### CSS
