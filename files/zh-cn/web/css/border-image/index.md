@@ -53,22 +53,26 @@ border-image: unset;
 - `<'border-image-source'>`
   - : 源图像。见 {{cssxref("border-image-source")}}。
 - `<'border-image-slice'>`
-  - : 尺寸，用于将源图像切割为多个部分。最多可以指定四个值。见 {{cssxref("border-image-slice")}}。
+  - : 尺寸，用于将源图像分割为多个区域。最多可以指定四个值。见 {{cssxref("border-image-slice")}}。
 - `<'border-image-width'>`
   - : 边框图像的宽度。最多可以指定四个值。见 {{cssxref("border-image-width")}}。
 - `<'border-image-outset'>`
   - : 边框图像到元素外部边缘的距离。最多可以指定四个值。见 {{cssxref("border-image-outset")}}。
 - `<'border-image-repeat'>`
-  - : 定义源图像边缘部分适应边框图像尺寸的方式。最多可以指定两个值。见 {{cssxref("border-image-repeat")}}。
+  - : 定义源图像边缘区域适配边框图像尺寸的方式。最多可以指定两个值。见 {{cssxref("border-image-repeat")}}。
 
-### 无障碍考虑
+## 无障碍考虑
 
 辅助技术无法解析边框图像。如果图像包含对理解页面的整体内容至关重要的信息，最好在文档中对其进行语义描述。
 
-- [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
+- [MDN Understanding WCAG, Guideline 1.1 explanations](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
 - [Understanding Success Criterion 1.1.1 | Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
-### 正式语法
+## 形式定义
+
+{{cssinfo}}
+
+## 形式语法
 
 {{csssyntax}}
 
@@ -76,43 +80,63 @@ border-image: unset;
 
 ### 位图
 
-#### HTML 内容
+在这个示例中，我们将菱形图案作为元素的边框图像。边框图像的源文件是一个 81 x 81 像素的“.png”文件，垂直方向和水平方向上各排列着三个菱形。
+
+![an example borderimage](border.png)
+
+#### HTML
 
 ```html
-<div id="bitmap">The image is stretched to fill the area.</div>
+<div id="bitmap">
+  这个元素被基于位图的边框图像围绕！
+</div>
 ```
 
-#### CSS 内容
+#### CSS
+
+为了适配单个菱形的尺寸，我们将使用 81 被 3 或 27 除后得到的值，将图像分割为角区域和边缘区域。为了将边框图像居中放置于元素背景的边缘，我们将令 border-image-outset 等于 border-image-width 的一半。最后，将 border-image-repeat 设置为 round将使边框切片均匀贴合，没有裁剪或间隙。
 
 ```css
 #bitmap {
-  border: 30px solid transparent;
-  padding: 20px;
-  border-image: url("border.png") 30;
+  width: 200px;
+  background-color: #ffa;
+  border: 36px solid orange;
+  margin: 30px;
+  padding: 10px;
+
+  border-image: url("border.png") 27 / 36px 28px 18px 8px / 18px 14px 9px 4px
+    round;
 }
 ```
 
-{{ EmbedLiveSample('位图') }}
+#### 结果
 
-### 渐变
+{{EmbedLiveSample('Bitmap', '100%', 200)}}
 
-#### HTML 内容
+### 简便
+
+#### HTML
 
 ```html
-<div id="gradient">The image is stretched to fill the area.</div>
+<div id="gradient">
+  这个元素被基于渐变的边框图像围绕！
+</div>
 ```
 
-#### CSS 内容
+#### CSS
 
 ```css
 #gradient {
+  width: 200px;
   border: 30px solid;
-  border-image: linear-gradient(red, yellow) 10;
+  border-image: repeating-linear-gradient(45deg, #f33, #3bf, #f33 30px) 60;
   padding: 20px;
 }
 ```
 
-{{ EmbedLiveSample('渐变') }}
+#### 结果
+
+{{EmbedLiveSample('Gradient')}}
 
 ## 规范
 
@@ -121,3 +145,13 @@ border-image: unset;
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- {{cssxref("border")}}
+- {{cssxref("outline")}}
+- {{cssxref("box-shadow")}}
+- {{cssxref("background-image")}}
+- {{cssxref("url", "url()")}} 函数
+- 渐变函数：{{CSSxRef("gradient/conic-gradient", "conic-gradient()")}}, {{CSSxRef("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}, {{CSSxRef("gradient/linear-gradient", "linear-gradient()")}}, {{CSSxRef("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{CSSxRef("gradient/radial-gradient", "radial-gradient()")}}, {{CSSxRef("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
+- MDN 博客（2023）[Border images in CSS: A key focus area for Interop 2023](/en-US/blog/border-images-interop-2023/)
