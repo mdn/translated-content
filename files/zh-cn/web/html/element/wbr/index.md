@@ -1,56 +1,29 @@
 ---
-title: <wbr>
+title: <wbr>：换行机会元素
 slug: Web/HTML/Element/wbr
+l10n:
+  sourceCommit: 0af6781c93ffe3d011a060b4e517187cf780e93a
 ---
 
 {{HTMLSidebar}}
 
-**HTML `<wbr>` 元素** — 一个文本中的位置，其中浏览器可以选择来换行，虽然它的换行规则可能不会在这里换行。
+**`<wbr>`** [HTML](/zh-CN/docs/Web/HTML) 元素表示一个单词断行机会——文本中的一个位置，浏览器可以在此处选择性地断行，即使按照其常规断行规则此处原本不会产生换行。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/zh-CN/docs/HTML/Content_categories">Content categories</a></th>
-   <td><a href="/zh-CN/docs/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted content</th>
-   <td>Empty</td>
-  </tr>
-  <tr>
-   <th scope="row">Tag omission</th>
-   <td>It is an {{Glossary("empty element")}}; it must have a start tag, but must not have an end tag.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted parents</th>
-   <td>Any element that accepts <a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">Permitted ARIA roles</th>
-   <td>Any</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM interface</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
-</table>
+{{EmbedInteractiveExample("pages/tabbed/wbr.html", "tabbed-shorter")}}
 
 ## 属性
 
-这个元素仅仅包含 [全局属性](/zh-CN/docs/HTML/Global_attributes)
+这个元素只包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-## Notes
+## 说明
 
-在 UTF-8 编码的页面中， `<wbr>` 表现为 `U+200B ZERO-WIDTH SPACE` （零宽空格）代码点。特别是，它表现为 Unicode bidi BN 代码点，也就是说，它对 bidi-ordering 没有影响：`<div dir=rtl>123,<wbr>456</div>` 展示 `123,456` 而不是 `456,123`，当不拆成的两行时候。
+在使用 UTF-8 编码的页面中，`<wbr>` 元素表现得如同 `U+200B ZERO-WIDTH SPACE` 代码一样。特别是在表现为 Unicode 双向性（bidirectional, 简称 bidi）码点时，它对 {{Glossary("bidi")}} 排序并无影响。例如：`<div dir=rtl>123，<wbr>456</div>` 在未断行显示时呈现为 `123，456` 而非 `456，123`。
 
-出于相同原因， `< wbr >`元素不会在换行的地方引入连字符。为了使连字符仅仅在行尾出现，使用连字符软实体 (`& shy;`) 来代替。
-
-这个元素首先在 Internet Explorer 5.5 中实现，并且在 HTML5 中官方定义。
+出于同样的原因，`<wbr>` 元素在换行处不会插入连字符。若要使连字符仅出现在行尾，请改用软连字符实体（`&shy;`）。
 
 ## 示例
 
-[_Yahoo 代码规范_](https://web.archive.org/web/20121105171040/http://styleguide.yahoo.com/)推荐[在标点之前为 URL 换行](https://web.archive.org/web/20121105171040/http://styleguide.yahoo.com/editing/treat-abbreviations-capitalization-and-titles-consistently/website-names-and-addresses)，以便避免将标点符号留在行尾，这会让读者将 URL 的末尾搞错。
+[_Yahoo 风格指南_](https://web.archive.org/web/20121014054923/http://styleguide.yahoo.com/)建议在 [URL 遇到标点符号*之前*](https://web.archive.org/web/20121105171040/http://styleguide.yahoo.com/editing/treat-abbreviations-capitalization-and-titles-consistently/website-names-and-addresses)换行，以避免在行尾留下可能被读者误认为是 URL 结尾的标点符号。
 
 ```html
 <p>
@@ -58,7 +31,62 @@ slug: Web/HTML/Element/wbr
 </p>
 ```
 
+### 结果
+
 {{EmbedLiveSample("示例")}}
+
+## 技术概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/zh-CN/docs/Web/HTML/Content_categories"
+          >内容分类</a
+        >
+      </th>
+      <td>
+        <a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+          >流式内容</a
+        >、<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+          >短语内容</a
+        >。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允许的内容</th>
+      <td>空</td>
+    </tr>
+    <tr>
+      <th scope="row">标签省略</th>
+      <td>不允许，开始标签和结束标签都不能省略。</td>
+    </tr>
+    <tr>
+      <th scope="row">允许的父元素</th>
+      <td>
+        任何接受<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+          >短语内容</a
+        >的元素。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">隐含的 ARIA 角色</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >没有对应的角色</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允许的 ARIA 角色</th>
+      <td>任意</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM 接口</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 规范
 
@@ -67,3 +95,10 @@ slug: Web/HTML/Element/wbr
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- {{cssxref("overflow-wrap")}}
+- {{cssxref("word-break")}}
+- {{cssxref("hyphens")}}
+- {{HTMLElement("br")}} 元素
