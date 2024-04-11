@@ -7,7 +7,7 @@ l10n:
 
 {{HTMLSidebar}}
 
-[HTML](/zh-CN/docs/Web/HTML) **`<var>`** 元素表示数学表达式或编程上下文中的变量名称。尽管该行为取决于浏览器，但通常使用当前字体的斜体形式显示。
+[HTML](/zh-CN/docs/Web/HTML) **`<var>`** 元素表示数学表达式或编程上下文中的变量名称。它通常使用当前字体的斜体版本来显示，不过这种行为取决于浏览器。
 
 {{EmbedInteractiveExample("pages/tabbed/var.html", "tabbed-shorter")}}
 
