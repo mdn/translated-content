@@ -9,7 +9,7 @@ slug: Web/CSS/border-image
 
 {{EmbedInteractiveExample("pages/css/border-image.html")}}
 
-> **注意：**你应该另外指定 {{cssxref("border-style")}} 以防边框图像没能加载。虽然规范并没有严格要求这一点，但当 {{cssxref("border-style")}} 为 `none` 或 {{cssxref("border-width")}} 为 `0` 时，某些浏览器不会渲染边框图像。
+> **注意：** 你应该另外指定 {{cssxref("border-style")}} 以防边框图像没能加载。虽然规范并没有严格要求这一点，但当 {{cssxref("border-style")}} 为 `none` 或 {{cssxref("border-width")}} 为 `0` 时，某些浏览器不会渲染边框图像。
 
 ## 成分属性
 
@@ -46,7 +46,7 @@ border-image: unset;
 
 `border-image` 属性可以用下面列出的 1 到 5 个值中的任意值指定。
 
-> **注意：**如果 {{cssxref("border-image-source")}} 的[计算值](/zh-CN/docs/Web/CSS/computed_value)为 `none`，或图像无法显示，则将显示 {{cssxref("border-style")}}。
+> **注意：** 如果 {{cssxref("border-image-source")}} 的[计算值](/zh-CN/docs/Web/CSS/computed_value)为 `none`，或图像无法显示，则将显示 {{cssxref("border-style")}}。
 
 ### 值
 
@@ -82,7 +82,7 @@ border-image: unset;
 
 在这个示例中，我们将菱形图案作为元素的边框图像。边框图像的源文件是一个 81 x 81 像素的“.png”文件，垂直方向和水平方向上各排列着三个菱形。
 
-![an example borderimage](border.png)
+![一个示例边框图像](border.png)
 
 #### HTML
 
@@ -94,7 +94,7 @@ border-image: unset;
 
 #### CSS
 
-为了适配单个菱形的尺寸，我们将使用 81 被 3 或 27 除后得到的值，将图像分割为角区域和边缘区域。为了将边框图像居中放置于元素背景的边缘，我们将令 border-image-outset 等于 border-image-width 的一半。最后，将 border-image-repeat 设置为 round将使边框切片均匀贴合，没有裁剪或间隙。
+每个菱形的宽和高皆为 81 ÷ 3 = 27，所以我们将 border-image-slice 设置为 27，这样图像的角区域和边缘区域宽高皆为 27px。为了使每个菱形的中心恰好位于元素背景的边缘，我们将令 border-image-outset 等于 border-image-width 的一半。最后，将 border-image-repeat 设置为 round 将使分割出的不同区域均匀贴合，没有裁剪或间隙。
 
 ```css
 #bitmap {
@@ -111,9 +111,9 @@ border-image: unset;
 
 #### 结果
 
-{{EmbedLiveSample('Bitmap', '100%', 200)}}
+{{EmbedLiveSample('位图', '100%', 200)}}
 
-### 简便
+### 渐变
 
 #### HTML
 
@@ -136,7 +136,7 @@ border-image: unset;
 
 #### 结果
 
-{{EmbedLiveSample('Gradient')}}
+{{EmbedLiveSample('渐变')}}
 
 ## 规范
 
