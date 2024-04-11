@@ -19,7 +19,7 @@ l10n:
 
 你可以查看页面上任何元素的无障碍描述：查看浏览器开发工具的无障碍选项卡——它其中就提供了当前选定元素的无障碍信息。
 
-## See also
+## 参见
 
 - {{glossary("accessible name")}} 术语
 - [ARIA 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles)
