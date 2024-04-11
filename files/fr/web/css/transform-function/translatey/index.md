@@ -22,7 +22,7 @@ transform: translateY(50%);
 ### Valeurs
 
 - `<length-percentage>`
-  - : valeur de type [`<length>`](/fr/docs/Web/CSS/length) ou [`<percentage>`](/fr/docs/Web/CSS/percentage) représentant l'ordonnée (verticale, coordonnée y) du vecteur de translation [0, ty]. Dans [le système de coordonnées cartésiennes](/fr/docs/Web/CSS/transform-function#le_système_de_coordonnées_cartésiennes), elle représente le déplacement le long de l'axe y. Une valeur en pourcentage fait référence à la hauteur de la boîte de référence définie par la propriété [`transform-box`](/fr/docs/Web/CSS/transform-box).
+  - : Valeur de type [`<length>`](/fr/docs/Web/CSS/length) ou [`<percentage>`](/fr/docs/Web/CSS/percentage) représentant l'ordonnée (verticale, coordonnée y) du vecteur de translation [0, ty]. Dans [le système de coordonnées cartésiennes](/fr/docs/Web/CSS/transform-function#le_système_de_coordonnées_cartésiennes), elle représente le déplacement le long de l'axe y. Une valeur en pourcentage fait référence à la hauteur de la boîte de référence définie par la propriété [`transform-box`](/fr/docs/Web/CSS/transform-box).
 
 <table class="standard-table">
   <thead>
