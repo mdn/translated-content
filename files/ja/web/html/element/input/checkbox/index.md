@@ -2,7 +2,7 @@
 title: <input type="checkbox">
 slug: Web/HTML/Element/input/checkbox
 l10n:
-  sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
+  sourceCommit: 8720024f7e04f09f7ca879a0291a85b0eb7168df
 ---
 
 {{HTMLSidebar}}
@@ -41,7 +41,7 @@ l10n:
 
 ## 追加の属性
 
-すべての {{HTMLElement("input")}} 型で共通する属性に加え、 "`checkbox`" 型の入力欄は次の属性にも対応しています。
+すべての {{HTMLElement("input")}} 型で[共通する属性](/ja/docs/Web/HTML/Element/input#属性)に加え、 "`checkbox`" 型の入力欄は次の属性にも対応しています。
 
 - `checked`
 
@@ -287,7 +287,7 @@ otherCheckbox.addEventListener("change", () => {
     </tr>
     <tr>
       <td><strong>イベント</strong></td>
-      <td>{{domxref("HTMLElement/change_event", "change")}} および {{domxref("HTMLElement/input_event", "input")}}</td>
+      <td>{{domxref("HTMLElement/change_event", "change")}} および {{domxref("Element/input_event", "input")}}</td>
     </tr>
     <tr>
       <td><strong>対応している共通属性</strong></td>

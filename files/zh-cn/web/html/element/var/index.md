@@ -36,7 +36,7 @@ slug: Web/HTML/Element/var
     </tr>
     <tr>
       <th scope="row">标签省略</th>
-      <td>{{no_tag_omission}}</td>
+      <td>不允许，开始标签和结束标签都不能省略。</td>
     </tr>
     <tr>
       <th scope="row">显式 ARIA 角色</th>

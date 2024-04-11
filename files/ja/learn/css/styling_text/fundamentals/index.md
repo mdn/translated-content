@@ -1,21 +1,23 @@
 ---
 title: 基本的なテキストとフォントの装飾
 slug: Learn/CSS/Styling_text/Fundamentals
+l10n:
+  sourceCommit: 18696d0c4bedd2dbc7b415be4da72e2beaf6bfbb
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
 
 この記事では、{{glossary("CSS")}} によるテキストの装飾の習得に向けて旅を始めましょう。 ここでは、フォントの太さ、ファミリーそしてスタイルの設定、フォントの一括指定、テキストの配置とその他のエフェクト、ラインと文字の間隔などを含んだ、テキストやフォントの装飾の基本について詳しく説明します。
 
-| 前提知識: | 基本的なコンピューターリテラシー、HTML の基本（[HTML 入門](/ja/docs/Learn/HTML/Introduction_to_HTML)を学ぶ）、CSS の基本（[CSS 入門](/ja/docs/Learn/CSS/Introduction_to_CSS)を学ぶ）。 |
-| --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 学習目標: | ウェブページのテキストを装飾するために必要な基本的なプロパティとテクニックを学ぶこと。                                                                                                 |
+| 前提知識: | 基本的なコンピューターリテラシー、HTML の基本（[HTML 入門](/ja/docs/Learn/HTML/Introduction_to_HTML)を学ぶ）、CSS の基本（[CSS 入門](/ja/docs/Learn/CSS/First_steps)を学ぶ）。 |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 学習目標: | ウェブページのテキストを装飾するために必要な基本的なプロパティとテクニックを学ぶこと。                                                                                         |
 
 ## CSS においてテキストの装飾には何が関係していますか？
 
 HTML と CSS を使った作業ですでに経験したように、要素内のテキストは要素のコンテンツボックス内にレイアウトされます。 コンテンツ領域の左上（RTL 言語のコンテンツの場合は右上）から始まり、ラインの終りに向かって流れます。 終りに達すると、次のラインに進み、続けてすべてのコンテンツがボックスに配置されるまで次のラインに進みます。 テキストコンテンツは事実上一連のインライン要素のようにふるまい、互いに隣接するラインに配置され、ラインの終りに達するまで、または、{{htmlelement("br")}} 要素を使用して手動で改行を強制しない限り改行を作成しません。
 
-> **メモ:** 上の段落で混乱していると感じても問題ありません — 先に進む前に、ボックスモデル理論を磨くために、[ボックスモデル](/ja/docs/Learn/CSS/Introduction_to_CSS/Box_model)の記事に戻って見直してください。
+> **メモ:** 上の段落で混乱していると感じても問題ありません — 先に進む前に、ボックスモデル理論を磨くために、[ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)の記事に戻って見直してください。
 
 テキストを装飾するために使用される CSS プロパティは、一般的に次の 2 つのカテゴリに分類されます。 この記事では、これらのプロパティを個別に説明します。
 
@@ -42,13 +44,13 @@ HTML と CSS を使った作業ですでに経験したように、要素内の�
 </p>
 ```
 
-[完成した例](http://mdn.github.io/learning-area/css/styling-text/fundamentals/)は Github にあります（[ソースコード](https://github.com/mdn/learning-area/blob/master/css/styling-text/fundamentals/index.html)も参照してください）。
+[完成した例](https://mdn.github.io/learning-area/css/styling-text/fundamentals/)は Github にあります（[ソースコード](https://github.com/mdn/learning-area/blob/master/css/styling-text/fundamentals/index.html)も参照してください）。
 
 ### 色
 
 {{cssxref("color")}} プロパティは、選択された要素の前景のコンテンツの色を設定します（通常はテキストですが、{{cssxref("text-decoration")}} プロパティを使用してテキストに下線や上線を配置するなど、他のいくつかの要素を含めることもできます）。
 
-`color` は次のように任意の [CSS カラー単位](/ja/Learn/CSS/Introduction_to_CSS/Values_and_units#Colors)を受け入れることができます。
+`color` は次のように任意の [CSS カラー単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units#colors)を受け入れることができます。
 
 ```css
 p {
@@ -168,7 +170,7 @@ p {
 
 ### フォントサイズ
 
-前のモジュールの [CSS の値と単位](/ja/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)の記事で、[長さとサイズの単位](/ja/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size)を確認しました。 フォントサイズ（{{cssxref("font-size")}} プロパティで設定）は、これらの単位のほとんど（および[パーセント](/ja/Learn/CSS/Introduction_to_CSS/Values_and_units#Percentages)などの他の単位）で測定された値を取ることができますが、テキストのサイズを設定するために使用する最も一般的な単位は次のとおりです。
+前のモジュールの [CSS の値と単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)の記事で、[長さとサイズの単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units#length_and_size)を確認しました。 フォントサイズ（{{cssxref("font-size")}} プロパティで設定）は、これらの単位のほとんど（および[パーセント](/ja/docs/Learn/CSS/Building_blocks/Values_and_units#percentages)などの他の単位）で測定された値を取ることができますが、テキストのサイズを設定するために使用する最も一般的な単位は次のとおりです。
 
 - `px` (pixels): テキストを表示したい高さのピクセル数。 これは絶対的な単位です — それはほとんどどんな状況でもページ上のフォントの同じ最終的な計算値になります。
 - `em`: `1em` は、現在装飾している要素の親要素に設定されているフォントサイズ（より具体的には、親要素の内側に含まれる大文字の M の幅）に等しくなります。 フォントサイズの異なるネストされた要素が多数設定されている場合には厄介な作業になるかもしれませんが、以下に示すように、それは実行可能です。 なぜわざわざそうする？ 慣れると非常に自然になり、テキストだけでなく、`em` を使用してすべてのサイズを変更できます。 ウェブサイト全体を `em` を使用してサイズ設定することができ、これにより、メンテナンスが簡単になります。
@@ -311,10 +313,10 @@ text-shadow: 4px 4px 5px red;
 
 4 つのプロパティは次のとおりです。
 
-1. 元のテキストからの影の水平方向のオフセット — これは、ほとんどの CSS の[長さとサイズの単位](/ja/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size)を取ることができますが、最も一般的には `px` を使用します。 この値を含める必要があります。
+1. 元のテキストからの影の水平方向のオフセット — これは、ほとんどの CSS の[長さとサイズの単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units#length_and_size)を取ることができますが、最も一般的には `px` を使用します。 この値を含める必要があります。
 2. 元のテキストからの影の垂直方向のオフセット — 基本的に水平方向のオフセットと同じようにふるまいますが、影を左右に移動するのではなく上下に移動する点が異なります。 この値を含める必要があります。
-3. ぼかし半径 — 値が大きいほど、影はより広く分散されます。 この値が含まれていない場合、デフォルトは 0 になり、ぼかしは行われません。 これは、ほとんどの CSS の[長さとサイズの単位](/ja/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size)を取ることができます。
-4. 影のベースカラー — 任意の [CSS カラー単位](/ja/Learn/CSS/Introduction_to_CSS/Values_and_units#Colors)を取ります。 含まれていない場合、デフォルトは `black` です。
+3. ぼかし半径 — 値が大きいほど、影はより広く分散されます。 この値が含まれていない場合、デフォルトは 0 になり、ぼかしは行われません。 これは、ほとんどの CSS の[長さとサイズの単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units#length_and_size)を取ることができます。
+4. 影のベースカラー — 任意の [CSS カラー単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units#colors)を取ります。 含まれていない場合、デフォルトは `black` です。
 
 > **メモ:** 正のオフセット値は影を右下に移動させますが、`-1px -1px` のように負のオフセット値を使用して影を左上に移動させることもできます。
 
@@ -374,7 +376,7 @@ p {
 
 {{ EmbedLiveSample('Multiple_shadows', '100%', 220) }}
 
-> **メモ:** Sitepoint の記事 [Moonlighting with CSS text-shadow](http://www.sitepoint.com/moonlighting-css-text-shadow/) で、`text-shadow` の使い方のより興味深い例を見ることができます。
+> **メモ:** Sitepoint の記事 [Moonlighting with CSS text-shadow](https://www.sitepoint.com/moonlighting-css-text-shadow/) で、`text-shadow` の使い方のより興味深い例を見ることができます。
 
 ## テキストのレイアウト
 
@@ -436,7 +438,7 @@ p {
 
 ### ラインの高さ
 
-{{cssxref("line-height")}} プロパティはテキストの各ラインの高さを設定します — これはほとんどの[長さとサイズの単位](/ja/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size)をとることができますが、乗数として機能し、一般的に最良の選択肢と考えられる単位なしの値をとることもできます — `line-height` を得るために {{cssxref("font-size")}} が乗算されます。 本文はラインが離れていると、一般的に見栄えがよく、読みやすくなります。 推奨されるラインの高さは約 1.5 〜 2（ダブルスペース）です。 したがって、テキストのラインをフォントの高さの 1.5 倍に設定するには、次のようにします。
+{{cssxref("line-height")}} プロパティはテキストの各ラインの高さを設定します — これはほとんどの[長さとサイズの単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units#length_and_size)をとることができますが、乗数として機能し、一般的に最良の選択肢と考えられる単位なしの値をとることもできます — `line-height` を得るために {{cssxref("font-size")}} が乗算されます。 本文はラインが離れていると、一般的に見栄えがよく、読みやすくなります。 推奨されるラインの高さは約 1.5 〜 2（ダブルスペース）です。 したがって、テキストのラインをフォントの高さの 1.5 倍に設定するには、次のようにします。
 
 ```css
 line-height: 1.5;
@@ -490,7 +492,7 @@ p {
 
 ### 文字と単語の間隔設定
 
-{{cssxref("letter-spacing")}} プロパティと {{cssxref("word-spacing")}} プロパティを使用すると、テキスト内の文字と単語の間隔を設定できます。 これらはあまり使用しませんが、ある外観を得るためや、特に濃いフォントの読みやすさを向上させるために使用することがあります。 それらはほとんどの[長さとサイズの単位](/ja/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size)を取ることができます。
+{{cssxref("letter-spacing")}} プロパティと {{cssxref("word-spacing")}} プロパティを使用すると、テキスト内の文字と単語の間隔を設定できます。 これらはあまり使用しませんが、ある外観を得るためや、特に濃いフォントの読みやすさを向上させるために使用することがあります。 それらはほとんどの[長さとサイズの単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units#length_and_size)を取ることができます。
 
 例として、この例の {{htmlelement("p")}} 要素の最初のラインに次を適用したとします。
 

@@ -20,7 +20,7 @@ var downloading = browser.downloads.download(
 );
 ```
 
-### パラメータ
+### パラメーター
 
 - `options`
 

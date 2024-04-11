@@ -1667,10 +1667,6 @@
     "modified": "2020-09-02T11:05:36.300Z",
     "contributors": ["bogpok"]
   },
-  "Learn/Front-end_web_developer": {
-    "modified": "2020-10-26T19:26:16.101Z",
-    "contributors": ["Villian79", "bogpok", "Menma"]
-  },
   "Learn/Getting_started_with_the_web": {
     "modified": "2020-07-17T07:11:41.531Z",
     "contributors": [
@@ -10155,10 +10151,6 @@
     "modified": "2020-10-15T21:31:50.271Z",
     "contributors": ["JCodeg", "PopovDaniil", "Aleksej", "karskiy"]
   },
-  "Web/HTML/Element/image": {
-    "modified": "2019-03-18T20:41:47.756Z",
-    "contributors": ["Dozorengel", "KishiTako"]
-  },
   "Web/HTML/Element/img": {
     "modified": "2020-10-15T21:32:27.907Z",
     "contributors": [
@@ -15995,8 +15987,16 @@
     "modified": "2019-01-17T00:00:52.853Z",
     "contributors": ["wbamberg", "warsan"]
   },
+  "conflicting/Web/HTML/Element/img": {
+    "modified": "2019-03-18T20:41:47.756Z",
+    "contributors": ["Dozorengel", "KishiTako"]
+  },
   "conflicting/Web/SVG/Attribute": {
     "modified": "2020-10-15T22:34:58.576Z",
     "contributors": ["osipov_s"]
+  },
+  "orphaned/Learn/Front-end_web_developer": {
+    "modified": "2020-10-26T19:26:16.101Z",
+    "contributors": ["Villian79", "bogpok", "Menma"]
   }
 }
