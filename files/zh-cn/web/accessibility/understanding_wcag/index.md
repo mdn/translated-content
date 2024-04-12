@@ -9,7 +9,7 @@ l10n:
 
 这一组文章提供了帮助你理解如何遵循 W3C Web 内容无障碍指南 2.0 或 2.1（或者只是 WCAG，出于撰写本文的目的）建议的步骤的快速解释。
 
-WCAG 2.0 和 2.1 为使得 Web 内容更易于让各中残障人士访问提供了一套详细的指南。它非常全面，但也过于详细，因此很难快速理解。因此，我们总结了满足不同建议所需的实际步骤，并在必要时提供了更多详细信息的链接。
+WCAG 2.0 和 2.1 为使得 Web 内容更易于让各类残障人士访问提供了一套详细的指南。它非常全面，但也过于详细，因此很难快速理解。为此，我们总结了满足不同建议所需的实际步骤，并在必要时提供了指向更多详细信息的链接。
 
 ## 四大原则
 
@@ -20,7 +20,7 @@ WCAG 大致分为四个原则——它们是 Web 内容无障碍所**必须具�
 - [可感知](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable)：用户必须能够通过一种或多种感官的方式来感知内容。
 - [可操作](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Operable)：用户必须能够控制 UI 元素（例如，按钮必须可以通过某种方式（鼠标、键盘、语音指令等）点击）。
 - [可理解](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Understandable)：内容必须是能够被用户理解的。
-- [健壮性](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Robust)：内容必须使用广泛采用的，且将能够在不同的浏览器中持续工作的 Web 标准来开发。
+- [健壮性](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Robust)：内容必须使用广泛采用的，并且能够在不同的浏览器中长期可用的 Web 标准来开发。
 
 ## 应该采用 WCAG 2.0 还是 2.1？
 
