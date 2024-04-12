@@ -9,15 +9,15 @@ l10n:
 
 **`<abbr>`** [HTML](/zh-CN/docs/Web/HTML) 元素表示一个缩写词或首字母缩略词。
 
-在包含缩写或首字母缩写词时，应在纯文本中提供该术语的扩展形式。同时使用 `<abbr>` 元素来标记缩写。这可以告知用户缩写或首字母缩写词的含义。
+在包含缩写或首字母缩写词时，应在纯文本中提供该术语的扩展形式。同时使用 `<abbr>` 元素来标记缩写。这可以告知用户缩写或首字母缩略词的含义。
 
-可选的 [`title`](/zh-CN/docs/Web/HTML/Global_attributes#title) 属性可以在没有完整扩展情况下为缩写或首字母缩略词提供扩展。这为用户代理提供了如何声称/显示内容的提示，并告知所有用户该缩写的含义。如果存在 `title` 属性则必须包含此完整描述且无其他内容。
+可选的 [`title`](/zh-CN/docs/Web/HTML/Global_attributes#title) 属性可以在没有完整扩展情况下为缩写或首字母缩略词提供扩展。这为用户代理提供了如何宣告/显示内容的提示，并告知所有用户该缩写的含义。如果存在 `title` 属性则必须包含此完整描述且无其他内容。
 
 {{EmbedInteractiveExample("pages/tabbed/abbr.html", "tabbed-shorter")}}
 
 ## 属性
 
-这个元素只包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。在 `<abbr>` 元素中使用时，[`title`](/zh-CN/docs/Web/HTML/Global_attributes#title) 属性具有特定的语义含义；它*必须*包含该缩写的完整可读描述或扩展描述。此文本通常会在鼠标光标悬停在元素上时由浏览器作为工具提示展示出来。
+这个元素只包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。在 `<abbr>` 元素中使用时，[`title`](/zh-CN/docs/Web/HTML/Global_attributes#title) 属性具有特定的语义含义；它*必须*包含该缩写的完整可读描述或扩展描述。此文本通常会在鼠标光标悬停在元素上时由浏览器通过提示框展示出来。
 
 你使用的每个 `<abbr>` 元素都是相互独立的；为一个元素提供 `title` 属性并不会自动将相同地扩展文本关联到具有相同内容文本的其他元素上。
 
@@ -27,20 +27,20 @@ l10n:
 
 确实并非要求所有缩写都必须使用 `<abbr>` 进行标记。然而，在某些情况下，这样做是有帮助的：
 
-- 当在文档内容中使用了缩写并且希望在正文流程之外提供一个扩展或定义时，应当使用带有适当 [`title`](/zh-CN/docs/Web/HTML/Global_attributes#title) 属性的 `abbr` 标签。
+- 当在文档内容中使用了缩写并且希望在正文流程之外提供一个扩展或定义时，应当使用带有适当 [`title`](/zh-CN/docs/Web/HTML/Global_attributes#title) 属性的 `<abbr>` 标签。
 - 为了定义读者可能不熟悉的缩写，请使用 `<abbr>` 并提供内联文本来提供定义。仅当内联扩展或定义不可用时才包含 `title` 属性。
 - 当文本中出现的缩写需要从语义层面上加以标注时，`<abbr>` 元素非常有用。这可以用于样式或脚本目的。
 - 你可以将 `<abbr>` 和 {{HTMLElement("dfn")}} 元素来定义术语其对应的缩写或首字母缩略词。请参阅下面的[定义缩略语](#定义缩略语)。
 
 ### 语法注意事项
 
-在具有[语法数](<https://zh.wikipedia.org/wiki/数_(语法)>)（即，在那些名词的数量影响句子语法）的语言中，应在 `title` 属性中使用与 `<abbr>` 元素内部相同的语法数。这一点在诸如阿拉伯语等拥有超过两种数（单数、复数等）的语言中尤为重要，也适用于英语。
+在具有[数（语法）](<https://zh.wikipedia.org/wiki/数_(语法)>)的语言（即数词会影响句子语法的语言）中，应在 `title` 属性中使用与 `<abbr>` 元素内部相同的语法数。这一点在诸如阿拉伯语等拥有超过两种数的语言中尤为重要，但也适用于英语。
 
 ## 默认样式
 
-此元素存在的目的纯粹是为了方便作者，并且默认情况下都会将其作为行内元素（{{cssxref('display')}}`:inline`）显示，然而，各个浏览器对其的默认样式可能存在差异：
+此元素存在的目的纯粹是为了方便作者，并且默认情况下都会将其以行向（{{cssxref('display')}}`: inline`）显示，然而，各个浏览器对其的默认样式可能存在差异：
 
-某些浏览器会在该元素内容下添加虚线下划线，另一些浏览器会将内容转换为小型大写字母，并添加虚线下划线。还有些浏览器则可能仅将其视为普通的 {{HTMLElement("span")}} 元素对待，不作特殊样式处理。为了控制这些样式，可以通过 CSS 属性 {{cssxref('text-decoration')}} 和 {{cssxref('font-variant')}} 进行设置。
+某些浏览器会在该元素内容下添加虚线下划线，另一些浏览器会将内容转换为小型大写字母，并添加虚线下划线。还有些浏览器则可能仅将其视为普通的 {{HTMLElement("span")}} 元素对待，不作特殊样式处理。可以通过 CSS 属性 {{cssxref('text-decoration')}} 和 {{cssxref('font-variant')}} 来控制它的样式。
 
 ## 示例
 
@@ -65,7 +65,7 @@ l10n:
 #### HTML
 
 ```html
-<p>利用 <abbr>CSS</abbr>，你可以自定义你的缩略语样式！</p>
+<p>利用 <abbr>CSS</abbr>，你可以自定义缩写样式！</p>
 ```
 
 #### CSS
@@ -82,12 +82,12 @@ abbr {
 
 ### 提供扩展解释
 
-你可以添加一个 [`title`](/zh-CN/docs/Web/HTML/Global_attributes#title) 属性来缩写或首字母缩略词提供一个扩展解释或定义。
+你可以添加一个 [`title`](/zh-CN/docs/Web/HTML/Global_attributes#title) 属性来为缩写或首字母缩略词提供一个扩展解释或定义。
 
 #### HTML
 
 ```html
-<p>Ashok 的笑话让我笑得 <abbr title="前仰后合">（LOL）</abbr>。</p>
+<p>你可以用 <abbr title="邮政特快专递服务">EMS</abbr> 把这个包裹寄给我。</p>
 ```
 
 #### 结果
@@ -96,19 +96,19 @@ abbr {
 
 ### 定义缩略语
 
-你可以在 {{HTMLElement("dfn")}} 元素中配合使用 `<abbr>` 元素，以更正式地定义一个缩写，如下所示。
+你可以在 {{HTMLElement("dfn")}} 元素中配合使用 `<abbr>` 元素，以更正式地定义缩写，如下所示。
 
 #### HTML
 
 ```html
 <p>
   <dfn id="html"><abbr title="超文本标记语言">HTML</abbr></dfn>
-  是一种标记语言，用于创建网页的语义和结构。
+  是一种用于创建网页的语义和结构的标记语言。
 </p>
 
 <p>
   <dfn id="spec">规范</dfn>（<abbr>spec</abbr>）是一份详细说明某项技术或 API
-  的预期功能和访问方式。
+  的预期功能和访问方式的文档。
 </p>
 ```
 
