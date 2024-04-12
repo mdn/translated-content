@@ -19,6 +19,7 @@ l10n:
   - : 连接关闭时 WebSocket 对象触发的事件。
 - [`MessageEvent`](/zh-CN/docs/Web/API/MessageEvent)
   - : 当从服务器获取到消息的时候 WebSocket 对象触发的事件。
+
 ## 指南
 
 - [编写 WebSocket 客户端应用程序](/zh-CN/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
