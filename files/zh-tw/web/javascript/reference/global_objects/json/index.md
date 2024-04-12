@@ -13,17 +13,10 @@ slug: Web/JavaScript/Reference/Global_Objects/JSON
 
 JSON 是序列物件、陣列、數字、字串、布林值、還有 {{jsxref("null")}} 的語法。它建基、但不同於 JavaScript：有些 JavaScript 不是 JSON、而有些 JSON 不是 JavaScript。請參見 [JSON: The JavaScript subset that isn't](http://timelessrepo.com/json-isnt-a-javascript-subset)。
 
-| JavaScript 型別 | 與 JSON 的差別                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 物件與陣列      | 屬性名稱必須是包含在雙引號中的字串；禁止尾後逗號。                                                                                                                                                                                                                                                                                                                                                                                                          |
-| 數字            | 數字不可以 0 作為開頭；小數點前面必須至少有一位數字。                                                                                                                                                                                                                                                                                                                                       |
-| 字串            | Only a limited set of characters may be escaped; certain control characters are prohibited; the Unicode line separator ([U+2028](https://symbl.cc/cn/2028/)) and paragraph separator ([U+2029](https://symbl.cc/cn/2029/)) characters are permitted; strings must be double-quoted. See the following example where {{jsxref("JSON.parse()")}} works fine and a {{jsxref("SyntaxError")}} is thrown when evaluating the code as JavaScript: |
-
-```js
-const code = '"\u2028\u2029"';
-JSON.parse(code); // evaluates to "\u2028\u2029" in all engines
-eval(code); // throws a SyntaxError in old engines
-```
+| JavaScript 型別 | 與 JSON 的差別                                                                                             |
+| --------------- | ---------------------------------------------------------------------------------------------------------- |
+| 物件與陣列      | 屬性名稱必須是包含在雙引號中的字串；禁止[尾後逗號](/zh-TW/docs/Web/JavaScript/Reference/Trailing_commas)。 |
+| 數字            | 數字不可以 0 作為開頭；小數點前面必須至少有一位數字；不支援 `NaN` 和 `Infinity`。                          |
 
 ### JSON 的完整語法
 
