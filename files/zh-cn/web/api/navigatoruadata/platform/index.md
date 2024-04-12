@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
-{{domxref("NavigatorUAData")}} 接口的 **`platform`** 只读属性返回平台品牌信息。
+{{domxref("NavigatorUAData")}} 接口的 **`platform`** 只读属性返回平台的品牌信息。
 
 ## 值
 
