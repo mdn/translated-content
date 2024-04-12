@@ -1,6 +1,8 @@
 ---
 title: border-image
 slug: Web/CSS/border-image
+l10n:
+  sourceCommit: fb3ef3857ca1d77cc720deba0c12d7a3313b85b4
 ---
 
 {{CSSRef}}
@@ -36,7 +38,7 @@ border-image: linear-gradient(red, blue) 27 / 35px;
 /* source | slice | width | outset | repeat */
 border-image: url("/images/border.png") 27 23 / 50px 30px / 1rem round space;
 
-/* Global values */
+/* 全局值 */
 border-image: inherit;
 border-image: initial;
 border-image: revert;
@@ -65,8 +67,8 @@ border-image: unset;
 
 辅助技术无法解析边框图像。如果图像包含对理解页面的整体内容至关重要的信息，最好在文档中对其进行语义描述。
 
-- [MDN Understanding WCAG, Guideline 1.1 explanations](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
-- [Understanding Success Criterion 1.1.1 | Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
+- [MDN 理解 WCAG，指南 1.1 解释](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
+- [理解成功标准 1.1.1 | 理解 WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
 ## 形式定义
 
@@ -92,7 +94,7 @@ border-image: unset;
 
 #### CSS
 
-每个菱形的宽和高皆为 81 ÷ 3 = 27，所以我们将 border-image-slice 设置为 27，这样图像的角区域和边缘区域宽高皆为 27px。为了使每个菱形的中心恰好位于元素背景的边缘，我们将令 border-image-outset 等于 border-image-width 的一半。最后，将 border-image-repeat 设置为 round 将使分割出的不同区域均匀贴合，没有裁剪或间隙。
+每个菱形的宽和高皆为 81 ÷ 3 = 27，所以我们将 `border-image-slice` 设置为 `27`，这样图像的角区域和边缘区域宽高皆为 27px。为了使每个菱形的中心恰好位于元素背景的边缘，我们将令 `border-image-outset` 等于 `border-image-width` 的一半。最后，将 `border-image-repeat` 设置为 `round` 使分割出的不同区域均匀贴合，没有裁剪或间隙。
 
 ```css
 #bitmap {
@@ -149,5 +151,5 @@ border-image: unset;
 - {{cssxref("box-shadow")}}
 - {{cssxref("background-image")}}
 - {{cssxref("url", "url()")}} 函数
-- 渐变函数：{{CSSxRef("gradient/conic-gradient", "conic-gradient()")}}, {{CSSxRef("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}, {{CSSxRef("gradient/linear-gradient", "linear-gradient()")}}, {{CSSxRef("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{CSSxRef("gradient/radial-gradient", "radial-gradient()")}}, {{CSSxRef("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
-- MDN 博客（2023）[Border images in CSS: A key focus area for Interop 2023](/en-US/blog/border-images-interop-2023/)
+- 渐变函数：{{CSSxRef("gradient/conic-gradient", "conic-gradient()")}}、{{CSSxRef("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}、{{CSSxRef("gradient/linear-gradient", "linear-gradient()")}}、{{CSSxRef("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}、{{CSSxRef("gradient/radial-gradient", "radial-gradient()")}}、{{CSSxRef("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
+- MDN 博客（2023）[CSS 中的边框图像：Interop 2023 的重点关注领域](/en-US/blog/border-images-interop-2023/)
