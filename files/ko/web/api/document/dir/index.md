@@ -1,6 +1,9 @@
 ---
 title: "Document: dir property"
+short-title: dir
 slug: Web/API/Document/dir
+l10n:
+  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
 ---
 
 {{ApiRef("HTML DOM")}}
