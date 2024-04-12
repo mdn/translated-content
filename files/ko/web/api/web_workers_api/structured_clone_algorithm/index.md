@@ -22,7 +22,7 @@ JSON을 뛰어넘는 structured clone알고리즘의 여러가지 핵심 이득�
 - DOM node들을 클론하려고 시도하는것도 동일하게 `DATA_CLONE_ERR` exception을 던질 것 입니다.
 - 객체들의 몇몇 파라미터들은 보존되지 않습니다:
 
-  - `RegExp객체들의 liastIndex필드는 보존되지 않습니다.`
+  - `RegExp객체들의 lastIndex필드는 보존되지 않습니다.`
   - Property descriptors, setters, 그리고 getters (이것들과 비슷한 메타데이터같은 기능들)은 복제되지 않습니다. 예를들어서 한 객체가 프로퍼티 디스크립터를 사용하여 읽기전용으로 마크되어져 있다면 이것은 읽기-쓰기가 가능하도록 복제 될 것입니다. 이것이 디폴트 조건이기 때문입니다.
   - 프로토타입 체인은 거치지않고 복제되지 않습니다.
 
