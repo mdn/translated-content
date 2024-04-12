@@ -2,7 +2,7 @@
 title: <input type="time">
 slug: Web/HTML/Element/input/time
 l10n:
-  sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
+  sourceCommit: 72ca3d725e3e56b613de3ac9727bd0d6d619c38a
 ---
 
 {{HTMLSidebar}}
@@ -82,7 +82,7 @@ timeControl.value = "15:30";
 </form>
 ```
 
-JavaScript コードは、 time 入力欄に {{domxref("HTMLElement/input_event", "input")}} イベントを監視するコードを追加し、 input 要素の中身が変更されるたびに呼び出されるようにします。これが発生すると、 `<span>` 要素の中身が input 要素の新しい値で置き換えられます。
+JavaScript コードは、 time 入力欄に {{domxref("Element/input_event", "input")}} イベントを監視するコードを追加し、 input 要素の中身が変更されるたびに呼び出されるようにします。これが発生すると、 `<span>` 要素の中身が input 要素の新しい値で置き換えられます。
 
 ```js
 const startTime = document.getElementById("startTime");
@@ -509,7 +509,7 @@ minuteSelect.onchange = setMinutesToZero;
       <td><strong>イベント</strong></td>
       <td>
         {{domxref("HTMLElement/change_event", "change")}} および
-        {{domxref("HTMLElement/input_event", "input")}}
+        {{domxref("Element/input_event", "input")}}
       </td>
     </tr>
     <tr>

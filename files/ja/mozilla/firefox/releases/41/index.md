@@ -5,7 +5,7 @@ slug: Mozilla/Firefox/Releases/41
 
 Firefox 41 は、米国時間 2015 年 9 月 22 日にリリースされました。このページでは、開発者に影響する Firefox 41 の変更点をまとめています。
 
-## Web 開発者向けの変更点一覧
+## ウェブ開発者向けの変更点一覧
 
 ### 開発者ツール
 
@@ -53,7 +53,7 @@ Firefox 41 は、米国時間 2015 年 9 月 22 日にリリースされまし�
 - 非標準の {{jsxref("Statements/let", "let 式", "#let_expressions", 1)}}を廃止しました ([Firefox バグ 1023609](https://bugzil.la/1023609))。
 - {{jsxref("Functions/Default_parameters", "既定値の代入を含む、分割されたパラメータ", "#Destructured_parameter_with_default_value_assignment", 1)}}をサポートしました ([Firefox バグ 1018628](https://bugzil.la/1018628))。
 - ES6 に従い、[メソッドの定義](/ja/docs/Web/JavaScript/Reference/Functions/Method_definitions)で波括弧が必要になりました。波括弧を欠いた構文はエラーになります ([Firefox バグ 1150855](https://bugzil.la/1150855))。
-- コンストラクタ形式の[メソッド定義](/ja/docs/Web/JavaScript/Reference/Functions/Method_definitions) (ジェネレータメソッドを除く) は不可になりました ([Firefox バグ 1059908](https://bugzil.la/1059908) および [Firefox バグ 1166950](https://bugzil.la/1166950))。
+- コンストラクター形式の[メソッド定義](/ja/docs/Web/JavaScript/Reference/Functions/Method_definitions) (ジェネレータメソッドを除く) は不可になりました ([Firefox バグ 1059908](https://bugzil.la/1059908) および [Firefox バグ 1166950](https://bugzil.la/1166950))。
 - ES6 使用への準拠の一環として `([a, b]) = [1, 2]` や `({a, b}) = { a: 1, b: 2 }` といった、括弧でくくるパターンの [destructuring](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) 構文は無効と判断され、{{jsxref("SyntaxError")}} が発生するようになりました。詳しくは [Jeff Walden のブログ記事](http://whereswalden.com/2015/06/20/new-changes-to-make-spidermonkeys-and-firefoxs-parsing-of-destructuring-patterns-more-spec-compliant/) をご覧ください。
 - [`new.target`](/ja/docs/Web/JavaScript/Reference/Operators/new.target) 構文をサポートしました ([Firefox バグ 1141865](https://bugzil.la/1141865))。
 
@@ -61,16 +61,16 @@ Firefox 41 は、米国時間 2015 年 9 月 22 日にリリースされまし�
 
 #### HTML Editing API
 
-- 切り取り、コピー、貼り付けのコマンド制御を改良して、JS プログラムから Web コンテンツのコピーや切り取りが可能になりました:
+- 切り取り、コピー、貼り付けのコマンド制御を改良して、JS プログラムからウェブコンテンツのコピーや切り取りが可能になりました:
 
   - {{domxref("Document.queryCommandSupported()")}} に引数として `'paste'` コマンドを与えると、実際に操作を行うための十分な権限がない場合に `false` を返します ([Firefox バグ 1161721](https://bugzil.la/1161721))。
-  - {{domxref("Document.queryCommandSupported()")}} に引数として `'cut'` または `'copy'` を与えると、ユーザが起動したコードや権限を持つコードのコンテキスト内で呼び出された場合に `true` を返すようになりました ([Firefox バグ 1162952](https://bugzil.la/1162952))。
-  - 引数として `'cut'` または `'copy'` を与えた {{domxref("Document.execCommand()")}} は動作しますが、ユーザが起動したコードや権限を持つコードのコンテキスト内で呼び出された場合に限ります ([Firefox バグ 1012662](https://bugzil.la/1012662))。
+  - {{domxref("Document.queryCommandSupported()")}} に引数として `'cut'` または `'copy'` を与えると、ユーザーが起動したコードや権限を持つコードのコンテキスト内で呼び出された場合に `true` を返すようになりました ([Firefox バグ 1162952](https://bugzil.la/1162952))。
+  - 引数として `'cut'` または `'copy'` を与えた {{domxref("Document.execCommand()")}} は動作しますが、ユーザーが起動したコードや権限を持つコードのコンテキスト内で呼び出された場合に限ります ([Firefox バグ 1012662](https://bugzil.la/1012662))。
   - {{domxref("Document.execCommand()")}} でコマンドが未サポートまたは無効である場合に、例外が発生しないようになりました ([Firefox バグ 1027560](https://bugzil.la/1027560))。
 
 #### イベント
 
-- 非標準の {{domxref("CloseEvent.initCloseEvent()")}} メソッド、および {{domxref("Event.createEvent", "Event.createEvent('CloseEvent')")}} メソッドを使用して {{domxref("CloseEvent")}} を生成する機能を削除しました。代わりに、標準のコンストラクタである {{domxref("CloseEvent.CloseEvent", "CloseEvent()")}} を使用してください ([Firefox バグ 1161950](https://bugzil.la/1161950))。
+- 非標準の {{domxref("CloseEvent.initCloseEvent()")}} メソッド、および {{domxref("Event.createEvent", "Event.createEvent('CloseEvent')")}} メソッドを使用して {{domxref("CloseEvent")}} を生成する機能を削除しました。代わりに、標準のコンストラクターである {{domxref("CloseEvent.CloseEvent", "CloseEvent()")}} を使用してください ([Firefox バグ 1161950](https://bugzil.la/1161950))。
 - デスクトップ版の Nightly で、{{domxref("PointerEvent")}} がデフォルトで有効になりました。Developer Edition、Beta、Release では無効であり、少なくともいくつかのバージョンの間は有効化しない予定です。([Firefox バグ 1166347](https://bugzil.la/1166347))
 - 接頭辞なしの {{domxref("MouseEvent.movementX")}} および {{domxref("MouseEvent.movementY")}} を追加しました。接頭辞つきのプロパティは非推奨になり、将来のある時点で削除する予定です ([Firefox バグ 1164981](https://bugzil.la/1164981))。
 
@@ -114,7 +114,7 @@ Firefox 41 は、米国時間 2015 年 9 月 22 日にリリースされまし�
 
 #### 新たな既定フォントとフォールバックフォントの制御
 
-数式では特別なフォントが必要です。これまで、そのフォントは `mathml.css` ユーザエージェントスタイルシート ({{MathMLElement("math")}} タグに font-family を設定) および設定項目 `font.mathfont-family` (伸縮する大型演算子で使用するフォールバックフォントを設定) でハードコードされていました。Firefox 41 より `<math>` タグへ自動的に設定される `x-math` 内部言語と、それに対応する設定項目 (例えば `font.name.serif.x-math`) を導入しました。ユーザエージェントスタイルシートでは `<math>` タグの font-family を serif に設定して、設定項目 `font.mathfont-family` を `font.name.serif.x-math` で置き換えました。また、すべてのプラットフォームで、フォールバックフォントは基本的に "Latin Modern Math" が先頭にある同一のリストを使用するようになりました。既定フォント/フォールバックフォントは、標準の言語別フォント設定メニューで設定できます。詳しくは [Firefox バグ 947654](https://bugzil.la/947654) および [Firefox バグ 1160456](https://bugzil.la/1160456) をご覧ください。
+数式では特別なフォントが必要です。これまで、そのフォントは `mathml.css` ユーザーエージェントスタイルシート ({{MathMLElement("math")}} タグに font-family を設定) および設定項目 `font.mathfont-family` (伸縮する大型演算子で使用するフォールバックフォントを設定) でハードコードされていました。Firefox 41 より `<math>` タグへ自動的に設定される `x-math` 内部言語と、それに対応する設定項目 (例えば `font.name.serif.x-math`) を導入しました。ユーザーエージェントスタイルシートでは `<math>` タグの font-family を serif に設定して、設定項目 `font.mathfont-family` を `font.name.serif.x-math` で置き換えました。また、すべてのプラットフォームで、フォールバックフォントは基本的に "Latin Modern Math" が先頭にある同一のリストを使用するようになりました。既定フォント/フォールバックフォントは、標準の言語別フォント設定メニューで設定できます。詳しくは [Firefox バグ 947654](https://bugzil.la/947654) および [Firefox バグ 1160456](https://bugzil.la/1160456) をご覧ください。
 
 ### SVG
 
@@ -122,7 +122,7 @@ Firefox 41 は、米国時間 2015 年 9 月 22 日にリリースされまし�
 
 ### Audio/Video
 
-- 設定項目 `media.autoplay.enabled` が、信頼されていない {{domxref("HTMLMediaElement.play()")}} の起動 (ユーザ以外が作動したスクリプトから呼び出される場合) に対しても適用されるようになりました ([Firefox バグ 659285](https://bugzil.la/659285))。
+- 設定項目 `media.autoplay.enabled` が、信頼されていない {{domxref("HTMLMediaElement.play()")}} の起動 (ユーザー以外が作動したスクリプトから呼び出される場合) に対しても適用されるようになりました ([Firefox バグ 659285](https://bugzil.la/659285))。
 
 ## ネットワーク
 

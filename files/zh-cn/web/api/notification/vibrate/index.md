@@ -2,14 +2,12 @@
 title: Notification：vibrate 属性
 slug: Web/API/Notification/vibrate
 l10n:
-  sourceCommit: 10b9d1a207b2bf467150b0ec72e2e5f09429d2d9
+  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
 ---
 
-{{APIRef("Web Notifications")}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{APIRef("Web Notifications")}}{{SecureContext_Header}}{{SeeCompatTable}} {{AvailableInWorkers}}
 
 {{domxref("Notification")}} 接口的 **`vibrate`** 只读属性指定当通知触发时设备振动硬件发出的[振动模式](/zh-CN/docs/Web/API/Vibration_API#振动模式)。此属性通过 {{domxref("Notification.Notification","Notification()")}} 构造函数的 `vibrate` 选项指定。
-
-{{AvailableInWorkers}}
 
 ## 值
 

@@ -3,9 +3,9 @@ title: Firefox 3.6 for developers
 slug: Mozilla/Firefox/Releases/3.6
 ---
 
-Firefox 3.6 では新規あるいは開発中のウェブ標準のサポート、性能の向上、ウェブユーザと開発者にとってより良い体験が提供されます。このページは Firefox 3.6 で新しく利用出来るようになった機能に関する記事のリンクを提供します。
+Firefox 3.6 では新規あるいは開発中のウェブ標準のサポート、性能の向上、ウェブユーザーと開発者にとってより良い体験が提供されます。このページは Firefox 3.6 で新しく利用出来るようになった機能に関する記事のリンクを提供します。
 
-## Web サイトとアプリケーション開発者向け
+## ウェブサイトとアプリケーション開発者向け
 
 ### CSS
 
@@ -29,13 +29,13 @@ Firefox 3.6 では新規あるいは開発中のウェブ標準のサポート�
 - [`text-align`](/ja/docs/Web/CSS/text-align):end がサポートされました。[バグ 299837](https://bugzilla.mozilla.org/show_bug.cgi?id=299837)
 - table [`display`](/ja/docs/Web/CSS/display) タイプの要素に対する DOM の変更がより良く動作するようになりました。
 - `indeterminate` 属性が `true` である `checkbox` [`input`](/ja/docs/HTML/Element/Input) 要素にマッチする [`:indeterminate`](/ja/docs/Web/CSS/:indeterminate) 擬似クラスのサポートが追加されました。
-- [`:-moz-locale-dir(ltr)`](</ja/docs/Web/CSS/:-moz-locale-dir(ltr)> 'CSS の :-moz-locale-dir(ltr) 疑似クラスは Mozilla 拡張であり、ユーザーインターフェイスが左から右へ向けて表示される要素に一致します。これは設定の intl.uidirection.locale (locale は現在のロケール) が "ltr" に設定されていることで特定されます。') と [`:-moz-locale-dir(rtl)`](</ja/docs/Web/CSS/:-moz-locale-dir(rtl)> 'CSS の :-moz-locale-dir(ltr) 疑似クラスは Mozilla 拡張であり、ユーザーインターフェイスが右から左へ向けて表示される要素に一致します。これは設定の intl.uidirection.locale (locale は現在のロケール) が "rtl" に設定されていることで特定されます。') が追加され、ユーザインタフェースが left-to-right または right-to-left のどちらで描画されるかに応じて、容易にレイアウトをカスタマイズできるようになりました。[バグ 478416](https://bugzilla.mozilla.org/show_bug.cgi?id=478416)
+- [`:-moz-locale-dir(ltr)`](</ja/docs/Web/CSS/:-moz-locale-dir(ltr)> 'CSS の :-moz-locale-dir(ltr) 疑似クラスは Mozilla 拡張であり、ユーザーインターフェイスが左から右へ向けて表示される要素に一致します。これは設定の intl.uidirection.locale (locale は現在のロケール) が "ltr" に設定されていることで特定されます。') と [`:-moz-locale-dir(rtl)`](</ja/docs/Web/CSS/:-moz-locale-dir(rtl)> 'CSS の :-moz-locale-dir(ltr) 疑似クラスは Mozilla 拡張であり、ユーザーインターフェイスが右から左へ向けて表示される要素に一致します。これは設定の intl.uidirection.locale (locale は現在のロケール) が "rtl" に設定されていることで特定されます。') が追加され、ユーザーインターフェイスが left-to-right または right-to-left のどちらで描画されるかに応じて、容易にレイアウトをカスタマイズできるようになりました。[バグ 478416](https://bugzilla.mozilla.org/show_bug.cgi?id=478416)
 - ウィンドウ化されたプラグインは CSS transforms の中では表示されなくなりました。これはコンポジターによって正しく変換されないためです。
 
 ### HTML
 
 - [ウェブアプリケーションからファイルを扱う](/ja/docs/Using_files_from_web_applications)
-  - : 新しい HTML5 File API のサポートが Gecko に追加され、ウェブアプリケーションがユーザの選択したローカルファイルにアクセス出来るようになりました。これには `input type="file"` HTML 要素において複数のファイルを選択する `multiple` 属性のサポートが含まれます。
+  - : 新しい HTML5 File API のサポートが Gecko に追加され、ウェブアプリケーションがユーザーの選択したローカルファイルにアクセス出来るようになりました。これには `input type="file"` HTML 要素において複数のファイルを選択する `multiple` 属性のサポートが含まれます。
 
 <!---->
 
@@ -66,14 +66,14 @@ Gecko 1.9.2 は JavaScript 1.8.2 を採用し、[ECMAScript 5 standard](/ja/Java
 
 #### その他の DOM の変更
 
-- `getBoxObjectFor()` メソッドが**削除されました**。このメソッドは非標準であり、さらに非標準なものを Web にさらすことになるからです。[バグ 340571](https://bugzilla.mozilla.org/show_bug.cgi?id=340571) を参照してください。これはまた、Gecko の検出にこのメソッドをコールする MooTools にも影響します。これは最新の MooTools で修正されたのでいずれ更新されるでしょう。
+- `getBoxObjectFor()` メソッドが**削除されました**。このメソッドは非標準であり、さらに非標準なものをウェブにさらすことになるからです。[バグ 340571](https://bugzilla.mozilla.org/show_bug.cgi?id=340571) を参照してください。これはまた、Gecko の検出にこのメソッドをコールする MooTools にも影響します。これは最新の MooTools で修正されたのでいずれ更新されるでしょう。
 - DOM windows に新しい [`mozInnerScreenX`](/ja/docs/DOM/window.mozInnerScreenX) と [`mozInnerScreenY`](/ja/docs/DOM/window.mozInnerScreenY) プロパティが追加されました。これらはウィンドウ表示領域の左上コーナーを基準にしたスクリーンの座標を返します。
 - chrome に対してのみアクセス可能な新しい [`mozScreenPixelsPerCSSPixel`](/ja/docs/DOM/window.mozScreenPixelsPerCSSPixel) プロパティは CSS ピクセルとスクリーン・ピクセルの変換率を提供します。この値はコンテンツのズームレベルに応じて変化します。
 - ページ URI の文書フラグメント識別子（"#" (ハッシュ) 文字の後の部分）が変更になったとき、新たな `hashchange` イベントがページに送られます。[バグ 385434](https://bugzilla.mozilla.org/show_bug.cgi?id=385434)、[バグ 504837](https://bugzilla.mozilla.org/show_bug.cgi?id=504837 "FIXED: hashchange event should not be restricted to firing only when the document's ready state is")、および [バグ 504220](https://bugzilla.mozilla.org/show_bug.cgi?id=504220) を参照してください。
 - `document.readystate で` `complete`属性がサポートされました。[バグ 347174](https://bugzilla.mozilla.org/show_bug.cgi?id=347174 'FIXED: Implement document.readystate == "complete"')。
 - HTML5 の [`element.classList`](/ja/DOM/element.classList) がサポートされ、クラス属性の処理が容易になりました。[バグ 501257](https://bugzilla.mozilla.org/show_bug.cgi?id=501257)
 - HTML 文書の `localName` と `namespaceURI` が XHTML 文書と同じように振舞うようになりました。`localName` は小文字で値を返し、HTML 要素の `namespaceURI` は `"http://www.w3.org/1999/xhtml"` です。
-- [`nsIDOMGeoPositionAddress`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMGeoPositionAddress) インタフェースによりジオロケーションの address がサポートされ、新しいフィールドが [`nsIDOMGeoPosition`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMGeoPosition) に追加されました。[バグ 503942](https://bugzilla.mozilla.org/show_bug.cgi?id=503942)
+- [`nsIDOMGeoPositionAddress`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMGeoPositionAddress) インターフェイスによりジオロケーションの address がサポートされ、新しいフィールドが [`nsIDOMGeoPosition`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMGeoPosition) に追加されました。[バグ 503942](https://bugzilla.mozilla.org/show_bug.cgi?id=503942)
 - [`window.getComputedStyle`](/ja/docs/Web/API/Window/getComputedStyle) 関数は `url()` 値の中をクォートして返すようになりました。
 
 ### XPath
@@ -96,8 +96,8 @@ Gecko 1.9.2 は JavaScript 1.8.2 を採用し、[ECMAScript 5 standard](/ja/Java
 
 ### Places
 
-- Places のクエリーは結果にリダイレクトされたページが含んでいるかどうかを特定できるように [`nsINavHistoryQueryOptions`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryQueryOptions) インタフェースで `redirectsMode` を利用できるようになりました。
-- 新しい [`nsIFaviconService.expireAllFavicons()`](</ja/docs/XPCOM_Interface_Reference/nsIFaviconService#expireAllFavicons()>) メソッドが [`nsIFaviconService`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFaviconService) インターフェースに追加されました。
+- Places のクエリーは結果にリダイレクトされたページが含んでいるかどうかを特定できるように [`nsINavHistoryQueryOptions`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryQueryOptions) インターフェイスで `redirectsMode` を利用できるようになりました。
+- 新しい [`nsIFaviconService.expireAllFavicons()`](</ja/docs/XPCOM_Interface_Reference/nsIFaviconService#expireAllFavicons()>) メソッドが [`nsIFaviconService`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFaviconService) インターフェイスに追加されました。
 
 ### Storage
 
@@ -112,14 +112,14 @@ Gecko 1.9.2 は JavaScript 1.8.2 を採用し、[ECMAScript 5 standard](/ja/Java
 
 ### Preferences
 
-- [`nsIContentPrefService`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIContentPrefService) インタフェースが新しく二つのメソッドを持ちました: [`nsIContentPrefService.getPrefsByName()`](</ja/docs/XPCOM_Interface_Reference/nsIContentPrefService#getPrefsByName()>) と [`nsIContentPrefService.removePrefsByName()`](</ja/docs/XPCOM_Interface_Reference/nsIContentPrefService#removePrefsByName()>)。
+- [`nsIContentPrefService`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIContentPrefService) インターフェイスが新しく二つのメソッドを持ちました: [`nsIContentPrefService.getPrefsByName()`](</ja/docs/XPCOM_Interface_Reference/nsIContentPrefService#getPrefsByName()>) と [`nsIContentPrefService.removePrefsByName()`](</ja/docs/XPCOM_Interface_Reference/nsIContentPrefService#removePrefsByName()>)。
 
 ### テーマ
 
 テーマに関する変更の詳細は [Updating themes for Firefox 3.6](/ja/docs/Updating_themes_for_Firefox_3.6) を参照してください。
 
 - [軽量テーマ](/ja/docs/Themes/Lightweight_themes)
-  - : Firefox 3.6 は軽量テーマをサポートします。これは作成するのが簡単なテーマで、ブラウザウィンドウの上部（URL バーとボタンバー）と下部（ステータスバー）に単純に画像を適用します。これは既存の [Personas](http://www.getpersonas.com/) テーマ構造の Firefox への統合です。
+  - : Firefox 3.6 は軽量テーマをサポートします。これは作成するのが簡単なテーマで、ブラウザーウィンドウの上部（URL バーとボタンバー）と下部（ステータスバー）に単純に画像を適用します。これは既存の [Personas](http://www.getpersonas.com/) テーマ構造の Firefox への統合です。
 
 ### その他
 
@@ -131,13 +131,13 @@ Gecko 1.9.2 は JavaScript 1.8.2 を採用し、[ECMAScript 5 standard](/ja/Java
 - 発生したイベントに基づいて音を鳴らすための [`nsISound`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISound) に対するサポートが追加されました。 [バグ 502799](https://bugzilla.mozilla.org/show_bug.cgi?id=502799) を参照してください。
 - Gecko 1.9 での新しいドラッグ＆ドロップ API をサポートするために [`nsITreeView`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITreeView) のメソッドである [`nsITreeView.canDrop()`](</ja/docs/XPCOM_Interface_Reference/nsITreeView#canDrop()>) および [`nsITreeView.drop()`](</ja/docs/XPCOM_Interface_Reference/nsITreeView#drop()>) の構文が変更になりました。[バグ 455590](https://bugzilla.mozilla.org/show_bug.cgi?id=455590) を参照してください。
 - Windows のダイアログとウィザードのデフォルトボタンへのマウスカーソルの移動がサポートされました。[バグ 76053](https://bugzilla.mozilla.org/show_bug.cgi?id=76053 'FIXED: Windows mouse integration: "Snap to default button in dialog boxes"') を参照してください。これはダイアログとウィザード要素によって自動的に行われます。ただし、XUL アプリケーションが `window` 要素のウィンドウを生成し、それがデフォルトボタンを持つ場合は、ウィンドウの onload イベントで [`nsIDOMChromeWindow.notifyDefaultButtonLoaded()`](</ja/docs/XPCOM_Interface_Reference/nsIDOMChromeWindow#notifyDefaultButtonLoaded()>) をコールする必要があります。
-- [`nsILocalFileMac`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsILocalFileMac) インタフェースが二つのメソッドを持ちました: `setFileTypeAndCreatorFromMIMEType()` と `setFileTypeAndCreatorFromExtension()`。
+- [`nsILocalFileMac`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsILocalFileMac) インターフェイスが二つのメソッドを持ちました: `setFileTypeAndCreatorFromMIMEType()` と `setFileTypeAndCreatorFromExtension()`。
 - 新しい [`NetUtils.jsm`](/ja/docs/JavaScript_code_modules/NetUtil.jsm) コードモジュールは、入力ストリームから出力ストリームに非同期にデータをコピーする簡単に利用できるメソッドを提供します。
 - 新しい [`openLocationLastURL.jsm`](/ja/docs/JavaScript_code_modules/openLocationLastURL.jsm) コードモジュールは、プライベートブラウジングモードであるかを正しく判断して、"Open Location" ダイアログボックスの記憶された URL データの読み込みと変更を容易にします。
-- Windows では、[`nsIScreen`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIScreen) インタフェースは、グラフィックスドライバーが 32 ビットをサポートしていても、ピクセルごとに 24 ビットカラーをレポートします。これは 24 ビットは実際に利用されているカラーピクセルの数をより正確に表現するためです。
+- Windows では、[`nsIScreen`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIScreen) インターフェイスは、グラフィックスドライバーが 32 ビットをサポートしていても、ピクセルごとに 24 ビットカラーをレポートします。これは 24 ビットは実際に利用されているカラーピクセルの数をより正確に表現するためです。
 - Window では [`toolbar`](/ja/docs/Mozilla/Tech/XUL/toolbar) XUL 要素の新しい [`autohide`](/ja/docs/Mozilla/Tech/XUL/Attribute/autohide) アトリビュートを用いてメニューバーを隠すことができます。
 - [`loadOneTab`](/ja/docs/Mozilla/Tech/XUL/Method/loadOneTab) と [`addTab`](/ja/docs/Mozilla/Tech/XUL/Method/addTab) メソッドは新しい `relatedToCurrent` パラメータをサポートし、加えて、多くのパラメータが省略可能であるために名前によるパラメータの指定ができます。
-- インストール manifests で "hidden" プロパティはサポートされなくなりました。アドオンマネージャウィンドウ上でユーザが見ることのできないアドオンは不可能になりました。
+- インストール manifests で "hidden" プロパティはサポートされなくなりました。アドオンマネージャウィンドウ上でユーザーが見ることのできないアドオンは不可能になりました。
 - @mozilla.org/webshell;1 コンポーネントはもう存在しません。代わりに @mozilla.org/docshell;1 を使う必要があります。
 - タイマーイベントをスケジュールするために、タイマーがコールするオブジェクトをインスタンシエイトすることなく update-timer カテゴリで登録できるようになりました。代わりに必要になったときにインスタンシエイトされます。詳細は [`nsIUpdateTimerManager.registerTimer()`](</ja/docs/XPCOM_Interface_Reference/nsIUpdateTimerManager#registerTimer()>) を参照してください。
 - The [`NPN_GetValue()`](/ja/NPN_GetValue) 関数はもはや変数値 `NPNVserviceManager`, `NPNVDOMelement`, `NPNVDOMWindow`を経由した XPCOM へのアクセスを提供しません。これは将来のバージョンの Gecko バージョンでプラグインを分離したプロセスで動作させるための作業の一部です。
@@ -146,18 +146,18 @@ Gecko 1.9.2 は JavaScript 1.8.2 を採用し、[ECMAScript 5 standard](/ja/Java
 
 いくつかの変更はあなたが Firefox そのものの内部で作業している場合にだけ興味を持つことでしょう。
 
-### マージされたインタフェース
+### マージされたインターフェイス
 
-以下のインタフェースは統合されました:
+以下のインターフェイスは統合されました:
 
 - `nsIPluginTagInfo2` は `nsIPluginTagInfo` にマージされました。
 - `nsIPluginInstanceInternal`, `nsIPPluginInstancePeer`, `nsIPluginInstancePeer1`, `nsIPluginInstancePeer2`, `nsIPluginInstancePeer3` はすべて `nsIPluginInstance` にマージされました。
 - `nsIWindowlessPlugInstPeer` は `nsIPluginInstance` にマージされました。
 - `nsIPluginManager` と `nsIPluginManager2` は `nsIPluginHost` にマージされました。
 
-### 削除されたインタフェース
+### 削除されたインターフェイス
 
-以下のインタフェースは利用されていない、実装されていないまたは旧式であるためにすべて削除されました:
+以下のインターフェイスは利用されていない、実装されていないまたは旧式であるためにすべて削除されました:
 
 - `nsIFullScreen`
 - `nsIDOMSVGListener`
@@ -171,22 +171,22 @@ Gecko 1.9.2 は JavaScript 1.8.2 を採用し、[ECMAScript 5 standard](/ja/Java
 - `nsIClassicPluginFactory`
 - `nsIFileUtilities`
 
-### 移動されたインタフェース
+### 移動されたインターフェイス
 
-以下のインタフェースは以前の IDL ファイルから新しい場所に移動されました:
+以下のインターフェイスは以前の IDL ファイルから新しい場所に移動されました:
 
 - `nsIDOMNSCSS2Properties` は専用の IDL ファイル (`dom/interfaces/css/nsIDOMCSS2Properties.idl`) に移動されました。
 - [`nsIUpdateTimerManager`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIUpdateTimerManager) はそれ自身の IDL ファイル内に配置されます。
 
-多くのインタフェースが移動されました。完全なリストは [Interfaces moved in Firefox 3.6](/ja/docs/Interfaces_moved_in_Firefox_3.6) を参照してください。
+多くのインターフェイスが移動されました。完全なリストは [Interfaces moved in Firefox 3.6](/ja/docs/Interfaces_moved_in_Firefox_3.6) を参照してください。
 
-### その他のインタフェースの変更
+### その他のインターフェイスの変更
 
 以下のようなさまざまな変更が行われました:
 
-- `nsIPlugin` インタフェースは [`nsIFactory`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFactory) ではなく [`nsISupports`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports) から継承します。
-- `nsIPluginHost` インタフェースは [`nsIFactory`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFactory) ではなく [`nsISupports`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports) から継承しますす。
-- `nsIFrame` インタフェースは [`nsISupports`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports) ではなく `nsQueryFrame` から継承します。
+- `nsIPlugin` インターフェイスは [`nsIFactory`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFactory) ではなく [`nsISupports`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports) から継承します。
+- `nsIPluginHost` インターフェイスは [`nsIFactory`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFactory) ではなく [`nsISupports`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports) から継承しますす。
+- `nsIFrame` インターフェイスは [`nsISupports`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports) ではなく `nsQueryFrame` から継承します。
 - [`nsIDeviceContext`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDeviceContext) メソッド `getPaletteInfo()` は今まで実装されてことがないので削除されました。
 - [`nsIScriptContext`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIScriptContext) メソッド `reportPendingException()` はもう利用されていないので削除されました。
 

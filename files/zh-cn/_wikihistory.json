@@ -15296,6 +15296,10 @@
     "modified": "2019-09-19T09:48:51.675Z",
     "contributors": ["SphinxKnight", "joodo", "teoli", "khalid32", "monjer"]
   },
+  "Web/API/Window/indexedDB": {
+    "modified": "2019-09-21T03:34:03.050Z",
+    "contributors": ["FEhaoxinjie"]
+  },
   "Web/API/Window/innerHeight": {
     "modified": "2019-03-18T20:46:35.962Z",
     "contributors": ["WangLeto", "teoli", "AlexChao"]
@@ -16256,10 +16260,6 @@
       "fuchao2012"
     ]
   },
-  "Web/API/indexedDB": {
-    "modified": "2019-09-21T03:34:03.050Z",
-    "contributors": ["FEhaoxinjie"]
-  },
   "Web/API/isSecureContext": {
     "modified": "2019-09-21T03:37:23.951Z",
     "contributors": ["Awe"]
@@ -16527,10 +16527,6 @@
   "Web/CSS/-webkit-line-clamp": {
     "modified": "2020-10-15T22:24:06.241Z",
     "contributors": ["liuruiqi1993", "herotangabc", "litaoAurora"]
-  },
-  "Web/CSS/-webkit-mask-attachment": {
-    "modified": "2019-03-18T21:45:10.830Z",
-    "contributors": ["mobiuskaikai"]
   },
   "Web/CSS/-webkit-overflow-scrolling": {
     "modified": "2019-03-23T23:02:52.440Z",
