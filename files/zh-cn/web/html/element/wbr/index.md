@@ -7,7 +7,7 @@ l10n:
 
 {{HTMLSidebar}}
 
-**`<wbr>`** [HTML](/zh-CN/docs/Web/HTML) 元素表示一个单词换行机会——文本中的一个位置，浏览器可以在此处选择性地断行，即使按照其常规换行规则此处原本不会产生断行。
+**`<wbr>`** [HTML](/zh-CN/docs/Web/HTML) 元素表示一个单词换行机会——文本中的一个位置，浏览器可以选择在此处换行，即使其换行规则不会在此处换行。
 
 {{EmbedInteractiveExample("pages/tabbed/wbr.html", "tabbed-shorter")}}
 
@@ -17,13 +17,13 @@ l10n:
 
 ## 说明
 
-在使用 UTF-8 编码的页面中，`<wbr>` 元素表现得如同 `U+200B ZERO-WIDTH SPACE` 代码一样。特别是在表现为 Unicode 双向性（bidirectional, 简称 bidi）码点时，它对 {{Glossary("bidi")}} 排序并无影响。例如：`<div dir=rtl>123，<wbr>456</div>` 在未断行显示时呈现为 `123，456` 而非 `456，123`。
+在 UTF-8 编码的页面中，`<wbr>` 元素表现得如同 `U+200B ZERO-WIDTH SPACE`（零宽度空格）码点相同。具体来说，它就像一个 Unicode 双向文本（bidi）BN 码位，这意味着它对 {{Glossary("bidi")}} 排序没有影响：`<div dir=rtl>123，<wbr>456</div>` 不换行时会显示为 `123，456`，而不是 `456，123`。
 
-出于同样的原因，`<wbr>` 元素在换行处不会插入连字符。若要使连字符仅出现在行尾，请改用软连字符实体（`&shy;`）。
+出于同样的原因，`<wbr>` 元素不会在换行处插入连字符。若要使连字符仅出现在行尾，请改用软连字符实体（`&shy;`）。
 
 ## 示例
 
-[_雅虎风格指南_](https://web.archive.org/web/20121014054923/http://styleguide.yahoo.com/)建议在 [URL 遇到标点符号*之前*](https://web.archive.org/web/20121105171040/http://styleguide.yahoo.com/editing/treat-abbreviations-capitalization-and-titles-consistently/website-names-and-addresses)换行，以避免在行尾留下可能被读者误认为是 URL 结尾的标点符号。
+[_雅虎风格指南_](https://web.archive.org/web/20121014054923/http://styleguide.yahoo.com/)建议在[在标点*之前*为 URL 换行](https://web.archive.org/web/20121105171040/http://styleguide.yahoo.com/editing/treat-abbreviations-capitalization-and-titles-consistently/website-names-and-addresses)，以避免在行尾留下可能被读者误认为是 URL 结尾的标点符号。
 
 ```html
 <p>
