@@ -188,6 +188,6 @@ window.addEventListener("devicemotion", handleMotion, true);
 
 - {{domxref("DeviceOrientationEvent")}}
 - {{domxref("DeviceMotionEvent")}}
-- [Orientation and motion data explained](/en-US/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)
-- [Using deviceorientation in 3D Transforms](/en-US/docs/Web/API/Device_orientation_events/Using_device_orientation_with_3D_transforms)
-- [Cyber Orb: 2D maze game with device orientation](/en-US/docs/Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation)
+- [Orientation and motion data explained](/ko/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)
+- [Using deviceorientation in 3D Transforms](/ko/docs/Web/API/Device_orientation_events/Using_device_orientation_with_3D_transforms)
+- [Cyber Orb: 2D maze game with device orientation](/ko/docs/Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation)
