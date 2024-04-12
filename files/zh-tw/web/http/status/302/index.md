@@ -30,5 +30,5 @@ HTTP **`302 Found`** 重新導向碼表示所請求的資源已暫時移動到�
 ## 參見
 
 - {{HTTPStatus("307", "307 Temporary Redirect")}}，這個狀態碼的等效之處在於使用的方法永遠不會改變。
-- {{HTTPStatus("303", "303 See Other")}}，一個臨時重新導向，改變了使用的方法為 {{HTTPMethod("GET")}}。
-- {{HTTPStatus("301", "301 Moved Permanently")}}，一個永久重新導向。
+- {{HTTPStatus("303", "303 See Other")}}，臨時重新導向，改變了使用的方法為 {{HTTPMethod("GET")}}。
+- {{HTTPStatus("301", "301 Moved Permanently")}}，永久重新導向。
