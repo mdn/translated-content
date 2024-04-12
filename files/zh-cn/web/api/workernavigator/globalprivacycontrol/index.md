@@ -2,7 +2,7 @@
 title: WorkerNavigator：globalPrivacyControl 属性
 slug: Web/API/WorkerNavigator/globalPrivacyControl
 l10n:
-  sourceCommit: 44cf523714745d626317192bfbe849b47144f3ab
+  sourceCommit: dc337dde57d0c3b3b19edf9430d6cf169eaa0739
 ---
 
 {{APIRef("DOM")}}{{SeeCompatTable}}{{non-standard_header}}
