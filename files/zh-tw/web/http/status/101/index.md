@@ -19,7 +19,7 @@ HTTP **`101 Switching Protocols`** 資訊回應碼表示伺服器正在切換協
 
 ## 範例
 
-協定切換可能與 [WebSockets](/zh-TW/docs/Web/API/WebSockets_API) 一起使用。
+協定切換可能與 [WebSocket](/zh-TW/docs/Web/API/WebSockets_API) 一起使用。
 
 ```http
 HTTP/1.1 101 Switching Protocols
