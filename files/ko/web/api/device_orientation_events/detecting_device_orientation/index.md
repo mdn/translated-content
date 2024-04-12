@@ -1,10 +1,6 @@
 ---
 title: 디바이스 방향 감지
 slug: Web/API/Device_orientation_events/Detecting_device_orientation
-page-type: guide
-browser-compat:
-  - api.DeviceMotionEvent
-  - api.DeviceOrientationEvent
 ---
 
 {{DefaultAPISidebar("Device Orientation Events")}}{{securecontext_header}}
