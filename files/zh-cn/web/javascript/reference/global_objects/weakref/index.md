@@ -29,8 +29,15 @@ WeakRef 对象包含对对象的弱引用，这个弱引用被称为该 WeakRef 
 
 以下是 WeakRef 提案的作者在其解释文件（[explainer document](https://github.com/tc39/proposal-weakrefs/blob/master/README.md)）中提出的一些具体观点
 
-> [Garbage collectors](<https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)>) are complicated. If an application or library depends on GC cleaning up a WeakRef or calling a finalizer \[cleanup callback] in a timely, predictable manner, it's likely to be disappointed: the cleanup may happen much later than expected, or not at all. Sources of variability include:
+> [垃圾回收](<https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)>)是复杂的。如果某个应用或者库依赖于 GC 及时、可预测地清理一个 WeakRef 或者调用 finalizer 的\[清理回调]。那么它很可能让人失望：清理工作可能比预期晚得多，甚至根本没有。变化来源包括：
 >
+> - 由于分代收集等原因，即使两个对象同时变得不可达，其中一个对象也可能比另一个对象早得多被垃圾回收。
+> - 垃圾回收工作可以通过增量和并发技术在一段时间内分散进行。
+> - 引擎会使用多种运行时策略来平衡内存占用与响应速度。
+> - JavaScript 引擎可能对看似不可达的对象持有引用（例如，在闭包中或内联缓存中）。
+> - 不同的 JavaScript 引擎对这些处理方式可能存在差异，而且同一引擎可能随着版本改变其算法。
+> - 一些复杂因素比如使用特定 API 也可能导致对象的存活时间超出预期。
+
 > - One object might be garbage-collected much sooner than another object, even if they become unreachable at the same time, e.g., due to generational collection.
 > - Garbage collection work can be split up over time using incremental and concurrent techniques.
 > - Various runtime heuristics can be used to balance memory usage, responsiveness.
