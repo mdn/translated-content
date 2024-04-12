@@ -49,4 +49,4 @@ l10n:
 
 ### 其他资源
 
-- 使用服务器发送事件 [创建一个墙推社交应用程序](https://hacks.mozilla.org/2011/06/a-wall-powered-by-eventsource-and-server-sent-events/) ，代码存放在这里：[Github](https://github.com/mozilla/webowonder-demos/tree/master/demos/friends%20timeline)。
+- 使用服务器发送事件[创建一个墙推社交应用程序](https://hacks.mozilla.org/2011/06/a-wall-powered-by-eventsource-and-server-sent-events/)，代码存放在这里：[Github](https://github.com/mozilla/webowonder-demos/tree/master/demos/friends%20timeline)。
