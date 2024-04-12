@@ -16,7 +16,7 @@ l10n:
 ## 示例
 
 ```js
-// 在 web worker 中可以运行
+// 可以在 web worker 中运行
 async function init() {
   if (!navigator.gpu) {
     throw Error("不支持 WebGPU。");
