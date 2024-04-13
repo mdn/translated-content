@@ -7,7 +7,7 @@ l10n:
 
 {{HTTPSidebar}}{{SeeCompatTable}}
 
-HTTP **`402 Payment Required`** 是一個非標準的回應狀態碼，保留供將來使用。此狀態碼旨在支援數字貨幣或（微型）支付系統，表示在用戶端進行支付之前，所請求的內容不可用。
+HTTP **`402 Payment Required`** 是一個非標準的回應狀態碼，保留以供將來使用。此狀態碼旨在支援數字貨幣或（微型）支付系統，表示在用戶端進行支付之前，所請求的內容不可用。
 
 有時，此狀態碼表示在用戶端進行支付之前無法處理請求。然而，並不存在標準使用慣例，不同的實體在不同的上下文中使用它。
 
@@ -34,4 +34,4 @@ Date: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## 參見
 
-- [HTTP 驗證](/zh-TW/docs/Web/HTTP/Authentication)
+- [HTTP 認證](/zh-TW/docs/Web/HTTP/Authentication)
