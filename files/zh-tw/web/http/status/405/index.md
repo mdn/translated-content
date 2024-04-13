@@ -25,5 +25,5 @@ HTTP **`405 Method Not Allowed`** 回應狀態碼表示伺服器了解請求方�
 
 - {{HTTPHeader("Allow")}}
 - [HTTP 狀態碼定義](https://httpwg.org/specs/rfc9110.html#status.405)
-- [如何修復 405 方法不允許](https://kinsta.com/blog/405-method-not-allowed-error/)
+- [如何修復 405 Method Not Allowed](https://kinsta.com/blog/405-method-not-allowed-error/)
 - [排除 HTTP 405 錯誤](https://learn.microsoft.com/zh-tw/aspnet/web-api/overview/testing-and-debugging/troubleshooting-http-405-errors-after-publishing-web-api-applications)
