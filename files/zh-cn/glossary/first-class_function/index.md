@@ -91,4 +91,4 @@ sayHello()();
 
 ## 参见
 
-- [First-class functions](https://zh.wikipedia.org/wiki/First-class_functions) 在维基百科
+- 维基百科上的[头等函数](https://zh.wikipedia.org/wiki/头等函数)

@@ -28,6 +28,6 @@ XSS 攻击可以分为 3 类：存储型（持久型）、反射型（非持久�
 ## 参见
 
 - [Type of Attacks: Cross-site scripting (XSS)](/zh-CN/docs/Web/Security/Types_of_attacks#cross-site_scripting_xss)
-- [Cross-site scripting](https://zh.wikipedia.org/wiki/Cross-site_scripting) on Wikipedia
+- 维基百科上的[跨站脚本](https://zh.wikipedia.org/wiki/跨網站指令碼)
 - [Cross-site scripting on OWASP](https://owasp.org/www-community/attacks/xss/)
 - [Another article about Cross-site scripting](https://www.acunetix.com/blog/articles/dom-xss-explained/)

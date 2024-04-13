@@ -9,4 +9,4 @@ slug: Glossary/Compile_time
 
 ## 参见
 
-- [Compile time](https://zh.wikipedia.org/wiki/Compile_time) on Wikipedia
+- 维基百科上的[编译期](https://zh.wikipedia.org/wiki/编译期)
