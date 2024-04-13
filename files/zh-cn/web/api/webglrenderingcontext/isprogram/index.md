@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("WebGL")}}
 
-[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.isProgram()`** 方法将在 {{domxref("WebGLProgram")}} 有效时返回 `true`，否则返回 `false`。
+[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.isProgram()`** 方法将在传递的 {{domxref("WebGLProgram")}} 参数有效时返回 `true`，否则返回 `false`。
 
 ## 语法
 
