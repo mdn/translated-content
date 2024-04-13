@@ -2,7 +2,7 @@
 title: "Response: свойство type"
 slug: Web/API/Response/type
 l10n:
-  sourceCommit: xxx
+  sourceCommit: 18234f36b082bdbdeb1177880974a3aa29a115ab
 ---
 
 {{APIRef("Fetch API")}}
