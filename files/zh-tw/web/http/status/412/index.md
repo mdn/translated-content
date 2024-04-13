@@ -22,9 +22,9 @@ ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 ETag: W/"0815"
 ```
 
-### 避免空中碰撞
+### 避免空中衝突
 
-通過 `ETag` 和 {{HTTPHeader("If-Match")}} 標頭的幫助，您可以檢測到空中編輯碰撞。
+通過 `ETag` 和 {{HTTPHeader("If-Match")}} 標頭的幫助，您可以檢測到空中編輯衝突。
 
 例如在編輯 MDN 時，當前的 wiki 內容被雜湊並放入回應中的 `Etag`：
 
