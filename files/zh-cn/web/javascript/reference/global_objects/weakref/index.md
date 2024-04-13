@@ -29,7 +29,7 @@ slug: Web/JavaScript/Reference/Global_Objects/WeakRef
 
 以下是 WeakRef 提案的作者在其解释文件（[explainer document](https://github.com/tc39/proposal-weakrefs/blob/master/README.md)）中提出的一些具体观点
 
-> [垃圾回收](<https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)>)是复杂的。如果某个应用或者库依赖于 GC 及时、可预测地清理一个 WeakRef 或者调用 finalizer 的\[清理回调]。那么它很可能让人失望：清理工作可能比预期晚得多，甚至根本没有。变化来源包括：
+> [垃圾回收](<https://zh.wikipedia.org/wiki/垃圾回收_(計算機科學)>)是复杂的。如果某个应用或者库依赖于 GC 及时、可预测地清理 WeakRef 或者调用终结器的\[清理回调]。那么它很可能让人失望：清理工作可能比预期晚得多，甚至根本没有。差异的来源包括：
 >
 > - 由于分代收集等原因，即使两个对象同时变得不可达，其中一个对象也可能比另一个对象早得多被垃圾回收。
 > - 垃圾回收工作可以通过增量和并发技术在一段时间内分散进行。
