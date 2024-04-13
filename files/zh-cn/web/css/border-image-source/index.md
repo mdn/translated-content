@@ -2,7 +2,7 @@
 title: border-image-source
 slug: Web/CSS/border-image-source
 l10n:
-  sourceCommit: 0f5f5ee73f3190f3a15dc42e1cee84201ffd19f6
+  sourceCommit: fb3ef3857ca1d77cc720deba0c12d7a3313b85b4
 ---
 
 {{CSSRef}}
