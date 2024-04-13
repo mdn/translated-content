@@ -27,4 +27,4 @@ HTTP **`418 I'm a teapot`** 用戶端錯誤回應碼表示伺服器拒絕沖泡�
 
 ## 參見
 
-- [維基百科：超文本咖啡壺控制協議](https://en.wikipedia.org/wiki/Hyper_Text_Coffee_Pot_Control_Protocol)
+- [維基百科：超文本咖啡壺控制協議](https://zh.wikipedia.org/zh-tw/超文字咖啡壺控制協定)
