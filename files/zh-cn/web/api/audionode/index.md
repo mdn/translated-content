@@ -32,7 +32,8 @@ l10n:
   - : 一个描述节点输入和输出之间必须匹配的通道方式的枚举值。
 - {{domxref("AudioNode.channelInterpretation")}}
   - : 一个描述通道含义的枚举值。该数值将定义音频的[上混音和下混音](/zh-CN/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing)会怎样进行。可能的取值是 `"speakers"` 或 `"discrete"`。
-  - 
+  -
+
 ## 方法
 
 _还实现了接口 {{domxref("EventTarget")}} 的方法_。
