@@ -7,7 +7,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP **`407 Proxy Authentication Required`** 用戶端錯誤狀態回應碼表示請求未被應用，因為它缺少對於位於瀏覽器與可訪問所請求資源的伺服器之間的{{Glossary("proxy server", "代理伺服器")}}的有效驗證憑證。
+HTTP **`407 Proxy Authentication Required`** 用戶端錯誤狀態回應碼表示請求未被應用，因為它缺少對於位於瀏覽器與可訪問所請求資源的伺服器之間的{{Glossary("proxy server", "代理伺服器")}}的有效認證憑證。
 
 此狀態隨著一個含有如何正確授權的 {{HTTPHeader("Proxy-Authenticate")}} 標頭一同發送。
 
@@ -35,7 +35,7 @@ Proxy-Authenticate: Basic realm="Access to internal site"
 
 ## 參見
 
-- [HTTP 驗證](/zh-TW/docs/Web/HTTP/Authentication)
+- [HTTP 認證](/zh-TW/docs/Web/HTTP/Authentication)
 - {{HTTPHeader("WWW-Authenticate")}}
 - {{HTTPHeader("Authorization")}}
 - {{HTTPHeader("Proxy-Authorization")}}
