@@ -14,7 +14,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_component
       <th scope="row">전제 사항:</th>
       <td>
         <p>
-          적어도 
+          적어도
           <a href="/ko/docs/Learn/HTML">HTML</a>,
           <a href="/ko/docs/Learn/CSS">CSS</a>,
           <a href="/ko/docs/Learn/JavaScript">JavaScript</a>언어의 사용에 익숙하기를 권장합니다. 그리고 
