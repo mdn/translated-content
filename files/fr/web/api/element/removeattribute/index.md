@@ -26,8 +26,6 @@ element.removeAttribute(nomAttribut);
 
 `removeAttribute()` devrait être utilisée plutôt que de passer la valeur de l'attribut à `null` (que ce soit directement ou en appelant [`setAttribute()`](/fr/docs/Web/API/Element/setAttribute). De nombreux attributs ne fonctionneront pas comme espéré si on les passe à `null`.
 
-{{ DOMAttributeMethods() }}
-
 ## Exemple
 
 ```js

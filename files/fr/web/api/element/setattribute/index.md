@@ -61,8 +61,6 @@ Ceci démontre 2 choses :
 
 {{ EmbedLiveSample('Exemple', '300', '50') }}
 
-{{DOMAttributeMethods}}
-
 ## Spécifications
 
 - [DOM Level 2 Core&nbsp;: setAttribute](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-F68F082) — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2/core/core.html#ID-F68F082) (non normative)
