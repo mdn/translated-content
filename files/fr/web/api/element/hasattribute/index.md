@@ -13,10 +13,16 @@ La méthode **`Element.hasAttribute()`** renvoie une **valeur booléenne** indiq
 var result = element.hasAttribute(name);
 ```
 
-- `result`
-  - : récupère la valeur de retour `true` ou `false`.
+### Paramètre
+
 - `name`
   - : est une chaine de caractères représentant le nom de l'attribut.
+
+### Valeur de retour
+
+- `result`
+  - : récupère la valeur de retour `true` ou `false`.
+
 
 ## Exemple
 

@@ -15,8 +15,17 @@ Dans Firefox 3 et postérieurs, cette méthode réinitialise les valeurs DOM à 
 element.removeAttributeNS(namespace, attrName);
 ```
 
-- `namespace` est une chaîne qui contient l'espace de noms de l'attribut.
-- `attrName` est une chaîne qui nomme l'attribut à supprimer du noeud en cours.
+### Paramètres
+
+- `namespace` 
+    - : est une chaîne qui contient l'espace de noms de l'attribut.
+
+- `attrName`
+    - : est une chaîne qui nomme l'attribut à supprimer du noeud en cours.
+
+### Valeur de retour
+
+[`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined).
 
 ## Exemple
 

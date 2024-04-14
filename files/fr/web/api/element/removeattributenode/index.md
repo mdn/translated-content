@@ -13,8 +13,15 @@ slug: Web/API/Element/removeAttributeNode
 removedAttr = element.removeAttributeNode(attributeNode);
 ```
 
-- `attributeNode` est le nœud `Attr` à enlever.
-- `removedAttr` est le nœud `Attr` qui vient d'être enlevé.
+### Paramètre
+
+- `attributeNode`
+    - : est le nœud `Attr` à enlever.
+
+### Valeur de retour
+
+- `removedAttr`
+    - : est le nœud `Attr` qui vient d'être enlevé.
 
 ## Exemple
 

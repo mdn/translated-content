@@ -15,12 +15,16 @@ attributeNode = element.getAttributeNodeNS(namespace, nodeName);
 
 ### Paramètres
 
-- `attributeNode`
-  - : Le nœud pour l'attribut spécifié.
 - `namespace`
   - : Une chaîne spécifiant l'espace de noms de l'attribut.
+  
 - `nodeName`
   - : Une chaîne spécifiant le nom de l'attribut.
+
+### Valeur de retour
+
+- `attributeNode`
+  - : Le nœud pour l'attribut spécifié.
 
 ## Notes
 

@@ -13,14 +13,14 @@ La méthode **`removeAttribute()`**, rattachée à l'interface [`Element`](/fr/d
 element.removeAttribute(nomAttribut);
 ```
 
-### Paramètres
+### Paramètre
 
 - `nomAttribut`
   - : Une chaîne de caractères ([`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String)) qui indique le nom de l'attribut à supprimer de l'élément. Si l'attribut indiqué n'existe pas, `removeAttribute()` finit son exécution sans générer d'erreur.
 
 ### Valeur de retour
 
-`undefined`.
+[`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined).
 
 ## Notes d'utilisation
 

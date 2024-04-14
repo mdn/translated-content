@@ -10,15 +10,21 @@ slug: Web/API/Element/hasAttributeNS
 ## Syntaxe
 
 ```js
-result = element.hasAttributeNS(namespace, localName);
+var result = element.hasAttributeNS(namespace, localName);
 ```
+
+### Paramètres
+
+- `namespace`
+  - : Une chaîne spécifiant l'espace de noms de l'attribut.
+
+- `localName`
+  - : Le nom de l'attribut.
+
+### Valeur de retour
 
 - `result`
   - : Une valeur booléenne `true` ou `false`.
-- `namespace`
-  - : Une chaîne spécifiant l'espace de noms de l'attribut.
-- `localName`
-  - : Le nom de l'attribut.
 
 ## Exemple
 

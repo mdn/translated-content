@@ -13,10 +13,15 @@ slug: Web/API/Element/setAttributeNodeNS
 replacedAttr = element.setAttributeNodeNS(attributeNode);
 ```
 
-- `replacedAttr`
-  - : Le nœud attribut remplacé, si applicable, renvoyé par cette fonction.
+### Paramètre
+
 - `attributeNode`
   - : Un nœud `Attr`.
+
+### Valeur de retour
+
+- `replacedAttr`
+  - : Le nœud attribut remplacé, si applicable, renvoyé par cette fonction.
 
 ## Exemple
 

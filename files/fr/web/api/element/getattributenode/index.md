@@ -13,8 +13,15 @@ Renvoie le nœud d'attribut spécifié pour l'élément courant, en tant que noe
 var attrNode = element.getAttributeNode(attrName);
 ```
 
-- `attrNode` est un nœud `Attr` pour l'attribut demandé.
-- `attrName` est une chaîne de caractères qui contient le nom de l'attribut.
+### Paramètre
+
+- `attrName`
+    - : est une chaîne de caractères qui contient le nom de l'attribut.
+
+### Valeur de retour
+
+- `attrNode`
+    - : est un nœud `Attr` pour l'attribut demandé.
 
 ## Exemple
 

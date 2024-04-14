@@ -13,8 +13,15 @@ slug: Web/API/Element/setAttributeNode
 var replacedAttr = element.setAttributeNode(attribute);
 ```
 
-- `attribute` est le nœud `Attr` à définir sur l'élément.
-- `replacedAttr` est le nœud d'attribut remplacé, renvoyé par la fonction, s'il y en avait un.
+### Paramètre
+
+- `attribute` 
+    - : est le nœud `Attr` à définir sur l'élément.
+
+### Valeur de retour
+
+- `replacedAttr`
+    - : est le nœud d'attribut remplacé, renvoyé par la fonction, s'il y en avait un.
 
 ## Exemple
 
