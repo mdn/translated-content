@@ -19,7 +19,6 @@ Element.setAttribute(name, value);
 
 - `name`
   - : Une chaîne de caractères spécifiant le nom de l'attribut pour lequel la valeur doit être définie. L'attribut name est automatiquement converti en minuscules quand `setAttribute()` est appelé sur un élément HTML dans document HTML.
-
 - `value`
   - : une chaîne de caractères contenant la valeur à affecter à l'attribut. Toute valeur spécifiée qui n'est pas une chaîne de caractères, est convertie automatiquement en chaîne.
 

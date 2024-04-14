@@ -19,7 +19,6 @@ element.removeAttributeNS(namespace, attrName);
 
 - `namespace`
   - : est une chaîne qui contient l'espace de noms de l'attribut.
-
 - `attrName`
   - : est une chaîne qui nomme l'attribut à supprimer du noeud en cours.
 

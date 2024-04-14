@@ -17,7 +17,6 @@ var result = element.hasAttributeNS(namespace, localName);
 
 - `namespace`
   - : Une chaîne spécifiant l'espace de noms de l'attribut.
-
 - `localName`
   - : Le nom de l'attribut.
 
