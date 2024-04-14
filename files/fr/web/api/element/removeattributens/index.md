@@ -18,10 +18,10 @@ element.removeAttributeNS(namespace, attrName);
 ### Paramètres
 
 - `namespace` 
-    - : est une chaîne qui contient l'espace de noms de l'attribut.
+  - : est une chaîne qui contient l'espace de noms de l'attribut.
 
 - `attrName`
-    - : est une chaîne qui nomme l'attribut à supprimer du noeud en cours.
+  - : est une chaîne qui nomme l'attribut à supprimer du noeud en cours.
 
 ### Valeur de retour
 

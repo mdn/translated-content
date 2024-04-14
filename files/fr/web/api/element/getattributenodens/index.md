@@ -17,7 +17,7 @@ attributeNode = element.getAttributeNodeNS(namespace, nodeName);
 
 - `namespace`
   - : Une chaîne spécifiant l'espace de noms de l'attribut.
-  
+
 - `nodeName`
   - : Une chaîne spécifiant le nom de l'attribut.
 

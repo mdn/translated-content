@@ -16,12 +16,12 @@ removedAttr = element.removeAttributeNode(attributeNode);
 ### Paramètre
 
 - `attributeNode`
-    - : est le nœud `Attr` à enlever.
+  - : est le nœud `Attr` à enlever.
 
 ### Valeur de retour
 
 - `removedAttr`
-    - : est le nœud `Attr` qui vient d'être enlevé.
+  - : est le nœud `Attr` qui vient d'être enlevé.
 
 ## Exemple
 

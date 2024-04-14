@@ -16,12 +16,12 @@ var attrNode = element.getAttributeNode(attrName);
 ### Paramètre
 
 - `attrName`
-    - : est une chaîne de caractères qui contient le nom de l'attribut.
+  - : est une chaîne de caractères qui contient le nom de l'attribut.
 
 ### Valeur de retour
 
 - `attrNode`
-    - : est un nœud `Attr` pour l'attribut demandé.
+  - : est un nœud `Attr` pour l'attribut demandé.
 
 ## Exemple
 

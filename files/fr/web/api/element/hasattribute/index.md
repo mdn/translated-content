@@ -23,7 +23,6 @@ var result = element.hasAttribute(name);
 - `result`
   - : récupère la valeur de retour `true` ou `false`.
 
-
 ## Exemple
 
 ```js

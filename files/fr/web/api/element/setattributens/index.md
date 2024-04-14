@@ -16,13 +16,13 @@ element.setAttributeNS(namespace, name, value);
 ### Paramètres
 
 - `namespace`
-    - : est une chaîne spécifiant l'espace de noms de l'attribut.
+  - : est une chaîne spécifiant l'espace de noms de l'attribut.
 
 - `name`
-    - : est une chaîne identifiant l'attribut par son nom qualifié ; c'est-à-dire un préfixe d'espace de noms suivi d'un deux-points suivi d'un nom local.
+  - : est une chaîne identifiant l'attribut par son nom qualifié ; c'est-à-dire un préfixe d'espace de noms suivi d'un deux-points suivi d'un nom local.
 
 - `value`
-    - : est la valeur chaîne désirée pour le nouvel attribut.
+  - : est la valeur chaîne désirée pour le nouvel attribut.
 
 ### Valeur de retour
 

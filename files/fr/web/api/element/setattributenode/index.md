@@ -15,13 +15,13 @@ var replacedAttr = element.setAttributeNode(attribute);
 
 ### Paramètre
 
-- `attribute` 
-    - : est le nœud `Attr` à définir sur l'élément.
+- `attribute`
+  - : est le nœud `Attr` à définir sur l'élément.
 
 ### Valeur de retour
 
 - `replacedAttr`
-    - : est le nœud d'attribut remplacé, renvoyé par la fonction, s'il y en avait un.
+  - : est le nœud d'attribut remplacé, renvoyé par la fonction, s'il y en avait un.
 
 ## Exemple
 
