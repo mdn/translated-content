@@ -39,7 +39,7 @@ _还实现了接口 {{domxref("EventTarget")}} 的方法_。
 
 - {{domxref("AudioNode.connect()")}}
   - 允许我们将此节点的输出连接到另一个节点（可以是音频数据，也可以是 {{domxref("AudioParam")}} 的值）的输入。
-- {{domxref("AudioNode.disconnect()")}} 
+- {{domxref("AudioNode.disconnect()")}}
   - : 允许我们断开当前节点与另一个已连接节点的连接。
 
 ## 描述
