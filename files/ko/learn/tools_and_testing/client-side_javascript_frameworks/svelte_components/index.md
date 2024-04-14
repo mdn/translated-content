@@ -1,7 +1,6 @@
 ---
 title: Svelte 앱 컴포넌트화하기
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components
-page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}
