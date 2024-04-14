@@ -9,7 +9,7 @@ l10n:
 
 **WebSocket API** 是一种先进的技术，可在用户浏览器和服务器之间开启双向交互式通信会话。利用该 API，可以向服务器发送信息，并接收事件驱动的响应，而无需轮询服务器以获得回复。
 
-> **备注：** 虽然 WebSocket 连接在功能上与标准 Unix 风格 socket 有些类似，但两者并无关联。
+> **备注：** 虽然 WebSocket 连接在功能上与标准 Unix 风格的 socket 有些类似，但两者并无关联。
 
 ## 接口
 
@@ -31,7 +31,7 @@ l10n:
 ## 工具
 
 - [AsyncAPI](https://www.asyncapi.com/)：用于描述基于 WebSocket 等协议的事件驱动架构的规范。可以使用它来描述基于 WebSocket 的 API，就像使用 OpenAPI 规范描述 REST API 一样。了解[为什么要考虑将 AsyncAPI 与 WebSocket 结合使用](https://www.asyncapi.com/blog/websocket-part1)和[如何使用](https://www.asyncapi.com/blog/websocket-part2)。
-- [HumbleNet](https://hacks.mozilla.org/2017/06/introducing-humblenet-a-cross-platform-networking-library-that-works-in-the-browser/)：一个在浏览器中工作的跨平台网络库。它由 WebSockets 和 WebRTC 的 C 语言封装器组成，可抽象出跨浏览器的差异，便于为游戏和其他应用程序创建多用户网络功能。
+- [HumbleNet](https://hacks.mozilla.org/2017/06/introducing-humblenet-a-cross-platform-networking-library-that-works-in-the-browser/)：一个在浏览器中工作的跨平台网络库。它由 WebSocket 和 WebRTC 的 C 语言封装器组成，可抽象出跨浏览器的差异，便于为游戏和其他应用程序创建多用户网络功能。
 - [µWebSockets](https://github.com/uNetworking/uWebSockets)：由 [C++11](https://isocpp.org/) 和 [Node.js](https://nodejs.org/) 实现的高度可扩展的 WebSocket 服务器和客户端。
 - [Socket.IO](https://socket.io)：基于长轮询和 WebSocket 的 [Node.js](https://nodejs.org) 第三方传输协议。
 - [SocketCluster](https://socketcluster.io/)：适用于 [Node.js](https://nodejs.org) 的 pub/sub WebSocket 框架，注重可扩展性。
