@@ -16,7 +16,7 @@ l10n:
 
 {{InheritanceDiagram}}
 
-> **注意：** 一个 `AudioNode` 可以作为事件的目标，所以它实现了 {{domxref("EventTarget")}} 接口。
+> **备注：** 一个 `AudioNode` 可以作为事件的目标，所以它实现了 {{domxref("EventTarget")}} 接口。
 
 ## 属性
 
