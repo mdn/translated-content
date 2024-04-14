@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-**`Object.create()`** メソッドは、既存のオブジェクトを新しく生成されるオブジェクトのプロトタイプとして使用して、新しいオブジェクトを生成します。
+**`Object.create()`** 静的メソッドは、既存のオブジェクトを新しく生成されるオブジェクトのプロトタイプとして使用して、新しいオブジェクトを生成します。
 
 {{EmbedInteractiveExample("pages/js/object-create.html", "taller")}}
 
