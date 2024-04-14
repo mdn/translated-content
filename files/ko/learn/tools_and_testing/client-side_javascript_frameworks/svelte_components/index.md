@@ -286,7 +286,7 @@ export let onclick = (clicked) => {};
    </button>
    ```
 
-  `dispatch('remove', todo)`를 사용하여 `remove` 이벤트를 발생시키고, 삭제되는 `todo`를 추가 데이터로 전달하고 있습니다. 핸들러는 이벤트 객체를 사용할 수 있게 호출되며, 추가 데이터는 `event.detail` 속성에서 사용할 수 있습니다.
+`dispatch('remove', todo)`를 사용하여 `remove` 이벤트를 발생시키고, 삭제되는 `todo`를 추가 데이터로 전달하고 있습니다. 핸들러는 이벤트 객체를 사용할 수 있게 호출되며, 추가 데이터는 `event.detail` 속성에서 사용할 수 있습니다.
 
 3. 이제 `Todos.svelte` 내부에서 이 이벤트를 수신하고 그에 따라 행동해야 합니다. 이 파일로 돌아가서 `<Todo>` 컴포넌트 호출을 다음과 같이 업데이트하세요:
 
