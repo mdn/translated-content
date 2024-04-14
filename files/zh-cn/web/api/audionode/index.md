@@ -48,13 +48,13 @@ _还实现了接口 {{domxref("EventTarget")}} 的方法_。
 
 ![参与一个 AudioContext 中的 AudioNode 可以构成一个音频路由图。](webaudiobasics.png)
 
-每个 `AudioNode` 都有输入和输出，多个音频节点连接在一起构成一个 _处理图_。这个图包含在一个 {{domxref("AudioContext")}} 中，每个音频节点只能属于一个音频上下文。
+每个 `AudioNode` 都有输入和输出，多个音频节点连接在一起构成一个*处理图*。这个图包含在一个 {{domxref("AudioContext")}} 中，每个音频节点只能属于一个音频上下文。
 
-一个 _源节点_ 没有输入，但有一个或多个输出，可以用来生成声音。另一方面，一个 _目的地节点_ 没有输出；相反，它的所有输入直接播放在扬声器上（或者音频上下文使用的任何音频输出设备）。此外，还有 _处理节点_，它们有输入和输出。不同的 `AudioNode` 之间的确切处理方式各不相同，但通常来说，一个节点会读取它的输入，进行一些与音频相关的处理，并为它的输出生成新值，或者让音频通过（例如在 {{domxref("AnalyserNode")}} 中，处理的结果是单独访问的）。
+一个*源节点*没有输入，但有一个或多个输出，可以用来生成声音。另一方面，一个*目的地节点*没有输出；相反，它的所有输入直接播放在扬声器上（或者音频上下文使用的任何音频输出设备）。此外，还有*处理节点*，它们有输入和输出。不同的 `AudioNode` 之间的确切处理方式各不相同，但通常来说，一个节点会读取它的输入，进行一些与音频相关的处理，并为它的输出生成新值，或者让音频通过（例如在 {{domxref("AnalyserNode")}} 中，处理的结果是单独访问的）。
 
 图中的节点越多，延迟就越高。例如，如果你的图的延迟为 500 毫秒，当源节点播放声音时，你会需要等待半秒，才能在扬声器上听到声音（甚至可能因为底层音频设备的延迟而更长）。因此，如果你需要实现需要交互式音频，请尽量保持图尽可能小，并将用户控制的音频节点放在图的末尾。例如，音量控制器（`GainNode`）应该是最后一个节点，以便音量更改立即生效。
 
-每个输入和输出都有一定数量的 _通道_。例如，单声道音频有一个通道，而立体声音频有两个通道。Web Audio API 将根据需要上混音或下混音通道数量；请查看 Web Audio 规范以获取详细信息。
+每个输入和输出都有一定数量的*通道*。例如，单声道音频有一个通道，而立体声音频有两个通道。Web Audio API 将根据需要上混音或下混音通道数量；请查看 Web Audio 规范以获取详细信息。
 
 有关所有音频节点的列表，请参阅 [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API) 主页。
 
@@ -87,12 +87,12 @@ analyserNode.smoothingTimeConstant = 0.5;
 - 可以对音频节点进行[子类化](https://github.com/WebAudio/web-audio-api/issues/251)。虽然实际处理是由浏览器内部完成的，无法更改，但你可以编写一个音频节点的包装器，以提供自定义属性和方法。
 - 性能略有提高：在 Chrome 浏览器和 Firefox 浏览器中，_factory_ 方法会在内部调用构造函数。
 
-_简史：_ 第一版网络音频规范仅定义了 _factory_ 方法。经过 [2013 年 10 月的设计审查](https://github.com/WebAudio/web-audio-api/issues/250)，决定添加 _constructor_，因为与 _factory_ 方法相比，前者有很多优点。在 2016 年 8 月至 10 月期间，_constructor_ 被添加到规范中。_factory_ 方法仍继续包含在规范中，并未废弃。
+_简史_：第一版网络音频规范仅定义了 _factory_ 方法。经过 [2013 年 10 月的设计审查](https://github.com/WebAudio/web-audio-api/issues/250)，决定添加 _constructor_，因为与 _factory_ 方法相比，前者有很多优点。在 2016 年 8 月至 10 月期间，_constructor_ 被添加到规范中。_factory_ 方法仍继续包含在规范中，并未废弃。
 
 
 ## 例子
 
-这个简单的代码片段展示了一些音频节点的创建，以及如何使用`AudioNode` 属性 和方法。你可以在 [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API) 页面中的链接找到此类用法的示例（例如 [Violent Theremin](https://github.com/mdn/webaudio-examples/tree/main/violent-theremin)）。
+这个简单的代码片段展示了一些音频节点的创建，以及如何使用 `AudioNode` 属性和方法。你可以在 [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API) 页面中的链接找到此类用法的示例（例如 [Violent Theremin](https://github.com/mdn/webaudio-examples/tree/main/violent-theremin)）。
 
 ```js
 const audioCtx = new AudioContext();
