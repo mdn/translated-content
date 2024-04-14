@@ -85,7 +85,7 @@ analyserNode.smoothingTimeConstant = 0.5;
 
 - 所有参数都可以在构建时设置，而无需单独设置。
 - 可以对音频节点进行[子类化](https://github.com/WebAudio/web-audio-api/issues/251)。虽然实际处理是由浏览器内部完成的，无法更改，但你可以编写一个音频节点的包装器，以提供自定义属性和方法。
-- 性能略有提高： 在 Chrome 浏览器和 Firefox 浏览器中，_factory_ 方法会在内部调用构造函数。
+- 性能略有提高：在 Chrome 浏览器和 Firefox 浏览器中，_factory_ 方法会在内部调用构造函数。
 
 _简史：_ 第一版网络音频规范仅定义了 _factory_ 方法。经过 [2013 年 10 月的设计审查](https://github.com/WebAudio/web-audio-api/issues/250)，决定添加 _constructor_，因为与 _factory_ 方法相比，前者有很多优点。在 2016 年 8 月至 10 月期间，_constructor_ 被添加到规范中。_factory_ 方法仍继续包含在规范中，并未废弃。
 
