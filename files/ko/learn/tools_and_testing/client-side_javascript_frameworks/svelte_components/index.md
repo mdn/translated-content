@@ -243,17 +243,17 @@ export let onclick = (clicked) => {};
 
 `Todos.svelte` 내의 `{#each}` 블록을 다음과 같이 업데이트 하세요:
 
-   ```svelte
-   <ul role="list" class="todo-list stack-large" aria-labelledby="list-heading">
-     {#each filterTodos(filter, todos) as todo (todo.id)}
-     <li class="todo">
-       <Todo {todo} />
-     </li>
-     {:else}
-     <li>Nothing to do here!</li>
-     {/each}
-   </ul>
-   ```
+```svelte
+<ul role="list" class="todo-list stack-large" aria-labelledby="list-heading">
+  {#each filterTodos(filter, todos) as todo (todo.id)}
+  <li class="todo">
+    <Todo {todo} />
+  </li>
+  {:else}
+  <li>Nothing to do here!</li>
+  {/each}
+</ul>
+```
 
 앱을 실행해보면, 페이지에 할 일(to-do) 목록이 표시되며 체크박스는 작동해야 합니다(몇 개를 체크하거나 체크 해제한 후 필터가 여전히 예상대로 작동하는지 시도해 보세요). 하지만 "x개 중 y개의 항목 완료" 상태 표시는 더 이상 업데이트되지 않습니다. 이는 Todo 컴포넌트가 할 일(to-do)을 prop을 통해 받고 있지만, 부모에게 어떠한 정보도 보내지 않기 때문입니다. 나중에 이 문제를 해결하겠습니다.
 
