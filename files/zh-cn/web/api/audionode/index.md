@@ -1,7 +1,7 @@
 ---
 title: AudioNode
 slug: Web/API/AudioNode
-l10n: 
+l10n:
   sourceCommit: 10b342385644e822d123694ad3bc8c2ca9abb2dc
 ---
 
