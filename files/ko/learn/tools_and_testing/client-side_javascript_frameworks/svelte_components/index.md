@@ -241,7 +241,7 @@ export let onclick = (clicked) => {};
 
 4. 다음으로, `Todo.svelte` 로 옮겨진 코드 대신 각 to-do마다 `<Todo>` 컴포넌트를 포함하도록 `{#each}` 블록을 업데이트 해야 합니다. 또한 현재 `todo` 객체를 prop으로 컴포넌트에 전달하고 있습니다.
 
- `Todos.svelte` 내의 `{#each}` 블록을 다음과 같이 업데이트 하세요:
+`Todos.svelte` 내의 `{#each}` 블록을 다음과 같이 업데이트 하세요:
 
    ```svelte
    <ul role="list" class="todo-list stack-large" aria-labelledby="list-heading">
