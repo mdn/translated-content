@@ -335,29 +335,29 @@ export let onclick = (clicked) => {};
 
 이전 함수 아래에 이러한 동작을 처리할 다음 함수 코드를 추가하세요:
 
-   ```js
-   function onCancel() {
-     name = todo.name; // 이름을 초기값으로 복원하고
-     editing = false; // 편집 모드 종료
-   }
+```js
+function onCancel() {
+  name = todo.name; // 이름을 초기값으로 복원하고
+  editing = false; // 편집 모드 종료
+}
 
-   function onSave() {
-     update({ name }); // 할 일(todo)이름 업데이트
-     editing = false; // 편집 모드 종료
-   }
+function onSave() {
+  update({ name }); // 할 일(todo)이름 업데이트
+  editing = false; // 편집 모드 종료
+}
 
-   function onRemove() {
-     dispatch("remove", todo); // remove 이벤트 방출
-   }
+function onRemove() {
+  dispatch("remove", todo); // remove 이벤트 방출
+}
 
-   function onEdit() {
-     editing = true; // 편집 모드로 들어갑니다
-   }
+function onEdit() {
+  editing = true; // 편집 모드로 들어갑니다
+}
 
-   function onToggle() {
-     update({ completed: !todo.completed }); // 할 일(todo) 상태에 대한 업데이트
-   }
-   ```
+function onToggle() {
+  update({ completed: !todo.completed }); // 할 일(todo) 상태에 대한 업데이트
+}
+```
 
 ### 마크업 업데이트
 
