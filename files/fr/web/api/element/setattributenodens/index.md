@@ -51,6 +51,6 @@ Notez que si vous essayez de définir sans cloner le noeud, Mozilla donne une er
 
 ## Voir aussi
 
-- {{domxref("Document.createAttribute()")}}
-- {{domxref("Document.createAttributeNS()")}}
-- {{domxref("Element.getAttributeNodeNS()")}}
+- [`Document.createAttribute()`](/fr/docs/Web/API/Document/createAttribute)
+- [`Document.createAttributeNS()`](/fr/docs/Web/API/Document/createAttributeNS)
+- [`Element.getAttributeNodeNS()`](/fr/docs/Web/API/Element/getAttributeNodeNS)

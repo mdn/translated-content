@@ -39,6 +39,6 @@ d.setAttributeNS("http://www.mozilla.org/ns/specialspace", "align", "center");
 
 ## Voir aussi
 
-- {{domxref("Element.hasAttributeNS()")}}
-- {{domxref("Element.getAttributeNS()")}}
-- {{domxref("Element.removeAttributeNS()")}}
+- [`Element.hasAttributeNS()`](/fr/docs/Web/API/Element/hasAttributeNS)
+- [`Element.getAttributeNS()`](/fr/docs/Web/API/Element/getAttributeNS)
+- [`Element.removeAttributeNS()`](/fr/docs/Web/API/Element/removeAttributeNS)

@@ -47,6 +47,6 @@ if (
 
 ## Voir aussi
 
-- {{domxref("Element.getAttributeNS()")}}
-- {{domxref("Element.setAttributeNS()")}}
-- {{domxref("Element.removeAttributeNS()")}}
+- [`Element.getAttributeNS()`](/fr/docs/Web/API/Element/getAttributeNS)
+- [`Element.setAttributeNS()`](/fr/docs/Web/API/Element/setAttributeNS)
+- [`Element.removeAttributeNS()`](/fr/docs/Web/API/Element/removeAttributeNS)

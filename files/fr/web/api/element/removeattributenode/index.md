@@ -44,6 +44,6 @@ Il n'y a pas de `removeAttributeNodeNS` (contrairement à la paire `setAttribute
 
 ## Voir aussi
 
-- {{domxref("Document.createAttribute()")}}
-- {{domxref("Element.getAttributeNode()")}}
-- {{domxref("Element.setAttributeNode()")}}
+- [`Document.createAttribute()`](/fr/docs/Web/API/Document/createAttribute)
+- [`Element.getAttributeNode()`](/fr/docs/Web/API/Element/getAttributeNode)
+- [`Element.setAttributeNode()`](/fr/docs/Web/API/Element/setAttributeNode)

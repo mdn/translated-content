@@ -49,8 +49,8 @@ if (foo.hasAttribute("bar")) {
 
 ## Voir aussi
 
-- {{domxref("Element.hasAttributes()")}}
-- {{domxref("Element.getAttribute()")}}
-- {{domxref("Element.setAttribute()")}}
-- {{domxref("Element.removeAttribute()")}}
-- {{domxref("Element.toggleAttribute()")}}
+- [`Element.hasAttributes()`](/fr/docs/Web/API/Element/hasAttributes)
+- [`Element.getAttribute()`](/fr/docs/Web/API/Element/getAttribute)
+- [`Element.setAttribute()`](/fr/docs/Web/API/Element/setAttribute)
+- [`Element.removeAttribute()`](/fr/docs/Web/API/Element/removeAttribute)
+- [`Element.toggleAttribute()`](/fr/docs/Web/API/Element/toggleAttribute)

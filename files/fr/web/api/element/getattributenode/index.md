@@ -48,6 +48,6 @@ Les nœuds `Attr` héritent de `Node`, mais ne sont pas considérés comme faisa
 
 ## Voir aussi
 
-- {{domxref("Document.createAttribute()")}}
-- {{domxref("Element.setAttributeNode()")}}
-- {{domxref("Element.removeAttributeNode()")}}
+- [`Document.createAttribute()`](/fr/docs/Web/API/Document/createAttribute)
+- [`Element.setAttributeNode()`](/fr/docs/Web/API/Element/setAttributeNode)
+- [`Element.removeAttributeNode()`](/fr/docs/Web/API/Element/removeAttributeNode)

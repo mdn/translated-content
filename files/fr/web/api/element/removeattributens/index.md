@@ -40,6 +40,6 @@ d.removeAttributeNS("http://www.mozilla.org/ns/specialspace", "specialAlign");
 
 ## Voir aussi
 
-- {{domxref("Element.hasAttributeNS()")}}
-- {{domxref("Element.getAttributeNS()")}}
-- {{domxref("Element.setAttributeNS()")}}
+- [`Element.hasAttributeNS()`](/fr/docs/Web/API/Element/hasAttributeNS)
+- [`Element.getAttributeNS()`](/fr/docs/Web/API/Element/getAttributeNS)
+- [`Element.setAttributeNS()`](/fr/docs/Web/API/Element/setAttributeNS)

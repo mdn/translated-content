@@ -7,7 +7,7 @@ slug: Web/API/Element/setAttribute
 
 Ajoute un nouvel attribut ou change la valeur d'un attribut existant pour l'élément spécifié. Si l'attribut existe déjà, la valeur est mise à jour ; sinon, un nouvel attribut est ajouté avec le nom et la valeur spécifiés.
 
-Pour obtenir la valeur actuelle d'un attribut, utilisez {{domxref("Element.getAttribute", "getAttribute()")}} ; pour supprimer un attribut, appelez {{domxref("Element.removeAttribute", "removeAttribute()")}}.
+Pour obtenir la valeur actuelle d'un attribut, utilisez [`getAttribute()`](/fr/docs/Web/API/Element/getAttribute) ; pour supprimer un attribut, appelez [`removeAttribute()`](/fr/docs/Web/API/Element/removeAttribute).
 
 ## Syntaxe
 
@@ -22,13 +22,13 @@ Element.setAttribute(name, value);
 - `value`
   - : une chaîne de caractères contenant la valeur à affecter à l'attribut. Toute valeur spécifiée qui n'est pas une chaîne de caractères, est convertie automatiquement en chaîne.
 
-Les attributs booléens sont considérés être `true` (_vrai_) s'ils sont présents sur l'élément, quelle que soit leur valeur réelle ; en règle générale, vous devez spécifier la chaîne vide (`""`) dans `value` (certains utilisent le nom de l'attribut, mais ce fonctionnement n'est pas standard). Voir l' [exemple](#exemple) ce-dessous pour une démonstration pratique.
+Les attributs booléens sont considérés être `true` (_vrai_) s'ils sont présents sur l'élément, quelle que soit leur valeur réelle ; en règle générale, vous devez spécifier la chaîne vide (`""`) dans `value` (certains utilisent le nom de l'attribut, mais ce fonctionnement n'est pas standard). Voir l'[exemple](#exemple) ci-dessous pour une démonstration pratique.
 
-Puisque la valeur spécifiée est convertie en chaîne, spécifier `null` ne fait pas nécessairement ce que vous attendez. Au lieu de supprimer l'attribut ou de définir sa valeur comme [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null) , il définit à la place la valeur de l'attribut avec la chaîne "null". Si vous souhaitez supprimer un attribut, appelez {{domxref("Element.removeAttribute","removeAttribute()")}}.
+Puisque la valeur spécifiée est convertie en chaîne, spécifier `null` ne fait pas nécessairement ce que vous attendez. Au lieu de supprimer l'attribut ou de définir sa valeur comme [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null) , il définit à la place la valeur de l'attribut avec la chaîne "null". Si vous souhaitez supprimer un attribut, appelez [`removeAttribute()`](/fr/docs/Web/API/Element/removeAttribute).
 
 ### Valeur retournée
 
-{{jsxref("undefined")}}.
+[`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined).
 
 ### Exceptions
 
@@ -78,7 +78,7 @@ L'utilisation de `setAttribute()` pour modifier certains attributs, en particuli
 
 ## Voir aussi
 
-- {{domxref("Element.hasAttribute()")}}
-- {{domxref("Element.getAttribute()")}}
-- {{domxref("Element.removeAttribute()")}}
-- {{domxref("Element.toggleAttribute()")}}
+- [`Element.hasAttribute()`](/fr/docs/Web/API/Element/hasAttribute)
+- [`Element.getAttribute()`](/fr/docs/Web/API/Element/getAttribute)
+- [`Element.removeAttribute()`](/fr/docs/Web/API/Element/removeAttribute)
+- [`Element.toggleAttribute()`](/fr/docs/Web/API/Element/toggleAttribute)

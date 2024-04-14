@@ -33,7 +33,7 @@ alert(d2.attributes[1].value);
 
 Si l'attribut nommé existe déjà sur l'élément, cet attribut est remplacé par le nouveau et le nœud remplacé est renvoyé.
 
-Cette méthode est peu utilisée. On lui préfère souvent {{domxref("Element.setAttribute()")}} pour modifier la valeur d'un attribut d'élément.
+Cette méthode est peu utilisée. On lui préfère souvent [`setAttribute()`](/fr/docs/Web/API/Element/setAttribute) pour modifier la valeur d'un attribut d'élément.
 
 ## Spécifications
 
@@ -47,6 +47,6 @@ Cette méthode est peu utilisée. On lui préfère souvent {{domxref("Element.se
 
 ## Voir aussi
 
-- {{domxref("Document.createAttribute()")}}
-- {{domxref("Element.getAttributeNode()")}}
-- {{domxref("Element.removeAttributeNode()")}}
+- [`Document.createAttribute()`](/fr/docs/Web/API/Document/createAttribute)
+- [`Element.getAttributeNode()`](/fr/docs/Web/API/Element/getAttributeNode)
+- [`Element.removeAttributeNode()`](/fr/docs/Web/API/Element/removeAttributeNode)

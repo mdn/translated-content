@@ -26,7 +26,7 @@ attributeNode = element.getAttributeNodeNS(namespace, nodeName);
 
 ## Notes
 
-`getAttributeNodeNS` est plus spécifique que {{ domxref("Element.getAttributeNode") }} en ce qu'il permet de spécifier les attributs faisant partis d'un espace de noms particulier. La méthode de réglage correspondante est {{ domxref("Element.setAttributeNodeNS") }}.
+`getAttributeNodeNS` est plus spécifique que [`Element.getAttributeNode()`](/fr/docs/Web/API/Element/getAttributeNode) car il permet de spécifier les attributs faisant partis d'un espace de noms particulier. La méthode de réglage correspondante est [`Element.setAttributeNodeNS()`](/fr/docs/Web/API/Element/setAttributeNodeNS).
 
 ## Spécifications
 
@@ -40,6 +40,6 @@ attributeNode = element.getAttributeNodeNS(namespace, nodeName);
 
 ## Voir aussi
 
-- {{domxref("Document.createAttribute()")}}
-- {{domxref("Document.createAttributeNS()")}}
-- {{domxref("Element.setAttributeNodeNS()")}}
+- [`Document.createAttribute()`](/fr/docs/Web/API/Document/createAttribute)
+- [`Document.createAttributeNS()`](/fr/docs/Web/API/Document/createAttributeNS)
+- [`Element.setAttributeNodeNS()`](/fr/docs/Web/API/Element/setAttributeNodeNS)

@@ -44,7 +44,7 @@ document.getElementById("div1").removeAttribute("align");
 
 ## Voir aussi
 
-- {{domxref("Element.hasAttribute()")}}
-- {{domxref("Element.getAttribute()")}}
-- {{domxref("Element.setAttribute()")}}
-- {{domxref("Element.toggleAttribute()")}}
+- [`Element.hasAttribute()`](/fr/docs/Web/API/Element/hasAttribute)
+- [`Element.getAttribute()`](/fr/docs/Web/API/Element/getAttribute)
+- [`Element.setAttribute()`](/fr/docs/Web/API/Element/setAttribute)
+- [`Element.toggleAttribute()`](/fr/docs/Web/API/Element/toggleAttribute)
