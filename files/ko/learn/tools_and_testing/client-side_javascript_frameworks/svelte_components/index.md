@@ -17,7 +17,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_component
           적어도
           <a href="/ko/docs/Learn/HTML">HTML</a>,
           <a href="/ko/docs/Learn/CSS">CSS</a>,
-          <a href="/ko/docs/Learn/JavaScript">JavaScript</a>언어의 사용에 익숙하기를 권장합니다. 그리고 
+          <a href="/ko/docs/Learn/JavaScript">JavaScript</a>언어의 사용에 익숙하기를 권장합니다. 그리고
           <a
             href="/ko/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
             >terminal/command line</a
