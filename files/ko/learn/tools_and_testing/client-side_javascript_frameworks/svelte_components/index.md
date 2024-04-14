@@ -278,7 +278,7 @@ export let onclick = (clicked) => {};
    const dispatch = createEventDispatcher();
    ```
 
-2. _Delete_ 버튼을 같은 파일의 마크다운 섹션에 다음과 같이 추가합니다. 
+2. _Delete_ 버튼을 같은 파일의 마크다운 섹션에 다음과 같이 추가합니다.
 
    ```svelte
    <button type="button" class="btn btn__danger" on:click={() => dispatch('remove', todo)}>
