@@ -17,7 +17,7 @@ element.removeAttributeNS(namespace, attrName);
 
 ### Paramètres
 
-- `namespace` 
+- `namespace`
   - : est une chaîne qui contient l'espace de noms de l'attribut.
 
 - `attrName`
