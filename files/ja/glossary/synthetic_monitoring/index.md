@@ -13,6 +13,6 @@ RUM とは異なり、合成モニタリングはユーザーの違いを考慮�
 
 ## 関連情報
 
-- [実ユーザーモニタリング (RUM)](/ja/docs/Glossary/Real_User_Monitoring)
-- [実ユーザーモニタリング (RUM) と合成モニタリング](/ja/docs/Web/Performance/Rum-vs-Synthetic)
-- [ビーコン](/ja/docs/Glossary/beacon)
+- [リアルユーザーモニタリング (RUM)](/ja/docs/Glossary/Real_User_Monitoring)
+- [リアルユーザーモニタリング (RUM) と合成モニタリング](/ja/docs/Web/Performance/Rum-vs-Synthetic)
+- [ビーコン](/ja/docs/Glossary/Beacon)

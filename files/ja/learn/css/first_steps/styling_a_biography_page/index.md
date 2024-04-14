@@ -1,26 +1,23 @@
 ---
-title: 新しい知識を使う
+title: 経歴ページのスタイル設定
 slug: Learn/CSS/First_steps/Styling_a_biography_page
+l10n:
+  sourceCommit: c64e813d8ab9dbe22cbc049c26f7c6703370a2b7
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
 
-先のいくつかのレッスンで、あなたは CSS を使ってシンプルなテキストドキュメントにスタイルを追加してフォーマットする方法を学びました。ここでは、それを実際に行ってみましょう。
+ここ数回のレッスンで学んだことで、 CSS を使用して単純なテキスト文書を整形し、自分自身でスタイルを追加することができます。この評価試験では、その方法を学びます。
 
 <table>
   <tbody>
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        基本的なコンピュータリテラシー、<a
-          href="/ja/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >基本的なソフトウェアのインストール</a
-        >、基本的な<a
-          href="/ja/Learn/Getting_started_with_the_web/Dealing_with_files"
-          >ファイル操作</a
-        >や HTML の基本（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML"
+        この評価試験に挑戦する前に、すでにこのモジュールの記事をすべて読み終えていて、HTML の基本を理解している必要があります（<a
+        href="/ja/docs/Learn/HTML/Introduction_to_HTML"
           >HTML の入門</a
-        >で学ぶ）、CSS の基礎（このモジュールの残り部分）。
+        >で学ぶこと）。
       </td>
     </tr>
     <tr>
@@ -30,56 +27,46 @@ slug: Learn/CSS/First_steps/Styling_a_biography_page
   </tbody>
 </table>
 
-## さあ始めよう
+## 開始点
 
-下の Live エディタで試すこともできますし、[我々の Github リポジトリ](https://github.com/mdn/css-examples/blob/master/learn/getting-started/biog-download.html/)からサンプルファイルをダウンロードして試してみることもできます。ここで使うサンプルはシンプルな一ページの HTML で、頭にはとりあえずシンプルな CSS が埋め込まれています。もしローカルで動かすとき HTML と CSS が一緒になっているのが嫌だったら別々のファイルに分割しても構いません。あるいは、[CodePen](https://codepen.io/) や [jsFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) といったオンラインエディタを使うこともできます。
+下のライブエディターで試すこともできますし、[開始点ファイルをダウンロード](https://github.com/mdn/css-examples/blob/main/learn/getting-started/biog-download.html/)して自分のエディターで作業することもできます。これは、 HTML と開始点の CSS （文書内の見出し）の両方を含む単一のページです。できれば、この CSS を別のファイルに移し、ローカルコンピューターで例を作成するときにリンクしてください。
 
-> **メモ:** もし途中で詰まったら、私達に気兼ねなく相談してください！詳しくはこの記事の一番下にある「アセスメントとさらなるヘルプ」の部分を見てください。
+> **メモ:** このページのインタラクティブエディターや、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインエディターで解決策を試すことができます。
+>
+> もし行き詰まったら、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してみてください。
 
-## CSS を少し試してみよう
+## プロジェクト概要
 
-下のサンプルは、CSS でスタイルされたプロフィールページの例です。ここで使われているプロパティは次の通りです。これらについてはそれぞれリンクから MDN の記事に飛べますので、プロパティの詳細な説明についてはそちらをご参照ください。
+下のサンプルは、 CSS でスタイルされたプロフィールページの例です。ここで使われているプロパティは次の通りです。これらについてはそれぞれリンクから MDN の記事に飛べますので、プロパティの詳細な説明についてはそちらをご参照ください。
 
 - {{cssxref("font-family")}}
 - {{cssxref("color")}}
 - {{cssxref("border-bottom")}}
 - {{cssxref("font-weight")}}
 - {{cssxref("font-size")}}
+- {{cssxref("font-style")}}
 - {{cssxref("text-decoration")}}
 
-下のプロフィールページでは、いろんなセレクタを使ったり、h1 要素や h2 要素などの装飾要素を使ったりしただけでなく、職業を表す部分ではクラスを定義してデザインを設定しました。
+下のプロフィールページでは、いろんなセレクターを使ったり、h1 要素や h2 要素などの装飾要素を使ったりしただけでなく、職業を表す部分ではクラスを定義してデザインを設定しました。プロパティの値をいろいろに変えて見た目がどう変わるか試してみましょう。
 
-プロパティの値をいろいろに変えて見た目がどう変わるか試してみましょう。
-
-1. 見出し 1 の文字色をピンクに変えてみましょう。色の指定には `hotpink` を使うとよいでしょう。
-2. 見出し 1 の下に太さ 10px の点線をつけてみましょう。そしてその色を `purple` にしてみましょう。
+1. 見出しの文字色をピンクに変えてみましょう。色の指定には `hotpink` を使うとよいでしょう。
+2. 見出しに太さ 10px の {{cssxref("border-bottom")}} をつけてみましょう。そしてその色を `purple` にしてみましょう。
 3. 見出し 2 の書体をイタリックに変えてみましょう。
-4. 連絡先情報の部分で使われている `ul` 要素の {{cssxref("background-color")}} を `#eeeeee` にして、{{cssxref("border")}} を太さ 5px の紫の線に変えてみましょう。また、{{cssxref("padding")}} を指定してコンテンツと連絡先情報の部分にスペースが空くように設定しましょう。
-5. リンクの部分にマウスが乗ったとき、リンクが `green` に変わるように設定しましょう。
+4. 連絡先情報の部分で使われている `ul` 要素の {{cssxref("background-color")}} を `#eeeeee` にして、 {{cssxref("border")}} を太さ 5px の紫の実践に変えてみましょう。 {{cssxref("padding")}} を指定してコンテンツと連絡先情報の部分を離しましょう。
+5. リンクの部分にマウスを当てたとき、リンクが `green` に変わるように設定しましょう。
 
-完成したら次の画像のようになるはずです。
+## ヒントとコツ
 
-![](https://mdn.dev/archives/media/attachments/2019/12/31/17035/da8ff2a04da214e57e18a6ea3ac6832e/learn-css-basics-assessment.png)
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) を使用することで、 CSS の意図しない間違い（他の方法では見逃してしまうかもしれない間違い）を発見し、修正することができます。
+- その後、[MDN CSS リファレンス](/ja/docs/Web/CSS/Reference)でこのページで紹介されていないプロパティを見て冒険してみてください。
+- ここに間違った答えはないことを忘れないでください。この段階では、少し楽しむ余裕があるのです。
 
-それから、このページに書かれていない属性をみてみましょう。[MDN の CSS リファレンス](/ja/docs/Web/CSS/Reference) には冒険が待っています!
+## 例
 
-ここには間違った回答はないことを覚えていてください — ここではいろいろ試して楽しみながら学びましょう。
+この画像のように仕上がるはずです。
+
+![評価試験完了後の例のスクリーンショットです。](learn-css-basics-assessment.png)
 
 {{EmbedGHLiveSample("css-examples/learn/getting-started/biog.html", '100%', 1600)}}
-
-## アセスメントとさらなるヘルプ
-
-作ったものを見てほしいときや、作業に詰まってしまって質問をしたいとき：
-
-1. あなたが作ったものを [CodePen](https://codepen.io/) や [jsFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのコード共有サービスに公開してください。
-2. 添削の依頼あるいは訊きたいことを [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn) に投稿してください。ここに投稿するときには次のことを忘れないようにしてください。
-
-   - タイトルは何についての質問か分かるように、「Assessment wanted for CSS First Steps」のようにしてください。
-   - 添削や質問を依頼したいコードへのリンクを貼ってください。ソースコードを示してもらわないとこちらもどうサポートしたらよいかがわからないからです。
-   - どの課題に取り組んでいるのか分かるように課題へのリンクを貼ってください。そうしていただけるとあなたがどこで躓いているのか知ることができます。
-
-## 次のステップ
-
-最初のモジュールを修了しました。おめでとうございます。あなたはもう CSS の基本的な部分は理解できたはずです。そして、スタイルシートの挙動が分かるようになったはずです。次のモジュール、[CSS ブロック構築](/ja/docs/Learn/CSS/Building_blocks)ではいくつかの重要な部分を深く見ていきましょう。
 
 {{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}

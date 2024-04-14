@@ -33,11 +33,9 @@ Lorsqu'elle est appelée sur un élément HTML dans un DOM marqué comme un docu
 
 Les nœuds `Attr` héritent de `Node`, mais ne sont pas considérés comme faisant partie de l'arbre du document. Les attributs habituels des nœuds comme [parentNode](/fr/docs/Web/API/Node/parentNode), [previousSibling](/fr/docs/Web/API/Node/previousSibling), et [nextSibling](/fr/docs/Web/API/Node/nextSibling) sont `null` pour un nœud `Attr`. Vous pouvez cependant accéder à l'élément auquel cet attribut appartient grâce à la propriété `ownerElement`.
 
-[getAttribute](/fr/docs/Web/API/Element/getAttribute) est habituellement utilisé à la place de `getAttributeNode` pour obtenir la valeur d'un attribut d'un élément.
+[getAttribute](/fr/DOM/element.getAttribute) est habituellement utilisé à la place de `getAttributeNode` pour obtenir la valeur d'un attribut d'un élément.
 
-## Spécifications
-
-{{Specifications}}
+## Spécification
 
 - [DOM Level 2 Core&nbsp;: getAttributeNode](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-217A91B8) — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-217A91B8) (non normative)
 - [HTML 5: APIs in HTML documents](https://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#apis-in-html-documents)

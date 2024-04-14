@@ -90,7 +90,7 @@ Content-Encoding: gzip
 Vary: Accept-Encoding
 ```
 
-サーバーが SVG ファイルで正しい HTTP ヘッダを送信しているかどうかは、[ネットワークモニターパネル](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#headers)や [websniffer.cc](https://websniffer.cc/) などのサイトを使用して確認できます。 SVG ファイルのうちの 1 つの URL を送信し、 HTTP レスポンスヘッダーを確認します。サーバーが上記の値のヘッダーを送信していないことがわかったら、ウェブのホスティング業者に連絡してください。 SVG 用のサーバーを正しく設定するように説得しにくい場合は、自分で設定するのも良いかもしれません。簡単な解決策については、 w3.org の[サーバー設定ページ](https://www.w3.org/services/svg-server/)を参照してください。
+サーバーが SVG ファイルで正しい HTTP ヘッダを送信しているかどうかは、[ネットワークモニターパネル](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#headers)や [websniffer.com](https://websniffer.com/) などのサイトを使用して確認できます。 SVG ファイルのうちの 1 つの URL を送信し、 HTTP レスポンスヘッダーを確認します。サーバーが上記の値のヘッダーを送信していないことがわかったら、ウェブのホスティング業者に連絡してください。 SVG 用のサーバーを正しく設定するように説得しにくい場合は、自分で設定するのも良いかもしれません。簡単な解決策については、 w3.org の[サーバー設定ページ](https://www.w3.org/services/svg-server/)を参照してください。
 
 サーバーの設定ミスは SVG の読み込みに失敗する理由として非常に一般的です。サーバーが正しいヘッダーを SVG ファイルと一緒に送信するように設定されていない場合、 Firefox はファイルのマークアップをテキストや文字化けしたゴミとして表示したり、ビューアーにアプリケーションを選択して開くように要求したりする可能性が高いです。
 

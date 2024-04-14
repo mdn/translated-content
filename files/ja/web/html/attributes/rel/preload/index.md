@@ -2,7 +2,7 @@
 title: rel=preload
 slug: Web/HTML/Attributes/rel/preload
 l10n:
-  sourceCommit: 10b342385644e822d123694ad3bc8c2ca9abb2dc
+  sourceCommit: 8295b4bd0687986f57a401eaea7c08aec64c33b3
 ---
 
 {{HTMLSidebar}}
@@ -46,12 +46,10 @@ l10n:
 ここで CSS ファイルと JavaScript ファイルを事前読み込みするので、その後のページのレンダリングで必要な時には、すぐに利用できるようになります。ブラウザーはおそらく、 `<link rel="stylesheet">` と `<script>` 要素を HTML 内の同じチャンクで見つけるので、この例は極端ですが、後に現れるリソースであるほど、また大きいリソースであるほど効果が見られる可能性があります。例えば以下の場合です。
 
 - フォントや画像など、 CSS の中から指しているリソース
-- JSON やインポートされたスクリプト、ウェブワーカーなどの JavaScript がリクエストする可能性があるリソース
-- より大きな画像や動画ファイル。
+- JavaScript がリクエストする可能性があるリソース（インポートされるスクリプトなど）。
 
 `preload` には他の利点もあります。 `as` によって事前読み込みされるコンテンツの種類をブラウザーに指示することで、以下のようなことが実現できます。
 
-- リソースの読み取りの優先付けがより正確にできる。
 - 可能であれば、将来のリクエストのためにキャッシュに格納してリソースを再利用できる。
 - リソースに対して正しく[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/CSP)を適用できる。
 - 正しい {{HTTPHeader("Accept")}} リクエストヘッダーを設定できる。
@@ -60,55 +58,44 @@ l10n:
 
 さまざまな種類のコンテンツが事前読み込みできます。 `as` 属性で使用できる値は以下の通りです。
 
-- `audio`: 通常は {{htmlelement("audio")}} で使用される音声ファイル。
-- `document`: {{htmlelement("frame")}} や {{htmlelement("iframe")}} に埋め込まれる HTML 文書。
-- `embed`: {{htmlelement("embed")}} 要素の中に埋め込まれるリソース。
 - `fetch`: ArrayBuffer や WebAssembly バイナリーや JSON ファイルのような、フェッチまたは XHR 要求でアクセスされるリソース。
 - `font`: フォントファイル。
 - `image`: 画像ファイル。
-- `object`: {{htmlelement("object")}} 要素の中に埋め込まれるリソース。
 - `script`: JavaScript ファイル。
 - `style`: CSS スタイルシート。
 - `track`: WebVTT ファイル。
-- `worker`: JavaScript ウェブワーカーまたは共有ワーカー。
-- `video`: 通常は {{htmlelement("video")}} で使用される動画ファイル。
 
 > **メモ:** `font` および `fetch` の事前読み込みには、 `crossorigin` 属性を設定する必要があります。下記の [CORS を使用したフェッチ](#cors_を使用したフェッチ)を参照してください。
 
-> **メモ:** 使用されると予想されるこれらの値やウェブ機能について、もっと詳細は事前読み込みの仕様書にあります。 — [link element extensions](https://w3c.github.io/preload/#link-element-extensions) を参照してください。また、フェッチの仕様書で管理されている `as` 属性の値の完全な一覧は、 [request destinations](https://fetch.spec.whatwg.org/#concept-request-destination) を参照してください。
+> **メモ:** 使用されると予想されるこれらの値やウェブ機能について、もっと詳細のことは、 HTML の仕様書、 [Link type "preload"](https://html.spec.whatwg.org/#match-preload-type) を参照してください。また、フェッチの仕様書で管理されている `as` 属性の値の完全な一覧は、 [request destinations](https://fetch.spec.whatwg.org/#concept-request-destination) を参照してください。
 
 ## MIME タイプを含める
 
 `<link>` 要素は [`type`](/ja/docs/Web/HTML/Element/link#type) 要素を受け付け、要素が指す先のリソースの MIME タイプを指定することができます。これは特にリソースの事前読み込み時に便利です。 — ブラウザーは `type` 属性の値を使用して対応しているリソースであるかどうかを確認し、その場合だけダウンロードを開始し、そうでない場合は開始しないようにすることができます。
 
-この例を動画のデモで見ることができます（[ソースコード全体](https://github.com/mdn/html-examples/tree/main/link-rel-preload/video)と[デモ版](https://mdn.github.io/html-examples/link-rel-preload/video/)もご覧ください。）。コードスニペットは下記の通りです。
-
 ```html
 <head>
   <meta charset="utf-8" />
-  <title>Video preload example</title>
+  <title>Image preload example</title>
 
-  <link rel="preload" href="sintel-short.mp4" as="video" type="video/mp4" />
+  <link rel="preload" href="flower.avif" as="image" type="image/avif" />
 </head>
 <body>
-  <video controls>
-    <source src="sintel-short.mp4" type="video/mp4" />
-    <source src="sintel-short.webm" type="video/webm" />
-    <p>
-      Your browser doesn't support HTML video. Here is a
-      <a href="sintel-short.mp4">link to the video</a> instead.
-    </p>
-  </video>
+  <picture>
+    <source src="flower.avif" type="image/avif" />
+    <source src="flower.webp" type="image/webp" />
+    <img src="flower.jpg" />
+  </picture>
 </body>
 ```
 
-上記の例のコードでは、`video/mp4` の動画は対応ブラウザーでのみ事前読み込みされま す。そして、`video/mp4` をサポートしているブラウザーでは、`video/mp4` の動画が実際に使用されます（これは、最初の {{htmlelement("source")}} が指定されたため）。これにより、ブラウザーの `video/mp4` に対応しているユーザーにとって、動画プレーヤーがよりスムーズでレスポンスのよいものになることを期待しています。
+上記の例のコードでは、`image/avif` の画像は対応ブラウザーでのみ事前読み込みされます。そして、`image/avif` に対応しているブラウザーでは、 `image/avif` の画像が実際に使用されます（これは、最初の {{htmlelement("source")}} が指定されたため）。これにより、ブラウザーの `image/avif` に対応しているユーザーにとって、画像のダウンロードがより小さくなることを期待しています。
 
-なお、ブラウザーが `video/mp4` と `video/webm` の両方に対応しているユーザーのために、そのコードで `<link rel="preload" href="sintel-short.webm" as="video" type="video/webm">` 要素も指定すると、実際にはどちらかのみが使用されても `video/mp4` と `video/webm` 動画がどちらも事前読み込みされることになります。
+なお、ブラウザーが `image/avif` と `image/webp` の両方に対応しているユーザーのために、そのコードで `<link rel="preload" href="flower.webp" as="image" type="image/webp">` 要素も指定すると、実際にはどちらかのみが使用されても `image/avif` と `image/webp` 画像がどちらも事前読み込みされることになります。
 
-したがって、同じリソースに対して複数の種類の事前読み込みを指定することは推奨されません。その代わりに、ユーザーの大半が実際に使用する可能性のある種類にのみ、事前読み込みを指定することが最善の手法です。上の例のコードで、`video/webm` の動画に事前読み込みさせることを指定していないのはそのためです。
+したがって、同じリソースに対して複数の種類の事前読み込みを指定することは推奨されません。その代わりに、ユーザーの大半が実際に使用する可能性のある種類にのみ、事前読み込みを指定することが最善の手法です。上の例のコードで、`image/webp` の画像に事前読み込みさせることを指定していないのはそのためです。
 
-しかし、事前読み込みさせないからといって、`video/webm` の動画が必要な人に実際に使用されないわけではありません。`video/mp4` に対応していないけれども `video/webm` には対応しているユーザーのために、上記の例のコードは `video/webm` 動画を使用するようにしても、他の多くのユーザーに不必要な事前読み込みをしてもらうようなことはしないようにしているのです。
+しかし、事前読み込みされないからといって、実際に `image/webp` 画像が必要な人に使用されないわけではありません。ブラウザーが `image/avif` に対応していないが、`image/webp` に対応しているユーザーのために、上記の例のコードは `image/avif` 画像を使用させますが、他の大多数のユーザーに不必要に事前読み込みさせることはありません。
 
 ## CORS を使用した取得
 
@@ -116,7 +103,7 @@ l10n:
 
 上記のように、これが当てはまる興味深いケースの 1 つが、フォントファイルです。さまざまな理由により、これらは匿名モードの CORS を使用してフェッチする必要があります（[Font fetching requirements](https://drafts.csswg.org/css-fonts/#font-fetching-requirements)参照）。
 
-このケースを例として使用してみましょう。完全なサンプルソースコードは [GitHub のソースコード例](https://github.com/mdn/html-examples/tree/main/link-rel-preload/fonts) ([およびライブ版](https://mdn.github.io/html-examples/link-rel-preload/fonts/)) にあります。
+このケースを例として使用してみましょう。完全なサンプルソースコードは [GitHub のソースサンプルコード](https://github.com/mdn/html-examples/tree/main/link-rel-preload/fonts) ([およびライブ版](https://mdn.github.io/html-examples/link-rel-preload/fonts/)) にあります。
 
 ```html
 <head>

@@ -18,8 +18,8 @@ slug: Web/HTML/Element/samp
    <td><a href="/en/HTML/Content_categories#Phrasing_content">Phrasing content</a>.</td>
   </tr>
   <tr>
-   <th scope="row">遗漏标签</th>
-   <td>{{no_tag_omission}}</td>
+   <th scope="row">标签省略</th>
+   <td>不允许，开始标签和结束标签都不能省略。</td>
   </tr>
   <tr>
    <th scope="row">允许的父级元素</th>
