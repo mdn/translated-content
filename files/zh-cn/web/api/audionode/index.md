@@ -21,7 +21,7 @@ l10n:
 ## 属性
 
 - {{domxref("AudioNode.context")}} {{ReadOnlyInline}}
-- : 返回相关的 {{domxref("BaseAudioContext")}}，即代表节点参与的处理图的对象。
+  - : 返回相关的 {{domxref("BaseAudioContext")}}，即代表节点参与的处理图的对象。
 - {{domxref("AudioNode.numberOfInputs")}} {{ReadOnlyInline}}
   - : 返回节点的输入数。源节点被定义为 `numberOfInputs` 属性 值为 `0` 的节点。
 - {{domxref("AudioNode.numberOfOutputs")}} {{ReadOnlyInline}}
