@@ -30,8 +30,6 @@ attributeNode = element.getAttributeNodeNS(namespace, nodeName);
 
 `getAttributeNodeNS` est plus spécifique que {{ domxref("Element.getAttributeNode") }} en ce qu'il permet de spécifier les attributs faisant partis d'un espace de noms particulier. La méthode de réglage correspondante est {{ domxref("Element.setAttributeNodeNS") }}.
 
-{{ DOMAttributeMethods() }}
-
 ### Spécification
 
 - [DOM Level 2 Core: getAttributeNodeNS (en)](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElGetAtNodeNS) — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-ElGetAtNodeNS) (non normative)
