@@ -376,9 +376,9 @@ export let onclick = (clicked) => {};
 ```svelte
 <div class="stack-small">
   {#if editing}
-  <!-- markup for editing to-do: label, input text, Cancel and Save Button -->
+  <!-- 작업관리 편집을 위한 마크업: 레이블, 입력 텍스트, 취소 및 저장 버튼 -->
   {:else}
-  <!-- markup for displaying to-do: checkbox, label, Edit and Delete Button -->
+  <!-- 작업관리를 표시하기 위한 마크업: 확인란, 레이블, 편집 및 삭제 버튼 -->
   {/if}
 </div>
 ```
@@ -455,7 +455,7 @@ on:keydown={(e) => e.key === 'Escape' && onCancel()}
    ```svelte
    <div class="stack-small">
    {#if editing}
-     <!-- markup for editing todo: label, input text, Cancel and Save Button -->
+     <!-- 작업관리를 편집하기 위한 마크업: 레이블, 입력 텍스트, 취소 및 저장 버튼 -->
      <form on:submit|preventDefault={onSave} class="stack-small" on:keydown={(e) => e.key === 'Escape' && onCancel()}>
        <div class="form-group">
          <label for="todo-{todo.id}" class="todo-label">New name for '{todo.name}'</label>
@@ -471,7 +471,7 @@ on:keydown={(e) => e.key === 'Escape' && onCancel()}
        </div>
      </form>
    {:else}
-     <!-- markup for displaying todo: checkbox, label, Edit and Delete Button -->
+     <!-- 작업관리를 표시하기 위한 마크업: 확인란, 레이블, 편집 및 삭제 버튼 -->
      <div class="c-cb">
        <input type="checkbox" id="todo-{todo.id}"
          on:click={onToggle} checked={todo.completed}
