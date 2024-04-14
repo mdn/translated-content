@@ -5,8 +5,6 @@ slug: Web/API/Element/getAttributeNode
 
 {{ APIRef("DOM") }}
 
-## Résumé
-
 Renvoie le nœud d'attribut spécifié pour l'élément courant, en tant que noeud `Attr`.
 
 ## Syntaxe

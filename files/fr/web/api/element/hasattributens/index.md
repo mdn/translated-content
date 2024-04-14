@@ -5,8 +5,6 @@ slug: Web/API/Element/hasAttributeNS
 
 {{ APIRef("DOM") }}
 
-## Résumé
-
 `hasAttributeNS` renvoie une valeur booléenne indiquant si l'élément courant possède ou non l'attribut spécifié.
 
 ## Syntaxe

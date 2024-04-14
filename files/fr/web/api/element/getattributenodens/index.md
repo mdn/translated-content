@@ -5,8 +5,6 @@ slug: Web/API/Element/getAttributeNodeNS
 
 {{ APIRef("DOM") }}
 
-## Résumé
-
 Renvoie le nœud `Attr` pour l'attribut avec l'espace de noms et le nom donnés.
 
 ## Syntaxe
