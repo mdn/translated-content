@@ -1,6 +1,8 @@
 ---
 title: WebAssembly 概念
 slug: WebAssembly/Concepts
+l10n:
+  sourceCommit: b9a41e258e656b57f41e8aaf88f93e51bb27974d
 ---
 
 {{WebAssemblySidebar}}
@@ -83,8 +85,7 @@ WebAssembly 生态系统处在初始阶段；更多的工具会毫无疑问得�
 
 创建 WASM 代码的众多选项中有两个是在线 WASM 汇编程序或 [Emscripten](/zh-CN/docs/Mozilla/Projects/Emscripten)。有许多在线 WASM 汇编程序可供选择，例如：
 
-- [WasmFiddle](https://wasdk.github.io/WasmFiddle/)
-- [WasmFiddle++](https://anonyco.github.io/WasmFiddle/)
+- [WasmFiddle++](https://anonyco.github.io/WasmFiddlePlusPlus/)
 - [WasmExplorer](https://mbebenita.github.io/WasmExplorer/)
 
 对于那些想知道从哪里开始的人来说，这些是很好的资源，但是他们缺少一些 Emscripten 的工具和优化。
