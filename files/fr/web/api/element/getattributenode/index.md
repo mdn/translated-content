@@ -35,7 +35,9 @@ Les nœuds `Attr` héritent de `Node`, mais ne sont pas considérés comme faisa
 
 [getAttribute](/fr/DOM/element.getAttribute) est habituellement utilisé à la place de `getAttributeNode` pour obtenir la valeur d'un attribut d'un élément.
 
-## Spécification
+## Spécifications
+
+{{Specifications}}
 
 - [DOM Level 2 Core&nbsp;: getAttributeNode](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-217A91B8) — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-217A91B8) (non normative)
 - [HTML 5: APIs in HTML documents](https://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#apis-in-html-documents)
