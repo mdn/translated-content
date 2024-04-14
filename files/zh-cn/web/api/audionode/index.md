@@ -25,14 +25,13 @@ l10n:
 - {{domxref("AudioNode.numberOfInputs")}} {{ReadOnlyInline}}
   - : 返回节点的输入数。源节点被定义为 `numberOfInputs` 属性 值为 `0` 的节点。
 - {{domxref("AudioNode.numberOfOutputs")}} {{ReadOnlyInline}}
-  - : 返回节点输出的数量。目的地节点（如 { domxref("AudioDestinationNode") }}）的这一属性的值为 `0`。
+  - : 返回节点输出的数量。目的地节点（如 {{ domxref("AudioDestinationNode") }}）的这一属性的值为 `0`。
 - {{domxref("AudioNode.channelCount")}}
   - : 一个整数，用于确定在[上混音和下混音](/zh-CN/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing)中连接到节点的任何输入时使用了多少个通道。其用法和精确定义取决于 {{domxref("AudioNode.channelCountMode")}} 的值。
 - {{domxref("AudioNode.channelCountMode")}}。
   - : 一个描述节点输入和输出之间必须匹配的通道方式的枚举值。
 - {{domxref("AudioNode.channelInterpretation")}}
   - : 一个描述通道含义的枚举值。该数值将定义音频的[上混音和下混音](/zh-CN/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing)会怎样进行。可能的取值是 `"speakers"` 或 `"discrete"`。
-  -
 
 ## 方法
 
