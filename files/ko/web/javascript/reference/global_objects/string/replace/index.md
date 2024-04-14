@@ -23,8 +23,8 @@ replace(pattern, replacement)
   - : 문자열이거나 [`Symbol.replace`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) 메서드가 있는 객체일 수 있습니다. 일반적인 예를 들자면 [정규식](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp)이 있습니다. `Symbol.replace` 메서드가 없는 모든 값은 문자열로 강제 변환됩니다.
 - `replacement`
   - : 문자열이나 함수가 될 수 있습니다.
-    - 문자열일 경우, `pattern`과 일치하는 부분 문자열을 대체합니다. 여러 특수 대체 패턴을 지원합니다. 아래 [대체할 내용으로 함수 명시하기](#대체할_내용으로_함수_명시하기)를 참고하세요
-    - 함수일 경우 이 함수는 각 일치 항목마다 호출되며 반환값은 대체 문자열에 사용됩니다. 이 함수에 제공되는 인수는 아래 [대체할 내용으로 함수 명시하기](#대체할_내용으로_함수_명시하기) 섹션에서 설명하고 있습니다.
+    - 문자열일 경우, `pattern`과 일치하는 부분 문자열을 대체합니다. 여러 특수 대체 패턴을 지원합니다. 아래 [대체할 내용으로 문자열로 지정하기](#대체할_내용을_문자열로_지정하기)를 참고하세요
+    - 함수일 경우 이 함수는 각 일치 항목마다 호출되며 반환 값은 대체 문자열에 사용됩니다. 이 함수에 제공되는 인수는 아래 [대체할 내용으로 함수 명시하기](#대체할_내용으로_함수_명시하기) 섹션에서 설명하고 있습니다.
 
 ### 반환 값
 
@@ -36,7 +36,7 @@ replace(pattern, replacement)
 
 문자열 패턴은 한 번만 바뀝니다. 전역 검색 및 바꾸기를 수행하려면 `g` 플래그가 있는 정규식을 사용하거나 [`replaceAll()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll)을 대신 사용하세요.
 
-`pattern`이 [`Symbol.replace`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) 메서드가 있는 객체(`RegExp` 객체 포함)인 경우, 해당 메서드는 대상 문자열과 `replacement`를 인수로 사용하여 호출됩니다. 그 반환 값은 `replace()`의 반환 값이 됩니다. 이 경우 `replace()`의 동작은 전적으로 `@@replace` 메서드로 인코딩됩니다 - 예를 들어, 아래 설명에서 "그룹 캡처"에 대한 언급은 실제로 [`RegExp.prototype[@@replace]`](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)에서 제공하는 기능입니다.
+`pattern`이 [`Symbol.replace`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) 메서드가 있는 객체(`RegExp` 객체 포함)인 경우, 해당 메서드는 대상 문자열과 `replacement`를 인수로 사용하여 호출됩니다. 그 반환 값은 `replace()`의 반환 값이 됩니다. 이 경우 `replace()`의 동작은 전적으로 `@@replace` 메서드로 인코딩됩니다. 예를 들어, 아래 설명에서 "그룹 캡처"에 대한 언급은 실제로 [`RegExp.prototype[@@replace]`](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)에서 제공하는 기능입니다.
 
 `pattern`이 빈 문자열인 경우 문자열의 시작 부분에 대체 문자열이 추가됩니다.
 
@@ -44,7 +44,7 @@ replace(pattern, replacement)
 "xxx".replace("", "_"); // "_xxx"
 ```
 
-플래그가 `g`인 정규식은 `replace()`가 두 번 이상 대체하는 유일한 경우 입니다. 정규식 속성(특히 [sticky](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky) 플래그)이 `replace()`와 상호작용하는 방법에 대한 자세한 내용은 [`RegExp.prototype[@@replace]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)를 참조하세요.
+플래그가 `g`인 정규식은 `replace()`가 두 번 이상 대체하는 유일한 경우입니다. 정규식 속성(특히 [sticky](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky) 플래그)이 `replace()`와 상호작용하는 방법에 대한 자세한 내용은 [`RegExp.prototype[@@replace]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)를 참고하세요.
 
 ### 대체할 내용을 문자열로 지정하기
 
@@ -53,7 +53,7 @@ replace(pattern, replacement)
 | 패턴      | 삽입 문자열                                                                              |
 | --------- | ---------------------------------------------------------------------------------------- |
 | `$$`      | `"$"`를 삽입합니다.                                                                      |
-| `$&`      | 일치된 부분 문자열을 넣습니다.                                                           |
+| `$&`      | 일치된 부분 문자열을 삽입니다.                                                           |
 | `` $` ``  | 일치하는 하위 문자열 앞에 있는 문자열 부분을 삽입합니다.                                 |
 | `$'`      | 일치하는 하위 문자열 뒤에 오는 문자열 부분을 삽입합니다.                                 |
 | `$n`      | `n`번째(`1`- indexed) 캡처 그룹을 삽입합니다. 여기서 `n`은 100보다 작은 양의 정수입니다. |
@@ -118,7 +118,7 @@ console.log(newString); // abc - 12345 - #$*%
 
 ### replace()에서 정규식 정의하기
 
-다음 예제에서는 `replace()`에서 대/소문자 무시 플래그를 포함한 정규식을 정의합니다.
+다음 예제에서는 `replace()`에서 대/소문자 무시 플래그를 포함한 정규 표현식을 정의합니다.
 
 ```js
 const str = "Twas the night before Xmas...";
@@ -132,7 +132,7 @@ console.log(newstr); // Twas the night before Christmas...
 
 ### 전역 그리고 대소문자 구분 무시 플래그와 함께 replace() 사용하기
 
-전역 문자열 대체는 정규 표현식로만 가능합니다. 다음 예제는 정규식이 [전역 그리고 대소문자 무시 플래그](/ko/docs/Web/JavaScript/Guide/Regular_expressions#advanced_searching_with_flags)이 포함되어 있어서 `replace()`가 문자열에서 `'apple'`이 나타날 때마다 `'orange'`로 문자열을 바꾸도록 허용합니다.
+전역 문자열 대체는 정규 표현식으로만 가능합니다. 다음 예제는 정규 표현식이 [전역 그리고 대소문자 무시 플래그](/ko/docs/Web/JavaScript/Guide/Regular_expressions#advanced_searching_with_flags)이 포함되어 있어서 `replace()`가 문자열에서 `'apple'`이 나타날 때마다 `'orange'`로 문자열을 바꾸도록 허용합니다.
 
 ```js
 const re = /apples/gi;
@@ -145,7 +145,7 @@ console.log(newstr); // oranges are round, and oranges are juicy.
 
 ### 문자열에서 단어 순서 바꾸기
 
-다음 스크립트는 문자열의 단어의 순서를 바꿉니다. 대체 문자열의 경우, 스크립트는 [그룹 캡쳐](/ko/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)과 `$1` 및 `$2` 대체 패턴을 사용합니다.
+다음 스크립트는 문자열의 단어의 순서를 바꿉니다. 대체 문자열의 경우, 스크립트는 [그룹 캡처](/ko/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)과 `$1` 및 `$2` 대체 패턴을 사용합니다.
 
 ```js
 const re = /(\w+)\s(\w+)/;
@@ -186,7 +186,7 @@ const newString = propertyName.replace(/[A-Z]/g, "-" + "$&".toLowerCase());
 
 다음 예에서는 화씨 온도를 그에 상응하는 섭씨 온도를 대체합니다. 화씨도는 `"F"`로 끝나는 숫자여야 합니다. 이 함수는 `"C"`로 끝나는 섭씨 숫자를 반환합니다. 예를 들어 입력 숫자가 `"212F"`인 경우 함수는 `"100C"`를 반환합니다. 숫자가 `"0F"`이면 함수는 `"-17.777777777778C"`를 반환합니다.
 
-정규식 `test`는 `F`로 끝나는 숫자가 있는지 확인합니다. 화씨 온도의 숫자는 두 번째 매개 변수인 `p1`을 통해 함수에 접근할 수 있습니다. 이 함수는 `f2c()` 함수에 문자열로 전달된 화씨 온도 숫자에 따라 섭씨 숫자를 설정합니다. 그런 다음 `f2c()`는 섭씨 숫자를 반환합니다. 이 함수는 Perl의 `s///e` 플래그를 근사화합니다.
+정규식 `test`는 `F`로 끝나는 숫자가 있는지 확인합니다. 화씨 온도의 숫자는 두 번째 매개 변수인 `p1`을 통해 함수에 접근할 수 있습니다. 이 함수는 `f2c()` 함수에 문자열로 전달된 화씨 온도 숫자에 따라 섭씨 숫자를 설정합니다. 그런 다음 `f2c()`는 섭씨 숫자를 반환합니다. 이 함수는 Perl의 `s///e` 플래그에 가깝습니다.
 
 ```js
 function f2c(x) {
@@ -245,7 +245,7 @@ console.log("abcd".replace(/(?<group>bc)/, addOffset)); // "abc (1) d"
 
 ## 같이 보기
 
-- [Polyfill of `String.prototype.replace` in `core-js` with fixes and implementation of modern behavior like `Symbol.replace` support](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [`Symbol.replace` 지원과 같은 최신 동작의 수정 및 구현한 `core-js`의 `String.prototype.replace` 폴리필](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.replaceAll()")}}
 - {{jsxref("String.prototype.match()")}}
 - {{jsxref("RegExp.prototype.exec()")}}
