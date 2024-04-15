@@ -85,8 +85,6 @@ La méthode `getAttributeNS` diffère de {{domxref("element.getAttribute()", "ge
 
 Avant la spécification DOM4, cette méthode était spécifiée pour renvoyer une chaîne vide plutôt que null pour les attributs inexistants. Cependant, la plupart des navigateurs ont renvoyé null. À partir de DOM4, la spécification dit maintenant de retourner null. Cependant, certains navigateurs plus anciens renvoient une chaîne vide. Pour cette raison, vous devez utiliser {{domxref("element.hasAttributeNS ()","hasAttributeNS ()")}} pour vérifier l'existence d'un attribut avant d'appeler `getAttributeNS()` s'il est possible que l'attribut demandé n'existe pas sur l'élément spécifié.
 
-{{ DOMAttributeMethods() }}
-
 ## Spécifications
 
 {{Specifications}}

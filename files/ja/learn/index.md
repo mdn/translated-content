@@ -2,41 +2,39 @@
 title: ウェブ開発を学ぶ
 slug: Learn
 l10n:
-  sourceCommit: f22e2f56c6cc82b43b6a14fa213755512e23cd8f
+  sourceCommit: 4155f9bfa35ad2624ee1dad2fce5bba5bb425870
 ---
 
 {{LearnSidebar}}
 
-MDN 学習領域へようこそ。この一連の記事では、ウェブ開発が全くの初心者にとって、シンプルなウェブサイトのコーディングを始めるのに必要な全てを提供することを目標とします。
+MDN 学習領域へようこそ。この一連の記事は、ウェブ開発の完全な初心者に、ウェブサイトをコーディングするための基本的なスキルを提供することを目的としています。目的は、あなたを「初心者」から「エキスパート」に導くことではなく、「初心者」から「ほどほど」に導くことです。そこから、 [MDN のその他の部分](/ja/)や、前回多くの知識を想定した他の中級から上級のリソースから学びながら、自分の道を歩み始めることができるはずです。
 
-MDN のこの領域の目的は、あなたを「初心者」から「エキスパート」にすることではなく、「初心者」から「中級者」にすることです。そこから、 [MDN のその他の部分](/ja/) や、多くの予備知識を前提とする他の中級から上級のリソースから学びながら、自分の道を歩み始めることができるようになるはずです。
-
-全くの初心者であれば、ウェブ開発は難しいものです - 私たちはあなたの手を握り、あなたが快適に感じ、適切にトピックを学ぶために十分な詳細を提供します。あなたがウェブ開発を学習している学生（個人またはクラスの一部として）、クラスの教材を探している先生、趣味の人、ウェブ技術の仕組みをもっと理解したい人など、どのような人であっても、安心してください。
-
-> **注目:**
->
-> #### フロントエンドのウェブ開発者を目指している方
->
-> 目標に向かって努力するために必要な必須情報をすべて盛り込んだコースを用意しました。
->
-> [**始めましょう**](/ja/docs/Learn/Front-end_web_developer)
+全くの初心者であれば、ウェブ開発は難しいものです。私たちはあなたの手を握り、あなたが快適に感じ、適切にトピックを学ぶために十分な詳細を提供します。あなたがウェブ開発を学習している学生（個人またはクラスの一部として）、クラスの教材を探している先生、趣味の人、ウェブ技術の仕組みをもっと理解したい人など、どのような人であっても、安心してください。
 
 ## 読み始める場所
 
-- 全くの初心者の方
-  - : ウェブ開発の全くの初心者なら、[ウェブ入門](/ja/docs/Learn/Getting_started_with_the_web)を一通り読むことをお勧めします。これを読めば、ウェブ開発を始めるのに必要な基本的な知識はすべて見つかるでしょう。
-- 基本の次の段階の方
-  - : すでにいくらかの知識があるなら、次のステップは {{glossary("HTML")}} と {{glossary("CSS")}} を詳しく学ぶことです。 [HTML 入門](/ja/docs/Learn/HTML/Introduction_to_HTML)のモジュールから始めて、 [CSS 入門](/ja/docs/Learn/CSS/First_steps)のモジュールに移動してください。
-- スクリプト作成まで進む方
-  - : HTML と CSS を十分知っていたり、主にコーディングに興味があるなら、 {{glossary("JavaScript")}} やサーバーサイド開発に行きたくなるでしょう。 [JavaScript の第一歩](/ja/docs/Learn/JavaScript/First_steps)と[サーバーサイドの第一歩](/ja/docs/Learn/Server-side/First_steps)のモジュールから始めてください。
+ウェブ開発を深く学ぶことに自信がなく、おためしセッションから始めたい場合は、[ウェブ入門](/ja/docs/Learn/Getting_started_with_the_web)ガイドを読み終えてから作業することをお勧めします。続いて、以下のトピックを学ぶことから始めてください。
+
+- HTML および CSS
+  - : HTML とはウェブコンテンツの構造を指定されたもので、 CSS とはそのコンテンツをスタイル設定したりレイアウトしたりする命令を提供するものです。必要不可欠な初心者向け情報については、 [HTML 入門](/ja/docs/Learn/HTML/Introduction_to_HTML)および [CSS 入門](/ja/docs/Learn/CSS/First_steps)を参照してください。
+- JavaScript
+  - : JavaScript を使用すると、ウェブサイト上でインタラクティブな機能をコード化することができます。 [JavaScript の第一歩](/ja/docs/Learn/JavaScript/First_steps)から始めてください。
 - フレームワークとツールの利用
-  - : HTML、CSS、JavaScriptの基本をマスターしたら、[クライアントサイドウェブ開発ツール](/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools) について学んでください。そして、[クライアントサイド JavaScript フレームワーク](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)、[サーバーサイドウェブサイトプログラミング](/ja/docs/Learn/Server-side)について掘り下げて考えてみてください。
+  - : HTML、CSS、JavaScript の基本をマスターしたら、[クライアントサイドウェブ開発ツール](/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools)について学んでください。そして、[クライアントサイド JavaScript フレームワーク](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)、[サーバーサイドウェブサイトプログラミング](/ja/docs/Learn/Server-side)について掘り下げて考えてみてください。
 
 > **メモ:** [用語集](/ja/docs/Glossary)には、用語の定義が記載されています。また、ウェブ開発に関する特定の質問がある場合は、[よくある質問](/ja/docs/Learn/Common_questions)の節で解決できることがあるかもしれません。
 
-## カバーするトピック
+> **注目:**
+>
+> #### フロントエンドのウェブ開発者を目指している方へ
+>
+> あなたがフロントエンドウェブ開発者になりたいと思っていて、最初に何を学べばいいかわからない場合は、 [MDN カリキュラム](/ja/curriculum/)を使用して学習計画を立てることを提案します。これは、成功するフロントエンド開発者になるために必要なスキルと実践を網羅し、推奨される学習リソースとともに、体系化された学習経路を提供します。
+>
+> [**始めましょう**](/ja/curriculum/)
 
-下記は MDN 学習領域にてカバーしているすべてのトピック一覧です。
+## 扱うトピック
+
+下記は MDN 学習領域にて扱っているすべてのトピック一覧です。
 
 - [ウェブ入門](/ja/docs/Learn/Getting_started_with_the_web)
   - : 完全なウェブ開発初心者用の実用的な入門を提供します。
@@ -59,9 +57,25 @@ MDN のこの領域の目的は、あなたを「初心者」から「エキス�
 - [サーバーサイドのウェブサイトプログラミング](/ja/docs/Learn/Server-side)
   - : クライアントサイドのウェブ開発に集中していても、サーバーとサーバーサイドのコードがどう動くのかを知るのは有益です。このトピックではサーバーサイドの動作の一般的な入門と、2 つの有名フレームワーク — Django (Python) や Express (Node.js) を使ってサーバーサイドアプリを作る方法の詳しいチュートリアルを提供します。
 
-## コード例の入手
+## 課題と評価
 
-学習領域にあるコードの例はすべて [GitHub から利用可能](https://github.com/mdn/learning-area/)です。すべてのコードを自分のコンピューターにコピーしたいのであれば、[最新の master コードブランチの ZIP をダウンロードする](https://codeload.github.com/mdn/learning-area/zip/main)のが最も簡単です。
+MDN のウェブ開発の学習セクションには、自己完結型の課題や評価がたくさんあります。これらは主に 2 つの型に入力します。
+
+- 「スキルテスト」の課題、例えば[コードでの意思決定 — 条件文](/ja/docs/Learn/JavaScript/Building_blocks/conditionals#test_your_skills!)。
+- 一部のモジュールの終わりには、より詳細な**評価試験**、例えば[画像ギャラリー](/ja/docs/Learn/JavaScript/Building_blocks/Image_gallery)などがあります。
+
+それぞれに関連する採点ガイドと模範解答があり、作業する際の評価に利用できます。
+例えば、このようなリソースを探しやすくするパターンがあります。
+
+- 上記リンクの**スキルテスト**課題には、採点ガイドと資料が <https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/tasks/conditionals> にあります。
+- 上記リンクの**評価試験**には、採点ガイドと資料が <https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/gallery> にあります。
+
+> **メモ:** 課題と評価のための採点ガイドと他のリソースのほとんどは [`mdn/learning-area`](https://github.com/mdn/learning-area/) で利用できますが、一部は [`mdn/css-examples`](https://github.com/mdn/css-examples/tree/main/learn) にあります。
+
+## サンプルコードの入手
+
+学習領域にあるサンプルコードはすべて [GitHub から利用可能](https://github.com/mdn/learning-area/)です。
+すべてのコードを自分のコンピューターにコピーしたいのであれば、[最新の main コードブランチの ZIP をダウンロードする](https://codeload.github.com/mdn/learning-area/zip/main)のが最も簡単です。
 
 自動更新ができる、より柔軟な方法でリポジトリーをコピーしたい場合は、より複雑な指示に従うことになります。
 
@@ -93,27 +107,19 @@ MDN のこの領域の目的は、あなたを「初心者」から「エキス�
 
 何か連絡を取りたいことがある場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)を使用してください。サイト上で間違っていると思うことや足りないもの、新しい学習テーマのリクエスト、わからない項目のヘルプなど、どんなことでもお聞かせください。
 
-コンテンツの開発、改善の手助けに興味がある場合、[協力するには？](/ja/docs/MDN/Contribute)を覗いて、始めてください！あなたが初心者でも、先生でも、熟練のウェブ開発者でも、その他学習体験の改善に興味がある人でも、誰でも歓迎です。
+コンテンツの開発、改善の手助けに興味がある場合、[協力するには？](/ja/docs/MDN/Community/Contributing)を覗いて、始めてください。あなたが初心者でも、先生でも、熟練のウェブ開発者でも、その他学習体験の改善に興味がある人でも、誰でも歓迎です。
 
 ## 関連情報
 
-- [Mozilla developer newsletter](https://www.mozilla.org/en/newsletter/developer/)
-  - : 我々のウェブ開発者向けニュースレターで、あらゆる経験レベル向けのすばらしいリソースです。
 - [Learn JavaScript](https://learnjavascript.online/)
   - : ウェブ開発者を目指す人のための優れたリソースです。短いレッスンとインタラクティブなテストで、自動評価によって導かれるインタラクティブな環境で JavaScript を学ぶことができます。最初の 40 レッスンは無料で、完全なコースはわずかな一回の支払いで利用できます。
-- [Web demystified](https://www.youtube.com/playlist?list=PLo3w8EB99pqLEopnunz-dOOBJ8t-Wgt2g)
-  - : ウェブの基礎を説明するすばらしい動画シリーズで、ウェブ開発の完全な初心者に向けたもの。製作者は [Jérémie Patonnier](https://twitter.com/JeremiePat)
 - [Codecademy](https://www.codecademy.com/)
   - : 最初からプログラミング言語を学ぶためのすばらしいインタラクティブサイトです。
-- [BitDegree](https://www.bitdegree.org/learn/)
-  - : ゲーミフィケーションされた学習プロセスによる基本的なコーディング理論です。主に初心者向けです。
-- [Code.org](https://code.org/)
-  - : 基本的なコーディング理論と実践で、主に子供や完全な初心者を目的としたもの。
-- [EXLskills](https://exlskills.com/learn-en/courses)
-  - : 技術スキルを学ぶための、メンターシップやプロジェクトベースの学習があるフリーでオープンなコースです。
 - [freeCodeCamp.org](https://www.freecodecamp.org/)
-  - : ウェブ開発を学習するチュートリアルやプロジェクトのあるインタラクティブなサイト。
-- [Web literacy map](https://learning.mozilla.org/web-literacy/)
-  - : 入門レベルのウェブリテラシーや 21 世紀のスキル向けのフレームワークで、カテゴリーごとにソートされた教科にもアクセスできます。
-- [Edabit](https://edabit.com/challenges)
-  - : 数千のインタラクティブな JavaScript チャレンジ。
+  - : ウェブ開発を学習するチュートリアルやプロジェクトのあるインタラクティブなサイトです。
+- [The Odin Project](https://www.theodinproject.com/)
+  - : 初心者から上級者まで、無料で開くためのフルスタックカリキュラムが特徴です。
+- [MDN Blog](/en-US/blog/)
+  - : MDN ブログでは、 MDN チームやゲストライターが、サイトの新しい開発、HTML、CSS、JavaScript、他にもウェブ開発に関するニュースを記事にしています。
+- [Mozilla developer newsletter](https://www.mozilla.org/en/newsletter/developer/)
+  - : 我々のウェブ開発者向けニュースレターで、あらゆる経験レベル向けのすばらしいリソースです。

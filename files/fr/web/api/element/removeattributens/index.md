@@ -28,10 +28,6 @@ d.removeAttributeNS("http://www.mozilla.org/ns/specialspace", "specialAlign");
 // l'élément est devenu&nbsp;: <div id="div1" width="200px" />
 ```
 
-## Notes
-
-{{ DOMAttributeMethods() }}
-
 ## Spécification
 
 - [DOM Level 2 Core: removeAttributeNS (en)](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElRemAtNS) — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-ElRemAtNS) (non normative)
