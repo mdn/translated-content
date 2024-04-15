@@ -32,7 +32,7 @@ ETag: W/"0815"
 ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 ```
 
-當將更改保存到 wiki 頁面（發送資料）時，{{HTTPMethod("POST")}} 請求將包含 {{HTTPHeader("If-Match")}} 標頭，其中包含要檢查新鮮度的 `ETag` 值。
+當將更改保存到 wiki 頁面（發送資料）時，{{HTTPMethod("POST")}} 請求將包含 {{HTTPHeader("If-Match")}} 標頭，其中包含用於檢查新鮮度的 `ETag` 值。
 
 ```http
 If-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
@@ -45,8 +45,6 @@ If-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 {{Specifications}}
 
 ## 瀏覽器相容性
-
-以下資訊來自 MDN 的 GitHub（<https://github.com/mdn/browser-compat-data>）。
 
 {{Compat}}
 
