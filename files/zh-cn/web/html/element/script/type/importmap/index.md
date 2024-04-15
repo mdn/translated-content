@@ -9,7 +9,7 @@ l10n:
 
 [`<script>` 元素](/zh-CN/docs/Web/HTML/Element/script)的 [`type`](/zh-CN/docs/Web/HTML/Element/script/type) 属性的 **`importmap`** 值表示元素的主体包含一个导入映射。
 
-导入映射（import map）是一个 JSON 对象，其允许开发者在导入 [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)时，控制浏览器如何解析模块标识符。它提供了在 [`import` 语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/import) 或 [`import()` 运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/import) 中用作模块标识符的文本，其会在解析标识符时与要替换的文本之间建立映射。JSON 对象必须符合[导入映射 JSON 表示格式](#导入映射_json_表示)。
+导入映射（import map）是一个 JSON 对象，其允许开发者在导入 [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)时，控制浏览器如何解析模块标识符。它提供了在 [`import` 语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/import)或 [`import()` 运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/import)中用作模块标识符的文本，其会在解析标识符时与要替换的文本之间建立映射。JSON 对象必须符合[导入映射 JSON 表示格式](#导入映射_json_表示)。
 
 导入映射用于解析静态和动态导入中的模块标识符，因此必须在使用映射表中声明的标识符导入模块的任何 `<script>` 元素之前声明和处理。注意，导入映射仅适用于在 [`import` 语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/import)或 [`import()` 运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/import)中的模块标识符；它不适用于 `<script>` 元素的 `src` 属性中指定的路径，也不适用加载到 workers 或 worklets 中的模块。
 
