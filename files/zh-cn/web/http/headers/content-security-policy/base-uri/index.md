@@ -80,7 +80,7 @@ add_header Content-Security-Policy "base-uri 'self';"
 
 {{Compat}}
 
-## 相关内容
+## 参见
 
 - {{HTTPheader("Content-Security-Policy")}}
 - {{HTMLElement("base")}}

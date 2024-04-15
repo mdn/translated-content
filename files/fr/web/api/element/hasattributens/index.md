@@ -35,10 +35,6 @@ if (
 }
 ```
 
-## Notes
-
-{{ DOMAttributeMethods() }}
-
 ## Spécification
 
 - [DOM Level 2 Core: hasAttributeNS (en)](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElHasAttrNS) — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-ElHasAttrNS) (non normative)

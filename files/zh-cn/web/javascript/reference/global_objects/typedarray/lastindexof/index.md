@@ -49,7 +49,7 @@ uint8.lastIndexOf(2, -1); // 3
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{jsxref("TypedArray.prototype.indexOf()")}}
 - {{jsxref("Array.prototype.lastIndexOf()")}}

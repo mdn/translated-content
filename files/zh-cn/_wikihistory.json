@@ -2717,10 +2717,6 @@
       "sanxingming"
     ]
   },
-  "Learn/Front-end_web_developer": {
-    "modified": "2020-07-16T22:40:48.018Z",
-    "contributors": ["Ende93", "ex90rts"]
-  },
   "Learn/Getting_started_with_the_web": {
     "modified": "2020-09-24T11:26:23.243Z",
     "contributors": [
@@ -15300,6 +15296,10 @@
     "modified": "2019-09-19T09:48:51.675Z",
     "contributors": ["SphinxKnight", "joodo", "teoli", "khalid32", "monjer"]
   },
+  "Web/API/Window/indexedDB": {
+    "modified": "2019-09-21T03:34:03.050Z",
+    "contributors": ["FEhaoxinjie"]
+  },
   "Web/API/Window/innerHeight": {
     "modified": "2019-03-18T20:46:35.962Z",
     "contributors": ["WangLeto", "teoli", "AlexChao"]
@@ -16260,10 +16260,6 @@
       "fuchao2012"
     ]
   },
-  "Web/API/indexedDB": {
-    "modified": "2019-09-21T03:34:03.050Z",
-    "contributors": ["FEhaoxinjie"]
-  },
   "Web/API/isSecureContext": {
     "modified": "2019-09-21T03:37:23.951Z",
     "contributors": ["Awe"]
@@ -16531,10 +16527,6 @@
   "Web/CSS/-webkit-line-clamp": {
     "modified": "2020-10-15T22:24:06.241Z",
     "contributors": ["liuruiqi1993", "herotangabc", "litaoAurora"]
-  },
-  "Web/CSS/-webkit-mask-attachment": {
-    "modified": "2019-03-18T21:45:10.830Z",
-    "contributors": ["mobiuskaikai"]
   },
   "Web/CSS/-webkit-overflow-scrolling": {
     "modified": "2019-03-23T23:02:52.440Z",
@@ -21554,10 +21546,6 @@
       "ZhangJianxiang"
     ]
   },
-  "Web/HTML/Element/image": {
-    "modified": "2019-03-30T00:32:55.632Z",
-    "contributors": ["raygift", "hoyt"]
-  },
   "Web/HTML/Element/img": {
     "modified": "2020-10-15T21:34:27.415Z",
     "contributors": [
@@ -22287,10 +22275,6 @@
   "Web/HTML/Global_attributes/contenteditable": {
     "modified": "2020-10-15T21:37:25.983Z",
     "contributors": ["zhangchen", "xgqfrms", "eforegist", "AlexChao"]
-  },
-  "Web/HTML/Global_attributes/contextmenu": {
-    "modified": "2020-10-15T21:51:27.709Z",
-    "contributors": ["SphinxKnight", "eforegist", "Ende93", "shuangya"]
   },
   "Web/HTML/Global_attributes/data-*": {
     "modified": "2020-10-15T21:36:49.775Z",
@@ -32660,9 +32644,5 @@
       "skyfore",
       "xgqfrms-GitHub"
     ]
-  },
-  "conflicting/Web/SVG/Attribute": {
-    "modified": "2020-10-15T22:10:48.584Z",
-    "contributors": ["liu3329"]
   }
 }

@@ -54,7 +54,7 @@ wat2wasm simple.wat -v
 
 ![several strings of binary with textual descriptions beside them. For example: 0000008: 01 ; section code ](assembly-output.png)
 
-## 另见
+## 参见
 
 - [理解 WebAssembly 文本格式](/zh-CN/docs/WebAssembly/Understanding_the_text_format)——详细解释文本格式语法。
 - [从 C/C++ 编译为 WebAssembly](/zh-CN/docs/WebAssembly/C_to_wasm)——诸如 Binaryen/Emscripten 的工具不但把你的代码编译为 wasm 而且创建必要的用来在一个 JavaScript 上下文中运行模块的 API 代码。关于如何使用它们，可以探究更多内容。

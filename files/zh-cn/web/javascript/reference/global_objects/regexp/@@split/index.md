@@ -75,7 +75,7 @@ console.log(result); // ["(2016)", "(01)", "(02)"]
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{jsxref("String.prototype.split()")}}
 - {{jsxref("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}

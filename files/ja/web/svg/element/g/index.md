@@ -44,7 +44,7 @@ svg {
 - [条件処理属性](/ja/docs/Web/SVG/Attribute/Conditional_Processing)
   - : 特に: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
 - イベント属性
-  - : [グローバルイベント属性](/ja/docs/Web/SVG/Attribute/Events#Global_Event_Attributes), [グラフィカルイベント属性](/ja/docs/Web/SVG/Attribute/Events#Graphical_Event_Attributes)
+  - : [グローバルイベント属性](/ja/docs/Web/SVG/Attribute/Events#グローバルイベント属性), [グラフィックイベント属性](/ja/docs/Web/SVG/Attribute/Events#グラフィックイベント属性)
 - [プレゼンテーション属性](/ja/docs/Web/SVG/Attribute/Presentation)
   - : 特に: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
 - Aria 属性
