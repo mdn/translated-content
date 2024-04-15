@@ -18,7 +18,7 @@ atob(encodedData)
 ### 参数
 
 - `encodedData`
-  - : 一个包含 base64 编码数据的二进制字符串（即字符串中的每个字符都被视为一字节的二进制数据）。A binary string (i.e., a string in which each character in the string is treated as a byte of binary data) containing base64-encoded data.
+  - : 一个包含 base64 编码数据的二进制字符串（即字符串中的每个字符都被视为一字节的二进制数据）。
 
 ### 返回值
 
