@@ -49,7 +49,7 @@ Web Bluetooth API 只能在安全的上下文中使用。
 当调用 {{domxref("Bluetooth.requestDevice()")}} 请求访问未授权的新蓝牙设备时，将显示权限提示（拥有的全局对象还必须具有 {{glossary("transient activation")}}）。
 你可以使用 {{domxref("Bluetooth.getDevices()")}} 来检索先前已被授予站点权限的任何设备。
 
- [Permissions API](/en-US/docs/Web/API/Permissions_API) 中的 {{domxref("Permissions/query","navigator.permissions.query()")}} 方法可以与 `bluetooth` 权限一起使用，用于测试站点是否具有使用蓝牙设备的权限。
+[Permissions API](/zh-CN/docs/Web/API/Permissions_API) 中的 {{domxref("Permissions/query","navigator.permissions.query()")}} 方法可以与 `bluetooth` 权限一起使用，用于测试站点是否具有使用蓝牙设备的权限。
 权限状态将是 `granted`、`denied` 或 `prompt`（需要用户确认提示）：
 
 ```js
@@ -59,11 +59,11 @@ if (btPermission.state !== "denied") {
 }
 ```
 
-<!-- 以下部分是规范正确的，但在撰写本文时尚未实现： https://github.com/WebBluetoothCG/web-bluetooth/issues/620#issuecomment-1986689299。
+<!-- 以下部分是规范正确的，但在撰写本文时尚未实现：https://github.com/WebBluetoothCG/web-bluetooth/issues/620#issuecomment-1986689299。
 -->
 <!--
 你还可以使用 `query()` 直接检索先前已被授予站点权限的设备。
-例如，下面的代码（修改自规范中的示例），返回用户授予权限的最后一个使用的蓝牙设备:
+例如，下面的代码（修改自规范中的示例），返回用户授予权限的最后一个使用的蓝牙设备：
 ```js
 const btPermission = await navigator.permissions.query({
   name: "bluetooth",
