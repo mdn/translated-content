@@ -13,7 +13,7 @@ l10n:
 
 ## 属性
 
-这个元素包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes).
+这个元素包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
 ## 示例
 
