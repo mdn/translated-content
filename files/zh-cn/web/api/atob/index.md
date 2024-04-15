@@ -47,5 +47,5 @@ const decodedData = window.atob(encodedData); // 解码
 ## 参见
 
 - [`core-js`](https://github.com/zloirock/core-js) 提供了 [`atob` 的 polyfill](https://github.com/zloirock/core-js#base64-utility-methods)
-- [`data` URLs](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)
+- [`data` URL](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)
 - {{domxref("btoa","btoa()")}}
