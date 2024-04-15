@@ -26,7 +26,7 @@ l10n:
 
 {{EmbedLiveSample("示例")}}
 
-## 技术规范
+## 技术概要
 
 <table class="properties">
   <tbody>
