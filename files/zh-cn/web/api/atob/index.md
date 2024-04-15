@@ -1,5 +1,5 @@
 ---
-title: 全局函数 atob()
+title: atob() 全局函数
 slug: Web/API/atob
 ---
 
