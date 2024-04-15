@@ -9,7 +9,7 @@ l10n:
 
 HTTP **`415 Unsupported Media Type`** 用戶端錯誤回應碼表示伺服器拒絕接受請求，因為有效載荷格式是不支援的。
 
-格式問題可能是由於請求中指定的 {{HTTPHeader("Content-Type")}} 或 {{HTTPHeader("Content-Encoding")}}，或者檢查資料時直接發現的。
+格式問題可能是由於請求中指定的 {{HTTPHeader("Content-Type")}} 或 {{HTTPHeader("Content-Encoding")}}，或者直接檢查資料導致的。
 
 ## 狀態
 
