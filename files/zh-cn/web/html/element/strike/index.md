@@ -18,8 +18,8 @@ l10n:
 ## 示例
 
 ```html
-&lt;strike&gt;: <strike>今日特供：鲑鱼</strike> 已售空<br />
-&lt;s&gt;: <s>今日特供：鲑鱼</s> 已售空
+&lt;strike&gt;: <strike>今日特供：鲑鱼</strike> 已售罄<br />
+&lt;s&gt;: <s>今日特供：鲑鱼</s> 已售罄
 ```
 
 ### 结果
