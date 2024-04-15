@@ -55,7 +55,7 @@ getHighEntropyValues(hints)
 - `platformVersion`
   - : 一个包含平台版本的字符串。平台名称本身始终可通过低熵提示 `platform` 提供。例如，`"10.0"`。请注意，如果服务器在 {{HTTPHeader("Accept-CH")}} 中明确请求该信息，则可以在 {{HTTPHeader("Sec-CH-UA-Platform-Version")}} 标头中将该信息发送到服务器。
 - `uaFullVersion` {{Deprecated_Inline}}
-  - : 一个包含完整浏览器版本的字符串。例如，`"103.0.5060.134"`。已弃用，使用 `fullVersionList` 替代。请注意，如果服务器在 {{HTTPHeader("Accept-CH")}} 中明确请求该信息，则可以在 {{HTTPHeader("Sec-CH-UA-Full-Version")}} 标头中将该信息发送到服务器。
+  - : 一个包含完整浏览器版本的字符串。例如，`"103.0.5060.134"`。已弃用，请使用 `fullVersionList` 替代。请注意，如果服务器在 {{HTTPHeader("Accept-CH")}} 中明确请求该信息，则可以在 {{HTTPHeader("Sec-CH-UA-Full-Version")}} 标头中将该信息发送到服务器。
 - `wow64`
   - : 一个布尔值，指示用户代理的二进制文件是否在 64 位 Windows 上以 32 位模式运行。请注意，如果服务器在 {{HTTPHeader("Accept-CH")}} 标头中明确请求该信息，则可以在 {{HTTPHeader("Sec-CH-UA-WoW64")}} 标头中将该信息发送到服务器。
 
@@ -66,7 +66,7 @@ getHighEntropyValues(hints)
 
 ## 示例
 
-在以下示例中，使用 `getHighEntropyValues() 方法请求许多提示。当 promise 兑现时，此信息将打印到控制台。
+在以下示例中，使用 `getHighEntropyValues()` 方法请求许多提示。当 promise 兑现时，此信息将打印到控制台。
 
 ```js
 navigator.userAgentData
