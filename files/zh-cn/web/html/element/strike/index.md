@@ -9,7 +9,7 @@ l10n:
 
 **`<strike>`** [HTML](/zh-CN/docs/Web/HTML) 元素在文本上添加删除线（水平线）。
 
-> **警告：** 该元素在 HTML 4 和 XHTML 1 中已被弃用，并且在[现存的 HTML 标准](https://html.spec.whatwg.org/multipage/obsolete.html#strike)被弃用。如果语义合适，即表示已*删除*的内容，请使用 {{HTMLElement("del")}} 来代替。在所有其他情况下，请使用 {{HTMLElement("s")}}。
+> **警告：** 该元素在 HTML 4 和 XHTML 1 中已被弃用，并且在 [HTML 动态标准](https://html.spec.whatwg.org/multipage/obsolete.html#strike)被弃用。如果语义合适，即表示*已删除*的内容，请使用 {{HTMLElement("del")}} 来代替。在所有其他情况下，请使用 {{HTMLElement("s")}}。
 
 ## 属性
 
@@ -49,4 +49,4 @@ l10n:
 
 - {{HTMLElement("s")}} 元素。
 - {{HTMLElement("del")}} 元素应该在数据已经*删除*的情况下使用。
-- CSS {{CSSxRef("text-decoration")}} 属性可以用于使用删除线来装饰文本。
+- 可以使用 CSS 的 {{CSSxRef("text-decoration")}} 属性为文本添加删除线样式。
