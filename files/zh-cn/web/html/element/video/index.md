@@ -370,7 +370,7 @@ AddType video/webm .webm
 #### HTML
 
 ```html
-<!-- 使用多个 sources as fallbacks for a video tag -->
+<!-- 使用多个 sources 作为视频标签的回退 -->
 <!-- “大象之梦”由 Orange Open Movie Project 制作，采用 CC-3.0 许可，由 archive.org 托管-->
 <!-- 海报来自维基百科 -->
 <video
