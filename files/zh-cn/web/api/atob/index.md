@@ -7,7 +7,7 @@ slug: Web/API/atob
 
 **`atob()`** 函数会对经过 {{glossary("Base64")}} 编码的字符串进行解码。你可以使用 {{domxref("btoa","btoa()")}} 方法来编码可能会在传输过程中出现问题的数据，并且在接收数据之后，使用 `atob()` 方法再将数据解码。例如：你可以编码、传输和解码控制字符，如 {{Glossary("ASCII")}} 值为 0 到 31 的。
 
-对于任意 Unicode 字符串的使用，请参阅 {{Glossary("Base64")}} 文中的 [“Unicode 问题”](/zh-CN/docs/Glossary/Base64#“unicode_问题”)。
+对于任意 Unicode 字符串的使用，请参阅 {{Glossary("Base64")}} 文中的[“Unicode 问题”](/zh-CN/docs/Glossary/Base64#“unicode_问题”)。
 
 ## 语法
 
