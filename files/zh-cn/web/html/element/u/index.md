@@ -114,7 +114,7 @@ u.spelling {
 <p>The class read <cite>Moby Dick</cite> in the first term.</p>
 ```
 
-{{EmbedLiveSample("使用_cite_元素", 650, 80)}}
+{{EmbedLiveSample("使用 cite 元素", 650, 80)}}
 
 ##### 为 cite 元素添加样式
 
@@ -131,7 +131,7 @@ cite {
 }
 ```
 
-{{EmbedLiveSample("为_cite_元素添加样式", 650, 80)}}
+{{EmbedLiveSample("为 cite 元素添加样式", 650, 80)}}
 
 ## 技术概要
 
