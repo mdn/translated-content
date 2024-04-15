@@ -1,6 +1,8 @@
 ---
 title: Строгое равенство (===)
 slug: Web/JavaScript/Reference/Operators/Strict_equality
+l10n:
+  sourceCommit: 934ba3b7968030a573a28346dfcb371e796075a3
 ---
 
 {{jsSidebar("Operators")}}
