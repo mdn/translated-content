@@ -20,9 +20,7 @@ BigInt.asIntN(bits, bigint)
 ### 매개변수
 
 - `bits`
-
   - : 반환된 BigInt에 사용할 수 있는 비트의 양입니다. 0에서 2<sup>53</sup> - 1 이하의 정수여야 합니다.
-
 - `bigint`
   - : 제공된 비트에 맞게 잘라낼 BigInt 값입니다.
 
