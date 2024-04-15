@@ -20,7 +20,7 @@ replace(pattern, replacement)
 ### 매개변수
 
 - `pattern`
-  - : 문자열이거나 [`Symbol.replace`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) 메서드가 있는 객체일 수 있습니다. 일반적인 예를 들자면 [정규식](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp)이 있습니다. `Symbol.replace` 메서드가 없는 모든 값은 문자열로 강제 변환됩니다.
+  - : 문자열이거나 [`Symbol.replace`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) 메서드가 있는 객체일 수 있습니다. 일반적인 예를 들자면 [정규 표현식](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp)이 있습니다. `Symbol.replace` 메서드가 없는 모든 값은 문자열로 강제 변환됩니다.
 - `replacement`
   - : 문자열이나 함수가 될 수 있습니다.
     - 문자열일 경우, `pattern`과 일치하는 부분 문자열을 대체합니다. 여러 특수 대체 패턴을 지원합니다. 아래 [대체할 내용으로 문자열로 지정하기](#대체할_내용을_문자열로_지정하기)를 참고하세요
@@ -34,7 +34,7 @@ replace(pattern, replacement)
 
 이 메서드는 호출된 문자열 값을 변경하지 않습니다. 새 문자열을 반환합니다.
 
-문자열 패턴은 한 번만 바뀝니다. 전역 검색 및 바꾸기를 수행하려면 `g` 플래그가 있는 정규식을 사용하거나 [`replaceAll()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll)을 대신 사용하세요.
+문자열 패턴은 한 번만 바뀝니다. 전역 검색 및 바꾸기를 수행하려면 `g` 플래그가 있는 정규 표현식을 사용하거나 [`replaceAll()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll)을 대신 사용하세요.
 
 `pattern`이 [`Symbol.replace`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) 메서드가 있는 객체(`RegExp` 객체 포함)인 경우, 해당 메서드는 대상 문자열과 `replacement`를 인수로 사용하여 호출됩니다. 그 반환 값은 `replace()`의 반환 값이 됩니다. 이 경우 `replace()`의 동작은 전적으로 `@@replace` 메서드로 인코딩됩니다. 예를 들어, 아래 설명에서 "그룹 캡처"에 대한 언급은 실제로 [`RegExp.prototype[@@replace]`](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)에서 제공하는 기능입니다.
 
@@ -54,12 +54,12 @@ replace(pattern, replacement)
 | --------- | ---------------------------------------------------------------------------------------- |
 | `$$`      | `"$"`를 삽입합니다.                                                                      |
 | `$&`      | 일치된 부분 문자열을 삽입니다.                                                           |
-| `` $` ``  | 일치하는 하위 문자열 앞에 있는 문자열 부분을 삽입합니다.                                 |
-| `$'`      | 일치하는 하위 문자열 뒤에 오는 문자열 부분을 삽입합니다.                                 |
-| `$n`      | `n`번째(`1`- indexed) 캡처 그룹을 삽입합니다. 여기서 `n`은 100보다 작은 양의 정수입니다. |
+| `` $` ``  | 일치하는 부분 문자열 앞에 있는 문자열 부분을 삽입합니다.                                 |
+| `$'`      | 일치하는 부분 문자열 뒤에 오는 문자열 부분을 삽입합니다.                                 |
+| `$n`      | `n`번째(`1`로부터 시작하는) 캡처 그룹을 삽입합니다. 여기서 `n`은 100보다 작은 양의 정수입니다. |
 | `$<Name>` | `Name`이 그룹 이름인 명명된 캡처 그룹을 삽입합니다.                                      |
 
-`$n` 및 `$<Name>`은 `pattern` 인수가 {{jsxref("RegExp")}} 객체인 경우에만 사용할 수 있습니다. `pattern`이 문자열이거나 해당 캡쳐 그룹이 정규식에 없는 경우 패턴은 리터럴로 대체됩니다. 그룹이 존재하지만 일치하지 않는 경우(Disjunction의 일부이기 때문에) 빈 문자열로 대체됩니다.
+`$n` 및 `$<Name>`은 `pattern` 인수가 {{jsxref("RegExp")}} 객체인 경우에만 사용할 수 있습니다. `pattern`이 문자열이거나 해당 캡처 그룹이 정규 표현식에 없는 경우 패턴은 리터럴로 대체됩니다. 그룹이 존재하지만 일치하지 않는 경우(이는 불일치의 일부이므로) 빈 문자열로 대체됩니다.
 
 ```js
 "foo".replace(/(f)/, "$2");
@@ -74,9 +74,9 @@ replace(pattern, replacement)
 
 ### 대체할 내용으로 함수 명시하기
 
-여러분은 함수를 두 번째 매개변수로 명시할 수 있습니다. 이 경우 함수는 각각의 문자열 일치가 발생할때마다 호출됩니다. 이 함수의 결과(반환 값)은 대체 문자열의 값으로 사용됩니다.
+함수를 두 번째 매개변수로 명시할 수 있습니다. 이 경우 함수는 각각의 문자열 일치가 발생할 때마다 호출됩니다. 이 함수의 결과(반환 값)는 대체 문자열로 사용됩니다.
 
-> **참고:** 위에서 언급한 특수 대체 패턴은 대체자 함수에서 반환된 문자열에는 아직 적용되지 않습니다.
+> **참고:** 위에서 언급한 특수 대체 패턴은 대체자 함수에서 반환된 문자열에는 적용되지 않습니다.
 
 함수 시그니처는 아래와 같습니다.
 
@@ -91,7 +91,7 @@ function replacer(match, p1, p2, /* …, */ pN, offset, string, groups) {
 - `match`
   - : 일치한 부분 문자열. 위의 `$&`에 해당합니다.
 - `p1, p2, …, pN`
-  - : `replace()`의 첫 번째 인자로 제공된 캡처 그룹(명명된 캡처 그룹 포함)에서 찾은 `n`번째 문자열은 {{jsxref("RegExp")}} 객체입니다. (위의 `$1`, `$2` 등에 해당합니다.) 예를 들어 `pattern`이 `/(\a+)(\b+)/`이라면, `pq`은 `\a+`와 일치하지만 `p2`는 `\b+`와 일치합니다. 그룹이 disjunction의 일부인 경우(예: `"abc".replace(/(a)|(b)/, replacer)`), 일치하지 않는 대체어는 `undefined`이 됩니다.
+  - : `replace()`의 첫 번째 인수로 제공된 캡처 그룹(명명된 캡처 그룹 포함)에서 찾은 `n`번째 문자열은 {{jsxref("RegExp")}} 객체입니다. (위의 `$1`, `$2` 등에 해당합니다.) 예를 들어 `pattern`이 `/(\a+)(\b+)/`이라면, `p1`은 `\a+`와 일치하지만 `p2`는 `\b+`와 일치합니다. 그룹이 불일치의 일부인 경우(예: `"abc".replace(/(a)|(b)/, replacer)`), 일치하지 않는 대체어는 `undefined`이 됩니다.
 - `offset`
   - 검사 중인 전체 문자열 내에서 일치하는 부분 문자열의 오프셋입니다. 예를 들어 전체 문자열이 `'abcd'`이고 일치하는 부분 문자열이 `'bc'`인 경우 이 인수는 `1`이 됩니다.
 - `string`
@@ -101,7 +101,7 @@ function replacer(match, p1, p2, /* …, */ pN, offset, string, groups) {
 
 정확한 인수의 개수는 첫 번째 인수가 {{jsxref("RegExp")}} 객체인지, 그렇다면 얼마나 많은 캡처 그룹이 있는지에 따라 달라집니다.
 
-아래 예제는 `newString`dmf `'abc - 12345 - #$*%'`로 설정합니다.
+아래 예제는 `newString`을 `'abc - 12345 - #$*%'`로 설정합니다.
 
 ```js
 function replacer(match, p1, p2, p3, offset, string) {
@@ -112,11 +112,11 @@ const newString = "abc12345#$*%".replace(/([^\d]*)(\d*)([^\w]*)/, replacer);
 console.log(newString); // abc - 12345 - #$*%
 ```
 
-첫 번째 매개변수의 정규식이 전역인 경우 이 함수는 대체할 문자열 전체 일치 각각의 항목에 대해 여러 번 호출됩니다.
+첫 번째 매개변수의 정규 표현식이 전역인 경우 이 함수는 대체할 문자열 전체 일치 각각의 항목에 대해 여러 번 호출됩니다.
 
 ## 예제
 
-### replace()에서 정규식 정의하기
+### replace()에서 정규 표현식 정의하기
 
 다음 예제에서는 `replace()`에서 대/소문자 무시 플래그를 포함한 정규 표현식을 정의합니다.
 
