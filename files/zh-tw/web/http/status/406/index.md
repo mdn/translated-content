@@ -7,7 +7,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP **`406 Not Acceptable`** 用戶端錯誤回應碼表示伺服器無法產生與請求中定義的可接受值清單匹配的回應，並且伺服器不願意提供默認表示。
+超文本傳輸協定（HTTP）**`406 Not Acceptable`** 用戶端錯誤回應碼表示伺服器無法產生與請求的主动[內容協商](/zh-TW/docs/Web/HTTP/Content_negotiation)標頭中定義的可接受值清單匹配的回應，並且伺服器不願意提供默認表示。
 
 主動內容協商標頭包括：
 
