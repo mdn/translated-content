@@ -280,7 +280,7 @@ textarea {
     </tr>
     <tr>
       <th scope="row">允许的 ARIA 角色</th>
-      <td>没有 <code>role</code> 的允许</td>
+      <td>没有允许 <code>role</code> 的</td>
     </tr>
     <tr>
       <th scope="row">DOM 接口</th>
