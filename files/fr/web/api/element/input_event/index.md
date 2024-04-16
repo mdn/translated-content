@@ -1,6 +1,7 @@
 ---
 title: input
-slug: Web/API/HTMLElement/input_event
+slug: Web/API/Element/input_event
+original_slug: Web/API/HTMLElement/input_event
 ---
 
 L'évènement DOM `input` _(entrée)_ est déclenché de façon synchrone quand la valeur d'un élément {{HTMLElement("input")}} _(entrée)_, {{HTMLElement("select")}} _(sélection)_ ou {{ HTMLElement("textarea") }} _(zone de texte)_ est modifiée. (Pour les éléments `input` avec `type=checkbox` _(case à cocher)_ ou `type=radio` , l'évènement `input` n'est pas lancé quand l'utilisateur clique sur le contrôle, parce que la valeur attribuée ne peut être changée).
