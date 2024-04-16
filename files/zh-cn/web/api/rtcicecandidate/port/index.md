@@ -1,5 +1,5 @@
 ---
-title: "RTCIceCandidate: port 属性"
+title: RTCIceCandidate：port 属性
 slug: Web/API/RTCIceCandidate/port
 l10n:
   sourceCommit: 31fa0bbc78b87bf3ec7559906515fcd3dfde68de
@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("WebRTC")}}
 
-**{{domxref("RTCIceCandidate")}}** 接口的只读 `port` 属性是 {{domxref("RTCIceCandidate.address")}} 给出的地址所包含的候选对等方可以到达的端口号。
+**{{domxref("RTCIceCandidate")}}** 接口的 1 只读 `port` 属性是 {{domxref("RTCIceCandidate.address")}} 给出的地址所包含的候选对等方可以到达的端口号。
 
 `port` 字段的值是从传递给 {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate()")}} 构造函数的 `candidateInfo` 选项对象中设置的。
 你不能直接在选项对象中指定 `port` 的值，但如果对象的 `candidate` 属性行 (a-line) 格式正确，其值将自动从对象的 `candidate` 属性行 (a-line) 中提取。
@@ -17,7 +17,7 @@ l10n:
 一个 16 位数字，指示 {{domxref("RTCIceCandidate/address", "address")}} 指定的设备上的端口号，候选对等体可以到达的地址。
 如果在 `candidate` 中未指定 `port`，或者 `candidate` 字符串无法正确解析，则将端口初始化为 `null`。
 
-> **注意：** 如果端口为 `null`，则将 `candidate` 传递给 {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} 将失败，抛出 `OperationError` 异常。只有当候选者实现 `port` 时才适用此规则。
+> **注意：** 如果 `port` 值为 `null`，则将 `candidate` 传递给 {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} 将失败，抛出 `OperationError` 异常。只有当候选者实现 `port` 时才适用此规则。
 
 ## 使用说明
 
