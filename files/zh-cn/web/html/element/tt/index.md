@@ -132,5 +132,5 @@ tt {
 
 ## 参见
 
-- 语义化 {{HTMLElement("code")}}、{{HTMLElement("var")}}、{{HTMLElement("kbd")}} 和 {{HTMLElement("samp")}} 元素
+- {{HTMLElement("code")}}、{{HTMLElement("var")}}、{{HTMLElement("kbd")}} 和 {{HTMLElement("samp")}} 语义化元素
 - 用于显示预格式化文本块的 {{HTMLElement("pre")}} 元素
