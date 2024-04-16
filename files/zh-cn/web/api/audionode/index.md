@@ -89,7 +89,6 @@ analyserNode.smoothingTimeConstant = 0.5;
 
 _简史_：第一版网络音频规范仅定义了 _factory_ 方法。经过 [2013 年 10 月的设计审查](https://github.com/WebAudio/web-audio-api/issues/250)，决定添加 _constructor_，因为与 _factory_ 方法相比，前者有很多优点。在 2016 年 8 月至 10 月期间，_constructor_ 被添加到规范中。_factory_ 方法仍继续包含在规范中，并未废弃。
 
-
 ## 示例
 
 这个简单的代码片段展示了一些音频节点的创建，以及如何使用 `AudioNode` 属性和方法。你可以在 [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API) 页面中的链接找到此类用法的示例（例如 [Violent Theremin](https://github.com/mdn/webaudio-examples/tree/main/violent-theremin)）。
