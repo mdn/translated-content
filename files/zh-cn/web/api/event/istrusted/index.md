@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("DOM")}}
 
-{{domxref("Event")}} 接口的 **`isTrusted`** 只读属性是一个布尔值，表示事件是否由用户行为生成。当事件由用户行为触发时，为 `true`，当事件由脚本创建或修改，或通过 {{domxref("EventTarget.dispatchEvent()")}} 分发时，为 `false`。
+{{domxref("Event")}} 接口的 **`isTrusted`** 只读属性是一个表示事件是否由用户行为生成的布尔值。当事件由用户行为触发时，为 `true`；当事件由脚本创建或修改，或通过 {{domxref("EventTarget.dispatchEvent()")}} 派发时，为 `false`。
 
 ## 值
 

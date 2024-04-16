@@ -39,6 +39,6 @@ function handleInput(e) {
 
 ## 参见
 
-- 调用 {{domxref("Event.stopPropagation", "stopPropagation()")}} 方法可以阻止当前事件在捕获和冒泡阶段的进一步传播
-- 调用 {{domxref("Event.stopImmediatePropagation", "stopImmediatePropagation()")}} 方法可阻止在同一 DOM 层级上针对同一事件调用的任何后续监听器
-- 调用 {{domxref("Event.preventDefault", "preventDefault()")}} 方法可以在事件继续传播的同时，禁止浏览器在无监听器处理该事件时执行其默认操作
+- {{domxref("Event.stopPropagation", "stopPropagation()")}} 方法用于阻止当前事件在捕获和冒泡阶段的进一步传播
+- {{domxref("Event.stopImmediatePropagation", "stopImmediatePropagation()")}} 方法用于阻止在同一 DOM 层级上针对同一事件调用任何后续监听器
+- {{domxref("Event.preventDefault", "preventDefault()")}} 方法用于在事件继续传播的同时，禁止浏览器在无监听器处理该事件时执行其默认操作
