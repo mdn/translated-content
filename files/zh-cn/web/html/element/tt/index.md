@@ -11,7 +11,7 @@ l10n:
 
 **非比例**、**monotype**和**monospace**这些术语可以互换使用，具有相同的通用含义：它们描述的是字符宽度均为相同像素数的字体。
 
-然而，此元素已过时，对于需要以等宽类型呈现的内联文本，应使用更具语义意义的 {{HTMLElement("code")}}、{{HTMLElement("kbd")}}、{{HTMLElement("samp")}} 或 {{HTMLElement("var")}} 元素，而对于应作为独立块呈现的内容，应使用 {{HTMLElement("pre")}} 标签。
+然而，此元素已过时，对于需要以等宽类型呈现的内联文本，应使用更具语义化的 {{HTMLElement("code")}}、{{HTMLElement("kbd")}}、{{HTMLElement("samp")}} 或 {{HTMLElement("var")}} 元素，而对于应作为独立块呈现的内容，应使用 {{HTMLElement("pre")}} 标签。
 
 > **备注：** 如果上述语义元素均不符合你的应用场景（例如，你需要以非比例字体展示某些内容），可考虑使用 {{ HTMLElement("span") }} 元素，并通过 CSS 进行相应样式设置。{{cssxref("font-family")}} 属性是一个不错的起点。
 
