@@ -12,7 +12,6 @@ slug: Web/API/HTMLInputElement/files
 
 선택한 파일이 있는 경우 해당 파일을 나열하는 {{domxref("FileList")}} 객체입니다. **`HTMLInputElement`** 가 `type="file"`이 아닌 경우는 `null`입니다.
 
-
 ## 예제
 
 이 예제에서는 **`HTMLInputElement.files`** 속성에 접근하여 사용자가 선택한 각 파일의 이름, 수정된 날짜, 크기 및 타입을 로그에 출력합니다.
