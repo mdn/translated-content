@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 89c435da452257b944b403cc9e45036fcb22590e
 ---
 
-{{APIRef("Web Workers API")}}{{SeeCompatTable}}
+{{APIRef("Web Workers API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 {{domxref("WorkerNavigator")}} 接口的 **`gpu`** 只读属性返回当前浏览上下文的 {{domxref("GPU")}} 对象，该对象是 {{domxref("WebGPU_API", "WebGPU API", "", 1)}} 的入口点。
 

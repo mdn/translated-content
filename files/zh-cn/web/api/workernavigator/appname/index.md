@@ -13,7 +13,7 @@ l10n:
 
 ## 值
 
-The string "`Netscape`".
+字符串“`Netscape`”。
 
 ## 规范
 
