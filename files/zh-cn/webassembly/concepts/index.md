@@ -52,7 +52,7 @@ WebAssembly 是一门不同于 JavaScript 的语言，但是，它不是用来�
 
 为了理解 WebAssembly 如何在浏览器中运行，需要了解几个关键概念。所有这些概念在 [WebAssembly JavaScript API](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly) 中都存在一一映射。
 
-- **模块**：表示一个已经被浏览器编译为可执行机器码的 WebAssembly 二进制代码。一个模块是无状态的，并且像一个[二进制大对象](/zh-CN/docs/Web/API/Blob)（`Blob`）一样能够[被缓存到 IndexedDB](/zh-CN/docs/WebAssembly/Caching_modules) 中或者在 window 和 worker 之间进行共享（通过 [`postMessage()`](/zh-CN/docs/Web/API/MessagePort/postMessage) 函数）。一个模块能够像一个 ES 的模块一样声明导入和导出。
+- **模块**：表示一个已经被浏览器编译为可执行机器码的 WebAssembly 二进制代码。一个模块是无状态的，并且像一个[二进制大对象](/zh-CN/docs/Web/API/Blob)（`Blob`）一样在 Window 和 Worker 之间进行共享（通过 [`postMessage()`](/zh-CN/docs/Web/API/MessagePort/postMessage) 函数）。一个模块能够像一个 ES 的模块一样声明导入和导出。
 - **内存**：一个可变长的 ArrayBuffer。本质上是连续的字节数组，WebAssembly 的低级内存存取指令可以对它进行读写操作。
 - **表格**：一个可变长的类型化数组。表格中的项存储了不能作为原始字节存储在内存里的对象的引用（为了安全和可移植性的原因）。
 - **实例**：一个模块及其在运行时使用的所有状态，包括内存、表格和一系列导入值。一个实例就像一个已经被加载到一个拥有一组特定导入的特定的全局变量的 ES 模块。
