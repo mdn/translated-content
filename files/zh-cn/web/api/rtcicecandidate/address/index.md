@@ -15,7 +15,7 @@ l10n:
 
 提供候选者来源的 IP 地址的字符串。
 
-> **Note:** 如果 `port`（端口）为 `null`, 并且 {{Glossary("user agent", "用户代理 ")}} 支持端口，将候选者传递给 {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} 将失败，并抛出一个 `OperationError` 异常。
+> **注意：** 如果候选者的 `port`（端口）为 `null`, 并且 {{Glossary("user agent", "用户代理 ")}} 支持端口，将这个候选者传递给 {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} 将失败，并抛出一个 `OperationError` 异常。
 
 ## 安全注意事项
 
@@ -48,11 +48,11 @@ const rtcConfig = {
 a=candidate:4234997325 1 udp 2043278322 192.0.2.172 44323 typ host
 ```
 
-第五个字段，`"192.0.2.172"` 是该候选者的 a-line 字符串中的 IP 地址。
+第五个字段，`"192.0.2.172"` 字符串是该候选者的 IP 地址。
 
 ## 示例
 
-这个代码片段使用 `address` 属性的值来实现基于 IP 地址的禁止功能。
+这个代码片段使用 `address` 属性的值来实现基于 IP 地址的黑名单功能。
 
 ```js
 if (ipBanList.includes(candidate.address)) {
