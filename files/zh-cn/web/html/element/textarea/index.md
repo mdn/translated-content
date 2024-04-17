@@ -7,7 +7,7 @@ l10n:
 
 {{HTMLSidebar}}
 
-**`<textarea>`** [HTML](/zh-CN/docs/Web/HTML) 元素代表一个多行纯文本编辑控件，适用于允许用户输入大量自由格式文本的场景，例如评论或反馈表单。
+**`<textarea>`** [HTML](/zh-CN/docs/Web/HTML) 元素是一个多行纯文本编辑控件，适用于允许用户输入大量自由格式文本的场景，例如评论或反馈表单。
 
 {{EmbedInteractiveExample("pages/tabbed/textarea.html", "tabbed-standard")}}
 
@@ -96,7 +96,7 @@ l10n:
 
 ## 使用 CSS 样式
 
-`<textarea>` 是一个[可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)——它具有与光栅图像类似的内在维度。默认情况下，其 {{cssxref("display")}} 值为 `inline-block`。与其他表单元素相比，它的样式相对容易，其盒模型、字体、配色方案等属性均可通过常规 CSS 方式轻松调整。
+`<textarea>` 是一个[可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)——它具有与光栅图像类似的固有尺寸。默认情况下，其 {{cssxref("display")}} 值为 `inline-block`。与其他表单元素相比，它的样式相对容易，其盒模型、字体、配色方案等属性均可通过常规 CSS 方式轻松调整。
 
 [样式化 HTML 表单](/zh-CN/docs/Learn/Forms/Styling_web_forms)提供了一些有关样式化 `<textarea>` 元素的实用技巧。
 
