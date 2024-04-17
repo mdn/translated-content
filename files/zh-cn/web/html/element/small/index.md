@@ -7,7 +7,7 @@ l10n:
 
 {{HTMLSidebar}}
 
-**`<small>`** [HTML](/zh-CN/docs/Web/HTML) 元素代表旁注和小字印刷，如版权和法律文本，与其样式的呈现方式无关。默认情况下，它以比其中的文本小一号的字体大小呈现，例如从 `small` 变为 `x-small`。
+**`<small>`** [HTML](/zh-CN/docs/Web/HTML) 元素代表旁注和小字印刷（如版权和法律文本），与其样式的呈现方式无关。默认情况下，它以比其中的文本小一号的字体大小呈现，例如从 `small` 变为 `x-small`。
 
 {{EmbedInteractiveExample("pages/tabbed/small.html", "tabbed-shorter")}}
 
@@ -43,7 +43,7 @@ l10n:
 
 {{EmbedLiveSample("CSS_替代")}}
 
-## 说明
+## 备注
 
 尽管 `<small>` 元素像 {{htmlelement("b")}} 和 {{htmlelement("i")}} 元素一样，可能被认为违反了结构与表现分离的原则，但这三个元素在 HTML 中都是有效的。建议作者根据实际情况使用 `<small>` 或者 CSS 来做判断。
 
