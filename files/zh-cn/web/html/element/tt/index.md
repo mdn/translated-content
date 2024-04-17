@@ -9,7 +9,7 @@ l10n:
 
 **`<tt>`** [HTML](/zh-CN/docs/Web/HTML) 元素创建行级文本，该文本使用{{Glossary("user agent", "用户代理")}}默认的等宽字体，旨在以固定宽度设备（如电传打字机、纯文本屏幕或行式打印机）上显示文本的方式呈现文本。
 
-**非比例**、**monotype** 和 **monospace**这些术语可以互换使用，具有相同的通用含义：它们描述的是字符宽度均为相同像素数的字体。
+**非比例**、**monotype** 和 **monospace** 这些术语可以互换使用，具有相同的通用含义：它们描述的是字符宽度均为相同像素数的字体。
 
 然而，此元素已过时，对于需要以等宽类型呈现的内联文本，应使用更具语义化的 {{HTMLElement("code")}}、{{HTMLElement("kbd")}}、{{HTMLElement("samp")}} 或 {{HTMLElement("var")}} 元素，而对于应作为独立块呈现的内容，应使用 {{HTMLElement("pre")}} 标签。
 
