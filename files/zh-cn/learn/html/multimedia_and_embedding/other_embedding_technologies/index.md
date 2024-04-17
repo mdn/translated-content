@@ -77,9 +77,7 @@ l10n:
 <div class="output" style="min-height: 250px;"></div>
 
 <h2>可编辑代码</h2>
-<p class="a11y-label">
-  按 ESC 退出编辑区域，按 Tab 可插入制表符
-</p>
+<p class="a11y-label">按 ESC 退出编辑区域，按 Tab 可插入制表符</p>
 
 <textarea
   id="code"
