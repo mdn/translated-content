@@ -57,7 +57,7 @@ l10n:
 - `disabled`
   - : 此布尔属性表示用户无法与控件交互。如果未指定此属性，控件将从其包含元素（如 {{ HTMLElement("fieldset") }}）继承设置；如果在设置 `disabled` 属性时没有包含元素，则控件处于启用状态。
 - `form`
-  - : 与 `<textarea>` 元素相关联的表单元素（其“表单所有者”）。此属性的值必须是同一文档中某个表单元素的 `id` 。如果未指定此属性，`<textarea>` 元素必须是表单元素的后代。此属性允许你将 `<textarea>` 元素放置在文档内的任何位置，而不仅仅是作为表单元素的后代。
+  - : 与 `<textarea>` 元素相关联的表单元素（其“表单所有者”）。此属性的值必须是同一文档中某个表单元素的 `id`。如果未指定此属性，`<textarea>` 元素必须是表单元素的后代。此属性允许你将 `<textarea>` 元素放置在文档内的任何位置，而不仅仅是作为表单元素的后代。
 - `maxlength`
   - : 要求用户输入的最大字符串长度（以 UTF-16 代码单元衡量）。如果未指定此值，用户可以输入无限数量的字符。
 - `minlength`
@@ -199,7 +199,7 @@ textarea {
 
 ### 禁用和只读文本区
 
-此示例展示了两个 `<textarea>`——一个是 [`readonly`](/zh-CN/docs/Web/HTML/Attributes/readonly) 另一个是 [`disabled`](/zh-CN/docs/Web/HTML/Attributes/disabled)。你不能编辑任一元素的内容，但 `readonly` 元素可获得焦点且其值会被提交到表单。`disabled` 元素的值不会被提交且无法获得焦点。
+此示例展示了两个 `<textarea>`——一个是 [`readonly`](/zh-CN/docs/Web/HTML/Attributes/readonly)，另一个是 [`disabled`](/zh-CN/docs/Web/HTML/Attributes/disabled)。你不能编辑任一元素的内容，但 `readonly` 元素可获得焦点且其值会被提交到表单。`disabled` 元素的值不会被提交且无法获得焦点。
 
 ```html
 <textarea name="textarea" rows="5" cols="30" readonly>
