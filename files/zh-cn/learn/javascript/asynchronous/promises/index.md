@@ -1,41 +1,44 @@
 ---
 title: 如何使用 Promise
 slug: Learn/JavaScript/Asynchronous/Promises
+l10n:
+  sourceComit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous")}}
 
-**Promise** 是现代 JavaScript 中异步编程的基础，是一个由异步函数返回的可以向我们指示当前操作所处的状态的对象。在 Promise 返回给调用者的时候，操作往往还没有完成，但 Promise 对象可以让我们操作最终完成时对其进行处理（无论成功还是失败）。
+**Promise** 是现代 JavaScript 中异步编程的基础。它是一个由异步函数返回的对象，可以指示操作当前所处的状态。在 Promise 返回给调用者的时候，操作往往还没有完成，但 Promise 对象提供了方法来处理操作最终的成功或失败。
 
 <table>
   <tbody>
     <tr>
       <th scope="row">前提：</th>
       <td>
-        基本的计算机素养，以及对 JavaScript 基础知识的一定了解，包括函数和事件处理程序。
+        对 JavaScript 基础知识的一定了解，包括事件处理程序。
       </td>
     </tr>
     <tr>
       <th scope="row">目标：</th>
-      <td>理解 Promise 在 JavaScript 中是怎样被使用的</td>
+      <td>了解如何在 JavaScript 中使用 Promise。</td>
     </tr>
   </tbody>
 </table>
 
-在上一篇文章中，我们谈到使用回调实现异步函数的方法。在这种设计中，我们需要在调用异步函数的同时传入回调函数。这个异步函数会立即返回，并在操作完成后调用传入的回调。
+在[上一篇文章](/zh-CN/docs/Learn/JavaScript/Asynchronous/Introducing)中，我们谈到使用回调实现异步函数的方法。在这种设计中，我们需要在调用异步函数的同时传入回调函数。这个异步函数会立即返回，并在操作完成后调用传入的回调。
 
-在基于 Promise 的 API 中，异步函数会启动操作并返回 {{jsxref("Promise")}} 对象。然后，你可以将处理函数附加到 Promise 对象上，当操作完成时（成功或失败），这些处理函数将被执行。
+在基于 Promise 的 API 中，异步函数会启动操作并返回一个 {{jsxref("Promise")}} 对象。然后，你可以将处理函数附加到 Promise 对象上，当操作完成时（成功或失败），这些处理函数将被执行。
 
 ## 使用 fetch() API
 
 > **备注：** 在这篇文章中，我们将通过复制页面上的代码示例到浏览器的 JavaScript 控制台中运行的方式来学习 Promise。因此在正式开始学习之前你需要进行以下设置：
 >
-> 1. 在浏览器的新标签页中访问<https://example.org>。
+> 1. 在浏览器中打开一个新标签页并访问 <https://example.org>。
 > 2. 在该标签页中，打开[浏览器开发者工具](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools)中的 JavaScript 控制台
 > 3. 把我们展示的代码示例复制到控制台中运行。值得注意的是，你必须在每次输入新的示例之前重新加载页面，否则控制台会报错“重新定义了 `fetchPromise`”。
->    在这个例子中，我们将从<https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json>下载 JSON 文件，并记录一些相关信息。
 
-要做到这一点，我们将向服务器发出一个 **HTTP 请求**。在 HTTP 请求中，我们向远程服务器发送一个请求信息，然后它向我们发送一个响应。这次，我们将发送一个请求，从服务器上获得一个 JSON 文件。还记得在上一篇文章中，我们使用 {{domxref("XMLHttpRequest")}} API 进行 HTTP 请求吗？那么，在这篇文章中，我们将使用 {{domxref("fetch", "fetch()")}} API，一个现代的、基于 Promise 的、用于替代 `XMLHttpRequest` 的方法。
+在这个例子中，我们将从 <https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json> 下载 JSON 文件，并打印一些相关信息。
+
+要做到这一点，我们将向服务器发出一个 **HTTP 请求**。在 HTTP 请求中，我们向远程服务器发送一个请求信息，然后它向我们发送一个响应。在这里，我们将发送一个请求，从服务器上获得一个 JSON 文件。还记得在上一篇文章中，我们使用 {{domxref("XMLHttpRequest")}} API 进行 HTTP 请求吗？那么，在这篇文章中，我们将使用 {{domxref("fetch", "fetch()")}} API，一个现代的、基于 Promise 的、用于替代 `XMLHttpRequest` 的方法。
 
 把下列代码复制到你的浏览器 JavaScript 控制台中：
 
@@ -62,7 +65,7 @@ console.log("已发送请求……");
 
 完整的输出结果应该是这样的：
 
-```
+```plain
 Promise { <state>: "pending" }
 已发送请求……
 已收到响应：200
@@ -74,7 +77,7 @@ Promise { <state>: "pending" }
 
 ## 链式使用 Promise
 
-在你通过 `fetch()` API 得到一个 `Response` 对象的时候，你需要调用另一个函数来获取响应数据。这次，我们想获得 JSON 格式的响应数据，所以我们会调用 `Response` 对象的 {{domxref("Response/json", "json()")}} 方法。事实上，`json()` 也是异步的，因此我们必须连续调用两个异步函数。
+在你通过 `fetch()` API 得到一个 `Response` 对象的时候，你需要调用另一个函数来获取响应数据。在在这里，我们想获得 JSON 格式的响应数据，所以我们会调用 `Response` 对象的 {{domxref("Response/json", "json()")}} 方法。事实上，`json()` 也是异步的，因此我们必须连续调用两个异步函数。
 
 试试这个：
 
@@ -105,11 +108,9 @@ const fetchPromise = fetch(
 );
 
 fetchPromise
-  .then((response) => {
-    return response.json();
-  })
-  .then((json) => {
-    console.log(json[0].name);
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data[0].name);
   });
 ```
 
@@ -125,7 +126,7 @@ const fetchPromise = fetch(
 fetchPromise
   .then((response) => {
     if (!response.ok) {
-      throw new Error(`HTTP error: ${response.status}`);
+      throw new Error(`HTTP 请求错误：${response.status}`);
     }
     return response.json();
   })
@@ -140,7 +141,7 @@ fetchPromise
 
 在上一篇文章中，我们看到在嵌套回调中进行错误处理非常困难，我们需要在每一个嵌套层中单独捕获错误。
 
-`Promise` 对象提供了一个 {{jsxref("Promise/catch", "catch()")}} 方法来支持错误处理。这很像 `then()`：你调用它并传入一个处理函数。然后，当异步操作*成功*时，传递给 `then()` 的处理函数被调用，而当异步操作*失败*时，传递给 `catch()` 的处理函数被调用。
+为了支持错误处理，`Promise` 对象提供了一个 {{jsxref("Promise/catch", "catch()")}} 方法。这很像 `then()`：你调用它并传入一个处理函数。然后，当异步操作*成功*时，传递给 `then()` 的处理函数被调用，而当异步操作*失败*时，传递给 `catch()` 的处理函数被调用。
 
 如果将 `catch()` 添加到 Promise 链的末尾，它就可以在任何异步函数失败时被调用。于是，我们就可以将一个操作实现为几个连续的异步函数调用，并在一个地方处理所有错误。
 
@@ -180,9 +181,9 @@ Promise 中有一些具体的术语值得我们弄清楚。
 
 注意，这里的“成功”或“失败”的含义取决于所使用的 API：例如，`fetch()` 认为服务器返回一个错误（如[404 Not Found](/zh-CN/docs/Web/HTTP/Status/404)）时请求成功，但如果网络错误阻止请求被发送，则认为请求失败。
 
-有时我们用 **已敲定（settled）** 这个词来同时表示 **已兑现（fulfilled）** 和 **已拒绝（rejected）** 两种情况。
+有时我们用**已敲定（settled）**这个词来同时表示**已兑现（fulfilled）**和**已拒绝（rejected）**两种情况。
 
-如果一个 Promise 处于已决议（resolved）状态，或者它被“锁定”以跟随另一个 Promise 的状态，那么它就是 **已兑现（fulfilled）**。
+如果一个 Promise 已敲定（settled），或者如果它被“锁定”以跟随另一个 Promise 的状态，那么它就是**已解决（resolved）**的。
 
 文章 [Let's talk about how to talk about promises](https://thenewtoys.dev/blog/2021/02/08/lets-talk-about-how-to-talk-about-promises/) 对这些术语的细节做了很好的解释。
 
@@ -225,7 +226,7 @@ Promise.all([fetchPromise1, fetchPromise2, fetchPromise3])
 
 根据我们提供的 URL，应该所有的请求都会被兑现，尽管因为第二个请求中请求的文件不存在，服务器将返回 `404`（Not Found）而不是 `200`（OK）。所以输出应该是：
 
-```
+```plain
 https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json：200
 https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/not-found：404
 https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json：200
@@ -255,13 +256,13 @@ Promise.all([fetchPromise1, fetchPromise2, fetchPromise3])
   });
 ```
 
-……然后 `catch()` 处理程序将被运行，我们应该看到像这样的输出：
+然后 `catch()` 处理程序将被运行，我们应该看到像这样的输出：
 
-```
+```plain
 获取失败：TypeError: Failed to fetch
 ```
 
-有时，你可能需要等待一组 Promise 中的某一个 Promise 的执行，而不关心是哪一个。在这种情况下，你需要 {{jsxref("Promise/any", "Promise.any()")}}。这就像 `Promise.all()`，不过在 Promise 数组中的任何一个被兑现时它就会被兑现，如果所有的 Promise 都被拒绝，它也会被拒绝。
+有时，你可能需要一组 Promise 中的某一个 Promise 的兑现，而不关心是哪一个。在这种情况下，你需要 {{jsxref("Promise/any", "Promise.any()")}}。这就像 `Promise.all()`，不过在 Promise 数组中的任何一个被兑现时它就会被兑现，如果所有的 Promise 都被拒绝，它也会被拒绝。
 
 ```js
 const fetchPromise1 = fetch(
@@ -339,15 +340,15 @@ async function fetchProducts() {
     if (!response.ok) {
       throw new Error(`HTTP 请求错误：${response.status}`);
     }
-    const json = await response.json();
-    return json;
+    const data = await response.json();
+    return data;
   } catch (error) {
     console.error(`无法获取产品列表：${error}`);
   }
 }
 
-const json = fetchProducts();
-console.log(json[0].name); // json 是一个 Promise 对象，因此这句代码无法正常工作
+const promise = fetchProducts();
+console.log(promise[0].name); // “promise”是一个 Promise 对象，因此这句代码无法正常工作
 ```
 
 相反，你需要做一些事情，比如：
@@ -361,15 +362,34 @@ async function fetchProducts() {
     if (!response.ok) {
       throw new Error(`HTTP 请求错误：${response.status}`);
     }
-    const json = await response.json();
-    return json;
+    const data = await response.json();
+    return data;
   } catch (error) {
     console.error(`无法获取产品列表：${error}`);
   }
 }
 
-const jsonPromise = fetchProducts();
-jsonPromise.then((json) => console.log(json[0].name));
+const promise = fetchProducts();
+promise.then((data) => console.log(data[0].name));
+```
+
+Also, note that you can only use `await` inside an `async` function, unless your code is in a [JavaScript module](/en-US/docs/Web/JavaScript/Guide/Modules). That means you can't do this in a normal script:
+同样，请注意，你只能在 `async` 函数中使用 `await`，除非你的代码是 [JavaScript 模块化](/zh-CN/docs/Web/JavaScript/Guide/Modules)。这意味着你不能在普通脚本中这样做：
+
+```js
+try {
+  // 仅允许在模块中在异步函数外使用 await
+  const response = await fetch(
+    "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+  );
+  if (!response.ok) {
+    throw new Error(`HTTP 请求错误：${response.status}`);
+  }
+  const data = await response.json();
+  console.log(data[0].name);
+} catch (error) {
+  console.error(`无法获取产品列表：${error}`);
+}
 ```
 
 你可能会在需要使用 Promise 链地方使用 `async` 函数，这也使得 Promise 的工作更加直观。
