@@ -2,7 +2,7 @@
 title: 如何使用 Promise
 slug: Learn/JavaScript/Asynchronous/Promises
 l10n:
-  sourceComit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
+  sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous")}}
