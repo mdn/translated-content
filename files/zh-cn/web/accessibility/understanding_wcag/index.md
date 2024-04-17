@@ -5,7 +5,7 @@ l10n:
   sourceCommit: d52001165c52cca8a43c9bf2f021ac0d498fccb6
 ---
 
-{{QuicklinksWithSubPages}}
+{{AccessibilitySidebar}}
 
 这一组文章提供了帮助你理解如何遵循 W3C Web 内容无障碍指南 2.0 或 2.1（或者只是 WCAG，出于撰写本文的目的）建议的步骤的快速解释。
 
