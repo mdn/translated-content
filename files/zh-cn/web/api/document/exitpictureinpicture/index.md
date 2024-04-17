@@ -1,6 +1,6 @@
 ---
 title: Document：exitPictureInPicture() 方法
-short-title: exitPictureInPicture()
+slug: Web/API/Document/exitPictureInPicture
 l10n:
   sourceCommit: 4cbb657f882495b1cd18cbbaa8d1c5237bce4eb8
 ---
