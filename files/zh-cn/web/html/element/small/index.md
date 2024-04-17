@@ -2,7 +2,7 @@
 title: <small>：备注元素
 slug: Web/HTML/Element/small
 l10n:
-  sourceCommit:
+  sourceCommit: 533dc583856cfc95c1b9129335cd24793eac1093
 ---
 
 {{HTMLSidebar}}
