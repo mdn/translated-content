@@ -33,9 +33,7 @@ new RTCIceCandidate(candidateInfo)
         a=candidate:4234997325 1 udp 2043278322 192.0.2.172 44323 typ host
         ```
 
-        相应的`候选者`字符串的值将是 `"candidate:4234997325 1 udp 2043278322 192.0.2.172 44323 typ host"`。
-        在其他条件相同前提下，{{Glossary("user agent","用户代理")}} 始终更喜欢 {{domxref("RTCIceCandidate.priority", "优先级")}} 最高的候选者。在上面的示例中，优先级是 `2043278322`。
-        所有属性都用单个空格字符分隔，并且按特定顺序排列。示例中候选者的完整属性列表如下所示：
+        相应的`候选者`字符串的值将是 `"candidate:4234997325 1 udp 2043278322 192.0.2.172 44323 typ host"`。在其他条件相同前提下，{{Glossary("user agent","用户代理")}} 始终更喜欢 {{domxref("RTCIceCandidate.priority", "优先级")}} 最高的候选者。在上面的示例中，优先级是 `2043278322`。所有属性都用单个空格字符分隔，并且按特定顺序排列。示例中候选者的完整属性列表如下所示：
 
         - {{domxref("RTCIceCandidate.foundation", "foundation")}} = 4234997325
         - {{domxref("RTCIceCandidate.component", "component")}} = `"rtp"` (the number 1 is encoded to this string; 2 becomes `"rtcp"`)
@@ -51,12 +49,11 @@ new RTCIceCandidate(candidateInfo)
 
     - `sdpMid` {{optional_inline}}
 
-      - : 一个包含候选者关联的媒体流的标识标签的字符串，如果没有关联的媒体流，则为 `null`。默认值为 `null`。
-        更多信息可以查阅 {{domxref("RTCIceCandidate.sdpMid")}}。
+      - : 一个包含候选者关联的媒体流的标识标签的字符串，如果没有关联的媒体流，则为 `null`。默认值为 `null`。更多信息可以查阅 {{domxref("RTCIceCandidate.sdpMid")}}。
 
     - `sdpMLineIndex` {{optional_inline}}
 
-      - : 一个包含候选者关联的 m-line 的基于零的索引号，位于媒体描述的 [SDP](/zh-CN/docs/Web/API/WebRTC_API/Protocols#sdp) 中，如果没有这样的关联存在，则为 `null`。默认值为 `null`。更多信息可以查阅 {{domxref("RTCIceCandidate.sdpMLineIndex")}}。
+      - : 一个包含候选者关联的媒体行 (m-line) 的从零开始的索引号，位于媒体描述的 [SDP](/zh-CN/docs/Web/API/WebRTC_API/Protocols#sdp) 中，如果没有这样的关联存在，则为 `null`。默认值为 `null`。更多信息可以查阅 {{domxref("RTCIceCandidate.sdpMLineIndex")}}。
 
     - `usernameFragment` {{optional_inline}}
 
