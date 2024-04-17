@@ -100,9 +100,9 @@ l10n:
 
 [样式化 HTML 表单](/zh-CN/docs/Learn/Forms/Styling_web_forms)提供了一些有关样式化 `<textarea>` 元素的实用技巧。
 
-### 基准线不一致
+### 基线不一致
 
-HTML 规范中并未明确规定 `<textarea>` 元素的基准线位置，不同浏览器可能会导致将其设置在不同的位置。在 Gecko 中，`<textarea>` 的基准线被设定为文本域第一行的基准线，而在其他浏览器中，该基准线可能被设定为 `<textarea>` 容器底部。请不要在元素中使用 {{cssxref("vertical-align")}}`: baseline` 样式；其行为是不可预测的。
+HTML 规范中并未明确规定 `<textarea>` 元素的基线位置，不同浏览器可能会导致将其设置在不同的位置。在 Gecko 中，`<textarea>` 的基线被设定为文本域第一行的基线，而在其他浏览器中，该基线可能被设定为 `<textarea>` 容器底部。请不要在元素中使用 {{cssxref("vertical-align")}}`: baseline` 样式；其行为是不可预测的。
 
 ### 控制 textarea 是否可调整大小
 
