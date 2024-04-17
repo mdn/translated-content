@@ -1,6 +1,8 @@
 ---
-title: Element.removeAttribute()
+title: "Element : méthode removeAttribute()"
 slug: Web/API/Element/removeAttribute
+l10n:
+  sourceCommit: 7eed0e1e4ab478d78dc7ca23c19ae77406776e4e
 ---
 
 {{APIRef("DOM")}}
@@ -9,18 +11,18 @@ La méthode **`removeAttribute()`**, rattachée à l'interface [`Element`](/fr/d
 
 ## Syntaxe
 
-```js
-element.removeAttribute(nomAttribut);
+```js-nolint
+removeAttribute(attrName)
 ```
 
-### Paramètre
+### Paramètres
 
 - `nomAttribut`
-  - : Une chaîne de caractères ([`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String)) qui indique le nom de l'attribut à supprimer de l'élément. Si l'attribut indiqué n'existe pas, `removeAttribute()` finit son exécution sans générer d'erreur.
+  - : Une chaîne de caractères qui indique le nom de l'attribut à supprimer de l'élément. Si l'attribut indiqué n'existe pas, `removeAttribute()` finit son exécution sans générer d'erreur.
 
 ### Valeur de retour
 
-[`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined).
+Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
 
 ## Notes d'utilisation
 
@@ -29,8 +31,8 @@ element.removeAttribute(nomAttribut);
 ## Exemple
 
 ```js
-// Si initialement on a : <div id="div1" align="left" width="200px">
-document.getElementById("div1").removeAttribute("align");
+// Si initialement on a : <div id="div1" disabled width="200px">
+document.getElementById("div1").removeAttribute("disabled");
 // Après on aura : <div id="div1" width="200px">
 ```
 
@@ -48,3 +50,5 @@ document.getElementById("div1").removeAttribute("align");
 - [`Element.getAttribute()`](/fr/docs/Web/API/Element/getAttribute)
 - [`Element.setAttribute()`](/fr/docs/Web/API/Element/setAttribute)
 - [`Element.toggleAttribute()`](/fr/docs/Web/API/Element/toggleAttribute)
+- [`Element.removeAttributeNode()`](/fr/docs/Web/API/Element/removeAttributeNode)
+- [`Element.removeAttributeNS()`](/fr/docs/Web/API/Element/removeAttributeNS)
