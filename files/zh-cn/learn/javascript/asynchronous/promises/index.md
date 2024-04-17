@@ -373,7 +373,7 @@ const promise = fetchProducts();
 promise.then((data) => console.log(data[0].name));
 ```
 
-Also, note that you can only use `await` inside an `async` function, unless your code is in a [JavaScript module](/en-US/docs/Web/JavaScript/Guide/Modules). That means you can't do this in a normal script:
+Also, note that you can only use `await` inside an `async` function, unless your code is in a [JavaScript module](/zh-CN/docs/Web/JavaScript/Guide/Modules). That means you can't do this in a normal script:
 同样，请注意，你只能在 `async` 函数中使用 `await`，除非你的代码是 [JavaScript 模块化](/zh-CN/docs/Web/JavaScript/Guide/Modules)。这意味着你不能在普通脚本中这样做：
 
 ```js
