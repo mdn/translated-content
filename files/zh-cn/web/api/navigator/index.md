@@ -20,7 +20,7 @@ _不继承任何属性_。
 - {{domxref("Navigator.bluetooth")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : 返回一个当前文档的 {{domxref("Bluetooth")}} 对象，提供对 [Web 蓝牙 API](/zh-CN/docs/Web/API/Web_Bluetooth_API) 功能的访问。
 - {{domxref("Navigator.clipboard")}} {{ReadOnlyInline}} {{securecontext_inline}}
-  - : 返回一个用于访问系统读写剪贴板内容的 {{domxref("Clipboard")}} 对象。
+  - : 返回一个用于读写访问系统剪贴板内容的 {{domxref("Clipboard")}} 对象。
 - {{domxref("Navigator.connection")}} {{ReadOnlyInline}}
   - : 返回一个包含有关网络连接信息的 {{domxref("NetworkInformation")}} 对象。
 - {{domxref("Navigator.contacts")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
@@ -42,7 +42,7 @@ _不继承任何属性_。
 - {{domxref("Navigator.ink")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 返回一个当前文档的 {{domxref("Ink")}} 对象，提供对 [Ink API](/zh-CN/docs/Web/API/Ink_API) 功能的访问。
 - {{domxref('Navigator.keyboard')}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
-  - : 返回一个 {{domxref('Keyboard')}} 对象，通过可访问检索键盘布局映射和切换捕捉物理键盘按键的函数。
+  - : 返回一个 {{domxref('Keyboard')}} 对象，该对象可用于访问检索键盘布局映射和切换捕捉物理键盘按键的函数。
 - {{domxref("Navigator.language")}} {{ReadOnlyInline}}
   - : 返回一个字符串，表示用户的首选语言，通常是浏览器 UI 的语言。如果未知，则返回 `null` 值。
 - {{domxref("Navigator.languages")}} {{ReadOnlyInline}}
@@ -88,9 +88,9 @@ _不继承任何属性_。
 - {{domxref("Navigator.wakeLock")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : 返回一个 {{domxref("WakeLock")}} 接口，你可以使用它来请求屏幕唤醒锁并防止屏幕变暗、关闭或显示屏幕保护程序。
 - {{domxref("Navigator.webdriver")}} {{ReadOnlyInline}}
-  - : 表示用户代理是否由自动化控制。
+  - : 表示用户代理是否受自动化控制。
 - {{domxref("Navigator.windowControlsOverlay")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
-  - : 返回 {{domxref("WindowControlsOverlay")}} 接口，该接口暴露了桌面渐进式 Web 应用程序标题栏的几何信息，以及在标题栏发生变化时触发事件。
+  - : 返回 {{domxref("WindowControlsOverlay")}} 接口，该接口暴露了桌面渐进式 Web 应用程序标题栏的几何信息，以及在标题栏发生变化时触发的事件。
 - {{domxref("Navigator.xr")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : 返回 {{domxref("XRSystem")}} 对象，它代表了进入 [WebXR API](/zh-CN/docs/Web/API/WebXR_Device_API) 的入口点。
 
@@ -128,7 +128,7 @@ _不继承任何属性_。
 - {{domxref("Navigator.productSub")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : 返回字符串 `'20030107'` 或 `'20100101'`。
 - {{domxref("Navigator.vendor")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
-  - : 返回空字符串，`'Apple Computer Inc.'` 或 `'Google Inc.'`。
+  - : 返回空字符串、`'Apple Computer Inc.'` 或 `'Google Inc.'`。
 - {{domxref("Navigator.vendorSub")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : 始终返回空字符串。
 
@@ -137,7 +137,7 @@ _不继承任何属性_。
 _不继承任何方法_。
 
 - {{domxref("Navigator.canShare()")}} {{SecureContext_Inline}}
-  - : 返回一个 `true`，表示调用 `Navigator.share()` 是否能够成功。
+  - : 如果调用 `Navigator.share()` 成功，则返回 `true`。
 - {{domxref("Navigator.clearAppBadge()")}} {{SecureContext_Inline}}
   - : 清除当前应用图标的徽标，并返回敲定一个为 {{jsxref("undefined")}} 的 {{jsxref("Promise")}} 对象。
 - {{domxref("Navigator.deprecatedReplaceInURN()")}} {{Experimental_Inline}}
@@ -145,7 +145,7 @@ _不继承任何方法_。
 - {{domxref("Navigator.getAutoplayPolicy()")}} {{Experimental_Inline}}
   - : 返回一个值，表示指定的媒体元素、音频上下文或媒体特性“类型”是否允许自动播放。
 - {{domxref("Navigator.getBattery()")}} {{SecureContext_Inline}}
-  - : 返回一个 promise，解决一个 {{domxref("BatteryManager")}} 对象，返回有关电池充电状态的信息。
+  - : 返回一个 promise，兑现为一个 {{domxref("BatteryManager")}} 对象，返回有关电池充电状态的信息。
 - {{domxref("Navigator.getGamepads()")}}
   - : 返回一个 {{domxref("Gamepad")}} 数组对象，对应每一个设备上连接的手柄。
 - {{domxref("Navigator.getInstalledRelatedApps()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
