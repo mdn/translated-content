@@ -1,6 +1,8 @@
 ---
 title: MDN Web 文档的本地化
 slug: MDN/Community/Contributing/Translated_content
+l10n:
+  sourceCommit: 7eed0e1e4ab478d78dc7ca23c19ae77406776e4e
 ---
 
 {{MDNSidebar}}
