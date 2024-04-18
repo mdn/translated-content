@@ -20,8 +20,8 @@ slug: Web/HTML/Element/nav
    <td><a href="/zh-CN/docs/HTML/Content_categories#Flow_content">流式内容</a>.</td>
   </tr>
   <tr>
-   <th scope="row"><dfn>忽略的标记</dfn></th>
-   <td>{{no_tag_omission}}</td>
+   <th scope="row">标签省略</th>
+   <td>不允许，开始标签和结束标签都不能省略。</td>
   </tr>
   <tr>
    <th scope="row"><dfn>允许的父元素</dfn></th>

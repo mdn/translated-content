@@ -12,7 +12,7 @@ slug: Web/HTML/Element/ins
 
 - _[内容](/zh-CN/docs/HTML/Content_categories)分类_[短语元素](/zh-CN/docs/Web/Guide/HTML/Content_categories#短语元素（Phrasing_content）) 或者 [流式元素](/zh-CN/docs/Web/Guide/HTML/Content_categories#流式元素（Flow_content）) 。
 - _允许内容_ [透明内容模型](/zh-CN/docs/Web/Guide/HTML/Content_categories#透明内容模型（Transparent_content_model）)。
-- _标签闭合_ {{no_tag_omission}}
+- _标签省略_：不允许，开始标签和结束标签都不能省略。
 - *允许的父级标签*任意[短语元素](/zh-CN/docs/Web/Guide/HTML/Content_categories#短语元素（Phrasing_content）)
 - *允许的 ARIA 角色*任意
 - _DOM 接口_ {{domxref("HTMLModElement")}}
