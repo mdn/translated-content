@@ -226,11 +226,15 @@ Promise.all([fetchPromise1, fetchPromise2, fetchPromise3])
 
 根据我们提供的 URL，应该所有的请求都会被兑现，尽管因为第二个请求中请求的文件不存在，服务器将返回 `404`（Not Found）而不是 `200`（OK）。所以输出应该是：
 
+<!-- autocorrect-disable -->
+
 ```plain
 https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json：200
 https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/not-found：404
 https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json：200
 ```
+
+<!-- autocorrect-enable -->
 
 如果我们用一个错误编码的 URL 尝试同样的代码，就像这样：
 
