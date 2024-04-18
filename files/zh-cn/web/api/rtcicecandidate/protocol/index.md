@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("WebRTC")}}
 
-**{{domxref("RTCIceCandidate")}}** 接口的只读 `protocol` 属性是一个字符串，用于指示候选者使用 {{Glossary("UDP")}} 还是 {{Glossary("TCP")}} 作为传输协议。
+**{{domxref("RTCIceCandidate")}}** 接口的 `protocol` 只读属性是一个字符串，用于指示候选者使用 {{Glossary("UDP")}} 还是 {{Glossary("TCP")}} 作为传输协议。
 
 `protocol` 字段的值是从传递给 {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate()")}} 构造函数的 `candidateInfo` 选项对象中设置的。你不能直接在选项对象中指定 `protocol` 的值，如果对象的 `candidate` 属性行 (`a-line`) 格式正确，其值将自动从对象的候选属性行中提取。
 
@@ -24,7 +24,7 @@ l10n:
 - `udp`
   - : 该候选者将使用 {{Glossary("UDP")}} 传输协议进行数据传输。由于其更好的性能特点，是媒体交互的首选协议。
 
-> **注意：** 如果 `protocol` 为 `null`，且 {{Glossary("user agent","用户代理")}} 支持 `protocol`，则将 `candidate` 传递给 {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} 将失败，抛出 `OperationError` 异常。
+> **备注：** 如果 `protocol` 为 `null`，且 {{Glossary("user agent","用户代理")}} 支持 `protocol`，则将 `candidate` 传递给 {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} 将失败，抛出 `OperationError` 异常。
 
 ## 使用说明
 

@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("WebRTC")}}
 
-**{{domxref("RTCIceCandidate")}}** 接口的只读 **`tcpType`** 属性 是 TCP 候选者所包含的，表示候选者的额外类型信息。
+**{{domxref("RTCIceCandidate")}}** 接口的 **`tcpType`** 只读属性是 TCP 候选者所包含的，表示候选者的额外类型信息。
 
 `tcpType` 字段的值是从传递给 {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate()")}} 构造函数的 `candidateInfo` 选项对象中设置的。你不能直接在选项对象中指定 `tcpType` 的值，如果对象的 `candidate` 属性行 (`a-line`) 格式正确，其值将自动从对象的候选属性行中提取。
 

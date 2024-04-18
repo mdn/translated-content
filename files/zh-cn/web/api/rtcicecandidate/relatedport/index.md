@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("WebRTC")}}
 
-**{{domxref("RTCIceCandidate")}}** 接口的只读 **`relatedPort`** 属性是一个整数，指示中继候选者或反射候选者的 **关联端口**。
+**{{domxref("RTCIceCandidate")}}** 接口的 **`relatedPort`** 只读属性是一个整数，指示中继候选者或反射候选者的 **关联端口**。
 
 如果候选者是主机候选者（即其 {{domxref("RTCIceCandidate/address", "address")}} 实际上是远程对等方的真实 IP 地址），则 `relatedPort` 为 `null`。
 

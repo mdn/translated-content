@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("WebRTC")}}
 
-**{{domxref("RTCIceCandidate")}}** 接口上的只读属性 **`type`** 指定代表候选者的类型。
+**{{domxref("RTCIceCandidate")}}** 接口的 **`type`** 只读属性指定代表候选者的类型。
 
 `type` 字段的值是从传递给 {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate()")}} 构造函数的 `candidateInfo` 选项对象中设置的。你不能直接在选项对象中指定 `type` 的值，如果对象的 `candidate` 属性行 (`cand-type` 字段) 格式正确，其值将自动从对象的候选属性行中提取。
 

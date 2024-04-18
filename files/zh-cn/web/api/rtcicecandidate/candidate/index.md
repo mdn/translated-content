@@ -1,5 +1,5 @@
 ---
-title: "RTCIceCandidate: candidate 属性"
+title: RTCIceCandidate：candidate 属性
 slug: Web/API/RTCIceCandidate/candidate
 l10n:
   sourceCommit: 31fa0bbc78b87bf3ec7559906515fcd3dfde68de
@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("WebRTC")}}
 
-**{{domxref("RTCIceCandidate")}}** 接口上的只读属性 **`candidate`** 返回一个详细描述候选者的字符串。`RTCIceCandidate` 的大多数其他属性实际上都是从这个字符串中提取的。
+**{{domxref("RTCIceCandidate")}}** 接口的 **`candidate`** 只读属性返回一个详细描述候选者的字符串。`RTCIceCandidate` 的大多数其他属性实际上都是从这个字符串中提取的。
 
 可以使用传递给 {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate() 构造函数")}} 或 {{domxref("RTCPeerConnection.addIceCandidate()")}} 对象的`candidate`属性来配置此属性。
 

@@ -1,5 +1,5 @@
 ---
-title: "RTCIceCandidate: component 属性"
+title: RTCIceCandidate：component 属性
 slug: Web/API/RTCIceCandidate/component
 l10n:
   sourceCommit: 31fa0bbc78b87bf3ec7559906515fcd3dfde68de
@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("WebRTC")}}
 
-**{{domxref("RTCIceCandidate")}}** 接口的只读 **`component`** 属性是一个字符串，指示候选者是 [RTP](/zh-CN/docs/Web/API/WebRTC_API/Intro_to_RTP) 还是 `RTCP` 候选者。如果一个候选者同时代表 `RTP` 和 `RTCP` 多路复用，它将被报告为 `RTP` 候选者。
+**{{domxref("RTCIceCandidate")}}** 接口的 **`component`** 只读属性是一个字符串，指示候选者是 [RTP](/zh-CN/docs/Web/API/WebRTC_API/Intro_to_RTP) 还是 `RTCP` 候选者。如果一个候选者同时代表 `RTP` 和 `RTCP` 多路复用，它将被报告为 `RTP` 候选者。
 
 ## 值
 

@@ -45,7 +45,7 @@ new RTCIceCandidate(candidateInfo)
 
         更多信息可以查阅 {{domxref("RTCIceCandidate.candidate")}} 。
 
-        > ** 注意：** 为了向后兼容旧版本的 WebRTC 规范，构造函数还可以直接接受字符串作为参数。
+        > **备注：** 为了向后兼容旧版本的 WebRTC 规范，构造函数还可以直接接受字符串作为参数。
 
     - `sdpMid` {{optional_inline}}
 
@@ -72,7 +72,7 @@ new RTCIceCandidate(candidateInfo)
   {{domxref("RTCIceCandidate.priority", "priority")}}, {{domxref("RTCIceCandidate/address","address")}}, {{domxref("RTCIceCandidate.protocol", "protocol")}},
   {{domxref("RTCIceCandidate.port", "port")}}, {{domxref("RTCIceCandidate.type", "type")}}, {{domxref("RTCIceCandidate.tcpType", "tcpType")}},
   {{domxref("RTCIceCandidate.relatedAddress", "relatedAddress")}}, 和 {{domxref("RTCIceCandidate.relatedPort", "relatedPort")}}这些属性没有包含在 {{domxref("RTCIceCandidate.candidate")}} 属性中，则该字段将初始化为 `null`。
-  > **注意：** WebRTC 规范中 `candidate` 字符串使用 [candidate-attribute grammar](https://w3c.github.io/webrtc-pc/#candidate-attribute-grammar) 语法规范进行解析。
+  > **备注：** WebRTC 规范中 `candidate` 字符串使用 [candidate-attribute grammar](https://w3c.github.io/webrtc-pc/#candidate-attribute-grammar) 语法规范进行解析。
 
 ### 异常
 

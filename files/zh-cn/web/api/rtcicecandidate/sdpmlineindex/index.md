@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("WebRTC")}}
 
-**{{domxref("RTCIceCandidate")}}** 接口的只读 **`sdpMLineIndex`** 属性 是一个从零开始的索引，用于描述与候选者相关联的媒体的媒体行 (m-line)。
+**{{domxref("RTCIceCandidate")}}** 接口的 **`sdpMLineIndex`** 只读属性是一个从零开始的索引，用于描述与候选者相关联的媒体的媒体行 (m-line)。
 
 可以通过在传递给 {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate()")}} 构造函数的 `candidateInfo` 选项对象中指定`sdpMLineIndex` 属性的值来配置此属性。如果你使用媒体行 (m-line) 字符串而不是选项对象调用构造函数，则 `sdpMLineIndex` 的值将从指定的候选者媒体行 (m-line) 字符串中提取。
 
@@ -15,7 +15,7 @@ l10n:
 
 包含指向提供媒体描述的媒体行 (m-line) 集合的从零开始的索引，表明哪个媒体源与候选者相关联；如果没有这样的关联，则为 `null`。
 
-> **注意：** 使用{{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} 添加一个`sdpMid` 和 `sdpMLineIndex` 都为 `null` 的候选者时，将抛出 {{jsxref("TypeError")}} 异常。
+> **备注：** 使用{{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} 添加一个`sdpMid` 和 `sdpMLineIndex` 都为 `null` 的候选者时，将抛出 {{jsxref("TypeError")}} 异常。
 
 ## 规范
 
