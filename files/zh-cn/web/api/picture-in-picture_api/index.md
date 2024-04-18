@@ -9,7 +9,7 @@ l10n:
 
 **画中画 API** 允许网站总是在其他窗口之上创建一个浮动的视频，以便用户在其他内容站点或者设备上的应用程序交互时可以继续播放媒体。
 
-> **备注：** [文档画中画（Picture-in-Picture）API](/zh-CN/docs/Web/API/Document_Picture-in-Picture_API) 扩展了画中画 API，使其能够将*任意* HTML 内容（而不仅仅是视频）呈现在始终置顶的窗口中。
+> **备注：** [文档画中画 API（Document Picture-in-Picture API）](/zh-CN/docs/Web/API/Document_Picture-in-Picture_API) 扩展了画中画 API，使其能够将*任意* HTML 内容（而不仅仅是视频）呈现在始终置顶的窗口中。
 
 ## 接口
 
@@ -42,7 +42,7 @@ l10n:
 ### Document 接口上的实例属性
 
 - {{DOMxRef("Document.pictureInPictureEnabled")}}
-  - : `pictureInPictureEnabled` 属性告诉你是否可以使用画中画模式。如果画中画模式因任何原因不可用（例如[`"画中画"`功能](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/picture-in-picture) 不被接受，或者不支持画中画模式），则是 `false` 。
+  - : `pictureInPictureEnabled` 属性告诉你是否可以使用画中画模式。如果画中画模式因任何原因不可用（例如 [`"picture-in-picture"` 特性](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/picture-in-picture)不被接受，或者不支持画中画模式），则是 `false` 。
 
 ### Document 或 ShadowRoot 接口上的实例属性
 
@@ -116,4 +116,4 @@ function togglePictureInPicture() {
 - {{DOMxRef("Document.exitPictureInPicture()")}}
 - {{DOMxRef("Document.pictureInPictureElement")}}
 - {{CSSxRef(":picture-in-picture")}}
-- [文档画中画（Picture-in-Picture）API](/zh-CN/docs/Web/API/Document_Picture-in-Picture_API)
+- [文档画中画 API（Document Picture-in-Picture API）](/zh-CN/docs/Web/API/Document_Picture-in-Picture_API)

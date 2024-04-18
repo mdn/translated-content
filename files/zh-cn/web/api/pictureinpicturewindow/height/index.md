@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Picture-in-Picture API")}}
 
-{{domxref("PictureInPictureWindow")}} 接口的只读属性 **`height`** 返回浮动视频窗口的高度（以像素为单位）。
+{{domxref("PictureInPictureWindow")}} 接口的只读属性 **`height`** 只读属性返回浮动视频窗口的高度（以像素为单位）。
 
 ## 语法
 
