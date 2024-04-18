@@ -32,7 +32,7 @@ requestPictureInPicture()
 - `SecurityError` {{domxref("DOMException")}}
   - : 如果该功能被[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)阻止，则抛出错误。
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : 如果视频元素的 `readState` 为 `HAVE_NOTHING`，，或者视频元素没有视频轨道，或者视频元素的 `disablePictureInPicture` 属性为 `true`，则抛出错误。
+  - : 如果视频元素的 `readState` 为 `HAVE_NOTHING`，或者视频元素没有视频轨道，或者视频元素的 `disablePictureInPicture` 属性为 `true`，则抛出错误。
 - `NotAllowedError` {{domxref("DOMException")}}
   - : 如果 `document.pictureInPictureElement` 为 `null` 且文档没有{{Glossary("transient activation", "短暂激活")}}，则抛出错误。
 

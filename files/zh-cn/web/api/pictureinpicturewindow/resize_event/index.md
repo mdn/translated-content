@@ -57,7 +57,7 @@ function resize(evt) {
 
 video.requestPictureInPicture().then((pictureInPictureWindow) => {
   pictureInPictureWindow.onresize = resize;
-  // or
+  // 或
   pictureInPictureWindow.addEventListener("resize", resize);
 });
 ```
