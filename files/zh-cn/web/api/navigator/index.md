@@ -18,7 +18,7 @@ _不继承任何属性_。
 ### 标准属性
 
 - {{domxref("Navigator.bluetooth")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
-  - : 返回一个当前文档的 {{domxref("Bluetooth")}} 对象，提供对 [Web 蓝牙 API](/zh-CN/docs/Web/API/Web_Bluetooth_API) 功能的访问。
+  - : 返回一个当前文档的 {{domxref("Bluetooth")}} 对象，提供对 [网络蓝牙 API](/zh-CN/docs/Web/API/Web_Bluetooth_API) 功能的访问。
 - {{domxref("Navigator.clipboard")}} {{ReadOnlyInline}} {{securecontext_inline}}
   - : 返回一个用于读写访问系统剪贴板内容的 {{domxref("Clipboard")}} 对象。
 - {{domxref("Navigator.connection")}} {{ReadOnlyInline}}
@@ -139,7 +139,7 @@ _不继承任何方法_。
 - {{domxref("Navigator.canShare()")}} {{SecureContext_Inline}}
   - : 如果调用 `Navigator.share()` 成功，则返回 `true`。
 - {{domxref("Navigator.clearAppBadge()")}} {{SecureContext_Inline}}
-  - : 清除当前应用图标的徽标，并返回敲定一个为 {{jsxref("undefined")}} 的 {{jsxref("Promise")}} 对象。
+  - : 清除当前应用图标的徽标，并返回一个兑现为 {{jsxref("undefined")}} 的 {{jsxref("Promise")}} 对象。
 - {{domxref("Navigator.deprecatedReplaceInURN()")}} {{Experimental_Inline}}
   - : 针对给定的不透明 URN 或 `FencedFrameConfig` 的内部 `url` 属性，在映射 URL 中替换指定字符串。此方法作为临时措施（标记为“已弃用”）提供，以支持对围栏框架 URL 执行此类替换，帮助广告技术提供商将现有的实现迁移到[隐私沙盒](https://developer.chrome.com/docs/privacy-sandbox/) API。
 - {{domxref("Navigator.getAutoplayPolicy()")}} {{Experimental_Inline}}
@@ -159,7 +159,7 @@ _不继承任何方法_。
 - {{domxref("Navigator.sendBeacon()")}}
   - : 用于通过 {{Glossary("HTTP")}} 协议异步地从用户代理向 Web 服务器传输少量数据。
 - {{domxref("Navigator.setAppBadge()")}} {{SecureContext_Inline}}
-  - : 在与此应用程序关联的图标上设置徽标，并返回一个敲定为 {{jsxref("undefined")}} 的 {{jsxref("Promise")}} 对象。
+  - : 在与此应用程序关联的图标上设置徽标，并返回一个兑现为 {{jsxref("undefined")}} 的 {{jsxref("Promise")}} 对象。
 - {{domxref("Navigator.share()")}} {{SecureContext_Inline}}
   - : 调用当前平台的原生分享机制。
 - {{domxref("Navigator.vibrate()")}}
