@@ -127,7 +127,7 @@ La clé `browser_action` est un objet qui peut avoir l'une des propriétés suiv
           </li>
         </ul>
         <p>Cette propriété est seulement supportée dans Firefox.</p>
-        <p>Cett propriété est facultative, et defaut à "navbar".</p>
+        <p>Cette propriété est facultative et a pour valeur par défaut "menupanel".</p>
         <p>
           Firefox se souvient des paramètres <code>default_area</code> d'une
           extension, même si cette extension est désinstallée et réinstallée
