@@ -72,7 +72,7 @@ WebAssembly 生态系统处在初始阶段；更多的工具会毫无疑问得�
 - 使用 [Emscripten](https://emscripten.org/) 移植一个 C/C++ 应用程序。
 - 直接在汇编层，编写或生成 WebAssembly 代码。
 - 编写 Rust 程序，将 WebAssembly 作为它的输出。
-- 使用 [AssemblyScript](https://www.assemblyscript.org/)，它类似于 TypeScript 并且可编译成二进制 WebAssembly 代码
+- 使用 [AssemblyScript](https://www.assemblyscript.org/)，它类似于 TypeScript 并且可编译成二进制 WebAssembly 代码。
 
 让我们讨论这几项：
 
@@ -92,10 +92,10 @@ Emscripten 工具可以将任何 C/C++ 源代码编译成 Wasm 模块，再加�
 简而言之，工作流程如下所示：
 
 1. Emscripten 首先把 C/C++ 提供给 clang+LLVM——一个成熟的开源 C/C++ 编译器工具链，比如，在 OSX 上是 XCode 的一部分。
-2. Emscripten 将 clang+LLVM 编译的结果转换为一个.wasm 二进制文件。
-3. 目前，WebAssembly 本身无法直接访问 DOM；它只能调用 JavaScript，并且只能传入整形和浮点型的原始数据类型作为参数。这就是说，为了使用任何 Web API，WebAssembly 需要调用到 JavaScript，然后由 JavaScript 调用 Web API。因此，Emscripten 创建了 HTML 和 JavaScript 粘合代码以便完成这些功能。
+2. Emscripten 将 clang+LLVM 编译的结果转换为 Wasm 二进制文件。
+3. 目前，WebAssembly 本身无法直接访问 DOM；它只能调用 JavaScript，并且只能传入整型和浮点型的原始数据类型作为参数。这就是说，为了使用任何 Web API，WebAssembly 需要调用 JavaScript，然后由 JavaScript 进行 Web API 调用。因此，Emscripten 创建了 HTML 和 JavaScript 粘合代码以便完成这些功能。
 
-> **注意：** 计划将来[允许 WebAssembly 直接调用 Web API](https://github.com/WebAssembly/gc/blob/master/README.md)。
+> **备注：** 计划将来[允许 WebAssembly 直接调用 Web API](https://github.com/WebAssembly/gc/blob/master/README.md)。
 
 JavaScript 粘合代码并不是像你想象的那么简单。首先，Emscripten 实现了流行的 C/C++ 库，比如，[SDL](https://zh.wikipedia.org/wiki/SDL)、[OpenGL](https://zh.wikipedia.org/wiki/OpenGL)、[OpenAL](https://zh.wikipedia.org/wiki/OpenAL) 以及部分 [POSIX](https://zh.wikipedia.org/wiki/可移植操作系统接口)。这些库以 Web API 的形式实现，并且每个库需要一个 JavaScript 粘合代码来连接 WebAssembly 和低层的 Web API。
 
@@ -107,7 +107,7 @@ JavaScript 粘合代码并不是像你想象的那么简单。首先，Emscripte
 
 ### 直接编写 WebAssembly 代码
 
-你想构建自己的编译器，或者你自己的工具，或者创建一个能够在运行时生成 WebAssembly 代码的 JavaScript 库？
+你想构建自己的编译器，或者你自己的工具，或者创建一个能够在运行时生成 WebAssembly 代码的 JavaScript 库吗？
 
 就像真实的汇编语言一样，WebAssembly 的二进制格式也有文本表示——两者之间 1:1 对应。你可以手工书写或者生成这种格式然后使用这些工具（[WebAssembly 文本转化为二进制工具](http://webassembly.org/getting-started/advanced-tools/)）中的任何一个把它转换为二进制格式。
 
