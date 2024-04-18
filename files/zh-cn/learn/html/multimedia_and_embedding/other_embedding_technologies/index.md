@@ -67,6 +67,10 @@ l10n:
 如果你犯了某些错误，你可以点击*重置*按钮以重置编辑器。如果你实在无法解决，可以按下*显示答案*按钮以借鉴答案。
 
 ```html hidden
+<p>
+  可以试着引入 B 站（哔哩哔哩视频网站）的“改革春风吹满地”视频吗？（其 BV 号为
+  BV1bW411n7fY）
+</p>
 <h2>实时输出</h2>
 
 <div class="output" style="min-height: 250px;"></div>
@@ -136,7 +140,7 @@ solution.addEventListener("click", function () {
 });
 
 const htmlSolution =
-  '<iframe src="//player.bilibili.com/player.html?aid=1&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>';
+  '<iframe src="//player.bilibili.com/player.html?aid=19390801&bvid=BV1bW411n7fY&cid=31621681&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>';
 let solutionEntry = htmlSolution;
 
 textarea.addEventListener("input", updateCode);
