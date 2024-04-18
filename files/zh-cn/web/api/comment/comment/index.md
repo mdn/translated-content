@@ -22,7 +22,7 @@ new Comment(aString)
 
 ### 返回值
 
-一个新的 {{domxref("Comment")}}，包含 `aString`，如果没有给出参数，则为空字符串。
+一个新的包含 `aString`（如果没有给出参数，则为空字符串）的注释（{{domxref("Comment")}}）。
 
 ## 示例
 
