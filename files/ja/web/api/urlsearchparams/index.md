@@ -161,9 +161,9 @@ console.log(atob(binQuery) === rawData); // true
 
 ```js
 const emptyVal = new URLSearchParams("foo=&bar=baz");
-console.log(emptyVal.get("foo")); // returns ''
+console.log(emptyVal.get("foo")); // '' を返す
 const noEquals = new URLSearchParams("foo&bar=baz");
-console.log(noEquals.get("foo")); // also returns ''
+console.log(noEquals.get("foo")); // これも '' を返す
 console.log(noEquals.toString()); // 'foo=&bar=baz'
 ```
 
