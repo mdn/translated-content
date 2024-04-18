@@ -1,6 +1,8 @@
 ---
 title: "Event: свойство currentTarget"
 slug: Web/API/Event/currentTarget
+l10n:
+  sourceCommit: 435d49ec4d4d828a1f9a4e6c0b292b48c332aa22
 ---
 
 {{APIRef("DOM")}}
@@ -21,7 +23,7 @@ slug: Web/API/Event/currentTarget
 
 #### HTML
 
-На странице есть "родительский" {{htmlelement("div")}}, содержащий "дочерний" `<div>`.
+На странице есть «родительский» {{htmlelement("div")}}, содержащий «дочерний» `<div>`.
 
 ```html
 <div id="parent">
@@ -49,8 +51,7 @@ div {
 #### JavaScript
 
 Обработчик событий прикрепляется к родительскому элементу. Он регистрирует значение `event.currentTarget` и `event.target`.
-
-У нас также есть кнопка "Сбросить", которая просто перезагружает страницу с примером.
+Также есть кнопка «Сбросить», которая просто перезагружает страницу с примером.
 
 ```js
 const output = document.querySelector("#output");
@@ -72,7 +73,7 @@ reset.addEventListener("click", () => document.location.reload());
 
 В обоих случаях `currentTarget` указывает на родительский элемент, потому что к нему прикреплён обработчик события.
 
-{{EmbedLiveSample("currentTarget против target", 100, 250)}}
+{{EmbedLiveSample("currentTarget и target", 100, 250)}}
 
 ## Спецификации
 
