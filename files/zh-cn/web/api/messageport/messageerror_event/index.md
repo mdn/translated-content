@@ -1,13 +1,13 @@
 ---
-title: MessagePort：message 事件
-slug: Web/API/MessagePort/message_event
+title: MessagePort：messageerror 事件
+slug: Web/API/MessagePort/messageerror_event
 l10n:
   sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
 ---
 
 {{APIRef("Channel Messaging API")}} {{AvailableInWorkers}}
 
-当有消息到达该 channel 时，{{domxref('MessagePort')}} 对象上会触发 **`message`** 事件。
+当 {{domxref('MessagePort')}} 对象接收到无法反序列化的消息时，会触发 **`messageerror`** 事件。
 
 此事件不可取消，也不会冒泡。
 
@@ -16,9 +16,9 @@ l10n:
 使用 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中的事件名称或设置事件处理器属性。
 
 ```js
-addEventListener("message", (event) => {});
+addEventListener("messageerror", (event) => {});
 
-onmessage = (event) => {};
+onmessageerror = (event) => {};
 ```
 
 ## 事件类型
@@ -62,7 +62,7 @@ channelMessageButton.addEventListener("click", () => {
 targetFrame.postMessage("启动", targetOrigin, [channel.port2]);
 ```
 
-目标可以接收端口并开始监听消息，代码如下：
+目标可以接收端口并开始监听消息和消息错误，代码如下：
 
 ```js
 window.addEventListener("message", (event) => {
@@ -70,6 +70,10 @@ window.addEventListener("message", (event) => {
 
   myPort.addEventListener("message", (event) => {
     received.textContent = event.data;
+  });
+
+  myPort.addEventListener("messageerror", (event) => {
+    console.error(event.data);
   });
 
   myPort.start();
@@ -85,6 +89,10 @@ window.addEventListener("message", (event) => {
   myPort.onmessage = (event) => {
     received.textContent = event.data;
   };
+
+  myPort.onmessageerror = (event) => {
+    console.error(event.data);
+  };
 });
 ```
 
@@ -98,5 +106,5 @@ window.addEventListener("message", (event) => {
 
 ## 参见
 
-- 相关事件：[`messageerror`](/zh-CN/docs/Web/API/MessagePort/messageerror_event).
+- 相关事件：[`message`](/zh-CN/docs/Web/API/MessagePort/message_event).
 - [使用 channel messaging](/zh-CN/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
