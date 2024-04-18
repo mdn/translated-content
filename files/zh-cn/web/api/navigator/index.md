@@ -18,7 +18,7 @@ _不继承任何属性_。
 ### 标准属性
 
 - {{domxref("Navigator.bluetooth")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
-  - : 返回一个当前文档的 {{domxref("Bluetooth")}} 对象，提供对 [网络蓝牙 API](/zh-CN/docs/Web/API/Web_Bluetooth_API) 功能的访问。
+  - : 返回一个当前文档的 {{domxref("Bluetooth")}} 对象，提供对 [web 蓝牙 API](/zh-CN/docs/Web/API/Web_Bluetooth_API) 功能的访问。
 - {{domxref("Navigator.clipboard")}} {{ReadOnlyInline}} {{securecontext_inline}}
   - : 返回一个用于读写访问系统剪贴板内容的 {{domxref("Clipboard")}} 对象。
 - {{domxref("Navigator.connection")}} {{ReadOnlyInline}}
