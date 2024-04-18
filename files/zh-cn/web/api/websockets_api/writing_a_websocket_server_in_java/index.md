@@ -88,7 +88,7 @@ try {
   Matcher get = Pattern.compile("^GET").matcher(data);
 ```
 
-创建响应比理解为什么必须以这种方式来创建响应更容易。
+创建响应比理解为什么必须以这种方式做要容易得多。
 
 你必须，
 
