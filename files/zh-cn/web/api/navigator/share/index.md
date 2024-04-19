@@ -22,7 +22,7 @@ navigator.share(data)
 ### 参数
 
 - `data` {{optional_inline}}
-  - : 包含要共享的数据的对象。通常，如果此调用返回 `true`，则具有相同属性的对象将传递给 {{domxref("navigator.share()")}}。用户代理未知的属性将被忽略；共享数据仅根据用户代理理解的属性进行评估。所有属性都是可选的，但必须至少指定一个已知的数据属性。可能的值为：
+  - : 包含要共享的数据的对象。用户代理未知的属性将被忽略；共享数据仅根据用户代理理解的属性进行评估。所有属性都是可选的，但必须至少指定一个已知的数据属性。可能的值为：
     - `url` {{optional_inline}}
       - : 表示要共享的 URL 的字符串。
     - `text` {{optional_inline}}
@@ -43,7 +43,7 @@ navigator.share(data)
 - `InvalidStateError` {{domxref("DOMException")}}
   - : 文档未完全激活，或正在进行其他共享操作。
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : `web-share` [权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)已用于阻止使用此功能，或当前文档没有{{Glossary("transient activate", "瞬态激活")}}，或者出于安全考虑，文件共享被阻止。
+  - : `web-share` [权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)已用于阻止使用此功能，或当前文档没有{{Glossary("transient activation", "瞬态激活")}}，或者出于安全考虑，文件共享被阻止。
 - {{jsxref("TypeError")}}
   - : 无法验证指定的共享数据。可能的原因包括：
     - `data` 参数被完全省略或仅包含具有未知值的属性。请注意，用户代理无法识别的任何属性都会被忽略。
