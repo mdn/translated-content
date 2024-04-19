@@ -42,15 +42,9 @@ l10n:
 
 ```html
 <form id="my-form">
-  <label>
-    用户名：<input type="text" name="username" />
-  </label>
-  <label>
-    全名：<input type="text" name="full-name" />
-  </label>
-  <label>
-    密码：<input type="password" name="password" />
-  </label>
+  <label> 用户名：<input type="text" name="username" /> </label>
+  <label> 全名：<input type="text" name="full-name" /> </label>
+  <label> 密码：<input type="password" name="password" /> </label>
 </form>
 ```
 
