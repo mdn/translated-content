@@ -82,7 +82,7 @@ l10n:
       <td>
         任何接受<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
           >短语内容</a
-        >，<a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+        >或<a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
           >流式内容</a
         >的元素。
       </td>
