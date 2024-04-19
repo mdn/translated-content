@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("HTMLFormElement")}} 属性 **`elements`** 返回一个 {{domxref("HTMLFormControlsCollection")}}，其中列出了 {{HTMLElement("form")}} 元素中包含的所有表单控件。
+{{domxref("HTMLFormElement")}} 的 **`elements`** 属性返回一个 {{domxref("HTMLFormControlsCollection")}}，其中列出了 {{HTMLElement("form")}} 元素中包含的所有表单控件。
 
 你还可以独立使用 {{domxref("HTMLFormElement.length", "length")}} 属性只获取表单控件的数量。
 
@@ -27,7 +27,7 @@ l10n:
 
 - {{HTMLElement("button")}}
 - {{HTMLElement("fieldset")}}
-- {{HTMLElement("input")}}（由于历史原因，为 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 类型的 `"image"` 元素都将被省略）。
+- {{HTMLElement("input")}}（由于历史原因，[`type`](/zh-CN/docs/Web/HTML/Element/input#type) 类型为 `"image"` 的元素都将被省略）。
 - {{HTMLElement("object")}}
 - {{HTMLElement("output")}}
 - {{HTMLElement("select")}}
@@ -43,16 +43,13 @@ l10n:
 ```html
 <form id="my-form">
   <label>
-    用户名：
-    <input type="text" name="username" />
+    用户名：<input type="text" name="username" />
   </label>
   <label>
-    全名：
-    <input type="text" name="full-name" />
+    全名：<input type="text" name="full-name" />
   </label>
   <label>
-    密码：
-    <input type="password" name="password" />
+    密码：<input type="password" name="password" />
   </label>
 </form>
 ```
@@ -65,7 +62,7 @@ const inputByName = inputs["username"];
 
 ### 访问表单控件
 
-此示例获取表单的元素列表，然后遍历该列表，查找类型为 [`"text"`](/zh-CN/docs/Web/HTML/Element/input/text) 的 {{HTMLElement("input")}} 元素，以便对它们执行某种行为的处理。
+此示例获取表单的元素列表，然后遍历该列表，查找类型为 [`"text"`](/zh-CN/docs/Web/HTML/Element/input/text) 的 {{HTMLElement("input")}} 元素，以便对它们执行某种形式的处理。
 
 ```js
 const inputs = document.getElementById("my-form").elements;
