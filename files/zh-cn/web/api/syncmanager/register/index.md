@@ -23,7 +23,7 @@ register(tag)
 
 ### 返回值
 
-resolve 为 {{jsxref("undefined")}} 的 {{jsxref("Promise")}}
+一个解析为 {{jsxref("undefined")}} 的 {{jsxref("Promise")}}。
 
 ### 异常
 
