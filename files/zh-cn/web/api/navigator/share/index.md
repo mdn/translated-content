@@ -11,7 +11,7 @@ l10n:
 
 该方法用 `undefined` 兑现 {{jsxref("Promise")}}。在 Windows 上，当共享弹出窗口启动时，就会发生这种情况，而在 Android 上，一旦数据成功传递到*共享目标*，promise 就会兑现。
 
-[网络共享 API](/zh-CN/docs/Web/API/Web_Share_API) 受 [web-share](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/web-share) 权限策略限制。如果支持该权限但尚未授予该权限，则 `share()` 方法将抛出异常。
+[Web 共享 API](/zh-CN/docs/Web/API/Web_Share_API) 受 [web-share](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/web-share) 权限策略限制。如果支持该权限但尚未授予该权限，则 `share()` 方法将抛出异常。
 
 ## 语法
 
@@ -114,7 +114,7 @@ navigator.share(data)
 
 ### 分享一个 URL
 
-下面的示例显示了单击按钮调用网络分享 API 来共享 MDN 的 URL。这是取自我们的[网络共享测试](https://mdn.github.io/dom-examples/web-share/)（[查看源代码](https://github.com/mdn/dom-examples/blob/main/web-share/index.html)）。
+下面的示例显示了单击按钮调用 Web 共享 API 来共享 MDN 的 URL。这是取自我们的[网络共享测试](https://mdn.github.io/dom-examples/web-share/)（[查看源代码](https://github.com/mdn/dom-examples/blob/main/web-share/index.html)）。
 
 #### HTML
 
@@ -187,7 +187,7 @@ document.getElementById("share").addEventListener("click", async () => {
 
   // 功能检测 navigator.canShare() 也意味着 navigator.share() 的功能相同
   if (!navigator.canShare) {
-    output.textContent = "您的浏览器不支持 Web Share API。";
+    output.textContent = "您的浏览器不支持 Web 共享 API。";
     return;
   }
 
