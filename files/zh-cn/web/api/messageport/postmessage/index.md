@@ -24,7 +24,7 @@ postMessage(message, transfer)
 - `options` {{optional_inline}}
   - : 一个可选对象，包含一个带有[数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)的 `transfer` 的字段，数组中包含要转让所有权的[可转移对象](/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects)。这些对象的所有权被赋予接收方，发送方将不能再使用它们。
 - `transfer` {{optional_inline}}
-  - : 一个可选[数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)，包含要转让所有权的[可转移对象](/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects)这些对象的所有权将转移到目标侧，并且发送方将不能再使用它们。
+  - : 一个可选[数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)，包含要转让所有权的[可转移对象](/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects)。这些对象的所有权将转移到目标侧，并且发送方将不能再使用它们。
 
 ### 返回值
 
