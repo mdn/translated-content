@@ -29,4 +29,4 @@ _无特定方法；从其父元素 {{domxref("HTMLElement")}} 继承方法。_
 
 ## 参见
 
-- 实现此接口的 HTML 元素: {{HTMLElement("span")}}。
+- 实现此接口的 HTML 元素：{{HTMLElement("span")}}。
