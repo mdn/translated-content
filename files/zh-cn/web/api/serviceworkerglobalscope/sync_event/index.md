@@ -14,7 +14,7 @@ l10n:
 
 ## 语法
 
-像 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 一样在方法中使用事件名称，或设置事件处理程序属性。
+像 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 一样在方法中使用事件名称，或设置事件处理器属性。
 
 ```js
 addEventListener("sync", (event) => {});

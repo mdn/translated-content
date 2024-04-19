@@ -87,6 +87,6 @@ self.addEventListener("sync", (event) => {
 
 {{Compat}}
 
-## See also
+## 参见
 
 - [Introducing Background Sync](https://developer.chrome.com/blog/background-sync/)
