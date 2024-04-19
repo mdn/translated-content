@@ -48,7 +48,7 @@ const ssNewCandidate = (signalMsg) => {
 };
 ```
 
-这将遍历用于接收 ICE 数据的 {{domxref("RTCRtpReceiver")}} 对象列表，并查看候选者的 `usernameFragment`值 是否与其中任何`usernameFragment` 匹配。如果匹配，则 `ssNewCandidate()` 将中止。否则，在检查每个接收器后，它将新候选者添加到连接中。
+这将遍历用于接收 ICE 数据的 {{domxref("RTCRtpReceiver")}} 对象列表，并查看候选者的 `usernameFragment` 值 是否与其中任何 `usernameFragment` 匹配。如果匹配，则 `ssNewCandidate()` 将中止。否则，在检查每个接收器后，它将新候选者添加到连接中。
 
 ## 规范
 
