@@ -20,8 +20,8 @@ slug: Web/HTML/Element/header
    <td><a href="/zh-CN/docs/HTML/Content_categories#Flow_content">Flow content</a>，但是不允许 <code>&lt;header&gt;</code> 或{{HTMLElement("footer")}} 成为子元素</td>
   </tr>
   <tr>
-   <th scope="row">标记省略</th>
-   <td>{{no_tag_omission}}</td>
+   <th scope="row">标签省略</th>
+   <td>不允许，开始标签和结束标签都不能省略。</td>
   </tr>
   <tr>
    <th scope="row">允许的父元素</th>

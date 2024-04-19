@@ -1,27 +1,19 @@
 ---
-title: Document.dir
+title: Document：dir 属性
 slug: Web/API/Document/dir
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{ApiRef("")}}
+{{ApiRef("HTML DOM")}}
 
-Document.dir 的本质是 DOMString，代表了文档的文字朝向，是从左到右 (默认) 还是从右到左。
+**`Document.dir`** 属性是一个表示文档的文本方向（即从左至右（默认）或从右至左）的字符串。可能的值包括 `'rtl'`（从右至左）和 `'ltr'`（从左至右）。
 
-'rtl'(right to left) 代表从右到左，'ltr'(left to right) 代表从左到右。
+## 值
 
-## 语法
+一个字符串。
 
-```plain
-console.log(document.dir);// "" (译者添加)
-document.dir = "ltr"//(默认);
-document.dir = "rtl";
-dirStr = document.dir;
-document.dir = dirStr;
-```
-
-（译者注：第一次调用该属性时，可能返回空字符串""，译者环境：chrome，版本 53.0.2785.116 m）
-
-## 说明
+## 规范
 
 {{Specifications}}
 
@@ -31,4 +23,4 @@ document.dir = dirStr;
 
 ## 参见
 
-- <http://msdn.microsoft.com/en-us/library/ms533731.aspx>
+- [`dir`](/zh-CN/docs/Web/HTML/Global_attributes/dir) 全局属性

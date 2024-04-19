@@ -172,7 +172,7 @@ X-Cache-Info: not cacheable; request wasn't a GET or HEAD
 Content-Length: 0
 ```
 
-> **メモ:** これらの例に示されている HTTP レスポンスとリクエストは [Fiddler](https://www.telerik.com/download/fiddler) アプリケーションを使ってキャプチャされました、しかしあなたはウェブスニファ (例えば [Websniffer](http://websniffer.cc/)) または [HttpFox](https://addons.mozilla.org/en-US/firefox/addon/httpfox/) のようなブラウザー拡張を使って同様の情報を得ることができます。あなたはこれを自分で試すことができます。リンクされているツールを使用してから、サイト内を移動してプロファイル情報を編集し、さまざまなリクエストとレスポンスを確認します。最近のほとんどのブラウザーには、ネットワーク要求を監視するツール (たとえば、Firefox の[ネットワークモニタツール](/ja/docs/Tools/Network_Monitor)) もあります。
+> **メモ:** これらの例に示されている HTTP レスポンスとリクエストは [Fiddler](https://www.telerik.com/download/fiddler) アプリケーションを使ってキャプチャされました、しかしあなたはウェブスニファ (例えば [WebSniffer](https://websniffer.com/)) または [HttpFox](https://addons.mozilla.org/en-US/firefox/addon/httpfox/) のようなブラウザー拡張を使って同様の情報を得ることができます。あなたはこれを自分で試すことができます。リンクされているツールを使用してから、サイト内を移動してプロファイル情報を編集し、さまざまなリクエストとレスポンスを確認します。最近のほとんどのブラウザーには、ネットワーク要求を監視するツール (たとえば、Firefox の[ネットワークモニタツール](/ja/docs/Tools/Network_Monitor)) もあります。
 
 ## 静的サイト
 
