@@ -1,5 +1,5 @@
 ---
-title: 远程播放 API
+title: 远程回放 API
 slug: Web/API/Remote_Playback_API
 l10n:
   sourceCommit: f6fd1d76db03af97c23b5587fb7eba5762f425df
@@ -7,7 +7,7 @@ l10n:
 
 {{DefaultAPISidebar("Remote Playback API")}}
 
-**远程播放 API** 扩展了 {{domxref("HTMLMediaElement")}} 来控制远程设备上播放的媒体。
+**远程回放 API** 扩展了 {{domxref("HTMLMediaElement")}} 来控制远程设备上播放的媒体。
 
 ## 概念和用法
 
@@ -15,12 +15,12 @@ l10n:
 
 该 API 使具有媒体元素（如视频或音频文件）的页面能够在连接的远程设备上启用和控制该媒体的播放。例如，在连接的电视上播放视频。
 
-> **备注：** Safari for iOS 有一些在 AirPlay 上启用远程播放的 API。这些细节可以在 [Safari 9.0 发行说明](https://developer.apple.com/library/archive/releasenotes/General/WhatsNewInSafari/Articles/Safari_9_0.html#//apple_ref/doc/uid/TP40014305-CH9-SW16)中找到。Android 版本的 Firefox 和 Chrome 也包含一些远程播放功能。如果本地网络中有可用的投放（Cast）设备，这些设备将显示一个投放（Cast）按钮。
+> **备注：** Safari for iOS 有一些在 AirPlay 上启用远程播放的 API。这些细节可以在 [Safari 9.0 发行说明](https://developer.apple.com/library/archive/releasenotes/General/WhatsNewInSafari/Articles/Safari_9_0.html#//apple_ref/doc/uid/TP40014305-CH9-SW16)中找到。Android 版本的 Firefox 和 Chrome 也包含一些远程播放功能。如果本地网络中有可用的投放（Cast）设备，这些设备将显示投放按钮。
 
 ## 接口
 
 - {{domxref("RemotePlayback")}}
-  - : 允许页面检测远程播放设备的可用性，并连接并控制这些设备上的播放。
+  - : 允许页面检测远程播放设备的可用性，然后连接和控制这些设备上的播放。
 
 ### 对其他接口的扩展
 
