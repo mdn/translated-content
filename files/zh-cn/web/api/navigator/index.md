@@ -172,7 +172,7 @@ _不继承任何方法_。
 - {{domxref("Navigator.getUserMedia()")}} {{Deprecated_Inline}} {{SecureContext_Inline}}
   - : 在向用户请求权限后，返回与本地计算机上的摄像头或麦克风关联的音频或视频流。
 - {{domxref("Navigator.getVRDisplays()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : 返回一个 promise，该 promise 敲定为一个数组中包含了代表连接到计算机的所有可用 VR 设备的 {{domxref("VRDisplay")}} 对象。
+  - : 返回一个 promise，该 promise 兑现为一个数组中包含了代表连接到计算机的所有可用 VR 设备的 {{domxref("VRDisplay")}} 对象。
 - {{domxref("Navigator.javaEnabled()")}} {{Deprecated_Inline}}
   - : 始终返回 false。
 - {{domxref("Navigator.taintEnabled()")}} {{Deprecated_Inline}}
