@@ -22,7 +22,7 @@ None.
 
 ### 返回值
 
-一个 {{jsxref("Promise")}}，resolve 为包含开发人员定义的用于 `SyncManager` 注册的标识符的字符串数组。
+一个 {{jsxref("Promise")}}，兑现为包含开发人员定义的用于 `SyncManager` 注册的标识符的字符串数组。
 
 ## 规范
 
