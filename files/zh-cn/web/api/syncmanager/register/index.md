@@ -19,7 +19,7 @@ register(tag)
 ### 参数
 
 - `tag`
-  - : 同步事件的标识符。{{domxref("SyncEvent")}} 的 tag 属性的值，它被传递到 Service Worker 的 {{domxref("ServiceWorkerGlobalScope.sync_event", "sync")}} 处理程序中。
+  - : 同步事件的标识符。{{domxref("SyncEvent")}} 的 tag 属性的值，它被传递到 Service Worker 的 {{domxref("ServiceWorkerGlobalScope.sync_event", "sync")}} 事件处理器中。
 
 ### 返回值
 

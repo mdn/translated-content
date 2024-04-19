@@ -21,7 +21,7 @@ new SyncEvent(type, options)
 - `type`
   - : 字符串，用于事件名称。它区分大小写，浏览器总是将其设置为 `sync`。
 - `options`
-  - : 一个 object 对象，除了 {{domxref("ExtendableEvent/ExtendableEvent", "ExtendableEvent()")}} 中定义的属性外，还可以包含以下属性：
+  - : 一个对象，除了 {{domxref("ExtendableEvent/ExtendableEvent", "ExtendableEvent()")}} 中定义的属性外，还可以包含以下属性：
     - `tag`
       - : 开发人员为此 `SyncEvent` 定义的标识符。
     - `lastChance` {{optional_inline}}

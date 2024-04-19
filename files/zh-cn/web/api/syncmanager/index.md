@@ -11,12 +11,12 @@ l10n:
 
 ## 实例属性
 
-None.
+无。
 
-## 示例方法
+## 实例方法
 
 - {{domxref("SyncManager.register()")}}
-  - : 创建一个新的同步注册并返回 {{jsxref("Promise")}}.
+  - : 创建一个新的同步注册并返回 {{jsxref("Promise")}}。
 - {{domxref("SyncManager.getTags()")}}
   - : 返回开发人员定义的 `SyncManager` 注册标识符列表。
 

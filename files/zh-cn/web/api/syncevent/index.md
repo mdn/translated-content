@@ -31,7 +31,7 @@ _继承属性自其父级 {{domxref("ExtendableEvent")}} 和 {{domxref("Event")}
 
 _继承方法自其父级 {{domxref("ExtendableEvent")}} 和 {{domxref("Event")}}_。
 
-None.
+无。
 
 ## 浏览器兼容性
 
