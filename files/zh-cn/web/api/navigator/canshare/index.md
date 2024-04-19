@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Web Share API")}}{{securecontext_header}}
 
-{{domxref("Navigator")}} 接口的 **`canShare()`** 方法在对 {{domxref("navigator.share()")}} 的等效调用成功，则返回 `true`。
+{{domxref("Navigator")}} 接口的 **`canShare()`** 方法在对 {{domxref("navigator.share()")}} 的等效调用能够成功时返回 `true`。
 
 如果数据无法通过验证，该方法将返回 `false`。数据可能无效的原因包括：
 
