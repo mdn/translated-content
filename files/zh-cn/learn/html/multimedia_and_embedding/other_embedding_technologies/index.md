@@ -56,12 +56,12 @@ l10n:
 3. 选择“嵌入代码”选项，会出现“成功复制到剪贴板”的提示。
 4. 将复制的代码粘贴到下面的*输入*框里，看看*输出*结果是什么。
 
-此外，你还可以试试在示例中嵌入 [Bing 地图](https://cn.bing.com/maps)：
+此外，你还可以试试在示例中嵌入 [OpenStreetMap](https://www.openstreetmap.org/)：
 
-1. 去 Bing 地图找一个喜欢的地图。
-2. 鼠标移动到 UI 上方的“更多”处。
-3. 选择*嵌入地图*选项。
-4. 在新打开的网页中，指定你喜欢的地图大小、类型、风格和链接，点击“生成代码”按钮，代码会复制到剪贴板中。
+1. 去 OpenStreetMap 找一个喜欢的地图。
+2. 鼠标点击到 UI 右侧的“分享”图标。
+3. 选择 _HTML_ 选项。
+4. 下面的文本框中会提供一些 `<iframe>` 代码，请复制它。
 5. 将复制的代码粘贴到下面的*输入*框，看看*输出*结果是什么。
 
 如果你犯了某些错误，你可以点击*重置*按钮以重置编辑器。如果你实在无法解决，可以按下*显示答案*按钮以借鉴答案。
@@ -140,7 +140,7 @@ solution.addEventListener("click", function () {
 });
 
 const htmlSolution =
-  '<iframe src="//player.bilibili.com/player.html?aid=19390801&bvid=BV1bW411n7fY&cid=31621681&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>';
+  '<iframe src="https://player.bilibili.com/player.html?aid=19390801&bvid=BV1bW411n7fY&cid=31621681&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true">\n</iframe>\n\n<iframe width="425" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=120.1198983192444%2C30.235600118473787%2C120.16195535659791%2C30.258529710286673&amp;layer=mapnik" style="border: 1px solid black"></iframe>';
 let solutionEntry = htmlSolution;
 
 textarea.addEventListener("input", updateCode);
