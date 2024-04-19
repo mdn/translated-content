@@ -9,7 +9,7 @@ slug: Glossary/MIME_type
 
 ## 参见
 
-- [Internet media type](https://zh.wikipedia.org/wiki/Internet_media_type) on Wikipedia
+- 维基百科上的[互联网媒体类型](https://zh.wikipedia.org/wiki/互联网媒体类型)
 - [MIME types 列表](https://www.iana.org/assignments/media-types/media-types.xhtml)
 - [正确配置服务器 MIME Types](/zh-CN/docs/Learn/Server-side/Configuring_server_MIME_types)
 - 有关在 Web 环境中使用 [MIME Types](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types) 的详细信息。

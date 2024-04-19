@@ -25,16 +25,8 @@ if (field == empty) {
 
 控制流的存在意味着在读代码时，你不能只从第一行读到最后一行，你还要注意代码的结构以及它对语句执行顺序的影响。
 
-## Learn more
+## 参见
 
-### General knowledge
-
-- [Control flow](https://zh.wikipedia.org/wiki/Control_flow) on Wikipedia
-
-### Technical reference
-
-- [JavaScript Reference - Control flow](/zh-CN/docs/Web/JavaScript/Reference#Control_flow) on MDN
-
-### Learn about it
-
-- [Statements (Control flow)](/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling) on MDN
+- 维基百科上的[控制流程](https://zh.wikipedia.org/wiki/控制流程)
+- MDN 上的 [JavaScript 参考——控制流](/zh-CN/docs/Web/JavaScript/Reference#control_flow)
+- MDN 上的[语句（控制流）](/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)

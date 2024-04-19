@@ -85,7 +85,7 @@ PrivateKeyInfo ::= SEQUENCE {
 
 `importKey()` 方法期望接收一个包含 [DER 编码](https://luca.ntop.org/Teaching/Appunti/asn1.html)的 `PrivateKeyInfo` 的 [`ArrayBuffer`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) 对象。DER 是一组将 ASN.1 结构编码为二进制格式的规则。
 
-你最有可能遇到的此类对象的格式为 [PEM 格式](ttps://zh.wikipedia.org/wiki/Pem格式)。PEM 格式是一种使用 ASCII 编码二进制数据的方法。它由头部、尾部和中间 [base64 编码](/zh-CN/docs/Glossary/Base64) 的二进制数据组成。PEM 编码的 `PrivateKeyInfo` 类似于这样：
+你最有可能遇到的此类对象的格式为 [PEM 格式](https://zh.wikipedia.org/wiki/Pem格式)。PEM 格式是一种使用 ASCII 编码二进制数据的方法。它由头部、尾部和中间 [base64 编码](/zh-CN/docs/Glossary/Base64)的二进制数据组成。PEM 编码的 `PrivateKeyInfo` 类似于这样：
 
 ```plain
 -----BEGIN PRIVATE KEY-----
@@ -117,7 +117,7 @@ SubjectPublicKeyInfo  ::=  SEQUENCE  {
 
 类似于 [PKCS #8](#pkcs_8)，`importKey()` 方法期望接收一个包含 [DER 编码](https://luca.ntop.org/Teaching/Appunti/asn1.html)的 `SubjectPublicKeyInfo` 的 [`ArrayBuffer`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) 对象。
 
-同样地，你最有可能遇到的此类对象的格式为 [PEM 格式](ttps://zh.wikipedia.org/wiki/Pem格式)。PEM 编码的 `SubjectPublicKeyInfo` 类似于这样：
+同样地，你最有可能遇到的此类对象的格式为 [PEM 格式](https://zh.wikipedia.org/wiki/Pem格式)。PEM 编码的 `SubjectPublicKeyInfo` 类似于这样：
 
 ```plain
 -----BEGIN PUBLIC KEY-----
