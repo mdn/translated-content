@@ -7,11 +7,11 @@ l10n:
 
 {{DefaultAPISidebar("WebSockets API")}}
 
-你可以通过这个示例知道如何用甲骨文的 Java 语言来创建一个 WebSocket 服务。
+这个示例展示了如何用甲骨文的 Java 语言来创建 WebSocket API 服务器。
 
 虽然其他的服务端语言也能创建 WebSocket 服务，但是通过这个示例代码你可以看到使用 Java 来做这件事会更简单。
 
-这个服务符合协议[RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455)，所以它只处理 Chrome 16 版本，Firefox 11，IE 10 及更高版本的连接。
+该服务器符合 [RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455)，所以它只处理来自 Chrome 16 版本、Firefox 11、IE 10 及更高版本的连接。
 
 ## 第一步
 
@@ -50,9 +50,9 @@ public class WebSocket {
 ### Socket 方法
 
 - `java.net.Socket.getInputStream()`
-  - : 返回该 stream 的输入流。
+  - : 返回该 Socket 的输入流。
 - `java.net.Socket.getOutputStream()`
-  - : 返回该 stream 的输出流。
+  - : 返回该 Socket 的输出流。
 
 ### OutputStream 方法
 
@@ -70,7 +70,7 @@ read(byte[] b, int off, int len)
 
 从输入流中读取最多 _len_ 字节的数据到一个字节数组中。
 
-让我们延伸一下我们的示例。
+让我们扩展一下示例。
 
 ```java
 InputStream in = client.getInputStream();
@@ -90,12 +90,12 @@ try {
 
 创建响应比理解为什么必须以这种方式做要容易得多。
 
-你必须，
+你必须：
 
 1. 获取 _Sec-WebSocket-Key_ 请求标头的值，去除头部和尾部的所有空格
 2. 追加字符串“258EAFA5-E914-47DA-95CA-C5AB0DC85B11”
 3. 计算 SHA-1 值及其 Base64 编码
-4. 将其作为 HTTP 响应的一部分写回 _Sec-WebSocket-Accept_ 响应头的值
+4. 将其作为 HTTP 响应的一部分写回 _Sec-WebSocket-Accept_ 响应标头的值
 
 ```java
 if (get.find()) {
@@ -126,11 +126,11 @@ if (get.find()) {
   | ----------------------- | ---- | ---- | ---- | -------- |
   | 1                       | 0    | 0    | 0    | 0x1=0001 |
 
-  FIN：你可以分多次发送一个完整的消息。但现在为了简单，操作码 _0x1_ 表示这是文本消息，[完整 Opcodes 列表](https://datatracker.ietf.org/doc/html/rfc6455#section-5.2)。
+  FIN：你可以分多次发送一个完整的消息。但现在为了简单，操作码 _0x1_ 表示这是文本消息。[完整的操作码列表](https://datatracker.ietf.org/doc/html/rfc6455#section-5.2)。
 
-- 134：如果第二个字节减去 128 在 0 到 125 之间，则这是消息的长度。如果是 126，则后面的 2 个字节（16 位无符号整数），如果是 127，则后面的 8 个字节（64 位无符号整数，最高有效位必须为 0）是长度。
+- 134：如果第二个字节减去 128 在 0 到 125 之间，则这是消息的长度。如果是 126，则为后面的 2 个字节（16 位无符号整数）；如果是 127，则为后面的 8 个字节（64 位无符号整数，最高有效位必须为 0）是长度。
 
-> **备注：** 由于第一位始终为 1，因此可以取 128。
+  > **备注：** 由于第一位始终为 1，因此可以取 128。
 
 - 解码密钥的字节是 167、225、225 和 210。每次都会改变。
 
@@ -138,7 +138,7 @@ if (get.find()) {
 
 ### 解码算法
 
-解码字节 = 编码字节 XOR（编码字节位置 BITWISE 和 0x3）的密钥字节
+解码字节 = 编码字节 XOR 密钥的第（编码字节位置 AND 0x3）个字节
 
 在 Java 示例中：
 
