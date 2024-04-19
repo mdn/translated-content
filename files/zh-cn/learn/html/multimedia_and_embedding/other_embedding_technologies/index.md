@@ -140,7 +140,7 @@ solution.addEventListener("click", function () {
 });
 
 const htmlSolution =
-  '<iframe src="https://player.bilibili.com/player.html?aid=19390801&bvid=BV1bW411n7fY&cid=31621681&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true">\n</iframe>\n\n<iframe width="425" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=120.1198983192444%2C30.235600118473787%2C120.16195535659791%2C30.258529710286673&amp;layer=mapnik" style="border: 1px solid black"></iframe>';
+  '<iframe src="https://player.bilibili.com/player.html?aid=19390801&bvid=BV1bW411n7fY&cid=31621681&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true">\n</iframe>\n\n<iframe width="425" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=120.1198983192444%2C30.235600118473787%2C120.16195535659791%2C30.258529710286673&amp;layer=mapnik" style="border: 1px solid black">\n</iframe>';
 let solutionEntry = htmlSolution;
 
 textarea.addEventListener("input", updateCode);
