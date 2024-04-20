@@ -2,7 +2,7 @@
 title: SyncEvent
 slug: Web/API/SyncEvent
 l10n:
-  sourceCommit: 56df677713fecf43ec0eb8862cb91c141aaa0005
+  sourceCommit: aa38aff31533096459caed61424a6f20f9807a15
 ---
 
 {{APIRef("Background Sync")}}{{AvailableInWorkers("service")}}
@@ -32,6 +32,10 @@ _继承属性自其父级 {{domxref("ExtendableEvent")}} 和 {{domxref("Event")}
 _继承方法自其父级 {{domxref("ExtendableEvent")}} 和 {{domxref("Event")}}_。
 
 无。
+
+## 规范
+
+{{Specifications}}
 
 ## 浏览器兼容性
 
