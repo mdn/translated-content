@@ -1,5 +1,5 @@
 ---
-title: "SyncEvent: tag 属性"
+title: SyncEvent：tag 属性
 slug: Web/API/SyncEvent/tag
 l10n:
   sourceCommit: 56df677713fecf43ec0eb8862cb91c141aaa0005

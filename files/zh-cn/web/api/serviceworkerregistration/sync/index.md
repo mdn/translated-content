@@ -1,5 +1,5 @@
 ---
-title: "ServiceWorkerRegistration: sync 属性"
+title: ServiceWorkerRegistration：sync 属性
 slug: Web/API/ServiceWorkerRegistration/sync
 l10n:
   sourceCommit: 56df677713fecf43ec0eb8862cb91c141aaa0005
