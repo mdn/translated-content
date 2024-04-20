@@ -1,36 +1,54 @@
 ---
-title: Element.removeAttribute()
+title: "Element: método removeAttribute()"
+short-title: removeAttribute()
 slug: Web/API/Element/removeAttribute
+l10n:
+  sourceCommit: 93f6ad26b70067f9fbac190ea6a0351fdf40318e
 ---
 
 {{ APIRef("DOM") }}
 
-`removeAttribute` remove um atributo de um elemento específico.
+O método {{domxref("Element")}} **`removeAttribute()`** remove o atributo com o nome especificado do elemento.
 
 ## Sintaxe
 
-```
-element.removeAttribute(attrName);
-```
-
-- `attrName` é o nome, em formato de texto (_string_), do atributo a ser removido do `element`_._
-
-## Exemplo
-
-```
-// <div id="div1" align="left" width="200px">
-document.getElementById("div1").removeAttribute("align");
-// agora: <div id="div1" width="200px">
+```js-nolint
+removeAttribute(attrName)
 ```
 
-## Observação
+### Parâmetros
 
-Você deve usar `removeAttribute` ao invés de atribuir `null` ao atributo usando [setAttribute](/pt-BR/DOM/element.setAttribute).
+- `attrName`
+  - : Uma string especificando o nome do atributo a ser removido do elemento. Se o atributo especificado não existir, `removeAttribute()` retorna sem gerar um erro.
 
-Tentar remover um atributo que não existe no elemento não fará que uma exceção seja lançada.
+### Valor de retorno
 
-{{ DOMAttributeMethods() }}
+None ({{jsxref("undefined")}}).
 
-## Especificação
+## Notas de uso
 
-[DOM Level 2 Core: removeAttribute](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-6D6AC0F9) (introduzido no [DOM Level 1 Core](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeAttribute))
+Você deve usar `removeAttribute()` em vez de definir o valor do atributo como `null` diretamente ou usando {{domxref("Element.setAttribute", "setAttribute()")}}.
+Muitos atributos não se comportarão conforme o esperado se você defini-los como `null`.
+
+## Exemplos
+
+```js
+// Dado: <div id="div1" disabled width="200px">
+document.getElementById("div1").removeAttribute("disabled");
+// Agora: <div id="div1" width="200px">
+```
+
+## Especificações
+
+{{Specifications}}
+
+## Compatibilidade de navegadores
+
+{{Compat}}
+
+## Veja também
+
+- {{domxref("Element.hasAttribute()")}}
+- {{domxref("Element.getAttribute()")}}
+- {{domxref("Element.setAttribute()")}}
+- {{domxref("Element.toggleAttribute()")}}
