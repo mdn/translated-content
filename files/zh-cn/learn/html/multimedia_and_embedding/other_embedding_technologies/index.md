@@ -39,9 +39,9 @@ l10n:
 
 在过去，**框架**（frame）的使用曾一度成为网站设计的流行趋势。网站的各个部分被分别存储在独立的 HTML 页面中，并被嵌入到一个主文档——即**框架集**中。开发者借助这种设计指定每个框架在屏幕上的具体位置，类似于调整表格的列宽和行高。在 90 年代中后期，这种做法被视为尖端技术，因为它能将网页内容分割成小块，从而加快下载速度——这在当时缓慢的网络连接下尤其有益。然而，随着时间的推移，这些技术的问题日益凸显，而且随着网络速度的提升，这些问题开始超过其带来的好处。因此，现在我们几乎不再看到框架技术的使用。
 
-一小段时间之后（20 世纪 90 年代末，21 世纪初），插件技术开始流行起来，例如 [Java Applet](/zh-CN/docs/Glossary/Java) 和 [Flash](/zh-CN/docs/Glossary/Adobe_Flash)——web 开发者借助这些技术将丰富的内容嵌入到网页中，例如视频和动画等，这些内容不能通过 HTML 单独实现。嵌入这些技术是通过诸如 {{htmlelement("object")}} 和较少使用的 {{htmlelement("embed")}} 元素来实现的，当时它们非常有用。由于许多问题，包括无障碍、安全性、文件大小等，现在它们已经被淘汰了。如今，大多数浏览器已不再支持这些插件。
+一小段时间之后（20 世纪 90 年代末，21 世纪初），插件技术开始流行起来，例如 [Java Applet](/zh-CN/docs/Glossary/Java) 和 [Flash](/zh-CN/docs/Glossary/Adobe_Flash)——web 开发者借助这些技术将丰富的内容（例如视频和动画等）嵌入到网页中，这些内容不能通过 HTML 单独实现。嵌入这些技术是通过诸如 {{htmlelement("object")}} 和较少使用的 {{htmlelement("embed")}} 元素来实现的，当时它们非常有用。由于包括无障碍、安全性、文件大小在内的许多问题，它们现在已经被淘汰了。如今，大多数浏览器已不再支持 Flash 等插件。
 
-最后，{{htmlelement("iframe")}} 元素出现了（连同其他嵌入内容的方式，如 {{htmlelement("canvas")}}、{{htmlelement("video")}} 等），它提供了将整个 web 页面嵌入到另一个网页的方法，就像它是另一个网页的一个 {{htmlelement("img")}} 之类的元素一样。{{htmlelement("iframe")}} 现在经常被使用。
+最后，{{htmlelement("iframe")}} 元素出现了（连同其他嵌入内容的方式，如 {{htmlelement("canvas")}}、{{htmlelement("video")}} 等），它提供了将整个 web 页面嵌入到另一个网页的方法，就像它是另一个网页的一个 {{htmlelement("img")}} 之类的元素一样。现在经常使用该元素。
 
 了解完历史之后，让我们继续往下看，了解如何使用它们。
 
@@ -49,7 +49,7 @@ l10n:
 
 > **备注：** 考虑到中国大陆学习者可能无法访问英文原文的某些示例网站，下文的部分示例已经替换为更易于访问和实践的网站。
 
-在这篇文章中，我们将直接进入动手练习部分，让你立即体会到嵌入技术的实用性。大家都非常熟悉 [Bilibili](https://www.bilibili.com/)，但很多人不了解它所提供的一些分享功能。让我们来看看如何借助 Bilibili 提供的 {{htmlelement("iframe")}} 在页面中嵌入喜欢的视频。
+在这篇文章中，我们将直接进入动手练习部分，让你立即体会到嵌入技术的实用性。大家都非常熟悉 [Bilibili](https://www.bilibili.com/)，但很多人不了解它所提供的一些分享功能。让我们来看看如何借助 {{htmlelement("iframe")}}，将 Bilibili 上的视频嵌入到页面中。
 
 1. 首先，去 Bilibili 找一个喜欢的视频。
 2. 在视频下方，可以看到*分享*按钮（样式为一个向右箭头），鼠标停留在那个按钮上，可以看到一些分享选项。
@@ -195,7 +195,7 @@ textarea.onkeyup = function () {
 
 ## Iframe 详解
 
-是不是很简单又有趣呢？你可以通过 {{htmlelement("iframe")}} 元素将其他 Web 文档嵌入到当前文档中。这很适合将第三方内容嵌入你的网站，这些内容你可能无法直接控制，也不想实现自己的版本——例如来自在线视频提供商的视频，[Disqus](https://disqus.com/) 等评论系统，在线地图提供商，广告横幅等。甚至本课程使用的实时可编辑示例就是使用 `<iframe>` 实现的。
+是不是很简单又有趣呢？你可以通过 {{htmlelement("iframe")}} 元素将其他 Web 文档嵌入到当前文档中。这很适合将第三方内容嵌入你的网站，这些内容你可能无法直接控制，也不想实现自己的版本——例如来自在线视频提供商的视频、[Disqus](https://disqus.com/) 等评论系统、在线地图提供商、广告横幅等。甚至本课程使用的实时可编辑示例就是使用 `<iframe>` 实现的。
 
 在深入了解如何使用 `<iframe>` 元素之前，需要注意一些安全问题。假设你想使用 {{htmlelement("iframe")}} 元素来在自己的网页上包含 MDN 词汇表，你可能会尝试像下一个代码示例那样操作。如果你将下面的代码添加到你的页面中，接下来发生的事可能会出乎你的预料：你会遇到错误消息，而不是词汇表页面：
 
@@ -234,9 +234,9 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 此示例包括使用 `<iframe>` 所需的基本要素：
 
 - [`border: none`](/zh-CN/docs/Web/CSS/border)
-  - ：如果使用此属性，`<iframe>` 将不会显示周围的边框。否则，默认情况下，浏览器会显示 `<iframe>` 的边框（通常我们不希望显示边框）。
+  - : 如果使用此属性，`<iframe>` 将不会显示周围的边框。否则，默认情况下，浏览器会显示 `<iframe>` 的边框（通常我们不希望显示边框）。
 - [`allowfullscreen`](/zh-CN/docs/Web/HTML/Element/iframe#allowfullscreen)
-  - : 如果设置，`<iframe>`则可以通过[全屏 API](/zh-CN/docs/Web/API/Fullscreen_API) 放置在全屏模式中（稍微超出本文的范围）。
+  - : 如果设置，则可以通过[全屏 API](/zh-CN/docs/Web/API/Fullscreen_API) 将 `<iframe>` 置于全屏模式（稍微超出本文的范围）。
 - [`src`](/zh-CN/docs/Web/HTML/Element/iframe#src)
   - : 该属性与 {{htmlelement("video")}}/{{htmlelement("img")}} 中的同名属性一样，包含指向要嵌入的文档的 URL。
 - [`width`](/zh-CN/docs/Web/HTML/Element/iframe#width) 和 [`height`](/zh-CN/docs/Web/HTML/Element/iframe#height)
@@ -248,13 +248,13 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 
 ### 安全隐患
 
-以上我们提到了安全问题——现在我们来详细介绍一下这一点。你第一次并不需要完全理解所有内容；我们只想让你意识到这一问题，然后在你更有经验并开始考虑在你的实验和工作中使用 `<iframe>` 时为你提供参考。此外，没有必要害怕和拒绝使用 `<iframe>`——你只需要谨慎一点。继续看下去吧...
+我们在前面提到了安全问题——现在我们来详细介绍一下这一点。你第一次并不需要完全理解所有内容；我们只想让你意识到这一问题，然后在你更有经验并开始考虑在你的实验和工作中使用 `<iframe>` 时为你提供参考。此外，没有必要害怕和拒绝使用 `<iframe>`——你只需要谨慎一点。继续看下去吧……
 
-浏览器制造商和 Web 开发人员已经深刻认识到，如果 Web 上的恶意人士（通常成为**黑客**，或者更准确地说，**骇客**）试图发起攻击，或者欺骗人们做一些他们不想做的事情，比如泄露敏感信息（如用户名和密码），那么 iframe 是常见目标（正式术语：**攻击向量**）。因此，规范工程师和浏览器开发人员已经开发了各种安全机制，以使 `<iframe>` 更安全，并且还有一些最佳实践需要考虑——我们将在下面介绍其中一些。
+浏览器制造商和 Web 开发人员已经深刻认识到，如果 Web 上的恶意人士（通常成为**黑客**，或者更准确地说，**破解者**）试图发起攻击，或者欺骗人们做一些他们不想做的事情，比如泄露敏感信息（如用户名和密码），那么 iframe 是常见目标（正式术语：**攻击向量**）。因此，规范工程师和浏览器开发人员已经开发了各种安全机制，以使 `<iframe>` 更安全，并且还有一些最佳实践需要考虑——我们将在下面介绍其中一些。
 
-> **备注：** [单击劫持](/zh-CN/docs/Glossary/Clickjacking)是一种常见的 iframe 攻击，黑客将一个不可见的 iframe 嵌入到你的文档中（或将你的文档嵌入到他们自己的恶意网站），并使用它来获取用户的交互。这是一种常见的误导用户或窃取敏感数据的方式。
+> **备注：** [点击劫持](/zh-CN/docs/Glossary/Clickjacking)是一种常见的 iframe 攻击，黑客将一个不可见的 iframe 嵌入到你的文档中（或将你的文档嵌入到他们自己的恶意网站），并使用它来获取用户的交互。这是一种常见的误导用户或窃取敏感数据的方式。
 
-一个简单的例子——尝试在浏览器中加载上面的例子——你也可以 [在 Github 上找到它](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)（[参见源代码](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)）。与你期望的页面不同，你可能会看到某种类型的消息，内容类似于“无法打开此页面”，如果你查看[浏览器开发工具](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)中的*控制台*，你将看到一条信息消息告知你原因。在 Firefox 中，消息类似于*由于“X-Frame-Options”指令设置为“DENY”，因此无法在 iframe 中加载“https\://developer.mozilla.org/zh-CN/docs/Glossary”*。这是因为构建 MDN 的开发人员在服务器上设置了一个选项，禁止将网站页面嵌入到 `<iframe>` 中（参见下面的[配置 CSP 指令](#配置-CSP-指令)）。这是有原因的——整个 MDN 页面在其他页面中嵌入并不合适，除非你希望将它们嵌入到你的网站上并将它们声明为你自己的页面——或者通过[点击劫持](/zh-CN/docs/Glossary/Clickjacking)来尝试窃取数据，这两者都是非常糟糕的行为。而且，如果每个人这样做，额外的带宽成本将给 Mozilla 带来很大压力。
+一个简单的例子——尝试在浏览器中加载上面的例子——你也可以 [在 Github 上找到它](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)（[参见源代码](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)）。与你期望的页面不同，你可能会看到某种类型的消息，内容类似于“无法打开此页面”，如果你查看[浏览器开发工具](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)中的*控制台*，你将看到一条信息消息告知你原因。在 Firefox 中，消息类似于*由于“X-Frame-Options”指令设置为“DENY”，因此无法在 iframe 中加载“https\://developer.mozilla.org/zh-CN/docs/Glossary”*。这是因为构建 MDN 的开发人员在服务器上设置了一个选项，禁止将网站页面嵌入到 `<iframe>` 中（参见下面的[配置 CSP 指令](#配置_scp_指令)）。这是有原因的——整个 MDN 页面在其他页面中嵌入并不合适，除非你希望将它们嵌入到你的网站上并将它们声明为你自己的页面——或者通过[点击劫持](/zh-CN/docs/Glossary/Clickjacking)来尝试窃取数据，这两者都是非常糟糕的行为。而且，如果每个人这样做，额外的带宽成本将给 Mozilla 带来很大压力。
 
 #### 只有在必要时嵌入
 
@@ -273,24 +273,23 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 
 要想为网站启用 HTTPS，你需要安装特殊的安全证书。许多托管提供商提供了支持 HTTPS 的托管服务，无需你自己进行任何设置即可安装证书。但是，如果你*确实*需要自己动手为网站设置 HTTPS 支持，[Let's Encrypt](https://letsencrypt.org/) 提供了工具和说明，可以自动创建和安装所需的证书，并支持包括 Apache Web 服务器、Nginx 和其他常用的 Web 服务器。Let's Encrypt 的工具旨在使该过程尽可能简单，因此强烈建议使用它或其他可用的方法来启用你的网站的 HTTPS。
 
-> **备注：** [Github pages](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages)默认情况下通过 HTTPS 提供内容。
-> 如果你正在使用其他的托管，请向你的托管服务商询问他们提供为 HTTPS 提供的支持。
+> **备注：** [Github pages](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages) 允许默认情况下通过 HTTPS 提供内容。如果你正在使用其他的托管，请向你的托管服务商确定他们为基于 HTTPS 的内容托管提供哪些支持。
 
 #### 始终使用 `sandbox` 属性
 
-想尽可能减少攻击者在你的网站上做坏事的机会，那么你应该仅给嵌入的内容*完成自己工作所需的权限*。当然，这也适用于你自己的内容。[沙盒](<https://en.wikipedia.org/wiki/Sandbox_(computer_security)>)技术为此而诞生，沙盒是一个容器，其仅允许包含在内部的代码以适当的方式执行（或者用于测试），而无法对其他代码库（意外或恶意）造成任何损害。
+想尽可能减少攻击者在你的网站上做坏事的机会，那么你应该仅给嵌入的内容*完成自己工作所需的权限*。当然，这也适用于你自己的内容。[沙盒](<https://zh.wikipedia.org/wiki/沙盒_(電腦安全)>)技术为此而诞生，沙盒是一个容器，其仅允许包含在内部的代码以适当的方式执行（或者用于测试），而无法对其他代码库（意外或恶意）造成任何损害。
 
-未沙盒化（Unsandboxed）的内容可以执行 JavaScript，提交表单，弹出窗口等。默认情况下，你应该使用没有参数的 `sandbox` 属性来强制执行所有可用的限制，如我们前面的示例所示。
+未沙盒化的内容可以执行 JavaScript、提交表单、弹出窗口等。默认情况下，你应该使用没有参数的 `sandbox` 属性来强制执行所有可用的限制，如我们前面的示例所示。
 
-如果绝对需要某些权限，你可以逐个添加权限（`sandbox=""` 属性值内）——请参阅 [`sandbox`](/zh-CN/docs/Web/HTML/Element/iframe#sandbox) 所有可用选项的参考条目。其中重要的一点是，你*永远不*应该同时添加 `allow-scripts` 和 `allow-same-origin` 到你的 `sandbox` 属性中——在这种情况下，嵌入的内容可以绕过阻止站点执行脚本的[同源安全策略](/zh-CN/docs/Glossary/Same-origin_policy)，并使用 JavaScript 完全关闭沙盒。
+如果绝对需要某些权限，你可以（在 `sandbox=""` 属性值内）逐个添加它们——请参阅 [`sandbox`](/zh-CN/docs/Web/HTML/Element/iframe#sandbox) 所有可用选项的参考条目。其中重要的一点是，你*永远不*应该同时添加 `allow-scripts` 和 `allow-same-origin` 到你的 `sandbox` 属性中——在这种情况下，嵌入的内容可以绕过阻止站点执行脚本的[同源安全策略](/zh-CN/docs/Glossary/Same-origin_policy)，并使用 JavaScript 完全关闭沙盒。
 
 > **备注：** 如果攻击者可以欺骗人们直接访问恶意内容（在 `iframe` 之外），则沙盒无法提供保护。如果某些内容可能是恶意的（例如，用户生成的内容），请保证其是从不同的{{glossary("domain", "域")}}向你的主站点提供的。
 
 #### 配置 CSP 指令
 
-{{Glossary("CSP")}} 全称是**[内容安全策略](/zh-CN/docs/Web/HTTP/CSP)**，它提供了[一组 HTTP 标头](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy)（访问 web 服务器时与网页一起发送的元数据），旨在提高 HTML 文档的安全性。在 `<iframe>` 的安全性方面，你可以*[配置服务器发送适当的 `X-Frame-Options` 标头](/zh-CN/docs/Web/HTTP/Headers/X-Frame-Options)*。这样可以防止其他网站在其网页中嵌入你的内容（这将导致[点击劫持](https://zh.wikipedia.org/wiki/点击劫持)和一系列其他攻击），正如我们之前看到的那样，MDN 开发人员已经做了这些工作。
+{{Glossary("CSP")}} 全称是[**内容安全策略**](/zh-CN/docs/Web/HTTP/CSP)，它提供了[一组 HTTP 标头](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy)（访问 web 服务器时与网页一起发送的元数据），旨在提高 HTML 文档的安全性。在 `<iframe>` 的安全性方面，你可以[_配置服务器发送适当的 `X-Frame-Options` 标头_](/zh-CN/docs/Web/HTTP/Headers/X-Frame-Options)。这样可以防止其他网站在其网页中嵌入你的内容（这将导致[点击劫持](https://zh.wikipedia.org/wiki/点击劫持)和一系列其他攻击），正如我们之前看到的那样，MDN 的开发人员已经做了这些工作。
 
-> **备注：** 你可以阅读 Frederik Braun 的帖子[论 X-Frame-Options 安全性标头](https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/)来获取有关此主题的更多背景信息。其已经超出了本文章内容范围，故无法展开。
+> **备注：** 你可以阅读 Frederik Braun 的帖子[论 X-Frame-Options 安全性标头](https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/)来获取有关此主题的更多背景信息。显然，其已经超出了本文所解释内容的范围。
 
 ## \<embed> 和 \<object> 元素
 
@@ -298,7 +297,7 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 
 然而，你不太可能使用这些元素。如果你需要展示 PDF，通常最好的方式是链接它们，而不是直接在页面中展示。
 
-在过去，这些元素也用于嵌入由浏览器{{Glossary("Plugin", "插件")}}处理的内容如 {{Glossary("Adobe Flash")}}，但这个技术现在已经废弃了，不为现代浏览器所支持。
+在过去，这些元素也用于嵌入由浏览器{{Glossary("Plugin", "插件")}}（如 {{Glossary("Adobe Flash")}}，但这个技术现在已经废弃了，不为现代浏览器所支持）处理的内容。
 
 如果你确实需要嵌入插件内容，那么你至少需要以下信息：
 
@@ -343,7 +342,7 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
     </tr>
     <tr>
       <td>用作后备资源的独立的 HTML 内容，以防资源不可用</td>
-      <td>不受支持（<code>&#x3C;noembed></code> 已废弃）</td>
+      <td>不受支持（<code>&#x3C;noembed></code> 已过时）</td>
       <td>
         包含在 <code>&#x3C;object></code> 中，在 <code>&#x3C;param></code> 元素之后
       </td>
