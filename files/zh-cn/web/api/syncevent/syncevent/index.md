@@ -1,6 +1,5 @@
 ---
 title: SyncEvent：SyncEvent() 构造函数
-short-title: SyncEvent()
 slug: Web/API/SyncEvent/SyncEvent
 l10n:
   sourceCommit: 56df677713fecf43ec0eb8862cb91c141aaa0005
