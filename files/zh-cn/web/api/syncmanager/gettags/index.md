@@ -1,5 +1,5 @@
 ---
-title: SyncManager：getTags() method
+title: SyncManager：getTags() 方法
 slug: Web/API/SyncManager/getTags
 l10n:
   sourceCommit: 56df677713fecf43ec0eb8862cb91c141aaa0005
