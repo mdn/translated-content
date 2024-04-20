@@ -5512,6 +5512,10 @@
     "modified": "2020-10-15T21:43:45.922Z",
     "contributors": ["SphinxKnight", "khrizenriquez"]
   },
+  "Web/API/Window/indexedDB": {
+    "modified": "2019-03-23T22:16:36.537Z",
+    "contributors": ["ivannieto"]
+  },
   "Web/API/Window/innerHeight": {
     "modified": "2020-07-23T18:50:37.998Z",
     "contributors": ["dongerardor", "alfredoWs"]
@@ -5768,10 +5772,6 @@
     "modified": "2020-10-15T22:01:57.457Z",
     "contributors": ["fscholz", "jagomf"]
   },
-  "Web/API/indexedDB": {
-    "modified": "2019-03-23T22:16:36.537Z",
-    "contributors": ["ivannieto"]
-  },
   "Web/API/notification/icon": {
     "modified": "2019-03-23T22:59:32.492Z",
     "contributors": ["joxhker"]
@@ -5961,10 +5961,6 @@
   "Web/CSS/-webkit-box-reflect": {
     "modified": "2019-03-23T22:35:45.474Z",
     "contributors": ["teoli", "pekechis"]
-  },
-  "Web/CSS/-webkit-mask-attachment": {
-    "modified": "2019-03-23T22:35:53.127Z",
-    "contributors": ["pekechis"]
   },
   "Web/CSS/-webkit-mask-box-image": {
     "modified": "2019-03-23T22:35:44.795Z",
@@ -14248,6 +14244,10 @@
   "conflicting/Web/CSS/width": {
     "modified": "2019-01-16T15:41:51.944Z",
     "contributors": ["teoli", "Nathymig", "HenryGR", "Mgjbot"]
+  },
+  "conflicting/Web/CSS_a6ba0198499c2f7f7947719c0dfd9166": {
+    "modified": "2019-03-23T22:35:53.127Z",
+    "contributors": ["pekechis"]
   },
   "conflicting/Web/Guide": {
     "modified": "2019-03-23T23:43:57.691Z",

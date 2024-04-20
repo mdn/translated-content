@@ -14092,6 +14092,10 @@
       "Potappo"
     ]
   },
+  "Web/API/Window/indexedDB": {
+    "modified": "2019-03-23T22:01:21.947Z",
+    "contributors": ["Marsf"]
+  },
   "Web/API/Window/innerHeight": {
     "modified": "2020-11-20T13:43:14.616Z",
     "contributors": [
@@ -15179,10 +15183,6 @@
       "Piroro-hs",
       "chikoski"
     ]
-  },
-  "Web/API/indexedDB": {
-    "modified": "2019-03-23T22:01:21.947Z",
-    "contributors": ["Marsf"]
   },
   "Web/API/isSecureContext": {
     "modified": "2020-10-15T22:08:54.038Z",
@@ -30202,10 +30202,6 @@
       "kenji-yamasaki",
       "sii"
     ]
-  },
-  "conflicting/MDN/MDN_Product_Advisory_Board": {
-    "modified": "2020-03-14T06:36:03.749Z",
-    "contributors": ["mfuji09", "silverskyvicto"]
   },
   "conflicting/MDN/Writing_guidelines": {
     "modified": "2020-09-30T15:30:23.873Z",

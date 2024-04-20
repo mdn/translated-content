@@ -9,4 +9,4 @@ slug: Glossary/Arpanet
 
 ## 参见
 
-- 维基百科上的 [Arpanet](https://zh.wikipedia.org/wiki/Arpanet)
+- 维基百科上的[高级研究计划局网络](https://zh.wikipedia.org/wiki/ARPANET)

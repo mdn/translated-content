@@ -1,6 +1,8 @@
 ---
 title: 製品諮問委員会憲章および会員資格
 slug: MDN/MDN_Product_Advisory_Board/Membership
+l10n:
+  sourceCommit: 5963448346ef9c37aba716f785901dd007f862ea
 ---
 
 {{MDNSidebar}}
@@ -67,7 +69,7 @@ a. メンバーは、タイムリーにフィードバックや回答を提供�
 
 b. メンバーは、アナリスト、プレス、および／または業界の出版物やプレスリリースのために、個人情報や資料 (経歴など) の提供を求められることがありる。
 
-c. すべてのメンバーは、 MDN Product Advisory Board Agreement に署名し、 MDN PAB Code of Conduct および Antitrust Policy に同意する必要がある。
+c. すべてのメンバーは、 MDN Product Advisory Board Agreement に署名し、 MDN PAB [Code of Conduct](https://www.mozilla.org/about/governance/policies/participation/) および Antitrust Policy に同意する必要がある。
 
 ## 5. MDN PAB メンバーの特典
 
@@ -105,6 +107,3 @@ c. 参加者の旅費や生活費、その他の関与にかかる費用は、�
 ## 関連情報
 
 - [製品諮問委員会ホーム](/ja/docs/MDN/MDN_Product_Advisory_Board)
-- [Product Advisory Board meeting minutes](https://github.com/mdn/pab) (GitHub)
-- [製品諮問委員会メンバー](/ja/docs/MDN/MDN_Product_Advisory_Board/Members)
-- [Membership application](https://www.surveygizmo.com/s3/4024118/MDN-Advisory-Board-Application)

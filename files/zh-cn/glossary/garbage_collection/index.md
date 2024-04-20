@@ -9,7 +9,7 @@ slug: Glossary/Garbage_collection
 
 ## 参见
 
-- [Memory management](https://zh.wikipedia.org/wiki/Memory_management) on Wikipedia
-- [Garbage collection](https://zh.wikipedia.org/wiki/Garbage_collection) on Wikipedia
+- 维基百科上的[内存管理](https://zh.wikipedia.org/wiki/記憶體管理)
+- 维基百科上的[垃圾回收](<https://zh.wikipedia.org/wiki/垃圾回收_(計算機科學)>)
 - [Garbage collection](/zh-CN/docs/Web/JavaScript/Memory_management#垃圾回收) in the MDN JavaScript guide.
 - [Memory management in JavaScript](/zh-CN/docs/Web/JavaScript/Memory_management)

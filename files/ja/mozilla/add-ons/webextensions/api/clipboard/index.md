@@ -20,7 +20,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/clipboard
 - {{WebExtAPIRef("clipboard.setImageData()")}}
   - : 画像をクリップボードにコピーする
 
-## ブラウザー互換性
+## ブラウザーの互換性
 
 {{Compat}} {{WebExtExamples("h2")}}
 

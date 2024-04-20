@@ -1,37 +1,55 @@
 ---
 title: グリッド
 slug: Learn/CSS/CSS_layout/Grids
+l10n:
+  sourceCommit: 289d6314f3368aa3e28524e7d090f6e9c704e3b1
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout")}}
 
-CSS グリッドレイアウト（Grid Layout）は、ウェブ用の 2 次元レイアウトシステムです。 これにより、コンテンツを行と列にレイアウトすることができ、複雑なレイアウトを簡単に構築できるようにする多くの機能があります。 この記事では、ページレイアウトを始めるために知っておくべきことをすべて説明します。
+[CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout) (Grid Layout) は、ウェブ用の 2 次元レイアウトシステムです。 コンテンツを行と列にまとめることができ、複雑なレイアウトの作成を簡素化する多くの機能を提供します。この記事では、グリッドレイアウトを始めるに当たって知っておくべきことをすべて説明します。
 
-| 前提知識: | HTML の基本（[HTML 入門](/ja/docs/Learn/HTML/Introduction_to_HTML)を学ぶ）、および CSS の機能の考え方（[CSS 入門](/ja/docs/Learn/CSS/Introduction_to_CSS)と[ボックスの装飾](/ja/docs/Learn/CSS/Styling_boxes)を学ぶ）。 |
-| --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 学習目標: | グリッドレイアウトシステムの背後にある基本概念と、CSS グリッドを使用してグリッドレイアウトを実装する方法を理解すること。                                                                                                |
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">前提知識:</th>
+      <td>
+        HTML の基礎（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML"
+          >HTML 入門</a
+        >で学習）、 CSS の動作の考え方（
+        <a href="/ja/docs/Learn/CSS/First_steps">CSS 入門</a>、
+        <a href="/ja/docs/Learn/CSS/Building_blocks">ボックスのスタイル設定</a>で学習）
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">目的:</th>
+      <td>
+        グリッドレイアウトシステムの背後にある基本概念と、CSS グリッドを使用してグリッドレイアウトを実装する方法を理解すること。
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-## グリッドレイアウトとは？
+## グリッドレイアウトとは
 
-グリッドとは、水平方向と垂直方向のラインを集めたもので、デザイン要素を並べて表示することができます。 ページ間を移動するときに要素が跳び回ったり幅が変わったりしないようなデザインを作成するのに役立ちます。 これにより、ウェブサイトの一貫性が向上します。
+グリッドとは、水平方向と垂直方向の線を集めたもので、デザイン要素を並べて表示することができます。 ページ間を移動するときに要素が跳び回ったり幅が変わったりしないようなデザインを作成するのに役立ちます。 これにより、ウェブサイトの一貫性が向上します。
 
-グリッドには通常、列（**column**）、行（**row**）、そしてそれぞれの行と列の間のギャップ（通常はガター（**gutter**）と呼ばれます）があります。
+グリッドには通常、**列** (column)、**行** (row)、そしてそれぞれの行と列の間の間隔です。間隔はよく溝またはガター (**gutter**) と呼ばれます。
 
-![](grid.png)
+![行、列、溝とラベル付けされた部分を持つ CSS グリッド。行はグリッドの水平方向の区分で、段組みはグリッドの垂直方向の区分です。 2 つの行の間の空間は「行の溝」と呼ばれ、 2 つの列の間の空間は「列の溝」と呼ばれます。](grid.png)
 
-## CSS でグリッドを作りましょう
+## CSS でグリッドを作成
 
-デザインに必要なグリッドを決定したら、CSS グリッドレイアウトを使用して CSS でそのグリッドを作成し、その上に項目を配置できます。 最初にグリッドレイアウトの基本機能を見てから、プロジェクト用のシンプルなグリッドシステムを作成する方法を探ります。
-
-The following video provides a nice visual explanation of using CSS Grid:
+デザインに必要なグリッドを決定したら、CSS グリッドレイアウトを使用して CSS でそのグリッドを作成し、その上にアイテムを配置できます。 最初にグリッドレイアウトの基本機能を見てから、プロジェクト用のシンプルなグリッドシステムを作成する方法を探ります。
+次の動画では、 CSS グリッドを使用する方法を視覚的にわかりやすく説明しています。
 
 {{EmbedYouTube("KOvGeFUHAC0")}}
 
-### グリッドを定義する
+### グリッドを定義
 
-出発点として、テキストエディタとブラウザーで[出発点ファイル](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/0-starting-point.html)をダウンロードして開きます（[ここでライブを見る](https://mdn.github.io/learning-area/css/css-layout/grids/0-starting-point.html)こともできます）。 いくつかの子項目を持つコンテナの例が表示されます。 デフォルトではこれらは通常フローで表示されるので、ボックスは上下に表示されます。 このレッスンの最初の部分でこのファイルを使用して、グリッドのふるまいを確認するための変更を加えます。
+例を使ってグリッドレイアウトを試してみましょう。出発点として、テキストエディターとブラウザーで[出発点ファイル](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/0-starting-point.html)をダウンロードして開いてください（[ここでライブを見る](https://mdn.github.io/learning-area/css/css-layout/grids/0-starting-point.html)こともできます）。 いくつかの子アイテムを持つコンテナーの例が表示されます。既定では、これらのアイテムは通常フローで表示され、他のアイテムの下に1つずつ現れます。このレッスンの最初の部分では、このファイルを使用してグリッドの動作を確認します。
 
-グリッドを定義するために、{{cssxref("display")}} プロパティに `grid` の値を使います。 フレックスボックスと同様に、これによりグリッドレイアウトがオンになり、コンテナの直接の子すべてがグリッド項目になります。 次のものをファイル内の CSS に追加してください。
+フレックスボックスを定義する方法と同様に、 {{cssxref("display")}} プロパティの値に `grid` を設定することでグリッドレイアウトを定義します。フレックスボックスの場合と同様に、`display: grid` プロパティはコンテナーの直接の子をすべてグリッドアイテムに変換します。以下を CSS に追加してください。
 
 ```css
 .container {
@@ -39,7 +57,7 @@ The following video provides a nice visual explanation of using CSS Grid:
 }
 ```
 
-フレックスボックスとは異なり、項目はすぐには違ったようには見えません。 `display: grid` を宣言すると 1 列のグリッドになるので、項目は通常フローで表示されるように上下に表示され続けます。
+フレックスボックスとは異なり、アイテムはすぐには違ったようには見えません。 `display: grid` を宣言すると 1 列のグリッドになるので、アイテムは通常フローと同様に下方向に表示されていきます。
 
 よりグリッドらしく見せるには、グリッドにいくつかの列を追加する必要があります。 ここに 200 ピクセルの列を 3 つ追加しましょう。 これらの列トラックを作成するために、任意の長さの単位やパーセントを使用できます。
 
@@ -50,7 +68,7 @@ The following video provides a nice visual explanation of using CSS Grid:
 }
 ```
 
-CSS 規則に 2 番目の宣言を追加してからページをリロードすると、作成したグリッドの各セルに項目が 1 つずつ再配置されていることがわかります。
+CSS ルールに 2 番目の宣言を追加してからページを再読み込みすると、作成したグリッドの各セルにアイテムが 1 つずつ再配置されていることがわかります。
 
 ```css hidden
 body {
@@ -66,8 +84,8 @@ body {
 .container > div {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
+  background-color: rgb(207 232 220);
+  border: 2px solid rgb(79 185 227);
 }
 ```
 
@@ -83,20 +101,13 @@ body {
 </div>
 ```
 
-```css hidden
-.container {
-  display: grid;
-  grid-template-columns: 200px 200px 200px;
-}
-```
+{{ EmbedLiveSample('Defining_a_grid', '100%', 200) }}
 
-{{ EmbedLiveSample('Grid_1', '100%', 400) }}
+### fr 単位を使用した柔軟なグリッド
 
-### fr 単位での柔軟なグリッド
+長さとパーセントを使用してグリッドを作成するだけでなく、 `fr` 単位を使用して柔軟にグリッドの行と列のサイズを変更できます。 この単位は、グリッドコンテナー内の使用可能スペースの割合を表します。
 
-長さとパーセントを使用してグリッドを作成するだけでなく、`fr` 単位を使用して柔軟にグリッドの行と列のサイズを変更できます。 この単位は、グリッドコンテナ内の使用可能スペースの割合を表します。
-
-トラックのリストを次の定義に変更し、`1fr` のトラックを 3 つ作成します。
+トラックのリストを次の定義に変更し、 `1fr` のトラックを 3 つ作成します。
 
 ```css
 .container {
@@ -105,7 +116,7 @@ body {
 }
 ```
 
-あなたは今、柔軟なトラックを持っているのを見るべきです。 `fr` 単位はスペースを比例して配分するので、トラックには異なる正の値を指定できます。 例えば次のように定義を変更したとします。
+これで柔軟なトラックになりました。 `fr` 単位は空間を比例配分します。このようにトラックに異なる正の値を指定することができます。
 
 ```css
 .container {
@@ -114,7 +125,7 @@ body {
 }
 ```
 
-最初のトラックの使用可能スペースは `2fr` になり、他の 2 つのトラックの使用可能スペースは `1fr` になり、最初のトラックのサイズが大きくなります。 `fr` 単位と固定長トラックを混在させることができます — そのような場合、固定長トラックに必要なスペースは、スペースが他のトラックに分配される前に取り除かれます。
+最初のトラックは、利用できる空間の `2fr` を確保し、他の 2 つのトラックは `1fr` を確保するので、最初のトラックはより大きくなります。 `fr` 単位と固定された長さの単位を混合することができます。この場合、修正されたトラックに必要な空間が最初に使用され、残りの空間が他のトラックに分配されます。
 
 ```css hidden
 body {
@@ -127,16 +138,11 @@ body {
     sans-serif;
 }
 
-.container {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-}
-
 .container > div {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
+  background-color: rgb(207 232 220);
+  border: 2px solid rgb(79 185 227);
 }
 ```
 
@@ -152,93 +158,96 @@ body {
 </div>
 ```
 
-{{ EmbedLiveSample('Grid_2', '100%', 400) }}
+{{ EmbedLiveSample('Flexible_grids_with_the_fr_unit', '100%', 200) }}
 
-> **メモ:** `fr` 単位は、*すべて*のスペースではなく、*使用可能*なスペースを分配します。 あなたのトラックの 1 つがその中に大きな何かを持っているならば、共有する空きスペースは少なくなります。
+> **メモ:** `fr` 単位は、*すべて*のスペースではなく、*使用可能*なスペースを分配します。そのため、トラックの中に何か大きなものがある場合、共有できる自由空間は少なくなります。
 
-### トラック間のギャップ
+### トラック間の間隔
 
-トラック間のギャップを作成するには、列間のギャップには {{cssxref("grid-column-gap")}} プロパティ、行間のギャップには {{cssxref("grid-row-gap")}} プロパティ、両方を同時に設定するには {{cssxref("grid-gap")}} プロパティを使用します。
+トラック間の間隔を作成するには、次のプロパティを使用してください。
 
-```css
-.container {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  grid-gap: 20px;
-}
-```
-
-これらのギャップは、長さの単位またはパーセントのいずれでもかまいませんが、`fr` 単位ではありません。
-
-```css hidden
-body {
-  width: 90%;
-  max-width: 900px;
-  margin: 2em auto;
-  font:
-    0.9em/1.2 Arial,
-    Helvetica,
-    sans-serif;
-}
-
-.container {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  grid-gap: 20px;
-}
-
-.container > div {
-  border-radius: 5px;
-  padding: 10px;
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
-}
-```
-
-```html hidden
-<div class="container">
-  <div>One</div>
-  <div>Two</div>
-  <div>Three</div>
-  <div>Four</div>
-  <div>Five</div>
-  <div>Six</div>
-  <div>Seven</div>
-</div>
-```
-
-{{ EmbedLiveSample('Grid_3', '100%', 400) }}
-
-> **メモ:** `*gap` プロパティは以前は `grid-` という接頭辞を付けていましたが、これは仕様変更されています。 その意図はそれらを複数のレイアウト方法で使えるようにすることです。 接頭辞の付いたバージョンはエイリアスとして保持されるため、しばらくの間は安全に使用できます。 安全のために、コードをより万全にするために、両方のプロパティを倍増して追加することができます。
+- {{cssxref("column-gap")}} は列間の間隔
+- {{cssxref("row-gap")}} は行間の間隔
+- {{cssxref("gap")}} は両方の一括指定
 
 ```css
 .container {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
-  grid-gap: 20px;
   gap: 20px;
 }
 ```
 
+これらの間隔は、長さの単位またはパーセント値のどちらでもかまいませんが、`fr` 単位は使えません。
+
+```css hidden
+body {
+  width: 90%;
+  max-width: 900px;
+  margin: 2em auto;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
+}
+
+.container > div {
+  border-radius: 5px;
+  padding: 10px;
+  background-color: rgb(207 232 220);
+  border: 2px solid rgb(79 185 227);
+}
+```
+
+```html hidden
+<div class="container">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+</div>
+```
+
+{{ EmbedLiveSample('Gaps_between_tracks', '100%', 250) }}
+
+> **メモ:** gap` プロパティ（`column-gap`、`row-gap`、`gap`）は、接頭辞として `grid-` を使用していました。仕様は変更されましたが、接頭辞は別名として維持されます。安全な側に立ち、コードをより強固なものにするのであれば、両方のプロパティを追加することができます。
+>
+> ```css
+> .container {
+>   display: grid;
+>   grid-template-columns: 2fr 1fr 1fr;
+>   grid-gap: 20px;
+>   gap: 20px;
+> }
+> ```
+
 ### トラックリストの繰り返し
 
-反復記法を使用して、トラックリストの全部または一部を繰り返すことができます。 トラックリストを次のように変更します。
+反復記法を使用して、トラックリストの全部または一部を繰り返すことができます。
+トラックリストを次のように変更します。
 
 ```css
 .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
+  gap: 20px;
 }
 ```
 
-今までと同じ 3 つの `1fr` のトラックが手に入ります。 repeat 関数に渡す最初の値はリストを繰り返す回数で、2 番目の値はトラックリストで、1 つ以上のトラックを繰り返すことができます。
+今までと同じ 3 つの `1fr` のトラックが手に入ります。 `repeat()` 関数に渡す最初の値はリストを繰り返す回数で、2 番目の値はトラックリストで、1 つ以上のトラックを繰り返すことができます。
 
 ### 暗黙的グリッドと明示的グリッド
 
-ここまでは列トラックのみを指定しましたが、コンテンツを保持するために行が作成されています。 これは明示的グリッド対暗黙的グリッドの例です。 明示的グリッドは、`grid-template-columns` または `grid-template-rows` を使用して作成したものです。 暗黙的グリッドは、コンテンツがそのグリッドの外側、例えば行に配置されたときに作成されます。 明示的グリッドと暗黙的グリッドは、フレックスボックスの主軸および交差軸と類似しています。
+ここまで、列のトラックだけを指定してきましたが、行はコンテンツを保持するために自動的に作成されます。この概念は、明示的グリッドと暗黙的グリッドの違いを強調しています。
+ここでは、 2 つの型のグリッドの違いについてもう少し詳しく説明します。
 
-デフォルトでは、暗黙的グリッドに作成されたトラックは `auto` でサイズ調整されます。 これは一般に、コンテンツに合わせて十分に大きいことを意味します。 暗黙的グリッドのトラックにサイズを指定したい場合は、{{cssxref("grid-auto-rows")}} プロパティと {{cssxref("grid-auto-columns")}} プロパティを使用できます。 CSS に `100px` の値で `grid-auto-rows` を追加すると、作成された行の高さは 100 ピクセルになります。
+- **明示的グリッド**は、 `grid-template-columns` または `grid-template-rows` を使用して作成します。
+- **暗黙的グリッド**は、定義した明示的なグリッドを拡張するもので、そのグリッドの外側、例えば新しい行にグリッド線を描画することでコンテンツを配置します。
+
+既定では、暗黙的グリッドに作成されたトラックは `auto` でサイズ調整されます。 これは一般に、コンテンツを十分に含むことができる大きさがあることを意味します。 暗黙的グリッドのトラックにサイズを指定したい場合は、 {{cssxref("grid-auto-rows")}} プロパティと {{cssxref("grid-auto-columns")}} プロパティを使用できます。 CSS に `grid-auto-rows` を `100px` の値で追加すると、作成された行の高さは 100 ピクセルになります。
 
 ```css hidden
 body {
@@ -254,8 +263,8 @@ body {
 .container > div {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
+  background-color: rgb(207 232 220);
+  border: 2px solid rgb(79 185 227);
 }
 ```
 
@@ -276,24 +285,24 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 100px;
-  grid-gap: 20px;
+  gap: 20px;
 }
 ```
 
-{{ EmbedLiveSample('Grid_4', '100%', 400) }}
+{{ EmbedLiveSample('Implicit_and_explicit_grids', '100%', 400) }}
 
 ### minmax() 関数
 
 100 ピクセルより高いコンテンツを追加する場合、100 ピクセルの高さのトラックはあまり役に立ちません。 その場合、オーバーフローが発生します。 トラックの高さは*最低* 100 ピクセルで、さらに多くのコンテンツがトラックに入る場合は拡大できると良いでしょう。 ウェブについてのかなり基本的な事実は、あなたが実際に何かがどれほど高くなるかを本当に知らないということです。 追加のコンテンツや大きなフォントサイズは、あらゆる次元でピクセルパーフェクトになろうとするデザインに問題を引き起こす可能性があります。
 
-{{cssxref("minmax")}} 関数を使用すると、トラックの最小サイズと最大サイズ、例えば `minmax(100px, auto)` を設定できます。 最小サイズは 100 ピクセルですが、最大サイズは `auto` で、コンテンツに合わせて拡大されます。 次のように `minmax` の値を使用するように `grid-auto-rows` を変更してみてください。
+{{cssxref("minmax", "minmax()")}} 関数を使用すると、トラックの最小サイズと最大サイズ、例えば `minmax(100px, auto)` を設定できます。 最小サイズは 100 ピクセルですが、最大サイズは `auto` で、コンテンツに合わせて拡大されます。 次のように `minmax` の値を使用するように `grid-auto-rows` を変更してみてください。
 
 ```css
 .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: minmax(100px, auto);
-  grid-gap: 20px;
+  gap: 20px;
 }
 ```
 
@@ -301,9 +310,9 @@ body {
 
 ### 収まる限り多くの列
 
-トラックリスト、反復記法、{{cssxref("minmax")}} について学んだことのいくつかを組み合わせて、便利なパターンを作成できます。 グリッドに、コンテナに収まるだけの数の列を作成するように依頼できると便利な場合があります。 これを行うには、{{cssxref("repeat")}} 記法を使用して `grid-template-columns` の値を設定しますが、数値を渡す代わりにキーワード `auto-fill` を渡します。 関数の 2 番目のパラメータには、`minmax()` を使用し、最小値は、必要な最小トラックサイズに等しく、最大値は `1fr` です。
+トラックリスト、反復記法、 {{cssxref("minmax", "minmax()")}} について学んだことのいくつかを組み合わせて、便利なパターンを作成できます。 グリッドに、コンテナーに収まるだけの数の列を作成するように依頼できると便利な場合があります。 これを行うには、 `grid-template-columns` の値を {{cssxref("repeat", "repeat()")}} 記法を使用して設定しますが、数値を渡す代わりにキーワード `auto-fit` を渡します。 関数の 2 番目の引数には、`minmax()` を使用し、最小値は、必要な最小トラックサイズに等しく、最大値は `1fr` です。
 
-以下の CSS を使用して、今すぐあなたのファイルで次を試してください。
+自分のファイルで下記の CSS を使用してみてください。
 
 ```css hidden
 body {
@@ -319,8 +328,8 @@ body {
 .container > div {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
+  background-color: rgb(207 232 220);
+  border: 2px solid rgb(79 185 227);
 }
 ```
 
@@ -339,37 +348,36 @@ body {
 ```css
 .container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-auto-rows: minmax(100px, auto);
-  grid-gap: 20px;
+  gap: 20px;
 }
 ```
 
-{{ EmbedLiveSample('Grid_5', '100%', 400) }}
+{{ EmbedLiveSample('As_many_columns_as_will_fit', '100%', 400) }}
 
-これは、グリッドがコンテナに収まるだけの数の 200 ピクセルの列を作成し、その後すべての列の間で残っているスペースを共有するためです — 最大は `1fr` で、すでにご存じのとおり、トラック間でスペースを均等に配分するためのものです。
+これは、グリッドがコンテナーに収まるだけの数の 200 ピクセルの列を作成し、その後すべての列の間で残っている空間を共有するためです — 最大は `1fr` で、すでにご存じのとおり、トラック間で空間を均等に配分するためのものです。
 
-## ラインベースの配置
+## 線に基づいた配置
 
-グリッドの作成から、グリッド上に物を配置することに移ります。 グリッドは常にラインを持っていて、そのラインは 1 から始まり、文書の書字方向モード（Writing Mode）に関連しています。 したがって、英語では、列の 1 ライン目がグリッドの左側にあり、行の 1 ライン目が一番上にあります。 アラビア語では、アラビア語は右から左に書かれているので、列の 1 ライン目が右側になります。
+これでグリッドの作成からグリッドに配置することに移動します。グリッドには常に線があります。これらは 1 から始まり、文書の[書字方向](/ja/docs/Web/CSS/CSS_writing_modes)に関連しています。例えば、英語（左書き）の場合、列線 1 はグリッドの左端であり、行線 1 はグリッドの上端となり、アラビア語（右書き）の場合、列線 1 は右端になります。
 
-開始ラインと終了ラインを指定することで、これらのラインに従って物を配置できます。 次のプロパティを使用してこれを行います。
+これらの線に沿ってアイテムを配置するには、アイテムを配置するグリッド領域の開始線と終了線を指定します。このために使用することができます4つのプロパティがあります。
 
 - {{cssxref("grid-column-start")}}
 - {{cssxref("grid-column-end")}}
 - {{cssxref("grid-row-start")}}
 - {{cssxref("grid-row-end")}}
 
-これらのプロパティはすべて値としてライン番号を持つことができます。 次の一括指定プロパティを使用することもできます。
+これらのプロパティはその値として線番号を受け入れるので、例えばある項目が 1 本目から始まり 3 本目で終わるように指定することができます。
+また、開始線と終了線を同時に指定する一括指定プロパティを使用することもできます。指定する線はスラッシュ `/` で区切ります。
 
-- {{cssxref("grid-column")}}
-- {{cssxref("grid-row")}}
+- {{cssxref("grid-column")}} は `grid-column-start` および `grid-column-end` の一括指定
+- {{cssxref("grid-row")}} は `grid-row-start` および `grid-row-end` の一括指定
 
-これにより、開始ラインと終了ラインを `/` （スラッシュ文字）で区切って一度に指定できます。
+これを実際に見るには、[線に基づいた配置の開始点ファイル](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/8-placement-starting-point.html)をダウンロードするか、[ここでライブを見てください](https://mdn.github.io/learning-area/css/css-layout/grids/8-placement-starting-point.html)。これは定義したグリッドと単純な記事の概要が入っています。自動配置が各アイテムをグリッドの自分自身のセルに配置していることがわかります。
 
-[出発点としてこのファイルをダウンロードする](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/8-placement-starting-point.html)か、[ここにあるライブを見てください](https://mdn.github.io/learning-area/css/css-layout/grids/8-placement-starting-point.html)。 それはすでに定義されたグリッドを持ち、そして簡単な記事が概説されています。 自動配置により、作成したグリッドの各セルに項目を 1 つずつ配置していることがわかります。
-
-代わりに、グリッドラインを使用して、サイトのすべての要素をグリッドに配置します。 CSS の最後に次の規則を追加してください。
+代わりに、グリッド線を使用して、サイトのすべての要素をグリッドに配置しましょう。 CSS の最後に次のルールを追加してください。
 
 ```css
 header {
@@ -407,34 +415,15 @@ body {
 .container {
   display: grid;
   grid-template-columns: 1fr 3fr;
-  grid-gap: 20px;
-}
-header {
-  grid-column: 1 / 3;
-  grid-row: 1;
-}
-
-article {
-  grid-column: 2;
-  grid-row: 2;
-}
-
-aside {
-  grid-column: 1;
-  grid-row: 2;
-}
-
-footer {
-  grid-column: 1 / 3;
-  grid-row: 3;
+  gap: 20px;
 }
 
 header,
 footer {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
+  background-color: rgb(207 232 220);
+  border: 2px solid rgb(79 185 227);
 }
 
 aside {
@@ -476,19 +465,19 @@ aside {
       est.
     </p>
   </aside>
-  <footer>Contact me@mysite.com</footer>
+  <footer>Contact me@example.com</footer>
 </div>
 ```
 
-{{ EmbedLiveSample('Grid_6', '100%', 400) }}
+{{ EmbedLiveSample('Line-based_placement', '100%', 550) }}
 
-> **メモ:** 終点の列または行のラインをターゲットとして値 `-1` を使用し、負の値を使用して終点から内側に向かって数えることもできます。 しかしこれは明示的グリッドに対してのみ有効です。 値 `-1` は、[暗黙的グリッド](/ja/docs/Glossary/Grid)の終点のラインをターゲットにしません。
+> **メモ:** 最後の列または行の線をターゲットとして値 `-1` を使用することができ、負の値を使用して終点から数えることもできます。 しかしこれは明示的グリッドに対してのみ有効です。 値 `-1` は、[暗黙的グリッド](/ja/docs/Glossary/Grid)の終点の線をターゲットにしません。
 
 ## grid-template-areas での配置
 
-項目をグリッドに配置する別の方法は、{{cssxref("grid-template-areas")}} プロパティを使用して、デザインのさまざまな要素に名前を付けることです。
+アイテムをグリッドに配置する別の方法は、{{cssxref("grid-template-areas")}} プロパティを使用して、デザインのさまざまな要素に名前を付けることです。
 
-最後の例からラインベースの配置を削除して（またはファイルを再ダウンロードして新しい出発点にして）、次の CSS を追加します。
+最後の例から線に基づいた配置を削除して（またはファイルを再ダウンロードして新しい出発点にして）、次の CSS を追加します。
 
 ```css
 .container {
@@ -498,7 +487,7 @@ aside {
     "sidebar content"
     "footer footer";
   grid-template-columns: 1fr 3fr;
-  grid-gap: 20px;
+  gap: 20px;
 }
 
 header {
@@ -518,7 +507,7 @@ footer {
 }
 ```
 
-ページをリロードすると、ライン番号を使用しなくても項目が以前と同じように配置されたことがわかります！
+ページを再読み込みすると、線番号を使用しなくてもアイテムが以前と同じように配置されたことがわかります！
 
 ```css hidden
 body {
@@ -535,38 +524,12 @@ header,
 footer {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
+  background-color: rgb(207 232 220);
+  border: 2px solid rgb(79 185 227);
 }
 
 aside {
   border-right: 1px solid #999;
-}
-
-.container {
-  display: grid;
-  grid-template-areas:
-    "header header"
-    "sidebar content"
-    "footer footer";
-  grid-template-columns: 1fr 3fr;
-  grid-gap: 20px;
-}
-
-header {
-  grid-area: header;
-}
-
-article {
-  grid-area: content;
-}
-
-aside {
-  grid-area: sidebar;
-}
-
-footer {
-  grid-area: footer;
 }
 ```
 
@@ -604,27 +567,212 @@ footer {
       est.
     </p>
   </aside>
-  <footer>Contact me@mysite.com</footer>
+  <footer>Contact me@example.com</footer>
 </div>
 ```
 
-{{ EmbedLiveSample('Grid_7', '100%', 400) }}
+{{ EmbedLiveSample('Positioning_with_grid-template-areas', '100%', 550) }}
 
-`grid-template-area` の規則は次のとおりです。
+`grid-template-area` のルールは次のとおりです。
 
-- グリッドのすべてのセルを塗りつぶす必要があります。
+- グリッドのすべてのセルを埋める必要があります。
 - 2 つのセルにまたがるようにするには、名前を繰り返します。
 - セルを空のままにするには、`.` （ピリオド）を使用します。
 - 領域は長方形である必要があります。 例えば、L 字型の領域を持つことはできません。
-- 領域は異なる場所で繰り返すことはできません。
+- 領域を異なる場所で繰り返すことはできません。
 
-あなたは私たちのレイアウトで遊ぶことができます。 例えば、フッターをコンテンツの下にだけあるように変更し、サイドバーをずっと下に広げるように変更できます。 これは、何が起こっているのかが CSS から明らかなので、レイアウトを記述するためのとても良い方法です。
+レイアウトを弄ることができます。フッターを記事の下にだけ配置したり、サイドバーをすべて下にまたがるように変更したりすることができます。 CSS を見ていくだけで、何が起こっているのかがよくわかるので、これはレイアウトを記述するのにとてもいい方法です。
 
-## CSS グリッド、グリッドフレームワーク
+## 入れ子のグリッドとサブグリッド
 
-グリッドの「フレームワーク」は、12 列または 16 列のグリッドと CSS グリッドを基にし、そのようなフレームワークを提供するためにサードパーティ製ツールを必要としません — すでに仕様にあります。
+グリッドを別のグリッドの中に入れ子にして、[サブグリッド](/ja/docs/Web/CSS/CSS_grid_layout/Subgrid)を作成することが可能です。
+これを行うには、グリッドアイテムに `display: grid` プロパティを設定します。
 
-[出発点ファイルをダウンロードしてください](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/11-grid-system-starting-point.html)。 これには、12 列のグリッドが定義されたコンテナと、前の 2 つの例で使用したのと同じマークアップが含まれています。 ラインベースの配置を使用して、次のようにコンテンツを 12 列のグリッドに配置できます。
+記事のコンテナーを追加し、入れ子のグリッドを使用して複数の記事のレイアウトを制御することで、前回の例を展開してみましょう。
+入れ子のグリッドでは 1 列しか使用していませんが、 `grid-template-rows` プロパティを使用することで、行を 2:1:1 の比率で分割するように定義することができます。
+この手法により、ページ上部の 1 つの記事を大きく表示し、他にもプレビューのように小さく表示するレイアウトを作成することができます。
+
+```html hidden live-sample___nesting-grids
+<div class="container">
+  <header>This is my lovely blog</header>
+  <div class="articles">
+    <article>
+      <h1>Darmok and Jalad had a picnic at Tanagra</h1>
+
+      <p>
+        Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras
+        porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed
+        auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet
+        orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac
+        ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat.
+        Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros
+        pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam
+        nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum
+        sapien.
+      </p>
+
+      <button>Read more</button>
+    </article>
+    <article>
+      <h1>Temba held his arms wide</h1>
+      <p>
+        Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras
+        porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed
+        auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet
+        orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac
+        ornare ex malesuada et ...
+      </p>
+      <button>Read more</button>
+    </article>
+    <article>
+      <h1>Gilgamesh, a king, at Uruk</h1>
+      <p>
+        Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras
+        porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed
+        auctor cursus massa at porta ...
+      </p>
+      <button>Read more</button>
+    </article>
+  </div>
+  <aside>
+    <h2>Other things</h2>
+    <p>
+      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+      est.
+    </p>
+    <button>Read more</button>
+  </aside>
+  <footer>Contact me@example.com</footer>
+</div>
+```
+
+```css hidden live-sample___nesting-grids
+body {
+  width: 90%;
+  max-width: 900px;
+  margin: 2em auto;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
+}
+
+header,
+footer {
+  border-radius: 5px;
+  padding: 10px;
+  background-color: rgb(207 232 220);
+  border: 2px solid rgb(79 185 227);
+}
+header {
+  grid-area: header;
+}
+
+aside {
+  border-right: 1px solid #999;
+  grid-area: sidebar;
+  padding-right: 10px;
+  font-size: 0.8em;
+}
+
+footer {
+  grid-area: footer;
+}
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar content"
+    "footer footer";
+  grid-template-columns: 1fr 3fr;
+  gap: 20px;
+}
+```
+
+```css live-sample___nesting-grids
+.articles {
+  display: grid;
+  grid-template-rows: 2fr 1fr 1fr;
+  gap: inherit;
+}
+
+article {
+  padding: 10px;
+  border: 2px solid rgb(79 185 227);
+  border-radius: 5px;
+}
+```
+
+{{EmbedLiveSample('nesting-grids', '100%', 1100)}}
+
+入れ子グリッドのレイアウトを簡単に作業するために、 `grid-template-rows` と `grid-template-columns` プロパティに `subgrid` を使用することができます。これにより、親グリッドで定義したトラックを活用することができます。
+
+次の例では、[線に基づいた配置](#線に基づいた配置)を使用しており、入れ子グリッドを親グリッドの複数の列や行にまたがるようにすることができます。
+`subgrid` を追加し、親グリッドの列を継承しつつ、入れ子グリッド内の行に異なるレイアウトを追加しています。
+
+```css hidden live-sample___subgrid
+body {
+  width: 90%;
+  max-width: 900px;
+  margin: 2em auto;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
+}
+
+.container div {
+  border-radius: 5px;
+  padding: 10px;
+  background-color: rgb(207 232 220);
+  border: 2px solid rgb(79 185 227);
+}
+```
+
+```html live-sample___subgrid
+<div class="container">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div id="subgrid">
+    <div>Five</div>
+    <div>Six</div>
+    <div>Seven</div>
+    <div>Eight</div>
+  </div>
+  <div>Nine</div>
+  <div>Ten</div>
+</div>
+```
+
+```css live-sample___subgrid
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 10px;
+}
+
+#subgrid {
+  grid-column: 1 / 4;
+  grid-row: 2 / 4;
+  display: grid;
+  gap: inherit;
+  grid-template-columns: subgrid;
+  grid-template-rows: 2fr 1fr;
+}
+```
+
+{{ EmbedLiveSample('subgrid', '100%', 300) }}
+
+## グリッドフレームワーク
+
+コンテンツのレイアウトに役立つ、 12 列または 16 列のグリッドを提供する数多くのグリッドフレームワークが利用できます。
+良い知らせは、グリッドベースのレイアウトを作成するのにサードパーティ製のフレームワークはおそらく必要ないということです。グリッド機能はすでに仕様に記載されており、ほとんどの現行ブラウザーで対応しています。
+
+[出発点ファイルをダウンロードしてください](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/11-grid-system-starting-point.html)。 これには、12 列のグリッドが定義されたコンテナーと、前の 2 つの例で使用したのと同じマークアップが含まれています。 線に基づいた配置を使用して、次のようにコンテンツを 12 列のグリッドに配置できます。
 
 ```css
 header {
@@ -662,35 +810,15 @@ body {
 .container {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
-  grid-gap: 20px;
-}
-
-header {
-  grid-column: 1 / 13;
-  grid-row: 1;
-}
-
-article {
-  grid-column: 4 / 13;
-  grid-row: 2;
-}
-
-aside {
-  grid-column: 1 / 4;
-  grid-row: 2;
-}
-
-footer {
-  grid-column: 1 / 13;
-  grid-row: 3;
+  gap: 20px;
 }
 
 header,
 footer {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
+  background-color: rgb(207 232 220);
+  border: 2px solid rgb(79 185 227);
 }
 
 aside {
@@ -732,19 +860,19 @@ aside {
       est.
     </p>
   </aside>
-  <footer>Contact me@mysite.com</footer>
+  <footer>Contact me@example.com</footer>
 </div>
 ```
 
-{{ EmbedLiveSample('Grid_8', '100%', 400) }}
+{{ EmbedLiveSample('Grid frameworks in CSS Grid', '100%', 600) }}
 
-[Firefox のグリッドインスペクタ](/ja/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)を使用してデザイン上のグリッドラインをオーバーレイすると、12 列グリッドがどのように機能するかがわかります。
+[Firefox のグリッドインスペクター](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)を使用してデザイン上のグリッド線をオーバーレイすると、12 列グリッドがどのように機能するかがわかります。
 
-![私たちのデザインの上に重ねられた12列のグリッド。](learn-grids-inspector.png)
+![私たちのデザインの上に重ねられた 12 列のグリッド。](learn-grids-inspector.png)
 
 ## スキルテスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[Test your skills: Grids](/ja/docs/Learn/CSS/CSS_layout/Grid_skills) を見てください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: グリッド](/ja/docs/Learn/CSS/CSS_layout/Grid_skills) を見てください。
 
 ## まとめ
 
@@ -752,7 +880,10 @@ aside {
 
 ## 関連情報
 
-- [CSS グリッドのガイド](/ja/docs/Web/CSS/CSS_grid_layout#ガイド)
-- [CSS グリッドインスペクター: グリッドレイアウトを調査する](/ja/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)
+- CSS グリッドレイアウトに関する[ガイドの一覧](/ja/docs/Web/CSS/CSS_grid_layout#ガイド)
+- [サブグリッド](/ja/docs/Web/CSS/CSS_grid_layout/Subgrid)ガイド
+- [CSS grid inspector: Examine grid layouts](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) (firefox-source-docs)
+- [A complete guide to CSS grid](https://css-tricks.com/snippets/css/complete-guide-grid/), a visual guide on CSS-Tricks (2023)
+- [Grid Garden](https://cssgridgarden.com/), an educational game to learn and better understand the basics of grid on cssgridgarden.com
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout")}}

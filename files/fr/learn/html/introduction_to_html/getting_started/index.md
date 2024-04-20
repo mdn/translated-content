@@ -462,8 +462,8 @@ Nous vous recommandons de toujours inclure les guillemets afin d'éviter ce type
 
 Dans cet article, vous remarquerez que les valeurs des attributs sont toutes entre des guillemets doubles ("&nbsp;"). Vous pouvez cependant voir des guillemets simples ('&nbsp;') dans le code HTML de certaines personnes. C'est purement une question de style, et vous êtes libre de choisir la solution que vous préférez. Les deux lignes suivantes sont équivalentes :
 
-```html
-<a href="http://www.exemple.com">Un lien vers mon exemple.</a>
+```html-nolint
+<a href='http://www.exemple.com'>Un lien vers mon exemple.</a>
 
 <a href="http://www.example.com">Un lien vers mon exemple</a>
 ```

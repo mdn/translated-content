@@ -3,13 +3,13 @@ title: scrollbar-color
 slug: Web/CSS/scrollbar-color
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
-**`scrollbar-color`**该[CSS](/zh-CN/docs/Web/CSS)属性设置滚动条轨道和拇指的颜色
+**`scrollbar-color`** [CSS](/zh-CN/docs/Web/CSS) 属性设置滚动条轨道和滑块的颜色
 
-**track（轨道）**是指滚动条，其一般是固定的而不管滚动位置的背景。
+**轨道**（track）是指滚动条，其一般是固定的而不管滚动位置的背景。
 
-**thumb**（**拇指**）是指滚动条通常漂浮在轨道的顶部上的移动部分。
+**滑块**（thumb）是指滚动条通常漂浮在轨道的顶部上的移动部分。
 
 {{CSSInfo}}
 
@@ -18,8 +18,6 @@ slug: Web/CSS/scrollbar-color
 ```css
 /* Keyword values */
 scrollbar-color: auto;
-scrollbar-color: dark;
-scrollbar-color: light;
 
 /* <color> values */
 scrollbar-color: rebeccapurple green; /* Two valid colors.
@@ -42,7 +40,7 @@ scrollbar-color: unset;
     | `auto`            | 在没有任何其他相关滚动条颜色属性的情况下，滚动条的轨道部分默认平台渲染。               |
     | `dark`            | 显示黑色滚动条，可以是平台提供的滚动条的深色变体，也可以是带深色的自定义滚动条。       |
     | `light`           | 显示一个轻量滚动条，可以是平台提供的滚动条的轻微变体，也可以是带有浅色的自定义滚动条。 |
-    | `<color> <color>` | 将第一种颜色应用于滚动条拇指，第二种颜色应用于滚动条轨道。                             |
+    | `<color> <color>` | 将第一种颜色应用于滚动条滑块，第二种颜色应用于滚动条轨道。                             |
 
     > **备注：** 用户代理必须将`scrollbar-color`根元素上设置的任何值应用于视口。
 
@@ -79,7 +77,7 @@ scrollbar-color: unset;
 
 {{EmbedLiveSample("示例")}}
 
-## 无障碍问题
+## 无障碍考虑
 
 使用`scrollbar-color`具有特定颜色值的属性时，作者应确保指定的颜色在它们之间具有足够的对比度。对于关键字值，UA 应确保其使用的颜色具有足够的对比度。参见[WCAG 2.0 的技术：G183：使用 3:1 的对比度](https://www.w3.org/TR/WCAG20-TECHS/G183.html)。
 

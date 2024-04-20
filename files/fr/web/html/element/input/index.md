@@ -898,7 +898,7 @@ Certains attributs et valeurs peuvent causer une erreur [`ValidityState`](/fr/do
       <td>Se produit lorsque la valeur est inférieure à la valeur minimale définie par l'attribut <code>min</code>.</td>
     </tr>
     <tr>
-      <td><a href="#maxlength"><code>maxlength</code></a></td>
+      <td><a href="#minlength"><code>minlength</code></a></td>
       <td><a href="/fr/docs/Web/API/validityState/tooShort"><code>validityState.tooShort</code></a></td>
       <td>Se produit lorsque le nombre de caractères du champ est inférieur à la valeur définie par l'attribut <code>minlength</code>.</td>
     </tr>
