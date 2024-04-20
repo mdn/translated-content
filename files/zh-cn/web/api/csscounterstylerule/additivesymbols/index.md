@@ -9,7 +9,7 @@ slug: Web/API/CSSCounterStyleRule/additiveSymbols
 
 ## 值
 
-字符串
+一个字符串。
 
 ## 示例
 
