@@ -5,7 +5,7 @@ slug: Web/API/CSSCounterStyleRule/name
 
 {{DefaultAPISidebar("CSS Counter Styles")}}
 
-{{domxref("CSSCounterStyleRule")}} 的 **`name`** 属性用于获取或设置 {{CSSxRef("&lt;custom-ident&gt;")}} 为关联规则定义的 `name`。
+{{domxref("CSSCounterStyleRule")}} 接口的 **`name`** 属性用于获取或设置 {{CSSxRef("&lt;custom-ident&gt;")}} 为关联规则定义的 `name`。
 
 ## 值
 

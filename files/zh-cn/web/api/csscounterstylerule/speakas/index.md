@@ -5,7 +5,7 @@ slug: Web/API/CSSCounterStyleRule/speakAs
 
 {{DefaultAPISidebar("CSS Counter Styles")}}
 
-{{domxref("CSSCounterStyleRule")}} 的 **`speakAs`** 属性用于获取或设置 {{cssxref("@counter-style/speak-as","speak-as")}} 描述符的值。如果描述符没有设置值，此属性返回空字符串。
+{{domxref("CSSCounterStyleRule")}} 接口的 **`speakAs`** 属性用于获取或设置 {{cssxref("@counter-style/speak-as","speak-as")}} 描述符的值。如果描述符没有设置值，此属性返回空字符串。
 
 ## 值
 
