@@ -1,5 +1,5 @@
 ---
-title: "CSSCounterStyleRule: system 属性"
+title: CSSCounterStyleRule：system 属性
 slug: Web/API/CSSCounterStyleRule/system
 ---
 

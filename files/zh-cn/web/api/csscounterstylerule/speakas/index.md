@@ -1,5 +1,5 @@
 ---
-title: "CSSCounterStyleRule: speakAs 属性"
+title: CSSCounterStyleRule：speakAs 属性
 slug: Web/API/CSSCounterStyleRule/speakAs
 ---
 

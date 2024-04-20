@@ -1,5 +1,5 @@
 ---
-title: "CSSCounterStyleRule: pad 属性"
+title: CSSCounterStyleRule：pad 属性
 slug: Web/API/CSSCounterStyleRule/pad
 ---
 

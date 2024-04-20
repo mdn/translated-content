@@ -1,5 +1,5 @@
 ---
-title: "CSSCounterStyleRule: prefix 属性"
+title: CSSCounterStyleRule：prefix 属性
 slug: Web/API/CSSCounterStyleRule/prefix
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "CSSCounterStyleRule: negative 属性"
+title: CSSCounterStyleRule：negative 属性
 slug: Web/API/CSSCounterStyleRule/negative
 ---
 

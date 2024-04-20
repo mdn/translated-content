@@ -1,5 +1,5 @@
 ---
-title: "CSSCounterStyleRule: additiveSymbols 属性"
+title: CSSCounterStyleRule：additiveSymbols 属性
 slug: Web/API/CSSCounterStyleRule/additiveSymbols
 ---
 

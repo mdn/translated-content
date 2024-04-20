@@ -1,5 +1,5 @@
 ---
-title: "CSSCounterStyleRule: suffix 属性"
+title: CSSCounterStyleRule：suffix 属性
 slug: Web/API/CSSCounterStyleRule/suffix
 ---
 

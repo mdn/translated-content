@@ -1,5 +1,5 @@
 ---
-title: "CSSCounterStyleRule: fallback 属性"
+title: CSSCounterStyleRule：fallback 属性
 slug: Web/API/CSSCounterStyleRule/fallback
 ---
 

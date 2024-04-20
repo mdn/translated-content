@@ -1,5 +1,5 @@
 ---
-title: "CSSCounterStyleRule: symbols 属性"
+title: CSSCounterStyleRule：symbols 属性
 slug: Web/API/CSSCounterStyleRule/symbols
 ---
 
