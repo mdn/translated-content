@@ -1,5 +1,5 @@
 ---
-title: "SyncEvent: SyncEvent() 构造函数"
+title: SyncEvent：SyncEvent() 构造函数
 short-title: SyncEvent()
 slug: Web/API/SyncEvent/SyncEvent
 l10n:

@@ -1,6 +1,5 @@
 ---
 title: "SyncManager: getTags() method"
-short-title: getTags()
 slug: Web/API/SyncManager/getTags
 l10n:
   sourceCommit: 56df677713fecf43ec0eb8862cb91c141aaa0005

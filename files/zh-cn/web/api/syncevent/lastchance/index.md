@@ -1,6 +1,5 @@
 ---
 title: "SyncEvent: lastChance 属性"
-short-title: lastChance
 slug: Web/API/SyncEvent/lastChance
 l10n:
   sourceCommit: 56df677713fecf43ec0eb8862cb91c141aaa0005
