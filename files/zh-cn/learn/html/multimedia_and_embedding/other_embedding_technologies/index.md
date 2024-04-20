@@ -191,7 +191,7 @@ textarea.onkeyup = function () {
 };
 ```
 
-{{ EmbedLiveSample('自主学习：嵌入类型的使用', 700, 600) }}
+{{ EmbedLiveSample('动手练习：典型嵌入的使用', 700, 600) }}
 
 ## Iframe 详解
 
