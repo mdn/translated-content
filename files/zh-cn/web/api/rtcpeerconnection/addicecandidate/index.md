@@ -28,43 +28,41 @@ addIceCandidate(candidate, successCallback, failureCallback) // 已废弃
 
   - : {{domxref("RTCIceCandidate")}} 实例，或者是具有以下属性的对象：
 
-        - `candidate` {{optional_inline}}
+    - `candidate` {{optional_inline}}
 
-          描述候选者属性的字符串，直接从 [SDP](/zh-CN/docs/Web/API/WebRTC_API/Protocols#sdp) 属性 `"candidate"` 中取得。候选者字符串指定了候选者的网络连接信息。如果 `"candidate"` 是一个空字符串（`""`），则表示已到达候选者列表的末尾；此候选者被称为 "候选结束标记"("end-of-candidates")。候选者字符串的语法在 {{RFC(5245, "", 15.1)}} 中有描述。对于一个这样的属性行（a-line）：
+      描述候选者属性的字符串，直接从 [SDP](/zh-CN/docs/Web/API/WebRTC_API/Protocols#sdp) 属性 `"candidate"` 中取得。候选者字符串指定了候选者的网络连接信息。如果 `"candidate"` 是一个空字符串（`""`），则表示已到达候选者列表的末尾；此候选者被称为 "候选结束标记"("end-of-candidates")。候选者字符串的语法在 {{RFC(5245, "", 15.1)}} 中有描述。对于一个这样的属性行（a-line）：
 
-          ```plain
-          a=candidate:4234997325 1 udp 2043278322 192.0.2.172 44323 typ host
-          ```
+      ```plain
+      a=candidate:4234997325 1 udp 2043278322 192.0.2.172 44323 typ host
+      ```
 
-          相应的 `candidate` 字符串的值将是 `"candidate:4234997325 1 udp 2043278322 192.0.2.172 44323 typ host"`。
+      相应的 `candidate` 字符串的值将是 `"candidate:4234997325 1 udp 2043278322 192.0.2.172 44323 typ host"`。
 
-          在其它属性相同的前提下，{{Glossary("user agent","用户代理")}} 总是更喜欢具有更高 {{domxref("RTCIceCandidate.priority", "priority")}} 的候选者。在上面的例子中，优先级为 `2043278322`。所有属性都由单个空格字符分隔，并按特定顺序排列。这个例子的候选者完整属性列表包括：
+      在其它属性相同的前提下，{{Glossary("user agent","用户代理")}} 总是更喜欢具有更高 {{domxref("RTCIceCandidate.priority", "priority")}} 的候选者。在上面的例子中，优先级为 `2043278322`。所有属性都由单个空格字符分隔，并按特定顺序排列。这个例子的候选者完整属性列表包括：
 
-          - {{domxref("RTCIceCandidate.foundation", "foundation")}} = 4234997325
-          - {{domxref("RTCIceCandidate.component", "component")}} = `"rtp"` (the number 1 is encoded to this string; 2 becomes `"rtcp"`)
-          - {{domxref("RTCIceCandidate.protocol", "protocol")}} = `"udp"`
-          - {{domxref("RTCIceCandidate.priority", "priority")}} = 2043278322
-          - {{domxref("RTCIceCandidate/address", "ip")}} = `"192.0.2.172"`
-          - {{domxref("RTCIceCandidate.port", "port")}} = 44323
-          - {{domxref("RTCIceCandidate.type", "type")}} = `"host"`
+      - {{domxref("RTCIceCandidate.foundation", "foundation")}} = 4234997325
+      - {{domxref("RTCIceCandidate.component", "component")}} = `"rtp"` (the number 1 is encoded to this string; 2 becomes `"rtcp"`)
+      - {{domxref("RTCIceCandidate.protocol", "protocol")}} = `"udp"`
+      - {{domxref("RTCIceCandidate.priority", "priority")}} = 2043278322
+      - {{domxref("RTCIceCandidate/address", "ip")}} = `"192.0.2.172"`
+      - {{domxref("RTCIceCandidate.port", "port")}} = 44323
+      - {{domxref("RTCIceCandidate.type", "type")}} = `"host"`
 
-          更多信息请参见 {{domxref("RTCIceCandidate.candidate")}}
+      更多信息请参见 {{domxref("RTCIceCandidate.candidate")}}
 
-          > **备注：** 为了向后兼容历史版本的 WebRTC 规范，构造函数也接受一个字符串作为参数。
+      > **备注：** 为了向后兼容历史版本的 WebRTC 规范，构造函数也接受一个字符串作为参数。
 
-        - `sdpMid` {{optional_inline}}
+    - `sdpMid` {{optional_inline}}
 
-          - : 包含与候选者关联的媒体流标识字符串，如果没有关联的媒体流，则为 `null`。默认值为 `null`。更多信息参见 {{domxref("RTCIceCandidate.sdpMid")}}。
+      - : 包含与候选者关联的媒体流标识字符串，如果没有关联的媒体流，则为 `null`。默认值为 `null`。更多信息参见 {{domxref("RTCIceCandidate.sdpMid")}}。
 
-        - `sdpMLineIndex` {{optional_inline}}
+    - `sdpMLineIndex` {{optional_inline}}
 
-          - : 包含与候选者关联的媒体行（m-line）的从零开始的整数型索引，包含在 [SDP](/zh-CN/docs/Web/API/WebRTC_API/Protocols#sdp) 的媒体描述中，如果不存在这样的关联则为 `null`。默认值为 `null`
+      - : 包含与候选者关联的媒体行（m-line）的从零开始的整数型索引，包含在 [SDP](/zh-CN/docs/Web/API/WebRTC_API/Protocols#sdp) 的媒体描述中，如果不存在这样的关联则为 `null`。默认值为 `null`。更多信息参见 {{domxref("RTCIceCandidate.sdpMLineIndex")}}。
 
-    更多信息参见 {{domxref("RTCIceCandidate.sdpMLineIndex")}}。
+    - `usernameFragment` {{optional_inline}}
 
-        - `usernameFragment` {{optional_inline}}
-
-          - : 一个包含用户名片段（通常简称为 "ufrag" 或 "ice-ufrag"）的字符串，此片段与 ICE 密码（"ice-pwd"）一起作为单个正在进行的 ICE 交互（包括与 {{Glossary("STUN")}} 服务器的任何通信）的唯一标识。该字符串由 WebRTC 在会话开始时生成。最多 256 个字符，并且至少有 24 位必须包含随机数据。它除非显式设置否则没有默认值，否则不会出现。更多信息参见 {{domxref("RTCIceCandidate.usernameFragment")}}。
+      - : 一个包含用户名片段（通常简称为 "ufrag" 或 "ice-ufrag"）的字符串，此片段与 ICE 密码（"ice-pwd"）一起作为单个正在进行的 ICE 交互（包括与 {{Glossary("STUN")}} 服务器的任何通信）的唯一标识。该字符串由 WebRTC 在会话开始时生成。最多 256 个字符，并且至少有 24 位必须包含随机数据。它除非显式设置否则没有默认值，否则不会出现。更多信息参见 {{domxref("RTCIceCandidate.usernameFragment")}}。
 
   如果 `sdpMid` 和 `sdpMLineIndex` 都为 `null`，则该方法将抛出 {{jsxref("TypeError")}} 异常。
 
