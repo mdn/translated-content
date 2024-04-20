@@ -13,8 +13,6 @@ slug: Web/API/CSSCounterStyleRule/additiveSymbols
 
 ## 示例
 
-<!-- git commit 后，“\sV 5, IV 4, I 1”会被格式化为“V 5, IV 4, I 1”，这与示例结果不符。加上 html 空白符临时解决改问题。-->
-
 以下示例展示了 {{cssxref("@counter-style")}} 样式的规则。在 JavaScript 中，`myRules[0]` 为 `@counter-style` 规则，`additiveSymbols` 返回值为“&nbsp;V 5, IV 4, I 1”。
 
 ```css

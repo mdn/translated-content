@@ -13,8 +13,6 @@ slug: Web/API/CSSCounterStyleRule/prefix
 
 ## 示例
 
-<!-- git commit 后，“Chapter\s”会被格式化为“Chapter”，这与示例结果不符。加上 html 空白符临时解决改问题。-->
-
 以下示例展示了 {{cssxref("@counter-style")}} 样式的规则。在 JavaScript 中，`myRules[0]` 为 `@counter-style` 规则，`prefix` 返回值为“Chapter&nbsp;”。
 
 ```css

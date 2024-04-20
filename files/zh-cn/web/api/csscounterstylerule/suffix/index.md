@@ -13,8 +13,6 @@ slug: Web/API/CSSCounterStyleRule/suffix
 
 ## 示例
 
-<!-- 使用全角符号时，“: ”会被格式化为“:”。与示例结果不符合。加上 html 空白符临时解决改问题。-->
-
 以下示例展示了 {{cssxref("@counter-style")}} 样式的规则。在 JavaScript 中，`myRules[0]` 为 `@counter-style` 规则，`suffix` 返回值为“:&nbsp;”。
 
 ```css
