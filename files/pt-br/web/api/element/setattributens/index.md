@@ -28,6 +28,7 @@ setAttributeNS(namespace, name, value)
 ## Valor de retorno
 
 None ({{jsxref("undefined")}}).
+
 ## Exemplos
 
 ```js

@@ -21,6 +21,7 @@ setAttribute(name, value)
 ```
 
 ### Parâmetros
+
 - `name`
   - : Uma string especificando o nome do atributo cujo valor deve ser definido. O nome do atributo é automaticamente convertido para letras minúsculas quando `setAttribute()` é chamado em um elemento HTML em um documento HTML.
 - `value`
@@ -69,12 +70,12 @@ button.setAttribute("disabled", "");
 Isso demonstra duas coisas:
 
 - A primeira chamada para `setAttribute()` acima mostra a alteração do valor do atributo `name` para "helloButton".
-Você pode ver isso usando o inspetor de páginas do seu navegador ([Chrome](https://developer.chrome.com/docs/devtools/dom/properties/), [Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/css/inspect),
+  Você pode ver isso usando o inspetor de páginas do seu navegador ([Chrome](https://developer.chrome.com/docs/devtools/dom/properties/), [Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/css/inspect),
   [Firefox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/open_the_inspector/index.html), [Safari](https://support.apple.com/en-us/guide/safari-developer/welcome/mac)).
 - Para definir o valor de um atributo booleano, como `disabled`, você pode especificar qualquer valor.
-    Uma string vazia ou o nome do atributo são valores recomendados.
-   Tudo o que importa é que se o atributo estiver presente, _independentemente do seu valor real_, o seu valor é considerado 'verdadeiro'.
-   A ausência do atributo significa que seu valor é `false`. Ao definir o valor do atributo `disabled` para a string vazia (`""`), estamos definindo `disabled` como `true`, o que resulta na desativação do botão.
+  Uma string vazia ou o nome do atributo são valores recomendados.
+  Tudo o que importa é que se o atributo estiver presente, _independentemente do seu valor real_, o seu valor é considerado 'verdadeiro'.
+  A ausência do atributo significa que seu valor é `false`. Ao definir o valor do atributo `disabled` para a string vazia (`""`), estamos definindo `disabled` como `true`, o que resulta na desativação do botão.
 
 ## Especificações
 
