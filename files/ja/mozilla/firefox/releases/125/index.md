@@ -24,8 +24,7 @@ l10n:
 
 - 開発者が文字列でロケールに依存したテキスト分割を実行できる {{jsxref("Intl.Segmenter")}} をサポートしました。
   たとえば `Intl.Segmenter("ja-JP", { granularity: "word" })` で、単語を分けるためにスペースを使用しない言語でテキストを単語に分割できます。
-  また、文字列を書記素や文に区切ることもできます 
-  ([Firefox bug 1423593](https://bugzil.la/1423593)、[Firefox bug 1883914](https://bugzil.la/1883914))。
+  また、文字列を書記素や文に区切ることもできます ([Firefox bug 1423593](https://bugzil.la/1423593)、[Firefox bug 1883914](https://bugzil.la/1883914))。
 
 ### API
 
@@ -70,8 +69,7 @@ l10n:
   メモリーは JavaScript で作成して Wasm module にインポートする、または Wasm module で作成してエクスポートすることができます。
   Wasm インスタンス内にあるそれぞれの新規線形メモリーに、ゼロから始まる連番のインデックスが与えられます。
   WebAssembly の [メモリー命令](/ja/docs/WebAssembly/Reference/Memory) で、操作するメモリーを参照するためにインデックスを使用します。インデックスを指定しない場合は、最初のメモリーが既定値として定義されます。
-  詳しくは _WebAssembly テキスト形式の理解_ で [WebAssembly メモリー](/ja/docs/WebAssembly/Understanding_the_text_format#webassembly_メモリー) をご覧ください 
-  ([Firefox bug 1860816](https://bugzil.la/1860816))。
+  詳しくは _WebAssembly テキスト形式の理解_ で [WebAssembly メモリー](/ja/docs/WebAssembly/Understanding_the_text_format#webassembly_メモリー) をご覧ください ([Firefox bug 1860816](https://bugzil.la/1860816))。
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -90,7 +88,7 @@ l10n:
 
 ## アドオン開発者向けの変更点一覧
 
-- {{WebExtAPIRef("proxy.ProxyInfo")}} の `proxyAuthorization` プロパティの内容を、[CONNECT](/ja/docs/Web/HTTP/Methods/CONNECT) リクエストの一部として (すでにサポートする HTTPS プロキシ向けに加えて)  HTTP プロキシに送信する {{httpheader("Proxy-Authorization")}} リクエストヘッダーに渡すようになりました ([Firefox bug 1794464](https://bugzil.la/1794464))。
+- {{WebExtAPIRef("proxy.ProxyInfo")}} の `proxyAuthorization` プロパティの内容を、[CONNECT](/ja/docs/Web/HTTP/Methods/CONNECT) リクエストの一部として (すでにサポートする HTTPS プロキシ向けに加えて) HTTP プロキシに送信する {{httpheader("Proxy-Authorization")}} リクエストヘッダーに渡すようになりました ([Firefox bug 1794464](https://bugzil.la/1794464))。
 
 ## 実験的なウェブ機能
 
