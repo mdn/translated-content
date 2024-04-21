@@ -169,7 +169,11 @@ pc.setRemoteDescription(desc)
   });
 ```
 
-这段代码获取从远程对等端接收到的 SDP，并构造一个新的 {{domxref("RTCSessionDescription")}} 实例并传递到 {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}}。执行成功后，使用 {{domxref("MediaDevices.getUserMedia")}} 来访问本地摄像头和麦克风。如果（调用）成功，则将拿到的流作为变量 previewElement 所指向的 {{HTMLElement("video")}} 元素的源输入给它。这是通过遍历 {{domxref("MediaStream.getTracks()")}} 返回的 (tracks) 列表中的每个轨道，并将它们与其所属的流一起传递给 `addTrack()` 方法来完成的。
+这段代码获取从远程对等端接收到的 SDP，并构造一个新的 {{domxref("RTCSessionDescription")}} 实例并传递到 {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}}。执行成功后，使用 {{domxref("MediaDevices.getUserMedia")}} 来访问本地摄像头和麦克风。
+
+如果（调用）成功，则将拿到的流作为变量 `previewElement` 所指向的 {{HTMLElement("video")}} 元素的源输入给它。
+
+这是通过遍历 {{domxref("MediaStream.getTracks()")}} 返回的列表中的每个轨道，并将它们与其所属的流一起传递给 `addTrack()` 方法来完成的。
 
 ## 规范
 
