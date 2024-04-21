@@ -59,7 +59,7 @@ l10n:
 - `SourceGraphic`
   - : 该关键字表示图形元素自身将作为 {{SVGElement("filter")}} 元素的原始输入。
 - `SourceAlpha`
-  - : 该关键字表示图形元素自身将作为 `<filter>` 元素的原始输入。`SourceAlpha` 与 `SourceGraphic` 具有相同的规则除了前者只使用元素的 alpha 通道。
+  - : 该关键字表示图形元素自身将作为 `<filter>` 元素的原始输入。`SourceAlpha` 与 `SourceGraphic` 具有相同的规则，除了前者只使用元素的 alpha 通道。
 - `BackgroundImage`
   - : 该关键字表示调用 `<filter>` 元素时，滤镜区域下方的 SVG 文档的图形快照。
 - `BackgroundAlpha`
