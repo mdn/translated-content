@@ -11,7 +11,7 @@ slug: Glossary/Developer_Tools
 
 ## 参见
 
-- [Web development tools](https://zh.wikipedia.org/wiki/Web_development_tools) on Wikipedia
+- 维基百科上的 [Web 开发者工具](https://zh.wikipedia.org/wiki/Web开发工具)
 - [Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html) on MDN
 - [Firebug](https://getfirebug.com/) (former developer tool for Firefox)
 - [Chrome DevTools](https://developer.chrome.com/devtools) on chrome.com
