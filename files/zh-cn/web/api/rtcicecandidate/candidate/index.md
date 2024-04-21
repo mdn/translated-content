@@ -23,7 +23,7 @@ a=candidate:4234997325 1 udp 2043278322 192.0.2.172 44323 typ host
 
 相应的候选者字符串的值将是：`"candidate:4234997325 1 udp 2043278322 192.0.2.172 44323 typ host"`
 
-其他条件相同时，{{Glossary("user agent", "用户代理 ")}} 将选择具有最高优先级的候选者。在上面的示例中，优先级为 `2043278322` 。每个属性都用单个空格字符分隔，并且按特定顺序排列。此示例候选者的属性完整列表为：
+其他条件相同时，{{Glossary("user agent", "用户代理")}} 将选择具有最高优先级的候选者。在上面的示例中，优先级为 `2043278322`。每个属性都用单个空格字符分隔，并且按特定顺序排列。此示例候选者的属性完整列表为：
 
 - {{domxref("RTCIceCandidate.foundation", "foundation")}} = 4234997325
 - {{domxref("RTCIceCandidate.component", "component")}} = `"rtp"` (the number 1 is encoded to this string; 2 becomes `"rtcp"`)
