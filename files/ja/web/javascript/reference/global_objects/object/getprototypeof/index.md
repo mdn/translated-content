@@ -22,7 +22,7 @@ Object.getPrototypeOf(obj)
 
 ### 返値
 
-指定されたオブジェクトのプロトタイプです。何も継承していないオブジェクトの場合は {{jsxref("null")}} です。
+指定されたオブジェクトのプロトタイプです。何も継承していないオブジェクトの場合は [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) です。
 
 ## 例
 

@@ -12,7 +12,7 @@ Notation](https://json.org/) ({{glossary("JSON")}}) を解釈するメソッド�
 
 ### JavaScript と JSON の違い
 
-JSON は、オブジェクト、配列、数値、文字列、論理値、そして {{jsxref("null")}} をシリアライズする構文です。これは JavaScript の構文に基づいていますが、区別されるものです。JavaScript ならば JSON であるというわけでは*ありません*。
+JSON は、オブジェクト、配列、数値、文字列、論理値、そして [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) をシリアライズする構文です。これは JavaScript の構文に基づいていますが、区別されるものです。JavaScript ならば JSON であるというわけでは*ありません*。
 
 - **オブジェクトと配列**
   - : プロパティ名は二重引用符で括った文字列にしなければなりません。[末尾のカンマ](/ja/docs/Web/JavaScript/Reference/Trailing_commas)を置いてはいけません。
@@ -96,7 +96,7 @@ DIGIT = %x30-39            ; 0-9
 - {{jsxref("JSON.parse()", "JSON.parse(<var>text</var>[, <var>reviver</var>])")}}
   - : 文字列 `text` を JSON として解析し、オプションで生成された値とそのプロパティを変換し、値を返します。 JavaScript と JSON の違いに関連するものを含め、 JSON の構文に違反すると {{jsxref("SyntaxError")}} が発生します。`reviver` オプションは、`replacer` が他のデータ型の代用として使用したものを解釈することができます。
 - {{jsxref("JSON.stringify()", "JSON.stringify(<var>value</var>[, <var>replacer</var>[, <var>space</var>]])")}}
-  - : 指定した値に対応する JSON 文字列を返します。オプションで、特定のプロパティのみを含むか、ユーザー定義の方法でプロパティ値を置き換えることもできます。既定では、すべての {{jsxref("undefined")}} のインスタンスは {{jsxref("null")}} に置き換えられ、その他の対応していないネイティブデータ型は打ち切られます。 `replacer` オプションでは、他の動作を指定することができます。
+  - : 指定した値に対応する JSON 文字列を返します。オプションで、特定のプロパティのみを含むか、ユーザー定義の方法でプロパティ値を置き換えることもできます。既定では、すべての {{jsxref("undefined")}} のインスタンスは [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) に置き換えられ、その他の対応していないネイティブデータ型は打ち切られます。 `replacer` オプションでは、他の動作を指定することができます。
 
 ## 例
 

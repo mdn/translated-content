@@ -63,7 +63,7 @@ Object.defineProperty(obj, prop, descriptor);
 
 記述子に `value`, `writable`, `get`, `set` のいずれのキーもない場合、データ記述子として扱われます。記述子に `value` または `writable` と、`get` または `set` のキーの両方がある場合は、例外が発生します。
 
-これらのキーは必ずしも記述子が直接所有しているとは限らないことに留意してください。継承されたプロパティも同様です。これらの既定値が存在することを保証するには、先行して {{jsxref("Object")}} を凍結しておくか、すべてのオプションを明示的に指定するか、{{jsxref("Object.create", "Object.create(null)")}} で {{jsxref("null")}} に設定するかします。
+これらのキーは必ずしも記述子が直接所有しているとは限らないことに留意してください。継承されたプロパティも同様です。これらの既定値が存在することを保証するには、先行して {{jsxref("Object")}} を凍結しておくか、すべてのオプションを明示的に指定するか、{{jsxref("Object.create", "Object.create(null)")}} で [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) に設定するかします。
 
 ```js
 // __proto__ を使うやり方

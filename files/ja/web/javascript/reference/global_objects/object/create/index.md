@@ -31,7 +31,7 @@ Object.create(proto, propertiesObject);
 
 `proto` 引数は次のいずれかになります。
 
-- {{jsxref("null")}} または
+- [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) または
 - {{jsxref("Object")}} ただし[プリミティブラッパーオブジェクト](/ja/docs/Glossary/Primitive#primitive_wrapper_objects_in_javascript)を除く
 
 `proto` がどちらでもない場合、 {{jsxref("TypeError")}} が発生します。

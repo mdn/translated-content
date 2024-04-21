@@ -22,7 +22,7 @@ JSON.stringify(value, replacer, space)
 - `value`
   - : JSON 文字列に変換する値です。
 - `replacer` {{optional_inline}}
-  - : 文字列化の手順の挙動を変更する関数、または `value` のプロパティのうち出力に含めるものを指定する {{JSxRef("String")}} と {{JSxRef("Number")}} の配列です。この値が配列である場合は、文字列でも数値でもない要素 ({{JSxRef("Symbol")}} など) は完全に無視されます。文字列や数値としては、プリミティブもラッパーオブジェクトも使用可能です。この値が関数でも配列でもない場合 ({{JSxRef("null")}} の場合や、指定しない場合など) は、結果の JSON 文字列にオブジェクトの文字列をキーとするすべてのプロパティが含まれます。
+  - : 文字列化の手順の挙動を変更する関数、または `value` のプロパティのうち出力に含めるものを指定する {{JSxRef("String")}} と {{JSxRef("Number")}} の配列です。この値が配列である場合は、文字列でも数値でもない要素 ({{JSxRef("Symbol")}} など) は完全に無視されます。文字列や数値としては、プリミティブもラッパーオブジェクトも使用可能です。この値が関数でも配列でもない場合 ([`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) の場合や、指定しない場合など) は、結果の JSON 文字列にオブジェクトの文字列をキーとするすべてのプロパティが含まれます。
 - `space` {{optional_inline}}
 
   - : 出力する JSON 文字列に可読性を目的に空白 (インデントや改行など) を挿入するために使う {{JSxRef("String")}} または {{JSxRef("Number")}} オブジェクトです。
@@ -31,7 +31,7 @@ JSON.stringify(value, replacer, space)
 
     これが `String` のときは、その文字列 (10 文字より長い場合はその最初の 10 文字) がネストされたそれぞれのオブジェクトや配列の前に挿入されます。
 
-    これが文字列でも数値でもない (文字列や数値としては、プリミティブもラッパーオブジェクトも使用可能) 場合、たとえば {{JSxRef("null")}} や指定しない場合は、空白は使用されません。
+    これが文字列でも数値でもない (文字列や数値としては、プリミティブもラッパーオブジェクトも使用可能) 場合、たとえば [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) や指定しない場合は、空白は使用されません。
 
 ### 返値
 
@@ -48,8 +48,8 @@ JSON.stringify(value, replacer, space)
 
 - {{JSxRef("Boolean")}}、 {{JSxRef("Number")}}、 {{JSxRef("String")}}、および ([`Object()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/Object) により得られる) {{JSxRef("BigInt")}} の各オブジェクトは、文字列化の際に慣習的な変換セマンティクスに従い、対応するプリミティブ値に変換されます。([`Object()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/Object) により得られる) {{jsxref("Symbol")}} のオブジェクトは、プレーンオブジェクトとして扱われます。
 - {{JSxRef("BigInt")}} の値を文字列化しようとすると、例外が発生します。しかし、`BigInt` が (モンキーパッチ `BigInt.prototype.toJSON = ...` により) `toJSON()` メソッドを持っている場合、このメソッドにより文字列化できます。この制約により、適切な文字列化の方法 (そして、ほとんどの場合、対応する逆変換の方法) が常にユーザーによって明示されるようにします。
-- {{JSxRef("undefined")}}、関数 ({{JSxRef("Function")}})、シンボル ({{JSxRef("Symbol")}}) は有効な JSON 値ではありません。変換中にそのような値に遭遇した場合は、(オブジェクトの中で発見された場合は) 省略されたり、(配列の中で見つかった場合は) {{JSxRef("null")}} に変換されたりします。 `JSON.stringify()` は `JSON.stringify(() => {})` や `JSON.stringify(undefined)` のように「純粋」な値を渡した場合に `undefined` を返すことがあります。
-- {{JSxRef("Infinity")}} および {{JSxRef("NaN")}} の数値は、 {{JSxRef("null")}} の値と同様に、すべて `null` と見なされます。(ただし、前述の値と違って、省略されることはありません)
+- {{JSxRef("undefined")}}、関数 ({{JSxRef("Function")}})、シンボル ({{JSxRef("Symbol")}}) は有効な JSON 値ではありません。変換中にそのような値に遭遇した場合は、(オブジェクトの中で発見された場合は) 省略されたり、(配列の中で見つかった場合は) [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) に変換されたりします。 `JSON.stringify()` は `JSON.stringify(() => {})` や `JSON.stringify(undefined)` のように「純粋」な値を渡した場合に `undefined` を返すことがあります。
+- {{JSxRef("Infinity")}} および {{JSxRef("NaN")}} の数値は、 [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) の値と同様に、すべて `null` と見なされます。(ただし、前述の値と違って、省略されることはありません)
 - 配列は配列として文字列化されます。(角括弧で囲まれます) 0 から `length - 1` までの添字 (両端を含みます) が文字列化され、他のプロパティは無視されます。
 - その他のオブジェクトについては:
   - シンボル ({{JSxRef("Symbol")}}) がキーとなっているプロパティはすべて、引数 [`replacer`](#replacer_%E5%BC%95%E6%95%B0) を使用する場合でも完全に無視されます。
@@ -70,7 +70,7 @@ JSON.stringify(value, replacer, space)
 
 `replacer` 関数は、まず文字列化されるオブジェクトについて呼び出され、このときの `key` は空文字列 (`""`) です。その後、文字列化されるオブジェクトや配列のそれぞれのプロパティについて呼び出されます。配列の添字は、文字列として `key` に入ります。処理中のプロパティの値は、文字列化において `replacer` の返値に置き換えられます。すなわち:
 
-- 数値 ({{JSxRef("Number")}})、文字列 ({{JSxRef("String")}})、論理値 ({{JSxRef("Boolean")}})、{{JSxRef("null")}} を返すと、その値を直接文字列化したものがプロパティの値として使用されます。({{JSxRef("BigInt")}} を返すと、例外が発生します)
+- 数値 ({{JSxRef("Number")}})、文字列 ({{JSxRef("String")}})、論理値 ({{JSxRef("Boolean")}})、[`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) を返すと、その値を直接文字列化したものがプロパティの値として使用されます。({{JSxRef("BigInt")}} を返すと、例外が発生します)
 - 関数 ({{JSxRef("Function")}})、シンボル ({{JSxRef("Symbol")}})、{{JSxRef("undefined")}} を返すと、出力にはそのプロパティが含まれなくなります。
 - その他のオブジェクトを返した場合、そのオブジェクトのそれぞれのプロパティに `replacer` 関数を呼び出して再帰的に文字列化します。
 

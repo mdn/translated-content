@@ -15,7 +15,7 @@ JavaScript のほぼすべてのオブジェクトが {{jsxref("Object")}} の�
 
 `Object` コンストラクターは、指定された値のオブジェクトラッパーを生成します。
 
-- 値が {{jsxref("null")}} または {{jsxref("undefined")}} である場合、空のオブジェクトを生成して返します。
+- 値が [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) または {{jsxref("undefined")}} である場合、空のオブジェクトを生成して返します。
 - それ以外の場合は、与えられた値に関連する型のオブジェクトを返します。
 - 値がすでにオブジェクトであった場合は、その値を返します。
 
