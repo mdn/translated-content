@@ -19,7 +19,7 @@ l10n:
 
 此 API 只有两个方法。{{domxref("navigator.canShare()")}} 方法可用于首先验证某些数据是否“可共享”，然后再将其传递给 {{domxref("navigator.share()")}} 发送。
 
-{{domxref("navigator.share()")}} 方法调用底层操作系统的本机共享机制并传递指定的数据。它需要{{Glossary("transient activate", "瞬态激活")}}状态，因此必须由 UI 事件（如按钮单击）触发。此外，该方法必须指定本机实现支持共享的有效数据。
+{{domxref("navigator.share()")}} 方法调用底层操作系统的本机共享机制并传递指定的数据。它需要{{Glossary("transient activation", "瞬态激活")}}状态，因此必须由 UI 事件（如按钮单击）触发。此外，该方法必须指定本机实现支持共享的有效数据。
 
 Web 共享 API 由 [web-share](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/web-share) 权限策略控制。如果策略受支持但尚未授予，两种方法都会指示数据不可共享。
 
@@ -30,7 +30,7 @@ Web 共享 API 由 [web-share](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/w
 - {{domxref("navigator.canShare()")}}
   - : 返回一个布尔值，指示指定的数据是否可共享。
 - {{domxref("navigator.share()")}}
-  - : 返回一个 {{jsxref("Promise")}}，根据传递的数据是否已成功发送到共享目标兑现结果。必须在单击按钮或其他用户激活时调用此方法（需要{{Glossary("transient activate", "瞬态激活")}}状态）。
+  - : 返回一个 {{jsxref("Promise")}}，根据传递的数据是否已成功发送到共享目标兑现结果。必须在单击按钮或其他用户激活时调用此方法（需要{{Glossary("transient activation", "瞬态激活")}}状态）。
 
 ## 示例
 
@@ -57,7 +57,7 @@ btn.addEventListener("click", async () => {
 });
 ```
 
-上面的例子取自我们的 [Web 共享测试](https://mdn.github.io/dom-examples/web-share/)（[查看源码](https://github.com/mdn/ dom-examples/blob/main/web-share/index.html)）。你还可以在 {{domxref("navigator.share()")}} 中查看此实例。
+上面的例子取自我们的 [Web 共享测试](https://mdn.github.io/dom-examples/web-share/)（[查看源码](https://github.com/mdn/dom-examples/blob/main/web-share/index.html)）。你还可以在 {{domxref("navigator.share()")}} 中查看此实例。
 
 ## 规范
 
