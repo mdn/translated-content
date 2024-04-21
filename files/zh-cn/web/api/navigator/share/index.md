@@ -49,7 +49,7 @@ navigator.share(data)
 - `InvalidStateError` {{domxref("DOMException")}}
   - : 文档未完全激活，或正在进行其他共享操作。
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : `web-share` [权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)已用于阻止使用此特性，或当前文档没有{{Glossary("transient activation", "瞬态激活")}}状态，或者出于安全考虑，文件共享被阻止。
+  - : `web-share` [权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)已用于阻止使用此特性，或当前文档不处于{{Glossary("transient activation", "瞬态激活")}}状态，或者出于安全考虑，文件共享被阻止。
 - {{jsxref("TypeError")}}
   - : 无法验证指定的共享数据。可能的原因包括：
     - `data` 参数被完全省略或仅包含具有未知值的属性。请注意，用户代理无法识别的任何属性都会被忽略。
