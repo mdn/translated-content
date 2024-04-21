@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
 ---
 
-在编写 Web 代码时，有大量可用的 Web API。下面是开发 Web 应用程序或网站时可能使用的所有 API 和接口（对象类型）的列表。
+在编写 Web 代码时，有大量可用的 Web API。下面是开发 Web 应用程序或网站时可以使用的所有 API 和接口（对象类型）的列表。
 
 Web API 主要与 JavaScript 一起使用，但情况并非总是如此。
 
