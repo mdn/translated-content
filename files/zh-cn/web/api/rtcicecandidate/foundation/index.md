@@ -28,7 +28,7 @@ a=candidate:4234997325 1 udp 2043278322 192.0.2.172 44323 typ host
 
 ## 示例
 
-此代码片段使用两个候选者的`foundation` 来确定它们是否实际上是同一个候选者
+此代码片段使用两个候选者的 `foundation` 来确定它们是否实际上是同一个候选者
 
 ```js
 if (candidate1.foundation === candidate2.foundation) {
