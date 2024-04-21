@@ -24,7 +24,7 @@ addTrack(track, stream1, stream2, /* …, */ streamN)
 
 - `track`
   - : 一个 {{domxref("MediaStreamTrack")}} 对象，表示要添加到对等连接的媒体轨道。
-- `stream1`, …, `streamN` {{optional_inline}}
+- `stream1`、…、`streamN` {{optional_inline}}
   - : 一个或多个将要添加到轨道的本地 {{domxref("MediaStream")}} 对象。
 
 指定的 `track` 不一定必须是任何指定 `stream` 的一部分。相反的 `stream` 是连接的接收端将 `track` 组合在一起的一种方式，以确保它们是同步的。将任一轨道添在连接的本地端的同一个 `stream` 中，该轨道在远程端也将位于相应的同一个 `stream` 中。
