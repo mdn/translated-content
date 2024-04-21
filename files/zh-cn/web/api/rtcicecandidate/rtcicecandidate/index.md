@@ -22,8 +22,6 @@ new RTCIceCandidate(candidateInfo)
 
   - : 一个可选的对象，可用于配置候选者。该对象具有以下属性：
 
-    <!-- The spec calls this object an RTCIceCandidateInit -->
-
     - `candidate` {{optional_inline}}
 
       - : 描述候选者属性的字符串，直接取自[SDP](/zh-CN/docs/Web/API/WebRTC_API/Protocols#sdp) 属性 `"candidate"`。候选者字符串指定了候选者的网络连接信息。如果候选者是一个空字符串（`""`），则表示已经到达了候选者列表的末尾；这个候选者被称为 `“候选者结束”`(`"end-of-candidates"`) 标记。
