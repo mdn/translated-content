@@ -14,8 +14,7 @@ l10n:
 它的值一个字符串，可以是以下之一：
 
 - `rtp`
-
-  - : 标识正在用于 [实时传输协议](/zh-CN/docs/Web/API/WebRTC_API/Intro_to_RTP) (RTP), 或与 RTP 控制协议（RTCP）多路复用的 ICE 传输。RTP 在 {{RFC(3550)}} 中定义。此值对应于候选者 `a-line` 中的组件 ID 字段，其值为 1。
+  - : 标识正在用于[实时传输协议](/zh-CN/docs/Web/API/WebRTC_API/Intro_to_RTP)（RTP）, 或与 RTP 控制协议（RTCP）多路复用的 ICE 传输。RTP 在 {{RFC(3550)}} 中定义。此值对应于候选者 `a-line` 中的组件 ID 字段，其值为 1。
 
 - `rtcp`
   - : 标识用于 `RTCP` 的 ICE 传输，`RTCP` 在 {{RFC(3550, "", 6)}} 中定义。对应于组件 ID 其值为 2。
