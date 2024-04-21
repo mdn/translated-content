@@ -53,7 +53,7 @@ Object.freeze(new DataView(new ArrayBuffer(32))); // 要素なし
 Object.freeze(new Float64Array(new ArrayBuffer(64), 63, 0)); // 要素なし
 // Float64Array []
 
-Object.freeze(new Float64Array(new ArrayBuffer(64), 32, 2)) // 要素あり
+Object.freeze(new Float64Array(new ArrayBuffer(64), 32, 2)); // 要素あり
 // TypeError: 要素を含む配列バッファービューは凍結できない
 ```
 
