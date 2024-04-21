@@ -26,7 +26,7 @@ l10n:
 
 ### JavaScript
 
-**`HTMLInputElement.files`** 는 파일이 선택되지 않은 경우에도 {{domxref("FileList")}}의 인스턴스를 반환합니다. 따라서 파일 선택 여부를 확인하지 않아도 {{JSxref("Statements/for...of", "for...of")}} 를 사용하여 이를 안전하게 반복할 수 있습니다.
+**`HTMLInputElement.files`**는 파일이 선택되지 않은 경우에도 {{domxref("FileList")}}의 인스턴스를 반환합니다. 따라서 파일 선택 여부를 확인하지 않아도 {{JSxref("Statements/for...of", "for...of")}}를 사용하여 이를 안전하게 반복할 수 있습니다.
 
 ```js
 const fileInput = document.getElementById("files");
