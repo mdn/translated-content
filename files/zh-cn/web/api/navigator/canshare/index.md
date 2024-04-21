@@ -9,7 +9,7 @@ l10n:
 
 {{domxref("Navigator")}} 接口的 **`canShare()`** 方法在对 {{domxref("navigator.share()")}} 的等效调用能够成功时返回 `true`。
 
-如果数据无法通过验证，该方法将返回 `false`。数据可能无效的原因包括：
+如果数据无法*通过验证*，该方法将返回 `false`。数据可能无效的原因包括：
 
 - `data` 参数已被省略或仅包含具有未知值的属性。请注意，用户代理无法识别的任何属性都会被忽略。
 - URL 格式错误。
@@ -28,7 +28,6 @@ canShare(data)
 ### 参数
 
 - `data` {{optional_inline}}
-
 
   - : 定义要测试的共享数据的对象。
 
@@ -98,7 +97,7 @@ if (!navigator.canShare) {
 
 ```js
 // 可能不支持的功能
-let testShare = { someNewProperty: "Data to share" };
+let testShare = { someNewProperty: "要共享的数据" };
 
 // 使用新数据属性的复杂数据
 const shareData = {
