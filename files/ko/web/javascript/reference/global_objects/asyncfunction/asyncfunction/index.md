@@ -59,7 +59,7 @@ const fn = new AsyncFunction(
 );
 
 fn(10, 20).then((v) => {
-  console.log(v); // 4초 뒤 30 을 출력합니다
+  console.log(v); // 4초 뒤 30을 출력합니다
 });
 ```
 
