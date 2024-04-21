@@ -44,7 +44,7 @@ Object.freeze(obj)
 Object.freeze(new Uint8Array(0)); // 要素なし
 // Uint8Array []
 
-Object.freeze(new Uint8Array(1)) // 要素あり
+Object.freeze(new Uint8Array(1)); // 要素あり
 // TypeError: 要素を含む配列バッファービューは凍結できない
 
 Object.freeze(new DataView(new ArrayBuffer(32))) // 要素なし
