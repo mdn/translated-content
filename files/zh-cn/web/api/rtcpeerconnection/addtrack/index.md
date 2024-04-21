@@ -64,7 +64,7 @@ async function openCall(pc) {
 }
 ```
 
-  结果是一组轨道被发送到远程对等端，而没有流与其关联。远程对等端上的 {{DOMxRef("RTCPeerConnection/track_event", "track")}} 事件处理器将负责确定将每个轨道添加到哪个流中，这意味着也可以将它们全部添加到同一个流中。{{domxref("RTCPeerConnection.track_event", "ontrack")}} 处理器可能如下所示：
+结果是一组轨道被发送到远程对等端，而没有流与其关联。远程对等端上的 {{DOMxRef("RTCPeerConnection/track_event", "track")}} 事件处理器将负责确定将每个轨道添加到哪个流中，这意味着也可以将它们全部添加到同一个流中。{{domxref("RTCPeerConnection.track_event", "ontrack")}} 处理器可能如下所示：
 
 ```js
 let inboundStream = null;
