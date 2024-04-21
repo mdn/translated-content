@@ -1,5 +1,5 @@
 ---
-title: RTCPeerConnection.addTrack()
+title: RTCPeerConnection：addTrack() 方法
 slug: Web/API/RTCPeerConnection/addTrack
 l10n:
   sourceCommit: 31fa0bbc78b87bf3ec7559906515fcd3dfde68de
