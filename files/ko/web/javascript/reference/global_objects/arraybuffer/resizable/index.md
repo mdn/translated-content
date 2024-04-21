@@ -13,7 +13,7 @@ l10n:
 
 ## 설명
 
-`resizeable` 속성은 설정 접근자 함수가 `undefined`인 접근자 속성으로 이 속성은 읽을 수 만 있습니다.이 값은 배열이 생성될 때 설정됩니다. 생성자에서 `maxByteLength` 옵션을 설정했다면 `resizeable`은 `true`를 반환하고 그렇지 않으면 `false`를 반환합니다.
+`resizeable` 속성은 설정 접근자 함수가 `undefined`인 접근자 속성으로 이 속성은 읽을 수 만 있습니다. 이 값은 배열이 생성될 때 설정됩니다. 생성자에서 `maxByteLength` 옵션을 설정했다면 `resizeable`은 `true`를 반환하고 그렇지 않으면 `false`를 반환합니다.
 
 ## 예제
 
