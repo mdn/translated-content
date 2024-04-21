@@ -41,7 +41,7 @@ Object.freeze(obj)
 要素を持つ {{jsxref("TypedArray")}} や {{jsxref("DataView")}} は {{jsxref("TypeError")}} になります。これらはメモリ上のビューであり、他にも可能な問題を確実に引き起こします。
 
 ```js
-Object.freeze(new Uint8Array(0)) // 要素なし
+Object.freeze(new Uint8Array(0)); // 要素なし
 // Uint8Array []
 
 Object.freeze(new Uint8Array(1)) // 要素あり
