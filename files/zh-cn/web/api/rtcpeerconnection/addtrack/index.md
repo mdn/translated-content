@@ -33,7 +33,7 @@ addTrack(track, stream1, stream2, /* …, */ streamN)
 
 将用于传输媒体数据的 {{domxref("RTCRtpSender")}} 实例。
 
-> **备注：** 每个 `RTCRtpSender` 都与一个 {{domxref("RTCRtpReceiver")}} 配对，组成一个 {{domxref("RTCRtpTransceiver")}} 。相对应的接收器 (RTCRtpReceiver) 会被置于静默状态（无法传递数据包），直到远程对等端向接收器添加一个或多个流。
+> **备注：** 每个 `RTCRtpSender` 都与一个 {{domxref("RTCRtpReceiver")}} 配对，组成一个 {{domxref("RTCRtpTransceiver")}} 。相对应的接收器（RTCRtpReceiver）会被置于静默状态（无法传递数据包），直到远程对等端向接收器添加一个或多个流。
 
 ### 异常
 
