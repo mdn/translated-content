@@ -148,7 +148,7 @@ pc.ontrack = ({ streams: [stream] }) => (videoElem.srcObject = stream);
 
 ## 实例
 
-下面这个例子是从文章[信令与视频通话](/zh-CN/docs/Web/API/WebRTC_API/Signaling_and_video_calling)中给出的相应示例代码中提取的。它来自`handleVideoOfferMsg()` 方法中，该方法在是远程对等端接收到邀请消息时被调用。
+下面这个例子是从文章[信令与视频通话](/zh-CN/docs/Web/API/WebRTC_API/Signaling_and_video_calling)中给出的相应示例代码中提取的。它来自 `handleVideoOfferMsg()` 方法中，该方法在是远程对等端接收到邀请消息时被调用。
 
 ```js
 var mediaConstraints = {
