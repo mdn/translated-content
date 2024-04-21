@@ -27,8 +27,7 @@ addTrack(track, stream1, stream2, /* …, */ streamN)
 - `stream1`, …, `streamN` {{optional_inline}}
   - : 一个或多个将要添加到轨道的本地 {{domxref("MediaStream")}} 对象。
 
-指定的 `track` 不一定必须是任何指定 `stream` 的一部分。相反的 `stream` 是连接的接收端将 `track` 组合在一起的一种方式，以确保它们是同步的。
-将任一轨道添在连接的本地端的同一个 `stream` 中，该轨道在远程端也将位于相应的同一个 `stream` 中。
+指定的 `track` 不一定必须是任何指定 `stream` 的一部分。相反的 `stream` 是连接的接收端将 `track` 组合在一起的一种方式，以确保它们是同步的。将任一轨道添在连接的本地端的同一个 `stream` 中，该轨道在远程端也将位于相应的同一个 `stream` 中。
 
 ### 返回值
 
@@ -118,8 +117,6 @@ async function openCall(pc) {
 ```js
 pc.ontrack = ({ streams: [stream] }) => (videoElem.srcObject = stream);
 ```
-
-This sets the video element's current stream to the one that contains the track that's been added to the connection.
 
 将视频元素的当前流设置为已添加到在包含连接上的轨道的流。
 
