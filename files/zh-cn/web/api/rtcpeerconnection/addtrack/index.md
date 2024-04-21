@@ -112,7 +112,7 @@ async function openCall(pc) {
 }
 ```
 
-然后远程对等端可以使用一个 {{DOMxRef("RTCPeerConnection/track_event", "track")}} 事件处理程序如下：
+然后远程对等端可以使用一个 {{DOMxRef("RTCPeerConnection/track_event", "track")}} 事件处理器如下：
 
 ```js
 pc.ontrack = ({ streams: [stream] }) => (videoElem.srcObject = stream);
