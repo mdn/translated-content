@@ -9,4 +9,4 @@ slug: Glossary/Data_structure
 
 ## 参见
 
-- 维基百科上的 [Data structure](https://zh.wikipedia.org/wiki/Data_structure)
+- 维基百科上的[数据结构](https://zh.wikipedia.org/wiki/数据结构)

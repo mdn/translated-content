@@ -9,4 +9,4 @@ slug: Glossary/Instance
 
 ## 参见
 
-- [实例](<https://zh.wikipedia.org/wiki/Instance_(computer_science)>) - 维基百科
+- 维基百科上的[实例](https://zh.wikipedia.org/wiki/實例)
