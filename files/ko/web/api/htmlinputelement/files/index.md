@@ -12,7 +12,7 @@ l10n:
 
 ## 값
 
-선택한 파일이 있는 경우 해당 파일을 나열하는 {{domxref("FileList")}} 객체입니다. **`HTMLInputElement`** 가 `type="file"`이 아닌 경우는 `null`입니다.
+선택한 파일이 있는 경우 해당 파일을 나열하는 {{domxref("FileList")}} 객체입니다. **`HTMLInputElement`**가 `type="file"`이 아닌 경우는 `null`입니다.
 
 ## 예제
 
