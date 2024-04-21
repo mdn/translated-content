@@ -41,7 +41,7 @@ async function syncMessagesLater() {
   try {
     await registration.sync.register("sync-messages");
   } catch {
-    console.log("Background Sync could not be registered!");
+    console.log("Background Sync 无法被注册！");
   }
 }
 ```
