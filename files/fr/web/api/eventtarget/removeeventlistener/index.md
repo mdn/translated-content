@@ -25,8 +25,6 @@ target.removeEventListener(type, listener[, useCapture]);
   - : Un objet d'options qui spécifie les caractéristiques de l'écouteur d'évènements. Les options disponibles sont :
 
     - `capture` : un {{jsxref("Boolean")}} indiquant que les évènements de ce type seront envoyés au `listener` enregistré avant d'être distribués à tout `EventTarget` en-dessous dans l'arborescence du DOM.
-    - `passive` : un {{jsxref("Boolean")}} qui indique que le `listener` n'appellera jamais `preventDefault()`. S'il doit le faire, l'agent utilisateur l'ignorera et génèrera un avertissement dans la console.
-    - {{non-standard_inline}} `mozSystemGroup` : Disponible seulement pour le code exécuté dans XBL ou dans le chrome de Firefox, c'est un {{jsxref("Boolean")}} indiquant que l'écouteur a été ajouté au groupe système.
 
 - `useCapture` {{optional_inline}}
   - : Indique si l'[`EventListener`](/fr/docs/Web/API/EventListener) à retirer a été enregistré comme un écouteur capturant, ou non. Si le paramètre est absent, la valeur par défaut est `false` (_faux_).
