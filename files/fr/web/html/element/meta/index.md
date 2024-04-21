@@ -31,7 +31,7 @@ Comme tous les autres éléments, cet élément inclut [les attributs universels
 - `http-equiv`
   - : Cet attribut définit une directive de pragma. Il est nommé `http-equiv(alent)`, car les valeurs autorisées suivantes sont les noms d'en-têtes HTTP correspondant.
     - `content-security-policy`
-      - : Cette valeur permet aux autrices et auteurs de sites web de définir des [règles de gestion de contenu (CSP)](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) pour les ressources qui sont servies. Cela permet notamment d'indiquer les origines valides et les points d'accès aux scripts afin de protéger contre les attaques XSS.
+      - : Cette valeur permet de créer des [règles de gestion de contenu (CSP)](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) pour les ressources qui sont servies. Cela permet notamment d'indiquer les origines valides et les points d'accès aux scripts afin de protéger contre les attaques XSS.
     - `content-type`
       - : Ce champ d'attribut définit le [type MIME](/fr/docs/Web/HTTP/Basics_of_HTTP/MIME_types) du document, suivi du jeu de caractères utilisé pour l'encodage du document. Si cette valeur est utilisée, l'attribut `content` doit valoir `"text/html; charset=utf-8"`. Cette formulation est équivalente à un élément `<meta>` ayant l'attribut [`charset`](#charset), et les mêmes restrictions s'appliquent quant à l'emplacement dans le document (1024 premiers octets).
         > **Note :** Cette valeur peut uniquement être utilisée pour les documents servis avec le type `text/html`. Elle ne peut pas être utilisée pour les documents servis avec un type MIME XML.
