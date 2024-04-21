@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("WebRTC")}}
 
-{{domxref("RTCPeerConnection")}} 对象的 **`addTrack()`** 方法将媒体轨道添加到将传输给其他对等端的轨道集合中。
+{{domxref("RTCPeerConnection")}} 接口的 **`addTrack()`** 方法将媒体轨道添加到将传输给其他对等点的轨道集合中。
 
 > **备注：** 通过向连接添加轨道来触发重新协商，从而触发一个 {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} 事件。详情请参见 [信令与视频通话#开始协商](/zh-CN/docs/Web/API/WebRTC_API/Signaling_and_video_calling#开始协商)。
 
