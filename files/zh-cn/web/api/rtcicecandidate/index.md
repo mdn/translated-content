@@ -53,7 +53,7 @@ l10n:
 ## 实例方法
 
 - {{domxref("RTCIceCandidate.toJSON", "toJSON()")}}
-  - : 返回一个包含 `RTCIceCandidate` 当前配置的{{Glossary("JSON")}}对象。其格式与 `candidateInfo` 对象相同，可作为可选参数传入{{domxref("RTCIceCandidate.RTCIceCandidate()","RTCIceCandidate()")}} 构造一个新的 `RTCIceCandidate` 实例。
+  - : 返回一个包含 `RTCIceCandidate` 当前配置的 {{Glossary("JSON")}} 对象。其格式与 `candidateInfo` 对象相同，可作为可选参数传入 {{domxref("RTCIceCandidate.RTCIceCandidate()","RTCIceCandidate()")}} 构造一个新的 `RTCIceCandidate` 实例。
 
 ## 示例
 
