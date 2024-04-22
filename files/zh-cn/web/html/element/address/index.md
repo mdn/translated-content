@@ -33,14 +33,11 @@ l10n:
 <address>
   你可以通过
   <a href="http://www.example.com/contact">www.example.com</a><br />
-  与作者联系，如果你发现了任何错误，请<a href="mailto:webmaster@example.com"
+  与作者联系。如果你发现了任何错误，请<a href="mailto:webmaster@example.com"
     >联系网站管理员</a
   >。<br />
-  你也可以访问我们：<br />
-  Mozilla 基金会<br />
-  331 E Evelyn Ave<br />
-  Mountain View, CA 94041<br />
-  USA
+  你也可以前来访问：美国加利福尼亚州山景城伊芙琳大道东
+  331 号 Mozilla 基金会，邮编：94041
 </address>
 ```
 
@@ -71,7 +68,7 @@ l10n:
       <td>
         <a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
           >流式内容</a
-        >，但不允许嵌套 <code>&#x3C;address></code> 元素，不允许包含标题内容（{{HTMLElement("hgroup")}}、{{HTMLElement("Heading_Elements", "h1")}}、{{HTMLElement("Heading_Elements", "h2")}}、{{HTMLElement("Heading_Elements", "h3")}}、{{HTMLElement("Heading_Elements", "h4")}}、{{HTMLElement("Heading_Elements", "h5")}}、{{HTMLElement("Heading_Elements", "h6")}}），不允许包含章节内容({{HTMLElement("article")}}、{{HTMLElement("aside")}}、{{HTMLElement("section")}}、{{HTMLElement("nav")}}），不允许包含 {{HTMLElement("header")}} 或 {{HTMLElement("footer")}} 元素。
+        >，但不允许嵌套 <code>&#x3C;address></code> 元素，不允许包含标题内容（{{HTMLElement("hgroup")}}、{{HTMLElement("Heading_Elements", "h1")}}、{{HTMLElement("Heading_Elements", "h2")}}、{{HTMLElement("Heading_Elements", "h3")}}、{{HTMLElement("Heading_Elements", "h4")}}、{{HTMLElement("Heading_Elements", "h5")}}、{{HTMLElement("Heading_Elements", "h6")}}）、章节内容({{HTMLElement("article")}}、{{HTMLElement("aside")}}、{{HTMLElement("section")}}、{{HTMLElement("nav")}}）以及 {{HTMLElement("header")}} 或 {{HTMLElement("footer")}} 元素。
       </td>
     </tr>
     <tr>
