@@ -79,7 +79,7 @@ l10n:
 
 ## シンプルな使用法
 
- \<coordinate> はユーザー座標系での長さで、指定された軸方向（X 座標の場合は X 軸、 Y 座標の場合は Y 軸）のユーザー座標系の原点からの距離です。構文は [\<length>](https://www.w3.org/TR/SVG11/types.html#DataTypeLength) と同じです。
+\<coordinate> はユーザー座標系での長さで、指定された軸方向（X 座標の場合は X 軸、 Y 座標の場合は Y 軸）のユーザー座標系の原点からの距離です。構文は [\<length>](https://www.w3.org/TR/SVG11/types.html#DataTypeLength) と同じです。
 
 ```html
 <svg width="100" height="50" xmlns="http://www.w3.org/2000/svg">
