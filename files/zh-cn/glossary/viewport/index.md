@@ -11,4 +11,4 @@ slug: Glossary/Viewport
 
 ## 参见
 
-- [Viewport](https://zh.wikipedia.org/wiki/Viewport) 维基百科
+- 维基百科上的[视口](https://zh.wikipedia.org/wiki/视口)
