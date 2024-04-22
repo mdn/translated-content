@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Background Sync")}}{{AvailableInWorkers}}
 
-{{domxref("Background Synchronization API", "", "", "nocode")}} 的 **`SyncManager`** 接口，提供了用于注册和列出同步注册的功能。
+{{domxref("Background Synchronization API", "", "", "nocode")}} 的 **`SyncManager`** 接口提供了用于注册和列出同步注册情况的接口。
 
 ## 实例属性
 

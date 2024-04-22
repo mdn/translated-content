@@ -22,12 +22,12 @@ register(tag)
 
 ### 返回值
 
-一个解析为 {{jsxref("undefined")}} 的 {{jsxref("Promise")}}。
+一个兑现为 {{jsxref("undefined")}} 的 {{jsxref("Promise")}}。
 
 ### 异常
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : 如果当前的 Service Worker 不是 active 状态，则抛出该错误。
+  - : 如果当前的 Service Worker 不是活动状态，则抛出该错误。
 - `NotAllowedError` {{domxref("DOMException")}}
   - : 如果用户禁用了后台同步功能，则抛出该错误。
 
