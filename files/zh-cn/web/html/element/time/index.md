@@ -2,12 +2,12 @@
 title: <time>：（日期）时间元素
 slug: Web/HTML/Element/time
 l10n:
-  sourceCommit: e31cb5978e9f3c731c49db9ed0a15795b870e141
+  sourceCommit: fdd3ac5598c3ddceb71e59949b003936ae99f647
 ---
 
 {{HTMLSidebar}}
 
-[HTML](/zh-CN/docs/Web/HTML) **`<time>`** 标签用来表示一个特定的时间段。该元素可包含 `datetime` 属性，用于将日期转换为机器可读格式，从而获得更好的搜索引擎结果或自定义功能（如提醒）。
+**`<time>`** [HTML](/zh-CN/docs/Web/HTML) 元素用来表示一个特定的时间段。该元素可包含 `datetime` 属性，用于将日期转换为机器可读格式，从而获得更好的搜索引擎结果或自定义功能（如提醒）。
 
 它可以代表以下含义之一：
 
@@ -140,7 +140,7 @@ _日期时间值_（机器可读的日期时间值）是该元素的 `datetime` 
       </td>
     </tr>
     <tr>
-      <th scope="row">隐式 ARIA 角色</th>
+      <th scope="row">隐含的 ARIA 角色</th>
       <td>
         <code
           ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/structural_roles#structural_roles_with_html_equivalents">time</a
