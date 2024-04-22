@@ -18,8 +18,8 @@ l10n:
 ```plain
 addIceCandidate(candidate)
 
-addIceCandidate(candidate, successCallback) // 已废弃
-addIceCandidate(candidate, successCallback, failureCallback) // 已废弃
+addIceCandidate(candidate, successCallback) // 已弃用
+addIceCandidate(candidate, successCallback, failureCallback) // 已弃用
 ```
 
 ### 参数
