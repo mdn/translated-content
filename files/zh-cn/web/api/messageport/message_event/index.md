@@ -13,7 +13,7 @@ l10n:
 
 ## 语法
 
-使用 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中的事件名称或设置事件处理器属性。
+在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中使用事件名称，或设置事件处理器属性。
 
 ```js
 addEventListener("message", (event) => {});
@@ -98,5 +98,5 @@ window.addEventListener("message", (event) => {
 
 ## 参见
 
-- 相关事件：[`messageerror`](/zh-CN/docs/Web/API/MessagePort/messageerror_event).
+- 相关事件：[`messageerror`](/zh-CN/docs/Web/API/MessagePort/messageerror_event)
 - [使用 channel messaging](/zh-CN/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)

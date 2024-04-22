@@ -20,7 +20,7 @@ _继承父类 {{domxref("EventTarget")}} 的方法_。
 - {{domxref("MessagePort.postMessage","postMessage()")}}
   - : 从端口发送一条消息，并且可选是否将对象的所有权交给其他浏览器上下文。
 - {{domxref("MessagePort.start","start()")}}
-  - : 开始发送该端口中的消息队列（仅在使用 {{domxref("EventTarget.addEventListener")}} 时需要；使用 {{domxref("MessagePort.message_event", "onmessage")}} 已隐含方法）。
+  - : 开始发送该端口中的消息队列（仅在使用 {{domxref("EventTarget.addEventListener")}} 时需要；使用 {{domxref("MessagePort.message_event", "onmessage")}} 已隐含调用该方法）。
 - {{domxref("MessagePort.close","close()")}}
   - : 断开端口连接，它将不再是激活状态。
 

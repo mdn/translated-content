@@ -13,7 +13,7 @@ l10n:
 
 ## 语法
 
-使用 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中的事件名称或设置事件处理器属性。
+在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中使用事件名称，或设置事件处理器属性。
 
 ```js
 addEventListener("messageerror", (event) => {});

@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Channel Messaging API")}} {{AvailableInWorkers}}
 
-{{domxref("MessagePort")}} 接口的 **`start()`** 方法开始发送该端口中的消息队列。只有在使用 {{domxref("EventTarget.addEventListener")}} 时才需要此方法；使用 {{domxref("MessagePort.message_event", "onmessage")}} 时已隐含方法。
+{{domxref("MessagePort")}} 接口的 **`start()`** 方法开始发送该端口中的消息队列。只有在使用 {{domxref("EventTarget.addEventListener")}} 时才需要此方法；使用 {{domxref("MessagePort.message_event", "onmessage")}} 事件时已隐含调用该方法。
 
 ## 语法
 
@@ -25,7 +25,7 @@ start()
 
 ## 示例
 
-在以下代码块中，你可以看到一个名为 `handleMessage` 处理函数，当使用 `onmessage` 向本文档发回信息时运行：
+在以下代码块中，你可以看到一个名为 `handleMessage` 的处理函数，当使用 `onmessage` 向本文档发回信息时运行：
 
 ```js
 channel.port1.onmessage = handleMessage;

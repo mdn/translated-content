@@ -22,9 +22,9 @@ postMessage(message, transfer)
 - `message`
   - : 需要通过 channel 发送的消息。可以是任何基本数据类型。多个数据项可以作为数组发送。
 - `options` {{optional_inline}}
-  - : 一个可选对象，包含一个带有[数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)的 `transfer` 的字段，数组中包含要转让所有权的[可转移对象](/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects)。这些对象的所有权被赋予接收方，发送方将不能再使用它们。
+  - : 一个可选对象，包含一个带有[数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)的 `transfer` 的字段，数组中包含要转让所有权的[可转移对象](/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects)。这些对象的所有权将转移到接收方，发送方将不能再使用它们。
 - `transfer` {{optional_inline}}
-  - : 一个可选[数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)，包含要转让所有权的[可转移对象](/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects)。这些对象的所有权将转移到目标侧，并且发送方将不能再使用它们。
+  - : 一个可选[数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)，包含要转让所有权的[可转移对象](/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects)。这些对象的所有权将转移到接收方，发送方将不能再使用它们。
 
 ### 返回值
 
@@ -34,7 +34,7 @@ postMessage(message, transfer)
 
 在以下代码块中，你可以看到使用 {{domxref("MessageChannel.MessageChannel", "MessageChannel()")}} 构造函数创建了一个新的 `channel`。当 IFrame 加载完成后，我们使用 {{domxref("window.postMessage")}} 中的 {{domxref("MessageChannel.port2")}} 以及一条消息传递给 IFrame。IFrame 接收消息，并使用 `MessageChannel` 中的 `postMessage()` 上发送回上一条消息。
 
-`handleMessage` 处理响应来自 iframe 的 `onmessage` 消息，并将其放入段落中——监听 {{domxref("MessageChannel.port1")}}，以检查消息何时到达。
+`handleMessage` 处理程序使用 `onmessage` 对从 iframe 发回的消息作出响应，并将其放入段落中；{{domxref("MessageChannel.port1")}} 监听了 `onmessage` 事件，以检查消息何时到达。
 
 ```js
 const channel = new MessageChannel();
