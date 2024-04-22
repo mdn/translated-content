@@ -7,24 +7,24 @@ l10n:
 
 {{APIRef("WebRTC")}}
 
-**`RTCIceCandidate`** 是[WebRTC API](/zh-CN/docs/Web/API/WebRTC_API)的接口之一，表示用于建立{{domxref("RTCPeerConnection")}}的候选交互连接建立 ({{Glossary("ICE")}}) 的配置信息。
+**`RTCIceCandidate`** 是 [WebRTC API](/zh-CN/docs/Web/API/WebRTC_API) 的接口之一，表示用于建立 {{domxref("RTCPeerConnection")}} 的候选交互连接建立 ({{Glossary("ICE")}}) 的配置信息。
 
 `ICE` 候选者描述了 `WebRTC` 能够与远程设备通讯的协议、路由等信息，在启动{{domxref("RTCPeerConnection")}}对等连接时，通常由每个连接方各自提出多个候选者，直到它们互相同意一个它们都认为是最佳的连接候选者描述。`WebRTC` 将使用该候选者描述建立连接。
 
-更多关于 `ICE` 的工作流程，可以参考[WebRTC 会话生命周期](/zh-CN/docs/Web/API/WebRTC_API/Session_lifetime)。[WebRTC 连接交互](/zh-CN/docs/Web/API/WebRTC_API/Connectivity)这篇文章则详细介绍了 `ICE` 的工作原理。
+更多关于 `ICE` 的工作流程，可以参考 [WebRTC 会话生命周期](/zh-CN/docs/Web/API/WebRTC_API/Session_lifetime)。[WebRTC 连接交互](/zh-CN/docs/Web/API/WebRTC_API/Connectivity)这篇文章则详细介绍了 `ICE` 的工作原理。
 
 ## 构造函数
 
 - {{domxref("RTCIceCandidate.RTCIceCandidate()","RTCIceCandidate()")}}
   - : 构造一个新的表示 ICE 候选者的 `RTCIceCandidate` 对象。根据配置对象进行可选配置。
-    > **备注：** 为了向后兼容，构造函数也接受一个包含{{domxref("RTCIceCandidate.candidate", "candidate")}}属性值字符串参数，以此替代配置对象。
+    > **备注：** 为了向后兼容，构造函数也接受一个包含 {{domxref("RTCIceCandidate.candidate", "candidate")}} 属性值的字符串参数，以此替代配置对象。
 
 ## 实例属性
 
 - {{domxref("RTCIceCandidate.address", "address")}} {{ReadOnlyInline}}
   - : 表示候选者的 IP 地址的字符串。
 - {{domxref("RTCIceCandidate.candidate", "candidate")}} {{ReadOnlyInline}}
-  - : 表示用于连接检查的候选者的传输地址的字符串。此地址的格式是在{{RFC(5245)}}中定义的候选者属性（`candidate-attribute`）。如果 `RTCIceCandidate` 是候选者结束（"end of candidates"）指示器，则此字符串为空字符串（`""`）。
+  - : 表示用于连接检查的候选者的传输地址的字符串。此地址的格式是在 {{RFC(5245)}} 中定义的候选者属性（`candidate-attribute`）。如果 `RTCIceCandidate` 是候选者结束（"end of candidates"）指示器，则此字符串为空字符串（`""`）。
 - {{domxref("RTCIceCandidate.component", "component")}} {{ReadOnlyInline}}
   - : 表示候选者是用 `RTP` 或者 `RTCP`的字符串，返回值有 `rtp` 或 `rtcp`，该值是来自 `candidate` 属性行的 `"component-id"` 字段。
 - {{domxref("RTCIceCandidate.foundation", "foundation")}} {{ReadOnlyInline}}
@@ -42,7 +42,7 @@ l10n:
 - {{domxref("RTCIceCandidate.sdpMid", "sdpMid")}} {{ReadOnlyInline}}
   - : 表示候选者的媒体流标识标签的字符串，该标签在候选者关联的组件中唯一标识媒体流，如果不存在这样的关联，则为 `null`。
 - {{domxref("RTCIceCandidate.sdpMLineIndex", "sdpMLineIndex")}} {{ReadOnlyInline}}
-  - : 如果值不为 `null`，`sdpMLineIndex` 表示 `SDP` 中候选者关联的从零开始的媒体描述索引编号（在[RFC 4566](https://datatracker.ietf.org/doc/html/rfc4566) 中定义）。
+  - : 如果值不为 `null`，`sdpMLineIndex` 表示 `SDP` 中候选者关联的从零开始的媒体描述索引编号（在 [RFC 4566](https://datatracker.ietf.org/doc/html/rfc4566) 中定义）。
 - {{domxref("RTCIceCandidate.tcpType", "tcpType")}} {{ReadOnlyInline}}
   - : 如果协议 (`protocol`) 是 `"tcp"` ，`tcpType` 表示 `TCP` 类型的候选者。否则 `tcpType` 为 `null`。
 - {{domxref("RTCIceCandidate.type", "type")}} {{ReadOnlyInline}}
@@ -53,7 +53,7 @@ l10n:
 ## 实例方法
 
 - {{domxref("RTCIceCandidate.toJSON", "toJSON()")}}
-  - : 返回一个包含 `RTCIceCandidate` 当前配置的{{Glossary("JSON")}}对象。其格式与 `candidateInfo` 对象相同，可作为可选参数传入{{domxref("RTCIceCandidate.RTCIceCandidate()","RTCIceCandidate()")}} 构造一个新的 `RTCIceCandidate` 实例。
+  - : 返回一个包含 `RTCIceCandidate` 当前配置的 {{Glossary("JSON")}} 对象。其格式与 `candidateInfo` 对象相同，可作为可选参数传入 {{domxref("RTCIceCandidate.RTCIceCandidate()","RTCIceCandidate()")}} 构造一个新的 `RTCIceCandidate` 实例。
 
 ## 示例
 
