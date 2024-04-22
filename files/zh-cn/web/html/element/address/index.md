@@ -21,9 +21,9 @@ l10n:
 
 ## 使用说明
 
-- `<address>` 元素只能用于表示其最近的祖先 {{HTMLElement("article")}} 或 {{HTMLElement("body")}} 元素的联系信息。
-- 此元素不应包含除联系信息以外的其他信息，如发布日期（应放在 {{HTMLElement("time")}} 元素中）。
-- 通常来说，一个 `<address>` 元素可以放在 {{HTMLElement("footer")}} 元素中，（如果存在的话）。
+- 当表示一个和联系信息无关的任意的地址时，请改用 {{HTMLElement("p")}} 元素而不是 `<address>` 元素。
+- 这个元素不能包含除联系信息之外的任何信息，比如出版日期（这应当被包含在 {{HTMLElement("time")}} 元素之中）。
+- 通常，`<address>` 元素可以放在 {{HTMLElement("footer")}} 元素之中（如果存在的话）。
 
 ## 示例
 
@@ -45,7 +45,7 @@ l10n:
 
 {{EmbedLiveSample("示例", "300", "200")}}
 
-虽然它与 {{HTMLElement("i")}} 或 {{HTMLElement("em")}} 元素相同的默认样式渲染文本，但在处理联系信息时使用 `<address>` 更为恰当，因为它传达了额外的语义信息。
+虽然 `<address>` 元素看起来只是使用了 {{HTMLElement("i")}} 或者 {{HTMLElement("em")}} 元素的默认样式来渲染其中的文本，但是当处理联系信息时使用它更为合适，因为它表达了额外的语义信息。
 
 ## 技术概要
 
