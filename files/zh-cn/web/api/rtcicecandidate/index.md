@@ -9,7 +9,7 @@ l10n:
 
 **`RTCIceCandidate`** 是 [WebRTC API](/zh-CN/docs/Web/API/WebRTC_API) 的接口之一，表示用于建立 {{domxref("RTCPeerConnection")}} 的候选交互连接建立（{{Glossary("ICE")}}）的配置信息。
 
-`ICE` 候选者描述了 `WebRTC` 能够与远程设备通讯的协议、路由等信息，在启动{{domxref("RTCPeerConnection")}}对等连接时，通常由每个连接方各自提出多个候选者，直到它们互相同意一个它们都认为是最佳的连接候选者描述。`WebRTC` 将使用该候选者描述建立连接。
+`ICE` 候选者描述了 `WebRTC` 能够与远程设备通讯的协议、路由等信息，在启动 {{domxref("RTCPeerConnection")}} 对等连接时，通常由每个连接方各自提出多个候选者，直到它们互相同意一个它们都认为是最佳的连接候选者描述。`WebRTC` 将使用该候选者描述建立连接。
 
 更多关于 `ICE` 的工作流程，可以参考[WebRTC 会话生命周期](/zh-CN/docs/Web/API/WebRTC_API/Session_lifetime)。[WebRTC 连接交互](/zh-CN/docs/Web/API/WebRTC_API/Connectivity)这篇文章则详细介绍了 `ICE` 的工作原理。
 
