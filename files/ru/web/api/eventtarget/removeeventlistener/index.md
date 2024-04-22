@@ -3,7 +3,7 @@ title: Метод EventTarget.removeEventListener()
 slug: Web/API/EventTarget/removeEventListener
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("DOM")}}
 
 Удаляет обработчик события, который был зарегистрирован при помощи {{domxref("EventTarget.addEventListener()")}}. Обработчик определяется типом события, самой функцией обработки события, и дополнительными параметрами, переданными при регистрации обработчика.
 
