@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("WebRTC")}}
 
-当一个网站或应用程序使用 {{domxref("RTCPeerConnection")}} 通过其信令通道从远程对等端接收到一个新的 ICE 候选者时，将通过调用 **`RTCPeerConnection.addIceCandidate()`** 方法将新接收的候选者传递给浏览器的 {{Glossary("ICE")}} 代理。这方法会将这个新的远程候选者添加到 `RTCPeerConnection` 的远程描述中，该候选者描述了连接的远程端状态。
+当一个网站或应用程序使用 {{domxref("RTCPeerConnection")}} 通过其信令通道从远程对等端接收到一个新的 ICE 候选者时，将通过调用 **`RTCPeerConnection.addIceCandidate()`** 方法将新接收的候选者传递给浏览器的 {{Glossary("ICE")}} 代理。此方法会将这个新的远程候选者添加到描述了连接的远程端状态的 `RTCPeerConnection` 远程描述中。
 
 如果在调用 `addIceCandidate()` 方法时，`candidate` 参数缺失或者值为 `null`，那么添加的 ICE 候选者将会是一个候选结束标记（"end-of-candidates"）。如果指定对象的 {{domxref("RTCIceCandidate.candidate", "candidate")}} 属性值缺失或者为空字符串（`""`），则表示远程候选者已被传递完毕。候选结束标记通知通过属性行（a-line）值为 `end-of-candidates` 的候选者传输给远程对等端。
 
