@@ -7,11 +7,11 @@ l10n:
 
 {{HTMLSidebar}}{{deprecated_header}}
 
-**`<tt>`** [HTML](/zh-CN/docs/Web/HTML) 元素创建行级文本，该文本使用{{Glossary("user agent", "用户代理")}}默认的等宽字体，旨在以固定宽度设备（如电传打字机、纯文本屏幕或行式打印机）上显示文本的方式呈现文本。
+**`<tt>`** [HTML](/zh-CN/docs/Web/HTML) 元素创建行级文本，该文本使用{{Glossary("user agent", "用户代理")}}默认的等宽字体。该元素用于将文本呈现在固定宽度的显示设备（如电传打字机、纯文本屏幕或行式打印机）上。
 
 **非比例**、**monotype** 和 **monospace** 这些术语可以互换使用，具有相同的通用含义：它们描述的是字符宽度均为相同像素数的字体。
 
-然而，此元素已过时，对于需要以等宽类型呈现的内联文本，应使用更具语义化的 {{HTMLElement("code")}}、{{HTMLElement("kbd")}}、{{HTMLElement("samp")}} 或 {{HTMLElement("var")}} 元素，而对于应作为独立块呈现的内容，应使用 {{HTMLElement("pre")}} 标签。
+然而，此元素已过时，对于需要以等宽类型呈现的行级文本，应使用更具语义化的 {{HTMLElement("code")}}、{{HTMLElement("kbd")}}、{{HTMLElement("samp")}} 或 {{HTMLElement("var")}} 元素，而对于应作为单个块呈现的内容，应使用 {{HTMLElement("pre")}} 标签。
 
 > **备注：** 如果上述语义元素均不符合你的应用场景（例如，你需要以非比例字体展示某些内容），可考虑使用 {{ HTMLElement("span") }} 元素，并通过 CSS 进行相应样式设置。{{cssxref("font-family")}} 属性是一个不错的起点。
 
@@ -27,8 +27,7 @@ l10n:
 
 ```html
 <p>
-  在 telnet 命令提示符下输入以下内容：
-  <code>set localecho</code><br />
+  在 telnet 命令提示符下输入以下内容：<code>set localecho</code><br />
 
   telnet 客户端将显示：<tt>Local Echo is on</tt>
 </p>
@@ -54,8 +53,7 @@ tt {
 
 ```html
 <p>
-  在 telnet 命令提示符下输入以下内容：
-  <code>set localecho</code><br />
+  在 telnet 命令提示符下输入以下内容：<code>set localecho</code><br />
 
   telnet 客户端将显示：<tt>Local Echo is on</tt>
 </p>
@@ -71,7 +69,7 @@ tt {
 
 > **备注：** 用户对默认等宽字体设置所做的自定义更改可能优先于你的 CSS 样式。
 
-尽管 HTML 4.01 并未正式废弃该元素，但还是不鼓励使用它，而更倾向于使用语义化元素或 CSS。`<tt>` 元素在 HTML 5 中已过时。
+尽管 HTML 4.01 并未正式废弃该元素，但还是不鼓励使用它（因为有语义化元素或 CSS）。`<tt>` 元素在 HTML 5 中已过时。
 
 ## 技术概要
 
@@ -84,9 +82,9 @@ tt {
         >
       </th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#flow_content"
+        <a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
           >流式内容</a
-        >、<a href="/zh-CN/docs/Web/HTML/Content_categories#phrasing_content"
+        >、<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
           >短语内容</a
         >、可感知内容。
       </td>
@@ -94,7 +92,7 @@ tt {
     <tr>
       <th scope="row">允许的内容</th>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Content_categories#phrasing_content"
+        <a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
           >短语内容</a
         >。
       </td>
