@@ -21,6 +21,6 @@ Pour tracer la courbe, deux lignes imaginaires sont tracées l'une de P<sub>0</s
 
 ### Voir aussi
 
-- [Fonctions de synchronisation Cubic Bézier en CSS](/fr/docs/Web/CSS/easing-function#the_cubic-bezier()_class_of_timing_functions)
+- [Fonctions de synchronisation Cubic Bézier en CSS](</fr/docs/Web/CSS/easing-function#the_cubic-bezier()_class_of_timing_functions>)
 - {{SVGAttr("keySplines")}} Attribut SVG
 - [Générateur Cubic Bézier](https://cubic-bezier.com/)
