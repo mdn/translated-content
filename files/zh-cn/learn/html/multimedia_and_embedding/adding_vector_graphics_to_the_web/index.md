@@ -14,7 +14,7 @@ l10n:
     <tr>
       <th scope="row">前提：</th>
       <td>
-        你需要了解<a 
+        你需要了解<a
         href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 的基本知识</a
         >并且知道如何<a
@@ -138,7 +138,7 @@ background-size: contain;
 
 与上文所述的 `<img>` 方法一样，使用 CSS 背景图片插入 SVG 意味着 SVG 无法使用 JavaScript 进行操作，并且同样受到相同的 CSS 限制。
 
-如果 SVG 根本没有显示，可能是因为你的服务器设置不正确。如果是这个问题，[这篇文章]将为你指出正确方向(/zh-CN/docs/Web/SVG/Tutorial/Getting_Started#A_Word_on_Webservers)。
+如果 SVG 根本没有显示，可能是因为你的服务器设置不正确。如果是这个问题，[这篇文章]将为你指出正确方向 (/zh-CN/docs/Web/SVG/Tutorial/Getting_Started#A_Word_on_Webservers)。
 
 ### 如何在 HTML 中引入 SVG 代码
 
@@ -326,7 +326,7 @@ textarea.onkeyup = function () {
 
 本文提供了矢量图形和 SVG 的简单教程，让你了解他们的作用，以及如何在网页中引入 SVG。本文并非学习 SVG 的完整教程，只是一个指南，让你在 Web 上遇到 SVG 时知道它是什么。所以不要因为觉得你不是一个 SVG 专家而担心。如果你想了解更多它的工作原理，我们在下面列出了一些可能会帮助你的链接。
 
-在本模块的最后一篇文章中，我们将详细探索[响应式图像](en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)，查看 HTML 提供的可以让图像更好地跨设备适配的工具。
+在本模块的最后一篇文章中，我们将详细探索[响应式图像](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)，查看 HTML 提供的可以让图像更好地跨设备适配的工具。
 
 ## 参见
 
