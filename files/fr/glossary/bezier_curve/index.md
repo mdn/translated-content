@@ -11,7 +11,7 @@ La courbe est définie par un ensemble de points de contrôle avec un minimum de
 
 Pour tracer la courbe, deux lignes imaginaires sont tracées l'une de P<sub>0</sub> à P<sub>1</sub> et l'autre de P<sub>1</sub> à P<sub>2</sub>. Les extrémités des lignes sont ensuite régulièrement déplacées vers le point suivant. Une troisième ligne imaginaire est dessinée avec son point de départ se déplaçant régulièrement sur la première ligne d'assistance et le point final sur la deuxième ligne d'assistance. Sur cette ligne imaginaire, un point est dessiné à partir de son point de départ en se déplaçant régulièrement vers son point final. La courbe décrite par ce point est la courbe de Bézier. Voici une illustration animée démontrant la création de la courbe :
 
-![Drawing a Bézier curve](bézier_3_big.gif)
+![Drawing a Bézier curve](bézier_2_big.gif)
 
 ## Apprendre plus
 
