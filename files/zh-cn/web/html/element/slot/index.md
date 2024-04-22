@@ -104,7 +104,7 @@ l10n:
     <tr>
       <th scope="row">允许的父元素</th>
       <td>
-        任何接受<a href="/zh-CN/docs/Web/HTML/Content_categories短语内容"
+        任何接受<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
           >短语内容</a
         >的元素。
       </td>
