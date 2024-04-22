@@ -24,7 +24,7 @@ l10n:
 - {{domxref("RTCIceCandidate.address", "address")}} {{ReadOnlyInline}}
   - : 表示候选者的 IP 地址的字符串。
 - {{domxref("RTCIceCandidate.candidate", "candidate")}} {{ReadOnlyInline}}
-  - : 表示用于连接检查的候选者的传输地址的字符串。此地址的格式是在{{RFC(5245)}}中定义的候选者属性（`candidate-attribute`）。如果 `RTCIceCandidate` 是候选者结束（"end of candidates"）指示器，则此字符串为空字符串（`""`）。
+  - : 表示用于连接检查的候选者的传输地址的字符串。此地址的格式是在 {{RFC(5245)}}中定义的候选者属性（`candidate-attribute`）。如果 `RTCIceCandidate` 是候选者结束（"end of candidates"）指示器，则此字符串为空字符串（`""`）。
 - {{domxref("RTCIceCandidate.component", "component")}} {{ReadOnlyInline}}
   - : 表示候选者是用 `RTP` 或者 `RTCP` 的字符串，返回值有 `rtp` 或 `rtcp`，该值是来自 `candidate` 属性行的 `"component-id"` 字段。
 - {{domxref("RTCIceCandidate.foundation", "foundation")}} {{ReadOnlyInline}}
