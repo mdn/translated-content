@@ -1,5 +1,5 @@
 ---
-title: HTMLVideoElement：enterpictureinpicture 事件"
+title: HTMLVideoElement：enterpictureinpicture 事件
 slug: Web/API/HTMLVideoElement/enterpictureinpicture_event
 l10n:
   sourceCommit: 4cbb657f882495b1cd18cbbaa8d1c5237bce4eb8
@@ -23,7 +23,7 @@ onenterpictureinpicture = (event) => {};
 
 ## 事件类型
 
-{{domxref("PictureInPictureEvent")}} 继承自 {{domxref("Event")}}。
+{{domxref("PictureInPictureEvent")}}。继承自 {{domxref("Event")}}。
 
 {{InheritanceDiagram("PictureInPictureEvent")}}
 
@@ -52,7 +52,7 @@ button.onclick = () => {
 };
 ```
 
-使用事件处理程序 `onenterpictureinpicture`：
+使用事件处理器属性 `onenterpictureinpicture`：
 
 ```js
 const video = document.querySelector("#video");
@@ -80,4 +80,4 @@ button.onclick = () => {
 ## 参见
 
 - {{domxref("HTMLVideoElement")}}
-- {{domxref("Picture-in-Picture_API", "画中画 API")}}
+- {{domxref("Picture-in-Picture_API", "画中画 API", "", 1)}}

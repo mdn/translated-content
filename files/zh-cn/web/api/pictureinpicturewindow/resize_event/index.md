@@ -7,13 +7,13 @@ l10n:
 
 {{APIRef("Picture-in-Picture API")}}
 
-当浮动视频窗口被调整大小时，会触发 **`resize`** 事件。
+**`resize`** 事件会在浮动视频窗口的大小改变时触发。
 
 此事件不可取消，也不会冒泡。
 
 ## 语法
 
-在诸如 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 的方法中使用该事件名，或设置事件处理器属性。
+在诸如 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 之类的方法中使用该事件名，或设置事件处理器属性。
 
 ```js
 addEventListener("resize", (event) => {});
@@ -23,13 +23,13 @@ onresize = (event) => {};
 
 ## 事件类型
 
-一个 {{domxref("PictureInPictureEvent")}}，继承于 {{domxref("Event")}}。
+{{domxref("PictureInPictureEvent")}}。继承自 {{domxref("Event")}}。
 
 {{InheritanceDiagram("PictureInPictureEvent")}}
 
 ## 事件属性
 
-_除了下列列出的属性外，还可用来自父接口 {{domxref("Event")}} 的属性。_
+_除了下列属性外，还可用来自父接口 {{domxref("Event")}} 的属性。_
 
 - {{domxref("PictureInPictureEvent.pictureInPictureWindow")}}
   - : 返回被调整大小的 {{domxref("PictureInPictureWindow")}} 对象。

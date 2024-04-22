@@ -26,7 +26,7 @@ exitPictureInPicture()
 ### 异常
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : 如果 `document.pictureInPictureElement` 为 `null`，则抛出错误。
+  - : 如果 `document.pictureInPictureElement` 为 `null`，则抛出该异常。
 
 ## 示例
 
@@ -62,4 +62,4 @@ document.onclick = (event) => {
 - {{DOMxRef("Document.pictureInPictureEnabled")}}
 - {{DOMxRef("Document.pictureInPictureElement")}}
 - {{CSSxRef(":picture-in-picture")}}
-- [画中画事件](/zh-CN/docs/Web/API/Picture-in-Picture_API#events)
+- [画中画事件](/zh-CN/docs/Web/API/Picture-in-Picture_API#事件)

@@ -13,7 +13,7 @@ l10n:
 
 ## 语法
 
-在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中使用事件方法名，或者设置事件处理器属性。
+在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中使用事件名称，或者设置事件处理器属性。
 
 ```js
 addEventListener("leavepictureinpicture", (event) => {});
@@ -84,4 +84,4 @@ button.onclick = () => {
 ## 参见
 
 - {{domxref("HTMLVideoElement")}}
-- {{domxref("Picture-in-Picture_API", "画中画 API")}}
+- {{domxref("Picture-in-Picture_API", "画中画 API", "", 1)}}
