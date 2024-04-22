@@ -134,7 +134,7 @@ pc.ontrack = ({ streams: [stream] }) => (videoElem.srcObject = stream);
 - {{domxref("RTCRtpTransceiver.currentDirection")}} 属性的值不是 `"stopped"`。
 - 考虑复用的 `RTCRtpSender` 从未被用于发送数据。如果收发器的 {{domxref("RTCRtpTransceiver.currentDirection", "currentDirection")}} 曾经是 `"sendrecv"` 或 `"sendonly"`，则发送器不能被复用。
 
-如果以上这些条件都满足，那么该发送器将被复用，（复用该发送器）这将导致现有的 `RTCRtpSender` 及其 `RTCRtpTransceiver` 发生以下变化：
+如果以上这些条件都满足，那么该发送器将被复用，这将导致现有的 `RTCRtpSender` 及其 `RTCRtpTransceiver` 发生以下变化：
 
 - `RTCRtpSender` 的 {{domxref("RTCRtpSender.track", "track")}} 属性被设置为指定的轨道。
 - 发送器关联的流集合被设置为传入此方法的流集合，即 `stream...`。
@@ -143,10 +143,10 @@ pc.ontrack = ({ streams: [stream] }) => (videoElem.srcObject = stream);
 
 ### 新建发送器
 
-如果没有现有的可复用发送器，则会创建一个新的。这也会导致创建必须存在的相关对象（传输器和接收器）。创建新发送器的过程将产生以下变化：
+如果没有现有的可复用发送器，则会创建一个新的。这也会导致创建必须存在的相关对象。创建新发送器的过程将产生以下变化：
 
 - 使用指定的 `track` 和 `stream` (集合) 创建新的 `RTCRtpSender`。
-- 创建一个新的 {{domxref("RTCRtpReceiver")}}，其 {{domxref("RTCRtpSender.track", "track")}} 属性是一个 **新的** {{domxref("MediaStreamTrack","MediaStreamTrack")}}（不是调用 `addTrack(track)` 时参数的 `track`）。这个媒体轨道的 {{domxref("MediaStreamTrack.kind", "kind")}} 属性被设置为与输入参数 `track` 的 `kind` 属性相匹配。
+- 创建一个新的 {{domxref("RTCRtpReceiver")}}，其 {{domxref("RTCRtpSender.track", "track")}} 属性是一个*新的* {{domxref("MediaStreamTrack","MediaStreamTrack")}}（不是调用 `addTrack(track)` 时参数的 `track`）。这个媒体轨道的 {{domxref("MediaStreamTrack.kind", "kind")}} 属性被设置为与输入参数 `track` 的 `kind` 属性相匹配。
 - 创建一个新的 {{domxref("RTCRtpTransceiver")}}，并将其与新发送器和接收器关联。
 - 新收发器的 {{domxref("RTCRtpTransceiver.direction", "direction")}} 的属性值设置为 `"sendrecv"`。
 - 新收发器被添加到 `RTCPeerConnection` 的收发器集合中。
@@ -157,8 +157,8 @@ pc.ontrack = ({ streams: [stream] }) => (videoElem.srcObject = stream);
 
 ```js
 const mediaConstraints = {
-  audio: true, // We want an audio track
-  video: true, // And we want a video track
+  audio: true, // 我们需要一个音频轨道
+  video: true, // 以及一个视频轨道
 };
 
 const desc = new RTCSessionDescription(sdp);
