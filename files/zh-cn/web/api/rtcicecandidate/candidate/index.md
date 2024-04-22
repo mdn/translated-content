@@ -19,7 +19,7 @@ l10n:
 a=candidate:4234997325 1 udp 2043278322 192.0.2.172 44323 typ host
 ```
 
-相应的 `candidate` 字符串的值将是：`"candidate:4234997325 1 udp 2043278322 192.0.2.172 44323 typ host"`。其他条件相同时，{{Glossary("user agent", "用户代理")}}将选择具有最高优先级的候选者。在上面的示例中，优先级为 `2043278322`。每个候选者属性都用单个空格字符分隔，并且按特定顺序排列。此示例候选者的属性完整列表为：
+相应的 `candidate` 字符串的值将是：`"candidate:4234997325 1 udp 2043278322 192.0.2.172 44323 typ host"`。其他条件相同时，{{Glossary("user agent", "用户代理")}}将选择具有最高{{domxref("RTCIceCandidate.priority", "优先级", "", "nocode")}}的候选者。在上面的示例中，优先级为 `2043278322`。每个候选者属性都用单个空格字符分隔，并且按特定顺序排列。此示例候选者的属性完整列表为：
 
 - {{domxref("RTCIceCandidate.foundation", "foundation")}} = 4234997325
 - {{domxref("RTCIceCandidate.component", "component")}} = `"rtp"` (数字 1 将会转化为 `"rtp"`;数字 2 则是 `"rtcp"`)
