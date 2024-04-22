@@ -38,7 +38,7 @@ l10n:
 
 在这个例子中，我们将从 <https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json> 下载 JSON 文件，并打印一些相关信息。
 
-要做到这一点，我们将向服务器发出一个 **HTTP 请求**。在 HTTP 请求中，我们向远程服务器发送一个请求信息，然后它向我们发送一个响应。在这里，我们将发送一个请求，从服务器上获得一个 JSON 文件。还记得在上一篇文章中，我们使用 {{domxref("XMLHttpRequest")}} API 进行 HTTP 请求吗？那么，在这篇文章中，我们将使用 {{domxref("fetch", "fetch()")}} API，一个现代的、基于 Promise 的、用于替代 `XMLHttpRequest` 的方法。
+要做到这一点，我们将向服务器发出一个 **HTTP 请求**。在 HTTP 请求中，我们向远程服务器发送一个请求消息，然后它向我们发送一个响应。在这里，我们将发送一个请求，从服务器上获得一个 JSON 文件。还记得在上一篇文章中，我们使用 {{domxref("XMLHttpRequest")}} API 进行 HTTP 请求吗？那么，在这篇文章中，我们将使用 {{domxref("fetch", "fetch()")}} API，一个现代的、基于 Promise 的、用于替代 `XMLHttpRequest` 的方法。
 
 把下列代码复制到你的浏览器 JavaScript 控制台中：
 
@@ -77,7 +77,7 @@ Promise { <state>: "pending" }
 
 ## 链式使用 Promise
 
-在你通过 `fetch()` API 得到一个 `Response` 对象的时候，你需要调用另一个函数来获取响应数据。在在这里，我们想获得 JSON 格式的响应数据，所以我们会调用 `Response` 对象的 {{domxref("Response/json", "json()")}} 方法。事实上，`json()` 也是异步的，因此我们必须连续调用两个异步函数。
+在你通过 `fetch()` API 得到一个 `Response` 对象的时候，你需要调用另一个函数来获取响应数据。在这里，我们想获得 JSON 格式的响应数据，所以我们会调用 `Response` 对象的 {{domxref("Response/json", "json()")}} 方法。事实上，`json()` 也是异步的，因此我们必须连续调用两个异步函数。
 
 试试这个：
 
@@ -179,11 +179,11 @@ Promise 中有一些具体的术语值得我们弄清楚。
 - **已兑现（fulfilled）**：意味着操作成功完成。当 Promise 完成时，它的 `then()` 处理函数被调用。
 - **已拒绝（rejected）**：意味着操作失败。当一个 Promise 失败时，它的 `catch()` 处理函数被调用。
 
-注意，这里的“成功”或“失败”的含义取决于所使用的 API：例如，`fetch()` 认为服务器返回一个错误（如[404 Not Found](/zh-CN/docs/Web/HTTP/Status/404)）时请求成功，但如果网络错误阻止请求被发送，则认为请求失败。
+注意，这里的“成功”或“失败”的含义取决于所使用的 API：例如，`fetch()` 认为服务器返回一个错误（如 [404 Not Found](/zh-CN/docs/Web/HTTP/Status/404)）时请求成功，但如果网络错误阻止请求被发送，则认为请求失败。
 
-有时我们用**已敲定（settled）**这个词来同时表示**已兑现（fulfilled）**和**已拒绝（rejected）**两种情况。
+有时我们用**已敲定**（settled）这个词来同时表示**已兑现**（fulfilled）和**已拒绝**（rejected）两种情况。
 
-如果一个 Promise 已敲定（settled），或者如果它被“锁定”以跟随另一个 Promise 的状态，那么它就是**已解决（resolved）**的。
+如果一个 Promise 已敲定，或者如果它被“锁定”以跟随另一个 Promise 的状态，那么它就是**已解决**（resolved）的。
 
 文章 [Let's talk about how to talk about promises](https://thenewtoys.dev/blog/2021/02/08/lets-talk-about-how-to-talk-about-promises/) 对这些术语的细节做了很好的解释。
 
@@ -377,11 +377,11 @@ const promise = fetchProducts();
 promise.then((data) => console.log(data[0].name));
 ```
 
-同样，请注意，你只能在 `async` 函数中使用 `await`，除非你的代码是 [JavaScript 模块化](/zh-CN/docs/Web/JavaScript/Guide/Modules)。这意味着你不能在普通脚本中这样做：
+同样地，请注意你只能在 `async` 函数中使用 `await`，除非你的代码是 [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)。这意味着你不能在普通脚本中这样做：
 
 ```js
 try {
-  // 仅允许在模块中在异步函数外使用 await
+  // 只有在模块中才能在异步函数之外使用 await
   const response = await fetch(
     "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
   );
