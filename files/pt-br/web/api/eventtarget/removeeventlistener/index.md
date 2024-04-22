@@ -3,7 +3,7 @@ title: EventTarget.removeEventListener()
 slug: Web/API/EventTarget/removeEventListener
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("DOM")}}
 
 Remove o event listener anteriormente registrado com {{domxref("EventTarget.addEventListener()")}}.
 

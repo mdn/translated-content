@@ -3,7 +3,7 @@ title: EventTarget()
 slug: Web/API/EventTarget/EventTarget
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("DOM")}}
 
 O construtor **`EventTarget()`** cria uma nova instância do objeto {{domxref("EventTarget")}}.
 
