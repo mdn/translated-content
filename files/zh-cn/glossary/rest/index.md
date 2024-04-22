@@ -15,5 +15,5 @@ REST 的基本概念是资源（resource），例如文件能通过明确和标�
 
 - [restapitutorial.com](https://www.restapitutorial.com/)
 - [restcookbook.com](https://restcookbook.com/)
-- [REST](https://zh.wikipedia.org/wiki/Representational_state_transfer) on Wikipedia
+- 维基百科上的[表现层状态转换](https://zh.wikipedia.org/wiki/表现层状态转换)
 - [REST Architecture](https://www.service-architecture.com/articles/web-services/representational_state_transfer_rest.html)

@@ -18,8 +18,6 @@ slug: Web/CSS/scrollbar-color
 ```css
 /* Keyword values */
 scrollbar-color: auto;
-scrollbar-color: dark;
-scrollbar-color: light;
 
 /* <color> values */
 scrollbar-color: rebeccapurple green; /* Two valid colors.

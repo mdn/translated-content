@@ -1,6 +1,8 @@
 ---
 title: <script type="importmap">
 slug: Web/HTML/Element/script/type/importmap
+l10n:
+  sourceCommit: 85ee57ef02a1cc0d104d3db2c81a4a45cb71011b
 ---
 
 {{HTMLSidebar}}
@@ -9,7 +11,7 @@ slug: Web/HTML/Element/script/type/importmap
 
 导入映射（import map）是一个 JSON 对象，其允许开发者在导入 [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)时，控制浏览器如何解析模块标识符。它提供了在 [`import` 语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/import)或 [`import()` 运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/import)中用作模块标识符的文本，其会在解析标识符时与要替换的文本之间建立映射。JSON 对象必须符合[导入映射 JSON 表示格式](#导入映射_json_表示)。
 
-导入映射用于解析静态和动态导入中的模块标识符，因此必须在使用映射表中声明的标识符导入模块的任何 `<script>` 元素之前声明和处理。注意，导入映射仅适用于在 [`import` 语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/import)或 [`import()` 运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/import)中的模块标识符；它不适用于 `<script>` 元素的 `src` 属性中指定的路径。
+导入映射用于解析静态和动态导入中的模块标识符，因此必须在使用映射表中声明的标识符导入模块的任何 `<script>` 元素之前声明和处理。注意，导入映射仅适用于在 [`import` 语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/import)或 [`import()` 运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/import)中的模块标识符；它不适用于 `<script>` 元素的 `src` 属性中指定的路径，也不适用加载到 worker 或 worklet 中的模块。
 
 有关更多信息，请参见 JavaScript 模块指南的[使用导入映射导入模块](/zh-CN/docs/Web/JavaScript/Guide/Modules#使用导入映射导入模块)部分。
 
@@ -32,7 +34,7 @@ slug: Web/HTML/Element/script/type/importmap
 
 对于导入映射 JSON 不符合[导入映射](#导入映射_json_表示)模式的其他情况，浏览器会生成控制台警告。
 
-如果 script 元素中的 `type="importmap"` 没有被处理，则会触发 [`error` 事件](/zh-CN/docs/Web/API/Element/error_event)。这是可能发生的，例如，在处理导入模块时模块已经开始加载，或页面中定义了多个导入映射。
+如果 script 元素中的 `type="importmap"` 没有被处理，则会触发 [`error` 事件](/zh-CN/docs/Web/API/HTMLElement/error_event)。这是可能发生的，例如，在处理导入模块时模块已经开始加载，或页面中定义了多个导入映射。
 
 ## 描述
 
@@ -107,7 +109,7 @@ import { name as squareName, draw } from "shapes/circle.js";
 
 如果模块标识符映射中对应几个可能匹配的模块标识符键，则将选择最具体的键（即具有较长路径/值的键）。
 
-在匹配之前，`./Foo/../js/app.js` 的模块说明符将解析为 `./js/app.js`。这意味着，即使 `./js/app.js` 的模块标识符键与模块标识符不完全相同，它们也是匹配的。
+在匹配之前，`./foo/../js/app.js` 的模块说明符将解析为 `./js/app.js`。这意味着，即使 `./js/app.js` 的模块标识符键与模块标识符不完全相同，它们也是匹配的。
 
 ### 作用域模块标识符映射
 
