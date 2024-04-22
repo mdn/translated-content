@@ -159,6 +159,6 @@ pc.addIceCandidate({ candidate: "" });
 
 - [WebRTC API](/zh-CN/docs/Web/API/WebRTC_API)
 - [信令与视频通话](/zh-CN/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
-- [WebRTC architecture overview](/zh-CN/docs/Web/API/WebRTC_API/Architecture)
+- [WebRTC 协议简介](/zh-CN/docs/Web/API/WebRTC_API/Protocols)
 - [WebRTC 连接性](/zh-CN/docs/Web/API/WebRTC_API/Connectivity)
 - [WebRTC 会话生命周期](/zh-CN/docs/Web/API/WebRTC_API/Session_lifetime)
