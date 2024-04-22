@@ -7,7 +7,7 @@ l10n:
 
 {{HTMLSidebar}}
 
-**`<div>`** [HTML](/zh-CN/docs/Web/HTML) 元素是流式内容的通用容器。它对内容或布局没有影响。除非以某种方式使用 {{glossary("CSS")}} 对其进行样式设置（例如，直接应用样式，或者其父元素应用某种布局模型，如 [Flexbox](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)），否则它对内容或布局没有影响。
+**`<div>`** [HTML](/zh-CN/docs/Web/HTML) 元素是流式内容的通用容器。它对内容或布局没有影响。除非以某种方式使用 {{glossary("CSS")}} 对其进行样式设置（例如，直接应用样式，或者其父元素应用某种布局模型，如[弹性盒子](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)），否则它对内容或布局没有影响。
 
 {{EmbedInteractiveExample("pages/tabbed/div.html","tabbed-standard")}}
 
