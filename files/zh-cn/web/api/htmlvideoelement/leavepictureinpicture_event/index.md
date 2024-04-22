@@ -54,7 +54,7 @@ button.onclick = () => {
 };
 ```
 
-使用事件处理程序 `onleavepictureinpicture`：
+使用事件处理器属性 `onleavepictureinpicture`：
 
 ```js
 const video = document.querySelector("#video");
