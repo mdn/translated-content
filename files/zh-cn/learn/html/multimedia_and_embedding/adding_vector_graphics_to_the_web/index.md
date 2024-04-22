@@ -2,7 +2,7 @@
 title: 向 web 中添加矢量图形
 slug: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: 2492742db9d7341fa74604a1b4cd97dc3c079cab
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
