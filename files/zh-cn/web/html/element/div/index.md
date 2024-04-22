@@ -11,7 +11,7 @@ l10n:
 
 {{EmbedInteractiveExample("pages/tabbed/div.html","tabbed-standard")}}
 
-作为“纯”容器，`<div>` 元素本身并不表示任何内容。相反，它用于组织内容，以便通过使用 [`class`](/zh-CN/docs/Web/HTML/Global_attributes#class) 或 [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id) 属性轻松应用样式，标记文档中以不同语言编写的部分（使用 [`lang`](/zh-CN/docs/Web/HTML/Global_attributes#lang) 属性）等等。
+作为一个“纯粹的”容器，`<div>` 元素本身并不表示任何内容。相反，它用于组织内容，以便通过使用 [`class`](/zh-CN/docs/Web/HTML/Global_attributes#class) 或 [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id) 属性轻松应用样式，标记文档中以不同语言编写的部分（使用 [`lang`](/zh-CN/docs/Web/HTML/Global_attributes#lang) 属性）等等。
 
 ## 属性
 
