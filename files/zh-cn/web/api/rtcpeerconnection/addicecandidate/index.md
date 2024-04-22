@@ -7,6 +7,8 @@ l10n:
 
 {{APIRef("WebRTC")}}
 
+{{domxref("RTCPeerConnection")}} 接口的 **`addIceCandidate()`** 方法将新的远程候选者添加到连接的远程描述中，该远程描述描述了连接的远程端的状态。
+
 当一个网站或应用程序使用 {{domxref("RTCPeerConnection")}} 通过其信令通道从远程对等端接收到一个新的 ICE 候选者时，将通过调用 **`RTCPeerConnection.addIceCandidate()`** 方法将新接收的候选者传递给浏览器的 {{Glossary("ICE")}} 代理。此方法会将这个新的远程候选者添加到描述了连接的远程端状态的 `RTCPeerConnection` 远程描述中。
 
 如果在调用 `addIceCandidate()` 方法时，`candidate` 参数缺失或者值为 `null`，那么添加的 ICE 候选者将会是一个候选结束标记（"end-of-candidates"）。如果指定对象的 {{domxref("RTCIceCandidate.candidate", "candidate")}} 属性值缺失或者为空字符串（`""`），则表示远程候选者已被传递完毕。候选结束标记通知通过属性行（a-line）值为 `end-of-candidates` 的候选者传输给远程对等端。
@@ -111,30 +113,31 @@ addIceCandidate(candidate, successCallback, failureCallback) // 已弃用
 此代码片段显示了如何通过信令通道传递 ICE 候选者。
 
 ```js
-// This example assumes that the other peer is using a signaling channel as follows:
-//
+// 本示例假设另一个对等端使用以下信令通道：
+
 // pc.onicecandidate = (event) => {
 //   if (event.candidate) {
 //     signalingChannel.send(JSON.stringify({ice: event.candidate})); // "ice" is arbitrary
 //   } else {
-//     // All ICE candidates have been sent
+//     // ICE 候选者全部发送完毕
 //   }
 // }
 
 signalingChannel.onmessage = (receivedString) => {
   const message = JSON.parse(receivedString);
   if (message.ice) {
-    // A typical value of ice here might look something like this:
+    //
+    // ICE 候选者的属性值可能如下所示：
     //
     // {candidate: "candidate:0 1 UDP 2122154243 192.0.2.43 53421 typ host", sdpMid: "0", …}
     //
-    // Pass the whole thing to addIceCandidate:
+    // 将整个 ICE 候选者信息传入给方法 addIceCandidate
 
     pc.addIceCandidate(message.ice).catch((e) => {
       console.log(`Failure during addIceCandidate(): ${e.name}`);
     });
   } else {
-    // handle other things you might be signaling, like sdp
+    // 例如，如果信令通道用于交换 SDP 信息，则可以在此处处理
   }
 };
 ```
