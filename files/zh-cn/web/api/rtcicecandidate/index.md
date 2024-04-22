@@ -48,7 +48,7 @@ l10n:
 - {{domxref("RTCIceCandidate.type", "type")}} {{ReadOnlyInline}}
   - : 表示候选者类型的字符串，该值为 [`RTCIceCandidate.type`](/zh-CN/docs/Web/API/RTCIceCandidate/type#values) 中列出的字符串之一。
 - {{domxref("RTCIceCandidate.usernameFragment", "usernameFragment")}} {{ReadOnlyInline}}
-  - : 一个包含随机生成的用户名片段（`“ice-ufrag”`）的字符串，`ICE` 与随机生成的密码（`“ice-pwd”`）一起用于消息完整性。你可以使用此字符串来验证 `ICE` 生成的代数；同一 `ICE` 进程的每一代将使用相同的用户名片段 (`usernameFragment`)，即使 `ICE` 重新启动也是如此。
+  - : 一个包含随机生成的用户名片段（`“ice-ufrag”`）的字符串，`ICE` 与随机生成的密码（`“ice-pwd”`）一起用于消息完整性。你可以使用此字符串来验证 `ICE` 生成的代数；同一 `ICE` 进程的每一代将使用相同的用户名片段（`usernameFragment`），即使 `ICE` 重新启动也是如此。
 
 ## 实例方法
 
