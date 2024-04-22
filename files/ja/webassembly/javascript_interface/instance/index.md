@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.Instance
 slug: WebAssembly/JavaScript_interface/Instance
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance
 ---
 
 {{WebAssemblySidebar}}
@@ -27,19 +26,19 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance
 ```js
 const importObject = {
   imports: {
-    imported_func: function(arg) {
+    imported_func: function (arg) {
       console.log(arg);
-    }
-  }
+    },
+  },
 };
 
-fetch('simple.wasm').then(response =>
-  response.arrayBuffer()
-).then(bytes => {
-  let mod = new WebAssembly.Module(bytes);
-  let instance = new WebAssembly.Instance(mod, importObject);
-  instance.exports.exported_func();
-})
+fetch("simple.wasm")
+  .then((response) => response.arrayBuffer())
+  .then((bytes) => {
+    let mod = new WebAssembly.Module(bytes);
+    let instance = new WebAssembly.Instance(mod, importObject);
+    instance.exports.exported_func();
+  });
 ```
 
 `Instance` を取得するには非同期で行うことを推奨します。例えば、 {{jsxref("WebAssembly.instantiateStreaming()")}} 関数を使って次のようにします。
@@ -47,14 +46,15 @@ fetch('simple.wasm').then(response =>
 ```js
 const importObject = {
   imports: {
-    imported_func: function(arg) {
+    imported_func: function (arg) {
       console.log(arg);
-    }
-  }
+    },
+  },
 };
 
-WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
-.then(obj => obj.instance.exports.exported_func());
+WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
+  (obj) => obj.instance.exports.exported_func(),
+);
 ```
 
 また、これは `exports` プロパティを使ってエクスポートされた関数にアクセスする方法も紹介しています。

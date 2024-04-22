@@ -1,13 +1,6 @@
 ---
 title: Math.pow()
 slug: Web/JavaScript/Reference/Global_Objects/Math/pow
-tags:
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/pow
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/pow
 ---
 
 {{JSRef}}
@@ -49,12 +42,12 @@ Math.pow(7, 2); // 49
 Math.pow(7, -2); // 0.02040816326530612 (1/49)
 
 // Exposants fractionnaires
-Math.pow(2, 1/2); // 1.4142135623730951 (racine carrée de 2)
+Math.pow(2, 1 / 2); // 1.4142135623730951 (racine carrée de 2)
 
 // Cas aux limites
 Math.pow(-7, 0.5); // NaN
 // (les nombres négatifs n'ont pas de racine carrée)
-Math.pow(-7, 1/3); // NaN
+Math.pow(-7, 1 / 3); // NaN
 // Nombre négatif avec une base décimale
 ```
 

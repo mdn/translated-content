@@ -1,9 +1,6 @@
 ---
 title: WebAssembly.Module()
 slug: WebAssembly/JavaScript_interface/Module
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module
-browser-compat: javascript.builtins.WebAssembly.Module
 ---
 
 {{WebAssemblySidebar}}
@@ -33,9 +30,8 @@ Dans l'exemple qui suit (voir le fichier source [`index-compile.html`](https://g
 ```js
 let worker = new Worker("wasm_worker.js");
 
-WebAssembly.compileStreaming(fetch('simple.wasm'))
-.then(mod =>
-  worker.postMessage(mod)
+WebAssembly.compileStreaming(fetch("simple.wasm")).then((mod) =>
+  worker.postMessage(mod),
 );
 ```
 
@@ -44,17 +40,17 @@ Au sein du <i lang="en">worker</i> (voir le fichier [`wasm_worker.js`](https://g
 ```js
 let importObject = {
   imports: {
-    imported_func: function(arg) {
+    imported_func: function (arg) {
       console.log(arg);
-    }
-  }
+    },
+  },
 };
 
-onmessage = function(e) {
-  console.log('module reçu depuis le thread principal');
+onmessage = function (e) {
+  console.log("module reçu depuis le thread principal");
   let mod = e.data;
 
-  WebAssembly.instantiate(mod, importObject).then(function(instance) {
+  WebAssembly.instantiate(mod, importObject).then(function (instance) {
     instance.exports.exported_func();
   });
 };

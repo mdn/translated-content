@@ -1,16 +1,6 @@
 ---
 title: IntersectionObserver.takeRecords()
 slug: Web/API/IntersectionObserver/takeRecords
-tags:
-  - API
-  - Intersection Observer
-  - Intersection Observer API
-  - IntersectionObserver
-  - Method
-  - NeedsExample
-  - Reference
-  - takeRecords
-translation_of: Web/API/IntersectionObserver/takeRecords
 ---
 
 {{APIRef("Intersection Observer API")}}

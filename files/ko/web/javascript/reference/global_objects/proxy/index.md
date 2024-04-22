@@ -21,7 +21,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Proxy
 ```js
 const target = {
   message1: "hello",
-  message2: "everyone"
+  message2: "everyone",
 };
 
 const handler1 = {};
@@ -41,13 +41,13 @@ console.log(proxy1.message2); // everyone
 ```js
 const target = {
   message1: "hello",
-  message2: "everyone"
+  message2: "everyone",
 };
 
 const handler2 = {
   get(target, prop, receiver) {
     return "world";
-  }
+  },
 };
 
 const proxy2 = new Proxy(target, handler2);
@@ -55,7 +55,7 @@ const proxy2 = new Proxy(target, handler2);
 
 대상 객체의 속성 액세스를 가로채는 {{jsxref("Global_Objects/Proxy/Proxy/get", "get()")}} 처리기를 제공했습니다.
 
-처리기 함수는 대상 객체에 대한 호출을 잡아내기 때문에 *트랩(traps)* 이라고도 부릅니다. 위의 `handler2`에 있는 매우 간단한 트랩은 모든 속성 접근자를 재정의합니다.
+처리기 함수는 대상 객체에 대한 호출을 잡아내기 때문에 _트랩(traps)_ 이라고도 부릅니다. 위의 `handler2`에 있는 매우 간단한 트랩은 모든 속성 접근자를 재정의합니다.
 
 ```js
 console.log(proxy2.message1); // world
@@ -67,7 +67,7 @@ console.log(proxy2.message2); // world
 ```js
 const target = {
   message1: "hello",
-  message2: "everyone"
+  message2: "everyone",
 };
 
 const handler3 = {
@@ -104,10 +104,8 @@ console.log(proxy3.message2); // world
 ```js
 const handler = {
   get(obj, prop) {
-    return prop in obj ?
-      obj[prop] :
-      37;
-  }
+    return prop in obj ? obj[prop] : 37;
+  },
 };
 
 const p = new Proxy({}, handler);
@@ -117,7 +115,7 @@ p.b = undefined;
 console.log(p.a, p.b);
 //  1, undefined
 
-console.log('c' in p, p.c);
+console.log("c" in p, p.c);
 //  false, 37
 ```
 
@@ -179,7 +177,9 @@ console.log(proxy.secret);
 ```js
 class Secret {
   #x = 1;
-  x() { return this.#x; }
+  x() {
+    return this.#x;
+  }
 }
 
 const aSecret = new Secret();
@@ -213,12 +213,12 @@ console.log(proxy.size); // TypeError: get size method called on incompatible Pr
 ```js
 const validator = {
   set(obj, prop, value) {
-    if (prop === 'age') {
+    if (prop === "age") {
       if (!Number.isInteger(value)) {
-        throw new TypeError('The age is not an integer');
+        throw new TypeError("The age is not an integer");
       }
       if (value > 200) {
-        throw new RangeError('The age seems invalid');
+        throw new RangeError("The age seems invalid");
       }
     }
 
@@ -227,15 +227,15 @@ const validator = {
 
     // 성공 표시
     return true;
-  }
+  },
 };
 
 const person = new Proxy({}, validator);
 
 person.age = 100;
 console.log(person.age); // 100
-person.age = 'young';    // 예외 발생
-person.age = 300;        // 예외 발생
+person.age = "young"; // 예외 발생
+person.age = 300; // 예외 발생
 ```
 
 ### 생성자 확장하기
@@ -254,7 +254,7 @@ function extend(sup, base) {
     apply(target, that, args) {
       sup.apply(that, args);
       base.apply(that, args);
-    }
+    },
   });
   return base.prototype.constructor;
 }
@@ -267,13 +267,13 @@ const Boy = extend(Person, function (name, age) {
   this.age = age;
 });
 
-Boy.prototype.gender = 'M';
+Boy.prototype.gender = "M";
 
-const Peter = new Boy('Peter', 13);
+const Peter = new Boy("Peter", 13);
 
-console.log(Peter.gender);  // "M"
-console.log(Peter.name);    // "Peter"
-console.log(Peter.age);     // 13
+console.log(Peter.gender); // "M"
+console.log(Peter.name); // "Peter"
+console.log(Peter.age); // 13
 ```
 
 ### DOM 노드 조작
@@ -285,46 +285,48 @@ console.log(Peter.age);     // 13
 `view.selected`에 HTML 요소를 할당하면 요소의 `'aria-selected'` 속성이 `true`로 설정됩니다. 그런 다음 `view.selected`에 다른 요소를 할당하면 이 요소의 `'aria-selected'` 속성이 `true`로 설정되고 이전 요소의 `'aria-selected'` 속성이 자동으로 `false`로 설정됩니다.
 
 ```js
-const view = new Proxy({
-  selected: null,
-},
-{
-  set(obj, prop, newval) {
-    const oldval = obj[prop];
+const view = new Proxy(
+  {
+    selected: null,
+  },
+  {
+    set(obj, prop, newval) {
+      const oldval = obj[prop];
 
-    if (prop === 'selected') {
-      if (oldval) {
-        oldval.setAttribute('aria-selected', 'false');
+      if (prop === "selected") {
+        if (oldval) {
+          oldval.setAttribute("aria-selected", "false");
+        }
+        if (newval) {
+          newval.setAttribute("aria-selected", "true");
+        }
       }
-      if (newval) {
-        newval.setAttribute('aria-selected', 'true');
-      }
-    }
 
-    // 값을 저장하는기본 동작
-    obj[prop] = newval;
+      // 값을 저장하는기본 동작
+      obj[prop] = newval;
 
-    // 성공 표시
-    return true;
-  }
-});
+      // 성공 표시
+      return true;
+    },
+  },
+);
 
-const item1 = document.getElementById('item-1');
-const item2 = document.getElementById('item-2');
+const item1 = document.getElementById("item-1");
+const item2 = document.getElementById("item-2");
 
 // item1 선택
 view.selected = item1;
 
-console.log(`item1: ${item1.getAttribute('aria-selected')}`);
+console.log(`item1: ${item1.getAttribute("aria-selected")}`);
 // item1: true
 
 // item2를 선택하고 item1은 선택 해제
 view.selected = item2;
 
-console.log(`item1: ${item1.getAttribute('aria-selected')}`);
+console.log(`item1: ${item1.getAttribute("aria-selected")}`);
 // item1: false
 
-console.log(`item2: ${item2.getAttribute('aria-selected')}`);
+console.log(`item2: ${item2.getAttribute("aria-selected")}`);
 // item2: true
 ```
 
@@ -333,49 +335,51 @@ console.log(`item2: ${item2.getAttribute('aria-selected')}`);
 `products` 프록시 객체는 전달된 값을 계산하고 필요한 경우 배열로 변환합니다. 또한 객체는 getter 및 setter 모두에게 `latestBrowser`라는 추가 속성을 지원합니다.
 
 ```js
-const products = new Proxy({
-  browsers: ['Internet Explorer', 'Netscape']
-},
-{
-  get(obj, prop) {
-    // 추가 속성
-    if (prop === 'latestBrowser') {
-      return obj.browsers[obj.browsers.length - 1];
-    }
-
-    // 값을 저장하는 기본 동작
-    return obj[prop];
+const products = new Proxy(
+  {
+    browsers: ["Internet Explorer", "Netscape"],
   },
-  set(obj, prop, value) {
-    // 추가 속성
-    if (prop === 'latestBrowser') {
-      obj.browsers.push(value);
+  {
+    get(obj, prop) {
+      // 추가 속성
+      if (prop === "latestBrowser") {
+        return obj.browsers[obj.browsers.length - 1];
+      }
+
+      // 값을 저장하는 기본 동작
+      return obj[prop];
+    },
+    set(obj, prop, value) {
+      // 추가 속성
+      if (prop === "latestBrowser") {
+        obj.browsers.push(value);
+        return true;
+      }
+
+      // 값이 배열이 아닌 경우 배열로 변환
+      if (typeof value === "string") {
+        value = [value];
+      }
+
+      // 값을 저장하는 기본 동작
+      obj[prop] = value;
+
+      // 성공 표시
       return true;
-    }
-
-    // 값이 배열이 아닌 경우 배열로 변환
-    if (typeof value === 'string') {
-      value = [value];
-    }
-
-    // 값을 저장하는 기본 동작
-    obj[prop] = value;
-
-    // 성공 표시
-    return true;
-  }
-});
+    },
+  },
+);
 
 console.log(products.browsers);
 //  ['Internet Explorer', 'Netscape']
 
-products.browsers = 'Firefox';
+products.browsers = "Firefox";
 // (실수로) 문자열을 넘겨줌
 
 console.log(products.browsers);
 //  ['Firefox'] <- 문제없이 값은 배열로 변환됨
 
-products.latestBrowser = 'Chrome';
+products.latestBrowser = "Chrome";
 
 console.log(products.browsers);
 //  ['Firefox', 'Chrome']
@@ -389,62 +393,64 @@ console.log(products.latestBrowser);
 이 프록시는 일부 유틸리티 기능으로 배열을 확장합니다. 보시다시피 {{jsxref("Object.defineProperties", "Object.defineProperties()")}}를 사용하지 않고도 속성을 유연하게 "정의"할 수 있습니다. 이 예제는 해당 셀로 테이블 행을 찾는 데 적용할 수 있습니다. 이 경우 대상은 {{domxref("HTMLTableElement.rows", "table.rows")}}가 됩니다.
 
 ```js
-const products = new Proxy([
-  { name: 'Firefox', type: 'browser' },
-  { name: 'SeaMonkey', type: 'browser' },
-  { name: 'Thunderbird', type: 'mailer' }
-],
-{
-  get(obj, prop) {
-    // 값을 저장하는 기본 동작. prop은 보통 int
-    if (prop in obj) {
-      return obj[prop];
-    }
-
-    // product의 수를 가져옴. products.length에 대한 별칭
-    if (prop === 'number') {
-      return obj.length;
-    }
-
-    let result;
-    const types = {};
-
-    for (const product of obj) {
-      if (product.name === prop) {
-        result = product;
+const products = new Proxy(
+  [
+    { name: "Firefox", type: "browser" },
+    { name: "SeaMonkey", type: "browser" },
+    { name: "Thunderbird", type: "mailer" },
+  ],
+  {
+    get(obj, prop) {
+      // 값을 저장하는 기본 동작. prop은 보통 int
+      if (prop in obj) {
+        return obj[prop];
       }
-      if (types[product.type]) {
-        types[product.type].push(product);
-      } else {
-        types[product.type] = [product];
+
+      // product의 수를 가져옴. products.length에 대한 별칭
+      if (prop === "number") {
+        return obj.length;
       }
-    }
 
-    // 이름으로 product 가져오기
-    if (result) {
-      return result;
-    }
+      let result;
+      const types = {};
 
-    // type으로 product 가져오기
-    if (prop in types) {
-      return types[prop];
-    }
+      for (const product of obj) {
+        if (product.name === prop) {
+          result = product;
+        }
+        if (types[product.type]) {
+          types[product.type].push(product);
+        } else {
+          types[product.type] = [product];
+        }
+      }
 
-    // types로 product 가져오기
-    if (prop === 'types') {
-      return Object.keys(types);
-    }
+      // 이름으로 product 가져오기
+      if (result) {
+        return result;
+      }
 
-    return undefined;
-  }
-});
+      // type으로 product 가져오기
+      if (prop in types) {
+        return types[prop];
+      }
 
-console.log(products[0]);          // { name: 'Firefox', type: 'browser' }
-console.log(products['Firefox']);  // { name: 'Firefox', type: 'browser' }
-console.log(products['Chrome']);   // undefined
-console.log(products.browser);     // [{ name: 'Firefox', type: 'browser' }, { name: 'SeaMonkey', type: 'browser' }]
-console.log(products.types);       // ['browser', 'mailer']
-console.log(products.number);      // 3
+      // types로 product 가져오기
+      if (prop === "types") {
+        return Object.keys(types);
+      }
+
+      return undefined;
+    },
+  },
+);
+
+console.log(products[0]); // { name: 'Firefox', type: 'browser' }
+console.log(products["Firefox"]); // { name: 'Firefox', type: 'browser' }
+console.log(products["Chrome"]); // undefined
+console.log(products.browser); // [{ name: 'Firefox', type: 'browser' }, { name: 'SeaMonkey', type: 'browser' }]
+console.log(products.types); // ['browser', 'mailer']
+console.log(products.number); // 3
 ```
 
 ### 완전한 trap 예제
@@ -462,11 +468,15 @@ const docCookies = new Proxy(docCookies, {
     return target[key] || target.getItem(key) || undefined;
   },
   set(target, key, value) {
-    if (key in target) { return false; }
+    if (key in target) {
+      return false;
+    }
     return target.setItem(key, value);
   },
   deleteProperty(target, key) {
-    if (!(key in target)) { return false; }
+    if (!(key in target)) {
+      return false;
+    }
     return target.removeItem(key);
   },
   ownKeys(target) {
@@ -476,28 +486,30 @@ const docCookies = new Proxy(docCookies, {
     return key in target || target.hasItem(key);
   },
   defineProperty(target, key, descriptor) {
-    if (descriptor && 'value' in descriptor) {
+    if (descriptor && "value" in descriptor) {
       target.setItem(key, descriptor.value);
     }
     return target;
   },
   getOwnPropertyDescriptor(target, key) {
     const value = target.getItem(key);
-    return value ? {
-      value,
-      writable: true,
-      enumerable: true,
-      configurable: false,
-    } : undefined;
+    return value
+      ? {
+          value,
+          writable: true,
+          enumerable: true,
+          configurable: false,
+        }
+      : undefined;
   },
 });
 
 /* 쿠키 테스트 */
 
-console.log(docCookies.myCookie1 = 'First value');
-console.log(docCookies.getItem('myCookie1'));
+console.log((docCookies.myCookie1 = "First value"));
+console.log(docCookies.getItem("myCookie1"));
 
-docCookies.setItem('myCookie1', 'Changed value');
+docCookies.setItem("myCookie1", "Changed value");
 console.log(docCookies.myCookie1);
 ```
 

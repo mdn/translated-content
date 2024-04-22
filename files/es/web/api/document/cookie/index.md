@@ -1,7 +1,6 @@
 ---
 title: document.cookie
 slug: Web/API/Document/cookie
-original_slug: DOM/document.cookie
 ---
 
 {{ApiRef("DOM")}}
@@ -58,7 +57,6 @@ document.cookie = "nombre=oeschger";
 document.cookie = "comida_preferida=tripa";
 function alertCookie() {
   alert(document.cookie); // visualizar: nombre=oeschger;comida favorita=tripa
-
 }
 ```
 
@@ -74,7 +72,10 @@ function alertCookie() {
 document.cookie = "test1=Hola";
 document.cookie = "test2=Mundo";
 
-var cookieValor = document.cookie.replace(/(?:(?:^|.*;\s*)test2\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+var cookieValor = document.cookie.replace(
+  /(?:(?:^|.*;\s*)test2\s*\=\s*([^;]*).*$)|^.*$/,
+  "$1",
+);
 
 function alertCookieValue() {
   alert(cookieValor);
@@ -93,9 +94,15 @@ De manera a usar el siguiente código, favor remplace todas las veces la palabra
 
 ```js
 function hazUnaVez() {
-  if (document.cookie.replace(/(?:(?:^|.*;\s*)hacerAlgoUnaSolaVez\s*\=\s*([^;]*).*$)|^.*$/, "$1") !== "true") {
+  if (
+    document.cookie.replace(
+      /(?:(?:^|.*;\s*)hacerAlgoUnaSolaVez\s*\=\s*([^;]*).*$)|^.*$/,
+      "$1",
+    ) !== "true"
+  ) {
     alert("Hacer algo aquí!");
-    document.cookie = "hacerAlgoUnaSolaVez=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+    document.cookie =
+      "hacerAlgoUnaSolaVez=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
   }
 }
 ```

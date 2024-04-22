@@ -1,7 +1,6 @@
 ---
 title: tabindex
 slug: Web/HTML/Global_attributes/tabindex
-original_slug: Web/HTML/Atributos_Globales/tabindex
 ---
 
 {{HTMLSidebar("Global_attributes")}}

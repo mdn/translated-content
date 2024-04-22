@@ -21,7 +21,9 @@ elemento = elementoBase.querySelector(seletores);
 Neste exemplo é retornado o primeiro elemento `style` que, ou não tem nenhum atributo type, ou tem o atributo type igual a `text/css`:
 
 ```js
-var el = document.body.querySelector("style[type='text/css'], style:not([type])");
+var el = document.body.querySelector(
+  "style[type='text/css'], style:not([type])",
+);
 ```
 
 ## Notas

@@ -1,8 +1,6 @@
 ---
-title: 'Location : reload()'
+title: "Location : reload()"
 slug: Web/API/Location/reload
-translation_of: Web/API/Location/reload
-browser-compat: api.Location.reload
 ---
 
 {{ APIRef("HTML DOM") }}

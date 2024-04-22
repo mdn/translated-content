@@ -1,8 +1,6 @@
 ---
 title: font-stretch
 slug: Web/CSS/font-stretch
-translation_of: Web/CSS/font-stretch
-browser-compat: css.properties.font-stretch
 ---
 
 {{CSSRef}}

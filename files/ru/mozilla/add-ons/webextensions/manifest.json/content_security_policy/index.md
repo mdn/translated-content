@@ -1,12 +1,8 @@
 ---
 title: content_security_policy
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy
-tags:
-  - Web-расширение
-  - Безопасность
-  - Расширение
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -130,6 +126,6 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/content_security_pol
 
 _Примечание: Работающие примеры демонстрируют правильное написание политики защиты содержимого. Тем не менее, расширения с политикой, включающей ключевые словами 'unsafe-eval', 'unsafe-inline', разрешающей загрузку удалённых скриптов и ресурсов, а так же blob файлов не будут допущены к распространению на addons.mozilla.org из-за значительных проблем с безопасностью._
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}

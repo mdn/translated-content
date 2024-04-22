@@ -1,14 +1,6 @@
 ---
 title: Preuve du théorème de Pythagore
 slug: Web/MathML/Examples/MathML_Pythagorean_Theorem
-tags:
-  - Débutant
-  - Education mathématique
-  - Exemple
-  - HTML5 Math
-  - MathML
-translation_of: Web/MathML/Examples/MathML_Pythagorean_Theorem
-original_slug: Web/MathML/Exemples/MathML_Theoreme_de_Pythagore
 ---
 
 Nous allons prouver le théorème de Pythagore :

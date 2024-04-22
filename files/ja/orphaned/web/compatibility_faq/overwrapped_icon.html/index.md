@@ -1,7 +1,6 @@
 ---
 title: アイコンが隣接する他のアイコンと重なってしまう
 slug: orphaned/Web/Compatibility_FAQ/Overwrapped_Icon.html
-original_slug: Web/Compatibility_FAQ/Overwrapped_Icon.html
 ---
 
 ## 概要

@@ -1,8 +1,9 @@
 ---
-title: MouseEvent.initMouseEvent()
+title: "MouseEvent: initMouseEvent() メソッド"
+short-title: initMouseEvent()
 slug: Web/API/MouseEvent/initMouseEvent
 l10n:
-  sourceCommit: a36633398f827c87eb593f9647ed00bf33fd5b34
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("UI Events")}}{{deprecated_header}}
@@ -107,9 +108,25 @@ document.body.onclick = (event) => {
 
 const simulateClick = () => {
   const event = document.createEvent("MouseEvents");
-  event.initMouseEvent("click", true, true, window, 0, 0, 0, 80, 20, false, false, false, false, 0, null);
+  event.initMouseEvent(
+    "click",
+    true,
+    true,
+    window,
+    0,
+    0,
+    0,
+    80,
+    20,
+    false,
+    false,
+    false,
+    false,
+    0,
+    null,
+  );
   document.body.dispatchEvent(event);
-}
+};
 
 simulateClick();
 ```

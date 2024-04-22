@@ -1,14 +1,6 @@
 ---
 title: Node.textContent
 slug: Web/API/Node/textContent
-tags:
-  - API
-  - Command API
-  - DOM
-  - Node
-  - Property
-  - Reference
-translation_of: Web/API/Node/textContent
 ---
 
 {{ApiRef}}
@@ -59,7 +51,7 @@ document.getElementById("block").textContent = "Это — просто текс
 //   <div id="block">Это — просто текст</div>
 ```
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

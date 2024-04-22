@@ -1,7 +1,6 @@
 ---
 title: VRDisplay.isPresenting
 slug: Web/API/VRDisplay/isPresenting
-original_slug: Web/API/VRDevice/isPresenting
 ---
 
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
@@ -17,21 +16,23 @@ original_slug: Web/API/VRDevice/isPresenting
 ## 例
 
 ```js
-function onVRExitPresent () {
+function onVRExitPresent() {
   // No sense in exiting presentation if we're not actually presenting.
   // (This may happen if we get an event like vrdisplaydeactivate when
   // we weren't presenting.)
-  if (!vrDisplay.isPresenting)
-    return;
-  vrDisplay.exitPresent().then(function () {
-    // Nothing to do because we're handling things in onVRPresentChange.
-  }, function (err) {
-    var errMsg = "exitPresent failed.";
-    if (err && err.message) {
-      errMsg += "<br/>" + err.message
-    }
-    VRSamplesUtil.addError(errMsg, 2000);
-  });
+  if (!vrDisplay.isPresenting) return;
+  vrDisplay.exitPresent().then(
+    function () {
+      // Nothing to do because we're handling things in onVRPresentChange.
+    },
+    function (err) {
+      var errMsg = "exitPresent failed.";
+      if (err && err.message) {
+        errMsg += "<br/>" + err.message;
+      }
+      VRSamplesUtil.addError(errMsg, 2000);
+    },
+  );
 }
 ```
 
@@ -49,5 +50,4 @@ function onVRExitPresent () {
 
 ## 関連情報
 
-- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — Mozilla VR チームによるデモ、ダウンロード、その他のリソース。
+- [WebVR API](/ja/docs/Web/API/WebVR_API)

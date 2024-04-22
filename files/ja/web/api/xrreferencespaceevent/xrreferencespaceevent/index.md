@@ -1,30 +1,32 @@
 ---
-title: XRReferenceSpaceEvent()
+title: "XRReferenceSpaceEvent: XRReferenceSpaceEvent() コンストラクター"
+short-title: XRReferenceSpaceEvent()
 slug: Web/API/XRReferenceSpaceEvent/XRReferenceSpaceEvent
+l10n:
+  sourceCommit: 6788d086c530ae04793a497d12863db3d8adf040
 ---
 
 {{APIRef("WebXR Device API")}}
 
 **`XRReferenceSpaceEvent()`** コンストラクターは、新しい {{domxref("XRReferenceSpaceEvent")}} オブジェクトを生成するために使用します。 これは、WebXR 参照空間オブジェクト {{domxref("XRReferenceSpace")}} の状態に関するイベントを表します。
 
-この型を使用して定義されているのは {{domxref("XRReferenceSpace.reset_event", "reset")}} イベントのみです。
-
 ## 構文
 
-```js
-let refSpaceEvent = new XRReferenceSpaceEvent(type, eventInitDict);
+```js-nolint
+new XRReferenceSpaceEvent(type, options)
 ```
 
 ### 引数
 
 - `type`
-  - : 発生したイベントタイプを示す {{domxref("DOMString")}}。 現在、これは常に `reset` です。
-- `eventInitDict`
-
-  - : イベントを構成するためのオブジェクトです。プロパティは次のとおりです。
-
-    - `referenceSpace`: イベントの発生元の {{domxref("XRReferenceSpace")}} です。
-    - `transform`: 古い座標系（このイベントによって示される変更の前のもの）を新しい座標系にマップする {{domxref("XRRigidTransform")}} です。
+  - : イベントの名前の入った文字列です。
+    大文字小文字を区別し、ブラウザーは常に `reset` を設定します。
+- `options`
+  - : オブジェクトで、 _{{domxref("Event/Event", "Event()")}} で定義されているプロパティに加え_、以下のプロパティを持ちます。
+    - `referenceSpace`
+      - : イベントの発生元の {{domxref("XRReferenceSpace")}} です。
+    - `transform`
+      - : 古い座標系（このイベントによって示される変更の前のもの）を新しい座標系にマップする {{domxref("XRRigidTransform")}} です。
 
 ### 返値
 
@@ -37,7 +39,7 @@ let refSpaceEvent = new XRReferenceSpaceEvent(type, eventInitDict);
 ```js
 let refSpaceEvent = new XRReferenceSpaceEvent("reset", {
   referenceSpace: myRefSpace,
-  transform: myTransform
+  transform: myTransform,
 });
 ```
 

@@ -17,9 +17,9 @@ JavaScript의 {{Glossary("문자열")}} 유형은 원문의 데이터를 나타�
 
 작은따옴표나 큰따옴표를 사용하여 간단한 문자열을 만들 수 있습니다:
 
-```js
-'foo'
-"bar"
+```js-nolint
+'foo';
+"bar";
 ```
 
 보다 많은 문자열을 이스케이프 시퀀스를 사용하여 만들 수 있습니다
@@ -29,7 +29,7 @@ JavaScript의 {{Glossary("문자열")}} 유형은 원문의 데이터를 나타�
 \x 뒤에 수는 [16진수](https://en.wikipedia.org/wiki/Hexadecimal)로 해석(interpreted)됩니다.
 
 ```js
-'\xA9' // "©"
+"\xA9"; // "©"
 ```
 
 #### 유니코드 이스케이프 시퀀스
@@ -37,7 +37,7 @@ JavaScript의 {{Glossary("문자열")}} 유형은 원문의 데이터를 나타�
 유니코드 이스케이프 시퀀스는 \u 다음에 적어도 네 개의 16진수 숫자(digit)를 필요로 합니다.
 
 ```js
-'\u00A9' // "©"
+"\u00A9"; // "©"
 ```
 
 #### 유니코드 코드 포인트 이스케이프
@@ -47,10 +47,10 @@ ECMAScript 6의 새로운 기능. 유니 코드 포인트 이스케이프를 사
 {{jsxref("String.fromCodePoint()")}} 나 {{jsxref("String.prototype.codePointAt()")}}를 참고하세요.
 
 ```js
-'\u{2F804}'
+"\u{2F804}";
 
 // the same with simple Unicode escapes
-'\uD87E\uDC04'
+"\uD87E\uDC04";
 ```
 
 ### 문자열 개체
@@ -77,9 +77,9 @@ eval(s2); // Returns the string "2 + 2"
 문자열 개체는 문자열의 문자 수를 나타내는 하나의 속성, 길이를 갖습니다. 예를 들어, "Hello, World!"가 13자 이므로 다음 코드는 x를 값 13으로 할당합니다. `String` 객체는 문자열에있는 UTF-16 코드 단위의 수를 나타내는 길이가 하나의 속성을 가집니다. 예를 들어, 다음 코드에서는 "Hello, World!"가 UTF-16 코드 단위로 표현되는 13개의 문자를 가지고 있기 때문에 x 값이 13이 됩니다. 배열 브래킷 스타일을 사용하여 각 코드 단위에 액세스 할 수 있습니다. 문자열은 변경 불가능한 배열과 같은 객체이기 때문에 개별 문자를 변경할 수 없습니다.
 
 ```js
-var mystring = 'Hello, World!';
+var mystring = "Hello, World!";
 var x = mystring.length;
-mystring[0] = 'L'; // This has no effect, because strings are immutable
+mystring[0] = "L"; // This has no effect, because strings are immutable
 mystring[0]; // This returns "H"
 ```
 
@@ -209,7 +209,7 @@ mystring[0]; // This returns "H"
 
 ### 다중 선 템플릿 문자열
 
-[템플릿 문자열](/en-US/docs/Web/JavaScript/Reference/template_strings)은 포함 식을 용납하는 문자열 리터럴입니다. 여러분은 그것들과 함께 다중 선 문자열 및 문자열 보간 기능을 사용할 수 있습니다.
+[템플릿 문자열](/ko/docs/Web/JavaScript/Reference/template_strings)은 포함 식을 용납하는 문자열 리터럴입니다. 여러분은 그것들과 함께 다중 선 문자열 및 문자열 보간 기능을 사용할 수 있습니다.
 
 템플릿 문자열은 작은따옴표나 큰따옴표 대신에 back-tick (\` \`) ([grave accent](https://en.wikipedia.org/wiki/Grave_accent))문자로 묶습니다. 템플릿 문자열은 자리 표시자를 포함 할 수 있습니다. 이들은 달러 기호와 중괄호로 표시됩니다. (`${expression}`)
 
@@ -218,8 +218,10 @@ mystring[0]; // This returns "H"
 소스에 삽입하는 새로운 선 문자는 템플릿 문자열의 일부입니다. 정상적인 문자열을 사용하면, 여러분은 다중 선 문자열을 얻기 위해 다음과 같은 구문을 사용해야합니다:
 
 ```js
-console.log("string text line 1\n\
-string text line 2");
+console.log(
+  "string text line 1\n\
+string text line 2",
+);
 // "string text line 1
 // string text line 2"
 ```
@@ -255,7 +257,7 @@ console.log(`Fifteen is ${a + b} and\nnot ${2 * a + b}.`);
 // not 20."
 ```
 
-자세한 내용은 [JavaScript 참조](/en-US/docs/Web/JavaScript/Reference)에서 [템플릿 문자열](/en-US/docs/Web/JavaScript/Reference/template_strings)에 대해 읽어보세요.
+자세한 내용은 [JavaScript 참조](/ko/docs/Web/JavaScript/Reference)에서 [템플릿 문자열](/ko/docs/Web/JavaScript/Reference/template_strings)에 대해 읽어보세요.
 
 ## 국제화
 
@@ -271,8 +273,14 @@ var msPerDay = 24 * 60 * 60 * 1000;
 // July 17, 2014 00:00:00 UTC.
 var july172014 = new Date(msPerDay * (44 * 365 + 11 + 197));
 
-var options = { year: "2-digit", month: "2-digit", day: "2-digit",
-                hour: "2-digit", minute: "2-digit", timeZoneName: "short" };
+var options = {
+  year: "2-digit",
+  month: "2-digit",
+  day: "2-digit",
+  hour: "2-digit",
+  minute: "2-digit",
+  timeZoneName: "short",
+};
 var americanDateTime = new Intl.DateTimeFormat("en-US", options).format;
 
 console.log(americanDateTime(july172014)); // 07/16/14, 5:00 PM PDT
@@ -283,14 +291,18 @@ console.log(americanDateTime(july172014)); // 07/16/14, 5:00 PM PDT
 {{jsxref("NumberFormat")}}개체는 통화를 위해 숫자를 서식하는것에 대해 유용하다.
 
 ```js
-var gasPrice = new Intl.NumberFormat("en-US",
-                        { style: "currency", currency: "USD",
-                          minimumFractionDigits: 3 });
+var gasPrice = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD",
+  minimumFractionDigits: 3,
+});
 
 console.log(gasPrice.format(5.259)); // $5.259
 
-var hanDecimalRMBInChina = new Intl.NumberFormat("zh-CN-u-nu-hanidec",
-                        { style: "currency", currency: "CNY" });
+var hanDecimalRMBInChina = new Intl.NumberFormat("zh-CN-u-nu-hanidec", {
+  style: "currency",
+  currency: "CNY",
+});
 
 console.log(hanDecimalRMBInChina.format(1314.25)); // ￥ 一,三一四.二五
 ```
@@ -299,7 +311,7 @@ console.log(hanDecimalRMBInChina.format(1314.25)); // ￥ 一,三一四.二五
 
 {{jsxref("Collator")}}개체는 문자열을 비교하고 구분하는 것에 대해 유용합니다.
 
-예를 들어, 실제로 독일에선 phonebook과 dictionary라는 2개의 다른 종류의 명령어들이 있습니다. 전화기록부류는 소리를 강조합니다. 그리고 구분에 앞서 다른것들은 “ä”, “ö”인것처럼 "ae", "oe"로 확장됐습니다.
+예를 들어, 실제로 독일에선 phonebook과 dictionary라는 2개의 다른 종류의 명령어들이 있습니다. 전화기록부류는 소리를 강조합니다. 그리고 구분에 앞서 다른것들은 "ä", "ö"인것처럼 "ae", "oe"로 확장됐습니다.
 
 ```js
 var names = ["Hochberg", "Hönigswald", "Holzman"];

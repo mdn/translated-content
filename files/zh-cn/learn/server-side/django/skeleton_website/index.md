@@ -1,5 +1,5 @@
 ---
-title: 'Django Tutorial Part 2: 创建网站的地基'
+title: "Django Tutorial Part 2: 创建网站的地基"
 slug: Learn/Server-side/Django/skeleton_website
 ---
 
@@ -37,7 +37,7 @@ slug: Learn/Server-side/Django/skeleton_website
 1. 使用 django-admin 工具创建工程的文件夹，基本的文件模板和工程管理脚本（**manage.py**）。
 2. 用**manage.py** 创建一个或多个应用。
 
-    > **备注：** 一个网站可能由多个部分组成，比如，主要页面，博客，wiki，下载区域等。Django 鼓励将这些部分作为分开的应用开发。如果这样的话，在需要可以在不同的工程中复用这些应用。
+   > **备注：** 一个网站可能由多个部分组成，比如，主要页面，博客，wiki，下载区域等。Django 鼓励将这些部分作为分开的应用开发。如果这样的话，在需要可以在不同的工程中复用这些应用。
 
 3. 在工程里注册新的应用。
 4. 为每个应用分配 url。
@@ -90,7 +90,7 @@ locallibrary 项目的子文件夹是整个网站的进入点：
 
 ## 创建 catalog 应用
 
-接下来，在 locallibrary 项目里，使用下面的命令创建 catalog 应用（和您项目的**manage.py**在同一个文件夹下）
+接下来，在 locallibrary 项目里，使用下面的命令创建 catalog 应用（和你项目的**manage.py**在同一个文件夹下）
 
 ```bash
 python3 manage.py startapp catalog
@@ -345,7 +345,7 @@ python3 manage.py runserver
 
 该 **catalog/** 目录包含视图，模型和应用程序其他部分的文件。你可以打开这些文件并查看样板。
 
-如上所述，管理站点的 URL 映射已经添加到项目的 **urls.py** 中。导航到浏览器中的管理区域，看看会发生什么（您可以从上面的映射中推断出正确的 URL）。
+如上所述，管理站点的 URL 映射已经添加到项目的 **urls.py** 中。导航到浏览器中的管理区域，看看会发生什么（你可以从上面的映射中推断出正确的 URL）。
 
 ## 概要
 

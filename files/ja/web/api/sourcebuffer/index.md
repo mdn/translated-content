@@ -30,7 +30,7 @@ l10n:
 - {{domxref("SourceBuffer.updating")}} {{ReadOnlyInline}}
   - : 論理値で、`SourceBuffer` が現在更新されているかどうか、つまり {{domxref("SourceBuffer.appendBuffer()")}} または {{domxref("SourceBuffer.remove()")}} の操作が現在進行中かどうかを示します。
 - {{domxref("SourceBuffer.videoTracks")}} {{ReadOnlyInline}}
-  - : `SourceBuffer` 内に現在含まれている動画トラックのリストです。。
+  - : `SourceBuffer` 内に現在含まれている動画トラックのリストです。
 
 ## インスタンスメソッド
 
@@ -80,7 +80,10 @@ if ("MediaSource" in window && MediaSource.isTypeSupported(mimeCodec)) {
   video.src = URL.createObjectURL(mediaSource);
   mediaSource.addEventListener("sourceopen", sourceOpen);
 } else {
-  console.error(`${mimeCodec} の MIME タイプまたはコーデックには対応していません`, mimeCodec);
+  console.error(
+    `${mimeCodec} の MIME タイプまたはコーデックには対応していません`,
+    mimeCodec,
+  );
 }
 
 function sourceOpen() {

@@ -1,15 +1,6 @@
 ---
 title: TouchEvent
 slug: Web/API/TouchEvent
-tags:
-  - API
-  - DOM
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-  - touch
-translation_of: Web/API/TouchEvent
 ---
 
 {{ APIRef("Touch Events") }}
@@ -131,7 +122,7 @@ _Данный интерфейс наследует свойства своих 
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

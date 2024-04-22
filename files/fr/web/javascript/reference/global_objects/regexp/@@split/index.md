@@ -1,15 +1,6 @@
 ---
 title: RegExp.prototype[@@split]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@split
-tags:
-  - Expressions rationnelles
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - RegExp
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@split
-original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/@@split
 ---
 
 {{JSRef}}
@@ -40,9 +31,9 @@ Un tableau ({{jsxref("Array")}}) dont les éléments sont les sous-chaînes de c
 Cette méthode est appelée de façon interne par la méthode {{jsxref("String.prototype.split()")}} lorsque l'argument `str` est un objet {{jsxref("RegExp")}}. Ainsi, les deux exemples qui suivent sont équivalents et le second est la version interne du premier :
 
 ```js
-'a-b-c'.split(/-/);
+"a-b-c".split(/-/);
 
-/-/[Symbol.split]('a-b-c');
+/-/[Symbol.split]("a-b-c");
 ```
 
 Cette méthode existe afin de pouvoir adapter le fonctionnement de la découpe pour les sous-classes de `RegExp`.
@@ -57,9 +48,9 @@ Cette méthode peut être utilisée comme {{jsxref("String.prototype.split()")}}
 
 ```js
 var re = /-/g;
-var str = '2016-01-02';
+var str = "2016-01-02";
 var résultat = re[Symbol.split](str);
-console.log(résultat);  // ["2016", "01", "02"]
+console.log(résultat); // ["2016", "01", "02"]
 ```
 
 ### Utiliser `@@split` avec une sous-classe
@@ -70,12 +61,12 @@ Les sous-classes de {{jsxref("RegExp")}} peuvent surcharger `[@@split]()` afin d
 class MaRegExp extends RegExp {
   [Symbol.split](str, limit) {
     var résultat = RegExp.prototype[Symbol.split].call(this, str, limit);
-    return résultat.map(x => "(" + x + ")");
+    return résultat.map((x) => "(" + x + ")");
   }
 }
 
-var re = new MaRegExp('-');
-var str = '2016-01-02';
+var re = new MaRegExp("-");
+var str = "2016-01-02";
 var résultat = str.split(re); // String.prototype.split appelle re[@@split].
 console.log(résultat); // ["(2016)", "(01)", "(02)"]
 ```

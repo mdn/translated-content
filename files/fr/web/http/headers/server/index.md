@@ -1,12 +1,6 @@
 ---
 title: Serveur
 slug: Web/HTTP/Headers/Server
-tags:
-  - HTTP
-  - Reference
-  - header
-translation_of: Web/HTTP/Headers/Server
-original_slug: Web/HTTP/Headers/Serveur
 ---
 
 {{ HTTPSidebar }}

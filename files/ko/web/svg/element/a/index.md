@@ -67,33 +67,33 @@ svg|a:active {
 
 ## 속성
 
-- {{htmlattrxref("download", "a")}}
+- [`download`](/ko/docs/Web/HTML/Element/a#download)
   - : {{Glossary("URL")}}로 이동하는 대신 URL을 다운로드하도록 브라우저에 지시하여 사용자에게 로컬 파일로 저장하라는 메시지가 표시됩니다.
     값 유형: **\<string>** ; 기본 값: 없음; 애니메이션 가능: **아니요**
 - {{SVGAttr("href")}}
   - : 하이퍼링크가 가리키는 URL 또는 URL 조각입니다.
-    값 유형: **[\<URL>](/en-US/docs/Web/SVG/Content_type#url)** ; 기본값: 없음; 애니메이션 가능: **예**
-- {{htmlattrxref("hreflang", "a")}}
+    값 유형: **[\<URL>](/ko/docs/Web/SVG/Content_type#url)** ; 기본값: 없음; 애니메이션 가능: **예**
+- [`hreflang`](/ko/docs/Web/HTML/Element/a#hreflang)
   - : 하이퍼링크가 가리키는 URL 또는 URL 조각의 사람 언어입니다.
     값 유형: **\<string>** ; 기본값: 없음; 애니메이션 가능: **예**
-- {{htmlattrxref("ping", "a")}} {{experimental_inline}}
+- [`ping`](/ko/docs/Web/HTML/Element/a#ping) {{experimental_inline}}
   - : 공백으로 구분된 URL 목록으로, 하이퍼링크를 따라갈 때 `PING` 본문이 포함된 {{HTTPMethod("POST")}} 요청이 브라우저에서 전송됩니다(백그라운드에서). 일반적으로 추적에 사용됩니다. 동일한 사용 사례를 다루는 보다 광범위하게 지원되는 기능은 {{domxref("Navigator.sendBeacon()")}}을 참조하십시오.
-    값 유형: **[\<list-of-URLs>](/en-US/docs/Web/SVG/Content_type#list-of-ts)** ; 기본값: 없음; 애니메이션 가능: **아니요**
-- {{htmlattrxref("referrerpolicy", "a")}}
+    값 유형: **[\<list-of-URLs>](/ko/docs/Web/SVG/Content_type#list-of-ts)** ; 기본값: 없음; 애니메이션 가능: **아니요**
+- [`referrerpolicy`](/ko/docs/Web/HTML/Element/a#referrerpolicy)
   - : {{Glossary("URL")}}을 가져올 때 보내는 [리퍼러](/ko/docs/Web/HTTP/Headers/Referer)입니다.
     값 유형: `no-referrer`|`no-referrer-when-downgrade`|`same-origin`|`origin`|`strict-origin`|`origin-when-cross-origin`|`strict-origin-when-cross-origin`|`unsafe-url` ; 기본 값: 없음; 애니메이션 가능: **아니요**
-- {{htmlattrxref("rel", "a")}}
+- [`rel`](/ko/docs/Web/HTML/Element/a#rel)
   - : 이 속성은 타겟 객체와 링크 객체의 관계를 지정합니다.
     값 유형: **[\<list-of-Link-Types>](/docs/Web/HTML/Link_types)** ; 기본 값: 없음; 에니메이션 가능: **예**
 - {{SVGAttr("target")}}
   - : 연결된 {{Glossary("URL")}}을 표시할 위치입니다.
     값 유형: `_self`|`_parent`|`_top`|`_blank`|**\<name>** ; 기본 값: `_self`; 에니메이션 가능: **예**
-- {{htmlattrxref("type", "a")}}
+- [`type`](/ko/docs/Web/HTML/Element/a#type)
   - : 연결된 URL의 {{Glossary("MIME type", "MIME 유형")}}입니다.
     값 유형: **\<string>** ; 기본 값: 없음; 에니메이션 가능: **예**
 - {{SVGAttr("xlink:href")}} {{deprecated_inline}}
   - : 하이퍼링크가 가리키는 URL 또는 URL 조각입니다. 이전 브라우저의 이전 버전과의 호환성을 위해 필요할 수 있습니다.
-  값 유형: **[\<URL>](/ko/docs/Web/SVG/Content_type#url)** ; 기본값: 없음; 애니메이션 가능: **예**
+    값 유형: **[\<URL>](/ko/docs/Web/SVG/Content_type#url)** ; 기본값: 없음; 애니메이션 가능: **예**
 
 ### 전역 속성
 

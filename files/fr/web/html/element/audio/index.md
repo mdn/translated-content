@@ -1,22 +1,6 @@
 ---
-title: '<audio> : l''élément audio embarqué'
+title: "<audio> : l'élément audio embarqué"
 slug: Web/HTML/Element/audio
-tags:
-  - Audio
-  - Element
-  - HTML
-  - HTML embedded content
-  - HTML5
-  - HTML:Embedded content
-  - HTML:Flow content
-  - HTML:Phrasing content
-  - Media
-  - Multimedia
-  - Reference
-  - Web
-  - sound
-translation_of: Web/HTML/Element/audio
-browser-compat: html.elements.audio
 ---
 
 {{HTMLSidebar}}
@@ -112,11 +96,12 @@ Les navigateurs ne prennent pas tous en charge les mêmes [types de fichiers](/f
 
 ```html
 <audio controls>
-  <source src="myAudio.mp3" type="audio/mpeg">
-  <source src="myAudio.ogg" type="audio/ogg">
-  <p>Votre navigateur ne prend pas en charge l'audio HTML5.
-  Voici un <a href="myAudio.mp3">lien vers le fichier audio</a>
-  à la place.</p>
+  <source src="myAudio.mp3" type="audio/mpeg" />
+  <source src="myAudio.ogg" type="audio/ogg" />
+  <p>
+    Votre navigateur ne prend pas en charge l'audio HTML5. Voici un
+    <a href="myAudio.mp3">lien vers le fichier audio</a> à la place.
+  </p>
 </audio>
 ```
 
@@ -161,11 +146,11 @@ Ainsi, on pourra utiliser un fragment de code analogue à celui qui suit pour d�
 ```js
 let elem = document.querySelector("audio");
 
-elem.audioTrackList.onaddtrack = function(event) {
+elem.audioTrackList.onaddtrack = function (event) {
   trackEditor.addTrack(event.track);
 };
 
-elem.audioTrackList.onremovetrack = function(event) {
+elem.audioTrackList.onremovetrack = function (event) {
   trackEditor.removeTrack(event.track);
 };
 ```
@@ -193,7 +178,7 @@ Cet exemple précise quelle piste audio intégrer en utilisant l'attribut `src` 
 
 ```html
 <audio controls="controls">
-  <source src="toto.wav" type="audio/wav">
+  <source src="toto.wav" type="audio/wav" />
   Votre navigateur ne prend pas en charge l'élément <code>audio</code>.
 </audio>
 ```
@@ -204,9 +189,9 @@ Dans l'exemple qui suit, le navigateur essaiera de jouer le premier fichier corr
 
 ```html
 <audio controls="">
-  <source src="toto.opus" type="audio/ogg; codecs=opus"/>
-  <source src="toto.ogg" type="audio/ogg; codecs=vorbis"/>
- <source src="toto.mp3" type="audio/mpeg"/>
+  <source src="toto.opus" type="audio/ogg; codecs=opus" />
+  <source src="toto.ogg" type="audio/ogg; codecs=vorbis" />
+  <source src="toto.mp3" type="audio/mpeg" />
 </audio>
 ```
 
@@ -238,11 +223,11 @@ Une autre bonne pratique consiste à fournir du contenu comme un lien de téléc
 
 ```html
 <audio controls>
-  <source src="monAudio.mp3" type="audio/mpeg">
-  <source src="monAudio.ogg" type="audio/ogg">
+  <source src="monAudio.mp3" type="audio/mpeg" />
+  <source src="monAudio.ogg" type="audio/ogg" />
   <p>
-    Votre navigateur ne prend pas charge l'audio HTML.
-    Voici <a href="monAudio.mp3">un lien de téléchargement</a> à la place.
+    Votre navigateur ne prend pas charge l'audio HTML. Voici
+    <a href="monAudio.mp3">un lien de téléchargement</a> à la place.
   </p>
 </audio>
 ```

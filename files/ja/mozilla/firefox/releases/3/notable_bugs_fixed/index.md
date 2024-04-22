@@ -1,7 +1,6 @@
 ---
 title: Firefox 3 で修正された重要なバグ
 slug: Mozilla/Firefox/Releases/3/Notable_bugs_fixed
-original_slug: Notable_bugs_fixed_in_Firefox_3
 l10n:
   sourceCommit: a35e5b74ecbe13a768edf765a4666fb81a5153a1
 ---

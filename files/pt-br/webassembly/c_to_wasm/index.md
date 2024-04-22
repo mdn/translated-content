@@ -59,7 +59,7 @@ Neste ponto em seu diretório de origem, você deve ter:
 
 Agora tudo o que resta é você carregar o resultado `hello.html` em um navegador que suporte WebAssembly. Ele é ativado por padrão no Firefox 52, Chrome 57, Edge 57, Opera 44.
 
-> **Nota:** Se você tentar abrir o arquivo HTML gerado (`hello.html`) diretamente de seu disco rígido local (por exemplo, `file://your_path/hello.html`), você terminará com uma mensagem de erro ao longo das linhas de `both async and sync fetching of the wasm failed.` Você precisa executar seu arquivo HTML por meio de um servidor HTTP (`http://`) — consulte [Como você configura um servidor de teste local](/pt_BR/docs/Learn/Common_questions/set_up_a_local_testing_server) Para maiores informações.
+> **Nota:** Se você tentar abrir o arquivo HTML gerado (`hello.html`) diretamente de seu disco rígido local (por exemplo, `file://your_path/hello.html`), você terminará com uma mensagem de erro ao longo das linhas de `both async and sync fetching of the wasm failed.` Você precisa executar seu arquivo HTML por meio de um servidor HTTP (`http://`) — consulte [Como você configura um servidor de teste local](/pt-BR/docs/Learn/Common_questions/set_up_a_local_testing_server) Para maiores informações.
 
 Se tudo funcionou como planejado, você deverá ver a saída "Hello world" no console do Emscripten aparecendo na página da Web e no console JavaScript do seu navegador. Parabéns, você acabou de compilar C para WebAssembly e executá-lo em seu navegador!
 ![image](helloworld.png)
@@ -94,7 +94,7 @@ Se tudo funcionou como planejado, você deverá ver a saída "Hello world" no co
 
 4. Agora vamos executar este exemplo. O comando acima terá gerado `hello2.html`, que terá praticamente o mesmo conteúdo do modelo com algum código de cola adicionado para carregar o wasm gerado, executá-lo etc. Abra-o em seu navegador e você verá a mesma saída do último exemplo.
 
-> **Observação:** Você pode especificar a saída apenas do arquivo JavaScript "cola"* em vez do HTML completo especificando um arquivo .js em vez de um arquivo HTML no `-o` flag, e.g. `emcc -o hello2.js hello2.c -O3`. Você poderia então construir seu HTML personalizado completamente do zero, embora esta seja uma abordagem avançada; geralmente é mais fácil usar o modelo HTML fornecido.
+> **Observação:** Você pode especificar a saída apenas do arquivo JavaScript "cola" em vez do HTML completo especificando um arquivo .js em vez de um arquivo HTML no `-o` flag, e.g. `emcc -o hello2.js hello2.c -O3`. Você poderia então construir seu HTML personalizado completamente do zero, embora esta seja uma abordagem avançada; geralmente é mais fácil usar o modelo HTML fornecido.
 >
 > - O Emscripten requer uma grande variedade de código JavaScript "cola" para lidar com alocação de memória, vazamentos de memória e uma série de outros problemas
 
@@ -155,7 +155,7 @@ Se você tiver uma função definida em seu código C que deseja chamar conforme
        "myFunction", // name of C function
        null, // return type
        null, // argument types
-       null // arguments
+       null, // arguments
      );
    });
    ```

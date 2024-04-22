@@ -1,7 +1,6 @@
 ---
 title: SVGRectElement
 slug: Web/API/SVGRectElement
-translation_of: Web/API/SVGRectElement
 ---
 
 {{APIRef("SVG")}}
@@ -31,7 +30,7 @@ _Cette interface hérite aussi des propriétés de_ _{{domxref("SVGGeometryEleme
 
 ## Méthode
 
-*Cette interface n'implémente pas de méthodes spécifiques mais elle hérite des méthodes parentes de [`SVGGeometryElement`](/fr/docs/Web/API/SVGGeometryElement).*
+_Cette interface n'implémente pas de méthodes spécifiques mais elle hérite des méthodes parentes de [`SVGGeometryElement`](/fr/docs/Web/API/SVGGeometryElement)._
 
 ## Spécifications
 

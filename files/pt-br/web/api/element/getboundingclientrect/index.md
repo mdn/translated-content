@@ -29,11 +29,17 @@ Scripts que requerem uma alta compatibilidade cross-browser podem usar `window.p
 
 ```js
 // Para o scrollX
-(((t = document.documentElement) || (t = document.body.parentNode))
-  && typeof t.ScrollLeft == 'number' ? t : document.body).ScrollLeft
-// Para o scrollY
-(((t = document.documentElement) || (t = document.body.parentNode))
-  && typeof t.ScrollTop == 'number' ? t : document.body).ScrollTop
+(((t = document.documentElement) || (t = document.body.parentNode)) &&
+typeof t.ScrollLeft == "number"
+  ? t
+  : document.body
+).ScrollLeft(
+  // Para o scrollY
+  ((t = document.documentElement) || (t = document.body.parentNode)) &&
+    typeof t.ScrollTop == "number"
+    ? t
+    : document.body,
+).ScrollTop;
 ```
 
 ## Exemplo
@@ -43,21 +49,13 @@ Scripts que requerem uma alta compatibilidade cross-browser podem usar `window.p
 var rect = obj.getBoundingClientRect();
 ```
 
-## Especificaçōes
+## Especificações
 
-| Especificação                                                                                                                        | Status                           | Comentário        |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------- |
-| {{SpecName("CSSOM View", "#dom-element-getboundingclientrect", "Element.getBoundingClientRect()")}} | {{Spec2("CSSOM View")}} | Definiçāo Inicial |
+{{Specifications}}
 
-### Notas
+## Compatibilidade com navegadores
 
-`getBoundingClientRect()` foi primeiramente introduzida no modelo de objeto MS IE DHTML.
-
-O valor de retorno de `getBoundingClientRect()` é [frozen](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze).
-
-## Compatibilidade
-
-{{Compat("api.Element.getBoundingClientRect")}}
+{{Compat}}
 
 ## Veja também
 

@@ -77,7 +77,7 @@ console.log([4, 6, 7, 12].findIndex(isPrime)); // 2
 ```js
 const fruits = ["apple", "banana", "cantaloupe", "blueberries", "grapefruit"];
 
-const index = fruits.findIndex(fruit => fruit === "blueberries");
+const index = fruits.findIndex((fruit) => fruit === "blueberries");
 
 console.log(index); // 3
 console.log(fruits[index]); // blueberries
@@ -88,9 +88,9 @@ console.log(fruits[index]); // blueberries
 ```js
 // https://tc39.github.io/ecma262/#sec-array.prototype.findIndex
 if (!Array.prototype.findIndex) {
-  Object.defineProperty(Array.prototype, 'findIndex', {
-    value: function(predicate) {
-     // 1. Let O be ? ToObject(this value).
+  Object.defineProperty(Array.prototype, "findIndex", {
+    value: function (predicate) {
+      // 1. Let O be ? ToObject(this value).
       if (this == null) {
         throw new TypeError('"this" is null or not defined');
       }
@@ -101,8 +101,8 @@ if (!Array.prototype.findIndex) {
       var len = o.length >>> 0;
 
       // 3. If IsCallable(predicate) is false, throw a TypeError exception.
-      if (typeof predicate !== 'function') {
-        throw new TypeError('predicate must be a function');
+      if (typeof predicate !== "function") {
+        throw new TypeError("predicate must be a function");
       }
 
       // 4. If thisArg was supplied, let T be thisArg; else let T be undefined.
@@ -127,12 +127,12 @@ if (!Array.prototype.findIndex) {
 
       // 7. Return -1.
       return -1;
-    }
+    },
   });
 }
 ```
 
-如果您需要相容過時的不支援 [`Object.defineProperty`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) 的 JavaScript 引擎，最好不要使用 polyfill 來填充 `Array.prototype` 方法，因為無法使它們成為不可枚舉的（non-enumerable）屬性。
+如果你需要相容過時的不支援 [`Object.defineProperty`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) 的 JavaScript 引擎，最好不要使用 polyfill 來填充 `Array.prototype` 方法，因為無法使它們成為不可枚舉的（non-enumerable）屬性。
 
 ## 規範
 

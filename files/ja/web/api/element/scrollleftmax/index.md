@@ -1,17 +1,18 @@
 ---
-title: Element.scrollLeftMax
+title: "Element: scrollLeftMax プロパティ"
+short-title: scrollLeftMax
 slug: Web/API/Element/scrollLeftMax
+l10n:
+  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
 {{APIRef("DOM")}}{{Non-standard_header}}
 
 **`Element.scrollLeftMax`** は読み取り専用のプロパティで、この要素で可能な最大の左スクロールオフセットを表す数値を返します。
 
-## 構文
+## 値
 
-```js
-var pxl = element.scrollLeftMax;
-```
+数値です。
 
 ## 仕様書
 

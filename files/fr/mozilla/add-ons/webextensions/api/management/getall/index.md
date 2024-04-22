@@ -1,18 +1,9 @@
 ---
 title: management.getAll()
 slug: Mozilla/Add-ons/WebExtensions/API/management/getAll
-tags:
-  - API
-  - Add-ons
-  - Méthode
-  - Reference
-  - WebExtensions
-  - getAll
-  - management
-translation_of: Mozilla/Add-ons/WebExtensions/API/management/getAll
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Récupère un ensemble d'objets {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}}, un pour chaque extension installé.
 
@@ -25,7 +16,7 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 ## Syntaxe
 
 ```js
-var gettingAll = browser.management.getAll()
+var gettingAll = browser.management.getAll();
 ```
 
 ### Paramètres

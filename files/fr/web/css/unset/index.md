@@ -1,12 +1,6 @@
 ---
 title: unset
 slug: Web/CSS/unset
-tags:
-  - CSS
-  - Mot-clé
-  - Reference
-  - Web
-translation_of: Web/CSS/unset
 ---
 
 {{CSSRef}}

@@ -31,74 +31,76 @@ elements = document.getElementsByTagNameNS(namespace, name)
 
 ```html
 <html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>getElementsByTagNameNS example</title>
 
-<head>
-<title>getElementsByTagNameNS example</title>
+    <script type="text/javascript">
+      function getAllParaElems() {
+        var allParas = document.getElementsByTagNameNS(
+          "http://www.w3.org/1999/xhtml",
+          "p",
+        );
 
-<script type="text/javascript">
+        var num = allParas.length;
 
-function getAllParaElems()
-{
-  var allParas = document.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "p");
+        alert("There are " + num + " &lt;p&gt; elements in this document");
+      }
 
-  var num = allParas.length;
+      function div1ParaElems() {
+        var div1 = document.getElementById("div1");
+        var div1Paras = div1.getElementsByTagNameNS(
+          "http://www.w3.org/1999/xhtml",
+          "p",
+        );
 
-  alert("There are " + num + " &lt;p&gt; elements in this document");
-}
+        var num = div1Paras.length;
 
+        alert("There are " + num + " &lt;p&gt; elements in div1 element");
+      }
 
-function div1ParaElems()
-{
-  var div1 = document.getElementById("div1")
-  var div1Paras = div1.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "p");
+      function div2ParaElems() {
+        var div2 = document.getElementById("div2");
+        var div2Paras = div2.getElementsByTagNameNS(
+          "http://www.w3.org/1999/xhtml",
+          "p",
+        );
 
-  var num = div1Paras.length;
+        var num = div2Paras.length;
 
-  alert("There are " + num + " &lt;p&gt; elements in div1 element");
-}
+        alert("There are " + num + " &lt;p&gt; elements in div2 element");
+      }
+    </script>
+  </head>
 
+  <body style="border: solid green 3px">
+    <p>Some outer text</p>
+    <p>Some outer text</p>
 
-function div2ParaElems()
-{
-  var div2 = document.getElementById("div2")
-  var div2Paras = div2.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "p");
+    <div id="div1" style="border: solid blue 3px">
+      <p>Some div1 text</p>
+      <p>Some div1 text</p>
+      <p>Some div1 text</p>
 
-  var num = div2Paras.length;
-
-  alert("There are " + num + " &lt;p&gt; elements in div2 element");
-}
-
-</script>
-</head>
-
-<body style="border: solid green 3px">
-<p>Some outer text</p>
-<p>Some outer text</p>
-
-  <div id="div1" style="border: solid blue 3px">
-    <p>Some div1 text</p>
-    <p>Some div1 text</p>
-    <p>Some div1 text</p>
-
-    <div id="div2" style="border: solid red 3px">
-    <p>Some div2 text</p>
-    <p>Some div2 text</p>
+      <div id="div2" style="border: solid red 3px">
+        <p>Some div2 text</p>
+        <p>Some div2 text</p>
+      </div>
     </div>
-  </div>
 
-<p>Some outer text</p>
-<p>Some outer text</p>
+    <p>Some outer text</p>
+    <p>Some outer text</p>
 
-<button onclick="getAllParaElems();">
- show all p elements in document</button><br />
+    <button onclick="getAllParaElems();">show all p elements in document</button
+    ><br />
 
-<button onclick="div1ParaElems();">
- show all p elements in div1 element</button><br />
+    <button onclick="div1ParaElems();">
+      show all p elements in div1 element</button
+    ><br />
 
-<button onclick="div2ParaElems();">
- show all p elements in div2 element</button>
-
-</body>
+    <button onclick="div2ParaElems();">
+      show all p elements in div2 element
+    </button>
+  </body>
 </html>
 ```
 
@@ -107,21 +109,27 @@ function div2ParaElems()
 要求されたブラウザーが XPath に対応していない場合、他のアプローチ (DOM のすべての子要素をたどって、すべての @xmlns インスタンスで識別する、など) で要求された局所名および名前空間を持つすべてのタグを検索する必要がありますが、 XPath の方がはるかに高速です。 (Explorer に対応するためには、[このラッパークラス](http://www.davidflanagan.com/javascript5/display.php?n=21-10&f=21/10.js)のように、以下の関数で XPath の代わりに XPath のラッパーを呼び出すことができます (Explorer は異なる API を持つ XPath に対応しています)。
 
 ```js
-function getElementsByTagNameNSWrapper (ns, elName, doc, context) {
- if (!doc) {
-  doc = document;
- }
- if (!context) {
-  context = doc;
- }
+function getElementsByTagNameNSWrapper(ns, elName, doc, context) {
+  if (!doc) {
+    doc = document;
+  }
+  if (!context) {
+    context = doc;
+  }
 
- var result = doc.evaluate('//*[local-name()="'+elName+'" and namespace-uri() = "'+ns+'"]', context, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
+  var result = doc.evaluate(
+    '//*[local-name()="' + elName + '" and namespace-uri() = "' + ns + '"]',
+    context,
+    null,
+    XPathResult.ORDERED_NODE_SNAPSHOT_TYPE,
+    null,
+  );
 
-        var a = [];
-        for(var i = 0; i < result.snapshotLength; i++) {
-            a[i] = result.snapshotItem(i);
-        }
-        return a;
+  var a = [];
+  for (var i = 0; i < result.snapshotLength; i++) {
+    a[i] = result.snapshotItem(i);
+  }
+  return a;
 }
 ```
 

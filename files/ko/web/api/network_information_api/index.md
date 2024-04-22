@@ -12,7 +12,8 @@ slug: Web/API/Network_Information_API
 이 예제는 사용자의 연결상태 변화를 감시합니다. 사용자가 비싼 망에서 싼 망으로 이동할 때 사용자가 추가적인 비용을 지불하지 않게 하기 위해서 전송량을 감소시키는 등과 같은 행동을 할 수 있게 앱이 경고를 하는 일과 비슷합니다.
 
 ```js
-var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+var connection =
+  navigator.connection || navigator.mozConnection || navigator.webkitConnection;
 
 function updateConnectionStatus() {
   alert("Connection bandwidth: " + connection.bandwidth + " MB/s");

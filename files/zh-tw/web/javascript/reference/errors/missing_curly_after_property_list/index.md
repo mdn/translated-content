@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: missing } after property list'
+title: "SyntaxError: missing } after property list"
 slug: Web/JavaScript/Reference/Errors/Missing_curly_after_property_list
 ---
 
@@ -17,7 +17,7 @@ SyntaxError: missing } after property list
 
 ## 何處出錯?
 
-在物件初始化時，語法錯誤。 實際上可能遺漏一個大括號或是逗號。 例如， 同時檢查大括弧以及逗號是否以正確的順序關閉。 縮排或是有規則的排序代碼是有幫助您找出複雜的代碼錯誤。
+在物件初始化時，語法錯誤。 實際上可能遺漏一個大括號或是逗號。 例如， 同時檢查大括弧以及逗號是否以正確的順序關閉。 縮排或是有規則的排序代碼是有幫助你找出複雜的代碼錯誤。
 
 ## 範例
 
@@ -39,7 +39,7 @@ Correct would be:
 var obj = {
   a: 1,
   b: { myProp: 2 },
-  c: 3
+  c: 3,
 };
 ```
 

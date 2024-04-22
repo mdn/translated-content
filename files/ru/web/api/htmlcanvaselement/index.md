@@ -1,15 +1,6 @@
 ---
 title: HTMLCanvasElement
 slug: Web/API/HTMLCanvasElement
-tags:
-  - API
-  - Canvas
-  - HTML DOM
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-translation_of: Web/API/HTMLCanvasElement
 ---
 
 {{APIRef("Canvas API")}}
@@ -21,11 +12,11 @@ translation_of: Web/API/HTMLCanvasElement
 _Наследуются от родителя,_ _{{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLCanvasElement.height")}}
-  - : Положительное целое число, отражающее HTML-атрибут {{htmlattrxref("height", "canvas")}} элемента {{HTMLElement("canvas")}} (воспринимается в пикселях CSS). Если атрибут не определён или имеет некорректное значение (например отрицательное), используется значение по умолчанию `— 150`.
+  - : Положительное целое число, отражающее HTML-атрибут [`height`](/ru/docs/Web/HTML/Element/canvas#height) элемента {{HTMLElement("canvas")}} (воспринимается в пикселях CSS). Если атрибут не определён или имеет некорректное значение (например отрицательное), используется значение по умолчанию `— 150`.
 - {{domxref("HTMLCanvasElement.mozOpaque")}} {{non-standard_inline}}
-  - : Объект {{jsxref("Boolean")}}, отражающий HTML-атрибут {{htmlattrxref("moz-opaque", "canvas")}} элемента {{HTMLElement("canvas")}}. Сообщает холсту, будет ли присутствовать прозрачность. Если холсту известно, что прозрачность не используется, отрисовка может быть оптимизирована.
+  - : Объект {{jsxref("Boolean")}}, отражающий HTML-атрибут [`moz-opaque`](/ru/docs/Web/HTML/Element/canvas#moz-opaque) элемента {{HTMLElement("canvas")}}. Сообщает холсту, будет ли присутствовать прозрачность. Если холсту известно, что прозрачность не используется, отрисовка может быть оптимизирована.
 - {{domxref("HTMLCanvasElement.width")}}
-  - : Положительное целое число, отражающее HTML-атрибут {{htmlattrxref("width", "canvas")}} элемента {{HTMLElement("canvas")}} (воспринимается в пикселях CSS). Если атрибут не определён или имеет некорректное значение (например отрицательное), используется значение по умолчанию `— 300`.
+  - : Положительное целое число, отражающее HTML-атрибут [`width`](/ru/docs/Web/HTML/Element/canvas#width) элемента {{HTMLElement("canvas")}} (воспринимается в пикселях CSS). Если атрибут не определён или имеет некорректное значение (например отрицательное), используется значение по умолчанию `— 300`.
 - {{domxref("HTMLCanvasElement.mozPrintCallback")}}{{non-standard_inline}}
   - : Is a `function` that is Initially null, Web content can set this to a JavaScript function that will be called if the page is printed. This function can then redraw the canvas at a higher resolution that is suitable for the printer being used. [See this blog post.](https://blog.mozilla.org/labs/2012/09/a-new-way-to-control-printing-output/)
 
@@ -46,16 +37,11 @@ _Наследуются от родителя,_ _{{domxref("HTMLElement")}}._
 - {{domxref("HTMLCanvasElement.mozGetAsFile()")}} {{non-standard_inline}} {{deprecated_inline}}
   - : Возвращает объект {{domxref("File")}} представляющий картинку, которая содержится в холсте. This file is a memory-based file, with the specified `name`. Если тип не указан, используется `image/png`.
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                                                                        | Status                                               | Comment                                                                                                                                                                                                                 |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Media Capture DOM Elements', '#html-media-element-media-capture-extensions', 'HTMLCanvasElement')}} | {{Spec2('Media Capture DOM Elements')}} | Adds the method `captureStream()`.                                                                                                                                                                                      |
-| {{SpecName('HTML WHATWG', "#the-canvas-element", "HTMLCanvasElement")}}                                                     | {{Spec2('HTML WHATWG')}}                     | The method `getContext()` now returns a {{domxref("RenderingContext")}} rather than an opaque `object`. The methods `probablySupportsContext()`, `setContext()` and `transferControlToProxy()` have been added. |
-| {{SpecName('HTML5.1', "scripting-1.html#the-canvas-element", "HTMLCanvasElement")}}                                     | {{Spec2('HTML5.1')}}                         |                                                                                                                                                                                                                         |
-| {{SpecName('HTML5 W3C', "scripting-1.html#the-canvas-element", "HTMLCanvasElement")}}                                     | {{Spec2('HTML5 W3C')}}                         | Initial definition.                                                                                                                                                                                                     |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

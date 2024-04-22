@@ -1,8 +1,6 @@
 ---
 title: Выравнивание элементов во Flex контейнере
 slug: Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container
-translation_of: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
-original_slug: Web/CSS/CSS_Flexible_Box_Layout/Выравнивание_элементов_в_Flex_контейнере
 ---
 
 {{CSSRef}}
@@ -24,7 +22,7 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Выравнивание_элем
 - {{cssxref("justify-content")}} — управляет выравниванием элементов по главной оси.
 - {{cssxref("align-items")}} — управляет выравниванием элементов по перекрёстной оси.
 - {{cssxref("align-self")}} — управляет выравниванием конкретного flex элемента по перекрёстной оси.
-- {{cssxref("align-content")}} — описывается в спецификации как “упаковка flex строк”; управляет промежутками между flex строками по перекрёстной оси.
+- {{cssxref("align-content")}} — описывается в спецификации как "упаковка flex строк"; управляет промежутками между flex строками по перекрёстной оси.
 
 Также будет рассмотрены авто-отступы для выравнивания элементов во flexbox.
 
@@ -58,7 +56,7 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Выравнивание_элем
 
 Свойство `align-items` устанавливает `align-self` для всех flex элементов как для группы. Это означает, что можно явно указать значение `align-self` для конкретного элемента. Свойство `align-self` может принимать все те же значения, что и свойство `align-items`, а так же значение `auto`, которое сбросит значение, установленное в flex контейнере.
 
-В следующем примере, у flex контейнера установлено `align-items: flex-start`, означающее, что все элементы будут выравнены по началу перекрёстной оси. У первого элемента с помощью `first-child` селектора установлено `align-items: stretch`; у следующего элемента с классом `selected` установлено `align-self: center`. Можно изменять значение `align-items` на контейнере или `align-self` на элементе для изучения их работы.8н
+В следующем примере, у flex контейнера установлено `align-items: flex-start`, означающее, что все элементы будут выравнены по началу перекрёстной оси. У первого элемента с помощью селектора `first-child` установлено `align-self: stretch`; у следующего элемента с классом `selected` установлено `align-self: center`. Можно изменять значение `align-items` на контейнере или `align-self` на элементе для изучения их работы.8н
 
 {{EmbedGHLiveSample("css-examples/flexbox/alignment/align-self.html", '100%', 650)}}
 

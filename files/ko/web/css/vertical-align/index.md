@@ -53,7 +53,7 @@ vertical-align: unset;
 다음 값은 요소를 부모 요소에 대해 수직으로 정렬합니다.
 
 - `baseline`
-  - : 부모의 baseline에 맞추어 해당 엘리먼트의 baseline 을 정렬합니다. 몇몇 [replaced elements](/en-US/docs/Web/CSS/Replaced_element)의 베이스라인은 예를들면{{HTMLElement("textarea")}}은 HTML 명세에 정의되어 있지 않으므로, 이 키워드는 브라우저마다 다른 결과를 보여줍니다.
+  - : 부모의 baseline에 맞추어 해당 엘리먼트의 baseline 을 정렬합니다. 몇몇 [replaced elements](/ko/docs/Web/CSS/Replaced_element)의 베이스라인은 예를들면{{HTMLElement("textarea")}}은 HTML 명세에 정의되어 있지 않으므로, 이 키워드는 브라우저마다 다른 결과를 보여줍니다.
 - `sub`
   - : 해당 엘리먼트의 baseline을 부모의 subscript-baseline으로 정렬합니다.
 - `super`
@@ -108,18 +108,39 @@ Baseline이 없는 엘리먼트에 대해서는 bottom margin edge가 baseline�
 #### HTML
 
 ```html
-<div>An <img src="frame_image.svg" alt="link" width="32" height="32" /> image with a default alignment.</div>
-<div>An <img class="top" src="frame_image.svg" alt="link" width="32" height="32" /> image with a text-top alignment.</div>
-<div>An <img class="bottom" src="frame_image.svg" alt="link" width="32" height="32" /> image with a text-bottom alignment.</div>
-<div>An <img class="middle" src="frame_image.svg" alt="link" width="32" height="32" /> image with a middle alignment.</div>
+<div>
+  An <img src="frame_image.svg" alt="link" width="32" height="32" /> image with
+  a default alignment.
+</div>
+<div>
+  An
+  <img class="top" src="frame_image.svg" alt="link" width="32" height="32" />
+  image with a text-top alignment.
+</div>
+<div>
+  An
+  <img class="bottom" src="frame_image.svg" alt="link" width="32" height="32" />
+  image with a text-bottom alignment.
+</div>
+<div>
+  An
+  <img class="middle" src="frame_image.svg" alt="link" width="32" height="32" />
+  image with a middle alignment.
+</div>
 ```
 
 #### CSS
 
 ```css
-img.top { vertical-align: text-top; }
-img.bottom { vertical-align: text-bottom; }
-img.middle { vertical-align: middle; }
+img.top {
+  vertical-align: text-top;
+}
+img.bottom {
+  vertical-align: text-bottom;
+}
+img.middle {
+  vertical-align: middle;
+}
 ```
 
 ### 결과
@@ -132,20 +153,20 @@ img.middle { vertical-align: middle; }
 
 ```html
 <p>
-top:         <img style="vertical-align: top" src="star.png"/>
-middle:      <img style="vertical-align: middle" src="star.png"/>
-bottom:      <img style="vertical-align: bottom" src="star.png"/>
-super:       <img style="vertical-align: super" src="star.png"/>
-sub:         <img style="vertical-align: sub" src="star.png"/>
+  top: <img style="vertical-align: top" src="star.png" /><br />
+  middle: <img style="vertical-align: middle" src="star.png" /><br />
+  bottom: <img style="vertical-align: bottom" src="star.png" /><br />
+  super: <img style="vertical-align: super" src="star.png" /><br />
+  sub: <img style="vertical-align: sub" src="star.png" /><br />
 </p>
 
 <p>
-text-top:    <img style="vertical-align: text-top" src="star.png"/>
-text-bottom: <img style="vertical-align: text-bottom" src="star.png"/>
-0.2em:       <img style="vertical-align: 0.2em" src="star.png"/>
--1em:        <img style="vertical-align: -1em" src="star.png"/>
-20%:         <img style="vertical-align: 20%" src="star.png"/>
--100%:       <img style="vertical-align: -100%" src="star.png"/>
+  text-top: <img style="vertical-align: text-top" src="star.png" /><br />
+  text-bottom: <img style="vertical-align: text-bottom" src="star.png" /><br />
+  0.2em: <img style="vertical-align: 0.2em" src="star.png" /><br />
+  -1em: <img style="vertical-align: -1em" src="star.png" /><br />
+  20%: <img style="vertical-align: 20%" src="star.png" /><br />
+  -100%: <img style="vertical-align: -100%" src="star.png" /><br />
 </p>
 ```
 
@@ -160,7 +181,7 @@ img {
 
 p {
   height: 3em;
-  padding: 0 .5em;
+  padding: 0 0.5em;
   font-family: monospace;
   text-decoration: underline overline;
   margin-left: auto;
@@ -185,10 +206,14 @@ p {
     <td style="vertical-align: middle">middle</td>
     <td style="vertical-align: bottom">bottom</td>
     <td>
-      <p>There is a theory which states that if ever anyone discovers exactly
-      what the Universe is for and why it is here, it will instantly disappear and
-      be replaced by something even more bizarre and inexplicable.</p>
-      <p>There is another theory which states that this has already happened.</p>
+      <p>
+        There is a theory which states that if ever anyone discovers exactly
+        what the Universe is for and why it is here, it will instantly disappear
+        and be replaced by something even more bizarre and inexplicable.
+      </p>
+      <p>
+        There is another theory which states that this has already happened.
+      </p>
     </td>
   </tr>
 </table>
@@ -203,7 +228,9 @@ table {
   width: 80%;
 }
 
-table, th, td {
+table,
+th,
+td {
   border: 1px solid black;
 }
 

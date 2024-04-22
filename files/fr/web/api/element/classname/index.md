@@ -1,13 +1,6 @@
 ---
 title: element.className
 slug: Web/API/Element/className
-tags:
-  - API
-  - Classe
-  - DOM
-  - Element
-  - Propriétés
-translation_of: Web/API/Element/className
 ---
 
 {{APIRef("DOM")}}
@@ -26,12 +19,12 @@ elementNodeReference.className = cName;
 ## Exemple
 
 ```js
-let elm = document.getElementById('item');
+let elm = document.getElementById("item");
 
-if(elm.className === 'active'){
-    elm.className = 'inactive';
+if (elm.className === "active") {
+  elm.className = "inactive";
 } else {
-    elm.className = 'active';
+  elm.className = "active";
 }
 ```
 
@@ -42,7 +35,7 @@ Le nom `className` est utilisé pour cette propriété au lieu de `class` à cau
 `className` peut être une instance de {{domxref("SVGAnimatedString")}} si l'`element` est un {{domxref("SVGElement")}}. Dans ce cas là, l'usage de `className` ne fonctionnera pas, il sera donc préférable d'utiliser {{domxref("Element.getAttribute")}} et {{domxref("Element.setAttribute")}} si vous utilisez des élements SVG.
 
 ```js
-elm.setAttribute('class', elm.getAttribute('class'))
+elm.setAttribute("class", elm.getAttribute("class"));
 ```
 
 ## Spécifications

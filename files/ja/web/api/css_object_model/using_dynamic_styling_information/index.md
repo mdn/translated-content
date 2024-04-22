@@ -54,7 +54,7 @@ CSS の構文を使って文書のスタイルを変更したい場合は、ル�
 具体的な要素のスタイルを変更するには、スタイル設定したい要素に対して以下の例を適用します。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -80,13 +80,10 @@ CSS の構文を使って文書のスタイルを変更したい場合は、ル�
 
   <body>
     <!-- スタイルを変える要素のオブジェクトとして 'this' を渡す -->
-    <p id="p1" onclick="alterStyle(this);">
-     クリックして背景色を変更
-    </p>
+    <p id="p1" onclick="alterStyle(this);">クリックして背景色を変更</p>
 
     <!-- スタイルを変える要素の ID 'p1' を渡す -->
     <button onclick="resetStyle('p1');">背景色をリセット</button>
-
   </body>
 </html>
 ```
@@ -105,7 +102,7 @@ CSS の構文を使って文書のスタイルを変更したい場合は、ル�
 この記事で例示した CSS プロパティに限らず、 `style` オブジェクトを通して要素のスタイルを個別に操作できるという点が重要です。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -139,8 +136,8 @@ CSS の構文を使って文書のスタイルを変更したい場合は、ル�
 なお、要素のスタイルを変更するには、その要素の参照を取得し、その要素の [`setAttribute`](/ja/docs/Web/API/Element/setAttribute) メソッドを使用してCSSプロパティとその値を指定することも可能です。
 
 ```js
-const el = document.getElementById('some-element');
-el.setAttribute('style', 'background-color:darkblue;');
+const el = document.getElementById("some-element");
+el.setAttribute("style", "background-color:darkblue;");
 ```
 
 `setAttribute` を使うと要素の `style` オブジェクトで定義されていた既存の `style` プロパティの指定は全て失われることに注意が必要です。もし上の例に使った `some-element` 要素の `style` 属性がインラインで `style="font-size: 18px"` のように指定されていた場合、この指定は `setAttribute` を使うことで失われます。

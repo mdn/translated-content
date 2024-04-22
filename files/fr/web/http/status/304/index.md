@@ -1,8 +1,6 @@
 ---
 title: 304 Not Modified
 slug: Web/HTTP/Status/304
-translation_of: Web/HTTP/Status/304
-browser-compat: http.status.304
 ---
 
 {{HTTPSidebar}}

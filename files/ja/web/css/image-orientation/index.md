@@ -18,6 +18,8 @@ image-orientation: revert-layer;
 image-orientation: unset;
 ```
 
+{{EmbedInteractiveExample("pages/css/image-orientation.html")}}
+
 ## 構文
 
 ### 値
@@ -57,7 +59,7 @@ image-orientation: unset;
 
 ```css hidden
 img {
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 
 label {
@@ -66,23 +68,26 @@ label {
 ```
 
 ```html hidden
-<img id="image" src="oriole.jpg"
-    alt="Orientation taken from the image">
+<img id="image" src="oriole.jpg" alt="Orientation taken from the image" />
 
 <div>
-  <input type="radio" id="from-image" name="orientation" value="from-image"
-         checked>
+  <input
+    type="radio"
+    id="from-image"
+    name="orientation"
+    value="from-image"
+    checked />
   <label for="from-image">from-image</label>
 </div>
 
 <div>
-  <input type="radio" id="none" name="orientation" value="none">
+  <input type="radio" id="none" name="orientation" value="none" />
   <label for="none">none</label>
 </div>
 ```
 
 ```js hidden
-document.addEventListener('change', evt => {
+document.addEventListener("change", (evt) => {
   document.getElementById("image").style.imageOrientation = evt.target.value;
 });
 ```

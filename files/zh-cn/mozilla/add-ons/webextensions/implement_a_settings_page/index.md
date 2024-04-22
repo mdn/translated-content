@@ -1,7 +1,6 @@
 ---
 title: 实现一个设置页面
 slug: Mozilla/Add-ons/WebExtensions/Implement_a_settings_page
-original_slug: Mozilla/Add-ons/WebExtensions/实现一个设置页面
 ---
 
 {{AddonSidebar}}
@@ -24,7 +23,6 @@ original_slug: Mozilla/Add-ons/WebExtensions/实现一个设置页面
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "Settings example",
   "version": "1.0",
@@ -35,7 +33,6 @@ original_slug: Mozilla/Add-ons/WebExtensions/实现一个设置页面
       "js": ["borderify.js"]
     }
   ]
-
 }
 ```
 
@@ -61,7 +58,6 @@ document.body.style.border = "10px solid blue";
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "Settings example",
   "version": "1.0",
@@ -78,7 +74,6 @@ document.body.style.border = "10px solid blue";
   },
 
   "permissions": ["storage"]
-
 }
 ```
 
@@ -90,24 +85,21 @@ document.body.style.border = "10px solid blue";
 接下来，因为我们承诺提供"options.html"，让我们来创建他，在"setting"目录创建一个该文件并具有以下内容：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
   </head>
 
   <body>
-
     <form>
-        <label>Border color<input type="text" id="color" ></label>
-        <button type="submit">Save</button>
+      <label>Border color<input type="text" id="color" /></label>
+      <button type="submit">Save</button>
     </form>
 
     <script src="options.js"></script>
-
   </body>
-
 </html>
 ```
 
@@ -119,12 +111,11 @@ document.body.style.border = "10px solid blue";
 function saveOptions(e) {
   e.preventDefault();
   browser.storage.local.set({
-    color: document.querySelector("#color").value
+    color: document.querySelector("#color").value,
   });
 }
 
 function restoreOptions() {
-
   function setCurrentChoice(result) {
     document.querySelector("#color").value = result.color || "blue";
   }
@@ -151,7 +142,7 @@ document.querySelector("form").addEventListener("submit", saveOptions);
 > **警告：** 因为 [browser.storage.local.get()](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get) 在火狐 52 版本之前的一个漏洞 ,以下代码没法起作用。为了使它生效，`onGot()` 中的 `item.color` 必须改为 `item[0].color`。
 
 ```js
- function onError(error) {
+function onError(error) {
   console.log(`Error: ${error}`);
 }
 

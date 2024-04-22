@@ -1,18 +1,6 @@
 ---
 title: PushManager
 slug: Web/API/PushManager
-tags:
-  - API
-  - Experimental
-  - Interface
-  - NeedsTranslation
-  - Push
-  - Push API
-  - Reference
-  - Référence(2)
-  - Service Workers
-  - TopicStub
-translation_of: Web/API/PushManager
 ---
 
 {{SeeCompatTable}}{{ApiRef("Push API")}}
@@ -51,28 +39,30 @@ translation_of: Web/API/PushManager
 ## Пример
 
 ```js
-this.onpush = function(event) {
+this.onpush = function (event) {
   console.log(event.data);
   // From here we can write the data to IndexedDB, send it to any open
   // windows, display a notification, etc.
-}
+};
 
-navigator.serviceWorker.register('serviceworker.js').then(
-  function(serviceWorkerRegistration) {
+navigator.serviceWorker
+  .register("serviceworker.js")
+  .then(function (serviceWorkerRegistration) {
     serviceWorkerRegistration.pushManager.subscribe().then(
-      function(pushSubscription) {
+      function (pushSubscription) {
         console.log(pushSubscription.subscriptionId);
         console.log(pushSubscription.endpoint);
         // The push subscription details needed by the application
         // server are now available, and can be sent to it using,
         // for example, an XMLHttpRequest.
-      }, function(error) {
+      },
+      function (error) {
         // During development it often helps to log errors to the
         // console. In a production environment it might make sense to
         // also report information about errors back to the
         // application server.
         console.log(error);
-      }
+      },
     );
   });
 ```

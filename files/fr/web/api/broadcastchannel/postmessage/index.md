@@ -1,9 +1,6 @@
 ---
 title: BroadcastChannel.postMessage()
 slug: Web/API/BroadcastChannel/postMessage
-page-type: web-api-instance-method
-translation_of: Web/API/BroadcastChannel/postMessage
-browser-compat: api.BroadcastChannel.postMessage
 l10n:
   sourceCommit: c80b15ae2fe8b65c1a68264df72323986b2750b2
 ---

@@ -38,12 +38,15 @@ postMessage(message, targetOrigin, transfer)
 `window` は以下の JavaScript を実行することで、配信されたメッセージを受け取ることができます。
 
 ```js
-window.addEventListener("message", (event) => {
-  if (event.origin !== "http://example.org:8080")
-    return;
+window.addEventListener(
+  "message",
+  (event) => {
+    if (event.origin !== "http://example.org:8080") return;
 
-  // …
-}, false);
+    // …
+  },
+  false,
+);
 ```
 
 配信されたメッセージには、以下のプロパティがあります。
@@ -99,22 +102,27 @@ const popup = window.open(/* ポップアップの詳細 */);
 // ポップアップブロッカーでブロックされず、ポップアップが完全にロードされたとき
 
 // ウィンドウがその場所を変更していない場合、これは何もしません。
-popup.postMessage("ユーザー名は 'bob' 、パスワードは 'secret' です",
-                  "https://secure.example.net");
+popup.postMessage(
+  "ユーザー名は 'bob' 、パスワードは 'secret' です",
+  "https://secure.example.net",
+);
 
 // ウィンドウがその場所を変更していない場合、
 //これはポップアップに送るメッセージのキューに追加します。
 popup.postMessage("hello there!", "http://example.com");
 
-window.addEventListener("message", (event) => {
-  // このメッセージの送信者は信頼している者か？（例えば、最初開いたものと違
-  // うかもしれません）。
-  if (event.origin !== "http://example.com")
-    return;
+window.addEventListener(
+  "message",
+  (event) => {
+    // このメッセージの送信者は信頼している者か？（例えば、最初開いたものと違
+    // うかもしれません）。
+    if (event.origin !== "http://example.com") return;
 
-  // event.source は popup
-  // event.data は "hi there yourself!  the secret response is: rheeeeet!"
-}, false);
+    // event.source は popup
+    // event.data は "hi there yourself!  the secret response is: rheeeeet!"
+  },
+  false,
+);
 ```
 
 ```js
@@ -125,8 +133,7 @@ window.addEventListener("message", (event) => {
 // postMessage が呼び出された後に呼び出されます。
 window.addEventListener("message", (event) => {
   // このメッセージの送信者は信頼している者か？
-  if (event.origin !== "http://example.com:8080")
-    return;
+  if (event.origin !== "http://example.com:8080") return;
 
   // event.source は window.opener
   // event.data は "hello there!"
@@ -135,9 +142,10 @@ window.addEventListener("message", (event) => {
   // きです）、メッセージに返答するための便利なイディオムは event.source 上
   // の postMessage を呼び出し、targetOrigin に event.origin を指定すること
   // です。
-  event.source.postMessage("hi there yourself!  the secret response " +
-                           "is: rheeeeet!",
-                           event.origin);
+  event.source.postMessage(
+    "hi there yourself!  the secret response " + "is: rheeeeet!",
+    event.origin,
+  );
 });
 ```
 

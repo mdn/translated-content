@@ -27,8 +27,8 @@ None.
 ### 删除一个帧缓冲区
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
+var canvas = document.getElementById("canvas");
+var gl = canvas.getContext("webgl");
 var framebuffer = gl.createFramebuffer();
 
 // ...
@@ -44,7 +44,7 @@ gl.deleteFramebuffer(framebuffer);
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{domxref("WebGLRenderingContext.bindFramebuffer()")}}
 - {{domxref("WebGLRenderingContext.createFramebuffer()")}}

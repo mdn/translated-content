@@ -1,18 +1,6 @@
 ---
 title: PerformanceTiming.domContentLoadedEventStart
 slug: Web/API/PerformanceTiming/domContentLoadedEventStart
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - Navigation Timing
-  - PerformanceTiming
-  - Property
-  - Propriété
-  - Read-only
-  - legacy
-  - domContentLoadedEventStart
-translation_of: Web/API/PerformanceTiming/domContentLoadedEventStart
 ---
 
 {{APIRef("Navigation Timing")}}

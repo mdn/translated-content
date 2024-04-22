@@ -1,7 +1,6 @@
 ---
 title: GlobalEventHandlers.onclick
 slug: conflicting/Web/API/Element/click_event
-original_slug: Web/API/GlobalEventHandlers/onclick
 ---
 
 {{ ApiRef("HTML DOM") }}
@@ -57,7 +56,7 @@ function inputChange(e) {
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.GlobalEventHandlers.onclick")}}
+{{Compat}}
 
 ## Veja também
 

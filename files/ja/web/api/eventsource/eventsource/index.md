@@ -30,15 +30,15 @@ new EventSource(url, options)
 ## 例
 
 ```js
-const evtSource = new EventSource('sse.php');
-const eventList = document.querySelector('ul');
+const evtSource = new EventSource("sse.php");
+const eventList = document.querySelector("ul");
 
 evtSource.onmessage = (e) => {
   const newElement = document.createElement("li");
 
   newElement.textContent = `message: ${e.data}`;
   eventList.appendChild(newElement);
-}
+};
 ```
 
 > **メモ:** 完全な例は GitHub で見られます。 [PHP を用いた簡単な SSE のデモ](https://github.com/mdn/dom-examples/tree/main/server-sent-events) を参照してください。

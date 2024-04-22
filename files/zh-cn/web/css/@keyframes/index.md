@@ -1,5 +1,5 @@
 ---
-title: '@keyframes'
+title: "@keyframes"
 slug: Web/CSS/@keyframes
 ---
 
@@ -43,10 +43,21 @@ JavaScript 可以通过 CSS 对象模型的 {{domxref("CSSKeyframesRule")}} 接�
 
 ```css
 @keyframes identifier {
-  0% { top: 0; left: 0; }
-  30% { top: 50px; }
-  68%, 72% { left: 50px; }
-  100% { top: 100px; left: 100%; }
+  0% {
+    top: 0;
+    left: 0;
+  }
+  30% {
+    top: 50px;
+  }
+  68%,
+  72% {
+    left: 50px;
+  }
+  100% {
+    top: 100px;
+    left: 100%;
+  }
 }
 ```
 
@@ -58,10 +69,19 @@ JavaScript 可以通过 CSS 对象模型的 {{domxref("CSSKeyframesRule")}} 接�
 
 ```css
 @keyframes identifier {
-  0% { top: 0; }
-  50% { top: 30px; left: 20px; }
-  50% { top: 10px; }
-  100% { top: 0; }
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 30px;
+    left: 20px;
+  }
+  50% {
+    top: 10px;
+  }
+  100% {
+    top: 0;
+  }
 }
 ```
 
@@ -75,16 +95,26 @@ Firefox 14 开始支持层叠 keyframes。
 
 ```css
 @keyframes important1 {
-  from { margin-top: 50px; }
-  50%  { margin-top: 150px !important; } /* 忽略 */
-  to   { margin-top: 100px; }
+  from {
+    margin-top: 50px;
+  }
+  50% {
+    margin-top: 150px !important;
+  } /* 忽略 */
+  to {
+    margin-top: 100px;
+  }
 }
 
 @keyframes important2 {
-  from { margin-top: 50px;
-         margin-bottom: 100px; }
-  to   { margin-top: 150px !important; /* 忽略 */
-         margin-bottom: 50px; }
+  from {
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+  to {
+    margin-top: 150px !important; /* 忽略 */
+    margin-bottom: 50px;
+  }
 }
 ```
 

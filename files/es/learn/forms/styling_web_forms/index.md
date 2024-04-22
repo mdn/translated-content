@@ -1,7 +1,6 @@
 ---
 title: Estilizando formularios HTML
 slug: Learn/Forms/Styling_web_forms
-original_slug: Learn/HTML/Forms/Styling_HTML_forms
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
@@ -93,7 +92,10 @@ Veremos un ejemplo al final de este artículo para darle más ideas sobre el est
 Las funciones de fuente y texto CSS se pueden usar fácilmente con cualquier control (y sí, puede usar {{cssxref("@font-face")}} con controles de formulario). Sin embargo, el comportamiento del navegador suele ser inconsistente. De forma predeterminada, algunos controles no heredan {{cssxref("font-family")}} y {{cssxref("font-size")}} de sus padres. En su lugar, muchos navegadores utilizan la apariencia predeterminada del sistema. Para que la apariencia de sus formularios sea consistente con el resto de su contenido, puede agregar las siguientes reglas a su hoja de estilo:
 
 ```css
-button, input, select, textarea {
+button,
+input,
+select,
+textarea {
   font-family: inherit;
   font-size: 100%;
 }
@@ -116,8 +118,11 @@ Todos los campos de texto tienen soporte completo para cada propiedad relacionad
 **Esto se debe a que cada control tiene sus propias reglas para el borde, el relleno (_padding_) y el margen**. Para dar el mismo tamaño a varios controles diferentes, puede usar la propiedad {{cssxref("box-sizing")}} junto con algunos valores consistentes para otras propiedades:
 
 ```css
-input, textarea, select, button {
-  width : 150px;
+input,
+textarea,
+select,
+button {
+  width: 150px;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -174,12 +179,12 @@ El HTML es solo un poco más complicado que el ejemplo que usamos en [el primer 
 
   <div id="from">
     <label for="name">from:</label>
-    <input type="text" id="name" name="user_name">
+    <input type="text" id="name" name="user_name" />
   </div>
 
   <div id="reply">
     <label for="mail">reply:</label>
-    <input type="email" id="mail" name="user_email">
+    <input type="email" id="mail" name="user_email" />
   </div>
 
   <div id="message">
@@ -220,42 +225,44 @@ Primero, nos preparamos definiendo nuestras reglas {{cssxref("@font-face")}} y t
 
 ```css
 @font-face {
-    font-family: 'handwriting';
-    src: url('fonts/journal-webfont.woff2') format('woff2'),
-         url('fonts/journal-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "handwriting";
+  src:
+    url("fonts/journal-webfont.woff2") format("woff2"),
+    url("fonts/journal-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'typewriter';
-    src: url('fonts/veteran_typewriter-webfont.woff2') format('woff2'),
-         url('fonts/veteran_typewriter-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "typewriter";
+  src:
+    url("fonts/veteran_typewriter-webfont.woff2") format("woff2"),
+    url("fonts/veteran_typewriter-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
-  font  : 1.3rem sans-serif;
-  padding : 0.5em;
-  margin  : 0;
-  background : #222;
+  font: 1.3rem sans-serif;
+  padding: 0.5em;
+  margin: 0;
+  background: #222;
 }
 
 form {
-  position : relative;
-  width  : 740px;
-  height : 498px;
-  margin : 0 auto;
+  position: relative;
+  width: 740px;
+  height: 498px;
+  margin: 0 auto;
   padding: 1em;
   box-sizing: border-box;
-  background : #FFF url(background.jpg);
+  background: #fff url(background.jpg);
 
   /* creamos nuestra malla (grid) */
-  display  : grid;
-  grid-gap : 20px;
-  grid-template-columns : repeat(2, 1fr);
-  grid-template-rows    : 10em 1em 1em 1em;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 10em 1em 1em 1em;
 }
 ```
 
@@ -263,16 +270,19 @@ Tenga en cuenta que hemos utilizado [CSS Grid](/es/docs/Web/CSS/CSS_Grid_Layout)
 
 ```css
 h1 {
-  font : 1em "typewriter", monospace;
-  align-self : end;
+  font:
+    1em "typewriter",
+    monospace;
+  align-self: end;
 }
 
 #message {
-   grid-row: 1 / 5;
+  grid-row: 1 / 5;
 }
 
-#from, #reply {
-   display: flex;
+#from,
+#reply {
+  display: flex;
 }
 ```
 
@@ -282,28 +292,35 @@ Ahora podemos empezar a trabajar en los propios elementos del formulario. Primer
 
 ```css
 label {
-  font : .8em "typewriter", sans-serif;
+  font:
+    0.8em "typewriter",
+    sans-serif;
 }
 ```
 
 Los campos de texto requieren algunas reglas comunes. En otras palabras, eliminamos sus {{cssxref("border","borders")}} y {{cssxref("background","backgrounds")}}, y redefinimos sus {{cssxref("padding")}} y {{cssxref("margin")}}:
 
 ```css
-input, textarea {
-  font    : 1.4em/1.5em "handwriting", cursive, sans-serif;
-  border  : none;
-  padding : 0 10px;
-  margin  : 0;
-  width   : 80%;
-  background : none;
+input,
+textarea {
+  font:
+    1.4em/1.5em "handwriting",
+    cursive,
+    sans-serif;
+  border: none;
+  padding: 0 10px;
+  margin: 0;
+  width: 80%;
+  background: none;
 }
 ```
 
 Cuando uno de estos campos tienen el foco, lo resaltamos con un fondo transparente gris claro (siempre es importante tener un estilo de foco, para la usabilidad y la accesibilidad del teclado):
 
 ```css
-input:focus, textarea:focus {
-  background   : rgba(0,0,0,.1);
+input:focus,
+textarea:focus {
+  background: rgba(0, 0, 0, 0.1);
   border-radius: 5px;
 }
 ```
@@ -316,12 +333,12 @@ Los elementos {{HTMLElement("textarea")}} se representan de forma predeterminada
 
 ```css
 textarea {
-  display : block;
+  display: block;
 
-  padding : 10px;
-  margin  : 10px 0 0 -10px;
-  width   : 100%;
-  height  : 90%;
+  padding: 10px;
+  margin: 10px 0 0 -10px;
+  width: 100%;
+  height: 90%;
 
   border-right: 1px solid;
 
@@ -336,24 +353,24 @@ El elemento {{HTMLElement("button")}} es realmente conveniente para diseñar con
 
 ```css
 button {
-  padding      : 5px;
-  font         : bold .6em sans-serif;
-  border       : 2px solid #333;
+  padding: 5px;
+  font: bold 0.6em sans-serif;
+  border: 2px solid #333;
   border-radius: 5px;
-  background   : none;
-  cursor       : pointer;
-  transform    : rotate(-1.5deg);
+  background: none;
+  cursor: pointer;
+  transform: rotate(-1.5deg);
 }
 
 button:after {
-  content      : " >>>";
+  content: " >>>";
 }
 
 button:hover,
 button:focus {
-  outline     : none;
-  background  : #000;
-  color       : #FFF;
+  outline: none;
+  background: #000;
+  color: #fff;
 }
 ```
 

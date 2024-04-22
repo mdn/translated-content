@@ -26,7 +26,7 @@ propertyIsEnumerable(prop)
 
 ## 描述
 
-所有继承自 `Object.prototype`（即除了 [`null` 原型对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null_原型对象)之外的所有对象）都继承了 `propertyIsEnumerable()` 方法。该方法确定指定的属性（字符串或 symbol 值）是否是对象的可枚举自有属性。如果对象没有指定的属性，则该方法返回 `false`。
+所有继承自 `Object.prototype`（即除了 [`null` 原型对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null_原型对象)之外的所有对象）都继承了 `propertyIsEnumerable()` 方法。该方法判断指定的属性（字符串或 symbol 值）是否是对象的可枚举自有属性。如果对象没有指定的属性，则该方法返回 `false`。
 
 此方法等价于 [`Object.getOwnPropertyDescriptor(obj, prop)?.enumerable ?? false`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor)。
 
@@ -90,7 +90,7 @@ o2.propertyIsEnumerable("nonEnumerableOwn"); // false
 
 ### 测试 Symbol 属性
 
-`propertyIsEnumerable()` 也支持 {{jsxref("Symbol")}} 属性。请注意，大多数枚举方法只访问字符串属性；当使用 {{jsxref("Object.assign()")}} 或[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)时，symbol 属性的可枚举性才有用。有关更多信息，请参见[属性的枚举性和所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)。
+`propertyIsEnumerable()` 也支持 {{jsxref("Symbol")}} 属性。请注意，大多数枚举方法只访问字符串属性；当使用 {{jsxref("Object.assign()")}} 或[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)时，symbol 属性的可枚举性才有用。更多信息，请参见[属性的枚举性和所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)。
 
 ```js
 const sym = Symbol("可枚举的");

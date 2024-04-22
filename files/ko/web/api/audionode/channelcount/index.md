@@ -2,6 +2,7 @@
 title: AudioNode.channelCount
 slug: Web/API/AudioNode/channelCount
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("AudioNode") }} 인터페이스의 **`channelCount`** 속성은 노드의 모든 입력에 대해 연결을 [업믹싱하거나 다운믹싱](/ko/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing)할 때 얼마나 많은 채널이 사용될 지를 결정하기 위해 사용되는 integer를 나타냅니다.

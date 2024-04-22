@@ -1,6 +1,9 @@
 ---
-title: HTMLTableElement.deleteCaption()
+title: "HTMLTableElement: deleteCaption() メソッド"
+short-title: deleteCaption()
 slug: Web/API/HTMLTableElement/deleteCaption
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{APIRef("HTML DOM")}}
@@ -9,9 +12,17 @@ slug: Web/API/HTMLTableElement/deleteCaption
 
 ## 構文
 
-```js
-HTMLTableElement.deleteCaption()
+```js-nolint
+deleteCaption()
 ```
+
+### 引数
+
+なし。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
@@ -21,22 +32,30 @@ HTMLTableElement.deleteCaption()
 
 ```html
 <table>
-  <caption>このキャプションは削除されます。</caption>
-  <tr><td>セル 1.1</td><td>セル 1.2</td></tr>
-  <tr><td>セル 2.1</td><td>セル 2.2</td></tr>
+  <caption>
+    このキャプションは削除されます。
+  </caption>
+  <tr>
+    <td>セル 1.1</td>
+    <td>セル 1.2</td>
+  </tr>
+  <tr>
+    <td>セル 2.1</td>
+    <td>セル 2.2</td>
+  </tr>
 </table>
 ```
 
 ### JavaScript
 
 ```js
-let table = document.querySelector('table');
+let table = document.querySelector("table");
 table.deleteCaption();
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## 仕様書
 

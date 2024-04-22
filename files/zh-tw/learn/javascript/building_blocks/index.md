@@ -9,13 +9,13 @@ slug: Learn/JavaScript/Building_blocks
 
 ## 先決條件
 
-開始這個模組之前，你應該已經熟悉 [HTML](/zh-TW/docs/Learn/HTML/Introduction_to_HTML) 和 [CSS](/zh-TW/docs/Learn/CSS/Introduction_to_CSS) 的基礎知識了，你也應該閱讀完前一個模組 - [JavaScript 入門](/zh-TW/docs/Learn/JavaScript/First_steps) - 的內容了。
+開始這個模組之前，你應該已經熟悉 [HTML](/zh-TW/docs/Learn/HTML/Introduction_to_HTML) 和 [CSS](/zh-TW/docs/Learn/CSS/First_steps) 的基礎知識了，你也應該閱讀完前一個模組 - [JavaScript 入門](/zh-TW/docs/Learn/JavaScript/First_steps) - 的內容了。
 
 > **備註：** 假如你正使用平板、電腦或任何無法讓你可以建立檔案的裝置時，你可以試著透過線上程式碼工具（像是 [JSBin](http://jsbin.com/) 或 [Glitch](https://glitch.com/)）測試文章的測試碼。
 
 ## 指南
 
-- [在代碼中做出決定 - 條件](/zh-TW/docs/Learn/JavaScript/Building_blocks/%E6%A2%9D%E4%BB%B6)
+- [在代碼中做出決定 - 條件](/zh-TW/docs/Learn/JavaScript/Building_blocks/conditionals)
   - : 在任何編程語言中，代碼都需要根據不同的輸入做出決策並相應地執行操作。 例如，在遊戲中，如果玩家的生命數量為 0，則遊戲結束。 在天氣應用程序中，如果在早上查看，則顯示日出圖形; 如果是夜晚，則顯示星星和月亮。 在本文中，我們將探討條件結構如何在 JavaScript 中工作。
 - [程式碼迴圈](/zh-TW/docs/Learn/JavaScript/Building_blocks/Looping_code)
   - : 有時候你需要超過一行的程式碼完成一項任務，舉例來說：尋找一個擁有許多名字的清單。透過編輯程式，迴圈可以幫助你完美的完成這項工作，在本文中，我們將探討迴圈的結構如何在 JavaScript 中運作。

@@ -1,5 +1,5 @@
 ---
-title: 'Window: unload 이벤트'
+title: "Window: unload 이벤트"
 slug: Web/API/Window/unload_event
 ---
 
@@ -7,10 +7,10 @@ slug: Web/API/Window/unload_event
 
 **`unload`** 이벤트는 문서나 하위 리소스가 언로딩 중일 때 발생합니다.
 
-| 확산               | 아니오                                                                   |
-| ------------------ | ------------------------------------------------------------------------ |
-| 취소 가능          | 아니오                                                                   |
-| 인터페이스         | {{domxref("Event")}}                                             |
+| 확산               | 아니오                                                  |
+| ------------------ | ------------------------------------------------------- |
+| 취소 가능          | 아니오                                                  |
+| 인터페이스         | {{domxref("Event")}}                                    |
 | 이벤트 처리기 속성 | {{domxref("WindowEventHandlers/onunload", "onunload")}} |
 
 `unload`는 다음 이벤트 이후 발생합니다.
@@ -30,16 +30,16 @@ slug: Web/API/Window/unload_event
 ## 예제
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>Parent Frame</title>
     <script>
-      window.addEventListener('beforeunload', function(event) {
-        console.log('I am the 1st one.');
+      window.addEventListener("beforeunload", function (event) {
+        console.log("I am the 1st one.");
       });
-      window.addEventListener('unload', function(event) {
-        console.log('I am the 3rd one.');
+      window.addEventListener("unload", function (event) {
+        console.log("I am the 3rd one.");
       });
     </script>
   </head>
@@ -52,21 +52,21 @@ slug: Web/API/Window/unload_event
 아래는 `child-frame.html`의 내용입니다.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>Child Frame</title>
     <script>
-      window.addEventListener('beforeunload', function(event) {
-        console.log('I am the 2nd one.');
+      window.addEventListener("beforeunload", function (event) {
+        console.log("I am the 2nd one.");
       });
-      window.addEventListener('unload', function(event) {
-        console.log('I am the 4th and last one…');
+      window.addEventListener("unload", function (event) {
+        console.log("I am the 4th and last one…");
       });
     </script>
   </head>
   <body>
-      ☻
+    ☻
   </body>
 </html>
 ```

@@ -32,26 +32,29 @@ var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 // getUserMedia block - grab stream 获取音频流
 // put it into a  把音频流放入 MediaStreamAudioSourceNode
 if (navigator.mediaDevices.getUserMedia) {
-   console.log('new getUserMedia supported.');
-   navigator.mediaDevices.getUserMedia (
+  console.log("new getUserMedia supported.");
+  navigator.mediaDevices
+    .getUserMedia(
       // constraints: audio and video for this app
       {
-         audio: true,
-         video: false
-     }).then(function(stream) {
+        audio: true,
+        video: false,
+      },
+    )
+    .then(function (stream) {
+      // Create a MediaStreamAudioSourceNode
+      var options = {
+        mediaStream: stream,
+      };
 
-       // Create a MediaStreamAudioSourceNode
-       var options = {
-         mediaStream : stream
-       }
-
-       var source = new MediaStreamAudioSourceNode(audioCtx, options);
-        source.connect(audioCtx.destination);
-        }).catch(function(err) {
-         console.log('The following gUM error occured: ' + err);
-      });
+      var source = new MediaStreamAudioSourceNode(audioCtx, options);
+      source.connect(audioCtx.destination);
+    })
+    .catch(function (err) {
+      console.log("The following gUM error occured: " + err);
+    });
 } else {
-   console.log('new getUserMedia not supported on your browser!');
+  console.log("new getUserMedia not supported on your browser!");
 }
 ```
 

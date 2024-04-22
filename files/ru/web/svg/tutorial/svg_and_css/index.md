@@ -1,8 +1,6 @@
 ---
 title: SVG и CSS
 slug: Web/SVG/Tutorial/SVG_and_CSS
-translation_of: Web/SVG/Tutorial/SVG_and_CSS
-original_slug: Web/Guide/CSS/Getting_started/SVG_и_CSS
 ---
 
 На этой странице показано, как использовать CSS со специальным языком для создания графики: [SVG](/ru/docs/SVG).
@@ -94,78 +92,78 @@ SVG можно использовать для статических изобр
 /* page */
 svg {
   background-color: beige;
-  }
+}
 
 #heading {
   font-size: 24px;
   font-weight: bold;
-  }
+}
 
 #caption {
   font-size: 12px;
-  }
+}
 
 /* flower */
 #flower:hover {
   cursor: crosshair;
-  }
+}
 
 /* gradient */
 #fade-stop-1 {
   stop-color: blue;
-  }
+}
 
 #fade-stop-2 {
   stop-color: white;
-  }
+}
 
 /* outer petals */
 #outer-petals {
-  opacity: .75;
-  }
+  opacity: 0.75;
+}
 
 #outer-petals .segment-fill {
   fill: azure;
   stroke: lightsteelblue;
   stroke-width: 1;
-  }
+}
 
 #outer-petals .segment-edge {
   fill: none;
   stroke: deepskyblue;
   stroke-width: 3;
-  }
+}
 
 #outer-petals .segment:hover > .segment-fill {
   fill: plum;
   stroke: none;
-  }
+}
 
 #outer-petals .segment:hover > .segment-edge {
   stroke: slateblue;
-  }
+}
 
 /* inner petals */
 #inner-petals .segment-fill {
   fill: yellow;
   stroke: yellowgreen;
   stroke-width: 1;
-  }
+}
 
 #inner-petals .segment-edge {
   fill: none;
   stroke: yellowgreen;
   stroke-width: 9;
-  }
+}
 
 #inner-petals .segment:hover > .segment-fill {
   fill: darkseagreen;
   stroke: none;
-  }
+}
 
 #inner-petals .segment:hover > .segment-edge {
   stroke: green;
-  }
+}
 ```
 
 Откройте документ в вашем браузере с поддержкой SVG. Переместите указатель мыши на изображение.
@@ -173,7 +171,7 @@ svg {
 Эта wiki не поддерживает вставку SVG в страницы, поэтому мы не имеем возможности продемонстрировать это здесь. Изображение будет выглядеть так:
 
 | ![SVG demonstration](svg-flower.png) |
-| --------------------------------------------------------------------------- |
+| ------------------------------------ |
 
 Примечания к демонстрации:
 

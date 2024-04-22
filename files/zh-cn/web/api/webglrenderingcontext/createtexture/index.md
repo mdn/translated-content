@@ -28,8 +28,8 @@ WebGLTexture gl.createTexture();
 ### 创建一个纹理
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
+var canvas = document.getElementById("canvas");
+var gl = canvas.getContext("webgl");
 var texture = gl.createTexture();
 ```
 
@@ -41,7 +41,7 @@ var texture = gl.createTexture();
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{domxref("WebGLRenderingContext.bindTexture()")}}
 - {{domxref("WebGLRenderingContext.deleteTexture()")}}

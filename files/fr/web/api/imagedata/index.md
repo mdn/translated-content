@@ -1,13 +1,6 @@
 ---
 title: ImageData
 slug: Web/API/ImageData
-tags:
-  - API
-  - Canvas
-  - DOM
-  - Images
-  - JavaScript
-translation_of: Web/API/ImageData
 ---
 
 {{APIRef("Canvas API")}}

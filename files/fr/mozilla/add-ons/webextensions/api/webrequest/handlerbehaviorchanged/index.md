@@ -1,20 +1,9 @@
 ---
 title: webRequest.handlerBehaviorChanged()
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/handlerBehaviorChanged
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - handlerBehaviorChanged
-  - webRequest
-translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/handlerBehaviorChanged
 ---
 
-{{AddonSidebar()}}Cette fonction peut être utilisée pour s'assurer que les auditeurs d'événements sont appliqués correctement lorsque les pages se trouvent dans le cache en mémoire du navigateur.Si le navigateur a chargé une page et que la page est rechargée, le navigateur peut recharger la page à partir de son cache en mémoire, et dans ce cas, les événements ne seront pas déclenchés pour la demande.
+{{AddonSidebar}}Cette fonction peut être utilisée pour s'assurer que les auditeurs d'événements sont appliqués correctement lorsque les pages se trouvent dans le cache en mémoire du navigateur.Si le navigateur a chargé une page et que la page est rechargée, le navigateur peut recharger la page à partir de son cache en mémoire, et dans ce cas, les événements ne seront pas déclenchés pour la demande.
 
 Supposons que le travail d'une extension consiste à bloquer les requêtes Web par rapport à un modèle, et le scénario suivant se produit :
 
@@ -36,7 +25,7 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 ## Syntaxe
 
 ```js
-var flushingCache = browser.webRequest.handlerBehaviorChanged()
+var flushingCache = browser.webRequest.handlerBehaviorChanged();
 ```
 
 ### Paramètres

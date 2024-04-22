@@ -1,11 +1,11 @@
 ---
-title: 'Window: beforeunload event'
+title: Window：beforeunload 事件
 slug: Web/API/Window/beforeunload_event
 ---
 
 {{APIRef}}
 
-当浏览器窗口关闭或者刷新时，会触发 beforeunload 事件。当前页面不会直接关闭，可以点击确定按钮关闭或刷新，也可以取消关闭或刷新。
+当浏览器窗口关闭或者刷新时，会触发 **`beforeunload`** 事件。当前页面不会直接关闭，可以点击确定按钮关闭或刷新，也可以取消关闭或刷新。
 
 <table class="properties">
   <tbody>
@@ -52,11 +52,11 @@ HTML 规范指出在此事件中调用{{domxref("window.alert()")}}，{{domxref(
 HTML 规范指出作者应该使用 {{domxref("Event.preventDefault()")}} 而非 {{domxref("Event.returnValue")}}，然而，不是所有浏览器都支持这么做。
 
 ```js
-window.addEventListener('beforeunload', (event) => {
+window.addEventListener("beforeunload", (event) => {
   // Cancel the event as stated by the standard.
   event.preventDefault();
   // Chrome requires returnValue to be set.
-  event.returnValue = '';
+  event.returnValue = "";
 });
 ```
 
@@ -68,8 +68,8 @@ window.addEventListener('beforeunload', (event) => {
 
 {{Compat}}
 
-## 参阅
+## 参见
 
-- 相关事件：{{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}}, {{domxref("Document/readystatechange_event", "readystatechange")}}, {{domxref("Window/load_event", "load")}}, {{domxref("Window/unload_event", "unload")}}
+- 相关事件：{{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}}、{{domxref("Document/readystatechange_event", "readystatechange")}}、{{domxref("Window/load_event", "load")}}、{{domxref("Window/unload_event", "unload")}}
 - [Unloading Documents — Prompt to unload a document](https://html.spec.whatwg.org/#prompt-to-unload-a-document)
 - [Remove Custom Messages in onbeforeload Dialogs after Chrome 51](https://developers.google.com/web/updates/2016/04/chrome-51-deprecations?hl=en#remove_custom_messages_in_onbeforeunload_dialogs)

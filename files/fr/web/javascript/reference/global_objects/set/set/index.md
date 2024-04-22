@@ -1,8 +1,6 @@
 ---
 title: Constructeur Set()
 slug: Web/JavaScript/Reference/Global_Objects/Set/Set
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/Set
-browser-compat: javascript.builtins.Set.Set
 ---
 
 {{JSRef}}
@@ -14,8 +12,8 @@ Le **constructeur `Set()`** permet de créer des objets `Set` qui sont des ensem
 ## Syntaxe
 
 ```js
-new Set()
-new Set(iterable)
+new Set();
+new Set(iterable);
 ```
 
 ### Paramètres
@@ -35,13 +33,13 @@ Un nouvel objet `Set`.
 ### Utiliser `Set()`
 
 ```js
-let monSet = new Set()
+let monSet = new Set();
 
-monSet.add(1);           // Set [ 1 ]
-monSet.add(5);           // Set [ 1, 5 ]
-monSet.add(5);           // Set [ 1, 5 ]
-monSet.add('du texte');  // Set [ 1, 5, 'du texte' ]
-let o = {a: 1, b: 2};
+monSet.add(1); // Set [ 1 ]
+monSet.add(5); // Set [ 1, 5 ]
+monSet.add(5); // Set [ 1, 5 ]
+monSet.add("du texte"); // Set [ 1, 5, 'du texte' ]
+let o = { a: 1, b: 2 };
 monSet.add(o);
 ```
 

@@ -43,7 +43,9 @@ l10n:
 これをブラウザーの JavaScript コンソールにコピーしてください。
 
 ```js
-const fetchPromise = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+const fetchPromise = fetch(
+  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+);
 
 console.log(fetchPromise);
 
@@ -80,7 +82,9 @@ Promise { <state>: "pending" }
 これを実行してみましょう。
 
 ```js
-const fetchPromise = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+const fetchPromise = fetch(
+  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+);
 
 fetchPromise.then((response) => {
   const jsonPromise = response.json();
@@ -99,7 +103,9 @@ fetchPromise.then((response) => {
 もちろんそうです。しかし、プロミスのエレガントな特徴は、_`then()` 自身がプロミスを返し、それに渡された関数の結果で完了することです_。これはつまり、上記のコードをこのように書き換えることができる（そして、確かにそうすべき）ということです。
 
 ```js
-const fetchPromise = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+const fetchPromise = fetch(
+  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+);
 
 fetchPromise
   .then((response) => response.json())
@@ -113,7 +119,9 @@ fetchPromise
 次のステップに移動する前に、もう一つ追加しなければならないことがあります。リクエストを読み込む前に、サーバーがリクエストを受け入れ、処理することができたかどうかを調べる必要があります。これを行うには、レスポンスのステータスコードを調べて、それが "OK" でない場合はエラーを発生させます。
 
 ```js
-const fetchPromise = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+const fetchPromise = fetch(
+  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+);
 
 fetchPromise
   .then((response) => {
@@ -140,7 +148,9 @@ fetchPromise
 このバージョンの `fetch()` コードを試してみてください。 `catch()` を使用したエラーハンドラーを追加し、リクエストが失敗するように URL も変更しています。
 
 ```js
-const fetchPromise = fetch('bad-scheme://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+const fetchPromise = fetch(
+  "bad-scheme://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+);
 
 fetchPromise
   .then((response) => {
@@ -191,9 +201,15 @@ fetchPromise
 例を示します。
 
 ```js
-const fetchPromise1 = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
-const fetchPromise2 = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/not-found');
-const fetchPromise3 = fetch('https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json');
+const fetchPromise1 = fetch(
+  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+);
+const fetchPromise2 = fetch(
+  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/not-found",
+);
+const fetchPromise3 = fetch(
+  "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json",
+);
 
 Promise.all([fetchPromise1, fetchPromise2, fetchPromise3])
   .then((responses) => {
@@ -202,7 +218,7 @@ Promise.all([fetchPromise1, fetchPromise2, fetchPromise3])
     }
   })
   .catch((error) => {
-    console.error(`Failed to fetch: ${error}`)
+    console.error(`Failed to fetch: ${error}`);
   });
 ```
 
@@ -219,9 +235,15 @@ https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json: 200
 同じコードを間違った形の URL で試すと、次のようになります。
 
 ```js
-const fetchPromise1 = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
-const fetchPromise2 = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/not-found');
-const fetchPromise3 = fetch('bad-scheme://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json');
+const fetchPromise1 = fetch(
+  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+);
+const fetchPromise2 = fetch(
+  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/not-found",
+);
+const fetchPromise3 = fetch(
+  "bad-scheme://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json",
+);
 
 Promise.all([fetchPromise1, fetchPromise2, fetchPromise3])
   .then((responses) => {
@@ -230,7 +252,7 @@ Promise.all([fetchPromise1, fetchPromise2, fetchPromise3])
     }
   })
   .catch((error) => {
-    console.error(`Failed to fetch: ${error}`)
+    console.error(`Failed to fetch: ${error}`);
   });
 ```
 
@@ -243,16 +265,22 @@ Failed to fetch: TypeError: Failed to fetch
 時には、設定されたプロミスのうちどれかが履行される必要があり、どれが履行されるかは気にしないことがあるかもしれません。そのような場合は {{jsxref("Promise/any", "Promise.any()")}} を指定します。これは `Promise.all()` と似ていますが、プロミスの配列のいずれかが履行されるとすぐに履行され、すべてが拒否されると拒否される点が異なります。
 
 ```js
-const fetchPromise1 = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
-const fetchPromise2 = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/not-found');
-const fetchPromise3 = fetch('https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json');
+const fetchPromise1 = fetch(
+  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+);
+const fetchPromise2 = fetch(
+  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/not-found",
+);
+const fetchPromise3 = fetch(
+  "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json",
+);
 
 Promise.any([fetchPromise1, fetchPromise2, fetchPromise3])
   .then((response) => {
     console.log(`${response.url}: ${response.status}`);
   })
   .catch((error) => {
-    console.error(`Failed to fetch: ${error}`)
+    console.error(`Failed to fetch: ${error}`);
   });
 ```
 
@@ -279,7 +307,9 @@ async function fetchProducts() {
   try {
     // この行の後、この関数は `fetch()` 呼び出しが決定されるのを待ちます。
     // `fetch()` 呼び出しは Response を返すか、エラーを発生させます。
-    const response = await fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+    const response = await fetch(
+      "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+    );
     if (!response.ok) {
       throw new Error(`HTTP error: ${response.status}`);
     }
@@ -287,8 +317,7 @@ async function fetchProducts() {
     // `response.json()` 呼び出しは、解釈された JSON オブジェクトを返すか、エラーを発生させるかのどちらかです。
     const data = await response.json();
     console.log(data[0].name);
-  }
-  catch (error) {
+  } catch (error) {
     console.error(`Could not get products: ${error}`);
   }
 }
@@ -305,20 +334,21 @@ fetchProducts();
 ```js example-bad
 async function fetchProducts() {
   try {
-    const response = await fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+    const response = await fetch(
+      "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+    );
     if (!response.ok) {
       throw new Error(`HTTP error: ${response.status}`);
     }
     const data = await response.json();
     return data;
-  }
-  catch (error) {
+  } catch (error) {
     console.error(`Could not get products: ${error}`);
   }
 }
 
 const promise = fetchProducts();
-console.log(promise[0].name);   // "promise" は Promise オブジェクトなので、これは動作しません。
+console.log(promise[0].name); // "promise" は Promise オブジェクトなので、これは動作しません。
 ```
 
 その代わり、次のようにする必要があります。
@@ -326,14 +356,15 @@ console.log(promise[0].name);   // "promise" は Promise オブジェクトな�
 ```js
 async function fetchProducts() {
   try {
-    const response = await fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+    const response = await fetch(
+      "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+    );
     if (!response.ok) {
       throw new Error(`HTTP error: ${response.status}`);
     }
     const data = await response.json();
     return data;
-  }
-  catch (error) {
+  } catch (error) {
     console.error(`Could not get products: ${error}`);
   }
 }
@@ -347,14 +378,15 @@ promise.then((data) => console.log(data[0].name));
 ```js
 try {
   // await を非同期関数の外で使用することは、モジュールの中でしか許されません。
-  const response = await fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+  const response = await fetch(
+    "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+  );
   if (!response.ok) {
     throw new Error(`HTTP error: ${response.status}`);
   }
   const data = await response.json();
   console.log(data[0].name);
-}
-catch(error) {
+} catch (error) {
   console.error(`Could not get products: ${error}`);
 }
 ```

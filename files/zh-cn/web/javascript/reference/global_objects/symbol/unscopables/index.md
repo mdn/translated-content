@@ -24,7 +24,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/unscopables
 ```js
 var keys = [];
 
-with(Array.prototype) {
+with (Array.prototype) {
   keys.push("something");
 }
 
@@ -38,15 +38,15 @@ Object.keys(Array.prototype[Symbol.unscopables]);
 ```js
 var obj = {
   foo: 1,
-  bar: 2
+  bar: 2,
 };
 
 obj[Symbol.unscopables] = {
   foo: false,
-  bar: true
+  bar: true,
 };
 
-with(obj) {
+with (obj) {
   console.log(foo); // 1
   console.log(bar); // ReferenceError: bar is not defined
 }
@@ -60,7 +60,7 @@ with(obj) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}}
-- [`with`](/zh-CN/docs/Web/JavaScript/Reference/Statements/with) statement (not available in [Strict mode](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode))
+- [`with`](/zh-CN/docs/Web/JavaScript/Reference/Statements/with) 语句（在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)中不可用）

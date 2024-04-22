@@ -17,22 +17,6 @@ var myRequest = new XMLHttpRequest();
 
 Para obter detalhes sobre como usar XMLHttpRequest , consulte [Usando XMLHttpRequest](/pt-BR/DOM/XMLHttpRequest/Using_XMLHttpRequest).
 
-## Métodos
-
-| `XMLHttpRequest(JSObject objParameters);`                                                                                                                   |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `void abort();`                                                                                                                                             |
-| `DOMString getAllResponseHeaders();`                                                                                                                        |
-| `DOMString? getResponseHeader(DOMString header);`                                                                                                           |
-| `void open(DOMString method, DOMString url, optional boolean async, optional DOMString? user, optional DOMString? password);`                               |
-| `void overrideMimeType(DOMString mime);`                                                                                                                    |
-| `void send();` `void send(ArrayBuffer data);` `void send(Blob data);` `void send(Document data);` `void send(DOMString? data);` `void send(FormData data);` |
-| `void setRequestHeader(DOMString header, DOMString value);`                                                                                                 |
-| Métodos não-padrão                                                                                                                                          |
-| `[noscript] void init(in nsIPrincipal principal, in nsIScriptContext scriptContext, in nsPIDOMWindow ownerWindow);`                                         |
-| `[noscript] void openRequest(in AUTF8String method, in AUTF8String url, in boolean async, in AString user, in AString password);`                           |
-| `void sendAsBinary(in DOMString body);`                                                                                                                     |
-
 ## Propriedades
 
 <table class="standard-table">
@@ -622,7 +606,8 @@ Desde sendAsBinary() é um recurso experimental, aqui está uma polyfill para na
 
 if (!XMLHttpRequest.prototype.sendAsBinary) {
   XMLHttpRequest.prototype.sendAsBinary = function (sData) {
-    var nBytes = sData.length, ui8Data = new Uint8Array(nBytes);
+    var nBytes = sData.length,
+      ui8Data = new Uint8Array(nBytes);
     for (var nIdx = 0; nIdx < nBytes; nIdx++) {
       ui8Data[nIdx] = sData.charCodeAt(nIdx) & 0xff;
     }
@@ -647,11 +632,15 @@ if (!XMLHttpRequest.prototype.sendAsBinary) {
 
 Desde então, foram implementadas uma série de manipuladores de eventos adicionais em vários navegadores ( onload , onerror , onprogress , etc.). Estes são suportados no Firefox. Em particular, veja `nsIXMLHttpRequestEventTarget` and [Using XMLHttpRequest](/pt-BR/DOM/XMLHttpRequest/Using_XMLHttpRequest).
 
-avegadores mais recentes, incluindo o Firefox, também suporta ouvir as XMLHttpRequest eventos via padrão [`addEventListener`](/pt-BR/DOM/element.addEventListener) APIs Além de definir on\* propriedades para uma função de manipulador.
+avegadores mais recentes, incluindo o Firefox, também suporta ouvir as XMLHttpRequest eventos via padrão [`addEventListener`](/pt-BR/DOM/element.addEventListener) APIs Além de definir on propriedades para uma função de manipulador.
 
-## Compatibilidade do navegador
+## Especificações
 
-{{Compat("api.XMLHttpRequest")}}
+{{Specifications}}
+
+## Compatibilidade com navegadores
+
+{{Compat}}
 
 ## Veja também
 

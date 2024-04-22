@@ -2,6 +2,7 @@
 title: CSS 구성 블록
 slug: Learn/CSS/Building_blocks
 ---
+
 {{LearnSidebar}}
 
 이 강의에서는 [CSS 첫 번째 단계](/ko/docs/Learn/CSS/First_steps) 가 중단된 부분을 처리합니다 — 이제 언어와 구문에 익숙해졌으며, 약간 더 깊이 익힐 때가 되었을 때, 이를 사용하는 기본적인 경험을 얻었습니다. 이 과목에서는 계단식 및 상속, 사용 가능한 모든 선택자 유형, 단위 크기 조정, 배경 및 테두리 스타일 지정, 디버깅 등을 살펴 봅니다.
@@ -10,7 +11,7 @@ slug: Learn/CSS/Building_blocks
 
 ## 전제 조건
 
-이 과목을 시작하기 전에 다음이 있어야 합니다:
+이 과목을 시작하기 전에 다음이 있어야 합니다.
 
 1. 컴퓨터 사용 및 수동적으로 웹을 사용하는 것(보기만 하고, 콘텐츠를 소비하는 것)에 대한 기본적인 친숙성.
 2. [기본 소프트웨어 설치](/ko/docs/Learn/Getting_started_with_the_web/Installing_basic_software) 에 설명 된대로 기본 작업 환경과 [파일 처리](/ko/docs/Learn/Getting_started_with_the_web/Dealing_with_files) 에 설명 된대로 파일 작성 및 관리 방법에 대한 이해.
@@ -27,7 +28,7 @@ slug: Learn/CSS/Building_blocks
   - : 이번 수업의 목적은 CSS 가 HTML 에 적용되는 방법과 충돌을 해결하는 방법을 제어하는 CSS 의 가장 기본적인 개념인 — 계단식, 우선 순위 및 상속 — 에 대한 이해를 발전시키는 것입니다.
 - [CSS 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors)
 
-  - : 사용 가능한 다양한 CSS 선택자가 있으며, 스타일을 지정할 요소를 선택할 때 세밀한 정밀도를 허용합니다. 이 기사와 하위 기사에서는 다양한 유형을 자세히 살펴보고 작동 방식을 살펴 보겠습니다. 하위 기사는 다음과 같습니다:
+  - : 사용 가능한 다양한 CSS 선택자가 있으며, 스타일을 지정할 요소를 선택할 때 세밀한 정밀도를 허용합니다. 이 기사와 하위 기사에서는 다양한 유형을 자세히 살펴보고 작동 방식을 살펴 보겠습니다. 하위 기사는 다음과 같습니다.
 
     - [Type, class 및 ID 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
     - [속성 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
@@ -35,7 +36,7 @@ slug: Learn/CSS/Building_blocks
     - [결합자 (combinators)](/ko/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
 - [박스 모델](/ko/docs/Learn/CSS/Building_blocks/The_box_model)
-  - : CSS 의 모든 것에는 주위에 박스가 있으며, 이러한 박스를 이해하는 것은 CSS 를 사용하여 레이아웃을 만들거나 다른 항목과 항목을 정렬하는 데 중요합니다. 이 수업에서는 CSS ***박스 모델** *을 제대로 살펴보고, 작동 방식 및 관련 용어를 이해하여 보다 복잡한 레이아웃 작업으로 넘어갈 수 있습니다.
+  - : CSS 의 모든 것에는 주위에 박스가 있으며, 이러한 박스를 이해하는 것은 CSS 를 사용하여 레이아웃을 만들거나 다른 항목과 항목을 정렬하는 데 중요합니다. 이 수업에서는 CSS _박스 모델_ 을 제대로 살펴보고, 작동 방식 및 관련 용어를 이해하여 보다 복잡한 레이아웃 작업으로 넘어갈 수 있습니다.
 - [배경 및 테두리](/ko/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
   - : 이번 수업에서는 CSS 배경과 테두리로 할 수 있는 창의적인 작업을 살펴 보겠습니다. 그라데이션 (gradients), 배경 이미지 및 둥근 테두리를 추가하는 경우, 배경과 테두리는 CSS 의 많은 스타일 질문에 대한 답입니다.
 - [다른 텍스트 방향 처리](/ko/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)

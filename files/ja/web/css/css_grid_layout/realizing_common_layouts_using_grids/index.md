@@ -1,12 +1,13 @@
 ---
-title: CSS Grid Layout によるよくあるレイアウトの実現
+title: グリッドを使用したよくあるレイアウトの実現
 slug: Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
-original_slug: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{CSSRef}}
 
-今回の CSS グリッドレイアウトガイドの締めくくりとして、グリッドレイアウトを使ったデザインのテクニックをいくつか紹介します。ここでは、 [grid-template-areas](/ja/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas) を使った例と、典型的な 12 列の可変グリッドシステム、そして自動配置を使ったアイテムリストを見ていきます。これらの例からわかるように、多くの場合、グリッドレイアウトで望む結果を得るためには複数の方法があります。自分が解決しようとしている問題や、実現しようとしているデザインに合わせて、最も参考になる方法を選んでください。
+今回の CSS グリッドレイアウトガイドの締めくくりとして、グリッドレイアウトを使ったデザインのテクニックをいくつか紹介します。ここでは、 [grid-template-areas](/ja/docs/Web/CSS/CSS_grid_layout/Grid_template_areas) を使った例と、典型的な 12 列の可変グリッドシステム、そして自動配置を使ったアイテムリストを見ていきます。これらの例からわかるように、多くの場合、グリッドレイアウトで望む結果を得るためには複数の方法があります。自分が解決しようとしている問題や、実現しようとしているデザインに合わせて、最も参考になる方法を選んでください。
 
 ## `grid-template-areas` を使用した、1 ～ 3 列の流動的なレスポンシブレイアウト
 
@@ -14,30 +15,35 @@ original_slug: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_L
 
 ![2 つのブレイクポイントでグリッドを再定義し、3 種類のレイアウトを作成した画像。](11-responsive-areas.png)
 
-このレイアウトは、*[グリッドテンプレート領域](/ja/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)*のガイドで学んだ*名前付きテンプレート領域*を使って作成する予定です。
+このレイアウトは、*[グリッドテンプレート領域](/ja/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)*のガイドで学んだ*名前付きテンプレート領域*を使って作成する予定です。
 
 このマークアップは、ヘッダー、フッター、メインコンテンツ、ナビゲーション、サイドバー、そして広告を掲載するためのブロックの要素を内部に持つコンテナーです。
 
 ```css hidden
-* {box-sizing: border-box;}
-  .wrapper {
-    max-width: 1024px;
-    margin: 0 auto;
-    font: 1.2em Helvetica, arial, sans-serif;
-  }
+* {
+  box-sizing: border-box;
+}
+.wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+  font:
+    1.2em Helvetica,
+    arial,
+    sans-serif;
+}
 
-  .wrapper > * {
-    border: 2px solid #f08c00;
-    background-color: #ffec99;
-    border-radius: 5px;
-    padding: 10px;
-  }
+.wrapper > * {
+  border: 2px solid #f08c00;
+  background-color: #ffec99;
+  border-radius: 5px;
+  padding: 10px;
+}
 
-  nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 ```
 
 ```html
@@ -52,7 +58,11 @@ original_slug: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_L
   </nav>
   <article class="content">
     <h1>メイン記事領域</h1>
-    <p>このレイアウトでは、幅が 500 ピクセル以下の画面では、領域をソース順に表示します。グリッドとグリッド上のアイテムの配置を再定義することで、2 列レイアウト、3 列レイアウトへと変化していきます。</p>
+    <p>
+      このレイアウトでは、幅が 500
+      ピクセル以下の画面では、領域をソース順に表示します。グリッドとグリッド上のアイテムの配置を再定義することで、2
+      列レイアウト、3 列レイアウトへと変化していきます。
+    </p>
   </article>
   <aside class="side">サイドバー</aside>
   <div class="ad">広告</div>
@@ -83,7 +93,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_L
 }
 ```
 
-これでレイアウトは作成されませんが、アイテムに名前がついたので、それを使ってレイアウトを作成することができます。 メディアクエリーを使用せずに、これからモバイル幅用のレイアウトを設定します。ここでは、 *[グリッドレイアウトとアクセシビリティ](/ja/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)* のガイドに記載されているように、ソースと表示の間に断絶が生じないように、すべてをソース順にしています。列や行のトラックは定義していませんが、このレイアウトでは 1 つの列が指示されており、行は暗黙のグリッド内の各アイテムに必要に応じて作成されます。
+これでレイアウトは作成されませんが、アイテムに名前がついたので、それを使ってレイアウトを作成することができます。 メディアクエリーを使用せずに、これからモバイル幅用のレイアウトを設定します。ここでは、 _[グリッドレイアウトとアクセシビリティ](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)_ のガイドに記載されているように、ソースと表示の間に断絶が生じないように、すべてをソース順にしています。列や行のトラックは定義していませんが、このレイアウトでは 1 つの列が指示されており、行は暗黙のグリッド内の各アイテムに必要に応じて作成されます。
 
 ```css
 .wrapper {
@@ -99,7 +109,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_L
 }
 ```
 
-モバイルレイアウトを設定すると、どの画面サイズでも 1 列になりますが、[メディアクエリー](/ja/docs/Web/CSS/Media_Queries)を追加して、2 列表示できるだけの画面領域がある場合のレイアウトを再定義することができます。
+モバイルレイアウトを設定すると、どの画面サイズでも 1 列になりますが、[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)を追加して、2 列表示できるだけの画面領域がある場合のレイアウトを再定義することができます。
 
 ```css
 @media (min-width: 500px) {
@@ -118,7 +128,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_L
 }
 ```
 
-{{cssxref("grid-template-areas")}}　の値で、レイアウトの形が見えてきます。`header` は、 `nav` と同様に 2 列のトラックに渡っています。3 列目のトラックには `sidebar` と `content` が一緒に配置されています。4 列目のトラックには、`ad` コンテンツを配置することにしました。サイドバーの下に表示され、コンテンツの下にはその隣の `footer` が表示されます。ナビゲーションにはフレックスボックスを使用して、間隔を空けて一列に表示しています。
+{{cssxref("grid-template-areas")}} の値で、レイアウトの形が見えてきます。`header` は、 `nav` と同様に 2 列のトラックに渡っています。3 列目のトラックには `sidebar` と `content` が一緒に配置されています。4 列目のトラックには、`ad` コンテンツを配置することにしました。サイドバーの下に表示され、コンテンツの下にはその隣の `footer` が表示されます。ナビゲーションにはフレックスボックスを使用して、間隔を空けて一列に表示しています。
 
 最後のブレイクポイントを追加すると、3 列レイアウトに移行することができるようになります。
 
@@ -130,11 +140,11 @@ original_slug: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_L
       "header header  header"
       "nav    content sidebar"
       "nav    content ad"
-      "footer footer  footer"
-   }
-   nav ul {
-     flex-direction: column;
-   }
+      "footer footer  footer";
+  }
+  nav ul {
+    flex-direction: column;
+  }
 }
 ```
 
@@ -154,7 +164,10 @@ original_slug: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_L
 .wrapper {
   max-width: 1024px;
   margin: 0 auto;
-  font: 1.2em Helvetica, arial, sans-serif;
+  font:
+    1.2em Helvetica,
+    arial,
+    sans-serif;
 }
 .wrapper > * {
   border: 2px solid #f08c00;
@@ -176,10 +189,18 @@ original_slug: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_L
 
 ```html
 <div class="wrapper">
-  <div class="item1">列 1 の線を先頭として、 3 列のトラックにまたがります。</div>
-  <div class="item2">列 6 の線を先頭として、 4 列、2 行のトラックにまたがります。</div>
-  <div class="item3">列 2、行 2 の線を先頭として、 3 列のトラックにまたがります。</div>
-  <div class="item4">列 3 の線を先頭として、グリッドの末尾までまたがります (-1)。</div>
+  <div class="item1">
+    列 1 の線を先頭として、 3 列のトラックにまたがります。
+  </div>
+  <div class="item2">
+    列 6 の線を先頭として、 4 列、2 行のトラックにまたがります。
+  </div>
+  <div class="item3">
+    列 2、行 2 の線を先頭として、 3 列のトラックにまたがります。
+  </div>
+  <div class="item4">
+    列 3 の線を先頭として、グリッドの末尾までまたがります (-1)。
+  </div>
 </div>
 ```
 
@@ -190,7 +211,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_L
   grid-column: col-start / span 3;
 }
 .item2 {
-  grid-column: col-start 6 / span 4 ;
+  grid-column: col-start 6 / span 4;
   grid-row: 1 / 3;
 }
 .item3 {
@@ -205,9 +226,9 @@ original_slug: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_L
 
 {{ EmbedLiveSample('A_flexible_12-column_layout', '800', '400') }}
 
-[名前付きグリッド線のガイド](/ja/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)で説明されているように、アイテムを配置するために名前付きの線を使用しています。同じ名前の行が 12 本あるので、名前、そして行のインデックスを使います。名前付きの線を使わずに、線のインデックスだけを使うこともできます。
+[名前付きグリッド線を使用したレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)で説明されているように、アイテムを配置するために名前付きの線を使用しています。同じ名前の行が 12 本あるので、名前、そして行のインデックスを使います。名前付きの線を使わずに、線のインデックスだけを使うこともできます。
 
-最終の線の番号を設定するのではなく、 `span` キーワードを使って、この要素が何トラックにまたがるのかを指定することにしました。複数列のレイアウトシステムで作業をする場合、通常はブロックがまたがるグリッドのトラック数でブロックを考え、異なるブレイクポイントに合わせて調整するので、このアプローチが気に入っています。ブロックがトラックにどのように配置されているかを確認するには、[Firefox グリッドインスペクター](/ja/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)を使用してください。これは、アイテムがどのように配置されているかを明確に示します。
+最終の線の番号を設定するのではなく、 `span` キーワードを使って、この要素が何トラックにまたがるのかを指定することにしました。複数列のレイアウトシステムで作業をする場合、通常はブロックがまたがるグリッドのトラック数でブロックを考え、異なるブレイクポイントに合わせて調整するので、このアプローチが気に入っています。ブロックがトラックにどのように配置されているかを確認するには、[Firefox グリッドインスペクター](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)を使用してください。これは、アイテムがどのように配置されているかを明確に示します。
 
 ![グリッドに配置されたアイテムを、グリッドトラックを強調して表示しています。](11-grid-inspector-12col.png)
 
@@ -218,28 +239,33 @@ original_slug: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_L
 このレイアウト方法が実際にどのように機能するかを確認するために、 {{cssxref("grid-template-areas")}} で作成したのと同じレイアウトを、今度は 12 列のグリッドシステムを使って作成してみましょう。ここでは、グリッドテンプレート領域の例で使用したのと同じマークアップで始めます。
 
 ```css hidden
-* {box-sizing: border-box;}
-  .wrapper {
-    max-width: 1024px;
-    margin: 0 auto;
-    font: 1.2em Helvetica, arial, sans-serif;
-  }
+* {
+  box-sizing: border-box;
+}
+.wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+  font:
+    1.2em Helvetica,
+    arial,
+    sans-serif;
+}
 
-  .wrapper > * {
-    border: 2px solid #f08c00;
-    background-color: #ffec99;
-    border-radius: 5px;
-    padding: 10px;
-  }
+.wrapper > * {
+  border: 2px solid #f08c00;
+  background-color: #ffec99;
+  border-radius: 5px;
+  padding: 10px;
+}
 
-  nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 ```
 
-```html
+```html-nolint
 <div class="wrapper">
   <header class="main-head">ヘッダー</header>
   <nav class="main-nav">
@@ -251,7 +277,9 @@ original_slug: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_L
   </nav>
   <article class="content">
     <h1>メイン記事領域</h1>
-    <p>このレイアウトでは、幅が 500 ピクセル以下の画面では、領域をソース順に表示します。グリッドとグリッド上のアイテムの配置を再定義することで、2 列レイアウト、3 列レイアウトへと変化していきます。</p>
+    <p>
+      このレイアウトでは、幅が 500 ピクセル以下の画面では、領域をソース順に表示します。グリッドとグリッド上のアイテムの配置を再定義することで、2 列レイアウト、3 列レイアウトへと変化していきます。
+    </p>
   </article>
   <aside class="side">サイドバー</aside>
   <div class="ad">広告</div>
@@ -293,7 +321,8 @@ original_slug: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_L
     grid-column: col-start / span 3;
     grid-row: 4;
   }
-  .content, .main-footer {
+  .content,
+  .main-footer {
     grid-column: col-start 4 / span 9;
   }
   nav ul {
@@ -334,15 +363,15 @@ original_slug: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_L
 
 {{ EmbedLiveSample('Building_a_layout_using_the_12-column_system', '800', '450') }}
 
-今回も、レイアウトがどのような形になっているかを確認するために、[グリッドインスペクター](/ja/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)が役に立ちます。
+今回も、レイアウトがどのような形になっているかを確認するために、[グリッドインスペクター](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)が役に立ちます。
 
-![Showing the layout with grid tracks highlighted by the grid inspector.](11-grid-inspector-12col-layout.png)
+![グリッドインスペクターでグリッドトラックをハイライトしたレイアウトを表示します。](11-grid-inspector-12col-layout.png)
 
 このレイアウトを作成する際に注意すべき点は、各ブレイクポイントですべての要素をグリッド上に明示的に配置する必要がないことです。これは「モバイルファースト」の利点でもあります。また、グリッドの自動配置を利用することもできます。グリッドの自動配置は、要素を論理的な順序で配置することで、アイテムをグリッドに配置するための多くの作業を自動化してくれます。このガイドの最後の例では、自動配置に完全に依存したレイアウトを作成します。
 
 ## 自動配置される製品リスト
 
-多くのレイアウトは、アイテムリストやイメージギャラリーなど、基本的に「カード」のセットです。グリッドを使えば、レスポンシブ対応のために[メディアクエリー](/ja/docs/Web/CSS/Media_Queries)を追加しなくても、これらのリストを非常に簡単に作成することができます。次の例では、CSS グリッドとフレックスボックスレイアウトを組み合わせて、シンプルな製品リストのレイアウトを作成しています。
+多くのレイアウトは、アイテムリストやイメージギャラリーなど、基本的に「カード」のセットです。グリッドを使えば、レスポンシブ対応のために[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)を追加しなくても、これらのリストを非常に簡単に作成することができます。次の例では、CSS グリッドとフレックスボックスレイアウトを組み合わせて、シンプルな製品リストのレイアウトを作成しています。
 
 アイテムリストのマークアップは、順不同のアイテムリストです。各項目には、見出し、さまざまな高さのテキスト、コールトゥアクションのリンクが含まれています。
 
@@ -400,23 +429,32 @@ original_slug: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_L
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
-    img {max-width: 100%; display: block;}
-    body {
-        font: 1.2em Helvetica, arial, sans-serif;
-    }
-    a:link, a:visited {
-      text-decoration: none;
-      color: #f08c00;
-    }
+* {
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+body {
+  font:
+    1.2em Helvetica,
+    arial,
+    sans-serif;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #f08c00;
+}
 
-    h2 {
-      background-color: #f08c00;
-      color: #fff;
-      text-align: center;
-      margin: 0;
-      padding: 20px;
-    }
+h2 {
+  background-color: #f08c00;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
 ```
 
 ここでは、列数の自由度が高いグリッドを作成します。 200 ピクセル以下にならないようにして、残った空間を均等に分け合うようにして、常に同じ幅の列トラックを得るようにします。これを実現するには、トラックのサイズ調整のための反復記法で、`minmax()` 関数を使用します。
@@ -427,7 +465,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_L
   margin: 2em;
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 ```
 
@@ -463,7 +501,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_L
 
 ![2 トラックのアイテムをレイアウトする空間がないため、隙間のあるレイアウトになっています。](11-grid-auto-flow-sparse.png)
 
-グリッドコンテナーに {{cssxref("grid-auto-flow")}}`: dense` を設定することで、グリッドがこれらの隙間を埋め合わせることができます。しかし、これを行うと、アイテムが論理的なソースの順序から外れてしまうので、注意が必要です。これは、アイテムの順序が決まっていない場合にのみ行うべきです。また、タブの順序がソースに従ったものになり、並び替えた表示にはならないという[問題](/ja/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility#視覚的な、しかし論理的ではない並べ替え)にも注意してください。
+グリッドコンテナーに {{cssxref("grid-auto-flow")}}`: dense` を設定することで、グリッドがこれらの隙間を埋め合わせることができます。しかし、これを行うと、アイテムが論理的なソースの順序から外れてしまうので、注意が必要です。これは、アイテムの順序が決まっていない場合にのみ行うべきです。また、タブの順序がソースに従ったものになり、並び替えた表示にはならないという[問題](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility#視覚的な、しかし論理的ではない並べ替え)にも注意してください。
 
 ```html hidden
 <ul class="listing">
@@ -479,10 +517,12 @@ original_slug: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_L
   </li>
   <li class="wide">
     <h2>アイテム 3</h2>
-    <div class="body"><p>このアイテムのコンテンツがここに来ます。</p>
+    <div class="body">
+      <p>このアイテムのコンテンツがここに来ます。</p>
       <p>こちらは他のアイテムよりも文字数が多いです。</p>
       <p>はるかにたくさん</p>
-      <p>何か違うことができるのでは？</p></div>
+      <p>何か違うことができるのでは？</p>
+    </div>
     <div class="cta"><a href="">コールトゥアクション</a></div>
   </li>
   <li>
@@ -499,23 +539,32 @@ original_slug: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_L
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
-    img {max-width: 100%; display: block;}
-    body {
-        font: 1.2em Helvetica, arial, sans-serif;
-    }
-    a:link, a:visited {
-      text-decoration: none;
-      color: #f08c00;
-    }
+* {
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+body {
+  font:
+    1.2em Helvetica,
+    arial,
+    sans-serif;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #f08c00;
+}
 
-    h2 {
-      background-color: #f08c00;
-      color: #fff;
-      text-align: center;
-      margin: 0;
-      padding: 20px;
-    }
+h2 {
+  background-color: #f08c00;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
 
 .listing li {
   border: 1px solid #ffe066;
@@ -541,7 +590,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_L
   display: grid;
   gap: 20px;
   grid-auto-flow: dense;
-  grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 .listing .wide {
   grid-column-end: span 2;
@@ -556,5 +605,8 @@ original_slug: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_L
 
 グリッドレイアウトを使いこなすには、ここで紹介したようなサンプルを作り続けるのが一番です。普段使っているフレームワークや浮動要素を使って作っているものを、グリッドを使って作れるかどうか試してみてください。また、現在の方法では作ることができない例を探すことも忘れてはいけません。雑誌やウェブ以外のものからインスピレーションを得るのもいいでしょう。グリッドレイアウトは、今までにない可能性を秘めています。古いレイアウトに縛られることなく、ぜひ活用してみてください。
 
-- インスピレーションを得るには、 [_Layout Labs_ from Jen Simmons](https://labs.jensimmons.com/) を参照してください。彼女はさまざまなソースに基づいてレイアウトを作成しています。
-- その他の一般的なレイアウトパターンについては、 _[Grid by Example](https://gridbyexample.com)_ を参照してください。ここには、グリッドレイアウトの多くの小さな例や、より大きな UI パターンやフルページレイアウトがあります。
+- [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)
+- [CSS レイアウト: グリッド](/ja/docs/Learn/CSS/CSS_layout/Grids)
+- [A complete guide to CSS grid](https://css-tricks.com/snippets/css/complete-guide-grid/) on CSS-Tricks (2023)
+- [Grid by example](https://gridbyexample.com)
+- [CSS grid website layout examples](https://www.quackit.com/css/grid/examples/css_grid_website_layout_examples.cfm) on quackit.com

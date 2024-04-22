@@ -1,16 +1,6 @@
 ---
 title: EventTarget
 slug: Web/API/EventTarget
-tags:
-  - API
-  - Cible de l'événement
-  - DOM
-  - DOM Events
-  - EventTarget
-  - Interface
-  - Événements DOM
-translation_of: Web/API/EventTarget
-browser-compat: api.EventTarget
 ---
 
 {{ApiRef("DOM Events")}}
@@ -52,41 +42,41 @@ Voir aussi [liaisons WebIDL](/fr/docs/Mozilla/WebIDL_bindings).
 
 ```js
 const EventTarget = function () {
-  this.listeners = {}
-}
+  this.listeners = {};
+};
 
-EventTarget.prototype.listeners = null
+EventTarget.prototype.listeners = null;
 EventTarget.prototype.addEventListener = function (type, callback) {
   if (!(type in this.listeners)) {
-    this.listeners[type] = []
+    this.listeners[type] = [];
   }
-  this.listeners[type].push(callback)
-}
+  this.listeners[type].push(callback);
+};
 
 EventTarget.prototype.removeEventListener = function (type, callback) {
   if (!(type in this.listeners)) {
-    return
+    return;
   }
-  const stack = this.listeners[type]
+  const stack = this.listeners[type];
   for (let i = 0, l = stack.length; i < l; i++) {
     if (stack[i] === callback) {
-      stack.splice(i, 1)
-      return
+      stack.splice(i, 1);
+      return;
     }
   }
-}
+};
 
 EventTarget.prototype.dispatchEvent = function (event) {
   if (!(event.type in this.listeners)) {
-    return true
+    return true;
   }
-  const stack = this.listeners[event.type].slice()
+  const stack = this.listeners[event.type].slice();
 
   for (let i = 0, l = stack.length; i < l; i++) {
-    stack[i].call(this, event)
+    stack[i].call(this, event);
   }
-  return !event.defaultPrevented
-}
+  return !event.defaultPrevented;
+};
 ```
 
 ## Spécifications

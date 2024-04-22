@@ -1,20 +1,9 @@
 ---
 title: downloads.DownloadItem
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadItem
-tags:
-  - API
-  - Add-ons
-  - DownloadItem
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - downloads
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadItem
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Le type `DownloadItem` de l'API {{WebExtAPIRef("downloads")}} représente un fichier téléchargé.
 

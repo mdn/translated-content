@@ -18,9 +18,9 @@ DOMImpObj = document.implementation;
 ```js
 var modName = "HTML";
 var modVer = "2.0";
-var conformTest = document.implementation.hasFeature( modName, modVer );
+var conformTest = document.implementation.hasFeature(modName, modVer);
 
-alert( "DOM " + modName + " " + modVer + " supported?: " + conformTest );
+alert("DOM " + modName + " " + modVer + " supported?: " + conformTest);
 
 // alerts with: "DOM HTML 2.0 supported?: true" if DOM Level 2 HTML module is supported.
 ```

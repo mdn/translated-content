@@ -1,20 +1,9 @@
 ---
 title: extensionTypes.ImageFormat
 slug: Mozilla/Add-ons/WebExtensions/API/extensionTypes/ImageFormat
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - ImageFormat
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - extensionTypes
-translation_of: Mozilla/Add-ons/WebExtensions/API/extensionTypes/ImageFormat
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Les valeurs de ce type sont des chaînes de caractères. Les valeurs possibles sont : `"jpeg"`, `"png"`.
 

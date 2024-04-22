@@ -27,12 +27,12 @@ Cat image and text coming from [www.best-cat-art.com](http://www.best-cat-art.co
 
 padding-bottom
 
-**Left**、**Top**、**Right**、**Bottom**、_margin-top_、*margin-bottom*、*border-top*、_border-bottom_
+**Left**、**Top**、**Right**、**Bottom**、_margin-top_、_margin-bottom_、_border-top_、_border-bottom_
 
 ## 备注
 
 `clientTop` 首次出现于 MS IE DHTML 对象模型中。
 
-## 相关链接
+## 参见
 
 - [MSDN: Measuring Element Dimension and Location](<https://docs.microsoft.com/en-us/previous-versions//hh781509(v=vs.85)>)

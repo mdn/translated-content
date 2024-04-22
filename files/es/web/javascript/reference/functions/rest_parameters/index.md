@@ -1,7 +1,6 @@
 ---
 title: Parámetros Rest
 slug: Web/JavaScript/Reference/Functions/rest_parameters
-original_slug: Web/JavaScript/Referencia/Funciones/parametros_rest
 ---
 
 {{jsSidebar("Functions")}}
@@ -57,22 +56,21 @@ Los parámetros rest han sido agregados para reducir el código repetitivo que s
 // Antes de los parámetros rest, "arguments" se podía convertir en un array usando:
 
 function f(a, b) {
-
-  let normalArray = Array.prototype.slice.call(arguments)
+  let normalArray = Array.prototype.slice.call(arguments);
   // -- o  --
-  let normalArray = [].slice.call(arguments)
+  let normalArray = [].slice.call(arguments);
   // -- o  --
-  let normalArray = Array.from(arguments)
+  let normalArray = Array.from(arguments);
 
-  let first = normalArray.shift()  // OK, nos da el primer argumento
-  let first = arguments.shift()    // ERROR (arguments no es un array)
+  let first = normalArray.shift(); // OK, nos da el primer argumento
+  let first = arguments.shift(); // ERROR (arguments no es un array)
 }
 
 // Ahora, puedes acceder fácilmente a un array usando un parametro rest.
 
 function f(...args) {
-  let normalArray = args
-  let first = normalArray.shift() // OK, gives the first argument
+  let normalArray = args;
+  let first = normalArray.shift(); // OK, gives the first argument
 }
 ```
 
@@ -85,9 +83,9 @@ function f(...[a, b, c]) {
   return a + b + c;
 }
 
-f(1)          // NaN (b y c son indefinidos)
-f(1, 2, 3)    // 6
-f(1, 2, 3, 4) // 6 (el cuarto parámetro no está desestructurado)
+f(1); // NaN (b y c son indefinidos)
+f(1, 2, 3); // 6
+f(1, 2, 3, 4); // 6 (el cuarto parámetro no está desestructurado)
 ```
 
 ## Ejemplos
@@ -100,12 +98,12 @@ De todas formas, el tercer argumento, `manyMoreArgs`, será un array que contend
 
 ```js
 function myFun(a, b, ...manyMoreArgs) {
-  console.log("a", a)
-  console.log("b", b)
-  console.log("manyMoreArgs", manyMoreArgs)
+  console.log("a", a);
+  console.log("b", b);
+  console.log("manyMoreArgs", manyMoreArgs);
 }
 
-myFun("one", "two", "three", "four", "five", "six")
+myFun("one", "two", "three", "four", "five", "six");
 
 // a, one
 // b, two
@@ -116,7 +114,7 @@ Debajo... incluso si hay solo un valor, el ultimo argumento seguirá siendo colo
 
 ```js
 // usando la misma definición de función del ejemplo anterior
-myFun("one", "two", "three")
+myFun("one", "two", "three");
 
 // a, one
 // b, two
@@ -128,7 +126,7 @@ Debajo, el tercer argumento no esta provisto, pero `manyMoreArgs` continúa sien
 ```js
 //usando la misma definición de función del ejemplo anterior
 
-myFun("one", "two")
+myFun("one", "two");
 
 // a, one
 // b, two
@@ -144,7 +142,7 @@ function fun1(...theArgs) {
   console.log(theArgs.length);
 }
 
-fun1();  // 0
+fun1(); // 0
 fun1(5); // 1
 fun1(5, 6, 7); // 3
 ```
@@ -172,7 +170,7 @@ function sortRestArgs(...theArgs) {
   return sortedArgs;
 }
 
-console.log(sortRestArgs(5,3,7,1)); // muestra 1,3,5,7
+console.log(sortRestArgs(5, 3, 7, 1)); // muestra 1,3,5,7
 
 function sortArguments() {
   var sortedArgs = arguments.sort();
@@ -180,7 +178,7 @@ function sortArguments() {
 }
 
 // lanza un TypeError: arguments.sort is not a function
-console.log(sortArguments(5,3,7,1));
+console.log(sortArguments(5, 3, 7, 1));
 ```
 
 Para poder usar los métodos de `Array` en el objeto `arguments`, se debe convertir a un `Array` primero.

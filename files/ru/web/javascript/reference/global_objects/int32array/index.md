@@ -1,7 +1,6 @@
 ---
 title: Int32Array
 slug: Web/JavaScript/Reference/Global_Objects/Int32Array
-translation_of: Web/JavaScript/Reference/Global_Objects/Int32Array
 ---
 
 {{JSRef}}
@@ -85,8 +84,6 @@ All `Int32Array` objects inherit from {{jsxref("TypedArray.prototype", "%TypedAr
   - : Returns the last (greatest) index of an element within the array equal to the specified value, or -1 if none is found. See also {{jsxref("Array.prototype.lastIndexOf()")}}.
 - {{jsxref("TypedArray.map", "Int32Array.prototype.map()")}}
   - : Creates a new array with the results of calling a provided function on every element in this array. See also {{jsxref("Array.prototype.map()")}}.
-- {{jsxref("TypedArray.move", "Int32Array.prototype.move()")}} {{non-standard_inline}} {{unimplemented_inline}}
-  - : Former non-standard version of {{jsxref("TypedArray.copyWithin", "Int32Array.prototype.copyWithin()")}}.
 - {{jsxref("TypedArray.reduce", "Int32Array.prototype.reduce()")}}
   - : Apply a function against an accumulator and each value of the array (from left-to-right) as to reduce it to a single value. See also {{jsxref("Array.prototype.reduce()")}}.
 - {{jsxref("TypedArray.reduceRight", "Int32Array.prototype.reduceRight()")}}
@@ -125,7 +122,7 @@ console.log(int32.length); // 2
 console.log(int32.BYTES_PER_ELEMENT); // 4
 
 // Из массива (Array)
-var arr = new Int32Array([21,31]);
+var arr = new Int32Array([21, 31]);
 console.log(arr[1]); // 31
 
 // Из другого типизированного массива (TypedArray)
@@ -138,20 +135,18 @@ var buffer = new ArrayBuffer(16);
 var z = new Int32Array(buffer, 0, 4);
 
 // Из итерируемого объекта (iterable)
-var iterable = function*(){ yield* [1,2,3]; }();
+var iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 var int32 = new Int32Array(iterable);
 // Int32Array[1, 2, 3]
 ```
 
 ## Specifications
 
-| Specification                                                                        | Статус                           | Комментарии                                                                                                                    |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('Typed Array')}}                                                 | {{Spec2('Typed Array')}} | Superseded by ECMAScript 2015.                                                                                                 |
-| {{SpecName('ES2015', '#table-49', 'TypedArray constructors')}} | {{Spec2('ES2015')}}         | Initial definition in an ECMA standard. Specified that `new` is required.                                                      |
-| {{SpecName('ESDraft', '#table-49', 'TypedArray constructors')}} | {{Spec2('ESDraft')}}     | ECMAScript 2017 changed the `Int32Array` constructor to use the `ToIndex` operation and allows constructors with no arguments. |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

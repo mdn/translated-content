@@ -21,10 +21,19 @@ slug: Web/API/ResizeObserverEntry/contentRect
 const resizeObserver = new ResizeObserver((entries) => {
   for (const entry of entries) {
     if (entry.contentBoxSize) {
-      h1Elem.style.fontSize = `${Math.max(1.5, entry.contentBoxSize.inlineSize / 200)}rem`;
-      pElem.style.fontSize = `${Math.max(1, entry.contentBoxSize.inlineSize / 600)}rem`;
+      h1Elem.style.fontSize = `${Math.max(
+        1.5,
+        entry.contentBoxSize.inlineSize / 200,
+      )}rem`;
+      pElem.style.fontSize = `${Math.max(
+        1,
+        entry.contentBoxSize.inlineSize / 600,
+      )}rem`;
     } else {
-      h1Elem.style.fontSize = `${Math.max(1.5, entry.contentRect.width / 200)}rem`;
+      h1Elem.style.fontSize = `${Math.max(
+        1.5,
+        entry.contentRect.width / 200,
+      )}rem`;
       pElem.style.fontSize = `${Math.max(1, entry.contentRect.width / 600)}rem`;
     }
   }

@@ -1,7 +1,6 @@
 ---
 title: プロキシー自動設定ファイル
 slug: Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
-original_slug: Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file
 ---
 
 {{HTTPSidebar}}
@@ -136,7 +135,7 @@ PAC ファイルを作成するために、以下の関数を使用できます�
 #### 構文
 
 ```js
-isPlainHostName(host)
+isPlainHostName(host);
 ```
 
 #### 引数
@@ -151,8 +150,8 @@ isPlainHostName(host)
 #### 例
 
 ```js
-isPlainHostName("www.mozilla.org") // false
-isPlainHostName("www") // true
+isPlainHostName("www.mozilla.org"); // false
+isPlainHostName("www"); // true
 ```
 
 ### `dnsDomainIs()`
@@ -160,7 +159,7 @@ isPlainHostName("www") // true
 #### 構文
 
 ```js
-dnsDomainIs(host, domain)
+dnsDomainIs(host, domain);
 ```
 
 #### 引数
@@ -177,8 +176,8 @@ dnsDomainIs(host, domain)
 #### 例
 
 ```js
-dnsDomainIs("www.mozilla.org", ".mozilla.org") // true
-dnsDomainIs("www", ".mozilla.org") // false
+dnsDomainIs("www.mozilla.org", ".mozilla.org"); // true
+dnsDomainIs("www", ".mozilla.org"); // false
 ```
 
 ### localHostOrDomainIs()
@@ -186,7 +185,7 @@ dnsDomainIs("www", ".mozilla.org") // false
 #### 構文
 
 ```js
-localHostOrDomainIs(host, hostdom)
+localHostOrDomainIs(host, hostdom);
 ```
 
 #### 引数
@@ -203,10 +202,10 @@ localHostOrDomainIs(host, hostdom)
 #### 例
 
 ```js
-localHostOrDomainIs("www.mozilla.org" , "www.mozilla.org") // true (exact match)
-localHostOrDomainIs("www"             , "www.mozilla.org") // true (hostname match, domain not specified)
-localHostOrDomainIs("www.google.com"  , "www.mozilla.org") // false (domain name mismatch)
-localHostOrDomainIs("home.mozilla.org", "www.mozilla.org") // false (hostname mismatch)
+localHostOrDomainIs("www.mozilla.org", "www.mozilla.org"); // true (exact match)
+localHostOrDomainIs("www", "www.mozilla.org"); // true (hostname match, domain not specified)
+localHostOrDomainIs("www.google.com", "www.mozilla.org"); // false (domain name mismatch)
+localHostOrDomainIs("home.mozilla.org", "www.mozilla.org"); // false (hostname mismatch)
 ```
 
 ### isResolvable()
@@ -214,7 +213,7 @@ localHostOrDomainIs("home.mozilla.org", "www.mozilla.org") // false (hostname mi
 #### 構文
 
 ```js
-isResolvable(host)
+isResolvable(host);
 ```
 
 #### 引数
@@ -227,7 +226,7 @@ isResolvable(host)
 #### 例
 
 ```js
-isResolvable("www.mozilla.org") // true
+isResolvable("www.mozilla.org"); // true
 ```
 
 ### isInNet()
@@ -235,7 +234,7 @@ isResolvable("www.mozilla.org") // true
 #### 構文
 
 ```js
-isInNet(host, pattern, mask)
+isInNet(host, pattern, mask);
 ```
 
 #### 引数
@@ -254,9 +253,11 @@ isInNet(host, pattern, mask)
 #### 例
 
 ```js
-function alert_eval(str) { alert(str + ' is ' + eval(str)) }
+function alert_eval(str) {
+  alert(str + " is " + eval(str));
+}
 function FindProxyForURL(url, host) {
-  alert_eval('isInNet(host, "63.245.213.24", "255.255.255.255")')
+  alert_eval('isInNet(host, "63.245.213.24", "255.255.255.255")');
   // "PAC-alert: isInNet(host, "63.245.213.24", "255.255.255.255") is true"
 }
 ```
@@ -264,7 +265,7 @@ function FindProxyForURL(url, host) {
 ### dnsResolve()
 
 ```js
-dnsResolve(host)
+dnsResolve(host);
 ```
 
 #### 引数
@@ -285,7 +286,7 @@ dnsResolve("www.mozilla.org"); // returns the string "104.16.41.2"
 #### 構文
 
 ```js
-convert_addr(ipaddr)
+convert_addr(ipaddr);
 ```
 
 #### 引数
@@ -306,7 +307,7 @@ convert_addr("104.16.41.2"); // returns the decimal number 1745889538
 #### 構文
 
 ```js
-myIpAddress()
+myIpAddress();
 ```
 
 #### 引数
@@ -322,7 +323,7 @@ Firefox が動作しているマシンのサーバー IP アドレスを、ド�
 #### 例
 
 ```js
-myIpAddress() //returns the string "127.0.1.1" if you were running Firefox on that localhost
+myIpAddress(); //returns the string "127.0.1.1" if you were running Firefox on that localhost
 ```
 
 ### dnsDomainLevels()
@@ -330,7 +331,7 @@ myIpAddress() //returns the string "127.0.1.1" if you were running Firefox on th
 #### 構文
 
 ```js
-dnsDomainLevels(host)
+dnsDomainLevels(host);
 ```
 
 #### 引数
@@ -343,8 +344,8 @@ dnsDomainLevels(host)
 #### 例
 
 ```js
-dnsDomainLevels("www");             // 0
-dnsDomainLevels("mozilla.org");     // 1
+dnsDomainLevels("www"); // 0
+dnsDomainLevels("mozilla.org"); // 1
 dnsDomainLevels("www.mozilla.org"); // 2
 ```
 
@@ -353,7 +354,7 @@ dnsDomainLevels("www.mozilla.org"); // 2
 #### 構文
 
 ```js
-shExpMatch(str, shexp)
+shExpMatch(str, shexp);
 ```
 
 #### 引数
@@ -381,7 +382,7 @@ shExpMatch("http://home.netscape.com/people/montulli/index.html", "*/ari/*"); //
 #### 構文
 
 ```js
-weekdayRange(wd1, wd2, [gmt])
+weekdayRange(wd1, wd2, [gmt]);
 ```
 
 > **メモ:** （Firefox 49以前） 関数でこれらの引数を範囲として評価したい場合は、 wd1 が wd2 より小さくなければなりません。以下の警告を参照してください。
@@ -406,11 +407,11 @@ weekdayRange(wd1, wd2, [gmt])
 #### 例
 
 ```js
-weekdayRange("MON", "FRI");        // returns true Monday through Friday (local timezone)
+weekdayRange("MON", "FRI"); // returns true Monday through Friday (local timezone)
 weekdayRange("MON", "FRI", "GMT"); // returns true Monday through Friday (GMT timezone)
-weekdayRange("SAT");               // returns true on Saturdays local time
-weekdayRange("SAT", "GMT");        // returns true on Saturdays GMT time
-weekdayRange("FRI", "MON");        // returns true Friday and Monday only (note, order does matter!)
+weekdayRange("SAT"); // returns true on Saturdays local time
+weekdayRange("SAT", "GMT"); // returns true on Saturdays GMT time
+weekdayRange("FRI", "MON"); // returns true Friday and Monday only (note, order does matter!)
 ```
 
 ### dateRange()
@@ -450,17 +451,17 @@ dateRange(<day1>, <month1>, <year1>, <day2>, <month2>, <year2>, [gmt])
 - gmt
   - : 文字列 "GMT" を指定すると、GMT タイムゾーンで時刻の比較を行います。指定しない場合は、ローカルタイムゾーンでの時刻と見なされます。
 
-1つの値のみが指定された場合（日、月、年のカテゴリーから）、この関数はその指定に一致する日にのみ真値を返します。両方の値が指定された場合、結果はそれらの時間の間で true となり、境界も含まれますが、境界は順序付けされます_。
+1つの値のみが指定された場合（日、月、年のカテゴリーから）、この関数はその指定に一致する日にのみ真値を返します。両方の値が指定された場合、結果はそれらの時間の間で true となり、境界も含まれますが、境界は順序付けされます\_。
 
 > **警告:** **日、月、年の順序が重要です**。 Firefox 49 以前では、 `dateRange("JAN", "DEC")` は常に `true` と評価されます。現在では、 `dateRange("DEC", "JAN")` は現在の月が 12 月か 1 月のときのみ、 true と評価されます。
 
 #### 例
 
 ```js
-dateRange(1);            // returns true on the first day of each month, local timezone
-dateRange(1, "GMT")      // returns true on the first day of each month, GMT timezone
-dateRange(1, 15);        // returns true on the first half of each month
-dateRange(24, "DEC");    // returns true on 24th of December each year
+dateRange(1); // returns true on the first day of each month, local timezone
+dateRange(1, "GMT"); // returns true on the first day of each month, GMT timezone
+dateRange(1, 15); // returns true on the first half of each month
+dateRange(24, "DEC"); // returns true on 24th of December each year
 dateRange("JAN", "MAR"); // returns true on the first quarter of the year
 
 dateRange(1, "JUN", 15, "AUG");
@@ -485,7 +486,7 @@ dateRange(1995, 1997);
 
 #### 構文
 
-```html
+```js
 // The full range of expansions is analogous to dateRange.
 timeRange(<hour1>, <min1>, <sec1>, <hour2>, <min2>, <sec2>, [gmt])
 ```
@@ -503,18 +504,18 @@ timeRange(<hour1>, <min1>, <sec1>, <hour2>, <min2>, <sec2>, [gmt])
 - gmt
   - : GMTタイムゾーンを表す文字列 "GMT"、またはローカルタイムゾーンを表す指定なしのどちらかです。
 
-1 つの値のみが指定された場合（各カテゴリー：時、分、秒）、この関数は、その指定に一致する時間でのみ真値を返します。両方の値が指定された場合、結果はそれらの時間の間で真となり、境界を含みますが、境界は順序付けされます_。
+1 つの値のみが指定された場合（各カテゴリー：時、分、秒）、この関数は、その指定に一致する時間でのみ真値を返します。両方の値が指定された場合、結果はそれらの時間の間で真となり、境界を含みますが、境界は順序付けされます\_。
 
 > **警告:** **時、分、秒の順序が重要です**。 Firefox 49 以前では、 `timeRange(0, 23)` は常に true と評価されます。現在は `timeRange(23, 0)` は現在の時刻が 23:00 か 0:00 のときだけ true と評価されます。
 
 #### 例
 
 ```js
-timerange(12);                // returns true from noon to 1pm
-timerange(12, 13);            // returns true from noon to 1pm
-timerange(12, "GMT");         // returns true from noon to 1pm, in GMT timezone
-timerange(9, 17);             // returns true from 9am to 5pm
-timerange(8, 30, 17, 00);     // returns true from 8:30am to 5:00pm
+timerange(12); // returns true from noon to 1pm
+timerange(12, 13); // returns true from noon to 1pm
+timerange(12, "GMT"); // returns true from noon to 1pm, in GMT timezone
+timerange(9, 17); // returns true from 9am to 5pm
+timerange(8, 30, 17, 00); // returns true from 8:30am to 5:00pm
 timerange(0, 0, 0, 0, 0, 30); // returns true between midnight and 30 seconds past midnight
 ```
 
@@ -536,8 +537,8 @@ alert(message)
 #### 例
 
 ```js
-alert(host + " = " + dnsResolve(host));            // logs the host name and its IP address
-alert("Error: shouldn't reach this clause.");      // log a simple message
+alert(host + " = " + dnsResolve(host)); // logs the host name and its IP address
+alert("Error: shouldn't reach this clause."); // log a simple message
 ```
 
 ## 例 1
@@ -592,10 +593,8 @@ function FindProxyForURL(url, host) {
 
 ```js
 function FindProxyForURL(url, host) {
-  if (isResolvable(host))
-    return "DIRECT";
-  else
-    return "PROXY proxy.mydomain.com:8080";
+  if (isResolvable(host)) return "DIRECT";
+  else return "PROXY proxy.mydomain.com:8080";
 }
 ```
 
@@ -623,10 +622,8 @@ function FindProxyForURL(url, host) {
 
 ```js
 function FindProxyForURL(url, host) {
-  if (isInNet(host, "198.95.0.0", "255.255.0.0"))
-    return "DIRECT";
-  else
-    return "PROXY proxy.mydomain.com:8080";
+  if (isInNet(host, "198.95.0.0", "255.255.0.0")) return "DIRECT";
+  else return "PROXY proxy.mydomain.com:8080";
 }
 ```
 
@@ -652,32 +649,31 @@ function FindProxyForURL(url, host) {
 
 この例はより洗練されています。4 台のプロキシサーバがあり、そのうちの 1 台は他のすべてのプロキシーサーバーの ホットスタンバイとなっていて、残りの 3 台のうちの 1 台がダウンすると、 4 台目が見なされます。さらに、残りの 3 つのプロキシーサーバーは URL パターンに基づいて負荷を分担し、キャッシュをより効果的にしています（3 つのサーバーにはどの文書も 1 つのコピーしかありません - それぞれに 1 つのコピーがあるのとは対照的です）。負荷はこのように配分されます。
 
-| プロキシー | 目的           |
-| ----- | ----------------- |
-| #1    | .com ドメイン       |
-| #2    | .edu ドメイン       |
-| #3    | その他のすべてのドメイン |
-| #4    | ホットスタンバイ      |
+| プロキシー | 目的                     |
+| ---------- | ------------------------ |
+| #1         | .com ドメイン            |
+| #2         | .edu ドメイン            |
+| #3         | その他のすべてのドメイン |
+| #4         | ホットスタンバイ         |
 
 ローカルからのアクセスはすべて直接であることが望まれます。すべてのプロキシサーバーは 8080 番ポートで動作します（要件ではありません。ポートを変更すればいいのです。ただし、両側の設定を変更するのを忘れないでください）。 JavaScript の **`+`** 演算子で文字列を連結することができることに注意してください。
 
 ```js
 function FindProxyForURL(url, host) {
-
   if (isPlainHostName(host) || dnsDomainIs(host, ".mydomain.com"))
     return "DIRECT";
-
   else if (shExpMatch(host, "*.com"))
-    return "PROXY proxy1.mydomain.com:8080; " +
-           "PROXY proxy4.mydomain.com:8080";
-
+    return (
+      "PROXY proxy1.mydomain.com:8080; " + "PROXY proxy4.mydomain.com:8080"
+    );
   else if (shExpMatch(host, "*.edu"))
-    return "PROXY proxy2.mydomain.com:8080; " +
-           "PROXY proxy4.mydomain.com:8080";
-
+    return (
+      "PROXY proxy2.mydomain.com:8080; " + "PROXY proxy4.mydomain.com:8080"
+    );
   else
-    return "PROXY proxy3.mydomain.com:8080; " +
-           "PROXY proxy4.mydomain.com:8080";
+    return (
+      "PROXY proxy3.mydomain.com:8080; " + "PROXY proxy4.mydomain.com:8080"
+    );
 }
 ```
 
@@ -689,22 +685,13 @@ function FindProxyForURL(url, host) {
 
 ```js
 function FindProxyForURL(url, host) {
-
-  if (url.startsWith("http:"))
-    return "PROXY http-proxy.mydomain.com:8080";
-
-  else if (url.startsWith("ftp:"))
-    return "PROXY ftp-proxy.mydomain.com:8080";
-
+  if (url.startsWith("http:")) return "PROXY http-proxy.mydomain.com:8080";
+  else if (url.startsWith("ftp:")) return "PROXY ftp-proxy.mydomain.com:8080";
   else if (url.startsWith("gopher:"))
     return "PROXY gopher-proxy.mydomain.com:8080";
-
   else if (url.startsWith("https:") || url.startsWith("snews:"))
     return "PROXY security-proxy.mydomain.com:8080";
-
-  else
-    return "DIRECT";
-
+  else return "DIRECT";
 }
 ```
 

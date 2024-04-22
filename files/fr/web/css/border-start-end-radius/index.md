@@ -1,13 +1,6 @@
 ---
 title: border-start-end-radius
 slug: Web/CSS/border-start-end-radius
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Propriété logique
-  - Reference
-translation_of: Web/CSS/border-start-end-radius
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

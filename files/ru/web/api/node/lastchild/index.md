@@ -1,7 +1,6 @@
 ---
 title: Node.lastChild
 slug: Web/API/Node/lastChild
-translation_of: Web/API/Node/lastChild
 ---
 
 {{ ApiRef() }}
@@ -27,7 +26,10 @@ var tr = document.getElementById("row1");
 var corner_td = tr.lastChild;
 ```
 
-## Спецификация
+## Спецификации
 
-- {{Spec("http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-61AD09FB", "DOM Level 2: lastChild", "REC")}}
-- {{Spec("http://dom.spec.whatwg.org/#dom-node-lastchild", "DOM Standard: lastChild")}}
+{{Specifications}}
+
+## Совместимость с браузерами
+
+{{Compat}}

@@ -1,8 +1,6 @@
 ---
 title: Window.scroll()
 slug: Web/API/Window/scroll
-translation_of: Web/API/Window/scroll
-browser-compat: api.Window.scroll
 ---
 
 {{APIRef}}
@@ -12,8 +10,8 @@ La méthode **`Window.scroll()`** permet de faire défiler la fenêtre jusqu'à 
 ## Syntaxe
 
 ```js
-window.scroll(x, y)
-window.scroll(options)
+window.scroll(x, y);
+window.scroll(options);
 ```
 
 ### Paramètres
@@ -32,14 +30,19 @@ Ou avec `options`&nbsp;:
     - `left`
       - : Indique le nombre de pixels sur l'axe horizontal le long desquels faire défiler la fenêtre ou l'élément.
     - `behavior`
-      - : Indique si le défilement devrait être doux (`smooth`), ou s'il devrait avoir lieu instantanément, en un seul saut (`auto`, il s'agit de la valeur par défaut).
+      - : Indique si le défilement devrait être instantané ou doux. Cette option est une chaine de caractères qui doit être l'une de ces valeurs&nbsp;:
+        - `smooth`&nbsp;: le défilement doit s'animer en douceur
+        - `instant`&nbsp;: le défilement devrait se produire instantanément, en un seul saut
+        - `auto`&nbsp;: le comportement de défilement est déterminé par la valeur calculée de ([scroll-behavior](/fr/docs/Web/CSS/scroll-behavior))
 
 ## Exemples
 
 ```html
 <!-- On place le 100e pixel, sur l'axe vertical, en haut de la fenêtre -->
 
-<button onclick="scroll(0, 100);">Cliquez pour faire défiler jusqu'au 100e pixel</button>
+<button onclick="scroll(0, 100);">
+  Cliquez pour faire défiler jusqu'au 100e pixel
+</button>
 ```
 
 Avec `options`&nbsp;:
@@ -48,7 +51,7 @@ Avec `options`&nbsp;:
 window.scroll({
   top: 100,
   left: 100,
-  behavior: 'smooth'
+  behavior: "smooth",
 });
 ```
 

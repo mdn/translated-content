@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RangeError
 
 ## 語法
 
-```plain
+```js-nolint
 new RangeError([message[, fileName[, lineNumber]]])
 ```
 
@@ -56,51 +56,41 @@ new RangeError([message[, fileName[, lineNumber]]])
 
 ## 範例
 
-### 使用 `RangeError` (數值)
+### 使用 `RangeError`（數值）
 
 ```js
-function check(n)
-{
-    if(!(n >= -500 && n <= 500))
-    {
-        throw new RangeError("The argument must be between -500 and 500.");
-    }
+function check(n) {
+  if (!(n >= -500 && n <= 500)) {
+    throw new RangeError("The argument must be between -500 and 500.");
+  }
 }
 
-try
-{
-    check(2000);
-}
-catch(error)
-{
-    if(error instanceof RangeError)
-    {
-        // Handle the error.
-    }
+try {
+  check(2000);
+} catch (error) {
+  if (error instanceof RangeError) {
+    // Handle the error.
+  }
 }
 ```
 
-### 使用 `RangeError` (非數值)
+### 使用 `RangeError`（非數值）
 
 ```js
-function check(value)
-{
-    if(["apple", "banana", "carrot"].includes(value) === false)
-    {
-        throw new RangeError("The argument must be an \"apple\", \"banana\", or \"carrot\".");
-    }
+function check(value) {
+  if (["apple", "banana", "carrot"].includes(value) === false) {
+    throw new RangeError(
+      'The argument must be an "apple", "banana", or "carrot".',
+    );
+  }
 }
 
-try
-{
-    check("cabbage");
-}
-catch(error)
-{
-    if(error instanceof RangeError)
-    {
-        // Handle the error.
-    }
+try {
+  check("cabbage");
+} catch (error) {
+  if (error instanceof RangeError) {
+    // Handle the error.
+  }
 }
 ```
 
@@ -112,7 +102,7 @@ catch(error)
 
 {{Compat}}
 
-## 另見
+## 參見
 
 - {{jsxref("Error")}}
 - {{jsxref("RangeError.prototype")}}

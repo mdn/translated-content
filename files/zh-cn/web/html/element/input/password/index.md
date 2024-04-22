@@ -161,7 +161,7 @@ slug: Web/HTML/Element/input/password
 ```js
 document.getElementById("selectAll").onclick = () => {
   document.getElementById("userPassword").select();
-}
+};
 ```
 
 #### 结果
@@ -226,7 +226,7 @@ const current = document.getElementById("current");
 
 ssn.oninput = (event) => {
   current.textContent = ssn.value;
-}
+};
 ```
 
 #### 结果
@@ -247,7 +247,7 @@ ssn.oninput = (event) => {
       <td><strong>Events</strong></td>
       <td>
         {{domxref("HTMLElement/change_event", "change")}} 和
-        {{domxref("HTMLElement/input_event", "input")}}
+        {{domxref("Element/input_event", "input")}}
       </td>
     </tr>
     <tr>

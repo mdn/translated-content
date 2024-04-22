@@ -1,7 +1,6 @@
 ---
 title: Object.isFrozen()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isFrozen
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/isFrozen
 ---
 
 {{JSRef}}
@@ -47,32 +46,36 @@ delete oneProp.p;
 Object.isFrozen(oneProp); // === true
 
 // Un ojbeto no-extendible con una propiedad sin capacidad de escritura pero si con capacidad de configuración no está congelado.
-var nonWritable = { e: 'plep' };
+var nonWritable = { e: "plep" };
 Object.preventExtensions(nonWritable);
-Object.defineProperty(nonWritable, 'e', { writable: false }); // Le quita la capacidad de escritura.
+Object.defineProperty(nonWritable, "e", { writable: false }); // Le quita la capacidad de escritura.
 Object.isFrozen(nonWritable); // === false
 
 // Quitarle la capacidad de configuración a una propiedad congela el objeto.
-Object.defineProperty(nonWritable, 'e', { configurable: false }); // le quita la capacidad de configuración.
+Object.defineProperty(nonWritable, "e", { configurable: false }); // le quita la capacidad de configuración.
 Object.isFrozen(nonWritable); // === true
 
 // Un objeto no-extendible con una propiedad sin capacidad de configuración pero con capacidad de escritura no congela a dicho objeto.
-var nonConfigurable = { release: 'the kraken!' };
+var nonConfigurable = { release: "the kraken!" };
 Object.preventExtensions(nonConfigurable);
-Object.defineProperty(nonConfigurable, 'release', { configurable: false });
+Object.defineProperty(nonConfigurable, "release", { configurable: false });
 Object.isFrozen(nonConfigurable); // === false
 
 // Quitarle la capacidad de configuración a esa propiedad congela el objeto.
-Object.defineProperty(nonConfigurable, 'release', { writable: false });
+Object.defineProperty(nonConfigurable, "release", { writable: false });
 Object.isFrozen(nonConfigurable); // === true
 
 // A non-extensible object with a configurable accessor property isn't frozen.
-var accessor = { get food() { return 'yum'; } };
+var accessor = {
+  get food() {
+    return "yum";
+  },
+};
 Object.preventExtensions(accessor);
 Object.isFrozen(accessor); // === false
 
 // ...but make that property non-configurable and it becomes frozen.
-Object.defineProperty(accessor, 'food', { configurable: false });
+Object.defineProperty(accessor, "food", { configurable: false });
 Object.isFrozen(accessor); // === true
 
 // But the easiest way for an object to be frozen is if Object.freeze has been called on it.

@@ -1,7 +1,6 @@
 ---
 title: decimal-format
 slug: Web/XSLT/Element/decimal-format
-original_slug: Web/XSLT/decimal-format
 ---
 
 {{XsltRef}}
@@ -32,33 +31,43 @@ Ninguno.
 ### Atributos opcionales
 
 - `name`
+
   - : Indica el nombre que tendrá este formato.
 
 - `decimal-separator`
+
   - : Indica el caracter a ser usado como punto decimal. El valor por defecto es (`.`).
 
 - `grouping-separator`
+
   - : Indica el separador de miles. El valor por defecto es (`,`).
 
 - `infinity`
+
   - : Indica el texto a ser usado para representar el valor de infinito. El valor por defecto es la cadena de texto "`Infinity`".
 
 - `minus-sign`
+
   - : Indica el caracter a ser usado como signo negativo. El valor por defecto es el guión (`-`).
 
 - `NaN`
+
   - : Indica la cadena de texto a ser usado cuando el valor no es un número. El valor por defecto es la cadena de texto "`NaN`".
 
 - `percent`
+
   - : Indica el caracter a ser usado como signo de porcentaje. El valor por defecto es (`%`).
 
 - `per-mille`
+
   - : Indica el separador de miles. El valor por defecto es (`‰`).
 
 - `zero-digit`
+
   - : Indica el caracter para el cero. El valor por defecto es (`0`).
 
 - `digit`
+
   - : Indica el caracter a ser usado en los patrones de formato para indicar un dígito. El valor por defecto es (`#`).
 
 - `pattern-separator`

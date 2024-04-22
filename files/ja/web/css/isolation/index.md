@@ -34,11 +34,11 @@ isolation: unset;
 - `isolate`
   - : 新しい重ね合わせコンテキストが必ず作成されます。
 
-## Formal definition
+## 公式定義
 
 {{cssinfo}}
 
-## Formal syntax
+## 形式文法
 
 {{csssyntax}}
 
@@ -63,7 +63,7 @@ isolation: unset;
 
 ```css
 .a {
-  background-color: rgb(0,255,0);
+  background-color: rgb(0, 255, 0);
 }
 #b {
   width: 200px;

@@ -1,7 +1,6 @@
 ---
 title: perspective
 slug: Web/CSS/perspective
-translation_of: Web/CSS/perspective
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -12,7 +11,7 @@ translation_of: Web/CSS/perspective
 
 Элементы части которые находятся за пользователем, т.е. z-координата этих элементов больше чем значение свойства `perspective, не отрисовываются.`
 
-*`Точка схождения`* по умолчанию расположена в центре элемента, но её можно переместить используя свойство {{ cssxref("perspective-origin") }}.
+_`Точка схождения`_ по умолчанию расположена в центре элемента, но её можно переместить используя свойство {{ cssxref("perspective-origin") }}.
 
 При использовании данного свойства со значениями отличными от 0 или none создаётся новый [stacking context](/en/CSS/Understanding_z-index/The_stacking_context).
 
@@ -53,54 +52,51 @@ perspective: unset;
 
 ```html
 <table>
-   <tbody>
-      <tr>
-         <th><code>perspective: 250px;</code>
-         </th>
-         <th><code>perspective: 350px;</code>
-         </th>
-         <th><code>perspective: 500px;</code>
-         </th>
-      </tr>
-      <tr>
-         <td>
-            <div class="container">
-               <div class="cube pers250">
-                  <div class="face front">1</div>
-                  <div class="face back">2</div>
-                  <div class="face right">3</div>
-                  <div class="face left">4</div>
-                  <div class="face top">5</div>
-                  <div class="face bottom">6</div>
-               </div>
-            </div>
-         </td>
-         <td>
-            <div class="container">
-               <div class="cube pers350">
-                  <div class="face front">1</div>
-                  <div class="face back">2</div>
-                  <div class="face right">3</div>
-                  <div class="face left">4</div>
-                  <div class="face top">5</div>
-                  <div class="face bottom">6</div>
-               </div>
-            </div>
-         </td>
-         <td>
-            <div class="container">
-               <div class="cube pers500">
-                  <div class="face front">1</div>
-                  <div class="face back">2</div>
-                  <div class="face right">3</div>
-                  <div class="face left">4</div>
-                  <div class="face top">5</div>
-                  <div class="face bottom">6</div>
-               </div>
-            </div>
-         </td>
-      </tr>
-   </tbody>
+  <tbody>
+    <tr>
+      <th><code>perspective: 250px;</code></th>
+      <th><code>perspective: 350px;</code></th>
+      <th><code>perspective: 500px;</code></th>
+    </tr>
+    <tr>
+      <td>
+        <div class="container">
+          <div class="cube pers250">
+            <div class="face front">1</div>
+            <div class="face back">2</div>
+            <div class="face right">3</div>
+            <div class="face left">4</div>
+            <div class="face top">5</div>
+            <div class="face bottom">6</div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="container">
+          <div class="cube pers350">
+            <div class="face front">1</div>
+            <div class="face back">2</div>
+            <div class="face right">3</div>
+            <div class="face left">4</div>
+            <div class="face top">5</div>
+            <div class="face bottom">6</div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="container">
+          <div class="cube pers500">
+            <div class="face front">1</div>
+            <div class="face back">2</div>
+            <div class="face right">3</div>
+            <div class="face left">4</div>
+            <div class="face top">5</div>
+            <div class="face bottom">6</div>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -109,87 +105,89 @@ perspective: unset;
 ```css
 /* Короткие классы для различных значений perspective */
 .pers250 {
-    perspective: 250px;
-    -webkit-perspective: 250px;
+  perspective: 250px;
+  -webkit-perspective: 250px;
 }
 .pers350 {
-    perspective: 350px;
-    -webkit-perspective: 350px;
+  perspective: 350px;
+  -webkit-perspective: 350px;
 }
 .pers500 {
-    perspective: 500px;
-    -webkit-perspective: 500px;
+  perspective: 500px;
+  -webkit-perspective: 500px;
 }
 
 /* Определяем div.container, div.cube, и свойства граней куба */
- .container {
-   width: 200px;
-   height: 200px;
-   margin: 75px 0 0 75px;
-   border: none;
+.container {
+  width: 200px;
+  height: 200px;
+  margin: 75px 0 0 75px;
+  border: none;
 }
 .cube {
-   width: 100%;
-   height: 100%;
-   backface-visibility: visible;
-   perspective-origin: 150% 150%;
-   transform-style: preserve-3d;
-   -webkit-backface-visibility: visible;
-   -webkit-perspective-origin: 150% 150%;
-   -webkit-transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+  backface-visibility: visible;
+  perspective-origin: 150% 150%;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: visible;
+  -webkit-perspective-origin: 150% 150%;
+  -webkit-transform-style: preserve-3d;
 }
 .face {
-   display: block;
-   position: absolute;
-   width: 100px;
-   height: 100px;
-   border: none;
-   line-height: 100px;
-   font-family: sans-serif;
-   font-size: 60px;
-   color: white;
-   text-align: center;
+  display: block;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: none;
+  line-height: 100px;
+  font-family: sans-serif;
+  font-size: 60px;
+  color: white;
+  text-align: center;
 }
 
 /* Определяем каждую грань в зависимости от направления */
- .front {
-   background: rgba(0, 0, 0, 0.3);
-   transform: translateZ(50px);
-   -webkit-transform: translateZ(50px);
+.front {
+  background: rgba(0, 0, 0, 0.3);
+  transform: translateZ(50px);
+  -webkit-transform: translateZ(50px);
 }
 .back {
-   background: rgba(0, 255, 0, 1);
-   color: black;
-   transform: rotateY(180deg) translateZ(50px);
-   -webkit-transform: rotateY(180deg) translateZ(50px);
+  background: rgba(0, 255, 0, 1);
+  color: black;
+  transform: rotateY(180deg) translateZ(50px);
+  -webkit-transform: rotateY(180deg) translateZ(50px);
 }
 .right {
-   background: rgba(196, 0, 0, 0.7);
-   transform: rotateY(90deg) translateZ(50px);
-   -webkit-transform: rotateY(90deg) translateZ(50px);
+  background: rgba(196, 0, 0, 0.7);
+  transform: rotateY(90deg) translateZ(50px);
+  -webkit-transform: rotateY(90deg) translateZ(50px);
 }
 .left {
-   background: rgba(0, 0, 196, 0.7);
-   transform: rotateY(-90deg) translateZ(50px);
-   -webkit-transform: rotateY(-90deg) translateZ(50px);
+  background: rgba(0, 0, 196, 0.7);
+  transform: rotateY(-90deg) translateZ(50px);
+  -webkit-transform: rotateY(-90deg) translateZ(50px);
 }
 .top {
-   background: rgba(196, 196, 0, 0.7);
-   transform: rotateX(90deg) translateZ(50px);
-   -webkit-transform: rotateX(90deg) translateZ(50px)
+  background: rgba(196, 196, 0, 0.7);
+  transform: rotateX(90deg) translateZ(50px);
+  -webkit-transform: rotateX(90deg) translateZ(50px);
 }
 .bottom {
-   background: rgba(196, 0, 196, 0.7);
-   transform: rotateX(-90deg) translateZ(50px);
-   -webkit-transform: rotateX(-90deg) translateZ(50px);
+  background: rgba(196, 0, 196, 0.7);
+  transform: rotateX(-90deg) translateZ(50px);
+  -webkit-transform: rotateX(-90deg) translateZ(50px);
 }
 
 /* Делаем таблицу немного лучше */
-th, p, td {
-   background-color: #EEEEEE;
-   padding: 10px;
-   font-family: sans-serif;
-   text-align: left;
+th,
+p,
+td {
+  background-color: #eeeeee;
+  padding: 10px;
+  font-family: sans-serif;
+  text-align: left;
 }
 ```
 

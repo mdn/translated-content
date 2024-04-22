@@ -1,15 +1,6 @@
 ---
 title: DataView.prototype.byteLength
 slug: Web/JavaScript/Reference/Global_Objects/DataView/byteLength
-tags:
-  - DataView
-  - JavaScript
-  - Propriété
-  - Prototype
-  - Reference
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/byteLength
-original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/byteLength
 ---
 
 {{JSRef}}
@@ -21,7 +12,7 @@ L'accesseur **`byteLength`** est une propriété représentant la longueur, expr
 ## Syntaxe
 
 ```js
-dataview.byteLength
+dataview.byteLength;
 ```
 
 ## Description

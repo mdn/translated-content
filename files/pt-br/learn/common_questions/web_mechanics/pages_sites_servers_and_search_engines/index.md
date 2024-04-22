@@ -1,7 +1,6 @@
 ---
 title: Qual a diferença entre página web, site, servidor web e mecanismo de busca?
 slug: Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines
-original_slug: Learn/Common_questions/Pages_sites_servers_and_search_engines
 ---
 
 Neste artigo, iremos apresentar diversos conceitos relacionados à Web: páginas web, sites, servidores web e mecanismos de busca. Estes termos são confundidos frequentemente por iniciantes na web, ou são empregados de forma incorreta. Vamos aprender o que cada um significa!

@@ -38,17 +38,17 @@ Anteriormente en este curso, hicimos que escribieras algunos comandos JavaScript
 1. Ve a la pestaña dónde tienes abierto `number-game-errors.html` y abre tu consola JavaScript. Deberías ver un mensaje de error con las siguientes líneas: ![](not-a-function.png)
 2. Este es un error bastante fácil de rastrear, y el navegador le brinda varios bits de información útil para ayudarte (la captura de pantalla anterior es de Firefox, pero otros navegadores proporcionan información similar). De izquierda a derecha, tenemos:
 
-    - Una "x" roja para indicar que se trata de un error.
-    - Un mensaje de error para indicar qué salió mal: "TypeError: guessSubmit.addeventListener no es una función"
-    - Un enlace a "Más información" que te lleva a una página de MDN dónde explica detalladamente qué significa este error.
-    - El nombre del archivo JavaScript, que enlaza con la pestaña "Depurador" de las herramientas para desarrolladores. Si sigues este enlace, verás la línea exacta donde se resalta el error.
-    - El número de línea donde está el error y el número de carácter en esa línea donde se detectó el error por primera vez. En este caso, tenemos la línea 86, carácter número 3.
+   - Una "x" roja para indicar que se trata de un error.
+   - Un mensaje de error para indicar qué salió mal: "TypeError: guessSubmit.addeventListener no es una función"
+   - Un enlace a "Más información" que te lleva a una página de MDN dónde explica detalladamente qué significa este error.
+   - El nombre del archivo JavaScript, que enlaza con la pestaña "Depurador" de las herramientas para desarrolladores. Si sigues este enlace, verás la línea exacta donde se resalta el error.
+   - El número de línea donde está el error y el número de carácter en esa línea donde se detectó el error por primera vez. En este caso, tenemos la línea 86, carácter número 3.
 
 3. Si miramos la línea 86 en nuestro editor de código, encontraremos esta línea:
 
-    ```js
-    guessSubmit.addeventListener('click', checkGuess);
-    ```
+   ```js
+   guessSubmit.addeventListener("click", checkGuess);
+   ```
 
 4. El mensaje de error dice "`guessSubmit.addeventListener no es una función`", lo cual significa que el intérprete de JavaScript no reconoce la función que estamos llamando. A menudo, este mensaje de error en realidad significa que hemos escrito algo mal. Si no estás seguro de la ortografía correcta de una parte de la sintaxis, a menudo es bueno buscar la función en MDN. La mejor manera de hacer esto es, en tu navegador favorito, buscar "mdn _nombre-de-característica_". Aquí hay un atajo para ahorrarte algo de tiempo en esta instancia: [`addEventListener()`](/es/docs/Web/API/EventTarget/addEventListener).
 5. Entonces, al mirar esta página, ¡el error parece ser que hemos escrito mal el nombre de la función!. Recuerda que JavaScript distingue entre mayúsculas y minúsculas, por lo que cualquier pequeña diferencia en la ortografía o en mayúsculas provocará un error. Cambiar `addeventListener` a `addEventListener` debería solucionar este problema. Hazlo ahora.
@@ -61,36 +61,36 @@ Anteriormente en este curso, hicimos que escribieras algunos comandos JavaScript
 2. Ahora, si intentas ingresar un número y presionas el botón "Enviar respuesta", verás... ¡otro error! ![](variable-is-null.png)
 3. Esta vez, el error que se informa es "`TypeError: lowOrHi es nulo`", en la línea 78.
 
-    > **Nota:** [`Null`](/es/docs/Glossary/Null) es un valor especial que significa "nada" o "sin valor". Por lo tanto, `lowOrHi` ha sido declarado e iniciado, pero no con algún valor significativo — no tiene tipo ni valor.
+   > **Nota:** [`Null`](/es/docs/Glossary/Null) es un valor especial que significa "nada" o "sin valor". Por lo tanto, `lowOrHi` ha sido declarado e iniciado, pero no con algún valor significativo — no tiene tipo ni valor.
 
-    > **Nota:** Este error no apareció tan pronto como se cargó la página porque este error ocurrió dentro de una función (dentro del bloque `checkGuess() {...}`). Como pronto aprenderás con más detalle en nuestro [artículo de funciones](/es/docs/Learn/JavaScript/Building_blocks/Functions), el código dentro de las funciones se ejecuta en un ámbito separado que el código fuera de las funciones. En este caso, el código no se ejecutó y el error no se lanzó hasta que la función `checkGuess()` se ejecutó en la línea 86.
+   > **Nota:** Este error no apareció tan pronto como se cargó la página porque este error ocurrió dentro de una función (dentro del bloque `checkGuess() {...}`). Como pronto aprenderás con más detalle en nuestro [artículo de funciones](/es/docs/Learn/JavaScript/Building_blocks/Functions), el código dentro de las funciones se ejecuta en un ámbito separado que el código fuera de las funciones. En este caso, el código no se ejecutó y el error no se lanzó hasta que la función `checkGuess()` se ejecutó en la línea 86.
 
 4. Échale un vistazo a la línea 78 y verás el siguiente código:
 
-    ```js
-    lowOrHi.textContent = '¡El número es muy grande!';
-    ```
+   ```js
+   lowOrHi.textContent = "¡El número es muy grande!";
+   ```
 
 5. Esta línea está intentando establecer la propiedad `textContent` de la constante `lowOrHi` en una cadena de texto, pero no funciona porque `lowOrHi` no contiene lo que es supone. Veamos por qué es así — intenta buscar otras instancias de `lowOrHi` en el código. La primera instancia que encontrarás en JavaScript está en la línea 48:
 
-    ```js
-    const lowOrHi = document.querySelector('lowOrHi');
-    ```
+   ```js
+   const lowOrHi = document.querySelector("lowOrHi");
+   ```
 
 6. En este punto, estamos intentando hacer que la variable contenga una referencia a un elemento en el HTML del documento. Comprobemos si el valor es `null` después de ejecutar esta línea. Agrega el siguiente código en la línea 49:
 
-    ```js
-    console.log(lowOrHi);
-    ```
+   ```js
+   console.log(lowOrHi);
+   ```
 
-    > **Nota:** [`console.log()`](/es/docs/Web/API/Console/log) es una función de depuración realmente útil que imprime un valor en la consola. Por lo tanto, imprimirá el valor de `lowOrHi` en la consola tan pronto como intentemos configurarlo en la línea 48.
+   > **Nota:** [`console.log()`](/es/docs/Web/API/Console/log) es una función de depuración realmente útil que imprime un valor en la consola. Por lo tanto, imprimirá el valor de `lowOrHi` en la consola tan pronto como intentemos configurarlo en la línea 48.
 
 7. Guarda y refresca, y ahora deberías ver el resultado de `console.log()` en tu consola. ![](console-log-output.png)Efectivamente, el valor de `lowOrHi` es `null` en este punto, así que definitivamente hay un problema con la línea 48.
 8. Pensemos en cuál podría ser el problema. La línea 48 está utilizando un método [`document.querySelector()`](/es/docs/Web/API/Document/querySelector) para obtener una referencia a un elemento seleccionándolo con un selector CSS. Buscando más adelante en nuestro archivo, podemos encontrar el párrafo en cuestión:
 
-    ```js
-    <p class="lowOrHi"></p>
-    ```
+   ```js
+   <p class="lowOrHi"></p>
+   ```
 
 9. Entonces necesitamos un selector de clase aquí, que comienza con un punto (`.`), pero el selector que se pasa al método `querySelector()` en la línea 48 no tiene punto. ¡Este podría ser el problema! Intenta cambiar `lowOrHi` a `.lowOrHi` en la línea 48.
 10. Ahora guarda y refresca nuevamente, y tu declaración `console.log()` debería devolver el elemento `<p>` que queremos. ¡Uf! ¡Otro error solucionado! Ahora puedes eliminar tu línea `console.log()`, o mantenerla como referencia más adelante — tu elección.
@@ -111,21 +111,21 @@ Obviamente hay un problema en la lógica del juego en alguna parte — el juego 
 
 1. Busca la variable `randomNumber` y las líneas donde se establece primero el número aleatorio. La instancia que almacena el número aleatorio que queremos adivinar al comienzo del juego debe estar alrededor de la línea número 44:
 
-    ```js
-    let randomNumber = Math.floor(Math.random()) + 1;
-    ```
+   ```js
+   let randomNumber = Math.floor(Math.random()) + 1;
+   ```
 
-    Y la que genera el número aleatorio antes de cada juego subsiguiente está alrededor de la línea 113:
+   Y la que genera el número aleatorio antes de cada juego subsiguiente está alrededor de la línea 113:
 
-    ```js
-    randomNumber = Math.floor(Math.random()) + 1;
-    ```
+   ```js
+   randomNumber = Math.floor(Math.random()) + 1;
+   ```
 
 2. Para comprobar si estas líneas son realmente el problema, volvamos a echar mano de nuestra amiga `console.log()` — inserta la siguiente línea directamente debajo de cada una de las dos líneas anteriores:
 
-    ```js
-    console.log(randomNumber);
-    ```
+   ```js
+   console.log(randomNumber);
+   ```
 
 3. Guarda y refresca, luego juega un par de veces — verás que `randomNumber` es igual a 1 en cada punto en el que se registra en la consola.
 
@@ -134,7 +134,7 @@ Obviamente hay un problema en la lógica del juego en alguna parte — el juego 
 Para solucionar esto, consideremos cómo está funcionando esta línea. Primero, invocamos a [`Math.random()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Math/random), que genera un número decimal aleatorio entre 0 y 1, p. ej. 0.5675493843.
 
 ```js
-Math.random()
+Math.random();
 ```
 
 A continuación, pasamos el resultado de invocar a `Math.random()` a [`Math.floor()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Math/floor), que redondea el número pasado al número entero más cercano. Luego agregamos 1 a ese resultado:
@@ -146,13 +146,13 @@ Math.floor(Math.random()) + 1
 Redondear un número decimal aleatorio entre 0 y 1 siempre devolverá 0, por lo que agregarle 1 siempre devolverá 1. Necesitamos multiplicar el número aleatorio por 100 antes de redondearlo hacia abajo. Lo siguiente nos daría un número aleatorio entre 0 y 99:
 
 ```js
-Math.floor(Math.random()*100);
+Math.floor(Math.random() * 100);
 ```
 
 De ahí que queramos sumar 1, para darnos un número aleatorio entre 1 y 100:
 
 ```js
-Math.floor(Math.random()*100) + 1;
+Math.floor(Math.random() * 100) + 1;
 ```
 
 Intenta actualizar ambas líneas de esta manera, luego guarda y refresca — ¡el juego ahora debería trabajar como pretendemos!

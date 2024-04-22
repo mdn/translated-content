@@ -1,6 +1,9 @@
 ---
-title: HTMLObjectElement.height
+title: "HTMLObjectElement: height プロパティ"
+short-title: height
 slug: Web/API/HTMLObjectElement/height
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{APIRef("HTML DOM")}}

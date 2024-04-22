@@ -1,20 +1,9 @@
 ---
 title: menus.update()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/update
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - Update
-  - WebExtensions
-  - contextMenus
-translation_of: Mozilla/Add-ons/WebExtensions/API/menus/update
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Met à jour un élément de menu précédemment créé.
 
@@ -26,9 +15,9 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var updating = browser.menus.update(
-  id,               // integer or string
-  updateProperties // object
-)
+  id, // integer or string
+  updateProperties, // object
+);
 ```
 
 ### Paramètres
@@ -132,13 +121,13 @@ function onError() {
 browser.menus.create({
   id: "do-not-click-me",
   title: "Do not click this button",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
-browser.menus.onClicked.addListener(function(info, tab) {
+browser.menus.onClicked.addListener(function (info, tab) {
   if (info.menuItemId == "do-not-click-me") {
     var updating = browser.contextMenus.update(info.menuItemId, {
-      title: "Do not click this button again"
+      title: "Do not click this button again",
     });
     updating.then(onUpdated, onError);
   }

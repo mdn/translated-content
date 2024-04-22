@@ -1,8 +1,8 @@
 ---
 title: CanvasCaptureMediaStreamTrack
 slug: Web/API/CanvasCaptureMediaStreamTrack
-translation_of: Web/API/CanvasCaptureMediaStreamTrack
 ---
+
 {{APIRef ("захват мультимедиа и потоки")}}
 
 **`CanvasCaptureMediaStreamTrack`** Интерфейс представляет собой видеодорожку, содержащуюся в {{domxref ("MediaStream")}}, генерируемую из {{HTMLElement ("canvas")}} после вызова {{domxref ("HTMLCanvasElement.captureStream ()")}}.
@@ -23,15 +23,13 @@ _Этот интерфейс наследует методы своего род
 - {{domxref ("CanvasCaptureMediaStreamTrack.requestFrame()")}}
   - : Вручную заставляет кадр быть захваченным и отправленным в поток. Это позволяет приложениям, которые хотят непосредственно указать время захвата кадра, сделать это, если они указали a `frameRate` из 0 при вызове {{domxref ("HTMLCanvasElement.captureStream", "captureStream()")}}.
 
-## Технические характеристики
+## Спецификации
 
-| Спецификация                                                                                                                                             | Статус                                               | Комментарий          |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- | -------------------- |
-| {{SpecName ('Media Capture DOM Elements', '#the-canvascapturemediastreamtrack', 'CanvasCaptureMediaStreamTrack')}} | {{Spec2 ('Media Captiondom Elements')}} | Исходное определение |
+{{Specifications}}
 
-## Совместимость браузера
+## Совместимость с браузерами
 
-{{Compat ("api.CanvasCaptureMediaStreamTrack")}}
+{{Compat}}
 
 ## Смотреть также
 

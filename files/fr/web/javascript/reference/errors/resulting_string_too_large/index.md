@@ -1,12 +1,6 @@
 ---
-title: 'RangeError: repeat count must be less than infinity'
+title: "RangeError: repeat count must be less than infinity"
 slug: Web/JavaScript/Reference/Errors/Resulting_string_too_large
-tags:
-  - Erreurs
-  - JavaScript
-  - RangeError
-translation_of: Web/JavaScript/Reference/Errors/Resulting_string_too_large
-original_slug: Web/JavaScript/Reference/Erreurs/Resulting_string_too_large
 ---
 
 {{jsSidebar("Errors")}}
@@ -34,17 +28,17 @@ La chaîne de caractères crée par cette méthode ne doit pas dépasser la tail
 ### Exemples invalides
 
 ```js example-bad
-'abc'.repeat(Infinity); // RangeError
-'a'.repeat(2**28);      // RangeError
+"abc".repeat(Infinity); // RangeError
+"a".repeat(2 ** 28); // RangeError
 ```
 
 ### Exemples valides
 
 ```js example-good
-'abc'.repeat(0);    // ''
-'abc'.repeat(1);    // 'abc'
-'abc'.repeat(2);    // 'abcabc'
-'abc'.repeat(3.5);  // 'abcabcabc' (count will be converted to integer)
+"abc".repeat(0); // ''
+"abc".repeat(1); // 'abc'
+"abc".repeat(2); // 'abcabc'
+"abc".repeat(3.5); // 'abcabcabc' (count will be converted to integer)
 ```
 
 ## Voir aussi

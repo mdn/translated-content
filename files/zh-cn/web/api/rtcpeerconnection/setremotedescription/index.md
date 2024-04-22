@@ -37,23 +37,23 @@ _这个方法没有返回值。_
 
 ```js
 var pc = new PeerConnection();
-pc.setRemoteDescription( new RTCSessionDescription( offer ), function() {
-   pc.createAnswer( function( answer ) {
-     pc.setLocalDescription( answer, function() {
-       // send the answer to the remote connection
-    })
-  })
+pc.setRemoteDescription(new RTCSessionDescription(offer), function () {
+  pc.createAnswer(function (answer) {
+    pc.setLocalDescription(answer, function () {
+      // send the answer to the remote connection
+    });
+  });
 });
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [WebRTC](/zh-CN/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/zh-CN/docs/Web/API/WebRTC_API)

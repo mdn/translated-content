@@ -1,7 +1,6 @@
 ---
 title: Protocolos de Iteración
 slug: Web/JavaScript/Reference/Iteration_protocols
-original_slug: Web/JavaScript/Referencia/Iteration_protocols
 ---
 
 {{jsSidebar("More")}}Las nuevas características de ECMAScript 6 no solo están asociadas a cambios y adiciones de sintaxis o a nuevos objetos nativos, sino también a protocolos. Dichos protocolos puede ser implementados por cualquier objeto en relación a algunas convenciones.Existen dos protocolos: El[protocolo iterable](#The_.22iterable.22_protocol) y el[protocolo iterador](#The_.22iterator.22_protocol).
@@ -44,8 +43,8 @@ Algunos iteradores son a su vez iterables:
 var someArray = [1, 5, 7];
 var someArrayEntries = someArray.entries();
 
-someArrayEntries.toString();           // "[object Array Iterator]"
-someArrayEntries === someArrayEntries[Symbol.iterator]();    // true
+someArrayEntries.toString(); // "[object Array Iterator]"
+someArrayEntries === someArrayEntries[Symbol.iterator](); // true
 ```
 
 ## Ejemplos de protocolos de iteración
@@ -54,24 +53,24 @@ Un {{jsxref("String")}} es un ejemplo de un objeto iterable nativo:
 
 ```js
 var someString = "hi";
-typeof someString[Symbol.iterator];          // "function"
+typeof someString[Symbol.iterator]; // "function"
 ```
 
 Para objetos `String` su iterador por defecto retorna cada uno de sus caracteres, uno a la vez:
 
 ```js
 var iterator = someString[Symbol.iterator]();
-iterator + "";                               // "[object String Iterator]"
+iterator + ""; // "[object String Iterator]"
 
-iterator.next();                             // { value: "h", done: false }
-iterator.next();                             // { value: "i", done: false }
-iterator.next();                             // { value: undefined, done: true }
+iterator.next(); // { value: "h", done: false }
+iterator.next(); // { value: "i", done: false }
+iterator.next(); // { value: undefined, done: true }
 ```
 
 En algunas estructuras nativas del lenguaje como en el caso del [operador de propagación _spread operator_](/es/docs/Web/JavaScript/Reference/Operators/Spread_operator), el mismo protocolo de iteración está presente en su parte interna:
 
 ```js
-[...someString]                              // ["h", "i"]
+[...someString]; // ["h", "i"]
 ```
 
 Podemos redefinir el comportamiento de iteración creando nuestro propio `@@iterator`:
@@ -83,9 +82,10 @@ Podemos redefinir el comportamiento de iteración creando nuestro propio `@@iter
 
 var someString = new String("hi");
 
-someString[Symbol.iterator] = function() {
-  return { // este es el objeto iterador que retorna un único elemento, la cadena string "bye"
-    next: function() {
+someString[Symbol.iterator] = function () {
+  return {
+    // este es el objeto iterador que retorna un único elemento, la cadena string "bye"
+    next: function () {
       if (this._first) {
         this._first = false;
         return { value: "bye", done: false };
@@ -93,7 +93,7 @@ someString[Symbol.iterator] = function() {
         return { done: true };
       }
     },
-    _first: true
+    _first: true,
   };
 };
 ```
@@ -101,8 +101,8 @@ someString[Symbol.iterator] = function() {
 Nótese que al redefinir un `@@iterator` se puede afectar el comportamiento de construcciones nativas que usan el protocolo de iteración:
 
 ```js
-[...someString];                              // ["bye"]
-someString + "";                              // "hi"
+[...someString]; // ["bye"]
+someString + ""; // "hi"
 ```
 
 ## Ejemplos de iterables
@@ -118,9 +118,9 @@ Podemos crear nuestros propios iterables de la siguiente manera:
 ```js
 var myIterable = {};
 myIterable[Symbol.iterator] = function* () {
-    yield 1;
-    yield 2;
-    yield 3;
+  yield 1;
+  yield 2;
+  yield 3;
 };
 [...myIterable]; // [1, 2, 3]
 ```
@@ -131,15 +131,30 @@ Existen varios APIs que aceptan iterables, como en el caso de: {{jsxref("Map", "
 
 ```js
 var myObj = {};
-new Map([[1,"a"],[2,"b"],[3,"c"]]).get(2);               // "b"
-new WeakMap([[{},"a"],[myObj,"b"],[{},"c"]]).get(myObj); // "b"
-new Set([1, 2, 3]).has(3);                               // true
-new Set("123").has("2");                                 // true
-new WeakSet(function*() {
+
+new Map([
+  [1, "a"],
+  [2, "b"],
+  [3, "c"],
+]).get(2); // "b"
+
+new WeakMap([
+  [{}, "a"],
+  [myObj, "b"],
+  [{}, "c"],
+]).get(myObj); // "b"
+
+new Set([1, 2, 3]).has(3); // true
+
+new Set("123").has("2"); // true
+
+new WeakSet(
+  (function* () {
     yield {};
     yield myObj;
     yield {};
-}()).has(myObj);                                         // true
+  })(),
+).has(myObj); // true
 ```
 
 De igual manera {{jsxref("Promise.all", "Promise.all(iterable)")}}, {{jsxref("Promise.race", "Promise.race(iterable)")}}, y {{jsxref("Array.from", "Array.from()")}}.
@@ -149,8 +164,8 @@ De igual manera {{jsxref("Promise.all", "Promise.all(iterable)")}}, {{jsxref("Pr
 Algunas declaraciones y expresiones esperan iterables, por ejemplo el bucle [`for-of`](/es/docs/Web/JavaScript/Reference/Statements/for...of), el[operador de propagación _spread operator_](/es/docs/Web/JavaScript/Reference/Operators/Spread_operator), la expresión [`Yield*`](/es/docs/Web/JavaScript/Reference/Operators/yield*), y la [asignación desestructurada _destructuring assignment_](/es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
 
 ```js
-for(let value of ["a", "b", "c"]){
-    console.log(value);
+for (let value of ["a", "b", "c"]) {
+  console.log(value);
 }
 // "a"
 // "b"
@@ -158,14 +173,14 @@ for(let value of ["a", "b", "c"]){
 
 [..."abc"]; // ["a", "b", "c"]
 
-function* gen(){
+function* gen() {
   yield* ["a", "b", "c"];
 }
 
 gen().next(); // { value:"a", done:false }
 
 [a, b, c] = new Set(["a", "b", "c"]);
-a // "a"
+a; // "a"
 ```
 
 ### Iterables mal definidos
@@ -183,36 +198,36 @@ nonWellFormedIterable[Symbol.iterator] = () => 1
 ### Iterador simple
 
 ```js
-function makeIterator(array){
-    var nextIndex = 0;
+function makeIterator(array) {
+  var nextIndex = 0;
 
-    return {
-       next: function(){
-           return nextIndex < array.length ?
-               {value: array[nextIndex++], done: false} :
-               {done: true};
-       }
-    };
+  return {
+    next: function () {
+      return nextIndex < array.length
+        ? { value: array[nextIndex++], done: false }
+        : { done: true };
+    },
+  };
 }
 
-var it = makeIterator(['yo', 'ya']);
+var it = makeIterator(["yo", "ya"]);
 
 console.log(it.next().value); // 'yo'
 console.log(it.next().value); // 'ya'
-console.log(it.next().done);  // true
+console.log(it.next().done); // true
 ```
 
 ### Iterador infinito
 
 ```js
-function idMaker(){
-    var index = 0;
+function idMaker() {
+  var index = 0;
 
-    return {
-       next: function(){
-           return {value: index++, done: false};
-       }
-    };
+  return {
+    next: function () {
+      return { value: index++, done: false };
+    },
+  };
 }
 
 var it = idMaker();
@@ -226,26 +241,23 @@ console.log(it.next().value); // '2'
 ### Con un generador
 
 ```js
-function* makeSimpleGenerator(array){
-    var nextIndex = 0;
+function* makeSimpleGenerator(array) {
+  var nextIndex = 0;
 
-    while(nextIndex < array.length){
-        yield array[nextIndex++];
-    }
+  while (nextIndex < array.length) {
+    yield array[nextIndex++];
+  }
 }
 
-var gen = makeSimpleGenerator(['yo', 'ya']);
+var gen = makeSimpleGenerator(["yo", "ya"]);
 
 console.log(gen.next().value); // 'yo'
 console.log(gen.next().value); // 'ya'
-console.log(gen.next().done);  // true
+console.log(gen.next().done); // true
 
-
-
-function* idMaker(){
-    var index = 0;
-    while(true)
-        yield index++;
+function* idMaker() {
+  var index = 0;
+  while (true) yield index++;
 }
 
 var gen = idMaker();
@@ -261,11 +273,11 @@ console.log(gen.next().value); // '2'
 Un [objeto iterador](/es/docs/Web/JavaScript/Reference/Global_Objects/Generator) es tanto un iterador como un iterable:
 
 ```js
-var aGeneratorObject = function*(){
-    yield 1;
-    yield 2;
-    yield 3;
-}();
+var aGeneratorObject = (function* () {
+  yield 1;
+  yield 2;
+  yield 3;
+})();
 typeof aGeneratorObject.next;
 // "function", ya que tiene un método next, por lo tanto es un iterador
 typeof aGeneratorObject[Symbol.iterator];

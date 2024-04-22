@@ -1,14 +1,6 @@
 ---
 title: Event
 slug: Web/API/Event
-tags:
-  - API
-  - DOM
-  - Event
-  - Interface
-  - Reference
-  - Событие
-translation_of: Web/API/Event
 ---
 
 {{APIRef("DOM")}}
@@ -138,7 +130,7 @@ translation_of: Web/API/Event
 
 {{Specifications}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -50,24 +50,24 @@ new SharedWorker(aURL, options)
 以下のコードでは、`SharedWorker()` コンストラクターを使用して {{domxref("SharedWorker")}} オブジェクトを作成し、その後にそのオブジェクトを使用している様子を示しています。
 
 ```js
-const myWorker = new SharedWorker('worker.js');
+const myWorker = new SharedWorker("worker.js");
 
 myWorker.port.start();
 
 first.onchange = () => {
   myWorker.port.postMessage([first.value, second.value]);
-  console.log('Message posted to worker');
-}
+  console.log("Message posted to worker");
+};
 
 second.onchange = () => {
   myWorker.port.postMessage([first.value, second.value]);
-  console.log('Message posted to worker');
-}
+  console.log("Message posted to worker");
+};
 
 myWorker.port.onmessage = (e) => {
   result1.textContent = e.data;
-  console.log('Message received from worker');
-}
+  console.log("Message received from worker");
+};
 ```
 
 完全な例は、[基本的な共有ワーカーの例](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker)（[共有ワーカーを実行](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/)）を参照してください。

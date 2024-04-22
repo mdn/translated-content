@@ -28,8 +28,8 @@ varalignment =HTMLTableElement.align;
 
 ```js
 // Establecer la alineación de una tabla
-var t = document.getElementById('TableA');
-t.align = 'center';
+var t = document.getElementById("TableA");
+t.align = "center";
 ```
 
 ## Especificación

@@ -1,7 +1,6 @@
 ---
 title: MessagePort.onmessageerror
 slug: Web/API/MessagePort/messageerror_event
-original_slug: Web/API/MessagePort/onmessageerror
 ---
 
 {{APIRef("HTML DOM")}}

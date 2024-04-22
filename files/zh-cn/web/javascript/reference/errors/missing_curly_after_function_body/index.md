@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: missing } after function body'
+title: "SyntaxError: missing } after function body"
 slug: Web/JavaScript/Reference/Errors/Missing_curly_after_function_body
 ---
 
@@ -37,7 +37,7 @@ var charge = function() {
 正确的应该是这样的：
 
 ```js example-good
-var charge = function() {
+var charge = function () {
   if (sunny) {
     useSolarCells();
   } else {
@@ -55,7 +55,7 @@ var charge = function() {
 通常将代码语句按照层级缩进以及对缩进进行复核会有助于错误的发现。
 
 ```js example-good
-(function() {
+(function () {
   if (true) {
     return false;
   }

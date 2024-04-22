@@ -2,6 +2,7 @@
 title: String.prototype.padEnd()
 slug: Web/JavaScript/Reference/Global_Objects/String/padEnd
 ---
+
 {{JSRef}}
 
 **`padEnd()`** 메서드는 현재 문자열에 다른 문자열을 채워, 주어진 길이를 만족하는 새로운 문자열을 반환합니다. 채워넣기는 대상 문자열의 끝(우측)부터 적용됩니다.
@@ -28,10 +29,10 @@ str.padEnd(targetLength [, padString])
 ## 예시
 
 ```js
-'abc'.padEnd(10);          // "abc       "
-'abc'.padEnd(10, "foo");   // "abcfoofoof"
-'abc'.padEnd(6, "123456"); // "abc123"
-'abc'.padEnd(1);           // "abc"
+"abc".padEnd(10); // "abc       "
+"abc".padEnd(10, "foo"); // "abcfoofoof"
+"abc".padEnd(6, "123456"); // "abc123"
+"abc".padEnd(1); // "abc"
 ```
 
 ## 폴리필
@@ -40,22 +41,21 @@ str.padEnd(targetLength [, padString])
 
 ```js
 // https://github.com/uxitten/polyfill/blob/master/string.polyfill.js
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padEnd
+// https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/padEnd
 if (!String.prototype.padEnd) {
-    String.prototype.padEnd = function padEnd(targetLength,padString) {
-        targetLength = targetLength>>0; //floor if number or convert non-number to 0;
-        padString = String((typeof padString !== 'undefined' ? padString : ' '));
-        if (this.length > targetLength) {
-            return String(this);
-        }
-        else {
-            targetLength = targetLength-this.length;
-            if (targetLength > padString.length) {
-                padString += padString.repeat(targetLength/padString.length); //append to original to ensure we are longer than needed
-            }
-            return String(this) + padString.slice(0,targetLength);
-        }
-    };
+  String.prototype.padEnd = function padEnd(targetLength, padString) {
+    targetLength = targetLength >> 0; //floor if number or convert non-number to 0;
+    padString = String(typeof padString !== "undefined" ? padString : " ");
+    if (this.length > targetLength) {
+      return String(this);
+    } else {
+      targetLength = targetLength - this.length;
+      if (targetLength > padString.length) {
+        padString += padString.repeat(targetLength / padString.length); //append to original to ensure we are longer than needed
+      }
+      return String(this) + padString.slice(0, targetLength);
+    }
+  };
 }
 ```
 

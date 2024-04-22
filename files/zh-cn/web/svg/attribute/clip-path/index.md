@@ -14,7 +14,11 @@ slug: Web/SVG/Attribute/clip-path
 ## 示例
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -24,24 +28,44 @@ html,body,svg { height:100% }
   </clipPath>
 
   <!-- 左上：应用自定义的剪切路径 -->
-  <rect x="1" y="1" width="8" height="8" stroke="green"
-        clip-path="url(#myClip)" />
+  <rect
+    x="1"
+    y="1"
+    width="8"
+    height="8"
+    stroke="green"
+    clip-path="url(#myClip)" />
 
   <!-- 右上：应用 CSS 基本形状和 fill-box 几何。
        实质上和自定义剪切路径并把 clipPathUnits
        设成 objectBoundingBox 一样 -->
-  <rect x="11" y="1" width="8" height="8" stroke="green"
-        clip-path="circle() fill-box" />
+  <rect
+    x="11"
+    y="1"
+    width="8"
+    height="8"
+    stroke="green"
+    clip-path="circle() fill-box" />
 
   <!-- 左下 -->
-  <rect x="1" y="11" width="8" height="8" stroke="green"
-        clip-path="circle() stroke-box" />
+  <rect
+    x="1"
+    y="11"
+    width="8"
+    height="8"
+    stroke="green"
+    clip-path="circle() stroke-box" />
 
   <!-- 右下：应用 CSS 基本形状和 view-box 几何。
        实质上和自定义剪切路径并把 clipPathUnits
        设成 userSpaceOnUse 一样 -->
-  <rect x="11" y="11" width="8" height="8" stroke="green"
-        clip-path="circle() view-box" />
+  <rect
+    x="11"
+    y="11"
+    width="8"
+    height="8"
+    stroke="green"
+    clip-path="circle() view-box" />
 </svg>
 ```
 
@@ -50,9 +74,9 @@ html,body,svg { height:100% }
 ## Usage notes
 
 | 值         | {{cssxref('url')}} \| [ {{cssxref('basic-shape')}} \|\| `<geometry-box>` ] \| `none` |
-| ---------- | ---------------------------------------------------------------------------------------------------- |
-| 默认值     | `none`                                                                                               |
-| Animatable | 是                                                                                                   |
+| ---------- | ------------------------------------------------------------------------------------ |
+| 默认值     | `none`                                                                               |
+| Animatable | 是                                                                                   |
 
 - \<geometry-box>
   - : geometry-box 是应用 {{cssxref('basic-shape')}} 的额外信息，用于区分 CSS 基本形状如何应用于元素上：`fill-box` 表示将对象的包围框作为参照框；`stroke-box` 表示将对象的包围框加上描边的范围作为参照框；`view-box` 表示使用最近的 SVG 视窗作为参照框。

@@ -11,7 +11,7 @@ slug: Web/HTML/Element/datalist
 
 - _[内容范畴](/zh-CN/docs/HTML/Content_categories)_[流内容](/zh-CN/docs/HTML/Content_categories#Flow_content)，[段落内容](/zh-CN/docs/HTML/Content_categories#Phrasing_content)。
 - *允许内容*要么 [段落内容](/zh-CN/docs/HTML/Content_categories#Phrasing_content) 要么 0 个或多个 {{HTMLElement("option")}}元素。
-- _遗漏标签_{{no_tag_omission}}
+- _标签省略_：不允许，开始标签和结束标签都不能省略。
 - *允许父级元素*任何接受[段落内容](/zh-CN/docs/HTML/Content_categories#Phrasing_content)的元素。
 - \_Permitted ARIA roles_None
 - _DOM 接口_{{domxref("HTMLDataListElement")}}
@@ -23,14 +23,15 @@ slug: Web/HTML/Element/datalist
 ## 示例
 
 ```html
-<label>Choose a browser from this list:
-<input list="browsers" name="myBrowser" /></label>
+<label
+  >Choose a browser from this list: <input list="browsers" name="myBrowser"
+/></label>
 <datalist id="browsers">
-  <option value="Chrome">
-  <option value="Firefox">
-  <option value="Internet Explorer">
-  <option value="Opera">
-  <option value="Safari">
+  <option value="Chrome"></option>
+  <option value="Firefox"></option>
+  <option value="Internet Explorer"></option>
+  <option value="Opera"></option>
+  <option value="Safari"></option>
 </datalist>
 ```
 
@@ -45,10 +46,6 @@ slug: Web/HTML/Element/datalist
 ## 浏览器兼容性
 
 {{Compat}}
-
-## Polyfill
-
-以下 Polyfill 旨在支持旧的或者目前不兼容的浏览器：[datalist-polyfill](https://github.com/mfranzke/datalist-polyfill)
 
 ## 参见
 

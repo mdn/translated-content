@@ -64,10 +64,10 @@ overflow: unset;
 
 ```css
 p {
-     width: 12em;
-     height: 6em;
-     border: dotted;
-     overflow: visible; /* content is not clipped */
+  width: 12em;
+  height: 6em;
+  border: dotted;
+  overflow: visible; /* content is not clipped */
 }
 ```
 
@@ -75,21 +75,27 @@ p {
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
 
 ```css
-p { overflow: hidden; /* no scrollbars are provided */ }
+p {
+  overflow: hidden; /* no scrollbars are provided */
+}
 ```
 
 `overflow: hidden`
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
 
 ```css
-p { overflow: scroll; /* always show scrollbars */ }
+p {
+  overflow: scroll; /* always show scrollbars */
+}
 ```
 
 `overflow: scroll`
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
 
 ```css
-p { overflow: auto; /* append scrollbars if necessary */ }
+p {
+  overflow: auto; /* append scrollbars if necessary */
+}
 ```
 
 `overflow: auto`

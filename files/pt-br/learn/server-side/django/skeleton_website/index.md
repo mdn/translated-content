@@ -12,7 +12,7 @@ O segundo artigo do tutorial de Django mostra uma forma de criar o "esqueleto" d
     <tr>
       <th scope="row">Pré-requisitos:</th>
       <td>
-        <a href="/en-US/docs/Learn/Server-side/Django/development_environment"
+        <a href="/pt-BR/docs/Learn/Server-side/Django/development_environment"
           >Configurar um ambiente de desenvolvimento Django</a
         >. Ter lido
         <a
@@ -40,7 +40,7 @@ O processo é direto:
 1. Use a ferramenta `django-admin` para criar a pasta do projeto, arquivos de template básicos, e o script de gestão do projeto (**manage.py**).
 2. Use o script **manage.py** para criar um ou mais _aplicativos_.
 
-    > **Nota:** Um website pode consistir de uma ou mais áreas, como por exemplo, site, blog, wiki, área de download, etc. Django te encoraja a desenvolver esses componentes como aplicativos separados, que podem então ser reutilizados em diferentes projetos, caso seja necessário.
+   > **Nota:** Um website pode consistir de uma ou mais áreas, como por exemplo, site, blog, wiki, área de download, etc. Django te encoraja a desenvolver esses componentes como aplicativos separados, que podem então ser reutilizados em diferentes projetos, caso seja necessário.
 
 3. Registre os novos aplicativos para inclui-los no projeto.
 4. Conecte o mapeador de url/path para cada aplicativo.

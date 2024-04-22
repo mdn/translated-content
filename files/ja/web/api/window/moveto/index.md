@@ -12,7 +12,7 @@ slug: Web/API/Window/moveTo
 ## 構文
 
 ```js
-moveTo(x, y)
+moveTo(x, y);
 ```
 
 ### 引数

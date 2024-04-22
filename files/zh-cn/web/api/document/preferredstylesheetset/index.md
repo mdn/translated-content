@@ -21,7 +21,9 @@ preferredStyleSheetSet = document.preferredStyleSheetSet
 
 ```js
 if (document.preferredStyleSheetSet) {
-  console.log("The preferred style sheet set is: " + document.preferredStyleSheetSet);
+  console.log(
+    "The preferred style sheet set is: " + document.preferredStyleSheetSet,
+  );
 } else {
   console.log("There is no preferred style sheet.");
 }

@@ -1,13 +1,6 @@
 ---
 title: Performance
 slug: Web/API/Performance
-tags:
-  - API
-  - Navigation Timing
-  - Performance
-  - Performance Web
-  - Reference
-translation_of: Web/API/Performance
 ---
 
 {{APIRef("High Resolution Time")}}

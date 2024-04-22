@@ -52,8 +52,8 @@ button.addEventListener("click", () => {
 
 ```html
 <p>
-  당신의 위치는 위도 <span id="latitude">0.00</span>°,
-  경도 <span id="longitude">0.00</span>° 입니다.
+  당신의 위치는 위도 <span id="latitude">0.00</span>°, 경도
+  <span id="longitude">0.00</span>° 입니다.
 </p>
 <button id="get-location">내 위치 찾기</button>
 ```

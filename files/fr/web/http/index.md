@@ -1,12 +1,11 @@
 ---
 title: HTTP
 slug: Web/HTTP
-translation_of: Web/HTTP
 ---
 
 {{HTTPSidebar}}
 
-**_<i lang="en">Hypertext Transfer Protocol</i> (HTTP) (ou protocole de transfert hypertexte en français)_** est un protocole de [la couche application](https://fr.wikipedia.org/wiki/Couche_application) servant à transmettre des documents hypermédias, comme HTML. Il a été conçu pour la communication entre les navigateurs web et les serveurs web mais peut également être utilisé à d'autres fins. Il suit le modèle classique [client-serveur](https://fr.wikipedia.org/wiki/Client-serveur)&nbsp;: un client ouvre une connexion, effectue une requête et attend jusqu'à recevoir une réponse. Il s'agit aussi d'un [protocole sans état](https://fr.wikipedia.org/wiki/Protocole_sans_%C3%A9tat), ce qui signifie que le serveur ne conserve aucune donnée (on parle d'état) entre deux requêtes.
+**_<i lang="en">Hypertext Transfer Protocol</i> (HTTP) (ou protocole de transfert hypertexte en français)_** est un protocole de [la couche application](https://fr.wikipedia.org/wiki/Couche_application) servant à transmettre des documents hypermédias, comme HTML. Il a été conçu pour la communication entre les navigateurs web et les serveurs web mais peut également être utilisé à d'autres fins. Il suit le modèle classique [client-serveur](https://fr.wikipedia.org/wiki/Client-serveur)&nbsp;: un client ouvre une connexion, effectue une requête et attend jusqu'à recevoir une réponse. Il s'agit aussi d'un [protocole sans état](https://fr.wikipedia.org/wiki/Protocole_sans_état), ce qui signifie que le serveur ne conserve aucune donnée (on parle d'état) entre deux requêtes.
 
 ## Tutoriels
 

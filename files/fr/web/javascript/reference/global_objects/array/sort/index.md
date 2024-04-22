@@ -1,14 +1,6 @@
 ---
 title: Array.prototype.sort()
 slug: Web/JavaScript/Reference/Global_Objects/Array/sort
-tags:
-  - Array
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/sort
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/sort
 ---
 
 {{JSRef}}
@@ -22,14 +14,14 @@ La complexité en espace mémoire et en temps utilisée pour le tri ne peut pas 
 ## Syntaxe
 
 ```js
-arr.sort()
-arr.sort(fonctionComparaison)
+arr.sort();
+arr.sort(fonctionComparaison);
 ```
 
 ### Paramètres
 
 - `fonctionComparaison` {{optional_inline}}
-  - : Ce paramètre optionnel permet de spécifier une fonction définissant l'ordre de tri. Si absente, le tableau est trié selon la valeur de point de code [Unicode](/fr/docs/Web/JavaScript/Guide/Valeurs,_variables,_et_litt%C3%A9raux#Unicode) de chaque caractère, d'après la conversion en chaine de caractères de chaque élément. Cette fonction prendra deux arguments : le premier élément à comparer et le deuxième élément à comparer.
+  - : Ce paramètre optionnel permet de spécifier une fonction définissant l'ordre de tri. Si absente, le tableau est trié selon la valeur de point de code [Unicode](/fr/docs/Web/JavaScript/Guide/Valeurs,_variables,_et_littéraux#Unicode) de chaque caractère, d'après la conversion en chaine de caractères de chaque élément. Cette fonction prendra deux arguments : le premier élément à comparer et le deuxième élément à comparer.
 
 ### Valeur de retour
 
@@ -46,7 +38,7 @@ Si le paramètre `fonctionComparaison` est fourni, les éléments du tableau (qu
 - Si `fonctionComparaison(a, b)` est inférieur à 0, on trie `a` avec un indice inférieur à `b` (`a` sera classé avant `b`)
 - Si `fonctionComparaison(a, b)` renvoie 0, on laisse `a` et `b` inchangés l'un par rapport à l'autre, mais triés par rapport à tous les autres éléments. Note&nbsp;: la norme ECMAScript ne garantit pas ce comportement, par conséquent tous les navigateurs (par exemple les versions de Mozilla antérieures à 2003) ne respectent pas ceci.
 - Si `fonctionComparaison(a, b)` est supérieur à 0, on trie `b` avec un indice inférieur à `a`.
-- `fonctionComparaison(a, b)` doit toujours renvoyer le même résultat à partir de la même paire d'arguments. Si la fonction renvoie des résultats incohérents, alors l’ordre dans lequel sont triés les éléments n’est pas défini.
+- `fonctionComparaison(a, b)` doit toujours renvoyer le même résultat à partir de la même paire d'arguments. Si la fonction renvoie des résultats incohérents, alors l'ordre dans lequel sont triés les éléments n'est pas défini.
 
 Une fonction de comparaison aura donc généralement la forme suivante&nbsp;:
 
@@ -73,14 +65,14 @@ L'usage des {{jsxref("Opérateurs/L_opérateur_function", "expressions de foncti
 
 ```js
 var nombres = [4, 2, 5, 1, 3];
-nombres.sort(function(a, b) {
+nombres.sort(function (a, b) {
   return a - b;
 });
 console.log(nombres);
 // [1, 2, 3, 4, 5]
 ```
 
-ECMAScript 2015 permet d'utiliser [les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fl%C3%A9ch%C3%A9es) et ainsi d'obtenir une syntaxe plus concise :
+ECMAScript 2015 permet d'utiliser [les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées) et ainsi d'obtenir une syntaxe plus concise :
 
 ```js
 let nombres = [4, 2, 5, 1, 3];
@@ -97,7 +89,7 @@ var items = [
   { name: "And", value: 45 },
   { name: "The", value: -12 },
   { name: "Magnetic", value: 13 },
-  { name: "Zeros", value: 37 }
+  { name: "Zeros", value: 37 },
 ];
 items.sort(function (a, b) {
   return a.value - b.value;
@@ -124,8 +116,7 @@ a[5] = "zèbre";
 function writeArray(x) {
   for (i = 0; i < x.length; i++) {
     console.log(x[i]);
-    if (i < x.length-1)
-      console.log(", ");
+    if (i < x.length - 1) console.log(", ");
   }
 }
 
@@ -165,20 +156,44 @@ function compareNombres(a, b) {
   return a - b;
 }
 
-console.log("Chaînes&nbsp;: " + stringArray.join() +"\n");
-console.log("Triées&nbsp;: " + stringArray.sort() +"\n\n");
+console.log("Chaînes&nbsp;: " + stringArray.join() + "\n");
+console.log("Triées&nbsp;: " + stringArray.sort() + "\n\n");
 
-console.log("Nombres&nbsp;: " + numberArray.join() +"\n");
-console.log("Triés sans fonction de comparaison&nbsp;: " + numberArray.sort() +"\n");
-console.log("Triés avec compareNombres&nbsp;: " + numberArray.sort(compareNombres) +"\n\n");
+console.log("Nombres&nbsp;: " + numberArray.join() + "\n");
+console.log(
+  "Triés sans fonction de comparaison&nbsp;: " + numberArray.sort() + "\n",
+);
+console.log(
+  "Triés avec compareNombres&nbsp;: " +
+    numberArray.sort(compareNombres) +
+    "\n\n",
+);
 
-console.log("Chaînes numériques&nbsp;: " + numericStringArray.join() +"\n");
-console.log("Triées sans fonction de comparaison&nbsp;: " + numericStringArray.sort() +"\n");
-console.log("Triées avec compareNombres&nbsp;: " + numericStringArray.sort(compareNombres) +"\n\n");
+console.log("Chaînes numériques&nbsp;: " + numericStringArray.join() + "\n");
+console.log(
+  "Triées sans fonction de comparaison&nbsp;: " +
+    numericStringArray.sort() +
+    "\n",
+);
+console.log(
+  "Triées avec compareNombres&nbsp;: " +
+    numericStringArray.sort(compareNombres) +
+    "\n\n",
+);
 
-console.log("Nombres et chaînes numériques&nbsp;: " + mixedNumericArray.join() +"\n");
-console.log("Triés sans fonction de comparaison&nbsp;: " + mixedNumericArray.sort() +"\n");
-console.log("Triés avec compareNombres&nbsp;: " + mixedNumericArray.sort(compareNombres) +"\n\n");
+console.log(
+  "Nombres et chaînes numériques&nbsp;: " + mixedNumericArray.join() + "\n",
+);
+console.log(
+  "Triés sans fonction de comparaison&nbsp;: " +
+    mixedNumericArray.sort() +
+    "\n",
+);
+console.log(
+  "Triés avec compareNombres&nbsp;: " +
+    mixedNumericArray.sort(compareNombres) +
+    "\n\n",
+);
 ```
 
 Cet exemple produit la sortie suivante. Comme on peut le voir, lorsqu'on utilise la fonction de comparaison, les nombres sont triés correctement qu'ils soient des nombres ou des chaînes numériques.
@@ -205,7 +220,7 @@ Triés avec compareNombres&nbsp;: 1,5,9,40,80,200,700
 Pour des chaines de caractères contenant des caractères non ASCII, c'est à dire des chaines de caractères contenant par exemple des accents (é, è, a, ä, etc.) : utilisez {{jsxref("String.localeCompare")}}. Cette fonction peut comparer ces caractères afin qu'ils apparaissent dans le bon ordre.
 
 ```js
-var items = ["réservé", "premier", "cliché", "communiqué", "café" ,"adieu"];
+var items = ["réservé", "premier", "cliché", "communiqué", "café", "adieu"];
 items.sort(function (a, b) {
   return a.localeCompare(b);
 });
@@ -219,16 +234,16 @@ La fonction de comparaison peut être amenée à être appelée plusieurs fois p
 
 ```js
 // le tableau à trier
-var liste = ['Delta', 'alpha', 'CHARLIE', 'bravo'];
+var liste = ["Delta", "alpha", "CHARLIE", "bravo"];
 
 // Création d'objet temporaire qui contient les positions
 // et les valeurs en minuscules
-var mapped = liste.map(function(e, i) {
+var mapped = liste.map(function (e, i) {
   return { index: i, value: e.toLowerCase() };
-})
+});
 
 // on trie l'objet temporaire avec les valeurs réduites
-mapped.sort(function(a, b) {
+mapped.sort(function (a, b) {
   if (a.value > b.value) {
     return 1;
   }
@@ -239,7 +254,7 @@ mapped.sort(function(a, b) {
 });
 
 // on utilise un objet final pour les résultats
-var result = mapped.map(function(e){
+var result = mapped.map(function (e) {
   return liste[e.index];
 });
 ```

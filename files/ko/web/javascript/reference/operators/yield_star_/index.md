@@ -11,8 +11,8 @@ slug: Web/JavaScript/Reference/Operators/yield*
 
 ## 구문
 
-```js
-    yield* [[expression]];
+```js-nolint
+yield* [[expression]];
 ```
 
 - `expression`
@@ -97,9 +97,9 @@ console.log(iterator.next()); // { value: 1, done: false }
 console.log(iterator.next()); // { value: 2, done: false }
 console.log(iterator.next()); // { value: 3, done: false }
 console.log(iterator.next()); // { value: undefined, done: true },
-                              // g4() 는 여기서 { value: "foo", done: true }를 반환합니다
+// g4() 는 여기서 { value: "foo", done: true }를 반환합니다
 
-console.log(result);          // "foo"
+console.log(result); // "foo"
 ```
 
 ## 명세서
@@ -112,7 +112,7 @@ console.log(result);          // "foo"
 
 ## 같이 보기
 
-- [The Iterator protocol](/en-US/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- [The Iterator protocol](/ko/docs/Web/JavaScript/Guide/The_Iterator_protocol)
 - {{jsxref("Statements/function*", "function*")}}
 - {{jsxref("Operators/function*", "function* expression")}}
 - {{jsxref("Operators/yield", "yield")}}

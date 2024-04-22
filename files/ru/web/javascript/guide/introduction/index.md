@@ -1,12 +1,6 @@
 ---
 title: Введение в JavaScript
 slug: Web/JavaScript/Guide/Introduction
-tags:
-  - Beginner
-  - Guide
-  - JavaScript
-translation_of: Web/JavaScript/Guide/Introduction
-original_slug: Web/JavaScript/Guide/Введение_в_JavaScript
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Values,_variables,_and_literals")}}
@@ -112,14 +106,14 @@ Web Console отлично подходит для выполнения один
 Чтобы начать писать JavaScript-код откройте Scratchpad и напишите свой первый "Hello World!" код:
 
 ```js
-(function(){
+(function () {
   "use strict";
   /* Start of your code */
   function greetMe(yourName) {
-    alert('Hello ' + yourName);
+    alert("Hello " + yourName);
   }
 
-  greetMe('World');
+  greetMe("World");
   /* End of your code */
 })();
 ```

@@ -1,8 +1,6 @@
 ---
 title: IDBObjectStore.getAll()
 slug: Web/API/IDBObjectStore/getAll
-translation_of: Web/API/IDBObjectStore/getAll
-browser-compat: api.IDBObjectStore.getAll
 ---
 
 {{APIRef("IndexedDB")}}
@@ -24,9 +22,9 @@ Pour distinguer ces situations, on pourra appeler une de ces deux méthodes&nbsp
 ## Syntaxe
 
 ```js
-getAll()
-getAll(query)
-getAll(query, count)
+getAll();
+getAll(query);
+getAll(query, count);
 ```
 
 ### Paramètres

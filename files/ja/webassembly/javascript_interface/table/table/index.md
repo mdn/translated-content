@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.Table() コンストラクター
 slug: WebAssembly/JavaScript_interface/Table/Table
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/Table
 ---
 
 {{WebAssemblySidebar}}
@@ -11,7 +10,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/Table
 ## 構文
 
 ```js
-new WebAssembly.Table(tableDescriptor)
+new WebAssembly.Table(tableDescriptor);
 ```
 
 ### 引数
@@ -39,10 +38,10 @@ new WebAssembly.Table(tableDescriptor)
 次の例では (table2.html の[ソースコード](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.html)と[実行例](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html)はこちら) 新しく WebAssembly テーブルのインスタンスを、初期の大きさを 2 要素して生成します。それからテーブルの長さと 2 つの要素の中身を ({{jsxref("WebAssembly/Table/get", "Table.prototype.get()")}} で取得して) 表示し、長さは 2 で 2 つの要素は共に {{jsxref("null")}} となります。
 
 ```js
-var tbl = new WebAssembly.Table({initial:2, element:"anyfunc"});
-console.log(tbl.length);  // "2"
-console.log(tbl.get(0));  // "null"
-console.log(tbl.get(1));  // "null"
+var tbl = new WebAssembly.Table({ initial: 2, element: "anyfunc" });
+console.log(tbl.length); // "2"
+console.log(tbl.get(0)); // "null"
+console.log(tbl.get(1)); // "null"
 ```
 
 それからテーブルを含むインポートオブジェクトを作成します。
@@ -50,20 +49,21 @@ console.log(tbl.get(1));  // "null"
 ```js
 var importObj = {
   js: {
-    tbl:tbl
-  }
+    tbl: tbl,
+  },
 };
 ```
 
 最終的に、 wasm モジュール (table2.wasm) を {{jsxref("WebAssembly.instantiateStreaming()")}} メソッドを使用して読み込みインスタンス化します。 table2.wasm モジュールには 2 つの関数 (1 つは 42 を返し、もう 1 つは 83 を返す) が入っており、それぞれをインポートされたテーブルの要素 0 と 1 に格納します。 ([テキスト表現](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat)をご覧ください)。インスタンス化した後で、テーブルは長さは 2 のままですが、要素には呼び出し可能な<a href="/ja/docs/WebAssembly/Exported_functions">エクスポートされた WebAssembly 関数</a>が入り、 JS から呼び出せるようになりました。
 
 ```js
-WebAssembly.instantiateStreaming(fetch('table2.wasm'), importObject)
-.then(function(obj) {
-  console.log(tbl.length);
-  console.log(tbl.get(0)());
-  console.log(tbl.get(1)());
-});
+WebAssembly.instantiateStreaming(fetch("table2.wasm"), importObject).then(
+  function (obj) {
+    console.log(tbl.length);
+    console.log(tbl.get(0)());
+    console.log(tbl.get(1)());
+  },
+);
 ```
 
 なお、関数呼び出し演算子がアクセサーの後に二重についており (例えば `get(0)()` を `get(0)` の代わりに使用)、実際に参照している関数を呼び出して、その中に格納された値をログ出力しています。

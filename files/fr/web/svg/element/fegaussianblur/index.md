@@ -1,7 +1,6 @@
 ---
 title: <feGaussianBlur>
 slug: Web/SVG/Element/feGaussianBlur
-translation_of: Web/SVG/Element/feGaussianBlur
 ---
 
 {{SVGRef}}
@@ -39,18 +38,18 @@ Cet élément implémente l'interface {{domxref("SVGFEGaussianBlurElement")}}.
 #### SVG
 
 ```html
-<svg width="230" height="120"
- xmlns="http://www.w3.org/2000/svg"
- xmlns:xlink="http://www.w3.org/1999/xlink">
-
+<svg
+  width="230"
+  height="120"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <filter id="blurMe">
     <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
   </filter>
 
-  <circle cx="60"  cy="60" r="50" fill="green" />
+  <circle cx="60" cy="60" r="50" fill="green" />
 
-  <circle cx="170" cy="60" r="50" fill="green"
-          filter="url(#blurMe)" />
+  <circle cx="170" cy="60" r="50" fill="green" filter="url(#blurMe)" />
 </svg>
 ```
 
@@ -63,21 +62,21 @@ Cet élément implémente l'interface {{domxref("SVGFEGaussianBlurElement")}}.
 #### SVG
 
 ```html
-<svg width="120" height="120"
- xmlns="http://www.w3.org/2000/svg"
- xmlns:xlink="http://www.w3.org/1999/xlink">
-
+<svg
+  width="120"
+  height="120"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <filter id="dropShadow">
     <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
     <feOffset dx="2" dy="4" />
     <feMerge>
-        <feMergeNode />
-        <feMergeNode in="SourceGraphic" />
+      <feMergeNode />
+      <feMergeNode in="SourceGraphic" />
     </feMerge>
   </filter>
 
-  <circle cx="60"  cy="60" r="50" fill="green"
-          filter="url(#dropShadow)" />
+  <circle cx="60" cy="60" r="50" fill="green" filter="url(#dropShadow)" />
 </svg>
 ```
 

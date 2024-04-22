@@ -7,23 +7,23 @@ document view 나 element가 스크롤 될 때, **`scroll`** 이벤트가 발생
 
 ## 개요
 
-| 인터페이스   | {{domxref("UIEvent")}}                                                |
-| ------------ | --------------------------------------------------------------------------- |
-| 버블         | element에는 없지만, document에서 실행될 때 버블링이 발생합니다.             |
-| 취소가능여부 | 불가                                                                        |
-| 타겟         | DefaultView, {{domxref("Document")}}, {{domxref("Element")}} |
-| 기본 액션    | 없음                                                                        |
+| 인터페이스   | {{domxref("UIEvent")}}                                          |
+| ------------ | --------------------------------------------------------------- |
+| 버블         | element에는 없지만, document에서 실행될 때 버블링이 발생합니다. |
+| 취소가능여부 | 불가                                                            |
+| 타겟         | DefaultView, {{domxref("Document")}}, {{domxref("Element")}}    |
+| 기본 액션    | 없음                                                            |
 
 ## 속성
 
-| 속성                                  | 타입                                 | 설명                                                                   |
-| ------------------------------------- | ------------------------------------ | ---------------------------------------------------------------------- |
-| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | 이벤트 대상 (DOM 트리의 최상위 타겟)                                   |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | 이벤트의 타입                                                          |
-| `bubbles` {{readonlyInline}}    | {{domxref("Boolean")}}         | 이벤트가 버블이 되는지                                                 |
-| `cancelable` {{readonlyInline}} | {{domxref("Boolean")}}         | 이벤트 취소가 가능한지                                                 |
+| 속성                            | 타입                       | 설명                                                      |
+| ------------------------------- | -------------------------- | --------------------------------------------------------- |
+| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | 이벤트 대상 (DOM 트리의 최상위 타겟)                      |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | 이벤트의 타입                                             |
+| `bubbles` {{readonlyInline}}    | {{domxref("Boolean")}}     | 이벤트가 버블이 되는지                                    |
+| `cancelable` {{readonlyInline}} | {{domxref("Boolean")}}     | 이벤트 취소가 가능한지                                    |
 | `view` {{readonlyInline}}       | {{domxref("WindowProxy")}} | {{domxref("Document.defaultView")}} (document의 `window`) |
-| `detail` {{readonlyInline}}     | `long` (`float`)                     | `0`.                                                                   |
+| `detail` {{readonlyInline}}     | `long` (`float`)           | `0`.                                                      |
 
 ## 예제
 
@@ -44,11 +44,11 @@ function doSomething(scroll_pos) {
   // scroll 위치에 대한 작업을 하세요
 }
 
-window.addEventListener('scroll', function(e) {
+window.addEventListener("scroll", function (e) {
   last_known_scroll_position = window.scrollY;
 
   if (!ticking) {
-    window.requestAnimationFrame(function() {
+    window.requestAnimationFrame(function () {
       doSomething(last_known_scroll_position);
       ticking = false;
     });
@@ -68,6 +68,6 @@ window.addEventListener('scroll', function(e) {
 
 ## 같이 보기
 
-- [Document: `scrollend` event](/en-US/docs/Web/API/Document/scrollend_event)
-- [Element: `scroll` event](/en-US/docs/Web/API/Element/scroll_event)
-- [Element: `scrollend` event](/en-US/docs/Web/API/Element/scrollend_event)
+- [Document: `scrollend` event](/ko/docs/Web/API/Document/scrollend_event)
+- [Element: `scroll` event](/ko/docs/Web/API/Element/scroll_event)
+- [Element: `scrollend` event](/ko/docs/Web/API/Element/scrollend_event)

@@ -1,8 +1,6 @@
 ---
 title: Exemples pratiques de positionnement
 slug: Learn/CSS/CSS_layout/Practical_positioning_examples
-translation_of: Learn/CSS/CSS_layout/Practical_positioning_examples
-original_slug: Apprendre/CSS/CSS_layout/Exemples_pratiques_de_positionnement
 ---
 
 {{LearnSidebar}}
@@ -53,17 +51,32 @@ Pour commencer, effectuez une copie locale du fichier HTML de départ — [info-
     <article class="active-panel">
       <h2>Premier onglet</h2>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque turpis nibh, porttitor nec venenatis eu, pulvinar in augue. Vestibulum et orci scelerisque, vulputate tellus quis, lobortis dui. Vivamus varius libero at ipsum mattis efficitur ut nec nisl. Nullam eget tincidunt metus. Donec ultrices, urna maximus consequat aliquet, dui neque eleifend lorem, a auctor libero turpis at sem. Aliquam ut porttitor urna. Nulla facilisi.</p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+        turpis nibh, porttitor nec venenatis eu, pulvinar in augue. Vestibulum
+        et orci scelerisque, vulputate tellus quis, lobortis dui. Vivamus varius
+        libero at ipsum mattis efficitur ut nec nisl. Nullam eget tincidunt
+        metus. Donec ultrices, urna maximus consequat aliquet, dui neque
+        eleifend lorem, a auctor libero turpis at sem. Aliquam ut porttitor
+        urna. Nulla facilisi.
+      </p>
     </article>
     <article>
       <h2>Deuxième onglet</h2>
 
-      <p>Cet onglet ne contient pas de Lorem Ipsum, mais bon c'est aussi peu intéressant que les autres onglets.</p>
+      <p>
+        Cet onglet ne contient pas de Lorem Ipsum, mais bon c'est aussi peu
+        intéressant que les autres onglets.
+      </p>
     </article>
     <article>
       <h2>Troisième onglet</h2>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque turpis nibh, porttitor nec venenatis eu, pulvinar in augue. Et voici une liste ordonnée&nbsp;!</p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+        turpis nibh, porttitor nec venenatis eu, pulvinar in augue. Et voici une
+        liste ordonnée&nbsp;!
+      </p>
 
       <ol>
         <li>dui neque eleifend lorem, a auctor libero turpis at sem.</li>
@@ -149,7 +162,8 @@ Ajoutez le fragment de CSS qui suit&nbsp;:
 Pour finir avec cette section, mettons en forme les liens selon leur état. Toute d'abord, gérons les états `:focus` et `:hover` afin que les onglets aient un aspect différent lorsqu'ils ont le focus ou qu'on les survole afin que la personne qui utilise le site ait un retour visuel. Deuxièmement, ajoutons une règle qui applique la même mise en forme lorsqu'un attribut `class` avec la valeur `active` est présent dessus. Nous appliquerons cette valeur à l'aide de JavaScript lorsqu'un clic aura lieu sur l'onglet. Ajoutez le CSS qui suit après les autres règles déjà écrites&nbsp;:
 
 ```css
-.info-box li a:focus, .info-box li a:hover {
+.info-box li a:focus,
+.info-box li a:hover {
   background-color: #a60000;
   color: white;
 }
@@ -199,28 +213,28 @@ La deuxième règle ajoutée indique qu'un panneau avec une classe (`class`) val
 La dernière étape permettant d'avoir un résultat fonctionnel consiste à ajouter du JavaScript. Placez les lignes suivantes (sans modification) entre les balises ouvrantes et fermantes [`<script>`](/fr/docs/Web/HTML/Element/script) (elles se situent après le contenu HTML)&nbsp;:
 
 ```js
-let tabs = document.querySelectorAll('.info-box li a');
-let panels = document.querySelectorAll('.info-box article');
+let tabs = document.querySelectorAll(".info-box li a");
+let panels = document.querySelectorAll(".info-box article");
 
-for(let i = 0; i < tabs.length; i++) {
+for (let i = 0; i < tabs.length; i++) {
   let tab = tabs[i];
   setTabHandler(tab, i);
 }
 
 function setTabHandler(tab, tabPos) {
-  tab.onclick = function() {
-    for(let i = 0; i < tabs.length; i++) {
-      tabs[i].className = '';
+  tab.onclick = function () {
+    for (let i = 0; i < tabs.length; i++) {
+      tabs[i].className = "";
     }
 
-    tab.className = 'active';
+    tab.className = "active";
 
-    for(let i = 0; i < panels.length; i++) {
-      panels[i].className = '';
+    for (let i = 0; i < panels.length; i++) {
+      panels[i].className = "";
     }
 
-    panels[tabPos].className = 'active-panel';
-  }
+    panels[tabPos].className = "active-panel";
+  };
 }
 ```
 
@@ -254,14 +268,38 @@ Tout d'abord, il nous faut compléter le HTML afin de représenter le contenu pr
 ```html
 <section class="fake-content">
   <h1>Faux contenu</h1>
-  <p>Du contenu imaginaire. Le contenu principal de votre page web se situerait probablement ici.</p>
-  <p>Du contenu imaginaire. Le contenu principal de votre page web se situerait probablement ici.</p>
-  <p>Du contenu imaginaire. Le contenu principal de votre page web se situerait probablement ici.</p>
-  <p>Du contenu imaginaire. Le contenu principal de votre page web se situerait probablement ici.</p>
-  <p>Du contenu imaginaire. Le contenu principal de votre page web se situerait probablement ici.</p>
-  <p>Du contenu imaginaire. Le contenu principal de votre page web se situerait probablement ici.</p>
-  <p>Du contenu imaginaire. Le contenu principal de votre page web se situerait probablement ici.</p>
-  <p>Du contenu imaginaire. Le contenu principal de votre page web se situerait probablement ici.</p>
+  <p>
+    Du contenu imaginaire. Le contenu principal de votre page web se situerait
+    probablement ici.
+  </p>
+  <p>
+    Du contenu imaginaire. Le contenu principal de votre page web se situerait
+    probablement ici.
+  </p>
+  <p>
+    Du contenu imaginaire. Le contenu principal de votre page web se situerait
+    probablement ici.
+  </p>
+  <p>
+    Du contenu imaginaire. Le contenu principal de votre page web se situerait
+    probablement ici.
+  </p>
+  <p>
+    Du contenu imaginaire. Le contenu principal de votre page web se situerait
+    probablement ici.
+  </p>
+  <p>
+    Du contenu imaginaire. Le contenu principal de votre page web se situerait
+    probablement ici.
+  </p>
+  <p>
+    Du contenu imaginaire. Le contenu principal de votre page web se situerait
+    probablement ici.
+  </p>
+  <p>
+    Du contenu imaginaire. Le contenu principal de votre page web se situerait
+    probablement ici.
+  </p>
 </section>
 ```
 
@@ -314,12 +352,8 @@ Pour commencer, enregistrez le fichier [hidden-info-panel-start.html](https://gi
 
 ```html
 <label for="toggle">❔</label>
-<input type="checkbox" id="toggle">
-<aside>
-
-  ...
-
-</aside>
+<input type="checkbox" id="toggle" />
+<aside>...</aside>
 ```
 
 Pour commencer, nous avons un élément [`<label>`](/fr/docs/Web/HTML/Element/Label) et un élément [`<input>`](/fr/docs/Web/HTML/Element/Input). Les éléments `<label>` sont généralement utilisés afin d'associer un libellé avec un élément de formulaire à des fins d'accessibilité (permettant par exemple à quelqu'un qui utilise un lecteur d'écran de connaître la description du contenu attendu dans ce champ de formulaire). Ici, ce libellé est associé avec la case à cocher `<input>` grâce aux attributs `for` et `id`.
@@ -393,7 +427,7 @@ Il y a plusieurs déclarations ici, voyons-les au fur et à mesure&nbsp;:
 Voici le dernier fragment de CSS à ajouter, là encore à la fin&nbsp;:
 
 ```css
-input[type=checkbox]:checked + aside {
+input[type="checkbox"]:checked + aside {
   right: 0px;
 }
 ```

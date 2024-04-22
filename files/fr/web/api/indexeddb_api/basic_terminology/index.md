@@ -1,7 +1,6 @@
 ---
 title: Caractéristiques clés et terminologie d'IndexedDB
 slug: Web/API/IndexedDB_API/Basic_Terminology
-translation_of: Web/API/IndexedDB_API/Basic_Terminology
 ---
 
 {{DefaultAPISidebar("IndexedDB")}}
@@ -25,6 +24,7 @@ Si vous avez l'habitude de travailler avec d'autres types de base de données, I
 - **Les bases de données IndexedDB stockent des paires de clé/valeur**
   - : Les valeurs peuvent être des objets structurés complexes et les clés peuvent être des propriétés de ces objets. On peut créer des index qui utilisent n'importe quelle propriété des objets pour des recherches rapides ou des énumérations triées. Les clés peuvent être des objets binaires.
 - **IndexedDB est construit sur un modèle de base de données transactionnel**
+
   - : Tout ce qui se produit dans une base de données IndexedDB a lieu dans le contexte d'une [transaction](#transaction). L'API IndexedDB fournit de nombreux objets qui représentent des index, des tables, des curseurs, etc. et chacun de ces objets est lié à une transaction donnée. On ne peut pas exécuter de commandes ou ouvrir des curseurs en dehors d'une transaction. Les transactions disposent d'une durée de vie bien définie et toute tentative d'utiliser une transaction après qu'elle a terminée se soldera par des exceptions. Par ailleurs, les transactions sont appliquées avec des commits automatiques et on ne peut pas réaliser de commit manuel.
 
   Ce modèle de transaction s'avère vraiment utile lorsqu'on pense au cas d'usage où une personne a ouvert simultanément deux instances d'une application web dans deux onglets différents. Sans opérations transactionnelles, les deux instances pourraient interférer l'une avec l'autre. Si vous ne connaissez pas le concept de transaction pour les bases de données, nous vous conseillons de lire [l'article Wikipédia sur les transactions](https://fr.wikipedia.org/wiki/Transaction_informatique) et de poursuivre avec la sous-section [transaction](#transaction) de cette page, dans la section Définitions.
@@ -36,13 +36,15 @@ Si vous avez l'habitude de travailler avec d'autres types de base de données, I
 - **IndexedDB utilise les évènements du DOM pour notifier de la disponibilité des résultats**
   - : Les évènements du DOM ont toujours une propriété `type` (pour IndexedDB, celle-ci vaudra le plus souvent `"success"` ou `"error"`). Les évènements DOM possèdent également une propriété `target` qui indique la destination de l'évènement. Dans la plupart des cas, la propriété `target` d'un évènement sera ici l'objet `IDBRequest` qui a été généré comme résultat d'une opération sur la base de données. Les évènements de réussite ne bouillonnent pas vers la surface et ne peuvent être annulés. En revanche, les évènements d'erreur bouillonnent vers la surface et peuvent être annulés. Cette nuance a son importance, car les évènements d'erreur interrompent toute transaction dont ils faisaient partie, à moins qu'ils soient annulés.
 - **IndexedDB est orientée objets**
+
   - : IndexedDB n'est pas une base de données relationnelle avec des tableaux qui représentent des ensembles de lignes et de colonnes. Cette différence majeure et fondamentale aura un impact sur la façon de concevoir et de construire vos applications.
 
-  Dans un magasin de données relationnel traditionnel, on aurait une table qui stocke un ensemble de lignes et des colonnes avec des types, nommées pour les différentes données. Avec IndexedDB, il faut créer un magasin d'objets pour un type de données et y faire persister des objets JavaScript. Chaque magasin d'objet peut avoir un ensemble d'index qui permettent des recherches et des parcours rapides. Si vous ne connaissez pas les systèmes de gestion de bases de données orientées objet, nous vous invitons à lire [l'article Wikipédia correspondant](https://fr.wikipedia.org/wiki/Base_de_donn%C3%A9es_orient%C3%A9e_objet).
+  Dans un magasin de données relationnel traditionnel, on aurait une table qui stocke un ensemble de lignes et des colonnes avec des types, nommées pour les différentes données. Avec IndexedDB, il faut créer un magasin d'objets pour un type de données et y faire persister des objets JavaScript. Chaque magasin d'objet peut avoir un ensemble d'index qui permettent des recherches et des parcours rapides. Si vous ne connaissez pas les systèmes de gestion de bases de données orientées objet, nous vous invitons à lire [l'article Wikipédia correspondant](https://fr.wikipedia.org/wiki/Base_de_données_orientée_objet).
 
 - **IndexedDB n'utilise pas le langage SQL**
   - : Cette API utilise des requêtes sur un index, qui produisent un curseur qu'on utilise pour parcourir l'ensemble des résultats. Si vous ne connaissez pas les systèmes NoSQL, nous vous invitons à lire [l'article Wikipédia correspondant](https://fr.wikipedia.org/wiki/NoSQL).
 - **IndexedDB suit la règle d'origine unique**
+
   - : Une origine se compose du domaine, du protocole de l'application et du port de l'URL du document où le script est exécuté. Chaque base de données est associée à une seule origine et chaque origine peut avoir plusieurs bases de données. Chaque base de données possède un nom qui permet de l'identifier pour une origine donnée.
 
   Cette règle de sécurité qui porte sur IndexedDB empêche les applications d'accéder aux données des autres origines. Ainsi, bien qu'une application ou une page située sur [http://www.example.com/app/](https://www.example.com/app/) puisse récupérer des données à propos de [http://www.example.com/dir/](https://www.example.com/dir/), car elles partagent la même origine&nbsp;; elle ne peut pas récupérer des données provenant de [http://www.example.com:8080/dir/](https://www.example.com:8080/dir/) (le port est différent) ou de <https://www.example.com/dir/> (le protocole est différent), car les origines sont différentes.

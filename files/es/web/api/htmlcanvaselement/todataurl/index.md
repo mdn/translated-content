@@ -40,7 +40,7 @@ Dado un elemento {{HTMLElement("canvas")}}:
 Puedes obtener el data-URL del canvas con las siguientes líneas:
 
 ```js
-var canvas = document.getElementById('canvas');
+var canvas = document.getElementById("canvas");
 var dataURL = canvas.toDataURL();
 console.log(dataURL);
 // "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNby
@@ -50,10 +50,10 @@ console.log(dataURL);
 ### Establecer la calidad de imagen con jpegs
 
 ```js
-var fullQuality = canvas.toDataURL('image/jpeg', 1.0);
+var fullQuality = canvas.toDataURL("image/jpeg", 1.0);
 // "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQ...9oADAMBAAIRAxEAPwD/AD/6AP/Z"
-var mediumQuality = canvas.toDataURL('image/jpeg', 0.5);
-var lowQuality = canvas.toDataURL('image/jpeg', 0.1);
+var mediumQuality = canvas.toDataURL("image/jpeg", 0.5);
+var lowQuality = canvas.toDataURL("image/jpeg", 0.1);
 ```
 
 ### Ejemplo: Cambiar imágenes dinámicamente

@@ -1,73 +1,85 @@
 ---
 title: text-decoration-line
 slug: Web/CSS/text-decoration-line
+l10n:
+  sourceCommit: 37163d27e0625a83a3f8633fe58b9041867adeaa
 ---
 
 {{CSSRef}}
 
-La propiedad [CSS](/es/docs/CSS) **`text-decoration-line`** establece el tipo de decoración de línea que se agregará a un elemento.
+La propiedad **`text-decoration-line`** de [CSS](/es/docs/Web/CSS) establece el tipo de decoración que se utiliza en el texto de un elemento, como un subrayado o un sobrerayado.
 
 {{EmbedInteractiveExample("pages/css/text-decoration-line.html")}}
 
-When setting multiple line-decoration properties at once, it may be more convenient to use the {{cssxref("text-decoration")}} shorthand property instead.
-
-La decoración _underline_ posiciona el subrayado debajo del texto, la decoración _overline_ posiciona el subrayado encima del texto, y la decoración _line-through_ posiciona la línea en medio del texto.
+Al configurar varias propiedades de decoración de línea a la vez, puede ser más conveniente usar la propiedad abreviada {{cssxref("text-decoration")}} en su lugar.
 
 ## Sintaxis
 
 ```css
-/* Valores de clave */
+/* Palabra clave única */
 text-decoration-line: none;
 text-decoration-line: underline;
 text-decoration-line: overline;
 text-decoration-line: line-through;
-text-decoration-line: underline overline;                /* Dos líneas de decoración */
-text-decoration-line: overline underline line-through;   /* Múltiples líneas de decoración */
+text-decoration-line: blink;
+
+/* Varias palabras clave */
+text-decoration-line: underline overline; /* Dos líneas de decoración */
+text-decoration-line: overline underline line-through; /* Múltiples líneas de decoración */
 
 /* Valores globales */
 text-decoration-line: inherit;
 text-decoration-line: initial;
+text-decoration-line: revert;
+text-decoration-line: revert-layer;
 text-decoration-line: unset;
 ```
+
+La propiedad `text-decoration-line` se especifica como `none`, o **uno o más** valores separados por espacios de la lista a continuación.
 
 ### Valores
 
 - `none`
-  - : No agrega decoración al texto.
+  - : No produce decoración de texto.
 - `underline`
-  - : Cada línea del texto lleva subrayado inferior.
+  - : Cada línea de texto tiene una línea decorativa debajo.
 - `overline`
-  - : Cada línea del texto lleva subrayado superior.
+  - : Cada línea de texto tiene una línea decorativa encima.
 - `line-through`
-  - : Cada línea del texto lleva una línea atravesando por en medio del mismo.
-- `blink {{deprecated_inline}}`
-  - : El texto parpadea (se alterna entre visible e invisible). Según los ajustes del agente usuario, el texto puede simplemente no parpadear. Este valor está en **desuso**, en favor de las [Animaciones](/es/docs/Web/CSS/animation).
-- `-moz-anchor-decoration`{{non-standard_inline}}
-  - : El texto es decorado con el estilo de un ancla; no adecuado para contenido web.
+  - : Cada línea de texto tiene una línea decorativa que pasa por su centro.
+- `blink` {{deprecated_inline}}
+  - : El texto parpadea (alterna entre visible e invisible). Es posible que algunos navegadores no parpadeen el texto. Este valor está **obsoleto** en favor de [animaciones CSS](/es/docs/Web/CSS/animation).
 
-### Sintaxis formal
+## Definicion formal
+
+{{CSSInfo}}
+
+## Sintaxis formal
 
 {{csssyntax}}
 
-## Ejemplo
+## Ejemplos
 
-HTML
+### Ejemplo básico
 
 ```html
-<p>¡Aquí hay texto con subrayado inferior rojo ondulado!</p>
+<p class="wavy">¡Aquí hay un texto con subrayado rojo ondulado!</p>
+<p class="both">Este texto tiene líneas arriba y abajo.</p>
 ```
 
-CSS
-
 ```css
-p {
+.wavy {
   text-decoration-line: underline;
   text-decoration-style: wavy;
   text-decoration-color: red;
 }
+
+.both {
+  text-decoration-line: underline overline;
+}
 ```
 
-{{EmbedLiveSample('example', 300, 50)}}
+{{EmbedLiveSample('Examples')}}
 
 ## Especificaciones
 
@@ -77,6 +89,10 @@ p {
 
 {{Compat}}
 
-## Ver también
+## Véase también
 
-- When setting multiple line-decoration properties at once, it may be more convenient to use the {{cssxref("text-decoration")}} shorthand property instead.
+- Al configurar varias propiedades de decoración de línea a la vez, puede ser más conveniente usar la propiedad abreviada {{cssxref("text-decoration")}} en su lugar, que también incluye:
+  - {{cssxref("text-decoration-style")}}
+  - {{cssxref("text-decoration-color")}}
+  - {{cssxref("text-decoration-thickness")}}
+- {{cssxref("text-underline-offset")}}

@@ -1,7 +1,6 @@
 ---
 title: API de Armazenamento na Web
 slug: Web/API/Web_Storage_API
-original_slug: Web/API/Web_Storage_API_pt_br
 ---
 
 {{DefaultAPISidebar("Web Storage API")}}
@@ -38,9 +37,7 @@ Nós também fornecemos um [event output page](http://mdn.github.io/web-storage-
 
 ## Especificações
 
-| Especificação                        | Status                           | Comentário |
-| ------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('Web Storage')}} | {{Spec2('Web Storage')}} |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

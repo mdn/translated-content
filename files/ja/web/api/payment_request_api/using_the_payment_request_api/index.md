@@ -28,7 +28,7 @@ l10n:
 ```js
 const request = new PaymentRequest(
   buildSupportedPaymentMethodData(),
-  buildShoppingCartDetails()
+  buildShoppingCartDetails(),
 );
 ```
 
@@ -92,7 +92,7 @@ new PaymentRequest(buildSupportedPaymentMethodData(), {
       // Real payment request
       const request = new PaymentRequest(
         buildSupportedPaymentMethodData(),
-        checkoutObject
+        checkoutObject,
       );
       request.show().then((paymentResponse) => {
         // Here we would process the payment.
@@ -117,7 +117,7 @@ const checkoutButton = document.getElementById("checkout-button");
 if (window.PaymentRequest) {
   let request = new PaymentRequest(
     buildSupportedPaymentMethodNames(),
-    buildShoppingCartDetails()
+    buildShoppingCartDetails(),
   );
   checkoutButton.addEventListener("click", () => {
     request
@@ -136,7 +136,7 @@ if (window.PaymentRequest) {
     // called only once per instance.
     request = new PaymentRequest(
       buildSupportedPaymentMethodNames(),
-      buildShoppingCartDetails()
+      buildShoppingCartDetails(),
     );
   });
 }
@@ -160,7 +160,7 @@ checkoutButton.innerText = "Loading…";
 if (window.PaymentRequest) {
   const request = new PaymentRequest(
     buildSupportedPaymentMethodNames(),
-    buildShoppingCartDetails()
+    buildShoppingCartDetails(),
   );
   request
     .canMakePayment()
@@ -253,7 +253,7 @@ function onServerCheckoutDetailsRetrieved(checkoutObject) {
 checkoutButton.addEventListener("click", () => {
   const request = new PaymentRequest(
     buildSupportedPaymentMethodData(),
-    buildShoppingCartDetails()
+    buildShoppingCartDetails(),
   );
   request
     .show()
@@ -311,7 +311,7 @@ request
 ```js
 const paymentRequest = new PaymentRequest(
   [{ supportedMethods: "https://example.com/preauth" }],
-  details
+  details,
 );
 
 // Send `CanMakePayment` event to the payment handler.

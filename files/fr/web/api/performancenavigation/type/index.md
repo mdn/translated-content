@@ -1,18 +1,6 @@
 ---
 title: PerformanceNavigation.type
 slug: Web/API/PerformanceNavigation/type
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - Déprécié
-  - Navigation Timing
-  - PerformanceNavigation
-  - Property
-  - Propriété
-  - Read-only
-  - Héritage
-translation_of: Web/API/PerformanceNavigation/type
 ---
 
 {{APIRef("Navigation Timing")}}

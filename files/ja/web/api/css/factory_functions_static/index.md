@@ -1,7 +1,6 @@
 ---
 title: CSS 数値ファクトリー関数
 slug: Web/API/CSS/factory_functions_static
-original_slug: Web/API/CSS/factory_functions
 l10n:
   sourceCommit: 458eb9af74287fd15ef8ba9f4ba9aa3423c4cac3
 ---

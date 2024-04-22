@@ -3,6 +3,8 @@ title: 动态类型
 slug: Glossary/Dynamic_typing
 ---
 
+{{GlossarySidebar}}
+
 **动态类型语言**是那些像 {{glossary("JavaScript")}} 语言那样，其解释器在运行时根据{{glossary("variable", "变量")}}当时的{{glossary("value","值")}}分配{{glossary("type", "类型")}}。
 
 ## 参见

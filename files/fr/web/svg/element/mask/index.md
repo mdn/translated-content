@@ -1,13 +1,6 @@
 ---
 title: <mask>
 slug: Web/SVG/Element/mask
-tags:
-  - Element
-  - Masque
-  - NeedsCompatTable
-  - SVG
-  - SVG Container
-translation_of: Web/SVG/Element/mask
 ---
 
 {{SVGRef}}
@@ -19,7 +12,11 @@ Le masque permet de rendre des zones de l'élément sur lequel est appliqué (se
 ## Exemple
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -29,7 +26,9 @@ html,body,svg { height:100% }
     <rect x="0" y="0" width="100" height="100" fill="white" />
 
     <!-- Tous les pixels noirs sont invisibles -->
-    <path d="M10,35 A20,20,0,0,1,50,35 A20,20,0,0,1,90,35 Q90,65,50,95 Q10,65,10,35 Z" fill="black" />
+    <path
+      d="M10,35 A20,20,0,0,1,50,35 A20,20,0,0,1,90,35 Q90,65,50,95 Q10,65,10,35 Z"
+      fill="black" />
   </mask>
 
   <polygon points="-10,110 110,110 110,-10" fill="orange" />

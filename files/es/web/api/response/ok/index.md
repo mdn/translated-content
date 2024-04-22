@@ -23,13 +23,13 @@ En nuestro [ejemplo de Fetch Response](https://github.com/mdn/fetch-examples/tre
 > **Nota:** en la parte superior del bloque de `fetch()` imprimimos el valor de `ok` en la consola.
 
 ```js
-var imagen = document.querySelector('img');
+var imagen = document.querySelector("img");
 
-var peticion = new Request('flowers.jpg');
+var peticion = new Request("flowers.jpg");
 
-fetch(peticion).then(function(respuesta) {
+fetch(peticion).then(function (respuesta) {
   console.log(respuesta.ok); //retorna true si la respuesta fue exitosa
-  respuesta.blob().then(function(miBlob) {
+  respuesta.blob().then(function (miBlob) {
     var objectoURL = URL.createObjectURL(miBlob);
     imagen.src = objectURL;
   });

@@ -24,7 +24,7 @@ Um {{domxref("Boolean")}} que é `true` se o nó está conectado ao contexto rel
 Um exemplo em um DOM padrão:
 
 ```js
-let test = document.createElement('p');
+let test = document.createElement("p");
 console.log(test.isConnected); // Returns false
 document.body.appendChild(test);
 console.log(test.isConnected); // Returns true
@@ -36,10 +36,10 @@ Um exemplo em um Shadow DOM:
 
 ```js
 // Cria um raíz Shadow
-var shadow = this.attachShadow({mode: 'open'});
+var shadow = this.attachShadow({ mode: "open" });
 
 // Cria um CSS para aplicar a Shadow DOm
-var style = document.createElement('style');
+var style = document.createElement("style");
 console.log(style.isConnected); // retorna false
 
 style.textContent = `
@@ -70,41 +70,10 @@ shadow.appendChild(style);
 console.log(style.isConnected); // retorna true
 ```
 
-## Polyfill
-
-Node.isConnected pode ser polyfilled com o seguinte código para IE10 e EdgeHTML:
-
-```
-/*
- * Node.isConnected polyfill para IE and EdgeHTML
- * 2020-02-04
- *
- * Por Eli Grey, https://eligrey.com
- * Domínio Público.
- * NENHUMA GARANTIA É EXPRESSADA OU IMPLÍCITA. USE AO SEU PRÓPRIO RISCO.
- */
-
-if (!('isConnected' in Node.prototype)) {
-  Object.defineProperty(Node.prototype, 'isConnected', {
-    get() {
-      return (
-        !this.ownerDocument ||
-        !(
-          this.ownerDocument.compareDocumentPosition(this) &
-          this.DOCUMENT_POSITION_DISCONNECTED
-        )
-      );
-    },
-  });
-}
-```
-
 ## Especificações
 
-| Especificação                                                                        | Status                           | Comentários        |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('DOM WHATWG','#dom-node-isconnected','isConnected')}} | {{Spec2('DOM WHATWG')}} | Definição Inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Node.isConnected")}}
+{{Compat}}

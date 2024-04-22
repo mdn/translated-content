@@ -2,6 +2,7 @@
 title: AbortController.signal
 slug: Web/API/AbortController/signal
 ---
+
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
 {{domxref("AbortController")}} 인터페이스의 **`signal`** 읽기 전용 프로퍼티는 DOM 요청과 통신하거나 취소하는데 사용하는 {{domxref("AbortSignal")}} 객체 인터페이스를 반환한다.

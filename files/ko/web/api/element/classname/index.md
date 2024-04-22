@@ -2,6 +2,7 @@
 title: Element.className
 slug: Web/API/Element/className
 ---
+
 {{APIRef("DOM")}}
 
 ## 개요
@@ -20,12 +21,12 @@ elementNodeReference.className = cName;
 ## 예제
 
 ```js
-let elm = document.getElementById('item');
+let elm = document.getElementById("item");
 
-if(elm.className === 'active'){
-    elm.className = 'inactive';
+if (elm.className === "active") {
+  elm.className = "inactive";
 } else {
-    elm.className = 'active';
+  elm.className = "active";
 }
 ```
 

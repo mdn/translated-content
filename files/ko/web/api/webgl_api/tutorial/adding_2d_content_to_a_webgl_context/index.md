@@ -13,7 +13,7 @@ slug: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 
 ### 쉐이더 초기화
 
-쉐이더는[OpenGL ES 쉐이딩 언어](http://www.khronos.org/registry/gles/specs/2.0/GLSL_ES_Specification_1.0.17.pdf)를 사용하여 지정됩니다. 컨텐츠의 유지보수와 업데이트를 쉽게하기 위해 쉐이더를 '불러오기위한' 코드를 직접 작성하겠습니다. 다시 말하자면 쉐이더를 직접 새로 만드는 것이 아니라 HTML문서에서 쉐이더를 '찾아오는' 자바스크립트 코드입니다. 이 작업을 처리하는 initShaders()함수의 일반적인 형태를 살펴보겠습니다.
+쉐이더는[OpenGL ES 쉐이딩 언어](http://www.khronos.org/registry/gles/specs/2.0/GLSL_ES_Specification_1.0.17.pdf)를 사용하여 지정됩니다. 컨텐츠의 유지보수와 업데이트를 쉽게하기 위해 쉐이더를 '불러오기위한' 코드를 직접 작성하겠습니다. 다시 말하자면 쉐이더를 직접 새로 만드는 것이 아니라 HTML문서에서 쉐이더를 '찾아오는' JavaScript 코드입니다. 이 작업을 처리하는 initShaders()함수의 일반적인 형태를 살펴보겠습니다.
 
 ```js
 function initShaders() {
@@ -35,7 +35,10 @@ function initShaders() {
 
   gl.useProgram(shaderProgram);
 
-  vertexPositionAttribute = gl.getAttribLocation(shaderProgram, "aVertexPosition");
+  vertexPositionAttribute = gl.getAttribLocation(
+    shaderProgram,
+    "aVertexPosition",
+  );
   gl.enableVertexAttribArray(vertexPositionAttribute);
 }
 ```
@@ -73,14 +76,14 @@ function getShader(gl, id) {
 특정 ID를 가진 엘리먼트를 찾으면 텍스트 컨텐츠가 `theSource 변수에 저장됩니다.`
 
 ```js
-  if (shaderScript.type == "x-shader/x-fragment") {
-    shader = gl.createShader(gl.FRAGMENT_SHADER);
-  } else if (shaderScript.type == "x-shader/x-vertex") {
-    shader = gl.createShader(gl.VERTEX_SHADER);
-  } else {
-     // Unknown shader type
-     return null;
-  }
+if (shaderScript.type == "x-shader/x-fragment") {
+  shader = gl.createShader(gl.FRAGMENT_SHADER);
+} else if (shaderScript.type == "x-shader/x-vertex") {
+  shader = gl.createShader(gl.VERTEX_SHADER);
+} else {
+  // Unknown shader type
+  return null;
+}
 ```
 
 쉐이더를 위한 코드가 읽혀지면 쉐이더가 정점 쉐이더(MIME type "x-shader/x-vertex")인지 조각 쉐이더(MIME type "x-shader/x-fragment")인지 결정하기 위해 쉐이더 객체의 MIME 형식을 살펴봅니다. 그 다음 소스 코드에서 얻어진 것을 가지고 적절한 타입의 쉐이더를 생성합니다.
@@ -121,7 +124,6 @@ fragment의 색상에서 사용되는 gl_FragColor는 GL에서 만들어진 변�
     gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
 
   }
-
 </script>
 ```
 
@@ -147,17 +149,14 @@ fragment의 색상에서 사용되는 gl_FragColor는 GL에서 만들어진 변�
 사각형 렌더링을 하기 전에 사각형의 각 정점들을 저장할 버퍼를 만들어야 합니다. 이를 **initBuffers()** 라는 함수를 이용해 해보도록 하겠습니다. 앞으로 고급 WebGL 개념을 살펴보면서, 더욱 다양하고 복잡한 3D 오브젝트를 생성하고자 할 때 이 루틴을 많이 사용하게 될 것입니다.
 
 ```js
-var horizAspect = 480.0/640.0;
+var horizAspect = 480.0 / 640.0;
 
 function initBuffers() {
   squareVerticesBuffer = gl.createBuffer();
   gl.bindBuffer(gl.ARRAY_BUFFER, squareVerticesBuffer);
 
   var vertices = [
-    1.0,  1.0,  0.0,
-    -1.0, 1.0,  0.0,
-    1.0,  -1.0, 0.0,
-    -1.0, -1.0, 0.0
+    1.0, 1.0, 0.0, -1.0, 1.0, 0.0, 1.0, -1.0, 0.0, -1.0, -1.0, 0.0,
   ];
 
   gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW);
@@ -166,7 +165,7 @@ function initBuffers() {
 
 이 예제에서는 장면(scene)의 기본적인 속성만을 보여주기 위해, 루틴이 다소 지나치게 단순화되어있습니다. 정점들을 저장할 버퍼를 얻기 위해 `gl` 객체의 createBuffer() 메서드를 호출하는 것으로 시작합니다. 그 다음 `bindBuffer()` 메서드를 불러와 컨텍스트에 연결합니다.
 
-이 과정이 끝난 뒤 사각형의 각 정점 좌표를 담고있는 자바스크립트 배열을 생성합니다. 그런 다음 배열을 WebGL floats 배열로 변환한 뒤 gl객체의 bufferData() 메서드로 전달해 객체의 정점을 설정합니다.
+이 과정이 끝난 뒤 사각형의 각 정점 좌표를 담고있는 JavaScript 배열을 생성합니다. 그런 다음 배열을 WebGL floats 배열로 변환한 뒤 gl객체의 bufferData() 메서드로 전달해 객체의 정점을 설정합니다.
 
 ## 장면(Scene) 그리기
 
@@ -176,7 +175,7 @@ function initBuffers() {
 function drawScene() {
   gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
-  perspectiveMatrix = makePerspective(45, 640.0/480.0, 0.1, 100.0);
+  perspectiveMatrix = makePerspective(45, 640.0 / 480.0, 0.1, 100.0);
 
   loadIdentity();
   mvTranslate([-0.0, 0.0, -6.0]);
@@ -196,7 +195,7 @@ function drawScene() {
 
 ## 행렬 유틸리티를 이용한 연산
 
-행렬 연산은 꽤 복잡합니다. 행렬을 다루기 위한 코드를 직접 작성하고 싶은 사람은 아무도 없을 것입니다. 다행히도 벡터와 행렬 연산을 자바스크립트에서 다루는 데 아주 편리한 라이브러리인 [Sylvester](http://sylvester.jcoglan.com/)가 있습니다.
+행렬 연산은 꽤 복잡합니다. 행렬을 다루기 위한 코드를 직접 작성하고 싶은 사람은 아무도 없을 것입니다. 다행히도 벡터와 행렬 연산을 JavaScript에서 다루는 데 아주 편리한 라이브러리인 [Sylvester](http://sylvester.jcoglan.com/)가 있습니다.
 
 이 데모에서 사용한glUtils.js 파일은 웹에 떠돌아 다니는 많은 WebGL 데모에서 사용하고 있습니다. 이 파일이 어디서 나온 것인지 명확히 아는 사람은 아무도 없는것 같습니다만, HTML 로 출력하기 위한 메소드 뿐만 아니라 특별한 형태의 행렬을 만들기 위한 메소드를 추가되어 있어 Sylvester를 보다 정말 단순화 시켜놓았습니다.
 
@@ -217,7 +216,11 @@ function mvTranslate(v) {
 
 function setMatrixUniforms() {
   var pUniform = gl.getUniformLocation(shaderProgram, "uPMatrix");
-  gl.uniformMatrix4fv(pUniform, false, new Float32Array(perspectiveMatrix.flatten()));
+  gl.uniformMatrix4fv(
+    pUniform,
+    false,
+    new Float32Array(perspectiveMatrix.flatten()),
+  );
 
   var mvUniform = gl.getUniformLocation(shaderProgram, "uMVMatrix");
   gl.uniformMatrix4fv(mvUniform, false, new Float32Array(mvMatrix.flatten()));

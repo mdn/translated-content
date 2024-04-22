@@ -32,7 +32,7 @@ mySet.add(value);
 var mySet = new Set();
 
 mySet.add(1);
-mySet.add(5).add('어떤 문자열'); // 계속 붙일 수 있음
+mySet.add(5).add("어떤 문자열"); // 계속 붙일 수 있음
 
 console.log(mySet);
 // Set [1, 5, "어떤 문자열"]

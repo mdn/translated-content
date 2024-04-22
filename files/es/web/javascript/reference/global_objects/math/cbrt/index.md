@@ -1,7 +1,6 @@
 ---
 title: Math.cbrt()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cbrt
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/cbrt
 ---
 
 {{JSRef}}
@@ -37,10 +36,10 @@ Para <math><semantics><mrow><mi>x</mi><mo>≥</mo><mn>0</mn></mrow><annotation e
 
 ```js
 if (!Math.cbrt) {
-  Math.cbrt = (function(pow) {
-    return function cbrt(x){
+  Math.cbrt = (function (pow) {
+    return function cbrt(x) {
       // Esto asegura que numeros negativos sigan siendo negativos
-      return x < 0 ? -pow(-x, 1/3) : pow(x, 1/3);
+      return x < 0 ? -pow(-x, 1 / 3) : pow(x, 1 / 3);
     };
   })(Math.pow); // Localiza Math.pow para una mayor eficiencía
 }
@@ -59,7 +58,7 @@ Math.cbrt(0); // 0
 Math.cbrt(1); // 1
 Math.cbrt(Infinity); // Infinito
 Math.cbrt(null); // 0
-Math.cbrt(2);  // 1.2599210498948732
+Math.cbrt(2); // 1.2599210498948732
 ```
 
 ## Especificaciones

@@ -1,13 +1,6 @@
 ---
 title: Mettre en œuvre vos connaissances
 slug: Learn/CSS/First_steps/Styling_a_biography_page
-tags:
-  - Apprendre
-  - CSS
-  - Débutant
-  - Playground
-translation_of: Learn/CSS/First_steps/Using_your_new_knowledge
-original_slug: Learn/CSS/First_steps/Using_your_new_knowledge
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
@@ -77,12 +70,12 @@ Si vous voulez une évaluation de votre travail, ou si vous êtes coincé et rec
 1. Publiez votre code dans un éditeur en ligne tel [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
 2. Si vous êtes à l'aise en anglais :
 
-    1. Dans le [forum MDN Discourse](https://discourse.mozilla.org/c/mdn), écrivez un billet pour évaluation et/ou demande d'aide. Ajouter le tag "learning" à votre post pour que nous puissions le trouver plus facilement. Votre post devrait contenir :
+   1. Dans le [forum MDN Discourse](https://discourse.mozilla.org/c/mdn), écrivez un billet pour évaluation et/ou demande d'aide. Ajouter le tag "learning" à votre post pour que nous puissions le trouver plus facilement. Votre post devrait contenir :
 
-        - Un titre parlant comme "Assessment wanted for CSS First Steps".
-        - Des détails sur ce que vous voudriez que l'on fasse — par exemple, ce que vous avez déjà essayé si vous êtes coincé et demandez de l'aide.
-        - Un lien vers l'exemple dans l'éditeur en ligne, sur lequel vous demandez une évaluation ou de l'aide : voilà une bonne pratique — il n'est pas commode d'aider quelqu'un coincé sur son code quand on ne peut pas voir ce code...
-        - Un lien vers cette page d'évaluation afin que nous puissions voir la question sur laquelle vous demandez de l'aide.
+      - Un titre parlant comme "Assessment wanted for CSS First Steps".
+      - Des détails sur ce que vous voudriez que l'on fasse — par exemple, ce que vous avez déjà essayé si vous êtes coincé et demandez de l'aide.
+      - Un lien vers l'exemple dans l'éditeur en ligne, sur lequel vous demandez une évaluation ou de l'aide : voilà une bonne pratique — il n'est pas commode d'aider quelqu'un coincé sur son code quand on ne peut pas voir ce code...
+      - Un lien vers cette page d'évaluation afin que nous puissions voir la question sur laquelle vous demandez de l'aide.
 
 3. Sinon, n'hésitez pas à contacter @MDNfr sur Twitter.
 

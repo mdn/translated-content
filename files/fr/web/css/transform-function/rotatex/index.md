@@ -1,9 +1,6 @@
 ---
 title: rotateX()
 slug: Web/CSS/transform-function/rotateX
-translation_of: Web/CSS/transform-function/rotateX()
-original_slug: Web/CSS/transform-function/rotateX()
-browser-compat: css.types.transform-function.rotateX
 ---
 
 {{CSSRef}}

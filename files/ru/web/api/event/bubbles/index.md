@@ -1,8 +1,8 @@
 ---
 title: Event.bubbles
 slug: Web/API/Event/bubbles
-translation_of: Web/API/Event/bubbles
 ---
+
 {{ ApiRef("DOM") }}
 
 ### Описание
@@ -13,23 +13,19 @@ translation_of: Web/API/Event/bubbles
 
 ### Синтаксис
 
-```
-event.bubbles
+```js
+event.bubbles;
 ```
 
 Возвращает булево значение `true`, если событие является всплывающим внутри DOM.
 
-### Пример
-
-```
-var bool = event.bubbles;
-```
+### Значение
 
 `bool` содержит `true` или `false` в зависимости от того, может событие быть всплывающим внутри DOM или нет
 
 ### Пример
 
-```
+```js
 function handleInput(e) {
   // Проверяем всплывает ли событие и ...
   if (!e.bubbles) {

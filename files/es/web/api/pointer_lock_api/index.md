@@ -1,7 +1,6 @@
 ---
 title: API Pointer Lock
 slug: Web/API/Pointer_Lock_API
-original_slug: WebAPI/Pointer_Lock
 l10n:
   sourceCommit: c244d3b2cb6c17e6ba8692e3faec393afd9988ca
 ---

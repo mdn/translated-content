@@ -1,12 +1,12 @@
 ---
 title: s
 slug: Web/HTML/Element/s
-original_slug: Web/HTML/Elemento/s
 ---
 
 ### Definición
 
 - Muestra el texto tachado con una linea horizontal.
+
   - : **Sus etiquetas son**: \<s> y \</s> (Ambas obligatorias)
 
     **Crea una caja**: [en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea).

@@ -1,7 +1,6 @@
 ---
 title: O que é um servidor web (web server)?
 slug: Learn/Common_questions/Web_mechanics/What_is_a_web_server
-original_slug: Learn/Common_questions/What_is_a_web_server
 ---
 
 Neste artigo vamos revisar o que são web servers, como eles funcionam, e por que eles são importantes.
@@ -96,7 +95,7 @@ O HTTP fornece regras claras sobre como um cliente e um servidor se comunicam. A
 
 1. Ao receber uma requisição, um servidor HTTP primeiramente confirma se a URL requisitada corresponde ao arquivo existente.
 2. Se confirmar, o servidor web envia o conteúdo do arquivo de volta ao navegador. Senão, o servidor de aplicações cria o arquivo necessário.
-3. Se nenhum dos processos for possível, o servidor web retorna uma mensagem de erro ao navegador, mais conhecido como "404 Not Found". (Esse erro é tão comum que muitos desevolvedores web passam um bom tempo criando [páginas de erro do 404](http://www.404notfound.fr/).)
+3. Se nenhum dos processos for possível, o servidor web retorna uma mensagem de erro ao navegador, mais conhecido como "404 Not Found". (Esse erro é tão comum que muitos desevolvedores web passam um bom tempo criando páginas de erro do 404.)
 
 ### Conteúdo estático vs. dinâmico
 

@@ -1,13 +1,6 @@
 ---
 title: FormData
 slug: Web/API/FormData
-tags:
-  - API
-  - FormData
-  - Interface
-  - Reference
-  - XMLHttpRequest
-translation_of: Web/API/FormData
 ---
 
 {{APIRef("XMLHttpRequest")}}
@@ -50,7 +43,7 @@ FormData использует такой же формат на выходе, к
 
 {{Specifications}}
 
-## Совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

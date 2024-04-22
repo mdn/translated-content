@@ -1,11 +1,6 @@
 ---
 title: <feFuncB>
 slug: Web/SVG/Element/feFuncB
-tags:
-  - Element
-  - SVG
-  - SVG Filter
-translation_of: Web/SVG/Element/feFuncB
 ---
 
 {{SVGRef}}
@@ -25,7 +20,7 @@ La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feFuncB>`** doit être placé
 
 ### Attributs spécifiques
 
-_Aucun_
+_Aucun._
 
 ## Interface DOM
 

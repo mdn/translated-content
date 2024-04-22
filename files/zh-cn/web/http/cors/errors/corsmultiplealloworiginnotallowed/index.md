@@ -1,5 +1,5 @@
 ---
-title: 原因： Multiple CORS header 'Access-Control-Allow-Origin' not allowed
+title: 原因：Multiple CORS header 'Access-Control-Allow-Origin' not allowed
 slug: Web/HTTP/CORS/Errors/CORSMultipleAllowOriginNotAllowed
 ---
 
@@ -8,7 +8,7 @@ slug: Web/HTTP/CORS/Errors/CORSMultipleAllowOriginNotAllowed
 ## 原因
 
 ```plain
-原因： Multiple CORS header 'Access-Control-Allow-Origin' not allowed
+原因：Multiple CORS header 'Access-Control-Allow-Origin' not allowed
 ```
 
 ## 哪里错了？

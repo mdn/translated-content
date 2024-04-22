@@ -1,22 +1,6 @@
 ---
-title: '<abbr> : l''élément d''abréviation'
+title: "<abbr> : l'élément d'abréviation"
 slug: Web/HTML/Element/abbr
-tags:
-  - Acronym
-  - Definitions
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Reference
-  - Web
-  - abbr
-  - abbreviation
-  - semantics
-translation_of: Web/HTML/Element/abbr
-browser-compat: html.elements.abbr
 ---
 
 {{HTMLSidebar}}
@@ -125,8 +109,7 @@ On peut baliser une abréviation sans fournir de description ou de définition, 
 
 ```html
 <p>
-  Nous allons voir le <abbr>HTML</abbr> qui sert à construire
-  des pages web.
+  Nous allons voir le <abbr>HTML</abbr> qui sert à construire des pages web.
 </p>
 ```
 
@@ -177,14 +160,17 @@ Il est possible d'utiliser l'élément `<abbr>` avec [`<dfn>`](/fr/docs/Web/HTML
 #### HTML
 
 ```html
-<p><dfn id="html"><abbr title="HyperText Markup Language">HTML</abbr>
-</dfn> est un langage de balise qui permet de créer la structure
-et d'organiser la sémantique d'une page web.</p>
+<p>
+  <dfn id="html"><abbr title="HyperText Markup Language">HTML</abbr> </dfn> est
+  un langage de balise qui permet de créer la structure et d'organiser la
+  sémantique d'une page web.
+</p>
 
-<p>Une <dfn id="spec">spécification</dfn>
-(<abbr title="spécification">spec</abbr>) est un document qui décrit,
-de façon détaillée comme une technologie ou une API fonctionne et comment
-l'utiliser.</p>
+<p>
+  Une <dfn id="spec">spécification</dfn> (<abbr title="spécification">spec</abbr
+  >) est un document qui décrit, de façon détaillée comme une technologie ou une
+  API fonctionne et comment l'utiliser.
+</p>
 ```
 
 #### Résultat
@@ -198,8 +184,10 @@ C'est une bonne pratique que d'épeler l'acronyme ou l'abréviation lorsqu'elle 
 #### Exemples
 
 ```html
-<p>JavaScript Object Notation (<abbr>JSON</abbr>) est un format léger
-  d'échange de données.</p>
+<p>
+  JavaScript Object Notation (<abbr>JSON</abbr>) est un format léger d'échange
+  de données.
+</p>
 ```
 
 ##### Résultat

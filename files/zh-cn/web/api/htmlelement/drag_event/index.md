@@ -12,9 +12,9 @@ slug: Web/API/HTMLElement/drag_event
 在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
 
 ```js
-addEventListener('drag', (event) => {});
+addEventListener("drag", (event) => {});
 
-ondrag = (event) => { };
+ondrag = (event) => {};
 ```
 
 ## 事件类型
@@ -38,9 +38,7 @@ _除了下面列出的属性外，还可以使用父接口 {{domxref("Event")}} 
 
 ```html
 <div class="dropzone">
-  <div id="draggable" draggable="true">
-    这个 div 可以拖动
-  </div>
+  <div id="draggable" draggable="true">这个 div 可以拖动</div>
 </div>
 <div class="dropzone" id="droptarget"></div>
 ```
@@ -71,7 +69,7 @@ body {
 }
 
 .dragging {
-  opacity: .5;
+  opacity: 0.5;
 }
 ```
 
@@ -80,49 +78,53 @@ body {
 ```js
 let dragged;
 
-/* events fired on the draggable target */
+/* 在可拖动的目标上触发的事件 */
 const source = document.getElementById("draggable");
 source.addEventListener("drag", (event) => {
   console.log("dragging");
 });
 
 source.addEventListener("dragstart", (event) => {
-  // store a ref. on the dragged elem
+  // 保存被拖动元素的引用
   dragged = event.target;
-  // make it half transparent
+  // 设置为半透明
   event.target.classList.add("dragging");
 });
 
 source.addEventListener("dragend", (event) => {
-  // reset the transparency
+  // 拖动结束，重置透明度
   event.target.classList.remove("dragging");
 });
 
-/* events fired on the drop targets */
+/* 在放置目标上触发的事件 */
 const target = document.getElementById("droptarget");
-target.addEventListener("dragover", (event) => {
-  // prevent default to allow drop
-  event.preventDefault();
-}, false);
+target.addEventListener(
+  "dragover",
+  (event) => {
+    // 阻止默认行为以允许放置
+    event.preventDefault();
+  },
+  false,
+);
 
 target.addEventListener("dragenter", (event) => {
-  // highlight potential drop target when the draggable element enters it
+  // 在可拖动元素进入潜在的放置目标时高亮显示该目标
   if (event.target.classList.contains("dropzone")) {
     event.target.classList.add("dragover");
   }
 });
 
 target.addEventListener("dragleave", (event) => {
-  // reset background of potential drop target when the draggable element leaves it
+  // 在可拖动元素离开潜在放置目标元素时重置该目标的背景
   if (event.target.classList.contains("dropzone")) {
     event.target.classList.remove("dragover");
   }
 });
 
 target.addEventListener("drop", (event) => {
-  // prevent default action (open as link for some elements)
+  // 阻止默认行为（会作为某些元素的链接打开）
   event.preventDefault();
-  // move dragged element to the selected drop target
+  // 将被拖动元素移动到选定的目标元素中
   if (event.target.classList.contains("dropzone")) {
     event.target.classList.remove("dragover");
     dragged.parentNode.removeChild(dragged);

@@ -13,7 +13,7 @@ HTML의 주요 작업 중 하나는 브라우저가 텍스트를 올바르게 �
     <tr>
       <th scope="row">선행 학습:</th>
       <td>
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+        <a href="/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
           >HTML 시작하기</a
         >에서 다뤄봤던 HTML의 기초에 익숙해지기.
       </td>
@@ -61,15 +61,22 @@ heading 요소는 총 6개가 있습니다— {{htmlelement("h1")}}, {{htmleleme
 
 <h2>Chapter 1: The dark night</h2>
 
-<p>It was a dark night. Somewhere, an owl hooted. The rain lashed down on the ...</p>
+<p>
+  It was a dark night. Somewhere, an owl hooted. The rain lashed down on the ...
+</p>
 
 <h2>Chapter 2: The eternal silence</h2>
 
-<p>Our protagonist could not so much as a whisper out of the shadowy figure ...</p>
+<p>
+  Our protagonist could not so much as a whisper out of the shadowy figure ...
+</p>
 
 <h3>The specter speaks</h3>
 
-<p>Several more hours had passed, when all of a sudden the specter sat bolt upright and exclaimed, "Please have mercy on my soul!"</p>
+<p>
+  Several more hours had passed, when all of a sudden the specter sat bolt
+  upright and exclaimed, "Please have mercy on my soul!"
+</p>
 ```
 
 구조화된 계층이 타당해 보이는 한 연관된 요소들이 정확히 무엇을 나타내는지는 당신에게 달려있습니다. 다만 그러한 구조들을 만들 때 다음 몇 가지의 관례만 기억하면 됩니다:
@@ -103,11 +110,13 @@ heading 요소는 총 6개가 있습니다— {{htmlelement("h1")}}, {{htmleleme
 
 ```html hidden
 <h2>Input</h2>
-<textarea id="code" class="input">My short story
+<textarea id="code" class="input">
+My short story
 
 I am a policewoman and my name is Trish.
 
-My legs are made of cardboard and I am married to a fish.</textarea>
+My legs are made of cardboard and I am married to a fish.</textarea
+>
 <h2>Output</h2>
 <div class="output"></div>
 <div class="controls">
@@ -118,10 +127,11 @@ My legs are made of cardboard and I am married to a fish.</textarea>
 
 ```css hidden
 body {
-  font-family: 'Open Sans Light', Helvetica, Arial, sans-serif;
+  font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
 }
 
-.input, .output {
+.input,
+.output {
   width: 90%;
   height: 8em;
   padding: 10px;
@@ -145,13 +155,14 @@ function drawOutput() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawOutput();
 });
 
-solution.addEventListener("click", function() {
-textarea.value = '<h1>My short story</h1>\n<p>I am a policewoman and my name is Trish.</p>\n<p>My legs are made of cardboard and I am married to a fish.</p>';
+solution.addEventListener("click", function () {
+  textarea.value =
+    "<h1>My short story</h1>\n<p>I am a policewoman and my name is Trish.</p>\n<p>My legs are made of cardboard and I am married to a fish.</p>";
   drawOutput();
 });
 
@@ -176,7 +187,9 @@ Semantic(직역 : 의미를 담은, 의미론적인)은 우리 주변 어디에�
 반면에, 당신은 어떤 요소도 최상위 heading처럼 _보이게_ 할 수 있습니다. 다음을 고려해 봅시다:
 
 ```html
-<span style="font-size: 32px; margin: 21px 0;">Is this a top level heading?</span>
+<span style="font-size: 32px; margin: 21px 0;"
+  >Is this a top level heading?</span
+>
 ```
 
 이것은 {{htmlelement("span")}} 요소입니다. 의미가 없죠. 당신은 컨텐츠에 추가적인 의미를 더하지 않고 CSS 를 적용하고 싶을 때 (혹은 JavaScript를 적용해 무언가를 하고 싶을 때) 이것을 사용합니다. (이것들에 대해서는 코스 뒤에서 더 알게 될겁니다.) 우리는 이것에 CSS를 더해 최상위 heading처럼 보이게 했지만, 이것이 semantic(의미론적인) 가치는 없기 때문에, 위에서 서술된 추가적인 이득들은 얻지 못할 것입니다. 작업에 관계있는 HTML 요소를 사용하는 것이 좋은 생각입니다.
@@ -202,12 +215,12 @@ hummus
 
 모든 리스트 아이템:
 
-```html
+```html-nolint
 <ul>
-milk
-eggs
-bread
-hummus
+  milk
+  eggs
+  bread
+  hummus
 </ul>
 ```
 
@@ -228,10 +241,12 @@ HTML 순서 없는(unordered) 리스트를 만들기 위해 아래에 있는 샘
 
 ```html hidden
 <h2>Input</h2>
-<textarea id="code" class="input">milk
+<textarea id="code" class="input">
+milk
 eggs
 bread
-hummus</textarea>
+hummus</textarea
+>
 <h2>Output</h2>
 <div class="output"></div>
 <div class="controls">
@@ -242,10 +257,11 @@ hummus</textarea>
 
 ```css hidden
 body {
-  font-family: 'Open Sans Light', Helvetica, Arial, sans-serif;
+  font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
 }
 
-.input, .output {
+.input,
+.output {
   width: 90%;
   height: 6em;
   padding: 10px;
@@ -269,13 +285,14 @@ function drawOutput() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawOutput();
 });
 
-solution.addEventListener("click", function() {
-textarea.value = '<ul>\n<li>milk</li>\n<li>eggs</li>\n<li>bread</li>\n<li>hummus</li>\n</ul>';
+solution.addEventListener("click", function () {
+  textarea.value =
+    "<ul>\n<li>milk</li>\n<li>eggs</li>\n<li>bread</li>\n<li>hummus</li>\n</ul>";
   drawOutput();
 });
 
@@ -317,11 +334,13 @@ HTML 순서가 있는(ordered) 리스트를 만들기 위해 아래에 있는 �
 
 ```html hidden
 <h2>Input</h2>
-<textarea id="code" class="input">Drive to the end of the road
+<textarea id="code" class="input">
+Drive to the end of the road
 Turn right
 Go straight across the first two roundabouts
 Turn left at the third roundabout
-The school is on your right, 300 meters up the road</textarea>
+The school is on your right, 300 meters up the road</textarea
+>
 <h2>Output</h2>
 <div class="output"></div>
 <div class="controls">
@@ -332,10 +351,11 @@ The school is on your right, 300 meters up the road</textarea>
 
 ```css hidden
 body {
-  font-family: 'Open Sans Light', Helvetica, Arial, sans-serif;
+  font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
 }
 
-.input, .output {
+.input,
+.output {
   width: 90%;
   height: 8em;
   padding: 10px;
@@ -359,13 +379,14 @@ function drawOutput() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawOutput();
 });
 
-solution.addEventListener("click", function() {
-textarea.value = '<ol>\n<li>Drive to the end of the road</li>\n<li>Turn right</li>\n<li>Go straight across the first two roundabouts</li>\n<li>Turn left at the third roundabout</li>\n<li>The school is on your right, 300 meters up the road</li>\n</ol>';
+solution.addEventListener("click", function () {
+  textarea.value =
+    "<ol>\n<li>Drive to the end of the road</li>\n<li>Turn right</li>\n<li>Go straight across the first two roundabouts</li>\n<li>Turn left at the third roundabout</li>\n<li>The school is on your right, 300 meters up the road</li>\n</ol>";
   drawOutput();
 });
 
@@ -381,7 +402,8 @@ window.addEventListener("load", drawOutput);
 
 ```html hidden
 <h2>Input</h2>
-<textarea id="code" class="input">Quick hummus recipe
+<textarea id="code" class="input">
+Quick hummus recipe
 
     This recipe makes quick, tasty hummus, with no messing. It has been adapted from a number of different recipes that I have read over the years.
 
@@ -412,7 +434,8 @@ window.addEventListener("load", drawOutput);
 
     Refrigerate the finished hummus in a sealed container. You should be able to use it for about a week after you've made it. If it starts to become fizzy, you should definitely discard it.
 
-    Hummus is suitable for freezing; you should thaw it and use it within a couple of months.</textarea>
+    Hummus is suitable for freezing; you should thaw it and use it within a couple of months.</textarea
+>
 <h2>Output</h2>
 <div class="output"></div>
 <div class="controls">
@@ -423,10 +446,11 @@ window.addEventListener("load", drawOutput);
 
 ```css hidden
 body {
-  font-family: 'Open Sans Light', Helvetica, Arial, sans-serif;
+  font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
 }
 
-.input, .output {
+.input,
+.output {
   width: 90%;
   height: 8em;
   padding: 10px;
@@ -450,13 +474,14 @@ function drawOutput() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawOutput();
 });
 
-solution.addEventListener("click", function() {
-  textarea.value = '<h1>Quick hummous recipe</h1>\n\n<p>This recipe makes quick, tasty hummus, with no messing. It has been adapted from a number of different recipes that I have read over the years.</p>\n\n<p>Hummus is a delicious thick paste used heavily in Greek and Middle Eastern dishes. It is very tasty with salad, grilled meats and pitta breads.</p>\n\n<h2>Ingredients</h2>\n\n<ul>\n<li>1 can (400g) of chick peas (garbanzo beans)</li>\n<li>175g of tahini</li>\n<li>6 sundried tomatoes</li>\n<li>Half a red pepper</li>\n<li>A pinch of cayenne pepper</li>\n<li>1 clove of garlic</li>\n<li>A dash of olive oil</li>\n</ul>\n\n<h2>Instructions</h2>\n\n<ol>\n<li>Remove the skin from the garlic, and chop coarsely.</li>\n<li>Remove all the seeds and stalk from the pepper, and chop coarsely.</li>\n<li>Add all the ingredients into a food processor.</li>\n<li>Process all the ingredients into a paste.</li>\n<li>If you want a coarse "chunky" hummus, process it for a short time.</li>\n<li>If you want a smooth hummus, process it for a longer time.</li>\n</ol>\n\n<p>For a different flavour, you could try blending in a small measure of lemon and coriander, chili pepper, lime and chipotle, harissa and mint, or spinach and feta cheese. Experiment and see what works for you.</p>\n\n<h2>Storage</h2>\n\n<p>Refrigerate the finished hummus in a sealed container. You should be able to use it for about a week after you\'ve made it. If it starts to become fizzy, you should definitely discard it.</p>\n\n<p>Hummus is suitable for freezing; you should thaw it and use it within a couple of months.</p>';
+solution.addEventListener("click", function () {
+  textarea.value =
+    '<h1>Quick hummous recipe</h1>\n\n<p>This recipe makes quick, tasty hummus, with no messing. It has been adapted from a number of different recipes that I have read over the years.</p>\n\n<p>Hummus is a delicious thick paste used heavily in Greek and Middle Eastern dishes. It is very tasty with salad, grilled meats and pitta breads.</p>\n\n<h2>Ingredients</h2>\n\n<ul>\n<li>1 can (400g) of chick peas (garbanzo beans)</li>\n<li>175g of tahini</li>\n<li>6 sundried tomatoes</li>\n<li>Half a red pepper</li>\n<li>A pinch of cayenne pepper</li>\n<li>1 clove of garlic</li>\n<li>A dash of olive oil</li>\n</ul>\n\n<h2>Instructions</h2>\n\n<ol>\n<li>Remove the skin from the garlic, and chop coarsely.</li>\n<li>Remove all the seeds and stalk from the pepper, and chop coarsely.</li>\n<li>Add all the ingredients into a food processor.</li>\n<li>Process all the ingredients into a paste.</li>\n<li>If you want a coarse "chunky" hummus, process it for a short time.</li>\n<li>If you want a smooth hummus, process it for a longer time.</li>\n</ol>\n\n<p>For a different flavour, you could try blending in a small measure of lemon and coriander, chili pepper, lime and chipotle, harissa and mint, or spinach and feta cheese. Experiment and see what works for you.</p>\n\n<h2>Storage</h2>\n\n<p>Refrigerate the finished hummus in a sealed container. You should be able to use it for about a week after you\'ve made it. If it starts to become fizzy, you should definitely discard it.</p>\n\n<p>Hummus is suitable for freezing; you should thaw it and use it within a couple of months.</p>';
   drawOutput();
 });
 
@@ -491,9 +516,12 @@ window.addEventListener("load", drawOutput);
   <li>Remove the skin from the garlic, and chop coarsely.</li>
   <li>Remove all the seeds and stalk from the pepper, and chop coarsely.</li>
   <li>Add all the ingredients into a food processor.</li>
-  <li>Process all the ingredients into a paste.
+  <li>
+    Process all the ingredients into a paste.
     <ul>
-      <li>If you want a coarse "chunky" hummus, process it for a short time.</li>
+      <li>
+        If you want a coarse "chunky" hummus, process it for a short time.
+      </li>
       <li>If you want a smooth hummus, process it for a longer time.</li>
     </ul>
   </li>
@@ -541,8 +569,11 @@ HTML에서는 이러한 경우를 표시하기 위해 {{htmlelement("strong")}} 
 원한다면 각각의 태그가 서로의 안에 위치할 수 있습니다.
 
 ```html
-<p>This liquid is <strong>highly toxic</strong> —
-if you drink it, <strong>you may <em>die</em></strong>.</p>
+<p>
+  This liquid is <strong>highly toxic</strong> — if you drink it,
+  <strong>you may <em>die</em></strong
+  >.
+</p>
 ```
 
 ### Active learning: Let's be important!
@@ -551,14 +582,16 @@ if you drink it, <strong>you may <em>die</em></strong>.</p>
 
 ```html hidden
 <h2>Input</h2>
-<textarea id="code" class="input"><h1>Important notice</h1>
+<textarea id="code" class="input">
+<h1>Important notice</h1>
 
 <p>On Sunday January 9th 2010, a gang of goths were
 spotted stealing several garden gnomes from a shopping
 center in downtown Milwaukee. They were all wearing green
 jumpsuits and silly hats, and seemed to be having a whale
 of a time. If anyone has any information about this
-incident, please contact the police now.</p></textarea>
+incident, please contact the police now.</p></textarea
+>
 <h2>Output</h2>
 <div class="output"></div>
 <div class="controls">
@@ -569,10 +602,11 @@ incident, please contact the police now.</p></textarea>
 
 ```css hidden
 body {
-  font-family: 'Open Sans Light', Helvetica, Arial, sans-serif;
+  font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
 }
 
-.input, .output {
+.input,
+.output {
   width: 90%;
   height: 8em;
   padding: 10px;
@@ -596,13 +630,14 @@ function drawOutput() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawOutput();
 });
 
-solution.addEventListener("click", function() {
-  textarea.value = '<h1>Important notice</h1>\n<p>On <strong>Sunday January 9th 2010</strong>, a gang of <em>goths</em> were spotted stealing <strong><em>several</em> garden gnomes</strong> from a shopping center in downtown <strong>Milwaukee</strong>. They were all wearing <em>green jumpsuits</em> and <em>silly hats</em>, and seemed to be having a whale of a time. If anyone has <strong>any</strong> information about this incident, please contact the police <strong>now</strong>.</p>';
+solution.addEventListener("click", function () {
+  textarea.value =
+    "<h1>Important notice</h1>\n<p>On <strong>Sunday January 9th 2010</strong>, a gang of <em>goths</em> were spotted stealing <strong><em>several</em> garden gnomes</strong> from a shopping center in downtown <strong>Milwaukee</strong>. They were all wearing <em>green jumpsuits</em> and <em>silly hats</em>, and seemed to be having a whale of a time. If anyone has <strong>any</strong> information about this incident, please contact the police <strong>now</strong>.</p>";
   drawOutput();
 });
 
@@ -612,7 +647,7 @@ window.addEventListener("load", drawOutput);
 
 {{ EmbedLiveSample('Playable_code_5', 700, 500) }}
 
-### Italic, bold, underline...
+### Italic, bold, underline
 
 우리가 지금까지 얘기했던 요소들은 관련된 의미들을 명확히 구분했습니다. {{htmlelement("b")}}, {{htmlelement("i")}}, {{htmlelement("u")}}의 상황들은 좀 복잡하죠. 이 요소들은 CSS가 형편없이 지원되거나 완전히 지원되지 않는 경우에 이탤릭체 또는 밑줄 등을 표현할 수 있도록 고안되었습니다. 의미론적이 아닌 표현에만 영향을 주는 이와 같은 요소들은 **현재적 요소**로 알려져 있으며, 더 이상 사용되어서는 안됩니다. 앞에서 살펴본 바와 같이 의미론은 접근성, SEO 등에 매우 중요하기 때문이죠.
 
@@ -629,8 +664,8 @@ HTML5 에서는 `<b>`, `<i>,` `<u>` 를 조금 혼란스럽긴 하지만 새로�
 ```html
 <!-- scientific names -->
 <p>
-  The Ruby-throated Hummingbird (<i>Archilochus colubris</i>)
-  is the most common hummingbird in Eastern North America.
+  The Ruby-throated Hummingbird (<i>Archilochus colubris</i>) is the most common
+  hummingbird in Eastern North America.
 </p>
 
 <!-- foreign words -->
@@ -640,18 +675,14 @@ HTML5 에서는 `<b>`, `<i>,` `<u>` 를 조금 혼란스럽긴 하지만 새로�
 </p>
 
 <!-- a known misspelling -->
-<p>
-  Someday I'll learn how to <u>spel</u> better.
-</p>
+<p>Someday I'll learn how to <u>spel</u> better.</p>
 
 <!-- Highlight keywords in a set of instructions -->
 <ol>
+  <li><b>Slice</b> two pieces of bread off the loaf.</li>
   <li>
-    <b>Slice</b> two pieces of bread off the loaf.
-  </li>
-  <li>
-    <b>Insert</b> a tomato slice and a leaf of
-    lettuce between the slices of bread.
+    <b>Insert</b> a tomato slice and a leaf of lettuce between the slices of
+    bread.
   </li>
 </ol>
 ```

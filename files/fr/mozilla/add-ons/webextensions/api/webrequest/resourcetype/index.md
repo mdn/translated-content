@@ -1,20 +1,9 @@
 ---
 title: webRequest.ResourceType
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/ResourceType
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - ResourceType
-  - Type
-  - WebExtensions
-  - webRequest
-translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/ResourceType
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Ce type est une chaîne de caractères, qui représente le contexte dans lequel une ressource a été récupérée dans une requête web.
 

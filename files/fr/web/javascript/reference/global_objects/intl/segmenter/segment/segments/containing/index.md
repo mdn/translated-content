@@ -1,10 +1,6 @@
 ---
 title: Intl.Segments.prototype.containing()
-slug: >-
-  Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/containing
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Segments/containing
-original_slug: Web/JavaScript/Reference/Global_Objects/Intl/Segments/containing
-browser-compat: javascript.builtins.Intl.Segments.containing
+slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/containing
 ---
 
 {{JSRef}}
@@ -16,7 +12,7 @@ La méthode **`Intl.Segments.containing()`** renvoie un objet décrivant le segm
 ## Syntaxe
 
 ```js
-containing(codeUnitIndex)
+containing(codeUnitIndex);
 ```
 
 ### Paramètres
@@ -42,9 +38,9 @@ Un objet qui décrit le segment faisant partie de la chaîne de caractères orig
 ```js
 // ┃0 1 2 3 4 5┃6┃7┃8┃9  ← Indice des codets
 // ┃A l l o n s┃-┃y┃!┃   ← Codets
-const input = 'Allons-y!';
+const input = "Allons-y!";
 
-const segmenter = new Intl.Segmenter('fr', {granularity: 'word'});
+const segmenter = new Intl.Segmenter("fr", { granularity: "word" });
 const segments = segmenter.segment(input);
 let current = undefined;
 

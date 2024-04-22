@@ -11,7 +11,7 @@ slug: Web/CSS/CSS_logical_properties_and_values/Floating_and_positioning
 
 下表详列了本指南所论述的属性和值，以及其实体对应关系。假设书写模式（{{CSSXref("writing-mode")}}）为横排，行内方向为从左到右。
 
-| 逻辑属性或逻辑值 | 实体属性或实体值 |
+| 逻辑属性或逻辑值                   | 实体属性或实体值                 |
 | ---------------------------------- | -------------------------------- |
 | {{CSSXref("float")}}: inline-start | {{CSSXref("float")}}: left       |
 | {{CSSXref("float")}}: inline-end   | {{CSSXref("float")}}: right      |
@@ -26,10 +26,10 @@ slug: Web/CSS/CSS_logical_properties_and_values/Floating_and_positioning
 
 除了这些有对应关系的属性，另有可以处理块向和行向尺度的简写属性。除 {{CSSXref("inset")}} 属性外，这些属性没有与实体属性的对应关系。
 
-| 逻辑属性 | 用途 |
-| --------------------------- | - |
-| {{CSSXref("inset-inline")}} | 为行向尺度同时设置上述两个偏移值。 |
-| {{CSSXref("inset-block")}}  | 为块向尺度同时设置上述两个偏移值。 |
+| 逻辑属性                    | 用途                                           |
+| --------------------------- | ---------------------------------------------- |
+| {{CSSXref("inset-inline")}} | 为行向尺度同时设置上述两个偏移值。             |
+| {{CSSXref("inset-block")}}  | 为块向尺度同时设置上述两个偏移值。             |
 | {{CSSXref("inset")}}        | 同时设置四个偏移值，多值语法使用实体对应关系。 |
 
 ## 浮动和清除浮动的示例

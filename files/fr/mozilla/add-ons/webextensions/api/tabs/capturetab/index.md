@@ -1,19 +1,9 @@
 ---
 title: tabs.captureTab()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/captureTab
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - captureTab
-  - tabs
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/captureTab
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Crée un URI de données codant une image de la zone visible de l'onglet donné. Vous devez avoir la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) `<all_urls>` pour utiliser cette méthode.
 
@@ -23,9 +13,9 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var capturing = browser.tabs.captureTab(
-  tabId,               // optional integer
-  options              // optional extensionTypes.ImageDetails
-)
+  tabId, // optional integer
+  options, // optional extensionTypes.ImageDetails
+);
 ```
 
 ### Paramètres
@@ -52,7 +42,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.browserAction.onClicked.addListener(function() {
+browser.browserAction.onClicked.addListener(function () {
   var capturing = browser.tabs.captureTab();
   capturing.then(onCaptured, onError);
 });

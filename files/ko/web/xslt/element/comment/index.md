@@ -1,7 +1,6 @@
 ---
 title: comment
 slug: Web/XSLT/Element/comment
-original_slug: Web/XSLT/comment
 ---
 
 {{ XsltRef() }}

@@ -113,12 +113,14 @@ The following example requests a given record title; when that request is succes
 var title = "Walk dog";
 
 // Open up a transaction as usual
-var objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
+var objectStore = db
+  .transaction(["toDoList"], "readwrite")
+  .objectStore("toDoList");
 
 // Get the to-do list object that has this title as it's title
 var objectStoreTitleRequest = objectStore.get(title);
 
-objectStoreTitleRequest.onsuccess = function() {
+objectStoreTitleRequest.onsuccess = function () {
   // Grab the data object returned as the result
   var data = objectStoreTitleRequest.result;
 
@@ -129,10 +131,13 @@ objectStoreTitleRequest.onsuccess = function() {
   var updateTitleRequest = objectStore.put(data);
 
   // Log the transaction that originated this request
-  console.log("The transaction that originated this request is " + updateTitleRequest.transaction);
+  console.log(
+    "The transaction that originated this request is " +
+      updateTitleRequest.transaction,
+  );
 
   // When this new request succeeds, run the displayData() function again to update the display
-  updateTitleRequest.onsuccess = function() {
+  updateTitleRequest.onsuccess = function () {
     displayData();
   };
 };

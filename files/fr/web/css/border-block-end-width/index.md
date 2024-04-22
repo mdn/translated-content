@@ -1,12 +1,6 @@
 ---
 title: border-block-end-width
 slug: Web/CSS/border-block-end-width
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-translation_of: Web/CSS/border-block-end-width
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

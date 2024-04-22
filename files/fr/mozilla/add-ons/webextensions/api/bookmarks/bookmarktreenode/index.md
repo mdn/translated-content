@@ -1,20 +1,9 @@
 ---
 title: bookmarks.BookmarkTreeNode
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode
-tags:
-  - API
-  - Add-ons
-  - BookmarkTreeNode
-  - Bookmarks
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Un objet de type `bookmarks.BookmarkTreeNode` représente un nœud dans l'arborescence de signets, où chaque nœud est un signet, un dossier de signet ou un séparateur. Les noeuds enfants sont classés par `index` dans leurs dossiers parents respectifs.
 

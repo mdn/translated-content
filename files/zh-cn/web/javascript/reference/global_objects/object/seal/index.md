@@ -28,13 +28,13 @@ Object.seal(obj)
 
 密封一个对象等价于[阻止其扩展](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions)，然后将现有的[属性描述符](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#描述)更改为 `configurable: false`。这会使对象上的属性集固定。令对象的所有属性不可配置且可以防止它们从数据属性转换成访问器属性，反之亦然，但它不会防止数据属性的值被更改。尝试删除或者向密封对象添加属性，或者将数据属性和访问器属性互相转换，都将失败，可能会静默失败，也可能会抛出 {{jsxref("TypeError")}}（最常见的是在{{jsxref("Strict_mode", "严格模式", "", 1)}}代码中，但不仅限于此）。
 
-原型链保持原样。然而，由于[扩展被阻止](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions)，`[[Prototype]]` 不能重新赋值。
+原型链保持不变。然而，由于[扩展被阻止](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions)，`[[Prototype]]` 不能重新赋值。
 
 不同于 {{jsxref("Object.freeze()")}} 的是，通过 `Object.seal()` 密封的对象可以更改其现有属性，只要它们是可写的。
 
 ## 示例
 
-### 使用 Object.seal
+### 使用 Object.seal()
 
 ```js
 const obj = {

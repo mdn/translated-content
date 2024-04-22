@@ -2,12 +2,12 @@
 title: WebAssembly の概要
 slug: WebAssembly/Concepts
 l10n:
-  sourceCommit: 1ef12f2e0815d0d285d6027219c987a3e4e228a3
+  sourceCommit: 0cfdd279edb09f70fbeb52c67ecc2876da5ce32d
 ---
 
 {{WebAssemblySidebar}}
 
-この記事では、 WebAssembly がどのように機能しているか、その目標、解決している問題、ウェブブラウザーのレンダリングエンジン内での動作などの概念について説明します。
+この記事では、WebAssembly がどのように機能しているか、その目標、解決している問題、ウェブブラウザーのレンダリングエンジン内での動作などの概念について説明します。
 
 ## WebAssembly とは何か
 
@@ -46,22 +46,22 @@ WebAssembly は JavaScript とは異なる言語ですが、置き換えを意�
 
 ブラウザーにおける WebAssembly の登場によって、私たちが先述したような仮想マシンはこれから 2 つの種類の言語をロードして実行することになります — JavaScript と WebAssembly です。
 
-必要に応じてこの異なったコードは互いを呼び出し合うことができます — [WebAssembly JavaScript API](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly) はエクスポートした WebAssembly のコードを普遍的に呼び出せる JavaScript 関数でラップし、WebAssembly のコードは通常の JavaScript 関数をインポートして同期的に呼び出せます。実際、WebAssembly のコードの基本単位はモジュールと呼ばれ、 WebAssembly のモジュールは ES モジュールと多くの対になる概念を持っています。
+必要に応じてこの異なったコードは互いを呼び出し合うことができます — [WebAssembly JavaScript API](/ja/docs/WebAssembly/JavaScript_interface) はエクスポートした WebAssembly のコードを普遍的に呼び出せる JavaScript 関数でラップし、WebAssembly のコードは通常の JavaScript 関数をインポートして同期的に呼び出せます。実際、WebAssembly のコードの基本単位はモジュールと呼ばれ、 WebAssembly のモジュールは ES モジュールと多くの対になる概念を持っています。
 
 ### WebAssembly の主要概念
 
-ブラウザー上で WebAssembly がどのように動作するかを理解するため必要となる主要概念がいくつか存在します。これらのコンセプトはそれぞれが [WebAssembly JavaScript API](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly) に一対一で対応しています。
+ブラウザー上で WebAssembly がどのように動作するかを理解するため必要となる主要概念がいくつか存在します。これらのコンセプトはそれぞれが [WebAssembly JavaScript API](/ja/docs/WebAssembly/JavaScript_interface) に一対一で対応しています。
 
-- **モジュール** (Module): ブラウザーによって実行可能な機械語にコンパイルされた WebAssembly のバイナリーに対応します。モジュールはステートレスであるため、[Blob](/ja/docs/Web/API/Blob) のように、明示的に [IndexedDB にキャッシュ](/ja/docs/WebAssembly/Caching_modules) できたり window やウェブワーカーと ( [`postMessage()`](/ja/docs/Web/API/MessagePort/postMessage) を経由して ) 共有することができます。モジュールは ES2015 のモジュールのように import と export の宣言を行います。
+- **モジュール** (Module): ブラウザーによって実行可能な機械語にコンパイルされた WebAssembly のバイナリーを表します。モジュールはステートレスであるため、[`Blob`](/ja/docs/Web/API/Blob) のように、ウィンドウやウェブワーカーと（[`postMessage()`](/ja/docs/Web/API/MessagePort/postMessage) を経由して）共有することができます。モジュールは ES のモジュールのように import と export の宣言を行います。
 - **メモリー** (Memory): WebAssembly の低水準なメモリーアクセス命令によって読み込みおよび書き込みが行われるバイト列を一次元の配列として保持している、リサイズ可能な ArrayBuffer です。
-- **テーブル** (Table): メモリー内に（安全性およびポータブル性を維持するため）バイト列として保持することができなかった（関数等に対する）参照を保持しているリサイズ可能な型付き配列です。
+- **テーブル** (Table): メモリー内に（安全性および可搬性を維持するため）バイト列として保持することができなかった（関数等に対する）参照を保持しているリサイズ可能な型付き配列です。
 - **インスタンス** (Instance): メモリー、テーブル、インポートされた値を含む実行時に利用されるすべての状態と対となるモジュールです。インスタンスは特定の import によって特定のグローバル環境にロードされた ES モジュールのようなものです。
 
-JavaScript API はモジュール、メモリー、テーブルおよびインスタンスを作る機能を開発者に提供します。 WebAssembly のインスタンスが与えられれば、 JavaScript はその中で export されたオブジェクトを、一般的な JavaScript で渡せる状態にされた関数同様に、同期的に呼び出すことができます。また任意の JavaScript の関数はその関数を WebAssembly のインスタンスに import することで WebAssembly のコードから同期的に呼び出されるようにすることもできます。
+JavaScript API はモジュール、メモリー、テーブルおよびインスタンスを作る機能を開発者に提供します。 WebAssembly のインスタンスが与えられれば、JavaScript はその中で export されたオブジェクトを、一般的な JavaScript で渡せる状態にされた関数同様に、同期的に呼び出すことができます。また任意の JavaScript の関数はその関数を WebAssembly のインスタンスに import することで WebAssembly のコードから同期的に呼び出されるようにすることもできます。
 
 JavaScript は WebAssembly のコードがどのようにダウンロードされ、コンパイルされて実行されるかを完全に制御できるため、JavaScript 開発者は WebAssembly を単に効果的に高いパフォーマンスを発揮する JavaScript の機能のようにとらえることもできます。
 
-将来的には、 WebAssembly モジュールは (`<script type='module'>` を利用して) [ES2015 モジュールのようにロード可能](https://github.com/WebAssembly/proposals/issues/12) となり、これは JavaScript が WebAssembly モジュールを ES2015 モジュールと同じくらい簡単に取得、コンパイル、インポートできるようになることを意味します。
+将来的には、WebAssembly モジュールは（`<script type='module'>` を利用して）[ES2015 モジュールのようにロード可能](https://github.com/WebAssembly/proposals/issues/12) となり、これは JavaScript が WebAssembly モジュールを ES2015 モジュールと同じくらい簡単に取得、コンパイル、インポートできるようになることを意味します。
 
 ## WebAssembly をどのようにアプリで用いるか
 
@@ -78,7 +78,7 @@ WebAssembly のエコシステムはまだ黎明期の状態にあります。�
 
 ### C/C++ からの移植
 
-WASM コードを作成するための多くのオプションのうちの 2 つは、オンラインの Wasm アセンブラーまたは [Emscripten](https://emscripten.org/) です。 WASM のオンラインアセンブラーには、次のようなものがあります。
+Wasm コードを作成するための多くのオプションのうちの 2 つは、オンラインの Wasm アセンブラーまたは [Emscripten](https://emscripten.org/) です。 Wasm のオンラインアセンブラーには、次のようなものがあります。
 
 - [WasmFiddle](https://wasdk.github.io/WasmFiddle/)
 - [WasmFiddle++](https://anonyco.github.io/WasmFiddlePlusPlus/)
@@ -86,25 +86,25 @@ WASM コードを作成するための多くのオプションのうちの 2 つ
 
 これらは、どこから始めるべきかを把握しようとしている人にとっては素晴らしいリソースですが、 Emscripten のツールと最適化には欠けています。
 
-Emscripten ツールは C/C++ ソースコードを取得し、それを .wasm モジュール、加えてモジュールを読み出して実行するために必要な JavaScript に "glue" コードとコードの結果を表示するための HTML 文書にコンパイルおよび出力します。
+Emscripten ツールは C/C++ ソースコードを取得し、それを Wasm モジュール、加えてモジュールを読み出して実行するために必要な JavaScript に "glue" コードとコードの結果を表示するための HTML 文書にコンパイルおよび出力します。
 
-![](emscripten-diagram.png)
+![図: Emscripten は C/C++ ソースコードをコンパイルし、JavaScript グルーコードを伴う HTML 文書であるWasm モジュールに変換します。](emscripten-diagram.png)
 
-簡潔に言えば、このプロセスは以下のような物になります。
+簡潔に言えば、このプロセスは以下のようになります。
 
 1. Emscripten は最初に C/C++ を Clang + LLVM — 完成度の高いオープンソースの C/C++ コンパイラー・ツールチェインであり、OSX の XCode の一部として提供される等の利用例が有る、に注入します。
-2. Emscripten が Clang + LLVM によるコンパイル結果を .wasm バイナリーに変換します。
+2. Emscripten が Clang + LLVM によるコンパイル結果を Wasm バイナリーに変換します。
 3. それ自体だけでは WebAssembly は現時点で DOM に直接アクセスできません; JavaScript を呼び出して、整数型もしくは浮動小数点型の基本データを渡せるだけです。そのため、ウェブ API にアクセスするためには、WebAssembly は JavaScript を呼び出す必要が有り、この時点でウェブ API の呼び出しが行われます。そのため Emscripten は結果を得るための HTML と JavaScript のグルーコードを生成します。
 
 > **メモ:** 将来的に [WebAssembly に直接ウェブ API を呼ばせることを許容する](https://github.com/WebAssembly/gc/blob/master/README.md) 計画があります。
 
 JavaScript グルーコードは多くの人が想像するほど簡単な構造をしていません。はじめに、 Emscripten は [SDL](https://en.wikipedia.org/wiki/Simple_DirectMedia_Layer)、 [OpenGL](https://en.wikipedia.org/wiki/OpenGL)、 [OpenAL](https://en.wikipedia.org/wiki/OpenAL) および [POSIX](https://en.wikipedia.org/wiki/POSIX) の一部といった主な C/C++ ライブラリーを組み込みます。これらのライブラリー群はウェブ API の観点から組み込まれ、各々が WebAssembly を既存のウェブ API に接続するためにいくつかの JavaScript グルーコードを必要とします。
 
-そのためグルーコードの一部は C/C++ コードによって利用されるそれぞれのライブラリーの機能を組み込みます。グルーコードはまた .wasm ファイルを取得、ロード、実行するため先述した WebAssembly JavaScript API を呼び出すロジックも含んでいます。
+そのためグルーコードの一部は C/C++ コードによって利用されるそれぞれのライブラリーの機能を組み込みます。グルーコードはまた Wasm ファイルを取得、ロード、実行するため先述した WebAssembly JavaScript API を呼び出すロジックも含んでいます。
 
 生成された HTML 文章は JavaScript グルーコードのファイルを読み込んで {{htmlelement("textarea")}} に標準出力を書き出します。もしアプリケーションが OpenGL を利用している場合、その HTML はまた出力先となる {{htmlelement("canvas")}} 要素を含みます。Emscripten の出力結果を修正して必要とするウェブアプリに変換するのは非常に簡単です。
 
-Emscripten に関する完全なドキュメントは [emscripten.org](https://emscripten.org) で参照でき、このツールチェインの組み込みと自身の C/C++ アプリを wasm へとコンパイルするガイドとしては [C/C++ を WebAssembly にコンパイルする](/ja/docs/WebAssembly/C_to_wasm) が参考になります。
+Emscripten に関する完全なドキュメントは [emscripten.org](https://emscripten.org) で参照でき、このツールチェインの組み込みと自身の C/C++ アプリを Wasm へとコンパイルするガイドとしては [C/C++ を WebAssembly にコンパイルする](/ja/docs/WebAssembly/C_to_Wasm) が参考になります。
 
 ### WebAssembly を直接記述する
 
@@ -112,15 +112,15 @@ Emscripten に関する完全なドキュメントは [emscripten.org](https://e
 
 実際のアセンブリー言語同様、 WebAssembly バイナリー形式はテキスト表現を持っています — これらは一対一で対応しています。なんらかの [WebAssemby テキスト表現バイナリー変換ツール](https://webassembly.org/getting-started/advanced-tools/) を用いることでテキスト表現を直接記述してバイナリー形式に変換することができます。
 
-この手順に関しては、 [WebAssembly テキスト表現を wasm 形式に変換する](/ja/docs/WebAssembly/Text_format_to_wasm) の項目を参照ください。
+この手順に関しては、 [WebAssembly テキスト表現を Wasm 形式に変換する](/ja/docs/WebAssembly/Text_format_to_Wasm) の項目を参照ください。
 
 ### WebAssembly をターゲットとした Rust の記述
 
-Rust WebAssembly ワーキンググループの不断の仕事のおかげで、Rust コードを書いて WebAssembly にコンパイルすることも可能です。必要なツールチェーンをインストールし、サンプル Rust プログラムを WebAssembly npm パッケージにコンパイルし、ウェブアプリケーションのサンプルを使用して、 [Rust から WebAssembly へのコンパイル](/ja/docs/WebAssembly/Rust_to_wasm)の記事を読むことができます。
+Rust WebAssembly ワーキンググループの不断の仕事のおかげで、Rust コードを書いて WebAssembly にコンパイルすることも可能です。必要なツールチェーンをインストールし、サンプル Rust プログラムを WebAssembly npm パッケージにコンパイルし、ウェブアプリケーションのサンプルを使用して、 [Rust から WebAssembly へのコンパイル](/ja/docs/WebAssembly/Rust_to_Wasm)の記事を読むことができます。
 
 ### AssemblyScript の使用
 
-C や Rust の詳細を学ぶ必要なく、 TypeScript のような慣れ親しんだ言語の快適さの中で WebAssembly を試したいウェブ開発者にとって、 AssemblyScript は最良の選択肢になるでしょう。 AssemblyScript は TypeScript の厳密なバージョンを WebAssembly にコンパイルし、ウェブ開発者は Prettier、ESLint、VS Code intellisense など、使い慣れた TypeScript 互換のツールを引き続き使用することができます。ドキュメントは <https://www.assemblyscript.org/> で確認することができます。
+C や Rust の詳細を学ぶ必要なく、 TypeScript のような慣れ親しんだ言語の快適さの中で WebAssembly を試したいウェブ開発者にとって、 AssemblyScript は最良の選択肢になるでしょう。 AssemblyScript は TypeScript の厳密なバージョンを WebAssembly にコンパイルし、ウェブ開発者は Prettier、ESLint、VS Code IntelliSense など、使い慣れた TypeScript 互換のツールを引き続き使用することができます。ドキュメントは <https://www.assemblyscript.org/> で確認することができます。
 
 ## まとめ
 

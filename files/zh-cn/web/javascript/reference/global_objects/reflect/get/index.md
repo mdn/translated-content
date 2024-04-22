@@ -47,9 +47,11 @@ Reflect.get(obj, "x"); // 1
 Reflect.get(["zero", "one"], 1); // "one"
 
 // Proxy with a get handler
-var x = {p: 1};
+var x = { p: 1 };
 var obj = new Proxy(x, {
-  get(t, k, r) { return k + "bar"; }
+  get(t, k, r) {
+    return k + "bar";
+  },
 });
 Reflect.get(obj, "foo"); // "foobar"
 ```
@@ -62,7 +64,7 @@ Reflect.get(obj, "foo"); // "foobar"
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Reflect")}}
 - [属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)

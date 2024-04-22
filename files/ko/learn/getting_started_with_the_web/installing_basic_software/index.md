@@ -1,7 +1,6 @@
 ---
 title: 기본 소프트웨어 설치하기
 slug: Learn/Getting_started_with_the_web/Installing_basic_software
-original_slug: Learn/Getting_started_with_the_web/기본_소프트웨어_설치하기
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}

@@ -22,7 +22,7 @@ Un objeto de tipo {{domxref("Headers")}}.
 En el siguiente fragmento de código, crearemos una nueva petición utilizando el constructor del {{domxref("Request.Request()")}} (para un archivo de imagen ubicado en el mismo directorio del script), guardamos el encabezado de la petición en una variable:
 
 ```js
-var myRequest = new Request('flowers.jpg');
+var myRequest = new Request("flowers.jpg");
 var myHeaders = myRequest.headers; // Headers {}
 ```
 
@@ -30,16 +30,18 @@ Para agregar encabezados al objeto {{domxref("Headers")}} usamos {{domxref("Head
 
 ```js
 var myHeaders = new Headers();
-myHeaders.append('Content-Type', 'image/jpeg');
+myHeaders.append("Content-Type", "image/jpeg");
 
-var myInit = { method: 'GET',
-                   headers: myHeaders,
-                   mode: 'cors',
-                   cache: 'default' };
+var myInit = {
+  method: "GET",
+  headers: myHeaders,
+  mode: "cors",
+  cache: "default",
+};
 
-var myRequest = new Request('flowers.jpg',myInit);
+var myRequest = new Request("flowers.jpg", myInit);
 
-myContentType = myRequest.headers.get('Content-Type'); // returns 'image/jpeg'
+myContentType = myRequest.headers.get("Content-Type"); // returns 'image/jpeg'
 ```
 
 ## Especificaciones

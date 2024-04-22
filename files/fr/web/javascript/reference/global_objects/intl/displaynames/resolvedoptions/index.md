@@ -1,7 +1,6 @@
 ---
 title: Intl.DisplayNames.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/resolvedOptions
-browser-compat: javascript.builtins.Intl.DisplayNames.resolvedOptions
 ---
 
 {{JSRef}}
@@ -11,7 +10,7 @@ La méthode **`Intl.DisplayNames.prototype.resolvedOptions()`** renvoie un nouve
 ## Syntaxe
 
 ```js
-resolvedOptions()
+resolvedOptions();
 ```
 
 ### Valeur de retour
@@ -36,12 +35,12 @@ L'objet renvoyé par `resolvedOptions()` possède les propriétés suivantes&nbs
 ### Utiliser resolvedOptions()
 
 ```js
-const displayNames = new Intl.DisplayNames(['de-DE'], {type: 'region'});
+const displayNames = new Intl.DisplayNames(["de-DE"], { type: "region" });
 
 const usedOptions = displayNames.resolvedOptions();
-console.log(usedOptions.locale);   // "de-DE"
-console.log(usedOptions.style);    // "long"
-console.log(usedOptions.type);     // "region"
+console.log(usedOptions.locale); // "de-DE"
+console.log(usedOptions.style); // "long"
+console.log(usedOptions.type); // "region"
 console.log(usedOptions.fallback); // "code"
 ```
 

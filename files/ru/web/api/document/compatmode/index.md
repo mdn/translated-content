@@ -1,15 +1,6 @@
 ---
 title: Document.compatMode
 slug: Web/API/Document/compatMode
-tags:
-  - API
-  - DOM
-  - almost standards
-  - quirk
-  - standards
-  - Свойство
-  - режимы
-translation_of: Web/API/Document/compatMode
 ---
 
 {{ ApiRef("DOM") }}

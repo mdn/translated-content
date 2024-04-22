@@ -1,7 +1,6 @@
 ---
 title: 413 Payload Too Large
 slug: Web/HTTP/Status/413
-translation_of: Web/HTTP/Status/413
 ---
 
 {{HTTPSidebar}}

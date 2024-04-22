@@ -1,7 +1,6 @@
 ---
 title: Sobre o MDN
 slug: MDN/Writing_guidelines
-original_slug: MDN/About
 ---
 
 {{MDNSidebar}}
@@ -60,7 +59,7 @@ Os direitos das marcas, logos, marcas de serviço da Mozilla Foundation, bem com
 
 Você pode baixar o conteúdo de uma página individual na MDN adicionando [document parameters](/pt-BR/docs/Project:MDN/Kuma/API#Document_parameters) à URL para especificar qual formato deseja.
 
-Se você quiser baixar um dump SQL completo e anonimizado da base de dados da MDN -- isto é, uma cópia da base de dados com todas as informações privadas de usuários removidas, nós também fornecemos isso. Esse dump é atualizado no primeiro dia de todo mês.
+Se você quiser baixar um dump SQL completo e anonimizado da base de dados da MDN — isto é, uma cópia da base de dados com todas as informações privadas de usuários removidas, nós também fornecemos isso. Esse dump é atualizado no primeiro dia de todo mês.
 
 Existem três arquivos que compreendem o dump mensal anonimizado da MDN:
 

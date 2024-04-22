@@ -1,15 +1,8 @@
 ---
 title: CanvasRenderingContext2D.arc()
 slug: Web/API/CanvasRenderingContext2D/arc
-tags:
-  - API
-  - Рисование
-  - Рисование в 2d
-  - Функция
-  - Холст
-  - метод
-translation_of: Web/API/CanvasRenderingContext2D/arc
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.arc()`** метод Canvas 2D API добавляет дугу к пути с центром _(x, y)_ и с радиусом _r_ с началом в _startAngle_ и с концом _endAngle_ и с направлением против часовой стрелки (по умолчанию по часовой стрелке).
@@ -70,7 +63,8 @@ ctx.stroke();
 <textarea id="code" class="playable-code">
 ctx.beginPath();
 ctx.arc(50, 50, 50, 0, 2 * Math.PI, false);
-ctx.stroke();</textarea>
+ctx.stroke();</textarea
+>
 ```
 
 ```js hidden
@@ -86,14 +80,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
@@ -110,23 +104,23 @@ window.addEventListener("load", drawCanvas);
 ```
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 
 // Draw shapes
-for (i=0;i<4;i++){
-  for(j=0;j<3;j++){
+for (i = 0; i < 4; i++) {
+  for (j = 0; j < 3; j++) {
     ctx.beginPath();
-    var x              = 25+j*50;               // x coordinate
-    var y              = 25+i*50;               // y coordinate
-    var radius         = 20;                    // Arc radius
-    var startAngle     = 0;                     // Starting point on circle
-    var endAngle       = Math.PI+(Math.PI*j)/2; // End point on circle
-    var anticlockwise  = i%2==1;                // Draw anticlockwise
+    var x = 25 + j * 50; // x coordinate
+    var y = 25 + i * 50; // y coordinate
+    var radius = 20; // Arc radius
+    var startAngle = 0; // Starting point on circle
+    var endAngle = Math.PI + (Math.PI * j) / 2; // End point on circle
+    var anticlockwise = i % 2 == 1; // Draw anticlockwise
 
-    ctx.arc(x,y,radius,startAngle,endAngle, anticlockwise);
+    ctx.arc(x, y, radius, startAngle, endAngle, anticlockwise);
 
-    if (i>1){
+    if (i > 1) {
       ctx.fill();
     } else {
       ctx.stroke();
@@ -141,16 +135,9 @@ for (i=0;i<4;i++){
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
-
-## Примечания относительно Gecko
-
-Начиная с Gecko 2.0:
-
-- Параметр `anticlockwise` опциональный,
-- Указывание отрицательного радиуса теперь приводит к ошибке {{domxref("DOMError", "IndexSizeError")}} error ("Index or size is negative or greater than the allowed amount").
 
 ## Смотрите также
 

@@ -1,13 +1,6 @@
 ---
 title: <label>
 slug: Web/HTML/Element/label
-tags:
-  - Element
-  - Formulaires
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/label
 ---
 
 {{HTMLSidebar}}
@@ -26,8 +19,9 @@ Pour associer un élément `<label>` avec un élément `<input>`, il faut fourni
 On peut également créer un lien implicite en imbriquant l'élément `<input>` directement au sein d'un élément `<label>` . Dans ce cas, les attributs `for` et `id` ne sont plus nécessaires.
 
 ```html
-<label>Aimez-vous les petits pois ?
-  <input type="checkbox" name="petits_pois">
+<label
+  >Aimez-vous les petits pois ?
+  <input type="checkbox" name="petits_pois" />
 </label>
 ```
 
@@ -35,13 +29,13 @@ On peut également créer un lien implicite en imbriquant l'élément `<input>` 
 
 Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
 
-- {{htmlattrdef("for")}}
+- `for`
 
   - : L'identifiant (la valeur de l'attribut [`id`](/fr/docs/Web/HTML/Global_attributes#id)) de l'élément de formulaire associé, appartenant au même document que l'élément label. Le premier élément du document dont l'identifiant correspond est alors le contrôle étiqueté par l'élément.
 
     > **Note :** Un élément label peut simultanément avoir un attribut `for` et contenir un élément de contrôle tant que l'attribut `for` pointe vers l'élément contenu.
 
-- {{htmlattrdef("form")}}
+- `form`
 
   - : L'élément de formulaire auquel l'élément label est associé (son formulaire propriétaire). La valeur de cet attribut doit être l'identifiant d'un élément {{HTMLElement("form")}} contenu au sein du même document. Si l'attribut n'est pas renseigné, cet élément \<label> doit être le descendant d'un élément {{HTMLElement("form")}}. Cet attribut permet de placer des éléments label dans le document sans qu'ils soient nécessairement imbriqués dans un formulaire.
 
@@ -71,7 +65,7 @@ Il n'existe pas de spécificité relative à la mise en forme des éléments `<l
 
 {{EmbedLiveSample('Exemple_simple', '200', '50', '')}}
 
-### Utiliser l’attribut `for`
+### Utiliser l'attribut `for`
 
 #### HTML
 
@@ -82,7 +76,7 @@ Il n'existe pas de spécificité relative à la mise en forme des éléments `<l
 
 #### Résultat
 
-{{EmbedLiveSample("Utiliser_l’attribut_for", '200', '50', '')}}
+{{EmbedLiveSample("Utiliser_l'attribut_for", '200', '50', '')}}
 
 ## Accessibilité
 
@@ -94,7 +88,7 @@ Il ne faut pas placer d'éléments interactifs (tels que les ancres ({{HTMLEleme
 
 ```html example-bad
 <label for="tac">
-  <input id="tac" type="checkbox" name="terms-and-conditions">
+  <input id="tac" type="checkbox" name="terms-and-conditions" />
   J'accepte <a href="terms-and-conditions.html">les conditions d'utilisation</a>
 </label>
 ```
@@ -103,7 +97,7 @@ Il ne faut pas placer d'éléments interactifs (tels que les ancres ({{HTMLEleme
 
 ```html example-good
 <label for="tac">
-  <input id="tac" type="checkbox" name="terms-and-conditions">
+  <input id="tac" type="checkbox" name="terms-and-conditions" />
   J'accepte les conditions d'utilisation
 </label>
 <p>
@@ -122,7 +116,7 @@ S'il faut associer un titre à un formulaire ou à une section d'un formulaire, 
 ```html example-bad
 <label for="votre-nom">
   <h3>Votre nom</h3>
-  <input id="votre-nom" name="votre-nom" type="text">
+  <input id="votre-nom" name="votre-nom" type="text" />
 </label>
 ```
 
@@ -131,7 +125,7 @@ S'il faut associer un titre à un formulaire ou à une section d'un formulaire, 
 ```html example-good
 <label class="label-grand" for="votre-nom">
   Votre nom
-  <input id="votre-nom" name="votre-nom" type="text">
+  <input id="votre-nom" name="votre-nom" type="text" />
 </label>
 ```
 
@@ -156,11 +150,11 @@ Un élément {{HTMLElement("input")}} avec `type="button"` et un attribut `value
           >Contenu de flux</a
         >,
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
           >contenu phrasé</a
         >,
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_associ.C3.A9_aux_formulaires"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_associ.C3.A9_aux_formulaires"
           >contenu associé aux formulaires</a
         >
         (listed, submittable, resettable),
@@ -172,7 +166,7 @@ Un élément {{HTMLElement("input")}} avec `type="button"` et un attribut `value
     <tr>
       <th scope="row">Contenu autorisé</th>
       <td>
-        <a href="/fr/docs/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+        <a href="/fr/docs/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
           >Contenu phrasé</a
         >
         sans éléments <code>label</code> descendants. À l'exception du contrôle
@@ -189,7 +183,7 @@ Un élément {{HTMLElement("input")}} avec `type="button"` et un attribut `value
       <td>
         Tout élément acceptant du
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
           >contenu phrasé</a
         >.
       </td>
@@ -215,4 +209,4 @@ Un élément {{HTMLElement("input")}} avec `type="button"` et un attribut `value
 
 ## Voir aussi
 
-- Les autres éléments relatifs aux formulaires : {{HTMLElement("form")}}, {{HTMLElement("input")}}, {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("legend")}}, {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} et {{HTMLElement("meter")}}.
+- Les autres éléments relatifs aux formulaires : {{HTMLElement("form")}}, {{HTMLElement("input")}}, {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("legend")}}, {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("textarea")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} et {{HTMLElement("meter")}}.

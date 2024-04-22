@@ -1,15 +1,6 @@
 ---
 title: Les grilles CSS et l'accessibilité
 slug: Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility
-tags:
-  - Accessibilité
-  - CSS
-  - CSS Grids
-  - Grilles CSS
-  - Guide
-  - Intermédiaire
-translation_of: Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility
-original_slug: Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility
 ---
 
 {{CSSRef}}
@@ -45,7 +36,9 @@ La modification d'ordre appliquée par la grille (ou les boîtes flexibles) est 
 Dans cet exemple, on utilise une grille pour organiser un ensemble de boîtes qui contiennent des liens. On utilise les propriétés pour placer les éléments sur des lignes : la première boîte est placée sur la deuxième ligne. Visuellement, cette boîte apparaît désormais comme le quatrième élément de la liste. Mais si on utilise la touche tabulation pour naviguer au clavier parmi les liens, c'est toujours ce lien qui est en premier.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;

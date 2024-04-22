@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/values
 ## Syntax
 
 ```js
-Object.values(obj)
+Object.values(obj);
 ```
 
 ### Parameters
@@ -31,24 +31,33 @@ Object.values(obj)
 ## Examples
 
 ```js
-var obj = { foo: 'bar', baz: 42 };
+var obj = { foo: "bar", baz: 42 };
 console.log(Object.values(obj)); // ['bar', 42]
 
 // 유사 배열 (숫자를 속성으로 사용하는 객체)
-var obj = { 0: 'a', 1: 'b', 2: 'c' };
+var obj = { 0: "a", 1: "b", 2: "c" };
 console.log(Object.values(obj)); // ['a', 'b', 'c']
 
 // 유사 배열의 경의 속성으로 사용한 숫자의 크기 순으로 정렬되어 반환됩니다.
-var an_obj = { 100: 'a', 2: 'b', 7: 'c' };
+var an_obj = { 100: "a", 2: "b", 7: "c" };
 console.log(Object.values(an_obj)); // ['b', 'c', 'a']
 
 // getFoo는 열거 가능한 속성이 아니라서 배열에 포함되지 않습니다.
-var my_obj = Object.create({}, { getFoo: { value: function() { return this.foo; } } });
-my_obj.foo = 'bar';
+var my_obj = Object.create(
+  {},
+  {
+    getFoo: {
+      value: function () {
+        return this.foo;
+      },
+    },
+  },
+);
+my_obj.foo = "bar";
 console.log(Object.values(my_obj)); // ['bar']
 
 // 객체가 아닌 경우에는 객체로 강제로 변환되어 적용됩니다.
-console.log(Object.values('foo')); // ['f', 'o', 'o']
+console.log(Object.values("foo")); // ['f', 'o', 'o']
 ```
 
 ## Polyfill

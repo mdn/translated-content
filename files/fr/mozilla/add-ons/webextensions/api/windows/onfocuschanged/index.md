@@ -1,20 +1,9 @@
 ---
 title: windows.onFocusChanged
 slug: Mozilla/Add-ons/WebExtensions/API/windows/onFocusChanged
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - Windows
-  - onFocusChanged
-translation_of: Mozilla/Add-ons/WebExtensions/API/windows/onFocusChanged
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Attiré lorsque la fenêtre actuellement change. Sera {{WebExtAPIRef('windows.WINDOW_ID_NONE')}} si toutes les fenêtres du navigateur ont perdu le focus.
 
@@ -23,9 +12,9 @@ Attiré lorsque la fenêtre actuellement change. Sera {{WebExtAPIRef('windows.WI
 ## Syntaxe
 
 ```js
-browser.windows.onFocusChanged.addListener(listener)
-browser.windows.onFocusChanged.removeListener(listener)
-browser.windows.onFocusChanged.hasListener(listener)
+browser.windows.onFocusChanged.addListener(listener);
+browser.windows.onFocusChanged.removeListener(listener);
+browser.windows.onFocusChanged.hasListener(listener);
 ```
 
 Les événements ont trois événements :

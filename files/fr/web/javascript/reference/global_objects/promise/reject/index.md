@@ -1,14 +1,6 @@
 ---
 title: Promise.reject()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/reject
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Promise
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/reject
-original_slug: Web/JavaScript/Reference/Objets_globaux/Promise/reject
 ---
 
 {{JSRef}}
@@ -39,11 +31,14 @@ La fonction statique `Promise.reject` renvoie une `Promise` qui est rejetée. Po
 ## Exemples
 
 ```js
-Promise.reject(new Error("échec")).then(function() {
-  // n'est pas appelée
-}, function(erreur) {
-  console.log(erreur); // Analyse de la pile d'appels
-});
+Promise.reject(new Error("échec")).then(
+  function () {
+    // n'est pas appelée
+  },
+  function (erreur) {
+    console.log(erreur); // Analyse de la pile d'appels
+  },
+);
 ```
 
 ## Spécifications

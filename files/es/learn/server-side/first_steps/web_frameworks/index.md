@@ -1,7 +1,6 @@
 ---
 title: Frameworks Web de lado servidor
 slug: Learn/Server-side/First_steps/Web_frameworks
-original_slug: Learn/Server-side/Primeros_pasos/Web_frameworks
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}
@@ -149,14 +148,14 @@ Los frameworks web proporcionan con frecuencia sistemas de plantillas. Éstas te
 
 Los frameworks web proporcionan con frecuencia un mecanismo para facilitar la generación de otros formatos a partir de los datos almacenados, incluyendo {{glossary("JSON")}} y {{glossary("XML")}}.
 
-Por ejemplo, el sistema de plantillas de Django te permite especificar variables usando una sintaxis de "llaves dobles" (ej. ` { { variable_name }} `), que serán reemplazadas por valores pasados desde la función de visualización cuando la página sea renderizada. El sistema de plantillas también proporciona soporte para expresiones (con la sintaxis: `{% expression %}`), que permite a las plantillas realizar operaciones simples como iterar sobre la lista de valores pasados a la misma.
+Por ejemplo, el sistema de plantillas de Django te permite especificar variables usando una sintaxis de "llaves dobles" (ej. `\{{ variable_name }}`), que serán reemplazadas por valores pasados desde la función de visualización cuando la página sea renderizada. El sistema de plantillas también proporciona soporte para expresiones (con la sintaxis: `{% expression %}`), que permite a las plantillas realizar operaciones simples como iterar sobre la lista de valores pasados a la misma.
 
 > **Nota:** Muchos otros sistemas de plantillas usan una sintaxis similar, ej.: Jinja2 (Python), Handlebars (JavaScript), Moustache (JavaScript), etc.
 
 El fragmento de código de abajo muestra como hacer este trabajo. Continuando el ejemplo del "equipo más joven" de la sección anterior, la "view" pasa a la plantilla HTML una variable tipo lista llamada `youngest_teams`. Dentro del esqueleto HTML tenemos una expresión que primero comprueba que la variable `youngest_teams` existe, y luego itera sobre ella en un bucle `for`. En cada iteración la plantilla presenta en pantalla el valor del `team_name` del equipo de uno de los elementos de la lista.
 
-```html
-#best/templates/best/index.html
+```django
+<!-- best/templates/best/index.html -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -202,13 +201,13 @@ Si eres un completo principiante en la programación probablemente escogerás tu
 > **Nota:** Vayamos a los sitios principales de [Django](https://www.djangoproject.com/) (Python) y [Express](http://expressjs.com/) (Node/JavaScript) y comprobemos su documentación y su comunidad.
 >
 > 1. Navega a los sitios principales (enlazados abajo)
->     - Pincha en los enlaces de los menus de Documentación (cosas que se llaman como "Documentación, Guía, Referencia API, Primeros Pasos".
->     - ¿Puedes ver temas que te muestran como configurar enrutado URL, plantillas y bases de datos/modelos?
->     - ¿Son los documentos suficientemente claros?
+>    - Pincha en los enlaces de los menus de Documentación (cosas que se llaman como "Documentación, Guía, Referencia API, Primeros Pasos".
+>    - ¿Puedes ver temas que te muestran como configurar enrutado URL, plantillas y bases de datos/modelos?
+>    - ¿Son los documentos suficientemente claros?
 > 2. Navega a las listas de correo de cada sitio (accesible desde los enlaces de Comunidad).
->     - ¿Cuántas preguntas se han realizado en unos pocos días recientes?
->     - ¿Cuántas tienen respuestas?
->     - ¿Tienen una comunidad activa?
+>    - ¿Cuántas preguntas se han realizado en unos pocos días recientes?
+>    - ¿Cuántas tienen respuestas?
+>    - ¿Tienen una comunidad activa?
 
 ## ¿Unos pocos frameworks web buenos?
 

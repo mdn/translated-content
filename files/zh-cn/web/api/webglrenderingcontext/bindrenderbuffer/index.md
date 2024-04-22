@@ -37,8 +37,8 @@ None.
 ### 绑定一个渲染缓冲区
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
+var canvas = document.getElementById("canvas");
+var gl = canvas.getContext("webgl");
 var renderbuffer = gl.createRenderbuffer();
 
 gl.bindRenderbuffer(gl.RENDERBUFFER, renderbuffer);
@@ -60,7 +60,7 @@ gl.getParameter(gl.RENDERBUFFER_BINDING);
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{domxref("WebGLRenderingContext.createRenderbuffer()")}}
 - {{domxref("WebGLRenderingContext.deleteRenderbuffer()")}}

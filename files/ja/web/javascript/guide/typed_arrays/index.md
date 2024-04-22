@@ -1,7 +1,6 @@
 ---
 title: JavaScript の型付き配列
 slug: Web/JavaScript/Guide/Typed_arrays
-original_slug: Web/JavaScript/Typed_arrays
 ---
 
 {{JsSidebar("Advanced")}}
@@ -26,19 +25,19 @@ original_slug: Web/JavaScript/Typed_arrays
 
 型付き配列のビューは自身を表現する名称を持ち、`Int8`、`Uint32`、`Float64` などの一般的な数値型のビューを提供します。特別な型付き配列のビューとして `Uint8ClampedArray` があります。これは、値を 0 から 255 の間に制限します。例えば [Canvas のデータ処理](/ja/docs/Web/API/ImageData)に役立ちます。
 
-| 型                                     | 値の範囲                                                     | バイト数 | 説明                                                                  | Web IDL 型          | 同等の C の型               |
-| ---------------------------------------- | --------------------------------------------------------------- | ------------- | ---------------------------------------------------------------------------- | --------------------- | ------------------------------- |
-| {{jsxref("Int8Array")}}         | -128 ～ 127                                                 | 1             | 8 ビット 2 の補数方式の符号付き整数値                                        | `byte`                | `int8_t`                        |
-| {{jsxref("Uint8Array")}}         | 0 ～ 255                                                    | 1             | 8 ビット符号なし整数値                                                       | `octet`               | `uint8_t`                       |
-| {{jsxref("Uint8ClampedArray")}} | 0 ～ 255                                                    | 1             | 8 ビット符号なし整数値（切り詰め）                                             | `octet`               | `uint8_t`                       |
-| {{jsxref("Int16Array")}}         | -32768 ～ 32767                                             | 2             | 16 ビット 2 の補数方式の符号付き整数値                                       | `short`               | `int16_t`                       |
-| {{jsxref("Uint16Array")}}         | 0 ～ 65535                                                  | 2             | 16 ビット符号なし整数値                                                      | `unsigned short`      | `uint16_t`                      |
-| {{jsxref("Int32Array")}}         | -2147483648 ～ 2147483647                                   | 4             | 32 ビット 2 の補数方式の符号付き整数値                                       | `long`                | `int32_t`                       |
-| {{jsxref("Uint32Array")}}         | 0 ～ 4294967295                                             | 4             | 32 ビット符号なし整数値                                                      | `unsigned long`       | `uint32_t`                      |
-| {{jsxref("Float32Array")}}     | `-3.4E38` ～ `3.4E38` および `1.2E-38` が最小の正の値  | 4             | 32 ビットIEEE 浮動小数点数 (7 桁の有効数字、例えば `1.123456`)    | `unrestricted float`  | `float`                         |
-| {{jsxref("Float64Array")}}     | `-1.8E308` ～ `1.8E308` および `5E-324` が最小の正の値 | 8             | 64 ビットIEEE 浮動小数点数 (16 桁の有効数字、例えば `1.123...15`) | `unrestricted double` | `double`                        |
-| {{jsxref("BigInt64Array")}}     | -2<sup>63</sup> ～ 2<sup>63</sup> - 1                                           | 8             | 64 ビット 2 の補数方式の符号付き整数値                                       | `bigint`              | `int64_t (signed long long)`    |
-| {{jsxref("BigUint64Array")}}     | 0 ～ 2<sup>64</sup> - 1                                               | 8             | 64 ビット符号なし整数値                                                      | `bigint`              | `uint64_t (unsigned long long)` |
+| 型                              | 値の範囲                                               | バイト数 | 説明                                                              | Web IDL 型            | 同等の C の型                   |
+| ------------------------------- | ------------------------------------------------------ | -------- | ----------------------------------------------------------------- | --------------------- | ------------------------------- |
+| {{jsxref("Int8Array")}}         | -128 ～ 127                                            | 1        | 8 ビット 2 の補数方式の符号付き整数値                             | `byte`                | `int8_t`                        |
+| {{jsxref("Uint8Array")}}        | 0 ～ 255                                               | 1        | 8 ビット符号なし整数値                                            | `octet`               | `uint8_t`                       |
+| {{jsxref("Uint8ClampedArray")}} | 0 ～ 255                                               | 1        | 8 ビット符号なし整数値（切り詰め）                                | `octet`               | `uint8_t`                       |
+| {{jsxref("Int16Array")}}        | -32768 ～ 32767                                        | 2        | 16 ビット 2 の補数方式の符号付き整数値                            | `short`               | `int16_t`                       |
+| {{jsxref("Uint16Array")}}       | 0 ～ 65535                                             | 2        | 16 ビット符号なし整数値                                           | `unsigned short`      | `uint16_t`                      |
+| {{jsxref("Int32Array")}}        | -2147483648 ～ 2147483647                              | 4        | 32 ビット 2 の補数方式の符号付き整数値                            | `long`                | `int32_t`                       |
+| {{jsxref("Uint32Array")}}       | 0 ～ 4294967295                                        | 4        | 32 ビット符号なし整数値                                           | `unsigned long`       | `uint32_t`                      |
+| {{jsxref("Float32Array")}}      | `-3.4E38` ～ `3.4E38` および `1.2E-38` が最小の正の値  | 4        | 32 ビットIEEE 浮動小数点数 (7 桁の有効数字、例えば `1.123456`)    | `unrestricted float`  | `float`                         |
+| {{jsxref("Float64Array")}}      | `-1.8E308` ～ `1.8E308` および `5E-324` が最小の正の値 | 8        | 64 ビットIEEE 浮動小数点数 (16 桁の有効数字、例えば `1.123...15`) | `unrestricted double` | `double`                        |
+| {{jsxref("BigInt64Array")}}     | -2<sup>63</sup> ～ 2<sup>63</sup> - 1                  | 8        | 64 ビット 2 の補数方式の符号付き整数値                            | `bigint`              | `int64_t (signed long long)`    |
+| {{jsxref("BigUint64Array")}}    | 0 ～ 2<sup>64</sup> - 1                                | 8        | 64 ビット符号なし整数値                                           | `bigint`              | `uint64_t (unsigned long long)` |
 
 ### DataView
 

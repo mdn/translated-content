@@ -1,13 +1,13 @@
 ---
 title: RTCPeerConnection.currentLocalDescription
 slug: Web/API/RTCPeerConnection/currentLocalDescription
-translation_of: Web/API/RTCPeerConnection/currentLocalDescription
 ---
+
 {{DefaultAPISidebar("WebRTC")}}
 
 Только для чтения свойство **`RTCPeerConnection.currentLocalDescription`** возвращает объект {{domxref("RTCSessionDescription")}} , описывающий локальную сторону соединения, как самый последний, удачно согласованный объект описания, с момента последнего завершения согласования {{domxref("RTCPeerConnection")}} и соединения с удалённым пиром (участником соединения) .
 
-Для изменения `currentLocalDescription`, вызовите метод {{domxref("RTCPeerConnection.setLocalDescription()")}}, который запускает серию событий, приводящих к присвоению значения. Более подробно о том, что точно происходит и почему изменения происходят не сразу, смотрите {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Ожидающие и текущие объекты описания")}}.
+Для изменения `currentLocalDescription`, вызовите метод {{domxref("RTCPeerConnection.setLocalDescription()")}}, который запускает серию событий, приводящих к присвоению значения. Более подробно о том, что точно происходит и почему изменения происходят не сразу, смотрите [Ожидающие и текущие объекты описания](/ru/docs/Web/API/WebRTC_API/Connectivity#рассматриваемые_и_текущие_описания).
 
 > **Примечание:** В отличие от {{domxref("RTCPeerConnection.localDescription")}}, это значение представляет актуальный, текущий статус локальной стороны соединения; `localDescription` может устанавливать описание, на которое соединение находится в процессе перехода.
 

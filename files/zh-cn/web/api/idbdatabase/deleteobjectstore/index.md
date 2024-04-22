@@ -26,11 +26,11 @@ dbInstance.deleteObjectStore(name);
 
 此方法可能会引发下列 {{domxref("DOMException")}} 异常：
 
-| Exception                  | Description                                                                                                                                                                                                                                                                      |
-| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `InvalidStateError`        | Occurs if the method was not called from a `versionchange` transaction callback. For older WebKit browsers, you must call {{ APIRef("IDBVersionChangeRequest.setVersion")}} first.                                                                                |
+| Exception                  | Description                                                                                                                                                                                                                                                                                              |
+| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `InvalidStateError`        | Occurs if the method was not called from a `versionchange` transaction callback. For older WebKit browsers, you must call {{ APIRef("IDBVersionChangeRequest.setVersion")}} first.                                                                                                                       |
 | `TransactionInactiveError` | Occurs if a request is made on a source database that doesn't exist (e.g. has been deleted or removed.) In Firefox previous to version 41, an `InvalidStateError` was raised in this case as well, which was misleading; this has now been fixed (see [Firefox bug 1176165](https://bugzil.la/1176165).) |
-| `NotFoundError`            | You are trying to delete an object store that does not exist. Names are case sensitive.                                                                                                                                                                                          |
+| `NotFoundError`            | You are trying to delete an object store that does not exist. Names are case sensitive.                                                                                                                                                                                                                  |
 
 ## 示例
 
@@ -39,7 +39,7 @@ var dbName = "sampleDB";
 var dbVersion = 2;
 var request = indexedDB.open(dbName, dbVersion);
 
-request.onupgradeneeded = function(e) {
+request.onupgradeneeded = function (e) {
   var db = request.result;
   if (e.oldVersion < 1) {
     db.createObjectStore("store1");

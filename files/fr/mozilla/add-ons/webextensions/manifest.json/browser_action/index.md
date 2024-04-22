@@ -1,11 +1,6 @@
 ---
 title: browser_action
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
 ---
 
 {{AddonSidebar}}
@@ -132,7 +127,7 @@ La clé `browser_action` est un objet qui peut avoir l'une des propriétés suiv
           </li>
         </ul>
         <p>Cette propriété est seulement supportée dans Firefox.</p>
-        <p>Cett propriété est facultative, et defaut à "navbar".</p>
+        <p>Cette propriété est facultative et a pour valeur par défaut "menupanel".</p>
         <p>
           Firefox se souvient des paramètres <code>default_area</code> d'une
           extension, même si cette extension est désinstallée et réinstallée
@@ -344,7 +339,7 @@ Si Firefox ne peut pas trouver une correspondance exacte pour la taille qu'il ve
 Une action de navigateur avec juste une icône, spécifiée en 2 tailles différentes. Les scripts d'arrière-plan de l'extension peuvent recevoir des événements de clic lorsque l'utilisateur clique sur l'icône en utilisant un code comme celui-ci :
 
 ```js
- browser.browserAction.onClicked.addListener(handleClick);
+browser.browserAction.onClicked.addListener(handleClick);
 ```
 
 ```json

@@ -1,11 +1,8 @@
 ---
 title: readystatechange
 slug: Web/API/Document/readystatechange_event
-tags:
-  - события
-translation_of: Web/API/Document/readystatechange_event
-original_slug: Web/Events/readystatechange
 ---
+
 {{ApiRef}}
 
 Событие `readystatechange` срабатывает, когда изменяется атрибут документа [`readyState`](/ru/docs/DOM/document.readyState).
@@ -29,12 +26,12 @@ original_slug: Web/Events/readystatechange
 
 ## Свойства
 
-| Свойство                              | Тип                                  | Описание                                        |
-| ------------------------------------- | ------------------------------------ | ----------------------------------------------- |
+| Свойство                        | Тип                        | Описание                                        |
+| ------------------------------- | -------------------------- | ----------------------------------------------- |
 | `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | Цель события (Самая верхняя цель в дереве DOM). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | Тип события.                                    |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Всплывает ли событие.                           |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Возможно ли отменить событие.                   |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | Тип события.                                    |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Всплывает ли событие.                           |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Возможно ли отменить событие.                   |
 
 ## Примеры
 
@@ -42,18 +39,17 @@ original_slug: Web/Events/readystatechange
 document.readyState === "complete";
 // true
 
-
 // Альтернатива DOMContentLoaded
 document.onreadystatechange = function () {
-    if (document.readyState === "interactive") {
-        initApplication();
-    }
-}
+  if (document.readyState === "interactive") {
+    initApplication();
+  }
+};
 ```
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
-Данное событие давно поддерживается Internet Explorer и может быть использовано в качестве альтернативы событию [`DOMContentLoaded`](/ru/docs/Web/Events/DOMContentLoaded) (см. примечание \[2] в разделе [Поддержка браузерами](/ru/docs/Web/Events/DOMContentLoaded#Поддержка_браузерами)).
+{{Compat}}
 
 ## Связанные события
 

@@ -1,7 +1,6 @@
 ---
 title: WebAssembly
 slug: WebAssembly/JavaScript_interface
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly
 ---
 
 {{WebAssemblySidebar}}
@@ -57,10 +56,11 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly
 次の例 (GitHub 上の [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html) のデモと、[動作例](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html)も参照) は、基礎となるソースから .wasm モジュールを直接ストリーミングし、コンパイルしてインスタンス化し、 `ResultObject` で履行されるプロミスを返します。 `instantiateStreaming()` 関数は [`Response`](/ja/docs/Web/API/Response) オブジェクトのプロミスを受け付けるので、 [`fetch()`](/ja/docs/Web/API/fetch) の呼び出し結果を直接渡すと、履行されたときにレスポンスを関数に渡すことができます。
 
 ```js
-var importObject = { imports: { imported_func: arg => console.log(arg) } };
+var importObject = { imports: { imported_func: (arg) => console.log(arg) } };
 
-WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
-.then(obj => obj.instance.exports.exported_func());
+WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
+  (obj) => obj.instance.exports.exported_func(),
+);
 ```
 
 それから `ResultObject` の instance メンバーにアクセスすると、呼び出し対象のエクスポートされた関数が入っています。

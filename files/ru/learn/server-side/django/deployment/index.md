@@ -1,13 +1,6 @@
 ---
-title: 'Django Руководство часть 11: Разворачивание сайта на сервере'
+title: "Django Руководство часть 11: Разворачивание сайта на сервере"
 slug: Learn/Server-side/Django/Deployment
-tags:
-  - Веб-сервер
-  - Для начинающих
-  - Разворачивание на сервере
-  - Развёртывание Django
-translation_of: Learn/Server-side/Django/Deployment
-original_slug: Learn/Server-side/Django/Разворачивание
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Testing", "Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
@@ -188,10 +181,10 @@ Heroku тесно интегрирована с системой управле�
 2. После входа в систему нажмите ссылку + в верхней панели инструментов и выберите **Новый репозиторий**.
 3. Заполните все поля на этой форме. Хотя они не являются обязательными, они настоятельно рекомендуются.
 
-    - Введите имя нового репозитория (например _django_local_library_), и комментарий к репозиторию (например "Local Library website written in Django".
-    - Нажмите на кнопку **Add .gitignore** и в появившемся списке выберите **Python**.
-    - Выберите подходящую вам лицензию из списка **Add license.** Если не знаете для чего это - оставьте как было.
-    - Установите галочку напротив _**Initialize this repository with a README**._
+   - Введите имя нового репозитория (например _django_local_library_), и комментарий к репозиторию (например "Local Library website written in Django".
+   - Нажмите на кнопку **Add .gitignore** и в появившемся списке выберите **Python**.
+   - Выберите подходящую вам лицензию из списка **Add license.** Если не знаете для чего это - оставьте как было.
+   - Установите галочку напротив _**Initialize this repository with a README**._
 
 4. Нажмите кнопку **Create repository**, тем самым создав ваш репозиторий.
 5. Перейдите на страницу вашего репозитория. Там нажмите на зелёную кнопку **Clone or download**. Скопируйте URL из текстового поля из появившегося диалогового окна (Это будет похоже на: `https://github.com/<your_git_user_id>/django_local_library.git`). Здесь **`<your_git_user_id>`** - это будет ваш id пользователя git.
@@ -201,65 +194,65 @@ Heroku тесно интегрирована с системой управле�
 1. Установите git себе на компьютер (Вы можете найти версию для своей платформы [здесь](https://git-scm.com/downloads)).
 2. Откройте командную строку (или терминал) и выполните в нём следующую команду, используя ссылку, которую вы получили с github:
 
-    ```bash
-    git clone https://github.com/<your_git_user_id>/django_local_library.git
-    ```
+   ```bash
+   git clone https://github.com/<your_git_user_id>/django_local_library.git
+   ```
 
-    Это создаст подпапку (с содержанием вашего репозитория и именем вашего репозитория) внутри папки, в которой выполнялась команда.
+   Это создаст подпапку (с содержанием вашего репозитория и именем вашего репозитория) внутри папки, в которой выполнялась команда.
 
 3. Перейдите в эту папку:
 
-    ```bash
-    cd django_local_library.git
-    ```
+   ```bash
+   cd django_local_library.git
+   ```
 
 Последний шаг. Нужно скопировать ваше Django-приложение и добавить его файлы в новый репозиторий, используя git:
 
 1. Скопируйте ваше приложение в папку репозитория (все файлы с таким же уровнем, как у **manage.py**, **БЕЗ** папки проекта, в которой эти файлы находятся).
 2. Откройте файл с расширением **.gitignore** в текстовом редакторе, вставьте в самый его конец строки, приведённые ниже, а затем сохраните (этот файл "говорит" о файлах, которые не должны быть загружены в git по умолчанию).
 
-    ```
-    # Text backup files
-    *.bak
+   ```
+   # Text backup files
+   *.bak
 
-    #Database
-    *.sqlite3
-    ```
+   #Database
+   *.sqlite3
+   ```
 
 3. Откройте командную строку или терминал и используйте `add` команду с флагом `-A`. Эта команда сохранит изменения в репозиторий:
 
-    ```bash
-    git add -A
-    ```
+   ```bash
+   git add -A
+   ```
 
 4. Используйте команду `status`, что бы убедиться, что все файлы, которые вы собираетесь добавить верны (вы хотите включить исходные файлы, а не бинарные файлы, временные файлы и т. д.). В консоль выведется что то вроде этого:
 
-    ```
-    > git status
-    On branch master
-    Your branch is up-to-date with 'origin/master'.
-    Changes to be committed:
-      (use "git reset HEAD <file>..." to unstage)
+   ```
+   > git status
+   On branch master
+   Your branch is up-to-date with 'origin/master'.
+   Changes to be committed:
+     (use "git reset HEAD <file>..." to unstage)
 
-            modified:   .gitignore
-            new file:   catalog/__init__.py
-            ...
-            new file:   catalog/migrations/0001_initial.py
-            ...
-            new file:   templates/registration/password_reset_form.html
-    ```
+           modified:   .gitignore
+           new file:   catalog/__init__.py
+           ...
+           new file:   catalog/migrations/0001_initial.py
+           ...
+           new file:   templates/registration/password_reset_form.html
+   ```
 
 5. Теперь, зафиксируйте файлы в локальном репозитории:
 
-    ```bash
-    git commit -m "First version of application moved into github"
-    ```
+   ```bash
+   git commit -m "First version of application moved into github"
+   ```
 
 6. Синхронизируете свой локальный репозиторий с сайтом Github:
 
-    ```
-    git push origin master
-    ```
+   ```
+   git push origin master
+   ```
 
 Когда эти операции завершатся, вернитесь на страницу Github где вы создали свой репозиторий, обновите страницу, и убедитесь, что ваше приложение полностью загружено. При надобности обновить файлы на репозитории - повторите цикл ввода команд add/commit/push.
 
@@ -373,14 +366,15 @@ STATIC_URL = '/static/'
 
 Для получения дополнительной информации см. Django и Static Assets (документы Heroku).
 
-**WhiteNoise**
+#### WhiteNoise
+
 Существует множество способов обслуживания статических файлов на производстве (мы видели соответствующие настройки Django в предыдущих разделах). Heroku рекомендует использовать проект WhiteNoise для обслуживания статических активов непосредственно из Gunicorn в производстве.
 
 > **Примечание:** Heroku автоматически вызывает collectstatic и готовит ваши статические файлы для использования WhiteNoise после того, как он загрузит ваше приложение. Посмотрите [WhiteNoise](https://warehouse.python.org/project/whitenoise/) документацию для объяснения того, как она работает, и почему реализация является относительно эффективным методом для обслуживания этих файлов.
 
 Шаги по настройке _WhiteNoise_ для использования в проекте:
 
-##### WhiteNoise
+##### Установка WhiteNoise
 
 Установите _WhiteNoise_ локально, используя следующую команду:
 
@@ -637,21 +631,3 @@ heroku ps   #Display dyno status
   - [Другие документы Digital Ocean Django](https://www.digitalocean.com/community/tutorials?q=django)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Testing", "Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
-
-## В этом модуле
-
-- [Django introduction](/ru/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/ru/docs/Learn/Server-side/Django/development_environment)
-- [Django Tutorial: The Local Library website](/ru/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Tutorial Part 2: Creating a skeleton website](/ru/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Tutorial Part 3: Using models](/ru/docs/Learn/Server-side/Django/Models)
-- [Django Tutorial Part 4: Django admin site](/ru/docs/Learn/Server-side/Django/Admin_site)
-- [Django Tutorial Part 5: Creating our home page](/ru/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/ru/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/ru/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/ru/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/ru/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/ru/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/ru/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/ru/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/ru/docs/Learn/Server-side/Django/django_assessment_blog)

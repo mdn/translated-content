@@ -11,7 +11,7 @@ slug: Web/SVG/Attribute/From
 
 | 类别       | 动画属性值                                                                   |
 | ---------- | ---------------------------------------------------------------------------- |
-| 值         | \<value>                                                                      |
+| 值         | \<value>                                                                     |
 | 动画特征   | No                                                                           |
 | 标准化文档 | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/animate.html#FromAttribute) |
 

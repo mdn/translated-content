@@ -1,5 +1,5 @@
 ---
-title: 'WakeLockSentinel: release イベント'
+title: "WakeLockSentinel: release イベント"
 slug: Web/API/WakeLockSentinel/release_event
 ---
 
@@ -14,9 +14,9 @@ slug: Web/API/WakeLockSentinel/release_event
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などで用いるか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('release', event => { })
+addEventListener("release", (event) => {});
 
-onrelease = event => { }
+onrelease = (event) => {};
 ```
 
 ## イベント型
@@ -28,17 +28,16 @@ onrelease = event => { }
 この例では、起動ロックが解放されたときに UI を更新します。
 
 ```js
-wakeLock.addEventListener('release', () => {
-
+wakeLock.addEventListener("release", () => {
   // if wake lock is released alter the UI accordingly
-  statusElement.textContent = 'Wake Lock has been released';
+  statusElement.textContent = "Wake Lock has been released";
 });
 ```
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}

@@ -1,7 +1,6 @@
 ---
 title: 'SyntaxError: "0"-prefixed octal literals and octal escape seq. are deprecated'
 slug: Web/JavaScript/Reference/Errors/Deprecated_octal
-translation_of: Web/JavaScript/Reference/Errors/Deprecated_octal
 ---
 
 {{jsSidebar("Errors")}}
@@ -63,7 +62,7 @@ for octal literals use the "0o" prefix instead
 Вместо escape-последовательностей можно использовать шестнадцатеричные escape-последовательности:
 
 ```js
-'\xA9';
+"\xA9";
 ```
 
 ## Смотрите также

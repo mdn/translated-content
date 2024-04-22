@@ -3,13 +3,13 @@ title: Column combinator
 slug: Web/CSS/Column_combinator
 ---
 
-{{CSSRef("Selectors")}}{{SeeCompatTable}}
+{{CSSRef}} {{SeeCompatTable}}
 
 通过**列合并符** (`||`) 链接两个元素时，它只会匹配被第二个 CSS 选择器匹配的元素，且此元素属于被第一个 CSS 选择器匹配的列元素。
 
 ```css
 /* 属于"被选择"列的表单元格 */
-col.selected || td {
+col.selected||td {
   background: gray;
 }
 ```
@@ -29,14 +29,14 @@ column-selector || cell-selector {
 ```html
 <table border="1">
   <colgroup>
-    <col span="2"/>
-    <col class="selected"/>
+    <col span="2" />
+    <col class="selected" />
   </colgroup>
   <tbody>
     <tr>
-      <td>A
-      <td>B
-      <td>C
+      <td>A</td>
+      <td>B</td>
+      <td>C</td>
     </tr>
     <tr>
       <td colspan="2">D</td>
@@ -53,7 +53,7 @@ column-selector || cell-selector {
 ### CSS
 
 ```css
-col.selected || td {
+col.selected||td {
   background: gray;
   color: white;
   font-weight: bold;

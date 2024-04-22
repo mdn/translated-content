@@ -1,8 +1,8 @@
 ---
 title: <mfenced>
 slug: Web/MathML/Element/mfenced
-translation_of: Web/MathML/Element/mfenced
 ---
+
 {{MathMLRef}}
 
 Элемент MathML `<mfenced>` обеспечивает возможность добавить по выбору открывающие и закрывающие скобки (например, квадратные) и разделители (например, запятую или точку с запятой)
@@ -62,13 +62,10 @@ Rendering in your browser: <math><mfenced close="]" open separators="||||,"><mi>
 </math>
 ```
 
-## Specifications
+## Спецификации
 
-| Specification                                                                            | Status                       | Comment               |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | --------------------- |
-| {{ SpecName('MathML3', 'chapter3.html#presm.mfenced', 'mfenced') }} | {{ Spec2('MathML3') }} | Current specification |
-| {{ SpecName('MathML2', 'chapter3.html#presm.mfenced', 'mfenced') }} | {{ Spec2('MathML2') }} | Initial specification |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}

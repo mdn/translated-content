@@ -1,16 +1,11 @@
 ---
 title: Используемые по умолчанию значения заголовка Accept
 slug: Web/HTTP/Content_negotiation/List_of_default_Accept_values
-tags:
-  - HTTP
-  - Reference
-  - Заголовок Accept
-  - Согласование контента
-translation_of: Web/HTTP/Content_negotiation/List_of_default_Accept_values
 ---
+
 {{HTTPSidebar}}
 
-В этой статье описывается, какие значения используются в HTTP-заголовке [`Accept`](/en-US/docs/Web/HTTP/Headers/Accept) по умолчанию в зависимости от конкретного запроса и версии браузера.
+В этой статье описывается, какие значения используются в HTTP-заголовке [`Accept`](/ru/docs/Web/HTTP/Headers/Accept) по умолчанию в зависимости от конкретного запроса и версии браузера.
 
 ## Значения по умолчанию
 
@@ -43,10 +38,10 @@ translation_of: Web/HTTP/Content_negotiation/List_of_default_Accept_values
 
 | Агент пользователя                         | Значение                                                                           | Комментарий                                                                                                                                                                           |
 | ------------------------------------------ | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Firefox до версии 3.6                      | _Не поддерживается для элемента {{HTMLElement("video")}}._                 |                                                                                                                                                                                       |
+| Firefox до версии 3.6                      | _Не поддерживается для элемента {{HTMLElement("video")}}._                         |                                                                                                                                                                                       |
 | Firefox начиная с версии 3.6               | `video/webm,video/ogg,video/*;q=0.9,application/ogg;q=0.7,audio/*;q=0.6,*/*;q=0.5` | См. [страницу ошибки 489071](https://bugzilla.mozilla.org/show_bug.cgi?id=489071). [исходный код](https://hg.mozilla.org/mozilla-central/file/tip/dom/html/HTMLVideoElement.cpp#l136) |
 | Chrome                                     | `*/*`                                                                              | [исходный код](https://chromium.googlesource.com/chromium/src.git/+/master/services/network/loader_util.cc#27)                                                                        |
-| Internet Explorer до версии 8 включительно | _Не поддерживается для элемента {{HTMLElement("video")}}_.                 |                                                                                                                                                                                       |
+| Internet Explorer до версии 8 включительно | _Не поддерживается для элемента {{HTMLElement("video")}}_.                         |                                                                                                                                                                                       |
 
 ## Значения для аудиофайлов
 
@@ -56,7 +51,7 @@ translation_of: Web/HTTP/Content_negotiation/List_of_default_Accept_values
 | ------------------------------------------ | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Firefox начиная с версии 3.6               | `audio/webm,audio/ogg,audio/wav,audio/*;q=0.9,application/ogg;q=0.7,video/*;q=0.6,*/*;q=0.5` | См. [страницу ошибки 489071](https://bugzilla.mozilla.org/show_bug.cgi?id=489071). [исходный код](https://hg.mozilla.org/mozilla-central/file/tip/dom/html/HTMLAudioElement.cpp#l81) |
 | Safari, Chrome                             | `*/*`                                                                                        | [исходный код](https://chromium.googlesource.com/chromium/src.git/+/master/services/network/loader_util.cc#27)                                                                       |
-| Internet Explorer до версии 8 включительно | _Не поддерживается для элемента {{HTMLElement("audio")}}._                           |                                                                                                                                                                                      |
+| Internet Explorer до версии 8 включительно | _Не поддерживается для элемента {{HTMLElement("audio")}}._                                   |                                                                                                                                                                                      |
 | Internet Explorer 9                        | ?                                                                                            |                                                                                                                                                                                      |
 
 ## Значения для скриптов

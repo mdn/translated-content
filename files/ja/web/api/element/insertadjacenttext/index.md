@@ -1,77 +1,81 @@
 ---
-title: Element.insertAdjacentText()
+title: "Element: insertAdjacentText() メソッド"
+short-title: insertAdjacentText()
 slug: Web/API/Element/insertAdjacentText
+l10n:
+  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
 {{APIRef("DOM")}}
 
-`insertAdjacentText()` メソッドは、与えられたテキストノードを、メソッドを実行した要素に対する相対的な位置に挿入します。
+**`insertAdjacentText()`** は {{domxref("Element")}} インターフェイスのメソッドで、与えられたテキストノードを、メソッドを実行した要素に対する相対的な位置に挿入します。
 
 ## 構文
 
+```js-nolint
+insertAdjacentText(where, data)
 ```
-element.insertAdjacentText(position, element);
-```
 
-### パラメーター
+### 引数
 
-- position
+- `where`
 
-  - : `element` に対する相対的な位置を {{domxref("DOMString")}} 表現で指定します。次の文字列のうち 1 つを取ります。
+  - : 文字列で、メソッドを呼び出した要素から見た相対的な位置を表します。以下のいずれかでなければなりません。
 
     - `'beforebegin'`: `element` 本体の前。
     - `'afterbegin'`: `element` のすぐ内側の、最初の子要素の前。
     - `'beforeend'`: `element` のすぐ内側の、最後の子要素の後。
     - `'afterend'`:`element` 本体の後。
 
-- element
-  - : DOM ツリーに挿入するテキストの {{domxref("DOMString")}} 表現。
+- `data`
+  - : メソッドが呼び出された要素から相対的に指定された位置 `where` に挿入する新しいテキストノードを作成する文字列です。
 
-### 返り値
+### 返値
 
-Void。
+なし ({{jsxref("undefined")}})。
 
 ### 例外
 
-| 例外          | 説明                                                    |
-| ------------- | ------------------------------------------------------- |
-| `SyntaxError` | `position` として指定した文字列が認識できない値だった。 |
+- `SyntaxError` {{domxref("DOMException")}}
+  - : `where` が理解できない値である場合に発生します。
 
-### ポジション名の視覚的な表現
+### 位置名の図解
 
-```
+```html
 <!-- beforebegin -->
 <p>
-<!-- afterbegin -->
-foo
-<!-- beforeend -->
+  <!-- afterbegin -->
+  foo
+  <!-- beforeend -->
 </p>
 <!-- afterend -->
 ```
 
-> **メモ:** `beforebegin` および `afterend` の positions が使えるのは、対象ノードがツリーの中にあって、親要素を持つ時に限られます。
+> **メモ:** `beforebegin` および `afterend` の位置が使えるのは、対象ノードがツリーの中にあって、親要素を持つ時に限られます。
+
+## 例
 
 ```js
-beforeBtn.addEventListener('click', function() {
-  para.insertAdjacentText('afterbegin',textInput.value);
+beforeBtn.addEventListener("click", () => {
+  para.insertAdjacentText("afterbegin", textInput.value);
 });
 
-afterBtn.addEventListener('click', function() {
-  para.insertAdjacentText('beforeend',textInput.value);
+afterBtn.addEventListener("click", () => {
+  para.insertAdjacentText("beforeend", textInput.value);
 });
 ```
 
-私たちが GitHub に用意した [insertAdjacentText.html](https://mdn.github.io/dom-examples/insert-adjacent/insertAdjacentText.html) デモを見てください。(同時に [source code](https://github.com/mdn/dom-examples/blob/master/insert-adjacent/insertAdjacentText.html) も読んでください。) ここにはシンプルなパラグラフが 1 つあります。フォーム要素に好きなテキストを入力してから、_Insert before_ または _Insert after_ ボタンを押すと、`insertAdjacentText()` が、入力したテキストをパラグラフのテキストの前または後に挿入します。すでにあるテキストノードにテキストが追加されるのではなく、新しい追加テキストが含まれる別のテキストノードが生成されて、それが追加されることに注意してください。
+GitHub 上にあるデモ [insertAdjacentText.html](https://mdn.github.io/dom-examples/insert-adjacent/insertAdjacentText.html) を見てください。（同時に[ソースコード](https://github.com/mdn/dom-examples/blob/main/insert-adjacent/insertAdjacentText.html)も読んでください。）ここにはシンプルな段落が 1 つあります。フォーム要素に好きなテキストを入力してから、_Insert before_ または _Insert after_ ボタンを押すと、`insertAdjacentText()` が、入力したテキストを段落のテキストの前または後に挿入します。すでにあるテキストノードにテキストが追加されるのではなく、新しい追加テキストが含まれる別のテキストノードが生成されて、それが追加されることに注意してください。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザー間の互換性
+## ブラウザーの互換性
 
 {{Compat}}
 
-## 関連項目
+## 関連情報
 
 - {{domxref("Element.insertAdjacentElement()")}}
 - {{domxref("Element.insertAdjacentHTML()")}}

@@ -1,7 +1,6 @@
 ---
 title: API canvas
 slug: Web/API/Canvas_API
-translation_of: Web/API/Canvas_API
 ---
 
 {{DefaultAPISidebar("Canvas API")}}
@@ -25,10 +24,10 @@ Voilà un simple extrait de code qui utilise la méthode {{domxref("CanvasRender
 ### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 
-ctx.fillStyle = 'green';
+ctx.fillStyle = "green";
 ctx.fillRect(10, 10, 100, 100);
 ```
 
@@ -44,15 +43,16 @@ ctx.fillRect(10, 10, 100, 100);
 </div>
 <textarea id="code" class="playable-code">
 ctx.fillStyle = 'green';
-ctx.fillRect(10, 10, 100, 100);</textarea>
+ctx.fillRect(10, 10, 100, 100);</textarea
+>
 ```
 
 ```js hidden
-var canvas = document.getElementById('canvas');
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var edit = document.getElementById('edit');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var edit = document.getElementById("edit");
 var code = textarea.value;
 
 function drawCanvas() {
@@ -60,17 +60,17 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener('click', function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
-textarea.addEventListener('input', drawCanvas);
-window.addEventListener('load', drawCanvas);
+textarea.addEventListener("input", drawCanvas);
+window.addEventListener("load", drawCanvas);
 ```
 
 {{ EmbedLiveSample('Code_jouable', 700, 360) }}

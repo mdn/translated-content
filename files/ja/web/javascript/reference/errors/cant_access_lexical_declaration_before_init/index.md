@@ -1,5 +1,5 @@
 ---
-title: 'ReferenceError: can''t access lexical declaration`X'' before initialization'
+title: "ReferenceError: can't access lexical declaration`X' before initialization"
 slug: Web/JavaScript/Reference/Errors/Cant_access_lexical_declaration_before_init
 ---
 
@@ -34,7 +34,7 @@ ReferenceError: 'x' is not defined (Chrome)
 function test() {
   let foo = 33;
   if (true) {
-    let foo = (foo + 55);
+    let foo = foo + 55;
     // ReferenceError: can't access lexical
     // declaration `foo' before initialization
   }
@@ -47,11 +47,11 @@ test();
 "foo" を if ステートメント内に変更するには、再宣言の原因となる `let` を取り除きます。
 
 ```js example-good
-function test(){
-   let foo = 33;
-   if (true) {
-      foo = (foo + 55);
-   }
+function test() {
+  let foo = 33;
+  if (true) {
+    foo = foo + 55;
+  }
 }
 test();
 ```

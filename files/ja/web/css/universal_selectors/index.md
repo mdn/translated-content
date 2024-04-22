@@ -33,7 +33,7 @@ CSS の**全称セレクター** (universal selector) (`*`) は、すべての�
 ### CSS
 
 ```css
-* [lang^=en] {
+* [lang^="en"] {
   color: green;
 }
 
@@ -46,7 +46,7 @@ CSS の**全称セレクター** (universal selector) (`*`) は、すべての�
 }
 
 .floating {
-  float: left
+  float: left;
 }
 
 /* 浮動要素の後の兄弟要素で自動的に浮動を解除する */
@@ -76,7 +76,9 @@ CSS の**全称セレクター** (universal selector) (`*`) は、すべての�
 
 ```css
 @namespace example url(http://www.example.com);
-example|* { color: blue }
+example|* {
+  color: blue;
+}
 ```
 
 ## 仕様書

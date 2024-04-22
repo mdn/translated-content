@@ -1,15 +1,6 @@
 ---
 title: Math.tanh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/tanh
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/tanh
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/tanh
 ---
 
 {{JSRef}}
@@ -23,7 +14,7 @@ La fonction **`Math.tanh()`** renvoie la tangente hyperbolique d'un nombre défi
 ## Syntaxe
 
 ```js
-Math.tanh(x)
+Math.tanh(x);
 ```
 
 ### Paramètres
@@ -44,9 +35,9 @@ La tangente hyperbolique du nombre fourni en argument.
 ### Utiliser `Math.tanh()`
 
 ```js
-Math.tanh(0);        // 0
+Math.tanh(0); // 0
 Math.tanh(Infinity); // 1
-Math.tanh(1);        // 0.7615941559557649
+Math.tanh(1); // 0.7615941559557649
 ```
 
 ## Prothèse d'émulation (_polyfill_)
@@ -54,25 +45,30 @@ Math.tanh(1);        // 0.7615941559557649
 Cette méthode peut être émulée grâce à la fonction {{jsxref("Objets_globaux/Math/exp", "Math.exp()")}} :
 
 ```js
-Math.tanh = Math.tanh || function(x){
-  var a = Math.exp(+x), b = Math.exp(-x);
-  return a == Infinity ? 1 : b == Infinity ? -1 : (a - b) / (a + b);
-}
+Math.tanh =
+  Math.tanh ||
+  function (x) {
+    var a = Math.exp(+x),
+      b = Math.exp(-x);
+    return a == Infinity ? 1 : b == Infinity ? -1 : (a - b) / (a + b);
+  };
 ```
 
 et si on souhaite n'utiliser qu'un seul appel à {{jsxref("Objets_globaux/Math/exp", "Math.exp()")}}&nbsp;:
 
 ```js
-Math.tanhx = Math.tanhx || function(x) {
-  if(x === Infinity) {
-    return 1;
-  } else if(x === -Infinity) {
-    return -1;
-  } else {
-    var y = Math.exp(2 * x);
-    return (y - 1) / (y + 1);
-  }
-};
+Math.tanhx =
+  Math.tanhx ||
+  function (x) {
+    if (x === Infinity) {
+      return 1;
+    } else if (x === -Infinity) {
+      return -1;
+    } else {
+      var y = Math.exp(2 * x);
+      return (y - 1) / (y + 1);
+    }
+  };
 ```
 
 ## Spécifications

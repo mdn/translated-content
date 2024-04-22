@@ -1,7 +1,6 @@
 ---
 title: 量词
 slug: Web/JavaScript/Guide/Regular_expressions/Quantifiers
-original_slug: Web/JavaScript/Guide/Regular_Expressions/量词
 ---
 
 {{jsSidebar("JavaScript Guide")}}
@@ -15,8 +14,8 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/量词
 <table class="standard-table">
   <thead>
     <tr>
-      <th scope="col">Characters</th>
-      <th scope="col">Meaning</th>
+      <th scope="col">字符集</th>
+      <th scope="col">意义</th>
     </tr>
   </thead>
   <tbody>
@@ -39,7 +38,7 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/量词
       <td>
         <p>
           将前一项“x”匹配 1
-          次或更多次。等价于{1,}。例如，/a+/匹配“candy”中的“a”和“caaaaaaandy”中的“a”。
+          次或更多次。等价于 <code>{1,}</code>。例如，<code>/a+/</code> 匹配“candy”中的“a”和“caaaaaaandy”中的所有“a”。
         </p>
       </td>
     </tr>
@@ -104,22 +103,22 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/量词
         <p>
           默认情况下，像 <code>* </code>和
           <code>+ </code
-          >这样的量词是“贪婪的”，这意味着它们试图匹配尽可能多的字符串。?量词后面的字符使量词“非贪婪”：意思是它一旦找到匹配就会停止。例如，给定一个字符串“some
+          >这样的量词是“贪婪的”，这意味着它们试图匹配尽可能多的字符串。量词后面的字符 `?` 使量词“非贪婪”：它一旦找到匹配就会停止。例如，给定一个字符串“some
           &#x3C;foo> &#x3C;bar> new &#x3C;/bar> &#x3C;/foo> thing”:
         </p>
         <ul>
           <li>
-            <code>/&#x3C;.*>/</code> will match "&#x3C;foo> &#x3C;bar> new
-            &#x3C;/bar> &#x3C;/foo>"
+            <code>/&#x3C;.*>/</code> 将匹配“&#x3C;foo> &#x3C;bar> new
+            &#x3C;/bar> &#x3C;/foo>”
           </li>
-          <li><code>/&#x3C;.*?>/</code> will match "&#x3C;foo>"</li>
+          <li><code>/&#x3C;.*?>/</code> 将匹配“&#x3C;foo>”</li>
         </ul>
       </td>
     </tr>
   </tbody>
 </table>
 
-## 举例说明
+## 示例
 
 ### 重复模式
 
@@ -140,8 +139,8 @@ var loooongWord = /\b\w{13,}\b/g;
 var sentence = "Why do I have to learn multiplication table?";
 
 console.table(sentence.match(singleLetterWord)); // ["I"]
-console.table(sentence.match(notSoLongWord));    // [ "Why", "do", "I", "have", "to", "learn", "table" ]
-console.table(sentence.match(loooongWord));      // ["multiplication"] 可选可选字符
+console.table(sentence.match(notSoLongWord)); // [ "Why", "do", "I", "have", "to", "learn", "table" ]
+console.table(sentence.match(loooongWord)); // ["multiplication"] 可选可选字符
 ```
 
 ### 可选字符
@@ -163,7 +162,7 @@ console.table(americanText.match(regexpEnding));
 // ["neighbor", "favor"]
 ```
 
-### 贪婪 与 非贪婪的
+### 贪婪匹配与非贪婪匹配
 
 ```js
 var text = "I must be getting somewhere near the centre of the earth.";
@@ -183,11 +182,8 @@ console.log(text.match(nonGreedyRegexp));
 
 ## 参见
 
-- [Regular expressions guide](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)
-
-  - [Character classes](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
-  - [Assertions](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
-  - [Unicode property escapes](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
-  - [Groups and ranges](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_Ranges)
-
-- [The `RegExp()` constructor](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
+- [正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)指南
+- [字符类](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)指南
+- [断言](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)指南
+- [组和反向引用](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)指南
+- [`RegExp`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)

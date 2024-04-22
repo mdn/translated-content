@@ -1,5 +1,5 @@
 ---
-title: '-webkit-overflow-scrolling'
+title: "-webkit-overflow-scrolling"
 slug: Web/CSS/-webkit-overflow-scrolling
 ---
 
@@ -30,14 +30,10 @@ slug: Web/CSS/-webkit-overflow-scrolling
 
 ```html
 <div class="scroll-touch">
-  <p>
-    This paragraph has momentum scrolling
-  </p>
+  <p>This paragraph has momentum scrolling</p>
 </div>
 <div class="scroll-auto">
-  <p>
-    This paragraph does not.
-  </p>
+  <p>This paragraph does not.</p>
 </div>
 ```
 

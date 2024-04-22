@@ -7,9 +7,9 @@ slug: Web/HTTP/Headers/SourceMap
 
 **`SourceMap`** [HTTP](/zh-CN/docs/Web/HTTP) 响应头链接生成的代码到一个 [source map](/zh-CN/docs/Tools/Debugger/How_to/Use_a_source_map)，使浏览器能够重建原始的资源然后显示在调试器里。
 
-| Header 类型                                      | {{Glossary("Response header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| Header 类型                           | {{Glossary("Response header")}} |
+| ------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                              |
 
 ## 语法
 

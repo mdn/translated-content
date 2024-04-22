@@ -1,7 +1,6 @@
 ---
 title: 웹사이트 출판하기
 slug: Learn/Getting_started_with_the_web/Publishing_your_website
-original_slug: Learn/Getting_started_with_the_web/웹사이트_출판하기
 ---
 
 {{LearnSidebar}}
@@ -79,41 +78,41 @@ HTML, CSS 그리고 JavaScript 를 입력할 수 있게 하고 웹사이트로 �
 모든 운영 체제는 커맨드 라인 도구를 갖습니다:
 
 - **윈도우즈**: **Command Prompt** 는 윈도우 키를 누르고 명령 프롬프트 를 입력하고 나타난 리스트에서 이것을 선택하는 것으로 접근할 수 있습니다. 윈도우즈는 리눅스와 맥 OS 와는 다른 그들만의 명령 규칙이 있으므로, 여러분의 장치에 따라 서로 다르다는것을 기억하세요.
-- **맥 OS**: _Applications > Utilities 안에 _**Terminal**_ 이 있습니다.
+- **맥 OS**: _Applications > Utilities 안에 _**Terminal**\_ 이 있습니다.
 - **리눅스**: 보통 _Ctrl + Alt + T_ 로 터미널을 꺼낼 수 있습니다. 만약 작동하지 않는다면 app 바 또는 메뉴에서 **Terminal** 을 찾아보세요.
 
 처음에는 좀 두려우실 수 있지만, 걱정하지마세요 — 기본적인 것들은 금방 익히실 수 있을 것입니다. 무언가를 하기 위해선 명령어를 입력하고 엔터를 누르는 것으로 컴퓨터에게 알려줘야합니다.
 
 1. 커맨드 라인을 여러분의 `test-site` 폴더로 향하게 합니다 (또는 여러분의 웹사이트가 포함된 어디든지). 그러기 위해선, `cd` 명령을 사용합니다 (말하자면 "**c**hange **d**irectory"). 여기 만약 `test-site` 폴더 안에 여러분의 웹사이트를 놓으셨다면 여러분이 입력해야 하는 것이 있습니다:
 
-    ```bash
-    cd Desktop/test-site
-    ```
+   ```bash
+   cd Desktop/test-site
+   ```
 
 2. 커맨드 라인이 여러분의 웹사이트 폴더 안을 가리킬 때, 그 폴더를 git repository 가 되도록 `git` 도구에게 알려주는 다음의 명령을 입력하세요:
 
-    ```bash
-    git init
-    ```
+   ```bash
+   git init
+   ```
 
 3. 다음으로, GitHub 사이트로 돌아가세요. 현재 페이지에서, you are interested in the section _…or push an existing repository from the command line_. 이 구역에 나열된 두 코드를 보게 되실 겁니다. 첫 번째 줄의 코드 전체를 복사하고, 커맨드 라인에 붙여넣은 다음, 엔터를 누르세요. 그 명령은 이렇게 보일 것입니다:
 
-    ```bash
-    git remote add origin https://github.com/bobsmith/bobsmith.github.io.git
-    ```
+   ```bash
+   git remote add origin https://github.com/bobsmith/bobsmith.github.io.git
+   ```
 
 4. 다음으로, 다음 두 명령어를 입력하고, 각 명령마다 엔터를 누릅니다. 이것은 GitHub 에 코드를 올릴 준비를 하는 것이고, Git 에게 그 파일들을 관리하도록 요청합니다.
 
-    ```bash
-    git add --all
-    git commit -m "adding my files to my repository"
-    ```
+   ```bash
+   git add --all
+   git commit -m "adding my files to my repository"
+   ```
 
 5. 마지막으로, GitHub 웹 페이지로 가서 3단계에서 봤던 두 개의 명령어중 두 번째 줄을 터미널에 입력하는 것으로 코드를 푸시합니다:
 
-    ```bash
-    git push -u origin master
-    ```
+   ```bash
+   git push -u origin master
+   ```
 
 6. 이제 새 브라우저 탭 (_username.github.io_) 에서 여러분의 GitHub 페이지의 웹 주소로 갈 때, 여러분의 사이트를 온라인에서 보실 수 있습니다! 친구들에게 메일을 보내서 여러분의 실력을 뽐내보세요.
 

@@ -49,13 +49,13 @@ Registered axes are the most commonly encountered — common enough that the aut
 
 Here are the registered axes along with their corresponding CSS properties:
 
-| Axis Tag       | CSS Property                                        |
-| -------------- | --------------------------------------------------- |
-| "wght"         | {{cssxref("font-weight")}}                |
-| "wdth"         | {{cssxref("font-stretch")}}                |
+| Axis Tag       | CSS Property                                 |
+| -------------- | -------------------------------------------- |
+| "wght"         | {{cssxref("font-weight")}}                   |
+| "wdth"         | {{cssxref("font-stretch")}}                  |
 | "slnt" (slant) | {{cssxref("font-style")}}: `oblique + angle` |
 | "ital"         | {{cssxref("font-style")}}: `italic`          |
-| "opsz"         | {{cssxref("font-optical-sizing")}}        |
+| "opsz"         | {{cssxref("font-optical-sizing")}}           |
 
 Custom axes can be anything the font designer wants to vary in their font, for example ascender or descender heights, the size of serifs, or anything else they can imagine. Any axis can be used as long as it is given a unique 4-character axis. Some will end up becoming more common, and may even become registered over time.
 

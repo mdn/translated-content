@@ -1,14 +1,6 @@
 ---
-title: 'Attribut HTML : step'
+title: "Attribut HTML : step"
 slug: Web/HTML/Attributes/step
-tags:
-  - Attribute
-  - Attributes
-  - Constraint validation
-  - HTML
-  - Reference
-  - step
-translation_of: Web/HTML/Attributes/step
 ---
 
 {{HTMLSidebar}}
@@ -132,7 +124,7 @@ input:invalid {
 Nous définissons ensuite un champ avec une valeur minimale de 7,2, en omettant l'attribut "step", qui a la valeur 1 par défaut.
 
 ```html
-<input id="myNumber" name="myNumber" type="number" step="2" min="1.2">
+<input id="myNumber" name="myNumber" type="number" step="2" min="1.2" />
 ```
 
 Les valeurs valides comprennent `1,2`, `3,2`, `5,2`, `7,2`, `9,2`, `11,2`, et ainsi de suite. Les nombres entiers et les nombres pairs suivis de .2 ne sont pas valides. Comme nous avons inclus une valeur non valide, les navigateurs qui prennent en charge cette valeur l'afficheront comme non valide. Le compteur de nombres, s'il est présent, n'affichera que les valeurs flottantes valides de `1,2` et plus.

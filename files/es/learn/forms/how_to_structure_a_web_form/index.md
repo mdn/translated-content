@@ -1,7 +1,6 @@
 ---
 title: Cómo estructurar un formulario HTML
 slug: Learn/Forms/How_to_structure_a_web_form
-original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}
@@ -54,15 +53,15 @@ Un pequeño ejemplo:
   <fieldset>
     <legend>Tamaño del zumo de fruta</legend>
     <p>
-      <input type="radio" name="size" id="size_1" value="small">
+      <input type="radio" name="size" id="size_1" value="small" />
       <label for="size_1">Pequeño</label>
     </p>
     <p>
-      <input type="radio" name="size" id="size_2" value="medium">
+      <input type="radio" name="size" id="size_2" value="medium" />
       <label for="size_2">Mediano</label>
     </p>
     <p>
-      <input type="radio" name="size" id="size_3" value="large">
+      <input type="radio" name="size" id="size_3" value="large" />
       <label for="size_3">Grande</label>
     </p>
   </fieldset>
@@ -82,7 +81,8 @@ Debido a la influencia que tiene sobre las tecnologías de asistencia, el elemen
 Como vimos en el artículo anterior, el elemento {{HTMLElement ("label")}} es la forma formal de definir una etiqueta para un control de un formulario HTML. Este es el elemento más importante si deseas crear formularios accesibles porque cuando se implementan correctamente, los lectores de pantalla leen la etiqueta de un elemento de formulario junto con las instrucciones relacionadas, y esto además resulta muy útil para los usuarios videntes. Tomemos este ejemplo que vimos en el artículo anterior:
 
 ```html
-<label for="name">Nombre:</label> <input type="text" id="name" name="user_name">
+<label for="name">Nombre:</label>
+<input type="text" id="name" name="user_name" />
 ```
 
 Con la etiqueta `<label>` asociada correctamente con `<input>` por su atributo `for` (que contiene el atributo `id` del elemento `<input>`), un lector de pantalla leerá algo como «Nombre, editar texto».
@@ -91,7 +91,7 @@ Hay otra forma de asociar un control de formulario con una etiqueta: asociarlo i
 
 ```html
 <label for="name">
-  Nombre: <input type="text" id="name" name="user_name">
+  Nombre: <input type="text" id="name" name="user_name" />
 </label>
 ```
 
@@ -108,11 +108,11 @@ Por ejemplo, al hacer clic en el texto de la etiqueta «Me gustan las cerezas» 
 ```html
 <form>
   <p>
-    <input type="checkbox" id="taste_1" name="taste_cherry" value="cherry">
+    <input type="checkbox" id="taste_1" name="taste_cherry" value="cherry" />
     <label for="taste_1">Me gustan las cerezas</label>
   </p>
   <p>
-    <input type="checkbox" id="taste_2" name="taste_banana" value="banana">
+    <input type="checkbox" id="taste_2" name="taste_banana" value="banana" />
     <label for="taste_2">Me gustan los plátanos</label>
   </p>
 </form>
@@ -127,28 +127,32 @@ Estrictamente hablando, es posible poner varias etiquetas en un solo control de 
 Consideremos este ejemplo:
 
 ```html
-<p>Los campos obligatorios se marcan con un <abbr title = "required">*</abbr>.</p>
+<p>Los campos obligatorios se marcan con un <abbr title="required">*</abbr>.</p>
 
 <!-- Así que esto: -->
 <div>
   <label for="username">Nombre:</label>
-  <input type="text" name="username">
-  <label for="username"><abbr title="required" aria-label="required">*</abbr></label>
+  <input type="text" name="username" />
+  <label for="username"
+    ><abbr title="required" aria-label="required">*</abbr></label
+  >
 </div>
 
 <!-- sería mejor hacerlo así: -->
 <div>
   <label for="username">
     <span>Nombre:</span>
-    <input id="username" type="text" name="username">
+    <input id="username" type="text" name="username" />
     <abbr title="required" aria-label="required">*</abbr>
   </label>
 </div>
 
 <!-- Pero probablemente lo mejor es esto: -->
 <div>
-  <label for="username">Nombre: <abbr title="required" aria-label="required">*</abbr></label>
-  <input id="username" type="text" name="username">
+  <label for="username"
+    >Nombre: <abbr title="required" aria-label="required">*</abbr></label
+  >
+  <input id="username" type="text" name="username" />
 </div>
 ```
 
@@ -183,117 +187,118 @@ Pongamos en práctica estas ideas y creemos un formulario un poco más complicad
 1. Para comenzar, haz una copia local de nuestro [archivo de plantilla en blanco](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html) y el [CSS de nuestro formulario de pago](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.css) en un nuevo directorio de tu ordenador.
 2. Añade dentro del elemento HTML {{htmlelement ("head")}} la línea siguiente para aplicar el CSS al HTML:
 
-    ```html
-    <link href="payment-form.css" rel="stylesheet">
-    ```
+   ```html
+   <link href="payment-form.css" rel="stylesheet" />
+   ```
 
 3. A continuación, añade el elemento externo {{htmlelement ("form")}} para crear tu formulario:
 
-    ```html
-    <form>
-
-    </form>
-    ```
+   ```html
+   <form></form>
+   ```
 
 4. Añade un encabezado y un párrafo dentro de las etiquetas `<form>` para informar a los usuarios cómo se marcan los campos obligatorios:
 
-    ```html
-    <h1>Forma de pago</h1>
-    <p>Los campos obligatorios van seguidos de <strong> <abbr title = "required"> * </abbr> </strong>.</p>
-    ```
+   ```html
+   <h1>Forma de pago</h1>
+   <p>
+     Los campos obligatorios van seguidos de
+     <strong> <abbr title="required"> * </abbr> </strong>.
+   </p>
+   ```
 
 5. A continuación añadimos al formulario una sección de código más grande, justo debajo de nuestra entrada anterior. Aquí verás que delimitamos con un elemento {{htmlelement ("section")}} independiente los campos con la información de contacto. Además, hay un conjunto de dos botones de opción, cada uno de los cuales colocamos dentro de su elemento de lista ({{htmlelement ("li")}}) propio. También hay dos entradas de texto estándar {{htmlelement ("input")}} y sus elementos {{htmlelement ("label")}} asociados, cada uno anidado dentro de un elemento {{htmlelement ("p")}} y una entrada de texto para introducir una contraseña. Añade este código a tu formulario:
 
-    ```html
-    <section>
-        <h2>Información de contacto</h2>
-        <fieldset>
-          <legend>Título</legend>
-          <ul>
-              <li>
-                <label for="title_1">
-                  <input type="radio" id="title_1" name="title" value="K" >
-                  Rey
-                </label>
-              </li>
-              <li>
-                <label for="title_2">
-                  <input type="radio" id="title_2" name="title" value="Q">
-                  Reina
-                </label>
-              </li>
-              <li>
-                <label for="title_3">
-                  <input type="radio" id="title_3" name="title" value="J">
-                  Bufón
-                </label>
-              </li>
-          </ul>
-        </fieldset>
-        <p>
-          <label for="name">
-            <span>Nombre:</span>
-            <strong><abbr title="required">*</abbr></strong>
-          </label>
-          <input type="text" id="name" name="username">
-        </p>
-        <p>
-          <label for="mail">
-            <Span>Correo electrónico:</ span>
-            <strong><abbr title="required">*</abbr></strong>
-          </label>
-          <input type="email" id="mail" name="usermail">
-        </p>
-        <p>
-          <label for="pwd">
-            <span>Contraseña:</span>
-            <strong><abbr title="required">*</abbr></strong>
-          </label>
-          <input type="password" id="pwd" name="password">
-        </p>
-    </section>
-    ```
+   ```html
+   <section>
+     <h2>Información de contacto</h2>
+     <fieldset>
+       <legend>Título</legend>
+       <ul>
+         <li>
+           <label for="title_1">
+             <input type="radio" id="title_1" name="title" value="K" />
+             Rey
+           </label>
+         </li>
+         <li>
+           <label for="title_2">
+             <input type="radio" id="title_2" name="title" value="Q" />
+             Reina
+           </label>
+         </li>
+         <li>
+           <label for="title_3">
+             <input type="radio" id="title_3" name="title" value="J" />
+             Bufón
+           </label>
+         </li>
+       </ul>
+     </fieldset>
+     <p>
+       <label for="name">
+         <span>Nombre:</span>
+         <strong><abbr title="required">*</abbr></strong>
+       </label>
+       <input type="text" id="name" name="username" />
+     </p>
+     <p>
+       <label for="mail">
+         <span>Correo electrónico:</span>
+         <strong><abbr title="required">*</abbr></strong>
+       </label>
+       <input type="email" id="mail" name="usermail" />
+     </p>
+     <p>
+       <label for="pwd">
+         <span>Contraseña:</span>
+         <strong><abbr title="required">*</abbr></strong>
+       </label>
+       <input type="password" id="pwd" name="password" />
+     </p>
+   </section>
+   ```
 
 6. La segunda `<section>` de nuestro formulario es la información de pago. Hay tres controles diferentes, junto con sus etiquetas, cada uno contenido dentro de un elemento `<p>`. El primero es un menú desplegable ({{htmlelement ("select")}}) para seleccionar el tipo de tarjeta de crédito. El segundo es un elemento `<input>` de tipo `tel`, para introducir un número de tarjeta de crédito. Si bien podríamos haber usado el tipo `number`, no queremos una interfaz de usuario con control de número. El último es un elemento `<input>` de tipo `date`, para introducir la fecha de caducidad de la tarjeta; aparecerá como un control de selección de fecha en navegadores compatibles, y como una entrada de texto normal en navegadores no compatibles. Estos tipos de entrada más nuevos volverán a aparecer en el artículo [Tipos de entrada HTML5](/es/docs/Learn/Forms/HTML5_input_types).
 
-    Introduce los datos siguientes a continuación de la sección anterior:
+   Introduce los datos siguientes a continuación de la sección anterior:
 
-    ```html
-    <section>
-        <h2>Información de pago</h2>
-        <p>
-          <label for="card">
-            <span>Tipo de tarjeta:</span>
-          </label>
-          <select id="card" name="usercard">
-            <option value="visa">Visa</option>
-            <option value="mc">Mastercard</option>
-            <option value="amex">American Express</option>
-          </select>
-        </p>
-        <p>
-          <label for="number">
-            <span>Número de tarjeta:</span>
-            <strong><abbr title="required">*</abbr></strong>
-          </label>
-          <input type="tel" id="number" name="cardnumber">
-        </p>
-        <p>
-          <label for="date">
-            <span>Fecha de caducidad:</span>
-            <strong><abbr title="required">*</abbr></strong>
-            <em>el formato mm/aa</em>
-          </label>
-          <input type="date" id="date" name="expiration">
-        </p>
-    </section>
-    ```
+   ```html
+   <section>
+     <h2>Información de pago</h2>
+     <p>
+       <label for="card">
+         <span>Tipo de tarjeta:</span>
+       </label>
+       <select id="card" name="usercard">
+         <option value="visa">Visa</option>
+         <option value="mc">Mastercard</option>
+         <option value="amex">American Express</option>
+       </select>
+     </p>
+     <p>
+       <label for="number">
+         <span>Número de tarjeta:</span>
+         <strong><abbr title="required">*</abbr></strong>
+       </label>
+       <input type="tel" id="number" name="cardnumber" />
+     </p>
+     <p>
+       <label for="date">
+         <span>Fecha de caducidad:</span>
+         <strong><abbr title="required">*</abbr></strong>
+         <em>el formato mm/aa</em>
+       </label>
+       <input type="date" id="date" name="expiration" />
+     </p>
+   </section>
+   ```
 
 7. La última sección que añadimos es mucho más simple y contiene solo un {{htmlelement ("button")}} de tipo `submit`, para enviar los datos del formulario. Añádelo al final de tu formulario:
 
-    ```html
-    <p> <button type="submit">Validar el pago</button> </p>
-    ```
+   ```html
+   <p><button type="submit">Validar el pago</button></p>
+   ```
 
 Debajo puedes ver en acción el formulario terminado (también lo encontrarás en GitHub; consulta el [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.html) de nuestro payment-form.html y [ejecútalo en vivo](https://mdn.github.io/learning-area/html/forms/html-form-structure/payment-form.html)):
 

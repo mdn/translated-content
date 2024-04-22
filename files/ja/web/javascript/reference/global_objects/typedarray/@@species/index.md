@@ -1,8 +1,8 @@
 ---
-title: get TypedArray[@@species]
+title: TypedArray[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/@@species
 l10n:
-  sourceCommit: 194d3e00cb93a6e5ea44812548f4131cb17f0381
+  sourceCommit: bf81c9ed7de8cfd94cf1fc7f77e23b987f753a8b
 ---
 
 {{JSRef}}

@@ -1,8 +1,8 @@
 ---
 title: WebGLRenderingContext.shaderSource()
 slug: Web/API/WebGLRenderingContext/shaderSource
-translation_of: Web/API/WebGLRenderingContext/shaderSource
 ---
+
 {{APIRef("WebGL")}}
 
 **`WebGLRenderingContext.shaderSource()`** метод [WebGL API](/ru/docs/Web/API/WebGL_API) записывает исходный код шейдера в шейдерную программу {{domxref("WebGLShader")}}.

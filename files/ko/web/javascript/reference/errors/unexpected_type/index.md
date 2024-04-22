@@ -40,26 +40,25 @@ foo.substring(1); // TypeError: foo is undefined
 var foo = null;
 foo.substring(1); // TypeError: foo is null
 
-
 // Certain methods might require a specific type
-var foo = {}
+var foo = {};
 Symbol.keyFor(foo); // TypeError: foo is not a symbol
 
-var foo = 'bar'
+var foo = "bar";
 Object.create(foo); // TypeError: "foo" is not an object or null
 ```
 
 ### Fixing the issue
 
-undefined 나 null 값을 가진 null 포인터를 고치기 위해서 아래 예제와 같이 [typeof](/en-US/docs/Web/JavaScript/Reference/Operators/typeof) 연산자를 사용할 수 있다.
+undefined 나 null 값을 가진 null 포인터를 고치기 위해서 아래 예제와 같이 [typeof](/ko/docs/Web/JavaScript/Reference/Operators/typeof) 연산자를 사용할 수 있다.
 
 ```js
-if (typeof foo !== 'undefined') {
+if (typeof foo !== "undefined") {
   // Now we know that foo is defined, we are good to go.
 }
 ```
 
-## See also
+## 같이 보기
 
 - {{jsxref("undefined")}}
 - {{jsxref("null")}}

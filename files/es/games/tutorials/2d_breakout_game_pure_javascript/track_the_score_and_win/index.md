@@ -1,7 +1,6 @@
 ---
 title: Poner un contador y terminar ganando
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win
-original_slug: Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Track_the_score_and_win
 ---
 
 {{GamesSidebar}}
@@ -24,9 +23,9 @@ También necesitas una función `drawScore()` para enseñar el contador por pant
 
 ```js
 function drawScore() {
-    ctx.font = "16px Arial";
-    ctx.fillStyle = "#0095DD";
-    ctx.fillText("Score: "+score, 8, 20);
+  ctx.font = "16px Arial";
+  ctx.fillStyle = "#0095DD";
+  ctx.fillText("Score: " + score, 8, 20);
 }
 ```
 
@@ -36,18 +35,23 @@ Para sumar un punto cada vez que se rompe un ladrillo, añade la línea que est�
 
 ```js
 function collisionDetection() {
-    for(c=0; c<brickColumnCount; c++) {
-        for(r=0; r<brickRowCount; r++) {
-            var b = bricks[c][r];
-            if(b.status == 1) {
-                if(x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight) {
-                    dy = -dy;
-                    b.status = 0;
-                    score++;
-                }
-            }
+  for (c = 0; c < brickColumnCount; c++) {
+    for (r = 0; r < brickRowCount; r++) {
+      var b = bricks[c][r];
+      if (b.status == 1) {
+        if (
+          x > b.x &&
+          x < b.x + brickWidth &&
+          y > b.y &&
+          y < b.y + brickHeight
+        ) {
+          dy = -dy;
+          b.status = 0;
+          score++;
         }
+      }
     }
+  }
 }
 ```
 
@@ -63,22 +67,27 @@ Lo de sumar puntos funciona, pero tiene un final. ¿Qué ocurrirá cuando no que
 
 ```js
 function collisionDetection() {
-    for(c=0; c<brickColumnCount; c++) {
-        for(r=0; r<brickRowCount; r++) {
-            var b = bricks[c][r];
-            if(b.status == 1) {
-                if(x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight) {
-                    dy = -dy;
-                    b.status = 0;
-                    score++;
-                    if(score == brickRowCount*brickColumnCount) {
-                        alert("YOU WIN, CONGRATULATIONS!");
-                        document.location.reload();
-                    }
-                }
-            }
+  for (c = 0; c < brickColumnCount; c++) {
+    for (r = 0; r < brickRowCount; r++) {
+      var b = bricks[c][r];
+      if (b.status == 1) {
+        if (
+          x > b.x &&
+          x < b.x + brickWidth &&
+          y > b.y &&
+          y < b.y + brickHeight
+        ) {
+          dy = -dy;
+          b.status = 0;
+          score++;
+          if (score == brickRowCount * brickColumnCount) {
+            alert("YOU WIN, CONGRATULATIONS!");
+            document.location.reload();
+          }
         }
+      }
     }
+  }
 }
 ```
 

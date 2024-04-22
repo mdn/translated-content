@@ -1,7 +1,6 @@
 ---
 title: ホーム画面に追加
 slug: Web/Progressive_web_apps/Guides/Making_PWAs_installable
-original_slug: Web/Progressive_web_apps/Add_to_home_screen
 l10n:
   sourceCommit: 8e1f45b8c0a3671f6e3de43c0764ad610aa345dd
 ---
@@ -151,35 +150,35 @@ PWA インストール機能をデスクトップでも実現するには、ま�
 
 ```js
 let deferredPrompt;
-const addBtn = document.querySelector('.add-button');
-addBtn.style.display = 'none';
+const addBtn = document.querySelector(".add-button");
+addBtn.style.display = "none";
 ```
 
 PWA は A2HS の基準に従うことで、初めてインストールを利用できるようになるため、最初はボタンを非表示にしています。このとき、対応しているブラウザーは `beforeinstallprompt` イベントを発行します。そして、以下のようなハンドラーを使用して、インストールを処理することができます。
 
 ```js
-window.addEventListener('beforeinstallprompt', (e) => {
+window.addEventListener("beforeinstallprompt", (e) => {
   // Chrome 67以前のバージョンでプロンプトが自動的に表示されないようにする
   e.preventDefault();
   // 後で発生させることができるように、イベントを隠しておく。
   deferredPrompt = e;
   // ホーム画面に内側へ追加できることをユーザーに通知する UI の更新
-  addBtn.style.display = 'block';
+  addBtn.style.display = "block";
 
-  addBtn.addEventListener('click', (e) => {
+  addBtn.addEventListener("click", (e) => {
     // A2HS ボタンを表示するユーザーインターフェイスを非表示にします。
-    addBtn.style.display = 'none';
+    addBtn.style.display = "none";
     // プロンプトを表示
     deferredPrompt.prompt();
     // ユーザーがプロンプトに応答するのを待つ
     deferredPrompt.userChoice.then((choiceResult) => {
-        if (choiceResult.outcome === 'accepted') {
-          console.log('ユーザーが A2HS プロンプトを受け入れました。');
-        } else {
-          console.log('ユーザーは A2HS のプロンプトを拒否しました。');
-        }
-        deferredPrompt = null;
-      });
+      if (choiceResult.outcome === "accepted") {
+        console.log("ユーザーが A2HS プロンプトを受け入れました。");
+      } else {
+        console.log("ユーザーは A2HS のプロンプトを拒否しました。");
+      }
+      deferredPrompt = null;
+    });
   });
 });
 ```

@@ -1,41 +1,57 @@
 ---
-title: element.removeAttributeNode
+title: "Element: removeAttributeNode() メソッド"
+short-title: removeAttributeNode()
 slug: Web/API/Element/removeAttributeNode
+l10n:
+  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{ ApiRef("DOM") }}
+{{ APIRef("DOM") }}
 
-### Summary
+**`removeAttributeNode()`** は {{domxref("Element")}} インターフェイスのメソッドで、この要素から指定された属性を除去します。
 
-`removeAttributeNode` removes the specified attribute from the current element.
+## 構文
 
-### Syntax
-
-```
-removedAttr =element.removeAttributeNode(attributeNode)
+```js-nolint
+removeAttributeNode(attributeNode)
 ```
 
-- `attributeNode` is the `Attr` node that needs to be removed.
-- `removedAttr` is the removed `Attr` node.
+### 引数
 
-### Example
+- `attributeNode`
+  - : この要素から除去する属性ノードです。
 
-```
-// <div id="top" align="center" />
-var d = document.getElementById("top");
-var d_align = d.getAttributeNode("align");
+### 返値
+
+除去された属性ノードです。
+
+### 例外
+
+- `NotFoundError` {{DOMxRef("DOMException")}}
+  - : 要素の属性リストに属性ノードが含まれていない場合に発生します。
+
+## 例
+
+```js
+// Given: <div id="top" align="center" />
+const d = document.getElementById("top");
+const d_align = d.getAttributeNode("align");
 d.removeAttributeNode(d_align);
-// align has a default value, center,
-// so the removed attribute is immediately
-// replaced: <div id="top" align="center" />
+// align is now removed: <div id="top" />
 ```
 
-### Notes
+## メモ
 
-If the removed Attribute has a default value it is immediately replaced. The replacing attribute has the same namespace URI and local name, as well as the original prefix, when applicable.
+削除された属性に既定値がある場合、それは直ちに置き換えられます。置換される属性は、同じ名前空間 URI とローカル名、そして必要に応じて元の接頭辞を持ちます。
+
+`removeAttributeNodeNS` メソッドはありません。`removeAttributeNode` メソッドは、名前空間付き属性と名前空間付きでない属性の両方を削除することができます。
 
 {{ DOMAttributeMethods() }}
 
-### Specification
+## 仕様書
 
-[DOM Level 2 Core: removeAttributeNode](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-D589198) (introduced in [DOM Level 1 Core](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeAttributeNode))
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}

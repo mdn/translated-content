@@ -44,8 +44,8 @@ Math.log(x)
 
 ```js
 Math.log(-1); // NaN, out of range
-Math.log(0);  // -Infinity
-Math.log(1);  // 0
+Math.log(0); // -Infinity
+Math.log(1); // 0
 Math.log(10); // 2.302585092994046
 ```
 
@@ -67,7 +67,7 @@ function getBaseLog(x, y) {
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Math.log")}}
+{{Compat}}
 
 ## 関連情報
 

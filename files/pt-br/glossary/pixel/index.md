@@ -1,8 +1,9 @@
 ---
 title: Pixel
 slug: Glossary/Pixel
-original_slug: Glossario/Pixel
 ---
+
+{{GlossarySidebar}}
 
 Um pixel é o menor elemento de um dispositivo de exibição como, por exemplo, um monitor.
 

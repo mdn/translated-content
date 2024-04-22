@@ -1,11 +1,6 @@
 ---
-title: ':not'
+title: ":not"
 slug: Web/CSS/:not
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:not
 ---
 
 {{CSSRef}}
@@ -66,15 +61,9 @@ body :not(.classy, p) {
 ### HTML
 
 ```html
-<p>
-  Un peu de texte.
-</p>
-<p class="classy">
-  Encore du texte.
-</p>
-<span>
-  Et toujours du texte.
-<span>
+<p>Un peu de texte.</p>
+<p class="classy">Encore du texte.</p>
+<span> Et toujours du texte. </span>
 ```
 
 ### Résultat

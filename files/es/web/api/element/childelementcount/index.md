@@ -1,7 +1,6 @@
 ---
 title: ParentNode.childElementCount
 slug: Web/API/Element/childElementCount
-original_slug: Web/API/ParentNode/childElementCount
 ---
 
 {{ APIRef }}

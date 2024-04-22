@@ -22,10 +22,10 @@ var htmlCollection = document.images;
 ```js
 var ilist = document.images;
 
-for(var i = 0; i < ilist.length; i++) {
-    if(ilist[i].src == "banner.gif") {
-        // bunner.gif が存在した場合の処理
-    }
+for (var i = 0; i < ilist.length; i++) {
+  if (ilist[i].src == "banner.gif") {
+    // bunner.gif が存在した場合の処理
+  }
 }
 ```
 

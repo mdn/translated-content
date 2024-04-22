@@ -1,14 +1,6 @@
 ---
 title: DeviceMotionEvent.rotationRate
 slug: Web/API/DeviceMotionEvent/rotationRate
-tags:
-  - API
-  - DOM
-  - Mobile
-  - Orientation
-  - Propriété
-  - Vitesse
-translation_of: Web/API/DeviceMotionEvent/rotationRate
 ---
 
 {{ ApiRef("Device Orientation Events") }}

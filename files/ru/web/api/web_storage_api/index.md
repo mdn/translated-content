@@ -1,7 +1,6 @@
 ---
 title: Веб хранилище (API)
 slug: Web/API/Web_Storage_API
-translation_of: Web/API/Web_Storage_API
 ---
 
 Web Storage API предоставляет механизмы, при помощи которых браузеры могут безопасно хранить пары ключ/значение в более интуитивно понятной манере, чем куки (cookies).
@@ -42,15 +41,9 @@ Web Storage API предоставляет механизмы, при помощ
 | ------------------------------------------------------------------------------------------------------ |
 | [HTML Living Standard # webstorage](https://html.spec.whatwg.org/multipage/webstorage.html#webstorage) |
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
-### `Window.localStorage`
-
-{{Compat("api.Window.localStorage")}}
-
-### `Window.sessionStorage`
-
-{{Compat("api.Window.sessionStorage")}}
+{{Compat}}
 
 ## Приватный режим/Инкогнито
 

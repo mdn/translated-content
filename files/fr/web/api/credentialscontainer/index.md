@@ -1,14 +1,6 @@
 ---
 title: CredentialsContainer
 slug: Web/API/CredentialsContainer
-tags:
-  - API
-  - Credential Management API
-  - Interface
-  - Reference
-  - Web Authentication API
-  - WebAuthn
-translation_of: Web/API/CredentialsContainer
 ---
 
 {{SeeCompatTable}}{{APIRef("Credential Management API")}}{{securecontext_header}}

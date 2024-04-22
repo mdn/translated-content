@@ -59,7 +59,7 @@ HTML의 요소들은 **특성**을 가지고 있습니다. 특성은 사용자�
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/allow">allow</a></code>
+        <code><a href="/ko/docs/Web/HTML/Attributes/allow">allow</a></code>
       </td>
       <td>{{ HTMLElement("iframe") }}</td>
       <td>Specifies a feature-policy for the iframe.</td>
@@ -101,7 +101,6 @@ HTML의 요소들은 **특성**을 가지고 있습니다. 특성은 사용자�
       <td>
         {{ HTMLElement("button") }},
         {{ HTMLElement("input") }},
-        {{ HTMLElement("keygen") }},
         {{ HTMLElement("select") }},
         {{ HTMLElement("textarea") }}
       </td>
@@ -179,7 +178,7 @@ HTML의 요소들은 **특성**을 가지고 있습니다. 특성은 사용자�
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/capture">capture</a></code
+          ><a href="/ko/docs/Web/HTML/Attributes/capture">capture</a></code
         >
       </td>
       <td>{{ HTMLElement("input") }}</td>
@@ -188,11 +187,6 @@ HTML의 요소들은 **특성**을 가지고 있습니다. 특성은 사용자�
         media capture spec,
         specifies a new file can be captured.
       </td>
-    </tr>
-    <tr>
-      <td><code>challenge</code></td>
-      <td>{{ HTMLElement("keygen") }}</td>
-      <td>공개 키와 같이 전송된 challenge 문자열입니다.</td>
     </tr>
     <tr>
       <td><code>charset</code></td>
@@ -312,7 +306,7 @@ HTML의 요소들은 **특성**을 가지고 있습니다. 특성은 사용자�
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTML/CORS_settings_attributes"
+          ><a href="/ko/docs/Web/HTML/CORS_settings_attributes"
             >crossorigin</a
           ></code
         >
@@ -356,7 +350,7 @@ HTML의 요소들은 **특성**을 가지고 있습니다. 특성은 사용자�
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/decoding">decoding</a></code
+          ><a href="/ko/docs/Web/HTML/Attributes/decoding">decoding</a></code
         >
       </td>
       <td>{{ HTMLElement("img") }}</td>
@@ -401,7 +395,6 @@ HTML의 요소들은 **특성**을 가지고 있습니다. 특성은 사용자�
         {{ HTMLElement("command") }},
         {{ HTMLElement("fieldset") }},
         {{ HTMLElement("input") }},
-        {{ HTMLElement("keygen") }},
         {{ HTMLElement("optgroup") }},
         {{ HTMLElement("option") }},
         {{ HTMLElement("select") }},
@@ -437,7 +430,7 @@ HTML의 요소들은 **특성**을 가지고 있습니다. 특성은 사용자�
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/enterkeyhint"
+          ><a href="/ko/docs/Web/HTML/Attributes/enterkeyhint"
             >enterkeyhint</a
           ></code
         >
@@ -445,7 +438,7 @@ HTML의 요소들은 **특성**을 가지고 있습니다. 특성은 사용자�
       </td>
       <td>
         {{ HTMLElement("textarea") }},
-        <a href="/en-US/docs/Web/HTML/Global_attributes/contenteditable"
+        <a href="/ko/docs/Web/HTML/Global_attributes/contenteditable"
           ><code>contenteditable</code></a
         >
       </td>
@@ -475,7 +468,6 @@ HTML의 요소들은 **특성**을 가지고 있습니다. 특성은 사용자�
         {{ HTMLElement("button") }},
         {{ HTMLElement("fieldset") }},
         {{ HTMLElement("input") }},
-        {{ HTMLElement("keygen") }},
         {{ HTMLElement("label") }},
         {{ HTMLElement("meter") }},
         {{ HTMLElement("object") }},
@@ -500,7 +492,7 @@ HTML의 요소들은 **특성**을 가지고 있습니다. 특성은 사용자�
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/formenctype"
+          ><a href="/ko/docs/Web/HTML/Attributes/formenctype"
             >formenctype</a
           ></code
         >
@@ -514,13 +506,13 @@ HTML의 요소들은 **특성**을 가지고 있습니다. 특성은 사용자�
         this attribute sets the encoding type to use during form submission. If
         this attribute is specified, it overrides the
         <code>enctype</code> attribute of the button's
-        <a href="/en-US/docs/Web/HTML/Element/form">form</a> owner.
+        <a href="/ko/docs/Web/HTML/Element/form">form</a> owner.
       </td>
     </tr>
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/formmethod"
+          ><a href="/ko/docs/Web/HTML/Attributes/formmethod"
             >formmethod</a
           ></code
         >
@@ -534,13 +526,13 @@ HTML의 요소들은 **특성**을 가지고 있습니다. 특성은 사용자�
         this attribute sets the submission method to use during form submission
         (<code>GET</code>, <code>POST</code>, etc.). If this attribute is
         specified, it overrides the <code>method</code> attribute of the
-        button's <a href="/en-US/docs/Web/HTML/Element/form">form</a> owner.
+        button's <a href="/ko/docs/Web/HTML/Element/form">form</a> owner.
       </td>
     </tr>
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/formnovalidate"
+          ><a href="/ko/docs/Web/HTML/Attributes/formnovalidate"
             >formnovalidate</a
           ></code
         >
@@ -554,13 +546,13 @@ HTML의 요소들은 **특성**을 가지고 있습니다. 특성은 사용자�
         this boolean attribute specifies that the form is not to be validated
         when it is submitted. If this attribute is specified, it overrides the
         <code>novalidate</code> attribute of the button's
-        <a href="/en-US/docs/Web/HTML/Element/form">form</a> owner.
+        <a href="/ko/docs/Web/HTML/Element/form">form</a> owner.
       </td>
     </tr>
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/formtarget"
+          ><a href="/ko/docs/Web/HTML/Attributes/formtarget"
             >formtarget</a
           ></code
         >
@@ -575,7 +567,7 @@ HTML의 요소들은 **특성**을 가지고 있습니다. 특성은 사용자�
         or inline frame) in which to display the response that is received after
         submitting the form. If this attribute is specified, it overrides the
         <code>target</code> attribute of the button's
-        <a href="/en-US/docs/Web/HTML/Element/form">form</a> owner.
+        <a href="/ko/docs/Web/HTML/Element/form">form</a> owner.
       </td>
     </tr>
     <tr>
@@ -664,7 +656,7 @@ HTML의 요소들은 **특성**을 가지고 있습니다. 특성은 사용자�
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/importance"
+          ><a href="/ko/docs/Web/HTML/Attributes/importance"
             >importance</a
           ></code
         >
@@ -679,7 +671,7 @@ HTML의 요소들은 **특성**을 가지고 있습니다. 특성은 사용자�
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Security/Subresource_Integrity"
+          ><a href="/ko/docs/Web/Security/Subresource_Integrity"
             >integrity</a
           ></code
         >
@@ -689,7 +681,7 @@ HTML의 요소들은 **특성**을 가지고 있습니다. 특성은 사용자�
       </td>
       <td>
         Specifies a
-        <a href="/en-US/docs/Web/Security/Subresource_Integrity"
+        <a href="/ko/docs/Web/Security/Subresource_Integrity"
           >Subresource Integrity</a
         >
         value that allows browsers to verify what they fetch.
@@ -697,7 +689,7 @@ HTML의 요소들은 **특성**을 가지고 있습니다. 특성은 사용자�
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/HTML/Element/img#attr-intrinsicsize"
+        <a href="/ko/docs/Web/HTML/Element/img#intrinsicsize"
           ><code>intrinsicsize</code></a
         >
         {{deprecated_inline}}
@@ -705,18 +697,18 @@ HTML의 요소들은 **특성**을 가지고 있습니다. 특성은 사용자�
       <td>{{ HTMLElement("img") }}</td>
       <td>
         This attribute tells the browser to ignore the actual intrinsic size of
-        the image and pretend it’s the size specified in the attribute.
+        the image and pretend it's the size specified in the attribute.
       </td>
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/HTML/Global_attributes/inputmode"
+        <a href="/ko/docs/Web/HTML/Global_attributes/inputmode"
           ><code>inputmode</code></a
         >
       </td>
       <td>
         {{ HTMLElement("textarea") }},
-        <a href="/en-US/docs/Web/HTML/Global_attributes/contenteditable"
+        <a href="/ko/docs/Web/HTML/Global_attributes/contenteditable"
           ><code>contenteditable</code></a
         >
       </td>
@@ -737,11 +729,6 @@ HTML의 요소들은 **특성**을 가지고 있습니다. 특성은 사용자�
       <td><code>itemprop</code></td>
       <td><a href="/ko/docs/Web/HTML/Global_attributes">전역 특성</a></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>keytype</code></td>
-      <td>{{ HTMLElement("keygen") }}</td>
-      <td>Specifies the type of key generated.</td>
     </tr>
     <tr>
       <td><code>kind</code></td>
@@ -781,7 +768,7 @@ HTML의 요소들은 **특성**을 가지고 있습니다. 특성은 사용자�
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/list">list</a></code>
+        <code><a href="/ko/docs/Web/HTML/Attributes/list">list</a></code>
       </td>
       <td>{{ HTMLElement("input") }}</td>
       <td>Identifies a list of pre-defined options to suggest to the user.</td>
@@ -826,7 +813,7 @@ HTML의 요소들은 **특성**을 가지고 있습니다. 특성은 사용자�
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/minlength"
+          ><a href="/ko/docs/Web/HTML/Attributes/minlength"
             >minlength</a
           ></code
         >
@@ -878,7 +865,7 @@ HTML의 요소들은 **특성**을 가지고 있습니다. 특성은 사용자�
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/muted">muted</a></code>
+        <code><a href="/ko/docs/Web/HTML/Attributes/muted">muted</a></code>
       </td>
       <td>
         {{ HTMLElement("audio") }},
@@ -895,7 +882,6 @@ HTML의 요소들은 **특성**을 가지고 있습니다. 특성은 사용자�
         {{ HTMLElement("fieldset") }},
         {{ HTMLElement("iframe") }},
         {{ HTMLElement("input") }},
-        {{ HTMLElement("keygen") }},
         {{ HTMLElement("object") }},
         {{ HTMLElement("output") }},
         {{ HTMLElement("select") }},
@@ -1074,7 +1060,7 @@ HTML의 요소들은 **특성**을 가지고 있습니다. 특성은 사용자�
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/spellcheck"
+          ><a href="/ko/docs/Web/HTML/Attributes/spellcheck"
             >spellcheck</a
           ></code
         >
@@ -1155,14 +1141,14 @@ HTML의 요소들은 **특성**을 가지고 있습니다. 특성은 사용자�
     <tr>
       <td>
         <code
-          ><a href="/en-US/docs/Web/HTML/Attributes/translate"
+          ><a href="/ko/docs/Web/HTML/Attributes/translate"
             >translate</a
           ></code
         >
       </td>
       <td><a href="/ko/docs/Web/HTML/Global_attributes">전역 특성</a></td>
       <td>
-        Specify whether an element’s attribute values and the values of its
+        Specify whether an element's attribute values and the values of its
         <code
           ><a href="https://dom.spec.whatwg.org/#text" id="ref-for-text①⑦"
             >Text</a

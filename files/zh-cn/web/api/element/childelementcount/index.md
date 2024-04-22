@@ -5,7 +5,7 @@ slug: Web/API/Element/childElementCount
 
 {{ APIRef("DOM") }}
 
-**`Element.childElementCount`** 只读属性返回一个***无符号长整型数字***，表示给定元素的子元素数。
+**`Element.childElementCount`** 只读属性返回一个**_无符号长整型数字_**，表示给定元素的子元素数。
 
 > **备注：** This property was initially defined in the {{domxref("ElementTraversal")}} pure interface. As this interface contained two distinct set of properties, one aimed at {{domxref("Node")}} that have children, one at those that are children, they have been moved into two separate pure interfaces, {{domxref("Element")}} and {{domxref("ChildNode")}}. In this case, `childElementCount` moved to {{domxref("Element")}}. This is a fairly technical change that shouldn't affect compatibility.
 
@@ -91,7 +91,7 @@ if (foo.childElementCount > 0) {
 
 [childElementCount (W3C)](http://www.w3.org/TR/2008/WD-ElementTraversal-20080303/#attribute-childElementCount)
 
-## 相关链接
+## 参见
 
 - [`children`](/zh-CN/DOM/Element.children)
 - [`firstElementChild`](/zh-CN/DOM/Element.firstElementChild)

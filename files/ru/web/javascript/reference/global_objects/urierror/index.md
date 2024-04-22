@@ -1,99 +1,69 @@
 ---
 title: URIError
 slug: Web/JavaScript/Reference/Global_Objects/URIError
-tags:
-  - Error
-  - JavaScript
-  - Object
-  - Reference
-  - URIError
-translation_of: Web/JavaScript/Reference/Global_Objects/URIError
+l10n:
+  sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
 ---
-{{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}}
 
-## Сводка
+{{JSRef}}
 
 Объект **`URIError`** представляет ошибку, возникающую при неправильном использовании глобальных функций обработки URI.
 
-## Синтаксис
+`URIError` является {{Glossary("serializable object", "сериализуемым объектом")}}, поэтому он может быть клонирован с помощью {{domxref("structuredClone()")}} или передан между [воркерами](/ru/docs/Web/API/Worker) с использованием {{domxref("Worker/postMessage()", "postMessage()")}}.
 
-```
-new URIError([message[, fileName[, lineNumber]]])
-```
+`URIError` является подклассом {{jsxref("Error")}}.
 
-### Параметры
+## Конструктор
 
-- `message`
-  - : Необязательный параметр. Человеко-читаемое описание ошибки.
-- `fileName` {{non-standard_inline}}
-  - : Необязательный параметр. Имя файла, содержащего код, вызвавший исключение.
-- `lineNumber` {{non-standard_inline}}
-  - : Необязательный параметр. Номер строки кода, вызвавшей исключение.
+- {{jsxref("URIError/URIError", "URIError()")}}
+  - : Создаёт новый объект `URIError`.
 
-## Описание
+## Свойства экземпляра
 
-Исключение `URIError` выбрасывается при передаче некорректного URI в глобальные функции обработки URI.
+_Также наследует свойства своего родителя {{jsxref("Error")}}_.
 
-## Свойства
+Эти свойства определены в `URIError.prototype` и есть у всех экземпляров `URIError`.
 
-- {{jsxref("URIError.prototype")}}
-  - : Позволяет добавлять свойства в объект `URIError`.
+- {{jsxref("Object/constructor", "URIError.prototype.constructor")}}
+  - : Функция-конструктор, создающая экземпляр объекта. Для экземпляров `URIError` начальным значением является конструктор {{jsxref("URIError/URIError", "URIError")}}.
+- {{jsxref("Error/name", "URIError.prototype.name")}}
+  - : Представляет название типа ошибки. Начальным значением `URIError.prototype.name` является `"URIError"`.
 
-## Методы
+## Методы экземпляра
 
-Глобальный объект `URIError` не содержит собственных методов, однако, он наследует некоторые методы из цепочки прототипов.
-
-## Экземпляры объекта `URIError`
-
-### Свойства
-
-{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/URIError/prototype', 'Properties')}}
-
-### Методы
-
-{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/URIError/prototype', 'Methods')}}
+_Наследует методы своего родителя {{jsxref("Error")}}_.
 
 ## Примеры
 
-### Пример: перехват исключения `URIError`
+### Перехват `URIError`
 
 ```js
 try {
-  decodeURIComponent('%');
+  decodeURIComponent("%");
 } catch (e) {
   console.log(e instanceof URIError); // true
-  console.log(e.message);             // "malformed URI sequence" - неверный формат последовательности URI
-  console.log(e.name);                // "URIError"
-  console.log(e.fileName);            // "Scratchpad/1"
-  console.log(e.lineNumber);          // 2
-  console.log(e.columnNumber);        // 2
-  console.log(e.stack);               // "@Scratchpad/2:2:3\n"
+  console.log(e.message); // "malformed URI sequence"
+  console.log(e.name); // "URIError"
+  console.log(e.stack); // Стек ошибок
 }
 ```
 
-### Пример: возбуждение исключения `URIError`
+### Создание `URIError`
 
 ```js
 try {
-  throw new URIError('Привет', 'someFile.js', 10);
+  throw new URIError("Привет");
 } catch (e) {
   console.log(e instanceof URIError); // true
-  console.log(e.message);             // "Привет"
-  console.log(e.name);                // "URIError"
-  console.log(e.fileName);            // "someFile.js"
-  console.log(e.lineNumber);          // 10
-  console.log(e.columnNumber);        // 0
-  console.log(e.stack);               // "@Scratchpad/2:2:9\n"
+  console.log(e.message); // "Привет"
+  console.log(e.name); // "URIError"
+  console.log(e.stack); // Стек ошибок
 }
 ```
 
 ## Спецификации
 
-| Спецификация                                                                                                             | Статус                   | Комментарии              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------------ |
-| ECMAScript 3-е издание.                                                                                                  | Стандарт                 | Изначальное определение. |
-| {{SpecName('ES5.1', '#sec-15.11.6.6', 'URIError')}}                                                     | {{Spec2('ES5.1')}} |                          |
-| {{SpecName('ES6', '#sec-native-error-types-used-in-this-standard-urierror', 'URIError')}} | {{Spec2('ES6')}}     |                          |
+{{Specifications}}
 
 ## Совместимость с браузерами
 
@@ -102,8 +72,7 @@ try {
 ## Смотрите также
 
 - {{jsxref("Error")}}
-- {{jsxref("URIError.prototype")}}
-- {{jsxref("Global_Objects/decodeURI", "decodeURI()")}}
-- {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
-- {{jsxref("Global_Objects/encodeURI", "encodeURI()")}}
-- {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
+- {{jsxref("decodeURI()")}}
+- {{jsxref("decodeURIComponent()")}}
+- {{jsxref("encodeURI()")}}
+- {{jsxref("encodeURIComponent()")}}

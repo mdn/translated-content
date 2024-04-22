@@ -18,9 +18,9 @@ var objRef = window.opener;
 ### 例子
 
 ```js
- if (window.opener != indexWin) {
-     referToTop(window.opener);
- }
+if (window.opener != indexWin) {
+  referToTop(window.opener);
+}
 ```
 
 ### 备注

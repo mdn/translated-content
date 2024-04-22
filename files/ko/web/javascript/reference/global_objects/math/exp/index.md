@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/exp
 ## 구문
 
 ```js
-    Math.exp(x)
+Math.exp(x);
 ```
 
 ### 매개변수
@@ -34,8 +34,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/exp
 
 ```js
 Math.exp(-1); // 0.36787944117144233
-Math.exp(0);  // 1
-Math.exp(1);  // 2.718281828459045
+Math.exp(0); // 1
+Math.exp(1); // 2.718281828459045
 ```
 
 ## 명세서

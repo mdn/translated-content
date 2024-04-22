@@ -1,10 +1,6 @@
 ---
 title: Грамматика и типы
 slug: Web/JavaScript/Guide/Grammar_and_types
-tags:
-  - JavaScript
-  - Руководство
-translation_of: Web/JavaScript/Guide/Grammar_and_types
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
@@ -150,16 +146,16 @@ console.log(y); // ReferenceError
 ```js
 /*
  * Example 1
-*/
+ */
 console.log(x === undefined); // true
 var x = 3;
 
 /*
  * Example 2
-*/
+ */
 var myvar = "my value";
 
-(function() {
+(function () {
   console.log(myvar); // undefined
   var myvar = "local value";
 })();
@@ -170,17 +166,17 @@ var myvar = "my value";
 ```js
 /*
  * Example 1
-*/
+ */
 var x;
 console.log(x === undefined); // true
 x = 3;
 
 /*
  * Example 2
-*/
+ */
 var myvar = "my value";
 
-(function() {
+(function () {
   var myvar;
   console.log(myvar); // undefined
   myvar = "local value";
@@ -213,7 +209,7 @@ function foo() {
 /* Определение функции через выражение */
 baz(); // TypeError: baz is not a function
 
-var baz = function() {
+var baz = function () {
   console.log("bar2");
 };
 ```
@@ -223,7 +219,7 @@ var baz = function() {
 Глобальные переменные на самом деле являются свойствами _глобального объекта_. На веб-страницах глобальным объектом является {{domxref("window")}}, поэтому вы можете устанавливать глобальные переменные и обращаться к ним, используя синтаксис `window.variable`:
 
 ```js
-window.foo = 'bar';
+window.foo = "bar";
 ```
 
 Следовательно, вы можете обращаться к глобальным переменным, объявленным в одном объекте window или frame из другого объекта window или frame, указав имя window или frame. Например, если переменная `phoneNumber` объявлена в документе, то вы можете сослаться на эту переменную из iframe как `parent.phoneNumber`.
@@ -233,7 +229,7 @@ window.foo = 'bar';
 Вы можете создать именованную константу, доступную только для чтения, используя ключевое слово {{jsxref("Statements/const", "const")}}. Синтаксис идентификатора константы является таким же, как и у идентификатора переменной: он должен начинаться с буквы, нижнего подчёркивания или знака $ и может содержать буквы, цифры или нижнее подчёркивание.
 
 ```js
-const PREFIX = '212';
+const PREFIX = "212";
 ```
 
 Нельзя изменить значение константы через присваивание или повторное объявление во время выполнения скрипта. Значение должно быть указано при инициализации.
@@ -259,7 +255,7 @@ function f() {
 Однако, атрибуты объектов не защищены, так что следующее выражение выполнится без проблем
 
 ```js
-const MY_OBJECT = {"key": "value"};
+const MY_OBJECT = { key: "value" };
 MY_OBJECT.key = "otherValue";
 ```
 
@@ -301,15 +297,15 @@ answer = "Thanks for all the fish...";
 В выражениях, включающих числовые и строковые значения с оператором `+`, JavaScript преобразует числовые значения в строковые. Например:
 
 ```js
-x = "The answer is " + 42 // "The answer is 42"
-y = 42 + " is the answer" // "42 is the answer"
+x = "The answer is " + 42; // "The answer is 42"
+y = 42 + " is the answer"; // "42 is the answer"
 ```
 
 В выражениях с другими операторами JavaScript не преобразует числовые значения в строковые. Например:
 
 ```js
-"37" - 7 // 30
-"37" + 7 // "377"
+"37" - 7; // 30
+"37" + 7; // "377"
 ```
 
 ### Преобразование строк в числа
@@ -323,9 +319,9 @@ y = 42 + " is the answer" // "42 is the answer"
 
 Альтернативным способом для получения числа из строки является использование оператора "унарный плюс":
 
-```js
-"1.1" + "1.1"       // "1.11.1"
-(+"1.1") + (+"1.1") // 2.2
+```js-nolint
+"1.1" + "1.1"; // "1.11.1"
+(+"1.1") + (+"1.1"); // 2.2
 // Обратите внимание на то, что скобки не являются обязательными и используются для ясности.
 ```
 
@@ -371,20 +367,20 @@ var fish = ["Lion", , "Angel"]; // ["Lion", undefined, "Angel"]
 
 > **Примечание:** Лишние запятые могут вызывать ошибки в старых версиях браузеров, поэтому лучше избегать их использования.
 
-```js
-var myList = ['home', , 'school', ]; // ["home", undefined, "school"]
+```js-nolint
+var myList = ["home", , "school", ]; // ["home", undefined, "school"]
 ```
 
 В следующем примере длина массива равна четырём, элементы `myList[0]` и `myList[2]` имеют значение `undefined`:
 
 ```js
-var myList = [ , 'home', , 'school']; // [undefined, "home", undefined, "school"]
+var myList = [, "home", , "school"]; // [undefined, "home", undefined, "school"]
 ```
 
 В следующем примере длина массива равна четырём, элементы `myList[1]` и `myList[3]` имеют значение `undefined`. Игнорируется только последняя запятая.
 
 ```js
-var myList = ['home', , 'school', , ]; // ["home", undefined, "school", undefined]
+var myList = ["home", , "school", ,]; // ["home", undefined, "school", undefined]
 ```
 
 Понимание поведения лишних запятых важно для понимания JavaScript как языка. Однако, когда будете писать свой собственный код, то имейте в виду, что явное объявление отсутствующих элементов как `undefined` улучшает ясность кода и лёгкость его поддержки.
@@ -460,18 +456,18 @@ function CarTypes(name) {
 
 var car = { myCar: "Saturn", getCar: CarTypes("Honda"), special: Sales };
 
-console.log(car.myCar);   // Saturn
-console.log(car.getCar);  // Honda
+console.log(car.myCar); // Saturn
+console.log(car.getCar); // Honda
 console.log(car.special); // Toyota
 ```
 
 Кроме того, вы можете использовать числовой или строковой литералы в именах свойств или вкладывать один объект в другой. Например:
 
 ```js
-var car = { manyCars: {a: "Saab", "b": "Jeep"}, 7: "Mazda" };
+var car = { manyCars: { a: "Saab", b: "Jeep" }, 7: "Mazda" };
 
 console.log(car.manyCars.b); // Jeep
-console.log(car[7]);         // Mazda
+console.log(car[7]); // Mazda
 ```
 
 Именем свойства объекта может быть любая строка, в том числе пустая строка. Если имя свойства не является корректным JavaScript идентификатором, то оно должно быть заключено в кавычки. Для обращения к таким именам следует использовать квадратные скобки ( `[]` ), а не точку ( `.` ):
@@ -491,30 +487,30 @@ console.log(unusualPropertyNames["!"]); // "Bang!"
 
 ```js
 var obj = {
-    // __proto__
-    __proto__: theProtoObj,
-    // Короткая запись для ‘handler: handler’
-    handler,
-    // Методы
-    toString() {
-     // Супер вызовы
-     return "d " + super.toString();
-    },
-    // Динамическое вычисление имён свойств
-    [ 'prop_' + (() => 42)() ]: 42
+  // __proto__
+  __proto__: theProtoObj,
+  // Короткая запись для ‘handler: handler’
+  handler,
+  // Методы
+  toString() {
+    // Супер вызовы
+    return "d " + super.toString();
+  },
+  // Динамическое вычисление имён свойств
+  ["prop_" + (() => 42)()]: 42,
 };
 ```
 
 Обратите внимание на следующий пример:
 
 ```js
-var foo = {a: "alpha", 2: "two"};
-console.log(foo.a);               // alpha
-console.log(foo[2]);              // two
+var foo = { a: "alpha", 2: "two" };
+console.log(foo.a); // alpha
+console.log(foo[2]); // two
 // console.log(foo.2);            // SyntaxError: Unexpected number
 // console.log(foo[a]);           // ReferenceError: a is not defined
-console.log(foo["a"]);            // alpha
-console.log(foo["2"]);            // two
+console.log(foo["a"]); // alpha
+console.log(foo["2"]); // two
 ```
 
 ### RegExp литерал
@@ -549,15 +545,16 @@ console.log("John's cat".length);
 
 ```js
 // Простое создание строки через литерал string
-`In JavaScript '\n' is a line-feed.`
+`In JavaScript '\n' is a line-feed.`;
 
 // Мультистроковые строки
 `In JavaScript this is
- not legal.`
+ not legal.`;
 
 // Интерполяция строк
-var name = "Бобби", time = "сегодня";
-`Привет ${name}, как ты ${time}?`
+var name = "Бобби",
+  time = "сегодня";
+`Привет ${name}, как ты ${time}?`;
 
 // Строим префикс HTTP запроса, используемый для интерпретации замен и конструирования
 POST`http://foo.org/bar?a=${a}&b=${b}
@@ -574,26 +571,26 @@ POST`http://foo.org/bar?a=${a}&b=${b}
 Кроме обычных символов вы также можете включать специальные символы в строки.
 
 ```js
-"one line \n another line"
+"one line \n another line";
 ```
 
 В следующей таблице перечислены специальные символы, которые вы можете использовать.
 
-| Символ      | Значение                                                                                                                 |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------ |
-| `\b`        | Возврат (Backspace)                                                                                                      |
-| `\f`        | Перевод или прогон страницы (Form feed)                                                                                  |
-| `\n`        | Перевод строки (New line)                                                                                                |
-| `\r`        | Возврат каретки (Carriage return)                                                                                        |
-| `\t`        | Табуляция (Tab)                                                                                                          |
-| `\v`        | Вертикальная табуляция (Vertical tab)                                                                                    |
-| `\'`        | Апостроф или одинарная кавычка                                                                                           |
-| `\"`        | Двойная кавычка                                                                                                          |
-| `\\`        | Обратная косая черта (Backslash)                                                                                         |
+| Символ      | Значение                                                                                                                  |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `\b`        | Возврат (Backspace)                                                                                                       |
+| `\f`        | Перевод или прогон страницы (Form feed)                                                                                   |
+| `\n`        | Перевод строки (New line)                                                                                                 |
+| `\r`        | Возврат каретки (Carriage return)                                                                                         |
+| `\t`        | Табуляция (Tab)                                                                                                           |
+| `\v`        | Вертикальная табуляция (Vertical tab)                                                                                     |
+| `\'`        | Апостроф или одинарная кавычка                                                                                            |
+| `\"`        | Двойная кавычка                                                                                                           |
+| `\\`        | Обратная косая черта (Backslash)                                                                                          |
 | `\XXX`      | Символ в кодировке Latin-1, представленный тремя восьмеричными числами _XXX_ от 0 до 377. Например, \251 (символ ©).     |
 | `\xXX`      | Символ в кодировке Latin-1, представленный двумя шестнадцатеричными числами _XX_ от 00 до FF. Например, \xA9 (символ ©). |
 | `\uXXXX`    | Символ в Unicode, представленный четырьмя шестнадцатеричными числами _XXXX_. Например, \u00A9 (символ ©).                |
-| `\u{XXXXX}` | Символ в UTF-32BE. Например, \u{2F804} обозначает то же, что обычная запись \uD87E\uDC04.                                |
+| `\u{XXXXX}` | Символ в UTF-32BE. Например, \u{2F804} обозначает то же, что обычная запись \uD87E\uDC04.                                 |
 
 #### Экранирующие символы
 
@@ -601,7 +598,7 @@ POST`http://foo.org/bar?a=${a}&b=${b}
 
 Вы можете вставить кавычку в строку, если поставите перед ней обратную косую черту. Это называется экранированием кавычек. Например:
 
-```js
+```js-nolint
 var quote = "He read \"The Cremation of Sam McGee\" by R.W. Service.";
 console.log(quote); // He read "The Cremation of Sam McGee" by R.W. Service.
 ```
@@ -615,10 +612,11 @@ var home = "c:\\temp"; // c:\temp
 Вы также можете экранировать перевод строки. Обратная косая черта и перевод строки будут удалены из содержимого строки. Например:
 
 ```js
-var str = "this string \
+var str =
+  "this string \
 is broken \
 across multiple\
-lines."
+lines.";
 console.log(str); // this string is broken across multiplelines.
 ```
 
@@ -626,10 +624,10 @@ console.log(str); // this string is broken across multiplelines.
 
 ```js
 var poem =
-"Roses are red,\n\
+  "Roses are red,\n\
 Violets are blue.\n\
 I'm schizophrenic,\n\
-And so am I."
+And so am I.";
 ```
 
 ## Дополнительная информация

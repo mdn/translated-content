@@ -1,7 +1,6 @@
 ---
 title: Document.open()
 slug: Web/API/Document/open
-original_slug: Web/API/Document/abrir
 ---
 
 {{APIRef("DOM")}}
@@ -60,7 +59,7 @@ There is a lesser-known and little-used three-argument version of `document.open
 This call, for example opens github.com in a new window, with its opener set to `null`:
 
 ```js
-document.open('https://www.github.com','', 'noopener=true')
+document.open("https://www.github.com", "", "noopener=true");
 ```
 
 ## Two-argument document.open()
@@ -68,7 +67,7 @@ document.open('https://www.github.com','', 'noopener=true')
 Browsers used to support a two-argument `document.open()`, with the following signature:
 
 ```js
-document.open(type, replace)
+document.open(type, replace);
 ```
 
 Where `type` specified the MIME type of the data you are writing (e.g. `text/html`) and replace if set (i.e. a string of `"replace"`) specified that the history entry for the new document would replace the current history entry of the document being written to.

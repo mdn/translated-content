@@ -2,6 +2,7 @@
 title: translate
 slug: Web/XPath/Functions/translate
 ---
+
 {{ XsltRef() }}
 
 `translate` 함수는 문자열과 번역할 문자 집합을 평가하고 번역된 문자열을 반환합니다.

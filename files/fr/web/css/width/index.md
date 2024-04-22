@@ -1,11 +1,6 @@
 ---
 title: width
 slug: Web/CSS/width
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/width
 ---
 
 {{CSSRef}}
@@ -145,8 +140,8 @@ p.goldie {
 ```css
 p.maxgreen {
   background: lightgreen;
-  width: intrinsic;           /* Safari/WebKit utilisent un nom non-standard */
-  width: -moz-max-content;    /* Firefox/Gecko */
+  width: intrinsic; /* Safari/WebKit utilisent un nom non-standard */
+  width: -moz-max-content; /* Firefox/Gecko */
   width: -webkit-max-content; /* Chrome */
 }
 ```
@@ -162,7 +157,7 @@ p.maxgreen {
 ```css
 p.minblue {
   background: lightblue;
-  width: -moz-min-content;    /* Firefox */
+  width: -moz-min-content; /* Firefox */
   width: -webkit-min-content; /* Chrome */
 }
 ```
@@ -178,7 +173,7 @@ p.minblue {
 Il faut s'assurer que les éléments sur lesquels on utilise `width` ne sont pas tronqués et ne masquent pas d'autre contenu sur la page lorsque l'utilisateur zoome afin d'agrandir la taille du texte.
 
 - [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [_Understanding Success Criterion 1.4.4  | Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
+- [_Understanding Success Criterion 1.4.4 | Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
 ## Spécifications
 

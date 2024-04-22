@@ -20,9 +20,11 @@ slug: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
 ウェブアプリケーションをプロトコルハンドラーとして設定するのは、難しい処理ではありません。基本的に、ウェブアプリケーションは自身を指定したプロトコルのための可能なハンドラーとしてブラウザーに登録するために [`registerProtocolHandler()`](/ja/docs/Web/API/Navigator/registerProtocolHandler) を使用します。
 
 ```js
-navigator.registerProtocolHandler("web+burger",
-                                  "http://www.google.co.uk/?uri=%s",
-                                  "Burger handler");
+navigator.registerProtocolHandler(
+  "web+burger",
+  "http://www.google.co.uk/?uri=%s",
+  "Burger handler",
+);
 ```
 
 ここでの引数は次の通りです。
@@ -66,14 +68,16 @@ navigator.registerProtocolHandler("web+burger",
 ### 例
 
 ```html
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="en">
-<head>
-  <title>ウェブプロトコルハンドラーサンプル - テスト</title>
-</head>
-<body>
-  <p>前に<a href="web+burger:cheeseburger">これ</a>を見たことがありますか？</p>
-</body>
+  <head>
+    <title>ウェブプロトコルハンドラーサンプル - テスト</title>
+  </head>
+  <body>
+    <p>
+      前に<a href="web+burger:cheeseburger">これ</a>を見たことがありますか？
+    </p>
+  </body>
 </html>
 ```
 

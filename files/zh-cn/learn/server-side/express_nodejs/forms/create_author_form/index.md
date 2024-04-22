@@ -12,8 +12,8 @@ slug: Learn/Server-side/Express_Nodejs/forms/Create_author_form
 打开 **/controllers/authorController.js**，并在档案最上方加入底下几行：
 
 ```js
-const { body,validationResult } = require('express-validator/check');
-const { sanitizeBody } = require('express-validator/filter');
+const { body, validationResult } = require("express-validator/check");
+const { sanitizeBody } = require("express-validator/filter");
 ```
 
 ## 控制器—get 路由
@@ -22,8 +22,8 @@ const { sanitizeBody } = require('express-validator/filter');
 
 ```js
 // Display Author create form on GET.
-exports.author_create_get = function(req, res, next) {
-    res.render('author_form', { title: 'Create Author'});
+exports.author_create_get = function (req, res, next) {
+  res.render("author_form", { title: "Create Author" });
 };
 ```
 
@@ -34,50 +34,64 @@ exports.author_create_get = function(req, res, next) {
 ```js
 // Handle Author create on POST.
 exports.author_create_post = [
+  // Validate fields.
+  body("first_name")
+    .isLength({ min: 1 })
+    .trim()
+    .withMessage("First name must be specified.")
+    .isAlphanumeric()
+    .withMessage("First name has non-alphanumeric characters."),
+  body("family_name")
+    .isLength({ min: 1 })
+    .trim()
+    .withMessage("Family name must be specified.")
+    .isAlphanumeric()
+    .withMessage("Family name has non-alphanumeric characters."),
+  body("date_of_birth", "Invalid date of birth")
+    .optional({ checkFalsy: true })
+    .isISO8601(),
+  body("date_of_death", "Invalid date of death")
+    .optional({ checkFalsy: true })
+    .isISO8601(),
 
-    // Validate fields.
-    body('first_name').isLength({ min: 1 }).trim().withMessage('First name must be specified.')
-        .isAlphanumeric().withMessage('First name has non-alphanumeric characters.'),
-    body('family_name').isLength({ min: 1 }).trim().withMessage('Family name must be specified.')
-        .isAlphanumeric().withMessage('Family name has non-alphanumeric characters.'),
-    body('date_of_birth', 'Invalid date of birth').optional({ checkFalsy: true }).isISO8601(),
-    body('date_of_death', 'Invalid date of death').optional({ checkFalsy: true }).isISO8601(),
+  // Sanitize fields.
+  sanitizeBody("first_name").trim().escape(),
+  sanitizeBody("family_name").trim().escape(),
+  sanitizeBody("date_of_birth").toDate(),
+  sanitizeBody("date_of_death").toDate(),
 
-    // Sanitize fields.
-    sanitizeBody('first_name').trim().escape(),
-    sanitizeBody('family_name').trim().escape(),
-    sanitizeBody('date_of_birth').toDate(),
-    sanitizeBody('date_of_death').toDate(),
+  // Process request after validation and sanitization.
+  (req, res, next) => {
+    // Extract the validation errors from a request.
+    const errors = validationResult(req);
 
-    // Process request after validation and sanitization.
-    (req, res, next) => {
+    if (!errors.isEmpty()) {
+      // There are errors. Render form again with sanitized values/errors messages.
+      res.render("author_form", {
+        title: "Create Author",
+        author: req.body,
+        errors: errors.array(),
+      });
+      return;
+    } else {
+      // Data from form is valid.
 
-        // Extract the validation errors from a request.
-        const errors = validationResult(req);
-
-        if (!errors.isEmpty()) {
-            // There are errors. Render form again with sanitized values/errors messages.
-            res.render('author_form', { title: 'Create Author', author: req.body, errors: errors.array() });
-            return;
+      // Create an Author object with escaped and trimmed data.
+      var author = new Author({
+        first_name: req.body.first_name,
+        family_name: req.body.family_name,
+        date_of_birth: req.body.date_of_birth,
+        date_of_death: req.body.date_of_death,
+      });
+      author.save(function (err) {
+        if (err) {
+          return next(err);
         }
-        else {
-            // Data from form is valid.
-
-            // Create an Author object with escaped and trimmed data.
-            var author = new Author(
-                {
-                    first_name: req.body.first_name,
-                    family_name: req.body.family_name,
-                    date_of_birth: req.body.date_of_birth,
-                    date_of_death: req.body.date_of_death
-                });
-            author.save(function (err) {
-                if (err) { return next(err); }
-                // Successful - redirect to new author record.
-                res.redirect(author.url);
-            });
-        }
+        // Successful - redirect to new author record.
+        res.redirect(author.url);
+      });
     }
+  },
 ];
 ```
 
@@ -135,7 +149,7 @@ block content
 
 此视图的结构和行为与**genre_form.pug**模板完全相同，因此我们不再对其进行描述。
 
-> **备注：** 某些浏览器不支持 input `type=“date”`，因此您不会获得日期选取部件或默认的*`dd/mm/yyyy`*占位符，而是获取一个空的纯文本字段。一种解决方法，是明确添加属性`placeholder='dd/mm/yyyy'`，以便在功能较少的浏览器上，仍然可以获得有关所需文本格式的信息。
+> **备注：** 某些浏览器不支持 input `type=“date”`，因此你不会获得日期选取部件或默认的*`dd/mm/yyyy`*占位符，而是获取一个空的纯文本字段。一种解决方法，是明确添加属性`placeholder='dd/mm/yyyy'`，以便在功能较少的浏览器上，仍然可以获得有关所需文本格式的信息。
 
 ### 自我挑战：加入死亡日期
 
@@ -147,7 +161,7 @@ block content
 
 ![Author Create Page - Express Local Library site](locallibary_express_author_create_empty.png)
 
-> **备注：** 如果您尝试使用日期的各种输入格式，您可能会发现格式`yyyy-mm-dd`行为不正常。这是因为 JavaScript 将日期字符串，视为包含 0 小时的时间，但另外将该格式的日期字符串（ISO 8601 标准）视为包括 0 小时 UTC 时间，而不是本地时间。如果您的时区在 UTC 以西，则日期显示（即本地）将在您输入的日期之前一天。这是我们在这里没有解决的几个复杂问题之一（例如多字姓和有多个作者的书本）。
+> **备注：** 如果你尝试使用日期的各种输入格式，你可能会发现格式`yyyy-mm-dd`行为不正常。这是因为 JavaScript 将日期字符串，视为包含 0 小时的时间，但另外将该格式的日期字符串（ISO 8601 标准）视为包括 0 小时 UTC 时间，而不是本地时间。如果你的时区在 UTC 以西，则日期显示（即本地）将在你输入的日期之前一天。这是我们在这里没有解决的几个复杂问题之一（例如多字姓和有多个作者的书本）。
 
 ## 下一步
 

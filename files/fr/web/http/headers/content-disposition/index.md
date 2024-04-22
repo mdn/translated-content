@@ -1,11 +1,6 @@
 ---
 title: Content-Disposition
 slug: Web/HTTP/Headers/Content-Disposition
-tags:
-  - HTTP
-  - Reference
-  - header
-translation_of: Web/HTTP/Headers/Content-Disposition
 ---
 
 {{HTTPSidebar}}
@@ -84,13 +79,17 @@ Les paramètres `filename` et `filename*` diffèrent uniquement en ce que `filen
 
 Une réponse déclanchant le dialogue "Enregistrer sous":
 
-```html
+```http
 200 OK
 Content-Type: text/html; charset=utf-8
 Content-Disposition: attachment; filename="cool.html"
 Content-Length: 22
+```
 
-<HTML>Enregistrez-moi !</HTML>
+```html
+<html>
+  Enregistrez-moi !
+</html>
 ```
 
 Ce fichier HTML simple sera sauvegardé en tant que téléchargement régulier plutôt que dans le navigateur. La plupart des navigateurs proposeront de l'enregistrer sous le nom de fichier `cool.html` (par défaut).

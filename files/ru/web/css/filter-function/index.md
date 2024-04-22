@@ -1,9 +1,6 @@
 ---
 title: <filter-function>
 slug: Web/CSS/filter-function
-tags:
-  - фильтры
-translation_of: Web/CSS/filter-function
 ---
 
 {{cssref}}
@@ -37,9 +34,7 @@ translation_of: Web/CSS/filter-function
 
 ## Спецификация
 
-| Спецификация                                                                                                     | Статус                               | Комментарии         |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{ SpecName('Filters 1.0', '#typedef-filter-function', '&lt;filter-function&gt;') }} | {{ Spec2('Filters 1.0') }} | Первое определение. |
+{{Specifications}}
 
 ## Смотрите также
 

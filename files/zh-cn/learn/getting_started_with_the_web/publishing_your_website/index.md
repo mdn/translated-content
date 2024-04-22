@@ -20,15 +20,15 @@ slug: Learn/Getting_started_with_the_web/Publishing_your_website
 
 许多专业的网站通过这种方法接入互联网。
 
-此外，你将需要一个 {{Glossary("FTP", "文件传输协议")}} 程序 ( 点击[钻研在网络上做某些事情要花费多少：软件](/zh-CN/docs/Learn/Common_questions/How_much_does_it_cost#软件)查看详细信息 ) 来将网站文件上传到服务器。不同的 FTP 程序涵盖了不同的范围，但是你通常需要使用主机服务提供商给你的详细信息（比如用户名、密码、主机名）登录到 Web 服务器。然后程序在两个窗口里分别显示本地文件和服务器文件，这样你就可以在它们之间进行传输：
+此外，你将需要一个{{Glossary("FTP", "文件传输协议")}}程序（点击[钻研在网络上做某些事情要花费多少：软件](/zh-CN/docs/Learn/Common_questions/How_much_does_it_cost#软件)查看详细信息）来将网站文件上传到服务器。不同的 FTP 程序涵盖了不同的范围，但是你通常需要使用主机服务提供商给你的详细信息（比如用户名、密码、主机名）登录到 Web 服务器。然后程序在两个窗口里分别显示本地文件和服务器文件，这样你就可以在它们之间进行传输：
 
 ![](ftp.jpg)
 
 #### 寻找主机服务和域名的建议
 
 - 我们不会推荐任何商业化的主机公司。要找到主机公司和域名注册商，只需要搜索 "网络主机服务" 和 "域名" 来找到一家出售域名的公司。所有这种类型的公司都允许你查看你想要的域名是否可用。
-- 你的家庭或办公 {{Glossary("ISP", "网络服务提供商")}} 可能会提供一些受限制的的小型主机空间。它们的能使用的功能都会受到限制，但是它们会非常适合你的第一个实验的——联系一下他们！
-- 有一些免费服务比如 [Neocities](https://neocities.org/) ， [Blogspot](https://www.blogger.com) ，和 [Wordpress](https://wordpress.com/) 。重复一遍，一分钱一分货，不过它们对于你的初次实验可能会是很理想的。免费服务大部分也不需要 FTP 软件来上传文件——你只需要将文件拖入到它们网页的界面里。
+- 你的家庭或办公的{{Glossary("ISP", "网络服务提供商")}}可能会提供一些受限制的小型主机空间。它们的能使用的功能都会受到限制，但是它们会非常适合你的第一个实验的——联系一下他们！
+- 有一些免费服务比如 [Neocities](https://neocities.org/)、[Blogspot](https://www.blogger.com) 和 [Wordpress](https://wordpress.com/)。重复一遍，一分钱一分货，不过它们对于你的初次实验可能会是很理想的。免费服务大部分也不需要 FTP 软件来上传文件——你只需要将文件拖入到它们网页的界面里。
 - 有时公司会打包提供主机服务和域名。
 
 ### 使用在线工具如 GitHub 或 Google App Engine
@@ -62,11 +62,11 @@ slug: Learn/Getting_started_with_the_web/Publishing_your_website
 3. 在这个页面上，在 _Repository name_ 输入框里输入 _username_.github.io，username 是你的用户名。比如，我们的朋友 bobsmith 会输入 _bobsmith.github.io。同时勾选_ _Initialize this repository with a README_，然后点击 _Create repository_。![](github-create-repo.png)
 4. 然后，将你的网站文件夹里的内容拖拽到你的资源库 ( repository )，再点击 _Commit changes_。
 
-    > **备注：** 确保你的文件夹有一个 _index.html_ 文件。
+   > **备注：** 确保你的文件夹有一个 _index.html_ 文件。
 
 5. 现在将你的浏览器转到 _username_.github.io 来在线查看你的网站。比如，_如果用户名为 chrisdavidmills_, 请转到 [chrisdavidmills.github.io](http://chrisdavidmills.github.io/)。
 
-    > **备注：** 你的网站可能需要几分钟的时间才能投入使用。如果它不能立即工作，你可能需要等待几分钟，然后再试一次。
+   > **备注：** 你的网站可能需要几分钟的时间才能投入使用。如果它不能立即工作，你可能需要等待几分钟，然后再试一次。
 
 想要了解更多，请看 [GitHub Pages Help](https://help.github.com/categories/github-pages-basics/).
 

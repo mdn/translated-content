@@ -123,12 +123,7 @@ Veja também os posts [WebGL 2 lands in Firefox](https://hacks.mozilla.org/2017/
 
 ## Especificações
 
-| Especificação                            | Status                               | Comentário                                            |
-| ---------------------------------------- | ------------------------------------ | ----------------------------------------------------- |
-| {{SpecName('WebGL')}}             | {{Spec2('WebGL')}}             | Definição inicial. Baseada em OpenGL ES 2.0           |
-| {{SpecName('WebGL2')}}             | {{Spec2('WebGL2')}}             | Criada com base no WebGL 1. Baseada em OpenGL ES 3.0. |
-| {{SpecName('OpenGL ES 2.0')}} | {{Spec2('OpenGL ES 2.0')}} |                                                       |
-| {{SpecName('OpenGL ES 3.0')}} | {{Spec2('OpenGL ES 3.0')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

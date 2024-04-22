@@ -1,16 +1,15 @@
 ---
 title: 在选择器中使用 :target 伪类
-slug: Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors
-original_slug: Web/Guide/CSS/Using_the_:target_selector
+slug: Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors
 ---
 
 {{CSSRef}}
 
-为了辅助标识那些指向文档特定部分链接的目标，[CSS3 选择器](http://www.w3.org/TR/css3-selectors/#target-pseudo) 引入了` {{ Cssxref(":target") }} `[伪类](/zh-CN/CSS/Pseudo-classes). Netscape 7.1 已经在 Netscape 系列中加入了这个伪类的支持，这一新的举措让页面作者能够辅助用户在较大的页面中定位。
+为了辅助标识那些指向文档特定部分链接的目标，[CSS3 选择器](http://www.w3.org/TR/css3-selectors/#target-pseudo) 引入了 {{cssxref(":target")}} [伪类](/zh-CN/CSS/Pseudo-classes). Netscape 7.1 已经在 Netscape 系列中加入了这个伪类的支持，这一新的举措让页面作者能够辅助用户在较大的页面中定位。
 
 ### 选择一个目标
 
-`{{ Cssxref(":target") }} 伪类用来指定那些包含片段标识符的 URI 的目标元素样式。` 例如，`http://developer.mozilla.org/en/docs/Using_the_:target_selector#Example` 这个 URI 包含了 `#Example 片段标识符。` 在 HTML 中，标识符是元素的 id 或者 name 属性，。由于这两者位于相同的命名空间，因此，这个示例 URI 指向的是文档顶层的 "Example" 。
+{{cssxref(":target")}} 伪类用来指定那些包含片段标识符的 URI 的目标元素样式。例如 `https://developer.mozilla.org/zh-CN/docs/Web/CSS#参考` 这个 URI 包含了 `#参考` 片段标识符 在 HTML 中，标识符是元素的 `id` 或者 `name` 属性。由于这两者位于相同的命名空间，因此，这个示例 URI 指向的是文档顶层的“参考”。
 
 假设你想修改 URI 指向的任何 h2 元素，但是又不想把样式应用到任何其他同类型的元素，那么以下示例足够简单有用：
 
@@ -34,7 +33,7 @@ h2:target {font-weight: bold;}
 
 ### 示例
 
-在以下示例中，5 个链接指向了同一文档中的元素。例如，选择 "First" 链接会导致` <h1 id="one"> `成为目标元素。注意，由于目标元素有可能会被放置到浏览器窗口的顶层，因此文档可能会跳到新的滚动位置。
+在以下示例中，5 个链接指向了同一文档中的元素。例如，选择 "First" 链接会导致 `<h1 id="one">` 成为目标元素。注意，由于目标元素有可能会被放置到浏览器窗口的顶层，因此文档可能会跳到新的滚动位置。
 
 ```
 <h4 id="one">...</h4> <p id="two">...</p>

@@ -51,10 +51,10 @@ Proxy-Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 
 ## 仕様書
 
-| 仕様書                                                       | 題名                                   |
-| ------------------------------------------------------------ | -------------------------------------- |
+| 仕様書                                        | 題名                                   |
+| --------------------------------------------- | -------------------------------------- |
 | {{RFC("7235", "Proxy-Authorization", "4.4")}} | HTTP/1.1: Authentication               |
-| {{RFC("7617")}}                                         | The 'Basic' HTTP Authentication Scheme |
+| {{RFC("7617")}}                               | The 'Basic' HTTP Authentication Scheme |
 
 ## 関連情報
 

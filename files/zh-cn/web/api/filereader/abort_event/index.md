@@ -1,5 +1,5 @@
 ---
-title: 'FileReader: 中止事件 (abort)'
+title: "FileReader: 中止事件 (abort)"
 slug: Web/API/FileReader/abort_event
 ---
 
@@ -36,22 +36,22 @@ slug: Web/API/FileReader/abort_event
 
 ```html
 <div class="example">
-
-    <div class="file-select">
-        <label for="avatar">选择你的头像：</label>
-        <input type="file"
-               id="avatar" name="avatar"
-               accept="image/png, image/jpeg">
-    </div>
-
-    <img src="" class="preview" height="200" alt="图像预览...">
-
-    <div class="event-log">
-        <label>事件日志：</label>
-        <textarea readonly class="event-log-contents"></textarea>
-    </div>
-
+  <div class="file-select">
+    <label for="avatar">选择你的头像：</label>
+    <input
+      type="file"
+      id="avatar"
+      name="avatar"
+      accept="image/png, image/jpeg" />
   </div>
+
+  <img src="" class="preview" height="200" alt="图像预览..." />
+
+  <div class="event-log">
+    <label>事件日志：</label>
+    <textarea readonly class="event-log-contents"></textarea>
+  </div>
+</div>
 ```
 
 ```css hidden
@@ -63,15 +63,15 @@ img.preview {
   width: 18rem;
   height: 5rem;
   border: 1px solid black;
-  margin: .2rem;
-  padding: .2rem;
+  margin: 0.2rem;
+  padding: 0.2rem;
 }
 
 .example {
   display: grid;
   grid-template-areas:
-              "select  log"
-              "preview log";
+    "select  log"
+    "preview log";
 }
 
 .file-select {
@@ -86,7 +86,7 @@ img.preview {
   grid-area: log;
 }
 
-.event-log>label {
+.event-log > label {
   display: block;
 }
 
@@ -99,38 +99,40 @@ img.preview {
 
 ```js
 const fileInput = document.querySelector('input[type="file"]');
-const preview = document.querySelector('img.preview');
-const eventLog = document.querySelector('.event-log-contents');
+const preview = document.querySelector("img.preview");
+const eventLog = document.querySelector(".event-log-contents");
 const reader = new FileReader();
 
 function handleEvent(event) {
-    eventLog.textContent = eventLog.textContent + `${event.type}: ${event.loaded} bytes transferred\n`;
+  eventLog.textContent =
+    eventLog.textContent + `${event.type}: ${event.loaded} bytes transferred\n`;
 
-    if (event.type === "load") {
-        preview.src = reader.result;
-    }
+  if (event.type === "load") {
+    preview.src = reader.result;
+  }
 }
 
 function addListeners(reader) {
-    reader.addEventListener('loadstart', handleEvent);
-    reader.addEventListener('load', handleEvent);
-    reader.addEventListener('loadend', handleEvent);
-    reader.addEventListener('progress', handleEvent);
-    reader.addEventListener('error', handleEvent);
-    reader.addEventListener('abort', handleEvent);
+  reader.addEventListener("loadstart", handleEvent);
+  reader.addEventListener("load", handleEvent);
+  reader.addEventListener("loadend", handleEvent);
+  reader.addEventListener("progress", handleEvent);
+  reader.addEventListener("error", handleEvent);
+  reader.addEventListener("abort", handleEvent);
 }
 
 function handleSelected(e) {
-    eventLog.textContent = '';
-    const selectedFile = fileInput.files[0];
-    if (selectedFile) {
-        addListeners(reader);
-        reader.readAsDataURL(selectedFile);
-    }
-    reader.abort();
+  eventLog.textContent = "";
+  const selectedFile = fileInput.files[0];
+  if (selectedFile) {
+    addListeners(reader);
+    reader.readAsDataURL(selectedFile);
+  }
+  reader.abort();
 }
 
-fileInput.addEventListener('change', handleSelected);返回返回发的
+fileInput.addEventListener("change", handleSelected);
+返回返回发的;
 ```
 
 #### 结果

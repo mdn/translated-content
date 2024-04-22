@@ -61,14 +61,13 @@ setInterval(func, delay, arg0, arg1, /* … ,*/ argN)
 다음 예제는 `setInterval()`의 기본 구문을 보여줍니다.
 
 ```js
-const intervalID = setInterval(myCallback, 500, 'Parameter 1', 'Parameter 2');
+const intervalID = setInterval(myCallback, 500, "Parameter 1", "Parameter 2");
 
-function myCallback(a, b)
-{
- // 여기에 코드를 작성하세요
- // 매개변수는 순전히 선택적입니다.
- console.log(a);
- console.log(b);
+function myCallback(a, b) {
+  // 여기에 코드를 작성하세요
+  // 매개변수는 순전히 선택적입니다.
+  console.log(a);
+  console.log(b);
 }
 ```
 
@@ -146,7 +145,7 @@ document.getElementById("stop").addEventListener("click", stopTextColor);
 다음 예제를 참조하세요(사실 문제는 두 타이머 모두 동일합니다)
 
 ```js
-myArray = ['zero', 'one', 'two'];
+myArray = ["zero", "one", "two"];
 
 myArray.myMethod = function (sProperty) {
   alert(arguments.length > 0 ? this[sProperty] : this);
@@ -210,10 +209,10 @@ interval을 취소할 수 있습니다.
 
 ```js
 (function loop() {
-   setTimeout(() => {
-      // 로직을 넣어주세요
+  setTimeout(() => {
+    // 로직을 넣어주세요
 
-      loop();
+    loop();
   }, delay);
 })();
 ```

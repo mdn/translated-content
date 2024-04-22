@@ -1,15 +1,6 @@
 ---
 title: WeakMap.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/set
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - WeakMap
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/set
-original_slug: Web/JavaScript/Reference/Objets_globaux/WeakMap/set
 ---
 
 s{{JSRef}}

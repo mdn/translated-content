@@ -1,10 +1,6 @@
 ---
 title: ceiling
 slug: Web/XPath/Functions/ceiling
-tags:
-  - Référence_XSLT
-translation_of: Web/XPath/Functions/ceiling
-original_slug: Web/XPath/Fonctions/ceiling
 ---
 
 {{ XsltRef() }}

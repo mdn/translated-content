@@ -42,9 +42,9 @@ Void.
 ```html
 <!-- beforebegin -->
 <p>
-<!-- afterbegin -->
-foo
-<!-- beforeend -->
+  <!-- afterbegin -->
+  foo
+  <!-- beforeend -->
 </p>
 <!-- afterend -->
 ```
@@ -54,12 +54,12 @@ foo
 ## 范例
 
 ```js
-beforeBtn.addEventListener('click', function() {
-  para.insertAdjacentText('afterbegin',textInput.value);
+beforeBtn.addEventListener("click", function () {
+  para.insertAdjacentText("afterbegin", textInput.value);
 });
 
-afterBtn.addEventListener('click', function() {
-  para.insertAdjacentText('beforeend',textInput.value);
+afterBtn.addEventListener("click", function () {
+  para.insertAdjacentText("beforeend", textInput.value);
 });
 ```
 

@@ -1,7 +1,6 @@
 ---
 title: CanvasRenderingContext2D.clearRect()
 slug: Web/API/CanvasRenderingContext2D/clearRect
-translation_of: Web/API/CanvasRenderingContext2D/clearRect
 ---
 
 {{APIRef}}
@@ -17,9 +16,9 @@ void ctx.clearRect(x, y, largeur, hauteur);
 ### Paramètres
 
 - `x`
-  - : La coordonnée sur l'axe des *x* du point de départ du rectangle.
+  - : La coordonnée sur l'axe des _x_ du point de départ du rectangle.
 - `y`
-  - : La coordonnée sur l'axe des *y* du point de départ du rectangle.
+  - : La coordonnée sur l'axe des _y_ du point de départ du rectangle.
 - `largeur`
   - : La largeur du rectangle.
 - `hauteur`
@@ -27,7 +26,7 @@ void ctx.clearRect(x, y, largeur, hauteur);
 
 ## Notes d'utilisation
 
-Un problème classique avec `clearRect` est qu'il peut apparaître comme ne fonctionnant pas si l'on n'[utilise pas les trajets de façon appropriée](/fr/docs/Tutoriel_canvas/Formes_g%C3%A9om%C3%A9triques#Drawing_paths). N'oubliez pas d'appeler {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} avant de commencer à dessiner une nouvelle image après avoir appelé `clearRect`.
+Un problème classique avec `clearRect` est qu'il peut apparaître comme ne fonctionnant pas si l'on n'[utilise pas les trajets de façon appropriée](/fr/docs/Tutoriel_canvas/Formes_géométriques#Drawing_paths). N'oubliez pas d'appeler {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} avant de commencer à dessiner une nouvelle image après avoir appelé `clearRect`.
 
 ## Exemples
 
@@ -48,9 +47,9 @@ var canevas = document.getElementById("canvas");
 var ctx = canevas.getContext("2d");
 
 ctx.beginPath();
-ctx.moveTo(20,20);
-ctx.lineTo(200,20);
-ctx.lineTo(120,120);
+ctx.moveTo(20, 20);
+ctx.lineTo(200, 20);
+ctx.lineTo(120, 120);
 ctx.closePath(); // dessine la dernière ligne du triangle
 ctx.stroke();
 
@@ -78,7 +77,8 @@ ctx.lineTo(120,120);
 ctx.closePath(); // dessine la dernière ligne du triangle
 ctx.stroke();
 
-ctx.clearRect(10, 10, 100, 100);</textarea>
+ctx.clearRect(10, 10, 100, 100);</textarea
+>
 ```
 
 ```js hidden
@@ -94,14 +94,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);

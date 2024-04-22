@@ -1,7 +1,6 @@
 ---
 title: Qu'est-ce que sont les outils de développement ?
 slug: Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools
-original_slug: Learn/Common_questions/What_are_browser_developer_tools
 ---
 
 Tous les navigateurs web modernes possèdent un ensemble d'outils de développement. Ces outils permettent de réaliser différentes actions&nbsp;: inspecter le code HTML, CSS ou JavaScript chargé à la volée dans la page, montrer les fichiers téléchargés et leur temps de chargement, etc. Dans cet article, nous verrons comment utiliser les fonctionnalités basiques des outils de développements d'un navigateur (aussi souvent appelés par l'anglicisme «&nbsp;<i lang="en">devtools</i>&nbsp;»).
@@ -12,7 +11,7 @@ Tous les navigateurs web modernes possèdent un ensemble d'outils de développem
 
 Les outils de développement, s'affichent généralement dans une sous-fenêtre du navigateur, de la façon suivante (cela peut varier légèrement d'un navigateur à l'autre)&nbsp;:
 
-![Capture d'écran d'un navigateur avec les outils de développement ouverts. La page web est affichée sur la moitié supérieure de la fenêtre du navigateur et les outils de développement sur la moitié inférieure. Dans les outils de développement, on distingue trois panneaux&nbsp;: HTML avec l'élément `body` sélectionné, CSS avec les styles qui cibles l'élément `body` sélectionné et un panneau pour les styles calculés qui affiche les styles du site, la case à cocher pour les styles du navigateur n'étant pas cochée.](devtools_63_inspector.png)
+![Capture d'écran d'un navigateur avec les outils de développement ouverts. La page web est affichée sur la moitié supérieure de la fenêtre du navigateur et les outils de développement sur la moitié inférieure. Dans les outils de développement, on distingue trois panneaux : HTML avec l'élément `body` sélectionné, CSS avec les styles qui cibles l'élément `body` sélectionné et un panneau pour les styles calculés qui affiche les styles du site, la case à cocher pour les styles du navigateur n'étant pas cochée.](devtools_63_inspector.png)
 
 Comment faire pour que cette sous-fenêtre apparaisse&nbsp;? Trois méthodes&nbsp;:
 
@@ -30,7 +29,7 @@ Comment faire pour que cette sous-fenêtre apparaisse&nbsp;? Trois méthodes&nbs
 
 - Via un menu contextuel&nbsp;: Cliquez-droit sur un élément de la page web (ou <kbd>Ctrl</kbd>+clic sur macOS) et sélectionnez _Examiner l'élément_ dans le menu qui apparait (_Bonus&nbsp;:_ cette méthode ouvrira l'inspecteur et sélectionnera directement l'élément en question&nbsp;!).
 
-![Le logo de Firefox comme un élément du DOM dans un site web d'exemple avec le menu contextuel affiché. Ce menu contextuel apparaît lors d'un clic-droit sur n'importe quel élément d'une page web. La dernière option du menu indique «&nbsp;Inspecter&nbsp;».](inspector_context.png)
+![Le logo de Firefox comme un élément du DOM dans un site web d'exemple avec le menu contextuel affiché. Ce menu contextuel apparaît lors d'un clic-droit sur n'importe quel élément d'une page web. La dernière option du menu indique « Inspecter ».](inspector_context.png)
 
 ## L'inspecteur&nbsp;: explorateur du DOM et éditeur de CSS
 
@@ -173,17 +172,20 @@ Vous verrez alors quelque chose comme ceci à l'écran&nbsp;:
 Pour voir ce qui se passe, essayez de saisir les fragments de code suivants dans la console, un à un en pressant <kbd>Entrée</kbd> entre chaque&nbsp;:
 
 ```js
-alert('Coucou !');
+alert("Coucou !");
 ```
 
 ```js
-document.querySelector('html').style.backgroundColor = 'purple';
+document.querySelector("html").style.backgroundColor = "purple";
 ```
 
 ```js
-const logoWikipedia = document.createElement('img');
-logoWikipedia.setAttribute('src','https://upload.wikimedia.org/wikipedia/commons/6/63/Wikipedia-logo.png');
-document.querySelector('h1').appendChild(logoWikipedia);
+const logoWikipedia = document.createElement("img");
+logoWikipedia.setAttribute(
+  "src",
+  "https://upload.wikimedia.org/wikipedia/commons/6/63/Wikipedia-logo.png",
+);
+document.querySelector("h1").appendChild(logoWikipedia);
 ```
 
 Désormais, essayez de saisir ces versions incorrectes pour voir le résultat.
@@ -193,13 +195,16 @@ alert('Coucou !);
 ```
 
 ```js example-bad
-document.cheeseSelector('html').style.backgroundColor = 'purple';
+document.cheeseSelector("html").style.backgroundColor = "purple";
 ```
 
 ```js example-bad
-const logoWikipedia = document.createElement('img');
-myBanana.setAttribute('src','https://upload.wikimedia.org/wikipedia/commons/6/63/Wikipedia-logo.png');
-document.querySelector('h1').appendChild(logoWikipedia);
+const logoWikipedia = document.createElement("img");
+myBanana.setAttribute(
+  "src",
+  "https://upload.wikimedia.org/wikipedia/commons/6/63/Wikipedia-logo.png",
+);
+document.querySelector("h1").appendChild(logoWikipedia);
 ```
 
 Vous pourrez voir les erreurs que renvoie le navigateur. Il arrive que ces erreurs soient plutôt incompréhensibles, mais comprendre l'origine du problème en relisant le code devrait être jouable&nbsp;!

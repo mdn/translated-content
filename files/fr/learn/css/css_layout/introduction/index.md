@@ -1,21 +1,6 @@
 ---
 title: Introduction à la mise en page en CSS
 slug: Learn/CSS/CSS_layout/Introduction
-tags:
-  - Apprendre
-  - Article
-  - Boîtes flexibles
-  - CSS
-  - Débutant
-  - Flottants
-  - Flux
-  - Grille
-  - Intro
-  - Mise en page
-  - Positionnement
-  - Tableaux
-translation_of: Learn/CSS/CSS_layout/Introduction
-original_slug: Apprendre/CSS/CSS_layout/Introduction
 ---
 
 {{LearnSidebar}}{{NextMenu("Apprendre/CSS/CSS_layout/Normal_Flow", "Apprendre/CSS/CSS_layout")}}
@@ -28,7 +13,7 @@ Cet article récapitule quelques fonctionnalités de mise en page CSS que l'on a
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Les fondamentaux du HTML (étudiez
-        <a href="/fr/Apprendre/HTML/Introduction_%C3%A0_HTML"
+        <a href="/fr/Apprendre/HTML/Introduction_à_HTML"
           >Introduction au HTML</a
         >) et avoir une idée de la manière dont la CSS fonctionne (étudiez
         <a href="/fr/Apprendre/CSS/Introduction_à_CSS">Introduction aux CSS</a
@@ -88,7 +73,7 @@ Lorsque vous utilisez les CSS pour faire une mise en page, vous déplacez les é
 
 Les méthodes des CSS pouvant changer le placement des éléments sont les suivantes :
 
-- **La propriété {{cssxref("display")}}** — les valeurs standards comme `block`, `inline` ou `inline-block` peuvent changer la manière dont l'élément se comporte dans le cours normal (voir [Types de boîtes](/fr/Apprendre/CSS/Introduction_%C3%A0_CSS/Le_mod%C3%A8le_de_bo%C3%AEte#Les_types_de_bo%C3%AEte) pour plus d'informations). Ensuite, nous disposons de méthodes de mise en page autonomes activées par l'intermédiaire d'une valeur de `display`, par exemple les [Grilles CSS](/fr/docs/Learn/CSS/CSS_layout/Grids) ou [Flexbox](/fr/docs/Learn/CSS/CSS_layout/Flexbox).
+- **La propriété {{cssxref("display")}}** — les valeurs standards comme `block`, `inline` ou `inline-block` peuvent changer la manière dont l'élément se comporte dans le cours normal (voir [Types de boîtes](/fr/Apprendre/CSS/Introduction_à_CSS/Le_modèle_de_boîte#Les_types_de_boîte) pour plus d'informations). Ensuite, nous disposons de méthodes de mise en page autonomes activées par l'intermédiaire d'une valeur de `display`, par exemple les [Grilles CSS](/fr/docs/Learn/CSS/CSS_layout/Grids) ou [Flexbox](/fr/docs/Learn/CSS/CSS_layout/Flexbox).
 - **Flotteurs** — appliquer à {{cssxref("float")}} une valeur comme `left` peut créer une juxtaposition d'un élément bloc à côté d'un autre, tout comme les images «&nbsp;baignent&nbsp;» dans le texte dans les mises en page de magazines.
 - **La propriété {{cssxref("position")}}** — vous permet de contrôler avec précision le placement de boîtes dans d'autres boîtes. `static` est le placement par défaut dans le cours, mais vous pouvez manipuler les éléments pour qu'ils se comportent différemment à l'aide d'autres valeurs, par exemple en les fixant en haut à gauche de la fenêtre d'affichage du navigateur.
 - **Mise en page de tableaux** — les fonctions conçues pour styliser les parties d'un tableau HTML peuvent être utilisées sur des éléments non tableau en utilisant `display: table` et les propriétés associées.
@@ -113,14 +98,15 @@ Le balisage HTML ci-dessous crée un élément conteneur de la classe `wrapper`,
 Mais nous ajoutons `display: flex` sur le parent&nbsp;; les trois éléments se placent maintenant côte à côte. Cela provient du fait qu'ils sont devenus des _éléments flex_ et qu'ils utilisent les valeurs initiales données par flexbox. Ils sont disposés alignés, car la valeur initiale de {{cssxref("flex-direction")}} est `row`. Ils apparaissent serrés au haut de l'élément le plus haut, car la valeur initiale de la propriété {{cssxref("align-items")}} est `stretch`. Ce qui signifie que les éléments se casent dans la hauteur du conteneur `flex` défini dans ce cas par l'élément le plus grand. Les éléments s'alignent à partir de l'origine du conteneur à la fin sans laisser d'espace.
 
 ```css hidden
-* {box-sizing: border-box;}
-
-.wrapper > div {
-    border-radius: 5px;
-    background-color: rgb(207,232,220);
-    padding: 1em;
+* {
+  box-sizing: border-box;
 }
 
+.wrapper > div {
+  border-radius: 5px;
+  background-color: rgb(207, 232, 220);
+  padding: 1em;
+}
 ```
 
 ```css
@@ -146,31 +132,32 @@ En plus des propriétés ci-dessus applicables au conteneur `flex`, il existe de
 À titre d'exemple, nous pouvons donner la valeur `1` à la propriété {{cssxref("flex")}} des éléments enfants. Tous les éléments vont grandir jusqu'à remplir le conteneur, au lieu de laisser de l'espace à la suite. S'il y a assez d'espace, les éléments vont devenir plus larges&nbsp;; s'il y en a moins ils vont devenir plus étroits. En outre, si vous ajoutez un autre élément au balisage, les éléments vont rapetisser pour lui faire de la place — ils ajusteront leur taille pour prendre la même quantité d'espace, quel qu'il soit.
 
 ```css hidden
-    * {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
-    .wrapper > div {
-        border-radius: 5px;
-        background-color: rgb(207,232,220);
-        padding: 1em;
-    }
-
+.wrapper > div {
+  border-radius: 5px;
+  background-color: rgb(207, 232, 220);
+  padding: 1em;
+}
 ```
 
 ```css
 .wrapper {
-    display: flex;
+  display: flex;
 }
 
 .wrapper > div {
-    flex: 1;
+  flex: 1;
 }
 ```
 
 ```html
 <div class="wrapper">
-    <div class="box1">Un</div>
-    <div class="box2">Deux</div>
-    <div class="box3">Trois</div>
+  <div class="box1">Un</div>
+  <div class="box2">Deux</div>
+  <div class="box3">Trois</div>
 </div>
 ```
 
@@ -187,33 +174,34 @@ Alors que «&nbsp;flexbox&nbsp;» est conçu pour une disposition unidimensionne
 ### Utiliser display: grid
 
 ```css hidden
-    * {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
-    .wrapper > div {
-        border-radius: 5px;
-        background-color: rgb(207,232,220);
-        padding: 1em;
-    }
-
+.wrapper > div {
+  border-radius: 5px;
+  background-color: rgb(207, 232, 220);
+  padding: 1em;
+}
 ```
 
 ```css
 .wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 100px 100px;
-    grid-gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px 100px;
+  grid-gap: 10px;
 }
 ```
 
 ```html
 <div class="wrapper">
-    <div class="box1">Un</div>
-    <div class="box2">Deux</div>
-    <div class="box3">Trois</div>
-    <div class="box4">Quatre</div>
-    <div class="box5">Cinq</div>
-    <div class="box6">Six</div>
+  <div class="box1">Un</div>
+  <div class="box2">Deux</div>
+  <div class="box3">Trois</div>
+  <div class="box4">Quatre</div>
+  <div class="box5">Cinq</div>
+  <div class="box6">Six</div>
 </div>
 ```
 
@@ -224,45 +212,46 @@ Alors que «&nbsp;flexbox&nbsp;» est conçu pour une disposition unidimensionne
 Une fois la trame créée, vous pouvez y placer explicitement les éléments au lieu de compter sur le placement automatique. Dans ce second exemple ci‑dessous nous avons défini la même trame, mais cette fois avec trois éléments enfants. Nous avons défini début et fin de ligne pour chaque élément avec les propriétés {{cssxref("grid-column")}} et {{cssxref("grid-row")}}. Les éléments occupent alors plusieurs trames.
 
 ```css hidden
-    * {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
-    .wrapper > div {
-        border-radius: 5px;
-        background-color: rgb(207,232,220);
-        padding: 1em;
-    }
-
+.wrapper > div {
+  border-radius: 5px;
+  background-color: rgb(207, 232, 220);
+  padding: 1em;
+}
 ```
 
 ```css
 .wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 100px 100px;
-    grid-gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px 100px;
+  grid-gap: 10px;
 }
 
 .box1 {
-    grid-column: 2 / 4;
-    grid-row: 1;
+  grid-column: 2 / 4;
+  grid-row: 1;
 }
 
 .box2 {
-    grid-column: 1;
-    grid-row: 1 / 3;
+  grid-column: 1;
+  grid-row: 1 / 3;
 }
 
 .box3 {
-    grid-row: 2;
-    grid-column: 3;
+  grid-row: 2;
+  grid-column: 3;
 }
 ```
 
 ```html
 <div class="wrapper">
-    <div class="box1">Un</div>
-    <div class="box2">Deux</div>
-    <div class="box3">Trois</div>
+  <div class="box1">Un</div>
+  <div class="box2">Deux</div>
+  <div class="box3">Trois</div>
 </div>
 ```
 
@@ -287,21 +276,21 @@ Dans l'exemple ci‑dessous nous faisons flotter un élément `<div>` à gauche 
 
 ```css hidden
 body {
-    width: 90%;
-    max-width: 900px;
-    margin: 0 auto;
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 p {
-    line-height: 2;
-    word-spacing: 0.1rem;
+  line-height: 2;
+  word-spacing: 0.1rem;
 }
 
 .box {
-    background-color: rgb(207,232,220);
-    border: 2px solid rgb(79,185,227);
-    padding: 10px;
-    border-radius: 5px;
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
+  padding: 10px;
+  border-radius: 5px;
 }
 ```
 
@@ -310,15 +299,25 @@ p {
 
 <div class="box">Boîte flottante</div>
 
-<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
+  dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus
+  ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus
+  laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum,
+  tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus
+  neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
+  volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros
+  pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec
+  lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+</p>
 ```
 
 ```css
 .box {
-    float: left;
-    width: 150px;
-    height: 150px;
-    margin-right: 30px;
+  float: left;
+  width: 150px;
+  height: 150px;
+  margin-right: 30px;
 }
 ```
 
@@ -361,11 +360,11 @@ body {
 }
 
 p {
-    background-color: rgb(207,232,220);
-    border: 2px solid rgb(79,185,227);
-    padding: 10px;
-    margin: 10px;
-    border-radius: 5px;
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
 }
 ```
 
@@ -404,19 +403,19 @@ body {
 }
 
 p {
-    background-color: rgb(207,232,220);
-    border: 2px solid rgb(79,185,227);
-    padding: 10px;
-    margin: 10px;
-    border-radius: 5px;
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
 }
 ```
 
 ```css
 .positioned {
   position: relative;
-  background: rgba(255,84,104,.3);
-  border: 2px solid rgb(255,84,104);
+  background: rgba(255, 84, 104, 0.3);
+  border: 2px solid rgb(255, 84, 104);
   top: 30px;
   left: 30px;
 }
@@ -455,19 +454,19 @@ body {
 }
 
 p {
-    background-color: rgb(207,232,220);
-    border: 2px solid rgb(79,185,227);
-    padding: 10px;
-    margin: 10px;
-    border-radius: 5px;
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
 }
 ```
 
 ```css
 .positioned {
   position: absolute;
-  background: rgba(255,84,104,.3);
-  border: 2px solid rgb(255,84,104);
+  background: rgba(255, 84, 104, 0.3);
+  border: 2px solid rgb(255, 84, 104);
   top: 30px;
   left: 30px;
 }
@@ -498,33 +497,61 @@ Pour cet exemple, l'HTML est constitué de trois paragraphes de texte, de façon
 
 <div class="positioned">Fixé</div>
 
-<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
+  dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus
+  ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus
+  laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum,
+  tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus
+  neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
+  volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros
+  pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec
+  lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+</p>
 
-<p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+<p>
+  Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+  ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+  est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+  tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus
+  sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+  vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+</p>
 
-<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
+  dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus
+  ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus
+  laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum,
+  tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus
+  neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
+  volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros
+  pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec
+  lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+</p>
 ```
 
 ```css hidden
 body {
-    width: 500px;
-    margin: 0 auto;
+  width: 500px;
+  margin: 0 auto;
 }
 
 .positioned {
-    background: rgba(255,84,104,.3);
-    border: 2px solid rgb(255,84,104);
-    padding: 10px;
-    margin: 10px;
-    border-radius: 5px;
+  background: rgba(255, 84, 104, 0.3);
+  border: 2px solid rgb(255, 84, 104);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
 }
 ```
 
 ```css
 .positioned {
-    position: fixed;
-    top: 30px;
-    left: 30px;
+  position: fixed;
+  top: 30px;
+  left: 30px;
 }
 ```
 
@@ -537,13 +564,41 @@ Le positionnement collant est la dernière méthode de positionnement à notre d
 ```html hidden
 <h1>Positionnement collant</h1>
 
-<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
+  dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus
+  ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus
+  laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum,
+  tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus
+  neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
+  volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros
+  pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec
+  lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+</p>
 
 <div class="positioned">Collé</div>
 
-<p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+<p>
+  Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+  ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+  est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+  tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus
+  sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+  vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+</p>
 
-<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
+  dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus
+  ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus
+  laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum,
+  tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus
+  neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
+  volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros
+  pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec
+  lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+</p>
 ```
 
 ```css hidden
@@ -553,8 +608,8 @@ body {
 }
 
 .positioned {
-  background: rgba(255,84,104,.3);
-  border: 2px solid rgb(255,84,104);
+  background: rgba(255, 84, 104, 0.3);
+  border: 2px solid rgb(255, 84, 104);
   padding: 10px;
   margin: 10px;
   border-radius: 5px;
@@ -586,15 +641,15 @@ Prenons un exemple. Tout d'abord, un simple balisage qui crée un formulaire HTM
   <p>Tout d'abord, dites‑nous votre nom et votre âge.</p>
   <div>
     <label for="fname">Prénom&nbsp;:</label>
-    <input type="text" id="fname">
+    <input type="text" id="fname" />
   </div>
   <div>
     <label for="lname">Nom&nbsp;:</label>
-    <input type="text" id="lname">
+    <input type="text" id="lname" />
   </div>
   <div>
     <label for="age">Âge&nbsp;:</label>
-    <input type="text" id="age">
+    <input type="text" id="age" />
   </div>
 </form>
 ```
@@ -617,7 +672,8 @@ form div {
   display: table-row;
 }
 
-form label, form input {
+form label,
+form input {
   display: table-cell;
   margin-bottom: 10px;
 }
@@ -657,37 +713,55 @@ Dans l'exemple ci–dessous, nous démarrons avec un bloc HTML dans un élément
 
 ```html
 <div class="container">
-    <h1>Disposition en colonnes</h1>
+  <h1>Disposition en colonnes</h1>
 
-    <p>Paragraphe 1.</p>
-    <p>Paragraphe 2.</p>
-
+  <p>Paragraphe 1.</p>
+  <p>Paragraphe 2.</p>
 </div>
 ```
 
 Noux utilisons une propriété `column-width` de valeur 200 pixels pour ce conteneur&nbsp;; le navigateur crée autant de colonnes de 200 pixels de large qu'il est possible de faire entrer dans le conteneur, puis il partage l'espace restant entre les colonnes crées.
 
 ```html hidden
-    <div class="container">
-        <h2>Disposition en colonnes</h2>
+<div class="container">
+  <h2>Disposition en colonnes</h2>
 
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+    aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+    pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at
+    ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer
+    ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur
+    vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus.
+    Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus
+    sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus.
+    Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis,
+    eget fermentum sapien.
+  </p>
 
-
-        <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-
-    </div>
-
+  <p>
+    Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+    ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+    est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+    tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies
+    lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+    vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+    penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+  </p>
+</div>
 ```
 
 ```css hidden
-body { max-width: 800px; margin: 0 auto; }
+body {
+  max-width: 800px;
+  margin: 0 auto;
+}
 ```
 
 ```css
-    .container {
-        column-width: 200px;
-    }
+.container {
+  column-width: 200px;
+}
 ```
 
 {{ EmbedLiveSample('Disposition_sur_plusieurs_colonnes', '100%', 200) }}

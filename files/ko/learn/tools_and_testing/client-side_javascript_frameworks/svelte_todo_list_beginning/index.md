@@ -1,7 +1,6 @@
 ---
 title: Svelte 할 일 목록 앱 시작
-slug: >-
-    Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning
 l10n:
   sourceCommit: 4a5ceb89ac004d087669aeee3c26475c2207787f
 ---
@@ -95,7 +94,7 @@ REPL을 사용하여 우리와 함께 코딩하려면 <https://svelte.dev/repl/b
 
 1. 새 폴더 `src/components`를 만듭니다.
 
-    > **참고:** `src` 폴더 안의 아무 곳에나 컴포넌트를 넣을 수 있습니다. 하지만 `components` 폴더는 따라야하는 규칙으로 인정되고 컴포넌트를 쉽게 찾을 수 있습니다.
+   > **참고:** `src` 폴더 안의 아무 곳에나 컴포넌트를 넣을 수 있습니다. 하지만 `components` 폴더는 따라야하는 규칙으로 인정되고 컴포넌트를 쉽게 찾을 수 있습니다.
 
 2. 다음 내용을 포함하는 `src/components/Todos.svelte`라는 파일을 만드세요.
 
@@ -103,7 +102,7 @@ REPL을 사용하여 우리와 함께 코딩하려면 <https://svelte.dev/repl/b
    <h1>Svelte 할 일 목록</h1>
    ```
 
-3. `public/index.html`에서 `title` 요소를 변경하여 _Svelte 할 일 목록_라는 텍스트를 포함하도록 합니다.
+3. `public/index.html`에서 `title` 요소를 변경하여 *Svelte 할 일 목록*라는 텍스트를 포함하도록 합니다.
 
    ```html
    <title>Svelte 할 일 목록</title>
@@ -121,7 +120,7 @@ REPL을 사용하여 우리와 함께 코딩하려면 <https://svelte.dev/repl/b
 
 5. 개발 모드에서 Svelte는 컴포넌트에 존재하지 않는 속성을 지정할 때 브라우저 콘솔에 경고를 표시합니다. 이 경우에는 `App` 내부에서는 사용되지 않지만 `src/main.js` 내부의 `App` 컴포넌트를 인스턴스화할 때 지정되는 `name` 속성이 있습니다. 콘솔은 현재 "\<App>이 알 수 없는 속성 '이름'으로 생성되었습니다"라는 메시지를 표시해야 합니다. 이를 제거하려면 `src/main.js`에서 `name` 속성을 제거하세요. 이제 다음과 같이 표시됩니다.
 
-    ```js
+   ```js
    import App from "./App.svelte";
 
    const app = new App({
@@ -198,7 +197,9 @@ REPL을 사용하여 우리와 함께 코딩하려면 <https://svelte.dev/repl/b
             </button>
             <button class="btn btn__primary todo-edit" type="submit">
               저장
-              <span class="visually-hidden">Svelte 스타터 앱 만들기의 새 이름</span>
+              <span class="visually-hidden"
+                >Svelte 스타터 앱 만들기의 새 이름</span
+              >
             </button>
           </div>
         </form>
@@ -210,9 +211,7 @@ REPL을 사용하여 우리와 함께 코딩하려면 <https://svelte.dev/repl/b
       <div class="stack-small">
         <div class="c-cb">
           <input type="checkbox" id="todo-2" checked />
-          <label for="todo-2" class="todo-label">
-            첫 번째 컴포넌트 생성
-          </label>
+          <label for="todo-2" class="todo-label"> 첫 번째 컴포넌트 생성 </label>
         </div>
         <div class="btn-group">
           <button type="button" class="btn">
@@ -232,9 +231,7 @@ REPL을 사용하여 우리와 함께 코딩하려면 <https://svelte.dev/repl/b
       <div class="stack-small">
         <div class="c-cb">
           <input type="checkbox" id="todo-3" />
-          <label for="todo-3" class="todo-label">
-            나머지 튜토리얼 완료
-          </label>
+          <label for="todo-3" class="todo-label"> 나머지 튜토리얼 완료 </label>
         </div>
         <div class="btn-group">
           <button type="button" class="btn">
@@ -298,7 +295,7 @@ CSS를 포함하지 않았기 때문에 `visual-hidden` 클래스는 아직 효�
 <ul
   role="list"
   className="todo-list stack-large"
-  aria-labelledby="list-heading">
+  aria-labelledby="list-heading"></ul>
 ```
 
 'role' 속성은 보조 기술이 요소가 어떤 의미론적 가치를 가지고 있는지 또는 그 목적이 무엇인지 설명하는 데 도움이 됩니다. `<ul>`은 기본적으로 목록처럼 취급되지만 추가하려는 스타일로 인해 해당 기능이 중단됩니다. 'role' 속성은 `<ul>` 요소에 대한 "목록" 의미를 복원합니다. 이것이 필요한 이유에 대해 자세히 알아보려면 Scott O'Hara의 기사 "Fixing Lists"를 참조하십시오.
@@ -444,7 +441,9 @@ body {
   width: 100%;
   max-width: 68rem;
   margin: 0 auto;
-  font: 1.6rem/1.25 Arial, sans-serif;
+  font:
+    1.6rem/1.25 Arial,
+    sans-serif;
   background-color: #f5f5f5;
   color: #4d4d4d;
 }
@@ -543,7 +542,9 @@ body {
   margin: 2rem 0 4rem 0;
   padding: 1rem;
   position: relative;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
+  box-shadow:
+    0 2px 4px 0 rgba(0, 0, 0, 0.2),
+    0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
 }
 @media screen and (min-width: 550px) {
   .todoapp {

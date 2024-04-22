@@ -1,13 +1,6 @@
 ---
 title: <legend>
 slug: Web/HTML/Element/legend
-tags:
-  - HTML
-  - HTML forms
-  - Web
-  - element legend
-  - legend
-translation_of: Web/HTML/Element/legend
 ---
 
 {{HTMLSidebar}}
@@ -19,10 +12,10 @@ translation_of: Web/HTML/Element/legend
 | [Категории контента](/ru/docs/HTML/Content_categories) | Нет                                                                    |
 | ------------------------------------------------------ | ---------------------------------------------------------------------- |
 | Допустимый контент                                     | [Фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content). |
-| Пропуск тегов                                          | {{no_tag_omission}}                                               |
-| Допустимые родители                                    | Является дочерним элементом тега {{HTMLElement("fieldset")}}  |
+| Пропуск тегов                                          | {{no_tag_omission}}                                                    |
+| Допустимые родители                                    | Является дочерним элементом тега {{HTMLElement("fieldset")}}           |
 | Допустимые ARIA-роли                                   | Нет                                                                    |
-| DOM-интерфейс                                          | {{domxref("HTMLLegendElement")}}                           |
+| DOM-интерфейс                                          | {{domxref("HTMLLegendElement")}}                                       |
 
 ## Атрибуты
 
@@ -42,5 +35,5 @@ translation_of: Web/HTML/Element/legend
 
 ## Смотрите также
 
-- Другие связанные элементы: {{HTMLElement("form")}}, {{HTMLElement("option")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} и {{HTMLElement("meter")}}.
+- Другие связанные элементы: {{HTMLElement("form")}}, {{HTMLElement("option")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} и {{HTMLElement("meter")}}.
 - [ARIA: Form role](/ru/docs/Web/Accessibility/ARIA/Roles/Form_Role)

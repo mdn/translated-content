@@ -28,7 +28,7 @@ Object.freeze(obj)
 
 ## 描述
 
-冻结一个对象相当于[阻止其扩展](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions)然后将所有现有属性的描述符的 `configurable` 特性更改为 `false`——对于数据属性，将同时把 `writable` 特性更改为 `false`。无法向被冻结的对象的属性中添加或删除任何内容。任何这样的尝试都将失败，可能是静默失败，也可能抛出一个 {{jsxref("TypeError")}} 异常（通常情况下，在{{jsxref("Strict_mode", "严格模式", "", 1)}}中抛出）。
+冻结一个对象相当于[阻止其扩展](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions)然后将所有现有[属性的描述符](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#描述)的 `configurable` 特性更改为 `false`——对于数据属性，将同时把 `writable` 特性更改为 `false`。无法向被冻结的对象的属性中添加或删除任何内容。任何这样的尝试都将失败，可能是静默失败，也可能抛出一个 {{jsxref("TypeError")}} 异常（通常情况下，在{{jsxref("Strict_mode", "严格模式", "", 1)}}中抛出）。
 
 对于被冻结对象的数据属性，它们的值不能被更改，因为它们的 `writable` 和 `configurable` 特性被设置为 `false`。访问器属性（getter 和 setter）也相同——getter 返回的属性值仍然可以更改，setter 可以在设置属性时调用而不抛出错误。请注意，对象类型的值仍然可以修改，除非它们也被冻结。数组作为一种对象也可以被冻结；数组被冻结后，既不能更改它的元素，也不能向数组中添加或删除元素。
 
@@ -145,7 +145,7 @@ obj1.internal.a; // 'aValue'
 
 #### 什么是“浅冻结”？
 
-调用 `Object.freeze(object)` 的结果仅适用于 `object` 本身的直接属性，并且只会在 `object` 上防止未来的属性添加、删除，或重新赋值的操作。如果这些属性的值本身是对象，这些对象不会被冻结，并且可能成为属性添加、删除，或重新赋值操作的目标。
+调用 `Object.freeze(object)` 的结果仅适用于 `object` 本身的直接属性，并且*只会*在 `object` 上防止未来的属性添加、删除，或重新赋值的操作。如果这些属性的值本身是对象，这些对象不会被冻结，并且可能成为属性添加、删除，或重新赋值操作的目标。
 
 ```js
 const employee = {
@@ -165,7 +165,7 @@ employee.address.city = "Noida"; // 可以修改子对象的属性
 console.log(employee.address.city); // "Noida"
 ```
 
-为了使对象不可变，需要递归地冻结每个对象类型的属性（深冻结）。当且仅当你知道对象在引用图中不包含[循环引用](<https://zh.wikipedia.org/wiki/環_(圖論)>)时，可以根据你的设计逐个案例地使用该模式，否则会导致无限循环。`deepFreeze()` 的一个增强功能是添加一个内部函数，该函数接收一个路径（例如一个数组）参数，这样可以在调用 `deepFreeze()` 递归地冻结对象时，避免冻结正在被处理的对象。但仍有可能会冻结不应该被冻结的对象，例如 \[window]。
+为了使对象不可变，需要递归地冻结每个对象类型的属性（深冻结）。当且仅当你知道对象在引用图中不包含[循环引用](<https://zh.wikipedia.org/wiki/環_(圖論)>)时，可以根据你的设计逐个案例地使用该模式，否则会导致无限循环。`deepFreeze()` 的一个增强功能是添加一个内部函数，该函数接收一个路径（例如一个数组）参数，这样可以在调用 `deepFreeze()` 递归地冻结对象时，避免冻结正在被处理的对象。但仍有可能会冻结不应该被冻结的对象，例如 [`window`](/zh-CN/docs/Web/API/Window)。
 
 ```js
 function deepFreeze(object) {

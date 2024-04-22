@@ -19,10 +19,10 @@ slug: Web/API/XMLSerializer
 首先，最基本的例子是将整个 document 对象序列化为一个 XML 字符串。
 
 ```js
- var s = new XMLSerializer();
- var d = document;
- var str = s.serializeToString(d);
- saveXML(str);
+var s = new XMLSerializer();
+var d = document;
+var str = s.serializeToString(d);
+saveXML(str);
 ```
 
 这里新建了一个 `XMLSerializer` 对象实例，然后将待序列化的 {{domxref("Document")}} 对象实例传入返回等价 XML 的 {{domxref("XMLSerializer.serializeToString", "serializeToString()")}} 方法。
@@ -40,12 +40,12 @@ slug: Web/API/XMLSerializer
 因为`insertAdjacentHTML()` 的第二个参数是一个字符串而不是 `Node` 节点对象，所以这里先要使用 `XMLSerializer` 将节点转换为字符串。
 
 ```js
-var inp = document.createElement('input');
+var inp = document.createElement("input");
 var XMLS = new XMLSerializer();
 var inp_xmls = XMLS.serializeToString(inp); // 先将一个 DOM 节点转换为字符串。
 
 // 将新建的节点添加到 DOM 中。
-document.body.insertAdjacentHTML('afterbegin', inp_xmls);
+document.body.insertAdjacentHTML("afterbegin", inp_xmls);
 ```
 
 以上代码通过调用 {{domxref("Document.createElement()")}} 方法新建一个 {HTMLElement("input")}} 对象 , 然后通过 {{domxref("XMLSerializer.serializeToString", "serializeToString()")}} 方法将该对象序列化为 XML.

@@ -109,16 +109,16 @@ http-response set-header X-Frame-Options SAMEORIGIN
 Express で `X-Frame-Options` ヘッダーを送信するように設定するには、[helmet](https://helmetjs.github.io/) を使用して [frameguard](https://helmetjs.github.io/docs/frameguard/) でヘッダーを設定してください。以下の記述をサーバー設定に追加してください。
 
 ```js
-const helmet = require('helmet');
+const helmet = require("helmet");
 const app = express();
-app.use(helmet.frameguard({ action: 'SAMEORIGIN' }));
+app.use(helmet.frameguard({ action: "SAMEORIGIN" }));
 ```
 
 他にも、直接 frameguard を使用することもできます。
 
 ```js
-const frameguard = require('frameguard')
-app.use(frameguard({ action: 'SAMEORIGIN' }))
+const frameguard = require("frameguard");
+app.use(frameguard({ action: "SAMEORIGIN" }));
 ```
 
 ## 仕様書

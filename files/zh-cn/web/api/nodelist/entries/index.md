@@ -31,7 +31,7 @@ node.appendChild(kid3);
 var list = node.childNodes;
 
 // 使用 for..of 循环
-for(var entry of list.entries()) {
+for (var entry of list.entries()) {
   console.log(entry);
 }
 ```

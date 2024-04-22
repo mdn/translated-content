@@ -5,6 +5,8 @@ l10n:
   sourceCommit: fead53324d271aa05e93b369966a773bb328c64b
 ---
 
+{{GlossarySidebar}}
+
 あるプログラミング言語が**第一級関数 (First-class functions)** を持つと言われる場合、その言語の関数がその他の変数と同様に扱われることを表します。例えば、こうした言語では、関数を他の関数への引数として渡したり、他の関数から返却したり、変数の値として代入したりすることができます。
 
 ## 例
@@ -14,7 +16,7 @@ l10n:
 ```js
 const foo = () => {
   console.log("foobar");
-}
+};
 foo(); // 変数を使用して呼び出し
 // foobar
 ```
@@ -47,7 +49,7 @@ greeting(sayHello, "JavaScript!");
 function sayHello() {
   return () => {
     console.log("Hello!");
-  }
+  };
 }
 ```
 

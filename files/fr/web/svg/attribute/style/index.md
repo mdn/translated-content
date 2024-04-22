@@ -1,11 +1,6 @@
 ---
 title: style
 slug: Web/SVG/Attribute/style
-tags:
-  - Reference
-  - SVG
-  - SVG Attribute
-translation_of: Web/SVG/Attribute/style
 ---
 
 {{SVGRef}}
@@ -51,8 +46,12 @@ L'exemple suivant stylise le rectangle en utilisant l'attribut `style`, avec CSS
 
 ```html
 <svg viewbox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
-  <rect height="300" width="600" x="200" y="100"
-     style="fill: red; stroke: blue; stroke-width: 3"/>
+  <rect
+    height="300"
+    width="600"
+    x="200"
+    y="100"
+    style="fill: red; stroke: blue; stroke-width: 3" />
 </svg>
 ```
 

@@ -1,40 +1,39 @@
 ---
 title: RegExp.prototype.global
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/global
+l10n:
+  sourceCommit: 16bacf2194dc9e9ff6ee5bcc65316547cf88a8d9
 ---
 
 {{JSRef}}
 
-**`global`** プロパティは "`g`" フラグが正規表現で使われているかどうかを返します。`global` は個々の正規表現インスタンスの読取専用プロパティです。
+**`global`** は {{jsxref("RegExp")}} インスタンスのプロパティで、`g` フラグが正規表現で使われているかどうかを返します。
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-global.html")}}{{js_property_attributes(0, 0, 1)}}
+{{EmbedInteractiveExample("pages/js/regexp-prototype-global.html")}}
 
 ## 解説
 
-`global` の値は {{jsxref("Boolean")}} です。 `true` は "`g`" フラグを使用していることを表します。それ以外は `false` になります。 "`g`" フラグは、その正規表現が文字列の中で一致する可能性がある場所すべてについてテストを行うことを示します。 `global` ("`g`") と `sticky` ("`y`") の両方が指定された正規表現では、 `global` フラグが無視され、粘着的な比較が行われます。
+`RegExp.prototype.global` は、`g` フラグが使用された場合は `true`、そうでない場合は `false` になります。`g` フラグは、正規表現が文字列内のすべての可能なマッチに対してテストされるべきであることを示します。 [`exec()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) を呼び出すたびに [`lastIndex`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex) プロパティが更新され、次の `exec()` の呼び出しが次の文字から始まるようになります。
 
-このプロパティを直接変更することはできません。
+[`String.prototype.matchAll()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll) や [`String.prototype.replaceAll()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll) のようないくつかのメソッドは、引数が正規表現である場合、それがグローバルであることを検証します。正規表現の [`@@match`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@match) および [`@@replace`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)（[`String.prototype.match()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/match) と [`String.prototype.replace()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/replace) によって呼び出されます）も、正規表現がグローバルである場合に異なる動作をします。
+
+`global` の設定アクセサーは `undefined` です。このプロパティを直接変更することはできません。
 
 ## 例
 
 ### global の使用
 
 ```js
-var regex = new RegExp('foo', 'g');
+const regex = /foo/g;
+console.log(regex.global); // true
 
-console.log(regex.global);  // true
+const str = "fooexamplefoo";
+const str1 = str.replace(regex, "");
+console.log(str1); // example
 
-var str = 'fooexamplefoo';
-
-var str1 = str.replace(regex, '');
-
-console.log(str1);  // Output: example
-
-var regex1 = new RegExp('foo');
-
-var str2 = str.replace(regex1, '');
-
-console.log(str2);  // Output: examplefoo
+const regex1 = /foo/;
+const str2 = str.replace(regex1, "");
+console.log(str2); // examplefoo
 ```
 
 ## 仕様書
@@ -43,12 +42,15 @@ console.log(str2);  // Output: examplefoo
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.RegExp.global")}}
+{{Compat}}
 
 ## 関連情報
 
-- {{jsxref("RegExp.lastIndex")}}
-- {{jsxref("RegExp.prototype.ignoreCase")}}
-- {{jsxref("RegExp.prototype.multiline")}}
-- {{jsxref("RegExp.prototype.source")}}
-- {{jsxref("RegExp.prototype.sticky")}}
+- {{jsxref("RegExp.prototype.lastIndex")}}
+- {{JSxRef("RegExp.prototype.dotAll")}}
+- {{JSxRef("RegExp.prototype.hasIndices")}}
+- {{JSxRef("RegExp.prototype.ignoreCase")}}
+- {{JSxRef("RegExp.prototype.multiline")}}
+- {{JSxRef("RegExp.prototype.source")}}
+- {{JSxRef("RegExp.prototype.sticky")}}
+- {{JSxRef("RegExp.prototype.unicode")}}

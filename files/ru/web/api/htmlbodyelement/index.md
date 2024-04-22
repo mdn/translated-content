@@ -1,8 +1,8 @@
 ---
 title: HTMLBodyElement
 slug: Web/API/HTMLBodyElement
-translation_of: Web/API/HTMLBodyElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLBodyElement`** интерфейс предоставляющий специальные свойства (помимо этого, они постоянно наследуют {{ domxref("HTMLElement") }} интерфейс) для манипуляции элементами тела.

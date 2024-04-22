@@ -53,7 +53,7 @@ CORS 실패는 오류의 원인이지만, 보안상의 이유로 JavaScript에�
   - {{HTTPMethod("HEAD")}}
   - {{HTTPMethod("POST")}}
 
-- 유저 에이전트가 자동으로 설정 한 헤더 (예를들어, {{HTTPHeader("Connection")}}, {{HTTPHeader("User-Agent")}}, [Fetch 명세에서 “forbidden header name”으로 정의한 헤더](https://fetch.spec.whatwg.org/#forbidden-header-name))외에, 수동으로 설정할 수 있는 헤더는 오직 [Fetch 명세에서 “CORS-safelisted request-header”로 정의한 헤더](https://fetch.spec.whatwg.org/#cors-safelisted-request-header) 뿐입니다.
+- 유저 에이전트가 자동으로 설정 한 헤더 (예를들어, {{HTTPHeader("Connection")}}, {{HTTPHeader("User-Agent")}}, [Fetch 명세에서 "forbidden header name"으로 정의한 헤더](https://fetch.spec.whatwg.org/#forbidden-header-name))외에, 수동으로 설정할 수 있는 헤더는 오직 [Fetch 명세에서 "CORS-safelisted request-header"로 정의한 헤더](https://fetch.spec.whatwg.org/#cors-safelisted-request-header) 뿐입니다.
 
   - {{HTTPHeader("Accept")}}
   - {{HTTPHeader("Accept-Language")}}
@@ -71,7 +71,7 @@ CORS 실패는 오류의 원인이지만, 보안상의 이유로 JavaScript에�
 
 > **참고:** 이는 웹 컨텐츠가 이미 발행할 수 있는 것과 동일한 종류의 cross-site 요청입니다. 서버가 적절한 헤더를 전송하지 않으면 요청자에게 응답 데이터가 공개되지 않습니다. 따라서 cross-site 요청 위조를 방지하는 사이트는 HTTP 접근 제어를 두려워 할 만한 부분이 없습니다.
 
-> **참고:** **주의:** WebKit Nightly 와 Safari Technology Preview 는 {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("Content-Language")}} 헤더에서 허용되는 값에 대한 추가 제약이 있습니다. 이러한 헤더 중 하나에 ”nonstandard” 값이 존재하면, WebKit/Safari 는 더이상 요청을 “simple request”로 간주하지 않습니다. 다음 Webkit 버그 외에 WebKit/Safari 가 “nonstandard” 으로 간주하는 값은 문서화되어 있지 않습니다.
+> **참고:** **주의:** WebKit Nightly 와 Safari Technology Preview 는 {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("Content-Language")}} 헤더에서 허용되는 값에 대한 추가 제약이 있습니다. 이러한 헤더 중 하나에 "nonstandard" 값이 존재하면, WebKit/Safari 는 더이상 요청을 "simple request"로 간주하지 않습니다. 다음 Webkit 버그 외에 WebKit/Safari 가 "nonstandard" 으로 간주하는 값은 문서화되어 있지 않습니다.
 >
 > - [Require preflight for non-standard CORS-safelisted request headers Accept, Accept-Language, and Content-Language](https://bugs.webkit.org/show_bug.cgi?id=165178)
 > - [Allow commas in Accept, Accept-Language, and Content-Language request headers for simple CORS](https://bugs.webkit.org/show_bug.cgi?id=165566)
@@ -79,7 +79,7 @@ CORS 실패는 오류의 원인이지만, 보안상의 이유로 JavaScript에�
 >
 > 이 부분은 명세가 아니기 때문에 다른 브라우저에는 이러한 추가 제한 사항이 없습니다.
 
-예를들어, `https://foo.example` 의 웹 컨텐츠가 `https://bar.other` 도메인의 컨텐츠를 호출하길 원합니다. `foo.example`에 배포된 자바스크립트에는 아래와 같은 코드가 사용될 수 있습니다.
+예를들어, `https://foo.example` 의 웹 컨텐츠가 `https://bar.other` 도메인의 컨텐츠를 호출하길 원합니다. `foo.example`에 배포된 JavaScript에는 아래와 같은 코드가 사용될 수 있습니다.
 
 ```
 const xhr = new XMLHttpRequest();
@@ -132,7 +132,7 @@ Access-Control-Allow-Origin: https://foo.example
 
 ### 프리플라이트 요청
 
-"preflighted" request는 위에서 논의한 [“simple requests”](/ko/docs/Web/HTTP/CORS#단순_요청simple_requests) 와는 달리, 먼저 {{HTTPMethod("OPTIONS")}} 메서드를 통해 다른 도메인의 리소스로 HTTP 요청을 보내 실제 요청이 전송하기에 안전한지 확인합니다. cross-origin 요청은 유저 데이터에 영향을 줄 수 있기 때문에 이와같이 미리 전송(preflighted)합니다.
+"preflighted" request는 위에서 논의한 ["simple requests"](/ko/docs/Web/HTTP/CORS#단순_요청simple_requests) 와는 달리, 먼저 {{HTTPMethod("OPTIONS")}} 메서드를 통해 다른 도메인의 리소스로 HTTP 요청을 보내 실제 요청이 전송하기에 안전한지 확인합니다. cross-origin 요청은 유저 데이터에 영향을 줄 수 있기 때문에 이와같이 미리 전송(preflighted)합니다.
 
 다음은 preflighted 할 요청의 예제입니다.
 
@@ -213,7 +213,7 @@ Content-Type: text/plain
 [Some GZIP'd payload]
 ```
 
-첫 번째 예제의 1 - 10 행은 {{HTTPMethod("OPTIONS")}} 메서드를 사용한 preflight request를 나타냅니다. 브라우저는 위의 자바스크립트 코드 스니펫이 사용중인 요청 파라미터를 기반으로 전송해야 합니다. 그렇게 해야 서버가 실제 요청 파라미터로 요청을 보낼 수 있는지 여부에 응답할 수 있습니다. OPTIONS는 서버에서 추가 정보를 판별하는데 사용하는 HTTP/1.1 메서드입니다. 또한 {{Glossary("safe")}} 메서드이기 때문에, 리소스를 변경하는데 사용할 수 없습니다. OPTIONS 요청과 함께 두 개의 다른 요청 헤더가 전송됩니다. (10, 11행)
+첫 번째 예제의 1 - 10 행은 {{HTTPMethod("OPTIONS")}} 메서드를 사용한 preflight request를 나타냅니다. 브라우저는 위의 JavaScript 코드 스니펫이 사용중인 요청 파라미터를 기반으로 전송해야 합니다. 그렇게 해야 서버가 실제 요청 파라미터로 요청을 보낼 수 있는지 여부에 응답할 수 있습니다. OPTIONS는 서버에서 추가 정보를 판별하는데 사용하는 HTTP/1.1 메서드입니다. 또한 {{Glossary("safe")}} 메서드이기 때문에, 리소스를 변경하는데 사용할 수 없습니다. OPTIONS 요청과 함께 두 개의 다른 요청 헤더가 전송됩니다. (10, 11행)
 
 ```
 Access-Control-Request-Method: POST
@@ -263,7 +263,7 @@ CORS 프로토콜은 본래 그 동작(리다이렉트)이 필요했지만, [이
 
 {{domxref("XMLHttpRequest")}} 혹은 [Fetch](/ko/docs/Web/API/Fetch_API) 를 사용할 때 CORS 에 의해 드러나는 가장 흥미로운 기능은 "credentialed" requests 입니다. credentialed requests는 [HTTP cookies](/ko/docs/Web/HTTP/Cookies) 와 HTTP Authentication 정보를 인식합니다. 기본적으로 cross-site `XMLHttpRequest` 나 [Fetch](/ko/docs/Web/API/Fetch_API) 호출에서 브라우저는 자격 증명을 보내지 **않습니다.** `XMLHttpRequest` 객체나 {{domxref("Request")}} 생성자가 호출될 때 특정 플래그를 설정해야 합니다.
 
-이 예제에서 원래 `http://foo.example` 에서 불러온 컨텐츠는 쿠키를 설정하는 `http://bar.other` 리소스에 simple GET request를 작성합니다. foo.example의 내용은 다음과 같은 자바스크립트를 포함할 수 있습니다.
+이 예제에서 원래 `http://foo.example` 에서 불러온 컨텐츠는 쿠키를 설정하는 `http://bar.other` 리소스에 simple GET request를 작성합니다. foo.example의 내용은 다음과 같은 JavaScript를 포함할 수 있습니다.
 
 ```
 const invocation = new XMLHttpRequest();
@@ -468,8 +468,8 @@ Access-Control-Request-Headers: <field-name>[, <field-name>]*
 - [Will it CORS?](https://httptoolkit.tech/will-it-cors) - an interactive CORS explainer & generator
 - [Using CORS with All (Modern) Browsers](https://www.telerik.com/blogs/using-cors-with-all-modern-browsers)
 - [How to run Chrome browser without CORS](https://alfilatov.com/posts/run-chrome-without-cors/)
-- [Stack Overflow answer with “how to” info for dealing with common problems](https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe/43881141#43881141):
+- [Stack Overflow answer with "how to" info for dealing with common problems](https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe/43881141#43881141):
 
   - How to avoid the CORS preflight
-  - How to use a CORS proxy to get around _“No Access-Control-Allow-Origin header”_
-  - How to fix _“Access-Control-Allow-Origin header must not be the wildcard”_
+  - How to use a CORS proxy to get around _"No Access-Control-Allow-Origin header"_
+  - How to fix _"Access-Control-Allow-Origin header must not be the wildcard"_

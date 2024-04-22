@@ -1,7 +1,6 @@
 ---
 title: Document.pointerLockElement
 slug: Web/API/Document/pointerLockElement
-original_slug: Web/API/DocumentOrShadowRoot/pointerLockElement
 l10n:
   sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
 ---
@@ -20,10 +19,10 @@ l10n:
 
 ```js
 if (document.pointerLockElement === canvasElement) {
-  console.log('ポインターロック状態がロック中になりました');
+  console.log("ポインターロック状態がロック中になりました");
   // レスポンスで何か有益なことをする
 } else {
-  console.log('ポインターロック状態がロック解除になりました');
+  console.log("ポインターロック状態がロック解除になりました");
   // レスポンスで何か有益なことをする
 }
 ```

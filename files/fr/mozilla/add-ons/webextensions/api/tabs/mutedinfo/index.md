@@ -1,20 +1,9 @@
 ---
 title: tabs.MutedInfo
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/MutedInfo
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - MutedInfo
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - tabs
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/MutedInfo
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Cet objet contient un booléen indiquant si l'onglet est muet et la raison du dernier changement d'état.
 

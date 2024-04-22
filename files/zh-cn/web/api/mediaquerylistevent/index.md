@@ -31,17 +31,17 @@ _`MediaQueryListEvent` 接口的方法继承自它的父接口，{{DOMxRef("Even
 ## 示例
 
 ```js
-var mql = window.matchMedia('(max-width: 600px)');
+var mql = window.matchMedia("(max-width: 600px)");
 
 function screenTest(e) {
   if (e.matches) {
     /* 视口等于或小于 600 像素 */
-    para.textContent = 'This is a narrow screen — less than 600px wide.';
-    document.body.style.backgroundColor = 'red';
+    para.textContent = "This is a narrow screen — less than 600px wide.";
+    document.body.style.backgroundColor = "red";
   } else {
     /* 视口大于 600 像素 */
-    para.textContent = 'This is a wide screen — more than 600px wide.';
-    document.body.style.backgroundColor = 'blue';
+    para.textContent = "This is a wide screen — more than 600px wide.";
+    document.body.style.backgroundColor = "blue";
   }
 }
 

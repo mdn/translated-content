@@ -1,12 +1,11 @@
 ---
 title: BaseAudioContext.createBufferSource()
 slug: Web/API/BaseAudioContext/createBufferSource
-translation_of: Web/API/BaseAudioContext/createBufferSource
 ---
 
 {{ APIRef("Web Audio API") }}
 
-La méthode `createBufferSource()` de l’interface {{ domxref("BaseAudioContext") }} est utilisée pour créer un nouveau {{ domxref("AudioBufferSourceNode") }}, qui peut être employé pour jouer des données audio contenues dans un objet {{ domxref("AudioBuffer") }}.
+La méthode `createBufferSource()` de l'interface {{ domxref("BaseAudioContext") }} est utilisée pour créer un nouveau {{ domxref("AudioBufferSourceNode") }}, qui peut être employé pour jouer des données audio contenues dans un objet {{ domxref("AudioBuffer") }}.
 
 Des {{ domxref("AudioBuffer") }} peuvent être créés en utilisant {{domxref("BaseAudioContext.createBuffer")}}, ou sont retournés par la méthode {{domxref("BaseAudioContext.decodeAudioData")}} quand elle a terminé de décoder une piste audio avec succès.
 
@@ -28,9 +27,9 @@ Dans cet exemple, on crée un tampon de deux secondes, on le remplit avec du bru
 
 ```js
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var button = document.querySelector('button');
-var pre = document.querySelector('pre');
-var myScript = document.querySelector('script');
+var button = document.querySelector("button");
+var pre = document.querySelector("pre");
+var myScript = document.querySelector("script");
 
 pre.innerHTML = myScript.innerHTML;
 
@@ -42,17 +41,17 @@ var frameCount = audioCtx.sampleRate * 2.0;
 
 var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
 
-button.onclick = function() {
+button.onclick = function () {
   // Remplit le tampon avec du bruit blanc ;
   // simplement des valeurs aléatoires entre -1.0 et 1.0
   for (var channel = 0; channel < channels; channel++) {
-   // Ceci nous donne l’ArrayBuffer qui contient les données
-   var nowBuffering = myArrayBuffer.getChannelData(channel);
-   for (var i = 0; i < frameCount; i++) {
-     // Math.random() est parmi [0; 1.0]
-     // audio doit être parmi [-1.0; 1.0]
-     nowBuffering[i] = Math.random() * 2 - 1;
-   }
+    // Ceci nous donne l’ArrayBuffer qui contient les données
+    var nowBuffering = myArrayBuffer.getChannelData(channel);
+    for (var i = 0; i < frameCount; i++) {
+      // Math.random() est parmi [0; 1.0]
+      // audio doit être parmi [-1.0; 1.0]
+      nowBuffering[i] = Math.random() * 2 - 1;
+    }
   }
 
   // Obtient un AudioBufferSourceNode.
@@ -65,7 +64,7 @@ button.onclick = function() {
   source.connect(audioCtx.destination);
   // commence la lecture de la source
   source.start();
-}
+};
 ```
 
 ## Spécifications

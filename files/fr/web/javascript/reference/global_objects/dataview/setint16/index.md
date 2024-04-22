@@ -1,15 +1,6 @@
 ---
 title: DataView.prototype.setInt16()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setInt16
-tags:
-  - DataView
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/setInt16
-original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/setInt16
 ---
 
 {{JSRef}}

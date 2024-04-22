@@ -1,22 +1,6 @@
 ---
 title: Test sur plusieurs navigateurs
 slug: Learn/Tools_and_testing/Cross_browser_testing
-tags:
-  - Accessibility
-  - Automation
-  - Beginner
-  - CSS
-  - CodingScripting
-  - HTML
-  - JavaScript
-  - Landing
-  - Learn
-  - Module
-  - Testing
-  - Tools
-  - TopicStub
-  - cross browser
-translation_of: Learn/Tools_and_testing/Cross_browser_testing
 ---
 
 {{LearnSidebar}}

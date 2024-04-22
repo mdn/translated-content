@@ -1,7 +1,6 @@
 ---
 title: Math.asinh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/asinh
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/asinh
 ---
 
 {{JSRef}}
@@ -13,7 +12,7 @@ La función **`Math.asinh()`** retorna el arcoseno hyperbólico de un número, e
 ## Sintáxis
 
 ```js
-Math.asinh(x)
+Math.asinh(x);
 ```
 
 ### Parámetros
@@ -34,8 +33,8 @@ Debido a que `asinh()` es un método estático de `Math`, siempre hay que usarlo
 ### Usos de `Math.asinh()`
 
 ```js
-Math.asinh(1);  // 0.881373587019543
-Math.asinh(0);  // 0
+Math.asinh(1); // 0.881373587019543
+Math.asinh(0); // 0
 ```
 
 ## Polyfill
@@ -43,13 +42,15 @@ Math.asinh(0);  // 0
 As a quick and dirty hack the expression <math><semantics><mrow><mo lspace="0em" rspace="thinmathspace">arsinh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></msqrt></mrow><mo>)</mo></mrow></mrow><annotation encoding="TeX">\operatorname {arsinh} (x) = \ln \left(x + \sqrt{x^{2} + 1} \right)</annotation></semantics></math> may be used directly for a coarse emulation by the following function:
 
 ```js
-Math.asinh = Math.asinh || function(x) {
-  if (x === -Infinity) {
-    return x;
-  } else {
-    return Math.log(x + Math.sqrt(x * x + 1));
-  }
-};
+Math.asinh =
+  Math.asinh ||
+  function (x) {
+    if (x === -Infinity) {
+      return x;
+    } else {
+      return Math.log(x + Math.sqrt(x * x + 1));
+    }
+  };
 ```
 
 Been formally correct it suffers from a number of issues related to floating point computations. Accurate result requires special handling of positive/negative, small/large arguments as it done e.g. in [glibc](https://sourceware.org/git/?p=glibc.git;a=blob;f=sysdeps/ieee754/dbl-64/s_asinh.c) or [GNU Scientific Library](http://git.savannah.gnu.org/cgit/gsl.git/tree/sys/invhyp.c).

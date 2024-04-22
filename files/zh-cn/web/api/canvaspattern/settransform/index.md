@@ -27,8 +27,7 @@ setTransform(matrix)
 #### HTML
 
 ```html
-<canvas id="canvas"></canvas>
-<svg id="svg1"></svg>
+<canvas id="canvas"></canvas> <svg id="svg1"></svg>
 ```
 
 #### JavaScript
@@ -41,13 +40,13 @@ var svg1 = document.getElementById("svg1");
 var matrix = svg1.createSVGMatrix();
 
 var img = new Image();
-img.src = 'canvas_createpattern.png';
+img.src = "canvas_createpattern.png";
 
-img.onload = function() {
-  var pattern = ctx.createPattern(img, 'repeat');
+img.onload = function () {
+  var pattern = ctx.createPattern(img, "repeat");
   pattern.setTransform(matrix.rotate(-45).scale(1.5));
   ctx.fillStyle = pattern;
-  ctx.fillRect(0,0,400,400);
+  ctx.fillRect(0, 0, 400, 400);
 };
 ```
 
@@ -68,7 +67,8 @@ img.onload = function() {
   pattern.setTransform(matrix.rotate(-45).scale(1.5));
   ctx.fillStyle = pattern;
   ctx.fillRect(0,0,400,400);
-};</textarea>
+};</textarea
+>
 ```
 
 ```js hidden
@@ -87,14 +87,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);

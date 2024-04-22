@@ -79,8 +79,8 @@ code {
 
 ```css
 pre {
-  word-wrap: break-word;      /* IE 5.5-7 */
-  white-space: pre-wrap;      /* current browsers */
+  word-wrap: break-word; /* IE 5.5-7 */
+  white-space: pre-wrap; /* current browsers */
 }
 ```
 
@@ -96,16 +96,18 @@ pre {
     <option>pre-wrap</option>
     <option>pre-line</option>
     <option>break-spaces</option>
-  </select> }
+  </select>
+  }
 </div>
 <div id="results" class="box">
-  <p>    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-
-    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
 </div>
 ```
 
@@ -117,12 +119,12 @@ pre {
 }
 
 #css-code {
-  background-color: rgb(220,220,220);
+  background-color: rgb(220, 220, 220);
   font-size: 16px;
 }
 
 #results {
-  background-color: rgb(230,230,230);
+  background-color: rgb(230, 230, 230);
   overflow-x: scroll;
   height: 400px;
   white-space: normal;
@@ -131,23 +133,24 @@ pre {
 ```
 
 ```js hidden
-var select  = document.querySelector("#css-code select");
+var select = document.querySelector("#css-code select");
 var results = document.querySelector("#results p");
-select.addEventListener("change", function(e) {
-  results.setAttribute("style", "white-space: "+e.target.value);
-})
+select.addEventListener("change", function (e) {
+  results.setAttribute("style", "white-space: " + e.target.value);
+});
 ```
 
 ### HTML
 
 ```html
-    <p>    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-
-    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+  nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+  eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+  in culpa qui officia deserunt mollit anim id est laborum.
+</p>
 ```
 
 ### CSS + 결과

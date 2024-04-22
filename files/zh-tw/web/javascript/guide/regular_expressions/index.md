@@ -9,7 +9,7 @@ slug: Web/JavaScript/Guide/Regular_expressions
 
 ## 建立正規表達式
 
-您可透過下列兩種方法去創建一條正規表達式：
+你可透過下列兩種方法去創建一條正規表達式：
 
 使用正規表達式字面值（regular expression literal），包含兩個 `/` 字元之間的模式如下：
 
@@ -25,7 +25,7 @@ var re = /ab+c/;
 var re = new RegExp("ab+c");
 ```
 
-使用建構子函數供即時編譯正則表達式，當模式會異動、事先未知匹配模式、或者您將從其他地方取得時，使用建構子函數將較為合適。
+使用建構子函數供即時編譯正則表達式，當模式會異動、事先未知匹配模式、或者你將從其他地方取得時，使用建構子函數將較為合適。
 
 ## 撰寫正規表達模式
 
@@ -376,7 +376,7 @@ Within non-capturing parentheses `(?:` , the regular expression looks for three 
 The `Change` event activated when the user presses Enter sets the value of `RegExp.input`.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
@@ -387,7 +387,7 @@ The `Change` event activated when the user presses Enter sets the value of `RegE
         var OK = re.exec(phoneInput.value);
         if (!OK)
           window.alert(
-            phoneInput.value + " isn't a phone number with area code!"
+            phoneInput.value + " isn't a phone number with area code!",
           );
         else window.alert("Thanks, your phone number is " + OK[0]);
       }

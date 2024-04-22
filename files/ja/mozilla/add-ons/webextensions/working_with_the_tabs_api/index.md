@@ -40,7 +40,7 @@ Tabs API 機能の大半では権限は不要ですが、次の例外はあり�
 - ユーザーは拡張機能のページアクション、コンテキストメニュー、ショートカットキーいずれかでやりとりせねばならない。
 - アクティブなタブ内の権限のみ許可される。
 
-このアプローチの利点は、拡張機能が “Access your data for all websites” という警告をユーザーに表示しないことです。これは `<all_urls>` 権限により、拡張機能がいつでもどんなタブでも実行できるのに対し、[`"activeTab"`](/ja/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission) では、現在のタブでのユーザーが要求したアクションのみ実行するためです。
+このアプローチの利点は、拡張機能が "Access your data for all websites" という警告をユーザーに表示しないことです。これは `<all_urls>` 権限により、拡張機能がいつでもどんなタブでも実行できるのに対し、[`"activeTab"`](/ja/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission) では、現在のタブでのユーザーが要求したアクションのみ実行するためです。
 
 ## タブとそのプロパティの探検
 
@@ -52,7 +52,7 @@ Tabs API 機能の大半では権限は不要ですが、次の例外はあり�
 
 ### 方法の実例
 
-{{WebExtAPIRef("tabs.query")}} と {{WebExtAPIRef("tabs.Tab")}} の使われ方を見るために、[tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs) の例で “switch to tabs” のリストをツールバーボタンのポップアップに追加するのを見てみましょう。
+{{WebExtAPIRef("tabs.query")}} と {{WebExtAPIRef("tabs.Tab")}} の使われ方を見るために、[tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs) の例で "switch to tabs" のリストをツールバーボタンのポップアップに追加するのを見てみましょう。
 
 ![The tabs tabs tabs toolbar menu showing the switch to tap area](Switch_to_tab.png)
 
@@ -71,9 +71,7 @@ Tabs API 機能の大半では権限は不要ですが、次の例外はあり�
   "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs",
   "manifest_version": 2,
   "name": "Tabs, tabs, tabs",
-  "permissions": [
-    "tabs"
-  ],
+  "permissions": ["tabs"],
   "version": "1.0"
 }
 ```
@@ -88,43 +86,35 @@ Tabs API 機能の大半では権限は不要ですが、次の例外はあり�
 tabs.html では拡張機能のポップアップのコンテンツを定義します。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="tabs.css" />
+  </head>
 
- <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="tabs.css"/>
- </head>
+  <body>
+    <div class="panel">
+      <div class="panel-section panel-section-header">
+        <div class="text-section-header">Tabs-tabs-tabs</div>
+      </div>
 
-<body>
+      <a href="#" id="tabs-move-beginning"
+        >Move active tab to the beginning of the window</a
+      ><br />
 
- <div class="panel">
-    <div class="panel-section panel-section-header">
-     <div class="text-section-header">Tabs-tabs-tabs</div>
+      … Define the other menu items …
+
+      <div class="switch-tabs">
+        <p>Switch to tab</p>
+
+        <div id="tabs-list"></div>
+      </div>
     </div>
 
-    <a href="#" id="tabs-move-beginning">Move active tab to the beginning of the window</a><br>
-
-
-…
-
-Define the other menu items
-…
-
-    <div class="switch-tabs">
-
-     <p>Switch to tab</p>
-
-     <div id="tabs-list"></div>
-
-    </div>
- </div>
-
- <script src="tabs.js"></script>
-
-</body>
-
+    <script src="tabs.js"></script>
+  </body>
 </html>
 ```
 
@@ -150,7 +140,7 @@ document.addEventListener("DOMContentLoaded", listTabs);
 
 ```js
 function getCurrentWindowTabs() {
-  return browser.tabs.query({currentWindow: true});
+  return browser.tabs.query({ currentWindow: true });
 }
 ```
 
@@ -179,24 +169,23 @@ function listTabs() {
 1. {{WebExtAPIRef("tabs.Tab")}} オブジェクトからの最初の 5 項目でループする。
 2. 各項目ごとに、文書のフラグメントのハイパーリンクを追加する。
 
-    - リンクのラベル—つまり、そのテキスト—が、タブのタイトル (ない場合はその ID)を使って、セットされる
-    - タブの ID を使ってリンクのアドレスがセットされる。
+   - リンクのラベル—つまり、そのテキスト—が、タブのタイトル (ない場合はその ID)を使って、セットされる
+   - タブの ID を使ってリンクのアドレスがセットされる。
 
 ```js
-    for (let tab of tabs) {
-     if (!tab.active && counter <= limit) {
-        let tabLink = document.createElement('a');
+for (let tab of tabs) {
+  if (!tab.active && counter <= limit) {
+    let tabLink = document.createElement("a");
 
-        tabLink.textContent = tab.title || tab.id;
+    tabLink.textContent = tab.title || tab.id;
 
-       tabLink.setAttribute('href', tab.id);
-        tabLink.classList.add('switch-tabs');
-        currentTabs.appendChild(tabLink);
-     }
+    tabLink.setAttribute("href", tab.id);
+    tabLink.classList.add("switch-tabs");
+    currentTabs.appendChild(tabLink);
+  }
 
-     counter += 1;
-
-    }
+  counter += 1;
+}
 ```
 
 最後に、`tabs-list` div に文書のフラグメントが書き込まれる:
@@ -209,7 +198,7 @@ function listTabs() {
 
 #### アクティブタブを操作する
 
-関連するもう 1 つの例として、“Alert active tab” インフォオプションがあり、これはアクティブなタブのすべての {{WebExtAPIRef("tabs.Tab")}} オブジェクトのプロパティをアラートにダンプするものです:
+関連するもう 1 つの例として、"Alert active tab" インフォオプションがあり、これはアクティブなタブのすべての {{WebExtAPIRef("tabs.Tab")}} オブジェクトのプロパティをアラートにダンプするものです:
 
 ```js
  else if (e.target.id === "tabs-alertinfo") {
@@ -241,7 +230,7 @@ document.addEventListener("click", function(e) {
 
 ## タブを作成、複製、移動、更新、読み込み、削除する
 
-Having gathered information about the tabs you’ll most likely want to do something with them—either to offer users features for manipulating and managing tabs or to implement functionality in your extension.
+Having gathered information about the tabs you'll most likely want to do something with them—either to offer users features for manipulating and managing tabs or to implement functionality in your extension.
 
 The following functions are available:
 
@@ -249,8 +238,8 @@ The following functions are available:
 - duplicate a tab ({{WebExtAPIRef("tabs.duplicate")}}).
 - remove a tab ({{WebExtAPIRef("tabs.remove")}}).
 - move a tab ({{WebExtAPIRef("tabs.move")}}).
-- update the tab’s URL—effectively browse to a new page—({{WebExtAPIRef("tabs.update")}}).
-- reload the tab’s page ({{WebExtAPIRef("tabs.reload")}}).
+- update the tab's URL—effectively browse to a new page—({{WebExtAPIRef("tabs.update")}}).
+- reload the tab's page ({{WebExtAPIRef("tabs.reload")}}).
 
 > **メモ:**
 >
@@ -267,7 +256,7 @@ The following functions are available:
 
 ### 方法の実例
 
-The [tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs) example exercises all of these features except for updating a tab’s URL The way in which these APIs are used is similar, so we’ll look at one of the more involved implementations, that of the “Move active tab to the beginning of the window list” option.
+The [tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs) example exercises all of these features except for updating a tab's URL The way in which these APIs are used is similar, so we'll look at one of the more involved implementations, that of the "Move active tab to the beginning of the window list" option.
 
 But first, here is a demonstration of the feature in action:
 
@@ -279,24 +268,26 @@ None of the functions require a permission to operate, so there are no features 
 
 #### [tabs.html](https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.html)
 
-tabs.html defines the “menu” displayed in the popup, which includes the “Move active tab to the beginning of the window list” option, with a series of `<a>` tags grouped by a visual separator. Each menu item is given an ID, which is used in tabs.js to determine which menu item is being requested.
+tabs.html defines the "menu" displayed in the popup, which includes the "Move active tab to the beginning of the window list" option, with a series of `<a>` tags grouped by a visual separator. Each menu item is given an ID, which is used in tabs.js to determine which menu item is being requested.
 
 ```html
-    <a href="#" id="tabs-move-beginning">Move active tab to the beginning of the window</a><br>
-    <a href="#" id="tabs-move-end">Move active tab to the end of the window</a><br>
+<a href="#" id="tabs-move-beginning"
+  >Move active tab to the beginning of the window</a
+><br />
+<a href="#" id="tabs-move-end">Move active tab to the end of the window</a
+><br />
 
-    <div class="panel-section-separator"></div>
+<div class="panel-section-separator"></div>
 
+<a href="#" id="tabs-duplicate">Duplicate active tab</a><br />
 
-    <a href="#" id="tabs-duplicate">Duplicate active tab</a><br>
-
-    <a href="#" id="tabs-reload">Reload active tab</a><br>
-    <a href="#" id="tabs-alertinfo">Alert active tab info</a><br>
+<a href="#" id="tabs-reload">Reload active tab</a><br />
+<a href="#" id="tabs-alertinfo">Alert active tab info</a><br />
 ```
 
 #### [tabs.js](https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.js)
 
-To implement the “menu” defined in tabs.html, tabs.js includes a listener for clicks in tabs.html:
+To implement the "menu" defined in tabs.html, tabs.js includes a listener for clicks in tabs.html:
 
 ```js
 document.addEventListener("click", function(e) {
@@ -315,37 +306,37 @@ document.addEventListener("click", function(e) {
 
 A series of `if` statements then look to match the ID of the item clicked.
 
-This code snippet is for the “Move active tab to the beginning of the window list” option:
+This code snippet is for the "Move active tab to the beginning of the window list" option:
 
 ```js
- if (e.target.id === "tabs-move-beginning") {
-   callOnActiveTab((tab, tabs) => {
-     var index = 0;
-     if (!tab.pinned) {
-       index = firstUnpinnedTab(tabs);
-     }
-     console.log(`moving ${tab.id} to ${index}`)
-     browser.tabs.move([tab.id], {index});
-   });
- }
+if (e.target.id === "tabs-move-beginning") {
+  callOnActiveTab((tab, tabs) => {
+    var index = 0;
+    if (!tab.pinned) {
+      index = firstUnpinnedTab(tabs);
+    }
+    console.log(`moving ${tab.id} to ${index}`);
+    browser.tabs.move([tab.id], { index });
+  });
+}
 ```
 
 It's worth noting the use of `console.log()`. This enables you to output information to the [debugger](/ja/docs/Mozilla/Add-ons/WebExtensions/Debugging) console, which can be useful when resolving issues found during development.
 
 ![Example of the console.log output, from the move tabs feature, in the debugging console](console.png)
 
-The move code first calls `callOnActiveTab()` which in turn calls `getCurrentWindowTabs()` to get a {{WebExtAPIRef("tabs.Tab")}} object containing the active window’s tabs. It then loops through the object to find and return the active tab object:
+The move code first calls `callOnActiveTab()` which in turn calls `getCurrentWindowTabs()` to get a {{WebExtAPIRef("tabs.Tab")}} object containing the active window's tabs. It then loops through the object to find and return the active tab object:
 
 ```js
- function callOnActiveTab(callback) {
-   getCurrentWindowTabs().then((tabs) => {
-     for (var tab of tabs) {
-       if (tab.active) {
-         callback(tab, tabs);
-       }
-     }
-   });
- }
+function callOnActiveTab(callback) {
+  getCurrentWindowTabs().then((tabs) => {
+    for (var tab of tabs) {
+      if (tab.active) {
+        callback(tab, tabs);
+      }
+    }
+  });
+}
 ```
 
 ##### ピン止めされたタブ
@@ -354,25 +345,25 @@ A feature of tabs is that the user can _pin_ tabs in a window. Pinned tabs are p
 
 ```js
 function firstUnpinnedTab(tabs) {
- for (var tab of tabs) {
-   if (!tab.pinned) {
-     return tab.index;
-   }
- }
+  for (var tab of tabs) {
+    if (!tab.pinned) {
+      return tab.index;
+    }
+  }
 }
 ```
 
 We now have everything needed to move the tab: the active tab object from which we can get the tab ID and the position the tab is to be moved to. So, we can implement the move:
 
 ```js
-     browser.tabs.move([tab.id], {index});
+browser.tabs.move([tab.id], { index });
 ```
 
 The remaining functions to duplicate, reload, create, and remove tabs are implemented similarly.
 
 ## タブのズームレベルを操作する
 
-The next set of functions enable you to get ({{WebExtAPIRef("tabs.getZoom")}}) and set ({{WebExtAPIRef("tabs.setZoom")}}) the zoom level within a tab. You can also retrieve the zoom settings ({{WebExtAPIRef("tabs.getZoomSettings")}}) but, at the time of writing, the ability to set the settings ({{WebExtAPIRef("tabs.setZoomSettings")}}) wasn’t available in Firefox.
+The next set of functions enable you to get ({{WebExtAPIRef("tabs.getZoom")}}) and set ({{WebExtAPIRef("tabs.setZoom")}}) the zoom level within a tab. You can also retrieve the zoom settings ({{WebExtAPIRef("tabs.getZoomSettings")}}) but, at the time of writing, the ability to set the settings ({{WebExtAPIRef("tabs.setZoomSettings")}}) wasn't available in Firefox.
 
 The level of zoom can be between 30% and 300% (represented as decimals `0.3` to `3`).
 
@@ -388,7 +379,7 @@ The [tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/master/t
 
 {{EmbedYouTube("RFr3oYBCg28")}}
 
-Let’s take a look at how the zoom in is implemented.
+Let's take a look at how the zoom in is implemented.
 
 #### [manifest.json](https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/manifest.json)
 
@@ -433,7 +424,7 @@ For the zoom in feature, this runs:
  }
 ```
 
-This code uses `callOnActiveTab()` to get the details of the active tab, then {{WebExtAPIRef("tabs.getZoom")}} gets the tab’s current zoom factor. The current zoom is compared to the defined maximum (`MAX_ZOOM`) and an alert issued if the tab is already at the maximum zoom. Otherwise, the zoom level is incremented but limited to the maximum zoom, then the zoom is set with {{WebExtAPIRef("tabs.getZoom")}}.
+This code uses `callOnActiveTab()` to get the details of the active tab, then {{WebExtAPIRef("tabs.getZoom")}} gets the tab's current zoom factor. The current zoom is compared to the defined maximum (`MAX_ZOOM`) and an alert issued if the tab is already at the maximum zoom. Otherwise, the zoom level is incremented but limited to the maximum zoom, then the zoom is set with {{WebExtAPIRef("tabs.getZoom")}}.
 
 ## タブの CSS を操作する
 
@@ -447,7 +438,7 @@ The [apply-css](https://github.com/mdn/webextensions-examples/tree/master/apply-
 
 {{EmbedYouTube("bcK-GT2Dyhs")}}
 
-Let’s walk through how it’s set up.
+Let's walk through how it's set up.
 
 #### [manifest.json](https://github.com/mdn/webextensions-examples/blob/master/apply-css/manifest.json)
 
@@ -456,46 +447,40 @@ To use the CSS features you need either:
 - `"tabs"` permission and [host permission](/ja/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) or
 - `"activeTab"` permission.
 
-The latter is the most useful, as it allows an extension to use {{WebExtAPIRef("tabs.insertCSS")}} and {{WebExtAPIRef("tabs.removeCSS")}} in the active tab when run from the extension’s browser or page action, context menu, or a shortcut.
+The latter is the most useful, as it allows an extension to use {{WebExtAPIRef("tabs.insertCSS")}} and {{WebExtAPIRef("tabs.removeCSS")}} in the active tab when run from the extension's browser or page action, context menu, or a shortcut.
 
 ```json
 {
   "description": "Adds a page action to toggle applying CSS to pages.",
 
- "manifest_version": 2,
- "name": "apply-css",
- "version": "1.0",
- "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/apply-css",
+  "manifest_version": 2,
+  "name": "apply-css",
+  "version": "1.0",
+  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/apply-css",
 
- "background": {
-
+  "background": {
     "scripts": ["background.js"]
- },
+  },
 
- "page_action": {
-
+  "page_action": {
     "default_icon": "icons/off.svg",
     "browser_style": true
- },
+  },
 
- "permissions": [
-    "activeTab",
-    "tabs"
- ]
-
+  "permissions": ["activeTab", "tabs"]
 }
 ```
 
-You will note that `"tabs"` permission is requested in addition to `"activeTab"`. This additional permission is needed to enable the extension’s script to access the tab’s URL, the importance of which we’ll see in a moment.
+You will note that `"tabs"` permission is requested in addition to `"activeTab"`. This additional permission is needed to enable the extension's script to access the tab's URL, the importance of which we'll see in a moment.
 
 The other main features in the manifest.json file are the definition of:
 
 - **a background script**, which starts running as soon as the extension is loaded.
-- **a “page action”**, which defines an icon to be added to the browser’s address bar.
+- **a "page action"**, which defines an icon to be added to the browser's address bar.
 
 #### [background.js](https://github.com/mdn/webextensions-examples/blob/master/apply-css/background.js)
 
-On startup, background.js sets some constants to define the CSS to be applied, titles for the “page action”, and a list of protocols the extension will work in:
+On startup, background.js sets some constants to define the CSS to be applied, titles for the "page action", and a list of protocols the extension will work in:
 
 ```js
 const CSS = "body { border: 20px solid red; }";
@@ -510,32 +495,31 @@ When first loaded, the extension uses {{WebExtAPIRef("tabs.query")}} to get a li
 var gettingAllTabs = browser.tabs.query({});
 
 gettingAllTabs.then((tabs) => {
- for (let tab of tabs) {
-   initializePageAction(tab);
- }
+  for (let tab of tabs) {
+    initializePageAction(tab);
+  }
 });
 ```
 
-`initializePageAction` uses `protocolIsApplicable()` to determine whether the active tab’s URL is one the CSS can be applied to:
+`initializePageAction` uses `protocolIsApplicable()` to determine whether the active tab's URL is one the CSS can be applied to:
 
 ```js
 function protocolIsApplicable(url) {
- var anchor =  document.createElement('a');
- anchor.href = url;
- return APPLICABLE_PROTOCOLS.includes(anchor.protocol);
+  var anchor = document.createElement("a");
+  anchor.href = url;
+  return APPLICABLE_PROTOCOLS.includes(anchor.protocol);
 }
 ```
 
-Then, if the example can act on the tab, `initializePageAction()` sets the tab’s `pageAction` (navigation bar) icon and title to use the “off” versions before making the `pageAction` visible:
+Then, if the example can act on the tab, `initializePageAction()` sets the tab's `pageAction` (navigation bar) icon and title to use the "off" versions before making the `pageAction` visible:
 
 ```js
 function initializePageAction(tab) {
-
- if (protocolIsApplicable(tab.url)) {
-   browser.pageAction.setIcon({tabId: tab.id, path: "icons/off.svg"});
-   browser.pageAction.setTitle({tabId: tab.id, title: TITLE_APPLY});
-   browser.pageAction.show(tab.id);
- }
+  if (protocolIsApplicable(tab.url)) {
+    browser.pageAction.setIcon({ tabId: tab.id, path: "icons/off.svg" });
+    browser.pageAction.setTitle({ tabId: tab.id, title: TITLE_APPLY });
+    browser.pageAction.show(tab.id);
+  }
 }
 ```
 
@@ -547,36 +531,33 @@ browser.pageAction.onClicked.addListener(toggleCSS);
 
 `toggleCSS()` gets the title of the `pageAction` and then takes the action described:
 
-- **For "Apply CSS”:**
+- **For "Apply CSS":**
 
-  - toggles the `pageAction` icon and title to the “remove” versions.
+  - toggles the `pageAction` icon and title to the "remove" versions.
   - applies the CSS using {{WebExtAPIRef("tabs.insertCSS")}}.
 
-- **For “Remove CSS”:**
+- **For "Remove CSS":**
 
-  - toggles the `pageAction` icon and title to the “apply” versions.
+  - toggles the `pageAction` icon and title to the "apply" versions.
   - removes the CSS using {{WebExtAPIRef("tabs.removeCSS")}}.
 
 ```js
 function toggleCSS(tab) {
-
-
- function gotTitle(title) {
-
+  function gotTitle(title) {
     if (title === TITLE_APPLY) {
-     browser.pageAction.setIcon({tabId: tab.id, path: "icons/on.svg"});
-     browser.pageAction.setTitle({tabId: tab.id, title: TITLE_REMOVE});
-     browser.tabs.insertCSS({code: CSS});
+      browser.pageAction.setIcon({ tabId: tab.id, path: "icons/on.svg" });
+      browser.pageAction.setTitle({ tabId: tab.id, title: TITLE_REMOVE });
+      browser.tabs.insertCSS({ code: CSS });
     } else {
-     browser.pageAction.setIcon({tabId: tab.id, path: "icons/off.svg"});
-     browser.pageAction.setTitle({tabId: tab.id, title: TITLE_APPLY});
-     browser.tabs.removeCSS({code: CSS});
+      browser.pageAction.setIcon({ tabId: tab.id, path: "icons/off.svg" });
+      browser.pageAction.setTitle({ tabId: tab.id, title: TITLE_APPLY });
+      browser.tabs.removeCSS({ code: CSS });
     }
- }
+  }
 
- var gettingTitle = browser.pageAction.getTitle({tabId: tab.id});
+  var gettingTitle = browser.pageAction.getTitle({ tabId: tab.id });
 
- gettingTitle.then(gotTitle);
+  gettingTitle.then(gotTitle);
 }
 ```
 
@@ -584,16 +565,16 @@ Finally, to ensure that the `pageAction` is valid after each update to the tab, 
 
 ```js
 browser.tabs.onUpdated.addListener((id, changeInfo, tab) => {
- initializePageAction(tab);
+  initializePageAction(tab);
 });
 ```
 
 ## その他の興味深い機能
 
-There are a couple of other Tabs API features that don’t fit into one of the earlier sections:
+There are a couple of other Tabs API features that don't fit into one of the earlier sections:
 
 - Capture the visible tab content with {{WebExtAPIRef("tabs.captureVisibleTab")}}.
-- Detect the primary language of the content in a tab using {{WebExtAPIRef("tabs.detectLanguage")}}. This could be used, 例えば、to match the language in your extension’s UI with that of the page it’s running in.
+- Detect the primary language of the content in a tab using {{WebExtAPIRef("tabs.detectLanguage")}}. This could be used, 例えば、to match the language in your extension's UI with that of the page it's running in.
 
 ## 関連項目
 

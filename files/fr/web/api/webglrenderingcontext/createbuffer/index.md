@@ -1,13 +1,6 @@
 ---
 title: WebGLRenderingContext.createBuffer()
 slug: Web/API/WebGLRenderingContext/createBuffer
-tags:
-  - API
-  - Méthode
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
-translation_of: Web/API/WebGLRenderingContext/createBuffer
 ---
 
 {{APIRef("WebGL")}}
@@ -33,8 +26,8 @@ Un {{domxref("WebGLBuffer")}} stockant des données telles que des sommets ou de
 ### Création d'un tampon
 
 ```js
-var canevas = document.getElementById('canevas');
-var gl = canevas.getContext('webgl');
+var canevas = document.getElementById("canevas");
+var gl = canevas.getContext("webgl");
 var tampon = gl.createBuffer();
 ```
 

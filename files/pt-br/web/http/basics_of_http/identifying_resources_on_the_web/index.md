@@ -1,7 +1,6 @@
 ---
 title: Identificando recursos na web
 slug: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
-original_slug: Web/HTTP/Basico_sobre_HTTP/Identifying_resources_on_the_Web
 ---
 
 {{HTTPSidebar}}
@@ -107,8 +106,8 @@ urn:isbn:9780141036144
 
 ## Especificações
 
-| Specification                                                            | Title                                                              |
-| ------------------------------------------------------------------------ | ------------------------------------------------------------------ |
+| Specification                                          | Title                                                              |
+| ------------------------------------------------------ | ------------------------------------------------------------------ |
 | {{RFC("7230", "Uniform Resource Identifiers", "2.7")}} | Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing |
 
 ## Veja também

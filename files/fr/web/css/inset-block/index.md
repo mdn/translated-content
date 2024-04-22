@@ -1,13 +1,6 @@
 ---
 title: inset-block
 slug: Web/CSS/inset-block
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Propriété logique
-  - Reference
-translation_of: Web/CSS/inset-block
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

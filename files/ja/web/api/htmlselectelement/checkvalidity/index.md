@@ -1,6 +1,9 @@
 ---
-title: HTMLSelectElement.checkValidity()
+title: "HTMLSelectElement: checkValidity() メソッド"
+short-title: checkValidity()
 slug: Web/API/HTMLSelectElement/checkValidity
+l10n:
+  sourceCommit: 58269be5547b2e0b5b6f53a4c6eff6b13dfdf9bd
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -9,9 +12,17 @@ slug: Web/API/HTMLSelectElement/checkValidity
 
 ## 構文
 
-```js
-var result = selectElt.checkValidity();
+```js-nolint
+checkValidity()
 ```
+
+### 引数
+
+なし。
+
+### 返値
+
+要素の値に妥当性の問題がなければ `true` を返し、そうでなければ `false` を返します。
 
 ## 仕様書
 

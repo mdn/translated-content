@@ -17,7 +17,7 @@ slug: Web/API/TransformStream/readable
 
 ```js
 const textEncoderStream = new TransformStream();
-console.log(textEncoderStream.readable) // a ReadableStream
+console.log(textEncoderStream.readable); // a ReadableStream
 ```
 
 ## 规范

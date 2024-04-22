@@ -37,6 +37,7 @@ animation-duration: unset;
   - : 动画完成一个周期所需的时间。可以用秒（`s`）或毫秒（`ms`）指定。值必须是正数或零，单位是必需的。
 
     如果未提供值，则使用默认值 `0s`，此时动画仍会执行（会触发 [`animationStart`](/zh-CN/docs/Web/API/Element/animationstart_event) 和 [`animationEnd`](/zh-CN/docs/Web/API/Element/animationend_event) 事件）。如果 `animation-duration` 为 `0s` 时，动画是否可见取决于 [`animation-fill-mode`](/zh-CN/docs/Web/CSS/animation-fill-mode) 的值，如下所述：
+
     - 如果 `animation-fill-mode` 设置为 `backwards` 或者 `both`，则在 [`animation-delay`](/zh-CN/docs/Web/CSS/animation-delay) 倒计时期间将显示由 `animation-direction` 定义的动画的第一帧。
     - 如果 `animation-fill-mode` 设置为 `forwards` 或者 `both`，在 `animation-delay` 结束后，将显示由 `animation-direction` 定义的动画的最后一帧。
     - 如果 `animation-fill-mode` 设置为 `none`，动画将不会有任何的视觉效果。

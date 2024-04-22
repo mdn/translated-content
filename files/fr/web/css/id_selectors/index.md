@@ -1,16 +1,9 @@
 ---
 title: Sélecteurs d'ID
 slug: Web/CSS/ID_selectors
-tags:
-  - CSS
-  - Débutant
-  - Reference
-  - Sélecteur
-translation_of: Web/CSS/ID_selectors
-original_slug: Web/CSS/Sélecteurs_d_ID
 ---
 
-{{CSSRef("Selectors")}}
+{{CSSRef}}
 
 Un sélecteur d'identifiant (_ID selector_) permet, pour un document HTML, de cibler un élément grâce à la valeur de son attribut [`id`](/fr/docs/Web/HTML/Global_attributes#id). Il faut que la valeur soit exactement la même que celle du sélecteur pour que l'élément soit effectivement ciblé.
 
@@ -28,7 +21,6 @@ Un sélecteur d'identifiant (_ID selector_) permet, pour un document HTML, de ci
 ```
 
 > **Note :** Cela est équivalent à la notation suivante qui utilise un {{cssxref("Sélecteurs_d_attribut", "sélecteur d'attribut")}}:
->
 >
 > ```
 > [id=valeur_identifiant] { déclarations }

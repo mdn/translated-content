@@ -27,7 +27,7 @@ O seguinte código funciona normalmente no ES5 e anteriores. Entretanto, no ECMA
 var keys = [];
 
 with (Array.prototype) {
-  keys.push('something');
+  keys.push("something");
 }
 
 Object.keys(Array.prototype[Symbol.unscopables]);
@@ -42,12 +42,12 @@ Você também pode configurar `unscopables` para seu próprio objeot.
 ```js
 var obj = {
   foo: 1,
-  bar: 2
+  bar: 2,
 };
 
 obj[Symbol.unscopables] = {
   foo: false,
-  bar: true
+  bar: true,
 };
 
 with (obj) {
@@ -58,13 +58,11 @@ with (obj) {
 
 ## Especificações
 
-| Especificação                                                                                    |
-| ------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-symbol.unscopables', 'Symbol.unscopables')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Symbol.unscopables")}}
+{{Compat}}
 
 ## Veja também
 

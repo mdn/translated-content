@@ -3,6 +3,8 @@ title: CSRF
 slug: Glossary/CSRF
 ---
 
+{{GlossarySidebar}}
+
 **跨站請求偽造**（Cross-Site Request Forgery, CSRF）是一種冒充信任用戶，來傳送非預期指令的攻擊。比方說，可以在 {{glossary("URL")}} 連結背後添加惡意參數來攻擊：
 
 ```html
@@ -19,4 +21,4 @@ slug: Glossary/CSRF
 
 - 維基百科上的 [跨站請求偽造](https://zh.wikipedia.org/wiki/跨站請求偽造)
 - [Prevention measures](<https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet>)
-- [MDN 安全手冊](/zh-TW/Learn/tutorial/Information_Security_Basics)
+- [MDN 安全手冊](/zh-TW/docs/Learn/tutorial/Information_Security_Basics)

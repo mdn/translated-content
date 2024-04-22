@@ -1,8 +1,8 @@
 ---
 title: Формат Web Video Text Tracks (WebVTT)
 slug: Web/API/WebVTT_API
-translation_of: Web/API/WebVTT_API
 ---
+
 {{APIRef("WebVTT")}}
 
 **Формат Web Video Text Tracks** (**WebVTT**)это формат для отображения синхронизированных текстовых треков (такие как субтитры или подписи) с помощью элементов {{HTMLElement("track")}}. Основная цель файлов WebVTT — добавить текстовые наложения к элементам {{HTMLElement("video")}}. WebVTT является текстовым форматом, который должен быть закодирован с использованием {{Glossary("UTF-8")}}. В этих файлах вы можете использовать пробелы и табы для отступов. Существует также небольшой API для представления и управления этими дорожками и данными, необходимыми для отображения текста в нужное время.
@@ -301,7 +301,7 @@ Here are a few examples:
 
 A cue timing indicates when the cue is shown. It has a start and end time which are represented by timestamps. The end time must be greater than the start time, and the start time must be greater than or equal to all previous start times. Cues may have overlapping timings.
 
-If the WebVTT file is being used for chapters ({{HTMLElement("track")}} {{htmlattrxref("kind")}} is `chapters`) then the file cannot have overlapping timings.
+If the WebVTT file is being used for chapters ({{HTMLElement("track")}} [`kind`](/ru/docs/Web/HTML/Global_attributes#kind) is `chapters`) then the file cannot have overlapping timings.
 
 Each cue timing contains five components:
 
@@ -441,7 +441,7 @@ In addition to the three escape sequences mentioned above, there are fours other
 
 ### Cue payload text tags
 
-There are a number of tags, such as `<b>`, that can be used. However, if the WebVTT file is used in a {{HTMLElement("track")}} element where the attribute {{htmlattrxref("kind")}} is `chapters` then you cannot use tags.
+There are a number of tags, such as `<b>`, that can be used. However, if the WebVTT file is used in a {{HTMLElement("track")}} element where the attribute [`kind`](/ru/docs/Web/HTML/Global_attributes#kind) is `chapters` then you cannot use tags.
 
 - Timestamp tag
 
@@ -587,7 +587,7 @@ Where p and a are the tags which are used in HTML for paragraph and link, respec
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
@@ -597,8 +597,8 @@ Prior to Firefox 50, the `AlignSetting` enum (representing possible values for {
 
 WebVTT was implemented in Firefox 24 behind the preference `media.webvtt.enabled`, which is disabled by default; you can enable it by setting this preference to `true`. WebVTT is enabled by default starting in Firefox 31 and can be disabled by setting the preference to `false`.
 
-Prior to Firefox 58, the `REGION` keyword was creating {{domxref("VTTRegion")}} objects, but they were not being used. Firefox 58 now fully supports `VTTRegion` and its use; however, this feature is disabled by default behind the preference `media.webvtt.regions.enabled`; set it to `true` to enable region support in Firefox 58. Regions are enabled by default starting in Firefox 59 (see bugs {{bug(1338030)}} and {{bug(1415805)}}).
+Prior to Firefox 58, the `REGION` keyword was creating {{domxref("VTTRegion")}} objects, but they were not being used. Firefox 58 now fully supports `VTTRegion` and its use; however, this feature is disabled by default behind the preference `media.webvtt.regions.enabled`; set it to `true` to enable region support in Firefox 58. Regions are enabled by default starting in Firefox 59 (see bugs [Firefox bug 1338030](https://bugzil.la/1338030) and [Firefox bug 1415805](https://bugzil.la/1415805)).
 
 ## See also
 
-- The CSS [`::cue` and `::cue()`](/en-US/docs/Web/CSS/::cue) pseudo-elements
+- The CSS [`::cue` and `::cue()`](/ru/docs/Web/CSS/::cue) pseudo-elements

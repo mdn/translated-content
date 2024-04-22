@@ -1,11 +1,14 @@
 ---
-title: 'MediaStream: removetrack イベント'
+title: "MediaStream: removetrack イベント"
+short-title: removetrack
 slug: Web/API/MediaStream/removetrack_event
+l10n:
+  sourceCommit: ac67e6f05d337e52e39f02a978b8c00bc43d583b
 ---
 
 {{APIRef("Media Capture and Streams")}}
 
-`removetrack` イベントは、新しい [`MediaStreamTrack`](/ja/docs/Web/API/MediaStreamTrack) オブジェクトが [`MediaStream`](/ja/docs/Web/API/MediaStream) から取り除かれたときに発行されます。
+**`removetrack`** イベントは、新しい {{domxref("MediaStreamTrack")}} オブジェクトが {{domxref("MediaStream")}} から除去されたときに発行されます。
 
 このイベントはキャンセル不可で、バブリングしません。
 
@@ -14,9 +17,9 @@ slug: Web/API/MediaStream/removetrack_event
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('removetrack', event => { });
+addEventListener("removetrack", (event) => {});
 
-onremovetrack = event => { };
+onremovetrack = (event) => {};
 ```
 
 ## イベント型
@@ -29,17 +32,17 @@ onremovetrack = event => { };
 
 _親インターフェイスである {{domxref("Event")}} から継承したプロパティもあります。_
 
-- `track` {{ReadOnlyInline}}
-  - : {{domxref("MediaStreamTrack")}} オブジェクトで、このストリームから削除されたトラックを表します。
+- {{domxref("MediaStreamTrackEvent.track")}} {{ReadOnlyInline}}
+  - : {{domxref("MediaStreamTrack")}} オブジェクトで、このストリームから除去されたトラックを表します。
 
 ## 例
 
 `addEventListener()` を使用すると次にようになります。
 
 ```js
-let stream = new MediaStream();
+const stream = new MediaStream();
 
-stream.addEventListener('removetrack', (event) => {
+stream.addEventListener("removetrack", (event) => {
   console.log(`${event.track.kind} track removed`);
 });
 ```
@@ -47,7 +50,7 @@ stream.addEventListener('removetrack', (event) => {
 `onremovetrack` イベントハンドラープロパティを使用すると次にようになります。
 
 ```js
-let stream = new MediaStream();
+const stream = new MediaStream();
 
 stream.onremovetrack = (event) => {
   console.log(`${event.track.kind} track removed`);
@@ -67,5 +70,5 @@ stream.onremovetrack = (event) => {
 - 関連イベント: [`addtrack`](/ja/docs/Web/API/MediaStream/addtrack_event)
 - [`AudioTrackList`](/ja/docs/Web/API/AudioTrackList) をターゲットとしたこのイベント: [`removetrack`](/ja/docs/Web/API/AudioTrackList/removetrack_event)
 - [`VideoTrackList`](/ja/docs/Web/API/VideoTrackList) をターゲットとしたこのイベント: [`removetrack`](/ja/docs/Web/API/VideoTrackList/removetrack_event)
-- [メディアストリーム API](/ja/docs/Web/API/Media_Streams_API)
+- [メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Capture_and_Streams_API)
 - [WebRTC](/ja/docs/Web/API/WebRTC_API)

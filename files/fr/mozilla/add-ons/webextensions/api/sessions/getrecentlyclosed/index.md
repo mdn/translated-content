@@ -1,20 +1,9 @@
 ---
 title: sessions.getRecentlyClosed()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/getRecentlyClosed
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getRecentlyClosed
-  - sessions
-translation_of: Mozilla/Add-ons/WebExtensions/API/sessions/getRecentlyClosed
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Renvoie un ensemble d'objets {{WebExtAPIRef("sessions.Session", "Session")}}, représentant des fenêtres et des onglets qui ont été fermés dans la session du navigation actuelle (c'est à dire l'heure écoulée depuis le démarrage du navigateur).
 
@@ -24,8 +13,8 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 
 ```js
 var gettingSessions = browser.sessions.getRecentlyClosed(
-  filter             // optional object
-)
+  filter, // optional object
+);
 ```
 
 ### Paramètres
@@ -50,7 +39,7 @@ Le code restaure la session la plus récemment fermée, qu'il s'agisse d'un ongl
 ```js
 function restoreMostRecent(sessionInfos) {
   if (!sessionInfos.length) {
-    console.log("No sessions found")
+    console.log("No sessions found");
     return;
   }
   let sessionInfo = sessionInfos[0];
@@ -65,9 +54,9 @@ function onError(error) {
   console.log(error);
 }
 
-browser.browserAction.onClicked.addListener(function() {
+browser.browserAction.onClicked.addListener(function () {
   var gettingSessions = browser.sessions.getRecentlyClosed({
-    maxResults: 1
+    maxResults: 1,
   });
   gettingSessions.then(restoreMostRecent, onError);
 });

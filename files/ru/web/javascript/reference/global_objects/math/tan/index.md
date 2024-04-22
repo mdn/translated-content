@@ -1,15 +1,9 @@
 ---
 title: Math.tan()
 slug: Web/JavaScript/Reference/Global_Objects/Math/tan
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/tan
 ---
 
-{{JSRef("Global_Objects", "Math")}}
+{{JSRef}}
 
 ## Сводка
 
@@ -44,18 +38,14 @@ Math.tan(1); // 1.5574077246549023
 
 ```js
 function getTanDeg(deg) {
-  var rad = deg * Math.PI/180;
+  var rad = (deg * Math.PI) / 180;
   return Math.tan(rad);
 }
 ```
 
 ## Спецификации
 
-| Спецификация                                                         | Статус                   | Комментарии                                            |
-| -------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------ |
-| ECMAScript 1-е издание.                                              | {{Spec2('ES1')}}     | Изначальное определение. Реализована в JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.2.18', 'Math.tan')}} | {{Spec2('ES5.1')}} |                                                        |
-| {{SpecName('ES6', '#sec-math.tan', 'Math.tan')}}     | {{Spec2('ES6')}}     |                                                        |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

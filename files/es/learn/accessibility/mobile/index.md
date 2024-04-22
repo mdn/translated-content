@@ -103,9 +103,9 @@ Por ejemplo, con TalkBack activado:
 2. Activar la barra de URL.
 3. Ingrese una página web que tenga muchos encabezados, como la página principal de bbc.co.uk. Para ingresar el texto de la URL:
 
-    - Seleccione la barra de URL deslizando hacia la izquierda / derecha hasta que llegue a ella, y luego toque dos veces.
-    - Mantenga presionado el teclado virtual hasta que obtenga el carácter que desea y luego suelte el dedo para escribirlo. Repita para cada personaje.
-    - Una vez que hayas terminado, encuentra la tecla Intro y presiónala.
+   - Seleccione la barra de URL deslizando hacia la izquierda / derecha hasta que llegue a ella, y luego toque dos veces.
+   - Mantenga presionado el teclado virtual hasta que obtenga el carácter que desea y luego suelte el dedo para escribirlo. Repita para cada personaje.
+   - Una vez que hayas terminado, encuentra la tecla Intro y presiónala.
 
 4. Desliza el dedo hacia la izquierda y hacia la derecha para moverte entre los diferentes elementos de la página.
 5. Deslice hacia arriba y hacia la derecha con un movimiento suave para ingresar al menú de contenido local.
@@ -142,8 +142,8 @@ Cuando VoiceOver está activado, tiene una función de navegación llamada Rotor
 1. Gira dos dedos alrededor de la pantalla como si estuvieras girando un dial. Cada opción se leerá en voz alta a medida que gire más. Puede ir hacia adelante y hacia atrás para recorrer las opciones.
 2. Una vez que hayas encontrado la opción que
 
-    - Suelte los dedos para seleccionarlo.
-    - Si es una opción que puede repetir el valor de (como Volumen o Velocidad de voz), puede deslizar hacia arriba o hacia abajo para aumentar o disminuir el valor del elemento seleccionado.
+   - Suelte los dedos para seleccionarlo.
+   - Si es una opción que puede repetir el valor de (como Volumen o Velocidad de voz), puede deslizar hacia arriba o hacia abajo para aumentar o disminuir el valor del elemento seleccionado.
 
 Las opciones disponibles en el Rotor son sensibles al contexto; serán diferentes según la aplicación o la vista en la que se encuentre (consulte a continuación un ejemplo).
 
@@ -155,20 +155,20 @@ Vamos a hacer una prueba a navegar con VoiceOver:
 2. Activar la barra de URL.
 3. Ingrese una página web que tenga muchos encabezados, como la página principal de bbc.co.uk. Para ingresar el texto de la URL:
 
-    - Seleccione la barra de URL deslizando hacia la izquierda / derecha hasta que llegue a ella, y luego toque dos veces.
-    - Para cada personaje, mantenga presionado el teclado virtual hasta que obtenga el carácter que desea y luego suelte el dedo para seleccionarlo. Pulse dos veces para escribirlo.
-    - Una vez que hayas terminado, encuentra la tecla Intro y presiónala.
+   - Seleccione la barra de URL deslizando hacia la izquierda / derecha hasta que llegue a ella, y luego toque dos veces.
+   - Para cada personaje, mantenga presionado el teclado virtual hasta que obtenga el carácter que desea y luego suelte el dedo para seleccionarlo. Pulse dos veces para escribirlo.
+   - Una vez que hayas terminado, encuentra la tecla Intro y presiónala.
 
 4. Desliza el dedo hacia la izquierda y hacia la derecha para moverte entre los elementos de la página. Puede tocar dos veces un elemento para seleccionarlo (por ejemplo, siga un enlace).
 5. Por defecto, la opción de Rotor seleccionada será Speaking Rate; actualmente puede deslizar hacia arriba y hacia abajo para aumentar o disminuir la frecuencia de habla.
 6. Ahora gire dos dedos alrededor de la pantalla como un cuadrante para mostrar el rotor y muévase entre sus opciones. Aquí hay algunos ejemplos de las opciones disponibles:
 
-    - Tasa de habla: Cambia la tasa de habla.
-    - Contenedores: muévete entre los diferentes contenedores semánticos de la página.
-    - Encabezados: muévete entre los encabezados de la página.
-    - Enlaces: Mover entre enlaces en la página.
-    - Controles de formulario: muévase entre los controles de formulario en la página.
-    - Idioma: Mover entre diferentes traducciones, si están disponibles.
+   - Tasa de habla: Cambia la tasa de habla.
+   - Contenedores: muévete entre los diferentes contenedores semánticos de la página.
+   - Encabezados: muévete entre los encabezados de la página.
+   - Enlaces: Mover entre enlaces en la página.
+   - Controles de formulario: muévase entre los controles de formulario en la página.
+   - Idioma: Mover entre diferentes traducciones, si están disponibles.
 
 7. Seleccionar encabezados. Ahora podrá desplazarse hacia arriba y hacia abajo para moverse entre los encabezados de la página.
 
@@ -185,11 +185,11 @@ Alternativamente, los eventos específicos del mouse como [mousedown](/es/docs/W
 Si intenta controlar nuestro ejemplo de [simple-box-drag.html](https://github.com/mdn/learning-area/blob/master/accessibility/mobile/simple-box-drag.html) ([ver ejemplo en vivo](https://mdn.github.io/learning-area/accessibility/mobile/simple-box-drag.html)) con el teclado o el toque, verá el problema. Esto ocurre porque estamos usando un código como el siguiente:
 
 ```js
-div.onmousedown = function() {
+div.onmousedown = function () {
   initialBoxX = div.offsetLeft;
   initialBoxY = div.offsetTop;
   movePanel();
-}
+};
 
 document.onmouseup = stopMove;
 ```
@@ -197,12 +197,12 @@ document.onmouseup = stopMove;
 Para habilitar otras formas de control, debe usar eventos diferentes pero equivalentes; por ejemplo, los eventos táctiles funcionan en dispositivos con pantalla táctil:
 
 ```js
-div.ontouchstart = function(e) {
+div.ontouchstart = function (e) {
   initialBoxX = div.offsetLeft;
   initialBoxY = div.offsetTop;
   positionHandler(e);
   movePanel();
-}
+};
 
 panel.ontouchend = stopMove;
 ```
@@ -232,12 +232,12 @@ Hay otros aspectos importantes a tener en cuenta al hacer que los sitios sean m�
 Usando viewport, es posible deshabilitar el zoom, usando un código como este en su {{htmlelement("head")}}:
 
 ```html
-<meta name="viewport" content="user-scalable=no">
+<meta name="viewport" content="user-scalable=no" />
 ```
 
 Nunca debe hacer esto si es posible: muchas personas confían en el zoom para poder ver el contenido de su sitio web, por lo que eliminar esta funcionalidad es una muy mala idea. Hay ciertas situaciones en las que el zoom podría romper la interfaz de usuario; en tales casos, si cree que necesita deshabilitar el zoom, debe proporcionar algún otro tipo de equivalente, como un control para aumentar el tamaño del texto de una manera que no rompa su interfaz de usuario.
 
-#### Mantener los menús accesibles.
+#### Mantener los menús accesibles
 
 Debido a que la pantalla es mucho más estrecha en los dispositivos móviles, es muy común utilizar consultas de medios y otras tecnologías para hacer que el menú de navegación se reduzca a un pequeño icono en la parte superior de la pantalla, que se puede presionar para mostrar el menú solo si es necesario - cuando el sitio se ve en el móvil. Esto suele representarse mediante un icono de "tres líneas horizontales" y, por lo tanto, el patrón de diseño se conoce como "menú de hamburguesas".
 

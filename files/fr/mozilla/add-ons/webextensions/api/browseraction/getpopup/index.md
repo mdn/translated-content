@@ -1,20 +1,9 @@
 ---
 title: browserAction.getPopup()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/getPopup
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - browserAction
-  - getPopup
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/getPopup
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Obtient le document HTML défini comme la popup pour cette action du navigateur.
 
@@ -24,8 +13,8 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 
 ```js
 var gettingPopup = browser.browserAction.getPopup(
-  details               // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -54,7 +43,7 @@ Obtenez l'URL du Popup:
 
 ```js
 function gotPopup(popupURL) {
-  console.log(popupURL)
+  console.log(popupURL);
 }
 
 var gettingPopup = browser.browserAction.getPopup({});

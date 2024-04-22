@@ -3,6 +3,8 @@ title: 变量
 slug: Glossary/Variable
 ---
 
+{{GlossarySidebar}}
+
 变量是{{Glossary("Value", "值")}}的具名引用。这样，不可预测的值可以通过预定的名称来访问。
 
 ## 参见

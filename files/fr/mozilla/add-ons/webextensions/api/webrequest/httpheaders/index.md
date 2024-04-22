@@ -1,20 +1,9 @@
 ---
 title: webRequest.HttpHeaders
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/HttpHeaders
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - HttpHeaders
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - webRequest
-translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/HttpHeaders
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Un tableau d'en-tetes HTTP. Chaque en-tête est représenté comme un objet avec deux propriétés : `name` et `valeur` ou `binaryValue`.
 

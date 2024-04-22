@@ -1,18 +1,13 @@
 ---
 title: User-Agent
 slug: Web/HTTP/Headers/User-Agent
-tags:
-  - HTTP
-  - Заголовки HTTP
-  - Справка
-  - User-agent
-translation_of: Web/HTTP/Headers/User-Agent
 ---
+
 {{HTTPSidebar}}
 
 {{Glossary("request header", "Заголовок запроса")}} **User-Agent** - это строка с характеристиками, по которым сервера и сетевые узлы могут определить тип приложения, операционную систему, производителя и/или версию {{Glossary("user agent", "пользовательского агента")}}.
 
-> **Обратите внимание:** Показывать ту или иную страницу в зависимости от характеристик пользовательского агента — дурная практика. Почему не стоит так делать, читайте в статье «[Определение браузера по пользовательскому агенту](/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent)».
+> **Обратите внимание:** Показывать ту или иную страницу в зависимости от характеристик пользовательского агента — дурная практика. Почему не стоит так делать, читайте в статье «[Определение браузера по пользовательскому агенту](/ru/docs/Web/HTTP/Browser_detection_using_the_user_agent)».
 
 <table class="properties">
   <tbody>
@@ -50,7 +45,7 @@ User-Agent: Mozilla/5.0 (<system-information>) <platform> (<platform-details>) <
 
 ## Строка UA в Firefox
 
-Подробные сведения о _user agent_ строках в Firefox и других браузерах, основанных на движке Gecko, вы найдёте в [справочнике](/en-US/docs/Web/HTTP/Headers/User-Agent/Firefox).
+Подробные сведения о _user agent_ строках в Firefox и других браузерах, основанных на движке Gecko, вы найдёте в [справочнике](/ru/docs/Web/HTTP/Headers/User-Agent/Firefox).
 
 Строка UA в Firefox разбита на 4 части и одну общую метку для всех:
 
@@ -138,7 +133,7 @@ Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)
 Mozilla/5.0 (compatible; YandexAccessibilityBot/3.0; +http://yandex.com/bots)
 ```
 
-## Строка UA у библиотек и net-tools.
+## Строка UA у библиотек и net-tools
 
 ### Примеры
 
@@ -161,5 +156,5 @@ PostmanRuntime/7.26.5
 ## Смотрите также
 
 - [User-Agent detection, history and checklist](https://hacks.mozilla.org/2013/09/user-agent-detection-history-and-checklist/)
-- [Firefox user agent string reference](/en-US/docs/Web/HTTP/Headers/User-Agent/Firefox)
-- [Browser detection using the user agent](/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent)
+- [Firefox user agent string reference](/ru/docs/Web/HTTP/Headers/User-Agent/Firefox)
+- [Browser detection using the user agent](/ru/docs/Web/HTTP/Browser_detection_using_the_user_agent)

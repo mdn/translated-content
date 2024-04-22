@@ -1,6 +1,9 @@
 ---
-title: Event()
+title: "Event: Event() コンストラクター"
+short-title: Event()
 slug: Web/API/Event/Event
+l10n:
+  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
 {{APIRef("DOM")}}
@@ -9,7 +12,7 @@ slug: Web/API/Event/Event
 
 ## 構文
 
-```js
+```js-nolint
 new Event(type)
 new Event(type, options)
 ```
@@ -34,12 +37,12 @@ new Event(type, options)
 ## 例
 
 ```js
-// create a look event that bubbles up and cannot be canceled
+// バブルアップし、キャンセルできない look イベントを作成
 
-const evt = new Event("look", {"bubbles":true, "cancelable":false});
+const evt = new Event("look", { bubbles: true, cancelable: false });
 document.dispatchEvent(evt);
 
-// event can be dispatched from any element, not only the document
+// イベントは文書だけでなく、あらゆる要素から配信することができる
 myDiv.dispatchEvent(evt);
 ```
 

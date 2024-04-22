@@ -1,10 +1,6 @@
 ---
 title: BeforeUnloadEvent
 slug: Web/API/BeforeUnloadEvent
-tags:
-  - API
-  - Reference
-translation_of: Web/API/BeforeUnloadEvent
 ---
 
 {{APIRef}}
@@ -39,12 +35,12 @@ Si une chaine non vide est assignée à la propriété `returnValue` de l'évèn
 ## Exemples
 
 ```js
-window.addEventListener("beforeunload", function(event) {
-  event.returnValue = "\o/";
+window.addEventListener("beforeunload", function (event) {
+  event.returnValue = "\\o/";
 });
 
 // est équivalent à
-window.addEventListener("beforeunload", function(event) {
+window.addEventListener("beforeunload", function (event) {
   event.preventDefault();
 });
 ```
@@ -53,11 +49,11 @@ Les navigateurs basés sur WebKit ne suivent pas la spécification concernant la
 
 ```js
 window.addEventListener("beforeunload", function (e) {
-  var confirmationMessage = "\o/";
+  var confirmationMessage = "\\o/";
 
-  (e || window.event).returnValue = confirmationMessage;     // Gecko + IE
-  return confirmationMessage;                                /* Safari, Chrome, and other
-                                                              * WebKit-derived browsers */
+  (e || window.event).returnValue = confirmationMessage; // Gecko + IE
+  return confirmationMessage; /* Safari, Chrome, and other
+   * WebKit-derived browsers */
 });
 ```
 

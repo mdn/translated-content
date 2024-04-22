@@ -1,11 +1,6 @@
 ---
 title: <feComposite>
 slug: Web/SVG/Element/feComposite
-tags:
-  - Element
-  - SVG
-  - SVG Filter
-translation_of: Web/SVG/Element/feComposite
 ---
 
 {{SVGRef}}
@@ -56,98 +51,259 @@ Cet élément implémente l'interface {{domxref("SVGFECompositeElement")}}.
 ### SVG
 
 ```html
-<svg width="330" height="195" viewBox="0 0 1100 650" version="1.1"
-      xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  width="330"
+  height="195"
+  viewBox="0 0 1100 650"
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <title>Example feComposite - Examples of feComposite operations</title>
-  <desc>Four rows of six pairs of overlapping triangles depicting
-        the six different feComposite operators under different
-        opacity values and different clearing of the background.</desc>
+  <desc>
+    Four rows of six pairs of overlapping triangles depicting the six different
+    feComposite operators under different opacity values and different clearing
+    of the background.
+  </desc>
   <defs>
-    <desc>Define two sets of six filters for each of the six compositing operators.
-          The first set wipes out the background image by flooding with opaque white.
-          The second set does not wipe out the background, with the result
-          that the background sometimes shines through and is other cases
-          is blended into itself (i.e., "double-counting").</desc>
-    <filter id="overFlood" filterUnits="objectBoundingBox" x="-5%" y="-5%" width="110%" height="110%">
-      <feFlood flood-color="#ffffff" flood-opacity="1" result="flood"/>
-      <feComposite in="SourceGraphic" in2="BackgroundImage" operator="over" result="comp"/>
-      <feMerge> <feMergeNode in="flood"/> <feMergeNode in="comp"/> </feMerge>
+    <desc>
+      Define two sets of six filters for each of the six compositing operators.
+      The first set wipes out the background image by flooding with opaque
+      white. The second set does not wipe out the background, with the result
+      that the background sometimes shines through and is other cases is blended
+      into itself (i.e., "double-counting").
+    </desc>
+    <filter
+      id="overFlood"
+      filterUnits="objectBoundingBox"
+      x="-5%"
+      y="-5%"
+      width="110%"
+      height="110%">
+      <feFlood flood-color="#ffffff" flood-opacity="1" result="flood" />
+      <feComposite
+        in="SourceGraphic"
+        in2="BackgroundImage"
+        operator="over"
+        result="comp" />
+      <feMerge>
+        <feMergeNode in="flood" />
+        <feMergeNode in="comp" />
+      </feMerge>
     </filter>
-    <filter id="inFlood" filterUnits="objectBoundingBox" x="-5%" y="-5%" width="110%" height="110%">
-      <feFlood flood-color="#ffffff" flood-opacity="1" result="flood"/>
-      <feComposite in="SourceGraphic" in2="BackgroundImage" operator="in" result="comp"/>
-      <feMerge> <feMergeNode in="flood"/> <feMergeNode in="comp"/> </feMerge>
+    <filter
+      id="inFlood"
+      filterUnits="objectBoundingBox"
+      x="-5%"
+      y="-5%"
+      width="110%"
+      height="110%">
+      <feFlood flood-color="#ffffff" flood-opacity="1" result="flood" />
+      <feComposite
+        in="SourceGraphic"
+        in2="BackgroundImage"
+        operator="in"
+        result="comp" />
+      <feMerge>
+        <feMergeNode in="flood" />
+        <feMergeNode in="comp" />
+      </feMerge>
     </filter>
-    <filter id="outFlood" filterUnits="objectBoundingBox" x="-5%" y="-5%" width="110%" height="110%">
-      <feFlood flood-color="#ffffff" flood-opacity="1" result="flood"/>
-      <feComposite in="SourceGraphic" in2="BackgroundImage" operator="out" result="comp"/>
-      <feMerge> <feMergeNode in="flood"/> <feMergeNode in="comp"/> </feMerge>
+    <filter
+      id="outFlood"
+      filterUnits="objectBoundingBox"
+      x="-5%"
+      y="-5%"
+      width="110%"
+      height="110%">
+      <feFlood flood-color="#ffffff" flood-opacity="1" result="flood" />
+      <feComposite
+        in="SourceGraphic"
+        in2="BackgroundImage"
+        operator="out"
+        result="comp" />
+      <feMerge>
+        <feMergeNode in="flood" />
+        <feMergeNode in="comp" />
+      </feMerge>
     </filter>
-    <filter id="atopFlood" filterUnits="objectBoundingBox" x="-5%" y="-5%" width="110%" height="110%">
-      <feFlood flood-color="#ffffff" flood-opacity="1" result="flood"/>
-      <feComposite in="SourceGraphic" in2="BackgroundImage" operator="atop" result="comp"/>
-      <feMerge> <feMergeNode in="flood"/> <feMergeNode in="comp"/> </feMerge>
+    <filter
+      id="atopFlood"
+      filterUnits="objectBoundingBox"
+      x="-5%"
+      y="-5%"
+      width="110%"
+      height="110%">
+      <feFlood flood-color="#ffffff" flood-opacity="1" result="flood" />
+      <feComposite
+        in="SourceGraphic"
+        in2="BackgroundImage"
+        operator="atop"
+        result="comp" />
+      <feMerge>
+        <feMergeNode in="flood" />
+        <feMergeNode in="comp" />
+      </feMerge>
     </filter>
-    <filter id="xorFlood" filterUnits="objectBoundingBox" x="-5%" y="-5%" width="110%" height="110%">
-      <feFlood flood-color="#ffffff" flood-opacity="1" result="flood"/>
-      <feComposite in="SourceGraphic" in2="BackgroundImage" operator="xor" result="comp"/>
-      <feMerge> <feMergeNode in="flood"/> <feMergeNode in="comp"/> </feMerge>
+    <filter
+      id="xorFlood"
+      filterUnits="objectBoundingBox"
+      x="-5%"
+      y="-5%"
+      width="110%"
+      height="110%">
+      <feFlood flood-color="#ffffff" flood-opacity="1" result="flood" />
+      <feComposite
+        in="SourceGraphic"
+        in2="BackgroundImage"
+        operator="xor"
+        result="comp" />
+      <feMerge>
+        <feMergeNode in="flood" />
+        <feMergeNode in="comp" />
+      </feMerge>
     </filter>
-    <filter id="arithmeticFlood" filterUnits="objectBoundingBox"
-            x="-5%" y="-5%" width="110%" height="110%">
-      <feFlood flood-color="#ffffff" flood-opacity="1" result="flood"/>
-      <feComposite in="SourceGraphic" in2="BackgroundImage" result="comp"
-                    operator="arithmetic" k1=".5" k2=".5" k3=".5" k4=".5"/>
-      <feMerge> <feMergeNode in="flood"/> <feMergeNode in="comp"/> </feMerge>
+    <filter
+      id="arithmeticFlood"
+      filterUnits="objectBoundingBox"
+      x="-5%"
+      y="-5%"
+      width="110%"
+      height="110%">
+      <feFlood flood-color="#ffffff" flood-opacity="1" result="flood" />
+      <feComposite
+        in="SourceGraphic"
+        in2="BackgroundImage"
+        result="comp"
+        operator="arithmetic"
+        k1=".5"
+        k2=".5"
+        k3=".5"
+        k4=".5" />
+      <feMerge>
+        <feMergeNode in="flood" />
+        <feMergeNode in="comp" />
+      </feMerge>
     </filter>
-    <filter id="overNoFlood" filterUnits="objectBoundingBox" x="-5%" y="-5%" width="110%" height="110%">
-      <feComposite in="SourceGraphic" in2="BackgroundImage" operator="over" result="comp"/>
+    <filter
+      id="overNoFlood"
+      filterUnits="objectBoundingBox"
+      x="-5%"
+      y="-5%"
+      width="110%"
+      height="110%">
+      <feComposite
+        in="SourceGraphic"
+        in2="BackgroundImage"
+        operator="over"
+        result="comp" />
     </filter>
-    <filter id="inNoFlood" filterUnits="objectBoundingBox" x="-5%" y="-5%" width="110%" height="110%">
-      <feComposite in="SourceGraphic" in2="BackgroundImage" operator="in" result="comp"/>
+    <filter
+      id="inNoFlood"
+      filterUnits="objectBoundingBox"
+      x="-5%"
+      y="-5%"
+      width="110%"
+      height="110%">
+      <feComposite
+        in="SourceGraphic"
+        in2="BackgroundImage"
+        operator="in"
+        result="comp" />
     </filter>
-    <filter id="outNoFlood" filterUnits="objectBoundingBox" x="-5%" y="-5%" width="110%" height="110%">
-      <feComposite in="SourceGraphic" in2="BackgroundImage" operator="out" result="comp"/>
+    <filter
+      id="outNoFlood"
+      filterUnits="objectBoundingBox"
+      x="-5%"
+      y="-5%"
+      width="110%"
+      height="110%">
+      <feComposite
+        in="SourceGraphic"
+        in2="BackgroundImage"
+        operator="out"
+        result="comp" />
     </filter>
-    <filter id="atopNoFlood" filterUnits="objectBoundingBox" x="-5%" y="-5%" width="110%" height="110%">
-      <feComposite in="SourceGraphic" in2="BackgroundImage" operator="atop" result="comp"/>
+    <filter
+      id="atopNoFlood"
+      filterUnits="objectBoundingBox"
+      x="-5%"
+      y="-5%"
+      width="110%"
+      height="110%">
+      <feComposite
+        in="SourceGraphic"
+        in2="BackgroundImage"
+        operator="atop"
+        result="comp" />
     </filter>
-    <filter id="xorNoFlood" filterUnits="objectBoundingBox" x="-5%" y="-5%" width="110%" height="110%">
-      <feComposite in="SourceGraphic" in2="BackgroundImage" operator="xor" result="comp"/>
+    <filter
+      id="xorNoFlood"
+      filterUnits="objectBoundingBox"
+      x="-5%"
+      y="-5%"
+      width="110%"
+      height="110%">
+      <feComposite
+        in="SourceGraphic"
+        in2="BackgroundImage"
+        operator="xor"
+        result="comp" />
     </filter>
-    <filter id="arithmeticNoFlood" filterUnits="objectBoundingBox"
-            x="-5%" y="-5%" width="110%" height="110%">
-      <feComposite in="SourceGraphic" in2="BackgroundImage" result="comp"
-                    operator="arithmetic" k1=".5" k2=".5" k3=".5" k4=".5"/>
+    <filter
+      id="arithmeticNoFlood"
+      filterUnits="objectBoundingBox"
+      x="-5%"
+      y="-5%"
+      width="110%"
+      height="110%">
+      <feComposite
+        in="SourceGraphic"
+        in2="BackgroundImage"
+        result="comp"
+        operator="arithmetic"
+        k1=".5"
+        k2=".5"
+        k3=".5"
+        k4=".5" />
     </filter>
     <path id="Blue100" d="M 0 0 L 100 0 L 100 100 z" fill="#00ffff" />
     <path id="Red100" d="M 0 0 L 0 100 L 100 0 z" fill="#ff00ff" />
-    <path id="Blue50" d="M 0 125 L 100 125 L 100 225 z" fill="#00ffff" fill-opacity=".5" />
-    <path id="Red50" d="M 0 125 L 0 225 L 100 125 z" fill="#ff00ff" fill-opacity=".5" />
+    <path
+      id="Blue50"
+      d="M 0 125 L 100 125 L 100 225 z"
+      fill="#00ffff"
+      fill-opacity=".5" />
+    <path
+      id="Red50"
+      d="M 0 125 L 0 225 L 100 125 z"
+      fill="#ff00ff"
+      fill-opacity=".5" />
     <g id="TwoBlueTriangles">
-      <use xlink:href="#Blue100"/>
-      <use xlink:href="#Blue50"/>
+      <use xlink:href="#Blue100" />
+      <use xlink:href="#Blue50" />
     </g>
     <g id="BlueTriangles">
-      <use transform="translate(275,25)" xlink:href="#TwoBlueTriangles"/>
-      <use transform="translate(400,25)" xlink:href="#TwoBlueTriangles"/>
-      <use transform="translate(525,25)" xlink:href="#TwoBlueTriangles"/>
-      <use transform="translate(650,25)" xlink:href="#TwoBlueTriangles"/>
-      <use transform="translate(775,25)" xlink:href="#TwoBlueTriangles"/>
-      <use transform="translate(900,25)" xlink:href="#TwoBlueTriangles"/>
+      <use transform="translate(275,25)" xlink:href="#TwoBlueTriangles" />
+      <use transform="translate(400,25)" xlink:href="#TwoBlueTriangles" />
+      <use transform="translate(525,25)" xlink:href="#TwoBlueTriangles" />
+      <use transform="translate(650,25)" xlink:href="#TwoBlueTriangles" />
+      <use transform="translate(775,25)" xlink:href="#TwoBlueTriangles" />
+      <use transform="translate(900,25)" xlink:href="#TwoBlueTriangles" />
     </g>
   </defs>
 
-  <rect fill="none" stroke="blue" x="1" y="1" width="1098" height="648"/>
+  <rect fill="none" stroke="blue" x="1" y="1" width="1098" height="648" />
   <g font-family="Verdana" font-size="40" shape-rendering="crispEdges">
-    <desc>Render the examples using the filters that draw on top of
-          an opaque white surface, thus obliterating the background.</desc>
+    <desc>
+      Render the examples using the filters that draw on top of an opaque white
+      surface, thus obliterating the background.
+    </desc>
     <g enable-background="new">
       <text x="15" y="75">opacity 1.0</text>
       <text x="15" y="115" font-size="27">(with feFlood)</text>
       <text x="15" y="200">opacity 0.5</text>
       <text x="15" y="240" font-size="27">(with feFlood)</text>
-      <use xlink:href="#BlueTriangles"/>
+      <use xlink:href="#BlueTriangles" />
       <g transform="translate(275,25)">
         <use xlink:href="#Red100" filter="url(#overFlood)" />
         <use xlink:href="#Red50" filter="url(#overFlood)" />
@@ -180,15 +336,17 @@ Cet élément implémente l'interface {{domxref("SVGFECompositeElement")}}.
       </g>
     </g>
     <g transform="translate(0,325)" enable-background="new">
-    <desc>Render the examples using the filters that do not obliterate
-          the background, thus sometimes causing the background to continue
-          to appear in some cases, and in other cases the background
-          image blends into itself ("double-counting").</desc>
+      <desc>
+        Render the examples using the filters that do not obliterate the
+        background, thus sometimes causing the background to continue to appear
+        in some cases, and in other cases the background image blends into
+        itself ("double-counting").
+      </desc>
       <text x="15" y="75">opacity 1.0</text>
       <text x="15" y="115" font-size="27">(without feFlood)</text>
       <text x="15" y="200">opacity 0.5</text>
       <text x="15" y="240" font-size="27">(without feFlood)</text>
-      <use xlink:href="#BlueTriangles"/>
+      <use xlink:href="#BlueTriangles" />
       <g transform="translate(275,25)">
         <use xlink:href="#Red100" filter="url(#overNoFlood)" />
         <use xlink:href="#Red50" filter="url(#overNoFlood)" />

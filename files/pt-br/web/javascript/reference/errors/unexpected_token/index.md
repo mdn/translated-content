@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: Unexpected token'
+title: "SyntaxError: Unexpected token"
 slug: Web/JavaScript/Reference/Errors/Unexpected_token
 ---
 
@@ -30,7 +30,7 @@ Uma construção específica da linguagem era esperada, mas algo não foi fornec
 
 Por exemplo, quando funções são chamadas, vírgulas sem um valor na sequência não são permitidas. O JavaScript esperarará outro argumento, como pode ser qualquer expressão.
 
-```js example-bad
+```js-nolint example-bad
 Math.max(2, 42,);
 // SyntaxError: expected expression, got ')'
 ```

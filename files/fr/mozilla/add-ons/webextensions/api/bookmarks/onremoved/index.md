@@ -1,29 +1,18 @@
 ---
 title: bookmarks.onRemoved
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onRemoved
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onRemoved
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/onRemoved
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Lancé lorsqu'un signet ou un dossier est supprimé. Lorsqu'un dossier est supprimé de manière récursive, une seule notification est envoyée pour le dossier et aucune pour son contenu.
 
 ## Syntaxe
 
 ```js
-browser.bookmarks.onRemoved.addListener(listener)
-browser.bookmarks.onRemoved.removeListener(listener)
-browser.bookmarks.onRemoved.hasListener(listener)
+browser.bookmarks.onRemoved.addListener(listener);
+browser.bookmarks.onRemoved.removeListener(listener);
+browser.bookmarks.onRemoved.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :

@@ -2,6 +2,7 @@
 title: AudioWorkletProcessor()
 slug: Web/API/AudioWorkletProcessor/AudioWorkletProcessor
 ---
+
 {{APIRef("Web Audio API")}}
 
 **`AudioWorkletProcessor()`** 생성자는 {{domxref("AudioWorkletNode")}}의 근본적인 오디오 프로세싱 메커니즘을 나타내는 새로운 {{domxref("AudioWorkletProcessor")}} 객체를 생성합니다.
@@ -52,17 +53,17 @@ clone](/ko/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)이 우리의
 ```js
 // test-processor.js
 class TestProcessor extends AudioWorkletProcessor {
-  constructor (options) {
-    super()
-    console.log(options.numberOfInputs)
-    console.log(options.processorOptions.someUsefulVariable)
+  constructor(options) {
+    super();
+    console.log(options.numberOfInputs);
+    console.log(options.processorOptions.someUsefulVariable);
   }
-  process (inputs, outputs, parameters) {
-    return true
+  process(inputs, outputs, parameters) {
+    return true;
   }
 }
 
-registerProcessor('test-processor', TestProcessor)
+registerProcessor("test-processor", TestProcessor);
 ```
 
 다음으로, 메인 스크립트 파일에서 우리는 프로세서를 로드하고, `AudioWorkletNode` 에 프로세서의 이름과 _options_ 객체를 전달하며 `AudioWorkletNode` 의 인스턴스를 생성합니다.
@@ -70,13 +71,16 @@ registerProcessor('test-processor', TestProcessor)
 _options_ 객체에서 우리는 `someUsefulVariable` 키 아래에서 {{jsxref("Map")}} 인스턴스와 함께 `processorOptions` 를 전달합니다. 우리는 `numberOfInputs` 을 전달하지 않았고 어떻게 이것이 기본 값을 얻게 되는지 관찰해 봅시다.
 
 ```js
-const audioContext = new AudioContext()
-await audioContext.audioWorklet.addModule('test-processor.js')
-const testNode = new AudioWorkletNode(audioContext, 'test-processor', {
+const audioContext = new AudioContext();
+await audioContext.audioWorklet.addModule("test-processor.js");
+const testNode = new AudioWorkletNode(audioContext, "test-processor", {
   processorOptions: {
-    someUsefulVariable: new Map([[1, 'one'], [2, 'two']])
-  }
-})
+    someUsefulVariable: new Map([
+      [1, "one"],
+      [2, "two"],
+    ]),
+  },
+});
 ```
 
 콘솔 출력은 다음과 같을 것입니다:

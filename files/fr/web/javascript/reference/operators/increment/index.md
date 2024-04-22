@@ -1,13 +1,6 @@
 ---
 title: Incrémentation (++)
 slug: Web/JavaScript/Reference/Operators/Increment
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/Increment
-browser-compat: javascript.operators.increment
 ---
 
 {{jsSidebar("Operators")}}

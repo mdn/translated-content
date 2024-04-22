@@ -1,5 +1,5 @@
 ---
-title: 'CSP: default-src'
+title: "CSP: default-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/default-src
 ---
 
@@ -19,8 +19,8 @@ HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`default-src`** 구문은
 - {{CSP("style-src")}}
 - {{CSP("worker-src")}}
 
-| CSP version    | 1                                        |
-| -------------- | ---------------------------------------- |
+| CSP version    | 1                               |
+| -------------- | ------------------------------- |
 | Directive type | {{Glossary("Fetch directive")}} |
 
 ## Syntax
@@ -99,8 +99,6 @@ Content-Security-Policy: connect-src 'self';
 {{Specifications}}
 
 ## Browser compatibility
-
-The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <https://github.com/mdn/browser-compat-data> and send us a pull request.
 
 {{Compat}}
 

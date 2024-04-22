@@ -1,7 +1,6 @@
 ---
 title: Symbol.replace
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/replace
-original_slug: Web/JavaScript/Reference/Global_Objects/Symbol/replace
 l10n:
   sourceCommit: 88508ebe5c73264be2cf03f1a949d8099d68d1ea
 ---
@@ -24,11 +23,11 @@ class CustomReplacer {
     this.value = value;
   }
   [Symbol.replace](string) {
-    return string.replace(this.value, '#!@?');
+    return string.replace(this.value, "#!@?");
   }
 }
 
-console.log('football'.replace(new CustomReplacer('foo')));
+console.log("football".replace(new CustomReplacer("foo")));
 // salida esperada: "#!@?tball"
 ```
 

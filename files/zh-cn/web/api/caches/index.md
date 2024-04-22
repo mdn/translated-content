@@ -18,22 +18,22 @@ slug: Web/API/caches
 以下示例展示了你在 [service worker](/zh-CN/docs/Web/API/Service_Worker_API) 上下文中应该如何运用 cache 对资源进行离线存储。
 
 ```js
-this.addEventListener('install', function(event) {
+this.addEventListener("install", function (event) {
   event.waitUntil(
-    caches.open('v1').then(function(cache) {
+    caches.open("v1").then(function (cache) {
       return cache.addAll([
-        '/sw-test/',
-        '/sw-test/index.html',
-        '/sw-test/style.css',
-        '/sw-test/app.js',
-        '/sw-test/image-list.js',
-        '/sw-test/star-wars-logo.jpg',
-        '/sw-test/gallery/',
-        '/sw-test/gallery/bountyHunters.jpg',
-        '/sw-test/gallery/myLittleVader.jpg',
-        '/sw-test/gallery/snowTroopers.jpg'
+        "/sw-test/",
+        "/sw-test/index.html",
+        "/sw-test/style.css",
+        "/sw-test/app.js",
+        "/sw-test/image-list.js",
+        "/sw-test/star-wars-logo.jpg",
+        "/sw-test/gallery/",
+        "/sw-test/gallery/bountyHunters.jpg",
+        "/sw-test/gallery/myLittleVader.jpg",
+        "/sw-test/gallery/snowTroopers.jpg",
       ]);
-    })
+    }),
   );
 });
 ```

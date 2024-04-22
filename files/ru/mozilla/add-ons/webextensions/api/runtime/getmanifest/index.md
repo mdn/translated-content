@@ -1,27 +1,16 @@
 ---
 title: runtime.getManifest()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/getManifest
-tags:
-  - API
-  - Reference
-  - WebExtensions
-  - getManifest
-  - runtime
-  - Веб-расширения
-  - Дополнения
-  - Нестандартный
-  - Расширения
-  - Ссылка
-  - метод
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/getManifest
 ---
 
-{{AddonSidebar()}}Получить весь файл [manifest.json](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json) в виде объекта JavaScript, совместимого с JSON.
+{{AddonSidebar}}
+
+Получить весь файл [manifest.json](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json) в виде объекта JavaScript, совместимого с JSON.
 
 ## Синтаксис
 
 ```js
-browser.runtime.getManifest()
+browser.runtime.getManifest();
 ```
 
 ### Параметры
@@ -48,8 +37,6 @@ console.log(manifest.name);
 {{WebExtExamples}}
 
 > **Примечание:** Это API основано на API Chromium [`chrome.runtime`](https://developer.chrome.com/extensions/runtime). Эта документация основана на [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) из кода Chromium.
->
-> Информация о совместимости Microsoft Edge предоставлена корпорацией Microsoft и включена здесь под лицензией Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

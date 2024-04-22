@@ -34,17 +34,17 @@ Sin embargo, sentirse cómodo con JavaScript es un poco más difícil que sentir
 1. Primero, ve a tu sitio de pruebas y crea una carpeta llamada `scripts`. Luego, dentro de la nueva carpeta de scripts, crea un nuevo archivo llamado `main.js` y guárdalo.
 2. A continuación, abre tu archivo `index.html` e introduce el siguiente código en una nueva línea, justo antes de la etiqueta de cierre `</body>`:
 
-    ```html
-    <script src="scripts/main.js"></script>
-    ```
+   ```html
+   <script src="scripts/main.js"></script>
+   ```
 
 3. Esto hace básicamente el mismo trabajo que el elemento {{htmlelement("link")}} para CSS: aplica el código JavaScript a la página, para que pueda actuar sobre el HTML (y CSS, o cualquier cosa en la página).
 4. Ahora añade el siguiente código al archivo `main.js`:
 
-    ```js
-    const miTitulo = document.querySelector('h1');
-    miTitulo.textContent = '¡Hola mundo!';
-    ```
+   ```js
+   const miTitulo = document.querySelector("h1");
+   miTitulo.textContent = "¡Hola mundo!";
+   ```
 
 5. Finalmente, asegúrate de que has guardado los archivos HTML y JavaScript, y abre `index.html` en el navegador. Deberías ver algo así: ![](hello-world.png)
 
@@ -85,13 +85,13 @@ let nombreDeLaVariable;
 Tras declarar una variable, puedes asignarle un valor:
 
 ```js
-nombreDeLaVariable = 'Bob';
+nombreDeLaVariable = "Bob";
 ```
 
 Puedes hacer las dos cosas en la misma línea si lo necesitas:
 
 ```js
-let nombreDeLaVariable = 'Bob';
+let nombreDeLaVariable = "Bob";
 ```
 
 Puedes obtener el valor de la variable llamándola por su nombre:
@@ -103,8 +103,8 @@ nombreDeLaVariable;
 Después de haberle dado un valor a la variable, puedes volver a cambiarlo:
 
 ```js
-let nombreDeLaVariable = 'Bob';
-nombreDeLaVariable = 'Steve';
+let nombreDeLaVariable = "Bob";
+nombreDeLaVariable = "Steve";
 ```
 
 Advierte que las variables tienen distintos [tipos de datos](/es/docs/Web/JavaScript/Data_structures):
@@ -277,11 +277,11 @@ Hay muchos operadores por explorar, pero con esto será suficiente por ahora. Mi
 Las condicionales son estructuras de código que permiten comprobar si una expresión devuelve _true_ o no, y después ejecuta un código diferente dependiendo del resultado. La forma de condicional más común es la llamada `if... else`. Entonces, por ejemplo:
 
 ```js
-let helado = 'chocolate';
-if (helado === 'chocolate') {
-  alert('¡Sí, amo el helado de chocolate!');
+let helado = "chocolate";
+if (helado === "chocolate") {
+  alert("¡Sí, amo el helado de chocolate!");
 } else {
-  alert('Awwww, pero mi favorito es el de chocolate...');
+  alert("Awwww, pero mi favorito es el de chocolate...");
 }
 ```
 
@@ -292,11 +292,11 @@ La expresión dentro de `if (... )` es el criterio — este usa al operador de i
 Las {{Glossary("Function", "funciones")}} son una manera de encapsular una funcionalidad que quieres reutilizar, de manera que puedes llamar esa función con un solo nombre, y no tendrás que escribir el código entero cada vez que la utilices. Ya has visto algunas funciones más arriba, por ejemplo:
 
 ```js
-let nombreDeLaVariable = document.querySelector('h1');
+let nombreDeLaVariable = document.querySelector("h1");
 ```
 
 ```js
-alert('¡Hola!');
+alert("¡Hola!");
 ```
 
 Estas funciones `document.querySelector` y `alert` están integradas en el navegador para poder utilizarlas en cualquier momento.
@@ -308,7 +308,7 @@ Por ejemplo, la función `alert()` hace aparecer una ventana emergente dentro de
 Las buenas noticias son que podemos definir nuestras propias funciones —en el siguiente ejemplo escribimos una función simple que toma dos números como argumentos y los multiplica entre sí—:
 
 ```js
-function multiplica(num1,num2) {
+function multiplica(num1, num2) {
   let resultado = num1 * num2;
   return resultado;
 }
@@ -329,9 +329,9 @@ multiplica(0.5, 3);
 Para crear una interacción real en tu sitio web, debes usar eventos. Estos son unas estructuras de código que captan lo que sucede en el navegador, y permite que en respuesta a las acciones que suceden se ejecute un código. El ejemplo más obvio es un clic ([click event](/es/docs/Web/Events/click)), que se activa al hacer clic sobre algo. Para demostrar esto, prueba ingresando lo siguiente en tu consola, luego da clic sobre la página actual:
 
 ```js
-document.querySelector('html').onclick = function() {
-    alert('¡Ouch! ¡Deja de pincharme!');
-}
+document.querySelector("html").onclick = function () {
+  alert("¡Ouch! ¡Deja de pincharme!");
+};
 ```
 
 Hay muchas maneras de enlazar un evento a un elemento; aquí hemos seleccionado el elemento {{htmlelement("html")}} y le asignamos a su propiedad [`onclick`](/es/docs/Web/API/GlobalEventHandlers/onclick) una función anónima (función sin nombre) que contiene el código que se ejecutará cuando el evento suceda.
@@ -339,14 +339,14 @@ Hay muchas maneras de enlazar un evento a un elemento; aquí hemos seleccionado 
 Nota que
 
 ```js
-document.querySelector('html').onclick = function(){};
+document.querySelector("html").onclick = function () {};
 ```
 
 es equivalente a
 
 ```js
-let miHTML = document.querySelector('html');
-miHTML.onclick = function(){};
+let miHTML = document.querySelector("html");
+miHTML.onclick = function () {};
 ```
 
 es solo un modo más corto de escribirlo.
@@ -364,17 +364,17 @@ En esta sección añadirás otra imagen a tu sitio usando la DOM API y agregará
 3. Renombra esta imagen «firefox2.png» (sin las comillas).
 4. Ve a tu archivo `main.js` y agrega el siguiente JavaScript (si tu JavaScript de _«Hola Mundo»_ está aún allí, bórralo).
 
-    ```js
-    let miImage = document.querySelector('img');
-    miImage.onclick = function () {
-        let miSrc = miImage.getAttribute('src');
-        if (miSrc === 'images/firefox-icon.png') {
-          miImage.setAttribute('src','images/firefox2.png');
-        } else {
-          miImage.setAttribute('src', 'images/firefox-icon.png');
-        }
-    }
-    ```
+   ```js
+   let miImage = document.querySelector("img");
+   miImage.onclick = function () {
+     let miSrc = miImage.getAttribute("src");
+     if (miSrc === "images/firefox-icon.png") {
+       miImage.setAttribute("src", "images/firefox2.png");
+     } else {
+       miImage.setAttribute("src", "images/firefox-icon.png");
+     }
+   };
+   ```
 
 5. Guarda todos los archivos y carga `index.html` en tu navegador. Ahora cuando hagas clic en la imagen, ¡esta debe cambiar por otra!
 
@@ -383,8 +383,8 @@ Esto fue lo que sucedió: se almacena una referencia a tu elemento {{htmlelement
 1. El código recupera el valor del atributo `src` de la imagen.
 2. El código usa una condicional para comprobar si el valor `src` es igual a la ruta de la imagen original:
 
-    1. Si es así, el código cambia el valor de `src` a la ruta de la segunda imagen, forzando a que se cargue la otra imagen en el elemento {{htmlelement("img")}}.
-    2. Si no es así (significa que ya fue modificada), se cambiará el valor de `src` nuevamente a la ruta de la imagen original, regresando a como era en un principio.
+   1. Si es así, el código cambia el valor de `src` a la ruta de la segunda imagen, forzando a que se cargue la otra imagen en el elemento {{htmlelement("img")}}.
+   2. Si no es así (significa que ya fue modificada), se cambiará el valor de `src` nuevamente a la ruta de la imagen original, regresando a como era en un principio.
 
 ### Añadir un mensaje de bienvenida personalizado
 
@@ -392,50 +392,49 @@ Ahora añadirás un poco más de código, para cambiar el título de la página 
 
 1. En `index.html`, agrega el siguiente código antes del elemento {{htmlelement("script")}}:
 
-    ```html
-    <button>Cambiar de usuario</button>
-    ```
+   ```html
+   <button>Cambiar de usuario</button>
+   ```
 
 2. En `main.js`, agrega el siguiente código al final del archivo, exactamente como está escrito. Esto toma referencia al nuevo botón que se agregó y al título y los almacena en variables:
 
-    ```js
-    let miBoton = document.querySelector('button');
-    let miTitulo = document.querySelector( 'h1');
-    ```
+   ```js
+   let miBoton = document.querySelector("button");
+   let miTitulo = document.querySelector("h1");
+   ```
 
 3. Ahora agrega la siguiente función para poner el saludo personalizado, lo que no causará nada aún, pero arreglarás esto en un momento:
 
-    ```js
-    function estableceNombreUsuario() {
-        let miNombre = prompt('Por favor, ingresa tu nombre.');
-        localStorage.setItem('nombre', miNombre);
-        miTitulo.textContent = 'Mozilla es genial,' + miNombre;
-    }
-    ```
+   ```js
+   function estableceNombreUsuario() {
+     let miNombre = prompt("Por favor, ingresa tu nombre.");
+     localStorage.setItem("nombre", miNombre);
+     miTitulo.textContent = "Mozilla es genial," + miNombre;
+   }
+   ```
 
-    La función `estableceNombreUsuario()` contiene una función [`prompt()`](/es/docs/Web/API/Window/prompt), que crea un cuadro de diálogo como lo hace `alert()`; la diferencia es que `prompt()` pide al usuario un dato, y almacena este dato en una variable cuando el botón **Aceptar** del cuadro de diálogo es presionado. En este caso, pedirás al usuario que ingrese su nombre. Luego, llamarás la API `localStorage`, que nos permite almacenar datos en el navegador y recuperarlos luego. Usarás la función `setItem()` de localStorage, que crea y almacena un dato en el elemento llamado `'nombre'`, y coloca este valor en la variable `miNombre` que contiene el nombre que el usuario ingresó. Finalmente, establecerás el `textContent` del título a una cadena, más el nombre de usuario recientemente almacenado.
+   La función `estableceNombreUsuario()` contiene una función [`prompt()`](/es/docs/Web/API/Window/prompt), que crea un cuadro de diálogo como lo hace `alert()`; la diferencia es que `prompt()` pide al usuario un dato, y almacena este dato en una variable cuando el botón **Aceptar** del cuadro de diálogo es presionado. En este caso, pedirás al usuario que ingrese su nombre. Luego, llamarás la API `localStorage`, que nos permite almacenar datos en el navegador y recuperarlos luego. Usarás la función `setItem()` de localStorage, que crea y almacena un dato en el elemento llamado `'nombre'`, y coloca este valor en la variable `miNombre` que contiene el nombre que el usuario ingresó. Finalmente, establecerás el `textContent` del título a una cadena, más el nombre de usuario recientemente almacenado.
 
 4. Luego, agregarás este bloque `if ... else`. Se podría llamar a esto el código de inicialización, como se ha establecido para cuando carga la app por primera vez:
 
-    ```js
-    if (!localStorage.getItem('nombre')) {
-        estableceNombreUsuario();
-    }
-    else {
-        let nombreAlmacenado = localStorage.getItem('nombre');
-        miTitulo.textContent = 'Mozilla es genial,' + nombreAlmacenado;
-    }
-    ```
+   ```js
+   if (!localStorage.getItem("nombre")) {
+     estableceNombreUsuario();
+   } else {
+     let nombreAlmacenado = localStorage.getItem("nombre");
+     miTitulo.textContent = "Mozilla es genial," + nombreAlmacenado;
+   }
+   ```
 
-    La primera línea de este bloque usa el operador de negación (NO lógico representado por `!`) para comprobar si el elemento `'nombre'` existe. Si no existe, la función `estableceNombreUsuario()` se iniciará para crearlo. Si ya existe (como por ejemplo cuando el usuario ya ingresó al sitio), se recupera el dato del nombre usando `getItem()` y se fija mediante `textContent` del título a la cadena, más el nombre del usuario, como hiciste dentro de `estableceNombreUsuario()`.
+   La primera línea de este bloque usa el operador de negación (NO lógico representado por `!`) para comprobar si el elemento `'nombre'` existe. Si no existe, la función `estableceNombreUsuario()` se iniciará para crearlo. Si ya existe (como por ejemplo cuando el usuario ya ingresó al sitio), se recupera el dato del nombre usando `getItem()` y se fija mediante `textContent` del título a la cadena, más el nombre del usuario, como hiciste dentro de `estableceNombreUsuario()`.
 
 5. Finalmente, agrega abajo el evento `onclick` que manipulará el botón, de modo que cuando sea pulsado se inicie la función `estableceNombreUsuario()`. Esto permitirá al usuario establecer un nuevo nombre cada vez que lo desee al pulsar el botón:
 
-    ```js
-    miBoton.onclick = function() {
-        estableceNombreUsuario();
-    }
-    ```
+   ```js
+   miBoton.onclick = function () {
+     estableceNombreUsuario();
+   };
+   ```
 
 Ahora cuando visites tu sitio por primera vez, este te pedirá tu nombre y te dará un mensaje personalizado de bienvenida. Puedes cambiar cuantas veces quieras el nombre al presionar el botón. Y como un bonus añadido, ya que el nombre se almacena en el localStorage, este permanecerá después de que cierre el sitio, ¡manteniendo ahí el mensaje personalizado cuando abras el sitio la próxima vez!
 
@@ -449,12 +448,12 @@ Para evitar estos problemas, podrías comprobar que el usuario no ha introducido
 
 ```js
 function estableceNombreUsuario() {
-  let miNombre = prompt('Introduzca su nombre.');
-  if(!miNombre) {
+  let miNombre = prompt("Introduzca su nombre.");
+  if (!miNombre) {
     estableceNombreUsuario();
   } else {
-    localStorage.setItem('nombre', miNombre);
-    miTitulo.innerHTML = 'Mozilla is genial, ' + miNombre;
+    localStorage.setItem("nombre", miNombre);
+    miTitulo.innerHTML = "Mozilla is genial, " + miNombre;
   }
 }
 ```

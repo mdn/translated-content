@@ -1,12 +1,6 @@
 ---
 title: Element.getElementsByClassName()
 slug: Web/API/Element/getElementsByClassName
-tags:
-  - API
-  - Класс
-  - Коллекция
-  - Элемент
-translation_of: Web/API/Element/getElementsByClassName
 ---
 
 {{APIRef("DOM")}}
@@ -30,36 +24,37 @@ var elements = element.getElementsByClassName(names);
 Получить все элементы с классом test:
 
 ```js
-element.getElementsByClassName('test');
+element.getElementsByClassName("test");
 ```
 
 Получить все элементы с классами test и red:
 
 ```js
-element.getElementsByClassName('red test');
+element.getElementsByClassName("red test");
 ```
 
 Получить все элементы с классом test, которые находятся в элементе с id main:
 
 ```js
-document.getElementById('main').getElementsByClassName('test');
+document.getElementById("main").getElementsByClassName("test");
 ```
 
 Мы так же можем использовать все методы из {{jsxref("Array.prototype")}} на любом {{ domxref("HTMLCollection") }} путём передачи `HTMLCollection` в метод как значение _this_. Так мы найдём все {{HTMLElement("div")}} элементы, которые имеют класс test:
 
 ```js
-var testElements = document.getElementsByClassName('test');
-var testDivs = Array.prototype.filter.call(testElements, function(testElement){
-    return testElement.nodeName === 'div';
-});
+var testElements = document.getElementsByClassName("test");
+var testDivs = Array.prototype.filter.call(
+  testElements,
+  function (testElement) {
+    return testElement.nodeName === "div";
+  },
+);
 ```
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                                                            | Status                           | Comment            |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('DOM WHATWG', '#dom-element-getelementsbyclassname', 'Element.getElementsByClassName()')}} | {{Spec2('DOM WHATWG')}} | Initial definition |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}

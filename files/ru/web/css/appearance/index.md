@@ -1,10 +1,6 @@
 ---
 title: appearance (-moz-appearance, -webkit-appearance)
 slug: Web/CSS/appearance
-tags:
-  - Стилизация
-  - кастомные свойства
-translation_of: Web/CSS/appearance
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -266,7 +262,7 @@ The following values may be operational on historical browser versions using **`
 
 {{CSSInfo}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

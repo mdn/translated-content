@@ -2,7 +2,7 @@
 title: CSS の構造
 slug: Learn/CSS/First_steps/How_CSS_is_structured
 l10n:
-  sourceCommit: b8e4a710b8a02c2c218e5b58c74183e328b2c57f
+  sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
@@ -14,7 +14,7 @@ CSS の概要と基本的な使い方について理解できたので、今度�
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        基本的なコンピュータリテラシー、<a
+        <a
           href="/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
           >基本的なソフトウェアのインストール</a
         >、基本的な<a
@@ -22,10 +22,7 @@ CSS の概要と基本的な使い方について理解できたので、今度�
           >ファイル操作</a
         >や HTML の基本（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 入門</a
-        >で学習）に関する基本的な知識、
-        <a href="/ja/docs/Learn/CSS/First_steps/How_CSS_works"
-          >CSS の動作</a
-        >に関する理解。
+        >で学習）に関する基本的な知識。
       </td>
     </tr>
     <tr>
@@ -46,7 +43,7 @@ CSS の概要と基本的な使い方について理解できたので、今度�
 HTML の `<link>` 要素から外部 CSS スタイルシートを参照しています。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-GB">
   <head>
     <meta charset="utf-8" />
@@ -94,7 +91,7 @@ p {
 例えば、 HTML はこのようになります。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-GB">
   <head>
     <meta charset="utf-8" />
@@ -127,7 +124,7 @@ p {
 インラインスタイルは、単一の HTML 要素のみに影響を与える CSS 宣言で、 `style` 属性の中に記述します。 HTML 文書におけるインラインスタイルの実装は次のようになります。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-GB">
   <head>
     <meta charset="utf-8" />
@@ -142,7 +139,7 @@ p {
 </html>
 ```
 
-**この方法での CSS の使用は、可能な限り避けてください。**まず、 CSS の実装の中では最も保守の効率が悪いものです。一つのスタイルを変更するために、一つのウェブページ内で複数の編集が必要になるかもしれません。第二に、インライン CSS はプレゼンテーション用のコードを HTML やコンテンツに混ぜてしまうため、すべてが読んだり理解したりしにくいものになってしまいます。コードとコンテンツを分離すれば、ウェブサイトで働くすべての人にとって保守が容易になります。
+**この方法での CSS の使用は、可能な限り避けてください。** まず、 CSS の実装の中では最も保守の効率が悪いものです。一つのスタイルを変更するために、一つのウェブページ内で複数の編集が必要になるかもしれません。第二に、インライン CSS はプレゼンテーション用のコードを HTML やコンテンツに混ぜてしまうため、すべてが読んだり理解したりしにくいものになってしまいます。コードとコンテンツを分離すれば、ウェブサイトで働くすべての人にとって保守が容易になります。
 
 インラインスタイルが一般的な状況はいくつかあります。作業環境が非常に制限されている場合は、インラインスタイルの使用に頼らざるを得ないかもしれません。例えば、 CMS では HTML の本文しか編集できない場合があります。また、できるだけ多くのメールクライアントとの互換性を実現するために、 HTML メールでインラインスタイルが多用されているのを見ることもあるでしょう。
 
@@ -153,7 +150,7 @@ p {
 **index.html:**
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -189,7 +186,7 @@ p {
 
 セレクターは CSS に欠かせない構成要素です。[CSS 入門](/ja/docs/Learn/CSS/First_steps/Getting_started)のチュートリアルでは、すでにさまざまな種類のセレクターを見てきました。セレクターは、 HTML 文書のなかでスタイルを適用する対象を指定するものです。もし CSS が期待通りにコンテンツに適用されなかったら、セレクターが一致すると思っていた方法で一致していないのかもしれません。
 
-それぞれの CSS ルールの先頭には、セレクターまたはセレクターのリストを書きます。これによって、ブラウザーにどの要素に CSS ルールを適用するかを指示します。次のコード例は、いずれも有効なセレクター、またはセレクターのリストです。
+それぞれの CSS ルールの先頭には、セレクターまたはセレクターのリストを書きます。これによって、ブラウザーにどの要素に CSS ルールを適用するかを指示します。次のサンプルコードは、いずれも有効なセレクター、またはセレクターのリストです。
 
 ```css
 h1
@@ -257,7 +254,7 @@ p {
 
 ![CSS で強調された宣言](declaration.png)
 
-プロパティが値と組み合わせられているとき、この組み合わせを _CSS 宣言_ (CSS declaration) と呼びます。 CSS 宣言は _CSS 宣言ブロック_ (CSS Declaration Blocks) の中に入っています。次のコード例では CSS の宣言ブロックを強調しています。
+プロパティが値と組み合わせられているとき、この組み合わせを _CSS 宣言_ (CSS declaration) と呼びます。 CSS 宣言は _CSS 宣言ブロック_ (CSS Declaration Blocks) の中に入っています。次のサンプルコードでは CSS の宣言ブロックを強調しています。
 
 ![強調表示された宣言ブロック](declaration-block.png)
 
@@ -348,9 +345,9 @@ CSS の[アットルール](/ja/docs/Web/CSS/At-rule) は、 CSS が実行する
 @import "styles2.css";
 ```
 
-よく目にするであろうアットルールが `@media` があり、[メディアクエリ](/ja/docs/Web/CSS/Media_Queries)を作成するために使用されます。メディアクエリは CSS スタイルを提供する条件を使用します。
+よく目にするであろうアットルールが `@media` があり、[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)を作成するために使用されます。メディアクエリーは CSS スタイルを提供する条件を使用します。
 
-以下の例では、スタイルシートは `<body>` 要素に既定でピンクの背景を定義しています。しかし、ブラウザーのビューポートが 30em よりも広い場合は、青い背景を定義するメディアクエリが続いています。
+以下の例では、スタイルシートは `<body>` 要素に既定でピンクの背景を定義しています。しかし、ブラウザーのビューポートが 30em よりも広い場合は、青い背景を定義するメディアクエリーが続いています。
 
 ```css
 body {
@@ -366,7 +363,7 @@ body {
 
 これ以外のアットルールにも、これからのチュートリアルで遭遇するでしょう。
 
-**ビューポートの幅に基づいてスタイルを変更するメディアクエリを追加できるかどうかを確認してください。ブラウザーウィンドウの幅を変更して結果を確認してみてください。**
+**ビューポートの幅に基づいてスタイルを変更するメディアクエリーを追加できるかどうかを確認してください。ブラウザーウィンドウの幅を変更して結果を確認してみてください。**
 
 ## 一括指定
 
@@ -423,7 +420,10 @@ CSS のコメントは `/*` で始まり `*/` で終わります。以下の例�
 /* 基本的な要素のスタイル付けを扱う */
 /* -------------------------------------------------------------------------------------------- */
 body {
-  font: 1em/150% Helvetica, Arial, sans-serif;
+  font:
+    1em/150% Helvetica,
+    Arial,
+    sans-serif;
   padding: 1em;
   margin: 0 auto;
   max-width: 33em;
@@ -480,7 +480,10 @@ p {
 
 ```css
 body {
-  font: 1em/150% Helvetica, Arial, sans-serif;
+  font:
+    1em/150% Helvetica,
+    Arial,
+    sans-serif;
   padding: 1em;
   margin: 0 auto;
   max-width: 33em;

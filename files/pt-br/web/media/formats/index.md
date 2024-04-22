@@ -1,7 +1,6 @@
 ---
 title: Formatos de mídia suportados por elementos HTML  de áudio e vídeo
 slug: Web/Media/Formats
-original_slug: Web/HTML/formatos_midia_suportados
 ---
 
 Os elementos {{ HTMLElement("audio") }} e {{ HTMLElement("video") }} fornecem suporte para a reprodução de mídias de áudio e vídeo sem necessitar de plug-ins. Codecs de áudio e vídeo são usados para manipular arquivos de áudio e vídeo, diferentes codecs oferecem diferentes níveis de compressão e qualidade. Um formato do repositório é usado para armazenar e transmitir o codec de áudio e vídeo ( ambos juntos, no caso de um vídeo com tilha sonora). Existem muitas combinações de codecs e formatos de containers, embora apenas alguns são relevantes para a internet.
@@ -12,9 +11,10 @@ Para exibir um vídeo usando HTML5, que funcione nas últimas versões dos princ
 
 ```html
 <video controls>
-  <source src="somevideo.webm" type="video/webm">
-  <source src="somevideo.mp4" type="video/mp4">
-  Desculpe; seu navegador não suporta vídeos HTML5 em WebM com VP8 ou MP4 com H.264.
+  <source src="somevideo.webm" type="video/webm" />
+  <source src="somevideo.mp4" type="video/mp4" />
+  Desculpe; seu navegador não suporta vídeos HTML5 em WebM com VP8 ou MP4 com
+  H.264.
   <!-- Você pode embutir um Flash player aqui, para exibir seu vídeo mp4 em navegadores antigos -->
 </video>
 ```

@@ -1,12 +1,6 @@
 ---
-title: '-moz-user-focus'
+title: "-moz-user-focus"
 slug: Web/CSS/-moz-user-focus
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
-translation_of: Web/CSS/-moz-user-focus
 ---
 
 {{CSSRef}}{{Non-standard_header}}
@@ -46,7 +40,9 @@ En utilisant la valeur `ignore`, on peut désactiver la prise de focus sur l'él
 ### HTML
 
 ```html
-<input class="ignored" value="L'utilisateur ne peut pas placer le focus sur cet élément.">
+<input
+  class="ignored"
+  value="L'utilisateur ne peut pas placer le focus sur cet élément." />
 ```
 
 ### CSS

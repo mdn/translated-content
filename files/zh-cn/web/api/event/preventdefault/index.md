@@ -1,25 +1,21 @@
 ---
-title: event.preventDefault
+title: Event：preventDefault() 方法
 slug: Web/API/Event/preventDefault
 ---
 
 {{APIRef("DOM")}}
 
-{{domxref("Event")}} 接口的 **`preventDefault()`** 方法，告诉{{Glossary("user agent", "用户代理")}}：如果此事件没有被显式处理，它默认的动作也不应该照常执行。此事件还是继续传播，除非碰到事件监听器调用 {{domxref("Event.stopPropagation", "stopPropagation()")}} 或 {{domxref("Event.stopImmediatePropagation", "stopImmediatePropagation()")}}，才停止传播。
+{{domxref("Event")}} 接口的 **`preventDefault()`** 方法，告诉{{Glossary("user agent", "用户代理")}}：如果此事件没有被显式处理，它默认的动作也不应该照常执行。
+
+此事件还是继续传播，除非碰到事件监听器调用 {{domxref("Event.stopPropagation", "stopPropagation()")}} 或 {{domxref("Event.stopImmediatePropagation", "stopImmediatePropagation()")}}，才停止传播。
+
+如后文所述，对于不可取消的事件（例如通过 {{domxref("EventTarget.dispatchEvent", "EventTarget.dispatchEvent()")}} 分派的、没有指定 `cancelable: true` 的事件），调用 **`preventDefault()`** 是没有任何效果的。
 
 ### 语法
 
-```plain
-event.preventDefault();
+```js-nolint
+event.preventDefault()
 ```
-
-### 参数
-
-无
-
-### 返回值
-
-`undefined`
 
 ## 示例
 
@@ -30,10 +26,15 @@ event.preventDefault();
 #### JavaScript
 
 ```js
-document.querySelector("#id-checkbox").addEventListener("click", function(event) {
-         document.getElementById("output-box").innerHTML += "Sorry! <code>preventDefault()</code> won't let you check this!<br>";
-         event.preventDefault();
-}, false);
+const checkbox = document.querySelector("#id-checkbox");
+
+checkbox.addEventListener("click", checkboxClick, false);
+
+function checkboxClick(event) {
+  let warn = "preventDefault() won't let you check this!<br>";
+  document.getElementById("output-box").innerHTML += warn;
+  event.preventDefault();
+}
 ```
 
 #### HTML
@@ -43,7 +44,7 @@ document.querySelector("#id-checkbox").addEventListener("click", function(event)
 
 <form>
   <label for="id-checkbox">Checkbox:</label>
-  <input type="checkbox" id="id-checkbox"/>
+  <input type="checkbox" id="id-checkbox" />
 </form>
 
 <div id="output-box"></div>
@@ -57,18 +58,18 @@ document.querySelector("#id-checkbox").addEventListener("click", function(event)
 
 ### 在编辑域中阻止按键
 
-下面的这个例子说明了如何使用 `preventDefault()` 在文本编辑域中阻止有效的文本输入。如今，你通常可以使用[原生的 HTML 表单验证](/zh-CN/docs/Learn/HTML/Forms/Data_form_validation)来代替。
+下面的这个例子说明了如何使用 `preventDefault()` 在文本编辑域中阻止有效的文本输入。如今，你通常可以使用[原生的 HTML 表单验证](/zh-CN/docs/Learn/Forms/Form_validation)来代替。
 
 #### HTML
 
-表单：
+此 HTML 表单用于捕获用户输入。由于我们只对按键输入感兴趣，因此我们禁用 `autocomplete` 功能来防止浏览器使用缓存的值填充输入字段。
 
 ```html
 <div class="container">
   <p>Please enter your name using lowercase letters only.</p>
 
   <form>
-    <input type="text" id="my-textbox">
+    <input type="text" id="my-textbox" />
   </form>
 </div>
 ```
@@ -93,8 +94,8 @@ document.querySelector("#id-checkbox").addEventListener("click", function(event)
 这里是相关的 JavaScript 代码。首先，监听 [`keypress`](/zh-CN/docs/Web/API/Element/keypress_event) 事件：
 
 ```js
-var myTextbox = document.getElementById('my-textbox');
-myTextbox.addEventListener('keypress', checkName, false);
+var myTextbox = document.getElementById("my-textbox");
+myTextbox.addEventListener("keypress", checkName, false);
 ```
 
 `checkName()` 方法可以监听按键并且决定是否允许按键的默认行为发生。
@@ -106,8 +107,11 @@ function checkName(evt) {
     if (charCode < 97 || charCode > 122) {
       evt.preventDefault();
       displayWarning(
-        "Please use lowercase letters only."
-        + "\n" + "charCode: " + charCode + "\n"
+        "Please use lowercase letters only." +
+          "\n" +
+          "charCode: " +
+          charCode +
+          "\n",
       );
     }
   }
@@ -131,10 +135,10 @@ function displayWarning(msg) {
     myTextbox.parentNode.insertBefore(warningBox, myTextbox.nextSibling);
   }
 
-  warningTimeout = window.setTimeout(function() {
-      warningBox.parentNode.removeChild(warningBox);
-      warningTimeout = -1;
-    }, 2000);
+  warningTimeout = window.setTimeout(function () {
+    warningBox.parentNode.removeChild(warningBox);
+    warningTimeout = -1;
+  }, 2000);
 }
 ```
 

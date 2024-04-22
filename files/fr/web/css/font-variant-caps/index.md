@@ -1,12 +1,6 @@
 ---
 title: font-variant-caps
 slug: Web/CSS/font-variant-caps
-tags:
-  - CSS
-  - CSS Fonts
-  - Propriété
-  - Reference
-translation_of: Web/CSS/font-variant-caps
 ---
 
 {{CSSRef}}
@@ -86,11 +80,9 @@ La valeur de cette propriété peut être l'un des mots-clés définis ci-après
 
 ```html
 <p>
-  La Reine devint pourpre de colère et
-  après l’avoir considérée un moment avec
-  des yeux flamboyants comme ceux d’une
-  bête fauve, elle se mit à crier :
-  « <span class="exemple">Qu’on lui coupe la tête !</span> »
+  La Reine devint pourpre de colère et après l’avoir considérée un moment avec
+  des yeux flamboyants comme ceux d’une bête fauve, elle se mit à crier : «
+  <span class="exemple">Qu’on lui coupe la tête !</span> »
 </p>
 ```
 

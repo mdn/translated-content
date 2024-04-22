@@ -32,10 +32,10 @@ var request = objectStore.get(key);
 
 此方法可能会引发以下类型之一的 {{domxref("DOMException")}} :
 
-| Exception                | Description                                                               |
-| ------------------------ | ------------------------------------------------------------------------- |
+| Exception                | Description                                                    |
+| ------------------------ | -------------------------------------------------------------- |
 | TransactionInactiveError | This {{domxref("IDBObjectStore")}}'s transaction is inactive.  |
-| DataError                | The key or key range provided contains an invalid key.                    |
+| DataError                | The key or key range provided contains an invalid key.         |
 | `InvalidStateError`      | The {{domxref("IDBObjectStore")}} has been deleted or removed. |
 
 ## 例子
@@ -46,8 +46,8 @@ var request = objectStore.get(key);
 // Let us open our database
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Database initialised.</li>';
+DBOpenRequest.onsuccess = function (event) {
+  note.innerHTML += "<li>Database initialised.</li>";
 
   // store the result of opening the database in the db variable.
   // This is used a lot below
@@ -62,12 +62,13 @@ function getData() {
   var transaction = db.transaction(["toDoList"], "readwrite");
 
   // report on the success of the transaction completing, when everything is done
-  transaction.oncomplete = function(event) {
-    note.innerHTML += '<li>Transaction completed.</li>';
+  transaction.oncomplete = function (event) {
+    note.innerHTML += "<li>Transaction completed.</li>";
   };
 
-  transaction.onerror = function(event) {
-    note.innerHTML += '<li>Transaction not opened due to error: ' + transaction.error + '</li>';
+  transaction.onerror = function (event) {
+    note.innerHTML +=
+      "<li>Transaction not opened due to error: " + transaction.error + "</li>";
   };
 
   // create an object store on the transaction
@@ -76,14 +77,13 @@ function getData() {
   // Make a request to get a record by key from the object store
   var objectStoreRequest = objectStore.get("Walk dog");
 
-  objectStoreRequest.onsuccess = function(event) {
+  objectStoreRequest.onsuccess = function (event) {
     // report the success of our request
-    note.innerHTML += '<li>Request successful.</li>';
+    note.innerHTML += "<li>Request successful.</li>";
 
     var myRecord = objectStoreRequest.result;
   };
-
-};
+}
 ```
 
 ## 规范

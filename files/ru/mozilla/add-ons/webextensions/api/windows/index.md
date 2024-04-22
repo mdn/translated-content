@@ -1,7 +1,6 @@
 ---
 title: windows
 slug: Mozilla/Add-ons/WebExtensions/API/windows
-translation_of: Mozilla/Add-ons/WebExtensions/API/windows
 ---
 
 {{AddonSidebar}}
@@ -52,7 +51,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/windows
 - {{WebExtAPIRef("windows.onFocusChanged")}}
   - : Fired when the currently focused window changes.
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

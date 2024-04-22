@@ -1,13 +1,9 @@
 ---
 title: Noms réservés
 slug: Glossary/Placeholder_names
-tags:
-  - Cryptographie
-  - Glossaire
-  - Sécurité
-translation_of: Glossary/Placeholder_names
-original_slug: Glossaire/Noms_réservés
 ---
+
+{{GlossarySidebar}}
 
 Les noms réservés sont courramment utilisés en cryptographie pour indiquer les participants à une conversation, sans recourir à une terminologie comme "Partie A", "indiscret" et "attaquant malveillant". Les noms les plus courants sont :
 

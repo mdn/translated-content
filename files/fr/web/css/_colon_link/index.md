@@ -1,11 +1,6 @@
 ---
-title: ':link'
+title: ":link"
 slug: Web/CSS/:link
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:link
 ---
 
 {{CSSRef}}
@@ -45,15 +40,15 @@ a:link {
 ### HTML
 
 ```html
-<p>Et si on allait voir
+<p>
+  Et si on allait voir
   <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/">
-  un peu de JavaScript ?
+    un peu de JavaScript ?
   </a>
 </p>
-<p>Sinon, on peut continuer à se cultiver sur CSS autre part
-  <a class="external" href="https://css-tricks.com/">
-  comme CSS Tricks.
-  </a>
+<p>
+  Sinon, on peut continuer à se cultiver sur CSS autre part
+  <a class="external" href="https://css-tricks.com/"> comme CSS Tricks. </a>
 </p>
 ```
 

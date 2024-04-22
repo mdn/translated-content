@@ -1,8 +1,6 @@
 ---
 title: Mise en forme des tableaux
 slug: Learn/CSS/Building_blocks/Styling_tables
-translation_of: Learn/CSS/Building_blocks/Styling_tables
-original_slug: Apprendre/CSS/Building_blocks/Styling_tables
 l10n:
   sourceCommit: 916af5e72ce683c6f7795755830c11677ca0f529
 ---
@@ -32,7 +30,9 @@ Commençons par un tableau HTML typique. Typique au sens où la plupart des exem
 
 ```html
 <table>
-  <caption>Récapitulatif des groupes punk les plus célèbres du Royaume-Uni</caption>
+  <caption>
+    Récapitulatif des groupes punk les plus célèbres du Royaume-Uni
+  </caption>
   <thead>
     <tr>
       <th scope="col">Groupe</th>
@@ -46,7 +46,9 @@ Commençons par un tableau HTML typique. Typique au sens où la plupart des exem
       <th scope="row">Buzzcocks</th>
       <td>1976</td>
       <td>9</td>
-      <td><i lang="en">Ever fallen in love (with someone you shouldn't've)</i></td>
+      <td>
+        <i lang="en">Ever fallen in love (with someone you shouldn't've)</i>
+      </td>
     </tr>
     <tr>
       <th scope="row">The Clash</th>
@@ -93,9 +95,9 @@ Voyons ensemble comment mettre en forme ce tableau.
 4. Ensuite, créez un nouveau fichier nommé `style.css` et enregistrez‑le dans le même répertoire que les autres fichiers
 5. Liez le CSS au HTML en mettant la ligne suivante dans l'élément [`<head>`](/fr/docs/Web/HTML/Element/head)&nbsp;:
 
-    ```html
-    <link href="style.css" rel="stylesheet" type="text/css">
-    ```
+   ```html
+   <link href="style.css" rel="stylesheet" type="text/css" />
+   ```
 
 ### Espacement et disposition
 
@@ -127,7 +129,8 @@ thead th:nth-child(4) {
   width: 35%;
 }
 
-th, td {
+th,
+td {
   padding: 20px;
 }
 ```
@@ -155,7 +158,10 @@ Tout d'abord, nous avons trouvé une police sur [Google Fonts](https://www.googl
 D'abord, ajoutons l'élément [`<link>`](/fr/docs/Web/HTML/Element/link) suivant dans l'élément HTML `head`, juste au‑dessus de l'élément `<link>` déjà présent&nbsp;:
 
 ```html
-<link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+<link
+  href="https://fonts.googleapis.com/css?family=Rock+Salt"
+  rel="stylesheet"
+  type="text/css" />
 ```
 
 Puis ajoutons le CSS suivant dans le fichier `style.css`, sous ce qui a déjà été ajouté&nbsp;:
@@ -164,11 +170,12 @@ Puis ajoutons le CSS suivant dans le fichier `style.css`, sous ce qui a déjà �
 /* typographie */
 
 html {
-  font-family: 'helvetica neue', helvetica, arial, sans-serif;
+  font-family: "helvetica neue", helvetica, arial, sans-serif;
 }
 
-thead th, tfoot th {
-  font-family: 'Rock Salt', cursive;
+thead th,
+tfoot th {
+  font-family: "Rock Salt", cursive;
 }
 
 th {
@@ -208,14 +215,21 @@ Commençons par ajouter le CSS suivant à la fin du fichier `style.css`&nbsp;:
 ```css
 /* graphisme et couleurs */
 
-thead, tfoot {
+thead,
+tfoot {
   background: url(leopardskin.jpg);
   color: white;
   text-shadow: 1px 1px 1px black;
 }
 
-thead th, tfoot th, tfoot td {
-  background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5));
+thead th,
+tfoot th,
+tfoot td {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.5)
+  );
   border: 3px solid purple;
 }
 ```
@@ -268,7 +282,7 @@ Il nous reste une dernière chose à faire avec ce tableau&nbsp;: mettre en form
 /* légende */
 
 caption {
-  font-family: 'Rock Salt', cursive;
+  font-family: "Rock Salt", cursive;
   padding: 20px;
   font-style: italic;
   caption-side: bottom;

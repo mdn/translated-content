@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.getMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getMilliseconds
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/getMilliseconds
 ---
 
 {{JSRef}}

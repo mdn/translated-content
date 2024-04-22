@@ -1,7 +1,6 @@
 ---
 title: Возвращаемые значения функций
 slug: Learn/JavaScript/Building_blocks/Return_values
-translation_of: Learn/JavaScript/Building_blocks/Return_values
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/События", "Learn/JavaScript/Building_blocks")}}
@@ -17,8 +16,8 @@ translation_of: Learn/JavaScript/Building_blocks/Return_values
 **Возвращаемые значения** - это на самом деле просто значения, которые функция возвращает после своего завершения. Вы уже неоднократно встречали возвращаемые значения, хотя, возможно, и не осознавали этого. Напишем небольшой код:
 
 ```js
-var myText = 'I am a string';
-var newString = myText.replace('string', 'sausage');
+var myText = "I am a string";
+var newString = myText.replace("string", "sausage");
 console.log(newString);
 // функция replace() принимает строку,
 // заменяет одну подстроку другой и возвращает
@@ -41,10 +40,10 @@ console.log(newString);
 
 ```js
 function draw() {
-  ctx.clearRect(0,0,WIDTH,HEIGHT);
+  ctx.clearRect(0, 0, WIDTH, HEIGHT);
   for (var i = 0; i < 100; i++) {
     ctx.beginPath();
-    ctx.fillStyle = 'rgba(255,0,0,0.5)';
+    ctx.fillStyle = "rgba(255,0,0,0.5)";
     ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
     ctx.fill();
   }
@@ -55,7 +54,7 @@ function draw() {
 
 ```js
 function random(number) {
-  return Math.floor(Math.random()*number);
+  return Math.floor(Math.random() * number);
 }
 ```
 
@@ -63,7 +62,7 @@ function random(number) {
 
 ```js
 function random(number) {
-  var result = Math.floor(Math.random()*number);
+  var result = Math.floor(Math.random() * number);
   return result;
 }
 ```
@@ -91,43 +90,53 @@ ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 1. Первым делом, сделайте локальную копию файла [function-library.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library.html) из GitHub. Это простая HTML страничка, содержащая текстовое поле {{htmlelement("input")}} и параграф Также там есть элемент {{htmlelement("script")}} в котором мы храним в 2ух переменных ссылки на оба HTML-элемента. Это маленькая страничка позволит вам ввести число в text box и отобразит различные, относящиеся к нему числа в параграфе ниже.
 2. Теперь добавим несколько полезных функций в элемент `<script>` . Ниже двух существующих строчек JavaScript, добавьте следующие описания функций:
 
-    ```js
-    function squared(num) {
-      return num * num;
-    }
+   ```js
+   function squared(num) {
+     return num * num;
+   }
 
-    function cubed(num) {
-      return num * num * num;
-    }
+   function cubed(num) {
+     return num * num * num;
+   }
 
-    function factorial(num) {
-      var x = num;
-      while (x > 1) {
-        num *= x-1;
-        x--;
-      }
-      return num;
-    }
-    ```
+   function factorial(num) {
+     var x = num;
+     while (x > 1) {
+       num *= x - 1;
+       x--;
+     }
+     return num;
+   }
+   ```
 
-    `Ф` функции `squared()` и `cubed()` довольно очевидны— они возвращают квадрат или куб переданного как параметр числа. Функция `factorial()` возвращает [factorial](https://en.wikipedia.org/wiki/Factorial) переданного числа.
+   `Ф` функции `squared()` и `cubed()` довольно очевидны— они возвращают квадрат или куб переданного как параметр числа. Функция `factorial()` возвращает [factorial](https://en.wikipedia.org/wiki/Factorial) переданного числа.
 
 3. Далее мы добавим способ выводить нашу информацию введённым в text input числе. Добавьте обработчик событий ниже существующих функций:
 
-    ```js
-    input.onchange = function() {
-      var num = input.value;
-      if (isNaN(num)) {
-        para.textContent = 'You need to enter a number!';
-      } else {
-        para.textContent = num + ' squared is ' + squared(num) + '. ' +
-                           num + ' cubed is ' + cubed(num) + '. ' +
-                           num + ' factorial is ' + factorial(num) + '.';
-      }
-    }
-    ```
+   ```js
+   input.onchange = function () {
+     var num = input.value;
+     if (isNaN(num)) {
+       para.textContent = "You need to enter a number!";
+     } else {
+       para.textContent =
+         num +
+         " squared is " +
+         squared(num) +
+         ". " +
+         num +
+         " cubed is " +
+         cubed(num) +
+         ". " +
+         num +
+         " factorial is " +
+         factorial(num) +
+         ".";
+     }
+   };
+   ```
 
-    Здесь мы создаём обработчик событий `onchange` который срабатывает когда меняется когда новое значение вводится в text input и подтверждается (введите значение и, например, нажмите tab). Когда анонимная функция срабатывает, введённое в input значение сохраняется в переменной `num` .
+   Здесь мы создаём обработчик событий `onchange` который срабатывает когда меняется когда новое значение вводится в text input и подтверждается (введите значение и, например, нажмите tab). Когда анонимная функция срабатывает, введённое в input значение сохраняется в переменной `num` .
 
 4. Далее мы делаем условный тест — если введённое значение не является числом, мы выводим в параграф сообщение об ошибке. Тест смотрит возвращает ли выражение `isNaN(num)` true. Мы используем функцию [isNaN()](/ru/docs/Web/JavaScript/Reference/Global_Objects/isNaN) чтобы проверить что значение переменной num не число — если так то функция возвращает `true`, если нет- `false`.
 5. Если тест возвращает `false`, значение переменной `num` число, и поэтому мы выводим сообщение внутри параграфа о значениях квадрата, куба и факториала числа. Предложение вызывает функции `squared()`, `cubed()` и `factorial()` чтобы получить нужные значения. Сохраните ваш код, загрузите его в браузере и посмотрите на то что получилось.

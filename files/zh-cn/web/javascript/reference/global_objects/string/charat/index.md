@@ -5,192 +5,87 @@ slug: Web/JavaScript/Reference/Global_Objects/String/charAt
 
 {{JSRef}}
 
-## 概述
+{{jsxref("String")}} 的 **`charAt()`** 方法返回一个由给定索引处的单个 UTF-16 码元构成的新字符串。
 
-**charAt()** 方法从一个字符串中返回指定的字符。
+`charAt()` 方法总是将字符串作为 [UTF-16 码元](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_字符、unicode_码位和字素簇)序列进行索引，因此它可能会返回孤项代理。要获取给定索引处的完整 Unicode 码位，请使用 {{jsxref("String.prototype.codePointAt()")}} 和 {{jsxref("String.fromCodePoint()")}}。
+
+{{EmbedInteractiveExample("pages/js/string-charat.html", "shorter")}}
 
 ## 语法
 
-```plain
-str.charAt(index)
+```js-nolint
+charAt(index)
 ```
 
 ### 参数
 
 - `index`
-  - : 一个介于 0 和字符串长度减 1 之间的整数。(0\~length-1) 如果没有提供索引，charAt() 将使用 0。
+  - : 要返回的字符的索引，从零开始。会被[转换为整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#整数转换)——`undefined` 会被转换为 0。
+
+### 返回值
+
+返回一个字符串，该字符串表示指定 `index` 处的字符（恰好是一个 UTF-16 码元）。如果 `index` 超出了 `0` – `str.length - 1` 的范围，`charAt()` 将返回一个空字符串。
 
 ## 描述
 
-字符串中的字符从左向右索引，第一个字符的索引值为 0，最后一个字符（假设该字符位于字符串 stringName 中）的索引值为 `stringName.length - 1`。如果指定的 index 值超出了该范围，则返回一个空字符串。
+字符串中的字符从左到右进行索引。第一个字符的索引为 `0`，字符串中最后一个字符的索引为 `str.length - 1`。
+
+Unicode 码位的范围从 `0` 到 `1114111` (`0x10FFFF`)。`charAt()` 方法总是返回一个其值小于 `65536` 的字符，因为更高的码位是由*一对* 16 位代理伪字符表示的。因此，为了获取值大于 `65535` 的完整字符，需要检索不仅是 `charAt(i)`，还要检索 `charAt(i + 1)`（就像操作一个由两个字符组成的字符串一样），或者使用 {{jsxref("String/codePointAt", "codePointAt(i)")}} 和 {{jsxref("String.fromCodePoint()")}} 代替。有关 Unicode 的信息，请参阅 [UTF-16 字符、Unicode 码位和字素簇](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_字符、unicode_码位和字素簇)。
+
+`charAt()` 和使用[方括号表示法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors#方括号表示法)访问指定索引处的字符非常相似。它们的主要区别在于：
+
+- `charAt()` 尝试将 `index` 转换为整数，而方括号表示法不会，直接使用 `index` 作为属性名。
+- 如果 `index` 超出范围，`charAt()` 返回一个空字符串，而方括号表示法返回 `undefined`。
 
 ## 示例
 
-### 示例：输出字符串中不同位置的字符
+### 使用 charAt()
 
-下例输出字符串 "`Brave new world`" 不同位置处的字符：
+下例输出字符串 `"Brave new world"` 不同位置处的字符：
 
 ```js
-var anyString = "Brave new world";
+const anyString = "Brave new world";
+console.log(`在索引 0 处的字符为 '${anyString.charAt()}'`);
+// 没有提供索引，使用 0 作为默认值
 
-console.log("The character at index 0   is '" + anyString.charAt(0)   + "'");
-console.log("The character at index 1   is '" + anyString.charAt(1)   + "'");
-console.log("The character at index 2   is '" + anyString.charAt(2)   + "'");
-console.log("The character at index 3   is '" + anyString.charAt(3)   + "'");
-console.log("The character at index 4   is '" + anyString.charAt(4)   + "'");
-console.log("The character at index 999 is '" + anyString.charAt(999) + "'");
+console.log(`在索引 0 处的字符为 '${anyString.charAt(0)}'`);
+console.log(`在索引 1 处的字符为 '${anyString.charAt(1)}'`);
+console.log(`在索引 2 处的字符为 '${anyString.charAt(2)}'`);
+console.log(`在索引 3 处的字符为 '${anyString.charAt(3)}'`);
+console.log(`在索引 4 处的字符为 '${anyString.charAt(4)}'`);
+console.log(`在索引 999 处的字符为 '${anyString.charAt(999)}'`);
 ```
 
 上面代码的输出为：
 
-```plain
-The character at index 0 is 'B'
-The character at index 1 is 'r'
-The character at index 2 is 'a'
-The character at index 3 is 'v'
-The character at index 4 is 'e'
-The character at index 999 is ''
+```
+在索引 0 处的字符为 'B'
+
+在索引 0 处的字符为 'B'
+在索引 1 处的字符为 'r'
+在索引 2 处的字符为 'a'
+在索引 3 处的字符为 'v'
+在索引 4 处的字符为 'e'
+在索引 999 处的字符为 ''
 ```
 
-### 示例：获取所有字符
-
-以下提供了一种确保通过字符串循环总是提供整个字符的方法，即使该字符串包含不在[基本多文种平面](https://zh.wikipedia.org/wiki/Unicode%E5%AD%97%E7%AC%A6%E5%B9%B3%E9%9D%A2%E6%98%A0%E5%B0%84#.E5.9F.BA.E6.9C.AC.E5.A4.9A.E6.96.87.E7.A7.8D.E5.B9.B3.E9.9D.A2)（BMP）中的字符。
+`charAt()` 可能会返回孤项代理，这些代理项不是有效的 Unicode 字符。
 
 ```js
-var str = 'A \uD87E\uDC04 Z'; // We could also use a non-BMP character directly
-for (var i=0, chr; i < str.length; i++) {
-  if ((chr = getWholeChar(str, i)) === false) {
-    continue;
-  } // Adapt this line at the top of each loop, passing in the whole string and
-    // the current iteration and returning a variable to represent the
-    // individual character
-
-  alert(chr);
-}
-
-function getWholeChar (str, i) {
-  var code = str.charCodeAt(i);
-
-  if (isNaN(code)) {
-    return ''; // Position not found
-  }
-  if (code < 0xD800 || code > 0xDFFF) {
-    return str.charAt(i);
-  }
-
-  // High surrogate (could change last hex to 0xDB7F to treat high private
-  // surrogates as single characters)
-  if (0xD800 <= code && code <= 0xDBFF) {
-    if (str.length <= (i+1))  {
-      throw 'High surrogate without following low surrogate';
-    }
-    var next = str.charCodeAt(i+1);
-      if (0xDC00 > next || next > 0xDFFF) {
-        throw 'High surrogate without following low surrogate';
-      }
-      return str.charAt(i)+str.charAt(i+1);
-  }
-  // Low surrogate (0xDC00 <= code && code <= 0xDFFF)
-  if (i === 0) {
-    throw 'Low surrogate without preceding high surrogate';
-  }
-  var prev = str.charCodeAt(i-1);
-
-  // (could change last hex to 0xDB7F to treat high private
-  // surrogates as single characters)
-  if (0xD800 > prev || prev > 0xDBFF) {
-    throw 'Low surrogate without preceding high surrogate';
-  }
-  // We can pass over low surrogates now as the second component
-  // in a pair which we have already processed
-  return false;
-}
+const str = "𠮷𠮾";
+console.log(str.charAt(0)); // "\ud842"，这不是有效的 Unicode 字符
+console.log(str.charAt(1)); // "\udfb7"，这不是有效的 Unicode 字符
 ```
 
-在允许解构分配的独占 JavaScript 1.7+ 环境（如 Firefox）中，以下是一个更简洁和更灵活的替代方法，它会自动递增一个递增变量（如果字符保证它是一个替代对）。
+要获取给定索引处的完整 Unicode 码位，请使用按 Unicode 码位拆分的索引方法，例如 {{jsxref("String.prototype.codePointAt()")}} 和将字符串[展开为 Unicode 码位数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator)。
 
 ```js
-var str = 'A\uD87E\uDC04Z'; // We could also use a non-BMP character directly
-for (var i=0, chr; i < str.length; i++) {
-  [chr, i] = getWholeCharAndI(str, i);
-  // Adapt this line at the top of each loop, passing in the whole string and
-  // the current iteration and returning an array with the individual character
-  // and 'i' value (only changed if a surrogate pair)
-
-  alert(chr);
-}
-
-function getWholeCharAndI (str, i) {
-  var code = str.charCodeAt(i);
-
-  if (isNaN(code)) {
-    return ''; // Position not found
-  }
-  if (code < 0xD800 || code > 0xDFFF) {
-    return [str.charAt(i), i]; // Normal character, keeping 'i' the same
-  }
-
-  // High surrogate (could change last hex to 0xDB7F to treat high private
-  // surrogates as single characters)
-  if (0xD800 <= code && code <= 0xDBFF) {
-    if (str.length <= (i+1))  {
-      throw 'High surrogate without following low surrogate';
-    }
-    var next = str.charCodeAt(i+1);
-      if (0xDC00 > next || next > 0xDFFF) {
-        throw 'High surrogate without following low surrogate';
-      }
-      return [str.charAt(i)+str.charAt(i+1), i+1];
-  }
-  // Low surrogate (0xDC00 <= code && code <= 0xDFFF)
-  if (i === 0) {
-    throw 'Low surrogate without preceding high surrogate';
-  }
-  var prev = str.charCodeAt(i-1);
-
-  // (could change last hex to 0xDB7F to treat high private surrogates
-  // as single characters)
-  if (0xD800 > prev || prev > 0xDBFF) {
-    throw 'Low surrogate without preceding high surrogate';
-  }
-  // Return the next character instead (and increment)
-  return [str.charAt(i+1), i+1];
-}
+const str = "𠮷𠮾";
+console.log(String.fromCodePoint(str.codePointAt(0))); // "𠮷"
+console.log([...str][0]); // "𠮷"
 ```
 
-### 示例：修复 charAt 以支持非基本多文种平面（BMP）字符
-
-虽然上面的例子对于那些希望支持非 BMP 字符的用户可能更有用（因为它不要求调用者知道任何非 BMP 字符可能出现在哪里），在人们希望的情况下，在选择字符 通过索引，将字符串中的替代对作为它们表示的单个字符，可以使用以下：
-
-```js
-function fixedCharAt (str, idx) {
-  var ret = '';
-  str += '';
-  var end = str.length;
-
-  var surrogatePairs = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
-  while ((surrogatePairs.exec(str)) != null) {
-    var li = surrogatePairs.lastIndex;
-    if (li - 2 < idx) {
-      idx++;
-    } else {
-      break;
-    }
-  }
-
-  if (idx >= end || idx < 0) {
-    return '';
-  }
-
-  ret += str.charAt(idx);
-
-  if (/[\uD800-\uDBFF]/.test(ret) && /[\uDC00-\uDFFF]/.test(str.charAt(idx+1))) {
-    // Go one further, since one of the "characters" is part of a surrogate pair
-    ret += str.charAt(idx+1);
-  }
-  return ret;
-}
-```
+> **备注：** 避免使用 `charAt()` 重新实现上述解决方案。检测孤项代理及其配对很复杂，而内置 API 可能更高效，因为它们直接使用字符串的内部表示形式。如有必要，请安装上述 API 的 polyfill。
 
 ## 规范
 
@@ -200,10 +95,12 @@ function fixedCharAt (str, idx) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{jsxref("String.prototype.indexOf()")}}, {{jsxref("String.prototype.lastIndexOf()")}}
-- {{jsxref("String.prototype.split()")}}
+- {{jsxref("String.prototype.indexOf()")}}
+- {{jsxref("String.prototype.lastIndexOf()")}}
 - {{jsxref("String.prototype.charCodeAt()")}}
-- {{jsxref("String.fromCodePoint()")}}
 - {{jsxref("String.prototype.codePointAt()")}}
+- {{jsxref("String.prototype.split()")}}
+- {{jsxref("String.fromCodePoint()")}}
+- [JavaScript 有一个关于 Unicode 的问题——Mathias Bynens](https://mathiasbynens.be/notes/javascript-unicode)

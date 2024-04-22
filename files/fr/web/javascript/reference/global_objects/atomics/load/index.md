@@ -1,14 +1,6 @@
 ---
 title: Atomics.load()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/load
-tags:
-  - Atomics
-  - JavaScript
-  - Mémoire partagée
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/load
-original_slug: Web/JavaScript/Reference/Objets_globaux/Atomics/load
 ---
 
 {{JSRef}}
@@ -20,7 +12,7 @@ La méthode statique **`Atomics.load()`** renvoie une valeur située à une posi
 ## Syntaxe
 
 ```js
-Atomics.load(typedArray, index)
+Atomics.load(typedArray, index);
 ```
 
 ### Paramètres

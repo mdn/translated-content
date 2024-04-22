@@ -33,7 +33,10 @@ slug: Web/API/CSSRuleList
 
 ```css
 body {
-  font-family: system-ui,-apple-system,sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
   margin: 2em;
 }
 

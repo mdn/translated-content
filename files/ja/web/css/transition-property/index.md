@@ -1,17 +1,17 @@
 ---
 title: transition-property
 slug: Web/CSS/transition-property
+l10n:
+  sourceCommit: bed59f268d5e299beb538e435f08c4f4ce685980
 ---
 
 {{CSSRef}}
 
-**`transition-property`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[トランジション効果](/ja/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)を適用する CSS プロパティを指定します。
+**`transition-property`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[トランジション効果](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)を適用する CSS プロパティを指定します。
 
 {{EmbedInteractiveExample("pages/css/transition-property.html")}}
 
-> **メモ:** [アニメーション可能なプロパティのセット](/ja/docs/Web/CSS/CSS_animated_properties)は変更される可能性があります。これにより、将来意図しない結果を引き起こす可能性があるため、リストで現状アニメーションしないとしているプロパティを使用することは避けてください。
-
-一括指定プロパティ (例えば {{cssxref("background")}}) を指定すると、その個別指定のサブプロパティすべてをアニメーションさせることができます。
+一括指定プロパティ（例えば {{cssxref("background")}}）を指定すると、その個別指定のサブプロパティすべてをアニメーションさせることができます。
 
 ## 構文
 
@@ -28,12 +28,16 @@ transition-property: sliding-vertically;
 /* 複数の値 */
 transition-property: test1, animation4;
 transition-property: all, height, color;
-transition-property: all, -moz-specific, sliding;
+transition-property:
+  all,
+  -moz-specific,
+  sliding;
 
 /* グローバル値 */
 transition-property: inherit;
 transition-property: initial;
 transition-property: revert;
+transition-property: revert-layer;
 transition-property: unset;
 ```
 
@@ -56,35 +60,48 @@ transition-property: unset;
 
 ## 例
 
-### 単純な例
+### 基本的な例
 
-この例では、ユーザーが要素の上にカーソルを置いたときに、 4 秒間でフォントサイズの遷移を行います。 `transition-property` は `font-size` です。
+ボタンにポインターを当てるかフォーカスすると、 1 秒間の色のトランジションが行われます。 `transition-property` は [`background-color`](/ja/docs/Web/CSS/background-color) です。
 
 #### HTML
 
 ```html
-<a class="target">ここにマウスポインターを置いてください</a>
+<button class="target">フォーカスしてください</button>
 ```
 
 #### CSS
 
-```css
-.target {
-  font-size: 14px;
-  transition-property: font-size;
-  transition-duration: 4s;
+```css hidden
+html {
+  height: 100vh;
 }
 
-.target:hover {
-  font-size: 36px;
+button {
+  font-size: 1.4rem;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
 }
 ```
 
-#### 結果
+```css
+.target {
+  transition-property: background-color;
+  transition-duration: 1s;
+  background-color: #ccc;
+}
 
-{{EmbedLiveSample('Simple_example', 600, 100)}}
+.target:hover,
+.target:focus {
+  background-color: #eee;
+}
+```
 
-`transition-property` のその他の例は、主となる [CSS トランジション](/ja/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)の記事にあります。
+{{EmbedLiveSample('Basic_example', 600, 100)}}
+
+`transition-property` のその他の例については、 [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)ガイドを参照してください。
 
 ## 仕様書
 
@@ -96,7 +113,7 @@ transition-property: unset;
 
 ## 関連情報
 
-- [CSS トランジションの使用](/ja/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [CSS トランジションの使用](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - {{cssxref('transition')}}
 - {{cssxref('transition-duration')}}
 - {{cssxref('transition-timing-function')}}

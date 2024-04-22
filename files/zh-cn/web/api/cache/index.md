@@ -55,51 +55,52 @@ var CACHE_VERSION = 1;
 
 // 简写标识符映射到特定版本的缓存。
 var CURRENT_CACHES = {
-  font: 'font-cache-v' + CACHE_VERSION
+  font: "font-cache-v" + CACHE_VERSION,
 };
 
-self.addEventListener('activate', function(event) {
-  var expectedCacheNames = Object.keys(CURRENT_CACHES).map(function(key) {
+self.addEventListener("activate", function (event) {
+  var expectedCacheNames = Object.keys(CURRENT_CACHES).map(function (key) {
     return CURRENT_CACHES[key];
   });
 
   // 在 promise 成功完成之前，活跃的 worker 不会被视作已激活。
   event.waitUntil(
-    caches.keys().then(function(cacheNames) {
+    caches.keys().then(function (cacheNames) {
       return Promise.all(
-        cacheNames.map(function(cacheName) {
+        cacheNames.map(function (cacheName) {
           if (expectedCacheNames.indexOf(cacheName) == -1) {
-            console.log('Deleting out of date cache:', cacheName);
+            console.log("Deleting out of date cache:", cacheName);
 
             return caches.delete(cacheName);
           }
-        })
+        }),
       );
-    })
+    }),
   );
 });
 
-self.addEventListener('fetch', function(event) {
-  console.log('Handling fetch event for', event.request.url);
+self.addEventListener("fetch", function (event) {
+  console.log("Handling fetch event for", event.request.url);
 
   event.respondWith(
-
     // 打开以'font'开头的 Cache 对象。
-    caches.open(CURRENT_CACHES['font']).then(function(cache) {
-      return cache.match(event.request).then(function(response) {
-        if (response) {
-          console.log(' Found response in cache:', response);
+    caches.open(CURRENT_CACHES["font"]).then(function (cache) {
+      return cache
+        .match(event.request)
+        .then(function (response) {
+          if (response) {
+            console.log(" Found response in cache:", response);
 
-          return response;
-        }
-      }).catch(function(error) {
+            return response;
+          }
+        })
+        .catch(function (error) {
+          // 处理 match() 或 fetch() 引起的异常。
+          console.error("  Error in fetch handler:", error);
 
-        // 处理 match() 或 fetch() 引起的异常。
-        console.error('  Error in fetch handler:', error);
-
-        throw error;
-      });
-    })
+          throw error;
+        });
+    }),
   );
 });
 ```
@@ -114,8 +115,8 @@ self.addEventListener('fetch', function(event) {
 
 ## 参见
 
-- [Using Service Workers](/zh-CN/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
-- [Service workers basic code example](https://github.com/mdn/sw-test)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- [使用 Service Worker](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Service workers 基本代码示例](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
+- [是否支持 ServiceWorker](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
-- [Using web workers](/zh-CN/docs/Web/Guide/Performance/Using_web_workers)
+- [使用 web worker](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)

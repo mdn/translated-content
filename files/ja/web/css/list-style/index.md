@@ -26,7 +26,7 @@ slug: Web/CSS/list-style
 list-style: square;
 
 /* image */
-list-style: url('../img/shape.png');
+list-style: url("../img/shape.png");
 
 /* position */
 list-style: inside;
@@ -35,7 +35,7 @@ list-style: inside;
 list-style: georgian inside;
 
 /* type | image | position */
-list-style: lower-roman url('../img/shape.png') outside;
+list-style: lower-roman url("../img/shape.png") outside;
 
 /* キーワード値 */
 list-style: none;
@@ -81,13 +81,15 @@ ul li::before {
 もう一つは、 list-style プロパティに url の値を適用する方法です。
 
 ```css
-nav ol, nav ul {
+nav ol,
+nav ul {
   list-style: none;
 }
 
 /* こうします */
 
-nav ol, nav ul {
+nav ol,
+nav ul {
   list-style: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E");
 }
 ```
@@ -96,7 +98,7 @@ nav ol, nav ul {
 
 - ['Fixing' Lists](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html)
 - [VoiceOver and list-style-type: none – Unfettered Thoughts](https://unfetteredthoughts.net/2017/09/26/voiceover-and-list-style-type-none/)
-- [MDN "WCAG を理解する ― ガイドライン 1.3 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways)
+- [MDN "WCAG を理解する ― ガイドライン 1.3 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.3_—_さまざまな方法で提示できるコンテンツの作成)
 - [Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
 
 ## 公式定義

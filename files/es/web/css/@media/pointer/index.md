@@ -27,8 +27,7 @@ Este ejemplo crea una pequeño checkbox para los usuarios con punteros primarios
 ### HTML
 
 ```html
-<input id="test" type="checkbox" />
-<label for="test">Mírame!</label>
+<input id="test" type="checkbox" /> <label for="test">Mírame!</label>
 ```
 
 ### CSS

@@ -1,19 +1,9 @@
 ---
 title: webRequest.CertificateInfo
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/CertificateInfo
-tags:
-  - API
-  - Add-ons
-  - CertificateInfo
-  - Extensions
-  - Reference
-  - Type
-  - WebExtensions
-  - webRequest
-translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/CertificateInfo
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Un objet décrivant un seul [certificat X.509](https://tools.ietf.org/html/rfc5280).
 

@@ -24,12 +24,12 @@ Una variable es un contenedor para un valor, como un número que podríamos usar
 ```
 
 ```js
-const button = document.querySelector('button');
+const button = document.querySelector("button");
 
-button.onclick = function() {
-  let name = prompt('¿Cuál es tu nombre?');
-  alert('¡Hola ' + name + ', encantado de verte!');
-}
+button.onclick = function () {
+  let name = prompt("¿Cuál es tu nombre?");
+  alert("¡Hola " + name + ", encantado de verte!");
+};
 ```
 
 {{ EmbedLiveSample('What_is_a_variable', '100%', 50, "", "", "hide-codepen-jsfiddle") }}
@@ -99,7 +99,7 @@ scoobyDoo;
 Una vez que hayas declarado una variable, la puedes iniciar con un valor. Para ello, escribe el nombre de la variable, seguido de un signo igual (`=`), seguido del valor que deseas darle. Por ejemplo:
 
 ```js
-myName = 'Chris';
+myName = "Chris";
 myAge = 37;
 ```
 
@@ -113,7 +113,7 @@ myAge;
 Puedes declarar e iniciar una variable al mismo tiempo, así:
 
 ```js
-let myDog = 'Rover';
+let myDog = "Rover";
 ```
 
 Esto probablemente es lo que harás la mayor parte del tiempo, ya que es más rápido que realizar las dos acciones en dos líneas separadas.
@@ -129,7 +129,7 @@ A continuación se explican un par de diferencias simples. No abordaremos todas 
 Para empezar, si escribes un programa JavaScript de varias líneas que declara e inicia una variable, puedes declarar una variable con `var` después de iniciarla y seguirá funcionando. Por ejemplo:
 
 ```js
-myName = 'Chris';
+myName = "Chris";
 
 function logName() {
   console.log(myName);
@@ -149,22 +149,22 @@ La elevación (`hoisting`) ya no funciona con `let`. Si cambiamos `var` a `let` 
 En segundo lugar, cuando usas `var`, puedes declarar la misma variable tantas veces como desees, pero con `let` no puedes. Lo siguiente funcionaría:
 
 ```js
-var myName = 'Chris';
-var myName = 'Bob';
+var myName = "Chris";
+var myName = "Bob";
 ```
 
 Pero lo siguiente arrojaría un error en la segunda línea:
 
 ```js
-let myName = 'Chris';
-let myName = 'Bob';
+let myName = "Chris";
+let myName = "Bob";
 ```
 
 Tendrías que hacer esto en su lugar:
 
 ```js
-let myName = 'Chris';
-myName = 'Bob';
+let myName = "Chris";
+myName = "Bob";
 ```
 
 Nuevamente, esta es una sensata decisión del lenguaje. No hay razón para volver a declarar las variables — solo hace que las cosas sean más confusas.
@@ -176,7 +176,7 @@ Por estas y otras razones, se recomienda utilizar `let` tanto como sea posible e
 Una vez que una variable se ha iniciado con un valor, puedes cambiar (o actualizar) ese valor simplemente dándole un valor diferente. Intenta ingresar las siguientes líneas en tu consola:
 
 ```js
-myName = 'Bob';
+myName = "Bob";
 myAge = 40;
 ```
 
@@ -241,7 +241,7 @@ let myAge = 17;
 Las `string`s (cadenas) son piezas de texto. Cuando le das a una variable un valor de cadena, debes encerrarlo entre comillas simples o dobles; de lo contrario, JavaScript intenta interpretarlo como otro nombre de variable.
 
 ```js
-let dolphinGoodbye = 'Hasta luego y gracias por todos los peces';
+let dolphinGoodbye = "Hasta luego y gracias por todos los peces";
 ```
 
 ### Booleanos
@@ -265,7 +265,7 @@ Aquí se está usando el operador "menor que" (`<`) para probar si 6 es menor qu
 Un arreglo es un objeto único que contiene múltiples valores encerrados entre corchetes y separados por comas. Intenta ingresar las siguientes líneas en tu consola:
 
 ```js
-let myNameArray = ['Chris', 'Bob', 'Jim'];
+let myNameArray = ["Chris", "Bob", "Jim"];
 let myNumberArray = [10, 15, 40];
 ```
 
@@ -287,13 +287,13 @@ En programación, un objeto es una estructura de código que modela un objeto de
 Intenta ingresar la siguiente línea en tu consola:
 
 ```js
-let dog = { name : 'Spot', breed : 'Dalmatian' };
+let dog = { name: "Spot", breed: "Dalmatian" };
 ```
 
 Para recuperar la información almacenada en el objeto, puedes utilizar la siguiente sintaxis:
 
 ```js
-dog.name
+dog.name;
 ```
 
 Por ahora, no veremos más objetos. Puedes obtener más información sobre ellos en [un futuro módulo](/es/docs/Learn/JavaScript/Objects).
@@ -305,13 +305,13 @@ JavaScript es un "lenguaje tipado dinámicamente", lo cual significa que, a dife
 Por ejemplo, si declaras una variable y le das un valor entre comillas, el navegador trata a la variable como una cadena (`string`):
 
 ```js
-let myString = 'Hello';
+let myString = "Hello";
 ```
 
 Incluso si el valor contiene números, sigue siendo una cadena, así que ten cuidado:
 
 ```js
-let myNumber = '500'; // Vaya, esto sigue siendo una cadena
+let myNumber = "500"; // Vaya, esto sigue siendo una cadena
 typeof myNumber;
 myNumber = 500; // mucho mejor — ahora este es un número
 typeof myNumber;

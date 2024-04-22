@@ -1,13 +1,6 @@
 ---
 title: ET binaire (&)
 slug: Web/JavaScript/Reference/Operators/Bitwise_AND
-tags:
-  - Bitwise operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.bitwise_and
 ---
 
 {{jsSidebar("Operators")}}
@@ -19,14 +12,14 @@ L'opérateur ET binaire (`&`) renvoie un nombre dont la représentation binaire 
 ## Syntaxe
 
 ```js
-a & b
+a & b;
 ```
 
 ## Description
 
 Les opérandes sont convertis en entiers sur 32 bits et exprimés comme une séquence de bits. Les nombres sur plus de 32 bits ont leurs bits en excès écartés. Par exemple, l'entier suivant nécessite plus de 32 bits pour être représenté et il sera converti en un entier sur 32 bits :
 
-```js
+```plain
 Avant:  11100110111110100000000000000110000000000001
 Après:              10100000000000000110000000000001
 ```

@@ -1,8 +1,6 @@
 ---
 title: Constructeur Intl.Segmenter()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/Segmenter
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/Segmenter
-browser-compat: javascript.builtins.Intl.Segmenter.constructor
 ---
 
 {{JSRef}}
@@ -14,9 +12,9 @@ Le constructeur **`Intl.Segmenter()`** crée un objet [`Intl.Segmenter`](/fr/doc
 ## Syntaxe
 
 ```js
-new Intl.Segmenter()
-new Intl.Segmenter(locales)
-new Intl.Segmenter(locales, options)
+new Intl.Segmenter();
+new Intl.Segmenter(locales);
+new Intl.Segmenter(locales, options);
 ```
 
 ### Paramètres
@@ -52,8 +50,11 @@ Dans l'exemple suivant, on compte les mots d'une chaîne en japonais (où le dé
 
 ```js
 const text = "吾輩は猫である。名前はたぬき。";
-const japaneseSegmenter = new Intl.Segmenter('ja-JP', {granularity: 'word'});
-console.log([...japaneseSegmenter.segment(text)].filter(segment => segment.isWordLike).length);
+const japaneseSegmenter = new Intl.Segmenter("ja-JP", { granularity: "word" });
+console.log(
+  [...japaneseSegmenter.segment(text)].filter((segment) => segment.isWordLike)
+    .length,
+);
 // affiche 8 car le texte est segmenté en '吾輩'|'は'|'猫'|'で'|'ある'|'。'|'名前'|'は'|'たぬき'|'。'
 ```
 

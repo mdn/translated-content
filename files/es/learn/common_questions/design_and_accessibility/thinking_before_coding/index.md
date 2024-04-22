@@ -1,7 +1,6 @@
 ---
 title: ¿Cómo empiezo a diseñar mi sitio web?
 slug: Learn/Common_questions/Design_and_accessibility/Thinking_before_coding
-original_slug: Learn/Common_questions/Thinking_before_coding
 ---
 
 Este artículo cubre el primer paso importante de cada proyecto: definir lo que se desea lograr con él.
@@ -180,4 +179,4 @@ En segundo lugar, establecer pasos procesables conduce a nuevas preguntas que ne
 
 ## Conclusión
 
-Como puedes ver, la idea simple “Quiero hacer un sitio web” genera una larga lista de quehaceres, la cual sólo crece conforme piensas en ella. Pronto puede parecer abrumador, pero no entres en pánico. No es necesario responder todas las preguntas, y no necesitas hacer todo lo indicado en tu lista. Lo que importa es tener una visión de lo que deseas y cómo alcanzarlo. Una vez que tengas una visión clara, necesitarás decidir cómo y cuándo hacerlo. Divide grandes proyectos en pequeños pasos realizables, y esos pequeños pasos producirán grandes logros.
+Como puedes ver, la idea simple "Quiero hacer un sitio web" genera una larga lista de quehaceres, la cual sólo crece conforme piensas en ella. Pronto puede parecer abrumador, pero no entres en pánico. No es necesario responder todas las preguntas, y no necesitas hacer todo lo indicado en tu lista. Lo que importa es tener una visión de lo que deseas y cómo alcanzarlo. Una vez que tengas una visión clara, necesitarás decidir cómo y cuándo hacerlo. Divide grandes proyectos en pequeños pasos realizables, y esos pequeños pasos producirán grandes logros.

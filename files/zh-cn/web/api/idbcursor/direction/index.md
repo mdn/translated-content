@@ -38,24 +38,28 @@ prev
 
 ```js
 function backwards() {
-  list.innerHTML = '';
-  var transaction = db.transaction(['rushAlbumList'], 'readonly');
-  var objectStore = transaction.objectStore('rushAlbumList');
+  list.innerHTML = "";
+  var transaction = db.transaction(["rushAlbumList"], "readonly");
+  var objectStore = transaction.objectStore("rushAlbumList");
 
-  objectStore.openCursor(null,'prev').onsuccess = function(event) {
+  objectStore.openCursor(null, "prev").onsuccess = function (event) {
     var cursor = event.target.result;
-      if(cursor) {
-        var listItem = document.createElement('li');
-        listItem.innerHTML = '<strong>' + cursor.value.albumTitle + '</strong>, ' + cursor.value.year;
-        list.appendChild(listItem);
+    if (cursor) {
+      var listItem = document.createElement("li");
+      listItem.innerHTML =
+        "<strong>" +
+        cursor.value.albumTitle +
+        "</strong>, " +
+        cursor.value.year;
+      list.appendChild(listItem);
 
-        console.log(cursor.direction);
-        cursor.continue();
-      } else {
-        console.log('Entries displayed backwards.');
-      }
+      console.log(cursor.direction);
+      cursor.continue();
+    } else {
+      console.log("Entries displayed backwards.");
+    }
   };
-};
+}
 ```
 
 ## Specifications

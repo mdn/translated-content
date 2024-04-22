@@ -28,7 +28,9 @@ Promise.race(iterable)
 
 ## 解説
 
-`Promise.race()` メソッドは[プロミス並列処理](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#promise_concurrency)メソッドの 1 つです。これは最初の非同期タスクを完全に完了させたいが、最終的な状態は気にしない（つまり、成功も失敗もあり得る）場合に有用です。
+`Promise.race()` メソッドは[プロミス並行処理](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#promise_concurrency)メソッドの 1 つです。これは最初の非同期タスクを完全に完了させたいが、最終的な状態は気にしない（つまり、成功も失敗もあり得る）場合に有用です。
+
+> **メモ:** 日本語の技術文書では、このメソッドが複数のプロミスを並列に処理すると説明されることがありますが、実際には複数のスレッドでプロミスが処理されるわけではないことに注意してください。詳細は[プロミスの並行処理](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#プロミスの並行処理)を参照してください。
 
 反復可能オブジェクトに 1 つ以上の非プロミス値および/または既に確定したプロミスが格納されている場合、 `Promise.race()` は反復可能オブジェクトで最初に見つかった値に確定します。
 
@@ -69,7 +71,7 @@ Promise.race([p3, p4]).then(
   },
   (error) => {
     // Not called
-  }
+  },
 );
 
 const p5 = sleep(500, "five", "fulfill");
@@ -82,13 +84,13 @@ Promise.race([p5, p6]).then(
   (error) => {
     console.error(error.message); // "six"
     // p6 is faster, so it rejects
-  }
+  },
 );
 ```
 
 ### Promise.race の非同期性
 
-以下の例では、 `Promise.race` の非同期性を示しています。他のプロミス並列処理メソッドとは異なり、 `Promise.race` は常に非同期です。反復可能オブジェクトが空の場合でも、決して同期的に解決することはありません。
+以下の例では、 `Promise.race` の非同期性を示しています。他のプロミス並行処理メソッドとは異なり、 `Promise.race` は常に非同期です。反復可能オブジェクトが空の場合でも、決して同期的に解決することはありません。
 
 ```js
 // Promise.race をできるだけ早く起動させるために、

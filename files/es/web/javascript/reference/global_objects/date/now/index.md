@@ -1,10 +1,9 @@
 ---
 title: Date.now()
 slug: Web/JavaScript/Reference/Global_Objects/Date/now
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/now
 ---
 
-{{JSRef("Objetos_globales", "Date")}}
+{{JSRef}}
 
 ## Resumen
 

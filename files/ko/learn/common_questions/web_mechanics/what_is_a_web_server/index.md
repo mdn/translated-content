@@ -1,7 +1,6 @@
 ---
 title: 웹 서버란 무엇일까?
 slug: Learn/Common_questions/Web_mechanics/What_is_a_web_server
-original_slug: Learn/Common_questions/What_is_a_web_server
 ---
 
 여기서 우리는 웹 서버가 무엇인지, 어떻게 동작하는지, 왜 중요한지를 알아볼 것입니다.
@@ -11,10 +10,10 @@ original_slug: Learn/Common_questions/What_is_a_web_server
     <tr>
       <th scope="row">선수 지식</th>
       <td>
-        <a href="/en-US/docs/Learn/page_vs_site_vs_server_vs_search_engine"
+        <a href="/ko/docs/Learn/page_vs_site_vs_server_vs_search_engine"
           >웹 페이지와 웹 사이트, 웹 서버, 그리고 검색 엔진의 차이점</a
         >에 대해 이해하고
-        <a href="/en-US/docs/Learn/How_the_Internet_works"
+        <a href="/ko/docs/Learn/How_the_Internet_works"
           >인터넷이 어떻게 동작하는지</a
         > 알고있으면 좋습니다.
       </td>
@@ -56,7 +55,7 @@ original_slug: Learn/Common_questions/What_is_a_web_server
 
 웹 서버는 처음에 HTML 문서라고 불리는 웹 사이트의 파일들과 이미지, CSS 스타일시트, JavaScript 파일, 폰트, 비디오를 포함한 관련된 것들을 저장해야합니다.
 
-기술적으로, 당신은 컴퓨터에 있는 그 파일들을 불러올수 있지만, 그것들을 전담하는 웹 서버에 저장하는것이 훨씬 더 편리합니다. 전담하는 웹서버는:
+기술적으로, 당신은 컴퓨터에 있는 그 파일들을 불러올수 있지만, 그것들을 전담하는 웹 서버에 저장하는것이 훨씬 더 편리합니다. 전담하는 웹서버는 아래와 같습니다.
 
 - 항상 실행 중입니다
 - 항상 인터넷과 연결되어 있습니다
@@ -88,7 +87,7 @@ HTTP는 어떻게 클라이언트와 서버가 통신을 하는지 명확한 규
 
 1. 요청을 받으면, HTTP 서버는 먼저 요청받은 URL이 존재하는 파일과 매칭이 되는지를 확인합니다.
 2. 만약 매칭된다면, 웹 서버는 그 파일 내용을 브라우저에게 되돌려줍니다. 만약 그렇지 않다면, 애플리케이션 서버는 필요한 파일을 구축합니다.
-3. 만약 위 둘의 과정이 불가능하다면, 웹 서버는 브라우저에게 에러 메시지를 반환합니다, 대부분의 에러 메시지는 "404 Not Found" 입니다.(이 에러는 너무 많이 발생하여 많은 웹 디자이너들은[404 error pages](http://www.404notfound.fr/)를 디자인하는데 많은 시간을 할애합니다.
+3. 만약 위 둘의 과정이 불가능하다면, 웹 서버는 브라우저에게 에러 메시지를 반환합니다, 대부분의 에러 메시지는 "404 Not Found" 입니다.(이 에러는 너무 많이 발생하여 많은 웹 디자이너들은404 error pages를 디자인하는데 많은 시간을 할애합니다.
 
 ### 정적 vs. 동적 컨텐츠
 
@@ -102,7 +101,7 @@ HTTP는 어떻게 클라이언트와 서버가 통신을 하는지 명확한 규
 
 ## 다음 과정
 
-이제 당신은 웹 서버에 익숙해졌으니, 아래와 같은 것들을 할 수 있습니다:
+이제 당신은 웹 서버에 익숙해졌으니, 아래와 같은 것들을 할 수 있습니다.
 
 - [웹에서 어떤 것을 하는 것이 얼마나 많은 비용이 들지](/ko/docs/Learn/How_much_does_it_cost)를 읽어보기
 - [당신이 웹 사이트를 생성하기 위해 필요한 다양한 소프트웨어](/ko/docs/Learn/What_software_do_I_need.)를 배우기

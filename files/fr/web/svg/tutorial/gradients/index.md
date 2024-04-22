@@ -1,11 +1,6 @@
 ---
 title: Gradients SVG
 slug: Web/SVG/Tutorial/Gradients
-tags:
-  - SVG
-  - SVG:Tutoriel
-translation_of: Web/SVG/Tutorial/Gradients
-original_slug: Web/SVG/Tutoriel/Gradients
 ---
 
 {{ PreviousNext("Web/SVG/Tutoriel/Fills_and_Strokes", "Web/SVG/Tutoriel/Motifs") }}
@@ -25,25 +20,34 @@ Un exemple de dégradé linéaire appliqué à un élément `<rect>`:
 ```html
 <svg width="120" height="240" version="1.1" xmlns="http://www.w3.org/2000/svg">
   <defs>
-      <linearGradient id="Gradient1" x1="0" x2="0" y1="0" y2="1">
-        <stop offset="0%" stop-color="red"/>
-        <stop offset="50%" stop-color="black" stop-opacity="0"/>
-        <stop offset="100%" stop-color="blue"/>
-      </linearGradient>
-      <linearGradient id="Gradient2">
-        <stop class="stop1" offset="0%"/>
-        <stop class="stop2" offset="50%"/>
-        <stop class="stop3" offset="100%"/>
-      </linearGradient>
-      <style type="text/css"><![CDATA[
-        #rect1 { fill: url(#Gradient2); }
-        .stop1 { stop-color: red; }
-        .stop2 { stop-color: black; stop-opacity: 0; }
-        .stop3 { stop-color: blue; }
-      ]]></style>
+    <linearGradient id="Gradient1" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="red" />
+      <stop offset="50%" stop-color="black" stop-opacity="0" />
+      <stop offset="100%" stop-color="blue" />
+    </linearGradient>
+    <linearGradient id="Gradient2">
+      <stop class="stop1" offset="0%" />
+      <stop class="stop2" offset="50%" />
+      <stop class="stop3" offset="100%" />
+    </linearGradient>
+    <style type="text/css">
+      <![CDATA[
+              #rect1 { fill: url(#Gradient2); }
+              .stop1 { stop-color: red; }
+              .stop2 { stop-color: black; stop-opacity: 0; }
+              .stop3 { stop-color: blue; }
+            ]]>
+    </style>
   </defs>
 
-  <rect x="10" y="120" rx="15" ry="15" width="100" height="100" fill="url(#Gradient1)"/>
+  <rect
+    x="10"
+    y="120"
+    rx="15"
+    ry="15"
+    width="100"
+    height="100"
+    fill="url(#Gradient1)" />
   <rect x="10" y="10" rx="15" ry="15" width="100" height="100" id="rect1" />
 </svg>
 ```
@@ -71,7 +75,7 @@ Pour utiliser le dégradé, vous devez le référencer avec l'attribut `fill` ou
 L'élément `<linearGradient>` peut également prendre différents attributs pour spécifier la taille et l'apparence du dégradé. L'orientation du dégradé est contrôlé par deux points, désignés par les attributs `x1`, `x2`, `y1`, et `y2`. Ces attributs définissent la ligne le long de laquelle le dégradé est tracé. Par défaut, le dégradé est horizontal, mais il peut être orienté autrement grâce à ces attributs. "Gradient2" dans l'exemple précédent crée un dégradé vertical.
 
 ```html
-<linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
+<linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1"></linearGradient>
 ```
 
 ### xlink:href
@@ -80,12 +84,18 @@ Vous pouvez également utiliser l'attribut `xlink:href` sur les dégradés. Quan
 
 ```html
 <linearGradient id="Gradient1">
-  <stop id="stop1" offset="0%"/>
-  <stop id="stop2" offset="50%"/>
-  <stop id="stop3" offset="100%"/>
+  <stop id="stop1" offset="0%" />
+  <stop id="stop2" offset="50%" />
+  <stop id="stop3" offset="100%" />
 </linearGradient>
-<linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1"
-  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#Gradient1"/>
+<linearGradient
+  id="Gradient2"
+  x1="0"
+  x2="0"
+  y1="0"
+  y2="1"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xlink:href="#Gradient1" />
 ```
 
 Ici, le namespace xlink est inclut directement sur le noeud, bien qu'il soit généralement définit en haut du document, comme dans l'[exemple avec les images](/fr/docs/Web/SVG/Tutoriel/Contenu_embarque_SVG)
@@ -99,18 +109,32 @@ Les dégradés radiaux (_radial gradient_ en anglais) sont similaires aux dégra
 ```html
 <svg width="120" height="240" version="1.1" xmlns="http://www.w3.org/2000/svg">
   <defs>
-      <radialGradient id="RadialGradient1">
-        <stop offset="0%" stop-color="red"/>
-        <stop offset="100%" stop-color="blue"/>
-      </radialGradient>
-      <radialGradient id="RadialGradient2" cx="0.25" cy="0.25" r="0.25">
-        <stop offset="0%" stop-color="red"/>
-        <stop offset="100%" stop-color="blue"/>
-      </radialGradient>
+    <radialGradient id="RadialGradient1">
+      <stop offset="0%" stop-color="red" />
+      <stop offset="100%" stop-color="blue" />
+    </radialGradient>
+    <radialGradient id="RadialGradient2" cx="0.25" cy="0.25" r="0.25">
+      <stop offset="0%" stop-color="red" />
+      <stop offset="100%" stop-color="blue" />
+    </radialGradient>
   </defs>
 
-  <rect x="10" y="10" rx="15" ry="15" width="100" height="100" fill="url(#RadialGradient1)"/>
-  <rect x="10" y="120" rx="15" ry="15" width="100" height="100" fill="url(#RadialGradient2)"/>
+  <rect
+    x="10"
+    y="10"
+    rx="15"
+    ry="15"
+    width="100"
+    height="100"
+    fill="url(#RadialGradient1)" />
+  <rect
+    x="10"
+    y="120"
+    rx="15"
+    ry="15"
+    width="100"
+    height="100"
+    fill="url(#RadialGradient2)" />
 </svg>
 ```
 
@@ -126,25 +150,40 @@ Les stops utilisés ici sont les mêmes que précédemment, la différence étan
 ### Centre et point focal
 
 ```html
-<svg width="120" height="120" version="1.1"
-  xmlns="http://www.w3.org/2000/svg">
+<svg width="120" height="120" version="1.1" xmlns="http://www.w3.org/2000/svg">
   <defs>
-      <radialGradient id="Gradient"
-            cx="0.5" cy="0.5" r="0.5" fx="0.25" fy="0.25">
-        <stop offset="0%" stop-color="red"/>
-        <stop offset="100%" stop-color="blue"/>
-      </radialGradient>
+    <radialGradient id="Gradient" cx="0.5" cy="0.5" r="0.5" fx="0.25" fy="0.25">
+      <stop offset="0%" stop-color="red" />
+      <stop offset="100%" stop-color="blue" />
+    </radialGradient>
   </defs>
 
-  <rect x="10" y="10" rx="15" ry="15" width="100" height="100"
-        fill="url(#Gradient)" stroke="black" stroke-width="2"/>
+  <rect
+    x="10"
+    y="10"
+    rx="15"
+    ry="15"
+    width="100"
+    height="100"
+    fill="url(#Gradient)"
+    stroke="black"
+    stroke-width="2" />
 
-  <circle cx="60" cy="60" r="50" fill="transparent" stroke="white" stroke-width="2"/>
-  <circle cx="35" cy="35" r="2" fill="white" stroke="white"/>
-  <circle cx="60" cy="60" r="2" fill="white" stroke="white"/>
-  <text x="38" y="40" fill="white" font-family="sans-serif" font-size="10pt">(fx,fy)</text>
-  <text x="63" y="63" fill="white" font-family="sans-serif" font-size="10pt">(cx,cy)</text>
-
+  <circle
+    cx="60"
+    cy="60"
+    r="50"
+    fill="transparent"
+    stroke="white"
+    stroke-width="2" />
+  <circle cx="35" cy="35" r="2" fill="white" stroke="white" />
+  <circle cx="60" cy="60" r="2" fill="white" stroke="white" />
+  <text x="38" y="40" fill="white" font-family="sans-serif" font-size="10pt">
+    (fx,fy)
+  </text>
+  <text x="63" y="63" fill="white" font-family="sans-serif" font-size="10pt">
+    (cx,cy)
+  </text>
 </svg>
 ```
 
@@ -213,10 +252,14 @@ Les deux types de dégradés ont également un attribut `gradientUnits`, qui ind
 - `userSpaceOnUse` indique que les valeurs sont absolues. Vous devez donc savoir où se situe l'objet, et placer le dégradé à la même position. Le dégradé radial précédent devrait être ré-écrit comme suit:
 
   ```html
-  <radialGradient id="Gradient"
-                  cx="60" cy="60" r="50"
-                  fx="35" fy="35"
-                  gradientUnits="userSpaceOnUse">
+  <radialGradient
+    id="Gradient"
+    cx="60"
+    cy="60"
+    r="50"
+    fx="35"
+    fy="35"
+    gradientUnits="userSpaceOnUse"></radialGradient>
   ```
 
 Il y a quelques subtilités concernant l'utilisation de `gradientUnits="objectBoundingBox"` quand les limites de l'objet ne sont pas carrées, mais elles sont assez complexes et nous attendrons quelqu'un de plus au courant pour les expliquer.

@@ -11,9 +11,9 @@ slug: Web/HTTP/Headers/If-Modified-Since
 
 最常见的应用场景是来更新没有特定 {{HTTPHeader("ETag")}} 标签的缓存实体。
 
-| Header type                                      | {{Glossary("Request header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| Header type                           | {{Glossary("Request header")}} |
+| ------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden header name")}} | no                             |
 
 ## 语法
 
@@ -54,7 +54,7 @@ If-Modified-Since: Wed, 21 Oct 2015 07:28:00 GMT
 
 {{Compat}}
 
-## 相关内容
+## 参见
 
 - {{HTTPHeader("ETag")}}
 - {{HTTPHeader("If-Unmodified-since")}}

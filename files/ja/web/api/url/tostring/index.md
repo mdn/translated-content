@@ -1,43 +1,48 @@
 ---
-title: URL.toString()
+title: "URL: toString() メソッド"
+short-title: toString()
 slug: Web/API/URL/toString
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{ApiRef("URL API")}}
 
-`URL.toString()` 文字列化メソッドは、URL 全体を含む {{domxref("USVString")}} を返します。 これは事実上、{{domxref("URL.href")}} の読み取り専用バージョンです。
+**`URL.toString()`** は{{Glossary("stringifier", "文字列化")}}メソッドで、URL 全体が入った文字列を返します。 これは事実上、{{domxref("URL.href")}} の読み取り専用バージョンです。
 
 {{AvailableInWorkers}}
 
 ## 構文
 
-```
-string = url.toString();
+```js-nolint
+toString()
 ```
 
-### パラメーター
+### 引数
 
 なし。
 
-### 戻り値
+### 返値
 
-{{domxref("USVString")}}。
+文字列です。
 
 ## 例
 
 ```js
-const url = new URL("https://developer.mozilla.org/en-US/docs/Web/API/URL/toString");
-url.toString() // URL を文字列として返します
+const url = new URL(
+  "https://developer.mozilla.org/ja/docs/Web/API/URL/toString",
+);
+url.toString(); // URL を文字列として返します
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.URL.toString")}}
+{{Compat}}
 
 ## 関連情報
 
-- {{domxref("URL")}} インターフェイスに属します。
+- 所属先の {{domxref("URL")}} インターフェイス

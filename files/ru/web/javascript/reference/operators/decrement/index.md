@@ -1,10 +1,6 @@
 ---
 title: Декремент (--)
 slug: Web/JavaScript/Reference/Operators/Decrement
-tags:
-  - Декремент
-  - Оператор
-translation_of: Web/JavaScript/Reference/Operators/Decrement
 ---
 
 {{jsSidebar("Operators")}}
@@ -49,12 +45,9 @@ b = --a;
 
 ## Характеристики
 
-Спецификация
+{{Specifications}}
 
-| {{SpecName('ESDraft', '#sec-postfix-decrement-operator', 'Decrement operator')}} |
-| ------------------------------------------------------------------------------------------------------------ |
-
-## Совместимость с браузером
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -1,7 +1,6 @@
 ---
 title: JSON.stringify()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/stringify
-original_slug: Web/JavaScript/Referencia/Objetos_globales/JSON/stringify
 ---
 
 {{JSRef}}
@@ -46,62 +45,83 @@ Lanza una excepción {{JSxRef("TypeError")}} ("cyclic object value") cuando encu
 - El resto de instancias de {{JSxRef("Object")}} (incluyendo {{JSxRef("Map")}}, {{JSxRef("Set")}}, {{JSxRef("WeakMap")}}, y {{JSxRef("WeakSet")}}) sólo tendrán serializadas sus propiedades enumerables.
 
 ```js
-JSON.stringify({});                    // '{}'
-JSON.stringify(true);                  // 'true'
-JSON.stringify('foo');                 // '"foo"'
-JSON.stringify([1, 'false', false]);   // '[1,"false",false]'
+JSON.stringify({}); // '{}'
+JSON.stringify(true); // 'true'
+JSON.stringify("foo"); // '"foo"'
+JSON.stringify([1, "false", false]); // '[1,"false",false]'
 JSON.stringify([NaN, null, Infinity]); // '[null,null,null]'
-JSON.stringify({ x: 5 });              // '{"x":5}'
+JSON.stringify({ x: 5 }); // '{"x":5}'
 
-JSON.stringify(new Date(2006, 0, 2, 15, 4, 5))
+JSON.stringify(new Date(2006, 0, 2, 15, 4, 5));
 // '"2006-01-02T15:04:05.000Z"'
 
 JSON.stringify({ x: 5, y: 6 });
 // '{"x":5,"y":6}'
-JSON.stringify([new Number(3), new String('false'), new Boolean(false)]);
+JSON.stringify([new Number(3), new String("false"), new Boolean(false)]);
 // '[3,"false",false]'
 
 // Elementos de array identificados por string no son enumerables y no tienen sentido en JSON
-let a = ['foo', 'bar'];
-a['baz'] = 'quux';      // a: [ 0: 'foo', 1: 'bar', baz: 'quux' ]
+let a = ["foo", "bar"];
+a["baz"] = "quux"; // a: [ 0: 'foo', 1: 'bar', baz: 'quux' ]
 JSON.stringify(a);
 // '["foo","bar"]'
 
-JSON.stringify({ x: [10, undefined, function(){}, Symbol('')] });
+JSON.stringify({ x: [10, undefined, function () {}, Symbol("")] });
 // '{"x":[10,null,null,null]}'
 
 // Estructuras de datos standard
-JSON.stringify([new Set([1]), new Map([[1, 2]]), new WeakSet([{a: 1}]), new WeakMap([[{a: 1}, 2]])]);
+JSON.stringify([
+  new Set([1]),
+  new Map([[1, 2]]),
+  new WeakSet([{ a: 1 }]),
+  new WeakMap([[{ a: 1 }, 2]]),
+]);
 // '[{},{},{},{}]'
 
 // TypedArray
 JSON.stringify([new Int8Array([1]), new Int16Array([1]), new Int32Array([1])]);
 // '[{"0":1},{"0":1},{"0":1}]'
-JSON.stringify([new Uint8Array([1]), new Uint8ClampedArray([1]), new Uint16Array([1]), new Uint32Array([1])]);
+JSON.stringify([
+  new Uint8Array([1]),
+  new Uint8ClampedArray([1]),
+  new Uint16Array([1]),
+  new Uint32Array([1]),
+]);
 // '[{"0":1},{"0":1},{"0":1},{"0":1}]'
 JSON.stringify([new Float32Array([1]), new Float64Array([1])]);
 // '[{"0":1},{"0":1}]'
 
 // toJSON()
-JSON.stringify({ x: 5, y: 6, toJSON(){ return this.x + this.y; } });
+JSON.stringify({
+  x: 5,
+  y: 6,
+  toJSON() {
+    return this.x + this.y;
+  },
+});
 // '11'
 
 // Símbolos:
-JSON.stringify({ x: undefined, y: Object, z: Symbol('') });
+JSON.stringify({ x: undefined, y: Object, z: Symbol("") });
 // '{}'
-JSON.stringify({ [Symbol('foo')]: 'foo' });
+JSON.stringify({ [Symbol("foo")]: "foo" });
 // '{}'
-JSON.stringify({ [Symbol.for('foo')]: 'foo' }, [Symbol.for('foo')]);
+JSON.stringify({ [Symbol.for("foo")]: "foo" }, [Symbol.for("foo")]);
 // '{}'
-JSON.stringify({ [Symbol.for('foo')]: 'foo' }, function(k, v) {
-  if (typeof k === 'symbol') {
-    return 'a symbol';
+JSON.stringify({ [Symbol.for("foo")]: "foo" }, function (k, v) {
+  if (typeof k === "symbol") {
+    return "a symbol";
   }
 });
 // undefined
 
 // Propiedades no enumerables:
-JSON.stringify( Object.create(null, { x: { value: 'x', enumerable: false }, y: { value: 'y', enumerable: true } }) );
+JSON.stringify(
+  Object.create(null, {
+    x: { value: "x", enumerable: false },
+    y: { value: "y", enumerable: true },
+  }),
+);
 // '{"y":"y"}'
 ```
 
@@ -134,7 +154,13 @@ function replacer(key, value) {
   return value;
 }
 
-var foo = {foundation: "Mozilla", model: "box", week: 45, transport: "car", month: 7};
+var foo = {
+  foundation: "Mozilla",
+  model: "box",
+  week: 45,
+  transport: "car",
+  month: 7,
+};
 var jsonString = JSON.stringify(foo, replacer);
 // '{"week":45, "month":7}'
 ```
@@ -146,7 +172,7 @@ Ejemplo con un array
 Si el reemplazo es un array, los valores indican los nombres de las propiedades del objeto que se va a incluir en la cadena JSON resultado.
 
 ```js
-JSON.stringify(foo, ['week', 'month']);
+JSON.stringify(foo, ["week", "month"]);
 // '{"week":45,"month":7}', sólo mantiene las propiedades de "week" y de "month"
 ```
 
@@ -155,7 +181,7 @@ JSON.stringify(foo, ['week', 'month']);
 Este argumento puede ser empleado para controlar el espaciado en la cadena final. Si es un número, los niveles sucesivos del proceso serán identados cada uno por tantos espacios como se indique (hasta 10). Si es una cadena, serán identados con dicha cadena (o los primeros diez caracteres de la misma).
 
 ```js
-JSON.stringify({ a: 2 }, null, ' ');
+JSON.stringify({ a: 2 }, null, " ");
 // regresa la cadena de texto:
 // '{
 //  "a": 2
@@ -165,7 +191,7 @@ JSON.stringify({ a: 2 }, null, ' ');
 Usar el carácter tabulador simula la apariencia de impresión:
 
 ```js
-JSON.stringify({ uno: 1, dos : 2 }, null, '\t')
+JSON.stringify({ uno: 1, dos: 2 }, null, "\t");
 // devuelve el string:
 // '{            \
 //     "uno": 1, \
@@ -179,12 +205,12 @@ Si un objeto que sera estringificado tiene una propiedad llamada toJSON donde su
 
 ```js
 var obj = {
-  foo: 'foo',
+  foo: "foo",
   toJSON: function () {
-    return 'bar';
-  }
+    return "bar";
+  },
 };
-var json = JSON.stringify({x: obj}); // '{"x":"bar"}'.
+var json = JSON.stringify({ x: obj }); // '{"x":"bar"}'.
 ```
 
 ### Ejemplo de como usar `JSON.stringify()` con `localStorage`
@@ -196,23 +222,23 @@ En dado caso en el cual se requiera que un objeto creado por el usuario y al cua
 ```js
 // Creando un ejemplo de JSON
 var session = {
-  'screens': [],
-  'state': true
+  screens: [],
+  state: true,
 };
-session.screens.push({ 'name': 'screenA', 'width': 450, 'height': 250 });
-session.screens.push({ 'name': 'screenB', 'width': 650, 'height': 350 });
-session.screens.push({ 'name': 'screenC', 'width': 750, 'height': 120 });
-session.screens.push({ 'name': 'screenD', 'width': 250, 'height': 60 });
-session.screens.push({ 'name': 'screenE', 'width': 390, 'height': 120 });
-session.screens.push({ 'name': 'screenF', 'width': 1240, 'height': 650 });
+session.screens.push({ name: "screenA", width: 450, height: 250 });
+session.screens.push({ name: "screenB", width: 650, height: 350 });
+session.screens.push({ name: "screenC", width: 750, height: 120 });
+session.screens.push({ name: "screenD", width: 250, height: 60 });
+session.screens.push({ name: "screenE", width: 390, height: 120 });
+session.screens.push({ name: "screenF", width: 1240, height: 650 });
 
 // Convirte el JSON string con JSON.stringify()
 // entonces guarda con localStorage con el nombre de la sesión
-localStorage.setItem('session', JSON.stringify(session));
+localStorage.setItem("session", JSON.stringify(session));
 
 // Ejemplo de como transformar el String generado usando
 // JSON.stringify() y guardándolo en localStorage como objeto JSON otra vez
-var restoredSession = JSON.parse(localStorage.getItem('session'));
+var restoredSession = JSON.parse(localStorage.getItem("session"));
 
 // Ahora la variable restoredSession contiene el objeto que fue guardado
 // en localStorage

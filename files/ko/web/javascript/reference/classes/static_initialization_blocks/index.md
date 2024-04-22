@@ -1,7 +1,6 @@
 ---
 title: Class static initialization blocks
 slug: Web/JavaScript/Reference/Classes/Static_initialization_blocks
-original_slug: Web/JavaScript/Reference/Classes/Class_static_initialization_blocks
 ---
 
 {{jsSidebar("Classes")}}
@@ -31,10 +30,10 @@ super 클래스의 정적 초기화는 하위 클래스보다 먼저 수행됩�
 `static {}` 초기화 블록에서 선언된 `var`, `function`, `const` 또는 `let`은 해당 블록에 대해 로컬이므로 블록의 모든 `var` 선언은 호이스트 되지 않습니다.
 
 ```js
-var y = '외부 y';
+var y = "외부 y";
 
 class A {
-  static field = '내부 y';
+  static field = "내부 y";
   static {
     var y = this.field;
   }
@@ -62,13 +61,13 @@ console.log(y);
 
 ```js
 class MyClass {
-  static field1 = console.log('필드1 호출됨');
+  static field1 = console.log("필드1 호출됨");
   static {
-    console.log('1번 정적 클래스 블록 호출됨');
+    console.log("1번 정적 클래스 블록 호출됨");
   }
-  static field2 = console.log('필드2 호출됨');
+  static field2 = console.log("필드2 호출됨");
   static {
-    console.log('2번 정적 클래스 블록 호출됨');
+    console.log("2번 정적 클래스 블록 호출됨");
   }
 }
 
@@ -89,7 +88,7 @@ super 클래스의 정적 초기화는 하위 클래스보다 먼저 수행됩�
 
 ```js
 class A {
-  static field = '정적 필드';
+  static field = "정적 필드";
   static {
     console.log(this.field);
   }
@@ -101,7 +100,7 @@ class A {
 
 ```js
 class A {
-  static fieldA = 'A.fieldA';
+  static fieldA = "A.fieldA";
 }
 class B extends A {
   static {
@@ -128,7 +127,7 @@ class D {
   }
 }
 
-getDPrivateField(new D('private'));
+getDPrivateField(new D("private"));
 // > private
 ```
 

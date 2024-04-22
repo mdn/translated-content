@@ -21,12 +21,12 @@ _cName_ es una variable de cadena representando la clase o la lista de clases se
 ## Ejemplo
 
 ```js
-let elm = document.getElementById('item');
+let elm = document.getElementById("item");
 
-if(elm.className === 'active'){
-    elm.className = 'inactive';
+if (elm.className === "active") {
+  elm.className = "inactive";
 } else {
-    elm.className = 'active';
+  elm.className = "active";
 }
 ```
 
@@ -37,7 +37,7 @@ El nombre `className` es utilizado para esta propiedad en lugar de `class` para 
 `className` también puede ser una instancia de {{domxref("SVGAnimatedString")}} si `element` es un {{domxref("SVGElement")}}. Es mejor de obtener/establecer la propiedad `className` de un elemento utilizando {{domxref("Element.getAttribute")}} y {{domxref("Element.setAttribute")}} si estás tratando con elementos SVG.
 
 ```js
-elm.setAttribute('class', elm.getAttribute('class'))
+elm.setAttribute("class", elm.getAttribute("class"));
 ```
 
 ## Especificaciones

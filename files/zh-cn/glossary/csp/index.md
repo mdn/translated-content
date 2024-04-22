@@ -3,6 +3,8 @@ title: CSP
 slug: Glossary/CSP
 ---
 
+{{GlossarySidebar}}
+
 内容安全策略（CSP）用于检测和减轻用于 Web 站点的特定类型的攻击，例如 {{Glossary("XSS")}} 和数据注入等。
 
 该安全策略的实现基于一个称作 `Content-Security-Policy` 的 {{Glossary("HTTP")}} 首部。

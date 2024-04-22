@@ -1,12 +1,6 @@
 ---
 title: Array.prototype.concat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/concat
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/concat
 ---
 
 {{JSRef}}
@@ -48,8 +42,8 @@ var new_array = old_array.concat(value1[, value2[, ...[, valueN]]])
 Следующий код соединяет два массива:
 
 ```js
-var alpha = ['a', 'b', 'c'],
-    numeric = [1, 2, 3];
+var alpha = ["a", "b", "c"],
+  numeric = [1, 2, 3];
 
 var alphaNumeric = alpha.concat(numeric);
 
@@ -62,8 +56,8 @@ console.log(alphaNumeric); // Результат: ['a', 'b', 'c', 1, 2, 3]
 
 ```js
 var num1 = [1, 2, 3],
-    num2 = [4, 5, 6],
-    num3 = [7, 8, 9];
+  num2 = [4, 5, 6],
+  num3 = [7, 8, 9];
 
 var nums = num1.concat(num2, num3);
 
@@ -75,7 +69,7 @@ console.log(nums); // Результат: [1, 2, 3, 4, 5, 6, 7, 8, 9]
 Следующий код соединяет три значения в массив:
 
 ```js
-var alpha = ['a', 'b', 'c'];
+var alpha = ["a", "b", "c"];
 
 var alphaNumeric = alpha.concat(1, [2, 3]);
 

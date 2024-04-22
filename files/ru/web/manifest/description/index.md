@@ -1,11 +1,6 @@
 ---
 title: description
 slug: Web/Manifest/description
-tags:
-  - Manifest
-  - Web
-  - description
-translation_of: Web/Manifest/description
 ---
 
 {{QuickLinksWithSubpages('/ru/docs/Web/Manifest')}}
@@ -31,7 +26,7 @@ translation_of: Web/Manifest/description
   </tbody>
 </table>
 
-`description` это строка, в которой разработчики могут объяснить, что делает приложение. `description` способно к направленности, что означает, что оно может отображаться слева направо или справа налево на основе значений свойств [`dir`](./dir) and [`lang`](./lang) манифеста.
+`description` это строка, в которой разработчики могут объяснить, что делает приложение. `description` способно к направленности, что означает, что оно может отображаться слева направо или справа налево на основе значений свойств `dir` и `lang` [манифеста](/ru/docs/Web/Manifest).
 
 ## Примеры
 
@@ -49,12 +44,10 @@ translation_of: Web/Manifest/description
 "description": ".تطبيق رائع سيساعدك على تحقيق أحلامك"
 ```
 
-## Specification
+## Спецификации
 
-| Specification                                                                        | Status                       | Comment             | Feedback                                                                         |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------- | -------------------------------------------------------------------------------- |
-| {{SpecName('Manifest', '#description-member', 'description')}} | {{Spec2('Manifest')}} | Initial definition. | [Web App Manifest Working Group drafts](https://github.com/w3c/manifest/issues/) |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}

@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Boolean/valueOf
 ## 構文
 
 ```js
-valueOf()
+valueOf();
 ```
 
 ### 返値

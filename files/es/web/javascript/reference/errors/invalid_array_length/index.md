@@ -1,5 +1,5 @@
 ---
-title: 'RangeError: invalid array length'
+title: "RangeError: invalid array length"
 slug: Web/JavaScript/Reference/Errors/Invalid_array_length
 ---
 
@@ -35,25 +35,25 @@ De lo contrario, puedes especificar un mínimo y un máximo para la longitud ant
 ### Casos inválidos
 
 ```js example-bad
-new Array(Math.pow(2, 40))
-new Array(-1)
-new ArrayBuffer(Math.pow(2, 32))
-new ArrayBuffer(-1)
+new Array(Math.pow(2, 40));
+new Array(-1);
+new ArrayBuffer(Math.pow(2, 32));
+new ArrayBuffer(-1);
 
 let a = [];
-a.length = a.length - 1;         // definir la propiedad de longitud a -1
+a.length = a.length - 1; // definir la propiedad de longitud a -1
 
 let b = new Array(Math.pow(2, 32) - 1);
-b.length = b.length + 1;         // definir la propiedad de longitud a 2^32
+b.length = b.length + 1; // definir la propiedad de longitud a 2^32
 ```
 
 ### Casos válidos
 
 ```js example-good
-[ Math.pow(2, 40) ]                     // [ 1099511627776 ]
-[ -1 ]                                  // [ -1 ]
-new ArrayBuffer(Math.pow(2, 32) - 1)
-new ArrayBuffer(0)
+[Math.pow(2, 40)]; // [ 1099511627776 ]
+[-1]; // [ -1 ]
+new ArrayBuffer(Math.pow(2, 32) - 1);
+new ArrayBuffer(0);
 
 let a = [];
 a.length = Math.max(0, a.length - 1);

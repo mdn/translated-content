@@ -1,7 +1,6 @@
 ---
 title: switch
 slug: Web/JavaScript/Reference/Statements/switch
-original_slug: Web/JavaScript/Referencia/Sentencias/switch
 ---
 
 {{jsSidebar("Statements")}}
@@ -31,6 +30,7 @@ switch (expresión) {
 - `expresión`
   - : Es una expresión que es comparada con el valor de cada instancia `case`.
 - `case valorN`
+
   - : Una instancia `case valorN` es usada para ser comparada con la `expresión`. Si la `expresión` coincide con el `valorN`, las declaraciones dentro de la instancia `case` se ejecutan hasta que se encuentre el final de la declaración `switch` o hasta encontrar una interrupción `break`.
 
 - `default`
@@ -52,24 +52,24 @@ En el siguiente ejemplo, si `expresión` se resuelve a "Platanos", el algoritmo 
 
 ```js
 switch (expr) {
-  case 'Naranjas':
-    console.log('El kilogramo de naranjas cuesta $0.59.');
+  case "Naranjas":
+    console.log("El kilogramo de naranjas cuesta $0.59.");
     break;
-  case 'Manzanas':
-    console.log('El kilogramo de manzanas cuesta $0.32.');
+  case "Manzanas":
+    console.log("El kilogramo de manzanas cuesta $0.32.");
     break;
-  case 'Platanos':
-    console.log('El kilogramo de platanos cuesta $0.48.');
+  case "Platanos":
+    console.log("El kilogramo de platanos cuesta $0.48.");
     break;
-  case 'Cerezas':
-    console.log('El kilogramo de cerezas cuesta $3.00.');
+  case "Cerezas":
+    console.log("El kilogramo de cerezas cuesta $3.00.");
     break;
-  case 'Mangos':
-  case 'Papayas':
-    console.log('El kilogramo de mangos y papayas cuesta $2.79.');
+  case "Mangos":
+  case "Papayas":
+    console.log("El kilogramo de mangos y papayas cuesta $2.79.");
     break;
   default:
-    console.log('Lo lamentamos, por el momento no disponemos de ' + expr + '.');
+    console.log("Lo lamentamos, por el momento no disponemos de " + expr + ".");
 }
 
 console.log("¿Hay algo más que te quisiera consultar?");
@@ -83,11 +83,11 @@ Si olvidas un `break`, el script se ejecutará desde donde se cumple la condici�
 var foo = 0;
 switch (foo) {
   case -1:
-    console.log('1 negativo');
+    console.log("1 negativo");
     break;
   case 0: // foo es 0, por lo tanto se cumple la condición y se ejecutara el siguiente bloque
-    console.log(0)
-    // NOTA: el "break" olvidado debería estar aquí
+    console.log(0);
+  // NOTA: el "break" olvidado debería estar aquí
   case 1: // No hay sentencia "break" en el 'case 0:', por lo tanto este caso también será ejecutado
     console.log(1);
     break; // Al encontrar un "break", no será ejecutado el 'case 2:'
@@ -95,7 +95,7 @@ switch (foo) {
     console.log(2);
     break;
   default:
-    console.log('default');
+    console.log("default");
 }
 ```
 
@@ -110,10 +110,10 @@ switch (foo) {
     console.log(2);
     break; // al encontrar este 'break' no se continuará con el siguiente 'default:'
   default:
-    console.log('default')
-    // fall-through
+    console.log("default");
+  // fall-through
   case 1:
-    console.log('1');
+    console.log("1");
 }
 ```
 
@@ -132,17 +132,17 @@ Este método toma ventaja del hecho de que, si no hay un `break` debajo de una d
 Este es un ejemplo de operación única con sentencia `switch` secuencial, donde cuatro valores diferentes se comportan exactamente de la misma manera:
 
 ```js
-var Animal = 'Jirafa';
+var Animal = "Jirafa";
 switch (Animal) {
-  case 'Vaca':
-  case 'Jirafa':
-  case 'Perro':
-  case 'Cerdo':
-    console.log('Este animal subirá al Arca de Noé.');
+  case "Vaca":
+  case "Jirafa":
+  case "Perro":
+  case "Cerdo":
+    console.log("Este animal subirá al Arca de Noé.");
     break;
-  case 'Dinosaurio':
+  case "Dinosaurio":
   default:
-    console.log('Este animal no lo hará.');
+    console.log("Este animal no lo hará.");
 }
 ```
 
@@ -152,27 +152,27 @@ Este es un ejemplo de una sentencia `switch` secuencial con múltiples operacion
 
 ```js
 var foo = 1;
-var output = 'Salida: ';
+var output = "Salida: ";
 switch (foo) {
   case 10:
-    output += '¿Y ';
+    output += "¿Y ";
   case 1:
-    output += 'Cuál ';
-    output += 'Es ';
+    output += "Cuál ";
+    output += "Es ";
   case 2:
-    output += 'Tu ';
+    output += "Tu ";
   case 3:
-    output += 'Nombre';
+    output += "Nombre";
   case 4:
-    output += '?';
+    output += "?";
     console.log(output);
     break;
   case 5:
-    output += '!';
+    output += "!";
     console.log(output);
     break;
   default:
-    console.log('Por favor, selecciona un valor del 1 al 6.');
+    console.log("Por favor, selecciona un valor del 1 al 6.");
 }
 ```
 

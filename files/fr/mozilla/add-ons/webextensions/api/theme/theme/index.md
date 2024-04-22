@@ -1,15 +1,9 @@
 ---
 title: Theme
 slug: Mozilla/Add-ons/WebExtensions/API/theme/Theme
-tags:
-  - Extension
-  - Theme
-  - WebExtensions
-  - add-on
-translation_of: Mozilla/Add-ons/WebExtensions/API/theme/Theme
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Un objet thème représente la spécification d'un thème.
 

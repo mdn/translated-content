@@ -1,25 +1,24 @@
 ---
 title: timeout
 slug: Web/API/XMLHttpRequest/timeout_event
-original_slug: Web/API/XMLHttpRequest/timeout
 ---
 
 **`timeout`** 이벤트는 미리 설정한 시간이 만료되어 진행이 종료되면 시작합니다.
 
-| Bubbles        | No                                       |
-| -------------- | ---------------------------------------- |
-| Cancelable     | No                                       |
+| Bubbles        | No                            |
+| -------------- | ----------------------------- |
+| Cancelable     | No                            |
 | Target objects | {{domxref("XMLHttpRequest")}} |
-| Interface      | {{domxref("ProgressEvent")}}     |
+| Interface      | {{domxref("ProgressEvent")}}  |
 
 ## Examples
 
 ```js
 var client = new XMLHttpRequest();
 client.open("GET", "http://www.example.org/example.txt");
-client.ontimeout = function(e) {
+client.ontimeout = function (e) {
   console.error("Timeout!!");
-}
+};
 client.send();
 ```
 

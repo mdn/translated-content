@@ -2,6 +2,7 @@
 title: URL()
 slug: Web/API/URL/URL
 ---
+
 {{APIRef("URL API")}}
 
 **`URL()`** 생성자는 매개변수로 제공한 URL을 나타내는 새로운 {{domxref("URL")}} 객체를 반환합니다.
@@ -27,32 +28,32 @@ const url = new URL(url [, base])
 
 ### 예외
 
-| 예외                             | 설명                                                                              |
-| -------------------------------- | --------------------------------------------------------------------------------- |
+| 예외                    | 설명                                                                              |
+| ----------------------- | --------------------------------------------------------------------------------- |
 | {{jsxref("TypeError")}} | 절대 URL인 경우 `url`, 상대 URL인 경우 `base` + `url`이 유효하지 않은 URL인 경우. |
 
 ## 예제
 
 ```js
 // Base urls
-let m = 'https://developer.mozilla.org';
-let a = new URL("/", m);                                // => 'https://developer.mozilla.org/'
-let b = new URL(m);                                     // => 'https://developer.mozilla.org/'
+let m = "https://developer.mozilla.org";
+let a = new URL("/", m); // => 'https://developer.mozilla.org/'
+let b = new URL(m); // => 'https://developer.mozilla.org/'
 
-        new URL('en-US/docs', b);                      // => 'https://developer.mozilla.org/en-US/docs'
-let d = new URL('/en-US/docs', b);                     // => 'https://developer.mozilla.org/en-US/docs'
-        new URL('/en-US/docs', d);                     // => 'https://developer.mozilla.org/en-US/docs'
-        new URL('/en-US/docs', a);                     // => 'https://developer.mozilla.org/en-US/docs'
+new URL("en-US/docs", b); // => 'https://developer.mozilla.org/en-US/docs'
+let d = new URL("/en-US/docs", b); // => 'https://developer.mozilla.org/en-US/docs'
+new URL("/en-US/docs", d); // => 'https://developer.mozilla.org/en-US/docs'
+new URL("/en-US/docs", a); // => 'https://developer.mozilla.org/en-US/docs'
 
-        new URL('/en-US/docs', "https://developer.mozilla.org/fr-FR/toto");
-                                                       // => 'https://developer.mozilla.org/en-US/docs'
+new URL("/en-US/docs", "https://developer.mozilla.org/fr-FR/toto");
+// => 'https://developer.mozilla.org/en-US/docs'
 
-        new URL('/en-US/docs', '');                    // Raises a TypeError exception as '' is not a valid URL
-        new URL('/en-US/docs');                        // Raises a TypeError exception as '/en-US/docs' is not a valid URL
-        new URL('http://www.example.com', );           // => 'http://www.example.com/'
-        new URL('http://www.example.com', b);          // => 'http://www.example.com/'
+new URL("/en-US/docs", ""); // Raises a TypeError exception as '' is not a valid URL
+new URL("/en-US/docs"); // Raises a TypeError exception as '/en-US/docs' is not a valid URL
+new URL("http://www.example.com"); // => 'http://www.example.com/'
+new URL("http://www.example.com", b); // => 'http://www.example.com/'
 
-        new URL("//foo.com", "https://example.com")    // => 'https://foo.com' (see relative URLs)
+new URL("//foo.com", "https://example.com"); // => 'https://foo.com' (see relative URLs)
 ```
 
 ## 명세

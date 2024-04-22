@@ -1,15 +1,6 @@
 ---
 title: Object.create()
 slug: Web/JavaScript/Reference/Global_Objects/Object/create
-tags:
-  - ECMAScript5
-  - JavaScript
-  - Method
-  - Object
-  - Reference
-  - Référence(2)
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/create
 ---
 
 {{JSRef}}
@@ -51,10 +42,10 @@ function Shape() {
 }
 
 // метод суперкласса
-Shape.prototype.move = function(x, y) {
+Shape.prototype.move = function (x, y) {
   this.x += x;
   this.y += y;
-  console.info('Фигура переместилась.');
+  console.info("Фигура переместилась.");
 };
 
 // Rectangle — подкласс
@@ -68,8 +59,10 @@ Rectangle.prototype.constructor = Rectangle;
 
 var rect = new Rectangle();
 
-console.log('Является ли rect экземпляром Rectangle? ' + (rect instanceof Rectangle)); // true
-console.log('Является ли rect экземпляром Shape? ' + (rect instanceof Shape)); // true
+console.log(
+  "Является ли rect экземпляром Rectangle? " + (rect instanceof Rectangle),
+); // true
+console.log("Является ли rect экземпляром Shape? " + (rect instanceof Shape)); // true
 rect.move(1, 1); // выведет 'Фигура переместилась.'
 ```
 
@@ -84,7 +77,7 @@ function MyClass() {
 MyClass.prototype = Object.create(SuperClass.prototype); // наследование
 mixin(MyClass.prototype, OtherSuperClass.prototype); // примешивание
 
-MyClass.prototype.myMethod = function() {
+MyClass.prototype.myMethod = function () {
   // что-то делаем
 };
 ```
@@ -99,28 +92,29 @@ var o;
 // создаём объект с нулевым прототипом
 o = Object.create(null);
 
-
 o = {};
 // эквивалентно этому:
 o = Object.create(Object.prototype);
-
 
 // В этом примере мы создаём объект с несколькими свойствами.
 // (Обратите внимание, что второй параметр отображает ключи на *дескрипторы свойств*.)
 o = Object.create(Object.prototype, {
   // foo является рядовым 'свойством-значением'
-  foo: { writable: true, configurable: true, value: 'привет' },
+  foo: { writable: true, configurable: true, value: "привет" },
   // bar является свойством с геттером и сеттером (свойством доступа)
   bar: {
     configurable: false,
-    get: function() { return 10; },
-    set: function(value) { console.log('Установка `o.bar` в', value); }
-/* при использовании методов доступа ES5 наш код мог бы выглядеть так:
+    get: function () {
+      return 10;
+    },
+    set: function (value) {
+      console.log("Установка `o.bar` в", value);
+    },
+    /* при использовании методов доступа ES5 наш код мог бы выглядеть так:
     get function() { return 10; },
     set function(value) { console.log('Установка `o.bar` в', value); } */
-  }
+  },
 });
-
 
 function Constructor() {}
 o = new Constructor();
@@ -128,7 +122,6 @@ o = new Constructor();
 o = Object.create(Constructor.prototype);
 // Конечно, если бы в функции Constructor был бы реальный код инициализации,
 // метод с Object.create() не был бы эквивалентным
-
 
 // создаём новый объект, чей прототип является новым пустым объектом
 // и добавляем простое свойство 'p' со значением 42
@@ -149,14 +142,17 @@ delete o.p;
 // false
 
 // для определения свойства ES3
-o2 = Object.create({}, {
-  p: {
-    value: 42,
-    writable: true,
-    enumerable: true,
-    configurable: true
-  }
-});
+o2 = Object.create(
+  {},
+  {
+    p: {
+      value: 42,
+      writable: true,
+      enumerable: true,
+      configurable: true,
+    },
+  },
+);
 ```
 
 ## Полифил
@@ -164,10 +160,10 @@ o2 = Object.create({}, {
 Для этого полифила необходима правильно работающая Object.prototype.hasOwnProperty.
 
 ```js
-if (typeof Object.create != 'function') {
+if (typeof Object.create != "function") {
   // Этапы производства ECMA-262, издание 5, 15.2.3.5
   // Ссылка: http://es5.github.io/#x15.2.3.5
-  Object.create = (function() {
+  Object.create = (function () {
     // Чтобы сэкономить память, используйте общий конструктор
     function Temp() {}
 
@@ -176,8 +172,8 @@ if (typeof Object.create != 'function') {
 
     return function (O) {
       // 1. Если Type(O) не является Object or Null выдаётся исключение TypeError.
-      if (typeof O != 'object') {
-        throw TypeError('Object prototype may only be an Object or null');
+      if (typeof O != "object") {
+        throw TypeError("Object prototype may only be an Object or null");
       }
 
       // 2. Пусть obj будет результатом создания нового объекта, как если бы

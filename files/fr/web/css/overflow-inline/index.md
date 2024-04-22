@@ -64,22 +64,26 @@ La propriété `overflow-inline` est définie avec une valeur de type [`<overflo
   </li>
 
   <li>
-    <code>overflow-inline: scroll</code> (ajoute une barre de défilement quoi qu'il arrive)
+    <code>overflow-inline: scroll</code> (ajoute une barre de défilement quoi
+    qu'il arrive)
     <div id="div2">ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ</div>
   </li>
 
   <li>
-    <code>overflow-inline: visible</code> (affiche le texte en dehors de la boîte si nécessaire)
+    <code>overflow-inline: visible</code> (affiche le texte en dehors de la
+    boîte si nécessaire)
     <div id="div3">ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ</div>
   </li>
 
   <li>
-    <code>overflow-inline: auto</code> (équivalent à <code>scroll</code> pour la plupart des navigateurs)
+    <code>overflow-inline: auto</code> (équivalent à <code>scroll</code> pour la
+    plupart des navigateurs)
     <div id="div4">ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ</div>
   </li>
 
   <li>
-    <code>overflow-inline: clip</code> (masque le texte en dehors de la boîte au-delà du bord de dépassement)
+    <code>overflow-inline: clip</code> (masque le texte en dehors de la boîte
+    au-delà du bord de dépassement)
     <code>clip</code>
     <div id="div5">ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ</div>
   </li>

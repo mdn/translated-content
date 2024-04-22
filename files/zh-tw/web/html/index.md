@@ -37,7 +37,7 @@ HTML 文件中的元素和其他內容文字不同的地方，在於元素名稱
   - : 本模塊探究如何使用 HTML 在你的網頁裡置入多媒體，包含多種不同載入圖片的方式，如何嵌入影音，甚至是另外一整個網頁。
 - [HTML 表格](/zh-TW/docs/Learn/HTML/Tables)
   - : 要以簡單易懂的方式將表格式的資訊呈現在網頁上會是一件挑戰。本模組涵蓋了基本的表格使用與更複雜的功能，例如標題和總結。
-- [HTML 表單](/zh-TW/docs/Learn/HTML/Forms)
+- [HTML 表單](/zh-TW/docs/Learn/Forms)
   - : 表單是網頁相當重要的部分，能夠提供與網頁互動時所需的各式的功能性。例如：註冊和登入、發送回饋意見、購買產品以及更多實用的功能。這個單元將帶領你建立網頁端的表單功能。
 - [用 HTML 解決常見問題](/zh-TW/docs/Learn/HTML/Howto)
   - : 提供部分內容註釋連結。 當你建立一個網頁時，如何解決 HTML 中常見問題，例如 : 處理標題、增加圖片或影片、強調內文、建立基本表單等。.
@@ -47,7 +47,7 @@ HTML 文件中的元素和其他內容文字不同的地方，在於元素名稱
 - [CORS 圖像](/zh-TW/docs/Web/HTML/CORS_enabled_image)
   - : `當結合了一個適合的`[CORS](/zh-TW/docs/Glossary/CORS)，[`crossorigin`](/zh-TW/docs/Web/HTML/Element/img#crossorigin) 屬性允許 {{HTMLElement("img")}} 元素定義的圖像被從一個地方載入，並被使用於 {{HTMLElement("canvas")}}，即便載入的地方是原處也一樣。
 - [設定 CORS 屬性](/zh-TW/docs/Web/HTML/CORS_settings_attributes)
-  - : 有些 HTML 元素可以支援 [CORS](/zh-TW/docs/HTTP/Access_control_CORS),像 {{HTMLElement("img")}} 或者 {{HTMLElement("video")}},有著 `crossorigin` (`crossOrigin` property)的屬性, 讓你能直接使用 CORS 的元素。
+  - : 有些 HTML 元素可以支援 [CORS](/zh-TW/docs/Web/HTTP/CORS),像 {{HTMLElement("img")}} 或者 {{HTMLElement("video")}},有著 `crossorigin` (`crossOrigin` property)的屬性, 讓你能直接使用 CORS 的元素。
 - [管理 HTML 中的焦點](/zh-TW/docs/Web/HTML/Focus_management_in_HTML)
   - : The [`activeElement`](/zh-TW/docs/Web/API/Document/activeElement) DOM attribute and the [`hasFocus()`](/zh-TW/docs/Web/API/Document/hasFocus) DOM method help you track and control a user's interactions with elements on a web page.
 - [使用 application cache](/zh-TW/docs/Web/HTML/Using_the_application_cache)

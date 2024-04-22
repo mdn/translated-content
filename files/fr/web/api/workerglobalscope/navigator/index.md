@@ -1,7 +1,6 @@
 ---
 title: WorkerGlobalScope.navigator
 slug: Web/API/WorkerGlobalScope/navigator
-translation_of: Web/API/WorkerGlobalScope/navigator
 ---
 
 {{APIRef("Web Workers API")}}

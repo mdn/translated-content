@@ -1,8 +1,6 @@
 ---
 title: Contenu embarqué dans le SVG
 slug: Web/SVG/Tutorial/Other_content_in_SVG
-translation_of: Web/SVG/Tutorial/Other_content_in_SVG
-original_slug: Web/SVG/Tutoriel/Contenu_embarque_SVG
 ---
 
 {{ PreviousNext("Web/SVG/Tutoriel/Découpages_et_masquages", "Web/SVG/Tutoriel/filtres") }}
@@ -16,11 +14,19 @@ De la même façon qu'il est possible d'utiliser la balise **img** en HTML, le f
 L'image embarquée devient un élément SVG normal. Cela implique que vous pouvez utiliser le découpage, les masques, les filtres, les rotations et toute la panoplie des outils svg sur ce contenu embarqué :
 
 ```html
-<svg version="1.1"
-  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-  width="200" height="200">
-<image x="90" y="-65" width="128" height="146" transform="rotate(45)"
-  xlink:href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/image/mdn_logo_only_color.png"/>
+<svg
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="200"
+  height="200">
+  <image
+    x="90"
+    y="-65"
+    width="128"
+    height="146"
+    transform="rotate(45)"
+    xlink:href="https://developer.mozilla.org/fr/docs/Web/SVG/Element/image/mdn_logo_only_color.png" />
 </svg>
 ```
 

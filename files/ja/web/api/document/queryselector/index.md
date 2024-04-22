@@ -86,7 +86,7 @@ const el = document.querySelector("div.user-panel.main input[name='login']");
 
 ```js
 const el = document.querySelector(
-  "div.user-panel:not(.main) input[name='login']"
+  "div.user-panel:not(.main) input[name='login']",
 );
 ```
 

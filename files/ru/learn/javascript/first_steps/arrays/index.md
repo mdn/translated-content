@@ -1,18 +1,8 @@
 ---
 title: Массивы
 slug: Learn/JavaScript/First_steps/Arrays
-tags:
-  - JavaScript
-  - Pop
-  - Push
-  - shift
-  - unshift
-  - Для начинающих
-  - Массивы
-  - Статья
-translation_of: Learn/JavaScript/First_steps/Arrays
-original_slug: Learn/JavaScript/Первые_шаги/Arrays
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Первые_шаги/Useful_string_methods", "Learn/JavaScript/Первые_шаги/Создатель_глупых_историй", "Learn/JavaScript/Первые_шаги")}}
 
 В финальной статье этого раздела, мы познакомимся с массивами — лаконичным способом хранения списка элементов под одним именем. Мы поймём, чем они полезны, затем узнаем, как создать массив, получить, добавить и удалить элементы, хранящиеся в массиве.
@@ -35,17 +25,17 @@ original_slug: Learn/JavaScript/Первые_шаги/Arrays
 
 1. Допустим, мы бы хотели хранить список покупок в массиве — мы бы сделали что-то вроде этого. Введите следующие строчки в вашу консоль:
 
-    ```js
-    var shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
-    shopping;
-    ```
+   ```js
+   var shopping = ["bread", "milk", "cheese", "hummus", "noodles"];
+   shopping;
+   ```
 
 2. В данном случае, каждый элемент в массиве — это строка , но имейте в виду, что вы можете хранить любой элемент в массиве — строку, число, объект, другую переменную, даже другой массив. Вы также можете перемешивать типы элементов — они не должны все быть числами, строками, и так далее. Попробуйте это:
 
-    ```js
-    var sequence = [1, 1, 2, 3, 5, 8, 13];
-    var random = ['tree', 795, [0, 1, 2]];
-    ```
+   ```js
+   var sequence = [1, 1, 2, 3, 5, 8, 13];
+   var random = ["tree", 795, [0, 1, 2]];
+   ```
 
 3. Попробуйте сами создать несколько массивов, перед тем как двигаться дальше.
 
@@ -55,26 +45,26 @@ original_slug: Learn/JavaScript/Первые_шаги/Arrays
 
 1. Введите следующее в вашу консоль:
 
-    ```js
-    shopping[0];
-    // возвращает "bread"
-    ```
+   ```js
+   shopping[0];
+   // возвращает "bread"
+   ```
 
 2. Вы также можете изменять элемент в массиве, просто дав отдельному элементу массива новое значение. Попробуйте это:
 
-    ```js
-    shopping[0] = 'tahini';
-    shopping;
-    // shopping теперь возвратит [ "tahini", "milk", "cheese", "hummus", "noodles" ]
-    ```
+   ```js
+   shopping[0] = "tahini";
+   shopping;
+   // shopping теперь возвратит [ "tahini", "milk", "cheese", "hummus", "noodles" ]
+   ```
 
-    > **Примечание:** Мы уже упоминали это прежде, но просто как напоминание — компьютеры начинают считать с нуля!
+   > **Примечание:** Мы уже упоминали это прежде, но просто как напоминание — компьютеры начинают считать с нуля!
 
 3. Заметьте, что массив внутри массива называется многомерным массивом. Вы можете получить доступ к элементу внутри массива, который сам находится внутри другого массива, объединив два набора квадратных скобок. Например, для доступа к одному из элементов внутри массива, который является третьим элементом внутри массива `random` (см. предыдущую секцию данной статьи), мы могли бы сделать что-то вроде этого:
 
-    ```js
-    random[2][2];
-    ```
+   ```js
+   random[2][2];
+   ```
 
 4. Попробуйте внести некоторые дополнительные изменения в свои примеры массивов, прежде чем двигаться дальше.
 
@@ -100,7 +90,7 @@ for (var i = 0; i < sequence.length; i++) {
 
 1. Начать цикл с номера позиции 0 в массиве.
 2. Остановить цикл на номере элемента, равном длине массива. Это будет работать для массива любой длины, но в этом случае он остановит цикл на элементе номер 7 (это хорошо, поскольку последний элемент, который мы хотим, чтобы цикл был закрыт, равен 6).
-3. Для каждого элемента вернуть его значение в консоли браузера с помощью [`console.log()`](/en-US/docs/Web/API/Console/log).
+3. Для каждого элемента вернуть его значение в консоли браузера с помощью [`console.log()`](/ru/docs/Web/API/Console/log).
 
 ## Некоторые полезные методы массивов
 
@@ -114,97 +104,104 @@ for (var i = 0; i < sequence.length; i++) {
 
 1. Поиграем с этим, посмотрим как это работает. Сначала, создадим строку в вашей консоли:
 
-    ```js
-    var myData = 'Manchester,London,Liverpool,Birmingham,Leeds,Carlisle';
-    ```
+   ```js
+   var myData = "Manchester,London,Liverpool,Birmingham,Leeds,Carlisle";
+   ```
 
 2. Теперь разделим ee посредством запятой:
 
-    ```js
-    var myArray = myData.split(',');
-    myArray;
-    ```
+   ```js
+   var myArray = myData.split(",");
+   myArray;
+   ```
 
 3. Наконец, попробуйте найти длину вашего нового массива и извлечь из него некоторые элементы:
 
-    ```js
-    myArray.length;
-    myArray[0]; // первый элемент в массиве
-    myArray[1]; // второй элемент в массиве
-    myArray[myArray.length-1]; // последний элемент в массиве
-    ```
+   ```js
+   myArray.length;
+   myArray[0]; // первый элемент в массиве
+   myArray[1]; // второй элемент в массиве
+   myArray[myArray.length - 1]; // последний элемент в массиве
+   ```
 
 4. Вы можете сделать обратное используя метод{{jsxref("Array.prototype.join()","join()")}} . Попробуйте следующее:
 
-    ```js
-    var myNewString = myArray.join(',');
-    myNewString;
-    ```
+   ```js
+   var myNewString = myArray.join(",");
+   myNewString;
+   ```
 
 5. Другой способ преобразования массива в строку - использовать метод {{jsxref("Array.prototype.toString()","toString()")}}. `toString()`, возможно, проще,чем `join()` поскольку он не принимает параметр, но это ограничивает его. С `join()` вы можете указать разные разделители (попробуйте выполнить шаг 4 с другим символом, кроме запятой).
 
-    ```js
-    var dogNames = ["Rocket","Flash","Bella","Slugger"];
-    dogNames.toString(); //Rocket,Flash,Bella,Slugger
-    ```
+   ```js
+   var dogNames = ["Rocket", "Flash", "Bella", "Slugger"];
+   dogNames.toString(); //Rocket,Flash,Bella,Slugger
+   ```
 
 ### Добавление и удаление элементов массива
 
 Мы ещё не рассмотрели добавление и удаление элементов массива - давайте посмотрим на это сейчас. Мы будем использовать массив `myArray` , с которым мы столкнулись в предыдущем разделе. Если вы ещё не прошли этот раздел, сначала создайте массив в консоли:
 
 ```js
-var myArray = ['Manchester', 'London', 'Liverpool', 'Birmingham', 'Leeds', 'Carlisle'];
+var myArray = [
+  "Manchester",
+  "London",
+  "Liverpool",
+  "Birmingham",
+  "Leeds",
+  "Carlisle",
+];
 ```
 
 Прежде всего, чтобы добавить или удалить элемент с конца массива, мы можем использовать {{jsxref("Array.prototype.push()","push()")}} и {{jsxref("Array.prototype.pop()","pop()")}} соответственно.
 
 1. Давайте сначала используем метод `push()` — заметьте, что вам нужно указать один или более элементов, которые вы хотите добавить в конец своего массива. Попробуйте это:
 
-    ```js
-    myArray.push('Cardiff');
-    myArray;
-    myArray.push('Bradford', 'Brighton');
-    myArray;
-    ```
+   ```js
+   myArray.push("Cardiff");
+   myArray;
+   myArray.push("Bradford", "Brighton");
+   myArray;
+   ```
 
 2. При завершении вызова метода возвращается новая длина массива. Если бы вы хотели сохранить новую длину массива в переменной, вы бы могли сделать что-то вроде этого:
 
-    ```js
-    var newLength = myArray.push('Bristol');
-    myArray;
-    newLength;
-    ```
+   ```js
+   var newLength = myArray.push("Bristol");
+   myArray;
+   newLength;
+   ```
 
 3. Удаление последнего элемента массива можно совершить с помощью вызова метода `pop()`. Попробуйте это:
 
-    ```js
-    myArray.pop();
-    ```
+   ```js
+   myArray.pop();
+   ```
 
 4. Когда вызов метода завершается, возвращается удалённый элемент. Вы бы могли также сделать такое:
 
-    ```js
-    var removedItem = myArray.pop();
-    myArray;
-    removedItem;
-    ```
+   ```js
+   var removedItem = myArray.pop();
+   myArray;
+   removedItem;
+   ```
 
 {{jsxref("Array.prototype.unshift()","unshift()")}} и {{jsxref("Array.prototype.shift()","shift()")}} работают точно таким же способом, за исключением того что они работают в начале массива, а не в конце.
 
 1. Сначала, попробуем метод `unshift()`:
 
-    ```js
-    myArray.unshift('Edinburgh');
-    myArray;
-    ```
+   ```js
+   myArray.unshift("Edinburgh");
+   myArray;
+   ```
 
 2. Теперь `shift()`; попробуйте эти!
 
-    ```js
-    var removedItem = myArray.shift();
-    myArray;
-    removedItem;
-    ```
+   ```js
+   var removedItem = myArray.shift();
+   myArray;
+   removedItem;
+   ```
 
 ## Практика: Печать продуктов!
 
@@ -224,18 +221,16 @@ var myArray = ['Manchester', 'London', 'Liverpool', 'Birmingham', 'Leeds', 'Carl
 <h2>Live output</h2>
 
 <div class="output" style="min-height: 150px;">
+  <ul></ul>
 
-<ul>
-
-</ul>
-
-<p></p>
-
+  <p></p>
 </div>
 
 <h2>Editable code</h2>
 
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 
 <textarea id="code" class="playable-code" style="height: 410px;width: 95%">
 var list = document.querySelector('.output ul');
@@ -267,15 +262,15 @@ totalBox.textContent = 'Total: $' + total.toFixed(2);
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
 var code = textarea.value;
 var userEntry = textarea.value;
 
@@ -283,40 +278,40 @@ function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
 
-var jsSolution = 'var list = document.querySelector(\'.output ul\');\nvar totalBox = document.querySelector(\'.output p\');\nvar total = 0;\nlist.innerHTML = \'\';\ntotalBox.textContent = \'\';\n\nvar products = [\'Underpants:6.99\',\n \'Socks:5.99\',\n \'T-shirt:14.99\',\n \'Trousers:31.99\',\n \'Shoes:23.99\'];\n\nfor(var i = 0; i < products.length; i++) {\n var subArray = products[i].split(\':\');\n var name = subArray[0];\n var price = Number(subArray[1]);\n total += price;\n itemText = name + \' — $\' + price;\n\n var listItem = document.createElement(\'li\');\n listItem.textContent = itemText;\n list.appendChild(listItem);\n}\n\ntotalBox.textContent = \'Total: $\' + total.toFixed(2);';
+var jsSolution =
+  "var list = document.querySelector('.output ul');\nvar totalBox = document.querySelector('.output p');\nvar total = 0;\nlist.innerHTML = '';\ntotalBox.textContent = '';\n\nvar products = ['Underpants:6.99',\n 'Socks:5.99',\n 'T-shirt:14.99',\n 'Trousers:31.99',\n 'Shoes:23.99'];\n\nfor(var i = 0; i < products.length; i++) {\n var subArray = products[i].split(':');\n var name = subArray[0];\n var price = Number(subArray[1]);\n total += price;\n itemText = name + ' — $' + price;\n\n var listItem = document.createElement('li');\n listItem.textContent = itemText;\n list.appendChild(listItem);\n}\n\ntotalBox.textContent = 'Total: $' + total.toFixed(2);";
 var solutionEntry = jsSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
-
 
   if (e.keyCode === 27) {
     textarea.blur();
@@ -327,8 +322,11 @@ function insertAtCaret(text) {
   var scrollPos = textarea.scrollTop;
   var caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -339,10 +337,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -395,19 +393,16 @@ body {
 
 <h2>Live output</h2>
 <div class="output" style="min-height: 150px;">
+  <input type="text" /><button>Search</button>
 
-<input type="text"><button>Search</button>
-
-<ul>
-
-</ul>
-
+  <ul></ul>
 </div>
 
 <h2>Editable code</h2>
 
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
-
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 
 <textarea id="code" class="playable-code" style="height: 370px; width: 95%">
 var list = document.querySelector('.output ul');
@@ -449,8 +444,8 @@ searchBtn.onclick = function() {
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -477,9 +472,9 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
 var code = textarea.value;
 var userEntry = textarea.value;
 
@@ -487,38 +482,39 @@ function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
 
-var jsSolution = 'var list = document.querySelector(\'.output ul\');\nvar searchInput = document.querySelector(\'.output input\');\nvar searchBtn = document.querySelector(\'.output button\');\n\nlist.innerHTML = \'\';\n\nvar myHistory= [];\n\nsearchBtn.onclick = function() {\n if(searchInput.value !== \'\') {\n myHistory.unshift(searchInput.value);\n\n list.innerHTML = \'\';\n\n for(var i = 0; i < myHistory.length; i++) {\n itemText = myHistory[i];\n var listItem = document.createElement(\'li\');\n listItem.textContent = itemText;\n list.appendChild(listItem);\n }\n\n if(myHistory.length >= 5) {\n myHistory.pop();\n }\n\n searchInput.value = \'\';\n searchInput.focus();\n }\n}';
+var jsSolution =
+  "var list = document.querySelector('.output ul');\nvar searchInput = document.querySelector('.output input');\nvar searchBtn = document.querySelector('.output button');\n\nlist.innerHTML = '';\n\nvar myHistory= [];\n\nsearchBtn.onclick = function() {\n if(searchInput.value !== '') {\n myHistory.unshift(searchInput.value);\n\n list.innerHTML = '';\n\n for(var i = 0; i < myHistory.length; i++) {\n itemText = myHistory[i];\n var listItem = document.createElement('li');\n listItem.textContent = itemText;\n list.appendChild(listItem);\n }\n\n if(myHistory.length >= 5) {\n myHistory.pop();\n }\n\n searchInput.value = '';\n searchInput.focus();\n }\n}";
 var solutionEntry = jsSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -530,8 +526,11 @@ function insertAtCaret(text) {
   var scrollPos = textarea.scrollTop;
   var caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -542,10 +541,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;

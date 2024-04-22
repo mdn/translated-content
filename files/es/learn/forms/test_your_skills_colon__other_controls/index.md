@@ -1,7 +1,6 @@
 ---
-title: 'Prueba tus habilidades: Otros controles'
+title: "Prueba tus habilidades: Otros controles"
 slug: Learn/Forms/Test_your_skills:_Other_controls
-original_slug: Learn/HTML/Forms/Prueba_tus_habilidades:_Otros_controles
 ---
 
 {{learnsidebar}}
@@ -64,7 +63,7 @@ Si deseas que tu trabajo sea evaluado, o estás atorado y quieres solicitar ayud
 1. Pon tu trabajo en un editor en línea con capacidad de compartir como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/). Puedes escribir el código por ti mismo, o usar los archivos de punto de inicio enlazados en las secciones superiores.
 2. Escribe una publicación solicitando evaluacion y/o ayuda en el [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Tu publicación debería incluir:
 
-    - Un título descriptivo como "Solicito evaluacion para la prueba de habilidad de Otros controles 1".
-    - Detalles de lo que ya has intentado, y que te gustaría que hiciéramos, por ejemplo, si estas atascado y necesitas ayuda, o quieres una evaluación.
-    - Un enlace al ejemplo que quieres que sea evaluado o por el que necesitas ayuda en un editor en linea con capacidad de compartir (como se mencionó en el paso 1 más arriba). Esta es una buena práctica - Es muy dificil ayudar a alguien con un problema de codificación si no puedes ver su código.
-    - Un enlace a la tarea o página de evaluacion actual, para que podamos encontrar la pregunta con la cual necesitas ayuda.
+   - Un título descriptivo como "Solicito evaluacion para la prueba de habilidad de Otros controles 1".
+   - Detalles de lo que ya has intentado, y que te gustaría que hiciéramos, por ejemplo, si estas atascado y necesitas ayuda, o quieres una evaluación.
+   - Un enlace al ejemplo que quieres que sea evaluado o por el que necesitas ayuda en un editor en linea con capacidad de compartir (como se mencionó en el paso 1 más arriba). Esta es una buena práctica - Es muy dificil ayudar a alguien con un problema de codificación si no puedes ver su código.
+   - Un enlace a la tarea o página de evaluacion actual, para que podamos encontrar la pregunta con la cual necesitas ayuda.

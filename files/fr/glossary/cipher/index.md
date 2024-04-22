@@ -1,15 +1,9 @@
 ---
 title: Chiffre
 slug: Glossary/Cipher
-tags:
-  - Attaques
-  - Cryptographie
-  - Glossaire
-  - Sécurité
-  - Vie privée
-translation_of: Glossary/Cipher
-original_slug: Glossaire/Chiffre
 ---
+
+{{GlossarySidebar}}
 
 En {{glossary("cryptography","cryptographie")}}, un **chiffre** est un algorithme qui permet de {{glossary("encryption","chiffrer")}} du {{glossary("cleartext","texte brut")}} dans le but de le rendre illisible et de le {{glossary("decryption", "déchiffrer")}} par la suite.
 

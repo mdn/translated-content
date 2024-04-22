@@ -1,11 +1,6 @@
 ---
 title: <blend-mode>
 slug: Web/CSS/blend-mode
-tags:
-  - CSS
-  - Reference
-  - Type
-translation_of: Web/CSS/blend-mode
 ---
 
 {{CSSRef}}
@@ -67,8 +62,7 @@ Une valeur de type de données `<blend-mode>` s'écrit avec l'un des mots-clés 
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: normal;
 }
 ```
@@ -85,8 +79,7 @@ Une valeur de type de données `<blend-mode>` s'écrit avec l'un des mots-clés 
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: multiply;
 }
 ```
@@ -103,8 +96,7 @@ Une valeur de type de données `<blend-mode>` s'écrit avec l'un des mots-clés 
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: screen;
 }
 ```
@@ -121,8 +113,7 @@ Une valeur de type de données `<blend-mode>` s'écrit avec l'un des mots-clés 
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: overlay;
 }
 ```
@@ -139,8 +130,7 @@ Une valeur de type de données `<blend-mode>` s'écrit avec l'un des mots-clés 
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: darken;
 }
 ```
@@ -157,8 +147,7 @@ Une valeur de type de données `<blend-mode>` s'écrit avec l'un des mots-clés 
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: lighten;
 }
 ```
@@ -175,8 +164,7 @@ Une valeur de type de données `<blend-mode>` s'écrit avec l'un des mots-clés 
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: color-dodge;
 }
 ```
@@ -193,8 +181,7 @@ Une valeur de type de données `<blend-mode>` s'écrit avec l'un des mots-clés 
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: color-burn;
 }
 ```
@@ -211,8 +198,7 @@ Une valeur de type de données `<blend-mode>` s'écrit avec l'un des mots-clés 
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: hard-light;
 }
 ```
@@ -229,8 +215,7 @@ Une valeur de type de données `<blend-mode>` s'écrit avec l'un des mots-clés 
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: soft-light;
 }
 ```
@@ -247,8 +232,7 @@ Une valeur de type de données `<blend-mode>` s'écrit avec l'un des mots-clés 
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: difference;
 }
 ```
@@ -265,8 +249,7 @@ Une valeur de type de données `<blend-mode>` s'écrit avec l'un des mots-clés 
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: exclusion;
 }
 ```
@@ -283,8 +266,7 @@ Une valeur de type de données `<blend-mode>` s'écrit avec l'un des mots-clés 
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: hue;
 }
 ```
@@ -301,8 +283,7 @@ Une valeur de type de données `<blend-mode>` s'écrit avec l'un des mots-clés 
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: saturation;
 }
 ```
@@ -319,8 +300,7 @@ Une valeur de type de données `<blend-mode>` s'écrit avec l'un des mots-clés 
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: color;
 }
 ```
@@ -337,8 +317,7 @@ Une valeur de type de données `<blend-mode>` s'écrit avec l'un des mots-clés 
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: luminosity;
 }
 ```

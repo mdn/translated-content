@@ -20,25 +20,25 @@ var elements = rootElement.getElementsByClassName(names);
 
 ## 範例
 
-取得所有 class 為 “test” 的元素：
+取得所有 class 為 「test」 的元素：
 
 ```js
 document.getElementsByClassName("test");
 ```
 
-取得所有 class 為 “test” 和 “red” 的元素：
+取得所有 class 為 「test」 和 「red」 的元素：
 
 ```js
 document.getElementsByClassName("red test");
 ```
 
-取得所有在 id 為 '“main” 的元素裡 class 為 “test” 的元素：
+取得所有在 id 為 '「main」 的元素裡 class 為 「test」 的元素：
 
 ```js
 document.getElementById("main").getElementsByClassName("test");
 ```
 
-我們也可以藉由傳遞 {{ domxref("HTMLCollection") }} 為 *this *來使用 `Array.prototype` 的方法。下面的例子將會找到所有 class 為 “test” 的 div 元素：
+我們也可以藉由傳遞 {{ domxref("HTMLCollection") }} 為 *this *來使用 `Array.prototype` 的方法。下面的例子將會找到所有 class 為 「test」 的 div 元素：
 
 ```js
 var testElements = document.getElementsByClassName("test");
@@ -46,7 +46,7 @@ var testDivs = Array.prototype.filter.call(
   testElements,
   function (testElement) {
     return testElement.nodeName === "DIV";
-  }
+  },
 );
 ```
 

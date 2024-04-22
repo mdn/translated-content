@@ -1,5 +1,5 @@
 ---
-title: 'Window: 页面隐藏事件 (pagehide event)'
+title: "Window: 页面隐藏事件 (pagehide event)"
 slug: Web/API/Window/pagehide_event
 ---
 
@@ -33,21 +33,25 @@ slug: Web/API/Window/pagehide_event
 在此示例中，建立了一个事件处理程序以监视 `pagehide` (页面隐藏) 事件，并在持久保存页面以进行可能的重用时执行特殊处理。
 
 ```js
-window.addEventListener("pagehide", event => {
-  if (event.persisted) {
-    /* the page isn't being discarded, so it can be reused later */
-  }
-}, false);
+window.addEventListener(
+  "pagehide",
+  (event) => {
+    if (event.persisted) {
+      /* the page isn't being discarded, so it can be reused later */
+    }
+  },
+  false,
+);
 ```
 
 这也可以使用 {{domxref("Window")}} 上的 {{domxref("Window.onpagehide", "onpagehide")}} 事件处理程序属性来编写：
 
 ```js
-window.onpagehide = event => {
+window.onpagehide = (event) => {
   if (event.persisted) {
     /* the page isn't being discarded, so it can be reused later */
   }
-}
+};
 ```
 
 ## 规范

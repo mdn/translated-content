@@ -1,12 +1,6 @@
 ---
 title: title
 slug: Web/SVG/Element/title
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Description
-translation_of: Web/SVG/Element/title
 ---
 
 {{SVGRef}}
@@ -31,7 +25,7 @@ L'élément `<title>` est souvent le premier enfant de son parent. Notons que le
 
 ### Attributs spécifiques
 
-_(Aucun)_
+_Aucun._
 
 ## Interface DOM
 

@@ -1,13 +1,6 @@
 ---
 title: Classes
 slug: Web/JavaScript/Reference/Classes
-tags:
-  - Classes
-  - ECMAScript 2015
-  - Intermédiaire
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Classes
 ---
 
 {{JsSidebar("Classes")}}
@@ -157,15 +150,15 @@ Si on écrit le code avec des fonctions traditionnelles plutôt qu'avec des clas
 L'autodétermination de `this` n'a pas lieu en mode strict, la valeur `this` est passée telle quelle.
 
 ```js
-function Animal() { }
+function Animal() {}
 
-Animal.prototype.crie = function() {
+Animal.prototype.crie = function () {
   return this;
-}
+};
 
-Animal.mange = function() {
+Animal.mange = function () {
   return this;
-}
+};
 
 let obj = new Animal();
 let crie = obj.crie;
@@ -228,7 +221,7 @@ En utilisant des champs privés, on peut revoir la définition de la façon suiv
 class Rectangle {
   #hauteur = 0;
   #largeur;
-  constructor(hauteur, largeur){
+  constructor(hauteur, largeur) {
     this.#hauteur = hauteur;
     this.#largeur = largeur;
   }
@@ -271,12 +264,12 @@ Si on déclare un constructeur dans une classe fille, on doit utiliser `super()`
 On peut également étendre des classes plus _traditionnelles_ basées sur des constructeurs fonctionnels :
 
 ```js
-function Animal (nom) {
+function Animal(nom) {
   this.nom = nom;
 }
 Animal.prototype.crie = function () {
   console.log(`${this.nom} fait du bruit.`);
-}
+};
 
 class Chien extends Animal {
   crie() {
@@ -285,7 +278,7 @@ class Chien extends Animal {
   }
 }
 
-let c = new Chien('Ida');
+let c = new Chien("Ida");
 c.crie();
 // Ida fait du bruit.
 // Ida aboie.
@@ -297,7 +290,7 @@ En revanche, les classes ne permettent pas d'étendre des objets classiques non-
 const Animal = {
   crie() {
     console.log(`${this.nom} fait du bruit.`);
-  }
+  },
 };
 
 class Chien {
@@ -311,7 +304,7 @@ class Chien {
 }
 Object.setPrototypeOf(Chien.prototype, Animal);
 
-let d = new Chien('Ida');
+let d = new Chien("Ida");
 d.crie();
 // Ida fait du bruit
 // Ida aboie.
@@ -327,13 +320,15 @@ Par exemple, si, lorsqu'on utilise des méthodes comme {{jsxref("Array.map","map
 class MonArray extends Array {
   // On surcharge species
   // avec le constructeur Array du parent
-  static get [Symbol.species]() { return Array; }
+  static get [Symbol.species]() {
+    return Array;
+  }
 }
-let a = new MonArray(1,2,3);
-let mapped = a.map(x => x * x);
+let a = new MonArray(1, 2, 3);
+let mapped = a.map((x) => x * x);
 
 console.log(mapped instanceof MonArray); // false
-console.log(mapped instanceof Array);    // true
+console.log(mapped instanceof Array); // true
 ```
 
 ## Utiliser super pour la classe parente
@@ -366,20 +361,22 @@ Les sous-classes abstraites ou _mix-ins_ sont des modèles (_templates_) pour de
 Une fonction peut prendre une classe parente en entrée et renvoyer une classe fille qui étend cette classe parente. Cela peut permettre d'émuler les _mix-ins_ avec ECMAScript.
 
 ```js
-let calculetteMixin = Base => class extends Base {
-  calc() { }
-};
+let calculetteMixin = (Base) =>
+  class extends Base {
+    calc() {}
+  };
 
-let aleatoireMixin = Base => class extends Base {
-  randomiseur() { }
-};
+let aleatoireMixin = (Base) =>
+  class extends Base {
+    randomiseur() {}
+  };
 ```
 
 Une classe utilisant ces _mix-ins_ peut alors être écrite de cette façon :
 
 ```js
-class Toto { }
-class Truc extends calculetteMixin(aleatoireMixin(Toto)) { }
+class Toto {}
+class Truc extends calculetteMixin(aleatoireMixin(Toto)) {}
 ```
 
 ## Spécifications

@@ -1,0 +1,59 @@
+---
+title: "Document: fragmentDirective プロパティ"
+short-title: fragmentDirective
+slug: Web/API/Document/fragmentDirective
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+---
+
+{{APIRef}}{{SeeCompatTable}}
+
+**`fragmentDirective`** は {{domxref("Document")}} インターフェイスの読み取り専用プロパティで、現在の文書の {{domxref("FragmentDirective")}} を返します。
+
+## 値
+
+{{domxref("FragmentDirective")}} オブジェクトです。
+
+## 例
+
+対応するブラウザーの開発ツールを使用して、1 つ以上の一致するテキストフラグメントがあるタブで、以下を実行してみてください。
+
+```js
+document.fragmentDirective;
+```
+
+以下のような構造を持つ {{domxref("FragmentDirective")}} オブジェクトインスタンスが返されるはずです。
+
+```js
+items: [
+  {
+    prefix: "",
+    textStart: "Module Workers",
+    textEnd: "",
+    suffix: "support",
+    type: "text",
+  },
+  {
+    prefix: "feedback on",
+    textStart: "usability",
+    textEnd: "",
+    suffix: "",
+    type: "text",
+  },
+];
+```
+
+この機能は、現在は主に機能検出を目的としていますが、将来的には、翻訳ヒントなど他の情報を記載するために展開することができます。
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- [テキストフラグメント](/ja/docs/Web/Text_fragments)
+- {{cssxref("::target-text")}}

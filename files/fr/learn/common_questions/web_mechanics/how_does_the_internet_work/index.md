@@ -1,12 +1,6 @@
 ---
 title: Le fonctionnement de l'Internet
 slug: Learn/Common_questions/Web_mechanics/How_does_the_Internet_work
-tags:
-  - Beginner
-  - Internet
-  - WebMechanics
-translation_of: Learn/Common_questions/How_does_the_Internet_work
-original_slug: Learn/Common_questions/How_does_the_Internet_work
 ---
 
 Dans cet article, nous expliquons ce qu'est l'Internet et comment il fonctionne.
@@ -83,7 +77,7 @@ Notre réseau est donc lié à l'infrastructure téléphonique. La prochaine ét
 
 ### Localiser un ordinateur
 
-Lorsque nous souhaitons transmettre un message à un ordinateur, nous devons préciser de quel ordinateur il s'agit. Par conséquent, chaque ordinateur lié à un réseau possède une adresse unique appelée «&nbsp;adresse IP&nbsp;» (où «&nbsp;IP&nbsp;» signifie _Internet Protocol_) qui sert à localiser l'ordinateur. Cette adresse est composée d'une série de nombres séparés par des points, par exemple&nbsp;: `192.168.2.10`  ou de lettres et de chiffres séparés par deux points. `2001:0db8:85a3:0000:0000:8a2e:0370:7334`.
+Lorsque nous souhaitons transmettre un message à un ordinateur, nous devons préciser de quel ordinateur il s'agit. Par conséquent, chaque ordinateur lié à un réseau possède une adresse unique appelée «&nbsp;adresse IP&nbsp;» (où «&nbsp;IP&nbsp;» signifie _Internet Protocol_) qui sert à localiser l'ordinateur. Cette adresse est composée d'une série de nombres séparés par des points, par exemple&nbsp;: `192.168.2.10` ou de lettres et de chiffres séparés par deux points. `2001:0db8:85a3:0000:0000:8a2e:0370:7334`.
 
 C'est une méthode très efficace pour les ordinateurs, mais les humains ont un peu plus de difficulté à retenir de telles adresses numériques. Afin de se faciliter la tâche, un libellé alphabétique, appelé _nom de domaine,_ est souvent associé aux adresses IP. Par example, `google.com` est le nom de domaine associé à l'adresse IP `173.194.121.32`. L'utilisation d'un nom de domaine est ainsi le moyen le plus facile d'atteindre un ordinateur via l'Internet.
 

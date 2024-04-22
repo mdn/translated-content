@@ -1,7 +1,6 @@
 ---
 title: HTMLHyperlinkElementUtils.href
 slug: Web/API/HTMLAnchorElement/href
-original_slug: Web/API/HTMLHyperlinkElementUtils/href
 ---
 
 {{ApiRef("URL API")}}

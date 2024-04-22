@@ -1,7 +1,6 @@
 ---
 title: MouseEvent.pageX
 slug: Web/API/MouseEvent/pageX
-translation_of: Web/API/MouseEvent/pageX
 ---
 
 {{APIRef("DOM Events")}}

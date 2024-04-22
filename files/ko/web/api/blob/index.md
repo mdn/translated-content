@@ -2,6 +2,7 @@
 title: Blob
 slug: Web/API/Blob
 ---
+
 {{APIRef("File API")}}
 
 **`Blob`** 객체는 파일류의 불변하는 미가공 데이터를 나타냅니다. 텍스트와 이진 데이터의 형태로 읽을 수 있으며, {{domxref("ReadableStream")}}으로 변환한 후 스트림 메서드를 사용해 데이터를 처리할 수도 있습니다.
@@ -44,8 +45,10 @@ slug: Web/API/Blob
 {{DOMxRef("Blob.Blob", "Blob()")}} 생성자를 사용해 다른 객체에서 블롭을 생성할 수 있습니다. 예를 들어, 아래 코드는 문자열에서 블롭을 생성합니다.
 
 ```js
-const obj = {hello: 'world'};
-const blob = new Blob([JSON.stringify(obj, null, 2)], {type : 'application/json'});
+const obj = { hello: "world" };
+const blob = new Blob([JSON.stringify(obj, null, 2)], {
+  type: "application/json",
+});
 ```
 
 ### 형식화 배열의 콘텐츠를 나타내는 URL 생성하기
@@ -55,32 +58,33 @@ const blob = new Blob([JSON.stringify(obj, null, 2)], {type : 'application/json'
 #### HTML
 
 ```html
-<p>이 예제는 스페이스 문자부터 대문자 Z까지의 ASCII
-   코드를 담은 형식화 배열을 생성한 후 객체 URL로
-   변환합니다. 아래에 링크를 추가했으니, 클릭해서
-   디코딩한 객체 URL을 확인하세요.</p>
+<p>
+  이 예제는 스페이스 문자부터 대문자 Z까지의 ASCII 코드를 담은 형식화 배열을
+  생성한 후 객체 URL로 변환합니다. 아래에 링크를 추가했으니, 클릭해서 디코딩한
+  객체 URL을 확인하세요.
+</p>
 ```
 
 #### JavaScript
 
-아래 코드의 주제는 `typedArrayToURL()` 함수로, 주어진 형식화 배열에서 `Blob`을 생성한 후 블롭의 객체 URL을 반환합니다. 데이터를 객체 URL로 변환한 후에는 (데이터가 이미지 정보라면) {{HTMLElement("img")}} 요소의 {{htmlattrxref("src", "img")}} 특성에 지정하는 등 다양하게 사용할 수 있습니다.
+아래 코드의 주제는 `typedArrayToURL()` 함수로, 주어진 형식화 배열에서 `Blob`을 생성한 후 블롭의 객체 URL을 반환합니다. 데이터를 객체 URL로 변환한 후에는 (데이터가 이미지 정보라면) {{HTMLElement("img")}} 요소의 [`src`](/ko/docs/Web/HTML/Element/img#src) 특성에 지정하는 등 다양하게 사용할 수 있습니다.
 
 ```js
 function typedArrayToURL(typedArray, mimeType) {
-  return URL.createObjectURL(new Blob([typedArray.buffer], {type: mimeType}))
+  return URL.createObjectURL(new Blob([typedArray.buffer], { type: mimeType }));
 }
 
 const bytes = new Uint8Array(59);
 
-for(let i = 0; i < 59; i++) {
+for (let i = 0; i < 59; i++) {
   bytes[i] = 32 + i;
 }
 
-const url = typedArrayToURL(bytes, 'text/plain');
+const url = typedArrayToURL(bytes, "text/plain");
 
-const link = document.createElement('a');
+const link = document.createElement("a");
 link.href = url;
-link.innerText = '배열 URL 열기';
+link.innerText = "배열 URL 열기";
 
 document.body.appendChild(link);
 ```
@@ -97,8 +101,8 @@ document.body.appendChild(link);
 
 ```js
 const reader = new FileReader();
-reader.addEventListener('loadend', () => {
-   // reader.result에 블롭의 내용이 형식화 배열로 들어있음
+reader.addEventListener("loadend", () => {
+  // reader.result에 블롭의 내용이 형식화 배열로 들어있음
 });
 reader.readAsArrayBuffer(blob);
 ```
@@ -106,7 +110,7 @@ reader.readAsArrayBuffer(blob);
 {{domxref("Response")}}를 사용하는 방법도 있습니다. 다음 코드는 `Blob`의 내용을 텍스트로 가져옵니다.
 
 ```js
-const text = await (new Response(blob)).text();
+const text = await new Response(blob).text();
 ```
 
 텍스트로 가져올 땐 {{DOMxRef("Blob.prototype.text()")}}를 사용할 수도 있습니다.

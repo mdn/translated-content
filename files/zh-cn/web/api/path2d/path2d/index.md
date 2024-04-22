@@ -33,8 +33,8 @@ new Path2D(d);
 ```
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 let path1 = new Path2D();
 path1.rect(10, 10, 100, 100);
@@ -57,10 +57,10 @@ ctx.stroke(path2);
 ```
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-let p = new Path2D('M10 10 h 80 v 80 h -80 Z');
+let p = new Path2D("M10 10 h 80 v 80 h -80 Z");
 ctx.fill(p);
 ```
 

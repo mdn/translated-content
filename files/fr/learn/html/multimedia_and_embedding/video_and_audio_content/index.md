@@ -1,18 +1,6 @@
 ---
 title: Contenu audio et vidéo
 slug: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
-tags:
-  - Article
-  - Audio
-  - Débutant
-  - Guide
-  - HTML
-  - Légendes
-  - Video
-  - pistes (audio ou texte)
-  - sous‑titres
-translation_of: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
-original_slug: Apprendre/HTML/Multimedia_and_embedding/Contenu_audio_et_video
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}
@@ -29,10 +17,10 @@ Maintenant que nous sommes à l'aise pour ajouter de simples images dans une pag
           href="/fr/Apprendre/Commencer_avec_le_web/Installation_outils_de_base"
           >installation des outils de base</a
         >, bases de la
-        <a href="/fr/Apprendre/Commencer_avec_le_web/G%C3%A9rer_les_fichiers"
+        <a href="/fr/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers"
           >manipulation des fichiers</a
         >, connaissance des fondamentaux du HTML (comme expliqué dans
-        <a href="/fr/Apprendre/HTML/Introduction_%C3%A0_HTML/Getting_started"
+        <a href="/fr/Apprendre/HTML/Introduction_à_HTML/Getting_started"
           >Commencer avec le HTML)</a
         >
         et
@@ -67,7 +55,10 @@ L'élément {{htmlelement("video")}} vous permet d'intégrer de la vidéo très 
 
 ```html
 <video src="rabbit320.webm" controls>
-  <p>Votre navigateur ne prend pas en charge les vidéos HTML5. Voici, à la place, un <a href="rabbit320.webm">lien sur la vidéo</a>.</p>
+  <p>
+    Votre navigateur ne prend pas en charge les vidéos HTML5. Voici, à la place,
+    un <a href="rabbit320.webm">lien sur la vidéo</a>.
+  </p>
 </video>
 ```
 
@@ -76,7 +67,7 @@ Les fonctionnalités de ce code sont :
 - [`src`](/fr/docs/Web/HTML/Element/video#src)
   - : De la même manière que pour l'élément {{htmlelement("img")}}, l'attribut `src` (source) contient le chemin vers la vidéo que vous voulez intégrer. Cela fonctionne de la même manière.
 - [`controls`](/fr/docs/Web/HTML/Element/video#controls)
-  - : Les utilisateurs doivent avoir un contrôle sur la lecture de la vidéo ou de l'audio. (c'est particulièrement crucial pour les gens ayant de l'[épilepsie](https://fr.wikipedia.org/wiki/%C3%89pilepsie).) Vous devez vous servir de l'attribut `controls` pour appeler l'interface de contrôle du navigateur ou construire votre propre interface en utilisant l'[API JavaScript](/fr/docs/Web/API/HTMLMediaElement) adéquat. Au minimum, l'interface doit avoir un contrôle de démarrage et d'arrêt (start/stop) du média et un pour ajuster le volume.
+  - : Les utilisateurs doivent avoir un contrôle sur la lecture de la vidéo ou de l'audio. (c'est particulièrement crucial pour les gens ayant de l'[épilepsie](https://fr.wikipedia.org/wiki/Épilepsie).) Vous devez vous servir de l'attribut `controls` pour appeler l'interface de contrôle du navigateur ou construire votre propre interface en utilisant l'[API JavaScript](/fr/docs/Web/API/HTMLMediaElement) adéquat. Au minimum, l'interface doit avoir un contrôle de démarrage et d'arrêt (start/stop) du média et un pour ajuster le volume.
 - Le paragraphe dans la balise `<video>`
   - : Cela peut s'appeler solution de repli ou contenu de secours (fallback content) — si le navigateur accédant à la page ne supporte pas l'élément `<video>`, cela offre un texte alternatif qui peut être ce que vous voulez&nbsp;; dans ce cas nous avons mis un lien direct au fichier vidéo, afin que l'utilisateur puisse au moins y accéder sans avoir à se soucier du navigateur qu'il utilise.
 
@@ -105,16 +96,17 @@ Un lecteur audio peut jouer directement une piste audio, par ex. un fichier MP3 
 Les formats ci-dessus ont été créés pour compresser la vidéo et l'audio dans des fichiers gérables (les fichiers vidéo et audio bruts sont très volumineux). Les navigateurs contiennent différents {{Glossary("Codec","Codecs")}}, comme Vorbis ou H.264, utilisés pour convertir le son et la vidéo compressés en binaire et inversement. Comme indiqué ci-dessus, les navigateurs ne supportent malheureusement pas tous les mêmes codecs, vous devrez donc fournir plusieurs fichiers pour chaque production de média. S'il vous manque le bon codec pour décoder le média, il ne pourra pas être lu.
 
 > **Note :** Vous êtes peut-être surpris de l'existence d'une telle situation. Les formats **MP3** (pour l'audio) et **MP4/H.264** (pour la vidéo) sont tous deux largement pris en charge et de bonne qualité. Cependant, ils sont également grevés de brevets — les brevets américains couvrent le MP3 jusqu'en 2017 au moins et le H.264 jusqu'en 2027 au plus tôt, ce qui signifie que les navigateurs ne détenant pas de licence doivent payer d'énormes sommes d'argent pour pouvoir utiliser ces formats. En outre, beaucoup de personnes évitent, par principe, les logiciels propriétaires et leur préférent des formats ouverts. C'est pourquoi nous devons fournir plusieurs formats pour une prise en charge par différents navigateurs.
->
->
 
 Alors, comment faire ? Jetez un coup d'œil à l'exemple qui suit, [mis à jour](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html), ([essayez-le directement ici](http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html) aussi) :
 
 ```html
 <video controls>
-  <source src="rabbit320.mp4" type="video/mp4">
-  <source src="rabbit320.webm" type="video/webm">
-  <p>Votre navigateur ne prend pas en charge les vidéos HTML5. Voici, à la place, un <a href="rabbit320.mp4">lien sur la vidéo</a>.</p>
+  <source src="rabbit320.mp4" type="video/mp4" />
+  <source src="rabbit320.webm" type="video/webm" />
+  <p>
+    Votre navigateur ne prend pas en charge les vidéos HTML5. Voici, à la place,
+    un <a href="rabbit320.mp4">lien sur la vidéo</a>.
+  </p>
 </video>
 ```
 
@@ -129,12 +121,20 @@ Chaque élément \<source> possède également un attribut de type. C'est facult
 Il y a possibilité d'inclure d'autres fonctionnalités dans une vidéo HTML5. Regardez notre troisième exemple&nbsp;:
 
 ```html
-<video controls width="400" height="400"
-       autoplay loop muted
-       poster="poster.png">
-  <source src="rabbit320.mp4" type="video/mp4">
-  <source src="rabbit320.webm" type="video/webm">
-  <p>Votre navigateur ne prend pas en charge les vidéos HTML5. Voici, à la place, un <a href="rabbit320.mp4">lien à la vidéo</a>.</p>
+<video
+  controls
+  width="400"
+  height="400"
+  autoplay
+  loop
+  muted
+  poster="poster.png">
+  <source src="rabbit320.mp4" type="video/mp4" />
+  <source src="rabbit320.webm" type="video/webm" />
+  <p>
+    Votre navigateur ne prend pas en charge les vidéos HTML5. Voici, à la place,
+    un <a href="rabbit320.mp4">lien à la vidéo</a>.
+  </p>
 </video>
 ```
 
@@ -170,9 +170,12 @@ L'élément {{htmlelement("audio")}} fonctionne exactement de la même manière 
 
 ```html
 <audio controls>
-  <source src="viper.mp3" type="audio/mp3">
-  <source src="viper.ogg" type="audio/ogg">
-  <p>Votre navigateur ne prend pas en charge l'audio HTML5. Voici, à la place, un <a href="viper.mp3">lien sur l'audio</a>.</p>
+  <source src="viper.mp3" type="audio/mp3" />
+  <source src="viper.ogg" type="audio/ogg" />
+  <p>
+    Votre navigateur ne prend pas en charge l'audio HTML5. Voici, à la place, un
+    <a href="viper.mp3">lien sur l'audio</a>.
+  </p>
 </audio>
 ```
 
@@ -235,9 +238,9 @@ Voici un exemple&nbsp;:
 
 ```html
 <video controls>
-    <source src="example.mp4" type="video/mp4">
-    <source src="example.webm" type="video/webm">
-    <track kind="subtitles" src="subtitles_en.vtt" srclang="en">
+  <source src="example.mp4" type="video/mp4" />
+  <source src="example.webm" type="video/webm" />
+  <track kind="subtitles" src="subtitles_en.vtt" srclang="en" />
 </video>
 ```
 
@@ -269,7 +272,7 @@ En bonus, vous pouvez chercher des textes à intégrer et ajouter des légendes 
 
 Emballez, c'est pesé ! Nous espérons que vous avez pris plaisir avec ces pages vidéo et audio. Au chapitre suivant, nous découvrirons des manières différentes d'intégrer du contenu sur le Web en se servant de technologies comme {{htmlelement("iframe")}} et {{htmlelement("object")}}.
 
-## Consultez aussi :
+## Consultez aussi
 
 - {{htmlelement("audio")}}
 - {{htmlelement("video")}}

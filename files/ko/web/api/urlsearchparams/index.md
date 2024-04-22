@@ -10,8 +10,10 @@ slug: Web/API/URLSearchParams
 `URLSearchParams`를 구현하는 객체는 {{jsxref("Statements/for...of", "for...of")}} 반복문으로 직접 키/값 쌍을 순회할 수 있습니다. 키/값 쌍의 순회 순서는 쿼리 문자열에 나타나는 순서와 같습니다. 예를 들어, 다음 두 줄의 코드는 동일합니다.
 
 ```js
-for (const [key, value] of mySearchParams) {}
-for (const [key, value] of mySearchParams.entries()) {}
+for (const [key, value] of mySearchParams) {
+}
+for (const [key, value] of mySearchParams.entries()) {
+}
 ```
 
 {{availableinworkers}}
@@ -51,7 +53,7 @@ for (const [key, value] of mySearchParams.entries()) {}
 ## 예제
 
 ```js
-const paramsString = 'q=URLUtils.searchParams&topic=api';
+const paramsString = "q=URLUtils.searchParams&topic=api";
 let searchParams = new URLSearchParams(paramsString);
 
 // 검색 매개변수 순회
@@ -59,38 +61,38 @@ for (let p of searchParams) {
   console.log(p);
 }
 
-searchParams.has('topic') === true;      // true
-searchParams.get('topic') === "api";     // true
-searchParams.getAll('topic');            // ["api"]
-searchParams.get('foo') === null;        // true
-searchParams.append('topic', 'webdev');
-searchParams.toString();                 // "q=URLUtils.searchParams&topic=api&topic=webdev"
-searchParams.set('topic', 'More webdev');
-searchParams.toString();                 // "q=URLUtils.searchParams&topic=More+webdev"
-searchParams.delete('topic');
-searchParams.toString();                 // "q=URLUtils.searchParams"
+searchParams.has("topic") === true; // true
+searchParams.get("topic") === "api"; // true
+searchParams.getAll("topic"); // ["api"]
+searchParams.get("foo") === null; // true
+searchParams.append("topic", "webdev");
+searchParams.toString(); // "q=URLUtils.searchParams&topic=api&topic=webdev"
+searchParams.set("topic", "More webdev");
+searchParams.toString(); // "q=URLUtils.searchParams&topic=More+webdev"
+searchParams.delete("topic");
+searchParams.toString(); // "q=URLUtils.searchParams"
 ```
 
 ```js
 // 검색 매개변수는 객체도 가능
-let paramsObj = {foo: 'bar', baz: 'bar'};
+let paramsObj = { foo: "bar", baz: "bar" };
 let searchParams = new URLSearchParams(paramsObj);
 
-searchParams.toString();                 // "foo=bar&baz=bar"
-searchParams.has('foo');                 // true
-searchParams.get('foo');                 // bar
+searchParams.toString(); // "foo=bar&baz=bar"
+searchParams.has("foo"); // true
+searchParams.get("foo"); // bar
 ```
 
 ### 중복된 검색 매개변수
 
 ```js
-let paramStr = 'foo=bar&foo=baz';
+let paramStr = "foo=bar&foo=baz";
 let searchParams = new URLSearchParams(paramStr);
 
-searchParams.toString();                 // "foo=bar&foo=baz"
-searchParams.has('foo');                 // true
-searchParams.get('foo');                 // bar, 첫 번째 값만 반환
-searchParams.getAll('foo');              // ["bar", "baz"]
+searchParams.toString(); // "foo=bar&foo=baz"
+searchParams.has("foo"); // true
+searchParams.get("foo"); // bar, 첫 번째 값만 반환
+searchParams.getAll("foo"); // ["bar", "baz"]
 ```
 
 ### URL 파싱 없음
@@ -98,22 +100,22 @@ searchParams.getAll('foo');              // ["bar", "baz"]
 `URLSearchParams` 생성자에 URL 파싱 기능은 없습니다. 다만 쿼리 문자열이 `?`로 시작하면 무시합니다.
 
 ```js
-const paramsString1 = 'http://example.com/search?query=%40';
+const paramsString1 = "http://example.com/search?query=%40";
 const searchParams1 = new URLSearchParams(paramsString1);
 
-searchParams1.has('query'); // false
-searchParams1.has('http://example.com/search?query'); // true
+searchParams1.has("query"); // false
+searchParams1.has("http://example.com/search?query"); // true
 
-searchParams1.get('query'); // null
-searchParams1.get('http://example.com/search?query'); // "@" (decodeURIComponent('%40')과 동일)
+searchParams1.get("query"); // null
+searchParams1.get("http://example.com/search?query"); // "@" (decodeURIComponent('%40')과 동일)
 
-const paramsString2 = '?query=value';
+const paramsString2 = "?query=value";
 const searchParams2 = new URLSearchParams(paramsString2);
-searchParams2.has('query'); // true
+searchParams2.has("query"); // true
 
-const url = new URL('http://example.com/search?query=%40');
+const url = new URL("http://example.com/search?query=%40");
 const searchParams3 = new URLSearchParams(url.search);
-searchParams3.has('query') // true
+searchParams3.has("query"); // true
 ```
 
 ### 더하기 기호 보존하기
@@ -121,11 +123,11 @@ searchParams3.has('query') // true
 `URLSearchParams` 생성자는 더하기 기호(`+`)를 공백으로 취급하므로 원하지 않는 결과를 낳을 수 있습니다.
 
 ```js
-const rawData = '\x13à\x17@\x1F\x80';
+const rawData = "\x13à\x17@\x1F\x80";
 const base64Data = btoa(rawData); // 'E+AXQB+A'
 
 const searchParams = new URLSearchParams(`bin=${base64Data}`); // 'bin=E+AXQB+A'
-const binQuery = searchParams.get('bin'); // 'E AXQB A', '+'가 공백으로 대체됨
+const binQuery = searchParams.get("bin"); // 'E AXQB A', '+'가 공백으로 대체됨
 
 console.log(atob(binQuery) === rawData); // false
 ```
@@ -133,12 +135,12 @@ console.log(atob(binQuery) === rawData); // false
 {{jsxref("encodeURIComponent", "encodeURIComponent()")}}로 값을 먼저 인코딩하면 이 문제를 피할 수 있습니다.
 
 ```js
-const rawData = '\x13à\x17@\x1F\x80';
+const rawData = "\x13à\x17@\x1F\x80";
 const base64Data = btoa(rawData); // 'E+AXQB+A'
 const encodedBase64Data = encodeURIComponent(base64Data); // 'E%2BAXQB%2BA'
 
 const searchParams = new URLSearchParams(`bin=${encodedBase64Data}`); // 'bin=E%2BAXQB%2BA'
-const binQuery = searchParams.get('bin'); // 'E+AXQB+A'
+const binQuery = searchParams.get("bin"); // 'E+AXQB+A'
 
 console.log(atob(binQuery) === rawData); // true
 ```
@@ -148,10 +150,10 @@ console.log(atob(binQuery) === rawData); // true
 `URLSearchParams`는 `=` 뒤에 값이 없는 것과, 아예 `=`조차 없는 매개변수를 구분하지 않습니다.
 
 ```js
-const emptyVal = new URLSearchParams('foo=&bar=baz');
-emptyVal.get('foo'); // '' 반환
-const noEquals = new URLSearchParams('foo&bar=baz');
-noEquals.get('foo'); // '' 반환, 동일함
+const emptyVal = new URLSearchParams("foo=&bar=baz");
+emptyVal.get("foo"); // '' 반환
+const noEquals = new URLSearchParams("foo&bar=baz");
+noEquals.get("foo"); // '' 반환, 동일함
 noEquals.toString(); // 'foo=&bar=baz'
 ```
 

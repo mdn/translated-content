@@ -1,7 +1,6 @@
 ---
 title: Форматирование даты при помощи moment
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment
-translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment
 ---
 
 По умолчанию отображение дат наших моделей некрасиво: _Tue Dec 06 2016 15:49:58 GMT+1100 (AUS Eastern Daylight Time)_. В этом разделе мы покажем, как можно обновить страницу списка _BookInstance List_ из предыдущего раздела, чтобы представить поле `due_date` в более удобном формате: December 6th, 2016.
@@ -23,17 +22,15 @@ npm install moment
 1. Откройте файл **./models/bookinstance.js**.
 2. В начало файла введите строку для импортирования _moment_.
 
-    ```js
-    var moment = require('moment');
-    ```
+   ```js
+   var moment = require("moment");
+   ```
 
 Добавьте виртуальное свойство `due_back_formatted` сразу после свойства url.
 
 ```js
-BookInstanceSchema
-.virtual('due_back_formatted')
-.get(function () {
-  return moment(this.due_back).format('MMMM Do, YYYY');
+BookInstanceSchema.virtual("due_back_formatted").get(function () {
+  return moment(this.due_back).format("MMMM Do, YYYY");
 });
 ```
 

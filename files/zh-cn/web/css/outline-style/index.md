@@ -88,7 +88,10 @@ outline-style: unset;
 }
 
 /* 让效果更清楚 */
-* { outline-width: 10px; padding: 15px; }
+* {
+  outline-width: 10px;
+  padding: 15px;
+}
 ```
 
 {{ EmbedLiveSample('dotted 和 dashed') }}
@@ -116,7 +119,10 @@ outline-style: unset;
 }
 
 /* 让效果更清楚 */
-* { outline-width: 10px; padding: 15px; }
+* {
+  outline-width: 10px;
+  padding: 15px;
+}
 ```
 
 {{ EmbedLiveSample('solid 和 double') }}
@@ -144,7 +150,10 @@ outline-style: unset;
 }
 
 /* 让效果更清楚 */
-* { outline-width: 10px; padding: 15px; }
+* {
+  outline-width: 10px;
+  padding: 15px;
+}
 ```
 
 {{ EmbedLiveSample('groove 和 ridge') }}
@@ -172,7 +181,10 @@ outline-style: unset;
 }
 
 /* 让效果更清楚 */
-* { outline-width: 10px; padding: 15px; }
+* {
+  outline-width: 10px;
+  padding: 15px;
+}
 ```
 
 {{ EmbedLiveSample('inset 和 outset') }}

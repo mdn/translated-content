@@ -14,7 +14,7 @@ slug: Web/JavaScript/Guide/Regular_expressions
 - 정규 표현식 리터럴. 다음과 같이 슬래시로 패턴을 감싸서 작성합니다.
 
   ```js
-  const re = /ab+c/
+  const re = /ab+c/;
   ```
 
   정규 표현식 리터럴은 스크립트를 불러올 때 컴파일되므로, 바뀔 일이 없는 패턴의 경우 리터럴을 사용하면 성능이 향상될 수 있습니다.
@@ -22,7 +22,7 @@ slug: Web/JavaScript/Guide/Regular_expressions
 - {{jsxref("RegExp")}} 객체의 생성자 호출.
 
   ```js
-  const re = new RegExp('ab+c')
+  const re = new RegExp("ab+c");
   ```
 
   생성자 함수를 사용하면 정규 표현식이 런타임에 컴파일됩니다. 바뀔 수 있는 패턴이나, 사용자 입력 등 외부 출처에서 가져오는 패턴의 경우 이렇게 사용하세요.
@@ -158,7 +158,7 @@ slug: Web/JavaScript/Guide/Regular_expressions
 
 ```js
 function escapeRegExp(string) {
-  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') // $&은 일치한 문자열 전체를 의미
+  return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); // $&은 일치한 문자열 전체를 의미
 }
 ```
 
@@ -191,13 +191,13 @@ function escapeRegExp(string) {
 
 ```js
 const myRe = /d(b+)d/g;
-const myArray = myRe.exec('cdbbdbsbz');
+const myArray = myRe.exec("cdbbdbsbz");
 ```
 
 만약 정규 표현식 객체의 속성에 접근할 필요가 없으면 아래와 같이 짧게 쓸 수도 있습니다.
 
 ```js
-const myArray = /d(b+)d/g.exec('cdbbdbsbz');
+const myArray = /d(b+)d/g.exec("cdbbdbsbz");
 // 'cdbbdbsbz'.match(/d(b+)d/g); 와 비슷하지만,
 // 'cdbbdbsbz'.match(/d(b+)d/g)의 반환 값은 [ 'dbbd' ]인 반면
 // /d(b+)d/g.exec('cdbbdbsbz')의 반환 값은 [ 'dbbd', 'bb', index: 1, input: 'cdbbdbsbz' ]
@@ -208,8 +208,8 @@ const myArray = /d(b+)d/g.exec('cdbbdbsbz');
 정규 표현식을 문자열에서 만들고 싶으면 아래처럼 사용할 수도 있습니다.
 
 ```js
-const myRe = new RegExp('d(b+)d', 'g');
-const myArray = myRe.exec('cdbbdbsbz');
+const myRe = new RegExp("d(b+)d", "g");
+const myArray = myRe.exec("cdbbdbsbz");
 ```
 
 아래의 표는 위 스크립트에서 일치를 성공한 후, 반환하는 배열과 업데이트되는 정규 표현식 객체의 속성입니다.
@@ -271,7 +271,7 @@ const myArray = myRe.exec('cdbbdbsbz');
 
 ```js
 const myRe = /d(b+)d/g;
-const myArray = myRe.exec('cdbbdbsbz');
+const myArray = myRe.exec("cdbbdbsbz");
 console.log(`lastIndex의 값은 ${myRe.lastIndex}`);
 
 // "lastIndex의 값은 5"
@@ -280,7 +280,7 @@ console.log(`lastIndex의 값은 ${myRe.lastIndex}`);
 그러나 위의 코드 대신 아래 코드를 사용하게 되면...
 
 ```js
-const myArray = /d(b+)d/g.exec('cdbbdbsbz');
+const myArray = /d(b+)d/g.exec("cdbbdbsbz");
 console.log(`lastIndex의 값은 ${/d(b+)d/g.lastIndex}`);
 
 // "lastIndex의 값은 0"
@@ -311,7 +311,7 @@ const re = /pattern/flags;
 생성자를 사용할 경우 이렇게 지정합니다.
 
 ```js
-const re = new RegExp('pattern', 'flags');
+const re = new RegExp("pattern", "flags");
 ```
 
 플래그는 정규식과 완전히 합쳐지므로 나중에 추가하거나 제거할 수 없습니다.
@@ -320,7 +320,7 @@ const re = new RegExp('pattern', 'flags');
 
 ```js
 const re = /\w+\s/g;
-const str = 'fee fi fo fum';
+const str = "fee fi fo fum";
 const myArray = str.match(re);
 console.log(myArray);
 
@@ -336,7 +336,7 @@ const re = /\w+\s/g;
 이렇게 생성자를 사용하도록 바꿀 수도 있습니다.
 
 ```js
-const re = new RegExp('\\w+\\s', 'g');
+const re = new RegExp("\\w+\\s", "g");
 ```
 
 두 구문 모두 동일한 결과를 낳습니다.
@@ -348,19 +348,19 @@ const re = new RegExp('\\w+\\s', 'g');
 {{jsxref("RegExp.prototype.exec()")}} 메서드와 `g` 플래그를 사용하면, 일치한 부분 문자열들과 각각의 인덱스를 하나씩 순차적으로 반환합니다.
 
 ```js
-const str = 'fee fi fo fum'
-const re = /\w+\s/g
+const str = "fee fi fo fum";
+const re = /\w+\s/g;
 
-console.log(re.exec(str)) // ["fee ", index: 0, input: "fee fi fo fum"]
-console.log(re.exec(str)) // ["fi ", index: 4, input: "fee fi fo fum"]
-console.log(re.exec(str)) // ["fo ", index: 7, input: "fee fi fo fum"]
-console.log(re.exec(str)) // null
+console.log(re.exec(str)); // ["fee ", index: 0, input: "fee fi fo fum"]
+console.log(re.exec(str)); // ["fi ", index: 4, input: "fee fi fo fum"]
+console.log(re.exec(str)); // ["fo ", index: 7, input: "fee fi fo fum"]
+console.log(re.exec(str)); // null
 ```
 
 반면, {{jsxref("String.prototype.match()")}} 메서드는 모든 일치를 한 번에 반환하지만, 각각의 인덱스는 포함하지 않습니다.
 
 ```js
-console.log(str.match(re)) // ["fee ", "fi ", "fo "]
+console.log(str.match(re)); // ["fee ", "fi ", "fo "]
 ```
 
 ## 예제
@@ -402,26 +402,26 @@ console.log(str.match(re)) // ["fee ", "fi ", "fo "]
 #### JavaScript
 
 ```js
-const form = document.querySelector('#form')
-const input = document.querySelector('#phone')
-const output = document.querySelector('#output')
+const form = document.querySelector("#form");
+const input = document.querySelector("#phone");
+const output = document.querySelector("#output");
 
-const re = /^(?:\d{3}|\(\d{3}\))([-\/\.])\d{4}\1\d{4}$/
+const re = /^(?:\d{3}|\(\d{3}\))([-\/\.])\d{4}\1\d{4}$/;
 
 function testInfo(phoneInput) {
-  const ok = re.exec(phoneInput.value)
+  const ok = re.exec(phoneInput.value);
 
   if (!ok) {
-    output.textContent = `형식에 맞지 않는 전화번호입니다. (${phoneInput.value})`
+    output.textContent = `형식에 맞지 않는 전화번호입니다. (${phoneInput.value})`;
   } else {
-    output.textContent = `감사합니다. 전화번호는 ${ok[0]} 입니다.`
+    output.textContent = `감사합니다. 전화번호는 ${ok[0]} 입니다.`;
   }
 }
 
-form.addEventListener('submit', (event) => {
-  event.preventDefault()
-  testInfo(input)
-})
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  testInfo(input);
+});
 ```
 
 #### 결과

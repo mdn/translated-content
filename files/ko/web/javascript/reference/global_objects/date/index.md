@@ -48,10 +48,12 @@ UTC를 기준으로 하는 읽기/쓰기 메서드도 존재합니다.
 - {{jsxref("Date.now()")}}
   - : 1970년 1월 1일 00:00:00 UTC로부터 지난 시간을 밀리초 단위의 숫자 값으로 반환합니다. 윤초는 무시합니다.
 - {{jsxref("Date.parse()")}}
+
   - : 날짜를 나타내는 문자열을 분석한 후, 해당 날짜와 1970년 1월 1일 00:00:00 UTC의 시간 차이를 밀리초 단위의 숫자 값으로 반환합니다.
 
     > **참고:** `Date.parse()`를 사용한 날짜 분석은 브라우저 간 차이 및 일관적이지 못한 동작을
-    가지고 있으므로 사용하지 않는 것이 좋습니다.
+    > 가지고 있으므로 사용하지 않는 것이 좋습니다.
+
 - {{jsxref("Date.UTC()")}}
   - : 생성자가 받을 수 있는 제일 많은 매개변수(구성요소 각각, 2개 \~ 7개)를 동일하게 받아서, 1970년 1월 1일 00:00:00 UTC의
     시간 차이를 밀리초 단위의 숫자 값으로 반환합니다. 윤초는 무시합니다.
@@ -161,11 +163,11 @@ UTC를 기준으로 하는 읽기/쓰기 메서드도 존재합니다.
 > 동작이 일관적이지 못하고 브라우저끼리 차이가 존재하므로 사용하지 않는 것이 좋습니다.
 
 ```js
-let today = new Date()
-let birthday = new Date('December 17, 1995 03:24:00')
-let birthday = new Date('1995-12-17T03:24:00')
-let birthday = new Date(1995, 11, 17)            // 월은 0부터 시작
-let birthday = new Date(1995, 11, 17, 3, 24, 0)
+let today = new Date();
+let birthday = new Date("December 17, 1995 03:24:00");
+let birthday = new Date("1995-12-17T03:24:00");
+let birthday = new Date(1995, 11, 17); // 월은 0부터 시작
+let birthday = new Date(1995, 11, 17, 3, 24, 0);
 ```
 
 ### 두 자리 연도는 1900년대로
@@ -177,12 +179,12 @@ let birthday = new Date(1995, 11, 17, 3, 24, 0)
 {{jsxref("Date.prototype.getFullYear()")}} 메서드를 사용해야 합니다.
 
 ```js
-let date = new Date(98, 1)  // Sun Feb 01 1998 00:00:00 GMT+0900 (대한민국 표준시)
+let date = new Date(98, 1); // Sun Feb 01 1998 00:00:00 GMT+0900 (대한민국 표준시)
 
 // 구형 메서드: 여기서도 98을 1998로 처리
-date.setYear(98)            // Sun Feb 01 1998 00:00:00 GMT+0900 (대한민국 표준시)
+date.setYear(98); // Sun Feb 01 1998 00:00:00 GMT+0900 (대한민국 표준시)
 
-date.setFullYear(98)        // Sat Feb 01 0098 00:00:00 GMT+0827 (대한민국 표준시)
+date.setFullYear(98); // Sat Feb 01 0098 00:00:00 GMT+0827 (대한민국 표준시)
 ```
 
 ### 경과시간 계산
@@ -194,36 +196,36 @@ date.setFullYear(98)        // Sat Feb 01 0098 00:00:00 GMT+0827 (대한민국 �
 
 ```js
 // Date 객체 사용법
-let start = Date.now()
+let start = Date.now();
 
 // 시간이 오래 걸리는 어떤 작업
-doSomethingForALongTime()
-let end = Date.now()
-let elapsed = end - start // 밀리초로 나타낸 경과시간
+doSomethingForALongTime();
+let end = Date.now();
+let elapsed = end - start; // 밀리초로 나타낸 경과시간
 ```
 
 ```js
 // 내장 메서드 사용법
-let start = new Date()
+let start = new Date();
 
 // 시간이 오래 걸리는 어떤 작업
-doSomethingForALongTime()
-let end = new Date()
-let elapsed = end.getTime() - start.getTime() // 밀리초로 나타낸 경과시간
+doSomethingForALongTime();
+let end = new Date();
+let elapsed = end.getTime() - start.getTime(); // 밀리초로 나타낸 경과시간
 ```
 
 ```js
 // 임의의 함수를 테스트하고, 호출에 걸린 시간을 출력하려면
 function printElapsedTime(fTest) {
   let nStartTime = Date.now(),
-      vReturn = fTest(),
-      nEndTime = Date.now()
+    vReturn = fTest(),
+    nEndTime = Date.now();
 
-  console.log(`Elapsed time: ${ String(nEndTime - nStartTime) } milliseconds`)
-  return vReturn
+  console.log(`Elapsed time: ${String(nEndTime - nStartTime)} milliseconds`);
+  return vReturn;
 }
 
-let yourFunctionReturn = printElapsedTime(yourFunction)
+let yourFunctionReturn = printElapsedTime(yourFunction);
 ```
 
 > **참고:** {{domxref("Window.performance", "Web Performance API", "", 1)}}의 고해상도 시간 기능을
@@ -233,7 +235,7 @@ let yourFunctionReturn = printElapsedTime(yourFunction)
 ### ECMAScript 시간으로부터 경과한 시간을 초 단위로 가져오기
 
 ```js
-let seconds = Math.floor(Date.now() / 1000)
+let seconds = Math.floor(Date.now() / 1000);
 ```
 
 여기서는 정수만 반환하는 것이 중요하므로, 단순히 나누기만 해서는 충분하지 않습니다. 그리고 실제로 "지나간" 초를

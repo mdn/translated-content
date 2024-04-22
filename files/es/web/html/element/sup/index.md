@@ -1,7 +1,6 @@
 ---
 title: sup
 slug: Web/HTML/Element/sup
-original_slug: Web/HTML/Elemento/sup
 ---
 
 El **elemento HTML** \<sup> define un fragmento de texto que se debe mostrar, por razones tipográficas, más alto, y generalmente más pequeño, que el tramo principal del texto, es decir, en superíndice.
@@ -11,7 +10,7 @@ El **elemento HTML** \<sup> define un fragmento de texto que se debe mostrar, po
     <tr>
       <th scope="row">
         <a
-          href="https://developer.mozilla.org/en-US/docs/HTML/Content_categories"
+          href="/es/docs/HTML/Content_categories"
           title="en/HTML/Content categories"
           >Categorías de contenido</a
         >

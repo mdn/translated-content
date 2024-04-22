@@ -1,7 +1,6 @@
 ---
 title: var
 slug: Web/JavaScript/Reference/Statements/var
-original_slug: Web/JavaScript/Referencia/Sentencias/var
 ---
 
 {{jsSidebar("Statements")}}
@@ -17,6 +16,7 @@ var nombreDeVariable1 [= valor1] [, nombreDeVariable2 [= valor2] ... [, nombreDe
 ```
 
 - `nombreDeVariableN`
+
   - : Representa el nombre que el programador da a la variable. Puede ser cualquier identificador legal.
 
 - `valorN`
@@ -32,7 +32,7 @@ Asignar un valor a una variable no declarada implica crearla como variable globa
 
 ```js
 function x() {
-  y = 1;   // Lanza un error de tipo "ReferenceError" en modo estricto ('use strict')
+  y = 1; // Lanza un error de tipo "ReferenceError" en modo estricto ('use strict')
   var z = 2;
 }
 
@@ -45,14 +45,14 @@ console.log(z); // Lanza un error de tipo "ReferenceError": z no está definida 
 2\. Las variables declaradas son creadas antes de ejecutar cualquier otro código. Las variables sin declarar no existen hasta que el código que las asigna es ejecutado.
 
 ```js
-console.log(a);                // Lanza un error de tipo "ReferenceError".
-console.log('trabajando...'); // Nunca se ejecuta.
+console.log(a); // Lanza un error de tipo "ReferenceError".
+console.log("trabajando..."); // Nunca se ejecuta.
 ```
 
 ```js
 var a;
-console.log(a);                // Imprime "undefined" o "" dependiendo del navegador.
-console.log('trabajando...'); // Imprime "trabajando...".
+console.log(a); // Imprime "undefined" o "" dependiendo del navegador.
+console.log("trabajando..."); // Imprime "trabajando...".
 ```
 
 3\. Las variables declaradas son una propiedad no-configurable de su contexto de ejecución (de función o global). Las variables sin declarar son configurables (p. ej. pueden borrarse).
@@ -110,24 +110,27 @@ function haz_algo() {
 ### Declarando e inicializando dos variables
 
 ```js
-var a = 0, b = 0;
+var a = 0,
+  b = 0;
 ```
 
 ### Asignando dos variables con un solo valor de cadena
 
 ```js
-var a = 'A';
+var a = "A";
 var b = a;
 
 // Equivalente a:
 
-var a, b = a = 'A';
+var a,
+  b = (a = "A");
 ```
 
 Sé consciente del orden:
 
 ```js
-var x = y, y = 'A';
+var x = y,
+  y = "A";
 console.log(x + y); // Imprimirá "undefinedA"
 ```
 
@@ -139,7 +142,7 @@ Aquí, '`x`' & '`y`' son declaradas antes de ejecutarse cualquier código, y la 
 var x = 0;
 
 function f() {
-  var x = y = 1; // 'x' es declarada localmente, ¡'y' no lo es!
+  var x = (y = 1); // 'x' es declarada localmente, ¡'y' no lo es!
 }
 f();
 
@@ -154,26 +157,28 @@ console.log(x, y); // Lanza un error de tipo "ReferenceError" en modo estricto (
 Las variables que parecen ser globales implícitas pueden ser referencias a variables en un ámbito externo a la función:
 
 ```js
-var x = 0;  // 'x' es declarada globalmente, luego se le asigna el valor 0.
+var x = 0; // 'x' es declarada globalmente, luego se le asigna el valor 0.
 
 console.log(typeof z); // Imprime "undefined", pues 'z' aún no existe.
 
-function a() { // Cuando 'a()' es invocada,
-  var y = 2;   // 'y' es declarada localmente en la function 'a()', después se le asigna el valor 2.
+function a() {
+  // Cuando 'a()' es invocada,
+  var y = 2; // 'y' es declarada localmente en la function 'a()', después se le asigna el valor 2.
 
-  console.log(x, y);   // Imprime "0, 2".
+  console.log(x, y); // Imprime "0, 2".
 
-  function b() {       // Cuando 'b()' es invocada,
-    x = 3;  // Asigna el valor 3 a la global 'x' ya existente, no crea una nueva variable global.
-    y = 4;  // Asigna 4 a la externa existente 'y', no crea una nueva variable global.
-    z = 5;  // Crea una nueva variable global 'z' y le asigna un valor de 5.
-  }         // (Lanza un error de tipo "ReferenceError" en modo estricto.)
+  function b() {
+    // Cuando 'b()' es invocada,
+    x = 3; // Asigna el valor 3 a la global 'x' ya existente, no crea una nueva variable global.
+    y = 4; // Asigna 4 a la externa existente 'y', no crea una nueva variable global.
+    z = 5; // Crea una nueva variable global 'z' y le asigna un valor de 5.
+  } // (Lanza un error de tipo "ReferenceError" en modo estricto.)
 
-  b();     // Invocar 'b()' crea 'z' como variable global.
-  console.log(x, y, z);  // Imprime "3, 4, 5".
+  b(); // Invocar 'b()' crea 'z' como variable global.
+  console.log(x, y, z); // Imprime "3, 4, 5".
 }
 
-a();                   // Invocar 'a()' también llama a 'b()'.
-console.log(x, z);     // Imprime "3, 5", porque 'z' ya es una global.
+a(); // Invocar 'a()' también llama a 'b()'.
+console.log(x, z); // Imprime "3, 5", porque 'z' ya es una global.
 console.log(typeof y); // Imprime 'undefined' porque 'y' es local en la función 'a()'
 ```

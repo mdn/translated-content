@@ -1,7 +1,6 @@
 ---
 title: copy-of
 slug: Web/XSLT/Element/copy-of
-original_slug: Web/XSLT/copy-of
 ---
 
 {{ XsltRef() }}

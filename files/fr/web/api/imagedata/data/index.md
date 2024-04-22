@@ -1,7 +1,6 @@
 ---
 title: ImageData.data
 slug: Web/API/ImageData/data
-translation_of: Web/API/ImageData/data
 ---
 
 {{APIRef("Canvas API")}}
@@ -11,7 +10,7 @@ La propriété en lecteur seul `ImageData.data` retourne un {{jsxref("Uint8Clamp
 ## Syntaxe
 
 ```js
-imagedata.data
+imagedata.data;
 ```
 
 ## Exemple

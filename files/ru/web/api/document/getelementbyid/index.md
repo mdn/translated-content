@@ -1,7 +1,6 @@
 ---
 title: document.getElementById()
 slug: Web/API/Document/getElementById
-translation_of: Web/API/Document/getElementById
 ---
 
 {{ ApiRef("DOM") }}
@@ -26,22 +25,22 @@ element = document.getElementById(id);
 ## Пример
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  <title>getElementById example</title>
-  <script>
-  function changeColor(newColor) {
-    var elem = document.getElementById("para1");
-    elem.style.color = newColor;
-  }
-  </script>
-</head>
-<body>
-  <p id="para1">Some text here</p>
-  <button onclick="changeColor('blue');">blue</button>
-  <button onclick="changeColor('red');">red</button>
-</body>
+  <head>
+    <title>getElementById example</title>
+    <script>
+      function changeColor(newColor) {
+        var elem = document.getElementById("para1");
+        elem.style.color = newColor;
+      }
+    </script>
+  </head>
+  <body>
+    <p id="para1">Some text here</p>
+    <button onclick="changeColor('blue');">blue</button>
+    <button onclick="changeColor('red');">red</button>
+  </body>
 </html>
 ```
 
@@ -55,22 +54,17 @@ element = document.getElementById(id);
 
 ```js
 var element = document.createElement("div");
-element.id = 'testqq';
-var el = document.getElementById('testqq'); // el will be null!
+element.id = "testqq";
+var el = document.getElementById("testqq"); // el will be null!
 ```
 
 **Не-HTML документы**. Релизация DOM должна содержать информацию, сообщающую о том, какие атрибуты являются идентификаторами. Атрибуты с именем "id" не являются идентификаторами только если это не указано в описании типа документа (DTD). Атрибут "id" определён в качестве идентификатора в общих случаях [XHTML](/ru/docs/XHTML), [XUL](/ru/docs/XUL), и других. От реализаций, которые не знают, какой атрибут является идентификатором, ожидается возврат null.
 
-## Спецификация
+## Спецификации
 
-| Спецификация                                                                                                 | Статус                           | Комментарий                     |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------- |
-| {{SpecName('DOM1','level-one-html.html#method-getElementById','getElementById')}} | {{Spec2('DOM1')}}         | Исходное определение интерфейса |
-| {{SpecName('DOM2 Core','core.html#ID-getElBId','getElementById')}}                     | {{Spec2('DOM2 Core')}}     | Заменяет DOM 1                  |
-| {{SpecName('DOM3 Core','core.html#ID-getElBId','getElementById')}}                     | {{Spec2('DOM3 Core')}}     | Заменяет DOM 2                  |
-| {{SpecName('DOM WHATWG','#interface-nonelementparentnode','getElementById')}}     | {{Spec2('DOM WHATWG')}} | Должен заменить DOM 3           |
+{{Specifications}}
 
-## Совместимость в браузерах
+## Совместимость с браузерами
 
 {{Compat}}
 

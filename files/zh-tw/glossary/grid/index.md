@@ -3,6 +3,8 @@ title: Grid
 slug: Glossary/Grid
 ---
 
+{{GlossarySidebar}}
+
 _CSS 格線_(CSS grid) 使用 `display: grid;` 值，你可以透過 {{cssxref("grid-template-rows")}} 與 {{cssxref("grid-template-columns")}} 屬性定義格線的行（Row）與列（Column）。
 
 使用這些屬性的格線會稱做*明式格線*（explicit grid）。

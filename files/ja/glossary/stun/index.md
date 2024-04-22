@@ -1,9 +1,11 @@
 ---
 title: STUN
 slug: Glossary/STUN
-l10n: 
+l10n:
   sourceCommit: ed947b2c608428b62a60f07d09dc543f732dc09b
 ---
+
+{{GlossarySidebar}}
 
 **STUN** (Session Traversal Utilities for NAT) は、{{glossary("NAT")}} (Network Address Translator) を介してデータを転送する際の補助プロトコルです。STUNは、NATの内側にあるコンピュータの {{glossary("IP address", "IP アドレス")}}、{{glossary("port", "ポート")}}、接続状態を返します。
 

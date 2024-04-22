@@ -1,29 +1,18 @@
 ---
 title: tabs.onZoomChange
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onZoomChange
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onZoomChange
-  - tabs
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onZoomChange
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Envoyé lorsqu'un onglet est agrandi.
 
 ## Syntaxe
 
 ```js
-browser.tabs.onZoomChange.addListener(listener)
-browser.tabs.onZoomChange.removeListener(listener)
-browser.tabs.onZoomChange.hasListener(listener)
+browser.tabs.onZoomChange.addListener(listener);
+browser.tabs.onZoomChange.removeListener(listener);
+browser.tabs.onZoomChange.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :

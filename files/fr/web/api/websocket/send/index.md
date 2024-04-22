@@ -1,7 +1,6 @@
 ---
 title: WebSocket.send()
 slug: Web/API/WebSocket/send
-browser-compat: api.WebSocket.send
 ---
 
 {{APIRef("Web Sockets API")}}

@@ -64,7 +64,7 @@ deriveKey(algorithm, baseKey, derivedKeyAlgorithm, extractable, keyUsages)
 
 ### ECDH
 
-ECDH（椭圆曲线迪菲-赫尔曼密钥交换，Elliptic Curve Diffie-Hellman）是一种*密钥协商算法*。它使每个人都能拥有用于生成共享密钥的 ECDH 公钥/私钥对：即，密钥仅在两人之间共享（而不包括其他人）。然后他们可以使用这个共享密钥作为对称密钥来保护他们的通信，或可以使用密钥来作为派生同类密钥（例如，使用 HKDF 算法）的输入。
+ECDH（椭圆曲线迪菲—赫尔曼密钥交换，Elliptic Curve Diffie-Hellman）是一种*密钥协商算法*。它使每个人都能拥有用于生成共享密钥的 ECDH 公钥/私钥对：即，密钥仅在两人之间共享（而不包括其他人）。然后他们可以使用这个共享密钥作为对称密钥来保护他们的通信，或可以使用密钥来作为派生同类密钥（例如，使用 HKDF 算法）的输入。
 
 ECDH 的规范定于 [RFC 6090](https://datatracker.ietf.org/doc/html/rfc6090)。
 
@@ -100,15 +100,15 @@ function deriveSecretKey(privateKey, publicKey) {
   return window.crypto.subtle.deriveKey(
     {
       name: "ECDH",
-      public: publicKey
+      public: publicKey,
     },
     privateKey,
     {
       name: "AES-GCM",
-      length: 256
+      length: 256,
     },
     false,
-    ["encrypt", "decrypt"]
+    ["encrypt", "decrypt"],
   );
 }
 
@@ -118,26 +118,32 @@ async function agreeSharedSecretKey() {
   let alicesKeyPair = await window.crypto.subtle.generateKey(
     {
       name: "ECDH",
-      namedCurve: "P-384"
+      namedCurve: "P-384",
     },
     false,
-    ["deriveKey"]
+    ["deriveKey"],
   );
 
   let bobsKeyPair = await window.crypto.subtle.generateKey(
     {
       name: "ECDH",
-      namedCurve: "P-384"
+      namedCurve: "P-384",
     },
     false,
-    ["deriveKey"]
+    ["deriveKey"],
   );
 
   // 然后 Alice 使用她的私钥和 Bob 的公钥生成密钥（secret key）。
-  let alicesSecretKey = await deriveSecretKey(alicesKeyPair.privateKey, bobsKeyPair.publicKey);
+  let alicesSecretKey = await deriveSecretKey(
+    alicesKeyPair.privateKey,
+    bobsKeyPair.publicKey,
+  );
 
   // Bob 使用他的私钥和 Alice 的公钥来生成相同的密钥。
-  let bobsSecretKey = await deriveSecretKey(bobsKeyPair.privateKey, alicesKeyPair.publicKey);
+  let bobsSecretKey = await deriveSecretKey(
+    bobsKeyPair.privateKey,
+    alicesKeyPair.publicKey,
+  );
 
   // Alice 可以使用她的密钥拷贝来加密发送给 Bob 的消息。
   let encryptButton = document.querySelector(".ecdh .encrypt-button");
@@ -185,16 +191,12 @@ async function encrypt(plaintext, salt, iv) {
       hash: "SHA-256",
     },
     keyMaterial,
-    { "name": "AES-GCM", "length": 256},
+    { name: "AES-GCM", length: 256 },
     true,
     ["encrypt", "decrypt"],
   );
 
-  return window.crypto.subtle.encrypt(
-    { name: "AES-GCM", iv },
-    key,
-    plaintext,
-  );
+  return window.crypto.subtle.encrypt({ name: "AES-GCM", iv }, key, plaintext);
 }
 ```
 

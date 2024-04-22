@@ -67,7 +67,7 @@ l10n:
 {{Glossary("Clickjacking", "클릭재킹")}}은 사용자가 기대하는 것과 다른 작업을 수행하는 UI 요소를 클릭하도록 속입니다.
 
 - [HTTP X-Frame-Options](/ko/docs/Web/HTTP/Headers/X-Frame-Options)
-  - : **`X-Frame-Options`** [HTTP](/en-US/docs/Web/HTTP) 응답 헤더는 브라우저가 {{htmlelement("frame")}}, {{htmlelement("iframe")}}, {{htmlelement("embed")}} 또는 {{htmlelement("object")}}에서 페이지를 렌더링하도록 허용해야 하는지 여부를 나타내는 데 사용할 수 있습니다. 사이트는 이를 사용하여 콘텐츠가 다른 사이트에 포함되지 않도록 함으로써 {{Glossary("Clickjacking", "클릭재킹")}} 공격을 피할 수 있습니다.
+  - : **`X-Frame-Options`** [HTTP](/ko/docs/Web/HTTP) 응답 헤더는 브라우저가 {{htmlelement("frame")}}, {{htmlelement("iframe")}}, {{htmlelement("embed")}} 또는 {{htmlelement("object")}}에서 페이지를 렌더링하도록 허용해야 하는지 여부를 나타내는 데 사용할 수 있습니다. 사이트는 이를 사용하여 콘텐츠가 다른 사이트에 포함되지 않도록 함으로써 {{Glossary("Clickjacking", "클릭재킹")}} 공격을 피할 수 있습니다.
 - [CSP: frame-ancestors](/ko/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors)
   - : HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`frame-ancestors`** 지시문은 {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, {{HTMLElement("embed")}}, 또는 {{HTMLElement("applet")}}을 사용하여 페이지를 포함할 수 있는 유효한 부모를 지정합니다.
 
@@ -76,7 +76,7 @@ l10n:
 - [안전하지 않은 비밀번호](/ko/docs/Web/Security/Insecure_passwords)
   - : HTTP를 통해 로그인 양식을 제공하는 것은 사용자 암호를 추출하기 위해 사용할 수 있는 다양한 공격으로 인해 특히 위험합니다. 네트워크 도청자는 네트워크를 스니핑하거나 전송 중인 페이지를 수정하여 사용자의 비밀번호를 훔칠 수 있습니다.
 - [개인 정보 및 :visited 선택자](/ko/docs/Web/CSS/Privacy_and_the_:visited_selector)
-  - : 2010년 이전에는 [CSS](/en-US/docs/Web/CSS) {{cssxref(":visited")}} 선택자를 사용하여 웹사이트에서 사용자의 검색 기록을 발견하고 사용자가 방문한 사이트를 파악할 수 있었습니다. 이 문제를 완화하기 위해 브라우저는 방문한 링크에서 얻을 수 있는 정보의 양을 제한했습니다.
+  - : 2010년 이전에는 [CSS](/ko/docs/Web/CSS) {{cssxref(":visited")}} 선택자를 사용하여 웹사이트에서 사용자의 검색 기록을 발견하고 사용자가 방문한 사이트를 파악할 수 있었습니다. 이 문제를 완화하기 위해 브라우저는 방문한 링크에서 얻을 수 있는 정보의 양을 제한했습니다.
 
 ## 보안 관련 용어
 

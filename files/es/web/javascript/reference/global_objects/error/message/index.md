@@ -1,7 +1,7 @@
 ---
 title: "Error: message"
 slug: Web/JavaScript/Reference/Global_Objects/Error/message
-ln10:
+l10n:
   sourceCommit: 6b728699f5f38f1070a94673b5e7afdb1102a941
 ---
 
@@ -26,7 +26,7 @@ Por defecto, la propiedad `message` es una cadena vacía, pero se puede especifi
 ### Lanzar un error personalizado
 
 ```js
-var e = new Error('No se pudo analizar la entrada');
+var e = new Error("No se pudo analizar la entrada");
 // e.message es 'No se pudo analizar la entrada'
 throw e;
 ```

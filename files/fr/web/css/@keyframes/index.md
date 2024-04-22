@@ -1,16 +1,11 @@
 ---
-title: '@keyframes'
+title: "@keyframes"
 slug: Web/CSS/@keyframes
-tags:
-  - CSS
-  - Reference
-  - Règle @
-translation_of: Web/CSS/@keyframes
 ---
 
 {{CSSRef}}
 
-La [règle](/fr/docs/Web/CSS/R%C3%A8gles_@) **`@keyframes`** permet aux auteurs de définir les étapes qui composent la séquence d'une animation CSS. Cela permet de contrôler une animation plus finement que ce qu'on pourrait obtenir avec [les transitions](/fr/docs/Web/CSS/CSS_Transitions).
+La [règle](/fr/docs/Web/CSS/Règles_@) **`@keyframes`** permet aux auteurs de définir les étapes qui composent la séquence d'une animation CSS. Cela permet de contrôler une animation plus finement que ce qu'on pourrait obtenir avec [les transitions](/fr/docs/Web/CSS/CSS_Transitions).
 
 ```css
 @keyframes slidein {
@@ -50,10 +45,21 @@ Si des propriétés ne sont pas définies à chaque étape, elles sont interpol�
 
 ```css
 @keyframes identifier {
-  0% { top: 0; left: 0; }
-  30% { top: 50px; }
-  68%, 72% { left: 50px; }
-  100% { top: 100px; left: 100%; }
+  0% {
+    top: 0;
+    left: 0;
+  }
+  30% {
+    top: 50px;
+  }
+  68%,
+  72% {
+    left: 50px;
+  }
+  100% {
+    top: 100px;
+    left: 100%;
+  }
 }
 ```
 
@@ -67,16 +73,26 @@ Les déclarations qui utilisent `!important` dans une description d'étape sont 
 
 ```css
 @keyframes important1 {
-  from { margin-top: 50px; }
-  50%  { margin-top: 150px !important; } /* ignorée */
-  to   { margin-top: 100px; }
+  from {
+    margin-top: 50px;
+  }
+  50% {
+    margin-top: 150px !important;
+  } /* ignorée */
+  to {
+    margin-top: 100px;
+  }
 }
 
 @keyframes important2 {
-  from { margin-top: 50px;
-         margin-bottom: 100px; }
-                         to { margin-top: 150px !important; /* ignorée */
-         margin-bottom: 50px; }
+  from {
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+  to {
+    margin-top: 150px !important; /* ignorée */
+    margin-bottom: 50px;
+  }
 }
 ```
 
@@ -129,11 +145,9 @@ p {
 
 ```html
 <p>
-  Le Chat grimaça en apercevant Alice. Elle trouva qu’il
-  avait l’air bon enfant, et cependant il avait de
-  très longues griffes et une grande rangée de dents ;
-  aussi comprit-elle qu’il fallait le traiter avec
-  respect.
+  Le Chat grimaça en apercevant Alice. Elle trouva qu’il avait l’air bon enfant,
+  et cependant il avait de très longues griffes et une grande rangée de dents ;
+  aussi comprit-elle qu’il fallait le traiter avec respect.
 </p>
 ```
 

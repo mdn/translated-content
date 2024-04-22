@@ -1,7 +1,6 @@
 ---
 title: String.prototype.fontcolor()
 slug: Web/JavaScript/Reference/Global_Objects/String/fontcolor
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/fontcolor
 ---
 
 {{JSRef}} {{deprecated_header}}
@@ -32,19 +31,19 @@ Si expresas el color como hexadecimal, usa el formato rrggbb. Por ejemplo, el co
 Los siguientes ejemplos usan el método `fontcolor()` para cambiar el color de una cadena.
 
 ```js
-var worldString = 'Hello, world';
+var worldString = "Hello, world";
 
-console.log(worldString.fontcolor('red') +  ' en rojo');
+console.log(worldString.fontcolor("red") + " en rojo");
 // '<font color="red">Hello, world</font> en rojo'
 
-console.log(worldString.fontcolor('FF00') + ' es rojo en hexadecimal');
+console.log(worldString.fontcolor("FF00") + " es rojo en hexadecimal");
 // '<font color="FF00">Hello, world</font> es rojo en hexadecimal'
 ```
 
 Con el objeto {{domxref("HTMLElement.style", "element.style")}} obtienes el atributo `style` y manipularlo:
 
 ```js
-document.getElementById('yourElemId').style.color = 'red';
+document.getElementById("yourElemId").style.color = "red";
 ```
 
 ## Especificaciones

@@ -1,7 +1,6 @@
 ---
 title: Escrevendo aplicações cliente WebSocket
 slug: Web/API/WebSockets_API/Writing_WebSocket_client_applications
-original_slug: WebSockets/Escrevendo_aplicacoes_cliente_WebSocket
 ---
 
 Aplicações cliente usam o [WebSocket API](/pt-BR/docs/Web/API/Websockets_API) para se comunicar com [WebSocket servers](/pt-BR/docs/Web/API/WebSockets_API/Writing_WebSocket_servers) sob o protocolo WebSocket.
@@ -41,7 +40,10 @@ O browser pode exibir uma descrição de erro mais detalhada na saída do consol
 Neste simples exemplo, criaremos um novo WebSocket, conectando ao servidor em `ws://www.example.com/socketserver`. Neste exemplo utilizaremos um protocolo customizado denominado "protocolOne", embora possa ser omitido.
 
 ```js
-var exampleSocket = new WebSocket("ws://www.example.com/socketserver", "protocolOne");
+var exampleSocket = new WebSocket(
+  "ws://www.example.com/socketserver",
+  "protocolOne",
+);
 ```
 
 No retorno, `exampleSocket.readyState` está como `CONNECTING`. O `readyState` se tornará `OPEN` quando a conexão estiver pronta para transferir dados.
@@ -49,7 +51,10 @@ No retorno, `exampleSocket.readyState` está como `CONNECTING`. O `readyState` s
 Se quiser abrir uma conexão e for flexível quanto aos protocolos suportados, você pode especificar um array de protocolos:
 
 ```js
-var exampleSocket = new WebSocket("ws://www.example.com/socketserver", ["protocolOne", "protocolTwo"]);
+var exampleSocket = new WebSocket("ws://www.example.com/socketserver", [
+  "protocolOne",
+  "protocolTwo",
+]);
 ```
 
 Uma vez que a conexão for estabelecida (isso é, `readyState` está `OPEN`), `exampleSocket.protocol` informará qual protocolo o servidor selecionou.
@@ -61,7 +66,9 @@ Nos exemplos acima, `ws` foi substituído por `http`, de forma similar `wss` sub
 Uma vez a conexão aberta, você pode iniciar a transmisão de dados ao servidor. Para tanto, chame o método [`send()`](</en/WebSockets/WebSockets_reference/WebSocket#send()> "en/WebSockets/WebSockets reference/WebSocket#send()") do `WebSocket` para cada mensagem que queira enviar:
 
 ```js
-exampleSocket.send("Aqui vai algum texto que o servidor esteja aguardando urgentemente!");
+exampleSocket.send(
+  "Aqui vai algum texto que o servidor esteja aguardando urgentemente!",
+);
 ```
 
 Você pode enviar dados como uma string, {{ domxref("Blob") }}, ou um [`ArrayBuffer`](/pt-BR/JavaScript_typed_arrays/ArrayBuffer).
@@ -72,7 +79,9 @@ Visto que estabelecer uma conexão funciona de forma assícrona e, consequenteme
 
 ```js
 exampleSocket.onopen = function (event) {
-  exampleSocket.send("Aqui vai algum texto que o servidor esteja aguardando urgentemente!");
+  exampleSocket.send(
+    "Aqui vai algum texto que o servidor esteja aguardando urgentemente!",
+  );
 };
 ```
 
@@ -87,8 +96,8 @@ function sendText() {
   var msg = {
     type: "message",
     text: document.getElementById("text").value,
-    id:   clientID,
-    date: Date.now()
+    id: clientID,
+    date: Date.now(),
   };
 
   // Enviar o objeto msg como um JSON em formato de string.
@@ -106,7 +115,7 @@ A API WebSockets é dirigida por [eventos](/pt-BR/docs/Web/Guide/Events/Overview
 ```js
 exampleSocket.onmessage = function (event) {
   console.log(event.data);
-}
+};
 ```
 
 ### Recebendo e interpretando objetos JSON
@@ -120,30 +129,38 @@ Vamos considerar que a aplicação cliente de chat remete o envio de dados [Util
 O código que interpreta as mensagens de entrada se parecerá com esse:
 
 ```js
-exampleSocket.onmessage = function(event) {
+exampleSocket.onmessage = function (event) {
   var f = document.getElementById("chatbox").contentDocument;
   var text = "";
   var msg = JSON.parse(event.data);
   var time = new Date(msg.date);
   var timeStr = time.toLocaleTimeString();
 
-  switch(msg.type) {
+  switch (msg.type) {
     case "id":
       clientID = msg.id;
       setUsername();
       break;
     case "username":
-      text = "<b>User <em>" + msg.name + "</em> signed in at " + timeStr + "</b><br>";
+      text =
+        "<b>User <em>" +
+        msg.name +
+        "</em> signed in at " +
+        timeStr +
+        "</b><br>";
       break;
     case "message":
       text = "(" + timeStr + ") <b>" + msg.name + "</b>: " + msg.text + "<br>";
       break;
     case "rejectusername":
-      text = "<b>Seu usuario foi configurado como <em>" + msg.name + "</em> porque o nome que você escolheu está em uso.</b><br>"
+      text =
+        "<b>Seu usuario foi configurado como <em>" +
+        msg.name +
+        "</em> porque o nome que você escolheu está em uso.</b><br>";
       break;
     case "userlist":
       var ul = "";
-      for (i=0; i < msg.users.length; i++) {
+      for (i = 0; i < msg.users.length; i++) {
         ul += msg.users[i] + "<br>";
       }
       document.getElementById("userlistbox").innerHTML = ul;

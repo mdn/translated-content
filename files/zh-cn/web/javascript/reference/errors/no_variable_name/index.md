@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: missing variable name'
+title: "SyntaxError: missing variable name"
 slug: Web/JavaScript/Reference/Errors/No_variable_name
 ---
 
@@ -60,11 +60,12 @@ var second = document.getElementById('two'),
 修复后的代码：
 
 ```js example-good
-var x, y = "foo";
+var x,
+  y = "foo";
 var x = "foo";
 
-var first = document.getElementById('one');
-var second = document.getElementById('two');
+var first = document.getElementById("one");
+var second = document.getElementById("two");
 ```
 
 ### 数组
@@ -79,7 +80,7 @@ var arr = 1,2,3,4,5;
 这样写才是正确的：
 
 ```js example-good
-var arr = [1,2,3,4,5];
+var arr = [1, 2, 3, 4, 5];
 ```
 
 ## 相关内容

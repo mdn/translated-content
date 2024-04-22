@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.Table
 slug: WebAssembly/JavaScript_interface/Table
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table
 ---
 
 {{WebAssemblySidebar}}
@@ -36,10 +35,10 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table
 次の例では ([table2.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.html) と[動作例](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html)を確認してください)、新しい WebAssembly Table メソッドを初期サイズ 2 要素で生成します。それからそのテーブルの長さと 2 つの位置の内容を ({{jsxref("WebAssembly/Table/get", "Table.prototype.get()")}} を使用して受け取って) 表示し、長さが 2 で両方の要素が {{jsxref("null")}} であることを示します。
 
 ```js
-var tbl = new WebAssembly.Table({initial:2, element:"anyfunc"});
-console.log(tbl.length);  // "2"
-console.log(tbl.get(0));  // "null"
-console.log(tbl.get(1));  // "null"
+var tbl = new WebAssembly.Table({ initial: 2, element: "anyfunc" });
+console.log(tbl.length); // "2"
+console.log(tbl.get(0)); // "null"
+console.log(tbl.get(1)); // "null"
 ```
 
 次に、テーブルを含むインポートオブジェクトを生成します。
@@ -47,8 +46,8 @@ console.log(tbl.get(1));  // "null"
 ```js
 var importObj = {
   js: {
-    tbl:tbl
-  }
+    tbl: tbl,
+  },
 };
 ```
 

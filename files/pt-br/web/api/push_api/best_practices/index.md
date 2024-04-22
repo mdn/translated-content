@@ -1,12 +1,11 @@
 ---
 title: Melhores práticas
 slug: Web/API/Push_API/Best_Practices
-original_slug: Web/API/API_Push/Best_Practices
 ---
 
 Este artigo proporciona um compilado das melhores práticas a serem usadas enquanto estiver desenvolvendo websites e aplicações que usem Notificações push para engajamento de usuários.
 
-> “Se feito de uma maneira correta, as notificações ajudam os usuarios, se não, so irritam.” — Conversa entre dois desenvolvedores a respeito da etica das notificações push.
+> "Se feito de uma maneira correta, as notificações ajudam os usuarios, se não, so irritam." — Conversa entre dois desenvolvedores a respeito da etica das notificações push.
 
 ## Visão Geral do _web push notifications_
 
@@ -18,7 +17,7 @@ Essa novidade oferece uma oportunidade nova e inexplorada para sites empresariai
 
 Mas sério, qual o melhor uso das notificações push? Ou é apenas uma nova interação dos bons e velhos pop-ups?
 
-> “O envio de notificações push não corre o risco de acabar na pasta de spam. Nem pode ser bloqueado por bloqueadores de anúncios. Ele aparece na sua área de trabalho, mesmo quando o site está fechado. No celular, ele aparece na barra de notificações, assim como as notificações por push do aplicativo, mesmo quando o navegador não está em execução.” — um site de marketing anonimo
+> "O envio de notificações push não corre o risco de acabar na pasta de spam. Nem pode ser bloqueado por bloqueadores de anúncios. Ele aparece na sua área de trabalho, mesmo quando o site está fechado. No celular, ele aparece na barra de notificações, assim como as notificações por push do aplicativo, mesmo quando o navegador não está em execução." — um site de marketing anonimo
 
 ### Bons usos das notificações
 
@@ -48,7 +47,7 @@ Alguns estudos mostraram que até 60% das notificações por push não chegam ao
 
 Por causa dos abusos da utilização das notificações por push no passado, os desenvolvedores de navegadores começaram a implementar estratégias para ajudar a mitigar esse problema. Por exemplo, o Safari 12.1 agora exige - e outros navegadores já o fazem ou estão planejando[\[1\]](#mitigations-footnote-1) fazer—que o usuário interaja com a página de alguma forma antes que ela possa solicitar permissão para executar notificações por push, assim como já acontece com os popups. Isso pelo menos impede que o usuário receba espontaneamente essa pergunta em páginas da Web que apenas olharam de uma só vez, raramente ou nunca mais.
 
-\[1] No caso do Firefox, veja {{bug(1524619)}}, podemos observar que Firefox 68 implementa isso, desabilitado por padrão, usando a preferência `dom.webnotifications.requireuserinteraction`.
+\[1] No caso do Firefox, veja [Erro do Firefox 1524619](https://bugzil.la/1524619), podemos observar que Firefox 68 implementa isso, desabilitado por padrão, usando a preferência `dom.webnotifications.requireuserinteraction`.
 
 ## Veja também
 

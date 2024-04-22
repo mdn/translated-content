@@ -1,6 +1,9 @@
 ---
-title: Element.getElementsByClassName()
+title: "Element: getElementsByClassName() メソッド"
+short-title: getElementsByClassName()
 slug: Web/API/Element/getElementsByClassName
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("DOM")}}
@@ -11,18 +14,18 @@ slug: Web/API/Element/getElementsByClassName
 
 ## 構文
 
-```js
-var elements = element.getElementsByClassName(names);
+```js-nolint
+getElementsByClassName(names)
 ```
 
 ### 引数
 
 - `names`
-  - : 一致させる一つ以上のクラス名を表す {{domxref("DOMString")}} で、クラス名は空白区切りで指定できます。
+  - : 文字列で、一致させる一つ以上のクラス名を表し、空白区切りで指定できます。
 
 ### 返値
 
-{{domxref("HTMLCollection")}} で、 `names` で指定したすべてのクラスを持つすべての要素のライブで更新されるリストです。
+{{domxref("HTMLCollection")}} で、`names` で指定したすべてのクラスを持つすべての要素のライブで更新されるリストです。
 
 ## 使用上の注意
 
@@ -39,13 +42,13 @@ var elements = element.getElementsByClassName(names);
 単一の指定されたクラスを含む要素を探すには、 `getElementsByClassName()` を呼び出す際にそのクラス名を指定するだけです。
 
 ```js
-element.getElementsByClassName('test');
+element.getElementsByClassName("test");
 ```
 
 この例は `main` の `id` を持つ要素の子孫の中で、`test` クラスをもつ全要素を見つけます。
 
 ```js
-document.getElementById('main').getElementsByClassName('test');
+document.getElementById("main").getElementsByClassName("test");
 ```
 
 ### 複数のクラスと一致させる
@@ -53,7 +56,7 @@ document.getElementById('main').getElementsByClassName('test');
 `red` と `test` 両方のクラスを含んだ要素を見つけます。
 
 ```js
-element.getElementsByClassName('red test');
+element.getElementsByClassName("red test");
 ```
 
 ### 結果を調査する
@@ -61,36 +64,38 @@ element.getElementsByClassName('red test');
 標準の配列構文や、`HTMLCollection` の {{domxref("HTMLCollection.item", "item()")}} メソッドを使うことで、返されたコレクションの要素を調査することができます。しかし、次の例はうまく動作しないでしょう。`colorbox` クラスを外した際に、`matches` がすぐに変更されてしまうからです。
 
 ```js
-var matches = element.getElementsByClassName('colorbox');
+const matches = element.getElementsByClassName("colorbox");
 
-for (var i=0; i<matches.length; i++) {
-  matches[i].classList.remove('colorbox');
-  matches.item(i).classList.add('hueframe');
+for (let i = 0; i < matches.length; i++) {
+  matches[i].classList.remove("colorbox");
+  matches.item(i).classList.add("hueframe");
 }
 ```
 
 別の手段を使いましょう。例えば、
 
 ```js
-var matches = element.getElementsByClassName('colorbox');
+const matches = element.getElementsByClassName("colorbox");
 
 while (matches.length > 0) {
-  matches.item(0).classList.add('hueframe');
-  matches[0].classList.remove('colorbox');
+  matches.item(0).classList.add("hueframe");
+  matches[0].classList.remove("colorbox");
 }
 ```
 
 このコードは、`"colorbox"` クラスを持つ子孫要素を見つけ、`item(0)`を呼び出して `"hueframe"` クラスを追加し、（配列記法で） `"colorbox"` を削除します。その後、（もし残っていれば）別の要素が `item(0)` になります。
 
-### Array メソッドで結果を抽出する
+### 配列のメソッドで結果を抽出する
 
-このメソッドの戻り値を `this` 値として {{jsxref("Array")}} のメソッドに与えることで、任意の {{ domxref("HTMLCollection") }} で `Array` のメソッドを使うことができます。次の例では `test` クラスを持つすべての {{HTMLElement("div")}} 要素を見つけられます。
+{{jsxref("Array")}} のメソッドに `this` 値として {{domxref("HTMLCollection")}} を渡すことで、
+任意の {{domxref("HTMLCollection")}} に対して配列のメソッドを呼び出すことができます。ここでは、`test` のクラスのある {{HTMLElement("div")}} 要素をすべて探します。
 
 ```js
-var testElements = document.getElementsByClassName('test');
-var testDivs = Array.prototype.filter.call(testElements, function(testElement) {
-  return testElement.nodeName === 'DIV';
-});
+const testElements = document.getElementsByClassName("test");
+const testDivs = Array.prototype.filter.call(
+  testElements,
+  (testElement) => testElement.nodeName === "DIV",
+);
 ```
 
 ## 仕様書

@@ -1,15 +1,9 @@
 ---
 title: Cross-site scripting
 slug: Glossary/Cross-site_scripting
-tags:
-  - DOM
-  - Faille de sécurité
-  - Glossaire
-  - Sécurité
-  - XSS
-translation_of: Glossary/Cross-site_scripting
-original_slug: Glossaire/Cross-site_scripting
 ---
+
+{{GlossarySidebar}}
 
 Cross-site scripting (XSS) est une faille de sécurité qui permet à un attaquant d'injecter dans un site web un code client malveillant. Ce code est exécuté par les victimes et permet aux attaquants de contourner les contrôles d'accès et d'usurper l'identité des utilisateurs. Selon le projet Open Web Application Security, XSS était la [troisième cause de vulnérabilité des applications du web](https://www.owasp.org/index.php/Top_10_2013-Top_10) en 2013.
 

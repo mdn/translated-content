@@ -11,7 +11,7 @@ slug: Web/API/URLSearchParams/URLSearchParams
 
 ## 语法
 
-```js
+```js-nolint
 new URLSearchParams()
 new URLSearchParams(options)
 ```
@@ -19,8 +19,8 @@ new URLSearchParams(options)
 ### 参数
 
 - `options` {{optional_inline}}
-  - : 可以是以下之一:
-    - 一个字符串, 这个字符串从 `application/x-www-form-urlencoded` 的格式解析而来。开头的 `'?'` 字符会被忽略。
+  - : 可以是以下之一：
+    - 一个字符串，这个字符串从 `application/x-www-form-urlencoded` 的格式解析而来。开头的 `'?'` 字符会被忽略。
     - 一系列基于字面量的字符串键值对，或者任何对象（例如 {{domxref("FormData")}} 对象），能提供一系列字符串对的[迭代器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators#迭代器)对象。需要注意，{{domxref("File")}} 将被序列化为 `[object File]`，而不是它们的文件名（就像 `application/x-www-form-urlencoded` 格式中的那样）。
     - 一个由字符串键和字符串值组成的键值对对象。请注意，不支持嵌套。
 
@@ -34,7 +34,7 @@ new URLSearchParams(options)
 
 ```js
 // Pass in a string literal
-var url = new URL('https://example.com?foo=1&bar=2');
+var url = new URL("https://example.com?foo=1&bar=2");
 // Retrieve from window.location
 var url2 = new URL(window.location);
 
@@ -43,10 +43,13 @@ var params = new URLSearchParams(url.search);
 var params2 = new URLSearchParams(url2.search);
 
 // Pass in a sequence
-var params3 = new URLSearchParams([["foo", 1],["bar", 2]]);
+var params3 = new URLSearchParams([
+  ["foo", 1],
+  ["bar", 2],
+]);
 
 // Pass in a record
-var params4 = new URLSearchParams({"foo" : 1 , "bar" : 2});
+var params4 = new URLSearchParams({ foo: 1, bar: 2 });
 ```
 
 这个示例展示了如何使用来自一个带有查询参数（search parameter）的 URL 构建的查询参数对象创建一个新的 URL。
@@ -84,7 +87,7 @@ const addSearchParams = (url, params = {}) =>
     `${url.origin}${url.pathname}?${new URLSearchParams([
       ...Array.from(url.searchParams.entries()),
       ...Object.entries(params),
-    ])}`
+    ])}`,
   );
 ```
 

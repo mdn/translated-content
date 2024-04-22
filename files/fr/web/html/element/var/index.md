@@ -1,12 +1,6 @@
 ---
-title: '<var> : l''élément de variable'
+title: "<var> : l'élément de variable"
 slug: Web/HTML/Element/var
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/var
 ---
 
 {{HTMLSidebar}}
@@ -37,7 +31,10 @@ La plupart des navigateurs appliquent la propriété {{cssxref("font-style")}} a
 
 ```css
 var {
-  font: bold 15px "Courier", "Courier New", monospace;
+  font:
+    bold 15px "Courier",
+    "Courier New",
+    monospace;
 }
 ```
 
@@ -64,7 +61,10 @@ var {
 
 ```css
 var {
-  font: bold 15px "Courier", "Courier New", monospace;
+  font:
+    bold 15px "Courier",
+    "Courier New",
+    monospace;
 }
 ```
 
@@ -73,8 +73,8 @@ var {
 ```html
 <p>
   Les variables <var>minSpeed</var> et <var>maxSpeed</var> contrôlent les
-  vitesses minimale et maximale de l'appareil et sont exprimées en tours
-  par minute.
+  vitesses minimale et maximale de l'appareil et sont exprimées en tours par
+  minute.
 </p>
 ```
 

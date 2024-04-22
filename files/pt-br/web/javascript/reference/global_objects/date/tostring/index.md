@@ -69,18 +69,16 @@ O exemplo asseguir atribui o valor de `toString()` de um objeto {{jsxref("Date")
 ```js
 var x = new Date();
 var myVar = x.toString(); // atribui uma string em myVar no mesmo formato que este:
-                          // Mon Sep 08 1998 14:36:22 GMT-0700 (PDT)
+// Mon Sep 08 1998 14:36:22 GMT-0700 (PDT)
 ```
 
 ## Especificações
 
-| Especificação                                                                                                |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-date.prototype.tostring', 'Date.prototype.toString')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.Date.toString")}}
+{{Compat}}
 
 ## Veja também
 

@@ -7,6 +7,7 @@ on:
     paths:
       - .nvmrc
       - .markdownlint-cli2.jsonc
+      - "**/.markdownlint.jsonc"
       - package.json
       - yarn.lock
       - .github/workflows/markdown-lint.yml
@@ -14,13 +15,15 @@ on:
 
 jobs:
   docs:
+    # do not run on forks
+    if: github.repository == 'mdn/translated-content'
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Setup Node.js environment
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version-file: ".nvmrc"
           cache: yarn
@@ -28,6 +31,9 @@ jobs:
       - name: Install all yarn packages
         run: |
           yarn --frozen-lockfile
+        env:
+          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Lint markdown files
         run: |

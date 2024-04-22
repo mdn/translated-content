@@ -1,12 +1,6 @@
 ---
 title: Allow
 slug: Web/HTTP/Headers/Allow
-tags:
-  - Entête HTTP
-  - HTTP
-  - Reference
-  - entête
-translation_of: Web/HTTP/Headers/Allow
 ---
 
 {{HTTPSidebar}}

@@ -1,20 +1,9 @@
 ---
 title: i18n.detectLanguage()
 slug: Mozilla/Add-ons/WebExtensions/API/i18n/detectLanguage
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - detectLanguage
-  - i18n
-translation_of: Mozilla/Add-ons/WebExtensions/API/i18n/detectLanguage
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Détecte la langue du texte fourni à l'aide du [détecteur de langue compact](https://github.com/CLD2Owners/cld2) (CLD).
 
@@ -24,8 +13,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var detectingLanguages = browser.i18n.detectLanguage(
-  text                  // string
-)
+  text, // string
+);
 ```
 
 ### Paramètres
@@ -62,7 +51,7 @@ function onLanguageDetected(langInfo) {
   }
 }
 
-var text = "L'homme est né libre, et partout il est dans les fers."
+var text = "L'homme est né libre, et partout il est dans les fers.";
 
 var detecting = browser.i18n.detectLanguage(text);
 detecting.then(onLanguageDetected);

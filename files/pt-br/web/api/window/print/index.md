@@ -23,11 +23,9 @@ None.
 
 None ({{jsxref("undefined")}}).
 
-## Especificação
+## Especificações
 
-| Especificação                                                                                            | Status                           | Comentário |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'timers-and-user-prompts.html#printing', 'print()')}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
@@ -35,6 +33,6 @@ None ({{jsxref("undefined")}}).
 
 ## Veja também
 
-- [Printing](/en-US/docs/Web/Guide/Printing)
+- [Printing](/pt-BR/docs/Web/Guide/Printing)
 - {{ domxref("window.beforeprint_event", "beforeprint") }} event
 - {{ domxref("window.afterprint_event", "afterprint") }} event

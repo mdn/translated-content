@@ -1,16 +1,6 @@
 ---
 title: TypedArray.prototype.some()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/some
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/some
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/some
 ---
 
 {{JSRef}}
@@ -65,7 +55,7 @@ Dans l'exemple qui suit, on teste s'il existe au moins un élément du tableau t
 function supérieurÀ10(élément, index, array) {
   return élément > 10;
 }
-new Uint8Array([2, 5, 8, 1, 4]).some(supérieurÀ10);  // false
+new Uint8Array([2, 5, 8, 1, 4]).some(supérieurÀ10); // false
 new Uint8Array([12, 5, 8, 1, 4]).some(supérieurÀ10); // true
 ```
 
@@ -74,8 +64,8 @@ new Uint8Array([12, 5, 8, 1, 4]).some(supérieurÀ10); // true
 [Les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions) permettent d'utiliser une syntaxe plus concise pour arriver au même résultat :
 
 ```js
-new Uint8Array([2, 5, 8, 1, 4]).some(elem => elem > 10); // false
-new Uint8Array([12, 5, 8, 1, 4]).some(elem => elem > 10); // true
+new Uint8Array([2, 5, 8, 1, 4]).some((elem) => elem > 10); // false
+new Uint8Array([12, 5, 8, 1, 4]).some((elem) => elem > 10); // true
 ```
 
 ## Prothèse d'émulation (_polyfill_)
@@ -85,8 +75,8 @@ Il n'existe pas d'objet global intitulé _TypedArray_, la prothèse doit donc un
 ```js
 // https://tc39.github.io/ecma262/#sec-%typedarray%.prototype.slice
 if (!Uint8Array.prototype.some) {
-  Object.defineProperty(Uint8Array.prototype, 'some', {
-    value: Array.prototype.some
+  Object.defineProperty(Uint8Array.prototype, "some", {
+    value: Array.prototype.some,
   });
 }
 ```

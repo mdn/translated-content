@@ -1,8 +1,9 @@
 ---
-title: 'HTMLFormElement: formdata イベント'
+title: "HTMLFormElement: formdata イベント"
+short-title: formdata
 slug: Web/API/HTMLFormElement/formdata_event
 l10n:
-  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef}}
@@ -16,9 +17,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを使用するかしてください。
 
 ```js
-addEventListener('formdata', (event) => {});
+addEventListener("formdata", (event) => {});
 
-onformdata = (event) => { };
+onformdata = (event) => {};
 ```
 
 ## イベント型
@@ -39,11 +40,11 @@ _親インターフェイスである {{domxref("Event")}} から継承したプ
 ```js
 // フォームの参照を得る
 
-const formElem = document.querySelector('form');
+const formElem = document.querySelector("form");
 
 // submit ハンドラー
 
-formElem.addEventListener('submit', (e) => {
+formElem.addEventListener("submit", (e) => {
   // フォームの送信時、既定の動作を抑止
   e.preventDefault();
 
@@ -53,20 +54,20 @@ formElem.addEventListener('submit', (e) => {
   // FormData オブジェクトを構築し、 formdata イベントが発行される
   const formData = new FormData(formElem);
   // formdata は formdata イベントで変更されます。
-  console.log(formData.get('field1')); // foo
-  console.log(formData.get('field2')); // bar
+  console.log(formData.get("field1")); // foo
+  console.log(formData.get("field2")); // bar
 });
 
 // データを受け取るための formdata ハンドラー
 
-formElem.addEventListener('formdata', (e) => {
-  console.log('formdata fired');
+formElem.addEventListener("formdata", (e) => {
+  console.log("formdata fired");
 
   // イベントオブジェクトからフォームデータを取得する
   const formData = e.formData;
   //  formdata イベントでフォームデータを変更する
-  formData.set('field1', formData.get('field1').toLowerCase());
-  formData.set('field2', formData.get('field2').toLowerCase());
+  formData.set("field1", formData.get("field1").toLowerCase());
+  formData.set("field2", formData.get("field2").toLowerCase());
 });
 ```
 
@@ -74,12 +75,12 @@ formElem.addEventListener('formdata', (e) => {
 
 ```js
 formElem.onformdata = (e) => {
-  console.log('formdata fired');
+  console.log("formdata fired");
 
   // フォームデータを変更
   const formData = e.formData;
-  formData.set('field1', formData.get('field1').toLowerCase());
-  formData.set('field2', formData.get('field2').toLowerCase());
+  formData.set("field1", formData.get("field1").toLowerCase());
+  formData.set("field2", formData.get("field2").toLowerCase());
 };
 ```
 

@@ -1,11 +1,8 @@
 ---
 title: decodeURI()
 slug: Web/JavaScript/Reference/Global_Objects/decodeURI
-tags:
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/decodeURI
 ---
+
 {{jsSidebar("Objects")}}
 
 Метод **`decodeURI()`** декодирует унифицированный идентификатор ресурса (URI), созданный при помощи метода {{jsxref("encodeURI")}} или другой подобной процедуры.
@@ -40,7 +37,9 @@ Throws an {{jsxref("URIError")}} ("malformed URI sequence") exception when `enco
 ### Декодирование кириллического URL
 
 ```js
-decodeURI("https://developer.mozilla.org/ru/docs/JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B");
+decodeURI(
+  "https://developer.mozilla.org/ru/docs/JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B",
+);
 // "https://developer.mozilla.org/ru/docs/JavaScript_шеллы"
 ```
 

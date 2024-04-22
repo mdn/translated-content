@@ -1,7 +1,6 @@
 ---
 title: Mejorando el Rendimiento Inicial
 slug: Web/Performance/Optimizing_startup_performance
-original_slug: Web/Performance/mejorando_rendimienot_inicial
 ---
 
 Un aspecto que a menudo se pasa por alto en el desarrollo de software de aplicaciones, incluso entre aquellos enfocados en la optimización del rendimiento, es el rendimiento inicial. ¿Cuánto tiempo demora su aplicación en iniciarse? ¿Parece que se bloquea el dispositivo o el navegador del usuario no responde mientras se carga la aplicación? Eso hace que los usuarios se preocupen de que su aplicación haya fallado, o de que algo anda mal. Siempre es una buena idea invertir tiempo para asegurarse de que la aplicación se inicie de manera correcta. Este artículo ofrece consejos y sugerencias para ayudar a lograr ese objetivo, tanto al escribir una nueva aplicación como al migrar una aplicación de otra plataforma a la Web.
@@ -28,7 +27,7 @@ Sin embargo, incluso código como ese puede ser hecho asíncrono, con un poco de
 
 Algunas sugerencias que se pueden aplicar para hacer que el proceso de inicio de la aplicación se lo más asíncrona posible, sin importar si la aplicación es nueva o si se está migrando una que ya existe, son las siguientes:
 
-- Usar los atributos {{ htmlattrxref("defer") }} o {{ htmlattrxref("async") }} en los tag de script que la aplicación Web necesita. Esto permite que el interpretador de HTML no se vea forzado a esperar a que el código se haya descargado y ejecutado para continuar.
+- Usar los atributos [`defer`](/es/docs/Web/HTML/Global_attributes#defer) o [`async`](/es/docs/Web/HTML/Global_attributes#async) en los tag de script que la aplicación Web necesita. Esto permite que el interpretador de HTML no se vea forzado a esperar a que el código se haya descargado y ejecutado para continuar.
 - Si se necesita descodificar archivos de recurso (por ejemplo, descodificar archivos JPEG files y convertirlos en datos de textura para ser usados luegos en WebGL), este es un buen caso de uso para Web workers.
 - When dealing with data supported by the browser (por ejemplo, descodificar images), es mejor utilizar los descodificadores includos en el navegador o el dispositivo en lugar de utilizar un propio migrado del código existente. El descodificador incluído en el navegador es muy probablemente más rápido, y reduce la cantidad de código que se va a necesitar para iniciar la aplicación. Además, es posible que el navegador automáticamente pueda ejecutar en paralelo estos descodificadores.
 - Cualquier procesamiento de información que puede ejecutarse en paralelo debe ser ejecutada en paralelo. No trabaje con porciones de información de manera sequencial; es mejor ejecutarlas en paralelo, siempre que sea posible.
@@ -68,7 +67,7 @@ Hay otras cosas además de ir asíncrono, que pueden ayudarlo a mejorar el tiemp
 - [Apps](/es/docs/Web/Progressive_web_apps)
 - [Games](/es/docs/Games)
 
-## Información del Documento Original:
+## Información del Documento Original
 
 - Autor(s): Alon Zakai
 - Fuente: [BananaBread (or any compiled codebase) Startup Experience](http://mozakai.blogspot.com/2012/07/bananabread-or-any-compiled-codebase.html)

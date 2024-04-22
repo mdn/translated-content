@@ -1,15 +1,9 @@
 ---
 title: Standards du Web
 slug: Glossary/Web_standards
-tags:
-  - Glossaire
-  - Infrastructure
-  - Standards du Web
-  - spécifications web
-  - standards
-translation_of: Glossary/Web_standards
-original_slug: Glossaire/Web_standards
 ---
+
+{{GlossarySidebar}}
 
 Les standards du Web sont des règles établies par des organismes de standardisation internationaux qui définissent la manière dont fonctionne le {{Glossary("World Wide Web", "Web")}} (et parfois qui contrôlent l'{{Glossary("Internet")}} également).
 

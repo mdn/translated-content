@@ -9,8 +9,6 @@ slug: Web/HTML/Element/article
 
 {{EmbedInteractiveExample("pages/tabbed/article.html", "tabbed-standard")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
-
 하나의 문서가 여러 개의 `<article>`을 가질 수 있습니다. 예컨대 사용자가 스크롤하면 계속해서 다음 글을 보여주는 블로그의 경우, 각각의 글이 `<article>` 요소가 되며, 그 안에는 또 여러 개의 {{htmlelement("section")}}이 존재할 수 있습니다.
 
 <table class="properties">
@@ -56,7 +54,7 @@ slug: Web/HTML/Element/article
     <tr>
       <th scope="row"><dfn>가능한 부모 요소</dfn></th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/ko/docs/Web/HTML/Content_categories#Flow_content"
           >플로우 콘텐츠</a
         >를 허용하는 모든 요소.<br /><code>&#x3C;article></code> 요소는
         {{HTMLElement("address")}}의 후손이 될 수 없음에 주의하세요.
@@ -91,7 +89,7 @@ slug: Web/HTML/Element/article
 - 각각의 `<article>`을 식별할 수단이 필요합니다. 주로 제목({{htmlelement('h1')}}-{{htmlelement('h6')}}) 요소를 `<article>`의 자식으로 포함하는 방법을 사용합니다.
 - `<article>` 요소가 중첩되어 있을 때, 안쪽에 있는 요소는 바깥쪽에 있는 요소와 관련된 글을 나타냅니다. 예를 들어 블로그 글의 댓글은, 글을 나타내는 `<article>` 요소 안에 중첩한 `<article>`로 나타낼 수 있습니다.
 - `<article>` 요소의 작성자 정보를 {{HTMLElement("address")}} 요소를 이용하여 제공할 수 있습니다. 그러나 중첩 `<article>`에는 적용되지 않습니다.
-- `<article>` 요소의 작성일자와 시간은 {{HTMLElement("time")}} 요소의 {{htmlattrxref("datetime", "time")}} 속성을 이용하여 설명할 수 있습니다. 참고로 {{HTMLElement("time")}} 요소의 {{htmlattrxref("pubdate", "time")}} 속성은 더 이상 {{glossary("W3C")}} {{glossary("HTML5")}} 표준안에 포함되지 않습니다.
+- `<article>` 요소의 작성일자와 시간은 {{HTMLElement("time")}} 요소의 [`datetime`](/ko/docs/Web/HTML/Element/time#datetime) 속성을 이용하여 설명할 수 있습니다. 참고로 {{HTMLElement("time")}} 요소의 [`pubdate`](/ko/docs/Web/HTML/Element/time#pubdate) 속성은 더 이상 {{glossary("W3C")}} {{glossary("HTML5")}} 표준안에 포함되지 않습니다.
 
 ## 예제
 
@@ -115,16 +113,12 @@ slug: Web/HTML/Element/article
     <article class="user_review">
       <p>I agree, dinos are my favorite.</p>
       <footer>
-        <p>
-          Posted on <time datetime="2015-05-17 19:00">May 17</time> by Tom.
-        </p>
+        <p>Posted on <time datetime="2015-05-17 19:00">May 17</time> by Tom.</p>
       </footer>
     </article>
   </section>
   <footer>
-    <p>
-      Posted on <time datetime="2015-05-15 19:00">May 15</time> by Staff.
-    </p>
+    <p>Posted on <time datetime="2015-05-15 19:00">May 15</time> by Staff.</p>
   </footer>
 </article>
 ```

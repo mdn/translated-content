@@ -2,7 +2,7 @@
 title: Mozilla のスプラッシュページ
 slug: Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
 l10n:
-  sourceCommit: ace1400b3b5cf252d6afc0caaccf170d0316c15e
+  sourceCommit: 0b2ed45bea188abc27cdd92c3faffcb7483d3314
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
@@ -28,7 +28,7 @@ l10n:
 
 ## 出発点
 
-この評価試験を開始するには、github の [mdn-splash-page-start](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/mdn-splash-page-start/) ディレクトリーにある HTML とすべての画像を取得する必要があります。 [index.html](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/mdn-splash-page-start/index.html) の内容をローカルドライブの新しいディレクトリーの `index.html` というファイルに保存します。 それから、[pattern.png](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/mdn-splash-page-start/pattern.png) を同じディレクトリーに保存します（画像を右クリックして保存するオプションを選びます）。
+この評価試験を開始するには、GitHub の [mdn-splash-page-start](https://github.com/mdn/learning-area/tree/main/html/multimedia-and-embedding/mdn-splash-page-start/) ディレクトリーにある HTML とすべての画像を取得する必要があります。 [index.html](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/mdn-splash-page-start/index.html) の内容をローカルドライブの新しいディレクトリーの `index.html` というファイルに保存します。 それから、[pattern.png](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/mdn-splash-page-start/pattern.png) を同じディレクトリーに保存します（画像を右クリックして保存するオプションを選びます）。
 
 [originals](https://github.com/mdn/learning-area/tree/main/html/multimedia-and-embedding/mdn-splash-page-start/originals) ディレクトリーの別の画像にアクセスし、同じ方法で保存します。 あなたはそれらを使用する準備が整う前に、グラフィックスエディターを使って（それらのいくつかを）操作する必要があるので、今は別のディレクトリーに保存する必要があります。
 
@@ -72,7 +72,7 @@ l10n:
 
 正しい画像と正しいリンクが一致していることを確認してください。
 
-> **メモ:** `srcset` と `sizes` の例を適切にテストするには、サイトをサーバーにアップロードする必要があります ([Github ページ](/ja/docs/Learn/Common_questions/Using_Github_pages)を使用するのが簡単で無料の解決策です)。 そして、そこから Firefox の[ネットワークモニター](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)などのツールを使用して正しく動作しているかどうかをテストできます。
+> **メモ:** `srcset` と `sizes` の例を適切にテストするには、サイトをサーバーにアップロードする必要があります ([GitHub ページ](/ja/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages)を使用するのが簡単で無料の解決策です)。 そして、そこから Firefox の[ネットワークモニター](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)などのツールを使用して正しく動作しているかどうかをテストできます。
 
 ### アートディレクションされたレッサーパンダ
 
@@ -99,9 +99,9 @@ l10n:
 1. [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), [Glitch](https://glitch.com/) などのオンライン共有エディターに、自身の作品を入れてください。 Glitch は画像のようなアセットをアップロードできるので、この例では Glitch の方が良いかもしれませんが、他のツールはそうではありません。
 2. [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn/250) に、評価や助けを依頼する投稿を書きます。投稿には、以下を記載してください。（訳注: やりとりは英語になります。）
 
-    - "Assessment wanted for Mozilla splash page" のような説明的なタイトル。
-    - すでに保有されている内容や、私たちに希望されること。例えば、行き詰って助けが必要な場合や、評価を希望される場合は、その旨を指示してください。
-    - 評価したい、あるいは助けが必要な例へのリンクを、オンライン共有エディターで表示します（上記のステップ 1 で述べたとおり）。コードを見ることができなければ、コーディングの問題で誰かを助けることはとても難しいのです。
-    - 実際のタスクまたは評価ページへのリンク。そうすると私たちがヘルプが必要な質問を探すことができます。
+   - "Assessment wanted for Mozilla splash page" のような説明的なタイトル。
+   - すでに保有されている内容や、私たちに希望されること。例えば、行き詰って助けが必要な場合や、評価を希望される場合は、その旨を指示してください。
+   - 評価したい、あるいは助けが必要な例へのリンクを、オンライン共有エディターで表示します（上記のステップ 1 で述べたとおり）。コードを見ることができなければ、コーディングの問題で誰かを助けることはとても難しいのです。
+   - 実際のタスクまたは評価ページへのリンク。そうすると私たちがヘルプが必要な質問を探すことができます。
 
 {{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}

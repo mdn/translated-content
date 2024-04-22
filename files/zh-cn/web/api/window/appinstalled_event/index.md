@@ -16,8 +16,8 @@ window.onappinstalled = function(event) { ... };
 ## 示例
 
 ```js
-window.onappinstalled = function(ev) {
-  console.log('The application was installed.');
+window.onappinstalled = function (ev) {
+  console.log("The application was installed.");
 };
 ```
 

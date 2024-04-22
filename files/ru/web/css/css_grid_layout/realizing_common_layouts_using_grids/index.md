@@ -1,8 +1,6 @@
 ---
 title: Realizing common layouts using CSS Grid Layout
 slug: Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
-translation_of: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout
-original_slug: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout
 ---
 
 Чтобы завершить набор руководств по CSS Grid Layout, я собираюсь пройтись по основным видам макетов, которые демонстрируют несколько различных методов, которые можно использовать при проектировании с помощью grid layout. Мы рассмотрим пример использования областей сетки-шаблона, типичную гибкую сеточную систему с 12 столбцами, а также список продуктов с использованием автоматического размещения. Как вы можете видеть из этого списка примеров, существует несколько способов достижения желаемого результата с помощью компоновки сетки. Выберите метод, который вы считаете наиболее полезным для решения проблем, которые вы решаете, и проектов, которые вам нужно реализовать.
@@ -18,45 +16,55 @@ original_slug: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_L
 Моя разметка-это контейнер с элементами внутри для хедера и футера, основного контента, навигации, боковой панели и блока, в который я собираюсь поместить рекламу.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
-    .wrapper {
-        max-width: 1024px;
-        margin: 0 auto;
-        font: 1.2em Helvetica, arial, sans-serif;
-    }
+.wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+  font:
+    1.2em Helvetica,
+    arial,
+    sans-serif;
+}
 
-    .wrapper > * {
-        border: 2px solid #f08c00;
-        background-color: #ffec99;
-        border-radius: 5px;
-        padding: 10px;
-    }
+.wrapper > * {
+  border: 2px solid #f08c00;
+  background-color: #ffec99;
+  border-radius: 5px;
+  padding: 10px;
+}
 
-    nav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 ```
 
 ```html
 <div class="wrapper">
-        <header class="main-head">The header</header>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="">Nav 1</a></li>
-                <li><a href="">Nav 2</a></li>
-                <li><a href="">Nav 3</a></li>
-            </ul>
-        </nav>
-        <article class="content">
-            <h1>Main article area</h1>
-            <p>In this layout, we display the areas in source order for any screen less that 500 pixels wide. We go to a two column layout, and then to a three column layout by redefining the grid, and the placement of items on the grid.</p>
-        </article>
-        <aside class="side">Sidebar</aside>
-        <div class="ad">Advertising</div>
-        <footer class="main-footer">The footer</footer>
+  <header class="main-head">The header</header>
+  <nav class="main-nav">
+    <ul>
+      <li><a href="">Nav 1</a></li>
+      <li><a href="">Nav 2</a></li>
+      <li><a href="">Nav 3</a></li>
+    </ul>
+  </nav>
+  <article class="content">
+    <h1>Main article area</h1>
+    <p>
+      In this layout, we display the areas in source order for any screen less
+      that 500 pixels wide. We go to a two column layout, and then to a three
+      column layout by redefining the grid, and the placement of items on the
+      grid.
+    </p>
+  </article>
+  <aside class="side">Sidebar</aside>
+  <div class="ad">Advertising</div>
+  <footer class="main-footer">The footer</footer>
 </div>
 ```
 
@@ -130,11 +138,11 @@ original_slug: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_L
       "header header  header"
       "nav    content sidebar"
       "nav    content ad"
-      "footer footer  footer"
-   }
-   nav ul {
-     flex-direction: column;
-   }
+      "footer footer  footer";
+  }
+  nav ul {
+    flex-direction: column;
+  }
 }
 ```
 
@@ -146,7 +154,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_L
 
 Это простой пример, но он демонстрирует, как мы можем использовать grid layout для перестройки нашего макета. В частности, я изменяю расположение рекламного блока, как заложено в настройках столбцов. Этот метод очень полезен на этапе прототипирования, он легко позволяет экспериментировать с расположением элементов. Вы всегда можете использовать сетку таким образом для прототипирования, даже несмотря на особенности отражения в различных браузерах, которые показывают ваш сайт.
 
-## Гибкий 12-колоночный макет.
+## Гибкий 12-колоночный макет
 
 Если вы работали с фреймворками или grid системами, вам знакомо размещение сайта на гибкой сетке с 12 или 16 столбцами. Мы можем создать такой макет, используя CSS Grid Layout. В качестве простого примера я создаю гибкую сетку из 12 столбцов, которая имеет 12 линий столбцов размером 12 `1fr`-все они имеют начальную линию с именем `col-start`. Это означает, что у нас будет двенадцать линий сетки с именем `col-start`.
 
@@ -154,7 +162,10 @@ original_slug: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_L
 .wrapper {
   max-width: 1024px;
   margin: 0 auto;
-  font: 1.2em Helvetica, arial, sans-serif;
+  font:
+    1.2em Helvetica,
+    arial,
+    sans-serif;
 }
 .wrapper > * {
   border: 2px solid #f08c00;
@@ -177,9 +188,13 @@ original_slug: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_L
 ```html
 <div class="wrapper">
   <div class="item1">Start column line 1, span 3 column tracks.</div>
-  <div class="item2">Start column line 6, span 4 column tracks. 2 row tracks.</div>
+  <div class="item2">
+    Start column line 6, span 4 column tracks. 2 row tracks.
+  </div>
   <div class="item3">Start row 2 column line 2, span 2 column tracks.</div>
-  <div class="item4">Start at column line 3, span to the end of the grid (-1).</div>
+  <div class="item4">
+    Start at column line 3, span to the end of the grid (-1).
+  </div>
 </div>
 ```
 
@@ -190,7 +205,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_L
   grid-column: col-start / span 3;
 }
 .item2 {
-  grid-column: col-start 6 / span 4 ;
+  grid-column: col-start 6 / span 4;
   grid-row: 1 / 3;
 }
 .item3 {
@@ -218,44 +233,56 @@ original_slug: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_L
 Чтобы увидеть, как этот метод макета работает на практике, мы можем создать тот же самый макет, который мы создали с {{cssxref("grid-template-areas")}}, на этот раз используя сеточную систему из 12 столбцов. Я начинаю с той же разметки, которая используется для примера областей шаблона сетки.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
-    .wrapper {
-        max-width: 1024px;
-        margin: 0 auto;
-        font: 1.2em Helvetica, arial, sans-serif;
-    }
+.wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+  font:
+    1.2em Helvetica,
+    arial,
+    sans-serif;
+}
 
-    .wrapper > * {
-        border: 2px solid #f08c00;
-        background-color: #ffec99;
-        border-radius: 5px;
-        padding: 10px;
-    }
+.wrapper > * {
+  border: 2px solid #f08c00;
+  background-color: #ffec99;
+  border-radius: 5px;
+  padding: 10px;
+}
 
-    nav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 ```
 
 ```html
 <div class="wrapper">
-        <header class="main-head">The header</header>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="">Nav 1</a></li>
-                <li><a href="">Nav 2</a></li>
-                <li><a href="">Nav 3</a></li>
-            </ul>
-        </nav>
-        <article class="content"><h1>Main article area</h1>
-        <p>In this layout, we display the areas in source order for any screen less that 500 pixels wide. We go to a two column layout, and then to a three column layout by redefining the grid, and the placement of items on the grid.</p></article>
-        <aside class="side">Sidebar</aside>
-        <div class="ad">Advertising</div>
-        <footer class="main-footer">The footer</footer>
-    </div>
+  <header class="main-head">The header</header>
+  <nav class="main-nav">
+    <ul>
+      <li><a href="">Nav 1</a></li>
+      <li><a href="">Nav 2</a></li>
+      <li><a href="">Nav 3</a></li>
+    </ul>
+  </nav>
+  <article class="content">
+    <h1>Main article area</h1>
+    <p>
+      In this layout, we display the areas in source order for any screen less
+      that 500 pixels wide. We go to a two column layout, and then to a three
+      column layout by redefining the grid, and the placement of items on the
+      grid.
+    </p>
+  </article>
+  <aside class="side">Sidebar</aside>
+  <div class="ad">Advertising</div>
+  <footer class="main-footer">The footer</footer>
+</div>
 ```
 
 Затем я настраиваю сетку как в примере выше.
@@ -284,7 +311,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_L
 
 ```css
 @media (min-width: 500px) {
-
   .side {
     grid-column: col-start / span 3;
     grid-row: 3;
@@ -293,7 +319,8 @@ original_slug: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_L
     grid-column: col-start / span 3;
     grid-row: 4;
   }
-  .content, .main-footer {
+  .content,
+  .main-footer {
     grid-column: col-start 4 / span 9;
   }
   nav ul {
@@ -338,7 +365,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_L
 
 ![Макет с грид-трэками, подсвеченными инспектором.](11-grid-inspector-12col-layout.png)
 
-При создании этого макета следует отметить, что нам не нужно было явно размещать каждый элемент сетки в каждой контрольной точке. Мы унаследовали ранее настроенное размещение – преимущество работы “сначала мобильный". Мы также можем воспользоваться преимуществами автоматического размещения сетки. Сохраняя элементы в логическом порядке, автоматическое размещение делает довольно много работы за нас при размещении элементов в сетке. В последнем примере этого руководства мы создадим макет, который полностью зависит от автоматического размещения.
+При создании этого макета следует отметить, что нам не нужно было явно размещать каждый элемент сетки в каждой контрольной точке. Мы унаследовали ранее настроенное размещение – преимущество работы "сначала мобильный". Мы также можем воспользоваться преимуществами автоматического размещения сетки. Сохраняя элементы в логическом порядке, автоматическое размещение делает довольно много работы за нас при размещении элементов в сетке. В последнем примере этого руководства мы создадим макет, который полностью зависит от автоматического размещения.
 
 ## Создание списка с помощью авторазмещения
 
@@ -353,50 +380,61 @@ original_slug: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_L
     <div class="body"><p>The content of this listing item goes here.</p></div>
     <div class="cta"><a href="">Call to action!</a></div>
   </li>
-   <li>
-     <h2>Item Two</h2>
-     <div class="body"><p>The content of this listing item goes here.</p></div>
-     <div class="cta"><a href="">Call to action!</a></div>
-   </li>
-   <li class="wide">
-     <h2>Item Three</h2>
-     <div class="body"><p>The content of this listing item goes here.</p>
-     <p>This one has more text than the other items.</p>
-     <p>Quite a lot more</p>
-     <p>Perhaps we could do something different with it?</p></div>
-     <div class="cta"><a href="">Call to action!</a></div>
-    </li>
-    <li>
-     <h2>Item Four</h2>
-     <div class="body"><p>The content of this listing item goes here.</p></div>
-     <div class="cta"><a href="">Call to action!</a></div>
-    </li>
-     <li>
-     <h2>Item Five</h2>
-     <div class="body"><p>The content of this listing item goes here.</p></div>
-      <div class="cta"><a href="">Call to action!</a></div>
-    </li>
+  <li>
+    <h2>Item Two</h2>
+    <div class="body"><p>The content of this listing item goes here.</p></div>
+    <div class="cta"><a href="">Call to action!</a></div>
+  </li>
+  <li class="wide">
+    <h2>Item Three</h2>
+    <div class="body">
+      <p>The content of this listing item goes here.</p>
+      <p>This one has more text than the other items.</p>
+      <p>Quite a lot more</p>
+      <p>Perhaps we could do something different with it?</p>
+    </div>
+    <div class="cta"><a href="">Call to action!</a></div>
+  </li>
+  <li>
+    <h2>Item Four</h2>
+    <div class="body"><p>The content of this listing item goes here.</p></div>
+    <div class="cta"><a href="">Call to action!</a></div>
+  </li>
+  <li>
+    <h2>Item Five</h2>
+    <div class="body"><p>The content of this listing item goes here.</p></div>
+    <div class="cta"><a href="">Call to action!</a></div>
+  </li>
 </ul>
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
-    img {max-width: 100%; display: block;}
-    body {
-        font: 1.2em Helvetica, arial, sans-serif;
-    }
-    a:link, a:visited {
-      text-decoration: none;
-      color: #f08c00;
-    }
+* {
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+body {
+  font:
+    1.2em Helvetica,
+    arial,
+    sans-serif;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #f08c00;
+}
 
-    h2 {
-      background-color: #f08c00;
-      color: #fff;
-      text-align: center;
-      margin: 0;
-      padding: 20px;
-    }
+h2 {
+  background-color: #f08c00;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
 ```
 
 Мы собираемся создать сетку с гибким количеством гибких столбцов. Я хочу, чтобы они никогда не становились меньше 200 пикселей, а затем делили любое доступное оставшееся пространство поровну – так мы всегда получаем одинаковые по ширине дорожки столбцов. Мы достигаем этого с помощью функции `minmax()` в нашей повторной нотации для определения размера трека.
@@ -407,7 +445,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_L
   margin: 2em;
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 ```
 
@@ -450,50 +488,61 @@ original_slug: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_L
     <div class="body"><p>The content of this listing item goes here.</p></div>
     <div class="cta"><a href="">Call to action!</a></div>
   </li>
-   <li>
-     <h2>Item Two</h2>
-     <div class="body"><p>The content of this listing item goes here.</p></div>
-     <div class="cta"><a href="">Call to action!</a></div>
-   </li>
-   <li class="wide">
-     <h2>Item Three</h2>
-     <div class="body"><p>The content of this listing item goes here.</p>
-     <p>This one has more text than the other items.</p>
-     <p>Quite a lot more</p>
-     <p>Perhaps we could do something different with it?</p></div>
-     <div class="cta"><a href="">Call to action!</a></div>
-    </li>
-    <li>
-     <h2>Item Four</h2>
-     <div class="body"><p>The content of this listing item goes here.</p></div>
-     <div class="cta"><a href="">Call to action!</a></div>
-    </li>
-     <li>
-     <h2>Item Five</h2>
-     <div class="body"><p>The content of this listing item goes here.</p></div>
-      <div class="cta"><a href="">Call to action!</a></div>
-    </li>
+  <li>
+    <h2>Item Two</h2>
+    <div class="body"><p>The content of this listing item goes here.</p></div>
+    <div class="cta"><a href="">Call to action!</a></div>
+  </li>
+  <li class="wide">
+    <h2>Item Three</h2>
+    <div class="body">
+      <p>The content of this listing item goes here.</p>
+      <p>This one has more text than the other items.</p>
+      <p>Quite a lot more</p>
+      <p>Perhaps we could do something different with it?</p>
+    </div>
+    <div class="cta"><a href="">Call to action!</a></div>
+  </li>
+  <li>
+    <h2>Item Four</h2>
+    <div class="body"><p>The content of this listing item goes here.</p></div>
+    <div class="cta"><a href="">Call to action!</a></div>
+  </li>
+  <li>
+    <h2>Item Five</h2>
+    <div class="body"><p>The content of this listing item goes here.</p></div>
+    <div class="cta"><a href="">Call to action!</a></div>
+  </li>
 </ul>
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
-    img {max-width: 100%; display: block;}
-    body {
-        font: 1.2em Helvetica, arial, sans-serif;
-    }
-    a:link, a:visited {
-      text-decoration: none;
-      color: #f08c00;
-    }
+* {
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+body {
+  font:
+    1.2em Helvetica,
+    arial,
+    sans-serif;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #f08c00;
+}
 
-    h2 {
-      background-color: #f08c00;
-      color: #fff;
-      text-align: center;
-      margin: 0;
-      padding: 20px;
-    }
+h2 {
+  background-color: #f08c00;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
 
 .listing li {
   border: 1px solid #ffe066;
@@ -519,7 +568,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_L
   display: grid;
   grid-gap: 20px;
   grid-auto-flow: dense;
-  grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 .listing .wide {
   grid-column-end: span 2;

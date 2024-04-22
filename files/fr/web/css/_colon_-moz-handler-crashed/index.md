@@ -1,12 +1,6 @@
 ---
-title: ':-moz-handler-crashed'
+title: ":-moz-handler-crashed"
 slug: Web/CSS/:-moz-handler-crashed
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:-moz-handler-crashed
 ---
 
 {{Non-standard_header}}{{CSSRef}}

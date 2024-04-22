@@ -65,13 +65,11 @@ Tk: N
 
 ## Especificações
 
-| Especificação                                                                    | Status                       | Comentário         |
-| -------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('Tracking','#Tk-header-defn', 'Tk header field')}} | {{Spec2("Tracking")}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Tk")}}
+{{Compat}}
 
 ## Veja também
 

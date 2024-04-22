@@ -1,14 +1,9 @@
 ---
 title: RVB
 slug: Glossary/RGB
-tags:
-  - CSS
-  - Conception
-  - Débutant
-  - Guide
-translation_of: Glossary/RGB
-original_slug: Glossaire/RGB
 ---
+
+{{GlossarySidebar}}
 
 Rouge Vert Bleu (RVB) est un modèle de couleurs qui représente les couleurs comme étant une combinaison de trois composantes sous-jacentes (ou canaux), à savoir, rouge, verte et bleue. Chaque couleur est décrite par une suite de trois valeurs (en général comprises entre 0,0 et 1,0, ou entre 0 et 255) qui correspondent aux différentes intensités de rouge, vert et bleu contribuant à déterminer la couleur finale.
 

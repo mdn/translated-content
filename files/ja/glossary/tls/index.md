@@ -3,6 +3,8 @@ title: Transport Layer Security (TLS)
 slug: Glossary/TLS
 ---
 
+{{GlossarySidebar}}
+
 **TLS (Transport Layer Security)** は、以前は {{Glossary("SSL", "SSL (Secure Sockets Layer)")}} として知られていたもので、ネットワーク上で安全に通信するためにアプリケーションが使用する{{Glossary("protocol", "プロトコル")}}であり、電子メール、ウェブ閲覧、メッセージング、その他のプロトコルの改ざんや盗聴を防止します。 SSL と TLS はどちらもクライアント・サーバー型のプロトコルであり、暗号化したプロトコルを使用してプライバシーを保証することで、ネットワークを通じたセキュリティを提供します。サーバーとクライアントが TLS を使用して通信するすれば、どのメッセージも第三者によって盗聴や改ざんされていないことが保証されます。
 
 最新のブラウザーはすべて TLS プロトコルに対応しており、有効な{{Glossary("Digital certificate", "デジタル証明書")}}の提供をサーバーに要求してその身元を確認し、安全な接続を確立します。クライアントとサーバーの両者がそれぞれのデジタル証明書を提供すれば、相互に認証することができます。
@@ -11,18 +13,18 @@ slug: Glossary/TLS
 
 1. 仕様書
 
-    1. [RFC 5246](https://tools.ietf.org/html/rfc5246) (The Transport Layer Security Protocol, Version 1.2)
+   1. [RFC 5246](https://tools.ietf.org/html/rfc5246) (The Transport Layer Security Protocol, Version 1.2)
 
 2. Wikipedia の記事
 
-    1. [Transport Layer Security](https://ja.wikipedia.org/wiki/Transport_Layer_Security)
+   1. [Transport Layer Security](https://ja.wikipedia.org/wiki/Transport_Layer_Security)
 
 3. 関連情報
 
-    1. [Transport Layer Security](/ja/docs/Web/Security/Transport_Layer_Security)
-    2. [OWASP: Transport Layer Protection Cheat Sheet](https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet)
+   1. [Transport Layer Security](/ja/docs/Web/Security/Transport_Layer_Security)
+   2. [OWASP: Transport Layer Protection Cheat Sheet](https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet)
 
 4. [用語集](/ja/docs/Glossary)
 
-    1. {{Glossary("HTTPS")}}
-    2. {{Glossary("SSL")}}
+   1. {{Glossary("HTTPS")}}
+   2. {{Glossary("SSL")}}

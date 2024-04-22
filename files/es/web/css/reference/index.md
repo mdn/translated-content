@@ -1,9 +1,7 @@
 ---
 title: Referencia CSS
 slug: Web/CSS/Reference
-original_slug: Web/CSS/Referencia_CSS
 ---
-
 
 Esta _Referencia CSS_ muestra la sintáxis básica de una regla CSS; lista todas las propiedades estándares [CSS](/es/docs/Web/CSS), [pseudo-classes](/es/docs/Web/CSS/Pseudo-classes) y [pseudo-elementos](/es/docs/Web/CSS/Pseudoelementos), [reglas-at](/es/docs/Web/CSS/At-rule), [unidades](/es/docs/Web/CSS/length), y [selectores](/es/docs/Web/CSS/Introducci%C3%B3n/Selectors), todos juntos en [orden alfabético](#Keyword_index), así como los [selectores por tipo](#Selectors); y le permitirá acceso rápido a la información detallada de cada uno de ellos. No solo lista las propiedades de CSS 1 y CSS 2.1, sino que también es una referencia de CSS3 que enlaza cualquier propiedad y concepto de [CSS3](/es/docs/Web/CSS/CSS3) estandarizado, o ya establecido. También incluye una breve [referencia DOM-CSS / CSSOM](#DOM_CSS).
 

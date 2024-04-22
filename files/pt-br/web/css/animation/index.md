@@ -33,7 +33,9 @@ animation: 3s ease-in 1s 2 reverse both paused slidein;
 animation: 3s linear 1s slidein;
 
 /* two animations */
-animation: 3s linear slidein, 3s ease-out 5s slideout;
+animation:
+  3s linear slidein,
+  3s ease-out 5s slideout;
 ```
 
 A propriedade `animation` é especificada como uma ou mais animações separadas por vírgulas.
@@ -202,8 +204,9 @@ gira gradualmente através de um arco-íris de cores. O tempo do sol, posição 
   height: 100vh;
   aspect-ratio: 1 / 1;
   /* várias animações são separadas por vírgulas, os parâmetros de cada animação são definidos independentemente */
-  animation: 4s linear 0s infinite alternate rise, 24s linear 0s infinite
-      psychedelic;
+  animation:
+    4s linear 0s infinite alternate rise,
+    24s linear 0s infinite psychedelic;
 }
 
 @keyframes rise {
@@ -256,8 +259,9 @@ embora uma animação de ascensão seja definida. A propriedade de transformaç�
     propriedades de animações declaradas anteriormente
   */
   /* bounce 'substitui' a transformação definida por ascensão, portanto, o sol só se move horizontalmente */
-  animation: 4s linear 0s infinite alternate rise, 4s linear 0s infinite
-      alternate bounce;
+  animation:
+    4s linear 0s infinite alternate rise,
+    4s linear 0s infinite alternate bounce;
 }
 
 @keyframes rise {

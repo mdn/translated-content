@@ -1,7 +1,6 @@
 ---
 title: イベントの作成と起動
 slug: Web/Events/Creating_and_triggering_events
-original_slug: Web/Events/Creating_and_triggering_events
 ---
 
 この記事では、 DOM イベントを作成して処理する方法を説明します。このようなイベントは、一般に、ブラウザー自体によって起動されたイベントとは対照的に、**合成イベント**と呼ばれます。
@@ -11,10 +10,16 @@ original_slug: Web/Events/Creating_and_triggering_events
 イベントは、次のように [`Event`](/ja/docs/Web/API/Event) コンストラクターを使用して作成できます。
 
 ```js
-const event = new Event('build');
+const event = new Event("build");
 
 // Listen for the event.
-elem.addEventListener('build', function (e) { /* ... */ }, false);
+elem.addEventListener(
+  "build",
+  function (e) {
+    /* ... */
+  },
+  false,
+);
 
 // Dispatch the event.
 elem.dispatchEvent(event);
@@ -30,14 +35,14 @@ elem.dispatchEvent(event);
 たとえば、イベントは次のようにして作成することができます。
 
 ```js
-const event = new CustomEvent('build', { detail: elem.dataset.time });
+const event = new CustomEvent("build", { detail: elem.dataset.time });
 ```
 
 これにより、イベントリスナー内の追加データにアクセスすることができます。
 
 ```js
 function eventHandler(e) {
-  console.log('The time is: ' + e.detail);
+  console.log("The time is: " + e.detail);
 }
 ```
 
@@ -72,20 +77,20 @@ elem.dispatchEvent(event);
 ```
 
 ```js
-const form = document.querySelector('form');
-const textarea = document.querySelector('textarea');
+const form = document.querySelector("form");
+const textarea = document.querySelector("textarea");
 
 // 新しいイベントを生成し、バブリングを許可し、 "detail" プロパティに渡したいデータを設定する
-const eventAwesome = new CustomEvent('awesome', {
+const eventAwesome = new CustomEvent("awesome", {
   bubbles: true,
-  detail: { text: () => textarea.value }
+  detail: { text: () => textarea.value },
 });
 
 // フォームイベントが "awesome" カスタムイベントを待ち受けし、渡されたものの text() メソッドをコンソールに出力する
-form.addEventListener('awesome', e => console.log(e.detail.text()));
+form.addEventListener("awesome", (e) => console.log(e.detail.text()));
 
 // ユーザー型の場合、 form 内の textarea は発生させるイベントを起動・処理し、それを開始点として使用する
-textarea.addEventListener('input', e => e.target.dispatchEvent(eventAwesome));
+textarea.addEventListener("input", (e) => e.target.dispatchEvent(eventAwesome));
 ```
 
 ### イベントの動的な生成と処理
@@ -99,15 +104,20 @@ textarea.addEventListener('input', e => e.target.dispatchEvent(eventAwesome));
 ```
 
 ```js
-const form = document.querySelector('form');
-const textarea = document.querySelector('textarea');
+const form = document.querySelector("form");
+const textarea = document.querySelector("textarea");
 
-form.addEventListener('awesome', e => console.log(e.detail.text()));
+form.addEventListener("awesome", (e) => console.log(e.detail.text()));
 
-textarea.addEventListener('input', function() {
+textarea.addEventListener("input", function () {
   // Create and dispatch/trigger an event on the fly
   // Note: Optionally, we've also leveraged the "function expression" (instead of the "arrow function expression") so "this" will represent the element
-  this.dispatchEvent(new CustomEvent('awesome', { bubbles: true, detail: { text: () => textarea.value } }))
+  this.dispatchEvent(
+    new CustomEvent("awesome", {
+      bubbles: true,
+      detail: { text: () => textarea.value },
+    }),
+  );
 });
 ```
 
@@ -117,12 +127,12 @@ textarea.addEventListener('input', function() {
 
 ```js
 function simulateClick() {
-  const event = new MouseEvent('click', {
+  const event = new MouseEvent("click", {
     view: window,
     bubbles: true,
-    cancelable: true
+    cancelable: true,
   });
-  const cb = document.getElementById('checkbox');
+  const cb = document.getElementById("checkbox");
   const cancelled = !cb.dispatchEvent(event);
 
   if (cancelled) {

@@ -1,14 +1,13 @@
 ---
 title: translate()
 slug: Web/CSS/transform-function/translate
-original_slug: Web/CSS/transform-function/translate()
 ---
 
 {{CSSRef}}
 
 **`translate()`** 这个 [CSS](/zh-CN/docs/Web/CSS) 函数在水平和/或垂直方向上重新定位元素。其结果是 {{cssxref("&lt;transform-function&gt;")}} 类型。
 
-![](translate.png)
+{{EmbedInteractiveExample("pages/css/function-translate.html")}}
 
 该变换由二维向量构成。它的坐标定义了元素在每个方向上移动了多少。
 
@@ -118,7 +117,9 @@ div {
 }
 
 .moved {
-  transform: translate(10px); /* Equal to: translateX(10px) or translate(10px, 0) */
+  transform: translate(
+    10px
+  ); /* Equal to: translateX(10px) or translate(10px, 0) */
   background-color: pink;
 }
 ```

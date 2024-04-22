@@ -1,7 +1,6 @@
 ---
 title: Cómo hacer PWAs instalables
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
-original_slug: Web/Progressive_web_apps/Installable_PWAs
 ---
 
 {{PreviousMenuNext("Web/Apps/Progressive/Offline_Service_workers", "Web/Apps/Progressive/Re-engageable_Notifications_Push", "Web/Apps/Progressive")}}

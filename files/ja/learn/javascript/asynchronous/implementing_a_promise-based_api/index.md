@@ -48,16 +48,16 @@ div {
 ```
 
 ```js
-const output = document.querySelector('#output');
-const button = document.querySelector('#set-alarm');
+const output = document.querySelector("#output");
+const button = document.querySelector("#set-alarm");
 
 function setAlarm() {
   setTimeout(() => {
-    output.textContent = '起きて！';
+    output.textContent = "起きて！";
   }, 1000);
 }
 
-button.addEventListener('click', setAlarm);
+button.addEventListener("click", setAlarm);
 ```
 
 {{EmbedLiveSample("Wrapping setTimeout()", 600, 100)}}
@@ -76,7 +76,7 @@ button.addEventListener('click', setAlarm);
 function alarm(person, delay) {
   return new Promise((resolve, reject) => {
     if (delay < 0) {
-      throw new Error('アラームの待ち時間を負数にすることはできません。');
+      throw new Error("アラームの待ち時間を負数にすることはできません。");
     }
     setTimeout(() => {
       resolve(`${person}、起きて！`);
@@ -122,15 +122,15 @@ button {
 ```
 
 ```js
-const name = document.querySelector('#name');
-const delay = document.querySelector('#delay');
-const button = document.querySelector('#set-alarm');
-const output = document.querySelector('#output');
+const name = document.querySelector("#name");
+const delay = document.querySelector("#delay");
+const button = document.querySelector("#set-alarm");
+const output = document.querySelector("#output");
 
 function alarm(person, delay) {
   return new Promise((resolve, reject) => {
     if (delay < 0) {
-      throw new Error('アラームの待ち時間を負数にすることはできません。');
+      throw new Error("アラームの待ち時間を負数にすることはできません。");
     }
     setTimeout(() => {
       resolve(`${person}、起きて！`);
@@ -138,10 +138,12 @@ function alarm(person, delay) {
   });
 }
 
-button.addEventListener('click', () => {
+button.addEventListener("click", () => {
   alarm(name.value, delay.value)
-    .then((message) => output.textContent = message)
-    .catch((error) => output.textContent = `アラームを設定できません: ${error}`);
+    .then((message) => (output.textContent = message))
+    .catch(
+      (error) => (output.textContent = `アラームを設定できません: ${error}`),
+    );
 });
 ```
 
@@ -180,15 +182,15 @@ button {
 ```
 
 ```js
-const name = document.querySelector('#name');
-const delay = document.querySelector('#delay');
-const button = document.querySelector('#set-alarm');
-const output = document.querySelector('#output');
+const name = document.querySelector("#name");
+const delay = document.querySelector("#delay");
+const button = document.querySelector("#set-alarm");
+const output = document.querySelector("#output");
 
 function alarm(person, delay) {
   return new Promise((resolve, reject) => {
     if (delay < 0) {
-      throw new Error('アラームの待ち時間を負数にすることはできません。');
+      throw new Error("アラームの待ち時間を負数にすることはできません。");
     }
     setTimeout(() => {
       resolve(`${person}、起きて！`);
@@ -196,12 +198,11 @@ function alarm(person, delay) {
   });
 }
 
-button.addEventListener('click', async () => {
+button.addEventListener("click", async () => {
   try {
     const message = await alarm(name.value, delay.value);
     output.textContent = message;
-  }
-  catch (error) {
+  } catch (error) {
     output.textContent = `アラームを設定できません: ${error}`;
   }
 });

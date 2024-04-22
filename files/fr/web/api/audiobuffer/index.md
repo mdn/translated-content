@@ -1,12 +1,6 @@
 ---
 title: AudioBuffer
 slug: Web/API/AudioBuffer
-tags:
-  - API
-  - Experimental
-  - Reference
-  - Web Audio API
-translation_of: Web/API/AudioBuffer
 ---
 
 {{APIRef("Web Audio API")}}
@@ -51,9 +45,13 @@ var nombreCanaux = 2;
 // Crée une mémoire tampon vide de 2 secondes
 // à la fréquence d'échantillonage du contexte AudioContext
 var nombreFrames = contexteAudio.sampleRate * 2.0;
-var tableauDonnees = audioCtx.createBuffer(nombreCanaux, nombreFrames, contexteAudio.sampleRate);
+var tableauDonnees = audioCtx.createBuffer(
+  nombreCanaux,
+  nombreFrames,
+  contexteAudio.sampleRate,
+);
 
-bouton.onclick = function() {
+bouton.onclick = function () {
   // remplit la mémoire tampon avec du bruit blanc
   // valeurs aléatoires entre -1.0 et 1.0
   for (var canal = 0; canal < nombreCanaux; canal++) {
@@ -79,8 +77,7 @@ bouton.onclick = function() {
 
   // lance la lecture du so
   source.start();
-
-}
+};
 ```
 
 ## Spécifications

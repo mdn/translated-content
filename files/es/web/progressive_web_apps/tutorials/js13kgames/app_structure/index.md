@@ -1,7 +1,6 @@
 ---
 title: Estructura de una aplicación web progresiva
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/App_structure
-original_slug: Web/Progressive_web_apps/App_structure
 ---
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Introduction", "Web/Progressive_web_apps/Offline_Service_workers", "Web/Progressive_web_apps")}}
@@ -64,15 +63,14 @@ La estructura del sitio web [js13kPWA](https://mdn.github.io/pwa-examples/js13kp
 Desde el punto de vista HTML, el intérprete de la aplicación es todo lo que está fuera de la sección de contenido:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <title>js13kGames — Entradas del marco A</title>
     <meta
       name="description"
-      content="Una lista de las entradas del marco A enviadas a la competencia js13kGames 2017, que se utiliza como ejemplo para los artículos de MDN sobre Aplicaciones Web Progresivas"
-    />
+      content="Una lista de las entradas del marco A enviadas a la competencia js13kGames 2017, que se utiliza como ejemplo para los artículos de MDN sobre Aplicaciones Web Progresivas" />
     <meta name="author" content="end3r" />
     <meta name="theme-color" content="#B12A34" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -243,10 +241,10 @@ self.addEventListener("install", function (e) {
   e.waitUntil(
     caches.open(cacheName).then(function (cache) {
       console.log(
-        "[Servicio Worker] Almacena todo en caché: contenido e intérprete de la aplicación"
+        "[Servicio Worker] Almacena todo en caché: contenido e intérprete de la aplicación",
       );
       return cache.addAll(contentToCache);
-    })
+    }),
   );
 });
 ```
@@ -263,14 +261,14 @@ self.addEventListener("fetch", function (e) {
         fetch(e.request).then(function (response) {
           return caches.open(cacheName).then(function (cache) {
             console.log(
-              "[Servicio Worker] Almacena el nuevo recurso: " + e.request.url
+              "[Servicio Worker] Almacena el nuevo recurso: " + e.request.url,
             );
             cache.put(e.request, response.clone());
             return response;
           });
         })
       );
-    })
+    }),
   );
 });
 ```

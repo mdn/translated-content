@@ -20,13 +20,13 @@ var sets = document.styleSheetSets;
 ID가 "sheetList"인 {{HTMLElement("ul")}} (list) 요소가 주어지면, 사용 가능한 모든 스타일 시트 세트의 이름으로 아래와 같은 코드로 채울 수 있습니다.
 
 ```js
-let list = document.getElementById('sheetList');
+let list = document.getElementById("sheetList");
 let sheets = document.styleSheetSets;
 
-list.innerHTML = '';
+list.innerHTML = "";
 
 for (let i = 0; i < sheets.length; i++) {
-  let item = document.createElement('li');
+  let item = document.createElement("li");
 
   item.innerHTML = sheets[i];
   list.appendChild(item);

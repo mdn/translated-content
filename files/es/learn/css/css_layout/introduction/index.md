@@ -1,7 +1,6 @@
 ---
 title: Introducción al diseño en CSS
 slug: Learn/CSS/CSS_layout/Introduction
-original_slug: Learn/CSS/CSS_layout/Introducción
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout")}}
@@ -62,7 +61,7 @@ El flujo normal es el modo como el navegador presenta las páginas HTML de forma
 
 Por defecto, el navegador mostrará este código de la manera siguiente:
 
-{{ EmbedLiveSample('Normal_flow', '100%', 200) }}
+{{ EmbedLiveSample('Flujo normal', '100%', 200) }}
 
 Observa aquí cómo se muestra el HTML en el orden exacto en que aparece en el código fuente, con los elementos uno debajo del otro: el primer párrafo, seguido de la lista desordenada, y a continuación el segundo párrafo.
 
@@ -92,17 +91,21 @@ Además de poder cambiar la presentación predeterminada de un elemento `block` 
 
 Flexbox es el nombre corto del [módulo de diseño de cajas flexibles](/es/docs/Web/CSS/CSS_Flexible_Box_Layout), pensado para facilitarnos la distribución de las cosas en una dimensión, ya sea como una fila o como una columna. Para usar el método Flexbox, aplica `display: flex` al elemento padre de los elementos que deseas distribuir; todos sus elementos hijo directos se convierten en elementos flexibles. Vamos a verlo en un ejemplo sencillo.
 
+### Establecer display: flex
+
 El marcado HTML siguiente nos proporciona un elemento contenedor con una clase `wrapper` dentro del cual hay tres elementos {{htmlelement ("div")}}. Por defecto, estos elementos se mostrarían como elementos de bloque, uno debajo del otro, en nuestro documento en español.
 
 Sin embargo, si añadimos `display: flex` al elemento padre, los tres elementos se organizan en columnas. Esto se debe a que se convierten en _elementos flexibles_ y se ven afectados por algunos valores iniciales que el método Flexbox establece en el contenedor flexible. Se muestran en una fila porque el valor inicial de {{cssxref ("flex-direction")}} establecido en su elemento padre es `row`. Todos parecen expandirse hasta la altura del elemento de más altura, porque el valor inicial de la propiedad {{cssxref ("align-items")}} establecida en su elemento primario es `stretch`. Esto significa que los artículos se expanden hasta la altura del contenedor flexible, que en este caso está definida por el artículo de mayor altura. Todos los artículos se alinean al comienzo del contenedor y dejan el espacio que sobra al final de la fila.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper > div {
-border-radius: 5px;
-background-color: rgb(207,232,220);
-padding: 1em;
+  border-radius: 5px;
+  background-color: rgb(207, 232, 220);
+  padding: 1em;
 }
 ```
 
@@ -120,43 +123,45 @@ padding: 1em;
 </div>
 ```
 
-{{ EmbedLiveSample('Flex_1', '300', '200') }}
+{{ EmbedLiveSample('Establecer display: flex', '300', '200') }}
+
+### Establecer la propiedad flex
 
 Además de las propiedades anteriores, que pueden aplicarse a contenedores flexibles, también hay propiedades que pueden aplicarse a los elementos flexibles. Estas propiedades, entre otras cosas, pueden cambiar el comportamiento de estos elementos flexibles y permitirles expandirse y contraerse para adaptarse al espacio disponible.
 
 Como un ejemplo sencillo de esto podemos añadir la propiedad {{cssxref ("flex")}} a todos nuestros elementos secundarios, con un valor de `1`. Esto hará que todos los elementos crezcan y llenen el contenedor, en lugar de dejar espacio al final. Si hay más espacio, los artículos se ensancharán; si hay menos espacio, se volverán más estrechos. Además, si añades al código otro elemento, todos los elementos se volverán más pequeños para dejarle espacio; ajustarán el tamaño para ocupar la misma cantidad de espacio, cualquiera que sea.
 
-## Ejemplo
-
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper > div {
-    border-radius: 5px;
-    background-color: rgb(207,232,220);
-    padding: 1em;
+  border-radius: 5px;
+  background-color: rgb(207, 232, 220);
+  padding: 1em;
 }
 ```
 
 ```css
 .wrapper {
-    display: flex;
+  display: flex;
 }
 
 .wrapper > div {
-    flex: 1;
+  flex: 1;
 }
 ```
 
 ```html
 <div class="wrapper">
-    <div class="box1">Uno</div>
-    <div class="box2">Dos</div>
-    <div class="box3">Tres</div>
+  <div class="box1">Uno</div>
+  <div class="box2">Dos</div>
+  <div class="box3">Tres</div>
 </div>
 ```
 
-{{ EmbedLiveSample('Flex_2', '300', '200') }}
+{{ EmbedLiveSample('Establecer la propiedad flex', '300', '200') }}
 
 > **Nota:** Esta ha sido una breve introducción de lo que permite el método Flexbox. Para obtener más información, consulta nuestro artículo sobre [Flexbox](/es/docs/Learn/CSS/CSS_layout/Flexbox).
 
@@ -164,87 +169,93 @@ Como un ejemplo sencillo de esto podemos añadir la propiedad {{cssxref ("flex")
 
 Mientras que el método Flexbox está pensado para distribuir elementos unidimensionalmente, el diseño de cuadrícula está diseñado para distribuir elementos en dos dimensiones: alinear elementos en filas y columnas.
 
+### Establecer display: grid
+
 Una vez más, puedes activar el diseño de páginas web en cuadrícula con un valor de visualización específico: `display: grid`. El ejemplo siguiente utiliza un marcado similar al del ejemplo del método Flexbox, con un contenedor y algunos elementos secundarios. Además de usar `display: grid`, también definimos algunos tramos de filas y columnas en el elemento padre con las propiedades {{cssxref("grid-template-rows")}} y {{cssxref("grid-template-columns")}}. Hemos definido tres columnas, cada una de `1fr`, y dos filas de `100px`. No necesitamos poner ninguna regla sobre los elementos secundarios porque se colocan automáticamente en las celdas que nuestra cuadrícula ha creado.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper > div {
-    border-radius: 5px;
-    background-color: rgb(207,232,220);
-    padding: 1em;
+  border-radius: 5px;
+  background-color: rgb(207, 232, 220);
+  padding: 1em;
 }
 ```
 
 ```css
 .wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 100px 100px;
-    grid-gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px 100px;
+  grid-gap: 10px;
 }
 ```
 
 ```html
 <div class="wrapper">
-    <div class="box1">Uno</div>
-    <div class="box2">Dos</div>
-    <div class="box3">Tres</div>
-    <div class="box4">Cuatro</div>
-    <div class="box5">Cinco</div>
-    <div class="box6">Seis</div>
+  <div class="box1">Uno</div>
+  <div class="box2">Dos</div>
+  <div class="box3">Tres</div>
+  <div class="box4">Cuatro</div>
+  <div class="box5">Cinco</div>
+  <div class="box6">Seis</div>
 </div>
 ```
 
-{{ EmbedLiveSample('Grid_1', '300', '330') }}
+{{ EmbedLiveSample('Establecer display: grid', '300', '330') }}
+
+### Colocar elementos en la cuadrícula
 
 Cuando ya tienes una cuadrícula, se puede colocar tus elementos en ella explícitamente en lugar de confiar en el comportamiento de colocación automática que hemos visto arriba. En el segundo ejemplo, hemos definido la misma cuadrícula, pero esta vez con tres elementos secundarios. Hemos establecido la línea de inicio y final de cada elemento con las propiedades {{cssxref ("grid-column")}} y {{cssxref ("grid-row")}}. Esto hace que los elementos abarquen varios tramos.
 
-## Ejemplo
-
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper > div {
-    border-radius: 5px;
-    background-color: rgb(207,232,220);
-    padding: 1em;
+  border-radius: 5px;
+  background-color: rgb(207, 232, 220);
+  padding: 1em;
 }
 ```
 
 ```css
 .wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 100px 100px;
-    grid-gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px 100px;
+  grid-gap: 10px;
 }
 
 .box1 {
-    grid-column: 2 / 4;
-    grid-row: 1;
+  grid-column: 2 / 4;
+  grid-row: 1;
 }
 
 .box2 {
-    grid-column: 1;
-    grid-row: 1 / 3;
+  grid-column: 1;
+  grid-row: 1 / 3;
 }
 
 .box3 {
-    grid-row: 2;
-    grid-column: 3;
+  grid-row: 2;
+  grid-column: 3;
 }
 ```
 
 ```html
 <div class="wrapper">
-    <div class="box1">Uno</div>
-    <div class="box2">Dos</div>
-    <div class="box3">Tres</div>
+  <div class="box1">Uno</div>
+  <div class="box2">Dos</div>
+  <div class="box3">Tres</div>
 </div>
 ```
 
-{{ EmbedLiveSample('Grid_2', '300', '330') }}
+{{ EmbedLiveSample('Colocar elementos en la cuadrícula', '300', '330') }}
 
 > **Nota:** Estos dos ejemplos son solo una pequeña parte del poder del diseño de cuadrículas; para obtener más información, consulta nuestro artículo sobre [Diseñar cuadrículas](/es/docs/Learn/CSS/CSS_layout/Grids).
 
@@ -265,21 +276,21 @@ En el ejemplo siguiente, establecemos una flotación a la izquierda para un elem
 
 ```css hidden
 body {
-width: 90%;
-max-width: 900px;
-margin: 0 auto;
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 p {
-line-height: 2;
-word-spacing: 0.1rem;
+  line-height: 2;
+  word-spacing: 0.1rem;
 }
 
 .box {
-background-color: rgb(207,232,220);
-border: 2px solid rgb(79,185,227);
-padding: 10px;
-border-radius: 5px;
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
+  padding: 10px;
+  border-radius: 5px;
 }
 ```
 
@@ -288,19 +299,29 @@ border-radius: 5px;
 
 <div class="box">Float</div>
 
-<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
+  dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus
+  ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus
+  laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum,
+  tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus
+  neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
+  volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros
+  pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec
+  lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+</p>
 ```
 
 ```css
 .box {
-    float: left;
-    width: 150px;
-    height: 150px;
-    margin-right: 30px;
+  float: left;
+  width: 150px;
+  height: 150px;
+  margin-right: 30px;
 }
 ```
 
-{{ EmbedLiveSample('Float_1', '100%', 600) }}
+{{ EmbedLiveSample('Floats', '100%', 600) }}
 
 > **Nota:** El método de flotación se explica al completo en nuestro artículo sobre [las propiedades float y clear](/es/docs/Learn/CSS/CSS_layout/Floats). El método de flotación es el que se usaba para crear diseños de columnas antes de la aparición de técnicas como los métodos Flexbox y diseño en rejillas. En la red aún puedes toparte con estos métodos. Vamos a exponer todo esto en el artículo sobre [métodos de diseño heredados](/es/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods).
 
@@ -339,17 +360,17 @@ body {
 }
 
 p {
-    background-color: rgb(207,232,220);
-    border: 2px solid rgb(79,185,227);
-    padding: 10px;
-    margin: 10px;
-    border-radius: 5px;
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
 }
 ```
 
 La salida que se obtiene es la siguiente:
 
-{{ EmbedLiveSample('Simple_positioning_example', '100%', 300) }}
+{{ EmbedLiveSample('Ejemplo sencillo de posicionamiento', '100%', 300) }}
 
 ### El posicionamiento relativo
 
@@ -371,36 +392,31 @@ Añadir este código dará el resultado siguiente:
 <h1>El posicionamiento relativo</h1>
 
 <p>Soy un elemento básico de nivel de bloque.</p>
-<p class="positioned">Este es mi elemento con posicionamiento relativo. </p>
+<p class="positioned">Este es mi elemento con posicionamiento relativo.</p>
 <p>Soy un elemento básico de nivel de bloque.</p>
 ```
 
 ```css hidden
 body {
-width: 500px;
-margin: 0 auto;
+  width: 500px;
+  margin: 0 auto;
 }
 
 p {
-background-color: rgb(207,232,220);
-border: 2px solid rgb(79,185,227);
-padding: 10px;
-margin: 10px;
-border-radius: 5px;
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
 }
-```
 
-```css
 .positioned {
-  position: relative;
-  background: rgba(255,84,104,.3);
-  border: 2px solid rgb(255,84,104);
-  top: 30px;
-  left: 30px;
+  background: rgb(255 84 104 / 30%);
+  border: 2px solid rgb(255 84 104);
 }
 ```
 
-{{ EmbedLiveSample('Relative_1', '100%', 300) }}
+{{ EmbedLiveSample('El posicionamiento relativo', '100%', 300) }}
 
 ### El posicionamiento absoluto
 
@@ -422,36 +438,31 @@ Aquí le damos a la propiedad {{cssxref ("position")}} de nuestro párrafo del m
 <h1>Posicionamiento absoluto</h1>
 
 <p>Soy un elemento básico de nivel de bloque.</p>
-<p class="positioned">Este es mi elemento con posicionamiento absoluto. </p>
+<p class="positioned">Este es mi elemento con posicionamiento absoluto.</p>
 <p>Soy un elemento básico de nivel de bloque.</p>
 ```
 
 ```css hidden
 body {
-width: 500px;
-margin: 0 auto;
+  width: 500px;
+  margin: 0 auto;
 }
 
 p {
-background-color: rgb(207,232,220);
-border: 2px solid rgb(79,185,227);
-padding: 10px;
-margin: 10px;
-border-radius: 5px;
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
 }
-```
 
-```css
 .positioned {
-    position: absolute;
-    background: rgba(255,84,104,.3);
-    border: 2px solid rgb(255,84,104);
-    top: 30px;
-    left: 30px;
+  background: rgb(255 84 104 / 30%);
+  border: 2px solid rgb(255 84 104);
 }
 ```
 
-{{ EmbedLiveSample('Absolute_1', '100%', 300) }}
+{{ EmbedLiveSample('El posicionamiento absoluto', '100%', 300) }}
 
 ¡Este resultado es muy diferente! El elemento posicionado ahora se ha separado por completo del resto del diseño de la página y se superpone encima de este. Los otros dos párrafos ahora se asientan juntos, como si su hermano con posicionamiento absoluto no existiera. Las propiedades {{cssxref ("top")}} y {{cssxref ("left")}} tienen un efecto diferente en elementos con posicionamiento absoluto que en elementos con posicionamiento relativo. En este caso, los desplazamientos se han calculado desde la parte superior e izquierda de la página. Es posible cambiar el elemento padre para que se convierta en este tipo de contenedor, y lo veremos en el artículo sobre [posicionamiento](/es/docs/Learn/CSS/CSS_layout/Positioning).
 
@@ -466,49 +477,65 @@ En este ejemplo nuestro HTML tiene tres párrafos de texto para poder tener una 
 
 <div class="positioned">Fijo</div>
 
-<p>Párrafo 1.</p>
-<p>Párrafo 2.</p>
-<p>Párrafo 3.</p>
-```
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
+  dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus
+  ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus
+  laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum,
+  tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus
+  neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
+  volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros
+  pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec
+  lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+</p>
 
-## Ejemplo
+<p>
+  Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+  ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+  est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+  tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus
+  sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+  vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+</p>
 
-```html hidden
-<h1>Posicionamiento fijo</h1>
-
-<div class="positioned">Fijo</div>
-
-<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
-
-<p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-
-<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
+  dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus
+  ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus
+  laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum,
+  tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus
+  neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
+  volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros
+  pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec
+  lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+</p>
 ```
 
 ```css hidden
 body {
-width: 500px;
-margin: 0 auto;
+  width: 500px;
+  margin: 0 auto;
 }
 
 .positioned {
-background: rgba(255,84,104,.3);
-border: 2px solid rgb(255,84,104);
-padding: 10px;
-margin: 10px;
-border-radius: 5px;
+  background: rgba(255, 84, 104, 0.3);
+  border: 2px solid rgb(255, 84, 104);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
 }
 ```
 
 ```css
 .positioned {
-    position: fixed;
-    top: 30px;
-    left: 30px;
+  position: fixed;
+  top: 30px;
+  left: 30px;
 }
 ```
 
-{{ EmbedLiveSample('Fixed_1', '100%', 200) }}
+{{ EmbedLiveSample('Posicionamiento fijo', '100%', 200) }}
 
 ### Posicionamiento pegajoso
 
@@ -517,27 +544,55 @@ El posicionamiento pegajoso es el último método de posicionamiento que tenemos
 ```html hidden
 <h1>Posicionamiento pegajoso</h1>
 
-<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
+  dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus
+  ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus
+  laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum,
+  tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus
+  neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
+  volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros
+  pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec
+  lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+</p>
 
 <div class="positioned">Pegajoso</div>
 
-<p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+<p>
+  Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+  ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+  est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+  tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus
+  sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+  vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+</p>
 
-<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p> 
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
+  dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus
+  ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus
+  laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum,
+  tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus
+  neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
+  volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros
+  pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec
+  lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+</p>
 ```
 
 ```css hidden
 body {
-width: 500px;
-margin: 0 auto;
+  width: 500px;
+  margin: 0 auto;
 }
 
 .positioned {
-background: rgba(255,84,104,.3);
-border: 2px solid rgb(255,84,104);
-padding: 10px;
-margin: 10px;
-border-radius: 5px;
+  background: rgba(255, 84, 104, 0.3);
+  border: 2px solid rgb(255, 84, 104);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
 }
 ```
 
@@ -549,7 +604,7 @@ border-radius: 5px;
 }
 ```
 
-{{ EmbedLiveSample('Sticky_1', '100%', 200) }}
+{{ EmbedLiveSample('Posicionamiento pegajoso', '100%', 200) }}
 
 > **Nota:** para obtener más información sobre el posicionamiento, consulta nuestro artículo [Posicionamiento](/es/docs/Learn/CSS/CSS_layout/Positioning).
 
@@ -568,15 +623,15 @@ Veamos un ejemplo. Primero, un código de marcado sencillo que crea un formulari
   <p>En primer lugar, díganos su nombre y edad.</p>
   <div>
     <label for="fname">Nombre:</label>
-    <input type="text" id="fname">
+    <input type="text" id="fname" />
   </div>
   <div>
     <label for="lname">Apellidos:</label>
-    <input type="text" id="lname">
+    <input type="text" id="lname" />
   </div>
   <div>
     <label for="age">Edad:</label>
-    <input type="text" id="age">
+    <input type="text" id="age" />
   </div>
 </form>
 ```
@@ -599,7 +654,8 @@ form div {
   display: table-row;
 }
 
-form label, form input {
+form label,
+form input {
   display: table-cell;
   margin-bottom: 10px;
 }
@@ -625,7 +681,7 @@ form p {
 
 Esto nos da el resultado siguiente:
 
-{{ EmbedLiveSample('Table_layout', '100%', '170') }}
+{{ EmbedLiveSample('Diseño de tablas', '100%', '170') }}
 
 También puedes ver este ejemplo en vivo en [css-tables-example.html](https://mdn.github.io/learning-area/css/styling-boxes/box-model-recap/css-tables-example.html) (ver el [código fuente](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/box-model-recap/css-tables-example.html)).
 
@@ -639,41 +695,47 @@ En el ejemplo siguiente comenzamos con un bloque de HTML dentro de un elemento `
 
 ```html
 <div class="container">
-    <H1>Diseño en columnas</ h1>
+  <h1>Diseño en columnas</h1>
 
-    <p>Párrafo 1.</p>
-    <p>Párrafo 2.</p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+    aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+    pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at
+    ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer
+    ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur
+    vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus.
+    Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus
+    sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus.
+    Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis,
+    eget fermentum sapien.
+  </p>
 
-</div>
-```
-
-## Ejemplo
-
-Utilizamos un `column-width` de 200 píxeles en ese contenedor, que crea en el navegador tantas columnas de 200 píxeles como quepan en el contenedor y luego comparte el espacio restante entre las columnas creadas.
-
-```html hidden
-<div class="container">
-    <h1> Diseño en columnas </h1>
-
-    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
-
-
-    <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-
+  <p>
+    Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+    ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+    est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+    tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies
+    lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+    vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+    penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+  </p>
 </div>
 ```
 
 ```css hidden
-body { max-width: 800px; margin: 0 auto; }
+body {
+  max-width: 800px;
+  margin: 0 auto;
+}
 ```
 
 ```css
 .container {
-    column-width: 200px;
+  column-width: 200px;
 }
 ```
 
-{{ EmbedLiveSample('Multicol_1', '100%', 200) }}
+{{ EmbedLiveSample('Diseño en columnas', '100%', 200) }}
 
 ## Resumen
 

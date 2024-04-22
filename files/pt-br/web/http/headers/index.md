@@ -236,7 +236,7 @@ O recurso HTTP [Client hints](/pt-BR/docs/Glossary/Client_hints) ainda está em 
 - {{HTTPHeader("Strict-Transport-Security")}} ({{Glossary("HSTS")}})
   - : Force communication using HTTPS instead of HTTP.
 - {{HTTPHeader("Upgrade-Insecure-Requests")}}
-  - : Sends a signal to the server expressing the client’s preference for an encrypted and authenticated response, and that it can successfully handle the {{CSP("upgrade-insecure-requests")}} directive.
+  - : Sends a signal to the server expressing the client's preference for an encrypted and authenticated response, and that it can successfully handle the {{CSP("upgrade-insecure-requests")}} directive.
 - {{HTTPHeader("X-Content-Type-Options")}}
   - : Disables MIME sniffing and forces browser to use the type given in {{HTTPHeader("Content-Type")}}.
 - {{HTTPHeader("X-Frame-Options")}} (XFO)

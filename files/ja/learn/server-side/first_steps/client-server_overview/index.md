@@ -15,7 +15,7 @@ slug: Learn/Server-side/First_steps/Client-Server_overview
 
 ## Web サーバと HTTP (入門書)
 
-Web ブラウザーは、**H**yper**T**ext **T**ransfer **P**rotocol ([HTTP](/ja/docs/Web/HTTP)) を使用して [Web サーバ](/ja/docs/Learn/Common_questions/What_is_a_web_server)と通信します。Web ページのリンクをクリックしたり、フォームを送信したり、検索を実行したりすると、ブラウザーは *HTTP リクエスト*をサーバに送信します。
+Web ブラウザーは、**H**yper**T**ext **T**ransfer **P**rotocol ([HTTP](/ja/docs/Web/HTTP)) を使用して [Web サーバ](/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)と通信します。Web ページのリンクをクリックしたり、フォームを送信したり、検索を実行したりすると、ブラウザーは *HTTP リクエスト*をサーバに送信します。
 
 このリクエストに含まれるもの:
 
@@ -97,7 +97,7 @@ HTTP リクエストもボディを持つことができますが、この場合
 
 メッセージの最後に **body** があります。これにはリクエストによって返された実際の HTML が含まれています。
 
-```html
+```http
 HTTP/1.1 200 OK
 Server: Apache
 X-Backend-Server: developer1.webapp.scl3.mozilla.com
@@ -110,8 +110,6 @@ X-Frame-Options: DENY
 Allow: GET
 X-Cache-Info: caching
 Content-Length: 41823
-
-
 
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr" class="redesign no-js"  data-ffo-opensanslight=false data-ffo-opensans=false >
@@ -132,7 +130,7 @@ HTTP `POST` は、サーバに保存する情報を含むフォームを送信�
 
 以下のテキストは、ユーザがこのサイトに新しいプロファイルの詳細を送信したときに行われる HTTP リクエストを示しています。最初の行はこのリクエストを `POST` として識別しますが、リクエストのフォーマットは前述の `GET` リクエストの例とほぼ同じです。
 
-```html
+```http
 POST https://developer.mozilla.org/en-US/profiles/hamishwillee/edit HTTP/1.1
 Host: developer.mozilla.org
 Connection: keep-alive
@@ -158,7 +156,7 @@ csrfmiddlewaretoken=zIPUJsAZv6pcgCBJSCj1zU6pQZbfMUAT&user-username=hamishwillee&
 
 リクエストからのレスポンスは以下のとおりです。ステータスコード "`302 Found`" は、投稿が成功したこと、および `Location` フィールドで指定されたページを読み込むために 2 番目の HTTP リクエストを発行する必要があることをブラウザーに通知します。その他の点では、この情報は GET リクエストへのレスポンスに関する情報と似ています。
 
-```html
+```http
 HTTP/1.1 302 FOUND
 Server: Apache
 X-Backend-Server: developer3.webapp.scl3.mozilla.com
@@ -174,7 +172,7 @@ X-Cache-Info: not cacheable; request wasn't a GET or HEAD
 Content-Length: 0
 ```
 
-> **メモ:** これらの例に示されている HTTP レスポンスとリクエストは [Fiddler](https://www.telerik.com/download/fiddler) アプリケーションを使ってキャプチャされました、しかしあなたはウェブスニファ (例えば [Websniffer](http://websniffer.cc/)) または [HttpFox](https://addons.mozilla.org/en-US/firefox/addon/httpfox/) のようなブラウザー拡張を使って同様の情報を得ることができます。あなたはこれを自分で試すことができます。リンクされているツールを使用してから、サイト内を移動してプロファイル情報を編集し、さまざまなリクエストとレスポンスを確認します。最近のほとんどのブラウザーには、ネットワーク要求を監視するツール (たとえば、Firefox の[ネットワークモニタツール](/ja/docs/Tools/Network_Monitor)) もあります。
+> **メモ:** これらの例に示されている HTTP レスポンスとリクエストは [Fiddler](https://www.telerik.com/download/fiddler) アプリケーションを使ってキャプチャされました、しかしあなたはウェブスニファ (例えば [WebSniffer](https://websniffer.com/)) または [HttpFox](https://addons.mozilla.org/en-US/firefox/addon/httpfox/) のようなブラウザー拡張を使って同様の情報を得ることができます。あなたはこれを自分で試すことができます。リンクされているツールを使用してから、サイト内を移動してプロファイル情報を編集し、さまざまなリクエストとレスポンスを確認します。最近のほとんどのブラウザーには、ネットワーク要求を監視するツール (たとえば、Firefox の[ネットワークモニタツール](/ja/docs/Tools/Network_Monitor)) もあります。
 
 ## 静的サイト
 

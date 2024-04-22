@@ -100,7 +100,7 @@ Content-Security-Policy: default-src 'self'; img-src *; media-src example.org ex
 
 この例では、コンテンツのデフォルト設定としてドキュメント自身のホストのみを許可していますが、以下の例外を認めています。
 
-- 画像は任意の場所から読み込まれます（ワイルドカード "*" による指定に注意）。
+- 画像は任意の場所から読み込まれます（ワイルドカード "\*" による指定に注意）。
 - メディアは example.org と example.net のものだけが許可されます（ただしサブドメインは許可されません）。
 - 実行可能なスクリプトは userscripts.example.com のものだけ許可されます。
 
@@ -183,7 +183,7 @@ Content-Security-Policy: default-src 'none'; style-src cdn.example.com; report-u
 `signup.html` の内容は次の通りです。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />

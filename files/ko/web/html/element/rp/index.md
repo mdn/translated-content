@@ -1,5 +1,5 @@
 ---
-title: '<rp>: 루비 대체 괄호 요소'
+title: "<rp>: 루비 대체 괄호 요소"
 slug: Web/HTML/Element/rp
 ---
 
@@ -62,9 +62,8 @@ slug: Web/HTML/Element/rp
 
 ```html
 <ruby>
-  景 <rp>(</rp><rt>경</rt><rp>)</rp>
-  福 <rp>(</rp><rt>복</rt><rp>)</rp>
-  宮 <rp>(</rp><rt>궁</rt><rp>)</rp>
+  景 <rp>(</rp><rt>경</rt><rp>)</rp> 福 <rp>(</rp><rt>복</rt><rp>)</rp> 宮
+  <rp>(</rp><rt>궁</rt><rp>)</rp>
 </ruby>
 ```
 

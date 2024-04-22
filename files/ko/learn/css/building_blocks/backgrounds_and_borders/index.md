@@ -22,11 +22,11 @@ slug: Learn/CSS/Building_blocks/Backgrounds_and_borders
           >파일 작업</a
         >
         에 대한 기본 지식, HTML 기본 사항 (<a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+          href="/ko/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 소개</a
         >
         학습) 및 , CSS 작동 방식 이해 (<a
-          href="/en-US/docs/Learn/CSS/First_steps"
+          href="/ko/docs/Learn/CSS/First_steps"
           >CSS 첫 번째 단계</a
         >
         학습)
@@ -45,8 +45,14 @@ CSS {{cssxref("background")}} 속성은 이 수업에서 만나게 될 많은 ba
 
 ```css
 .box {
-  background: linear-gradient(105deg, rgba(255,255,255,.2) 39%, rgba(51,56,57,1) 96%) center center / 400px 200px no-repeat,
-  url(big-star.png) center no-repeat, rebeccapurple;
+  background:
+    linear-gradient(
+        105deg,
+        rgba(255, 255, 255, 0.2) 39%,
+        rgba(51, 56, 57, 1) 96%
+      ) center center / 400px 200px no-repeat,
+    url(big-star.png) center no-repeat,
+    rebeccapurple;
 }
 ```
 
@@ -54,7 +60,7 @@ CSS {{cssxref("background")}} 속성은 이 수업에서 만나게 될 많은 ba
 
 ### 배경 색상
 
-{{cssxref("background-color")}} 속성은 CSS 의 모든 요소에 대한 배경색을 정의합니다. 이 속성은 유효한 [`<color>`](/en-US/docs/Web/CSS/color_value) 를 허용합니다. `background-color` 는 요소의 내용 및 패딩 박스 아래로 확장됩니다.
+{{cssxref("background-color")}} 속성은 CSS 의 모든 요소에 대한 배경색을 정의합니다. 이 속성은 유효한 [`<color>`](/ko/docs/Web/CSS/color_value) 를 허용합니다. `background-color` 는 요소의 내용 및 패딩 박스 아래로 확장됩니다.
 
 아래 예에서는 다양한 색상 값을 사용하여 박스, 제목 및 {{htmlelement("span")}} 요소에 배경색을 추가했습니다.
 
@@ -74,7 +80,7 @@ CSS {{cssxref("background")}} 속성은 이 수업에서 만나게 될 많은 ba
 
 #### 배경 이미지 반복 제어
 
-{{cssxref("background-repeat")}} 속성은 이미지의 타일링 동작을 제어하는 데 사용됩니다. 사용 가능한 값은 다음과 같습니다:
+{{cssxref("background-repeat")}} 속성은 이미지의 타일링 동작을 제어하는 데 사용됩니다. 사용 가능한 값은 다음과 같습니다.
 
 - `no-repeat` — 배경이 반복되지 않도록 합니다.
 - `repeat-x` — 수평으로 반복합니다.
@@ -89,7 +95,7 @@ CSS {{cssxref("background")}} 속성은 이 수업에서 만나게 될 많은 ba
 
 위의 예에서 배경의 요소보다 커서, 이미지가 크게 잘립니다. 이 경우 [길이](/ko/docs/Web/CSS/length) 나 [백분율](/ko/docs/Web/CSS/percentage) 값을 취할 수 있는 {{cssxref("background-size")}} 속성을 사용하여 이미지 크기를 배경 안에 맞출 수 있습니다.
 
-키워드를 사용할 수도 있습니다:
+키워드를 사용할 수도 있습니다.
 
 - `cover` — 브라우저는 이미지를 박스 면적을 완전히 덮으면서 가로 세로 비율을 유지하며 이미지를 충분히 크게 만듭니다. 이 경우 일부 이미지가 박스 외부에 있을 수 있습니다.
 - `contain` — 브라우저는 이미지를 박스 안에 들어가기에 적합한 크기로 만듭니다. 이 경우 이미지의 종횡비가 박스의 종횡비와 다른 경우, 이미지의 한쪽 또는 위쪽과 아래쪽에 간격이 생길 수 있습니다.
@@ -112,7 +118,7 @@ CSS {{cssxref("background")}} 속성은 이 수업에서 만나게 될 많은 ba
 
 가장 일반적인 `background-position` 값은 — 수평 값과 수직 값의 두 가지 개별 값을 갖습니다.
 
-`top` 및 `right` ({{cssxref("background-image")}} 페이지에서 다른 키워드를 찾으십시오) 와 같은 키워드를 사용 할 수 있습니다:
+`top` 및 `right` ({{cssxref("background-image")}} 페이지에서 다른 키워드를 찾으십시오) 와 같은 키워드를 사용 할 수 있습니다.
 
 ```css
 .box {
@@ -132,7 +138,7 @@ CSS {{cssxref("background")}} 속성은 이 수업에서 만나게 될 많은 ba
 }
 ```
 
-키워드 값을 길이 또는 백분율과 혼합할 수도 있습니다. 예를 들면:
+키워드 값을 길이 또는 백분율과 혼합할 수도 있습니다. 예를 들면 아래와 같습니다.
 
 ```css
 .box {
@@ -142,7 +148,7 @@ CSS {{cssxref("background")}} 속성은 이 수업에서 만나게 될 많은 ba
 }
 ```
 
-마지막으로, 박스의 특정 모서리로 부터의 거리를 나타내기 위해 4 값 구문을 사용할 수도 있습니다 — 이 경우 길이 단위는 앞에 오는 값과의 offset 입니다. 아래 CSS 에서 우리는 배경을 위쪽에서 20px, 오른쪽에서 10px 로 배치합니다:
+마지막으로, 박스의 특정 모서리로 부터의 거리를 나타내기 위해 4 값 구문을 사용할 수도 있습니다 — 이 경우 길이 단위는 앞에 오는 값과의 offset 입니다. 아래 CSS 에서 우리는 배경을 위쪽에서 20px, 오른쪽에서 10px 로 배치합니다.
 
 ```css
 .box {
@@ -162,7 +168,7 @@ CSS {{cssxref("background")}} 속성은 이 수업에서 만나게 될 많은 ba
 
 배경에 사용될 때 — Gradient — 는 이미지 처럼 작동하며 {{cssxref("background-image")}} 속성을 사용하여 설정 됩니다.
 
-[`<gradient>`](/en-US/docs/Web/CSS/gradient) 데이터 유형에 대한 MDN 페이지에서 다양한 유형의 그라디언트 및 그라디언트로 수행 할 수 있는 작업에 대한 자세한 내용을 읽을 수 있습니다. 그라디언트를 재생하는 재미있는 방법은 웹에서 사용할 수 있는 많은 CSS 그라디언트 생성기 중 [하나](https://cssgradient.io/) 를 사용하는 것입니다. 그라디언트를 생성한 다음 이를 생성하는 소스 코드를 복사하여 붙여 넣을 수 있습니다.
+[`<gradient>`](/ko/docs/Web/CSS/gradient) 데이터 유형에 대한 MDN 페이지에서 다양한 유형의 그라디언트 및 그라디언트로 수행 할 수 있는 작업에 대한 자세한 내용을 읽을 수 있습니다. 그라디언트를 재생하는 재미있는 방법은 웹에서 사용할 수 있는 많은 CSS 그라디언트 생성기 중 [하나](https://cssgradient.io/) 를 사용하는 것입니다. 그라디언트를 생성한 다음 이를 생성하는 소스 코드를 복사하여 붙여 넣을 수 있습니다.
 
 아래 예제에서 다른 그라디언트를 사용해 보십시오. 두 개의 박스에는 각각 전체 박스에 걸쳐 펼쳐지는 선형 그라디언트와 설정된 크기의 방사형 그라디언트가 있습니다. 따라서 반복됩니다.
 
@@ -176,12 +182,15 @@ CSS {{cssxref("background")}} 속성은 이 수업에서 만나게 될 많은 ba
 
 > **참고:** 그라디언트는 일반 배경 이미지와 혼합될 수 있습니다.
 
-다른 `background-*` 속성은 `background-image` 와 같은 방식으로 쉼표로 구분된 값을 가질 수도 있습니다:
+다른 `background-*` 속성은 `background-image` 와 같은 방식으로 쉼표로 구분된 값을 가질 수도 있습니다.
 
 ```css
-background-image: url(image1.png), url(image2.png), url(image3.png), url(image1.png);
+background-image: url(image1.png), url(image2.png), url(image3.png),
+  url(image1.png);
 background-repeat: no-repeat, repeat-x, repeat;
-background-position: 10px 20px,  top right;
+background-position:
+  10px 20px,
+  top right;
 ```
 
 다른 속성의 각 값은 다른 속성의 같은 위치에 있는 값과 일치합니다. 예를 들어, `image1` 의 `background-repeat` 값은 `no-repeat` 입니다. 그러나, 다른 속성의 값이 다른 경우 어떻게 됩니까? 답은 더 적은 수의 값이 순환한다는 것입니다 — 위의 예에서는 4 개의 배경 이미지가 있지만 2 개의 `background-position` 값만 있습니다. 처음 두 위치 값은 처음 두 이미지에 적용되고 다시 순환됩니다 — `image3` 에는 첫 번째 위치값이 제공되고, `image4` 에는 두 번째 위치값이 제공됩니다.
@@ -192,7 +201,7 @@ background-position: 10px 20px,  top right;
 
 ### 배경 첨부 (attachment)
 
-배경에 사용할 수 있는 또 다른 옵션은 내용이 스크롤될 때 스크롤하는 방법을 지정하는 것입니다. 이는 {{cssxref("background-attachment")}} 속성을 사용하여 제어되며, 다음 값을 사용할 수 있습니다:
+배경에 사용할 수 있는 또 다른 옵션은 내용이 스크롤될 때 스크롤하는 방법을 지정하는 것입니다. 이는 {{cssxref("background-attachment")}} 속성을 사용하여 제어되며, 다음 값을 사용할 수 있습니다.
 
 - `scroll`: 페이지가 스크롤될 때 요소의 배경이 스크롤 되도록 합니다. 요소 내용이 스크롤되면, 배경이 움직이지 않습니다. 실제로 배경은 페이지에서 동일한 위치로 고정되므로, 페이지가 스크롤될 때 스크롤 됩니다.
 - `fixed`: 요소의 배경을 viewport 에 고정시켜, 페이지나 요소 내용을 스크롤할 때 스크롤되지 않도록 합니다. 항상 화면에서 동일한 위치에 유지됩니다.
@@ -225,7 +234,7 @@ background-position: 10px 20px,  top right;
 
 박스 모델에 대해 알아볼 때, 테두리가 박스 크기에 어떤 영향을 미치는지 알아 냈습니다. 이 수업에서는 테두리를 창의적으로 사용하는 방법을 살펴봅니다. 일반적으로 CSS 를 사용하여 요소에 테두리를 추가할 때는, CSS 의 한 라인에 테두리의 색상, 너비 및 스타일을 설정하는 속기 속성을 사용합니다.
 
-{{cssxref("border")}} 를 사용하여 박스의 네 면 모두에 테두리를 설정할 수 있습니다:
+{{cssxref("border")}} 를 사용하여 박스의 네 면 모두에 테두리를 설정할 수 있습니다.
 
 ```css
 .box {
@@ -241,7 +250,7 @@ background-position: 10px 20px,  top right;
 }
 ```
 
-이러한 속기의 개별 속성은 다음과 같습니다:
+이러한 속기의 개별 속성은 다음과 같습니다.
 
 ```css
 .box {
@@ -251,7 +260,7 @@ background-position: 10px 20px,  top right;
 }
 ```
 
-그리고 longhands 는 다음과 같습니다:
+그리고 longhands 는 다음과 같습니다.
 
 ```css
 .box {
@@ -271,7 +280,7 @@ background-position: 10px 20px,  top right;
 
 박스의 둥근 테두리는 {{cssxref("border-radius")}} 속성 과 박스의 각 모서리와 관련되 관련 longhands 를 사용하여 수행됩니다. 두 개의 길이 또는 백분율을 값으로 사용할 수 있습니다. 첫 번째 값은 가로 반경을 정의하고 두 번째 값은 세로 반경을 정의합니다. 많은 경우에 하나의 값만 전달하면 둘 다에 사용됩니다.
 
-예를 들어, 박스의 네 모서리를 모두 10px radius 로 만들려면:
+예를 들어, 박스의 네 모서리를 모두 10px radius 로 만들려면 아래와 같습니다.
 
 ```css
 .box {
@@ -279,7 +288,7 @@ background-position: 10px 20px,  top right;
 }
 ```
 
-또는 오른쪽 상단 모서리의 가로 반경이 1em 이고, 세로 반경이 10% 가 되도록 하려면:
+또는 오른쪽 상단 모서리의 가로 반경이 1em 이고, 세로 반경이 10% 가 되도록 하려면 아래와 같습니다.
 
 ```css
 .box {
@@ -293,7 +302,7 @@ background-position: 10px 20px,  top right;
 
 ## 배경과 테두리로 실습하기
 
-새로운 지식을 테스트하려면 아래 예제를 시작점으로 사용하여 배경과 테두리를 사용하여 다음을 작성하십시오:
+새로운 지식을 테스트하려면 아래 예제를 시작점으로 사용하여 배경과 테두리를 사용하여 다음을 작성하십시오.
 
 1. 박스에 둥근 모서리가 10px 인, 5px 검은색 단색 테두리를 지정하십시오.
 2. 배경 이미지를 추가하고 (URL `balloons.jpg` 사용) 박스를 덮도록 크기를 조정하십시오.

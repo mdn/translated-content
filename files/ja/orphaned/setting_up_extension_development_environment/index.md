@@ -1,7 +1,6 @@
 ---
 title: Setting up extension development environment
 slug: orphaned/Setting_up_extension_development_environment
-original_slug: Setting_up_extension_development_environment
 ---
 
 この記事では、あなたの Mozilla アプリケーションにおいて拡張機能の開発を容易にするためのノウハウを提案します。
@@ -50,7 +49,7 @@ start "" "%ProgramFiles%\Mozilla Firefox\firefox.exe" -no-remote -P dev
 
 1. 拡張機能に含まれる install.rdf から拡張機能の ID を見つける
 2. プロファイルディレクトリ/extensions/ に、ファイル名をその ID にしたファイルを作成する (例: \`your_profile_directory/extensions/{46D1B3C0-DB7A-4b1a-863A-6EE6F77ECB58}\`) (<http://kb.mozillazine.org/Profile_folder> プロファイルディレクトリの場所])
-3. そのファイルの内容に install.rdf ファイルを格納するフォルダへのパスを書き込む (例: \`/full/path/to/yourExtension\` Windows ユーザはスラッシュではなくバックスラッシュを使ってください。 例: \`\full\path\to\yourExtension\`)
+3. そのファイルの内容に install.rdf ファイルを格納するフォルダへのパスを書き込む (例: \`/full/path/to/yourExtension\` Windows ユーザーはスラッシュではなくバックスラッシュを使ってください。 例: \`\full\path\to\yourExtension\`)
 4. ファイルをプロファイルの extensions フォルダに置いて、アプリケーションを再起動する
 
 ### JAR ファイルの代わりにディレクトリを使用

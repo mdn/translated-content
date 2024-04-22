@@ -17,9 +17,9 @@ scroll(options)
 ### Parâmetros
 
 - `x-coord` é o pixel ao longo do eixo horizontal do documento que você
-   deseja exibido no canto superior esquerdo.
+  deseja exibido no canto superior esquerdo.
 - `y-coord` é o pixel ao longo do eixo vertical do documento que você
-   deseja exibido no canto superior esquerdo.
+  deseja exibido no canto superior esquerdo.
 
 \- ou -
 

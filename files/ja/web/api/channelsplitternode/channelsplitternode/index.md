@@ -28,16 +28,16 @@ new ChannelSplitterNode(context, options)
       - : {{domxref("ChannelSplitterNode")}} の出力の数を決める数値です。指定しない場合の既定の値は 6 です。
     - `channelCount` {{optional_inline}}
       - : このノードの入力について[アップミキシングとダウンミキシング](/ja/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#%E3%82%A2%E3%83%83%E3%83%97%E3%83%9F%E3%82%AD%E3%82%B7%E3%83%B3%E3%82%B0%E3%81%A8%E3%83%80%E3%82%A6%E3%83%B3%E3%83%9F%E3%82%AD%E3%82%B7%E3%83%B3%E3%82%B0)を行う際に用いるチャンネル数を決める整数です。
-      (詳しくは {{domxref("AudioNode.channelCount")}} を参照してください)
-      使用法と正確な定義は `channelCountMode` の値によります。
+        (詳しくは {{domxref("AudioNode.channelCount")}} を参照してください)
+        使用法と正確な定義は `channelCountMode` の値によります。
     - `channelCountMode` {{optional_inline}}
       - : ノードの入力と出力でチャンネルを対応付ける方法を表す文字列です。
-          (デフォルト値など詳しくは {{domxref("AudioNode.channelCountMode")}} を参照してください)
+        (デフォルト値など詳しくは {{domxref("AudioNode.channelCountMode")}} を参照してください)
     - `channelInterpretation` {{optional_inline}}
       - : チャンネルの意味を表す文字列です。
-          この意味により、音声の[アップミキシングとダウンミキシング](/ja/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#%E3%82%A2%E3%83%83%E3%83%97%E3%83%9F%E3%82%AD%E3%82%B7%E3%83%B3%E3%82%B0%E3%81%A8%E3%83%80%E3%82%A6%E3%83%B3%E3%83%9F%E3%82%AD%E3%82%B7%E3%83%B3%E3%82%B0)を行う方法が決まります。
-          取りうる値は `"speakers"` と `"discrete"` です。
-          (デフォルト値など詳しくは {{domxref("AudioNode.channelCountMode")}} を参照してください)
+        この意味により、音声の[アップミキシングとダウンミキシング](/ja/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#%E3%82%A2%E3%83%83%E3%83%97%E3%83%9F%E3%82%AD%E3%82%B7%E3%83%B3%E3%82%B0%E3%81%A8%E3%83%80%E3%82%A6%E3%83%B3%E3%83%9F%E3%82%AD%E3%82%B7%E3%83%B3%E3%82%B0)を行う方法が決まります。
+        取りうる値は `"speakers"` と `"discrete"` です。
+        (デフォルト値など詳しくは {{domxref("AudioNode.channelCountMode")}} を参照してください)
 
 ### 返値
 

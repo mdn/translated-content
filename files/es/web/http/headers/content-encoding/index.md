@@ -9,9 +9,9 @@ La cabecera **`Content-Encoding`** es usada para comprimir el media-type. Cuando
 
 Se recomienda comprimir los datos tanto como sea posible y por lo tanto utilizar este campo, pero algunos tipos de recursos, como imágenes JPEG, ya están comprimidos. A veces, el uso de compresión adicional no reduce el tamaño de la petición e incluso puede hacer que la petición sea más larga.
 
-| Header type                                      | {{Glossary("Entity header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| Header type                           | {{Glossary("Entity header")}} |
+| ------------------------------------- | ----------------------------- |
+| {{Glossary("Forbidden header name")}} | no                            |
 
 ## Sintaxis
 
@@ -57,10 +57,10 @@ Ten en cuenta que el servidor no está obligado a usar algun método de compresi
 
 ## Especificaciones
 
-| Especificación                                               | Título                                                        |
-| ------------------------------------------------------------ | ------------------------------------------------------------- |
-| {{RFC("7231", "Content-Encoding", "3.1.2.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semántica y Contenido |
-| <http://www.ietf.org/id/draft-alakuijala-brotli>             | Formato de datos comprimidos Brotli                           |
+| Especificación                                   | Título                                                        |
+| ------------------------------------------------ | ------------------------------------------------------------- |
+| {{RFC("7231", "Content-Encoding", "3.1.2.2")}}   | Hypertext Transfer Protocol (HTTP/1.1): Semántica y Contenido |
+| <http://www.ietf.org/id/draft-alakuijala-brotli> | Formato de datos comprimidos Brotli                           |
 
 ## Compatibilidad con los navegadores
 

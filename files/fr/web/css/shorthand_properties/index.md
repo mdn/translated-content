@@ -1,163 +1,130 @@
 ---
 title: Propriétés raccourcies
 slug: Web/CSS/Shorthand_properties
-tags:
-  - CSS
-  - Guide
-  - Reference
-translation_of: Web/CSS/Shorthand_properties
-original_slug: Web/CSS/Propriétés_raccourcies
+l10n:
+  sourceCommit: be7a098e6af7b820c06a2d5169a9221ee2065e82
 ---
 
 {{CSSRef}}
 
-_Les propriétés raccourcies sont des propriétés CSS qui permettent de définir la valeur de plusieurs propriétés via une seule déclaration. En manipulant des propriétés raccourcies, un développeur web peut créer des feuilles de style plus concises et plus lisibles, améliorant ainsi la maintenabilité_.
+**_Les propriétés raccourcies_** sont des propriétés CSS permettant de paramétrer simultanément les valeurs de plusieurs propriétés CSS. Utiliser une propriété raccourcie permet d'obtenir des feuilles de style plus concises (et souvent plus lisibles).
 
-La spécification CSS définit les propriétés raccourcies en regroupant la définition des propriétés agissant sur le même aspect de l'élément. Ainsi, la propriété {{cssxref("background")}} est une propriété raccourcie qui permettra de définir {{cssxref("background-color")}}, {{cssxref("background-image")}}, {{cssxref("background-repeat")}} et {{cssxref("background-position")}}. De même, les propriétés fréquemment utilisées pour la mise en forme des polices de caractères (_font_) peuvent être définies via la propriété raccourcie {{cssxref("font")}} et celles qui concernent la marge avec la propriété raccourcie {{cssxref("margin")}}.
+La spécification CSS définit des propriétés raccourcies qui regroupent des propriétés courantes portant sur le même thème. Ainsi, la propriété [`background`](/fr/docs/Web/CSS/background) est une propriété raccourcie qui permet de définir les valeurs de [`background-color`](/fr/docs/Web/CSS/background-color), [`background-image`](/fr/docs/Web/CSS/background-image), [`background-repeat`](/fr/docs/Web/CSS/background-repeat), et [`background-position`](/fr/docs/Web/CSS/background-position). De la même façon, la plupart des propriétés communes relatives aux polices peuvent être définies grâce à la propriété raccourcie [`font`](/fr/docs/Web/CSS/font), et celles portant sur les marges autour d'une boîte peuvent être paramétrées grâce à la propriété raccourcie [`margin`](/fr/docs/Web/CSS/margin).
 
-## Quelques cas aux limites épineux
+## Quelques cas aux limites délicats
 
-Bien que les propriétés raccourcies soient pratiques à utiliser. Il est nécessaire de noter certains éléments pour parer aux cas étranges qui peuvent survenir :
+Il existe quelques cas aux limites qu'il convient de garder à l'esprit lorsqu'on utilise les propriétés raccourcies.
 
-1. Une valeur qui n'est pas définie pour la propriété raccourcie **sera réinitialisée avec sa valeur initiale**. Cela peut sembler anecdotique mais attention aux valeurs qui seront surchargées et à l'ordre des déclarations. Ainsi :
+### L'omission de propriétés
 
-    ```css
-    background-color: red;
-    background: url(images/bg.gif) no-repeat top right;
-    ```
+Lorsqu'une valeur n'est pas fournie dans la propriété raccourcie, la propriété correspondante utilise alors sa valeur initiale. Cela signifie que la déclaration de la propriété raccourcie **l'emportera** sur les valeurs des éventuelles déclarations précédentes. Prenons par exemple&nbsp;:
 
-    ne définira pas la couleur d'arrière-plan en rouge mais avec la valeur par défaut de {{cssxref("background-color")}} `transparent` car la deuxième déclaration prend le pas sur la première.
+```css
+p {
+  background-color: red;
+  background: url(images/bg.gif) no-repeat left top;
+}
+```
 
-2. L'héritage des propriétés ne peut avoir lieu qu'avec les propriétés individuelles . En effet, les valeurs absentes sont remplacées par leurs valeurs initiales et il est donc impossible d'hériter des valeurs en les omettant. Le mot-clé {{cssxref("inherit")}} pourra être appliqué à une propriété mais ce sera sur l'ensemble et non pour une valeur donnée ou une autre. Ainsi, pour utiliser une valeur héritée sur une propriété spécifique, il faudra utiliser cette propriété « longue » avec le mot-clé `inherit.`
-3. Les propriétés raccourcies n'ont pas d'ordre spécifique pour trier les valeurs des propriétés détaillées qu'elles remplacent. Cela fonctionne sans problème lorsque les différentes propriétés utilisent différents types de valeurs car l'ordre n'a alors aucune importance. Toutefois, lorsque les différentes propriétés peuvent prendre les mêmes valeurs, cela n'est pas si simple. On peut regrouper les différents cas en deux catégories distinctes :
+La couleur de l'arrière-plan ne sera pas rouge (`red`), ce sera la valeur par défaut de [`background-color`](/fr/docs/Web/CSS/background-color) qui sera utilisée&nbsp;: `transparent`.
 
-    1. Les propriétés raccourcies qui gèrent les bords d'une boîte telles que {{cssxref("border-style")}}, {{cssxref("margin")}} ou {{cssxref("padding")}}. Elles utilisent une méthode constante selon qu'elles reçoivent 1 à 4 valeurs :
+Seules les propriétés détaillées permettent l'héritage. Comme les valeurs manquantes dans une déclaration raccourcie sont remplacées par les valeurs initiales correspondantes, il est impossible de permettre l'héritage des propriétés détaillées en les omettant. Le mot-clé `inherit` peut être appliqué à une propriété, mais uniquement dans son ensemble et non comme un mot-clé pour une valeur parmi d'autres. Cela signifie que la seule façon pour qu'une valeur donnée soit héritée consiste à utiliser la propriété détaillée avec le mot-clé `inherit`.
 
-        <table>
-          <tbody>
-            <tr>
-              <td style="width: 79px"><img alt="border1.png" src="border1.png" /></td>
-              <td>
-                <em>1 valeur </em>: <code>border-width: 1em</code> — La valeur unique
-                s'adresse à tous les côtés.
-              </td>
-            </tr>
-            <tr>
-              <td><img alt="border2.png" src="border2.png" /></td>
-              <td>
-                <em>2 valeurs </em>: <code>border-width: 1em 2em</code> — La première
-                valeur représente les côtés horizontaux en haut et en bas. La seconde
-                valeur représente les côtés verticaux, à gauche et à droite.
-              </td>
-            </tr>
-            <tr>
-              <td><img alt="border3.png" src="border3.png" /></td>
-              <td>
-                <em>3 valeurs </em>: <code>border-width: 1em 2em 3em</code> — La
-                première valeur représente le côté haut, la deuxième les côtés gauche et
-                droit et la troisième représente le côté bas.
-              </td>
-            </tr>
-            <tr>
-              <td><img alt="border4.png" src="border4.png" /></td>
-              <td>
-                <p>
-                  <em>4 valeurs </em>: <code>border-width: 1em 2em 3em 4em</code> — Les
-                  quatre valeurs représentent respectivement le côté haut, le côté
-                  droit, le côté bas et le côté haut, toujours dans cet ordre (le sens
-                  horaire).
-                </p>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+### L'ordre des propriétés
 
-    2. De la même façon, les propriétés raccourcies relatives aux coins d'une boîte comme {{cssxref("border-radius")}} utilisent une méthode constante selon qu'elles reçoivent 1 à 4 valeurs :
+Les propriétés raccourcies essaient de ne pas imposer un ordre spécifique pour les valeurs des propriétés qu'elles synthétisent. Cela fonctionne bien lorsque les propriétés détaillées sont de différents types, l'ordre n'ayant alors pas d'importance. En revanche, cela ne peut pas fonctionner si plusieurs des propriétés détaillées permettent d'utiliser des mêmes valeurs.
 
-        <table>
-          <tbody>
-            <tr>
-              <td style="width: 69px"><img alt="corner1.png" src="corner1.png" /></td>
-              <td>
-                <em>1 valeur </em>: <code>border-radius: 1em</code> — La valeur
-                s'applique à tous les coins.
-              </td>
-            </tr>
-            <tr>
-              <td><img alt="corner2.png" src="corner2.png" /></td>
-              <td>
-                <em>2 valeurs </em>: <code>border-radius: 1em 2em</code> — La première
-                valeur s'applique aux coins en haut à gauche et en bas à droite et la
-                deuxième s'applique aux coins en haut à droite et en bas à gauche.
-              </td>
-            </tr>
-            <tr>
-              <td><img alt="corner3.png" src="corner3.png" /></td>
-              <td>
-                <em>3 valeurs </em>: <code>border-radius: 1em 2em 3em</code> — La
-                première valeur représente le coin en haut à gauche, la deuxième
-                représente les coins en haut à droite et en bas à gauche et la troisième
-                valeur représente le coin en bas à droite.
-              </td>
-            </tr>
-            <tr>
-              <td><img alt="corner4.png" src="corner4.png" /></td>
-              <td>
-                <p>
-                  <em>4 valeurs </em>: <code>border-radius: 1em 2em 3em 4em</code> — Les
-                  quatre valeurs s'appliquent respectivement au coin en haut à gauche,
-                  en haut à droite, en bas à droite et en bas à gauche, toujours dans
-                  cet ordre (le sens horaire).
-                </p>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+Il y a deux thèmes pour lesquels l'ordre est important&nbsp;:
 
-## Les propriétés concernant l'arrière-plan
+- Les propriétés relatives aux bords d'une boîte, comme [`border-style`](/fr/docs/Web/CSS/border-style), [`margin`](/fr/docs/Web/CSS/margin) ou [`padding`](/fr/docs/Web/CSS/padding).
+- Les propriétés relatives aux coins d'une boîte, comme [`border-radius`](/fr/docs/Web/CSS/border-radius)
 
-Lorsqu'on décrit un arrière-plan avec les propriétés suivantes :
+#### Propriétés pour les bords d'une boîte
+
+Les propriétés raccourcies qui portent sur les bords d'une boîte, comme [`border-style`](/fr/docs/Web/CSS/border-style), [`margin`](/fr/docs/Web/CSS/margin) ou [`padding`](/fr/docs/Web/CSS/padding), utilisent toutes une syntaxe cohérente ayant 1 à 4 valeurs&nbsp;:
+
+- Syntaxe avec une valeur
+
+  - : `border-width: 1em` — la valeur représente tous les bords&nbsp;: ![Les bords de la boîte avec une syntaxe utilisant une valeur.](border1.png)
+
+- Syntaxe avec deux valeurs
+
+  - : `border-width: 1em 2em` — la première valeur représente les bords sur l'axe vertical, c'est-à-dire les bords haut et bas&nbsp;; la seconde représente les bords sur l'axe horizontal, c'est-à-dire les bords gauche et droit&nbsp;: ![Les bords de la boîte avec une syntaxe utilisant deux valeurs.](border2.png)
+
+- Syntaxe avec trois valeurs
+
+  - : `border-width: 1em 2em 3em` — la première valeur représente le bord haut, la deuxième représente les bords de l'axe horizontal&nbsp;: gauche et droit, et la troisième représente le bord bas&nbsp;: ![Les bords de la boîte avec une syntaxe utilisant trois valeurs.](border3.png)
+
+- Syntaxe avec quatre valeurs
+  - : `border-width: 1em 2em 3em 4em` — les quatre valeurs représentent respectivement les bords haut, droit, bas et gauche (et toujours dans cet ordre), soit un sens horaire à partir du haut&nbsp;: ![Les bords de la boîte avec une syntaxe utilisant quatre valeurs.](border4.png) Un moyen mnémotechnique pour mémoriser l'ordre consiste à visualiser le mouvement des aiguilles sur une horloge&nbsp;: la première valeur (ici `1em`) commence à midi, puis la deuxième (ici `2em`) à 15h, puis la troisième (ici `3em`) à 18h, et la dernière (`4em` dans notre exemple) à 21h.
+
+#### Propriétés pour les coins d'une boîte
+
+De la même manière, les propriétés raccourcies qui portent sur les coins d'une boîte (par exemple [`border-radius`](/fr/docs/Web/CSS/border-radius)) utilisent toutes une syntaxe cohérente ayant 1 à 4 valeurs&nbsp;:
+
+- Syntaxe avec une valeur
+
+  - : `border-radius: 1em` — la valeur unique représente tous les coins&nbsp;: ![Les coins de la boîte avec une syntaxe utilisant une valeur.](corner1.png)
+
+- Syntaxe avec deux valeurs
+
+  - : `border-radius: 1em 2em` — la première valeur porte sur les coins supérieur gauche et inférieur droit, la seconde porte sur les coins supérieur droit et inférieur gauche&nbsp;: ![Les coins de la boîte avec une syntaxe utilisant deux valeurs.](corner2.png)
+
+- Syntaxe avec trois valeurs
+
+  - : `border-radius: 1em 2em 3em` — la première valeur représente le coin supérieur gauche, la deuxième les coins supérieur droit et inférieur gauche, la troisième le coin inférieur droit&nbsp;: ![Les coins de la boîte avec une syntaxe utilisant trois valeurs.](corner3.png)
+
+- Syntaxe avec quatre valeurs
+  - : `border-radius: 1em 2em 3em 4em` — les quatre valeurs représentent respectivement les coins supérieur gauche, supérieur droit, inférieur droit et inférieur gauche (et toujours dans cet ordre), soit un sens horaire à partir du coin supérieur gauche&nbsp;: ![Les coins de la boîte avec une syntaxe utilisant quatre valeurs.](corner4.png)
+
+## Propriétés pour l'arrière-plan
+
+Prenons un arrière-plan déclaré comme tel&nbsp;:
 
 ```css
 background-color: #000;
 background-image: url(images/bg.gif);
 background-repeat: no-repeat;
-background-position: top right;
+background-position: left top;
 ```
 
-On peut le faire de façon plus concise grâce à la propriété raccourcie. Voici la déclaration équivalent :
+On pourra synthétiser ces quatre déclarations en une&nbsp;:
 
 ```css
-background: #000 url(images/bg.gif) no-repeat top right;
+background: #000 url(images/bg.gif) no-repeat left top;
 ```
 
-> **Note :** Pour être tout à fait précis, la forme raccourcie présentée juste avant est équivalente aux propriétés détaillées qui précèdent auxquelles on ajoute `background-attachment: scroll` et d'autres propriétés avec CSS3).
+Voir [`background`](/fr/docs/Web/CSS/background) pour plus d'informations.
 
-Pour plus d'informations, voir {{cssxref("background")}}.
+> **Note :** La forme raccourcie correspond plus précisément aux propriétés détaillées indiquées ici avec également, `background-attachment: scroll` et d'autres propriétés supplémentaires.
 
-## Les propriétés liées à la police (_font_)
+## Propriétés typographiques
 
-Les déclarations suivantes :
+Prenons les déclarations suivantes&nbsp;:
 
 ```css
 font-style: italic;
 font-weight: bold;
-font-size: .8em;
+font-size: 0.8em;
 line-height: 1.2;
 font-family: Arial, sans-serif;
 ```
 
-Peuvent être synthétisées en une seule déclaration avec la propriété raccourcie :
+On pourra les raccourcir ainsi&nbsp;:
 
 ```css
-font: italic bold .8em/1.2 Arial, sans-serif;
+font:
+  italic bold 0.8em/1.2 Arial,
+  sans-serif;
 ```
 
-> **Note :** Pour être tout à fait précis, la déclaration raccourcie précédente est équivalente aux déclarations détaillées ci-avant auxquelles on ajoutera `font-variant: normal` et `font-size-adjust: none` (CSS2.0 / CSS3), `font-stretch: normal` (CSS3).
+Voir [`font`](/fr/docs/Web/CSS/font) pour plus d'informations sur cette propriété.
 
-## Les propriétés liées aux bordures
+> **Note :** Cette déclaration raccourcie avec [`font`](/fr/docs/Web/CSS/font) est en réalité équivalente aux déclarations détaillées présentes ici, avec en plus `font-variant: normal`, `font-size-adjust: none`, et `font-stretch: normal`.
 
-Avec les bordures, la largeur, la couleur et le style peuvent être regroupés en une seule déclaration. Par exemple,
+## Propriétés pour les bordures
+
+Les épaisseurs, couleurs et styles d'une bordure peuvent être exprimés avec une seule déclaration. Si on part du fragment de CSS suivant&nbsp;:
 
 ```css
 border-width: 1px;
@@ -165,15 +132,17 @@ border-style: solid;
 border-color: #000;
 ```
 
-peut être écrit ainsi :
+On pourra le simplifier de la façon suivante&nbsp;:
 
 ```css
 border: 1px solid #000;
 ```
 
-## Les propriétés liées à la marge et au remplissage (_padding_)
+Voir [`border`](/fr/docs/Web/CSS/border) pour plus d'informations sur cette propriété.
 
-Les propriétés raccourcies agissant sur la boîte de marge ou sur la boîte de remplissage (_padding_) fonctionnent de la même façon. Ainsi, les déclarations CSS suivantes :
+## Propriétés pour les marges et le remplissage (<i lang="en">padding</i>)
+
+Les propriétés raccourcies pour les marges et le remplissage fonctionnent de la même façon. La propriété [`margin`](/fr/docs/Web/CSS/margin) permet une syntaxe avec une, deux, trois ou quatre valeurs. Prenons les déclarations de ce fragment&nbsp;:
 
 ```css
 margin-top: 10px;
@@ -182,19 +151,100 @@ margin-bottom: 10px;
 margin-left: 5px;
 ```
 
-sont équivalentes à la déclaration qui suit (on notera que les valeurs sont ordonnés dans le sens horaire : haut, droit, bas, gauche ; un moyen mnémotechnique est d'utiliser l'acronyme anglais TRBL qui ressemble à _trouble_) :
+On pourra les condenser en une seule déclaration équivalente (on notera l'ordre dans le sens horaire&nbsp;: haut, droit, bas, gauche)&nbsp;:
 
 ```css
 margin: 10px 5px 10px 5px;
 ```
 
+## Propriétés de position
+
+Pour positionner un élément, plutôt que d'utiliser les propriétés détaillées `top`, `right`, `bottom` et `left` comme ceci&nbsp;:
+
+```css
+top: 0;
+right: 20px;
+bottom: 0;
+left: 20px;
+```
+
+On pourra utiliser la propriété [`inset`](/fr/docs/Web/CSS/inset) qui les synthétise&nbsp;:
+
+```css
+inset: 0 20px 0 20px;
+```
+
+À l'instar des marges et du remplissage, les valeurs suivent l'ordre horaire (haut, droit, bas, puis gauche).
+
 ## La propriété raccourcie universelle
 
-CSS fournit une propriété raccourcie qui permet d'appliquer une même valeur à l'ensemble des propriétés du document : {{cssxref("all")}}.
+CSS fournit une propriété raccourcie universelle, [`all`](/fr/docs/Web/CSS/all), qui applique sa valeur à toutes les propriétés du document. Elle permet ainsi de changer le modèle d'héritage des propriétés.
 
-Voir l'article sur [la cascade et l'héritage](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) pour plus d'informations sur le fonctionnement de l'héritage.
+Voir les articles [La cascade et l'héritage](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) ou [Introduction à la cascade CSS](/fr/docs/Web/CSS/Cascade) pour plus d'informations sur le fonctionnement de l'héritage en CSS.
 
 ## Voir aussi
 
-- [La référence CSS](/fr/docs/Web/CSS/Reference)
-- Les propriétés raccourcies : {{cssxref("animation")}}, {{cssxref("background")}}, {{cssxref("border")}}, {{cssxref("border-bottom")}}, {{cssxref("border-color")}}, {{cssxref("border-left")}}, {{cssxref("border-radius")}}, {{cssxref("border-right")}}, {{cssxref("border-style")}}, {{cssxref("border-top")}}, {{cssxref("border-width")}}, {{cssxref("column-rule")}}, {{cssxref("columns")}}, {{cssxref("flex")}}, {{cssxref("flex-flow")}}, {{cssxref("font")}}, {{cssxref("grid")}}, {{cssxref("grid-area")}}, {{cssxref("grid-column")}}, {{cssxref("grid-row")}}, {{cssxref("grid-template")}}, {{cssxref("list-style")}}, {{cssxref("margin")}}, {{cssxref("offset")}}, {{cssxref("outline")}}, {{cssxref("overflow")}}, {{cssxref("padding")}}, {{cssxref("place-content")}}, {{cssxref("place-items")}}, {{cssxref("place-self")}}, {{cssxref("text-decoration")}}, {{cssxref("transition")}}
+- Les concepts fondamentaux de CSS&nbsp;:
+  - [La syntaxe CSS](/fr/docs/Web/CSS/Syntax)
+  - [Les règles @](/fr/docs/Web/CSS/At-rule)
+  - [Les commentaires](/fr/docs/Web/CSS/Comments)
+  - [La spécificité](/fr/docs/Web/CSS/Specificity)
+  - [L'héritage](/fr/docs/Web/CSS/Inheritance)
+  - [Le modèle de boîtes](/fr/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+  - [Les modes de disposition](/fr/docs/Web/CSS/Layout_mode)
+  - [Les modèles de formatage visuel](/fr/docs/Web/CSS/Visual_formatting_model)
+  - [La fusion des marges](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+  - Les différentes valeurs
+    - [Les valeurs initiales](/fr/docs/Web/CSS/initial_value)
+    - [Les valeurs calculées](/fr/docs/Web/CSS/computed_value)
+    - [Les valeurs utilisées](/fr/docs/Web/CSS/used_value)
+    - [Les valeurs réelles](/fr/docs/Web/CSS/actual_value)
+  - [La syntaxe de définition des valeurs](/fr/docs/Web/CSS/Value_definition_syntax)
+  - [Les éléments remplacés](/fr/docs/Web/CSS/Replaced_element)
+- Les propriétés raccourcies&nbsp;:
+  - [`all`](/fr/docs/Web/CSS/all)
+  - [`animation`](/fr/docs/Web/CSS/animation)
+  - [`background`](/fr/docs/Web/CSS/background)
+  - [`border`](/fr/docs/Web/CSS/border)
+  - [`border-block-end`](/fr/docs/Web/CSS/border-block-end)
+  - [`border-block-start`](/fr/docs/Web/CSS/border-block-start)
+  - [`border-bottom`](/fr/docs/Web/CSS/border-bottom)
+  - [`border-color`](/fr/docs/Web/CSS/border-color)
+  - [`border-image`](/fr/docs/Web/CSS/border-image)
+  - [`border-inline-end`](/fr/docs/Web/CSS/border-inline-end)
+  - [`border-inline-start`](/fr/docs/Web/CSS/border-inline-start)
+  - [`border-left`](/fr/docs/Web/CSS/border-left)
+  - [`border-radius`](/fr/docs/Web/CSS/border-radius)
+  - [`border-right`](/fr/docs/Web/CSS/border-right)
+  - [`border-style`](/fr/docs/Web/CSS/border-style)
+  - [`border-top`](/fr/docs/Web/CSS/border-top)
+  - [`border-width`](/fr/docs/Web/CSS/border-width)
+  - [`column-rule`](/fr/docs/Web/CSS/column-rule)
+  - [`columns`](/fr/docs/Web/CSS/columns)
+  - [`contain-intrinsic-size`](/fr/docs/Web/CSS/contain-intrinsic-size)
+  - [`flex`](/fr/docs/Web/CSS/flex)
+  - [`flex-flow`](/fr/docs/Web/CSS/flex-flow)
+  - [`font`](/fr/docs/Web/CSS/font)
+  - [`gap`](/fr/docs/Web/CSS/gap)
+  - [`grid`](/fr/docs/Web/CSS/grid)
+  - [`grid-area`](/fr/docs/Web/CSS/grid-area)
+  - [`grid-column`](/fr/docs/Web/CSS/grid-column)
+  - [`grid-row`](/fr/docs/Web/CSS/grid-row)
+  - [`grid-template`](/fr/docs/Web/CSS/grid-template)
+  - [`inset`](/fr/docs/Web/CSS/inset)
+  - [`list-style`](/fr/docs/Web/CSS/list-style)
+  - [`margin`](/fr/docs/Web/CSS/margin)
+  - [`mask`](/fr/docs/Web/CSS/mask)
+  - [`offset`](/fr/docs/Web/CSS/offset)
+  - [`outline`](/fr/docs/Web/CSS/outline)
+  - [`overflow`](/fr/docs/Web/CSS/overflow)
+  - [`padding`](/fr/docs/Web/CSS/padding)
+  - [`place-content`](/fr/docs/Web/CSS/place-content)
+  - [`place-items`](/fr/docs/Web/CSS/place-items)
+  - [`place-self`](/fr/docs/Web/CSS/place-self)
+  - [`scroll-margin`](/fr/docs/Web/CSS/scroll-margin)
+  - [`scroll-padding`](/fr/docs/Web/CSS/scroll-padding)
+  - [`scroll-timeline`](/fr/docs/Web/CSS/scroll-timeline)
+  - [`text-decoration`](/fr/docs/Web/CSS/text-decoration)
+  - [`text-emphasis`](/fr/docs/Web/CSS/text-emphasis)
+  - [`transition`](/fr/docs/Web/CSS/transition)

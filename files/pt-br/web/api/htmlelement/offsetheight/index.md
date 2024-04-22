@@ -23,23 +23,17 @@ _intElemOffsetHeight_ is a variable storing an integer corresponding to the offs
 
 ## Example
 
-![Image:Dimensions-offset.png](/@api/deki/files/186/=Dimensions-offset.png)
+![Image:Dimensions-offset.png](dimensions-offset.png)
 
 The example image above shows a scrollbar and an offsetHeight which fits on the window. However, non-scrollable elements may have large offsetHeight values, much larger than the visible content. These elements are typically contained within scrollable elements; consequently these non-scrollable elements may be completely or partly invisible, depending on the scrollTop setting of the scrollable container.
 
-## Specification
+## Especificações
 
-| Specification                                                                                    | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('CSSOM View', '#dom-htmlelement-offsetHeight', 'offsetLeft')}} | {{Spec2('CSSOM View')}} |         |
-
-### Notes
-
-`offsetHeight` is a property of the DHTML object model which was first introduced by MSIE. It is sometimes referred to as an element's physical/graphical dimensions, or an element's border-box height.
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.HTMLElement.offsetHeight")}}
+{{Compat}}
 
 ## See Also
 

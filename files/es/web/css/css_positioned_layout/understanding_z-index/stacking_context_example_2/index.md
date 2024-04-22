@@ -1,7 +1,6 @@
 ---
 title: Ejemplo 2 del contexto de apilamiento
 slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_2
-original_slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2
 ---
 
 « [CSS](/es/CSS) « [ENTENDIENDO LA PROPIEDAD CSS Z-INDEX](/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index)
@@ -26,83 +25,94 @@ Para entender mejor esta situación, esta es la jerarquía del contexto de apila
 ### Código fuente de ejemplo
 
 ```html
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
-<head><style type="text/css">
+  <head>
+    <style type="text/css">
+      div {
+        font: 12px Arial;
+      }
 
-div { font: 12px Arial; }
+      span.bold {
+        font-weight: bold;
+      }
 
-span.bold { font-weight: bold; }
-
-#div2 { z-index: 2; }
-#div3 { z-index: 1; }
-#div4 { z-index: 10; }
-
-#div1,#div3 {
-   height: 80px;
-   position: relative;
-   border: 1px dashed #669966;
-   background-color: #ccffcc;
-   padding-left: 5px;
-}
-
-#div2 {
-   opacity: 0.8;
-   position: absolute;
-   width: 150px;
-   height: 200px;
-   top: 20px;
-   left: 170px;
-   border: 1px dashed #990000;
-   background-color: #ffdddd;
-   text-align: center;
-}
-
-#div4 {
-   opacity: 0.8;
-   position: absolute;
-   width: 200px;
-   height: 70px;
-   top: 65px;
-   left: 50px;
-   border: 1px dashed #000099;
-   background-color: #ddddff;
-   text-align: left;
-   padding-left: 10px;
-}
-
-
-</style></head>
-
-<body>
-
-    <br />
-
-    <div id="div1"><br />
-        <span class="bold">DIV #1</span><br />
-        position: relative;
-        <div id="div2"><br />
-            <span class="bold">DIV #2</span><br />
-            position: absolute;<br />
-            z-index: 2;
-        </div>
-    </div>
-
-    <br />
-
-    <div id="div3"><br />
-        <span class="bold">DIV #3</span><br />
-        position: relative;<br />
+      #div2 {
+        z-index: 2;
+      }
+      #div3 {
         z-index: 1;
-        <div id="div4"><br />
-            <span class="bold">DIV #4</span><br />
-            position: absolute;<br />
-            z-index: 10;
-        </div>
+      }
+      #div4 {
+        z-index: 10;
+      }
+
+      #div1,
+      #div3 {
+        height: 80px;
+        position: relative;
+        border: 1px dashed #669966;
+        background-color: #ccffcc;
+        padding-left: 5px;
+      }
+
+      #div2 {
+        opacity: 0.8;
+        position: absolute;
+        width: 150px;
+        height: 200px;
+        top: 20px;
+        left: 170px;
+        border: 1px dashed #990000;
+        background-color: #ffdddd;
+        text-align: center;
+      }
+
+      #div4 {
+        opacity: 0.8;
+        position: absolute;
+        width: 200px;
+        height: 70px;
+        top: 65px;
+        left: 50px;
+        border: 1px dashed #000099;
+        background-color: #ddddff;
+        text-align: left;
+        padding-left: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <br />
+
+    <div id="div1">
+      <br />
+      <span class="bold">DIV #1</span><br />
+      position: relative;
+      <div id="div2">
+        <br />
+        <span class="bold">DIV #2</span><br />
+        position: absolute;<br />
+        z-index: 2;
+      </div>
     </div>
 
-</body>
+    <br />
+
+    <div id="div3">
+      <br />
+      <span class="bold">DIV #3</span><br />
+      position: relative;<br />
+      z-index: 1;
+      <div id="div4">
+        <br />
+        <span class="bold">DIV #4</span><br />
+        position: absolute;<br />
+        z-index: 10;
+      </div>
+    </div>
+  </body>
 </html>
 ```
 

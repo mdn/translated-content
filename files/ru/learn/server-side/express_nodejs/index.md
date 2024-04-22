@@ -1,14 +1,6 @@
 ---
 title: Веб-фреймворк Express (Node.js/JavaScript)
 slug: Learn/Server-side/Express_Nodejs
-tags:
-  - Express
-  - Express.js
-  - Введение
-  - Для начинающих
-  - Программирование на стороне сервера
-  - Учебник
-translation_of: Learn/Server-side/Express_Nodejs
 ---
 
 {{LearnSidebar}}

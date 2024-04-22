@@ -1,13 +1,6 @@
 ---
 title: HTMLTableRowElement
 slug: Web/API/HTMLTableRowElement
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
-  - TopicStub
-translation_of: Web/API/HTMLTableRowElement
 ---
 
 {{ APIRef("HTML DOM") }}

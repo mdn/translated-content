@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Operators/Logical_NOT
 ## 構文
 
 ```js
-!expr
+!expr;
 ```
 
 ## 解説
@@ -38,10 +38,10 @@ false に変換することができる式の例を示します。
 以下のコードは `!` (論理否定) 演算子の例を示しています。
 
 ```js
-n1 = !true               // !t は false を返す
-n2 = !false              // !f は true を返す
-n3 = !''                 // !f は true を返す
-n4 = !'Cat'              // !t は false を返す
+n1 = !true; // !t は false を返す
+n2 = !false; // !f は true を返す
+n3 = !""; // !f は true を返す
+n4 = !"Cat"; // !t は false を返す
 ```
 
 ### 二重否定 (`!!`)
@@ -51,12 +51,12 @@ n4 = !'Cat'              // !t は false を返す
 同じ変換は {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} 関数を通じて行うこともできます。
 
 ```js
-n1 = !!true                   // !!truthy は true を返す
-n2 = !!{}                     // !!truthy は true: *あらゆる*オブジェクトは真値になります...
-n3 = !!(new Boolean(false))   // ... .valueOF() が false の Boolean オブジェクトであっても
-n4 = !!false                  // !!falsy は false を返す
-n5 = !!""                     // !!falsy は false を返す
-n6 = !!Boolean(false)         // !!falsy は false を返す
+n1 = !!true; // !!truthy は true を返す
+n2 = !!{}; // !!truthy は true: *あらゆる*オブジェクトは真値になります...
+n3 = !!new Boolean(false); // ... .valueOF() が false の Boolean オブジェクトであっても
+n4 = !!false; // !!falsy は false を返す
+n5 = !!""; // !!falsy は false を返す
+n6 = !!Boolean(false); // !!falsy は false を返す
 ```
 
 ### 否定同士の変換
@@ -64,13 +64,13 @@ n6 = !!Boolean(false)         // !!falsy は false を返す
 以下の操作を**論理値**で行った場合、
 
 ```js
-!!bCondition
+!!bCondition;
 ```
 
 常に以下のものと等しくなります。
 
 ```js
-bCondition
+bCondition;
 ```
 
 ## 仕様書

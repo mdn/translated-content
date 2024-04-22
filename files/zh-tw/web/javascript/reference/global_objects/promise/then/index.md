@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/then
 
 ## 語法
 
-```plain
+```js
 p.then(onFulfilled[, onRejected]);
 
 p.then(function(value) {
@@ -30,7 +30,7 @@ p.then(function(value) {
 
 ### 回傳值
 
-一個進入**擱置（pending）**狀態的 {{jsxref("Promise")}}。（只要堆疊一空）handler 函式**非同步地（asynchronously）**被呼叫。在調用 handler 後，若 handler 函式：
+一個進入**擱置**（pending）狀態的 {{jsxref("Promise")}}。（只要堆疊一空）handler 函式**非同步地**（asynchronously）被呼叫。在調用 handler 後，若 handler 函式：
 
 - 回傳一個值，則 `then` 回傳之 promise 以此值被實現（resolved）。
 - 拋出一個例外，則 `then` 回傳之 promise 以此例外被否決（rejected）。
@@ -44,18 +44,17 @@ p.then(function(value) {
 // 使用一個已實現的 promise，'then' 區塊將立即被觸發，但是它的 handlers 將是非同步地被觸發，如同 console.logs 所示
 var resolvedProm = Promise.resolve(33);
 
-var thenProm = resolvedProm.then(function(value){
-    console.log("我在 main stack 之後被呼叫。收到及將回傳的值為：" + value);
-    return value;
+var thenProm = resolvedProm.then(function (value) {
+  console.log("我在 main stack 之後被呼叫。收到及將回傳的值為：" + value);
+  return value;
 });
 // 立即紀錄 thenProm
 console.log(thenProm);
 
 // 我們可以使用 setTimeout 以延遲（postpone）函式執行直到堆疊為空
-setTimeout(function(){
-    console.log(thenProm);
+setTimeout(function () {
+  console.log(thenProm);
 });
-
 
 // 紀錄結果，依序為:
 // Promise {[[PromiseStatus]]: "pending", [[PromiseValue]]: undefined}
@@ -72,17 +71,20 @@ setTimeout(function(){
 ### 運用 `then` 方法
 
 ```js
-var p1 = new Promise( (resolve, reject) => {
-  resolve('Success!');
+var p1 = new Promise((resolve, reject) => {
+  resolve("Success!");
   // or
   // reject ("Error!");
-} );
+});
 
-p1.then( value => {
-  console.log(value); // Success!
-}, reason => {
-  console.log(reason); // Error!
-} );
+p1.then(
+  (value) => {
+    console.log(value); // Success!
+  },
+  (reason) => {
+    console.log(reason); // Error!
+  },
+);
 ```
 
 ### 串接
@@ -92,12 +94,12 @@ p1.then( value => {
 如果傳入 `then` 的 handler 函式回傳一個 promise，一個等價的 `Promise` 將被展現給方法串接中的下一個 then 。以下程式碼片段透過 `setTimout` 函式模擬非同步程式碼。
 
 ```js
-Promise.resolve('foo')
+Promise.resolve("foo")
   // 1. Receive "foo" concatenate "bar" to it and resolve that to the next then
-  .then(function(string) {
-    return new Promise(function(resolve, reject) {
-      setTimeout(function() {
-        string += 'bar';
+  .then(function (string) {
+    return new Promise(function (resolve, reject) {
+      setTimeout(function () {
+        string += "bar";
         resolve(string);
       }, 1);
     });
@@ -105,20 +107,22 @@ Promise.resolve('foo')
   // 2. receive "foobar", register a callback function to work on that string
   // and print it to the console, but not before return the unworked on
   // string to the next then
-  .then(function(string) {
-    setTimeout(function() {
-      string += 'baz';
+  .then(function (string) {
+    setTimeout(function () {
+      string += "baz";
       console.log(string);
-    }, 1)
+    }, 1);
     return string;
   })
   // 3. print helpful messages about how the code in this section will be run
   // before string is actually processed by the mocked asynchronous code in the
   // prior then block.
-  .then(function(string) {
-    console.log("Last Then:  oops... didn't bother to instantiate and return " +
-                "a promise in the prior then so the sequence may be a bit " +
-                "surprising");
+  .then(function (string) {
+    console.log(
+      "Last Then:  oops... didn't bother to instantiate and return " +
+        "a promise in the prior then so the sequence may be a bit " +
+        "surprising",
+    );
 
     // Note that `string` will not have the 'baz' bit of it at this point. This
     // is because we mocked that to happen asynchronously with a setTimeout function
@@ -129,18 +133,18 @@ Promise.resolve('foo')
 當 handler 僅回傳一個值，實際上它將回傳 `Promise.resolve(<value returned by whichever handler was called>)`.
 
 ```js
-var p2 = new Promise(function(resolve, reject) {
+var p2 = new Promise(function (resolve, reject) {
   resolve(1);
 });
 
-p2.then(function(value) {
+p2.then(function (value) {
   console.log(value); // 1
   return value + 1;
-}).then(function(value) {
-  console.log(value + '- This synchronous usage is virtually pointless'); // 2- This synchronous usage is virtually pointless
+}).then(function (value) {
+  console.log(value + "- This synchronous usage is virtually pointless"); // 2- This synchronous usage is virtually pointless
 });
 
-p2.then(function(value) {
+p2.then(function (value) {
   console.log(value); // 1
 });
 ```
@@ -149,38 +153,44 @@ p2.then(function(value) {
 
 ```js
 Promise.resolve()
-  .then( () => {
+  .then(() => {
     // 使 .then() 回傳一個被否決的 Promise
-    throw 'Oh no!';
+    throw "Oh no!";
   })
-  .then( () => {
-    console.log( 'Not called.' );
-  }, reason => {
-    console.error( 'onRejected function called: ', reason );
-  });
+  .then(
+    () => {
+      console.log("Not called.");
+    },
+    (reason) => {
+      console.error("onRejected function called: ", reason);
+    },
+  );
 ```
 
 在所有其他情形，實現中的 Promise 被回傳。在以下例子中，第一個 `then()` 將回傳一個實現中包裹 42 的 promise，即使串接中的前一個 Promise 被否決。
 
 ```js
 Promise.reject()
-  .then( () => 99, () => 42 ) // onRejected returns 42 which is wrapped in a resolving Promise
-  .then( solution => console.log( 'Resolved with ' + solution ) ); // Resolved with 42
+  .then(
+    () => 99,
+    () => 42,
+  ) // onRejected returns 42 which is wrapped in a resolving Promise
+  .then((solution) => console.log("Resolved with " + solution)); // Resolved with 42
 ```
 
 實務上，使用 `catch` 捕捉被否決的 promise 較理想的，而不建議使用兩個引數 `then` 語法，如下展示。
 
 ```js
 Promise.resolve()
-  .then( () => {
+  .then(() => {
     // Makes .then() return a rejected promise
-    throw 'Oh no!';
+    throw "Oh no!";
   })
-  .catch( reason => {
-    console.error( 'onRejected function called: ', reason );
+  .catch((reason) => {
+    console.error("onRejected function called: ", reason);
   })
-  .then( () => {
-    console.log( "I am always called even if the prior then's promise rejects" );
+  .then(() => {
+    console.log("I am always called even if the prior then's promise rejects");
   });
 ```
 
@@ -192,14 +202,14 @@ function fetch_current_data() {
   // exposes a similar API, except the fulfillment
   // value of this function's Promise has had more
   // work done on it.
-  return fetch('current-data.json').then((response) => {
-    if (response.headers.get('content-type') != 'application/json') {
+  return fetch("current-data.json").then((response) => {
+    if (response.headers.get("content-type") != "application/json") {
       throw new TypeError();
     }
     var j = response.json();
     // maybe do something with j
     return j; // fulfillment value given to user of
-              // fetch_current_data().then()
+    // fetch_current_data().then()
   });
 }
 ```
@@ -218,28 +228,34 @@ function rejectLater(resolve, reject) {
   }, 1000);
 }
 
-var p1 = Promise.resolve('foo');
-var p2 = p1.then(function() {
+var p1 = Promise.resolve("foo");
+var p2 = p1.then(function () {
   // Return promise here, that will be resolved to 10 after 1 second
   return new Promise(resolveLater);
 });
-p2.then(function(v) {
-  console.log('resolved', v);  // "resolved", 10
-}, function(e) {
-  // not called
-  console.log('rejected', e);
-});
+p2.then(
+  function (v) {
+    console.log("resolved", v); // "resolved", 10
+  },
+  function (e) {
+    // not called
+    console.log("rejected", e);
+  },
+);
 
-var p3 = p1.then(function() {
+var p3 = p1.then(function () {
   // Return promise here, that will be rejected with 20 after 1 second
   return new Promise(rejectLater);
 });
-p3.then(function(v) {
-  // not called
-  console.log('resolved', v);
-}, function(e) {
-  console.log('rejected', e); // "rejected", 20
-});
+p3.then(
+  function (v) {
+    // not called
+    console.log("resolved", v);
+  },
+  function (e) {
+    console.log("rejected", e); // "rejected", 20
+  },
+);
 ```
 
 ## 規範

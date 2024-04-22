@@ -44,29 +44,29 @@ void ctx.arcTo(x1, y1, x2, y2, radius);
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
-ctx.setLineDash([])
+ctx.setLineDash([]);
 ctx.beginPath();
 ctx.moveTo(150, 20);
-ctx.arcTo(150,100,50,20,30);
+ctx.arcTo(150, 100, 50, 20, 30);
 ctx.stroke();
 
-ctx.fillStyle = 'blue';
+ctx.fillStyle = "blue";
 // base point
 ctx.fillRect(150, 20, 10, 10);
 
-ctx.fillStyle = 'red';
+ctx.fillStyle = "red";
 // control point one
 ctx.fillRect(150, 100, 10, 10);
 // control point two
 ctx.fillRect(50, 20, 10, 10);
 //
-ctx.setLineDash([5,5])
+ctx.setLineDash([5, 5]);
 ctx.moveTo(150, 20);
-ctx.lineTo(150,100);
+ctx.lineTo(150, 100);
 ctx.lineTo(50, 20);
 ctx.stroke();
 ctx.beginPath();
-ctx.arc(120,38,30,0,2*Math.PI);
+ctx.arc(120, 38, 30, 0, 2 * Math.PI);
 ctx.stroke();
 ```
 
@@ -106,7 +106,8 @@ ctx.lineTo(50, 20);
 ctx.stroke();
 ctx.beginPath();
 ctx.arc(120,38,30,0,2*Math.PI);
-ctx.stroke();</textarea>
+ctx.stroke();</textarea
+>
 ```
 
 ```js hidden
@@ -122,14 +123,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);

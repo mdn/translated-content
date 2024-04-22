@@ -1,20 +1,9 @@
 ---
 title: storage.managed
 slug: Mozilla/Add-ons/WebExtensions/API/storage/managed
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Property
-  - Reference
-  - Storage
-  - WebExtensions
-  - managed
-translation_of: Mozilla/Add-ons/WebExtensions/API/storage/managed
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Un objet {{WebExtAPIRef("storage.StorageArea")}} qui représente la zone de stockage gérée. Les éléments de stockage `géré` sont définis par l'administrateur du domaine ou d'autres applications natives installées sur l'ordinateur de l'utilisateur et sont en lecture seule pour l'extension. Essayer de modifier cette zone de stockage entraîne une erreur.
 
@@ -33,8 +22,7 @@ Voici un exemple de manifest :
   "name": "favourite-color-examples@mozilla.org",
   "description": "ignored",
   "type": "storage",
-  "data":
-  {
+  "data": {
     "color": "management thinks it should be blue!"
   }
 }
@@ -43,7 +31,7 @@ Voici un exemple de manifest :
 Compte tenu de ce manifeste, l'extension "favourite-color-examples\@mozilla.org" pourrait accéder aux données en utilisant un code comme celui-ci :
 
 ```js
-var storageItem = browser.storage.managed.get('color');
+var storageItem = browser.storage.managed.get("color");
 storageItem.then((res) => {
   console.log(`Managed colur is: ${res.color}`);
 });

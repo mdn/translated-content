@@ -1,7 +1,6 @@
 ---
 title: Microformatos
 slug: Web/HTML/microformats
-original_slug: Web/HTML/microformatos
 ---
 
 {{HTMLSidebar}}
@@ -65,7 +64,9 @@ O valor de cada propriedade é definido no HTML utilizando a propriedade class, 
 <p class="h-card">
   <img class="u-photo" src="http://example.org/photo.png" alt="" />
   <a class="p-name u-url" href="http://example.org">Joe Bloggs</a>
-  <a class="u-email" href="mailto:joebloggs@example.com">joebloggs@example.com</a>,
+  <a class="u-email" href="mailto:joebloggs@example.com"
+    >joebloggs@example.com</a
+  >,
   <span class="p-street-address">17 Austerstræti</span>
   <span class="p-locality">Reykjavík</span>
   <span class="p-country-name">Iceland</span>
@@ -87,12 +88,10 @@ O valor de cada propriedade é definido no HTML utilizando a propriedade class, 
 
 ```html
 <div class="h-card">
-  <a class="p-name u-url"
-   href="http://blog.lizardwrangler.com/"
-  >Mitchell Baker</a>
-  (<a class="p-org h-card"
-    href="http://mozilla.org/"
-   >Mozilla Foundation</a>)
+  <a class="p-name u-url" href="http://blog.lizardwrangler.com/"
+    >Mitchell Baker</a
+  >
+  (<a class="p-org h-card" href="http://mozilla.org/">Mozilla Foundation</a>)
 </div>
 ```
 
@@ -129,13 +128,18 @@ Exemplo de h-entry como uma postagem em blog:
 ```html
 <article class="h-entry">
   <h1 class="p-name">Microformats are amazing</h1>
-  <p>Published by <a class="p-author h-card" href="http://example.com">W. Developer</a>
-   on <time class="dt-published" datetime="2013-06-13 12:00:00">13<sup>th</sup> June 2013</time></p>
+  <p>
+    Published by
+    <a class="p-author h-card" href="http://example.com">W. Developer</a> on
+    <time class="dt-published" datetime="2013-06-13 12:00:00"
+      >13<sup>th</sup> June 2013</time
+    >
+  </p>
 
   <p class="p-summary">In which I extoll the virtues of using microformats.</p>
 
   <div class="e-content">
-  <p>Blah blah blah</p>
+    <p>Blah blah blah</p>
   </div>
 </article>
 ```
@@ -211,12 +215,18 @@ O [h-feed](http://microformats.org/wiki/h-feed) é um fluxo de dados ou um feed 
 <div class="h-feed">
   <h1 class="p-name">Microformats Blogs</h1>
   <article class="h-entry">
-  <h2 class="p-name">Microformats are amazing</h2>
-  <p>Published by <a class="p-author h-card" href="http://example.com">W. Developer</a>
-     on <time class="dt-published" datetime="2013-06-13 12:00:00">13<sup>th</sup> June 2013</time>
-  </p>
-  <p class="p-summary">In which I extoll the virtues of using microformats.</p>
-  <div class="e-content"> <p>Blah blah blah</p> </div>
+    <h2 class="p-name">Microformats are amazing</h2>
+    <p>
+      Published by
+      <a class="p-author h-card" href="http://example.com">W. Developer</a> on
+      <time class="dt-published" datetime="2013-06-13 12:00:00"
+        >13<sup>th</sup> June 2013</time
+      >
+    </p>
+    <p class="p-summary">
+      In which I extoll the virtues of using microformats.
+    </p>
+    <div class="e-content"><p>Blah blah blah</p></div>
   </article>
 </div>
 ```
@@ -241,11 +251,17 @@ O `h-event` é para evento na web. O h-event é frequentemente usado com listage
 ```html
 <div class="h-event">
   <h1 class="p-name">Microformats Meetup</h1>
-  <p>From
-  <time class="dt-start" datetime="2013-06-30 12:00">30<sup>th</sup> June 2013, 12:00</time>
-  to <time class="dt-end" datetime="2013-06-30 18:00">18:00</time>
-  at <span class="p-location">Some bar in SF</span></p>
-  <p class="p-summary">Get together and discuss all things microformats-related.</p>
+  <p>
+    From
+    <time class="dt-start" datetime="2013-06-30 12:00"
+      >30<sup>th</sup> June 2013, 12:00</time
+    >
+    to <time class="dt-end" datetime="2013-06-30 18:00">18:00</time> at
+    <span class="p-location">Some bar in SF</span>
+  </p>
+  <p class="p-summary">
+    Get together and discuss all things microformats-related.
+  </p>
 </div>
 ```
 
@@ -339,7 +355,7 @@ O `h-event` é para evento na web. O h-event é frequentemente usado com listage
 
 See also
 
-- {{Interwiki("wikipedia", "Microformat")}} na Wikipedia
+- [Microformat](https://pt.wikipedia.org/wiki/Microformat) na Wikipedia
 - [Site oficial dos Microformatos](http://microformats.org/)
 - [Motores de busca suportados](http://microformats.org/wiki/search_engines) no site oficial do Microformats
 - [Microformatos no IndieWebCamp](https://indiewebcamp.com/microformats)

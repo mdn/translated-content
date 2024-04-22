@@ -1,8 +1,8 @@
 ---
 title: WebGLRenderingContext.uniform[1234][fi][v]()
 slug: Web/API/WebGLRenderingContext/uniform
-translation_of: Web/API/WebGLRenderingContext/uniform
 ---
+
 {{APIRef("WebGL")}}
 
 **`WebGLRenderingContext.uniform[1234][fi][v]()`** метод [WebGL API](/ru/docs/Web/API/WebGL_API) устанавливает значение для постоянных переменных Uniform.
@@ -59,7 +59,7 @@ None.
 ## Примеры
 
 ```js
-GL.uniform1f(GL.getUniformLocation(PROGRAM,'u_time'), timeStamp/1000.0)
+GL.uniform1f(GL.getUniformLocation(PROGRAM, "u_time"), timeStamp / 1000.0);
 ```
 
 ## Спецификация

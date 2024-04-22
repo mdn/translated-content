@@ -1,7 +1,6 @@
 ---
 title: CSS.registerProperty()
 slug: Web/API/CSS/registerProperty_static
-original_slug: Web/API/CSS/registerProperty
 ---
 
 {{APIRef("CSSOM")}}

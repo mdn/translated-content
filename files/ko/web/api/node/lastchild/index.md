@@ -12,7 +12,7 @@ slug: Web/API/Node/lastChild
 ## 구문과 값
 
 ```js
-last_child = element.lastChild
+last_child = element.lastChild;
 ```
 
 반환되는 `last_child`는 노드입니다. 노드의 부모가 요소이면, 자식은 보통 요소 노드, 텍스트 노드, 주석 노드입니다.

@@ -1,7 +1,6 @@
 ---
 title: 새로운 지식을 사용하기
 slug: Learn/CSS/First_steps/Styling_a_biography_page
-original_slug: Learn/CSS/First_steps/Using_your_new_knowledge
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
@@ -14,7 +13,7 @@ original_slug: Learn/CSS/First_steps/Using_your_new_knowledge
       <th scope="row">전제조건:</th>
       <td>
         이 평가를 시도하기 전에 나머지 CSS 기본 과목을 살펴보고 HTML 기본 사항
-        (<a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">HTML 소개</a>
+        (<a href="/ko/docs/Learn/HTML/Introduction_to_HTML">HTML 소개</a>
         학습) 을 이해해야 합니다.
       </td>
     </tr>
@@ -69,10 +68,10 @@ CSS 를 사용하여 내가 사용한 속성 값을 변경하여 이 전기(biog
 1. 작업을 [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) 또는 [Glitch](https://glitch.com/) 와 같은 온라인 공유 가능 편집기에 입력합니다.
 2. [MDN 토론 포럼 학습 카데고리](https://discourse.mozilla.org/c/mdn/learn) 에 평가 및 도움을 요청하는 게시물을 작성 하십시오. 게시물에는 다음이 포함되어야 합니다:
 
-    - "CSS 첫 단계에 대한 평가가 필요했습니다" 와 같은 설명적인 제목입니다.
-    - 당신이 이미 시도한 내용 및 당신이 우리가 무엇을 하기를 원하는지에 대한 세부 사항 입니다. 예: 당신이 정체되어 있고 도움이 필요하거나 평가를 원하는지에 대한 세부사항들.
-    - 온라인 공유 가능 편집기 (위의 1 단계에서 언급한) 에서 평가하거나 도움이 필요한 예에 대한 링크입니다. 이것은 좋은 습관입니다 — 코드가 보이지 않으면 코딩에 문제가 있는 사람을 돕는 것이 매우 어렵습니다.
-    - 실제 작업 또는 평가 페이지에 대한 링크로 도움이 필요한 질문을 찾을 수 있습니다.
+   - "CSS 첫 단계에 대한 평가가 필요했습니다" 와 같은 설명적인 제목입니다.
+   - 당신이 이미 시도한 내용 및 당신이 우리가 무엇을 하기를 원하는지에 대한 세부 사항 입니다. 예: 당신이 정체되어 있고 도움이 필요하거나 평가를 원하는지에 대한 세부사항들.
+   - 온라인 공유 가능 편집기 (위의 1 단계에서 언급한) 에서 평가하거나 도움이 필요한 예에 대한 링크입니다. 이것은 좋은 습관입니다 — 코드가 보이지 않으면 코딩에 문제가 있는 사람을 돕는 것이 매우 어렵습니다.
+   - 실제 작업 또는 평가 페이지에 대한 링크로 도움이 필요한 질문을 찾을 수 있습니다.
 
 ## 다음은 뭐죠?
 

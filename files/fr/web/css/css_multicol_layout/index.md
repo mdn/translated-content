@@ -1,13 +1,6 @@
 ---
 title: Colonnes CSS
 slug: Web/CSS/CSS_multicol_layout
-tags:
-  - Aperçu
-  - CSS
-  - CSS Multi-column Layout
-  - Reference
-translation_of: Web/CSS/CSS_Columns
-original_slug: Web/CSS/CSS_Columns
 ---
 
 {{CSSRef}}

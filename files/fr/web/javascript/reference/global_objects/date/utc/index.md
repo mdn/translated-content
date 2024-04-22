@@ -1,13 +1,6 @@
 ---
 title: Date.UTC()
 slug: Web/JavaScript/Reference/Global_Objects/Date/UTC
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/UTC
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/UTC
 ---
 
 {{JSRef}}

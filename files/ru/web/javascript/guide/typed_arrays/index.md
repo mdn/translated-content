@@ -1,8 +1,6 @@
 ---
 title: Типизированные массивы JavaScript
 slug: Web/JavaScript/Guide/Typed_arrays
-translation_of: Web/JavaScript/Typed_arrays
-original_slug: Web/JavaScript/Typed_arrays
 ---
 
 {{JsSidebar("Advanced")}}
@@ -24,8 +22,6 @@ original_slug: Web/JavaScript/Typed_arrays
 ### Типизированные представления
 
 Название типизированного представления массива говорит само за себя. Оно представляет массив в распространённых числовых форматах, таких как `Int8`, `Uint32`, `Float64` и так далее. Среди прочих, существует специальное представление `Uint8ClampedArray`. Оно ограничивает значения интервалом от 0 до 255. Это полезно, например, при [Обработке данных изображения в Canvas](/ru/docs/Web/API/ImageData).
-
-{{page("/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray", "Объект TypedArray")}}
 
 ### DataView
 
@@ -84,7 +80,7 @@ for (var i = 0; i < int32View.length; i++) {
 var int16View = new Int16Array(buffer);
 
 for (var i = 0; i < int16View.length; i++) {
-  console.log('Entry ' + i + ': ' + int16View[i]);
+  console.log("Entry " + i + ": " + int16View[i]);
 }
 ```
 
@@ -94,7 +90,7 @@ for (var i = 0; i < int16View.length; i++) {
 
 ```js
 int16View[0] = 32;
-console.log('Элемент 0 в 32-битном представлении теперь равен ' + int32View[0]);
+console.log("Элемент 0 в 32-битном представлении теперь равен " + int32View[0]);
 ```
 
 Результатом выполнения станет текст: "Элемент 0 в 32-битном представлении теперь равен 32". Другими словами, два массива на самом деле являются лишь разными представлениями одного и того же буфера данных в разных форматах. Вы можете повторить это с [представлениями](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) любого типа.
@@ -135,7 +131,7 @@ var amountDueView = new Float32Array(buffer, 20, 1);
 
 ```js
 var typedArray = new Uint8Array([1, 2, 3, 4]),
-    normalArray = Array.prototype.slice.call(typedArray);
+  normalArray = Array.prototype.slice.call(typedArray);
 normalArray.length === 4;
 normalArray.constructor === Array;
 ```

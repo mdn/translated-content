@@ -29,7 +29,7 @@ slug: Web/CSS/@counter-style/symbols
 symbols: A B C D E;
 symbols: "\24B6" "\24B7" "\24B8" D E;
 symbols: "0" "1" "2" "4" "5" "6" "7" "8" "9";
-symbols: url('first.svg') url('second.svg') url('third.svg');
+symbols: url("first.svg") url("second.svg") url("third.svg");
 symbols: indic-numbers;
 ```
 

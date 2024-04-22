@@ -1,12 +1,6 @@
 ---
 title: Разбираемся с веб ссылками
 slug: Learn/Common_questions/Web_mechanics/What_are_hyperlinks
-tags:
-  - Навигация
-  - инфраструктура
-  - начальный уровень
-translation_of: Learn/Common_questions/What_are_hyperlinks
-original_slug: Learn/Common_questions/What_are_hyperlinks
 ---
 
 В данной статье мы узнаем, что такое ссылки и почему они важны.

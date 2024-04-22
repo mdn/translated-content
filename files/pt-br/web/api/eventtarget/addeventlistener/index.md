@@ -1,7 +1,6 @@
 ---
 title: Element.addEventListener()
 slug: Web/API/EventTarget/addEventListener
-original_slug: Web/API/Element/addEventListener
 ---
 
 {{apiref("DOM Events")}}
@@ -31,41 +30,46 @@ alvo.addEventListener(type,listener[, useCapture, wantUntrusted {{ Non-standard_
 ## Exemplo
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-<title>Exemplo de Evento DOM</title>
+  <head>
+    <title>Exemplo de Evento DOM</title>
 
-<style>
-#t { border: 1px solid red }
-#t1 { background-color: pink; }
-</style>
+    <style>
+      #t {
+        border: 1px solid red;
+      }
+      #t1 {
+        background-color: pink;
+      }
+    </style>
 
-<script>
-// Função para mudar o conteúdo de t2
-function modifyText() {
-  var t2 = document.getElementById("t2");
-  t2.firstChild.nodeValue = "three";
-}
+    <script>
+      // Função para mudar o conteúdo de t2
+      function modifyText() {
+        var t2 = document.getElementById("t2");
+        t2.firstChild.nodeValue = "three";
+      }
 
-// Função para adicionar uma espera de evento em t
-function load() {
-  var el = document.getElementById("t");
-  el.addEventListener("click", modifyText, false);
-}
+      // Função para adicionar uma espera de evento em t
+      function load() {
+        var el = document.getElementById("t");
+        el.addEventListener("click", modifyText, false);
+      }
 
-document.addEventListener("DOMContentLoaded", load, false);
-</script>
-
-</head>
-<body>
-
-<table id="t">
-   <tr><td id="t1">one</td></tr>
-   <tr><td id="t2">two</td></tr>
-</table>
-
-</body>
+      document.addEventListener("DOMContentLoaded", load, false);
+    </script>
+  </head>
+  <body>
+    <table id="t">
+      <tr>
+        <td id="t1">one</td>
+      </tr>
+      <tr>
+        <td id="t2">two</td>
+      </tr>
+    </table>
+  </body>
 </html>
 ```
 
@@ -76,40 +80,50 @@ No exemplo acima, `modifyText()` é uma escuta para eventos de `click` registrad
 Se você deseja passar parâmetros para a função de escuta, você deve usar uma função anônima.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-<title>Exemplo de Evento DOM</title>
+  <head>
+    <title>Exemplo de Evento DOM</title>
 
-<style>
-#t { border: 1px solid red }
-#t1 { background-color: pink; }
-</style>
+    <style>
+      #t {
+        border: 1px solid red;
+      }
+      #t1 {
+        background-color: pink;
+      }
+    </style>
 
-<script>
+    <script>
+      // Função para mudar o conteúdo de t2
+      function modifyText(new_text) {
+        var t2 = document.getElementById("t2");
+        t2.firstChild.nodeValue = new_text;
+      }
 
-// Função para mudar o conteúdo de t2
-function modifyText(new_text) {
-  var t2 = document.getElementById("t2");
-  t2.firstChild.nodeValue = new_text;
-}
-
-// Função para adicionar uma espera de evento em t
-function load() {
-  var el = document.getElementById("t");
-  el.addEventListener("click", function(){modifyText("four")}, false);
-}
-</script>
-
-</head>
-<body onload="load();">
-
-<table id="t">
-  <tr><td id="t1">one</td></tr>
-  <tr><td id="t2">two</td></tr>
-</table>
-
-</body>
+      // Função para adicionar uma espera de evento em t
+      function load() {
+        var el = document.getElementById("t");
+        el.addEventListener(
+          "click",
+          function () {
+            modifyText("four");
+          },
+          false,
+        );
+      }
+    </script>
+  </head>
+  <body onload="load();">
+    <table id="t">
+      <tr>
+        <td id="t1">one</td>
+      </tr>
+      <tr>
+        <td id="t2">two</td>
+      </tr>
+    </table>
+  </body>
 </html>
 ```
 
@@ -142,6 +156,7 @@ Nos exemplos acima, o valor de this em modifyText(), quando disparado pelo event
 ```html
 <table id="t" onclick="modifyText();">
   . . .
+</table>
 ```
 
 O valor de this em modifyText(), quando disparado pelo evento de clique no HTML, será uma referência ao objeto global (no caso, a janela).
@@ -151,40 +166,38 @@ O valor de this em modifyText(), quando disparado pelo evento de clique no HTML,
 Este é um exemplo com e sem `bind`:
 
 ```js
-var Algo = function(elemento)
-{
-  this.nome = 'Algo bom';
-  this.onclick1 = function(evento) {
+var Algo = function (elemento) {
+  this.nome = "Algo bom";
+  this.onclick1 = function (evento) {
     console.log(this.nome); // indefinido, porque this é a função de escuta do clique
   };
-  this.onclick2 = function(evento) {
+  this.onclick2 = function (evento) {
     console.log(this.nome); // 'Algo bom', porque this está como objeto Algo através do bind
   };
-  elemento.addEventListener('click', this.onclick1, false);
-  elemento.addEventListener('click', this.onclick2.bind(this), false); // Truque de bind
-}
+  elemento.addEventListener("click", this.onclick1, false);
+  elemento.addEventListener("click", this.onclick2.bind(this), false); // Truque de bind
+};
 ```
 
 Outra solução é usar uma função especial chamada `handleEvent` para capturar quaisquer eventos:
 
 ```js
-var Algo = function(elemento)
-{
-  this.nome = 'Algo bom';
-  this.handleEvent = function(evento) {
+var Algo = function (elemento) {
+  this.nome = "Algo bom";
+  this.handleEvent = function (evento) {
     console.log(this.nome); // 'Algo bom', porque this é o objeto Algo
-    switch(evento.type) {
-      case 'click':
+    switch (evento.type) {
+      case "click":
         // seu codigo aqui...
         break;
-      case 'dblclick':
+      case "dblclick":
         // seu codigo aqui...
         break;
     }
   };
-  elemento.addEventListener('click', this, false); // Não this.handleEvent, só this
-  elemento.addEventListener('dblclick', this, false); // Não this.handleEvent, só this
-}
+  elemento.addEventListener("click", this, false); // Não this.handleEvent, só this
+  elemento.addEventListener("dblclick", this, false); // Não this.handleEvent, só this
+};
 ```
 
 ### Internet Explorer antigos e attachEvent
@@ -193,9 +206,9 @@ Em versões do Internet Explorer anteriores ao IE9, você precisa usar [`attachE
 
 ```js
 if (el.addEventListener) {
-  el.addEventListener('click', modifyText, false);
-} else if (el.attachEvent)  {
-  el.attachEvent('onclick', modifyText);
+  el.addEventListener("click", modifyText, false);
+} else if (el.attachEvent) {
+  el.attachEvent("onclick", modifyText);
 }
 ```
 
@@ -210,8 +223,8 @@ Existe um porém com `attachEvent` o valor de `this` será a referência ao obje
 el.onclick = modifyText;
 
 // Usando uma expressão de função
-element.onclick = function() {
-    // ... lógica da função ...
+element.onclick = function () {
+  // ... lógica da função ...
 };
 ```
 
@@ -242,17 +255,16 @@ for(i=0 ; i<els.length ; i++){
 
 No primeiro caso, uma nova função (anônima) é criada em cada turno do loop. No segundo caso, a mesma função previamente declarada é usada como um manipulador de evento. Isso resulta em um consumo menor de memória. Além do mais, no primeiro caso, já que nenhuma referência à função anônima é mantida, não é possível chamar [`element.removeEventListener`](/pt-BR/docs/DOM/element.removeEventListener) porque não há uma referência ao manipulador, enquanto no segundo caso é possível fazer `myElement.removeEventListener("click", processEvent, false)`.
 
-## Compatiblidade de navegadores
+## Especificações
 
-{{Compat("api.EventTarget.addEventListener")}}
+{{Specifications}}
+
+## Compatibilidade com navegadores
+
+{{Compat}}
 
 ## Veja também
 
 - [elemento.removeEventListener()](/pt-BR/docs/DOM/element.removeEventListener)
 - [Criando e disparando eventos customizáveis](/pt-BR/docs/DOM/Creating_and_triggering_events)
 - [Mais detalhes no uso de `this` nos manipuladores de eventos](http://www.quirksmode.org/js/this.html)
-
-## Especificação
-
-- [Eventos DOM Nível 2: EventTarget.addEventListener](https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventTarget-addEventListener)
-- [Eventos DOM Nível 3: EventTarget.addEventListener](http://dev.w3.org/2006/webapi/DOM-Level-3-Events/html/DOM3-Events.html#events-EventTarget-addEventListener)

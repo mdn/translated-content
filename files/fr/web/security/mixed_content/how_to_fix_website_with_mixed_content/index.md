@@ -1,7 +1,6 @@
 ---
 title: Comment corriger un site avec du contenu mixte bloqué
 slug: Web/Security/Mixed_content/How_to_fix_website_with_mixed_content
-translation_of: Web/Security/Mixed_content/How_to_fix_website_with_mixed_content
 ---
 
 À partir de [Firefox 23](/fr/docs/Mozilla/Firefox/Releases/23), Firefox bloque [le contenu mixte actif](/fr/docs/Security/Mixed_content#contenu_mixte_actif) par défaut. Cela suit une pratique adoptée par Internet Explorer (depuis IE 9) et [Chrome](https://security.googleblog.com/2011/06/trying-to-end-mixed-scripting.html?m=1).

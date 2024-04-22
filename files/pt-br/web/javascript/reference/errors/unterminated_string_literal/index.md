@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: unterminated string literal'
+title: "SyntaxError: unterminated string literal"
 slug: Web/JavaScript/Reference/Errors/Unterminated_string_literal
 ---
 
@@ -39,15 +39,17 @@ var longString = "This is a very long string which needs
 Ao invés disso, você deve utilizar o operador [+ operator](/pt-BR/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Addition), uma barra invertida(\\), ou [modelos literais](/pt-BR/docs/Web/JavaScript/Reference/Template_literals). Uma forma de uso do operador `+`, seria assim:
 
 ```js example-good
-var longString = "This is a very long string which needs " +
-                 "to wrap across multiple lines because " +
-                 "otherwise my code is unreadable.";
+var longString =
+  "This is a very long string which needs " +
+  "to wrap across multiple lines because " +
+  "otherwise my code is unreadable.";
 ```
 
 Ou você pode usar uma barra invertida ("\\") ao final de cada linha para indicar que a string continuará na próxima linha. Certifique-se de que não há espaço ou qualquer outro caractere após a barra invertida (excento quando for uma quebra de linha), ou como indentação; caso contrário, não funcionará. Esta forma ficaria assim:
 
 ```js example-good
-var longString = "This is a very long string which needs \
+var longString =
+  "This is a very long string which needs \
 to wrap across multiple lines because \
 otherwise my code is unreadable.";
 ```

@@ -1,7 +1,6 @@
 ---
 title: Firefox 3 での DOM の改良
 slug: Mozilla/Firefox/Releases/3/DOM_improvements
-original_slug: DOM_improvements_in_Firefox_3
 l10n:
   sourceCommit: a35e5b74ecbe13a768edf765a4666fb81a5153a1
 ---

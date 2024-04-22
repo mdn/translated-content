@@ -35,6 +35,7 @@ zoom: unset;
 - `reset` {{non-standard_inline}}
 
   - : ユーザーが非ピンチベースのズームを利用したときは (たとえばキーボードで <kbd>Ctrl</kbd>-<kbd>-</kbd> または <kbd>Ctrl</kbd>+<kbd>+</kbd> のショートカット) 要素を拡大しない。 WebKit (とおそらく Blink) のみ対応しています。
+
 - {{cssxref("&lt;percentage&gt;")}}
   - : ズーム率です。 `100%` と `normal` は等価です。 `100%` よりも大きな値はズームイン、 `100%`よりも小さな値はズームアウトします。
 - {{cssxref("&lt;number&gt;")}}
@@ -135,5 +136,4 @@ div#c {
 ## 関連情報
 
 - CSS-Tricks' CSS Almanac の [`zoom` の記事](https://css-tricks.com/almanac/properties/z/zoom/)
-- `zoom` 記述子（[`@viewport`](/ja/docs/Web/CSS/@viewport) で使用）
 - [Bug 390936: Implement Internet Explorer `zoom` property for CSS](https://bugzilla.mozilla.org/show_bug.cgi?id=390936) on the Firefox issue tracker Bugzilla

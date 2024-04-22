@@ -1,7 +1,6 @@
 ---
 title: Dimensionamiento para propiedades lógicas
 slug: Web/CSS/CSS_logical_properties_and_values/Sizing
-original_slug: Web/CSS/CSS_Logical_Properties/Sizing
 ---
 
 {{CSSRef}}
@@ -16,14 +15,14 @@ La siguiente tabla proporciona asignaciones entre propiedades lógicas y física
 
 Si tú estás en un modo de escritura vertical, entonces {{CSSxRef("inline-size")}} sería asignado a {{CSSxRef("height")}}.
 
-| Propiedades Lógicas                      | Propiedades Físicas              |
-| ---------------------------------------- | -------------------------------- |
-| {{CSSxRef("inline-size")}}     | {{CSSxRef("width")}}     |
-| {{CSSxRef("block-size")}}         | {{CSSxRef("height")}}     |
-| {{CSSxRef("min-inline-size")}} | {{CSSxRef("min-width")}} |
-| {{CSSxRef("min-block-size")}} | {{CSSxRef("min-height")}} |
-| {{CSSxRef("max-inline-size")}} | {{CSSxRef("max-width")}} |
-| {{CSSxRef("max-block-size")}} | {{CSSxRef("max-height")}} |
+| Propiedades Lógicas            | Propiedades Físicas       |
+| ------------------------------ | ------------------------- |
+| {{CSSxRef("inline-size")}}     | {{CSSxRef("width")}}      |
+| {{CSSxRef("block-size")}}      | {{CSSxRef("height")}}     |
+| {{CSSxRef("min-inline-size")}} | {{CSSxRef("min-width")}}  |
+| {{CSSxRef("min-block-size")}}  | {{CSSxRef("min-height")}} |
+| {{CSSxRef("max-inline-size")}} | {{CSSxRef("max-width")}}  |
+| {{CSSxRef("max-block-size")}}  | {{CSSxRef("max-height")}} |
 
 ## Ejemplo de ancho y alto
 

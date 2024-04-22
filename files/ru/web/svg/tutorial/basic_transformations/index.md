@@ -1,8 +1,6 @@
 ---
 title: Базовые трансформации
 slug: Web/SVG/Tutorial/Basic_Transformations
-translation_of: Web/SVG/Tutorial/Basic_Transformations
-original_slug: Web/SVG/Tutorial/Базовые_Преобразования
 ---
 
 {{PreviousNext("Web/SVG/Tutorial/Texts", "Web/SVG/Tutorial/Clipping_and_masking")}}
@@ -13,10 +11,10 @@ original_slug: Web/SVG/Tutorial/Базовые_Преобразования
 
 ```html
 <svg width="30" height="10">
-    <g fill="red">
-        <rect x="0" y="0" width="10" height="10" />
-        <rect x="20" y="0" width="10" height="10" />
-    </g>
+  <g fill="red">
+    <rect x="0" y="0" width="10" height="10" />
+    <rect x="20" y="0" width="10" height="10" />
+  </g>
 </svg>
 ```
 
@@ -30,7 +28,7 @@ original_slug: Web/SVG/Tutorial/Базовые_Преобразования
 
 ```html
 <svg width="40" height="50" style="background-color:#bff;">
-    <rect x="0" y="0" width="10" height="10" transform="translate(30,40)" />
+  <rect x="0" y="0" width="10" height="10" transform="translate(30,40)" />
 </svg>
 ```
 
@@ -46,7 +44,7 @@ original_slug: Web/SVG/Tutorial/Базовые_Преобразования
 
 ```html
 <svg width="31" height="31">
-    <rect x="12" y="-10" width="20" height="20" transform="rotate(45)" />
+  <rect x="12" y="-10" width="20" height="20" transform="rotate(45)" />
 </svg>
 ```
 
@@ -76,9 +74,9 @@ original_slug: Web/SVG/Tutorial/Базовые_Преобразования
 
 ```html
 <svg width="100" height="100">
-    <g transform="scale(2)">
-        <rect width="50" height="50" />
-    </g>
+  <g transform="scale(2)">
+    <rect width="50" height="50" />
+  </g>
 </svg>
 ```
 

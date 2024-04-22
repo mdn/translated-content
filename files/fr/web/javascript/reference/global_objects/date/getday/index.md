@@ -1,14 +1,6 @@
 ---
 title: Date.prototype.getDay()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getDay
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getDay
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/getDay
 ---
 
 {{JSRef}}
@@ -20,7 +12,7 @@ La méthode **`getDay()`** renvoie le jour de la semaine pour la date spécifié
 ## Syntaxe
 
 ```js
-dateObj.getDay()
+dateObj.getDay();
 ```
 
 ### Valeur de retour
@@ -43,10 +35,10 @@ console.log(jourSemaine); //1
 > **Note :** Si besoin, on pourra obtenir le nom complet du jour (`"lundi"` par exemple) en utilisant la méthode {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}} avec un paramètre `options`. Ce faisant, il est plus simple d'internationaliser un site ou une application :
 >
 > ```js
-> var options = { weekday: 'long'};
-> console.log(new Intl.DateTimeFormat('en-US', options).format(Xmas95));
+> var options = { weekday: "long" };
+> console.log(new Intl.DateTimeFormat("en-US", options).format(Xmas95));
 > // Monday
-> console.log(new Intl.DateTimeFormat('de-DE', options).format(Xmas95));
+> console.log(new Intl.DateTimeFormat("de-DE", options).format(Xmas95));
 > // Montag
 > ```
 

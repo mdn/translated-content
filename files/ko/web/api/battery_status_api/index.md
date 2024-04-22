@@ -1,8 +1,8 @@
 ---
 title: Battery Status API
 slug: Web/API/Battery_Status_API
-original_slug: WebAPI/Battery_Status
 ---
+
 {{DefaultAPISidebar("Battery API")}}
 
 **Battery API** 만큼이나 자주 언급되는 **Battery Status API**는 시스템의 배터리 충전 상태에 대한 정보를 제공하고, 배터리 상태에 따라 발생하는 이벤트를 다룰 수 있도록 해 줍니다. 배터리가 얼마남지 않은 상황에서, 앱에서 배터리의 소모를 줄인다거나 배터리가 방전되기 전에 데이터를 저장하거나 하는 것들이 가능합니다.
@@ -14,7 +14,8 @@ Battery Status API 는 {{domxref("window.navigator.battery")}} 를 제공 합니
 아래 예제에서는 배터리가 충전중인 상태 (전원 케이블을 연결하여 충전 중인지) 와 배터리 수준의 변화를 감시합니다. 각각 {{domxref("BatteryManager.chargingchange_event", "chargingchange")}} 와 {{domxref("BatteryManager.levelchange_event", "levelchange")}} 이벤트가 발생하면 완료 됩니다.
 
 ```js
-var battery = navigator.battery || navigator.mozBattery || navigator.webkitBattery;
+var battery =
+  navigator.battery || navigator.mozBattery || navigator.webkitBattery;
 
 function updateBatteryStatus() {
   console.log("Battery status: " + battery.level * 100 + " %");

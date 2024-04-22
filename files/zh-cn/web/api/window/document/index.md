@@ -12,7 +12,7 @@ slug: Web/API/Window/document
 ## 语法
 
 ```js
-doc = window.document
+doc = window.document;
 ```
 
 ## 参数
@@ -22,19 +22,17 @@ doc = window.document
 ## 例子
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-   <title>Hello, World!</title>
-</head>
-<body>
-
-<script type="text/javascript">
-   var doc = window.document;
-   alert( doc.title);    // 弹出：Hello, World!
-</script>
-
-</body>
+  <head>
+    <title>Hello, World!</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var doc = window.document;
+      alert(doc.title); // 弹出：Hello, World!
+    </script>
+  </body>
 </html>
 ```
 

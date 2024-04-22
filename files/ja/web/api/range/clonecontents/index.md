@@ -1,6 +1,9 @@
 ---
-title: Range.cloneContents()
+title: "Range: cloneContents() メソッド"
+short-title: cloneContents()
 slug: Web/API/Range/cloneContents
+l10n:
+  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
 {{ APIRef("DOM") }}
@@ -13,7 +16,7 @@ slug: Web/API/Range/cloneContents
 
 ## 構文
 
-```js
+```js-nolint
 cloneContents()
 ```
 

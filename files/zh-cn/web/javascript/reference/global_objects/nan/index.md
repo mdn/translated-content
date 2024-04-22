@@ -27,7 +27,7 @@ slug: Web/JavaScript/Reference/Global_Objects/NaN
 
 `NaN` 及其行为不是 JavaScript 发明的。它在浮点运算中的语义（包括 `NaN !== NaN`）是由 [IEEE 754](https://zh.wikipedia.org/wiki/雙精度浮點數) 指定的。`NaN` 的行为包括：
 
-- 如果 `NaN` 涉及数学运算（但不涉及[位运算](zh-CN/docs/Web/JavaScript/Reference/Operators#位移运算符)），结果通常也是 `NaN`。（参见下面的[反例](#默默逃离_nan)。）
+- 如果 `NaN` 涉及数学运算（但不涉及[位运算](/zh-CN/docs/Web/JavaScript/Reference/Operators#位移运算符)），结果通常也是 `NaN`。（参见下面的[反例](#默默逃离_nan)。）
 - 当 `NaN` 是任何关系比较（`>`, `<`, `>=`, `<=`）的操作数之一时，结果总是 `false`。
 - `NaN` 不等于（通过 [`==`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)、[`!=`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Inequality)、[`===`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality) 和 [`!==`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_inequality)）任何其他值——包括与另一个 `NaN` 值。
 
@@ -37,7 +37,7 @@ slug: Web/JavaScript/Reference/Global_Objects/NaN
 
 ### 针对 NaN 的测试
 
-要判断一个值是否为 `NaN`，可以使用 {{jsxref("Number.isNaN()")}} 或 {{jsxref("Global_Objects/isNaN", "isNaN()")}} 来最清楚地确定一个值是否为 `NaN` ——或者，因为 `NaN` 是唯一与自身不相等的值，所以你可以执行类似 `x !== x` 这样的自我比较。
+要判断一个值是否为 `NaN`，可以使用 {{jsxref("Number.isNaN()")}} 或 {{jsxref("Global_Objects/isNaN", "isNaN()")}} 来最清楚地确定一个值是否为 `NaN`——或者，因为 `NaN` 是唯一与自身不相等的值，所以你可以执行类似 `x !== x` 这样的自我比较。
 
 ```js
 NaN === NaN; // false

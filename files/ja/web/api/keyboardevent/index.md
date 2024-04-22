@@ -2,7 +2,7 @@
 title: KeyboardEvent
 slug: Web/API/KeyboardEvent
 l10n:
-  sourceCommit: bbecba9e7d688493adbdc37fc70e02d87adfe371
+  sourceCommit: 56c76424a5edb45f6716ac4ee48861dac8e7ae38
 ---
 
 {{APIRef("UI Events")}}
@@ -24,7 +24,7 @@ l10n:
 
 ### キーボード上の位置
 
-以下の定数は、キーイベントがキーボードのどの部分から発生したかを識別します。これらは、`KeyboardEvent.DOM_KEY_LOCATION_STANDARD` などとしてアクセスされます。
+以下の定数は、キーイベントがキーボードのどの部分から発生したかを識別します。これらは、 `KeyboardEvent.DOM_KEY_LOCATION_STANDARD` などとしてアクセスされます。
 
 <table class="standard-table">
   <caption>
@@ -148,11 +148,11 @@ _このインターフェイスには、親である {{domxref("UIEvent")}} お�
 
   - : このキーの文字値を表す文字列を返します。キーが表示可能な文字に対応している場合、この値はその文字を含む空でない Unicode 文字列となります。キーが表示可能な表現を持たない場合は、これは空文字列です。
 
-    > **Note:** If the key is used as a macro that inserts multiple characters, this property's value is the entire string, not just the first character.
+    > **メモ:** キーが複数の文字を挿入するマクロとして使用されている場合、このプロパティの値は最初の文字だけでなく、文字列全体になります。
 
 - {{domxref("KeyboardEvent.charCode")}} {{Deprecated_inline}}{{ReadOnlyInline}}
 
-  - : このキーの Unicode 参照番号を表す数値を返します。この属性は、`keypress` イベントでのみ使用されます。 `char` 属性が複数の文字を含むキーの場合、これはその属性の最初の文字の Unicode 値となります。Firefox 26 では、これは表示可能な文字のコードを返します。
+  - : このキーの Unicode 参照番号を表す数値を返します。この属性は、`keypress` イベントでのみ使用されます。 `char` 属性が複数の文字を含むキーの場合、これはその属性の最初の文字の Unicode 値となります。 Firefox 26 では、これは表示可能な文字のコードを返します。
 
     > **警告:** この属性は非推奨です。可能であれば、代わりに {{domxref("KeyboardEvent.key")}} を使用してください。
 
@@ -166,7 +166,7 @@ _このインターフェイスには、親である {{domxref("UIEvent")}} お�
   - : このプロパティは標準外であり、{{domxref("KeyboardEvent.key")}} に置き換えられ非推奨になりました。これは DOM Level 3 Events の古い版に含まれていました。
 - {{domxref("KeyboardEvent.keyLocation")}} {{Non-standard_inline}} {{deprecated_inline}} {{ReadOnlyInline}}
   - : これは {{domxref("KeyboardEvent.location")}} の標準外で非推奨の別名です。これは DOM Level 3 Events の古い版に含まれていました。
-- {{domxref("KeyboardEvent.which")}} {{deprecated_inline}} {{ReadOnlyInline}}
+- {{domxref("UIEvent.which")}} {{deprecated_inline}} {{ReadOnlyInline}}
 
   - : 押されたキーの修飾されていない値を示す、 システムや実装に依存した数値コードを数値で返します。これは通常 `keyCode` と同じです。
 
@@ -233,32 +233,40 @@ GTK を用いた環境の中には、自動リピート時にネイティブの 
 ## 例
 
 ```js
-document.addEventListener('keydown', (event) => {
-  const keyName = event.key;
+document.addEventListener(
+  "keydown",
+  (event) => {
+    const keyName = event.key;
 
-  if (keyName === 'Control') {
-    // do not alert when only Control key is pressed.
-    return;
-  }
+    if (keyName === "Control") {
+      // do not alert when only Control key is pressed.
+      return;
+    }
 
-  if (event.ctrlKey) {
-    // Even though event.key is not 'Control' (e.g., 'a' is pressed),
-    // event.ctrlKey may be true if Ctrl key is pressed at the same time.
-    alert(`Combination of ctrlKey + ${keyName}`);
-  } else {
-    alert(`Key pressed ${keyName}`);
-  }
-}, false);
+    if (event.ctrlKey) {
+      // Even though event.key is not 'Control' (e.g., 'a' is pressed),
+      // event.ctrlKey may be true if Ctrl key is pressed at the same time.
+      alert(`Combination of ctrlKey + ${keyName}`);
+    } else {
+      alert(`Key pressed ${keyName}`);
+    }
+  },
+  false,
+);
 
-document.addEventListener('keyup', (event) => {
-  const keyName = event.key;
+document.addEventListener(
+  "keyup",
+  (event) => {
+    const keyName = event.key;
 
-  // As the user releases the Ctrl key, the key is no longer active,
-  // so event.ctrlKey is false.
-  if (keyName === 'Control') {
-    alert('Control key was released');
-  }
-}, false);
+    // As the user releases the Ctrl key, the key is no longer active,
+    // so event.ctrlKey is false.
+    if (keyName === "Control") {
+      alert("Control key was released");
+    }
+  },
+  false,
+);
 ```
 
 ## 仕様書

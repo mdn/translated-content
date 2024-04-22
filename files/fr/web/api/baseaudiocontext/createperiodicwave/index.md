@@ -1,21 +1,11 @@
 ---
 title: BaseAudioContext.createPeriodicWave()
 slug: Web/API/BaseAudioContext/createPeriodicWave
-tags:
-  - API
-  - Audio
-  - AudioContext
-  - BaseAudioContext
-  - Media
-  - Méthode
-  - Web Audio API
-  - createPeriodicWave
-translation_of: Web/API/BaseAudioContext/createPeriodicWave
 ---
 
 {{ APIRef("Web Audio API") }}
 
-La méthode `createPeriodicWave()` de l'interface {{ domxref("BaseAudioContext") }} est utilisée pour créer une {{domxref("PeriodicWave")}} (onde périodique), qui sert à définir une onde sinusoïdale périodique qui peut être utilisée pour modeler la sortie d'un {{ domxref("OscillatorNode") }}.
+La méthode `createPeriodicWave()` de l'interface {{ domxref("BaseAudioContext") }} est utilisée pour créer une {{domxref("PeriodicWave")}} (onde périodique), qui sert à définir une forme d'onde périodique qui peut être utilisée pour modeler la sortie d'un {{ domxref("OscillatorNode") }}.
 
 ## Syntaxe
 
@@ -56,7 +46,9 @@ imag[0] = 0;
 réel[1] = 1;
 imag[1] = 0;
 
-var onde = contexteAudio.createPeriodicWave(réel, imag, {disableNormalization: true});
+var onde = contexteAudio.createPeriodicWave(réel, imag, {
+  disableNormalization: true,
+});
 
 oscillateur.setPeriodicWave(wave);
 

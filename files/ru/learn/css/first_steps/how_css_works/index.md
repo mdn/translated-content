@@ -1,16 +1,6 @@
 ---
 title: Как работает CSS
 slug: Learn/CSS/First_steps/How_CSS_works
-tags:
-  - Beginner
-  - CSS
-  - DOM
-  - DOM дерево
-  - Learn
-  - Начинающий
-  - Обучение
-  - дерево
-translation_of: Learn/CSS/First_steps/How_CSS_works
 ---
 
 {{LearnSidebar}}
@@ -76,7 +66,9 @@ P
 {{EmbedLiveSample('A_real_DOM_representation', '100%', 55)}}
 
 ```css hidden
-p {margin:0;}
+p {
+  margin: 0;
+}
 ```
 
 ## Добавление CSS в DOM
@@ -122,7 +114,7 @@ span {
 Ниже я использовал британское написание слова _color_, что делает свойство некорректным. Поэтому текст не будет синим. Однако всё остальное будет работать; пропущено только недействительное свойство.
 
 ```html
-<p> I want this text to be large, bold and blue.</p>
+<p>I want this text to be large, bold and blue.</p>
 ```
 
 ```css
@@ -151,11 +143,3 @@ p {
 Вы почти закончили модуль; осталось только одно. В следующей статье вы попрактикуетесь в [использовании ваших новых знаний](/ru/docs/Learn/CSS/First_steps/Using_your_new_knowledge).
 
 {{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}
-
-## В этом модуле
-
-1. [Что такое CSS?](/ru/docs/Learn/CSS/First_steps/Что_такое_CSS)
-2. [Начало работы с CSS](/ru/docs/Learn/CSS/First_steps/Getting_started)
-3. [Как структурирован CSS](/ru/docs/Learn/CSS/First_steps/%D0%9A%D0%B0%D0%BA_%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD_CSS)
-4. [Как работает CSS](/ru/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [Использование ваших новых знаний](/ru/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

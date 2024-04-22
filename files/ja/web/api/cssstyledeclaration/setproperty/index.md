@@ -22,7 +22,7 @@ setProperty(propertyName, value, priority)
   - : 文字列で、変更する CSS プロパティ名（ハイフン区切り）です。
 - `value` {{optional_inline}}
   - : 文字列で、新しいプロパティ値が入ります。指定されなかった場合は、空文字列として扱われます。
-  > **メモ:** `value` が `"!important"` を含むことはできません。これは `priority` 引数を使用して設定してください。
+    > **メモ:** `value` が `"!important"` を含むことはできません。これは `priority` 引数を使用して設定してください。
 - `priority` {{optional_inline}}
 
   - : 文字列で、 CSS の優先度 "important" を設定することができます。指定されなかった場合は、空文字列として扱われます。以下の値を受け付けます。
@@ -139,7 +139,7 @@ function randomColor() {
 
 const stylesheet = document.styleSheets[1];
 const boxParaRule = [...stylesheet.cssRules].find(
-  (r) => r.selectorText === ".box p"
+  (r) => r.selectorText === ".box p",
 );
 
 function setRandomBorder() {

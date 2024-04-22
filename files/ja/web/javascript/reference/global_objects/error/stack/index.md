@@ -24,7 +24,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Error/stack
 次の HTML マークアップは、`stack` プロパティの使用を実演します。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <meta charset="UTF-8" />
 <title>Stack Trace Example</title>
 <body>

@@ -33,18 +33,15 @@ Note: Performance 对象暴露给了 {{domxref("Window")}} 和 {{domxref("Worker
 function print_PerformanceEntries() {
   // Use getEntries() to get a list of all performance entries
   var p = performance.getEntries();
-  for (var i=0; i < p.length; i++) {
+  for (var i = 0; i < p.length; i++) {
     console.log("PerformanceEntry[" + i + "]");
     print_PerformanceEntry(p[i]);
   }
 }
 function print_PerformanceEntry(perfEntry) {
-  var properties = ["name",
-    "entryType",
-    "startTime",
-    "duration"];
+  var properties = ["name", "entryType", "startTime", "duration"];
 
-  for (var i=0; i < properties.length; i++) {
+  for (var i = 0; i < properties.length; i++) {
     // check each property
     var supported = properties[i] in perfEntry;
     if (supported) {

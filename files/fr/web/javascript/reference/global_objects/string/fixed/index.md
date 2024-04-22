@@ -1,15 +1,6 @@
 ---
 title: String.prototype.fixed()
 slug: Web/JavaScript/Reference/Global_Objects/String/fixed
-tags:
-  - Déprécié
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/fixed
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/fixed
 ---
 
 {{JSRef}}{{deprecated_header}}
@@ -19,7 +10,7 @@ La méthode **`fixed()`** permet de créer un élément HTML {{HTMLElement("tt")
 ## Syntaxe
 
 ```js
-str.fixed()
+str.fixed();
 ```
 
 ### Valeur de retour

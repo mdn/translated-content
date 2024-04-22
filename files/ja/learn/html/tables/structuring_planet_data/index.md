@@ -1,5 +1,5 @@
 ---
-title: '評価: 太陽系の惑星のデータを構造化する'
+title: "評価: 太陽系の惑星のデータを構造化する"
 slug: Learn/HTML/Tables/Structuring_planet_data
 ---
 

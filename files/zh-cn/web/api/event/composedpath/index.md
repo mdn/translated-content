@@ -28,19 +28,19 @@ var composed = Event.composedPath();
 第一个定义就像这样，比如：
 
 ```js
-customElements.define('open-shadow',
+customElements.define(
+  "open-shadow",
   class extends HTMLElement {
     constructor() {
       super();
 
-      let pElem = document.createElement('p');
-      pElem.textContent = this.getAttribute('text');
+      let pElem = document.createElement("p");
+      pElem.textContent = this.getAttribute("text");
 
-      let shadowRoot = this.attachShadow({mode: 'open'})
-        .appendChild(pElem);
-
-  }
-});
+      let shadowRoot = this.attachShadow({ mode: "open" }).appendChild(pElem);
+    }
+  },
+);
 ```
 
 然后我们在我们的页面中插入其中一个元素：
@@ -53,7 +53,7 @@ customElements.define('open-shadow',
 然后在 `<html>` 元素中插入一个鼠标点击事件：
 
 ```js
-document.querySelector('html').addEventListener('click',function(e) {
+document.querySelector("html").addEventListener("click", function (e) {
   console.log(e.composed);
   console.log(e.composedPath());
 });

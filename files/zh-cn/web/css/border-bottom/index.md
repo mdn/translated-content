@@ -49,9 +49,7 @@ border-bottom: medium dashed blue;
 ## 示例
 
 ```html
-<div>
-  This box has a border on the bottom side.
-</div>
+<div>This box has a border on the bottom side.</div>
 ```
 
 ```css

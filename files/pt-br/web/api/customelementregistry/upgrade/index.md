@@ -37,7 +37,7 @@ customElements.define("spider-man", SpiderMan);
 console.assert(!(el instanceof SpiderMan)); // Ainda não atualizado
 
 customElements.upgrade(el);
-console.assert(el instanceof SpiderMan);    // Atualizado!
+console.assert(el instanceof SpiderMan); // Atualizado!
 ```
 
 ## Especificações

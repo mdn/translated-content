@@ -1,7 +1,6 @@
 ---
 title: expresión class
 slug: Web/JavaScript/Reference/Operators/class
-original_slug: Web/JavaScript/Referencia/Operadores/class
 ---
 
 {{jsSidebar("Operators")}}
@@ -23,7 +22,7 @@ Una expresión de clase tiene una sintaxis similar a la [declaración de una cla
 Tal y como en la declaración de clases, el cuerpo de la expresión de clase se ejecuta en [modo estricto](/es/docs/Web/JavaScript/Referencia/Modo_estricto).
 
 ```js
-'use strict';
+"use strict";
 var Foo = class {}; // la propiedad constructor es opcional
 var Foo = class {}; // Se permite repetir declaraciones
 
@@ -32,7 +31,7 @@ typeof class {}; // devuelve "function"
 
 Foo instanceof Object; // true
 Foo instanceof Function; // true
-class Foo {}; // Lanza TypeError, no permite volver a declararla
+class Foo {} // Lanza TypeError, no permite volver a declararla
 ```
 
 ## Ejemplo
@@ -64,7 +63,7 @@ var Foo = class NamedFoo {
   whoIsThere() {
     return NamedFoo.name;
   }
-}
+};
 var bar = new Foo();
 bar.whoIsThere(); // "NamedFoo"
 NamedFoo.name; // ReferenceError: NamedFoo no está definido

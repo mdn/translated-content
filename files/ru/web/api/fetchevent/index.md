@@ -1,7 +1,6 @@
 ---
 title: FetchEvent
 slug: Web/API/FetchEvent
-translation_of: Web/API/FetchEvent
 ---
 
 {{APIRef("Service Workers API")}}
@@ -42,26 +41,28 @@ _Данный класс наследует методы класса_ _{{domxre
 В данном примере все не-GET запросы будут обрабатываться стандартными средствами браузера. В случае GET запросов, service worker попробует найти ответ в кеше, а в случае его отсутствия получит данные с сервера. Также, он асинхронно обновит данные в кеше.
 
 ```js
-self.addEventListener('fetch', event => {
+self.addEventListener("fetch", (event) => {
   // В случае не-GET запроса браузер должен сам обрабатывать его
-  if (event.request.method != 'GET') return;
+  if (event.request.method != "GET") return;
 
   // Обрабатываем запрос с помощью логики service worker
-  event.respondWith(async function() {
-    // Пытаемся получить ответ из кеша.
-    const cache = await caches.open('dynamic-v1');
-    const cachedResponse = await cache.match(event.request);
+  event.respondWith(
+    (async function () {
+      // Пытаемся получить ответ из кеша.
+      const cache = await caches.open("dynamic-v1");
+      const cachedResponse = await cache.match(event.request);
 
-    if (cachedResponse) {
-      // Если кеш был найден, возвращаем данные из него
-      // и запускаем фоновое обновление данных в кеше.
-      event.waitUntil(cache.add(event.request));
-      return cachedResponse;
-    }
+      if (cachedResponse) {
+        // Если кеш был найден, возвращаем данные из него
+        // и запускаем фоновое обновление данных в кеше.
+        event.waitUntil(cache.add(event.request));
+        return cachedResponse;
+      }
 
-    // В случае, если данные не были найдены в кеше, получаем их с сервера.
-    return fetch(event.request);
-  }());
+      // В случае, если данные не были найдены в кеше, получаем их с сервера.
+      return fetch(event.request);
+    })(),
+  );
 });
 ```
 
@@ -69,7 +70,7 @@ self.addEventListener('fetch', event => {
 
 {{Specifications}}
 
-## Совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

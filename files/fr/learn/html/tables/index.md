@@ -1,17 +1,6 @@
 ---
 title: Les tableaux en HTML
 slug: Learn/HTML/Tables
-tags:
-  - Article
-  - CodingScripting
-  - Débutant
-  - Guide
-  - HTML
-  - Landing
-  - Module
-  - Tableaux
-translation_of: Learn/HTML/Tables
-original_slug: Apprendre/HTML/Tableaux
 ---
 
 {{LearnSidebar}}

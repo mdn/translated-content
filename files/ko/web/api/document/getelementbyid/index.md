@@ -30,14 +30,14 @@ document.getElementById(id);
 
 ```html
 <html>
-<head>
-  <title>getElementById 예제</title>
-</head>
-<body>
-  <p id="para">어떤 글</p>
-  <button onclick="changeColor('blue');">blue</button>
-  <button onclick="changeColor('red');">red</button>
-</body>
+  <head>
+    <title>getElementById 예제</title>
+  </head>
+  <body>
+    <p id="para">어떤 글</p>
+    <button onclick="changeColor('blue');">blue</button>
+    <button onclick="changeColor('red');">red</button>
+  </body>
 </html>
 ```
 
@@ -45,7 +45,7 @@ document.getElementById(id);
 
 ```js
 function changeColor(newColor) {
-  var elem = document.getElementById('para');
+  var elem = document.getElementById("para");
   elem.style.color = newColor;
 }
 ```
@@ -65,24 +65,24 @@ function changeColor(newColor) {
 ```html
 <!doctype html>
 <html>
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="parent-id">
-        <p>hello word1</p>
-        <p id="test1">hello word2</p>
-        <p>hello word3</p>
-        <p>hello word4</p>
+      <p>hello word1</p>
+      <p id="test1">hello word2</p>
+      <p>hello word3</p>
+      <p>hello word4</p>
     </div>
     <script>
-        var parentDOM = document.getElementById('parent-id');
-        var test1=parentDOM.getElementById('test1');
-        //throw error
-        //Uncaught TypeError: parentDOM.getElementById is not a function
+      var parentDOM = document.getElementById("parent-id");
+      var test1 = parentDOM.getElementById("test1");
+      //throw error
+      //Uncaught TypeError: parentDOM.getElementById is not a function
     </script>
-</body>
+  </body>
 </html>
 ```
 
@@ -91,9 +91,9 @@ function changeColor(newColor) {
 **문서에 없는 요소**는 `getElementById()`가 팀색하지 않습니다. 요소를 동적으로 생성해서 ID를 부여하더라도, {{domxref("Node.insertBefore()")}}나 비슷한 메서드로 문서 트리에 삽입해야 `getElementById()`로 접근할 수 있습니다.
 
 ```js
-var element = document.createElement('div');
-element.id = 'testqq';
-var el = document.getElementById('testqq'); // el이 null!
+var element = document.createElement("div");
+element.id = "testqq";
+var el = document.getElementById("testqq"); // el이 null!
 ```
 
 **HTML이 아닌 문서**. DOM 구현체는 요소의 어떤 속성이 ID인지 알고 있어야 합니다. 문서의 DTD가 정의하고 있지 않으면, 속성명이 "id"라고 해도 ID 유형인건 아닙니다. [XHTML](/ko/docs/XHTML), [XUL](/ko/docs/XUL) 등 자주 쓰이는 문서의 경우 `id` 속성을 ID 유형으로 정의하고 있습니다. ID 유형의 속성이 어떤 것인지 모르는 다른 구현의 경우 `null`을 반환합니다.

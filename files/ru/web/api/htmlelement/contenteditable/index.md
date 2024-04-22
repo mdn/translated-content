@@ -1,7 +1,6 @@
 ---
 title: HTMLElement.contentEditable
 slug: Web/API/HTMLElement/contentEditable
-translation_of: Web/API/HTMLElement/contentEditable
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -25,7 +24,7 @@ element.contentEditable = "true"
 
 {{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

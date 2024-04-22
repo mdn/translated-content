@@ -56,11 +56,11 @@ slug: Web/API/SVGCircleElement
 
 ## 属性
 
-| 名称 | 类型                                         | 描述                                                                             |
-| ---- | -------------------------------------------- | -------------------------------------------------------------------------------- |
+| 名称 | 类型                               | 描述                                                              |
+| ---- | ---------------------------------- | ----------------------------------------------------------------- |
 | `cx` | {{ domxref("SVGAnimatedLength") }} | 对应于给定{{ SVGElement("circle") }}元素的{{ SVGAttr("cx") }}属性 |
 | `cy` | {{ domxref("SVGAnimatedLength") }} | 对应于给定{{ SVGElement("circle") }}元素的{{ SVGAttr("cy") }}属性 |
-| `r`  | {{ domxref("SVGAnimatedLength") }} | 对应于给定{{ SVGElement("circle") }}元素的{{ SVGAttr("r") }}属性 |
+| `r`  | {{ domxref("SVGAnimatedLength") }} | 对应于给定{{ SVGElement("circle") }}元素的{{ SVGAttr("r") }}属性  |
 
 ## 方法
 

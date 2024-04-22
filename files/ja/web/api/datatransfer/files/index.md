@@ -9,7 +9,7 @@ slug: Web/API/DataTransfer/files
 
 この機能を利用して、ユーザーのデスクトップからブラウザーにファイルをドラッグすることができます。
 
-> **メモ:** [`DataTransfer`](/ja/docs/Web/API/DataTransfer) オブジェクトの `files` プロパティは、 `drop` イベントの中からのみアクセスできます。それ以外のどのイベントでも、 `files` プロパティは空になります。その基礎となるデータストアが[保護モード](<https://html.spec.whatwg.org/multipage/dnd.html#the-drag-data-store>)になるからです。
+> **メモ:** [`DataTransfer`](/ja/docs/Web/API/DataTransfer) オブジェクトの `files` プロパティは、 `drop` イベントの中からのみアクセスできます。それ以外のどのイベントでも、 `files` プロパティは空になります。その基礎となるデータストアが[保護モード](https://html.spec.whatwg.org/multipage/dnd.html#the-drag-data-store)になるからです。
 
 ## 返値
 

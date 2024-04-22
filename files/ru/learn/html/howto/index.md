@@ -1,14 +1,8 @@
 ---
 title: Использование HTML для решения общих задач
 slug: Learn/HTML/Howto
-tags:
-  - CodingScripting
-  - HTML
-  - На русском
-  - Программирование
-translation_of: Learn/HTML/Howto
-original_slug: Learn/HTML/Рецепты
 ---
+
 Следующие ссылки указывают на решения общих повседневных проблем, которые вам нужно решить с помощью HTML.
 
 ### Основы структурирования

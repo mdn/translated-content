@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: search ロール'
+title: "ARIA: search ロール"
 slug: Web/Accessibility/ARIA/Roles/search_role
 ---
 
@@ -20,8 +20,8 @@ slug: Web/Accessibility/ARIA/Roles/search_role
 ```html
 <form id="search" role="search">
   <label for="search-input">このサイトを検索</label>
-  <input type="search" id="search-input" name="search" spellcheck="false">
-  <input value="検索する" type="submit">
+  <input type="search" id="search-input" name="search" spellcheck="false" />
+  <input value="検索する" type="submit" />
 </form>
 ```
 
@@ -95,7 +95,7 @@ TBD
 
 - [\<form>: フォーム要素](/ja/docs/Web/HTML/Element/form)
 - [\<input type="search">](/ja/docs/Web/HTML/Element/input/search)
-- [HTML のセクションとアウトラインの使用](/ja/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines)
+- [HTML のセクションとアウトラインの使用](/ja/docs/Web/HTML/Element/Heading_Elements)
 - [ランドマークロール: ARIA を使用する: ロール、ステート、プロパティ](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles)
 - [Using WAI-ARIA Landmarks – 2013 | The Paciello Group](https://developer.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/)
 - [Accessible Landmarks | scottohara.me](https://www.scottohara.me/blog/2018/03/03/landmarks.html)

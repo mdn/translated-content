@@ -1,12 +1,6 @@
 ---
 title: Méthodes de requête HTTP
 slug: Web/HTTP/Methods
-tags:
-  - HTTP
-  - Méthodes
-  - Reference
-translation_of: Web/HTTP/Methods
-original_slug: Web/HTTP/Méthode
 ---
 
 {{HTTPSidebar}}

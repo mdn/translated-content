@@ -1,12 +1,6 @@
 ---
 title: Comment créer un arbre DOM
 slug: Web/API/Document_object_model/How_to_create_a_DOM_tree
-tags:
-  - AJAX
-  - DOM
-  - Extensions
-translation_of: Web/API/Document_object_model/How_to_create_a_DOM_tree
-original_slug: Comment_créer_un_arbre_DOM
 ---
 
 Cet article décrit comment utiliser l'API [DOM Core (en)](https://www.w3.org/TR/DOM-Level-3-Core/) en JavaScript pour créer et modifier des objets DOM. Il concerne toutes les applications basées sur Gecko (telles que Firefox) sur du code avec privilèges (par exemple les extensions) ou sans privilège (des pages Web).
@@ -134,7 +128,7 @@ Vous pouvez automatiser la création de l'arbre DOM en utilisant un algorithme i
 
 ### Et après ?
 
-Les arbres DOM peuvent être interrogés en utilisant des [expressions XPath](/fr/docs/Introduction_%C3%A0_l'utilisation_de_XPath_avec_JavaScript), convertis en chaîne de caractères ou écris dans un fichier local ou distant en utilisant [XMLSerializer](/fr/docs/Web/Guide/Parsing_and_serializing_XML) (sans avoir à le convertir en chaîne de caractères auparavant), [envoyés à un serveur Web](/fr/docs/Web/API/XMLHttpRequest) (via XMLHttpRequest), transformés en utilisant [XSLT](/fr/docs/XSLT), [XLink](/fr/docs/Glossaire/XLink), convertis en un objet JavaScript à travers un [algorithme JXON](/fr/docs/Archive/JXON), etc.
+Les arbres DOM peuvent être interrogés en utilisant des [expressions XPath](/fr/docs/Introduction_à_l'utilisation_de_XPath_avec_JavaScript), convertis en chaîne de caractères ou écris dans un fichier local ou distant en utilisant [XMLSerializer](/fr/docs/Web/Guide/Parsing_and_serializing_XML) (sans avoir à le convertir en chaîne de caractères auparavant), [envoyés à un serveur Web](/fr/docs/Web/API/XMLHttpRequest) (via XMLHttpRequest), transformés en utilisant [XSLT](/fr/docs/XSLT), [XLink](/fr/docs/Glossaire/XLink), convertis en un objet JavaScript à travers un [algorithme JXON](/fr/docs/Archive/JXON), etc.
 
 Vous pouvez utiliser des arbres DOM pour modéliser des données qui ne peuvent pas être traitées avec RDF (ou si vous n'aimez pas RDF). Un autre champ d'action est que, comme XUL est du XML, l'UI de votre application peut être manipulée dynamiquement, téléchargée, enregistrée, chargée, convertie ou transformée relativement facilement.
 

@@ -1,7 +1,6 @@
 ---
 title: transitionend
 slug: Web/API/Element/transitionend_event
-original_slug: Web/API/HTMLElement/transitionend_event
 ---
 
 {{ APIRef }}
@@ -25,15 +24,15 @@ El evento `transitionend` es lanzado cuando una [transición CSS](/es/docs/CSS/U
 
 ## Propiedades
 
-| Property                                 | Type                                 | Description                                                                                                                                                                                                                                                                                                |
-| ---------------------------------------- | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Property                           | Type                       | Description                                                                                                                                                                                                                                                                                                |
+| ---------------------------------- | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `target` {{readonlyInline}}        | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree).                                                                                                                                                                                                                                                     |
-| `type` {{readonlyInline}}          | {{domxref("DOMString")}}     | The type of event.                                                                                                                                                                                                                                                                                         |
-| `bubbles` {{readonlyInline}}       | {{jsxref("Boolean")}}         | Whether the event normally bubbles or not.                                                                                                                                                                                                                                                                 |
-| `cancelable` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Whether the event is cancellable or not.                                                                                                                                                                                                                                                                   |
-| `propertyName` {{readonlyInline}}  | {{domxref("DOMString")}}     | The name of the CSS property associated with the transition.                                                                                                                                                                                                                                               |
-| `elapsedTime` {{readonlyInline}}   | Float                                | The amount of time the transition has been running, in seconds, as of the time the event was generated. This value is not affected by the value of `transition-delay`.                                                                                                                                     |
-| `pseudoElement` {{readonlyInline}} | {{domxref("DOMString")}}     | The name (beginning with two colons) of the CSS pseudo-element on which the transition occured (in which case the target of the event is that pseudo-element's corresponding element), or the empty string if the transition occurred on an element (which means the target of the event is that element). |
+| `type` {{readonlyInline}}          | {{domxref("DOMString")}}   | The type of event.                                                                                                                                                                                                                                                                                         |
+| `bubbles` {{readonlyInline}}       | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.                                                                                                                                                                                                                                                                 |
+| `cancelable` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.                                                                                                                                                                                                                                                                   |
+| `propertyName` {{readonlyInline}}  | {{domxref("DOMString")}}   | The name of the CSS property associated with the transition.                                                                                                                                                                                                                                               |
+| `elapsedTime` {{readonlyInline}}   | Float                      | The amount of time the transition has been running, in seconds, as of the time the event was generated. This value is not affected by the value of `transition-delay`.                                                                                                                                     |
+| `pseudoElement` {{readonlyInline}} | {{domxref("DOMString")}}   | The name (beginning with two colons) of the CSS pseudo-element on which the transition occured (in which case the target of the event is that pseudo-element's corresponding element), or the empty string if the transition occurred on an element (which means the target of the event is that element). |
 
 ## Ejemplo
 
@@ -41,9 +40,13 @@ Este ejemplo establece un manejador de evento para detectar el evento `transitio
 
 ```js
 let element = document.getElementById("slidingMenu");
-element.addEventListener("transitionend", function(event) {
-  element.innerHTML = "Done!";
-}, false);
+element.addEventListener(
+  "transitionend",
+  function (event) {
+    element.innerHTML = "Done!";
+  },
+  false,
+);
 ```
 
 ## Especificaciones

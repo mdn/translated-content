@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/values
 l10n:
   sourceCommit: 194d3e00cb93a6e5ea44812548f4131cb17f0381
 ---
+
 {{JSRef}}
 
 **`values()`** 메서드는 배열 내 각 인덱스에 대한 값을 포함하는 새로운 배열 반복자 객체를 반환합니다.

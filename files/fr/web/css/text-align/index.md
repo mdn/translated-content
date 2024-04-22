@@ -1,11 +1,6 @@
 ---
 title: text-align
 slug: Web/CSS/text-align
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/text-align
 ---
 
 {{CSSRef}}
@@ -80,10 +75,10 @@ La propriété `text-align` peut être définie grâce à l'un des mots-clés de
 ```html
 <p class="exemple">
   Il y avait en Vestphalie, dans le château de M. le baron de
-  Thunder-ten-tronckh, un jeune garçon à qui la nature avait
-  donné les moeurs les plus douces. Sa physionomie annonçait
-  son âme. Il avait le jugement assez droit, avec l’esprit le plus
-  simple ; c’est, je crois, pour cette raison qu’on le nommait Candide.
+  Thunder-ten-tronckh, un jeune garçon à qui la nature avait donné les moeurs
+  les plus douces. Sa physionomie annonçait son âme. Il avait le jugement assez
+  droit, avec l’esprit le plus simple ; c’est, je crois, pour cette raison qu’on
+  le nommait Candide.
 </p>
 ```
 
@@ -107,10 +102,10 @@ La propriété `text-align` peut être définie grâce à l'un des mots-clés de
 ```html
 <p class="exemple">
   Il y avait en Vestphalie, dans le château de M. le baron de
-  Thunder-ten-tronckh, un jeune garçon à qui la nature avait
-  donné les moeurs les plus douces. Sa physionomie annonçait
-  son âme. Il avait le jugement assez droit, avec l’esprit le plus
-  simple ; c’est, je crois, pour cette raison qu’on le nommait Candide.
+  Thunder-ten-tronckh, un jeune garçon à qui la nature avait donné les moeurs
+  les plus douces. Sa physionomie annonçait son âme. Il avait le jugement assez
+  droit, avec l’esprit le plus simple ; c’est, je crois, pour cette raison qu’on
+  le nommait Candide.
 </p>
 ```
 
@@ -134,10 +129,10 @@ La propriété `text-align` peut être définie grâce à l'un des mots-clés de
 ```html
 <p class="exemple">
   Il y avait en Vestphalie, dans le château de M. le baron de
-  Thunder-ten-tronckh, un jeune garçon à qui la nature avait
-  donné les moeurs les plus douces. Sa physionomie annonçait
-  son âme. Il avait le jugement assez droit, avec l’esprit le plus
-  simple ; c’est, je crois, pour cette raison qu’on le nommait Candide.
+  Thunder-ten-tronckh, un jeune garçon à qui la nature avait donné les moeurs
+  les plus douces. Sa physionomie annonçait son âme. Il avait le jugement assez
+  droit, avec l’esprit le plus simple ; c’est, je crois, pour cette raison qu’on
+  le nommait Candide.
 </p>
 ```
 
@@ -182,7 +177,7 @@ La méthode la plus générique pour centrer un bloc plutot que de centrer son c
 L'espacement créé entre les mots par la justification du texte peut rendre la lecture difficile pour les personnes dyslexiques ou souffrant de troubles cognitifs.
 
 - [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [_Understanding Success Criterion 1.4.8  | Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
+- [_Understanding Success Criterion 1.4.8 | Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
 
 ## Spécifications
 

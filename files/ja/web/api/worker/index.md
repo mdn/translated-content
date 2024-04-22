@@ -53,14 +53,14 @@ _親である {{domxref("EventTarget")}} からメソッドを継承していま
 次のコード例では、 {{domxref("Worker")}} オブジェクトを、 {{domxref("Worker.Worker", "Worker()")}} コンストラクターを用いて生成しています。
 
 ```js
-const myWorker = new Worker('/worker.js');
-const first = document.querySelector('input#number1');
-const second = document.querySelector('input#number2');
+const myWorker = new Worker("/worker.js");
+const first = document.querySelector("input#number1");
+const second = document.querySelector("input#number2");
 
 first.onchange = () => {
   myWorker.postMessage([first.value, second.value]);
-  console.log('Message posted to worker');
-}
+  console.log("Message posted to worker");
+};
 ```
 
 完全な例は、 [Basic dedicated worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-web-worker) ([専用ワーカーを実行](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-web-worker/)) を参照してください。

@@ -77,11 +77,10 @@ slug: Web/HTML/Element/mark
 
 ```html
 <blockquote>
-  It is a period of civil war. Rebel spaceships, striking from a
-  hidden base, have won their first victory against the evil
-  Galactic Empire. During the battle, <mark>Rebel spies managed
-  to steal secret plans</mark> to the Empire’s ultimate weapon,
-  the DEATH STAR, an armored space station with enough power to
+  It is a period of civil war. Rebel spaceships, striking from a hidden base,
+  have won their first victory against the evil Galactic Empire. During the
+  battle, <mark>Rebel spies managed to steal secret plans</mark> to the Empire’s
+  ultimate weapon, the DEATH STAR, an armored space station with enough power to
   destroy an entire planet.
 </blockquote>
 ```
@@ -93,15 +92,17 @@ slug: Web/HTML/Element/mark
 다음 예제는 글의 검색 결과를 강조할 용도로 `<mark>`를 사용합니다.
 
 ```html
-<p>It is a dark time for the Rebellion. Although the Death
-Star has been destroyed, <mark class="match">Imperial</mark>
-troops have driven the Rebel forces from their hidden base and
-pursued them across the galaxy.</p>
+<p>
+  It is a dark time for the Rebellion. Although the Death Star has been
+  destroyed, <mark class="match">Imperial</mark> troops have driven the Rebel
+  forces from their hidden base and pursued them across the galaxy.
+</p>
 
-<p>Evading the dreaded <mark class="match">Imperial</mark>
-Starfleet, a group of freedom fighters led by Luke Skywalker
-has established a new secret base on the remote ice world of
-Hoth.</p>
+<p>
+  Evading the dreaded <mark class="match">Imperial</mark> Starfleet, a group of
+  freedom fighters led by Luke Skywalker has established a new secret base on
+  the remote ice world of Hoth.
+</p>
 ```
 
 다른 `<mark>`와 검색 결과 표시를 구별하기 위해 사용자 지정 클래스 `"match"`를 추가로 적용했습니다.

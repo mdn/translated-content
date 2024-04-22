@@ -1,19 +1,6 @@
 ---
 title: Работа с файлами
 slug: Learn/Getting_started_with_the_web/Dealing_with_files
-tags:
-  - Beginner
-  - CodingScripting
-  - Files
-  - Guide
-  - HTML
-  - theory
-  - website
-  - Новичку
-  - Руководство
-  - Файлы
-  - сайт
-translation_of: Learn/Getting_started_with_the_web/Dealing_with_files
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}
@@ -54,18 +41,18 @@ translation_of: Learn/Getting_started_with_the_web/Dealing_with_files
 1. Скопируйте изображение, которое вы выбрали ранее, в папку `images`.
 2. Откройте ваш файл `index.html` и вставьте следующий код в файл именно в таком виде. Не беспокойтесь о том, что все это значит - позже в этом руководстве мы рассмотрим структуры более подробно.
 
-    ```html
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <meta charset="utf-8">
-        <title>Моя тестовая страница</title>
-      </head>
-      <body>
-        <img src="" alt="Моё тестовое изображение">
-      </body>
-    </html>
-    ```
+   ```html
+   <!doctype html>
+   <html>
+     <head>
+       <meta charset="utf-8" />
+       <title>Моя тестовая страница</title>
+     </head>
+     <body>
+       <img src="" alt="Моё тестовое изображение" />
+     </body>
+   </html>
+   ```
 
 3. Строка `<img src="" alt="Моё тестовое изображение">` - это HTML код, который вставляет изображение на страницу. Мы должны сказать HTML, где находится изображение. Изображение находится внутри папки _images_, которая находится в той же директории что и `index.html`. Чтобы спуститься вниз по нашей файловой структуре от `index.html` до нашего изображения, путь к файлу должен выглядеть так `images/your-image-filename`. Например наше изображение, названное `firefox-icon.png`, имеет такой путь к файлу: `images/firefox-icon.png`.
 4. Вставьте путь к файлу в ваш HTML код между двойными кавычками `src=""`.
@@ -91,14 +78,3 @@ translation_of: Learn/Getting_started_with_the_web/Dealing_with_files
 ![A file structure in mac os x finder, showing an images folder with an image in, empty scripts and styles folders, and an index.html file](file-structure.png)
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}
-
-## В этом модуле
-
-- [Установка базового программного обеспечения](/ru/docs/Learn/Getting_started_with_the_web/%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0_%D0%B1%D0%B0%D0%B7%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BE%D0%B1%D0%B5%D1%81%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D1%8F)
-- [Каким должен быть ваш веб-сайт?](/ru/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [Работа с файлами](/ru/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [Основы HTML](/ru/docs/Learn/Getting_started_with_the_web/HTML_basics)
-- [Основы CSS](/ru/docs/Learn/Getting_started_with_the_web/CSS_basics)
-- [Основы JavaScript](/ru/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [Публикация вашего веб-сайта](/ru/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [Как работает Веб](/ru/docs/Learn/Getting_started_with_the_web/How_the_Web_works)

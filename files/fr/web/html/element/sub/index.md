@@ -1,5 +1,5 @@
 ---
-title: '<sub> : l''élément de mise en indice'
+title: "<sub> : l'élément de mise en indice"
 slug: Web/HTML/Element/sub
 l10n:
   sourceCommit: ca8d6889ade7fc6121aaf4d59158fa6a795f1a1b
@@ -77,9 +77,8 @@ Voici certains cas d'utilisation (non exhaustifs) pour `<sub>`&nbsp;:
 
 ```html
 <p>
-  Selon les calculs effectués par Nakamura, Johnson et
-  Mason<sub>1</sub>, cela causera l'annulation complète
-  des deux particules.
+  Selon les calculs effectués par Nakamura, Johnson et Mason<sub>1</sub>, cela
+  causera l'annulation complète des deux particules.
 </p>
 ```
 
@@ -92,9 +91,7 @@ Voici certains cas d'utilisation (non exhaustifs) pour `<sub>`&nbsp;:
 #### HTML
 
 ```html
-<p>
-  La molécule d'eau est symbolisée par H<sub>2</sub>O.
-</p>
+<p>La molécule d'eau est symbolisée par H<sub>2</sub>O.</p>
 ```
 
 #### Résultat

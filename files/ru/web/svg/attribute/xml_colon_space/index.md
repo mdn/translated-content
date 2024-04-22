@@ -1,7 +1,6 @@
 ---
 title: xml:space
 slug: Web/SVG/Attribute/xml:space
-translation_of: Web/SVG/Attribute/xml:space
 ---
 
 {{deprecated_header("SVG2")}}

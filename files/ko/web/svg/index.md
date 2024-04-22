@@ -1,7 +1,8 @@
 ---
-title: 'SVG: Scalable Vector Graphics'
+title: "SVG: Scalable Vector Graphics"
 slug: Web/SVG
 ---
+
 {{SVGRef}}
 
 ## SVG 시작하기

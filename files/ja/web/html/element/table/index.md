@@ -1,11 +1,13 @@
 ---
-title: '<table>: 表要素'
+title: "<table>: 表要素"
 slug: Web/HTML/Element/table
+l10n:
+  sourceCommit: 48838af610dd803130997115dbe274a5a19c532e
 ---
 
 {{HTMLSidebar}}
 
-**HTML の `<table>` 要素**は表形式のデータ、つまり、行と列の組み合わせによるセルに含まれたデータによる二次元の表で表現される情報です。
+**`<table>`** は [HTML](/ja/docs/Web/HTML) の要素で、表形式のデータ、つまり、行と列の組み合わせによるセルに含まれたデータによる二次元の表で表現される情報です。
 
 {{EmbedInteractiveExample("pages/tabbed/table.html","tabbed-standard")}}
 
@@ -13,7 +15,7 @@ slug: Web/HTML/Element/table
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a>
+        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
         <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
@@ -24,24 +26,20 @@ slug: Web/HTML/Element/table
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <div class="content-models">
-          <div id="table-mdls">
-            以下の順となる。
-            <ol>
-              <li>任意の 1 個の {{HTMLElement("caption")}} 要素</li>
-              <li>0 個以上の {{HTMLElement("colgroup")}} 要素</li>
-              <li>任意の 1 個の {{HTMLElement("thead")}} 要素</li>
-              <li>
-                次の 2 つの選択肢から 1 つ:
-                <ul>
-                  <li>0 個以上の {{HTMLElement("tbody")}} 要素</li>
-                  <li>1 個以上の {{HTMLElement("tr")}} 要素</li>
-                </ul>
-              </li>
-              <li>任意の 1 個の {{HTMLElement("tfoot")}} 要素</li>
-            </ol>
-          </div>
-        </div>
+        以下の順となる。
+        <ol>
+          <li>任意の 1 個の {{HTMLElement("caption")}} 要素</li>
+          <li>0 個以上の {{HTMLElement("colgroup")}} 要素</li>
+          <li>任意の 1 個の {{HTMLElement("thead")}} 要素</li>
+          <li>
+            次の 2 つの選択肢から 1 つ:
+            <ul>
+              <li>0 個以上の {{HTMLElement("tbody")}} 要素</li>
+              <li>1 個以上の {{HTMLElement("tr")}} 要素</li>
+            </ul>
+          </li>
+          <li>任意の 1 個の {{HTMLElement("tfoot")}} 要素</li>
+        </ol>
       </td>
     </tr>
     <tr>
@@ -87,23 +85,27 @@ slug: Web/HTML/Element/table
     - `center`: 表が文書の中央に表示される
     - `right`: 表が文書の右端に表示される
 
-    {{cssxref("margin-left")}} および {{cssxref("margin-right")}} に `auto` を指定したり、 {{cssxref("margin")}} に `0 auto` を指定したりすると、 `align` 属性と同様の効果を得ることができます。
+    {{cssxref("margin-left")}} および {{cssxref("margin-right")}} を設定すると、align 属性に似た効果を得ることができます。
+
+    - `left`: `margin-right: auto; margin-left: 0;`
+    - `center`: `margin-right: auto; margin-left: auto;`
+    - `right`: `margin-right: 0; margin-left: auto;`
 
 - `bgcolor` {{Deprecated_inline}}
 
-  - : 表の背景色です。値は[6 桁の 16 進 RGB コード](/ja/docs/Web/CSS/color_value#RGB_colors)で、その前に「`#`」が付きます。定義済みの[色キーワード](/ja/docs/Web/CSS/color_value#Color_keywords)のうちの 1 つを使用することもできます。
+  - : 表の背景色です。値は [6 桁の 16 進 RGB コード](/ja/docs/Web/CSS/hex-color)で、その前に「`#`」が付きます。定義済みの[色キーワード](/ja/docs/Web/CSS/named-color)のうちの 1 つを使用することもできます。
 
-    同様の効果を得るには、 CSS の {{cssxref("background-color")}} プロパティを使用してください。
+    同様の効果を得るには、CSS の {{cssxref("background-color")}} プロパティを使用してください。
 
 - `border` {{Deprecated_inline}}
 
-  - : この整数値属性は、ピクセル値で、表を囲む枠の大きさを定義します。もし 0 が設定された場合、それは [`frame`](/ja/docs/Web/HTML/Element/table#frame) 属性が void に設定されることを意味します。
+  - : この整数値属性は、ピクセル値で、表を囲む枠の大きさを定義します。もし 0 が設定された場合、それは [`frame`](#frame) 属性が void に設定されることを意味します。
 
     同様の効果を得るには、 {{cssxref("border")}} 一括指定プロパティを使用してください。
 
 - `cellpadding` {{Deprecated_inline}}
 
-  - : この属性は、セルの内容と境界線の間の空間を、表示・非表示を問わず定義します。 cellpadding の長さがピクセル数で定義されたのであれば、このピクセルの大きさの余白が、4 方向全てに適用されるでしょう。長さがパーセント値を用いて定義された場合は、内容は中央に配置され、垂直方向 (上下) の余白の合計値がこの値で表されます。水平方向 (左右) の余白の合計も同じことが言えます。
+  - : この属性は、セルの内容と境界線の間の空間を、表示・非表示を問わず定義します。 cellpadding の長さがピクセル数で定義されたのであれば、このピクセルの大きさの余白が、4 方向全てに適用されるでしょう。長さがパーセント値を用いて定義された場合は、内容は中央に配置され、垂直方向（上下）の余白の合計値がこの値で表されます。水平方向 (左右) の余白の合計も同じことが言えます。
 
     同様の効果を得るには、 {{cssxref("border-collapse")}} プロパティを `<table>` 要素に適用し、値を collapse に設定した上で、 {{cssxref("padding")}} プロパティを {{HTMLElement("td")}} 要素に使用してください。
 
@@ -111,7 +113,7 @@ slug: Web/HTML/Element/table
 
   - : この属性は、2 つのセルの間の空間の寸法を、パーセント値またはピクセル値で定義します。この属性は水平方向と垂直方向の両方に適用され、表の上端と最初の行におけるセルの間、表の左端と最初の列の間、表の右端と最後の列の間、表の下端と最後の行の間に適用されます。
 
-    同様の効果を得るには、 {{cssxref("border-spacing")}} プロパティを `<table>` 要素に適用してください。 `border-spacing` は、 {{cssxref("border-collapse")}} が collapse に設定されていると何の効果もありません。
+    同様の効果を得るには、{{cssxref("border-spacing")}} プロパティを `<table>` 要素に適用してください。`border-spacing` は、 {{cssxref("border-collapse")}} が collapse に設定されていると何の効果もありません。
 
 - `frame` {{Deprecated_inline}}
 
@@ -129,7 +131,7 @@ slug: Web/HTML/Element/table
     - `columns` は、列の間の罫線を表示します。
     - `all` は、行と列の間の罫線が表示されます。
 
-    同様の効果を得るには、 {{cssxref("border")}} プロパティを {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}} のうち適切な要素に適用してください。
+    同様の効果を得るには、{{cssxref("border")}} プロパティを {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}} のうち適切な要素に適用してください。
 
 - `summary` {{Deprecated_inline}}
   - : この属性は、表の内容の概要を示す代替テキストを定義します。代わりに {{HTMLElement("caption")}} 要素を使用してください。
@@ -153,9 +155,11 @@ slug: Web/HTML/Element/table
 </table>
 ```
 
+#### 結果
+
 {{EmbedLiveSample('Simple_table', '100%', '100')}}
 
-### さまざまな表
+### その他のシンプルな表
 
 ```html
 <p>ヘッダーのあるシンプルな表</p>
@@ -222,8 +226,8 @@ slug: Web/HTML/Element/table
 <p>colgroup と col のある表</p>
 <table>
   <colgroup>
-    <col style="background-color: #0f0">
-    <col span="2">
+    <col style="background-color: #0f0" />
+    <col span="2" />
   </colgroup>
   <tr>
     <th>Lime</th>
@@ -237,9 +241,11 @@ slug: Web/HTML/Element/table
   </tr>
 </table>
 
-<p>caption のあるシンプルな表</p>
+<p>キャプションのあるシンプルな表</p>
 <table>
-  <caption>素晴らしいキャプション</caption>
+  <caption>
+    素晴らしいキャプション
+  </caption>
   <tr>
     <td>素晴らしいデータ</td>
   </tr>
@@ -247,17 +253,19 @@ slug: Web/HTML/Element/table
 ```
 
 ```css hidden
-table
-{
-border-collapse: collapse;
-border-spacing: 0px;
+table {
+  border-collapse: collapse;
+  border-spacing: 0px;
 }
-table, th, td
-{
-padding: 5px;
-border: 1px solid black;
+table,
+th,
+td {
+  padding: 5px;
+  border: 1px solid black;
 }
 ```
+
+#### 結果
 
 {{EmbedLiveSample('Further_simple_examples', '100%', '700')}}
 
@@ -265,7 +273,7 @@ border: 1px solid black;
 
 #### 表の行のソート
 
-HTML の表の行 ({{HTMLElement("tr")}} 要素) をソートするネイティブの方法はありません。しかし、 {{jsxref("Array/slice", "Array.prototype.slice()")}}, {{jsxref("Array/sort", "Array.prototype.sort()")}}, {{domxref("Node/removeChild", "Node.removeChild()")}}, {{domxref("Node/appendChild", "Node.appendChild()")}} を使用して、独自の `sort()` 関数を実装し、　`<tr>` 要素の {{domxref("HTMLCollection")}} をソートすることができます。
+HTML の表の行（[`<tr>`](/ja/docs/Web/HTML/Element/tr) 要素）をソートするネイティブの方法はありません。しかし、[`Array.prototype.slice()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/slice), [`Array.prototype.sort()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/sort), [`Node.removeChild()`](/ja/docs/Web/API/Node/removeChild), [`Node.appendChild()`](/ja/docs/Web/API/Node/appendChild) を使用して、独自の `sort()` 関数を実装し、`<tr>` 要素の [`HTMLCollection`](/ja/docs/Web/API/HTMLCollection) をソートすることができます。
 
 次の例では、このような例を見ることができます。これを \<tbody> 要素に実装し、表のセルを値の昇順にソートし、それに合わせて表示を更新します。
 
@@ -290,20 +298,15 @@ HTML の表の行 ({{HTMLElement("tr")}} 要素) をソートするネイティ�
 ##### JavaScript
 
 ```js
-HTMLTableSectionElement.prototype.sort = function(cb){
-  Array
-    .prototype
-    .slice
-    .call(this.rows)
+HTMLTableSectionElement.prototype.sort = function (cb) {
+  Array.from(this.rows)
     .sort(cb)
-    .forEach((e,i,a)=>{
-      this.appendChild(this.removeChild(e));
-    },this);
-}
+    .forEach((e) => this.appendChild(this.removeChild(e)));
+};
 
-document.querySelector('table').tBodies[0].sort(function(a, b){
-    return a.textContent.localeCompare(b.textContent);
-});
+document
+  .querySelector("table")
+  .tBodies[0].sort((a, b) => a.textContent.localeCompare(b.textContent));
 ```
 
 ##### 結果
@@ -346,22 +349,25 @@ document.querySelector('table').tBodies[0].sort(function(a, b){
 ##### JavaScript
 
 ```js
-for (let table of document.querySelectorAll('table')) {
-  for (let th of table.tHead.rows[0].cells) {
-    th.onclick = function(){
-      const tBody = table.tBodies[0];
-      const rows = tBody.rows;
-      for (let tr of rows) {
-        Array.prototype.slice.call(rows)
-          .sort(function(tr1, tr2){
-            const cellIndex = th.cellIndex;
-            return tr1.cells[cellIndex].textContent.localeCompare(tr2.cells[cellIndex].textContent);
-          })
-          .forEach(function(tr){
-            this.appendChild(this.removeChild(tr));
-          }, tBody);
-      }
-    }
+const allTables = document.querySelectorAll("table");
+
+for (const table of allTables) {
+  const tBody = table.tBodies[0];
+  const rows = Array.from(tBody.rows);
+  const headerCells = table.tHead.rows[0].cells;
+
+  for (const th of headerCells) {
+    const cellIndex = th.cellIndex;
+
+    th.addEventListener("click", () => {
+      rows.sort((tr1, tr2) => {
+        const tr1Text = tr1.cells[cellIndex].textContent;
+        const tr2Text = tr2.cells[cellIndex].textContent;
+        return tr1Text.localeCompare(tr2Text);
+      });
+
+      tBody.append(...rows);
+    });
   }
 }
 ```
@@ -374,7 +380,7 @@ for (let table of document.querySelectorAll('table')) {
 
 ウェブ上の表でよくある問題は、コンテンツの量が多い場合、小さな画面ではネイティブにはあまりうまく動作しないこと、スクロール可能にする方法が明らかではないことです。特にマークアップが CDN からくると、ラッパーを持つように変更することができません。
 
-この例では、小さな空間に表を表示する方法の一つを紹介しています。 HTML の内容は非常に大きいので非表示にしていますが、特に目立ったものはありません。この例では CSS の方が検査に便利です。
+この例では、小さな空間に表を表示する方法の一つを紹介しています。HTML の内容は非常に大きいので非表示にしていますが、特に目立ったものはありません。この例では CSS の方が検査に便利です。
 
 ```html hidden
 <table>
@@ -551,7 +557,7 @@ for (let table of document.querySelectorAll('table')) {
 </table>
 ```
 
-これらのスタイルを見ると、表の {{cssxref("display")}} プロパティが `block` に設定されていることに気づくでしょう。これによりスクロールが可能になりますが、テーブルはその完全性の一部を失い、テーブルのセルが可能な限り小さくなろうとします。この問題を軽減するために、`<tbody>` の {{cssxref("white-space")}} を `nowrap`に設定しました。しかし、 `<thead>` ではこれを行わないようにしています。これは、長いタイトルで列がデータを表示するために必要以上に広くなるのを避けるためです。
+これらのスタイルを見ると、表の {{cssxref("display")}} プロパティが `block` に設定されていることに気づくでしょう。これによりスクロールが可能になりますが、テーブルはその完全性の一部を失い、テーブルのセルが可能な限り小さくなろうとします。この問題を軽減するために、`<tbody>` の {{cssxref("white-space")}} を `nowrap`に設定しました。しかし、`<thead>` ではこれを行わないようにしています。これは、長いタイトルで列がデータを表示するために必要以上に広くなるのを避けるためです。
 
 下にスクロールしている間、表のヘッダーをページ上に保持するために、 {{cssxref("position")}} を `<th>` 要素の上で粘着するように設定しました。 {{cssxref("border-collapse")}} を `collapse` に設定して **いない**ことに注意してください。
 
@@ -559,44 +565,44 @@ for (let table of document.querySelectorAll('table')) {
 table,
 th,
 td {
-    border: 1px solid;
+  border: 1px solid;
 }
 
 table {
-    width: 100%;
-    max-width: 400px;
-    height: 240px;
-    margin: 0 auto;
-    display: block;
-    overflow-x: auto;
-    border-spacing: 0;
+  width: 100%;
+  max-width: 400px;
+  height: 240px;
+  margin: 0 auto;
+  display: block;
+  overflow-x: auto;
+  border-spacing: 0;
 }
 
 tbody {
-    white-space: nowrap;
+  white-space: nowrap;
 }
 
 th,
 td {
-    padding: 5px 10px;
-    border-top-width: 0;
-    border-left-width: 0;
+  padding: 5px 10px;
+  border-top-width: 0;
+  border-left-width: 0;
 }
 
 th {
-    position: sticky;
-    top: 0;
-    background: #fff;
-    vertical-align: bottom;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  vertical-align: bottom;
 }
 
 th:last-child,
 td:last-child {
-    border-right-width: 0;
+  border-right-width: 0;
 }
 
 tr:last-child td {
-    border-bottom-width: 0;
+  border-bottom-width: 0;
 }
 ```
 
@@ -610,9 +616,9 @@ tr:last-child td {
 
 {{HTMLElement("caption")}} 要素は明確かつ簡潔に表の目的を示すことに価値があるため、これを提供することで、表の残りの部分を読む必要があるか、飛ばすかを判断するのに役立ちます。
 
-これは読み上げソフトのような支援技術を利用して操作している人、弱視の人、認知問題を抱えた人にとって役立ちます。
+これはスクリーンリーダーのような支援技術を利用して操作している人、弱視の人、認知問題を抱えた人にとって役立ちます。
 
-- [MDN \<caption> を用いて表にタイトルをつける](/ja/docs/Learn/HTML/Tables/Advanced#Adding_a_caption_to_your_table_with_<caption>)
+- [MDN \<caption> を用いて表にタイトルをつける](/ja/docs/Learn/HTML/Tables/Advanced#caption_を用いて表にキャプションを追加する)
 - [Caption & Summary • Tables • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/tables/caption-summary/)
 
 ### 行と列のスコープ付け
@@ -623,7 +629,9 @@ tr:last-child td {
 
 ```html
 <table>
-  <caption>Color names and values</caption>
+  <caption>
+    Color names and values
+  </caption>
   <tbody>
     <tr>
       <th scope="col">Name</th>
@@ -634,35 +642,39 @@ tr:last-child td {
     <tr>
       <th scope="row">Teal</th>
       <td><code>#51F6F6</code></td>
-      <td><code>hsla(180, 90%, 64%, 1)</code></td>
-      <td><code>rgba(81, 246, 246, 1)</code></td>
+      <td><code>hsl(180 90% 64% / 1)</code></td>
+      <td><code>rgb(81 246 246 / 1)</code></td>
     </tr>
     <tr>
       <th scope="row">Goldenrod</th>
       <td><code>#F6BC57</code></td>
-      <td><code>hsla(38, 90%, 65%, 1)</code></td>
-      <td><code>rgba(246, 188, 87, 1)</code></td>
+      <td><code>hsl(38 90% 65% / 1)</code></td>
+      <td><code>rgba(246 188 87 / 1)</code></td>
     </tr>
   </tbody>
 </table>
 ```
 
+##### 結果
+
+{{EmbedLiveSample('Scoping_rows_and_columns')}}
+
 {{HTMLElement("th")}} 要素に `scope="col"` を宣言すると、セルが列の一番上にあることを記述するのに役立ちます。 {{HTMLElement("th")}} 要素に `scope="row"` を宣言すると、セルが行の最初の列であることを記述するのに役立ちます。
 
-- [MDN 視覚障碍者向けの表](/ja/docs/Learn/HTML/Tables/Advanced#Tables_for_visually_impaired_users)
+- [MDN 視覚障碍者向けの表](/ja/docs/Learn/HTML/Tables/Advanced#視覚障碍者向けの表)
 - [Tables with two headers • Tables • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/tables/two-headers/)
 - [Tables with irregular headers • Tables • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/tables/irregular/)
 - [H63: Using the scope attribute to associate header cells and data cells in data tables | W3C Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/H63.html)
 
 ### 複雑な表
 
-読み上げソフトのような支援技術は、ヘッダーのセルを厳密に水平又は垂直方向に関連付けすることができない表を解析するのが困難な場合があります。これはつまり、 [`colspan`](/ja/docs/Web/HTML/Element/td#colspan) に [`rowspan`](/ja/docs/Web/HTML/Element/td#rowspan) 属性がある場合のことです。
+スクリーンリーダーのような支援技術は、ヘッダーのセルを厳密に水平または垂直方向に関連付けすることができない表を解析するのが困難な場合があります。これはつまり、 [`colspan`](/ja/docs/Web/HTML/Element/td#colspan) に [`rowspan`](/ja/docs/Web/HTML/Element/td#rowspan) 属性がある場合のことです。
 
-できれば、テーブルの内容を表現するための別な方法、例えばより小さい表の集合に分解するなどで、 `colspan` 及び `rowspan` 属性に依存する必要がないようにすることを考慮してください。これは支援技術を使用している人が表の内容を理解しやすくするのに加えて、表のレイアウトの関連を理解することが難しい認識障碍を持った人にも利益になります。
+できれば、テーブルの内容を表現するための別な方法、例えばより小さい表の集合に分解するなどで、 `colspan` および `rowspan` 属性に依存する必要がないようにすることを考慮してください。これは支援技術を使用している人が表の内容を理解しやすくするのに加えて、表のレイアウトの関連を理解することが難しい認識障碍を持った人にも利益になります。
 
-表を分割することができないのであれば、 [`id`](/ja/docs/Web/HTML/Global_attributes#id) 及び [`headers`](/ja/docs/Web/HTML/Element/td#headers)ment/td#headers) 属性の組み合わせを用いて、表のセルとそのセルに関連したヘッダーをプログラム的に結び付けてください。
+表を分割することができないのであれば、 [`id`](/ja/docs/Web/HTML/Global_attributes#id) および [`headers`](/ja/docs/Web/HTML/Element/td#headers) 属性の組み合わせを用いて、表のセルとそのセルに関連したヘッダーをプログラム的に結び付けてください。
 
-- [MDN 視覚障碍者向けの表](/ja/docs/Learn/HTML/Tables/Advanced#Tables_for_visually_impaired_users)
+- [MDN 視覚障碍者向けの表](/ja/docs/Learn/HTML/Tables/Advanced#視覚障碍者向けの表)
 - [Tables with multi-level headers • Tables • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/tables/multi-level/)
 - [H43: Using id and headers attributes to associate data cells with header cells in data tables | Techniques for W3C WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/H43.html)
 
@@ -672,13 +684,14 @@ tr:last-child td {
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.table")}}
+{{Compat}}
 
 ## 関連情報
 
+- [HTML データ表のチュートリアル](/ja/docs/Learn/HTML/Tables)
 - `<table>` 要素をスタイルするのに特に役に立つであろう CSS の プロパティ:
 
   - {{cssxref("width")}}: 表の幅を定義
   - {{cssxref("border")}}, {{cssxref("border-style")}}, {{cssxref("border-color")}}, {{cssxref("border-width")}}, {{cssxref("border-collapse")}}, {{cssxref("border-spacing")}}: セルの境界線、罫線、枠線の外観を制御
-  - {{cssxref("margin")}} 及び {{cssxref("padding")}}: 個別のセルの内容を整形
-  - {{cssxref("text-align")}} 及び {{cssxref("vertical-align")}}: 文字列やセルの内容の配置
+  - {{cssxref("margin")}} および {{cssxref("padding")}}: 個別のセルの内容を整形
+  - {{cssxref("text-align")}} および {{cssxref("vertical-align")}}: 文字列やセルの内容の配置

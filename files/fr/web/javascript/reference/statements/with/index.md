@@ -1,13 +1,6 @@
 ---
 title: with
 slug: Web/JavaScript/Reference/Statements/with
-tags:
-  - Déprécié
-  - Instruction
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Statements/with
-original_slug: Web/JavaScript/Reference/Instructions/with
 ---
 
 {{jsSidebar("Statements")}}
@@ -20,7 +13,7 @@ L'instruction **`with`** permet d'étendre la portée chaînée d'une instructio
 
 ```js
 with (expression) {
-  instruction
+  instruction;
 }
 ```
 
@@ -45,23 +38,22 @@ Dès qu'un nom non-qualifié est utilisé, JavaScript cherche dans la chaîne de
 - **Inconvénient :** l'instruction `with` peut rendre plus compliquée, que ce soit pour un humain ou un compilateur, la recherche d'un nom non-qualifié le long de la chaîne des portées. Ainsi, avec cet exemple :
 
   ```js
-    function f(x, o) {
-      with (o)
-        console.log(x);
-    }
-    ```
+  function f(x, o) {
+    with (o) console.log(x);
+  }
+  ```
 
   ce n'est que quand `f` est appelée que `x` est trouvé ou non, s'il est trouvé à partir de `o` ou (si o n'a pas de telle propriété) dans l'objet d'activation de `f` où `x` représente le premier argument de la fonction. Si `x` n'est pas défini dans l'objet passé en second argument, il n'y aura pas d'erreur renvoyée, juste des résultats imprévus.
 
 - **Inconvénient :** Du code utilisant l'instruction `with` pourrait ne pas être compatible dans le futur, en particulier lorsqu'il est utilisé avec autre chose qu'un objet simple. Par exemple :
 
   ```js
-    function f(toto, values) {
-      with (toto) {
-        console.log(values)
-      }
+  function f(toto, values) {
+    with (toto) {
+      console.log(values);
     }
-    ```
+  }
+  ```
 
   Si vous appelez `f([1,2,3], obj)` dans un environnement ECMAScript 5, la référence à `values` à l'intérieur de l'instruction `with` sera liée avec `obj`. Cependant, ECMAScript 2015 (ES6) a introduit une propriété `values` pour {{jsxref("Array.prototype")}} (afin qu'elle soit disponible pour chaque tableau). Dans un environnement ECMAScript 2015, la référence à `values` utilisée à l'intérieur de l'instruction `with` sera résolue avec `[1,2,3].values`.
 

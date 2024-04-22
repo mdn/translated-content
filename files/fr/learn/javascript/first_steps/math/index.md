@@ -1,7 +1,6 @@
 ---
 title: Mathématiques de base en JavaScript — nombres et opérateurs
 slug: Learn/JavaScript/First_steps/Math
-translation_of: Learn/JavaScript/First_steps/Math
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
@@ -62,22 +61,22 @@ Amusons‑nous avec quelques nombres pour nous familiariser avec la syntaxe de b
 
 1. Premièrement, déclarons une paire de variables et initialisons‑les respectivement avec un entier et un nombre avec des décimales, puis saisissons les noms des variables à nouveau pour vérifier que tout est correct&nbsp;:
 
-    ```js
-    const monEntier = 5;
-    const monFlottant = 6.667;
-    monEntier;
-    monFlottant;
-    ```
+   ```js
+   const monEntier = 5;
+   const monFlottant = 6.667;
+   monEntier;
+   monFlottant;
+   ```
 
 2. Les nombres sont saisis sans guillemets. Essayez de déclarer et initialiser deux ou trois variables de plus contenant des nombres avant de continuer.
 3. Maintenant vérifions que les deux variables d'origine sont du même type de donnée. En JavaScript, l'opérateur nommé [`typeof`](/fr/docs/Web/JavaScript/Reference/Operators/typeof) est prévu pour cela. Entrez les deux lignes ci‑dessous comme indiqué&nbsp;:
 
-    ```js
-    typeof monEntier;
-    typeof monFlottant;
-    ```
+   ```js
+   typeof monEntier;
+   typeof monFlottant;
+   ```
 
-    `"number"` est renvoyé dans les deux cas — cela nous facilite les choses quand nous avons des nombres différents de types variés et que nous avons à les traiter de diverses façons. Ouf&nbsp;!
+   `"number"` est renvoyé dans les deux cas — cela nous facilite les choses quand nous avons des nombres différents de types variés et que nous avons à les traiter de diverses façons. Ouf&nbsp;!
 
 ### Méthodes utiles de `Number`
 
@@ -99,7 +98,7 @@ Parfois vous pourrez rencontrer un nombre enregistré sous la forme d'une chaîn
 Par exemple, essayez de taper ces lignes dans votre console&nbsp;:
 
 ```js
-let monNombre = '74';
+let monNombre = "74";
 monNombre + 3;
 ```
 
@@ -112,7 +111,7 @@ typeof monNombre;
 Pour réparer le calcul, vous pouvez faire ceci:
 
 ```js
-let monNombre = '74';
+let monNombre = "74";
 Number(monNombre) + 3;
 ```
 
@@ -183,29 +182,29 @@ Nous n'avons certainement pas besoin de vous apprendre les quatre opérations, m
 
 1. Essayez de saisir quelques exemples simples de votre cru, comme&nbsp;:
 
-    ```js
-    10 + 7
-    9 * 8
-    60 % 3
-    ```
+   ```js
+   10 + 7;
+   9 * 8;
+   60 % 3;
+   ```
 
 2. Déclarez et initialisez quelques variables, puis utilisez‑les dans des opérations. Les variables se comporteront exactement comme les valeurs qu'elles contiennent pour les besoins de l'opération. Par exemple&nbsp;:
 
-    ```js
-    const num1 = 10;
-    const num2 = 50;
-    9 * num1;
-    num1 ** 3;
-    num2 / num1;
-    ```
+   ```js
+   const num1 = 10;
+   const num2 = 50;
+   9 * num1;
+   num1 ** 3;
+   num2 / num1;
+   ```
 
 3. Pour terminer cette partie, entrez quelques expressions plus compliquées, comme&nbsp;:
 
-    ```js
-    5 + 10 * 3;
-    num2 % 9 * num1;
-    num2 + num1 / 8 + 2;
-    ```
+   ```js
+   5 + 10 * 3;
+   (num2 % 9) * num1;
+   num2 + num1 / 8 + 2;
+   ```
 
 Certaines opérations de cet ensemble ne vous renvoient peut-être pas le résultat attendu&nbsp;; le paragraphe qui suit vous explique pourquoi.
 
@@ -217,7 +216,7 @@ Revenons sur le dernier exemple ci‑dessus, en supposant que `num2` contient la
 num2 + num1 / 8 + 2;
 ```
 
-En tant qu'humain, vous pouvez lire «&nbsp;50 plus 10 égale 60&nbsp;»*, puis «&nbsp;8 plus 2 égale 10&nbsp;» et finalement «&nbsp;60 divisé par 10 égale 6&nbsp;».
+En tant qu'humain, vous pouvez lire «&nbsp;50 plus 10 égale 60&nbsp;», puis «&nbsp;8 plus 2 égale 10&nbsp;» et finalement «&nbsp;60 divisé par 10 égale 6&nbsp;».
 
 Mais le navigateur calcule «&nbsp;10 sur 8 égale 1.25&nbsp;», puis «&nbsp;50 plus 1.25 plus 2 égale 53.25&nbsp;».
 
@@ -350,18 +349,18 @@ Nous verrons comment coder cette logique quand nous étudierons les directives c
 ```
 
 ```js
-const btn = document.querySelector('button');
-const txt = document.querySelector('p');
+const btn = document.querySelector("button");
+const txt = document.querySelector("p");
 
-btn.addEventListener('click', updateBtn);
+btn.addEventListener("click", updateBtn);
 
 function updateBtn() {
-  if (btn.textContent === 'Démarrer la machine') {
-    btn.textContent = 'Arrêter la machine';
-    txt.textContent = 'La machine est en marche&nbsp;!';
+  if (btn.textContent === "Démarrer la machine") {
+    btn.textContent = "Arrêter la machine";
+    txt.textContent = "La machine est en marche&nbsp;!";
   } else {
-    btn.textContent = 'Démarrer la machine';
-    txt.textContent = 'La machine est arrêtée.';
+    btn.textContent = "Démarrer la machine";
+    txt.textContent = "La machine est arrêtée.";
   }
 }
 ```

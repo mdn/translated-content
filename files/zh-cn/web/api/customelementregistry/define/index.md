@@ -48,62 +48,60 @@ class PopUpInfo extends HTMLElement {
     super();
 
     // Create a shadow root
-    var shadow = this.attachShadow({mode: 'open'});
+    var shadow = this.attachShadow({ mode: "open" });
 
     // Create spans
-    var wrapper = document.createElement('span');
-    wrapper.setAttribute('class','wrapper');
-    var icon = document.createElement('span');
-    icon.setAttribute('class','icon');
-    icon.setAttribute('tabindex', 0);
-    var info = document.createElement('span');
-    info.setAttribute('class','info');
+    var wrapper = document.createElement("span");
+    wrapper.setAttribute("class", "wrapper");
+    var icon = document.createElement("span");
+    icon.setAttribute("class", "icon");
+    icon.setAttribute("tabindex", 0);
+    var info = document.createElement("span");
+    info.setAttribute("class", "info");
 
     // Take attribute content and put it inside the info span
-    var text = this.getAttribute('text');
+    var text = this.getAttribute("text");
     info.textContent = text;
 
     // Insert icon
     var imgUrl;
-    if(this.hasAttribute('img')) {
-      imgUrl = this.getAttribute('img');
+    if (this.hasAttribute("img")) {
+      imgUrl = this.getAttribute("img");
     } else {
-      imgUrl = 'img/default.png';
+      imgUrl = "img/default.png";
     }
-    var img = document.createElement('img');
+    var img = document.createElement("img");
     img.src = imgUrl;
     icon.appendChild(img);
 
     // Create some CSS to apply to the shadow dom
-    var style = document.createElement('style');
+    var style = document.createElement("style");
 
-    style.textContent = '.wrapper {' +
-                           'position: relative;' +
-                        '}' +
-
-                         '.info {' +
-                            'font-size: 0.8rem;' +
-                            'width: 200px;' +
-                            'display: inline-block;' +
-                            'border: 1px solid black;' +
-                            'padding: 10px;' +
-                            'background: white;' +
-                            'border-radius: 10px;' +
-                            'opacity: 0;' +
-                            'transition: 0.6s all;' +
-                            'position: absolute;' +
-                            'bottom: 20px;' +
-                            'left: 10px;' +
-                            'z-index: 3;' +
-                          '}' +
-
-                          'img {' +
-                            'width: 1.2rem' +
-                          '}' +
-
-                          '.icon:hover + .info, .icon:focus + .info {' +
-                            'opacity: 1;' +
-                          '}';
+    style.textContent =
+      ".wrapper {" +
+      "position: relative;" +
+      "}" +
+      ".info {" +
+      "font-size: 0.8rem;" +
+      "width: 200px;" +
+      "display: inline-block;" +
+      "border: 1px solid black;" +
+      "padding: 10px;" +
+      "background: white;" +
+      "border-radius: 10px;" +
+      "opacity: 0;" +
+      "transition: 0.6s all;" +
+      "position: absolute;" +
+      "bottom: 20px;" +
+      "left: 10px;" +
+      "z-index: 3;" +
+      "}" +
+      "img {" +
+      "width: 1.2rem" +
+      "}" +
+      ".icon:hover + .info, .icon:focus + .info {" +
+      "opacity: 1;" +
+      "}";
 
     // attach the created elements to the shadow dom
 
@@ -115,13 +113,15 @@ class PopUpInfo extends HTMLElement {
 }
 
 // Define the new element
-customElements.define('popup-info', PopUpInfo);
+customElements.define("popup-info", PopUpInfo);
 ```
 
 ```html
-<popup-info img="img/alt.png" text="Your card validation code (CVC) is an extra
+<popup-info
+  img="img/alt.png"
+  text="Your card validation code (CVC) is an extra
                                     security feature — it is the last 3 or 4
-                                    numbers on the back of your card.">
+                                    numbers on the back of your card."></popup-info>
 ```
 
 > **备注：** 自主自定义元素的构造函数必须扩展{{domxref("HTMLElement")}}。
@@ -140,35 +140,33 @@ class WordCount extends HTMLParagraphElement {
     // count words in element's parent element
     var wcParent = this.parentNode;
 
-    function countWords(node){
-      var text = node.innerText || node.textContent
+    function countWords(node) {
+      var text = node.innerText || node.textContent;
       return text.split(/\s+/g).length;
     }
 
-    var count = 'Words: ' + countWords(wcParent);
+    var count = "Words: " + countWords(wcParent);
 
     // Create a shadow root
-    var shadow = this.attachShadow({mode: 'open'});
+    var shadow = this.attachShadow({ mode: "open" });
 
     // Create text node and add word count to it
-    var text = document.createElement('span');
+    var text = document.createElement("span");
     text.textContent = count;
 
     // Append it to the shadow root
     shadow.appendChild(text);
 
-
     // Update count when element content changes
-    setInterval(function() {
-      var count = 'Words: ' + countWords(wcParent);
+    setInterval(function () {
+      var count = "Words: " + countWords(wcParent);
       text.textContent = count;
-    }, 200)
-
+    }, 200);
   }
 }
 
 // Define the new element
-customElements.define('word-count', WordCount, { extends: 'p' });
+customElements.define("word-count", WordCount, { extends: "p" });
 ```
 
 ```html

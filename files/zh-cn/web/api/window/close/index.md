@@ -28,7 +28,7 @@ window.close();
 var openedWindow;
 
 function openWindow() {
-  openedWindow = window.open('moreinfo.htm');
+  openedWindow = window.open("moreinfo.htm");
 }
 
 function closeOpenedWindow() {

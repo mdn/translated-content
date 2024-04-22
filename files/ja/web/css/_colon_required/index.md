@@ -1,5 +1,5 @@
 ---
-title: ':required'
+title: ":required"
 slug: Web/CSS/:required
 ---
 
@@ -13,6 +13,8 @@ input:required {
   border: 1px dashed red;
 }
 ```
+
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-required.html", "tabbed-standard")}}
 
 この擬似クラスは、フォームを送信する前に有効なデータを持っている必要がある入力欄を強調表示するのに便利です。
 
@@ -34,12 +36,12 @@ input:required {
 <form>
   <div class="field">
     <label for="url_input">Enter a URL:</label>
-    <input type="url" id="url_input">
+    <input type="url" id="url_input" />
   </div>
 
   <div class="field">
     <label for="email_input">Enter an email address:</label>
-    <input type="email" id="email_input" required>
+    <input type="email" id="email_input" required />
   </div>
 </form>
 ```

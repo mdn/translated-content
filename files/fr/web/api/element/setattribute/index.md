@@ -1,44 +1,47 @@
 ---
-title: Element.setAttribute()
+title: "Element : méthode setAttribute()"
 slug: Web/API/Element/setAttribute
-translation_of: Web/API/Element/setAttribute
+l10n:
+  sourceCommit: 7eed0e1e4ab478d78dc7ca23c19ae77406776e4e
 ---
 
 {{APIRef("DOM")}}
 
-Ajoute un nouvel attribut ou change la valeur d'un attribut existant pour l'élément spécifié. Si l'attribut existe déjà, la valeur est mise à jour ; sinon, un nouvel attribut est ajouté avec le nom et la valeur spécifiés.
+La méthode **`setAttribute()`**, rattachée à l'interface [`Element`](/fr/docs/Web/API/Element), ajoute un nouvel attribut ou change la valeur d'un attribut existant en utilisant la valeur fournie. Si l'attribut existe déjà, la valeur est mise à jour&nbsp;; sinon, un nouvel attribut est ajouté avec le nom et la valeur spécifiés.
 
-Pour obtenir la valeur actuelle d'un attribut, utilisez {{domxref("Element.getAttribute", "getAttribute()")}} ; pour supprimer un attribut, appelez {{domxref("Element.removeAttribute", "removeAttribute()")}}.
+Pour obtenir la valeur actuelle d'un attribut, on utilisera la méthode [`getAttribute()`](/fr/docs/Web/API/Element/getAttribute)&nbsp;; pour supprimer un attribut, on emploiera [`removeAttribute()`](/fr/docs/Web/API/Element/removeAttribute).
+
+Si besoin de travailler sur le nœud [`Attr`](/fr/docs/Web/API/Attr) avant de l'ajouter (par exemple en le clonant depuis un autre élément), on pourra utiliser la méthode [`setAttributeNode()`](/fr/docs/Web/API/Element/setAttributeNode) à la place.
 
 ## Syntaxe
 
-```js
-Element.setAttribute(name, value);
+```js-nolint
+setAttribute(name, value)
 ```
 
 ### Paramètres
 
 - `name`
-  - : Une {{domxref("DOMString")}} (_chaîne de caractères_) spécifiant le nom de l'attribut pour lequel la valeur doit être définie. L'attribut name est automatiquement converti en minuscules quand `setAttribute()` est appelé sur un élément HTML dans document HTML.
+  - : Une chaîne de caractères spécifiant le nom de l'attribut pour lequel la valeur doit être définie. Cette valeur est automatiquement convertie en minuscules quand `setAttribute()` est appelée sur un élément HTML dans un document HTML.
 - `value`
-  - : une {{domxref("DOMString")}} contenant la valeur à affecter à l'attribut. Toute valeur spécifiée qui n'est pas une chaîne de caractères, est convertie automatiquement en chaîne.
+  - : Une chaîne de caractères contenant la valeur à affecter à l'attribut. Toute valeur spécifiée qui n'est pas une chaîne de caractères, est convertie automatiquement en chaîne de caractères.
 
-Les attributs booléens sont considérés être `true` (_vrai_) s'ils sont présents sur l'élément, quelle que soit leur valeur réelle ; en règle générale, vous devez spécifier la chaîne vide (`""`) dans `value` (certains utilisent le nom de l'attribut, mais ce fonctionnement n'est pas standard). Voir l' [exemple](#exemple) ce-dessous pour une démonstration pratique.
+Les attributs booléens sont considérés comme `true` s'ils sont présents sur l'élément, quelle que soit leur valeur réelle. En règle générale, il faut fournir la chaîne vide (`""`) dans `value` ou uniquement le nom de l'attribut (sans espace avant ou après) pour indiquer `false`. Voir [l'exemple](#exemples) ci-dessous pour une démonstration pratique.
 
-Puisque la valeur spécifiée est convertie en chaîne, spécifier `null` ne fait pas nécessairement ce que vous attendez. Au lieu de supprimer l'attribut ou de définir sa valeur comme {{jsxref("null")}} , il définit à la place la valeur de l'attribut avec la chaîne "null". Si vous souhaitez supprimer un attribut, appelez {{domxref("Element.removeAttribute","removeAttribute()")}}.
+Puisque la valeur spécifiée est convertie en chaîne, spécifier `null` fournira un résultat inattendu. Au lieu de supprimer l'attribut ou de définir sa valeur comme [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null) , cette méthode définit à la place la valeur de l'attribut avec la chaîne de caractères `"null"`. Pour supprimer un attribut, on appellera [`removeAttribute()`](/fr/docs/Web/API/Element/removeAttribute).
 
 ### Valeur retournée
 
-{{jsxref("undefined")}}.
+Aucune ([`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
 
 ### Exceptions
 
-- `InvalidCharacterError`
-  - : Le nom d'attribut spécifié contient un ou plusieurs caractères qui ne sont pas valides dans les noms d'attribut.
+- `InvalidCharacterError` [`DOMException`](/fr/docs/Web/API/DOMException)
+  - : Levée si la valeur [`name`](#name) n'est pas un [nom XML](https://www.w3.org/TR/REC-xml/#dt-name) valide (par exemple si elle commence par un chiffre, un tiret, un point ou si elle contient des caractères autres que des caractères alphanumériques, des tirets bas, des tirets ou des points).
 
-## Exemple
+## Exemples
 
-Dans l'exemple suivant, `setAttribute()` est utilisé pour définir des attributs sur un {{HTMLElement("button")}} (_bouton_).
+Dans l'exemple suivant, `setAttribute()` est utilisée pour définir des attributs sur un élément [`<button>`](/fr/docs/Web/HTML/Element/button).
 
 ### HTML
 
@@ -46,31 +49,43 @@ Dans l'exemple suivant, `setAttribute()` est utilisé pour définir des attribut
 <button>Hello World</button>
 ```
 
+```css hidden
+button {
+  height: 30px;
+  width: 100px;
+  margin: 1em;
+}
+```
+
 ### JavaScript
 
 ```js
-var b = document.querySelector("button");
+const button = document.querySelector("button");
 
-b.setAttribute("name", "helloButton");
-b.setAttribute("disabled", "");
+button.setAttribute("name", "helloButton");
+button.setAttribute("disabled", "");
 ```
 
-Ceci démontre 2 choses :
+{{EmbedLiveSample('', '300', '50')}}
 
-- le premier appel de `setAttribute()` ci-dessus montre la modification de la valeur de l'attribut `name` en "helloButton". Vous pouvez le voir en utilisant l'inspecteur de page de votre navigateur ([Chrome](https://developers.google.com/web/tools/chrome-devtools/inspect-styles), [Edge](https://docs.microsoft.com/en-us/microsoft-edge/f12-devtools-guide/dom-explorer), [Firefox](/fr/docs/Tools/Page_Inspector), [Safari](https://developer.apple.com/library/content/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Introduction/Introduction.html)).
-- Pour définir la valeur d'un attribut booléen, tel que `disabled`, vous pouvez spécifier n'importe quelle valeur. Une chaîne vide ou le nom de l'attribut sont des valeurs recommandées. Tout ce qui compte est que si l'attribut est présent, quelle que soit sa valeur réelle, sa valeur est considérée comme `true` (_vraie_). L'absence de l'attribut signifie que sa valeur est `false` (_fausse_). En définissant la valeur de l'attribut `disabled` sur la chaîne vide (""), nous définissons `disabled` sur `true`, ce qui entraîne la désactivation du bouton.
+Cet exemple permet d'illustrer deux choses&nbsp;:
 
-{{ EmbedLiveSample('Exemple', '300', '50') }}
-
-{{DOMAttributeMethods}}
+- Le premier appel à `setAttribute()` change la valeur de l'attribut `name` en "helloButton". Vous pouvez le voir en utilisant l'inspecteur de votre navigateur ([Chrome](https://developer.chrome.com/docs/devtools/dom/properties/), [Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/css/inspect), [Firefox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/open_the_inspector/index.html), [Safari](https://support.apple.com/en-us/guide/safari-developer/welcome/mac)).
+- Pour définir la valeur d'un attribut booléen, tel que `disabled`, on peut fournir n'importe quelle valeur. Une bonne pratique consiste à utiliser la chaîne vide ou le nom de l'attribut. Quelle que soit la valeur fournie, dès qu'elle est présente, elle indique que le booléen sera actif (`true`). L'absence de l'attribut signifie que sa valeur est `false`. En utilisant la chaîne vide (`""`) comme valeur, on passe `disabled` à l'état `true` dans le DOM, ce qui entraîne la désactivation du bouton à l'écran.
 
 ## Spécifications
 
-- [DOM Level 2 Core&nbsp;: setAttribute](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-F68F082) — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2/core/core.html#ID-F68F082) (non normative)
-- [HTML5 : API dans les documents HTML](http://www.whatwg.org/specs/web-apps/current-work/#apis-in-html-documents)
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-### Gecko notes
+{{Compat}}
 
-L'utilisation de `setAttribute()` pour modifier certains attributs, en particulier la valeur dans XUL, fonctionne de façon incohérente, car l'attribut spécifie la valeur par défaut. Pour accéder ou modifier la valeur courante, vous devez utiliser les propriétés. Par exemple, utilisez `Element.value` à la place de `Element.setAttribute()`.
+## Voir aussi
+
+- [`Element.hasAttribute()`](/fr/docs/Web/API/Element/hasAttribute)
+- [`Element.getAttribute()`](/fr/docs/Web/API/Element/getAttribute)
+- [`Element.removeAttribute()`](/fr/docs/Web/API/Element/removeAttribute)
+- [`Element.toggleAttribute()`](/fr/docs/Web/API/Element/toggleAttribute)
+- [`Element.setAttributeNode()`](/fr/docs/Web/API/Element/setAttributeNode)
+- [`Element.setAttributeNS()`](/fr/docs/Web/API/Element/setAttributeNS)

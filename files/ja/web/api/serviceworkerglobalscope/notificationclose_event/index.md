@@ -1,7 +1,6 @@
 ---
-title: 'ServiceWorkerGlobalScope: notificationclose イベント'
+title: "ServiceWorkerGlobalScope: notificationclose イベント"
 slug: Web/API/ServiceWorkerGlobalScope/notificationclose_event
-original_slug: Web/API/ServiceWorkerGlobalScope/onnotificationclose
 l10n:
   sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---
@@ -21,9 +20,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('notificationclose', (event) => { });
+addEventListener("notificationclose", (event) => {});
 
-onnotificationclose = (event) => { };
+onnotificationclose = (event) => {};
 ```
 
 ## イベント型
@@ -46,7 +45,7 @@ _親である {{domxref("Event")}} からプロパティを継承しています
 ```js
 // サービスワーカーの内部で
 self.onnotificationclose = (event) => {
-  console.log('On notification close: ', event.notification.tag);
+  console.log("On notification close: ", event.notification.tag);
 };
 ```
 

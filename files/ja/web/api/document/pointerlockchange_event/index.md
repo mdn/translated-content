@@ -1,7 +1,6 @@
 ---
-title: 'Document: pointerlockchange イベント'
+title: "Document: pointerlockchange イベント"
 slug: Web/API/Document/pointerlockchange_event
-original_slug: Web/API/Element/pointerlockchange_event
 l10n:
   sourceCommit: d4619276d67ca1ee02bd964d884ec52c2aa2ad4b
 ---
@@ -17,9 +16,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('pointerlockchange', (event) => { });
+addEventListener("pointerlockchange", (event) => {});
 
-onpointerlockchange = (event) => { };
+onpointerlockchange = (event) => {};
 ```
 
 ## イベント型
@@ -31,8 +30,8 @@ onpointerlockchange = (event) => { };
 `addEventListener()` を使用した場合
 
 ```js
-document.addEventListener('pointerlockchange', (event) => {
-  console.log('Pointer lock changed');
+document.addEventListener("pointerlockchange", (event) => {
+  console.log("Pointer lock changed");
 });
 ```
 
@@ -40,7 +39,7 @@ document.addEventListener('pointerlockchange', (event) => {
 
 ```js
 document.onpointerlockchange = (event) => {
-  console.log('Pointer lock changed');
+  console.log("Pointer lock changed");
 };
 ```
 

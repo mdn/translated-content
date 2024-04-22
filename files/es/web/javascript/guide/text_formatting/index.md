@@ -17,9 +17,9 @@ PRECAUCIÓN: si editas esta página, no incluyas ningún caracter por encima de 
 
 Puedes crear cadenas simples utilizando comillas simples o dobles:
 
-```js
-'foo'
-"bar"
+```js-nolint
+'foo';
+"bar";
 ```
 
 Se pueden crear cadenas más avanzadas usando secuencias de escape:
@@ -29,7 +29,7 @@ Se pueden crear cadenas más avanzadas usando secuencias de escape:
 El número después de \x se interpreta como un número del [Sistema_hexadecimal](https://es.wikipedia.org/wiki/Sistema_hexadecimal).
 
 ```js
-'\xA9' // "©"
+"\xA9"; // "©"
 ```
 
 #### Secuencias de escape Unicode
@@ -37,7 +37,7 @@ El número después de \x se interpreta como un número del [Sistema_hexadecimal
 Las secuencias de escape Unicode requieren al menos cuatro dígitos hexadecimales después de `\u`.
 
 ```js
-'\u00A9' // "©"
+"\u00A9"; // "©"
 ```
 
 #### Puntos de escape de código Unicode
@@ -47,10 +47,10 @@ Nuevo en ECMAScript 2015. Con el código de puntos de escape Unicode, cualquier 
 Consulta también {{JSxRef("String.fromCodePoint()")}} o {{JSxRef("String.prototype.codePointAt()")}}.
 
 ```js
-'\u{2F804}'
+"\u{2F804}";
 
 // lo mismo con los escapes Unicode simples
-'\uD87E\uDC04'
+"\uD87E\uDC04";
 ```
 
 ### Objetos `String`
@@ -58,9 +58,9 @@ Consulta también {{JSxRef("String.fromCodePoint()")}} o {{JSxRef("String.protot
 El objeto {{JSxRef("String")}} es una envoltura alrededor del tipo de dato primitivo `string`.
 
 ```js
-const foo = new String('foo'); // Crea un objeto String
-console.log(foo);              // Muestra: [String: 'foo']
-typeof foo;                    // Devuelve 'object'
+const foo = new String("foo"); // Crea un objeto String
+console.log(foo); // Muestra: [String: 'foo']
+typeof foo; // Devuelve 'object'
 ```
 
 Puedes llamar a cualquiera de los métodos del objeto `String` en un valor de cadena literal: JavaScript automáticamente convierte la cadena literal en un objeto `String` temporal, llama al método y luego descarta el objeto `String` temporal. También puedes usar la propiedad `String.length` con una cadena literal:
@@ -68,19 +68,19 @@ Puedes llamar a cualquiera de los métodos del objeto `String` en un valor de ca
 Debes usar cadenas literales a menos que necesites específicamente usar un objeto `String`, porque los objetos `String` pueden tener un comportamiento contrario a la intuición. Por ejemplo:
 
 ```js
-const firstString = '2 + 2';              // Crea un valor de cadena literal
-const secondString = new String('2 + 2'); // Crea un objeto String
-eval(firstString);                        // Devuelve el número 4
-eval(secondString);                       // Devuelve la cadena "2 + 2"
+const firstString = "2 + 2"; // Crea un valor de cadena literal
+const secondString = new String("2 + 2"); // Crea un objeto String
+eval(firstString); // Devuelve el número 4
+eval(secondString); // Devuelve la cadena "2 + 2"
 ```
 
 Un objeto `String` tiene una propiedad, `length`, que indica el número de unidades de código UTF-16 en la cadena. Por ejemplo, el siguiente código asigna a `helloLength` el valor 13, porque "¡Hola, mundo!" tiene 13 caracteres, cada uno representado por una unidad de código UTF-16. Puedes acceder a cada unidad de código utilizando la notación de corchete de los arreglos. No puedes cambiar caracteres individuales porque las cadenas son objetos inmutables similares a los arreglos:
 
 ```js
-const hello = '¡Hola, mundo!';
+const hello = "¡Hola, mundo!";
 const helloLength = hello.length;
-hello[0] = 'L'; // Esto no tiene ningún efecto, porque las cadenas son inmutables
-hello[1];       // Esto devuelve "H"
+hello[0] = "L"; // Esto no tiene ningún efecto, porque las cadenas son inmutables
+hello[1]; // Esto devuelve "H"
 ```
 
 Los caracteres cuyos valores escalares Unicode son mayores que U+FFFF (tal como algunos caracteres chinos/japoneses/coreanos/vietnamitas raros y algunos «emoji»s) se almacenan en UTF-16 con dos unidades de código sustituto cada uno. Por ejemplo, una cadena que contenga el caracter único U+1F600 "Cara sonriente de emoji" tendrá una longitud de 2. El acceso a las unidades de código individual en una cadena de este tipo utilizando corchetes puede tener consecuencias indeseables, como la formación de cadenas con diferentes unidades de código suplente, violando el estándar Unicode. (Se deben agregar ejemplos a esta página después de que se corrija el error MDN [Error 857438 en Firefox](https://bugzil.la/857438)). Consulta también {{JSxRef("String.fromCodePoint()")}} o {{JSxRef("String.prototype.codePointAt()")}}.
@@ -89,21 +89,21 @@ Un objeto `String` tiene una variedad de métodos: por ejemplo, aquellos que dev
 
 La siguiente tabla resume los métodos de los objetos {{JSxRef("String")}}.
 
-| Método                                                                                                                                                                                                                                                                           | Descripción                                                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{JSxRef("String.charAt", "charAt")}}, {{JSxRef("String.charCodeAt", "charCodeAt")}}, {{JSxRef("String.codePointAt", "codePointAt")}}                                                                                                 | Devuelve el caracter o código de caracter en la posición especificada en la cadena.                                                                  |
-| {{JSxRef("String.indexOf", "indexOf")}}, {{JSxRef("String.lastIndexOf", "lastIndexOf")}}                                                                                                                                                           | Devuelve la posición de la subcadena especificada en la cadena o la última posición de la subcadena especificada, respectivamente.                   |
-| {{JSxRef("String.startsWith", "startsWith")}}, {{JSxRef("String.endsWith", "endsWith")}}, {{JSxRef("String.includes", "includes")}}                                                                                                 | Devuelve si o no la cadena comienza, termina o contiene una subcadena especificada.                                                                  |
-| {{JSxRef("String.concat", "concat")}}                                                                                                                                                                                                                                 | Combina el texto de dos cadenas y devuelve una nueva cadena.                                                                                         |
-| {{JSxRef("String.fromCharCode", "fromCharCode")}}, {{JSxRef("String.fromCodePoint", "fromCodePoint")}}                                                                                                                                           | Construye una cadena a partir de la secuencia especificada de valores Unicode. Este es un método de la clase `String`, no una instancia de `String`. |
-| {{JSxRef("String.split", "split")}}                                                                                                                                                                                                                                 | Divide un objeto `String` en un arreglo de cadenas separando la cadena en subcadenas.                                                                |
-| {{JSxRef("String.slice", "slice")}}                                                                                                                                                                                                                                 | Extrae una sección de una cadena y devuelve una nueva cadena.                                                                                        |
-| {{JSxRef("String.substring", "substring")}}, {{JSxRef("String.substr", "substr")}}                                                                                                                                                                       | Devuelve el subconjunto especificado de la cadena, ya sea especificando los índices inicial y final o el índice inicial y una longitud.              |
+| Método                                                                                                                                                                                                        | Descripción                                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{JSxRef("String.charAt", "charAt")}}, {{JSxRef("String.charCodeAt", "charCodeAt")}}, {{JSxRef("String.codePointAt", "codePointAt")}}                                                                         | Devuelve el caracter o código de caracter en la posición especificada en la cadena.                                                                  |
+| {{JSxRef("String.indexOf", "indexOf")}}, {{JSxRef("String.lastIndexOf", "lastIndexOf")}}                                                                                                                      | Devuelve la posición de la subcadena especificada en la cadena o la última posición de la subcadena especificada, respectivamente.                   |
+| {{JSxRef("String.startsWith", "startsWith")}}, {{JSxRef("String.endsWith", "endsWith")}}, {{JSxRef("String.includes", "includes")}}                                                                           | Devuelve si o no la cadena comienza, termina o contiene una subcadena especificada.                                                                  |
+| {{JSxRef("String.concat", "concat")}}                                                                                                                                                                         | Combina el texto de dos cadenas y devuelve una nueva cadena.                                                                                         |
+| {{JSxRef("String.fromCharCode", "fromCharCode")}}, {{JSxRef("String.fromCodePoint", "fromCodePoint")}}                                                                                                        | Construye una cadena a partir de la secuencia especificada de valores Unicode. Este es un método de la clase `String`, no una instancia de `String`. |
+| {{JSxRef("String.split", "split")}}                                                                                                                                                                           | Divide un objeto `String` en un arreglo de cadenas separando la cadena en subcadenas.                                                                |
+| {{JSxRef("String.slice", "slice")}}                                                                                                                                                                           | Extrae una sección de una cadena y devuelve una nueva cadena.                                                                                        |
+| {{JSxRef("String.substring", "substring")}}, {{JSxRef("String.substr", "substr")}}                                                                                                                            | Devuelve el subconjunto especificado de la cadena, ya sea especificando los índices inicial y final o el índice inicial y una longitud.              |
 | {{JSxRef("String.match", "match")}}, {{JSxRef("String.matchAll", "matchAll")}}, {{JSxRef("String.replace", "replace")}}, {{JSxRef("String.replaceAll", "replaceAll")}}, {{JSxRef("String.search", "search")}} | Trabaja con expresiones regulares.                                                                                                                   |
-| {{JSxRef("String.toLowerCase", "toLowerCase")}}, {{JSxRef("String.toUpperCase", "toUpperCase")}}                                                                                                                                               | Devuelve la cadena en minúsculas o mayúsculas, respectivamente.                                                                                      |
-| {{JSxRef("String.normalize", "normalize")}}                                                                                                                                                                                                                         | Devuelve la forma de normalización Unicode del valor de la cadena llamada.                                                                           |
-| {{JSxRef("String.repeat", "repeat")}}                                                                                                                                                                                                                                 | Devuelve una cadena que consta de los elementos del objeto repetidos las veces indicadas.                                                            |
-| {{JSxRef("String.trim", "trim")}}                                                                                                                                                                                                                                     | Recorta los espacios en blanco desde el principio y el final de la cadena.                                                                           |
+| {{JSxRef("String.toLowerCase", "toLowerCase")}}, {{JSxRef("String.toUpperCase", "toUpperCase")}}                                                                                                              | Devuelve la cadena en minúsculas o mayúsculas, respectivamente.                                                                                      |
+| {{JSxRef("String.normalize", "normalize")}}                                                                                                                                                                   | Devuelve la forma de normalización Unicode del valor de la cadena llamada.                                                                           |
+| {{JSxRef("String.repeat", "repeat")}}                                                                                                                                                                         | Devuelve una cadena que consta de los elementos del objeto repetidos las veces indicadas.                                                            |
+| {{JSxRef("String.trim", "trim")}}                                                                                                                                                                             | Recorta los espacios en blanco desde el principio y el final de la cadena.                                                                           |
 
 ### Plantillas literales multilínea
 
@@ -116,8 +116,10 @@ Las plantillas literales están encerradas por el carácter (` `` `) ([acento gr
 Cualquier caracter de nueva línea insertado en la fuente es parte de la plantilla literal. Usando cadenas normales, tendrías que usar la siguiente sintaxis para obtener cadenas multilínea:
 
 ```js
-console.log('cadena de texto línea 1\n\
-cadena de texto línea 2');
+console.log(
+  "cadena de texto línea 1\n\
+cadena de texto línea 2",
+);
 // "cadena de texto línea 1
 // cadena de texto línea 2"
 ```
@@ -138,7 +140,7 @@ Para incrustar expresiones dentro de cadenas normales, usarías la siguiente sin
 ```js
 const five = 5;
 const ten = 10;
-console.log('Quince es ' + (five + ten) + ' y no ' + (2 * five + ten) + '.');
+console.log("Quince es " + (five + ten) + " y no " + (2 * five + ten) + ".");
 // "Quince es 15 y no 20."
 ```
 
@@ -147,7 +149,7 @@ Ahora, con las plantillas literales, puedes hacer uso del azúcar sintáctica ha
 ```js
 const five = 5;
 const ten = 10;
-console.log (`Quince es ${five + ten} y no ${2 * five + ten}.`);
+console.log(`Quince es ${five + ten} y no ${2 * five + ten}.`);
 // "Quince es 15 y no 20."
 ```
 
@@ -167,9 +169,15 @@ const msPerDay = 24 * 60 * 60 * 1000;
 // July 17, 2014 00:00:00 UTC.
 const july172014 = new Date(msPerDay * (44 * 365 + 11 + 197));
 
-const options = { year: '2-digit', month: '2-digit', day: '2-digit',
-                hour: '2-digit', minute: '2-digit', timeZoneName: 'short' };
-const americanDateTime = new Intl.DateTimeFormat('en-US', options).format;
+const options = {
+  year: "2-digit",
+  month: "2-digit",
+  day: "2-digit",
+  hour: "2-digit",
+  minute: "2-digit",
+  timeZoneName: "short",
+};
+const americanDateTime = new Intl.DateTimeFormat("en-US", options).format;
 
 console.log(americanDateTime(july172014)); // 07/16/14, 5:00 PM PDT
 ```
@@ -179,14 +187,18 @@ console.log(americanDateTime(july172014)); // 07/16/14, 5:00 PM PDT
 El objeto {{JSxRef("NumberFormat")}} es útil para formatear números, por ejemplo, monedas.
 
 ```js
-const gasPrice = new Intl.NumberFormat('en-US',
-                        { style: 'currency', currency: 'USD',
-                          minimumFractionDigits: 3 });
+const gasPrice = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD",
+  minimumFractionDigits: 3,
+});
 
 console.log(gasPrice.format(5.259)); // $5.259
 
-const hanDecimalRMBInChina = new Intl.NumberFormat('zh-CN-u-nu-hanidec',
-                        { style: 'currency', currency: 'CNY' });
+const hanDecimalRMBInChina = new Intl.NumberFormat("zh-CN-u-nu-hanidec", {
+  style: "currency",
+  currency: "CNY",
+});
 
 console.log(hanDecimalRMBInChina.format(1314.25)); // ￥ 一,三一四.二五
 ```
@@ -198,22 +210,22 @@ El objeto {{JSxRef("Collator")}} es útil para comparar y ordenar cadenas.
 Por ejemplo, en realidad hay dos órdenes de clasificación diferentes en Alemán, «_phonebook_» y «_dictionary_». La clasificación «_phonebook_» enfatiza el sonido, y es como si "ä", "ö", etc. se expandieran a "ae", "oe", etc. antes de la clasificación.
 
 ```js
-const names = ['Hochberg', 'Hönigswald', 'Holzman'];
+const names = ["Hochberg", "Hönigswald", "Holzman"];
 
-const germanPhonebook = new Intl.Collator('de-DE-u-co-phonebk');
+const germanPhonebook = new Intl.Collator("de-DE-u-co-phonebk");
 
 // como ordenando ["Hochberg", "Hoenigswald", "Holzman"]:
-console.log(names.sort(germanPhonebook.compare).join(', '));
+console.log(names.sort(germanPhonebook.compare).join(", "));
 // registra "Hochberg, Hönigswald, Holzman"
 ```
 
 Algunas palabras alemanas se conjugan con diéresis adicionales, por lo que en los diccionarios es sensato ordenar ignorando diéresis (excepto cuando se ordenan palabras que difieren _solo_ por las diéresis: «_schon_» antes de «_schön_»).
 
 ```js
-const germanDictionary = new Intl.Collator('de-DE-u-co-dict');
+const germanDictionary = new Intl.Collator("de-DE-u-co-dict");
 
 // como si ordenara ["Hochberg", "Honigswald", "Holzman"]:
-console.log(names.sort(germanDictionary.compare).join(', '));
+console.log(names.sort(germanDictionary.compare).join(", "));
 // registra "Hochberg, Holzman, Hönigswald"
 ```
 

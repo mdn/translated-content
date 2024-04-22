@@ -1,8 +1,6 @@
 ---
 title: Les tableaux typés en JavaScript
 slug: Web/JavaScript/Guide/Typed_arrays
-translation_of: Web/JavaScript/Typed_arrays
-original_slug: Web/JavaScript/Typed_arrays
 ---
 
 {{JsSidebar("Advanced")}}
@@ -27,19 +25,19 @@ Le type [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBu
 
 Les tableaux typés qui sont les vues sur ces tampons de mémoire possèdent des noms explicites correspondant aux types numériques habituels tels que `Int8`, `Uint32`, `Float64` et ainsi de suite. Il existe un type de tableau typé spécial, `Uint8ClampedArray`. Ce type permet de ramener (<i lang="en">clamp</i>) les valeurs observées entre 0 et 255. Cela peut notamment être utilisé pour [traiter les données d'un canvas](/fr/docs/Web/API/ImageData) par exemple.
 
-| Type                                     | Intervalle de valeurs | Taille exprimée en octets | Description                                                                  | Type Web IDL          | Type équivalent en C               |
-| ---------------------------------------- | --------------------------------------------------------------- | ------------- | ---------------------------------------------------------------------------- | --------------------- | ------------------------------- |
-| [`Int8Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int8Array)         | `-128` à `127`                                                 | 1             | Entier signé avec complément à deux sur 8 bits                                        | `byte`                | `int8_t`                          |
-| [`Uint8Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)         | `0` à `255`                                                    | 1             | Entier non-signé sur 8 bits                                                       | `octet`               | `uint8_t`                           |
-| [`Uint8ClampedArray`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray) | `0` à `255`                                                    | 1             | Entier non-signé sur 8 bit (écrété)                                             | `octet`               | `uint8_t`                       |
-| [`Int16Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int16Array)         | `-32768` à `32767`                                             | 2             | Entier signé avec complément à deux sur 16 bits                                       | `short`               | `int16_t`                       |
-| [`Uint16Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array)         | `0` à `65535`                                                  | 2             | Entier non-signé sur 16 bits                                                      | `unsigned short`      | `uint16_t`                        |
-| [`Int32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int32Array)         | `-2147483648` à `2147483647`                                   | 4             | Entier signé avec complément à deux sur 32 bits                                       | `long`                | `int32_t`                       |
-| [`Uint32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array)         | `0` à `4294967295`                                             | 4             | Entier non-signé sur 32 bits                                                      | `unsigned long`       | `uint32_t`                        |
-| [`Float32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Float32Array)     | `-3.4E38` à `3.4E38` et `1.2E-38` est le plus petit nombre positif | 4             | Nombre flottant sur 32 bits IEEE 754 (7 chiffres significatifs, ex. `1.123456`)    | `unrestricted float`  | `float`                        |
-| [`Float64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Float64Array)     | `-1.8E308` à `1.8E308` et `5E-324` est le plus petit nombre positif | 8             | Nombre flottant sur 64 bits IEEE 754 (16 chiffres significatifs, ex. `1.123...15`) | `unrestricted double` | `double`                      |
-| [`BigInt64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt64Array)     | `-2^63` à `2^63 - 1`                                           | 8             | Entier signé avec complément à deux sur 64 bits                                       | `bigint`              | `int64_t (signed long long)`  |
-| [`BigUint64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigUint64Array)     | `0` à `2^64 - 1`                                               | 8             | Entier non-signé sur 64 bits                                                      | `bigint`              | `uint64_t (unsigned long long)` |
+| Type                                                                                      | Intervalle de valeurs                                               | Taille exprimée en octets | Description                                                                        | Type Web IDL          | Type équivalent en C            |
+| ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------- | ---------------------------------------------------------------------------------- | --------------------- | ------------------------------- |
+| [`Int8Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int8Array)                 | `-128` à `127`                                                      | 1                         | Entier signé avec complément à deux sur 8 bits                                     | `byte`                | `int8_t`                        |
+| [`Uint8Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)               | `0` à `255`                                                         | 1                         | Entier non-signé sur 8 bits                                                        | `octet`               | `uint8_t`                       |
+| [`Uint8ClampedArray`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray) | `0` à `255`                                                         | 1                         | Entier non-signé sur 8 bit (écrété)                                                | `octet`               | `uint8_t`                       |
+| [`Int16Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int16Array)               | `-32768` à `32767`                                                  | 2                         | Entier signé avec complément à deux sur 16 bits                                    | `short`               | `int16_t`                       |
+| [`Uint16Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array)             | `0` à `65535`                                                       | 2                         | Entier non-signé sur 16 bits                                                       | `unsigned short`      | `uint16_t`                      |
+| [`Int32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int32Array)               | `-2147483648` à `2147483647`                                        | 4                         | Entier signé avec complément à deux sur 32 bits                                    | `long`                | `int32_t`                       |
+| [`Uint32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array)             | `0` à `4294967295`                                                  | 4                         | Entier non-signé sur 32 bits                                                       | `unsigned long`       | `uint32_t`                      |
+| [`Float32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Float32Array)           | `-3.4E38` à `3.4E38` et `1.2E-38` est le plus petit nombre positif  | 4                         | Nombre flottant sur 32 bits IEEE 754 (7 chiffres significatifs, ex. `1.123456`)    | `unrestricted float`  | `float`                         |
+| [`Float64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Float64Array)           | `-1.8E308` à `1.8E308` et `5E-324` est le plus petit nombre positif | 8                         | Nombre flottant sur 64 bits IEEE 754 (16 chiffres significatifs, ex. `1.123...15`) | `unrestricted double` | `double`                        |
+| [`BigInt64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt64Array)         | `-2^63` à `2^63 - 1`                                                | 8                         | Entier signé avec complément à deux sur 64 bits                                    | `bigint`              | `int64_t (signed long long)`    |
+| [`BigUint64Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigUint64Array)       | `0` à `2^64 - 1`                                                    | 8                         | Entier non-signé sur 64 bits                                                       | `bigint`              | `uint64_t (unsigned long long)` |
 
 ### `DataView`
 
@@ -141,7 +139,7 @@ let vueMontant = new Float32Array(buffer, 20, 1);
 
 On peut ensuite accéder au montant lié à un utilisateur, par exemple, avec `vueMontant[0]`.
 
-> **Note :** [L'alignement des structures de données](https://fr.wikipedia.org/wiki/Alignement_en_m%C3%A9moire) dans une structure C dépend de la plate-forme. Il est donc nécessaire de prendre des précautions quant au format attendu.
+> **Note :** [L'alignement des structures de données](https://fr.wikipedia.org/wiki/Alignement_en_mémoire) dans une structure C dépend de la plate-forme. Il est donc nécessaire de prendre des précautions quant au format attendu.
 
 ### Convertir un tableau typé en un tableau normal
 

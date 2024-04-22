@@ -24,6 +24,8 @@ _AbortSignal インターフェイスには、親インターフェイスであ�
 
 - {{domxref("AbortSignal.abort()")}}
   - : 既に中止と設定された **`AbortSignal`** を返します。
+- {{domxref("AbortSignal.any()")}}
+  - : 指定された中止シグナルのいずれかが中止された時中止となる **`AbortSignal`** を返します。
 - {{domxref("AbortSignal.timeout()")}}
   - : 指定された時間の後で自動的に中止となる **`AbortSignal`** インターフェイスを返します。
 
@@ -104,7 +106,7 @@ try {
     console.error("Timeout: It took more than 5 seconds to get the result!");
   } else if (err.name === "AbortError") {
     console.error(
-      "Fetch aborted by user action (browser stop button, closing tab, etc."
+      "Fetch aborted by user action (browser stop button, closing tab, etc.",
     );
   } else if (err.name === "TypeError") {
     console.error("AbortSignal.timeout() method is not supported");

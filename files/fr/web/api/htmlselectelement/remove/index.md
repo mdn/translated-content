@@ -1,7 +1,6 @@
 ---
 title: HTMLSelectElement.remove()
 slug: Web/API/HTMLSelectElement/remove
-translation_of: Web/API/HTMLSelectElement/remove
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -42,7 +41,6 @@ sel.remove(1);
     <option value="3">Option: Value 3</option>
   </select>
 */
-
 ```
 
 ## Spécifications

@@ -1,16 +1,6 @@
 ---
 title: Accessibilité
 slug: Learn/Accessibility
-tags:
-  - ARIA
-  - Accessibilité
-  - Apprendre
-  - CSS
-  - Débutant
-  - HTML
-  - JavaScript
-translation_of: Learn/Accessibility
-original_slug: Apprendre/a11y
 ---
 
 {{LearnSidebar}}

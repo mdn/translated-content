@@ -1,7 +1,6 @@
 ---
 title: Mettre en place un environnement de développement Django
 slug: Learn/Server-side/Django/development_environment
-translation_of: Learn/Server-side/Django/development_environment
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}
@@ -133,8 +132,8 @@ Vous pouvez facilement installer Python 3 (ainsi que l'outil _pip3_) sur [python
 
 1. Téléchargez l'installeur requis :
 
-    1. Allez sur <https://www.python.org/downloads/>
-    2. Sélectionnez le bouton **Download Python 3.7.2** (le numéro de version mineure peut varier).
+   1. Allez sur <https://www.python.org/downloads/>
+   2. Sélectionnez le bouton **Download Python 3.7.2** (le numéro de version mineure peut varier).
 
 2. Localisez le fichier en utilisant le _Finder_, puis double-cliquez le fichier package. Suivez les consignes d'installation.
 
@@ -157,8 +156,8 @@ Windows n'inclut pas Python par défaut, mais vous pouvez facilement l'installer
 
 1. Téléchargez l'installeur requis :
 
-    1. Allez sur <https://www.python.org/downloads/>
-    2. Sélectionnez le bouton **Download Python 3.7.2** (le numéro de version mineure peut varier).
+   1. Allez sur <https://www.python.org/downloads/>
+   2. Sélectionnez le bouton **Download Python 3.7.2** (le numéro de version mineure peut varier).
 
 2. Installez Python en double-cliquant sur le fichier télécharger puis en suivant les consignes d'installation
 3. Assurez-vous d'avoir coché la case intitulée "Ajouter Python au PATH".

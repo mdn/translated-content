@@ -1,20 +1,9 @@
 ---
 title: webNavigation.onHistoryStateUpdated
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onHistoryStateUpdated
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onHistoryStateUpdated
-  - webNavigation
-translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/onHistoryStateUpdated
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Lancé lorsque la page a utilisé l'[API history](http://diveintohtml5.info/history.html) pour mettre à jour l'URL affichée dans la barre d'adresse du navigateur. Tous les événements futurs de ce cadre utiliseront l'URL mise à jour.
 
@@ -22,11 +11,11 @@ Lancé lorsque la page a utilisé l'[API history](http://diveintohtml5.info/hist
 
 ```js
 browser.webNavigation.onHistoryStateUpdated.addListener(
-  listener,                   // function
-  filter                      // optional object
-)
-browser.webNavigation.onHistoryStateUpdated.removeListener(listener)
-browser.webNavigation.onHistoryStateUpdated.hasListener(listener)
+  listener, // function
+  filter, // optional object
+);
+browser.webNavigation.onHistoryStateUpdated.removeListener(listener);
+browser.webNavigation.onHistoryStateUpdated.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -81,12 +70,8 @@ Logs les URL cibles et les informations de transition supplémentaires pour `onH
 
 ```js
 var filter = {
-  url:
-  [
-    {hostContains: "example.com"},
-    {hostPrefix: "developer"}
-  ]
-}
+  url: [{ hostContains: "example.com" }, { hostPrefix: "developer" }],
+};
 
 function logOnHistoryStateUpdated(details) {
   console.log("onHistoryStateUpdated: " + details.url);
@@ -94,7 +79,10 @@ function logOnHistoryStateUpdated(details) {
   console.log("Transition qualifiers: " + details.transitionQualifiers);
 }
 
-browser.webNavigation.onHistoryStateUpdated.addListener(logOnHistoryStateUpdated, filter);
+browser.webNavigation.onHistoryStateUpdated.addListener(
+  logOnHistoryStateUpdated,
+  filter,
+);
 ```
 
 {{WebExtExamples}}

@@ -1,18 +1,6 @@
 ---
 title: Array.prototype.some()
 slug: Web/JavaScript/Reference/Global_Objects/Array/some
-tags:
-  - Array
-  - ECMAScript5
-  - JavaScript
-  - JavaScript 1.6
-  - Method
-  - Prototype
-  - Reference
-  - Référence(2)
-  - Массив
-  - метод
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/some
 ---
 
 {{JSRef}}
@@ -71,7 +59,7 @@ arr.some(callback(element[, index[, array]])[, thisArg])
 function isBiggerThan10(element, index, array) {
   return element > 10;
 }
-[2, 5, 8, 1, 4].some(isBiggerThan10);  // false
+[2, 5, 8, 1, 4].some(isBiggerThan10); // false
 [12, 5, 8, 1, 4].some(isBiggerThan10); // true
 ```
 
@@ -82,8 +70,8 @@ function isBiggerThan10(element, index, array) {
 [Стрелочные функции](/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions) предоставляют более краткий синтаксис для подобных проверок.
 
 ```js
-[2, 5, 8, 1, 4].some(elem => elem > 10);  // false
-[12, 5, 8, 1, 4].some(elem => elem > 10); // true
+[2, 5, 8, 1, 4].some((elem) => elem > 10); // false
+[12, 5, 8, 1, 4].some((elem) => elem > 10); // true
 ```
 
 {{ EmbedLiveSample('Проверка_элементов_массива_с_использованием_стрелочных_функций') }}
@@ -93,16 +81,16 @@ function isBiggerThan10(element, index, array) {
 Чтобы имитировать функцию метода `includes()`, эта пользовательская функция возвращает true, если элемент существует в массиве:
 
 ```js
-const fruits = ['apple', 'banana', 'mango', 'guava'];
+const fruits = ["apple", "banana", "mango", "guava"];
 
 function checkAvailability(arr, val) {
-  return arr.some(function(arrVal) {
+  return arr.some(function (arrVal) {
     return val === arrVal;
   });
 }
 
-checkAvailability(fruits, 'kela');   // false
-checkAvailability(fruits, 'banana'); // true
+checkAvailability(fruits, "kela"); // false
+checkAvailability(fruits, "banana"); // true
 ```
 
 {{ EmbedLiveSample('Проверка_наличия_элемента_в_массиве') }}
@@ -110,14 +98,14 @@ checkAvailability(fruits, 'banana'); // true
 ### Проверка наличия элемента в массиве с использованием стрелочной функции
 
 ```js
-const fruits = ['apple', 'banana', 'mango', 'guava'];
+const fruits = ["apple", "banana", "mango", "guava"];
 
 function checkAvailability(arr, val) {
-  return arr.some(arrVal => val === arrVal);
+  return arr.some((arrVal) => val === arrVal);
 }
 
-checkAvailability(fruits, 'kela');   // false
-checkAvailability(fruits, 'banana'); // true
+checkAvailability(fruits, "kela"); // false
+checkAvailability(fruits, "banana"); // true
 ```
 
 {{ EmbedLiveSample('Проверка_наличия_элемента_в_массиве_с_использованием_стрелочной_функции') }}
@@ -125,24 +113,24 @@ checkAvailability(fruits, 'banana'); // true
 ### Приведение значения к логическому типу
 
 ```js
-const TRUTHY_VALUES = [true, 'true', 1];
+const TRUTHY_VALUES = [true, "true", 1];
 
 function getBoolean(value) {
-  'use strict';
+  "use strict";
 
-  if (typeof value === 'string') {
+  if (typeof value === "string") {
     value = value.toLowerCase().trim();
   }
 
-  return TRUTHY_VALUES.some(function(t) {
+  return TRUTHY_VALUES.some(function (t) {
     return t === value;
   });
 }
 
-getBoolean(false);   // false
-getBoolean('false'); // false
-getBoolean(1);       // true
-getBoolean('true');  // true
+getBoolean(false); // false
+getBoolean("false"); // false
+getBoolean(1); // true
+getBoolean("true"); // true
 ```
 
 {{ EmbedLiveSample('Приведение_значения_к_логическому_типу') }}
@@ -156,14 +144,14 @@ getBoolean('true');  // true
 // Ссылка (en): http://es5.github.io/#x15.4.4.17
 // Ссылка (ru): http://es5.javascript.ru/x15.4.html#x15.4.4.17
 if (!Array.prototype.some) {
-  Array.prototype.some = function(fun/*, thisArg*/) {
-    'use strict';
+  Array.prototype.some = function (fun /*, thisArg*/) {
+    "use strict";
 
     if (this == null) {
-      throw new TypeError('Array.prototype.some called on null or undefined');
+      throw new TypeError("Array.prototype.some called on null or undefined");
     }
 
-    if (typeof fun !== 'function') {
+    if (typeof fun !== "function") {
       throw new TypeError();
     }
 

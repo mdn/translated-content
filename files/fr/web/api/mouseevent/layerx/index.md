@@ -1,15 +1,6 @@
 ---
 title: event.layerX
 slug: Web/API/MouseEvent/layerX
-tags:
-  - API
-  - DOM
-  - Propriété
-  - Reference
-  - UIEvent
-  - lecture seule
-translation_of: Web/API/UIEvent/layerX
-original_slug: Web/API/UIEvent/layerX
 ---
 
 {{APIRef("DOM Events")}} {{Non-standard_header}}
@@ -21,88 +12,101 @@ Cette propriété prend en compte le défilement de la page, et retourne une val
 ## Syntaxe
 
 ```js
-var posx = event.layerX
+var posx = event.layerX;
 ```
 
-- *`posx`* est une valeur entière en pixels pour la coordonnée x du pointeur de la souris, lorsque l'évènement souris est déclenché.
+- _`posx`_ est une valeur entière en pixels pour la coordonnée x du pointeur de la souris, lorsque l'évènement souris est déclenché.
 
 ## Exemples
 
 ```html
 <html>
-<head>
-<title>Exemple pageX\pageY & layerX\layerY</title>
+  <head>
+    <title>Exemple pageX\pageY & layerX\layerY</title>
 
-<script type="text/javascript">
+    <script type="text/javascript">
+      function montrerCoords(evt) {
+        var form = document.forms.form_coords;
+        var parent_id = evt.target.parentNode.id;
+        form.parentId.value = parent_id;
+        form.pageXCoords.value = evt.pageX;
+        form.pageYCoords.value = evt.pageY;
+        form.layerXCoords.value = evt.layerX;
+        form.layerYCoords.value = evt.layerY;
+      }
+    </script>
 
-function montrerCoords(evt){
-  var form = document.forms.form_coords;
-  var parent_id = evt.target.parentNode.id;
-  form.parentId.value = parent_id;
-  form.pageXCoords.value = evt.pageX;
-  form.pageYCoords.value = evt.pageY;
-  form.layerXCoords.value = evt.layerX;
-  form.layerYCoords.value = evt.layerY;
-}
-</script>
+    <style type="text/css">
+      #d1 {
+        border: solid blue 1px;
+        padding: 20px;
+      }
 
-<style type="text/css">
+      #d2 {
+        position: absolute;
+        top: 180px;
+        left: 80%;
+        right: auto;
+        width: 40%;
+        border: solid blue 1px;
+        padding: 20px;
+      }
 
- #d1 {
-  border: solid blue 1px;
-  padding: 20px;
- }
+      #d3 {
+        position: absolute;
+        top: 240px;
+        left: 20%;
+        width: 50%;
+        border: solid blue 1px;
+        padding: 10px;
+      }
+    </style>
+  </head>
 
- #d2 {
-  position: absolute;
-  top: 180px;
-  left: 80%;
-  right:auto;
-  width: 40%;
-  border: solid blue 1px;
-  padding: 20px;
- }
+  <body onmousedown="montrerCoords(event)">
+    <p>
+      Pour afficher les coordonnées de la souris, veuillez cliquer quelque part
+      sur la page.
+    </p>
 
- #d3 {
-  position: absolute;
-  top: 240px;
-  left: 20%;
-  width: 50%;
-  border: solid blue 1px;
-  padding: 10px;
- }
+    <div id="d1">
+      <span
+        >Cette div n'est pas positionnée : cliquer dedans renverra des valeurs
+        layerX/layerY identiques à celles de pageX/PageY.</span
+      >
+    </div>
 
-</style>
-</head>
+    <div id="d2">
+      <span
+        >Cette div est positionnée : cliquer dedans renverra des valeurs
+        layerX/layerY relatives à son coin supérieur. Notez que les valeurs de
+        pageX\pageY sont toujours relatives au document, ce qui inclue le
+        défilement dans la page.</span
+      >
 
-<body onmousedown="montrerCoords(event)">
+      <span
+        >Un peu de défilement ! C'est un div positionné : le clic renverra des
+        valeurs layerX/layerY relative à son coin supérieur gauche. Notez que
+        les valeurs de pageX\pageY sont toujours relatives au document, ce qui
+        inclue le défilement dans la page.</span
+      >
+    </div>
 
-<p>Pour afficher les coordonnées de la souris, veuillez cliquer quelque part sur la page.</p>
-
-<div id="d1">
-<span>Cette div n'est pas positionnée : cliquer dedans renverra des valeurs layerX/layerY identiques à celles de pageX/PageY.</span>
-</div>
-
-<div id="d2">
-
-<span>Cette div est positionnée : cliquer dedans renverra des valeurs layerX/layerY
-relatives à son coin supérieur. Notez que les valeurs de pageX\pageY sont toujours relatives au document, ce qui inclue le défilement dans la page.</span>
-
-<span>Un peu de défilement ! C'est un div positionné : le clic renverra des valeurs layerX/layerY relative à son coin supérieur gauche. Notez que les valeurs de pageX\pageY sont toujours relatives au document, ce qui inclue le défilement dans la page.</span>
-
-</div>
-
-<div id="d3">
-<form name="form_coords" id="form1">
- Id de l'élément parent : <input type="text" name="parentId" size="7" /><br />
- pageX:<input type="text" name="pageXCoords" size="7" />
- pageY:<input type="text" name="pageYCoords" size="7" /><br />
- layerX:<input type="text" name="layerXCoords" size="7" />
- layerY:<input type="text" name="layerYCoords" size="7" />
-</form>
-</div>
-
-</body>
+    <div id="d3">
+      <form name="form_coords" id="form1">
+        Id de l'élément parent :
+        <input type="text" name="parentId" size="7" /><br />
+        pageX:<input type="text" name="pageXCoords" size="7" /> pageY:<input
+          type="text"
+          name="pageYCoords"
+          size="7" /><br />
+        layerX:<input type="text" name="layerXCoords" size="7" /> layerY:<input
+          type="text"
+          name="layerYCoords"
+          size="7" />
+      </form>
+    </div>
+  </body>
 </html>
 ```
 

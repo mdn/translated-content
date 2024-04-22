@@ -19,8 +19,8 @@ slug: Web/API/Event/timeStamp
 
 ```html
 <p>
-  이 프레임에 포커스를 두고 아무 키나 눌러
-  keypress 이벤트의 현재 타임스탬프를 알아보세요.
+  이 프레임에 포커스를 두고 아무 키나 눌러 keypress 이벤트의 현재 타임스탬프를
+  알아보세요.
 </p>
 <p>timeStamp: <span id="time">-</span></p>
 ```
@@ -29,10 +29,10 @@ slug: Web/API/Event/timeStamp
 
 ```js
 function getTime(event) {
-  const time = document.getElementById('time');
+  const time = document.getElementById("time");
   time.firstChild.nodeValue = event.timeStamp;
 }
-document.body.addEventListener('keypress', getTime);
+document.body.addEventListener("keypress", getTime);
 ```
 
 ### 결과

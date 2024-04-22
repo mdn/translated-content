@@ -1,15 +1,6 @@
 ---
 title: Notification.actions
 slug: Web/API/Notification/actions
-tags:
-  - API
-  - API Notifications
-  - Notification
-  - Notifications
-  - Propriété
-  - Reference
-  - actions
-translation_of: Web/API/Notification/actions
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
@@ -23,7 +14,7 @@ Il s'agit d'une liste des actions définies par l'application que l'utilisateur 
 ## Syntaxe
 
 ```js
-Notification.actions
+Notification.actions;
 ```
 
 ### Valeur

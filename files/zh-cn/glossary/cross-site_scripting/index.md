@@ -3,6 +3,8 @@ title: Cross-site scripting（跨站脚本攻击）
 slug: Glossary/Cross-site_scripting
 ---
 
+{{GlossarySidebar}}
+
 跨站脚本攻击（Cross-site scripting，XSS）是一种安全漏洞，攻击者可以利用这种漏洞在网站上注入恶意的客户端代码。若受害者运行这些恶意代码，攻击者就可以突破网站的访问限制并冒充受害者。根据开放式 Web 应用安全项目（OWASP），XSS 在 2017 年被认为 [7 种最常见的 Web 应用程序漏洞之一](<https://owasp.org/www-project-top-ten/OWASP_Top_Ten_2017/Top_10-2017_A7-Cross-Site_Scripting_(XSS)>)。
 
 如果 Web 应用程序没有部署足够的安全验证，那么，这些攻击很容易成功。浏览器无法探测到这些恶意脚本是不可信的，所以，这些脚本可以任意读取 cookie，session tokens，或者其他敏感的网站信息，或者让恶意脚本重写{{glossary("HTML")}}内容。
@@ -23,11 +25,9 @@ XSS 攻击可以分为 3 类：存储型（持久型）、反射型（非持久�
 - **基于 DOM 的 XSS**
   - : 通过修改原始的客户端代码，受害者浏览器的 DOM 环境改变，导致有效载荷的执行。也就是说，页面本身并没有变化，但由于 DOM 环境被恶意修改，有客户端代码被包含进了页面，并且意外执行。
 
-## 更多相关
+## 参见
 
-### 基本知识
-
-- [Cross-site scripting](https://zh.wikipedia.org/wiki/Cross-site_scripting) on Wikipedia
-- [Cross-site scripting on OWASP](https://www.owasp.org/index.php/XSS)
-- [Another article about Cross-site scripting](https://www.acunetix.com/blog/web-security-zone/articles/dom-xss-explained/)
-- [XSS Attack – Exploit & Protection](https://secure.wphackedhelp.com/blog/wordpress-xss-attack/)
+- [Type of Attacks: Cross-site scripting (XSS)](/zh-CN/docs/Web/Security/Types_of_attacks#cross-site_scripting_xss)
+- 维基百科上的[跨站脚本](https://zh.wikipedia.org/wiki/跨網站指令碼)
+- [Cross-site scripting on OWASP](https://owasp.org/www-community/attacks/xss/)
+- [Another article about Cross-site scripting](https://www.acunetix.com/blog/articles/dom-xss-explained/)

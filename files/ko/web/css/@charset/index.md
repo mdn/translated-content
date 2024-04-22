@@ -1,7 +1,8 @@
 ---
-title: '@charset'
+title: "@charset"
 slug: Web/CSS/@charset
 ---
+
 {{ CSSRef }}
 
 **`@charset`** [CSS](/ko/docs/Web/CSS) [at-규칙](/ko/docs/Web/CSS/At-rule)은 스타일 시트에 쓰이는 문자 인코딩을 지정합니다. 스타일 시트의 첫 번째 요소여야 하며 어떤 문자가 선행되지 않아야 합니다; [중첩된 문](/ko/docs/Web/CSS/Syntax#nested_statements)이 아니기에, [조건부 그룹 at-규칙](/ko/docs/Web/CSS/At-rule#Conditional_Group_Rules) 내에 사용될 수 없습니다. 여러 `@charset` at-규칙이 정의된 경우, 첫 번째 것만 사용되고 HTML 요소의 `style` attribute 또는 HTML 페이지의 문자 집합과 관련 있는 {{ HTMLElement("style") }} 요소 내에서 사용될 수 없습니다.
@@ -38,11 +39,11 @@ where:
 
 ## 예제
 
-```css
-@charset "UTF-8";       /* 스타일 시트의 인코딩을 Unicode UTF-8로 설정 */
+```css-nolint
+@charset "UTF-8"; /* 스타일 시트의 인코딩을 Unicode UTF-8로 설정 */
 @charset 'iso-8859-15'; /* 스타일 시트의 인코딩을 Latin-9 (서유럽어, euro sign 있는) 로 설정 */
- @charset "UTF-8";      /* 무효한, at-규칙 앞에 문자(공백)가 있음 */
-@charset UTF-8;         /* 무효한, ' 또는 " 없는 문자집합 CSS {{cssxref("&lt;string&gt;")}}이 아님 */
+ @charset "UTF-8"; /* 무효한, at-규칙 앞에 문자(공백)가 있음 */
+@charset UTF-8; /* 무효한, ' 또는 " 없는 문자집합 CSS {{cssxref("&lt;string&gt;")}}이 아님 */
 ```
 
 ## 명세

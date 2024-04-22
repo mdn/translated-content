@@ -1,13 +1,6 @@
 ---
 title: GlobalEventHandlers.onerror
 slug: Web/API/Window/error_event
-tags:
-  - API
-  - HTML DOM
-  - Propriété
-  - Reference
-translation_of: Web/API/GlobalEventHandlers/onerror
-original_slug: Web/API/GlobalEventHandlers/onerror
 ---
 
 {{ApiRef("HTML DOM")}}
@@ -51,16 +44,16 @@ Quand une erreur de syntaxe**(?)** se produit dans un script chargé à partir d
 window.onerror = function (msg, url, noLigne, noColonne, erreur) {
   var chaine = msg.toLowerCase();
   var souschaine = "script error";
-  if (chaine.indexOf(souschaine) > -1){
-    alert('Script Error : voir la Console du Navigateur pour les Détails');
+  if (chaine.indexOf(souschaine) > -1) {
+    alert("Script Error : voir la Console du Navigateur pour les Détails");
   } else {
     var message = [
-      'Message : ' + msg,
-      'URL : ' + url,
-      'Ligne : ' + noLigne,
-      'Colonne : ' + noColonne,
-      'Objet Error : ' + JSON.stringify(erreur)
-    ].join(' - ');
+      "Message : " + msg,
+      "URL : " + url,
+      "Ligne : " + noLigne,
+      "Colonne : " + noColonne,
+      "Objet Error : " + JSON.stringify(erreur),
+    ].join(" - ");
 
     alert(message);
   }

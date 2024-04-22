@@ -1,12 +1,6 @@
 ---
 title: Bluetooth
 slug: Web/API/Bluetooth
-tags:
-  - API
-  - Bluetooth
-  - Web Bluetooth API
-  - Экспериментальное
-translation_of: Web/API/Bluetooth
 ---
 
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}

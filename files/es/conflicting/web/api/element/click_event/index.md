@@ -2,7 +2,6 @@
 title: GlobalEventHandlers.onclick
 slug: conflicting/Web/API/Element/click_event
 original_slug: Web/API/GlobalEventHandlers/onclick
-browser-compat: api.Element.click_event
 ---
 
 {{ ApiRef("HTML DOM") }}
@@ -65,11 +64,3 @@ p.onclick = function(event) { alert("moot!"); };
 El evento `click` se genera cuando el usuario hace clic en un elemento. El evento clic ocurrirá después de los eventos `mousedown` y `mouseup`.
 
 Solo se puede asignar un controlador `click` a un objeto a la vez con esta propiedad. Puede que prefiera utilizar el método {{domxref ("EventTarget.addEventListener()")}} en su lugar, ya que es más flexible y forma parte de la especificación DOM Events.
-
-## Especificaciones
-
-{{Specifications}}
-
-## Compatibilidad con navegadores
-
-{{Compat}}

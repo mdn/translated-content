@@ -10,7 +10,7 @@ slug: Web/API/AudioParam/cancelScheduledValues
 ## 구문
 
 ```js
-var AudioParam = AudioParam.cancelScheduledValues(startTime)
+var AudioParam = AudioParam.cancelScheduledValues(startTime);
 ```
 
 ### 매개변수

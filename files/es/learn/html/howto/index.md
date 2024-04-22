@@ -1,7 +1,6 @@
 ---
 title: Solución de problemas comunes de HTML
 slug: Learn/HTML/Howto
-original_slug: Learn/HTML/como
 ---
 
 {{LearnSidebar}}

@@ -1,13 +1,6 @@
 ---
 title: calc
 slug: Web/CSS/calc
-tags:
-  - CSS
-  - Fonction
-  - Reference
-  - Web
-translation_of: Web/CSS/calc()
-original_slug: Web/CSS/calc()
 ---
 
 {{CSSRef}}
@@ -50,7 +43,7 @@ L'opérande dans l'expression peut utiliser n'importe quelle syntaxe de longueur
 
 ## Exemples
 
-### Positionner un objet sur l’écran avec une marge
+### Positionner un objet sur l'écran avec une marge
 
 `calc()` rend le positionnement des objets facile en définissant une marge. Dans cet exemple, le CSS crée une bannière qui s'étend sur toute la fenêtre, avec un espace de 40 pixels entre chaque bout de la bannière et les bords de la fenêtre :
 
@@ -72,9 +65,9 @@ L'opérande dans l'expression peut utiliser n'importe quelle syntaxe de longueur
 <div class="banniere">C'est une bannière !</div>
 ```
 
-{{EmbedLiveSample("Positionner_un_objet_sur_l’écran_avec_une_marge", '100%', '60')}}
+{{EmbedLiveSample("Positionner_un_objet_sur_l'écran_avec_une_marge", '100%', '60')}}
 
-### Dimensionner automatiquement les champs d’un formulaire pour s’ajuster au conteneur
+### Dimensionner automatiquement les champs d'un formulaire pour s'ajuster au conteneur
 
 Un autre cas d'utilisation de `calc()` est d'aider à s'assurer que les champs d'un formulaire s'adaptent à l'espace disponible, sans s'étendre au-delà de la bordure du conteneur, tout en conservant une marge appropriée.
 
@@ -88,7 +81,7 @@ input {
 }
 
 #boiteformulaire {
-  width: calc(100%/6);
+  width: calc(100% / 6);
   border: 1px solid black;
   padding: 4px;
 }
@@ -99,13 +92,13 @@ Dans ce cas, le formulaire est lui-même défini pour utiliser un sixième de la
 ```html
 <form>
   <div id="boiteformulaire">
-  <label>Tapez quelque chose :</label>
-  <input type="text">
+    <label>Tapez quelque chose :</label>
+    <input type="text" />
   </div>
 </form>
 ```
 
-{{EmbedLiveSample("Dimensionner_automatiquement_les_champs_d’un_formulaire_pour_s’ajuster_au_conteneur", '100%', '80')}}
+{{EmbedLiveSample("Dimensionner_automatiquement_les_champs_d'un_formulaire_pour_s'ajuster_au_conteneur", '100%', '80')}}
 
 ### Imbriquer plusieurs `calc()` grâce aux variables CSS
 

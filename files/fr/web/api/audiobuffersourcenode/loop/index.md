@@ -1,13 +1,6 @@
 ---
 title: AudioBufferSourceNode.loop
 slug: Web/API/AudioBufferSourceNode/loop
-tags:
-  - API
-  - AudioBufferSourceNode
-  - Loop
-  - Reference
-  - Web Audio API
-translation_of: Web/API/AudioBufferSourceNode/loop
 ---
 
 {{ APIRef("Web Audio API") }}
@@ -40,14 +33,16 @@ function getData() {
   source = audioCtx.createBufferSource();
   request = new XMLHttpRequest();
 
-  request.open('GET', 'viper.ogg', true);
+  request.open("GET", "viper.ogg", true);
 
-  request.responseType = 'arraybuffer';
+  request.responseType = "arraybuffer";
 
-  request.onload = function() {
+  request.onload = function () {
     var audioData = request.response;
 
-    audioCtx.decodeAudioData(audioData, function(buffer) {
+    audioCtx.decodeAudioData(
+      audioData,
+      function (buffer) {
         myBuffer = buffer;
         source.buffer = myBuffer;
         source.playbackRate.value = playbackControl.value;
@@ -55,21 +50,23 @@ function getData() {
         source.loop = true;
       },
 
-      function(e){"Error with decoding audio data" + e.err});
-
-  }
+      function (e) {
+        "Error with decoding audio data" + e.err;
+      },
+    );
+  };
 
   request.send();
 }
 
 // lie les boutons pour lire et arrêter l'audio, et le slider
 
-play.onclick = function() {
+play.onclick = function () {
   getData();
   source.start(0);
-  play.setAttribute('disabled', 'disabled');
-  playbackControl.removeAttribute('disabled');
-}
+  play.setAttribute("disabled", "disabled");
+  playbackControl.removeAttribute("disabled");
+};
 ```
 
 ## Spécifications

@@ -1,7 +1,6 @@
 ---
 title: DOMPoint.fromPoint()
 slug: Web/API/DOMPoint/fromPoint_static
-original_slug: Web/API/DOMPoint/fromPoint
 ---
 
 {{APIRef("DOM")}}
@@ -16,7 +15,7 @@ original_slug: Web/API/DOMPoint/fromPoint
 ## 構文
 
 ```js
-fromPoint(sourcePoint)
+fromPoint(sourcePoint);
 ```
 
 ### 引数
@@ -53,7 +52,7 @@ var mutablePoint = DOMPoint.fromPoint(readOnlyPoint);
 このサンプルでは、 {{domxref("DOMPointReadOnly.x", "x")}} と {{domxref("DOMPointReadOnly.y", "y")}} に使用する値を含むインラインオブジェクトを指定し、二次元の点を作成しています。 _z_ と _w_ プロパティは既定値（それぞれ 0 と 1）のままにしておくことができます。
 
 ```js
-var center = DOMPoint.fromPoint({x: 75, y: -50, z: -55, w: 0.25});
+var center = DOMPoint.fromPoint({ x: 75, y: -50, z: -55, w: 0.25 });
 ```
 
 ## 仕様書

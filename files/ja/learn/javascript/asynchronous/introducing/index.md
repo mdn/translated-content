@@ -43,7 +43,7 @@ l10n:
 以下のようなコードを考えてみましょう。
 
 ```js
-const name = 'Miriam';
+const name = "Miriam";
 const greeting = `Hello, my name is ${name}!`;
 console.log(greeting);
 // "Hello, my name is Miriam!"
@@ -64,7 +64,7 @@ function makeGreeting(name) {
   return `Hello, my name is ${name}!`;
 }
 
-const name = 'Miriam';
+const name = "Miriam";
 const greeting = makeGreeting(name);
 console.log(greeting);
 // "Hello, my name is Miriam!"
@@ -113,15 +113,15 @@ function generatePrimes(quota) {
   return primes;
 }
 
-const quota = document.querySelector('#quota');
-const output = document.querySelector('#output');
+const quota = document.querySelector("#quota");
+const output = document.querySelector("#output");
 
-document.querySelector('#generate').addEventListener('click', () => {
+document.querySelector("#generate").addEventListener("click", () => {
   const primes = generatePrimes(quota.value);
   output.textContent = `${quota.value} 個の素数を生成しました。`;
 });
 
-document.querySelector('#reload').addEventListener('click', () => {
+document.querySelector("#reload").addEventListener("click", () => {
   document.location.reload();
 });
 ```
@@ -182,15 +182,15 @@ function generatePrimes(quota) {
   return primes;
 }
 
-const quota = document.querySelector('#quota');
-const output = document.querySelector('#output');
+const quota = document.querySelector("#quota");
+const output = document.querySelector("#output");
 
-document.querySelector('#generate').addEventListener('click', () => {
+document.querySelector("#generate").addEventListener("click", () => {
   const primes = generatePrimes(quota.value);
   output.textContent = `${quota.value} 個の素数を生成しました。`;
 });
 
-document.querySelector('#reload').addEventListener('click', () => {
+document.querySelector("#reload").addEventListener("click", () => {
   document.location.reload();
 });
 ```
@@ -230,23 +230,27 @@ pre {
 ```
 
 ```js
-const log = document.querySelector('.event-log');
+const log = document.querySelector(".event-log");
 
-document.querySelector('#xhr').addEventListener('click', () => {
-  log.textContent = '';
+document.querySelector("#xhr").addEventListener("click", () => {
+  log.textContent = "";
 
   const xhr = new XMLHttpRequest();
 
-  xhr.addEventListener('loadend', () => {
+  xhr.addEventListener("loadend", () => {
     log.textContent = `${log.textContent}ステータス ${xhr.status} で完了しました`;
   });
 
-  xhr.open('GET', 'https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json');
+  xhr.open(
+    "GET",
+    "https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json",
+  );
   xhr.send();
-  log.textContent = `${log.textContent}XHR リクエストを開始しました\n`;});
+  log.textContent = `${log.textContent}XHR リクエストを開始しました\n`;
+});
 
-document.querySelector('#reload').addEventListener('click', () => {
-  log.textContent = '';
+document.querySelector("#reload").addEventListener("click", () => {
+  log.textContent = "";
   document.location.reload();
 });
 ```

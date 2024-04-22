@@ -3,13 +3,7 @@ title: line-height
 slug: Web/CSS/line-height
 ---
 
-```
-https://developer.mozilla.org/en-US/docs/Web/CSS{{ CSSRef() }}
-/*Keyword value*/
-line-height: normal;
-
-/
-```
+{{ CSSRef() }}
 
 ### Resumen
 
@@ -19,7 +13,7 @@ La propiedad [CSS](/es/docs/Web/CSS) `line-height` establece la altura de una ca
 - Aplicable a: todos los elementos.
 - {{ Cssxref("inheritance", "Valor heredado") }}: sí
 - Porcentajes: se refieren a tamaño de la fuente del elemento mismo.
-- Medio: {{ Xref_cssvisual() }}
+- Medio: {{cssxref("Media/Visual", "visual")}}
 - {{ Cssxref("computed value", "Valor calculado") }}: para los valores \<length> y \<percentage>, el valor absoluto, en otro caso, como se especifica.
 
 ## Syntax
@@ -68,21 +62,13 @@ div { font: 10pt/1.2  Georgia,"Bitstream Charter",serif; } /* font shorthand */
 
 A menudo es más conveniente establecer el `line-height` usando {{cssxref("font")}} abreviadamente, como se muestra arriba, pero esto también requiere especificar la propiedad `font-family`.
 
-### Notas
-
 ### Especificaciones
 
-- [CSS 2.1](http://www.w3.org/TR/CSS21/visudet.html#propdef-line-height)
+{{Specifications}}
 
 ### Compatibilidad de navegadores
 
-| Navegador         | Versión mínima |
-| ----------------- | -------------- |
-| Internet Explorer | ?              |
-| Firefox           | 1              |
-| Netscape          | ?              |
-| Opera             | ?              |
-| Safari            | ?              |
+{{Compat}}
 
 ### Ver también
 

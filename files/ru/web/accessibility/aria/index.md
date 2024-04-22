@@ -1,12 +1,8 @@
 ---
 title: ARIA
 slug: Web/Accessibility/ARIA
-tags:
-  - ARIA
-  - Web
-  - доступность
-translation_of: Web/Accessibility/ARIA
 ---
+
 Accessible Rich Internet Applications **(ARIA)** определяет способ сделать веб контент и веб приложения (особенно те, которые разработаны с помощью Ajax и JavaScript) более доступными для людей с ограниченными возможностями. Например, ARIA делает доступным навигационные маркеры, JavaScript виджеты, подсказки на форме, сообщения об ошибках, автоматические обновления и многое другое.
 
 ARIA - это набор специальных атрибутов, которые могут быть добавлены в любую разметку, но особенно подходят для HTML. Атрибут `role` определяет тип объекта (такие как статья, оповещение или ползунок). Дополнительные ARIA атрибуты предоставляют другие полезные возможности, такие как описания для форм или текущее значение индикатора выполнения.
@@ -37,7 +33,7 @@ ARIA - это набор специальных атрибутов, которы
 - [Использование ARIA Live Regions для оповещения об изменении контента страницы](http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm)
   - : Краткая сводка об использовании live regions от создателей JAWS screen reader software. Live regions также поддерживаются NVDA в Firefox и VoiceOver в Safari.
 
-### ARIA для виджетов на JavaScript.
+### ARIA для виджетов на JavaScript
 
 - [Навигация с помощью клавиатуры и фокус в виджетах на JavaScript](/ru/docs/Accessibility/Keyboard-navigable_JavaScript_widgets)
   - : Первый шаг в создании доступных JavaScript виджетов, позволяющих производить навигацию с помощью клавиатуры. Статья описывает последовательные шаги по достижению цели. Ещё один хороший ресурс - [статья Yahoo! об управлении фокусом.](http://www.yuiblog.com/blog/2009/02/23/managing-focus/)
@@ -51,7 +47,7 @@ ARIA - это набор специальных атрибутов, которы
 - [JavaScript UI библиотеки со встроенной поддержкой ARIA.](http://www.paciellogroup.com/blog/2009/07/wai-aria-implementation-in-javascript-ui-libraries/)
   - : Если вы начинаете новый проект, то вам стоит обратить внимание на UI библиотеки, имеющие встроенную поддержку ARIA. Внимание: статья 2009 года — то, что она описывает, стоит вынести в отдельную статью на MDN, которая будет поддерживаться в актуальном состоянии.
 
-### Список рассылки.
+### Список рассылки
 
 - [Открытая Google Group, посвящённая ARIA](https://groups.google.com/forum/#!forum/free-aria)
   - : Здесь можно задать вопрос об ARIA, а также предложить улучшение существующей документации, которая находится там же.
@@ -64,7 +60,7 @@ ARIA - это набор специальных атрибутов, которы
 
 [Accessible Culture](http://www.accessibleculture.org/tag/wai-aria/)
 
-### Обнаружение багов.
+### Обнаружение багов
 
 [Сообщайте об ошибках ARIA в браузерах, экранных читалках и библиотеках JavaScript.](/en/Accessibility/ARIA/How_to_file_ARIA-related_bugs)
 
@@ -79,7 +75,7 @@ ARIA - это набор специальных атрибутов, которы
 - [Yahoo! Search](http://search.yahoo.com)
   - : Yahoo! проделали невероятную работу по продвижению ARIA в своём поисковике, используя все возможности и [делясь своим опытом](http://ycorpblog.com/2011/03/23/searchdirect/). Yahoo! Search использует одновременно ARIA landmarks, live regions, и widgets.
 
-### Стандартизация.
+### Стандартизация
 
 - [WAI-ARIA Activities Overview at W3C](http://www.w3.org/WAI/intro/aria.php)
   - : Authoritative Overview of WAI-ARIA Standardization efforts by the Web Accessibility Initiative (WAI)

@@ -1,14 +1,8 @@
 ---
 title: Node.insertBefore()
 slug: Web/API/Node/insertBefore
-tags:
-  - API
-  - DOM
-  - DOM Element Methods
-  - Method
-  - WebAPI
-translation_of: Web/API/Node/insertBefore
 ---
+
 {{APIRef("DOM")}}
 
 Метод **`Node.insertBefore()`** добавляет элемент в список дочерних элементов родителя перед указанным элементом.
@@ -34,20 +28,20 @@ var insertedElement = parentElement.insertBefore(newElement, referenceElement);
 </div>
 
 <script>
-// Создаём новый <span>
-var sp1 = document.createElement("span");
+  // Создаём новый <span>
+  var sp1 = document.createElement("span");
 
-// Получаем ссылку на элемент, перед которым мы хотим вставить sp1
-var sp2 = document.getElementById("childElement");
-//Получаем ссылку на родителя sp2
-var parentDiv = sp2.parentNode;
+  // Получаем ссылку на элемент, перед которым мы хотим вставить sp1
+  var sp2 = document.getElementById("childElement");
+  //Получаем ссылку на родителя sp2
+  var parentDiv = sp2.parentNode;
 
-// Вставляем sp1 перед sp2
-parentDiv.insertBefore(sp1, sp2);
+  // Вставляем sp1 перед sp2
+  parentDiv.insertBefore(sp1, sp2);
 </script>
 ```
 
-Однако нет метода insertAfter. Он может быть заменён использованием метода insertBefore в связке с [`nextSibling`](/en-US/docs/DOM/Node.nextSibling).
+Однако нет метода insertAfter. Он может быть заменён использованием метода insertBefore в связке с [`nextSibling`](/ru/docs/DOM/Node.nextSibling).
 
 В предыдущем примере sp1 может быть вставлен после sp2 следующим образом:
 
@@ -63,7 +57,7 @@ parentDiv.insertBefore(sp1, sp2.nextSibling);
 
 ```js
 // Получаем ссылку на элемент в который мы хотим добавить новый элемент
-var parentElement = document.getElementById('parentElement');
+var parentElement = document.getElementById("parentElement");
 // Получаем ссылку на первый дочерний элемент
 var theFirstChild = parentElement.firstChild;
 
@@ -76,10 +70,10 @@ parentElement.insertBefore(newElement, theFirstChild);
 
 Когда у родителя нет первого дочернего элемента, `firstChild` вернёт `null`. Новый элемент всё равно будет выставляться после последнего дочернего элемента. Но так как родитель не имеет первого дочернего элемента, то он не будет иметь и последнего. Следовательно, после добавления в него элемента, этот элемент будет единственным дочерним элементом.
 
+## Спецификации
+
+{{Specifications}}
+
 ## Совместимость с браузерами
 
 {{Compat}}
-
-## Спецификация
-
-- [insertBefore](http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-952280727)

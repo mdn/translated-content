@@ -1,8 +1,6 @@
 ---
 title: Жизни
 slug: Games/Tutorials/2D_breakout_game_Phaser/Extra_lives
-translation_of: Games/Tutorials/2D_breakout_game_Phaser/Extra_lives
-original_slug: Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Жизни
 ---
 
 {{GamesSidebar}}{{PreviousNext("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Победа", "Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Анимация")}}
@@ -28,9 +26,17 @@ var lifeLostText;
 Надписи мы уже определяли, когда реализовывали систему [очков](/ru/docs/Games/Tutorials/%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_2D_Breakout_%D0%B8%D0%B3%D1%80%D1%8B_%D0%BD%D0%B0_Phaser/%D0%9E%D1%87%D0%BA%D0%B8). Добавьте следующие строки кода в после определения надписи `scoreText` в функции `create()`:
 
 ```js
-livesText = game.add.text(game.world.width-5, 5, 'Lives: '+lives, { font: '18px Arial', fill: '#0095DD' });
-livesText.anchor.set(1,0);
-lifeLostText = game.add.text(game.world.width*0.5, game.world.height*0.5, 'Life lost, click to continue', { font: '18px Arial', fill: '#0095DD' });
+livesText = game.add.text(game.world.width - 5, 5, "Lives: " + lives, {
+  font: "18px Arial",
+  fill: "#0095DD",
+});
+livesText.anchor.set(1, 0);
+lifeLostText = game.add.text(
+  game.world.width * 0.5,
+  game.world.height * 0.5,
+  "Life lost, click to continue",
+  { font: "18px Arial", fill: "#0095DD" },
+);
 lifeLostText.anchor.set(0.5);
 lifeLostText.visible = false;
 ```
@@ -44,16 +50,26 @@ lifeLostText.visible = false;
 Как вы могли заметить, мы используем одинаковые стили для всех надписей: `scoreText`, `livesText` и `lifeLostText`. Однако, налицо копирование кода и если мы, когда-либо, захотим изменить размер шрифта или цвет, то нам придётся делать это в нескольких местах. Чтобы избежать этого, мы вынесем стиль в отдельную переменную. Напишите следующую строку сразу после всех наших текущих определений переменных:
 
 ```js
-var textStyle = { font: '18px Arial', fill: '#0095DD' };
+var textStyle = { font: "18px Arial", fill: "#0095DD" };
 ```
 
 Теперь мы можем использовать эту переменную для нашего текста — обновите ваш код и замените повторяющиеся участки со стилем текста на переменную.
 
 ```js
-scoreText = game.add.text(5, 5, 'Points: 0', textStyle);
-livesText = game.add.text(game.world.width-5, 5, 'Lives: '+lives, textStyle);
-livesText.anchor.set(1,0);
-lifeLostText = game.add.text(game.world.width*0.5, game.world.height*0.5, 'Life lost, click to continue', textStyle);
+scoreText = game.add.text(5, 5, "Points: 0", textStyle);
+livesText = game.add.text(
+  game.world.width - 5,
+  5,
+  "Lives: " + lives,
+  textStyle,
+);
+livesText.anchor.set(1, 0);
+lifeLostText = game.add.text(
+  game.world.width * 0.5,
+  game.world.height * 0.5,
+  "Life lost, click to continue",
+  textStyle,
+);
 lifeLostText.anchor.set(0.5);
 lifeLostText.visible = false;
 ```
@@ -65,9 +81,9 @@ lifeLostText.visible = false;
 Чтобы реализовать жизнь в нашей игре, давайте сначала изменим функцию шара, связанную с событием `onOutOfBounds`. Вместо того, чтобы выполнять анонимную функцию и сразу показывать сообщение:
 
 ```js
-ball.events.onOutOfBounds.add(function(){
-    alert('Game over!');
-    location.reload();
+ball.events.onOutOfBounds.add(function () {
+  alert("Game over!");
+  location.reload();
 }, this);
 ```
 
@@ -81,21 +97,20 @@ ball.events.onOutOfBounds.add(ballLeaveScreen, this);
 
 ```js
 function ballLeaveScreen() {
-    lives--;
-    if(lives) {
-        livesText.setText('Lives: '+lives);
-        lifeLostText.visible = true;
-        ball.reset(game.world.width*0.5, game.world.height-25);
-        paddle.reset(game.world.width*0.5, game.world.height-5);
-        game.input.onDown.addOnce(function(){
-            lifeLostText.visible = false;
-            ball.body.velocity.set(150, -150);
-        }, this);
-    }
-    else {
-        alert('You lost, game over!');
-        location.reload();
-    }
+  lives--;
+  if (lives) {
+    livesText.setText("Lives: " + lives);
+    lifeLostText.visible = true;
+    ball.reset(game.world.width * 0.5, game.world.height - 25);
+    paddle.reset(game.world.width * 0.5, game.world.height - 5);
+    game.input.onDown.addOnce(function () {
+      lifeLostText.visible = false;
+      ball.body.velocity.set(150, -150);
+    }, this);
+  } else {
+    alert("You lost, game over!");
+    location.reload();
+  }
 }
 ```
 

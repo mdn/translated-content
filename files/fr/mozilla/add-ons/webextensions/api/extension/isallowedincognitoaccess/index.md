@@ -1,20 +1,9 @@
 ---
 title: extension.isAllowedIncognitoAccess()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/isAllowedIncognitoAccess
-tags:
-  - API
-  - Add-ons
-  - Extension
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - isAllowedIncognitoAccess
-translation_of: Mozilla/Add-ons/WebExtensions/API/extension/isAllowedIncognitoAccess
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Vérifiez si l'extension est autorisée à accéder aux onglets ouverts en mode "navigation privée".
 
@@ -23,7 +12,7 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 ## Syntaxe
 
 ```js
-var isAllowed = browser.extension.isAllowedIncognitoAccess()
+var isAllowed = browser.extension.isAllowedIncognitoAccess();
 ```
 
 ### Paramètres

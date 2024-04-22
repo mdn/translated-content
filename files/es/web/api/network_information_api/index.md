@@ -11,18 +11,21 @@ La Network Information (Información de red) API provee información sobre el si
 
 ## Examples
 
-### Detectar cambios de conexiónThis example watches for changes to the user's connection.
+### Detectar cambios de conexión
 
 ```js
-var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+var connection =
+  navigator.connection || navigator.mozConnection || navigator.webkitConnection;
 var tipo = connection.effectiveType;
 
 function updateConnectionStatus() {
-  console.log("Connection type changed from " + tipo + " to " + connection.effectiveType);
+  console.log(
+    "Connection type changed from " + tipo + " to " + connection.effectiveType,
+  );
   tipo = connection.effectiveType;
 }
 
-connection.addEventListener('change', updateConnectionStatus);
+connection.addEventListener("change", updateConnectionStatus);
 ```
 
 ### Precargar recursos grandes
@@ -34,9 +37,10 @@ use case would likely use a switch statement or some other method to check all o
 
 ```js
 let preloadVideo = true;
-var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+var connection =
+  navigator.connection || navigator.mozConnection || navigator.webkitConnection;
 if (connection) {
-  if (connection.effectiveType === 'slow-2g') {
+  if (connection.effectiveType === "slow-2g") {
     preloadVideo = false;
   }
 }

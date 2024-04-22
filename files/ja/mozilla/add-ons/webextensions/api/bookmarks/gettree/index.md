@@ -3,7 +3,7 @@ title: bookmarks.getTree()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getTree
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 **`bookmarks.getTree()`** は、ブックマークツリーのルートを表した{{WebExtAPIRef("bookmarks.BookmarkTreeNode")}} オブジェクトの配列を返します。
 
@@ -11,8 +11,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getTree
 
 ```js
 browser.bookmarks.getTree(
-  callback // 関数
-)
+  callback, // 関数
+);
 ```
 
 ### 引数
@@ -26,7 +26,7 @@ browser.bookmarks.getTree(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.bookmarks.getTree")}}
+{{Compat}}
 
 ## 例
 

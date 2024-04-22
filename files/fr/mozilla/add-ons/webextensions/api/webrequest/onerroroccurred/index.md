@@ -1,20 +1,9 @@
 ---
 title: webRequest.onErrorOccurred
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onErrorOccurred
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onErrorOccurred
-  - webRequest
-translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/onErrorOccurred
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Utilisé lorsqu'une demande n'a pas pu être traitée en raison d'une erreur : par exemple, un manque de connectivité Internet.
 
@@ -28,11 +17,11 @@ Cet événement est à titre d'information seulement.
 
 ```js
 browser.webRequest.onErrorOccurred.addListener(
-  listener,             // function
-  filter                //  object
-)
-browser.webRequest.onErrorOccurred.removeListener(listener)
-browser.webRequest.onErrorOccurred.hasListener(listener)
+  listener, // function
+  filter, //  object
+);
+browser.webRequest.onErrorOccurred.removeListener(listener);
+browser.webRequest.onErrorOccurred.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -139,10 +128,7 @@ function logError(responseDetails) {
   console.log(responseDetails.error);
 }
 
-browser.webRequest.onErrorOccurred.addListener(
-  logError,
-  {urls: [target]}
-);
+browser.webRequest.onErrorOccurred.addListener(logError, { urls: [target] });
 ```
 
 {{WebExtExamples}}

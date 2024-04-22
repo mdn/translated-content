@@ -1,7 +1,6 @@
 ---
 title: Window.history
 slug: Web/API/Window/history
-translation_of: Web/API/Window/history
 ---
 
 {{ APIRef }}
@@ -19,8 +18,8 @@ var historyObj = window.history;
 ## Пример
 
 ```js
-history.back();     // эквивалент клика по кнопке назад
-history.go(-1);     // эквивалент history.back();
+history.back(); // эквивалент клика по кнопке назад
+history.go(-1); // эквивалент history.back();
 ```
 
 ## Замечания

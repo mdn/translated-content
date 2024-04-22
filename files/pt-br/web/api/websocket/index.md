@@ -39,17 +39,17 @@ O construtor pode lançar exceções:
 
 ## Atributos
 
-| Attributo        | Tipo                                 | Descrição                                                                                                                                                                                                                                                                                                                                       |
-| ---------------- | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `binaryType`     | {{DOMXref("DOMString")}}     | Uma string indica o tipo de dado binário que está sendo transmitido pela conexão. Este deve ser tanto "blob" se o objeto DOM {{domxref("Blob")}} estiver sendo usado ou "arraybuffer" se os objetos {{jsxref("ArrayBuffer")}} estiver sendo usada                                                                                   |
-| `bufferedAmount` | `unsigned long`                      | O número de bites de dados que tem sid consultado usando chamadas para [send](#send) mas não ainda para a rede.Estes valor reseta para zero uma vez que todos os dados tem sido mandados.Este valor não reseta para zero quando a conexão está fechada, se você continuar chamando [send](#send), isto continuará escalando. **Leitura online** |
+| Attributo        | Tipo                         | Descrição                                                                                                                                                                                                                                                                                                                                       |
+| ---------------- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `binaryType`     | {{DOMXref("DOMString")}}     | Uma string indica o tipo de dado binário que está sendo transmitido pela conexão. Este deve ser tanto "blob" se o objeto DOM {{domxref("Blob")}} estiver sendo usado ou "arraybuffer" se os objetos {{jsxref("ArrayBuffer")}} estiver sendo usada                                                                                               |
+| `bufferedAmount` | `unsigned long`              | O número de bites de dados que tem sid consultado usando chamadas para [send](#send) mas não ainda para a rede.Estes valor reseta para zero uma vez que todos os dados tem sido mandados.Este valor não reseta para zero quando a conexão está fechada, se você continuar chamando [send](#send), isto continuará escalando. **Leitura online** |
 | `extensions`     | {{DOMXref("DOMString")}}     | As extensões selecionadas pelo servidor. Este é atualmente apenas a string vazia ou uma lista de extensões negociadas pela conexão.                                                                                                                                                                                                             |
-| `onclose`        | {{domxref("EventListener")}} | Um event listener para ser chamado quando o `readyState` da conexão do WebSocket mudar para `CLOSED`. O listener recebe um [`CloseEvent`](/pt-BR/docs/Web/API/CloseEvent) "close".                                                                                                                                                             |
+| `onclose`        | {{domxref("EventListener")}} | Um event listener para ser chamado quando o `readyState` da conexão do WebSocket mudar para `CLOSED`. O listener recebe um [`CloseEvent`](/pt-BR/docs/Web/API/CloseEvent) "close".                                                                                                                                                              |
 | `onerror`        | {{domxref("EventListener")}} | Um event listener para ser chamado quando ocorrer um erro. Este é um evento simples chamado "erro".                                                                                                                                                                                                                                             |
 | `onmessage`      | {{domxref("EventListener")}} | Um event listener para ser chamado quando uma mensagem é recebida do servidor. O listener recebe um [`MessageEvent`](/pt-BR/docs/Web/API/MessageEvent) "message".                                                                                                                                                                               |
-| `onopen`         | {{domxref("EventListener")}} | Um event listener para ser chamado quando o `readyState` da conexão do WebSocket mudar para `OPEN`, isso indica que a conexão está pronta para enviar e receber dados. O evento é simples, com o nome "open".                                                                                                                                  |
+| `onopen`         | {{domxref("EventListener")}} | Um event listener para ser chamado quando o `readyState` da conexão do WebSocket mudar para `OPEN`, isso indica que a conexão está pronta para enviar e receber dados. O evento é simples, com o nome "open".                                                                                                                                   |
 | `protocol`       | {{DOMXref("DOMString")}}     | Uma sequência de caracteres que indica o nome do sub-protocolo selecionado pelo servidor, este será um dos parâmetros especificados no `protocolo` ao criar o objeto WebSocket.                                                                                                                                                                 |
-| `readyState`     | `unsigned short`                     | O estado atual da conexão, este é um dos [Ready state constants](#ready_state_constants). **Apenas leitura.**                                                                                                                                                                                                                                   |
+| `readyState`     | `unsigned short`             | O estado atual da conexão, este é um dos [Ready state constants](#ready_state_constants). **Apenas leitura.**                                                                                                                                                                                                                                   |
 | `url`            | {{DOMXref("DOMString")}}     | O URL resolvido pelo construtor. Este é sempre um URL absoluto. **Apenas leitura.**                                                                                                                                                                                                                                                             |
 
 ## Constantes
@@ -129,15 +129,13 @@ void send(
 >
 > `A partir de Gecko 11.0, o suporte para {{jsxref ("ArrayBuffer")}} está implementado, mas não {{domxref("Blob")}} tipos de dados.`
 
-## `Especificações`
+## Especificações
 
-| `Especificações`                                                                           | `Status`                           | `Comentário`        |
-| ------------------------------------------------------------------------------------------ | ---------------------------------- | ------------------- |
-| `{{SpecName("Websockets", "#the-websocket-interface", "WebSocket")}}` | `{{Spec2("Websockets")}}` | `Definição inicial` |
+{{Specifications}}
 
-## `Navegador Compatível`
+## Compatibilidade com navegadores
 
-{{Compat("api.WebSocket")}}
+{{Compat}}
 
 ## `Veja também`
 

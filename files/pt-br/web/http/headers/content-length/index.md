@@ -33,13 +33,13 @@ Content-Length: <tamanho>
 
 ## Especificações
 
-| Especificação                                            | Título                                                                                |
-| -------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| Especificação                              | Título                                                                                |
+| ------------------------------------------ | ------------------------------------------------------------------------------------- |
 | {{RFC("7230", "Content-Length", "3.3.2")}} | Protocolo de Transferência de Hypertexto (HTTP/1.1): Sintaxe de mensagem e Roteamento |
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Content-Length")}}
+{{Compat}}
 
 ## Veja também
 

@@ -7,7 +7,7 @@ slug: Web/API/SubtleCrypto
 
 [Web Crypto API](/zh-CN/docs/Web/API/Web_Crypto_API) 的 **`SubtleCrypto`** 接口提供了许多底层加密函数。你可以通过 {{domxref("crypto_property", "crypto")}} 属性提供的 {{domxref("Crypto")}} 对象中的 {{domxref("Crypto.subtle", "subtle")}} 属性来访问 `SubtleCrypto` 的相关特性。
 
-> **警告：** 此 API 提供了许多底层加密原语。滥用它们很容易陷入微妙的陷阱中。
+> **警告：** 此 API 提供了许多底层密码学原语。滥用它们很容易陷入微妙的陷阱中。
 >
 > 即使你正确地运用了基础加密方法，也很难设计一套正确的安全密钥管理及整体安全设计方案，这些往往是安全专家所做的事情。
 >

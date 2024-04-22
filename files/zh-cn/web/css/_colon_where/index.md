@@ -1,5 +1,5 @@
 ---
-title: ':where()'
+title: ":where()"
 slug: Web/CSS/:where
 ---
 

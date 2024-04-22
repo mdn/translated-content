@@ -89,12 +89,16 @@ For example, consider the [JavaScript](/en-US/docs/Web/JavaScript) guide, which 
 
 常見錯誤使用的標點符號（包含但不限於下列的例子）：
 
+<!-- markdownlint-disable search-replace -->
+
 | 名稱   | 正確     | 錯誤     |
 | ------ | -------- | -------- |
 | 夾注號 | （）     | ()       |
 | 冒號   | ：       | :        |
 | 引號   | 「『』」 | “” 、 "" |
 | 破折號 | ——       | -- 、 —  |
+
+<!-- markdownlint-enable search-replace -->
 
 #### 如何輸入全形標點符號
 
@@ -131,6 +135,8 @@ For example, consider the [JavaScript](/en-US/docs/Web/JavaScript) guide, which 
 | --------------------- | ------------ |
 | Browser compatibility | 瀏覽器相容性 |
 | Examples              | 範例         |
+| Formal definition     | 形式定義     |
+| Formal syntax         | 形式語法     |
 | See also              | 參見         |
 | Specifications        | 規範         |
 

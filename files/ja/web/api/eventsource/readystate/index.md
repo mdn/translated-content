@@ -20,7 +20,7 @@ l10n:
 ## 例
 
 ```js
-const evtSource = new EventSource('sse.php');
+const evtSource = new EventSource("sse.php");
 console.log(evtSource.readyState);
 ```
 

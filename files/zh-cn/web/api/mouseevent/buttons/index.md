@@ -14,7 +14,7 @@ slug: Web/API/MouseEvent/buttons
 ## 语法
 
 ```js
-var buttonPressed = instanceOfMouseEvent.buttons
+var buttonPressed = instanceOfMouseEvent.buttons;
 ```
 
 ## 返回值

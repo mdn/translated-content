@@ -3,7 +3,7 @@ title: tabs.MutedInfoReason
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/MutedInfoReason
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 タブがミュート・アンミュートになった理由を指定します。
 
@@ -16,11 +16,11 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/MutedInfoReason
 - "extension"
   - : 拡張機能がミュート状態に設定しました。もしこれが理由なら、{{WebExtAPIRef("tabs.mutedInfo")}}の`extensionId`が責任のある拡張機能の ID を含んでいます。
 - "user"
-  - : ユーザがミュート状態に設定しました。
+  - : ユーザーがミュート状態に設定しました。
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.tabs.MutedInfoReason")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

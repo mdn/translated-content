@@ -1,19 +1,9 @@
 ---
 title: tabs.goBack()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/goBack
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - hoBack
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/goBack
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Naviguer à la page précédente dans l'historique de l'onglet, si disponible.
 
@@ -23,9 +13,9 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 
 ```js
 var withgoingBack = browser.tabs.goBack(
-  tabId,                  // optional integer
-  callback                  // optional function
-)
+  tabId, // optional integer
+  callback, // optional function
+);
 ```
 
 ### Paramètres

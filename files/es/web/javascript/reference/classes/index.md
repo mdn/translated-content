@@ -1,7 +1,6 @@
 ---
 title: Clases
 slug: Web/JavaScript/Reference/Classes
-original_slug: Web/JavaScript/Referencia/Classes
 ---
 
 {{JsSidebar("Classes")}}
@@ -84,16 +83,16 @@ Vea también [métodos definidos](/es/docs/Web/JavaScript/Reference/Functions/Me
 
 ```js
 class Rectangulo {
-  constructor (alto, ancho) {
+  constructor(alto, ancho) {
     this.alto = alto;
     this.ancho = ancho;
   }
   // Getter
   get area() {
-     return this.calcArea();
-   }
+    return this.calcArea();
+  }
   // Método
-  calcArea () {
+  calcArea() {
     return this.alto * this.ancho;
   }
 }
@@ -109,23 +108,23 @@ La _palabra clave_ [`static`](/es/docs/Web/JavaScript/Reference/Classes/static) 
 
 ```js
 class Punto {
-  constructor ( x , y ){
+  constructor(x, y) {
     this.x = x;
     this.y = y;
   }
 
-  static distancia ( a , b) {
+  static distancia(a, b) {
     const dx = a.x - b.x;
     const dy = a.y - b.y;
 
-    return Math.sqrt ( dx * dx + dy * dy );
+    return Math.sqrt(dx * dx + dy * dy);
   }
 }
 
 const p1 = new Punto(5, 5);
 const p2 = new Punto(10, 10);
 
-console.log (Punto.distancia(p1, p2)); // 7.0710678118654755
+console.log(Punto.distancia(p1, p2)); // 7.0710678118654755
 ```
 
 ### "Boxing" con prototipos y métodos estáticos
@@ -184,13 +183,13 @@ class Animal {
   }
 
   hablar() {
-    console.log(this.nombre + ' hace un ruido.');
+    console.log(this.nombre + " hace un ruido.");
   }
 }
 
 class Perro extends Animal {
   hablar() {
-    console.log(this.nombre + ' ladra.');
+    console.log(this.nombre + " ladra.");
   }
 }
 ```
@@ -198,21 +197,21 @@ class Perro extends Animal {
 También se pueden extender las clases tradicionales basadas en funciones:
 
 ```js
-function Animal (nombre) {
+function Animal(nombre) {
   this.nombre = nombre;
 }
 Animal.prototype.hablar = function () {
-  console.log(this.nombre + 'hace un ruido.');
-}
+  console.log(this.nombre + "hace un ruido.");
+};
 
 class Perro extends Animal {
   hablar() {
     super.hablar();
-    console.log(this.nombre + ' ladra.');
+    console.log(this.nombre + " ladra.");
   }
 }
 
-var p = new Perro('Mitzie');
+var p = new Perro("Mitzie");
 p.hablar();
 ```
 
@@ -254,14 +253,16 @@ Por ejemplo, cuando se usan metodos del tipo {{jsxref("Array.map", "map()")}} qu
 ```js
 class MyArray extends Array {
   // Sobreescribe species sobre el constructor padre Array
-  static get [Symbol.species]() { return Array; }
+  static get [Symbol.species]() {
+    return Array;
+  }
 }
 
-var a = new MyArray(1,2,3);
-var mapped = a.map(x => x * x);
+var a = new MyArray(1, 2, 3);
+var mapped = a.map((x) => x * x);
 
 console.log(mapped instanceof MyArray); // false
-console.log(mapped instanceof Array);   // true
+console.log(mapped instanceof Array); // true
 ```
 
 ## Llamadas a súperclases con `super`
@@ -294,20 +295,22 @@ Subclases abstractas or _mix-ins_ son plantillas de clases. Una clase ECMAScript
 Una función con una clase padre como entrada y una subclase extendiendo la clase padre como salida puede ser usado para implementar mix-ins en EMCAScript:
 
 ```js
-var calculatorMixin = Base => class extends Base {
-  calc() { }
-};
+var calculatorMixin = (Base) =>
+  class extends Base {
+    calc() {}
+  };
 
-var randomizerMixin = Base => class extends Base {
-  randomize() { }
-};
+var randomizerMixin = (Base) =>
+  class extends Base {
+    randomize() {}
+  };
 ```
 
 Una clase que use este método puede ser escrita tal que así:
 
 ```js
-class Foo { }
-class Bar extends calculatorMixin(randomizerMixin(Foo)) { }
+class Foo {}
+class Bar extends calculatorMixin(randomizerMixin(Foo)) {}
 ```
 
 ## Especificaciones

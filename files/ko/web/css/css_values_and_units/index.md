@@ -1,7 +1,6 @@
 ---
 title: CSS 단위와 값
 slug: Web/CSS/CSS_Values_and_Units
-original_slug: Web/CSS/CSS_단위와_값
 ---
 
 {{CSSRef}}
@@ -42,7 +41,7 @@ CSS 사양에서는 웹 개발자가 정의할 수 있는 값들, 가령 키프�
 
 ```css
 .item::after {
-    content: "This is my content.";
+  content: "This is my content.";
 }
 ```
 
@@ -62,7 +61,7 @@ left | right | none | inline-start | inline-end
 
 ```css
 .box {
-    float: left;
+  float: left;
 }
 ```
 
@@ -132,8 +131,8 @@ CSS는 치수를 사용해 아래와 같은 것들을 표시합니다:
 | `em`   | 해당 요소의 폰트 크기                                                                                   |
 | `ex`   | 해당 요소의 폰트의 x높이                                                                                |
 | `cap`  | 해당 요소의 폰트의 대문자 높이(대문자의 공칭 높이)                                                      |
-| `ch`   | 해당 요소의 폰트의 좁은 문자가 평균적으로 나아가는 길이, “0” (ZERO, U+0030) 문자로 대표됨.              |
-| `ic`   | 해당 요소의 폰트의 전각 문자가 평균적으로 나아가는 길이, “水” (CJK 물 표의 문자, U+6C34) 문자로 대표됨. |
+| `ch`   | 해당 요소의 폰트의 좁은 문자가 평균적으로 나아가는 길이, "0" (ZERO, U+0030) 문자로 대표됨.              |
+| `ic`   | 해당 요소의 폰트의 전각 문자가 평균적으로 나아가는 길이, "水" (CJK 물 표의 문자, U+6C34) 문자로 대표됨. |
 | `rem`  | 루트 요소의 폰트 크기                                                                                   |
 | `lh`   | 해당 요소의 줄 높이                                                                                     |
 | `rlh`  | 루트 요소의 줄 높이                                                                                     |

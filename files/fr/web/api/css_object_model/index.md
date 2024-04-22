@@ -1,16 +1,11 @@
 ---
 title: CSS Object Model
 slug: Web/API/CSS_Object_Model
-tags:
-  - API
-  - CSSOM
-  - Reference
-translation_of: Web/API/CSS_Object_Model
 ---
 
 {{DefaultAPISidebar('CSSOM')}}
 
-Le **CSS Object Model** est un ensemble d’API permettant de manipuler le CSS depuis JavaScript. C’est l’équivalent des API DOM et HTML, mais pour CSS. Il permet de lire et modifier des styles CSS dynamiquement.
+Le **CSS Object Model** est un ensemble d'API permettant de manipuler le CSS depuis JavaScript. C'est l'équivalent des API DOM et HTML, mais pour CSS. Il permet de lire et modifier des styles CSS dynamiquement.
 
 ## Référence
 
@@ -54,8 +49,8 @@ Quelques autres interfaces sont également étentues par les spécifications rel
 
 ## Tutoriels
 
-- [Déterminer les dimensions l’un élément](/fr/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements) (nécéssite une mise à jour, car datant de l’époque DHTML/Ajax).
-- [Gérer l’orientation de l’écran](/fr/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
+- [Déterminer les dimensions l'un élément](/fr/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements) (nécéssite une mise à jour, car datant de l'époque DHTML/Ajax).
+- [Gérer l'orientation de l'écran](/fr/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
 
 ## Spécifications
 

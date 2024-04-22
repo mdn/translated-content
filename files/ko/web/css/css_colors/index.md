@@ -1,7 +1,6 @@
 ---
 title: CSS Color
 slug: Web/CSS/CSS_colors
-original_slug: Web/CSS/CSS_Color
 ---
 
 {{CSSRef}}
@@ -33,10 +32,6 @@ original_slug: Web/CSS/CSS_Color
 ## 명세
 
 {{Specifications}}
-
-## 브라우저 호환성
-
-{{Compat}}
 
 ## 같이 보기
 

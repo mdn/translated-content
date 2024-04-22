@@ -1,7 +1,6 @@
 ---
 title: Escribir servidores WebSocket
 slug: Web/API/WebSockets_API/Writing_WebSocket_servers
-original_slug: Web/API/WebSockets_API/Escribiendo_servidores_con_WebSocket
 ---
 
 ## Introducción
@@ -172,8 +171,6 @@ WebSocket extensions and subprotocols are negotiated via headers during [the han
 Think of an extension as compressing a file before e-mailing it to someone. Whatever you do, you're sending the _same_ data in different forms. The recipient will eventually be able to get the same data as your local copy, but it is sent differently. That's what an extension does. WebSockets defines a protocol and a simple way to send data, but an extension such as compression could allow sending the same data but in a shorter format.
 
 > **Nota:** Extensions are explained in sections 5.8, 9, 11.3.2, and 11.4 of the spec.
-
-_TODO_
 
 ### Subprotocols
 

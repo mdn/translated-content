@@ -15,14 +15,14 @@ ECMAScript 6 で導入された {{jsxref("Proxy")}} オブジェクトによっ�
 
 ```js
 let handler = {
-  get: function(target, name) {
-    return name in target ? target[name] : 42
-  }
-}
+  get: function (target, name) {
+    return name in target ? target[name] : 42;
+  },
+};
 
-let p = new Proxy({}, handler)
-p.a = 1
-console.log(p.a, p.b) // 1, 42
+let p = new Proxy({}, handler);
+p.a = 1;
+console.log(p.a, p.b); // 1, 42
 ```
 
 この `Proxy` オブジェクトは `target` (ここでは空オブジェクト) と `handler` オブジェクトを定義し、その中に `get` トラップが実装されています。ここで、プロキシーとなったオブジェクトは未定義のプロパティを取得しようとした時に `undefined` を返さず、代わりに数値 `42` を返します。
@@ -387,20 +387,23 @@ console.log(p.a, p.b) // 1, 42
 その後はプロキシーを通じたいかなる操作も {{jsxref("TypeError")}} になります。
 
 ```js
-let revocable = Proxy.revocable({}, {
-  get: function(target, name) {
-    return '[[' + name + ']]'
-  }
-})
-let proxy = revocable.proxy
-console.log(proxy.foo)  // "[[foo]]"
+let revocable = Proxy.revocable(
+  {},
+  {
+    get: function (target, name) {
+      return "[[" + name + "]]";
+    },
+  },
+);
+let proxy = revocable.proxy;
+console.log(proxy.foo); // "[[foo]]"
 
-revocable.revoke()
+revocable.revoke();
 
-console.log(proxy.foo)  // TypeError が発生
-proxy.foo = 1           // TypeError が再び発生
-delete proxy.foo        // TypeError がここでも発生
-typeof proxy            // "object" が返され, typeof はどんなトラップも引き起こさない
+console.log(proxy.foo); // TypeError が発生
+proxy.foo = 1; // TypeError が再び発生
+delete proxy.foo; // TypeError がここでも発生
+typeof proxy; // "object" が返され, typeof はどんなトラップも引き起こさない
 ```
 
 ## リフレクション
@@ -414,7 +417,7 @@ typeof proxy            // "object" が返され, typeof はどんなトラッ�
 例えば、{{jsxref("Reflect.has()")}} を使えば、[`in` 演算子](/ja/docs/Web/JavaScript/Reference/Operators/in)を関数として使うことができます。
 
 ```js
-Reflect.has(Object, 'assign') // true
+Reflect.has(Object, "assign"); // true
 ```
 
 ### より優れた `apply` 関数
@@ -422,22 +425,22 @@ Reflect.has(Object, 'assign') // true
 ES5 では、所定の `this` 値と配列や[配列風オブジェクト](/ja/docs/Web/JavaScript/Guide/Indexed_collections#配列風オブジェクトの扱い)として提供される `arguments` を使って関数を呼び出す {{jsxref("Function.prototype.apply()")}} メソッドがよく使われてきました。
 
 ```js
-Function.prototype.apply.call(Math.floor, undefined, [1.75])
+Function.prototype.apply.call(Math.floor, undefined, [1.75]);
 ```
 
 {{jsxref("Reflect.apply")}} を使えば、より簡潔で分かりやすいものにできます。
 
 ```js
-Reflect.apply(Math.floor, undefined, [1.75])
+Reflect.apply(Math.floor, undefined, [1.75]);
 // 1
 
-Reflect.apply(String.fromCharCode, undefined, [104, 101, 108, 108, 111])
+Reflect.apply(String.fromCharCode, undefined, [104, 101, 108, 108, 111]);
 // "hello"
 
-Reflect.apply(RegExp.prototype.exec, /ab/, ['confabulation']).index
+Reflect.apply(RegExp.prototype.exec, /ab/, ["confabulation"]).index;
 // 4
 
-Reflect.apply(''.charAt, 'ponies', [3])
+Reflect.apply("".charAt, "ponies", [3]);
 // "i"
 ```
 

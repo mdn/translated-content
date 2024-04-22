@@ -1,19 +1,6 @@
 ---
 title: PerformanceNavigation.redirectCount
 slug: Web/API/PerformanceNavigation/redirectCount
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - Déprécié
-  - HTML
-  - Navigation Timing
-  - PerformanceNavigation
-  - Property
-  - Propriété
-  - Read-only
-  - Héritage
-translation_of: Web/API/PerformanceNavigation/redirectCount
 ---
 
 {{APIRef("Navigation Timing")}}

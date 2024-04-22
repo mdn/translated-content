@@ -40,7 +40,7 @@ exports.book_detail = function (req, res, next) {
         book: results.book,
         book_instances: results.book_instance,
       });
-    }
+    },
   );
 };
 ```

@@ -1,23 +1,13 @@
 ---
 title: Блочная модель
 slug: Learn/CSS/Building_blocks/The_box_model
-tags:
-  - Новичку
-  - CSS
-  - Обучение
-  - border
-  - Блочная модель
-  - display
-  - margin
-  - padding
-translation_of: Learn/CSS/Building_blocks/The_box_model
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}Каждый элемент в CSS заключён в блок, и понимание поведения этих блоков — это ключ к умению задавать раскладку с помощью CSS, то есть выстраивать одни элементы относительно других элементов. В этом уроке мы надлежащим образом рассмотрим _блочную модель_ CSS, чтобы вы могли создавать более сложные раскладки, понимая принцип ее работы и терминологию, которая к ней относится.
 
 | Необходимые условия: | Базовая компьютерная грамотность, [установка базового ПО](/ru/docs/Learn/Getting_started_with_the_web/Installing_basic_software), базовые знания о [работе с файлами](/ru/docs/Learn/Getting_started_with_the_web/Dealing_with_files), основы HTML (изучите [Введение в HTML](/ru/docs/Learn/HTML/Introduction_to_HTML)) и понимание работы CSS (изучите [Введение в CSS](/ru/docs/Learn/CSS/First_steps).) |
-| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Цель:                | Узнать как работает блочная модель CSS, из чего она состоит и как переключиться на альтернативную модель.                                                                                                                                                                                                                                                                                                  |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Цель:                | Узнать как работает блочная модель CSS, из чего она состоит и как переключиться на альтернативную модель.                                                                                                                                                                                                                                                                                                   |
 
 ## Блочные и строчные элементы
 
@@ -140,7 +130,9 @@ translation_of: Learn/CSS/Building_blocks/The_box_model
 html {
   box-sizing: border-box;
 }
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 ```
@@ -295,24 +287,3 @@ html {
 В следующем уроке мы рассмотрим, как можно использовать [фон и рамки](/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders), чтобы сделать ваши простые блоки более интересными.
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}
-
-## В этом модуле
-
-1. [Каскад и наследование](/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [Селекторы CSS](/ru/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [Селекторы типа, класса и ID](/ru/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [Селекторы атрибута](/ru/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Псевдоклассы и псевдоэлементы](/ru/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [Комбинаторы](/ru/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [Блочная модель](/ru/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [Фон и рамки](/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [Обработка разных направлений текста](/ru/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [Переполнение содержимого](/ru/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [Значения и единицы измерения](/ru/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [Изменение размеров в CSS](/ru/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [Элементы изображений, форм и медиа-элементы](/ru/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [Стилизация таблиц](/ru/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [Отладка CSS](/ru/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [Организация вашего CSS](/ru/docs/Learn/CSS/Building_blocks/Organizing)[](/ru/docs/Learn/CSS/Building_blocks/Organizing)

@@ -1,8 +1,9 @@
 ---
 title: Constant (定数)
 slug: Glossary/Constant
-original_slug: Glossary/Constant(定数)
 ---
+
+{{GlossarySidebar}}
 
 定数とはプログラマーが変更できない値のことです。例えば、数値 (1, 2, 42) です。一方、{{glossary("variable","変数")}}の場合、プログラマーは既に使用されている変数名に新しい{{glossary("value","値")}}を割り当てられます。
 
@@ -12,4 +13,4 @@ original_slug: Glossary/Constant(定数)
 
 ### 基礎知識
 
-- Wikipedia 上の記事「[定数 (プログラミング)](https://ja.wikipedia.org/wiki/定数_(プログラミング))」
+- Wikipedia 上の記事「[定数 (プログラミング)](<https://ja.wikipedia.org/wiki/定数_(プログラミング)>)」

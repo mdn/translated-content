@@ -1,7 +1,6 @@
 ---
-title: '::-webkit-meter-optimum-value'
+title: "::-webkit-meter-optimum-value"
 slug: Web/CSS/::-webkit-meter-optimum-value
-translation_of: Web/CSS/::-webkit-meter-optimum-value
 ---
 
 {{CSSRef}}{{Non-standard_header}}
@@ -14,9 +13,9 @@ Le pseudo-élément **`::-webkit-meter-optimum-value`** permet de mettre en form
 
 ```css
 meter::-webkit-meter-bar {
-  background : none;
-  background-color : whiteSmoke;
-  box-shadow : 0 5px 5px -5px #333 inset;
+  background: none;
+  background-color: whiteSmoke;
+  box-shadow: 0 5px 5px -5px #333 inset;
 }
 
 meter::-webkit-meter-optimum-value {

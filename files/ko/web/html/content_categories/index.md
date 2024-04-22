@@ -29,14 +29,14 @@ slug: Web/HTML/Content_categories
 
 플로우 콘텐츠 카테고리에 속한 요소는 보통 텍스트나 내장 콘텐츠를 포함합니다.
 
-{{HTMLElement("a")}}, {{HTMLElement("abbr")}}, {{HTMLElement("address")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("audio")}}, {{HTMLElement("b")}},{{HTMLElement("bdo")}}, {{HTMLElement("bdi")}}, {{HTMLElement("blockquote")}}, {{HTMLElement("br")}}, {{HTMLElement("button")}}, {{HTMLElement("canvas")}}, {{HTMLElement("cite")}}, {{HTMLElement("code")}}, {{deprecated_inline}}{{HTMLElement("command")}}, {{HTMLElement("data")}}, {{HTMLElement("datalist")}}, {{HTMLElement("del")}}, {{HTMLElement("details")}}, {{HTMLElement("dfn")}}, {{HTMLElement("div")}}, {{HTMLElement("dl")}}, {{HTMLElement("em")}}, {{HTMLElement("embed")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("figure")}}, {{HTMLElement("footer")}}, {{HTMLElement("form")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("header")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("hr")}}, {{HTMLElement("i")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{HTMLElement("input")}}, {{HTMLElement("ins")}}, {{HTMLElement("kbd")}}, {{deprecated_inline}}{{HTMLElement("keygen")}}, {{HTMLElement("label")}}, {{HTMLElement("main")}}, {{HTMLElement("map")}}, {{HTMLElement("mark")}}, {{MathMLElement("math")}}, {{HTMLElement("menu")}}, {{HTMLElement("meter")}}, {{HTMLElement("nav")}}, {{HTMLElement("noscript")}}, {{HTMLElement("object")}}, {{HTMLElement("ol")}}, {{HTMLElement("output")}}, {{HTMLElement("p")}}, {{HTMLElement("picture")}}, {{HTMLElement("pre")}}, {{HTMLElement("progress")}}, {{HTMLElement("q")}}, {{HTMLElement("ruby")}}, {{HTMLElement("s")}}, {{HTMLElement("samp")}}, {{HTMLElement("script")}}, {{HTMLElement("section")}}, {{HTMLElement("select")}}, {{HTMLElement("small")}}, {{HTMLElement("span")}}, {{HTMLElement("strong")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{HTMLElement("svg")}}, {{HTMLElement("table")}}, {{HTMLElement("template")}}, {{HTMLElement("textarea")}}, {{HTMLElement("time")}}, {{HTMLElement("ul")}}, {{HTMLElement("var")}}, {{HTMLElement("video")}}, {{HTMLElement("wbr")}}, 텍스트
+{{HTMLElement("a")}}, {{HTMLElement("abbr")}}, {{HTMLElement("address")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("audio")}}, {{HTMLElement("b")}},{{HTMLElement("bdo")}}, {{HTMLElement("bdi")}}, {{HTMLElement("blockquote")}}, {{HTMLElement("br")}}, {{HTMLElement("button")}}, {{HTMLElement("canvas")}}, {{HTMLElement("cite")}}, {{HTMLElement("code")}}, {{deprecated_inline}}{{HTMLElement("command")}}, {{HTMLElement("data")}}, {{HTMLElement("datalist")}}, {{HTMLElement("del")}}, {{HTMLElement("details")}}, {{HTMLElement("dfn")}}, {{HTMLElement("div")}}, {{HTMLElement("dl")}}, {{HTMLElement("em")}}, {{HTMLElement("embed")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("figure")}}, {{HTMLElement("footer")}}, {{HTMLElement("form")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("header")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("hr")}}, {{HTMLElement("i")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{HTMLElement("input")}}, {{HTMLElement("ins")}}, {{HTMLElement("kbd")}}, {{HTMLElement("label")}}, {{HTMLElement("main")}}, {{HTMLElement("map")}}, {{HTMLElement("mark")}}, {{MathMLElement("math")}}, {{HTMLElement("menu")}}, {{HTMLElement("meter")}}, {{HTMLElement("nav")}}, {{HTMLElement("noscript")}}, {{HTMLElement("object")}}, {{HTMLElement("ol")}}, {{HTMLElement("output")}}, {{HTMLElement("p")}}, {{HTMLElement("picture")}}, {{HTMLElement("pre")}}, {{HTMLElement("progress")}}, {{HTMLElement("q")}}, {{HTMLElement("ruby")}}, {{HTMLElement("s")}}, {{HTMLElement("samp")}}, {{HTMLElement("script")}}, {{HTMLElement("section")}}, {{HTMLElement("select")}}, {{HTMLElement("small")}}, {{HTMLElement("span")}}, {{HTMLElement("strong")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{HTMLElement("svg")}}, {{HTMLElement("table")}}, {{HTMLElement("template")}}, {{HTMLElement("textarea")}}, {{HTMLElement("time")}}, {{HTMLElement("ul")}}, {{HTMLElement("var")}}, {{HTMLElement("video")}}, {{HTMLElement("wbr")}}, 텍스트
 
 특정 조건을 만족하는 경우 플로우 콘텐츠에 속하는 요소도 있습니다.
 
 - {{HTMLElement("area")}}는 {{HTMLElement("map")}} 요소의 자손인 경우.
-- {{HTMLElement("link")}}가 [`itemprop`](/ko/docs/HTML/Global_attributes#attr-itemprop) 특성을 가지고 있는 경우..
-- {{HTMLElement("meta")}}가 [`itemprop`](/ko/docs/HTML/Global_attributes#attr-itemprop) 특성을 가지고 있는 경우.
-- {{HTMLElement("style")}}이 {{htmlattrxref("scoped","style")}} 특성을 가지고 있는 경우.
+- {{HTMLElement("link")}}가 [`itemprop`](/ko/docs/HTML/Global_attributes#itemprop) 특성을 가지고 있는 경우..
+- {{HTMLElement("meta")}}가 [`itemprop`](/ko/docs/HTML/Global_attributes#itemprop) 특성을 가지고 있는 경우.
+- {{HTMLElement("style")}}이 [`scoped`](/ko/docs/Web/HTML/Element/style#scoped) 특성을 가지고 있는 경우.
 
 ### 구획 콘텐츠
 
@@ -68,9 +68,9 @@ slug: Web/HTML/Content_categories
 - {{HTMLElement("area")}}, {{HTMLElement("map")}}의 자손인 경우.
 - {{HTMLElement("del")}}, 구문 콘텐츠만 포함하는 경우.
 - {{HTMLElement("ins")}}, 구문 콘텐츠만 포함하는 경우.
-- {{HTMLElement("link")}}, [`itemprop`](/ko/docs/Web/HTML/Global_attributes#attr-itemprop) 속성을 가지고 있는 경우.
+- {{HTMLElement("link")}}, [`itemprop`](/ko/docs/Web/HTML/Global_attributes#itemprop) 속성을 가지고 있는 경우.
 - {{HTMLElement("map")}}, 구문 콘텐츠만 포함하는 경우.
-- {{HTMLElement("meta")}}, [`itemprop`](/ko/docs/Web/HTML/Global_attributes#attr-itemprop) 속성을 가지고 있는 경우.
+- {{HTMLElement("meta")}}, [`itemprop`](/ko/docs/Web/HTML/Global_attributes#itemprop) 속성을 가지고 있는 경우.
 
 ### 내장 콘텐츠
 
@@ -82,16 +82,16 @@ slug: Web/HTML/Content_categories
 
 대화형 콘텐츠 는 사용자와의 상호작용을 위해 특별하게 설계된 요소를 포함합니다
 
-{{HTMLElement("a")}}, {{HTMLElement("button")}}, {{HTMLElement("details")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{deprecated_inline}}{{HTMLElement("keygen")}}, {{HTMLElement("label")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}.
+{{HTMLElement("a")}}, {{HTMLElement("button")}}, {{HTMLElement("details")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("label")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}.
 
 특정 조건을 만족하는 경우 대화형 콘텐츠에 속하는 요소도 있습니다.
 
-- {{HTMLElement("audio")}}, {{htmlattrxref("controls", "audio")}} 속성을 가진 경우.
-- {{HTMLElement("img")}}, {{htmlattrxref("usemap", "img")}} 속성을 가진 경우.
-- {{HTMLElement("input")}}, {{htmlattrxref("type", "input")}} 속성이 `hidden`이 아닌경우.
-- {{HTMLElement("menu")}}, {{htmlattrxref("type", "menu")}} 속성이 `toolbar`인 경우.
-- {{HTMLElement("object")}}, {{htmlattrxref("usemap", "object")}} 속성을 가진 경우.
-- {{HTMLElement("video")}}, {{htmlattrxref("controls", "video")}} 속성을 가진 경우.
+- {{HTMLElement("audio")}}, [`controls`](/ko/docs/Web/HTML/Element/audio#controls) 속성을 가진 경우.
+- {{HTMLElement("img")}}, [`usemap`](/ko/docs/Web/HTML/Element/img#usemap) 속성을 가진 경우.
+- {{HTMLElement("input")}}, [`type`](/ko/docs/Web/HTML/Element/input#type) 속성이 `hidden`이 아닌경우.
+- {{HTMLElement("menu")}}, [`type`](/ko/docs/Web/HTML/Element/menu#type) 속성이 `toolbar`인 경우.
+- {{HTMLElement("object")}}, [`usemap`](/ko/docs/Web/HTML/Element/object#usemap) 속성을 가진 경우.
+- {{HTMLElement("video")}}, [`controls`](/ko/docs/Web/HTML/Element/video#controls) 속성을 가진 경우.
 
 ### 뚜렷한 콘텐츠
 
@@ -104,7 +104,6 @@ slug: Web/HTML/Content_categories
 - {{HTMLElement("button")}}
 - {{HTMLElement("fieldset")}}
 - {{HTMLElement("input")}}
-- {{deprecated_inline()}}{{HTMLElement("keygen")}}
 - {{HTMLElement("label")}}
 - {{HTMLElement("meter")}}
 - {{HTMLElement("object")}}
@@ -116,13 +115,13 @@ slug: Web/HTML/Content_categories
 양식 관련 콘텐츠는 여러 개의 하위 카테고리를 가집니다.
 
 - 나열됨
-  - : {{domxref("HTMLFormElement.elements", "form.elements")}} 및 {{domxref("HTMLFieldSetElement.elements", "fieldset.elements")}} IDL 콜렉션에 나열된 요소. {{HTMLElement("button")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{deprecated_inline()}}{{HTMLElement("keygen")}}, {{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}를 포함합니다.
+  - : {{domxref("HTMLFormElement.elements", "form.elements")}} 및 {{domxref("HTMLFieldSetElement.elements", "fieldset.elements")}} IDL 콜렉션에 나열된 요소. {{HTMLElement("button")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}를 포함합니다.
 - 레이블 가능
-  - : {{HTMLElement("label")}} 요소와 연결할 수 있는 요소. {{HTMLElement("button")}}, {{HTMLElement("input")}}, {{deprecated_inline()}}{{HTMLElement("keygen")}}, {{HTMLElement("meter")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}를 포함합니다.
+  - : {{HTMLElement("label")}} 요소와 연결할 수 있는 요소. {{HTMLElement("button")}}, {{HTMLElement("input")}}, {{HTMLElement("meter")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}를 포함합니다.
 - 제출 가능
-  - : 양식을 제출할 때, 양식 데이터셋을 구성할 수 있는 요소. {{HTMLElement("button")}}, {{HTMLElement("input")}}, {{deprecated_inline()}}{{HTMLElement("keygen")}}, {{HTMLElement("object")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}를 포함합니다.
+  - : 양식을 제출할 때, 양식 데이터셋을 구성할 수 있는 요소. {{HTMLElement("button")}}, {{HTMLElement("input")}}, {{HTMLElement("object")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}를 포함합니다.
 - 초기화 가능
-  - : 양식을 초기화할 때 영향을 받는 요소. {{HTMLElement("input")}}, {{deprecated_inline()}}{{HTMLElement("keygen")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}를 포함합니다.
+  - : 양식을 초기화할 때 영향을 받는 요소. {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}를 포함합니다.
 
 ## 보조 카테고리
 
@@ -144,7 +143,10 @@ slug: Web/HTML/Content_categories
 예를 들어, {{HTMLElement("del")}} 과 {{HTMLELement("ins")}} 요소는 투명합니다:
 
 ```html
-<p>We hold these truths to be <del><em>sacred &amp; undeniable</em></del> <ins>self-evident</ins>.</p>
+<p>
+  We hold these truths to be <del><em>sacred &amp; undeniable</em></del>
+  <ins>self-evident</ins>.
+</p>
 ```
 
 올바른 영어는 아니지만, 두 요소를 제거하더라도 HTML은 유효합니다.

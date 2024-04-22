@@ -1,12 +1,9 @@
 ---
 title: Constant
 slug: Glossary/Constant
-tags:
-  - Constant
-  - Glossary
-translation_of: Glossary/Constant
-original_slug: Глоссарий/Константа
 ---
+
+{{GlossarySidebar}}
 
 Константа хранит значение, которое программист не хочет изменять, например числа (1, 2, 42). С другой стороны, у {{glossary("variable","переменных")}} программист может установить новое {{glossary("value","значение")}} к переменной, имя которой уже используется.
 

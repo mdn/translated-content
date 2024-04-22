@@ -1,15 +1,8 @@
 ---
 title: Видимость страницы API
 slug: Web/API/Page_Visibility_API
-tags:
-  - API
-  - DOM
-  - Документ
-  - Показать страницу
-  - Скрыть страницу
-translation_of: Web/API/Page_Visibility_API
-original_slug: Web/API/Видимость_страницы_API
 ---
+
 {{DefaultAPISidebar("Page Visibility API")}}
 
 При переключении между вкладками, web страница переходит в фоновый режим и поэтому не видна пользователю. Page Visibility API предоставляет события, которые вы можете отслеживать, чтобы узнать, когда страница станет видимой или скрытой, а так же возможность наблюдать текущее состояние видимости страницы.
@@ -38,18 +31,18 @@ original_slug: Web/API/Видимость_страницы_API
 Separately from the Page Visibility API, user agents typically have a number of policies in place to mitigate the performance impact of background or hidden tabs. These may include:
 
 - Most browsers stop sending {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} callbacks to background tabs or hidden {{ HTMLElement("iframe") }}s in order to improve performance and battery life.
-- Timers such as {{domxref("WindowOrWorkerGlobalScope.setTimeout", "setTimeout()")}} are throttled in background/inactive tabs to help improve performance. See [Reasons for delays longer than specified](/ru/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout#Reasons_for_delays_longer_than_specified) for more details.
+- Timers such as {{domxref("setTimeout()")}} are throttled in background/inactive tabs to help improve performance. See [Reasons for delays longer than specified](/ru/docs/Web/API/setTimeout#Reasons_for_delays_longer_than_specified) for more details.
 - Budget-based background timeout throttling is now available in modern browsers (Firefox 58+, Chrome 57+), placing an additional limit on background timer CPU usage. This operates in a similar way across modern browsers, with the details being as follows:
 
   - In Firefox, windows in background tabs each have their own time budget in milliseconds — a max and a min value of +50 ms and -150 ms, respectively. Chrome is very similar except that the budget is specified in seconds.
-  - Windows are subjected to throttling after 30 seconds, with the same throttling delay rules as specified for window timers (again, see [Reasons for delays longer than specified](/ru/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout#Reasons_for_delays_longer_than_specified)). In Chrome, this value is 10 seconds.
+  - Windows are subjected to throttling after 30 seconds, with the same throttling delay rules as specified for window timers (again, see [Reasons for delays longer than specified](/ru/docs/Web/API/setTimeout#Reasons_for_delays_longer_than_specified)). In Chrome, this value is 10 seconds.
   - Timer tasks are only permitted when the budget is non-negative.
   - Once a timer's code has finished running, the duration of time it took to execute is subtracted from its window's timeout budget.
   - The budget regenerates at a rate of 10 ms per second, in both Firefox and Chrome.
 
 Some processes are exempt from this throttling behavior. In these cases, you can use the Page Visibility API to reduce the tabs' performance impact while they're hidden.
 
-- Tabs which are playing audio are considered foreground and aren’t throttled.
+- Tabs which are playing audio are considered foreground and aren't throttled.
 - Tabs running code that's using real-time network connections ([WebSockets](/ru/docs/Web/API/WebSockets_API) and [WebRTC](/ru/docs/Web/API/WebRTC_API)) go unthrottled in order to avoid closing these connections timing out and getting unexpectedly closed.
 - [IndexedDB](/ru/docs/Web/API/IndexedDB_API) processes are also left unthrottled in order to avoid timeouts.
 
@@ -62,7 +55,8 @@ The example, which pauses the video when you switch to another tab and plays aga
 ```js
 // Set the name of the hidden property and the change event for visibility
 var hidden, visibilityChange;
-if (typeof document.hidden !== "undefined") { // Opera 12.10 and Firefox 18 and later support
+if (typeof document.hidden !== "undefined") {
+  // Opera 12.10 and Firefox 18 and later support
   hidden = "hidden";
   visibilityChange = "visibilitychange";
 } else if (typeof document.msHidden !== "undefined") {
@@ -87,22 +81,31 @@ function handleVisibilityChange() {
 
 // Warn if the browser doesn't support addEventListener or the Page Visibility API
 if (typeof document.addEventListener === "undefined" || hidden === undefined) {
-  console.log("This demo requires a browser, such as Google Chrome or Firefox, that supports the Page Visibility API.");
+  console.log(
+    "This demo requires a browser, such as Google Chrome or Firefox, that supports the Page Visibility API.",
+  );
 } else {
   // Handle page visibility change
   document.addEventListener(visibilityChange, handleVisibilityChange, false);
 
   // When the video pauses, set the title.
   // This shows the paused
-  videoElement.addEventListener("pause", function(){
-    document.title = 'Paused';
-  }, false);
+  videoElement.addEventListener(
+    "pause",
+    function () {
+      document.title = "Paused";
+    },
+    false,
+  );
 
   // When the video plays, set the title.
-  videoElement.addEventListener("play", function(){
-    document.title = 'Playing';
-  }, false);
-
+  videoElement.addEventListener(
+    "play",
+    function () {
+      document.title = "Playing";
+    },
+    false,
+  );
 }
 ```
 
@@ -140,7 +143,7 @@ The Page Visibility API adds the following properties to the {{domxref("Document
 function handleVisibilityChange() {
   if (document.hidden) {
     pauseSimulation();
-  } else  {
+  } else {
     startSimulation();
   }
 }
@@ -150,15 +153,11 @@ document.addEventListener("visibilitychange", handleVisibilityChange, false);
 
 ## Specifications
 
-| Specification                                    | Status                                       | Comment             |
-| ------------------------------------------------ | -------------------------------------------- | ------------------- |
-| {{SpecName('Page Visibility API')}} | {{Spec2('Page Visibility API')}} | Initial definition. |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
-### `Document.visibilityState`
-
-{{Compat("api.Document.visibilityState")}}
+{{Compat}}
 
 ## See also
 

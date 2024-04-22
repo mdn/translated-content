@@ -1,16 +1,9 @@
 ---
 title: ATAG
 slug: Glossary/ATAG
-tags:
-  - ATAG
-  - Accessibility
-  - Authoring Tool Accessibility Guidelines
-  - Glossary
-  - Общедоступность
-  - Глоссарий
-translation_of: Glossary/ATAG
-original_slug: Глоссарий/ATAG
 ---
+
+{{GlossarySidebar}}
 
 ATAG (Authoring Tool {{glossary("Accessibility")}} Guidelines) - это {{Glossary("W3C")}} рекомендации для создания общедоступных инструментов разработчика, которые создают общедоступный контент.
 

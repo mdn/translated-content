@@ -1,11 +1,6 @@
 ---
 title: Ajouter des couleurs avec les nuanceurs
 slug: Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
-tags:
-  - Tutoriel
-  - WebGL
-translation_of: Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
-original_slug: Web/API/WebGL_API/Tutorial/Ajouter_des_couleurs_avec_les_shaders
 ---
 
 {{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context", "Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL")}}
@@ -120,14 +115,14 @@ Ensuite, `drawScene()` peut être modifié pour utiliser réellement ces couleur
     type,
     normalize,
     stride,
-    offset);
-  gl.enableVertexAttribArray(
-    programInfo.attribLocations.vertexColor);
+    offset,
+  );
+  gl.enableVertexAttribArray(programInfo.attribLocations.vertexColor);
 }
 ```
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample3/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample3/index.html', 670, 510) }}
 
-[Voir le code complet](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample3) | [Ouvrir cette démo dans une nouvelle page](http://mdn.github.io/webgl-examples/tutorial/sample3/)
+[Voir le code complet](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample3) | [Ouvrir cette démo dans une nouvelle page](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample3/)
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context", "Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL")}}

@@ -1,5 +1,5 @@
 ---
-title: ':lang()'
+title: ":lang()"
 slug: Web/CSS/:lang
 ---
 
@@ -10,9 +10,11 @@ slug: Web/CSS/:lang
 ```css
 /* <p> のうち English (en) のものをすべて選択 */
 p:lang(en) {
-  quotes: '\201C' '\201D' '\2018' '\2019';
+  quotes: "\201C" "\201D" "\2018" "\2019";
 }
 ```
+
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-function-lang.html", "tabbed-shorter")}}
 
 > **メモ:** HTML では、言語は [`lang`](/ja/docs/Web/HTML/Global_attributes#lang) 属性と {{HTMLElement("meta")}} 要素、それに、可能であればプロトコルから得られる情報 (HTTP ヘッダーなど) の組み合わせで決められます。他の文書型では、文書の言語を決定する他の方法があるかもしれません。
 
@@ -36,17 +38,29 @@ p:lang(en) {
 ### HTML
 
 ```html
-<div lang="en"><q>This English quote has a <q>nested</q> quote inside.</q></div>
-<div lang="fr"><q>This French quote has a <q>nested</q> quote inside.</q></div>
-<div lang="ja"><q>この日本語の引用には内部に<q>入れ子</q>の引用があります。</q></div>
+<div lang="en">
+  <q>This English quote has a <q>nested</q> quote inside.</q>
+</div>
+<div lang="fr">
+  <q>This French quote has a <q>nested</q> quote inside.</q>
+</div>
+<div lang="ja">
+  <q>この日本語の引用には内部に<q>入れ子</q>の引用があります。</q>
+</div>
 ```
 
 ### CSS
 
 ```css
-:lang(en) > q { quotes: '\201C' '\201D' '\2018' '\2019'; }
-:lang(fr) > q { quotes: '« ' ' »'; }
-:lang(ja) > q { quotes: '「' '」' '『' '』'; }
+:lang(en) > q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+:lang(fr) > q {
+  quotes: "« " " »";
+}
+:lang(ja) > q {
+  quotes: "「" "」" "『" "』";
+}
 ```
 
 ### 結果

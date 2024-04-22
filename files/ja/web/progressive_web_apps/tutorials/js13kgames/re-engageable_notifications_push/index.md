@@ -1,7 +1,6 @@
 ---
 title: 通知とプッシュを利用して PWA を再エンゲージ可能にするには
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push
-original_slug: Web/Progressive_web_apps/Re-engageable_Notifications_Push
 ---
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Installable_PWAs", "Web/Progressive_web_apps/Loading", "Web/Progressive_web_apps")}}
@@ -24,12 +23,12 @@ original_slug: Web/Progressive_web_apps/Re-engageable_Notifications_Push
 
 ```js
 var button = document.getElementById("notifications");
-button.addEventListener('click', function(e) {
-    Notification.requestPermission().then(function(result) {
-        if(result === 'granted') {
-            randomNotification();
-        }
-    });
+button.addEventListener("click", function (e) {
+  Notification.requestPermission().then(function (result) {
+    if (result === "granted") {
+      randomNotification();
+    }
+  });
 });
 ```
 
@@ -47,16 +46,16 @@ button.addEventListener('click', function(e) {
 
 ```js
 function randomNotification() {
-    var randomItem = Math.floor(Math.random()*games.length);
-    var notifTitle = games[randomItem].name;
-    var notifBody = 'Created by '+games[randomItem].author+'.';
-    var notifImg = 'data/img/'+games[randomItem].slug+'.jpg';
-    var options = {
-        body: notifBody,
-        icon: notifImg
-    }
-    var notif = new Notification(notifTitle, options);
-    setTimeout(randomNotification, 30000);
+  var randomItem = Math.floor(Math.random() * games.length);
+  var notifTitle = games[randomItem].name;
+  var notifBody = "Created by " + games[randomItem].author + ".";
+  var notifImg = "data/img/" + games[randomItem].slug + ".jpg";
+  var options = {
+    body: notifBody,
+    icon: notifImg,
+  };
+  var notif = new Notification(notifTitle, options);
+  setTimeout(randomNotification, 30000);
 }
 ```
 
@@ -71,7 +70,7 @@ function randomNotification() {
 前述のように、プッシュメッセージを受信できるようにするには、サービスワーカーが必要です。 その基本については、[サービスワーカーで PWA をオフラインで動作させる](/ja/docs/Web/Progressive_web_apps/Offline_Service_workers)の記事で既に説明しています。 サービスワーカーの内部には、プッシュサービス購読機構（push service subscription mechanism）が作成されています。
 
 ```js
-registration.pushManager.getSubscription() .then( /* ... */ );
+registration.pushManager.getSubscription().then(/* ... */);
 ```
 
 ユーザーが購読すると、サーバーからプッシュ通知を受け取ることができます。
@@ -81,7 +80,9 @@ registration.pushManager.getSubscription() .then( /* ... */ );
 プッシュメッセージを受信するために、次のようにサービスワーカーファイルの {{domxref("ServiceWorkerGlobalScope/push_event", "push")}} イベントを監視できます。
 
 ```js
-self.addEventListener('push', function(e) { /* ... */ });
+self.addEventListener("push", function (e) {
+  /* ... */
+});
 ```
 
 データを取得してすぐにユーザーへの通知として表示できます。 これは、例えば、何かをユーザーに思い出させるために使用したり、アプリで利用可能な新しいコンテンツについてユーザーに知らせたりするために使用できます。
@@ -103,16 +104,18 @@ self.addEventListener('push', function(e) { /* ... */ });
 `index.js` ファイルは、次のようにサービスワーカーを登録することから始まります。
 
 ```js
-navigator.serviceWorker.register('service-worker.js')
-.then(function(registration) {
-  return registration.pushManager.getSubscription()
-  .then(async function(subscription) {
-      // registration part
-  });
-})
-.then(function(subscription) {
+navigator.serviceWorker
+  .register("service-worker.js")
+  .then(function (registration) {
+    return registration.pushManager
+      .getSubscription()
+      .then(async function (subscription) {
+        // registration part
+      });
+  })
+  .then(function (subscription) {
     // subscription part
-});
+  });
 ```
 
 [js13kPWA デモ](https://mdn.github.io/pwa-examples/js13kpwa/)で見たサービスワーカーよりも少し複雑です。 この特定のケースでは、登録後、登録オブジェクト（registration object）を使用して購読し、次に結果として得られた購読オブジェクト（subscription object）を使用してプロセス全体を完了します。
@@ -120,15 +123,15 @@ navigator.serviceWorker.register('service-worker.js')
 登録部分（registration part）では、コードは次のようになります。
 
 ```js
-if(subscription) {
-    return subscription;
+if (subscription) {
+  return subscription;
 }
 ```
 
 ユーザーが既に購読している場合は、購読オブジェクトを返して購読部分（subscription part）に移ります。 そうでない場合は、次のように新しい購読を初期化します。
 
 ```js
-const response = await fetch('./vapidPublicKey');
+const response = await fetch("./vapidPublicKey");
 const vapidPublicKey = await response.text();
 const convertedVapidKey = urlBase64ToUint8Array(vapidPublicKey);
 ```
@@ -139,45 +142,45 @@ const convertedVapidKey = urlBase64ToUint8Array(vapidPublicKey);
 
 ```js
 return registration.pushManager.subscribe({
-    userVisibleOnly: true,
-    applicationServerKey: convertedVapidKey
+  userVisibleOnly: true,
+  applicationServerKey: convertedVapidKey,
 });
 ```
 
 それでは購読部分（subscription part）に移りましょう — アプリは最初に Fetch を使って購読の詳細を JSON としてサーバーに送ります。
 
 ```js
-fetch('./register', {
-    method: 'post',
-    headers: {
-        'Content-type': 'application/json'
-    },
-    body: JSON.stringify({
-        subscription: subscription
-    }),
+fetch("./register", {
+  method: "post",
+  headers: {
+    "Content-type": "application/json",
+  },
+  body: JSON.stringify({
+    subscription: subscription,
+  }),
 });
 ```
 
 次に、\[Request sending a notification!（通知の送信依頼）] ボタンの {{domxref("GlobalEventHandlers.onclick","onclick")}} 関数を定義します。
 
 ```js
-document.getElementById('doIt').onclick = function() {
-    const payload = document.getElementById('notification-payload').value;
-    const delay = document.getElementById('notification-delay').value;
-    const ttl = document.getElementById('notification-ttl').value;
+document.getElementById("doIt").onclick = function () {
+  const payload = document.getElementById("notification-payload").value;
+  const delay = document.getElementById("notification-delay").value;
+  const ttl = document.getElementById("notification-ttl").value;
 
-    fetch('./sendNotification', {
-        method: 'post',
-        headers: {
-            'Content-type': 'application/json'
-        },
-        body: JSON.stringify({
-            subscription: subscription,
-            payload: payload,
-            delay: delay,
-            ttl: ttl,
-        }),
-    });
+  fetch("./sendNotification", {
+    method: "post",
+    headers: {
+      "Content-type": "application/json",
+    },
+    body: JSON.stringify({
+      subscription: subscription,
+      payload: payload,
+      delay: delay,
+      ttl: ttl,
+    }),
+  });
 };
 ```
 
@@ -192,51 +195,53 @@ document.getElementById('doIt').onclick = function() {
 [web-push モジュール](https://www.npmjs.com/package/web-push)（英語）は VAPID キーを設定するために使用され、それらがまだ利用できない場合は必要に応じて生成します。
 
 ```js
-const webPush = require('web-push');
+const webPush = require("web-push");
 
 if (!process.env.VAPID_PUBLIC_KEY || !process.env.VAPID_PRIVATE_KEY) {
-  console.log("You must set the VAPID_PUBLIC_KEY and VAPID_PRIVATE_KEY "+
-    "environment variables. You can use the following ones:");
+  console.log(
+    "You must set the VAPID_PUBLIC_KEY and VAPID_PRIVATE_KEY " +
+      "environment variables. You can use the following ones:",
+  );
   console.log(webPush.generateVAPIDKeys());
   return;
 }
 
 webPush.setVapidDetails(
-  'https://github.com/mdn/serviceworker-cookbook/',
+  "https://github.com/mdn/serviceworker-cookbook/",
   process.env.VAPID_PUBLIC_KEY,
-  process.env.VAPID_PRIVATE_KEY
+  process.env.VAPID_PRIVATE_KEY,
 );
 ```
 
 次に、モジュールはアプリが処理する必要があるすべてのルートを定義してエクスポートします — VAPID 公開鍵の取得、登録、そして通知の送信です。 使用されている `index.js` ファイルの変数（`payload`、`delay`、および `ttl`）を見ることができます。
 
 ```js
-module.exports = function(app, route) {
-  app.get(route + 'vapidPublicKey', function(req, res) {
+module.exports = function (app, route) {
+  app.get(route + "vapidPublicKey", function (req, res) {
     res.send(process.env.VAPID_PUBLIC_KEY);
   });
 
-  app.post(route + 'register', function(req, res) {
-
+  app.post(route + "register", function (req, res) {
     res.sendStatus(201);
   });
 
-  app.post(route + 'sendNotification', function(req, res) {
+  app.post(route + "sendNotification", function (req, res) {
     const subscription = req.body.subscription;
     const payload = req.body.payload;
     const options = {
-      TTL: req.body.ttl
+      TTL: req.body.ttl,
     };
 
-    setTimeout(function() {
-      webPush.sendNotification(subscription, payload, options)
-      .then(function() {
-        res.sendStatus(201);
-      })
-      .catch(function(error) {
-        console.log(error);
-        res.sendStatus(500);
-      });
+    setTimeout(function () {
+      webPush
+        .sendNotification(subscription, payload, options)
+        .then(function () {
+          res.sendStatus(201);
+        })
+        .catch(function (error) {
+          console.log(error);
+          res.sendStatus(500);
+        });
     }, req.body.delay * 1000);
   });
 };
@@ -247,13 +252,13 @@ module.exports = function(app, route) {
 最後に取り上げるファイルは、サービスワーカーです。
 
 ```js
-self.addEventListener('push', function(event) {
-    const payload = event.data ? event.data.text() : 'no payload';
-    event.waitUntil(
-        self.registration.showNotification('ServiceWorker Cookbook', {
-            body: payload,
-        })
-    );
+self.addEventListener("push", function (event) {
+  const payload = event.data ? event.data.text() : "no payload";
+  event.waitUntil(
+    self.registration.showNotification("ServiceWorker Cookbook", {
+      body: payload,
+    }),
+  );
 });
 ```
 

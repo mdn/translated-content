@@ -1,7 +1,6 @@
 ---
 title: 205 Reset Content
 slug: Web/HTTP/Status/205
-translation_of: Web/HTTP/Status/205
 ---
 
 {{HTTPSidebar}}
@@ -16,8 +15,8 @@ translation_of: Web/HTTP/Status/205
 
 ## Спецификации
 
-| Specification                                                | Title                                                         |
-| ------------------------------------------------------------ | ------------------------------------------------------------- |
+| Specification                                  | Title                                                         |
+| ---------------------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "205 Reset Content" , "6.3.6")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Смотрите также

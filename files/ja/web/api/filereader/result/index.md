@@ -71,7 +71,7 @@ function read(callback) {
 
   reader.onload = () => {
     callback(reader.result);
-  }
+  };
 
   reader.readAsText(file);
 }

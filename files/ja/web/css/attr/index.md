@@ -1,7 +1,6 @@
 ---
 title: attr()
 slug: Web/CSS/attr
-original_slug: Web/CSS/attr()
 ---
 
 {{CSSRef}}
@@ -26,6 +25,8 @@ attr(src url, "");
 attr(data-width px, inherit);
 attr(data-something, "default");
 ```
+
+{{EmbedInteractiveExample("pages/tabbed/function-attr.html", "tabbed-shorter")}}
 
 ## 構文
 
@@ -145,7 +146,7 @@ attr(data-something, "default");
 
 ## 例
 
-<h3 id="content_property">content プロパティ</h3>
+### content プロパティ
 
 #### HTML
 
@@ -163,16 +164,19 @@ attr(data-something, "default");
 
 #### 結果
 
-{{EmbedLiveSample("content_property", "100%", 50)}}
+{{EmbedLiveSample("content プロパティ", "100%", 50)}}
 
-<h3 id="color_value">&lt;color&gt; 値</h3>
+### \<color> 値
 
 {{SeeCompatTable}}
 
 #### HTML
 
 ```html
-<div class="background" data-background="lime">background expected to be red if your browser does not support advanced usage of attr()</div>
+<div class="background" data-background="lime">
+  background expected to be red if your browser does not support advanced usage
+  of attr()
+</div>
 ```
 
 #### CSS
@@ -195,7 +199,7 @@ attr(data-something, "default");
 
 #### 結果
 
-{{EmbedLiveSample("color_value", "100%", 50)}}
+{{EmbedLiveSample("color 値", "100%", 50)}}
 
 ## 仕様書
 

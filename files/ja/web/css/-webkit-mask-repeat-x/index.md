@@ -1,5 +1,5 @@
 ---
-title: '-webkit-mask-repeat-x'
+title: "-webkit-mask-repeat-x"
 slug: Web/CSS/-webkit-mask-repeat-x
 ---
 
@@ -52,12 +52,12 @@ slug: Web/CSS/-webkit-mask-repeat-x
 
 ```css
 .exampleone {
-  -webkit-mask-image: url('mask.png');
+  -webkit-mask-image: url("mask.png");
   -webkit-mask-repeat-x: repeat;
 }
 
 .exampletwo {
-  -webkit-mask-image: url('mask.png');
+  -webkit-mask-image: url("mask.png");
   -webkit-mask-repeat-x: no-repeat;
 }
 ```
@@ -68,7 +68,7 @@ slug: Web/CSS/-webkit-mask-repeat-x
 
 ```css
 .examplethree {
-  -webkit-mask-image: url('mask1.png'), url('mask2.png');
+  -webkit-mask-image: url("mask1.png"), url("mask2.png");
   -webkit-mask-repeat-x: repeat, space;
 }
 ```

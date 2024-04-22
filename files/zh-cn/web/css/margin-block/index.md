@@ -5,7 +5,7 @@ slug: Web/CSS/margin-block
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) [简写属性](/en-US/docs/Web/CSS/Shorthand_properties) **`margin-block`** 定义了元素的逻辑块首和块末外边距，并根据元素的书写模式、行内方向和文本朝向对应至实体外边距。
+[CSS](/zh-CN/docs/Web/CSS) [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties) **`margin-block`** 定义了元素的逻辑块首和块末外边距，并根据元素的书写模式、行内方向和文本朝向对应至实体外边距。
 
 {{EmbedInteractiveExample("pages/css/margin-block.html")}}
 

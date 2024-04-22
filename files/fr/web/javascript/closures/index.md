@@ -1,7 +1,6 @@
 ---
 title: Closures (Fermetures)
 slug: Web/JavaScript/Closures
-translation_of: Web/JavaScript/Closures
 ---
 
 {{jsSidebar("Intermediate")}}
@@ -15,11 +14,12 @@ Dans l'exemple suivant&nbsp;:
 ```js
 function init() {
   var nom = "Mozilla"; // nom est une variable locale de init
-  function afficheNom() { // afficheNom est une fonction interne de init
+  function afficheNom() {
+    // afficheNom est une fonction interne de init
     console.log(nom); // ici nom est une variable libre (définie dans la fonction parente)
   }
   afficheNom();
-};
+}
 init();
 ```
 
@@ -48,21 +48,21 @@ Ce code produit le même résultat que l'appel à `init()` étudié précédemme
 
 Le code continue à fonctionner, ce qui peut paraître contre-intuitif au regard de la syntaxe utilisée. Usuellement, les variables locales d'une fonction n'existent que pendant l'exécution d'une fonction. Une fois que `creerFonction()` a fini son exécution, on aurait pu penser que la variable `nom` n'est plus accessible. Cependant, le code fonctionne&nbsp;: en JavaScript, la variable est donc accessible d'une certaine façon.
 
-L'explication est la suivante&nbsp;: `maFonction` est une fermeture. La fermeture combine la fonction `afficheNom` et son environnement. Cet environnement est composé de toutes les variables locales accessibles (dans la portée) à la création de la fermeture. Ici `maFonction` est une fermeture qui contient la fonction `afficheNom` et une référence à la variable `var nom = "Mozilla"` qui existait lorsque la fermeture a été créée. L'instance de `afficheNom` conserve une référence à son environnement lexical, dans lequel `nom`  existe. Pour cette raison, lorsque `maFonction` est invoquée, la variable `nom` reste disponible et "Mozilla" est transmis à `console.log`.
+L'explication est la suivante&nbsp;: `maFonction` est une fermeture. La fermeture combine la fonction `afficheNom` et son environnement. Cet environnement est composé de toutes les variables locales accessibles (dans la portée) à la création de la fermeture. Ici `maFonction` est une fermeture qui contient la fonction `afficheNom` et une référence à la variable `var nom = "Mozilla"` qui existait lorsque la fermeture a été créée. L'instance de `afficheNom` conserve une référence à son environnement lexical, dans lequel `nom` existe. Pour cette raison, lorsque `maFonction` est invoquée, la variable `nom` reste disponible et "Mozilla" est transmis à `console.log`.
 
 Voici un exemple un peu plus intéressant, une fonction `ajouterA`&nbsp;:
 
 ```js
 function ajouterA(x) {
-  return function(y) {
+  return function (y) {
     return x + y;
   };
-};
+}
 
 var ajouter_5 = ajouterA(5);
 var ajouter_10 = ajouterA(10);
 
-console.log(ajouter_5(2));  // 7
+console.log(ajouter_5(2)); // 7
 console.log(ajouter_10(2)); // 12
 ```
 
@@ -100,10 +100,10 @@ Voici le code JavaScript qui correspond&nbsp;:
 
 ```js
 function fabriqueRedimensionneur(taille) {
-  return function() {
-    document.body.style.fontSize = taille + 'px';
+  return function () {
+    document.body.style.fontSize = taille + "px";
   };
-};
+}
 
 var taille12 = fabriqueRedimensionneur(12);
 var taille14 = fabriqueRedimensionneur(14);
@@ -113,9 +113,9 @@ var taille16 = fabriqueRedimensionneur(16);
 `taille12`, `taille14`, et `taille16` sont désormais des fermetures qui peuvent, respectivement, redimensionner le texte de l'élément `body` à 12, 14, ou 16 pixels. On peut les attacher aux boutons de la façon suivantes&nbsp;:
 
 ```js
-document.getElementById('taille-12').onclick = taille12;
-document.getElementById('taille-14').onclick = taille14;
-document.getElementById('taille-16').onclick = taille16;
+document.getElementById("taille-12").onclick = taille12;
+document.getElementById("taille-14").onclick = taille14;
+document.getElementById("taille-16").onclick = taille16;
 ```
 
 ```html
@@ -135,21 +135,21 @@ JavaScript ne permet pas de faire cela de façon native. En revanche, on peut é
 Voici comment définir une fonction publique accédant à des fonctions et des variables privées en utilisant des fermetures. Cette façon de procéder est également connue comme le patron de conception [module](https://en.wikipedia.org/wiki/Module_pattern)&nbsp;:
 
 ```js
-var compteur = (function() {
+var compteur = (function () {
   var compteurPrive = 0;
   function changeValeur(val) {
     compteurPrive += val;
   }
   return {
-    increment: function() {
+    increment: function () {
       changeValeur(1);
     },
-    decrement: function() {
+    decrement: function () {
       changeValeur(-1);
     },
-    valeur: function() {
+    valeur: function () {
       return compteurPrive;
-    }
+    },
   };
 })();
 
@@ -172,21 +172,21 @@ Ces trois fonctions publiques sont des fermetures qui partagent le même environ
 On remarquera qu'on définit une fonction anonyme qui crée un compteur puis qu'on l'appelle immédiatement pour assigner le résultat à la variable `compteur`. On pourrait stocker cette fonction dans une variable puis l'appeler plusieurs fois afin de créer plusieurs compteurs.
 
 ```js
-var creerCompteur = function() {
+var creerCompteur = function () {
   var compteurPrive = 0;
   function changeValeur(val) {
     compteurPrive += val;
   }
   return {
-    increment: function() {
+    increment: function () {
       changeValeur(1);
     },
-    decrement: function() {
+    decrement: function () {
       changeValeur(-1);
     },
-    valeur: function() {
+    valeur: function () {
       return compteurPrive;
-    }
+    },
   };
 };
 
@@ -221,16 +221,16 @@ On peut oublier parfois, dans le cas de fonctions imbriquées, qu'une fonction a
 ```js
 // Portée globale
 var e = 10;
-function somme(a){
-  return function(b){
-    return function(c){
+function somme(a) {
+  return function (b) {
+    return function (c) {
       // Portée des autres fonctions (externes)
-      return function(d){
+      return function (d) {
         // Portée locale
         return a + b + c + d + e;
-      }
-    }
-  }
+      };
+    };
+  };
 }
 
 console.log(somme(1)(2)(3)(4)); // affiche 20
@@ -239,23 +239,23 @@ console.log(somme(1)(2)(3)(4)); // affiche 20
 
 // Portée globale
 var e = 10;
-function somme(a){
-  return function somme2(b){
-    return function somme3(c){
+function somme(a) {
+  return function somme2(b) {
+    return function somme3(c) {
       // Portée des autres fonctions
-      return function somme4(d){
+      return function somme4(d) {
         // Portée locale
         return a + b + c + d + e;
-      }
-    }
-  }
+      };
+    };
+  };
 }
 
 var somme2 = somme(1);
 var somme3 = somme2(2);
 var somme4 = somme3(3);
 var resultat = somme4(4);
-console.log(resultat) // affiche 20
+console.log(resultat); // affiche 20
 ```
 
 Dans l'exemple qui précède, on a une suite de fonctions imbriquées dont chacune accède à la portée des fonctions extérieures. Dans ce contexte, on peut dire que les fermetures ont accès à _l'ensemble_ des portées des fonctions extérieures.
@@ -266,28 +266,28 @@ Avant que le mot clé [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let) 
 
 ```html
 <p id="aide">Des aides seront affichées ici</p>
-<p>E-mail&nbsp;: <input type="text" id="email" name="email"></p>
-<p>Nom&nbsp;: <input type="text" id="nom" name="nom"></p>
-<p>Âge&nbsp;: <input type="text" id="âge" name="âge"></p>
+<p>E-mail&nbsp;: <input type="text" id="email" name="email" /></p>
+<p>Nom&nbsp;: <input type="text" id="nom" name="nom" /></p>
+<p>Âge&nbsp;: <input type="text" id="âge" name="âge" /></p>
 ```
 
 ```js
 function afficherAide(aide) {
-  document.getElementById('aide').innerHTML = aide;
+  document.getElementById("aide").innerHTML = aide;
 }
 
 function preparerAide() {
   var texteAide = [
-      {'id': 'email', 'aide': 'Votre adresse e-mail'},
-      {'id': 'nom', 'aide': 'Vos prénom et nom'},
-      {'id': 'âge', 'aide': 'Votre âge (plus de 16 ans requis)'}
-    ];
+    { id: "email", aide: "Votre adresse e-mail" },
+    { id: "nom", aide: "Vos prénom et nom" },
+    { id: "âge", aide: "Votre âge (plus de 16 ans requis)" },
+  ];
 
   for (var i = 0; i < texteAide.length; i++) {
     var item = texteAide[i];
-    document.getElementById(item.id).onfocus = function() {
+    document.getElementById(item.id).onfocus = function () {
       afficherAide(item.aide);
-    }
+    };
   }
 }
 
@@ -304,21 +304,21 @@ Une solution consiste à utiliser plus de fermetures et à appliquer une fabriqu
 
 ```js
 function afficheAide(aide) {
-  document.getElementById('aide').innerHTML = aide;
+  document.getElementById("aide").innerHTML = aide;
 }
 
 function creerCallbackAide(aide) {
-  return function() {
+  return function () {
     afficheAide(aide);
   };
 }
 
 function prepareAide() {
   var texteAide = [
-      {'id': 'email', 'aide': 'Votre adresse e-mail'},
-      {'id': 'nom', 'aide': 'Votre prénom et nom'},
-      {'id': 'âge', 'aide': 'Your age (you must be over 16)'}
-    ];
+    { id: "email", aide: "Votre adresse e-mail" },
+    { id: "nom", aide: "Votre prénom et nom" },
+    { id: "âge", aide: "Your age (you must be over 16)" },
+  ];
 
   for (var i = 0; i < texteAide.length; i++) {
     var item = texteAide[i];
@@ -333,21 +333,21 @@ Voici une autre solution qui permet de ne pas utiliser plus de fermetures&nbsp;:
 
 ```js
 function afficheAide(aide) {
-  document.getElementById('aide').innerHTML = aide;
+  document.getElementById("aide").innerHTML = aide;
 }
 
 function prepareAide() {
   var texteAide = [
-      {'id': 'email', 'aide': 'Votre adresse e-mail'},
-      {'id': 'nom', 'aide': 'Votre prénom et nom'},
-      {'id': 'âge', 'aide': 'Votre âge (vous devez être majeur)'}
-    ];
+    { id: "email", aide: "Votre adresse e-mail" },
+    { id: "nom", aide: "Votre prénom et nom" },
+    { id: "âge", aide: "Votre âge (vous devez être majeur)" },
+  ];
 
   for (var i = 0; i < texteAide.length; i++) {
     let item = texteAide[i];
-    document.getElementById(item.id).onfocus = function() {
+    document.getElementById(item.id).onfocus = function () {
       afficheAide(item.aide);
-    }
+    };
   }
 }
 
@@ -362,20 +362,20 @@ Autrement, on aurait pu utiliser `forEach()` afin de parcourir le tableau `texte
 
 ```js
 function afficheAide(aide) {
-  document.getElementById('aide').innerHTML = aide;
+  document.getElementById("aide").innerHTML = aide;
 }
 
 function prepareAide() {
   var texteAide = [
-      {'id': 'email', 'aide': 'Votre adresse e-mail'},
-      {'id': 'nom', 'aide': 'Votre prénom et nom'},
-      {'id': 'âge', 'aide': 'Votre âge (vous devez être majeur)'}
-    ];
+    { id: "email", aide: "Votre adresse e-mail" },
+    { id: "nom", aide: "Votre prénom et nom" },
+    { id: "âge", aide: "Votre âge (vous devez être majeur)" },
+  ];
 
-  texteAide.forEach(function(texte) {
-      document.getElementById(texte.id).onfocus = function() {
-        afficheAide(texte.help);
-      }
+  texteAide.forEach(function (texte) {
+    document.getElementById(texte.id).onfocus = function () {
+      afficheAide(texte.help);
+    };
   });
 }
 
@@ -394,11 +394,11 @@ Voici un exemple de la mauvaise façon de procéder&nbsp;:
 function MonObjet(nom, message) {
   this.nom = nom.toString();
   this.message = message.toString();
-  this.getNom = function() {
+  this.getNom = function () {
     return this.nom;
   };
 
-  this.getMessage = function() {
+  this.getMessage = function () {
     return this.message;
   };
 }
@@ -412,12 +412,12 @@ function MonObjet(nom, message) {
   this.message = message.toString();
 }
 MonObjet.prototype = {
-  getNom: function() {
+  getNom: function () {
     return this.nom;
   },
-  getMessage: function() {
+  getMessage: function () {
     return this.message;
-  }
+  },
 };
 ```
 
@@ -428,12 +428,12 @@ function MonObjet(nom, message) {
   this.nom = nom.toString();
   this.message = message.toString();
 }
-MonObjet.prototype.getNom = function() {
+MonObjet.prototype.getNom = function () {
   return this.nom;
 };
-MonObjet.prototype.getMessage = function() {
+MonObjet.prototype.getMessage = function () {
   return this.message;
 };
 ```
 
-Les deux derniers exemples permettent de voir que le prototype hérité est partagé par tous les objets construits et que les méthodes n'ont pas besoin d'être reconstruites pour chaque création d'objet. Veuillez consulter la page sur [le modèle objet JavaScript en détails](/fr/docs/Web/JavaScript/Guide/Le_mod%C3%A8le_objet_JavaScript_en_d%C3%A9tails) pour plus d'informations.
+Les deux derniers exemples permettent de voir que le prototype hérité est partagé par tous les objets construits et que les méthodes n'ont pas besoin d'être reconstruites pour chaque création d'objet. Veuillez consulter la page sur [le modèle objet JavaScript en détails](/fr/docs/Web/JavaScript/Guide/Le_modèle_objet_JavaScript_en_détails) pour plus d'informations.

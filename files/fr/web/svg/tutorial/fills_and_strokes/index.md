@@ -1,11 +1,6 @@
 ---
 title: Remplissages et contours
 slug: Web/SVG/Tutorial/Fills_and_Strokes
-tags:
-  - SVG
-  - SVG:Tutoriel
-translation_of: Web/SVG/Tutorial/Fills_and_Strokes
-original_slug: Web/SVG/Tutoriel/Fills_and_Strokes
 ---
 
 {{ PreviousNext("Web/SVG/Tutoriel/Paths", "Web/SVG/Tutoriel/Gradients") }}
@@ -44,12 +39,30 @@ Le second attribut affectant le contour est la propriété `stroke-linecap`. Ell
 
 ```html
 <svg width="160" height="140" xmlns="http://www.w3.org/2000/svg" version="1.1">
-  <line x1="40" x2="120" y1="20" y2="20"
-        stroke-linecap="butt" stroke="black" stroke-width="20"/>
-  <line x1="40" x2="120" y1="60" y2="60"
-        stroke-linecap="square" stroke="black" stroke-width="20"/>
-  <line x1="40" x2="120" y1="100" y2="100"
-        stroke-linecap="round" stroke="black" stroke-width="20"/>
+  <line
+    x1="40"
+    x2="120"
+    y1="20"
+    y2="20"
+    stroke-linecap="butt"
+    stroke="black"
+    stroke-width="20" />
+  <line
+    x1="40"
+    x2="120"
+    y1="60"
+    y2="60"
+    stroke-linecap="square"
+    stroke="black"
+    stroke-width="20" />
+  <line
+    x1="40"
+    x2="120"
+    y1="100"
+    y2="100"
+    stroke-linecap="round"
+    stroke="black"
+    stroke-width="20" />
 </svg>
 ```
 
@@ -69,14 +82,29 @@ La propriété `stroke-linejoin` permet de contrôler la manière de dessiner la
 
 ```html
 <svg width="160" height="280" xmlns="http://www.w3.org/2000/svg" version="1.1">
-  <polyline points="40 60 80 20 120 60" stroke="black" stroke-width="20"
-      stroke-linecap="butt" fill="none" stroke-linejoin="miter"/>
+  <polyline
+    points="40 60 80 20 120 60"
+    stroke="black"
+    stroke-width="20"
+    stroke-linecap="butt"
+    fill="none"
+    stroke-linejoin="miter" />
 
-  <polyline points="40 140 80 100 120 140" stroke="black" stroke-width="20"
-      stroke-linecap="round" fill="none" stroke-linejoin="round"/>
+  <polyline
+    points="40 140 80 100 120 140"
+    stroke="black"
+    stroke-width="20"
+    stroke-linecap="round"
+    fill="none"
+    stroke-linejoin="round" />
 
-  <polyline points="40 220 80 180 120 220" stroke="black" stroke-width="20"
-      stroke-linecap="square" fill="none" stroke-linejoin="bevel"/>
+  <polyline
+    points="40 220 80 180 120 220"
+    stroke="black"
+    stroke-width="20"
+    stroke-linecap="square"
+    fill="none"
+    stroke-linejoin="bevel" />
 </svg>
 ```
 
@@ -96,10 +124,19 @@ Finalement, vous pouvez également créer des lignes pointillées en spécifiant
 
 ```html
 <svg width="200" height="150" xmlns="http://www.w3.org/2000/svg" version="1.1">
-  <path d="M 10 75 Q 50 10 100 75 T 190 75" stroke="black"
-    stroke-linecap="round" stroke-dasharray="5,10,5" fill="none"/>
-  <path d="M 10 75 L 190 75" stroke="red"
-    stroke-linecap="round" stroke-width="1" stroke-dasharray="5,5" fill="none"/>
+  <path
+    d="M 10 75 Q 50 10 100 75 T 190 75"
+    stroke="black"
+    stroke-linecap="round"
+    stroke-dasharray="5,10,5"
+    fill="none" />
+  <path
+    d="M 10 75 L 190 75"
+    stroke="red"
+    stroke-linecap="round"
+    stroke-width="1"
+    stroke-dasharray="5,5"
+    fill="none" />
 </svg>
 ```
 
@@ -155,10 +192,10 @@ Sinon, il peut être déplacé vers une section `style`. Au lieu de l'insérer d
 Déplacer les styles dans une zone comme ceci peut rendre les choses plus simples pour ajuster les propriétés d'un grand nombre d'éléments. Vous pouvez également utiliser les **pseudo-classes comme hover** pour créer des effets:
 
 ```css
- #MyRect:hover {
-   stroke: black;
-   fill: blue;
- }
+#MyRect:hover {
+  stroke: black;
+  fill: blue;
+}
 ```
 
 #### Dans un fichier externe

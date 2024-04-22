@@ -11,9 +11,9 @@ slug: Web/HTTP/Headers/Access-Control-Allow-Headers
 
 如果请求中含有 {{HTTPHeader("Access-Control-Request-Headers")}} 字段，那么这个首部是必要的。
 
-| Header type                                      | {{Glossary("Response header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| Header type                           | {{Glossary("Response header")}} |
+| ------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                              |
 
 ## 语法
 
@@ -98,7 +98,7 @@ If the requested method isn't supported, the server will respond with an error.
   - Servo: [Issue 13283](https://github.com/servo/servo/issues/13283)
   - WebKit: [Issue 165508](https://bugs.webkit.org/show_bug.cgi?id=165508)
 
-## 相关内容
+## 参见
 
 - {{HTTPHeader("Access-Control-Allow-Origin")}}
 - {{HTTPHeader("Access-Control-Expose-Headers")}}

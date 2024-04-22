@@ -37,10 +37,8 @@ targetWindow.postMessage(message, targetOrigin, [transfer]);
 ```js
 window.addEventListener("message", receiveMessage, false);
 
-function receiveMessage(event)
-{
-  if (event.origin !== "http://example.org:8080")
-    return;
+function receiveMessage(event) {
+  if (event.origin !== "http://example.org:8080") return;
 
   // ...
 }
@@ -54,7 +52,7 @@ function receiveMessage(event)
   - : `postMessage` 가 호출될 때 메시지를 보내는 윈도우의 [origin](/ko/docs/Origin).
     이 문자열은 프로토콜과 "://", 호스트 명(존재할 경우), 그리고 ":"의 뒤에 이어 지는 포트 번호가 연결된 것입니다. (포트 번호는 포트 번호가 명기되었거나 주어진 프로토콜의 디폴트 포트와 다를 경우). 전형적인 origin의 예로 `https://example.org` (이 경우 port `443`), `http://example.net` (이 경우 port `80`), and `http://example.com:8080` 가 있습니다. 이 origin은 `postMessage` 호출 이후 다른 위치로 이동되었을 수 있는 해당 윈도우의 현재 또는 미래의 origin 이 보장되지 *않는다*는 점에 주의하세요.
 - `source`
-  - : 메시지를 보낸 [`window`](/en-US/docs/DOM/window) 오브젝트에 대한 참조.
+  - : 메시지를 보낸 [`window`](/ko/docs/DOM/window) 오브젝트에 대한 참조.
     이것을 사용함으로 다른 orign에 있는 두 개의 윈도우에서 쌍방향 통신을 확립할 수 있습니다.
 
 ## 보안 문제(Security concerns)
@@ -103,11 +101,9 @@ window.addEventListener("message", receiveMessage, false);
  */
 
 // Called sometime after postMessage is called
-function receiveMessage(event)
-{
+function receiveMessage(event) {
   // Do we trust the sender of this message?
-  if (event.origin !== "http://example.com:8080")
-    return;
+  if (event.origin !== "http://example.com:8080") return;
 
   // event.source is window.opener
   // event.data is "hello there!"
@@ -116,9 +112,10 @@ function receiveMessage(event)
   // you must do in any case), a convenient idiom for replying to a
   // message is to call postMessage on event.source and provide
   // event.origin as the targetOrigin.
-  event.source.postMessage("hi there yourself!  the secret response " +
-                           "is: rheeeeet!",
-                           event.origin);
+  event.source.postMessage(
+    "hi there yourself!  the secret response " + "is: rheeeeet!",
+    event.origin,
+  );
 }
 
 window.addEventListener("message", receiveMessage, false);

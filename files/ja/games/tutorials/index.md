@@ -1,7 +1,6 @@
 ---
 title: チュートリアル
 slug: Games/Tutorials
-original_slug: Games/Workflows
 l10n:
   sourceCommit: 86e302046641b6c4885d21bc0dc0ddd2f57db2e5
 ---

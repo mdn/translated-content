@@ -1,7 +1,6 @@
 ---
 title: Navigator.geolocation
 slug: Web/API/Navigator/geolocation
-translation_of: Web/API/Navigator/geolocation
 ---
 
 {{ APIRef("Geolocation API") }}
@@ -20,7 +19,7 @@ geo = navigator.geolocation
 
 {{Specifications}}
 
-## Доступность в браузере
+## Совместимость с браузерами
 
 {{Compat}}
 

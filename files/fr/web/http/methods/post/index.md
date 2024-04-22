@@ -1,12 +1,6 @@
 ---
 title: POST
 slug: Web/HTTP/Methods/POST
-tags:
-  - HTTP
-  - Reference
-  - Request method
-translation_of: Web/HTTP/Methods/POST
-original_slug: Web/HTTP/Méthode/POST
 ---
 
 {{HTTPSidebar}}
@@ -15,7 +9,7 @@ La **méthode HTTP `POST`** envoie des données au serveur. Le type du corps de 
 
 La différence entre `PUT` et {{HTTPMethod("POST")}} tient au fait que `PUT` est une méthode idempotente. Une requête `PUT`, envoyée une ou plusieurs fois avec succès, aura toujours le même effet (il n'y a pas d'effet de bord). À l'inverse, des requêtes `POST` successives et identiques peuvent avoir des effets additionnels, ce qui peut revenir par exemple à passer plusieurs fois une commande.
 
-Une requête `POST` est habituellement envoyée via un [formulaire HTML](/fr/docs/Web/Guide/HTML/Forms) et a pour résultat un changement sur le serveur. Dans ce cas, le type du contenu est sélectionné en mettant la chaîne de caractères adéquate dans l'attribut *[`enctype`](/fr/docs/Web/HTML/Element/form#enctype) de l'élément {{HTMLElement("form")}} ou dans l'attribut [`formenctype`](/fr/docs/Web/HTML/Element/input#formenctype) de l'élément {{HTMLElement("input") }}, voir celui des éléments {{HTMLElement("button")}}*&nbsp;:
+Une requête `POST` est habituellement envoyée via un [formulaire HTML](/fr/docs/Web/Guide/HTML/Forms) et a pour résultat un changement sur le serveur. Dans ce cas, le type du contenu est sélectionné en mettant la chaîne de caractères adéquate dans l'attribut _[`enctype`](/fr/docs/Web/HTML/Element/form#enctype) de l'élément {{HTMLElement("form")}} ou dans l'attribut [`formenctype`](/fr/docs/Web/HTML/Element/input#formenctype) de l'élément {{HTMLElement("input") }}, voir celui des éléments {{HTMLElement("button")}}_&nbsp;:
 
 - `application/`_`x-www-form-urlencoded`&nbsp;: les valeurs sont encodées sous forme de couples clé-valeur séparés par `'&'`, avec un `'='` entre la clé et la valeur. Les caractères non alphanumériques sont {{glossary("percent encoded")}}&nbsp;: c'est la raison pour laquelle ce type de format n'est pas adapté à une utilisation avec des données binaires (utilisez `multipart/form-data` à la place)_
 - _`multipart/form-data`_

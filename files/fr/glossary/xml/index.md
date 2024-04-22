@@ -1,13 +1,9 @@
 ---
 title: XML
 slug: Glossary/XML
-tags:
-  - Encodage
-  - Glossaire
-  - XML
-translation_of: Glossary/XML
-original_slug: Glossaire/XML
 ---
+
+{{GlossarySidebar}}
 
 eXtensible Markup Language (XML) est un langage de balisage générique définit par le W3C. Le secteur IT utilise de nombreux langages basés sur XML comme langages de description de données.
 

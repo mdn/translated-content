@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: switch ロール'
+title: "ARIA: switch ロール"
 slug: Web/Accessibility/ARIA/Roles/switch_role
 ---
 
@@ -8,10 +8,14 @@ ARIA のスイッチ (**`switch`**) ロールは、チェックボックス ([`c
 この例では、ウィジェットを作成し、それに ARIA のスイッチ (`switch`) ロールを割り当てています。
 
 ```html
-<button type="button" role="switch" aria-checked="true"
-    id="speakerPower" class="switch">
-    <span>オフ</span>
-    <span>オン</span>
+<button
+  type="button"
+  role="switch"
+  aria-checked="true"
+  id="speakerPower"
+  class="switch">
+  <span>オフ</span>
+  <span>オン</span>
 </button>
 <label for="speakerPower" class="switch">スピーカー出力</label>
 ```
@@ -65,8 +69,7 @@ ARIA のスイッチ (**`switch`**) ロールは、チェックボックス ([`c
 ここでの HTML はかなり単純です。 スイッチは {{HTMLElement("button")}} 要素として実装され、`aria-checked` 属性が `"true"` に設定されているため、最初はチェックされています。 スイッチには、「off」と「on」のラベルを含む 2 つの子要素があり、その後にスイッチを識別する {{HTMLElement("label")}} が続きます。
 
 ```html
-<button role="switch" aria-checked="true"
-      id="speakerPower" class="switch">
+<button role="switch" aria-checked="true" id="speakerPower" class="switch">
   <span>off</span>
   <span>on</span>
 </button>
@@ -78,7 +81,7 @@ ARIA のスイッチ (**`switch`**) ロールは、チェックボックス ([`c
 この JavaScript コードは、スイッチウィジェットの `click` イベントを処理する関数を定義して適用します。 この関数は、`aria-checked` 属性を `true` から `false` やその逆に変更します。
 
 ```js
-document.querySelectorAll(".switch").forEach(function(theSwitch) {
+document.querySelectorAll(".switch").forEach(function (theSwitch) {
   theSwitch.addEventListener("click", handleClickEvent, false);
 });
 
@@ -86,9 +89,9 @@ function handleClickEvent(evt) {
   let el = evt.target;
 
   if (el.getAttribute("aria-checked") == "true") {
-      el.setAttribute("aria-checked", "false");
+    el.setAttribute("aria-checked", "false");
   } else {
-      el.setAttribute("aria-checked", "true");
+    el.setAttribute("aria-checked", "true");
   }
 }
 ```
@@ -109,7 +112,10 @@ button.switch {
   line-height: 20px;
   vertical-align: middle;
   text-align: center;
-  font: 12px "Open Sans", "Arial", serif;
+  font:
+    12px "Open Sans",
+    "Arial",
+    serif;
 }
 
 button.switch span {
@@ -129,7 +135,10 @@ button.switch span {
 }
 
 label.switch {
-  font: 16px "Open Sans", "Arial", sans-serif;
+  font:
+    16px "Open Sans",
+    "Arial",
+    sans-serif;
   line-height: 20px;
   user-select: none;
   vertical-align: middle;

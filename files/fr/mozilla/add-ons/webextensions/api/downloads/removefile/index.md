@@ -1,20 +1,9 @@
 ---
 title: downloads.removeFile()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/removeFile
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
-  - removeFile
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/removeFile
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 La fonction **`removeFile()`** de l'API {{WebExtAPIRef("downloads")}} supprime un fichier téléchargé du disque.
 
@@ -30,8 +19,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var removing = browser.downloads.removeFile(
-  downloadId      // integer
-)
+  downloadId, // integer
+);
 ```
 
 ### Paramètres
@@ -69,7 +58,7 @@ function remove(downloadItems) {
 
 var searching = browser.downloads.search({
   limit: 1,
-  orderBy: ["-startTime"]
+  orderBy: ["-startTime"],
 });
 
 searching.then(remove, onError);

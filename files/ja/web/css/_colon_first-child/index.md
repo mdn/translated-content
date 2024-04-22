@@ -1,5 +1,5 @@
 ---
-title: ':first-child'
+title: ":first-child"
 slug: Web/CSS/:first-child
 ---
 
@@ -14,6 +14,8 @@ p:first-child {
   color: lime;
 }
 ```
+
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-first-child.html", "tabbed-shorter")}}
 
 > **メモ:** 当初の定義では、親のある要素のみが選択されていました。 Selectors Level 4 の初期に、これは必要なくなりました。
 
@@ -63,7 +65,8 @@ p:first-child {
 <ul>
   <li>Item 1</li>
   <li>Item 2</li>
-  <li>Item 3
+  <li>
+    Item 3
     <ul>
       <li>Item 3.1</li>
       <li>Item 3.2</li>

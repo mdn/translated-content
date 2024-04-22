@@ -1,12 +1,6 @@
 ---
 title: element.nodeValue
 slug: Web/API/Node/nodeValue
-tags:
-  - API
-  - DOM
-  - Noeuds
-  - Propriétés
-translation_of: Web/API/Node/nodeValue
 ---
 
 {{APIRef("DOM")}}

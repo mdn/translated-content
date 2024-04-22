@@ -1,8 +1,8 @@
 ---
 title: Document.currentScript
 slug: Web/API/Document/currentScript
-translation_of: Web/API/Document/currentScript
 ---
+
 {{ApiRef("DOM")}}
 
 Возвращает элемент {{HTMLElement("script")}}, который выполняется в данный момент.
@@ -33,11 +33,9 @@ if (document.currentScript.async) {
 
 ## Спецификации
 
-| Specification                                                                                                                | Status                           | Comment            |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("HTML WHATWG", "dom.html#dom-document-currentscript", "Document.currentScript")}} | {{Spec2("HTML WHATWG")}} | Initial definition |
+{{Specifications}}
 
-## Совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

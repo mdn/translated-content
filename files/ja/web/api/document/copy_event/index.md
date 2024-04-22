@@ -1,5 +1,5 @@
 ---
-title: 'Document: copy イベント'
+title: "Document: copy イベント"
 slug: Web/API/Document/copy_event
 ---
 
@@ -33,8 +33,8 @@ slug: Web/API/Document/copy_event
 ## 例
 
 ```js
-document.addEventListener('copy', (event) => {
-    console.log('copy action initiated')
+document.addEventListener("copy", (event) => {
+  console.log("copy action initiated");
 });
 ```
 

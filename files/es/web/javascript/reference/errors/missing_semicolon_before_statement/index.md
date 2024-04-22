@@ -1,7 +1,6 @@
 ---
-title: 'ErrordeSintaxis: Punto y coma ; faltante antes de la declaracion'
+title: "SyntaxError: missing ; before statement"
 slug: Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement
-original_slug: Web/JavaScript/Reference/Errors/Falta_puntoycoma_antes_de_declaracion
 ---
 
 {{jsSidebar("Errores")}}
@@ -9,7 +8,7 @@ original_slug: Web/JavaScript/Reference/Errors/Falta_puntoycoma_antes_de_declara
 ## Mensaje
 
 ```
-Error de Sintaxis: Punto y coma ; faltante antes de la declaración
+SyntaxError: missing ; before statement
 ```
 
 ## Tipo de Error
@@ -30,12 +29,12 @@ Este error puede pasar fácilmente cuando no se colocan las comillas correctamen
 
 ```js example-bad
 var foo = 'El bar de Tom's';
-// Error de Sintaxis: Punto y coma ; faltante antes de la declaración
+// SyntaxError: missing ; before statement
 ```
 
 En este caso se pueden usar comillas dobles para escapar del apóstrofe:
 
-```js example-good
+```js-nolint example-good
 var foo = "El bar de Tom's";
 var foo = 'El bar de Tom\'s';
 ```
@@ -48,23 +47,23 @@ var foo = 'El bar de Tom\'s';
 
 ```js example-bad
 var obj = {};
-var obj.foo = 'hola'; // Error de Sintaxis: Punto y coma ; faltante antes de la declaración
+var obj.foo = 'hola'; // SyntaxError: missing ; before statement
 
 var array = [];
-var array[0] = 'mundo'; // Error de Sintaxis: Punto y coma ; faltante antes de la declaración
+var array[0] = 'mundo'; // SyntaxError: missing ; before statement
 ```
 
 En vez de esto. omitamos la palabra `var`:
 
 ```js example-good
 var obj = {};
-obj.foo = 'hola';
+obj.foo = "hola";
 
 var array = [];
-array[0] = 'mundo';
+array[0] = "mundo";
 ```
 
-## Ver también:
+## Ver también
 
 - [Automatic semicolon insertion (ASI)](/es/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion)
 - [JavaScript statements](/es/docs/Web/JavaScript/Reference/Statements)

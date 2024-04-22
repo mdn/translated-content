@@ -1,14 +1,6 @@
 ---
 title: Virgules finales (trailing commas)
 slug: Web/JavaScript/Reference/Trailing_commas
-tags:
-  - ECMAScript2017
-  - ECMAScript5
-  - JavaScript
-  - Syntaxe
-  - Virgule
-translation_of: Web/JavaScript/Reference/Trailing_commas
-original_slug: Web/JavaScript/Reference/Virgules_finales
 ---
 
 {{JsSidebar("More")}}
@@ -26,11 +18,7 @@ Les virgules finales peuvent être utilisées dans les littéraux de tableau dep
 JavaScript ignore les virgules finales dans les tableaux :
 
 ```js
-var arr = [
-  1,
-  2,
-  3,
-];
+var arr = [1, 2, 3];
 
 arr; // [1, 2, 3]
 arr.length; // 3
@@ -39,7 +27,7 @@ arr.length; // 3
 Si plusieurs virgules finales sont utilisées, cela crée un vide dans le tableau. Un tableau avec des vides est parfois qualifié de _parsemé_ (ou _sparse_ en anglais). Lorsqu'on parcourt un tableau avec les méthodes {{jsxref("Array.prototype.forEach()")}} ou {{jsxref("Array.prototype.map()")}}, par exemple, ces vides sont ignorés.
 
 ```js
-var arr = [1, 2, 3,,,];
+var arr = [1, 2, 3, , ,];
 arr.length; // 5
 ```
 
@@ -65,10 +53,10 @@ Pour chacune des deux paires de définitions qui suivent, les deux définitions 
 
 ```js
 function f(p) {}
-function f(p,) {}
+function f(p) {}
 
 (p) => {};
-(p,) => {};
+(p) => {};
 ```
 
 Les virgules finales peuvent également être utilisées lors [des définitions de méthodes](/fr/docs/Web/JavaScript/Reference/Fonctions/Définition_de_méthode) dans les objets et les classes :
@@ -91,10 +79,10 @@ Pour chacune des deux paires d'appels qui suivent, les deux appels sont équival
 
 ```js
 f(p);
-f(p,);
+f(p);
 
 Math.max(10, 20);
-Math.max(10, 20,);
+Math.max(10, 20);
 ```
 
 ### Virgules finales non-autorisées
@@ -117,7 +105,7 @@ On peut aussi utiliser une virgule finale dans l'opérande gauche lorsqu'on util
 ```js
 // Décomposition d'un tableau avec
 // une virgule finale
-[a, b,] = [1, 2];
+[a, b] = [1, 2];
 
 // Décomposition d'un objet avec une
 // virgule finale
@@ -125,13 +113,13 @@ var o = {
   p: 42,
   q: true,
 };
-var {p, q,} = o;
+var { p, q } = o;
 ```
 
 Là encore, si on utilise un élément du reste, une exception {{jsxref("SyntaxError")}} sera levée :
 
 ```js example-bad
-var [a, ...b,] = [1, 2, 3];
+var [a, ...b] = [1, 2, 3];
 // SyntaxError: rest element may not have a trailing comma
 ```
 
@@ -142,7 +130,7 @@ L'utilisation des virgules finales dans les objets a été introduite avec ECMAS
 Les deux lignes suivantes lèveront une exception {{jsxref("SyntaxError")}} :
 
 ```js example-bad
-JSON.parse('[1, 2, 3, 4, ]');
+JSON.parse("[1, 2, 3, 4, ]");
 JSON.parse('{"foo" : 1, }');
 // SyntaxError JSON.parse: unexpected character
 // at line 1 column 14 of the JSON data
@@ -151,7 +139,7 @@ JSON.parse('{"foo" : 1, }');
 Pour analyser le JSON correctement, on évitera les virgules finales :
 
 ```js example-good
-JSON.parse('[1, 2, 3, 4 ]');
+JSON.parse("[1, 2, 3, 4 ]");
 JSON.parse('{"foo" : 1 }');
 ```
 

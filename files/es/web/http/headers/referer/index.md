@@ -5,7 +5,7 @@ slug: Web/HTTP/Headers/Referer
 
 {{HTTPSidebar}}
 
-La cabecera de solicitud **`Referer`** (‘referente’) contiene la dirección de la página web anterior de la que provenía el enlace a la página actual que se siguió. La cabecera `Referer` permite a los servidores identificar de dónde los visitan las personas y pueden emplear estos datos para realizar análisis, registros o un almacenamiento en antememoria optimizado, por mencionar algunos ejemplos.
+La cabecera de solicitud **`Referer`** ("referente") contiene la dirección de la página web anterior de la que provenía el enlace a la página actual que se siguió. La cabecera `Referer` permite a los servidores identificar de dónde los visitan las personas y pueden emplear estos datos para realizar análisis, registros o un almacenamiento en antememoria optimizado, por mencionar algunos ejemplos.
 
 Observe que _referer_ es una grafía errónea de la palabra _referrer_. Consulte [<em>HTTP referer</em> en Wikipedia](https://es.wikipedia.org/wiki/HTTP_referer) para obtener más información.
 
@@ -16,9 +16,9 @@ Los navegadores no envían ninguna cabecera `Referer` si:
 - el recurso referente es un URI local «file» o «data»;
 - se emplea una solicitud HTTP no segura y la página referente fue recibida a través de un protocolo seguro (HTTPS).
 
-| Tipo de cabecera                                 | {{Glossary("Request header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | sí                                       |
+| Tipo de cabecera                      | {{Glossary("Request header")}} |
+| ------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden header name")}} | sí                             |
 
 ## Sintaxis
 

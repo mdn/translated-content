@@ -1,7 +1,6 @@
 ---
 title: log ロールの使用
 slug: Web/Accessibility/ARIA/Roles/log_role
-original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_log_role
 ---
 
 ### 説明
@@ -45,8 +44,10 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_log_role
   <ul id="chatRegion" aria-live="polite" aria-atomic="false">
     <li>AJAX チャットの使用を開始するには、ユーザー名を選択してください。</li>
   </ul>
-  <ul id="userListRegion" aria-live="off" aria-relevant="additions removals text">
-  </ul>
+  <ul
+    id="userListRegion"
+    aria-live="off"
+    aria-relevant="additions removals text"></ul>
 </div>
 ```
 

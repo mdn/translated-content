@@ -65,7 +65,7 @@ try {
 function check(value) {
   if (["apple", "banana", "carrot"].includes(value) === false) {
     throw new RangeError(
-      'El argumento debe de ser una "apple", "banana", o "carrot".'
+      'El argumento debe de ser una "apple", "banana", o "carrot".',
     );
   }
 }

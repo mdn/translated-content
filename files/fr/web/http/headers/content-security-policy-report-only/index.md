@@ -1,16 +1,6 @@
 ---
 title: Content-Security-Policy-Report-Only
 slug: Web/HTTP/Headers/Content-Security-Policy-Report-Only
-tags:
-  - CSP
-  - Content-Security-Policy
-  - HTTP
-  - HTTPS
-  - Reference
-  - Security
-  - Sécurité
-  - header
-translation_of: Web/HTTP/Headers/Content-Security-Policy-Report-Only
 ---
 
 {{HTTPSidebar}}
@@ -98,11 +88,11 @@ Content-Security-Policy-Report-Only: default-src 'none'; style-src cdn.example.c
 La page HTML correspondant à l'adresse `signup.html` ressemble à :
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>Sign Up</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     ... Content ...

@@ -2,6 +2,7 @@
 title: Document.createElement()
 slug: Web/API/Document/createElement
 ---
+
 {{APIRef("DOM")}}
 
 HTML 문서에서, **`Document.createElement()`** 메서드는 지정한 `tagName`의 HTML 요소를 만들어 반환합니다. `tagName`을 인식할 수 없으면 {{domxref("HTMLUnknownElement")}}를 대신 반환합니다.
@@ -30,14 +31,14 @@ let element = document.createElement(tagName[, options]);
 #### HTML
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  <title>||Working with elements||</title>
-</head>
-<body>
-  <div id="div1">위의 텍스트는 동적으로 추가했습니다.</div>
-</body>
+  <head>
+    <title>||Working with elements||</title>
+  </head>
+  <body>
+    <div id="div1">위의 텍스트는 동적으로 추가했습니다.</div>
+  </body>
 </html>
 ```
 
@@ -46,7 +47,7 @@ let element = document.createElement(tagName[, options]);
 ```js
 document.body.onload = addElement;
 
-function addElement () {
+function addElement() {
   // create a new div element
   var newDiv = document.createElement("div");
   // and give it some content

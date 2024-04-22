@@ -1,7 +1,6 @@
 ---
 title: "CSS: paintWorklet 静的プロパティ"
 slug: Web/API/CSS/paintWorklet_static
-original_slug: Web/API/CSS/paintWorklet
 l10n:
   sourceCommit: f29d8a648ef7ada05a00c358bfb9e9f67f3bc90d
 ---

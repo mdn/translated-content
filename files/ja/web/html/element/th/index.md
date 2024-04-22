@@ -1,56 +1,15 @@
 ---
-title: '<th>: 表見出し要素'
+title: "<th>: 表見出し要素"
 slug: Web/HTML/Element/th
+l10n:
+  sourceCommit: ade2af490b3f99f053a19a786584c64dcb4d67f9
 ---
 
 {{HTMLSidebar}}
 
-**`<th>`** は [HTML](/ja/docs/Web/HTML) の要素で、表のセルのグループ用の見出しであるセルを定義します。このグループの正確な性質は、[`scope`](/ja/docs/Web/HTML/Element/th#scope) 属性と [`headers`](/ja/docs/Web/HTML/Element/th#headers) 属性で定義します。
+**`<th>`** は [HTML](/ja/docs/Web/HTML) の要素で、表のセルのグループ用の見出しであるセルを定義します。このグループの正確な性質は、[`scope`](#scope) 属性と [`headers`](#headers) 属性で定義します。
 
 {{EmbedInteractiveExample("pages/tabbed/th.html","tabbed-taller")}}
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories"
-          >コンテンツカテゴリー</a
-        >
-      </th>
-      <td>なし。</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
-      <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>、ただしヘッダー、フッター、区分コンテンツ、見出しコンテンツを除く。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
-      <td>
-        開始タグは必須です。<br>直後に {{HTMLElement("th")}} 要素または {{HTMLElement("td")}} 要素がある場合、または親要素内で以降のデータがない場合は終了タグを省略可能。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
-      <td>{{HTMLElement("tr")}} 要素</td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
-      <td>
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/columnheader_role">columnheader</a></code> または <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/rowheader_role">rowheader</a></code>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
-      <td>すべて</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{domxref("HTMLTableCellElement")}}</td>
-    </tr>
-  </tbody>
-</table>
 
 ## 属性
 
@@ -66,11 +25,11 @@ slug: Web/HTML/Element/th
   - : この属性はセルをいくつの行に広げるかを示す、負でない整数を持ちます。既定値は `1` です。`0` を設定した場合は、セルが属する表セクション ({{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, 暗黙的に定義されたものも含む) の終端まで拡張します。 65534 より大きな値は、 65534 に切り詰めます。
 - `scope`
 
-  - : これは列挙型の属性で、この ({{HTMLElement("th")}} で定義されている) 見出し要素が関連するセルを定義します。次の値を取ることができます。
+  - : これは[列挙型](/ja/docs/Glossary/Enumerated)の属性で、この ({{HTMLElement("th")}} で定義されている) 見出し要素が関連するセルを定義します。次の値を取ることができます。
 
     - `row`: この見出しはその行に属するすべてのセルに関連します。
     - `col`: この見出しはその列に属するすべてのセルに関連します。
-    - `rowgroup`: この見出しは行グループに属し、その中のすべてのセルに関連します。これらのセルは {{HTMLElement("table")}} 要素の `[dir](/ja/docs/Web/HTML/Global_attributes/dir)` 属性の値によって、見出しの右又は左に配置されます。
+    - `rowgroup`: この見出しは行グループに属し、その中のすべてのセルに関連します。
     - `colgroup`: この見出しは列グループに属し、その中のすべてのセルに関連します。
 
     もし `scope` 属性が指定されていないか、その値が `row`, `col`, `rowgroup`, `colgroup` でない場合は、ブラウザーは自動的に見出しセルが適用されるセルの集合を選択します。
@@ -84,48 +43,29 @@ slug: Web/HTML/Element/th
     - `left`: 中身をセルの左側に揃えます。
     - `center`: 中身をセル内で中央揃えにします。
     - `right`: 中身をセルの右側に揃えます。
-    - `justify` (テキストのみ): セルの中で幅が全体にわたるように、中身が引き延ばされます。
-    - `char` (テキストのみ): テキストコンテンツを特定の文字に対して、最小のオフセットで揃えます。特定の文字は [`char`](/ja/docs/Web/HTML/Element/th#char) 属性および [`charoff`](/ja/docs/Web/HTML/Element/th#charoff) 属性で定義します。
+    - `justify`（テキストのみ）: セルの中で幅が全体にわたるように、中身が引き延ばされます。
+    - `char`（テキストのみ）: テキストコンテンツを特定の文字に対して、最小のオフセットで揃えます。特定の文字は [`char`](#char) 属性および [`charoff`](#charoff) 属性で定義します。
 
     この属性を設定しない場合は、値が `left` であるとみなされます。
 
     > **メモ:** この属性は最新の標準仕様で廃止されたため、使用しないでください。
     >
     > - `left`, `center`, `right`, `justify` の値と同様の効果を得るには、 CSS の {{cssxref("text-align")}} プロパティを使用してください。
-    > - `char` の値と同様の効果を得るには、 {{cssxref("text-align")}} プロパティに [`char`](/ja/docs/Web/HTML/Element/th#char) で使用する値と同じものを指定してください。
+    > - `char` の値と同様の効果を得るには、 {{cssxref("text-align")}} プロパティに [`char`](#char) で使用する値と同じものを指定してください。
 
 - `axis` {{deprecated_inline}}
 
   - : この属性は、空白文字で区切られた文字列のリストを持ちます。各文字列は、このヘッダーを適用するセルグループの `id` です。
 
-    > **メモ:** この属性は最新の標準で廃止されているため、使用しないでください。代わりに [`scope`](/ja/docs/Web/HTML/Element/th#scope) 属性を使用してください。
+    > **メモ:** この属性は最新の標準で廃止されているため、使用しないでください。代わりに [`scope`](#scope) 属性を使用してください。
 
-- `bgcolor` {{Non-standard_inline}}
+- `bgcolor` {{Deprecated_Inline}}
 
-  - : この属性は、列の各セルの背景色を定義します。値は [sRGB](https://www.w3.org/Graphics/Color/sRGB) で定義された6桁の16進数値のいずれかで、先頭に '#' を付加します。16個のあらかじめ定義された色文字列から、 1 つを使用することができます。
-
-    - `black` = "#000000"
-    - `green` = "#008000"
-    - `silver` = "#C0C0C0"
-    - `lime` = "#00FF00"
-    - `gray` = "#808080"
-    - `olive` = "#808000"
-    - `white` = "#FFFFFF"
-    - `yellow` = "#FFFF00"
-    - `maroon` = "#800000"
-    - `navy` = "#000080"
-    - `red` = "#FF0000"
-    - `blue` = "#0000FF"
-    - `purple` = "#800080"
-    - `teal` = "#008080"
-    - `fuchsia` = "#FF00FF"
-    - `aqua` = "#00FFFF"
-
-    > **メモ:** この属性は標準外であり Internet Explorer の一部バージョンしか実装していませんので、使用しないでください。 {{HTMLElement("th")}} 要素は [CSS](/ja/docs/Web/CSS) を使用してスタイル付けをしてください。同様の効果を与えるには、 [CSS](/ja/docs/Web/CSS) の {{cssxref("background-color")}} プロパティを使用してください。
+  - : この属性は、列の各セルの背景色を定義します。値は [sRGB](https://www.w3.org/Graphics/Color/sRGB) で定義された 6 桁の 16 進数値のいずれかで、先頭に '#' を付加します。
 
 - `char` {{deprecated_inline}}
 
-  - : この属性は、列内のセルで揃える文字を設定します。典型的な値に、数値や金額を揃えようとするときのピリオド (.) があります。 [`align`](/ja/docs/Web/HTML/Element/th#align) 属性を `char` に設定していない場合は、この属性を無視します。
+  - : この属性は、列内のセルで揃える文字を設定します。典型的な値に、数値や金額を揃えようとするときのピリオド (.) があります。 [`align`](#align) 属性を `char` に設定していない場合は、この属性を無視します。
 
     > **メモ:** この属性は最新の標準で廃止されているため、使用しないでください。 CSS3 で同じ効果を得るには、 {{cssxref("text-align")}} プロパティの最初の値としてその文字を設定することができます。
 
@@ -160,7 +100,52 @@ slug: Web/HTML/Element/th
 
 ## 例
 
-`<th>` 要素の例については、 {{HTMLElement("table")}} を参照してください。
+`<th>` 要素の例については、{{HTMLElement("table")}} を参照してください。
+
+## 技術的概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ja/docs/Web/HTML/Content_categories"
+          >コンテンツカテゴリー</a
+        >
+      </th>
+      <td>なし。</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている内容</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>、ただしヘッダー、フッター、区分コンテンツ、見出しコンテンツを除く。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">タグの省略</th>
+      <td>
+        開始タグは必須です。<br>直後に {{HTMLElement("th")}} 要素または {{HTMLElement("td")}} 要素がある場合、または親要素内で以降のデータがない場合は終了タグを省略可能。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている親要素</th>
+      <td>{{HTMLElement("tr")}} 要素</td>
+    </tr>
+    <tr>
+      <th scope="row">暗黙の ARIA ロール</th>
+      <td>
+        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/columnheader_role"><code>columnheader</code></a> または <a href="/ja/docs/Web/Accessibility/ARIA/Roles/rowheader_role"><code>rowheader</code></a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている ARIA ロール</th>
+      <td>すべて</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>{{domxref("HTMLTableCellElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 仕様書
 
@@ -170,6 +155,6 @@ slug: Web/HTML/Element/th
 
 {{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
 - 他の表関連 HTML 要素: {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}}

@@ -28,9 +28,9 @@ RegExp["$'"]
 
 ```js
 var re = /hello/g;
-re.test('hello world!');
+re.test("hello world!");
 RegExp.rightContext; // " world!"
-RegExp["$'"];       // " world!"
+RegExp["$'"]; // " world!"
 ```
 
 ## 规范
@@ -41,7 +41,7 @@ RegExp["$'"];       // " world!"
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{non-standard_inline}} {{jsxref("RegExp.input", "RegExp.input ($_)")}}
 - {{non-standard_inline}} {{jsxref("RegExp.lastMatch", "RegExp.lastMatch ($&amp;)")}}

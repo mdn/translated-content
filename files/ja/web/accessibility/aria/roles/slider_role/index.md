@@ -1,7 +1,6 @@
 ---
 title: slider ロールの使用
 slug: Web/Accessibility/ARIA/Roles/slider_role
-original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role
 ---
 
 このテクニックは、[`slider`](http://www.w3.org/TR/wai-aria/#slider) ロールの使い方を示し、ブラウザーと支援技術に及ぼす影響について説明します。
@@ -30,7 +29,8 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role
 
 ```html
 <label for="fader">ボリューム</label>
-<input type="range"
+<input
+  type="range"
   id="fader"
   min="1"
   max="100"
@@ -39,7 +39,7 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role
   aria-valuemin="1"
   aria-valuemax="100"
   aria-valuenow="50"
-  oninput="outputUpdate(value)">
+  oninput="outputUpdate(value)" />
 <output for="fader" id="volume">50</output>
 ```
 
@@ -70,11 +70,19 @@ function outputUpdate(vol) {
 以下のコードスニペットは、ユーザーの入力に応答して `aria-valuenow` および `aria-valuetext` 属性を更新する関数を示しています。
 
 ```js
-var dayNames = ["日曜日", "月曜日", "火曜日", "水曜日", "木曜日", "金曜日", "土曜日"];
+var dayNames = [
+  "日曜日",
+  "月曜日",
+  "火曜日",
+  "水曜日",
+  "木曜日",
+  "金曜日",
+  "土曜日",
+];
 var updateSlider = function (newValue) {
-    var handle = document.getElementById("day-handle");
-    handle.setAttribute("aria-valuenow", newValue.toString());
-    handle.setAttribute("aria-valuetext", dayNames[newValue]);
+  var handle = document.getElementById("day-handle");
+  handle.setAttribute("aria-valuenow", newValue.toString());
+  handle.setAttribute("aria-valuetext", dayNames[newValue]);
 };
 ```
 

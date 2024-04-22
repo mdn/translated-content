@@ -38,43 +38,29 @@ gl.bindBuffer(gl.ARRAY_BUFFER, cubeVerticesNormalBuffer);
 
 var vertexNormals = [
   // 앞
-   0.0,  0.0,  1.0,
-   0.0,  0.0,  1.0,
-   0.0,  0.0,  1.0,
-   0.0,  0.0,  1.0,
+  0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0,
 
   // 뒤
-   0.0,  0.0, -1.0,
-   0.0,  0.0, -1.0,
-   0.0,  0.0, -1.0,
-   0.0,  0.0, -1.0,
+  0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0,
 
   // 위
-   0.0,  1.0,  0.0,
-   0.0,  1.0,  0.0,
-   0.0,  1.0,  0.0,
-   0.0,  1.0,  0.0,
+  0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0,
 
   // 아래
-   0.0, -1.0,  0.0,
-   0.0, -1.0,  0.0,
-   0.0, -1.0,  0.0,
-   0.0, -1.0,  0.0,
+  0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0,
 
   // 오른쪽
-   1.0,  0.0,  0.0,
-   1.0,  0.0,  0.0,
-   1.0,  0.0,  0.0,
-   1.0,  0.0,  0.0,
+  1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0,
 
   // 왼쪽
-  -1.0,  0.0,  0.0,
-  -1.0,  0.0,  0.0,
-  -1.0,  0.0,  0.0,
-  -1.0,  0.0,  0.0
+  -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0, -1.0, 0.0, 0.0,
 ];
 
-gl.bufferData(gl.ARRAY_BUFFER, new WebGLFloatArray(vertexNormals), gl.STATIC_DRAW);
+gl.bufferData(
+  gl.ARRAY_BUFFER,
+  new WebGLFloatArray(vertexNormals),
+  gl.STATIC_DRAW,
+);
 ```
 
 이런 배열의 처리는 앞 단원에서 여러 번 다뤄왔으므로 이젠 꽤 친숙해 보일 것입니다. 새로운 버퍼를 생성하고, 버퍼와 법선 배열을 바인딩하고, `bufferData()`를 호출해서 법선 배열을 버퍼에 전달합니다.
@@ -92,7 +78,11 @@ gl.vertexAttribPointer(vertexNormalAttribute, 3, gl.FLOAT, false, 0, 0);
 var normalMatrix = mvMatrix.inverse();
 normalMatrix = normalMatrix.transpose();
 var nUniform = gl.getUniformLocation(shaderProgram, "uNormalMatrix");
-gl.uniformMatrix4fv(nUniform, false, new WebGLFloatArray(normalMatrix.flatten()));
+gl.uniformMatrix4fv(
+  nUniform,
+  false,
+  new WebGLFloatArray(normalMatrix.flatten()),
+);
 ```
 
 ## 셰이더 수정

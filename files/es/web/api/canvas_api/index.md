@@ -1,7 +1,6 @@
 ---
 title: API Canvas
 slug: Web/API/Canvas_API
-original_slug: Web/HTML/Canvas
 ---
 
 {{DefaultAPISidebar("Canvas API")}}
@@ -25,10 +24,10 @@ Esto es un trozo de código que usa el método {{domxref("CanvasRenderingContext
 ### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 
-ctx.fillStyle = 'green';
+ctx.fillStyle = "green";
 ctx.fillRect(10, 10, 100, 100);
 ```
 
@@ -42,15 +41,16 @@ Edita este código para ver tus cambios en tiempo real en este canvas:
 </div>
 <textarea id="code" class="playable-code">
 ctx.fillStyle = 'green';
-ctx.fillRect(10, 10, 100, 100);</textarea>
+ctx.fillRect(10, 10, 100, 100);</textarea
+>
 ```
 
 ```js hidden
-var canvas = document.getElementById('canvas');
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var edit = document.getElementById('edit');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var edit = document.getElementById("edit");
 var code = textarea.value;
 
 function drawCanvas() {
@@ -58,17 +58,17 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener('click', function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
-textarea.addEventListener('input', drawCanvas);
-window.addEventListener('load', drawCanvas);
+textarea.addEventListener("input", drawCanvas);
+window.addEventListener("load", drawCanvas);
 ```
 
 {{ EmbedLiveSample('Código_editable', 700, 360) }}
@@ -78,7 +78,6 @@ window.addEventListener('load', drawCanvas);
 - {{domxref("HTMLCanvasElement")}}
 - {{domxref("CanvasRenderingContext2D")}}
 - {{domxref("CanvasGradient")}}
-- {{domxref("CanvasImageSource")}}
 - {{domxref("CanvasPattern")}}
 - {{domxref("ImageBitmap")}}
 - {{domxref("ImageData")}}
@@ -97,8 +96,6 @@ Las interfaces relacionadas con `WebGLRenderingContext` están en [WebGL](/es/do
   - : Tutorial exhaustivo que cubre tanto el uso básico de `<canvas>` como sus características avanzadas.
 - [Fragmentos de código: Canvas](/es/Add-ons/Code_snippets/Canvas)
   - : Algunos fragmentos de código orientados al desarrollador de extensiones usando `<canvas>`.
-- [Demo: Un laberinto básico](/es/docs/Web/API/Canvas_API/A_basic_ray-caster)
-  - : Una demo de una animación de laberinto usando canvas.
 - [Dibujar objetos DOM en un canvas](/es/docs/Web/API/Canvas_API/Drawing_DOM_objects_into_a_canvas)
   - : Cómo dibujar contenido DOM, como elementos HTML, en un canvas.
 - [Manipulación de vídeo usando canvas](/es/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)

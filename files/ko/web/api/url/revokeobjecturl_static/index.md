@@ -1,7 +1,6 @@
 ---
 title: URL.revokeObjectURL()
 slug: Web/API/URL/revokeObjectURL_static
-original_slug: Web/API/URL/revokeObjectURL
 ---
 
 {{ApiRef("URL API")}}
@@ -15,7 +14,7 @@ original_slug: Web/API/URL/revokeObjectURL
 ## 구문
 
 ```js
-URL.revokeObjectURL(objectURL)
+URL.revokeObjectURL(objectURL);
 ```
 
 ### 매개변수

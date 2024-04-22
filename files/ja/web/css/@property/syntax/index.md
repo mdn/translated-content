@@ -1,9 +1,11 @@
 ---
 title: syntax
 slug: Web/CSS/@property/syntax
+l10n:
+  sourceCommit: 3b39e41fb9393a13b16aaf58ba25174a62205041
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 **`syntax`** は [CSS](/ja/docs/Web/CSS) の記述子で、 {{cssxref("@property")}} [アットルール](/ja/docs/Web/CSS/At-rule)を使用する上で必要であり、そのプロパティで許可される構文を記述します。
 
@@ -12,13 +14,13 @@ slug: Web/CSS/@property/syntax
 以下のものはすべて、有効な構文の文字列です。
 
 ```css
-syntax: '<color>'; /* 色を受け入れる */
+syntax: "<color>"; /* 色を受け入れる */
 
-syntax: '<length> | <percentage>'; /* 長さまたはパーセント値を受け入れるが、両者を組み合わせた calc 式は受け入れない */
+syntax: "<length> | <percentage>"; /* 長さまたはパーセント値を受け入れるが、両者を組み合わせた calc 式は受け入れない */
 
-syntax: 'small | medium | large'; /* カスタム識別子で設定されたこれらの値の何れかを受け入れる */
+syntax: "small | medium | large"; /* カスタム識別子で設定されたこれらの値の何れかを受け入れる */
 
-syntax: '*'; /* 常に有効なトークン */
+syntax: "*"; /* 常に有効なトークン */
 ```
 
 ## 値
@@ -38,7 +40,7 @@ syntax: '*'; /* 常に有効なトークン */
 - `"<image>"`
   - : あらゆる有効な {{cssxref("&lt;image&gt;")}} の値です。
 - `"<url>"`
-  - : あらゆる有効な {{cssxref("url()","url()")}} の値です。
+  - : あらゆる有効な {{cssxref("url","url()")}} の値です。
 - `"<integer>"`
   - : あらゆる有効な {{cssxref("&lt;integer&gt;")}} の値です。
 - `"<angle>"`
@@ -70,20 +72,20 @@ syntax: '*'; /* 常に有効なトークン */
 
 ```css
 @property --my-color {
-  syntax: '<color>';
+  syntax: "<color>";
   inherits: false;
   initial-value: #c0ffee;
 }
 ```
 
-[JavaScript](/ja/docs/Web/JavaScript) の {{domxref('CSS.registerProperty')}} を使用すると次のようになります。
+[JavaScript](/ja/docs/Web/JavaScript) の {{domxref('CSS.registerProperty_static', 'CSS.registerProperty()')}} を使用すると次のようになります。
 
 ```js
 window.CSS.registerProperty({
-  name: '--my-color',
-  syntax: '<color>',
+  name: "--my-color",
+  syntax: "<color>",
   inherits: false,
-  initialValue: '#c0ffee',
+  initialValue: "#c0ffee",
 });
 ```
 
@@ -100,4 +102,4 @@ window.CSS.registerProperty({
 - [CSS プロパティと値 API](/ja/docs/Web/API/CSS_Properties_and_Values_API)
 - [CSS 描画 API](/ja/docs/Web/API/CSS_Painting_API)
 - [CSS 型付きオブジェクトモデル](/ja/docs/Web/API/CSS_Typed_OM_API)
-- [CSS Houdini](/ja/docs/Web/Guide/Houdini)
+- [Houdini API](/ja/docs/Web/API/Houdini_APIs)

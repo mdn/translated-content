@@ -38,7 +38,7 @@ slug: Mozilla/Firefox/Releases/101
   0 は有効なフレームレートの値ですが、Firefox は "フレームレート制限なし" と解釈しますので注意してください。
   詳しくは [Firefox バグ 1611957](https://bugzil.la/1611957) をご覧ください。
 
-- _Constructable stylesheets_ をサポートしました。[Shadow DOM](/ja/docs/Web/Web_Components/Using_shadow_DOM) とともに使用する、再使用可能なスタイルシートをとても簡単に作成できます。
+- _Constructable stylesheets_ をサポートしました。[Shadow DOM](/ja/docs/Web/API/Web_components/Using_shadow_DOM) とともに使用する、再使用可能なスタイルシートをとても簡単に作成できます。
   この更新には新しいスタイルシートを作成する [`CSSStyleSheet()` コンストラクター](/ja/docs/Web/API/CSSStyleSheet/CSSStyleSheet) や、スタイルシートに CSS 規則を追加するために使用できる {{domxref("CSSStyleSheet.replace()")}} および {{domxref("CSSStyleSheet.replaceSync()")}} メソッドが含まれます。
   詳しくは [Firefox バグ 1520690](https://bugzil.la/1520690) をご覧ください。
 

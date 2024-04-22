@@ -1,7 +1,6 @@
 ---
 title: Adición (+)
 slug: Web/JavaScript/Reference/Operators/Addition
-original_slug: Web/JavaScript/Referencia/Operadores/Adición
 ---
 
 {{jsSidebar("Operators")}}
@@ -24,26 +23,26 @@ Operator: x + y
 
 ```js
 // Número + Número -> adición
-1 + 2 // 3
+1 + 2; // 3
 
 // Booleano + Número -> adición
-true + 1 // 2
+true + 1; // 2
 
 // Booleano + Booleano -> adición
-false + false // 0
+false + false; // 0
 ```
 
 ### Concatenación de (cadenas) String
 
 ```js
 // String + String -> concatenación
-'fut' + 'bol' // "futbol"
+"fut" + "bol"; // "futbol"
 
 // Número + String -> concatenación
-5 + 'oh' // "5oh"
+5 + "oh"; // "5oh"
 
 // String + Booleano -> concatenación
-'fut' + false // "futfalse"
+"fut" + false; // "futfalse"
 ```
 
 ## Especificaciones

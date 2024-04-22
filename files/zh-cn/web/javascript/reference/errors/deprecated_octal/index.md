@@ -56,7 +56,7 @@ for octal literals use the \"0o\" prefix instead
 至于八进制转义序列，你可以使用十六进制转义序列来代替：
 
 ```js example-good
-'\xA9';
+"\xA9";
 ```
 
 ## 参见

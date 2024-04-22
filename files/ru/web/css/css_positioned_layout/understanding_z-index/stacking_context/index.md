@@ -1,8 +1,6 @@
 ---
 title: Контекст наложения (stacking context)
 slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context
-translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
-original_slug: Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
 ---
 
 Контекст наложения (stacking context) это концепция трёхмерного расположения HTML-элементов вдоль оси Z по отношению к пользователю, находящемуся перед экраном. HTML-элементы занимают это место по порядку, основанному на атрибутах элемента.
@@ -77,42 +75,45 @@ original_slug: Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_contex
 
 ```html
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
   <head>
-
-    <title>Understanding CSS z-index: The Stacking Context: Example Source</title>
+    <title>
+      Understanding CSS z-index: The Stacking Context: Example Source
+    </title>
 
     <style type="text/css">
       * {
         margin: 0;
-        }
+      }
       html {
         padding: 20px;
-        font: 12px/20px Arial, sans-serif;
-        }
+        font:
+          12px/20px Arial,
+          sans-serif;
+      }
       div {
         opacity: 0.7;
         position: relative;
-        }
+      }
       h1 {
         font: inherit;
         font-weight: bold;
-        }
-      #div1, #div2 {
+      }
+      #div1,
+      #div2 {
         border: 1px dashed #696;
         padding: 10px;
         background-color: #cfc;
-        }
+      }
       #div1 {
         z-index: 5;
         margin-bottom: 190px;
-        }
+      }
       #div2 {
         z-index: 2;
-        }
+      }
       #div3 {
         z-index: 4;
         opacity: 1;
@@ -123,21 +124,22 @@ original_slug: Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_contex
         border: 1px dashed #900;
         background-color: #fdd;
         padding: 40px 20px 20px;
-        }
-      #div4, #div5 {
+      }
+      #div4,
+      #div5 {
         border: 1px dashed #996;
         background-color: #ffc;
-        }
+      }
       #div4 {
         z-index: 6;
         margin-bottom: 15px;
         padding: 25px 10px 5px;
-        }
+      }
       #div5 {
         z-index: 1;
         margin-top: 15px;
         padding: 5px 10px;
-        }
+      }
       #div6 {
         z-index: 3;
         position: absolute;
@@ -149,50 +151,57 @@ original_slug: Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_contex
         padding-top: 125px;
         background-color: #ddf;
         text-align: center;
-        }
+      }
     </style>
-
   </head>
   <body>
-
     <div id="div1">
       <h1>Division Element #1</h1>
-      <code>position: relative;<br/>
-      z-index: 5;</code>
+      <code
+        >position: relative;<br />
+        z-index: 5;</code
+      >
     </div>
 
     <div id="div2">
       <h1>Division Element #2</h1>
-      <code>position: relative;<br/>
-      z-index: 2;</code>
+      <code
+        >position: relative;<br />
+        z-index: 2;</code
+      >
     </div>
 
     <div id="div3">
-
       <div id="div4">
         <h1>Division Element #4</h1>
-        <code>position: relative;<br/>
-        z-index: 6;</code>
+        <code
+          >position: relative;<br />
+          z-index: 6;</code
+        >
       </div>
 
       <h1>Division Element #3</h1>
-      <code>position: absolute;<br/>
-      z-index: 4;</code>
+      <code
+        >position: absolute;<br />
+        z-index: 4;</code
+      >
 
       <div id="div5">
         <h1>Division Element #5</h1>
-        <code>position: relative;<br/>
-        z-index: 1;</code>
+        <code
+          >position: relative;<br />
+          z-index: 1;</code
+        >
       </div>
 
       <div id="div6">
         <h1>Division Element #6</h1>
-        <code>position: absolute;<br/>
-        z-index: 3;</code>
+        <code
+          >position: absolute;<br />
+          z-index: 3;</code
+        >
       </div>
-
     </div>
-
   </body>
 </html>
 ```

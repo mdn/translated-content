@@ -1,7 +1,6 @@
 ---
 title: alertdialog ロールの使用
 slug: Web/Accessibility/ARIA/Roles/alertdialog_role
-original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role
 ---
 
 ### 説明
@@ -40,10 +39,17 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role
 以下のコードスニペットは、メッセージと\[OK]ボタンだけを提供するアラートダイアログをマークアップする方法を示しています。
 
 ```html
-<div role="alertdialog" aria-labelledby="dialog1Title" aria-describedby="dialog1Desc">
+<div
+  role="alertdialog"
+  aria-labelledby="dialog1Title"
+  aria-describedby="dialog1Desc">
   <div role="document" tabindex="0">
-    <h2 id="dialog1Title">あなたのログインセッションは期限切れになりそうです</h2>
-    <p id="dialog1Desc">セッションを延長するには、[OK]ボタンをクリックしてください。</p>
+    <h2 id="dialog1Title">
+      あなたのログインセッションは期限切れになりそうです
+    </h2>
+    <p id="dialog1Desc">
+      セッションを延長するには、[OK]ボタンをクリックしてください。
+    </p>
     <button>OK</button>
   </div>
 </div>

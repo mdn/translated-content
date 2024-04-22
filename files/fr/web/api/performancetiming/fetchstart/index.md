@@ -1,18 +1,6 @@
 ---
 title: PerformanceTiming.fetchStart
 slug: Web/API/PerformanceTiming/fetchStart
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - Navigation Timing
-  - PerformanceTiming
-  - Property
-  - Propriété
-  - Read-only
-  - legacy
-  - fetchStart
-translation_of: Web/API/PerformanceTiming/fetchStart
 ---
 
 {{APIRef("Navigation Timing")}}

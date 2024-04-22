@@ -1,10 +1,6 @@
 ---
 title: clip-path
 slug: Web/SVG/Attribute/clip-path
-tags:
-  - SVG
-  - SVG Attribute
-translation_of: Web/SVG/Attribute/clip-path
 ---
 
 {{SVGRef}}
@@ -18,7 +14,11 @@ Cet attribut peut être appliqué sur tous les éléments, en revanche il n'aura
 ## Exemple
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -28,22 +28,42 @@ html,body,svg { height:100% }
   </clipPath>
 
   <!-- En haut à gauche: Applique un détourage précédemment crée -->
-  <rect x="1" y="1" width="8" height="8" stroke="green"
-        clip-path="url(#myClip)" />
+  <rect
+    x="1"
+    y="1"
+    width="8"
+    height="8"
+    stroke="green"
+    clip-path="url(#myClip)" />
 
   <!-- En haut à droite: Applique un détourage sur fill-box via une forme CSS.
        Revient à créer un détourage avec clipPathUnits="objectBoundingBox" -->
-  <rect x="11" y="1" width="8" height="8" stroke="green"
-        clip-path="circle() fill-box" />
+  <rect
+    x="11"
+    y="1"
+    width="8"
+    height="8"
+    stroke="green"
+    clip-path="circle() fill-box" />
 
   <!-- En bas à gauche: Applique un détourage sur stroke-box via une forme CSS. -->
-  <rect x="1" y="11" width="8" height="8" stroke="green"
-        clip-path="circle() stroke-box" />
+  <rect
+    x="1"
+    y="11"
+    width="8"
+    height="8"
+    stroke="green"
+    clip-path="circle() stroke-box" />
 
   <!-- En bas à droite: Applique un détourage sur view-box via une forme CSS.
        Revient à créer un détourage avec clipPathUnits="userSpaceOnUse" -->
-  <rect x="11" y="11" width="8" height="8" stroke="green"
-        clip-path="circle() view-box" />
+  <rect
+    x="11"
+    y="11"
+    width="8"
+    height="8"
+    stroke="green"
+    clip-path="circle() view-box" />
 </svg>
 ```
 

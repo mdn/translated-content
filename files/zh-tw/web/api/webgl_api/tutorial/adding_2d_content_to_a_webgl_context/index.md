@@ -72,7 +72,7 @@ function initShaderProgram(gl, vsSource, fsSource) {
   if (!gl.getProgramParameter(shaderProgram, gl.LINK_STATUS)) {
     alert(
       "Unable to initialize the shader program: " +
-        gl.getProgramInfoLog(shaderProgram)
+        gl.getProgramInfoLog(shaderProgram),
     );
     return null;
   }
@@ -99,7 +99,7 @@ function loadShader(gl, type, source) {
 
   if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
     alert(
-      "An error occurred compiling the shaders: " + gl.getShaderInfoLog(shader)
+      "An error occurred compiling the shaders: " + gl.getShaderInfoLog(shader),
     );
     gl.deleteShader(shader);
     return null;
@@ -207,7 +207,7 @@ function drawScene(gl, programInfo, buffers) {
   mat4.translate(
     modelViewMatrix, // destination matrix
     modelViewMatrix, // matrix to translate
-    [-0.0, 0.0, -6.0]
+    [-0.0, 0.0, -6.0],
   ); // amount to translate
 
   // Tell WebGL how to pull out the positions from the position
@@ -226,7 +226,7 @@ function drawScene(gl, programInfo, buffers) {
       type,
       normalize,
       stride,
-      offset
+      offset,
     );
     gl.enableVertexAttribArray(programInfo.attribLocations.vertexPosition);
   }
@@ -240,12 +240,12 @@ function drawScene(gl, programInfo, buffers) {
   gl.uniformMatrix4fv(
     programInfo.uniformLocations.projectionMatrix,
     false,
-    projectionMatrix
+    projectionMatrix,
   );
   gl.uniformMatrix4fv(
     programInfo.uniformLocations.modelViewMatrix,
     false,
-    modelViewMatrix
+    modelViewMatrix,
   );
 
   {
@@ -260,9 +260,9 @@ function drawScene(gl, programInfo, buffers) {
 
 接下來，我們讀入正方形的位置，並把它擺在離相機 6 單位遠的位置。然後我們將正方形頂點的 buffer 綁定到 gl 上。最後我們呼叫{{domxref("WebGLRenderingContext.drawArrays()", "drawArrays()")}}函數來渲染物件。
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample2/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample2/index.html', 670, 510) }}
 
-[檢視完整程式碼](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample2) | [開啟新頁面來檢視結果](http://mdn.github.io/webgl-examples/tutorial/sample2/)
+[檢視完整程式碼](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample2) | [開啟新頁面來檢視結果](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample2/)
 
 ## 矩陣運算
 

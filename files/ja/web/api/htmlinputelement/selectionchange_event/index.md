@@ -1,5 +1,6 @@
 ---
 title: "HTMLInputElement: selectionchange イベント"
+short-title: selectionchange
 slug: Web/API/HTMLInputElement/selectionchange_event
 l10n:
   sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
@@ -38,7 +39,10 @@ onselectionchange = (event) => {};
 
 ```html
 <div>
-  こちらにテキストを入力して選択してください:<br /><input id="mytext" rows="2" cols="20" />
+  こちらにテキストを入力して選択してください:<br /><input
+    id="mytext"
+    rows="2"
+    cols="20" />
 </div>
 <div>selectionStart: <span id="start"></span></div>
 <div>selectionEnd: <span id="end"></span></div>

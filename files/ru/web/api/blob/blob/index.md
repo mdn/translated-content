@@ -1,7 +1,6 @@
 ---
 title: Blob()
 slug: Web/API/Blob/Blob
-translation_of: Web/API/Blob/Blob
 ---
 
 {{APIRef("File API")}}
@@ -26,16 +25,14 @@ var aBlob = new Blob( array, options );
 
 ```js
 var aFileParts = ['<a id="a"><b id="b">hey!</b></a>']; // an array consisting of a single DOMString
-var oMyBlob = new Blob(aFileParts, {type : 'text/html'}); // the blob
+var oMyBlob = new Blob(aFileParts, { type: "text/html" }); // the blob
 ```
 
-## Спецификация
+## Спецификации
 
-| Specification                                                            | Status                       | Comment             |
-| ------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('File API', '#constructorBlob', 'Blob()')}} | {{Spec2('File API')}} | Initial definition. |
+{{Specifications}}
 
-## Браузерная совместимость
+## Совместимость с браузерами
 
 {{Compat}}
 

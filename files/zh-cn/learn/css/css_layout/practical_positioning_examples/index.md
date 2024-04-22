@@ -10,7 +10,7 @@ slug: Learn/CSS/CSS_layout/Practical_positioning_examples
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row"><p>预备知识：</p></th>
+      <th scope="row"><p>前提：</p></th>
       <td>
         <p>
           HTML 基础 (学习<a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
@@ -35,13 +35,13 @@ slug: Learn/CSS/CSS_layout/Practical_positioning_examples
 
 ![](tabbed-info-box.png)
 
-> **备注：** 你能看完整的示例，可运行在 [info-box.html](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) ([source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html))。检出它以理解你在本文章里要建立什么。
+> **备注：** 你能看完整的示例，可运行在 [info-box.html](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) ([source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box.html))。检出它以理解你在本文章里要建立什么。
 
 你可能会想：”为什么不仅仅做独立的选项卡为一个独立的网页，然后通过点击不同的标签来在不同的页面跳转来达到这个效果？“这样代码可能会简单一些，是的。但是这样每个独立的”页面“视图将会实际上是一个新加载的网页，跨视图更难保存信息，并把这个特征融入一个更大的 UI 设计。另外，所谓的”单页应用“正在变得非常流行——尤其是移动网页 UI——因为把一切的服务放在一个单独的文件上可以减少 HTTP 请求的数量来浏览所有内容，从而提高性能。
 
 > **备注：** 一些网络开发者甚至更超前，每次只加载一页的信息，并且使用 JavaScript 诸如 [XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest)特征动态改变信息显示。但是，在你此时的学习中，我们希望尽可能保持简单。接下来会有一些 JavaScript，但是只有一点。
 
-在开始之前，我们需要你拷贝文件到本地，当作起始的 HTML 文件—— [info-box-start.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box-start.html). 保存到你的计算机合适的位置，然后在你的编辑器里打开。让我们看看包含在 body 里的 HTML 代码：
+在开始之前，我们需要你拷贝文件到本地，当作起始的 HTML 文件——[info-box-start.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box-start.html)。保存到你的计算机合适的位置，然后在你的编辑器里打开。让我们看看包含在 body 里的 HTML 代码：
 
 ```html
 <section class="info-box">
@@ -54,17 +54,32 @@ slug: Learn/CSS/CSS_layout/Practical_positioning_examples
     <article class="active-panel">
       <h2>The first tab</h2>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque turpis nibh, porttitor nec venenatis eu, pulvinar in augue. Vestibulum et orci scelerisque, vulputate tellus quis, lobortis dui. Vivamus varius libero at ipsum mattis efficitur ut nec nisl. Nullam eget tincidunt metus. Donec ultrices, urna maximus consequat aliquet, dui neque eleifend lorem, a auctor libero turpis at sem. Aliquam ut porttitor urna. Nulla facilisi.</p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+        turpis nibh, porttitor nec venenatis eu, pulvinar in augue. Vestibulum
+        et orci scelerisque, vulputate tellus quis, lobortis dui. Vivamus varius
+        libero at ipsum mattis efficitur ut nec nisl. Nullam eget tincidunt
+        metus. Donec ultrices, urna maximus consequat aliquet, dui neque
+        eleifend lorem, a auctor libero turpis at sem. Aliquam ut porttitor
+        urna. Nulla facilisi.
+      </p>
     </article>
     <article>
       <h2>The second tab</h2>
 
-      <p>This tab hasn't got any Lorem Ipsum in it. But the content isn't very exciting all the same.</p>
+      <p>
+        This tab hasn't got any Lorem Ipsum in it. But the content isn't very
+        exciting all the same.
+      </p>
     </article>
     <article>
       <h2>The third tab</h2>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque turpis nibh, porttitor nec venenatis eu, pulvinar in augue. And now an ordered list: how exciting!</p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+        turpis nibh, porttitor nec venenatis eu, pulvinar in augue. And now an
+        ordered list: how exciting!
+      </p>
 
       <ol>
         <li>dui neque eleifend lorem, a auctor libero turpis at sem.</li>
@@ -150,7 +165,8 @@ body {
 最后，对于本节，我们将会在链接状态上设置一些样式。首先，我们要设置标签的 `:focus` 和 `:hover` 状态，让他们在获得焦点/鼠标悬浮的时候看起来不同，给用户提供一些可视化反馈。其次，当某个选项卡的类（ `class` ）出现 `active` 时，我们为其设置一条相同的样式规则。我们将通过使用 JavaScript 来设置，当一个标签被点击时。把这些 CSS 放置在你的其他样式后面：
 
 ```css
-.info-box li a:focus, .info-box li a:hover {
+.info-box li a:focus,
+.info-box li a:hover {
   background-color: #a60000;
   color: white;
 }
@@ -200,32 +216,32 @@ body {
 让这些特性工作的最后一步是添加一些 JavaScript。添加下列一块代码，准确的写在你的开始和结束的{{htmlelement("script")}}标签之间（在接下来的 HTML 内容中你将会发现这些）：
 
 ```js
-var tabs = document.querySelectorAll('.info-box li a');
-var panels = document.querySelectorAll('.info-box article');
+var tabs = document.querySelectorAll(".info-box li a");
+var panels = document.querySelectorAll(".info-box article");
 
-for(i = 0; i < tabs.length; i++) {
+for (i = 0; i < tabs.length; i++) {
   var tab = tabs[i];
   setTabHandler(tab, i);
 }
 
 function setTabHandler(tab, tabPos) {
-  tab.onclick = function() {
-    for(i = 0; i < tabs.length; i++) {
-      if(tabs[i].getAttribute('class')) {
-        tabs[i].removeAttribute('class');
+  tab.onclick = function () {
+    for (i = 0; i < tabs.length; i++) {
+      if (tabs[i].getAttribute("class")) {
+        tabs[i].removeAttribute("class");
       }
     }
 
-    tab.setAttribute('class', 'active');
+    tab.setAttribute("class", "active");
 
-    for(i = 0; i < panels.length; i++) {
-      if(panels[i].getAttribute('class')) {
-        panels[i].removeAttribute('class');
+    for (i = 0; i < panels.length; i++) {
+      if (panels[i].getAttribute("class")) {
+        panels[i].removeAttribute("class");
       }
     }
 
-    panels[tabPos].setAttribute('class', 'active-panel');
-  }
+    panels[tabPos].setAttribute("class", "active-panel");
+  };
 }
 ```
 
@@ -250,7 +266,7 @@ function setTabHandler(tab, tabPos) {
 
 > **备注：** 你可以点击[蓝字](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/fixed-info-box.html)预览完成后的效果，看看哪些部分是你在这篇文章里你要制作的。
 
-在开始的时候，你可以使用第一部分中完成的例子，或者从我们的 Github 仓库中拷贝 [info-box.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html) 到本地。
+在开始的时候，你可以使用第一部分中完成的例子，或者从我们的 Github 仓库中拷贝 [info-box.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box.html) 到本地。
 
 ### 添加 HTML
 
@@ -259,14 +275,30 @@ function setTabHandler(tab, tabPos) {
 ```html
 <section class="fake-content">
   <h1>Fake content</h1>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
 </section>
 ```
 
@@ -315,7 +347,7 @@ function setTabHandler(tab, tabPos) {
 
 > **备注：** 你可以点击[蓝字](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/hidden-info-panel.html)预览完成后的效果，仔细看看哪些部分是你在这篇文章里你要制作的。
 
-在一开始，老规矩在我们的 GitHub 代码仓库拷贝 [hideen-info-panel-start.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/hidden-info-panel.html)（[源码](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/hidden-info-panel.html)）。这个例子并没有用先前的例子，所以我们需要一个新的开始文件。让我们来仔细观察一下这个 HTML 文件：
+在一开始，老规矩在我们的 GitHub 代码仓库拷贝 [hideen-info-panel-start.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/hidden-info-panel.html)（[源码](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/hidden-info-panel.html)）。这个例子并没有用先前的例子，所以我们需要一个新的开始文件。让我们来仔细观察一下这个 HTML 文件：
 
 ```css
 <label for="toggle">❔</label>
@@ -395,17 +427,17 @@ aside {
 
 ### 设置选择后的状态
 
-这是最后要添加的一点 CSS ——把这些放到你的 CSS 底部：
+这是最后要添加的一点 CSS——把这些放到你的 CSS 底部：
 
 ```css
-input[type=checkbox]:checked + aside {
+input[type="checkbox"]:checked + aside {
   right: 0px;
 }
 ```
 
 这里的选择器是复杂的——我们选择与 `<input>` 元素邻接的 `<aside>` 元素，但是仅仅在它被选择时（请注意使用 {{cssxref(":checked")}} 伪类来实现此目的），在这种情况下，我们将 `<aside>` 的 {{cssxref("right")}} 属性设置为 0px，会造成面板再次出现在屏幕上（由于过渡属性会平滑的出现）。再一次点击这个标签会取消选中 checkbox，面板将会跟着再一次消失。
 
-所以你有 ——一个相当巧妙的避免使用 JavaScript 来创建一个切换按钮效果方式。这将在 IE9 及以上版本中起作用（平滑过渡将在 IE10 及更高版本中起作用）。这种效果确实有一些问题 ——这是有点滥用表单元素（它们不是为了这个目的），并且在无障碍方面效果不是很好——标签在默认情况下不可聚焦，并且表单元素的非语义使用可能会导致屏幕朗读器出现问题。JavaScript 和链接或按钮可能更合适，但这样的实验仍然很有趣。
+所以你有——一个相当巧妙的避免使用 JavaScript 来创建一个切换按钮效果方式。这将在 IE9 及以上版本中起作用（平滑过渡将在 IE10 及更高版本中起作用）。这种效果确实有一些问题——这是有点滥用表单元素（它们不是为了这个目的），并且在无障碍方面效果不是很好——标签在默认情况下不可聚焦，并且表单元素的非语义使用可能会导致屏幕朗读器出现问题。JavaScript 和链接或按钮可能更合适，但这样的实验仍然很有趣。
 
 ## 总结
 

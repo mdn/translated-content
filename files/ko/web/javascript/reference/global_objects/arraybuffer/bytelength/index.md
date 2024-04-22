@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/byteLength
 ## 구문
 
 ```js
-    arraybuffer.byteLength
+arraybuffer.byteLength;
 ```
 
 ## 설명

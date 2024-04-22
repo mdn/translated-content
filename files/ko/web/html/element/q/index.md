@@ -1,5 +1,5 @@
 ---
-title: '<q>: 인라인 인용문 요소'
+title: "<q>: 인라인 인용문 요소"
 slug: Web/HTML/Element/q
 ---
 
@@ -61,16 +61,18 @@ slug: Web/HTML/Element/q
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
-- {{htmlattrdef("cite")}}
+- `cite`
   - : 인용문의 출처 문서나 메시지를 가리키는 URL. 인용문의 맥락 혹은 출처 정보를 가리킬 용도입니다.
 
 ## 예제
 
 ```html
-<p>Mozilla 재단의 웹사이트에 따르면,
-  <q
-  cite="https://www.mozilla.org/en-US/about/history/details/">Firefox 1.0
-  은 2004년 처음 공개되어 큰 성공을 거두었습니다.</q></p>
+<p>
+  Mozilla 재단의 웹사이트에 따르면,
+  <q cite="https://www.mozilla.org/en-US/about/history/details/"
+    >Firefox 1.0 은 2004년 처음 공개되어 큰 성공을 거두었습니다.</q
+  >
+</p>
 ```
 
 {{EmbedLiveSample('예제')}}

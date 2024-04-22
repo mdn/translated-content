@@ -122,7 +122,7 @@ yarn global add @vue/cli
 
 在其他框架都鼓励把模板、逻辑和样式的代码区分成不同文件的时候，Vue 却反其道行之。使用[单文件组件](https://vuejs.org/v2/guide/single-file-components.html)，Vue 把模板、相关脚本和 CSS 一起整合放在 `.vue` 结尾的一个单文件中。这些文件最终会通过 JS 打包工具（例如 Webpack）处理，这意味着你可以使用构建时工具。你可以使用比如 Babel、TypeScript、SCSS 等来创建更多复杂的组件。
 
-另外，使用 Vue CLI 创建的项目被配置为在开箱即用的情况下借助 Webpack 使用 .`vue`文件。实际上，如果你查看我们使用 CLI 创建的项目中的 `src` 文件夹，你会看到第一个`.vue` 文件：`App.vue`。
+另外，使用 Vue CLI 创建的项目被配置为在开箱即用的情况下借助 Webpack 使用 `.vue` 文件。实际上，如果你查看我们使用 CLI 创建的项目中的 `src` 文件夹，你会看到第一个`.vue` 文件：`App.vue`。
 
 现在我们来开始探讨。
 
@@ -139,14 +139,14 @@ yarn global add @vue/cli
 对于 `App.vue`，我们的默认导出将组件的名称设置为 `App` ，并通过将 `HelloWorld` 组件添加到 `components` 属性中来注册它。以这种方式注册组件时，就是在本地注册。本地注册的组件只能在注册它们的组件内部使用，因此你需要将其导入并注册到使用它们的每个组件文件中。这对于拆包/摇树优化（tree shaking）很有用，因为并不是应用程序中的每个页面都不一定需要每个组件。
 
 ```js
-import HelloWorld from './components/HelloWorld.vue';
+import HelloWorld from "./components/HelloWorld.vue";
 
 export default {
   name: "App",
   components: {
     // 可以在这里本地注册组件。
     HelloWorld,
-  }
+  },
 };
 ```
 
@@ -206,7 +206,7 @@ import HelloWorld from "./components/HelloWorld.vue";
 
 ```js
 components: {
-  HelloWorld
+  HelloWorld;
 }
 ```
 

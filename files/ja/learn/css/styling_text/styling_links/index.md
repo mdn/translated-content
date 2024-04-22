@@ -92,28 +92,21 @@ p {
 
 ```css
 a {
-
 }
 
-
 a:link {
-
 }
 
 a:visited {
-
 }
 
 a:focus {
-
 }
 
 a:hover {
-
 }
 
 a:active {
-
 }
 ```
 
@@ -144,31 +137,32 @@ a:link {
 }
 
 a:visited {
-  color: #437A16;
+  color: #437a16;
 }
 
 a:focus {
   border-bottom: 1px solid;
-  background: #BAE498;
+  background: #bae498;
 }
 
 a:hover {
   border-bottom: 1px solid;
-  background: #CDFEAA;
+  background: #cdfeaa;
 }
 
 a:active {
   background: #265301;
-  color: #CDFEAA;
+  color: #cdfeaa;
 }
 ```
 
 CSS を適用するためのサンプル HTML も提供します。
 
 ```html
-<p>There are several browsers available, such as <a href="#">Mozilla
-Firefox</a>, <a href="#">Google Chrome</a>, and
-<a href="#">Microsoft Edge</a>.</p>
+<p>
+  There are several browsers available, such as <a href="#">Mozilla Firefox</a>,
+  <a href="#">Google Chrome</a>, and <a href="#">Microsoft Edge</a>.
+</p>
 ```
 
 2 つをまとめると、この結果が得られます。
@@ -194,14 +188,25 @@ Firefox</a>, <a href="#">Google Chrome</a>, and
 間違えた場合は、_Reset_ ボタンを使用していつでもリセットできます。 本当に立ち往生してしまったら、上に示した例を挿入するために _Show solution_ ボタンを押してください。
 
 ```html hidden
-<div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
+<div
+  class="body-wrapper"
+  style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
   <h2>HTML Input</h2>
-  <textarea id="code" class="html-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"><p>There are several browsers available, such as <a href="#">Mozilla
+  <textarea
+    id="code"
+    class="html-input"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
+<p>There are several browsers available, such as <a href="#">Mozilla
  Firefox</a>, <a href="#">Google Chrome</a>, and
-<a href="#">Microsoft Edge</a>.</p></textarea>
+<a href="#">Microsoft Edge</a>.</p></textarea
+  >
 
   <h2>CSS Input</h2>
-  <textarea id="code" class="css-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">a {
+  <textarea
+    id="code"
+    class="css-input"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
+a {
 
 }
 
@@ -223,13 +228,24 @@ a:hover {
 
 a:active {
 
-}</textarea>
+}</textarea
+  >
 
   <h2>Output</h2>
-  <div class="output" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></div>
+  <div
+    class="output"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></div>
   <div class="controls">
-    <input id="reset" type="button" value="Reset" style="margin: 10px 10px 0 0;">
-    <input id="solution" type="button" value="Show solution" style="margin: 10px 0 0 10px;">
+    <input
+      id="reset"
+      type="button"
+      value="Reset"
+      style="margin: 10px 10px 0 0;" />
+    <input
+      id="solution"
+      type="button"
+      value="Show solution"
+      style="margin: 10px 0 0 10px;" />
   </div>
 </div>
 ```
@@ -243,8 +259,8 @@ var cssCode = cssInput.value;
 var output = document.querySelector(".output");
 var solution = document.getElementById("solution");
 
-var styleElem = document.createElement('style');
-var headElem = document.querySelector('head');
+var styleElem = document.createElement("style");
+var headElem = document.querySelector("head");
 headElem.appendChild(styleElem);
 
 function drawOutput() {
@@ -252,15 +268,16 @@ function drawOutput() {
   styleElem.textContent = cssInput.value;
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   htmlInput.value = htmlCode;
   cssInput.value = cssCode;
   drawOutput();
 });
 
-solution.addEventListener("click", function() {
+solution.addEventListener("click", function () {
   htmlInput.value = htmlCode;
-  cssInput.value = 'p {\n  font-size: 1.2rem;\n  font-family: sans-serif;\n  line-height: 1.4;\n}\n\na {\n  outline: none;\n  text-decoration: none;\n  padding: 2px 1px 0;\n}\n\na:link {\n  color: #265301;\n}\n\na:visited {\n  color: #437A16;\n}\n\na:focus {\n  border-bottom: 1px solid;\n  background: #BAE498;\n}\n\na:hover {\n  border-bottom: 1px solid;\n  background: #CDFEAA;\n}\n\na:active {\n  background: #265301;\n  color: #CDFEAA;\n}';
+  cssInput.value =
+    "p {\n  font-size: 1.2rem;\n  font-family: sans-serif;\n  line-height: 1.4;\n}\n\na {\n  outline: none;\n  text-decoration: none;\n  padding: 2px 1px 0;\n}\n\na:link {\n  color: #265301;\n}\n\na:visited {\n  color: #437A16;\n}\n\na:focus {\n  border-bottom: 1px solid;\n  background: #BAE498;\n}\n\na:hover {\n  border-bottom: 1px solid;\n  background: #CDFEAA;\n}\n\na:active {\n  background: #265301;\n  color: #CDFEAA;\n}";
   drawOutput();
 });
 
@@ -278,9 +295,11 @@ window.addEventListener("load", drawOutput);
 欲しい効果が得られる HTML と CSS を見てみましょう。 まず、装飾する簡単な HTML です。
 
 ```html
-<p>For more information on the weather, visit our <a href="#">weather page</a>,
-look at <a href="http://#">weather on Wikipedia</a>, or check
-out <a href="http://#">weather on Extreme Science</a>.</p>
+<p>
+  For more information on the weather, visit our <a href="#">weather page</a>,
+  look at <a href="http://#">weather on Wikipedia</a>, or check out
+  <a href="http://#">weather on Extreme Science</a>.
+</p>
 ```
 
 次に、CSS です。
@@ -310,7 +329,8 @@ a:visited {
   color: purple;
 }
 
-a:focus, a:hover {
+a:focus,
+a:hover {
   border-bottom: 1px solid;
 }
 
@@ -319,7 +339,7 @@ a:active {
 }
 
 a[href*="http"] {
-  background: url('external-link-52.png') no-repeat 100% 0;
+  background: url("external-link-52.png") no-repeat 100% 0;
   background-size: 16px 16px;
   padding-right: 19px;
 }
@@ -349,14 +369,19 @@ a[href*="http"] {
 
 ```html
 <ul>
-  <li><a href="#">Home</a></li><li><a href="#">Pizza</a></li><li><a href="#">Music</a></li><li><a href="#">Wombats</a></li><li><a href="#">Finland</a></li>
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Pizza</a></li>
+  <li><a href="#">Music</a></li>
+  <li><a href="#">Wombats</a></li>
+  <li><a href="#">Finland</a></li>
 </ul>
 ```
 
 そして CSS です。
 
 ```css
-body,html {
+body,
+html {
   margin: 0;
   font-family: sans-serif;
 }
@@ -385,7 +410,9 @@ li:last-child a {
   margin-right: 0;
 }
 
-a:link, a:visited, a:focus {
+a:link,
+a:visited,
+a:focus {
   background: yellow;
 }
 

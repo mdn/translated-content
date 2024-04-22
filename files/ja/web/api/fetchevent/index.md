@@ -65,7 +65,7 @@ self.addEventListener("fetch", (event) => {
 
       // キャッシュに一致するものがなければ、ネットワークのものを使用
       return fetch(event.request);
-    })()
+    })(),
   );
 });
 ```

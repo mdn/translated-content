@@ -13,8 +13,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getOwnPropertyDescript
 
 ```js
 new Proxy(target, {
-  getOwnPropertyDescriptor(target, prop) {
-  }
+  getOwnPropertyDescriptor(target, prop) {},
 });
 ```
 
@@ -60,15 +59,18 @@ new Proxy(target, {
 다음 코드는 {{jsxref("Object.getOwnPropertyDescriptor()")}}를 트래핑합니다.
 
 ```js
-const p = new Proxy({ a: 20}, {
-  getOwnPropertyDescriptor(target, prop) {
-    console.log(`called: ${prop}`);
-    return { configurable: true, enumerable: true, value: 10 };
+const p = new Proxy(
+  { a: 20 },
+  {
+    getOwnPropertyDescriptor(target, prop) {
+      console.log(`called: ${prop}`);
+      return { configurable: true, enumerable: true, value: 10 };
+    },
   },
-});
+);
 
-console.log(Object.getOwnPropertyDescriptor(p, 'a').value); // "called: a"
-                                                            // 10
+console.log(Object.getOwnPropertyDescriptor(p, "a").value); // "called: a"
+// 10
 ```
 
 다음 코드는 불변 조건을 위반합니다.
@@ -82,7 +84,7 @@ const p = new Proxy(obj, {
   },
 });
 
-Object.getOwnPropertyDescriptor(p, 'a'); // TypeError is thrown
+Object.getOwnPropertyDescriptor(p, "a"); // TypeError is thrown
 ```
 
 ## 명세서

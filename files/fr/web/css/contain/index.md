@@ -1,12 +1,6 @@
 ---
 title: contain
 slug: Web/CSS/contain
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-translation_of: Web/CSS/contain
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

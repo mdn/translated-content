@@ -27,10 +27,10 @@ Intl.getCanonicalLocales(locales)
 ## 示例
 
 ```js
-Intl.getCanonicalLocales('EN-US'); // ["en-US"]
-Intl.getCanonicalLocales(['EN-US', 'Fr']); // ["en-US", "fr"]
+Intl.getCanonicalLocales("EN-US"); // ["en-US"]
+Intl.getCanonicalLocales(["EN-US", "Fr"]); // ["en-US", "fr"]
 
-Intl.getCanonicalLocales('EN_US');
+Intl.getCanonicalLocales("EN_US");
 // RangeError:'EN_US' is not a structurally valid language tag
 ```
 

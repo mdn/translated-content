@@ -1,16 +1,9 @@
 ---
 title: border
 slug: Web/CSS/border
-tags:
-  - CSS Границы
-  - CSS-свойства
-  - Разметка
-  - Совместимость Мобильных Браузеров
-  - Справка
-translation_of: Web/CSS/border
 ---
 
-{{CSSRef("CSS Borders")}}
+{{CSSRef}}
 
 Свойство [CSS](/ru/docs/CSS) **`border`** это [универсальное свойство](/ru/docs/Web/CSS/Shorthand_properties) для указания всех персональных свойств границ за раз: {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, и {{Cssxref("border-color")}}.
 
@@ -76,7 +69,7 @@ style {
 
 {{cssinfo}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 

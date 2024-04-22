@@ -131,7 +131,7 @@ const fruits = ["apple", "banana", "grapes", "mango", "orange"];
  * 根据搜索条件（查询）筛选数组项
  */
 function filterItems(arr, query) {
-    return arr.filter((el) => el.toLowerCase().includes(query.toLowerCase()));
+  return arr.filter((el) => el.toLowerCase().includes(query.toLowerCase()));
 }
 
 console.log(filterItems(fruits, "ap")); // ['apple', 'grapes']
@@ -184,7 +184,7 @@ words = ["spray", "limit", "exuberant", "destruction", "elite", "present"];
 const appendedWords = words.filter((word, index, arr) => {
   arr.push("new");
   return word.length < 6;
-})
+});
 
 console.log(appendedWords);
 // 只有三个符合条件，即使 `words` 本身现在有更多字符长度小于 6 的单词
@@ -195,7 +195,7 @@ words = ["spray", "limit", "exuberant", "destruction", "elite", "present"];
 const deleteWords = words.filter((word, index, arr) => {
   arr.pop();
   return word.length < 6;
-})
+});
 
 console.log(deleteWords);
 // 注意我们没有得到 'elite'，因为它在过滤器访问到它之前就已经从 'words' 弹出了

@@ -34,13 +34,15 @@ slug: Web/API/BarcodeDetector
 
 ```js
 // 新しい検出器の生成
-var barcodeDetector = new BarcodeDetector({formats: ['code_39', 'codabar', 'ean_13']});
+var barcodeDetector = new BarcodeDetector({
+  formats: ["code_39", "codabar", "ean_13"],
+});
 
 // 互換性のチェック
 if (barcodeDetector) {
-  console.log('Barcode Detector に対応しています。');
+  console.log("Barcode Detector に対応しています。");
 } else {
-  console.log('Barcode Detector はこのブラウザーでは対応していません。');
+  console.log("Barcode Detector はこのブラウザーでは対応していません。");
 }
 ```
 
@@ -50,10 +52,9 @@ if (barcodeDetector) {
 
 ```js
 // check supported types
-BarcodeDetector.getSupportedFormats()
-  .then(supportedFormats => {
-    supportedFormats.forEach(format => console.log(format));
-  });
+BarcodeDetector.getSupportedFormats().then((supportedFormats) => {
+  supportedFormats.forEach((format) => console.log(format));
+});
 ```
 
 ### バーコードの検出
@@ -61,14 +62,14 @@ BarcodeDetector.getSupportedFormats()
 この例では、 `detect()` メソッドを使用して、与えられた画像内のバーコードを検出しています。これらは繰り返し処理され、バーコードのデータはコンソールに記録されます。
 
 ```js
-  barcodeDetector.detect(imageEl)
-    .then(barcodes => {
-      barcodes.forEach(barcode => console.log(barcode.rawData));
-    })
-    .catch(err => {
-      console.log(err);
-    })
-
+barcodeDetector
+  .detect(imageEl)
+  .then((barcodes) => {
+    barcodes.forEach((barcode) => console.log(barcode.rawData));
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 ```
 
 ## 仕様書

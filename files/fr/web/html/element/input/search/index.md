@@ -1,8 +1,6 @@
 ---
 title: <input type="search">
 slug: Web/HTML/Element/input/search
-translation_of: Web/HTML/Element/input/search
-browser-compat: html.elements.input.input-search
 ---
 
 {{HTMLSidebar}}
@@ -165,7 +163,7 @@ Les éléments `<input>` de type `search` sont semblables aux éléments `<input
 ```html
 <form>
   <div>
-    <input type="search" id="maRecherche" name="q">
+    <input type="search" id="maRecherche" name="q" />
     <button>Rechercher</button>
   </div>
 </form>
@@ -196,8 +194,11 @@ Il est possible de fournir un texte indicatif dans le champ de recherche afin de
 ```html
 <form>
   <div>
-    <input type="search" id="maRecherche" name="q"
-     placeholder="Rechercher sur le site…">
+    <input
+      type="search"
+      id="maRecherche"
+      name="q"
+      placeholder="Rechercher sur le site…" />
     <button>Rechercher</button>
   </div>
 </form>
@@ -221,9 +222,12 @@ Prenons un exemple&nbsp;:
 ```html
 <form role="search">
   <div>
-    <input type="search" id="maRecherche" name="q"
-     placeholder="Rechercher sur le site…"
-     aria-label="Rechercher parmi le contenu du site">
+    <input
+      type="search"
+      id="maRecherche"
+      name="q"
+      placeholder="Rechercher sur le site…"
+      aria-label="Rechercher parmi le contenu du site" />
     <button>Rechercher</button>
   </div>
 </form>
@@ -244,8 +248,12 @@ Il est possible de contrôler la taille physique du champ de saisie grâce à l'
 ```html
 <form>
   <div>
-    <input type="search" id="maRecherche" name="q"
-    placeholder="Rechercher sur le site…" size="30">
+    <input
+      type="search"
+      id="maRecherche"
+      name="q"
+      placeholder="Rechercher sur le site…"
+      size="30" />
     <button>Rechercher</button>
   </div>
 </form>
@@ -267,15 +275,15 @@ Les pseudo-classes CSS [`:valid`](/fr/docs/Web/CSS/:valid) et [`:invalid`](/fr/d
 
 ```css
 input:invalid ~ span:after {
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
   position: absolute;
 }
 
 input:valid ~ span:after {
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
-  position: absolute
+  position: absolute;
 }
 ```
 
@@ -288,8 +296,12 @@ Il est possible d'utiliser l'attribut [`required`](/fr/docs/Web/HTML/Element/Inp
 ```html
 <form>
   <div>
-    <input type="search" id="maRecherche" name="q"
-    placeholder="Recherche sur le site…" required>
+    <input
+      type="search"
+      id="maRecherche"
+      name="q"
+      placeholder="Recherche sur le site…"
+      required />
     <button>Rechercher</button>
     <span class="validity"></span>
   </div>
@@ -302,13 +314,13 @@ input {
 }
 
 input:invalid ~ span:after {
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
   position: absolute;
 }
 
 input:valid ~ span:after {
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
   position: absolute;
 }
@@ -334,9 +346,15 @@ Dans l'exemple qui suit, la valeur saisie dans le champ de recherche doit mesure
 <form>
   <div>
     <label for="mySearch">Rechercher une utilisatrice ou un utilisateur</label>
-    <input type="search" id="mySearch" name="q"
-    placeholder="ID de 4 à 8 char." required
-    size="30" minlength="4" maxlength="8">
+    <input
+      type="search"
+      id="mySearch"
+      name="q"
+      placeholder="ID de 4 à 8 char."
+      required
+      size="30"
+      minlength="4"
+      maxlength="8" />
     <button>Rechercher</button>
     <span class="validity"></span>
   </div>
@@ -349,13 +367,13 @@ input {
 }
 
 input:invalid ~ span:after {
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
   position: absolute;
 }
 
 input:valid ~ span:after {
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
   position: absolute;
 }
@@ -377,9 +395,14 @@ Prenons un exemple. Imaginons qu'on veuille rechercher un produit grâce à son 
 <form>
   <div>
     <label for="mySearch">Rechercher un produit par son code :</label>
-    <input type="search" id="mySearch" name="q"
-    placeholder="2 lettres puis 4 chiffres" required
-    size="30" pattern="[A-z]{2}[0-9]{4}">
+    <input
+      type="search"
+      id="mySearch"
+      name="q"
+      placeholder="2 lettres puis 4 chiffres"
+      required
+      size="30"
+      pattern="[A-z]{2}[0-9]{4}" />
     <button>Rechercher</button>
     <span class="validity"></span>
   </div>
@@ -392,13 +415,13 @@ input {
 }
 
 input:invalid ~ span:after {
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
   position: absolute;
 }
 
 input:valid ~ span:after {
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
   position: absolute;
 }

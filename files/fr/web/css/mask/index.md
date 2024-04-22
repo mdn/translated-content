@@ -1,12 +1,6 @@
 ---
 title: mask
 slug: Web/CSS/mask
-tags:
-  - CSS
-  - Propriété
-  - Reference
-  - SVG
-translation_of: Web/CSS/mask
 ---
 
 {{CSSRef}}
@@ -23,16 +17,16 @@ mask: none;
 
 /* Valeurs d'image */
 /* Type <image>    */
-mask: url(mask.png);                       /* Image matricielle utilisée comme masque */
-mask: url(masks.svg#star);                 /* Élément d'un SVG utilisé comme masque */
+mask: url(mask.png); /* Image matricielle utilisée comme masque */
+mask: url(masks.svg#star); /* Élément d'un SVG utilisé comme masque */
 
 /* Valeurs combinées */
-mask: url(masks.svg#star) luminance;       /* Élément d'un SVG utilisé comme masque de luminance */
-mask: url(masks.svg#star) 40px 20px;       /* Élément d'un SVG utilisé comme masque positioné à 40px du haut et 20px de la gauche */
-mask: url(masks.svg#star) 0 0/50px 50px;   /* Élément d'un SVG utilisé comme masque avec une hauteur et largeur de 50px */
-mask: url(masks.svg#star) repeat-x;        /* Élément d'un SVG utilisé comme masque répété horizontalement */
-mask: url(masks.svg#star) stroke-box;      /* Élément d'un SVG utilisé comme masque étendu à la boîte contenu dans le contour */
-mask: url(masks.svg#star) exclude;         /* Élément d'un SVG utilisé comme masque et combiné avec l'arrière-plan pour les parties qui ne se chevauchent pas */
+mask: url(masks.svg#star) luminance; /* Élément d'un SVG utilisé comme masque de luminance */
+mask: url(masks.svg#star) 40px 20px; /* Élément d'un SVG utilisé comme masque positioné à 40px du haut et 20px de la gauche */
+mask: url(masks.svg#star) 0 0/50px 50px; /* Élément d'un SVG utilisé comme masque avec une hauteur et largeur de 50px */
+mask: url(masks.svg#star) repeat-x; /* Élément d'un SVG utilisé comme masque répété horizontalement */
+mask: url(masks.svg#star) stroke-box; /* Élément d'un SVG utilisé comme masque étendu à la boîte contenu dans le contour */
+mask: url(masks.svg#star) exclude; /* Élément d'un SVG utilisé comme masque et combiné avec l'arrière-plan pour les parties qui ne se chevauchent pas */
 
 /* Valeurs globales */
 mask: inherit;
@@ -68,18 +62,19 @@ mask: unset;
 ### HTML
 
 ```html
-<p class="exemple">Il y avait une table servie sous un arbre devant
- la maison, et le Lièvre y prenait le thé avec le Chapelier. Un Loir
- profondément endormi était assis entre les deux autres qui s’en
- servaient comme d’un coussin, le coude appuyé sur lui et causant
- par-dessus sa tête.</p>
+<p class="exemple">
+  Il y avait une table servie sous un arbre devant la maison, et le Lièvre y
+  prenait le thé avec le Chapelier. Un Loir profondément endormi était assis
+  entre les deux autres qui s’en servaient comme d’un coussin, le coude appuyé
+  sur lui et causant par-dessus sa tête.
+</p>
 ```
 
 ### CSS
 
 ```css
-.exemple{
-  mask:url(firefox.png) luminance 20%;
+.exemple {
+  mask: url(firefox.png) luminance 20%;
 }
 ```
 

@@ -1,14 +1,6 @@
 ---
 title: Window.scrollByLines()
 slug: Web/API/Window/scrollByLines
-tags:
-  - API
-  - DOM
-  - DOM_0
-  - Méthode
-  - Non-standard
-  - Window
-translation_of: Web/API/Window/scrollByLines
 ---
 
 {{ ApiRef() }}
@@ -20,7 +12,7 @@ Fait défiler le document du nombre de lignes spécifié.
 ## Syntaxe
 
 ```js
-window.scrollByLines(lignes)
+window.scrollByLines(lignes);
 ```
 
 ## Paramètres

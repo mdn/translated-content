@@ -1,9 +1,8 @@
 ---
 title: WindowEventHandlers.onunload
 slug: Web/API/Window/unload_event
-translation_of: Web/API/WindowEventHandlers/onunload
-original_slug: Web/API/WindowEventHandlers/onunload
 ---
+
 {{APIRef("HTML DOM")}}
 
 ## Описание
@@ -30,6 +29,6 @@ You _can_ and _should_ handle this event through {{domxref("EventTarget.addEvent
 
 {{Specifications}}
 
-### Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}

@@ -43,7 +43,7 @@ slug: Learn/CSS/First_steps/How_CSS_is_structured
 使用 HTML `<link>` 元素来链接外部样式表文件：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8" />
@@ -75,13 +75,13 @@ p {
 
 ```html
 <!-- 在当前目录中，引用子文件夹 styles 中的样式表文件 -->
-<link rel="stylesheet" href="styles/style.css">
+<link rel="stylesheet" href="styles/style.css" />
 
 <!-- 在当前目录中，引用子文件夹 styles 中的子文件夹 general 中的样式表文件 -->
-<link rel="stylesheet" href="styles/general/style.css">
+<link rel="stylesheet" href="styles/general/style.css" />
 
 <!-- 在当前目录的父级目录中，引用子文件夹 styles 中的样式表文件 -->
-<link rel="stylesheet" href="../styles/style.css">
+<link rel="stylesheet" href="../styles/style.css" />
 ```
 
 ### 内部样式表
@@ -91,7 +91,7 @@ p {
 一个内部样式表的 HTML 代码可能看起来像这样：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8" />
@@ -123,7 +123,7 @@ p {
 内联样式是影响单个 HTML 元素的 CSS 声明，包含在元素的 `style` 属性中。在一个 HTML 文档中，内联样式的实现可能看起来像这样：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8" />
@@ -149,7 +149,7 @@ p {
 **index.html**：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8" />
@@ -253,11 +253,11 @@ p {
 
 ![一个突出的 CSS 样式](declaration.png)
 
-当一个属性与一个值配对时，这种配对被称为 *CSS 声明*。CSS 声明可以在 *CSS 声明块*中找到。在下面的例子中，高亮显示的是 CSS 声明块。
+当一个属性与一个值配对时，这种配对被称为 _CSS 声明_。CSS 声明可以在 *CSS 声明块*中找到。在下面的例子中，高亮显示的是 CSS 声明块。
 
 ![一个突出的声明块](declaration-block.png)
 
-最后，CSS 声明块与*选择器*配对，以生成 *CSS 规则集*（或称 *CSS 规则*）。这个示例包含两个规则，一个用于 `h1` 选择器，另一个用于 `p` 选择器。`h1` 的规则被突出显示。
+最后，CSS 声明块与*选择器*配对，以生成 _CSS 规则集_（或称 _CSS 规则_）。这个示例包含两个规则，一个用于 `h1` 选择器，另一个用于 `p` 选择器。`h1` 的规则被突出显示。
 
 ![h1 规则被突出显示](rules.png)
 
@@ -295,10 +295,10 @@ CSS 属性和值是不区分大小写的。一个属性——值对中的属性�
 }
 
 .box {
-padding: 10px;
-width: calc(90% - 30px);
-background-color: rebeccapurple;
-color: white;
+  padding: 10px;
+  width: calc(90% - 30px);
+  background-color: rebeccapurple;
+  color: white;
 }
 ```
 
@@ -322,7 +322,7 @@ color: white;
   width: 100px;
   height: 100px;
   background-color: rebeccapurple;
-  transform: rotate(0.8turn)
+  transform: rotate(0.8turn);
 }
 ```
 
@@ -341,7 +341,7 @@ color: white;
 CSS 的 [`@rules`](/zh-CN/docs/Web/CSS/At-rule)（读作“at-rules”）是一些特殊的规则，提供了关于 CSS 应该执行什么或如何表现的指令。有些@规则很简单，只有一个关键词和一个值。例如，`@import` 将一个样式表导入另一个 CSS 样式表：
 
 ```css
-@import 'styles2.css';
+@import "styles2.css";
 ```
 
 你可能遇到的一个常见的@规则是 `@media`，它被用来创建[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)。媒体查询使用条件逻辑来应用 CSS 样式。
@@ -419,7 +419,10 @@ CSS 中的注释以 `/*` 开头，以 `*/` 结尾。在下面的代码块中，�
 /* 处理基本元素样式 */
 /* -------------------------------------------------------------------------------------------- */
 body {
-  font: 1em/150% Helvetica, Arial, sans-serif;
+  font:
+    1em/150% Helvetica,
+    Arial,
+    sans-serif;
   padding: 1em;
   margin: 0 auto;
   max-width: 33em;
@@ -432,16 +435,19 @@ body {
   }
 }
 
-h1 {font-size: 1.5em;}
+h1 {
+  font-size: 1.5em;
+}
 
 /* 处理在 DOM 中嵌套的特殊元素 */
 /* -------------------------------------------------------------------------------------------- */
-div p, #id:first-line {
+div p,
+#id:first-line {
   background-color: red;
   border-radius: 3px;
 }
 
-div p{
+div p {
   margin: 0;
   padding: 1em;
 }
@@ -473,7 +479,10 @@ p {
 
 ```css
 body {
-  font: 1em/150% Helvetica, Arial, sans-serif;
+  font:
+    1em/150% Helvetica,
+    Arial,
+    sans-serif;
   padding: 1em;
   margin: 0 auto;
   max-width: 33em;

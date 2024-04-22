@@ -1,7 +1,6 @@
 ---
 title: "HTMLAreaElement: search プロパティ"
 slug: Web/API/HTMLAreaElement/search
-original_slug: Web/API/HTMLHyperlinkElementUtils/search
 l10n:
   sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
@@ -21,7 +20,7 @@ l10n:
 ### エリアのリンクから検索文字列を取得
 
 ```js
-// <area id="myArea" href="/en-US/docs/HTMLAreaElement?q=123"> 要素が文書内にあったとします
+// <area id="myArea" href="/ja/docs/HTMLAreaElement?q=123"> 要素が文書内にあったとします
 const area = document.getElementById("myArea");
 area.search; // '?q=123' を返す
 ```

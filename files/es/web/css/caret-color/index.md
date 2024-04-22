@@ -20,7 +20,7 @@ caret-color: rgb(0, 200, 0);
 caret-color: hsla(228, 4%, 24%, 0.8);
 ```
 
-> **Nota:** Los agentes usuario podrían incluir otras cosas que consideren “cursor de texto.” Por ejemplo, puede haber una “cursor para navegación,” que actúa de forma similar al cursor de texto pero puede ser movido en textos no editables. Por otro lado, la imagen de cursor mostrada cuando se coloca el cursor del ratón sobre texto cuando la propiedad {{cssxref("cursor")}} es `auto`, o sobre un elemento donde la propiedad `cursor` es `text` o `vertical-text`, aunque a veces se parezca al cursor de texto, no lo es (es un cursor del ratón). En algunos navegadores que no soportan esta propiedad, el color del cursor de texto no está asociado al color de la fuente.
+> **Nota:** Los agentes usuario podrían incluir otras cosas que consideren "cursor de texto". Por ejemplo, puede haber una "cursor para navegación", que actúa de forma similar al cursor de texto pero puede ser movido en textos no editables. Por otro lado, la imagen de cursor mostrada cuando se coloca el cursor del ratón sobre texto cuando la propiedad {{cssxref("cursor")}} es `auto`, o sobre un elemento donde la propiedad `cursor` es `text` o `vertical-text`, aunque a veces se parezca al cursor de texto, no lo es (es un cursor del ratón). En algunos navegadores que no soportan esta propiedad, el color del cursor de texto no está asociado al color de la fuente.
 
 {{cssinfo}}
 

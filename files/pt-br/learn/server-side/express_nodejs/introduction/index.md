@@ -1,7 +1,6 @@
 ---
 title: Introdução Express/Node
 slug: Learn/Server-side/Express_Nodejs/Introduction
-original_slug: Learn/Server-side/Express_Nodejs/Introdução
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs")}}
@@ -52,7 +51,7 @@ Você pode utilizar o Node.js para criar um simples servidor web, utilizando o p
 
 ### Olá, Node.js
 
-O exemplo a seguir cria um servidor web que escuta qualquer tipo de requisição HTTP na URL `http://127.0.0.1:8000/` -- quando uma requisição é recebida, o script vai responder com a string (texto) "Olá Mundo". Se você já instalou o Node, você pode seguir os passos seguintes deste exemplo.
+O exemplo a seguir cria um servidor web que escuta qualquer tipo de requisição HTTP na URL `http://127.0.0.1:8000/` — quando uma requisição é recebida, o script vai responder com a string (texto) "Olá Mundo". Se você já instalou o Node, você pode seguir os passos seguintes deste exemplo.
 
 1. Abre o Terminal (no Windows, abra o prompt da linha de comando)
 2. Crie uma pasta onde você quer salvar o programa, por exemplo, `test-node`. Então, entre na pasta com o seguinte comando no terminal:
@@ -68,17 +67,18 @@ Use o seu editor de texto preferido, crie um arquivo chamado `hello.js` e cole o
 var http = require("http");
 
 // Cria um servidor HTTP e uma escuta de requisições para a porta 8000
-http.createServer(function(request, response) {
+http
+  .createServer(function (request, response) {
+    // Configura o cabeçalho da resposta com um status HTTP e um Tipo de Conteúdo
+    response.writeHead(200, { "Content-Type": "text/plain" });
 
-  // Configura o cabeçalho da resposta com um status HTTP e um Tipo de Conteúdo
-   response.writeHead(200, {'Content-Type': 'text/plain'});
-
-   // Manda o corpo da resposta "Olá Mundo"
-   response.end('Olá Mundo\n');
-}).listen(8000, '127.0.0.1');
+    // Manda o corpo da resposta "Olá Mundo"
+    response.end("Olá Mundo\n");
+  })
+  .listen(8000, "127.0.0.1");
 
 // Imprime no console a URL de acesso ao servidor
-console.log('Servidor executando em http://127.0.0.1:8000/');
+console.log("Servidor executando em http://127.0.0.1:8000/");
 ```
 
 Salve o arquivo na pasta que você criou acima.
@@ -147,15 +147,15 @@ Primeiro, considere o padrão do exemplo do Express [Olá Mundo](http://expressj
 > **Nota:** **Dica:** Se você tiver o Node e o Express já instalados (ou se você os instalar como mostrado no [próximo artigo](/pt-BR/docs/Learn/Server-side/Express_Nodejs/development_environment), você pode salvar este código em um arquivo chamado **app.js** e executá-lo em um prompt, ao digitar o comando `node app.js`.
 
 ```js
-var express = require('express');
+var express = require("express");
 var app = express();
 
-app.get('/', function(req, res) {
-  res.send('Olá Mundo!');
+app.get("/", function (req, res) {
+  res.send("Olá Mundo!");
 });
 
-app.listen(3000, function() {
-  console.log('App de Exemplo escutando na porta 3000!');
+app.listen(3000, function () {
+  console.log("App de Exemplo escutando na porta 3000!");
 });
 ```
 
@@ -172,7 +172,7 @@ Um módulo é uma biblioteca/arquivo de JavaScript que você pode importar para 
 O código abaixo mostra como importamos um módulo por nome, usando o quadro Express como um exemplo. Primeiro invocamos a função `require()`, especificando o nome do módulo como uma string (`'express'`), e chamando o objeto retornado para criar um [aplicativo Express](https://expressjs.com/en/4x/api.html#app). Podemos então acessar as propriedades e funções do objeto da aplicação.
 
 ```js
-var express = require('express');
+var express = require("express");
 var app = express();
 ```
 
@@ -183,15 +183,19 @@ Você também pode criar seus próprios módulos para serem importados da mesma 
 Para tornar os objetos disponíveis fora do módulo, você precisa apenas atribuí-los ao objeto `exports`. Por Exemplo, o módulo **square.js** abaixo é um arquivo que exporta os métodos `area()` e `perimeter()`:
 
 ```js
-exports.area = function(width) { return width * width; };
-exports.perimeter = function(width) { return 4 * width; };
+exports.area = function (width) {
+  return width * width;
+};
+exports.perimeter = function (width) {
+  return 4 * width;
+};
 ```
 
 Nós podemos importar este módulo usando `require()`. Depois, conecte ao(s) método(s) exportado(s) como mostrado a seguir:
 
 ```js
-var square = require('./square'); // Chamamos o arquivo utilizando o require()
-console.log('The area of a square with a width of 4 is ' + square.area(4));
+var square = require("./square"); // Chamamos o arquivo utilizando o require()
+console.log("The area of a square with a width of 4 is " + square.area(4));
 ```
 
 > **Nota:** Você também pode especificar um caminho absoluto para o módulo (ou um nome, como fizemos inicialmente).
@@ -200,13 +204,13 @@ Se você deseja exportar um objeto completo em uma atribuição, em vez de criar
 
 ```js
 module.exports = {
-  area: function(width) {
+  area: function (width) {
     return width * width;
   },
 
-  perimeter: function(width) {
+  perimeter: function (width) {
     return 4 * width;
-  }
+  },
 };
 ```
 
@@ -217,17 +221,17 @@ Para muitas outras informações sobre módulos veja [Módulos](https://nodejs.o
 O código JavaScript frequentemente usa APIs assíncronas em vez de síncronas para operações que podem levar algum tempo para serem concluídas. Uma API síncrona é aquela em que cada operação deve ser concluída antes que a próxima operação seja iniciada. Por exemplo, as seguintes funções de log são síncronas e imprimirão o texto no console em ordem (Primeiro, Segundo).
 
 ```js
-console.log('Primeiro');
-console.log('Segundo');
+console.log("Primeiro");
+console.log("Segundo");
 ```
 
 Em contrapartida, uma API assíncrona é aquela em que a API iniciará uma operação e retornará imediatamente (antes da conclusão da operação). Assim que a operação terminar, a API usará algum mecanismo para executar operações adicionais. Por exemplo, o código abaixo imprimirá "Segundo, Primeiro". Isso porque, mesmo que o método `setTimeout()` seja chamado primeiro e retornae imediatamente, a operação precisa de três segundos para finalizar.
 
 ```js
-setTimeout(function() {
-   console.log('Primeiro');
-   }, 3000);
-console.log('Segundo');
+setTimeout(function () {
+  console.log("Primeiro");
+}, 3000);
+console.log("Segundo");
 ```
 
 O uso de APIs assíncronas não bloqueadoras é ainda mais importante no Node do que no navegador, pois o Node é um ambiente de execução orientado por evento único (single threaded). "Single threaded" significa que todos os pedidos para o servidor são executados no mesmo tópico (em vez de serem gerados em processos separados). Esse modelo é extremamente eficiente em termos de velocidade e recursos do servidor, mas isso significa que, se qualquer uma das suas funções chamar métodos síncronos que demoram muito para completar, eles bloquearão não apenas a solicitação atual, mas todas as outras solicitações serão tratadas por sua aplicação web.
@@ -243,8 +247,8 @@ Há várias maneiras de uma API assíncrona notificar para a aplicação que alg
 No nosso _Olá Mundo_ em Express (veja acima), nós definimos uma (callback) função manipuladora de rota para requisição `GET` HTTP para a raiz do site (`'/'`).
 
 ```js
-app.get('/', function(req, res) {
-  res.send('Olá Mundo');
+app.get("/", function (req, res) {
+  res.send("Olá Mundo");
 });
 ```
 
@@ -257,8 +261,8 @@ O Express também fornece métodos para definir manipuladores de rotas para toda
 Há um método de roteamento especial, `app.all()`, que será chamado em resposta a qualquer método HTTP. É usado para carregar funções de middleware em um caminho específico para todos os métodos de solicitação. O exemplo a seguir (da documentação Express) mostra um manipulador que será executado para solicitações `/secret`, independentemente do verbo HTTP usado (desde que seja suportado pelo módulo http).
 
 ```js
-app.all('/secret', function(req, res, next) {
-  console.log('Acessando a sessão secreta...');
+app.all("/secret", function (req, res, next) {
+  console.log("Acessando a sessão secreta...");
   next(); // passa o controle para o próximo manipulador
 });
 ```
@@ -270,17 +274,17 @@ Muitas vezes, é útil agrupar manipuladores de rotas para uma determinada parte
 ```js
 // wiki.js - Rotas de Wiki
 
-var express = require('express');
+var express = require("express");
 var router = express.Router();
 
 // Home page route
-router.get('/', function(req, res) {
-  res.send('Wiki home page');
+router.get("/", function (req, res) {
+  res.send("Wiki home page");
 });
 
 // About page route
-router.get('/about', function(req, res) {
-  res.send('About this wiki');
+router.get("/about", function (req, res) {
+  res.send("About this wiki");
 });
 
 module.exports = router;
@@ -291,9 +295,9 @@ module.exports = router;
 Para usar o roteador em nosso arquivo de aplicativo principal, então, `require()` o módulo de rota (**wiki.js**) e depois `use()` no aplicativo Express para adicionar o Router ao caminho de gerenciamento de middleware. As duas rotas serão acessíveis a partir de `/wiki/` e `/wiki/about/`.
 
 ```js
-var wiki = require('./wiki.js');
+var wiki = require("./wiki.js");
 // ...
-app.use('/wiki', wiki);
+app.use("/wiki", wiki);
 ```
 
 Vamos mostrar-lhe muito mais sobre trabalhar com rotas e, em particular, sobre o uso do `Router`, mais tarde, na seção vinculada [Rotas e controladores](/pt-BR/docs/Learn/Server-side/Express_Nodejs/routes).
@@ -331,23 +335,23 @@ Você pode adicionar uma função de middleware à cadeia de processamento com `
 O exemplo abaixo mostra como você pode adicionar a função middleware usando ambos os métodos e com/sem rota.
 
 ```js
-var express = require('express');
+var express = require("express");
 var app = express();
 
 // Um exemplo de função middleware
-var a_middleware_function = function(req, res, next) {
+var a_middleware_function = function (req, res, next) {
   // ... Executa alguma operação
   next(); // next() Chama o próximo middleware ou função de rotas
-}
+};
 
 // Função adicionada com use() para todas rotas e requisições
 app.use(a_middleware_function);
 
 // Função adicionada com use() para uma rota específica
-app.use('/someroute', a_middleware_function);
+app.use("/someroute", a_middleware_function);
 
 // função middleware adicionado para uma rota e requisição específica
-app.get('/', a_middleware_function);
+app.get("/", a_middleware_function);
 
 app.listen(3000);
 ```
@@ -361,7 +365,7 @@ A documentação Express possui uma documentação excelente sobre como usar e e
 Você pode usar o middleware [express.static](http://expressjs.com/en/4x/api.html#express.static) para servir arquivos estáticos, incluindo suas imagens, CSS e JavaScript (`static()` é a única função de middleware que é realmente parte do Express). Por exemplo, você usaria a linha abaixo para exibir imagens, arquivos CSS e arquivos JavaScript de um diretório chamado 'public' no mesmo nível onde você chama o nó:
 
 ```js
-app.use(express.static('public'));
+app.use(express.static("public"));
 ```
 
 Todos os arquivos no diretório público são atendidos adicionando o nome do arquivo (relativo ao diretório "público" base) ao URL base. Então, por exemplo:
@@ -376,14 +380,14 @@ http://localhost:3000/about.html
 Você pode chamar `static()` várias vezes para atender vários diretórios. Se um arquivo não puder ser encontrado por uma função de middleware, ele simplesmente será transmitido ao middleware subsequente (a ordem em que o middleware é chamado é baseada em sua ordem de declaração).
 
 ```js
-app.use(express.static('public'));
-app.use(express.static('media'));
+app.use(express.static("public"));
+app.use(express.static("media"));
 ```
 
 Você também pode criar um prefixo virtual para seus URL estáticos, em vez de ter os arquivos adicionados ao URL base. Por exemplo, aqui [especificamos um caminho de montagem](http://expressjs.com/en/4x/api.html#app.use) para que os arquivos sejam carregados com o prefixo "/media":
 
 ```js
-app.use('/media', express.static('public'));
+app.use("/media", express.static("public"));
 ```
 
 Agora, você pode carregar os arquivos que estão no diretório `public` a partir do prefixo de caminho `/media`.
@@ -401,9 +405,9 @@ Para obter mais informações, consulte [Servindo arquivos estáticos no Express
 Os erros são tratados por uma ou mais funções de middleware especiais que possuem quatro argumentos, em vez dos três habituais: `(err, req, res, next)`. Por exemplo:
 
 ```js
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   console.error(err.stack);
-  res.status(500).send('Something broke!');
+  res.status(500).send("Something broke!");
 });
 ```
 
@@ -430,16 +434,18 @@ npm install mongodb
 O próprio banco de dados pode ser instalado localmente ou em um servidor em nuvem. No seu código Express, você precisa do driver, conecte-se ao banco de dados e execute as operações criar, ler, atualizar e excluir (CRUD). O exemplo abaixo (da documentação Express) mostra como você pode encontrar registros de "mamíferos" usando MongoDB.
 
 ```js
-var MongoClient = require('mongodb').MongoClient;
+var MongoClient = require("mongodb").MongoClient;
 
-MongoClient.connect('mongodb://localhost:27017/animals', function(err, db) {
+MongoClient.connect("mongodb://localhost:27017/animals", function (err, db) {
   if (err) throw err;
 
-  db.collection('mammals').find().toArray(function (err, result) {
-    if (err) throw err;
+  db.collection("mammals")
+    .find()
+    .toArray(function (err, result) {
+      if (err) throw err;
 
-    console.log(result);
-  });
+      console.log(result);
+    });
 });
 ```
 
@@ -454,21 +460,21 @@ Os mecanismos de modelo (referidos como "view engines" por Express) permitem que
 No seu código de configurações do aplicativo você configurou o mecanismo do modelo para usar e o local onde Express deve procurar modelos usando as configurações 'visualizações' e 'visualizar mecanismos', conforme mostrado abaixo (você também terá que instalar o pacote que contém a biblioteca do modelo também !)
 
 ```js
-var express = require('express');
+var express = require("express");
 var app = express();
 
 //  Definir o diretório para conter os modelos ('views')
-app.set('views', path.join(__dirname, 'views'));
+app.set("views", path.join(__dirname, "views"));
 
 // Definir o motor de visualização para usar, neste caso 'some_template_engine_name'
-app.set('view engine', 'some_template_engine_name');
+app.set("view engine", "some_template_engine_name");
 ```
 
 A aparência do modelo dependerá do mecanismo que você usa. Supondo que você tenha um arquivo de modelo chamado "índice. \<Template_extension>" que contenha espaços reservados para variáveis de dados denominadas 'título' e 'mensagem', você chamaria [`Response.render()`](http://expressjs.com/en/4x/api.html#res.render) em uma função de roteador de rotas para criar e enviar a resposta HTML :
 
 ```js
-app.get('/', function(req, res) {
-  res.render('index', { title: 'About dogs', message: 'Dogs rock!' });
+app.get("/", function (req, res) {
+  res.render("index", { title: "About dogs", message: "Dogs rock!" });
 });
 ```
 

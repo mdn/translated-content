@@ -1,13 +1,6 @@
 ---
 title: Ajouter une carte de zones cliquables sur une image
 slug: Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image
-tags:
-  - Guide
-  - HTML
-  - Intermediate
-  - Navigation
-translation_of: Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image
-original_slug: Apprendre/HTML/Comment/Ajouter_carte_zones_cliquables_sur_image
 ---
 
 Dans cet article, nous verrons comment construire une carte imagée cliquable en commençant par les inconvénients de cette méthode.
@@ -62,10 +55,7 @@ On insère une image [de la même façon que d'habitude](/fr/Learn/HTML/Howto/Ad
 Cette image contiendra une attribut spécial [`usemap`](/fr/docs/Web/HTML/Element/img#usemap). Celui-ci doit désigner avec un nom unique et sans espace la carte imagée. C'est ce nom qu'on placera dans cet attribut `usemap` :
 
 ```html
-<img
-  src="image-map.png"
-  alt=""
-  usemap="#exemple-map-1" />
+<img src="image-map.png" alt="" usemap="#exemple-map-1" />
 ```
 
 ### Étape 2 : Activer les régions actives
@@ -73,9 +63,7 @@ Cette image contiendra une attribut spécial [`usemap`](/fr/docs/Web/HTML/Elemen
 Dans cette étape, nous allons remplir le code de l'élément {{htmlelement('map')}}. Celui-ci n'a besoin que d'un seul attribut : [`name`](/fr/docs/Web/HTML/Element/map#name) dont la valeur doit correspondre à celle utilisée pour l'attribut `usemap` vue juste avant :
 
 ```html
-<map name="exemple-map-1">
-
-</map>
+<map name="exemple-map-1"> </map>
 ```
 
 Dans cet élément `<map>`, on aura besoin d'utiliser les éléments {{htmlelement('area')}}. Chacun de ces éléments correspondra à une région donnée. Afin que la navigation au clavier reste intuitive, il faudra veiller à ce que l'ordre de ces éléments HTML corresponde bien à l'ordre visuel des régions.
@@ -106,12 +94,17 @@ Les éléments `<area>` sont des éléments vides mais qui utilisent quatres att
 
 ```html
 <map name="exemple-map-1">
-  <area shape="circle" coords="200,250,25"
-    href="page-2.html" alt="exemple de cercle" />
+  <area
+    shape="circle"
+    coords="200,250,25"
+    href="page-2.html"
+    alt="exemple de cercle" />
 
-  <area shape="rect" coords="10, 5, 20, 15"
-    href="page-3.html" alt="exemple de rectangle" />
-
+  <area
+    shape="rect"
+    coords="10, 5, 20, 15"
+    href="page-3.html"
+    alt="exemple de rectangle" />
 </map>
 ```
 

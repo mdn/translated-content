@@ -52,10 +52,8 @@ A interface **`Animation`** da [Web Animations API](/pt-BR/docs/Web/API/Web_Anim
 
 ## Especificações
 
-| Especificação                                                                                    | Estado                               | Comentário        |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------------- |
-| {{SpecName("Web Animations", "#the-animation-interface", "Animation")}} | {{Spec2("Web Animations")}} | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Animation")}}
+{{Compat}}

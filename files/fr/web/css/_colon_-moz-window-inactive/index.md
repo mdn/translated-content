@@ -1,12 +1,6 @@
 ---
-title: ':-moz-window-inactive'
+title: ":-moz-window-inactive"
 slug: Web/CSS/:-moz-window-inactive
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:-moz-window-inactive
 ---
 
 {{CSSRef}}{{Non-standard_header}}

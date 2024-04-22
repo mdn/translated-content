@@ -1,7 +1,6 @@
 ---
 title: MouseEvent.screenX
 slug: Web/API/MouseEvent/screenX
-translation_of: Web/API/MouseEvent/screenX
 ---
 
 {{APIRef("DOM Events")}}
@@ -32,8 +31,8 @@ var x = instanceOfMouseEvent.screenX
 #### JavaScript
 
 ```js
-let screenLog = document.querySelector('#screen-log');
-document.addEventListener('mousemove', logKey);
+let screenLog = document.querySelector("#screen-log");
+document.addEventListener("mousemove", logKey);
 
 function logKey(e) {
   screenLog.innerText = `

@@ -29,14 +29,18 @@ var myHeaders = new Headers(); // Currently empty
 你可以使用{{domxref("Headers.append")}}方法添加一个 header 并赋值：
 
 ```js
-myHeaders.append('Content-Type', 'image/jpeg');
-myHeaders.get('Content-Type'); // Returns 'image/jpeg'
+myHeaders.append("Content-Type", "image/jpeg");
+myHeaders.get("Content-Type"); // Returns 'image/jpeg'
 ```
 
 或者你可以在 Headers 对象创建时添加多个 header. 在下面的示例中我们创建了一个新的{{domxref("Headers")}} 对象，并通过 Headers 构造函数中 init 属性来添加多个 header:
 
 ```js
-var httpHeaders = { 'Content-Type' : 'image/jpeg', 'Accept-Charset' : 'utf-8', 'X-My-Custom-Header' : 'Zeke are cool' };
+var httpHeaders = {
+  "Content-Type": "image/jpeg",
+  "Accept-Charset": "utf-8",
+  "X-My-Custom-Header": "Zeke are cool",
+};
 var myHeaders = new Headers(httpHeaders);
 ```
 
@@ -44,7 +48,7 @@ var myHeaders = new Headers(httpHeaders);
 
 ```js
 var secondHeadersObj = new Headers(myHeaders);
-secondHeadersObj.get('Content-Type'); // Would return 'image/jpeg' — it inherits it from the first headers object
+secondHeadersObj.get("Content-Type"); // Would return 'image/jpeg' — it inherits it from the first headers object
 ```
 
 ## Specifications

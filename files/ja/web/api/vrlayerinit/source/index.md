@@ -1,7 +1,6 @@
 ---
 title: VRLayerInit.source
 slug: Web/API/VRLayerInit/source
-original_slug: Web/API/VRLayer/source
 ---
 
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
@@ -26,5 +25,4 @@ original_slug: Web/API/VRLayer/source
 
 ## 関連情報
 
-- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — Mozilla VR チームによるデモ、ダウンロード、その他のリソース。
+- [WebVR API](/ja/docs/Web/API/WebVR_API)

@@ -11,7 +11,7 @@ l10n:
 
 `patternMismatch` プロパティは、以下の条件がすべて真である場合にのみ、true となります。
 
-- そのフィールドが [`pattern`](/ja/docs/Web/HTML/Attributes/pattern) 属性に対応している場合 -- つまり、 {{HTMLElement("input")}} の `type` が {{HTMLElement("input/text", "text")}}, {{HTMLElement("input/tel", "tel")}}, {{HTMLElement("input/email", "email")}}, {{HTMLElement("input/url", "url")}}, {{HTMLElement("input/password", "password")}}, {{HTMLElement("input/search", "search")}} のいずれかであった場合
+- そのフィールドが [`pattern`](/ja/docs/Web/HTML/Attributes/pattern) 属性に対応している場合 — つまり、 {{HTMLElement("input")}} の `type` が {{HTMLElement("input/text", "text")}}, {{HTMLElement("input/tel", "tel")}}, {{HTMLElement("input/email", "email")}}, {{HTMLElement("input/url", "url")}}, {{HTMLElement("input/password", "password")}}, {{HTMLElement("input/search", "search")}} のいずれかであった場合
 - [`pattern`](/ja/docs/Web/HTML/Attributes/pattern) 属性の値が有効な正規表現に設定されていた場合
 - {{HTMLElement("input")}} 値が [`pattern`](/ja/docs/Web/HTML/Attributes/pattern) の値で設定された制約に適合していない場合
 

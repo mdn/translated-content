@@ -32,42 +32,50 @@ _从其父项继承方法 {{domxref("EventTarget")}}。_
 ## 示例
 
 ```js
-'use strict';
+"use strict";
 
 // Put variables in global scope to make them available to the browser console.
-var video = document.querySelector('video');
-var constraints = window.constraints = {
+var video = document.querySelector("video");
+var constraints = (window.constraints = {
   audio: false,
-  video: true
-};
-var errorElement = document.querySelector('#errorMsg');
-
-navigator.mediaDevices.getUserMedia(constraints)
-.then(function(stream) {
-  var videoTracks = stream.getVideoTracks();
-  console.log('Got stream with constraints:', constraints);
-  console.log('Using video device: ' + videoTracks[0].label);
-  stream.onended = function() {
-    console.log('Stream ended');
-  };
-  window.stream = stream; // make variable available to browser console
-  video.srcObject = stream;
-})
-.catch(function(error) {
-  if (error.name === 'ConstraintNotSatisfiedError') {
-    errorMsg('The resolution ' + constraints.video.width.exact + 'x' +
-        constraints.video.width.exact + ' px is not supported by your device.');
-  } else if (error.name === 'PermissionDeniedError') {
-    errorMsg('Permissions have not been granted to use your camera and ' +
-      'microphone, you need to allow the page access to your devices in ' +
-      'order for the demo to work.');
-  }
-  errorMsg('getUserMedia error: ' + error.name, error);
+  video: true,
 });
+var errorElement = document.querySelector("#errorMsg");
+
+navigator.mediaDevices
+  .getUserMedia(constraints)
+  .then(function (stream) {
+    var videoTracks = stream.getVideoTracks();
+    console.log("Got stream with constraints:", constraints);
+    console.log("Using video device: " + videoTracks[0].label);
+    stream.onended = function () {
+      console.log("Stream ended");
+    };
+    window.stream = stream; // make variable available to browser console
+    video.srcObject = stream;
+  })
+  .catch(function (error) {
+    if (error.name === "ConstraintNotSatisfiedError") {
+      errorMsg(
+        "The resolution " +
+          constraints.video.width.exact +
+          "x" +
+          constraints.video.width.exact +
+          " px is not supported by your device.",
+      );
+    } else if (error.name === "PermissionDeniedError") {
+      errorMsg(
+        "Permissions have not been granted to use your camera and " +
+          "microphone, you need to allow the page access to your devices in " +
+          "order for the demo to work.",
+      );
+    }
+    errorMsg("getUserMedia error: " + error.name, error);
+  });
 
 function errorMsg(msg, error) {
-  errorElement.innerHTML += '<p>' + msg + '</p>';
-  if (typeof error !== 'undefined') {
+  errorElement.innerHTML += "<p>" + msg + "</p>";
+  if (typeof error !== "undefined") {
     console.error(error);
   }
 }
@@ -83,7 +91,7 @@ function errorMsg(msg, error) {
 
 ## 参见
 
-- [Media Capture and Streams API](/zh-CN/docs/Web/API/Media_Streams_API): The API this interface is part of.
+- [媒体捕捉与媒体流 API](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API): The API this interface is part of.
 - [Screen Capture API](/zh-CN/docs/Web/API/Screen_Capture_API): The API defining the {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} method.
 - [WebRTC API](/zh-CN/docs/Web/API/WebRTC_API)
 - {{domxref("Navigator.mediaDevices")}}: Returns a reference to a `MediaDevices` object that can be used to access devices.

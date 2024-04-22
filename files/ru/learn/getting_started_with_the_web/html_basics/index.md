@@ -1,12 +1,6 @@
 ---
 title: Основы HTML
 slug: Learn/Getting_started_with_the_web/HTML_basics
-tags:
-  - HTML
-  - Web
-  - Новичку
-  - Обучение
-translation_of: Learn/Getting_started_with_the_web/HTML_basics
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
@@ -73,7 +67,7 @@ HTML не является языком программирования; это
 Некоторые элементы не имеют контента, и называются **пустыми элементами**. Возьмём элемент {{htmlelement("img")}}, который уже имеется в нашем HTML:
 
 ```html
-<img src="images/firefox-icon.png" alt="Моё тестовое изображение">
+<img src="images/firefox-icon.png" alt="Моё тестовое изображение" />
 ```
 
 Он содержит два атрибута, но не имеет закрывающего тега `</img>`, и никакого внутреннего контента. Это потому, что элемент изображения не оборачивает контент для влияния на него. Его целью является вставка изображения в HTML страницу в нужном месте.
@@ -83,14 +77,14 @@ HTML не является языком программирования; это
 Мы завершили изучение основ отдельных HTML элементов, но они не очень полезны сами по себе. Теперь мы посмотрим, как отдельные элементы объединяются в целую HTML страницу. Давайте вернёмся к коду, который мы записывали в наш `index.html` (с которым мы впервые встретились в статье [Работа с файлами](/ru/Learn/Getting_started_with_the_web/Dealing_with_files)):
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Моя тестовая страница</title>
   </head>
   <body>
-    <img src="images/firefox-icon.png" alt="Моё тестовое изображение">
+    <img src="images/firefox-icon.png" alt="Моё тестовое изображение" />
   </body>
 </html>
 ```
@@ -109,7 +103,7 @@ HTML не является языком программирования; это
 Давайте снова обратим наше внимание на элемент {{htmlelement("img", "изображения")}}:
 
 ```html
-<img src="images/firefox-icon.png" alt="Mоё тестовое изображение">
+<img src="images/firefox-icon.png" alt="Mоё тестовое изображение" />
 ```
 
 Как было сказано раньше, код встраивает изображение на нашу страницу в нужном месте. Это делается с помощью атрибута `src` (source, источник), который содержит путь к нашему файлу изображения.
@@ -166,7 +160,10 @@ HTML не является языком программирования; это
 Например, если мы хотим включить часть следующего фрагмента абзаца в список:
 
 ```html
-<p>Mozilla, мы являемся мировым сообществом технологов, мыслителей и строителей, работающих вместе ... </p>
+<p>
+  Mozilla, мы являемся мировым сообществом технологов, мыслителей и строителей,
+  работающих вместе ...
+</p>
 ```
 
 Мы могли бы изменить разметку на эту:
@@ -180,7 +177,7 @@ HTML не является языком программирования; это
   <li>строителей</li>
 </ul>
 
-<p>работающих вместе ... </p>
+<p>работающих вместе ...</p>
 ```
 
 Попробуйте добавить упорядоченный или неупорядоченный список на свою страницу.
@@ -192,21 +189,23 @@ HTML не является языком программирования; это
 1. Выберите некоторый текст. Мы выбрали текст "Манифест Mozilla".
 2. Оберните текст в элемент {{htmlelement("a")}}, например так:
 
-    ```html
-    <a>Манифест Mozilla</a>
-    ```
+   ```html
+   <a>Манифест Mozilla</a>
+   ```
 
 3. Задайте элементу {{htmlelement("a")}} атрибут href, например так:
 
-    ```html
-    <a href="">Манифест Mozilla</a>
-    ```
+   ```html
+   <a href="">Манифест Mozilla</a>
+   ```
 
 4. Заполните значение этого атрибута веб-адресом, на который вы хотите указать ссылку:
 
-    ```html
-    <a href="https://www.mozilla.org/ru/about/manifesto/details/">Манифест Mozilla</a>
-    ```
+   ```html
+   <a href="https://www.mozilla.org/ru/about/manifesto/details/"
+     >Манифест Mozilla</a
+   >
+   ```
 
 Вы можете получить неожиданные результаты, если в самом начале веб-адреса вы опустите `https://` или `http://` часть, называемую _протоколом_. После создания ссылки, кликните по ней, чтобы убедиться, что она направляет вас туда, куда вы хотели.
 
@@ -225,14 +224,3 @@ HTML не является языком программирования; это
 Здесь вы узнали только самую поверхность HTML. Чтобы узнать больше, перейдите на страницу [Обучение HTML: руководства и уроки](/ru/Learn/HTML).
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
-
-## В этом модуле
-
-- [Установка базового программного обеспечения](/ru/docs/Learn/Getting_started_with_the_web/%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0_%D0%B1%D0%B0%D0%B7%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BE%D0%B1%D0%B5%D1%81%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D1%8F)
-- [Каким должен быть ваш веб-сайт?](/ru/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [Работа с файлами](/ru/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [Основы HTML](/ru/docs/Learn/Getting_started_with_the_web/HTML_basics)
-- [Основы CSS](/ru/docs/Learn/Getting_started_with_the_web/CSS_basics)
-- [Основы JavaScript](/ru/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [Публикация вашего веб-сайта](/ru/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [Как работает Веб](/ru/docs/Learn/Getting_started_with_the_web/How_the_Web_works)

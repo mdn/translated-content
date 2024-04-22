@@ -3,6 +3,8 @@ title: Cipher (サイファー)
 slug: Glossary/Cipher
 ---
 
+{{GlossarySidebar}}
+
 {{glossary("cryptography","暗号学")}}では、**サイファー**は{{glossary("plaintext","平文")}}を{{glossary("encryption", "暗号化")}}して読めなくし、それを{{glossary("decryption", "復号")}}するアルゴリズムです。
 
 サイファーは、情報化時代のかなり前から一般的でしたが（例えば、[換字式暗号](https://ja.wikipedia.org/wiki/換字式暗号)、[転置式暗号](https://ja.wikipedia.org/wiki/転置式暗号)）、それらは[ワンタイムパッド](https://ja.wikipedia.org/wiki/ワンタイムパッド)を除いて、どれも暗号的に安全ではありませんでした。
@@ -18,21 +20,21 @@ slug: Glossary/Cipher
 
 1. 一般知識
 
-    1. Wikipedia 上の [Cipher](https://en.wikipedia.org/wiki/Cipher) (英語)
-    2. Wikipedia 上の [暗号](https://ja.wikipedia.org/wiki/暗号)
-    3. [暗号化と復号](/ja/docs/Archive/Security/Encryption_and_Decryption)
+   1. Wikipedia 上の [Cipher](https://en.wikipedia.org/wiki/Cipher) (英語)
+   2. Wikipedia 上の [暗号](https://ja.wikipedia.org/wiki/暗号)
+   3. [暗号化と復号](/ja/docs/Archive/Security/Encryption_and_Decryption)
 
 2. [MDN Web Docs 用語集](/ja/docs/Glossary)
 
-    1. {{Glossary("Block cipher mode of operation", "暗号利用モード")}}
-    2. {{Glossary("Cipher", "サイファー")}}
-    3. {{Glossary("Ciphertext", "暗号文")}}
-    4. {{Glossary("Cipher suite", "暗号スイート")}}
-    5. {{Glossary("Cryptanalysis", "暗号解読")}}
-    6. {{Glossary("Cryptography", "暗号学")}}
-    7. {{Glossary("Decryption", "復号")}}
-    8. {{Glossary("Encryption", "暗号化")}}
-    9. {{Glossary("Key", "暗号鍵")}}
-    10. {{Glossary("Plaintext", "平文")}}
-    11. {{Glossary("Public-key cryptography", "公開鍵暗号")}}
-    12. {{Glossary("Symmetric-key cryptography", "共通鍵暗号")}}
+   1. {{Glossary("Block cipher mode of operation", "暗号利用モード")}}
+   2. {{Glossary("Cipher", "サイファー")}}
+   3. {{Glossary("Ciphertext", "暗号文")}}
+   4. {{Glossary("Cipher suite", "暗号スイート")}}
+   5. {{Glossary("Cryptanalysis", "暗号解読")}}
+   6. {{Glossary("Cryptography", "暗号学")}}
+   7. {{Glossary("Decryption", "復号")}}
+   8. {{Glossary("Encryption", "暗号化")}}
+   9. {{Glossary("Key", "暗号鍵")}}
+   10. {{Glossary("Plaintext", "平文")}}
+   11. {{Glossary("Public-key cryptography", "公開鍵暗号")}}
+   12. {{Glossary("Symmetric-key cryptography", "共通鍵暗号")}}

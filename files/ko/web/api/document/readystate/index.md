@@ -44,7 +44,9 @@ switch (document.readyState) {
     break;
   case "complete":
     // The page is fully loaded.
-    console.log("The first CSS rule is: " + document.styleSheets[0].cssRules[0].cssText);
+    console.log(
+      "The first CSS rule is: " + document.styleSheets[0].cssRules[0].cssText,
+    );
     break;
 }
 ```
@@ -54,10 +56,10 @@ switch (document.readyState) {
 ```js
 // Alternative to DOMContentLoaded event
 document.onreadystatechange = function () {
-  if (document.readyState === 'interactive') {
+  if (document.readyState === "interactive") {
     initApplication();
   }
-}
+};
 ```
 
 ### readystatechange as an alternative to load event
@@ -65,20 +67,19 @@ document.onreadystatechange = function () {
 ```js
 // Alternative to load event
 document.onreadystatechange = function () {
-  if (document.readyState === 'complete') {
+  if (document.readyState === "complete") {
     initApplication();
   }
-}
+};
 ```
 
 ### readystatechange as event listener to insert or modify the DOM before DOMContentLoaded
 
 ```js
-document.addEventListener('readystatechange', event => {
-  if (event.target.readyState === 'interactive') {
+document.addEventListener("readystatechange", (event) => {
+  if (event.target.readyState === "interactive") {
     initLoader();
-  }
-  else if (event.target.readyState === 'complete') {
+  } else if (event.target.readyState === "complete") {
     initApp();
   }
 });

@@ -41,13 +41,11 @@ for (i = 0; i < files.length; i++) {
 
 ## Especificações
 
-| Especificação                                                | Status                       | Comentário         |
-| ------------------------------------------------------------ | ---------------------------- | ------------------ |
-| {{SpecName('File API', '#dfn-type', 'type')}} | {{Spec2('File API')}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Blob.type")}}
+{{Compat}}
 
 ## Veja também
 

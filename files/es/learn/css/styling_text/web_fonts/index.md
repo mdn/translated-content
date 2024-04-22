@@ -1,7 +1,6 @@
 ---
 title: Fuentes web
 slug: Learn/CSS/Styling_text/Web_fonts
-original_slug: Learn/CSS/Styling_text/Fuentes_web
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text/Typesetting_a_homepage", "Learn/CSS/Styling_text")}}
@@ -122,9 +121,9 @@ Para implementar estos tipos de letra en tu ejemplo de demostración, sigue esto
 3. Cada una de las funciones `url()` apunta a un archivo de tipo de letra que tenemos que importar a nuestro CSS. Necesitamos asegurarnos de que las rutas a los archivos son correctas, así que añade `fonts/` al inicio de cada ruta (ajusta la ruta como sea necesario).
 4. Ahora puedes usar estos tipos de letra en tu lista de tipos de letra, al igual que cualquier tipo de letra seguro o predeterminado del sistema. Por ejemplo:
 
-    ```css
-    font-family: 'zantrokeregular', serif;
-    ```
+   ```css
+   font-family: "zantrokeregular", serif;
+   ```
 
 Con tu ejemplo de demostración, deberías obtener una página con unos agradables tipos de letra. Debido a que los tipos de letra se crean en diferentes tamaños, es posible que tengas que ajustar el tamaño, el espaciado, etc., para conseguir una apariencia más ordenada.
 
@@ -153,13 +152,14 @@ Vamos a explorar que la sintaxis correspondiente a `@font-face` que te ha genera
 
 ```css
 @font-face {
-  font-family: 'ciclefina';
-  src: url('fonts/cicle_fina-webfont.eot');
-  src: url('fonts/cicle_fina-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/cicle_fina-webfont.woff2') format('woff2'),
-         url('fonts/cicle_fina-webfont.woff') format('woff'),
-         url('fonts/cicle_fina-webfont.ttf') format('truetype'),
-         url('fonts/cicle_fina-webfont.svg#ciclefina') format('svg');
+  font-family: "ciclefina";
+  src: url("fonts/cicle_fina-webfont.eot");
+  src:
+    url("fonts/cicle_fina-webfont.eot?#iefix") format("embedded-opentype"),
+    url("fonts/cicle_fina-webfont.woff2") format("woff2"),
+    url("fonts/cicle_fina-webfont.woff") format("woff"),
+    url("fonts/cicle_fina-webfont.ttf") format("truetype"),
+    url("fonts/cicle_fina-webfont.svg#ciclefina") format("svg");
   font-weight: normal;
   font-style: normal;
 }

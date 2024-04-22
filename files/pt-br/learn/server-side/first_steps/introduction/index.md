@@ -1,7 +1,6 @@
 ---
 title: Introdução ao lado servidor
 slug: Learn/Server-side/First_steps/Introduction
-original_slug: Learn/Server-side/First_steps/Introdução
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}
@@ -131,7 +130,7 @@ Uma análise mais profunda dos hábitos do usuário pode ser usada para antecipa
 >
 > Os resultados de pesquisa do Google são otimizados com base em pesquisas anteriores.
 >
-> 1. Vá em [Google search](https:\\google.com).
+> 1. Vá em [Google search](https://www.google.com).
 > 2. Pesquise por "futeboll".
 > 3. Agora tente digitar "favorito" na caixa de pesquisa e observe as previsões de pesquisa do preenchimento automático.
 >
@@ -186,7 +185,7 @@ Agora você aprendeu que o código do lado do servidor é executado em um servid
 
 Você também deve entender que é útil porque nos permite criar sites que fornecem informações sob medida para usuários individuais de forma eficiente e têm uma boa ideia de algumas das coisas que você pode fazer quando for um programador do lado do servidor.
 
-Por último, você deve entender que o código do lado do servidor pode ser escrito em várias linguagens de programação e que você deve usar um framewoek web para tornar todo o processo mais fácil.
+Por último, você deve entender que o código do lado do servidor pode ser escrito em várias linguagens de programação e que você deve usar um framework web para tornar todo o processo mais fácil.
 
 Em um artigo futuro, ajudaremos você a escolher o melhor framework web para seu primeiro site. Aqui, vamos levá-lo pelas principais interações cliente-servidor com um pouco mais de detalhes.
 

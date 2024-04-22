@@ -1,8 +1,6 @@
 ---
 title: Constructeur URIError()
 slug: Web/JavaScript/Reference/Global_Objects/URIError/URIError
-translation_of: Web/JavaScript/Reference/Global_Objects/URIError/URIError
-browser-compat: javascript.builtins.URIError.URIError
 ---
 
 {{JSRef}}
@@ -12,10 +10,10 @@ Le constructeur **`URIError()`** permet de créer une erreur lorsqu'une fonction
 ## Syntaxe
 
 ```js
-new URIError()
-new URIError(message)
-new URIError(message, fileName)
-new URIError(message, fileName, lineNumber)
+new URIError();
+new URIError(message);
+new URIError(message, fileName);
+new URIError(message, fileName, lineNumber);
 ```
 
 ### Paramètres
@@ -33,15 +31,15 @@ new URIError(message, fileName, lineNumber)
 
 ```js
 try {
-  decodeURIComponent('%')
+  decodeURIComponent("%");
 } catch (e) {
-  console.log(e instanceof URIError)  // true
-  console.log(e.message)              // "malformed URI sequence"
-  console.log(e.name)                 // "URIError"
-  console.log(e.fileName)             // "Scratchpad/1"
-  console.log(e.lineNumber)           // 2
-  console.log(e.columnNumber)         // 2
-  console.log(e.stack)                // "@Scratchpad/2:2:3\n"
+  console.log(e instanceof URIError); // true
+  console.log(e.message); // "malformed URI sequence"
+  console.log(e.name); // "URIError"
+  console.log(e.fileName); // "Scratchpad/1"
+  console.log(e.lineNumber); // 2
+  console.log(e.columnNumber); // 2
+  console.log(e.stack); // "@Scratchpad/2:2:3\n"
 }
 ```
 
@@ -49,15 +47,15 @@ try {
 
 ```js
 try {
-  throw new URIError('Coucou', 'unFichier.js', 10)
+  throw new URIError("Coucou", "unFichier.js", 10);
 } catch (e) {
-  console.log(e instanceof URIError)  // true
-  console.log(e.message)              // "Coucou"
-  console.log(e.name)                 // "URIError"
-  console.log(e.fileName)             // "unFichier.js"
-  console.log(e.lineNumber)           // 10
-  console.log(e.columnNumber)         // 0
-  console.log(e.stack)                // "@Scratchpad/2:2:9\n"
+  console.log(e instanceof URIError); // true
+  console.log(e.message); // "Coucou"
+  console.log(e.name); // "URIError"
+  console.log(e.fileName); // "unFichier.js"
+  console.log(e.lineNumber); // 10
+  console.log(e.columnNumber); // 0
+  console.log(e.stack); // "@Scratchpad/2:2:9\n"
 }
 ```
 

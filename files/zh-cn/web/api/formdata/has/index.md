@@ -35,9 +35,9 @@ var formData = new FormData();
 下列代码用来检测 `FormData` 对象是否存在 `username` 这个 key。默认检测一次，使用 {{domxref("FormData.append")}} 插入`username` 之后再检测一次：
 
 ```js
-formData.has('username'); // Returns false
-formData.append('username', 'Chris');
-formData.has('username'); // Returns true
+formData.has("username"); // Returns false
+formData.append("username", "Chris");
+formData.has("username"); // Returns true
 ```
 
 ## 规范
@@ -48,9 +48,7 @@ formData.has('username'); // Returns true
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/zh-CN/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
-- [Using FormData objects](/zh-CN/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
+- [使用 FormData 对象](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

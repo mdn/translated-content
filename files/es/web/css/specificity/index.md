@@ -1,7 +1,6 @@
 ---
 title: Especificidad
 slug: Web/CSS/Specificity
-original_slug: Web/CSS/Especificidad
 ---
 
 La **especificidad** es la manera mediante la cual los navegadores deciden qué valores de una propiedad CSS son más relevantes para un elemento y, por lo tanto, serán aplicados. La especificidad está basada en las reglas de coincidencia que están compuestas por diferentes tipos de [selectores CSS](/es/CSS/CSS_Reference#Selectors).
@@ -42,26 +41,32 @@ Cuando se emplea `important` en una declaración de estilo, esta declaración so
 1. Hacer un mejor uso de las propiedades en cascada de CSS.
 2. Usar reglas más específicas. Indicando uno o más elementos antes del elemento que estás seleccionando, la regla se vuelve más específica y gana mayor prioridad:
 
-    ```html
-    <div id="test">
-      <span>Text</span>
-    </div>
-    ```
+   ```html
+   <div id="test">
+     <span>Text</span>
+   </div>
+   ```
 
-    ```css
-    div#test span { color: green; }
-    div span { color: blue; }
-    span { color: red; }
-    ```
+   ```css
+   div#test span {
+     color: green;
+   }
+   div span {
+     color: blue;
+   }
+   span {
+     color: red;
+   }
+   ```
 
 3. Como un caso especial sin sentido para (2), duplicar selectores simples para aumentar la especificidad cuando no tiene nada más que especificar
 
-    ```
-    #myId#myId span { color: yellow; }
-    .myClass.myClass span { color: orange; }
-    ```
+   ```
+   #myId#myId span { color: yellow; }
+   .myClass.myClass span { color: orange; }
+   ```
 
-#### Cómo se debería usar !important:
+#### Cómo se debería usar !important
 
 ##### A) Sobrescribiendo los estilos en linea
 
@@ -126,7 +131,7 @@ Aquí tienes un pedazo de CSS:
 
 ```css
 div.outer p {
-  color:orange;
+  color: orange;
 }
 div:not(.outer) p {
   color: lime;
@@ -192,9 +197,9 @@ Con el siguiente HTML:
 
 ```html
 <html>
-<body>
-  <h1>¡Aquí va un título!</h1>
-</body>
+  <body>
+    <h1>¡Aquí va un título!</h1>
+  </body>
 </html>
 ```
 
@@ -221,9 +226,9 @@ Con el siguiente HTML:
 
 ```html
 <html>
-<body id="parent">
-  <h1>¡Aquí va un título!</h1>
-</body>
+  <body id="parent">
+    <h1>¡Aquí va un título!</h1>
+  </body>
 </html>
 ```
 

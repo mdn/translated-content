@@ -1,18 +1,6 @@
 ---
 title: PerformanceTiming.requestStart
 slug: Web/API/PerformanceTiming/requestStart
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - Navigation Timing
-  - PerformanceTiming
-  - Property
-  - Propriété
-  - Read-only
-  - legacy
-  - requestStart
-translation_of: Web/API/PerformanceTiming/requestStart
 ---
 
 {{ APIRef("PerformanceTiming") }}

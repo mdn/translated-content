@@ -1,8 +1,8 @@
 ---
 title: Window.scrollBy()
 slug: Web/API/Window/scrollBy
-translation_of: Web/API/Window/scrollBy
 ---
+
 {{ APIRef() }}
 
 ## Описание
@@ -33,8 +33,10 @@ window.scrollBy(0, window.innerHeight);
 
 [window.scrollBy](/ru/docs/DOM/Window.scrollBy) прокручивает страницу на указанное количество пикселей, в то время как метод [window.scroll](/ru/docs/DOM/Window.scroll) указывает абсолютную позицию в документе, на которую надо сместиться. Смотрите также [window.scrollByLines](/ru/docs/DOM/Window.scrollByLines), [window.scrollByPages](/ru/docs/DOM/Window.scrollByPages)
 
-## Спецификация
+## Спецификации
 
-| Спецификация                                                                                     | Статус                           | Комментарий           |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------- |
-| {{ SpecName('CSSOM View', '#dom-window-scrollby', 'window.scrollBy()') }} | {{ Spec2('CSSOM View') }} | Исходное определение. |
+{{Specifications}}
+
+## Совместимость с браузерами
+
+{{Compat}}

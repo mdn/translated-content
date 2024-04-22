@@ -1,7 +1,6 @@
 ---
 title: 일반 대열 속 블록 및 인라인 레이아웃
 slug: Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow
-original_slug: Web/CSS/CSS_Flow_Layout/일반_흐름_속_블록_및_인라인_레이아웃
 ---
 
 {{CSSRef}}

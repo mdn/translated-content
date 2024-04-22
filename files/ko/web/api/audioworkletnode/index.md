@@ -2,6 +2,7 @@
 title: AudioWorkletNode
 slug: Web/API/AudioWorkletNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 > **참고:** 이 인터페이스는 [secure contexts](/ko/docs/Web/Security/Secure_Contexts) 바깥에서 이용 가능하지만, {{domxref("BaseAudioContext.audioWorklet")}} 속성은 그렇지 않습니다. 따라서 사용자 정의 {{domxref("AudioWorkletProcessor")}}는 [secure contexts](/ko/docs/Web/Security/Secure_Contexts) 바깥에서 정의될 수 없습니다.
@@ -42,27 +43,30 @@ _`AudioWorkletNode` 인터페이스는 자신만의 어떠한 메서드도 정�
 ```js
 // white-noise-processor.js
 class WhiteNoiseProcessor extends AudioWorkletProcessor {
-  process (inputs, outputs, parameters) {
-    const output = outputs[0]
-    output.forEach(channel => {
+  process(inputs, outputs, parameters) {
+    const output = outputs[0];
+    output.forEach((channel) => {
       for (let i = 0; i < channel.length; i++) {
-        channel[i] = Math.random() * 2 - 1
+        channel[i] = Math.random() * 2 - 1;
       }
-    })
-    return true
+    });
+    return true;
   }
 }
 
-registerProcessor('white-noise-processor', WhiteNoiseProcessor)
+registerProcessor("white-noise-processor", WhiteNoiseProcessor);
 ```
 
 다음으로, 메인 스크립트 파일에서 우리는 프로세서를 로드하고, 프로세서의 이름을 `AudioWorkletNode` 에 전달하며 `AudioWorkletNode` 의 인스턴스를 생성하고, 이 노드를 오디오 그래프에 연결할 것입니다.
 
 ```js
-const audioContext = new AudioContext()
-await audioContext.audioWorklet.addModule('white-noise-processor.js')
-const whiteNoiseNode = new AudioWorkletNode(audioContext, 'white-noise-processor')
-whiteNoiseNode.connect(audioContext.destination)
+const audioContext = new AudioContext();
+await audioContext.audioWorklet.addModule("white-noise-processor.js");
+const whiteNoiseNode = new AudioWorkletNode(
+  audioContext,
+  "white-noise-processor",
+);
+whiteNoiseNode.connect(audioContext.destination);
 ```
 
 ## 명세

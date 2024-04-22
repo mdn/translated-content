@@ -1,7 +1,6 @@
 ---
 title: AnalyserNode.fftSize
 slug: Web/API/AnalyserNode/fftSize
-translation_of: Web/API/AnalyserNode/fftSize
 ---
 
 {{ APIRef("Web Audio API") }}

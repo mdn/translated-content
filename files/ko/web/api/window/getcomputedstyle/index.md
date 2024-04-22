@@ -2,6 +2,7 @@
 title: Window.getComputedStyle()
 slug: Web/API/Window/getComputedStyle
 ---
+
 {{APIRef}}
 
 `Window.getComputedStyle()` 메소드는 인자로 전달받은 요소의 모든 CSS 속성값을 담은 객체를 회신합니다. 이 속성값들은, 해당 요소에 대하여 활성 스타일시트와 속성값에 대한 기본 연산이 모두 반영된 결과값입니다. 개별 CSS속성 값은 객체를 통해 제공되는 API 또는 CSS 속성 이름을 사용해서 간단히 색인화해서 액세스할 수 있습니다.
@@ -42,9 +43,14 @@ p {
 ```
 
 ```js
-let para = document.querySelector('p');
+let para = document.querySelector("p");
 let compStyles = window.getComputedStyle(para);
-para.textContent = 'My computed font-size is ' + compStyles.getPropertyValue('font-size') + ',\nand my computed line-height is ' + compStyles.getPropertyValue('line-height') + '.';
+para.textContent =
+  "My computed font-size is " +
+  compStyles.getPropertyValue("font-size") +
+  ",\nand my computed line-height is " +
+  compStyles.getPropertyValue("line-height") +
+  ".";
 ```
 
 ### 결과
@@ -67,18 +73,18 @@ getComputedStyle은 의사요소(pseudo-elements, `::after`, `::before`, `::mark
 
 ```html
 <style>
- h3::after {
-   content: ' rocks!';
- }
+  h3::after {
+    content: " rocks!";
+  }
 </style>
 
 <h3>generated content</h3>
 
 <script>
-  var h3       = document.querySelector('h3');
-  var result   = getComputedStyle(h3, ':after').content;
+  var h3 = document.querySelector("h3");
+  var result = getComputedStyle(h3, ":after").content;
 
-  console.log('the generated content is: ', result); // returns ' rocks!'
+  console.log("the generated content is: ", result); // returns ' rocks!'
 </script>
 ```
 

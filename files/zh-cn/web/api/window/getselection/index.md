@@ -19,10 +19,10 @@ const selection = window.getSelection() ;
 
 ```js
 function foo() {
-    let selObj = window.getSelection();
-    console.log(selObj);
-    let selRange = selObj.getRangeAt(0);
-    // 其他代码
+  let selObj = window.getSelection();
+  console.log(selObj);
+  let selRange = selObj.getRangeAt(0);
+  // 其他代码
 }
 ```
 

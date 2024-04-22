@@ -1,9 +1,8 @@
 ---
 title: Node.namespaceURI
 slug: Web/API/Element/namespaceURI
-translation_of: Web/API/Node/namespaceURI
-original_slug: Web/API/Node/namespaceURI
 ---
+
 {{APIRef("DOM")}}
 
 Свойство **`Node.namespaceURI`** только для чтения, возвращает пространство имён URI узла или `null,` если узел не находится в пространстве имён (только для чтения). Хотя узел документа, возвращает пространство имён XML для текущего документа.
@@ -19,8 +18,11 @@ namespace = node.namespaceURI
 В этом сниппете, узел рассматривается для его [localName](/ru/docs/DOM/Node.localName) и его `namespaceURI`. Если `namespaceURI` возвращает XUL пространство имён и `localName` возвращая "browser", затем узел XUL согласует `<browser/>`.
 
 ```js
-if (node.localName == "browser" &&
-    node.namespaceURI == "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul") {
+if (
+  node.localName == "browser" &&
+  node.namespaceURI ==
+    "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+) {
   // this is a XUL browser
 }
 ```
@@ -41,6 +43,8 @@ DOM не обрабатывает или не вынуждает проверя�
 
 ## Спецификации
 
-- [DOM Level 2 Core: namespaceURI](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-NodeNSname)
-- [DOM Level 2 Core: XML Namespaces](http://www.w3.org/TR/DOM-Level-2-Core/core.html#Namespaces-Considerations)
-- [DOM4: namespaceURI](http://www.w3.org/TR/dom/#dom-element-namespaceuri)
+{{Specifications}}
+
+## Совместимость с браузерами
+
+{{Compat}}

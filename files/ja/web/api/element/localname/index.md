@@ -1,25 +1,22 @@
 ---
-title: Element.localName
+title: "Element: localName プロパティ"
+short-title: localName
 slug: Web/API/Element/localName
+l10n:
+  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
 {{APIRef("DOM")}}
 
 **`Element.localName`** は読み取り専用プロパティで、要素の修飾名のローカル部分を返します。
 
-## 構文
+## 返値
 
-```js
-name = element.localName
-```
-
-### 返値
-
-要素の修飾名の、ローカル部分を示す {{domxref("DOMString")}} です。
+文字列で、要素の修飾名の、ローカル部分を示します。
 
 ## 例
 
-(`text/xml` や `application/xhtml+xml` のような、XML のコンテンツタイプで送出される必要があります。)
+（`text/xml` や `application/xhtml+xml` のような、XML のコンテンツタイプで送出される必要があります。）
 
 ```xml
 <html xmlns="http://www.w3.org/1999/xhtml"
@@ -27,8 +24,8 @@ name = element.localName
 <head>
   <script type="application/javascript"><![CDATA[
   function test() {
-    var text = document.getElementById('text');
-    var circle = document.getElementById('circle');
+    const text = document.getElementById('text');
+    const circle = document.getElementById('circle');
 
     text.value = "<svg:circle> has:\n" +
                  "localName = '" + circle.localName + "'\n" +
@@ -60,7 +57,7 @@ name = element.localName
 </ecomm:business>
 ```
 
-> **メモ:** Gecko 1.9.2 以前、このプロパティは、HTML DOM における HTML 要素ではローカル名を大文字で返していました（XML DOM における XHTML 要素とは対照的に）。最新バージョンでは HTML5 に従い、このプロパティは内部の DOM ストレージの場合、 HTML DOM における HTML 要素と XHTML DOM における XHTML 要素のいずれも、小文字で返します。{{domxref("element.tagName","tagName")}} プロパティは引き続き、 HTML DOM における HTML 要素では大文字で返します。
+> **メモ:** このプロパティは内部 DOM ストレージの大文字小文字を忠実に返しますが、{{domxref("element.tagName", "tagName")}} プロパティは HTML DOM における HTML 要素でを大文字で返します。
 
 ## 仕様書
 

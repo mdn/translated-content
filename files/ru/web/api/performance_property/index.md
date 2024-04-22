@@ -1,8 +1,6 @@
 ---
 title: Window.performance
 slug: Web/API/performance_property
-translation_of: Web/API/Window/performance
-original_slug: Web/API/Window/performance
 ---
 
 {{APIREf}}

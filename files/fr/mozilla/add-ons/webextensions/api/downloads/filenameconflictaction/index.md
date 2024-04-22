@@ -1,20 +1,9 @@
 ---
 title: downloads.FilenameConflictAction
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/FilenameConflictAction
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - FilenameConflitAction
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - downloads
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/FilenameConflictAction
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Le type `FilenameConflictAction` de l'API {{WebExtAPIRef("downloads")}} spécifie que faire si le nom d'un fichier téléchargé est en conflit avec un fichier existant.
 

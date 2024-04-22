@@ -1,10 +1,6 @@
 ---
 title: round
 slug: Web/XPath/Functions/round
-tags:
-  - Référence_XSLT
-translation_of: Web/XPath/Functions/round
-original_slug: Web/XPath/Fonctions/round
 ---
 
 {{ XsltRef() }}

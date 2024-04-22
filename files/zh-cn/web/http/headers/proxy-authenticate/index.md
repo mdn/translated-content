@@ -9,9 +9,9 @@ The HTTP **`Proxy-Authenticate`** 是一个响应首部，指定了获取 {{Glos
 
 `Proxy-Authenticate` 首部需要与 {{HTTPStatus("407")}} `Proxy Authentication Required` 响应一起发送。
 
-| Header type                                      | {{Glossary("Response header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| Header type                           | {{Glossary("Response header")}} |
+| ------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                              |
 
 ## 语法
 
@@ -38,7 +38,7 @@ Proxy-Authenticate: Basic realm="Access to the internal site"
 
 {{Specifications}}
 
-## 相关内容
+## 参见
 
 - [HTTP authentication](/zh-CN/docs/Web/HTTP/Authentication)
 - {{HTTPHeader("Authorization")}}

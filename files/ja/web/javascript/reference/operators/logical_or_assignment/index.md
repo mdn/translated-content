@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Operators/Logical_OR_assignment
 ## 構文
 
 ```js
-expr1 ||= expr2
+expr1 ||= expr2;
 ```
 
 ## 解説
@@ -50,7 +50,7 @@ x = x || y;
 "lyrics" 要素が空の場合は、既定値を表示します。
 
 ```js
-document.getElementById('lyrics').textContent ||= 'No lyrics.'
+document.getElementById("lyrics").textContent ||= "No lyrics.";
 ```
 
 ここでの短絡評価は、要素が不必要に更新されることがなく、追加のパースやレンダリング作業、フォーカスの損失などの望ましくない副作用を引き起こすことがないので、特に有益です。

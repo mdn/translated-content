@@ -1,7 +1,6 @@
 ---
 title: 使用 JavaScript 和 DOM 接口遍历 HTML 表格
-slug: >-
-  Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
+slug: Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
 ---
 
 {{DefaultAPISidebar("DOM")}}
@@ -147,10 +146,7 @@ td {
 
 ```html
 <body>
-  <input
-    type="button"
-    value="设置段落背景颜色"
-    onclick="setBackground()" />
+  <input type="button" value="设置段落背景颜色" onclick="setBackground()" />
   <p>hi</p>
   <p>hello</p>
 </body>
@@ -275,9 +271,7 @@ sample1.html 中创建表格的基本步骤是：
 ```html
 <html lang="zh-CN">
   <head>
-    <title>
-      示例代码——使用 JavaScript 和 DOM 接口遍历 HTML 表格
-    </title>
+    <title>示例代码——使用 JavaScript 和 DOM 接口遍历 HTML 表格</title>
     <script>
       function start() {
         // 获取 body 的引用
@@ -297,7 +291,7 @@ sample1.html 中创建表格的基本步骤是：
             const myCurrentCell = document.createElement("td");
             // 创建文本节点
             const currentText = document.createTextNode(
-              `cell is row ${j}, column ${i}`
+              `cell is row ${j}, column ${i}`,
             );
             // 将文本节点附加至 <td> 中
             myCurrentCell.appendChild(currentText);

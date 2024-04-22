@@ -1,11 +1,6 @@
 ---
 title: CanvasRenderingContext2D.textBaseline
 slug: Web/API/CanvasRenderingContext2D/textBaseline
-tags:
-  - API
-  - Canvas
-  - Property
-translation_of: Web/API/CanvasRenderingContext2D/textBaseline
 ---
 
 {{APIRef}}
@@ -50,12 +45,19 @@ ctx.textBaseline = "top" || "hanging" || "middle" || "alphabetic" || "ideographi
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-const baselines = ['top', 'hanging', 'middle', 'alphabetic', 'ideographic', 'bottom'];
-ctx.font = '36px serif';
-ctx.strokeStyle = 'red';
+const baselines = [
+  "top",
+  "hanging",
+  "middle",
+  "alphabetic",
+  "ideographic",
+  "bottom",
+];
+ctx.font = "36px serif";
+ctx.strokeStyle = "red";
 
 baselines.forEach(function (baseline, index) {
   ctx.textBaseline = baseline;
@@ -64,7 +66,7 @@ baselines.forEach(function (baseline, index) {
   ctx.moveTo(0, y + 0.5);
   ctx.lineTo(550, y + 0.5);
   ctx.stroke();
-  ctx.fillText('Abcdefghijklmnop (' + baseline + ')', 0, y);
+  ctx.fillText("Abcdefghijklmnop (" + baseline + ")", 0, y);
 });
 ```
 
@@ -76,7 +78,7 @@ baselines.forEach(function (baseline, index) {
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

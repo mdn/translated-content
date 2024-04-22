@@ -1,14 +1,6 @@
 ---
 title: Array.prototype.unshift()
 slug: Web/JavaScript/Reference/Global_Objects/Array/unshift
-tags:
-  - Array
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/unshift
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/unshift
 ---
 
 {{JSRef}}
@@ -68,7 +60,7 @@ arr.unshift(0); // renvoie 3, la nouvelle longueur du tableau
 arr.unshift(-2, -1); // = 5
 // arr est [-2, -1, 0, 1, 2]
 
-arr.unshift( [-3] ); // 6
+arr.unshift([-3]); // 6
 // arr est [[-3], -2, -1, 0, 1, 2]
 
 arr.unshift([-7, -6], [-5]); // 8

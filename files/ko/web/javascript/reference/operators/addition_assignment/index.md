@@ -2,6 +2,7 @@
 title: 더하기 할당 (+=)
 slug: Web/JavaScript/Reference/Operators/Addition_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 더하기 할당 연산자(`+=`)는 오른쪽 피연산자의 값을 변수에 더한 결과를 다시 변수에 할당합니다. 두 피연산자의
@@ -12,7 +13,7 @@ slug: Web/JavaScript/Reference/Operators/Addition_assignment
 ## 구문
 
 ```js
-x += y // x = x + y
+x += y; // x = x + y
 ```
 
 ## 예제
@@ -26,22 +27,22 @@ x += y // x = x + y
 // 위와 같은 변수를 가정할 때
 
 // Number + Number -> 덧셈
-bar += 2 // 7
+bar += 2; // 7
 
 // Boolean + Number -> 덧셈
-baz += 1 // 2
+baz += 1; // 2
 
 // Boolean + Boolean -> 덧셈
-baz += false // 1
+baz += false; // 1
 
 // Number + String -> 연결
-bar += 'foo' // "5foo"
+bar += "foo"; // "5foo"
 
 // String + Boolean -> 연결
-foo += false // "foofalse"
+foo += false; // "foofalse"
 
 // String + String -> 연결
-foo += 'bar' // "foobar"
+foo += "bar"; // "foobar"
 ```
 
 ## 명세

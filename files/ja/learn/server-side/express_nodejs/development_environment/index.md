@@ -57,8 +57,8 @@ Windows と macOS への _Node_ と _NPM_ のインストールは、提供さ�
 
 1. 必要なインストーラーをダウンロードします
 
-    1. <https://nodejs.org/ja/> に進みます
-    2. "ほとんどのユーザーに推奨" である LTS ビルドをダウンロードするためのボタンを選択してください。
+   1. <https://nodejs.org/ja/> に進みます
+   2. "ほとんどのユーザーに推奨" である LTS ビルドをダウンロードするためのボタンを選択してください。
 
 2. ダウンロードしたファイルをダブルクリックし、インストールの指示に従って Node をインストールします。
 
@@ -93,37 +93,36 @@ _Nodejs_ パッケージマネージャー _NPM_ もインストールされて�
 
 1. 次のテキストを **hellonode.js** というファイルにコピーします。これは純粋な Node 関数 (Express からは何もしていません) といくつかの ES6 構文を使用します。
 
-    ```js
-    //HTTP モジュールを読み込む
-    const http = require("http");
-    const hostname = '127.0.0.1';
-    const port = 3000;
+   ```js
+   //HTTP モジュールを読み込む
+   const http = require("http");
+   const hostname = "127.0.0.1";
+   const port = 3000;
 
-    //HTTP サーバーを作成し、3000 番ポートでリクエストを待機します。
-    const server = http.createServer((req, res) => {
+   //HTTP サーバーを作成し、3000 番ポートでリクエストを待機します。
+   const server = http.createServer((req, res) => {
+     //HTTP ステータスとコンテンツタイプを持つ応答 HTTP ヘッダーを設定します。
+     res.statusCode = 200;
+     res.setHeader("Content-Type", "text/plain");
+     res.end("Hello World\n");
+   });
 
-      //HTTP ステータスとコンテンツタイプを持つ応答 HTTP ヘッダーを設定します。
-      res.statusCode = 200;
-      res.setHeader('Content-Type', 'text/plain');
-      res.end('Hello World\n');
-    });
+   //3000 番ポートでリクエストを待機し、受信したときにログ出力するコールバック関数
+   server.listen(port, hostname, () => {
+     console.log(`Server running at http://${hostname}:${port}/`);
+   });
+   ```
 
-    //3000 番ポートでリクエストを待機し、受信したときにログ出力するコールバック関数
-    server.listen(port, hostname, () => {
-      console.log(`Server running at http://${hostname}:${port}/`);
-    });
-    ```
+   このコードは "http" モジュールをインポートし、それを使用して 3000 番ポートで HTTP リクエストを待機するサーバーを作成 (`createServer()`) します。次に、スクリプトはサーバーをテストするために使用できるブラウザー URL についてのメッセージをコンソールに出力します。 `createServer()` 関数は、HTTP リクエストを受信したときに呼び出されるコールバック関数を引数として取ります。これは HTTP ステータスコード 200 ("OK") とプレーンテキスト "Hello World" のレスポンスを返します。
 
-    このコードは "http" モジュールをインポートし、それを使用して 3000 番ポートで HTTP リクエストを待機するサーバーを作成 (`createServer()`) します。次に、スクリプトはサーバーをテストするために使用できるブラウザー URL についてのメッセージをコンソールに出力します。 `createServer()` 関数は、HTTP リクエストを受信したときに呼び出されるコールバック関数を引数として取ります。これは HTTP ステータスコード 200 ("OK") とプレーンテキスト "Hello World" のレスポンスを返します。
-
-    > **メモ:** このコードが何をしているのか正確に理解できなくても心配しないでください。Express を使い始めたら、コードについて詳しく説明します。
+   > **メモ:** このコードが何をしているのか正確に理解できなくても心配しないでください。Express を使い始めたら、コードについて詳しく説明します。
 
 2. コマンドプロンプトで `hellonode.js` ファイルと同じディレクトリーに移動し、次のようにスクリプト名とともに `node` を呼び出してサーバーを起動します。
 
-    ```bash
-    >node hellonode.js
-    Server running at http://127.0.0.1:3000/
-    ```
+   ```bash
+   >node hellonode.js
+   Server running at http://127.0.0.1:3000/
+   ```
 
 3. `http://127.0.0.1:3000` の URL に移動します。すべてがうまくいったら、ブラウザーは単に文字列 "Hello World" を表示するはずです。
 
@@ -143,81 +142,81 @@ Node 自体の次に、[NPM](https://docs.npmjs.com/) は Node アプリケー�
 
 1. まず、新しいアプリケーション用のディレクトリーを作成し、そこに移動します。
 
-    ```bash
-    mkdir myapp
-    cd myapp
-    ```
+   ```bash
+   mkdir myapp
+   cd myapp
+   ```
 
 2. アプリケーション用の **package.json** ファイルを作成するには、npm `init` コマンドを使用します。このコマンドはアプリケーションの名前とバージョン、初期エントリポイントファイルの名前 (デフォルトでは **index.js**) など、さまざまなことを要求します。今のところ、デフォルトをそのまま使用します。
 
-    ```bash
-    npm init
-    ```
+   ```bash
+   npm init
+   ```
 
-    **package.json** ファイル (`cat package.json`) を表示すると、受け入れたデフォルトが表示され、最後にライセンスが表示されます。
+   **package.json** ファイル (`cat package.json`) を表示すると、受け入れたデフォルトが表示され、最後にライセンスが表示されます。
 
-    ```json
-    {
-      "name": "myapp",
-      "version": "1.0.0",
-      "description": "",
-      "main": "index.js",
-      "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-      },
-      "author": "",
-      "license": "ISC"
-    }
-    ```
+   ```json
+   {
+     "name": "myapp",
+     "version": "1.0.0",
+     "description": "",
+     "main": "index.js",
+     "scripts": {
+       "test": "echo \"Error: no test specified\" && exit 1"
+     },
+     "author": "",
+     "license": "ISC"
+   }
+   ```
 
 3. `myapp` ディレクトリーに Express をインストールし、それをあなたの package.json ファイルの依存関係リストに保存してください。
 
-    ```bash
-      npm install express --save
-    ```
+   ```bash
+     npm install express --save
+   ```
 
 4. **package.json** の依存関係セクションが **package.json** ファイルの最後に表示され、Express が含まれます。
 
-    ```json
-    {
-      "name": "myapp",
-      "version": "1.0.0",
-      "description": "",
-      "main": "index.js",
-      "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-      },
-      "author": "",
-      "license": "ISC",
-      "dependencies": {
-        "express": "^4.16.3"
-      }
-    }
-    ```
+   ```json
+   {
+     "name": "myapp",
+     "version": "1.0.0",
+     "description": "",
+     "main": "index.js",
+     "scripts": {
+       "test": "echo \"Error: no test specified\" && exit 1"
+     },
+     "author": "",
+     "license": "ISC",
+     "dependencies": {
+       "express": "^4.16.3"
+     }
+   }
+   ```
 
 5. このライブラリを使用するには、index.js ファイルで以下に示すように `require()` 関数を呼び出します。"myapp" アプリケーションディレクトリーのルートにファイルを作り、以下の内容を記述します。
 
-    ```
-    const express = require('express')
-    const app = express();
+   ```
+   const express = require('express')
+   const app = express();
 
-    app.get('/', (req, res) => {
-      res.send('Hello World!')
-    });
+   app.get('/', (req, res) => {
+     res.send('Hello World!')
+   });
 
-    app.listen(8000, () => {
-      console.log('Example app listening on port 8000!')
-    });
-    ```
+   app.listen(8000, () => {
+     console.log('Example app listening on port 8000!')
+   });
+   ```
 
-    このコードは、最小限の「HelloWorld」Express ウェブアプリケーションを示しています。これは「express」モジュールをインポートし、それを使用して 8000 番ポートで HTTP リクエストを待機するサーバ ー(`app`) を作成し、サーバーをテストするために使用できるブラウザー URL を説明するメッセージをコンソールに出力します。 `app.get()` 関数は、指定された URL パス ('/') で HTTP `GET` リクエストにのみ応答します。この場合、関数を呼び出して _Hello World!_ メッセージを送信します。
+   このコードは、最小限の「HelloWorld」Express ウェブアプリケーションを示しています。これは「express」モジュールをインポートし、それを使用して 8000 番ポートで HTTP リクエストを待機するサーバ ー(`app`) を作成し、サーバーをテストするために使用できるブラウザー URL を説明するメッセージをコンソールに出力します。 `app.get()` 関数は、指定された URL パス ('/') で HTTP `GET` リクエストにのみ応答します。この場合、関数を呼び出して _Hello World!_ メッセージを送信します。
 
 6. コマンドプロンプトでスクリプトを使用して node を呼び出すことでサーバーを起動できます。
 
-    ```bash
-    >node index.js
-    Example app listening on port 8000
-    ```
+   ```bash
+   >node index.js
+   Example app listening on port 8000
+   ```
 
 7. URL (<http://127.0.0.1:8000/>) に移動します。すべてがうまくいったら、ブラウザーは単に文字列 "Hello World!" を表示するはずです。
 

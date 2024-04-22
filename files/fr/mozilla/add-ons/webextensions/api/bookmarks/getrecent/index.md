@@ -1,20 +1,9 @@
 ---
 title: bookmarks.getRecent()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getRecent
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getRecent
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/getRecent
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 La méthode `bookmarks.getRecent()` récupère un nombre spécifié de signets ajoutés le plus récemment en tant que tableau d'objets {{WebExtAPIRef('bookmarks.BookmarkTreeNode', 'BookmarkTreeNode')}}.
 
@@ -24,8 +13,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var gettingRecent = browser.bookmarks.getRecent(
-  numberOfItems          // integer
-)
+  numberOfItems, // integer
+);
 ```
 
 ### Paramètres

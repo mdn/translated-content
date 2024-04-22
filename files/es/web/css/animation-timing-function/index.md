@@ -30,11 +30,11 @@ animation-timing-function: step-start;
 animation-timing-function: step-end;
 
 /* Function values */
-animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+animation-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
 animation-timing-function: steps(4, end);
 
 /* Multiple animations */
-animation-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
+animation-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
 
 /* Global values */
 animation-timing-function: inherited;

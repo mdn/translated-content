@@ -1,7 +1,6 @@
 ---
 title: WebSocket.readyState
 slug: Web/API/WebSocket/readyState
-browser-compat: api.WebSocket.readyState
 ---
 
 {{APIRef("Web Sockets API")}}

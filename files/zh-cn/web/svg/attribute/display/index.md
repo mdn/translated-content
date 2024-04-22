@@ -28,7 +28,9 @@ As a presentation attribute, it can be applied to any element.
 ## 示例
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
@@ -41,7 +43,13 @@ html, body, svg {
 
   <!-- Here the yellow rectangle is not displayed -->
   <rect x="120" y="0" width="100" height="100" fill="skyblue"></rect>
-  <rect x="140" y="20" width="60" height="60" fill="yellow" display="none"></rect>
+  <rect
+    x="140"
+    y="20"
+    width="60"
+    height="60"
+    fill="yellow"
+    display="none"></rect>
 </svg>
 ```
 
@@ -49,10 +57,10 @@ html, body, svg {
 
 ## 使用说明
 
-| Default value | `inline`                         |
-| ------------- | -------------------------------- |
+| Default value | `inline`                 |
+| ------------- | ------------------------ |
 | Value         | {{csssyntax("display")}} |
-| Animatable    | Yes                              |
+| Animatable    | Yes                      |
 
 For a description of the values, please refer to the {{cssxref("display", "CSS display")}} property.
 

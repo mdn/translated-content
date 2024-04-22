@@ -1,20 +1,9 @@
 ---
 title: runtime.getBackgroundPage()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/getBackgroundPage
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getBackgroundPage
-  - runtime
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/getBackgroundPage
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Récupère l'objet [`Window`](/fr/docs/Web/API/Window) pour la page d'arrière-plan qui s'exécute dans l'extension en cours.
 
@@ -31,7 +20,7 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 ## Syntaxe
 
 ```js
-var gettingPage = browser.runtime.getBackgroundPage()
+var gettingPage = browser.runtime.getBackgroundPage();
 ```
 
 ### Paramètres

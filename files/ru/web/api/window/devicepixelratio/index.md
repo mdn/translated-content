@@ -1,7 +1,6 @@
 ---
 title: Window.devicePixelRatio
 slug: Web/API/Window/devicePixelRatio
-translation_of: Web/API/Window/devicePixelRatio
 ---
 
 {{APIRef}}
@@ -30,6 +29,6 @@ window.screen.deviceXDPI / window.screen.logicalXDPI
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}

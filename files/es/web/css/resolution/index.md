@@ -1,7 +1,6 @@
 ---
 title: <resolution>
 slug: Web/CSS/resolution
-original_slug: Web/CSS/resolución
 ---
 
 {{CSSRef}}

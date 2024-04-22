@@ -1,13 +1,9 @@
 ---
 title: Number.MAX_VALUE
 slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE
-tags:
-  - JavaScript
-  - Number
-  - Property
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE
 ---
-{{JSRef("Global_Objects", "Number")}}
+
+{{JSRef}}
 
 ## Сводка
 
@@ -37,11 +33,7 @@ if (num1 * num2 <= Number.MAX_VALUE) {
 
 ## Спецификации
 
-| Спецификация                                                                         | Статус                   | Комментарии                                            |
-| ------------------------------------------------------------------------------------ | ------------------------ | ------------------------------------------------------ |
-| ECMAScript 1-е издание.                                                              | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.7.3.2', 'Number.MAX_VALUE')}}         | {{Spec2('ES5.1')}} |                                                        |
-| {{SpecName('ES6', '#sec-number.max_value', 'Number.MAX_VALUE')}} | {{Spec2('ES6')}}     |                                                        |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

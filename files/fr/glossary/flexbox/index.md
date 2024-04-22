@@ -1,44 +1,42 @@
 ---
 title: Flexbox
 slug: Glossary/Flexbox
-tags:
-  - CSS
-  - Glossaire
-  - flexbox
-translation_of: Glossary/Flexbox
-original_slug: Glossaire/Flexbox
+l10n:
+  sourceCommit: 9b73bdea5458572f77a401596fef9a06ed8bba1b
 ---
 
-Flexbox (_boîte flexible_) est le nom communément utilisé pour le [module de mise en page des boîtes flexibles CSS](https://www.w3.org/TR/css-flexbox-1/), un modèle de disposition pour afficher des éléments dans une seule dimension - comme une ligne ou une colonne.
+{{GlossarySidebar}}
 
-Dans la spécification, flexbox est décrite comme un modèle de disposition pour la conception de l'interface utilisateur. La caractéristique clé de flexbox est le fait que les articles dans une disposition flexible peuvent grandir et rétrécir. De l'espace peut être affecté aux éléments eux-mêmes ou distribué entre ou autour des éléments.
+Flexbox (qu'on peut traduire par «&nbsp;boîte flexible&nbsp;») est le nom communément utilisé pour le [module de mise en page des boîtes flexibles CSS](https://www.w3.org/TR/css-flexbox-1/), un modèle de disposition pour afficher des éléments dans une seule dimension, comme une ligne ou une colonne.
 
-Flexbox permet également l'alignement des éléments sur l'axe principal ou transversal, offrant ainsi un niveau élevé de contrôle sur la taille et l'alignement d'un groupe d'éléments.
+Dans la spécification, flexbox est décrite comme un modèle de disposition pour aider à la conception d'une interface utilisateur. L'intérêt principal des boîtes flexibles est qu'elles permettent aux éléments à l'intérieur de s'agrandir ou de rétrécir en fonction de l'espace disponible. L'espace peut être distribué pour les éléments ou servir à leur espacement.
+
+Flexbox permet également l'alignement des éléments sur l'axe principal ou transversal, offrant ainsi un niveau de contrôle sur la taille et l'alignement d'un groupe d'éléments.
 
 ## Voir aussi
 
-### Références de la propriété
+### Propriétés CSS correspondantes
 
-- {{cssxref("align-content")}}
-- {{cssxref("align-items")}}
-- {{cssxref("align-self")}}
-- {{cssxref("flex")}}
-- {{cssxref("flex-basis")}}
-- {{cssxref("flex-direction")}}
-- {{cssxref("flex-flow")}}
-- {{cssxref("flex-grow")}}
-- {{cssxref("flex-shrink")}}
-- {{cssxref("flex-wrap")}}
-- {{cssxref("justify-content")}}
-- {{cssxref("order")}}
+- [`align-content`](/fr/docs/Web/CSS/align-content)
+- [`align-items`](/fr/docs/Web/CSS/align-items)
+- [`align-self`](/fr/docs/Web/CSS/align-self)
+- [`flex`](/fr/docs/Web/CSS/flex)
+- [`flex-basis`](/fr/docs/Web/CSS/flex-basis)
+- [`flex-direction`](/fr/docs/Web/CSS/flex-direction)
+- [`flex-flow`](/fr/docs/Web/CSS/flex-flow)
+- [`flex-grow`](/fr/docs/Web/CSS/flex-grow)
+- [`flex-shrink`](/fr/docs/Web/CSS/flex-shrink)
+- [`flex-wrap`](/fr/docs/Web/CSS/flex-wrap)
+- [`justify-content`](/fr/docs/Web/CSS/justify-content)
+- [`order`](/fr/docs/Web/CSS/order)
 
-### En lire plus
+### Lectures complémentaires
 
-- _[CSS Flexible Box Layout Module Level 1 Specification](https://www.w3.org/TR/css-flexbox-1/)_
-- Guide Flexbox CSS : _[Les concepts de base pour flexbox](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Concepts_de_base_flexbox)_
-- Guide Flexbox CSS : _[Les liens entre flexbox et les autres méthodes de disposition](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Liens_entre_flexbox_et_les_autres_dispositions)_
-- Guide Flexbox CSS : _[Aligner des éléments dans un conteneur flexible](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Aligner_des_%C3%A9l%C3%A9ments_dans_un_conteneur_flexible)_
-- Guide Flexbox CSS : _[Ordonner les éléments flexibles](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Ordering_Flex_Items)_
-- Guide Flexbox CSS : _[Contrôler les proportions des boîtes flexibles le long de l'axe principal](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Contr%C3%B4ler_les_proportions_des_bo%C3%AEtes_flexibles_le_long_de_l_axe_principal)_
-- Guide Flexbox CSS : _[Maîtriser le passage à la ligne des éléments flexibles](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Ma%C3%AEtriser_passage_%C3%A0_la_ligne_des_%C3%A9l%C3%A9ments_flexibles)_
-- Guide Flexbox CSS : _[Cas d'utilisation classiques de flexbox](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Cas_utilisation_flexbox)_
+- Chapitres du guide sur les boîtes flexibles&nbsp;:
+  - [Concepts élémentaires des boîtes flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+  - [Liens entre le module des boîtes flexibles et les autres méthodes de disposition](/fr/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods)
+  - [Alignement des objets au sein d'un conteneur flexible](/fr/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
+  - [Ordonner les éléments flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)
+  - [Contrôler les proportions des éléments flexibles le long de l'axe principal](/fr/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
+  - [Maîtriser le passage à la ligne des éléments flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)
+  - [Cas d'usages principaux pour les boîtes flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)

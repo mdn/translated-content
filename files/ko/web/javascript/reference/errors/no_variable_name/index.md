@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: missing variable name'
+title: "SyntaxError: missing variable name"
 slug: Web/JavaScript/Reference/Errors/No_variable_name
 ---
 
@@ -60,11 +60,12 @@ var second = document.getElementById('two'),
 올바르게 수정한 버전:
 
 ```js example-good
-var x, y = "foo";
+var x,
+  y = "foo";
 var x = "foo";
 
-var first = document.getElementById('one');
-var second = document.getElementById('two');
+var first = document.getElementById("one");
+var second = document.getElementById("two");
 ```
 
 ### 배열
@@ -79,11 +80,11 @@ var arr = 1,2,3,4,5;
 이렇게 해야 맞습니다:
 
 ```js example-good
-var arr = [1,2,3,4,5];
+var arr = [1, 2, 3, 4, 5];
 ```
 
 ## 더 보기
 
 - [Good variable names](http://wiki.c2.com/?GoodVariableNames)
-- [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var)
-- [Variable declarations in the JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Declarations)
+- [`var`](/ko/docs/Web/JavaScript/Reference/Statements/var)
+- [Variable declarations in the JavaScript Guide](/ko/docs/Web/JavaScript/Guide/Grammar_and_types#Declarations)

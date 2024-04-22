@@ -1,6 +1,9 @@
 ---
-title: HTMLTableElement.createCaption()
+title: "HTMLTableElement: createCaption() メソッド"
+short-title: createCaption()
 slug: Web/API/HTMLTableElement/createCaption
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{APIRef("HTML DOM")}}
@@ -12,9 +15,13 @@ slug: Web/API/HTMLTableElement/createCaption
 
 ## 構文
 
-```js
-HTMLTableElement = table.createCaption();
+```js-nolint
+createCaption()
 ```
+
+### 引数
+
+なし。
 
 ### 返値
 
@@ -28,22 +35,30 @@ HTMLTableElement = table.createCaption();
 
 ```html
 <table>
-  <tr><td>Cell 1.1</td><td>Cell 1.2</td><td>Cell 1.3</td></tr>
-  <tr><td>Cell 2.1</td><td>Cell 2.2</td><td>Cell 2.3</td></tr>
+  <tr>
+    <td>セル 1.1</td>
+    <td>セル 1.2</td>
+    <td>セル 1.3</td>
+  </tr>
+  <tr>
+    <td>セル 2.1</td>
+    <td>セル 2.2</td>
+    <td>セル 2.3</td>
+  </tr>
 </table>
 ```
 
 ### JavaScript
 
 ```js
-let table = document.querySelector('table');
+let table = document.querySelector("table");
 let caption = table.createCaption();
-caption.textContent = 'このキャプションは JavaScript で生成されました。';
+caption.textContent = "このキャプションは JavaScript で生成されました。";
 ```
 
 ### 例
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## 仕様書
 

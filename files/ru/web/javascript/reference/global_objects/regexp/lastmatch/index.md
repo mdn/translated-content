@@ -1,7 +1,6 @@
 ---
 title: RegExp.lastMatch ($&)
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/lastMatch
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/lastMatch
 ---
 
 {{JSRef}} {{non-standard_header}}
@@ -29,16 +28,16 @@ RegExp['$&']
 
 ```js
 var re = /hi/g;
-re.test('hi there!');
+re.test("hi there!");
 RegExp.lastMatch; // "hi"
-RegExp['$&'];     // "hi"
+RegExp["$&"]; // "hi"
 ```
 
 ## Спецификация
 
 Не стандартизированной. Не является частью какой-либо спецификации.
 
-## Поддержка в браузерах
+## Совместимость с браузерами
 
 {{Compat}}
 

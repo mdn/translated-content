@@ -1,13 +1,6 @@
 ---
 title: Math.asin()
 slug: Web/JavaScript/Reference/Global_Objects/Math/asin
-tags:
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/asin
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/asin
 ---
 
 {{JSRef}}
@@ -21,7 +14,7 @@ La fonction **`Math.asin()`** renvoie l'arc sinus d'un nombre (en radians). Elle
 ## Syntaxe
 
 ```js
-Math.asin(x)
+Math.asin(x);
 ```
 
 ### Paramètres
@@ -44,12 +37,12 @@ La méthode `Math.asin()` renvoie une valeur numérique comprise entre <math><se
 ### Utiliser `Math.asin()`
 
 ```js
-Math.asin(-2);  // NaN
-Math.asin(-1);  // -1.570796326794897 (-pi/2)
-Math.asin(0);   // 0
+Math.asin(-2); // NaN
+Math.asin(-1); // -1.570796326794897 (-pi/2)
+Math.asin(0); // 0
 Math.asin(0.5); // 0.5235987755982989
-Math.asin(1);   // 1.570796326794897 (pi/2)
-Math.asin(2);   // NaN
+Math.asin(1); // 1.570796326794897 (pi/2)
+Math.asin(2); // NaN
 ```
 
 Pour les valeurs (strictement) inférieures à -1 ou supérieures à 1, `Math.asin()` renvoie {{jsxref("NaN")}}.

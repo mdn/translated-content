@@ -1,82 +1,57 @@
 ---
-title: ':only-of-type'
+title: ":only-of-type"
 slug: Web/CSS/:only-of-type
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:only-of-type
+l10n:
+  sourceCommit: 62681c2ef134407009c5c11fa679db1f485e016d
 ---
 
 {{CSSRef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:only-of-type`** CSS permet de cibler un élément qui ne possède aucun nœud frère du même type pour un même élément parent (par exemple, sélectionner le seul élément {{HTMLElement("em")}} d'un {{HTMLElement("dd")}}).
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:only-of-type`** permet de cibler un élément qui ne possède aucun nœud frère du même type.
 
-```css
-/* Cible un élément <p> si celui-ci est le */
-/* seul paragraphe de son élément parent   */
-p:only-of-type {
-  background-color: lime;
-}
-```
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-only-of-type.html", "tabbed-shorter")}}
 
-> **Note :** Dans la version initiale de la spécification (CSS3), l'élément ciblé devait avoir un parent, ce n'est plus nécessaire depuis (spécification pour les sélecteurs de CSS4).
+> **Note :** Dans la version initiale de la spécification (CSS3), l'élément ciblé devait avoir un parent, ce n'est plus nécessaire depuis (spécification pour les sélecteurs de niveau 4).
 
 ## Syntaxe
 
-{{csssyntax}}
+```css
+:only-of-type {
+  /* ... */
+}
+```
 
 ## Exemples
 
-### CSS
+### Mettre en forme des éléments sans voisins du même type
 
-```css
-li li {
-  list-style-type : disc;
-}
-
-li:only-of-type {
-  color: #6699ff;
-  font-style: italic;
-  list-style-type: square;
-}
-```
-
-### HTML
+#### HTML
 
 ```html
-<ol>
-  <li>Premier
-    <ul>
-      <li>Ceci est l'unique li</li>
-    </ul>
-  </li>
-  <li>Deuxième
-    <ul>
-      <li>Cette liste a deux éléments</li>
-      <li>Cette liste a deux éléments</li>
-    </ul>
-  </li>
-  <li>Troisième
-    <ul>
-      <li>Cette liste a trois éléments</li>
-      <li>Cette liste a trois éléments</li>
-      <li>Cette liste a trois éléments</li>
-    </ul>
-  </li>
-</ol>
-<ol>
-  <li>Une seule liste imbriquée
-    <ul>Avec
-      <li>Un seul item</li>
-    </ul>
-  </li>
-</ol>
+<main>
+  <div>Je suis l'élément `div` n°1.</div>
+  <p>Je suis le seul élément `p` parmi mes voisins.</p>
+  <div>Je suis l'élément `div` n°2.</div>
+  <div>
+    Je suis l'élément `div` n°3.
+    <i>Je suis le seul enfant `i`.</i>
+    <em>Je suis l'élément `em` n°1.</em>
+    <em>Je suis l'élément `em` n°2.</em>
+  </div>
+</main>
 ```
 
-### Résultat
+#### CSS
 
-{{EmbedLiveSample('Exemples', '100%', 150)}}
+```css
+main :only-of-type {
+  color: red;
+}
+```
+
+#### Résultat
+
+{{EmbedLiveSample('','100%',180)}}
 
 ## Spécifications
 
@@ -88,7 +63,7 @@ li:only-of-type {
 
 ## Voir aussi
 
-- {{cssxref(":only-child")}}
-- {{cssxref(":nth-of-type")}}
-- {{cssxref(":first-of-type")}}
-- {{cssxref(":last-of-type")}}
+- [`:only-child`](/fr/docs/Web/CSS/:only-child)
+- [`:first-of-type`](/fr/docs/Web/CSS/:first-of-type)
+- [`:last-of-type`](/fr/docs/Web/CSS/:last-of-type)
+- [`:nth-of-type`](/fr/docs/Web/CSS/:nth-of-type)

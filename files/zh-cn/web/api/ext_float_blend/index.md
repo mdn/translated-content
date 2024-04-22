@@ -20,11 +20,11 @@ slug: Web/API/EXT_float_blend
 ## 例子
 
 ```js
-const gl = canvas.getContext('webgl2');
+const gl = canvas.getContext("webgl2");
 
 // enable necessary extensions
-gl.getExtension('EXT_color_buffer_float');
-gl.getExtension('EXT_float_blend');
+gl.getExtension("EXT_color_buffer_float");
+gl.getExtension("EXT_float_blend");
 
 const tex = gl.createTexture();
 gl.bindTexture(gl.TEXTURE_2D, tex);
@@ -34,7 +34,13 @@ gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA32F, 1, 1, 0, gl.RGBA, gl.FLOAT, null);
 
 const fb = gl.createFramebuffer();
 gl.bindFramebuffer(gl.FRAMEBUFFER, fb);
-gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, tex, 0);
+gl.framebufferTexture2D(
+  gl.FRAMEBUFFER,
+  gl.COLOR_ATTACHMENT0,
+  gl.TEXTURE_2D,
+  tex,
+  0,
+);
 
 // enable blending
 gl.enable(gl.BLEND);

@@ -1,12 +1,9 @@
 ---
 title: Полифил
 slug: Glossary/Polyfill
-tags:
-  - Глоссарий
-  - JavaScript
-  - Полифил
-original_slug: Glossary/Polifill
 ---
+
+{{GlossarySidebar}}
 
 Полифил — это фрагмент кода (в сети — обычно JavaScript), который позволяет использовать современную функциональность в более старых браузерах, которые не поддерживают ее по умолчанию.
 

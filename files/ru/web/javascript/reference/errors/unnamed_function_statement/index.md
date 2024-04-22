@@ -1,7 +1,6 @@
 ---
-title: 'SyntaxError: function statement requires a name(функция оператор требует имя)'
+title: "SyntaxError: function statement requires a name(функция оператор требует имя)"
 slug: Web/JavaScript/Reference/Errors/Unnamed_function_statement
-translation_of: Web/JavaScript/Reference/Errors/Unnamed_function_statement
 ---
 
 {{jsSidebar("Errors")}}
@@ -38,17 +37,15 @@ function () {
 Вы можете использовать выражение функции (назначат) вместо:
 
 ```js example-good
-var greet = function() {
-  return 'Hello world';
+var greet = function () {
+  return "Hello world";
 };
 ```
 
 Или, ваша функция возможно, предназначена для IIFE (немедленно вызываемое выражение функции), которое является функцией, которая запускается, как только она определена. В этом случае вам понадобится ещё несколько брекетов:
 
 ```js example-good
-(function () {
-
-})();
+(function () {})();
 ```
 
 ### Помеченные функции
@@ -82,7 +79,7 @@ function Greeter() {
 var greeter = {
   german: function () {
     return "Moin";
-  }
+  },
 };
 ```
 

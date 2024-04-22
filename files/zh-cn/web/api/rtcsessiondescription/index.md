@@ -40,35 +40,41 @@ _`RTCSessionDescription` 不继承任何方法。_
 - {{domxref("RTCSessionDescription.toJSON()")}}
   - : 返回一个{{Glossary("JSON")}} 描述对象。该对象包含两个值，{{domxref("RTCSessionDescription.type", "type")}} 和{{domxref("RTCSessionDescription.sdp", "sdp")}}。
 
-## Example
+## 示例
 
 ```js
 signalingChannel.onmessage = function (evt) {
-    if (!pc)
-        start(false);
+  if (!pc) start(false);
 
-    var message = JSON.parse(evt.data);
-    if (message.sdp)
-        pc.setRemoteDescription(new RTCSessionDescription(message), function () {
-            // if we received an offer, we need to answer
-            if (pc.remoteDescription.type == "offer")
-                pc.createAnswer(localDescCreated, logError);
-        }, logError);
-    else
-        pc.addIceCandidate(new RTCIceCandidate(message.candidate),
-            function () {}, logError);
+  var message = JSON.parse(evt.data);
+  if (message.sdp)
+    pc.setRemoteDescription(
+      new RTCSessionDescription(message),
+      function () {
+        // if we received an offer, we need to answer
+        if (pc.remoteDescription.type == "offer")
+          pc.createAnswer(localDescCreated, logError);
+      },
+      logError,
+    );
+  else
+    pc.addIceCandidate(
+      new RTCIceCandidate(message.candidate),
+      function () {},
+      logError,
+    );
 };
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [WebRTC](/zh-CN/docs/Web/Guide/API/WebRTC)
-- {{domxref("RTCPeerConnection.setLocalDescription()")}} and {{domxref("RTCPeerConnection.setRemoteDescription()")}}
+- [WebRTC](/zh-CN/docs/Web/API/WebRTC_API)
+- {{domxref("RTCPeerConnection.setLocalDescription()")}} 和 {{domxref("RTCPeerConnection.setRemoteDescription()")}}

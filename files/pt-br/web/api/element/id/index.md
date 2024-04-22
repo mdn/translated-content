@@ -22,15 +22,11 @@ element.id = idStr; // Insere o id
 
 ## Especificações
 
-| Especificação                                                                    | Status                           | Comentário                                            |
-| -------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-element-id', 'id')}}             | {{Spec2('DOM WHATWG')}} | Sem alteração desde {{SpecName('DOM2 HTML')}}. |
-| {{SpecName('DOM2 HTML', 'html.html#ID-63534901', 'id')}}     | {{Spec2('DOM2 HTML')}}     | Sem alteração desde {{SpecName('DOM1')}}.     |
-| {{SpecName('DOM1', 'level-one-html.html#ID-63534901', 'id')}} | {{Spec2('DOM1')}}         | Definição inicial.                                    |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Element.id")}}
+{{Compat}}
 
 ## Veja também
 

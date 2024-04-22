@@ -1,7 +1,6 @@
 ---
 title: Blob.slice()
 slug: Web/API/Blob/slice
-translation_of: Web/API/Blob/slice
 ---
 
 {{APIRef("File API")}}
@@ -31,11 +30,9 @@ var blob = instanceOfBlob.slice([start [, end [, contentType]]]);
 
 ## Specifications
 
-| Specification                                                            | Status                       | Comment            |
-| ------------------------------------------------------------------------ | ---------------------------- | ------------------ |
-| {{SpecName("File API", "#dfn-slice", "Blob.slice()")}} | {{Spec2("File API")}} | Initial definition |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

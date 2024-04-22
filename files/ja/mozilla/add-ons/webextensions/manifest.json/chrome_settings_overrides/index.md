@@ -176,4 +176,4 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.manifest.chrome_settings_overrides", 10)}}
+{{Compat}}

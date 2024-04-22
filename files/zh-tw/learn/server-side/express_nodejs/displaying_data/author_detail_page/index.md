@@ -46,7 +46,7 @@ exports.author_detail = function (req, res, next) {
         author: results.author,
         author_books: results.authors_books,
       });
-    }
+    },
   );
 };
 ```

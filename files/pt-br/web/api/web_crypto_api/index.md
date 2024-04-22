@@ -42,10 +42,8 @@ A Web Crypto API pode ser utilizada:
 
 ## Especificações
 
-| Especificação                            | Status                               | Comentário        |
-| ---------------------------------------- | ------------------------------------ | ----------------- |
-| {{SpecName("Web Crypto API")}} | {{Spec2("Web Crypto API")}} | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Crypto")}}
+{{Compat}}

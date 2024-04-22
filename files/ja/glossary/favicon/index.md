@@ -3,6 +3,8 @@ title: Favicon (ファビコン)
 slug: Glossary/Favicon
 ---
 
+{{GlossarySidebar}}
+
 ファビコン (お気に入りアイコン) はウェブサイトに含まれる小さなアイコンです。ブラウザのアドレスバー、ページタブ、ブックマークメニューなどに表示されます。ただし最新のブラウザのほとんどは、アドレスバーのファビコンをウェブサイトが {{Glossary("https","HTTPS")}} を使用しているかどうかを示す画像に置換しています。
 
 通常、ファビコンは 16x16 ピクセルの {{Glossary("GIF")}}、 {{Glossary("PNG")}}、または ICO 形式で保存されます。
@@ -12,5 +14,5 @@ slug: Glossary/Favicon
 1. Wikipedia 上の [Favicon](https://ja.wikipedia.org/wiki/Favicon)
 2. ツール
 
-    1. [Free favicon generator](https://favicon.io/)
-    2. [Favicon.ico and & app icon generator](https://www.favicon-generator.org/)
+   1. [Free favicon generator](https://favicon.io/)
+   2. [Favicon.ico and & app icon generator](https://www.favicon-generator.org/)

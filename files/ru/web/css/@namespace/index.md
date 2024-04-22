@@ -1,29 +1,29 @@
 ---
-title: '@namespace'
+title: "@namespace"
 slug: Web/CSS/@namespace
-tags:
-  - Пространства имён
-translation_of: Web/CSS/@namespace
 ---
 
 {{ CSSRef() }}
 
 ## Описание
 
-`@namespace` - это правила ([at-rule](/ru/docs/Web/CSS/At-rule)) определяющие [пространства имён XML](/ru/docs/Namespaces), которые будут использованы в [таблице стилей](/ru/docs/Web/API/StyleSheet). Они применяются чтобы ограничить CSS селекторы только элементами принадлежащими конкретному пространству имён. Пространства имён полезны, в основном, когда идёт взаимодействие с документами содержащими множество пространств имён, такими как HTML5 со встроенным SVG, MathML или XML.
+[CSS](/ru/docs/Web/CSS) [@-правило](/ru/docs/Web/CSS/At-rule) `@namespace` определяет [пространства имён XML](/ru/docs/Namespaces), которые будут использованы в [таблице стилей](/ru/docs/Web/API/StyleSheet). Они применяются чтобы ограничить CSS селекторы только элементами принадлежащими конкретному пространству имён. Пространства имён полезны, в основном, когда идёт взаимодействие с документами содержащими множество пространств имён, такими как HTML5 со встроенным SVG, MathML или XML.
 
 ```css
 @namespace url(http://www.w3.org/1999/xhtml);
 @namespace svg url(http://www.w3.org/2000/svg);
 
 /* This matches all XHTML <a> elements, as XHTML is the default unprefixed namespace */
-a {}
+a {
+}
 
 /* This matches all SVG <a> elements */
-svg|a {}
+svg|a {
+}
 
 /* This matches both XHTML and SVG <a> elements */
-*|a {}
+*|a {
+}
 ```
 
 Любое `@namespace` правило обязано следовать всем [@charset](/ru/docs/Web/CSS/%40charset) и [@import](/ru/docs/Web/CSS/%40import) правилам, а так же всем [описаниям стилей](/ru/docs/Web/API/CSSStyleDeclaration) в таблице стилей.

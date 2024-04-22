@@ -1,14 +1,8 @@
 ---
 title: Галерея изображений
 slug: Learn/JavaScript/Building_blocks/Image_gallery
-tags:
-  - Обработчик событий
-  - Оценка
-  - начальный уровень
-  - события
-  - циклы
-translation_of: Learn/JavaScript/Building_blocks/Image_gallery
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
 
 Теперь, после изучения основ JavaScript, мы проверим ваши знания циклов, функций, условных операторов и событий предложив вам написать популярный элемент который вы увидите на многих сайтах - галерея на JavaScript.
@@ -31,14 +25,12 @@ translation_of: Learn/JavaScript/Building_blocks/Image_gallery
 <h1>Пример фотогалереи</h1>
 
 <div class="full-img">
-  <img class="displayed-img" src="images/pic1.jpg">
+  <img class="displayed-img" src="images/pic1.jpg" />
   <div class="overlay"></div>
   <button class="dark">Темнее</button>
 </div>
 
-<div class="thumb-bar">
-
-</div>
+<div class="thumb-bar"></div>
 ```
 
 Результат выглядит следующим образом:
@@ -75,7 +67,7 @@ translation_of: Learn/JavaScript/Building_blocks/Image_gallery
 
 В каждой итерации цикла вам нужно добавить обработчик `onclick` к текущему `newImage`:
 
-1. Найдите значение атрибута `src` текущего изображения. Это можно сделать, запустив функцию [`getAttribute()`](/en-US/docs/Web/API/Element/getAttribute) в `<img>` в каждом случае и передав ей параметр `«src»` в каждом случае. Но как получить изображение? Использование `newImage` не будет работать, так как цикл завершается до применения обработчиков событий; это приведёт к тому, что значение `src` последнего `<img>` будет возвращено в каждом случае. Чтобы решить это, имейте в виду, что в случае каждого обработчика события `<img>` является целью обработчика. Как получить информацию от объекта события?
+1. Найдите значение атрибута `src` текущего изображения. Это можно сделать, запустив функцию [`getAttribute()`](/ru/docs/Web/API/Element/getAttribute) в `<img>` в каждом случае и передав ей параметр `«src»` в каждом случае. Но как получить изображение? Использование `newImage` не будет работать, так как цикл завершается до применения обработчиков событий; это приведёт к тому, что значение `src` последнего `<img>` будет возвращено в каждом случае. Чтобы решить это, имейте в виду, что в случае каждого обработчика события `<img>` является целью обработчика. Как получить информацию от объекта события?
 2. Запустите функцию, передав ей возвращаемое значение `src` в качестве параметра. Вы можете вызвать эту функцию, как хотите.
 3. Эта функция обработчика событий должна установить значение атрибута `src` `displayed-img <img>` равным значению `src`, переданному в качестве параметра. Мы уже предоставили вам строку, в которой хранится ссылка на соответствующий `<img>` в переменной с именем `displayedImg`. Обратите внимание, что здесь нам нужна определённая именованная функция.
 
@@ -84,13 +76,13 @@ translation_of: Learn/JavaScript/Building_blocks/Image_gallery
 Мы уже предоставили строку, в которой хранится ссылка на `<button>` в переменной `btn`. Вам нужно добавить обработчик `onclick`, который:
 
 1. Проверяет текущее имя класса, установленное на кнопке `<button>` — для этого снова можно использовать `getAttribute()`.
-2. Если имя класса `"dark"`, изменяет класс `<button>` на `"light"` (с помощью [`setAttribute()`](/en-US/docs/Web/API/Element/setAttribute)), его текстовое содержимое на "Светлее" и {{cssxref("background-color")}} наложения `<div>` на `"rgba (0,0,0,0.5)"`.
+2. Если имя класса `"dark"`, изменяет класс `<button>` на `"light"` (с помощью [`setAttribute()`](/ru/docs/Web/API/Element/setAttribute)), его текстовое содержимое на "Светлее" и {{cssxref("background-color")}} наложения `<div>` на `"rgba (0,0,0,0.5)"`.
 3. Если имя класса не «тёмное», изменяет класс `<button>` на `"dark"`, его текстовое содержимое обратно на "Темнее" и {{cssxref("background-color")}} наложения `<div>` на `"rgba(0,0,0,0)"`.
 
 Следующие строки служат основой для достижения изменений, указанных в пунктах 2 и 3 выше.
 
 ```js
-btn.setAttribute('class', xxx);
+btn.setAttribute("class", xxx);
 btn.textContent = xxx;
 overlay.style.backgroundColor = xxx;
 ```
@@ -104,13 +96,3 @@ overlay.style.backgroundColor = xxx;
 Если вы проводите эту оценку в рамках организованного курса, вы должны уметь отдать свою работу своему учителю/наставнику для маркировки. Если вы самообучаетесь, то вы можете получить руководство по маркировке довольно легко, задав тему [обсуждения об этом упражнении](https://discourse.mozilla.org/t/image-gallery-assessment/24687) или в IRC-канале [#mdn](irc://irc.mozilla.org/mdn) в [Mozilla IRC](https://wiki.mozilla.org/IRC). Сначала попробуйте упражнение - ничего не выиграть от обмана!
 
 {{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
-
-## В этом модуле
-
-- [Принятие решений в вашем коде — условные конструкции](/ru/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [Зацикливание кода](/ru/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [Функции — Переиспользуемые блоки кода](/ru/docs/Learn/JavaScript/Building_blocks/Functions)
-- [Создайте свою собственную функцию](/ru/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [Возвращаемое значение функции](/ru/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [Введение в события](/ru/docs/Learn/JavaScript/Building_blocks/%D0%A1%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D1%8F)
-- [Создание галереи](/ru/docs/Learn/JavaScript/Building_blocks/Image_gallery)

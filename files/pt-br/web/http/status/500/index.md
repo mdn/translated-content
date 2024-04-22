@@ -17,12 +17,12 @@ Status
 
 ## Especificações
 
-| Specification                                                            | Title                                                         |
-| ------------------------------------------------------------------------ | ------------------------------------------------------------- |
+| Specification                                          | Title                                                         |
+| ------------------------------------------------------ | ------------------------------------------------------------- |
 | {{RFC("7231", "500 Internal Server Error" , "6.6.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Compatibilidade com navegadores
 
 As informações mostradas acima foram extraídas do GitHub da MDN (<https://github.com/mdn/browser-compat-data>).
 
-{{Compat("http.status.500")}}
+{{Compat}}

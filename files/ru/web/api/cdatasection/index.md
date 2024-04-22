@@ -1,7 +1,6 @@
 ---
 title: CDATASection
 slug: Web/API/CDATASection
-translation_of: Web/API/CDATASection
 ---
 
 {{APIRef("DOM")}}

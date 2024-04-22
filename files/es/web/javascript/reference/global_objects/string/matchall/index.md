@@ -1,7 +1,6 @@
 ---
 title: String.prototype.matchAll()
 slug: Web/JavaScript/Reference/Global_Objects/String/matchAll
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/matchAll
 ---
 
 {{JSRef}}
@@ -32,12 +31,14 @@ Un [iterador](/es/docs/Web/JavaScript/Guide/Iterators_and_Generators) (el cual n
 Antes de la adición de `matchAll` a JavaScript, fue posible hacer llamados a [regexp.exec](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) (y usar expresiones regulares con la bandera `/g`) en un ciclo para obtener las ocurrencias:
 
 ```js
-const regexp = RegExp('foo[a-z]*','g');
-const cadena = 'mesa football, foosball';
+const regexp = RegExp("foo[a-z]*", "g");
+const cadena = "mesa football, foosball";
 let ocurrencia;
 
 while ((ocurrencia = regexp.exec(cadena)) !== null) {
-  console.log(`Encontrado ${ocurrencia[0]} inicio=${ocurrencia.index} final=${regexp.lastIndex}.`);
+  console.log(
+    `Encontrado ${ocurrencia[0]} inicio=${ocurrencia.index} final=${regexp.lastIndex}.`,
+  );
   // salida esperada: "Encontrado football inicio=5 final=13."
   // salida esperada: "Encontrado foosball inicio=15 final=23."
 }
@@ -46,38 +47,42 @@ while ((ocurrencia = regexp.exec(cadena)) !== null) {
 Con `matchAll` disponible, puedes evitar el ciclo [`while`](/es/docs/Web/JavaScript/Reference/Statements/while) y `exec` con `/g`. Por el contrario, usando `matchAll`, obtienes un iterador con el cual puedes usar con constructores más convenientes [`for...of`](/es/docs/Web/JavaScript/Reference/Statements/for...of), [array spread](/es/docs/Web/JavaScript/Reference/Operators/Spread_syntax), o {{jsxref("Array.from()")}}:
 
 ```js
-const regexp = RegExp('foo[a-z]*','g');
-const cadena = 'mesa football, foosball';
+const regexp = RegExp("foo[a-z]*", "g");
+const cadena = "mesa football, foosball";
 const ocurrencias = cadena.matchAll(regexp);
 
 for (const ocurrencia of ocurrencias) {
-  console.log(`Encontrado ${ocurrencia[0]} inicio=${ocurrencia.index} final=${ocurrencia.index + ocurrencia[0].length}.`);
+  console.log(
+    `Encontrado ${ocurrencia[0]} inicio=${ocurrencia.index} final=${
+      ocurrencia.index + ocurrencia[0].length
+    }.`,
+  );
 }
 // salida esperada: "Encontrado football start=5 end=13."
 // salida esperada: "Encontrado foosball start=15 end=23."
 
 // el iterador ocurrencias es agotado después de la iteración for..of
 // Llama matchAll de nuevo para crear un nuevo iterador
-Array.from(cadena.matchAll(regexp), m => m[0]);
+Array.from(cadena.matchAll(regexp), (m) => m[0]);
 // Array [ "football", "foosball" ]
 ```
 
 `matchAll` solo devuelve la primer ocurrencia si la bandera `/g` está ausente.
 
 ```js
-const regexp = RegExp('[a-c]','');
-const cadena = 'abc';
-Array.from(cadena.matchAll(regexp), m => m[0]);
+const regexp = RegExp("[a-c]", "");
+const cadena = "abc";
+Array.from(cadena.matchAll(regexp), (m) => m[0]);
 // Array [ "a" ]
 ```
 
 `matchAll` internamente hace un clon de la expresión regular, entonces a diferencia de [regexp.exec](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec), `lastIndex` no cambia a medida que la cadena es escaneada.
 
 ```js
-const regexp = RegExp('[a-c]','g');
+const regexp = RegExp("[a-c]", "g");
 regexp.lastIndex = 1;
-const cadena = 'abc';
-Array.from(cadena.matchAll(regexp), m => `${regexp.lastIndex} ${m[0]}`);
+const cadena = "abc";
+Array.from(cadena.matchAll(regexp), (m) => `${regexp.lastIndex} ${m[0]}`);
 // Array [ "1 b", "1 c" ]
 ```
 
@@ -87,7 +92,7 @@ Otra buena razón para `matchAll` es el mejorado acceso a los grupos de captura.
 
 ```js
 var regexp = /t(e)(st(\d?))/g;
-var cadena = 'test1test2';
+var cadena = "test1test2";
 
 cadena.match(regexp);
 // Array ['test1', 'test2']

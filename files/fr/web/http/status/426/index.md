@@ -1,7 +1,6 @@
 ---
 title: 426 Upgrade Required
 slug: Web/HTTP/Status/426
-translation_of: Web/HTTP/Status/426
 ---
 
 {{HTTPSidebar}}

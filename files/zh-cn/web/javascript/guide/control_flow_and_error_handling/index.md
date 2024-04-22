@@ -64,7 +64,7 @@ alert(x); // 输出的结果为 2
 ```js
 if (condition) {
   statement_1;
-}else {
+} else {
   statement_2;
 } //推荐使用严格的语句块模式，语句 else 可选
 ```
@@ -76,11 +76,11 @@ if (condition) {
 ```js
 if (condition_1) {
   statement_1;
-}else if (condition_2) {
+} else if (condition_2) {
   statement_2;
-}else if (condition_n_1) {
+} else if (condition_n_1) {
   statement_n;
-}else {
+} else {
   statement_last;
 }
 ```
@@ -101,15 +101,15 @@ if (条件) {
 
 > **警告：**
 >
-> ```js
->   if(x = y){
->     /*  语句  */
->   }
+> ```js-nolint
+> if (x = y) {
+>   /*  语句  */
+> }
 > ```
 
 如果你需要在条件表达式中使用赋值，通常在赋值语句前后额外添加一对括号。例如：
 
-```plain
+```js-nolint
 if ((x = y)) {
   /* statements here */
 }
@@ -145,8 +145,11 @@ function checkData() {
   if (document.form1.threeChar.value.length == 3) {
     return true;
   } else {
-    alert("Enter exactly three characters. " +
-      document.form1.threeChar.value + " is not valid.");
+    alert(
+      "Enter exactly three characters. " +
+        document.form1.threeChar.value +
+        " is not valid.",
+    );
     return false;
   }
 }
@@ -180,24 +183,24 @@ switch (expression) {
 
 ```js
 switch (fruittype) {
-   case "Oranges":
-      document.write("Oranges are $0.59 a pound.<br>");
-      break;
-   case "Apples":
-      document.write("Apples are $0.32 a pound.<br>");
-      break;
-   case "Bananas":
-      document.write("Bananas are $0.48 a pound.<br>");
-      break;
-   case "Cherries":
-      document.write("Cherries are $3.00 a pound.<br>");
-      break;
-   case "Mangoes":
-   case "Papayas":
-      document.write("Mangoes and papayas are $2.79 a pound.<br>");
-      break;
-   default:
-      document.write("Sorry, we are out of " + fruittype + ".<br>");
+  case "Oranges":
+    document.write("Oranges are $0.59 a pound.<br>");
+    break;
+  case "Apples":
+    document.write("Apples are $0.32 a pound.<br>");
+    break;
+  case "Bananas":
+    document.write("Bananas are $0.48 a pound.<br>");
+    break;
+  case "Cherries":
+    document.write("Cherries are $3.00 a pound.<br>");
+    break;
+  case "Mangoes":
+  case "Papayas":
+    document.write("Mangoes and papayas are $2.79 a pound.<br>");
+    break;
+  default:
+    document.write("Sorry, we are out of " + fruittype + ".<br>");
 }
 document.write("Is there anything else you'd like?<br>");
 ```
@@ -227,26 +230,30 @@ throw expression;
 你可以抛出任意表达式而不是特定一种类型的表达式。下面的代码抛出了几个不同类型的表达式：
 
 ```js
-throw "Error2";   // String type
-throw 42;         // Number type
-throw true;       // Boolean type
-throw {toString: function() { return "I'm an object!"; } };
+throw "Error2"; // String type
+throw 42; // Number type
+throw true; // Boolean type
+throw {
+  toString: function () {
+    return "I'm an object!";
+  },
+};
 ```
 
 > **备注：** 你可以在抛出异常时声明一个对象。那你就可以在 catch 块中查询到对象的属性。
 
 ```js
 // Create an object type UserException
-function UserException (message){
-  this.message=message;
-  this.name="UserException";
+function UserException(message) {
+  this.message = message;
+  this.name = "UserException";
 }
 
 // Make the exception convert to a pretty string when used as
 // a string (e.g. by the error console)
-UserException.prototype.toString = function (){
+UserException.prototype.toString = function () {
   return this.name + ': "' + this.message + '"';
-}
+};
 
 // Create an instance of the object type and throw it
 throw new UserException("Value too high");
@@ -263,8 +270,20 @@ throw new UserException("Value too high");
 ```js
 function getMonthName(mo) {
   mo = mo - 1; // Adjust month number for array index (1 = Jan, 12 = Dec)
-  var months = ["Jan","Feb","Mar","Apr","May","Jun","Jul",
-                "Aug","Sep","Oct","Nov","Dec"];
+  var months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
   if (months[mo]) {
     return months[mo];
   } else {
@@ -272,10 +291,10 @@ function getMonthName(mo) {
   }
 }
 
-try { // statements to try
+try {
+  // statements to try
   monthName = getMonthName(myMonth); // function could throw exception
-}
-catch (e) {
+} catch (e) {
   monthName = "unknown";
   logMyErrors(e); // pass exception object to error handler -> your own function
 }
@@ -297,11 +316,10 @@ catch (catchID) {
 
 ```js
 try {
-   throw "myException" // generates an exception
-}
-catch (e) {
-// statements to handle any exceptions
-   logMyErrors(e) // pass exception object to error handler
+  throw "myException"; // generates an exception
+} catch (e) {
+  // statements to handle any exceptions
+  logMyErrors(e); // pass exception object to error handler
 }
 ```
 
@@ -314,11 +332,11 @@ catch (e) {
 ```js
 openMyFile();
 try {
-    writeMyFile(theData); //This may throw a error
-}catch(e){
-    handleError(e); // If we got a error we handle it
-}finally {
-    closeMyFile(); // always close the resource
+  writeMyFile(theData); //This may throw a error
+} catch (e) {
+  handleError(e); // If we got a error we handle it
+} finally {
+  closeMyFile(); // always close the resource
 }
 ```
 
@@ -329,10 +347,10 @@ function f() {
   try {
     console.log(0);
     throw "bogus";
-  } catch(e) {
+  } catch (e) {
     console.log(1);
     return true; // this return statement is suspended
-                 // until finally block has completed
+    // until finally block has completed
     console.log(2); // not reachable
   } finally {
     console.log(3);
@@ -350,11 +368,11 @@ f(); // console 0, 1, 3; returns false
 ```js
 function f() {
   try {
-    throw 'bogus';
-  } catch(e) {
+    throw "bogus";
+  } catch (e) {
     console.log('caught inner "bogus"');
     throw e; // this throw statement is suspended until
-             // finally block has completed
+    // finally block has completed
   } finally {
     return false; // overwrites the previous "throw"
   }
@@ -363,7 +381,7 @@ function f() {
 
 try {
   f();
-} catch(e) {
+} catch (e) {
   // this is never reached because the throw inside
   // the catch is overwritten
   // by the return in finally

@@ -1,13 +1,6 @@
 ---
-title: 'Attribut HTML : size'
+title: "Attribut HTML : size"
 slug: Web/HTML/Attributes/size
-tags:
-  - Attribute
-  - HTML
-  - Input
-  - Reference
-  - Select
-translation_of: Web/HTML/Attributes/size
 ---
 
 {{HTMLSidebar}}
@@ -21,8 +14,10 @@ L'attribut `size` n'a aucun impact sur la validation des contraintes.
 En ajoutant `size` sur certains types d'entrée, la largeur de l'entrée peut être contrôlée. L'ajout de la taille sur une sélection modifie la hauteur, définissant le nombre d'options visibles à l'état fermé.
 
 ```html
-<label for="fruit">Entrez un fruit</label> <input type="text" size="15" id="fruit">
-<label for="vegetable">Entrez un légume</label> <input type="text" id="vegetable">
+<label for="fruit">Entrez un fruit</label>
+<input type="text" size="15" id="fruit" />
+<label for="vegetable">Entrez un légume</label>
+<input type="text" id="vegetable" />
 
 <select name="fruits" size="5">
   <option>banane</option>

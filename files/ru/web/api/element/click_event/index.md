@@ -1,9 +1,8 @@
 ---
 title: GlobalEventHandlers.onclick
 slug: Web/API/Element/click_event
-translation_of: Web/API/GlobalEventHandlers/onclick
-original_slug: Web/API/GlobalEventHandlers/onclick
 ---
+
 {{ ApiRef("HTML DOM") }}
 
 Свойство **onclick** возвращает обработчик события `click` на текущем элементе.
@@ -23,7 +22,7 @@ element.onclick = functionRef;
 ## Пример
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -34,7 +33,7 @@ element.onclick = functionRef;
         // NOTE: showAlert(); или showAlert(param); так НЕ сработает.
         // Нужно использовать ссылку на функцию, но не вызов функции.
         p.onclick = showAlert;
-      };
+      }
 
       function showAlert(event) {
         alert("onclick Event detected!");
@@ -56,7 +55,9 @@ element.onclick = functionRef;
 Или же вы можете использовать анонимную функцию, как здесь:
 
 ```js
-p.onclick = function(event) { alert("moot!"); };
+p.onclick = function (event) {
+  alert("moot!");
+};
 ```
 
 ## Примечания
@@ -65,11 +66,9 @@ p.onclick = function(event) { alert("moot!"); };
 
 С данным свойством только один обработчик события `click` может быть назначен объекту. Возможно, вместо данного метода, вам стоит обратить внимание на метод {{domxref("EventTarget.addEventListener()")}}, т.к. он более гибкий и является частью спецификации DOM Events.
 
-## Спецификация
+## Спецификации
 
-| Спецификация                                                                                     | Статус                           | Комментарий |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG','webappapis.html#handler-onclick','onclick')}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

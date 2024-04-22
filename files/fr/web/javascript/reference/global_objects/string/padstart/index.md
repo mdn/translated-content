@@ -1,13 +1,6 @@
 ---
 title: String.prototype.padStart()
 slug: Web/JavaScript/Reference/Global_Objects/String/padStart
-tags:
-  - JavaScript
-  - Méthode
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/padStart
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/padStart
 ---
 
 {{JSRef}}
@@ -36,11 +29,11 @@ Une chaîne de caractères ({{jsxref("String")}}) dont la longueur est celle ind
 ## Exemples
 
 ```js
-'abc'.padStart(10);         // "       abc"
-'abc'.padStart(10, "toto"); // "totototabc"
-'abc'.padStart(6,"123465"); // "123abc"
-'abc'.padStart(8, "0");     // "00000abc"
-'abc'.padStart(1);          // "abc"
+"abc".padStart(10); // "       abc"
+"abc".padStart(10, "toto"); // "totototabc"
+"abc".padStart(6, "123465"); // "123abc"
+"abc".padStart(8, "0"); // "00000abc"
+"abc".padStart(1); // "abc"
 ```
 
 ## Spécifications

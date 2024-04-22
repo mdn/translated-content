@@ -1,21 +1,9 @@
 ---
 title: idle.onStateChanged
 slug: Mozilla/Add-ons/WebExtensions/API/idle/onStateChanged
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Idle
-  - Inactif
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onStateChanged
-translation_of: Mozilla/Add-ons/WebExtensions/API/idle/onStateChanged
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Lancé lorsque le système change passe à l'état actif, inactif ou vérouillé. L'écouteur d'événement reçoit une chaîne qui a l'une des trois valeurs suivantes :
 
@@ -26,9 +14,9 @@ Lancé lorsque le système change passe à l'état actif, inactif ou vérouillé
 ## Syntaxe
 
 ```js
-browser.idle.onStateChanged.addListener(listener)
-browser.idle.onStateChanged.removeListener(listener)
-browser.idle.onStateChanged.hasListener(listener)
+browser.idle.onStateChanged.addListener(listener);
+browser.idle.onStateChanged.removeListener(listener);
+browser.idle.onStateChanged.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :

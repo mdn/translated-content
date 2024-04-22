@@ -1,14 +1,6 @@
 ---
 title: PerformanceObserverEntryList.getEntriesByType()
 slug: Web/API/PerformanceObserverEntryList/getEntriesByType
-tags:
-  - API
-  - Method
-  - Méthodes
-  - PerformanceObserverEntryList
-  - Reference
-  - Performance Web
-translation_of: Web/API/PerformanceObserverEntryList/getEntriesByType
 ---
 
 {{APIRef("Performance Timeline API")}}
@@ -36,14 +28,20 @@ Une liste d'objets [`PerformanceEntry`](/fr/docs/Web/API/PerformanceEntry) expli
 
 ```js
 function print_perf_entry(pe) {
-  console.log("name: " + pe.name +
-              "; entryType: " + pe.entryType +
-              "; startTime: " + pe.startTime +
-              "; duration: " + pe.duration);
+  console.log(
+    "name: " +
+      pe.name +
+      "; entryType: " +
+      pe.entryType +
+      "; startTime: " +
+      pe.startTime +
+      "; duration: " +
+      pe.duration,
+  );
 }
 
 // Crée un observateur pour tous les types d'événements de performance
-const observe_all = new PerformanceObserver(function(list, obs) {
+const observe_all = new PerformanceObserver(function (list, obs) {
   let perfEntries;
 
   // Imprime toutes les entrées
@@ -65,9 +63,11 @@ const observe_all = new PerformanceObserver(function(list, obs) {
   }
 });
 // inscrire tous les types d'événements de performance
-observe_all.observe({entryTypes: ['frame', 'mark', 'measure', 'navigation', 'resource', 'server']});
+observe_all.observe({
+  entryTypes: ["frame", "mark", "measure", "navigation", "resource", "server"],
+});
 
-const observe_frame = new PerformanceObserver(function(list, obs) {
+const observe_frame = new PerformanceObserver(function (list, obs) {
   let perfEntries = list.getEntries();
   // Ne devrait avoir que des entrées "frame"
   for (let i = 0; i < perfEntries.length; i++) {
@@ -75,7 +75,7 @@ const observe_frame = new PerformanceObserver(function(list, obs) {
   }
 });
 // inscrire à l'événement "frame" uniquement
-observe_frame.observe({entryTypes: ['frame']});
+observe_frame.observe({ entryTypes: ["frame"] });
 ```
 
 ## Spécifications

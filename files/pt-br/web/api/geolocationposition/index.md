@@ -22,9 +22,7 @@ _A interface `Position` não herda nenhuma propriedade_.
 
 ## Especificações
 
-| Especificação                                                        | Status                           | Comentário             |
-| -------------------------------------------------------------------- | -------------------------------- | ---------------------- |
-| {{SpecName('Geolocation', '#position', 'Position')}} | {{Spec2('Geolocation')}} | Especificação inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

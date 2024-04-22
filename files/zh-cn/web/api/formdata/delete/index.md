@@ -35,7 +35,7 @@ var formData = new FormData(myForm);
 你可以通过 `delete()` 方法来删除键值对：
 
 ```js
-formData.delete('username');
+formData.delete("username");
 ```
 
 ## 规范
@@ -49,6 +49,6 @@ formData.delete('username');
 ## 参见
 
 - {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/zh-CN/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
-- [Using FormData objects](/zh-CN/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
+- [使用 XMLHttpRequest](/zh-CN/docs/DOM/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [使用 FormData 对象](/zh-CN/docs/DOM/XMLHttpRequest/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

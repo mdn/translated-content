@@ -1,12 +1,6 @@
 ---
-title: '::-moz-progress-bar'
+title: "::-moz-progress-bar"
 slug: Web/CSS/::-moz-progress-bar
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-element
-  - Reference
-translation_of: Web/CSS/::-moz-progress-bar
 ---
 
 {{Non-standard_header}}{{CSSRef}}

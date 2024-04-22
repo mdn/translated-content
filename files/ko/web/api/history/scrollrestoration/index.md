@@ -2,6 +2,7 @@
 title: History.scrollRestoration
 slug: Web/API/History/scrollRestoration
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`History.scrollRestoration`** 속성을 사용하면 기록 탐색 시 사용할 스크롤 위치 복원 기능의 기본값을 웹 애플리케이션이 지정할 수 있습니다.
@@ -24,9 +25,11 @@ let scrollRestore = history.scrollRestoration;
 ### 현재 스크롤 복원 여부 알아내기
 
 ```js
-const scrollRestoration = history.scrollRestoration
-if (scrollRestoration === 'manual') {
-  console.log('The location on the page is not restored, user will need to scroll manually.');
+const scrollRestoration = history.scrollRestoration;
+if (scrollRestoration === "manual") {
+  console.log(
+    "The location on the page is not restored, user will need to scroll manually.",
+  );
 }
 ```
 
@@ -34,7 +37,7 @@ if (scrollRestoration === 'manual') {
 
 ```js
 if (history.scrollRestoration) {
-  window.history.scrollRestoration = 'manual';
+  window.history.scrollRestoration = "manual";
 }
 ```
 

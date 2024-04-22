@@ -1,15 +1,6 @@
 ---
 title: PerformanceServerTiming.description
 slug: Web/API/PerformanceServerTiming/description
-tags:
-  - API
-  - Property
-  - Propriété
-  - Reference
-  - Performance Web
-  - Resource Timing API
-  - description
-translation_of: Web/API/PerformanceServerTiming/description
 ---
 
 {{APIRef("Resource Timing API")}}

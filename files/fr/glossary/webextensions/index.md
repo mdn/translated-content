@@ -1,12 +1,9 @@
 ---
 title: WebExtensions
 slug: Glossary/WebExtensions
-tags:
-  - Glossaire
-  - WebExtensions
-translation_of: Glossary/WebExtensions
-original_slug: Glossaire/WebExtensions
 ---
+
+{{GlossarySidebar}}
 
 Les WebExtensions constituent un système multinavigateur pour développer des extensions de navigateur dans Firefox. Ce système fournit des API qui sont dans une large mesure prises en charge dans différents navigateurs tels que Mozilla Firefox, Google Chrome, Opera et Microsoft Edge.
 

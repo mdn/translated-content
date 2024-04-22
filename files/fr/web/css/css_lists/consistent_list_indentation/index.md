@@ -1,12 +1,6 @@
 ---
 title: Indentation homogène des listes
 slug: Web/CSS/CSS_lists/Consistent_list_indentation
-tags:
-  - CSS
-  - Guide
-  - Intermédiaire
-translation_of: Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation
-original_slug: Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation
 ---
 
 {{CSSRef}}
@@ -25,7 +19,7 @@ La bordure pointillée rouge représente la limite extérieure de la zone de con
 
 ![](consistent-list-indentation-figure2.gif)
 
-À présent, nous allons placer ces éléments dans un élément parent. Pour cet exemple, nous utiliserons une liste non-ordonnée avec {{HTMLElement("ul")}}. Selon [le modèle de boîtes CSS](/fr/docs/Apprendre/CSS/Les_bases/Le_mod%C3%A8le_de_bo%C3%AEte), les boîtes des éléments de la liste s'inscrivent dans la boîte de contenu de l'élément parent. Cette dernière n'a, pour l'instant, aucune marge ni aucun remplissage (_padding_). On obtient donc ce résultat :
+À présent, nous allons placer ces éléments dans un élément parent. Pour cet exemple, nous utiliserons une liste non-ordonnée avec {{HTMLElement("ul")}}. Selon [le modèle de boîtes CSS](/fr/docs/Apprendre/CSS/Les_bases/Le_modèle_de_boîte), les boîtes des éléments de la liste s'inscrivent dans la boîte de contenu de l'élément parent. Cette dernière n'a, pour l'instant, aucune marge ni aucun remplissage (_padding_). On obtient donc ce résultat :
 
 ![](consistent-list-indentation-figure3.gif)
 
@@ -44,7 +38,8 @@ C'est pourquoi, dans tous les navigateurs sauf Internet Explorer Windows, les ma
 Comment cela va-t-il être rendu dans un document&nbsp;? Pour le moment, nous avons un résultat équivalent à ces styles&nbsp;:
 
 ```css
-ul, li {
+ul,
+li {
   margin-left: 0;
   padding-left: 0;
 }

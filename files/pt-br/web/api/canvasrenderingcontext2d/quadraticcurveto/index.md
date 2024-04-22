@@ -39,21 +39,21 @@ This is just a simple code snippet drawing a quadratic bezier curve. The control
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 
 ctx.beginPath();
-ctx.moveTo(50,20);
+ctx.moveTo(50, 20);
 ctx.quadraticCurveTo(230, 30, 50, 100);
 ctx.stroke();
 
-ctx.fillStyle = 'blue';
+ctx.fillStyle = "blue";
 // start point
 ctx.fillRect(50, 20, 10, 10);
 // end point
 ctx.fillRect(50, 100, 10, 10);
 
-ctx.fillStyle = 'red';
+ctx.fillStyle = "red";
 // control point
 ctx.fillRect(230, 30, 10, 10);
 ```
@@ -74,7 +74,8 @@ Edit the code below and see your changes update live in the canvas:
 ctx.beginPath();
 ctx.moveTo(50,20);
 ctx.quadraticCurveTo(230, 30, 50, 100);
-ctx.stroke();</textarea>
+ctx.stroke();</textarea
+>
 ```
 
 ```js hidden
@@ -90,14 +91,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
@@ -107,13 +108,11 @@ window.addEventListener("load", drawCanvas);
 
 ## Especificações
 
-| Specification                                                                                                                                                        | Status                           | Comment |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-quadraticcurveto", "CanvasRenderingContext2D.quadraticCurveTo")}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.CanvasRenderingContext2D.quadraticCurveTo")}}
+{{Compat}}
 
 ## Veja também
 

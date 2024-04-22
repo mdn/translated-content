@@ -15,7 +15,7 @@ l10n:
 `*` は、 [XML 名の作成規則](https://www.w3.org/TR/REC-xml/#NT-Name)に加えて以下の制約に従う名前に置き換えることができます。
 
 - 大文字小文字にかかわらず、名前を `xml` で始めてはならない。
-- 名前にセミコロン (`:`) を含めてはならない。
+- 名前にコロン (`:`) を含めてはならない。
 - 名前に大文字を含めてはならない。
 
 なお、 {{domxref("HTMLElement.dataset")}} プロパティは {{domxref("DOMStringMap")}} であり、またカスタムデータ属性名のハイフン (`U+002D`) はその次の文字を大文字化したもの（キャメルケース）に変換されるので、 _data-test-value_ は `HTMLElement.dataset.testValue` （または `HTMLElement.dataset["testValue"]`）としてアクセスできます。

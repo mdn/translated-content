@@ -1,7 +1,6 @@
 ---
 title: 空值合并运算符（??）
 slug: Web/JavaScript/Reference/Operators/Nullish_coalescing
-original_slug: Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
 ---
 
 {{JSSidebar("Operators")}}
@@ -46,7 +45,7 @@ console.log(valC); // 42
 let foo;
 
 //  foo is never assigned any value so it is still undefined
-let someDummyText = foo || 'Hello!';
+let someDummyText = foo || "Hello!";
 ```
 
 然而，由于 `||` 是一个布尔逻辑运算符，左侧的操作数会被强制转换成布尔值用于求值。任何假值（`0`， `''`， `NaN`， `null`， `undefined`）都不会被返回。这导致如果你使用`0`，`''`或`NaN`作为有效值，就会出现不可预料的后果。
@@ -57,19 +56,19 @@ let text = "";
 
 let qty = count || 42;
 let message = text || "hi!";
-console.log(qty);     // 42，而不是 0
+console.log(qty); // 42，而不是 0
 console.log(message); // "hi!"，而不是 ""
 ```
 
 空值合并运算符可以避免这种陷阱，其只在第一个操作数为`null` 或 `undefined` 时（而不是其他假值）返回第二个操作数：
 
 ```js
-let myText = ''; // An empty string (which is also a falsy value)
+let myText = ""; // An empty string (which is also a falsy value)
 
-let notFalsyText = myText || 'Hello world';
+let notFalsyText = myText || "Hello world";
 console.log(notFalsyText); // Hello world
 
-let preservingFalsy = myText ?? 'Hi neighborhood';
+let preservingFalsy = myText ?? "Hi neighborhood";
 console.log(preservingFalsy); // '' (as myText is neither undefined nor null)
 ```
 
@@ -78,15 +77,24 @@ console.log(preservingFalsy); // '' (as myText is neither undefined nor null)
 与 OR 和 AND 逻辑运算符相似，当左表达式不为 `null` 或 `undefined` 时，不会对右表达式进行求值。
 
 ```js
-function A() { console.log('函数 A 被调用了'); return undefined; }
-function B() { console.log('函数 B 被调用了'); return false; }
-function C() { console.log('函数 C 被调用了'); return "foo"; }
+function A() {
+  console.log("函数 A 被调用了");
+  return undefined;
+}
+function B() {
+  console.log("函数 B 被调用了");
+  return false;
+}
+function C() {
+  console.log("函数 C 被调用了");
+  return "foo";
+}
 
-console.log( A() ?? C() );
+console.log(A() ?? C());
 // 依次打印 "函数 A 被调用了"、"函数 C 被调用了"、"foo"
 // A() 返回了 undefined，所以运算符两边的表达式都被执行了
 
-console.log( B() ?? C() );
+console.log(B() ?? C());
 // 依次打印 "函数 B 被调用了"、"false"
 // B() 返回了 false（既不是 null 也不是 undefined）
 // 所以右侧表达式没有被执行
@@ -104,7 +112,7 @@ true || undefined ?? "foo"; // 抛出 SyntaxError
 但是，如果使用括号来显式表明运算优先级，是没有问题的：
 
 ```js example-good
-(null || undefined ) ?? "foo"; // 返回 "foo"
+(null || undefined) ?? "foo"; // 返回 "foo"
 ```
 
 ### 与可选链式运算符（`?.`）的关系

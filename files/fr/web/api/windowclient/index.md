@@ -1,16 +1,6 @@
 ---
 title: WindowClient
 slug: Web/API/WindowClient
-tags:
-  - API
-  - Client
-  - Experimental
-  - Interface
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - WindowClient
-translation_of: Web/API/WindowClient
 ---
 
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
@@ -38,23 +28,25 @@ _`WindowClient` hérite certaines propriétés de son parent, {{domxref("Client"
 ## Exemple
 
 ```js
-self.addEventListener('notificationclick', function(event) {
-  console.log('On notification click: ', event.notification.tag);
+self.addEventListener("notificationclick", function (event) {
+  console.log("On notification click: ", event.notification.tag);
   event.notification.close();
 
   // Vérifie si le client en cours est ouvert et
   // le focus le cas échéant
-  event.waitUntil(clients.matchAll({
-    type: "window"
-  }).then(function(clientList) {
-    for (var i = 0; i < clientList.length; i++) {
-      var client = clientList[i];
-      if (client.url == '/' && 'focus' in client)
-        return client.focus();
-    }
-    if (clients.openWindow)
-      return clients.openWindow('/');
-  }));
+  event.waitUntil(
+    clients
+      .matchAll({
+        type: "window",
+      })
+      .then(function (clientList) {
+        for (var i = 0; i < clientList.length; i++) {
+          var client = clientList[i];
+          if (client.url == "/" && "focus" in client) return client.focus();
+        }
+        if (clients.openWindow) return clients.openWindow("/");
+      }),
+  );
 });
 ```
 

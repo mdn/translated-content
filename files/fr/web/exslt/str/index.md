@@ -1,7 +1,6 @@
 ---
 title: Strings (str)
 slug: Web/EXSLT/str
-translation_of: Web/EXSLT/str
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/fr/docs/Web/EXSLT")}}

@@ -28,18 +28,29 @@ Firefox 4 より、[Synchronized Multimedia Integration Language](http://www.w3.
 同じ要素でより多くの属性のアニメーションを行いたい場合は、{{ SVGElement("animate") }} 要素を追加してください。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>Attribute Animation with SMIL</title>
   </head>
   <body>
-     <svg width="300px" height="100px">
-       <rect x="0" y="0" width="300" height="100" stroke="black" stroke-width="1" />
-       <circle cx="0" cy="50" r="15" fill="blue" stroke="black" stroke-width="1">
-            <animate attributeName="cx" from="0" to="100" dur="5s" repeatCount="indefinite" />
-       </circle>
-     </svg>
+    <svg width="300px" height="100px">
+      <rect
+        x="0"
+        y="0"
+        width="300"
+        height="100"
+        stroke="black"
+        stroke-width="1" />
+      <circle cx="0" cy="50" r="15" fill="blue" stroke="black" stroke-width="1">
+        <animate
+          attributeName="cx"
+          from="0"
+          to="100"
+          dur="5s"
+          repeatCount="indefinite" />
+      </circle>
+    </svg>
   </body>
 </html>
 ```
@@ -85,24 +96,52 @@ The {{ SVGElement("animateMotion") }} 要素は、パスに従った SVG 要素�
 この例では、青い円 (circle) が黒い四角形の左端と右端をバウンドするように、無限に行き来します。このアニメーションは {{ SVGElement("animateMotion") }} 要素で制御されます。ここでは、アニメーションの始点を定義する **M**oveTo コマンド、円を 300 ピクセル右へ移動する **H**orizontal-line コマンド、そしてパスを閉じて始点へ戻ることを定義する **Z** コマンドで構成されるパスを指定しています。**repeatCount** 属性の値を `indefinite` にすることで、SVG 画像が存在する間は永久にアニメーションを繰り返すよう指定します。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>SVG SMIL Animate with Path</title>
   </head>
   <body>
-     <svg width="300px" height="100px">
-       <rect x="0" y="0" width="300" height="100" stroke="black" stroke-width="1" />
-       <rect x="0" y="50" width="15" height="34" fill="blue" stroke="black" stroke-width="1" transform="rotation">
-
-   <svg xmlns="http://www.w3.org/2000/svg" width="300px" height="100px">
-    <rect x="0" y="0" width="300" height="100" stroke="black" stroke-width="1" />
-    <circle cx="0" cy="50" r="15" fill="blue" stroke="black" stroke-width="1">
-     <animateMotion path="M 0 0 H 300 Z" dur="3s" repeatCount="indefinite" />
-    </circle>
-   </svg>
-       </rect>
-     </svg>
+    <svg width="300px" height="100px">
+      <rect
+        x="0"
+        y="0"
+        width="300"
+        height="100"
+        stroke="black"
+        stroke-width="1" />
+      <rect
+        x="0"
+        y="50"
+        width="15"
+        height="34"
+        fill="blue"
+        stroke="black"
+        stroke-width="1"
+        transform="rotation">
+        <svg xmlns="http://www.w3.org/2000/svg" width="300px" height="100px">
+          <rect
+            x="0"
+            y="0"
+            width="300"
+            height="100"
+            stroke="black"
+            stroke-width="1" />
+          <circle
+            cx="0"
+            cy="50"
+            r="15"
+            fill="blue"
+            stroke="black"
+            stroke-width="1">
+            <animateMotion
+              path="M 0 0 H 300 Z"
+              dur="3s"
+              repeatCount="indefinite" />
+          </circle>
+        </svg>
+      </rect>
+    </svg>
   </body>
 </html>
 ```

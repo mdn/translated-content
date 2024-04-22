@@ -96,17 +96,19 @@ digest(algorithm, data)
 此示例对消息进行编码，然后计算其 SHA-256 摘要，并打印摘要长度：
 
 ```js
-const text = 'An obscure body in the S-K System, your majesty. The inhabitants refer to it as the planet Earth.';
+const text =
+  "An obscure body in the S-K System, your majesty. The inhabitants refer to it as the planet Earth.";
 
 async function digestMessage(message) {
   const encoder = new TextEncoder();
   const data = encoder.encode(message);
-  const hash = await crypto.subtle.digest('SHA-256', data);
+  const hash = await crypto.subtle.digest("SHA-256", data);
   return hash;
 }
 
-digestMessage(text)
-  .then((digestBuffer) => console.log(digestBuffer.byteLength));
+digestMessage(text).then((digestBuffer) =>
+  console.log(digestBuffer.byteLength),
+);
 ```
 
 ### 将摘要转换为十六进制字符串
@@ -114,18 +116,20 @@ digestMessage(text)
 摘要以 `ArrayBuffer` 的形式返回，但为了进行比较和显示，通常会使用十六进制（hex）字符串的形式表示。此示例计算摘要，然后将 `ArrayBuffer` 转换为十六进制字符串：
 
 ```js
-const text = 'An obscure body in the S-K System, your majesty. The inhabitants refer to it as the planet Earth.';
+const text =
+  "An obscure body in the S-K System, your majesty. The inhabitants refer to it as the planet Earth.";
 
 async function digestMessage(message) {
-  const msgUint8 = new TextEncoder().encode(message);                           // 编码为（utf-8）Uint8Array
-  const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8);           // 计算消息的哈希值
-  const hashArray = Array.from(new Uint8Array(hashBuffer));                     // 将缓冲区转换为字节数组
-  const hashHex = hashArray.map((b) => b.toString(16).padStart(2, '0')).join(''); // 将字节数组转换为十六进制字符串
+  const msgUint8 = new TextEncoder().encode(message); // 编码为（utf-8）Uint8Array
+  const hashBuffer = await crypto.subtle.digest("SHA-256", msgUint8); // 计算消息的哈希值
+  const hashArray = Array.from(new Uint8Array(hashBuffer)); // 将缓冲区转换为字节数组
+  const hashHex = hashArray
+    .map((b) => b.toString(16).padStart(2, "0"))
+    .join(""); // 将字节数组转换为十六进制字符串
   return hashHex;
 }
 
-digestMessage(text)
-  .then((digestHex) => console.log(digestHex));
+digestMessage(text).then((digestHex) => console.log(digestHex));
 ```
 
 ## 规范

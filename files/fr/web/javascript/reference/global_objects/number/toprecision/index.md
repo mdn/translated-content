@@ -1,14 +1,6 @@
 ---
 title: Number.prototype.toPrecision()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
-tags:
-  - JavaScript
-  - Méthode
-  - Number
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
-original_slug: Web/JavaScript/Reference/Objets_globaux/Number/toPrecision
 ---
 
 {{JSRef}}
@@ -20,7 +12,7 @@ La méthode **`toPrecision()`** renvoie une chaîne de caractères représentant
 ## Syntaxe
 
 ```js
-numObj.toPrecision([précision])
+numObj.toPrecision([précision]);
 ```
 
 ### Paramètre
@@ -43,17 +35,17 @@ Si l'argument `précision` n'est pas utilisé, la méthode aura le même effet q
 
 ```js
 var objetNumber = 5.123456;
-console.log(objetNumber.toPrecision());  //affiche "5.123456"
+console.log(objetNumber.toPrecision()); //affiche "5.123456"
 console.log(objetNumber.toPrecision(5)); //affiche "5.1235"
 console.log(objetNumber.toPrecision(2)); //affiche "5.1"
 console.log(objetNumber.toPrecision(1)); //affiche "5"
 
 numObj = 0.000123;
 
-console.log(numObj.toPrecision());    // affiche "0.000123"
-console.log(numObj.toPrecision(5));   // affiche "0.00012300"
-console.log(numObj.toPrecision(2));   // affiche "0.00012"
-console.log(numObj.toPrecision(1));   // affiche "0.0001"
+console.log(numObj.toPrecision()); // affiche "0.000123"
+console.log(numObj.toPrecision(5)); // affiche "0.00012300"
+console.log(numObj.toPrecision(2)); // affiche "0.00012"
+console.log(numObj.toPrecision(1)); // affiche "0.0001"
 
 // dans certaines circonstances, on peut avoir une notation exponentielle
 console.log((1234.5).toPrecision(2)); // "1.2e+3"

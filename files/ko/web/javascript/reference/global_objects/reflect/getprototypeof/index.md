@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/getPrototypeOf
 ## 구문
 
 ```js
-Reflect.getPrototypeOf(target)
+Reflect.getPrototypeOf(target);
 ```
 
 ### 매개변수
@@ -46,19 +46,19 @@ Reflect.getPrototypeOf(Object.create(null)); // null
 
 ```js
 // 객체에는 동일한 결과
-Object.getPrototypeOf({});  // Object.prototype
+Object.getPrototypeOf({}); // Object.prototype
 Reflect.getPrototypeOf({}); // Object.prototype
 
 // ES5에서는 비객체 대상에서 모두 오류
-Object.getPrototypeOf('foo');  // Throws TypeError
-Reflect.getPrototypeOf('foo'); // Throws TypeError
+Object.getPrototypeOf("foo"); // Throws TypeError
+Reflect.getPrototypeOf("foo"); // Throws TypeError
 
 // ES2015에서는 Reflect만 오류, Object는 객체로 변환
-Object.getPrototypeOf('foo');  // String.prototype
-Reflect.getPrototypeOf('foo'); // Throws TypeError
+Object.getPrototypeOf("foo"); // String.prototype
+Reflect.getPrototypeOf("foo"); // Throws TypeError
 
 // ES2015 Object 동작을 따라하려면 객체 변환과정 필요
-Reflect.getPrototypeOf(Object('foo')); // String.prototype
+Reflect.getPrototypeOf(Object("foo")); // String.prototype
 ```
 
 ## 명세

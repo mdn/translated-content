@@ -1,8 +1,6 @@
 ---
 title: Utiliser les éléments template et slot
 slug: Web/API/Web_components/Using_templates_and_slots
-translation_of: Web/Web_Components/Using_templates_and_slots
-original_slug: Web/Web_Components/Using_templates_and_slots
 ---
 
 {{DefaultAPISidebar("Web Components")}}
@@ -24,7 +22,7 @@ Voyons un exemple simple&nbsp;:
 Ceci restera invisible sur la page tant qu'aucune référence n'y sera faite dans le code JavaScript puis ajouté au DOM, en utilisant par exemple&nbsp;:
 
 ```js
-let template = document.getElementById('my-paragraph');
+let template = document.getElementById("my-paragraph");
 let templateContent = template.content;
 document.body.appendChild(templateContent);
 ```
@@ -36,17 +34,20 @@ Quoique trivial, cet exemple vous permet d'entrevoir l'interêt d'utiliser des m
 Les modèles sont utiles en eux-mêmes, mais ils fonctionnent encore mieux avec des composants web. Créons un composant web qui utilise notre modèle comme contenu de son Shadow DOM. Nous l'appellerons `<my-paragraph>`&nbsp;:
 
 ```js
-customElements.define('my-paragraph',
+customElements.define(
+  "my-paragraph",
   class extends HTMLElement {
     constructor() {
       super();
-      let template = document.getElementById('my-paragraph');
+      let template = document.getElementById("my-paragraph");
       let templateContent = template.content;
 
-      const shadowRoot = this.attachShadow({mode: 'open'})
-        .appendChild(templateContent.cloneNode(true));
-  }
-})
+      const shadowRoot = this.attachShadow({ mode: "open" }).appendChild(
+        templateContent.cloneNode(true),
+      );
+    }
+  },
+);
 ```
 
 Le point important à noter est que l'on ajoute un clone du contenu du modèle à la racine du DOM, créé à l'aide de la méthode [`Node.cloneNode()`](/fr/docs/Web/API/Node/cloneNode).
@@ -135,20 +136,46 @@ Tout d'abord, on utilise l'élément [`<slot>`](/fr/docs/Web/HTML/Element/slot) 
 ```html
 <template id="element-details-template">
   <style>
-  details {font-family: "Open Sans Light",Helvetica,Arial}
-  .name {font-weight: bold; color: #217ac0; font-size: 120%}
-  h4 { margin: 10px 0 -8px 0; }
-  h4 span { background: #217ac0; padding: 2px 6px 2px 6px }
-  h4 span { border: 1px solid #cee9f9; border-radius: 4px }
-  h4 span { color: white }
-  .attributes { margin-left: 22px; font-size: 90% }
-  .attributes p { margin-left: 16px; font-style: italic }
+    details {
+      font-family: "Open Sans Light", Helvetica, Arial;
+    }
+    .name {
+      font-weight: bold;
+      color: #217ac0;
+      font-size: 120%;
+    }
+    h4 {
+      margin: 10px 0 -8px 0;
+    }
+    h4 span {
+      background: #217ac0;
+      padding: 2px 6px 2px 6px;
+    }
+    h4 span {
+      border: 1px solid #cee9f9;
+      border-radius: 4px;
+    }
+    h4 span {
+      color: white;
+    }
+    .attributes {
+      margin-left: 22px;
+      font-size: 90%;
+    }
+    .attributes p {
+      margin-left: 16px;
+      font-style: italic;
+    }
   </style>
   <details>
     <summary>
       <span>
-        <code class="name">&lt;<slot name="element-name">BESOIN D'UN NOM</slot>&gt;</code>
-        <i class="desc"><slot name="description">BESOIN D'UNE DESCRIPTION</slot></i>
+        <code class="name"
+          >&lt;<slot name="element-name">BESOIN D'UN NOM</slot>&gt;</code
+        >
+        <i class="desc"
+          ><slot name="description">BESOIN D'UNE DESCRIPTION</slot></i
+        >
       </span>
     </summary>
     <div class="attributes">
@@ -156,7 +183,7 @@ Tout d'abord, on utilise l'élément [`<slot>`](/fr/docs/Web/HTML/Element/slot) 
       <slot name="attributes"><p>Aucun</p></slot>
     </div>
   </details>
-  <hr>
+  <hr />
 </template>
 ```
 
@@ -176,17 +203,19 @@ Voyons les caractéristiques de cet élément [`<template>`](/fr/docs/Web/HTML/E
 Ensuite, voyons comment créer un nouvel élément personnalisé, intitulé **`<element-details>`**, et comment utiliser [`Element.attachShadow`](/fr/docs/Web/API/Element/attachShadow) pour lui rattacher, comme [racine virtuelle](/fr/docs/Web/API/ShadowRoot), le fragment de document créé avec l'élément [`<template>`](/fr/docs/Web/HTML/Element/template) ci-dessus. Pour cela, on utilisera la même méthode qu'avec notre exemple plus simple.
 
 ```js
-customElements.define('element-details',
+customElements.define(
+  "element-details",
   class extends HTMLElement {
     constructor() {
       super();
-      const template = document
-        .getElementById('element-details-template')
-        .content;
-      const shadowRoot = this.attachShadow({mode: 'open'})
-        .appendChild(template.cloneNode(true));
+      const template = document.getElementById(
+        "element-details-template",
+      ).content;
+      const shadowRoot = this.attachShadow({ mode: "open" }).appendChild(
+        template.cloneNode(true),
+      );
     }
-  }
+  },
 );
 ```
 
@@ -197,10 +226,10 @@ Prenons maintenant un élément **`<element-details>`** et utilisons le dans not
 ```html
 <element-details>
   <span slot="element-name">slot</span>
-  <span slot="description">Un emplacement dans un
-    composant web que les utilisateurs pourront remplir
-    avec leur propre contenu pour composer plusieurs
-    arbres DOM ensemble.</span>
+  <span slot="description"
+    >Un emplacement dans un composant web que les utilisateurs pourront remplir
+    avec leur propre contenu pour composer plusieurs arbres DOM ensemble.</span
+  >
   <dl slot="attributes">
     <dt>name</dt>
     <dd>Le nom de l'emplacement.</dd>
@@ -209,10 +238,11 @@ Prenons maintenant un élément **`<element-details>`** et utilisons le dans not
 
 <element-details>
   <span slot="element-name">template</span>
-  <span slot="description">Un mécanisme pour stocker
-    du contenu côté client qui n'est pas affiché lorsque la
-    page est chargée mais lors de l'exécution avec du code
-    JavaScript.</span>
+  <span slot="description"
+    >Un mécanisme pour stocker du contenu côté client qui n'est pas affiché
+    lorsque la page est chargée mais lors de l'exécution avec du code
+    JavaScript.</span
+  >
 </element-details>
 ```
 
@@ -227,14 +257,26 @@ En voyant ce fragment, notons quelques points&nbsp;:
 Pour finir, ajoutons un peu de CSS pour les éléments [`<dl>`](/fr/docs/Web/HTML/Element/dl), [`<dt>`](/fr/docs/Web/HTML/Element/dt) et [`<dd>`](/fr/docs/Web/HTML/Element/dd) de notre document&nbsp;:
 
 ```css
-dl { margin-left: 6px; }
-dt { font-weight: bold; color: #217ac0; font-size: 110% }
-dt { font-family: Consolas, "Liberation Mono", Courier }
-dd { margin-left: 16px }
+dl {
+  margin-left: 6px;
+}
+dt {
+  font-weight: bold;
+  color: #217ac0;
+  font-size: 110%;
+}
+dt {
+  font-family: Consolas, "Liberation Mono", Courier;
+}
+dd {
+  margin-left: 16px;
+}
 ```
 
 ```css hidden
-body { margin-top: 47px }
+body {
+  margin-top: 47px;
+}
 ```
 
 ### Résultat
@@ -254,36 +296,70 @@ Quelques notes à propos du résultat affiché&nbsp;:
 ##### Exemple complet
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>slot example</title>
     <style>
-
-      dl { margin-left: 6px; }
-      dt { font-weight: bold; color: #217ac0; font-size: 110% }
-      dt { font-family: Consolas, "Liberation Mono", Courier }
-      dd { margin-left: 16px }
-
+      dl {
+        margin-left: 6px;
+      }
+      dt {
+        font-weight: bold;
+        color: #217ac0;
+        font-size: 110%;
+      }
+      dt {
+        font-family: Consolas, "Liberation Mono", Courier;
+      }
+      dd {
+        margin-left: 16px;
+      }
     </style>
   </head>
   <body>
     <template id="element-details-template">
       <style>
-      details {font-family: "Open Sans Light",Helvetica,Arial}
-      .name {font-weight: bold; color: #217ac0; font-size: 120%}
-      h4 { margin: 10px 0 -8px 0; }
-      h4 span { background: #217ac0; padding: 2px 6px 2px 6px }
-      h4 span { border: 1px solid #cee9f9; border-radius: 4px }
-      h4 span { color: white }
-      .attributes { margin-left: 22px; font-size: 90% }
-      .attributes p { margin-left: 16px; font-style: italic }
+        details {
+          font-family: "Open Sans Light", Helvetica, Arial;
+        }
+        .name {
+          font-weight: bold;
+          color: #217ac0;
+          font-size: 120%;
+        }
+        h4 {
+          margin: 10px 0 -8px 0;
+        }
+        h4 span {
+          background: #217ac0;
+          padding: 2px 6px 2px 6px;
+        }
+        h4 span {
+          border: 1px solid #cee9f9;
+          border-radius: 4px;
+        }
+        h4 span {
+          color: white;
+        }
+        .attributes {
+          margin-left: 22px;
+          font-size: 90%;
+        }
+        .attributes p {
+          margin-left: 16px;
+          font-style: italic;
+        }
       </style>
       <details>
         <summary>
           <span>
-            <code class="name">&lt;<slot name="element-name">BESOIN D'UN NOM</slot>&gt;</code>
-            <i class="desc"><slot name="description">BESOIN D'UNE DESCRIPTION</slot></i>
+            <code class="name"
+              >&lt;<slot name="element-name">BESOIN D'UN NOM</slot>&gt;</code
+            >
+            <i class="desc"
+              ><slot name="description">BESOIN D'UNE DESCRIPTION</slot></i
+            >
           </span>
         </summary>
         <div class="attributes">
@@ -291,15 +367,16 @@ Quelques notes à propos du résultat affiché&nbsp;:
           <slot name="attributes"><p>Aucun</p></slot>
         </div>
       </details>
-      <hr>
+      <hr />
     </template>
 
     <element-details>
       <span slot="element-name">slot</span>
-      <span slot="description">Un emplacement dans un
-        composant web que les utilisateurs pourront remplir
-        avec leur propre contenu pour composer plusieurs
-        arbres DOM ensemble.</span>
+      <span slot="description"
+        >Un emplacement dans un composant web que les utilisateurs pourront
+        remplir avec leur propre contenu pour composer plusieurs arbres DOM
+        ensemble.</span
+      >
       <dl slot="attributes">
         <dt>name</dt>
         <dd>Le nom de l'emplacement.</dd>
@@ -308,24 +385,28 @@ Quelques notes à propos du résultat affiché&nbsp;:
 
     <element-details>
       <span slot="element-name">template</span>
-      <span slot="description">Un mécanisme pour stocker
-        du contenu côté client qui n'est pas affiché lorsque la
-        page est chargée mais lors de l'exécution avec du code
-        JavaScript.</span>
+      <span slot="description"
+        >Un mécanisme pour stocker du contenu côté client qui n'est pas affiché
+        lorsque la page est chargée mais lors de l'exécution avec du code
+        JavaScript.</span
+      >
     </element-details>
 
     <script>
-    customElements.define('element-details',
-      class extends HTMLElement {
-        constructor() {
-          super();
-          const template = document
-            .getElementById('element-details-template')
-            .content;
-          const shadowRoot = this.attachShadow({mode: 'open'})
-            .appendChild(template.cloneNode(true));
-        }
-      })
+      customElements.define(
+        "element-details",
+        class extends HTMLElement {
+          constructor() {
+            super();
+            const template = document.getElementById(
+              "element-details-template",
+            ).content;
+            const shadowRoot = this.attachShadow({ mode: "open" }).appendChild(
+              template.cloneNode(true),
+            );
+          }
+        },
+      );
     </script>
   </body>
 </html>

@@ -1,7 +1,6 @@
 ---
 title: floating 엘리먼트의 쌓임
 slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elements
-original_slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float
 ---
 
 {{CSSRef}}

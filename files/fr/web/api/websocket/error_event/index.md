@@ -1,7 +1,6 @@
 ---
-title: 'WebSocket : évènement error'
+title: "WebSocket : évènement error"
 slug: Web/API/WebSocket/error_event
-browser-compat: api.WebSocket.error_event
 ---
 
 {{APIRef}}
@@ -37,11 +36,11 @@ L'évènement `error` est déclenché lorsqu'une connexion avec une `WebSocket` 
 
 ```js
 // On crée une connexion WebSocket
-const socket = new WebSocket('ws://localhost:8080');
+const socket = new WebSocket("ws://localhost:8080");
 
 // On écoute les éventuelles erreurs
-socket.addEventListener('error', function (event) {
-  console.log('Erreur WebSocket : ', event);
+socket.addEventListener("error", function (event) {
+  console.log("Erreur WebSocket : ", event);
 });
 ```
 

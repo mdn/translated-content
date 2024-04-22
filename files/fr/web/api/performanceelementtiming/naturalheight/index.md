@@ -1,14 +1,6 @@
 ---
 title: PerformanceElementTiming.naturalHeight
 slug: Web/API/PerformanceElementTiming/naturalHeight
-tags:
-  - API
-  - Property
-  - Propriété
-  - Reference
-  - naturalHeight
-  - PerformanceElementTiming
-translation_of: Web/API/PerformanceElementTiming/naturalHeight
 ---
 
 {{APIRef("Element Timing API")}}
@@ -30,7 +22,11 @@ Un entier de 32 bits non signé (_unsigned long_) qui est la hauteur intrinsèqu
 Dans cet exemple, le fichier image a une largeur de 1000px et une hauteur de 750px. L'appel de `entry.naturalHeight` renvoie `750`, c'est-à-dire la hauteur intrinsèque en pixels.
 
 ```html
-<img src="image.jpg" alt="une belle image" elementtiming="big-image" id="myImage">
+<img
+  src="image.jpg"
+  alt="une belle image"
+  elementtiming="big-image"
+  id="myImage" />
 ```
 
 ```js

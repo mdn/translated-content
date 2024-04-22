@@ -1,11 +1,6 @@
 ---
 title: <custom-ident>
 slug: Web/CSS/custom-ident
-tags:
-  - CSS
-  - Reference
-  - Type
-translation_of: Web/CSS/custom-ident
 ---
 
 {{CSSRef}}

@@ -1,11 +1,6 @@
 ---
 title: border-image-source
 slug: Web/CSS/border-image-source
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/border-image-source
 ---
 
 {{CSSRef}}

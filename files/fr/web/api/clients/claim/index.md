@@ -1,14 +1,6 @@
 ---
 title: Clients.claim()
 slug: Web/API/Clients/claim
-tags:
-  - API
-  - Clients
-  - Méthode
-  - Reference
-  - Service Workers
-  - claim
-translation_of: Web/API/Clients/claim
 ---
 
 {{SeeCompatTable}}{{APIRef("Service Worker Clients")}}
@@ -20,7 +12,7 @@ Cette méthode peut être utilisée avec {{domxref("ServiceWorkerGlobalScope.ski
 ## Syntaxe
 
 ```js
-ServiceWorkerClients.claim().then(function() {
+ServiceWorkerClients.claim().then(function () {
   // Faire quelque chose
 });
 ```
@@ -38,10 +30,10 @@ Une `Promise.`
 L'exemple suivant utilise `claim()` dans le gestionnaire d'évènement `onActivate` d'un service worker. Donc la page client chargée dans la même portée n'a pas besoin d'être rechargée avant de pouvoir utiliser le service worker.
 
 ```js
-self.addEventListener('install', function(event) {
+self.addEventListener("install", function (event) {
   event.waitUntil(self.skipWaiting());
 });
-self.addEventListener('activate', function(event) {
+self.addEventListener("activate", function (event) {
   event.waitUntil(self.clients.claim());
 });
 ```

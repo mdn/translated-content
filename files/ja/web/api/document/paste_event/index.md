@@ -1,5 +1,5 @@
 ---
-title: 'Document: paste イベント'
+title: "Document: paste イベント"
 slug: Web/API/Document/paste_event
 ---
 
@@ -33,8 +33,8 @@ slug: Web/API/Document/paste_event
 ## 例
 
 ```js
-document.addEventListener('paste', (event) => {
-    console.log('paste action initiated')
+document.addEventListener("paste", (event) => {
+  console.log("paste action initiated");
 });
 ```
 

@@ -5,7 +5,7 @@ slug: Web/API/Server-sent_events/Using_server-sent_events
 
 {{DefaultAPISidebar("Server Sent Events")}}
 
-O desenvolvimento de um aplicativo da Web que usa [eventos enviados pelo servidor](/en-US/docs/Web/API/Server-sent_events) é simples. Você precisará de um pouco de código no servidor para transmitir eventos para o front-end, mas o código do lado do cliente funciona quase de forma idêntica a [websockets](/en-US/docs/Web/API/WebSockets_API) em parte do tratamento eventos de entrada. Esta é uma conexão unidirecional, portanto, você não pode enviar eventos de um cliente para um servidor.
+O desenvolvimento de um aplicativo da Web que usa [eventos enviados pelo servidor](/pt-BR/docs/Web/API/Server-sent_events) é simples. Você precisará de um pouco de código no servidor para transmitir eventos para o front-end, mas o código do lado do cliente funciona quase de forma idêntica a [websockets](/pt-BR/docs/Web/API/WebSockets_API) em parte do tratamento eventos de entrada. Esta é uma conexão unidirecional, portanto, você não pode enviar eventos de um cliente para um servidor.
 
 ## Recebendo eventos do servidor
 
@@ -18,7 +18,9 @@ const evtSource = new EventSource("ssedemo.php");
 Se o script do gerador de eventos estiver hospedado em uma origem diferente, um novo objeto `EventSource` deve ser criado com a URL e um dicionário de opções. Por exemplo, supondo que o script do cliente esteja em `example.com`:
 
 ```js
-const evtSource = new EventSource("//api.example.com/ssedemo.php", { withCredentials: true } );
+const evtSource = new EventSource("//api.example.com/ssedemo.php", {
+  withCredentials: true,
+});
 ```
 
 Depois de instanciar a origem do evento, você pode começar a ouvir as mensagens do servidor anexando um manipulador para o evento {{domxref("EventSource.message_event", "message")}}:
@@ -30,14 +32,14 @@ evtSource.onmessage = (event) => {
 
   newElement.textContent = `message: ${event.data}`;
   eventList.appendChild(newElement);
-}
+};
 ```
 
 Este código escuta as mensagens recebidas (ou seja, avisos do servidor que não possuem um campo `event`) e anexa o texto da mensagem a uma lista no HTML do documento.
 
 Você também pode escutar eventos com `addEventListener()`:
 
-``` js
+```js
 evtSource.addEventListener("ping", (evento) => {
   const novoElemento = document.createElement("li");
   const eventList = document.getElementById("list");
@@ -99,7 +101,7 @@ para quebrar o loop se a conexão foi fechada (por exemplo, o cliente fecha a p�
 
 ## Manipulação de erros
 
-Quando ocorrem problemas (como um tempo limite de rede ou problemas relacionados a [controle de acesso](/en-US/docs/Web/HTTP/CORS)), um evento de erro é gerado. Você pode agir sobre isso programaticamente implementando o retorno de chamada `onerror` no objeto `EventSource`:
+Quando ocorrem problemas (como um tempo limite de rede ou problemas relacionados a [controle de acesso](/pt-BR/docs/Web/HTTP/CORS)), um evento de erro é gerado. Você pode agir sobre isso programaticamente implementando o retorno de chamada `onerror` no objeto `EventSource`:
 
 ```js
 evtSource.onerror = (err) => {
@@ -117,7 +119,7 @@ evtSource.close();
 
 ## Formato do fluxo de eventos
 
-O fluxo de eventos é um fluxo simples de dados de texto que deve ser codificado usando [UTF-8](/en-US/docs/Glossary/UTF-8). As mensagens no fluxo de eventos são separadas por um par de caracteres de nova linha. Dois pontos como o primeiro caractere de uma linha é essencialmente um comentário e é ignorado.
+O fluxo de eventos é um fluxo simples de dados de texto que deve ser codificado usando [UTF-8](/pt-BR/docs/Glossary/UTF-8). As mensagens no fluxo de eventos são separadas por um par de caracteres de nova linha. Dois pontos como o primeiro caractere de uma linha é essencialmente um comentário e é ignorado.
 
 > **Nota:** A linha de comentário pode ser usada para evitar que as conexões atinjam o tempo limite; um servidor pode enviar um comentário periodicamente para manter a conexão ativa.
 
@@ -132,7 +134,7 @@ Cada mensagem recebida tem alguma combinação dos seguintes campos, um por linh
 - `data`
   - : O campo de dados para a mensagem. Quando o `EventSource` recebe várias linhas consecutivas que começam com `data:`, [ele as concatena](https://www.w3.org/TR/eventsource/#dispatchMessage), inserindo um caractere de nova linha entre cada uma. As novas linhas à direita são removidas.
 - `id`
-  - : o ID do evento para definir o último valor do ID do evento do objeto [`EventSource`](/en-US/docs/Web/API/EventSource).
+  - : o ID do evento para definir o último valor do ID do evento do objeto [`EventSource`](/pt-BR/docs/Web/API/EventSource).
 - `retry`
   - : O tempo de reconexão. Se a conexão com o servidor for perdida, o navegador aguardará o tempo especificado antes de tentar se reconectar. Deve ser um número inteiro, especificando o tempo de reconexão em milissegundos. Se um valor não inteiro for especificado, o campo será ignorado.
 
@@ -190,6 +192,10 @@ evento: mensagem do usuário
 data: {"username": "bobby", "time": "02:34:11", "text": "Olá a todos."}
 ```
 
-## Compatibilidade do navegador
+## Especificações
+
+{{Specifications}}
+
+## Compatibilidade com navegadores
 
 {{Compat}}

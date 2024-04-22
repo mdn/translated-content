@@ -1,11 +1,6 @@
 ---
 title: shape-outside
 slug: Web/CSS/shape-outside
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/shape-outside
 ---
 
 {{CSSRef}}
@@ -29,11 +24,10 @@ shape-outside: circle();
 shape-outside: ellipse();
 shape-outside: inset(10px 10px 10px 10px);
 shape-outside: polygon(10px 10px, 20px 20px, 30px 30px);
-shape-outside: linear-gradient(45deg, rgba(255,255,255,0) 150px, red 150px);
+shape-outside: linear-gradient(45deg, rgba(255, 255, 255, 0) 150px, red 150px);
 
 /* Valeur de type <url> */
 shape-outside: url(image.png);
-
 
 /* Valeur de type <gradient> */
 shape-outside: linear-gradient(45deg, rgba(255, 255, 255, 0) 150px, red 150px);
@@ -82,10 +76,9 @@ Afin de pouvoir interpoler entre deux formes, on appliquera les règles suivante
   <div class="left"></div>
   <div class="right"></div>
   <p>
-    Sometimes a web page's text content appears to be
-    funneling your attention towards a spot on the page
-    to drive you to follow a particular link.  Sometimes
-    you don't notice.
+    Sometimes a web page's text content appears to be funneling your attention
+    towards a spot on the page to drive you to follow a particular link.
+    Sometimes you don't notice.
   </p>
 </div>
 ```

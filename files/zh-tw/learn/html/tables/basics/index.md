@@ -1,7 +1,6 @@
 ---
 title: HTML表格的基礎
 slug: Learn/HTML/Tables/Basics
-original_slug: Learn/HTML/Tables/基礎
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}

@@ -127,12 +127,12 @@ function OnDivClick(e) {
     e.eventPhase == 0
       ? "none"
       : e.eventPhase == 1
-      ? "capturing"
-      : e.eventPhase == 2
-      ? "target"
-      : e.eventPhase == 3
-      ? "bubbling"
-      : "error";
+        ? "capturing"
+        : e.eventPhase == 2
+          ? "target"
+          : e.eventPhase == 3
+            ? "bubbling"
+            : "error";
   divInfo.innerHTML += e.currentTarget.id + "; eventPhase: " + level + "<br/>";
 }
 

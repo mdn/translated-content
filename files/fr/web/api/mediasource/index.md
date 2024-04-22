@@ -1,20 +1,6 @@
 ---
 title: MediaSource
 slug: Web/API/MediaSource
-tags:
-  - API
-  - Audio
-  - Experimental
-  - Extensions
-  - Interface
-  - MSE
-  - Media
-  - MediaSource
-  - MediaSource Extensions
-  - Reference
-  - TopicStub
-  - Video
-translation_of: Web/API/MediaSource
 ---
 
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
@@ -73,46 +59,46 @@ _Hérite des méthodes de son interface parente, {{domxref("EventTarget")}}._
 L'exemple simple suivant charge une vidéo avec {{domxref ("XMLHttpRequest")}} et la lit dès que possible. Cet exemple a été écrit par Nick Desaulniers et peut être [consulté en direct ici](http://nickdesaulniers.github.io/netfix/demo/bufferAll.html) (vous pouvez aussi [télécharger la source](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) pour une enquête plus approfondie).
 
 ```js
-var video = document.querySelector('video');
+var video = document.querySelector("video");
 
-var assetURL = 'frag_bunny.mp4';
+var assetURL = "frag_bunny.mp4";
 // Need to be specific for Blink regarding codecs
 // ./mp4info frag_bunny.mp4 | grep Codec
 var mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
 
-if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
+if ("MediaSource" in window && MediaSource.isTypeSupported(mimeCodec)) {
   var mediaSource = new MediaSource();
   //console.log(mediaSource.readyState); // closed
   video.src = URL.createObjectURL(mediaSource);
-  mediaSource.addEventListener('sourceopen', sourceOpen);
+  mediaSource.addEventListener("sourceopen", sourceOpen);
 } else {
-  console.error('Unsupported MIME type or codec: ', mimeCodec);
+  console.error("Unsupported MIME type or codec: ", mimeCodec);
 }
 
-function sourceOpen (_) {
+function sourceOpen(_) {
   //console.log(this.readyState); // open
   var mediaSource = this;
   var sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
   fetchAB(assetURL, function (buf) {
-    sourceBuffer.addEventListener('updateend', function (_) {
+    sourceBuffer.addEventListener("updateend", function (_) {
       mediaSource.endOfStream();
       video.play();
       //console.log(mediaSource.readyState); // ended
     });
     sourceBuffer.appendBuffer(buf);
   });
-};
+}
 
-function fetchAB (url, cb) {
+function fetchAB(url, cb) {
   console.log(url);
-  var xhr = new XMLHttpRequest;
-  xhr.open('get', url);
-  xhr.responseType = 'arraybuffer';
+  var xhr = new XMLHttpRequest();
+  xhr.open("get", url);
+  xhr.responseType = "arraybuffer";
   xhr.onload = function () {
     cb(xhr.response);
   };
   xhr.send();
-};
+}
 ```
 
 ## Spécifications

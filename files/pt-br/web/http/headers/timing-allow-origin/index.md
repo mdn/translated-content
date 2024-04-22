@@ -50,13 +50,11 @@ Timing-Allow-Origin: https://developer.mozilla.org
 
 ## Especificações
 
-| Especificação                                                                                                    | Status                                   | Comentário         |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------ |
-| {{SpecName('Resource Timing 3', '#sec-timing-allow-origin', 'Timing-Allow-Origin')}} | {{Spec2("Resource Timing 3")}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Timing-Allow-Origin")}}
+{{Compat}}
 
 ## Veja também
 

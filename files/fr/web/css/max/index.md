@@ -1,12 +1,6 @@
 ---
 title: max()
 slug: Web/CSS/max
-tags:
-  - CSS
-  - Fonction
-  - Reference
-translation_of: Web/CSS/max()
-original_slug: Web/CSS/max()
 ---
 
 {{CSSRef}}
@@ -54,7 +48,10 @@ Il est tout à fait possible de combiner des valeurs avec différentes unités d
 #### HTML
 
 ```html
-<img src="https://developer.mozilla.org/static/img/web-docs-sprite.svg" alt="MDN Web Docs" class="logo">
+<img
+  src="https://developer.mozilla.org/static/img/web-docs-sprite.svg"
+  alt="MDN Web Docs"
+  class="logo" />
 ```
 
 #### Résultat
@@ -84,7 +81,9 @@ Avec ces règles, la valeur pour `font-size` vaudra au moins `2rems` ou deux foi
 
 ```html
 <h1>Ce texte est toujours lisible mais sa taille ne change pas.</h1>
-<h1 class="responsive">Ce texte est toujours lisible et s'adapte dans une certaine mesure.</h1>
+<h1 class="responsive">
+  Ce texte est toujours lisible et s'adapte dans une certaine mesure.
+</h1>
 ```
 
 #### Résultat

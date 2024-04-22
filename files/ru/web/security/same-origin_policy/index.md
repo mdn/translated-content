@@ -1,7 +1,6 @@
 ---
 title: Same-origin policy
 slug: Web/Security/Same-origin_policy
-translation_of: Web/Security/Same-origin_policy
 ---
 
 **Политика одинакового источника** (same-origin policy) определяет как документ или скрипт, загруженный из одного источника ({{Glossary("origin")}}), может взаимодействовать с ресурсом из другого источника. Это помогает изолировать потенциально вредоносные документы, снижая количество возможных векторов атак.
@@ -71,7 +70,7 @@ Here are some examples of resources which may be embedded cross-origin:
 - Media files with {{htmlelement("video")}} and {{htmlelement("audio")}}.
 - Plug-ins with [`<object>`](/ru/docs/HTML/Element/object), [`<embed>`](/ru/docs/HTML/Element/embed) and [`<applet>`](/ru/docs/HTML/Element/applet).
 - Fonts with [`@font-face`](/ru/docs/CSS/@font-face). Some browsers allow cross-origin fonts, others require same-origin fonts.
-- Anything with [`<frame>`](/ru/docs/HTML/Element/frame) and [`<iframe>`](/ru/docs/HTML/Element/iframe). A site can use the [`X-Frame-Options`](/en-US/docs/HTTP/X-Frame-Options) header to prevent this form of cross-origin interaction.
+- Anything with [`<frame>`](/ru/docs/HTML/Element/frame) and [`<iframe>`](/ru/docs/HTML/Element/iframe). A site can use the [`X-Frame-Options`](/ru/docs/HTTP/X-Frame-Options) header to prevent this form of cross-origin interaction.
 
 ### How to allow cross-origin access
 
@@ -95,24 +94,24 @@ Specification: <http://www.whatwg.org/specs/web-apps/current-work/multipage/brow
 
 The following cross-origin access to `Window` properties is allowed:
 
-| Methods                                      |
-| -------------------------------------------- |
-| {{domxref("window.blur")}}         |
-| {{domxref("window.close")}}         |
-| {{domxref("window.focus")}}         |
+| Methods                           |
+| --------------------------------- |
+| {{domxref("window.blur")}}        |
+| {{domxref("window.close")}}       |
+| {{domxref("window.focus")}}       |
 | {{domxref("window.postMessage")}} |
 
-| Attributes                               |             |
-| ---------------------------------------- | ----------- |
-| {{domxref("window.closed")}}     | Read only.  |
-| {{domxref("window.frames")}}     | Read only.  |
-| {{domxref("window.length")}}     | Read only.  |
+| Attributes                     |             |
+| ------------------------------ | ----------- |
+| {{domxref("window.closed")}}   | Read only.  |
+| {{domxref("window.frames")}}   | Read only.  |
+| {{domxref("window.length")}}   | Read only.  |
 | {{domxref("window.location")}} | Read/write. |
-| {{domxref("window.opener")}}     | Read only.  |
-| {{domxref("window.parent")}}     | Read only.  |
+| {{domxref("window.opener")}}   | Read only.  |
+| {{domxref("window.parent")}}   | Read only.  |
 | {{domxref("window.self")}}     | Read only.  |
-| {{domxref("window.top")}}         | Read only.  |
-| {{domxref("window.window")}}     | Read only.  |
+| {{domxref("window.top")}}      | Read only.  |
+| {{domxref("window.window")}}   | Read only.  |
 
 Some browsers allow access to more properties than the specification allows.
 
@@ -122,12 +121,12 @@ Specification: <http://www.whatwg.org/specs/web-apps/current-work/multipage/brow
 
 The following cross-origin access to `Location` properties is allowed:
 
-| Methods                                  |
-| ---------------------------------------- |
+| Methods                         |
+| ------------------------------- |
 | {{domxref("location.replace")}} |
 
-| Attributes                           |             |
-| ------------------------------------ | ----------- |
+| Attributes                   |             |
+| ---------------------------- | ----------- |
 | {{domxref("URLUtils.href")}} | Write only. |
 
 Some browsers allow access to more properties than the specification allows.
@@ -147,4 +146,4 @@ Cookies use a separate definition of origins. A page can set a cookie for its ow
 
 - Author(s): Jesse Ruderman
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
+{{QuickLinksWithSubpages("/ru/docs/Web/Security")}}

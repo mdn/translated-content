@@ -39,19 +39,19 @@ slug: Web/API/Node
 
   - : 返回一个与该节点类型对应的`无符号短整型`的值，可能的值如下：
 
-    | Name                                                 | Value |
-    | ---------------------------------------------------- | ----- |
-    | `ELEMENT_NODE`                                       | `1`   |
+    | Name                                          | Value |
+    | --------------------------------------------- | ----- |
+    | `ELEMENT_NODE`                                | `1`   |
     | `ATTRIBUTE_NODE` {{Deprecated_Inline}}        | `2`   |
-    | `TEXT_NODE`                                          | `3`   |
-    | `CDATA_SECTION_NODE`                                 | `4`   |
+    | `TEXT_NODE`                                   | `3`   |
+    | `CDATA_SECTION_NODE`                          | `4`   |
     | `ENTITY_REFERENCE_NODE` {{Deprecated_Inline}} | `5`   |
     | `ENTITY_NODE` {{Deprecated_Inline}}           | `6`   |
-    | `PROCESSING_INSTRUCTION_NODE`                        | `7`   |
-    | `COMMENT_NODE`                                       | `8`   |
-    | `DOCUMENT_NODE`                                      | `9`   |
-    | `DOCUMENT_TYPE_NODE`                                 | `10`  |
-    | `DOCUMENT_FRAGMENT_NODE`                             | `11`  |
+    | `PROCESSING_INSTRUCTION_NODE`                 | `7`   |
+    | `COMMENT_NODE`                                | `8`   |
+    | `DOCUMENT_NODE`                               | `9`   |
+    | `DOCUMENT_TYPE_NODE`                          | `10`  |
+    | `DOCUMENT_FRAGMENT_NODE`                      | `11`  |
     | `NOTATION_NODE` {{Deprecated_Inline}}         | `12`  |
 
 - {{DOMxRef("Node.nodeValue")}}
@@ -142,8 +142,8 @@ slug: Web/API/Node
 ### 移除某个节点的所有子节点
 
 ```js
-function removeAllChildren(element){
-  while(element.firstChild){
+function removeAllChildren(element) {
+  while (element.firstChild) {
     element.removeChild(element.firstChild);
   }
 }
@@ -161,23 +161,21 @@ removeAllChildren(document.body);
 下面这个函数使用递归的方式遍历一个节点的所有子节点（包括这个根节点自身）。
 
 ```js
-function eachNode(rootNode, callback){
-  if(!callback){
+function eachNode(rootNode, callback) {
+  if (!callback) {
     var nodes = [];
-    eachNode(rootNode, function(node){
+    eachNode(rootNode, function (node) {
       nodes.push(node);
     });
     return nodes;
   }
 
-  if(false === callback(rootNode))
-    return false;
+  if (false === callback(rootNode)) return false;
 
-  if(rootNode.hasChildNodes()){
+  if (rootNode.hasChildNodes()) {
     var nodes = rootNode.childNodes;
-    for(var i = 0, l = nodes.length; i < l; ++i)
-      if(false === eachNode(nodes[i], callback))
-        return;
+    for (var i = 0, l = nodes.length; i < l; ++i)
+      if (false === eachNode(nodes[i], callback)) return;
   }
 }
 ```
@@ -217,8 +215,8 @@ eachNode(rootNode, callback);
 
 ```js
 var box = document.getElementById("box");
-eachNode(box, function(node){
-  if(null != node.textContent){
+eachNode(box, function (node) {
+  if (null != node.textContent) {
     console.log(node.textContent);
   }
 });
@@ -227,7 +225,7 @@ eachNode(box, function(node){
 用户终端上会显示如下字符：
 
 ```js
-"\n\t", "Foo", "\n\t", "Bar", "\n\t", "Baz"
+"\n\t", "Foo", "\n\t", "Bar", "\n\t", "Baz";
 ```
 
 > **备注：** 空格是构成 {{DOMxRef("Text")}}节点的一部分，意味着缩进和换行在 `Element` 节点之间形成单独的 `Text` 。
@@ -237,28 +235,23 @@ eachNode(box, function(node){
 下述例子反应了 `eachNode` 函数是如何在真实场景中使用的：搜索网页中的文本。我们使用一个包装函数 `grep` 去执行搜索：
 
 ```js
-function grep(parentNode, pattern){
+function grep(parentNode, pattern) {
   var matches = [];
   var endScan = false;
 
-  eachNode(parentNode, function(node){
-    if(endScan)
-      return false;
+  eachNode(parentNode, function (node) {
+    if (endScan) return false;
 
     // Ignore anything which isn't a text node
-    if(node.nodeType !== Node.TEXT_NODE)
-      return;
+    if (node.nodeType !== Node.TEXT_NODE) return;
 
-    if("string" === typeof pattern){
-      if(-1 !== node.textContent.indexOf(pattern))
-        matches.push(node);
-    }
-    else if(pattern.test(node.textContent)){
-      if(!pattern.global){
+    if ("string" === typeof pattern) {
+      if (-1 !== node.textContent.indexOf(pattern)) matches.push(node);
+    } else if (pattern.test(node.textContent)) {
+      if (!pattern.global) {
         endScan = true;
         matches = node;
-      }
-      else matches.push(node);
+      } else matches.push(node);
     }
   });
 

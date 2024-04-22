@@ -1,7 +1,6 @@
 ---
 title: Document.title
 slug: Web/API/Document/title
-translation_of: Web/API/Document/title
 ---
 
 {{APIRef("DOM")}}
@@ -25,20 +24,18 @@ document.title = newTitle;
 ## Exemple
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-<title>Hello World!</title>
-</head>
-<body>
-
-<script>
-alert(document.title); // Affiche "Hello World!"
-document.title = "Goodbye World!";
-alert(document.title); // Affiche "Goodbye World!"
-</script>
-
-</body>
+  <head>
+    <title>Hello World!</title>
+  </head>
+  <body>
+    <script>
+      alert(document.title); // Affiche "Hello World!"
+      document.title = "Goodbye World!";
+      alert(document.title); // Affiche "Goodbye World!"
+    </script>
+  </body>
 </html>
 ```
 

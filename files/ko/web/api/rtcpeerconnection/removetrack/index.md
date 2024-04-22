@@ -35,16 +35,20 @@ pc.removeTrack(sender);
 
 ```js
 var pc, sender;
-navigator.getUserMedia({video: true}, function(stream) {
+navigator.getUserMedia({ video: true }, function (stream) {
   pc = new RTCPeerConnection();
   var track = stream.getVideoTracks()[0];
   sender = pc.addTrack(track, stream);
 });
 
-document.getElementById("closeButton").addEventListener("click", function(event) {
-  pc.removeTrack(sender);
-  pc.close();
-}, false);
+document.getElementById("closeButton").addEventListener(
+  "click",
+  function (event) {
+    pc.removeTrack(sender);
+    pc.close();
+  },
+  false,
+);
 ```
 
 ## 사양서

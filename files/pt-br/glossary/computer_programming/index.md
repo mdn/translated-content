@@ -1,8 +1,9 @@
 ---
 title: Programação de Computadores
 slug: Glossary/Computer_Programming
-original_slug: Glossario/Programação_de_Computadores
 ---
+
+{{GlossarySidebar}}
 
 Programação é o processo que formula a solução de um problema computacional ou automatiza uma tarefa repetitiva na forma de uma série de instruções sequenciais em um programa executável.
 
@@ -10,4 +11,4 @@ Programação é o processo que formula a solução de um problema computacional
 
 ### Conhecimentos gerais
 
-- {{Interwiki("wikipedia", "Programação de computadores")}} na Wikipédia
+- [Programação de computadores](https://pt.wikipedia.org/wiki/Programação_de_computadores) na Wikipédia

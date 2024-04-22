@@ -77,9 +77,7 @@ The source for this interactive example is stored in a GitHub repository. If you
 <dl>
   <dt>Firefox</dt>
   <dd>
-    Mozilla 재단과 수 백명의
-    자원봉사자가 개발한 무료
-    오픈소스 크로스 플랫폼
+    Mozilla 재단과 수 백명의 자원봉사자가 개발한 무료 오픈소스 크로스 플랫폼
     그래픽 웹 브라우저.
   </dd>
 
@@ -97,9 +95,7 @@ The source for this interactive example is stored in a GitHub repository. If you
   <dt>Mozilla Firefox</dt>
   <dt>Fx</dt>
   <dd>
-    Mozilla 재단과 수 백명의
-    자원봉사자가 개발한 무료
-    오픈소스 크로스 플랫폼
+    Mozilla 재단과 수 백명의 자원봉사자가 개발한 무료 오픈소스 크로스 플랫폼
     그래픽 웹 브라우저.
   </dd>
 
@@ -115,16 +111,12 @@ The source for this interactive example is stored in a GitHub repository. If you
 <dl>
   <dt>Firefox</dt>
   <dd>
-    Mozilla 재단과 수 백명의
-    자원봉사자가 개발한 무료
-    오픈소스 크로스 플랫폼
+    Mozilla 재단과 수 백명의 자원봉사자가 개발한 무료 오픈소스 크로스 플랫폼
     그래픽 웹 브라우저.
   </dd>
   <dd>
-    붉은 판다, 레서 판다, 랫서 판다,
-    혹은 "Firefox"는 초식성 포유류이다.
-    몸 길이는 애완용 고양이보다 약간
-    큰 정도인 60cm다.
+    붉은 판다, 레서 판다, 랫서 판다, 혹은 "Firefox"는 초식성 포유류이다. 몸
+    길이는 애완용 고양이보다 약간 큰 정도인 60cm다.
   </dd>
 
   <!-- 다른 용어 및 정의 -->

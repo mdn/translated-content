@@ -19,7 +19,7 @@ A interface **`ImageCapture`** da [MediaStream Image Capture API](/pt-BR/docs/We
 
 ## Métodos
 
-A interface do `ImageCapture` é baseada em {{domxref ("EventTarget")}}}, portanto inclui os métodos definidos por essa interface e os listados abaixo.
+A interface do `ImageCapture` é baseada em {{domxref ("EventTarget")}}, portanto inclui os métodos definidos por essa interface e os listados abaixo.
 
 - {{domxref("ImageCapture.takePhoto()")}}
   - : Faz uma única exposição usando o dispositivo de captura de vídeo que busca um {{domxref ("MediaStreamTrack")}} e retorna um {{jsxref ("Promise")}} que resolve com um {{domxref ("Blob")}} que contém o dados.
@@ -40,60 +40,72 @@ Este exemplo mostra, aproximadamente, um {{domxref ("MediaStreamTrack")}} extra�
 var imageCapture;
 
 function onGetUserMediaButtonClick() {
-  navigator.mediaDevices.getUserMedia({video: true})
-  .then(mediaStream => {
-    document.querySelector('video').srcObject = mediaStream;
+  navigator.mediaDevices
+    .getUserMedia({ video: true })
+    .then((mediaStream) => {
+      document.querySelector("video").srcObject = mediaStream;
 
-    const track = mediaStream.getVideoTracks()[0];
-    imageCapture = new ImageCapture(track);
-  })
-  .catch(error => console.log(error));
+      const track = mediaStream.getVideoTracks()[0];
+      imageCapture = new ImageCapture(track);
+    })
+    .catch((error) => console.log(error));
 }
 
 function onGrabFrameButtonClick() {
-  imageCapture.grabFrame()
-  .then(imageBitmap => {
-    const canvas = document.querySelector('#grabFrameCanvas');
-    drawCanvas(canvas, imageBitmap);
-  })
-  .catch(error => console.log(error));
+  imageCapture
+    .grabFrame()
+    .then((imageBitmap) => {
+      const canvas = document.querySelector("#grabFrameCanvas");
+      drawCanvas(canvas, imageBitmap);
+    })
+    .catch((error) => console.log(error));
 }
 
 function onTakePhotoButtonClick() {
-  imageCapture.takePhoto()
-  .then(blob => createImageBitmap(blob))
-  .then(imageBitmap => {
-    const canvas = document.querySelector('#takePhotoCanvas');
-    drawCanvas(canvas, imageBitmap);
-  })
-  .catch(error => console.log(error));
+  imageCapture
+    .takePhoto()
+    .then((blob) => createImageBitmap(blob))
+    .then((imageBitmap) => {
+      const canvas = document.querySelector("#takePhotoCanvas");
+      drawCanvas(canvas, imageBitmap);
+    })
+    .catch((error) => console.log(error));
 }
 
 /* Utils */
 
 function drawCanvas(canvas, img) {
-  canvas.width = getComputedStyle(canvas).width.split('px')[0];
-  canvas.height = getComputedStyle(canvas).height.split('px')[0];
-  let ratio  = Math.min(canvas.width / img.width, canvas.height / img.height);
+  canvas.width = getComputedStyle(canvas).width.split("px")[0];
+  canvas.height = getComputedStyle(canvas).height.split("px")[0];
+  let ratio = Math.min(canvas.width / img.width, canvas.height / img.height);
   let x = (canvas.width - img.width * ratio) / 2;
   let y = (canvas.height - img.height * ratio) / 2;
-  canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
-  canvas.getContext('2d').drawImage(img, 0, 0, img.width, img.height,
-      x, y, img.width * ratio, img.height * ratio);
+  canvas.getContext("2d").clearRect(0, 0, canvas.width, canvas.height);
+  canvas
+    .getContext("2d")
+    .drawImage(
+      img,
+      0,
+      0,
+      img.width,
+      img.height,
+      x,
+      y,
+      img.width * ratio,
+      img.height * ratio,
+    );
 }
 
-document.querySelector('video').addEventListener('play', function() {
-  document.querySelector('#grabFrameButton').disabled = false;
-  document.querySelector('#takePhotoButton').disabled = false;
+document.querySelector("video").addEventListener("play", function () {
+  document.querySelector("#grabFrameButton").disabled = false;
+  document.querySelector("#takePhotoButton").disabled = false;
 });
 ```
 
 ## Especificações
 
-| Especificação                                                                            | Status                                   | Comentário          |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{SpecName('MediaStream Image','#imagecaptureapi','ImageCapture')}} | {{Spec2('MediaStream Image')}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.ImageCapture")}}
+{{Compat}}

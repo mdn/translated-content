@@ -1,22 +1,18 @@
 ---
-title: HTMLTableElement.frame
+title: "HTMLTableElement: frame プロパティ"
+short-title: frame
 slug: Web/API/HTMLTableElement/frame
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
 {{domxref("HTMLTableElement")}} インターフェイスの **`frame`** プロパティは、文字列で表の外部の境界のうちどれを描画するかを示します。
 
-## 構文
+## 値
 
-```js
-HTMLTableElement.frame = frameSides;
-var frameSides = HTMLTableElement.frame;
-```
-
-### 引数
-
-`frameSides` は文字列で、以下の値のうちの一つです。
+以下のいずれかです。
 
 - `void`
   - : どの辺も描画しません。これが既定値です。
@@ -41,8 +37,8 @@ var frameSides = HTMLTableElement.frame;
 
 ```js
 // TableA の枠を 'border' に設定
-var t = document.getElementById('TableA');
-t.frame  = "border";
+const t = document.getElementById("TableA");
+t.frame = "border";
 t.border = "2px";
 ```
 

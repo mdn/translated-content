@@ -1,7 +1,7 @@
 ---
 title: Firefox 110 for developers
 slug: Mozilla/Firefox/Releases/110
-l10n: 
+l10n:
   sourceCommit: a264df392ddc9378b59e07e89b9abdb4f0f776d5
 ---
 

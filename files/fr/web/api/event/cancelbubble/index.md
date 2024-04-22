@@ -1,14 +1,6 @@
 ---
 title: Event.cancelBubble
 slug: Web/API/Event/cancelBubble
-tags:
-  - API
-  - Annulation
-  - DOM
-  - Evènement
-  - Propagation
-  - Propriétés
-translation_of: Web/API/Event/cancelBubble
 ---
 
 {{APIRef("DOM Events")}}
@@ -25,10 +17,10 @@ var bool = event.cancelBubble;
 ## Exemple
 
 ```js
-elem.onclick = function(e) {
+elem.onclick = function (e) {
   // fais des choses sympas ici
   e.cancelBubble = true;
-}
+};
 ```
 
 ## Spécifications

@@ -1,13 +1,6 @@
 ---
 title: CanvasRenderingContext2D.drawImage()
 slug: Web/API/CanvasRenderingContext2D/drawImage
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Ссылка
-  - метод
-translation_of: Web/API/CanvasRenderingContext2D/drawImage
 ---
 
 {{APIRef}}
@@ -72,9 +65,9 @@ void ctx.drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
-var image = document.getElementById('source');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+var image = document.getElementById("source");
 
 ctx.drawImage(image, 33, 71, 104, 124, 21, 20, 87, 104);
 ```
@@ -96,7 +89,7 @@ ctx.drawImage(image, 33, 71, 104, 124, 21, 20, 87, 104);</textarea>
 ```js hidden
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
-var image = document.getElementById('source');
+var image = document.getElementById("source");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
 var edit = document.getElementById("edit");
@@ -107,14 +100,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
@@ -137,14 +130,14 @@ window.addEventListener("load", drawCanvas);
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 
-var image = new Image(60, 45);   // Размер изображения
+var image = new Image(60, 45); // Размер изображения
 image.onload = drawImageActualSize; // Рисуем изображение, когда оно будет загружено
 
 // load an image of intrinsic size 300x227 in CSS pixels
-image.src = 'rhino.jpg';
+image.src = "rhino.jpg";
 
 function drawImageActualSize() {
   // use the intrinsic size of image in CSS pixels for the canvas element
@@ -166,24 +159,13 @@ function drawImageActualSize() {
 
 {{EmbedLiveSample('Понимание_размеров_изображения-источника', 700, 360)}}
 
-## Спецификация
+## Спецификации
 
-| Спецификация                                                                                                                                     | Статус                           | Комментарий |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-drawimage", "CanvasRenderingContext2D.drawImage")}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
 
 ## Совместимость с браузерами
 
 {{Compat}}
-
-## Дополнительно о совместимости
-
-- Поддержка переворачивания изображения с использованием отрицательных значений `sw` и `sh` была добавлена в Gecko 5.0.
-- Начиная с Gecko 5.0, `drawImage()` поддерживает отрицательные значения аргументов. Таким образом, можно переворачивать изображение вокруг разных осей.
-- Начиная с Gecko 7.0, передача `null` или `undefined` как источника для `drawImage()` корректно выбрасывает исключение `TYPE_MISMATCH_ERR`.
-- Вплоть до Gecko 7.0 Firefox выбрасывал исключение в случае, если какая-то из координат равнялась нулю или бесконечности. Согласно спецификации, этого больше не происходит.
-- Gecko 9.0 теперь корректно поддерживает CORS без необходимости ["порчи" холста](/en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F).
-- Gecko 11.0 теперь поддерживает SVG как источник для `drawImage()` без необходимости ["порчи" холста](/en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F).
 
 ## Дополнительно
 

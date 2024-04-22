@@ -3,18 +3,18 @@ title: menus.onClicked
 slug: Mozilla/Add-ons/WebExtensions/API/menus/onClicked
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 メニューアイテムがクリックされたときに発火します。
 
-他のブラウザとの互換性のために Firefox はこのイベントを名前空間`contextMenus`と`menu`を経由して利用可能にしています。
+他のブラウザーとの互換性のために Firefox はこのイベントを名前空間`contextMenus`と`menu`を経由して利用可能にしています。
 
 ## 書式
 
 ```js
-browser.menus.onClicked.addListener(listener)
-browser.menus.onClicked.removeListener(listener)
-browser.menus.onClicked.hasListener(listener)
+browser.menus.onClicked.addListener(listener);
+browser.menus.onClicked.removeListener(listener);
+browser.menus.onClicked.hasListener(listener);
 ```
 
 イベントは 3 つの関数を持ちます:
@@ -28,7 +28,7 @@ browser.menus.onClicked.hasListener(listener)
 
 ## addListener の書式
 
-### パラメータ
+### パラメーター
 
 - `callback`
 
@@ -44,7 +44,7 @@ browser.menus.onClicked.hasListener(listener)
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.menus.onClicked", 10)}}
+{{Compat}}
 
 ## 例
 
@@ -54,12 +54,11 @@ browser.menus.onClicked.hasListener(listener)
 browser.menus.create({
   id: "click-me",
   title: "Click me!",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.onClicked.addListener((info, tab) => {
-  console.log("Item " + info.menuItemId + " clicked " +
-              "in tab " + tab.id);
+  console.log("Item " + info.menuItemId + " clicked " + "in tab " + tab.id);
 });
 ```
 

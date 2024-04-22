@@ -3,6 +3,8 @@ title: Host (ホスト)
 slug: Glossary/Host
 ---
 
+{{GlossarySidebar}}
+
 ホストは、{{glossary("Internet", "インターネット")}} (またはローカルネットワーク) に接続する端末です。{{glossary("server","サーバー")}}と呼ばれるホストは、ウェブページの提供や、ファイルやメールの保存のような付加サービスを提供します。
 
 ホストはハードウェアのインスタンスである必要はありません。仮想マシンで生成することもできます。仮想マシンで生成されたホストは「仮想ホスト」と呼ばれています。
@@ -11,4 +13,4 @@ slug: Glossary/Host
 
 ### 一般知識
 
-- Wikipedia 上の記事「[ホスト (ネットワーク)](https://ja.wikipedia.org/wiki/ホスト_(ネットワーク))」
+- Wikipedia 上の記事「[ホスト (ネットワーク)](<https://ja.wikipedia.org/wiki/ホスト_(ネットワーク)>)」

@@ -1,7 +1,6 @@
 ---
 title: "MediaDevices: devicechange イベント"
 slug: Web/API/MediaDevices/devicechange_event
-original_slug: Web/API/MediaDevices/ondevicechange
 l10n:
   sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
 ---
@@ -49,7 +48,10 @@ ondevicechange = (event) => {};
 
 ```css hidden
 body {
-  font: 14px "Open Sans", "Arial", sans-serif;
+  font:
+    14px "Open Sans",
+    "Arial",
+    sans-serif;
 }
 
 video {
@@ -129,7 +131,7 @@ startButton.addEventListener(
         log(`${err.name}: ${err.message}`);
       });
   },
-  false
+  false,
 );
 ```
 
@@ -189,7 +191,7 @@ navigator.mediaDevices.ondevicechange = (event) => {
 
 ### 結果
 
-{{ EmbedLiveSample('Example', 600, 460) }}
+{{ EmbedLiveSample('Example', 600, 460, "", "", "", "camera;microphone") }}
 
 ## 仕様書
 

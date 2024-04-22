@@ -1,7 +1,6 @@
 ---
 title: Symbol.for()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/for
-original_slug: Web/JavaScript/Reference/Global_Objects/Symbol/for
 l10n:
   sourceCommit: ef59c2d0399ba62ec2632810564ab12a198af868
 ---
@@ -45,23 +44,23 @@ El registro global de símbolos es una lista con la siguiente estructura de regi
 ### Uso de Symbol.for()
 
 ```js
-Symbol.for('foo'); // crear un nuevo símbolo global
-Symbol.for('foo'); // obtener el símbolo ya creado
+Symbol.for("foo"); // crear un nuevo símbolo global
+Symbol.for("foo"); // obtener el símbolo ya creado
 
 // El mismo símbolo global, pero no localmente
-Symbol.for('bar') === Symbol.for('bar'); // true
-Symbol('bar') === Symbol('bar'); // false
+Symbol.for("bar") === Symbol.for("bar"); // true
+Symbol("bar") === Symbol("bar"); // false
 
 // La clave también se utiliza como descripción
-const sym = Symbol.for('mario');
+const sym = Symbol.for("mario");
 sym.toString(); // "Symbol(mario)"
 ```
 
 Para evitar conflictos de nombres con sus claves de símbolos globales y otros símbolos globales (del código de la biblioteca), puede ser una buena idea poner un prefijo a sus símbolos:
 
 ```js
-Symbol.for('mdn.foo');
-Symbol.for('mdn.bar');
+Symbol.for("mdn.foo");
+Symbol.for("mdn.bar");
 ```
 
 ## Especificaciones

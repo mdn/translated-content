@@ -35,7 +35,7 @@ element.slot = aString
 在 Javascript 代码中我们获取到上面代码中的 span 的引用，然后将对应的 `<slot>` 元素的引用的名称打印在控制台中。
 
 ```js
-let slottedSpan = document.querySelector('my-paragraph span')
+let slottedSpan = document.querySelector("my-paragraph span");
 console.log(slottedSpan.slot); // logs 'my-text'
 ```
 

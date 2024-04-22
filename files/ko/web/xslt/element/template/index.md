@@ -1,7 +1,6 @@
 ---
 title: template
 slug: Web/XSLT/Element/template
-original_slug: Web/XSLT/template
 ---
 
 {{ XsltRef() }}

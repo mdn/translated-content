@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Operators/Optional_chaining
 
 **オプショナルチェーン** (optional chaining) 演算子 (**`?.`**) は、接続されたオブジェクトチェーンの深くに位置するプロパティの値を、チェーン内の各参照が正しいかどうかを明示的に確認せずに読み込むことを可能にします。
 
- `?.` 演算子の機能は `.` チェーン演算子と似ていますが、参照が [nullish](/ja/docs/Glossary/Nullish) ({{JSxRef("null")}} または {{JSxRef("undefined")}}) の場合にエラーとなるのではなく、式が短絡され `undefined` が返されるところが異なります。関数呼び出しで使用すると、与えられた関数が存在しない場合、 `undefined` を返します。
+`?.` 演算子の機能は `.` チェーン演算子と似ていますが、参照が [nullish](/ja/docs/Glossary/Nullish) ({{JSxRef("null")}} または {{JSxRef("undefined")}}) の場合にエラーとなるのではなく、式が短絡され `undefined` が返されるところが異なります。関数呼び出しで使用すると、与えられた関数が存在しない場合、 `undefined` を返します。
 
 これは、参照が失われた可能性のある連結されたプロパティにアクセスする時、結果的に短く単純な式になります。また、必要なプロパティの存在が保証されていない場合にオブジェクトのコンテンツを探索するのにも役立ちます。
 
@@ -19,10 +19,10 @@ slug: Web/JavaScript/Reference/Operators/Optional_chaining
 ## 構文
 
 ```js
-obj.val?.prop
-obj.val?.[expr]
-obj.arr?.[index]
-obj.func?.(args)
+obj.val?.prop;
+obj.val?.[expr];
+obj.arr?.[index];
+obj.func?.(args);
 ```
 
 ## 解説
@@ -49,7 +49,7 @@ let nestedProp = obj.first?.second;
 
 ```js
 let temp = obj.first;
-let nestedProp = ((temp === null || temp === undefined) ? undefined : temp.second);
+let nestedProp = temp === null || temp === undefined ? undefined : temp.second;
 ```
 
 ### 関数呼び出しにおけるオプショナルチェーン演算子
@@ -76,9 +76,9 @@ let result = someInterface.customMethod?.();
 function doSomething(onContent, onError) {
   try {
     // ... do something with the data
-  }
-  catch (err) {
-    if (onError) { // Testing if onError really exists
+  } catch (err) {
+    if (onError) {
+      // Testing if onError really exists
       onError(err.message);
     }
   }
@@ -89,9 +89,8 @@ function doSomething(onContent, onError) {
 // Using optional chaining with function calls
 function doSomething(onContent, onError) {
   try {
-   // ... do something with the data
-  }
-  catch (err) {
+    // ... do something with the data
+  } catch (err) {
     onError?.(err.message); // no exception if onError is undefined
   }
 }
@@ -102,7 +101,7 @@ function doSomething(onContent, onError) {
 [プロパティアクセサーのブラケット表記法](/ja/docs/Web/JavaScript/Reference/Operators/Property_Accessors#bracket_notation)を使用している式のプロパティにアクセスする際にも、オプショナルチェーン演算子を使用することができます。
 
 ```js
-let nestedProp = obj?.['prop' + 'Name'];
+let nestedProp = obj?.["prop" + "Name"];
 ```
 
 ### オプショナルチェーン演算子は代入の左辺値では使用できない
@@ -126,7 +125,7 @@ let arrayItem = arr?.[42];
 
 ```js
 let myMap = new Map();
-myMap.set("foo", {name: "baz", desc: "inga"});
+myMap.set("foo", { name: "baz", desc: "inga" });
 
 let nameBar = myMap.get("bar")?.name;
 ```
@@ -152,8 +151,8 @@ let customer = {
   name: "Carl",
   details: {
     age: 82,
-    location: "Paradise Falls" // 詳細な住所は不明
-  }
+    location: "Paradise Falls", // 詳細な住所は不明
+  },
 };
 let customerCity = customer.details?.address?.city;
 
@@ -168,7 +167,7 @@ let customerName = customer.name?.getName?.(); // メソッドが存在しない
 ```js
 let customer = {
   name: "Carl",
-  details: { age: 82 }
+  details: { age: 82 },
 };
 const customerCity = customer?.city ?? "Unknown city";
 console.log(customerCity); // Unknown city

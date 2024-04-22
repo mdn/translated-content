@@ -1,26 +1,6 @@
 ---
 title: Formats de date et d'heure utilisés en HTML
 slug: Web/HTML/Date_and_time_formats
-tags:
-  - Date
-  - Element
-  - Format
-  - HTML
-  - ISO 8601
-  - Input
-  - Reference
-  - String
-  - Time
-  - Week
-  - datetime
-  - datetime-local
-  - del
-  - ins
-  - month
-  - month-year
-  - week-year
-translation_of: Web/HTML/Date_and_time_formats
-original_slug: Web/HTML/Formats_date_heure_HTML
 ---
 
 {{HTMLSidebar}}
@@ -135,7 +115,7 @@ En HTML, les chaînes qui représentent des dates et des heures manipulent uniqu
 
 ### Numérotation des années
 
-La spécification HTML indique que les années doivent être exprimées selon le [calendrier grégorien](https://fr.wikipedia.org/wiki/Calendrier_gr%C3%A9gorien). Bien que les interfaces utilisateur permettent éventuellement de saisir des dates grâce à d'autres calendriers, la valeur sous-jacente est toujours représentée à l'aide du calendrier grégorien.
+La spécification HTML indique que les années doivent être exprimées selon le [calendrier grégorien](https://fr.wikipedia.org/wiki/Calendrier_grégorien). Bien que les interfaces utilisateur permettent éventuellement de saisir des dates grâce à d'autres calendriers, la valeur sous-jacente est toujours représentée à l'aide du calendrier grégorien.
 
 Bien que le calendrier grégorien ait été créé en 1582 afin de remplacer le calendrier julien, la notation grégorienne est « étendue » en HTML jusqu'à 1 après J.C. Aussi, si vous manipulez des dates antérieures à 1582, assurez-vous qu'elles soient bien exprimées selon le calendrier grégorien.
 

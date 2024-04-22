@@ -1,20 +1,9 @@
 ---
 title: webNavigation.TransitionType
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/TransitionType
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - TransitionType
-  - Type
-  - WebExtensions
-  - webNavigation
-translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/TransitionType
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Cause de la navigation: par exemple, l'utilisateur a cliqué sur un lien, ou a tapé une adresse, ou a cliqué sur un signet.
 

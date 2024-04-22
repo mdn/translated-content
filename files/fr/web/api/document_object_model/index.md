@@ -1,12 +1,6 @@
 ---
 title: Référence du DOM
 slug: Web/API/Document_Object_Model
-tags:
-  - API
-  - DOM
-  - Intermédiaire
-  - Référence(2)
-translation_of: Web/API/Document_Object_Model
 ---
 
 {{DefaultAPISidebar("DOM")}}
@@ -119,7 +113,6 @@ Un objet `HTMLDocument` donne également accès à différentes fonctionnalités
 - {{domxref("HTMLIFrameElement")}}
 - {{domxref("HTMLImageElement")}}
 - {{domxref("HTMLInputElement")}}
-- {{domxref("HTMLKeygenElement")}}
 - {{domxref("HTMLLabelElement")}}
 - {{domxref("HTMLLegendElement")}}
 - {{domxref("HTMLLIElement")}}
@@ -180,7 +173,6 @@ Un objet `HTMLDocument` donne également accès à différentes fonctionnalités
 
 ### Interfaces HTML obsolètes
 
-- {{domxref("HTMLBaseFontElement")}}
 - {{domxref("HTMLIsIndexElement")}}
 
 ## Interfaces SVG

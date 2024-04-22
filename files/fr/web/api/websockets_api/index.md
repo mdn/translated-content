@@ -1,19 +1,6 @@
 ---
 title: WebSockets
 slug: Web/API/WebSockets_API
-tags:
-  - API
-  - Aperçu
-  - Bidirectionnel
-  - Client
-  - Communication
-  - Serveur
-  - WebSocket
-  - WebSocket API
-  - WebSockets
-  - data
-  - interactive
-translation_of: Web/API/WebSockets_API
 ---
 
 {{DefaultAPISidebar("Websockets API")}}

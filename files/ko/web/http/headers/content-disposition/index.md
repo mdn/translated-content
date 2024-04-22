@@ -52,7 +52,7 @@ Content-Disposition: form-data; name="fieldName"; filename="filename.jpg"
 
 - `name`
 
-  - : 이름(`name`) 다음에 오는 문자열에는 이 서브파트가 참조하는 폼의 HTML 필드에서 사용한 그 이름이 들어갑니다. 같은 필드에 여러개의 파일이 있을 경우 (예 : `{{HTMLElement("input","&lt;input type=\"file\"&gt;")}}` 요소의 {{htmlattrxref("multiple", "input")}} 속성), 같은 이름으로 여러개의 서브파트들이 존재할 수 있습니다.
+  - : 이름(`name`) 다음에 오는 문자열에는 이 서브파트가 참조하는 폼의 HTML 필드에서 사용한 그 이름이 들어갑니다. 같은 필드에 여러개의 파일이 있을 경우 (예 : `{{HTMLElement("input","&lt;input type=\"file\"&gt;")}}` 요소의 [`multiple`](/ko/docs/Web/HTML/Element/input#multiple) 속성), 같은 이름으로 여러개의 서브파트들이 존재할 수 있습니다.
 
   `name`의 값이 `'_charset_'`인 것은 그 부분이 HTML필드가 아니라, charset을 명시하지 않고 사용할 수 있는 기본 charset임을 나타냅니다.
 
@@ -62,7 +62,7 @@ Content-Disposition: form-data; name="fieldName"; filename="filename.jpg"
 
 - `filename*`
 
-  - : "filename"과의 유일한 차이점은 "filename*"는 인코딩으로 [RFC 5987](https://tools.ietf.org/html/rfc5987)을 사용한다는 것 뿐입니다. 하나의 헤더 필드에 "filename"과 "filename*"이 둘 다 사용된다면 "filename*"이 보다 우선됩니다.
+  - : "filename"과의 유일한 차이점은 "filename*"는 인코딩으로 [RFC 5987](https://tools.ietf.org/html/rfc5987)을 사용한다는 것 뿐입니다. 하나의 헤더 필드에 "filename"과 "filename*"이 둘 다 사용된다면 "filename\*"이 보다 우선됩니다.
 
 ## Examples
 

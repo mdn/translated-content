@@ -1,8 +1,9 @@
 ---
 title: WebSockets
 slug: Glossary/WebSockets
-original_slug: Glossario/WebSockets
 ---
+
+{{GlossarySidebar}}
 
 WebSocket é um {{Glossary("protocolo")}} que permite persistir conexões {{Glossary("TCP")}} entre o {{Glossary("servidor")}} e o cliente de modo que se possa trocar dados a qualquer momento.
 
@@ -12,7 +13,7 @@ Qualquer aplicação de servidor ou cliente pode usar WebSocket, mas principalme
 
 ### General knowledge
 
-- {{Interwiki("wikipedia", "Websocket")}} on Wikipedia
+- [Websocket](https://en.wikipedia.org/wiki/Websocket) on Wikipedia
 
 ### Technical reference
 

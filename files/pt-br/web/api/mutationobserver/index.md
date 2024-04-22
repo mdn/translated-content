@@ -27,9 +27,9 @@ MutationObserver(
 ## Métodos da instância
 
 | `void observe( {{domxref("Node")}} target, MutationObserverInit options );` |
-| -------------------------------------------------------------------------------- |
-| `void disconnect();`                                                             |
-| `Array takeRecords();`                                                           |
+| --------------------------------------------------------------------------- |
+| `void disconnect();`                                                        |
+| `Array takeRecords();`                                                      |
 
 ### `observe()`
 
@@ -91,17 +91,17 @@ Retorna um Array de [`MutationRecord`s](#MutationRecord).
 
 `MutationRecord` é um objeto que será passado para o callback do observador. Tem as seguintes propriedades:
 
-| Property             | Type                               | Description                                                                                                                                                                                             |
-| -------------------- | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `type`               | `String`                           | Retorna `attributes` se a mutação foi a de um atributo, `characterData` se foi de um nó `CharacterData`, e `childList` se foi a mutação para uma árvore de nós.                                         |
-| `target`             | `{{domxref("Node")}}`         | Retorna o nó que a mutação afetou, dependendo do `type`. Para `attributes`é o elemento cujo atributo mudou. Para `characterData` é o nó `CharacterData`. Para `childList` é o nó cujos filhos mudaram. |
+| Property             | Type                      | Description                                                                                                                                                                                             |
+| -------------------- | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `type`               | `String`                  | Retorna `attributes` se a mutação foi a de um atributo, `characterData` se foi de um nó `CharacterData`, e `childList` se foi a mutação para uma árvore de nós.                                         |
+| `target`             | `{{domxref("Node")}}`     | Retorna o nó que a mutação afetou, dependendo do `type`. Para `attributes`é o elemento cujo atributo mudou. Para `characterData` é o nó `CharacterData`. Para `childList` é o nó cujos filhos mudaram.  |
 | `addedNodes`         | `{{domxref("NodeList")}}` | Retorna os nós adicionados. Será uma NodeList vazia se nenhum nó foi adicionado.                                                                                                                        |
 | `removedNodes`       | `{{domxref("NodeList")}}` | Retorna os nós removidos. Será uma NodeList vazia se nenhum nó foi removido.                                                                                                                            |
-| `previousSibling`    | `{{domxref("Node")}}`         | Retorna o irmão anterior dos nós adicionados ou removidos, ou `null`.                                                                                                                                   |
-| `nextSibling`        | `{{domxref("Node")}}`         | Retorna o próximo irmão dos nós adicionados ou removidos, ou `null`.                                                                                                                                    |
-| `attributeName`      | `String`                           | Retorna o nome local do atributo modificado, ou `null`.                                                                                                                                                 |
-| `attributeNamespace` | `String`                           | Retorna o namespace do atributo modificado, ou `null`.                                                                                                                                                  |
-| `oldValue`           | `String`                           | O valor retornado depende do `type`. Para `attributes`, é o valor do atributo modificado antes da troca. Para `characterData`, são os dados do nó modificado antes da troca. Para `childList` é `null`. |
+| `previousSibling`    | `{{domxref("Node")}}`     | Retorna o irmão anterior dos nós adicionados ou removidos, ou `null`.                                                                                                                                   |
+| `nextSibling`        | `{{domxref("Node")}}`     | Retorna o próximo irmão dos nós adicionados ou removidos, ou `null`.                                                                                                                                    |
+| `attributeName`      | `String`                  | Retorna o nome local do atributo modificado, ou `null`.                                                                                                                                                 |
+| `attributeNamespace` | `String`                  | Retorna o namespace do atributo modificado, ou `null`.                                                                                                                                                  |
+| `oldValue`           | `String`                  | O valor retornado depende do `type`. Para `attributes`, é o valor do atributo modificado antes da troca. Para `characterData`, são os dados do nó modificado antes da troca. Para `childList` é `null`. |
 
 ## Exemplo de uso
 
@@ -109,11 +109,11 @@ O exemplo a seguir foi retirado [deste post](http://hacks.mozilla.org/2012/05/do
 
 ```js
 // seleciona o nó alvo
-var target = document.querySelector('#some-id');
+var target = document.querySelector("#some-id");
 
 // cria uma nova instância de observador
-var observer = new MutationObserver(function(mutations) {
-  mutations.forEach(function(mutation) {
+var observer = new MutationObserver(function (mutations) {
+  mutations.forEach(function (mutation) {
     console.log(mutation.type);
   });
 });
@@ -136,6 +136,10 @@ observer.disconnect();
 - [The mutation summary library](http://code.google.com/p/mutation-summary/)
 - [The DOM standard](http://dom.spec.whatwg.org/#mutation-observers) que define a interface do `MutationObserver`
 
+## Especificações
+
+{{Specifications}}
+
 ## Compatibilidade com navegadores
 
-{{Compat("api.MutationObserver")}}
+{{Compat}}

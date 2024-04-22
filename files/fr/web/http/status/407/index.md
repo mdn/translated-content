@@ -1,8 +1,6 @@
 ---
 title: 407 Proxy Authentication Required
 slug: Web/HTTP/Status/407
-translation_of: Web/HTTP/Status/407
-browser-compat: http.status.407
 ---
 
 {{HTTPSidebar}}

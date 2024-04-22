@@ -1,7 +1,6 @@
 ---
 title: Relación de Grid Layout con otros métodos de diseño y posicionamiento - CSS
 slug: Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods
-original_slug: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 ---
 
 CSS Grid Layout ha sido diseñado para trabajar junto con otros elementos de CSS, como parte de un sistema completo para hacer el diseño. En esta guía explicaré cómo se ajusta _Grid_ junto con otras técnicas que ya se estén usando.
@@ -21,7 +20,9 @@ En este primer ejemplo, estoy usando flexbox para diseñar un conjunto de cajas.
 También he configurado la propiedad `wrap`{{cssxref ("flex-wrap")}} , de modo que si el espacio del contenedor se hace demasiado estrecho para mantener esa flex-basis, los ítems se ajustarán (wrap) a una nueva fila.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -69,7 +70,9 @@ La pregunta típica entonces es cómo conseguir que estos ítems se alineen. Aqu
 En el siguiente ejemplo construyo el mismo diseño usando Grid. Esta vez tenemos tres pistas de columna de `1fr`. No necesitamos establecer nada sobre los ítems mismos, ellos se colocarán uno dentro de cada celda de la cuadrícula creada. Como se puede ver, se mantienen en una cuadrícula estricta, alineados en filas y columnas. Con cinco ítems, tenemos un hueco al final de la fila dos.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -129,7 +132,9 @@ En una guía posterior en esta serie voy a echar un vistazo a Box Alignment y c�
 El primer ejemplo utiliza flexbox, tengo un contenedor con tres ítems dentro. El {{cssxref("min-height")}} del wrapper es fijo, por lo que está definiendo la altura del flex container. En el flex container he establecido {{cssxref("align-items")}} en `flex-end` para que los items se alineen al final del flex container. También he establecido la propiedad {{cssxref("align-self")}} en `box1` para que anule el valor por defecto y se estire a la altura del contenedor, y en `box2` para que se alinee con el inicio del contenedor flexible.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -175,7 +180,9 @@ El primer ejemplo utiliza flexbox, tengo un contenedor con tres ítems dentro. E
 En este segundo ejemplo uso Grid para construir el mismo diseño, usando las propiedades de alineación como se aplican en el grid layout. Por eso alineamos a `start` y a `end` en vez de a `flex-start` y `flex-end`. En grid layout alineamos los ítems dentro de su grid area que en este caso es una celda de la rejilla pero puede ser un área formada por múltiples celdas de rejilla.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -203,7 +210,7 @@ En este segundo ejemplo uso Grid para construir el mismo diseño, usando las pro
 ```css
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   align-items: end;
   grid-auto-rows: 200px;
 }
@@ -232,7 +239,9 @@ Podemos crear un efecto similar a flexbox, mientras mantenemos el contenido orga
 En el siguiente ejemplo he usado `auto-fill` en el lugar del número entero de la notación repeat y he establecido la lista de pistas en 200 píxeles. Esto significa que el grid creará tantas columnas de 200 píxeles como quepan en el container.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -271,7 +280,9 @@ En el siguiente ejemplo he usado `auto-fill` en el lugar del número entero de l
 Esto no es lo mismo que flexbox, en el ejemplo de flexbox los elementos son más grandes que la base de 200 píxeles antes del envoltorio. Podemos lograr lo mismo en grid combinando `auto-fill` y la función {{cssxref("minmax()", "minmax")}}. En el siguiente ejemplo configuro pistas que se rellenan automáticamente con `minmax`. Quiero que mis pistas tengan un mínimo de 200 píxeles, y luego establezco el máximo en `1fr`. Una vez que el navegador ha calculado cuántas veces caben 200 píxeles en el contenedor - teniendo en cuenta también la cantidad de espacio entre las rejillas ( grid gaps) - tratará como una instrucción el máximo de `1fr` y repartirá el espacio restante entre los ítems.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -318,50 +329,55 @@ Para hacer que el grid container sea un bloque contenedor es necesario añadir a
 En el ejemplo de abajo tengo un wrapper que contiene cuatro ítems hijos, el ítem tres está absolutamente posicionado y también está colocado en la cuadrícula usando line-based placement. El grid container tiene `position:` `relative` y así se convierte en el contexto de posicionamiento de este elemento.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">
-    Este bloque está absolutamente posicionado. En este ejemplo, el grid container es el bloque contenedor, y por ello sus valores offsset para el posicionamiento absoluto se calculan a partir de los bordes exteriores del área en la que está colocado.
-   </div>
-   <div class="box4">Four</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">
+    Este bloque está absolutamente posicionado. En este ejemplo, el grid
+    container es el bloque contenedor, y por ello sus valores offsset para el
+    posicionamiento absoluto se calculan a partir de los bordes exteriores del
+    área en la que está colocado.
+  </div>
+  <div class="box4">Four</div>
 </div>
 ```
 
 ```css
 .wrapper {
-   display: grid;
-   grid-template-columns: repeat(4,1fr);
-   grid-auto-rows: 200px;
-   grid-gap: 20px;
-   position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 200px;
+  grid-gap: 20px;
+  position: relative;
 }
 .box3 {
-   grid-column-start: 2;
-   grid-column-end: 4;
-   grid-row-start: 1;
-   grid-row-end: 3;
-   position: absolute;
-   top: 40px;
-   left: 40px;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  position: absolute;
+  top: 40px;
+  left: 40px;
 }
 ```
 
@@ -386,7 +402,9 @@ Si el ítem absolutamente posicionado está anidado dentro de un área de cuadr�
 He dado a `.box3` position relative y luego he posicionado el sub-ítem con las propiedades offset. En este caso, el contexto de posicionamiento es el grid area
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -407,9 +425,13 @@ He dado a `.box3` position relative y luego he posicionado el sub-ítem con las 
 <div class="wrapper">
   <div class="box1">One</div>
   <div class="box2">Two</div>
-  <div class="box3">Three
+  <div class="box3">
+    Three
     <div class="abspos">
-     Este bloque está absolutamente posicionado. En este ejemplo, el grid container es el bloque contenedor, y por ello sus valores offsset para el posicionamiento absoluto se calculan a partir de los bordes exteriores del área en la que está colocado.
+      Este bloque está absolutamente posicionado. En este ejemplo, el grid
+      container es el bloque contenedor, y por ello sus valores offsset para el
+      posicionamiento absoluto se calculan a partir de los bordes exteriores del
+      área en la que está colocado.
     </div>
   </div>
   <div class="box4">Four</div>
@@ -419,7 +441,7 @@ He dado a `.box3` position relative y luego he posicionado el sub-ítem con las 
 ```css
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 200px;
   grid-gap: 20px;
 }
@@ -434,8 +456,8 @@ He dado a `.box3` position relative y luego he posicionado el sub-ítem con las 
   position: absolute;
   top: 40px;
   left: 40px;
-  background-color: rgba(255,255,255,.5);
-  border: 1px solid rgba(0,0,0,0.5);
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.5);
   color: #000;
   padding: 10px;
 }
@@ -447,12 +469,14 @@ He dado a `.box3` position relative y luego he posicionado el sub-ítem con las 
 
 Una interacción final con otra especificación de layout que merece la pena destacar es la interacción entre CSS Grid Layout y `display:` `contents`. El valor de `contents` en la propiedad display es un nuevo valor que se describe en [Display specification](https://drafts.csswg.org/css-display/#box-generation) de la siguiente manera:
 
-> “El elemento en sí no genera ninguna caja, pero sus hijos y pseudo-elementos siguen generando cajas como de costumbre. A efectos de generación y layout de cajas, el elemento debe ser tratado como si hubiera sido sustituido por sus hijos y pseudo-elementos en el árbol del documento”
+> "El elemento en sí no genera ninguna caja, pero sus hijos y pseudo-elementos siguen generando cajas como de costumbre. A efectos de generación y layout de cajas, el elemento debe ser tratado como si hubiera sido sustituido por sus hijos y pseudo-elementos en el árbol del documento"
 
 Si configuras un ítem como `display: contents` la caja que normalmente crearía desaparece, y las cajas de los elementos hijo aparecen como si hubieran subido de nivel. Esto significa que los hijos de un grid item pueden convertirse en grid items. . ¿Suena raro? He aquí un ejemplo sencillo. En el siguiente marcado tengo un grid, el primer ítem del grid se establece para que se expanda tres pistas de columna. Contiene tres ítems anidados. Como esos hijos no son hijos directos, no forman parte del grid layout y por tanto se muestran como `display: block`.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -508,7 +532,9 @@ Si configuras un ítem como `display: contents` la caja que normalmente crearía
 Si ahora añado `display:` `contents` a las reglas del box1, la caja de ese ítem desaparece y los subítems se convierten en grid ítems y se despliegan usando las reglas de auto-placement.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;

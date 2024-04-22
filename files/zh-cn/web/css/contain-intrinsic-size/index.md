@@ -95,11 +95,11 @@ contain-intrinsic-size: unset;
 ```js
 const containedElement = document.querySelector("#contained_element");
 const intrinsicSizeSelector = document.querySelector(
-  "#contain_intrinsic_size_selector"
+  "#contain_intrinsic_size_selector",
 );
 const containSelector = document.querySelector("#contain_selector");
 const contentVisibilitySelector = document.querySelector(
-  "#content_visibility_selector"
+  "#content_visibility_selector",
 );
 
 containedElement.style["contain-intrinsic-size"] =
@@ -178,6 +178,6 @@ contentVisibilitySelector.addEventListener("change", () => {
 
 ## 参见
 
-- [content-visibility：提高渲染性能的新 CSS 属性](https://web.dev/content-visibility/)（web.dev）
+- [content-visibility：提高渲染性能的新 CSS 属性](https://web.dev/articles/content-visibility)（web.dev）
 - {{CSSXref("contain-intrinsic-block-size")}}
 - {{CSSXref("contain-intrinsic-inline-size")}}

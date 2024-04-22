@@ -1,11 +1,6 @@
 ---
-title: ':in-range'
+title: ":in-range"
 slug: Web/CSS/:in-range
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
-translation_of: Web/CSS/:in-range
 ---
 
 {{CSSRef}}
@@ -49,10 +44,10 @@ input:out-of-range {
   border: 2px solid red;
 }
 input:in-range + label::after {
-  content:' OK';
+  content: " OK";
 }
 input:out-of-range + label::after {
-  content:' non autorisée !';
+  content: " non autorisée !";
 }
 ```
 
@@ -60,9 +55,17 @@ input:out-of-range + label::after {
 
 ```html
 <form action="" id="form1">
-  <ul>Les valeurs entre 1 et 10 sont valides.
+  <ul>
+    Les valeurs entre 1 et 10 sont valides.
     <li>
-      <input id="valeur1" name="valeur1" type="number" placeholder="de 1 à 10" min="1" max="10" value="12">
+      <input
+        id="valeur1"
+        name="valeur1"
+        type="number"
+        placeholder="de 1 à 10"
+        min="1"
+        max="10"
+        value="12" />
       <label for="valeur1">Votre valeur est </label>
     </li>
   </ul>

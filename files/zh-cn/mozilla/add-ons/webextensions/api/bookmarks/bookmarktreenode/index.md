@@ -3,7 +3,7 @@ title: bookmarks.BookmarkTreeNode
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 代表书签树中的一个节点（书签或文件夹），子节点在它们的父文件夹中按顺序排列。
 

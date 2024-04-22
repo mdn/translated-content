@@ -5,13 +5,13 @@ slug: Web/API/Web_Crypto_API
 
 {{DefaultAPISidebar("Web Crypto API")}}
 
-**Web Crypto API** 为脚本提供了一套关于加密原语的接口，以便用于构建需要使用加密的系统。
+**Web Crypto API** 为脚本提供了一套关于密码学原语的接口，以便用于构建需要使用加密的系统。
 
 {{AvailableInWorkers}}
 
 {{securecontext_header}}
 
-> **警告：** 此 API 提供了许多底层加密原语。滥用它们很容易陷入微妙的陷阱中。
+> **警告：** 此 API 提供了许多底层密码学原语。滥用它们很容易陷入微妙的陷阱中。
 >
 > 即使你正确地运用了基础加密方法，也很难设计一套正确的安全密钥管理及整体安全设计方案，这些往往是安全专家所做的事情。
 >

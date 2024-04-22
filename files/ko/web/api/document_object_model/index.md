@@ -2,6 +2,7 @@
 title: 문서 객체 모델(DOM)
 slug: Web/API/Document_Object_Model
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 **문서 객체 모델**(**DOM**)은 메모리에 웹 페이지 문서 구조를 표현함으로써 스크립트 및 프로그래밍 언어와 페이지를 연결합니다. 이때 스크립트는 주로 JavaScript를 의미하나 HTML, SVG, XML 객체를 문서로 모델링 하는 것은 JavaScript 언어의 일부가 아닙니다.

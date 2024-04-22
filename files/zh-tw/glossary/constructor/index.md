@@ -3,6 +3,8 @@ title: 建構子
 slug: Glossary/Constructor
 ---
 
+{{GlossarySidebar}}
+
 建構子（**constructor**）屬於實做（instantiated）的指定 class {{glossary("object")}}。建構子概念可應用到大多數的{{glossary("OOP","物件導向")}}程式語言。基本上，{{glossary("JavaScript")}} 建構子用於在 {{glossary("class")}} 的實做（instance）聲明。
 
 ## 語法
@@ -34,5 +36,5 @@ var defaultReference = new Default();
 
 ### 技術資訊
 
-- MDN 的 [JavaScript 物件導向介紹](/zh-TW/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript#The_Constructor)
+- MDN 的 [JavaScript 物件導向介紹](/zh-TW/docs/Learn/JavaScript/Objects#the_constructor)
 - MDN 的 [JavaScript 的 new 操作符](/zh-TW/docs/Web/JavaScript/Reference/Operators/new)

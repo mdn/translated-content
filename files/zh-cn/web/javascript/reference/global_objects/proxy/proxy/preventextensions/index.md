@@ -1,7 +1,6 @@
 ---
 title: handler.preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/preventExtensions
-original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/preventExtensions
 ---
 
 {{JSRef}}
@@ -14,8 +13,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/preventExte
 
 ```js
 var p = new Proxy(target, {
-  preventExtensions: function(target) {
-  }
+  preventExtensions: function (target) {},
 });
 ```
 
@@ -52,26 +50,31 @@ var p = new Proxy(target, {
 以下代码演示了如何拦截{{jsxref("Object.preventExtensions()")}}。
 
 ```js
-var p = new Proxy({}, {
-  preventExtensions: function(target) {
-    console.log('called');
-    Object.preventExtensions(target);
-    return true;
-  }
-});
+var p = new Proxy(
+  {},
+  {
+    preventExtensions: function (target) {
+      console.log("called");
+      Object.preventExtensions(target);
+      return true;
+    },
+  },
+);
 
-console.log(Object.preventExtensions(p)); // "called"
-                                          // false
+console.log(Object.preventExtensions(p)); // "called"; outputs false
 ```
 
 以下代码违反了约束。
 
 ```js
-var p = new Proxy({}, {
-  preventExtensions: function(target) {
-    return true;
-  }
-});
+var p = new Proxy(
+  {},
+  {
+    preventExtensions: function (target) {
+      return true;
+    },
+  },
+);
 
 Object.preventExtensions(p); // 抛出类型错误
 ```

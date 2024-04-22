@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/shift
 
 ## 語法
 
-```plain
+```js-nolint
 arr.shift()
 ```
 
@@ -32,17 +32,17 @@ arr.shift()
 以下的程式碼會印出 `myFish` 陣列在移除第一個元素之前跟之後的內容，也印出了被移除的元素：
 
 ```js
-var myFish = ['angel', 'clown', 'mandarin', 'surgeon'];
+var myFish = ["angel", "clown", "mandarin", "surgeon"];
 
-console.log('myFish before:', JSON.stringify(myFish));
+console.log("myFish before:", JSON.stringify(myFish));
 // myFish before: ['angel', 'clown', 'mandarin', 'surgeon']
 
 var shifted = myFish.shift();
 
-console.log('myFish after:', myFish);
+console.log("myFish after:", myFish);
 // myFish after: ['clown', 'mandarin', 'surgeon']
 
-console.log('Removed this element:', shifted);
+console.log("Removed this element:", shifted);
 // Removed this element: angel
 ```
 
@@ -51,10 +51,10 @@ console.log('Removed this element:', shifted);
 `shift()` 方法常被用在 while 迴圈中的條件判斷。在下面的例子，每一次迭代都將會自陣列中移除下一個元素，直到陣列空了為止：
 
 ```js
-var names = ["Andrew", "Edward", "Paul", "Chris" ,"John"];
+var names = ["Andrew", "Edward", "Paul", "Chris", "John"];
 
-while( (i = names.shift()) !== undefined ) {
-    console.log(i);
+while ((i = names.shift()) !== undefined) {
+  console.log(i);
 }
 // Andrew, Edward, Paul, Chris, John
 ```

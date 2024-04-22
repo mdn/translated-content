@@ -69,7 +69,7 @@ const ta = new Uint8Array(sab);
 ta[0] = 2;
 
 Atomics.or(ta, 0, 1); // 이전 값 2를 반환합니다.
-Atomics.load(ta, 0);  // 3
+Atomics.load(ta, 0); // 3
 ```
 
 ## 명세서

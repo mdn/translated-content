@@ -24,10 +24,10 @@ dataTransfer.types;
 这个例子展示 `types` 和 {{domxref("DataTransfer.items","items")}} 属性的用法
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <title>Examples of DataTransfer.{types,items} properties</title>
-  <meta content="width=device-width">
+  <meta content="width=device-width" />
   <style>
     div {
       margin: 0em;
@@ -56,13 +56,15 @@ dataTransfer.types;
       ev.target.appendChild(document.getElementById(data));
 
       // Print each format type
-      for (let i=0; i < ev.dataTransfer.types.length; i++) {
+      for (let i = 0; i < ev.dataTransfer.types.length; i++) {
         console.log(`… types[${i}] = ${ev.dataTransfer.types[i]}`);
       }
 
       // Print each item's "kind" and "type"
-      for (let i=0; i < ev.dataTransfer.items.length; i++) {
-        console.log(`… items[${i}].kind = ${ev.dataTransfer.items[i].kind}; type = ${ev.dataTransfer.items[i].type}`);
+      for (let i = 0; i < ev.dataTransfer.items.length; i++) {
+        console.log(
+          `… items[${i}].kind = ${ev.dataTransfer.items[i].kind}; type = ${ev.dataTransfer.items[i].type}`,
+        );
       }
     }
 
@@ -70,16 +72,28 @@ dataTransfer.types;
       console.log("dragOver");
       ev.preventDefault();
       // Set the dropEffect to move
-      ev.dataTransfer.dropEffect = "move"
+      ev.dataTransfer.dropEffect = "move";
     }
   </script>
   <body>
-    <h1>Examples of <code>DataTransfer</code>.{<code>types</code>, <code>items</code>} properties</h1>
+    <h1>
+      Examples of <code>DataTransfer</code>.{<code>types</code>,
+      <code>items</code>} properties
+    </h1>
     <ul>
-      <li id="i1" ondragstart="dragstart_handler(event);" draggable="true">Drag Item 1 to the Drop Zone</li>
-      <li id="i2" ondragstart="dragstart_handler(event);" draggable="true">Drag Item 2 to the Drop Zone</li>
+      <li id="i1" ondragstart="dragstart_handler(event);" draggable="true">
+        Drag Item 1 to the Drop Zone
+      </li>
+      <li id="i2" ondragstart="dragstart_handler(event);" draggable="true">
+        Drag Item 2 to the Drop Zone
+      </li>
     </ul>
-    <div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div>
+    <div
+      id="target"
+      ondrop="drop_handler(event);"
+      ondragover="dragover_handler(event);">
+      Drop Zone
+    </div>
   </body>
 </html>
 ```

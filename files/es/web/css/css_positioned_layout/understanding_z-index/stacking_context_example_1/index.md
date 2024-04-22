@@ -1,7 +1,6 @@
 ---
 title: Ejemplo 1 del contexto de apilamiento
 slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1
-original_slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1
 ---
 
 « [CSS](/es/CSS) « [ENTENDIENDO LA PROPIEDAD CSS Z-INDEX](/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index)
@@ -65,41 +64,41 @@ En términos de contextos de apilamiento, el DIV #1 y el DIV #3 son simplemente 
 
 ```css
 .bold {
-    font-weight: bold;
-    font: 12px Arial;
+  font-weight: bold;
+  font: 12px Arial;
 }
 #div1,
 #div3 {
-    height: 80px;
-    position: relative;
-    border: 1px dashed #669966;
-    background-color: #ccffcc;
-    padding-left: 5px;
+  height: 80px;
+  position: relative;
+  border: 1px dashed #669966;
+  background-color: #ccffcc;
+  padding-left: 5px;
 }
 #div2 {
-    opacity: 0.8;
-    z-index: 1;
-    position: absolute;
-    width: 150px;
-    height: 200px;
-    top: 20px;
-    left: 170px;
-    border: 1px dashed #990000;
-    background-color: #ffdddd;
-    text-align: center;
+  opacity: 0.8;
+  z-index: 1;
+  position: absolute;
+  width: 150px;
+  height: 200px;
+  top: 20px;
+  left: 170px;
+  border: 1px dashed #990000;
+  background-color: #ffdddd;
+  text-align: center;
 }
 #div4 {
-    opacity: 0.8;
-    z-index: 2;
-    position: absolute;
-    width: 200px;
-    height: 70px;
-    top: 65px;
-    left: 50px;
-    border: 1px dashed #000099;
-    background-color: #ddddff;
-    text-align: left;
-    padding-left: 10px;
+  opacity: 0.8;
+  z-index: 2;
+  position: absolute;
+  width: 200px;
+  height: 70px;
+  top: 65px;
+  left: 50px;
+  border: 1px dashed #000099;
+  background-color: #ddddff;
+  text-align: left;
+  padding-left: 10px;
 }
 ```
 

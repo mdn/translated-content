@@ -1,20 +1,9 @@
 ---
 title: runtime.PlatformNaclArch
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformNaclArch
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - PlatformNaclArch
-  - Reference
-  - Type
-  - WebExtensions
-  - runtime
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformNaclArch
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 L'architecture du client natif. Cela peut-etre différent de arch sur certaines plate-formes.
 

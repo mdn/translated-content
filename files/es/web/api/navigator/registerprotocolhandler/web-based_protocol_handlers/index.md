@@ -20,9 +20,11 @@ Los controladores de protocolos basados en web permiten a las aplicaciones basad
 Configurar una aplicación web como un controlador de protocolo no es un proceso difícil. Básicamente la aplicación web usa [registerProtocolHandler()](/es/docs/Web/API/navigator.registerProtocolHandler) para registrarse a sí mismo con el navegador como un controlador potencial para un protocolo dado. Por ejemplo:
 
 ```js
-navigator.registerProtocolHandler("burger",
-                                  "http://www.google.co.uk/?uri=%s",
-                                  "Burger handler");
+navigator.registerProtocolHandler(
+  "burger",
+  "http://www.google.co.uk/?uri=%s",
+  "Burger handler",
+);
 ```
 
 En donde los parámetros son:
@@ -66,14 +68,14 @@ Ahora, cada vez que el usuario active un enlace que usa el protocolo registrado,
 ### Ejemplo
 
 ```html
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="en">
-<head>
-  <title>Ejemplo de Controlador de Protocolo Web - Prueba</title>
-</head>
-<body>
-  <p>Oye ¿Has visto <a href="burger:cheeseburger">esto</a> antes?</p>
-</body>
+  <head>
+    <title>Ejemplo de Controlador de Protocolo Web - Prueba</title>
+  </head>
+  <body>
+    <p>Oye ¿Has visto <a href="burger:cheeseburger">esto</a> antes?</p>
+  </body>
 </html>
 ```
 

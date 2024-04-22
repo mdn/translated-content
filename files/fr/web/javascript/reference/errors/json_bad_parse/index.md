@@ -1,14 +1,6 @@
 ---
-title: 'SyntaxError: JSON.parse: bad parsing'
+title: "SyntaxError: JSON.parse: bad parsing"
 slug: Web/JavaScript/Reference/Errors/JSON_bad_parse
-tags:
-  - Erreurs
-  - JSON
-  - JavaScript
-  - NeedsExample
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/JSON_bad_parse
-original_slug: Web/JavaScript/Reference/Erreurs/JSON_bad_parse
 ---
 
 {{jsSidebar("Errors")}}
@@ -65,7 +57,7 @@ Lorsque la méthode {{jsxref("JSON.parse()")}} analyse (_parse_) une chaîne de 
 Les deux lignes qui suivent déclencheront une exception `SyntaxError` :
 
 ```js example-bad
-JSON.parse('[1, 2, 3, 4, ]');
+JSON.parse("[1, 2, 3, 4, ]");
 JSON.parse('{"foo" : 1, }');
 // SyntaxError JSON.parse: unexpected character
 // at line 1 column 14 of the JSON data
@@ -74,7 +66,7 @@ JSON.parse('{"foo" : 1, }');
 Pour que la méthode puisse analyser le JSON correctement, on évitera les virgules en fin de tableau :
 
 ```js example-good
-JSON.parse('[1, 2, 3, 4 ]');
+JSON.parse("[1, 2, 3, 4 ]");
 JSON.parse('{"foo" : 1 }');
 ```
 

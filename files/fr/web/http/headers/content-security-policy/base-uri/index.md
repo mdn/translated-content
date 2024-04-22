@@ -1,8 +1,6 @@
 ---
-title: 'CSP : base-uri'
+title: "CSP : base-uri"
 slug: Web/HTTP/Headers/Content-Security-Policy/base-uri
-translation_of: Web/HTTP/Headers/Content-Security-Policy/base-uri
-browser-compat: http.headers.csp.Content-Security-Policy.base-uri
 ---
 
 {{HTTPSidebar}}
@@ -28,7 +26,7 @@ La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-
 
 ## Syntaxe
 
-Une ou plusieurs *sources* peuvent être autorisées pour cette directive&nbsp;:
+Une ou plusieurs _sources_ peuvent être autorisées pour cette directive&nbsp;:
 
 ```http
 Content-Security-Policy: base-uri <source>;
@@ -46,14 +44,14 @@ On notera toutefois que certaines de ces valeurs n'ont pas de sens pour `base-ur
 ### Configuration avec la balise `<meta>`
 
 ```html
-<meta http-equiv="Content-Security-Policy" content="base-uri 'self'">
+<meta http-equiv="Content-Security-Policy" content="base-uri 'self'" />
 ```
 
 ### Configuration avec Apache
 
-```html
+```xml
 <IfModule mod_headers.c>
-Header set Content-Security-Policy "base-uri 'self'";
+  Header set Content-Security-Policy "base-uri 'self'";
 </IfModule>
 ```
 
@@ -68,12 +66,14 @@ add_header Content-Security-Policy "base-uri 'self';"
 À partir du moment où votre domaine n'est pas `example.com`, un élément [`<base>`](/fr/docs/Web/HTML/Element/base) avec son attribut `href` défini à `https://example.com` résultera en une violation de CSP.
 
 ```html example-bad
-<meta http-equiv="Content-Security-Policy" content="base-uri 'self'">
-<base href="https://example.com/">
+<meta http-equiv="Content-Security-Policy" content="base-uri 'self'" />
+<base href="https://example.com/" />
 
-// Error: Refused to set the document's base URI to 'https://example.com/'
-// because it violates the following Content Security Policy
-// directive: "base-uri 'self'"
+<!--
+Error: Refused to set the document's base URI to 'https://example.com/'
+because it violates the following Content Security Policy
+directive: "base-uri 'self'"
+-->
 ```
 
 ## Spécifications

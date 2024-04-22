@@ -18,8 +18,8 @@ var historyObj = window.history;
 ## 示例
 
 ```js
-history.back();     // 等同于点击浏览器的回退按钮
-history.go(-1);     //等同于 history.back();
+history.back(); // 等同于点击浏览器的回退按钮
+history.go(-1); //等同于 history.back();
 ```
 
 ## 附注

@@ -60,13 +60,13 @@ let output = document.getElementById("output");
 let divList = document.getElementsByTagName("div");
 
 output.innerHTML += `div 0 と div 0 は同じか: ${divList[0].isSameNode(
-  divList[0]
+  divList[0],
 )}<br/>`;
 output.innerHTML += `div 0 と div 1 は同じか: ${divList[0].isSameNode(
-  divList[1]
+  divList[1],
 )}<br/>`;
 output.innerHTML += `div 0 と div 2 は同じか: ${divList[0].isSameNode(
-  divList[2]
+  divList[2],
 )}<br/>`;
 ```
 

@@ -15,9 +15,9 @@ Cuando se usa como parte de una respueste a una petición previa, indica si la p
 
 El encabezado `Access-Control-Allow-Credentials` trabaja en conjunción con la propiedad {{domxref("XMLHttpRequest.withCredentials")}} o con la opción `credentials` en el constructor {{domxref("Request.Request()", "Request()")}} de la API Fetch. Para una petición CORS con credenciales, para que el navegador exponga la respuesta al código JavaScript del fronend, tanto el servidor (utilizando el encabezado `Access-Control-Allow-Credentials`) y el cliente (al configurar el modo de las credenciales para peticiones XHR, Fetch, o Ajax) se debe indicar que estan permitiendo la inclusión de credenciales.
 
-| Tipo de encabezado                                                                               | {{Glossary("Response header", "Respuesta del encabezado")}} |
-| ------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------- |
-| {{Glossary("Forbidden header name", "Nombre prohibido del encabezado")}} | no                                                                               |
+| Tipo de encabezado                                                       | {{Glossary("Response header", "Respuesta del encabezado")}} |
+| ------------------------------------------------------------------------ | ----------------------------------------------------------- |
+| {{Glossary("Forbidden header name", "Nombre prohibido del encabezado")}} | no                                                          |
 
 ## Sintaxis
 
@@ -42,7 +42,7 @@ Utilizando [XHR](/es/docs/Web/API/XMLHttpRequest) con credenciales:
 
 ```js
 var xhr = new XMLHttpRequest();
-xhr.open('GET', 'http://example.com/', true);
+xhr.open("GET", "http://example.com/", true);
 xhr.withCredentials = true;
 xhr.send(null);
 ```
@@ -51,8 +51,8 @@ Utilizando [Fetch](/es/docs/Web/API/Fetch_API) con credenciales:
 
 ```js
 fetch(url, {
-  credentials: 'include'
-})
+  credentials: "include",
+});
 ```
 
 ## Especificaciones

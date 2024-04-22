@@ -1,11 +1,6 @@
 ---
 title: text-emphasis
 slug: Web/CSS/text-emphasis
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/text-emphasis
 ---
 
 {{CSSRef}}
@@ -28,13 +23,13 @@ text-emphasis: none; /* Pas de marque */
 
 /* Chaîne de caractères */
 /* Type <string>        */
-text-emphasis: 'x';
-text-emphasis: '点';
-text-emphasis: '\25B2';
-text-emphasis: '*' #555;
+text-emphasis: "x";
+text-emphasis: "点";
+text-emphasis: "\25B2";
+text-emphasis: "*" #555;
 /* À ne pas utiliser, cela pourra être */
 /* considéré comme 't' uniquement      */
-text-emphasis: 'toto';
+text-emphasis: "toto";
 
 /* Valeurs avec mot(s)-clé(s) */
 text-emphasis: filled;

@@ -1,7 +1,6 @@
 ---
 title: yield
 slug: Web/JavaScript/Reference/Operators/yield
-original_slug: Web/JavaScript/Referencia/Operadores/yield
 ---
 
 {{jsSidebar("Operadores")}}
@@ -49,10 +48,10 @@ Entre la ruta del código del generador, sus operadores `yield` y la capacidad d
 El siguiente código es la declaración de una función generadora de ejemplo.
 
 ```js
-function* countAppleSales () {
-  let saleList = [3, 7, 5]
+function* countAppleSales() {
+  let saleList = [3, 7, 5];
   for (let i = 0; i < saleList.length; i++) {
-    yield saleList[i]
+    yield saleList[i];
   }
 }
 ```
@@ -60,34 +59,34 @@ function* countAppleSales () {
 Una vez que se define una función generadora, se puede usar construyendo un iterador como el siguiente.
 
 ```js
-let appleStore = countAppleSales()  // Generator { }
-console.log(appleStore.next())      // { value: 3, done: false }
-console.log(appleStore.next())      // { value: 7, done: false }
-console.log(appleStore.next())      // { value: 5, done: false }
-console.log(appleStore.next())      // { value: undefined, done: true }
+let appleStore = countAppleSales(); // Generator { }
+console.log(appleStore.next()); // { value: 3, done: false }
+console.log(appleStore.next()); // { value: 7, done: false }
+console.log(appleStore.next()); // { value: 5, done: false }
+console.log(appleStore.next()); // { value: undefined, done: true }
 ```
 
 También puedes enviar un valor con `next(value)` al generador. '`step`' se evalúa como un valor de retorno en esta sintaxis \[_rv_] = **yield** \[_expression_]
 
 ```js
 function* counter(value) {
- let step;
+  let step;
 
- while (true) {
-   step = yield ++value;
+  while (true) {
+    step = yield ++value;
 
-   if (step) {
-     value += step;
-   }
- }
+    if (step) {
+      value += step;
+    }
+  }
 }
 
 const generatorFunc = counter(0);
-console.log(generatorFunc.next().value);   // 1
-console.log(generatorFunc.next().value);   // 2
-console.log(generatorFunc.next().value);   // 3
+console.log(generatorFunc.next().value); // 1
+console.log(generatorFunc.next().value); // 2
+console.log(generatorFunc.next().value); // 3
 console.log(generatorFunc.next(10).value); // 14
-console.log(generatorFunc.next().value);   // 15
+console.log(generatorFunc.next().value); // 15
 console.log(generatorFunc.next(10).value); // 26
 ```
 

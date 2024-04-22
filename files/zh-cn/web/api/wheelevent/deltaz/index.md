@@ -16,7 +16,10 @@ var dZ = event.deltaZ;
 ## 例子
 
 ```js
-var syntheticEvent = new WheelEvent("syntheticWheel", {"deltaZ": 4, "deltaMode": 0});
+var syntheticEvent = new WheelEvent("syntheticWheel", {
+  deltaZ: 4,
+  deltaMode: 0,
+});
 
 console.log(syntheticEvent.deltaZ);
 ```
@@ -29,7 +32,7 @@ console.log(syntheticEvent.deltaZ);
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - [`wheel`](/zh-CN/docs/Web/API/Element/wheel_event)
 - {{domxref("WheelEvent")}}

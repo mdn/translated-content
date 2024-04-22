@@ -1,14 +1,6 @@
 ---
 title: BeforeInstallPromptEvent
 slug: Web/API/BeforeInstallPromptEvent
-tags:
-  - API
-  - BeforeInstallPromptEvent
-  - Event
-  - Experimental
-  - Interface
-  - Reference
-translation_of: Web/API/BeforeInstallPromptEvent
 ---
 
 Событие **`BeforeInstallPromptEvent`** запускается в обработчике {{domxref("Window.onbeforeinstallprompt")}} перед тем, как пользователю будет предложено "установить" веб-сайт на главный экран мобильного устройства.Этот интерфейс наследуется от интерфейса {{domxref("Event")}}.
@@ -37,15 +29,19 @@ _Наследует свойства от своего родителя, {{domxr
 ## Пример
 
 ```js
-window.addEventListener("beforeinstallprompt", function(e) {
+window.addEventListener("beforeinstallprompt", function (e) {
   // Зарегистрируйте платформы, указанные в качестве параметров, в запросе на установку
   console.log(e.platforms); // e.g., ["web", "android", "windows"]
-  e.userChoice.then(function(choiceResult) {
+  e.userChoice.then(function (choiceResult) {
     console.log(choiceResult.outcome); // either "accepted" or "dismissed"
   }, handleError);
 });
 ```
 
-## Совместимость с браузером
+## Спецификации
+
+{{Specifications}}
+
+## Совместимость с браузерами
 
 {{Compat}}

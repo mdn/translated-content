@@ -16,24 +16,31 @@ Antes de que podamos comenzar a escribir la funcionalidad del juego, necesitamos
 La estructura del elemento HTML es bastante simple, ya que el juego va ser renderizado por completo en el elemento {{htmlelement("canvas")}} generado por el framework. Utilizando su editor de texto favorito, cree un nuevo documento HTML, guárdelo como `index.html`, en una ubicación sensata y agregue el siguiente código:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8" />
     <title>Gamedev Phaser Workshop - lesson 01: Initialize the framework</title>
-    <style>* { padding: 0; margin: 0; }</style>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+    </style>
     <script src="js/phaser.min.js"></script>
-</head>
-<body>
-<script>
-    var game = new Phaser.Game(480, 320, Phaser.AUTO, null, {
-      preload: preload, create: create, update: update
-    });
-    function preload() {}
-    function create() {}
-    function update() {}
-</script>
-</body>
+  </head>
+  <body>
+    <script>
+      var game = new Phaser.Game(480, 320, Phaser.AUTO, null, {
+        preload: preload,
+        create: create,
+        update: update,
+      });
+      function preload() {}
+      function create() {}
+      function update() {}
+    </script>
+  </body>
 </html>
 ```
 

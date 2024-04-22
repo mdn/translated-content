@@ -1,8 +1,9 @@
 ---
-title: Element.requestFullscreen()
+title: "Element: requestFullscreen() メソッド"
+short-title: requestFullscreen()
 slug: Web/API/Element/requestFullscreen
 l10n:
-  sourceCommit: a243190b798aa57b6cc08b9ef3216aed8ab9c895
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("Fullscreen API")}}
@@ -48,8 +49,9 @@ _`requestFullscreen()` プロシージャは、従来の例外を発生させる
 
     - その要素を含む文書が完全にアクティブでない、つまり、現在のアクティブ文書でない。
     - その要素が文書内に含まれていない。
-    - この要素は、機能ポリシーの設定または他のアクセス制御機能により、 `"fullscreen"` 機能を使用することが許可されていない。
+    - この要素は、[権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)の設定または他のアクセス制御機能により、 `fullscreen` 機能を使用することが許可されていない。
     - 要素とその文書が同じノードである。
+    - この要素が[ポップオーバー](/ja/docs/Web/API/Popover_API)であり、既に {{domxref("HTMLElement.showPopover()")}} で表示されている。
 
 ## セキュリティ
 
@@ -65,7 +67,7 @@ _`requestFullscreen()` プロシージャは、従来の例外を発生させる
 - {{HTMLElement("dialog")}} 要素ではないこと。
 - 最上位の文書内か、 [`allowfullscreen`](/ja/docs/Web/HTML/Element/iframe#allowfullscreen) 属性を適用した {{HTMLElement("iframe")}} 内に位置していなければなりません。
 
-さらに、もちろん、機能ポリシー `"fullscreen"` の権限も付与されていなければなりません。
+さらに、設定された権限ポリシーがこの機能の使用を許可している必要があります。
 
 ### 全画面起動の検出
 
@@ -86,7 +88,9 @@ function toggleFullscreen() {
 
   if (!document.fullscreenElement) {
     elem.requestFullscreen().catch((err) => {
-      alert(`Error attempting to enable fullscreen mode: ${err.message} (${err.name})`);
+      alert(
+        `Error attempting to enable fullscreen mode: ${err.message} (${err.name})`,
+      );
     });
   } else {
     document.exitFullscreen();
@@ -108,9 +112,14 @@ function toggleFullscreen() {
 ```js
 let elem = document.documentElement;
 
-elem.requestFullscreen({ navigationUI: "show" }).then(() => {}).catch((err) => {
-  alert(`An error occurred while trying to switch into fullscreen mode: ${err.message} (${err.name})`);
-});
+elem
+  .requestFullscreen({ navigationUI: "show" })
+  .then(() => {})
+  .catch((err) => {
+    alert(
+      `An error occurred while trying to switch into fullscreen mode: ${err.message} (${err.name})`,
+    );
+  });
 ```
 
 プロミスの解決ハンドラーは何もしませんが、プロミスが拒否された場合は {{DOMxRef("Window.alert", "alert()")}} を呼び出すことでエラーメッセージが表示します。

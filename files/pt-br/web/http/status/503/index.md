@@ -2,6 +2,7 @@
 title: 503 Service Unavailable
 slug: Web/HTTP/Status/503
 ---
+
 {{HTTPSidebar}}
 
 O código de resposta de erro de servidor **`503 Service Unavailable`** do HTTP indica que o servidor não está pronto para lidar com a requisição.
@@ -20,15 +21,15 @@ Os cabeçalhos relativos ao armazenamento em cache que são enviados juntamente 
 
 ## Especificações
 
-| Especificação                                                        | Título                                                        |
-| -------------------------------------------------------------------- | ------------------------------------------------------------- |
+| Especificação                                        | Título                                                        |
+| ---------------------------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "503 Service Unavailable" , "6.6.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Compatibilidade com navegadores
 
 A informação mostrada acima está sendo servida do MDN's GitHub (<https://github.com/mdn/browser-compat-data>).
 
-{{Compat("http.status.503")}}
+{{Compat}}
 
 ## Veja também
 

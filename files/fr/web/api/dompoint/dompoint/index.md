@@ -1,13 +1,6 @@
 ---
 title: DOMPoint.DOMPoint()
 slug: Web/API/DOMPoint/DOMPoint
-tags:
-  - API
-  - Constructeurs
-  - DOM
-  - Géométrie
-  - Quadrilatère
-translation_of: Web/API/DOMPoint/DOMPoint
 ---
 
 {{APIRef("DOM")}}{{ SeeCompatTable() }}

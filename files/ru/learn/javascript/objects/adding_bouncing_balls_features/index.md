@@ -1,8 +1,6 @@
 ---
 title: Добавление функций в нашу демонстрацию отбойных шаров
 slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
-translation_of: Learn/JavaScript/Objects/Adding_bouncing_balls_features
-original_slug: Learn/JavaScript/Объекты/Adding_bouncing_balls_features
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
@@ -74,8 +72,8 @@ original_slug: Learn/JavaScript/Объекты/Adding_bouncing_balls_features
 
 Этот метод имеет ту же цель, что и метод `draw()` метода `Ball()`: он рисует экземпляр объекта на холсте. Он будет работать очень схожим образом, поэтому вы можете начать с копирования определения `Ball.prototype.draw`. Затем вы должны внести следующие изменения:
 
-- Мы хотим, чтобы злой круг не был заполнен, а скорее имел внешнюю линию (удар). Вы можете добиться этого, обновив [`fillStyle`](/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle) и [`fill()`](/en-US/docs/Web/API/CanvasRenderingContext2D/fill) до [`strokeStyle`](/en-US/docs/Web/API/CanvasRenderingContext2D/strokeStyle) и s [`stroke()`](/en-US/docs/Web/API/CanvasRenderingContext2D/stroke).
-- Мы также хотим сделать ход немного толще, так что вы можете увидеть злой круг немного легче. Этого можно добиться, установив значение для [`lineWidth`](/en-US/docs/Web/API/CanvasRenderingContext2D/lineWidth) где-нибудь после вызова [`beginPath()`](/en-US/docs/Web/API/CanvasRenderingContext2D/beginPath) (3 будем делать).
+- Мы хотим, чтобы злой круг не был заполнен, а скорее имел внешнюю линию (удар). Вы можете добиться этого, обновив [`fillStyle`](/ru/docs/Web/API/CanvasRenderingContext2D/fillStyle) и [`fill()`](/ru/docs/Web/API/CanvasRenderingContext2D/fill) до [`strokeStyle`](/ru/docs/Web/API/CanvasRenderingContext2D/strokeStyle) и s [`stroke()`](/ru/docs/Web/API/CanvasRenderingContext2D/stroke).
+- Мы также хотим сделать ход немного толще, так что вы можете увидеть злой круг немного легче. Этого можно добиться, установив значение для [`lineWidth`](/ru/docs/Web/API/CanvasRenderingContext2D/lineWidth) где-нибудь после вызова [`beginPath()`](/ru/docs/Web/API/CanvasRenderingContext2D/beginPath) (3 будем делать).
 
 #### `checkBounds()`
 
@@ -90,17 +88,17 @@ original_slug: Learn/JavaScript/Объекты/Adding_bouncing_balls_features
 
 ```js
 var _this = this;
-window.onkeydown = function(e) {
-    if (e.keyCode === 65) {
-      _this.x -= _this.velX;
-    } else if (e.keyCode === 68) {
-      _this.x += _this.velX;
-    } else if (e.keyCode === 87) {
-      _this.y -= _this.velY;
-    } else if (e.keyCode === 83) {
-      _this.y += _this.velY;
-    }
+window.onkeydown = function (e) {
+  if (e.keyCode === 65) {
+    _this.x -= _this.velX;
+  } else if (e.keyCode === 68) {
+    _this.x += _this.velX;
+  } else if (e.keyCode === 87) {
+    _this.y -= _this.velY;
+  } else if (e.keyCode === 83) {
+    _this.y += _this.velY;
   }
+};
 ```
 
 Поэтому, когда нажата клавиша, проконсультируется о свойствах [keyCode](/ru/docs/Web/API/KeyboardEvent/keyCode) объекта события, чтобы увидеть, какая клавиша нажата. Если это один из четырёх, представленных указанными ключевыми кодами, тогда злой круг будет перемещаться влево / вправо / вверх / вниз.
@@ -130,22 +128,22 @@ window.onkeydown = function(e) {
 1. В своём HTML-файле добавьте элемент {{HTMLElement ("p")}} непосредственно под элементом {{HTMLElement ("h1")}}, содержащим текст «Ball count:».
 2. В вашем файле CSS добавьте следующее правило внизу:
 
-    ```css
-    p {
-      position: absolute;
-      margin: 0;
-      top: 35px;
-      right: 5px;
-      color: #aaa;
-    }
-    ```
+   ```css
+   p {
+     position: absolute;
+     margin: 0;
+     top: 35px;
+     right: 5px;
+     color: #aaa;
+   }
+   ```
 
 3. В своём JavaScript сделайте следующие обновления:
 
-    - Создайте переменную, которая хранит ссылку на абзац.
-    - Держите подсчёт количества шаров на экране в некотором роде.
-    - Увеличьте количество и покажите обновлённое количество шаров каждый раз, когда шар добавляется в сцену.
-    - Уменьшите счёт и покажите обновлённое количество мячей каждый раз, когда злой круг ест шарик (его не существует).
+   - Создайте переменную, которая хранит ссылку на абзац.
+   - Держите подсчёт количества шаров на экране в некотором роде.
+   - Увеличьте количество и покажите обновлённое количество шаров каждый раз, когда шар добавляется в сцену.
+   - Уменьшите счёт и покажите обновлённое количество мячей каждый раз, когда злой круг ест шарик (его не существует).
 
 ## Советы и подсказки
 

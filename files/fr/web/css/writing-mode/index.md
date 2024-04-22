@@ -1,11 +1,6 @@
 ---
 title: writing-mode
 slug: Web/CSS/writing-mode
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/writing-mode
 ---
 
 {{CSSRef}}
@@ -72,42 +67,43 @@ Ce fragment de code HTML contient un tableau ({{HTMLElement("table")}}) dont cha
 
 ```html
 <table>
-    <tr>
-        <th>Valeur</th>
-        <th>Système d'écriture vertical</th>
-        <th>Système d'écriture horizontal</th>
-        <th>Système d'écriture hybride</th>
-    </tr>
-    <tr>
-        <td>horizontal-tb</td>
-        <td class="example Text1">我家没有电脑。</td>
-        <td class="example Text1">Example text</td>
-        <td class="example Text1">1994年に至っては</td>
-    </tr>
-    <tr>
-        <td>vertical-lr</td>
-        <td class="example Text2">我家没有电脑。</td>
-        <td class="example Text2">Example text</td>
-        <td class="example Text2">1994年に至っては</td>
-    </tr>
-    <tr>
-        <td>vertical-rl</td>
-        <td class="example Text3">我家没有电脑。</td>
-        <td class="example Text3">Example text</td>
-        <td class="example Text3">1994年に至っては</td>
-    </tr>
-    <tr>
-        <td>sideways-lr</td>
-        <td class="example Text4">我家没有电脑。</td>
-        <td class="example Text4">Example text</td>
-        <td class="example Text4">1994年に至っては</td>
-    </tr>
-    <tr>
-        <td>sideways-rl</td>
-        <td class="example Text5">我家没有电脑。</td>
-        <td class="example Text5">Example text</td>
-        <td class="example Text5">1994年に至っては</td>
-    </tr>
+  <tr>
+    <th>Valeur</th>
+    <th>Système d'écriture vertical</th>
+    <th>Système d'écriture horizontal</th>
+    <th>Système d'écriture hybride</th>
+  </tr>
+  <tr>
+    <td>horizontal-tb</td>
+    <td class="example Text1">我家没有电脑。</td>
+    <td class="example Text1">Example text</td>
+    <td class="example Text1">1994年に至っては</td>
+  </tr>
+  <tr>
+    <td>vertical-lr</td>
+    <td class="example Text2">我家没有电脑。</td>
+    <td class="example Text2">Example text</td>
+    <td class="example Text2">1994年に至っては</td>
+  </tr>
+  <tr>
+    <td>vertical-rl</td>
+    <td class="example Text3">我家没有电脑。</td>
+    <td class="example Text3">Example text</td>
+    <td class="example Text3">1994年に至っては</td>
+  </tr>
+  <tr>
+    <td>sideways-lr</td>
+    <td class="example Text4">我家没有电脑。</td>
+    <td class="example Text4">Example text</td>
+    <td class="example Text4">1994年に至っては</td>
+  </tr>
+  <tr>
+    <td>sideways-rl</td>
+    <td class="example Text5">我家没有电脑。</td>
+    <td class="example Text5">Example text</td>
+    <td class="example Text5">1994年に至っては</td>
+  </tr>
+</table>
 ```
 
 ### CSS
@@ -116,11 +112,13 @@ Cette première partie permet uniquement de rendre les choses plus agréables à
 
 ```css
 table {
-  border-collapse:collapse;
+  border-collapse: collapse;
 }
 
-td, th {
-  border: 1px black solid; padding: 3px;
+td,
+th {
+  border: 1px black solid;
+  padding: 3px;
 }
 th {
   background-color: lightgray;
@@ -130,31 +128,36 @@ th {
 Ensuite, on ajoute la direction du contenu pour chaque cellule du tableau :
 
 ```css
-.example.Text1 span, .example.Text1 {
+.example.Text1 span,
+.example.Text1 {
   writing-mode: horizontal-tb;
   -webkit-writing-mode: horizontal-tb;
   -ms-writing-mode: horizontal-tb;
 }
 
-.example.Text2 span, .example.Text2 {
+.example.Text2 span,
+.example.Text2 {
   writing-mode: vertical-lr;
   -webkit-writing-mode: vertical-lr;
   -ms-writing-mode: vertical-lr;
 }
 
-.example.Text3 span, .example.Text3 {
+.example.Text3 span,
+.example.Text3 {
   writing-mode: vertical-rl;
   -webkit-writing-mode: vertical-rl;
   -ms-writing-mode: vertical-rl;
 }
 
-.example.Text4 span, .example.Text4 {
+.example.Text4 span,
+.example.Text4 {
   writing-mode: sideways-lr;
   -webkit-writing-mode: sideways-lr;
   -ms-writing-mode: sideways-lr;
 }
 
-.example.Text5 span, .example.Text5 {
+.example.Text5 span,
+.example.Text5 {
   writing-mode: sideways-rl;
   -webkit-writing-mode: sideways-rl;
   -ms-writing-mode: sideways-rl;

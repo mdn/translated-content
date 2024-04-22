@@ -20,69 +20,61 @@ _xScrollWidth_ es el ancho del contenido de _element_ en pixels.
 ## Ejemplo
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
+  <head>
     <title>Ejemplo</title>
     <style>
-        div {
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-        }
+      div {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
 
-        #aDiv {
-            width: 100px;
-        }
+      #aDiv {
+        width: 100px;
+      }
 
-        button {
-            margin-bottom: 2em;
-        }
+      button {
+        margin-bottom: 2em;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-    <div id="aDiv">
-        FooBar-FooBar-FooBar-FooBar
-    </div>
-    <button id="aButton">
-        Check for overflow
-    </button>
+  <body>
+    <div id="aDiv">FooBar-FooBar-FooBar-FooBar</div>
+    <button id="aButton">Check for overflow</button>
 
-    <div id="anotherDiv">
-        FooBar-FooBar-FooBar-FooBar
-    </div>
-    <button id="anotherButton">
-        Check for overflow
-    </button>
-</body>
-<script>
-    var buttonOne = document.getElementById('aButton'),
-    buttonTwo = document.getElementById('anotherButton'),
-    divOne = document.getElementById('aDiv'),
-    divTwo = document.getElementById('anotherDiv');
+    <div id="anotherDiv">FooBar-FooBar-FooBar-FooBar</div>
+    <button id="anotherButton">Check for overflow</button>
+  </body>
+  <script>
+    var buttonOne = document.getElementById("aButton"),
+      buttonTwo = document.getElementById("anotherButton"),
+      divOne = document.getElementById("aDiv"),
+      divTwo = document.getElementById("anotherDiv");
 
     //comprueba si un desbordamiento está ocurriendo
     function isOverflowing(element) {
-        return (element.scrollWidth > element.offsetWidth);
+      return element.scrollWidth > element.offsetWidth;
     }
 
     function alertOverflow(element) {
-        if (isOverflowing(element)) {
-            alert('El contenido desborda el contenedor.');
-        } else {
-            alert('Sin desobordamiento!');
-        }
+      if (isOverflowing(element)) {
+        alert("El contenido desborda el contenedor.");
+      } else {
+        alert("Sin desobordamiento!");
+      }
     }
 
-    buttonOne.addEventListener('click', function() {
-        alertOverflow(divOne);
+    buttonOne.addEventListener("click", function () {
+      alertOverflow(divOne);
     });
 
-    buttonTwo.addEventListener('click', function() {
-        alertOverflow(divTwo);
+    buttonTwo.addEventListener("click", function () {
+      alertOverflow(divTwo);
     });
-</script>
+  </script>
 </html>
 ```
 

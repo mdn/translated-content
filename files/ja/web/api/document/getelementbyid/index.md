@@ -30,14 +30,14 @@ var element = document.getElementById(id);
 
 ```html
 <html>
-<head>
-  <title>getElementById example</title>
-</head>
-<body>
-  <p id="para">Some text here</p>
-  <button onclick="changeColor('blue');">blue</button>
-  <button onclick="changeColor('red');">red</button>
-</body>
+  <head>
+    <title>getElementById example</title>
+  </head>
+  <body>
+    <p id="para">Some text here</p>
+    <button onclick="changeColor('blue');">blue</button>
+    <button onclick="changeColor('red');">red</button>
+  </body>
 </html>
 ```
 
@@ -45,7 +45,7 @@ var element = document.getElementById(id);
 
 ```js
 function changeColor(newColor) {
-  var elem = document.getElementById('para');
+  var elem = document.getElementById("para");
   elem.style.color = newColor;
 }
 ```
@@ -60,29 +60,29 @@ function changeColor(newColor) {
 
 {{domxref("Document.querySelector()")}} や {{domxref("Document.querySelectorAll()")}} などの他の要素検索メソッドとは異なり、 `getElementById()` はグローバルの `document` オブジェクトに対してのみ利用可能であり、 DOM のすべての要素オブジェクトのメソッドとしては利用*できません*。 ID の値は文書全体を通して固有でなければならないため、機能の「ローカル」バージョンは必要ないのです。
 
-## 例
+### 例
 
-```
+```html
 <!doctype html>
 <html>
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="parent-id">
-        <p>hello word1</p>
-        <p id="test1">hello word2</p>
-        <p>hello word3</p>
-        <p>hello word4</p>
+      <p>hello word1</p>
+      <p id="test1">hello word2</p>
+      <p>hello word3</p>
+      <p>hello word4</p>
     </div>
     <script>
-        var parentDOM = document.getElementById('parent-id');
-        var test1 = parentDOM.getElementById('test1');
-        //throw error
-        //Uncaught TypeError: parentDOM.getElementById is not a function
+      var parentDOM = document.getElementById("parent-id");
+      var test1 = parentDOM.getElementById("test1");
+      // throw error
+      // Uncaught TypeError: parentDOM.getElementById is not a function
     </script>
-</body>
+  </body>
 </html>
 ```
 
@@ -91,9 +91,9 @@ function changeColor(newColor) {
 **文書内にない要素** は `getElementById()` で検索されません。要素を作成し ID を割り当てたとき、 `getElementById()` でアクセスする前に {{domxref("Node.insertBefore()")}} またはそのたぐいのメソッドで、要素を文書ツリーに挿入しておく必要があります。
 
 ```js
-var element = document.createElement('div');
-element.id = 'testqq';
-var el = document.getElementById('testqq'); // el は null になります
+var element = document.createElement("div");
+element.id = "testqq";
+var el = document.getElementById("testqq"); // el は null になります
 ```
 
 **HTML 以外の文書**の場合。 DOM の実装では、どの属性が ID 類であるかを示す情報が必要です。 "id" という名前の属性は、文書の DTD で定義されていない限り ID 類とみなされません。 `id` 属性は [XHTML](/ja/docs/XHTML), [XUL](/ja/docs/XUL) などの一般的な場合には ID 類として定義されています。属性が ID 類であるかどうかが分からない実装では、 `null` を返すでしょう。

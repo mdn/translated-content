@@ -1,7 +1,6 @@
 ---
 title: "Document: styleSheets プロパティ"
 slug: Web/API/Document/styleSheets
-original_slug: Web/API/DocumentOrShadowRoot/styleSheets
 l10n:
   sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---

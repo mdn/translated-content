@@ -1,7 +1,6 @@
 ---
 title: window.clearTimeout
 slug: Web/API/clearTimeout
-original_slug: Web/API/WindowOrWorkerGlobalScope/clearTimeout
 ---
 
 {{ApiRef}}
@@ -24,25 +23,33 @@ Ejecute el script de abajo en el contexto de una página web y haga clic en la p
 
 ```js
 var alarm = {
-  remind: function(aMessage) {
+  remind: function (aMessage) {
     alert(aMessage);
     delete this.timeoutID;
   },
 
-  setup: function() {
+  setup: function () {
     this.cancel();
     var self = this;
-    this.timeoutID = window.setTimeout(function(msg) {self.remind(msg);}, 1000, "Wake up!");
+    this.timeoutID = window.setTimeout(
+      function (msg) {
+        self.remind(msg);
+      },
+      1000,
+      "Wake up!",
+    );
   },
 
-  cancel: function() {
-    if(typeof this.timeoutID == "number") {
+  cancel: function () {
+    if (typeof this.timeoutID == "number") {
       window.clearTimeout(this.timeoutID);
       delete this.timeoutID;
     }
-  }
+  },
 };
-window.onclick = function() { alarm.setup() };
+window.onclick = function () {
+  alarm.setup();
+};
 ```
 
 ## Notas

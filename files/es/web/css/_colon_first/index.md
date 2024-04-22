@@ -1,5 +1,5 @@
 ---
-title: ':first'
+title: ":first"
 slug: Web/CSS/:first
 ---
 
@@ -47,7 +47,7 @@ p {
 ```js
 document.querySelector("button").onclick = function () {
   window.print();
-}
+};
 ```
 
 ### Resultado

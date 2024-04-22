@@ -1,5 +1,5 @@
 ---
-title: 'EventSource: open イベント'
+title: "EventSource: open イベント"
 slug: Web/API/EventSource/open_event
 l10n:
   sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
@@ -16,9 +16,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('open', (event) => { });
+addEventListener("open", (event) => {});
 
-onopen = (event) => { };
+onopen = (event) => {};
 ```
 
 ## イベント型
@@ -28,10 +28,10 @@ onopen = (event) => { };
 ## 例
 
 ```js
-const evtSource = new EventSource('sse.php');
+const evtSource = new EventSource("sse.php");
 
 // addEventListener version
-evtSource.addEventListener('open', (e) => {
+evtSource.addEventListener("open", (e) => {
   console.log("The connection has been established.");
 });
 

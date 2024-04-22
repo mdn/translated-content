@@ -23,13 +23,15 @@ slug: Web/API/CustomEvent/detail
 
 ```js
 // add an appropriate event listener
-obj.addEventListener("cat", function(e) { process(e.detail) });
+obj.addEventListener("cat", function (e) {
+  process(e.detail);
+});
 
 // create and dispatch the event
 let event = new CustomEvent("cat", {
   detail: {
-    hazcheeseburger: true
-  }
+    hazcheeseburger: true,
+  },
 });
 obj.dispatchEvent(event);
 

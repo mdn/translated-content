@@ -15,7 +15,7 @@ CSS 다단 레이아웃 규격은 신문에서 볼 수 있듯이 콘텐츠를 �
         HTML의 기초 (<a href="/ko/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 입문서</a
         >)와 CSS 작동 방식에 대한 개념(<a
-          href="/en-US/docs/Learn/CSS/Introduction_to_CSS"
+          href="/ko/docs/Learn/CSS/Introduction_to_CSS"
           >CSS 입문서</a
         >를 공부하세요.)
       </td>
@@ -36,7 +36,7 @@ CSS 다단 레이아웃 규격은 신문에서 볼 수 있듯이 콘텐츠를 �
 
 우리의 착수 파일에는 아주 간단한 HTML이 포함되어 있습니다. 그 내용은 제목과 일부 단락이 내부에 있는 `container` 클래스 래퍼입니다.
 
-컨테이너 클래스에 해당하는 {{htmlelement("div")}}는 다단 컨테이너가 될 예정입니다. {{cssxref("column-count")}} 혹은 {{cssxref("column-width")}} 속성 중의 하나를 사용해서 다단으로 전환합니다. `column-count` 속성은 당신이 부여하는 값만큼 다단을 생성하게 되며, 당신의 스타일시트에 다음과 같은 CSS를 추가하고 페이지를 새로고침하면 당신은 삼단 레이아웃을 얻게 됩니다:
+컨테이너 클래스에 해당하는 {{htmlelement("div")}}는 다단 컨테이너가 될 예정입니다. {{cssxref("column-count")}} 혹은 {{cssxref("column-width")}} 속성 중의 하나를 사용해서 다단으로 전환합니다. `column-count` 속성은 당신이 부여하는 값만큼 다단을 생성하게 되며, 당신의 스타일시트에 다음과 같은 CSS를 추가하고 페이지를 새로고침하면 당신은 삼단 레이아웃을 얻게 됩니다.
 
 ```css
 .container {
@@ -51,25 +51,39 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
-
 ```
 
 ```html
 <div class="container">
   <h1>간단한 다단 예제</h1>
 
-  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate.
-  Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula.
-  Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse
-  ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit
-  quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+    aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+    pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at
+    ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer
+    ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur
+    vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus.
+    Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus
+    sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus.
+    Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis,
+    eget fermentum sapien.
+  </p>
 
-  <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique
-  elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit
-  cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis
-  dis parturient montes, nascetur ridiculus mus.</p>
+  <p>
+    Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+    ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+    est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+    tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies
+    lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+    vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+    penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+  </p>
 </div>
 ```
 
@@ -81,7 +95,7 @@ body {
 
 {{ EmbedLiveSample('다단_1', '100%', 400) }}
 
-다음과 같이 `column-width`를 사용하여 당신의 CSS를 변경하세요:
+다음과 같이 `column-width`를 사용하여 당신의 CSS를 변경하세요.
 
 ```css
 .container {
@@ -96,7 +110,10 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 ```
 
@@ -104,16 +121,28 @@ body {
 <div class="container">
   <h1>간단한 다단 예제</h1>
 
-  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate.
-  Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula.
-  Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse
-  ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit
-  quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+    aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+    pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at
+    ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer
+    ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur
+    vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus.
+    Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus
+    sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus.
+    Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis,
+    eget fermentum sapien.
+  </p>
 
-  <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique
-  elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit
-  cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis
-  dis parturient montes, nascetur ridiculus mus.</p>
+  <p>
+    Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+    ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+    est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+    tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies
+    lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+    vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+    penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+  </p>
 </div>
 ```
 
@@ -132,7 +161,7 @@ body {
 - {{cssxref("column-gap")}}를 사용해 다단 사이 간격의 크리를 변경하기.
 - {{cssxref("column-rule")}}를 가지고 다단 사이 규칙을 추가하기.
 
-상기 예제 용례에서 `column-gap` 속성을 추가해 간격의 크기를 변경하세요:
+상기 예제 용례에서 `column-gap` 속성을 추가해 간격의 크기를 변경하세요.
 
 ```css
 .container {
@@ -158,12 +187,15 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 .container {
- column-count: 3;
- column-gap: 20px;
- column-rule: 4px dotted rgb(79, 185, 227);
+  column-count: 3;
+  column-gap: 20px;
+  column-rule: 4px dotted rgb(79, 185, 227);
 }
 ```
 
@@ -171,16 +203,28 @@ body {
 <div class="container">
   <h1>간단한 다단 예제</h1>
 
-  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate.
-  Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula.
-  Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse
-  ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit
-  quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+    aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+    pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at
+    ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer
+    ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur
+    vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus.
+    Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus
+    sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus.
+    Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis,
+    eget fermentum sapien.
+  </p>
 
-  <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique
-  elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit
-  cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis
-  dis parturient montes, nascetur ridiculus mus.</p>
+  <p>
+    Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+    ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+    est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+    tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies
+    lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+    vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+    penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+  </p>
 </div>
 ```
 
@@ -199,7 +243,10 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 ```
 
@@ -207,59 +254,79 @@ body {
 <div class="container">
   <div class="card">
     <h2>나는 머리글이다.</h2>
-    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
-                vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies
-                tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci
-                vel, viverra egestas ligula.</p>
-    </div>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+      aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+      pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc,
+      at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta.
+      Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula.
+    </p>
+  </div>
 
-    <div class="card">
-      <h2>나는 머리글이다.</h2>
-      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
-                vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies
-                tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci
-                vel, viverra egestas ligula.</p>
-    </div>
+  <div class="card">
+    <h2>나는 머리글이다.</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+      aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+      pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc,
+      at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta.
+      Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula.
+    </p>
+  </div>
 
-    <div class="card">
-      <h2>나는 머리글이다.</h2>
-      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
-                vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies
-                tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci
-                vel, viverra egestas ligula.</p>
-    </div>
-    <div class="card">
-      <h2>나는 머리글이다.</h2>
-      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
-                vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies
-                tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci
-                vel, viverra egestas ligula.</p>
-    </div>
+  <div class="card">
+    <h2>나는 머리글이다.</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+      aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+      pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc,
+      at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta.
+      Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula.
+    </p>
+  </div>
+  <div class="card">
+    <h2>나는 머리글이다.</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+      aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+      pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc,
+      at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta.
+      Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula.
+    </p>
+  </div>
 
-    <div class="card">
-      <h2>나는 머리글이다.</h2>
-      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
-                vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies
-                tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci
-                vel, viverra egestas ligula.</p>
-    </div>
+  <div class="card">
+    <h2>나는 머리글이다.</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+      aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+      pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc,
+      at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta.
+      Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula.
+    </p>
+  </div>
 
-    <div class="card">
-      <h2>나는 머리글이다.</h2>
-      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
-                vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies
-                tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci
-                vel, viverra egestas ligula.</p>
-    </div>
+  <div class="card">
+    <h2>나는 머리글이다.</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+      aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+      pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc,
+      at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta.
+      Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula.
+    </p>
+  </div>
 
-    <div class="card">
-      <h2>나는 머리글이다.</h2>
-      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
-                vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies
-                tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci
-                vel, viverra egestas ligula.</p>
-    </div>
-
+  <div class="card">
+    <h2>나는 머리글이다.</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+      aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+      pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc,
+      at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta.
+      Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula.
+    </p>
+  </div>
 </div>
 ```
 
@@ -287,8 +354,8 @@ body {
 .card {
   break-inside: avoid;
   page-break-inside: avoid;
-  background-color: rgb(207,232,220);
-  border: 2px solid rgb(79,185,227);
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
   padding: 10px;
   margin: 0 0 1em 0;
 }
@@ -301,7 +368,10 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 2em auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 ```
 
@@ -309,59 +379,79 @@ body {
 <div class="container">
   <div class="card">
     <h2>나는 머리글이다.</h2>
-    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
-                vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies
-                tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci
-                vel, viverra egestas ligula.</p>
-    </div>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+      aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+      pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc,
+      at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta.
+      Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula.
+    </p>
+  </div>
 
-    <div class="card">
-      <h2>나는 머리글이다.</h2>
-      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
-                vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies
-                tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci
-                vel, viverra egestas ligula.</p>
-    </div>
+  <div class="card">
+    <h2>나는 머리글이다.</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+      aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+      pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc,
+      at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta.
+      Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula.
+    </p>
+  </div>
 
-    <div class="card">
-      <h2>나는 머리글이다.</h2>
-      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
-                vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies
-                tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci
-                vel, viverra egestas ligula.</p>
-    </div>
-    <div class="card">
-      <h2>나는 머리글이다.</h2>
-      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
-                vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies
-                tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci
-                vel, viverra egestas ligula.</p>
-    </div>
+  <div class="card">
+    <h2>나는 머리글이다.</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+      aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+      pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc,
+      at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta.
+      Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula.
+    </p>
+  </div>
+  <div class="card">
+    <h2>나는 머리글이다.</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+      aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+      pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc,
+      at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta.
+      Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula.
+    </p>
+  </div>
 
-    <div class="card">
-      <h2>나는 머리글이다.</h2>
-      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
-                vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies
-                tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci
-                vel, viverra egestas ligula.</p>
-    </div>
+  <div class="card">
+    <h2>나는 머리글이다.</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+      aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+      pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc,
+      at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta.
+      Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula.
+    </p>
+  </div>
 
-    <div class="card">
-      <h2>나는 머리글이다.</h2>
-      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
-                vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies
-                tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci
-                vel, viverra egestas ligula.</p>
-    </div>
+  <div class="card">
+    <h2>나는 머리글이다.</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+      aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+      pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc,
+      at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta.
+      Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula.
+    </p>
+  </div>
 
-    <div class="card">
-      <h2>나는 머리글이다.</h2>
-      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
-                vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies
-                tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci
-                vel, viverra egestas ligula.</p>
-    </div>
-
+  <div class="card">
+    <h2>나는 머리글이다.</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+      aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
+      pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc,
+      at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta.
+      Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula.
+    </p>
+  </div>
 </div>
 ```
 

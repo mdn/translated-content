@@ -27,8 +27,8 @@ var myindexNames = objectStore.indexNames;
 // 让我们来打开我们的数据库
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Database initialised.</li>';
+DBOpenRequest.onsuccess = function (event) {
+  note.innerHTML += "<li>Database initialised.</li>";
 
   // 将打开数据库的结果存储在 db 变量中
   // 下面经常用到这个
@@ -40,19 +40,29 @@ DBOpenRequest.onsuccess = function(event) {
 
 function addData() {
   // 创建一个新对象以准备插入到 IDB 中
-  var newItem = [ { taskTitle: "Walk dog", hours: 19, minutes: 30, day: 24, month: "December", year: 2013, notified: "no" } ];
+  var newItem = [
+    {
+      taskTitle: "Walk dog",
+      hours: 19,
+      minutes: 30,
+      day: 24,
+      month: "December",
+      year: 2013,
+      notified: "no",
+    },
+  ];
 
   // 打开读/写数据库事务，准备添加数据
   var transaction = db.transaction(["toDoList"], "readwrite");
 
   // 当所有事情都完成时，报告事务完成的成功情况
-  transaction.oncomplete = function(event) {
-    note.innerHTML += '<li>Transaction completed.</li>';
+  transaction.oncomplete = function (event) {
+    note.innerHTML += "<li>Transaction completed.</li>";
   };
 
-
-  transaction.onerror = function(event) {
-  note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
+  transaction.onerror = function (event) {
+    note.innerHTML +=
+      "<li>Transaction not opened due to error. Duplicate items not allowed.</li>";
   };
 
   // 在事务上创建对象存储
@@ -62,11 +72,11 @@ function addData() {
   // 请求将 newItem 对象 添加到对象存储区
   var objectStoreRequest = objectStore.add(newItem[0]);
 
-  objectStoreRequest.onsuccess = function(event) {
+  objectStoreRequest.onsuccess = function (event) {
     // 报告我们请求的成功
-    note.innerHTML += '<li>Request successful.</li>';
+    note.innerHTML += "<li>Request successful.</li>";
   };
-};
+}
 ```
 
 ## 规范

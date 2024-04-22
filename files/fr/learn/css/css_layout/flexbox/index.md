@@ -1,8 +1,6 @@
 ---
 title: Flexbox
 slug: Learn/CSS/CSS_layout/Flexbox
-translation_of: Learn/CSS/CSS_layout/Flexbox
-original_slug: Apprendre/CSS/CSS_layout/Flexbox
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
@@ -76,10 +74,10 @@ Lorsque les éléments sont disposés en boîtes flexibles, ils sont disposés l
 
 ![Terminologie pour les boîtes modulables](flex_terms.png)
 
-- L'**axe principal (*main axis*)** est l'axe de la direction dans laquelle sont disposés les éléments flex (par exemple, horizontalement sur la page, ou verticalement de haut en bas de la page). Le début et la fin de cet axe sont appelés l'**origine principale (*main start*)** et la **fin principale (*main end*)**.
-- L'**axe croisé (*cross axis*)** est l'axe perpendiculaire à l'axe principal, c'est-à-dire à la direction dans laquelle sont disposés les éléments flex. Le début et la fin de cet axe sont appelés le **début (*cross start*)** et la **fin (*cross end*)** de l'axe croisé.
-- L'élément parent dont la propriété est `display: flex` ([`<section>`](/fr/docs/Web/HTML/Element/section) dans notre exemple) est appelé le **conteneur flex (*flex container*)**.
-- Les éléments disposés en tant que boîtes flexibles à l'intérieur du conteneur flex sont appelés **éléments flex (*flex items*)** (les éléments [`<article>`](/fr/docs/Web/HTML/Element/article) dans notre exemple).
+- L'**axe principal (_main axis_)** est l'axe de la direction dans laquelle sont disposés les éléments flex (par exemple, horizontalement sur la page, ou verticalement de haut en bas de la page). Le début et la fin de cet axe sont appelés l'**origine principale (_main start_)** et la **fin principale (_main end_)**.
+- L'**axe croisé (_cross axis_)** est l'axe perpendiculaire à l'axe principal, c'est-à-dire à la direction dans laquelle sont disposés les éléments flex. Le début et la fin de cet axe sont appelés le **début (_cross start_)** et la **fin (_cross end_)** de l'axe croisé.
+- L'élément parent dont la propriété est `display: flex` ([`<section>`](/fr/docs/Web/HTML/Element/section) dans notre exemple) est appelé le **conteneur flex (_flex container_)**.
+- Les éléments disposés en tant que boîtes flexibles à l'intérieur du conteneur flex sont appelés **éléments flex (_flex items_)** (les éléments [`<article>`](/fr/docs/Web/HTML/Element/article) dans notre exemple).
 
 Gardez cette terminologie en tête en lisant les paragraphes suivants. Vous pouvez toujours vous y référer si vous avez un doute sur la signification des termes utilisés.
 

@@ -1,11 +1,6 @@
 ---
 title: display-mode
 slug: Web/CSS/@media/display-mode
-tags:
-  - CSS
-  - Caractéristique média
-  - Reference
-translation_of: Web/CSS/@media/display-mode
 ---
 
 {{CSSRef}}

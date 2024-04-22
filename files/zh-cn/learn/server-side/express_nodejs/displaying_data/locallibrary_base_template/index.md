@@ -7,7 +7,7 @@ slug: Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_templat
 
 开启 **/views/layout.pug** ，并以下列代码置换其内容。
 
-```html
+```pug
 doctype html
 html(lang='en')
   head
@@ -57,9 +57,9 @@ html(lang='en')
 
 ```css
 .sidebar-nav {
-    margin-top: 20px;
-    padding: 0;
-    list-style: none;
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
 }
 ```
 

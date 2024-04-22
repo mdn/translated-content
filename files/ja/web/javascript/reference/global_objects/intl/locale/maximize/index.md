@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/maximize
 ## 構文
 
 ```js
-maximize()
+maximize();
 ```
 
 ### 返値
@@ -28,7 +28,7 @@ maximize()
 ### maximize の使用
 
 ```js
-let myLocale = new Intl.Locale("ja", {hourCycle: "h24", calendar: "gregory"});
+let myLocale = new Intl.Locale("ja", { hourCycle: "h24", calendar: "gregory" });
 console.log(myLocale.baseName); // "ja" と表示
 console.log(myLocale.toString()); // "ja-u-ca-gregory-hc-h24" と表示
 let myLocMaximized = myLocale.maximize();

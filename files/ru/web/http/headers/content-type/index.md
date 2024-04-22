@@ -1,9 +1,8 @@
 ---
 title: Content-Type
 slug: Web/HTTP/Headers/Content-Type
-translation_of: Web/HTTP/Headers/Content-Type
-original_slug: Web/HTTP/Заголовки/Content-Type
 ---
+
 {{HTTPSidebar}}
 
 Заголовок-сущность **`Content-Type`** используется для того, чтобы определить {{Glossary("MIME type","MIME тип")}} ресурса.
@@ -55,8 +54,8 @@ Content-Type: multipart/form-data; boundary=something
 
 ```html
 <form action="/" method="post" enctype="multipart/form-data">
-  <input type="text" name="description" value="some text">
-  <input type="file" name="myFile">
+  <input type="text" name="description" value="some text" />
+  <input type="file" name="myFile" />
   <button type="submit">Submit</button>
 </form>
 ```
@@ -82,10 +81,10 @@ Content-Type: text/plain
 
 ## Спецификации
 
-| Спецификация                                                         | Заголовок                                                     |
-| -------------------------------------------------------------------- | ------------------------------------------------------------- |
+| Спецификация                                        | Заголовок                                                     |
+| --------------------------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7233", "Content-Type in multipart", "4.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Range Requests        |
-| {{RFC("7231", "Content-Type", "3.1.1.5")}}             | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+| {{RFC("7231", "Content-Type", "3.1.1.5")}}          | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Совместимость с браузерами
 

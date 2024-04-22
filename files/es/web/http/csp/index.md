@@ -5,7 +5,7 @@ slug: Web/HTTP/CSP
 
 {{HTTPSidebar}}
 
-**Política de Seguridad del Contenido** o ( {{Glossary("CSP")}} ) - del inglés ***Content Security Policy*** - es una capa de seguridad adicional que ayuda a prevenir y mitigar algunos tipos de ataque, incluyendo Cross Site Scripting ( {{Glossary("XSS")}} ) y ataques de inyección de datos. Estos ataques son usados con diversos propósitos, desde robar información hasta desfiguración de sitios o distribución de malware .
+**Política de Seguridad del Contenido** o ( {{Glossary("CSP")}} ) - del inglés **_Content Security Policy_** - es una capa de seguridad adicional que ayuda a prevenir y mitigar algunos tipos de ataque, incluyendo Cross Site Scripting ( {{Glossary("XSS")}} ) y ataques de inyección de datos. Estos ataques son usados con diversos propósitos, desde robar información hasta desfiguración de sitios o distribución de malware .
 
 CSP está diseñado para ser completamente retrocompatible (excepto la versión 2 de CSP, donde hay algunas menciones explícitas de inconsistencia en la retrocompatibilidad; más detalles [aquí](https://www.w3.org/TR/CSP2) sección 1.1). Los navegadores que no lo soportan siguen funcionando con los servidores que lo implementan y viceversa: los navegadores que no soportan CSP simplemente lo ignoran, funcionando como siempre y delegando a la política mismo-origen para contenido web. Si el sitio web no ofrece la cabecera CSP, los navegadores igualmente usan la política estándar [mismo-origen](/es/docs/Web/Security/Same-origin_policy).
 
@@ -43,7 +43,7 @@ La _política_ es una cadena de caracteres que contiene las directivas que descr
 
 ### Describiendo una política
 
-Una política se describe utilizando una serie de directivas de políticas, cada una de las cuales describe la política para un determinado tipo de recurso o área de política. Una política debe incluir una directiva de políticas {{CSP ("default-src")}}, que es una alternativa para otros tipos de recursos cuando no tienen políticas propias (para obtener una lista completa, consulte la descripción de la directiva {{CSP("default-src")}} ). Una política debe incluir una directiva {{CSP ("default-src")}} o {{CSP ("script-src")}} para evitar la ejecución de scripts en línea, así como bloquear el uso de `eval()`. Una política debe incluir una directiva {{CSP ("default-src")}} o {{CSP ("style-src")}} para restringir la aplicación de estilos en línea desde un elemento {{HTMLElement ("style")}}} o un atributo `style`.
+Una política se describe utilizando una serie de directivas de políticas, cada una de las cuales describe la política para un determinado tipo de recurso o área de política. Una política debe incluir una directiva de políticas {{CSP ("default-src")}}, que es una alternativa para otros tipos de recursos cuando no tienen políticas propias (para obtener una lista completa, consulte la descripción de la directiva {{CSP("default-src")}} ). Una política debe incluir una directiva {{CSP ("default-src")}} o {{CSP ("script-src")}} para evitar la ejecución de scripts en línea, así como bloquear el uso de `eval()`. Una política debe incluir una directiva {{CSP ("default-src")}} o {{CSP ("style-src")}} para restringir la aplicación de estilos en línea desde un elemento {{HTMLElement ("style")}} o un atributo `style`.
 
 ## Ejemplos: Casos de usos frecuentes
 
@@ -158,11 +158,11 @@ Content-Security-Policy: default-src 'none'; style-src cdn.example.com; report-u
 El código HTML de `signup.html` es el siguiente:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>Sign Up</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     ... Content ...

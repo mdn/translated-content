@@ -26,7 +26,7 @@ var myCred = request.credentials;
 다음의 snippet 에서, 우리는 {{domxref("Request.Request()")}} constructor 를 사용하여 (스크립트와 동일한 디렉토리의 이미지 파일을 위한) 새로운 요청(request)를 생성하고, 변수에 요청(request) credentials 을 저장한다.
 
 ```js
-var myRequest = new Request('flowers.jpg');
+var myRequest = new Request("flowers.jpg");
 var myCred = myRequest.credentials; // returns "same-origin" by default
 ```
 

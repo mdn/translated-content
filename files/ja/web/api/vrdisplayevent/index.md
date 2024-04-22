@@ -28,9 +28,11 @@ _`VRDisplayEvent` は、親オブジェクトである {{domxref("Event")}} か�
 ## 例
 
 ```js
-window.addEventListener('vrdisplaypresentchange', (e) => {
-  console.log(`Display ${e.display.displayId} presentation has changed. Reason given: ${e.reason}.`);
-})
+window.addEventListener("vrdisplaypresentchange", (e) => {
+  console.log(
+    `Display ${e.display.displayId} presentation has changed. Reason given: ${e.reason}.`,
+  );
+});
 ```
 
 ## 仕様書
@@ -45,5 +47,4 @@ window.addEventListener('vrdisplaypresentchange', (e) => {
 
 ## 関連情報
 
-- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — Mozilla VR チームが提供するデモ、ダウンロード、その他のリソース。
+- [WebVR API](/ja/docs/Web/API/WebVR_API)

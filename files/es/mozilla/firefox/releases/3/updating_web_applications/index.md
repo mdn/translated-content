@@ -1,7 +1,6 @@
 ---
 title: Actualizar aplicaciones web para Firefox 3
 slug: Mozilla/Firefox/Releases/3/Updating_web_applications
-original_slug: Actualizar_aplicaciones_web_para_Firefox_3
 ---
 
 {{FirefoxSidebar}}

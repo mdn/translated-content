@@ -1,8 +1,8 @@
 ---
-title: 必要な情報を保存する — 変数
+title: 必要な情報を保管する — 変数
 slug: Learn/JavaScript/First_steps/Variables
 l10n:
-  sourceCommit: 7ff26ceb6c6f1400d4297b22cb92e3786e35eac7
+  sourceCommit: bd2701f4618e1fd763aa62da3bc14bf050c75f1f
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}
@@ -14,12 +14,12 @@ l10n:
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        基本的なコンピューターの知識、HTML と CSS
-        の基本についての理解、JavaScript が何かが分かっていること。
+        HTML と CSS の基本についての理解、
+        JavaScript が何かが分かっていること。
       </td>
     </tr>
     <tr>
-      <th scope="row">目的:</th>
+      <th scope="row">目標:</th>
       <td>JavaScript の変数についての基礎を習得する。</td>
     </tr>
   </tbody>
@@ -43,14 +43,14 @@ l10n:
 ```
 
 ```js
-const buttonA = document.querySelector('#button_A');
-const headingA = document.querySelector('#heading_A');
+const buttonA = document.querySelector("#button_A");
+const headingA = document.querySelector("#heading_A");
 
 buttonA.onclick = () => {
-  const name = prompt('あなたの名前は何ですか？');
+  const name = prompt("あなたの名前は何ですか？");
   alert(`こんにちは、${name}さん、はじめまして！`);
   headingA.textContent = `${name}さん、ようこそ`;
-}
+};
 ```
 
 {{ EmbedLiveSample('Variable_example', '100%', 120) }}
@@ -67,13 +67,15 @@ buttonA.onclick = () => {
 ```
 
 ```js example-bad
-const buttonB = document.querySelector('#button_B');
-const headingB = document.querySelector('#heading_B');
+const buttonB = document.querySelector("#button_B");
+const headingB = document.querySelector("#heading_B");
 
 buttonB.onclick = () => {
-    alert(`こんにちは、${prompt('あなたの名前は何ですか？')}さん、はじめまして！`);
-    headingB.textContent = `${prompt('あなたの名前は何ですか？')}さん、ようこそ`;
-}
+  alert(
+    `こんにちは、${prompt("あなたの名前は何ですか？")}さん、はじめまして！`,
+  );
+  headingB.textContent = `${prompt("あなたの名前は何ですか？")}さん、ようこそ`;
+};
 ```
 
 {{ EmbedLiveSample('Without_a_variable', '100%', 120) }}
@@ -121,7 +123,7 @@ scoobyDoo;
 変数を宣言したら、値を入れて初期化できます。初期化するには、変数名に続けて等号記号 (`=`) を入力し、変数に入れたい値を渡します。例えば次のように。
 
 ```js
-myName = 'Chris';
+myName = "Chris";
 myAge = 37;
 ```
 
@@ -135,7 +137,7 @@ myAge;
 変数の宣言と初期化を一度にすることもできます。
 
 ```js
-let myDog = 'Rover';
+let myDog = "Rover";
 ```
 
 2 つの操作を別個の行で行うより早いので、おそらくほとんどの場合、この方法で書くでしょう。
@@ -156,7 +158,7 @@ JavaScript が最初に作成されたときには、これが変数を宣言す
 はじめに、変数を宣言して初期化する複数行の JavaScript プログラムを作成した場合、変数を初期化した後で実際に変数を `var` で宣言することができます。例えば次のようになります。
 
 ```js
-myName = 'Chris';
+myName = "Chris";
 
 function logName() {
   console.log(myName);
@@ -176,22 +178,22 @@ var myName;
 第二に、`var` を使用するとき、好きなだけ同じ変数を何度でも宣言することができます、しかし `let` ではできません。次の例は動作します。
 
 ```js
-var myName = 'Chris';
-var myName = 'Bob';
+var myName = "Chris";
+var myName = "Bob";
 ```
 
 しかし、次のようにすると 2 行目でエラーが発生します。
 
 ```js example-bad
-let myName = 'Chris';
-let myName = 'Bob';
+let myName = "Chris";
+let myName = "Bob";
 ```
 
 代わりにこれをしなければならないでしょう。
 
 ```js
-let myName = 'Chris';
-myName = 'Bob';
+let myName = "Chris";
+myName = "Bob";
 ```
 
 繰り返しますが、これは言語の賢明な決定です。変数を再宣言する必要はありません。それは物事をより混乱させるだけです。
@@ -200,22 +202,22 @@ myName = 'Bob';
 
 > **メモ:** このコードをブラウザーコンソールで試す場合は、ここにあるコードブロックのそれぞれを丸ごとコピー & ペーストするのがよいでしょう。[Chrome のコンソールの機能](https://goo.gle/devtools-const-repl)には、`let` と `const` による変数の再宣言が許可されているものがあります。
 >
-> ```
-> > let myName = 'Chris';
->   let myName = 'Bob';
+> ```plain
+> > let myName = "Chris";
+>   let myName = "Bob";
 > // 1 回の入力: SyntaxError: Identifier 'myName' has already been declared
 >
-> > let myName = 'Chris';
-> > let myName = 'Bob';
+> > let myName = "Chris";
+> > let myName = "Bob";
 > // 2 回の入力: 両方とも成功
 > ```
 
-## 変数の値を変更する
+## 変数の更新
 
 変数を初期化して値が入ったら、もう一度値を入れなおすことで、変数の値を変更することができます。次の行を入力してみてください。
 
 ```js
-myName = 'Bob';
+myName = "Bob";
 myAge = 40;
 ```
 
@@ -226,7 +228,7 @@ myAge = 40;
 - 上記以外の文字を使用するのはやめましょう。環境によってはエラーとなったり、他の国の人々にとって理解しがたいものとなります。
 - 変数名の先頭にアンダースコアは使用してはいけません。一部の JavaScript のコンストラクターにとっては特別な意味を持つため、問題となることがあります。
 - 変数名の先頭に数字を使用してはいけません。これは JavaScript の文法エラーとなります。
-- 複数の単語をつなげる場合は、[「小文字から始まるキャメルケース」](https://ja.wikipedia.org/wiki/キャメルケース#キャメルケースの種類)と呼ばれる書き方に従いましょう。最初の単語を全て小文字で書いて、その後に続く単語の最初の文字を大文字にする記法です。この記事ではこの書き方を採用しています。
+- 複数の単語をつなげる場合は、{{Glossary("camel_case", "小文字で始まるキャメルケース")}}と呼ばれる書き方に従いましょう。最初の単語を全て小文字で書いて、その後に続く単語の最初の文字を大文字にする記法です。この記事ではこの書き方を採用しています。
 - 保持するデータを説明する、分かりやすい名前を付けましょう。1 つの文字・数字や、長すぎる命名はしないようにしましょう。
 - 変数名は大文字・小文字を区別します。`myage` と `myAge` は違うものになります。
 - 最後に、JavaScript の予約語 ( これは JavaScript の文法を構成する単語のことです) を変数名には付けないようにしましょう。`var`、`function`、`let`、`for` 等を変数名として使用することは出来ません。ブラウザーはそれを異なるように解釈し、結果としてエラーとなるでしょう。
@@ -265,8 +267,6 @@ thisisareallylongvariablenameman
 
 変数に保持する値にはいくつかの種類があります。このセクションでは、その種類について簡単に解説します。さらに詳細については、もっと先の記事で紹介します。
 
-ここまで最初の 2 つは見てきましたが、他にもあります。
-
 ### 数値型
 
 変数には数値を格納することができます。数値は 30 のような整数値や、2.456 のような実数値（浮動小数点数とも呼ばれます）が存在します。その他の言語とは違い、JavaScript ではデータ型を宣言する必要はありません。もし数値を変数に設定するならば、引用符は付けてはいけません。
@@ -280,12 +280,12 @@ let myAge = 17;
 文字列とは文字が連なったもののことです。変数に文字列値を設定する場合、単一引用符 (`'`) または二重引用符 (`"`) で文字を囲みます。囲み忘れると、JavaScript はその文字を変数名として解釈しようとしてしまいます。
 
 ```js
-let dolphinGoodbye = 'So long and thanks for all the fish';
+let dolphinGoodbye = "So long and thanks for all the fish";
 ```
 
-### 論理値
+### 論理型
 
-論理値は `true` と `false` の 2 つの値だけを持ちます。どちらのコードを実行するべきかといった、条件を判定するためによく使います。例として、簡単なコードは以下のようなものです。
+論理型は真偽値です。 `true` と `false` の 2 つの値を持ちます。どちらのコードを実行するべきかといった、条件を判定するためによく使います。例として、簡単なコードは以下のようなものです。
 
 ```js
 let iAmAlive = true;
@@ -304,7 +304,7 @@ let test = 6 < 3;
 配列とは角括弧 (`[]`) にカンマで区切った複数の値を格納できるオブジェクトです。コンソールに以下のように入力してみましょう。
 
 ```js
-let myNameArray = ['Chris', 'Bob', 'Jim'];
+let myNameArray = ["Chris", "Bob", "Jim"];
 let myNumberArray = [10, 15, 40];
 ```
 
@@ -326,13 +326,13 @@ myNumberArray[2]; // 40 と表示されます
 次の行をコンソールに入力してみましょう。
 
 ```js
-let dog = { name : 'ポチ', breed : 'ダルメシアン' };
+let dog = { name: "ポチ", breed: "ダルメシアン" };
 ```
 
 オブジェクトに格納された情報を取得するには、以下のような書き方をします。
 
 ```js
-dog.name
+dog.name;
 ```
 
 とりあえずオブジェクトについて、今はここまでです。オブジェクトについてはもっと先のモジュールで紹介します。
@@ -344,19 +344,19 @@ JavaScript は他の言語と異なり、「動的型付け言語」という、
 たとえば、もし変数を宣言して、引用符で囲んだ値を渡すとします。すると、ブラウザーはこれを文字列として扱うでしょう。
 
 ```js
-let myString = 'Hello';
+let myString = "Hello";
 ```
 
 それが数字を含んでいたとしても、文字列になってしまうので、気を付けてください。
 
 ```js
-let myNumber = '500'; // oops, this is still a string
+let myNumber = "500"; // おっと、これはまだ文字列です
 typeof myNumber;
-myNumber = 500; // much better — now this is a number
+myNumber = 500; // はるかに良い — これで数値になりました
 typeof myNumber;
 ```
 
-上の 4 行をコンソールに一つづつ入力して、結果を見てみてください。[`typeof`](/ja/docs/Web/JavaScript/Reference/Operators/typeof) という演算子に気づきましたか？これは渡した変数のその時点でのデータ型を返します。最初に使用したとき、`myNumber` には `'500'` という文字列が入っているため、`string` と返ってきます。2 回目に呼んだときに何が返ってくるかを見てみましょう。
+上の 4 行をコンソールに一つずつ入力して、結果を見てみてください。[`typeof`](/ja/docs/Web/JavaScript/Reference/Operators/typeof) という演算子に気づきましたか？これは渡した変数のその時点でのデータ型を返します。最初に使用したとき、`myNumber` には `'500'` という文字列が入っているため、`string` と返ってきます。2 回目に呼んだときに何が返ってくるかを見てみましょう。
 
 ## JavaScript の定数
 
@@ -394,15 +394,15 @@ count = 2;
 JavaScript で定数は、常に同じ値に名前を付けなければなりませんが、名前を付けた値の内容は変更することができることに注意してください。これは、数値や論理値のような単純な型では有益な違いではありませんが、オブジェクトを考えてみてください。
 
 ```js
-const bird = { species : 'Kestrel'};
-console.log(bird.species);  // "Kestrel"
+const bird = { species: "Kestrel" };
+console.log(bird.species); // "Kestrel"
 ```
 
 オブジェクトの内容が変わっても、定数は同じオブジェクトを指しているので、`const` を使って宣言したオブジェクトのプロパティを更新したり、追加したり、削除したりすることができます。
 
 ```js
-bird.species = 'Striated Caracara';
-console.log(bird.species);  // "Striated Caracara"
+bird.species = "Striated Caracara";
+console.log(bird.species); // "Striated Caracara"
 ```
 
 ## いつ const を使い、いつ let を使うか
@@ -415,12 +415,12 @@ _可能であれば `const` を使用し、必要ならば `let` を使用する
 
 つまり、宣言時に変数を初期化でき、後で再代入する必要がない場合は、その変数を定数にします。
 
-## スキルをテストしよう
+## スキルテスト
 
-この記事の最後に到達しましたが、最も大事な情報を覚えていますか？移動する前に、情報を取得したかのテストを見ることができます — [Test your skills: variables](/ja/docs/Learn/JavaScript/First_steps/Test_your_skills:_variables) を見てください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: 変数](/ja/docs/Learn/JavaScript/First_steps/Test_your_skills:_variables)を見てください。
 
 ## まとめ
 
 ここまでで JavaScript の変数の作り方について理解して、それ以外にもそれなりの知識を得ましたね。次の記事では、数値に焦点を当てて、JavaScript の数値計算の基礎について見ていきます。
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}
+{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Maths", "Learn/JavaScript/First_steps")}}

@@ -1,6 +1,9 @@
 ---
-title: HTMLObjectElement.useMap
+title: "HTMLObjectElement: useMap プロパティ"
+short-title: useMap
 slug: Web/API/HTMLObjectElement/useMap
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{APIRef("HTML DOM")}}

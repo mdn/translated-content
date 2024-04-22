@@ -1,12 +1,15 @@
 ---
 title: matrix()
 slug: Web/CSS/transform-function/matrix
-original_slug: Web/CSS/transform-function/matrix()
+l10n:
+  sourceCommit: 88e01e6f934ea5f2413cecfab1b5112cf819ba09
 ---
 
 {{CSSRef}}
 
 **`matrix()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、二次元同次変換行列を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
+
+{{EmbedInteractiveExample("pages/css/function-matrix.html")}}
 
 > **メモ:** `matrix(a, b, c, d, tx, ty)` は `matrix3d(a, b, 0, 0, c, d, 0, 0, 0, 0, 1, 0, tx, ty, 0, 1)` の短縮形です。
 
@@ -28,30 +31,30 @@ matrix(a, b, c, d, tx, ty)
 <table class="standard-table">
   <thead>
     <tr>
-      <th scope="col">ℝ^2 のデカルト座標</th>
-      <th scope="col">ℝℙ^2 の同次座標</th>
-      <th scope="col">ℝ^3 のデカルト座標</th>
-      <th scope="col">ℝℙ^3 の同次座標</th>
+      <th scope="col"><a href="/ja/docs/Web/CSS/transform-function#直交座標系">直交座標系</a> (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^2</a>)</th>
+      <th scope="col"><a href="https://en.wikipedia.org/wiki/Homogeneous_coordinates">同次座標系</a> (<a href="https://en.wikipedia.org/wiki/Real_projective_plane">ℝℙ^2</a>)</th>
+      <th scope="col">直交座標系 (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^3</a>)</th>
+      <th scope="col">同次座標系 (<a href="https://en.wikipedia.org/wiki/Real_projective_space">ℝℙ^3</a>)</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td rowspan="2">
         <math
-          ><mfenced
+          ><mrow><mo>(</mo
             ><mtable
               ><mtr
                 ><mtd><mi>a</mi> </mtd><mtd><mi>c</mi> </mtd></mtr
               ><mtr
                 ><mtd><mi>b</mi> </mtd><mtd><mi>d</mi></mtd></mtr
               ></mtable
-            ></mfenced
+            ><mo>)</mo></mrow
           ></math
         >
       </td>
       <td>
         <math
-          ><mfenced
+          ><mrow><mo>(</mo
             ><mtable
               ><mtr
                 ><mtd><mi>a</mi> </mtd><mtd><mi>c</mi> </mtd
@@ -63,13 +66,13 @@ matrix(a, b, c, d, tx, ty)
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
                 ><mtd><mn>1</mn></mtd></mtr
               ></mtable
-            ></mfenced
+            ><mo>)</mo></mrow
           ></math
         >
       </td>
       <td rowspan="2">
         <math
-          ><mfenced
+          ><mrow><mo>(</mo
             ><mtable
               ><mtr
                 ><mtd><mi>a</mi> </mtd><mtd><mi>c</mi> </mtd
@@ -81,13 +84,13 @@ matrix(a, b, c, d, tx, ty)
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
                 ><mtd><mn>1</mn></mtd></mtr
               ></mtable
-            ></mfenced
+            ><mo>)</mo></mrow
           ></math
         >
       </td>
       <td rowspan="2">
         <math
-          ><mfenced
+          ><mrow><mo>(</mo
             ><mtable
               ><mtr
                 ><mtd><mi>a</mi> </mtd><mtd><mi>c</mi> </mtd
@@ -102,7 +105,7 @@ matrix(a, b, c, d, tx, ty)
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
                 ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
               ></mtable
-            ></mfenced
+            ><mo>)</mo></mrow
           ></math
         >
       </td>
@@ -114,9 +117,9 @@ matrix(a, b, c, d, tx, ty)
 </table>
 
 値は次の関数を表します。
-`matrix( scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY() )`
+`matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY())`
 
-<h2 id="Examples">例</h2>
+## 例
 
 ### HTML
 
@@ -155,6 +158,10 @@ div {
 ## 関連情報
 
 - {{cssxref("transform")}}
+- 独立した座標変換プロパティ:
+  - {{cssxref("translate")}}
+  - {{cssxref("scale")}}
+  - {{cssxref("rotate")}}
 - {{cssxref("&lt;transform-function&gt;")}}
-- [`matrix3d()`](/ja/docs/Web/CSS/transform-function/matrix3d())
+- [`matrix3d()`](/ja/docs/Web/CSS/transform-function/matrix3d)
 - [Understanding the CSS Transforms Matrix](https://dev.opera.com/articles/understanding-the-css-transforms-matrix/)

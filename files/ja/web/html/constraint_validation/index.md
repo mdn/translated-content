@@ -1,7 +1,6 @@
 ---
 title: 制約検証
 slug: Web/HTML/Constraint_validation
-original_slug: Web/Guide/HTML/Constraint_validation
 ---
 
 {{HTMLSidebar}}
@@ -23,10 +22,10 @@ HTML5 では、基本的な制約は 2 通りの方法で定義されます。
 
 [`type`](/ja/docs/Web/HTML/Element/input#type) 属性の組込み制約は次の通りです。
 
-| 入力型                                                         | 制約の説明                                                                                                                                        | 関連付けられた違反                                                                    |
-| --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| 入力型                                                          | 制約の説明                                                                                                                                                        | 関連付けられた違反                                                       |
+| --------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
 | [`<input type="URL">`](/ja/docs/Web/HTML/Element/input/url)     | 値は絶対 [URL](/ja/docs/Learn/Common_questions/What_is_a_URL) であり、 [URL Living Standard](https://url.spec.whatwg.org/) で定義された通りでなければなりません。 | **[TypeMismatch](/ja/docs/Web/API/ValidityState/typeMismatch)** 制約違反 |
-| [`<input type="email">`](/ja/docs/Web/HTML/Element/input/email) | 値は統語的に妥当なメールアドレスで、ふつうは `username@hostname.tld` の書式でなければなりません。                                               | **[TypeMismatch](/ja/docs/Web/API/ValidityState/typeMismatch)** 制約違反 |
+| [`<input type="email">`](/ja/docs/Web/HTML/Element/input/email) | 値は統語的に妥当なメールアドレスで、ふつうは `username@hostname.tld` の書式でなければなりません。                                                                 | **[TypeMismatch](/ja/docs/Web/API/ValidityState/typeMismatch)** 制約違反 |
 
 これらの入力型のどちらでも、[`multiple`](/ja/docs/Web/HTML/Element/input#multiple) 属性が設定されていたら、この入力欄にカンマ区切りのリストで複数の値を設定することができます。これらの中でここで書かれた条件に満足しないものがある場合、 **Type mismatch** 制約違反が発生します。
 
@@ -232,16 +231,16 @@ JavaScript と制約 API を使用すると、より複雑な制約を実装す�
 
 ```html
 <form>
-    <label for="ZIP">郵便番号 : </label>
-    <input type="text" id="ZIP">
-    <label for="Country">国 : </label>
-    <select id="Country">
-      <option value="ch">スイス</option>
-      <option value="fr">フランス</option>
-      <option value="de">ドイツ</option>
-      <option value="nl">オランダ</option>
-    </select>
-    <input type="submit" value="検証">
+  <label for="ZIP">郵便番号 : </label>
+  <input type="text" id="ZIP" />
+  <label for="Country">国 : </label>
+  <select id="Country">
+    <option value="ch">スイス</option>
+    <option value="fr">フランス</option>
+    <option value="de">ドイツ</option>
+    <option value="nl">オランダ</option>
+  </select>
+  <input type="submit" value="検証" />
 </form>
 ```
 
@@ -255,11 +254,22 @@ JavaScript と制約 API を使用すると、より複雑な制約を実装す�
 function checkZIP() {
   // それぞれの国で、郵便番号が従うべきパターンを定義する
   var constraints = {
-    ch : [ '^(CH-)?\\d{4}$', "スイスの郵便番号は明確な 4 桁である必要があります。例: CH-1950 または 1950" ],
-    fr : [ '^(F-)?\\d{5}$' , "フランスの郵便番号は明確な 5 桁です。例: F-75012 または 75012" ],
-    de : [ '^(D-)?\\d{5}$' , "ドイツの郵便番号は明確な 5 桁です。例: D-12345 または 12345" ],
-    nl : [ '^(NL-)?\\d{4}\\s*([A-RT-Z][A-Z]|S[BCE-RT-Z])$',
-                    "オランダの郵便番号は明確な 4 桁に、SA、SD、SS 以外の2文字が続きます。" ]
+    ch: [
+      "^(CH-)?\\d{4}$",
+      "スイスの郵便番号は明確な 4 桁である必要があります。例: CH-1950 または 1950",
+    ],
+    fr: [
+      "^(F-)?\\d{5}$",
+      "フランスの郵便番号は明確な 5 桁です。例: F-75012 または 75012",
+    ],
+    de: [
+      "^(D-)?\\d{5}$",
+      "ドイツの郵便番号は明確な 5 桁です。例: D-12345 または 12345",
+    ],
+    nl: [
+      "^(NL-)?\\d{4}\\s*([A-RT-Z][A-Z]|S[BCE-RT-Z])$",
+      "オランダの郵便番号は明確な 4 桁に、SA、SD、SS 以外の2文字が続きます。",
+    ],
   };
 
   // 国 ID を読む
@@ -270,14 +280,13 @@ function checkZIP() {
 
   // 制約チェッカーを構築
   var constraint = new RegExp(constraints[country][0], "");
-    console.log(constraint);
+  console.log(constraint);
 
   // チェックする
   if (constraint.test(ZIPField.value)) {
     // 郵便番号は制約に従っていることを ConstraintAPI を使って伝える
     ZIPField.setCustomValidity("");
-  }
-  else {
+  } else {
     // 郵便番号が制約に従っていないことを伝えるために、 ConstraintAPI を使用して
     // この国で必要な書式についてのメッセージを伝える
     ZIPField.setCustomValidity(constraints[country][1]);
@@ -289,9 +298,9 @@ function checkZIP() {
 
 ```js
 window.onload = function () {
-    document.getElementById("Country").onchange = checkZIP;
-    document.getElementById("ZIP").oninput = checkZIP;
-}
+  document.getElementById("Country").onchange = checkZIP;
+  document.getElementById("ZIP").oninput = checkZIP;
+};
 ```
 
 郵便番号の検証の[ライブサンプル](constraint.html)もあります。
@@ -304,7 +313,7 @@ window.onload = function () {
 
 ```html
 <label for="FS">75KB よりも小さいファイルを選択してください。 </label>
-<input type="file" id="FS">
+<input type="file" id="FS" />
 ```
 
 次のように表示されます。
@@ -320,10 +329,13 @@ function checkFileSize() {
 
   // If there is (at least) one file selected
   if (files.length > 0) {
-     if (files[0].size > 75 * 1024) { // 制約をチェック
-       FS.setCustomValidity("選択されたファイルは 75 kB より大きくてはいけません。");
-       return;
-     }
+    if (files[0].size > 75 * 1024) {
+      // 制約をチェック
+      FS.setCustomValidity(
+        "選択されたファイルは 75 kB より大きくてはいけません。",
+      );
+      return;
+    }
   }
   // No custom constraint violation
   FS.setCustomValidity("");
@@ -335,7 +347,7 @@ function checkFileSize() {
 ```js
 window.onload = function () {
   document.getElementById("FS").onchange = checkFileSize;
-}
+};
 ```
 
 ファイルサイズの制約検証の[ライブサンプル](fileconstraint.html)を見ることができます。

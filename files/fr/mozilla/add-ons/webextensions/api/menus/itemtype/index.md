@@ -1,20 +1,9 @@
 ---
 title: menus.ItemType
 slug: Mozilla/Add-ons/WebExtensions/API/menus/ItemType
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - contextMenus
-  - itemtype
-translation_of: Mozilla/Add-ons/WebExtensions/API/menus/ItemType
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Le type d'élément de menu.
 

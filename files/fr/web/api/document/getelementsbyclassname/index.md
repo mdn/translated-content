@@ -1,12 +1,6 @@
 ---
 title: document.getElementsByClassName
 slug: Web/API/Document/getElementsByClassName
-tags:
-  - API
-  - DOM
-  - Méthodes
-  - Reference
-translation_of: Web/API/Document/getElementsByClassName
 ---
 
 {{APIRef("DOM")}}
@@ -29,28 +23,31 @@ var elements = rootElement.getElementsByClassName(names);
 Trouve tous les éléments ayant la classe «&nbsp;test&nbsp;»&nbsp;:
 
 ```js
-document.getElementsByClassName('test')
+document.getElementsByClassName("test");
 ```
 
 Trouve tous les éléments ayant les classes «&nbsp;rouge&nbsp;» et «&nbsp;test&nbsp;»&nbsp;:
 
 ```js
-document.getElementsByClassName('rouge test')
+document.getElementsByClassName("rouge test");
 ```
 
 Trouve tous les éléments qui ont la classe «&nbsp;test&nbsp;» à l'intérieur d'un élément ayant l'ID «&nbsp;main&nbsp;»&nbsp;:
 
 ```js
-document.getElementById('main').getElementsByClassName('test')
+document.getElementById("main").getElementsByClassName("test");
 ```
 
 Nous pouvons également utiliser les méthodes de Array.prototype sur toute {{domxref ("HTMLCollection")}} en passant HTMLCollection comme valeur de la méthode. Ici, nous allons trouver tous les éléments div qui ont une classe de 'test':
 
 ```js
-var testElements = document.getElementsByClassName('test');
-var testDivs = Array.prototype.filter.call(testElements, function(testElement){
-    return testElement.nodeName === 'DIV';
-});
+var testElements = document.getElementsByClassName("test");
+var testDivs = Array.prototype.filter.call(
+  testElements,
+  function (testElement) {
+    return testElement.nodeName === "DIV";
+  },
+);
 ```
 
 XXX writeme == Notes == Une méthode semblable existe pour \<code>Element\</code>
@@ -62,27 +59,27 @@ C'est la méthode d'opération la plus couramment utilisée.
 ```html
 <!doctype html>
 <html>
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="parent-id">
-        <p>hello word1</p>
-        <p class="test">hello word2</p>
-        <p >hello word3</p>
-        <p>hello word4</p>
+      <p>hello word1</p>
+      <p class="test">hello word2</p>
+      <p>hello word3</p>
+      <p>hello word4</p>
     </div>
     <script>
-        var parentDOM = document.getElementById("parent-id");
+      var parentDOM = document.getElementById("parent-id");
 
-        var test=parentDOM.getElementsByClassName("test");//test is not target element
-        console.log(test);//HTMLCollection[1]
+      var test = parentDOM.getElementsByClassName("test"); //test is not target element
+      console.log(test); //HTMLCollection[1]
 
-        var testTarget=parentDOM.getElementsByClassName("test")[0];//here , this element is target
-        console.log(testTarget);//<p class="test">hello word2</p>
+      var testTarget = parentDOM.getElementsByClassName("test")[0]; //here , this element is target
+      console.log(testTarget); //<p class="test">hello word2</p>
     </script>
-</body>
+  </body>
 </html>
 ```
 

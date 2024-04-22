@@ -3,7 +3,7 @@ title: pageAction.onClicked
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 ページアクションのアイコンがクリックされたときに発火します。ページアクションがポップアップを持っているならこのイベントは発火しません。
 
@@ -12,9 +12,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked
 ## 書式
 
 ```js
-browser.pageAction.onClicked.addListener(listener)
-browser.pageAction.onClicked.removeListener(listener)
-browser.pageAction.onClicked.hasListener(listener)
+browser.pageAction.onClicked.addListener(listener);
+browser.pageAction.onClicked.removeListener(listener);
+browser.pageAction.onClicked.hasListener(listener);
 ```
 
 イベントは 3 つの関数を持ちます:
@@ -28,7 +28,7 @@ browser.pageAction.onClicked.hasListener(listener)
 
 ## addListener の書式
 
-### パラメータ
+### パラメーター
 
 - `callback`
 
@@ -39,22 +39,21 @@ browser.pageAction.onClicked.hasListener(listener)
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.pageAction.onClicked")}}
+{{Compat}}
 
 ## 例
 
-ユーザがページアクションをクリックしたとき、それを隠し、アクティブタブを"<http://chilloutandwatchsomecatgifs.com/>"に誘導します:
+ユーザーがページアクションをクリックしたとき、それを隠し、アクティブタブを"<http://chilloutandwatchsomecatgifs.com/>"に誘導します:
 
 ```js
 var CATGIFS = "http://chilloutandwatchsomecatgifs.com/";
 
 browser.pageAction.onClicked.addListener((tab) => {
   browser.pageAction.hide(tab.id);
-  browser.tabs.update({url: CATGIFS});
+  browser.tabs.update({ url: CATGIFS });
 });
 
-browser.pageAction.onClicked.addListener(function () {
-});
+browser.pageAction.onClicked.addListener(function () {});
 ```
 
 {{WebExtExamples}}

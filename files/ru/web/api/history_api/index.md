@@ -1,13 +1,8 @@
 ---
 title: History API
 slug: Web/API/History_API
-tags:
-  - API
-  - DOM
-  - HTML5
-  - История
-translation_of: Web/API/History_API
 ---
+
 {{DefaultAPISidebar("History API")}}
 DOM-объект {{DOMxRef("Window")}} предоставляет доступ к истории текущей сессии браузера (не путать с [историей браузерных расширений](/ru/docs/Mozilla/Add-ons/WebExtensions/API/history)) через объект {{DOMxRef("Window.history","history")}}. Он предоставляет полезные методы и свойства, которые позволяют переходить назад и вперёд по истории пользователя и манипулировать её содержимым.
 
@@ -86,14 +81,11 @@ history.go(2)  // alerts "location: http://example.com/example.html?page=3, stat
 
 ## Спецификации
 
-| Specification                                                                        | Status                           | Comment                                          |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------ |
-| {{SpecName("HTML WHATWG", "browsers.html#history", "History")}} | {{Spec2("HTML WHATWG")}} | No change from {{SpecName("HTML5 W3C")}}. |
-| {{SpecName("HTML5 W3C", "browsers.html#history", "History")}}     | {{Spec2("HTML5 W3C")}}     | Initial definition.                              |
+{{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
-{{Compat("api.History")}}
+{{Compat}}
 
 ## Смотрите также
 

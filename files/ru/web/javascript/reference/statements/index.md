@@ -1,11 +1,6 @@
 ---
 title: Инструкции и объявления
 slug: Web/JavaScript/Reference/Statements
-tags:
-  - JavaScript
-  - Reference
-  - statements
-translation_of: Web/JavaScript/Reference/Statements
 ---
 
 {{jsSidebar("Statements")}}

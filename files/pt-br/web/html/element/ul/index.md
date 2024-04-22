@@ -56,13 +56,13 @@ Não há nenhuma limitação para a profundidade e a imbricação das listas def
 
 Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
-- {{ htmlattrdef("compact") }}{{ Deprecated_inline() }}
+- `compact`{{ Deprecated_inline() }}
 
   - : Este atributo booleano sugere que a lista será processada em um modelo compacto. A interpretação deste atributo depende do perfil de navegação (_user agent_) e não funciona em todos os navegadores.
 
     > **Note:** **Nota de utilização:** Não aplique este atributo, que foi preterido - o elemento {{ HTMLElement("ul") }} deve ser definido utilizando-se a folha de estilos [CSS](/pt-BR/CSS). Para dar um efeito similar ao atributo compacto, a propriedade [line-height](/pt-BR/CSS/line-height) (espaçamento), da [CSS](/pt-BR/CSS), pode ser utilizada com um valor de 80%.
 
-- {{ htmlattrdef("type") }}{{ Deprecated_inline() }}
+- `type`{{ Deprecated_inline() }}
 
   - : Usados para estabelecer o tipo de marcador da lista. Os valores definidos durante a [HTML3.2](/pt-BR/HTML3.2) e a versão de transição de [HTML 4.0/4.01](/pt-BR/HTML4.01), são:
 
@@ -99,19 +99,25 @@ A HTML acima resulta em:
 ```html
 <ul>
   <li>primeiro item</li>
-  <li>segundo item      <!-- Observe que a tag de fechamento </li> não é colocada aqui! -->
+  <li>
+    segundo item
+    <!-- Observe que a tag de fechamento </li> não é colocada aqui! -->
     <ul>
       <li>segundo item primeiro subitem</li>
-      <li>segundo item segundo subitem      <!-- O mesmo para a segunda lista não ordenada aninhada (Same for the second nested unordered list)! -->
+      <li>
+        segundo item segundo subitem
+        <!-- O mesmo para a segunda lista não ordenada aninhada (Same for the second nested unordered list)! -->
         <ul>
           <li>segundo item segundo subitem primeiro sub-subitem</li>
           <li>segundo item segundo subitem segundo sub-subitem</li>
           <li>segundo item segundo subitem terceiro sub-subitem</li>
         </ul>
-      </li>           <!-- A tag de fechamento </li>, que contém a terceira lista não ordenada (Closing </li> tag for the li that contains the third unordered list) -->
+      </li>
+      <!-- A tag de fechamento </li>, que contém a terceira lista não ordenada (Closing </li> tag for the li that contains the third unordered list) -->
       <li>segundo item terceiro subitem</li>
     </ul>
-  </li>               <!-- Aqui entra a tag de fechamento </li> (Here is the closing </li> tag) -->
+  </li>
+  <!-- Aqui entra a tag de fechamento </li> (Here is the closing </li> tag) -->
   <li>terceiro item</li>
 </ul>
 ```
@@ -137,13 +143,16 @@ A saída HTML acima, é:
 ```html
 <ul>
   <li>primeiro item</li>
-  <li>segundo item      <!-- Observe, a tag de fechamento </li> não é colocada aqui! (Look, the closing </li> tag is not placed here!) -->
+  <li>
+    segundo item
+    <!-- Observe, a tag de fechamento </li> não é colocada aqui! (Look, the closing </li> tag is not placed here!) -->
     <ol>
       <li>segundo item primeiro subitem</li>
       <li>segundo item segundo subitem</li>
       <li>segundo item terceiro subitem</li>
     </ol>
-  </li>                <!-- Aqui está a tag de fechamento </li> (Here is the closing </li> tag) -->
+  </li>
+  <!-- Aqui está a tag de fechamento </li> (Here is the closing </li> tag) -->
   <li>terceiro item</li>
 </ul>
 ```
@@ -166,7 +175,7 @@ A saída HTML acima será:
 
   - a propriedade [list-style](/pt-BR/CSS/list-style), conveniente para escolher a maneira como os ordinais serão mostrados,
   - [CSS counters](/pt-BR/CSS_Counters), eficientes para guiar listas complexas aninhadas,
-  - a propriedade [line-height](/pt-BR/CSS/line-height), válida para simular o atributo ultrapassado {{ htmlattrxref("compact", "ul") }},
+  - a propriedade [line-height](/pt-BR/CSS/line-height), válida para simular o atributo ultrapassado [`compact`](/pt-BR/docs/Web/HTML/Element/ul#compact),
   - a propriedade [margin](/pt-BR/CSS/margin), proveitosa para controlar a indentação da lista.
 
 {{ HTMLSidebar }}

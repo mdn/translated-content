@@ -20,9 +20,9 @@ nodeList = document.anchors
 ### 例子
 
 ```js
-if ( document.anchors.length >= 5 ) {
-    dump("dump found too many anchors");
-    window.location = "http://www.google.com";
+if (document.anchors.length >= 5) {
+  dump("dump found too many anchors");
+  window.location = "http://www.google.com";
 }
 ```
 

@@ -23,21 +23,21 @@ write(data)
 - `data`
 
   - : ファイルに書き込むデータを表す {{jsxref("ArrayBuffer")}}・{{jsxref("TypedArray")}}・
-      {{jsxref("DataView")}}・{{domxref('Blob')}}・{{jsxref("String")}} オブジェクト・文字列リテラルのいずれかです。
-      もしくは、以下のプロパティを持つオブジェクトです。
+    {{jsxref("DataView")}}・{{domxref('Blob')}}・{{jsxref("String")}} オブジェクト・文字列リテラルのいずれかです。
+    もしくは、以下のプロパティを持つオブジェクトです。
 
     - `type`
       - : `"write"`・`"seek"`・`"truncate"` のいずれかの文字列です。
     - `data`
       - : ファイルに書き込むデータです。{{jsxref("ArrayBuffer")}}・{{jsxref("TypedArray")}}・{{jsxref("DataView")}}・
-          {{domxref('Blob')}}・{{jsxref("String")}} オブジェクト・文字列リテラルのいずれかです。
-          `type` が `write` に設定されているときは必須です。
+        {{domxref('Blob')}}・{{jsxref("String")}} オブジェクト・文字列リテラルのいずれかです。
+        `type` が `write` に設定されているときは必須です。
     - `position`
       - : `type` が `seek` のとき、現在のファイルカーソルの移動先のバイト位置を表します。
-          `type` が `write` のときにも設定することができ、この場合は書き込みの開始位置を表します。
+        `type` が `write` のときにも設定することができ、この場合は書き込みの開始位置を表します。
     - `size`
       - : ストリームが保持するべきバイト数を表す `unsigned long` 値です。
-          `type` が `truncate` に設定されているときは必須です。
+        `type` が `truncate` に設定されているときは必須です。
 
 ### 返値
 

@@ -20,8 +20,8 @@ isCollapsed = range.collapsed;
 ```js
 var range = document.createRange();
 
-range.setStart(startNode,startOffset);
-range.setEnd(endNode,endOffset);
+range.setStart(startNode, startOffset);
+range.setEnd(endNode, endOffset);
 isCollapsed = range.collapsed;
 ```
 

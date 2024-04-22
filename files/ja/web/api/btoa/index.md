@@ -1,7 +1,6 @@
 ---
 title: btoa()
 slug: Web/API/btoa
-original_slug: Web/API/WindowOrWorkerGlobalScope/btoa
 l10n:
   sourceCommit: 951c9cee9c31ef7c2f2314b87a7c7cc5e330d471
 ---
@@ -64,7 +63,7 @@ console.log(btoa(notOK)); // error
 function toBinary(string) {
   const codeUnits = Uint16Array.from(
     { length: string.length },
-    (element, index) => string.charCodeAt(index)
+    (element, index) => string.charCodeAt(index),
   );
   const charCodes = new Uint8Array(codeUnits.buffer);
 
@@ -88,7 +87,7 @@ console.log(encoded); // OCY5JjomOyY8Jj4mPyY=
 ```js
 function fromBinary(binary) {
   const bytes = Uint8Array.from({ length: binary.length }, (element, index) =>
-    binary.charCodeAt(index)
+    binary.charCodeAt(index),
   );
   const charCodes = new Uint16Array(bytes.buffer);
 

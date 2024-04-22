@@ -1,9 +1,6 @@
 ---
 title: Broadcast Channel API
 slug: Web/API/Broadcast_Channel_API
-page-type: web-api-overview
-translation_of: Web/API/Broadcast_Channel_API
-browser-compat: api.BroadcastChannel
 l10n:
   sourceCommit: c80b15ae2fe8b65c1a68264df72323986b2750b2
 ---
@@ -26,7 +23,7 @@ Un client rejoint un canal de diffusion en créant un objet [`BroadcastChannel`]
 
 ```js
 // Connexion au canal de diffusion
-const bc = new BroadcastChannel('canal_test');
+const bc = new BroadcastChannel("canal_test");
 ```
 
 ### Envoi d'un message
@@ -35,7 +32,7 @@ Il suffit d'appeler la méthode [`postMessage()`](/fr/docs/Web/API/BroadcastChan
 
 ```js
 // Exemple d'envoi d'un message très simple
-bc.postMessage('Ceci est un message test.');
+bc.postMessage("Ceci est un message test.");
 ```
 
 Les données envoyées sur le canal sont sérialisées via l'[algorithme de clonage de structure](/fr/docs/Web/API/Web_Workers_API/Structured_clone_algorithm). Ceci implique que vous pouvez envoyer un large spectre de type de données de manière sure sans avoir à les sérialiser par vous-même.
@@ -48,7 +45,9 @@ Lorsqu'un message est posté, un évènement [`message`](/fr/docs/Web/API/Broadc
 
 ```js
 // Un gestionnaire affichant simplement les messages sur la console :
-bc.onmessage = (event) => { console.log(event); }
+bc.onmessage = (event) => {
+  console.log(event);
+};
 ```
 
 ### Déconnexion d'un canal

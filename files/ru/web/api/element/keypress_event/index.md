@@ -1,9 +1,8 @@
 ---
 title: keypress
 slug: Web/API/Element/keypress_event
-translation_of: Web/API/Document/keypress_event
-original_slug: Web/API/Document/keypress_event
 ---
+
 Событие `keypress` происходит когда нажимается символьная клавиша, то есть клавиша которая создаёт символ. Пример таких клавиш это буквы, цифры, знаки пунктуации и т.д. Примеры клавиш которые не создают символы, это клавиши модификаторы, такие как: <kbd>Alt</kbd>, <kbd>Shift</kbd>, <kbd>Ctrl</kbd>, or <kbd>Meta</kbd>.
 
 ## Общая информация
@@ -57,7 +56,7 @@ original_slug: Web/API/Document/keypress_event
       <td>WindowProxy</td>
       <td>
         <a
-          href="/en-US/docs/Web/API/Document/defaultView"
+          href="/ru/docs/Web/API/Document/defaultView"
           title="In browsers, document.defaultView returns the window object associated with a document, or null if none is available."
           ><code>document.defaultView</code></a
         >
@@ -85,7 +84,7 @@ original_slug: Web/API/Document/keypress_event
         character, this value is a non-empty Unicode string containing that
         character. If the key doesn't have a printable representation, this is
         an empty string. See
-        <a href="/en-US/docs/Web/API/KeyboardEvent#Key_names_and_Char_values"
+        <a href="/ru/docs/Web/API/KeyboardEvent#Key_names_and_Char_values"
           >key names and char values</a
         >
         for the detail.
@@ -105,11 +104,11 @@ original_slug: Web/API/Document/keypress_event
           printed representation, this attribute's value is the same as the
           <code>char</code> property. Otherwise, it's one of the key value
           strings specified in
-          <a href="/en-US/docs/Web/API/KeyboardEvent/key/Key_Values"
+          <a href="/ru/docs/Web/API/KeyboardEvent/key/Key_Values"
             >Key values</a
           >. If the key can't be identified, its value is the string
           "Unidentified". See
-          <a href="/en-US/docs/Web/API/KeyboardEvent#Key_names_and_Char_values"
+          <a href="/ru/docs/Web/API/KeyboardEvent#Key_names_and_Char_values"
             >key names and char values</a
           >
           for more details. Read Only.
@@ -131,7 +130,7 @@ original_slug: Web/API/Document/keypress_event
       <td>
         The Unicode reference number of the key; this attribute is used only by
         the
-        <a href="/en-US/docs/Mozilla_event_reference/keypress"
+        <a href="/ru/docs/Mozilla_event_reference/keypress"
           ><code>keypress</code></a
         >
         event. For keys whose <code>char</code> attribute contains multiple
@@ -240,23 +239,20 @@ Chrome не запускает событие `keypress` для известны
 
 ## Пример
 
-```js
-<!DOCTYPE html>
+```html
+<!doctype html>
 <html>
-<head>
-<script>
+  <head>
+    <script>
+      "use strict";
 
-'use strict';
+      document.addEventListener("keypress", (event) => {
+        const keyName = event.key;
 
-document.addEventListener('keypress', (event) => {
-  const keyName = event.key;
-
-  alert('keypress event\n\n' + 'key: ' + keyName);
-});
-
-</script>
-</head>
-<body>
-</body>
+        alert("keypress event\n\n" + "key: " + keyName);
+      });
+    </script>
+  </head>
+  <body></body>
 </html>
 ```

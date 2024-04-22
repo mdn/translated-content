@@ -9,7 +9,7 @@ slug: Web/API/WebGLRenderingContext/getSupportedExtensions
 
 ## 语法
 
-```js
+```js-nolint
 getSupportedExtensions()
 ```
 
@@ -24,8 +24,8 @@ getSupportedExtensions()
 ## 示例
 
 ```js
-const canvas = document.getElementById('canvas');
-gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+gl = canvas.getContext("webgl");
 
 const extensions = gl.getSupportedExtensions();
 // Array [ 'ANGLE_instanced_arrays', 'EXT_blend_minmax', … ]

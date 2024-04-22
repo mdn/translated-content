@@ -2,6 +2,7 @@
 title: Example extensions
 slug: Mozilla/Add-ons/WebExtensions/Examples
 ---
+
 {{AddonSidebar}}
 
 확장앱 개발하는 방법을 설명하기 위해 간단한 예제를 저장해놓은 저장소를 두고 있다 <https://github.com/mdn/webextensions-examples>. 이번장에서는 해당 저장소에서 사용되는 WebExtension API에 대해 설명한다.

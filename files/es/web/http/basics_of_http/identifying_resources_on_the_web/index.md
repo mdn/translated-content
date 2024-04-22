@@ -1,7 +1,6 @@
 ---
 title: Identificación de recursos web
 slug: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
-original_slug: Web/HTTP/Basics_of_HTTP/Identificación_recursos_en_la_Web
 ---
 
 {{HTTPSidebar}}
@@ -10,7 +9,7 @@ El objetivo de una solicitud HTTP se denomina "recurso", (es decir: datos), y di
 
 La identidad y la localización del recursos en la Web son en su mayoria proporcionados por una sola dirección URL (Localicador de Recursos Uniforme; un tipo de URI). A veces, el mismo URI no proporciona la identidad ni la ubicación: HTTP usa un encabezado HTTP especifico, {{HTTPHeader("Alt-Svc")}} cuando el recurso solicitado por el cliente quiere acceder a él en otra ubicación.
 
-## URLs and URNs
+## URLs y URNs
 
 ### URLs
 
@@ -18,8 +17,8 @@ La forma más común de URI es la ({{Glossary("URL")}}) (de las siglas en ingles
 
 ```
 https://developer.mozilla.org
-https://developer.mozilla.org/en-US/docs/Learn/
-https://developer.mozilla.org/en-US/search?q=URL
+https://developer.mozilla.org/es/docs/Learn/
+https://developer.mozilla.org/es/search?q=URL
 ```
 
 Cualquiera de estas URLs se pueden escribir en la barra de direcciones de su navegador para decirle que cargue la página asociada (recurso).
@@ -53,7 +52,7 @@ Las dos URNs corresponden a
 
 | Esquema     | Descripción                                                                 |
 | ----------- | --------------------------------------------------------------------------- |
-| data        | [Datos URIs](/es/docs/Web/HTTP/Basics_of_HTTP/Data_URIs)                    |
+| data        | [URLs de datos](/es/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)                 |
 | file        | Host-nombre de archivo específicos                                          |
 | ftp         | [Protocolo de Transferencia de Archivos](/es/docs/Glossary/FTP)             |
 | http/https  | [Protocolo de transferencia de Hipertexto (Seguro)](/es/docs/Glossary/HTTP) |
@@ -67,7 +66,7 @@ Las dos URNs corresponden a
 ### Autoridad
 
 - ![Domaine Name](mdn-url-domain@x2.png)
-  - : `www.example.com` es el nombre de dominio o autoridad que gobierna el espacio de nombres. Indica cuando es solicitado el servidor Web . Alternativamente, Es posile usar directamente una {{Glossary("IP address")}}, pero debido a que es menos conveniente, no se usa muy amenudo en la Web.
+  - : `www.example.com` es el nombre de dominio o autoridad que gobierna el espacio de nombres. Indica cuando es solicitado el servidor Web . Alternativamente, Es posile usar directamente una {{Glossary("IP address", "dirección IP")}}, pero debido a que es menos conveniente, no se usa muy amenudo en la Web.
 
 ### Puerto
 
@@ -92,7 +91,7 @@ Las dos URNs corresponden a
 ## Ejemplos
 
 ```
-https://developer.mozilla.org/en-US/docs/Learn
+https://developer.mozilla.org/es/docs/Learn
 tel:+1-816-555-1212
 git@github.com:mdn/browser-compat-data.git
 ftp://example.org/resource.txt
@@ -101,11 +100,11 @@ urn:isbn:9780141036144
 
 ## Especificaciones
 
-| Especificación                                                           | Título                                                             |
-| ------------------------------------------------------------------------ | ------------------------------------------------------------------ |
+| Especificación                                         | Título                                                             |
+| ------------------------------------------------------ | ------------------------------------------------------------------ |
 | {{RFC("7230", "Uniform Resource Identifiers", "2.7")}} | Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing |
 
 ## Ver también
 
-- [Qué es una URL?](/es/docs/Learn/Common_questions/What_is_a_URL)
+- [¿Qué es una URL?](/es/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
 - [Lista de esquemas URI IANA](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml)

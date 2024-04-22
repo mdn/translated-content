@@ -56,19 +56,19 @@ Math.PI = 4;  // TypeError
 
 ```js example-bad
 "use strict";
-undefined = function () {};  // TypeError: "undefined" is read-only
+undefined = function () {}; // TypeError: "undefined" is read-only
 ```
 
 ### 下面这样都是有效，不报错的
 
 ```js example-good
 "use strict";
-var obj = Object.freeze({name: "Score", points: 157});
-obj = {name: obj.name, points: 0};   // 用一个新对象替换原来的对象 (其实就是更改了对象的指针)
+var obj = Object.freeze({ name: "Score", points: 157 });
+obj = { name: obj.name, points: 0 }; // 用一个新对象替换原来的对象 (其实就是更改了对象的指针)
 
-"use strict";
-var LUNG_COUNT = 2;  //
-LUNG_COUNT = 3;  //
+("use strict");
+var LUNG_COUNT = 2; //
+LUNG_COUNT = 3; //
 ```
 
 ## 参见

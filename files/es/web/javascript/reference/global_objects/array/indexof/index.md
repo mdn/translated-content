@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.indexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/indexOf
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/indexOf
 ---
 
 {{JSRef}}
@@ -39,9 +38,9 @@ El siguiente ejemplo usa `indexof()` para localizar valores en un array
 
 ```js
 var array = [2, 9, 9];
-array.indexOf(2);     // 0
-array.indexOf(7);     // -1
-array.indexOf(9, 2);  // 2
+array.indexOf(2); // 0
+array.indexOf(7); // -1
+array.indexOf(9, 2); // 2
 array.indexOf(2, -1); // -1
 array.indexOf(2, -3); // 0
 ```
@@ -50,8 +49,8 @@ array.indexOf(2, -3); // 0
 
 ```js
 var indices = [];
-var array = ['a', 'b', 'a', 'c', 'a', 'd'];
-var element = 'a';
+var array = ["a", "b", "a", "c", "a", "d"];
+var element = "a";
 var idx = array.indexOf(element);
 while (idx != -1) {
   indices.push(idx);
@@ -64,20 +63,20 @@ console.log(indices);
 ### Encontrar si un elemento existe en la matriz o no y actualizar la matriz
 
 ```js
-function updateVegetablesCollection (veggies, veggie) {
-    if (veggies.indexOf(veggie) === -1) {
-        veggies.push(veggie);
-        console.log('La nueva colección de vegetales es: ' + veggies);
-    } else if (veggies.indexOf(veggie) > -1) {
-        console.log(veggie + ' ya existe en la colección de verduras.');
-    }
+function updateVegetablesCollection(veggies, veggie) {
+  if (veggies.indexOf(veggie) === -1) {
+    veggies.push(veggie);
+    console.log("La nueva colección de vegetales es: " + veggies);
+  } else if (veggies.indexOf(veggie) > -1) {
+    console.log(veggie + " ya existe en la colección de verduras.");
+  }
 }
 
-var veggies = ['patata', 'tomate', 'chiles', 'pimientoverde'];
+var veggies = ["patata", "tomate", "chiles", "pimientoverde"];
 
-updateVegetablesCollection(veggies, 'espinaca');
+updateVegetablesCollection(veggies, "espinaca");
 // La nueva colección de verduras es : patata, tomate, chiles, pimientoverde, espinaca
-updateVegetablesCollection(veggies, 'espinaca');
+updateVegetablesCollection(veggies, "espinaca");
 // La espinaca ya existe en la colección de verduras.
 ```
 
@@ -94,11 +93,14 @@ if (!Array.prototype.indexOf) {
     En modo estricto, si la variable `this` es nula o indefinida, se lanza `TypeError`.
     */
     if (this == null) {
-      throw new TypeError("Array.prototype.indexOf() - no se puede convertir `" + this + "` en objeto");
+      throw new TypeError(
+        "Array.prototype.indexOf() - no se puede convertir `" +
+          this +
+          "` en objeto",
+      );
     }
 
-    var
-      index = isFinite(startFrom) ? Math.floor(startFrom) : 0,
+    var index = isFinite(startFrom) ? Math.floor(startFrom) : 0,
       that = this instanceof Object ? this : new Object(this),
       length = isFinite(that.length) ? Math.floor(that.length) : 0;
 
@@ -139,8 +141,7 @@ Sin embargo, si está más interesado en todos los pequeños trozos técnicos de
 // Pasos de producción de ECMA-262, Edición 5, 15.4.4.14
 // Referencia: http://es5.github.io/#x15.4.4.14
 if (!Array.prototype.indexOf) {
-  Array.prototype.indexOf = function(searchElement, fromIndex) {
-
+  Array.prototype.indexOf = function (searchElement, fromIndex) {
     var k;
 
     // 1. Dejar que `o` sea el resultado de llamar a ToObject

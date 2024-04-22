@@ -20,17 +20,17 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Options_pages
 オプションページを作成するには、ページを定義する HTML を書きます。このページは通常のページと同様に、 CSS と JavaScript ファイルを入れることができます。このページは、 [favourite-color](https://github.com/mdn/webextensions-examples/tree/master/favourite-colour) の例から取ってきていて、 JavaScript ファイルが含まれています。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
   <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
   </head>
 
   <body>
     <form>
       <label>Favorite color</label>
-      <input type="text" id="color"/>
+      <input type="text" id="color" />
       <button type="submit">Save</button>
     </form>
     <script src="options.js"></script>

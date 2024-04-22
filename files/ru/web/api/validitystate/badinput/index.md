@@ -1,14 +1,6 @@
 ---
 title: validityState.badInput
 slug: Web/API/ValidityState/badInput
-tags:
-  - API
-  - Constraints API
-  - HTML DOM
-  - Свойство
-  - Только для чтения
-  - ValidityState
-browser-compat: api.ValidityState.badInput
 ---
 
 {{APIRef("HTML DOM")}}
@@ -18,7 +10,7 @@ browser-compat: api.ValidityState.badInput
 ## Пример
 
 ```html
-<input type="number" id="age">
+<input type="number" id="age" />
 ```
 
 ```js

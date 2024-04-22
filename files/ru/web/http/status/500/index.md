@@ -1,12 +1,8 @@
 ---
 title: 500 Internal Server Error
 slug: Web/HTTP/Status/500
-tags:
-  - HTTP
-  - Код ошибки
-  - Ошибка сервера
-translation_of: Web/HTTP/Status/500
 ---
+
 {{HTTPSidebar}}
 
 Код ответа сервера **`500 Internal Server Error`** указывает на то, что сервер столкнулся с неожиданной ошибкой, которая помешала ему выполнить запрос.
@@ -21,8 +17,8 @@ translation_of: Web/HTTP/Status/500
 
 ## Спецификации
 
-| Specification                                                            | Title                                                         |
-| ------------------------------------------------------------------------ | ------------------------------------------------------------- |
+| Specification                                          | Title                                                         |
+| ------------------------------------------------------ | ------------------------------------------------------------- |
 | {{RFC("7231", "500 Internal Server Error" , "6.6.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
 ## Совместимость с браузерами

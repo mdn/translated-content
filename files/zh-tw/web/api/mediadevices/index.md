@@ -65,13 +65,13 @@ navigator.mediaDevices
           constraints.video.width.exact +
           "x" +
           constraints.video.height.exact +
-          " px is not supported by your device."
+          " px is not supported by your device.",
       );
     } else if (error.name === "PermissionDeniedError") {
       errorMsg(
         "Permissions have not been granted to use your camera and " +
           "microphone, you need to allow the page access to your devices in " +
-          "order for the demo to work."
+          "order for the demo to work.",
       );
     }
     errorMsg("getUserMedia error: " + error.name, error);

@@ -1,8 +1,6 @@
 ---
 title: Window.showModalDialog()
 slug: Web/API/Window/showModalDialog
-translation_of: Web/API/Window/showModalDialog
-browser-compat: api.Window.showModalDialog
 ---
 
 {{deprecated_header}}{{APIRef}}
@@ -16,9 +14,9 @@ La méthode **`Window.showModalDialog()`** permettait de créer et d'afficher un
 ## Syntaxe
 
 ```js
-showModalDialog(uri)
-showModalDialog(uri, arguments)
-showModalDialog(uri, arguments, options)
+showModalDialog(uri);
+showModalDialog(uri, arguments);
+showModalDialog(uri, arguments, options);
 ```
 
 ### Paramètres

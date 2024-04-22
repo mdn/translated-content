@@ -1,5 +1,5 @@
 ---
-title: ':last-of-type'
+title: ":last-of-type"
 slug: Web/CSS/:last-of-type
 ---
 
@@ -25,22 +25,23 @@ p em:last-of-type {
 
 ```html
 <p>
-  <em>我没有颜色 :(</em><br>
-  <strong>我没有颜色 :(</strong><br>
-  <em>我有颜色 :D</em><br>
-  <strong>我也没有颜色 :(</strong><br>
+  <em>我没有颜色 :(</em><br />
+  <strong>我没有颜色 :(</strong><br />
+  <em>我有颜色 :D</em><br />
+  <strong>我也没有颜色 :(</strong><br />
 </p>
 
 <p>
-  <em>我没有颜色 :(</em><br>
-  <span><em>我有颜色！</em></span><br>
-  <strong>我没有颜色 :(</strong><br>
-  <em>我有颜色 :D</em><br>
+  <em>我没有颜色 :(</em><br />
+  <span><em>我有颜色！</em></span
+  ><br />
+  <strong>我没有颜色 :(</strong><br />
+  <em>我有颜色 :D</em><br />
   <span>
-    <em>我在子元素里，但没有颜色！</em><br>
-    <span style="text-decoration:line-through;"> 我没有颜色 </span><br>
-    <em>我却有颜色！</em><br>
-  </span><br>
+    <em>我在子元素里，但没有颜色！</em><br />
+    <span style="text-decoration:line-through;"> 我没有颜色 </span><br />
+    <em>我却有颜色！</em><br /> </span
+  ><br />
   <strong>我也没有颜色 :(</strong>
 </p>
 ```

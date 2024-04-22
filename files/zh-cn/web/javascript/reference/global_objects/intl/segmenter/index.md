@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter
 
 {{JSRef}}
 
- **`Intl.Segmenter`** 对象支持语言敏感的文本分割，允许你将一个字符串分割成有意义的片段（字、词、句）。
+**`Intl.Segmenter`** 对象支持语言敏感的文本分割，允许你将一个字符串分割成有意义的片段（字、词、句）。
 
 {{EmbedInteractiveExample("pages/js/intl-segmenter.html")}}
 
@@ -41,7 +41,7 @@ console.table(str.split(" "));
 
 ```js example-good
 const str = "吾輩は猫である。名前はたぬき。";
-const segmenterJa = new Intl.Segmenter('ja-JP', { granularity: 'word' });
+const segmenterJa = new Intl.Segmenter("ja-JP", { granularity: "word" });
 
 const segments = segmenterJa.segment(str);
 console.table(Array.from(segments));

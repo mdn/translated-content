@@ -1,9 +1,6 @@
 ---
 title: Window.print()
 slug: Web/API/Window/print
-page-type: web-api-instance-method
-browser-compat: api.Window.print
-translation_of: Web/API/Window/print
 ---
 
 {{APIRef}}
@@ -17,7 +14,7 @@ Cette méthode sera bloquante pour le reste de l'exécution tant que la boîte d
 ## Syntaxe
 
 ```js
-print()
+print();
 ```
 
 ### Paramètres

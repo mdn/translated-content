@@ -1,8 +1,8 @@
 ---
 title: SVG image element
 slug: Web/SVG/Tutorial/SVG_Image_Tag
-translation_of: Web/SVG/Tutorial/SVG_Image_Tag
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/SVG_Fonts", "Web/SVG/Tutorial/Tools_for_SVG") }}
 
 SVG тег {{ SVGElement("image") }} позволяет выводить растровые изображения внутри SVG-объектов.

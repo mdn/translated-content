@@ -37,12 +37,12 @@ var obj = {
 
 ```js
 var obj = {
-  foo: function() {
+  foo: function () {
     /* code */
   },
-  bar: function() {
+  bar: function () {
     /* code */
-  }
+  },
 };
 ```
 
@@ -55,7 +55,7 @@ var obj = {
   },
   bar() {
     /* code */
-  }
+  },
 };
 ```
 
@@ -71,18 +71,16 @@ var obj = {
 var obj2 = {
   g: function* () {
     var index = 0;
-    while (true)
-      yield index++;
-  }
+    while (true) yield index++;
+  },
 };
 
 // The same object using shorthand syntax
 var obj2 = {
-  * g() {
+  *g() {
     var index = 0;
-    while (true)
-      yield index++;
-  }
+    while (true) yield index++;
+  },
 };
 
 var it = obj2.g();
@@ -99,14 +97,14 @@ console.log(it.next().value); // 1
 var obj3 = {
   f: async function () {
     await some_promise;
-  }
+  },
 };
 
 // The same object using shorthand syntax
 var obj3 = {
   async f() {
     await some_promise;
-  }
+  },
 };
 ```
 
@@ -120,16 +118,16 @@ var obj4 = {
     yield 1;
     yield 2;
     yield 3;
-  }
+  },
 };
 
 // The same object using shorthand syntax
 var obj4 = {
-  async* f() {
-   yield 1;
-   yield 2;
-   yield 3;
-  }
+  async *f() {
+    yield 1;
+    yield 2;
+    yield 3;
+  },
 };
 ```
 
@@ -139,14 +137,14 @@ All method definitions are not constructors and will throw a {{jsxref("TypeError
 
 ```js example-bad
 var obj = {
-  method() {}
+  method() {},
 };
-new obj.method; // TypeError: obj.method is not a constructor
+new obj.method(); // TypeError: obj.method is not a constructor
 
 var obj = {
-  * g() {}
+  *g() {},
 };
-new obj.g; // TypeError: obj.g is not a constructor (changed in ES2016)
+new obj.g(); // TypeError: obj.g is not a constructor (changed in ES2016)
 ```
 
 ## 範例
@@ -155,8 +153,10 @@ new obj.g; // TypeError: obj.g is not a constructor (changed in ES2016)
 
 ```js
 var obj = {
-  a: 'foo',
-  b() { return this.a; }
+  a: "foo",
+  b() {
+    return this.a;
+  },
 };
 console.log(obj.b()); // "foo"
 ```
@@ -167,9 +167,15 @@ The shorthand syntax also supports computed property names.
 
 ```js
 var bar = {
-  foo0: function() { return 0; },
-  foo1() { return 1; },
-  ['foo' + 2]() { return 2; }
+  foo0: function () {
+    return 0;
+  },
+  foo1() {
+    return 1;
+  },
+  ["foo" + 2]() {
+    return 2;
+  },
 };
 
 console.log(bar.foo0()); // 0

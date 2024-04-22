@@ -1,8 +1,6 @@
 ---
 title: GlobalEventHandlers.onblur
 slug: Web/API/Window/blur_event
-translation_of: Web/API/GlobalEventHandlers/onblur
-original_slug: Web/API/GlobalEventHandlers/onblur
 ---
 
 {{ApiRef("HTML DOM")}}
@@ -30,23 +28,23 @@ target.onblur = functionRef;
 ### HTML
 
 ```html
-<input type="text" value="CLICK HERE">
+<input type="text" value="CLICK HERE" />
 ```
 
 ### JavaScript
 
 ```js
-let input = document.querySelector('input');
+let input = document.querySelector("input");
 
 input.onblur = inputBlur;
 input.onfocus = inputFocus;
 
 function inputBlur() {
-  input.value = 'Focus has been lost';
+  input.value = "Focus has been lost";
 }
 
 function inputFocus() {
-  input.value = 'Focus is here';
+  input.value = "Focus is here";
 }
 ```
 
@@ -56,17 +54,13 @@ function inputFocus() {
 
 {{EmbedLiveSample('Example')}}
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                | Status                           | Comment |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG','webappapis.html#handler-onblur','onblur')}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
-
-In contrast to IE, in which almost all kinds of elements receive the `blur` event, only a few kinds of elements on Gecko browsers work with this event.
 
 ## See also
 

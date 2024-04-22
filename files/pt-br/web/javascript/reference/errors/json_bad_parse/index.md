@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: JSON.parse: bad parsing'
+title: "SyntaxError: JSON.parse: bad parsing"
 slug: Web/JavaScript/Reference/Errors/JSON_bad_parse
 ---
 
@@ -56,7 +56,7 @@ SyntaxError: JSON.parse: unexpected non-whitespace character after JSON data
 As duas linhas retornarão um SyntaxError:
 
 ```js example-bad
-JSON.parse('[1, 2, 3, 4,]');
+JSON.parse("[1, 2, 3, 4,]");
 JSON.parse('{"foo": 1,}');
 // SyntaxError JSON.parse: unexpected character
 // at line 1 column 14 of the JSON data
@@ -65,7 +65,7 @@ JSON.parse('{"foo": 1,}');
 Retire as virgulas sobrando para converter o JSON corretamente:
 
 ```js example-good
-JSON.parse('[1, 2, 3, 4]');
+JSON.parse("[1, 2, 3, 4]");
 JSON.parse('{"foo": 1}');
 ```
 

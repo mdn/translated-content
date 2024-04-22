@@ -1,7 +1,6 @@
 ---
 title: translateY()
 slug: Web/CSS/transform-function/translateY
-original_slug: Web/CSS/transform-function/translateY()
 ---
 
 {{CSSRef}}

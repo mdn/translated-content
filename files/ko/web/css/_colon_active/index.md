@@ -1,5 +1,5 @@
 ---
-title: ':active'
+title: ":active"
 slug: Web/CSS/:active
 ---
 
@@ -31,7 +31,8 @@ a:active {
 #### HTML
 
 ```html
-<p>링크를 포함하는 문단입니다.
+<p>
+  링크를 포함하는 문단입니다.
   <a href="#">이 링크는 클릭하는 동안 색이 빨갛게 됩니다.</a>
   이 문단은 클릭하는 동안 배경색이 회색이 됩니다.
 </p>
@@ -40,12 +41,22 @@ a:active {
 #### CSS
 
 ```css
-a:link { color: blue; }          /* 방문하지 않은 링크 */
-a:visited { color: purple; }     /* 방문한 링크 */
-a:hover { background: yellow; }  /* 마우스를 올린 링크 */
-a:active { color: red; }         /* 활성화한 링크 */
+a:link {
+  color: blue;
+} /* 방문하지 않은 링크 */
+a:visited {
+  color: purple;
+} /* 방문한 링크 */
+a:hover {
+  background: yellow;
+} /* 마우스를 올린 링크 */
+a:active {
+  color: red;
+} /* 활성화한 링크 */
 
-p:active { background: #eee; }   /* 활성화한 문단 */
+p:active {
+  background: #eee;
+} /* 활성화한 문단 */
 ```
 
 #### 결과

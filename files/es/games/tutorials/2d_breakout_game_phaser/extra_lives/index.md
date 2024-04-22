@@ -28,9 +28,17 @@ Estas almacenarán las vidas, el texto que muestra el número de vidas restante,
 Definir los textos es parecido a algo que ya hicimos en la lección de la [puntuación](/es/docs/Games/Workflows/2D_Breakout_game_Phaser/The_score). Añade las siguientes líneas debajo de la definición de `scoreText` dentro de la función `create()`:
 
 ```js
-livesText = game.add.text(game.world.width-5, 5, 'Lives: '+lives, { font: '18px Arial', fill: '#0095DD' });
-livesText.anchor.set(1,0);
-lifeLostText = game.add.text(game.world.width*0.5, game.world.height*0.5, 'Life lost, click to continue', { font: '18px Arial', fill: '#0095DD' });
+livesText = game.add.text(game.world.width - 5, 5, "Lives: " + lives, {
+  font: "18px Arial",
+  fill: "#0095DD",
+});
+livesText.anchor.set(1, 0);
+lifeLostText = game.add.text(
+  game.world.width * 0.5,
+  game.world.height * 0.5,
+  "Life lost, click to continue",
+  { font: "18px Arial", fill: "#0095DD" },
+);
 lifeLostText.anchor.set(0.5);
 lifeLostText.visible = false;
 ```
@@ -44,16 +52,26 @@ El texto `lifeLostText` se mostrará solamente cuando se pierda la vida, así qu
 Cómo probablemente hayas notado, estamos usando el mismo estilo para los tres textos: `scoreText`, `livesText` y `lifeLostText`. Si quisiéramos cambiar el tamaño de la fuente o el color tendríamos que hacerlo en muchos lugares. Para hacer eso más fácil de mantener en el futuro podemos crear una variable separada que almacenará nuestro estilo, la llamaremos `textStyle` y la colocaremos después de las definiciones de los textos:
 
 ```js
-textStyle = { font: '18px Arial', fill: '#0095DD' };
+textStyle = { font: "18px Arial", fill: "#0095DD" };
 ```
 
 Ahora podemos usar esta variable para dar estilo a nuestros textos — actualiza tú código para que cada una de las múltiples instancias de estilo de tú texto sean reemplazadas por la variable:
 
 ```js
-scoreText = game.add.text(5, 5, 'Points: 0', textStyle);
-livesText = game.add.text(game.world.width-5, 5, 'Lives: '+lives, textStyle);
-livesText.anchor.set(1,0);
-lifeLostText = game.add.text(game.world.width*0.5, game.world.height*0.5, 'Life lost, click to continue', textStyle);
+scoreText = game.add.text(5, 5, "Points: 0", textStyle);
+livesText = game.add.text(
+  game.world.width - 5,
+  5,
+  "Lives: " + lives,
+  textStyle,
+);
+livesText.anchor.set(1, 0);
+lifeLostText = game.add.text(
+  game.world.width * 0.5,
+  game.world.height * 0.5,
+  "Life lost, click to continue",
+  textStyle,
+);
 lifeLostText.anchor.set(0.5);
 lifeLostText.visible = false;
 ```
@@ -65,9 +83,9 @@ De esta manera cambiando la fuente en una variable aplicará los cambios en todo
 Para implementar las vidas en nuestro juego, primero cambiaremos la función de bote de la pelota por el evento `onOutOfBounds`.En lugar de ejecutar una función anónima y mostrar un mensaje de alerta :
 
 ```js
-ball.events.onOutOfBounds.add(function(){
-    alert('Game over!');
-    location.reload();
+ball.events.onOutOfBounds.add(function () {
+  alert("Game over!");
+  location.reload();
 }, this);
 ```
 
@@ -81,21 +99,20 @@ Queremos decrementar el número de vidas cada vez que la pelota abandone el lien
 
 ```js
 function ballLeaveScreen() {
-    lives--;
-    if(lives) {
-        livesText.setText('Lives: '+lives);
-        lifeLostText.visible = true;
-        ball.reset(game.world.width*0.5, game.world.height-25);
-        paddle.reset(game.world.width*0.5, game.world.height-5);
-        game.input.onDown.addOnce(function(){
-            lifeLostText.visible = false;
-            ball.body.velocity.set(150, -150);
-        }, this);
-    }
-    else {
-        alert('You lost, game over!');
-        location.reload();
-    }
+  lives--;
+  if (lives) {
+    livesText.setText("Lives: " + lives);
+    lifeLostText.visible = true;
+    ball.reset(game.world.width * 0.5, game.world.height - 25);
+    paddle.reset(game.world.width * 0.5, game.world.height - 5);
+    game.input.onDown.addOnce(function () {
+      lifeLostText.visible = false;
+      ball.body.velocity.set(150, -150);
+    }, this);
+  } else {
+    alert("You lost, game over!");
+    location.reload();
+  }
 }
 ```
 

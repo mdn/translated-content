@@ -68,6 +68,6 @@ if (tOLeft > 5) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{domxref("HTMLElement.offsetParent")}}, {{domxref("HTMLElement.offsetTop")}}, {{domxref("HTMLElement.offsetWidth")}}, {{domxref(" HTMLElement.offsetHeight")}}
+- {{domxref("HTMLElement.offsetParent")}}、{{domxref("HTMLElement.offsetTop")}}、{{domxref("HTMLElement.offsetWidth")}}、{{domxref("HTMLElement.offsetHeight")}}

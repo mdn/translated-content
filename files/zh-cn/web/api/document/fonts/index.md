@@ -20,7 +20,7 @@ let fontFaceSet = document.fonts;
 ### 在所有字体加载完成后进行操作
 
 ```js
-document.fonts.ready.then(function() {
+document.fonts.ready.then(function () {
   // 字体加载完成后的逻辑
 });
 ```

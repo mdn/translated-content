@@ -1,8 +1,6 @@
 ---
 title: z-index
 slug: Web/CSS/z-index
-translation_of: Web/CSS/z-index
-browser-compat: css.properties.z-index
 ---
 
 {{CSSRef}}

@@ -40,8 +40,8 @@ let myResponse = new Response(body, init);
 
 ```js
 var myBlob = new Blob();
-var init = { "status" : 200 , "statusText" : "SuperSmashingGreat!" };
-var myResponse = new Response(myBlob,init);
+var init = { status: 200, statusText: "SuperSmashingGreat!" };
+var myResponse = new Response(myBlob, init);
 ```
 
 ## 规范

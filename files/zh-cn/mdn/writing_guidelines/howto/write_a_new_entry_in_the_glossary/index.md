@@ -53,7 +53,7 @@ slug: MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
 - 该术语的主页面必须是一个包含了 [`GlossaryDisambiguation`](https://github.com/mdn/yari/blob/main/kumascript/macros/GlossaryDisambiguation.ejs) 宏的消歧页面；
 - 该术语具有定义给定上下文的术语的子页面。
 
-我们以一个例子来说明。*签名*（signature）条目在至少两种不同的语境中具有不同的含义：*安全*和*函数*。
+我们以一个例子来说明。_签名_（signature）条目在至少两种不同的语境中具有不同的含义：*安全*和*函数*。
 
 1. [Glossary/Signature](/zh-CN/docs/Glossary/Signature) 页面是使用了 [`GlossaryDisambiguation`](https://github.com/mdn/yari/blob/main/kumascript/macros/GlossaryDisambiguation.ejs) 宏的消歧页面。
 2. [Glossary/Signature/Security](/zh-CN/docs/Glossary/Signature/Security) 页面是定义安全上下文中签名的条目页面。

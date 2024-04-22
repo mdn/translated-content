@@ -1,10 +1,9 @@
 ---
 title: アドオンバー
 slug: Mozilla/Firefox/Releases/4/The_add-on_bar
-original_slug: The_add-on_bar
 ---
 
-Firefox 4 よりウィンドウの下部に新しいツールバーを実装する為、ブラウザウィンドウの下部からステータスバーが削除されます。この新しいツールバーは ID "addon-bar" を持った、標準の XUL `<toolbar>` です。アドオンはこのバーにコンテンツを挿入することが可能であり、また、ユーザーはツールバーのカスタマイズ中にボタンをアドオンバーにドラッグすることができます。これがアドオンバーと旧ステータスバーの間の主な相違点です。標準のツールバーであるため、どの XUL 要素でもアドオンバーに配置することができます。
+Firefox 4 よりウィンドウの下部に新しいツールバーを実装する為、ブラウザーウィンドウの下部からステータスバーが削除されます。この新しいツールバーは ID "addon-bar" を持った、標準の XUL `<toolbar>` です。アドオンはこのバーにコンテンツを挿入することが可能であり、また、ユーザーはツールバーのカスタマイズ中にボタンをアドオンバーにドラッグすることができます。これがアドオンバーと旧ステータスバーの間の主な相違点です。標準のツールバーであるため、どの XUL 要素でもアドオンバーに配置することができます。
 
 > **メモ:** 当面は、Firefox にはステータスバーが存在することを期待するアドオンがうまく動作するようにするためのシムが噛ませてあります。但しこれは一時的な措置であり、じきに削除されます。アドオンをアップデートしてください。
 
@@ -15,8 +14,9 @@ Firefox 4 よりウィンドウの下部に新しいツールバーを実装す�
 ```js
 // 一番最近使われたウィンドウを探す
 
-var mediator = Components.classes['@mozilla.org/appshell/window-mediator;1']
-                  .getService(Components.interfaces.nsIWindowMediator);
+var mediator = Components.classes[
+  "@mozilla.org/appshell/window-mediator;1"
+].getService(Components.interfaces.nsIWindowMediator);
 var doc = mediator.getMostRecentWindow("navigator:browser").document;
 
 // そのウィンドウのアドオンバーを取得する
@@ -45,9 +45,14 @@ if (firstrun) {
   /* Code related to firstrun */
 } else {
   try {
-    var installedVersion = Services.prefs.getCharPref("extensions.YOUREXT.installedVersion");
+    var installedVersion = Services.prefs.getCharPref(
+      "extensions.YOUREXT.installedVersion",
+    );
     if (curVersion > installedVersion) {
-      Services.prefs.setCharPref("extensions.YOUREXT.installedVersion", curVersion);
+      Services.prefs.setCharPref(
+        "extensions.YOUREXT.installedVersion",
+        curVersion,
+      );
       /* Code related to upgrade */
     }
   } catch (ex) {

@@ -161,81 +161,81 @@ appearance: unset;
 
 以下值可能适用于历史浏览器版本，使用 **`-moz-appearance`** 或 **`-webkit-appearance`** 前缀，但不适用于标准的 **`appearance`** 属性。
 
-| 值                                     | 浏览器                      | 描述                                                                                        |
-| -------------------------------------- | -------------------------- | ------------------------------------------------------------------------------------------ |
-| `attachment`                           | Safari                     |                                                                                            |
-| `borderless-attachment`                | Safari                     |                                                                                            |
-| `button-bevel`                         | Firefox Chrome Safari Edge |                                                                                            |
-| `caps-lock-indicator`                  | Safari Edge                |                                                                                            |
-| `caret`                                | Firefox Chrome Safari Edge |                                                                                            |
+| 值                                     | 浏览器                     | 描述                                                                                                       |
+| -------------------------------------- | -------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `attachment`                           | Safari                     |                                                                                                            |
+| `borderless-attachment`                | Safari                     |                                                                                                            |
+| `button-bevel`                         | Firefox Chrome Safari Edge |                                                                                                            |
+| `caps-lock-indicator`                  | Safari Edge                |                                                                                                            |
+| `caret`                                | Firefox Chrome Safari Edge |                                                                                                            |
 | `checkbox-container`                   | Firefox                    | 该元素的外观类似于复选框的容器，可能包括在某些平台下的光照预设背景效果。通常它会包含一个标签和一个复选框。 |
-| `checkbox-label`                       | Firefox                    |                                                                                            |
-| `checkmenuitem`                        | Firefox                    |                                                                                            |
-| `color-well`                           | Safari                     | `input type=color`                                                                         |
-| `continuous-capacity-level-indicator`  | Safari                     |                                                                                            |
-| `default-button`                       | Safari Edge                |                                                                                            |
-| `discrete-capacity-level-indicator`    | Safari                     |                                                                                            |
-| `inner-spin-button`                    | Firefox Chrome Safari      |                                                                                            |
-| `image-controls-button`                | Safari                     |                                                                                            |
-| `list-button`                          | Safari                     | datalist                                                                                   |
-| `listitem`                             | Firefox Chrome Safari Edge |                                                                                            |
-| `media-enter-fullscreen-button`        | Chrome Safari              |                                                                                            |
-| `media-exit-fullscreen-button`         | Chrome Safari              |                                                                                            |
-| `media-fullscreen-volume-slider`       | Safari                     |                                                                                            |
-| `media-fullscreen-volume-slider-thumb` | Safari                     |                                                                                            |
-| `media-mute-button`                    | Chrome Safari Edge         |                                                                                            |
-| `media-play-button`                    | Chrome Safari Edge         |                                                                                            |
-| `media-overlay-play-button`            | Chrome Safari              |                                                                                            |
-| `media-return-to-realtime-button`      | Safari                     |                                                                                            |
-| `media-rewind-button`                  | Safari                     |                                                                                            |
-| `media-seek-back-button`               | Safari Edge                |                                                                                            |
-| `media-seek-forward-button`            | Safari Edge                |                                                                                            |
-| `media-toggle-closed-captions-button`  | Chrome Safari              |                                                                                            |
-| `media-slider`                         | Chrome Safari Edge         |                                                                                            |
-| `media-sliderthumb`                    | Chrome Safari Edge         |                                                                                            |
-| `media-volume-slider-container`        | Chrome Safari              |                                                                                            |
-| `media-volume-slider-mute-button`      | Safari                     |                                                                                            |
-| `media-volume-slider`                  | Chrome Safari              |                                                                                            |
-| `media-volume-sliderthumb`             | Chrome Safari              |                                                                                            |
-| `media-controls-background`            | Chrome Safari              |                                                                                            |
-| `media-controls-dark-bar-background`   | Safari                     |                                                                                            |
-| `media-controls-fullscreen-background` | Chrome Safari              |                                                                                            |
-| `media-controls-light-bar-background`  | Safari                     |                                                                                            |
-| `media-current-time-display`           | Chrome Safari              |                                                                                            |
-| `media-time-remaining-display`         | Chrome Safari              |                                                                                            |
-| `menulist-text`                        | Firefox Chrome Safari Edge |                                                                                            |
-| `menulist-textfield`                   | Firefox Chrome Safari Edge | 该元素被样式化为下拉列表的文本字段。（未在 Windows 平台上实现）                                    |
-| `meterbar`                             | Firefox                    | 使用 `meter` 来代替。                                                                        |
-| `number-input`                         | Firefox                    |                                                                                            |
-| `progress-bar-value`                   | Chrome Safari              |                                                                                            |
-| `progressbar`                          | Firefox                    | 该元素的样式类似于进度条。可以使用 `progress-bar` 样式来实现                                      |
-| `progressbar-vertical`                 | Firefox                    |                                                                                            |
-| `range`                                | Firefox                    |                                                                                            |
-| `range-thumb`                          | Firefox                    |                                                                                            |
-| `rating-level-indicator`               | Safari                     |                                                                                            |
-| `relevancy-level-indicator`            | Safari                     |                                                                                            |
-| `scale-horizontal`                     | Firefox                    |                                                                                            |
-| `scalethumbend`                        | Firefox                    |                                                                                            |
-| `scalethumb-horizontal`                | Firefox                    |                                                                                            |
-| `scalethumbstart`                      | Firefox                    |                                                                                            |
-| `scalethumbtick`                       | Firefox                    |                                                                                            |
-| `scalethumb-vertical`                  | Firefox                    |                                                                                            |
-| `scale-vertical`                       | Firefox                    |                                                                                            |
-| `scrollbarthumb-horizontal`            | Firefox                    |                                                                                            |
-| `scrollbarthumb-vertical`              | Firefox                    |                                                                                            |
-| `scrollbartrack-horizontal`            | Firefox                    |                                                                                            |
-| `scrollbartrack-vertical`              | Firefox                    |                                                                                            |
-| `searchfield-decoration`               | Safari Edge                |                                                                                            |
-| `searchfield-results-decoration`       | Chrome Safari Edge         | 可以在 Windows 7 上的 Chrome 51 上使用。                                                      |
-| `searchfield-results-button`           | Safari Edge                |                                                                                            |
-| `searchfield-cancel-button`            | Chrome Safari Edge         |                                                                                            |
-| `snapshotted-plugin-overlay`           | Safari                     |                                                                                            |
-| `sheet`                                | 无                         |                                                                                            |
-| `slider-vertical`                      | Chrome Safari Edge         |                                                                                            |
-| `sliderthumb-horizontal`               | Chrome Safari Edge         |                                                                                            |
-| `sliderthumb-vertical`                 | Chrome Safari Edge         |                                                                                            |
-| `textfield-multiline`                  | Firefox                    | 使用 `textarea` 代替。                                                                       |
-| `-apple-pay-button`                    | Safari                     | 仅适用于 **iOS** 和 **macOS**。从 iOS 10.1 和 macOS 10.12 开始，在 Web 上可用。                 |
+| `checkbox-label`                       | Firefox                    |                                                                                                            |
+| `checkmenuitem`                        | Firefox                    |                                                                                                            |
+| `color-well`                           | Safari                     | `input type=color`                                                                                         |
+| `continuous-capacity-level-indicator`  | Safari                     |                                                                                                            |
+| `default-button`                       | Safari Edge                |                                                                                                            |
+| `discrete-capacity-level-indicator`    | Safari                     |                                                                                                            |
+| `inner-spin-button`                    | Firefox Chrome Safari      |                                                                                                            |
+| `image-controls-button`                | Safari                     |                                                                                                            |
+| `list-button`                          | Safari                     | datalist                                                                                                   |
+| `listitem`                             | Firefox Chrome Safari Edge |                                                                                                            |
+| `media-enter-fullscreen-button`        | Chrome Safari              |                                                                                                            |
+| `media-exit-fullscreen-button`         | Chrome Safari              |                                                                                                            |
+| `media-fullscreen-volume-slider`       | Safari                     |                                                                                                            |
+| `media-fullscreen-volume-slider-thumb` | Safari                     |                                                                                                            |
+| `media-mute-button`                    | Chrome Safari Edge         |                                                                                                            |
+| `media-play-button`                    | Chrome Safari Edge         |                                                                                                            |
+| `media-overlay-play-button`            | Chrome Safari              |                                                                                                            |
+| `media-return-to-realtime-button`      | Safari                     |                                                                                                            |
+| `media-rewind-button`                  | Safari                     |                                                                                                            |
+| `media-seek-back-button`               | Safari Edge                |                                                                                                            |
+| `media-seek-forward-button`            | Safari Edge                |                                                                                                            |
+| `media-toggle-closed-captions-button`  | Chrome Safari              |                                                                                                            |
+| `media-slider`                         | Chrome Safari Edge         |                                                                                                            |
+| `media-sliderthumb`                    | Chrome Safari Edge         |                                                                                                            |
+| `media-volume-slider-container`        | Chrome Safari              |                                                                                                            |
+| `media-volume-slider-mute-button`      | Safari                     |                                                                                                            |
+| `media-volume-slider`                  | Chrome Safari              |                                                                                                            |
+| `media-volume-sliderthumb`             | Chrome Safari              |                                                                                                            |
+| `media-controls-background`            | Chrome Safari              |                                                                                                            |
+| `media-controls-dark-bar-background`   | Safari                     |                                                                                                            |
+| `media-controls-fullscreen-background` | Chrome Safari              |                                                                                                            |
+| `media-controls-light-bar-background`  | Safari                     |                                                                                                            |
+| `media-current-time-display`           | Chrome Safari              |                                                                                                            |
+| `media-time-remaining-display`         | Chrome Safari              |                                                                                                            |
+| `menulist-text`                        | Firefox Chrome Safari Edge |                                                                                                            |
+| `menulist-textfield`                   | Firefox Chrome Safari Edge | 该元素被样式化为下拉列表的文本字段。（未在 Windows 平台上实现）                                            |
+| `meterbar`                             | Firefox                    | 使用 `meter` 来代替。                                                                                      |
+| `number-input`                         | Firefox                    |                                                                                                            |
+| `progress-bar-value`                   | Chrome Safari              |                                                                                                            |
+| `progressbar`                          | Firefox                    | 该元素的样式类似于进度条。可以使用 `progress-bar` 样式来实现                                               |
+| `progressbar-vertical`                 | Firefox                    |                                                                                                            |
+| `range`                                | Firefox                    |                                                                                                            |
+| `range-thumb`                          | Firefox                    |                                                                                                            |
+| `rating-level-indicator`               | Safari                     |                                                                                                            |
+| `relevancy-level-indicator`            | Safari                     |                                                                                                            |
+| `scale-horizontal`                     | Firefox                    |                                                                                                            |
+| `scalethumbend`                        | Firefox                    |                                                                                                            |
+| `scalethumb-horizontal`                | Firefox                    |                                                                                                            |
+| `scalethumbstart`                      | Firefox                    |                                                                                                            |
+| `scalethumbtick`                       | Firefox                    |                                                                                                            |
+| `scalethumb-vertical`                  | Firefox                    |                                                                                                            |
+| `scale-vertical`                       | Firefox                    |                                                                                                            |
+| `scrollbarthumb-horizontal`            | Firefox                    |                                                                                                            |
+| `scrollbarthumb-vertical`              | Firefox                    |                                                                                                            |
+| `scrollbartrack-horizontal`            | Firefox                    |                                                                                                            |
+| `scrollbartrack-vertical`              | Firefox                    |                                                                                                            |
+| `searchfield-decoration`               | Safari Edge                |                                                                                                            |
+| `searchfield-results-decoration`       | Chrome Safari Edge         | 可以在 Windows 7 上的 Chrome 51 上使用。                                                                   |
+| `searchfield-results-button`           | Safari Edge                |                                                                                                            |
+| `searchfield-cancel-button`            | Chrome Safari Edge         |                                                                                                            |
+| `snapshotted-plugin-overlay`           | Safari                     |                                                                                                            |
+| `sheet`                                | 无                         |                                                                                                            |
+| `slider-vertical`                      | Chrome Safari Edge         |                                                                                                            |
+| `sliderthumb-horizontal`               | Chrome Safari Edge         |                                                                                                            |
+| `sliderthumb-vertical`                 | Chrome Safari Edge         |                                                                                                            |
+| `textfield-multiline`                  | Firefox                    | 使用 `textarea` 代替。                                                                                     |
+| `-apple-pay-button`                    | Safari                     | 仅适用于 **iOS** 和 **macOS**。从 iOS 10.1 和 macOS 10.12 开始，在 Web 上可用。                            |
 
 ## 形式定义
 

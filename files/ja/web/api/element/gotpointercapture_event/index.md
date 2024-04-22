@@ -1,9 +1,9 @@
 ---
-title: 'Element: gotpointercapture イベント'
+title: "Element: gotpointercapture イベント"
+short-title: gotpointercapture
 slug: Web/API/Element/gotpointercapture_event
-original_slug: Web/API/Document/gotpointercapture_event
 l10n:
-  sourceCommit: 1d055933f471b0a8a7a48a8408c1fa4a5e2c1adf
+  sourceCommit: 7b3ccaec4a93584da12939587ea746acaabe30bc
 ---
 
 {{APIRef}}
@@ -15,14 +15,14 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('gotpointercapture', (event) => {});
+addEventListener("gotpointercapture", (event) => {});
 
-ongotpointercapture = (event) => { };
+ongotpointercapture = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("PointerEvent")}} です。 {{domxref("Event")}} を継承しています。
+{{domxref("PointerEvent")}} です。{{domxref("Event")}} を継承しています。
 
 {{InheritanceDiagram("PointerEvent")}}
 
@@ -56,27 +56,27 @@ _このインターフェイスは {{domxref("MouseEvent")}} および {{domxref
 この例は `<p>` 要素を取得し、 `gotpointercapture` イベントを待ち受けします。 `setPointerCapture()` を `pointerdown` イベントの要素上で呼び出し、 `gotpointercapture` を発生させます。
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
-para.addEventListener('gotpointercapture', () => {
-  console.log('I\'ve been captured!')
+para.addEventListener("gotpointercapture", () => {
+  console.log("I've been captured!");
 });
 
-para.addEventListener('pointerdown', (event) => {
+para.addEventListener("pointerdown", (event) => {
   para.setPointerCapture(event.pointerId);
 });
 ```
 
-同じ例ですが、 `ongotpointercapture` イベントハンドラーを使用して行います。
+同じ例ですが、`ongotpointercapture` イベントハンドラーを使用して行います。
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
 para.ongotpointercapture = () => {
-  console.log('I\'ve been captured!')
+  console.log("I've been captured!");
 };
 
-para.addEventListener('pointerdown', (event) => {
+para.addEventListener("pointerdown", (event) => {
   para.setPointerCapture(event.pointerId);
 });
 ```

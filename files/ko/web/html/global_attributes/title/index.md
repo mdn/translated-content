@@ -9,8 +9,6 @@ slug: Web/HTML/Global_attributes/title
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-title.html","tabbed-shorter")}}
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</div>
-
 다음과 같은 경우 많이 쓰입니다.
 
 - 보조 기술을 위해 {{HTMLElement("iframe")}} 요소에 이름 붙이기
@@ -26,9 +24,14 @@ slug: Web/HTML/Global_attributes/title
 ### HTML
 
 ```html
-<p><code>title</code> 안에서 줄을 바꿀 땐 조심해야 합니다.
-이 <abbr title="This is a
-multiline title">예제</abbr>처럼요.</p>
+<p>
+  <code>title</code> 안에서 줄을 바꿀 땐 조심해야 합니다. 이
+  <abbr
+    title="This is a
+multiline title"
+    >예제</abbr
+  >처럼요.
+</p>
 ```
 
 ### 결과

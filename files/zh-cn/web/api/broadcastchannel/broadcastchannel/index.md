@@ -11,7 +11,7 @@ slug: Web/API/BroadcastChannel/BroadcastChannel
 
 ## 语法
 
-```js
+```js-nolint
 new BroadcastChannel(channelName)
 ```
 
@@ -37,6 +37,6 @@ bc.postMessage("New listening connected!");
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - 所属接口：{{domxref("BroadcastChannel")}}

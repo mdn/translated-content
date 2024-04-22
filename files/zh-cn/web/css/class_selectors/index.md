@@ -60,9 +60,7 @@ li.spacious.elegant {
 
 ```html
 <p class="red">这段文字是红色的。</p>
-<p class="red yellow-bg">
-  这段文字是红色的，背景是黄色的。
-</p>
+<p class="red yellow-bg">这段文字是红色的，背景是黄色的。</p>
 <p class="red fancy">这段文字是红色的，有“fancy”样式。</p>
 <p>这只是普通的段落。</p>
 ```
@@ -81,5 +79,5 @@ li.spacious.elegant {
 
 ## 参见
 
-- [CSS 选择器](/zh-CN/docs/Web/CSS/CSS_Selectors)
+- [CSS 选择器](/zh-CN/docs/Web/CSS/CSS_selectors)
 - [学习 CSS 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)

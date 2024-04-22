@@ -28,11 +28,8 @@ if (e.isTrusted) {
 
 ## Especificações
 
-| Especifiação                                                                                 | Status                           | Comentário                                                                                                     |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-event-istrusted', 'Event.isTrusted')}} | {{ Spec2('DOM WHATWG') }} |                                                                                                                |
-| {{SpecName('DOM3 Events', '#trusted-events', 'Trusted events')}}         | {{Spec2('DOM3 Events')}} | Amplia requisito para confiabilidade de um evento, embora isto não defina por si só a propriedade `isTrusted`. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Event.isTrusted")}}
+{{Compat}}

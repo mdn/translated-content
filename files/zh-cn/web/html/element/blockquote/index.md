@@ -20,8 +20,8 @@ slug: Web/HTML/Element/blockquote
    <td><a href="/zh-CN/docs/HTML/Content_categories#Flow_content">Flow content</a>.</td>
   </tr>
   <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
+   <th scope="row">标签省略</th>
+   <td>不允许，开始标签和结束标签都不能省略。</td>
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>
@@ -59,17 +59,15 @@ slug: Web/HTML/Element/blockquote
 
 ```html
 <blockquote cite="https://tools.ietf.org/html/rfc1149">
-  <p>Avian carriers can provide high delay, low
-  throughput, and low altitude service.  The
-  connection topology is limited to a single
-  point-to-point path for each carrier, used with
-  standard carriers, but many carriers can be used
-  without significant interference with each other,
-  outside of early spring.  This is because of the 3D
-  ether space available to the carriers, in contrast
-  to the 1D ether used by IEEE802.3.  The carriers
-  have an intrinsic collision avoidance system, which
-  increases availability.</p>
+  <p>
+    Avian carriers can provide high delay, low throughput, and low altitude
+    service. The connection topology is limited to a single point-to-point path
+    for each carrier, used with standard carriers, but many carriers can be used
+    without significant interference with each other, outside of early spring.
+    This is because of the 3D ether space available to the carriers, in contrast
+    to the 1D ether used by IEEE802.3. The carriers have an intrinsic collision
+    avoidance system, which increases availability.
+  </p>
 </blockquote>
 ```
 

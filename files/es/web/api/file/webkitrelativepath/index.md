@@ -5,12 +5,12 @@ slug: Web/API/File/webkitRelativePath
 
 {{APIRef("File API")}}{{non-standard_header}}
 
-La propiedad **`File.webkitRelativePath`** de solo lectura contiene un {{domxref("USVString")}} el cual especifica la ruta relativa del archivo al directorio seleccionado por el usuario en un elemento {{HTMLElement("input")}} con su {{htmlattrxref("webkitdirectory", "input")}} atributo definido.
+La propiedad **`File.webkitRelativePath`** de solo lectura contiene un {{domxref("USVString")}} el cual especifica la ruta relativa del archivo al directorio seleccionado por el usuario en un elemento {{HTMLElement("input")}} con su [`webkitdirectory`](/es/docs/Web/HTML/Element/input#webkitdirectory) atributo definido.
 
 ## Sintaxis
 
 ```js
-var rulaRelativa = File.webkitRelativePath
+var rulaRelativa = File.webkitRelativePath;
 ```
 
 ### Valor
@@ -31,16 +31,20 @@ En este ejemplo,un seleccionador de directorios es mostrado al usuario para perm
 ### JavaScript
 
 ```js
-document.getElementById("filepicker").addEventListener("change", function(event) {
-  let output = document.getElementById("listing");
-  let files = event.target.files;
+document.getElementById("filepicker").addEventListener(
+  "change",
+  function (event) {
+    let output = document.getElementById("listing");
+    let files = event.target.files;
 
-  for (let i=0; i<files.length; i++) {
-    let item = document.createElement("li");
-    item.innerHTML = files[i].webkitRelativePath;
-    output.appendChild(item);
-  };
-}, false);
+    for (let i = 0; i < files.length; i++) {
+      let item = document.createElement("li");
+      item.innerHTML = files[i].webkitRelativePath;
+      output.appendChild(item);
+    }
+  },
+  false,
+);
 ```
 
 ### Resultado

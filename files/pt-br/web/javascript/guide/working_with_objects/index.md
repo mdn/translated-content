@@ -1,7 +1,6 @@
 ---
 title: Trabalhando com objetos
 slug: Web/JavaScript/Guide/Working_with_objects
-original_slug: Web/JavaScript/Guide/Trabalhando_com_Objetos
 ---
 
 **A linguagem JavaScript é projetada com base em um simples paradigma orientado a objeto. Um objeto é uma coleção de propriedades, e uma propriedade é uma associação entre um nome (ou _chave_) e um valor. Um valor de propriedade pode ser uma função, que é então considerada um _método_ do objeto. Além dos objetos que são pré-definidos no browser, você pode definir seus próprios objetos.**
@@ -19,7 +18,7 @@ Em JavaScript, um objeto é uma entidade independente, com propriedades e tipos.
 Um objeto em JavaScript tem propriedades associadas a ele. Uma propriedade de um objeto pode ser explicada como uma variável que é ligada ao objeto. Propriedades de objetos são basicamente as mesmas que variáveis normais em JavaScript, exceto pelo fato de estarem ligadas a objetos. As propriedades de um objeto definem as características do objeto. Você acessa as propriedades de um objeto com uma simples notação de ponto:
 
 ```js
-nomeDoObjeto.nomeDaPropriedade
+nomeDoObjeto.nomeDaPropriedade;
 ```
 
 Como as variáveis em JavaScript, o nome do objeto (que poderia ser uma variável normal) e um nome de propriedade diferem em maiúsculas/minúsculas (por exemplo, cor e Cor são propriedades diferentes). Você pode definir uma propriedade atribuindo um valor a ela. Por exemplo, vamos criar um objeto chamado `meuCarro` e dar a ele propriedades chamadas `fabricacao`, `modelo`, e `ano`, conforme mostrado a seguir:
@@ -49,16 +48,16 @@ Um nome de propriedade de um objeto pode ser qualquer string JavaScript válida,
 
 ```js
 var meuObj = new Object(),
-    str = "minhaString",
-    aleat = Math.random(),
-    obj = new Object();
+  str = "minhaString",
+  aleat = Math.random(),
+  obj = new Object();
 
-meuObj.tipo               = "Sintaxe de ponto";
+meuObj.tipo = "Sintaxe de ponto";
 meuObj["data de criacao"] = "String com espaco";
-meuObj[str]               = "valor de String";
-meuObj[aleat]             = "Numero Aleatorio";
-meuObj[obj]               = "Objeto";
-meuObj[""]                = "Mesmo uma string vazia";
+meuObj[str] = "valor de String";
+meuObj[aleat] = "Numero Aleatorio";
+meuObj[obj] = "Objeto";
+meuObj[""] = "Mesmo uma string vazia";
 
 console.log(meuObj);
 ```
@@ -80,7 +79,7 @@ function mostrarProps(obj, nomeDoObj) {
   var resultado = "";
   for (var i in obj) {
     if (obj.hasOwnProperty(i)) {
-        resultado += nomeDoObj + "." + i + " = " + obj[i] + "\n";
+      resultado += nomeDoObj + "." + i + " = " + obj[i] + "\n";
     }
   }
   return resultado;
@@ -113,12 +112,18 @@ Começando com a [ECMAScript 5](/pt-BR/docs/JavaScript/ECMAScript_5_support_in_M
 Antes, na ECMAScript 5, não existia uma forma nativa de se listar todas as propriedades de um objeto. No entanto, isso pode ser feito com a seguinte função:
 
 ```js
-function listarTodasAsPropriedades(o){
+function listarTodasAsPropriedades(o) {
   var objectoASerInspecionado;
   var resultado = [];
 
-  for(objectoASerInspecionado = o; objectoASerInspecionado !== null; objectoASerInspecionado = Object.getPrototypeOf(objectoASerInspecionado)){
-    resultado = resultado.concat(Object.getOwnPropertyNames(objectoASerInspecionado));
+  for (
+    objectoASerInspecionado = o;
+    objectoASerInspecionado !== null;
+    objectoASerInspecionado = Object.getPrototypeOf(objectoASerInspecionado)
+  ) {
+    resultado = resultado.concat(
+      Object.getOwnPropertyNames(objectoASerInspecionado),
+    );
   }
 
   return resultado;
@@ -138,10 +143,12 @@ Além de criar objetos usando uma função construtora, você pode criar objetos
 A sintaxe para um objeto usando-se um inicializador de objeto é:
 
 ```js
-var obj = { propriedade_1:   valor_1,   // propriedade_# pode ser um identificador...
-            2:            valor_2,   // ou um numero...
-            // ...,
-            "propriedade n": valor_n }; // ou uma string
+var obj = {
+  propriedade_1: valor_1, // propriedade_# pode ser um identificador...
+  2: valor_2, // ou um numero...
+  // ...,
+  "propriedade n": valor_n,
+}; // ou uma string
 ```
 
 onde `obj` é o nome do novo objeto, cada `propriedade_i` é um identificador (um nome, um número, ou uma string literal), e cada `valor_i` é uma expressão cujo valor é atribuído à `propriedade_i`. O `obj` e a atribuição são opcionais; se você não precisa fazer referência a esse objeto em nenhum outro local, você não precisa atribuí-lo a uma variável. (Note que você pode precisar colocar o objeto literal entre parentêses se o objeto aparece onde um comando é esperado, de modo a não confundir o literal com uma declaração de bloco.)
@@ -151,13 +158,17 @@ Se um objeto é criado com um inicializador de objeto em um script de alto níve
 O seguinte comando cria um objeto e o atribui à variável `x` somente se a expressão `cond` é verdadeira.
 
 ```js
-if (cond) var x = {hi: "there"};
+if (cond) var x = { hi: "there" };
 ```
 
 O seguinte exemplo cria `minhaHonda` com três propriedades. Note que a propriedade `motor` é também um objeto com suas próprias propriedades.
 
 ```js
-var minhaHonda = {cor: "vermelho", rodas: 4, motor: {cilindros: 4, tamanho: 2.2}};
+var minhaHonda = {
+  cor: "vermelho",
+  rodas: 4,
+  motor: { cilindros: 4, tamanho: 2.2 },
+};
 ```
 
 Você pode também usar inicializadores de objeto para criar arrays. Veja [arrays literais](/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_types#Array_literals).
@@ -234,7 +245,7 @@ var carro2 = new Carro("Nissan", "300ZX", 1992, paulo);
 Perceba que ao invés de passar uma string literal ou um valor inteiro na hora de criar os novos objetos, os comandos acima passam os objetos `jose` e `paulo` como os argumentos para os donos. Então se você quiser descobrir o nome do dono de `carro2`, você pode acessar a seguinte propriedade:
 
 ```js
-carro2.dono
+carro2.dono;
 ```
 
 Note que você pode sempre adicionar uma propriedade a um objeto definido anteriormente. Por exemplo, o comando
@@ -253,10 +264,11 @@ Objetos podem também ser criados usando-se o método [`Object.create()`](/pt-BR
 // Encapsulamento das propriedades e métodos de Animal
 var Animal = {
   tipo: "Invertebrados", // Propriedades de valores padrão
-  qualTipo : function() {  // Método que ira mostrar o tipo de Animal
+  qualTipo: function () {
+    // Método que ira mostrar o tipo de Animal
     console.log(this.tipo);
-  }
-}
+  },
+};
 
 // Cria um novo tipo de animal chamado animal1
 var animal1 = Object.create(Animal);
@@ -299,9 +311,9 @@ Um _método_ é uma função associada a um objeto, ou, simplesmente, um método
 nomeDoObjeto.nomedometodo = nome_da_funcao;
 
 var meuObjeto = {
-  meuMetodo: function(parametros) {
+  meuMetodo: function (parametros) {
     // ...faça algo
-  }
+  },
 };
 ```
 
@@ -317,8 +329,8 @@ Você pode definir métodos para um tipo de objeto incluindo uma definição de 
 
 ```js
 function mostreCarro() {
-  var resultado = "Um belo " + this.ano + " " + this.fabricacao
-    + " " + this.modelo;
+  var resultado =
+    "Um belo " + this.ano + " " + this.fabricacao + " " + this.modelo;
   pretty_print(resultado);
 }
 ```
@@ -356,16 +368,14 @@ JavaScript tem uma palavra-chave especial, [this](/pt-BR/docs/Web/JavaScript/Ref
 
 ```js
 function validate(obj, lowval, hival) {
-  if ((obj.value < lowval) || (obj.value > hival))
-    alert("Valor inválido!");
+  if (obj.value < lowval || obj.value > hival) alert("Valor inválido!");
 }
 ```
 
 Então, você poderia chamar `validate` no manipulador de evento `onchange` em cada elemento do formulário, usando `this` para passar o elemento, como no exemplo a seguir:
 
 ```html
-<input type="text" name="age" size="3"
-  onChange="validate(this, 18, 99)">
+<input type="text" name="age" size="3" onChange="validate(this, 18, 99)" />
 ```
 
 No geral, `this` referencia o objeto chamando um método.
@@ -374,10 +384,18 @@ Quando combinado com a propriedade `form` , `this` pode referenciar a forma orig
 
 ```html
 <form name="myForm">
-<p><label>Nome do form:<input type="text" name="text1" value="Beluga"></label>
-<p><input name="button1" type="button" value="Mostre o Nome do Form"
-     onclick="this.form.text1.value = this.form.name">
-</p>
+  <p>
+    <label
+      >Nome do form:<input type="text" name="text1" value="Beluga"
+    /></label>
+  </p>
+  <p>
+    <input
+      name="button1"
+      type="button"
+      value="Mostre o Nome do Form"
+      onclick="this.form.text1.value = this.form.name" />
+  </p>
 </form>
 ```
 
@@ -385,7 +403,7 @@ Quando combinado com a propriedade `form` , `this` pode referenciar a forma orig
 
 Um [getter](/pt-BR/docs/Web/JavaScript/Reference/Functions/get) é um método que obtém o valor de uma propriedade específica. Um [setter](/pt-BR/docs/Web/JavaScript/Reference/Functions/set) é um método que define o valor de uma propriedade específica. Você pode definir getters e setters em qualquer objeto de núcleo pré-definido ou objeto definido pelo usuário que suporta a adição de novas propriedades. A sintaxe para definir getters e setters usa a sintaxe literal do objeto.
 
-O código a seguir ilustra como getters e setters podem funcionar para um objeto` o `definido pelo usuário.
+O código a seguir ilustra como getters e setters podem funcionar para um objeto`o`definido pelo usuário.
 
 ```js
 var o = {
@@ -394,8 +412,8 @@ var o = {
     return this.a + 1;
   },
   set c(x) {
-    this.a = x / 2
-  }
+    this.a = x / 2;
+  },
 };
 
 console.log(o.a); // 7
@@ -410,8 +428,8 @@ As propriedades do objeto `o` são:
 - `o.b` — um getter que retorna `o.a` + 1
 - `o.c` — um setter que define o valor de `o.a` pela metade do valor definindo para `o.c`
 
-Observe que nomes de função de getters e setters definidos em um objeto literal usando "\[gs]et _property_()" (ao contrário de `__define[GS]etter__` ) não são os próprios nomes dos getters, embora a sintaxe `[gs]et propertyName(){ }` possa induzir ao erro e você pensar de outra forma. Para nomear uma função getter ou setter usando a sintaxe "\[gs]et _property_()", define explicitamente um função nomeada programaticamente usando [`Object.defineProperty`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Object/defineProperty "en-US/docs/Core JavaScript 1.5 Reference/Global
-Objects/Object/defineProperty") (ou o legado fallback [`Object.prototype.__defineGetter__`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Object/defineGetter "en-US/docs/Core JavaScript 1.5 Reference/Global
+Observe que nomes de função de getters e setters definidos em um objeto literal usando "\[gs]et _property_()" (ao contrário de `__define[GS]etter__` ) não são os próprios nomes dos getters, embora a sintaxe `[gs]et propertyName(){ }` possa induzir ao erro e você pensar de outra forma. Para nomear uma função getter ou setter usando a sintaxe "\[gs]et _property_()", define explicitamente um função nomeada programaticamente usando [`Object.defineProperty`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Object/defineProperty "/en-US/docs/Core JavaScript 1.5 Reference/Global
+Objects/Object/defineProperty") (ou o legado fallback [`Object.prototype.__defineGetter__`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Object/defineGetter "/en-US/docs/Core JavaScript 1.5 Reference/Global
 Objects/Object/defineGetter")).
 
 O código a seguir ilustra como getters e setters podem extender o protótipo [`Date`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Date) para adicionar a propriedade `ano` para todas as instâncias de classes `Date` pré-definidas. Ele usa os métodos `getFullYear` e `setFullYear` existentes da classe `Date` para suportar o getter e setter da propriedade `ano`.
@@ -421,8 +439,12 @@ Estes estados definem um getter e setter para a propriedade `ano`:
 ```js
 var d = Date.prototype;
 Object.defineProperty(d, "year", {
-  get: function() { return this.getFullYear() },
-  set: function(y) { this.setFullYear(y) }
+  get: function () {
+    return this.getFullYear();
+  },
+  set: function (y) {
+    this.setFullYear(y);
+  },
 });
 ```
 
@@ -446,23 +468,35 @@ Ao definir getters e setters usando [objetos inicializadores](/pt-BR/docs/Web/Ja
 ```js
 var o = {
   a: 7,
-  get b() { return this.a + 1; },
-  set c(x) { this.a = x / 2; }
+  get b() {
+    return this.a + 1;
+  },
+  set c(x) {
+    this.a = x / 2;
+  },
 };
 ```
 
 Getters e setters podem também ser adicionado em um objeto a qualquer hora depois da criação usando o método `Object.defineProperties`. O primeiro parâmetro deste método é o objeto no qual você quer definir o getter ou setter. O segundo parâmetro é um objeto cujos nomes das propriedades são os nomes getter ou setter, e cujo valores das propriedades são objetos para definição de funções getter ou setter. Aqui está um exemplo que define o mesmo getter e setter usado no exemplo anterior:
 
 ```js
-var o = { a:0 }
+var o = { a: 0 };
 
 Object.defineProperties(o, {
-    "b": { get: function () { return this.a + 1; } },
-    "c": { set: function (x) { this.a = x / 2; } }
+  b: {
+    get: function () {
+      return this.a + 1;
+    },
+  },
+  c: {
+    set: function (x) {
+      this.a = x / 2;
+    },
+  },
 });
 
-o.c = 10 // Roda o setter, que associa 10 / 2 (5) para a propriedade 'a'
-console.log(o.b) // Roda o getter, que yields a + 1 ou 6
+o.c = 10; // Roda o setter, que associa 10 / 2 (5) para a propriedade 'a'
+console.log(o.b); // Roda o getter, que yields a + 1 ou 6
 ```
 
 Escolher qual das duas formas depende do seu estilo de programação e tarefa na mão. Se você já vai para o inicializador de objeto ao definir um protótipo, provavelmente a maior parte do tempo escolherá a primeira forma. Esta forma é mais compacta e natural. No entanto, se você precisar adicionar getters e setters mais tarde - porque você não escreveu o protótipo ou objeto particular - então a segunda forma é a única possível. A segunda forma provavelmente melhor representa a natureza dinâmica do JavaScript - mas pode tornar o código difícil de ler e entender.
@@ -473,13 +507,13 @@ Você pode remover uma propriedade não herdada usando o operador `delete`. O c�
 
 ```js
 //Criando um novo objeto, myobj, com duas propriedades, a e b.
-var myobj = new Object;
+var myobj = new Object();
 myobj.a = 5;
 myobj.b = 12;
 
 //Removendo a propriedade a, deixando myobj com apenas a propriedade b.
 delete myobj.a;
-console.log ("a" in myobj) // yields "false"
+console.log("a" in myobj); // yields "false"
 ```
 
 Você também pode usar `delete` para remover uma variável global se a `var` keyword não estiver sendo usada para declarar a variável:
@@ -495,21 +529,21 @@ Em JavaScript, objetos são um tipo de referência. Dois objetos distintos nunca
 
 ```js
 // Duas variáveis, dois objetos distintos com as mesmas propriedades
-var fruit = {name: "apple"};
-var fruitbear = {name: "apple"};
+var fruit = { name: "apple" };
+var fruitbear = { name: "apple" };
 
-fruit == fruitbear // return false
-fruit === fruitbear // return false
+fruit == fruitbear; // return false
+fruit === fruitbear; // return false
 ```
 
 ```js
 // Duas variáveis, um único objeto
-var fruit = {name: "apple"};
-var fruitbear = fruit;  // assign fruit object reference to fruitbear
+var fruit = { name: "apple" };
+var fruitbear = fruit; // assign fruit object reference to fruitbear
 
 // Here fruit and fruitbear are pointing to same object
-fruit == fruitbear // return true
-fruit === fruitbear // return true
+fruit == fruitbear; // return true
+fruit === fruitbear; // return true
 ```
 
 Para mais informações sobre comparaçāo de operadores, veja [Operadores de comparaçāo](/pt-BR/docs/Web/JavaScript/Reference/Operators/Comparison_Operators).

@@ -14,12 +14,12 @@ l10n:
 
 아래의 `unsigned short` 값 중 하나입니다.
 
-| 상수                | 값    | 설명                                                                                    |
-| ------------------- | ----- | --------------------------------------------------------------------------------------- |
-| `NETWORK_EMPTY`     | 0     | 아직 데이터가 없습니다. 또한 `readyState`는 `HAVE_NOTHING`입니다.                       |
-| `NETWORK_IDLE`      | 1     | HTMLMediaElement가 활성 상태이고 리소스를 선택했지만 네트워크를 사용하고 있지 않습니다. |
-| `NETWORK_LOADING`   | 2     | 브라우저가 HTMLMediaElement 데이터를 다운로드하고 있습니다.                             |
-| `NETWORK_NO_SOURCE` | 3     | HTMLMediaElement src를 찾을 수 없습니다.                                                |
+| 상수                | 값  | 설명                                                                                    |
+| ------------------- | --- | --------------------------------------------------------------------------------------- |
+| `NETWORK_EMPTY`     | 0   | 아직 데이터가 없습니다. 또한 `readyState`는 `HAVE_NOTHING`입니다.                       |
+| `NETWORK_IDLE`      | 1   | HTMLMediaElement가 활성 상태이고 리소스를 선택했지만 네트워크를 사용하고 있지 않습니다. |
+| `NETWORK_LOADING`   | 2   | 브라우저가 HTMLMediaElement 데이터를 다운로드하고 있습니다.                             |
+| `NETWORK_NO_SOURCE` | 3   | HTMLMediaElement src를 찾을 수 없습니다.                                                |
 
 ## 예제
 

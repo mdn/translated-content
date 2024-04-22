@@ -26,7 +26,7 @@ function calculateCircumference(radius) {
   return Math.PI * (radius + radius);
 }
 
-calculateCircumference(1);  // 6.283185307179586
+calculateCircumference(1); // 6.283185307179586
 ```
 
 ## 仕様書
@@ -35,7 +35,7 @@ calculateCircumference(1);  // 6.283185307179586
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Math.PI")}}
+{{Compat}}
 
 ## 関連情報
 

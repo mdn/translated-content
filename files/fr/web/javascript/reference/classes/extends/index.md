@@ -1,11 +1,6 @@
 ---
 title: extends
 slug: Web/JavaScript/Reference/Classes/extends
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Classes/extends
 ---
 
 {{jsSidebar("Classes")}}
@@ -41,13 +36,12 @@ class Carré extends Polygone {
     // Pour les classes dérivées, super() doit être appelé avant de
     // pouvoir utiliser 'this' sinon cela provoque une exception
     // ReferenceError
-    this.nom = 'Carré';
+    this.nom = "Carré";
   }
 
   get aire() {
     return this.hauteur * this.largeur;
   }
-
 }
 ```
 
@@ -62,8 +56,23 @@ class maDate extends Date {
   }
 
   getFormattedDate() {
-    var mois = ['Jan','Fév','Mar','Avr','Mai','Juin','Juil','Août','Sep','Oct','Nov','Déc'];
-    return this.getDate() + "-" + mois[this.getMonth()] + "-" + this.getFullYear();
+    var mois = [
+      "Jan",
+      "Fév",
+      "Mar",
+      "Avr",
+      "Mai",
+      "Juin",
+      "Juil",
+      "Août",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Déc",
+    ];
+    return (
+      this.getDate() + "-" + mois[this.getMonth()] + "-" + this.getFullYear()
+    );
   }
 }
 ```

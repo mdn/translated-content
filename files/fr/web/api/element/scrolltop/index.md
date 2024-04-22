@@ -1,7 +1,6 @@
 ---
 title: Element.scrollTop
 slug: Web/API/Element/scrollTop
-translation_of: Web/API/Element/scrollTop
 ---
 
 {{APIRef("DOM")}}
@@ -40,7 +39,27 @@ element.scrollTop = intValue;
 
 ```html
 <div id="container">
-  <div id="content">Utilisez le bouton :) Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore harum adipisci earum placeat itaque, minima neque ipsam, incidunt corporis quod magnam corrupti, ut fugiat beatae quis dolor. Nisi, distinctio repellat!! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore harum adipisci earum placeat itaque, minima neque ipsam, incidunt corporis quod magnam corrupti, ut fugiat beatae quis dolor. Nisi, distinctio repellat!! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore harum adipisci earum placeat itaque, minima neque ipsam, incidunt corporis quod magnam corrupti, ut fugiat beatae quis dolor. Nisi, distinctio repellat!! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore harum adipisci earum placeat itaque, minima neque ipsam, incidunt corporis quod magnam corrupti, ut fugiat beatae quis dolor. Nisi, distinctio repellat!! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore harum adipisci earum placeat itaque, minima neque ipsam, incidunt corporis quod magnam corrupti, ut fugiat beatae quis dolor. Nisi, distinctio repellat!! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore harum adipisci earum placeat itaque, minima neque ipsam, incidunt corporis quod magnam corrupti, ut fugiat beatae quis dolor. Nisi, distinctio repellat!!</div>
+  <div id="content">
+    Utilisez le bouton :) Lorem ipsum dolor sit amet consectetur adipisicing
+    elit. Inventore harum adipisci earum placeat itaque, minima neque ipsam,
+    incidunt corporis quod magnam corrupti, ut fugiat beatae quis dolor. Nisi,
+    distinctio repellat!! Lorem ipsum dolor sit amet consectetur adipisicing
+    elit. Inventore harum adipisci earum placeat itaque, minima neque ipsam,
+    incidunt corporis quod magnam corrupti, ut fugiat beatae quis dolor. Nisi,
+    distinctio repellat!! Lorem ipsum dolor sit amet consectetur adipisicing
+    elit. Inventore harum adipisci earum placeat itaque, minima neque ipsam,
+    incidunt corporis quod magnam corrupti, ut fugiat beatae quis dolor. Nisi,
+    distinctio repellat!! Lorem ipsum dolor sit amet consectetur adipisicing
+    elit. Inventore harum adipisci earum placeat itaque, minima neque ipsam,
+    incidunt corporis quod magnam corrupti, ut fugiat beatae quis dolor. Nisi,
+    distinctio repellat!! Lorem ipsum dolor sit amet consectetur adipisicing
+    elit. Inventore harum adipisci earum placeat itaque, minima neque ipsam,
+    incidunt corporis quod magnam corrupti, ut fugiat beatae quis dolor. Nisi,
+    distinctio repellat!! Lorem ipsum dolor sit amet consectetur adipisicing
+    elit. Inventore harum adipisci earum placeat itaque, minima neque ipsam,
+    incidunt corporis quod magnam corrupti, ut fugiat beatae quis dolor. Nisi,
+    distinctio repellat!!
+  </div>
 </div>
 
 <button id="slide" type="button">Défilez vers le bas</button>
@@ -63,10 +82,10 @@ element.scrollTop = intValue;
 ### JavaScript
 
 ```js
-const button = document.getElementById('slide');
+const button = document.getElementById("slide");
 
 button.onclick = function () {
-  document.getElementById('container').scrollTop += 20;
+  document.getElementById("container").scrollTop += 20;
 };
 ```
 

@@ -36,7 +36,7 @@ document.domain = domainString
 
 ### ドメイン名の取得
 
-`http://developer.mozilla.org/en-US/docs/Web` の URI において、この例は `currentDomain` に "`developer.mozilla.org`" の文字列を設定します。
+`http://developer.mozilla.org/ja/docs/Web` の URI において、この例は `currentDomain` に "`developer.mozilla.org`" の文字列を設定します。
 
 ```js
 const currentDomain = document.domain;

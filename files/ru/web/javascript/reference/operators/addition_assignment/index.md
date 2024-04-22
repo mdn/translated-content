@@ -1,10 +1,6 @@
 ---
 title: Сложение с присваиванием (+=)
 slug: Web/JavaScript/Reference/Operators/Addition_assignment
-tags:
-  - JavaScript
-  - Оператор
-translation_of: Web/JavaScript/Reference/Operators/Addition_assignment
 ---
 
 {{jsSidebar("Operators")}}
@@ -31,22 +27,22 @@ translation_of: Web/JavaScript/Reference/Operators/Addition_assignment
 //  baz = true
 
 // Number + Number -> addition
-bar += 2 // 7
+bar += 2; // 7
 
 // Boolean + Number -> addition
-baz += 1 // 2
+baz += 1; // 2
 
 // Boolean + Boolean -> addition
-baz += false // 1
+baz += false; // 1
 
 // Number + String -> concatenation
-bar += 'foo' // "5foo"
+bar += "foo"; // "5foo"
 
 // String + Boolean -> concatenation
-foo += false // "foofalse"
+foo += false; // "foofalse"
 
 // String + String -> concatenation
-foo += 'bar' // "foobar"
+foo += "bar"; // "foobar"
 ```
 
 ## Спецификации

@@ -21,7 +21,7 @@ slug: Web/HTML/Element/input/number
   </tr>
   <tr>
    <td><strong>事件</strong></td>
-   <td>{{domxref("HTMLElement/change_event", "change")}} 和 {{domxref("HTMLElement/input_event", "input")}}</td>
+   <td>{{domxref("HTMLElement/change_event", "change")}} 和 {{domxref("Element/input_event", "input")}}</td>
   </tr>
   <tr>
    <td><strong>支持的公共属性</strong></td>
@@ -108,7 +108,7 @@ list 属性的值是位于同一文档中的 {{HTMLElement("datalist")}} 元素�
 
 > **警告：** 逻辑上，不应该向数字输入框输入数字以外的字符。某些浏览器允许这些不合法字符，另外一些浏览器不允许；请查看 [Firefox bug 1398528](https://bugzil.la/1398528)。
 
-> **备注：** 记住，用户可以在幕后修改 HTML ，因此网站*不得*使用简单的客户端验证来实现任何安全目的。你*必须*在服务器端验证所提供的值，以确保这些值没有任何安全问题。
+> **备注：** 记住，用户可以在幕后修改 HTML，因此网站*不得*使用简单的客户端验证来实现任何安全目的。你*必须*在服务器端验证所提供的值，以确保这些值没有任何安全问题。
 
 此外，移动浏览器通过在用户尝试输入值时显示更适合输入数字的特殊键盘，进一步帮助用户体验。
 
@@ -368,39 +368,39 @@ input:valid + span::after {
 最后是一些 JavaScript 代码：
 
 ```js
-const metersInputGroup = document.querySelector('.metersInputGroup');
-const feetInputGroup = document.querySelector('.feetInputGroup');
-const metersInput = document.querySelector('#meters');
-const feetInput = document.querySelector('#feet');
-const inchesInput = document.querySelector('#inches');
+const metersInputGroup = document.querySelector(".metersInputGroup");
+const feetInputGroup = document.querySelector(".feetInputGroup");
+const metersInput = document.querySelector("#meters");
+const feetInput = document.querySelector("#feet");
+const inchesInput = document.querySelector("#inches");
 const switchBtn = document.querySelector('input[type="button"]');
 
-switchBtn.addEventListener('click', () => {
-  if (switchBtn.getAttribute('class') === 'meters') {
-    switchBtn.setAttribute('class', 'feet');
-    switchBtn.value = 'Enter height in meters';
+switchBtn.addEventListener("click", () => {
+  if (switchBtn.getAttribute("class") === "meters") {
+    switchBtn.setAttribute("class", "feet");
+    switchBtn.value = "Enter height in meters";
 
-    metersInputGroup.style.display = 'none';
-    feetInputGroup.style.display = 'block';
+    metersInputGroup.style.display = "none";
+    feetInputGroup.style.display = "block";
 
-    feetInput.setAttribute('required', '');
-    inchesInput.setAttribute('required', '');
-    metersInput.removeAttribute('required');
+    feetInput.setAttribute("required", "");
+    inchesInput.setAttribute("required", "");
+    metersInput.removeAttribute("required");
 
-    metersInput.value = '';
+    metersInput.value = "";
   } else {
-    switchBtn.setAttribute('class', 'meters');
-    switchBtn.value = 'Enter height in feet and inches';
+    switchBtn.setAttribute("class", "meters");
+    switchBtn.value = "Enter height in feet and inches";
 
-    metersInputGroup.style.display = 'block';
-    feetInputGroup.style.display = 'none';
+    metersInputGroup.style.display = "block";
+    feetInputGroup.style.display = "none";
 
-    feetInput.removeAttribute('required');
-    inchesInput.removeAttribute('required');
-    metersInput.setAttribute('required', '');
+    feetInput.removeAttribute("required");
+    inchesInput.removeAttribute("required");
+    metersInput.setAttribute("required", "");
 
-    feetInput.value = '';
-    inchesInput.value = '';
+    feetInput.value = "";
+    inchesInput.value = "";
   }
 });
 ```

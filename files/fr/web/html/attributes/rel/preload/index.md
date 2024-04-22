@@ -1,9 +1,6 @@
 ---
-title: 'Types de liens : preload'
+title: "Types de liens : preload"
 slug: Web/HTML/Attributes/rel/preload
-translation_of: Web/HTML/Link_types/preload
-original_slug: Web/HTML/Link_types/preload
-browser-compat: html.elements.link.rel.preload
 ---
 
 {{HTMLSidebar}}
@@ -15,7 +12,7 @@ La valeur `preload` de l'attribut [`rel`](/fr/docs/Web/HTML/Element/link#rel) de
 Pour charger un fichier CSS permettant de styler une page, on utilise le plus souvent l'élément `<link>` de la manière suivante&nbsp;:
 
 ```html
-<link rel="stylesheet" href="styles/main.css">
+<link rel="stylesheet" href="styles/main.css" />
 ```
 
 Ici, nous allons utiliser la valeur `preload` sur l'attribut `rel`, ce qui transformera l'élément `<link>` en outil de préchargement utilisable pour n'importe quelle ressource. Nous devrons aussi indiquer&nbsp;:
@@ -27,13 +24,13 @@ Voici un exemple simple (voir nos [fichiers JS et CSS d'exemple](https://github.
 
 ```html
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <title>Exemple de préchargement JS et CSS</title>
 
-  <link rel="preload" href="style.css" as="style">
-  <link rel="preload" href="main.js" as="script">
+  <link rel="preload" href="style.css" as="style" />
+  <link rel="preload" href="main.js" as="script" />
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -95,16 +92,19 @@ Vous pouvez voir un exemple de ce fonctionnement dans notre vidéo d'exemple (vo
 
 ```html
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <title>Exemple de préchargement de vidéo</title>
 
-  <link rel="preload" href="sintel-short.mp4" as="video" type="video/mp4">
+  <link rel="preload" href="sintel-short.mp4" as="video" type="video/mp4" />
 </head>
 <body>
   <video controls>
-    <source src="sintel-short.mp4" type="video/mp4">
-    <source src="sintel-short.webm" type="video/webm">
-    <p>Votre navigateur ne prend pas en charge les vidéos HTML5. Voici un <a href="sintel-short.mp4">lien vers le fichier vidéo en remplacement</a>.</p>
+    <source src="sintel-short.mp4" type="video/mp4" />
+    <source src="sintel-short.webm" type="video/webm" />
+    <p>
+      Votre navigateur ne prend pas en charge les vidéos HTML5. Voici un
+      <a href="sintel-short.mp4">lien vers le fichier vidéo en remplacement</a>.
+    </p>
   </video>
 </body>
 ```
@@ -127,13 +127,23 @@ Voici un cas d'utilisation. Vous trouverez [le code source complet sur GitHub](h
 
 ```html
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <title>Exemple de préchargement de police Web</title>
 
-  <link rel="preload" href="fonts/cicle_fina-webfont.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/zantroke-webfont.woff2" as="font" type="font/woff2" crossorigin>
+  <link
+    rel="preload"
+    href="fonts/cicle_fina-webfont.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin />
+  <link
+    rel="preload"
+    href="fonts/zantroke-webfont.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin />
 
-  <link href="style.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet" />
 </head>
 <body>
   …
@@ -150,13 +160,21 @@ Voici un exemple. Vous pouvez consulter son [code source sur GitHub](https://git
 
 ```html
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <title>Exemple de préchargement responsive</title>
 
-  <link rel="preload" href="bg-image-narrow.png" as="image" media="(max-width: 600px)">
-  <link rel="preload" href="bg-image-wide.png" as="image" media="(min-width: 601px)">
+  <link
+    rel="preload"
+    href="bg-image-narrow.png"
+    as="image"
+    media="(max-width: 600px)" />
+  <link
+    rel="preload"
+    href="bg-image-wide.png"
+    as="image"
+    media="(min-width: 601px)" />
 
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="main.css" />
 </head>
 <body>
   <header>
@@ -165,12 +183,12 @@ Voici un exemple. Vous pouvez consulter son [code source sur GitHub](https://git
 
   <script>
     var mediaQueryList = window.matchMedia("(max-width: 600px)");
-    var header = document.querySelector('header');
+    var header = document.querySelector("header");
 
     if (mediaQueryList.matches) {
-      header.style.backgroundImage = 'url(bg-image-narrow.png)';
+      header.style.backgroundImage = "url(bg-image-narrow.png)";
     } else {
-      header.style.backgroundImage = 'url(bg-image-wide.png)';
+      header.style.backgroundImage = "url(bg-image-wide.png)";
     }
   </script>
 </body>

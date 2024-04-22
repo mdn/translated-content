@@ -1,15 +1,6 @@
 ---
 title: Notification.permission
 slug: Web/API/Notification/permission_static
-tags:
-  - API
-  - API Notifications
-  - Notification
-  - Notifications
-  - Propriété
-  - Reference
-translation_of: Web/API/Notification/permission
-original_slug: Web/API/Notification/permission
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
@@ -19,7 +10,7 @@ La propriété en lecture seule **`permission`** de l'interface {{domxref ("Noti
 ## Syntaxe
 
 ```js
-Notification.permission
+Notification.permission;
 ```
 
 ### Valeur
@@ -37,27 +28,27 @@ L'extrait suivant peut être utilisé si vous souhaitez d'abord vérifier si les
 ```js
 function notifyMe() {
   // Let's check if the browser supports notifications
-  if (!('Notification' in window)) {
-    console.log('This browser does not support desktop notification')
+  if (!("Notification" in window)) {
+    console.log("This browser does not support desktop notification");
   }
 
   // Let's check whether notification permissions have alredy been granted
-  else if (Notification.permission === 'granted') {
+  else if (Notification.permission === "granted") {
     // If it's okay let's create a notification
-    const notification = new Notification('Hi there!')
+    const notification = new Notification("Hi there!");
   }
 
   // Otherwise, we need to ask the user for permission
   else if (
-    Notification.permission !== 'denied' ||
-    Notification.permission === 'default'
+    Notification.permission !== "denied" ||
+    Notification.permission === "default"
   ) {
     Notification.requestPermission((permission) => {
       // If the user accepts, let's create a notification
-      if (permission === 'granted') {
-        const notification = new Notification('Hi there!')
+      if (permission === "granted") {
+        const notification = new Notification("Hi there!");
       }
-    })
+    });
   }
 
   // At last, if the user has denied notifications, and you

@@ -1,19 +1,9 @@
 ---
 title: sessions.setWindowValue()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/setWindowValue
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - sessions
-  - setWindowsValue
-translation_of: Mozilla/Add-ons/WebExtensions/API/sessions/setWindowValue
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Stocke une paire clé / valeur à associer à une fenêtre donnée. Vous pouvez ensuite récupérer cette valeur en utilisant {{WebExtAPIRef("sessions.getWindowValue")}}.
 
@@ -25,10 +15,10 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var storing = browser.sessions.setWindowValue(
-  windowId,    // integer
-  key,         // string
-  value        // string or object
-)
+  windowId, // integer
+  key, // string
+  value, // string or object
+);
 ```
 
 ### Paramètres
@@ -61,7 +51,7 @@ async function setOnActiveWindow() {
 browser.menus.create({
   id: "my-item",
   title: "my item",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.onClicked.addListener(setOnActiveWindow);

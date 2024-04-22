@@ -2,6 +2,7 @@
 title: EventTarget.addEventListener()
 slug: Web/API/EventTarget/addEventListener
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("EventTarget")}} 인터페이스의 **`addEventListener()`** 메서드는 지정한 유형의 이벤트를 대상이 수신할 때마다 호출할 함수를 설정합니다.
@@ -41,6 +42,7 @@ addEventListener(type, listener, useCapture);
 - `listener`
   - : 지정한 이벤트({{domxref("Event")}} 인터페이스를 구현한 객체)를 수신할 객체입니다. `handleEvent()` 메서드를 포함하는 객체 또는 JavaScript [함수](/ko/docs/Web/JavaScript/Guide/Functions)여야 합니다. [이벤트 수신기 콜백](#이벤트_수신기_콜백)에서 콜백 자체에 대한 정보를 더 알아보세요.
 - `options` {{optional_inline}}
+
   - : 이벤트 수신기의 특징을 지정할 수 있는 객체입니다. 가능한 옵션은 다음과 같습니다.
     - `capture`
       - : 이벤트 대상의 DOM 트리 하위에 위치한 자손 `EventTarget`으로 이벤트가 전달되기 전에, 이 수신기가 먼저 발동돼야 함을 나타내는 불리언 값입니다. 명시하지 않을 경우 기본 값은 `false`입니다.
@@ -77,9 +79,9 @@ addEventListener(type, listener, useCapture);
 
 ```js
 function eventHandler(event) {
-  if (event.type == 'fullscreenchange') {
+  if (event.type == "fullscreenchange") {
     /* 전체화면 여부 변화 처리 */
-  } else /* fullscreenerror */ {
+  } /* fullscreenerror */ else {
     /* 전체화면 오류 처리 */
   }
 }
@@ -98,15 +100,16 @@ let passiveSupported = false;
 
 try {
   const options = {
-    get passive() { // 브라우저가 passive 속성에 접근하려고 하면 이 함수가 실행됨
+    get passive() {
+      // 브라우저가 passive 속성에 접근하려고 하면 이 함수가 실행됨
       passiveSupported = true;
       return false;
-    }
+    },
   };
 
   window.addEventListener("test", null, options);
   window.removeEventListener("test", null, options);
-} catch(err) {
+} catch (err) {
   passiveSupported = false;
 }
 ```
@@ -118,8 +121,11 @@ try {
 그 후, 실제로 플래그를 사용할 땐 아래와 같이 할 수 있습니다.
 
 ```js
-someElement.addEventListener("mouseup", handleMouseUp, passiveSupported
-                               ? { passive: true } : false);
+someElement.addEventListener(
+  "mouseup",
+  handleMouseUp,
+  passiveSupported ? { passive: true } : false,
+);
 ```
 
 위 코드에서는 {domxref("Element/mouseup_event", "mouseup")}} 이벤트에 대한 수신기를 `someElement` 요소에 추가하고 있습니다. 세 번째 매개변수를 살펴보면, 만약 `passiveSupported`가 `true`일 경우 `passive`를 `true`로 지정한 옵션 객체를 지정하고 있으며, `passiveSupported`가 `false`일 경우, 세 번째 매개변수는 불리언 값이어야 할 것이므로 `useCapture`에 대한 값인 `false`를 지정하는 모습입니다.
@@ -138,8 +144,12 @@ someElement.addEventListener("mouseup", handleMouseUp, passiveSupported
 
 ```html
 <table id="outside">
-  <tr><td id="t1">one</td></tr>
-  <tr><td id="t2">two</td></tr>
+  <tr>
+    <td id="t1">one</td>
+  </tr>
+  <tr>
+    <td id="t2">two</td>
+  </tr>
 </table>
 ```
 
@@ -175,8 +185,12 @@ el.addEventListener("click", modifyText, false);
 
 ```html
 <table id="outside">
-  <tr><td id="t1">one</td></tr>
-  <tr><td id="t2">two</td></tr>
+  <tr>
+    <td id="t1">one</td>
+  </tr>
+  <tr>
+    <td id="t2">two</td>
+  </tr>
 </table>
 ```
 
@@ -186,7 +200,7 @@ el.addEventListener("click", modifyText, false);
 // 표에 중단 가능한 수신기 추가
 const controller = new AbortController();
 const el = document.getElementById("outside");
-el.addEventListener("click", modifyText, { signal: controller.signal } );
+el.addEventListener("click", modifyText, { signal: controller.signal });
 
 // t2의 콘텐츠를 바꾸는 함수
 function modifyText() {
@@ -214,8 +228,12 @@ function modifyText() {
 
 ```html
 <table id="outside">
-  <tr><td id="t1">one</td></tr>
-  <tr><td id="t2">two</td></tr>
+  <tr>
+    <td id="t1">one</td>
+  </tr>
+  <tr>
+    <td id="t2">two</td>
+  </tr>
 </table>
 ```
 
@@ -230,7 +248,13 @@ function modifyText(new_text) {
 
 // 표에 이벤트 수신기 추가
 const el = document.getElementById("outside");
-el.addEventListener("click", function(){modifyText("four")}, false);
+el.addEventListener(
+  "click",
+  function () {
+    modifyText("four");
+  },
+  false,
+);
 ```
 
 `addEventListener()` 호출을 살펴보면, 실제로 이벤트에 반응할 `modifyText()` 함수에 매개변수를 제공하는 코드가 익명 함수에 의해 캡슐화된 모습을 볼 수 있습니다.
@@ -247,8 +271,12 @@ el.addEventListener("click", function(){modifyText("four")}, false);
 
 ```html
 <table id="outside">
-  <tr><td id="t1">one</td></tr>
-  <tr><td id="t2">two</td></tr>
+  <tr>
+    <td id="t1">one</td>
+  </tr>
+  <tr>
+    <td id="t2">two</td>
+  </tr>
 </table>
 ```
 
@@ -263,7 +291,13 @@ function modifyText(new_text) {
 
 // 화살표 함수를 사용한 이벤트 수신기를 표에 추가
 const el = document.getElementById("outside");
-el.addEventListener("click", () => { modifyText("four"); }, false);
+el.addEventListener(
+  "click",
+  () => {
+    modifyText("four");
+  },
+  false,
+);
 ```
 
 #### 결과
@@ -296,85 +330,89 @@ el.addEventListener("click", () => { modifyText("four"); }, false);
 #### CSS
 
 ```css
-.outer, .middle, .inner1, .inner2 {
+.outer,
+.middle,
+.inner1,
+.inner2 {
   display: block;
-  width:   520px;
+  width: 520px;
   padding: 15px;
-  margin:  15px;
+  margin: 15px;
   text-decoration: none;
 }
 .outer {
   border: 1px solid red;
-  color:  red;
+  color: red;
 }
 .middle {
   border: 1px solid green;
-  color:  green;
-  width:  460px;
+  color: green;
+  width: 460px;
 }
-.inner1, .inner2 {
+.inner1,
+.inner2 {
   border: 1px solid purple;
-  color:  purple;
-  width:  400px;
+  color: purple;
+  width: 400px;
 }
 ```
 
 #### JavaScript
 
 ```js
-const outer  = document.querySelector('.outer');
-const middle = document.querySelector('.middle');
-const inner1 = document.querySelector('.inner1');
-const inner2 = document.querySelector('.inner2');
+const outer = document.querySelector(".outer");
+const middle = document.querySelector(".middle");
+const inner1 = document.querySelector(".inner1");
+const inner2 = document.querySelector(".inner2");
 
 const capture = {
-  capture : true
+  capture: true,
 };
 const noneCapture = {
-  capture : false
+  capture: false,
 };
 const once = {
-  once : true
+  once: true,
 };
 const noneOnce = {
-  once : false
+  once: false,
 };
 const passive = {
-  passive : true
+  passive: true,
 };
 const nonePassive = {
-  passive : false
+  passive: false,
 };
 
-outer.addEventListener('click', onceHandler, once);
-outer.addEventListener('click', noneOnceHandler, noneOnce);
-middle.addEventListener('click', captureHandler, capture);
-middle.addEventListener('click', noneCaptureHandler, noneCapture);
-inner1.addEventListener('click', passiveHandler, passive);
-inner2.addEventListener('click', nonePassiveHandler, nonePassive);
+outer.addEventListener("click", onceHandler, once);
+outer.addEventListener("click", noneOnceHandler, noneOnce);
+middle.addEventListener("click", captureHandler, capture);
+middle.addEventListener("click", noneCaptureHandler, noneCapture);
+inner1.addEventListener("click", passiveHandler, passive);
+inner2.addEventListener("click", nonePassiveHandler, nonePassive);
 
 function onceHandler(event) {
-  alert('바깥, 일회용');
+  alert("바깥, 일회용");
 }
 function noneOnceHandler(event) {
-  alert('바깥, 다회용, 기본 값');
+  alert("바깥, 다회용, 기본 값");
 }
 function captureHandler(event) {
   //event.stopImmediatePropagation();
-  alert('중간, 캡처');
+  alert("중간, 캡처");
 }
 function noneCaptureHandler(event) {
-  alert('중간, 비 캡처, 기본 값');
+  alert("중간, 비 캡처, 기본 값");
 }
 function passiveHandler(event) {
   // 패시브 수신기 내에서는 preventDefault 사용 불가
   event.preventDefault();
-  alert('내부 1, 패시브, 새 페이지 열림');
+  alert("내부 1, 패시브, 새 페이지 열림");
 }
 function nonePassiveHandler(event) {
   event.preventDefault();
   //event.stopPropagation();
-  alert('내부 2, 비 패시브, 기본 값, 새 페이지 열림');
+  alert("내부 2, 비 패시브, 기본 값, 새 페이지 열림");
 }
 ```
 
@@ -395,25 +433,26 @@ function nonePassiveHandler(event) {
 `addEventListener()`를 사용해 요소에 수신기를 부착하게 되면 수신기 내부의 {{jsxref("Operators/this", "this")}} 값은 대상 요소를 가리키게 되며, 이는 수신기가 매개변수로 받게 되는 이벤트 객체의 `currentTarget` 속성과 같습니다.
 
 ```js
-my_element.addEventListener('click', function (e) {
-  console.log(this.className)           // my_element의 className 기록
-  console.log(e.currentTarget === this) // `true` 기록
-})
+my_element.addEventListener("click", function (e) {
+  console.log(this.className); // my_element의 className 기록
+  console.log(e.currentTarget === this); // `true` 기록
+});
 ```
 
 다만 [화살표 함수는 스스로의 `this` 맥락을 가지지 않는다는 점](/ko/docs/Web/JavaScript/Reference/Functions/Arrow_functions)을 기억해야 합니다.
 
 ```js
-my_element.addEventListener('click', (e) => {
-  console.log(this.className)           // 경고: `this`가 `my_element`가 아님
-  console.log(e.currentTarget === this) // `false` 기록
-})
+my_element.addEventListener("click", (e) => {
+  console.log(this.className); // 경고: `this`가 `my_element`가 아님
+  console.log(e.currentTarget === this); // `false` 기록
+});
 ```
 
 HTML 소스 코드에서 ({{domxref("GlobalEventHandlers.onclick", "onclick")}} 특성 등을 사용해) 요소의 이벤트 수신기를 지정하는 경우, 이벤트 수신기 특성 내의 JavaScript 코드는 가상의 함수로 감싸인 후, 감싼 함수의 `this`를 `addEventListener()`와 같은 방식으로 바인딩하는 것으로 생각할 수 있습니다. 즉, 해당 특성의 값에서 등장하는 `this`는 특성이 속한 요소를 가리킵니다.
 
 ```html
-<table id="my_table" onclick="console.log(this.id);"><!-- `this`가 표를 가리키므로 'my_table'을 기록함 -->
+<table id="my_table" onclick="console.log(this.id);">
+  <!-- `this`가 표를 가리키므로 'my_table'을 기록함 -->
   ...
 </table>
 ```
@@ -422,9 +461,12 @@ HTML 소스 코드에서 ({{domxref("GlobalEventHandlers.onclick", "onclick")}} 
 
 ```html
 <script>
-  function logID() { console.log(this.id); }
+  function logID() {
+    console.log(this.id);
+  }
 </script>
-<table id="my_table" onclick="logID();"><!-- 호출 시, logID의 `this`는 전역 객체를 가리키게 됨 -->
+<table id="my_table" onclick="logID();">
+  <!-- 호출 시, logID의 `this`는 전역 객체를 가리키게 됨 -->
   ...
 </table>
 ```
@@ -438,52 +480,52 @@ HTML 소스 코드에서 ({{domxref("GlobalEventHandlers.onclick", "onclick")}} 
 다음은 `bind()`를 사용하는 수신기와 사용하지 않는 수신기의 모습입니다.
 
 ```js
-const Something = function(element) {
+const Something = function (element) {
   // this는 Something 인스턴스
-  this.name = 'Something Good';
-  this.onclick1 = function(event) {
+  this.name = "Something Good";
+  this.onclick1 = function (event) {
     console.log(this.name); // undefined, this는 element임
   };
 
-  this.onclick2 = function(event) {
+  this.onclick2 = function (event) {
     console.log(this.name); // 'Something Good', this는 Something 인스턴스
   };
 
   // bind가 onclick2의 this 맥락을 고정함
   this.onclick2 = this.onclick2.bind(this);
 
-  element.addEventListener('click', this.onclick1, false);
-  element.addEventListener('click', this.onclick2, false);
-}
+  element.addEventListener("click", this.onclick1, false);
+  element.addEventListener("click", this.onclick2, false);
+};
 const s = new Something(document.body);
 ```
 
 다른 방법으로는 `handleEvent()`라는 특별한 이름의 메서드를 구현해 모든 이벤트에 대응하는 것입니다.
 
 ```js
-const Something = function(element) {
+const Something = function (element) {
   // this는 Something 인스턴스
-  this.name = 'Something Good';
-  this.handleEvent = function(event) {
+  this.name = "Something Good";
+  this.handleEvent = function (event) {
     console.log(this.name); // 'Something Good', this는 Something 인스턴스로 바인딩 됨
-    switch(event.type) {
-      case 'click':
+    switch (event.type) {
+      case "click":
         // 다른 코드...
         break;
-      case 'dblclick':
+      case "dblclick":
         // 다른 코드...
         break;
     }
   };
 
   // 수신기 매개변수가 this.handleEvent가 아니라 this인 것에 주의
-  element.addEventListener('click', this, false);
-  element.addEventListener('dblclick', this, false);
+  element.addEventListener("click", this, false);
+  element.addEventListener("dblclick", this, false);
 
   // 수신기 제거도 가능
-  element.removeEventListener('click', this, false);
-  element.removeEventListener('dblclick', this, false);
-}
+  element.removeEventListener("click", this, false);
+  element.removeEventListener("dblclick", this, false);
+};
 const s = new Something(document.body);
 ```
 
@@ -491,19 +533,20 @@ const s = new Something(document.body);
 
 ```js
 class SomeClass {
-
   constructor() {
-    this.name = 'Something Good';
+    this.name = "Something Good";
   }
 
   register() {
     const that = this;
-    window.addEventListener('keydown', function(e) { that.someMethod(e); });
+    window.addEventListener("keydown", function (e) {
+      that.someMethod(e);
+    });
   }
 
   someMethod(e) {
     console.log(this.name);
-    switch(e.keyCode) {
+    switch (e.keyCode) {
       case 5:
         // 다른 코드...
         break;
@@ -512,7 +555,6 @@ class SomeClass {
         break;
     }
   }
-
 }
 
 const myObject = new SomeClass();
@@ -528,12 +570,15 @@ myObject.register();
 [위에서 언급했듯](#bind로_this_설정하기), `Function.prototype.bind()`를 사용하면 `this` 참조 변수를 통해 수신기에 값을 전달할 수 있습니다.
 
 ```js
-const myButton = document.getElementById('my-button-id');
-const someString = 'Data';
+const myButton = document.getElementById("my-button-id");
+const someString = "Data";
 
-myButton.addEventListener('click', function () {
-  console.log(this); // 예상 값: 'Data'
-}.bind(someString));
+myButton.addEventListener(
+  "click",
+  function () {
+    console.log(this); // 예상 값: 'Data'
+  }.bind(someString),
+);
 ```
 
 이 방법은 수신기가 발동된 대상을 알 필요가 없을 때 적합하며, 매개변수를 통해 값을 제공하는 것과 크게 다르지 않은 방법을 제공한다는 점이 장점입니다.
@@ -543,16 +588,16 @@ myButton.addEventListener('click', function () {
 바깥 스코프에서 `const`, `let`을 사용해 변수를 선언할 경우, 해당 스코프 안의 모든 함수에서도 해당 변수에 접근할 수 있습니다([함수](/ko/docs/Glossary/Function#여러_함수_형식들) 문서에서 바깥/내부 함수에 대한 정보를, [`var`](/ko/docs/Web/JavaScript/Reference/Statements/var#암묵적인_전역변수와_외부_함수_범위) 문서에서 변수 스코프에 대한 정보를 읽어보세요). 따라서, 이벤트 수신기가 바깥 데이터에 접근할 수 있는 가장 쉬운 방법은, 그 데이터를 이벤트 수신기가 선언된 스코프에서 접근할 수 있도록 하는 것입니다.
 
 ```js
-const myButton = document.getElementById('my-button-id');
-let someString = 'Data';
+const myButton = document.getElementById("my-button-id");
+let someString = "Data";
 
-myButton.addEventListener('click', function() {
-  console.log(someString);  // 예상 값: 'Data'
+myButton.addEventListener("click", function () {
+  console.log(someString); // 예상 값: 'Data'
 
-  someString = 'Data Again';
+  someString = "Data Again";
 });
 
-console.log(someString);  // 예상 값: 'Data' ('Data Again'을 출력하지 않음)
+console.log(someString); // 예상 값: 'Data' ('Data Again'을 출력하지 않음)
 ```
 
 > **참고:** 내부 스코프에서 바깥 스코프의 `const`와 `let` 변수에 접근할 수는 있지만, 수신기 내에서 변수의 값을 바꾸더라도 바깥 스코프에 그 변경점이 나타날 것으로 생각해서는 안됩니다. 이벤트 수신기가 발동하는 시점에는 이미 수신기가 속한 스코프가 실행을 마쳤을 것이기 때문입니다.
@@ -566,19 +611,19 @@ console.log(someString);  // 예상 값: 'Data' ('Data Again'을 출력하지 �
 객체를 참조하는 변수가 메모리에 존재하는 한 객체 속성을 사용해 메모리에 데이터를 저장할 수 있으니, 이벤트 수신기 내부로 데이터를 전달할 때도 사용할 수 있고, 이벤트 처리기 실행이 끝난 후 변화된 데이터를 가져와야 할 때도 사용할 수 있습니다. 아래 코드를 살펴보세요.
 
 ```js
-const myButton = document.getElementById('my-button-id');
-const someObject = {aProperty: 'Data'};
+const myButton = document.getElementById("my-button-id");
+const someObject = { aProperty: "Data" };
 
-myButton.addEventListener('click', function() {
-  console.log(someObject.aProperty);   // 예상 값: 'Data'
+myButton.addEventListener("click", function () {
+  console.log(someObject.aProperty); // 예상 값: 'Data'
 
-  someObject.aProperty = 'Data Again'; // 값 변경
+  someObject.aProperty = "Data Again"; // 값 변경
 });
 
-window.setInterval(function() {
-  if (someObject.aProperty === 'Data Again') {
-    console.log('Data Again: True');
-    someObject.aProperty = 'Data'; // 다음 이벤트 실행을 기다리기 위해 값 초기화
+window.setInterval(function () {
+  if (someObject.aProperty === "Data Again") {
+    console.log("Data Again: True");
+    someObject.aProperty = "Data"; // 다음 이벤트 실행을 기다리기 위해 값 초기화
   }
 }, 5000);
 ```
@@ -592,19 +637,25 @@ window.setInterval(function() {
 ### 메모리 문제
 
 ```js
-const els = document.getElementsByTagName('*');
+const els = document.getElementsByTagName("*");
 
 // 상황 1
-for(let i=0 ; i < els.length; i++){
-  els[i].addEventListener("click", function(e){/*do something*/}, false);
+for (let i = 0; i < els.length; i++) {
+  els[i].addEventListener(
+    "click",
+    function (e) {
+      /*do something*/
+    },
+    false,
+  );
 }
 
 // 상황 2
-function processEvent(e){
+function processEvent(e) {
   /* do something */
 }
 
-for(let i=0 ; i < els.length; i++){
+for (let i = 0; i < els.length; i++) {
   els[i].addEventListener("click", processEvent, false);
 }
 ```
@@ -614,22 +665,30 @@ for(let i=0 ; i < els.length; i++){
 사실, 메모리 소비와 관련하여, 함수 참조를 유지하지 못하는 것은 중요한 문제가 아닙니다. 진짜 문제는 함수 참조를 '정적으로' 유지하지 못하는 것입니다. 이 점을 보여주는 아래의 상황 3과 상황 4에서는 함수 참조를 유지하긴 하지만, 매 반복마다 재정의됩니다. 상황 3에서는 반복할 때마다 익명 함수에 대한 참조를 재할당하고, 상황 4에서는 함수 전체 정의는 변하지 않지만 매번 마치 새로운 함수처럼 반복적으로 재정의되므로 두 상황 모두 정적이지 않습니다. 따라서 코드를 보기엔 다수의 동일한 이벤트 수신기처럼 보이지만, 사실 각 반복마다 새로운 처리기를 참조하는 새로운 이벤트 수신기를 생성하고 있는 것입니다.
 
 ```js
-const els = document.getElementsByTagName('*');
+const els = document.getElementsByTagName("*");
 
-function processEvent(e){
+function processEvent(e) {
   /* do something */
 }
 
 // 시연을 위해 [i] 대신 [j]를 사용하는 실수를 한 것에 주의하세요. 반복문 내에서 정의한 수신기를 모두 첫 요소에 등록하고 있습니다.
 
 // 상황 3
-for(let i = 0, j = 0 ; i < els.length ; i++){
-  els[j].addEventListener("click", processEvent = function(e){/* do something */}, false);
+for (let i = 0, j = 0; i < els.length; i++) {
+  els[j].addEventListener(
+    "click",
+    (processEvent = function (e) {
+      /* do something */
+    }),
+    false,
+  );
 }
 
 // 상황 4
-for(let i = 0, j = 0 ; i < els.length ; i++){
-  function processEvent(e){/* do something */};
+for (let i = 0, j = 0; i < els.length; i++) {
+  function processEvent(e) {
+    /* do something */
+  }
   els[j].addEventListener("click", processEvent, false);
 }
 ```
@@ -651,21 +710,25 @@ for(let i = 0, j = 0 ; i < els.length ; i++){
 let passiveIfSupported = false;
 
 try {
-  window.addEventListener("test", null,
-    Object.defineProperty(
-      {},
-      "passive",
-      {
-        get: function() { passiveIfSupported = { passive: true }; }
-      }
-    )
+  window.addEventListener(
+    "test",
+    null,
+    Object.defineProperty({}, "passive", {
+      get: function () {
+        passiveIfSupported = { passive: true };
+      },
+    }),
   );
-} catch(err) {}
+} catch (err) {}
 
-window.addEventListener('scroll', function(event) {
-  /* do something */
-  // event.preventDefault() 사용 불가
-}, passiveIfSupported );
+window.addEventListener(
+  "scroll",
+  function (event) {
+    /* do something */
+    // event.preventDefault() 사용 불가
+  },
+  passiveIfSupported,
+);
 ```
 
 `addEventListener()`가 `options` 매개변수를 지원하지 않는 구형 브라우저에서 `options` 객체를 지정하면 `useCapture` 매개변수를 사용할 수 없으므로, 위와 같이 [기능 감지](#옵션_지원을_안전하게_감지하기)를 거쳐야 합니다.

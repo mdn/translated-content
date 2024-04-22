@@ -3,6 +3,8 @@ title: JPEG
 slug: Glossary/JPEG
 ---
 
+{{GlossarySidebar}}
+
 **JPEG**（联合图像专家小组）是一个广泛用于数字图像有损压缩的方法。
 
 **JPEG**（Joint Photographic Experts Group）是 JPEG 标准的产物，该标准由国际标准化组织（ISO）制订，是面向连续色调静止图像的一种压缩标准。JPEG 格式是最常用的[图像文件格式](https://baike.baidu.com/item/%E5%9B%BE%E5%83%8F%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F/10728158)，后缀名为.jpg 或.jpeg
@@ -47,9 +49,6 @@ JPEG 的复杂度之低和使用时间之长，给人以深刻的印象。以下
 
 其中位/像素（bit/pixel）定义为压缩图像（包括色度分量）的总位数除以亮度分量的样本数。
 
-## 了解更多
-
-### 常识
+## 参见
 
 - 在维基百科上的 [JPEG](https://zh.wikipedia.org/wiki/JPEG)
-- 在百度百科上的 [jpeg](https://baike.baidu.com/item/JPEG%E6%A0%BC%E5%BC%8F/3462770)

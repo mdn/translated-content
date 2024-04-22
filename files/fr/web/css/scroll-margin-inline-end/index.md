@@ -1,12 +1,6 @@
 ---
 title: scroll-margin-inline-end
 slug: Web/CSS/scroll-margin-inline-end
-tags:
-  - CSS
-  - Propriété
-  - Propriété logique
-  - Reference
-translation_of: Web/CSS/scroll-margin-inline-end
 ---
 
 {{CSSRef}}

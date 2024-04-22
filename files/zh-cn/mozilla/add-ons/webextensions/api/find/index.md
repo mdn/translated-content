@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/find
 
 在网页中查找文本，并突出显示匹配项。
 
-要使用此 API，您需要具有“查找” [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
+要使用此 API，你需要具有“查找” [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
 
 ## 功能
 

@@ -20,6 +20,7 @@ isInFullScreen = windowRef.fullScreen;
 ## 返回值
 
 - `isInFullScreen`
+
   - : 一个布尔值。可能的值如下：
 
     - `true`: 窗口处于全屏模式下。

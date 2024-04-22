@@ -1,7 +1,6 @@
 ---
 title: Qu'est-ce que le JavaScript ?
 slug: Learn/JavaScript/First_steps/What_is_JavaScript
-translation_of: Learn/JavaScript/First_steps/What_is_JavaScript
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
@@ -51,18 +50,18 @@ Nous pouvons ensuite ajouter du CSS pour rendre cela plus joli&nbsp;:
 
 ```css
 p {
-  font-family: 'helvetica neue', helvetica, sans-serif;
+  font-family: "helvetica neue", helvetica, sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
   text-align: center;
-  border: 2px solid rgba(0,0,200,0.6);
-  background: rgba(0,0,200,0.3);
-  color: rgba(0,0,200,0.6);
-  box-shadow: 1px 1px 2px rgba(0,0,200,0.4);
+  border: 2px solid rgba(0, 0, 200, 0.6);
+  background: rgba(0, 0, 200, 0.3);
+  color: rgba(0, 0, 200, 0.6);
+  box-shadow: 1px 1px 2px rgba(0, 0, 200, 0.4);
   border-radius: 10px;
   padding: 3px 10px;
   display: inline-block;
-  cursor:pointer;
+  cursor: pointer;
 }
 ```
 
@@ -71,13 +70,13 @@ p {
 Et enfin utiliser JavaScript pour ajouter un comportement dynamique&nbsp;:
 
 ```js
-let para = document.querySelector('p');
+let para = document.querySelector("p");
 
-para.addEventListener('click', updateName);
+para.addEventListener("click", updateName);
 
 function updateName() {
-  let name = prompt('Enter a new name');
-  para.textContent = 'Player 1: ' + name;
+  let name = prompt("Enter a new name");
+  para.textContent = "Player 1: " + name;
 }
 ```
 
@@ -126,7 +125,7 @@ Et il y a bien plus encore&nbsp;! Pas de précipitation cependant. Vous ne serez
 
 Ici nous allons commencer à réellement nous intéresser au code, et, ce faisant, à explorer ce qui se passe quand vous exécutez du JavaScript dans votre page.
 
-Commençons par un bref récapitulatif de ce qui se passe lorsqu'une page web se charge dans le navigateur (voir [Comment fonctionnent vraiment les CSS](/fr/docs/Apprendre/CSS/Introduction_%C3%A0_CSS/Le_fonctionnement_de_CSS#Comment_fonctionnent_vraiment_les_CSS)). Quand la page se charge, les codes HTML, CSS et JavaScript s'exécutent dans un environnement (l'onglet du navigateur). C'est un peu comme une usine qui prend des matières premières (le code) et sort un produit (la page web).
+Commençons par un bref récapitulatif de ce qui se passe lorsqu'une page web se charge dans le navigateur (voir [Comment fonctionnent vraiment les CSS](/fr/docs/Apprendre/CSS/Introduction_à_CSS/Le_fonctionnement_de_CSS#Comment_fonctionnent_vraiment_les_CSS)). Quand la page se charge, les codes HTML, CSS et JavaScript s'exécutent dans un environnement (l'onglet du navigateur). C'est un peu comme une usine qui prend des matières premières (le code) et sort un produit (la page web).
 
 ![](execution.png)
 
@@ -145,13 +144,13 @@ Chaque onglet du navigateur constitue un périmètre séparé dans lequel s'exé
 Quand le navigateur rencontre un bloc de JavaScript, il l'exécute généralement dans l'ordre, de haut en bas. Vous devrez donc faire attention à l'ordre dans lequel vous écrivez les choses. Reprenons le bloc de JavaScript vu dans notre premier exemple&nbsp;:
 
 ```js
-let para = document.querySelector('p');
+let para = document.querySelector("p");
 
-para.addEventListener('click', updateName);
+para.addEventListener("click", updateName);
 
 function updateName() {
-  let name = prompt('Enter a new name');
-  para.textContent = 'Player 1: ' + name;
+  let name = prompt("Enter a new name");
+  para.textContent = "Player 1: " + name;
 }
 ```
 
@@ -191,31 +190,29 @@ Le JavaScript est appliqué à votre page HTML un peu comme le CSS. Les élémen
 2. Ouvrez le fichier dans votre navigateur web et dans un éditeur de texte. Vous verrez que le HTML crée une page web simple contenant un bouton cliquable.
 3. Ensuite, allez dans votre éditeur de texte et ajoutez ce qui suit juste avant la balise fermante `</head>`&nbsp;:
 
-    ```html
-    <script>
-
-      // JavaScript goes here
-
-    </script>
-    ```
+   ```html
+   <script>
+     // JavaScript goes here
+   </script>
+   ```
 
 4. Ajoutons maintenant du JavaScript dans notre élément {{htmlelement("script")}} pour rendre la page plus dynamique. Ajoutez le code suivant juste en dessous de la ligne "// JavaScript goes here"&nbsp;:
 
-    ```js
-      document.addEventListener("DOMContentLoaded", function() {
-      function createParagraph() {
-        let para = document.createElement('p');
-        para.textContent = 'Vous avez cliqué sur le bouton!';
-        document.body.appendChild(para);
-      }
+   ```js
+   document.addEventListener("DOMContentLoaded", function () {
+     function createParagraph() {
+       let para = document.createElement("p");
+       para.textContent = "Vous avez cliqué sur le bouton!";
+       document.body.appendChild(para);
+     }
 
-      const buttons = document.querySelectorAll('button');
+     const buttons = document.querySelectorAll("button");
 
-      for(let i = 0; i < buttons.length ; i++) {
-        buttons[i].addEventListener('click', createParagraph);
-      }
-    });
-    ```
+     for (let i = 0; i < buttons.length; i++) {
+       buttons[i].addEventListener("click", createParagraph);
+     }
+   });
+   ```
 
 5. Enregistrez le fichier et actualisez le navigateur. Vous pouvez maintenant voir que, lorsque vous cliquez sur le bouton, un nouveau paragraphe est généré et placé en dessous.
 
@@ -231,9 +228,9 @@ Le JavaScript est appliqué à votre page HTML un peu comme le CSS. Les élémen
 2. Ensuite, copiez-collez tout le script contenu dans l'élément {{htmlelement("script")}} vers le fichier .js, et enregistrez le fichier.
 3. À présent remplacez l'élément {{htmlelement("script")}} par&nbsp;:
 
-    ```html
-    <script src="script.js" defer></script>
-    ```
+   ```html
+   <script src="script.js" defer></script>
+   ```
 
 4. Enregistrez et rechargez la page dans votre navigateur, et vous devriez voir la même chose qu'avant. C'est la même chose, mais nous avons maintenant le JavaScript dans un fichier externe. C'est une bonne chose en général pour organiser le code et le rendre réutilisable pour plusieurs fichiers HTML. Cela rend aussi le code HTML plus lisible en évitant d'y inclure de gros blocs de JavaScript.
 
@@ -245,8 +242,8 @@ Notez que parfois vous tomberez sur des morceaux de JavaScript directement dans 
 
 ```js example-bad
 function createParagraph() {
-  let para = document.createElement('p');
-  para.textContent = 'Vous avez cliqué !';
+  let para = document.createElement("p");
+  para.textContent = "Vous avez cliqué !";
   document.body.appendChild(para);
 }
 ```
@@ -268,10 +265,10 @@ Cet exemple a exactement le même comportement que ceux des deux sections préc�
 Une construction en JavaScript pur permet de sélectionner tous les boutons avec une instruction. Dans l'exemple précédent c'est cette partie qui s'en charge&nbsp;:
 
 ```js
-let buttons = document.querySelectorAll('button');
+let buttons = document.querySelectorAll("button");
 
-for(let i = 0; i < buttons.length ; i++) {
-  buttons[i].addEventListener('click', createParagraph);
+for (let i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener("click", createParagraph);
 }
 ```
 
@@ -293,7 +290,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 ```
 
-Il s'agit d'un gestionnaire d'évènement associé à l'événement `DOMContentLoaded` du navigateur, cet événement est déclenché quand le `body` HTML est complètement chargé et analysé. Le code JavaScript à l'intérieur du bloc est exécuté après le déclenchement de `DOMContentLoaded`. Par conséquent, l'erreur est évitée (vous en apprendrez plus sur les [événements](/fr/docs/Apprendre/JavaScript/Building_blocks/Ev%C3%A8nements) plus tard dans le cours).
+Il s'agit d'un gestionnaire d'évènement associé à l'événement `DOMContentLoaded` du navigateur, cet événement est déclenché quand le `body` HTML est complètement chargé et analysé. Le code JavaScript à l'intérieur du bloc est exécuté après le déclenchement de `DOMContentLoaded`. Par conséquent, l'erreur est évitée (vous en apprendrez plus sur les [événements](/fr/docs/Apprendre/JavaScript/Building_blocks/Evènements) plus tard dans le cours).
 
 Dans l'exemple externe, nous utilisons une fonctionnalité JavaScript plus moderne pour résoudre le problème, l'attribut `async`, qui indique au navigateur de continuer à télécharger le contenu HTML une fois que l'élément de balise {{htmlelement("script")}} a été atteint.
 
@@ -371,8 +368,8 @@ Ainsi, vous pourriez par exemple annoter notre dernière démonstration de JavaS
 // Fonction: créer un nouveau paragraphe et l'ajouter en bas du HTML
 
 function createParagraph() {
-  let para = document.createElement('p');
-  para.textContent = 'You clicked the button!';
+  let para = document.createElement("p");
+  para.textContent = "You clicked the button!";
   document.body.appendChild(para);
 }
 
@@ -383,10 +380,10 @@ function createParagraph() {
   Quand le bouton est cliqué, la fonction "createParagraph()" sera exécutée
 */
 
-let buttons = document.querySelectorAll('button');
+let buttons = document.querySelectorAll("button");
 
-for(let i = 0; i < buttons.length ; i++) {
-  buttons[i].addEventListener('click', createParagraph);
+for (let i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener("click", createParagraph);
 }
 ```
 

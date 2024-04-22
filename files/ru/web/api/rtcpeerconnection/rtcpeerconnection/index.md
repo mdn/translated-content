@@ -1,7 +1,6 @@
 ---
 title: RTCPeerConnection()
 slug: Web/API/RTCPeerConnection/RTCPeerConnection
-translation_of: Web/API/RTCPeerConnection/RTCPeerConnection
 ---
 
 {{APIRef("WebRTC")}}
@@ -18,10 +17,6 @@ pc = new RTCPeerConnection([configuration]);
 
 - `configuration` {{optional_inline}}
   - : Объект класса [`RTCConfiguration`](#RTCConfiguration_dictionary), предоставляющий свойства для конфигурации нового экземпляра соединения.
-
-### Объект конфигурации RTCConfiguration
-
-{{page("/en-US/docs/Web/API/RTCConfiguration", "Properties")}}
 
 ### Возвращаемое значение
 

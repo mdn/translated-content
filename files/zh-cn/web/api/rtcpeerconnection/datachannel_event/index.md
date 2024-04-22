@@ -22,10 +22,10 @@ RTCPeerConnection.ondatachannel = function;
 ## 示例
 
 ```js
-pc.ondatachannel = function(ev) {
-  console.log('Data channel is created!');
-  ev.channel.onopen = function() {
-    console.log('Data channel is open and ready to be used.');
+pc.ondatachannel = function (ev) {
+  console.log("Data channel is created!");
+  ev.channel.onopen = function () {
+    console.log("Data channel is open and ready to be used.");
   };
 };
 ```

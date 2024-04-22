@@ -1,7 +1,6 @@
 ---
 title: ¿Cuáles son las herramientas de desarrollo del navegador?
 slug: Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools
-original_slug: Learn/Common_questions/What_are_browser_developer_tools
 ---
 
 Todos los navegadores web modernos incluyen un potente conjunto de herramientas para desarrolladores. Estas herramientas hacen una variedad de cosas, desde inspeccionar HTML, CSS y JavaScript actualmente cargados, hasta mostrar qué activos ha solicitado la página y cuánto tiempo tardaron en cargarse. Este artículo explica cómo utilizar las funciones básicas de las herramientas de desarrollo de tu navegador.
@@ -182,17 +181,20 @@ Esto te dará una ventana como la siguiente:
 Para ver qué sucede, intenta ingresar los siguientes fragmentos de código en la consola uno por uno (y luego presiona Intro):
 
 ```js
-alert('hello!');
+alert("hello!");
 ```
 
 ```js
-document.querySelector('html').style.backgroundColor = 'purple';
+document.querySelector("html").style.backgroundColor = "purple";
 ```
 
 ```js
-const myWordmark = document.createElement('img');
-myWordmark.setAttribute('src','https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png');
-document.querySelector('h1').appendChild(myWordmark);
+const myWordmark = document.createElement("img");
+myWordmark.setAttribute(
+  "src",
+  "https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png",
+);
+document.querySelector("h1").appendChild(myWordmark);
 ```
 
 Ahora intenta ingresar las siguientes versiones incorrectas del código y ve lo que obtienes.
@@ -202,13 +204,16 @@ alert('hello!);
 ```
 
 ```js
-document.cheeseSelector('html').style.backgroundColor = 'purple';
+document.cheeseSelector("html").style.backgroundColor = "purple";
 ```
 
 ```js
-const myWordmark = document.createElement('img');
-myBanana.setAttribute('src','https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png');
-document.querySelector('h1').appendChild(myWordmark);
+const myWordmark = document.createElement("img");
+myBanana.setAttribute(
+  "src",
+  "https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png",
+);
+document.querySelector("h1").appendChild(myWordmark);
 ```
 
 Comenzarás a ver el tipo de errores que devuelve el navegador. A menudo, estos errores son bastante crípticos, ¡pero debería ser bastante sencillo resolver estos problemas!

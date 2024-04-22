@@ -2,6 +2,7 @@
 title: PerformanceEntry
 slug: Web/API/PerformanceEntry
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 **`PerformanceEntry`** 객체는 _performance timeline_ 상의 단일 성능 수치를 캡슐화 합니다. *performance entry*는 응용프로그램의 특정 지점에서 performance *{{domxref("PerformanceMark","mark")}}*나 *{{domxref("PerformanceMeasure","measure")}}*를 생성함으로써 (예를 들면 {{domxref("Performance.mark","mark()")}}를 호출하는 방법으로) 직접적으로 만들어질 수 있습니다. 또는 (이미지와 같은) 리소스를 로딩하는 등의 간접적인 방법으로 생성되기도 합니다.
@@ -41,18 +42,15 @@ The following example checks all `PerformanceEntry` properties to see if the bro
 function print_PerformanceEntries() {
   // Use getEntries() to get a list of all performance entries
   var p = performance.getEntries();
-  for (var i=0; i < p.length; i++) {
+  for (var i = 0; i < p.length; i++) {
     console.log("PerformanceEntry[" + i + "]");
     print_PerformanceEntry(p[i]);
   }
 }
 function print_PerformanceEntry(perfEntry) {
-  var properties = ["name",
-                    "entryType",
-                    "startTime",
-                    "duration"];
+  var properties = ["name", "entryType", "startTime", "duration"];
 
-  for (var i=0; i < properties.length; i++) {
+  for (var i = 0; i < properties.length; i++) {
     // Check each property
     var supported = properties[i] in perfEntry;
     if (supported) {

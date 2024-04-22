@@ -89,41 +89,51 @@ Você pode automatizar a criação de uma árvore DOM usando um [algoritmo rever
 ```json
 {
   "people": {
-    "person": [{
-      "address": [{
-        "@street": "321 south st",
-        "@city": "denver",
-        "@state": "co",
-        "@country": "usa"
-      }, {
-        "@street": "123 main st",
-        "@city": "arlington",
-        "@state": "ma",
-        "@country": "usa"
-      }],
-      "@first-name": "eric",
-      "@middle-initial": "H",
-      "@last-name": "jung"
-    }, {
-      "address": [{
-        "@street": "321 north st",
-        "@city": "atlanta",
-        "@state": "ga",
-        "@country": "usa"
-      }, {
-        "@street": "123 west st",
-        "@city": "seattle",
-        "@state": "wa",
-        "@country": "usa"
-      }, {
-        "@street": "321 south avenue",
-        "@city": "denver",
-        "@state": "co",
-        "@country": "usa"
-      }],
-      "@first-name": "jed",
-      "@last-name": "brown"
-    }]
+    "person": [
+      {
+        "address": [
+          {
+            "@street": "321 south st",
+            "@city": "denver",
+            "@state": "co",
+            "@country": "usa"
+          },
+          {
+            "@street": "123 main st",
+            "@city": "arlington",
+            "@state": "ma",
+            "@country": "usa"
+          }
+        ],
+        "@first-name": "eric",
+        "@middle-initial": "H",
+        "@last-name": "jung"
+      },
+      {
+        "address": [
+          {
+            "@street": "321 north st",
+            "@city": "atlanta",
+            "@state": "ga",
+            "@country": "usa"
+          },
+          {
+            "@street": "123 west st",
+            "@city": "seattle",
+            "@state": "wa",
+            "@country": "usa"
+          },
+          {
+            "@street": "321 south avenue",
+            "@city": "denver",
+            "@state": "co",
+            "@country": "usa"
+          }
+        ],
+        "@first-name": "jed",
+        "@last-name": "brown"
+      }
+    ]
   }
 }
 ```

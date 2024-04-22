@@ -1,13 +1,6 @@
 ---
-title: 'TypeError: ''x'' is not iterable'
+title: "TypeError: 'x' is not iterable"
 slug: Web/JavaScript/Reference/Errors/is_not_iterable
-tags:
-  - Error
-  - JavaScript
-  - Reference
-  - TypeError
-translation_of: Web/JavaScript/Reference/Errors/is_not_iterable
-original_slug: Web/JavaScript/Reference/Erreurs/is_not_iterable
 ---
 
 {{jsSidebar("Errors")}}
@@ -34,43 +27,42 @@ La valeur passée comme opérande droit de [`for…of`](/fr/docs/Web/JavaScript/
 En JavaScript, les objets ne sont pas itérables car ils n'implémentent pas le [protocole itérable](/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration#Le_protocole_«_itérable_»). On ne peut donc pas utiliser `for...of` afin d'en parcourir les propriétés.
 
 ```js example-bad
-var obj = { 'France': 'Paris', 'England': 'London' };
-for (let p of obj) { // TypeError: obj is not iterable
-    // …
+var obj = { France: "Paris", England: "London" };
+for (let p of obj) {
+  // TypeError: obj is not iterable
+  // …
 }
 ```
 
 Si on souhaite utiliser un itérateur pour parcourir les propriétés (leurs noms ou leurs valeurs), on pourra utiliser les méthodes {{jsxref("Object.keys")}} ou {{jsxref("Object.entries")}} qui fournissent des itérateurs :
 
 ```js example-good
-var obj = { 'France': 'Paris', 'England': 'London' };
+var obj = { France: "Paris", England: "London" };
 // On parcourt les noms des propriétés
 for (let country of Object.keys(obj)) {
-    var capital = obj[country];
-    console.log(country, capital);
+  var capital = obj[country];
+  console.log(country, capital);
 }
 
 for (const [country, capital] of Object.entries(obj))
-    console.log(country, capital);
+  console.log(country, capital);
 ```
 
 On pourrait également utiliser un objet {{jsxref("Map")}} :
 
 ```js example-good
-var map = new Map;
-map.set('France', 'Paris');
-map.set('England', 'London');
+var map = new Map();
+map.set("France", "Paris");
+map.set("England", "London");
 // On parcourt les noms des propriétés
 for (let country of map.keys()) {
-    let capital = map[country];
-    console.log(country, capital);
+  let capital = map[country];
+  console.log(country, capital);
 }
 
-for (let capital of map.values())
-    console.log(capital);
+for (let capital of map.values()) console.log(capital);
 
-for (const [country, capital] of map.entries())
-    console.log(country, capital);
+for (const [country, capital] of map.entries()) console.log(country, capital);
 ```
 
 ### Itérer grâce à un générateur
@@ -84,19 +76,18 @@ function* generate(a, b) {
 }
 
 for (let x of generate) // TypeError: generate is not iterable
-    console.log(x);
+  console.log(x);
 ```
 
 Lorsqu'elles ne sont pas appelées, l'objet {{jsxref("Function")}} correspondant au générateur peut être appelé mais il n'est pass itérable. Il ne faut donc pas oublier d'invoquer le générateur afin de parcourir les valeurs de l'itérateur qu'il produit.
 
 ```js example-good
 function* generate(a, b) {
-    yield a;
-    yield b;
+  yield a;
+  yield b;
 }
 
-for (let x of generate(1,2))
-    console.log(x);
+for (let x of generate(1, 2)) console.log(x);
 ```
 
 ### Parcourir un itérable spécifique
@@ -105,25 +96,25 @@ Les itérables spécifiques (_custom iterables_) peuvent être créés en implé
 
 ```js example-bad
 const monIterableVide = {
-    [Symbol.iterator]() {
-        return [] // [] est un iterable mais pas un itérateur
-                  // car il n'a pas de méthode next
-    }
-}
+  [Symbol.iterator]() {
+    return []; // [] est un iterable mais pas un itérateur
+    // car il n'a pas de méthode next
+  },
+};
 
-Array.from(monIterableVide);  // TypeError: monIterableVide is not iterable
+Array.from(monIterableVide); // TypeError: monIterableVide is not iterable
 ```
 
 Voici une implémentation correcte :
 
 ```js example-good
 const monIterableVide = {
-    [Symbol.iterator]() {
-        return [][Symbol.iterator]()
-    }
-}
+  [Symbol.iterator]() {
+    return [][Symbol.iterator]();
+  },
+};
 
-Array.from(monIterableVide);  // []
+Array.from(monIterableVide); // []
 ```
 
 ## Voir aussi

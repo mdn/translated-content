@@ -39,12 +39,10 @@ line-break: unset;
 
 ## Especificações
 
-| Especificações                                                                       | Status                       | Comentário        |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ----------------- |
-| {{SpecName('CSS3 Text', '#line-break-property', 'line-break')}} | {{Spec2('CSS3 Text')}} | Definição inicial |
+{{Specifications}}
 
 {{cssinfo}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.line-break")}}
+{{Compat}}

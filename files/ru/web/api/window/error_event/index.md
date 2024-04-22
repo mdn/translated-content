@@ -1,13 +1,6 @@
 ---
 title: GlobalEventHandlers.onerror
 slug: Web/API/Window/error_event
-tags:
-  - API
-  - HTML DOM
-  - Свойство
-  - Ссылка
-translation_of: Web/API/GlobalEventHandlers/onerror
-original_slug: Web/API/GlobalEventHandlers/onerror
 ---
 
 {{ ApiRef("HTML DOM") }}
@@ -53,7 +46,7 @@ window.onerror = function myErrorHandler(errorMsg, url, lineNumber) {
 
   // Просто запустить обработчик события по умолчанию.
   return false;
-}
+};
 ```
 
 ## Спецификации

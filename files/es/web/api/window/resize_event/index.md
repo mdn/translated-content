@@ -1,7 +1,6 @@
 ---
 title: GlobalEventHandlers.onresize
 slug: Web/API/Window/resize_event
-original_slug: Web/API/GlobalEventHandlers/onresize
 ---
 
 {{ ApiRef() }}
@@ -26,24 +25,21 @@ window.onresize = doFunc;
 
 ```html
 <html>
-<head>
+  <head>
+    <title>onresize test</title>
 
-<title>onresize test</title>
+    <script type="text/javascript">
+      window.onresize = resize;
 
-<script type="text/javascript">
+      function resize() {
+        alert("resize event detected!");
+      }
+    </script>
+  </head>
 
-window.onresize = resize;
-
-function resize()
-{
- alert("resize event detected!");
-}
-</script>
-</head>
-
-<body>
-<p>Resize the browser window to fire the resize event.</p>
-</body>
+  <body>
+    <p>Resize the browser window to fire the resize event.</p>
+  </body>
 </html>
 ```
 

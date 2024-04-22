@@ -25,7 +25,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Map
 ### 키 동일성
 
 값 동일성은 [`SameValueZero`](/ko/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality)을
-기반으로 합니다.(`0`과 `-0`을 다르게 취급하는 [등가 같음](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value_equality_using_object.is)을
+기반으로 합니다.(`0`과 `-0`을 다르게 취급하는 [등가 같음](/ko/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value_equality_using_object.is)을
 사용하였습니다. [브라우저 호환성](#browser_compatibility)을 확인해보세요). 즉, `NaN !== NaN`에도 불구하고
 {{jsxref("NaN")}}은 `NaN`과 동일하게 간주되며, 다른 모든 값은 `===` 연산자의 의미론에 따라 동일하게 간주됩니다.
 
@@ -189,8 +189,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Map
 
 ```js example-bad
 const wrongMap = new Map();
-wrongMap['bla'] = 'blaa';
-wrongMap['bla2'] = 'blaaa2';
+wrongMap["bla"] = "blaa";
+wrongMap["bla2"] = "blaaa2";
 
 console.log(wrongMap); // Map { bla: 'blaa', bla2: 'blaaa2' }
 ```
@@ -198,23 +198,23 @@ console.log(wrongMap); // Map { bla: 'blaa', bla2: 'blaaa2' }
 그러나 속성을 설정하는 방법은 Map 데이터 구조와 상호 작용하지 않습니다. 속성 설정은 일반 객체의 기능을 사용합니다. 'bla' 값은 질의를 위한 Map에 저장되지 않습니다. 데이터에 대한 다른 작업도 아래와 같이 실패합니다.
 
 ```js example-bad
-wrongMap.has('bla')    // false
-wrongMap.delete('bla') // false
-console.log(wrongMap)  // Map { bla: 'blaa', bla2: 'blaaa2' }
+wrongMap.has("bla"); // false
+wrongMap.delete("bla"); // false
+console.log(wrongMap); // Map { bla: 'blaa', bla2: 'blaaa2' }
 ```
 
 맵에 데이터를 저장하는 올바른 방법은 `set(key, value)` 메서드를 사용하는 것입니다.
 
 ```js example-good
-const contacts = new Map()
-contacts.set('Jessie', {phone: "213-555-1234", address: "123 N 1st Ave"})
-contacts.has('Jessie') // true
-contacts.get('Hilary') // undefined
-contacts.set('Hilary', {phone: "617-555-4321", address: "321 S 2nd St"})
-contacts.get('Jessie') // {phone: "213-555-1234", address: "123 N 1st Ave"}
-contacts.delete('Raymond') // false
-contacts.delete('Jessie') // true
-console.log(contacts.size) // 1
+const contacts = new Map();
+contacts.set("Jessie", { phone: "213-555-1234", address: "123 N 1st Ave" });
+contacts.has("Jessie"); // true
+contacts.get("Hilary"); // undefined
+contacts.set("Hilary", { phone: "617-555-4321", address: "321 S 2nd St" });
+contacts.get("Jessie"); // {phone: "213-555-1234", address: "123 N 1st Ave"}
+contacts.delete("Raymond"); // false
+contacts.delete("Jessie"); // true
+console.log(contacts.size); // 1
 ```
 
 ## 생성자
@@ -268,14 +268,14 @@ console.log(contacts.size) // 1
 ```js
 const myMap = new Map();
 
-const keyString = 'a string';
+const keyString = "a string";
 const keyObj = {};
-const keyFunc = function() {};
+const keyFunc = function () {};
 
 // 값 설정
 myMap.set(keyString, "value associated with 'a string'");
-myMap.set(keyObj, 'value associated with keyObj');
-myMap.set(keyFunc, 'value associated with keyFunc');
+myMap.set(keyObj, "value associated with keyObj");
+myMap.set(keyFunc, "value associated with keyFunc");
 
 console.log(myMap.size); // 3
 
@@ -284,9 +284,9 @@ console.log(myMap.get(keyString)); // "value associated with 'a string'"
 console.log(myMap.get(keyObj)); // "value associated with keyObj"
 console.log(myMap.get(keyFunc)); // "value associated with keyFunc"
 
-console.log(myMap.get('a string')); // "value associated with 'a string'", 왜냐하면 keyString === 'a string'
+console.log(myMap.get("a string")); // "value associated with 'a string'", 왜냐하면 keyString === 'a string'
 console.log(myMap.get({})); // undefined, 왜냐하면 keyObj !== {}
-console.log(myMap.get(function() {})); // undefined, 왜냐하면 keyFunc !== function () {}
+console.log(myMap.get(function () {})); // undefined, 왜냐하면 keyFunc !== function () {}
 ```
 
 ### Map 키로 NaN 사용하기
@@ -295,12 +295,12 @@ console.log(myMap.get(function() {})); // undefined, 왜냐하면 keyFunc !== fu
 
 ```js
 const myMap = new Map();
-myMap.set(NaN, 'not a number');
+myMap.set(NaN, "not a number");
 
 myMap.get(NaN);
 // "not a number"
 
-const otherNaN = Number('foo');
+const otherNaN = Number("foo");
 myMap.get(otherNaN);
 // "not a number"
 ```
@@ -311,8 +311,8 @@ myMap.get(otherNaN);
 
 ```js
 const myMap = new Map();
-myMap.set(0, 'zero');
-myMap.set(1, 'one');
+myMap.set(0, "zero");
+myMap.set(1, "one");
 
 for (const [key, value] of myMap) {
   console.log(`${key} = ${value}`);
@@ -354,11 +354,14 @@ myMap.forEach((value, key) => {
 ### 배열 객체와의 관계
 
 ```js
-const kvArray = [['key1', 'value1'], ['key2', 'value2']];
+const kvArray = [
+  ["key1", "value1"],
+  ["key2", "value2"],
+];
 
 // Use the regular Map constructor to transform a 2D key-value Array into a map
 const myMap = new Map(kvArray);
-console.log(myMap.get('key1')); // "value1"
+console.log(myMap.get("key1")); // "value1"
 
 // Use Array.from() to transform a map into a 2D key-value Array
 console.log(Array.from(myMap)); // Will show you exactly the same Array as kvArray
@@ -375,9 +378,7 @@ console.log(Array.from(myMap.keys())); // ["key1", "key2"]
 `Array`와 같이 `Map`은 복제가 가능합니다.
 
 ```js
-const original = new Map([
-  [1, 'one'],
-]);
+const original = new Map([[1, "one"]]);
 
 const clone = new Map(original);
 
@@ -391,14 +392,14 @@ console.log(original === clone); // false (useful for shallow comparison)
 
 ```js
 const first = new Map([
-  [1, 'one'],
-  [2, 'two'],
-  [3, 'three'],
+  [1, "one"],
+  [2, "two"],
+  [3, "three"],
 ]);
 
 const second = new Map([
-  [1, 'uno'],
-  [2, 'dos'],
+  [1, "uno"],
+  [2, "dos"],
 ]);
 
 // 두 맵을 병합합니다. 키 값이 중복될 경우 마지막 키의 값을 따릅니다.
@@ -414,18 +415,18 @@ console.log(merged.get(3)); // three
 
 ```js
 const first = new Map([
-  [1, 'one'],
-  [2, 'two'],
-  [3, 'three'],
+  [1, "one"],
+  [2, "two"],
+  [3, "three"],
 ]);
 
 const second = new Map([
-  [1, 'uno'],
-  [2, 'dos'],
+  [1, "uno"],
+  [2, "dos"],
 ]);
 
 // 맵을 배열로 병합하기. 중복된 키가 있다면 마지막에 병합된 맵의 키에 해당하는 값이 설정됩니다.
-const merged = new Map([...first, ...second, [1, 'eins']]);
+const merged = new Map([...first, ...second, [1, "eins"]]);
 
 console.log(merged.get(1)); // eins
 console.log(merged.get(2)); // dos

@@ -1,7 +1,6 @@
 ---
 title: Math.acosh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/acosh
-original_slug: Web/JavaScript/Reference/Global_Objects/Math/反双曲余弦值
 ---
 
 {{JSRef}}
@@ -36,11 +35,11 @@ Math.acosh(x)
 ### 使用 `Math.acosh()`
 
 ```js
-Math.acosh(-1);  // NaN
-Math.acosh(0);   // NaN
+Math.acosh(-1); // NaN
+Math.acosh(0); // NaN
 Math.acosh(0.5); // NaN
-Math.acosh(1);   // 0
-Math.acosh(2);   // 1.3169578969248166
+Math.acosh(1); // 0
+Math.acosh(2); // 1.3169578969248166
 ```
 
 当参数小于 1 时，`Math.acosh()` 将返回 {{jsxref("NaN")}}。
@@ -50,9 +49,11 @@ Math.acosh(2);   // 1.3169578969248166
 当 <math><semantics><mrow><mi>x</mi><mo>≥</mo><mn>1</mn></mrow><annotation encoding="TeX">x \geq 1</annotation></semantics></math> 时，都有 <math><semantics><mrow><mo lspace="0em" rspace="thinmathspace">arcosh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>-</mo><mn>1</mn></mrow></msqrt></mrow><mo>)</mo></mrow></mrow><annotation encoding="TeX">\operatorname {arcosh} (x) = \ln \left(x + \sqrt{x^{2} - 1} \right)</annotation></semantics></math> ，因此可以使用以下函数实现：
 
 ```js
-Math.acosh = Math.acosh || function(x) {
-  return Math.log(x + Math.sqrt(x * x - 1));
-};
+Math.acosh =
+  Math.acosh ||
+  function (x) {
+    return Math.log(x + Math.sqrt(x * x - 1));
+  };
 ```
 
 ## 规范

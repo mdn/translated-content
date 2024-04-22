@@ -1,13 +1,6 @@
 ---
 title: Aperçu des formes CSS
 slug: Web/CSS/CSS_shapes/Overview_of_shapes
-tags:
-  - Aperçu
-  - CSS
-  - CSS Shapes
-  - Formes CSS
-translation_of: Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes
-original_slug: Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes
 ---
 
 {{CSSRef}}
@@ -53,7 +46,7 @@ Dans [le guide sur les formes simples](/fr/docs/Web/CSS/CSS_Shapes/Formes_simple
 
 ### Boîtes de référence
 
-Les formes sont créées sur une boîte donnée. Aussi, on peut créer une boîte par rapport à chacune des boîtes du [modèle de boîte](/fr/docs/Apprendre/CSS/Introduction_%C3%A0_CSS/Le_mod%C3%A8le_de_bo%C3%AEte) et utiliser les valeurs :
+Les formes sont créées sur une boîte donnée. Aussi, on peut créer une boîte par rapport à chacune des boîtes du [modèle de boîte](/fr/docs/Apprendre/CSS/Introduction_à_CSS/Le_modèle_de_boîte) et utiliser les valeurs :
 
 - `border-box`
 - `padding-box`

@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Array/forEach
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/forEach
 ---
 
 {{JSRef}}
@@ -66,7 +65,7 @@ El siguiente código imprime una línea por cada elemento en un array:
 
 ```js
 function logArrayElements(element, index, array) {
-    console.log("a[" + index + "] = " + element);
+  console.log("a[" + index + "] = " + element);
 }
 // Nótese que se evita el 2° índice ya que no hay ningún elemento en esa posición del array
 [2, 5, , 9].forEach(logArrayElements);
@@ -85,8 +84,8 @@ function Counter() {
   this.sum = 0;
   this.count = 0;
 }
-Counter.prototype.add = function(array) {
-  array.forEach(function(entry) {
+Counter.prototype.add = function (array) {
+  array.forEach(function (entry) {
     this.sum += entry;
     ++this.count;
   }, this);
@@ -95,9 +94,9 @@ Counter.prototype.add = function(array) {
 
 var obj = new Counter();
 obj.add([2, 5, 9]);
-obj.count
+obj.count;
 // 3
-obj.sum
+obj.sum;
 // 16
 ```
 
@@ -108,11 +107,11 @@ Nota: Dado que el parámetro `thisArg` (this) se referencia en el `forEach()`, s
 El siguiente código crea una copia de un objeto dado. Hay diferentes formas de crear una copia de un objeto, ésta es sólo una de ellas y sirve para explicar cómo funciona `Array.prototype.forEach` utilizando funciones `Object.*` de ECMAScript 5.
 
 ```js
-function copy(o){
-  var copy = Object.create( Object.getPrototypeOf(o) );
+function copy(o) {
+  var copy = Object.create(Object.getPrototypeOf(o));
   var propNames = Object.getOwnPropertyNames(o);
 
-  propNames.forEach(function(name){
+  propNames.forEach(function (name) {
     var desc = Object.getOwnPropertyDescriptor(o, name);
     Object.defineProperty(copy, name, desc);
   });
@@ -120,19 +119,19 @@ function copy(o){
   return copy;
 }
 
-var o1 = {a:1, b:2};
+var o1 = { a: 1, b: 2 };
 var o2 = copy(o1); // o2 ahora se parece a o1
 ```
 
-### Si el array se modifica durante la iteración, otros elementos pueden ser omitidos.
+### Si el array se modifica durante la iteración, otros elementos pueden ser omitidos
 
 El siguiente ejemplo muestra por consola "uno", "dos", "cuatro". Cuando se alcanza el registro que contiene el valor "dos", el primer registro del array se desplaza, lo que hace que los registros restantes se muevan una posición. Debido a que el elemento "cuatro" está ahora en una posición anterior en el array, "tres" se omitirá. `forEach()` no hace una copia del array antes de iterar.
 
 ```js
-var words = ['uno', 'dos', 'tres', 'cuatro'];
-words.forEach(function(word) {
+var words = ["uno", "dos", "tres", "cuatro"];
+words.forEach(function (word) {
   console.log(word);
-  if (word === 'dos') {
+  if (word === "dos") {
     words.shift();
   }
 });
@@ -149,9 +148,8 @@ words.forEach(function(word) {
 // Production steps of ECMA-262, Edition 5, 15.4.4.18
 // Reference: http://es5.github.com/#x15.4.4.18
 if (!Array.prototype.forEach) {
-
   Array.prototype.forEach = function forEach(callback, thisArg) {
-    'use strict';
+    "use strict";
     var T, k;
 
     if (this == null) {
@@ -159,12 +157,11 @@ if (!Array.prototype.forEach) {
     }
 
     var kValue,
-        // 1. Let O be the result of calling ToObject passing the |this| value as the argument.
-        O = Object(this),
-
-        // 2. Let lenValue be the result of calling the Get internal method of O with the argument "length".
-        // 3. Let len be ToUint32(lenValue).
-        len = O.length >>> 0; // Hack to convert O.length to a UInt32
+      // 1. Let O be the result of calling ToObject passing the |this| value as the argument.
+      O = Object(this),
+      // 2. Let lenValue be the result of calling the Get internal method of O with the argument "length".
+      // 3. Let len be ToUint32(lenValue).
+      len = O.length >>> 0; // Hack to convert O.length to a UInt32
 
     // 4. If IsCallable(callback) is false, throw a TypeError exception.
     // See: http://es5.github.com/#x9.11
@@ -182,14 +179,12 @@ if (!Array.prototype.forEach) {
 
     // 7. Repeat, while k < len
     while (k < len) {
-
       // a. Let Pk be ToString(k).
       //   This is implicit for LHS operands of the in operator
       // b. Let kPresent be the result of calling the HasProperty internal method of O with argument Pk.
       //   This step can be combined with c
       // c. If kPresent is true, then
       if (k in O) {
-
         // i. Let kValue be the result of calling the Get internal method of O with argument Pk.
         kValue = O[k];
 

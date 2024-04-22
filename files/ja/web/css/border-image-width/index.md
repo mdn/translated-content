@@ -1,6 +1,8 @@
 ---
 title: border-image-width
 slug: Web/CSS/border-image-width
+l10n:
+  sourceCommit: 2adfb8760ac42c80966080e2e84211b14e43b589
 ---
 
 {{CSSRef}}
@@ -39,6 +41,7 @@ border-image-width: 5% 2em 10% auto;
 border-image-width: inherit;
 border-image-width: initial;
 border-image-width: revert;
+border-image-width: revert-layer;
 border-image-width: unset;
 ```
 
@@ -68,21 +71,23 @@ border-image-width: unset;
 
 ## 例
 
-<h3 id="Tiling_a_border_image">境界画像のタイリング</h3>
+### 境界画像のタイリング
 
 この例は以下の 90 × 90 ピクセルの ".png" ファイルを使用して境界画像を作成します。
 
-![](border.png)
+![8 つの円を含む正方形の画像。各コーナーの円は薄紫色。 4 つの辺の円は青。真ん中の 9 つ目の円が入る部分は空白。](border.png)
 
 そして、元の画像内のそれぞれの円は 30 × 30 ピクセルです。
 
 #### HTML
 
 ```html
-<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-   eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-   At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-   no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+<p>
+  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+  eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+  voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+  kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+</p>
 ```
 
 #### CSS
@@ -110,5 +115,5 @@ p {
 
 ## 関連情報
 
-- [背景と境界](/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders)
+- [背景と境界](/ja/docs/Web/CSS/CSS_backgrounds_and_borders)
 - [CSS の学習: 背景と境界](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)

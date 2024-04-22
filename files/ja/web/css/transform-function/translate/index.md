@@ -1,14 +1,15 @@
 ---
 title: translate()
 slug: Web/CSS/transform-function/translate
-original_slug: Web/CSS/transform-function/translate()
+l10n:
+  sourceCommit: 88e01e6f934ea5f2413cecfab1b5112cf819ba09
 ---
 
 {{CSSRef}}
 
 **`translate()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、要素を水平方向や垂直方向で再配置します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
 
-![](translate.png)
+{{EmbedInteractiveExample("pages/css/function-translate.html")}}
 
 この変換は、二次元ベクトルであることが特徴です。それぞれの方向にどれだけ要素が移動するかの座標を定義します。
 
@@ -29,29 +30,29 @@ transform: translate(30%, 50%);
 ### 値
 
 - 単一の `<length-percentage>` values
-  - : この値は {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} で、変換ベクトルの横軸 (水平方向、X 座標) を表します。変換ベクトルの縦軸 (垂直方向、Y 座標) は `0` に設定されます。例えば、 `translate(2)` は `translate(2, 0)` と等価です。パーセント値の場合は、 {{cssxref("transform-box")}} で定義される参照ボックスの幅からの相対値です。
+  - : この値は {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} で、変換ベクトルの横軸 (水平方向、X 座標) を表します。変換ベクトルの縦軸 (垂直方向、Y 座標) は `0` に設定されます。例えば、 `translate(2px)` は `translate(2px, 0)` と等価です。パーセント値の場合は、 {{cssxref("transform-box")}} で定義される参照ボックスの幅からの相対値です。
 - 二つの `<length-percentage>` 値
   - : この値は 2 つの {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} 値で、変換ベクトルの横軸 (水平方向、X 座標) と縦軸 (垂直方向、Y 座標) を表します。1 つ目にパーセント値が使用された場合は、 {{cssxref("transform-box")}} で定義された参照ボックスの幅からの相対値で、2 つ目にパーセント値が使用された場合は、高さからの相対値です。
 
 <table class="standard-table">
   <thead>
     <tr>
-      <th scope="col">ℝ^2 のデカルト座標</th>
-      <th scope="col">ℝℙ^2 の同次座標</th>
-      <th scope="col">ℝ^3 のデカルト座標</th>
-      <th scope="col">ℝℙ^3 の同次座標</th>
+      <th scope="col"><a href="/ja/docs/Web/CSS/transform-function#直交座標系">直交座標系</a> (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^2</a>)</th>
+      <th scope="col"><a href="https://en.wikipedia.org/wiki/Homogeneous_coordinates">同次座標系</a> (<a href="https://en.wikipedia.org/wiki/Real_projective_plane">ℝℙ^2</a>)</th>
+      <th scope="col">直交座標系 (<a href="https://ja.wikipedia.org/wiki/実数空間">ℝ^3</a>)</th>
+      <th scope="col">同次座標系 (<a href="https://en.wikipedia.org/wiki/Real_projective_space">ℝℙ^3</a>)</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td rowspan="2">
         <p>
-          ℝ^2 では線形変換ではないので、デカルト座標の行列で表すことはできない。
+          ℝ^2 では線形変換ではないので、直交座標の行列で表すことはできません。
         </p>
       </td>
       <td>
         <math
-          ><mfenced
+          ><mrow><mo>(</mo
             ><mtable
               ><mtr
                 ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
@@ -63,13 +64,13 @@ transform: translate(30%, 50%);
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
                 ><mtd><mn>1</mn></mtd></mtr
               ></mtable
-            ></mfenced
+            ><mo>)</mo></mrow
           ></math
         >
       </td>
       <td rowspan="2">
         <math
-          ><mfenced
+          ><mrow><mo>(</mo
             ><mtable
               ><mtr
                 ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
@@ -81,13 +82,13 @@ transform: translate(30%, 50%);
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
                 ><mtd><mn>1</mn></mtd></mtr
               ></mtable
-            ></mfenced
+            ><mo>)</mo></mrow
           ></math
         >
       </td>
       <td rowspan="2">
         <math
-          ><mfenced
+          ><mrow><mo>(</mo
             ><mtable
               ><mtr
                 ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
@@ -102,7 +103,7 @@ transform: translate(30%, 50%);
                 ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
                 ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
               ></mtable
-            ></mfenced
+            ><mo>)</mo></mrow
           ></math
         >
       </td>
@@ -116,12 +117,12 @@ transform: translate(30%, 50%);
 ### 形式文法
 
 ```css
-translate({{cssxref("&lt;length-percentage&gt;")}} , {{cssxref("&lt;length-percentage&gt;")}}?)
+translate({{cssxref("&lt;length-percentage&gt;")}}, {{cssxref("&lt;length-percentage&gt;")}}?)
 ```
 
 ## 例
 
-<h3 id="Using_a_single-axis_translation">単一軸を使用した変形</h3>
+### 単一軸を使用した移動
 
 #### HTML
 
@@ -141,16 +142,17 @@ div {
 }
 
 .moved {
-  transform: translate(10px); /* translateX(10px) または translate(10px, 0) と同じ */
+  /* translateX(10px) または translate(10px, 0) と同じ */
+  transform: translate(10px);
   background-color: pink;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Using_a_single-axis_translation", 250, 250)}}
+{{EmbedLiveSample("単一軸を使用した移動", 250, 250)}}
 
-<h3 id="Combining_y-axis_and_x-axis_translation">Y 軸と X 軸の変換の組み合わせ</h3>
+### Y 軸と X 軸の移動の組み合わせ
 
 #### HTML
 
@@ -177,7 +179,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("Combining_y-axis_and_x-axis_translation", 250, 250)}}
+{{EmbedLiveSample("y_軸と_x_軸の移動の組み合わせ", 250, 250)}}
 
 ## 仕様書
 
@@ -191,3 +193,4 @@ div {
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
+- {{cssxref("translate")}}

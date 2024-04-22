@@ -18,8 +18,8 @@ La propiedad [CSS](/es/docs/CSS) `quotes` indica cómo debe renderizar las citas
 quotes: none;
 
 /* Valor <string> */
-quotes: "«" "»";           /* Especifica open-quote y close-quote a las marcas de cita francesas */
-quotes: "«" "»" "‹" "›";   /* Especifica dos niveles de marcas de cita */
+quotes: "«" "»"; /* Especifica open-quote y close-quote a las marcas de cita francesas */
+quotes: "«" "»" "‹" "›"; /* Especifica dos niveles de marcas de cita */
 
 /* Valores globales */
 quotes: inherit;
@@ -41,9 +41,15 @@ quotes: unset;
 ## Ejemplos
 
 ```css
-q { quotes: '"' '"' "'" "'" }
-q:before { content: open-quote }
-q:after  { content: close-quote }
+q {
+  quotes: '"' '"' "'" "'";
+}
+q:before {
+  content: open-quote;
+}
+q:after {
+  content: close-quote;
+}
 ```
 
 ## Notas

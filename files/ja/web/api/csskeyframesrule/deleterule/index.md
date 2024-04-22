@@ -34,7 +34,7 @@ deleteRule(select)
 
 この CSS には keyframes アットルールがあります。これは `document.styleSheets[0].cssRules` で返される最初の {{domxref("CSSRule")}} になります。
 `myRules[0]` は {{domxref("CSSKeyframesRule")}} オブジェクトを返します。 `cssRules` プロパティは
- 2 つのルールを持った {{domxref("CSSRuleList")}} を返します。
+2 つのルールを持った {{domxref("CSSRuleList")}} を返します。
 
 `deleteRule()` でルールを 1 つ削除した後は、 `cssRules` プロパティはルールを 1 つ持った {{domxref("CSSRuleList")}} を返します。
 

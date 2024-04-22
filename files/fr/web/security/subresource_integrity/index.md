@@ -1,10 +1,6 @@
 ---
 title: Subresource Integrity
 slug: Web/Security/Subresource_Integrity
-tags:
-  - Intro
-  - Sécurité
-translation_of: Web/Security/Subresource_Integrity
 ---
 
 **_Subresource Integrity_** (SRI, ou « Intégrité des sous-ressources ») est une fonction de sécurité qui permet aux navigateurs de vérifier que les fichiers qu'ils vont chercher (par exemple, à partir d'un [CDN](/fr/docs/Glossaire/CDN)) sont livrés sans manipulation inattendue. Cela fonctionne en permettant de fournir un hachage cryptographique (« _hash_ ») auquel le fichier récupéré doit correspondre.
@@ -50,9 +46,10 @@ Dans les exemples suivants, supposons que `oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9
 Vous pouvez utiliser l'élément {{HTMLElement("script")}} suivant pour dire au navigateur qu'il doit comparer le _hash_ fourni avec celui du fichier et que les deux correspondent avant d'exécuter le script hébergé à `https://example.com/exemple-framework.js`.
 
 ```html
-<script src="https://exemple.com/exemple-framework.js"
-        integrity="sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC"
-        crossorigin="anonymous"></script>
+<script
+  src="https://exemple.com/exemple-framework.js"
+  integrity="sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC"
+  crossorigin="anonymous"></script>
 ```
 
 > **Note :** Pour plus de détails sur l'objectif de l'attribut **`crossorigin`**, voir [les attributs CORS](/fr/docs/Web/HTML/Reglages_des_attributs_CORS).

@@ -1,8 +1,11 @@
 ---
-title: どうすればすべての種類のユーザーのためにデザインすることができるか？
+title: すべての種類のユーザーのためにデザインするには
 slug: Learn/Common_questions/Design_and_accessibility/Design_for_all_types_of_users
-original_slug: Learn/Common_questions/Design_for_all_types_of_users
+l10n:
+  sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
+
+{{QuicklinksWithSubPages("ja/Learn/Common_questions")}}
 
 この記事ではあらゆる種類のユーザーのためのウェブサイトを設計する基本的なヒントを紹介します。
 
@@ -11,7 +14,7 @@ original_slug: Learn/Common_questions/Design_for_all_types_of_users
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        ここではアクセシビリティに応じた詳細な説明はしていませんので、まず<a href="/ja/docs/Learn/Common_questions/What_is_accessibility">アクセシビリティとは何か</a>を読んでください。
+        ここではアクセシビリティに応じた詳細な説明はしていませんので、まず<a href="/ja/docs/Learn/Common_questions/Design_and_accessibility/What_is_accessibility">アクセシビリティとは何か</a>を読んでください。
       </td>
     </tr>
     <tr>
@@ -25,11 +28,11 @@ original_slug: Learn/Common_questions/Design_for_all_types_of_users
 
 ## 概要
 
-ウェブサイトを構築する際、最も考慮すべき課題のひとつが[ユニバーサルデザイン](https://en.wikipedia.org/wiki/Universal_design)です。障碍の有無、技術的制約、文化、場所などにかかわらず、すべてのユーザーに対応することです。
+ウェブサイトを構築する際、最も考慮すべき課題のひとつが[ユニバーサルデザイン](https://ja.wikipedia.org/wiki/ユニバーサルデザイン)です。障碍の有無、技術的制約、文化、場所などにかかわらず、すべてのユーザーに対応することです。
 
 ## アクティブラーニング
 
-_利用可能なアクティブラーニングはまだありません。[ぜひ協力をご検討ください](/ja/docs/MDN/Contribute/Getting_started)。_
+_利用可能なアクティブラーニングはまだありません。[ぜひ協力をご検討ください](/ja/docs/MDN/Community/Contributing/Getting_started)。_
 
 ## より深く掘り下げる
 
@@ -41,9 +44,10 @@ _利用可能なアクティブラーニングはまだありません。[ぜひ
 
 Paciello Group の [Color Contrast Analyser](https://www.tpgi.com/color-contrast-checker/) をダウンロードし、インストールしてみましょう。
 
-> **メモ:** 他にも、WebAIM の [Color Contrast Checker](https://webaim.org/resources/contrastchecker/) のようなコントラストチェッカーがオンライン上に多数あります。ローカルチェッカーをお勧めするのは、色の数値を探すための画面上のカラーピッカーがパッケージされているからです。
+> **メモ:** 他にも、 WebAIM の [Color Contrast Checker](https://webaim.org/resources/contrastchecker/) のようなコントラストチェッカーがオンライン上に多数あります。ローカルチェッカーをお勧めするのは、色の数値を探すための画面上のカラーピッカーがパッケージされているからです。
 
 例えば、このページの色をカラーコントラストアナライザーで調べて、結果を確認してみましょう。
+
 ![Color contrast on this page: excellent!](color-contrast.png)
 
 文字と背景の輝度コントラスト比は 8.30:1 で、最低基準 (4.5:1) を超えており、多くの視覚障碍者がこのページを読むことができるはずです。
@@ -57,7 +61,9 @@ Paciello Group の [Color Contrast Analyser](https://www.tpgi.com/color-contrast
 絶対単位とは、比率計算ではなく、いわば設定された大きさを参照するもので、ほとんどの場合、ピクセル (`px`) で表現されます。例えば、 CSS でこのように宣言した場合、
 
 ```css
-body { font-size:16px; }
+body {
+  font-size: 16px;
+}
 ```
 
 … これは、何が起ころうともフォントサイズは 16 ピクセルでなければならない、とブラウザーに指示していることになります。最近のブラウザーは、「ユーザーが拡大率を 100% に設定したときの 16 ピクセル」を依頼しているように装うことで、このルールを回避しています。
@@ -82,36 +88,53 @@ body { font-size:16px; }
 以下は、使用している HTML の例です。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Font size experiment</title>
-</head>
-<body>
-
-    <h1>This is our main heading
-        <span class="subheading">This is our subheading</span>
+  </head>
+  <body>
+    <h1>
+      This is our main heading
+      <span class="subheading">This is our subheading</span>
     </h1>
-
-</body>
+  </body>
 </html>
 ```
 
 パーセントベースの CSS は、次のようになります。
 
 ```css
-body { font-size:100%; } /* ブラウザーの基本フォントサイズの 100% なので、ほとんどの場合、16 ピクセルとしてレンダリングされます。 */
-h1 { font-size:200%; } /* 本文の 2 倍の大きさなので 32 ピクセル */
-span.subheading { font-size:50%; } /* h1 の半分の大きさ、つまり 16 ピクセルで元のサイズに戻ります。 */
+body {
+  /* ブラウザーの基本フォントサイズの 100% なので、ほとんどの場合、16 ピクセルとしてレンダリングされます。 */
+  font-size: 100%;
+}
+h1 {
+  /* 本文の 2 倍の大きさなので 32 ピクセル */
+  font-size: 200%;
+}
+span.subheading {
+  /* h1 の半分の大きさ、つまり 16 ピクセルで元のサイズに戻ります。 */
+  font-size: 50%;
+}
 ```
 
 em でも同じ問題が発生します。
 
 ```css
-body { font-size:1em; } /* 1em = ブラウザーの基本フォントサイズの 100% なので、ほとんどの場合、16 ピクセルとしてレンダリングされます。 */
-h1 { font-size:2em; } /* 本文の 2 倍の大きさなので 32 ピクセル */
-span.subheading { font-size:0.5em; } /* h1 の半分の大きさ、つまり 16 ピクセルで元のサイズに戻ります。 */
+body {
+  /* 1em = ブラウザーの基本フォントサイズの 100% なので、ほとんどの場合、16 ピクセルとしてレンダリングされます。 */
+  font-size: 1em;
+}
+h1 {
+  /* 本文の 2 倍の大きさなので 32 ピクセル */
+  font-size: 2em;
+}
+span.subheading {
+  /* h1 の半分の大きさ、つまり 16 ピクセルで元のサイズに戻ります。 */
+  font-size: 0.5em;
+}
 ```
 
 ご覧のように、親、親の親、親の親の親などを保有しなければならない場合、計算はすぐに大変なことになります。(ほとんどのデザインはピクセルベースのソフトウェアで行われるため、計算は CSS をコーディングする人が行わなければなりません)。
@@ -119,12 +142,21 @@ span.subheading { font-size:0.5em; } /* h1 の半分の大きさ、つまり 16 
 そこで登場するのが `rem` です。この単位はルート要素のサイズに対する相対的なもので、他の親要素に対するものではありません。 CSS はこのように書き換えることができます。
 
 ```css
-body { font-size:1em; } /* 1em = ブラウザーの基本フォントサイズの 100% なので、ほとんどの場合、16 ピクセルとしてレンダリングされます。 */
-h1 { font-size:2rem; } /* 本文の 2 倍の大きさなので 32 ピクセル */
-span.subheading { font-size:1rem; } /* 元のサイズ */
+body {
+  /* 1em = ブラウザーの基本フォントサイズの 100% なので、ほとんどの場合、16 ピクセルとしてレンダリングされます。 */
+  font-size: 1em;
+}
+h1 {
+  /* 本文の 2 倍の大きさなので 32 ピクセル */
+  font-size: 2rem;
+}
+span.subheading {
+  /* 元のサイズ */
+  font-size: 1rem;
+}
 ```
 
-もっと簡単でしょう？これは、 [Internet Explorer 9 と他のすべての現行ブラウザーで](https://caniuse.com/#search=rem)の時点で動作するので、この単位は気軽に使用してください。
+もっと簡単でしょう？これは、[すべての現行ブラウザー](https://caniuse.com/#search=rem)で動作するので、この単位は気軽に使用してください。
 
 > **メモ:** Opera Mini は rem のフォントサイズに対応していないことにお気づきかもしれません。結局は独自のフォントサイズを設定することになるので、わざわざフォント単位を与える必要はありません。
 
@@ -148,30 +180,31 @@ span.subheading { font-size:1rem; } /* 元のサイズ */
 そのためには、テキストのコンテナーの大きさを指定します。この HTML を考えてみましょう。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Font size experiment</title>
-</head>
-<body>
-
-<div class="container">
-    <h1>This is our main heading
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        This is our main heading
         <span class="subheading">This is our subheading</span>
-    </h1>
+      </h1>
 
-    <p>[lengthy text that spans many lines]</p>
-</div>
-
-</body>
+      <p>[lengthy text that spans many lines]</p>
+    </div>
+  </body>
 </html>
 ```
 
 ここに、`container` クラスを持つ `div` があります。この `div` には、幅を設定する（`width` プロパティを使用する）か、大きすぎないように最大幅を設定する（`max-width` プロパティを使用する）かのどちらかのスタイルを設定することができます。もし、伸縮性のあるレスポンシブなウェブサイトを作りたいが、ブラウザーの既定の幅が分からない場合は、 `max-width` プロパティを使用して、 1 行に 70 文字まで許容し、それ以上は許容しないようにすることができます。
 
 ```css
-div.container { max-width:70em; }
+div.container {
+  max-width: 70em;
+}
 ```
 
 ### 画像、音声、動画の代替コンテンツ
@@ -182,7 +215,7 @@ div.container { max-width:70em; }
 
 画像には装飾的なものと情報的なものがありますが、ユーザーに見てもらえるという保証はありません。例えば、以下のような場合です。
 
-- 視覚障碍者は、テキストしか扱えない画面リーダーに頼っています。
+- 視覚障碍者は、テキストしか扱えないスクリーンリーダーに頼っています。
 - 読者が、 {{Glossary("CDN")}} から発信される画像をブロックする非常に厳しいイントラネットを使用している可能性があります。
 - 読者が、特にモバイル機器の帯域幅を節約するために、画像を無効にしている可能性があります （下記参照）。
 
@@ -193,7 +226,7 @@ div.container { max-width:70em; }
 - 情報的な画像
   - : 情報を伝えるために使用されることから、その名がつきました。例えば、グラフを表示したり、人の身振りを表示したり、その他の情報を表示することができます。少なくとも、関連する `alt` 属性を提供する必要があります。
 
-画像が簡潔に記述できるのであれば、`alt`属性を提供すればよく、それ以上のことをする必要はありません。画像が簡潔に記述できない場合は、同じページで同じ内容を別の形で提供するか（例えば、円グラフを同じデータを提供する表で補完する）、あるいは `longdesc` 属性に頼らなければならないでしょう。この属性の値は、画像の内容を詳細に記述したリソースを明示的に指す URL です。
+画像が簡潔に記述できるのであれば、 `alt` 属性を提供すればよく、それ以上のことをする必要はありません。画像が簡潔に記述できない場合は、同じページで同じ内容を別の形で提供するか（例えば、円グラフを同じデータを提供する表で補完する）、あるいは `longdesc` 属性に頼らなければならないでしょう。この属性の値は、画像の内容を詳細に記述したリソースを明示的に指す URL です。
 
 > **メモ:** `longdesc` を使用すること、さらにはその存在については、かなり長い間議論されてきました。 W3C の [Image Description Extension (longdesc)](https://www.w3.org/TR/html-longdesc/) を参照すると、詳しい説明と徹底的な例が載っています。
 

@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial Django Parte 8: Autenticação de usuário e permissões'
+title: "Tutorial Django Parte 8: Autenticação de usuário e permissões"
 slug: Learn/Server-side/Django/Authentication
 ---
 
@@ -13,7 +13,7 @@ Neste tutorial, mostraremos como permitir que os usuários efetuem login no seu 
       <th scope="row">Pré-requisitos:</th>
       <td>
         Conclua todos os tópicos do tutorial anterior, incluindo
-        <a href="/en-US/docs/Learn/Server-side/Django/Sessions"
+        <a href="/pt-BR/docs/Learn/Server-side/Django/Sessions"
           >Django Tutorial Part 7: Sessions framework</a
         >.
       </td>
@@ -99,7 +99,7 @@ Agora vamos criar um usuário:
 3. Digite um nome de **usuário** e uma **senha/confirmação de senha** adequados para o usuário de teste
 4. Pressione **SALVAR** para criar o usuário.
 
-    O site de administração criará o novo usuário e levará você imediatamente para uma tela Alterar usuário, na qual é possível alterar seu **nome de usuário** e adicionar informações aos campos opcionais do modelo de usuário. Esses campos incluem o nome, o sobrenome, o endereço de email e o status e as permissões do usuário (somente o sinalizador **Ativo** deve ser definido). Mais abaixo, você pode especificar os grupos e permissões do usuário e ver datas importantes relacionadas ao usuário (por exemplo, a data de ingresso e a última data de login).![Admin site - add user pt2](admin_authentication_add_user_prt2.png)
+   O site de administração criará o novo usuário e levará você imediatamente para uma tela Alterar usuário, na qual é possível alterar seu **nome de usuário** e adicionar informações aos campos opcionais do modelo de usuário. Esses campos incluem o nome, o sobrenome, o endereço de email e o status e as permissões do usuário (somente o sinalizador **Ativo** deve ser definido). Mais abaixo, você pode especificar os grupos e permissões do usuário e ver datas importantes relacionadas ao usuário (por exemplo, a data de ingresso e a última data de login).![Admin site - add user pt2](admin_authentication_add_user_prt2.png)
 
 5. Na seção _Grupos_, selecione grupo de **Library Members** na lista de _Grupos disponíveis_ e pressione a **seta para a direita** entre as caixas para movê-lo para a caixa _Grupos escolhidos_.![Admin site - add user to group](admin_authentication_user_add_group.png)
 6. Não precisamos fazer mais nada aqui; basta selecionar **SALVAR** novamente, para ir para a lista de usuários.
@@ -183,7 +183,7 @@ TEMPLATES = [
 
 Crie um novo arquivo HTML chamado **/locallibrary/templates/registration/login.html** e forneça o seguinte conteúdo:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -244,7 +244,7 @@ Se você navegar para o URL de logout (`http://127.0.0.1:8000/accounts/logout/`)
 
 Crie e abra /**locallibrary/templates/registration/logged_out.html**. Copie o texto abaixo:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -267,7 +267,7 @@ Os seguintes modelos podem ser usados como ponto de partida.
 
 Este é o formulário usado para obter o endereço de email do usuário (para enviar o email de redefinição de senha). Crie **/locallibrary/templates/registration/password_reset_form.html** e forneça o seguinte conteúdo:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -286,7 +286,7 @@ Este é o formulário usado para obter o endereço de email do usuário (para en
 
 Este formulário é exibido após a coleta do seu endereço de email. Crie **/locallibrary/templates/registration/password_reset_done.html**, e forneça o seguinte conteúdo:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -298,7 +298,7 @@ Este formulário é exibido após a coleta do seu endereço de email. Crie **/lo
 
 Este modelo fornece o texto do email em HTML que contém o link de redefinição que enviaremos aos usuários. Crie **/locallibrary/templates/registration/password_reset_email.html** e forneça o seguinte conteúdo:
 
-```html
+```django
 Someone asked for password reset for email \{{ email }}. Follow the link below:
 \{{ protocol}}://\{{ domain }}{% url 'password_reset_confirm' uidb64=uid token=token %}
 ```
@@ -307,35 +307,42 @@ Someone asked for password reset for email \{{ email }}. Follow the link below:
 
 É nesta página que você digita sua nova senha depois de clicar no link no e-mail de redefinição de senha. Crie **/locallibrary/templates/registration/password_reset_confirm.html** e forneça o seguinte conteúdo:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
-    {% if validlink %}
-        <p>Please enter (and confirm) your new password.</p>
-        <form action="" method="post">
-        {% csrf_token %}
-            <table>
-                <tr>
-                    <td>\{{ form.new_password1.errors }}
-                        <label for="id_new_password1">New password:</label></td>
-                    <td>\{{ form.new_password1 }}</td>
-                </tr>
-                <tr>
-                    <td>\{{ form.new_password2.errors }}
-                        <label for="id_new_password2">Confirm password:</label></td>
-                    <td>\{{ form.new_password2 }}</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><input type="submit" value="Change my password" /></td>
-                </tr>
-            </table>
-        </form>
-    {% else %}
-        <h1>Password reset failed</h1>
-        <p>The password reset link was invalid, possibly because it has already been used. Please request a new password reset.</p>
-    {% endif %}
+  {% if validlink %}
+    <p>Please enter (and confirm) your new password.</p>
+    <form action="" method="post">
+      {% csrf_token %}
+      <table>
+        <tr>
+          <td>
+            \{{ form.new_password1.errors }}
+            <label for="id_new_password1">New password:</label>
+          </td>
+          <td>\{{ form.new_password1 }}</td>
+        </tr>
+        <tr>
+          <td>
+            \{{ form.new_password2.errors }}
+            <label for="id_new_password2">Confirm password:</label>
+          </td>
+          <td>\{{ form.new_password2 }}</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><input type="submit" value="Change my password" /></td>
+        </tr>
+      </table>
+    </form>
+  {% else %}
+    <h1>Password reset failed</h1>
+    <p>
+      The password reset link was invalid, possibly because it has already been
+      used. Please request a new password reset.
+    </p>
+  {% endif %}
 {% endblock %}
 ```
 
@@ -343,7 +350,7 @@ Someone asked for password reset for email \{{ email }}. Follow the link below:
 
 Este é o último modelo de redefinição de senha, exibido para notificá-lo quando a redefinição de senha for bem-sucedida. Crie **/locallibrary/templates/registration/password_reset_complete.html** e forneça o seguinte conteúdo:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -383,17 +390,16 @@ Normalmente você primeiro testará contra a variável de template `\{{ user.is_
 
 Abra o template base (**/locallibrary/catalog/templates/base_generic.html**) e copie o texto a seguir no bloco `sidebar`, imediatamente antes da template tag `endblock`.
 
-```html
+```django
   <ul class="sidebar-nav">
-
     ...
 
-   {% if user.is_authenticated %}
-     <li>User: \{{ user.get_username }}</li>
-     <li><a href="{% url 'logout'%}?next=\{{request.path}}">Logout</a></li>
-   {% else %}
-     <li><a href="{% url 'login'%}?next=\{{request.path}}">Login</a></li>
-   {% endif %}
+    {% if user.is_authenticated %}
+      <li>User: \{{ user.get_username }}</li>
+      <li><a href="{% url 'logout'%}?next=\{{request.path}}">Logout</a></li>
+    {% else %}
+      <li><a href="{% url 'login'%}?next=\{{request.path}}">Login</a></li>
+    {% endif %}
   </ul>
 ```
 

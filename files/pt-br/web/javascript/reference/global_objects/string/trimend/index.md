@@ -39,24 +39,22 @@ String.prototype.trimRight.name === "trimEnd";
 O exemplo a seguir mostra a _string_ em caixa baixa `' foo'`:
 
 ```js
-var str = '   foo  ';
+var str = "   foo  ";
 
 console.log(str.length); // retorna 8
 
 str = str.trimEnd();
 console.log(str.length); // retorna 6
-console.log(str);        // retorna '   foo'
+console.log(str); // retorna '   foo'
 ```
 
 ## Especificações
 
-| Especificação                                                                                                    |
-| ---------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.trimend', 'String.prototype.trimEnd')}} |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.builtins.String.trimEnd")}}
+{{Compat}}
 
 ## Veja também
 

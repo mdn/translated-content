@@ -28,34 +28,32 @@ navigator.geolocation.getCurrentPosition(success, error, options)
 var options = {
   enableHighAccuracy: true,
   timeout: 5000,
-  maximumAge: 0
+  maximumAge: 0,
 };
 
 function success(pos) {
   var crd = pos.coords;
 
-  console.log('Sua posição atual é:');
-  console.log('Latitude : ' + crd.latitude);
-  console.log('Longitude: ' + crd.longitude);
-  console.log('Mais ou menos ' + crd.accuracy + ' metros.');
-};
+  console.log("Sua posição atual é:");
+  console.log("Latitude : " + crd.latitude);
+  console.log("Longitude: " + crd.longitude);
+  console.log("Mais ou menos " + crd.accuracy + " metros.");
+}
 
 function error(err) {
-  console.warn('ERROR(' + err.code + '): ' + err.message);
-};
+  console.warn("ERROR(" + err.code + "): " + err.message);
+}
 
 navigator.geolocation.getCurrentPosition(success, error, options);
 ```
 
 ## Especificações
 
-| Especificação                        | Estado                           | Comentário             |
-| ------------------------------------ | -------------------------------- | ---------------------- |
-| {{SpecName('Geolocation')}} | {{Spec2('Geolocation')}} | Especificação inicial. |
+{{Specifications}}
 
-## Navegadores compatíveis
+## Compatibilidade com navegadores
 
-{{Compat("api.Geolocation.getCurrentPosition")}}
+{{Compat}}
 
 ## Veja também
 

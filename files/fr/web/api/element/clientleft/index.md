@@ -1,8 +1,6 @@
 ---
 title: Element.clientLeft
 slug: Web/API/Element/clientLeft
-translation_of: Web/API/Element/clientLeft
-browser-compat: api.Element.clientLeft
 ---
 
 {{APIRef("DOM")}}
@@ -30,9 +28,12 @@ Dans l'exemple qui suit, la zone du client possède un arrière-plan blanc avec 
 ```html
 <div id="container">
   <div id="contained">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.
+    </p>
   </div>
 </div>
 ```
@@ -40,7 +41,6 @@ Dans l'exemple qui suit, la zone du client possède un arrière-plan blanc avec 
 ### CSS
 
 ```css
-
 #container {
   margin: 3rem;
   background-color: rgb(255, 255, 204);

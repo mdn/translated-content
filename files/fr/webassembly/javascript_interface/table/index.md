@@ -1,15 +1,6 @@
 ---
 title: WebAssembly.Table()
 slug: WebAssembly/JavaScript_interface/Table
-tags:
-  - API
-  - Constructeur
-  - JavaScript
-  - Reference
-  - WebAssembly
-  - table
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table
 ---
 
 {{WebAssemblySidebar}}
@@ -69,7 +60,7 @@ Toutes les instances `Table` héritent des propriétés [du prototype du constru
 Dans l'exemple qui suit (tiré du fichier [table2.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.html) et qui dispose [d'une démonstration](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html)), on crée une nouvelle instance d'un tableau WebAssembly avec une taille initiale permettant de stocker 2 références. Ensuite, on imprime la longueur du tableau et le contenu des deux éléments (obtenus grâce à la méthode {{jsxref("WebAssembly/Table/get", "Table.prototype.get()")}} afin de montrer que la longueur vaut 2 et que le tableau ne contient encore aucune référence de fonction (pour les deux positions, on a la valeur {{jsxref("null")}}).
 
 ```js
-var tbl = new WebAssembly.Table({initial:2, element:"anyfunc"});
+var tbl = new WebAssembly.Table({ initial: 2, element: "anyfunc" });
 console.log(tbl.length);
 console.log(tbl.get(0));
 console.log(tbl.get(1));
@@ -80,20 +71,21 @@ Ensuite, on crée un objet d'import qui contient une référence au tableau :
 ```js
 var importObj = {
   js: {
-    tbl:tbl
-  }
+    tbl: tbl,
+  },
 };
 ```
 
 Enfin, on charge et on instancie un module WebAssembly (table2.wasm) grâce à la fonction {{jsxref("WebAssembly.instantiateStreaming()")}}. Le module `table2.wasm` a ajouté deux références de fonctions (cf. [sa représentation textuelle](https://github.com/mdn/webassembly-examples/blob/0991effbbf2e2cce38a7dbadebd2f3495e3f4e07/js-api-examples/table2.wat)). Chacune de ces fonctions fournit une valeur simple :
 
 ```js
-WebAssembly.instantiateStreaming(fetch('table2.wasm'), importObject)
-.then(function(obj) {
-  console.log(tbl.length);   // "2"
-  console.log(tbl.get(0)()); // "42"
-  console.log(tbl.get(1)()); // "83"
-});
+WebAssembly.instantiateStreaming(fetch("table2.wasm"), importObject).then(
+  function (obj) {
+    console.log(tbl.length); // "2"
+    console.log(tbl.get(0)()); // "42"
+    console.log(tbl.get(1)()); // "83"
+  },
+);
 ```
 
 On voit ici qu'il faut d'abord récupérer la fonction puis effectuer une invocation pour obtenir la valeur correspondante à partir de l'accesseur (autrement dit, on écrit `get(0)()` plutôt que `get(0)` pour obtenir le résultat de la fonction) .

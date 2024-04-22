@@ -1,7 +1,5 @@
 ---
-title: >-
-  SyntaxError: applying the 'delete' operator to an unqualified name is
-  deprecated
+title: "SyntaxError: applying the 'delete' operator to an unqualified name is deprecated"
 slug: Web/JavaScript/Reference/Errors/Delete_in_strict_mode
 ---
 
@@ -33,7 +31,7 @@ delete 操作符只能用于删除对象中的属性。只有可配置的对象�
 在 JavaScript 中，普通变量是不能删除的，在严格模式下会报错：
 
 ```js example-bad
-'use strict';
+"use strict";
 
 var x;
 
@@ -48,7 +46,7 @@ delete x;
 要释放变量引用的内容，可以将变量值设置为 {{jsxref("null")}}:
 
 ```js example-good
-'use strict';
+"use strict";
 
 var x;
 

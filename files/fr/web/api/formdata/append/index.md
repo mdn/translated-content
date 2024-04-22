@@ -1,15 +1,6 @@
 ---
 title: FormData.append()
 slug: Web/API/FormData/append
-tags:
-  - API
-  - Append
-  - FormData
-  - Méthode
-  - Reference
-  - XHR
-  - XMLHttpRequest
-translation_of: Web/API/FormData/append
 ---
 
 {{APIRef("XMLHttpRequest")}}
@@ -55,15 +46,15 @@ var formData = new FormData(); // Actuellement vide
 Vous pouvez rajouter des paires clé/valeur en utilisant {{domxref("FormData.append")}}:
 
 ```js
-formData.append('username', 'Chris');
-formData.append('userpic', myFileInput.files[0], 'chris.jpg');
+formData.append("username", "Chris");
+formData.append("userpic", myFileInput.files[0], "chris.jpg");
 ```
 
 Comme pour un formulaire classique, vous pouvez ajouter plusieurs valeurs pour la même clé. Par exemple ( et pour être en accord avec les conventions de nommage PHP, on ajoute \[] au nom de la clé):
 
 ```js
-formData.append('userpic[]', myFileInput.files[0], 'chris1.jpg');
-formData.append('userpic[]', myFileInput.files[1], 'chris2.jpg');
+formData.append("userpic[]", myFileInput.files[0], "chris1.jpg");
+formData.append("userpic[]", myFileInput.files[1], "chris2.jpg");
 ```
 
 Cette technique permet de simplement gérer l'envoi de plusieurs fichiers avec l'envoi d'une structure facilement itérable.

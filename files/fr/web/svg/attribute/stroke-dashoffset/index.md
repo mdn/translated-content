@@ -1,10 +1,6 @@
 ---
 title: stroke-dashoffset
 slug: Web/SVG/Attribute/stroke-dashoffset
-tags:
-  - SVG
-  - SVG Attribute
-translation_of: Web/SVG/Attribute/stroke-dashoffset
 ---
 
 {{SVGRef}}
@@ -18,7 +14,11 @@ Cet attribut peut être appliqué sur tous les éléments, en revanche il n'aura
 ## Exemple
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -27,33 +27,47 @@ html,body,svg { height:100% }
   <line x1="0" y1="1" x2="30" y2="1" stroke="black" />
 
   <!-- Pas de décalage -->
-  <line x1="0" y1="3" x2="30" y2="3" stroke="black"
-        stroke-dasharray="3 1" />
+  <line x1="0" y1="3" x2="30" y2="3" stroke="black" stroke-dasharray="3 1" />
 
   <!--
   Le début des tirets est décalé
   de 3 unités vers la gauche
   -->
-  <line x1="0" y1="5" x2="30" y2="5" stroke="black"
-        stroke-dasharray="3 1"
-        stroke-dashoffset="3" />
+  <line
+    x1="0"
+    y1="5"
+    x2="30"
+    y2="5"
+    stroke="black"
+    stroke-dasharray="3 1"
+    stroke-dashoffset="3" />
 
   <!--
   Le début des tirets est décalé
   de 3 unités vers la droite (-3)
   -->
-  <line x1="0" y1="7" x2="30" y2="7" stroke="black"
-        stroke-dasharray="3 1"
-        stroke-dashoffset="-3" />
+  <line
+    x1="0"
+    y1="7"
+    x2="30"
+    y2="7"
+    stroke="black"
+    stroke-dasharray="3 1"
+    stroke-dashoffset="-3" />
 
   <!--
   Le début des tirets est décalé
   de 1 unité vers la gauche
   ce qui affiche la même chose que l'exemple précédent
   -->
-  <line x1="0" y1="9" x2="30" y2="9" stroke="black"
-        stroke-dasharray="3 1"
-        stroke-dashoffset="1" />
+  <line
+    x1="0"
+    y1="9"
+    x2="30"
+    y2="9"
+    stroke="black"
+    stroke-dasharray="3 1"
+    stroke-dashoffset="1" />
 
   <!--
   Lignes rouges pour indiquer la position

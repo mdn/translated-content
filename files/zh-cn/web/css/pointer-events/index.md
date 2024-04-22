@@ -12,13 +12,13 @@ slug: Web/CSS/pointer-events
 pointer-events: auto;
 pointer-events: none;
 pointer-events: visiblePainted; /* SVG only */
-pointer-events: visibleFill;    /* SVG only */
-pointer-events: visibleStroke;  /* SVG only */
-pointer-events: visible;        /* SVG only */
-pointer-events: painted;        /* SVG only */
-pointer-events: fill;           /* SVG only */
-pointer-events: stroke;         /* SVG only */
-pointer-events: all;            /* SVG only */
+pointer-events: visibleFill; /* SVG only */
+pointer-events: visibleStroke; /* SVG only */
+pointer-events: visible; /* SVG only */
+pointer-events: painted; /* SVG only */
+pointer-events: fill; /* SVG only */
+pointer-events: stroke; /* SVG only */
+pointer-events: all; /* SVG only */
 
 /* Global values */
 pointer-events: inherit;
@@ -88,13 +88,14 @@ img {
 
 ```html
 <ul>
-<li><a href="https://developer.mozilla.org/">MDN</a></li>
-<li><a href="http://example.com">example.com</a></li>
+  <li><a href="https://developer.mozilla.org/">MDN</a></li>
+  <li><a href="http://example.com">example.com</a></li>
 </ul>
 ```
 
 ```css
-a[href="http://example.com"] {
+a[href="http://example.com"]
+{
   pointer-events: none;
 }
 ```

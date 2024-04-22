@@ -1,7 +1,6 @@
 ---
 title: dd
 slug: Web/HTML/Element/dd
-original_slug: Web/HTML/Elemento/dd
 ---
 
 {{HTMLSidebar}}
@@ -71,7 +70,7 @@ La fuente para este ejemplo interactivo esta almacenado en un repositorio GitHub
 
 Los atributos de este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
 
-- {{htmlattrdef("nowrap")}} {{Non-standard_inline}}
+- `nowrap` {{Non-standard_inline}}
   - : Si el valor de este atributo es definido como `yes`, el texto de la definición no se encapsulará. El valor por defecto es `no`.
 
 ## Ejemplo

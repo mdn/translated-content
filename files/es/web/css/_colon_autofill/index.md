@@ -1,7 +1,6 @@
 ---
-title: ':-webkit-autofill'
+title: ":-webkit-autofill"
 slug: Web/CSS/:autofill
-original_slug: Web/CSS/:-webkit-autofill
 ---
 
 {{CSSRef}}{{Non-standard_header}}

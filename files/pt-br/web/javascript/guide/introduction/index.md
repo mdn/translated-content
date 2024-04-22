@@ -1,7 +1,6 @@
 ---
 title: Introdução
 slug: Web/JavaScript/Guide/Introduction
-page-type: guide
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}
@@ -49,11 +48,11 @@ Java é uma linguagem de programação baseada em classes, projetada para execu�
 
 Em contraste, JavaScript descende em espírito de uma linhagem de linguagens menores com tipagem dinâmica, como HyperTalk e dBASE. Essas linguagens de script oferecem ferramentas de programação para um público muito mais amplo por causa de sua sintaxe mais fácil, funções especializadas embutidas e requisitos mínimos para a criação de objetos.
 
-| JavaScript                                                                                                                                                                   | Java                                                                                                                                                                                     |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| JavaScript                                                                                                                                                                         | Java                                                                                                                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Orientada a objeto. Sem distinção entre tipos e objetos. A herança é feita através do protótipo e as propriedades e métodos podem ser adicionadas a qualquer objeto dinamicamente. | Baseada em classes. Objetos são divididos em classes e instâncias com toda a herança através da hierarquia da classe. Classes e instâncias não podem ter propriedades ou métodos adicionados dinamicamente. |
-| Os tipos de dados das variáveis não precisam ser declarados (tipagem dinâmica, vagamente tipado)                                                                                                     | Os tipos de dados das variáveis devem ser declarados (tipagem estática, fortemente tipado).                                                                                                                    |
-| Não pode escrever automaticamente no disco rigído.                                                                                                                                     | Pode escrever automaticamente no disco rigído.                                                                                                                                                    |
+| Os tipos de dados das variáveis não precisam ser declarados (tipagem dinâmica, vagamente tipado)                                                                                   | Os tipos de dados das variáveis devem ser declarados (tipagem estática, fortemente tipado).                                                                                                                 |
+| Não pode escrever automaticamente no disco rigído.                                                                                                                                 | Pode escrever automaticamente no disco rigído.                                                                                                                                                              |
 
 ## JavaScript e a especificação ECMAScript
 

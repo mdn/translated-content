@@ -3,7 +3,7 @@ title: bookmarks.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/remove
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 **`bookmarks.remove()`** 方法用于删除单个书签或一个空的书签文件夹。
 
@@ -15,8 +15,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/remove
 
 ```js
 var removingBookmark = browser.bookmarks.remove(
-  id                 // 字符串
-)
+  id, // 字符串
+);
 ```
 
 ### 参数

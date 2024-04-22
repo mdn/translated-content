@@ -46,7 +46,7 @@ reduce(callbackFn, initialValue)
 ### 累加数组中的所有值
 
 ```js
-var total = new Uint8Array([0, 1, 2, 3]).reduce(function(a, b) {
+var total = new Uint8Array([0, 1, 2, 3]).reduce(function (a, b) {
   return a + b;
 });
 // total == 6
@@ -60,7 +60,7 @@ var total = new Uint8Array([0, 1, 2, 3]).reduce(function(a, b) {
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{jsxref("TypedArray.prototype.reduceRight()")}}
 - {{jsxref("Array.prototype.reduce()")}}

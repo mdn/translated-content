@@ -7,8 +7,6 @@ slug: Web/API/Document/documentElement
 
 ### Resumen
 
-**Solo-lectura**
-
 Devuelve el [`Element`](/es/DOM/element) que es el elemento raíz de [document](/es/DOM/document) (por ejemplo, devuelve el elemento `<html>` en los documentos HTML).
 
 ### Sintaxis
@@ -24,8 +22,8 @@ var rootElement = document.documentElement;
 var firstTier = rootElement.childNodes;
 // firstTier el la NodeList de los hijos directos del elemento raízof the direct children of the root element
 for (var i = 0; i < firstTier.length; i++) {
-   // hacer algo con cada uno de los hijos directos del elemento raíz
-   // como firstTier[i]
+  // hacer algo con cada uno de los hijos directos del elemento raíz
+  // como firstTier[i]
 }
 ```
 

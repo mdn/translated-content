@@ -27,8 +27,8 @@ let ranges = [];
 
 sel = window.getSelection();
 
-for(var i = 0; i < sel.rangeCount; i++) {
- ranges[i] = sel.getRangeAt(i);
+for (var i = 0; i < sel.rangeCount; i++) {
+  ranges[i] = sel.getRangeAt(i);
 }
 /* 在 ranges 数组的每一个元素都是一个 range 对象，
  * 对象的内容是当前选区中的一个。 */

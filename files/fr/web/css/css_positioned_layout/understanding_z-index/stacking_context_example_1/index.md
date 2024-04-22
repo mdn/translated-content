@@ -1,12 +1,6 @@
 ---
 title: Exemple d'empilement 1
 slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1
-tags:
-  - Avancé
-  - CSS
-  - Guide
-translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1
-original_slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1
 ---
 
 {{PreviousMenuNext("Web/CSS/Comprendre_z-index/L'empilement_de_couches","Web/CSS/Comprendre_z-index/Exemple_2", "Web/CSS/Comprendre_z-index")}}
@@ -17,15 +11,15 @@ Commençons par un exemple simple, dans le contexte d'empilement racine nous avo
 
 Le seul et unique contexte d'empilement est le contexte racine. Sans `z-index`, les éléments sont empilés dans leur ordre d'apparition dans le code HTML.
 
-![Figure 5a&nbsp;: Exemple de contexte d'empilement 1](understanding_zindex_05a.png)
+![Figure 5a : Exemple de contexte d'empilement 1](understanding_zindex_05a.png)
 
 Si on assigne au bloc _DIV #2_ une valeur de `z-index` positive (non nulle et non automatique), il est rendu par dessus tous les autres blocs.
 
-![Figure 5b&nbsp;: Exemple de contexte d'empilement 1](understanding_zindex_05b.png)
+![Figure 5b : Exemple de contexte d'empilement 1](understanding_zindex_05b.png)
 
 Si maintenant on assigne également au bloc _DIV #4_ une valeur de `z-index` positive, plus grande que celle du _DIV #2_, le bloc _DIV #4_ est rendu par dessus tous les autres, y compris par dessus le bloc _DIV #2_.
 
-![Figure 5c&nbsp;: Exemple de contexte d'empilement 1](understanding_zindex_05c.png)
+![Figure 5c : Exemple de contexte d'empilement 1](understanding_zindex_05c.png)
 
 Dans le dernier exemple, vous pouvez voir que les blocs _DIV #2_ et _DIV #4_ ne sont pas frères, parce qu'ils appartiennent à des parents différents dans la hiérarchie des éléments HTML. Néanmoins, l'empilement du bloc _DIV #4_, tout en respectant le bloc _DIV #2_, peut être contrôlé avec la propriété `z-index`. Il se fait que les éléments _DIV #1_ et _DIV #3_ n'ayant pas de `z-index` défini, ils ne créent pas de contexte d'empilement. Cela signifie que l'ensemble de leur contenu, y compris les blocs _DIV #2_ et _DIV #3_, appartient au contexte d'empilement de la racine.
 
@@ -88,25 +82,22 @@ Dans le contexte d'empilement, les blocs _DIV #1_ et _DIV #3_ sont simplement as
 
 ```html
 <div id="div1">
-  <br/>
+  <br />
   <span class="bold">DIV #1</span>
-  <br/>position: relative;
+  <br />position: relative;
   <div id="div2">
-    <br/><span class="bold">DIV #2</span>
-    <br/>position: absolute;
-     <br/>z-index: 1;
+    <br /><span class="bold">DIV #2</span> <br />position: absolute;
+    <br />z-index: 1;
   </div>
 </div>
 
-<br/>
+<br />
 
 <div id="div3">
-  <b/><span class="bold">DIV #3</span>
-  <br/>position: relative;
+  <b /><span class="bold">DIV #3</span> <br />position: relative;
   <div id="div4">
-    <br/><span class="bold">DIV #4</span>
-    <br/>position: absolute;
-    <br/>z-index: 2;
+    <br /><span class="bold">DIV #4</span> <br />position: absolute;
+    <br />z-index: 2;
   </div>
 </div>
 ```

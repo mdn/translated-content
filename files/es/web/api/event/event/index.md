@@ -39,7 +39,7 @@ Una instancia del objeto {{domxref("Event")}}.
 ```js
 // crea un evento look que se propaga y no puede cancelarse
 
-var evento = new Event("look", {"bubbles":true, "cancelable":false});
+var evento = new Event("look", { bubbles: true, cancelable: false });
 document.dispatchEvent(evento);
 
 // El evento puede ser despachado desde cualquier elemento, no solo desde el `document`.

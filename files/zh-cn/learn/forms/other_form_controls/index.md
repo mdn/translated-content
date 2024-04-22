@@ -10,7 +10,7 @@ slug: Learn/Forms/Other_form_controls
 <table>
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>
         计算机基础知识和对于
         <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
@@ -49,7 +49,7 @@ slug: Learn/Forms/Other_form_controls
 
 以下截图显示了 macOS 上 Firefox 71 和 Safari 13，Windows 10 上 Edge 18、Yandex 14、Firefox 71 和 Chrome 79 下的默认、聚焦和禁用的 `<textarea>` 元素。
 
-![The default, focused, and disabled \<textarea> element in Firefox 71 and Safari 13 on Mac OSX and Edge 18, Yandex 14, Firefox and Chrome on Windows 10.](textarea_basic.png)
+![The default, focused, and disabled 'textarea' element in Firefox 71 and Safari 13 on Mac OSX and Edge 18, Yandex 14, Firefox and Chrome on Windows 10.](textarea_basic.png)
 
 > **备注：** 你可以在该系列的第一篇文章中整理的例子中找到一个稍微有趣的文本区域使用的[示例](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form-styled.html)（[顺便看看源代码](https://github.com/mdn/learning-area/blob/main/html/forms/your-first-HTML-form/first-form-styled.html)）。
 
@@ -146,15 +146,15 @@ slug: Learn/Forms/Other_form_controls
 ```html
 <select id="multi" name="multi" multiple size="2">
   <optgroup label="fruits">
-     <option>Banana</option>
-     <option selected>Cherry</option>
-     <option>Lemon</option>
-   </optgroup>
-   <optgroup label="vegetables">
-     <option>Carrot</option>
-     <option>Eggplant</option>
-     <option>Potato</option>
-   </optgroup>
+    <option>Banana</option>
+    <option selected>Cherry</option>
+    <option>Lemon</option>
+  </optgroup>
+  <optgroup label="vegetables">
+    <option>Carrot</option>
+    <option>Eggplant</option>
+    <option>Potato</option>
+  </optgroup>
 </select>
 ```
 
@@ -178,7 +178,7 @@ slug: Learn/Forms/Other_form_controls
 
 ```html
 <label for="myFruit">What's your favorite fruit?</label>
-<input type="text" name="myFruit" id="myFruit" list="mySuggestion">
+<input type="text" name="myFruit" id="myFruit" list="mySuggestion" />
 <datalist id="mySuggestion">
   <option>Apple</option>
   <option>Banana</option>
@@ -199,7 +199,7 @@ slug: Learn/Forms/Other_form_controls
 
 ```html
 <label for="myFruit">What is your favorite fruit? (With fallback)</label>
-<input type="text" id="myFruit" name="fruit" list="fruitList">
+<input type="text" id="myFruit" name="fruit" list="fruitList" />
 
 <datalist id="fruitList">
   <label for="suggestion">or pick a fruit</label>
@@ -294,9 +294,9 @@ slug: Learn/Forms/Other_form_controls
 
 能支持 {{HTMLElement("progress")}} 和 {{HTMLElement("meter")}} 已经非常不错了——除了 Internet Explorer 不支持，其他浏览器都可以支持。
 
-## 测试你的技能！
+## 技能测试！
 
-你已经看完了这篇文章的主要内容，但你还记得所有重要的信息吗？在继续学习其他内容之前，你可以在这里找到进一步的测试来确定你是否掌握了这些知识点——请参见[测试你的技能：其他控件](/zh-CN/docs/Learn/Forms/Test_your_skills:_Other_controls)。
+你已经看完了这篇文章的主要内容，但你还记得所有重要的信息吗？在继续学习其他内容之前，你可以在这里找到进一步的测试来确定你是否掌握了这些知识点——请参见[技能测试：其他控件](/zh-CN/docs/Learn/Forms/Test_your_skills:_Other_controls)。
 
 ## 总结
 

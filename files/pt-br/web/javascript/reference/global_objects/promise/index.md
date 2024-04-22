@@ -33,12 +33,12 @@ new Promise((resolveOuter) => {
   resolveOuter(
     new Promise((resolveInner) => {
       setTimeout(resolveInner, 1000);
-    })
+    }),
   );
 });
 ```
 
-Essa promise já está _resolvida_ no momento em que é criada (porque o `resolveOuter` é chamado de forma síncrona), mas é resolvido com outra promise e, portanto, não será _cumprida_ até 1 segundo depois, quando a promise interna for cumprida. Na prática, a “resolução” muitas vezes é feita nos bastidores e não observável, e apenas o seu cumprimento ou rejeição o são.
+Essa promise já está _resolvida_ no momento em que é criada (porque o `resolveOuter` é chamado de forma síncrona), mas é resolvido com outra promise e, portanto, não será _cumprida_ até 1 segundo depois, quando a promise interna for cumprida. Na prática, a "resolução" muitas vezes é feita nos bastidores e não observável, e apenas o seu cumprimento ou rejeição o são.
 
 > **Nota:** várias outras linguagens têm mecanismos para avaliação preguiçosa e adiamento de uma computação, que eles também chamam de "promises", por exemplo, Esquema. As promises em JavaScript representam processos que já estão acontecendo, que podem ser encadeados com funções de retorno de chamada. Se você deseja avaliar lentamente uma expressão, considere usar uma função sem argumentos, por exemplo. `f = () => expressão` para criar a expressão avaliada lentamente e `f()` para avaliar a expressão imediatamente.
 
@@ -153,12 +153,12 @@ Promise.resolve(aThenable); // Uma promise cumprida com 42
 
 Um objeto de configurações é um [ambiente](https://html.spec.whatwg.org/multipage/webappapis.html#environment-settings-object) que fornece informações adicionais quando o código JavaScript está em execução. Isso inclui o mapa do domínio e do módulo, bem como informações específicas do HTML, como a origem. O objeto de configurações incumbente é rastreado para garantir que o navegador saibas qual usar para um determinado pedaço de código de usuário.
 
-Para melhor visualizar isso, podemos dar uma olhada mais de perto em como o reino pode ser um problema. Um **reino** pode ser pensado aproximadamente como o objeto global. O que é único sobre os realms é que eles contêm todas as informações necessárias para executar o código JavaScript. Isso inclui objetos como [`Array`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array) e [`Error`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Error ). Cada objeto de configurações tem sua própria "cópia" e não são compartilhados. Isso pode causar algum comportamento inesperado em relação às promises. Para contornar isso, rastreamos algo chamado **objeto de configurações incumbentes**. Isso representa informações específicas do contexto do código do usuário responsável por uma determinada chamada de função.
+Para melhor visualizar isso, podemos dar uma olhada mais de perto em como o reino pode ser um problema. Um **reino** pode ser pensado aproximadamente como o objeto global. O que é único sobre os realms é que eles contêm todas as informações necessárias para executar o código JavaScript. Isso inclui objetos como [`Array`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array) e [`Error`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Error). Cada objeto de configurações tem sua própria "cópia" e não são compartilhados. Isso pode causar algum comportamento inesperado em relação às promises. Para contornar isso, rastreamos algo chamado **objeto de configurações incumbentes**. Isso representa informações específicas do contexto do código do usuário responsável por uma determinada chamada de função.
 
 Para ilustrar isso um pouco mais, podemos dar uma olhada em como um [`<iframe>`](/pt-BR/docs/Web/HTML/Element/iframe) embutido em um documento se comunica com seu host. Como todas as APIs da Web estão cientes do objeto de configurações incumbente, o seguinte funcionará em todos os navegadores:
 
 ```html
-<!DOCTYPE html> <iframe></iframe>
+<!doctype html> <iframe></iframe>
 <!-- temos um reino aqui -->
 <script>
   // temos um reino aqui também
@@ -174,7 +174,7 @@ Para ilustrar isso um pouco mais, podemos dar uma olhada em como um [`<iframe>`]
 O mesmo conceito se aplica às promises. Se modificarmos um pouco o exemplo acima, obtemos isso:
 
 ```html
-<!DOCTYPE html> <iframe></iframe>
+<!doctype html> <iframe></iframe>
 <!-- temos um reino aqui -->
 <script>
   // temos um reino aqui também
@@ -191,7 +191,7 @@ Se alterarmos isso para que o `<iframe>` no documento esteja ouvindo as mensagen
 
 ```html
 <!-- y.html -->
-<!DOCTYPEhtml>
+<!doctype html>
 <iframe src="x.html"></iframe>
 <script>
   const bound = frames[0].postMessage.bind(frames[0], "alguns dados", "*");
@@ -201,7 +201,7 @@ Se alterarmos isso para que o `<iframe>` no documento esteja ouvindo as mensagen
 
 ```html
 <!-- x.html -->
-<!DOCTYPEhtml>
+<!doctype html>
 <script>
   window.addEventListener(
     "mensagem",
@@ -210,7 +210,7 @@ Se alterarmos isso para que o `<iframe>` no documento esteja ouvindo as mensagen
       // este código será executado apenas em navegadores que rastreiam o objeto de configurações incumbente
       console.log(evento);
     },
-    falso
+    falso,
   );
 </script>
 ```
@@ -390,13 +390,16 @@ function testPromise() {
     // para resolver ou rejeitar a promise
     log.insertAdjacentHTML(
       "beforeend",
-      `${thisPromiseCount}) Construtor de promise<br>`
+      `${thisPromiseCount}) Construtor de promise<br>`,
     );
     // Este é apenas um exemplo para criar assincronismo
-    setTimeout(() => {
-      // Nós cumprimos a promise
-      resolve(thisPromiseCount);
-    }, Math.random() * 2000 + 1000);
+    setTimeout(
+      () => {
+        // Nós cumprimos a promise
+        resolve(thisPromiseCount);
+      },
+      Math.random() * 2000 + 1000,
+    );
   });
 
   // Definimos o que fazer quando a promise é resolvida com a chamada then(),

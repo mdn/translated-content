@@ -1,13 +1,14 @@
 ---
-title: Gamepad.axes
+title: "Gamepad: axes プロパティ"
+short-title: axes
 slug: Web/API/Gamepad/axes
 l10n:
-  sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
+  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
 {{APIRef("Gamepad API")}}
 
-**`Gamepad.axes`** は {{domxref("Gamepad") }} インターフェイスのプロパティで、機器上に存在する軸を持つコントロールを表す配列を返します。（例: アナログスティック）。
+**`Gamepad.axes`** は {{domxref("Gamepad") }} インターフェイスのプロパティで、機器（例えばアナログスティック）上に存在する軸を持つコントロールを表す配列を返します。
 
 配列の各要素は -1.0 〜 1.0 の範囲の浮動小数点値で、最小値 (-1.0) から最大値 (1.0) までの軸の位置を表します。
 
@@ -37,7 +38,7 @@ function gameLoop() {
   ball.style.top = `${b * 2}px`;
 
   const start = requestAnimationFrame(gameLoop);
-};
+}
 ```
 
 ## 仕様書

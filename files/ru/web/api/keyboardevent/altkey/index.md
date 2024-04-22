@@ -1,7 +1,6 @@
 ---
 title: KeyboardEvent.altKey
 slug: Web/API/KeyboardEvent/altKey
-translation_of: Web/API/KeyboardEvent/altKey
 ---
 
 {{APIRef("DOM Events")}}
@@ -47,7 +46,7 @@ function showChar(e){
 
 {{Specifications}}
 
-## Совместимость браузеров
+## Совместимость с браузерами
 
 {{Compat}}
 

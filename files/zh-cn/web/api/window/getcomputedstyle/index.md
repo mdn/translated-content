@@ -20,7 +20,7 @@ let style = window.getComputedStyle(element, [pseudoElt]);
 - pseudoElt {{optional_inline}}
   - : 指定一个要匹配的伪元素的字符串。必须对普通元素省略（或`null`）。
 
-> **备注：** 在 Gecko 2.0 之前版本，参数 pseudoElt 是必要的。如果为 null，则不指定其他主要浏览器必须指定此参数。Gecko 已经更改为匹配其他浏览器的行为。。
+> **备注：** 在 Gecko 2.0 之前版本，参数 pseudoElt 是必要的。如果为 null，则不指定其他主要浏览器必须指定此参数。Gecko 已经更改为匹配其他浏览器的行为。
 
 返回的`style`是一个实时的 {{domxref("CSSStyleDeclaration")}} 对象，当元素的样式更改时，它会自动更新本身。
 
@@ -58,20 +58,17 @@ let style = window.getComputedStyle(elem1, null);
 ```
 
 ```js
-function dumpComputedStyles(elem,prop) {
-
-  let cs = window.getComputedStyle(elem,null);
+function dumpComputedStyles(elem, prop) {
+  let cs = window.getComputedStyle(elem, null);
   if (prop) {
-    dump("    "+prop+" : "+cs.getPropertyValue(prop)+"\n");
+    dump("    " + prop + " : " + cs.getPropertyValue(prop) + "\n");
     return;
   }
   let len = cs.length;
-  for (var i=0;i<len;i++) {
-
+  for (var i = 0; i < len; i++) {
     let style = cs[i];
-    dump("    "+style+" : "+cs.getPropertyValue(style)+"\n");
+    dump("    " + style + " : " + cs.getPropertyValue(style) + "\n");
   }
-
 }
 ```
 
@@ -91,19 +88,19 @@ getComputedStyle 可以从**伪元素**拉取样式信息 (比如，`::after`, `
 
 ```html
 <style>
-    h3::after {
-        content: "rocks!";
-    }
+  h3::after {
+    content: "rocks!";
+  }
 </style>
 
 <h3>generated content</h3>
 
 <script>
-    let h3 = document.querySelector('h3'),
-    result = getComputedStyle(h3, '::after').content;
-    alert(`the generated content is: ${result}`);
-    console.log(`the generated content is: ${result}`);
-    // the generated content is: "rocks!"
+  let h3 = document.querySelector("h3"),
+    result = getComputedStyle(h3, "::after").content;
+  alert(`the generated content is: ${result}`);
+  console.log(`the generated content is: ${result}`);
+  // the generated content is: "rocks!"
 </script>
 ```
 

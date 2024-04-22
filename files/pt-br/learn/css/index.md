@@ -1,7 +1,6 @@
 ---
 title: Aprenda a estilizar HTML utilizando CSS
 slug: Learn/CSS
-original_slug: Aprender/CSS
 ---
 
 Cascading Stylesheets — ou {{glossary("CSS")}} — é a primeira tecnologia que você deve aprender após o {{glossary("HTML")}}. Enquanto o HTML é utilizado para definir a estrutura e semântica do seu conteúdo, o CSS é usado para estilizá-lo e desenhá-lo. Por exemplo, você pode usar o CSS para alterar a fonte, cor, tamanho e espaçamento do seu conteúdo, dividí-lo em multiplas colunas, ou adicionar animações e outros recursos decorativos.

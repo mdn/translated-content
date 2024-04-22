@@ -134,15 +134,15 @@ Cache-Control: public, max-age=31536000
 
 ## Especificações
 
-| Especificação        | Título                                          |
-| -------------------- | ----------------------------------------------- |
+| Especificação   | Título                                          |
+| --------------- | ----------------------------------------------- |
 | {{RFC("7234")}} | Hypertext Transfer Protocol (HTTP/1.1): Caching |
 | {{RFC("5861")}} | HTTP Cache-Control Extensions for Stale Content |
 | {{RFC("8246")}} | HTTP Immutable Responses                        |
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Cache-Control")}}
+{{Compat}}
 
 ## Veja também
 

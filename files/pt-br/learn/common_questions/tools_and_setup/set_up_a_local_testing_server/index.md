@@ -1,7 +1,6 @@
 ---
 title: Como configurar um servidor de testes local
 slug: Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server
-original_slug: Learn/Common_questions/set_up_a_local_testing_server
 ---
 
 Este artigo explica como configurar um simples servidor de testes local em seu computador e o básico para utiliza-lo.
@@ -53,37 +52,37 @@ Para fazer isso:
 
 1. Instale o Python. Se você estiver usando Linux ou macOS, ele já deverá estár disponível em seu sistema. Se você é um usuário do Windows, pode obter um instalador na página inicial do Python e seguir as instruções para instalá-lo:
 
-    - Vá para [python.org](https://www.python.org/) (em inglês)
-    - Na seção Download, clique no link para Python "3.xxx".
-    - Na parte inferior da página, escolha o instalador executável do _Windows x86_ e baixe-o.
-    - Quando tiver baixado, execute-o.
-    - Na primeira página do instalador, certifique-se de marcar a caixa de seleção "Adicionar Python 3.xxx ao PATH".
-    - Clique em _Instalar_ e então, clique em _Fechar_ quando a instalação terminar.
+   - Vá para [python.org](https://www.python.org/) (em inglês)
+   - Na seção Download, clique no link para Python "3.xxx".
+   - Na parte inferior da página, escolha o instalador executável do _Windows x86_ e baixe-o.
+   - Quando tiver baixado, execute-o.
+   - Na primeira página do instalador, certifique-se de marcar a caixa de seleção "Adicionar Python 3.xxx ao PATH".
+   - Clique em _Instalar_ e então, clique em _Fechar_ quando a instalação terminar.
 
 2. Abra seu prompt de comando (Windows)/ terminal (macOS/ Linux). Para verificar se o Python está instalado, digite o seguinte comando:
 
-    ```bash
-    python -V
-    ```
+   ```bash
+   python -V
+   ```
 
 3. Isso deve retornar um número de versão. Se estiver tudo OK, navegue até o diretório em que seu exemplo está dentro, usando o comando `cd`.
 
-    ```bash
-    # incluir o nome do diretório para entrar, por exemplo
-    cd Desktop
-    # use dois pontos para voltar um nível de diretório se você precisar
-    cd ..
-    ```
+   ```bash
+   # incluir o nome do diretório para entrar, por exemplo
+   cd Desktop
+   # use dois pontos para voltar um nível de diretório se você precisar
+   cd ..
+   ```
 
 4. Digite o comando para inicializar o servidor nesse diretório:
 
-    ```bash
-    # Se a versão do Python retornada acima for 3.X
-    python3 -m http.server
-    # No windows, tente "python" em vez de "python3"
-    # Se a versão do Python retornada acima for 2.X
-    python -m SimpleHTTPServer
-    ```
+   ```bash
+   # Se a versão do Python retornada acima for 3.X
+   python3 -m http.server
+   # No windows, tente "python" em vez de "python3"
+   # Se a versão do Python retornada acima for 2.X
+   python -m SimpleHTTPServer
+   ```
 
 5. Por padrão, isso executará o conteúdo do diretório em um servidor web local, na porta 8000. Você pode ir para esse servidor acessando a URL `localhost:8000` no seu navegador web. Aqui você verá o conteúdo do diretório listado — clique no arquivo HTML que você deseja executar.
 

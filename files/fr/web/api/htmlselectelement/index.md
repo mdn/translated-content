@@ -1,7 +1,6 @@
 ---
 title: HTMLSelectElement
 slug: Web/API/HTMLSelectElement
-translation_of: Web/API/HTMLSelectElement
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -92,13 +91,13 @@ _Cette interface hérite des méthodes de {{domxref("HTMLElement")}}, et de {{do
 </select>
 */
 
-const select = document.getElementById('s');
+const select = document.getElementById("s");
 
 // renvoie l'index de l'option sélectionnée
 console.log(select.selectedIndex); // 1
 
 // retourne la valeur de l'option sélectionnée
-console.log(select.options[select.selectedIndex].value) // Deuxième
+console.log(select.options[select.selectedIndex].value); // Deuxième
 ```
 
 Une meilleure façon de suivre les modifications apportées à la sélection de l'utilisateur consiste à surveiller l'événement {{domxref("HTMLElement/change_event", "change")}} qui se produit sur le `<select>`. Cela vous indiquera quand la valeur change, et vous pourrez alors mettre à jour ce dont vous avez besoin. Voir [l'exemple fourni](/fr/docs/Web/API/HTMLElement/change_event#select_element) dans la documentation de l'événement `change` pour plus de détails.

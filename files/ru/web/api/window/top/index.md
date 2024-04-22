@@ -1,8 +1,8 @@
 ---
 title: Window.top
 slug: Web/API/Window/top
-translation_of: Web/API/Window/top
 ---
+
 {{APIRef}}
 
 Возвращает ссылку на корневое окно в иерархии окон.

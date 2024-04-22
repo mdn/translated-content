@@ -1,7 +1,6 @@
 ---
 title: Uma reintrodução ao JavaScript (Tutorial de JS)
 slug: Web/JavaScript/Language_overview
-original_slug: Web/JavaScript/A_re-introduction_to_JavaScript
 ---
 
 ## Introdução
@@ -194,8 +193,8 @@ Obs: A definição de variáveis usando o let foi introduzida no ECMAScript 6. O
 Operadores numéricos de JavaScript são `+`, `-`, `*`, `/` e `%` - que é o operador resto. Valores são atribuídos usando `=`, e temos também as instruções de atribuição compostas, como `+=` e `-=`. Essas são o mesmo que `x = x operador y`.
 
 ```js
-x += 5
-x = x + 5
+x += 5;
+x = x + 5;
 ```
 
 Você pode usar `++` e `--` para incrementar ou decrementar respectivamente. Eles podem ser usados como operadores tanto antes como depois.
@@ -253,7 +252,7 @@ if (name == "puppies") {
 } else {
   name = "!" + name;
 }
-name == "kittens!!"
+name == "kittens!!";
 ```
 
 JavaScript tem as estruturas de repetição com os laços `while` e `do-while`. O primeiro é bom para repetições básicas; o segundo é para os casos em que você queira que o corpo da repetição seja executado pelo menos uma vez:
@@ -266,7 +265,7 @@ while (true) {
 var input;
 do {
   input = get_input();
-} while (inputIsNotValid(input))
+} while (inputIsNotValid(input));
 ```
 
 O laço `for` do JavaScript é o mesmo que no C e Java: ele lhe permite prover as informações para o seu laço em uma única linha.
@@ -292,46 +291,46 @@ var name = otherName || "default";
 JavaScript tem um operador ternário para expressões condicionais:
 
 ```js
-var allowed = (age > 18) ? "yes" : "no";
+var allowed = age > 18 ? "yes" : "no";
 ```
 
 A instrução switch pode ser usada para múltiplas ramificações baseadas em um número ou uma string:
 
 ```js
-switch(action) {
-    case 'draw':
-        drawit();
-        break;
-    case 'eat':
-        eatit();
-        break;
-    default:
-        donothing();
+switch (action) {
+  case "draw":
+    drawit();
+    break;
+  case "eat":
+    eatit();
+    break;
+  default:
+    donothing();
 }
 ```
 
 Se você não adicionar a instrução `break`, a execução irá "cair" no próximo nível. Isso é algo que raramente vai querer fazer — de fato vale mais a pena colocar um comentário especificando essa "queda" para o próximo nível, pois isso o ajudará na hora de fazer a depuração de seu código:
 
 ```js
-switch(a) {
-    case 1: // queda
-    case 2:
-        eatit();
-        break;
-    default:
-        donothing();
+switch (a) {
+  case 1: // queda
+  case 2:
+    eatit();
+    break;
+  default:
+    donothing();
 }
 ```
 
 A cláusula default é opcional. Se quiser, pode colocar expressões tanto no switch como nos cases; Comparações acontecem entre os dois usando o operador `===`:
 
 ```js
-switch(1 + 3) {
-    case 2 + 2:
-        yay();
-        break;
-    default:
-        neverhappens();
+switch (1 + 3) {
+  case 2 + 2:
+    yay();
+    break;
+  default:
+    neverhappens();
 }
 ```
 
@@ -388,13 +387,13 @@ A sintaxe de objeto literal pode ser usada para inicializar completamente um obj
 
 ```js
 var obj = {
-    name: "Carrot",
-    "for": "Max",
-    details: {
-        color: "orange",
-        size: 12
-    }
-}
+  name: "Carrot",
+  for: "Max",
+  details: {
+    color: "orange",
+    size: 12,
+  },
+};
 ```
 
 O acesso aos atributos podem ser encadeados:
@@ -453,7 +452,7 @@ Você pode iterar sobre um vetor da seguinte forma:
 
 ```js
 for (var i = 0; i < a.length; i++) {
-    // Faça algo com a[i]
+  // Faça algo com a[i]
 }
 ```
 
@@ -461,15 +460,15 @@ Isso é um pouco ineficaz visto que você está procurando a propriedade length 
 
 ```js
 for (var i = 0, len = a.length; i < len; i++) {
-    // Faça algo com a[i]
+  // Faça algo com a[i]
 }
 ```
 
 Uma forma mais elegante ainda poderia ser:
 
 ```js
-for (var i = 0, item; item = a[i++];) {
-    // Faça algo com item
+for (var i = 0, item; (item = a[i++]); ) {
+  // Faça algo com item
 }
 ```
 
@@ -488,7 +487,7 @@ for (var i in a) {
 Se quiser adicionar um item a um vetor, simplesmente faça desse jeito:
 
 ```js
-a[a.length] = item;                 // é o mesmo que a.push(item);
+a[a.length] = item; // é o mesmo que a.push(item);
 ```
 
 Vetores vem com vários métodos:
@@ -514,8 +513,8 @@ Junto com objetos, funções são os componentes principais para o entendimento 
 
 ```js
 function add(x, y) {
-    var total = x + y;
-    return total;
+  var total = x + y;
+  return total;
 }
 ```
 
@@ -590,13 +589,13 @@ O segundo argumento do `apply()` é o vetor para usar como argumento; o primeiro
 JavaScript lhe permite criar funções anônimas.
 
 ```js
-var avg = function() {
-    var sum = 0;
-    for (var i = 0, j = arguments.length; i < j; i++) {
-        sum += arguments[i];
-    }
-    return sum / arguments.length;
-}
+var avg = function () {
+  var sum = 0;
+  for (var i = 0, j = arguments.length; i < j; i++) {
+    sum += arguments[i];
+  }
+  return sum / arguments.length;
+};
 ```
 
 Isso é semanticamente equivalente a forma `function avg()`. É extremamente poderoso como ele lhe permite colocar a definição completa de uma função em qualquer lugar, que você normalmente poria uma expressão. Isso lhe permite todo tipo de truques engenhosos. Aqui está uma maneira de "esconder" algumas variáveis locais — como escopo de bloco em C:
@@ -618,14 +617,15 @@ JavaScript lhe permite chamar funções recursivamente. Isso é particularmente 
 
 ```js
 function countChars(elm) {
-    if (elm.nodeType == 3) { // TEXT_NODE
-        return elm.nodeValue.length;
-    }
-    var count = 0;
-    for (var i = 0, child; child = elm.childNodes[i]; i++) {
-        count += countChars(child);
-    }
-    return count;
+  if (elm.nodeType == 3) {
+    // TEXT_NODE
+    return elm.nodeValue.length;
+  }
+  var count = 0;
+  for (var i = 0, child; (child = elm.childNodes[i]); i++) {
+    count += countChars(child);
+  }
+  return count;
 }
 ```
 
@@ -633,14 +633,15 @@ Isso destaca um problema potencial com funções anônimas: Como chamá-las recu
 
 ```js
 var charsInBody = (function counter(elm) {
-    if (elm.nodeType == 3) { // TEXT_NODE
-        return elm.nodeValue.length;
-    }
-    var count = 0;
-    for (var i = 0, child; child = elm.childNodes[i]; i++) {
-        count += counter(child);
-    }
-    return count;
+  if (elm.nodeType == 3) {
+    // TEXT_NODE
+    return elm.nodeValue.length;
+  }
+  var count = 0;
+  for (var i = 0, child; (child = elm.childNodes[i]); i++) {
+    count += counter(child);
+  }
+  return count;
 })(document.body);
 ```
 
@@ -709,14 +710,14 @@ Podemos tirar vantagem da palavra chave '`this`' para melhorar nossa função `m
 
 ```js
 function Person(first, last) {
-    this.first = first;
-    this.last = last;
-    this.fullName = function() {
-        return this.first + ' ' + this.last;
-    }
-    this.fullNameReversed = function() {
-        return this.last + ', ' + this.first;
-    }
+  this.first = first;
+  this.last = last;
+  this.fullName = function () {
+    return this.first + " " + this.last;
+  };
+  this.fullNameReversed = function () {
+    return this.last + ", " + this.first;
+  };
 }
 var s = new Person("Simon", "Willison");
 ```
@@ -727,16 +728,16 @@ Nossos objetos pessoa estão ficando melhor mas ainda existem algumas arestas fe
 
 ```js
 function personFullName() {
-    return this.first + ' ' + this.last;
+  return this.first + " " + this.last;
 }
 function personFullNameReversed() {
-    return this.last + ', ' + this.first;
+  return this.last + ", " + this.first;
 }
 function Person(first, last) {
-    this.first = first;
-    this.last = last;
-    this.fullName = personFullName;
-    this.fullNameReversed = personFullNameReversed;
+  this.first = first;
+  this.last = last;
+  this.fullName = personFullName;
+  this.fullNameReversed = personFullNameReversed;
 }
 ```
 
@@ -744,15 +745,15 @@ Assim está melhor: estamos criando as funções de método apenas uma vez, e at
 
 ```js
 function Person(first, last) {
-    this.first = first;
-    this.last = last;
+  this.first = first;
+  this.last = last;
 }
-Person.prototype.fullName = function() {
-    return this.first + ' ' + this.last;
-}
-Person.prototype.fullNameReversed = function() {
-    return this.last + ', ' + this.first;
-}
+Person.prototype.fullName = function () {
+  return this.first + " " + this.last;
+};
+Person.prototype.fullNameReversed = function () {
+  return this.last + ", " + this.first;
+};
 ```
 
 `Person.prototype` é um objeto compartilhado por todas as instâncias de `Person`. Este forma parte da cadeia de buscas (que tem um nome especial, cadeia de protótipos ou "prototype chain"): toda a vez que você tentar acessar uma propriedade de `Person` que não está configurada, Javascript irá verificar em `Person.prototype` para ver se esta propriedade existe por lá. Como resultado, qualquer coisa atribuída à `Person.prototype` torna-se disponível para todas as instâncias deste construtor, através do objeto `this`.
@@ -814,9 +815,9 @@ Lembra como `avg.apply()` tinha um primeiro argumento null? Nós podemos revisit
 
 ```js
 function trivialNew(constructor, ...args) {
-    var o = {}; // Create an object
-    constructor.apply(o, args);
-    return o;
+  var o = {}; // Create an object
+  constructor.apply(o, args);
+  return o;
 }
 ```
 
@@ -825,20 +826,20 @@ Isto não é exatamente uma réplica de `new` porque não configura a cadeia de 
 Ao chamar
 
 ```js
-var bill = trivialNew(Person, 'Willian', 'Orange');
+var bill = trivialNew(Person, "Willian", "Orange");
 ```
 
 é equivalente a
 
 ```js
-var bill = new Person('Willian', 'Orange');
+var bill = new Person("Willian", "Orange");
 ```
 
 `apply()` tem uma função irmã de nome [`call`](/pt-BR/JavaScript/Reference/Global_Objects/Function/call), que novamente permite você configurar o '`this`' mas toma uma lista expandida de argumentos, ao invés de um array.
 
 ```js
 function lastNameCaps() {
-    return this.last.toUpperCase();
+  return this.last.toUpperCase();
 }
 var s = new Person("Simon", "Willison");
 lastNameCaps.call(s);
@@ -873,7 +874,7 @@ Isto nos leva a uma das abstrações mais poderosas que JavaScript tem a oferece
 
 ```js
 function makeAdder(a) {
-  return function(b) {
+  return function (b) {
     return a + b;
   };
 }
@@ -888,8 +889,8 @@ O nome da função `makeAdder` já diz tudo: ela cria novas funções 'adder', n
 O que está acontecendo aqui é muito parecido com o que estava acontencedo com as funções internas vistas anterioremente: uma função definida dentro de uma outra função tem acessso às variáveis da função de fora. A única diferença aqui é que a função de fora retornou e, como consequência do senso comum, deve dizer que todas as variáveis locais não existem mais. Mas elas _ainda_ existem — caso contrário a função adicionadora não seria capaz de funcionar. Mais ainda, há duas "cópias" diferentes de variáveis locais para `makeAdder` — uma na qual o `a` é 5 e a outra na qual `a` é 20. Então, o resultado dessas chamadas de funções é o seguinte:
 
 ```js
-x(6) // returns 11
-y(7) // returns 27
+x(6); // returns 11
+y(7); // returns 27
 ```
 
 Eis o que acontece na verdade: sempre que o JavaScript executa uma função, um objeto de 'escopo' é criado para guardar as variáveis locais criadas dentro desta função. Ela é inicializada com quaisquer variáveis passadas como parâmetros da função. Isto é similar ao objeto global, em que todas as variáveis globais e funções vivem, mas com algumas diferenças importantes: primeiro, um novo objeto de escopo é criado toda a vez que uma função começa a executar, e segundo, diferente do objeto global (que nos navegadores é acessado com `window`) estes objetos não podem ser diretamente acessados através do seu código JavaScript. Não há nenhum mecanismo para iterar sobre as propriedades do escopo corrente do objeto, por exemplo.

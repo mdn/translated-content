@@ -27,9 +27,9 @@ MutationObserver(
 ## Métodos
 
 | `void observe( {{domxref("Node")}} target, MutationObserverInit options );` |
-| -------------------------------------------------------------------------------- |
-| `void disconnect();`                                                             |
-| `Array takeRecords();`                                                           |
+| --------------------------------------------------------------------------- |
+| `void disconnect();`                                                        |
+| `Array takeRecords();`                                                      |
 
 ### `observe()`
 
@@ -135,11 +135,11 @@ El siguiente ejemplo fué tomado de: [this blog post](http://hacks.mozilla.org/2
 
 ```js
 // selecciona el nodo target
-var target = document.querySelector('#some-id');
+var target = document.querySelector("#some-id");
 
 // Crea una instancia de observer
-var observer = new MutationObserver(function(mutations) {
-  mutations.forEach(function(mutation) {
+var observer = new MutationObserver(function (mutations) {
+  mutations.forEach(function (mutation) {
     console.log(mutation.type);
   });
 });

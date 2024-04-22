@@ -1,8 +1,6 @@
 ---
 title: Constructeur Error()
 slug: Web/JavaScript/Reference/Global_Objects/Error/Error
-translation_of: Web/JavaScript/Reference/Global_Objects/Error/Error
-browser-compat: javascript.builtins.Error.Error
 ---
 
 {{JSRef}}
@@ -12,11 +10,11 @@ Le constructeur **`Error`** permet de créer un objet représentant une erreur.
 ## Syntaxe
 
 ```js
-new Error()
-new Error(message)
-new Error(message, options)
-new Error(message, nomFichier)
-new Error(message, nomFichier, numeroLigne)
+new Error();
+new Error(message);
+new Error(message, options);
+new Error(message, nomFichier);
+new Error(message, nomFichier, numeroLigne);
 ```
 
 ### Paramètres
@@ -24,10 +22,12 @@ new Error(message, nomFichier, numeroLigne)
 - `message` {{Optional_Inline}}
   - : Une description de l'erreur, compréhensible par un humain.
 - `options` {{Optional_Inline}}
+
   - : Un objet avec les propriétés suivantes&nbsp;:
 
     - `cause` {{Optional_Inline}}
       - : Une propriété qui indique la cause spécifique de l'erreur. Lors de l'interception puis du renvoi d'une erreur avec un autre message d'erreur, cette propriété devrait être utilisée afin de transmettre le message d'erreur original.
+
 - `nomFichier` {{Optional_Inline}} {{Non-standard_inline}}
   - : La valeur de la propriété `nomFichier` pour l'objet `Error` créé. Par défaut, il s'agit du nom du fichier contenant le code qui a invoqué le constructeur `Error()`.
 - `numeroLigne` {{Optional_Inline}} {{Non-standard_inline}}

@@ -55,7 +55,7 @@ _继承父类 {{domxref("Event")}} 的方法。_
 下面的代码片段展示了使用{{domxref("SharedWorker.SharedWorker", "SharedWorker()")}}构造器创建一个 `SharedWorker`对象。
 
 ```js
-var myWorker = new SharedWorker('worker.js');
+var myWorker = new SharedWorker("worker.js");
 ```
 
 接下来两份脚本通过一个{{domxref("SharedWorker.port")}}方法创建的{{domxref("MessagePort")}}对象访问 worker。如果 onmessage 事件通过 addEventListener 被绑定，端口可以用`start()`方法手动开启：
@@ -67,35 +67,35 @@ myWorker.port.start();
 当端口被打开，两份脚本各自都可用 `port.postMessage()` 向 worker 传消息并用 `port.onmessage`处理它（worker）传来的消息：
 
 ```js
-first.onchange = function() {
-  myWorker.port.postMessage([first.value,second.value]);
-  console.log('Message posted to worker');
-}
+first.onchange = function () {
+  myWorker.port.postMessage([first.value, second.value]);
+  console.log("Message posted to worker");
+};
 
-second.onchange = function() {
-  myWorker.port.postMessage([first.value,second.value]);
-  console.log('Message posted to worker');
-}
+second.onchange = function () {
+  myWorker.port.postMessage([first.value, second.value]);
+  console.log("Message posted to worker");
+};
 
-myWorker.port.onmessage = function(e) {
+myWorker.port.onmessage = function (e) {
   result1.textContent = e.data;
-  console.log('Message received from worker');
-}
+  console.log("Message received from worker");
+};
 ```
 
 在 worker 内部我们使用 {{domxref("SharedWorkerGlobalScope.onconnect")}} 处理器来连接前文说到相同端口。与 worker 相关联的端口可以在 {{domxref("SharedWorkerGlobalScope/connect_event", "connect")}} 事件的 `ports` 属性中访问到——接着我们使用 {{domxref("MessagePort")}} `start()` 方法打开端口，`onmessage` 处理器来处理主线程传来的消息。
 
 ```js
-onconnect = function(e) {
+onconnect = function (e) {
   var port = e.ports[0];
 
-  port.addEventListener('message', function(e) {
-    var workerResult = 'Result: ' + (e.data[0] * e.data[1]);
+  port.addEventListener("message", function (e) {
+    var workerResult = "Result: " + e.data[0] * e.data[1];
     port.postMessage(workerResult);
   });
 
   port.start(); // Required when using addEventListener. Otherwise called implicitly by onmessage setter.
-}
+};
 ```
 
 ## 规范

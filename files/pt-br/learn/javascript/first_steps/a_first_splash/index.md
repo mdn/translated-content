@@ -46,111 +46,117 @@ Com isso em mente, vejamos o exemplo que estaremos construindo neste artigo e an
 Neste artigo vamos mostrar a você como construir este simples jogo, que pode ser visto abaixo:
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Jogo adivinhe o número</title>
     <style>
-        html {
-            font-family: sans-serif;
-        }
+      html {
+        font-family: sans-serif;
+      }
 
-        body {
-            width: 50%;
-            max-width: 800px;
-            min-width: 480px;
-            margin: 0 auto;
-        }
+      body {
+        width: 50%;
+        max-width: 800px;
+        min-width: 480px;
+        margin: 0 auto;
+      }
 
-        .lastResult {
-            color: white;
-            padding: 3px;
-        }
+      .lastResult {
+        color: white;
+        padding: 3px;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>Jogo Adivinhe um número</h1>
-    <p>Selecionamos um número aleatório entre 1 e 100. Veja se consegue adivinhar em 10 chances ou menos. Nós lhe diremos se seu palpite está com valor alto ou baixo.</p>
-    <div class="form"> <label for="guessField">Digite seu palpite: </label><input type="text" id="guessField" class="guessField"> <input type="submit" value="Enviar palpite" class="guessSubmit"> </div>
-    <div class="resultParas">
-        <p class="guesses"></p>
-        <p class="lastResult"></p>
-        <p class="lowOrHi"></p>
+    <p>
+      Selecionamos um número aleatório entre 1 e 100. Veja se consegue adivinhar
+      em 10 chances ou menos. Nós lhe diremos se seu palpite está com valor alto
+      ou baixo.
+    </p>
+    <div class="form">
+      <label for="guessField">Digite seu palpite: </label
+      ><input type="text" id="guessField" class="guessField" />
+      <input type="submit" value="Enviar palpite" class="guessSubmit" />
     </div>
-</body>
-<script>
+    <div class="resultParas">
+      <p class="guesses"></p>
+      <p class="lastResult"></p>
+      <p class="lowOrHi"></p>
+    </div>
+  </body>
+  <script>
     // Seu JavaScipt vem aqui
     var randomNumber = Math.floor(Math.random() * 100) + 1;
-    var guesses = document.querySelector('.guesses');
-    var lastResult = document.querySelector('.lastResult');
-    var lowOrHi = document.querySelector('.lowOrHi');
-    var guessSubmit = document.querySelector('.guessSubmit');
-    var guessField = document.querySelector('.guessField');
+    var guesses = document.querySelector(".guesses");
+    var lastResult = document.querySelector(".lastResult");
+    var lowOrHi = document.querySelector(".lowOrHi");
+    var guessSubmit = document.querySelector(".guessSubmit");
+    var guessField = document.querySelector(".guessField");
     var guessCount = 1;
     var resetButton;
 
     function checkGuess() {
       var userGuess = Number(guessField.value);
       if (guessCount === 1) {
-        guesses.textContent = 'Palpites anteriores: ';
+        guesses.textContent = "Palpites anteriores: ";
       }
 
-      guesses.textContent += userGuess + ' ';
+      guesses.textContent += userGuess + " ";
 
       if (userGuess === randomNumber) {
-        lastResult.textContent = 'Parabéns! Seu número está certo!';
-        lastResult.style.backgroundColor = 'green';
-        lowOrHi.textContent = '';
+        lastResult.textContent = "Parabéns! Seu número está certo!";
+        lastResult.style.backgroundColor = "green";
+        lowOrHi.textContent = "";
         setGameOver();
       } else if (guessCount === 10) {
-        lastResult.textContent = '!!!FIM DE JOGO!!!';
-        lowOrHi.textContent = '';
+        lastResult.textContent = "!!!FIM DE JOGO!!!";
+        lowOrHi.textContent = "";
         setGameOver();
       } else {
-        lastResult.textContent = 'Errado!';
-        lastResult.style.backgroundColor = 'red';
-        if(userGuess < randomNumber) {
-          lowOrHi.textContent='Seu palpite está muito baixo!' ;
-        } else if(userGuess > randomNumber) {
-          lowOrHi.textContent = 'Seu palpite está muito alto!';
+        lastResult.textContent = "Errado!";
+        lastResult.style.backgroundColor = "red";
+        if (userGuess < randomNumber) {
+          lowOrHi.textContent = "Seu palpite está muito baixo!";
+        } else if (userGuess > randomNumber) {
+          lowOrHi.textContent = "Seu palpite está muito alto!";
         }
       }
 
       guessCount++;
-      guessField.value = '';
+      guessField.value = "";
     }
 
-    guessSubmit.addEventListener('click', checkGuess);
+    guessSubmit.addEventListener("click", checkGuess);
 
     function setGameOver() {
       guessField.disabled = true;
       guessSubmit.disabled = true;
-      resetButton = document.createElement('button');
-      resetButton.textContent = 'Iniciar novo jogo';
+      resetButton = document.createElement("button");
+      resetButton.textContent = "Iniciar novo jogo";
       document.body.appendChild(resetButton);
-      resetButton.addEventListener('click', resetGame);
+      resetButton.addEventListener("click", resetGame);
     }
 
     function resetGame() {
       guessCount = 1;
-      var resetParas = document.querySelectorAll('.resultParas p');
-      for(var i = 0 ; i < resetParas.length ; i++) {
-        resetParas[i].textContent='';
+      var resetParas = document.querySelectorAll(".resultParas p");
+      for (var i = 0; i < resetParas.length; i++) {
+        resetParas[i].textContent = "";
       }
 
       resetButton.parentNode.removeChild(resetButton);
       guessField.disabled = false;
       guessSubmit.disabled = false;
-      guessField.value='';
+      guessField.value = "";
       guessField.focus();
-      lastResult.style.backgroundColor='white';
-      randomNumber=Math.floor(Math.random() * 100) + 1;
+      lastResult.style.backgroundColor = "white";
+      randomNumber = Math.floor(Math.random() * 100) + 1;
     }
-</script>
-
+  </script>
 </html>
 ```
 
@@ -171,21 +177,21 @@ Olhando para o enunciado, a primeira coisa que devemos fazer é quebrá-lo em pe
 5. Depois, verificar se o palpite está correto.
 6. Se estiver correto:
 
-    1. Escrever mensagem de parabéns.
-    2. Impedir que o jogador insira mais respostas (isso pode bugar o jogo).
-    3. Mostrar controle que permita ao jogador reiniciar o jogo.
+   1. Escrever mensagem de parabéns.
+   2. Impedir que o jogador insira mais respostas (isso pode bugar o jogo).
+   3. Mostrar controle que permita ao jogador reiniciar o jogo.
 
 7. Se o palpite estiver errado e o jogador ainda tem turnos sobrando:
 
-    1. Dizer ao jogador que ele está errado.
-    2. Permitir que ele insira outra resposta.
-    3. Incrementar o número do turno em 1.
+   1. Dizer ao jogador que ele está errado.
+   2. Permitir que ele insira outra resposta.
+   3. Incrementar o número do turno em 1.
 
 8. Se o jogador está errado mas não tem turnos sobrando:
 
-    1. Dizer ao jogador que o jogo acabou.
-    2. Impedir que o jogador insira mais respostas (isso pode bugar o jogo).
-    3. Mostrar controle que permita ao jogador reiniciar o jogo.
+   1. Dizer ao jogador que o jogo acabou.
+   2. Impedir que o jogador insira mais respostas (isso pode bugar o jogo).
+   3. Mostrar controle que permita ao jogador reiniciar o jogo.
 
 9. Quando reiniciar, tenha certeza de resetar todas as variáveis e a interface do jogo, então volte para o passo 1.
 
@@ -199,9 +205,7 @@ O lugar em que começaremos a escrever nosso código será dentro da tag {{htmle
 
 ```html
 <script>
-
   // Seu JavaScript vai aqui
-
 </script>
 ```
 
@@ -210,14 +214,14 @@ O lugar em que começaremos a escrever nosso código será dentro da tag {{htmle
 Vamos começar. Primeiramente, adicione as seguintes linhas na sua tag {{htmlelement("script")}} :
 
 ```js
-var numeroAleatorio= Math.floor(Math.random() * 100) + 1;
+var numeroAleatorio = Math.floor(Math.random() * 100) + 1;
 
-var palpites = document.querySelector('.palpites');
-var ultimoResultado = document.querySelector('.ultimoResultado');
-var baixoOuAlto = document.querySelector('.baixoOuAlto');
+var palpites = document.querySelector(".palpites");
+var ultimoResultado = document.querySelector(".ultimoResultado");
+var baixoOuAlto = document.querySelector(".baixoOuAlto");
 
-var envioPalpite = document.querySelector('.envioPalpite');
-var campoPalpite = document.querySelector('.campoPalpite');
+var envioPalpite = document.querySelector(".envioPalpite");
+var campoPalpite = document.querySelector(".campoPalpite");
 
 var contagemPalpites = 1;
 var botaoReinicio;
@@ -239,8 +243,9 @@ No nosso exemplo:
 - As próximas duas variáveis armazenam referências para o campo de texto e o botão de envio e são usados para controlar o envio do palpite.
 
   ```html
-  <label for="campoPalpite">Digite seu palpite: </label><input type="text" id="campoPalpite" class="campoPalpite">
-  <input type="submit" value="Enviar palpite" class="envioPalpite">
+  <label for="campoPalpite">Digite seu palpite: </label
+  ><input type="text" id="campoPalpite" class="campoPalpite" />
+  <input type="submit" value="Enviar palpite" class="envioPalpite" />
   ```
 
 - As últimas duas variáveis (contagemPalpites e botaoReinicio) são usadas para armazenar a contagem dos palpites do usuário, e o outro é uma referência para o botão de reset, que não existe ainda (mas irá existir).
@@ -253,7 +258,7 @@ Em seguida, adicione o seguinte código abaixo do JavaScript anterior:
 
 ```js
 function conferirPalpite() {
-  alert('Eu sou um placeholder');
+  alert("Eu sou um placeholder");
 }
 ```
 
@@ -280,10 +285,10 @@ Os operadores JavaScript nos permite realizar testes, fazer cálculos matemátic
 Vamos salvar nosso código e atualizar a página exibida em nosso navegador. Abra o [console JavaScript](/pt-BR/docs/Learn/Common_questions/What_are_browser_developer_tools) se você ainda não o tiver aberto, para que possamos digitar os exemplos mostrados abaixo — digite cada um exatamente como mostrado na coluna "Exemplo", pressionando Return/Enter na sequência, e veja quais resultados são retornados. Se você não tiver fácil acesso às ferramentas de desenvolvimento do navegador você pode sempre utilizar o console embutido simples, como no exemplo abaixo:
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Console JavaScript</title>
     <style>
       * {
@@ -291,7 +296,7 @@ Vamos salvar nosso código e atualizar a página exibida em nosso navegador. Abr
       }
 
       html {
-        background-color: #0C323D;
+        background-color: #0c323d;
         color: #809089;
         font-family: monospace;
       }
@@ -325,62 +330,57 @@ Vamos salvar nosso código e atualizar a página exibida em nosso navegador. Abr
         line-height: 1.5;
         font-family: monospace;
         padding: 0;
-        background: #0C323D;
+        background: #0c323d;
         color: #809089;
       }
 
       div {
         clear: both;
       }
-
     </style>
   </head>
-  <body>
-
-
-  </body>
+  <body></body>
 
   <script>
     var geval = eval;
 
     function createInput() {
-      var inputDiv = document.createElement('div');
-      var inputPara = document.createElement('p');
-      var inputForm = document.createElement('input');
+      var inputDiv = document.createElement("div");
+      var inputPara = document.createElement("p");
+      var inputForm = document.createElement("input");
 
-      inputDiv.setAttribute('class','input');
-      inputPara.textContent = '>';
+      inputDiv.setAttribute("class", "input");
+      inputPara.textContent = ">";
       inputDiv.appendChild(inputPara);
       inputDiv.appendChild(inputForm);
       document.body.appendChild(inputDiv);
       inputDiv.focus();
 
-      inputForm.addEventListener('change', executeCode);
+      inputForm.addEventListener("change", executeCode);
     }
 
     function executeCode(e) {
       try {
         var result = geval(e.target.value);
-      } catch(e) {
-        var result = 'error — ' + e.message;
+      } catch (e) {
+        var result = "error — " + e.message;
       }
 
-      var outputDiv = document.createElement('div');
-      var outputPara = document.createElement('p');
+      var outputDiv = document.createElement("div");
+      var outputPara = document.createElement("p");
 
-      outputDiv.setAttribute('class','output');
-      outputPara.textContent = 'Result: ' + result;
+      outputDiv.setAttribute("class", "output");
+      outputPara.textContent = "Result: " + result;
       outputDiv.appendChild(outputPara);
       document.body.appendChild(outputDiv);
 
       e.target.disabled = true;
-      e.target.parentNode.style.opacity = '0.5';
+      e.target.parentNode.style.opacity = "0.5";
 
-      createInput()
+      createInput();
     }
 
     createInput();
-
   </script>
 </html>
 ```
@@ -399,9 +399,9 @@ Primeiro vamos ver os operadores matemáticos, como por exemplo:
 Você também pode usar o operador `+` para unir sequências de texto (isso é chamado de concatenação em programação). Tente inserir as seguintes linhas:
 
 ```js
-var nome = 'Bingo';
+var nome = "Bingo";
 nome;
-var ola = ' diz olá!';
+var ola = " diz olá!";
 ola;
 var cumprimento = nome + ola;
 cumprimento;
@@ -410,13 +410,13 @@ cumprimento;
 Há também alguns atalhos para operadores disponíveis, chamados de operadores de atribuição ampliada (ou atribuição composta). Por exemplo, se você quer adicionar uma nova sequência de texto à uma existente e retornar o resultado, você pode fazer o seguinte:
 
 ```js
-nome += ' diz olá!';
+nome += " diz olá!";
 ```
 
 Isso é equivalente a:
 
 ```js
-nome = nome + ' diz olá!';
+nome = nome + " diz olá!";
 ```
 
 Quando estamos rodando testes de verdadeiro/falso (por exemplo, condicinais internas — veja [abaixo](#conditionals), usamos operadores de comparação, por exemplo:
@@ -438,31 +438,31 @@ Neste ponto, substitua sua função `conferirPalpite()` atual por esta versão:
 function conferirPalpite() {
   var palpiteUsuario = Number(campoPalpite.value);
   if (contagemPalpites === 1) {
-    palpites.textContent = 'Palpites anteriores: ';
+    palpites.textContent = "Palpites anteriores: ";
   }
-  palpites.textContent += palpiteUsuario + ' ';
+  palpites.textContent += palpiteUsuario + " ";
 
   if (palpiteUsuario === numeroAleatorio) {
-    ultimoResultado.textContent = 'Parabéns! Você acertou!';
-    ultimoResultado.style.backgroundColor = 'green';
-    baixoOuAlto.textContent = '';
+    ultimoResultado.textContent = "Parabéns! Você acertou!";
+    ultimoResultado.style.backgroundColor = "green";
+    baixoOuAlto.textContent = "";
     configFimDeJogo();
   } else if (contagemPalpites === 10) {
-    ultimoResultado.textContent = '!!!FIM DE JOGO!!!';
-    baixoOuAlto.textContent = '';
+    ultimoResultado.textContent = "!!!FIM DE JOGO!!!";
+    baixoOuAlto.textContent = "";
     configFimDeJogo();
   } else {
-    ultimoResultado.textContent = 'Errado!';
-    ultimoResultado.style.backgroundColor = 'red';
-    if(palpiteUsuario < numeroAleatorio) {
-      baixoOuAlto.textContent = 'Seu palpite está muito baixo!';
-    } else if(palpiteUsuario > numeroAleatorio) {
-      baixoOuAlto.textContent = 'Seu palpite está muito alto!';
+    ultimoResultado.textContent = "Errado!";
+    ultimoResultado.style.backgroundColor = "red";
+    if (palpiteUsuario < numeroAleatorio) {
+      baixoOuAlto.textContent = "Seu palpite está muito baixo!";
+    } else if (palpiteUsuario > numeroAleatorio) {
+      baixoOuAlto.textContent = "Seu palpite está muito alto!";
     }
   }
 
   contagemPalpites++;
-  campoPalpite.value = '';
+  campoPalpite.value = "";
   campoPalpite.focus();
 }
 ```
@@ -473,7 +473,7 @@ Isso é bastante código — ufa! Vamos abordar cada seção e explicar o que fa
 - Em seguida, encontramos nosso primero bloco de código condicional (linhas 3–5 no código acima). Um bloco de código condicional lhe permite executar código seletivamente, dependendo se uma condição é verdadeira ou não. Se parece um pouco com uma função, mas não é. A forma mais simples de um bloco condicional começa com a palavra chave `if`, depois os parênteses, depois as chaves. Dentro dos parênteses nós incluímos um teste. Se o teste retornar `true`(verdadeiro), o código dentro das chaves é executado. Caso contrário, não é executado, e seguimos para a próxima parte do código. Neste caso, o teste está verificando se a variável `contagemPalpites` é igual a `1` (isto é, se essa é ou não a primeira tentativa do jogador):
 
   ```js
-  contagemPalpites === 1
+  contagemPalpites === 1;
   ```
 
   Se a condição for verdadeira, nós tornamos o conteúdo do parágrafo de palpites, `<p class="palpites"></p>` igual a "Palpites anteriores: ". Caso contrário, o texto não é exibido.
@@ -494,7 +494,7 @@ Neste ponto temos uma função `conferirPalpite()` bem implementada, mas ela nã
 Adicione a seguinte linha abaixo da chave de fechamento da sua função `conferirPalpite()`:
 
 ```js
-envioPalpite.addEventListener('click', conferirPalpite);
+envioPalpite.addEventListener("click", conferirPalpite);
 ```
 
 Aqui nós estamos adicionando um _event listener_ ao botão `envioPalpite`. Esse é um método que aceita a inserção de dois valores (chamados de argumentos) — o tipo de envento que estamos monitorando (neste caso o evento `click`) como um _string_ (sequência de texto), e o código que queremos executar quando o evento ocorrer (neste caso a função `conferirPalpite()` — note que não temos que especificar os parênteses quando estivermos escrevendo dentro de {{domxref("EventTarget.addEventListener", "addEventListener()")}}).
@@ -509,10 +509,10 @@ Vamos adicionar a função `configFimDeJogo()` ao final do nosso código e entã
 function configFimDeJogo() {
   campoPalpite.disabled = true;
   envioPalpite.disabled = true;
-  botaoReinicio = document.createElement('button');
-  botaoReinicio.textContent = 'Iniciar novo jogo';
+  botaoReinicio = document.createElement("button");
+  botaoReinicio.textContent = "Iniciar novo jogo";
   document.body.appendChild(botaoReinicio);
-  botaoReinicio.addEventListener('click', reiniciarJogo);
+  botaoReinicio.addEventListener("click", reiniciarJogo);
 }
 ```
 
@@ -526,19 +526,19 @@ Agora precisamos definir essa função também! Adicione o seguinte código, nov
 function reiniciarJogo() {
   contagemPalpites = 1;
 
-  var reiniciarParas = document.querySelectorAll('.resultadoParas p');
-  for (var i = 0 ; i < reiniciarParas.length ; i++) {
-    reiniciarParas[i].textContent = '';
+  var reiniciarParas = document.querySelectorAll(".resultadoParas p");
+  for (var i = 0; i < reiniciarParas.length; i++) {
+    reiniciarParas[i].textContent = "";
   }
 
   botaoReinicio.parentNode.removeChild(botaoReinicio);
 
   campoPalpite.disabled = false;
   envioPalpite.disabled = false;
-  campoPalpite.value = '';
+  campoPalpite.value = "";
   campoPalpite.focus();
 
-  ultimoResultado.style.backgroundColor = 'white';
+  ultimoResultado.style.backgroundColor = "white";
 
   numeroAleatorio = Math.floor(Math.random() * 100) + 1;
 }
@@ -564,7 +564,9 @@ Uma parte do código acima que precisamos olhar mais detalhadamente é o loop [f
 Para começar, vá novamente até o [console JavaScript](/pt-BR/docs/Learn/Common_questions/What_are_browser_developer_tools) do seu navegador, e insira o seguinte:
 
 ```js
-for (var i = 1 ; i < 21 ; i++) { console.log(i) }
+for (var i = 1; i < 21; i++) {
+  console.log(i);
+}
 ```
 
 O que aconteceu? Os números de 1 a 20 foram exibidos no seu console. Isso acontece por causa do loop. Um loop `for` utiliza a inserção de três valores (argumentos):
@@ -576,9 +578,9 @@ O que aconteceu? Os números de 1 a 20 foram exibidos no seu console. Isso acont
 Agora vamos olhar o loop em nosso jogo de adivinhar o número — o código seguinte pode ser encontrado dentro da função `reiniciarJogo()`:
 
 ```js
-var reiniciarParas = document.querySelectorAll('.resultadoParas p');
-for (var i = 0 ; i < reiniciarParas.length ; i++) {
-  reiniciarParas[i].textContent = '';
+var reiniciarParas = document.querySelectorAll(".resultadoParas p");
+for (var i = 0; i < reiniciarParas.length; i++) {
+  reiniciarParas[i].textContent = "";
 }
 ```
 
@@ -599,7 +601,7 @@ Vamos analisar o que está acontencedo aqui com um pouco mais de detalhes. Em Ja
 Neste caso particular, nós primeiro criamos a variável `campoPalpite` que armazena uma referência ao campo de inserção de texto do formulário em nosso HTML — a linha seguinte pode ser achada entre nossas declarações de variáveis próximas ao topo:
 
 ```js
-var campoPalpite = document.querySelector('.campoPalpite');
+var campoPalpite = document.querySelector(".campoPalpite");
 ```
 
 Para pegar essa referência, usamos o método {{domxref("document.querySelector", "querySelector()")}} do objeto {{domxref("document")}}. `querySelector()` pega um pedaço de informação — um [seletor CSS](/pt-BR/docs/Learn/CSS/Introduction_to_CSS/Selectors) que seleciona o elemento ao qual você quer referenciar.
@@ -620,41 +622,41 @@ Vamos brincar um pouco com alguns objetos do navegador.
 2. Em seguida, abra as [ferramentas de desenvolvimento do navegador](/pt-BR/docs/Learn/Common_questions/What_are_browser_developer_tools), e certifique-se de que a aba do console JavaScript esteja aberta.
 3. Digite `campoPalpite` e o console irá lhe mostrar que a variável contém um elemento {{htmlelement("input")}}. Você também irá notar que o console completa automaticamente os nomes de objetos existentes dentro do ambiente de execução, incluindo suas variáveis!
 
-    1. Agora digite o seguinte:
+   1. Agora digite o seguinte:
 
-        ```js
-        campoPalpite.value = 'Olá';
-        ```
+      ```js
+      campoPalpite.value = "Olá";
+      ```
 
-        A propriedade `value` representa o valor atual inserido no campo de texto. Você verá que inserindo esse comando, nós mudamos o valor desse objeto!
+      A propriedade `value` representa o valor atual inserido no campo de texto. Você verá que inserindo esse comando, nós mudamos o valor desse objeto!
 
 4. Agora tente digitar `palpites` e pressione _return_. O console irá mostrar que a variável contém um elemento {{htmlelement("p")}}.
 5. Agora tente inserir a linha seguinte:
 
-    ```js
-    palpites.value
-    ```
+   ```js
+   palpites.value;
+   ```
 
-    O navegador irá retornar `undefined`, porque `value` não existe em parágrafos.
+   O navegador irá retornar `undefined`, porque `value` não existe em parágrafos.
 
 6. Para mudar o texto dentro de um parágrafo, você precisa da propriedade {{domxref("Node.textContent", "textContent")}}. Tente isso:
 
-    ```js
-    palpites.textContent = 'Onde está meu parágrafo?';
-    ```
+   ```js
+   palpites.textContent = "Onde está meu parágrafo?";
+   ```
 
 7. Agora algo divertido. Tente inserir as linhas abaixo, uma por uma:
 
-    ```js
-    palpites.style.backgroundColor = 'yellow';
-    palpites.style.fontSize = '200%';
-    palpites.style.padding = '10px';
-    palpites.style.boxShadow = '3px 3px 6px black';
-    ```
+   ```js
+   palpites.style.backgroundColor = "yellow";
+   palpites.style.fontSize = "200%";
+   palpites.style.padding = "10px";
+   palpites.style.boxShadow = "3px 3px 6px black";
+   ```
 
-    Cada elemento em uma página tem uma propriedade `style`, que contém um objeto no qual estão inseridos em suas propriedades todos os estilos incorporados de CSS aplicados ao respectivo elemento. Isso nos permite configurar dinamicamente novos estilos CSS nos elementos usando JavaScript.
+   Cada elemento em uma página tem uma propriedade `style`, que contém um objeto no qual estão inseridos em suas propriedades todos os estilos incorporados de CSS aplicados ao respectivo elemento. Isso nos permite configurar dinamicamente novos estilos CSS nos elementos usando JavaScript.
 
-## Finalizado por enquanto...
+## Finalizado por enquanto
 
 Então é isso, para construir o exemplo — você chegou ao final, muito bem! Teste o resultado do seu código, ou [jogue com nossa versão finalizada aqui](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game.html). Se você não conseguir fazer o exemplo funcionar, compare com o [código fonte](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/first-splash/number-guessing-game.html).
 

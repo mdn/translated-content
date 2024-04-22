@@ -1,15 +1,6 @@
 ---
 title: DOMPoint.w
 slug: Web/API/DOMPointReadOnly/w
-tags:
-  - API
-  - Coordonnées
-  - DOM
-  - Géométrie
-  - Propriétés
-  - Quadrilatère
-  - W
-translation_of: Web/API/DOMPointReadOnly/w
 ---
 
 {{APIRef("DOM")}}{{ SeeCompatTable() }}

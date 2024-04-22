@@ -1,6 +1,8 @@
 ---
 title: HTMLTableColElement
 slug: Web/API/HTMLTableColElement
+l10n:
+  sourceCommit: 7e6e5f5d4c1c984af3d4ebf9399042d19eccea1e
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -9,7 +11,7 @@ slug: Web/API/HTMLTableColElement
 
 {{InheritanceDiagram}}
 
-## プロパティ
+## インスタンスプロパティ
 
 _親である {{domxref("HTMLElement")}} から継承したプロパティもあります。_
 
@@ -26,9 +28,9 @@ _親である {{domxref("HTMLElement")}} から継承したプロパティもあ
 - {{domxref("HTMLTableColElement.width")}} {{deprecated_inline}}
   - : 文字列で、既定の列の幅を表します。
 
-## メソッド
+## インスタンスメソッド
 
-_独自のメソッドはありません。親である {{domxref("HTMLElement")}} からメソッドを継承しています。_
+_固有のメソッドはありません。親である {{domxref("HTMLElement")}} から継承したメソッドがあります。_
 
 ## 仕様書
 

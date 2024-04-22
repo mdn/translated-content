@@ -1,6 +1,9 @@
 ---
-title: Storage.clear()
+title: "Storage: clear() メソッド"
+short-title: clear()
 slug: Web/API/Storage/clear
+l10n:
+  sourceCommit: 101ffc9479db6aaa530f2aac3992734dd97d1b86
 ---
 
 {{APIRef("Web Storage API")}}
@@ -9,8 +12,8 @@ slug: Web/API/Storage/clear
 
 ## 構文
 
-```js
-storage.clear();
+```js-nolint
+clear()
 ```
 
 ### 引数
@@ -27,15 +30,15 @@ storage.clear();
 
 ```js
 function populateStorage() {
-  localStorage.setItem('bgcolor', 'red');
-  localStorage.setItem('font', 'Helvetica');
-  localStorage.setItem('image', 'miGato.png');
+  localStorage.setItem("bgcolor", "red");
+  localStorage.setItem("font", "Helvetica");
+  localStorage.setItem("image", "miGato.png");
 
   localStorage.clear();
 }
 ```
 
-> **メモ:** 実際の例としては、 [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/) をご覧ください。
+> **メモ:** 現実世界の例としては、 [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/) をご覧ください。
 
 ## 仕様書
 
@@ -43,8 +46,8 @@ function populateStorage() {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Storage.clear")}}
+{{Compat}}
 
 ## 関連情報
 
-[Web Storage API の使用](/ja/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+- [ウェブストレージ API の使用](/ja/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)

@@ -18,7 +18,7 @@ Los modos _limited-quirks_ y _no-quirks_ solían llamarse modo "casi estándar" 
 Para documentos [HTML](/es/docs/Web/HTML), los navegadores usan un DOCTYPE al principio del documento para decidir si manejarlo en _quirks mode_ o en modo estándar. Para asegurarse de que su página utilice el modo estándar completo, asegúrese de que su página tenga un DOCTYPE como en este ejemplo:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />

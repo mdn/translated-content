@@ -1,8 +1,6 @@
 ---
 title: Les contrôles de formulaire natifs
 slug: Learn/Forms/Basic_native_form_controls
-translation_of: Learn/Forms/Basic_native_form_controls
-original_slug: Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms/HTML5_input_types", "Learn/Forms")}}
@@ -67,7 +65,11 @@ Pour créer un champ permettant de saisir du texte sur une seule ligne, on utili
 Voici un exemple de champ texte simple sur une ligne&nbsp;:
 
 ```html
-<input type="text" id="commentaire" name="commentaire" value="Je suis un champ texte">
+<input
+  type="text"
+  id="commentaire"
+  name="commentaire"
+  value="Je suis un champ texte" />
 ```
 
 Les champs texte sur une seule ligne n'ont qu'une contrainte&nbsp;: si on saisit du texte avec des sauts de ligne, le navigateur retirera les sauts de ligne avant d'envoyer les données au serveur.
@@ -83,7 +85,7 @@ _La capture d'écran qui suit illustre l'apparence des contrôles (par défaut, 
 Un des types de champ de formulaire, présent à l'origine, est destiné à la saisie de mots de passe avec le type `password`&nbsp;:
 
 ```html
-<input type="password" id="pwd" name="pwd">
+<input type="password" id="pwd" name="pwd" />
 ```
 
 La valeur `password` n'ajoute pas de contraintes particulières sur le texte qui est saisi. En revanche, elle masque la valeur saisie dans le champ (avec des points ou des astérisques) afin qu'elle ne puisse pas être facilement lue par d'autres.
@@ -97,7 +99,7 @@ Les navigateurs peuvent sensibiliser à ces aspects de sécurité lors de l'envo
 Un autre type de champ présent aux débuts de HTML est le type masqué (avec la valeur d'attribut `hidden`). Il permet de créer un champ de formulaire qui ne sera pas visible sur le site mais qui sera envoyé au serveur lors de l'envoi du formulaire (il peut, par exemple, permettre d'envoyer un horodatage au serveur pour indiquer l'heure de saisie du formulaire côté client). Étant masqué, le champ ne peut pas être vu ou édité de façon intentionnelle, il ne peut pas recevoir le focus et un outil de lecture d'écran ne le mentionnera pas.
 
 ```html
-<input type="hidden" id="timestamp" name="timestamp" value="1286705410">
+<input type="hidden" id="timestamp" name="timestamp" value="1286705410" />
 ```
 
 Pour créer un tel élément, il est nécessaire de lui fournir des attributs `name` et `value`. La valeur contenue dans ce champ peut être éditée dynamiquement avec JavaScript. Un champ de type `hidden` ne devrait pas avoir de libellé associé.
@@ -119,7 +121,7 @@ Pour améliorer l'utilisabilité et l'accessibilité, il est conseillé de regro
 Une case à cocher est créée avec un élément [`<input>`](/fr/docs/Web/HTML/Element/Input) pour lequel l'attribut [`type`](/fr/docs/Web/HTML/Element/Input#attr-type) prend la valeur [`checkbox`](/fr/docs/Web/HTML/Element/Input/checkbox).
 
 ```html
-<input type="checkbox" id="questionUn" name="abonnement" value="oui" checked>
+<input type="checkbox" id="questionUn" name="abonnement" value="oui" checked />
 ```
 
 Les cases à cocher qui portent sur le même sujet devraient partager le même attribut [`name`](/fr/docs/Web/HTML/Element/Input#attr-name). Ajouter l'attribut [`checked`](/fr/docs/Web/HTML/Element/Input/checkbox#attr-checked) à un tel élément permettra d'avoir la case cochée lors du chargement de la page. Cliquer sur la case ou sur le libellé associé permettra de cocher/décocher la case.
@@ -130,15 +132,20 @@ Les cases à cocher qui portent sur le même sujet devraient partager le même a
   <ul>
     <li>
       <label for="carottes">Carottes</label>
-      <input type="checkbox" id="carottes" name="legume" value="carottes" checked>
+      <input
+        type="checkbox"
+        id="carottes"
+        name="legume"
+        value="carottes"
+        checked />
     </li>
     <li>
       <label for="haricots">Haricots</label>
-      <input type="checkbox" id="haricots" name="legume" value="haricots">
+      <input type="checkbox" id="haricots" name="legume" value="haricots" />
     </li>
     <li>
       <label for="chou">Chou</label>
-      <input type="checkbox" id="chou" name="legume" value="chou">
+      <input type="checkbox" id="chou" name="legume" value="chou" />
     </li>
   </ul>
 </fieldset>
@@ -157,7 +164,7 @@ En raison de l'aspect marche/arrêt des cases à cocher, celles-ci sont parfois 
 Un bouton radio est créé avec un élément [`<input>`](/fr/docs/Web/HTML/Element/Input) pour lequel l'attribut [`type`](/fr/docs/Web/HTML/Element/Input#attr-type) vaut `radio`&nbsp;:
 
 ```html
-<input type="radio" id="soupe" name="plat" checked>
+<input type="radio" id="soupe" name="plat" checked />
 ```
 
 Il est possible de regrouper plusieurs boutons radio ensemble. S'ils partagent le même attribut [`name`](/fr/docs/Web/HTML/Element/Input#attr-name), ils feront partie du même groupe. Seul un bouton d'un groupe donné peut être sélectionné à la fois. Cela signifie que sélectionner une des options entraînera la désélection de toutes les autres. Lorsque le formulaire est envoyé, seule la valeur du bouton radio sélectionné du groupe est envoyée. Si aucun n'est sélectionné, l'ensemble du groupe est considéré dans un état inconnu et aucune valeur n'est envoyée avec le formulaire. Lorsqu'un des boutons radio d'un groupe a été sélectionné, la personne ne peut plus désélectionner l'ensemble des boutons sans réinitialiser le formulaire.
@@ -168,15 +175,15 @@ Il est possible de regrouper plusieurs boutons radio ensemble. S'ils partagent l
   <ul>
     <li>
       <label for="soupe">Soupe</label>
-      <input type="radio" id="soupe" name="plat" value="soupe" checked>
+      <input type="radio" id="soupe" name="plat" value="soupe" checked />
     </li>
     <li>
       <label for="curry">Curry</label>
-      <input type="radio" id="curry" name="plat" value="curry">
+      <input type="radio" id="curry" name="plat" value="curry" />
     </li>
     <li>
       <label for="pizza">Pizza</label>
-      <input type="radio" id="pizza" name="plat" value="pizza">
+      <input type="radio" id="pizza" name="plat" value="pizza" />
     </li>
   </ul>
 </fieldset>
@@ -208,11 +215,9 @@ Voici des exemples pour chaque type de bouton `<input>`, accompagnés chacun de 
 ### `submit`
 
 ```html
-<button type="submit">
-  Voici un <strong>bouton d'envoi</strong>
-</button>
+<button type="submit">Voici un <strong>bouton d'envoi</strong></button>
 
-<input type="submit" value="Voici un bouton d'envoi">
+<input type="submit" value="Voici un bouton d'envoi" />
 ```
 
 ### `reset`
@@ -222,17 +227,15 @@ Voici des exemples pour chaque type de bouton `<input>`, accompagnés chacun de 
   Voici un <strong>bouton de réinitialisation</strong>
 </button>
 
-<input type="reset" value="Voici un bouton de réinitialisation">
+<input type="reset" value="Voici un bouton de réinitialisation" />
 ```
 
 ### Générique
 
 ```html
-<button type="button">
-  Voici un <strong>bouton générique</strong>
-</button>
+<button type="button">Voici un <strong>bouton générique</strong></button>
 
-<input type="button" value="Voici un bouton générique">
+<input type="button" value="Voici un bouton générique" />
 ```
 
 Les boutons se comporteront de la même façon, que ce soient des éléments [`<button>`](/fr/docs/Web/HTML/Element/Button) ou des éléments [`<input>`](/fr/docs/Web/HTML/Element/Input). Toutefois, comme vous pouvez le voir dans les exemples, les éléments [`<button>`](/fr/docs/Web/HTML/Element/Button) permettent d'utiliser du HTML dans leur contenu au sein des balises `<button>`. En revanche, les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) sont des éléments vides et le contenu affiché provient de l'attribut `value` qui peut uniquement être du texte simple.
@@ -248,7 +251,12 @@ Le contrôle **de bouton d'image** s'affiche exactement comme un élément [`<im
 Un bouton d'image est créé avec un élément [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut [`type`](/fr/docs/Web/HTML/Element/Input#attr-type) vaut `image`. Cet élément prend en charge le même ensemble d'attributs que l'élément [`<img>`](/fr/docs/Web/HTML/Element/Img) et les attributs relatifs aux éléments de formulaire.
 
 ```html
-<input type="image" alt="Cliquez ici !" src="mon-img.png" width="80" height="30">
+<input
+  type="image"
+  alt="Cliquez ici !"
+  src="mon-img.png"
+  width="80"
+  height="30" />
 ```
 
 Si le bouton d'image est utilisé pour envoyer le formulaire, ce contrôle ne fournit pas sa valeur mais les coordonnées X / Y (relatives au coin en haut à gauche de coordonnées (0,0)) où le clic a eu lieu. Les coordonnées sont envoyées comme deux paires clé/valeur&nbsp;:
@@ -275,15 +283,15 @@ Pour créer [un sélecteur de fichier](/fr/docs/Web/HTML/Element/Input/file), on
 Dans cet exemple, on crée un sélecteur de fichier pour des images. La personne qui utilise le formulaire peut ici choisir plusieurs fichiers.
 
 ```html
-<input type="file" name="file" id="file" accept="image/*" multiple>
+<input type="file" name="file" id="file" accept="image/*" multiple />
 ```
 
 Sur certains appareils mobiles, le sélecteur de fichier peut accéder aux photos, vidéos et fichiers audios produits par l'appareil photo ou le micro en ajoutant des informations de captures avec l'attribut `accept`&nbsp;:
 
 ```html
-<input type="file" accept="image/*;capture=camera">
-<input type="file" accept="video/*;capture=camcorder">
-<input type="file" accept="audio/*;capture=microphone">
+<input type="file" accept="image/*;capture=camera" />
+<input type="file" accept="video/*;capture=camcorder" />
+<input type="file" accept="audio/*;capture=microphone" />
 ```
 
 ## Attributs communs

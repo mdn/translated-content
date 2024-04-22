@@ -1,12 +1,8 @@
 ---
 title: Beacon API
 slug: Web/API/Beacon_API
-tags:
-  - Beacon
-  - JSAPI Reference
-  - Производительность
-translation_of: Web/API/Beacon_API
 ---
+
 {{DefaultAPISidebar("Beacon")}}{{SeeCompatTable}}
 
 Интерфейс **`Beacon`** используется для планирования асинхронного и неблокирующего запроса к веб-серверу. **`Beacon`** запросы используют метод HTTP POST, и обычно не требуют ответа. Запросы гарантированно будут инициированы до того, как страница будет выгружена, и они выполняются до конца, не требуя блокирующего запроса (например {{domxref("XMLHttpRequest")}}).
@@ -35,7 +31,7 @@ translation_of: Web/API/Beacon_API
 
 ## Совместимость с браузерами
 
-The {{domxref("Navigator.sendBeacon","Navigator.sendBeacon()","Browser_compatibility")}} table indicates that method has relatively broad implementation.
+{{Compat}}
 
 ## Смотрите также
 

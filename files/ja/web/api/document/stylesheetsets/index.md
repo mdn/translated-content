@@ -16,13 +16,13 @@ slug: Web/API/Document/styleSheetSets
 "sheetList" という ID を持つ {{HTMLElement("ul")}} （リスト）要素がある場合、次のようなコードで、利用可能なすべてのスタイルシートセットの名前を入力することができます。
 
 ```js
-const list = document.getElementById('sheetList');
+const list = document.getElementById("sheetList");
 const sheets = document.styleSheetSets;
 
-list.textContent = '';
+list.textContent = "";
 
 for (let i = 0; i < sheets.length; i++) {
-  const item = document.createElement('li');
+  const item = document.createElement("li");
 
   item.textContent = sheets[i];
   list.appendChild(item);

@@ -24,7 +24,7 @@ l10n:
 
 ```js
 const compressedReadableStream = inputReadableStream.pipeThrough(
-  new CompressionStream("gzip")
+  new CompressionStream("gzip"),
 );
 ```
 

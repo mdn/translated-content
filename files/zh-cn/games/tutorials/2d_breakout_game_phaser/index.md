@@ -9,9 +9,9 @@ slug: Games/Tutorials/2D_breakout_game_Phaser
 
 在这个手把手的教程中，我们将使用 Phaser 框架制作一个使用 JavaScript 构建简单的 MDN 消除游戏。
 
-教程的每一步骤都会有可供修改的样品来玩，所以你可以看到开发的每一步中间步骤。您将学到如何使用 Phaser 框架来实现基础游戏机制的基本知识，诸如渲染和移动图像，碰撞检测，控制机制，框架特定的帮助器功能，动画和补间，以及获胜和失败状态等。
+教程的每一步骤都会有可供修改的样品来玩，所以你可以看到开发的每一步中间步骤。你将学到如何使用 Phaser 框架来实现基础游戏机制的基本知识，诸如渲染和移动图像，碰撞检测，控制机制，框架特定的帮助器功能，动画和补间，以及获胜和失败状态等。
 
-为了充分理解这一系列的文章，您应该确保已有基本的中级 JavaScript 知识。学完本教程，您将有能力用 Phaser 构建简单的 Web 游戏。
+为了充分理解这一系列的文章，你应该确保已有基本的中级 JavaScript 知识。学完本教程，你将有能力用 Phaser 构建简单的 Web 游戏。
 
 ![Gameplay screen from the game MDN Breakout created with Phaser where you can use your paddle to bounce the ball and destroy the brick field, with keeping the points and lives.](mdn-breakout-phaser.png)
 
@@ -40,7 +40,7 @@ slug: Games/Tutorials/2D_breakout_game_Phaser
 
 在那之后，你就能随意挑选框架并用在你的项目中;我们选择了 Phaser 这个稳定优越的框架，它有着好的支持和社区环境以及大量优秀的插件。框架加速了开发并能帮你管理无趣的部分，让你专注于有意思的事务。然而，框架也有不好的地方，所以当一些意想不到的事情发生了或者想实现一些框架没有提供的功能时，你就将需要原生的 JavaScript 知识了。
 
-> **备注：** 本系列文章可用作实际游戏开发的材料。如果您想要使用 Phaser 讨论游戏开发，您还可以使用基于本教程的 [Gamedev Phaser 内容套件](https://github.com/end3r/Gamedev-Phaser-Content-Kit).
+> **备注：** 本系列文章可用作实际游戏开发的材料。如果你想要使用 Phaser 讨论游戏开发，你还可以使用基于本教程的 [Gamedev Phaser 内容套件](https://github.com/end3r/Gamedev-Phaser-Content-Kit).
 
 ## Next steps
 

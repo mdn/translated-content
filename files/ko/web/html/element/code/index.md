@@ -1,5 +1,5 @@
 ---
-title: '<code>: 인라인 코드 요소'
+title: "<code>: 인라인 코드 요소"
 slug: Web/HTML/Element/code
 ---
 
@@ -62,8 +62,10 @@ slug: Web/HTML/Element/code
 ## 예제
 
 ```html
-<p>함수 <code>selectAll()</code>는 입력 필드의 모든 텍스트를 선택하므로,
-사용자가 복사 혹은 삭제를 손쉽게 할 수 있습니다.</p>
+<p>
+  함수 <code>selectAll()</code>는 입력 필드의 모든 텍스트를 선택하므로, 사용자가
+  복사 혹은 삭제를 손쉽게 할 수 있습니다.
+</p>
 ```
 
 {{EmbedLiveSample("예제", 640, 70)}}

@@ -2,6 +2,7 @@
 title: resize
 slug: Web/API/Window/resize_event
 ---
+
 **`resize`** 이벤트는 document view의 크기가 변경될 때 발생합니다.
 
 `window.onresize` 속성(어트리뷰트)을 사용하거나,`window.addEventListener('resize', ...)`를 사용하여, 이벤트 핸들러에 `resize` 이벤트를 등록할 수 있습니다.
@@ -27,14 +28,14 @@ slug: Web/API/Window/resize_event
 
 ## Properties
 
-| Property                              | Type                                                                                                                                                         | Description                                                                                                                                                                                               |
-| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `target` {{readonlyInline}}     | [`EventTarget`](/ko/docs/Web/API/EventTarget)  | 이벤트 타겟(DOM 트리의 최상위 타겟).                                                                                                                                                                      |
-| `type` {{readonlyInline}}       | [`DOMString`](/ko/docs/Web/API/DOMString) | 이벤트의 타입.                                                                                                                                                                                            |
-| `bubbles` {{readonlyInline}}    | [`Boolean`](/ko/docs/Web/API/Boolean)                                                         | 이벤트가 정상적으로 버블이 발생하는지 여부.                                                                                                                                                               |
-| `cancelable` {{readonlyInline}} | [`Boolean`](/ko/docs/Web/API/Boolean)                                                         | 이벤트 취소 가능 여부.                                                                                                                                                                                    |
-| `view` {{readonlyInline}}       | [`WindowProxy`](/ko/docs/Web/API/WindowProxy)                         | [`document.defaultView`](/ko/docs/Web/API/Document/defaultView) (문서의 `window`) |
-| `detail` {{readonlyInline}}     | `long` (`float`)                                                                                                                                             | 0.                                                                                                                                                                                                        |
+| Property                        | Type                                          | Description                                                                       |
+| ------------------------------- | --------------------------------------------- | --------------------------------------------------------------------------------- |
+| `target` {{readonlyInline}}     | [`EventTarget`](/ko/docs/Web/API/EventTarget) | 이벤트 타겟(DOM 트리의 최상위 타겟).                                              |
+| `type` {{readonlyInline}}       | [`DOMString`](/ko/docs/Web/API/DOMString)     | 이벤트의 타입.                                                                    |
+| `bubbles` {{readonlyInline}}    | [`Boolean`](/ko/docs/Web/API/Boolean)         | 이벤트가 정상적으로 버블이 발생하는지 여부.                                       |
+| `cancelable` {{readonlyInline}} | [`Boolean`](/ko/docs/Web/API/Boolean)         | 이벤트 취소 가능 여부.                                                            |
+| `view` {{readonlyInline}}       | [`WindowProxy`](/ko/docs/Web/API/WindowProxy) | [`document.defaultView`](/ko/docs/Web/API/Document/defaultView) (문서의 `window`) |
+| `detail` {{readonlyInline}}     | `long` (`float`)                              | 0.                                                                                |
 
 ## Examples
 
@@ -45,87 +46,83 @@ slug: Web/API/Window/resize_event
 ### requestAnimationFrame + customEvent
 
 ```js
-(function() {
-    var throttle = function(type, name, obj) {
-        obj = obj || window;
-        var running = false;
-        var func = function() {
-            if (running) { return; }
-            running = true;
-             requestAnimationFrame(function() {
-                obj.dispatchEvent(new CustomEvent(name));
-                running = false;
-            });
-        };
-        obj.addEventListener(type, func);
+(function () {
+  var throttle = function (type, name, obj) {
+    obj = obj || window;
+    var running = false;
+    var func = function () {
+      if (running) {
+        return;
+      }
+      running = true;
+      requestAnimationFrame(function () {
+        obj.dispatchEvent(new CustomEvent(name));
+        running = false;
+      });
     };
+    obj.addEventListener(type, func);
+  };
 
-    /* init - you can init any event */
-    throttle("resize", "optimizedResize");
+  /* init - you can init any event */
+  throttle("resize", "optimizedResize");
 })();
 
 // handle event
-window.addEventListener("optimizedResize", function() {
-    console.log("Resource conscious resize callback!");
+window.addEventListener("optimizedResize", function () {
+  console.log("Resource conscious resize callback!");
 });
 ```
 
 ### requestAnimationFrame
 
 ```js
-var optimizedResize = (function() {
+var optimizedResize = (function () {
+  var callbacks = [],
+    running = false;
 
-    var callbacks = [],
-        running = false;
+  // fired on resize event
+  function resize() {
+    if (!running) {
+      running = true;
 
-    // fired on resize event
-    function resize() {
-
-        if (!running) {
-            running = true;
-
-            if (window.requestAnimationFrame) {
-                window.requestAnimationFrame(runCallbacks);
-            } else {
-                setTimeout(runCallbacks, 66);
-            }
-        }
-
+      if (window.requestAnimationFrame) {
+        window.requestAnimationFrame(runCallbacks);
+      } else {
+        setTimeout(runCallbacks, 66);
+      }
     }
+  }
 
-    // run the actual callbacks
-    function runCallbacks() {
+  // run the actual callbacks
+  function runCallbacks() {
+    callbacks.forEach(function (callback) {
+      callback();
+    });
 
-        callbacks.forEach(function(callback) {
-            callback();
-        });
+    running = false;
+  }
 
-        running = false;
+  // adds callback to loop
+  function addCallback(callback) {
+    if (callback) {
+      callbacks.push(callback);
     }
+  }
 
-    // adds callback to loop
-    function addCallback(callback) {
-
-        if (callback) {
-            callbacks.push(callback);
-        }
-
-    }
-
-    return {
-        // public method to add additional callback
-        add: function(callback) {
-            if (!callbacks.length) {
-                window.addEventListener('resize', resize);
-            }
-            addCallback(callback);
-        }
-    }
-}());
+  return {
+    // public method to add additional callback
+    add: function (callback) {
+      if (!callbacks.length) {
+        window.addEventListener("resize", resize);
+      }
+      addCallback(callback);
+    },
+  };
+})();
 
 // start process
-optimizedResize.add(function() {
-    console.log('Resource conscious resize callback!')
+optimizedResize.add(function () {
+  console.log("Resource conscious resize callback!");
 });
 ```
 

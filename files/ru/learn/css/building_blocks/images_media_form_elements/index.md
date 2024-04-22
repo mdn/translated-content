@@ -1,7 +1,6 @@
 ---
 title: Элементы изображений, медиа и форм
 slug: Learn/CSS/Building_blocks/Images_media_form_elements
-translation_of: Learn/CSS/Building_blocks/Images_media_form_elements
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks")}}
@@ -9,8 +8,8 @@ translation_of: Learn/CSS/Building_blocks/Images_media_form_elements
 В этом уроке мы рассмотрим, как обрабатываются определённые специальные элементы в CSS. Элементы изображений, других медиа и форм ведут себя иначе при их стилизации в CSS чем обычные блоки. Понимание того, что возможно, а что нет спасут вас от лишних разочарований и этот урок прольёт свет на некоторые из этих основных вещей, которые вам нужно знать.
 
 | Prerequisites: | Basic computer literacy, [basic software installed](/en-US/Learn/Getting_started_with_the_web/Installing_basic_software), basic knowledge of [working with files](/en-US/Learn/Getting_started_with_the_web/Dealing_with_files), HTML basics (study [Introduction to HTML](/ru/docs/Learn/HTML/Introduction_to_HTML)), and an idea of how CSS works (study [CSS first steps](/ru/docs/Learn/CSS/First_steps).) |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Objective:     | To understand the way that some elements behave unusually when styled with CSS.                                                                                                                                                                                                                                                                                                                                                                                          |
+| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Objective:     | To understand the way that some elements behave unusually when styled with CSS.                                                                                                                                                                                                                                                                                                                                |
 
 ## Замещаемые элементы
 
@@ -31,7 +30,7 @@ translation_of: Learn/CSS/Building_blocks/Images_media_form_elements
 
 Так что же мы можем сделать с проблемой перекрывания?
 
-Как мы учили в [нашем предыдущем уроке](/ru/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS), распространённая техника — это сделать {{cssxref("max-width")}} изображения - 100%. Это позволит уменьшить размер изображения по отношению к блоку, но не увеличит его. Такой метод будет работать и с другими замещаемыми элементами такими как [`<video>`](/en-US/docs/Web/HTML/Element/video) или [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe).
+Как мы учили в [нашем предыдущем уроке](/ru/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS), распространённая техника — это сделать {{cssxref("max-width")}} изображения - 100%. Это позволит уменьшить размер изображения по отношению к блоку, но не увеличит его. Такой метод будет работать и с другими замещаемыми элементами такими как [`<video>`](/ru/docs/Web/HTML/Element/video) или [`<iframe>`](/ru/docs/Web/HTML/Element/iframe).
 
 **Попробуйте добавить `max-width: 100%` к элементу `<img>` в примере выше. Вы увидите, что меньшее изображение останется неизмененным, а большее изображение станет меньше, чтобы заполнить блок.**
 
@@ -72,7 +71,7 @@ img {
 
 Элементы форм могут быть сложной проблемой когда дело касается их стилизации в CSS, и [Web Forms module](/ru/docs/Learn/Forms) содержит детальные руководства по хитрым аспектам стилизации элементов форм, которые я не буду представлять здесь в полном объёме. В этом разделе статьи стоит выделить несколько ключевых моментов.
 
-Многие элементы управления форм добавляются на вашу страницу с помощью элемента [`<input>`](/en-US/docs/Web/HTML/Element/input) — он определяет простые поля формы, такие как ввод текста, и более сложные поля, добавленные в HTML5, такие как средства выбора цвета и даты. Существуют некоторые дополнительные элементы, такие как [`<textarea>`](/en-US/docs/Web/HTML/Element/textarea) для ввода многострочного текста, а также элементы которые содержали части маркировки форм, такие как [`<fieldset>`](/en-US/docs/Web/HTML/Element/fieldset) и [`<legend>`](/en-US/docs/Web/HTML/Element/legend).
+Многие элементы управления форм добавляются на вашу страницу с помощью элемента [`<input>`](/ru/docs/Web/HTML/Element/input) — он определяет простые поля формы, такие как ввод текста, и более сложные поля, добавленные в HTML5, такие как средства выбора цвета и даты. Существуют некоторые дополнительные элементы, такие как [`<textarea>`](/ru/docs/Web/HTML/Element/textarea) для ввода многострочного текста, а также элементы которые содержали части маркировки форм, такие как [`<fieldset>`](/ru/docs/Web/HTML/Element/fieldset) и [`<legend>`](/ru/docs/Web/HTML/Element/legend).
 
 HTML5 также содержит атрибуты, которые позволяют веб-разработчикам указывать какие поля являются обязательными и даже тип контента, который необходимо вводить. Если пользователь вводит неожидаемые данные или оставляет обязательные поля пустыми, браузер может выдать сообщение об ошибке. Разные браузеры несовместимы в том, сколько стилей и настроек они допускают для таких элементов.
 
@@ -97,8 +96,8 @@ button,
 input,
 select,
 textarea {
-  font-family : inherit;
-  font-size : 100%;
+  font-family: inherit;
+  font-size: 100%;
 }
 ```
 
@@ -141,7 +140,8 @@ textarea {
   font-family: inherit;
   font-size: 100%;
   box-sizing: border-box;
-  padding: 0; margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 textarea {
@@ -167,10 +167,10 @@ This lesson has highlighted some of the differences you will encounter when work
 1. [Cascade and inheritance](/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
 2. [CSS selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors)
 
-    - [Type, class, and ID selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [Attribute selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Pseudo-classes and pseudo-elements](/ru/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [Combinators](/ru/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
+   - [Type, class, and ID selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
+   - [Attribute selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
+   - [Pseudo-classes and pseudo-elements](/ru/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
+   - [Combinators](/ru/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
 3. [The box model](/ru/docs/Learn/CSS/Building_blocks/The_box_model)
 4. [Backgrounds and borders](/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)

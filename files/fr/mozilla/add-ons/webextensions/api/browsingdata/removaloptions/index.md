@@ -1,19 +1,9 @@
 ---
 title: browsingData.RemovalOptions
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/RemovalOptions
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - RemovalOptions
-  - Type
-  - WebExtensions
-  - browsingData
-translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/RemovalOptions
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Le type **`browsingData.RemovalOptions`** contient des options permettant de contrôler certains aspects de la suppression des données de navigation.
 

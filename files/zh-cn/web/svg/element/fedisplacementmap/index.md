@@ -33,7 +33,7 @@ slug: Web/SVG/Element/feDisplacementMap
 
 ## DOM 接口
 
-该元素实现了[`SVGFEDisplacementMapElement`](/zh-CN/DOM/SVGFEDisplacementMapElement)接口。
+该元素实现了 [`SVGFEDisplacementMapElement`](/zh-CN/DOM/SVGFEDisplacementMapElement) 接口。
 
 ## 参见
 

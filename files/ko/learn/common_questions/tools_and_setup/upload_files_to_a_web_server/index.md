@@ -1,7 +1,6 @@
 ---
 title: How do you upload files to a web server?
 slug: Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server
-original_slug: Learn/Common_questions/Upload_files_to_a_web_server
 ---
 
 본 글은 어떻게 {{Glossary("FTP")}} 도구를 사용하여 사이트를 발행(publish) 할 수 있는지를 다루고 있습니다.
@@ -47,11 +46,11 @@ _아직 좋은 예제가 없습니다. 누군가 나서 주세요([Please, consi
 
 ### FTP 클라이언트와 함께 해보기: FireFTP
 
-세상에는 다양한 종류의 FTP 클라이언트들이 있습니다. 본 문서에서는 FireFTP를 다룰 겁니다. FireFTP는 파이어 폭스에서 다루기 쉽습니다. 만약 파이어폭스를 사용하신다면 FireFTP 애드온 페이지([FireFTP's addons page](https://addons.mozilla.org/firefox/addon/fireftp/)) 에 가셔서l FireFTP를 설치하시면 됩니다.
+세상에는 다양한 종류의 FTP 클라이언트들이 있습니다. 본 문서에서는 FireFTP를 다룰 겁니다. FireFTP는 파이어 폭스에서 다루기 쉽습니다. 만약 Firefox를 사용하신다면 FireFTP 애드온 페이지([FireFTP's addons page](https://addons.mozilla.org/firefox/addon/fireftp/)) 에 가셔서l FireFTP를 설치하시면 됩니다.
 
 > **참고:** 물론 FireFTP 외에도 수 많은 대안이 있습니다. 관심이 있다면 퍼블리싱 도구: FTP 클라이언트([Publishing tools: FTP clients](/en-US/Learn/How_much_does_it_cost#Publishing_tools.3A_FTP_client)) 항목을 참조하시면 되겠습니다.
 
-FireFTP를 새로운 탭에서 열어보세요. 파이어폭스에서 열기 위한 방법도 두가지 있습니다.
+FireFTP를 새로운 탭에서 열어보세요. Firefox에서 열기 위한 방법도 두가지 있습니다.
 
 1. **Firefox menu ![](2014-01-10-13-08-08-f52b8c.png) ➤ ![Developer](screenshot_from_2014-11-26_14-24-56.png) ➤ FireFTP**
 2. **Tools** ➤ **Web Develope**r ➤ **FireFTP**
@@ -85,7 +84,7 @@ To publish to this account, please connect through FTP with the following creden
 
 ![Our demozilla personal website, seen in a browser: it's empty](demozilla-empty.png)
 
-> **참고:** 보이는 화면은 여러분의 호스팅 제공자에 따라 다릅니다. 대부분은 “This website is hosted by \[Hosting Service].”과 같은 페이지를 보게될 것입니다.
+> **참고:** 보이는 화면은 여러분의 호스팅 제공자에 따라 다릅니다. 대부분은 "This website is hosted by \[Hosting Service]."과 같은 페이지를 보게될 것입니다.
 
 이제 우리의 FTP 클라이언트를 멀리 떨어진 서버에 접속하기 위해 _"Create an account..." 버튼을 누릅니다._ 그리고 호스팅제공자로 부터 받은 정보를 해당 필드에 채워줍니다.
 

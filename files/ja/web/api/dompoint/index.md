@@ -1,9 +1,11 @@
 ---
 title: DOMPoint
 slug: Web/API/DOMPoint
+l10n:
+  sourceCommit: 1b094710cd2816a6669ce616b6f56d0a5b25e6ad
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("Geometry Interfaces")}}
 
 **`DOMPoint`** オブジェクトは、座標系における二次元または三次元の点を表します。最大三次元までの座標の値、およびオプションで視点の値も含まれます。 `DOMPoint` は {{domxref("DOMPointReadOnly")}} に基づいていますが、そのプロパティの値を変更することができます。
 
@@ -14,18 +16,9 @@ slug: Web/API/DOMPoint
 ## コンストラクター
 
 - {{domxref("DOMPoint.DOMPoint","DOMPoint()")}}
-  - : 0 個以上の座標成分の値、およびオプションとして `w` の視点位置を与えられた新しい `DOMPoint` オブジェクトを作成し、それを返します。また、既存の `DOMPoint` や `DOMPointReadOnly` 、あるいはオブジェクトを使用して、 {{domxref("DOMPoint.fromPoint()")}} 静的メソッドを呼び出し、新しい点を作成することができます。
+  - : 0 個以上の座標成分の値、およびオプションとして `w` の視点位置を与えられた新しい `DOMPoint` オブジェクトを作成し、それを返します。また、既存の `DOMPoint` や `DOMPointReadOnly` 、あるいはオブジェクトを使用して、 {{domxref("DOMPoint.fromPoint_static", "DOMPoint.fromPoint()")}} 静的メソッドを呼び出し、新しい点を作成することができます。
 
-## メソッド
-
-_`DOMPoint` には親である {{domxref("DOMPointReadOnly")}} から継承したメソッドがあります。_
-
-## 静的メソッド
-
-- {{domxref("DOMPoint.fromPoint()", "DOMPoint.fromPoint()")}}
-  - : 既存の点（または、一致するプロパティを含むオブジェクト）を指定して、そのプロパティの値を提供する、新しい変更可能な `DOMPoint` オブジェクトを作成します。
-
-## プロパティ
+## インスタンスプロパティ
 
 _`DOMPoint` には親である {{domxref("DOMPointReadOnly")}} から継承したプロパティがあります。_
 
@@ -37,6 +30,17 @@ _`DOMPoint` には親である {{domxref("DOMPointReadOnly")}} から継承し�
   - : この `DOMPoint` の奥行き座標である `z` です。
 - {{domxref("DOMPoint.w")}}
   - : この `DOMPoint` の視点位置である `w` です。
+
+## インスタンスメソッド
+
+_`DOMPoint` には親である {{domxref("DOMPointReadOnly")}} から継承したインスタンスメソッドがあります。_
+
+## 静的メソッド
+
+_`DOMPoint` には親である {{domxref("DOMPointReadOnly")}} から継承した静的メソッドがあります。_
+
+- {{domxref("DOMPoint/fromPoint_static", "DOMPoint.fromPoint()")}}
+  - : 既存の点（または、一致するプロパティを含むオブジェクト）を指定して、そのプロパティの値を提供する、新しい変更可能な `DOMPoint` オブジェクトを作成します。
 
 ## 例
 
@@ -50,14 +54,17 @@ function onXRFrame(time, xrFrame) {
     let position = viewerPose.transform.position;
     let orientation = viewerPose.transform.orientation;
 
-    console.log('XR Viewer Position: {x: ' + roundToTwo(position.x)
-                                 + ', y: ' + roundToTwo(position.y)
-                                 + ', z: ' + roundToTwo(position.z));
+    console.log(
+      `XR Viewer Position: {x: ${roundToTwo(position.x)}, y: ${roundToTwo(
+        position.y,
+      )}, z: ${roundToTwo(position.z)}`,
+    );
 
-    console.log('XR Viewer Orientation: {x: ' + roundToTwo(orientation.x)
-                                    + ', y: ' + roundToTwo(orientation.y)
-                                    + ', z: ' + roundToTwo(orientation.z)
-                                    + ', w: ' + roundToTwo(orientation.w));
+    console.log(
+      `XR Viewer Orientation: {x: ${roundToTwo(orientation.x)}, y: ${roundToTwo(
+        orientation.y,
+      )}, z: ${roundToTwo(orientation.z)}, w: ${roundToTwo(orientation.w)}`,
+    );
   }
 }
 ```

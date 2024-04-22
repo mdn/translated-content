@@ -1,20 +1,9 @@
 ---
 title: i18n.getAcceptLanguages()
 slug: Mozilla/Add-ons/WebExtensions/API/i18n/getAcceptLanguages
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getAcceptLanguages
-  - i18n
-translation_of: Mozilla/Add-ons/WebExtensions/API/i18n/getAcceptLanguages
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Obtient les [accept-languages](/fr/docs/Web/HTTP/Content_negotiation#The_Accept-Language_header) du navigateur. Ceci est différent des paramètres régionaux utilisés par le navigateur. Pour obtenir les paramètres régionaux, utilisez {{WebExtAPIRef('i18n.getUILanguage')}}.
 
@@ -23,7 +12,7 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 ## Syntaxe
 
 ```js
-var gettingAcceptLanguages = browser.i18n.getAcceptLanguages()
+var gettingAcceptLanguages = browser.i18n.getAcceptLanguages();
 ```
 
 ### Paramètres

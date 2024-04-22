@@ -1,7 +1,6 @@
 ---
 title: import
 slug: Web/JavaScript/Reference/Statements/import
-original_slug: Web/JavaScript/Referencia/Sentencias/import
 ---
 
 {{jsSidebar("Sentencias")}}
@@ -39,12 +38,12 @@ import "module-name";
 
 El parámetro `name` es el nombre del objeto que recibirá los miembros exportados. El parámetro `member` especifica miembros individuales, mientras el parámetro `name` importa todos ellos. name puede también ser una función si el módulo exporta un sólo parámetro por defecto en lugar de una serie de miembros. Abajo hay ejemplos que explican la sintaxis.
 
-### Importa el contenido de todo un módulo.
+### Importa el contenido de todo un módulo
 
 Esto inserta `myModule` en el ámbito actual, que contiene todos los elementos exportados en el archivo ubicado en `/modules/my-module.js`.
 
 ```js
-import * as myModule from '/modules/my-module.js';
+import * as myModule from "/modules/my-module.js";
 ```
 
 Aquí, para acceder a los miembros exportados habrá que usar el alias del módulo ("myModule" en este caso) como namespace. Por ejemplo, si el módulo importado arriba incluye un miembre exportado llamado `doAllTheAmazingThings()`, habría que invocarlo de la siguiente manera:
@@ -53,20 +52,20 @@ Aquí, para acceder a los miembros exportados habrá que usar el alias del módu
 myModule.doAllTheAmazingThings();
 ```
 
-### Importa un solo miembro de un módulo.
+### Importa un solo miembro de un módulo
 
 Dado un objeto o valor llamado `myExport` que ha sido exportado del módulo `my-module` ya sea implícitamente (porque todo el módulo ha sido exportado) o explícitamente (usando la sentencia {{jsxref("Sentencias/export", "export")}} ), esto inserta `myExport` en el ámbito actual.
 
 ```js
-import {myExport} from '/modules/my-module.js';
+import { myExport } from "/modules/my-module.js";
 ```
 
-### Importa multiples miembros de un módulo.
+### Importa multiples miembros de un módulo
 
 Esto inserta `foo` y `bar` en el ámbito actual.
 
 ```js
-import {foo, bar} from "my-module.js";
+import { foo, bar } from "my-module.js";
 ```
 
 ### Importa un miembre con un alias mas conveniente
@@ -74,8 +73,7 @@ import {foo, bar} from "my-module.js";
 Se puede renombrar un miembro exportado cuando se importa. Por ejemplo, esto inserta `shortName` en el ámbito actual.
 
 ```js
-import {reallyReallyLongModuleExportName as shortName}
-  from '/modules/my-module.js';
+import { reallyReallyLongModuleExportName as shortName } from "/modules/my-module.js";
 ```
 
 ### Renombra multiples miembros durante la importación
@@ -85,8 +83,8 @@ Importa múltiples miembros exportados de un módulo con un alias conveniente.
 ```js
 import {
   reallyReallyLongModuleExportName as shortName,
-  anotherLongModuleName as short
-} from '/modules/my-module.js';
+  anotherLongModuleName as short,
+} from "/modules/my-module.js";
 ```
 
 ### Importa un módulo entero para efectos secundarios sólamente
@@ -94,7 +92,7 @@ import {
 Importa un módulo entero para efectos secundarios sólamente, sin importar ningun elemento. Esto ejecuta el código global del módulo, pero no importa ningún valor.
 
 ```js
-import '/modules/my-module.js';
+import "/modules/my-module.js";
 ```
 
 ### Importación de elementos por defecto
@@ -104,20 +102,20 @@ Es posible tener una exportación por defecto (tanto si se trata de un objeto, f
 La versión más sencilla de importar un elemento por defecto es:
 
 ```js
-import myDefault from '/modules/my-module.js';
+import myDefault from "/modules/my-module.js";
 ```
 
 También es posible usar la sintaxis por defecto con lo que hemos visto anteriormente (importación de espacios de nombres o importaciones con nombre. En esos casos, la importación por defecto se deberá realizar en primer lugar. Por ejemplo:
 
 ```js
-import myDefault, * as myModule from '/modules/my-module.js';
+import myDefault, * as myModule from "/modules/my-module.js";
 // myModule used as a namespace
 ```
 
 o
 
 ```js
-import myDefault, {foo, bar} from '/modules/my-module.js';
+import myDefault, { foo, bar } from "/modules/my-module.js";
 // specific, named imports
 ```
 
@@ -131,24 +129,25 @@ Importar un archivo secundario para asistir en un procesamiento de una petición
 function getJSON(url, callback) {
   let xhr = new XMLHttpRequest();
   xhr.onload = function () {
-    callback(this.responseText)
+    callback(this.responseText);
   };
-  xhr.open('GET', url, true);
+  xhr.open("GET", url, true);
   xhr.send();
 }
 
 export function getUsefulContents(url, callback) {
-  getJSON(url, data => callback(JSON.parse(data)));
+  getJSON(url, (data) => callback(JSON.parse(data)));
 }
 ```
 
 ### El programa principal: main.js
 
 ```js
-import { getUsefulContents } from '/modules/file.js';
+import { getUsefulContents } from "/modules/file.js";
 
-getUsefulContents('http://www.example.com',
-    data => { doSomethingUseful(data); });
+getUsefulContents("http://www.example.com", (data) => {
+  doSomethingUseful(data);
+});
 ```
 
 ## Especificaciones

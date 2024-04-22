@@ -51,7 +51,7 @@ dataview.getFloat32(1); // 0
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.DataView.getFloat32")}}
+{{Compat}}
 
 ## 関連情報
 

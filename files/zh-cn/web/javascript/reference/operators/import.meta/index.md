@@ -1,7 +1,6 @@
 ---
 title: import.meta
 slug: Web/JavaScript/Reference/Operators/import.meta
-original_slug: Web/JavaScript/Reference/Statements/import.meta
 ---
 
 {{JSSidebar("Statements")}}

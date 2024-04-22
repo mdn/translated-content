@@ -1,8 +1,10 @@
 ---
-title: Table Grid Box
+title: Table Grid Box (表グリッドボックス)
 slug: Glossary/Table_Grid_Box
 l10n:
-  ed947b2c608428b62a60f07d09dc543f732dc09b
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-**Table Grid Box** はキャプションを除く表内のすべてのブロックレベルボックスです。キャプションを含むボックスは [Table Wrapper Box](/ja/docs/Glossary/Table_Wrapper_Box) と呼ばれます。
+{{GlossarySidebar}}
+
+**表グリッドボックス** (Table Grid Box) は、キャプションを除くすべての表の内部のブロックレベルボックスです。キャプションを含むボックスは[表ラッパーボックス](/ja/docs/Glossary/Table_Wrapper_Box)と呼ばれます。

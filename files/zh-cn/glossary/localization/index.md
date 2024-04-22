@@ -3,6 +3,8 @@ title: 本地化
 slug: Glossary/Localization
 ---
 
+{{GlossarySidebar}}
+
 **本地化**（l10n）是使软件用户界面适应特定文化环境的过程。
 
 以下是本地化过程中经常考虑的因素：
@@ -23,6 +25,9 @@ slug: Glossary/Localization
 - 本地节日
 - 人名
 
+设计一个系统以便于本地化的补充实践被称为{{glossary("Internationalization", "国际化")}}。
+
 ## 参见
 
 - 维基百科上的[本地化](https://zh.wikipedia.org/wiki/语言本地化)词条
+- {{glossary("Internationalization", "国际化")}}

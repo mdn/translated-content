@@ -1,9 +1,6 @@
 ---
 title: アニメーションを順番に再生する
 slug: Learn/JavaScript/Asynchronous/Sequencing_animations
-tags:
-  - JavaScript
-  - Learn
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Asynchronous/Introducing_workers", "Learn/JavaScript/Asynchronous")}}

@@ -18,7 +18,7 @@ Tous les nœuds qui sont des éléments `<input>` possèdent un attribut `files`
 On pourra utiliser la ligne de code suivante pour récupérer le premier fichier de la liste des fichiers pour ce nœud dans un objet [`File`](/fr/docs/Web/API/File)&nbsp;:
 
 ```js
-const file = document.getElementById('fileItem').files[0];
+const file = document.getElementById("fileItem").files[0];
 ```
 
 > **Note :** Cette interface [se voulait une tentative de modélisation d'une liste non-modifiable](https://stackoverflow.com/questions/74630989/why-use-domstringlist-rather-than-an-array/74641156#74641156) et continue uniquement d'être prise en charge pour ne pas casser le code qui l'utilise encore. Les API plus récentes utilisent des types qui se basent sur le type ECMAScript [`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array), afin que les objets puissent être traités comme des tableaux tout en imposant une sémantique additionnelle correspondant à leur utilisation (par exemple, en marquant leurs éléments comme étant en lecture seule).
@@ -49,7 +49,7 @@ Dans cet exemple, nous allons afficher le nom des fichiers sélectionnés par l'
 #### JavaScript
 
 ```js
-const sortie = document.querySelector('.sortie');
+const sortie = document.querySelector(".sortie");
 const fileInput = document.querySelector("#mesfichiers");
 
 fileInput.addEventListener("change", () => {

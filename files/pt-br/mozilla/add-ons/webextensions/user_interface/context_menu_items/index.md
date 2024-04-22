@@ -1,7 +1,6 @@
 ---
 title: Itens do menu de contexto
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
-original_slug: Mozilla/Add-ons/WebExtensions/user_interface/Itens_do_menu_de_contexto
 ---
 
 {{AddonSidebar}}
@@ -27,11 +26,14 @@ Você controla os itens do menu de contexto programaticamente, usando a API {{We
 Você pode então adicionar (e atualizar ou apagar) os itens do menu de contexto em seu script de "background" (segundo plano) da sua extensão. Para criar um item de menu, você especifica um id, seu título, e os menus de contexto em que ele deve aparecer:
 
 ```js
-browser.contextMenus.create({
-  id: "log-selection",
-  title: browser.i18n.getMessage("contextMenuItemSelectionLogger"),
-  contexts: ["selection"]
-}, onCreated);
+browser.contextMenus.create(
+  {
+    id: "log-selection",
+    title: browser.i18n.getMessage("contextMenuItemSelectionLogger"),
+    contexts: ["selection"],
+  },
+  onCreated,
+);
 ```
 
 Sua extensão então escuta os cliques nos itens do menu. As informações passadas sobre o item clicado, o contexto em que o clique ocorreu e os detalhes da guia em que o clique ocorreu podem ser usadas para chamar a funcionalidade de extensão apropriada.

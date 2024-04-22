@@ -42,12 +42,16 @@ Promise는 어떤 작업의 중간상태를 나타내는 오브젝트 입니다.
 ```js
 function handleCallButton(evt) {
   setStatusMessage("Calling...");
-  navigator.mediaDevices.getUserMedia({video: true, audio: true})
-    .then(chatStream => {
+  navigator.mediaDevices
+    .getUserMedia({ video: true, audio: true })
+    .then((chatStream) => {
       selfViewElem.srcObject = chatStream;
-      chatStream.getTracks().forEach(track => myPeerConnection.addTrack(track, chatStream));
+      chatStream
+        .getTracks()
+        .forEach((track) => myPeerConnection.addTrack(track, chatStream));
       setStatusMessage("Connected");
-    }).catch(err => {
+    })
+    .catch((err) => {
       setStatusMessage("Failed to connect");
     });
 }
@@ -74,12 +78,20 @@ Promise가 왜 좋은지 이해하기 위해 구식 callbacks을 살펴보고 �
 구식 [callbacks](/ko/docs/Learn/JavaScript/Asynchronous/Introducing#Callbacks)을 사용하면 아래와 같은 모습의 코드가 나타날것 입니다. :
 
 ```js
-chooseToppings(function(toppings) {
-  placeOrder(toppings, function(order) {
-    collectOrder(order, function(pizza) {
-      eatPizza(pizza);
-    }, failureCallback);
-  }, failureCallback);
+chooseToppings(function (toppings) {
+  placeOrder(
+    toppings,
+    function (order) {
+      collectOrder(
+        order,
+        function (pizza) {
+          eatPizza(pizza);
+        },
+        failureCallback,
+      );
+    },
+    failureCallback,
+  );
 }, failureCallback);
 ```
 
@@ -91,16 +103,16 @@ chooseToppings(function(toppings) {
 
 ```js
 chooseToppings()
-.then(function(toppings) {
-  return placeOrder(toppings);
-})
-.then(function(order) {
-  return collectOrder(order);
-})
-.then(function(pizza) {
-  eatPizza(pizza);
-})
-.catch(failureCallback);
+  .then(function (toppings) {
+    return placeOrder(toppings);
+  })
+  .then(function (order) {
+    return collectOrder(order);
+  })
+  .then(function (pizza) {
+    eatPizza(pizza);
+  })
+  .catch(failureCallback);
 ```
 
 보기에 훨씬 더 좋군요! — 이렇게 작성하면 앞으로 어떤 일이 일어날지 쉽게 예측 가능합니다. 그리고 단 한개의 `.catch()` 을 사용하여 모든 에러를 처리합니다. 그리고 main thread를 차단하지 않습니다. (그래서 피자를 주문하고 기다리는 동안 하던 게임을 마저 할 수 있습니다.), 또한 각 함수가 실행되기 전 이전 작업이 끝날때까지 기다립니다. 이런식으로 여러 개의 비동기 작업을 연쇄적으로 처리할 수 있습니다. 왜냐햐면 각 `.then()` 블럭은 자신이 속한 블럭의 작업이 끝났을 때의 결과를 새로운 Promise 반환해주기 때문입니다. 어때요, 참 쉽죠?
@@ -109,26 +121,20 @@ chooseToppings()
 
 ```js
 chooseToppings()
-.then(toppings =>
-  placeOrder(toppings)
-)
-.then(order =>
-  collectOrder(order)
-)
-.then(pizza =>
-  eatPizza(pizza)
-)
-.catch(failureCallback);
+  .then((toppings) => placeOrder(toppings))
+  .then((order) => collectOrder(order))
+  .then((pizza) => eatPizza(pizza))
+  .catch(failureCallback);
 ```
 
 혹은 아래처럼 표현할 수 있습니다. :
 
 ```js
 chooseToppings()
-.then(toppings => placeOrder(toppings))
-.then(order => collectOrder(order))
-.then(pizza => eatPizza(pizza))
-.catch(failureCallback);
+  .then((toppings) => placeOrder(toppings))
+  .then((order) => collectOrder(order))
+  .then((pizza) => eatPizza(pizza))
+  .catch(failureCallback);
 ```
 
 화살표 함수의 `() => x` 표현은 `() => { return x; }`의 약식 표현이므로 잘 작동합니다.
@@ -136,7 +142,11 @@ chooseToppings()
 함수는 arguments를 직접 전달 하므로 함수처럼 표현하지 않고 아래와 같이 작성할 수도 있습니다. :
 
 ```js
-chooseToppings().then(placeOrder).then(collectOrder).then(eatPizza).catch(failureCallback);
+chooseToppings()
+  .then(placeOrder)
+  .then(collectOrder)
+  .then(eatPizza)
+  .catch(failureCallback);
 ```
 
 그런데 이렇게 작성하면 읽기가 쉽지 않습니다. 사용자의 코드가 지금의 예제보다 더 복잡하다면 위의 방법은 사용하기 힘듭니다.
@@ -160,56 +170,54 @@ Promise는 이벤트 리스너와 유사하지만 몇 가지 다른점이 있습
 2. HTML {{htmlelement("body")}} 하단에 {{htmlelement("script")}} 엘리먼트를 삽입합니다.
 3. {{HTMLElement("script")}} 엘리먼트 안에 아래와 같이 코드를 작성합니다. :
 
-    ```js
-    let promise = fetch('coffee.jpg');
-    ```
+   ```js
+   let promise = fetch("coffee.jpg");
+   ```
 
-    `fetch()` 메서드를 호출하여, 네트워크에서 fetch할 이미지의 URL을 매개변수로 전달합니다. 두 번째 매개변수를 사용할 수 있지만, 지금은 우선 간단하게 하나의 매개변수만 사용하겠습니다. 코드를 더 살펴보면 `promise`변수에 `fetch()` 작업으로 반환된 Promise 오브젝트를 저장하고 있습니다. 이전에 말했듯이, 지금 오브젝트는 성공도 아니고 실패도 아닌 중간 상태를 저장하고 있습니다. 공식적으로는 **pending**상태라고 부릅니다.
+   `fetch()` 메서드를 호출하여, 네트워크에서 fetch할 이미지의 URL을 매개변수로 전달합니다. 두 번째 매개변수를 사용할 수 있지만, 지금은 우선 간단하게 하나의 매개변수만 사용하겠습니다. 코드를 더 살펴보면 `promise`변수에 `fetch()` 작업으로 반환된 Promise 오브젝트를 저장하고 있습니다. 이전에 말했듯이, 지금 오브젝트는 성공도 아니고 실패도 아닌 중간 상태를 저장하고 있습니다. 공식적으로는 **pending**상태라고 부릅니다.
 
-4. 작업이 성공적으로 진행될 때를 대응하기 위해 (이번 예제에선 {{domxref("Response")}} 가 반환될 때 입니다. ), 우리는 Promise 오브젝트의 [`.then()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) 메서드를 호출합니다. `.then()` 블럭 안의 callback은 (**executor** 라고 부름) Promise가 성공적으로 완료되고{{domxref("Response")}} 오브젝트를 반환할 때만 실행합니다. — 이렇게 성공한 Promise의 상태를 **fulfilled**라고 부릅니다. 그리고 반환된 {{domxref("Response")}} 오브젝트를 매개변수로 전달합니다.
+4. 작업이 성공적으로 진행될 때를 대응하기 위해 (이번 예제에선 {{domxref("Response")}} 가 반환될 때 입니다. ), 우리는 Promise 오브젝트의 [`.then()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) 메서드를 호출합니다. `.then()` 블럭 안의 callback은 (**executor** 라고 부름) Promise가 성공적으로 완료되고{{domxref("Response")}} 오브젝트를 반환할 때만 실행합니다. — 이렇게 성공한 Promise의 상태를 **fulfilled**라고 부릅니다. 그리고 반환된 {{domxref("Response")}} 오브젝트를 매개변수로 전달합니다.
 
-    > **참고:** The way that a `.then()` block works is similar to when you add an event listener to an object using `AddEventListener()`. It doesn't run until an event occurs (when the promise fulfills). The most notable difference is that a .then() will only run once for each time it is used, whereas an event listener could be invoked multiple times.
+   > **참고:** The way that a `.then()` block works is similar to when you add an event listener to an object using `AddEventListener()`. It doesn't run until an event occurs (when the promise fulfills). The most notable difference is that a .then() will only run once for each time it is used, whereas an event listener could be invoked multiple times.
 
-    그리고 즉시 `blob()` 메서드를 실행하여 Response Body가 완전히 다운로드 됐는지 확인합니다. 그리고 Response Body가 이용 가능할 때 추가 작업을 할 수 있는 `Blob` 오브젝트로 변환시킵니다. 해당 코드는 아래와 같이 작성할 수 있습니다. :
+   그리고 즉시 `blob()` 메서드를 실행하여 Response Body가 완전히 다운로드 됐는지 확인합니다. 그리고 Response Body가 이용 가능할 때 추가 작업을 할 수 있는 `Blob` 오브젝트로 변환시킵니다. 해당 코드는 아래와 같이 작성할 수 있습니다. :
 
-    ```js
-    response => response.blob()
-    ```
+   ```js
+   (response) => response.blob();
+   ```
 
-    위의 코드는 아래의 코드를 축약한 형태입니다.
+   위의 코드는 아래의 코드를 축약한 형태입니다.
 
-    ```js
-    function(response) {
-      return response.blob();
-    }
-    ```
+   ```js
+   function(response) {
+     return response.blob();
+   }
+   ```
 
-    이제 추가 설명은 충븐하므로, JavaScript의 첫 번째 줄 아래에 다음과 같은 라인을 추가하세요.
+   이제 추가 설명은 충븐하므로, JavaScript의 첫 번째 줄 아래에 다음과 같은 라인을 추가하세요.
 
-    ```js
-    let promise2 = promise.then(response => response.blob());
-    ```
+   ```js
+   let promise2 = promise.then((response) => response.blob());
+   ```
 
 5. 각 `.then()` 을 호출하면 새로운 Promise를 만드는데, 이는 매우 유용합니다. 왜냐하면 `blob()` 메서드도 Promise를 반환하기 때문에, 두 번째 Promise의 `.then()` 메서드를 호출함으로써 이행시 반환되는 `Blob` 오브젝트를 처리할 수 있습니다. 한 가지 메서드를 실행하여 결과를 반환하는 것보다 Blob에 좀 더 복잡한 일을 추가하고 싶습니다. 이럴때는 중괄호{ }로 묶습니다. (그렇지 않으면 에러가 발생합니다.).
 
-    이어서 아래와 같은 코드를 추가합니다.:
+   이어서 아래와 같은 코드를 추가합니다.:
 
-    ```js
-    let promise3 = promise2.then(myBlob => {
-
-    })
-    ```
+   ```js
+   let promise3 = promise2.then((myBlob) => {});
+   ```
 
 6. 이제 executor 함수를 아래와 같이 채워넣습니다. 중괄호 안에 작성하면 됩니다. :
 
-    ```js
-    let objectURL = URL.createObjectURL(myBlob);
-    let image = document.createElement('img');
-    image.src = objectURL;
-    document.body.appendChild(image);
-    ```
+   ```js
+   let objectURL = URL.createObjectURL(myBlob);
+   let image = document.createElement("img");
+   image.src = objectURL;
+   document.body.appendChild(image);
+   ```
 
-    여기서 우리는 두 번째 Promise가 fulfills일 때 반횐된 Blob을 매개변수로 전달받는 {{domxref("URL.createObjectURL()")}} 메서드를 실행하고 있습니다. 이렇게 하면 오브젝트가 가지고있는 URL이 반환됩니다. 그 다음 {{htmlelement("img")}} 엘리먼트를 만들고, 반환된 URL을 `src` 속성에 지정하여 DOM에 추가합니다. 이렇게 하면 페이지에 그림이 표시됩니다.
+   여기서 우리는 두 번째 Promise가 fulfills일 때 반횐된 Blob을 매개변수로 전달받는 {{domxref("URL.createObjectURL()")}} 메서드를 실행하고 있습니다. 이렇게 하면 오브젝트가 가지고있는 URL이 반환됩니다. 그 다음 {{htmlelement("img")}} 엘리먼트를 만들고, 반환된 URL을 `src` 속성에 지정하여 DOM에 추가합니다. 이렇게 하면 페이지에 그림이 표시됩니다.
 
 If you save the HTML file you've just created and load it in your browser, you'll see that the image is displayed in the page as expected. Good work!
 
@@ -217,11 +225,13 @@ If you save the HTML file you've just created and load it in your browser, you'l
 
 ### Responding to failure
 
-현재 에러가 발생했을 때 어떻게 처리를 해야할 지 작성된 코드가 없기때문에 코드를 조금만 더 추가하여 좀 더 완벽하게 작성해봅시다. (Promise에서 에러가 발생한 상태를 **rejects**라 부릅니다). 이전에 봤던대로 [`.catch()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch) 블럭을 추가하여 오류를 핸들링 할 수 있습니다. 아래처럼 말이죠 :
+현재 에러가 발생했을 때 어떻게 처리를 해야할 지 작성된 코드가 없기때문에 코드를 조금만 더 추가하여 좀 더 완벽하게 작성해봅시다. (Promise에서 에러가 발생한 상태를 **rejects**라 부릅니다). 이전에 봤던대로 [`.catch()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch) 블럭을 추가하여 오류를 핸들링 할 수 있습니다. 아래처럼 말이죠 :
 
 ```js
-let errorCase = promise3.catch(e => {
-  console.log('There has been a problem with your fetch operation: ' + e.message);
+let errorCase = promise3.catch((e) => {
+  console.log(
+    "There has been a problem with your fetch operation: " + e.message,
+  );
 });
 ```
 
@@ -236,22 +246,24 @@ let errorCase = promise3.catch(e => {
 위에서 사용한 코드는 작업이 어떻게 처리되는지 명확하게 보여주기 위해 매우 길게 코드를 작성했습니다. 이전 글에서 봤듯이, `.then()` 블럭을 사용하여 연쇄 작업을 진행할 수 있습니다. (또한 `.catch()` 블럭을 사용하여 에러 처리도 했지요). 앞선 예제의 코드는 아래와 같이 작성할 수도 있습니다. (see also [simple-fetch-chained.html](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/simple-fetch-chained.html) on GitHub):
 
 ```js
-fetch('coffee.jpg')
-.then(response => response.blob())
-.then(myBlob => {
-  let objectURL = URL.createObjectURL(myBlob);
-  let image = document.createElement('img');
-  image.src = objectURL;
-  document.body.appendChild(image);
-})
-.catch(e => {
-  console.log('There has been a problem with your fetch operation: ' + e.message);
-});
+fetch("coffee.jpg")
+  .then((response) => response.blob())
+  .then((myBlob) => {
+    let objectURL = URL.createObjectURL(myBlob);
+    let image = document.createElement("img");
+    image.src = objectURL;
+    document.body.appendChild(image);
+  })
+  .catch((e) => {
+    console.log(
+      "There has been a problem with your fetch operation: " + e.message,
+    );
+  });
 ```
 
 fulfilled promise 결과에 의해 반환된 값이 다음 `.then()` 블록의 executor 함수가 가진 파라미터로 전달 된다는 것을 꼭 기억하세요.
 
-> **참고:** `.then()`/`.catch()` blocks in promises are basically the async equivalent of a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block in sync code. Bear in mind that synchronous `try...catch` won't work in async code.
+> **참고:** `.then()`/`.catch()` blocks in promises are basically the async equivalent of a [`try...catch`](/ko/docs/Web/JavaScript/Reference/Statements/try...catch) block in sync code. Bear in mind that synchronous `try...catch` won't work in async code.
 
 ## Promise terminology recap
 
@@ -260,14 +272,14 @@ fulfilled promise 결과에 의해 반환된 값이 다음 `.then()` 블록의 e
 1. Promise가 생성되면 그 상태는 성공도 실패도 아닌 **pending**상태라고 부릅니다..
 2. Promise결과가 반환되면 결과에 상관 없이 **resolved**상태라고 부릅니다..
 
-    1. 성공적으로 처리된 Promise는 **fulfilled**상태이다. 이 상태가 되면 Promise 체인의 다음 `.then()` 블럭에서 사용할 수 있는 값을 반환합니다.. 그리고 `.then()` 블럭 내부의 executor 함수에 Promise에서 반환된 값이 파라미터로 전달됩니다..
-    2. 실패한 Promise는 **rejected**상태이다. 이때 어떤 이유(**reason)** 때문에 Promise가 rejected 됐는지를 나타내는 에러 메시지를 포함한 결과가 반환됩니다. Promise 체이닝의 제일 마지막 `.catch()` 에서 상세한 에러 메시지를 확인할 수 있습니다.
+   1. 성공적으로 처리된 Promise는 **fulfilled**상태이다. 이 상태가 되면 Promise 체인의 다음 `.then()` 블럭에서 사용할 수 있는 값을 반환합니다.. 그리고 `.then()` 블럭 내부의 executor 함수에 Promise에서 반환된 값이 파라미터로 전달됩니다..
+   2. 실패한 Promise는 **rejected**상태이다. 이때 어떤 이유(**reason)** 때문에 Promise가 rejected 됐는지를 나타내는 에러 메시지를 포함한 결과가 반환됩니다. Promise 체이닝의 제일 마지막 `.catch()` 에서 상세한 에러 메시지를 확인할 수 있습니다.
 
 ## Running code in response to multiple promises fulfilling
 
 위의 예제에서 Promise사용의 기초를 확인했습니다. 이제 고급 기능들을 한번 보겠습니다. 제일 먼저 확인해볼 예제는 다음과 같습니다. 연쇄적으로 일어나는 작업은 좋습니다. 그런데 모든 Promise가 fulfilled일 경우 코드를 실행하고 싶은 경우가 있을것 입니다.
 
-해당 기능을 [`Promise.all()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) 이라는 스테틱 메서드를 사용하여 만들 수 있습니다. 이 메서드는 Promise의 배열을 매개변수로 삼고, 배열의 모든 Promise가 fulfil일 때만 새로운 fulfil `Promise` 오브젝트를 반환합니다. 아래처럼 말이죠 :
+해당 기능을 [`Promise.all()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) 이라는 스테틱 메서드를 사용하여 만들 수 있습니다. 이 메서드는 Promise의 배열을 매개변수로 삼고, 배열의 모든 Promise가 fulfil일 때만 새로운 fulfil `Promise` 오브젝트를 반환합니다. 아래처럼 말이죠 :
 
 ```js
 Promise.all([a, b, c]).then(values => {
@@ -285,88 +297,89 @@ Promise.all([a, b, c]).then(values => {
 2. 이미지 그리고 텍스트 파일([coffee.jpg](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/coffee.jpg), [tea.jpg](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/tea.jpg), and [description.txt](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/description.txt))을 다운받고 [page template](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html) 와 같은 경로에 저장해주세요.
 3. 먼저 Promise를 반환하는 몇 가지 함수를 만들어 `Promise.all()`로 결과를 반환합니다. 세 개의 `fetch()` 작업이 끝나고 다음 요청을 진행하고 싶다면 아래 코드처럼 `Promise.all()`블럭을 작성합니다. :
 
-    ```js
-    let a = fetch(url1);
-    let b = fetch(url2);
-    let c = fetch(url3);
+   ```js
+   let a = fetch(url1);
+   let b = fetch(url2);
+   let c = fetch(url3);
 
-    Promise.all([a, b, c]).then(values => {
-      ...
-    });
-    ```
+   Promise.all([a, b, c]).then(values => {
+     ...
+   });
+   ```
 
-    Promise가 fulfilled가 됐을 때, fulfilment handler 핸들러로 전달된 values 매개변수에는 각 `fetch()` 의 결과로 발생한 세 개의 `Response` 오브젝트가 들어있습니다 .
+   Promise가 fulfilled가 됐을 때, fulfilment handler 핸들러로 전달된 values 매개변수에는 각 `fetch()` 의 결과로 발생한 세 개의 `Response` 오브젝트가 들어있습니다 .
 
-    하지만 우리는 단순히 결과만 넘겨주고 싶지 않습니다. 우리는`fetch()` 언제 끝나는지 보다 불러온 데이터에 더 관심이 있습니다. 그말은 브라우저에 표현할 수 있는 Blob과 텍스트 문자열이 불러와 졌을 때 `Promise.all()` 블럭을 실행하고 싶다는 것 입니다. `<script>` 엘리먼트에 아래와 같이 작성합니다. :
+   하지만 우리는 단순히 결과만 넘겨주고 싶지 않습니다. 우리는`fetch()` 언제 끝나는지 보다 불러온 데이터에 더 관심이 있습니다. 그말은 브라우저에 표현할 수 있는 Blob과 텍스트 문자열이 불러와 졌을 때 `Promise.all()` 블럭을 실행하고 싶다는 것 입니다. `<script>` 엘리먼트에 아래와 같이 작성합니다. :
 
-    ```js
-    function fetchAndDecode(url, type) {
-      return fetch(url).then(response => {
-        if (type === 'blob') {
-          return response.blob();
-        } else if (type === 'text') {
-          return response.text();
-        }
-      })
-      .catch(e => {
-        console.log('There has been a problem with your fetch operation: ' + e.message);
-      });
-    }
-    ```
+   ```js
+   function fetchAndDecode(url, type) {
+     return fetch(url)
+       .then((response) => {
+         if (type === "blob") {
+           return response.blob();
+         } else if (type === "text") {
+           return response.text();
+         }
+       })
+       .catch((e) => {
+         console.log(
+           "There has been a problem with your fetch operation: " + e.message,
+         );
+       });
+   }
+   ```
 
-    살짝 복잡해 보이므로 하나하나 살펴봅시다. :
+   살짝 복잡해 보이므로 하나하나 살펴봅시다. :
 
-    1. 먼저 fetchAndDecode() 함수를 정의했고 함수의 매개변수로 컨텐츠의 URL과 가져오는 리소스의 타입을 지정합니다.
-    2. 함수 내부에 첫 번째 예에서 본 것과 유사한 구조를 가진 코드가 있습니다. — `fetch()` 함수를 호출하여 전달받은 URL에서 리소스를 받아오도록 했습니다. 그리고 다음 Promise를 연쇄적으로 호출하여 디코딩된 (혹은 "읽은") Response Body를 반환하게 합니다. 이전 예에선 Blob만을 가져오기 때문에 `blob()` 메서드만 썼습니다.
-    3. 여기에선 이전과 다른 두 가지가 있습니다. :
+   1. 먼저 fetchAndDecode() 함수를 정의했고 함수의 매개변수로 컨텐츠의 URL과 가져오는 리소스의 타입을 지정합니다.
+   2. 함수 내부에 첫 번째 예에서 본 것과 유사한 구조를 가진 코드가 있습니다. — `fetch()` 함수를 호출하여 전달받은 URL에서 리소스를 받아오도록 했습니다. 그리고 다음 Promise를 연쇄적으로 호출하여 디코딩된 (혹은 "읽은") Response Body를 반환하게 합니다. 이전 예에선 Blob만을 가져오기 때문에 `blob()` 메서드만 썼습니다.
+   3. 여기에선 이전과 다른 두 가지가 있습니다. :
 
-        - 먼저 두 번째 Promise에서는 불러올 리소스의 `type` 이 무엇인지에 따라 반환받는 데이터가 다릅니다. executor 함수 내부에, 간단한 `if ... else if` 구문을 사용하여 어떤 종류의 파일을 디코딩해야 하는지에 따라 다른 Promise를 반환하게 했습니다. (이 경우 `blob` 이나 `text`밖에 없지만, 이것을 잘 활용하여 다른 코드에 확장하여 적용할 수 있습니다.).
-        - 두 번째로, `fetch()` 호출 앞에 `return` 키워드를 추가했습니다. 이렇게 하면 Promise 체이닝의 마지막 결과값을 함수의 결과로 반환해 줄 수 있습니다. (이 경우 `blob()` 혹은 `text()`메서드에 의해 반환된 Promise 입니다.) 사실상 `fetch()` 앞의 `return` 구문은 체이닝 결과를 다시 상단으로 전달하는 행위 입니다.
+      - 먼저 두 번째 Promise에서는 불러올 리소스의 `type` 이 무엇인지에 따라 반환받는 데이터가 다릅니다. executor 함수 내부에, 간단한 `if ... else if` 구문을 사용하여 어떤 종류의 파일을 디코딩해야 하는지에 따라 다른 Promise를 반환하게 했습니다. (이 경우 `blob` 이나 `text`밖에 없지만, 이것을 잘 활용하여 다른 코드에 확장하여 적용할 수 있습니다.).
+      - 두 번째로, `fetch()` 호출 앞에 `return` 키워드를 추가했습니다. 이렇게 하면 Promise 체이닝의 마지막 결과값을 함수의 결과로 반환해 줄 수 있습니다. (이 경우 `blob()` 혹은 `text()`메서드에 의해 반환된 Promise 입니다.) 사실상 `fetch()` 앞의 `return` 구문은 체이닝 결과를 다시 상단으로 전달하는 행위 입니다.
 
-    4. 블럭의 마지막에는 `.catch()` 블럭을 추가하여 작업중 발생한 에러를 `.all()`의 배열로 전달합니다. 아무 Promise에서 reject가 발생하면, catch 블럭은 어떤 Promise에서 에러가 발생했는지 알려줄 것 입니다. `.all()` (아래쪽에 있는) 블럭의 리소스에 문제가 있지 않는 이상 항상 fulfil일것 입니다. `.all` 블럭의 마지막 체이닝에 `.catch()` 블럭을 추가하여 reject됐을때 확인을 할 수 있습니다.
+   4. 블럭의 마지막에는 `.catch()` 블럭을 추가하여 작업중 발생한 에러를 `.all()`의 배열로 전달합니다. 아무 Promise에서 reject가 발생하면, catch 블럭은 어떤 Promise에서 에러가 발생했는지 알려줄 것 입니다. `.all()` (아래쪽에 있는) 블럭의 리소스에 문제가 있지 않는 이상 항상 fulfil일것 입니다. `.all` 블럭의 마지막 체이닝에 `.catch()` 블럭을 추가하여 reject됐을때 확인을 할 수 있습니다.
 
-    함수의 body 안에 있는 코드는 비동기적이고 Promise 기반이므로, 전체 함수는 Promise로 작동합니다. — 편리하죠?.
+   함수의 body 안에 있는 코드는 비동기적이고 Promise 기반이므로, 전체 함수는 Promise로 작동합니다. — 편리하죠?.
 
 4. 다음으로 fetchAndDecode() 함수를 세 번 호출하여 이미지와 텍스트를 가져오고 디코딩 하는 과정을 시작합니다. 그리고 반환된 Promise를 각각의 변수에 저장합니다. 이전 코드에 이어서 아래 코드를 추가하세요. :
 
-    ```js
-    let coffee = fetchAndDecode('coffee.jpg', 'blob');
-    let tea = fetchAndDecode('tea.jpg', 'blob');
-    let description = fetchAndDecode('description.txt', 'text');
-    ```
+   ```js
+   let coffee = fetchAndDecode("coffee.jpg", "blob");
+   let tea = fetchAndDecode("tea.jpg", "blob");
+   let description = fetchAndDecode("description.txt", "text");
+   ```
 
 5. 다음으로 위의 세 가지 코드가 모두 fulfilled가 됐을 때 원하는 코드를 실행하기 위해 `Promise.all()` 블럭을 만듭니다. 우선, `.then()` call 안에 비어있는 executor 를 추가하세요 :
 
-    ```js
-    Promise.all([coffee, tea, description]).then(values => {
+   ```js
+   Promise.all([coffee, tea, description]).then((values) => {});
+   ```
 
-    });
-    ```
-
-    위에서 Promise를 포함하는 배열을 매개 변수로 사용하는 것을 확인할 수 있습니다. executor는 세 가지 Promise가 resolve될 때만 실행될 것 입니다. 그리고 executor가 실행될 때 개별적인 Promise의 결과를 포함하는 \[coffee-results, tea-results, description-results] 배열을 매개 변수로 전달받을 것 입니다. (여기선 디코딩된 Response Body 입니다.).
+   위에서 Promise를 포함하는 배열을 매개 변수로 사용하는 것을 확인할 수 있습니다. executor는 세 가지 Promise가 resolve될 때만 실행될 것 입니다. 그리고 executor가 실행될 때 개별적인 Promise의 결과를 포함하는 \[coffee-results, tea-results, description-results] 배열을 매개 변수로 전달받을 것 입니다. (여기선 디코딩된 Response Body 입니다.).
 
 6. 마지막으로 executor 함수를 작성합니다. 예제에선 반환된 결과를 별도의 변수로 저장하기 위해 간단한 동기화 코드를 사용합니다. (Blob에서 오브젝트 URLs 생성), 그리고 페이지에 텍스트와 이미지를 표시합니다.
 
-    ```js
-    console.log(values);
-    // Store each value returned from the promises in separate variables; create object URLs from the blobs
-    let objectURL1 = URL.createObjectURL(values[0]);
-    let objectURL2 = URL.createObjectURL(values[1]);
-    let descText = values[2];
+   ```js
+   console.log(values);
+   // Store each value returned from the promises in separate variables; create object URLs from the blobs
+   let objectURL1 = URL.createObjectURL(values[0]);
+   let objectURL2 = URL.createObjectURL(values[1]);
+   let descText = values[2];
 
-    // Display the images in <img> elements
-    let image1 = document.createElement('img');
-    let image2 = document.createElement('img');
-    image1.src = objectURL1;
-    image2.src = objectURL2;
-    document.body.appendChild(image1);
-    document.body.appendChild(image2);
+   // Display the images in <img> elements
+   let image1 = document.createElement("img");
+   let image2 = document.createElement("img");
+   image1.src = objectURL1;
+   image2.src = objectURL2;
+   document.body.appendChild(image1);
+   document.body.appendChild(image2);
 
-    // Display the text in a paragraph
-    let para = document.createElement('p');
-    para.textContent = descText;
-    document.body.appendChild(para);
-    ```
+   // Display the text in a paragraph
+   let para = document.createElement("p");
+   para.textContent = descText;
+   document.body.appendChild(para);
+   ```
 
 7. 코드를 저장하고 창을 새로고치면 보기엔 좋지 않지만, UI 구성 요소가 모두 표시된 것을 볼 수 있습니다.
 
@@ -376,7 +389,7 @@ Promise.all([a, b, c]).then(values => {
 
 > **참고:** If you were improving this code, you might want to loop through a list of items to display, fetching and decoding each one, and then loop through the results inside `Promise.all()`, running a different function to display each one depending on what the type of code was. This would make it work for any number of items, not just three.
 >
-> Also, you could determine what the type of file is being fetched without needing an explicit `type` property. You could, for example, check the {{HTTPHeader("Content-Type")}} HTTP header of the response in each case using [`response.headers.get("content-type")`](/en-US/docs/Web/API/Headers/get), and then react accordingly.
+> Also, you could determine what the type of file is being fetched without needing an explicit `type` property. You could, for example, check the {{HTTPHeader("Content-Type")}} HTTP header of the response in each case using [`response.headers.get("content-type")`](/ko/docs/Web/API/Headers/get), and then react accordingly.
 
 ## Running some final code after a promise fulfills/rejects
 
@@ -384,48 +397,52 @@ Promise의 결과가 fulfilled 인지 rejected인지 관계 없이 Promise가 �
 
 ```js
 myPromise
-.then(response => {
-  doSomething(response);
-  runFinalCode();
-})
-.catch(e => {
-  returnError(e);
-  runFinalCode();
-});
+  .then((response) => {
+    doSomething(response);
+    runFinalCode();
+  })
+  .catch((e) => {
+    returnError(e);
+    runFinalCode();
+  });
 ```
 
-보다 최근의 현대 브라우저에서는 [`.finally()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/finally) 메서드를 사용할 수 있습니다. 이 메서드를 Promise 체이닝의 끝에 배치하여 코드 반복을 줄이고 좀 더 우아하게 일을 처리할 수 있습니다. 아래와 같이 마지막 블럭에 적용할 수 있습니다. :
+보다 최근의 현대 브라우저에서는 [`.finally()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise/finally) 메서드를 사용할 수 있습니다. 이 메서드를 Promise 체이닝의 끝에 배치하여 코드 반복을 줄이고 좀 더 우아하게 일을 처리할 수 있습니다. 아래와 같이 마지막 블럭에 적용할 수 있습니다. :
 
 ```js
 myPromise
-.then(response => {
-  doSomething(response);
-})
-.catch(e => {
-  returnError(e);
-})
-.finally(() => {
-  runFinalCode();
-});
+  .then((response) => {
+    doSomething(response);
+  })
+  .catch((e) => {
+    returnError(e);
+  })
+  .finally(() => {
+    runFinalCode();
+  });
 ```
 
 실제 예시는 [promise-finally.html demo](https://mdn.github.io/learning-area/javascript/asynchronous/promises/promise-finally.html) 에 나와있습니다. (see the [source code](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/promise-finally.html) also). 이 예시는 위에서 만들어본 `Promise.all()` 데모와 똑같이 작동합니다. 다만 이번에는 `fetchAndDecode()` 함수에 다음 연쇄 작업으로 `finally()` 를 호출합니다.:
 
 ```js
 function fetchAndDecode(url, type) {
-  return fetch(url).then(response => {
-    if(type === 'blob') {
-      return response.blob();
-    } else if(type === 'text') {
-      return response.text();
-    }
-  })
-  .catch(e => {
-    console.log(`There has been a problem with your fetch operation for resource "${url}": ` + e.message);
-  })
-  .finally(() => {
-    console.log(`fetch attempt for "${url}" finished.`);
-  });
+  return fetch(url)
+    .then((response) => {
+      if (type === "blob") {
+        return response.blob();
+      } else if (type === "text") {
+        return response.text();
+      }
+    })
+    .catch((e) => {
+      console.log(
+        `There has been a problem with your fetch operation for resource "${url}": ` +
+          e.message,
+      );
+    })
+    .finally(() => {
+      console.log(`fetch attempt for "${url}" finished.`);
+    });
 }
 ```
 
@@ -441,14 +458,14 @@ function fetchAndDecode(url, type) {
 
 ### Using the Promise() constructor
 
-[`Promise()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) constructor를 사용하여 사용자 정의 Promise를 만들 수 있습니다. 주로 Promise기반이 아닌 구식 비동기 API코드를 Promise기반 코드로 만들고 싶을 경우 사용합니다. 이 방법은 구식 프로젝트 코드, 라이브러리, 혹은 프레임워크를 지금의 Promise 코드와 함께 사용할 때 유용합니다.
+[`Promise()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise) constructor를 사용하여 사용자 정의 Promise를 만들 수 있습니다. 주로 Promise기반이 아닌 구식 비동기 API코드를 Promise기반 코드로 만들고 싶을 경우 사용합니다. 이 방법은 구식 프로젝트 코드, 라이브러리, 혹은 프레임워크를 지금의 Promise 코드와 함께 사용할 때 유용합니다.
 
-간단한 예를 들어 살펴보겠습니다. — 여기 Promise와 함께 사용되는 [`setTimeout()`](/ko/docs/Web/API/setTimeout) 호출이 있습니다. — 이 함수는 2초 후에 "Success!"라는 문자열과 함께 resolve됩니다. (통과된 [`resolve()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve) 호출에 의해);
+간단한 예를 들어 살펴보겠습니다. — 여기 Promise와 함께 사용되는 [`setTimeout()`](/ko/docs/Web/API/setTimeout) 호출이 있습니다. — 이 함수는 2초 후에 "Success!"라는 문자열과 함께 resolve됩니다. (통과된 [`resolve()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve) 호출에 의해);
 
 ```js
 let timeoutPromise = new Promise((resolve, reject) => {
-  setTimeout(function(){
-    resolve('Success!');
+  setTimeout(function () {
+    resolve("Success!");
   }, 2000);
 });
 ```
@@ -458,10 +475,9 @@ let timeoutPromise = new Promise((resolve, reject) => {
 따라서 이 Promise를 호출할 때, 그 끝에 `.then()` 블럭을 사용하면 "Success!" 문자열이 전달될 것입니다. 아래 코드는 간단한 alert메시지를 출력하는 방법 입니다. :
 
 ```js
-timeoutPromise
-.then((message) => {
-   alert(message);
-})
+timeoutPromise.then((message) => {
+  alert(message);
+});
 ```
 
 혹은 아래처럼 쓸 수 있죠
@@ -472,13 +488,13 @@ timeoutPromise.then(alert);
 
 Try [running this live](https://mdn.github.io/learning-area/javascript/asynchronous/promises/custom-promise.html) to see the result (also see the [source code](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/custom-promise.html)).
 
-위의 예시는 유연하게 적용된 예시가 아닙니다. — Promise는 항산 하나의 문자열로만 fulfil됩니다. 그리고 [`reject()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject) 조건도 정의되어있지 않습니다. (사실, `setTimeout()` 은 실패 조건이 필요없습니다, 그러니 이 예제에서는 없어도 됩니다.).
+위의 예시는 유연하게 적용된 예시가 아닙니다. — Promise는 항산 하나의 문자열로만 fulfil됩니다. 그리고 [`reject()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject) 조건도 정의되어있지 않습니다. (사실, `setTimeout()` 은 실패 조건이 필요없습니다, 그러니 이 예제에서는 없어도 됩니다.).
 
 > **참고:** Why `resolve()`, and not `fulfill()`? The answer we'll give you, for now, is _it's complicated_.
 
 ### Rejecting a custom promise
 
-[`reject()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject) 메서드를 사용하여 Promise가 reject상태일 때 전달할 값을 지정할 수 있습니다. — `resolve()`와 똑같습니다. 여기엔 하나의 값만 들어갈 수 있습니다. Promise가 reject 되면 에러는 `.catch()` 블럭으로 전달됩니다.
+[`reject()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject) 메서드를 사용하여 Promise가 reject상태일 때 전달할 값을 지정할 수 있습니다. — `resolve()`와 똑같습니다. 여기엔 하나의 값만 들어갈 수 있습니다. Promise가 reject 되면 에러는 `.catch()` 블럭으로 전달됩니다.
 
 이전 예시를 좀 더 확장하여 `reject()` 을 추가하고, Promise가 fulfil일 때 다른 메시지도 전달할 수 있게 만들어봅시다.
 
@@ -487,17 +503,17 @@ Try [running this live](https://mdn.github.io/learning-area/javascript/asynchron
 ```js
 function timeoutPromise(message, interval) {
   return new Promise((resolve, reject) => {
-    if (message === '' || typeof message !== 'string') {
-      reject('Message is empty or not a string');
-    } else if (interval < 0 || typeof interval !== 'number') {
-      reject('Interval is negative or not a number');
+    if (message === "" || typeof message !== "string") {
+      reject("Message is empty or not a string");
+    } else if (interval < 0 || typeof interval !== "number") {
+      reject("Interval is negative or not a number");
     } else {
-      setTimeout(function(){
+      setTimeout(function () {
         resolve(message);
       }, interval);
     }
   });
-};
+}
 ```
 
 함수를 살펴보면 두 가지 매개변수가 있습니다. — 출력할 메시지와(message) 메시지를 출력할 때 까지 기다릴 시간(`interval`)입니다. 맨 위에 `Promise` 오브젝트를 반환하도록 되어있습니다. 따라서 함수를 실행하면 우리가 사용하고 싶은 Promise가 반환될 것 입니다..
@@ -511,13 +527,13 @@ Promise constructor 안에는 몇가지 사항을 확인하기 위해 `if ... el
 `timeoutPromise()` 함수는 `Promise`를 반환하므로, `.then()`, `.catch()`, 기타등등 을 사용해 Promise 체이닝을 만들 수 있습니다. 아래와 같이 작성해봅시다. — 기존에 있는 `timeoutPromise` 를 삭제하고 아래처럼 바꿔주세요. :
 
 ```js
-timeoutPromise('Hello there!', 1000)
-.then(message => {
-   alert(message);
-})
-.catch(e => {
-  console.log('Error: ' + e);
-});
+timeoutPromise("Hello there!", 1000)
+  .then((message) => {
+    alert(message);
+  })
+  .catch((e) => {
+    console.log("Error: " + e);
+  });
 ```
 
 이 코드를 저장하고 브라우저를 새로 고침하면 1초 후에 'Hello there!' alert가 출력될 것 입니다. 이제 메시지 내용을 비우거나 interval을 음수로 지정해보세요 그렇게 하면 Promise가 reject되며 에러 메시지를 콘솔에 출력해 줄 것입니다. 또한 resolved 메시지를 다르게 만들어 줄 수도 있습니다.
@@ -532,12 +548,12 @@ timeoutPromise('Hello there!', 1000)
 
 ```js
 function promisifyRequest(request) {
-  return new Promise(function(resolve, reject) {
-    request.onsuccess = function() {
+  return new Promise(function (resolve, reject) {
+    request.onsuccess = function () {
       resolve(request.result);
     };
 
-    request.onerror = function() {
+    request.onerror = function () {
       reject(request.error);
     };
   });
@@ -546,12 +562,12 @@ function promisifyRequest(request) {
 
 우리가 했던것 처럼 적절한 타이밍에 Promise를 fulfil하고 reject하는 이벤트 핸들러를 두 개 추가했습니다. :
 
-- [`request`](/en-US/docs/Web/API/IDBRequest)의 [`success` event](/ko/docs/Web/API/IDBRequest/success_event)가 실행될 때, [`onsuccess`](/en-US/docs/Web/API/IDBRequest/onsuccess) 핸들러에 의해 fulfill된 Promise의 request [`result`](/en-US/docs/Web/API/IDBRequest/result)를 반환한다.
-- 반면 [`request`](/en-US/docs/Web/API/IDBRequest)'s [`error` event](/ko/docs/Web/API/IDBRequest/error_event)가 실행되면 [`onerror`](/en-US/docs/Web/API/IDBRequest/onerror) 핸들러에 의해 reject된 Promise의 request [`error`](/en-US/docs/Web/API/IDBRequest/error)를 반환한다.
+- [`request`](/ko/docs/Web/API/IDBRequest)의 [`success` event](/ko/docs/Web/API/IDBRequest/success_event)가 실행될 때, [`onsuccess`](/ko/docs/Web/API/IDBRequest/onsuccess) 핸들러에 의해 fulfill된 Promise의 request [`result`](/ko/docs/Web/API/IDBRequest/result)를 반환한다.
+- 반면 [`request`](/ko/docs/Web/API/IDBRequest)'s [`error` event](/ko/docs/Web/API/IDBRequest/error_event)가 실행되면 [`onerror`](/ko/docs/Web/API/IDBRequest/onerror) 핸들러에 의해 reject된 Promise의 request [`error`](/ko/docs/Web/API/IDBRequest/error)를 반환한다.
 
 ## Conclusion
 
-Promises are a good way to build asynchronous applications when we don’t know the return value of a function or how long it will take to return. They make it easier to express and reason about sequences of asynchronous operations without deeply nested callbacks, and they support a style of error handling that is similar to the synchronous `try...catch` statement.
+Promises are a good way to build asynchronous applications when we don't know the return value of a function or how long it will take to return. They make it easier to express and reason about sequences of asynchronous operations without deeply nested callbacks, and they support a style of error handling that is similar to the synchronous `try...catch` statement.
 
 Promises work in the latest versions of all modern browsers; the only place where promise support will be a problem is in Opera Mini and IE11 and earlier versions.
 
@@ -561,7 +577,7 @@ Most modern Web APIs are promise-based, so you'll need to understand promises to
 
 ## See also
 
-- [`Promise()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+- [`Promise()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - [Using promises](/ko/docs/Web/JavaScript/Guide/Using_promises)
 - [We have a problem with promises](https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html) by Nolan Lawson
 

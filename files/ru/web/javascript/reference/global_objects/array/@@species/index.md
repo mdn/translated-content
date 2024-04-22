@@ -1,12 +1,6 @@
 ---
 title: get Array[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@species
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@species
 ---
 
 {{JSRef}}
@@ -41,7 +35,9 @@ Array[Symbol.species]; // функция Array()
 ```js
 class MyArray extends Array {
   //  Переписывает тип MyArray в родительский конструктор Array
-  static get [Symbol.species]() { return Array; }
+  static get [Symbol.species]() {
+    return Array;
+  }
 }
 ```
 
@@ -53,7 +49,7 @@ class MyArray extends Array {
 
 {{Compat}}
 
-## Смотрите также:
+## Смотрите также
 
 - {{jsxref("Array")}}
 - {{jsxref("Symbol.species")}}

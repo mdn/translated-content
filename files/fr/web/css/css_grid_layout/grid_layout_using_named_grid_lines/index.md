@@ -1,13 +1,6 @@
 ---
 title: Utiliser des lignes nommées sur une grille
 slug: Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines
-tags:
-  - CSS
-  - CSS Grids
-  - Grilles CSS
-  - Guide
-translation_of: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
-original_slug: Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
 ---
 
 {{CSSRef}}
@@ -21,7 +14,9 @@ Dans les articles précédents, on a vu comment placer des objets sur les lignes
 Lorsqu'on définit une grille avec `grid-template-rows` et `grid-template-columns`, on peut donner des noms aux lignes (toutes ou seulement quelques unes). Pour illustrer ce point, nous allons reprendre la disposition utilisée dans l'article sur le placement sur les lignes. Cette fois, nous allons utiliser des lignes avec des noms.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -42,8 +37,8 @@ Lorsqu'on définit la grille, on nomme les lignes entre crochets. Ces noms peuve
 
 ```css
 .wrapper {
- display: grid;
- grid-template-columns: [main-start] 1fr [content-start] 1fr [content-end] 1fr [main-end];
+  display: grid;
+  grid-template-columns: [main-start] 1fr [content-start] 1fr [content-end] 1fr [main-end];
   grid-template-rows: [main-start] 100px [content-start] 100px [content-end] 100px [main-end];
 }
 ```
@@ -96,7 +91,9 @@ Plus haut, nous avons vu qu'il était possible de donner n'importe quel nom à u
 Bien qu'on puisse choisir n'importe quel nom (avec les contraintes qu'on vient d'énoncer), si on utilise les suffixes `-start` et `-end` pour désigner les lignes qui entourent une zone (comme dans l'exemple ci-avant), la grille créera automatiquement une zone nommée avec le nom utilisé devant ces suffixes. Si on reprend l'exemple précédent où on utilise `content-start` et `content-end` pour les lignes et pour les colonnes, cela signifie qu'on a, implicitement, une zone de grille intitulée `content` qu'on peut également manipuler
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -128,9 +125,7 @@ On utilise les mêmes définitions qu'avant mais cette fois, nous allons placer 
 
 ```html
 <div class="wrapper">
-  <div class="thing">
-    Je suis dans une zone nommée content.
-  </div>
+  <div class="thing">Je suis dans une zone nommée content.</div>
 </div>
 ```
 
@@ -167,7 +162,9 @@ Dans l'image qui suit, on peut voir l'emplacement de ces lignes. Certaines ligne
 On peut positionner `overlay` grâce à ces lignes implicites, de la même façon qu'on aurait positionner un objet avec des lignes créées explicitement :
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -210,9 +207,9 @@ On peut positionner `overlay` grâce à ces lignes implicites, de la même faço
   z-index: 10;
   grid-column: main-start / main-end;
   grid-row: hd-start / ft-end;
-  border: 4px solid rgb(92,148,13);
-  background-color: rgba(92,148,13,.4);
-  color: rgb(92,148,13);
+  border: 4px solid rgb(92, 148, 13);
+  background-color: rgba(92, 148, 13, 0.4);
+  color: rgb(92, 148, 13);
   font-size: 150%;
 }
 ```
@@ -240,7 +237,9 @@ Si vous souhaitez que chaque ligne ait un nom différent, il faudra alors défin
 Dans l'exemple qui suit, nous allons créer une grille avec douze colonnes de même largeur. Avant de définir la taille d'une piste pour la colonne (`1fr`), on définit un nom : `[col-start]`. Cela signifie qu'on aura une grille avec 12 colonnes, toutes intitulées `col-start` et qui mesureront chacune `1fr` de large.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -268,7 +267,7 @@ Une fois la grille créée, on peut y placer les objets. On a alors plusieurs li
 
 ```css
 .item1 {
-  grid-column: col-start / col-start 5
+  grid-column: col-start / col-start 5;
 }
 ```
 
@@ -307,7 +306,7 @@ Si on utilise `repeat()` et qu'on place deux lignes l'une à la suite de l'autre
 
 ```css
 .wrapper {
-  grid-template-columns: repeat(4, [col-start] 1fr [col-end] );
+  grid-template-columns: repeat(4, [col-start] 1fr [col-end]);
 }
 ```
 
@@ -315,14 +314,16 @@ Si on écrivait la même définition sans utiliser `repeat()`, on aurait la form
 
 ```css
 .wrapper {
-  grid-template-columns: [col-start] 1fr [col-end col-start] 1fr [col-end col-start] 1fr  [col-end col-start] 1fr [col-end];
+  grid-template-columns: [col-start] 1fr [col-end col-start] 1fr [col-end col-start] 1fr [col-end col-start] 1fr [col-end];
 }
 ```
 
 Si vous utilisez une liste de pistes, vous pouvez utiliser le mot-clé `span` pour indiquer le nombre de lignes à occuper mais aussi pour indiquer le nombre de lignes à occuper qui ont un nom donné.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -345,7 +346,7 @@ Si vous utilisez une liste de pistes, vous pouvez utiliser le mot-clé `span` po
   grid-template-columns: repeat(6, [col1-start] 1fr [col2-start] 3fr);
 }
 .item1 {
-  grid-column: col1-start / col2-start 2
+  grid-column: col1-start / col2-start 2;
 }
 .item2 {
   grid-row: 2;
@@ -355,8 +356,14 @@ Si vous utilisez une liste de pistes, vous pouvez utiliser le mot-clé `span` po
 
 ```html
 <div class="wrapper">
-  <div class="item1">Je suis placé à partir de la première col1-start et jusqu'à la deuxième col2-start.</div>
-  <div class="item2">Je suis placé à partir de la deuxième col1-start et je m'étend sur deux lignes nommées col1-start</div>
+  <div class="item1">
+    Je suis placé à partir de la première col1-start et jusqu'à la deuxième
+    col2-start.
+  </div>
+  <div class="item2">
+    Je suis placé à partir de la deuxième col1-start et je m'étend sur deux
+    lignes nommées col1-start
+  </div>
 </div>
 ```
 
@@ -379,7 +386,9 @@ Si on travaille avec une disposition sur plusieurs colonnes (comme celles utilis
 On peut alors utiliser ce modèle pour mettre en forme notre page. Par exemple, on peut créer une disposition avec trois colonnes, un en-tête et un pied de page avec les règles suivantes :
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -399,10 +408,10 @@ On peut alors utiliser ce modèle pour mettre en forme notre page. Par exemple, 
 ```html
 <div class="wrapper">
   <header class="main-header">Je suis l'en-tête</header>
-   <aside class="side1">Je suis la barre latérale 1</aside>
-   <article class="content">Je suis l'article</article>
-   <aside class="side2">Je suis la barre latérale 2</aside>
-   <footer class="main-footer">Je suis le pied de page</footer>
+  <aside class="side1">Je suis la barre latérale 1</aside>
+  <article class="content">Je suis l'article</article>
+  <aside class="side2">Je suis la barre latérale 2</aside>
+  <footer class="main-footer">Je suis le pied de page</footer>
 </div>
 ```
 
@@ -410,7 +419,7 @@ Pour placer ces éléments, on utilise la grille de la façon suivante :
 
 ```css
 .main-header,
-.main-footer  {
+.main-footer {
   grid-column: col-start / span 12;
 }
 .side1 {

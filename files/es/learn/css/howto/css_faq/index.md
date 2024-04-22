@@ -1,7 +1,6 @@
 ---
 title: Preguntas frecuentes sobre CSS
 slug: Learn/CSS/Howto/CSS_FAQ
-original_slug: Web/CSS/Preguntas_frecuentes_sobre_CSS
 ---
 
 #### Mi CSS es válida, pero no se representa correctamente
@@ -13,22 +12,18 @@ Los navegadores modernos tienen fundamentalmente dos modos de renderizado:
 - _Quirks mode_ (Modo no estándar): también se llama el modo de compatibilidad con versiones anteriores y permite que las páginas web heredadas se representen como sus autores habían previsto, siguiendo las normas de representación o renderizado no estándares que usan los navegadores antiguos. Los documentos con una declaración `DOCTYPE` incompleta, incorrecta o faltante o con una declaración `DOCTYPE` conocida que se usara habitualmente antes de 2001 se representarán en el Modo no estándar.
 - _Standards Mode_ (Modo estándar): el navegador intenta seguir estrictamente los estándares del W3C. Se supone que las nuevas páginas HTML se diseñarán para navegadores compatibles con los estándares, y como resultado, las páginas con una declaración `DOCTYPE` moderna será renderizada con el Modo estándar.
 
-Los navegadores basados en Gecko tienen un tercer _[Modo casi estándar](/en/Gecko's_"Almost_Standards"_Mode)_ que tiene solo una peculiaridades menores.
+Los navegadores basados en Gecko tienen un tercer _[Modo casi estándar](/es/docs/Mozilla/Gecko_Almost_Standards_Mode)_ que tiene solo una peculiaridades menores.
 
 Esta es una lista de las declaraciones `DOCTYPE` más utilizadas que activarán el Modo estándar o el Modo casi estándar:
 
 ```html
-<!DOCTYPE HTML PUBLIC "- / / W3C / / DTD HTML 4.0 Transitional / / EN"
-"http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html PUBLIC "- / / W3C / / DTD HTML 4.0 Transitional / / EN" "http://www.w3.org/TR/html4/loose.dtd">
 
-<!DOCTYPE HTML PUBLIC "- / / W3C / / DTD HTML 4.01 / / EN"
-"http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html PUBLIC "- / / W3C / / DTD HTML 4.01 / / EN" "http://www.w3.org/TR/html4/strict.dtd">
 
-<!DOCTYPE HTML PUBLIC "- / / W3C / / DTD XHTML 1.0 Transitional / / EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "- / / W3C / / DTD XHTML 1.0 Transitional / / EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<!DOCTYPE HTML PUBLIC "- / / W3C / / DTD XHTML 1.0 Strict / / EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "- / / W3C / / DTD XHTML 1.0 Strict / / EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 ```
 
 #### Diferencia entre `id` y `class`
@@ -59,13 +54,16 @@ A los elementos HTML se les pueden asignar varias clases listándolas en el atri
 
 ```html
 <style type="text/css">
-.news { background: black; color: white; }
-.today { font-weight: bold; }
+  .news {
+    background: black;
+    color: white;
+  }
+  .today {
+    font-weight: bold;
+  }
 </style>
 
-<div class="news today">
-... contenido de las noticias de hoy ...
-</div>
+<div class="news today">... contenido de las noticias de hoy ...</div>
 ```
 
 Si la misma propiedad se declara en ambas reglas, el conflicto se resuelve primero a través de la especificidad, a continuación, según el orden de las declaraciones CSS. El orden de las clases en el atributo `class` no es relevante.
@@ -163,6 +161,6 @@ div { color: black; }
 
 Las reglas son más complicadas cuando el selector tiene varias partes. Se puede encontrar más información detallada acerca de cómo se calcula la especificidad del selector en el [capítulo 6.4.3 de la Especificación CSS 2.1](http://www.w3.org/TR/CSS21/cascade.html#specificity)
 
-#### ¿Qué hacen las propiedades -moz-*?
+#### ¿Qué hacen las propiedades -moz-\*?
 
 Por favor, consulta la página [Extensiones CSS de Mozilla](/en/CSS_Reference/Mozilla_Extensions).

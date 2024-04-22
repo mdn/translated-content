@@ -1,13 +1,6 @@
 ---
 title: String.prototype.padEnd()
 slug: Web/JavaScript/Reference/Global_Objects/String/padEnd
-tags:
-  - JavaScript
-  - Méthode
-  - Reference
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/padEnd
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/padEnd
 ---
 
 {{JSRef}}
@@ -36,10 +29,10 @@ Une chaîne de caractères ({{jsxref("String")}}) dont la longueur est celle ind
 ## Exemples
 
 ```js
-'abc'.padEnd(10);         // "abc       "
-'abc'.padEnd(10, "toto"); // "abctototot"
-'abc'.padEnd(6,"123456"); // "abc123"
-'abc'.padEnd(1);          // "abc"
+"abc".padEnd(10); // "abc       "
+"abc".padEnd(10, "toto"); // "abctototot"
+"abc".padEnd(6, "123456"); // "abc123"
+"abc".padEnd(1); // "abc"
 ```
 
 ## Spécifications

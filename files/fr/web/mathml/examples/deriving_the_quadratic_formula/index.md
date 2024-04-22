@@ -1,8 +1,6 @@
 ---
-title: 'MathML: Dériver la formule quadratique'
+title: "MathML: Dériver la formule quadratique"
 slug: Web/MathML/Examples/Deriving_the_Quadratic_Formula
-translation_of: Web/MathML/Examples/Deriving_the_Quadratic_Formula
-original_slug: Web/MathML/Exemples/Dériver_la_Formule_Quadratique
 ---
 
 Dans cette page, on rédige la démonstration de la détermination des racines d'un polynôme quadratique&nbsp;:

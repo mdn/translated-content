@@ -1,12 +1,6 @@
 ---
 title: <small>
 slug: Web/HTML/Element/small
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/small
 ---
 
 {{HTMLSidebar}}
@@ -25,9 +19,8 @@ Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Att
 
 ```html
 <p>
-   Voici une phrase avant des infos à
-   présenter en plus petit.
-   <small>© tous droits réservés</small>
+  Voici une phrase avant des infos à présenter en plus petit.
+  <small>© tous droits réservés</small>
 </p>
 ```
 

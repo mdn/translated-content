@@ -108,7 +108,10 @@ event.dataTransfer.setDragImage(image, xOffset, yOffset);
 
 ```js
 function dragWithCustomImage(event) {
-  var canvas = document.createElementNS("http://www.w3.org/1999/xhtml","canvas");
+  var canvas = document.createElementNS(
+    "http://www.w3.org/1999/xhtml",
+    "canvas",
+  );
   canvas.width = canvas.height = 50;
 
   var ctx = canvas.getContext("2d");
@@ -120,7 +123,7 @@ function dragWithCustomImage(event) {
   ctx.stroke();
 
   var dt = event.dataTransfer;
-  dt.setData('text/plain', 'Data to Drag');
+  dt.setData("text/plain", "Data to Drag");
   dt.setDragImage(canvas, 25, 25);
 }
 ```
@@ -183,8 +186,8 @@ event.dataTransfer.dropEffect = "copy";
 如果你想要允许放置，你必须取消 `dragenter` 和 `dragover` 事件来阻止默认的处理。你可以在属性定义的事件监听程序返回 `false`，或者调用事件的 {{domxref("Event.preventDefault","preventDefault()")}} 方法来实现这一点。在一个独立脚本中的定义的函数里，可能后者更可行。
 
 ```html
-<div ondragover="return false">
-<div ondragover="event.preventDefault()">
+<div ondragover="return false"></div>
+<div ondragover="event.preventDefault()"></div>
 ```
 
 在 {{domxref("HTMLElement/dragenter_event", "dragenter")}} 和 {{domxref("HTMLElement/dragover_event", "dragover")}} 事件中调用 {{domxref("Event.preventDefault","preventDefault()")}} 方法将表明在该位置允许放置。但是，你通常希望只在某些情况下调用 {{domxref("Event.preventDefault","preventDefault()")}} 方法（如只当拖拽的是链接时）。
@@ -195,14 +198,14 @@ event.dataTransfer.dropEffect = "copy";
 
 ```js
 function contains(list, value) {
-    for( var i = 0; i < list.length; ++i ) {
-        if(list[i] === value) return true;
-    }
-    return false;
+  for (var i = 0; i < list.length; ++i) {
+    if (list[i] === value) return true;
+  }
+  return false;
 }
 
 function doDragOver(event) {
-  var isLink = contains( event.dataTransfer.types, "text/uri-list");
+  var isLink = contains(event.dataTransfer.types, "text/uri-list");
   if (isLink) {
     event.preventDefault();
   }

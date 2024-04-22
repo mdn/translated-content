@@ -35,69 +35,73 @@ void dataTransfer.setData(format, data);
 此示例显示了使用 {{domxref("DataTransfer")}} 对象的 {{domxref("DataTransfer.getData","getData()")}}, {{domxref("DataTransfer.setData","setData()")}} }和{{domxref("DataTransfer.clearData","clearData()")}} 方法。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>DataTransfer.setData()/.getData()/.clearData()</title>
     <style>
-        div {
-            margin: 0em;
-            padding: 2em;
-        }
-        #source {
-            color: blue;
-            border: 1px solid black;
-        }
-        #target {
-            border: 1px solid black;
-        }
+      div {
+        margin: 0em;
+        padding: 2em;
+      }
+      #source {
+        color: blue;
+        border: 1px solid black;
+      }
+      #target {
+        border: 1px solid black;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <section>
-        <h1>
-            <code>DataTransfer.setData()</code> <br>
-            <code>DataTransfer.getData()</code> <br>
-            <code>DataTransfer.clearData()</code>
-        </h1>
-        <div>
-            <p id="source" ondragstart="dragstart_handler(event);" draggable="true">
-                Select this element, drag it to the Drop Zone and then release the selection to move the element.
-            </p>
-        </div>
-        <div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">
-            Drop Zone
-        </div>
+      <h1>
+        <code>DataTransfer.setData()</code> <br />
+        <code>DataTransfer.getData()</code> <br />
+        <code>DataTransfer.clearData()</code>
+      </h1>
+      <div>
+        <p id="source" ondragstart="dragstart_handler(event);" draggable="true">
+          Select this element, drag it to the Drop Zone and then release the
+          selection to move the element.
+        </p>
+      </div>
+      <div
+        id="target"
+        ondrop="drop_handler(event);"
+        ondragover="dragover_handler(event);">
+        Drop Zone
+      </div>
     </section>
     <!-- js -->
     <script>
-        function dragstart_handler(ev) {
-            console.log("dragStart");
-            // Change the source element's background color to signify drag has started
-            ev.currentTarget.style.border = "dashed";
-            // Set the drag's format and data. Use the event target's id for the data
-            ev.dataTransfer.setData("text/plain", ev.target.id);
-        }
+      function dragstart_handler(ev) {
+        console.log("dragStart");
+        // Change the source element's background color to signify drag has started
+        ev.currentTarget.style.border = "dashed";
+        // Set the drag's format and data. Use the event target's id for the data
+        ev.dataTransfer.setData("text/plain", ev.target.id);
+      }
 
-        function dragover_handler(ev) {
-            console.log("dragOver");
-            // prevent Default event
-            ev.preventDefault();
-        }
+      function dragover_handler(ev) {
+        console.log("dragOver");
+        // prevent Default event
+        ev.preventDefault();
+      }
 
-        function drop_handler(ev) {
-            console.log("Drop");
-            ev.preventDefault();
-            // Get the data, which is the id of the drop target
-            var data = ev.dataTransfer.getData("text");
-            // appendChild
-            ev.target.appendChild(document.getElementById(data));
-            // Clear the drag data cache (for all formats/types)
-            ev.dataTransfer.clearData();
-        }
+      function drop_handler(ev) {
+        console.log("Drop");
+        ev.preventDefault();
+        // Get the data, which is the id of the drop target
+        var data = ev.dataTransfer.getData("text");
+        // appendChild
+        ev.target.appendChild(document.getElementById(data));
+        // Clear the drag data cache (for all formats/types)
+        ev.dataTransfer.clearData();
+      }
     </script>
-</body>
+  </body>
 </html>
 ```
 

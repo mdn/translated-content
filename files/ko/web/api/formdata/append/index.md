@@ -46,15 +46,15 @@ var formData = new FormData(); // Currently empty
 {{domxref("FormData.append")}}를 사용하여 key/value 쌍을 추가할 수 있습니다:
 
 ```js
-formData.append('username', 'Chris');
-formData.append('userpic', myFileInput.files[0], 'chris.jpg');
+formData.append("username", "Chris");
+formData.append("userpic", myFileInput.files[0], "chris.jpg");
 ```
 
 일반 form 데이터와 마찬가지로 동일한 이름의 여러 값을 추가할 수 있습니다. 예를들면 (그리고 이름에 \[]를 추가하여 PHP의 명명 규칙과 호환이 가능합니다):
 
 ```js
-formData.append('userpic[]', myFileInput.files[0], 'chris1.jpg');
-formData.append('userpic[]', myFileInput.files[1], 'chris2.jpg');
+formData.append("userpic[]", myFileInput.files[0], "chris1.jpg");
+formData.append("userpic[]", myFileInput.files[1], "chris2.jpg");
 ```
 
 이 기술을 사용하면 서버에 올라간 결과 데이터가 루프를 도는데 도움이 되는 구조이기 때문에, 이 기술을 사용하면 다중 -파일 업로드를 보다 쉽게 처리할 수 있습니다.

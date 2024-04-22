@@ -1,8 +1,6 @@
 ---
 title: Создаём зону кирпичей
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field
-original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Создаём_зону_кирпичей
 ---
 
 {{GamesSidebar}}{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection")}}
@@ -31,11 +29,11 @@ var brickOffsetLeft = 30;
 
 ```js
 var bricks = [];
-for(var c=0; c<brickColumnCount; c++) {
-    bricks[c] = [];
-    for(var r=0; r<brickRowCount; r++) {
-        bricks[c][r] = { x: 0, y: 0 };
-    }
+for (var c = 0; c < brickColumnCount; c++) {
+  bricks[c] = [];
+  for (var r = 0; r < brickRowCount; r++) {
+    bricks[c][r] = { x: 0, y: 0 };
+  }
 }
 ```
 
@@ -47,25 +45,25 @@ for(var c=0; c<brickColumnCount; c++) {
 
 ```js
 function drawBricks() {
-    for(var c=0; c<brickColumnCount; c++) {
-        for(var r=0; r<brickRowCount; r++) {
-            bricks[c][r].x = 0;
-            bricks[c][r].y = 0;
-            ctx.beginPath();
-            ctx.rect(0, 0, brickWidth, brickHeight);
-            ctx.fillStyle = "#0095DD";
-            ctx.fill();
-            ctx.closePath();
-        }
+  for (var c = 0; c < brickColumnCount; c++) {
+    for (var r = 0; r < brickRowCount; r++) {
+      bricks[c][r].x = 0;
+      bricks[c][r].y = 0;
+      ctx.beginPath();
+      ctx.rect(0, 0, brickWidth, brickHeight);
+      ctx.fillStyle = "#0095DD";
+      ctx.fill();
+      ctx.closePath();
     }
+  }
 }
 ```
 
 Опять же, мы зацикливаем строки и столбцы, чтобы установить положение `x` и `y` каждого кирпича, и мы также `brickWidth` кирпич на кирпичной `brickWidth` Canvas - `brickWidth` - с каждой итерацией цикла. Проблема в том, что мы рисуем их все в одном месте, в координатах `(0,0)` . Нам нужно включить некоторые вычисления, которые будут определять положение `x` и `y` каждого кирпича для каждой итерации цикла:
 
 ```js
-var brickX = (c*(brickWidth+brickPadding))+brickOffsetLeft;
-var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;
+var brickX = c * (brickWidth + brickPadding) + brickOffsetLeft;
+var brickY = r * (brickHeight + brickPadding) + brickOffsetTop;
 ```
 
 Каждая позиция `brickX` разрабатывается как `brickWidth` + `brickPadding` , умноженная на номер столбца, `c` , плюс `brickOffsetLeft` ; логика для brickY идентична, за исключением того, что она использует значения для номера строки, `r`, `brickHeight` и `brickOffsetTop` . Теперь каждый отдельный кирпич может быть помещён в правильное место и столбец места, с отступом между каждым кирпичом, нарисованным на смещение от левого и верхнего краёв холста.

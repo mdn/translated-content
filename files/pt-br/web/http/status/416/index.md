@@ -19,15 +19,15 @@ Observando este erro, os navegadores geralmente, ou abortam a operação (por ex
 
 ## Especificações
 
-| Especificação                                                            | Título                                                 |
-| ------------------------------------------------------------------------ | ------------------------------------------------------ |
+| Especificação                                          | Título                                                 |
+| ------------------------------------------------------ | ------------------------------------------------------ |
 | {{RFC("7233", "416 Request Not Satisfiable" , "4.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Range Requests |
 
 ## Compatibilidade com navegadores
 
 A informação abaixo foi buscada do GitHub da MDN (<https://github.com/mdn/browser-compat-data>).
 
-{{Compat("http.status.416")}}
+{{Compat}}
 
 ## Veja também
 

@@ -1,19 +1,11 @@
 ---
 title: WebGLRenderingContext.createShader()
 slug: Web/API/WebGLRenderingContext/createShader
-tags:
-  - API
-  - Graphiques
-  - Méthode
-  - Reference
-  - Shader
-  - WebGL
-translation_of: Web/API/WebGLRenderingContext/createShader
 ---
 
 {{APIRef("WebGL")}}
 
-La méthode **WebGLRenderingContext.createShader() de l'**[API WebGL](/fr-FR/docs/Web/API/WebGL_API) crée un {{domxref("WebGLShader")}}, qui peut alors être configuré davantage en utilisant {{domxref("WebGLRenderingContext.shaderSource()")}} et {{domxref("WebGLRenderingContext.compileShader()")}}.
+La méthode **WebGLRenderingContext.createShader() de l'**[API WebGL](/fr/docs/Web/API/WebGL_API) crée un {{domxref("WebGLShader")}}, qui peut alors être configuré davantage en utilisant {{domxref("WebGLRenderingContext.shaderSource()")}} et {{domxref("WebGLRenderingContext.compileShader()")}}.
 
 ## Syntaxe
 

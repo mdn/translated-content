@@ -1,11 +1,6 @@
 ---
 title: column-rule
 slug: Web/CSS/column-rule
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/column-rule
 ---
 
 {{CSSRef}}
@@ -58,16 +53,16 @@ Cette propriété peut être définie avec une, deux ou trois valeurs telles que
 
 ```html
 <div id="col_rul">
-  <p> column one </p>
-  <p> column two </p>
-  <p> column three </p>
+  <p>column one</p>
+  <p>column two</p>
+  <p>column three</p>
 </div>
 ```
 
 ### CSS
 
 ```css
-#col_rul{
+#col_rul {
   padding: 0.3em;
   background: gold;
   border: groove 2px gold;

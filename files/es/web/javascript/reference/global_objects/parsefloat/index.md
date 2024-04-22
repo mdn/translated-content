@@ -1,7 +1,6 @@
 ---
 title: parseFloat()
 slug: Web/JavaScript/Reference/Global_Objects/parseFloat
-original_slug: Web/JavaScript/Referencia/Objetos_globales/parseFloat
 ---
 
 {{jsSidebar("Objects")}}
@@ -59,12 +58,16 @@ Todos los siguientes ejemplos devuelven `3.14`:
 
 ```js
 parseFloat(3.14);
-parseFloat('3.14');
-parseFloat('  3.14  ');
-parseFloat('314e-2');
-parseFloat('0.0314E+2');
-parseFloat('3.14some non-digit characters');
-parseFloat({ toString: function() { return "3.14" } });
+parseFloat("3.14");
+parseFloat("  3.14  ");
+parseFloat("314e-2");
+parseFloat("0.0314E+2");
+parseFloat("3.14some non-digit characters");
+parseFloat({
+  toString: function () {
+    return "3.14";
+  },
+});
 ```
 
 ### `parseFloat` devolviendo `NaN`

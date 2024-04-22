@@ -1,18 +1,17 @@
 ---
 title: max-width
 slug: Web/CSS/max-width
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/max-width
+l10n:
+  sourceCommit: de7d710496266ccf4fce5ade75a67e6605f60ce5
 ---
 
 {{CSSRef}}
 
-La propriété **`max-width`** est utilisée pour définir la largeur maximale d'un élément donné. Elle empêche la valeur de la propriété {{cssxref("width")}} de devenir supérieure à la valeur spécifiée par `max-width` (autrement dit, `max-width` est une borne supérieur pour `width`).
+La propriété [CSS](/fr/docs/Web/CSS) **`max-width`** est utilisée pour définir la largeur maximale d'un élément. Elle empêche la [valeur utilisée](/fr/docs/Web/CSS/used_value) de la propriété [`width`](/fr/docs/Web/CSS/width) de devenir supérieure à la valeur spécifiée par `max-width`.
 
-{{EmbedInteractiveExample("pages/css/max-width.html")}}La valeur de `max-width` surcharge la valeur de {{cssxref("width")}} mais elle est surchargée par {{cssxref("min-width")}}.
+{{EmbedInteractiveExample("pages/css/max-width.html")}}
+
+La valeur de `max-width` surcharge la valeur de [`width`](/fr/docs/Web/CSS/width), mais `max-width` est, elle, surchargée par [`min-width`](/fr/docs/Web/CSS/min-width).
 
 ## Syntaxe
 
@@ -23,37 +22,43 @@ max-width: 3.5em;
 
 /* Valeurs relatives */
 /* Type <percentage> */
-max-width: 10%;
+max-width: 75%;
 
 /* Valeurs avec un mot-clé */
 max-width: none;
 max-width: max-content;
 max-width: min-content;
-max-width: fit-content;
-max-width: fill-available;
+max-width: fit-content(20em);
 
 /* Valeurs globales */
 max-width: inherit;
 max-width: initial;
+max-width: revert;
+max-width: revert-layer;
 max-width: unset;
 ```
 
 ### Valeurs
 
-- `<length>`
-  - : La largeur minimale fixée. Voir {{cssxref("&lt;length&gt;")}} pour les unités qu'on peut utiliser. Une largeur négative rendra la déclaration invalide.
-- `<percentage>`
-  - : La largeur minimale fixée, exprimée comme un fraction de la largeur du bloc englobant. Voir la page {{cssxref("&lt;percentage&gt;")}} sur les valeurs possibles avec ce type. Les valeurs négatives rendront la déclaration invalide.
-- `fill-available`{{experimental_inline}}
-  - : La largeur du bloc englobant moins la marge horizontale, la bordure et le remplissage (_padding_). Certains navigateurs implémentent cette valeur avec un ancien nom : `available`.
-- `fit-content` {{experimental_inline}}
-  - : Un synonyme pour `max-content`.
+- [`<length>`](/fr/docs/Web/CSS/length)
+  - : Définit la largeur maximale avec une valeur absolue.
+- [`<percentage>`](/fr/docs/Web/CSS/percentage)
+  - : Définit la largeur maximale avec une valeur relative à la largeur du bloc englobant.
+- <code>fit-content(<a href="/fr/docs/Web/CSS/length-percentage">&lt;length-percentage&gt;</a>)</code>
+  - : Utilise la formule `fit-content` avec l'espace disponible remplacé par l'argument fourni, c'est-à-dire `min(max-content, max(min-content, argument))`.
 - `max-content` {{experimental_inline}}
-  - : La largeur intrinsèque préférée.
+  - : La largeur maximale intrinsèque préférée.
 - `min-content` {{experimental_inline}}
-  - : La largeur intrinsèque minimale.
+  - : La valeur minimale intrinsèque pour la largeur maximale.
 - `none`
-  - : Il n'y a pas de maximum pour la largeur. C'est la valeur par défaut.
+  - : Il n'y a pas de maximum pour la largeur.
+
+## Accessibilité
+
+Veiller à s'assurer que les éléments ciblés avec une règle utilisant `max-width` ne sont pas tronqués ou ne masquent pas d'autre contenu sur la page lorsqu'on zoome pour augmenter la taille du texte.
+
+- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [_Understanding Success Criterion 1.4.4, W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
 ## Définition formelle
 
@@ -65,43 +70,38 @@ max-width: unset;
 
 ## Exemples
 
-### Exemple simple avec un tableau
+### Définir une largeur maximale en pixels
+
+Dans cet exemple, l'élément `enfant` aura la largeur la plus petite entre 150 et celle de l'élément `parent`.
 
 #### HTML
 
 ```html
-<div> Lorem ipsum tralala sit amet, consectetur adipisicing
-  <p>
-     Ut enim ad minim veniam, quis nostrud exercitation
-     ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  </p>
+<div id="parent">
+  <div id="enfant">
+    Fusce pulvinar vestibulum eros, sed luctus ex lobortis quis.
+  </div>
 </div>
 ```
 
 #### CSS
 
 ```css
-div {
-  width: 250px;
-  border: solid 1px red;
+#parent {
+  background: lightblue;
+  width: 300px;
 }
 
-p {
-  max-width: 60%;
-  border: solid 1px blue;
+#enfant {
+  background: gold;
+  width: 100%;
+  max-width: 150px;
 }
 ```
 
 #### Résultat
 
-{{EmbedLiveSample("Exemple_simple_avec_un_tableau","100%","100%")}}
-
-## Accessibilité
-
-Veiller à s'assurer que les éléments ciblés avec une règle utilisant `max-width` ne sont pas tronqués ou ne masquent pas d'autre contenu sur la page lorsqu'on zoome pour augmenter la taille du texte.
-
-- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [_Understanding Success Criterion 1.4.4, W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
+{{EmbedLiveSample("", 350, 100)}}
 
 ## Spécifications
 
@@ -113,9 +113,6 @@ Veiller à s'assurer que les éléments ciblés avec une règle utilisant `max-w
 
 ## Voir aussi
 
-- {{cssxref("width")}}
-- {{cssxref("min-width")}}
-- {{cssxref("min-height")}}
-- {{cssxref("max-height")}}
-- {{cssxref("box-sizing")}}
-- [Le modèle de boîtes](/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte)
+- [Le modèle de boîtes](/fr/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) et [`box-sizing`](/fr/docs/Web/CSS/box-sizing)
+- [`width`](/fr/docs/Web/CSS/width), [`min-width`](/fr/docs/Web/CSS/min-width)
+- Les propriétés logiques correspondantes [`max-block-size`](/fr/docs/Web/CSS/max-block-size) et [`max-inline-size`](/fr/docs/Web/CSS/max-inline-size)

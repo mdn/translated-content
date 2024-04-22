@@ -1,8 +1,8 @@
 ---
 title: scaleX()
 slug: Web/CSS/transform-function/scaleX
-original_slug: Web/CSS/transform-function/scaleX()
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) 함수인 **`scaleX()`** x 축을 따라 (수평방향)으로 요소의 크기를 조절하는 변형을 정의합니다. 결과는 {{cssxref("&lt;transform-function&gt;")}} 데이터 타입 입니다.

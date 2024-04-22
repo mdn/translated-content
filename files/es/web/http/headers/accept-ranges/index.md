@@ -7,9 +7,9 @@ El encabezado de respuesta HTTP **`Accept-Ranges`** es un marcador usado por el 
 
 En caso de estar presente un encabezado de respuesta `Accept-Ranges`, el navegador puede intentar restablecer una descarga interrumpida, en vez de reiniciarla o comenzarla desde el principio.
 
-| Header type                                      | {{Glossary("Response header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| Header type                           | {{Glossary("Response header")}} |
+| ------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                              |
 
 ## Sintaxis
 
@@ -33,8 +33,8 @@ Accept-Ranges: bytes
 
 ## Especificaciones
 
-| Specification                                        | Title                                                  |
-| ---------------------------------------------------- | ------------------------------------------------------ |
+| Specification                           | Title                                                  |
+| --------------------------------------- | ------------------------------------------------------ |
 | {{RFC("7233", "Accept-Ranges", "2.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Range Requests |
 
 ## Compatibilidad con navegadores

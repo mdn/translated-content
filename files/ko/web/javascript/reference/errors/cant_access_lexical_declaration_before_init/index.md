@@ -1,5 +1,5 @@
 ---
-title: 'ReferenceError: can''t access lexical declaration`X'' before initialization'
+title: "ReferenceError: can't access lexical declaration`X' before initialization"
 slug: Web/JavaScript/Reference/Errors/Cant_access_lexical_declaration_before_init
 ---
 
@@ -30,7 +30,7 @@ slug: Web/JavaScript/Reference/Errors/Cant_access_lexical_declaration_before_ini
 function test() {
   let foo = 33;
   if (true) {
-    let foo = (foo + 55);
+    let foo = foo + 55;
     // ReferenceError: can't access lexical
     // declaration `foo' before initialization
   }
@@ -43,15 +43,15 @@ test();
 if 문에서 "foo"를 변경하려면 재 선언을 발생시키는 `let` 을 제거해야합니다.
 
 ```js example-good
-function test(){
-   let foo = 33;
-   if (true) {
-      foo = (foo + 55);
-   }
+function test() {
+  let foo = 33;
+  if (true) {
+    foo = foo + 55;
+  }
 }
 test();
 ```
 
 ## 그밖에 볼 것
 
-- [Temporal Dead Zone and errors with let](/en-US/docs/Web/JavaScript/Reference/Statements/let#Temporal_Dead_Zone_and_errors_with_let)
+- [Temporal Dead Zone and errors with let](/ko/docs/Web/JavaScript/Reference/Statements/let#Temporal_Dead_Zone_and_errors_with_let)

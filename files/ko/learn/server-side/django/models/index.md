@@ -1,5 +1,5 @@
 ---
-title: 'Django Tutorial Part 3: Using models'
+title: "Django Tutorial Part 3: Using models"
 slug: Learn/Server-side/Django/Models
 ---
 
@@ -12,7 +12,7 @@ slug: Learn/Server-side/Django/Models
     <tr>
       <th scope="row">사전 준비:</th>
       <td>
-        <a href="/en-US/docs/Learn/Server-side/Django/skeleton_website"
+        <a href="/ko/docs/Learn/Server-side/Django/skeleton_website"
           >Django Tutorial Part 2: Creating a skeleton website</a
         >.
       </td>

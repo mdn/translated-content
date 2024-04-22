@@ -27,4 +27,4 @@ slug: Web/CSS/angle-percentage
 
 - [CSS データ型](/ja/docs/Web/CSS/CSS_Types)
 - [CSS グラデーションの使用](/ja/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
-- [`conic-gradient()`](/ja/docs/Web/CSS/gradient/conic-gradient()) および [`repeating-conic-gradient()`](/ja/docs/Web/CSS/gradient/repeating-conic-gradient())
+- [`conic-gradient()`](</ja/docs/Web/CSS/gradient/conic-gradient()>) および [`repeating-conic-gradient()`](</ja/docs/Web/CSS/gradient/repeating-conic-gradient()>)

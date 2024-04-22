@@ -36,8 +36,10 @@ compareMask = node.compareDocumentPosition( otherNode )
 ## 例子
 
 ```js
-var head = document.getElementsByTagName('head').item(0);
-if (head.compareDocumentPosition(document.body) & Node.DOCUMENT_POSITION_FOLLOWING) {
+var head = document.getElementsByTagName("head").item(0);
+if (
+  head.compareDocumentPosition(document.body) & Node.DOCUMENT_POSITION_FOLLOWING
+) {
   console.log("well-formed document");
 } else {
   console.log("<head> is not before <body>");

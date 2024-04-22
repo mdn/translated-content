@@ -1,11 +1,6 @@
 ---
 title: Valeurs
 slug: Web/MathML/Values
-tags:
-  - MathML
-  - Référence MathML
-translation_of: Web/MathML/Attribute/Values
-original_slug: Web/MathML/Attribute/Values
 ---
 
 ## Longueurs
@@ -14,17 +9,17 @@ Plusieurs éléments de présentation MathML possèdent des attributs qui accept
 
 ### Unités
 
-| Uniét | Description                                                                                                                                       |
-| ----- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Uniét | Description                                                                                                                     |
+| ----- | ------------------------------------------------------------------------------------------------------------------------------- |
 | `em`  | Unité {{ Cssxref("font-size", "relative à la police") }}                                                                        |
 | `ex`  | Unité {{ Cssxref("font-size", "relative à la police") }}. (La hauteur "x" de l'élément, `1ex ≈ 0.5em` dans beaucoup de polices) |
-| `px`  | Pixels                                                                                                                                            |
-| `in`  | Pouces (1 pouce = 2,54 centimètres)                                                                                                               |
-| `cm`  | Centimètres                                                                                                                                       |
-| `mm`  | Millimètres                                                                                                                                       |
-| `pt`  | Points (1 point = 1/72 pouce)                                                                                                                     |
-| `pc`  | Picas (1 pica = 12 points)                                                                                                                        |
-| `%`   | Pourcentage de la valeur par défaut.                                                                                                              |
+| `px`  | Pixels                                                                                                                          |
+| `in`  | Pouces (1 pouce = 2,54 centimètres)                                                                                             |
+| `cm`  | Centimètres                                                                                                                     |
+| `mm`  | Millimètres                                                                                                                     |
+| `pt`  | Points (1 point = 1/72 pouce)                                                                                                   |
+| `pc`  | Picas (1 pica = 12 points)                                                                                                      |
+| `%`   | Pourcentage de la valeur par défaut.                                                                                            |
 
 ### Constantes
 

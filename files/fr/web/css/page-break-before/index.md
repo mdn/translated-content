@@ -1,11 +1,6 @@
 ---
 title: page-break-before
 slug: Web/CSS/page-break-before
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/page-break-before
 ---
 
 {{CSSRef}}
@@ -77,7 +72,7 @@ Pour des raisons de compatibilité, si on traite `page-break-before` comme un sy
 /* Pour éviter d'avoir un saut de page avant */
 /* une note dans un div                      */
 div.note {
-    page-break-before: avoid;
+  page-break-before: avoid;
 }
 ```
 

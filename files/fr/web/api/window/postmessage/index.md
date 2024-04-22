@@ -1,13 +1,6 @@
 ---
 title: Window.postMessage
 slug: Web/API/Window/postMessage
-tags:
-  - API
-  - DOM
-  - Méthode
-  - Reference
-  - postMessage
-translation_of: Web/API/Window/postMessage
 ---
 
 {{ ApiRef() }}
@@ -38,10 +31,8 @@ otherWindow.postMessage(message, targetOrigin, [transfer]);
 ```js
 window.addEventListener("message", receiveMessage, false);
 
-function receiveMessage(event)
-{
-  if (event.origin !== "http://example.org:8080")
-    return;
+function receiveMessage(event) {
+  if (event.origin !== "http://example.org:8080") return;
 
   // ...
 }
@@ -104,11 +95,9 @@ window.addEventListener("message", receiveMessage, false);
  */
 
 // Appelée quelques instants après que postMessage a été appelée
-function receiveMessage(event)
-{
+function receiveMessage(event) {
   // Faisons-nous confiance à l'expéditeur de ce message ?
-  if (event.origin !== "http://example.com:8080")
-    return;
+  if (event.origin !== "http://example.com:8080") return;
 
   // event.source est window.opener
   // event.data est "hello there!"
@@ -117,9 +106,10 @@ function receiveMessage(event)
   // (ce que vous devriez faire en toutes circonstances),
   // un moyen pratique de répondre à un message est d'appeler postMessage
   // sur event.source et fournir event.origin comme targetOrigin.
-  event.source.postMessage("hi there yourself!  the secret response " +
-                           "is: rheeeeet!",
-                           event.origin);
+  event.source.postMessage(
+    "hi there yourself!  the secret response " + "is: rheeeeet!",
+    event.origin,
+  );
 }
 
 window.addEventListener("message", receiveMessage, false);

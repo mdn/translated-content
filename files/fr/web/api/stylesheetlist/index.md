@@ -1,12 +1,6 @@
 ---
 title: StyleSheetList
 slug: Web/API/StyleSheetList
-tags:
-  - API
-  - CSSDOM
-  - NeedsContent
-  - NeedsUpdate
-translation_of: Web/API/StyleSheetList
 ---
 
 {{APIRef("CSSOM")}}
@@ -19,16 +13,18 @@ Il s'agit d'un objet de type array, mais qui ne peut pas être itéré à l'aide
 
 ```js
 // Récupère toutes les règles CSS du document en cours en utilisant les méthodes de Array
-var allCSS = [].slice.call(document.styleSheets)
-                     .reduce(function (prev, styleSheet) {
-        if (styleSheet.cssRules) {
-            return prev +
-                [].slice.call(styleSheet.cssRules)
-                        .reduce(function (prev, cssRule) {
-                    return prev + cssRule.cssText;
-                });
-        } else {
-            return prev;
-        }
-    });
+var allCSS = [].slice
+  .call(document.styleSheets)
+  .reduce(function (prev, styleSheet) {
+    if (styleSheet.cssRules) {
+      return (
+        prev +
+        [].slice.call(styleSheet.cssRules).reduce(function (prev, cssRule) {
+          return prev + cssRule.cssText;
+        })
+      );
+    } else {
+      return prev;
+    }
+  });
 ```

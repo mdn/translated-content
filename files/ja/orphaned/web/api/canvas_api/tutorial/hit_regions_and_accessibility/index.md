@@ -1,7 +1,6 @@
 ---
 title: ヒット領域とアクセシビリティ
 slug: orphaned/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility
-original_slug: Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility
 ---
 
 <div>{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas", "Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}</div>
@@ -10,7 +9,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility
 
 <h2 id="Fallback_content" name="Fallback_content">フォールバックコンテンツ</h2>
 
-<p><code>&lt;canvas&gt; ... &lt;/canvas&gt;</code> タグの内部にあるコンテンツは、canvas のレンダリングをサポートしないブラウザ向けのフォールバックコンテンツとして使用できます。また支援技術 (スクリーンリーダーなど) ユーザーに対しても、タグ内のサブ DOM を読み上げたり対話することができますので、とても役に立ちます。この方法を示すよい例が <a href="http://www.html5accessibility.com/tests/canvas.html">html5accessibility.com</a> にあります:</p>
+<p><code>&lt;canvas&gt; ... &lt;/canvas&gt;</code> タグの内部にあるコンテンツは、canvas のレンダリングをサポートしないブラウザー向けのフォールバックコンテンツとして使用できます。また支援技術 (スクリーンリーダーなど) ユーザーに対しても、タグ内のサブ DOM を読み上げたり対話することができますので、とても役に立ちます。この方法を示すよい例が <a href="http://www.html5accessibility.com/tests/canvas.html">html5accessibility.com</a> にあります:</p>
 
 <pre class="brush: html">&lt;canvas&gt;
   &lt;h2&gt;Shapes&lt;/h2&gt;

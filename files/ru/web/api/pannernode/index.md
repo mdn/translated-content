@@ -1,7 +1,6 @@
 ---
 title: PannerNode
 slug: Web/API/PannerNode
-translation_of: Web/API/PannerNode
 ---
 
 {{ APIRef("Web Audio API") }}
@@ -95,17 +94,11 @@ translation_of: Web/API/PannerNode
   - : Это устаревший элемент API и его работа в дальнейшем не гарантируется.
     Определяет вектор распространения звука от источника - как быстро он движется и в каком направлении. В предыдущей версии спецификации, {{domxref("PannerNode")}} имел скорость распространения, которую можно было выдать выше или ниже подключённого потока {{domxref("AudioBufferSourceNode")}}. Эта функция не была чётко оговорена и имела ряд проблем, поэтому была удалена из спецификации.
 
-## Примеры
-
-{{page("/ru/docs/Web/API/AudioContext.createPanner","Example")}}
-
 ## Specifications
 
-| Specification                                                                                    | Status                               | Comment |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------- |
-| {{SpecName('Web Audio API', '#the-pannernode-interface', 'PannerNode')}} | {{Spec2('Web Audio API')}} |         |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

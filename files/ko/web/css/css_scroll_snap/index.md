@@ -1,7 +1,6 @@
 ---
 title: CSS Scroll Snap Points
 slug: Web/CSS/CSS_scroll_snap
-original_slug: Web/CSS/CSS_Scroll_Snap_Points
 ---
 
 {{CSSRef}}{{deprecated_header}}

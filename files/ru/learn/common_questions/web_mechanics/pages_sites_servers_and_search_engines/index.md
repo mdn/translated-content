@@ -1,15 +1,6 @@
 ---
 title: Веб-страницы, веб-сайты, веб серверы и поисковики
 slug: Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines
-tags:
-  - ActiveLearning
-  - Beginner
-  - WebMechanics
-  - Активное изучение
-  - Новичку
-  - Программисту
-translation_of: Learn/Common_questions/Pages_sites_servers_and_search_engines
-original_slug: Learn/Common_questions/Pages_sites_servers_and_search_engines
 ---
 
 В этой статье мы расскажем о различных понятиях связанных с Веб: о веб-страницах, веб-сайтах, веб-серверах и о поисковых системах. Эти термины часто ставят в тупик как начинающих работу с Веб, так и людей, редко пользующихся сетью. Давайте же разберёмся, что именно эти понятия означают!

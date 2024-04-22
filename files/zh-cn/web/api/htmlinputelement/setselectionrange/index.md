@@ -30,6 +30,7 @@ element.setSelectionRange(selectionStart, selectionEnd [, selectionDirection]);
 - `selectionEnd`
   - : 被选中的最后一个字符的 _下一个_ 位置索引。如果这个值比元素的 value 长度还大，则会被看作 value 最后一个位置的索引。
 - `selectionDirection` {{optional_inline}}
+
   - : 一个表示选择方向的字符串，可能的值有：
 
 - `"forward"`

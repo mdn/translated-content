@@ -29,22 +29,20 @@ slug: Web/SVG/Element/svg
 它可以包含在 html5 文档里，如下所示：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  <meta charset="UTF-8" />
-  <title>HTML/SVG Example</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <title>HTML/SVG Example</title>
+  </head>
 
-<body>
-
-  <svg width="150" height="100" viewBox="0 0 3 2">
-    <rect width="1" height="2" x="0" fill="#008d46" />
-    <rect width="1" height="2" x="1" fill="#ffffff" />
-    <rect width="1" height="2" x="2" fill="#d2232c" />
-  </svg>
-
-</body>
+  <body>
+    <svg width="150" height="100" viewBox="0 0 3 2">
+      <rect width="1" height="2" x="0" fill="#008d46" />
+      <rect width="1" height="2" x="1" fill="#ffffff" />
+      <rect width="1" height="2" x="2" fill="#d2232c" />
+    </svg>
+  </body>
 </html>
 ```
 
@@ -76,7 +74,7 @@ slug: Web/SVG/Element/svg
 
 ## DOM 接口
 
-该元素实现了[`SVGSVGElement`](/zh-CN/docs/DOM/SVGSVGElement) 接口。
+该元素实现了 [`SVGSVGElement`](/zh-CN/docs/DOM/SVGSVGElement) 接口。
 
 ## 浏览器兼容性
 

@@ -1,7 +1,6 @@
 ---
 title: XMLHttpRequest.open()
 slug: Web/API/XMLHttpRequest/open
-translation_of: Web/API/XMLHttpRequest/open
 ---
 
 {{APIRef('XMLHttpRequest')}}
@@ -13,10 +12,10 @@ La méthode **`open()`** de {{domxref("XMLHttpRequest")}} instancie une nouvelle
 ## Syntaxe
 
 ```js
-XMLHttpRequest.open(method, url)
-XMLHttpRequest.open(method, url, async)
-XMLHttpRequest.open(method, url, async, user)
-XMLHttpRequest.open(method, url, async, user, password)
+XMLHttpRequest.open(method, url);
+XMLHttpRequest.open(method, url, async);
+XMLHttpRequest.open(method, url, async, user);
+XMLHttpRequest.open(method, url, async, user, password);
 ```
 
 ### Paramètres

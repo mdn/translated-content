@@ -25,10 +25,10 @@ var hasName = URLSearchParams.has(name)
 ## 示例
 
 ```js
-let url = new URL('https://example.com?foo=1&bar=2');
+let url = new URL("https://example.com?foo=1&bar=2");
 let params = new URLSearchParams(url.search.slice(1));
 
-params.has('bar') === true; //true
+params.has("bar") === true; //true
 ```
 
 ## 规范

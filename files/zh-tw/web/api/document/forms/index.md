@@ -16,7 +16,7 @@ collection = document.forms;
 ## 範例：取得表單資訊
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>document.forms example</title>

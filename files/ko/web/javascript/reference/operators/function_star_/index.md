@@ -28,15 +28,15 @@ slug: Web/JavaScript/Reference/Operators/function*
 
 ## Description
 
-`function*` expression 은 {{jsxref('Statements/function*', 'function* statement')}} 과 매우 유사하고 형식도 같습니다. `function*` expression 과 `function*` statement 의 주요한 차이점은 함수명으로,\* _`function_` expressions 에서는 익명 함수로 만들기 위해 함수명이 생략될 수 있습니다.보다 자세한 내용은 [functions](/ko/docs/Web/JavaScript/Reference/Functions) 을 참조하십시오.
+`function*` expression 은 {{jsxref('Statements/function*', 'function* statement')}} 과 매우 유사하고 형식도 같습니다. `function*` expression 과 `function*` statement 의 주요한 차이점은 함수명으로, _`function*`_ expressions 에서는 익명 함수로 만들기 위해 함수명이 생략될 수 있습니다.보다 자세한 내용은 [functions](/ko/docs/Web/JavaScript/Reference/Functions) 을 참조하십시오.
 
 ## Examples
 
 아래의 예제는 이름이 없는 generator function 을 정의하고 이를 x 에 할당합니다. function 은 인자로 들어온 값의 제곱을 생산(yield)합니다.
 
 ```js
-var x = function*(y) {
-   yield y * y;
+var x = function* (y) {
+  yield y * y;
 };
 ```
 
@@ -52,7 +52,7 @@ var x = function*(y) {
 
 - {{jsxref("Statements/function*", "function* statement")}}
 - {{jsxref("GeneratorFunction")}} object
-- [The Iterator protocol](/en-US/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- [The Iterator protocol](/ko/docs/Web/JavaScript/Guide/The_Iterator_protocol)
 - {{jsxref("Operators/yield", "yield")}}
 - {{jsxref("Operators/yield*", "yield*")}}
 - {{jsxref("Function")}} object

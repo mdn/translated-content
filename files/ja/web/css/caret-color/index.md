@@ -1,6 +1,8 @@
 ---
 title: caret-color
 slug: Web/CSS/caret-color
+l10n:
+  sourceCommit: 1c4eb0bfb5f72a26fcc21a83fac91aa3e66c2fb8
 ---
 
 {{CSSRef}}
@@ -22,13 +24,14 @@ caret-color: currentcolor;
 /* <color> 値 */
 caret-color: red;
 caret-color: #5729e9;
-caret-color: rgb(0, 200, 0);
-caret-color: hsla(228, 4%, 24%, 0.8);
+caret-color: rgb(0 200 0);
+caret-color: hsl(228deg 4% 24% / 80%);
 
 /* グローバル値 */
 caret-color: inherit;
 caret-color: initial;
 caret-color: revert;
+caret-color: revert-layer;
 caret-color: unset;
 ```
 
@@ -58,10 +61,11 @@ caret-color: unset;
 #### HTML
 
 ```html
-<input value="このフィールドは既定のキャレットを使用します。" size="64"/>
-<input class="custom" value="キャレットが独自の色になります！" size="64"/>
-<p contenteditable class="custom">この段落は編集可能であり、
-   同様にキャレットが独自の色です！</p>
+<input value="このフィールドは既定のキャレットを使用します。" size="64" />
+<input class="custom" value="キャレットが独自の色になります！" size="64" />
+<p contenteditable class="custom">
+  この段落は編集可能であり、 同様にキャレットが独自の色です！
+</p>
 ```
 
 #### CSS
@@ -70,7 +74,7 @@ caret-color: unset;
 input {
   caret-color: auto;
   display: block;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 
 input.custom {
@@ -98,7 +102,6 @@ p.custom {
 
 - {{HTMLElement("input")}} 要素
 - 要素のテキストを編集可能にする HTML の [`contenteditable`](/ja/docs/Web/HTML/Global_attributes#contenteditable) 属性
-- [内容を編集可能にする](/ja/docs/Web/Guide/HTML/Editable_content)
-- [CSS を使用した HTML 要素への色の適用](/ja/docs/Web/HTML/Applying_color)
+- [CSS を使用した HTML 要素への色の適用](/ja/docs/Web/CSS/CSS_colors/Applying_color)
 - {{cssxref("&lt;color&gt;")}} データ型
 - その他の色に関するプロパティ: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}}

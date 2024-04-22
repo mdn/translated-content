@@ -1,9 +1,6 @@
 ---
 title: Gestion des espaces dans le DOM
 slug: Web/API/Document_Object_Model/Whitespace
-tags:
-  - DOM
-translation_of: Web/API/Document_Object_Model/Whitespace
 ---
 
 ## Le problème
@@ -18,15 +15,13 @@ En d'autres termes, l'arbre DOM pour le document qui suit ressemblera à l'image
 ```html
 <!-- My document -->
 <html>
-<head>
-  <title>My Document</title>
-</head>
-<body>
-  <h1>Header</h1>
-  <p>
-    Paragraph
-  </p>
-</body>
+  <head>
+    <title>My Document</title>
+  </head>
+  <body>
+    <h1>Header</h1>
+    <p>Paragraph</p>
+  </body>
 </html>
 ```
 
@@ -43,22 +38,22 @@ On peut formater leur code comme indiqué ci-dessous pour contourner le problèm
      avec des espaces entre les balises:
  -->
 <div>
- <ul>
-  <li>Position 1</li>
-  <li>Position 2</li>
-  <li>Position 3</li>
- </ul>
+  <ul>
+    <li>Position 1</li>
+    <li>Position 2</li>
+    <li>Position 3</li>
+  </ul>
 </div>
 
 <!-- jolie impression adaptée au problème :
  -->
-<div
- ><ul
-  ><li>Position 1</li
-  ><li>Position 2</li
-  ><li>Position 3</li
- ></ul
-></div>
+<div>
+  <ul>
+    <li>Position 1</li>
+    <li>Position 2</li>
+    <li>Position 3</li>
+  </ul>
+</div>
 ```
 
 Le code JavaScript ci-dessous définit plusieurs fonctions facilitant la manipulation d'espaces dans le DOM&nbsp;:
@@ -75,7 +70,6 @@ Le code JavaScript ci-dessous définit plusieurs fonctions facilitant la manipul
  * espaces (et aussi d'autres caractères).
  */
 
-
 /**
  * Détermine si le contenu du texte d'un nœud est entièrement blanc.
  *
@@ -84,12 +78,10 @@ Le code JavaScript ci-dessous définit plusieurs fonctions facilitant la manipul
  * @return     True (vrai) Si tout le contenu du texte du |nod| est un espace,
  *             sinon false (faux).
  */
-function is_all_ws( nod )
-{
+function is_all_ws(nod) {
   // Utilise ECMA-262 Edition 3 chaînes et fonctionnalités RegExp
-  return !(/[^\t\n\r ]/.test(nod.textContent));
+  return !/[^\t\n\r ]/.test(nod.textContent);
 }
-
 
 /**
  * Détermine si le nœud doit être ignoré par les fonctions d'itération.
@@ -101,10 +93,11 @@ function is_all_ws( nod )
  *             et autrement false (faux).
  */
 
-function is_ignorable( nod )
-{
-  return ( nod.nodeType == 8) || // un nœud commentaire
-         ( (nod.nodeType == 3) && is_all_ws(nod) ); // un nœud texte, tout espace
+function is_ignorable(nod) {
+  return (
+    nod.nodeType == 8 || // un nœud commentaire
+    (nod.nodeType == 3 && is_all_ws(nod))
+  ); // un nœud texte, tout espace
 }
 
 /**
@@ -120,8 +113,7 @@ function is_ignorable( nod )
  *                  être ignoré du fait de la fonction |is_ignorable|, ou
  *               2) null si aucun nœud n'existe.
  */
-function node_before( sib )
-{
+function node_before(sib) {
   while ((sib = sib.previousSibling)) {
     if (!is_ignorable(sib)) return sib;
   }
@@ -138,8 +130,7 @@ function node_before( sib )
  *                  être ignoré du fait de la fonction |is_ignorable|, ou
  *               2) null si aucun nœud n'existe.
  */
-function node_after( sib )
-{
+function node_after(sib) {
   while ((sib = sib.nextSibling)) {
     if (!is_ignorable(sib)) return sib;
   }
@@ -158,9 +149,8 @@ function node_after( sib )
  *                  être ignoré du fait de la fonction |is_ignorable|, ou
  *               2) null si aucun nœud n'existe.
  */
-function last_child( par )
-{
-  var res=par.lastChild;
+function last_child(par) {
+  var res = par.lastChild;
   while (res) {
     if (!is_ignorable(res)) return res;
     res = res.previousSibling;
@@ -178,9 +168,8 @@ function last_child( par )
  *                  être ignoré du fait de la fonction |is_ignorable|, ou
  *               2) null si aucun nœud n'existe.
  */
-function first_child( par )
-{
-  var res=par.firstChild;
+function first_child(par) {
+  var res = par.firstChild;
   while (res) {
     if (!is_ignorable(res)) return res;
     res = res.nextSibling;
@@ -197,13 +186,11 @@ function first_child( par )
  * @return     Une chaîne donnant le contenu du nœud de texte avec
  *             espace blanc s'est effondré.
  */
-function data_of( txt )
-{
+function data_of(txt) {
   var data = txt.textContent;
   // Utilise ECMA-262 Edition 3 chaînes et fonctionnalités RegExp
   data = data.replace(/[\t\n\r ]+/g, " ");
-  if (data.charAt(0) == " ")
-    data = data.substring(1, data.length);
+  if (data.charAt(0) == " ") data = data.substring(1, data.length);
   if (data.charAt(data.length - 1) == " ")
     data = data.substring(0, data.length - 1);
   return data;
@@ -216,12 +203,10 @@ Le code qui suit montre l'utilisation des fonctions présentées plus haut. Il p
 
 ```js
 var cur = first_child(document.getElementById("test"));
-while (cur)
-{
-  if (data_of(cur.firstChild) == "This is the third paragraph.")
-  {
-      cur.className = "magic";
-      cur.firstChild.textContent = "This is the magic paragraph.";
+while (cur) {
+  if (data_of(cur.firstChild) == "This is the third paragraph.") {
+    cur.className = "magic";
+    cur.firstChild.textContent = "This is the magic paragraph.";
   }
   cur = node_after(cur);
 }

@@ -146,7 +146,8 @@ slug: Web/HTML/Element/select
 下面的例子更加复杂，展示了可用在 `<select>` 元素上的更多功能：
 
 ```html
-<label>Please choose one or more pets:
+<label
+  >Please choose one or more pets:
   <select name="pets" multiple size="4">
     <optgroup label="4-legged pets">
       <option value="dog">Dog</option>
@@ -185,7 +186,7 @@ slug: Web/HTML/Element/select
   </tr>
   <tr>
    <th scope="row">标签省略</th>
-   <td>{{no_tag_omission}}</td>
+   <td>不允许，开始标签和结束标签都不能省略。</td>
   </tr>
   <tr>
    <th scope="row">允许的父元素</th>
@@ -216,5 +217,6 @@ slug: Web/HTML/Element/select
 
 ## 参见
 
-- 其他表单对象：{{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("option")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} 和 {{HTMLElement("meter")}}。
-- 由 `<select>` 触发的事件： {{domxref("HTMLElement/change_event", "change")}}, {{domxref("HTMLElement/input_event", "input")}}
+- 由 `<select>` 触发的事件：{{domxref("HTMLElement/change_event", "change")}}、{{domxref("Element/input_event", "input")}}
+- {{HTMLElement("option")}} 元素
+- {{HTMLElement("optgroup")}} 元素

@@ -1,10 +1,6 @@
 ---
 title: fill-rule
 slug: Web/SVG/Attribute/fill-rule
-tags:
-  - SVG
-  - SVG Attribute
-translation_of: Web/SVG/Attribute/fill-rule
 ---
 
 {{SVGRef}}
@@ -18,14 +14,20 @@ Cet attribut peut être appliqué à n'importe quel élément mais n'aura d'effe
 ## Exemple
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="-10 -10 220 120" xmlns="http://www.w3.org/2000/svg">
   <!-- Valeur par défaut pour fill-rule -->
-  <polygon fill-rule="nonzero" stroke="red"
-   points="50,0 21,90 98,35 2,35 79,90"/>
+  <polygon
+    fill-rule="nonzero"
+    stroke="red"
+    points="50,0 21,90 98,35 2,35 79,90" />
 
   <!--
   Les points au centre de la forme ont 2
@@ -34,8 +36,10 @@ html,body,svg { height:100% }
   dehors de la forme, et l'intérieur de l'étoile
   est donc vide.
   -->
-  <polygon fill-rule="evenodd" stroke="red"
-   points="150,0 121,90 198,35 102,35 179,90"/>
+  <polygon
+    fill-rule="evenodd"
+    stroke="red"
+    points="150,0 121,90 198,35 102,35 179,90" />
 </svg>
 ```
 
@@ -71,32 +75,42 @@ La valeur `nonzero` détermine si un point est à l'intérieur d'une forme en de
 #### Exemple
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="-10 -10 320 120" xmlns="http://www.w3.org/2000/svg">
   <!-- Effet de la règle de remplissage sur les segments qui se croisent -->
-  <polygon fill-rule="nonzero" stroke="red"
-           points="50,0 21,90 98,35 2,35 79,90"/>
+  <polygon
+    fill-rule="nonzero"
+    stroke="red"
+    points="50,0 21,90 98,35 2,35 79,90" />
 
   <!--
   Effet sur une forme dans une forme
   lorsque le segment va dans la même direction
   (vers la droite)
   -->
-  <path fill-rule="nonzero" stroke="red"
-        d="M110,0  h90 v90 h-90 z
-           M130,20 h50 v50 h-50 z"/>
+  <path
+    fill-rule="nonzero"
+    stroke="red"
+    d="M110,0  h90 v90 h-90 z
+           M130,20 h50 v50 h-50 z" />
 
   <!--
   Effet sur une forme dans une forme
   lorsque le segment va dans la direction opposée
   (vers la gauche contre vers la droite)
   -->
-  <path fill-rule="nonzero" stroke="red"
-        d="M210,0  h90 v90 h-90 z
-           M230,20 v50 h50 v-50 z"/>
+  <path
+    fill-rule="nonzero"
+    stroke="red"
+    d="M210,0  h90 v90 h-90 z
+           M230,20 v50 h50 v-50 z" />
 </svg>
 ```
 
@@ -109,32 +123,42 @@ La valeur `evenodd` détermine si un point est à l'intérieur d'une forme en de
 #### Exemple
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="-10 -10 320 120" xmlns="http://www.w3.org/2000/svg">
   <!-- Effet de la règle de remplissage sur les segments qui se croisent -->
-  <polygon fill-rule="evenodd" stroke="red"
-           points="50,0 21,90 98,35 2,35 79,90"/>
+  <polygon
+    fill-rule="evenodd"
+    stroke="red"
+    points="50,0 21,90 98,35 2,35 79,90" />
 
   <!--
   Effet sur une forme dans une forme
   lorsque le segment va dans la même direction
   (vers la droite)
   -->
-  <path fill-rule="evenodd" stroke="red"
-        d="M110,0  h90 v90 h-90 z
-           M130,20 h50 v50 h-50 z"/>
+  <path
+    fill-rule="evenodd"
+    stroke="red"
+    d="M110,0  h90 v90 h-90 z
+           M130,20 h50 v50 h-50 z" />
 
   <!--
   Effet sur une forme dans une forme
   lorsque le segment va dans la direction opposée
   (vers la gauche contre vers la droite)
   -->
-  <path fill-rule="evenodd" stroke="red"
-        d="M210,0  h90 v90 h-90 z
-           M230,20 v50 h50 v-50 z"/>
+  <path
+    fill-rule="evenodd"
+    stroke="red"
+    d="M210,0  h90 v90 h-90 z
+           M230,20 v50 h50 v-50 z" />
 </svg>
 ```
 

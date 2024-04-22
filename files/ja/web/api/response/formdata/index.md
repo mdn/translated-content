@@ -1,7 +1,6 @@
 ---
 title: Response.formData()
 slug: Web/API/Response/formData
-original_slug: Web/API/Body/formData
 l10n:
   sourceCommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
 ---

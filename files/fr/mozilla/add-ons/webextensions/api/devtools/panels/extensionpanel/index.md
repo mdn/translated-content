@@ -1,18 +1,9 @@
 ---
 title: devtools.panels.ExtensionPanel
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionPanel
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - devtools.panels
-translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionPanel
-original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionPanel
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Une `ExtensionPanel` représente un panneau ajouté aux devtools. C'est la résolution de la [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) renvoyé par [`browser.devtools.panels.create()`](/fr/Add-ons/WebExtensions/API/devtools.panels/create).
 
@@ -42,14 +33,16 @@ function handleHidden(e) {
   console.log("panel is being hidden");
 }
 
-browser.devtools.panels.create(
-  "My Panel",                 // title
-  "icons/star.png",           // icon
-  "devtools/panel/panel.html" // content
-).then((newPanel) => {
-  newPanel.onShown.addListener(handleShown);
-  newPanel.onHidden.addListener(handleHidden);
-});
+browser.devtools.panels
+  .create(
+    "My Panel", // title
+    "icons/star.png", // icon
+    "devtools/panel/panel.html", // content
+  )
+  .then((newPanel) => {
+    newPanel.onShown.addListener(handleShown);
+    newPanel.onHidden.addListener(handleHidden);
+  });
 ```
 
 {{WebExtExamples}}

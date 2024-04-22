@@ -1,20 +1,9 @@
 ---
 title: idle.setDetectionInterval()
 slug: Mozilla/Add-ons/WebExtensions/API/idle/setDetectionInterval
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Idle
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - setDetectionInterval
-translation_of: Mozilla/Add-ons/WebExtensions/API/idle/setDetectionInterval
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Définit l'intervalle, en secondes, utilisé pour déterminer quand le système est dans un état inactif pour les événements {{WebExtAPIRef("idle.onStateChanged")}} . L'intervalle par défaut est de 60 secondes.
 
@@ -24,8 +13,8 @@ L'intervalle de détection est spécifique à l'extension qui appelle la méthod
 
 ```js
 browser.idle.setDetectionInterval(
-  intervalInSeconds // integer
-)
+  intervalInSeconds, // integer
+);
 ```
 
 ### Paramètres

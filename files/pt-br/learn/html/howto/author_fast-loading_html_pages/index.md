@@ -1,7 +1,6 @@
 ---
 title: Dicas para criar páginas HTML de carregamento rápido
 slug: Learn/HTML/Howto/Author_fast-loading_HTML_pages
-original_slug: Web/HTML/Dicas_para_criar_páginas_HTML_de_carregamento_rápido
 ---
 
 Estas dicas são baseadas em conhecimento comum e experimentação.
@@ -64,7 +63,7 @@ Scripts _inline_ podem ser custosos para o carregamento, uma vez que o parser de
 
 ### Use CSS moderno e marcação validada
 
-O uso de CSS moderno reduz a quantidade de marcação, pode reduzir a necessidade de imagens, em termos de layout, e frequentemente substitui imagens de textos estilizados -- que "custam" muito mais do que o texto estilizado com CSS.
+O uso de CSS moderno reduz a quantidade de marcação, pode reduzir a necessidade de imagens, em termos de layout, e frequentemente substitui imagens de textos estilizados — que "custam" muito mais do que o texto estilizado com CSS.
 
 Usar marcações validadas tem outras vantagens. Primeiro, _browsers_ não precisarão realizar correção de erros durante o _parsing_ de HTML (isso é à parte da preocupação filosófica de permitir variação de formato na entrada do usuário, e então programaticamente "corrigir" ou normalizá-la; ou se, ao invés disso, forçar um formato de entrada rígido, sem tolerância a desvios).
 
@@ -120,21 +119,24 @@ Note, contudo, que muitas das dicas listadas neste artigo são técnicas de sens
 
 ## Exemplo de estrutura de página
 
-- `HTML`
+- `html`
 
-- `HEAD`
-  - `LINK`...
+- `head`
+
+  - `link`...
     Arquivos CSS requeridos para a aparência da página. Minimize o número de arquivos para performance enquanto mantém CSS não-relacionado em arquivos separados para manutenção.
 
-  - `SCRIPT`...
+  - `script`...
     Arquivos JavaScript para funções **requeridas** durante o carregamento da página, sem qualquer DHTML que só pode ser executado após o carregamento completo.
+
 - Minimize o número de arquivos para performance enquanto mantém JavaScript não-relacionado em arquivos separados para manutenção.
 
-- `BODY`
+- `body`
 - Páginas de conteúdo visíveis ao usuário em pequenas divisões (tabelas / divs) que podem ser exibidas sem esperar a página inteira ser baixada.
 
-  - `SCRIPT`...
+  - `script`...
     Quaisquer scripts que forem usados para realizar DHTML. Um script DHTML geralmente só pode ser executado após o carregamento completo da página e a inicialização de todos os objetos necessários. Não há necessidade de carregar esses scripts antes do conteúdo. Isso apenas desacelera a aparência inicial do carregamento da página.
+
 - Minimize o número de arquivos para performance enquanto mantém CSS não-relacionado em arquivos separados para manutenção.
 - Se uma ou mais imagens forem usadas para efeitos de _rollover_, você deve pré-carregá-las aqui após o conteúdo da página ter sido baixado.
 

@@ -26,7 +26,7 @@ slug: Web/CSS/:lang
 
 ## 範例
 
-在此例中，`:lang()` 偽類 會依據 “引用元素 quote” ({{htmlElement("q")}}) 的父層來選擇 [子組合子 ( child combinators )](/zh-TW/docs/Web/CSS/Child_selectors)。 請注意，此處演示的方法並不是唯一的，並且最好的方式，是依據文檔類型來確定。還要注意的是， {{glossary("Unicode")}} 的值，有明確指定到那些你要使用的字符。
+在此例中，`:lang()` 偽類 會依據 「引用元素 quote」 ({{htmlElement("q")}}) 的父層來選擇 [子組合子 ( child combinators )](/zh-TW/docs/Web/CSS/Child_selectors)。 請注意，此處演示的方法並不是唯一的，並且最好的方式，是依據文檔類型來確定。還要注意的是， {{glossary("Unicode")}} 的值，有明確指定到那些你要使用的字符。
 
 ### HTML
 
@@ -46,13 +46,13 @@ slug: Web/CSS/:lang
 
 ```css
 :lang(en) > q {
-  quotes: "\201C""\201D""\2018""\2019";
+  quotes: "\201C" "\201D" "\2018" "\2019";
 }
 :lang(fr) > q {
   quotes: "« " " »";
 }
 :lang(de) > q {
-  quotes: "»" "«" "\2039""\203A";
+  quotes: "»" "«" "\2039" "\203A";
 }
 ```
 

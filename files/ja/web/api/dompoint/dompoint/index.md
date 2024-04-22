@@ -12,11 +12,11 @@ slug: Web/API/DOMPoint/DOMPoint
 ## 構文
 
 ```js
-new DOMPoint()
-new DOMPoint(x)
-new DOMPoint(x, y)
-new DOMPoint(x, y, z)
-new DOMPoint(x, y, z, w)
+new DOMPoint();
+new DOMPoint(x);
+new DOMPoint(x, y);
+new DOMPoint(x, y, z);
+new DOMPoint(x, y, z, w);
 ```
 
 ### 引数

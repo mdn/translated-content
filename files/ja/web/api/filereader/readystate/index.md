@@ -26,13 +26,13 @@ l10n:
 
 ```js
 const reader = new FileReader();
-console.log('EMPTY', reader.readyState); // readyState は 0 になります。
+console.log("EMPTY", reader.readyState); // readyState は 0 になります。
 
 reader.readAsText(blob);
-console.log('LOADING', reader.readyState); // readyState は 1 になります。
+console.log("LOADING", reader.readyState); // readyState は 1 になります。
 
 reader.onloadend = () => {
-  console.log('DONE', reader.readyState); // readyState は 2 になります。
+  console.log("DONE", reader.readyState); // readyState は 2 になります。
 };
 ```
 

@@ -26,8 +26,8 @@ WebGLBuffer gl.createBuffer();
 ### 创建一个缓冲区
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
+var canvas = document.getElementById("canvas");
+var gl = canvas.getContext("webgl");
 var buffer = gl.createBuffer();
 ```
 

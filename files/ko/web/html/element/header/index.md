@@ -9,8 +9,6 @@ slug: Web/HTML/Element/header
 
 {{EmbedInteractiveExample("pages/tabbed/header.html", "tabbed-standard")}}
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</div>
-
 <table class="properties">
   <tbody>
     <tr>
@@ -78,7 +76,7 @@ slug: Web/HTML/Element/header
 ```html
 <header>
   <h1>Main Page Title</h1>
-  <img src="mdn-logo-sm.png" alt="MDN logo">
+  <img src="mdn-logo-sm.png" alt="MDN logo" />
 </header>
 ```
 
@@ -88,10 +86,17 @@ slug: Web/HTML/Element/header
 <article>
   <header>
     <h2>The Planet Earth</h2>
-    <p>Posted on Wednesday, <time datetime="2017-10-04">4 October 2017</time> by Jane Smith</p>
+    <p>
+      Posted on Wednesday, <time datetime="2017-10-04">4 October 2017</time> by
+      Jane Smith
+    </p>
   </header>
-  <p>We live on a planet that's blue and green, with so many things still unseen.</p>
-  <p><a href="https://janesmith.com/the-planet-earth/">Continue reading....</a></p>
+  <p>
+    We live on a planet that's blue and green, with so many things still unseen.
+  </p>
+  <p>
+    <a href="https://janesmith.com/the-planet-earth/">Continue reading....</a>
+  </p>
 </article>
 ```
 

@@ -17,9 +17,9 @@ Las decoraciones de texto se dibujan a través de los elementos descendientes. E
 
 ```css
 /* Valores clave */
-text-decoration: none;                 /* Sin decoración */
-text-decoration: underline red;        /* Subrayado rojo */
-text-decoration: underline wavy red;   /* Subrayado rojo ondulado */
+text-decoration: none; /* Sin decoración */
+text-decoration: underline red; /* Subrayado rojo */
+text-decoration: underline wavy red; /* Subrayado rojo ondulado */
 
 /* Valores globales */
 text-decoration: inherit;
@@ -39,31 +39,38 @@ La propiedad `text-decoration` es una forma reducida, y puede usar los valores d
 
 ```css
 h1.under {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 h1.over {
-    text-decoration: overline;
+  text-decoration: overline;
 }
 p.line {
-    text-decoration: line-through;
+  text-decoration: line-through;
 }
 p.blink {
-    text-decoration: blink;
+  text-decoration: blink;
 }
 a.none {
-    text-decoration: none;
+  text-decoration: none;
 }
 p.underover {
-    text-decoration: underline overline;
+  text-decoration: underline overline;
 }
 ```
 
 ```html
 <h1 class="under">Underlined Header</h1>
 <p class="line">If you want to strike out text, use line-through.</p>
-<p class="blink">This text might blink for you - if you use Explorer, it will not.</p>
+<p class="blink">
+  This text might blink for you - if you use Explorer, it will not.
+</p>
 <h1 class="over">and now an overlined header.</h1>
-<p>This <a class="none" href="textdecoration.html">link will not be underlined</a>, as most links are by default. Be careful with removing the text decoration on links since most users depend on the underline to signify a hyperlink.</p>
+<p>
+  This
+  <a class="none" href="textdecoration.html">link will not be underlined</a>, as
+  most links are by default. Be careful with removing the text decoration on
+  links since most users depend on the underline to signify a hyperlink.
+</p>
 <p class="underover">This text has both underline and overline.</p>
 ```
 

@@ -1,7 +1,6 @@
 ---
 title: extends
 slug: Web/JavaScript/Reference/Classes/extends
-original_slug: Web/JavaScript/Referencia/Classes/extends
 ---
 
 {{jsSidebar("Classes")}}
@@ -34,7 +33,7 @@ class Square extends Polygon {
     super(length, length);
     // Nota: En las clases extendidas, se debe llamar a super()
     // antes de poder usar 'this'. El no hacerlo provocará un reference error.
-    this.name = 'Square';
+    this.name = "Square";
   }
 
   get area() {
@@ -58,8 +57,24 @@ class myDate extends Date {
   }
 
   getFormattedDate() {
-    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-    return this.getDate() + "-" + months[this.getMonth()] + "-" + this.getFullYear();
+    var months = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ];
+
+    return (
+      this.getDate() + "-" + months[this.getMonth()] + "-" + this.getFullYear()
+    );
   }
 }
 ```
@@ -74,7 +89,7 @@ class nullExtends extends null {
 }
 
 Object.getPrototypeOf(nullExtends); // Function.prototype
-Object.getPrototypeOf(nullExtends.prototype) // null
+Object.getPrototypeOf(nullExtends.prototype); // null
 ```
 
 ## Especificaciones

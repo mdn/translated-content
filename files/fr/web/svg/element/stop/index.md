@@ -1,7 +1,6 @@
 ---
 title: <stop>
 slug: Web/SVG/Element/stop
-translation_of: Web/SVG/Element/stop
 ---
 
 {{SVGRef}}
@@ -36,9 +35,11 @@ Cet élément implémenté l'interface {{domxref("SVGStopElement")}}.
 ### SVG
 
 ```html
-<svg width="160" height="95" viewBox="0 0 80 40"
-     xmlns="http://www.w3.org/2000/svg">
-
+<svg
+  width="160"
+  height="95"
+  viewBox="0 0 80 40"
+  xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="MyGradient">
       <stop offset="5%" stop-color="#F60" />
@@ -47,12 +48,17 @@ Cet élément implémenté l'interface {{domxref("SVGStopElement")}}.
   </defs>
 
   <!-- Contour de la zone de dessin en noir -->
-  <rect fill="none" stroke="black"
-        x="0.5" y="0.5" width="79" height="39"/>
+  <rect fill="none" stroke="black" x="0.5" y="0.5" width="79" height="39" />
 
   <!-- Le rectangle est rempli avec un dégradé linéaire -->
-  <rect fill="url(#MyGradient)" stroke="black" stroke-width="1"
-        x="10" y="10" width="60" height="20"/>
+  <rect
+    fill="url(#MyGradient)"
+    stroke="black"
+    stroke-width="1"
+    x="10"
+    y="10"
+    width="60"
+    height="20" />
 </svg>
 ```
 

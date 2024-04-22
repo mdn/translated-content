@@ -3,30 +3,30 @@ title: browserAction.disable()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/disable
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
-タブに対してブラウザアクションを無効にします。つまり、タブがアクティブな時クリックされなくなります。
+タブに対してブラウザーアクションを無効にします。つまり、タブがアクティブな時クリックされなくなります。
 
 ## 書式
 
 ```js
 browser.browserAction.disable(
-  tabId // optional integer
-)
+  tabId, // optional integer
+);
 ```
 
-### パラメータ
+### パラメーター
 
 - `tabId`{{optional_inline}}
-  - : `integer`. ブラウザアクションを無効にしたいタブの ID です。
+  - : `integer`. ブラウザーアクションを無効にしたいタブの ID です。
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.browserAction.disable")}}
+{{Compat}}
 
 ## 例
 
-クリックされたときブラウザアクションを無効にし、新しいタブが開かれる毎回再度有効にします:
+クリックされたときブラウザーアクションを無効にし、新しいタブが開かれる毎回再度有効にします:
 
 ```js
 browser.tabs.onCreated.addListener(() => {
@@ -38,7 +38,7 @@ browser.browserAction.onClicked.addListener(() => {
 });
 ```
 
-アクティブなタブにだけブラウザアクションを無効にします:
+アクティブなタブにだけブラウザーアクションを無効にします:
 
 ```js
 browser.browserAction.onClicked.addListener((tab) => {

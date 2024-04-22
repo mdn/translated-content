@@ -1,19 +1,9 @@
 ---
 title: theme.reset()
 slug: Mozilla/Add-ons/WebExtensions/API/theme/reset
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - Theme
-  - WebExtensions
-  - reset
-translation_of: Mozilla/Add-ons/WebExtensions/API/theme/reset
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Réinitialise tout thème appliqué à l'aide de la méthode {{WebExtAPIRef("theme.update()")}}
 

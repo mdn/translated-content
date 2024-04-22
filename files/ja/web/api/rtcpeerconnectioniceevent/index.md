@@ -33,7 +33,9 @@ _{{domxref("RTCPeerConnectionIceEvent")}} は {{domxref("Event")}} の一種で�
 
 ```js
 pc.onicecandidate = (ev) => {
-  console.log(`The ICE candidate (trsp addr: '${ev.candidate.candidate}') added to connection.`);
+  console.log(
+    `The ICE candidate (trsp addr: '${ev.candidate.candidate}') added to connection.`,
+  );
 };
 ```
 

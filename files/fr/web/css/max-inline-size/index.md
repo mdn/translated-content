@@ -1,12 +1,6 @@
 ---
 title: max-inline-size
 slug: Web/CSS/max-inline-size
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-translation_of: Web/CSS/max-inline-size
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

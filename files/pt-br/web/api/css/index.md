@@ -26,14 +26,11 @@ _Nenhuma método estático herdado_.
 
 ## Especificações
 
-| Especificações                                                                   | Estado                                   | Comentário                               |
-| -------------------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------------- |
-| {{SpecName('CSSOM', '#the-css.escape%28%29-method', 'CSS')}} | {{Spec2('CSSOM')}}                 | Adicionado o `escape()` método estático. |
-| {{SpecName('CSS3 Conditional', '#the-css-interface', 'CSS')}} | {{Spec2('CSS3 Conditional')}} | Definição inicial.                       |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.CSS")}}
+{{Compat}}
 
 ## Veja também
 

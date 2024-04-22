@@ -2,6 +2,7 @@
 title: Location
 slug: Web/API/Location
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`Location`** 인터페이스는 객체가 연결된 장소(URL)를 표현합니다. `Location` 인터페이스에 변경을 가하면 연결된 객체에도 반영되는데, {{domxref("Document")}}와 {{domxref("Window")}} 인터페이스가 이런 `Location`을 가지고 있습니다. 각각 {{domxref("Document.location")}}과 {{domxref("Window.location")}}으로 접근할 수 있습니다.
@@ -51,17 +52,18 @@ slug: Web/API/Location
 ```js
 // Create anchor element and use href property for the purpose of this example
 // A more correct alternative is to browse to the URL and use document.location or window.location
-var url = document.createElement('a');
-url.href = 'https://developer.mozilla.org:8080/en-US/search?q=URL#search-results-close-container';
-console.log(url.href);      // https://developer.mozilla.org:8080/en-US/search?q=URL#search-results-close-container
-console.log(url.protocol);  // https:
-console.log(url.host);      // developer.mozilla.org:8080
-console.log(url.hostname);  // developer.mozilla.org
-console.log(url.port);      // 8080
-console.log(url.pathname);  // /en-US/search
-console.log(url.search);    // ?q=URL
-console.log(url.hash);      // #search-results-close-container
-console.log(url.origin);    // https://developer.mozilla.org:8080
+var url = document.createElement("a");
+url.href =
+  "https://developer.mozilla.org:8080/en-US/search?q=URL#search-results-close-container";
+console.log(url.href); // https://developer.mozilla.org:8080/en-US/search?q=URL#search-results-close-container
+console.log(url.protocol); // https:
+console.log(url.host); // developer.mozilla.org:8080
+console.log(url.hostname); // developer.mozilla.org
+console.log(url.port); // 8080
+console.log(url.pathname); // /en-US/search
+console.log(url.search); // ?q=URL
+console.log(url.hash); // #search-results-close-container
+console.log(url.origin); // https://developer.mozilla.org:8080
 ```
 
 ## 명세

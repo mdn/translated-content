@@ -1,7 +1,6 @@
 ---
 title: Modelo de layout
 slug: Web/CSS/Layout_mode
-original_slug: Web/CSS/Modelo_layout
 ---
 
 O modelo de layout [CSS](/pt-BR/docs/Web/CSS), às vezes abreviado por _layout_, é um algoritimo que determina a posição e tamanho dos boxes baseado em como estes interagem com os boxes filhos e boxe ancestral. Há vários layouts:

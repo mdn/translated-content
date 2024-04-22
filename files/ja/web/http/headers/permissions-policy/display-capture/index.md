@@ -1,7 +1,6 @@
 ---
-title: 'Feature-Policy: display-capture'
+title: "Feature-Policy: display-capture"
 slug: Web/HTTP/Headers/Permissions-Policy/display-capture
-original_slug: Web/HTTP/Headers/Feature-Policy/display-capture
 ---
 
 {{HTTPSidebar}} {{SeeCompatTable}}

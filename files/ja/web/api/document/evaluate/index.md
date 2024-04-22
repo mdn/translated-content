@@ -28,7 +28,13 @@ var xpathResult = document.evaluate(
 ## 例
 
 ```js
-var headings = document.evaluate("/html/body//h2", document, null, XPathResult.ANY_TYPE, null);
+var headings = document.evaluate(
+  "/html/body//h2",
+  document,
+  null,
+  XPathResult.ANY_TYPE,
+  null,
+);
 /* Search the document for all h2 elements.
  * The result will likely be an unordered node iterator. */
 var thisHeading = headings.iterateNext();

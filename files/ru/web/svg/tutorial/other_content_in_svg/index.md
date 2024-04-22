@@ -1,11 +1,8 @@
 ---
 title: Другое содержание в SVG
 slug: Web/SVG/Tutorial/Other_content_in_SVG
-tags:
-  - SVG
-  - SVG:Руководство
-translation_of: Web/SVG/Tutorial/Other_content_in_SVG
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/Clipping_and_masking", "Web/SVG/Tutorial/Filter_effects") }}
 
 Помимо графических примитивов, таких как прямоугольники и круги, SVG предлагает набор элементов для встраивания других типов контента в изображения.
@@ -17,11 +14,19 @@ translation_of: Web/SVG/Tutorial/Other_content_in_SVG
 Встроенное изображение становится обычным элементом SVG. Это означает, что вы можете использовать клипы, маски, фильтры, вращения и все другие инструменты SVG для контента:
 
 ```html
-<svg version="1.1"
-     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-     width="200" height="200">
-  <image x="90" y="-65" width="128" height="146" transform="rotate(45)"
-     xlink:href="https://developer.mozilla.org/static/img/favicon144.png"/>
+<svg
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="200"
+  height="200">
+  <image
+    x="90"
+    y="-65"
+    width="128"
+    height="146"
+    transform="rotate(45)"
+    xlink:href="https://developer.mozilla.org/static/img/favicon144.png" />
 </svg>
 ```
 

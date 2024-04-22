@@ -1,13 +1,6 @@
 ---
 title: Disposition des boîtes flexibles CSS
 slug: Web/CSS/CSS_flexible_box_layout
-tags:
-  - Aperçu
-  - CSS
-  - CSS Flexible Box Layout
-  - CSS Flexible Boxes
-  - Reference
-translation_of: Web/CSS/CSS_Flexible_Box_Layout
 ---
 
 {{CSSRef}}
@@ -67,11 +60,11 @@ Les propriétés `align-content`, `align-self`, `align-items` et `justify-conten
   - : Ce guide explique les différentes méthodes qui permettent de modifier l'ordre et la direction des éléments dans le conteneur flexible et aborde également les problèmes que cela peut causer.
 - [Contrôler les proportions des éléments flexibles le long de l'axe principal](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Contrôler_les_proportions_des_boîtes_flexibles_le_long_de_l_axe_principal)
   - : Cet article explique le fonctionnement des propriétés `flex-grow`, `flex-shrink` et `flex-basis`.
-- [Maîtriser le passage à la ligne des éléments flexibles](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Ma%C3%AEtriser_passage_%C3%A0_la_ligne_des_%C3%A9l%C3%A9ments_flexibles)
+- [Maîtriser le passage à la ligne des éléments flexibles](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Maîtriser_passage_à_la_ligne_des_éléments_flexibles)
   - : Comment créer des conteneur flexibles qui s'étendent sur plusieurs lignes et contrôler l'affichage des éléments sur ces lignes.
 - [Les cas d'utilisation classiques des boîtes flexibles](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Cas_utilisation_flexbox)
   - : Des _design patterns_ pouvant être résolus avec les boîtes flexibles.
-- [La rétrocompatibilité de _flexbox_](/fr/docs/Web/CSS/Disposition_flexbox_CSS/R%C3%A9trocompatibilite_de_flexbox)
+- [La rétrocompatibilité de _flexbox_](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Rétrocompatibilite_de_flexbox)
   - : L'état de la compatibilité des navigateurs pour les boîtes flexibles, les différents problème d'interopérabilité, la gestion des anciens navigateurs et l'évolution de la spécification.
 
 ## Spécifications

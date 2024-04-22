@@ -26,7 +26,7 @@ slug: Web/CSS/display-inside
 - `flex`
   - : 要素は、ブロック要素のように動作しつつ、そのコンテンツを[フレックスボックスモデル](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)に従ってレイアウトします。
 - `grid`
-  - : 要素は、ブロック要素のように動作しつつ、そのコンテンツを[グリッドモデル](/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)に従ってレイアウトします。
+  - : 要素は、ブロック要素のように動作しつつ、そのコンテンツを[グリッドモデル](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)に従ってレイアウトします。
 - `ruby` {{Experimental_Inline}}
   - : 要素は、インライン要素のように動作しつつ、そのコンテンツをルビ (ruby) モデルに従ってレイアウトします。HTML の {{HTMLElement("ruby")}} 要素のように動作します。
 
@@ -49,18 +49,18 @@ slug: Web/CSS/display-inside
 
 ```css
 .box {
-    background-color: rgb(224, 206, 247);
-    border: 5px solid rebeccapurple;
-    display: flow-root;
+  background-color: rgb(224, 206, 247);
+  border: 5px solid rebeccapurple;
+  display: flow-root;
 }
 
 .float {
-    float: left;
-    width: 200px;
-    height: 150px;
-    background-color: white;
-    border:1px solid black;
-    padding: 10px;
+  float: left;
+  width: 200px;
+  height: 150px;
+  background-color: white;
+  border: 1px solid black;
+  padding: 10px;
 }
 ```
 
@@ -76,29 +76,29 @@ slug: Web/CSS/display-inside
 
 ### 複数のキーワードの対応
 
-{{Compat("css.properties.display.multi-keyword_values", 10)}}
+{{Compat}}
 
 - Chromium のバグ: <https://bugs.chromium.org/p/chromium/issues/detail?id=804600>
 
 ### flow-root の対応
 
-{{Compat("css.properties.display.flow-root", 10)}}
+{{Compat}}
 
 ### table の対応
 
-{{Compat("css.properties.display.table_values", 10)}}
+{{Compat}}
 
 ### grid の対応
 
-{{Compat("css.properties.display.grid", 10)}}
+{{Compat}}
 
 ### flex の対応
 
-{{Compat("css.properties.display.flex", 10)}}
+{{Compat}}
 
 ### ruby の対応
 
-{{Compat("css.properties.display.ruby_values", 10)}}
+{{Compat}}
 
 ## 関連情報
 
@@ -110,5 +110,5 @@ slug: Web/CSS/display-inside
   - {{CSSxRef("&lt;display-box&gt;")}}
   - {{CSSxRef("&lt;display-legacy&gt;")}}
 
-- [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
-- [グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
+- [フレックスボックスの基本概念](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [グリッドレイアウトの基本概念](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)

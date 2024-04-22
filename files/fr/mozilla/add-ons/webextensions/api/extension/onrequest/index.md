@@ -1,19 +1,9 @@
 ---
 title: extension.onRequest
 slug: Mozilla/Add-ons/WebExtensions/API/extension/onRequest
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extension
-  - Extensions
-  - Reference
-  - WebExtensions
-  - onRequest
-translation_of: Mozilla/Add-ons/WebExtensions/API/extension/onRequest
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 > **Attention :** Ceci n'est pas implémenté dans Firefox car il est obsolète depuis Chrome 33. Veuillez utiliser [runtime.onMessageExternal](/fr/Add-ons/WebExtensions/API/runtime/onMessageExternal) à la place.
 

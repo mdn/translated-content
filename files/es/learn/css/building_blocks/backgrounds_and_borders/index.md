@@ -1,7 +1,6 @@
 ---
 title: Fondos y bordes
 slug: Learn/CSS/Building_blocks/Backgrounds_and_borders
-original_slug: Learn/CSS/Building_blocks/Fondos_y_bordes
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks")}}
@@ -42,8 +41,14 @@ La propiedad {{cssxref ("background")}} de CSS es una propiedad abreviada de una
 
 ```css
 .box {
-  background: linear-gradient(105deg, rgba(255,255,255,.2) 39%, rgba(51,56,57,1) 96%) center center / 400px 200px no-repeat,
-  url(big-star.png) center no-repeat, rebeccapurple;
+  background:
+    linear-gradient(
+        105deg,
+        rgba(255, 255, 255, 0.2) 39%,
+        rgba(51, 56, 57, 1) 96%
+      ) center center / 400px 200px no-repeat,
+    url(big-star.png) center no-repeat,
+    rebeccapurple;
 }
 ```
 
@@ -176,9 +181,12 @@ Si haces esto, las imágenes de fondo pueden quedar superpuestas entre sí. Los 
 Las otras propiedades `background-*` también pueden tener valores múltiples separados por comas, de la misma manera que `background-image`:
 
 ```css
-background-image: url(image1.png), url(image2.png), url(image3.png), url(image1.png);
+background-image: url(image1.png), url(image2.png), url(image3.png),
+  url(image1.png);
 background-repeat: no-repeat, repeat-x, repeat;
-background-position: 10px 20px,  top right;
+background-position:
+  10px 20px,
+  top right;
 ```
 
 Cada valor de las diversas propiedades coincide con los valores que están en la misma posición en las otras propiedades. Arriba, por ejemplo, el valor para la propiedad `background-repeat` de `image1` será `no-repeat`. Sin embargo, ¿qué sucede cuando diferentes propiedades tienen una cantidad diferente de valores? La respuesta es que los valores que ocupan las posiciones más pequeñas se alternan cíclicamente: en el ejemplo anterior hay cuatro imágenes de fondo pero solo dos valores `background-position`. Los primeros dos valores de posición se aplicarán a las dos primeras imágenes, luego los valores volverán a asignarse cíclicamente: a `image3` se le dará el primer valor de posición, y a `image4` se le dará el segundo valor de posición.

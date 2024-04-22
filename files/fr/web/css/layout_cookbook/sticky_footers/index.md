@@ -1,12 +1,6 @@
 ---
 title: Bas de page adhérant
 slug: Web/CSS/Layout_cookbook/Sticky_footers
-tags:
-  - CSS
-  - Guide
-  - Recette
-translation_of: Web/CSS/Layout_cookbook/Sticky_footers
-original_slug: Web/CSS/Layout_cookbook/Bas_de_page_adhérant
 ---
 
 {{CSSRef}}

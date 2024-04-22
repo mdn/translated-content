@@ -1,13 +1,6 @@
 ---
-title: '<footer> : l''élément de pied de page ou de section'
+title: "<footer> : l'élément de pied de page ou de section"
 slug: Web/HTML/Element/footer
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - Reference
-translation_of: Web/HTML/Element/footer
-browser-compat: html.elements.footer
 ---
 
 {{HTMLSidebar}}
@@ -149,13 +142,15 @@ Comme tous les éléments HTML, cet élément accepte [les attributs universels]
     <li>Maupassant</li>
   </ul>
 
-  <footer><small>Copyright © 2023 Littérature.com. Tous droits réservés.</small></footer>
+  <footer>
+    <small>Copyright © 2023 Littérature.com. Tous droits réservés.</small>
+  </footer>
 </body>
 ```
 
 ```css
 footer {
-  text-align:center;
+  text-align: center;
   padding: 5px;
   background-color: #abbaba;
   color: #000;

@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 
 我們會在這篇文章詳細講解 Firefox 的 WebExtension 的製作。這支附加元件會在 "mozilla.org" 網域底下的所有網頁，增加紅色外框。
 
-範例的原始碼也放在 GitHub 喔：<https://github.com/mdn/webextensions-examples/tree/master/borderify>。
+範例的原始碼也放在 GitHub 喔：<https://github.com/mdn/webextensions-examples/tree/main/borderify>。
 
 首先勒，你需要 Firefox 45.0 或以上的版本。
 

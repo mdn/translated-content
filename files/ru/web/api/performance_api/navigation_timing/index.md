@@ -1,17 +1,9 @@
 ---
 title: Navigation Timing API
 slug: Web/API/Performance_API/Navigation_timing
-tags:
-  - API
-  - Client side performance
-  - Navigation Timing
-  - Performance
-  - Производительность
-translation_of: Web/API/Navigation_timing_API
-original_slug: Web/API/Navigation_timing_API
 ---
 
-{{DefaultAPISidebar("Navigation Timing")}}
+{{DefaultAPISidebar("Performance API")}}
 
 **Navigation Timing API** предоставляет данные, которые могут быть использованы для измерения производительности веб-сайта. В отличие от других механизмов на основе JavaScript, которые были использованы с той же целью, этот API может предоставить полную и точную информацию о задержке в получении данных.
 
@@ -79,10 +71,7 @@ var pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
 var connectTime = perfData.responseEnd - perfData.requestStart;
 ```
 
-### Ссылки
+## Смотрите также
 
-- <http://www.w3.org/TR/navigation-timing/>
-
-## Совместимость с браузерами
-
-{{Compat}}
+- {{domxref("PerformanceNavigationTiming")}}
+- {{domxref("PerformanceResourceTiming")}}

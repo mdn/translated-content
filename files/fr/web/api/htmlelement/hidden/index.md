@@ -1,7 +1,6 @@
 ---
 title: HTMLElement.hidden
 slug: Web/API/HTMLElement/hidden
-translation_of: Web/API/HTMLElement/hidden
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -43,11 +42,14 @@ Voici un exemple où un bloc caché est utilisé pour contenir un message de rem
 ### JavaScript
 
 ```js
-document.getElementById("boutonOk")
-        .addEventListener("click", function() {
-  document.getElementById("bienvenue").hidden = true;
-  document.getElementById("impressionnant").hidden = false;
-}, false);
+document.getElementById("boutonOk").addEventListener(
+  "click",
+  function () {
+    document.getElementById("bienvenue").hidden = true;
+    document.getElementById("impressionnant").hidden = false;
+  },
+  false,
+);
 ```
 
 Ce code installe une gestionnaire pour le bouton "OK" du panneau de bienvenue, gestionnaire qui cache le panneau de bienvenue et rend le panneau de suite — ayant le curieux nom d'"impressionnant" — visible à sa place.
@@ -75,9 +77,12 @@ Une fois que l'utilisateur a cliqué sur le bouton "OK" dans le panneau d'accuei
 ```html
 <div id="impressionnant" class="panneau" hidden>
   <h1>Merci !</h1>
-  <p>Merci <strong>vraiment</strong> beaucoup d'avoir accepté d'être
-  impressionnant aujourd'hui ! Maintenant, sortez et faites des choses impressionnantes
-  d'une façon impressionnante pour rendre le monde plus impressionnant !</p>
+  <p>
+    Merci <strong>vraiment</strong> beaucoup d'avoir accepté d'être
+    impressionnant aujourd'hui ! Maintenant, sortez et faites des choses
+    impressionnantes d'une façon impressionnante pour rendre le monde plus
+    impressionnant !
+  </p>
 </div>
 ```
 
@@ -87,7 +92,11 @@ Le contenu est mis en forme en utilisant le CSS ci-dessous.
 
 ```css
 .panneau {
-  font: 16px "Open Sans", Helvetica, Arial, sans-serif;
+  font:
+    16px "Open Sans",
+    Helvetica,
+    Arial,
+    sans-serif;
   border: 1px solid #22d;
   padding: 12px;
   width: 500px;
@@ -95,7 +104,11 @@ Le contenu est mis en forme en utilisant le CSS ci-dessous.
 }
 
 .bouton {
-  font: 22px "Open Sans", Helvetica, Arial, sans-serif;
+  font:
+    22px "Open Sans",
+    Helvetica,
+    Arial,
+    sans-serif;
   padding: 5px 36px;
 }
 

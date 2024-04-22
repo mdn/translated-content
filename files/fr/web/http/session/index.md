@@ -1,11 +1,6 @@
 ---
 title: Une session HTTP typique
 slug: Web/HTTP/Session
-tags:
-  - HTTP
-  - Session
-  - Session HTTP
-translation_of: Web/HTTP/Session
 ---
 
 {{HTTPSidebar}}
@@ -32,8 +27,8 @@ Une fois la connexion établie, l'agent utilisateur peut envoyer la demande (un 
 
 1. La première ligne contient une méthode de demande suivie de ses paramètres:
 
-    - le chemin d'accès du document, c'est-à-dire une URL absolue sans le protocole ou le nom de domaine
-    - la version du protocole HTTP
+   - le chemin d'accès du document, c'est-à-dire une URL absolue sans le protocole ou le nom de domaine
+   - la version du protocole HTTP
 
 2. Les lignes subséquentes représentent un en-tête HTTP, ce qui donne aux informations du serveur quel type de données est approprié (par exemple, quelle langue, quels types MIME) ou d'autres données modifient son comportement (par exemple, ne pas envoyer de réponse s'il est déjà mis en cache). Ces en-têtes HTTP forment un bloc qui se termine par une ligne vide.
 3. Le bloc final est un bloc de données facultatif, qui peut contenir d'autres données principalement utilisées par la méthode POST.

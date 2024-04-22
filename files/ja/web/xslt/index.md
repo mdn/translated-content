@@ -1,5 +1,5 @@
 ---
-title: 'XSLT: 拡張可能なスタイルシートの言語変換'
+title: "XSLT: 拡張可能なスタイルシートの言語変換"
 slug: Web/XSLT
 ---
 
@@ -10,11 +10,11 @@ slug: Web/XSLT
 3. **[XPath](/ja/docs/Web/XPath)**
 4. ガイド
 
-    1. [よくある XSLT のエラー](/ja/docs/Web/XSLT/Common_errors)
-    2. [PI 引数](/ja/docs/Web/XSLT/PI_Parameters)
-    3. [Gecko の XSLT/JavaScript インターフェイス](/ja/docs/Web/XSLT/XSLT_JS_interface_in_Gecko)
-    4. [XML を XSLT で変換](/ja/docs/Web/XSLT/Transforming_XML_with_XSLT)
-    5. [Mozilla JavaScript インターフェイスからの XSLT の使用](/ja/docs/Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations)
+   1. [よくある XSLT のエラー](/ja/docs/Web/XSLT/Common_errors)
+   2. [PI 引数](/ja/docs/Web/XSLT/PI_Parameters)
+   3. [Gecko の XSLT/JavaScript インターフェイス](/ja/docs/Web/XSLT/XSLT_JS_interface_in_Gecko)
+   4. [XML を XSLT で変換](/ja/docs/Web/XSLT/Transforming_XML_with_XSLT)
+   5. [Mozilla JavaScript インターフェイスからの XSLT の使用](/ja/docs/Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations)
 
 5. [XSLT Elements](/ja/docs/XSLT/Element){{ListSubpagesForSidebar("/ja/docs/Web/XSLT/Element", "", "", "&lt;xsl:", "&gt;")}}
 

@@ -2,7 +2,7 @@
 title: <input type="range">
 slug: Web/HTML/Element/input/range
 l10n:
-  sourceCommit: fa8a44b8bff24a4032181c4fd155c459c0dc9161
+  sourceCommit: 72ca3d725e3e56b613de3ac9727bd0d6d619c38a
 ---
 
 {{HTMLSidebar}}
@@ -116,7 +116,7 @@ range 入力欄がよく使用される場合の例をいくつか示します�
 
 {{EmbedLiveSample("Setting_the_step_attribute", 600, 40)}}
 
-#### step を "any" に設定
+#### step を `any` に設定
 
 小数点以下が何桁になろうと、どんな値でも受け入れたい場合は、 [`step`](/ja/docs/Web/HTML/Element/input#step) 属性に `any` という値を指定することができます。
 
@@ -130,12 +130,12 @@ range 入力欄がよく使用される場合の例をいくつか示します�
 ##### JavaScript
 
 ```js
-const value = document.querySelector("#value")
-const input = document.querySelector("#pi_input")
-value.textContent = input.value
+const value = document.querySelector("#value");
+const input = document.querySelector("#pi_input");
+value.textContent = input.value;
 input.addEventListener("input", (event) => {
-  value.textContent = event.target.value
-})
+  value.textContent = event.target.value;
+});
 ```
 
 ##### 結果
@@ -183,6 +183,8 @@ input.addEventListener("input", (event) => {
 <p>
   <label for="temp2">Temperature for room 2:</label>
   <input type="range" id="temp2" name="temp2" list="values" />
+</p>
+
 <p>
   <label for="temp3">Temperature for room 3:</label>
   <input type="range" id="temp3" name="temp3" list="values" />
@@ -350,7 +352,7 @@ input[type="range"][orient="vertical"] {
       <td><strong>イベント</strong></td>
       <td>
         {{domxref("HTMLElement/change_event", "change")}} および
-        {{domxref("HTMLElement/input_event", "input")}}
+        {{domxref("Element/input_event", "input")}}
       </td>
     </tr>
     <tr>

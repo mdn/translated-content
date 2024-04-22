@@ -1,7 +1,9 @@
 ---
-title: 'Null'
+title: "Null"
 slug: Glossary/Null
 ---
+
+{{GlossarySidebar}}
 
 コンピュータサイエンス分野において、一般的に **`null`** という値は、存在しないまたは無効な{{glossary("object","オブジェクト")}}やアドレスへのポインター参照を表します。 null による参照が持つ意味は、言語実装によって様々です。
 
@@ -10,7 +12,7 @@ slug: Glossary/Null
 しかし、場合によっては、 `null` はそれらしく見えても「プリミティブ」ではありません。あらゆるオブジェクトが `null` 値から派生しており、そのため `typeof` で検査すると `object` が返るという一面もあります。
 
 ```js
-typeof null === 'object' // true
+typeof null === "object"; // true
 ```
 
 - **[用語集](/ja/docs/Glossary)**

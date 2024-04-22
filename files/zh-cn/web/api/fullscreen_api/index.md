@@ -104,11 +104,15 @@ Fullscreen API 定义了两个事件，可用于检测全屏模式的打开和�
 当页面加载时，这段代码会运行，设置一个事件监听器以监听 <kbd>Enter</kbd> 键。
 
 ```js
-document.addEventListener("keydown", function(e) {
-  if (e.keyCode == 13) {
-    toggleFullScreen();
-  }
-}, false);
+document.addEventListener(
+  "keydown",
+  function (e) {
+    if (e.keyCode == 13) {
+      toggleFullScreen();
+    }
+  },
+  false,
+);
 ```
 
 ### 切换全屏模式
@@ -118,7 +122,7 @@ document.addEventListener("keydown", function(e) {
 ```js
 function toggleFullScreen() {
   if (!document.fullscreenElement) {
-      document.documentElement.requestFullscreen();
+    document.documentElement.requestFullscreen();
   } else {
     if (document.exitFullscreen) {
       document.exitFullscreen();

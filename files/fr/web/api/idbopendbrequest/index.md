@@ -1,15 +1,6 @@
 ---
 title: IDBOpenDBRequest
 slug: Web/API/IDBOpenDBRequest
-tags:
-  - API
-  - Base de données
-  - IndexedDB
-  - Interface
-  - Reference
-  - Référence DOM
-  - Stockage
-translation_of: Web/API/IDBOpenDBRequest
 ---
 
 {{APIRef("IndexedDB")}}

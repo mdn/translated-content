@@ -26,22 +26,26 @@ var myBodyUsed = response.bodyUsed;
 ### HTML Content
 
 ```html
-<img class="my-image" src="https://wikipedia.org/static/images/project-logos/frwiki-1.5x.png">
+<img
+  class="my-image"
+  src="https://wikipedia.org/static/images/project-logos/frwiki-1.5x.png" />
 ```
 
 ### JS Content
 
 ```js
-var myImage = document.querySelector('.my-image');
-fetch('https://upload.wikimedia.org/wikipedia/commons/7/77/Delete_key1.jpg').then(function(response) {
+var myImage = document.querySelector(".my-image");
+fetch("https://upload.wikimedia.org/wikipedia/commons/7/77/Delete_key1.jpg")
+  .then(function (response) {
     console.log(response.bodyUsed);
     var res = response.blob();
     console.log(response.bodyUsed);
     return res;
-}).then(function(response) {
+  })
+  .then(function (response) {
     var objectURL = URL.createObjectURL(response);
     myImage.src = objectURL;
-});
+  });
 ```
 
 {{EmbedLiveSample('示例', '100%', '250px')}}

@@ -8,14 +8,18 @@ slug: Web/SVG/Element/use
 **`<use>`** 要素は SVG 文書の中からノード取り出して、別の場所に複製します。
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 30 10" xmlns="http://www.w3.org/2000/svg">
-  <circle id="myCircle" cx="5" cy="5" r="4" stroke="blue"/>
-  <use href="#myCircle" x="10" fill="blue"/>
-  <use href="#myCircle" x="20" fill="white" stroke="red"/>
+  <circle id="myCircle" cx="5" cy="5" r="4" stroke="blue" />
+  <use href="#myCircle" x="10" fill="blue" />
+  <use href="#myCircle" x="20" fill="white" stroke="red" />
   <!--
 stroke="red" will be ignored here, as stroke was already set on myCircle.
 Most attributes (except for x, y, width, height and (xlink:)href)
@@ -31,7 +35,7 @@ That's why the circles have different x positions, but the same stroke value.
 
 `use` のほとんどの属性は、 `use` から*参照*される要素に既にある属性を上書き**しません**。 (これは CSS のスタイル属性がカスケードで「以前」に設定されたものを上書きする方法とは異なります)。 `use` 要素にある{{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}}, {{SVGAttr("height")}}, {{SVGAttr("href")}} の各属性**のみ**が参照される要素に設定されているものを上書きします。ただし、参照される要素に設定されていない*他のすべての属性*は、 `use` 要素に適用**され得ます**。
 
-クローンされたノードは公開されないので、 [CSS](/ja/docs/Web/CSS) を使って `use` 要素とその隠れた子孫要素にスタイル付けをする場合は注意が必要です。[CSS の継承](/ja/docs/Web/CSS/inheritance)を使用して明示的に要求しない限り、CSS 属性は隠された複製の DOM によって継承されることが保証されません。
+クローンされたノードは公開されないので、 [CSS](/ja/docs/Web/CSS) を使って `use` 要素とその隠れた子孫要素にスタイル付けをする場合は注意が必要です。[CSS の継承](/ja/docs/Web/CSS/Inheritance)を使用して明示的に要求しない限り、CSS 属性は隠された複製の DOM によって継承されることが保証されません。
 
 セキュリティ上の理由で、ブラウザーは[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)を `use` 要素に適用して、 {{SVGAttr("href")}} 属性にあるオリジンをまたがる URL を読み込むことを拒否することがあります。現在のところ、 `use` 要素の同一オリジンポリシーを設定する方法は定義されていません。
 
@@ -71,7 +75,7 @@ That's why the circles have different x positions, but the same stroke value.
 - [条件処理属性](/ja/docs/Web/SVG/Attribute/Conditional_Processing)
   - : 特に: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
 - イベント属性
-  - : [グローバルイベント属性](/ja/docs/Web/SVG/Attribute/Events#global_Event_Attributes), [グラフィックイベント属性](/ja/docs/Web/SVG/Attribute/Events#graphical_Event_Attributes)
+  - : [グローバルイベント属性](/ja/docs/Web/SVG/Attribute/Events#グローバルイベント属性), [グラフィックイベント属性](/ja/docs/Web/SVG/Attribute/Events#グラフィックイベント属性)
 - [プレゼンテーション属性](/ja/docs/Web/SVG/Attribute/Presentation)
   - : 特に: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
 - ARIA 属性
@@ -89,4 +93,4 @@ That's why the circles have different x positions, but the same stroke value.
 
 ## ブラウザーの互換性
 
-{{Compat("svg.elements.use")}}
+{{Compat}}

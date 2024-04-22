@@ -32,16 +32,16 @@ label :
 ```js
 var i, j;
 
-loop1:
-for (i = 0; i < 3; i++) {      //O primeiro 'for' é etiquetado com "loop1"
-   loop2:
-   for (j = 0; j < 3; j++) {   //O segundo é etiquetado com "loop2"
-      if (i == 1 && j == 1) {
-         continue loop1;
-      } else {
-         console.log("i = " + i + ", j = " + j);
-      }
-   }
+loop1: for (i = 0; i < 3; i++) {
+  //O primeiro 'for' é etiquetado com "loop1"
+  loop2: for (j = 0; j < 3; j++) {
+    //O segundo é etiquetado com "loop2"
+    if (i == 1 && j == 1) {
+      continue loop1;
+    } else {
+      console.log("i = " + i + ", j = " + j);
+    }
+  }
 }
 
 // Sua saída é:
@@ -63,11 +63,8 @@ Dado uma lista de itens e outra de testes, este exemplo conta o número de íten
 var itemsPassed = 0;
 var i, j;
 
-top:
-for (i = 0; i < items.length; i++){
-  for (j = 0; j < tests.length; j++)
-    if (!tests[j].pass(items[i]))
-      continue top;
+top: for (i = 0; i < items.length; i++) {
+  for (j = 0; j < tests.length; j++) if (!tests[j].pass(items[i])) continue top;
   itemsPassed++;
 }
 ```
@@ -80,10 +77,9 @@ Dado uma lista de ítens e uma lista de testes, neste exemplo determina-se se to
 var allPass = true;
 var i, j;
 
-top:
-for (i = 0; items.length; i++)
+top: for (i = 0; items.length; i++)
   for (j = 0; j < tests.length; i++)
-    if (!tests[j].pass(items[i])){
+    if (!tests[j].pass(items[i])) {
       allPass = false;
       break top;
     }

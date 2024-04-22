@@ -1,7 +1,6 @@
 ---
 title: マージン、境界、パディングの論理的プロパティ
 slug: Web/CSS/CSS_logical_properties_and_values/Margins_borders_padding
-original_slug: Web/CSS/CSS_Logical_Properties/Margins_borders_padding
 ---
 
 {{CSSRef}}
@@ -56,9 +55,9 @@ original_slug: Web/CSS/CSS_Logical_Properties/Margins_borders_padding
 | {{cssxref("border-block-style")}}  | `border-style` をブロック方向の両方の境界に設定します。                                                                        |
 | {{cssxref("border-block-width")}}  | `border-width` をブロック方向の両方の境界に設定します。                                                                        |
 | {{cssxref("border-inline")}}       | `border-color`, `-style`, `-width` をインライン方向の両方の境界に設定します。                                                  |
-| {{cssxref("border-inline-color")}} | `border-color`  をインライン方向の両方の境界に設定します。                                                                     |
-| {{cssxref("border-inline-style")}} | `border-style`  をインライン方向の両方の境界に設定します。                                                                     |
-| {{cssxref("border-inline-width")}} | `border-width`  をインライン方向の両方の境界に設定します。                                                                     |
+| {{cssxref("border-inline-color")}} | `border-color` をインライン方向の両方の境界に設定します。                                                                      |
+| {{cssxref("border-inline-style")}} | `border-style` をインライン方向の両方の境界に設定します。                                                                      |
+| {{cssxref("border-inline-width")}} | `border-width` をインライン方向の両方の境界に設定します。                                                                      |
 | {{cssxref("margin-block")}}        | ブロック方向のすべての {{cssxref("margin")}} を設定します。                                                                    |
 | {{cssxref("margin-inline")}}       | インライン方向のすべての `margin` を設定します。                                                                               |
 | {{cssxref("padding-block")}}       | ブロック方向のすべての {{cssxref("padding")}} を設定します。                                                                   |

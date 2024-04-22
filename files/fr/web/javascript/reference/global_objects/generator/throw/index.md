@@ -1,15 +1,6 @@
 ---
 title: Generator.prototype.throw()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/throw
-tags:
-  - ECMAScript 2015
-  - Generator
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Generator/throw
-original_slug: Web/JavaScript/Reference/Objets_globaux/Generator/throw
 ---
 
 {{JSRef}}
@@ -19,7 +10,7 @@ La méthode **`throw()`** lève une erreur dans un générateur.
 ## Syntaxe
 
 ```js
-gen.throw(exception)
+gen.throw(exception);
 ```
 
 ### Paramètres
@@ -46,10 +37,10 @@ Dans l'exemple suivant, on utilise un générateur simple et on génère une exc
 
 ```js
 function* gen() {
-  while(true) {
+  while (true) {
     try {
-       yield 42;
-    } catch(e) {
+      yield 42;
+    } catch (e) {
       console.log("Erreur interceptée !");
     }
   }

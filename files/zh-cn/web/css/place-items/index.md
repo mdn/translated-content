@@ -65,10 +65,10 @@ place-items: unset;
 - `end`
   - : 在适当的轴线上，元素块沿着对齐容器的结束边缘对齐。
 - `flex-start`
-  - : 对齐方式取决于 flex 容器的的开始方向。（水平和垂直两个方向）
+  - : 对齐方式取决于 flex 容器的开始方向。（水平和垂直两个方向）
     这只对 flex 布局元素生效，对于不是 flex 容器的子元素，它被视为 `start` 。
 - `flex-end`
-  - : 对齐方式取决于 flex 容器的的结束方向。（水平和垂直两个方向）
+  - : 对齐方式取决于 flex 容器的结束方向。（水平和垂直两个方向）
     这只对 flex 布局元素生效，对于不是 flex 容器的子元素，它被视为 end。
 - `self-start`
   - : 沿着轴线的头部对齐。
@@ -195,15 +195,15 @@ select {
 ```
 
 ```js hidden
-var values = document.getElementById('values');
-var display = document.getElementById('display');
-var container = document.getElementById('container');
+var values = document.getElementById("values");
+var display = document.getElementById("display");
+var container = document.getElementById("container");
 
-values.addEventListener('change', function (evt) {
+values.addEventListener("change", function (evt) {
   container.style.placeItems = evt.target.value;
 });
 
-display.addEventListener('change', function (evt) {
+display.addEventListener("change", function (evt) {
   container.className = evt.target.value;
 });
 ```
@@ -212,7 +212,7 @@ display.addEventListener('change', function (evt) {
 
 ```css
 #container {
-  height:200px;
+  height: 200px;
   width: 240px;
   place-items: center; /* You can change this value by selecting another option in the list */
   background-color: #8c8c8c;

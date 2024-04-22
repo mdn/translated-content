@@ -1,14 +1,6 @@
 ---
-title: 'Кастомные свойства (--*): CSS переменные'
+title: "Кастомные свойства (--*): CSS переменные"
 slug: Web/CSS/--*
-page-type: guide
-tags:
-  - CSS
-  - CSS Custom Properties
-  - Guide
-  - Reference
-translation_of: Web/CSS/--*
-browser-compat: css.properties.custom-property
 ---
 
 {{CSSRef}}
@@ -41,12 +33,8 @@ browser-compat: css.properties.custom-property
 ### HTML
 
 ```html
-<p id="firstParagraph">
-  Этот параграф должен иметь синий фон и жёлтый текст.
-</p>
-<p id="secondParagraph">
-  Этот параграф должен иметь жёлтый фон и синий текст.
-</p>
+<p id="firstParagraph">Этот параграф должен иметь синий фон и жёлтый текст.</p>
+<p id="secondParagraph">Этот параграф должен иметь жёлтый фон и синий текст.</p>
 <div id="container">
   <p id="thirdParagraph">
     Этот параграф должен иметь зелёный фон и жёлтый текст.

@@ -45,16 +45,16 @@ _このインターフェイスは以下のメソッドを定義しています�
 ```js
 async function writeClipImg() {
   try {
-    const imgURL = '/myimage.png';
+    const imgURL = "/myimage.png";
     const data = await fetch(imgURL);
     const blob = await data.blob();
 
     await navigator.clipboard.write([
       new ClipboardItem({
-        [blob.type]: blob
-      })
+        [blob.type]: blob,
+      }),
     ]);
-    console.log('Fetched image copied.');
+    console.log("Fetched image copied.");
   } catch (err) {
     console.error(err.name, err.message);
   }
@@ -71,14 +71,11 @@ async function getClipboardContents() {
     const clipboardItems = await navigator.clipboard.read();
 
     for (const clipboardItem of clipboardItems) {
-
       for (const type of clipboardItem.types) {
         const blob = await clipboardItem.getType(type);
         // we can now use blob here
       }
-
     }
-
   } catch (err) {
     console.error(err.name, err.message);
   }

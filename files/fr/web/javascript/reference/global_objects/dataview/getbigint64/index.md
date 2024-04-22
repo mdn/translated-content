@@ -1,16 +1,6 @@
 ---
 title: DataView.prototype.getBigInt64()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/getBigInt64
-tags:
-  - BigInt
-  - DataView
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/DataView/getBigInt64
-original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/getBigInt64
 ---
 
 {{JSRef}}

@@ -43,7 +43,10 @@ WebSocket WebSocket(
 本例创建了一个新的 WebSocket，连接到地址为 `ws://www.example.com/socketserver` 的服务器。请求中命名了一个自定义的协议 "protocolOne"，这一部分可以省略。
 
 ```js
-var exampleSocket = new WebSocket("ws://www.example.com/socketserver", "protocolOne");
+var exampleSocket = new WebSocket(
+  "ws://www.example.com/socketserver",
+  "protocolOne",
+);
 ```
 
 返回后，`exampleSocket.readyState` 参数为 `CONNECTING`。一旦连接可以传送数据，`readyState` 就会变成 `OPEN` 。
@@ -51,7 +54,10 @@ var exampleSocket = new WebSocket("ws://www.example.com/socketserver", "protocol
 如果你想建立一个支持协议可选的连接，你可以指定协议的列表：
 
 ```js
-var exampleSocket = new WebSocket("ws://www.example.com/socketserver", ["protocolOne", "protocolTwo"]);
+var exampleSocket = new WebSocket("ws://www.example.com/socketserver", [
+  "protocolOne",
+  "protocolTwo",
+]);
 ```
 
 一旦连接建立了（也就是说 `readyState` 是 `OPEN`） `exampleSocket.protocol` 就会告诉你服务器选择了哪个协议。
@@ -89,8 +95,8 @@ function sendText() {
   var msg = {
     type: "message",
     text: document.getElementById("text").value,
-    id:   clientID,
-    date: Date.now()
+    id: clientID,
+    date: Date.now(),
   };
 
   // 把 msg 对象作为 JSON 格式字符串发送
@@ -108,7 +114,7 @@ WebSockets 是一个基于事件的 API；收到消息的时候，一个 "messag
 ```js
 exampleSocket.onmessage = function (event) {
   console.log(event.data);
-}
+};
 ```
 
 ### 接受与解析 JSON 对象

@@ -1,15 +1,9 @@
 ---
 title: Boucles et itérations
 slug: Web/JavaScript/Guide/Loops_and_iteration
-tags:
-  - Guide
-  - JavaScript
-  - Syntax
-translation_of: Web/JavaScript/Guide/Loops_and_iteration
-original_slug: Web/JavaScript/Guide/Boucles_et_itération
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Contr%C3%B4le_du_flux_Gestion_des_erreurs", "Web/JavaScript/Guide/Fonctions")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Contrôle_du_flux_Gestion_des_erreurs", "Web/JavaScript/Guide/Fonctions")}}
 
 Les boucles permettent de répéter des actions simplement et rapidement. Ce chapitre du [guide JavaScript](/fr/docs/Web/JavaScript/Guide) présente les différentes instructions qu'il est possible d'utiliser en JavaScript pour effectuer des itérations.
 
@@ -20,7 +14,7 @@ for (let pas = 0; pas < 5; pas++) {
   // Ceci sera exécuté 5 fois
   // À chaque éxécution, la variable "pas" augmentera de 1
   // Lorsque'elle sera arrivée à 5, le boucle se terminera.
-  console.log('Faire ' + pas + ' pas vers l\'est');
+  console.log("Faire " + pas + " pas vers l'est");
 }
 ```
 
@@ -61,7 +55,9 @@ La fonction suivante contient une instruction `for` qui compte le nombre d'optio
 ```html
 <form name="selectForm">
   <p>
-    <label for="typesMusique">Veuillez choisir des genres musicaux, puis cliquez :</label>
+    <label for="typesMusique"
+      >Veuillez choisir des genres musicaux, puis cliquez :</label
+    >
     <select id="typesMusique" name="typesMusique" multiple="multiple">
       <option selected="selected">R&B</option>
       <option>Jazz</option>
@@ -75,20 +71,23 @@ La fonction suivante contient une instruction `for` qui compte le nombre d'optio
 </form>
 
 <script>
-function quantité(selectObject) {
-  let qtéSélectionnée = 0;
-  for (let i = 0; i < selectObject.options.length; i++) {
-    if (selectObject.options[i].selected) {
-      qtéSélectionnée++;
+  function quantité(selectObject) {
+    let qtéSélectionnée = 0;
+    for (let i = 0; i < selectObject.options.length; i++) {
+      if (selectObject.options[i].selected) {
+        qtéSélectionnée++;
+      }
     }
+    return qtéSélectionnée;
   }
-  return qtéSélectionnée;
-}
 
-let btn = document.getElementById("btn");
-btn.addEventListener("click", function(){
-  alert('Nombre d\'options choisies : ' + quantité(document.selectForm.typesMusique))
-});
+  let btn = document.getElementById("btn");
+  btn.addEventListener("click", function () {
+    alert(
+      "Nombre d'options choisies : " +
+        quantité(document.selectForm.typesMusique),
+    );
+  });
 </script>
 ```
 
@@ -180,8 +179,7 @@ La valeur de `label` peut être n'importe quel identifiant JavaScript valide (et
 Dans cet exemple, on utilise un label `memoBoucle` pour identifier une boucle `while`.
 
 ```js
-memoBoucle:
-while (memo == true) {
+memoBoucle: while (memo == true) {
   faireQQC();
 }
 ```
@@ -282,15 +280,15 @@ vérifIetJ: while (i < 4) {
   i += 1;
 
   vérifJ: while (j > 4) {
-    console.log("j : "+ j);
+    console.log("j : " + j);
     j -= 1;
-    if ((j % 2) === 0){
+    if (j % 2 === 0) {
       continue vérifJ;
     }
     console.log(j + " est impaire.");
-   }
-   console.log("i = " + i);
-   console.log("j = " + j);
+  }
+  console.log("i = " + i);
+  console.log("j = " + j);
 }
 ```
 
@@ -322,8 +320,8 @@ function afficherProps(obj, nomObj) {
 Pour un objet `voiture` dont les propriétés sont `fabricant` et `modèle`, `result` serait :
 
 ```js
-voiture.fabricant = Ford
-voiture.modèle = Mustang
+voiture.fabricant = Ford;
+voiture.modèle = Mustang;
 ```
 
 ### Les tableaux (arrays) et `for...in`
@@ -355,4 +353,4 @@ for (let i of arr) {
 }
 ```
 
-{{PreviousNext("Web/JavaScript/Guide/Contr%C3%B4le_du_flux_Gestion_des_erreurs", "Web/JavaScript/Guide/Fonctions")}}
+{{PreviousNext("Web/JavaScript/Guide/Contrôle_du_flux_Gestion_des_erreurs", "Web/JavaScript/Guide/Fonctions")}}

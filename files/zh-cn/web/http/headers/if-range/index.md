@@ -1,54 +1,62 @@
 ---
 title: If-Range
 slug: Web/HTTP/Headers/If-Range
+l10n:
+  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
 {{HTTPSidebar}}
 
-**`If-Range`** HTTP 请求头字段用来使得 **`Range`** 头字段在一定条件下起作用：当字段值中的条件得到满足时，**`Range`** 头字段才会起作用，同时服务器回复{{HTTPStatus("206")}} 部分内容状态码，以及**`Range`** 头字段请求的相应部分；如果字段值中的条件没有得到满足，服务器将会返回 {{HTTPStatus("200")}} `OK` 状态码，并返回完整的请求资源。
+**`If-Range`** HTTP 请求标头用于创建具有条件的范围请求：当条件得到满足时，则发出范围请求，服务器将返回 {{HTTPStatus("206")}} `Partial Content` 状态，以及相应的内容；如果条件没有得到满足，服务器将返回完整的资源以及 {{HTTPStatus("200")}} `OK` 状态。
 
-字段值中既可以用 {{HTTPHeader("Last-Modified")}} 时间值用作验证，也可以用{{HTTPHeader("ETag")}}标记作为验证，但不能将两者同时使用。
+该标头既可用 {{HTTPHeader("Last-Modified")}} 验证器，也可用 {{HTTPHeader("ETag")}} 验证器，但不能同时使用两者。
 
-**`If-Range`** 头字段通常用于断点续传的下载过程中，用来自从上次中断后，确保下载的资源没有发生改变。
+最常见的用例是恢复下载，以确保自最后一次片段接收以来，存储的资源没有发生更改。
 
-| Header type                                      | {{Glossary("Request header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">标头类型</th>
+      <td>{{Glossary("Request header", "请求标头")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name", "禁止修改的标头")}}</th>
+      <td>否</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 语法
 
-```plain
+```http
 If-Range: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
 If-Range: <etag>
 ```
 
-## 说明
+## 指令
 
 - \<etag>
-  - : 一个资源标签（entity tag）代表着所请求的资源。它是由被双引号包围的 ACSII 编码的字符串组成的（例如`"675af34563dc-tr34"`）。当应用弱匹配算法时，E-Tag 会有一个 `W/` 前缀。
-
-<!---->
-
+  - : 唯一代表所请求资源的实体标签。它是用双引号括起的 ASCII 字符串（例如 `"675af34563dc-tr34"`）。这个标头中不能使用弱实体标签（以 `W/` 为前缀）。
 - \<day-name>
-  - : `"Mon"`，`"Tue"`，`"Wed"`，`"Thu"`，`"Fri"`，`"Sat"` 或者 `"Sun"` 当中的一个（大小写敏感）。
+  - : “Mon”、“Tue”、“Wed”、“Thu”、“Fri”、“Sat”或“Sun”之一（大小写敏感）。
 - \<day>
-  - : 两位数字，例如`"04"或者"23"`。
+  - : 两位表示日期的数字，例如“04”或“23”。
 - \<month>
-  - : `"Jan"`，`"Feb"`，`"Mar"`，`"Apr"`，`"May"`，`"Jun"`，`"Jul"`，`"Aug"`，`"Sep"`，`"Oct"`，`"Nov"`，或者 `"Dec"` 中的一个（大小写敏感）。
+  - : “Jan”、“Feb”、“Mar”、“Apr”、“May”、“Jun”、“Jul”、“Aug”、“Sep”、“Oct”、“Nov”或“Dec”之一（大小写敏感）。
 - \<year>
-  - : 四位数字，例如`"1990"` 或者 `"2016"`。
+  - : 四位表示年份的数字，例如“1990”或“2016”。
 - \<hour>
-  - : 两位数字，例如 `"09"` 或者 `"23"`。
+  - : 两位表示小时的数字，例如“09”或“23”。
 - \<minute>
-  - : 两位数字，例如 `"04"` 或者 `"59"`。
+  - : 两位表示分的数字，例如“04”或“59”。
 - \<second>
-  - : 两位数字，例如 `"04"` 或者 `"59"`。
+  - : 两位表示秒的数字，例如“04”或“59”。
 - `GMT`
-  - : 格林威治标准时间。HTTP 协议的日期总是要使用 GMT，而不是当地时间。
+  - : 格林威治时间。HTTP 的日期始终使用 GMT（而不是本地时间）表示。
 
 ## 示例
 
-```plain
+```http
 If-Range: Wed, 21 Oct 2015 07:28:00 GMT
 ```
 
@@ -60,7 +68,7 @@ If-Range: Wed, 21 Oct 2015 07:28:00 GMT
 
 {{Compat}}
 
-## 相关内容
+## 参见
 
 - {{HTTPHeader("ETag")}}
 - {{HTTPHeader("Last-Modified")}}
@@ -68,5 +76,5 @@ If-Range: Wed, 21 Oct 2015 07:28:00 GMT
 - {{HTTPHeader("If-Unmodified-Since")}}
 - {{HTTPHeader("If-Match")}}
 - {{HTTPHeader("If-None-Match")}}
-- {{HTTPStatus("206")}} Partial Content
-- [HTTP Conditional Requests](/zh-CN/docs/Web/HTTP/Conditional_requests)
+- {{HTTPStatus("206", "206 Partial Content")}}
+- [HTTP 条件请求](/zh-CN/docs/Web/HTTP/Conditional_requests)

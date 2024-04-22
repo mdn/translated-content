@@ -1,11 +1,6 @@
 ---
 title: animation-fill-mode
 slug: Web/CSS/animation-fill-mode
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/animation-fill-mode
 ---
 
 {{CSSRef}}
@@ -78,26 +73,34 @@ animation-fill-mode: both, forwards, none;
   font-family: sans-serif;
 }
 @keyframes grow {
-    0% { font-size: 0 }
-    100% { font-size: 40px }
+  0% {
+    font-size: 0;
+  }
+  100% {
+    font-size: 40px;
+  }
 }
 @-webkit-keyframes grow {
-    0% { font-size: 0 }
-    100% { font-size: 40px }
+  0% {
+    font-size: 0;
+  }
+  100% {
+    font-size: 40px;
+  }
 }
 .demo:hover .grows {
-    animation-name: grow;
-    animation-duration: 3s;
-    -webkit-animation-name: grow;
-    -webkit-animation-duration: 3s;
+  animation-name: grow;
+  animation-duration: 3s;
+  -webkit-animation-name: grow;
+  -webkit-animation-duration: 3s;
 }
 .demo:hover .growsandstays {
-    animation-name: grow;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
-    -webkit-animation-name: grow;
-    -webkit-animation-duration: 3s;
-    -webkit-animation-fill-mode: forwards;
+  animation-name: grow;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  -webkit-animation-name: grow;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-fill-mode: forwards;
 }
 ```
 

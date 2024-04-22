@@ -2,6 +2,7 @@
 title: 단항 부정 (-)
 slug: Web/JavaScript/Reference/Operators/Unary_negation
 ---
+
 {{jsSidebar("Operators")}}
 
 단항 부정 연산자(`-`)는 피연산자 앞에 위치하며, 피연산자의 부호를 부정합니다. 즉 양수는 음수로, 음수는 양수로 바꿉니다.
@@ -11,7 +12,7 @@ slug: Web/JavaScript/Reference/Operators/Unary_negation
 ## 구문
 
 ```js
--x
+-x;
 ```
 
 ## 예제

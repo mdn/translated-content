@@ -38,13 +38,11 @@ animation.currentTime =
 
 ## Especificações
 
-| Especificações                                                                                       | Status                               | Comentário |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | ---------- |
-| {{SpecName('Web Animations', '#dom-animation-currenttime', 'currentTime')}} | {{Spec2("Web Animations")}} |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Animation.currentTime")}}
+{{Compat}}
 
 ## Veja também
 

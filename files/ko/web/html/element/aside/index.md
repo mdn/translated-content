@@ -1,5 +1,5 @@
 ---
-title: '<aside>: 별도 구획 요소'
+title: "<aside>: 별도 구획 요소"
 slug: Web/HTML/Element/aside
 ---
 
@@ -8,8 +8,6 @@ slug: Web/HTML/Element/aside
 **HTML `<aside>` 요소**는 문서의 주요 내용과 간접적으로만 연관된 부분을 나타냅니다. 주로 사이드바 혹은 콜아웃 박스로 표현합니다.
 
 {{EmbedInteractiveExample("pages/tabbed/aside.html", "tabbed-standard")}}
-
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
 
 <table class="properties">
   <tbody>
@@ -47,7 +45,7 @@ slug: Web/HTML/Element/aside
     <tr>
       <th scope="row">가능한 부모 요소</th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/ko/docs/Web/HTML/Content_categories#Flow_content"
           >플로우 콘텐츠</a
         >를 허용하는 모든 요소.<br /><code>&#x3C;aside></code> 요소는
         {{HTMLElement("address")}}의 후손이 될 수 없음에 주의하세요.
@@ -94,16 +92,9 @@ slug: Web/HTML/Element/aside
 
 ```html
 <article>
-  <p>
-    디즈니 만화영화 <em>인어 공주</em>는
-    1989년 처음 개봉했습니다.
-  </p>
-  <aside>
-    인어 공주는 첫 개봉 당시 8700만불의 흥행을 기록했습니다.
-  </aside>
-  <p>
-    영화에 대한 정보...
-  </p>
+  <p>디즈니 만화영화 <em>인어 공주</em>는 1989년 처음 개봉했습니다.</p>
+  <aside>인어 공주는 첫 개봉 당시 8700만불의 흥행을 기록했습니다.</aside>
+  <p>영화에 대한 정보...</p>
 </article>
 ```
 

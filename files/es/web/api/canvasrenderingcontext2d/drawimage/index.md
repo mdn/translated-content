@@ -20,7 +20,7 @@ void ctx.drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
 ### Parámetros
 
 - `image`
-  - : Un elemento a dibujar dentro del context. La especificación permite cualquier fuente de imagen en canvas ({{domxref("CanvasImageSource")}}), tal como una {{domxref("HTMLImageElement")}}, un {{domxref("HTMLVideoElement")}}, un {{domxref("HTMLCanvasElement")}} o un{{domxref("ImageBitmap")}}.
+  - : Un elemento a dibujar dentro del context. La especificación permite cualquier fuente de imagen en canvas, tal como una {{domxref("HTMLImageElement")}}, un {{domxref("HTMLVideoElement")}}, un {{domxref("HTMLCanvasElement")}} o un{{domxref("ImageBitmap")}}.
 - `dx`
   - : La coordenada X del canvas destino en la cual se coloca la esquina superior izquierda de la imagen origen.
 - `dy`
@@ -67,7 +67,7 @@ Este es sólo un simple fragmento de código que utiliza el método drawImage.
 ```js
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
-var image = document.getElementById('source');
+var image = document.getElementById("source");
 
 ctx.drawImage(image, 33, 71, 104, 124, 21, 20, 87, 104);
 ```
@@ -89,7 +89,7 @@ ctx.drawImage(image, 33, 71, 104, 124, 21, 20, 87, 104);</textarea>
 ```js hidden
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
-var image = document.getElementById('source');
+var image = document.getElementById("source");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
 var edit = document.getElementById("edit");
@@ -100,14 +100,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);

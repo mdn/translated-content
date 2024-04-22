@@ -1,9 +1,11 @@
 ---
 title: Notification：requireInteraction 属性
 slug: Web/API/Notification/requireInteraction
+l10n:
+  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{APIRef("Web Notifications")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 {{domxref("Notification")}} 接口的 **`requireInteraction`** 只读属性返回一个布尔值，指示在用户点击或关闭通知前，通知应该保持活动状态，而不是自动关闭。
 

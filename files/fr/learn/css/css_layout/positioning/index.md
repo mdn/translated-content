@@ -1,8 +1,6 @@
 ---
 title: Le positionnement
 slug: Learn/CSS/CSS_layout/Positioning
-translation_of: Learn/CSS/CSS_layout/Positioning
-original_slug: Apprendre/CSS/CSS_layout/Le_positionnement
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout")}}
@@ -39,7 +37,7 @@ Le positionnement statique est celui reçu par défaut par chaque élément. Cel
 Pour illustrer ce positionnement (et disposer d'exemple qui nous servira pour les prochaines sections), ajoutez tout d'abord une classe `positioned` pour le deuxième [`<p>`](/fr/docs/Web/HTML/Element/p) dans le HTML&nbsp;:
 
 ```html
-<p class="positioned"> … </p>
+<p class="positioned">…</p>
 ```
 
 Puis ajoutez la règle suivante au bas de votre CSS&nbsp;:
@@ -81,13 +79,35 @@ Si vous enregistrez et actualisez maintenant, vous verrez ce résultat&nbsp;:
 ```html hidden
 <h1>Positionnement relatif</h1>
 
-<p>Je suis élément de base de niveau bloc. Les éléments de niveau de bloc adjacents se trouvent sur de nouvelles lignes en dessous de moi.</p>
+<p>
+  Je suis élément de base de niveau bloc. Les éléments de niveau de bloc
+  adjacents se trouvent sur de nouvelles lignes en dessous de moi.
+</p>
 
-<p class="positioned">Par défaut, je couvre 100% de la largeur de mon élément parent et je suis aussi haut que mon contenu enfant. Mes largeur et hauteur totales sont égales aux largeur et hauteur du contenu, plus celles du remplissage, plus celles de l'encadrement.</p>
+<p class="positioned">
+  Par défaut, je couvre 100% de la largeur de mon élément parent et je suis
+  aussi haut que mon contenu enfant. Mes largeur et hauteur totales sont égales
+  aux largeur et hauteur du contenu, plus celles du remplissage, plus celles de
+  l'encadrement.
+</p>
 
-<p>Entre éléments adjacents, nous sommes séparés par nos marges. En raison de la fusion des marges, nous sommes séparés par la largeur de la plus grande de nos marges, et non par la somme des deux.</p>
+<p>
+  Entre éléments adjacents, nous sommes séparés par nos marges. En raison de la
+  fusion des marges, nous sommes séparés par la largeur de la plus grande de nos
+  marges, et non par la somme des deux.
+</p>
 
-<p>Les éléments «&nbsp;inline&nbsp;» <span>comme celui-ci </span>ou <span>cet autre</span> sont sur une même ligne que les nœuds de texte adjacents, s'il y a de la place sur la même ligne. Les éléments «&nbsp;inline&nbsp;» débordants <span>se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant du texte</span>&nbsp;; sinon, ils passent simplement à une nouvelle ligne, un peu comme cette image le fait : <img src="long.jpg"></p>
+<p>
+  Les éléments «&nbsp;inline&nbsp;» <span>comme celui-ci </span>ou
+  <span>cet autre</span> sont sur une même ligne que les nœuds de texte
+  adjacents, s'il y a de la place sur la même ligne. Les éléments
+  «&nbsp;inline&nbsp;» débordants
+  <span
+    >se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant
+    du texte</span
+  >&nbsp;; sinon, ils passent simplement à une nouvelle ligne, un peu comme
+  cette image le fait : <img src="long.jpg" />
+</p>
 ```
 
 ```css hidden
@@ -139,11 +159,33 @@ Si vous enregistrez et actualisez maintenant, vous verrez quelque chose comme ce
 ```html hidden
 <h1>Positionnement absolu</h1>
 
-<p>Je suis élément de base de niveau bloc. Les éléments de niveau de bloc adjacents se trouvent sur de nouvelles lignes en dessous de moi.</p>
+<p>
+  Je suis élément de base de niveau bloc. Les éléments de niveau de bloc
+  adjacents se trouvent sur de nouvelles lignes en dessous de moi.
+</p>
 
-<p class="positioned">Par défaut, je couvre 100% de la largeur de mon élément parent et je suis aussi haut que mon contenu enfant. Mes largeur et hauteur totales sont égales aux largeur et hauteur du contenu, plus celles du remplissage, plus celles de l'encadrement.</p>
-<p>Entre éléments adjacents, nous sommes séparés par nos marges. En raison de la fusion des marges, nous sommes séparés par la largeur de la plus grande de nos marges, et non par la somme des deux.</p>
-<p>Les éléments «&nbsp;inline&nbsp;» <span>comme celui-ci </span>ou <span>cet autre</span> sont sur une même ligne que les noeuds de texte adjacents, s'il y a de la place sur la même ligne. Les éléments «&nbsp;inline&nbsp;» débordants <span>se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant du texte</span>&nbsp;; sinon, ils passent simplement à une nouvelle ligne, un peu comme cette image le fait : <img src="long.jpg"></p>
+<p class="positioned">
+  Par défaut, je couvre 100% de la largeur de mon élément parent et je suis
+  aussi haut que mon contenu enfant. Mes largeur et hauteur totales sont égales
+  aux largeur et hauteur du contenu, plus celles du remplissage, plus celles de
+  l'encadrement.
+</p>
+<p>
+  Entre éléments adjacents, nous sommes séparés par nos marges. En raison de la
+  fusion des marges, nous sommes séparés par la largeur de la plus grande de nos
+  marges, et non par la somme des deux.
+</p>
+<p>
+  Les éléments «&nbsp;inline&nbsp;» <span>comme celui-ci </span>ou
+  <span>cet autre</span> sont sur une même ligne que les noeuds de texte
+  adjacents, s'il y a de la place sur la même ligne. Les éléments
+  «&nbsp;inline&nbsp;» débordants
+  <span
+    >se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant
+    du texte</span
+  >&nbsp;; sinon, ils passent simplement à une nouvelle ligne, un peu comme
+  cette image le fait : <img src="long.jpg" />
+</p>
 ```
 
 ```css hidden
@@ -201,13 +243,35 @@ Cela devrait vous donner le résultat suivant&nbsp;:
 ```html hidden
 <h1>Contextes de positionnement</h1>
 
-<p>Je suis élément de base de niveau bloc. Les éléments de niveau de bloc adjacents se trouvent sur de nouvelles lignes en dessous de moi.</p>
+<p>
+  Je suis élément de base de niveau bloc. Les éléments de niveau de bloc
+  adjacents se trouvent sur de nouvelles lignes en dessous de moi.
+</p>
 
-<p class="positioned">Maintenant je suis positionné de manière absolue par rapport à l'élément <code>&lt;body&gt;</code>, et non par rapport à l'élément <code>&lt;html&gt;</code> !</p>
+<p class="positioned">
+  Maintenant je suis positionné de manière absolue par rapport à l'élément
+  <code>&lt;body&gt;</code>, et non par rapport à l'élément
+  <code>&lt;html&gt;</code> !
+</p>
 
-<p>Entre éléments adjacents, nous sommes séparés par nos marges. En raison de la fusion des marges, nous sommes séparés par la largeur de la plus grande de nos marges, et non par la somme des deux.</p>
+<p>
+  Entre éléments adjacents, nous sommes séparés par nos marges. En raison de la
+  fusion des marges, nous sommes séparés par la largeur de la plus grande de nos
+  marges, et non par la somme des deux.
+</p>
 
-<p>Les éléments « inline » <span>comme celui-ci </span>ou <span>cet autre</span> sont sur une même ligne que les noeuds de texte adjacents, s'il y a de la place sur la même ligne. Les éléments « inline » débordants <span>se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant du texte</span> ; sinon, ils passent simplement à une nouvelle ligne, un peu comme cette image le fait : <img src="long.jpg"></p>
+<p>
+  Les éléments « inline » <span>comme celui-ci </span>ou
+  <span>cet autre</span> sont sur une même ligne que les noeuds de texte
+  adjacents, s'il y a de la place sur la même ligne. Les éléments « inline »
+  débordants
+  <span
+    >se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant
+    du texte</span
+  >
+  ; sinon, ils passent simplement à une nouvelle ligne, un peu comme cette image
+  le fait : <img src="long.jpg" />
+</p>
 ```
 
 ```css hidden
@@ -275,13 +339,35 @@ Voici maintenant l'exemple terminé où vous devriez voir le paragraphe vert par
 ```html hidden
 <h1>z-index</h1>
 
-<p>Je suis élément de base de niveau bloc. Les éléments de niveau de bloc adjacents se trouvent sur de nouvelles lignes en dessous de moi.</p>
+<p>
+  Je suis élément de base de niveau bloc. Les éléments de niveau de bloc
+  adjacents se trouvent sur de nouvelles lignes en dessous de moi.
+</p>
 
-<p class="positioned">Maintenant je suis positionné de manière absolue par rapport à l'élément <code>&lt;body&gt;</code>, et non par rapport à l'élément <code>&lt;html&lt;html&gt;</code> !</p>
+<p class="positioned">
+  Maintenant je suis positionné de manière absolue par rapport à l'élément
+  <code>&lt;body&gt;</code>, et non par rapport à l'élément
+  <code>&lt;html&lt;html&gt;</code> !
+</p>
 
-<p>Entre éléments adjacents, nous sommes séparés par nos marges. En raison de la fusion des marges, nous sommes séparés par la largeur de la plus grande de nos marges, et non par la somme des deux.</p>
+<p>
+  Entre éléments adjacents, nous sommes séparés par nos marges. En raison de la
+  fusion des marges, nous sommes séparés par la largeur de la plus grande de nos
+  marges, et non par la somme des deux.
+</p>
 
-<p>Les éléments « inline » <span>comme celui-ci </span>ou <span>cet autre</span> sont sur une même ligne que les noeuds de texte adjacents, s'il y a de la place sur la même ligne. Les éléments « inline » débordants <span>se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant du texte</span> ; sinon, ils passent simplement à une nouvelle ligne, un peu comme cette image le fait : <img src="long.jpg"></p>
+<p>
+  Les éléments « inline » <span>comme celui-ci </span>ou
+  <span>cet autre</span> sont sur une même ligne que les noeuds de texte
+  adjacents, s'il y a de la place sur la même ligne. Les éléments « inline »
+  débordants
+  <span
+    >se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant
+    du texte</span
+  >
+  ; sinon, ils passent simplement à une nouvelle ligne, un peu comme cette image
+  le fait : <img src="long.jpg" />
+</p>
 ```
 
 ```css hidden
@@ -369,13 +455,30 @@ Voici l'exemple terminé&nbsp;:
 ```html hidden
 <h1>Positionnement fixe</h1>
 
-<p>Je suis élément de base de niveau bloc. Les éléments de niveau de bloc adjacents se trouvent sur de nouvelles lignes en dessous de moi.</p>
+<p>
+  Je suis élément de base de niveau bloc. Les éléments de niveau de bloc
+  adjacents se trouvent sur de nouvelles lignes en dessous de moi.
+</p>
 
 <p class="positioned">Je ne suis plus positionné...</p>
 
-<p>Entre éléments adjacents, nous sommes séparés par nos marges. En raison de la fusion des marges, nous sommes séparés par la largeur de la plus grande de nos marges, et non par la somme des deux.</p>
+<p>
+  Entre éléments adjacents, nous sommes séparés par nos marges. En raison de la
+  fusion des marges, nous sommes séparés par la largeur de la plus grande de nos
+  marges, et non par la somme des deux.
+</p>
 
-<p>Les éléments «&nbsp;inline&nbsp;» <span>comme celui-ci </span>ou <span>cet autre</span> sont sur une même ligne que les noeuds de texte adjacents, s'il y a de la place sur la même ligne. Les éléments «&nbsp;inline&nbsp;» débordants <span>se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant du texte</span>&nbsp;; sinon, ils passent simplement à une nouvelle ligne, un peu comme cette image le fait : <img src="long.jpg"></p>
+<p>
+  Les éléments «&nbsp;inline&nbsp;» <span>comme celui-ci </span>ou
+  <span>cet autre</span> sont sur une même ligne que les noeuds de texte
+  adjacents, s'il y a de la place sur la même ligne. Les éléments
+  «&nbsp;inline&nbsp;» débordants
+  <span
+    >se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant
+    du texte</span
+  >&nbsp;; sinon, ils passent simplement à une nouvelle ligne, un peu comme
+  cette image le fait : <img src="long.jpg" />
+</p>
 ```
 
 ```css hidden
@@ -425,13 +528,41 @@ Ce positionnement s'utilise par exemple pour faire défiler une barre de navigat
 ```html hidden
 <h1>Positionnement adhérent</h1>
 
-<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
+  dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus
+  ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus
+  laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum,
+  tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus
+  neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
+  volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros
+  pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec
+  lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+</p>
 
 <div class="positioned">adhérent : relatif en deça, fixe au delà</div>
 
-<p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+<p>
+  Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+  ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+  est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+  tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus
+  sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+  vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+</p>
 
-<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
+  dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus
+  ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus
+  laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum,
+  tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus
+  neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
+  volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros
+  pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec
+  lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+</p>
 ```
 
 ```css hidden
@@ -441,8 +572,8 @@ body {
 }
 
 .positioned {
-  background: rgba(255,84,104,.3);
-  border: 2px solid rgb(255,84,104);
+  background: rgba(255, 84, 104, 0.3);
+  border: 2px solid rgb(255, 84, 104);
   padding: 10px;
   margin: 10px;
   border-radius: 5px;
@@ -467,31 +598,31 @@ Une utilisation courante et pleine d'intérêt de `position: sticky` consiste à
 <h1>Positionnement adhérent</h1>
 
 <dl>
-    <dt>A</dt>
-    <dd>Abeille</dd>
-    <dd>Abricot</dd>
-    <dd>Altimètre</dd>
-    <dd>Avion</dd>
-    <dt>B</dt>
-    <dd>Banane</dd>
-    <dd>Betterave</dd>
-    <dd>Bœuf</dd>
-    <dd>Bouvreuil</dd>
-    <dd>Buzzard</dd>
-    <dt>C</dt>
-    <dd>Calculateur</dd>
-    <dd>Camera</dd>
-    <dd>Cane</dd>
-    <dd>Chameau</dd>
-    <dt>D</dt>
-    <dd>Dime</dd>
-    <dd>Dindon</dd>
-    <dd>Drapeau</dd>
-    <dd>Drone</dd>
-    <dt>E</dt>
-    <dd>Eau</dd>
-    <dd>Éléphant</dd>
-    <dd>Escadrille</dd>
+  <dt>A</dt>
+  <dd>Abeille</dd>
+  <dd>Abricot</dd>
+  <dd>Altimètre</dd>
+  <dd>Avion</dd>
+  <dt>B</dt>
+  <dd>Banane</dd>
+  <dd>Betterave</dd>
+  <dd>Bœuf</dd>
+  <dd>Bouvreuil</dd>
+  <dd>Buzzard</dd>
+  <dt>C</dt>
+  <dd>Calculateur</dd>
+  <dd>Camera</dd>
+  <dd>Cane</dd>
+  <dd>Chameau</dd>
+  <dt>D</dt>
+  <dd>Dime</dd>
+  <dd>Dindon</dd>
+  <dd>Drapeau</dd>
+  <dd>Drone</dd>
+  <dt>E</dt>
+  <dd>Eau</dd>
+  <dd>Éléphant</dd>
+  <dd>Escadrille</dd>
 </dl>
 ```
 

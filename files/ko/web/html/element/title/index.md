@@ -1,5 +1,5 @@
 ---
-title: '<title>: 문서 제목 요소'
+title: "<title>: 문서 제목 요소"
 slug: Web/HTML/Element/title
 ---
 
@@ -91,13 +91,18 @@ slug: Web/HTML/Element/title
 ### 예제
 
 ```html
-<title>메뉴 - 블루 하우스 치즈 - FoodYum: 지금 바로 온라인으로 주문하세요!</title>
+<title>
+  메뉴 - 블루 하우스 치즈 - FoodYum: 지금 바로 온라인으로 주문하세요!
+</title>
 ```
 
 사용자를 도와주려면 페이지의 `title` 값이 중요한 상태의 변화(입력 폼 유효성 문제 등)를 반영하도록 바꾸세요.
 
 ```html
-<title>오류 2개 - 주문서 - 블루 하우스 치즈 - FoodYum: 지금 바로 온라인으로 주문하세요!</title>
+<title>
+  오류 2개 - 주문서 - 블루 하우스 치즈 - FoodYum: 지금 바로 온라인으로
+  주문하세요!
+</title>
 ```
 
 - [MDN Understanding WCAG, Guideline 2.4 explanations](/ko/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.4_%E2%80%94_Navigable_Provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)

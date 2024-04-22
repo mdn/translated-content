@@ -1,8 +1,6 @@
 ---
 title: Web Components (composants web)
 slug: Web/API/Web_components
-translation_of: Web/Web_Components
-original_slug: Web/Web_Components
 ---
 
 {{DefaultAPISidebar("Web Components")}}
@@ -67,7 +65,7 @@ L'approche pour implémenter un composant web ressemble généralement à&nbsp;:
     - [`:defined`](/fr/docs/Web/CSS/:defined) cible tout élément défini, c'est-à-dire les éléments natifs et les éléments personnalisés définis avec `CustomElementRegistry.define()`.
     - [`:host`](/fr/docs/Web/CSS/:host) cible l'hôte sombre du [DOM sombre](/fr/docs/Web/Web_Components/Using_shadow_DOM) contenant le CSS à utiliser pour cet hôte. Autrement dit, elle permet de sélectionner un élément personnalisé depuis l'intérieur du DOM sombre.
     - [`:host()`](/fr/docs/Web/CSS/:host) cible l'hôte sombre du [DOM sombre](/fr/docs/Web/Web_Components/Using_shadow_DOM) contenant le CSS à utiliser en fonction d'un sélecteur passé en paramètre.
-    - [`:host-context()`](/fr/docs/Web/CSS/:host-context()) cible l'hôte sombre du [DOM sombre](/fr/docs/Web/Web_Components/Using_shadow_DOM) contenant le CSS à utiliser (afin de pouvoir sélectionner un élément personnalisé depuis son DOM sombre), uniquement si le sélecteur passé en argument à la fonction correspond à un ancêtre de l'élément dans la hiérarchie du DOM.
+    - [`:host-context()`](</fr/docs/Web/CSS/:host-context()>) cible l'hôte sombre du [DOM sombre](/fr/docs/Web/Web_Components/Using_shadow_DOM) contenant le CSS à utiliser (afin de pouvoir sélectionner un élément personnalisé depuis son DOM sombre), uniquement si le sélecteur passé en argument à la fonction correspond à un ancêtre de l'élément dans la hiérarchie du DOM.
 
 - Des pseudo-éléments CSS&nbsp;:
 

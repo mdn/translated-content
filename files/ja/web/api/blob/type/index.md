@@ -49,7 +49,7 @@ input.addEventListener("change", (event) => {
   }
 
   const allAllowed = Array.from(files).every((file) =>
-    allowedFileTypes.includes(file.type)
+    allowedFileTypes.includes(file.type),
   );
   output.innerText = allAllowed
     ? "すべてのファイルが合格です!"

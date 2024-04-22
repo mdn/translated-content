@@ -188,13 +188,13 @@ console.log(o.a); // 37；赋值不会成功
     writable: false,
   });
   o.b = 3; // 抛出 TypeError: "b" is read-only
-  return o.b; // 如果没有上一行的话，会返回 2 
+  return o.b; // 如果没有上一行的话，会返回 2
 })();
 ```
 
 #### Enumerable 特性
 
-`enumerable` 定义了属性是否可以被 {{jsxref("Object.assign()")}} 或[展开运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)所考虑。对于非 {{jsxref("Global_Objects/Symbol", "Symbol")}} 属性，它还定义了属性是否会在 {{jsxref("Statements/for...in", "for...in")}} 循环和 {{jsxref("Object.keys()")}} 中显示。有关更多信息，请参见[属性的枚举性和所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)。
+`enumerable` 特性定义了属性是否可以被 {{jsxref("Object.assign()")}} 或[展开运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)所考虑。对于非 {{jsxref("Global_Objects/Symbol", "Symbol")}} 属性，它还定义了属性是否会在 {{jsxref("Statements/for...in", "for...in")}} 循环和 {{jsxref("Object.keys()")}} 中显示。更多信息，请参见[属性的枚举性和所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)。
 
 ```js
 const o = {};
@@ -209,7 +209,7 @@ Object.defineProperty(o, "b", {
 Object.defineProperty(o, "c", {
   value: 3,
 }); // enumerable 默认为 false
-o.d = 4; // 通过赋值创建属性时 enumerable 默认为 true 
+o.d = 4; // 通过赋值创建属性时 enumerable 默认为 true
 Object.defineProperty(o, Symbol.for("e"), {
   value: 5,
   enumerable: true,
@@ -420,7 +420,7 @@ console.log(instance.myname); // 这是我名称的字符串
 
 ### 继承属性
 
-如果访问者的属性被继承，它的 `get` 和 `set` 方法会在派生对象的属性被访问或者修改时被调用。如果这些方法用一个变量存值，该值会被所有对象共享。
+如果访问器属性被继承，它的 `get` 和 `set` 方法会在派生对象的属性被访问或者修改时被调用。如果这些方法用一个变量存值，该值会被所有对象共享。
 
 ```js
 function MyClass() {}
@@ -491,7 +491,7 @@ console.log(MyClass.prototype.y); // 1
 
 ## 参见
 
-- [属性的可枚举性和所有权](/zh-CN/docs/Enumerability_and_ownership_of_properties)
+- [属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.defineProperties()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}

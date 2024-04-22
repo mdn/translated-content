@@ -70,7 +70,7 @@ l10n:
   - {{domxref("IDBObjectStore.getKey()")}} メソッドをサポートしました ([Firefox バグ 1271506](https://bugzil.la/1271506))。
   - {{domxref("IDBCursor.continuePrimaryKey()")}} メソッドをサポートしました ([Firefox バグ 1271505](https://bugzil.la/1271505))。
   - バイナリーキーをサポートしました ([Firefox バグ 1271500](https://bugzil.la/1271500))。
-  - ["What’s new in IndexedDB 2.0?" – Mozilla hacks](https://hacks.mozilla.org/2016/10/whats-new-in-indexeddb-2-0/) もご覧ください。
+  - ["What's new in IndexedDB 2.0?" – Mozilla hacks](https://hacks.mozilla.org/2016/10/whats-new-in-indexeddb-2-0/) もご覧ください。
 
 ### Canvas
 
@@ -167,7 +167,7 @@ l10n:
   - ソーシャルチャット機能を削除しました。
   - Social Status API を削除しました。
   - Share panel を除く、すべての [ソーシャルウィジェット](/ja/docs/Mozilla/Projects/Social_API/Widgets) を削除しました。social sidebar や flyover panel などが含まれます。
-  - 削除した API のためにサポートしていたユーザインターフェイスや機能も、同様に削除しました。
+  - 削除した API のためにサポートしていたユーザーインターフェイスや機能も、同様に削除しました。
   - 削除した機能をサポートする、[Social service provider manifest](/ja/docs/Mozilla/Projects/Social_API/Manifest) のプロパティを廃止しました。
 
 - ファイル拡張子と MIME タイプの関連付けを与えるために `mimeTypes.rdf` をアドオンが使用する場合に、`"ext-to-type-mapping"` カテゴリーで項目を登録することが必要になりました ([Firefox バグ 306471](https://bugzil.la/306471))。

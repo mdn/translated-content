@@ -1,7 +1,6 @@
 ---
 title: Crypto
 slug: Web/API/Crypto
-translation_of: Web/API/Crypto
 ---
 
 {{APIRef("Web Crypto API")}}

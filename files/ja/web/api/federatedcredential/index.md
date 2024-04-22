@@ -1,27 +1,33 @@
 ---
 title: FederatedCredential
 slug: Web/API/FederatedCredential
+l10n:
+  sourceCommit: 1ac70b362b94fc4d781b4cfbc7d0508eaf91b05c
 ---
 
 {{SeeCompatTable}}{{APIRef("Credential Management API")}}
 
-**`FederatedCredential`** は [Credential Management API](/ja/docs/Web/API/Credential_Management_API) のインターフェイスで、連合アイデンティティのプロバイダーからの認証情報についての情報を提供します。連合アイデンティティのプロバイダーは、ウェブサイトが正しくユーザーを認証し、そのための API を提供する主体です。連合アイデンティティプロバイダーの一例として、 [OpenID Connect](http://openid.net/developers/specs/) があります。
+**`FederatedCredential`** は[資格情報管理 API](/ja/docs/Web/API/Credential_Management_API) のインターフェイスで、連合アイデンティティプロバイダーからの資格情報についての情報を提供します。連合アイデンティティプロバイダーは、ウェブサイトが正しくユーザーを認証し、そのための API を提供する主体です。連合アイデンティティプロバイダーの一例として、 [OpenID Connect](https://openid.net/developers/specs/) があります。
+
+> **メモ:** [連合資格情報管理 API (FedCM)](/ja/docs/Web/API/FedCM_API) は、ブラウザーで ID フェデレーションを処理するためのより完全なソリューションを提供し、{{domxref("IdentityCredential")}} 型を使用します。
 
 対応しているブラウザーにおいては、このインターフェイスのインスタンスがグローバル {{domxref('fetch')}} の `init` オブジェクトの `credential` メンバーとして渡されることがあります。
 
+{{InheritanceDiagram}}
+
 ## コンストラクター
 
-- {{domxref("FederatedCredential.FederatedCredential()","FederatedCredential()")}}
+- {{domxref("FederatedCredential.FederatedCredential()","FederatedCredential()")}} {{Experimental_Inline}}
   - : 新しい `FederatedCredential` オブジェクトを生成します。
 
 ## プロパティ
 
-_祖先である {{domxref("Credential")}} からプロパティを継承しています。_
+_祖先である {{domxref("Credential")}} から継承したプロパティがあります。_
 
-- {{domxref("FederatedCredential.provider")}} {{readonlyInline}}
-  - : 認証情報の連合アイデンティティプロバイダーを含む {{domxref("USVString")}} です。
-- {{domxref("FederatedCredential.protocol")}} {{readonlyInline}}
-  - : 認証情報の連合アイデンティティプロトコルを含む {{domxref("DOMString")}} です。
+- {{domxref("FederatedCredential.provider")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : 資格情報の連合アイデンティティプロバイダーの入った文字列を返します。
+- {{domxref("FederatedCredential.protocol")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : 資格情報の連合アイデンティティプロトコルの入った文字列を返します。
 
 ### イベントハンドラー
 
@@ -34,16 +40,15 @@ _祖先である {{domxref("Credential")}} からプロパティを継承して�
 ## 例
 
 ```js
-var cred = new FederatedCredential({
-  id: id,
-  name: name,
-  provider: 'https://account.google.com',
-  iconURL: iconUrl
+const cred = new FederatedCredential({
+  id,
+  name,
+  provider: "https://account.google.com",
+  iconURL,
 });
 
 // 格納
-navigator.credentials.store(cred)
-  .then(function() {
+navigator.credentials.store(cred).then(() => {
   // 他に何かをする
 });
 ```
@@ -52,6 +57,6 @@ navigator.credentials.store(cred)
 
 {{Specifications}}
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
-{{Compat("api.FederatedCredential")}}
+{{Compat}}

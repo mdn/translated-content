@@ -7,9 +7,9 @@ slug: Web/HTTP/Headers/Date
 
 **`Date`** 是一个通用首部，其中包含了报文创建的日期和时间。
 
-| Header type                                      | {{Glossary("General header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | yes                                      |
+| Header type                           | {{Glossary("General header")}} |
+| ------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden header name")}} | yes                            |
 
 ## 语法
 
@@ -50,6 +50,6 @@ Date: Wed, 21 Oct 2015 07:28:00 GMT
 
 {{Compat}}
 
-## 相关内容
+## 参见
 
 - {{HTTPHeader("Age")}}

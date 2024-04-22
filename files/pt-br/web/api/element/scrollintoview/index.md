@@ -47,8 +47,8 @@ var element = document.getElementById("box");
 
 element.scrollIntoView();
 element.scrollIntoView(false);
-element.scrollIntoView({block: "end"});
-element.scrollIntoView({block: "end", behavior: "smooth"});
+element.scrollIntoView({ block: "end" });
+element.scrollIntoView({ block: "end", behavior: "smooth" });
 ```
 
 ## Observações
@@ -57,13 +57,11 @@ O elemento poderá não ser movido completamento ao topo ou ao fundo dependendo 
 
 ## Especificações
 
-| Especificação                                                                                                    | Status                           | Comentário        |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------- |
-| {{SpecName("CSSOM View", "#dom-element-scrollintoview", "Element.scrollIntoView()")}} | {{Spec2("CSSOM View")}} | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Element.scrollIntoView")}}
+{{Compat}}
 
 ## Veja também
 

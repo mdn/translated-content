@@ -1,5 +1,5 @@
 ---
-title: ':target'
+title: ":target"
 slug: Web/CSS/:target
 ---
 
@@ -45,14 +45,14 @@ http://www.example.com/index.html#section2
 ```html
 <h3>目录</h3>
 <ol>
- <li><a href="#p1">跳转到第一个段落！</a></li>
- <li><a href="#p2">跳转到第二个段落！</a></li>
- <li><a href="#nowhere">此链接不会跳转，因为目标不存在。</a></li>
+  <li><a href="#p1">跳转到第一个段落！</a></li>
+  <li><a href="#p2">跳转到第二个段落！</a></li>
+  <li><a href="#nowhere">此链接不会跳转，因为目标不存在。</a></li>
 </ol>
 
 <h3>我的趣味文章</h3>
 <p id="p1">你可以使用 URL 片段定位此<i>段落</i>。点击上面的链接试试吧！</p>
-<p id="p2">这是<i>另一个段落</i>，也可以从上面的链接访问。 这不是很愉快吗？</p>
+<p id="p2">这是<i>另一个段落</i>，也可以从上面的链接访问。这不是很愉快吗？</p>
 ```
 
 #### CSS
@@ -67,7 +67,7 @@ p:target::before {
   font: 70% sans-serif;
   content: "►";
   color: limegreen;
-  margin-right: .25em;
+  margin-right: 0.25em;
 }
 
 /*在目标元素中使用 italic 样式*/
@@ -97,17 +97,20 @@ p:target i {
 <div class="lightbox" id="example1">
   <figure>
     <a href="#" class="close"></a>
-    <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Donec felis enim, placerat id eleifend eu, semper vel sem.</figcaption>
+    <figcaption>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec felis enim,
+      placerat id eleifend eu, semper vel sem.
+    </figcaption>
   </figure>
 </div>
 
 <div class="lightbox" id="example2">
   <figure>
     <a href="#" class="close"></a>
-    <figcaption>Cras risus odio, pharetra nec ultricies et,
-      mollis ac augue. Nunc et diam quis sapien dignissim auctor.
-      Quisque quis neque arcu, nec gravida magna.</figcaption>
+    <figcaption>
+      Cras risus odio, pharetra nec ultricies et, mollis ac augue. Nunc et diam
+      quis sapien dignissim auctor. Quisque quis neque arcu, nec gravida magna.
+    </figcaption>
   </figure>
 </div>
 ```
@@ -170,7 +173,7 @@ p:target i {
   width: 100%;
   height: 100%;
   position: fixed;
-  background-color: rgba(0,0,0,.7);
+  background-color: rgba(0, 0, 0, 0.7);
   content: "";
   cursor: default;
 }
@@ -190,4 +193,4 @@ p:target i {
 
 ## 参见
 
-- [在选择器中使用 :target 伪类](/zh-CN/docs/Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors)
+- [在选择器中使用 :target 伪类](/zh-CN/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors)

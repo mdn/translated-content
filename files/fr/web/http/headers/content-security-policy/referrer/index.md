@@ -1,17 +1,6 @@
 ---
-title: 'CSP: referrer'
+title: "CSP: referrer"
 slug: Web/HTTP/Headers/Content-Security-Policy/referrer
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Obsolete
-  - Reference
-  - Security
-  - Sécurité
-  - referrer
-translation_of: Web/HTTP/Headers/Content-Security-Policy/referrer
 ---
 
 {{HTTPSidebar}} {{deprecated_header}}

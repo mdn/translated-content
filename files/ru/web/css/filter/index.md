@@ -1,14 +1,6 @@
 ---
 title: filter
 slug: Web/CSS/filter
-tags:
-  - CSS
-  - SVG
-  - SVG фильтр
-  - filter
-  - Свойство CSS
-  - Ссылка
-translation_of: Web/CSS/filter
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -68,7 +60,9 @@ filter: url(svg-url#element-id)
 Примеры использования предопределённых функций показаны ниже. См. каждую функцию для конкретного примера.
 
 ```css
-.mydiv { filter: grayscale(50%) }
+.mydiv {
+  filter: grayscale(50%);
+}
 
 /* сделать все изображения серыми на 50% и размыть на 10px */
 img {
@@ -79,9 +73,13 @@ img {
 Примеры использования функции URL с SVG ресурсом показаны ниже.
 
 ```css
-.target { filter: url(#c1); }
+.target {
+  filter: url(#c1);
+}
 
-.mydiv { filter: url(commonfilters.xml#large-blur) }
+.mydiv {
+  filter: url(commonfilters.xml#large-blur);
+}
 ```
 
 ## Функции
@@ -93,15 +91,15 @@ img {
 The url() function takes the location of an XML file that specifies an SVG filter, and may include an anchor to a specific filter element.
 
 ```css
-filter: url(resources.svg#c1)
+filter: url(resources.svg#c1);
 ```
 
 ### `blur() [размытие]`
 
-Applies a Gaussian blur to the input image. The value of ‘radius’ defines the value of the standard deviation to the Gaussian function, or how many pixels on the screen blend into each other, so a larger value will create more blur. If no parameter is provided, then a value `0` is used. The parameter is specified as a CSS length, but does not accept percentage values.
+Applies a Gaussian blur to the input image. The value of 'radius' defines the value of the standard deviation to the Gaussian function, or how many pixels on the screen blend into each other, so a larger value will create more blur. If no parameter is provided, then a value `0` is used. The parameter is specified as a CSS length, but does not accept percentage values.
 
 ```css
-filter: blur(5px)
+filter: blur(5px);
 ```
 
 ```html hidden
@@ -132,22 +130,30 @@ filter: blur(5px)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
-  -moz-filter:blur(5px);
-  -webkit-filter:blur(5px);
-  -o-filter:blur(5px);
-  -ms-filter:blur(5px);
-  filter:blur(5px); }
+  width: 100%;
+  height: auto;
+  -moz-filter: blur(5px);
+  -webkit-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
@@ -168,18 +174,20 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
 ```html
-<svg style="position: absolute; top: -99999px" xmlns="http://www.w3.org/2000/svg">
+<svg
+  style="position: absolute; top: -99999px"
+  xmlns="http://www.w3.org/2000/svg">
   <filter id="svgBlur" x="-5%" y="-5%" width="110%" height="110%">
-    <feGaussianBlur in="SourceGraphic" stdDeviation="5"/>
+    <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
   </filter>
 </svg>
 ```
@@ -188,19 +196,21 @@ table.standard-table td {
 
 ### `brightness() [яркость]`
 
-Applies a linear multiplier to input image, making it appear more or less bright. A value of `0%` will create an image that is completely black. A value of `100%` leaves the input unchanged. Other values are linear multipliers on the effect. Values of an amount over `100%` are allowed, providing brighter results. If the ‘amount’ parameter is missing, a value of `1` is used.
+Applies a linear multiplier to input image, making it appear more or less bright. A value of `0%` will create an image that is completely black. A value of `100%` leaves the input unchanged. Other values are linear multipliers on the effect. Values of an amount over `100%` are allowed, providing brighter results. If the 'amount' parameter is missing, a value of `1` is used.
 
 ```css
-filter: brightness(0.5)
+filter: brightness(0.5);
 ```
 
 ```html
-<svg style="position: absolute; top: -99999px" xmlns="http://www.w3.org/2000/svg">
- <filter id="brightness">
+<svg
+  style="position: absolute; top: -99999px"
+  xmlns="http://www.w3.org/2000/svg">
+  <filter id="brightness">
     <feComponentTransfer>
-        <feFuncR type="linear" slope="[amount]"/>
-        <feFuncG type="linear" slope="[amount]"/>
-        <feFuncB type="linear" slope="[amount]"/>
+      <feFuncR type="linear" slope="[amount]" />
+      <feFuncG type="linear" slope="[amount]" />
+      <feFuncB type="linear" slope="[amount]" />
     </feComponentTransfer>
   </filter>
 </svg>
@@ -238,28 +248,36 @@ filter: brightness(0.5)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
-  -moz-filter:brightness(2);
-  -webkit-filter:brightness(2);
-  -o-filter:brightness(2);
-  -ms-filter:brightness(2);
-  filter:brightness(2); }
+  width: 100%;
+  height: auto;
+  -moz-filter: brightness(2);
+  -webkit-filter: brightness(2);
+  -o-filter: brightness(2);
+  -ms-filter: brightness(2);
+  filter: brightness(2);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
   border-spacing: 0px;
   margin: 0px 0px 1.286em;
-  height:100%;
+  height: 100%;
   width: 85%;
 }
 table.standard-table th {
@@ -274,11 +292,11 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
@@ -286,19 +304,30 @@ table.standard-table td {
 
 ### `contrast() [контраст]`
 
-Adjusts the contrast of the input. A value of `0%` will create an image that is completely black. A value of `100%` leaves the input unchanged. Values of amount over `100%` are allowed, providing results with less contrast. If the ‘amount’ parameter is missing, a value of `1` is used.
+Adjusts the contrast of the input. A value of `0%` will create an image that is completely black. A value of `100%` leaves the input unchanged. Values of amount over `100%` are allowed, providing results with less contrast. If the 'amount' parameter is missing, a value of `1` is used.
 
 ```css
-filter: contrast(200%)
+filter: contrast(200%);
 ```
 
 ```html
-<svg style="position: absolute; top: -99999px" xmlns="http://www.w3.org/2000/svg">
+<svg
+  style="position: absolute; top: -99999px"
+  xmlns="http://www.w3.org/2000/svg">
   <filter id="contrast">
     <feComponentTransfer>
-      <feFuncR type="linear" slope="[amount]" intercept="-(0.5 * [amount]) + 0.5"/>
-      <feFuncG type="linear" slope="[amount]" intercept="-(0.5 * [amount]) + 0.5"/>
-      <feFuncB type="linear" slope="[amount]" intercept="-(0.5 * [amount]) + 0.5"/>
+      <feFuncR
+        type="linear"
+        slope="[amount]"
+        intercept="-(0.5 * [amount]) + 0.5" />
+      <feFuncG
+        type="linear"
+        slope="[amount]"
+        intercept="-(0.5 * [amount]) + 0.5" />
+      <feFuncB
+        type="linear"
+        slope="[amount]"
+        intercept="-(0.5 * [amount]) + 0.5" />
     </feComponentTransfer>
   </filter>
 </svg>
@@ -336,22 +365,30 @@ filter: contrast(200%)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
-  -moz-filter:contrast(200%);
-  -webkit-filter:contrast(200%);
-  -o-filter:contrast(200%);
-  -ms-filter:contrast(200%);
-  filter:contrast(200%); }
+  width: 100%;
+  height: auto;
+  -moz-filter: contrast(200%);
+  -webkit-filter: contrast(200%);
+  -o-filter: contrast(200%);
+  -ms-filter: contrast(200%);
+  filter: contrast(200%);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
@@ -372,11 +409,11 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
@@ -384,7 +421,7 @@ table.standard-table td {
 
 ### `drop-shadow() [тень]`
 
-Applies a drop shadow effect to the input image. A drop shadow is effectively a blurred, offset version of the input image's alpha mask drawn in a particular color, composited below the image. The function accepts a parameter of type \<shadow> (defined in CSS3 Backgrounds), with the exception that the ‘inset’ keyword is not allowed. This function is similar to the more established {{cssxref("box-shadow")}} property; the difference is that with filters, some browsers provide hardware acceleration for better performance. The parameters of the `<shadow>` parameter are as follows.
+Applies a drop shadow effect to the input image. A drop shadow is effectively a blurred, offset version of the input image's alpha mask drawn in a particular color, composited below the image. The function accepts a parameter of type \<shadow> (defined in CSS3 Backgrounds), with the exception that the 'inset' keyword is not allowed. This function is similar to the more established {{cssxref("box-shadow")}} property; the difference is that with filters, some browsers provide hardware acceleration for better performance. The parameters of the `<shadow>` parameter are as follows.
 
 - `<offset-x>` `<offset-y>` (required)
   - : These are two {{cssxref("&lt;length&gt;")}} values to set the shadow offset. `<offset-x>` specifies the horizontal distance. Negative values place the shadow to the left of the element. `<offset-y>` specifies the vertical distance. Negative values place the shadow above the element. See {{cssxref("&lt;length&gt;")}} for possible units.
@@ -398,19 +435,21 @@ Applies a drop shadow effect to the input image. A drop shadow is effectively a 
   - : See {{cssxref("&lt;color&gt;")}} values for possible keywords and notations. If not specified, the color depends on the browser. In Gecko (Firefox), Presto (Opera) and Trident (Internet Explorer), the value of the {{cssxref("color")}} property is used. On the other hand, WebKit's shadow is transparent and therefore useless if `<color>` is omitted.
 
 ```css
-filter: drop-shadow(16px 16px 10px black)
+filter: drop-shadow(16px 16px 10px black);
 ```
 
 ```html
-<svg style="position: absolute; top: -999999px" xmlns="http://www.w3.org/2000/svg">
- <filter id="drop-shadow">
-    <feGaussianBlur in="SourceAlpha" stdDeviation="[radius]"/>
-    <feOffset dx="[offset-x]" dy="[offset-y]" result="offsetblur"/>
-    <feFlood flood-color="[color]"/>
-    <feComposite in2="offsetblur" operator="in"/>
+<svg
+  style="position: absolute; top: -999999px"
+  xmlns="http://www.w3.org/2000/svg">
+  <filter id="drop-shadow">
+    <feGaussianBlur in="SourceAlpha" stdDeviation="[radius]" />
+    <feOffset dx="[offset-x]" dy="[offset-y]" result="offsetblur" />
+    <feFlood flood-color="[color]" />
+    <feComposite in2="offsetblur" operator="in" />
     <feMerge>
-      <feMergeNode/>
-      <feMergeNode in="SourceGraphic"/>
+      <feMergeNode />
+      <feMergeNode in="SourceGraphic" />
     </feMerge>
   </filter>
 </svg>
@@ -469,17 +508,24 @@ filter: drop-shadow(16px 16px 10px black)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
+  width: 100%;
+  height: auto;
   -moz-filter: drop-shadow(16px 16px 10px black);
   -webkit-filter: drop-shadow(16px 16px 10px black);
   -o-filter: drop-shadow(16px 16px 10px black);
@@ -487,13 +533,13 @@ body {
   filter: drop-shadow(16px 16px 10px black);
 }
 #img12 {
-  width:100%;
-  height:auto;
-  -moz-filter: drop-shadow(8px 9px 5px rgba(0,0,0,.8));
-  -webkit-filter: drop-shadow(8px 9px 5px rgba(0,0,0,.8));
-  -o-filter: drop-shadow(8px 9px 5px rgba(0,0,0,.8));
-  -ms-filter: drop-shadow(8px 9px 5px rgba(0,0,0,.8));
-  filter: drop-shadow(8px 9px 5px rgba(0,0,0,.8));
+  width: 100%;
+  height: auto;
+  -moz-filter: drop-shadow(8px 9px 5px rgba(0, 0, 0, 0.8));
+  -webkit-filter: drop-shadow(8px 9px 5px rgba(0, 0, 0, 0.8));
+  -o-filter: drop-shadow(8px 9px 5px rgba(0, 0, 0, 0.8));
+  -ms-filter: drop-shadow(8px 9px 5px rgba(0, 0, 0, 0.8));
+  filter: drop-shadow(8px 9px 5px rgba(0, 0, 0, 0.8));
 }
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
@@ -518,11 +564,12 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
-#img3, #img13 {
-  height:100%;
+#img3,
+#img13 {
+  height: 100%;
 }
 ```
 
@@ -530,10 +577,10 @@ table.standard-table td {
 
 ### `grayscale() [оттенки серого]`
 
-Converts the input image to grayscale. The value of ‘amount’ defines the proportion of the conversion. A value of `100%` is completely grayscale. A value of `0%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. If the ‘amount’ parameter is missing, a value of `0` is used.
+Converts the input image to grayscale. The value of 'amount' defines the proportion of the conversion. A value of `100%` is completely grayscale. A value of `0%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. If the 'amount' parameter is missing, a value of `0` is used.
 
 ```css
-filter: grayscale(100%)
+filter: grayscale(100%);
 ```
 
 ```html hidden
@@ -568,22 +615,30 @@ filter: grayscale(100%)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
-  -moz-filter:grayscale(100%);
-  -webkit-filter:grayscale(100%);
-  -o-filter:grayscale(100%);
-  -ms-filter:grayscale(100%);
-  filter:grayscale(100%); }
+  width: 100%;
+  height: auto;
+  -moz-filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
@@ -604,11 +659,11 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
@@ -619,7 +674,7 @@ table.standard-table td {
 Applies a hue rotation on the input image. The value of `angle` defines the number of degrees around the color circle the input samples will be adjusted. A value of `0deg` leaves the input unchanged. If the `angle` parameter is missing, a value of `0deg` is used. Though there is no maximum value, the effect of values above `360deg` wraps around.
 
 ```css
-filter: hue-rotate(90deg)
+filter: hue-rotate(90deg);
 ```
 
 ```html hidden
@@ -651,22 +706,30 @@ filter: hue-rotate(90deg)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
-  -moz-filter:hue-rotate(90deg);
-  -webkit-filter:hue-rotate(90deg);
-  -o-filter:hue-rotate(90deg);
-  -ms-filter:hue-rotate(90deg);
-  filter:hue-rotate(90deg); }
+  width: 100%;
+  height: auto;
+  -moz-filter: hue-rotate(90deg);
+  -webkit-filter: hue-rotate(90deg);
+  -o-filter: hue-rotate(90deg);
+  -ms-filter: hue-rotate(90deg);
+  filter: hue-rotate(90deg);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
@@ -687,11 +750,11 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
@@ -710,7 +773,7 @@ table.standard-table td {
 Inverts the samples in the input image. The value of `amount` defines the proportion of the conversion. A value of `100%` is completely inverted. A value of `0%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. If the `amount` parameter is missing, a value of `0` is used.
 
 ```css
-filter: invert(100%)
+filter: invert(100%);
 ```
 
 ```html hidden
@@ -745,22 +808,30 @@ filter: invert(100%)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
+  width: 100%;
+  height: auto;
   -moz-filter: invert(100%);
   -webkit-filter: invert(100%);
   -o-filter: invert(100%);
   -ms-filter: invert(100%);
-  filter: invert(100%); }
+  filter: invert(100%);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
@@ -781,11 +852,11 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
@@ -796,7 +867,7 @@ table.standard-table td {
 Applies transparency to the samples in the input image. The value of `amount` defines the proportion of the conversion. A value of `0%` is completely transparent. A value of `100%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. This is equivalent to multiplying the input image samples by amount. If the `amount` parameter is missing, a value of `1` is used. This function is similar to the more established {{Cssxref("opacity")}} property; the difference is that with filters, some browsers provide hardware acceleration for better performance.
 
 ```css
-filter: opacity(50%)
+filter: opacity(50%);
 ```
 
 ```html hidden
@@ -829,22 +900,30 @@ filter: opacity(50%)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
+  width: 100%;
+  height: auto;
   -moz-filter: opacity(50%);
   -webkit-filter: opacity(50%);
   -o-filter: opacity(50%);
   -ms-filter: opacity(50%);
-  filter: opacity(50%); }
+  filter: opacity(50%);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
@@ -865,11 +944,11 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
@@ -880,7 +959,7 @@ table.standard-table td {
 Saturates the input image. The value of `amount` defines the proportion of the conversion. A value of `0%` is completely un-saturated. A value of `100%` leaves the input unchanged. Other values are linear multipliers on the effect. Values of amount over `100%` are allowed, providing super-saturated results. If the `amount` parameter is missing, a value of `1` is used.
 
 ```css
-filter: saturate(200%)
+filter: saturate(200%);
 ```
 
 ```html hidden
@@ -912,22 +991,30 @@ filter: saturate(200%)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
+  width: 100%;
+  height: auto;
   -moz-filter: saturate(200%);
   -webkit-filter: saturate(200%);
   -o-filter: saturate(200%);
   -ms-filter: saturate(200%);
-  filter: saturate(200%); }
+  filter: saturate(200%);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
@@ -948,11 +1035,11 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
@@ -963,7 +1050,7 @@ table.standard-table td {
 Converts the input image to sepia. The value of `amount` defines the proportion of the conversion. A value of 100% is completely sepia. A value of `0%` leaves the input unchanged. Values between `0%` and `100%` are linear multipliers on the effect. If the `amount` parameter is missing, a value of `0` is used.
 
 ```css
-filter: sepia(100%)
+filter: sepia(100%);
 ```
 
 ```html hidden
@@ -998,22 +1085,30 @@ filter: sepia(100%)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
+  width: 100%;
+  height: auto;
   -moz-filter: sepia(100%);
   -webkit-filter: sepia(100%);
   -o-filter: sepia(100%);
   -ms-filter: sepia(100%);
-  filter: sepia(100%); }
+  filter: sepia(100%);
+}
 table.standard-table {
   border: 1px solid rgb(187, 187, 187);
   border-collapse: collapse;
@@ -1034,11 +1129,11 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 
@@ -1049,7 +1144,7 @@ table.standard-table td {
 You may combine any number of functions to manipulate the rendering. The following example enhances the contrast and brightness of the image.
 
 ```css
-filter: contrast(175%) brightness(103%)
+filter: contrast(175%) brightness(103%);
 ```
 
 ```html hidden
@@ -1063,9 +1158,30 @@ filter: contrast(175%) brightness(103%)
   </thead>
   <tbody>
     <tr>
-      <td><img alt="Test_Form_8.jpeg" id="img1" class="internal default" src="/files/3729/Test_Form_8.jpeg" style="width: 100%;" /></td>
-      <td><img alt="Test_Form_8.jpg" id="img2" class="internal default" src="/files/3729/Test_Form_8.jpeg" style="width: 100%;" /></td>
-      <td><img alt="Test_Form_8_s.jpg" id="img4" class="internal default" src="/files/3730/Test_Form_8_s.jpeg" style="width: 100%;" /></td>
+      <td>
+        <img
+          alt="Test_Form_8.jpeg"
+          id="img1"
+          class="internal default"
+          src="/files/3729/Test_Form_8.jpeg"
+          style="width: 100%;" />
+      </td>
+      <td>
+        <img
+          alt="Test_Form_8.jpg"
+          id="img2"
+          class="internal default"
+          src="/files/3729/Test_Form_8.jpeg"
+          style="width: 100%;" />
+      </td>
+      <td>
+        <img
+          alt="Test_Form_8_s.jpg"
+          id="img4"
+          class="internal default"
+          src="/files/3730/Test_Form_8_s.jpeg"
+          style="width: 100%;" />
+      </td>
     </tr>
   </tbody>
 </table>
@@ -1073,17 +1189,24 @@ filter: contrast(175%) brightness(103%)
 
 ```css hidden
 html {
-  height:100%;
+  height: 100%;
 }
 body {
-  font: 14px/1.286 "Lucida Grande","Lucida Sans Unicode","DejaVu Sans",Lucida,Arial,Helvetica,sans-serif;
+  font:
+    14px/1.286 "Lucida Grande",
+    "Lucida Sans Unicode",
+    "DejaVu Sans",
+    Lucida,
+    Arial,
+    Helvetica,
+    sans-serif;
   color: rgb(51, 51, 51);
-  height:100%;
-  overflow:hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #img2 {
-  width:100%;
-  height:auto;
+  width: 100%;
+  height: auto;
   -moz-filter: contrast(175%) brightness(103%);
   -webkit-filter: contrast(175%) brightness(103%);
   -o-filter: contrast(175%) brightness(103%);
@@ -1110,11 +1233,11 @@ table.standard-table td {
   border: 1px solid rgb(204, 204, 204);
   text-align: left;
   vertical-align: top;
-  width:25%;
-  height:auto;
+  width: 25%;
+  height: auto;
 }
 #img3 {
-  height:100%;
+  height: 100%;
 }
 ```
 

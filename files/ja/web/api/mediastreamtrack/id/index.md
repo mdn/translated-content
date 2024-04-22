@@ -10,7 +10,7 @@ slug: Web/API/MediaStreamTrack/id
 ## 構文
 
 ```js
-const id = track.id
+const id = track.id;
 ```
 
 ## 仕様書

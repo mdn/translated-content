@@ -1,8 +1,6 @@
 ---
-title: ':user-valid (:-moz-ui-valid)'
+title: ":user-valid (:-moz-ui-valid)"
 slug: Web/CSS/:user-valid
-translation_of: Web/CSS/:user-valid
-browser-compat: css.selectors.user-valid
 l10n:
   sourceCommit: 257486f64b2472dda4996a4ea7b6b5305e46f863
 ---
@@ -42,7 +40,7 @@ input:user-valid {
 }
 
 input:user-valid + span::before {
-  content: '✓';
+  content: "✓";
   color: green;
 }
 ```
@@ -52,7 +50,12 @@ input:user-valid + span::before {
 ```html
 <form>
   <label for="email">Email *: </label>
-  <input id="email" name="email" type="email" value="test@example.com" required>
+  <input
+    id="email"
+    name="email"
+    type="email"
+    value="test@example.com"
+    required />
   <span></span>
 </form>
 ```

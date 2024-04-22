@@ -3,6 +3,8 @@ title: 密码
 slug: Glossary/Cipher
 ---
 
+{{GlossarySidebar}}
+
 在密码学（{{glossary("cryptography")}}）领域，**密码**是将{{glossary("Plaintext","明文")}}{{glossary("encryption", "编码")}}为不可读，且能够{{glossary("decryption", "解码")}}回原来的明文的算法。
 
 在信息时代很久以前，密码就已经很常见了（例如[替换密码](https://zh.wikipedia.org/wiki/替换式密码)和[移位密码](https://zh.wikipedia.org/zh-cn/古典密码#移位式密码)），但是它们之中除了[一次性密码本](https://zh.wikipedia.org/zh-cn/一次性密码本)以外，其他的均不满足密码学上的安全性。

@@ -1,15 +1,8 @@
 ---
 title: BackgroundFetchRecord
 slug: Web/API/BackgroundFetchRecord
-page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - BackgroundFetchRecord
-  - Experimental
-browser-compat: api.BackgroundFetchRecord
 ---
+
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
 Интерфейс **`BackgroundFetchRecord`** {{domxref('Background Fetch API','','',' ')}} представляет отдельный запрос и ответ.
@@ -30,9 +23,9 @@ browser-compat: api.BackgroundFetchRecord
 В этом примере отдельный `BackgroundFetchRecord` возвращается с использованием {{domxref("BackgroundFetchManager.fetch()","BackgroundFetchManager.fetch()")}}. {{domxref("BackgroundFetchRecord.request")}} и {{domxref("BackgroundFetchRecord.responseReady")}} выводятся в консоль.
 
 ```js
-bgFetch.match('/ep-5.mp3').then(async (record) => {
+bgFetch.match("/ep-5.mp3").then(async (record) => {
   if (!record) {
-    console.log('No record found');
+    console.log("No record found");
     return;
   }
 

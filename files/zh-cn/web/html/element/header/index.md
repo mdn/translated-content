@@ -20,8 +20,8 @@ slug: Web/HTML/Element/header
    <td><a href="/zh-CN/docs/HTML/Content_categories#Flow_content">Flow content</a>，但是不允许 <code>&lt;header&gt;</code> 或{{HTMLElement("footer")}} 成为子元素</td>
   </tr>
   <tr>
-   <th scope="row">标记省略</th>
-   <td>{{no_tag_omission}}</td>
+   <th scope="row">标签省略</th>
+   <td>不允许，开始标签和结束标签都不能省略。</td>
   </tr>
   <tr>
    <th scope="row">允许的父元素</th>
@@ -53,7 +53,7 @@ slug: Web/HTML/Element/header
 ```html
 <header>
   <h1>主页标题</h1>
-  <img src="mdn-logo-sm.png" alt="MDN logo">
+  <img src="mdn-logo-sm.png" alt="MDN logo" />
 </header>
 ```
 
@@ -65,8 +65,12 @@ slug: Web/HTML/Element/header
     <h2>The Planet Earth</h2>
     <p>Posted on Wednesday, 4 October 2017 by Jane Smith</p>
   </header>
-  <p>We live on a planet that's blue and green, with so many things still unseen.</p>
-  <p><a href="https://janesmith.com/the-planet-earth/">Continue reading....</a></p>
+  <p>
+    We live on a planet that's blue and green, with so many things still unseen.
+  </p>
+  <p>
+    <a href="https://janesmith.com/the-planet-earth/">Continue reading....</a>
+  </p>
 </article>
 ```
 

@@ -1,10 +1,6 @@
 ---
 title: Guide JavaScript
 slug: Web/JavaScript/Guide
-tags:
-  - Guide
-  - JavaScript
-translation_of: Web/JavaScript/Guide
 ---
 
 {{jsSidebar("JavaScript Guide")}}
@@ -35,18 +31,18 @@ Ce guide est divisé en plusieurs chapitres :
 
 ## [Contrôle du flux et gestion des erreurs](/fr/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
 
-- [`if...else`](/fr/docs/Web/JavaScript/Guide/Contr%C3%B4le_du_flux_Gestion_des_erreurs#Instruction_if...else)
-- [`switch`](/fr/docs/Web/JavaScript/Guide/Contr%C3%B4le_du_flux_Gestion_des_erreurs#L%27instruction_switch)
-- [`try/catch/throw`](/fr/docs/Web/JavaScript/Guide/Contr%C3%B4le_du_flux_Gestion_des_erreurs#L%27instruction_try...catch)
-- [Objets `Error`](/fr/docs/Web/JavaScript/Guide/Contr%C3%B4le_du_flux_Gestion_des_erreurs#Utiliser_les_objets_Error)
+- [`if...else`](/fr/docs/Web/JavaScript/Guide/Contrôle_du_flux_Gestion_des_erreurs#Instruction_if...else)
+- [`switch`](/fr/docs/Web/JavaScript/Guide/Contrôle_du_flux_Gestion_des_erreurs#L%27instruction_switch)
+- [`try/catch/throw`](/fr/docs/Web/JavaScript/Guide/Contrôle_du_flux_Gestion_des_erreurs#L%27instruction_try...catch)
+- [Objets `Error`](/fr/docs/Web/JavaScript/Guide/Contrôle_du_flux_Gestion_des_erreurs#Utiliser_les_objets_Error)
 
 ## [Itération et boucles](/fr/docs/Web/JavaScript/Guide/Loops_and_iteration)
 
-- [`for`](/fr/docs/Web/JavaScript/Guide/Boucles_et_it%C3%A9ration#L%27instruction_for)
-- [`while`](/fr/docs/Web/JavaScript/Guide/Boucles_et_it%C3%A9ration#L%27instruction_while)
-- [`do...while`](/fr/docs/Web/JavaScript/Guide/Boucles_et_it%C3%A9ration#L%27instruction_do...while)
-- [`break`](/fr/docs/Web/JavaScript/Guide/Boucles_et_it%C3%A9ration#L%27instruction_break)/[continue](/fr/docs/Web/JavaScript/Guide/Boucles_et_it%C3%A9ration#L%27instruction_continue)
-- [`for..in`](/fr/docs/Web/JavaScript/Guide/Boucles_et_it%C3%A9ration#L%27instruction_for...in)
+- [`for`](/fr/docs/Web/JavaScript/Guide/Boucles_et_itération#L%27instruction_for)
+- [`while`](/fr/docs/Web/JavaScript/Guide/Boucles_et_itération#L%27instruction_while)
+- [`do...while`](/fr/docs/Web/JavaScript/Guide/Boucles_et_itération#L%27instruction_do...while)
+- [`break`](/fr/docs/Web/JavaScript/Guide/Boucles_et_itération#L%27instruction_break)/[continue](/fr/docs/Web/JavaScript/Guide/Boucles_et_itération#L%27instruction_continue)
+- [`for..in`](/fr/docs/Web/JavaScript/Guide/Boucles_et_itération#L%27instruction_for...in)
 - [`for..of`](/fr/docs/Web/JavaScript/Guide/Loops_and_iteration#l'instruction_for...of)
 
 ## [Fonctions](/fr/docs/Web/JavaScript/Guide/Functions)
@@ -60,10 +56,10 @@ Ce guide est divisé en plusieurs chapitres :
 
 ## [Expressions et opérateurs](/fr/docs/Web/JavaScript/Guide/Expressions_and_Operators)
 
-- [Affectation](/fr/docs/Web/JavaScript/Guide/Expressions_et_Op%C3%A9rateurs#Op.C3.A9rateurs_d%27affectation) et [comparaisons](/fr/docs/Web/JavaScript/Guide/Expressions_et_Op%C3%A9rateurs#Op.C3.A9rateurs_de_comparaison)
+- [Affectation](/fr/docs/Web/JavaScript/Guide/Expressions_et_Opérateurs#Op.C3.A9rateurs_d%27affectation) et [comparaisons](/fr/docs/Web/JavaScript/Guide/Expressions_et_Opérateurs#Op.C3.A9rateurs_de_comparaison)
 - [Opérateurs arithmétiques](/fr/docs/Web/JavaScript/Guide/Expressions_and_Operators#op.c3.a9rateurs_arithm.c3.a9tiques)
-- [Opérateurs binaires](/fr/docs/Web/JavaScript/Guide/Expressions_et_Op%C3%A9rateurs#Op.C3.A9rateurs_binaires) et [logiques](/fr/docs/Web/JavaScript/Guide/Expressions_et_Op%C3%A9rateurs#Op.C3.A9rateurs_logiques)
-- [Opérateur conditionnel](/fr/docs/Web/JavaScript/Guide/Expressions_et_Op%C3%A9rateurs#Op.C3.A9rateur_conditionnel_ternaire)
+- [Opérateurs binaires](/fr/docs/Web/JavaScript/Guide/Expressions_et_Opérateurs#Op.C3.A9rateurs_binaires) et [logiques](/fr/docs/Web/JavaScript/Guide/Expressions_et_Opérateurs#Op.C3.A9rateurs_logiques)
+- [Opérateur conditionnel](/fr/docs/Web/JavaScript/Guide/Expressions_et_Opérateurs#Op.C3.A9rateur_conditionnel_ternaire)
 
 ## [Nombres et dates](/fr/docs/Web/JavaScript/Guide/Numbers_and_dates)
 
@@ -76,7 +72,7 @@ Ce guide est divisé en plusieurs chapitres :
 
 - [Littéraux de chaînes de caractères](/fr/docs/Web/JavaScript/Guide/Text_formatting#les_litt.c3.a9raux_de_cha.c3.aenes_de_caract.c3.a8res)
 - [Objet `String`](/fr/docs/Web/JavaScript/Guide/Text_formatting#les_objets_string)
-- [Littéraux de gabarits](/fr/docs/Web/JavaScript/Guide/Text_formatting#les_litt%c3%a9raux_de_gabarits)
+- [Littéraux de gabarits](/fr/docs/Web/JavaScript/Guide/Text_formatting#les_littéraux_de_gabarits)
 - [Internationalisation](/fr/docs/Web/JavaScript/Guide/Text_formatting#internationalisation)
 - [Expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Text_formatting#les_expressions_rationnelles)
 
@@ -107,7 +103,7 @@ Ce guide est divisé en plusieurs chapitres :
 ## [Promesses](/fr/docs/Web/JavaScript/Guide/Using_promises)
 
 - [Garanties](/fr/docs/Web/JavaScript/Guide/Using_promises#garanties)
-- [Chaînage](/fr/docs/Web/JavaScript/Guide/Using_promises#cha%c3%aenage_des_promesses)
+- [Chaînage](/fr/docs/Web/JavaScript/Guide/Using_promises#chaînage_des_promesses)
 - [Propagation des erreurs](/fr/docs/Web/JavaScript/Guide/Using_promises#propagation_des_erreurs)
 - [Composition](/fr/docs/Web/JavaScript/Guide/Using_promises#composition)
 - [Gestion du temps](/fr/docs/Web/JavaScript/Guide/Using_promises#gestion_du_temps)

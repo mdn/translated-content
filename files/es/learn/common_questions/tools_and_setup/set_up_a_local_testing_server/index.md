@@ -1,7 +1,6 @@
 ---
 title: ¿Cómo se configura un servidor de prueba local?
 slug: Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server
-original_slug: Learn/Common_questions/set_up_a_local_testing_server
 ---
 
 En este artículo explica cómo configurar un servidor de prueba local simple en su equipo y los conceptos básicos de cómo utilizarlo.
@@ -12,10 +11,10 @@ En este artículo explica cómo configurar un servidor de prueba local simple en
       <th scope="row">Prerrequisitos:</th>
       <td>
         Primero debes saber
-        <a href="/en-US/docs/Learn/How_the_Internet_works"
+        <a href="/es/docs/Learn/How_the_Internet_works"
           >cómo funciona internet</a
         >, y
-        <a href="/en-US/docs/Learn/What_is_a_Web_server"
+        <a href="/es/docs/Learn/What_is_a_Web_server"
           >qué es un servidor web</a
         >.
       </td>
@@ -48,39 +47,39 @@ Para hacer esto:
 
 1. Instalar Python. Si usas Linux o Mac OS X, ya debe estar disponible en tu sistema. Si eres usuario de Windows, puedes conseguir un instalador desde la página principal de Python y seguir las instrucciones para instalarlo:
 
-    - Vé a [python.org](https://www.python.org/)
-    - Debajo de la sección de Descarga, haz clic en el link para Python "3.xxx".
-    - En la parte superior de la página, selecciona el _instalador ejecutable windows x86_ y descárgalo.
-    - Cuando se haya descargado, córrelo.
-    - En la primera página de instalación, asegúrate de marcar el checkbox "Añadir Python 3.xxx a la ruta"
-    - Clic en _Instalar_, luego clic en _Cerrar_ cuando la instalación ya haya finalizado.
+   - Vé a [python.org](https://www.python.org/)
+   - Debajo de la sección de Descarga, haz clic en el link para Python "3.xxx".
+   - En la parte superior de la página, selecciona el _instalador ejecutable windows x86_ y descárgalo.
+   - Cuando se haya descargado, córrelo.
+   - En la primera página de instalación, asegúrate de marcar el checkbox "Añadir Python 3.xxx a la ruta"
+   - Clic en _Instalar_, luego clic en _Cerrar_ cuando la instalación ya haya finalizado.
 
 2. Abre la terminal (windows)/terminal (OS X/Linux). Para chequear que Python está instalado, ingrese el siguiente comando.
 
-    ```bash
-    python -V
-    ```
+   ```bash
+   python -V
+   ```
 
-    > **Nota:** La v del ejemplo en mayuscula (V)
+   > **Nota:** La v del ejemplo en mayuscula (V)
 
 3. Esto debe retornar un número de versión. Si esto esta bien, navega al directorio que contiene tu ejemplo, usando el comando `cd`.
 
-    ```bash
-    # Incluye el nombre del directorio de entrar en él,
-    por ejemplo cd Escritorio
+   ```bash
+   # Incluye el nombre del directorio de entrar en él,
+   por ejemplo cd Escritorio
 
-    # Use dos puntos para regresar un nivel de directorio
-    si es necesario,por ejemplo cd ../
-    ```
+   # Use dos puntos para regresar un nivel de directorio
+   si es necesario,por ejemplo cd ../
+   ```
 
 4. Ingresa el comando para iniciar el servidor en ese directorio:
 
-    ```bash
-    # En Mac y Linux
-    python -m SimpleHTTPServer
-    #Windows
-    python -m http.server
-    ```
+   ```bash
+   # En Mac y Linux
+   python -m SimpleHTTPServer
+   #Windows
+   python -m http.server
+   ```
 
 5. Por defecto, se ejecutará el contenido del directorio en un servidor web local, en el puerto 8000. puedes ir a este servidor yendo a la URL `localhost:8000` en tu navegador web. Aquí verá el contenido del directorio listado - haga clic en el archivo HTML que desea ejecutar.
 

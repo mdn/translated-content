@@ -1,7 +1,6 @@
 ---
 title: ¿Qué es el CSS?
 slug: Learn/CSS/First_steps/What_is_CSS
-original_slug: Learn/CSS/First_steps/Qué_es_CSS
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}
@@ -61,8 +60,8 @@ El código siguiente muestra una regla CSS muy simple que proporcionaría el est
 
 ```css
 h1 {
-    color: red;
-    font-size: 5em;
+  color: red;
+  font-size: 5em;
 }
 ```
 
@@ -76,12 +75,12 @@ Una hoja de estilo CSS contendrá muchas de estas reglas, escritas una tras otra
 
 ```css
 h1 {
-    color: red;
-    font-size: 5em;
+  color: red;
+  font-size: 5em;
 }
 
 p {
-    color: black;
+  color: black;
 }
 ```
 

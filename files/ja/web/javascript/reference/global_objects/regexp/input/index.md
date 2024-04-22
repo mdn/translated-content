@@ -1,30 +1,34 @@
 ---
 title: RegExp.input ($_)
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/input
+l10n:
+  sourceCommit: 16bacf2194dc9e9ff6ee5bcc65316547cf88a8d9
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{JSRef}} {{deprecated_header}}
 
-標準外の **`input`** プロパティは正規表現の一致している文字列を含む静的プロパティです。 `RegExp.$_` はこのプロパティのエイリアスです。
+> **メモ:** グローバルに最後の一致状態を公開する `RegExp` の静的プロパティは、すべて非推奨です。詳しくは[非推奨の RegExp 機能](/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp)を参照してください。
+
+**`RegExp.input`** は静的アクセサープロパティで、正規表現の一致した文字列を返します。`RegExp.$_` はこのプロパティのエイリアスです。
 
 ## 解説
 
-`input` プロパティは静的プロパティです。個々の正規表現オブジェクトのプロパティではありません。常に、 `RegExp.input` または `RegExp.$_.` として使用してください。
+`input` は {{jsxref("RegExp")}} の静的静的プロパティですので、作成した `RegExp` オブジェクト野プロパティとしてではなく、常に `RegExp.input` または `RegExp.$_` として使用してください。
 
-**`input`** プロパティの値は、正規表現の検索文字列が変更され文字列が一致しているときはいつでも変更されます。
+`input` の値は `RegExp` インスタンス（ただし `RegExp` のサブクラスではない）が照合に成功するたびに更新されます。今まで一度も一致するものがなかった場合、 `input` は空文字列です。`input` に値を設定することはできますが、正規表現の他の動作には影響せず、値は次に行われた照合が成功した場合に再び上書きされます。
 
-## Examples
+## 例
 
 ### input と $\_ の使用
 
 ```js
-var re = /hi/g;
-re.test('hi there!');
-RegExp.input;         // "hi there!"
-re.test('foo');       // new test, non-matching
-RegExp.$_;            // "hi there!"
-re.test('hi world!'); // new test, matching
-RegExp.$_;            // "hi world!"
+const re = /hi/g;
+re.test("hi there!");
+RegExp.input; // "hi there!"
+re.test("foo"); // 新しい検査、一致しない
+RegExp.$_; // "hi there!"
+re.test("hi world!"); // 新しい検査、一致する
+RegExp.$_; // "hi world!"
 ```
 
 ## 仕様書
@@ -41,4 +45,4 @@ RegExp.$_;            // "hi world!"
 - {{jsxref("RegExp.lastParen", "RegExp.lastParen ($+)")}}
 - {{jsxref("RegExp.leftContext", "RegExp.leftContext ($`)")}}
 - {{jsxref("RegExp.rightContext", "RegExp.rightContext ($')")}}
-- {{jsxref("RegExp.n", "RegExp.$1-$9")}}
+- {{jsxref("RegExp/n", "RegExp.$1, …, RegExp.$9")}}

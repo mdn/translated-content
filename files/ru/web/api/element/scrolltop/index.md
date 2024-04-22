@@ -1,7 +1,6 @@
 ---
 title: Элемент.scrollTop
 slug: Web/API/Element/scrollTop
-translation_of: Web/API/Element/scrollTop
 ---
 
 {{ APIRef("DOM") }}
@@ -39,8 +38,6 @@ padding-top
 padding-bottom
 
 **Left** **Top** **Right** **Bottom** _margin-top_ _margin-bottom_ _border-top_ _border-bottom_
-
-![Image:scrollTop.png](/@api/deki/files/842/=ScrollTop.png)
 
 ## Спецификации
 

@@ -1,5 +1,5 @@
 ---
-title: 'RangeError: invalid array length'
+title: "RangeError: invalid array length"
 slug: Web/JavaScript/Reference/Errors/Invalid_array_length
 ---
 
@@ -35,37 +35,44 @@ RangeError: Invalid array buffer length (Chrome)
 ### 错误的示例
 
 ```js example-bad
-new Array(Math.pow(2, 40))
-new Array(-1)
-new ArrayBuffer(Math.pow(2, 32))
-new ArrayBuffer(-1)
+new Array(Math.pow(2, 40));
+new Array(-1);
+new ArrayBuffer(Math.pow(2, 32)); // 32 位系统
+new ArrayBuffer(-1);
 
-let a = [];
-a.length = a.length - 1;         // 将 length 属性的值设置为 -1
+const a = [];
+a.length = a.length - 1; // 将 length 属性的值设置为 -1
 
-let b = new Array(Math.pow(2, 32) - 1);
-b.length = b.length + 1;         // 将 length 属性的值设置为 2^32
+const b = new Array(Math.pow(2, 32) - 1);
+b.length = b.length + 1; // 将 length 属性的值设置为 2^32
+b.length = 2.5; // 将 length 属性设置为浮点数
+
+const c = new Array(2.5); // 传入浮点数
 ```
 
 ### 正确的示例
 
 ```js example-good
-[ Math.pow(2, 40) ]                     // [ 1099511627776 ]
-[ -1 ]                                  // [ -1 ]
-new ArrayBuffer(Math.pow(2, 32) - 1)
-new ArrayBuffer(0)
+[Math.pow(2, 40)]; // [ 1099511627776 ]
+[-1]; // [ -1 ]
+new ArrayBuffer(Math.pow(2, 32) - 1);
+new ArrayBuffer(Math.pow(2, 33)); // 64-bit systems after Firefox 89
+new ArrayBuffer(0);
 
-let a = [];
+const a = [];
 a.length = Math.max(0, a.length - 1);
 
-let b = new Array(Math.pow(2, 32) - 1);
+const b = new Array(Math.pow(2, 32) - 1);
 b.length = Math.min(0xffffffff, b.length + 1);
-
-// 0xffffffff 是 2^32 - 1 的 十六进制 表示方式
+// 0xffffffff 0xffffffff 是 2^32 - 1 的十六进制表示方式
 // 它也可以被写作 (-1 >>> 0)
+
+b.length = 3;
+
+const c = new Array(3);
 ```
 
-## 相关页面
+## 参见
 
 - {{jsxref("Array")}}
 - {{jsxref("Array.length")}}

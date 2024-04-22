@@ -1,11 +1,6 @@
 ---
 title: orientation
 slug: Web/Manifest/orientation
-tags:
-  - Manifest
-  - Orientation
-  - Web
-translation_of: Web/Manifest/orientation
 ---
 
 {{QuickLinksWithSubpages('/ru/docs/Web/Manifest')}}
@@ -56,12 +51,10 @@ translation_of: Web/Manifest/orientation
 "orientation": "portrait-primary"
 ```
 
-## Specifications
+## Спецификации
 
-| Specification                                                                        | Status                       | Comment             | Feedback                                                                         |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------- | -------------------------------------------------------------------------------- |
-| {{SpecName('Manifest', '#orientation-member', 'orientation')}} | {{Spec2('Manifest')}} | Initial definition. | [Web App Manifest Working Group drafts](https://github.com/w3c/manifest/issues/) |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}

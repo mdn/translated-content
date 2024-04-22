@@ -1,10 +1,8 @@
 ---
-title: ':visited'
+title: ":visited"
 slug: Web/CSS/:visited
-tags:
-  - Псевдо-классы
-translation_of: Web/CSS/:visited
 ---
+
 {{ CSSRef() }}
 
 ## Описание
@@ -16,15 +14,19 @@ CSS [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы) `:visit
 ## Примеры
 
 ```css
-a:visited { color: #4b2f89; }
-a:visited { background-color: white }
+a:visited {
+  color: #4b2f89;
+}
+a:visited {
+  background-color: white;
+}
 ```
 
 ## Спецификации
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

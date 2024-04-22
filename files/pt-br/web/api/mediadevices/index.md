@@ -34,42 +34,50 @@ _Mesmos métodos de {{domxref("EventTarget")}}._
 ## Exemplo
 
 ```js
-'use strict';
+"use strict";
 
 // Coloca as variáveis no escopo global para torná-las disponível para o Console do navegador.
-var video = document.querySelector('video');
-var constraints = window.constraints = {
+var video = document.querySelector("video");
+var constraints = (window.constraints = {
   audio: false,
-  video: true
-};
-var errorElement = document.querySelector('#errorMsg');
-
-navigator.mediaDevices.getUserMedia(constraints)
-.then(function(stream) {
-  var videoTracks = stream.getVideoTracks();
-  console.log('Got stream with constraints:', constraints);
-  console.log('Using video device: ' + videoTracks[0].label);
-  stream.onremovetrack = function() {
-    console.log('Stream ended');
-  };
-  window.stream = stream; // torna as variáveis disponíveis para o Console do navegador
-  video.srcObject = stream;
-})
-.catch(function(error) {
-  if (error.name === 'ConstraintNotSatisfiedError') {
-    errorMsg('A resolução ' + constraints.video.width.exact + 'x' +
-        constraints.video.width.exact + ' px não é suportada pelo seu dispositivo.');
-  } else if (error.name === 'PermissionDeniedError') {
-    errorMsg('As permissões para usar sua câmera e microfone não foram fornecidas. ' +
-      'Você precisa permitir o acesso da página aos seus dispositivos para ' +
-      'que a demo funcione.');
-  }
-  errorMsg('getUserMedia error: ' + error.name, error);
+  video: true,
 });
+var errorElement = document.querySelector("#errorMsg");
+
+navigator.mediaDevices
+  .getUserMedia(constraints)
+  .then(function (stream) {
+    var videoTracks = stream.getVideoTracks();
+    console.log("Got stream with constraints:", constraints);
+    console.log("Using video device: " + videoTracks[0].label);
+    stream.onremovetrack = function () {
+      console.log("Stream ended");
+    };
+    window.stream = stream; // torna as variáveis disponíveis para o Console do navegador
+    video.srcObject = stream;
+  })
+  .catch(function (error) {
+    if (error.name === "ConstraintNotSatisfiedError") {
+      errorMsg(
+        "A resolução " +
+          constraints.video.width.exact +
+          "x" +
+          constraints.video.width.exact +
+          " px não é suportada pelo seu dispositivo.",
+      );
+    } else if (error.name === "PermissionDeniedError") {
+      errorMsg(
+        "As permissões para usar sua câmera e microfone não foram fornecidas. " +
+          "Você precisa permitir o acesso da página aos seus dispositivos para " +
+          "que a demo funcione.",
+      );
+    }
+    errorMsg("getUserMedia error: " + error.name, error);
+  });
 
 function errorMsg(msg, error) {
-  errorElement.innerHTML += '<p>' + msg + '</p>';
-  if (typeof error !== 'undefined') {
+  errorElement.innerHTML += "<p>" + msg + "</p>";
+  if (typeof error !== "undefined") {
     console.error(error);
   }
 }
@@ -77,13 +85,11 @@ function errorMsg(msg, error) {
 
 ## Especificações
 
-| Especificação                                                                        | Status                               | Comentário        |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ----------------- |
-| {{SpecName('Media Capture', '#mediadevices', 'MediaDevices')}} | {{Spec2('Media Capture')}} | Definição inicial |
+{{Specifications}}
 
-## Compatibilidade
+## Compatibilidade com navegadores
 
-{{Compat("api.MediaDevices")}}
+{{Compat}}
 
 ## Veja também
 

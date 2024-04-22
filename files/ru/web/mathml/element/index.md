@@ -1,17 +1,11 @@
 ---
 title: Справка по элементам MathML
 slug: Web/MathML/Element
-tags:
-  - MathML
-  - MathML Reference
-  - NeedsTranslation
-  - TopicStub
-translation_of: Web/MathML/Element
 ---
 
 Здесь представлен алфавитный список **презентационных (presentation)** элементов MathML.
 
-Термин **презентационная разметка (presentation markup)** используется для описания разметки отображения математической системы обозначений, тогда как **разметка содержимого (content markup)** обеспечивает базовый математический смысл и не должна воспроизводиться парсером MathML (смотрите {{ bug(276028) }}). Если вы хотите узнать больше о разметке контента, вы можете изучить [Chapter 4](http://www.w3.org/TR/MathML3/chapter4.html) из [спецификации MathML 3](http://www.w3.org/TR/MathML3/).
+Термин **презентационная разметка (presentation markup)** используется для описания разметки отображения математической системы обозначений, тогда как **разметка содержимого (content markup)** обеспечивает базовый математический смысл и не должна воспроизводиться парсером MathML (смотрите [Firefox bug 276028](https://bugzil.la/276028)). Если вы хотите узнать больше о разметке контента, вы можете изучить [Chapter 4](http://www.w3.org/TR/MathML3/chapter4.html) из [спецификации MathML 3](http://www.w3.org/TR/MathML3/).
 
 ### math
 

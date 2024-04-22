@@ -1,8 +1,8 @@
 ---
 title: Window.prompt()
 slug: Web/API/Window/prompt
-translation_of: Web/API/Window/prompt
 ---
+
 {{ApiRef("Window")}}
 
 Метод `Window.prompt()` отображает диалоговое окно с необязательным запросом на ввод текста.
@@ -28,9 +28,9 @@ if (sign.toLowerCase() == "scorpio") {
 
 // есть множество способов использовать prompt
 var sign = window.prompt(); // открывается пустое окошко с запросом ввода текста
-var sign = prompt();       //  открывается пустое окошко с запросом ввода текста
-var sign = window.prompt('Are you feeling lucky'); // открывается окошко с текстом "Are you feeling lucky"
-var sign = window.prompt('Are you feeling lucky', 'sure'); // открывается окошко с текстом "Are you feeling lucky" и значением по умолчанию "sure"
+var sign = prompt(); //  открывается пустое окошко с запросом ввода текста
+var sign = window.prompt("Are you feeling lucky"); // открывается окошко с текстом "Are you feeling lucky"
+var sign = window.prompt("Are you feeling lucky", "sure"); // открывается окошко с текстом "Are you feeling lucky" и значением по умолчанию "sure"
 ```
 
 Когда пользователь нажимает кнопку OK, функция возвращает текст, введённый в поле. Если пользователь нажимает кнопку OK, без ввода какого-либо текста - возвращается пустая строка. Если пользователь нажимает кнопку Cancel, то функция возвращает `null`.
@@ -53,11 +53,13 @@ The following text is shared between this article, DOM:window\.confirm and DOM:w
 
 Эта функция не действует в современной UI/Metro версии Internet Explorer для Windows 8. Он не отображает запрос для пользователя и всегда возвращает `undefined`. Неясно, является ли это ошибкой или предполагаемым поведением. Desktop версия IE выполняет функцию корректно.
 
-## Спецификация
+## Спецификации
 
-| Спецификация                                                                                                 | Статус                           | Комментарий |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', 'timers-and-user-prompts.html#dom-prompt', 'prompt()')}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
+
+## Совместимость с браузерами
+
+{{Compat}}
 
 ## Смотрите также
 

@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.Table.prototype.length
 slug: WebAssembly/JavaScript_interface/Table/length
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/length
 ---
 
 {{WebAssemblySidebar}}
@@ -15,15 +14,19 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/length
 次の例では、新しい WebAssembly Table インスタンスを初期サイズ 2、最大サイズ 10 で作成します。
 
 ```js
-var table = new WebAssembly.Table({ element: "anyfunc", initial: 2, maximum: 10 });
+var table = new WebAssembly.Table({
+  element: "anyfunc",
+  initial: 2,
+  maximum: 10,
+});
 ```
 
 次のようにして、テーブルを 1 ずつ拡大することができます。
 
 ```js
-console.log(table.length);   // "2"
-console.log(table.grow(1));  // "2"
-console.log(table.length);   // "3"
+console.log(table.length); // "2"
+console.log(table.grow(1)); // "2"
+console.log(table.length); // "3"
 ```
 
 ## 仕様書

@@ -1,5 +1,5 @@
 ---
-title: 'HTMLDetailsElement: toggle event'
+title: "HTMLDetailsElement: toggle event"
 slug: Web/API/HTMLDetailsElement/toggle_event
 ---
 
@@ -7,11 +7,11 @@ slug: Web/API/HTMLDetailsElement/toggle_event
 
 当{{HtmlElement("details")}}元素`打开`/`关闭`状态被切换时，切换事件会触发。
 
-| Bubbles                | No                                                                            |
-| ---------------------- | ----------------------------------------------------------------------------- |
-| Cancelable             | No                                                                            |
-| Interface              | {{DOMxRef("Event")}}                                                  |
-| Event handler property | None                                                                          |
+| Bubbles                | No                                                                  |
+| ---------------------- | ------------------------------------------------------------------- |
+| Cancelable             | No                                                                  |
+| Interface              | {{DOMxRef("Event")}}                                                |
+| Event handler property | None                                                                |
 | Default Action         | Toggles the `open` state of the {{HtmlElement("details")}} element. |
 
 ## 示例
@@ -31,15 +31,18 @@ slug: Web/API/HTMLDetailsElement/toggle_event
   <b>Chapter summaries:</b>
   <details id="ch1">
     <summary>Chapter I</summary>
-    Philosophy reproves Boethius for the foolishness of his complaints against Fortune. Her very nature is caprice.
+    Philosophy reproves Boethius for the foolishness of his complaints against
+    Fortune. Her very nature is caprice.
   </details>
   <details id="ch2">
     <summary>Chapter II</summary>
-    Philosophy in Fortune's name replies to Boethius' reproaches, and proves that the gifts of Fortune are hers to give and to take away.
+    Philosophy in Fortune's name replies to Boethius' reproaches, and proves
+    that the gifts of Fortune are hers to give and to take away.
   </details>
   <details id="ch3">
     <summary>Chapter III</summary>
-    Boethius falls back upon his present sense of misery. Philosophy reminds him of the brilliancy of his former fortunes.
+    Boethius falls back upon his present sense of misery. Philosophy reminds him
+    of the brilliancy of his former fortunes.
   </details>
 </section>
 ```
@@ -67,12 +70,12 @@ body {
 ```js
 function logItem(e) {
   const item = document.querySelector(`[data-id=${e.target.id}]`);
-  item.toggleAttribute('hidden');
+  item.toggleAttribute("hidden");
 }
 
-const chapters = document.querySelectorAll('details');
+const chapters = document.querySelectorAll("details");
 chapters.forEach((chapter) => {
-  chapter.addEventListener('toggle', logItem);
+  chapter.addEventListener("toggle", logItem);
 });
 ```
 

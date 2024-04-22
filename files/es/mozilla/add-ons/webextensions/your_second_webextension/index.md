@@ -1,7 +1,6 @@
 ---
 title: Tu segunda extensión
 slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
-original_slug: Mozilla/Add-ons/WebExtensions/Tutorial
 ---
 
 {{AddonSidebar}}
@@ -55,7 +54,6 @@ Ahora crea un archivo llamado "manifest.json", y agrega el siguiente contenido:
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "Beastify",
   "version": "1.0",
@@ -66,9 +64,7 @@ Ahora crea un archivo llamado "manifest.json", y agrega el siguiente contenido:
     "48": "icons/beasts-48.png"
   },
 
-  "permissions": [
-    "activeTab"
-  ],
+  "permissions": ["activeTab"],
 
   "browser_action": {
     "default_icon": "icons/beasts-32.png",
@@ -81,7 +77,6 @@ Ahora crea un archivo llamado "manifest.json", y agrega el siguiente contenido:
     "beasts/turtle.jpg",
     "beasts/snake.jpg"
   ]
-
 }
 ```
 
@@ -103,7 +98,7 @@ Nota que todas las rutas dadas son relativas a manifest.json.
 
 La extensión debería tener un íncono. Éste, será mostrado junto a la lista de complementos en el Administrador de Complementos (Pude abrirlo introduciendo en la URL "about:addons"). El manifest.json promete que se posee un ícono para la barra de herramientas en "icons/beasts-48.png".
 
-Cree el directorio "icons" y guarde un ícono ahí y nómbrelo como "beasts-48.png". Puede utilizar [uno de nuestro ejemplo](https://github.com/mdn/webextensions-examples/blob/master/beastify/icons/beasts-48.png), el cual ha sido tomado del [conjuto de íconos Aha-Soft’s Free Retina](https://www.iconfinder.com/iconsets/free-retina-icon-set), que es utilizado bajo el término de su propia [licencia](http://www.aha-soft.com/free-icons/free-retina-icon-set/).
+Cree el directorio "icons" y guarde un ícono ahí y nómbrelo como "beasts-48.png". Puede utilizar [uno de nuestro ejemplo](https://github.com/mdn/webextensions-examples/blob/master/beastify/icons/beasts-48.png), el cual ha sido tomado del [conjuto de íconos Aha-Soft's Free Retina](https://www.iconfinder.com/iconsets/free-retina-icon-set), que es utilizado bajo el término de su propia [licencia](http://www.aha-soft.com/free-icons/free-retina-icon-set/).
 
 Si elige proporcionar su propio ícono, debería ser de 48x48 pixeles. También puede proporcionar un ícono de 96x96 pixeles, para pantallas de altas resoluciones y, si usted hace esto, deberá especificarlo como la propiedad `96` del objeto `icons` en el manifest.json:
 
@@ -137,27 +132,27 @@ Crea una nueva carpeta llamada "popup" bajo la carpeta raíz de la extensión . 
 El archivo HTML luce así:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
   <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="choose_beast.css"/>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="choose_beast.css" />
   </head>
 
-<body>
-  <div id="popup-content">
-    <div class="button beast">Frog</div>
-    <div class="button beast">Turtle</div>
-    <div class="button beast">Snake</div>
-    <div class="button reset">Reset</div>
-  </div>
-  <div id="error-content" class="hidden">
-    <p>Can't beastify this web page.</p><p>Try a different page.</p>
-  </div>
-  <script src="choose_beast.js"></script>
-</body>
-
+  <body>
+    <div id="popup-content">
+      <div class="button beast">Frog</div>
+      <div class="button beast">Turtle</div>
+      <div class="button beast">Snake</div>
+      <div class="button reset">Reset</div>
+    </div>
+    <div id="error-content" class="hidden">
+      <p>Can't beastify this web page.</p>
+      <p>Try a different page.</p>
+    </div>
+    <script src="choose_beast.js"></script>
+  </body>
 </html>
 ```
 
@@ -170,7 +165,8 @@ Note que referenciamos los archivos CSS y JS en el HTML como lo haríamos si se 
 El CSS ajusta el tamaño de la ventana emergente, se asegura que las tres posibles opciones llenen el espacio y les da un poco de estilo básico. Además oculta los elementos con `class="hidden"`: esto significa que nuestro `"error-content"` `<div>` estará oculto por defecto.
 
 ```css
-html, body {
+html,
+body {
   width: 100px;
 }
 
@@ -187,19 +183,19 @@ html, body {
 }
 
 .beast:hover {
-  background-color: #CFF2F2;
+  background-color: #cff2f2;
 }
 
 .beast {
-  background-color: #E5F2F2;
+  background-color: #e5f2f2;
 }
 
 .reset {
-  background-color: #FBFBC9;
+  background-color: #fbfbc9;
 }
 
 .reset:hover {
-  background-color: #EAEA9D;
+  background-color: #eaea9d;
 }
 ```
 
@@ -222,7 +218,6 @@ const hidePage = `body > :not(.beastify-image) {
  */
 function listenForClicks() {
   document.addEventListener("click", (e) => {
-
     /**
      * Recibe el nombre de una bestia y obtiene la URL de la imagen correspondiente.
      */
@@ -243,11 +238,11 @@ function listenForClicks() {
      * envía un mensaje "beastify" al script de contenido de la pestaña activa.
      */
     function beastify(tabs) {
-      browser.tabs.insertCSS({code: hidePage}).then(() => {
+      browser.tabs.insertCSS({ code: hidePage }).then(() => {
         let url = beastNameToURL(e.target.textContent);
         browser.tabs.sendMessage(tabs[0].id, {
           command: "beastify",
-          beastURL: url
+          beastURL: url,
         });
       });
     }
@@ -257,7 +252,7 @@ function listenForClicks() {
      * envía un mensaje de "reset" al script de contenido de la pestaña activa.
      */
     function reset(tabs) {
-      browser.tabs.removeCSS({code: hidePage}).then(() => {
+      browser.tabs.removeCSS({ code: hidePage }).then(() => {
         browser.tabs.sendMessage(tabs[0].id, {
           command: "reset",
         });
@@ -276,12 +271,13 @@ function listenForClicks() {
      * llama a "beastify()" o "reset()" según corresponda.
      */
     if (e.target.classList.contains("beast")) {
-      browser.tabs.query({active: true, currentWindow: true})
+      browser.tabs
+        .query({ active: true, currentWindow: true })
         .then(beastify)
         .catch(reportError);
-    }
-    else if (e.target.classList.contains("reset")) {
-      browser.tabs.query({active: true, currentWindow: true})
+    } else if (e.target.classList.contains("reset")) {
+      browser.tabs
+        .query({ active: true, currentWindow: true })
         .then(reset)
         .catch(reportError);
     }
@@ -303,9 +299,10 @@ function reportExecuteScriptError(error) {
  * y agrega un manejador de eventos.
  * Si no es posible inyectar el script, se ocupa de manejar el error.
  */
-browser.tabs.executeScript({file: "/content_scripts/beastify.js"})
-.then(listenForClicks)
-.catch(reportExecuteScriptError);
+browser.tabs
+  .executeScript({ file: "/content_scripts/beastify.js" })
+  .then(listenForClicks)
+  .catch(reportExecuteScriptError);
 ```
 
 Empecemos por la linea 96. La ventana emergente ejecuta un script de contenido en la pestaña activa tan pronto como se termina de cargar, usando la API [`browser.tabs.executeScript()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript). Si la ejecución del script de contenido es exitosa, este quedará cargado en la página hasta que sea cerrada la pestaña o hasta que el usuario navegue hacia una página distinta.
@@ -335,7 +332,7 @@ La función `reset()` deshace lo hecho por `beastify()`:
 Crea una carpeta nueva bajo la raíz del complemento llamada "content_scripts" y crea un nuevo archivo en ella llamado "beastify.js", con el contenido siguiente:
 
 ```js
-(function() {
+(function () {
   /**
    * Revisa e inicializa una variable de guardia.
    * Si este script de contenido es insertado más de una vez
@@ -346,11 +343,11 @@ Crea una carpeta nueva bajo la raíz del complemento llamada "content_scripts" y
   }
   window.hasRun = true;
 
-/**
-* Recibe la URL de la imagen, remueve las que se hayan agregado antes,
-* crea un nodo IMG que apunt hacia la imagen
-* e inserta ese nodo en el documento.
-*/
+  /**
+   * Recibe la URL de la imagen, remueve las que se hayan agregado antes,
+   * crea un nodo IMG que apunt hacia la imagen
+   * e inserta ese nodo en el documento.
+   */
   function insertBeast(beastURL) {
     removeExistingBeasts();
     let beastImage = document.createElement("img");
@@ -373,7 +370,7 @@ Crea una carpeta nueva bajo la raíz del complemento llamada "content_scripts" y
   /**
    * Atiende mensajes del script de segundo plano.
    * Llama a "beastify()" o "reset()".
-  */
+   */
   browser.runtime.onMessage.addListener((message) => {
     if (message.command === "beastify") {
       insertBeast(message.beastURL);
@@ -381,7 +378,6 @@ Crea una carpeta nueva bajo la raíz del complemento llamada "content_scripts" y
       removeExistingBeasts();
     }
   });
-
 })();
 ```
 
@@ -404,7 +400,7 @@ Crea una carpeta nueva llamada "beasts", y adiciona tres imágenes en ella, con 
 
 Primero, comprueba nuevamente que tienes todos los archivos necesarios en el lugar adecuado:
 
-```html
+```plain
 beastify/
 
     beasts/

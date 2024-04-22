@@ -1,13 +1,6 @@
 ---
 title: NON logique (!)
 slug: Web/JavaScript/Reference/Operators/Logical_NOT
-tags:
-  - JavaScript
-  - Language feature
-  - Logical Operator
-  - Operator
-  - Reference
-browser-compat: javascript.operators.logical_not
 ---
 
 {{jsSidebar("Operators")}}
@@ -19,7 +12,7 @@ L'opérateur logique NON (`!`) prend l'opposé logique de la valeur fournie par 
 ## Syntaxe
 
 ```js
-!expr
+!expr;
 ```
 
 ## Description
@@ -45,10 +38,10 @@ Bien que l'opérateur `!` puisse être utilisé avec des opérandes non booléen
 Le code suivant illustre l'utilisation de l'opérateur `!` pour le NON logique.
 
 ```js
-let n1 = !true     // !t renvoie false
-let n2 = !false    // !f renvoie true
-let n3 = !''       // !f renvoie true
-let n4 = !'Cat'    // !t renvoie false
+let n1 = !true; // !t renvoie false
+let n2 = !false; // !f renvoie true
+let n3 = !""; // !f renvoie true
+let n4 = !"Cat"; // !t renvoie false
 ```
 
 ### Double NON (`!!`)
@@ -58,12 +51,12 @@ Il est possible d'utiliser deux opérateurs NON à la suite pour convertir n'imp
 Une conversion équivalente pourra être obtenue avec le constructeur [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean).
 
 ```js
-let n1 = !!true                   // !!truthy renvoie true
-let n2 = !!{}                     // !!truthy renvoie true : tout objet est truthy
-let n3 = !!(new Boolean(false))   // Attention, un objet Boolean est toujours truthy !
-let n4 = !!false                  // !!falsy renvoie false
-let n5 = !!""                     // !!falsy renvoie false
-let n6 = !!Boolean(false)         // !!falsy renvoie false
+let n1 = !!true; // !!truthy renvoie true
+let n2 = !!{}; // !!truthy renvoie true : tout objet est truthy
+let n3 = !!new Boolean(false); // Attention, un objet Boolean est toujours truthy !
+let n4 = !!false; // !!falsy renvoie false
+let n5 = !!""; // !!falsy renvoie false
+let n6 = !!Boolean(false); // !!falsy renvoie false
 ```
 
 ### Équivalence booléenne de la double négation
@@ -71,13 +64,13 @@ let n6 = !!Boolean(false)         // !!falsy renvoie false
 L'expression qui suit, utilisée avec des booléens :
 
 ```js
-!!bCondition
+!!bCondition;
 ```
 
 est toujours égale à :
 
 ```js
-bCondition
+bCondition;
 ```
 
 ## Spécifications

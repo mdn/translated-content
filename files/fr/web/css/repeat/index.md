@@ -1,8 +1,6 @@
 ---
 title: repeat()
 slug: Web/CSS/repeat
-translation_of: Web/CSS/repeat()
-original_slug: Web/CSS/repeat()
 ---
 
 {{CSSRef}}
@@ -98,21 +96,11 @@ repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
 
 ```html
 <div id="container">
-  <div>
-    Un élément qui mesure 50 pixels de large.
-  </div>
-  <div>
-    Un élément avec une largeur flexible.
-  </div>
-  <div>
-    Un élément qui mesure 50 pixels de large.
-  </div>
-  <div>
-    Un élément avec une largeur flexible.
-  </div>
-  <div>
-    Un élément non-flexible qui mesure 100 pixels de large.
-  </div>
+  <div>Un élément qui mesure 50 pixels de large.</div>
+  <div>Un élément avec une largeur flexible.</div>
+  <div>Un élément qui mesure 50 pixels de large.</div>
+  <div>Un élément avec une largeur flexible.</div>
+  <div>Un élément non-flexible qui mesure 100 pixels de large.</div>
 </div>
 ```
 

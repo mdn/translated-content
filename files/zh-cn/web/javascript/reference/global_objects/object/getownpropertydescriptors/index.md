@@ -52,7 +52,7 @@ Object.getOwnPropertyDescriptors(obj)
 ```js
 Object.create(
   Object.getPrototypeOf(obj),
-  Object.getOwnPropertyDescriptors(obj)
+  Object.getOwnPropertyDescriptors(obj),
 );
 ```
 
@@ -67,7 +67,7 @@ superclass.prototype = {
 };
 function subclass() {}
 subclass.prototype = Object.create(superclass.prototype, {
-  // 在这里定义之类的构造方法、方法和属性
+  // 在这里定义子类的构造方法、方法和属性
 });
 ```
 

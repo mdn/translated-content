@@ -1,21 +1,18 @@
 ---
-title: GeolocationPosition.timestamp
+title: "GeolocationPosition: timestamp プロパティ"
+short-title: timestamp
 slug: Web/API/GeolocationPosition/timestamp
+l10n:
+  sourceCommit: b6984118ac9482e683a654edfefa4b426ca3c7ca
 ---
 
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
-**`GeolocationPosition.timestamp`** は読み取り専用のプロパティで、 {{domxref("DOMTimeStamp")}} オブジェクト形式で、所属する {{domxref("GeolocationPosition")}} オブジェクトが生成された日時を表す値を返します。精度はミリ秒です。
-
-## 構文
-
-```js
-var timestamp = geolocationPositionInstance.timestamp
-```
+**`GeolocationPosition.timestamp`** は読み取り専用のプロパティで、端末が位置を測定した日時を表します。
 
 ### 値
 
-{{domxref("DOMTimeStamp")}} オブジェクトのインスタンスです。
+ミリ秒単位の[Unix 時刻](/ja/docs/Glossary/Unix_time)で与えられるタイムスタンプが入った数値です。
 
 ## 仕様書
 

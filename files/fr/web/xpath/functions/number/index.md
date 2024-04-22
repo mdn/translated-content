@@ -1,10 +1,6 @@
 ---
 title: number
 slug: Web/XPath/Functions/number
-tags:
-  - Référence_XSLT
-translation_of: Web/XPath/Functions/number
-original_slug: Web/XPath/Fonctions/number
 ---
 
 {{ XsltRef() }}

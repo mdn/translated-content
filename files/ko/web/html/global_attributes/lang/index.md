@@ -11,8 +11,6 @@ slug: Web/HTML/Global_attributes/lang
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-lang.html","tabbed-shorter")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
-
 특성의 값이 빈 문자열(`lang=""`)일 때의 값은 "알 수 없음"(unknown)이며, 지정한 값이 BCP47의 유효한 값이 아닌 경우 "유효하지 않음"(invalid)입니다.
 
 > **참고:** ## 언어 태그 구문BCP47의 전체 구문은 매우 상세하여 어떤 언어의 세세한 방언을 나타낼 수도 있지만, 대부분의 사용법은 훨씬 단순합니다.언어 태그는 붙임표로 구분하는 "언어 하위태그"로 구성하며, 각각의 하위태그가 언어의 특정 속성을 나타냅니다. 가장 흔히 쓰이는 세 개의 하위 태그는 다음과 같습니다.- 언어 하위태그 - : 필수. 두 세 글자로 구성된 코드로 기본 언어를 정의하며, 보통 모두 소문자로 표기합니다. 예를 들어 영어의 언어 태그는 `en`이고, 한국어의 언어 태그는 `ko`입니다.

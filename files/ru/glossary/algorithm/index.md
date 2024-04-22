@@ -1,12 +1,9 @@
 ---
 title: Алгоритм
 slug: Glossary/Algorithm
-tags:
-  - Написание скриптов
-  - Глоссарий
-translation_of: Glossary/Algorithm
-original_slug: Глоссарий/Algorithm
 ---
+
+{{GlossarySidebar}}
 
 Алгоритм — это независимая серия инструкций для выполнения функции.
 

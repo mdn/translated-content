@@ -37,10 +37,6 @@ El tamaño del área de margen está determinado por las propiedades {{cssxref("
 
 Por último, tenga en cuenta que para los elementos en línea no modificados, la cantidad de espacio ocupado (la contribución a la altura de la línea) está determinada por la propiedad {{cssxref("line-height")}} , aunque los bordes y el relleno sigan apareciendo alrededor del contenido.
 
-## Especificaciones
-
-{{Specifications}}
-
 ## Véase también
 
 - [Diseño y el bloque contenedor](/es/docs/Web/CSS/Containing_block)

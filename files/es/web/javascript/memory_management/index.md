@@ -1,7 +1,6 @@
 ---
 title: Gestión de Memoria
 slug: Web/JavaScript/Memory_management
-original_slug: Web/JavaScript/Gestion_de_Memoria
 ---
 
 {{JsSidebar("Advanced")}}
@@ -32,22 +31,26 @@ var s = "azerty"; // reserva memoria para un string
 
 var o = {
   a: 1,
-  b: null
+  b: null,
 }; // reserva memoria para un objeto y los valores que
-   // contiene
+// contiene
 
 // (similar a objeto) reserva memoria para el arreglo y
 // los valores que contiene
 var a = [1, null, "abra"];
 
-function f(a){
+function f(a) {
   return a + 2;
 } // reserva memoria para una funcion (la cual es un objeto)
 
 // las expresiones de función tambien reservan memoria para un objeto
-someElement.addEventListener('click', function(){
-  someElement.style.backgroundColor = 'blue';
-}, false);
+someElement.addEventListener(
+  "click",
+  function () {
+    someElement.style.backgroundColor = "blue";
+  },
+  false,
+);
 ```
 
 #### Reserva de memoria al llamar una función
@@ -57,7 +60,7 @@ En ocasiones al llamar a una función se reserva memoria para un objeto.
 ```js
 var d = new Date();
 // reserva memoria para un elemento del DOM
-var e = document.createElement('div');
+var e = document.createElement("div");
 ```
 
 Algunos métodos reservan memoria para nuevos valores u objetos:
@@ -105,32 +108,31 @@ Hay que mencionar que en este contexto la noción de "objeto" se refiere a algo 
 ```js
 var o = {
   a: {
-    b:2
-  }
+    b: 2,
+  },
 };
 // Se crean dos objetos. Uno es referenciado por el otro como
 // una de sus propiedades.
 // El otro es referenciado al ser asignado a la variable "o"
 // Ninguno puede ser recolectado.
 
-
 var o2 = o; // la variable "o2" es lo segundo en tener una
-            // referencia al objeto.
-o = 1;      // ahora el objeto solo tiene una referencia mediante
-            // la variable "o2"
+// referencia al objeto.
+o = 1; // ahora el objeto solo tiene una referencia mediante
+// la variable "o2"
 
 var oa = o2.a; // referencia a la propiedad "a" del objeto.
-               // ahora el objeto posee dos referencias, una como propiedad
-               // la otra como la variable "oa"
+// ahora el objeto posee dos referencias, una como propiedad
+// la otra como la variable "oa"
 
 o2 = "yo"; // el objeto original "o" ahora ya no tiene
-           // referencias a él. Podría ser recolectado.
-           // Sin embargo lo que había en la propiedad "a" aún
-           // esta refernciado en la variable "oa";
-           // no puede ser recolectado aún
+// referencias a él. Podría ser recolectado.
+// Sin embargo lo que había en la propiedad "a" aún
+// esta refernciado en la variable "oa";
+// no puede ser recolectado aún
 
 oa = null; // lo que estaba en la propiedad "a" del objeto original "o"
-           // ahora ya no tiene ninguna referencia.Puede ser recolectado.
+// ahora ya no tiene ninguna referencia.Puede ser recolectado.
 ```
 
 #### Limitación : ciclos
@@ -138,7 +140,7 @@ oa = null; // lo que estaba en la propiedad "a" del objeto original "o"
 Existe una limitación cuando se trata de ciclos. En el siguiente ejemplo dos objetos son creados y se referencían entre ellos -por lo que se crea un ciclo. Ellos no saldrán del ámbito de la función después del llamado de la función, con lo que serían efectivamente "ya no son necesarios" y por lo cual ser liberados. Sin embargo, el algoritmo de conteo de referencias considera que ya que cada uno de los dos objetos está referenciado por lo menos una vez, ninguno podra ser recolectado. Este simple algoritmo tiene la limitación de que si un grupo de objetos se referencian a sí mismos (y forman un ciclo), nunca pasarán a "ya no ser necesitados" y no podrán ser recolectados nunca.
 
 ```js
-function f(){
+function f() {
   var o = {};
   var o2 = {};
   o.a = o2; // o referencía o2
@@ -162,7 +164,7 @@ Internet Explorer 6 y 7 son conocidos por tener recolectores de basura por conte
 
 ```js
 var div;
-window.onload = function(){
+window.onload = function () {
   div = document.getElementById("miDiv");
   div.referenciaCircular = div;
   div.muchosDatos = new Array(10000).join("*");
@@ -187,7 +189,7 @@ En el primer ejemplo, después de que la llamada a una función termina, los dos
 
 Lo mismo ocurre en el segundo ejemplo. Una vez que el elemento div y sus métodos se hacen inalcanzable desde los objetos raíz, ambos pueden ser recolectados a pesar de que estén referenciados los unos de los otros.
 
-#### Limitación: los objetos necesarios se hacen inalcanzables de forma explícita.
+#### Limitación: los objetos necesarios se hacen inalcanzables de forma explícita
 
 Aunque esto está marcado como una limitación, se puede encontrar muy poco en la práctica. Ésta es la razón por la cuál la recolección de basura es poco tomada en cuenta.
 

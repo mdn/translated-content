@@ -32,7 +32,7 @@ slug: Web/SVG/Element/cursor
 
 ## DOM 接口
 
-该元素实现了[`SVGCursorElement`](/zh-CN/docs/DOM/SVGCursorElement)接口。
+该元素实现了 [`SVGCursorElement`](/zh-CN/docs/DOM/SVGCursorElement) 接口。
 
 ## 规范
 

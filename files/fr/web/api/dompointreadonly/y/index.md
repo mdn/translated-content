@@ -1,15 +1,6 @@
 ---
 title: DOMPoint.y
 slug: Web/API/DOMPointReadOnly/y
-tags:
-  - API
-  - Coordonnées
-  - DOM
-  - Géométrie
-  - Propriétés
-  - Quadrilatère
-  - 'y'
-translation_of: Web/API/DOMPointReadOnly/y
 ---
 
 {{APIRef("DOM")}}{{ SeeCompatTable() }}

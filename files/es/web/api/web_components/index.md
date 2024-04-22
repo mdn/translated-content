@@ -1,7 +1,6 @@
 ---
 title: Web Components
 slug: Web/API/Web_components
-original_slug: Web/Web_Components
 ---
 
 {{DefaultAPISidebar("Web Components")}}
@@ -58,7 +57,7 @@ La aproximación básica para implementar un componente web, generalmente es la 
 
   - : &#x20;
 
-    - El atributo global HTML {{htmlattrxref("is")}}: Permite especificar que un elemento estandar HTML debe comportarse como un elemento incorporado personalizado registrado.
+    - El atributo global HTML [`is`](/es/docs/Web/HTML/Global_attributes#is): Permite especificar que un elemento estandar HTML debe comportarse como un elemento incorporado personalizado registrado.
     - La opción "is" del método {{domxref("Document.createElement()")}}: Permite crear una instancia de un elemento HTML estandar que se comporta como un determinado elemento incorporado personalizado registrado.
 
 - Pseudo-clases CSS
@@ -74,7 +73,7 @@ La aproximación básica para implementar un componente web, generalmente es la 
 
   - : Pseudo-elementos relacionados especificamente a elementos personalizados:
 
-    - {{cssxref("::part")}}: Representa cualquier elemento dentro del [shadow tree](/es/docs/Web/Web_Components/Using_shadow_DOM) que contiene un atributo {{HTMLAttrxRef("part")}} que coincida.
+    - {{cssxref("::part")}}: Representa cualquier elemento dentro del [shadow tree](/es/docs/Web/Web_Components/Using_shadow_DOM) que contiene un atributo [`part`](/es/docs/Web/HTML/Global_attributes#part) que coincida.
 
 ### Shadow DOM
 

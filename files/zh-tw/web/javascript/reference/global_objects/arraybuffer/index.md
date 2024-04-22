@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 
 ## 語法
 
-```plain
+```js-nolint
 new ArrayBuffer(length)
 ```
 
@@ -73,7 +73,7 @@ In this example, we create a 8-byte buffer with a {{jsxref("Global_Objects/Int32
 
 ```js
 var buffer = new ArrayBuffer(8);
-var view   = new Int32Array(buffer);
+var view = new Int32Array(buffer);
 ```
 
 ## 規範

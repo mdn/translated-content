@@ -14,7 +14,7 @@ slug: Web/API/Clients/openWindow
 ## 语法
 
 ```js
-ServiceWorkerClients.openWindow(url).then(function(WindowClient) {
+ServiceWorkerClients.openWindow(url).then(function (WindowClient) {
   // do something with your WindowClient
 });
 ```
@@ -33,9 +33,9 @@ ServiceWorkerClients.openWindow(url).then(function(WindowClient) {
 ```js
 // When the user clicks a notification focus the window if it exists or open
 // a new one otherwise.
-onotificationclick = function(event) {
+onotificationclick = function (event) {
   var found = false;
-  clients.matchAll().then(function(clientsArr) {
+  clients.matchAll().then(function (clientsArr) {
     for (i = 0; i < clientsArr.length; i++) {
       if (clientsArr[i].url === event.data.url) {
         // We already have a window to use, focus it.
@@ -46,7 +46,7 @@ onotificationclick = function(event) {
     }
     if (!found) {
       // Create a new window.
-      clients.openWindow(event.data.url).then(function(windowClient) {
+      clients.openWindow(event.data.url).then(function (windowClient) {
         // do something with the windowClient.
       });
     }

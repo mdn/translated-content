@@ -3,6 +3,8 @@ title: Adobe Flash
 slug: Glossary/Adobe_Flash
 ---
 
+{{GlossarySidebar}}
+
 Flash 是一项由 Adobe 开发的技术，它用于富 Web 应用程序、矢量图形和多媒体的呈现，目前已经过时。
 
 自从 2021 年开始，Flash 技术已不受 Adobe 或任何主流 web 浏览器的支持。

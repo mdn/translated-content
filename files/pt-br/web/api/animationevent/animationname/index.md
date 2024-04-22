@@ -2,6 +2,7 @@
 title: AnimationEvent.animationName
 slug: Web/API/AnimationEvent/animationName
 ---
+
 `{{SeeCompatTable}}{{ apiref("Web Animations API") }}`
 
 O `AnimationEvent.animationName` é uma propriedade só de leitura do{{domxref("DOMString")}} contendo o valor de {{cssxref("animation-name")}} propriedade CSS relacionada com a trasição.
@@ -14,13 +15,11 @@ name = AnimationEvent.animationName
 
 ## Especificações
 
-| Especificação                                                                                                                          | Estado                                     | Comentário            |
-| -------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ | --------------------- |
-| `{{ SpecName('CSS3 Animations', '#AnimationEvent-animationName', 'AnimationEvent.animationName') }}` | `{{ Spec2('CSS3 Animations')}}` | `Initial definition`. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.AnimationEvent.animationName")}}
+{{Compat}}
 
 ## See also
 

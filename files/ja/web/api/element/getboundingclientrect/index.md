@@ -1,6 +1,9 @@
 ---
-title: Element.getBoundingClientRect()
+title: "Element: getBoundingClientRect() メソッド"
+short-title: getBoundingClientRect()
 slug: Web/API/Element/getBoundingClientRect
+l10n:
+  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
 {{APIRef("DOM")}}
@@ -9,15 +12,19 @@ slug: Web/API/Element/getBoundingClientRect
 
 ## 構文
 
-```js
-domRect = element.getBoundingClientRect();
+```js-nolint
+getBoundingClientRect()
 ```
 
-### 値
+### 引数
 
-返値は {{domxref("DOMRect")}} オブジェクトで、（パディングと境界の幅を含む）要素全体が収まる最小の長方形です。`left`, `top`, `right`, `bottom`, `x`, `y`, `width`, `height` の各プロパティは、長方形の全体の位置と大きさをピクセル数で記述します。 `width` と `height` 以外のプロパティは、ビューポートの左上を基準としています。
+なし。
 
-![](element-box-diagram.png)
+### 返値
+
+返値は {{domxref("DOMRect")}} オブジェクトで、（パディングと境界の幅を含む）要素全体が収まる最小の長方形です。`left`, `top`, `right`, `bottom`, `x`, `y`, `width`, `height` の各プロパティは、長方形の全体の位置と大きさをピクセル数で記述します。`width` と `height` 以外のプロパティは、ビューポートの左上を基準としています。
+
+![要素全体を格納する最小の長方形である DOMRect オブジェクト。](element-box-diagram.png)
 
 このメソッドが返す {{domxref("DOMRect")}} オブジェクトの `width` と `height` プロパティは、内容物の幅や高さだけでなく、 `padding` と `border-width` も含まれます。標準的なボックスモデルでは、これは要素の `width` または `height` プロパティ + `padding` + `border-width` と同じになります。しかし、もし [`box-sizing: border-box`](/ja/docs/Web/CSS/box-sizing) が要素に設定されていれば、これは `width` または `height` と等しくなります。
 
@@ -27,20 +34,7 @@ domRect = element.getBoundingClientRect();
 
 境界矩形を計算するときには、ビューポート領域（または他のスクロール可能な要素）のスクロール量が考慮されます。これは、スクロール位置が変更される度に（その値はビューポートの相対値であり、絶対値ではないため) 矩形の境界の辺 (`top`, `right`, `bottom`, `left`) が変更されることを意味しています。
 
-もし文書の左上隅を基準とする境界矩形が必要な場合は、現在のスクロール位置から独立した境界矩形を取得する `top` と `left` プロパティに、現在のスクロール位置を加えるだけです（これらは {{domxref("window.scrollX")}} と {{domxref("window.scrollY")}} で取得できます）。
-
-### ブラウザー間で互換性のある代替手段
-
-高いブラウザー間の互換性を必要とするスクリプトでは、 `window.scrollX` と `window.scrollY` の代わりに {{domxref("window.pageXOffset")}} と {{domxref("window.pageYOffset")}} を使うことができます。これらのプロパティへのアクセスを使わない、次のようなスクリプトもあります。
-
-```js
-// For scrollX
-(((t = document.documentElement) || (t = document.body.parentNode))
-  && typeof t.scrollLeft == 'number' ? t : document.body).scrollLeft
-// For scrollY
-(((t = document.documentElement) || (t = document.body.parentNode))
-  && typeof t.scrollTop == 'number' ? t : document.body).scrollTop
-```
+もし文書の左上隅を基準とする境界矩形が必要な場合は、現在のスクロール位置から独立した境界矩形を取得する `top` と `left` プロパティに、現在のスクロール位置を加えるだけです（これらは {{domxref("window.scrollY")}} と {{domxref("window.scrollX")}} で取得できます）。
 
 ## 例
 
@@ -63,12 +57,12 @@ div {
 ```
 
 ```js
-let elem = document.querySelector('div');
+let elem = document.querySelector("div");
 let rect = elem.getBoundingClientRect();
-for (var key in rect) {
-  if(typeof rect[key] !== 'function') {
-    let para = document.createElement('p');
-    para.textContent  = `${ key } : ${ rect[key] }`;
+for (const key in rect) {
+  if (typeof rect[key] !== "function") {
+    let para = document.createElement("p");
+    para.textContent = `${key} : ${rect[key]}`;
     document.body.appendChild(para);
   }
 }
@@ -80,7 +74,7 @@ for (var key in rect) {
 
 また、`x`/`left`, `y`/`top`, `right`, `bottom` の値は、それぞれのケースで、ビューポートの関連する辺から要素のその側までの絶対的な距離に等しいことに注意してください。
 
-#### スクロール
+### スクロール
 
 この例では、文書がスクロールされたときに、クライアント矩形の境界がどのように変化するかを示しています。
 
@@ -98,8 +92,12 @@ div#example {
   background: purple;
 }
 
-body { padding-bottom: 1000px; }
-p { margin: 0; }
+body {
+  padding-bottom: 1000px;
+}
+p {
+  margin: 0;
+}
 ```
 
 ```js
@@ -108,17 +106,17 @@ function update() {
   const elem = document.getElementById("example");
   const rect = elem.getBoundingClientRect();
 
-  container.innerHTML = '';
-  for (let key in rect) {
-    if(typeof rect[key] !== 'function') {
-      let para = document.createElement('p');
-      para.textContent  = `${ key } : ${ rect[key] }`;
+  container.innerHTML = "";
+  for (const key in rect) {
+    if (typeof rect[key] !== "function") {
+      let para = document.createElement("p");
+      para.textContent = `${key} : ${rect[key]}`;
       container.appendChild(para);
     }
   }
 }
 
-document.addEventListener('scroll', update);
+document.addEventListener("scroll", update);
 update();
 ```
 
@@ -127,24 +125,6 @@ update();
 ## 仕様書
 
 {{Specifications}}
-
-### メモ
-
-最近のブラウザーでは返された `DOMRect` オブジェクトを変更することが可能ですが、これは `DOMRectReadOnly` を返す古いバージョンには該当しません。IE と Edge では、返された [`ClientRect`](<https://msdn.microsoft.com/library/hh826029(VS.85).aspx>) オブジェクトに対し、見過ごされたプロパティを追加することができず、`x` と `y` を補填することができません。
-
-互換性問題 (下記参照) のため、 `left`, `top`, `right`, `bottom` のみに頼ることが最も安全です。
-
-返された `DOMRect` オブジェクトのプロパティは、自身のプロパティではありません。`in` 演算子や `for...in` では返されたプロパティを見つけますが、他の `Object.keys()` のような API では失敗します。さらに予期しないことに、 `Object.assign()` のような ES2015 やより新しい機能では、返されるプロパティのコピーに失敗します。
-
-```js
-rect = elt.getBoundingClientRect()
-// emptyObj の結果は {}
-emptyObj = Object.assign({}, rect)
-emptyObj = { ...rect }
-{width, ...emptyObj} = rect
-```
-
-`DOMRect` の `top`, `left`, `right`, `bottom` の各プロパティは他のプロパティ値から計算されます。
 
 ## ブラウザーの互換性
 

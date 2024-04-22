@@ -1,7 +1,6 @@
 ---
 title: Border-image 生成器
 slug: Web/CSS/CSS_backgrounds_and_borders/Border-image_generator
-original_slug: Web/CSS/CSS_Background_and_Borders/Border-image_generator
 ---
 
 {{CSSRef}}

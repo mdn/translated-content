@@ -1,7 +1,6 @@
 ---
 title: beforeunload
 slug: Web/API/Window/beforeunload_event
-original_slug: Web/Events/beforeunload
 ---
 
 {{APIRef}}
@@ -35,19 +34,19 @@ Si es asignado un string a la propiedad del objeto Evento returnValue, una caja 
 
 ## Propiedades
 
-| Propiedad                             | Tipo                                 | Descripcion                                                                        |
-| ------------------------------------- | ------------------------------------ | ---------------------------------------------------------------------------------- |
+| Propiedad                       | Tipo                       | Descripcion                                                                        |
+| ------------------------------- | -------------------------- | ---------------------------------------------------------------------------------- |
 | `target` {{readOnlyInline}}     | {{domxref("EventTarget")}} | El evento objetivo(el objetivo superior en el arbol del DOM).                      |
-| `type` {{readOnlyInline}}       | {{domxref("DOMString")}}     | El tipo de evento.                                                                 |
-| `bubbles` {{readOnlyInline}}    | {{jsxref("Boolean")}}         | El evento normalmente burbujea?                                                    |
-| `cancelable` {{readOnlyInline}} | {{jsxref("Boolean")}}         | Es posible cancelar el evento?                                                     |
-| `returnValue`                         | {{domxref("DOMString")}}     | El valor actual devuelto por el evento (el mensaje que se le mostrara al usuario). |
+| `type` {{readOnlyInline}}       | {{domxref("DOMString")}}   | El tipo de evento.                                                                 |
+| `bubbles` {{readOnlyInline}}    | {{jsxref("Boolean")}}      | El evento normalmente burbujea?                                                    |
+| `cancelable` {{readOnlyInline}} | {{jsxref("Boolean")}}      | Es posible cancelar el evento?                                                     |
+| `returnValue`                   | {{domxref("DOMString")}}   | El valor actual devuelto por el evento (el mensaje que se le mostrara al usuario). |
 
 ## Ejemplos
 
 ```js
 window.addEventListener("beforeunload", function (event) {
-  event.returnValue = "\o/";
+  event.returnValue = "\\o/";
 });
 
 // es equivalente a
@@ -60,16 +59,16 @@ Navegadores basados en WebKit no siguen las especificaciones para la caja de dia
 
 ```js
 window.addEventListener("beforeunload", function (e) {
-  var confirmationMessage = "\o/";
+  var confirmationMessage = "\\o/";
 
-  e.returnValue = confirmationMessage;     // Gecko, Trident, Chrome 34+
-  return confirmationMessage;              // Gecko, WebKit, Chrome <34
+  e.returnValue = confirmationMessage; // Gecko, Trident, Chrome 34+
+  return confirmationMessage; // Gecko, WebKit, Chrome <34
 });
 ```
 
 ## Notas
 
-A partir del 25 de Mayo del 2011, la especificion HTML5 establece que llamadas a los metodos {{domxref("window.alert()")}}, {{domxref("window.confirm()")}}, y {{domxref("window.prompt()")}}pueden ser ignoradas durante este evento.Mire las [especificaciones de HTML5](http://www.w3.org/TR/html5/webappapis.html#user-prompts) para mas detalles.
+A partir del 25 de Mayo del 2011, la especificación HTML5 establece que llamadas a los métodos {{domxref("window.alert()")}}, {{domxref("window.confirm()")}}, y {{domxref("window.prompt()")}}pueden ser ignoradas durante este evento.Mire las [especificaciones de HTML5](http://www.w3.org/TR/html5/webappapis.html#user-prompts) para mas detalles.
 
 Varios navegadores ignoran el resultado del evento y no le preguntan al usuario por confirmacion en absoluto. El documento siempre se descargara automaticamente. Firefox tiene un switch llamado dom.disable_beforeunload en about:config para habilitar este comportamiento.
 

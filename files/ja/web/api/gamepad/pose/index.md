@@ -1,8 +1,9 @@
 ---
-title: Gamepad.pose
+title: "Gamepad: pose プロパティ"
+short-title: pose
 slug: Web/API/Gamepad/pose
 l10n:
-  sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
+  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
 {{APIRef("Gamepad")}}{{SeeCompatTable}}

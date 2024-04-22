@@ -62,10 +62,12 @@ CSS 规范包含了在一个物件上同时应用两种布局的时候，解释�
 在下面的示例中，我们已经浮动了三个`<div>`，所以它们显示在了一行中。任何使用不支持[CSS 网格布局](/zh-CN/docs/Learn/CSS/CSS_layout/Grids)的浏览器的人将会看到以浮动布局实现的一列盒子。一个成为了网格物件的浮动物件失去了浮动的动作，就是说通过把 wrapper 变成网格容器，浮动物件变成了网格物件。如果浏览器器支持网格布局，它会显示网格视图，否则它会忽略`display: grid`相关的属性，使用浮动布局。
 
 ```css
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   max-width: 400px;
   display: grid;
@@ -75,7 +77,7 @@ CSS 规范包含了在一个物件上同时应用两种布局的时候，解释�
 .item {
   float: left;
   border-radius: 5px;
-  background-color: rgb(207,232,220);
+  background-color: rgb(207, 232, 220);
   padding: 1em;
 }
 ```
@@ -112,10 +114,12 @@ CSS 规范包含了在一个物件上同时应用两种布局的时候，解释�
 在浮动布局中，百分数是依照容器计算的——33.333% 是容器宽度的三分之一。但在网格中，这 33.333% 是根据物件所在的网格区域计算的，所以只要网格布局引入进来，物件的大小实际上变成了我们想要的大小的三分之一。
 
 ```css
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   max-width: 400px;
   display: grid;
@@ -125,7 +129,7 @@ CSS 规范包含了在一个物件上同时应用两种布局的时候，解释�
 .item {
   float: left;
   border-radius: 5px;
-  background-color: rgb(207,232,220);
+  background-color: rgb(207, 232, 220);
   padding: 1em;
   width: 33.333%;
 }
@@ -150,10 +154,12 @@ CSS 规范包含了在一个物件上同时应用两种布局的时候，解释�
 如果我们向上面的示例中加入了一条特征查询，要是我们知道网格受到支持的话，我们可以用它把我们的物件宽度设定回`auto`。
 
 ```css
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   max-width: 400px;
   display: grid;
@@ -163,14 +169,14 @@ CSS 规范包含了在一个物件上同时应用两种布局的时候，解释�
 .item {
   float: left;
   border-radius: 5px;
-  background-color: rgb(207,232,220);
+  background-color: rgb(207, 232, 220);
   padding: 1em;
   width: 33.333%;
 }
 
 @supports (display: grid) {
   .item {
-      width: auto;
+    width: auto;
   }
 }
 ```
@@ -212,7 +218,6 @@ CSS 网格规范最初成形于 IE10，也就是说尽管 IE10 和 IE11 不支�
 ## 参见
 
 - [在 CSS 中使用媒体查询](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/)
-- [弹性盒的后向兼容性](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox)
 - [CSS 网格布局和渐进优化](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
 - [使用 CSS 网格：支持没有网格的浏览器](https://www.smashingmagazine.com/2017/11/css-grid-supporting-browsers-without-grid/)
 - [使用 IE10 和 IE11 版网格的教程](https://24ways.org/2012/css3-grid-layout/)

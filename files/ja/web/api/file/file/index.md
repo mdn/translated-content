@@ -1,6 +1,9 @@
 ---
-title: File()
+title: "File: File() コンストラクター"
+short-title: File()
 slug: Web/API/File/File
+l10n:
+  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
 {{APIRef("File")}}
@@ -9,27 +12,30 @@ slug: Web/API/File/File
 
 ## 構文
 
-```js
-new File(bits, name[, options]);
+```js-nolint
+new File(bits, name)
+new File(bits, name, options)
 ```
 
 ### 引数
 
 - `bits`
-  - : {{jsxref("Array")}}、{{jsxref("ArrayBuffer")}}、{{domxref("ArrayBufferView")}}、{{domxref("Blob")}}、{{domxref("USVString")}} の {{jsxref("Array")}} オブジェクト、またはそれらをあわせたものを {{domxref("File")}} 内に格納します。`USVString` オブジェクトは UTF-8 でエンコードされます。
+  - : [反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)オブジェクト、例えば {{jsxref("Array")}}、{{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}}、{{jsxref("DataView")}}、{{domxref("Blob")}}、文字列、またはそのような要素を混合させたものを {{domxref("File")}} 内に格納します。なお、文字列は JavaScript の UTF-16 文字列ではなく、UTF-8 でエンコードされます。
 - `name`
-  - : {{domxref("USVString")}} で、ファイル名またはファイルへのパスを表します。
+  - : 文字列で、ファイル名またはファイルへのパスを表します。
 - `options` {{optional_inline}}
 
   - : ファイルのオプション属性を含むオプションオブジェクト。利用可能なオプションは以下の通りです。
 
-    - `type`: ファイルの中に入るコンテンツの MIME タイプを表す {{domxref("DOMString")}} です。既定値は `""` です。
-    - `lastModified`: UNIX 元期からのミリ秒単位で、ファイルが最後に更新された時刻を表す数値です。既定値は {{jsxref("Date.now()")}} です。
+    - `type`
+      - : ファイルの中に入るコンテンツの MIME タイプを表す文字列です。既定値は `""` です。
+    - `lastModified`
+      - : UNIX 元期からのミリ秒単位で、ファイルが最後に更新された時刻を表す数値です。既定値は {{jsxref("Date.now()")}} です。
 
 ## 例
 
 ```js
-var file = new File(["foo"], "foo.txt", {
+const file = new File(["foo"], "foo.txt", {
   type: "text/plain",
 });
 ```

@@ -3,6 +3,8 @@ title: markup (マークアップ)
 slug: Glossary/Markup
 ---
 
+{{GlossarySidebar}}
+
 マークアップ言語は、テキストを定義し提示するために設計された言語です。 {{glossary("HTML")}} (HyperText Markup Language) は、マークアップ言語の一例です。
 
 HTML ファイルなどのテキストファイル内で、要素はコンテンツのその部分の目的を説明する{{glossary("Tag","タグ")}}を使用して*マークアップ*されます。
@@ -18,7 +20,7 @@ HTML ファイルなどのテキストファイル内で、要素はコンテン
 
 1. [MDN Web Docs 用語集](/ja/docs/Glossary)
 
-    1. {{Glossary("HTML")}}
-    2. {{Glossary("XHTML")}}
-    3. {{Glossary("XML")}}
-    4. {{Glossary("SVG")}}
+   1. {{Glossary("HTML")}}
+   2. {{Glossary("XHTML")}}
+   3. {{Glossary("XML")}}
+   4. {{Glossary("SVG")}}

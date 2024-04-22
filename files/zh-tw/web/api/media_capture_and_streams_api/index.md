@@ -1,7 +1,6 @@
 ---
 title: Media Capture and Streams API (Media Stream)
 slug: Web/API/Media_Capture_and_Streams_API
-original_slug: Web/API/Media_Streams_API
 ---
 
 {{DefaultAPISidebar("Media Capture and Streams")}}
@@ -10,7 +9,7 @@ original_slug: Web/API/Media_Streams_API
 
 ## 概念和用法
 
-該 API 基於{{domxref("MediaStream")}}對象的操作，該對象代表與音頻或視頻相關的數據流。請參閱“[獲取視頻”中](/zh-TW/docs/WebRTC/taking_webcam_photos#Get_the_video)的示例。
+該 API 基於{{domxref("MediaStream")}}對象的操作，該對象代表與音頻或視頻相關的數據流。請參閱「[獲取視頻](/zh-TW/docs/WebRTC/taking_webcam_photos#Get_the_video)」中的示例。
 
 A `MediaStream` consists of zero or more {{domxref("MediaStreamTrack")}} objects, representing various audio or video **tracks**. Each `MediaStreamTrack` may have one or more **channels**. The channel represents the smallest unit of a media stream, such as an audio signal associated with a given speaker, like _left_ or _right_ in a stereo audio track.
 

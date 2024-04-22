@@ -1,7 +1,6 @@
 ---
 title: WebExtensions
 slug: Mozilla/Add-ons/WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions
 ---
 
 {{AddonSidebar}}

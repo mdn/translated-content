@@ -1,5 +1,5 @@
 ---
-title: ':nth-last-of-type()'
+title: ":nth-last-of-type()"
 slug: Web/CSS/:nth-last-of-type
 ---
 
@@ -14,6 +14,8 @@ p:nth-last-of-type(4n) {
   color: lime;
 }
 ```
+
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-nth-last-of-type.html", "tabbed-shorter")}}
 
 > **メモ:** この擬似クラスは、最初から後に向けてではなく*最後*から前に向けて数えるという点を除けば、本質的に {{Cssxref(":nth-of-type")}} と同じです。
 

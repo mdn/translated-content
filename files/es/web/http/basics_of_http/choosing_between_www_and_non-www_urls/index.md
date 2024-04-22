@@ -2,6 +2,7 @@
 title: Elección entre www y no-www URLs
 slug: Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
 ---
+
 {{HTTPSidebar}}
 
 Una cuestión recurrente entre los dueños de sitios web consiste en elegir entre un no-www y www URLs. Esta página contiene algunos consejos sobre qué es mejor.
@@ -19,7 +20,7 @@ Un servidor no es necesariamente una máquina física: varios servidores pueden 
 
 Por lo tanto, ¡elija uno de sus dominios como su canónico! Hay dos técnicas a continuación para permitir que el dominio no canónico funcione aún.
 
-## Técnicas para las URL canónicas.
+## Técnicas para las URL canónicas
 
 Hay diferentes maneras de elegir qué sitio web es _canónico_.
 

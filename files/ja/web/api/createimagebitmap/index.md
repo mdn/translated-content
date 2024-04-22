@@ -1,7 +1,6 @@
 ---
 title: createImageBitmap()
 slug: Web/API/createImageBitmap
-original_slug: Web/API/WindowOrWorkerGlobalScope/createImageBitmap
 l10n:
   sourceCommit: 32539676aca5ea2913cfaefeab3ba986ecd2206f
 ---
@@ -67,25 +66,25 @@ createImageBitmap(image, sx, sy, sw, sh, options)
 この例では、スプライトシートをロードし、個々のスプライトを抽出し、各スプライトをキャンバスにレンダリングします。スプライトシートとは、複数の小さな画像を含む画像で、それぞれを個別にレンダリングできるようにしたいものです。
 
 ```js
-const canvas = document.getElementById('myCanvas'),
-ctx = canvas.getContext('2d'),
-image = new Image();
+const canvas = document.getElementById("myCanvas"),
+  ctx = canvas.getContext("2d"),
+  image = new Image();
 
 // スプライトシートがロードされるのを待ちます
 image.onload = () => {
   Promise.all([
     // スプライトシートから2つのスプライトを切り取ります
     createImageBitmap(image, 0, 0, 32, 32),
-    createImageBitmap(image, 32, 0, 32, 32)
+    createImageBitmap(image, 32, 0, 32, 32),
   ]).then((sprites) => {
     // 各スプライトをキャンバスに描きます
     ctx.drawImage(sprites[0], 0, 0);
     ctx.drawImage(sprites[1], 32, 32);
   });
-}
+};
 
 // 画像ファイルからスプライトシートを読み込みます
-image.src = 'sprites.png';
+image.src = "sprites.png";
 ```
 
 ## 仕様書

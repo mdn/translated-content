@@ -20,8 +20,8 @@ slug: Web/HTML/Element/data
    <td><a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content">Phrasing content</a>.</td>
   </tr>
   <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
+   <th scope="row">标签省略</th>
+   <td>不允许，开始标签和结束标签都不能省略。</td>
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>
@@ -48,9 +48,9 @@ slug: Web/HTML/Element/data
 ```html
 <p>新产品</p>
 <ul>
- <li><data value="398">迷你番茄酱</data></li>
- <li><data value="399">巨无霸番茄酱</data></li>
- <li><data value="400">超级巨无霸番茄酱</data></li>
+  <li><data value="398">迷你番茄酱</data></li>
+  <li><data value="399">巨无霸番茄酱</data></li>
+  <li><data value="400">超级巨无霸番茄酱</data></li>
 </ul>
 ```
 

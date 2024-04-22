@@ -571,7 +571,7 @@ O valor `public` tem o efeito de tornar a resposta armazenável mesmo se o cabe�
 
 Portanto, se a resposta for personalizada com autenticação básica, a presença de `público` pode causar problemas. Se estiver preocupado com isso, você pode escolher o segundo valor mais longo, `38` (1 mês).
 
-``` http
+```http
 # resposta para bundle.v123.js
 
 # Se você nunca personalizar as respostas por meio de autorização

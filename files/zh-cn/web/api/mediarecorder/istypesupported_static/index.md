@@ -1,7 +1,6 @@
 ---
 title: MediaRecorder.isTypeSupported
 slug: Web/API/MediaRecorder/isTypeSupported_static
-original_slug: Web/API/MediaRecorder/isTypeSupported
 ---
 
 {{APIRef("MediaStream Recording")}}
@@ -26,16 +25,23 @@ var canRecord = MediaRecorder.isTypeSupported(mimeType)
 ## Example
 
 ```js
-var types = ["video/webm",
-             "audio/webm",
-             "video/webm\;codecs=vp8",
-             "video/webm\;codecs=daala",
-             "video/webm\;codecs=h264",
-             "audio/webm\;codecs=opus",
-             "video/mpeg"];
+var types = [
+  "video/webm",
+  "audio/webm",
+  "video/webm;codecs=vp8",
+  "video/webm;codecs=daala",
+  "video/webm;codecs=h264",
+  "audio/webm;codecs=opus",
+  "video/mpeg",
+];
 
 for (var i in types) {
-  console.log( "Is " + types[i] + " supported? " + (MediaRecorder.isTypeSupported(types[i]) ? "Maybe!" : "Nope :("));
+  console.log(
+    "Is " +
+      types[i] +
+      " supported? " +
+      (MediaRecorder.isTypeSupported(types[i]) ? "Maybe!" : "Nope :("),
+  );
 }
 ```
 

@@ -26,7 +26,7 @@ window.close();
 var openedWindow;
 
 function openWindow() {
-  openedWindow = window.open('moreinfo.htm');
+  openedWindow = window.open("moreinfo.htm");
 }
 
 function closeOpenedWindow() {
@@ -50,4 +50,4 @@ function closeCurrentWindow() {
 
 ## ブラウザーの実装状況
 
-{{Compat("api.Window.close")}}
+{{Compat}}

@@ -1,10 +1,9 @@
 ---
 title: CSS 段組みレイアウト
 slug: Web/CSS/CSS_multicol_layout
-original_slug: Web/CSS/CSS_Columns
 ---
 
-{{CSSRef("CSS3 Multicol")}}
+{{CSSRef}}
 
 **CSS 段組みレイアウト**は CSS のモジュールの一つで、段組みレイアウトの対応を追加するものです。対応内容はレイアウトする段数の指定、段から段へのコンテンツの流れ方、段間の空白、段区切り線 (段間罫) などの対応が含まれています。
 
@@ -62,5 +61,5 @@ original_slug: Web/CSS/CSS_Columns
 
 他の CSS レイアウト技術には以下のようなものがあります。
 
-- [CSS フレキシブルボックスレイアウト](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout) (CSS フレックスボックス)
-- [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_Grid_Layout)
+- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout) (CSS フレックスボックス)
+- [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)

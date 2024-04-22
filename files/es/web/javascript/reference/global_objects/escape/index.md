@@ -1,12 +1,12 @@
 ---
 title: escape()
 slug: Web/JavaScript/Reference/Global_Objects/escape
-original_slug: Web/JavaScript/Referencia/Objetos_globales/escape
 ---
 
 {{Deprecated_header}}
 
 > **Advertencia:** `escape()` no esta estrictamente en desuso("eliminada por los estándares Web"), esta definida en [Anexo B](https://www.ecma-international.org/ecma-262/9.0/index.html#sec-additional-ecmascript-features-for-web-browsers) El estándar ECMA-262 , cuya introducción establece:
+>
 > > … Todos las características especificas y comportamientos del lenguaje en este anexo tienen mas de una caracterísitca indeseable y en ausencia del legado sera eliminada de esta especificación. …
 > >
 > > … Los programadores no deben usar o suponer la existencia de estas características y/o comportamientos al escribir nuevo código ECMAScript …
@@ -37,12 +37,12 @@ La forma hexadecimal de los caracteres cuyo valor es 0xFF o menor, es una secuen
 ## Ejemplos
 
 ```js
-escape('abc123');     // "abc123"
-escape('äöü');        // "%E4%F6%FC"
-escape('ć');          // "%u0107"
+escape("abc123"); // "abc123"
+escape("äöü"); // "%E4%F6%FC"
+escape("ć"); // "%u0107"
 
 // caracteres especiales
-escape('@*_+-./');    // "@*_+-./"
+escape("@*_+-./"); // "@*_+-./"
 ```
 
 ## Especificaciones

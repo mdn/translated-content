@@ -44,23 +44,24 @@ function Product(name, price) {
   this.price = price;
 
   if (price < 0) {
-    throw RangeError('Cannot create product ' +
-                      this.name + ' with a negative price');
+    throw RangeError(
+      "Cannot create product " + this.name + " with a negative price",
+    );
   }
 }
 
 function Food(name, price) {
   Product.call(this, name, price);
-  this.category = 'food';
+  this.category = "food";
 }
 
 function Toy(name, price) {
   Product.call(this, name, price);
-  this.category = 'toy';
+  this.category = "toy";
 }
 
-var cheese = new Food('feta', 5);
-var fun = new Toy('robot', 40);
+var cheese = new Food("feta", 5);
+var fun = new Toy("robot", 40);
 ```
 
 ### 익명 함수 호출에 `call` 사용
@@ -71,16 +72,15 @@ var fun = new Toy('robot', 40);
 
 ```js
 var animals = [
-  { species: 'Lion', name: 'King' },
-  { species: 'Whale', name: 'Fail' }
+  { species: "Lion", name: "King" },
+  { species: "Whale", name: "Fail" },
 ];
 
 for (var i = 0; i < animals.length; i++) {
-  (function(i) {
-    this.print = function() {
-      console.log('#' + i + ' ' + this.species
-                  + ': ' + this.name);
-    }
+  (function (i) {
+    this.print = function () {
+      console.log("#" + i + " " + this.species + ": " + this.name);
+    };
     this.print();
   }).call(animals[i], i);
 }
@@ -92,15 +92,18 @@ for (var i = 0; i < animals.length; i++) {
 
 ```js
 function greet() {
-  var reply = [this.animal, 'typically sleep between', this.sleepDuration].join(' ');
+  var reply = [this.animal, "typically sleep between", this.sleepDuration].join(
+    " ",
+  );
   console.log(reply);
 }
 
 var obj = {
-  animal: 'cats', sleepDuration: '12 and 16 hours'
+  animal: "cats",
+  sleepDuration: "12 and 16 hours",
 };
 
-greet.call(obj);  // cats typically sleep between 12 and 16 hours
+greet.call(obj); // cats typically sleep between 12 and 16 hours
 ```
 
 ### 첫번째 인수 지정 없이 함수 호출에 `call` 사용
@@ -108,26 +111,26 @@ greet.call(obj);  // cats typically sleep between 12 and 16 hours
 아래 예제에서, `display` 함수에 첫번째 인수를 전달하지 않고 호출합니다. 첫번째 인수를 전달하지 않으면, `this`의 값은 전역 객체에 바인딩됩니다.
 
 ```js
-var sData = 'Wisen';
-function display(){
-  console.log('sData value is %s ', this.sData);
+var sData = "Wisen";
+function display() {
+  console.log("sData value is %s ", this.sData);
 }
 
-display.call();  // sData value is Wisen
+display.call(); // sData value is Wisen
 ```
 
 > **참고:** **주의:** 엄격 모드(strict mode)에서, `this` 는 `undefined`값을 가집니다. See below.
 
 ```js
-    'use strict';
+"use strict";
 
-    var sData = 'Wisen';
+var sData = "Wisen";
 
-    function display() {
-      console.log('sData value is %s ', this.sData);
-    }
+function display() {
+  console.log("sData value is %s ", this.sData);
+}
 
-    display.call(); // Cannot read the property of 'sData' of undefined
+display.call(); // Cannot read the property of 'sData' of undefined
 ```
 
 ## 명세서

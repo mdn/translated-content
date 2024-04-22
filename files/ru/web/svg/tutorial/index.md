@@ -1,13 +1,6 @@
 ---
 title: SVG — учебное руководство
 slug: Web/SVG/Tutorial
-tags:
-  - Intermediate
-  - NeedsContent
-  - NeedsUpdate
-  - SVG
-  - SVG:Руководство
-translation_of: Web/SVG/Tutorial
 ---
 
 Масштабируемая векторная графика ([SVG](/en-US/Web/SVG)), — это подмножество расширяемого языка разметки XML созданный Консорциумом Всемирной паутины (W3C). Эта технология реализована в Firefox, Opera, Internet Explorer, WebKit и в прочих браузерах.

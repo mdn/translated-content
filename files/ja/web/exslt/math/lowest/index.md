@@ -11,7 +11,7 @@ slug: Web/EXSLT/math/lowest
 
 ## 構文
 
-```js
+```
 math:lowest(nodeSet)
 ```
 

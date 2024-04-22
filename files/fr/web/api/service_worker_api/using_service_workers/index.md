@@ -129,7 +129,7 @@ self.addEventListener("install", (event) => {
       "/gallery/bountyHunters.jpg",
       "/gallery/myLittleVader.jpg",
       "/gallery/snowTroopers.jpg",
-    ])
+    ]),
   );
 });
 ```
@@ -151,24 +151,24 @@ Maintenant que les fichiers sont mis en cache, il faut indiquer au <i lang="en">
 
 2. On peut attacher un gestionnaire d'évènement pour `fetch` au <i lang="en">service worker</i>, puis appeler la méthode `respondWith()` sur l'évènement afin d'intercepter les réponses HTTP et les remplacer par le contenu voulu.
 
-    ```js
-    self.addEventListener("fetch", (event) => {
-      event
-        .respondWith
-        // contenu spécifique
-        ();
-    });
-    ```
+   ```js
+   self.addEventListener("fetch", (event) => {
+     event
+       .respondWith
+       // contenu spécifique
+       ();
+   });
+   ```
 
 3. On peut ainsi répondre avec les ressources dont l'URL correspond à la requête interceptée&nbsp;:
 
-    ```js
-    self.addEventListener("fetch", (event) => {
-      event.respondWith(caches.match(event.request));
-    });
-    ```
+   ```js
+   self.addEventListener("fetch", (event) => {
+     event.respondWith(caches.match(event.request));
+   });
+   ```
 
-    `caches.match(event.request)` permet de cibler les ressources demandées sur le réseau avec les ressources équivalentes et qui sont disponibles dans le cache (si une telle ressource est disponible). La correspondance est effectuée avec l'URL et différents en-têtes, comme pour une requête HTTP normale.
+   `caches.match(event.request)` permet de cibler les ressources demandées sur le réseau avec les ressources équivalentes et qui sont disponibles dans le cache (si une telle ressource est disponible). La correspondance est effectuée avec l'URL et différents en-têtes, comme pour une requête HTTP normale.
 
 ![Diagramme illustrant le rôle de l'évènement fetch](sw-fetch.svg)
 
@@ -265,7 +265,7 @@ self.addEventListener("fetch", (event) => {
     cacheFirst({
       request: event.request,
       fallbackUrl: "/gallery/myLittleVader.jpg",
-    })
+    }),
   );
 });
 ```
@@ -366,7 +366,7 @@ self.addEventListener("install", (event) => {
       "/gallery/bountyHunters.jpg",
       "/gallery/myLittleVader.jpg",
       "/gallery/snowTroopers.jpg",
-    ])
+    ]),
   );
 });
 
@@ -376,7 +376,7 @@ self.addEventListener("fetch", (event) => {
       request: event.request,
       preloadResponsePromise: event.preloadResponse,
       fallbackUrl: "/gallery/myLittleVader.jpg",
-    })
+    }),
   );
 });
 ```
@@ -410,7 +410,7 @@ self.addEventListener("install", (event) => {
 
       // inclure les nouvelles ressources associées
       // à la nouvelle version…
-    ])
+    ]),
   );
 });
 ```

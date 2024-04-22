@@ -1,7 +1,6 @@
 ---
-title: 'SyntaxError: missing formal parameter( отсутствует формальный параметр)'
+title: "SyntaxError: missing formal parameter( отсутствует формальный параметр)"
 slug: Web/JavaScript/Reference/Errors/Missing_formal_parameter
-translation_of: Web/JavaScript/Reference/Errors/Missing_formal_parameter
 ---
 
 {{jsSidebar("Errors")}}
@@ -48,15 +47,15 @@ function log({ obj: "value"}) {
 ```js example-good
 function square(number) {
   return number * number;
-};
+}
 
 function greet(greeting) {
   return greeting;
-};
+}
 
 function log(arg) {
-  console.log(arg)
-};
+  console.log(arg);
+}
 ```
 
 Затем можно вызвать эти функции с аргументами, которые вам нравятся:
@@ -66,7 +65,7 @@ square(2); // 4
 
 greet("Howdy"); // "Howdy"
 
-log({obj: "value"}); // Object { obj: "value" }
+log({ obj: "value" }); // Object { obj: "value" }
 ```
 
 ## Смотрите также

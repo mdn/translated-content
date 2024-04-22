@@ -1,7 +1,6 @@
 ---
 title: Miembros
 slug: Web/JavaScript/Reference/Operators/Property_accessors
-original_slug: Web/JavaScript/Referencia/Operadores/Miembros
 ---
 
 {{jsSidebar("Operators")}}
@@ -26,7 +25,7 @@ objeto.propiedad = set;
 Ejemplo:
 
 ```js
-document.createElement('pre');
+document.createElement("pre");
 ```
 
 Aquí, el método llamado "createElement" se recupera de `document` y se le llama.
@@ -43,7 +42,7 @@ objeto[nombre_propiedad] = set;
 Ejemplo:
 
 ```js
-document['createElement']('pre');
+document["createElement"]("pre");
 ```
 
 Esto hace exactamente lo mismo que el ejemplo anterior.
@@ -56,15 +55,17 @@ Ejemplos:
 
 ```js
 var objeto = {};
-objeto['1'] = 'valor';
+objeto["1"] = "valor";
 alert(objeto[1]);
 ```
 
 Ésto tendrá como resultado "valor", ya que 1 se convertirá por tipo a '1'.
 
 ```js
-var foo = {propiedad_unica: 1}, bar = {propiedad_unica: 2}, objeto = {};
-objeto[foo] = 'valor';
+var foo = { propiedad_unica: 1 },
+  bar = { propiedad_unica: 2 },
+  objeto = {};
+objeto[foo] = "valor";
 alert(objeto[bar]);
 ```
 
@@ -81,7 +82,7 @@ Vea [enlace a métodos](/es/docs/Web/JavaScript/Referencia/Operadores/this#Funci
 Los principiantes en JavaScript a menudo tienen el error de usar {{jsxref("eval")}} cuando la notación por corchetes puede usarse a cambio. Por ejemplo, la siguiente sintaxis se ve a menudo en muchos scripts.
 
 ```js
-x = eval('document.nombre_formulario.' + cadenaControlFormulario + '.value');
+x = eval("document.nombre_formulario." + cadenaControlFormulario + ".value");
 ```
 
 `eval` es lenta y se debería evitar en la medida de lo posible. Es mejor usar la notación por corchetes a cambio:

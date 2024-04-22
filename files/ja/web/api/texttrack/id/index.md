@@ -18,7 +18,7 @@ ID の入った文字列、または空文字列です。
 以下の例では、`id` の値がコンソールに表示されます。
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 const track = video.addTextTrack("captions", "Captions", "en");
 track.mode = "showing";
 console.log(track.id);

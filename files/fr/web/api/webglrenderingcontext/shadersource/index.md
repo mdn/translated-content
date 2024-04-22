@@ -1,13 +1,6 @@
 ---
 title: WebGLRenderingContext.shaderSource()
 slug: Web/API/WebGLRenderingContext/shaderSource
-tags:
-  - API
-  - Méthode
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
-translation_of: Web/API/WebGLRenderingContext/shaderSource
 ---
 
 {{APIRef("WebGL")}}

@@ -3,7 +3,7 @@ title: Proxy.revocable()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/revocable
 ---
 
-{{JSRef("Global_Objects", "Proxy")}}
+{{JSRef}}
 
 **`Proxy.revocable()`** 方法可以用来创建一个可撤销的代理对象。
 
@@ -36,20 +36,23 @@ Proxy.revocable(target, handler);
 ## 示例
 
 ```js
-var revocable = Proxy.revocable({}, {
-  get(target, name) {
-    return "[[" + name + "]]";
-  }
-});
+var revocable = Proxy.revocable(
+  {},
+  {
+    get(target, name) {
+      return "[[" + name + "]]";
+    },
+  },
+);
 var proxy = revocable.proxy;
-proxy.foo;              // "[[foo]]"
+proxy.foo; // "[[foo]]"
 
 revocable.revoke();
 
 console.log(proxy.foo); // 抛出 TypeError
-proxy.foo = 1           // 还是 TypeError
-delete proxy.foo;       // 又是 TypeError
-typeof proxy            // "object"，因为 typeof 不属于可代理操作
+proxy.foo = 1; // 还是 TypeError
+delete proxy.foo; // 又是 TypeError
+typeof proxy; // "object"，因为 typeof 不属于可代理操作
 ```
 
 ## 规范

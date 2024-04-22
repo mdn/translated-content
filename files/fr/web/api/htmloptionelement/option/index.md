@@ -1,12 +1,6 @@
 ---
 title: Option()
 slug: Web/API/HTMLOptionElement/Option
-tags:
-  - API
-  - Constructeur
-  - HTML DOM
-  - HTMLOptionElement
-translation_of: Web/API/HTMLOptionElement/Option
 ---
 
 {{APIRef("HTML DOM")}}
@@ -24,7 +18,7 @@ var optionElementReference = new Option(text, value, defaultSelected, selected);
 - `text` {{optional_inline}}
   - : Une chaîne de caractères {{domxref("DOMString")}} représentant le contenu de l'élément, c'est-à-dire le texte affiché. Si cet argument n'est pas spécifié, c'est la chaîne vide qui sera utilisée.
 - `value` {{optional_inline}}
-  - : Une chaîne de caractères {{domxref("DOMString")}} représentant la valeur de {{domxref("HTMLOptionElement")}}, c’est-à-dire l’attribut HTML `value` de l'élément {{htmlelement("option")}}. Si cet argument n'est pas fourni, ce sera la valeur de `text` qui sera reprise comme valeur (par exemple pour l'élément {{htmlelement("select")}} associé lorsque le formulaire est envoyé au serveur).
+  - : Une chaîne de caractères {{domxref("DOMString")}} représentant la valeur de {{domxref("HTMLOptionElement")}}, c'est-à-dire l'attribut HTML `value` de l'élément {{htmlelement("option")}}. Si cet argument n'est pas fourni, ce sera la valeur de `text` qui sera reprise comme valeur (par exemple pour l'élément {{htmlelement("select")}} associé lorsque le formulaire est envoyé au serveur).
 - `defaultSelected` {{optional_inline}}
   - : Un {{domxref("Boolean")}} qui définit la valeur de l'attribut [`selected`](/fr/docs/Web/HTML/Element/option#selected), c'est-à-dire que cette {{htmlelement("option")}} sera la valeur par défaut sélectionné dans l'élément {{htmlelement("select")}} lors du premier chargement de la page. S'il n'est pas spécifié, la valeur `false` sera utilisée par défaut.
 - `selected` {{optional_inline}}
@@ -41,11 +35,11 @@ var optionElementReference = new Option(text, value, defaultSelected, selected);
 </select>
 */
 
-var s = document.getElementById('s');
+var s = document.getElementById("s");
 var options = [Quatre, Cinq, Six];
 
-options.forEach(function(element,key) {
-    s[key] = new Option(element,key);
+options.forEach(function (element, key) {
+  s[key] = new Option(element, key);
 });
 ```
 
@@ -60,17 +54,17 @@ options.forEach(function(element,key) {
 </select>
 */
 
-var s = document.getElementById('s');
-var options = [ 'zéro', 'un', 'deux' ];
+var s = document.getElementById("s");
+var options = ["zéro", "un", "deux"];
 
-options.forEach(function(element, key) {
-  if (element == 'zéro') {
+options.forEach(function (element, key) {
+  if (element == "zéro") {
     s[s.options.length] = new Option(element, s.options.length, false, false);
   }
-  if (element == 'un') {
+  if (element == "un") {
     s[s.options.length] = new Option(element, s.options.length, true, false); // Ajouter l'attribut "selected"
   }
-  if (element == 'deux') {
+  if (element == "deux") {
     s[s.options.length] = new Option(element, s.options.length, false, true); // Sélectionnera l'option
   }
 });

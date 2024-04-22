@@ -16,7 +16,8 @@ slug: Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 ```html
 <body onload="start()">
   <canvas id="glcanvas" width="640" height="480">
-    Your browser doesn't appear to support the HTML5 <code>&lt;canvas&gt;</code> element.
+    Your browser doesn't appear to support the HTML5
+    <code>&lt;canvas&gt;</code> element.
   </canvas>
 </body>
 ```
@@ -31,15 +32,15 @@ var gl; // глобальная переменная для контекста W
 function start() {
   var canvas = document.getElementById("glcanvas");
 
-  gl = initWebGL(canvas);      // инициализация контекста GL
+  gl = initWebGL(canvas); // инициализация контекста GL
 
   // продолжать только если WebGL доступен и работает
 
   if (gl) {
-    gl.clearColor(0.0, 0.0, 0.0, 1.0);                      // установить в качестве цвета очистки буфера цвета чёрный, полная непрозрачность
-    gl.enable(gl.DEPTH_TEST);                               // включает использование буфера глубины
-    gl.depthFunc(gl.LEQUAL);                                // определяет работу буфера глубины: более ближние объекты перекрывают дальние
-    gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);      // очистить буфер цвета и буфер глубины.
+    gl.clearColor(0.0, 0.0, 0.0, 1.0); // установить в качестве цвета очистки буфера цвета чёрный, полная непрозрачность
+    gl.enable(gl.DEPTH_TEST); // включает использование буфера глубины
+    gl.depthFunc(gl.LEQUAL); // определяет работу буфера глубины: более ближние объекты перекрывают дальние
+    gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT); // очистить буфер цвета и буфер глубины.
   }
 }
 ```
@@ -63,8 +64,7 @@ function initWebGL(canvas) {
   try {
     // Попытаться получить стандартный контекст. Если не получится, попробовать получить экспериментальный.
     gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
-  }
-  catch(e) {}
+  } catch (e) {}
 
   // Если мы не получили контекст GL, завершить работу
   if (!gl) {

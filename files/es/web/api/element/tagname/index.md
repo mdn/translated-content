@@ -12,7 +12,7 @@ Devuelve el nombre del elemento.
 ### Sintaxis
 
 ```js
-elementName = element.tagName
+elementName = element.tagName;
 ```
 
 - `elementName` es una cadena que contiene el nombre del elemento actual.

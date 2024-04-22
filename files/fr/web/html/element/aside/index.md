@@ -1,18 +1,6 @@
 ---
-title: '<aside> : l''élément aparté'
+title: "<aside> : l'élément aparté"
 slug: Web/HTML/Element/aside
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - HTML5
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Sectioning content
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/aside
-browser-compat: html.elements.aside
 ---
 
 {{HTMLSidebar}}
@@ -116,17 +104,12 @@ Dans cet exemple, on utilise `<aside>` afin de baliser un paragraphe d'un articl
 ```html
 <article>
   <p>
-    Le film Disney <cite>La petite Sirène</cite> est
-    sorti en salles en 1989.
+    Le film Disney <cite>La petite Sirène</cite> est sorti en salles en 1989.
   </p>
   <aside>
-    <p>
-      Le film a gagné 87 millions de dollars pendant sa sortie initiale.
-    </p>
+    <p>Le film a gagné 87 millions de dollars pendant sa sortie initiale.</p>
   </aside>
-  <p>
-    Plus d'informations sur le film…
-  </p>
+  <p>Plus d'informations sur le film…</p>
 </article>
 ```
 

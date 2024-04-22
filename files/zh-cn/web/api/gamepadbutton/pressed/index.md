@@ -18,7 +18,7 @@ var isPressed = navigator.getGamepads()[0].pressed;
 ```js
 var gp = navigator.getGamepads()[0]; // 获取第一个控制器对象
 
-if(gp.buttons[0].pressed == true) {
+if (gp.buttons[0].pressed == true) {
   // 响应按钮按下
 }
 ```
@@ -37,4 +37,4 @@ if(gp.buttons[0].pressed == true) {
 
 ## 参见
 
-- [使用 Gamepad API](/zh-CN/docs/Web/Guide/API/Gamepad)
+- [使用 Gamepad API](/zh-CN/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)

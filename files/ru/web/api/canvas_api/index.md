@@ -1,12 +1,6 @@
 ---
 title: Canvas
 slug: Web/API/Canvas_API
-tags:
-  - API
-  - Canvas
-  - Обзор
-  - Справка
-translation_of: Web/API/Canvas_API
 ---
 
 {{DefaultAPISidebar("Canvas API")}}
@@ -49,7 +43,8 @@ ctx.fillRect(10, 10, 100, 100);
 </div>
 <textarea id="code" class="playable-code">
 ctx.fillStyle = "green";
-ctx.fillRect(10, 10, 100, 100);</textarea>
+ctx.fillRect(10, 10, 100, 100);</textarea
+>
 ```
 
 ```js hidden
@@ -65,14 +60,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
@@ -99,8 +94,6 @@ window.addEventListener("load", drawCanvas);
   - : Подробный учебник, охватывающий как основное использование `<canvas>`, так и его расширенные функции.
 - [Фрагменты кода: Canvas](/en-US/Add-ons/Code_snippets/Canvas)
   - : Некоторые фрагменты кода, ориентированные на разработчиков, с использованием `<canvas>`.
-- [Demo: A basic ray-caster](/ru/docs/Web/API/Canvas_API/A_basic_ray-caster)
-  - : Демо анимации трассировки-лучей используя canvas.
 - [Drawing DOM objects into a canvas](/ru/docs/Web/API/Canvas_API/Drawing_DOM_objects_into_a_canvas)
   - : Как рисовать DOM контент, таких как HTML-элементы, в canvas.
 - [Manipulating video using canvas](/ru/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
@@ -129,7 +122,11 @@ window.addEventListener("load", drawCanvas);
 
 ## Спецификации
 
-{{Specifications("html.elements.canvas")}}
+{{Specifications}}
+
+## Совместимость с браузерами
+
+{{Compat}}
 
 ## Смотрите также
 

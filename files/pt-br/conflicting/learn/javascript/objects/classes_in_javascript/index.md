@@ -1,7 +1,6 @@
 ---
 title: JavaScript orientado a objetos para iniciantes
 slug: conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript
-original_slug: Learn/JavaScript/Objects/Object-oriented_JS
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Basics", "Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
@@ -15,12 +14,12 @@ Com o básico fora do caminho, agora vamos nos concentrar no JavaScript orientad
       <td>
         Alfabetização básica em informática, um entendimento básico de HTML e
         CSS, familiaridade com o básico do JavaScript (consulte
-        <a href="/en-US/docs/Learn/JavaScript/First_steps">Primeiros passos</a>
+        <a href="/pt-BR/docs/Learn/JavaScript/First_steps">Primeiros passos</a>
         e
-        <a href="/en-US/docs/Learn/JavaScript/Building_blocks"
+        <a href="/pt-BR/docs/Learn/JavaScript/Building_blocks"
           >Blocos de construção</a
         >) e noções básicas do OOJS (consulte
-        <a href="/en-US/docs/Learn/JavaScript/Object-oriented/Introduction"
+        <a href="/pt-BR/docs/Learn/JavaScript/Object-oriented/Introduction"
           >Introdução aos objetos</a
         >).
       </td>
@@ -235,7 +234,7 @@ Isso faz sentido, mas existem outras maneiras — queremos familiarizá-lo com e
 
 ### O construtor Object()
 
-Primeiro de tudo, você pode usar o construtor [`Object()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) para criar um novo objeto. Sim, até objetos genéricos possuem um construtor, o que gera um objeto vazio.
+Primeiro de tudo, você pode usar o construtor [`Object()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object) para criar um novo objeto. Sim, até objetos genéricos possuem um construtor, o que gera um objeto vazio.
 
 1. Tente inserir isso no console JavaScript do seu navegador:
 
@@ -269,7 +268,7 @@ Primeiro de tudo, você pode usar o construtor [`Object()`](/en-US/docs/Web/Java
 
 Os construtores podem ajudá-lo a fornecer seu pedido de código — você pode criar construtores em um único local e, em seguida, criar instâncias conforme necessário, e fica claro de onde eles vieram.
 
-No entanto, algumas pessoas preferem criar instâncias de objeto sem primeiro criar construtores, especialmente se estiverem criando apenas algumas instâncias de um objeto. JavaScript tem um método embutido chamado [`create()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create) que permite que você faça isso. Com ele, você pode criar um novo objeto com base em qualquer objeto existente.
+No entanto, algumas pessoas preferem criar instâncias de objeto sem primeiro criar construtores, especialmente se estiverem criando apenas algumas instâncias de um objeto. JavaScript tem um método embutido chamado [`create()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/create) que permite que você faça isso. Com ele, você pode criar um novo objeto com base em qualquer objeto existente.
 
 1. Com o exercício concluído das seções anteriores carregadas no navegador, tente isso no seu console JavaScript:
 

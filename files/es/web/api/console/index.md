@@ -1,7 +1,6 @@
 ---
 title: Consola
 slug: Web/API/console
-original_slug: Web/API/Console
 ---
 
 {{APIRef("Console API")}}
@@ -11,7 +10,7 @@ El objeto **`console`** provee acceso a la consola de depuración de los navegad
 El objeto `console` puede ser accedido desde cualquier objeto global. {{domxref("Window")}} en el ámbito de navegación y {{domxref("WorkerGlobalScope")}} como variantes específicas de `workers` a través de la propiedad `console`. Está expuesto como {{domxref("Window.console")}}, y puede ser referenciado como `console`. Por ejemplo:
 
 ```js
-console.log("Falló al abrir el enlace especificado")
+console.log("Falló al abrir el enlace especificado");
 ```
 
 Esta página documenta los [Métodos](#métodos) disponibles en el objeto `console` y da algunos ejemplos de [uso](#ejemplos).
@@ -124,8 +123,8 @@ Cuando se pasa una cadena a uno de los métodos del objeto `console` que la acep
 Cada uno de ellos trae el siguiente argumento posterior a la cadena de la lista de parámetros. Por ejemplo:
 
 ```js
-for (let i=0; i<5; i++) {
-  console.log("Hola, %s. Me has llamado %d veces.", "Bob", i+1);
+for (let i = 0; i < 5; i++) {
+  console.log("Hola, %s. Me has llamado %d veces.", "Bob", i + 1);
 }
 ```
 
@@ -144,7 +143,10 @@ La salida se verá parecido a esto:
 Puedes usar la directiva `%c` para aplicar un estilo CSS a la salida de la consola:
 
 ```js
-console.log("This is %cMy stylish message", "color: yellow; font-style: italic; background-color: blue;padding: 2px");
+console.log(
+  "This is %cMy stylish message",
+  "color: yellow; font-style: italic; background-color: blue;padding: 2px",
+);
 ```
 
 El texto previo a la directiva no se verá afectado, pero el texto posterior a la directiva será estilizado usando las declaraciones CSS en el parámetro.
@@ -154,7 +156,12 @@ El texto previo a la directiva no se verá afectado, pero el texto posterior a l
 Puedes usar `%c` varias veces:
 
 ```js
-console.log("Varios estilos: %crojo %cnaranja", "color: red", "color: orange", "Mensaje adicional sin estilo");
+console.log(
+  "Varios estilos: %crojo %cnaranja",
+  "color: red",
+  "color: orange",
+  "Mensaje adicional sin estilo",
+);
 ```
 
 Las propiedadas utilizables junto con la directiva `%c` son las siguientes (al menos, en Firefox - pueden variar en otros navegadores):

@@ -1,7 +1,6 @@
 ---
 title: Object.is()
 slug: Web/JavaScript/Reference/Global_Objects/Object/is
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/is
 ---
 
 {{JSRef}}
@@ -48,21 +47,21 @@ Esta _tampoco_ es igual a la que realiza el operador {{jsxref("Operators/Compari
 ## Ejemplos
 
 ```js
-Object.is('foo', 'foo');     // true
-Object.is(window, window);   // true
+Object.is("foo", "foo"); // true
+Object.is(window, window); // true
 
-Object.is('foo', 'bar');     // false
-Object.is([], []);           // false
+Object.is("foo", "bar"); // false
+Object.is([], []); // false
 
 var test = { a: 1 };
-Object.is(test, test);       // true
+Object.is(test, test); // true
 
-Object.is(null, null);       // true
+Object.is(null, null); // true
 
 // Special Cases
-Object.is(0, -0);            // false
-Object.is(-0, -0);           // true
-Object.is(NaN, 0/0);         // true
+Object.is(0, -0); // false
+Object.is(-0, -0); // true
+Object.is(NaN, 0 / 0); // true
 ```
 
 ## [Polyfill](https://en.wikipedia.org/wiki/Polyfill) para navegadores no ES6
@@ -71,9 +70,10 @@ Object.is(NaN, 0/0);         // true
 
 ```js
 if (!Object.is) {
-  Object.is = function(x, y) {
+  Object.is = function (x, y) {
     // SameValue algorithm
-    if (x === y) { // Steps 1-5, 7-10
+    if (x === y) {
+      // Steps 1-5, 7-10
       // Steps 6.b-6.e: +0 != -0
       return x !== 0 || 1 / x === 1 / y;
     } else {

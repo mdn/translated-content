@@ -20,23 +20,22 @@ Web ページに於いては、`window` オブジェクトは*グローバルオ
 
 1. スクリプト中の変数 "global" は、実際には `window` オブジェクトのプロパティです。
 
-    ```js
-    var global = {data: 0};
+   ```js
+   var global = { data: 0 };
 
-    alert(global === window.global); // "true" を表示します。
-    ```
+   alert(global === window.global); // "true" を表示します。
+   ```
 
 2. ブラウジングコンテキストに於いて `window` は最上位オブジェクトである為、 `window` オブジェクトのメンバへのアクセス時には "`window.`" 接頭辞を省略する事が可能となっています。
 
-    ```js
-    // 次の 2 行は同じ動作となります。
-    window.setTimeout( "window.alert('Hi!')", 50 );
-           setTimeout(        "alert('Hi!')", 50 );
+   ```js
+   // 次の 2 行は同じ動作となります。
+   window.setTimeout("window.alert('Hi!')", 50);
+   setTimeout("alert('Hi!')", 50);
 
-
-    // window プロパティが自身を参照しているか確認してみましょう。
-    alert( window === window.window === window.window.window.window ); // true
-    ```
+   // window プロパティが自身を参照しているか確認してみましょう。
+   alert((window === window.window) === window.window.window.window); // true
+   ```
 
 そのオブジェクト自身を参照する `window` プロパティが持っている理由は、おそらくグローバルオブジェクトの参照を容易にする為でしょう。もしこのようになっていない場合、 `var window = this;` という代入をスクリプトの一番最初に自分で書かなければならないでしょう。
 

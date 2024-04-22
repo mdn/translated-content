@@ -21,8 +21,8 @@ slug: Web/API/WebGLFramebuffer
 ### 创建一个帧缓冲
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
+var canvas = document.getElementById("canvas");
+var gl = canvas.getContext("webgl");
 var buffer = gl.createFramebuffer();
 ```
 

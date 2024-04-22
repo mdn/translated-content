@@ -1,7 +1,6 @@
 ---
 title: Русский
 slug: Web/Accessibility/Understanding_WCAG/Keyboard
-translation_of: Web/Accessibility/Understanding_WCAG/Keyboard
 ---
 
 Чтобы веб-страница была полностью доступной, она должна быть управляема кем-то, кто использует только клавиатуру для доступа к ней и управления ею. Сюда входят пользователи программ чтения с экрана, но также могут быть пользователи, у которых есть проблемы с использованием указывающего устройства, такого как мышь или трекбол, или у которых мышь не работает в данный момент, или которые просто предпочитают использовать клавиатуру для ввода, когда это возможно.
@@ -63,7 +62,7 @@ If the user can interact with an element (for example, using touch or a pointing
 
 ## Focusable element must have focus styling
 
-Any element that can receive keyboard focus should have visible styling that indicates when the element is focused. You can do this with the [`:focus`](/en-US/docs/Web/CSS/:focus) CSS pseudo-class.
+Any element that can receive keyboard focus should have visible styling that indicates when the element is focused. You can do this with the [`:focus`](/ru/docs/Web/CSS/:focus) CSS pseudo-class.
 
 Standard focusable elements such as links and input fields are given special styling by the browser by default, so you might not need to specify focus styling for such elements, unless you want the focus styling to be more distinctive.
 

@@ -26,14 +26,14 @@ observer.observe(options);
 /* 写法一 */
 
 //直接往 PerformanceObserver() 入参匿名回调函数，成功 new 了一个 PerformanceObserver 类的，名为 observer 的对象
-var observer = new PerformanceObserver(function(list, obj) {
+var observer = new PerformanceObserver(function (list, obj) {
   var entries = list.getEntries();
-  for (var i=0; i < entries.length; i++) {
+  for (var i = 0; i < entries.length; i++) {
     //处理“mark”和“frame”事件
   }
 });
 //调用 observer 对象的 observe() 方法
-observer.observe({entryTypes: ["mark", "frame"]});
+observer.observe({ entryTypes: ["mark", "frame"] });
 
 /* 写法二 */
 
@@ -44,7 +44,7 @@ function perf_observer(list, observer) {
 //再将其传入 PerformanceObserver()，成功 new 了一个 PerformanceObserver 类的，名为 observer2 的对象
 var observer2 = new PerformanceObserver(perf_observer);
 //调用 observer2 对象的 observe() 方法
-observer2.observe({entryTypes: ["measure"]});
+observer2.observe({ entryTypes: ["measure"] });
 ```
 
 ## 规范

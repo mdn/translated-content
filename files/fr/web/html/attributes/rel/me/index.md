@@ -1,9 +1,6 @@
 ---
-title: 'Types de lien : me'
+title: "Types de lien : me"
 slug: Web/HTML/Attributes/rel/me
-translation_of: Web/HTML/Link_types/me
-original_slug: Web/HTML/Link_types/me
-browser-compat: html.elements.link.rel.me
 ---
 
 Le mot-clé **`me`**, utilisé pour l'attribut [`rel`](/fr/docs/Web/HTML/Element/link#attr-rel) d'un élément [`<link>`](/fr/docs/Web/HTML/Element/link) ou d'un élément [`<a>`](/fr/docs/Web/HTML/Element/a), indique que la ressource courante est représentée par la partie liée. La valeur `me` fut introduite dans la spécification [XHTML Friends Network (XFN)](https://gmpg.org/xfn/).

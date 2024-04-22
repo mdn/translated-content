@@ -1,8 +1,6 @@
 ---
 title: Firefox 3 для разработчиков
 slug: Mozilla/Firefox/Releases/3
-translation_of: Mozilla/Firefox/Releases/3
-original_slug: Firefox_3_for_developers
 ---
 
 {{FirefoxSidebar}}
@@ -14,45 +12,59 @@ original_slug: Firefox_3_for_developers
 #### Для веб-мастеров и разработчиков приложений
 
 - [Обновление веб-приложений для Firefox 3](/ru/%D0%9E%D0%B1%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2%D0%B5%D0%B1-%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B9_%D0%B4%D0%BB%D1%8F_Firefox_3)
+
   - : Предоставляет информацию об изменениях которые вам возможно нужно внести, чтобы получить выгоду от новых возможностей Firefox 3.
 
 - [Online и offline события](/en/Online_%D0%B8_offline_%D1%81%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D1%8F)
+
   - : Firefox 3 поддерживает WHATWG online и offline события, которые позволяют приложениям и расширениям определять есть ли активное Интернет соединение, и так же позволяет определять когда появляется и пропадает соединение.
 
 - [Веб-ориентированные обработчики протоколов](/ru/%D0%92%D0%B5%D0%B1-%D0%BE%D1%80%D0%B8%D0%B5%D0%BD%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5_%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA%D0%B8_%D0%BF%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D0%BE%D0%B2)
+
   - : Теперь вы можете регистрировать веб-приложения как обработчик протокола используя метод `navigator.registerProtocolHandler()`.
 
 - [Рисование текста с использованием canvas](/ru/%D0%A0%D0%B8%D1%81%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5_%D1%82%D0%B5%D0%BA%D1%81%D1%82%D0%B0_%D1%81_%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%D0%BC_canvas)
+
   - : Теперь вы можете рисовать текст с использованием нестандартизированного API canvas поддерживаемого Firefox 3.
 
 - [Поддержка преобразований для canvas](/en/Canvas_tutorial/Transformations#Transforms)
+
   - : Firefox now supports the `transform()` and `setTransform()` methods on canvases.
 
 - [Using microformats](/en/Using_microformats)
+
   - : Firefox now has APIs for working with microformats.
 
 - [Drag and drop events](/en/Drag_and_drop_events)
+
   - : Firefox 3 supports new events that are sent to the source node for a drag operation when the drag begins and ends.
 
 - [Focus management in HTML](/en/Focus_management_in_HTML)
+
   - : The new HTML 5 `activeElement` and `hasFocus` attributes are supported.
 
 - [Offline resources in Firefox](/en/Offline_resources_in_Firefox)
+
   - : Firefox now lets web applications request that resources be cached to allow the application to be used while offline.
 
 - [CSS improvements in Firefox 3](/en/CSS_improvements_in_Firefox_3)
+
   - : Firefox 3 features a number of improvements in its CSS support.
 
 - [DOM improvements in Firefox 3](/en/DOM_improvements_in_Firefox_3)
+
   - : Firefox 3 offers a number of new features in Firefox 3's DOM implementation, including support for several Internet Explorer extensions to the DOM.
 
 - [JavaScript 1.8 support](/en/New_in_JavaScript_1.8)
+
   - : Firefox 3 offers JavaScript 1.8.
 
 - [EXSLT support](/en/EXSLT)
+
   - : Firefox 3 provides support for a substantial subset of the [EXSLT](/en/EXSLT) extensions to [XSLT](/en/XSLT).
 
 - [SVG improvements in Firefox 3](/en/SVG_improvements_in_Firefox_3)
+
   - : SVG support in Firefox 3 has been upgraded significantly, with support for over two dozen new filters, several new elements and attributes, and other improvements.
 
 - [Animated PNG graphics](/en/Animated_PNG_graphics)
@@ -63,33 +75,43 @@ original_slug: Firefox_3_for_developers
 ##### Notable changes and improvements
 
 - [Updating extensions for Firefox 3](/en/Updating_extensions_for_Firefox_3)
+
   - : Provides a guide to the things you'll need to do to update your extension to work with Firefox 3.
 
 - [XUL improvements in Firefox 3](/en/XUL_improvements_in_Firefox_3)
+
   - : Firefox 3 offers a number of new XUL elements, including new sliding scales, the date and time pickers, and spin buttons.
 
 - [Templates in Firefox 3](/en/Templates_in_Firefox_3)
+
   - : Templates have been significantly improved in Firefox 3. The key improvement allows the use of custom query processors to allow data sources other than RDF to be used.
 
 - [Securing updates](/en/Extension_Versioning,_Update_and_Compatibility#Securing_Updates)
+
   - : In order to provide a more secure add-on upgrade path for users, add-ons are now required to provide a secure method for obtaining updates before they can be installed. Add-ons hosted at [AMO](http://addons.mozilla.org) automatically provide this. Any add-ons installed that do not provide a secure update method when the user upgrades to Firefox 3 will be automatically disabled. Firefox will however continue to check for updates to the extension over the insecure path and attempt to install any update offered (installation will fail if the update also fails to provide a secure update method).
 
 - [Places migration guide](/en/Places_migration_guide)
+
   - : An article about how to update an existing extension to use the Places API.
 
 - [Download Manager improvements in Firefox 3](/en/Download_Manager_improvements_in_Firefox_3)
+
   - : The Firefox 3 Download Manager features new and improved APIs, including support for multiple progress listeners.
 
 - [Using nsILoginManager](/en/Using_nsILoginManager)
+
   - : The Password Manager has been replaced by the new Login Manager.
 
 - [Embedding XBL bindings](/en/XBL/XBL_1.0_Reference/Elements#binding)
+
   - : You can now use the `data:` URL scheme from chrome code to embed XBL bindings directly instead of having them in separate XML files.
 
 - [Localizing extension descriptions](/en/Localizing_extension_descriptions)
+
   - : Firefox 3 offers a new method for localizing add-on metadata. This lets the localized details be available as soon as the add-on has been downloaded, as well as when the add-on is disabled.
 
 - [Localization and Plurals](/en/Localization_and_Plurals)
+
   - : Firefox 3 adds the new PluralForm module, which provides tools to aid in correctly pluralizing words in multiple localizations.
 
 - [Theme changes in Firefox 3](/en/Theme_changes_in_Firefox_3)
@@ -98,36 +120,47 @@ original_slug: Firefox_3_for_developers
 ##### New components and functionality
 
 - [FUEL Library](/en/FUEL)
+
   - : FUEL is about making it easier for extension developers to be productive, by minimizing some of the XPCOM formality and adding some "modern" JavaScript ideas.
 
 - [Places](/en/Places)
+
   - : The history and bookmarks APIs have been completely replaced by the new [Places](/en/Places) API.
 
 - [Idle service](/en/nsIIdleService)
+
   - : Firefox 3 offers the new `nsIIdleService` interface, which lets extensions determine how long it's been since the user last pressed a key or moved their mouse.
 
 - [ZIP writer](/en/nsIZipWriter)
+
   - : The new `nsIZipWriter` interface lets extensions create ZIP archives.
 
 - [Full page zoom](/en/Full_page_zoom)
+
   - : Firefox 3 improves the user experience by offering full page zoom in addition to text-only zoom.
 
 - [Interfacing with the XPCOM cycle collector](/en/Interfacing_with_the_XPCOM_cycle_collector)
+
   - : XPCOM code can now take advantage of the cycle collector, which helps ensure that unused memory gets released instead of leaking.
 
 - [The Thread Manager](/en/The_Thread_Manager)
+
   - : Firefox 3 provides the new `nsIThreadManager` interface, along with new interfaces for threads and thread events, which provides a convenient way to create and manage threads in your code.
 
 - [JavaScript modules](/en/JavaScript_modules)
+
   - : Firefox 3 now offers a new shared code module mechanism that lets you easily create modules in JavaScript that can be loaded by extensions and applications for use, much like shared libraries.
 
 - [The `nsIJSON` interface](/en/nsIJSON)
+
   - : Firefox 3 offers the new `nsIJSON` interface, which offers high-performance encoding and decoding of [JSON](/en/JSON) strings.
 
 - [The nsIParentalControlsService interface](/en/nsIParentalControlsService)
+
   - : Firefox 3 now supports the Microsoft Windows Vista parental controls feature, and allows code to interact with it.
 
 - [Using content preferences](/en/Using_content_preferences)
+
   - : Firefox 3 includes a new service for getting and setting arbitrary site-specific preferences that extensions as well as core code can use to keep track of their users' preferences for individual sites.
 
 - [Plug-in Monitoring](/en/Monitoring_plugins)
@@ -146,7 +179,7 @@ original_slug: Firefox_3_for_developers
 - **Simplified add-on installation.** You can now install extensions from third-party download sites in fewer clicks, thanks to the removal of the add-on download site whitelist.
 - **New Download Manager.** The download manager makes it easier to locate your downloaded files.
 - **Resumable downloads.** You can now resume downloads after restarting the browser or resetting your network connection.
-- **Full page zoom.** From the View menu and using keyboard shortcuts, you can now zoom in and out on the content of entire pages -- this scales not just the text but the layout and images as well.
+- **Full page zoom.** From the View menu and using keyboard shortcuts, you can now zoom in and out on the content of entire pages — this scales not just the text but the layout and images as well.
 - **Tab scrolling and quickmenu.** Tabs are easier to locate with the new tab scrolling and tab quickmenu features.
 - **Save what you were doing.** Firefox 3 prompts you to see if you'd like to save your current tabs when you exit Firefox.
 - **Optimized Open in Tabs behavior.** Opening a folder of bookmarks in tabs now appends the new tabs instead of replacing the existing ones.

@@ -1,7 +1,6 @@
 ---
 title: RegExp.$1-$9
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/n
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/n
 ---
 
 {{JSRef}} {{non-standard_header}}
@@ -40,8 +39,8 @@ RegExp.$9
 
 ```js
 var re = /(\w+)\s(\w+)/;
-var str = 'John Smith';
-str.replace(re, '$2, $1'); // "Smith, John"
+var str = "John Smith";
+str.replace(re, "$2, $1"); // "Smith, John"
 RegExp.$1; // "John"
 RegExp.$2; // "Smith"
 ```

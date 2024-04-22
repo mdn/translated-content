@@ -138,7 +138,7 @@ function notifyMe() {
   }
 
   // Otherwise, we need to ask the user for permission
-  else if (Notification.permission !== 'denied') {
+  else if (Notification.permission !== "denied") {
     Notification.requestPermission(function (permission) {
       // If the user accepts, let's create a notification
       if (permission === "granted") {
@@ -157,7 +157,7 @@ function notifyMe() {
 In many cases, you don't need to be this verbose. For example, in our [Emogotchi demo](http://mdn.github.io/emogotchi/) ([see source code](https://github.com/mdn/emogotchi)), we simply run {{domxref("Notification.requestPermission")}} regardless to make sure we can get permission to send notifications (this uses the newer promise-based method syntax):
 
 ```js
-Notification.requestPermission().then(function(result) {
+Notification.requestPermission().then(function (result) {
   console.log(result);
 });
 ```
@@ -165,12 +165,12 @@ Notification.requestPermission().then(function(result) {
 Then we run a simple `spawnNotification()` function when we want to fire a notification — this is passed arguments to specify the body, icon and title we want, then it creates the necessary `options` object and fires the notification using the {{domxref("Notification.Notification","Notification()")}} constructor.
 
 ```js
-function spawnNotification(theBody,theIcon,theTitle) {
+function spawnNotification(theBody, theIcon, theTitle) {
   var options = {
-      body: theBody,
-      icon: theIcon
-  }
-  var n = new Notification(theTitle,options);
+    body: theBody,
+    icon: theIcon,
+  };
+  var n = new Notification(theTitle, options);
 }
 ```
 

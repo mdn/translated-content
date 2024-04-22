@@ -32,10 +32,13 @@ append(property, value)
 
 ```js
 // button 要素を取得
-const buttonEl = document.querySelector('button');
+const buttonEl = document.querySelector("button");
 
 // background-image プロパティに別の値を追加する
-buttonEl.attributeStyleMap.append('background-image', 'linear-gradient(180deg, blue, black');
+buttonEl.attributeStyleMap.append(
+  "background-image",
+  "linear-gradient(180deg, blue, black",
+);
 ```
 
 ## 仕様書

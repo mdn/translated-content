@@ -1,5 +1,5 @@
 ---
-title: 'Django Tutorial Part 7: Sessions framework'
+title: "Django Tutorial Part 7: Sessions framework"
 slug: Learn/Server-side/Django/Sessions
 ---
 
@@ -13,7 +13,7 @@ slug: Learn/Server-side/Django/Sessions
       <th scope="row">Prerequisites:</th>
       <td>
         Complete all previous tutorial topics, including
-        <a href="/en-US/docs/Learn/Server-side/Django/Generic_views"
+        <a href="/ko/docs/Learn/Server-side/Django/Generic_views"
           >Django Tutorial Part 6: Generic list and detail views</a
         >
       </td>
@@ -138,7 +138,7 @@ def index(request):
 
 메인 HTML template(**/locallibrary/catalog/templates/index.html**) "Dynamic content" 섹션 밑 부분에 context 변수가 보일 수 있도록 밑에 보이는 굵은 선으로 표시된 코드를 추가해주세요:
 
-```html
+```django
 <h2>Dynamic content</h2>
 
 <p>The library has the following record counts:</p>
@@ -149,7 +149,10 @@ def index(request):
   <li><strong>Authors:</strong> \{{ num_authors }}</li>
 </ul>
 
-<p>You have visited this page \{{ num_visits }}{% if num_visits == 1 %} time{% else %} times{% endif %}.</p>
+<p>
+  You have visited this page \{{ num_visits }}{% if num_visits == 1 %} time{%
+  else %} times{% endif %}.
+</p>
 ```
 
 바뀐 것을 저장해주시고 테스트 서버를 재시작해주세요. 페이지를 새로고침할 때 마다, 숫자가 업데이트되는 것을 보실 수 있을겁니다.

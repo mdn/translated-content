@@ -85,15 +85,11 @@ Examples from other developers:
 
 - [Progress Indicators with Streams, Service Workers, & Fetch](https://fetch-progress.anthum.com/).
 
-## Specifications
+## Especificações
 
-| Specification                    | Status                       | Comment             |
-| -------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('Streams')}} | {{Spec2('Streams')}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
-
-### WritableStream
 
 {{Compat}}
 

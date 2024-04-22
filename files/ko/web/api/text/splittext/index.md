@@ -16,7 +16,7 @@ slug: Web/API/Text/splitText
 ## 문법
 
 ```js
-replacementNode = textnode.splitText(offset)
+replacementNode = textnode.splitText(offset);
 ```
 
 ## 예제
@@ -28,15 +28,15 @@ replacementNode = textnode.splitText(offset)
   <p id="p">foobar</p>
 
   <script type="text/javascript">
-    var p = document.getElementById('p');
+    var p = document.getElementById("p");
     var textnode = p.firstChild;
 
     // foo 와 bar 사이를 분리
     var replacementNode = textnode.splitText(3);
 
     // ' span contents ' 를 포함하는 span을 생성
-    var span = document.createElement('span');
-    span.appendChild(document.createTextNode(' span contents '));
+    var span = document.createElement("span");
+    span.appendChild(document.createTextNode(" span contents "));
 
     // 'bar' 앞에 span을 추가
     p.insertBefore(span, replacementNode);

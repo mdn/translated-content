@@ -1,11 +1,6 @@
 ---
 title: counter-increment
 slug: Web/CSS/counter-increment
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/counter-increment
 ---
 
 {{CSSRef}}

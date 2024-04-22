@@ -1,19 +1,9 @@
 ---
 title: ExtensionInfo
 slug: Mozilla/Add-ons/WebExtensions/API/management/ExtensionInfo
-tags:
-  - API
-  - Add-ons
-  - ExtensionInfo
-  - Extensions
-  - Reference
-  - Type
-  - WebExtensions
-  - management
-translation_of: Mozilla/Add-ons/WebExtensions/API/management/ExtensionInfo
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Un objet `ExtensionInfo` contenant les informations sur l'extension.
 

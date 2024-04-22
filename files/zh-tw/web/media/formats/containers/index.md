@@ -3,7 +3,7 @@ title: Media container formats (file types)
 slug: Web/Media/Formats/Containers
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
+{{QuickLinksWithSubpages("/zh-TW/docs/Web/Media")}}
 
 視訊與音訊的檔案格式被定義成兩個部分（當然如果一個檔案同時擁有影、音的話，那就有三個）：一個是音訊或/和視訊的編解碼器(codecs，由 compress 和 decompress 所組成的詞語)，另一個是媒體封裝的格式(media container format，即檔案類型)。在本次導覽中，我們將會看到網路上最常見的封裝格式，並介紹它們的基本規格、優點、限制，以及理想的使用情形。
 
@@ -389,7 +389,7 @@ MPEG-1 和 MPEG-2 最主要的差別在於媒體資料格式而非封裝格式�
 
 **[MPEG-4](https://zh.wikipedia.org/wiki/MPEG-4)** (**MP4**) 是最新版 MPEG 檔案格式。這個格式有兩種版本，分別定義於規範中的 part 1 和 part 14。MP4 是現今流行的封裝容器，它支援了大部份常用的編解碼器，同時它也廣泛地被支援。
 
-初版的 MPEG-4 Part 1 檔案格式首見於西元 1999 年；第二版定義於 Part 14 在西元 2003 年時加入。MP4 檔案格式衍生於 [ISO base media file format](https://zh.wikipedia.org/wiki/ISO_base_media_file_format)，而該格式則是衍生於 [Apple](https://www.apple.com/) 開發的 [QuickTime file format](https://zh.wikipedia.org/wiki/QuickTime_file_format)。
+初版的 MPEG-4 Part 1 檔案格式首見於西元 1999 年；第二版定義於 Part 14 在西元 2003 年時加入。MP4 檔案格式衍生於 [ISO 基本媒體文件格式](https://en.wikipedia.org/wiki/ISO_base_media_file_format)，而該格式則是衍生於 [Apple](https://www.apple.com/) 開發的 [QuickTime 文件格式](https://zh.wikipedia.org/wiki/QuickTime文件格式)。
 
 | 音訊        | 視訊        |
 | ----------- | ----------- |

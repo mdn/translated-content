@@ -1,12 +1,6 @@
 ---
 title: "<figcaption>: Элемент подписи иллюстрации"
 slug: Web/HTML/Element/figcaption
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Элемент
-translation_of: Web/HTML/Element/figcaption
 ---
 
 {{HTMLSidebar}}
@@ -35,7 +29,7 @@ translation_of: Web/HTML/Element/figcaption
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

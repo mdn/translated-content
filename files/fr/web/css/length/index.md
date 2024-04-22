@@ -1,12 +1,6 @@
 ---
 title: <length>
 slug: Web/CSS/length
-tags:
-  - CSS
-  - Reference
-  - Type
-  - Type de donnée
-translation_of: Web/CSS/length
 ---
 
 {{CSSRef}}
@@ -48,7 +42,7 @@ Les unités relatives aux polices de caractères permettent d'obtenir des longue
 - `ex`
   - : Cette unité représente la [hauteur d'x](https://fr.wikipedia.org/wiki/Hauteur_d%27x) de la {{cssxref("font")}} de l'élément. Il peut s'agir généralement de la hauteur des lettres bas de casse de la police. `1ex ≈ 0.5em` dans de nombreuses polices.
 - `ic`
-  - : Cette unité représente la largeur entre le début du caractère “水” (U+6C34) et le début du caractère suivant selon la police utilisée et après que les transformations qui modifient la taille des caractères aient été appliquées.
+  - : Cette unité représente la largeur entre le début du caractère "水" (U+6C34) et le début du caractère suivant selon la police utilisée et après que les transformations qui modifient la taille des caractères aient été appliquées.
 - `lh`
   - : Cette unité représente la valeur calculée de la propriété {{cssxref("line-height")}}, convertie en longueur absolue, de l'élément sur lequel elle est utilisée.
 - `rem`
@@ -106,11 +100,11 @@ Dans un bloc de déclaration {{cssxref("@page")}}, l'utilisation des longueurs l
 
 Les unités de longueur absolues représentent une mesure physique. Cela est réalisé en faisant correspondre une des unités à une unité physique et en définissant les autres relativement à elle. La correspondance est différente pour les périphériques basse-résolution, tels que les écrans, et pour les périphériques haute-résolution, comme les imprimantes.
 
-Pour les périphériques ayant un faible nombre de points par pouce, l’unité **px** représente le pixel de _référence physique_ et les autres sont définies de façon relative à lui. Ainsi, `1in` est définit comme `96px`, ce qui équivaut à `72pt`. Sur de tels périphériques, cette définition à pour conséquence que la longueur exprimée en pouces (`in`), centimètres (`cm`) et millimètres (`mm`) ne correspondent pas forcément à la longueur de l’unité physique du même nom.
+Pour les périphériques ayant un faible nombre de points par pouce, l'unité **px** représente le pixel de _référence physique_ et les autres sont définies de façon relative à lui. Ainsi, `1in` est définit comme `96px`, ce qui équivaut à `72pt`. Sur de tels périphériques, cette définition à pour conséquence que la longueur exprimée en pouces (`in`), centimètres (`cm`) et millimètres (`mm`) ne correspondent pas forcément à la longueur de l'unité physique du même nom.
 
-Pour les périphériques ayant un nombre de points par pouce élevé, les pouces (`in`), centimètres (`cm`) et millimètres (`mm`) sont définis comme leur équivalent physique. Par conséquent, l’unité **px** est définie comme étant relavite à eux (1/96 de pouce).
+Pour les périphériques ayant un nombre de points par pouce élevé, les pouces (`in`), centimètres (`cm`) et millimètres (`mm`) sont définis comme leur équivalent physique. Par conséquent, l'unité **px** est définie comme étant relavite à eux (1/96 de pouce).
 
-> **Note :** Les utilisateurs peuvent augmenter la taille des polices pour des raisons d’accessibilité. Pour permettre des mises en page adaptées quelque soit la taille des polices, utilisez uniquement des unités de longueur quand les caractéristiques physiques du média de sortie sont connues, telles que les images matricielles (bitmap) et sinon, privilégiez les unités relatives telles que `em` et `rem` (notamment pour {{cssxref("font-size")}}).
+> **Note :** Les utilisateurs peuvent augmenter la taille des polices pour des raisons d'accessibilité. Pour permettre des mises en page adaptées quelque soit la taille des polices, utilisez uniquement des unités de longueur quand les caractéristiques physiques du média de sortie sont connues, telles que les images matricielles (bitmap) et sinon, privilégiez les unités relatives telles que `em` et `rem` (notamment pour {{cssxref("font-size")}}).
 
 - `px`
   - : Pour l'affichage sur écran, correspond typiquement à un pixel de l'affichage. Pour les écrans en haute résolution et les imprimantes, un pixel CSS correspond à plusieurs pixels du périphérique, de sorte que le nombre de pixels par pouce (ppi) reste aux alentours de 96.
@@ -145,11 +139,11 @@ Pour les périphériques ayant un nombre de points par pouce élevé, les pouces
     de pouce). Pour l'affichage sur écran, le nombre de pixels par pica est déterminé par l'estimation du système (souvent incorrecte) de la résolution de son affichage.
 
 - `mozmm` {{non-standard_inline}}, retiré avec Firefox 59
-  - : Une unité expérimentale qui tente de représenter exactement un millimètre, quelque soit la taille ou la résolution de l’affichage. C’est rarement ce que nous voulons, mais peut être utile en particulier pour les terminaux mobiles.
+  - : Une unité expérimentale qui tente de représenter exactement un millimètre, quelque soit la taille ou la résolution de l'affichage. C'est rarement ce que nous voulons, mais peut être utile en particulier pour les terminaux mobiles.
 
 ## Unités CSS et points par pouce
 
-> **Note :** L’unité `in` ne représente pas un pouce physique de l’écran, mais `96px`. Celà signifie que quelque soit la densité de pixel réelle de l’écran, elle est supposée correspondre à `96dpi`. Sur les périphériques dotés d’une plus grande densité de pixel, `1in` fera moins d’1 pouce physique. De la même manière, `mm`, `cm`, et `pt` ne sont pas des longueurs absolues.
+> **Note :** L'unité `in` ne représente pas un pouce physique de l'écran, mais `96px`. Celà signifie que quelque soit la densité de pixel réelle de l'écran, elle est supposée correspondre à `96dpi`. Sur les périphériques dotés d'une plus grande densité de pixel, `1in` fera moins d'1 pouce physique. De la même manière, `mm`, `cm`, et `pt` ne sont pas des longueurs absolues.
 
 Quelques exemples particuliers :
 

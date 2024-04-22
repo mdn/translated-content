@@ -64,7 +64,7 @@ Para utilizar esta API, uma extensão deve ser requisitada para o "bookmarks" [p
 
 ## Compatibilidade com navegadores
 
-{{Compat("webextensions.api.bookmarks")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

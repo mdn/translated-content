@@ -9,7 +9,7 @@ l10n:
 
 **`style`** は {{domxref("CSSFontFaceRule")}} インターフェイスの読み取り専用プロパティで、この {{cssxref("@font-face")}} [アットルール](/ja/docs/Web/CSS/At-rule)からスタイル情報を返します。これは {{domxref("CSSStyleDeclaration")}} オブジェクトの形です。
 
-## 例
+## 値
 
 {{domxref("CSSStyleDeclaration")}} です。
 
@@ -28,7 +28,7 @@ l10n:
 
 ```js
 let myRules = document.styleSheets[0].cssRules;
-  console.log(myRules[0].style); //a CSSStyleDeclaration
+console.log(myRules[0].style); //a CSSStyleDeclaration
 ```
 
 ## 仕様書

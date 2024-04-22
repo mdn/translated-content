@@ -1,7 +1,6 @@
 ---
 title: Écrire un serveur WebSocket en Java
 slug: Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java
-translation_of: Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java
 ---
 
 ## Introduction
@@ -50,7 +49,7 @@ public class Server{
 Méthodes :
 
 - `java.net.`[Socket](http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html) `getInputStream()`
-  Renvoie un flux d’entrée pour ce socket.
+  Renvoie un flux d'entrée pour ce socket.
 - `java.net.`[Socket](http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html) `getOutputStream()`
   Renvoie un flux sortant pour ce socket.
 
@@ -90,9 +89,9 @@ OutputStream out = client.getOutputStream();
 new Scanner(in, "UTF-8").useDelimiter("\\r\\n\\r\\n").next();
 ```
 
-## Établissement d‘une liaison (handshaking)
+## Établissement d'une liaison (handshaking)
 
-Quand un client se connecte à un serveur, il envoit une requête GET pour passer à une connexion WebSocket à partir d'une simple connexion HTTP. Ceci est appelé l’établissement d’une liaison.
+Quand un client se connecte à un serveur, il envoit une requête GET pour passer à une connexion WebSocket à partir d'une simple connexion HTTP. Ceci est appelé l'établissement d'une liaison.
 
 ```java
 import java.util.Scanner;
@@ -115,10 +114,10 @@ Créer une réponse est plus facile que de comprendre pourquoi vous devez le fai
 
 Vous devez,
 
-1. obtenir la valeur de la requête d’entête _Sec-WebSocket-Key_ sans aucun espacement;
+1. obtenir la valeur de la requête d'entête _Sec-WebSocket-Key_ sans aucun espacement;
 2. la lier avec « 258EAFA5-E914-47DA-95CA-C5AB0DC85B11 »;
 3. en calculer les codes SHA-1 et Base64;
-4. renvoyer le résultat comme valeur de l'entête de réponse _Sec-WebSocket-Accept_ qui sera une partie d’une réponse HTTP.
+4. renvoyer le résultat comme valeur de l'entête de réponse _Sec-WebSocket-Accept_ qui sera une partie d'une réponse HTTP.
 
 ```java
 if (get.find()) {
@@ -143,7 +142,7 @@ if (get.find()) {
 
 ## Décoder les messages
 
-Après l’établissement réussie d’une liaison, le client peut transmettre des messages au serveur, ils seront désormais encodés.
+Après l'établissement réussie d'une liaison, le client peut transmettre des messages au serveur, ils seront désormais encodés.
 
 Si nous envoyons « abcdef », nous obtenons :
 
@@ -172,12 +171,12 @@ Si nous envoyons « abcdef », nous obtenons :
 | ------------------------------------- | ---- | ---- | ---- | -------- |
 | 1                                     | 0    | 0    | 0    | 0x1=0001 |
 
-FIN : votre message peut être transmis en plusieurs morceaux, mais restons simple pour l’instant.
+FIN : votre message peut être transmis en plusieurs morceaux, mais restons simple pour l'instant.
 Opcode _0x1_ signifie que ceci est un texte. [Liste exhaustive des Opcodes](http://tools.ietf.org/html/rfc6455#section-5.2)
 
 \- 134:
 
-Si le second octet moins 128 est entre 0 et 125, alors il s’agit de la longueur du message. Si c’est 126, les deux octets suivants (entier non signé de 16-bits), si c’est 127, les huit octets suivants (entier non signé de 64-bis, dont le poid ford doit être 0) sont la longueur.
+Si le second octet moins 128 est entre 0 et 125, alors il s'agit de la longueur du message. Si c'est 126, les deux octets suivants (entier non signé de 16-bits), si c'est 127, les huit octets suivants (entier non signé de 64-bis, dont le poid ford doit être 0) sont la longueur.
 
 > **Note :** Je peux prendre 128 car le premier bit est toujours 1.
 
@@ -187,7 +186,7 @@ Si le second octet moins 128 est entre 0 et 125, alors il s’agit de la longueu
 
 ### Algorithme de décodage
 
-octet décodé = octet encodé XOR (position de l’octet ET LOGIQUE 0x3)th octet de la clef
+octet décodé = octet encodé XOR (position de l'octet ET LOGIQUE 0x3)th octet de la clef
 
 Exemple en Java :
 

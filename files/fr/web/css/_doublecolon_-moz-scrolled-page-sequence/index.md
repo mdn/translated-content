@@ -1,12 +1,6 @@
 ---
-title: '::-moz-scrolled-page-sequence'
+title: "::-moz-scrolled-page-sequence"
 slug: Web/CSS/::-moz-scrolled-page-sequence
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-element
-  - Reference
-translation_of: Web/CSS/::-moz-scrolled-page-sequence
 ---
 
 {{CSSRef}}{{non-standard_header}}

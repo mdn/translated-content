@@ -1,7 +1,6 @@
 ---
 title: Визуализация с Web Audio API
 slug: Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API
-translation_of: Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API
 ---
 
 Одна из самых интересных фич Web Audio API — возможность извлекать частоту, форму волны и другие данные из звукового источника, которые могут быть использованы для создания визуализаций. Эта статья объясняет, как это можно сделать, и приводит несколько базовых примеров использования.
@@ -79,54 +78,53 @@ function draw() {
 Здесь мы используем `requestAnimationFrame()` чтобы многократно вызывать эту функцию:
 
 ```js
-      drawVisual = requestAnimationFrame(draw);
+drawVisual = requestAnimationFrame(draw);
 ```
 
 Затем мы копируем данные в наш массив:
 
 ```js
-      analyser.getByteTimeDomainData(dataArray);
+analyser.getByteTimeDomainData(dataArray);
 ```
 
 Устанавливаем заливку холста
 
 ```js
-      canvasCtx.fillStyle = 'rgb(200, 200, 200)';
-      canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
+canvasCtx.fillStyle = "rgb(200, 200, 200)";
+canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 ```
 
 Затем устанавливаем ширину линий и цвет волны, которую мы хотим нарисовать, и начинаем рисовать путь
 
 ```js
-      canvasCtx.lineWidth = 2;
-      canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
+canvasCtx.lineWidth = 2;
+canvasCtx.strokeStyle = "rgb(0, 0, 0)";
 
-      canvasCtx.beginPath();
+canvasCtx.beginPath();
 ```
 
 Мы определяем ширину каждого отрезка в линии, деля длину холста на длину массива (равную FrequencyBinCount), затем определяем переменную x, задающую позицию, в которую необходимо перенести каждый отрезок.
 
 ```js
-      var sliceWidth = WIDTH * 1.0 / bufferLength;
-      var x = 0;
+var sliceWidth = (WIDTH * 1.0) / bufferLength;
+var x = 0;
 ```
 
 В цикле, мы задаём позицию небольшого отрезка волны для каждой точки в буфере на высоте, основанной на значении массива в этой точке, а затем перемещаем линию туда, где должен быть нарисован следующий отрезок:
 
 ```js
-      for(var i = 0; i < bufferLength; i++) {
+for (var i = 0; i < bufferLength; i++) {
+  var v = dataArray[i] / 128.0;
+  var y = (v * HEIGHT) / 2;
 
-        var v = dataArray[i] / 128.0;
-        var y = v * HEIGHT/2;
+  if (i === 0) {
+    canvasCtx.moveTo(x, y);
+  } else {
+    canvasCtx.lineTo(x, y);
+  }
 
-        if(i === 0) {
-          canvasCtx.moveTo(x, y);
-        } else {
-          canvasCtx.lineTo(x, y);
-        }
-
-        x += sliceWidth;
-      }
+  x += sliceWidth;
+}
 ```
 
 Наконец, мы заканчиваем линию в середине правой стороны холста и рисуем, используя установленные цвет и ширину линий:
@@ -140,7 +138,7 @@ function draw() {
 В конце концов, мы вызываем функцию `draw()` , запускающую весь процесс:
 
 ```js
-    draw();
+draw();
 ```
 
 Мы получаем изображение волны, обновляющееся несколько раз в секунду:
@@ -154,12 +152,12 @@ function draw() {
 Сначала мы снова создаём анализатор и массив для данных, затем очищаем холст при помощи `clearRect()`. Единственное отличие от того, что мы делали раньше - ы том, что мы можем установить намного меньший размер fft. Таким образом, каждый столбец в диаграмме будет выглядеть как столбец, а не как тонкая полоска.
 
 ```js
-    analyser.fftSize = 256;
-    var bufferLength = analyser.frequencyBinCount;
-    console.log(bufferLength);
-    var dataArray = new Uint8Array(bufferLength);
+analyser.fftSize = 256;
+var bufferLength = analyser.frequencyBinCount;
+console.log(bufferLength);
+var dataArray = new Uint8Array(bufferLength);
 
-    canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
+canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
 ```
 
 Затем мы запускаем функцию `draw()` и задаём цикл при помощи `requestAnimationFrame()` таким образом, чтобы в каждом кадре анимации данные обновлялись.
@@ -179,9 +177,9 @@ function draw() {
 Мы также устанавливаем значение переменных `barHeight` и `x` , задающей то, где на холсте должен быть размещён каждый столбец.
 
 ```js
-      var barWidth = (WIDTH / bufferLength) * 2.5;
-      var barHeight;
-      var x = 0;
+var barWidth = (WIDTH / bufferLength) * 2.5;
+var barHeight;
+var x = 0;
 ```
 
 Как и раньше, мы в цикле проходим по каждому значению в `dataArray`. Для каждого значения мы устанавливаем высоту `barHeight` на уровне значения в массиве, устанавливаем заливку в зависимости от `barHeight` (Чем выше столбец, тем он ярче), и рисуем столбец в `x` пикселях от левой стороны холста. Ширина столбца равна `barWidth` , а высота - `barHeight/2` (чтобы столбцы помещались на холсте, мы уменьшили высоту в два раза)
@@ -203,7 +201,7 @@ function draw() {
 Снова, мы вызываем функцию draw() в конце кода, чтобы запустить процесс.
 
 ```js
-    draw();
+draw();
 ```
 
 Этот код даёт нам следующий результат:

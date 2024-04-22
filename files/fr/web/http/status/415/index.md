@@ -1,7 +1,6 @@
 ---
 title: 415 Unsupported Media Type
 slug: Web/HTTP/Status/415
-translation_of: Web/HTTP/Status/415
 ---
 
 {{HTTPSidebar}}

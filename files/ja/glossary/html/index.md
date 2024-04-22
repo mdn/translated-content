@@ -5,6 +5,8 @@ l10n:
   sourceCommit: 4bd65a01204446af2254bb8864bd22ad87bc86b0
 ---
 
+{{GlossarySidebar}}
+
 **HTML** (HyperText Markup Language) は、ウェブページの構造を指定する記述言語です。
 
 ## 略歴

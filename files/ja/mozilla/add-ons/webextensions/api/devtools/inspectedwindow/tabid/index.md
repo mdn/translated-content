@@ -1,10 +1,9 @@
 ---
 title: devtools.inspectedWindow.tabId
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/tabId
-original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/tabId
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 devtools のこのインスタンスがアタッチされる {{WebExtAPIRef("tabs.Tab", "tab")}} の ID。番号で表されます。
 
@@ -18,7 +17,7 @@ const scriptToAttach = "document.body.innerHTML = 'Hi from the devtools';";
 attachContentScriptButton.addEventListener("click", () => {
   browser.runtime.sendMessage({
     tabId: browser.devtools.inspectedWindow.tabId,
-    script: scriptToAttach
+    script: scriptToAttach,
   });
 });
 ```
@@ -28,16 +27,16 @@ attachContentScriptButton.addEventListener("click", () => {
 
 function handleMessage(request, sender, sendResponse) {
   browser.tabs.executeScript(request.tabId, {
-    code: request.script
+    code: request.script,
   });
 }
 
 browser.runtime.onMessage.addListener(handleMessage);
 ```
 
-## ブラウザの対応状況
+## ブラウザーの対応状況
 
-{{Compat("webextensions.api.devtools.inspectedWindow.tabId")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

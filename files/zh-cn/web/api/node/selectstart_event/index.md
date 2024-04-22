@@ -1,32 +1,43 @@
 ---
-title: selectstart
+title: Node：selectstart 事件
 slug: Web/API/Node/selectstart_event
-original_slug: Web/API/Document/selectstart_event
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-[Selection API](/zh-CN/docs/Web/API/Selection_API) 的 **`selectstart`** 事件在用户开始一个新的选择时候触发。
+{{APIRef}}
 
-如果事件被取消，选择将不被触发。
+[Selection API](/zh-CN/docs/Web/API/Selection) 的 **`selectstart`** 事件在用户进行一个新的选择时触发。
 
-| Bubbles        | Yes                     |
-| -------------- | ----------------------- |
-| Cancelable     | Yes                     |
-| Target objects | {{domxref("Document")}} |
-| Interface      | {{domxref("Event")}}    |
+如果事件被取消，所选取内容将不会改变。
 
-## 例子
+## 语法
+
+在类似于 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
 
 ```js
-document.addEventListener("selectstart", function() {
-  console.log('Selection started');
-}, false);
+addEventListener("selectstart", (event) => {});
+
+onselectstart = (event) => {};
 ```
 
-## 继承
+## 事件类型
 
-`selectstart` 事件实现{{domxref("Event")}} 接口。你可以使用此界面上定义的属性和方法。
+通用的 {{domxref("Event")}}。
 
-{{InheritanceDiagram('','','', 'Event')}}
+## 示例
+
+```js
+// addEventListener 版本
+document.addEventListener("selectstart", () => {
+  console.log("已开始选择");
+});
+
+// onselectstart 版本
+document.onselectstart = () => {
+  console.log("已开始选择");
+};
+```
 
 ## 规范
 
@@ -38,4 +49,4 @@ document.addEventListener("selectstart", function() {
 
 ## 参见
 
-- {{domxref("GlobalEventHandlers.onselectstart")}}
+- {{domxref("Document/selectionchange_event", "selectionchange")}}

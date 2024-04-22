@@ -1,7 +1,6 @@
 ---
 title: API Clipboard
 slug: Web/API/Clipboard_API
-translation_of: Web/API/Clipboard_API
 ---
 
 {{DefaultAPISidebar("Clipboard API")}}
@@ -17,8 +16,11 @@ Cette API est conçue pour remplacer l'accès au presse-papiers précédemment p
 Au lieu de créer un objet `Clipboard` lors de l'instanciation, vous pouvez accéder au presse-papier du système avec la globale {{domxref("Navigator.clipboard")}}&nbsp;:
 
 ```js
-navigator.clipboard.readText().then(
-  clipText => document.querySelector(".editor").innerText += clipText);
+navigator.clipboard
+  .readText()
+  .then(
+    (clipText) => (document.querySelector(".editor").innerText += clipText),
+  );
 ```
 
 Ce bout de code analyse le texte à partir du presse-papiers et l'insère après le premier élément trouvé comportant la classe `editor`. Puisque {{domxref("Clipboard.readText", "readText()")}} (sans oublier {{domxref("Clipboard.read", "read()")}}) retournent une chaîne vide si le contenu du presse-papier n'est pas textuel, ce code est sécurisé.

@@ -1,7 +1,6 @@
 ---
 title: Public-Key-Pins
 slug: conflicting/Web/HTTP/Headers/Expect-CT
-original_slug: Web/HTTP/Headers/Public-Key-Pins
 ---
 
 {{HTTPSidebar}}{{deprecated_header}}
@@ -67,7 +66,7 @@ Neste exemplo, **pin-sha256="cUPcTAZWKaASuYWhhneDttWpY3oBAkE3h2+soZS7sWs="** fix
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Public-Key-Pins")}}
+{{Compat}}
 
 ## Veja também
 

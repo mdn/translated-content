@@ -3,7 +3,7 @@ title: Math.tan()
 slug: Web/JavaScript/Reference/Global_Objects/Math/tan
 ---
 
-{{JSRef("Global_Objects", "Math")}}
+{{JSRef}}
 
 ## 概述
 
@@ -34,7 +34,7 @@ Math.tan(x)
 
 ```js
 function getTan(x) {
-   return Math.tan(x);
+  return Math.tan(x);
 }
 ```
 
@@ -42,8 +42,8 @@ function getTan(x) {
 
 ```js
 function getTanDeg(deg) {
-   var rad = deg * Math.PI/180;
-   return Math.tan(rad);
+  var rad = (deg * Math.PI) / 180;
+  return Math.tan(rad);
 }
 ```
 

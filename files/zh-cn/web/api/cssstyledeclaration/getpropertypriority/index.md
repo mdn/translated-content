@@ -27,7 +27,7 @@ var priority = style.getPropertyPriority(property);
 
 ```js
 var declaration = document.styleSheets[0].cssRules[0].style;
-var isImportant = declaration.getPropertyPriority('margin') === 'important';
+var isImportant = declaration.getPropertyPriority("margin") === "important";
 ```
 
 ## 规范

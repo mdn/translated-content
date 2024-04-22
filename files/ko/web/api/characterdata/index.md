@@ -2,6 +2,7 @@
 title: CharacterData
 slug: Web/API/CharacterData
 ---
+
 {{APIRef("DOM")}}
 
 **`CharacterData`** 추상 인터페이스는 문자를 포함하는 {{domxref("Node")}} 객체를 나타냅니다. 이는 추상 인터페이스로 `CharacterData` 타입의 객체로는 존재하지 않음을 의미합니다. {{domxref("Text")}}, {{domxref("Comment")}}, {{domxref("ProcessingInstruction")}} 와 같은 추상 인터페이스가 아닌 다른 인터페이스에의해 구현되었습니다.

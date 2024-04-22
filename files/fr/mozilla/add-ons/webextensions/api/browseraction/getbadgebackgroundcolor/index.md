@@ -1,20 +1,9 @@
 ---
 title: browserAction.getBadgeBackgroundColor()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/getBadgeBackgroundColor
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - browserAction
-  - getBadgeBackgroundColor
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/getBadgeBackgroundColor
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Obtient la couleur d'arrière plan du badge de l'action du navigateur.
 
@@ -23,9 +12,9 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 ## Syntaxe
 
 ```js
-browser.browserAction.getBadgeBackgroundColor (
-  details // object
-)
+browser.browserAction.getBadgeBackgroundColor(
+  details, // object
+);
 ```
 
 ### Paramètres

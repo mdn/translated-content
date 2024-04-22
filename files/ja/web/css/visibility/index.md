@@ -72,7 +72,10 @@ visibility の値は*可視*及び*不可視*の間で補間可能です。従�
 ```html
 <p class="visible">The first paragraph is visible.</p>
 <p class="not-visible">The second paragraph is NOT visible.</p>
-<p class="visible">The third paragraph is visible. Notice the second paragraph is still occupying space.</p>
+<p class="visible">
+  The third paragraph is visible. Notice the second paragraph is still occupying
+  space.
+</p>
 ```
 
 #### CSS
@@ -137,7 +140,7 @@ td {
 
 ## ブラウザーの互換性
 
-{{Compat("css.properties.visibility")}}
+{{Compat}}
 
 ## 関連情報
 

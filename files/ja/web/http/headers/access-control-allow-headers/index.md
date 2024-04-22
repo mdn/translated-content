@@ -104,7 +104,7 @@ Access-Control-Max-Age: 86400
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.Access-Control-Allow-Headers")}}
+{{Compat}}
 
 ## 関連情報
 

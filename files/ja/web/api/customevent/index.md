@@ -1,6 +1,8 @@
 ---
 title: CustomEvent
 slug: Web/API/CustomEvent
+l10n:
+  sourceCommit: b280ea1234452ff553caa466bf532a66ba51db01
 ---
 
 {{APIRef("DOM")}}
@@ -16,18 +18,16 @@ slug: Web/API/CustomEvent
 - {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}
   - : `CustomEvent` を生成します。
 
-## プロパティ
+## インスタンスプロパティ
 
-_親である {{domxref("Event")}} インターフェイスからプロパティを継承しています。_
+_親である {{domxref("Event")}} インターフェイスから継承したプロパティがありますます。_
 
-- {{domxref("CustomEvent.detail")}} {{readonlyinline}}
+- {{domxref("CustomEvent.detail")}} {{ReadOnlyInline}}
   - : イベントが初期化されたときに渡された何らかのデータを返します。
 
-<em>このインターフェイスは親である {{domxref("Event")}} からプロパティを継承します</em>
+## インスタンスメソッド
 
-## メソッド
-
-_親である {{domxref("Event")}} インターフェイスからメソッドを継承しています。_
+_親である {{domxref("Event")}} インターフェイスから継承したメソッドがあります。_
 
 - {{domxref("CustomEvent.initCustomEvent()")}} {{deprecated_inline}}
   - : `CustomEvent` オブジェクトを初期化します。イベントが既に配信されている場合、このメソッドは何も行いません。

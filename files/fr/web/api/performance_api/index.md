@@ -1,71 +1,97 @@
 ---
-title: Performance API
+title: API Performance
 slug: Web/API/Performance_API
-tags:
-  - API
-  - Guide
-  - Aperçu
-  - Performance
-  - Performance Web
-translation_of: Web/API/Performance_API
+l10n:
+  sourceCommit: 2b649ca83589bf827d99db5d450c0c65a9de7a24
 ---
 
-{{DefaultAPISidebar("High Resolution Time")}}
+{{DefaultAPISidebar("Performance API")}}
 
-La norme [High Resolution Time](https://www.w3.org/TR/hr-time/) définit l'interface [`Performance`](/fr/docs/Web/API/Performance) qui prend en charge les mesures de latence côté client au sein des applications. Les interfaces [`Performance`](/fr/docs/Web/API/Performance) sont considérées comme étant à _haute résolution_, car elles sont précises au millième de milliseconde (sous réserve de contraintes matérielles ou logicielles).
+L'API Performance est un ensemble de standards utilisés pour mesurer les performances des applications web.
 
-Les interfaces prennent en charge un certain nombre de cas d'utilisation, notamment le calcul des taux de trame (potentiellement important dans les animations) et l'évaluation comparative (comme le temps de chargement d'une ressource).
+## Concepts et utilisation
 
-Comme l'_horloge système_ d'une plateforme est sujette à divers _décalages_ (comme les ajustements NTP), les interfaces prennent en charge une _horloge monotone_, c'est-à-dire une horloge toujours croissante. À ce titre, l'API [`Performance`](/fr/docs/Web/API/Performance) définit un type [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) plutôt que d'utiliser l'interface {{jsxref("Date.now", "Date.now()")}}.
+Si on veut s'assurer que les applications web sont rapides, il est important de mesurer et d'analyser différentes métriques relatives aux performances. L'API Performance fournit des métriques natives et l'outillage pour ajouter des mesures spécifiques à la frise chronologique des performances du navigateur. La frise chronologique des performances contient des horodatages à haute précision et peut être affichée dans les outils de développement. Les données correspondantes peuvent aussi être envoyées à des outils d'analyse externes pour enregistrer l'évolution des performances sur le temps.
 
-## DOMHighResTimeStamp
+Chaque métrique de performance est représentée par un objet [`PerformanceEntry`](/fr/docs/Web/API/PerformanceEntry). Une entrée de performance possède un nom (`name`), une durée (`duration`), un horodatage de début (`startTime`) et un type (`type`). Toutes les métriques de performance étendent l'interface `PerformanceEntry` en la spécialisant.
 
-Le type [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp), comme son nom l'indique, représente un point temporel de haute résolution. Ce type est un `double` et est utilisé par les interfaces de performance. La valeur peut être un point discret dans le temps ou la différence de temps entre deux points discrets dans le temps.
+La plupart des entrées de performance sont enregistrées sans que vous ayez à faire quoi que ce soit. Elles sont disponibles via la méthode [`Performance.getEntries()`](/fr/docs/Web/API/Performance/getEntries) ou (encore mieux) grâce aux instances de [`PerformanceObserver`](/fr/docs/Web/API/PerformanceObserver). On a par exemple les entrées natives [`PerformanceEventTiming`](/fr/docs/Web/API/PerformanceEventTiming) qui sont enregistrées pour les évènements dont la durée dépasse un seuil donné. L'API Performance permet aussi de définir et d'enregistrer des évènements sur mesure à l'aide des interfaces [`PerformanceMark`](/fr/docs/Web/API/PerformanceMark) et [`PerformanceMeasure`](/fr/docs/Web/API/PerformanceMeasure).
 
-L'unité de [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) est la milliseconde et doit être précise à 5 µs (microsecondes). Toutefois, si le navigateur n'est pas en mesure de fournir une valeur temporelle précise à 5 microsecondes (en raison, par exemple, de contraintes matérielles ou logicielles), le navigateur peut représenter la valeur comme un temps en millisecondes précis à la milliseconde près.
+L'interface [`Performance`](/fr/docs/Web/API/Performance) est disponible sur chaque contexte global à l'aide de [`self.performance`](/fr/docs/Web/API/performance_property) et permet d'ajouter des entrées de performance spécifiques, de récupérer ou de purger les entrées de performance.
 
-## Méthodes
+L'interface [`PerformanceObserver`](/fr/docs/Web/API/PerformanceObserver) permet d'écouter les évènements liés à l'enregistrement des différents types d'entrée de performance.
 
-L'interface [`Performance`](/fr/docs/Web/API/Performance) possède deux méthodes. La méthode [`now()`](/fr/docs/Web/API/Performance/now) renvoie un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) dont la valeur dépend de [`navigationStart`](/fr/docs/Web/API/PerformanceTiming/navigationStart) et du contexte. Si le contexte est une fenêtre, la valeur est l'heure de création du contexte du navigateur et si le contexte est un [`Worker`](/fr/docs/Web/API/Worker), la valeur est l'heure de création du worker.
+Pour plus d'informations sur les concepts de cette API, voir [la section sur les guides de l'API Performance](#guides) ci-après.
 
-La méthode [`toJSON()`](/fr/docs/Web/API/Performance/toJSON) renvoie une sérialisation de l'objet [`Performance`](/fr/docs/Web/API/Performance), pour les attributs qui peuvent être sérialisés.
+![Diagramme UML des interfaces de l'API Performance](diagram.svg)
 
-## Propriétés
+## Référence
 
-L'interface [`Performance`](/fr/docs/Web/API/Performance) possède deux propriétés. La propriété [`timing`](/fr/docs/Web/API/Performance/timing) {{deprecated_inline}} renvoie un objet [`PerformanceTiming`](/fr/docs/Web/API/PerformanceTiming) contenant des informations de performance liées à la latence, telles que l'heure de début de navigation, les heures de début et de fin des redirections, les heures de début et de fin des réponses, etc.
+L'API Performance définit les interfaces suivantes&nbsp;:
 
-La propriété [`navigation`](/fr/docs/Web/API/Performance/navigation) {{deprecated_inline}} renvoie un objet [`PerformanceNavigation`](/fr/docs/Web/API/PerformanceNavigation) représentant le type de navigation qui se produit dans le contexte de navigation donné, comme la page vers laquelle on a navigué depuis l'historique, la page vers laquelle on a navigué en suivant un lien, etc.
-
-## Interfaces
-
+- [`EventCounts`](/fr/docs/Web/API/EventCounts)
+  - : Une carte de correspondance en lecture seule, renvoyée par la propriété [`performance.eventCounts`](/fr/docs/Web/API/Performance/eventCounts), qui contient le nombre d'évènements émis, répartis par type d'évènement.
+- [`LargestContentfulPaint`](/fr/docs/Web/API/LargestContentfulPaint)
+  - : Mesure la durée de rendu du plus grand bloc de texte ou de la plus grande image visible au sein de la zone d'affichage (<i lang="en">viewport</i>) écoulée depuis le début du chargement de la page.
+- [`LayoutShift`](/fr/docs/Web/API/LayoutShift)
+  - : Fournit des indications sur la stabilité de la disposition d'une page selon les mouvements des éléments de la page.
+- [`LayoutShiftAttribution`](/fr/docs/Web/API/LayoutShiftAttribution)
+  - : Fournit des informations de débogage pour les éléments qui subissent un décalage sur la page.
 - [`Performance`](/fr/docs/Web/API/Performance)
-  - : Fournit des méthodes et des propriétés contenant des informations sur les performances liées au temps pour la page donnée.
+  - : L'interface principale permettant d'accéder aux mesures de performance. Elle est disponible dans les contextes des fenêtres et des <i lang="en">workers</i> via [`self.performance`](/fr/docs/Web/API/performance_property).
+- [`PerformanceElementTiming`](/fr/docs/Web/API/PerformanceElementTiming)
+  - : Mesure les horodatages pour le rendu d'éléments spécifiques.
 - [`PerformanceEntry`](/fr/docs/Web/API/PerformanceEntry)
-  - : Fournit des méthodes et des propriétés pour encapsuler une seule mesure de performance qui fait partie de la chronologie des performances.
-- [`PerformanceFrameTiming`](/fr/docs/Web/API/PerformanceFrameTiming)
-  - : Fournit des méthodes et des propriétés contenant des données de synchronisation de trame sur la boucle d'événements du navigateur.
+  - : Une entrée de la frise chronologique des performances qui encapsule une seule métrique de performance. Toutes les métriques de performance héritent de cette interface.
+- [`PerformanceEventTiming`](/fr/docs/Web/API/PerformanceEventTiming)
+  - : Mesure la latence des évènements (et permet entre autres de mesurer le <i lang="en">first input delay</i> (ou FID) qui correspond à la durée entre l'interaction de la personne avec l'application et le moment où le navigateur peut réagir).
+- [`PerformanceLongTaskTiming`](/fr/docs/Web/API/PerformanceLongTaskTiming)
+  - : Détecte les tâches longues qui monopolisent le rendu et empêchent l'exécution d'autres tâches.
 - [`PerformanceMark`](/fr/docs/Web/API/PerformanceMark)
-  - : Une interface abstraite pour les [entrées de performance](/fr/docs/Web/API/PerformanceEntry) avec un [type d'entrée](/fr/docs/Web/API/PerformanceEntry/entryType) de « `mark` ». Les entrées de ce type sont créées en appelant [`performance.mark()`](/fr/docs/Web/API/Performance/mark) pour ajouter un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) (un marqueur) à la chronologie des performances du navigateur.
+  - : Un marqueur spécifique pour votre entrée sur mesure dans la frise chronologique des performances.
 - [`PerformanceMeasure`](/fr/docs/Web/API/PerformanceMeasure)
-  - : Une interface abstraite pour les [entrées de performance](/fr/docs/Web/API/PerformanceEntry) avec un [type d'entrée](/fr/docs/Web/API/PerformanceEntry/entryType) de « `measure` ». Les entrées de ce type sont créées en appelant [`performance.measure()`](/fr/docs/Web/API/Performance/measure) pour ajouter un [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) (une mesure) entre deux marqueurs à la chronologie des performances du navigateur.
+  - : Permet une mesure spécifique entre deux entrées de performance.
 - [`PerformanceNavigationTiming`](/fr/docs/Web/API/PerformanceNavigationTiming)
-  - : Fournit des méthodes et des propriétés pour stocker et récupérer [les horodatages haute résolution](/fr/docs/Web/API/DOMHighResTimeStamp) ou des métriques concernant les événements de navigation de document du navigateur.
+  - : Mesure les évènements de navigation dans le document, par exemple la durée nécessaire au chargement du document.
 - [`PerformanceObserver`](/fr/docs/Web/API/PerformanceObserver)
-  - : Fournit des méthodes et des propriétés utilisées pour observer les événements de mesure des performances et être informé des nouvelles [entrées de performance](/fr/docs/Web/API/PerformanceEntry) lorsqu'elles sont enregistrées dans la chronologie des performances du navigateur.
+  - : Écoute les nouvelles entrées de performance lorsqu'elles sont enregistrées sur la frise chronologique des performances du navigateur.
+- [`PerformanceObserverEntryList`](/fr/docs/Web/API/PerformanceObserverEntryList)
+  - : Énumère les entrées observées pour un observateur de performance (`PerformanceObserver`) donné.
+- [`PerformancePaintTiming`](/fr/docs/Web/API/PerformancePaintTiming)
+  - : Mesure les opérations de rendu qui ont lieu pendant la construction de la page web.
 - [`PerformanceResourceTiming`](/fr/docs/Web/API/PerformanceResourceTiming)
-  - : Fournit des méthodes et des propriétés permettant de récupérer et d'analyser des données détaillées de synchronisation du réseau concernant le chargement des ressources d'une application.
+  - : Mesure les métriques liées aux chargements réseau comme les horodatages de début et de fin pour les redirections, les récupérations de ressources, les requêtes DNS, les appels réseau, etc.
+- [`PerformanceServerTiming`](/fr/docs/Web/API/PerformanceServerTiming)
+  - : Expose les métriques du serveur qui sont envoyées dans la réponse via l'en-tête [`Server-Timing`](/fr/docs/Web/HTTP/Headers/Server-Timing).
+- [`TaskAttributionTiming`](/fr/docs/Web/API/TaskAttributionTiming)
+  - : Identifie le type de tâche et le conteneur responsable de la tâche longue.
+- [`VisibilityStateEntry`](/fr/docs/Web/API/VisibilityStateEntry)
+  - : Le chronométrage relatif au changement d'état de visibilité de la page (par exemple quand un onglet passe du premier plan à l'arrière-plan et vice versa).
+
+## Guides
+
+Les guides qui suivent vous permettront de comprendre les concepts fondamentaux de l'API Performance tout en fournissant un aperçu de son potentiel&nbsp;:
+
+- [Les données de performance](/fr/docs/Web/API/Performance_API/Performance_data)
+  - : Collecter, récupérer et manipuler les données de performance.
+- [Chronométrage haute précision](/fr/docs/Web/API/Performance_API/High_precision_timing)
+  - : Mesurer à l'aide d'horodatage haute précision et d'horloges monotones.
+- [Chronométrage pour la récupération des ressources](/fr/docs/Web/API/Performance_API/Resource_timing)
+  - : Mesurer les performances réseau pour la récupération des ressources telles que les images, les fichiers CSS ou JavaScript.
+- [Chronométrage de la navigation](/fr/docs/Web/API/Performance_API/Navigation_timing)
+  - : Mesurer les performances relatives à la navigation dans un document.
+- [Chronométrage applicatif](/fr/docs/Web/API/Performance_API/User_timing)
+  - : Mesurer et enregistrer les données de performance spécifiques à votre application.
+- [Chronométrage côté serveur](/fr/docs/Web/API/Performance_API/Server_timing)
+  - : Récupérer les métriques côté serveur.
+
+<!-- Voir https://github.com/openwebdocs/project/issues/157 pour les parties manquantes au moment de cette mise à jour (2023-07-31). -->
 
 ## Spécifications
 
 {{Specifications}}
 
-## État de l'implémentation'
-
-Comme le montre le tableau [Compatibilité des navigateurs](/fr/docs/Web/API/Performance#browser_compatibility) de l'interface [`Performance`](/fr/docs/Web/API/Performance), la plupart de ces interfaces sont largement implémentées par les navigateurs de bureau.
-
-Pour tester le support de votre navigateur pour l'interface [`Performance`](/fr/docs/Web/API/Performance), exécutez l'application [`perf-api-support`](https://mdn.github.io/web-performance/perf-api-support.html).
-
 ## Voir aussi
 
-- [Utilisation de l'API `Performance`](/fr/docs/Web/API/Performance_API/Using_the_Performance_API)
-- [Une introduction aux API de chronométrage des performances du Web](https://w3c.github.io/perf-timing-primer/)
+- [La gestion des performances sur le Web](/fr/docs/Web/Performance)
+- [Apprendre&nbsp;: les performances sur le Web](/fr/docs/Learn/Performance)

@@ -1,19 +1,9 @@
 ---
 title: BrowserSetting
 slug: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting
-tags:
-  - API
-  - Add-ons
-  - BrowserSetting
-  - Extensions
-  - Reference
-  - Type
-  - Types
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Un `BrowserSetting` est un objet représentant un paramètre de navigateur.
 

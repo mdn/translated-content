@@ -1,20 +1,9 @@
 ---
 title: downloads.pause()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/pause
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
-  - pause
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/pause
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 La fonction **`pause()`** de l'API {{WebExtAPIRef("downloads")}} interrompt un téléchargement.
 
@@ -24,8 +13,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var pausing = browser.downloads.pause(
-  downloadId      // integer
-)
+  downloadId, // integer
+);
 ```
 
 ### Paramètres

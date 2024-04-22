@@ -1,10 +1,9 @@
 ---
 title: tabs.get()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/get
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/get
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Получает сведения об указанной вкладке.
 

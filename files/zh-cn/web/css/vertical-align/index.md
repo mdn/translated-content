@@ -100,18 +100,39 @@ vertical-align: unset;
 ### HTML
 
 ```html
-<div>An <img src="frame_image.svg" alt="link" width="32" height="32" /> image with a default alignment.</div>
-<div>An <img class="top" src="frame_image.svg" alt="link" width="32" height="32" /> image with a text-top alignment.</div>
-<div>An <img class="bottom" src="frame_image.svg" alt="link" width="32" height="32" /> image with a text-bottom alignment.</div>
-<div>An <img class="middle" src="frame_image.svg" alt="link" width="32" height="32" /> image with a middle alignment.</div>
+<div>
+  An <img src="frame_image.svg" alt="link" width="32" height="32" /> image with
+  a default alignment.
+</div>
+<div>
+  An
+  <img class="top" src="frame_image.svg" alt="link" width="32" height="32" />
+  image with a text-top alignment.
+</div>
+<div>
+  An
+  <img class="bottom" src="frame_image.svg" alt="link" width="32" height="32" />
+  image with a text-bottom alignment.
+</div>
+<div>
+  An
+  <img class="middle" src="frame_image.svg" alt="link" width="32" height="32" />
+  image with a middle alignment.
+</div>
 ```
 
 ### CSS
 
 ```css
-img.top { vertical-align: text-top; }
-img.bottom { vertical-align: text-bottom; }
-img.middle { vertical-align: middle; }
+img.top {
+  vertical-align: text-top;
+}
+img.bottom {
+  vertical-align: text-bottom;
+}
+img.middle {
+  vertical-align: middle;
+}
 ```
 
 ### 结果

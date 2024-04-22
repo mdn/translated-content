@@ -1,7 +1,6 @@
 ---
 title: HTMLFormElement.enctype
 slug: Web/API/HTMLFormElement/enctype
-translation_of: Web/API/HTMLFormElement/enctype
 ---
 
 {{APIRef("HTML DOM")}}
@@ -13,8 +12,8 @@ Le type d'encodage généralement utilisé est "application/x-www-form-urlencode
 ## Syntaxe
 
 ```js
-string = form.enctype
-form.enctype = string
+string = form.enctype;
+form.enctype = string;
 ```
 
 ## Exemple

@@ -1,18 +1,11 @@
 ---
 title: for...in
 slug: Web/JavaScript/Reference/Statements/for...in
-tags:
-  - Instruction
-  - JavaScript
-  - Reference
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/for...in
-original_slug: Web/JavaScript/Reference/Instructions/for...in
 ---
 
 {{jsSidebar("Statements")}}
 
-L'**instruction `for...in`** permet d'itérer sur les [propriétés énumérables](/fr/docs/Web/JavaScript/Caract%C3%A8re_%C3%A9num%C3%A9rable_des_propri%C3%A9t%C3%A9s_et_rattachement) d'un objet qui ne sont pas [des symboles](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Symbol). Pour chaque propriété obtenue, on exécute une instruction (ou plusieurs grâce à un {{jsxref("Instructions/bloc","bloc","",1)}} d'instructions).
+L'**instruction `for...in`** permet d'itérer sur les [propriétés énumérables](/fr/docs/Web/JavaScript/Caractère_énumérable_des_propriétés_et_rattachement) d'un objet qui ne sont pas [des symboles](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Symbol). Pour chaque propriété obtenue, on exécute une instruction (ou plusieurs grâce à un {{jsxref("Instructions/bloc","bloc","",1)}} d'instructions).
 
 {{EmbedInteractiveExample("pages/js/statement-forin.html")}}
 
@@ -20,7 +13,7 @@ L'**instruction `for...in`** permet d'itérer sur les [propriétés énumérable
 
 ```js
 for (variable in objet) {
-  instructions
+  instructions;
 }
 ```
 
@@ -58,7 +51,7 @@ Si on souhaite ne parcourir que les propriétés propres d'un objet et pas celle
 La boucle `for...in` qui suit utilise parcourt l'objet `obj` et ses propriétés énumérables qui ne sont pas des symboles en fournissant la chaîne de caractères qui décrit le nom de la propriété et sa valeur.
 
 ```js
-var obj = {a:1, b:2, c:3};
+var obj = { a: 1, b: 2, c: 3 };
 
 for (var prop in obj) {
   console.log(`obj.${prop} = ${obj[prop]}`);
@@ -73,7 +66,7 @@ for (var prop in obj) {
 La fonction qui suit utilise {{jsxref("Object.hasOwnProperty", "hasOwnProperty()")}} pour ne pas afficher les propriétés héritées :
 
 ```js
-var triangle = {a:1, b:2, c:3};
+var triangle = { a: 1, b: 2, c: 3 };
 
 function TriangleCouleur() {
   this.couleur = "rouge";
@@ -84,7 +77,7 @@ TriangleCouleur.prototype = triangle;
 var obj = new TriangleCouleur();
 
 for (var prop in obj) {
-  if( obj.hasOwnProperty( prop ) ) {
+  if (obj.hasOwnProperty(prop)) {
     console.log(`obj.${prop} = ${obj[prop]}`);
   }
 }

@@ -1,7 +1,6 @@
 ---
 title: <integer>
 slug: Web/CSS/integer
-translation_of: Web/CSS/integer
 ---
 
 {{CSSRef}}

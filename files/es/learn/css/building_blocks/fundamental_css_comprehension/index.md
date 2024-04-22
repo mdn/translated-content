@@ -1,7 +1,6 @@
 ---
 title: Comprensión de los fundamentos de CSS
 slug: Learn/CSS/Building_blocks/Fundamental_CSS_comprehension
-original_slug: Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/Introduction_to_CSS/Debugging_CSS", "Learn/CSS/Introduction_to_CSS")}}

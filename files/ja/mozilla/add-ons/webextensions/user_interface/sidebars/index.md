@@ -9,7 +9,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Sidebars
 
 ブラウザーには、表示するサイドバーを選択するための UI が用意されています。例えば、 Firefox には「表示」→「サイドバー」のメニューがあります。それぞれのブラウザーウィンドウには独自のサイドバーを表示することができ、ウィンドウ内のすべてのタブに表示されます。
 
-ブラウザは、いくつかの組み込みサイドバーを含むことができます。たとえば Firefox には、ブックマークを操作するためのサイドバーが含まれています。
+ブラウザーは、いくつかの組み込みサイドバーを含むことができます。たとえば Firefox には、ブックマークを操作するためのサイドバーが含まれています。
 
 ![](bookmarks-sidebar.png)
 
@@ -21,7 +21,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Sidebars
 
 ```js
 // sidebar.js
-browser.windows.getCurrent({populate: true}).then((windowInfo) => {
+browser.windows.getCurrent({ populate: true }).then((windowInfo) => {
   myWindowId = windowInfo.id;
 });
 ```

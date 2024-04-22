@@ -1,22 +1,53 @@
 ---
 title: HTMLTitleElement
 slug: Web/API/HTMLTitleElement
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{ApiRef}}
+{{ APIRef("HTML DOM") }}
 
-`title` オブジェクトは、文書のタイトルを含む [HTMLTitleElement](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-79243169) インタフェースを公開します。この要素は {{domxref("HTMLElement")}} インタフェースの全てのプロパティ及びメソッドを継承します。
+**`HTMLTitleElement`** インターフェイスは文書の {{ HTMLElement( "title" )}} が実装しています。この要素は {{domxref("HTMLElement")}} インターフェイスのすべてのプロパティおよびメソッドを継承しています。
 
-## プロパティ
+{{InheritanceDiagram}}
 
-{{domxref("HTMLElement")}} からの継承するプロパティに加え、以下の固有プロパティを持ちます。
+## インスタンスプロパティ
+
+_親である {{domxref("HTMLElement")}} から継承したプロパティがあります。_
 
 - {{domxref("HTMLTitleElement.text")}}
-  - : 文書のタイトルを表す {{domxref("DOMString")}}
+  - : 文字列で、文書の題名のテキストを表し、またテキスト部分のみを表します。例えば、この例を考えてみてください。
 
-## メソッド
+```html
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title>
+      Hello world! <span class="highlight">Isn't this wonderful</span> really?
+    </title>
+  </head>
+  <body></body>
+</html>
+```
 
-固有のメソッドはありません。{{domxref("HTMLElement")}} からの継承メソッドを持ちます。
+```js
+const title = document.querySelector("title");
+console.log(title.text); // yield: "Hello world! really?"
+```
+
+ご覧の通り、`span` タグとその内容はスキップされています。
+
+## インスタンスメソッド
+
+_固有のメソッドはありません。親である {{domxref("HTMLElement")}} から継承したメソッドがあります。_
+
+## 例
+
+`document.title` と `document.querySelector('title')` を混同しないでください。
+
+前者は文書の題名の内側のテキスト値を設定したり取得したりするための単なるセッター/ゲッターメソッドで、後者は {{domxref("HTMLTitleElement")}} オブジェクトです。ですから、`document.title.text = "Hello world!";` のように書くことはできません。
+
+代わりに、シンプルに `document.title = "Hello world!";` と書くことができます。これは `document.querySelector('title').text = "Hello world!";` と等価です。
 
 ## 仕様書
 
@@ -24,8 +55,8 @@ slug: Web/API/HTMLTitleElement
 
 ## ブラウザーの互換性
 
-{{Compat("api.HTMLTitleElement")}}
+{{Compat}}
 
 ## 関連情報
 
-- {{HTMLElement("title")}} - `HTMLTitleElement` インタフェースを持つ HTML 要素
+- このインターフェイスを実装している HTML 要素: {{HTMLElement("title")}}

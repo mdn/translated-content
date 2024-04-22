@@ -1,12 +1,6 @@
 ---
 title: scroll-padding-block-start
 slug: Web/CSS/scroll-padding-block-start
-tags:
-  - CSS
-  - Propriété
-  - Propriété logique
-  - Reference
-translation_of: Web/CSS/scroll-padding-block-start
 ---
 
 {{CSSRef}}

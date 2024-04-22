@@ -2,6 +2,7 @@
 title: Git and GitHub
 slug: Learn/Tools_and_testing/GitHub
 ---
+
 {{LearnSidebar}}
 
 모든 개발자는 **버전 관리 시스템** (**VCS**)을 사용하거나 앞으로 그럴 것이다. VCS는 다른 개발자와의 협업 시 코드 중복작성으로 인한 손실을 방지해 주고, 문재가 생겼을 시 이전 버전으로의 롤백을 쉽게 해준다. 가장 유명한 VCS는 Git와 그와 관련된 소셜 코딩 사이트, GitHub이다. 이 글은 이 두가지에 대해 설명할 것이다.

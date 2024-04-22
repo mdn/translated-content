@@ -1,7 +1,6 @@
 ---
 title: Relationship of grid layout to other layout methods
 slug: Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods
-original_slug: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 ---
 
 CSS 그리드 레이아웃은 레이아웃 작업을 위한 전체 시스템 중의 일부로서, 다른 CSS 기술과 함께 어우러져 작동하도록 설계되었습니다. 이번 가이드에서는 이미 사용하고 계신 다른 기술과 그리드가 어떻게 잘 어울리는지 설명해 드리겠습니다.
@@ -19,7 +18,9 @@ CSS 그리드 레이아웃과 [CSS 플랙스박스(Flexbox) 레이아웃](/ko/do
 또한, {{cssxref("flex-wrap")}} 프로퍼티 값으로 `wrap`을 지정해서, 만약 컨테이너 안에 있는 공간이 플랙스 기준값 너비의 아이템들을 모두 나열하지 못할 만큼 좁아진다면, 다음 행으로 줄 바꿈 하도록 하였습니다.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -67,20 +68,22 @@ CSS 그리드 레이아웃과 [CSS 플랙스박스(Flexbox) 레이아웃](/ko/do
 다음 예제에선 그리드를 써서 똑같은 레이아웃을 만들어 보았습니다. 이번엔 `1fr` 크기로 된 세 개의 세로 열 트랙으로 이루어져 있습니다. 아이템 자체에는 아무것도 설정할 필요가 없고, 아이템들은 생성된 그리드의 각 셀에 하나씩 배치됩니다. 보시다시피 아이템들은 행과 열에 줄지어서 그리드 위에 정확히 맞추어져 있습니다. 아이템이 다섯 개인 경우, 2번째 행의 끝부분은 빈 곳으로 남게 됩니다.
 
 ```css
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-border: 2px solid #f76707;
-border-radius: 5px;
-background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-border: 2px solid #ffa94d;
-border-radius: 5px;
-background-color: #ffd8a8;
-padding: 1em;
-color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -127,7 +130,9 @@ color: #d9480f;
 플랙스박스를 사용하는 첫 번째 예제에는 컨테이너 안에 세 개의 아이템이 있습니다. 감싸고 있는 요소에 {{cssxref("min-height")}}를 지정해서, 플랙스 컨테이너의 높이를 정의해 줍니다. 플렉스 컨테이너의 {{cssxref("align-items")}} 값을 `flex-end`로 설정하여 아이템이 플랙스 컨테이너의 끝에 정렬되도록 했습니다. 또한, `box1`에 {{cssxref("align-self")}} 프로퍼티를 설정하여 기본값을 덮어씌우면서 컨테이너의 높이 만큼 늘어나게 하였고, `box2`에는 플랙스 컨테이너의 시작 지점에 정렬되도록 하였습니다.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -173,7 +178,9 @@ color: #d9480f;
 다음 두 번째 예제에서는 그리드를 써서 앞에서와 똑같은 레이아웃을 구현했습니다. 이번에는 그리드 레이아웃에 적용할 때 쓰는 박스 정렬 프로퍼티를 사용하였습니다. 그래서 `flex-start`와 `flex-end`가 아닌 `start`와 `end`를 써서 정렬합니다. 그리드 레이아웃의 경우 해당 그리드 영역을 기준으로 내부에 있는 아이템들을 정렬합니다. 이번 경우에는 단일 그리드 셀로 되어 있지만, 그리드 영역이 여러 그리드 셀로 구성되어 있을 수도 있습니다.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -201,7 +208,7 @@ color: #d9480f;
 ```css
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   align-items: end;
   grid-auto-rows: 200px;
 }
@@ -230,7 +237,9 @@ color: #d9480f;
 다음 예제에서는 반복 표기법을 지정할 때 정수 대신 `auto-fill` 키워드를 사용하였고 기준 크기가 200픽셀이 되도록 트랙 목록을 설정했습니다. 즉, 그리드는 컨테이너에 200픽셀 너비의 세로 열 트랙을 채울 수 있을 만큼의 개수를 생성하게 됩니다.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -269,7 +278,9 @@ color: #d9480f;
 이것은 플랙스박스와 완전히 똑같지는 않습니다. 플랙스박스 예제에서는 아이템이 다음 줄로 행 바꿈 하기 전에는 기본값인 200픽셀보다 더 넓었습니다. 그리드에서는 `auto-fill`과 {{cssxref("minmax", "minmax()")}} 함수를 결합해서 비슷한 결과를 얻을 수 있습니다. 다음 예제에선 `minmax`를 써서 자동으로 채워지는 트랙을 만들었습니다. 트랙은 최소 200픽셀부터 시작해서 최대 `1fr`까지 늘어날 수 있도록 설정하였습니다. 브라우저는 우선 200픽셀 크기의 아이템을 (그리드 간격도 함께 고려해서) 컨테이너에 몇 개로 채울 수 있을지 계산을 하고 나서, 남아있는 공간을 최대치 `1fr` 기준으로 아이템들끼리 공유하면서 서로 늘어나도록 합니다.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -316,7 +327,9 @@ color: #d9480f;
 아래 예제에서는 네 개의 하위 아이템을 감싸는 wrapper 클래스의 블록이 있습니다. 3번 아이템은 단독으로 위치가 지정되었으며 라인을 기반으로 그리드에 배치되었습니다. 그리드 컨테이너에 `position: relative`를 지정해서 이 아이템이 위치를 잡을 때 참고하는 기준 요소가 됩니다.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -338,7 +351,9 @@ color: #d9480f;
   <div class="box1">One</div>
   <div class="box2">Two</div>
   <div class="box3">
-   This block is absolutely positioned. In this example the grid container is the containing block and so the absolute positioning offset values are calculated in from the outer edges of the area it has been placed into.
+    This block is absolutely positioned. In this example the grid container is
+    the containing block and so the absolute positioning offset values are
+    calculated in from the outer edges of the area it has been placed into.
   </div>
   <div class="box4">Four</div>
 </div>
@@ -347,7 +362,7 @@ color: #d9480f;
 ```css
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 200px;
   grid-gap: 20px;
   position: relative;
@@ -384,7 +399,9 @@ color: #d9480f;
 `.box3`의 position 값으로 relative를 지정했으며 그 밑에 있는 아이템에는 원래의 위치에서 벗어난 값을 따로 지정하였습니다. 이 경우 위치의 기준이 되는 요소는 그리드 영역이 됩니다.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -405,9 +422,12 @@ color: #d9480f;
 <div class="wrapper">
   <div class="box1">One</div>
   <div class="box2">Two</div>
-  <div class="box3">Three
+  <div class="box3">
+    Three
     <div class="abspos">
-     This block is absolutely positioned. In this example the grid area is the containing block and so the absolute positioning offset values are calculated in from the outer edges of the grid area.
+      This block is absolutely positioned. In this example the grid area is the
+      containing block and so the absolute positioning offset values are
+      calculated in from the outer edges of the grid area.
     </div>
   </div>
   <div class="box4">Four</div>
@@ -417,7 +437,7 @@ color: #d9480f;
 ```css
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 200px;
   grid-gap: 20px;
 }
@@ -432,8 +452,8 @@ color: #d9480f;
   position: absolute;
   top: 40px;
   left: 40px;
-  background-color: rgba(255,255,255,.5);
-  border: 1px solid rgba(0,0,0,0.5);
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.5);
   color: #000;
   padding: 10px;
 }
@@ -445,14 +465,16 @@ color: #d9480f;
 
 마지막으로 눈여겨볼 또 하나의 레이아웃 표준과 관련된 상호 작용으로 CSS 그리드 레이아웃과 `display: contents` 사이의 상호 작용이 있습니다. display 프로퍼티의`contents` 값은 [Display 표준 명세서](https://drafts.csswg.org/css-display/#box-generation)에 새로 정의된 것으로 다음과 같이 설명되어 있습니다:
 
-> “요소 자신은 어떠한 박스도 생성하지 않지만, 대신 포함하고 있는 하위 자식 요소와 가상 요소(pseudo-elements)가 평소처럼 박스를 생성하게 됩니다. 그래서 박스 생성과 레이아웃을 구현할 때, 문서의 계층 구조상 해당 요소가 아래 자식 요소와 가상 요소로 대체된 것처럼 다루어집니다.”
+> "요소 자신은 어떠한 박스도 생성하지 않지만, 대신 포함하고 있는 하위 자식 요소와 가상 요소(pseudo-elements)가 평소처럼 박스를 생성하게 됩니다. 그래서 박스 생성과 레이아웃을 구현할 때, 문서의 계층 구조상 해당 요소가 아래 자식 요소와 가상 요소로 대체된 것처럼 다루어집니다."
 
 만약에 아이템에 `display:` `contents`를 지정하면 보통 해당 요소가 만드는 박스는 사라지고, 자식 요소의 박스가 한 단계 상승한 것처럼 그 자리를 차지하게 됩니다. 이 얘기는 그리드 아이템의 자식 요소가 그리드 아이템이 될 수도 있다는 뜻입니다. 이상하게 들리시죠? 다음에 간단한 예를 들어보겠습니다. 아래 마크업에는 그리드가 있고, 이 그리드에 있는 첫 번째 아이템이 세 개의 열 트랙 모두를 가로지르도록 설정하였습니다. 또한, 이 아이템은 세 개의 중첩된 아이템들을 포함하고 있습니다. 이 아이템들은 컨테이너 바로 밑에 있는 자식 요소가 아니므로, 그리드 레이아웃의 일원으로 참여하지 않으면서 보통의 일반 블록 레이아웃으로 표시됩니다.
 
 ### Grid layout with nested child elements
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -508,7 +530,9 @@ color: #d9480f;
 이제 `.box1`에 `display:` `contents`규칙을 추가하면, 해당 아이템이 차지하고 있는 박스가 사라지면서 하위 아이템들이 그리드 아이템 자격을 얻게 되어 자동 배치 규칙에 따라 알아서 배치됩니다.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -569,47 +593,47 @@ color: #d9480f;
 3. [CSS 그리드 레이아웃](/ko/docs/Web/CSS/CSS_Grid_Layout)
 4. **가이드**
 
-    1. [그리드 레이아웃의 기본 개념](/ko/docs/Web/CSS/CSS_Grid_Layout/그리드_레이아웃의_기본_개념)
-    2. [다른 레이아웃 방법과의 관계](/ko/docs/Web/CSS/CSS_Grid_Layout/그리드_레이아웃과_다른_레이아웃_방법과의_관계)
-    3. [라인을 기준으로 한 아이템 배치](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_그리드의_라인을_기준으로_한_아이템_배치)
-    4. [그리드 템플릿 영역](/ko/docs/Web/CSS/CSS_Grid_Layout/그리드_템플릿_영역)
-    5. [이름이 주어진 그리드 라인을 이용한 레이아웃](/ko/docs/Web/CSS/CSS_Grid_Layout/이름이_주어진_그리드_라인을_이용한_레이아웃)
-    6. [Auto-placement in grid layout](/ko/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
-    7. [Box alignment in grid layout](/ko/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
-    8. [Grids, logical values, and writing modes](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
-    9. [CSS Grid Layout and Accessibility](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
-    10. [CSS Grid Layout and Progressive Enhancement](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
-    11. [Realizing common layouts using grids](/ko/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
+   1. [그리드 레이아웃의 기본 개념](/ko/docs/Web/CSS/CSS_Grid_Layout/그리드_레이아웃의_기본_개념)
+   2. [다른 레이아웃 방법과의 관계](/ko/docs/Web/CSS/CSS_Grid_Layout/그리드_레이아웃과_다른_레이아웃_방법과의_관계)
+   3. [라인을 기준으로 한 아이템 배치](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_그리드의_라인을_기준으로_한_아이템_배치)
+   4. [그리드 템플릿 영역](/ko/docs/Web/CSS/CSS_Grid_Layout/그리드_템플릿_영역)
+   5. [이름이 주어진 그리드 라인을 이용한 레이아웃](/ko/docs/Web/CSS/CSS_Grid_Layout/이름이_주어진_그리드_라인을_이용한_레이아웃)
+   6. [Auto-placement in grid layout](/ko/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
+   7. [Box alignment in grid layout](/ko/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
+   8. [Grids, logical values, and writing modes](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
+   9. [CSS Grid Layout and Accessibility](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
+   10. [CSS Grid Layout and Progressive Enhancement](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
+   11. [Realizing common layouts using grids](/ko/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
 
 5. **프로퍼티**
 
-    1. [grid](/ko/docs/Web/CSS/grid)
-    2. [grid-area](/ko/docs/Web/CSS/grid-area)
-    3. [grid-auto-columns](/ko/docs/Web/CSS/grid-auto-columns)
-    4. [grid-auto-flow](/ko/docs/Web/CSS/grid-auto-flow)
-    5. [grid-auto-rows](/ko/docs/Web/CSS/grid-auto-rows)
-    6. [grid-column](/ko/docs/Web/CSS/grid-column)
-    7. [grid-column-end](/ko/docs/Web/CSS/grid-column-end)
-    8. [grid-column-gap](/ko/docs/Web/CSS/grid-column-gap)
-    9. [grid-column-start](/ko/docs/Web/CSS/grid-column-start)
-    10. [grid-gap](/ko/docs/Web/CSS/grid-gap)
-    11. [grid-row](/ko/docs/Web/CSS/grid-row)
-    12. [grid-row-end](/ko/docs/Web/CSS/grid-row-end)
-    13. [grid-row-gap](/ko/docs/Web/CSS/grid-row-gap)
-    14. [grid-row-start](/ko/docs/Web/CSS/grid-row-start)
-    15. [grid-template](/ko/docs/Web/CSS/grid-template)
-    16. [grid-template-areas](/ko/docs/Web/CSS/grid-template-areas)
-    17. [grid-template-columns](/ko/docs/Web/CSS/grid-template-columns)
-    18. [grid-template-rows](/ko/docs/Web/CSS/grid-template-rows)
+   1. [grid](/ko/docs/Web/CSS/grid)
+   2. [grid-area](/ko/docs/Web/CSS/grid-area)
+   3. [grid-auto-columns](/ko/docs/Web/CSS/grid-auto-columns)
+   4. [grid-auto-flow](/ko/docs/Web/CSS/grid-auto-flow)
+   5. [grid-auto-rows](/ko/docs/Web/CSS/grid-auto-rows)
+   6. [grid-column](/ko/docs/Web/CSS/grid-column)
+   7. [grid-column-end](/ko/docs/Web/CSS/grid-column-end)
+   8. [grid-column-gap](/ko/docs/Web/CSS/grid-column-gap)
+   9. [grid-column-start](/ko/docs/Web/CSS/grid-column-start)
+   10. [grid-gap](/ko/docs/Web/CSS/grid-gap)
+   11. [grid-row](/ko/docs/Web/CSS/grid-row)
+   12. [grid-row-end](/ko/docs/Web/CSS/grid-row-end)
+   13. [grid-row-gap](/ko/docs/Web/CSS/grid-row-gap)
+   14. [grid-row-start](/ko/docs/Web/CSS/grid-row-start)
+   15. [grid-template](/ko/docs/Web/CSS/grid-template)
+   16. [grid-template-areas](/ko/docs/Web/CSS/grid-template-areas)
+   17. [grid-template-columns](/ko/docs/Web/CSS/grid-template-columns)
+   18. [grid-template-rows](/ko/docs/Web/CSS/grid-template-rows)
 
 6. **용어집**
 
-    1. [Grid](/ko/docs/Glossary/Grid)
-    2. [Grid lines](/ko/docs/Glossary/Grid_lines)
-    3. [Grid tracks](/ko/docs/Glossary/Grid_tracks)
-    4. [Grid cell](/ko/docs/Glossary/Grid_cell)
-    5. [Grid areas](/ko/docs/Glossary/Grid_areas)
-    6. [Gutters](/ko/docs/Glossary/Gutters)
-    7. [Grid Axis](/ko/docs/Glossary/Grid_Axis)
-    8. [Grid row](/ko/docs/Glossary/Grid_rows)
-    9. [Grid column](/ko/docs/Glossary/Grid_column)
+   1. [Grid](/ko/docs/Glossary/Grid)
+   2. [Grid lines](/ko/docs/Glossary/Grid_lines)
+   3. [Grid tracks](/ko/docs/Glossary/Grid_tracks)
+   4. [Grid cell](/ko/docs/Glossary/Grid_cell)
+   5. [Grid areas](/ko/docs/Glossary/Grid_areas)
+   6. [Gutters](/ko/docs/Glossary/Gutters)
+   7. [Grid Axis](/ko/docs/Glossary/Grid_Axis)
+   8. [Grid row](/ko/docs/Glossary/Grid_rows)
+   9. [Grid column](/ko/docs/Glossary/Grid_column)

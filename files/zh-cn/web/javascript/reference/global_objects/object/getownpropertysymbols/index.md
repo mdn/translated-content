@@ -32,7 +32,7 @@ Object.getOwnPropertySymbols(obj)
 
 ## 示例
 
-### 使用 getOwnPropertySymbols
+### 使用 Object.getOwnPropertySymbols()
 
 ```js
 const obj = {};

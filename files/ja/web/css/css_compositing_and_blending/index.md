@@ -1,7 +1,6 @@
 ---
 title: 合成と混合
 slug: Web/CSS/CSS_compositing_and_blending
-original_slug: Web/CSS/Compositing_and_Blending
 ---
 
 {{CSSRef}}
@@ -28,12 +27,12 @@ original_slug: Web/CSS/Compositing_and_Blending
 
 ### `background-blend-mode` プロパティ
 
-{{Compat("css.properties.background-blend-mode")}}
+{{Compat}}
 
 ### `isolation` プロパティ
 
-{{Compat("css.properties.isolation")}}
+{{Compat}}
 
 ### `mix-blend-mode` プロパティ
 
-{{Compat("css.properties.mix-blend-mode")}}
+{{Compat}}

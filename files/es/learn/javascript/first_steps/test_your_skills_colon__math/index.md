@@ -1,5 +1,5 @@
 ---
-title: 'Comprueba tus habilidades: Matematicas'
+title: "Comprueba tus habilidades: Matematicas"
 slug: Learn/JavaScript/First_steps/Test_your_skills:_Math
 ---
 
@@ -63,7 +63,7 @@ Si desea que se evalúe su trabajo, o está atascado y quiere pedir ayuda:
 1. Coloque su trabajo en un editor compartible en línea como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) o [Glitch](https://glitch.com/). Puede escribir el código usted mismo o usar los archivos de punto de partida vinculados en las secciones anteriores.
 2. Escriba una publicación solicitando evaluación o ayuda en la [categoría de aprendizaje del foro de Discourse de MDN](https://discourse.mozilla.org/c/mdn/learn). Su publicación debe incluir:
 
-    - Un título descriptivo como "Evaluación buscada para la prueba de habilidad de Matemáticas 1".
-    - Detalles de lo que ya ha probado y lo que le gustaría que hiciéramos, por ejemplo si está atascado y necesita ayuda, o desea una evaluación.
-    - Un enlace al ejemplo que desea evaluar o con el que necesita ayuda, en un editor compartible en línea (como se mencionó en el paso 1). Esta es una buena práctica para comenzar: es muy difícil ayudar a alguien con un problema de codificación si no puede ver su código.
-    - Un enlace a la tarea real o página de evaluación, para que podamos encontrar la pregunta con la que necesita ayuda.
+   - Un título descriptivo como "Evaluación buscada para la prueba de habilidad de Matemáticas 1".
+   - Detalles de lo que ya ha probado y lo que le gustaría que hiciéramos, por ejemplo si está atascado y necesita ayuda, o desea una evaluación.
+   - Un enlace al ejemplo que desea evaluar o con el que necesita ayuda, en un editor compartible en línea (como se mencionó en el paso 1). Esta es una buena práctica para comenzar: es muy difícil ayudar a alguien con un problema de codificación si no puede ver su código.
+   - Un enlace a la tarea real o página de evaluación, para que podamos encontrar la pregunta con la que necesita ayuda.

@@ -1,14 +1,6 @@
 ---
 title: Modèle de boîte
 slug: Web/CSS/CSS_box_model
-tags:
-  - Aperçu
-  - CSS
-  - CSS Box Model
-  - Overview
-  - Reference
-translation_of: Web/CSS/CSS_Box_Model
-original_slug: Web/CSS/Modèle_de_boîte_CSS
 ---
 
 {{CSSRef}}

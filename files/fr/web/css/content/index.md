@@ -1,8 +1,6 @@
 ---
 title: content
 slug: Web/CSS/content
-translation_of: Web/CSS/content
-browser-compat: css.properties.content
 ---
 
 {{CSSRef}}
@@ -68,6 +66,7 @@ content: unset;
 - [`<image>`](/fr/docs/Web/CSS/image)
   - : Une image (valeur de type [`<image>`](/fr/docs/Web/CSS/image)) avec une [`url()`](/fr/docs/Web/CSS/url) ou [`<gradient>`](/fr/docs/Web/CSS/gradient) ou une partie de la page web fournie par la fonction [`element()`](/fr/docs/Web/CSS/element) et qui indique le contenu à afficher.
 - [`counter()`](/fr/docs/Web/CSS/counter)
+
   - : Un [compteur CSS](/fr/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters), généralement un nombre, produit via les propriétés [`<counter-reset>`](/fr/docs/Web/CSS/counter-reset) et [`<counter-increment>`](/fr/docs/Web/CSS/counter-increment) et qui peut être affiché grâce à la fonction [`counter()`](/fr/docs/Web/CSS/counter) ou [`counters()`](/fr/docs/Web/CSS/counters).
 
     [`counter()`](/fr/docs/Web/CSS/counter) possède deux formes&nbsp;: `counter(_name_)` ou `counter(_name_, _style_)`. Le texte généré est la valeur du compteur le plus profond possédant un nom donné dans ce pseudo-élément&nbsp;; il est formaté selon le style ([`<list-style-type>`](/fr/docs/Web/CSS/list-style-type) indiqué (`decimal` par défaut).
@@ -86,7 +85,7 @@ content: unset;
 Le contenu généré par CSS n'est pas inclus dans le [DOM](/fr/docs/Web/API/Document_Object_Model/Introduction). Pour cette raison, il ne fait pas partie de l'[arbre d'accessibilité](/fr/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis) et certaines technologies d'assistances ou certains navigateurs ne permettront pas d'annoncer ce contenu. Si ce contenu porte des informations essentielles à la compréhension de la page, il faut inclure ces informations de façon sémantique dans le document principal.
 
 - [La prise en charge relative à l'accessibilité pour les contenus générés par CSS — Tink (en anglais)](https://tink.uk/accessibility-support-for-css-generated-content/)
-- [Comprendre les règles WCAG 1.3](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways)
+- [Comprendre les règles WCAG 1.3](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_—_Create_content_that_can_be_presented_in_different_ways)
 - [Comprendre les critères de succès 1.3.1 | Comprendre WCAG 2.0 (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
 
 ## Définition formelle
@@ -107,16 +106,23 @@ Dans cet exemple, on insère des marques de citation et le mot «&nbsp;Chapitre&
 
 ```html
 <h1>5</h1>
-<p>Commençons par une citation de Sir Tim Berners-Lee,
+<p>
+  Commençons par une citation de Sir Tim Berners-Lee,
   <q cite="http://www.w3.org/People/Berners-Lee/FAQ.html#Internet">
-    I was lucky enough to invent the Web at the time when the Internet already existed - and had for a decade and a half.</q>
-    We must understand that there is nothing fundamentally wrong with building on the contributions of others.
+    I was lucky enough to invent the Web at the time when the Internet already
+    existed - and had for a decade and a half.</q
+  >
+  We must understand that there is nothing fundamentally wrong with building on
+  the contributions of others.
 </p>
 
 <h1>6</h1>
-<p>Citons le manifeste Mozilla,
+<p>
+  Citons le manifeste Mozilla,
   <q cite="https://www.mozilla.org/fr/about/manifesto/">
-    Internet est une ressource publique mondiale qui doit demeurer ouverte et accessible.</q>
+    Internet est une ressource publique mondiale qui doit demeurer ouverte et
+    accessible.</q
+  >
 </p>
 ```
 
@@ -135,7 +141,7 @@ q::after {
   content: close-quote;
 }
 
-h1::before  {
+h1::before {
   content: "Chapitre ";
   /* L'espace après la dernière lettre est 
      voulu afin de détacher le mot du reste
@@ -158,10 +164,13 @@ h1::before  {
 #### CSS
 
 ```css
-a::before{
+a::before {
   content: url("https://mozorg.cdn.mozilla.net/media/img/favicon.ico") /
     " MOZILLA: ";
-  font: x-small Arial, freeSans, sans-serif;
+  font:
+    x-small Arial,
+    freeSans,
+    sans-serif;
   color: gray;
 }
 ```
@@ -205,8 +214,14 @@ Dans cet exemple, on insère une image avant chaque lien et on ajoute son identi
 
 ```html
 <ul>
-  <li><a id="moz" href="https://www.mozilla.org/fr/">Page d'accueil Mozilla</a></li>
-  <li><a id="mdn" href="https://developer.mozilla.org/">Mozilla Developer Network</a></li>
+  <li>
+    <a id="moz" href="https://www.mozilla.org/fr/">Page d'accueil Mozilla</a>
+  </li>
+  <li>
+    <a id="mdn" href="https://developer.mozilla.org/"
+      >Mozilla Developer Network</a
+    >
+  </li>
 </ul>
 ```
 
@@ -256,8 +271,9 @@ Dans cet exemple, on remplace le contenu d'un élément avec une image. Il est p
   content: url("mdn.svg");
 }
 
-#replaced::after { /* Ceci ne sera pas affiché, */
-                   /* l'élément sera un élément remplacé */
+#replaced::after {
+  /* Ceci ne sera pas affiché, */
+  /* l'élément sera un élément remplacé */
   content: " (" attr(id) ")";
 }
 ```

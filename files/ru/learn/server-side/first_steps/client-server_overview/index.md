@@ -1,20 +1,6 @@
 ---
 title: Клиент-сервер
 slug: Learn/Server-side/First_steps/Client-Server_overview
-tags:
-  - Вступление
-  - Вступление
-  - Начинающий
-  - Начинающий
-  - Программирование на стороне сервера
-  - Программирование на стороне сервера
-  - Руководство
-  - Руководство
-  - Сервер
-  - Сервер
-  - Учить
-  - Учить
-translation_of: Learn/Server-side/First_steps/Client-Server_overview
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Introduction", "Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
@@ -110,7 +96,7 @@ HTTP-запрос может также содержать body, но в дан�
 
 В конце сообщения мы видим содержимое **body,** содержащее HTML-код возвращаемого ответа.
 
-```html
+```http
 HTTP/1.1 200 OK
 Server: Apache
 X-Backend-Server: developer1.webapp.scl3.mozilla.com
@@ -123,8 +109,6 @@ X-Frame-Options: DENY
 Allow: GET
 X-Cache-Info: caching
 Content-Length: 41823
-
-
 
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr" class="redesign no-js"  data-ffo-opensanslight=false data-ffo-opensans=false >
@@ -145,7 +129,7 @@ HTTP `POST` создаётся, когда вы отправляете форм�
 
 В приведённом ниже тексте показан HTTP-запрос, сделанный когда пользователь загружает новые данные профиля на этом сайте. Формат запроса почти такой же, как пример запроса `GET`, показанный ранее, хотя первая строка идентифицирует этот запрос как `POST`.
 
-```html
+```http
 POST https://developer.mozilla.org/en-US/profiles/hamishwillee/edit HTTP/1.1
 Host: developer.mozilla.org
 Connection: keep-alive
@@ -171,7 +155,7 @@ csrfmiddlewaretoken=zIPUJsAZv6pcgCBJSCj1zU6pQZbfMUAT&user-username=hamishwillee&
 
 Ответ от запроса показан ниже. Код состояния «`302 Found`» сообщает браузеру, что сообщение обработано, и что необходим второй HTTP-запрос для загрузки страницы, указанной в поле `Location`. В остальном информация аналогична информации для ответа на запрос `GET` .
 
-```html
+```http
 HTTP/1.1 302 FOUND
 Server: Apache
 X-Backend-Server: developer3.webapp.scl3.mozilla.com

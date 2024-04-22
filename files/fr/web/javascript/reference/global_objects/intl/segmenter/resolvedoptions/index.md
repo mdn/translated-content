@@ -1,8 +1,6 @@
 ---
 title: Intl.Segmenter.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/resolvedOptions
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/resolvedOptions
-browser-compat: javascript.builtins.Intl.Segmenter.resolvedOptions
 ---
 
 {{JSRef}}
@@ -14,7 +12,7 @@ La méthode **`Intl.Segmenter.prototype.resolvedOptions()`** renvoie un nouvel o
 ## Syntaxe
 
 ```js
-resolvedOptions()
+resolvedOptions();
 ```
 
 ### Paramètres
@@ -39,7 +37,7 @@ L'objet renvoyé par la méthode possède les propriétés suivantes&nbsp;:
 ### Utilisation simple
 
 ```js
-const spanishSegmenter = new Intl.Segmenter('es', {granularity: 'sentence'});
+const spanishSegmenter = new Intl.Segmenter("es", { granularity: "sentence" });
 const options = spanishSegmenter.resolvedOptions();
 console.log(options.locale); // "es"
 console.log(options.granularity); // "sentence"
@@ -48,7 +46,7 @@ console.log(options.granularity); // "sentence"
 ### Granularité par défaut
 
 ```js
-const spanishSegmenter = new Intl.Segmenter('es');
+const spanishSegmenter = new Intl.Segmenter("es");
 const options = spanishSegmenter.resolvedOptions();
 console.log(options.locale); // "es"
 console.log(options.granularity); // "grapheme"
@@ -57,11 +55,11 @@ console.log(options.granularity); // "grapheme"
 ### Locale de recours locale
 
 ```js
-const banSegmenter = new Intl.Segmenter('ban');
+const banSegmenter = new Intl.Segmenter("ban");
 const options = banSegmenter.resolvedOptions();
 console.log(options.locale);
 // "fr" sur un environnement d'exécution où la locale
-// balinaise n'est pas prise en charge et où le 
+// balinaise n'est pas prise en charge et où le
 // français est la locale par défaut
 console.log(options.granularity); // "grapheme"
 ```

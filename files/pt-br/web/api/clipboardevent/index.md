@@ -25,13 +25,11 @@ _Não há método próprio; métodos herdados de {{domxref("Event")}}_.
 
 ## Especificações
 
-| Specification                                                                                                | Status                               | Comment           |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------------- |
-| {{ SpecName('Clipboard API', '#clipboard-event-interfaces', 'ClipboardEvent') }} | {{ Spec2('Clipboard API') }} | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.ClipboardEvent")}}
+{{Compat}}
 
 ## See also
 

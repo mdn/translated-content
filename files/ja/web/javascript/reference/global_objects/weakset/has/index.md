@@ -34,8 +34,8 @@ var ws = new WeakSet();
 var obj = {};
 ws.add(window);
 
-mySet.has(window);  // returns true
-mySet.has(obj);     // returns false
+mySet.has(window); // returns true
+mySet.has(obj); // returns false
 ```
 
 ## 仕様書
@@ -44,7 +44,7 @@ mySet.has(obj);     // returns false
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.WeakSet.has")}}
+{{Compat}}
 
 ## 関連情報
 

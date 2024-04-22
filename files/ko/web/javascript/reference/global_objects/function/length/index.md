@@ -52,7 +52,7 @@ console.log(((a, b = 1, c) => {}).length);
 // 1, 기본값을 가진 매개변수 이전의 매개변수만 셉니다
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

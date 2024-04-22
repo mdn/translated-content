@@ -1,12 +1,6 @@
 ---
 title: revert
 slug: Web/CSS/revert
-tags:
-  - CSS
-  - Cascade
-  - Mot-clé
-  - Reference
-translation_of: Web/CSS/revert
 ---
 
 {{CSSRef}}
@@ -84,16 +78,11 @@ h3 {
 <h3 style="font-weight: unset; color: unset;">
   Ceci aura toujours font-weight: normal mais color: black
 </h3>
-<p>
-  Juste un peu de texte
-</p>
+<p>Juste un peu de texte</p>
 <h3 style="font-weight: revert; color: revert;">
-  Ceci devrait avoir font-weight: bold (la valeur originale)
-  et color: black
+  Ceci devrait avoir font-weight: bold (la valeur originale) et color: black
 </h3>
-<p>
- Juste un peu de texte
-</p>
+<p>Juste un peu de texte</p>
 ```
 
 #### Résultat
@@ -117,18 +106,12 @@ h3 {
 #### HTML
 
 ```html
-<h3>
-  Un style spécifique
-</h3>
-<p>
-  Juste un peu de texte
-</p>
+<h3>Un style spécifique</h3>
+<p>Juste un peu de texte</p>
 <h3 style="all: revert">
   Retour aux réglages par défaut pour toutes les propriétés
 </h3>
-<p>
-  Juste un peu de texte
-</p>
+<p>Juste un peu de texte</p>
 ```
 
 #### Résultat

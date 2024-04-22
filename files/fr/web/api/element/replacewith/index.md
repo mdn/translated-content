@@ -1,8 +1,6 @@
 ---
 title: Element.replaceWith()
 slug: Web/API/Element/replaceWith
-translation_of: Web/API/Element/replaceWith
-browser-compat: api.Element.replaceWith
 ---
 
 {{APIRef("DOM")}}
@@ -14,9 +12,9 @@ Les chaînes de caractères sont insérées comme des nœuds [`Text`](/fr/docs/W
 ## Syntaxe
 
 ```js
-replaceWith(param1)
-replaceWith(param1, param2)
-replaceWith(param1, param2, /* ... ,*/ paramN)
+replaceWith(param1);
+replaceWith(param1, param2);
+replaceWith(param1, param2, /* ... ,*/ paramN);
 ```
 
 ### Paramètres
@@ -50,7 +48,7 @@ console.log(div.outerHTML);
 La méthode `replaceWith()` ne fait pas partie de la portée créée par une instruction `with`. Voir [`Symbol.unscopables`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/unscopables) pour plus d'informations.
 
 ```js
-with(node) {
+with (node) {
   replaceWith("toto");
 }
 // ReferenceError: replaceWith is not defined

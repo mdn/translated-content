@@ -1,26 +1,6 @@
 ---
 title: Стилизация текста
 slug: Learn/CSS/Styling_text
-tags:
-  - CSS
-  - CodingScripting
-  - Module
-  - NeedsTranslation
-  - Text
-  - TopicStub
-  - letter
-  - line
-  - Начинающий
-  - Ссылки
-  - Текст
-  - Шрифты
-  - веб шрифты
-  - лендинг
-  - примеры кода
-  - списки
-  - тени
-  - шрифт
-translation_of: Learn/CSS/Styling_text
 ---
 
 {{LearnSidebar}}

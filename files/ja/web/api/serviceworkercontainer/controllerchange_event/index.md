@@ -1,7 +1,6 @@
 ---
-title: 'ServiceWorkerContainer: controllerchange イベント'
+title: "ServiceWorkerContainer: controllerchange イベント"
 slug: Web/API/ServiceWorkerContainer/controllerchange_event
-original_slug: Web/API/ServiceWorkerContainer/oncontrollerchange
 l10n:
   sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---
@@ -15,9 +14,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('controllerchange', (event) => { });
+addEventListener("controllerchange", (event) => {});
 
-oncontrollerchange = (event) => { };
+oncontrollerchange = (event) => {};
 ```
 
 ## イベント型

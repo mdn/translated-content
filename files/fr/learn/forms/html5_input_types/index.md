@@ -1,7 +1,6 @@
 ---
 title: Les types de champs de formulaire HTML5
 slug: Learn/Forms/HTML5_input_types
-translation_of: Learn/Forms/HTML5_input_types
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Basic_native_form_controls", "Learn/Forms/Other_form_controls", "Learn/Forms")}}
@@ -34,7 +33,7 @@ L'apparence native des contrôles de formulaire HTML peut être différente de c
 Pour ce type de champ, on utilisera la valeur `email` pour l'attribut [`type`](/fr/docs/Web/HTML/Element/Input#attr-type)&nbsp;:
 
 ```html
-<input type="email" id="email" name="email">
+<input type="email" id="email" name="email" />
 ```
 
 Lorsque ce type est utilisé, la personne doit saisir une adresse mail avec un format valide dans le champ. Tout autre contenu entraînera l'affichage d'une erreur à l'envoi du formulaire. Voici une capture d'écran qui illustre une telle erreur.
@@ -44,7 +43,7 @@ Lorsque ce type est utilisé, la personne doit saisir une adresse mail avec un f
 Il est aussi possible d'utiliser l'attribut [`multiple`](/fr/docs/Web/HTML/Attributes/multiple) pour le type `email` afin de permettre la saisie de plusieurs adresses (séparées par des virgules)&nbsp;:
 
 ```html
-<input type="email" id="email" name="email" multiple>
+<input type="email" id="email" name="email" multiple />
 ```
 
 Sur certains appareils, notamment les appareils tactiles avec les claviers logiciels qu'on peut trouver sur les smartphones, un clavier adapté pourra être affiché pour une saisie plus adaptée à la saisie d'adresses électroniques, par exemple en incluant la touche `@`. Voici par exemple une capture d'écran du clavier qu'on peut observer sur Firefox pour Android&nbsp;:
@@ -70,7 +69,7 @@ On notera aussi que `a@b` est une adresse électronique valide pour les contrain
 Les champs de recherche permettent de créer des boîtes de recherches pour les sites et applications web. Pour créer un tel champ, on utilisera la valeur `search` pour l'attribut [`type`](/fr/docs/Web/HTML/Element/Input#attr-type)&nbsp;:
 
 ```html
-<input type="search" id="search" name="search">
+<input type="search" id="search" name="search" />
 ```
 
 La différence principale entre un champ `text` et un champ `search` porte notamment sur la mise en forme appliquée par le navigateur. Souvent, les champs de recherche sont affichés avec des coins arrondis et ils contiennent parfois une icône «&nbsp;Ⓧ&nbsp;» qui permet de réinitialiser la valeur saisie lorsqu'on clique dessus. De plus, pour les appareils avec des claviers logiciels, la touche Entrée pourra avoir un libellé adapté comme «&nbsp;**rechercher**&nbsp;», ou afficher une icône en forme de loupe.
@@ -86,7 +85,7 @@ On notera aussi une fonctionnalité intéressante pour les champs `search`&nbsp;
 Pour créer un champ permettant spécifiquement de saisir un numéro de téléphone, on pourra utiliser la valeur `tel` pour l'attribut [`type`](/fr/docs/Web/HTML/Element/Input#attr-type)&nbsp;:
 
 ```html
-<input type="tel" id="tel" name="tel">
+<input type="tel" id="tel" name="tel" />
 ```
 
 Lorsqu'on utilise un tel champ avec un clavier logiciel, la plupart des appareils fourniront un clavier numérique. Aussi, bien que cela dégrade la sémantique, on pourra se servir de cet aspect pour saisir une valeur numérique quelconque (voir après pour les champs de type `numeric` qui ont certaines particularités).
@@ -104,7 +103,7 @@ Comme mentionné précédemment, l'attribut [`pattern`](/fr/docs/Web/HTML/Attrib
 Pour créer un champ qui permette spécifiquement de saisir des URL, on utilisera la valeur `url` pour l'attribut [`type`](/fr/docs/Web/HTML/Element/Input#attr-type)&nbsp;:
 
 ```html
-<input type="url" id="url" name="url">
+<input type="url" id="url" name="url" />
 ```
 
 Ce type de champ ajoute certaines contraintes de validation. Le navigateur affichera une erreur si aucun protocole (par exemple `https:`) n'est saisi ou si l'URL est mal formée. Pour les appareils avec un clavier logiciel, le clavier affiché par défaut contiendra des touches pour les deux-points, le point, et la barre oblique.
@@ -130,13 +129,13 @@ On peut aussi utiliser l'attribut `step` qui permet de définir le pas (pour l'i
 Prenons quelques exemples. Dans le premier, on crée un contrôle numérique où la valeur est restreinte entre `1` et `10`, et où les boutons d'incrément/décrément utilisent un pas de `2`.
 
 ```html
-<input type="number" name="age" id="age" min="1" max="10" step="2">
+<input type="number" name="age" id="age" min="1" max="10" step="2" />
 ```
 
 Dans ce deuxième exemple, on crée un contrôle numérique où la valeur doit être comprise entre `0` et `1` (inclus), et où les boutons d'incrément/décrément utilisent un pas de `0.01`.
 
 ```html
-<input type="number" name="change" id="centimes" min="0" max="1" step="0.01">
+<input type="number" name="change" id="centimes" min="0" max="1" step="0.01" />
 ```
 
 Un champ de type `number` sera pertinent lorsque l'intervalle des valeurs valides est limité (par exemple pour l'âge ou la taille d'une personne). Si l'intervalle est trop grand pour qu'une augmentation incrémentale soit pertinente (par exemple pour un code postal), un champ `tel` pourra être une option plus adaptée, car le contrôle ne présente pas les boutons d'incrément/décrément mais affiche un clavier numérique (pour l'aspect relatif au clavier présenté, on pourra aussi exploiter l'attribut [`inputmode`](/fr/docs/Web/HTML/Global_attributes/inputmode)).
@@ -157,7 +156,14 @@ Voyons le code utilisé pour notre exemple ci-avant. Pour commencer, le fragment
 
 ```html
 <label for="price">Sélectionnez un prix maximal : </label>
-<input type="range" name="price" id="price" min="50000" max="500000" step="100" value="250000">
+<input
+  type="range"
+  name="price"
+  id="price"
+  min="50000"
+  max="500000"
+  step="100"
+  value="250000" />
 <output class="price-output" for="price"></output>
 ```
 
@@ -168,12 +174,12 @@ Un des inconvénients des curseurs est l'absence de retour visuel pour indiquer 
 Pour effectivement afficher la valeur courante et la mettre à jour lorsqu'elle est modifiée par l'utilisatrice ou l'utilisateur, on doit utiliser JavaScript et ces quelques lignes&nbsp;:
 
 ```js
-const price = document.querySelector('#price');
-const output = document.querySelector('.price-output');
+const price = document.querySelector("#price");
+const output = document.querySelector(".price-output");
 
 output.textContent = price.value;
 
-price.addEventListener('input', function() {
+price.addEventListener("input", function () {
   output.textContent = price.value;
 });
 ```
@@ -199,7 +205,7 @@ Voyons rapidement les différents types disponibles. On notera que l'utilisation
 [`<input type="datetime-local">`](/fr/docs/Web/HTML/Element/input/datetime-local) crée un contrôle permettant d'afficher et de sélectionner une date avec une heure sans information sur le fuseau horaire.
 
 ```html
-<input type="datetime-local" name="datetime" id="datetime">
+<input type="datetime-local" name="datetime" id="datetime" />
 ```
 
 ### `month`
@@ -207,7 +213,7 @@ Voyons rapidement les différents types disponibles. On notera que l'utilisation
 [`<input type="month">`](/fr/docs/Web/HTML/Element/input/month) crée un contrôle permettant d'afficher et de sélectionner un mois d'une année.
 
 ```html
-<input type="month" name="month" id="month">
+<input type="month" name="month" id="month" />
 ```
 
 ### `time`
@@ -215,7 +221,7 @@ Voyons rapidement les différents types disponibles. On notera que l'utilisation
 [`<input type="time">`](/fr/docs/Web/HTML/Element/input/time) crée un contrôle permettant d'afficher et de sélectionner une heure (avec des minutes). Bien que la valeur puisse être _affichée_ au format sur 12 heures, la _valeur sous-jacente_ est représentée dans un format sur 24 heures.
 
 ```html
-<input type="time" name="time" id="time">
+<input type="time" name="time" id="time" />
 ```
 
 ### `week`
@@ -225,7 +231,7 @@ Voyons rapidement les différents types disponibles. On notera que l'utilisation
 Les semaines commencent le lundi et vont jusqu'au dimanche. De plus, la première semaine de chaque année contient le premier jeudi de cette année (la première semaine peut donc ne pas inclure le premier jour de l'année ou inclure les derniers jours de l'année précédente).
 
 ```html
-<input type="week" name="week" id="week">
+<input type="week" name="week" id="week" />
 ```
 
 ### Restreindre les valeurs de date/heure
@@ -234,7 +240,13 @@ Tous les contrôles de date et d'heure peuvent être restreints avec les attribu
 
 ```html
 <label for="monDate">Quand êtes-vous disponible cet été&nbsp;?</label>
-<input type="date" name="monDate" min="2013-06-01" max="2013-08-31" step="7" id="monDate">
+<input
+  type="date"
+  name="monDate"
+  min="2013-06-01"
+  max="2013-08-31"
+  step="7"
+  id="monDate" />
 ```
 
 ## Contrôle de sélection de couleur
@@ -244,7 +256,7 @@ Les couleurs sont toujours difficiles à gérer en raison des différents format
 Un contrôle de sélection de couleur peut être créé avec l'élément [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut [`type`](/fr/docs/Web/HTML/Element/Input#attr-type) vaut `color`&nbsp;:
 
 ```html
-<input type="color" name="color" id="color">
+<input type="color" name="color" id="color" />
 ```
 
 Lorsqu'un tel contrôle est pris en charge, cliquer sur le contrôle permettra d'afficher le sélecteur de couleur par défaut du système d'exploitation. La capture d'écran qui suit montre le résultat obtenu avec Firefox pour macOS&nbsp;:

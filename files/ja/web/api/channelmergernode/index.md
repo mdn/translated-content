@@ -11,7 +11,7 @@ slug: Web/API/ChannelMergerNode
 
 もし `ChannelMergerNode` の出力が 1 つであるが、マージするチャンネルと同じ数の入力がある場合、入力数はそのコンストラクターおよび {{domxref("AudioContext.createChannelMerger()")}} の呼び出しの引数で指定されただけの数になります。値が指定されていない場合は、既定の `6` になります。
 
- `ChannelMergerNode` を使用すると、レンダリングハードウェアが処理できるよりも多くのチャンネルで出力を作成することが可能です。その場合、シグナルが{{domxref("AudioContext.listener")}} オブジェクトに送信されると、余分なチャンネルは無視されます。
+`ChannelMergerNode` を使用すると、レンダリングハードウェアが処理できるよりも多くのチャンネルで出力を作成することが可能です。その場合、シグナルが{{domxref("AudioContext.listener")}} オブジェクトに送信されると、余分なチャンネルは無視されます。
 
 {{InheritanceDiagram}}
 

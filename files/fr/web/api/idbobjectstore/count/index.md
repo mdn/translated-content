@@ -1,13 +1,6 @@
 ---
 title: IDBObjectStore.count()
 slug: Web/API/IDBObjectStore/count
-tags:
-  - API
-  - IDBObjectStore
-  - IndexedDB
-  - Méthode
-  - Reference
-translation_of: Web/API/IDBObjectStore/count
 ---
 
 {{APIRef("IndexedDB")}}
@@ -35,24 +28,24 @@ Un objet {{domxref("IDBRequest")}} sur lequel seront déclenchés les différent
 
 Cette méthode peut déclencher une exception {{domxref("DOMException")}} ayant un des types suivants :
 
-| Exception                  | Description                                                                              |
-| -------------------------- | ---------------------------------------------------------------------------------------- |
+| Exception                  | Description                                                                   |
+| -------------------------- | ----------------------------------------------------------------------------- |
 | `InvalidStateError`        | L'objet {{domxref("IDBObjectStore")}} a été supprimé.                         |
 | `TransactionInactiveError` | La transaction associée à l'objet {{domxref("IDBObjectStore")}} est inactive. |
-| `DataError`                | La clé ou l'intervalle de clé passé en argument est invalide.                            |
+| `DataError`                | La clé ou l'intervalle de clé passé en argument est invalide.                 |
 
 ## Exemples
 
 Dans ce fragment de code, on crée une transaction, on récupère un magasin d'objets puis on compte le nombre d'enregistrements contenus dans ce magasin grâce à la méthode `count()`. Lorsque l'évènement associé au succès de l'opération est déclenché, on inscrit le résultat dans la console.
 
 ```js
-var transaction = db.transaction(['fThings'], 'readonly');
-var objectStore = transaction.objectStore('fThings');
+var transaction = db.transaction(["fThings"], "readonly");
+var objectStore = transaction.objectStore("fThings");
 
 var countRequest = objectStore.count();
-countRequest.onsuccess = function() {
+countRequest.onsuccess = function () {
   console.log(countRequest.result);
-}
+};
 ```
 
 ## Spécifications

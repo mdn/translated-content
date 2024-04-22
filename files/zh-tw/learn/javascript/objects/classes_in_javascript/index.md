@@ -1,7 +1,6 @@
 ---
 title: JavaScript 中的「繼承」
 slug: Learn/JavaScript/Objects/Classes_in_JavaScript
-original_slug: Learn/JavaScript/Objects/Inheritance
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
@@ -166,7 +165,7 @@ Teacher.prototype.greeting = function () {
       this.name.last +
       ", and I teach " +
       this.subject +
-      "."
+      ".",
   );
 };
 ```
@@ -184,7 +183,7 @@ var teacher1 = new Teacher(
   31,
   "male",
   ["football", "cookery"],
-  "mathematics"
+  "mathematics",
 );
 ```
 

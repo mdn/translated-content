@@ -1,7 +1,6 @@
 ---
 title: Demonstrações de tecnologia web aberta
 slug: Web/Demos
-original_slug: Web/Demos_of_open_web_technologies
 ---
 
 A mozilla suporta uma grande variedade de tecnologias abertas da web aberta e nós encorajamos seu uso.Esta página oferece links para demonstrações interessantes dessas tecnologia.
@@ -52,8 +51,8 @@ Se você conhece uma boa demonstração ou aplicação da tecnologia web aberta,
 
 ### Realidade virtual
 
-- [The Polar Sea](http://mozvr.com/demos/polarsea/) ([source code](https://github.com/MozVR/polarsea))
-- Sechelt fly-through ([source code](https://github.com/mozvr/sechelt))
+- The Polar Sea ([source code](https://github.com/MozVR/polarsea))
+- [Sechelt fly-through](https://mozvr.github.io/sechelt/) ([source code](https://github.com/mozvr/sechelt))
 
 ## CSS
 

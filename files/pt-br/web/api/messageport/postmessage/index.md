@@ -32,15 +32,15 @@ In the following code block, you can see a new channel being created using the {
 
 ```js
 var channel = new MessageChannel();
-var para = document.querySelector('p');
+var para = document.querySelector("p");
 
-var ifr = document.querySelector('iframe');
+var ifr = document.querySelector("iframe");
 var otherWindow = ifr.contentWindow;
 
 ifr.addEventListener("load", iframeLoaded, false);
 
 function iframeLoaded() {
-  otherWindow.postMessage('Hello from the main page!', '*', [channel.port2]);
+  otherWindow.postMessage("Hello from the main page!", "*", [channel.port2]);
 }
 
 channel.port1.onmessage = handleMessage;
@@ -51,15 +51,13 @@ function handleMessage(e) {
 
 For a full working example, see our [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/master/channel-messaging-basic) on Github ([run it live too](https://mdn.github.io/dom-examples/channel-messaging-basic/)).
 
-## Specifications
+## Especificações
 
-| Specification                                                                                                                | Status                           | Comment |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', 'web-messaging.html#dom-messageport-postmessage', 'postMessage()')}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.MessagePort.postMessage")}}
+{{Compat}}
 
 ## See also
 

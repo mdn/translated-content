@@ -22,8 +22,8 @@ slug: Web/HTML/Element/bdi
    <td><a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">Phrasing content</a>.</td>
   </tr>
   <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
+   <th scope="row">标签省略</th>
+   <td>不允许，开始标签和结束标签都不能省略。</td>
   </tr>
   <tr>
    <th scope="row">Permitted parent elements</th>
@@ -43,7 +43,10 @@ slug: Web/HTML/Element/bdi
 ## 示例
 
 ```html
-<p dir="ltr">This arabic word <bdi>ARABIC_PLACEHOLDER</bdi> is automatically displayed right-to-left.</p>
+<p dir="ltr">
+  This arabic word <bdi>ARABIC_PLACEHOLDER</bdi> is automatically displayed
+  right-to-left.
+</p>
 ```
 
 ### 结果

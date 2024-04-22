@@ -17,9 +17,9 @@ Los floats que son relevantes para ser limpiados (cleared) son los primeros floa
 >
 > ```css
 > #container::after {
->    content: "";
->    display: block;
->    clear: both;
+>   content: "";
+>   display: block;
+>   clear: both;
 > }
 > ```
 
@@ -67,42 +67,43 @@ clear: inherit;
 
 ```html
 <div class="wrapper">
+  <p class="black">
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet
+    diam. Duis mattis varius dui. Suspendisse eget dolor.
+  </p>
 
-    <p class="black">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.</p>
+  <p class="red">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
 
-    <p class="red">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-
-    <p class="left">This paragraph clears left.</p>
-
+  <p class="left">This paragraph clears left.</p>
 </div>
 ```
 
 #### Contenido CSS
 
 ```css
-.wrapper{
-    border:1px solid black;
-    padding:10px;
+.wrapper {
+  border: 1px solid black;
+  padding: 10px;
 }
 .left {
-    border: 1px solid black;
-    clear: left;
+  border: 1px solid black;
+  clear: left;
 }
 .black {
-    float: left;
-    margin: 0;
-    background-color: black;
-    color: #fff;
-    width: 20%;
+  float: left;
+  margin: 0;
+  background-color: black;
+  color: #fff;
+  width: 20%;
 }
 .red {
-    float: left;
-    margin: 0;
-    background-color: red;
-    width:20%;
+  float: left;
+  margin: 0;
+  background-color: red;
+  width: 20%;
 }
 p {
-    width: 50%;
+  width: 50%;
 }
 ```
 
@@ -114,42 +115,43 @@ p {
 
 ```html
 <div class="wrapper">
+  <p class="black">
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet
+    diam. Duis mattis varius dui. Suspendisse eget dolor.
+  </p>
 
-    <p class="black">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.</p>
+  <p class="red">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
 
-    <p class="red">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-
-    <p class="right">This paragraph clears right.</p>
-
+  <p class="right">This paragraph clears right.</p>
 </div>
 ```
 
 #### Contenido CSS
 
 ```css
-.wrapper{
-    border:1px solid black;
-    padding:10px;
+.wrapper {
+  border: 1px solid black;
+  padding: 10px;
 }
 .right {
-    border: 1px solid black;
-    clear: right;
+  border: 1px solid black;
+  clear: right;
 }
 .black {
-    float: right;
-    margin: 0;
-    background-color: black;
-    color: #fff;
-    width:20%;
+  float: right;
+  margin: 0;
+  background-color: black;
+  color: #fff;
+  width: 20%;
 }
 .red {
-    float: right;
-    margin: 0;
-    background-color: red;
-    width:20%;
+  float: right;
+  margin: 0;
+  background-color: red;
+  width: 20%;
 }
 p {
-    width: 50%;
+  width: 50%;
 }
 ```
 
@@ -161,42 +163,47 @@ p {
 
 ```html
 <div class="wrapper">
+  <p class="black">
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet
+    diam. Duis mattis varius dui. Suspendisse eget dolor. Fusce pulvinar lacus
+    ac dui.
+  </p>
 
-    <p class="black">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor. Fusce pulvinar lacus ac dui.</p>
+  <p class="red">
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet
+    diam. Duis mattis varius dui. Suspendisse eget dolor.
+  </p>
 
-    <p class="red">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.</p>
-
-    <p class="both">This paragraph clears both.</p>
-
+  <p class="both">This paragraph clears both.</p>
 </div>
 ```
 
 #### Contenido CSS
 
 ```css
-.wrapper{
-    border:1px solid black;
-    padding:10px;
+.wrapper {
+  border: 1px solid black;
+  padding: 10px;
 }
 .both {
-    border: 1px solid black;
-    clear: both;
+  border: 1px solid black;
+  clear: both;
 }
 .black {
-    float: left;
-    margin: 0;
-    background-color: black;
-    color: #fff;
-    width:20%;
+  float: left;
+  margin: 0;
+  background-color: black;
+  color: #fff;
+  width: 20%;
 }
 .red {
-    float: right;
-    margin: 0;
-    background-color: red;
-    width:20%;
+  float: right;
+  margin: 0;
+  background-color: red;
+  width: 20%;
 }
 p {
-    width: 45%;
+  width: 45%;
 }
 ```
 

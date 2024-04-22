@@ -1,12 +1,8 @@
 ---
-title: ':hover'
+title: ":hover"
 slug: Web/CSS/:hover
-tags:
-  - CSS
-  - Псевдоклассы
-  - Руководство
-translation_of: Web/CSS/:hover
 ---
+
 {{ CSSRef() }}
 
 ## Описание
@@ -22,9 +18,13 @@ CSS [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы) `:hover
 ## Примеры
 
 ```css
-:link:hover { outline: dotted red; }
+:link:hover {
+  outline: dotted red;
+}
 
-.foo:hover { background: gold; }
+.foo:hover {
+  background: gold;
+}
 ```
 
 ### Выпадающее меню
@@ -73,18 +73,14 @@ div.menu-bar li:hover > ul {
 </div>
 ```
 
-Смотрите наш полный [пример выпадающего меню, основанный на CSS](/@api/deki/files/6238/=css_dropdown_menu.html).
-
 ### Галерея полноразмерных изображений и превью
 
-Вы можете использовать псевдокласс `:hover`, чтобы создать галерею изображений с полноразмерными картинками, показываемыми при наведении на них мыши. Посмотрите [это демо](/@api/deki/files/6247/=css-gallery.zip).
-
-> **Примечание:** Для аналогичного эффекта, но основанного на псевдоклассе[`:checked`](/en/CSS/%3Achecked) (применяется к скрытым радиокнопкам), смотрите [это демо](/@api/deki/files/6268/=css-checked-gallery.zip), взятое со страницы [ru/CSS/:checked](/ru/docs/Web/CSS/:checked).
+Вы можете использовать псевдокласс `:hover`, чтобы создать галерею изображений с полноразмерными картинками, показываемыми при наведении на них мыши.
 
 ## Спецификации
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}

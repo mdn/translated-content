@@ -22,15 +22,19 @@ var event = document.createEvent(type);
 
 ```js
 // イベントを作成します。
-var event = document.createEvent('Event');
+var event = document.createEvent("Event");
 
 // イベントの名前を 'build' に定義します。
-event.initEvent('build', true, true);
+event.initEvent("build", true, true);
 
 // イベントを待受します。
-elem.addEventListener('build', function (e) {
-  // e.target が elem に対応する
-}, false);
+elem.addEventListener(
+  "build",
+  function (e) {
+    // e.target が elem に対応する
+  },
+  false,
+);
 
 // ターゲットは任意の Element やほかの EventTarget にすることができます。
 elem.dispatchEvent(event);

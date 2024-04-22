@@ -1,23 +1,26 @@
 ---
-title: CountQueuingStrategy.size()
+title: "CountQueuingStrategy: size() メソッド"
+short-title: size()
 slug: Web/API/CountQueuingStrategy/size
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{SeeCompatTable}}{{APIRef("Streams")}}
+{{APIRef("Streams")}}
 
-{{domxref("CountQueuingStrategy")}} インターフェイスの **`size()`** メソッドは常に `1` を返すため、合計キューサイズはキュー内のチャンク数を数えたものになります。
+**`size()`** は {{domxref("CountQueuingStrategy")}} インターフェイスのメソッドで、常に `1` を返します。従って、合計キューサイズはキュー内のチャンク数を数えたものになります。
 
 ## 構文
 
-```
-var size = countQueuingStrategy.size();
+```js-nolint
+size()
 ```
 
-### パラメーター
+### 引数
 
 なし。
 
-### 戻り値
+### 返値
 
 `1`。
 
@@ -26,26 +29,33 @@ var size = countQueuingStrategy.size();
 ```js
 const queuingStrategy = new CountQueuingStrategy({ highWaterMark: 1 });
 
-const writableStream = new WritableStream({
-  // シンクの実装
-  write(chunk) {
-    ...
+const writableStream = new WritableStream(
+  {
+    // シンクの実装
+    write(chunk) {
+      // …
+    },
+    close() {
+      // …
+    },
+    abort(err) {
+      console.log("Sink error:", err);
+    },
   },
-  close() {
-    ...
-  },
-  abort(err) {
-    console.log("Sink error:", err);
-  }
-}, queuingStrategy);
+  queuingStrategy,
+);
 
-var size = queuingStrategy.size();
+const size = queuingStrategy.size();
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.CountQueuingStrategy.size")}}
+{{Compat}}
+
+## 関連情報
+
+- {{domxref("CountQueuingStrategy.CountQueuingStrategy", "CountQueuingStrategy()")}} コンストラクター

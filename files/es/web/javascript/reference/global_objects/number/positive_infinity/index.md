@@ -1,10 +1,9 @@
 ---
 title: Number.POSITIVE_INFINITY
 slug: Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/POSITIVE_INFINITY
 ---
 
-{{JSRef("Objetos_globales", "Number")}}
+{{JSRef}}
 
 ## Resumen
 

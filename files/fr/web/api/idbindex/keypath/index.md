@@ -1,7 +1,6 @@
 ---
 title: IDBIndex.keyPath
 slug: Web/API/IDBIndex/keyPath
-translation_of: Web/API/IDBIndex/keyPath
 ---
 
 {{ APIRef("IndexedDB") }}
@@ -13,7 +12,7 @@ La propriété **`keyPath`** de l'interface {{domxref("IDBIndex")}} renvoie le [
 ## Syntaxe
 
 ```js
-var keyPath = myIndex.keyPath
+var keyPath = myIndex.keyPath;
 ```
 
 ## Valeur
@@ -30,39 +29,56 @@ Finalement, On itère sur tous les enregistrements pour en insérer les données
 
 ```js
 function displayDataByIndex() {
-  tableEntry.innerHTML = '';
+  tableEntry.innerHTML = "";
 
   //ouvre un transaction
-  var transaction = db.transaction(['contactsList'], 'readonly');
+  var transaction = db.transaction(["contactsList"], "readonly");
   //accés au magasin d'objet
-  var objectStore = transaction.objectStore('contactsList');
+  var objectStore = transaction.objectStore("contactsList");
 
   //on récupère l'index
-  var myIndex = objectStore.index('lName');
+  var myIndex = objectStore.index("lName");
   //on affiche le chemin de clé de l'index sur la console
   console.log(myIndex.keyPath);
 
   //un curseur qui itère sur l'index
-  myIndex.openCursor().onsuccess = function(event) {
+  myIndex.openCursor().onsuccess = function (event) {
     var cursor = event.target.result;
-    if(cursor) {
-      var tableRow = document.createElement('tr');
-      tableRow.innerHTML =   '<td>' + cursor.value.id + '</td>'
-                           + '<td>' + cursor.value.lName + '</td>'
-                           + '<td>' + cursor.value.fName + '</td>'
-                           + '<td>' + cursor.value.jTitle + '</td>'
-                           + '<td>' + cursor.value.company + '</td>'
-                           + '<td>' + cursor.value.eMail + '</td>'
-                           + '<td>' + cursor.value.phone + '</td>'
-                           + '<td>' + cursor.value.age + '</td>';
+    if (cursor) {
+      var tableRow = document.createElement("tr");
+      tableRow.innerHTML =
+        "<td>" +
+        cursor.value.id +
+        "</td>" +
+        "<td>" +
+        cursor.value.lName +
+        "</td>" +
+        "<td>" +
+        cursor.value.fName +
+        "</td>" +
+        "<td>" +
+        cursor.value.jTitle +
+        "</td>" +
+        "<td>" +
+        cursor.value.company +
+        "</td>" +
+        "<td>" +
+        cursor.value.eMail +
+        "</td>" +
+        "<td>" +
+        cursor.value.phone +
+        "</td>" +
+        "<td>" +
+        cursor.value.age +
+        "</td>";
       tableEntry.appendChild(tableRow);
 
       cursor.continue();
     } else {
-      console.log('Tous les enregistrements ont été affichés.');
+      console.log("Tous les enregistrements ont été affichés.");
     }
   };
-};
+}
 ```
 
 > **Note :** Pour un exemple de travail complet, voir notre [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

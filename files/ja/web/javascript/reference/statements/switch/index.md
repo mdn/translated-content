@@ -226,15 +226,15 @@ switch (foo) {
 
 この例の出力は以下のとおりです。
 
-| 値                                                    | 出力するテキスト                  |
-| ----------------------------------------------------- | --------------------------------- |
+| 値                                                                    | 出力するテキスト                  |
+| --------------------------------------------------------------------- | --------------------------------- |
 | `foo` が `NaN` であるか、 `1`, `2`, `3`, `4`, `5`, `0` のどれでもない | Please pick a number from 0 to 5! |
-| `0`                                                   | Output: So What Is Your Name?     |
-| `1`                                                   | Output: What Is Your Name?        |
-| `2`                                                   | Output: Your Name?                |
-| `3`                                                   | Output: Name?                     |
-| `4`                                                   | Output: ?                         |
-| `5`                                                   | Output: !                         |
+| `0`                                                                   | Output: So What Is Your Name?     |
+| `1`                                                                   | Output: What Is Your Name?        |
+| `2`                                                                   | Output: Your Name?                |
+| `3`                                                                   | Output: Name?                     |
+| `4`                                                                   | Output: ?                         |
+| `5`                                                                   | Output: !                         |
 
 ### if...else チェーンによる代替
 

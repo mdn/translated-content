@@ -379,7 +379,7 @@ function addData(e) {
   // Informa sobre el éxito de la transacción completada, cuando todo esté hecho
   transaction.oncomplete = function () {
     console.log(
-      "Transacción completada: modificación de la base de datos finalizada."
+      "Transacción completada: modificación de la base de datos finalizada.",
     );
 
     // actualiza la visualización de datos para mostrar el elemento recién agregado, ejecutando displayData() nuevamente.
@@ -558,7 +558,7 @@ Repasemos las partes más interesantes del ejemplo. No lo veremos todo; gran par
            displayVideo(
              request.result.mp4,
              request.result.webm,
-             request.result.name
+             request.result.name,
            );
          } else {
            // Recuperar los videos de la red
@@ -577,10 +577,10 @@ Repasemos las partes más interesantes del ejemplo. No lo veremos todo; gran par
 
    ```js
    let mp4Blob = fetch("videos/" + video.name + ".mp4").then((response) =>
-     response.blob()
+     response.blob(),
    );
    let webmBlob = fetch("videos/" + video.name + ".webm").then((response) =>
-     response.blob()
+     response.blob(),
    );
 
    // Ejecuta el siguiente código solo cuando se hayan cumplido ambas promesas
@@ -668,7 +668,7 @@ Lo primero que hay que tener en cuenta es que hay un fragmento adicional de cód
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker
     .register(
-      "/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js"
+      "/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js",
     )
     .then(function () {
       console.log("Servicio Worker Registrado");
@@ -698,7 +698,7 @@ self.addEventListener("install", function (e) {
         "/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.js",
         "/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/style.css",
       ]);
-    })
+    }),
   );
 });
 ```
@@ -723,7 +723,7 @@ self.addEventListener("fetch", function (e) {
   e.respondWith(
     caches.match(e.request).then(function (response) {
       return response || fetch(e.request);
-    })
+    }),
   );
 });
 ```

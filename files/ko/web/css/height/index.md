@@ -69,9 +69,7 @@ height: unset;
 <div id="taller">제 키는 50픽셀입니다.</div>
 <div id="shorter">제 키는 25픽셀입니다.</div>
 <div id="parent">
-  <div id="child">
-    제 키는 부모의 절반입니다.
-  </div>
+  <div id="child">제 키는 부모의 절반입니다.</div>
 </div>
 ```
 

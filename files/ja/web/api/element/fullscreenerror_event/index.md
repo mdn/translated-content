@@ -1,8 +1,9 @@
 ---
-title: 'Element: fullscreenerror イベント'
+title: "Element: fullscreenerror イベント"
+short-title: fullscreenerror
 slug: Web/API/Element/fullscreenerror_event
 l10n:
-  sourceCommit: a122e87245c624ba56197641b4d7b21b643a6021
+  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
 {{APIRef}}
@@ -20,9 +21,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('fullscreenchange', (event) => { });
+addEventListener("fullscreenchange", (event) => {});
 
-onfullscreenchange = (event) => { };
+onfullscreenchange = (event) => {};
 ```
 
 ## イベント型
@@ -32,14 +33,14 @@ onfullscreenchange = (event) => { };
 ## 例
 
 ```js
-const requestor = document.querySelector('div');
+const requestor = document.querySelector("div");
 
 function handleError(event) {
-  console.error('an error occurred changing into fullscreen');
+  console.error("an error occurred changing into fullscreen");
   console.log(event);
-};
+}
 
-requestor.addEventListener('fullscreenerror', handleError);
+requestor.addEventListener("fullscreenerror", handleError);
 // or
 requestor.onfullscreenerror = handleError;
 

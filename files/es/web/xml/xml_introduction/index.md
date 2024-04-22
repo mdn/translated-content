@@ -1,7 +1,6 @@
 ---
 title: Introducción a XML
 slug: Web/XML/XML_introduction
-original_slug: Web/XML/Introducción_a_XML
 ---
 
 XML es un lenguaje de marcado similar a HTML. Significa Extensible Markup Language (Lenguaje de Marcado Extensible) y es una especificación de [W3C](https://www.w3.org/TR/xml/) como lenguaje de marcado de propósito general. Esto significa que, a diferencia de otros lenguajes de marcado, XML no está predefinido, por lo que debes definir tus propias etiquetas. El propósito principal del lenguaje es compartir datos a través de diferentes sistemas, como Internet.

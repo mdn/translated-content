@@ -1,11 +1,6 @@
 ---
 title: Compartimentation CSS (CSS Containment)
 slug: Web/CSS/CSS_containment
-tags:
-  - CSS
-  - CSS Containment
-translation_of: Web/CSS/CSS_Containment
-original_slug: Web/CSS/Compartimentation_CSS
 ---
 
 {{CSSRef}}

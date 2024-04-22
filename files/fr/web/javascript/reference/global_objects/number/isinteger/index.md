@@ -1,14 +1,6 @@
 ---
 title: Number.isInteger()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isInteger
-tags:
-  - JavaScript
-  - Méthode
-  - Number
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/isInteger
-original_slug: Web/JavaScript/Reference/Objets_globaux/Number/isInteger
 ---
 
 {{JSRef}}
@@ -20,7 +12,7 @@ La méthode **`Number.isInteger()`** permet de déterminer si l'argument est un 
 ## Syntaxe
 
 ```js
-Number.isInteger(valeurÀTester)
+Number.isInteger(valeurÀTester);
 ```
 
 ### Paramètres
@@ -39,33 +31,37 @@ Si la valeur à tester est un entier, cette méthode renvoie `true`, `false` sin
 ## Exemples
 
 ```js
-Number.isInteger(1);         // true
-Number.isInteger(-100000);   // true
-Number.isInteger(0);         // true
-Number.isInteger(1.000)      // true
+Number.isInteger(1); // true
+Number.isInteger(-100000); // true
+Number.isInteger(0); // true
+Number.isInteger(1.0); // true
 // Number.isInteger(9…9999); // true, même si le nombre dépasse 32 bits
 
-Number.isInteger(0.1);       // false
-Number.isInteger(Math.PI);   // false
+Number.isInteger(0.1); // false
+Number.isInteger(Math.PI); // false
 
 Number.isInteger(-Infinity); // false
-Number.isInteger(true);      // false
-Number.isInteger(NaN);       // false
-Number.isInteger("10");      // false
+Number.isInteger(true); // false
+Number.isInteger(NaN); // false
+Number.isInteger("10"); // false
 
-Number.isInteger(5.0);       // true
-Number.isInteger(5.000000000000001);// false
+Number.isInteger(5.0); // true
+Number.isInteger(5.000000000000001); // false
 Number.isInteger(5.0000000000000001); // true
 ```
 
 ## Prothèse d'émulation (_polyfill_)
 
 ```js
-Number.isInteger = Number.isInteger || function(value) {
-    return typeof value === "number" &&
-           isFinite(value) &&
-           Math.floor(value) === value;
-};
+Number.isInteger =
+  Number.isInteger ||
+  function (value) {
+    return (
+      typeof value === "number" &&
+      isFinite(value) &&
+      Math.floor(value) === value
+    );
+  };
 ```
 
 ## Spécifications

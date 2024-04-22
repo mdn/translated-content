@@ -34,7 +34,7 @@ arr.pop()
 下面的程式碼為一個包含四個元素的 `myFish` 陣列，接著移除此陣列的最後一個元素。
 
 ```js
-var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+var myFish = ["angel", "clown", "mandarin", "sturgeon"];
 
 var popped = myFish.pop();
 

@@ -1,11 +1,6 @@
 ---
 title: extends
 slug: Web/JavaScript/Reference/Classes/extends
-tags:
-  - Классы
-  - Наследование
-  - Расширение
-translation_of: Web/JavaScript/Reference/Classes/extends
 ---
 
 {{jsSidebar("Classes")}}
@@ -42,7 +37,7 @@ class Square extends Polygon {
     // В конструкторе класса, метод super() должен быть вызван
     // перед использованием this. В противном случае, будет
     // выброшена ошибка.
-    this.name = 'Square';
+    this.name = "Square";
   }
 
   get area() {
@@ -63,12 +58,22 @@ class myDate extends Date {
 
   getFormattedDate() {
     var months = [
-      'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-      'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
     ];
-    return this.getDate() + '-' +
-      months[this.getMonth()] + '-' +
-      this.getFullYear();
+    return (
+      this.getDate() + "-" + months[this.getMonth()] + "-" + this.getFullYear()
+    );
   }
 }
 ```
@@ -83,7 +88,7 @@ class nullExtends extends null {
 }
 
 Object.getPrototypeOf(nullExtends); // Function.prototype
-Object.getPrototypeOf(nullExtends.prototype) // null
+Object.getPrototypeOf(nullExtends.prototype); // null
 
 new nullExtends(); //ReferenceError: this is not defined
 ```

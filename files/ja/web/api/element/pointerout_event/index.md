@@ -1,9 +1,8 @@
 ---
 title: "Element: pointerout イベント"
 slug: Web/API/Element/pointerout_event
-original_slug: Web/API/Document/pointerout_event
 l10n:
-  sourceCommit: 9fb6c9e56c6db295967384730feeb941509ac743
+  sourceCommit: 7b3ccaec4a93584da12939587ea746acaabe30bc
 ---
 
 {{APIRef}}

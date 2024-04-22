@@ -43,7 +43,7 @@ addEventListener("fetch", (event) => {
 
       // それ以外の場合は、ネットワークを試します。
       return fetch(event.request);
-    })()
+    })(),
   );
 });
 ```

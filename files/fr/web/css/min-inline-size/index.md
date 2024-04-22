@@ -1,13 +1,6 @@
 ---
 title: min-inline-size
 slug: Web/CSS/min-inline-size
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Propriété logique
-  - Reference
-translation_of: Web/CSS/min-inline-size
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

@@ -9,8 +9,6 @@ slug: Web/HTML/Element/figure
 
 {{EmbedInteractiveExample("pages/tabbed/figure.html","tabbed-shorter")}}
 
-The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone [https://github.com/mdn/interactive-examples](https://github.com/mdn/interactive-examples) and send us a pull request.
-
 <table class="properties">
   <tbody>
     <tr>
@@ -86,15 +84,15 @@ The source for this interactive example is stored in a GitHub repository. If you
 <!-- Just an image -->
 <figure>
   <img
-  src="https://developer.mozilla.org/static/img/favicon144.png"
-  alt="A robotic monster over the letters MDN.">
+    src="https://developer.mozilla.org/static/img/favicon144.png"
+    alt="A robotic monster over the letters MDN." />
 </figure>
 
 <!-- Image with a caption -->
 <figure>
   <img
-  src="https://developer.mozilla.org/static/img/favicon144.png"
-  alt="A robotic monster over the letters MDN.">
+    src="https://developer.mozilla.org/static/img/favicon144.png"
+    alt="A robotic monster over the letters MDN." />
   <figcaption>MDN Logo</figcaption>
 </figure>
 ```
@@ -127,8 +125,10 @@ function NavigatorExample() {
 ```html
 <figure>
   <figcaption><cite>Edsger Dijkstra:</cite></figcaption>
-  <blockquote>If debugging is the process of removing software bugs,
-  then programming must be the process of putting them in.</blockquote>
+  <blockquote>
+    If debugging is the process of removing software bugs, then programming must
+    be the process of putting them in.
+  </blockquote>
 </figure>
 ```
 
@@ -139,14 +139,12 @@ function NavigatorExample() {
 ```html
 <figure>
   <p style="white-space:pre">
-Bid me discourse, I will enchant thine ear,
-  Or like a fairy trip upon the green,
-Or, like a nymph, with long dishevell'd hair,
-  Dance on the sands, and yet no footing seen:
-Love is a spirit all compact of fire,
-  Not gross to sink, but light, and will aspire.</p>
-  <figcaption><cite>Venus and Adonis</cite>,
-    by William Shakespeare</figcaption>
+    Bid me discourse, I will enchant thine ear, Or like a fairy trip upon the
+    green, Or, like a nymph, with long dishevell'd hair, Dance on the sands, and
+    yet no footing seen: Love is a spirit all compact of fire, Not gross to
+    sink, but light, and will aspire.
+  </p>
+  <figcaption><cite>Venus and Adonis</cite>, by William Shakespeare</figcaption>
 </figure>
 ```
 

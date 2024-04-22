@@ -1,11 +1,6 @@
 ---
 title: margin-bottom
 slug: Web/CSS/margin-bottom
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/margin-bottom
 ---
 
 {{CSSRef}}
@@ -21,9 +16,9 @@ Cette propriété n'a aucun effet sur les éléments en ligne (_inline_) qui ne 
 ```css
 /* Valeurs de longueur */
 /* Type <length>     */
-margin-bottom: 10px;    /* Une longueur absolue */
-margin-bottom: 1em;     /* Une longueur relative à la taille du texte */
-margin-bottom: 5%;      /* Une longueur relative à la
+margin-bottom: 10px; /* Une longueur absolue */
+margin-bottom: 1em; /* Une longueur relative à la taille du texte */
+margin-bottom: 5%; /* Une longueur relative à la
                  largeur du bloc englobant */
 
 /* Valeurs avec un mot-clé */
@@ -62,17 +57,17 @@ Grâce à la feuille de style on définit la marge basse et la hauteur des diff�
 
 ```css
 .box0 {
-  margin-bottom:1em;
-  height:3em;
+  margin-bottom: 1em;
+  height: 3em;
 }
 .box1 {
-  margin-bottom:-1.5em;
-  height:4em;
+  margin-bottom: -1.5em;
+  height: 4em;
 }
 .box2 {
-  border:1px dashed black;
-  border-width:1px 0;
-  margin-bottom:2em;
+  border: 1px dashed black;
+  border-width: 1px 0;
+  margin-bottom: 2em;
 }
 ```
 
@@ -80,13 +75,13 @@ On ajoute quelques règles afin de mieux visualiser les effets obtenus :
 
 ```css
 .container {
-  background-color:orange;
-  width:320px;
-  border:1px solid black;
+  background-color: orange;
+  width: 320px;
+  border: 1px solid black;
 }
 div {
-  width:320px;
-  background-color:gold;
+  width: 320px;
+  background-color: gold;
 }
 ```
 
@@ -94,9 +89,9 @@ div {
 
 ```html
 <div class="container">
-<div class="box0">Boîte 0</div>
-<div class="box1">Boîte 1</div>
-<div class="box2">La marge négative de 1 m'attire vers le haut</div>
+  <div class="box0">Boîte 0</div>
+  <div class="box1">Boîte 1</div>
+  <div class="box2">La marge négative de 1 m'attire vers le haut</div>
 </div>
 ```
 

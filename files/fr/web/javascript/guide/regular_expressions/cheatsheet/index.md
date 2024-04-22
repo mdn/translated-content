@@ -1,7 +1,6 @@
 ---
 title: Antisèche sur la syntaxe des expressions rationnelles
 slug: Web/JavaScript/Guide/Regular_expressions/Cheatsheet
-translation_of: Web/JavaScript/Guide/Regular_Expressions/Cheatsheet
 ---
 
 {{jsSidebar("JavaScript Guide")}}
@@ -421,7 +420,7 @@ Cette page fournit une «&nbsp;antisèche&nbsp;» sur l'ensemble des fonctionnal
 
 [Les quantificateurs](/fr/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers) indiquent le nombre de caractères ou d'expressions pour la correspondance.
 
-> **Note :** Dans ce qui suit, *élément* fait référence à des caractères uniques ou à des [classes de caractères](/fr/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes), [des échappements Unicode](/fr/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes), [des groupes et des intervalles](/fr/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges).
+> **Note :** Dans ce qui suit, _élément_ fait référence à des caractères uniques ou à des [classes de caractères](/fr/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes), [des échappements Unicode](/fr/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes), [des groupes et des intervalles](/fr/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges).
 
 <table class="standard-table">
   <thead>

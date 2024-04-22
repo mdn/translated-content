@@ -1,16 +1,6 @@
 ---
 title: Le "pourquoi" des performances Web
 slug: Learn/Performance/why_web_performance
-tags:
-  - Apprendre
-  - Débutant
-  - Introduction
-  - Performance
-  - Performance Web
-  - Reference
-  - Tutoriel
-translation_of: Learn/Performance/why_web_performance
-original_slug: Learn/Performance/pourquoi_performance_web
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Performance/What_is_web_performance", "Learn/Performance")}}

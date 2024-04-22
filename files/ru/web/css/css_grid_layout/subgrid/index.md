@@ -1,14 +1,11 @@
 ---
 title: Subgrid
 slug: Web/CSS/CSS_grid_layout/Subgrid
-translation_of: Web/CSS/CSS_Grid_Layout/Subgrid
 ---
 
 {{CSSRef}}
 
 2 уровень спецификации CSS Grid включает в себя значение `subgrid` для свойств [grid-template-columns](/ru/docs/Web/CSS/grid-template-columns) и [grid-template-rows](/ru/docs/Web/CSS/grid-template-rows). Это руководство содержит описание принципа работы subgrid и показывает некоторые примеры использования этой функции.
-
-> **Предупреждение:** **Важно**: Эта функция поставляется с Firefox 71, являющимся в данный момент единственным браузером, в котором реализован subgrid.
 
 ## Введение в subgrid
 
@@ -93,6 +90,4 @@ translation_of: Web/CSS/CSS_Grid_Layout/Subgrid
 
 ## Спецификация
 
-| Specification                        | Status                           | Comment                                                                                                   |
-| ------------------------------------ | -------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| {{SpecName("CSS Grid 2")}} | {{Spec2("CSS Grid 2")}} | Initial definition of [subgrids](/ru/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#subgrid). |
+{{Specifications}}

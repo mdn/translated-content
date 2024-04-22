@@ -28,7 +28,7 @@ scroll-padding: auto;
 
 /* <length> 値 */
 scroll-padding: 10px;
-scroll-padding: 1em .5em 1em 1em;
+scroll-padding: 1em 0.5em 1em 1em;
 scroll-padding: 10%;
 
 /* グローバル値 */

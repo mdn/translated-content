@@ -1,7 +1,6 @@
 ---
-title: 'HTMLMediaElement: canplaythrough'
+title: "HTMLMediaElement: canplaythrough"
 slug: Web/API/HTMLMediaElement/canplaythrough_event
-translation_of: Web/API/HTMLMediaElement/canplaythrough_event
 ---
 
 L'événement **`canplaythrough`** est déclenché lorsque le user agent peut jouer le média et estime que suffisament de données ont été chargées pour le lire jusqu'au bout. (Sans s'arrêter afin de charger plus contenu en mémoire)
@@ -23,12 +22,12 @@ L'événement **`canplaythrough`** est déclenché lorsque le user agent peut jo
 
 ## Propriétés
 
-| Property                              | Type                                 | Description                                            |
-| ------------------------------------- | ------------------------------------ | ------------------------------------------------------ |
+| Property                        | Type                       | Description                                            |
+| ------------------------------- | -------------------------- | ------------------------------------------------------ |
 | `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | The type of event.                                     |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Whether the event normally bubbles or not.             |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Whether the event is cancellable or not.               |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | The type of event.                                     |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.             |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.               |
 
 ## Evénements liés
 

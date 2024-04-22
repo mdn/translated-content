@@ -1,13 +1,6 @@
 ---
 title: URL.search
 slug: Web/API/URL/search
-tags:
-  - API
-  - Propriété
-  - Recherche
-  - Reference
-  - URL
-translation_of: Web/API/URL/search
 ---
 
 {{ApiRef("URL API")}}
@@ -32,7 +25,9 @@ Un {{domxref("USVString")}}.
 ## Exemples
 
 ```js
-var url = new URL('https://developer.mozilla.org/en-US/docs/Web/API/URL/search?q=123');
+var url = new URL(
+  "https://developer.mozilla.org/fr/docs/Web/API/URL/search?q=123",
+);
 var queryString = url.search; // Retourne:"?q=123"
 ```
 

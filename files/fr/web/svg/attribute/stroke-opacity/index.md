@@ -1,10 +1,6 @@
 ---
 title: stroke-opacity
 slug: Web/SVG/Attribute/stroke-opacity
-tags:
-  - SVG
-  - SVG Attribute
-translation_of: Web/SVG/Attribute/stroke-opacity
 ---
 
 {{SVGRef}}
@@ -18,7 +14,11 @@ Cet attribut peut être appliqué à tous les éléments, en revanche il n'aura 
 ## Exemple
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -27,16 +27,13 @@ html,body,svg { height:100% }
   <circle cx="5" cy="5" r="4" stroke="green" />
 
   <!-- Définit l'opacité avec un nombre entre 0 et 1-->
-  <circle cx="15" cy="5" r="4" stroke="green"
-          stroke-opacity="0.7" />
+  <circle cx="15" cy="5" r="4" stroke="green" stroke-opacity="0.7" />
 
   <!-- Définit l'opacité avec un pourcentage -->
-  <circle cx="25" cy="5" r="4" stroke="green"
-          stroke-opacity="50%" />
+  <circle cx="25" cy="5" r="4" stroke="green" stroke-opacity="50%" />
 
   <!-- Définit l'opacité comme propriété CSS -->
-  <circle cx="35" cy="5" r="4" stroke="green"
-          style="stroke-opacity: .3;" />
+  <circle cx="35" cy="5" r="4" stroke="green" style="stroke-opacity: .3;" />
 </svg>
 ```
 

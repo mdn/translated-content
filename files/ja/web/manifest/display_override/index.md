@@ -74,7 +74,7 @@ slug: Web/Manifest/display_override
 ```json
 {
   "display_override": ["fullscreen", "minimal-ui"],
-  "display": "standalone",
+  "display": "standalone"
 }
 ```
 

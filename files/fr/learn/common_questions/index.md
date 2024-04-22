@@ -1,12 +1,6 @@
 ---
 title: Questions fréquentes
 slug: Learn/Common_questions
-tags:
-  - Learn
-  - Web
-  - WebMechanics
-translation_of: Learn/Common_questions
-original_slug: Apprendre/Common_questions
 ---
 
 {{LearnSidebar}}

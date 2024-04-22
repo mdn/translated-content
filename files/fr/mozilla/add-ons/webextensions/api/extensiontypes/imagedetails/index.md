@@ -1,20 +1,9 @@
 ---
 title: extensionTypes.ImageDetails
 slug: Mozilla/Add-ons/WebExtensions/API/extensionTypes/ImageDetails
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - ImageDetails
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - extensionType
-translation_of: Mozilla/Add-ons/WebExtensions/API/extensionTypes/ImageDetails
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Details sur le format et la qualité de l'image.
 

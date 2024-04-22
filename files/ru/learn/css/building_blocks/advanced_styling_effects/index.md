@@ -1,21 +1,6 @@
 ---
 title: Узконаправленные функции CSS
 slug: Learn/CSS/Building_blocks/Advanced_styling_effects
-tags:
-  - Beginner
-  - Blend
-  - Boxes
-  - CSS
-  - Filters
-  - Styling
-  - effects
-  - Контейнеры
-  - Начинающий
-  - Смешивание
-  - Формы
-  - фигуры
-  - фильтры
-translation_of: Learn/CSS/Building_blocks/Advanced_styling_effects
 ---
 
 {{LearnSidebar}}
@@ -38,7 +23,10 @@ translation_of: Learn/CSS/Building_blocks/Advanced_styling_effects
 
 ```html
 <article class="simple">
-  <p><strong>Предупреждение</strong>: Температура ракетного двигателя достигла критической отметки.</p>
+  <p>
+    <strong>Предупреждение</strong>: Температура ракетного двигателя достигла
+    критической отметки.
+  </p>
 </article>
 ```
 
@@ -53,11 +41,15 @@ article {
   max-width: 500px;
   padding: 10px;
   background-color: red;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.25));
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.25)
+  );
 }
 
 .simple {
-  box-shadow: 5px 5px 5px rgba(0,0,0,0.7);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
 }
 ```
 
@@ -80,7 +72,10 @@ article {
 
 ```html hidden
 <article class="multiple">
-  <p><strong>Предупреждение</strong>: Температура ракетного двигателя достигла критической отметки.</p>
+  <p>
+    <strong>Предупреждение</strong>: Температура ракетного двигателя достигла
+    критической отметки.
+  </p>
 </article>
 ```
 
@@ -93,16 +88,21 @@ article {
   max-width: 500px;
   padding: 10px;
   background-color: red;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.25));
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.25)
+  );
 }
 
 .multiple {
-  box-shadow: 1px 1px 1px black,
-              2px 2px 1px black,
-              3px 3px 1px red,
-              4px 4px 1px red,
-              5px 5px 1px black,
-              6px 6px 1px black;
+  box-shadow:
+    1px 1px 1px black,
+    2px 2px 1px black,
+    3px 3px 1px red,
+    4px 4px 1px red,
+    5px 5px 1px black,
+    6px 6px 1px black;
 }
 ```
 
@@ -130,19 +130,22 @@ button {
   border-radius: 10px;
   border: none;
   background-image: linear-gradient(to bottom right, #777, #ddd);
-  box-shadow: 1px 1px 1px black,
-              inset 2px 3px 5px rgba(0,0,0,0.3),
-              inset -2px -3px 5px rgba(255,255,255,0.5);
+  box-shadow:
+    1px 1px 1px black,
+    inset 2px 3px 5px rgba(0, 0, 0, 0.3),
+    inset -2px -3px 5px rgba(255, 255, 255, 0.5);
 }
 
-button:focus, button:hover {
+button:focus,
+button:hover {
   background-image: linear-gradient(to bottom right, #888, #eee);
 }
 
 button:active {
-  box-shadow: inset 2px 2px 1px black,
-              inset 2px 3px 5px rgba(0,0,0,0.3),
-              inset -2px -3px 5px rgba(255,255,255,0.5);
+  box-shadow:
+    inset 2px 2px 1px black,
+    inset 2px 3px 5px rgba(0, 0, 0, 0.3),
+    inset -2px -3px 5px rgba(255, 255, 255, 0.5);
 }
 ```
 
@@ -192,10 +195,8 @@ button:active {
 Снова обратимся к примеру. Во-первых, {{cssxref("background-blend-mode")}} — мы покажем несколько контейнеров {{htmlelement("div")}}, чтобы вы сравнили оригинал с редактированной версией:
 
 ```html
-<div>
-</div>
-<div class="multiply">
-</div>
+<div></div>
+<div class="multiply"></div>
 ```
 
 Воспользуемся CSS — добавим к `<div>` одно фоновое изображение и зелёный фон:
@@ -227,20 +228,14 @@ div {
 ```html
 <article>
   Нет режима смешивания
-  <div>
-
-  </div>
-  <div>
-  </div>
+  <div></div>
+  <div></div>
 </article>
 
 <article>
   Множественное смешивание
-  <div class="multiply-mix">
-
-  </div>
-  <div>
-  </div>
+  <div class="multiply-mix"></div>
+  <div></div>
 </article>
 ```
 

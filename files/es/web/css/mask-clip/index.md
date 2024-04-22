@@ -1,7 +1,6 @@
 ---
-title: '-webkit-mask-clip'
+title: "-webkit-mask-clip"
 slug: Web/CSS/mask-clip
-original_slug: Web/CSS/-webkit-mask-clip
 ---
 
 {{ CSSRef() }}
@@ -36,8 +35,8 @@ donde:
 
 ```css
 div {
-    -webkit-mask-image: url('images/mask.png');
-    -webkit-mask-clip: padding;
+  -webkit-mask-image: url("images/mask.png");
+  -webkit-mask-clip: padding;
 }
 ```
 

@@ -3,7 +3,7 @@ title: i18n.getMessage()
 slug: Mozilla/Add-ons/WebExtensions/API/i18n/getMessage
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 指定したメッセージのローカライズされた文字列を取得します。
 
@@ -11,9 +11,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/i18n/getMessage
 
 ```js
 browser.i18n.getMessage(
-  messageName,  // 文字列
-  substitutions // 任意
-)
+  messageName, // 文字列
+  substitutions, // 任意
+);
 ```
 
 ### 引数
@@ -35,7 +35,7 @@ browser.i18n.getMessage(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.i18n.getMessage")}}
+{{Compat}}
 
 ## 例
 
@@ -54,9 +54,9 @@ console.log(message);
     "message": "You clicked $URL$.",
     "description": "Tells the user which link they clicked.",
     "placeholders": {
-      "url" : {
-        "content" : "$1",
-        "example" : "https://developer.mozilla.org"
+      "url": {
+        "content": "$1",
+        "example": "https://developer.mozilla.org"
       }
     }
   }

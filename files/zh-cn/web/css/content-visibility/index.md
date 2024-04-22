@@ -151,4 +151,4 @@ document.querySelectorAll("button.toggle").forEach((button) => {
 - [CSS 局限](/zh-CN/docs/Web/CSS/CSS_containment)
 - {{CSSXref("contain-intrinsic-size")}}
 - {{DOMXref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}}
-- [content-visibility：提高渲染性能的新 CSS 属性](https://web.dev/content-visibility/)（web.dev）
+- [content-visibility：提高渲染性能的新 CSS 属性](https://web.dev/articles/content-visibility)（web.dev）

@@ -1,7 +1,6 @@
 ---
 title: output
 slug: Web/XSLT/Element/output
-original_slug: Web/XSLT/output
 ---
 
 {{ XsltRef() }}

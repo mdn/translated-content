@@ -1,7 +1,6 @@
 ---
 title: String.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/String/includes
-original_slug: Web/JavaScript/Referencia/Objetos_globales/String/includes
 ---
 
 {{JSRef}}
@@ -36,7 +35,7 @@ Este método permite determinar si una cadena de texto se encuentra incluida den
 El método `includes()` es "case sensitive" (tiene en cuenta mayúsculas y minúsculas). Por ejemplo, la siguiente expresión devolverá `false`:
 
 ```js
-'Ballena azul'.includes('ballena'); // devuelve false
+"Ballena azul".includes("ballena"); // devuelve false
 ```
 
 ## Polyfill
@@ -47,13 +46,15 @@ Sin embargo, puedes usar este método como polyfill:
 
 ```js
 if (!String.prototype.includes) {
-  String.prototype.includes = function(search, start) {
-    'use strict';
+  String.prototype.includes = function (search, start) {
+    "use strict";
 
     if (search instanceof RegExp) {
-      throw TypeError('first argument must not be a RegExp');
+      throw TypeError("first argument must not be a RegExp");
     }
-    if (start === undefined) { start = 0; }
+    if (start === undefined) {
+      start = 0;
+    }
     return this.indexOf(search, start) !== -1;
   };
 }
@@ -64,14 +65,14 @@ if (!String.prototype.includes) {
 ### Usando `includes()`
 
 ```js
-const str = 'To be, or not to be, that is the question.'
+const str = "To be, or not to be, that is the question.";
 
-console.log(str.includes('To be'))        // true
-console.log(str.includes('question'))     // true
-console.log(str.includes('nonexistent'))  // false
-console.log(str.includes('To be', 1))     // false
-console.log(str.includes('TO BE'))        // false
-console.log(str.includes(''))             // true
+console.log(str.includes("To be")); // true
+console.log(str.includes("question")); // true
+console.log(str.includes("nonexistent")); // false
+console.log(str.includes("To be", 1)); // false
+console.log(str.includes("TO BE")); // false
+console.log(str.includes("")); // true
 ```
 
 ## Especificaciones

@@ -1,8 +1,6 @@
 ---
-title: 'CSP : media-src'
+title: "CSP : media-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/media-src
-translation_of: Web/HTTP/Headers/Content-Security-Policy/media-src
-browser-compat: http.headers.csp.Content-Security-Policy.media-src
 ---
 
 {{HTTPSidebar}}
@@ -59,7 +57,7 @@ Ces éléments [`<audio>`](/fr/docs/Web/HTML/Element/audio), [`<video>`](/fr/doc
 <audio src="https://not-example.com/audio"></audio>
 
 <video src="https://not-example.com/video">
-  <track kind="subtitles" src="https://not-example.com/subtitles">
+  <track kind="subtitles" src="https://not-example.com/subtitles" />
 </video>
 ```
 

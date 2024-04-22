@@ -1,12 +1,6 @@
 ---
 title: IDBCursor.advance()
 slug: Web/API/IDBCursor/advance
-tags:
-  - API
-  - IndexedDB
-  - Méthode
-  - Reference
-translation_of: Web/API/IDBCursor/advance
 ---
 
 {{APIRef("IndexedDB")}}
@@ -48,22 +42,23 @@ On notera également que, dans chaque itération de la boucle, on peut récupér
 
 ```js
 function advanceResult() {
-  list.innerHTML = '';
-  var transaction = db.transaction(['granListAlbum'], "readonly");
-  var objectStore = transaction.objectStore('granListAlbum');
+  list.innerHTML = "";
+  var transaction = db.transaction(["granListAlbum"], "readonly");
+  var objectStore = transaction.objectStore("granListAlbum");
 
-  objectStore.openCursor().onsuccess = function(event) {
+  objectStore.openCursor().onsuccess = function (event) {
     var curseur = event.target.result;
-    if(curseur) {
-      var listItem = document.createElement('li');
-      listItem.innerHTML = '' + curseur.value.titreAlbum + ', ' + curseur.value.annee;
+    if (curseur) {
+      var listItem = document.createElement("li");
+      listItem.innerHTML =
+        "" + curseur.value.titreAlbum + ", " + curseur.value.annee;
       list.appendChild(listItem);
       curseur.advance(2);
     } else {
-      console.log('moitié des resultats affichée');
+      console.log("moitié des resultats affichée");
     }
   };
-};
+}
 ```
 
 ## Spécifications

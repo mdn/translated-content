@@ -1,5 +1,5 @@
 ---
-title: 'Django 튜토리얼 파트 10: Django 웹 어플리케이션 테스트하기'
+title: "Django 튜토리얼 파트 10: Django 웹 어플리케이션 테스트하기"
 slug: Learn/Server-side/Django/Testing
 ---
 
@@ -15,7 +15,7 @@ slug: Learn/Server-side/Django/Testing
       <th scope="row">사전학습:</th>
       <td>
         아래 파트를 포함하여 앞선 모든 튜토리얼 파트의 학습을 완료할 것.
-        <a href="/en-US/docs/Learn/Server-side/Django/Forms"
+        <a href="/ko/docs/Learn/Server-side/Django/Forms"
           >Django 튜토리얼 파트 9: 폼으로 작업하기</a
         >.
       </td>

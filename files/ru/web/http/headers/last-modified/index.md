@@ -1,14 +1,8 @@
 ---
 title: Last-Modified
 slug: Web/HTTP/Headers/Last-Modified
-tags:
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Response Header
-translation_of: Web/HTTP/Headers/Last-Modified
-original_slug: Web/HTTP/Заголовки/Last-Modified
 ---
+
 {{HTTPSidebar}}
 
 Заголовок **`Last-Modified`** в ответе HTTP содержит дату и время, в которую, по мнению удалённого сервера, запрашиваемый ресурс был изменён. Он используется в качестве средства проверки для определения того, остался ли ресурс неизменным. Этот заголовок менее надёжный, чем {{HTTPHeader("ETag")}}, и используется как резервный механизм. Условный запрос, содержащий заголовок {{HTTPHeader("If-Modified-Since")}} или {{HTTPHeader("If-Unmodified-Since")}} позволяет серверу использовать для сравнения эту дату.
@@ -65,8 +59,8 @@ Last-Modified: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## Спецификации
 
-| Specification                                        | Title                                                        |
-| ---------------------------------------------------- | ------------------------------------------------------------ |
+| Specification                           | Title                                                        |
+| --------------------------------------- | ------------------------------------------------------------ |
 | {{RFC("7232", "Last-Modified", "2.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests |
 
 ## Совместимость с браузерами

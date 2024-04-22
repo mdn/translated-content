@@ -1,21 +1,6 @@
 ---
 title: AudioWorklet
 slug: Web/API/AudioWorklet
-tags:
-  - API
-  - Audio
-  - AudioWorklet
-  - Background
-  - Custom
-  - Interface
-  - Low-latency
-  - Reference
-  - Web Audio API
-  - Worklet
-  - Zero-latency
-  - latency
-  - sound
-translation_of: Web/API/AudioWorklet
 ---
 
 {{APIRef("Web Audio API")}}{{securecontext_header}}
@@ -26,7 +11,7 @@ L'accès à distance d'`AudioWorklet` du contexte audio se fait par la propriét
 
 ## Propriétés
 
-*L'interface `AudioWorklet` ne définit pas de propriétés propres, mais hérite des propriétés de [`Worklet`](/fr/docs/Web/API/Worklet).*
+_L'interface `AudioWorklet` ne définit pas de propriétés propres, mais hérite des propriétés de [`Worklet`](/fr/docs/Web/API/Worklet)._
 
 ## Méthodes
 
@@ -34,7 +19,7 @@ Cette interface hérite des méthodes de *{{domxref('Worklet')}}. L'interface `A
 
 ## Evénements
 
-*L'interface `AudioWorklet` n'a pas d'évènements auxquels elle répond.*
+_L'interface `AudioWorklet` n'a pas d'évènements auxquels elle répond._
 
 ## Exemples
 

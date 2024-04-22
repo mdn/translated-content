@@ -1,12 +1,6 @@
 ---
 title: Navigation segmentée
 slug: Web/CSS/Layout_cookbook/Split_Navigation
-tags:
-  - CSS
-  - Navigation
-  - flexbox
-translation_of: Web/CSS/Layout_cookbook/Split_Navigation
-original_slug: Web/CSS/Layout_cookbook/Navigation_segmentée
 ---
 
 {{CSSRef}}

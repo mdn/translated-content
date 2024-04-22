@@ -1,5 +1,5 @@
 ---
-title: ':last-of-type'
+title: ":last-of-type"
 slug: Web/CSS/:last-of-type
 ---
 
@@ -56,7 +56,10 @@ Este ejemplo muestra cómo los elementos anidados también pueden utilizarse. Te
 <article>
   <div>Este `div` es primero.</div>
   <div>¡Este <span>'span' anidado es el último</span>!</div>
-  <div>¡Este <em>`em` anidado es el primero</em>, pero este <em>`em` anidado es el último</em>!</div>
+  <div>
+    ¡Este <em>`em` anidado es el primero</em>, pero este
+    <em>`em` anidado es el último</em>!
+  </div>
   <b>¡Este `b` califica!</b>
   <div>¡Este es el 'div' final!</div>
 </article>

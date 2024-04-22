@@ -2,6 +2,7 @@
 title: Window.confirm()
 slug: Web/API/Window/confirm
 ---
+
 {{ApiRef("Window")}}
 
 **`Window.confirm()`** 메서드는 확인과 취소 두 버튼을 가지며 메시지를 지정할 수 있는 모달 대화 상자를 띄웁니다.

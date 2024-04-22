@@ -1,9 +1,6 @@
 ---
 title: 控制弹性元素在主轴上的比例
-slug: >-
-  Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis
-original_slug: >-
-  Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax
+slug: Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis
 ---
 
 {{CSSRef}}

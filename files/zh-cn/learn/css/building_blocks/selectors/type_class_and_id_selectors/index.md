@@ -56,7 +56,6 @@ slug: Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors
 
 ```css
 article :first-child {
-
 }
 ```
 
@@ -66,7 +65,6 @@ article :first-child {
 
 ```css
 article *:first-child {
-
 }
 ```
 

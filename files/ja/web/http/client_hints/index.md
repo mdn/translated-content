@@ -1,7 +1,6 @@
 ---
 title: HTTP クライアントヒント
 slug: Web/HTTP/Client_hints
-original_slug: Glossary/Client_hints
 l10n:
   sourceCommit: 48c0135f31d11eebde3e5bc3899811ddc69d2538
 ---
@@ -46,7 +45,7 @@ Vary: Accept, Width, ECT
 
 値が頻繁に変更されるクライアントヒントヘッダについては、 {{HTTPHeader("Vary")}} を指定しないか、 他の方法を使用したほうがよいでしょう。これは、リソースを効果的にキャッシュできなくしてしまうからです。( それぞれの固有の値に対して、新しいキャッシュ項目が作成されます)。
 これは特に {{HTTPHeader("Downlink")}} や {{HTTPHeader("RTT")}} のようなネットワーククライアントヒントに当てはまります。
-詳細な情報は、[HTTP キャッシュ > レスポンスの変化](/ja/docs/Web/HTTP/Caching#varying_respons) を参照してください。
+詳細な情報は、[HTTP キャッシュ > レスポンスの変化](/ja/docs/Web/HTTP/Caching#vary) を参照してください。
 
 ## ヒントの期限
 

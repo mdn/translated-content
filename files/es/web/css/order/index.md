@@ -42,12 +42,12 @@ order: unset;
 Aquí tiene un trozo de HTML básico:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <header>...</header>
-<div id='main'>
-   <article>Article</article>
-   <nav>Nav</nav>
-   <aside>Aside</aside>
+<div id="main">
+  <article>Article</article>
+  <nav>Nav</nav>
+  <aside>Aside</aside>
 </div>
 <footer>...</footer>
 ```
@@ -55,10 +55,22 @@ Aquí tiene un trozo de HTML básico:
 El siguiente código CSS debería crear un diseño clásico de dos barra laterales que rodea a un bloque de contenido. EL Módulo de Diseño de Caja Flexible crea automáticamente bloques de tamaño vertical igual y utiliza todo el espacio horizontal disponible.
 
 ```css
-#main { display: flex; text-align:center; }
-#main > article { flex:1;        order: 2; }
-#main > nav     { width: 200px;  order: 1; }
-#main > aside   { width: 200px;  order: 3; }
+#main {
+  display: flex;
+  text-align: center;
+}
+#main > article {
+  flex: 1;
+  order: 2;
+}
+#main > nav {
+  width: 200px;
+  order: 1;
+}
+#main > aside {
+  width: 200px;
+  order: 3;
+}
 ```
 
 ### Resultado

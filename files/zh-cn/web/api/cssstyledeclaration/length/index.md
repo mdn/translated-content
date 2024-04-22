@@ -22,7 +22,9 @@ var num = styles.length;
 获取下面 HTML 元素明确设置过的属性个数：
 
 ```html
-<div id="div1" style="margin: 0 10px; background-color: #CA1; font-family: monospace"></div>
+<div
+  id="div1"
+  style="margin: 0 10px; background-color: #CA1; font-family: monospace"></div>
 ```
 
 JavaScript 代码：

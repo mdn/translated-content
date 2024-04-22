@@ -1,16 +1,6 @@
 ---
 title: XMLHttpRequest.send()
 slug: Web/API/XMLHttpRequest/send
-tags:
-  - AJAX
-  - API
-  - HTTP запрос
-  - XHR
-  - XHR запрос
-  - XMLHttpRequest
-  - send
-  - запрос
-translation_of: Web/API/XMLHttpRequest/send
 ---
 
 {{APIRef('XMLHttpRequest')}}
@@ -93,11 +83,11 @@ xhr.send("foo=bar&lorem=ipsum");
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## Смотрите также
 
-- [Использование XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [Использование XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
 - [HTML in XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)

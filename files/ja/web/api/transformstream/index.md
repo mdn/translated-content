@@ -1,25 +1,35 @@
 ---
 title: TransformStream
 slug: Web/API/TransformStream
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("Media Capture and Streams")}}
+{{APIRef("Streams")}}
 
-`TransformStream` は [Streams API](/ja/docs/Web/API/Streams_API) のインターフェイスで一連の変換可能なデータを表します。
+**`TransformStream`** は[ストリーム API](/ja/docs/Web/API/Streams_API) のインターフェイスで、変換ストリームの概念である[パイプチェーン](/ja/docs/Web/API/Streams_API/Concepts#パイプチェーン)の具体的な実装を表します。
+
+これは、データのストリームをある形式から別の形式に変換するために {{domxref("ReadableStream.pipeThrough()")}} メソッドに渡すことができます。
+例えば、動画フレームをデコード（またはエンコード）したり、データを解凍したり、ストリームを XML から JSON に変換したりするために使用します。
+
+変換アルゴリズムは、オブジェクトのコンストラクターのオプション引数として指定されます。
+提供されない場合、ストリームを通してパイプ処理されたデータは変更されません。
+
+`TransformStream` は[移譲可能オブジェクト](/ja/docs/Web/API/Web_Workers_API/Transferable_objects)です。
 
 ## コンストラクター
 
 - {{domxref("TransformStream.TransformStream", "TransformStream()")}}
-  - : 指定されたハンドラーから変換ストリームを作成して返却します。
+  - : 指定されたハンドラーから変換ストリームを作成して返却します。オプションで、変換オブジェクトとストリームのキューイング戦略を指定します。
 
-## プロパティ
+## インスタンスプロパティ
 
-- {{domxref("TransformStream.readable")}} {{readonlyInline}}
-  - : TransformStream の `readable` 側の端点です。
-- {{domxref("TransformStream.writable")}} {{readonlyInline}}
-  - : TransformStream の `writable` 側の端点です。
+- {{domxref("TransformStream.readable")}} {{ReadOnlyInline}}
+  - : `TransformStream` の `readable` 側の端点です。
+- {{domxref("TransformStream.writable")}} {{ReadOnlyInline}}
+  - : `TransformStream` の `writable` 側の端点です。
 
-## メソッド
+## インスタンスメソッド
 
 なし
 
@@ -27,40 +37,55 @@ slug: Web/API/TransformStream
 
 ### 何かを uint8array に変換するストリーム
 
-以下の例では、変換ストリームは受信したすべてのチャンクを {{domxref("Uint8Array")}} の値に渡します。
+以下の例では、変換ストリームは受信したすべてのチャンクを {{jsxref("Uint8Array")}} の値に渡します。
 
 ```js
 const transformContent = {
   start() {}, // required.
   async transform(chunk, controller) {
-    chunk = await chunk
+    chunk = await chunk;
     switch (typeof chunk) {
-      case 'object':
+      case "object":
         // just say the stream is done I guess
-        if (chunk === null) controller.terminate()
-        else if (ArrayBuffer.isView(chunk))
-          controller.enqueue(new Uint8Array(chunk.buffer, chunk.byteOffset, chunk.byteLength))
-        else if (Array.isArray(chunk) && chunk.every(value => typeof value === 'number'))
-          controller.enqueue(new Uint8Array(chunk))
-        else if ('function' === typeof chunk.valueOf && chunk.valueOf() !== chunk)
-          this.transform(chunk.valueOf(), controller) // hack
-        else if ('toJSON' in chunk) this.transform(JSON.stringify(chunk), controller)
-        break
-      case 'symbol':
-        controller.error("Cannot send a symbol as a chunk part")
-        break
-      case 'undefined':
-        controller.error("Cannot send undefined as a chunk part")
+        if (chunk === null) {
+          controller.terminate();
+        } else if (ArrayBuffer.isView(chunk)) {
+          controller.enqueue(
+            new Uint8Array(chunk.buffer, chunk.byteOffset, chunk.byteLength),
+          );
+        } else if (
+          Array.isArray(chunk) &&
+          chunk.every((value) => typeof value === "number")
+        ) {
+          controller.enqueue(new Uint8Array(chunk));
+        } else if (
+          typeof chunk.valueOf === "function" &&
+          chunk.valueOf() !== chunk
+        ) {
+          this.transform(chunk.valueOf(), controller); // hack
+        } else if ("toJSON" in chunk) {
+          this.transform(JSON.stringify(chunk), controller);
+        }
+        break;
+      case "symbol":
+        controller.error("Cannot send a symbol as a chunk part");
+        break;
+      case "undefined":
+        controller.error("Cannot send undefined as a chunk part");
+        break;
       default:
-        controller.enqueue(this.textencoder.encode(String(chunk)))
-        break
+        controller.enqueue(this.textencoder.encode(String(chunk)));
+        break;
+    }
   },
-  flush() { /* do any destructor work here */ }
-}
+  flush() {
+    /* do any destructor work here */
+  },
+};
 
 class AnyToU8Stream extends TransformStream {
   constructor() {
-    super({...transformContent, textencoder: new TextEncoder()})
+    super({ ...transformContent, textencoder: new TextEncoder() });
   }
 }
 ```
@@ -71,45 +96,57 @@ class AnyToU8Stream extends TransformStream {
 
 ```js
 const tes = {
-  start(){this.encoder = new TextEncoder()},
+  start() {
+    this.encoder = new TextEncoder();
+  },
   transform(chunk, controller) {
-    controller.enqueue(this.encoder.encode(chunk))
-  }
-}
+    controller.enqueue(this.encoder.encode(chunk));
+  },
+};
+
 let _jstes_wm = new WeakMap(); /* info holder */
 class JSTextEncoderStream extends TransformStream {
   constructor() {
-    let t = {...tes}
+    let t = { ...tes };
 
-    super(t)
-    _jstes_wm.set(this, t)
+    super(t);
+    _jstes_wm.set(this, t);
   }
-  get encoding() {return _jstes_wm.get(this).encoder.encoding}
+  get encoding() {
+    return _jstes_wm.get(this).encoder.encoding;
+  }
 }
 ```
 
-同様に、 TextDecoderStream は次のように書くことができます。
+同様に、 `TextDecoderStream` は次のように書くことができます。
 
 ```js
-const tes = {
-  start(){
-    this.decoder = new TextDecoder(this.encoding, this.options)
+const tds = {
+  start() {
+    this.decoder = new TextDecoder(this.encoding, this.options);
   },
   transform(chunk, controller) {
-    controller.enqueue(this.decoder.decode(chunk))
-  }
-}
+    controller.enqueue(this.decoder.decode(chunk, { stream: true }));
+  },
+};
+
 let _jstds_wm = new WeakMap(); /* info holder */
 class JSTextDecoderStream extends TransformStream {
-  constructor(encoding = 'utf-8', {...options} = {}) {
-    let t = {...tds, encoding, options}
+  constructor(encoding = "utf-8", { ...options } = {}) {
+    let t = { ...tds, encoding, options };
 
-    super(t)
-    _jstes_wm.set(this, t)
+    super(t);
+    _jstds_wm.set(this, t);
   }
-  get encoding() {return _jstds_wm.get(this).decoder.encoding}
-  get fatal() {return _jstds_wm.get(this).decoder.fatal}
-  get ignoreBOM() {return _jstds_wm.get(this).decoder.ignoreBOM}
+  get encoding() {
+    return _jstds_wm.get(this).decoder.encoding;
+  }
+  get fatal() {
+    return _jstds_wm.get(this).decoder.fatal;
+  }
+  get ignoreBOM() {
+    return _jstds_wm.get(this).decoder.ignoreBOM;
+  }
 }
 ```
 
@@ -118,13 +155,16 @@ class JSTextDecoderStream extends TransformStream {
 これは、複数のストリームを結合できる便利なものです。例ではプログレッシブ読み込みやプログレッシブストリーミングを持つ PWA の構築が含まれます。
 
 ```js
-let responses = [ /* conjoined response tree */ ]
-let {readable, writable} = new TransformStream
+let responses = [
+  /* conjoined response tree */
+];
+let { readable, writable } = new TransformStream();
 
 responses.reduce(
-  (a, res, i, arr) => a.then(() => res.pipeTo(writable, {preventClose: (i+1) !== arr.length})),
-  Promise.resolve()
-)
+  (a, res, i, arr) =>
+    a.then(() => res.pipeTo(writable, { preventClose: i + 1 !== arr.length })),
+  Promise.resolve(),
+);
 ```
 
 これは他への影響に対して耐性がないことに注意してください。
@@ -135,8 +175,9 @@ responses.reduce(
 
 ## ブラウザーの互換性
 
-{{Compat("api.TransformStream")}}
+{{Compat}}
 
 ## 関連情報
 
-- [WHATWG Stream Visualiser](https://whatwg-stream-visualizer.glitch.me/): 読み取り、書き込み、変換ストリームの基本的な視覚化
+- [WHATWG Stream Visualizer](https://whatwg-stream-visualizer.glitch.me/): 読み取り、書き込み、変換ストリームの基本的な視覚化
+- [Streams—The Definitive Guide](https://web.dev/streams/)

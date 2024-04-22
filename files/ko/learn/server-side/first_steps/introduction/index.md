@@ -2,6 +2,7 @@
 title: Introduction to the server side
 slug: Learn/Server-side/First_steps/Introduction
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}
 
 MDN의 초심자용 서버측 프로그래밍 코스에 오신 것을 환영합니다! 첫번째 기사는 높은 수준의 서버측 프로그래밍을 살펴보고, "이게 뭐야?" , "클라이언트 측 프로그래밍과 어떻게 다르지?", 그리고 "이게 왜 유용한데?"같은 질문에 답할 것입니다. 이 기사를 읽은 뒤 당신은 웹 사이트가 서버측 코딩을 통해 이용 할 수 있는 추가적인 효과를 이해 할 수 있을것 입니다.

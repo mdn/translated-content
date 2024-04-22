@@ -22,7 +22,7 @@ Nós aprendemos o básico de CSS, porque e como escrever simples folhas de estí
           href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files"
           >trabalhar com arquivos</a
         >, e o básico de HTML (estude
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/pt-BR/docs/Learn/HTML/Introduction_to_HTML"
           >Introdução ao HTML</a
         >.)
       </td>
@@ -92,7 +92,9 @@ Esta é a forma como um browser interpreta o nosso trecho de documento HTML acim
 {{EmbedLiveSample('A_real_DOM_representation', '100%', 55)}}
 
 ```css hidden
-p {margin:0;}
+p {
+  margin: 0;
+}
 ```
 
 ## Aplicando CSS ao DOM
@@ -138,7 +140,7 @@ Similarmente, se um browser encontra um seletor que não comprende, ele o ignora
 No exemplo abaixo usei a grafia em inglês britânico para a propriedade cor, o que a torna inválida e portanto ela não é reconhecida. Por isso, o parágrafo não recebe a coloração azul. Todos os outros CSS foram aplicados, no entanto, apenas aquele que foi considerado inválido foi ignorado.
 
 ```html
-<p> Quero que este texto esteja grande, em negrito, e azul.</p>
+<p>Quero que este texto esteja grande, em negrito, e azul.</p>
 ```
 
 ```css

@@ -28,7 +28,7 @@ slug: Web/SVG/Tutorial/Other_content_in_SVG
     width="128"
     height="146"
     transform="rotate(45)"
-    xlink:href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/image/mdn_logo_only_color.png" />
+    xlink:href="https://developer.mozilla.org/zh-CN/docs/Web/SVG/Element/image/mdn_logo_only_color.png" />
 </svg>
 ```
 

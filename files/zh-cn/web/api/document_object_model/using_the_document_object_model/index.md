@@ -5,7 +5,7 @@ slug: Web/API/Document_object_model/Using_the_Document_Object_Model
 
 {{DefaultAPISidebar("DOM")}}
 
-*文档对象模型*（DOM）是一个用于操作 HTML 和 XML 文档（包括其他树状文档）的 DOM 树的 API。这个 API 是页面描述的根源，并作为 web 脚本的基础。
+_文档对象模型_（DOM）是一个用于操作 HTML 和 XML 文档（包括其他树状文档）的 DOM 树的 API。这个 API 是页面描述的根源，并作为 web 脚本的基础。
 
 ## 什么是内容树？
 

@@ -3,7 +3,7 @@ title: Date.prototype.getMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getMinutes
 ---
 
-{{JSRef("Global_Objects", "Date")}}
+{{JSRef}}
 
 **`getMinutes()`** 方法根据本地时间，返回一个指定的日期对象的分钟数。
 
@@ -11,8 +11,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getMinutes
 
 ## 语法
 
-```js
-dateObj.getMinutes()
+```js-nolint
+getMinutes()
 ```
 
 ### 参数
@@ -42,7 +42,7 @@ var minutes = Xmas95.getMinutes();
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.getUTCMinutes()")}}
 - {{jsxref("Date.prototype.setMinutes()")}}

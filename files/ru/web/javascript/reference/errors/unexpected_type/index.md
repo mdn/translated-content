@@ -1,7 +1,6 @@
 ---
 title: 'TypeError: "x" is (not) "y"'
 slug: Web/JavaScript/Reference/Errors/Unexpected_type
-translation_of: Web/JavaScript/Reference/Errors/Unexpected_type
 ---
 
 {{jsSidebar("Errors")}}
@@ -41,12 +40,11 @@ foo.substring(1); // TypeError: foo is undefined
 var foo = null;
 foo.substring(1); // TypeError: foo is null
 
-
 // Некоторые методы могут требовать определённый тип
-var foo = {}
+var foo = {};
 Symbol.keyFor(foo); // TypeError: foo is not a symbol
 
-var foo = 'bar'
+var foo = "bar";
 Object.create(foo); // TypeError: "foo" is not an object or null
 ```
 
@@ -55,7 +53,7 @@ Object.create(foo); // TypeError: "foo" is not an object or null
 Что бы исправить ошибку пустого указателя вы можете использовать оператор [typeof.](/ru/docs/Web/JavaScript/Reference/Operators/typeof)
 
 ```js
-if (typeof foo !== 'undefined') {
+if (typeof foo !== "undefined") {
   // Теперь мы знаем, что foo определено.
 }
 ```

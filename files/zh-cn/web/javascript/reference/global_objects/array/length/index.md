@@ -32,7 +32,7 @@ console.log(listB.length);
 listB.length = 2 ** 32; // 4294967296
 // RangeError: Invalid array length
 
-const listC = new Array(-100) // 负数是不允许的
+const listC = new Array(-100); // 负数是不允许的
 // RangeError: Invalid array length
 ```
 
@@ -53,7 +53,7 @@ arr.length = 5; // 将数组长度设置为 5，而当前为 2。
 console.log(arr);
 // [ 1, 2, <3 empty items> ]
 
-arr.forEach(element => console.log(element));
+arr.forEach((element) => console.log(element));
 // 1
 // 2
 ```

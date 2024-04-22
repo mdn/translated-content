@@ -21,15 +21,15 @@ objRef = window.menubar
 
 ```html
 <html>
-<head>
-  <title>Various DOM Tests</title>
-  <script>
-    var visible = window.menubar.visible;
-  </script>
-</head>
-<body>
-  <p>Various DOM Tests</p>
-</body>
+  <head>
+    <title>Various DOM Tests</title>
+    <script>
+      var visible = window.menubar.visible;
+    </script>
+  </head>
+  <body>
+    <p>Various DOM Tests</p>
+  </body>
 </html>
 ```
 

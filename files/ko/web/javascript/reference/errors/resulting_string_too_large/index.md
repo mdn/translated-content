@@ -1,5 +1,5 @@
 ---
-title: 'RangeError: repeat count must be less than infinity'
+title: "RangeError: repeat count must be less than infinity"
 slug: Web/JavaScript/Reference/Errors/Resulting_string_too_large
 ---
 
@@ -29,17 +29,17 @@ slug: Web/JavaScript/Reference/Errors/Resulting_string_too_large
 ### 허용되지 않는 경우
 
 ```js example-bad
-'abc'.repeat(Infinity); // RangeError
-'a'.repeat(2**28);      // RangeError
+"abc".repeat(Infinity); // RangeError
+"a".repeat(2 ** 28); // RangeError
 ```
 
 ### 허용되는 경우
 
 ```js example-good
-'abc'.repeat(0);    // ''
-'abc'.repeat(1);    // 'abc'
-'abc'.repeat(2);    // 'abcabc'
-'abc'.repeat(3.5);  // 'abcabcabc' (숫자는 정수로 변환될 것입니다.)
+"abc".repeat(0); // ''
+"abc".repeat(1); // 'abc'
+"abc".repeat(2); // 'abcabc'
+"abc".repeat(3.5); // 'abcabcabc' (숫자는 정수로 변환될 것입니다.)
 ```
 
 ## 참조

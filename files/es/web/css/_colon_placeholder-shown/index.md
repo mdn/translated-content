@@ -1,5 +1,5 @@
 ---
-title: ':placeholder-shown'
+title: ":placeholder-shown"
 slug: Web/CSS/:placeholder-shown
 ---
 
@@ -25,7 +25,7 @@ La [pseudo-clase](/es/docs/CSS/Pseudo-classes) **`:placeholder-shown`** de [CSS]
 #### HTML
 
 ```html
-<input placeholder="¡Escribe algo aquí!">
+<input placeholder="¡Escribe algo aquí!" />
 ```
 
 #### CSS
@@ -52,7 +52,7 @@ En pantallas angostas como teléfonos inteligentes, el ancho de los cuadros de b
 #### HTML
 
 ```html
-<input placeholder="¡Ingresa algo en este campo, por favor!">
+<input placeholder="¡Ingresa algo en este campo, por favor!" />
 ```
 
 #### CSS

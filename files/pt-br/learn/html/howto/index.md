@@ -1,7 +1,6 @@
 ---
 title: Use HTML para resolver problemas comuns
 slug: Learn/HTML/Howto
-original_slug: Aprender/HTML/como-fazer
 ---
 
 {{LearnSidebar}}

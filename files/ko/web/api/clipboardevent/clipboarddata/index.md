@@ -2,6 +2,7 @@
 title: ClipboardEvent.clipboardData
 slug: Web/API/ClipboardEvent/clipboardData
 ---
+
 {{APIRef("Clipboard API")}} {{SeeCompatTable}}
 
 **`ClipboardEvent.clipboardData`** 속성은 다음과 같은 용도로 사용할 수 있는 {{domxref("DataTransfer")}} 객체입니다.
@@ -14,7 +15,7 @@ slug: Web/API/ClipboardEvent/clipboardData
 ## 구문
 
 ```js
-data = ClipboardEvent.clipboardData
+data = ClipboardEvent.clipboardData;
 ```
 
 ## 명세

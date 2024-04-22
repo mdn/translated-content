@@ -1,5 +1,5 @@
 ---
-title: ':playing'
+title: ":playing"
 slug: Web/CSS/:playing
 ---
 
@@ -11,7 +11,6 @@ slug: Web/CSS/:playing
 
 ```css
 :playing {
-
 }
 ```
 

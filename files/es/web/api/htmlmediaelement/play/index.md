@@ -59,7 +59,7 @@ async function playVideo() {
   try {
     await videoElem.play();
     playButton.className = "playing";
-  } catch(err) {
+  } catch (err) {
     playButton.className = "";
   }
 }

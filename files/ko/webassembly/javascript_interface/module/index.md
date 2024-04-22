@@ -1,7 +1,6 @@
 ---
 title: WebAssembly.Module
 slug: WebAssembly/JavaScript_interface/Module
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module
 ---
 
 {{WebAssemblySidebar}}

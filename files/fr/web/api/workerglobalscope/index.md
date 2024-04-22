@@ -1,14 +1,6 @@
 ---
 title: WorkerGlobalScope
 slug: Web/API/WorkerGlobalScope
-tags:
-  - API
-  - Interface
-  - Reference
-  - TopicStub
-  - WorkerGlobalScope
-  - Workers
-translation_of: Web/API/WorkerGlobalScope
 ---
 
 {{APIRef("Web Workers API")}}
@@ -88,7 +80,7 @@ Cette interface hérite des méthodes de l'interface {{domxref ("EventTarget")}}
 Vous n'accéderez pas à `WorkerGlobalScope` directement dans votre code; cependant, ses propriétés et méthodes sont héritées par des portées globales plus spécifiques telles que {{domxref ("DedicatedWorkerGlobalScope")}} et {{domxref ("SharedWorkerGlobalScope")}}. Par exemple, vous pouvez importer un autre script dans le worker et imprimer le contenu de l'objet `navigator` de l'étendue du worker en utilisant les deux lignes suivantes:
 
 ```js
-importScripts('foo.js');
+importScripts("foo.js");
 console.log(navigator);
 ```
 

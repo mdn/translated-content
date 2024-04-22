@@ -1,19 +1,6 @@
 ---
 title: Начало работы с Angular
-slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started
-tags:
-  - Новички
-  - Фреймворки
-  - Установка
-  - JavaScript
-  - Изучение
-  - client-side
-  - Angular
-translation_of: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started
-original_slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started
 ---
 
 {{LearnSidebar}}
@@ -117,10 +104,10 @@ ng serve
 Файлы, генерируемые CLI автоматически, на которые стоит обратить внимание:
 
 1. `app.module.ts`: определяет файлы, которые использует приложение.
-    Этот файл действует как центральный узел для других файлов в вашем приложении.
+   Этот файл действует как центральный узел для других файлов в вашем приложении.
 2. `app.component.ts`: Определяет класс, который содержит логику основной страницы приложения.
 3. `app.component.html`: Содержит HTML для `AppComponent`. Содержимое этого файла также называется шаблоном.
-    Шаблон определяет представление или то, что вы видите в браузере.
+   Шаблон определяет представление или то, что вы видите в браузере.
 4. `app.component.css`: Содержит стили для `AppComponent`. Этот файл используется, когда вам нужно стилизовать определённый компонент, а не всё приложение.
 
 Компонент Angular состоит из трех основных частей: шаблон, стили, и класс.
@@ -152,17 +139,16 @@ TypeScript предлагает типизацию и более лаконич�
 Типичный компонент выглядит так:
 
 ```js
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-item',
-    // следующие метаданные определяют расположение других частей компонента
-  templateUrl: './item.component.html',
-  styleUrls: ['./item.component.css']
+  selector: "app-item",
+  // следующие метаданные определяют расположение других частей компонента
+  templateUrl: "./item.component.html",
+  styleUrls: ["./item.component.css"],
 })
-
 export class ItemComponent {
-// ваш код будет тут
+  // ваш код будет тут
 }
 ```
 
@@ -183,24 +169,20 @@ export class ItemComponent {
 
 ```js
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html'
+  selector: "app-root",
+  templateUrl: "./app.component.html",
 })
-
-export class AppComponent {
-}
+export class AppComponent {}
 ```
 
 Чтобы указать напрямую HTML-код, используется свойство `template` с обратными кавычками:
 
 ```js
 @Component({
-  selector: 'app-root',
+  selector: "app-root",
   template: `<h1>Hi!</h1>`,
 })
-
-export class AppComponent {
-}
+export class AppComponent {}
 ```
 
 Angular расширяет HTML дополнительным синтаксисом, который позволяет вставлять динамические данные в компонент.
@@ -215,16 +197,15 @@ Angular автоматически обновляет DOM, когда состо
 Значение для `title` берется из класса компонента:
 
 ```js
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-@Component ({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+@Component({
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"],
 })
-
 export class AppComponent {
-    title = 'To do application';
+  title = "To do application";
 }
 ```
 

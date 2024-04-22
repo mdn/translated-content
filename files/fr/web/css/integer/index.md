@@ -1,11 +1,6 @@
 ---
 title: <integer>
 slug: Web/CSS/integer
-tags:
-  - CSS
-  - Reference
-  - Type
-translation_of: Web/CSS/integer
 ---
 
 {{CSSRef}}
@@ -22,7 +17,7 @@ Toutes les valeurs de type `<integer>` sont également des valeurs de type {{css
 
 ## Interpolation
 
-Les valeurs du type `<entier>` peuvent être interpolées de manière à rendre les animations possibles. Dans ce cas l'interpolation se fait par incrémentation discrète. Le calcul est réalisé comme si les valeurs étaient des nombres réels, en virgule flottante et la valeur discrète est obtenue en utilisant la fonction [partie entière](https://fr.wikipedia.org/wiki/Partie_enti%C3%A8re_et_partie_fractionnaire#Fonction_partie_enti.C3.A8re). La rapidité de l'interpolation est déterminée par la {{cssxref("easing-function","fonction de temporisation")}} associée à l'animation.
+Les valeurs du type `<entier>` peuvent être interpolées de manière à rendre les animations possibles. Dans ce cas l'interpolation se fait par incrémentation discrète. Le calcul est réalisé comme si les valeurs étaient des nombres réels, en virgule flottante et la valeur discrète est obtenue en utilisant la fonction [partie entière](https://fr.wikipedia.org/wiki/Partie_entière_et_partie_fractionnaire#Fonction_partie_enti.C3.A8re). La rapidité de l'interpolation est déterminée par la {{cssxref("easing-function","fonction de temporisation")}} associée à l'animation.
 
 ## Exemples
 

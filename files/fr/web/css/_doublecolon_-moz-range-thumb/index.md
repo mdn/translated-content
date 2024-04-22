@@ -1,8 +1,6 @@
 ---
-title: '::-moz-range-thumb'
+title: "::-moz-range-thumb"
 slug: Web/CSS/::-moz-range-thumb
-browser-compat: css.selectors.-moz-range-thumb
-translation_of: Web/CSS/::-moz-range-thumb
 ---
 
 {{CSSRef}}{{Non-standard_header}}
@@ -20,13 +18,13 @@ Le pseudo-élément **`::-moz-range-thumb`** représente le curseur qui se dépl
 ### HTML
 
 ```html
-<input type="range" min="0" max="100" step="5" value="50"/>
+<input type="range" min="0" max="100" step="5" value="50" />
 ```
 
 ### CSS
 
 ```css
-input[type=range]::-moz-range-thumb {
+input[type="range"]::-moz-range-thumb {
   background-color: green;
 }
 ```
@@ -37,7 +35,7 @@ input[type=range]::-moz-range-thumb {
 
 Une barre de progression mise en forme avec ces règles devrait ressembler à&nbsp;:
 
-![Un élément \<input type=range> avec un curseur vert](screen_shot_2015-12-04_at_13.30.08.png)
+![Un élément 'input type=range' avec un curseur vert](screen_shot_2015-12-04_at_13.30.08.png)
 
 ## Spécifications
 

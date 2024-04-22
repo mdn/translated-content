@@ -1,8 +1,8 @@
 ---
 title: var()
 slug: Web/CSS/var
-original_slug: Web/CSS/var()
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`var()`** 함수는 [사용자 지정 속성](/ko/docs/Web/CSS/--*), 또는 "CSS 변수"의 값을 다른 속성의 값으로 지정할 때 사용합니다.
@@ -44,7 +44,10 @@ body {
 /* Fallback */
 /* In the component’s style: */
 .component .header {
-  color: var(--header-color, blue); /* header-color isn’t set, and so remains blue, the fallback value */
+  color: var(
+    --header-color,
+    blue
+  ); /* header-color isn’t set, and so remains blue, the fallback value */
 }
 
 .component .text {

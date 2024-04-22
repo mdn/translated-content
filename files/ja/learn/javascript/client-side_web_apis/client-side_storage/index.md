@@ -87,14 +87,14 @@ MDN 学習領域の他の場所で、[静的サイト](/ja/docs/Learn/Server-sid
    {{domxref("Storage.setItem()")}} メソッドによって、ストレージ内にデータ項目を保存できます。このメソッドは 2 つの引数をとります。すなわち、その項目の名前と、その値です。JavaScript コンソールに以下のように打ち込んでみてください（もし良ければ、値は自分の名前に変更してください）。
 
    ```js
-   localStorage.setItem('name','Chris');
+   localStorage.setItem("name", "Chris");
    ```
 
 4. {{domxref("Storage.getItem()")}} メソッドは 1 つの引数をとります。つまり、取り出したいデータ項目の名前です。そして、このメソッドは、その項目の値を返します。今度は JavaScript コンソールに以下の行を打ち込んでください。
 
    ```js
-   let myName = localStorage.getItem('name');
-   myName
+   let myName = localStorage.getItem("name");
+   myName;
    ```
 
    2 行目を入力すると、`myName` という変数が今や `name` というデータ項目の値を保有していることが分かるはずです。
@@ -102,9 +102,9 @@ MDN 学習領域の他の場所で、[静的サイト](/ja/docs/Learn/Server-sid
 5. {{domxref("Storage.removeItem()")}} メソッドは 1 つの引数をとります。つまり、削除したいデータ項目の名前です。このメソッドは、ウェブストレージからその項目を削除します。 JavaScript コンソールに以下の行を打ち込んでください。
 
    ```js
-   localStorage.removeItem('name');
-   myName = localStorage.getItem('name');
-   myName
+   localStorage.removeItem("name");
+   myName = localStorage.getItem("name");
+   myName;
    ```
 
    3 行目は、今度は `null` を返すはずです。というのも、もはや `name` という項目はウェブストレージ内に存在しないからです。
@@ -117,9 +117,9 @@ MDN 学習領域の他の場所で、[静的サイト](/ja/docs/Learn/Server-sid
 2. 以下の行をブラウザーの JavaScript コンソールに打ち込んでください。
 
    ```js
-   localStorage.setItem('name','Chris');
-   let myName = localStorage.getItem('name');
-   myName
+   localStorage.setItem("name", "Chris");
+   let myName = localStorage.getItem("name");
+   myName;
    ```
 
    name という項目が返されるのが分かるはずです。
@@ -128,8 +128,8 @@ MDN 学習領域の他の場所で、[静的サイト](/ja/docs/Learn/Server-sid
 4. 再び、以下の行を入力してください。
 
    ```js
-   let myName = localStorage.getItem('name');
-   myName
+   let myName = localStorage.getItem("name");
+   myName;
    ```
 
    ブラウザーを終了させてから再び開いたのに、それでも値が利用可能である、ということが分かるはずです。
@@ -156,31 +156,31 @@ MDN 学習領域の他の場所で、[静的サイト](/ja/docs/Learn/Server-sid
 
    ```js
    // 必要な定数を作成
-   const rememberDiv = document.querySelector('.remember');
-   const forgetDiv = document.querySelector('.forget');
-   const form = document.querySelector('form');
-   const nameInput = document.querySelector('#entername');
-   const submitBtn = document.querySelector('#submitname');
-   const forgetBtn = document.querySelector('#forgetname');
+   const rememberDiv = document.querySelector(".remember");
+   const forgetDiv = document.querySelector(".forget");
+   const form = document.querySelector("form");
+   const nameInput = document.querySelector("#entername");
+   const submitBtn = document.querySelector("#submitname");
+   const forgetBtn = document.querySelector("#forgetname");
 
-   const h1 = document.querySelector('h1');
-   const personalGreeting = document.querySelector('.personal-greeting');
+   const h1 = document.querySelector("h1");
+   const personalGreeting = document.querySelector(".personal-greeting");
    ```
 
 4. 次は、送信ボタンが押されたときにフォームが実際に送信されるのを阻止するために、小さなイベントリスナーを記載する必要があります。これは私たちが望むような動作ではないからです。前回のコードの下に、次のスニペットを追加してください。
 
    ```js
    // ボタンが押されたときにフォームを送信しないようにする
-   form.addEventListener('submit', (e) => e.preventDefault());
+   form.addEventListener("submit", (e) => e.preventDefault());
    ```
 
 5. 次に、イベントリスナーを追加する必要があります。このイベントリスナーのハンドラー関数は、"Say hello" ボタンがクリックされたときに動作するようにします。コメントでそれぞれが何を行うか詳細に説明していますが、要するにここではユーザーがテキスト入力ボックスに入力した名前を受け取り、 `setItem()` を使用してウェブストレージに保存し、次に `nameDisplayCheck()` という関数を呼び出して実際のウェブサイトの更新を処理しているのです。これをコードの一番下に追加してください。
 
    ```js
    // 'Say hello' ボタンがクリックされたら関数を実行する
-   submitBtn.addEventListener('click', () => {
+   submitBtn.addEventListener("click", () => {
      // 入力された名前をウェブストレージに保存
-     localStorage.setItem('name', nameInput.value);
+     localStorage.setItem("name", nameInput.value);
      // nameDisplayCheck() を動作させ、パーソナライズされた挨拶の表示と、
      // フォームの表示を更新する
      nameDisplayCheck();
@@ -191,9 +191,9 @@ MDN 学習領域の他の場所で、[静的サイト](/ja/docs/Learn/Server-sid
 
    ```js
    // 'Forget' ボタンがクリックされたら関数を実行する
-   forgetBtn.addEventListener('click', () => {
+   forgetBtn.addEventListener("click", () => {
      // 保存してある名前をウェブストレージから削除
-     localStorage.removeItem('name');
+     localStorage.removeItem("name");
      // 再び nameDisplayCheck() を実行して、一般的な挨拶を表示するとともに
      // フォーム表示を更新する
      nameDisplayCheck();
@@ -206,21 +206,22 @@ MDN 学習領域の他の場所で、[静的サイト](/ja/docs/Learn/Server-sid
    // nameDisplayCheck() という関数を定義する
    function nameDisplayCheck() {
      // 'name' というデータ項目がウェブストレージに保存されているかどうかを調べる
-     if (localStorage.getItem('name')) {
-      // もし保存されていたら、個人に合わせた挨拶を表示
-       const name = localStorage.getItem('name');
+     if (localStorage.getItem("name")) {
+       // もし保存されていたら、個人に合わせた挨拶を表示
+       const name = localStorage.getItem("name");
        h1.textContent = `Welcome, ${name}`;
        personalGreeting.textContent = `Welcome to our website, ${name}! We hope you have fun while you are here.`;
        // フォームのうち 'remember' の部分を隠し、'forget' の部分を表示
-       forgetDiv.style.display = 'block';
-       rememberDiv.style.display = 'none';
+       forgetDiv.style.display = "block";
+       rememberDiv.style.display = "none";
      } else {
        // もし保存されていなければ、一般的な挨拶を表示
-       h1.textContent = 'Welcome to our website ';
-       personalGreeting.textContent = 'Welcome to our website. We hope you have fun while you are here.';
+       h1.textContent = "Welcome to our website ";
+       personalGreeting.textContent =
+         "Welcome to our website. We hope you have fun while you are here.";
        // フォームのうち 'forget' の部分を隠し、'remember' の部分を表示
-       forgetDiv.style.display = 'none';
-       rememberDiv.style.display = 'block';
+       forgetDiv.style.display = "none";
+       rememberDiv.style.display = "block";
      }
    }
    ```
@@ -270,31 +271,33 @@ MDN 学習領域の他の場所で、[静的サイト](/ja/docs/Learn/Server-sid
    let db;
    ```
 
-    ここでは、`db` と呼ばれる変数を宣言しています。これは後に、データベースを表すオブジェクトを記憶するのに使われます。この変数を何箇所かで使うつもりなので、物事を容易にするために、ここでこの変数を大域的に宣言しておきました。
+   ここでは、`db` と呼ばれる変数を宣言しています。これは後に、データベースを表すオブジェクトを記憶するのに使われます。この変数を何箇所かで使うつもりなので、物事を容易にするために、ここでこの変数を大域的に宣言しておきました。
 
 2. 次に、以下のものをコードの末尾に加えてください。
 
    ```js
    // データベースを開きます。データベースがまだ存在しない場合は作成されます。
    // （後述の upgradeneed ハンドラーを参照）。
-   const openRequest = window.indexedDB.open('notes_db', 1);
+   const openRequest = window.indexedDB.open("notes_db", 1);
    ```
 
    この行は、 `notes_db` というデータベースのバージョン `1` を開くためのリクエストを作成します。もしこれがまだ存在しない場合は、後続のコードで作成されます。このリクエストパターンは、 IndexedDB 全体でとても多く使用されるでしょう。データベース処理には時間がかかります。結果を待つ間にブラウザーがハングアップするのは避けたいので、データベースの操作は{{Glossary("asynchronous", "非同期")}}です。つまり、すぐに実行するのではなく、将来のある時点で実行し、実行が完了したら通知を受け取ります。
 
    IndexedDB でこれを扱うには、リクエストオブジェクトを作成します（これは好きなように名付けることができます。ここでは `openRequest` と名付けているので、何のためのオブジェクトかは明らかでしょう）。そして、リクエストが完全に完了したり、失敗したりしたときにコードを実行するために、イベントハンドラーを使用します。
 
-    > **メモ:** バージョン番号は重要です。もし、データベースをアップグレードしたい場合（例えば、テーブル構造を変更するなど）、バージョンを上げ、 `upgradeneeded` ハンドラー（下記参照）の内部で異なるスキーマを指定するなどして、コードを再度実行する必要があります。このチュートリアルでは、データベースのアップグレードについては触れません。
+   > **メモ:** バージョン番号は重要です。もし、データベースをアップグレードしたい場合（例えば、テーブル構造を変更するなど）、バージョンを上げ、 `upgradeneeded` ハンドラー（下記参照）の内部で異なるスキーマを指定するなどして、コードを再度実行する必要があります。このチュートリアルでは、データベースのアップグレードについては触れません。
 
 3. 前回追加した部分のすぐ下に、次のイベントハンドラーを追加してください。
 
    ```js
    // error ハンドラーは、データベースがうまく開けなかったことを意味します。
-   openRequest.addEventListener('error', () => console.error('Database failed to open'));
+   openRequest.addEventListener("error", () =>
+     console.error("Database failed to open"),
+   );
 
    // success ハンドラーは、データベースがうまく開けたことを意味します。
-   openRequest.addEventListener('success', () => {
-     console.log('Database opened successfully');
+   openRequest.addEventListener("success", () => {
+     console.log("Database opened successfully");
 
      // 開いたデータベースオブジェクトを db という変数に記憶します。これは以降で頻繁に使われます。
      db = openRequest.result;
@@ -312,20 +315,22 @@ MDN 学習領域の他の場所で、[静的サイト](/ja/docs/Learn/Server-sid
 
    ```js
    // データベースのテーブルがまだ存在しない場合は、それを設定します。
-   openRequest.addEventListener('upgradeneeded', (e) => {
-
+   openRequest.addEventListener("upgradeneeded", (e) => {
      // 開いたデータベースの参照を取得します。
      db = e.target.result;
 
      // 自動増加するキーを含んだ、メモを格納するための objectStore を
      // 作成します（基本的に単一の表のように）。
-     const objectStore = db.createObjectStore('notes_os', { keyPath: 'id', autoIncrement:true });
+     const objectStore = db.createObjectStore("notes_os", {
+       keyPath: "id",
+       autoIncrement: true,
+     });
 
      // objectStore にどのようなデータ項目を格納するかを定義します。
-     objectStore.createIndex('title', 'title', { unique: false });
-     objectStore.createIndex('body', 'body', { unique: false });
+     objectStore.createIndex("title", "title", { unique: false });
+     objectStore.createIndex("body", "body", { unique: false });
 
-     console.log('Database setup complete');
+     console.log("Database setup complete");
    });
    ```
 
@@ -333,7 +338,7 @@ MDN 学習領域の他の場所で、[静的サイト](/ja/docs/Learn/Server-sid
 
    次に {{domxref("IDBDatabase.createObjectStore()")}} を使用して、呼び出されたデータベースの中に `notes_os` という名前の新しいオブジェクトストアを作成します。これは、従来のデータベースシステムにおける単一の表に相当します。これに notes という名前をつけて、 `id` という `autoIncrement` キーフィールドも指定しました。新しいレコードが作成されるたびに、このフィールドに自動的に値が増加するので、開発者は明示的にこのフィールドを設定する必要はありません。キーである `id` フィールドは、レコードを削除するときや表示するときなど、レコードを一意に識別するために使用されます。
 
-    他にも {{domxref("IDBObjectStore.createIndex()")}} メソッドを使用して、`title` （それぞれのメモのタイトルを格納）と `body` （メモの本文を格納）の 2 つのインデックス（フィールド）も作成しています。
+   他にも {{domxref("IDBObjectStore.createIndex()")}} メソッドを使用して、`title` （それぞれのメモのタイトルを格納）と `body` （メモの本文を格納）の 2 つのインデックス（フィールド）も作成しています。
 
 このデータベーススキーマを設定した上で、データベースにレコードを追加し始めると、各レコードはこのようなオブジェクトとして表わされることになります。
 
@@ -353,7 +358,7 @@ MDN 学習領域の他の場所で、[静的サイト](/ja/docs/Learn/Server-sid
 
 ```js
 // submit イベントハンドラーを作成し、フォームが送信されたときに addData() 関数が実行されるようにします。
-form.addEventListener('submit', addData);
+form.addEventListener("submit", addData);
 ```
 
 では、`addData()` 関数を定義しましょう。上記の行の下に、以下のものを追加してください。
@@ -368,29 +373,31 @@ function addData(e) {
   const newItem = { title: titleInput.value, body: bodyInput.value };
 
   // 読み書きのデータベーストランザクションを開いて、データの追加に備えます。
-  const transaction = db.transaction(['notes_os'], 'readwrite');
+  const transaction = db.transaction(["notes_os"], "readwrite");
 
   // すでにデータベースに追加されているオブジェクトストアを呼び出すします。
-  const objectStore = transaction.objectStore('notes_os');
+  const objectStore = transaction.objectStore("notes_os");
 
   // newItem オブジェクトをオブジェクトストアに追加するリクエストを行います。
   const addRequest = objectStore.add(newItem);
 
-  addRequest.addEventListener('success', () => {
+  addRequest.addEventListener("success", () => {
     // フォームをクリアして、次の項目の追加に備えます。
-    titleInput.value = '';
-    bodyInput.value = '';
+    titleInput.value = "";
+    bodyInput.value = "";
   });
 
   // トランザクションが完了し、完全に終了した場合の成功を報告します。
-  transaction.addEventListener('complete', () => {
-    console.log('Transaction completed: database modification finished.');
+  transaction.addEventListener("complete", () => {
+    console.log("Transaction completed: database modification finished.");
 
     // 表示データの更新を行い、新しく追加された項目を表示するために、再度 displayData() を実行します。
     displayData();
   });
 
-  transaction.addEventListener('error', () => console.log('Transaction not opened due to error'));
+  transaction.addEventListener("error", () =>
+    console.log("Transaction not opened due to error"),
+  );
 }
 ```
 
@@ -418,8 +425,8 @@ function displayData() {
 
   // オブジェクトストアを開き、カーソルを取得します。カーソルはストア内の
   // 異なるデータ項目をすべて反復処理します。
-  const objectStore = db.transaction('notes_os').objectStore('notes_os');
-  objectStore.openCursor().addEventListener('success', (e) => {
+  const objectStore = db.transaction("notes_os").objectStore("notes_os");
+  objectStore.openCursor().addEventListener("success", (e) => {
     // カーソルへの参照を取得します。
     const cursor = e.target.result;
 
@@ -427,9 +434,9 @@ function displayData() {
     if (cursor) {
       // リスト項目、h3、p を作成し、表示する際に各データ項目を中に入れます。
       // HTML フラグメントを構成し、リストの中に追加します。
-      const listItem = document.createElement('li');
-      const h3 = document.createElement('h3');
-      const para = document.createElement('p');
+      const listItem = document.createElement("li");
+      const h3 = document.createElement("h3");
+      const para = document.createElement("p");
 
       listItem.appendChild(h3);
       listItem.appendChild(para);
@@ -441,28 +448,28 @@ function displayData() {
 
       // listItem の属性内部に、このデータ項目の ID を保存します。こうすると、
       // どの項目に対応しているのかがわかります。これは、後で項目を削除したくなったときに有用です。
-      listItem.setAttribute('data-note-id', cursor.value.id);
+      listItem.setAttribute("data-note-id", cursor.value.id);
 
       // ボタンを作成し、それを各 listItem の内部に設置します。
-      const deleteBtn = document.createElement('button');
+      const deleteBtn = document.createElement("button");
       listItem.appendChild(deleteBtn);
-      deleteBtn.textContent = 'Delete';
+      deleteBtn.textContent = "Delete";
 
       // ボタンがクリックされたら deleteItem() 関数が実行されるように、
       // イベントハンドラーを設定します。
-      deleteBtn.addEventListener('click', deleteItem);
+      deleteBtn.addEventListener("click", deleteItem);
 
       // カーソルの次の項目へ反復処理を行います。
       cursor.continue();
     } else {
       // Again, if list item is empty, display a 'No notes stored' message
       if (!list.firstChild) {
-        const listItem = document.createElement('li');
-        listItem.textContent = 'No notes stored.'
+        const listItem = document.createElement("li");
+        listItem.textContent = "No notes stored.";
         list.appendChild(listItem);
       }
       // 反復処理をすべきカーソルの項目がこれ以上ない場合、そのように示します。
-      console.log('Notes all displayed');
+      console.log("Notes all displayed");
     }
   });
 }
@@ -488,15 +495,15 @@ function deleteItem(e) {
   // 削除したいタスクの名前を取得します。
   // IDB で使用する前に、これを数値に変換する必要があります。
   // IDB のキー値は型が重視されます。
-  const noteId = Number(e.target.parentNode.getAttribute('data-note-id'));
+  const noteId = Number(e.target.parentNode.getAttribute("data-note-id"));
 
   // データベーストランザクションを開き、タスクを削除します。上で取得した id を使用してタスクを探します。
-  const transaction = db.transaction(['notes_os'], 'readwrite');
-  const objectStore = transaction.objectStore('notes_os');
+  const transaction = db.transaction(["notes_os"], "readwrite");
+  const objectStore = transaction.objectStore("notes_os");
   const deleteRequest = objectStore.delete(noteId);
 
   // データ項目を削除したことを報告します。
-  transaction.addEventListener('complete', () => {
+  transaction.addEventListener("complete", () => {
     // ボタンの親、すなわちリスト項目を削除します。
     // すると、それは表示されなくなります。
     e.target.parentNode.parentNode.removeChild(e.target.parentNode);
@@ -504,8 +511,8 @@ function deleteItem(e) {
 
     // この場合も、リスト項目が空であれば、「メモが格納されていません」というメッセージを表示します。
     if (!list.firstChild) {
-      const listItem = document.createElement('li');
-      listItem.textContent = 'No notes stored.';
+      const listItem = document.createElement("li");
+      listItem.textContent = "No notes stored.";
       list.appendChild(listItem);
     }
   });
@@ -532,12 +539,12 @@ function deleteItem(e) {
 
    ```js
    const videos = [
-     { 'name' : 'crystal' },
-     { 'name' : 'elf' },
-     { 'name' : 'frog' },
-     { 'name' : 'monster' },
-     { 'name' : 'pig' },
-     { 'name' : 'rabbit' }
+     { name: "crystal" },
+     { name: "elf" },
+     { name: "frog" },
+     { name: "monster" },
+     { name: "pig" },
+     { name: "rabbit" },
    ];
    ```
 
@@ -548,16 +555,20 @@ function deleteItem(e) {
    ```js
    function init() {
      // 動画の名前を一つずつループ処理してゆきます。
-     for(const video of videos) {
-      // トランザクションを開き、オブジェクトストアを取得し、名前によって各動画を get() します。
-       const objectStore = db.transaction('videos_os').objectStore('videos_os');
+     for (const video of videos) {
+       // トランザクションを開き、オブジェクトストアを取得し、名前によって各動画を get() します。
+       const objectStore = db.transaction("videos_os").objectStore("videos_os");
        const request = objectStore.get(video.name);
-       request.addEventListener('success', () => {
+       request.addEventListener("success", () => {
          // もし結果がデータベース内に存在したら（存在しなければ undefined）
          if (request.result) {
            // displayVideo() を用いて、動画を IDB から取り出して表示します。
-           console.log('taking videos from IDB');
-           displayVideo(request.result.mp4, request.result.webm, request.result.name);
+           console.log("taking videos from IDB");
+           displayVideo(
+             request.result.mp4,
+             request.result.webm,
+             request.result.name,
+           );
          } else {
            // 動画をネットワークから取ってきます。
            fetchVideoFromNetwork(video);
@@ -569,14 +580,18 @@ function deleteItem(e) {
 
 3. 以下のスニペットは、`fetchVideoFromNetwork()` 内から引用したものです。ここでは、2 つの別々の {{domxref("fetch()")}} 要求を用いて MP4 版と WebM 版の動画を読み込んでいます。次に {{domxref("Response.blob()")}} メソッドを使用してそれぞれのレスポンスの本文を blob として抽出し、後で格納したり表示したりできる動画のオブジェクト表現を得ています。
 
-    しかし、ここで問題があります。これらの二つの要求はどちらも非同期的なのですが、双方のプロミスが履行された (fulfilled) 場合にだけ動画を表示もしくは保存しようと試みたいのです。幸い、そうした問題を扱う組み込みメソッドがあります。すなわち {{jsxref("Promise.all()")}} です。これは一つの引数 — 成立したかどうかを調べたい個々のプロミスすべてに対する参照を配列に入れたもの — をとり、これ自体がプロミスに基づいています。
+   しかし、ここで問題があります。これらの二つの要求はどちらも非同期的なのですが、双方のプロミスが履行された (fulfilled) 場合にだけ動画を表示もしくは保存しようと試みたいのです。幸い、そうした問題を扱う組み込みメソッドがあります。すなわち {{jsxref("Promise.all()")}} です。これは一つの引数 — 成立したかどうかを調べたい個々のプロミスすべてに対する参照を配列に入れたもの — をとり、これ自体がプロミスに基づいています。
 
    このプロミスの `then()` ハンドラー内で、先ほどと同様に `displayVideo()` 関数を呼び出して動画を UI に表示し、さらに `storeVideo()` 関数を呼び出して動画をデータベース内に格納しています。
 
    ```js
    // fetch() 関数を使用して MP4 版と WebM 版の動画を取得し、そのレスポンス本体を blob として公開します。
-   const mp4Blob = fetch(`videos/${video.name}.mp4`).then((response) => response.blob());
-   const webmBlob = fetch(`videos/${video.name}.webm`).then((response) => response.blob());
+   const mp4Blob = fetch(`videos/${video.name}.mp4`).then((response) =>
+     response.blob(),
+   );
+   const webmBlob = fetch(`videos/${video.name}.webm`).then((response) =>
+     response.blob(),
+   );
 
    // 両方のプロミスが履行されたときのみ、次のコードを実行します。
    Promise.all([mp4Blob, webmBlob]).then((values) => {
@@ -593,13 +608,17 @@ function deleteItem(e) {
    // storeVideo() 関数を定義します。
    function storeVideo(mp4, webm, name) {
      // トランザクションを開き、オブジェクトストアを取得し、IDB に書き込めるように読み書きできるようにします。
-     const objectStore = db.transaction(['videos_os'], 'readwrite').objectStore('videos_os');
+     const objectStore = db
+       .transaction(["videos_os"], "readwrite")
+       .objectStore("videos_os");
 
      // add() を使ってレコードを IDB に追加します。
      const request = objectStore.add({ mp4, webm, name });
 
-     request.addEventListener('success', () => console.log('Record addition attempt finished'));
-     request.addEventListener('error', () => console.error(request.error));
+     request.addEventListener("success", () =>
+       console.log("Record addition attempt finished"),
+     );
+     request.addEventListener("error", () => console.error(request.error));
    }
    ```
 
@@ -613,17 +632,17 @@ function deleteItem(e) {
      const webmURL = URL.createObjectURL(webmBlob);
 
      // ページに動画を埋め込むための DOM 要素を作成する
-     const article = document.createElement('article');
-     const h2 = document.createElement('h2');
+     const article = document.createElement("article");
+     const h2 = document.createElement("h2");
      h2.textContent = title;
-     const video = document.createElement('video');
+     const video = document.createElement("video");
      video.controls = true;
-     const source1 = document.createElement('source');
+     const source1 = document.createElement("source");
      source1.src = mp4URL;
-     source1.type = 'video/mp4';
-     const source2 = document.createElement('source');
+     source1.type = "video/mp4";
+     const source2 = document.createElement("source");
      source2.src = webmURL;
-     source2.type = 'video/webm';
+     source2.type = "video/webm";
 
      // DOM 要素のページへの埋め込み
      section.appendChild(article);
@@ -660,10 +679,12 @@ Cache API もクライアント側のストレージ機構ですが、少し異�
 
 ```js
 // サイトがオフラインで動くようにする処理を制御するために、サービスワーカーを登録します。
-if ('serviceWorker' in navigator) {
+if ("serviceWorker" in navigator) {
   navigator.serviceWorker
-    .register('/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js')
-    .then(() => console.log('Service Worker Registered'));
+    .register(
+      "/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js",
+    )
+    .then(() => console.log("Service Worker Registered"));
 }
 ```
 
@@ -680,18 +701,18 @@ if ('serviceWorker' in navigator) {
 ここで、キャッシュ API の動作を確認します。Domxref("CacheStorage.open()")}} メソッドを使用して、レスポンスを格納できる新しいキャッシュオブジェクトを開いています（IndexedDB オブジェクトストアのようなものです）。このプロミスは `video-store` キャッシュを表す {{domxref("Cache")}} オブジェクトで履行されます。次に {{domxref("Cache.addAll()")}} メソッドを使用して、一連のアセットをフェッチし、そのレスポンスをキャッシュに追加しています。
 
 ```js
-self.addEventListener('install', (e) => {
+self.addEventListener("install", (e) => {
   e.waitUntil(
     caches
-      .open('video-store')
+      .open("video-store")
       .then((cache) =>
         cache.addAll([
-          '/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/',
-          '/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.html',
-          '/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.js',
-          '/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/style.css',
-        ])
-      )
+          "/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/",
+          "/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.html",
+          "/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.js",
+          "/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/style.css",
+        ]),
+      ),
   );
 });
 ```
@@ -711,10 +732,10 @@ self.addEventListener('install', (e) => {
 一致するものが見つかった場合、それを独自のレスポンスとして返します。そうでない場合は、ネットワークからのレスポンスを [fetch()](/ja/docs/Web/API/fetch) して、代わりにそれを返します。
 
 ```js
-self.addEventListener('fetch', (e) => {
+self.addEventListener("fetch", (e) => {
   console.log(e.request.url);
   e.respondWith(
-    caches.match(e.request).then((response) => response || fetch(e.request))
+    caches.match(e.request).then((response) => response || fetch(e.request)),
   );
 });
 ```

@@ -5,9 +5,9 @@ slug: Web/HTML/Global_attributes/itemref
 
 {{HTMLSidebar("Global_attributes")}}
 
-**`itemref`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 사용하면 {{htmlattrxref("itemscope")}} 특성을 가진 요소 바깥의 속성도 아이템과 연결할 수 있습니다.
+**`itemref`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 사용하면 [`itemscope`](/ko/docs/Web/HTML/Global_attributes#itemscope) 특성을 가진 요소 바깥의 속성도 아이템과 연결할 수 있습니다.
 
-`itemref` 특성에는 문서 내 다른 요소의 {{htmlattrxref("id")}} 목록({{htmlattrxref("itemid")}} 아님)을 제공해야 합니다.
+`itemref` 특성에는 문서 내 다른 요소의 [`id`](/ko/docs/Web/HTML/Global_attributes#id) 목록([`itemid`](/ko/docs/Web/HTML/Global_attributes#itemid) 아님)을 제공해야 합니다.
 
 `itemref` 특성은 `itemscope` 특성을 지정한 요소에만 추가할 수 있습니다.
 
@@ -19,11 +19,11 @@ slug: Web/HTML/Global_attributes/itemref
 
 ```html
 <div itemscope id="amanda" itemref="a b"></div>
-<p id="a">Name: <span itemprop="name">Amanda</span> </p>
+<p id="a">Name: <span itemprop="name">Amanda</span></p>
 <div id="b" itemprop="band" itemscope itemref="c"></div>
 <div id="c">
-    <p>Band: <span itemprop="name">Jazz Band</span> </p>
-    <p>Size: <span itemprop="size">12</span> players</p>
+  <p>Band: <span itemprop="name">Jazz Band</span></p>
+  <p>Size: <span itemprop="size">12</span> players</p>
 </div>
 ```
 
@@ -60,7 +60,7 @@ slug: Web/HTML/Global_attributes/itemref
 - 다른 [전역 특성](/ko/docs/Web/HTML/Global_attributes).
 - 마이크로데이터 관련 다른 전역 특성
 
-  - {{htmlattrxref("itemid")}}
-  - {{htmlattrxref("itemprop")}}
-  - {{htmlattrxref("itemref")}}
-  - {{htmlattrxref("itemtype")}}
+  - [`itemid`](/ko/docs/Web/HTML/Global_attributes#itemid)
+  - [`itemprop`](/ko/docs/Web/HTML/Global_attributes#itemprop)
+  - [`itemscope`](/ko/docs/Web/HTML/Global_attributes#itemscope)
+  - [`itemtype`](/ko/docs/Web/HTML/Global_attributes#itemtype)

@@ -35,6 +35,8 @@ window.scrollBy(0, window.innerHeight);
 
 ## Especificações
 
-| Specification                                                                                    | Status                           | Comment             |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{ SpecName('CSSOM View', '#dom-window-scrollby', 'window.scrollBy()') }} | {{ Spec2('CSSOM View') }} | Initial definition. |
+{{Specifications}}
+
+## Compatibilidade com navegadores
+
+{{Compat}}

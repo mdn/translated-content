@@ -1,7 +1,6 @@
 ---
 title: MediaRecorder.isTypeSupported()
 slug: Web/API/MediaRecorder/isTypeSupported_static
-original_slug: Web/API/MediaRecorder/isTypeSupported
 ---
 
 {{APIRef("MediaStream Recording")}}
@@ -37,7 +36,11 @@ const types = [
 ];
 
 for (const type of types) {
-  console.log(`${type} に対応している? ${MediaRecorder.isTypeSupported(type) ? "たぶん!" : "いいえ :("}`);
+  console.log(
+    `${type} に対応している? ${
+      MediaRecorder.isTypeSupported(type) ? "たぶん!" : "いいえ :("
+    }`,
+  );
 }
 ```
 

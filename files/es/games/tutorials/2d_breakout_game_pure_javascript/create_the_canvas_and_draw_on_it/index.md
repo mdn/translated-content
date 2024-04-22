@@ -1,7 +1,6 @@
 ---
 title: Crea el lienzo (canvas) y dibuja en él
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
-original_slug: Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Create_the_Canvas_and_draw_on_it
 ---
 
 {{GamesSidebar}}
@@ -17,25 +16,30 @@ Antes de que podamos programar la parte funcional del juego, necesitamos crear l
 La estructura del documento HTML es muy simple, porque todo el juego se visualizará dentro del elemento {{htmlelement("canvas")}}. Con tu editor de textos favorito, prepara un documento en blanco, guárdalo como `index.html` en un lugar adecuado, y escribe el siguiente código:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8" />
     <title>Gamedev Canvas Workshop</title>
     <style>
-      * { padding: 0; margin: 0; }
-      canvas { background: #eee; display: block; margin: 0 auto; }
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      canvas {
+        background: #eee;
+        display: block;
+        margin: 0 auto;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="480" height="320"></canvas>
 
-<canvas id="myCanvas" width="480" height="320"></canvas>
-
-<script>
-  // JavaScript code goes here
-</script>
-
-</body>
+    <script>
+      // JavaScript code goes here
+    </script>
+  </body>
 </html>
 ```
 
@@ -68,7 +72,7 @@ Podemos dibujar otras cosas aparte de rectángulos. Aquí hay un fragmento de c�
 
 ```js
 ctx.beginPath();
-ctx.arc(240, 160, 20, 0, Math.PI*2, false);
+ctx.arc(240, 160, 20, 0, Math.PI * 2, false);
 ctx.fillStyle = "green";
 ctx.fill();
 ctx.closePath();

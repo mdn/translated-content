@@ -9,7 +9,7 @@ slug: Web/API/ReadableStream/getReader
 
 ## 语法
 
-```js
+```js-nolint
 getReader()
 getReader(mode)
 ```
@@ -56,8 +56,12 @@ function fetchStream() {
     // value for fetch streams is a Uint8Array
     charsReceived += value.length;
     const chunk = value;
-    let listItem = document.createElement('li');
-    listItem.textContent = 'Received ' + charsReceived + ' characters so far. Current chunk = ' + chunk;
+    let listItem = document.createElement("li");
+    listItem.textContent =
+      "Received " +
+      charsReceived +
+      " characters so far. Current chunk = " +
+      chunk;
     list2.appendChild(listItem);
 
     result += chunk;

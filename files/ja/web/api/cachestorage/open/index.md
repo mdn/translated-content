@@ -1,8 +1,9 @@
 ---
-title: CacheStorage.open()
+title: "CacheStorage: open() メソッド"
+short-title: open()
 slug: Web/API/CacheStorage/open
 l10n:
-  sourceCommit: 9ad07c43f42e14278a4040fd554af33699aea632
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("Service Workers API")}}
@@ -49,8 +50,8 @@ self.addEventListener("install", (event) => {
           "/gallery/bountyHunters.jpg",
           "/gallery/myLittleVader.jpg",
           "/gallery/snowTroopers.jpg",
-        ])
-      )
+        ]),
+      ),
   );
 });
 ```

@@ -1,6 +1,8 @@
 ---
 title: border-image-slice
 slug: Web/CSS/border-image-slice
+l10n:
+  sourceCommit: 9416f9b9db835dc3cc9a4f628d3bd34cdf494bc1
 ---
 
 {{CSSRef}}
@@ -37,7 +39,8 @@ border-image-slice: 30 30% 45;
 border-image-slice: 7 12 14 5;
 
 /* `fill` キーワードの使用 */
-border-image-slice: 10% fill 7 12;
+border-image-slice: 10% fill;
+border-image-slice: fill 10%;
 
 /* グローバル値 */
 border-image-slice: inherit;
@@ -74,7 +77,7 @@ border-image-slice: unset;
 
 ## 例
 
-<h3 id="Adjustable_border_width_and_slice">調整のできる境界の幅とスライス</h3>
+### 調整のできる境界の幅とスライス
 
 次の例は、シンプルな `<div>` に境界画像を設定したものです。境界のソース画像は以下の通りです。
 
@@ -103,12 +106,14 @@ border-image-slice: 30;
 <ul>
   <li>
     <label for="width">スライドして <code>border-width</code> を調整</label>
-    <input type="range" min="10" max="45" id="width">
+    <input type="range" min="10" max="45" id="width" />
     <output id="width-output">30px</output>
   </li>
   <li>
-    <label for="slice">スライドして <code>border-image-slice</code> を調整</label>
-    <input type="range" min="10" max="45" id="slice">
+    <label for="slice"
+      >スライドして <code>border-image-slice</code> を調整</label
+    >
+    <input type="range" min="10" max="45" id="slice" />
     <output id="slice-output">30</output>
   </li>
 </ul>
@@ -141,23 +146,23 @@ li {
 #### JavaScript
 
 ```js
-const widthSlider = document.getElementById('width');
-const sliceSlider = document.getElementById('slice');
-const widthOutput = document.getElementById('width-output');
-const sliceOutput = document.getElementById('slice-output');
-const divElem = document.querySelector('div > div');
+const widthSlider = document.getElementById("width");
+const sliceSlider = document.getElementById("slice");
+const widthOutput = document.getElementById("width-output");
+const sliceOutput = document.getElementById("slice-output");
+const divElem = document.querySelector("div > div");
 
-widthSlider.addEventListener('input', () => {
-  const newValue = widthSlider.value + 'px';
+widthSlider.addEventListener("input", () => {
+  const newValue = `${widthSlider.value}px`;
   divElem.style.borderWidth = newValue;
   widthOutput.textContent = newValue;
-})
+});
 
-sliceSlider.addEventListener('input', () => {
+sliceSlider.addEventListener("input", () => {
   const newValue = sliceSlider.value;
   divElem.style.borderImageSlice = newValue;
   sliceOutput.textContent = newValue;
-})
+});
 ```
 
 #### 結果

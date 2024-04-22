@@ -29,7 +29,7 @@ mvRotate(squareRotation, [1, 0, 1]);
 После отрисовки мы восстанавливаем изначальное состояние матрицы положения:
 
 ```js
-  mvPopMatrix();
+mvPopMatrix();
 ```
 
 Мы сохраняем и восстанавливаем состояние матрицы положения чтобы избежать влияние поворота на другие объекты, которые мы можем захотеть отобразить.
@@ -37,14 +37,14 @@ mvRotate(squareRotation, [1, 0, 1]);
 Чтобы заставить квадрат крутиться нам нужно добавить в программу код, который будет изменять значение переменной `squareRotation` во времени. Для этого мы заведём ещё одну переменную в которую будем записывать время последней отрисовки (давайте назовём её `lastSquareUpdateTime`), затем добавим следующий код в конец нашей процедуры `drawScene()`:
 
 ```js
-  var currentTime = (new Date).getTime();
-  if (lastSquareUpdateTime) {
-    var delta = currentTime - lastSquareUpdateTime;
+var currentTime = new Date().getTime();
+if (lastSquareUpdateTime) {
+  var delta = currentTime - lastSquareUpdateTime;
 
-    squareRotation += (30 * delta) / 1000.0;
-  }
+  squareRotation += (30 * delta) / 1000.0;
+}
 
-  lastSquareUpdateTime = currentTime;
+lastSquareUpdateTime = currentTime;
 ```
 
 Этот код использует количество времени прошедшего с момента, когда мы в последний раз изменяли значение переменной `squareRotation` чтобы определить как сильно нужно повернуть квадрат.
@@ -72,15 +72,15 @@ var zIncValue = 0.3;
 Теперь мы можем просто добавить следующий код к уже написанному, который обновляет положение угла поворота:
 
 ```js
-    squareXOffset += xIncValue * ((30 * delta) / 1000.0);
-    squareYOffset += yIncValue * ((30 * delta) / 1000.0);
-    squareZOffset += zIncValue * ((30 * delta) / 1000.0);
+squareXOffset += xIncValue * ((30 * delta) / 1000.0);
+squareYOffset += yIncValue * ((30 * delta) / 1000.0);
+squareZOffset += zIncValue * ((30 * delta) / 1000.0);
 
-    if (Math.abs(squareYOffset) > 2.5) {
-      xIncValue = -xIncValue;
-      yIncValue = -yIncValue;
-      zIncValue = -zIncValue;
-    }
+if (Math.abs(squareYOffset) > 2.5) {
+  xIncValue = -xIncValue;
+  yIncValue = -yIncValue;
+  zIncValue = -zIncValue;
+}
 ```
 
 И, наконец, мы добавляем в процедуру `drawScene()` следующий код:
@@ -111,7 +111,7 @@ function mvPushMatrix(m) {
 
 function mvPopMatrix() {
   if (!mvMatrixStack.length) {
-    throw("Can't pop from an empty matrix stack.");
+    throw "Can't pop from an empty matrix stack.";
   }
 
   mvMatrix = mvMatrixStack.pop();
@@ -119,7 +119,7 @@ function mvPopMatrix() {
 }
 
 function mvRotate(angle, v) {
-  var inRadians = angle * Math.PI / 180.0;
+  var inRadians = (angle * Math.PI) / 180.0;
 
   var m = Matrix.Rotation(inRadians, $V([v[0], v[1], v[2]])).ensure4x4();
   multMatrix(m);

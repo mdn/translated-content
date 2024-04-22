@@ -1,10 +1,6 @@
 ---
 title: letter-spacing
 slug: Web/SVG/Attribute/letter-spacing
-tags:
-  - SVG
-  - SVG атрибуты
-translation_of: Web/SVG/Attribute/letter-spacing
 ---
 
 « [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)
@@ -24,8 +20,6 @@ translation_of: Web/SVG/Attribute/letter-spacing
 | Значение             | normal \| [\<length>](/en/SVG/Content_type#Length) \| **inherit**                   |
 | Анимируется          | Да                                                                                  |
 | Нормативный документ | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/text.html#LetterSpacingProperty) |
-
-{{ page("/en/SVG/Content_type","Length") }}
 
 ## Элементы
 

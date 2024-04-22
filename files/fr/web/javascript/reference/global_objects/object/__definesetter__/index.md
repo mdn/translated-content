@@ -1,14 +1,6 @@
 ---
 title: Object.prototype.__defineSetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__
-tags:
-  - JavaScript
-  - Méthode
-  - Object
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__
-original_slug: Web/JavaScript/Reference/Objets_globaux/Object/defineSetter
 ---
 
 {{JSRef}}
@@ -20,7 +12,7 @@ La méthode **`__defineSetter__`** permet de lier une propriété d'un objet à 
 ## Syntaxe
 
 ```js
-obj.__defineSetter__(prop, fun)
+obj.__defineSetter__(prop, fun);
 ```
 
 ### Paramètres
@@ -32,8 +24,8 @@ obj.__defineSetter__(prop, fun)
   - : Une fonction à appeler pour chaque modification de la propriété. Cette fonction prend la forme suivante :
 
     ```js
-        function(val) { . . . }
-        ```
+    function(val) { . . . }
+    ```
 
     - `val`
       - : Un alias pour la variable contenant la nouvelle valeur qu'on souhaite affecter à `prop`.
@@ -52,26 +44,31 @@ La méthode `__defineSetter__` permet de définir un {{jsxref("Opérateurs/L_op�
 // Méthode non-standard et dépréciée
 
 var o = {};
-o.__defineSetter__('valeur', function(val) { this.uneAutreValeur = val; });
+o.__defineSetter__("valeur", function (val) {
+  this.uneAutreValeur = val;
+});
 o.valeur = 5;
 console.log(o.valeur); // undefined
 console.log(o.uneAutreValeur); // 5
 
-
 // Façons standard
 
 // En utilisant l'opérateur set
-var o = { set valeur(val) { this.uneAutreValeur = val; } };
+var o = {
+  set valeur(val) {
+    this.uneAutreValeur = val;
+  },
+};
 o.valeur = 5;
 console.log(o.valeur); // undefined
 console.log(o.uneAutreValeur); // 5
 
 // En utilisant Object.defineProperty
 var o = {};
-Object.defineProperty(o, 'valeur', {
-  set: function(val) {
+Object.defineProperty(o, "valeur", {
+  set: function (val) {
     this.uneAutreValeur = val;
-  }
+  },
 });
 o.valeur = 5;
 console.log(o.valeur); // undefined

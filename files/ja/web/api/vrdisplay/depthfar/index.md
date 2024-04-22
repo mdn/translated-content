@@ -1,7 +1,6 @@
 ---
 title: VRDisplay.depthFar
 slug: Web/API/VRDisplay/depthFar
-original_slug: Web/API/VRDevice/depthFar
 ---
 
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
@@ -21,7 +20,7 @@ double 値で、 z-depth をメートル単位で表します。初期値は `10
 ```js
 var vrDisplay;
 
-navigator.getVRDisplays().then(function(displays) {
+navigator.getVRDisplays().then(function (displays) {
   vrDisplay = displays[0];
   vrDisplay.depthNear = 1.0;
   vrDisplay.depthFar = 7500.0;
@@ -40,5 +39,4 @@ navigator.getVRDisplays().then(function(displays) {
 
 ## 関連情報
 
-- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — Mozilla VR チームによるデモ、ダウンロード、その他のリソース。
+- [WebVR API](/ja/docs/Web/API/WebVR_API)

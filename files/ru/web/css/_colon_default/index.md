@@ -1,14 +1,13 @@
 ---
-title: ':default'
+title: ":default"
 slug: Web/CSS/:default
-translation_of: Web/CSS/:default
 ---
 
 {{CSSRef}}
 
 [CSS](/ru/docs/Web/CSS) [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы) **`:default`** находит элемент формы, установленный по умолчанию для группы связанных элементов.
 
-Этот селектор используется для элементов: {{htmlelement("button")}}, [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox), [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio), и {{htmlelement("option")}} .
+Этот селектор используется для элементов: {{htmlelement("button")}}, [`<input type="checkbox">`](/ru/docs/Web/HTML/Element/input/checkbox), [`<input type="radio">`](/ru/docs/Web/HTML/Element/input/radio), и {{htmlelement("option")}} .
 
 ```css
 /* Выбрать установленный по умолчанию среди <input> */
@@ -30,16 +29,16 @@ input:default {
 ### HTML
 
 ```html
-<input type="radio" name="season" id="spring">
+<input type="radio" name="season" id="spring" />
 <label for="spring">Spring</label>
 
-<input type="radio" name="season" id="summer" checked>
+<input type="radio" name="season" id="summer" checked />
 <label for="summer">Summer</label>
 
-<input type="radio" name="season" id="fall">
+<input type="radio" name="season" id="fall" />
 <label for="fall">Fall</label>
 
-<input type="radio" name="season" id="winter">
+<input type="radio" name="season" id="winter" />
 <label for="winter">Winter</label>
 ```
 

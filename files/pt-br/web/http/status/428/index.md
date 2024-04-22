@@ -19,8 +19,8 @@ Quando o cabeçalho pré-requisito **não é o mesmo** esperado pelo servidor, a
 
 ## Especificações
 
-| Especificação                                                        | Título                       |
-| -------------------------------------------------------------------- | ---------------------------- |
+| Especificação                                      | Título                       |
+| -------------------------------------------------- | ---------------------------- |
 | {{RFC("6585", "428 Precondition Required" , "3")}} | Additional HTTP Status Codes |
 
 ## Ver também

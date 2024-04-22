@@ -1,7 +1,6 @@
 ---
 title: animation-timing-function
 slug: Web/CSS/animation-timing-function
-translation_of: Web/CSS/animation-timing-function
 ---
 
 {{CSSRef}}
@@ -25,7 +24,7 @@ animation-timing-function: step-start;
 animation-timing-function: step-end;
 
 /* Function values */
-animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+animation-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
 animation-timing-function: steps(4, end);
 
 /* Steps Function keywords */
@@ -37,7 +36,7 @@ animation-timing-function: steps(6, start);
 animation-timing-function: steps(8, end);
 
 /* Multiple animations */
-animation-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
+animation-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
 
 /* Global values */
 animation-timing-function: inherit;

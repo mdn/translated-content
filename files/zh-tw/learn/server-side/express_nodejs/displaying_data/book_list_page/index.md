@@ -50,7 +50,7 @@ block content
       li There are no books.
 ```
 
-這個視圖擴展了 **layout.pug** 基本模板，並覆蓋了名為 '**content**' 的 `block` 區塊 。它顯示我們從控制器傳入的標題 `title`（通過 `render()`方法），然後使用 `each`-`in`-`else` 語法，遍歷 `book_list`變量。為每本圖書創建一個列表項，以顯示書名，並作為書的詳細信息頁面的鏈接，後面跟著作者姓名。如果 `book_list`中沒有書，則執行 `else` 子句，並顯示文字 “沒有書本” 'There are no books'。
+這個視圖擴展了 **layout.pug** 基本模板，並覆蓋了名為 '**content**' 的 `block` 區塊 。它顯示我們從控制器傳入的標題 `title`（通過 `render()`方法），然後使用 `each`-`in`-`else` 語法，遍歷 `book_list`變量。為每本圖書創建一個列表項，以顯示書名，並作為書的詳細信息頁面的鏈接，後面跟著作者姓名。如果 `book_list`中沒有書，則執行 `else` 子句，並顯示文字 「沒有書本」 'There are no books'。
 
 > **備註：** 我們使用 `book.url`，為每本書提供詳細記錄鏈接（我們已經實現了此路由，但尚未實現此頁面）。這是 `Book` 模型的一個虛擬屬性，它使用模型實例的 `_id` 字段，生成唯一的 URL 路徑。
 

@@ -1,11 +1,6 @@
 ---
 title: orientation
 slug: Web/CSS/@media/orientation
-tags:
-  - CSS
-  - Caractéristique média
-  - Reference
-translation_of: Web/CSS/@media/orientation
 ---
 
 {{CSSRef}}

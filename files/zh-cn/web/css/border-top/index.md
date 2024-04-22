@@ -51,9 +51,7 @@ border-top: medium dashed green;
 ## 示例
 
 ```html
-<div>
-  This box has a border on the top side.
-</div>
+<div>This box has a border on the top side.</div>
 ```
 
 ```css

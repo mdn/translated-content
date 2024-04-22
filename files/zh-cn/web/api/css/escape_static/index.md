@@ -1,7 +1,6 @@
 ---
 title: CSS.escape()
 slug: Web/API/CSS/escape_static
-original_slug: Web/API/CSS/escape
 ---
 
 {{APIRef("CSSOM")}}{{SeeCompatTable}}
@@ -24,11 +23,11 @@ escapedStr = CSS.escape(str);
 ### 基本结果
 
 ```js
-CSS.escape(".foo#bar")        // "\.foo\#bar"
-CSS.escape("()[]{}")          // "\(\)\[\]\\{\\}"
-CSS.escape('--a')             // "--a"
-CSS.escape(0)                 // "\30 ",  Unicode 代码点“0”是 30
-CSS.escape('\0')              // "\ufffd",  Unicode 替换字符
+CSS.escape(".foo#bar"); // "\.foo\#bar"
+CSS.escape("()[]{}"); // "\(\)\[\]\\{\\}"
+CSS.escape("--a"); // "--a"
+CSS.escape(0); // "\30 ",  Unicode 代码点“0”是 30
+CSS.escape("\0"); // "\ufffd",  Unicode 替换字符
 ```
 
 ### 在上下文使用
@@ -36,7 +35,7 @@ CSS.escape('\0')              // "\ufffd",  Unicode 替换字符
 要转义一个字符串作为选择器使用， `escape()`方法可以用于：
 
 ```js
-var element = document.querySelector('#' + CSS.escape(id) + ' > img');
+var element = document.querySelector("#" + CSS.escape(id) + " > img");
 ```
 
 `escape()`方法也可以用于转义字符串，它也转义了不严格需要转义的字符：

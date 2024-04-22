@@ -1,12 +1,6 @@
 ---
 title: element.nextSibling
 slug: Web/API/Node/nextSibling
-tags:
-  - API
-  - DOM
-  - Noeuds
-  - Propriétés
-translation_of: Web/API/Node/nextSibling
 ---
 
 {{APIRef("DOM")}}
@@ -16,7 +10,7 @@ La propriété en lecture seule **`Node.nextSibling`** renvoie le nœud (`node`)
 ## Syntaxe
 
 ```js
-nextNode = node.nextSibling
+nextNode = node.nextSibling;
 ```
 
 ## Notes
@@ -39,20 +33,19 @@ dans la FAQ DOM 3 du W3C](http://www.w3.org/DOM/faq.html#emptytext) pour plus d'
 <div id="div-02">Here is div-02</div>
 
 <script type="text/javascript">
-var el = document.getElementById('div-01').nextSibling,
+  var el = document.getElementById("div-01").nextSibling,
     i = 1;
 
-console.log('Siblings of div-01:');
+  console.log("Siblings of div-01:");
 
-while (el) {
-  console.log(i + '. ' + el.nodeName);
-  el = el.nextSibling;
-  i++;
-}
-
+  while (el) {
+    console.log(i + ". " + el.nodeName);
+    el = el.nextSibling;
+    i++;
+  }
 </script>
 
-/**************************************************
+<!--
   Ce qui suit est écrit sur la console pendant le chargement:
 
      Siblings of div-01
@@ -62,7 +55,7 @@ while (el) {
       3. #text
       4. SCRIPT
 
-**************************************************/
+-->
 ```
 
 Dans cet exemple, on peut voir que des nœuds `#text` sont insérés dans le DOM là où des espaces se trouvent dans le code source entre les balises (c'est-à-dire après la balise de fermeture d'un élément et avant la balise d'ouverture du suivant). Aucun espace n'est créé entre les éléments insérés par l'instruction `document.write` .

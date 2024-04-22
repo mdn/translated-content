@@ -1,8 +1,8 @@
 ---
 title: 웹 어플리케이션에서 파일 사용하기
 slug: Web/API/File_API/Using_files_from_web_applications
-original_slug: Web/API/File/Using_files_from_web_applications
 ---
+
 {{APIRef("File API")}}
 
 HTML5의 DOM으로 추가된 File API를 사용하여, 이제 웹 컨텐츠가 사용자에게 로컬 파일을 선택한 후 파일의 컨텐츠를 읽도록 요청할 수 있습니다. 이 선택은 HTML {{HTMLElement("input")}} 엘리먼트나 드래그 앤 드랍을 사용하는 것으로도 수행할 수 있습니다.
@@ -14,7 +14,7 @@ HTML5의 DOM으로 추가된 File API를 사용하여, 이제 웹 컨텐츠가 �
 다음 HTML을 생각해봅시다.
 
 ```html
-<input type="file" id="input">
+<input type="file" id="input" />
 ```
 
 File API는 사용자에 의해 선택된 파일을 나타내는 객체인 {{DOMxRef("File")}}을 포함하는 {{DOMxRef("FileList")}}에 접근할 수 있게 해줍니다.
@@ -24,7 +24,7 @@ File API는 사용자에 의해 선택된 파일을 나타내는 객체인 {{DOM
 기존의 DOM 셀렉터를 사용하여 선택된 하나의 파일에 접근하기:
 
 ```js
-const selectedFile = document.getElementById('input').files[0];
+const selectedFile = document.getElementById("input").files[0];
 ```
 
 ### change 이벤트에서 선택한 파일에 접근하기
@@ -32,7 +32,7 @@ const selectedFile = document.getElementById('input').files[0];
 `change` 이벤트를 통해 {{DOMxRef("FileList")}}에 접근할수도 있습니다(필수는 아닙니다).
 
 ```html
-<input type="file" id="input" onchange="handleFiles(this.files)">
+<input type="file" id="input" onchange="handleFiles(this.files)" />
 ```
 
 사용자가 하나의 파일을 선택할 때, 사용자에 의해 선택된 파일을 나타내는 객체인 {{DOMxRef("File")}}을 포함하는 {{DOMxRef("FileList")}}와 함께 `handlerFiles()` 함수가 호출됩니다.
@@ -40,7 +40,7 @@ const selectedFile = document.getElementById('input').files[0];
 사용자가 여러 파일을 선택할 수 있도록 하길 원할 경우, 간단히 `input` 엘리먼트에서 `multiple` 속성을 사용하면됩니다.
 
 ```html
-<input type="file" id="input" multiple onchange="handleFiles(this.files)">
+<input type="file" id="input" multiple onchange="handleFiles(this.files)" />
 ```
 
 이 경우, `handleFiles()` 함수로 전달된 파일 리스트는 사용자가 선택한 각 파일에 대해 하나의 {{DOMxRef("File")}} 객체를 갖습니다.
@@ -92,37 +92,67 @@ for (let i = 0, numFiles = files.length; i < numFiles; i++) {
 다음 예시는 `size` 프로퍼티를 사용하는 방법을 보여줍니다.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>File(s) size</title>
-<script>
-function updateSize() {
-  let nBytes = 0,
-      oFiles = document.getElementById("uploadInput").files,
-      nFiles = oFiles.length;
-  for (let nFileId = 0; nFileId < nFiles; nFileId++) {
-    nBytes += oFiles[nFileId].size;
-  }
-  let sOutput = nBytes + " bytes";
-  // multiples approximation을 위한 선택적 코드
-  for (let aMultiples = ["KiB", "MiB", "GiB", "TiB", "PiB", "EiB", "ZiB", "YiB"], nMultiple = 0, nApprox = nBytes / 1024; nApprox > 1; nApprox /= 1024, nMultiple++) {
-    sOutput = nApprox.toFixed(3) + " " + aMultiples[nMultiple] + " (" + nBytes + " bytes)";
-  }
-  // 선택적 코드의 끝
-  document.getElementById("fileNum").innerHTML = nFiles;
-  document.getElementById("fileSize").innerHTML = sOutput;
-}
-</script>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <title>File(s) size</title>
+    <script>
+      function updateSize() {
+        let nBytes = 0,
+          oFiles = document.getElementById("uploadInput").files,
+          nFiles = oFiles.length;
+        for (let nFileId = 0; nFileId < nFiles; nFileId++) {
+          nBytes += oFiles[nFileId].size;
+        }
+        let sOutput = nBytes + " bytes";
+        // multiples approximation을 위한 선택적 코드
+        for (
+          let aMultiples = [
+              "KiB",
+              "MiB",
+              "GiB",
+              "TiB",
+              "PiB",
+              "EiB",
+              "ZiB",
+              "YiB",
+            ],
+            nMultiple = 0,
+            nApprox = nBytes / 1024;
+          nApprox > 1;
+          nApprox /= 1024, nMultiple++
+        ) {
+          sOutput =
+            nApprox.toFixed(3) +
+            " " +
+            aMultiples[nMultiple] +
+            " (" +
+            nBytes +
+            " bytes)";
+        }
+        // 선택적 코드의 끝
+        document.getElementById("fileNum").innerHTML = nFiles;
+        document.getElementById("fileSize").innerHTML = sOutput;
+      }
+    </script>
+  </head>
 
-<body onload="updateSize();">
-<form name="uploadForm">
-<p><input id="uploadInput" type="file" name="myFiles" onchange="updateSize();" multiple> selected files: <span id="fileNum">0</span>; total size: <span id="fileSize">0</span></p>
-<p><input type="submit" value="Send file"></p>
-</form>
-</body>
+  <body onload="updateSize();">
+    <form name="uploadForm">
+      <p>
+        <input
+          id="uploadInput"
+          type="file"
+          name="myFiles"
+          onchange="updateSize();"
+          multiple />
+        selected files: <span id="fileNum">0</span>; total size:
+        <span id="fileSize">0</span>
+      </p>
+      <p><input type="submit" value="Send file" /></p>
+    </form>
+  </body>
 </html>
 ```
 
@@ -133,7 +163,13 @@ function updateSize() {
 다음 HTML을 생각해봅시다.
 
 ```html
-<input type="file" id="fileElem" multiple accept="image/*" style="display:none" onchange="handleFiles(this.files)">
+<input
+  type="file"
+  id="fileElem"
+  multiple
+  accept="image/*"
+  style="display:none"
+  onchange="handleFiles(this.files)" />
 <button id="fileSelect">Select some files</button>
 ```
 
@@ -143,11 +179,15 @@ function updateSize() {
 const fileSelect = document.getElementById("fileSelect"),
   fileElem = document.getElementById("fileElem");
 
-fileSelect.addEventListener("click", function (e) {
-  if (fileElem) {
-    fileElem.click();
-  }
-}, false);
+fileSelect.addEventListener(
+  "click",
+  function (e) {
+    if (fileElem) {
+      fileElem.click();
+    }
+  },
+  false,
+);
 ```
 
 여러분이 원하는 파일 선택기를 열기위한 새로운 버튼을 스타일링할 수 있습니다.
@@ -159,7 +199,12 @@ JavaScript(click() 메소드)를 사용하지 않고 파일 선택기를 열도�
 다음 HTML과
 
 ```html
-<input type="file" id="fileElem" multiple accept="image/*" class="visually-hidden">
+<input
+  type="file"
+  id="fileElem"
+  multiple
+  accept="image/*"
+  class="visually-hidden" />
 <label for="fileElem">Select some files</label>
 ```
 
@@ -237,7 +282,9 @@ function handleFiles(files) {
   for (let i = 0; i < files.length; i++) {
     const file = files[i];
 
-    if (!file.type.startsWith('image/')){ continue }
+    if (!file.type.startsWith("image/")) {
+      continue;
+    }
 
     const img = document.createElement("img");
     img.classList.add("obj");
@@ -245,7 +292,11 @@ function handleFiles(files) {
     preview.appendChild(img); // "preview"가 결과를 보여줄 div 출력이라 가정.
 
     const reader = new FileReader();
-    reader.onload = (function(aImg) { return function(e) { aImg.src = e.target.result; }; })(img);
+    reader.onload = (function (aImg) {
+      return function (e) {
+        aImg.src = e.target.result;
+      };
+    })(img);
     reader.readAsDataURL(file);
   }
 }
@@ -280,7 +331,13 @@ window.URL.revokeObjectURL(objectURL);
 인터페이스를 나타내는 HTML은 다음과 같습니다.
 
 ```html
-<input type="file" id="fileElem" multiple accept="image/*" style="display:none" onchange="handleFiles(this.files)">
+<input
+  type="file"
+  id="fileElem"
+  multiple
+  accept="image/*"
+  style="display:none"
+  onchange="handleFiles(this.files)" />
 <a href="#" id="fileSelect">Select some files</a>
 <div id="fileList">
   <p>No files selected!</p>
@@ -295,15 +352,19 @@ window.URL.revokeObjectURL(objectURL);
 window.URL = window.URL || window.webkitURL;
 
 const fileSelect = document.getElementById("fileSelect"),
-    fileElem = document.getElementById("fileElem"),
-    fileList = document.getElementById("fileList");
+  fileElem = document.getElementById("fileElem"),
+  fileList = document.getElementById("fileList");
 
-fileSelect.addEventListener("click", function (e) {
-  if (fileElem) {
-    fileElem.click();
-  }
-  e.preventDefault(); // "#" 해시로 이동을 방지
-}, false);
+fileSelect.addEventListener(
+  "click",
+  function (e) {
+    if (fileElem) {
+      fileElem.click();
+    }
+    e.preventDefault(); // "#" 해시로 이동을 방지
+  },
+  false,
+);
 
 function handleFiles(files) {
   if (!files.length) {
@@ -319,9 +380,9 @@ function handleFiles(files) {
       const img = document.createElement("img");
       img.src = window.URL.createObjectURL(files[i]);
       img.height = 60;
-      img.onload = function() {
+      img.onload = function () {
         window.URL.revokeObjectURL(this.src);
-      }
+      };
       li.appendChild(img);
       const info = document.createElement("span");
       info.innerHTML = files[i].name + ": " + files[i].size + " bytes";
@@ -339,12 +400,12 @@ function handleFiles(files) {
 2. 새로운 리스트 엘리먼트가 {{DOMxRef("Node.appendChild()")}} 메소드 호출에 의해 {{HTMLElement("div")}} 블록으로 삽입됩니다.
 3. `files`에 의해 나타나는 {{DOMxRef("FileList")}} 내의 각 {{DOMxRef("File")}}에 대해 :
 
-    1. 새로운 리스트 항목({{HTMLElement("li")}}) 엘리먼트를 생성하고 리스트로 삽입합니다.
-    2. 새로운 이미지({{HTMLElement("img")}}) 엘리먼트를 생성합니다.
-    3. {{DOMxRef("window.URL.createObjectURL()")}}을 사용하여 이미지의 소스를 파일을 나타내는 새로운 객체 URL로 설정해 blob URL을 생성합니다.
-    4. 이미지의 height를 60 픽셀로 설정합니다.
-    5. 이미지가 로드된 이후에 더 이상 필요하지 않게되므로 객체 URL을 해제하기 위한 이미지의 로드 이벤트 핸들러를 설정합니다. {{DOMxRef("window.URL.revokeObjectURL()")}} 메소드를 호출하고 `img.src`로 지정한 객체 URL 문자열을 전달하면됩니다.
-    6. 리스트로 새로운 리스트 항목을 추가합니다.
+   1. 새로운 리스트 항목({{HTMLElement("li")}}) 엘리먼트를 생성하고 리스트로 삽입합니다.
+   2. 새로운 이미지({{HTMLElement("img")}}) 엘리먼트를 생성합니다.
+   3. {{DOMxRef("window.URL.createObjectURL()")}}을 사용하여 이미지의 소스를 파일을 나타내는 새로운 객체 URL로 설정해 blob URL을 생성합니다.
+   4. 이미지의 height를 60 픽셀로 설정합니다.
+   5. 이미지가 로드된 이후에 더 이상 필요하지 않게되므로 객체 URL을 해제하기 위한 이미지의 로드 이벤트 핸들러를 설정합니다. {{DOMxRef("window.URL.revokeObjectURL()")}} 메소드를 호출하고 `img.src`로 지정한 객체 URL 문자열을 전달하면됩니다.
+   6. 리스트로 새로운 리스트 항목을 추가합니다.
 
 다음은 위 코드의 라이브 데모입니다.
 
@@ -382,21 +443,32 @@ function FileUpload(img, file) {
   this.xhr = xhr;
 
   const self = this;
-  this.xhr.upload.addEventListener("progress", function(e) {
-        if (e.lengthComputable) {
-          const percentage = Math.round((e.loaded * 100) / e.total);
-          self.ctrl.update(percentage);
-        }
-      }, false);
+  this.xhr.upload.addEventListener(
+    "progress",
+    function (e) {
+      if (e.lengthComputable) {
+        const percentage = Math.round((e.loaded * 100) / e.total);
+        self.ctrl.update(percentage);
+      }
+    },
+    false,
+  );
 
-  xhr.upload.addEventListener("load", function(e){
-          self.ctrl.update(100);
-          const canvas = self.ctrl.ctx.canvas;
-          canvas.parentNode.removeChild(canvas);
-      }, false);
-  xhr.open("POST", "http://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php");
-  xhr.overrideMimeType('text/plain; charset=x-user-defined-binary');
-  reader.onload = function(evt) {
+  xhr.upload.addEventListener(
+    "load",
+    function (e) {
+      self.ctrl.update(100);
+      const canvas = self.ctrl.ctx.canvas;
+      canvas.parentNode.removeChild(canvas);
+    },
+    false,
+  );
+  xhr.open(
+    "POST",
+    "http://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php",
+  );
+  xhr.overrideMimeType("text/plain; charset=x-user-defined-binary");
+  reader.onload = function (evt) {
     xhr.send(evt.target.result);
   };
   reader.readAsBinaryString(file);
@@ -481,15 +553,15 @@ Object URLs can be used for other things than just images! They can be used to d
 In Firefox, to have the PDF appear embedded in the iframe (rather than proposed as a downloaded file), the preference `pdfjs.disabled` must be set to `false` {{non-standard_inline()}}.
 
 ```html
-<iframe id="viewer">
+<iframe id="viewer"></iframe>
 ```
 
 And here is the change of the `src` attribute:
 
 ```js
 const obj_url = window.URL.createObjectURL(blob);
-const iframe = document.getElementById('viewer');
-iframe.setAttribute('src', obj_url);
+const iframe = document.getElementById("viewer");
+iframe.setAttribute("src", obj_url);
 window.URL.revokeObjectURL(obj_url);
 ```
 
@@ -498,16 +570,12 @@ window.URL.revokeObjectURL(obj_url);
 You can manipulate files of other formats the same way. Here is how to preview uploaded video:
 
 ```js
-const video = document.getElementById('video');
+const video = document.getElementById("video");
 const obj_url = window.URL.createObjectURL(blob);
 video.src = obj_url;
-video.play()
+video.play();
 window.URL.revokeObjectURL(obj_url);
 ```
-
-## 명세서
-
-{{Specifications}}
 
 ## See also
 

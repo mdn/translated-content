@@ -1,15 +1,6 @@
 ---
 title: itemref
 slug: Web/HTML/Global_attributes/itemref
-tags:
-  - Attribut
-  - Attribut universel
-  - HTML
-  - Micro-données
-  - Microdata
-  - Reference
-translation_of: Web/HTML/Global_attributes/itemref
-original_slug: Web/HTML/Attributs_universels/itemref
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -34,11 +25,11 @@ itemref
 
 ```html
 <div itemscope id="amanda" itemref="a b"></div>
-<p id="a">Name: <span itemprop="name">Amanda</span> </p>
+<p id="a">Name: <span itemprop="name">Amanda</span></p>
 <div id="b" itemprop="band" itemscope itemref="c"></div>
 <div id="c">
-    <p>Band: <span itemprop="name">Jazz Band</span> </p>
-    <p>Size: <span itemprop="size">12</span> players</p>
+  <p>Band: <span itemprop="name">Jazz Band</span></p>
+  <p>Size: <span itemprop="size">12</span> players</p>
 </div>
 ```
 

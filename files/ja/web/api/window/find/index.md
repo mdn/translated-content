@@ -12,7 +12,15 @@ slug: Web/API/Window/find
 ## 構文
 
 ```js
-find(aString, aCaseSensitive, aBackwards, aWrapAround, aWholeWord, aSearchInFrames, aShowDialog)
+find(
+  aString,
+  aCaseSensitive,
+  aBackwards,
+  aWrapAround,
+  aWholeWord,
+  aSearchInFrames,
+  aShowDialog,
+);
 ```
 
 ### 引数
@@ -25,7 +33,7 @@ find(aString, aCaseSensitive, aBackwards, aWrapAround, aWholeWord, aSearchInFram
   - : 論理値です。 `true` の場合、後方検索を行います。
 - `aWrapAround`
   - : 論理値です。 `true` の場合、折り返し検索を行います。
-- `aWholeWord` {{Unimplemented_Inline}}
+- `aWholeWord`
   - : 論理値です。 `true` の場合、完全一致検索を行います。これは実装されていません。 [Firefox バグ 481513](https://bugzil.la/481513) を参照してください。
 - `aSearchInFrames`
   - : 論理値です。 `true` の場合、フレーム内の検索を行います。
@@ -40,7 +48,8 @@ find(aString, aCaseSensitive, aBackwards, aWrapAround, aWholeWord, aSearchInFram
 
 ```js
 function findString(text) {
-  document.querySelector("#output").textContent="String found? " + window.find(text);
+  document.querySelector("#output").textContent =
+    "String found? " + window.find(text);
 }
 ```
 
@@ -49,7 +58,9 @@ function findString(text) {
 ```html
 <p>Apples, Bananas, and Oranges.</p>
 <button type="button" onClick='findString("Apples")'>Search for Apples</button>
-<button type="button" onClick='findString("Bananas")'>Search for Bananas</button>
+<button type="button" onClick='findString("Bananas")'>
+  Search for Bananas
+</button>
 <button type="button" onClick='findString("Orange")'>Search for Orange</button>
 
 <p id="output"></p>

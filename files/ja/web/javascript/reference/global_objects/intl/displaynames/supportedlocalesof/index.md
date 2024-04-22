@@ -10,8 +10,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/supportedLocales
 ## 構文
 
 ```js
-Intl.DisplayNames.supportedLocalesOf(locales)
-Intl.DisplayNames.supportedLocalesOf(locales, options)
+Intl.DisplayNames.supportedLocalesOf(locales);
+Intl.DisplayNames.supportedLocalesOf(locales, options);
 ```
 
 ### 引数
@@ -40,9 +40,9 @@ Intl.DisplayNames.supportedLocalesOf(locales, options)
 表示名についてインドネシア語とドイツ語に対応しているが、バリ語に対応していないランタイムを想定した場合、 `supportedLocalesOf` はインドネシア語とドイツ語の言語タグを変更せずに返しますが、 `pinyin` の照合は表示名には関係なく、インドネシア語では使用されません。これは "`lookup`" アルゴリズムの仕様であることに注意してください。 "`best fit`" で照合すると、バリ語の話者のほとんどはインドネシア語も理解しているので、インドネシア語がバリ語に適切に一致すると判断し、バリ語の言語タグも返すかもしれません。
 
 ```js
-const locales = ['ban', 'id-u-co-pinyin', 'de-ID'];
-const options = { localeMatcher: 'lookup' };
-console.log(Intl.DisplayNames.supportedLocalesOf(locales, options).join(', '));
+const locales = ["ban", "id-u-co-pinyin", "de-ID"];
+const options = { localeMatcher: "lookup" };
+console.log(Intl.DisplayNames.supportedLocalesOf(locales, options).join(", "));
 // → "id-u-co-pinyin, de-ID"
 ```
 

@@ -1,14 +1,9 @@
 ---
 title: Repo
 slug: Glossary/Repo
-tags:
-  - Dépôt
-  - Glossaire
-  - Infrastructure
-  - Intro
-translation_of: Glossary/Repo
-original_slug: Glossaire/Dépôt
 ---
+
+{{GlossarySidebar}}
 
 Dans les systèmes de gestion de versions comme {{Glossary("Git")}} ou {{Glossary("SVN")}} , un dépôt est l'endroit où sont hébergés le code source d'une application ainsi que diverses méta-données.
 

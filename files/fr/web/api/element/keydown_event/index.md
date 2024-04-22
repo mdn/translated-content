@@ -1,9 +1,6 @@
 ---
 title: GlobalEventHandlers.onkeydown
 slug: Web/API/Element/keydown_event
-translation_of: Web/API/GlobalEventHandlers/onkeydown
-original_slug: Web/API/GlobalEventHandlers/onkeydown
-browser-compat: api.GlobalEventHandlers.onkeydown
 ---
 
 {{ApiRef("HTML DOM")}}
@@ -29,15 +26,15 @@ Cet exemple affiche la valeur de [`KeyboardEvent.code`](/fr/docs/Web/API/Keyboar
 ### HTML
 
 ```html
-<input>
+<input />
 <p id="log"></p>
 ```
 
 ### JavaScript
 
 ```js
-const input = document.querySelector('input');
-const log = document.getElementById('log');
+const input = document.querySelector("input");
+const log = document.getElementById("log");
 
 input.onkeydown = logKey;
 
@@ -63,7 +60,7 @@ function logKey(e) {
 Depuis Firefox 65, les évènements [`keyup`](/fr/docs/Web/API/Document/keyup_event) et [`keydown`](/fr/docs/Web/API/Document/keydown_event) sont désormais déclenchés pendant la composition IME afin d'améliorer la compatibilité entre les navigateurs pour les locuteurs de langues asiatiques (CJKT) (voir [le bug 354358](https://bugzilla.mozilla.org/show_bug.cgi?id=354358)). Pour ignorer les évènements `keydown` qui font partie d'une composition, on pourra écrire quelque chose d'analogue au fragment qui suit (229 est une valeur spéciale de `keyCode` relative à un évènement qui a été traité par un IME)&nbsp;:
 
 ```js
-eventTarget.addEventListener("keydown", event => {
+eventTarget.addEventListener("keydown", (event) => {
   if (event.isComposing || event.keyCode === 229) {
     return;
   }

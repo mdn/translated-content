@@ -1,5 +1,5 @@
 ---
-title: 'CSP: default-src'
+title: "CSP: default-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/default-src
 ---
 
@@ -19,8 +19,8 @@ slug: Web/HTTP/Headers/Content-Security-Policy/default-src
 - {{CSP("style-src")}}
 - {{CSP("worker-src")}}
 
-| CSP 版本 | 1                                        |
-| -------- | ---------------------------------------- |
+| CSP 版本 | 1                               |
+| -------- | ------------------------------- |
 | 指令类型 | {{Glossary("Fetch directive")}} |
 
 ## 语法
@@ -42,12 +42,14 @@ Content-Security-Policy: default-src <source> <source>;
     - `mail.example.com:443:`匹配对 mail.example.com 上的 443 端口号的访问。
     - `https://store.example.com`: 匹配对使用了 https: 的 store.example.com 的访问。
 - \<scheme-source>
+
   - : 协议名如'http:' 或者 'https:'。**必须带有冒号，不要有单引号**。同时你还可以指定数据协议（data schema）（不推荐使用）。
 
-    - `data:` 允许 [`data:` URIs](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) 作为内容的源*。这是不安全的。攻击者可以注入任意 data: URI。不要轻易使用这种形式的源，尤其是脚本，绝对不要使用。
+    - `data:` 允许 [`data:` URIs](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) 作为内容的源。这是不安全的。攻击者可以注入任意 data: URI。不要轻易使用这种形式的源，尤其是脚本，绝对不要使用。
     - `mediastream:` 允许 [`mediastream:` URIs](/zh-CN/docs/Web/API/MediaStream_API) 作为内容的源。
     - `blob:` 允许 [`blob:` URIs](/zh-CN/docs/Web/API/Blob) 作为内容的源。
     - `filesystem:` 允许 [`filesystem:` URIs](/zh-CN/docs/Web/API/FileSystem) 作为内容的源。
+
 - `'self'`
   - : 指向与要保护的文件所在的源，包括相同的 URL scheme 与端口号。必须有单引号。一些浏览器会特意排除 blob 与 filesystem。需要设定这两种内容类型的站点可以在 Data 属性中进行设定。
 - `'unsafe-inline'`

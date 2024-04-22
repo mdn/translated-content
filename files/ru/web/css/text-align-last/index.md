@@ -1,7 +1,6 @@
 ---
 title: text-align-last
 slug: Web/CSS/text-align-last
-translation_of: Web/CSS/text-align-last
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -59,7 +58,7 @@ div {
 
 {{Specifications}}
 
-## Совместимость браузера
+## Совместимость с браузерами
 
 {{Compat}}
 

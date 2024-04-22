@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/Symbol
 
 {{JSRef}}
 
-**`Symbol()`** 构造函数返回一个 **symbol** 类型的值，但是它并不完全支持构造函数的语法，因为它不支持 `new Symbol()` 语法，也无法被子类化。它可以作为 `class` 定义中 [`extends`](/en-US/docs/Web/JavaScript/Reference/Classes/extends) 子句的值使用，但对它进行 [`super`](/en-US/docs/Web/JavaScript/Reference/Operators/super) 调用将会导致异常。
+**`Symbol()`** 构造函数返回一个 **symbol** 类型的值，但是它并不完全支持构造函数的语法，因为它不支持 `new Symbol()` 语法，也无法被子类化。它可以作为 `class` 定义中 [`extends`](/zh-CN/docs/Web/JavaScript/Reference/Classes/extends) 子句的值使用，但对它进行 [`super`](/zh-CN/docs/Web/JavaScript/Reference/Operators/super) 调用将会导致异常。
 
 {{EmbedInteractiveExample("pages/js/symbol-constructor.html", "taller")}}
 

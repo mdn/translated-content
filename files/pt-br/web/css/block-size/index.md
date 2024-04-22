@@ -36,15 +36,15 @@ block-size: unset;
 
 Se o modo de escrita está orientado verticalmente, o valor do `block-size` refere-se à largura do elemento; senão, refere-se à altura do elemento. Uma propriedade relacionada é {{cssxref("inline-size")}}, que define as outras dimensões do elemento.
 
-{{cssinfo}}
-
-## Sintaxe
-
 ### Valores
 
 A propriedade `block-size` leva os mesmos valores que as propriedades {{cssxref("width")}} e {{cssxref("height")}}.
 
-### Sintaxe formal
+## Definição formal
+
+{{cssinfo}}
+
+## Sintaxe formal
 
 {{csssyntax}}
 
@@ -68,15 +68,13 @@ A propriedade `block-size` leva os mesmos valores que as propriedades {{cssxref(
 
 {{EmbedLiveSample("Example")}}
 
-## Especificação
+## Especificações
 
-| Specification                                                                                                    | Status                                           | Comment           |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ----------------- |
-| {{SpecName("CSS Logical Properties", "#logical-dimension-properties", "block-size")}} | {{Spec2("CSS Logical Properties")}} | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("css.properties.block-size")}}
+{{Compat}}
 
 ## See also
 

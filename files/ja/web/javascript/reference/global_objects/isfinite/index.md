@@ -35,19 +35,19 @@ isFinite(testValue)
 ### isFinite の使用
 
 ```js
-isFinite(Infinity);  // false
-isFinite(NaN);       // false
+isFinite(Infinity); // false
+isFinite(NaN); // false
 isFinite(-Infinity); // false
 
-isFinite(0);         // true
-isFinite(2e64);      // true
-isFinite(910);       // true
+isFinite(0); // true
+isFinite(2e64); // true
+isFinite(910); // true
 
-isFinite(null);      // true が返される、より堅牢性の高い
-                     // Number.isFinite(null) では false となる
+isFinite(null); // true が返される、より堅牢性の高い
+// Number.isFinite(null) では false となる
 
-isFinite('0');       // true が返される、より堅牢性の高い
-                     // Number.isFinite("0") では false となる
+isFinite("0"); // true が返される、より堅牢性の高い
+// Number.isFinite("0") では false となる
 ```
 
 ## 仕様書
@@ -56,7 +56,7 @@ isFinite('0');       // true が返される、より堅牢性の高い
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.isFinite")}}
+{{Compat}}
 
 ## 関連情報
 

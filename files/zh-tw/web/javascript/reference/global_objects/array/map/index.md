@@ -90,14 +90,16 @@ var roots = numbers.map(Math.sqrt); //map會return一個新的array
 以下程式碼取出一陣列，將其中物件變更格式後建立為一個新的陣列並傳回。
 
 ```js
-var kvArray = [{key: 1, value: 10},
-               {key: 2, value: 20},
-               {key: 3, value: 30}];
+var kvArray = [
+  { key: 1, value: 10 },
+  { key: 2, value: 20 },
+  { key: 3, value: 30 },
+];
 
-var reformattedArray = kvArray.map(function(obj) {
-   var rObj = {};
-   rObj[obj.key] = obj.value;
-   return rObj;
+var reformattedArray = kvArray.map(function (obj) {
+  var rObj = {};
+  rObj[obj.key] = obj.value;
+  return rObj;
 });
 
 // reformattedArray 現在是 [{1: 10}, {2: 20}, {3: 30}],
@@ -114,7 +116,7 @@ var reformattedArray = kvArray.map(function(obj) {
 
 ```js
 var numbers = [1, 4, 9];
-var doubles = numbers.map(function(num) {
+var doubles = numbers.map(function (num) {
   return num * 2;
 });
 
@@ -128,7 +130,7 @@ var doubles = numbers.map(function(num) {
 
 ```js
 var map = Array.prototype.map;
-var a = map.call('Hello World', function(x) {
+var a = map.call("Hello World", function (x) {
   return x.charCodeAt(0);
 });
 // a 現在等於 [72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]
@@ -139,8 +141,8 @@ var a = map.call('Hello World', function(x) {
 本範例將展示如何遍歷由 `querySelectorAll` 所產生的物件。我們將得到所有的選項、並印在主控台上：
 
 ```js
-var elems = document.querySelectorAll('select option:checked');
-var values = Array.prototype.map.call(elems, function(obj) {
+var elems = document.querySelectorAll("select option:checked");
+var values = Array.prototype.map.call(elems, function (obj) {
   return obj.value;
 });
 ```
@@ -155,7 +157,7 @@ var values = Array.prototype.map.call(elems, function(obj) {
 
 ```js
 // Consider:
-['1', '2', '3'].map(parseInt);
+["1", "2", "3"].map(parseInt);
 // 以為會是 [1, 2, 3] 嗎
 // 其實是 [1, NaN, NaN]
 
@@ -170,16 +172,16 @@ function returnInt(element) {
   return parseInt(element, 10);
 }
 
-['1', '2', '3'].map(returnInt); // [1, 2, 3]
+["1", "2", "3"].map(returnInt); // [1, 2, 3]
 // Actual result is an array of numbers (as expected)
 
 // Same as above, but using the concise arrow function syntax
-['1', '2', '3'].map( str => parseInt(str) );
+["1", "2", "3"].map((str) => parseInt(str));
 
 // A simpler way to achieve the above, while avoiding the "gotcha":
-['1', '2', '3'].map(Number); // [1, 2, 3]
+["1", "2", "3"].map(Number); // [1, 2, 3]
 // but unlike `parseInt` will also return a float or (resolved) exponential notation:
-['1.1', '2.2e2', '3e300'].map(Number); // [1.1, 220, 3e+300]
+["1.1", "2.2e2", "3e300"].map(Number); // [1.1, 220, 3e+300]
 ```
 
 ## Polyfill
@@ -190,13 +192,11 @@ function returnInt(element) {
 // Production steps of ECMA-262, Edition 5, 15.4.4.19
 // Reference: http://es5.github.io/#x15.4.4.19
 if (!Array.prototype.map) {
-
-  Array.prototype.map = function(callback/*, thisArg*/) {
-
+  Array.prototype.map = function (callback /*, thisArg*/) {
     var T, A, k;
 
     if (this == null) {
-      throw new TypeError('this is null or not defined');
+      throw new TypeError("this is null or not defined");
     }
 
     // 1. Let O be the result of calling ToObject passing the |this|
@@ -210,8 +210,8 @@ if (!Array.prototype.map) {
 
     // 4. If IsCallable(callback) is false, throw a TypeError exception.
     // See: http://es5.github.com/#x9.11
-    if (typeof callback !== 'function') {
-      throw new TypeError(callback + ' is not a function');
+    if (typeof callback !== "function") {
+      throw new TypeError(callback + " is not a function");
     }
 
     // 5. If thisArg was supplied, let T be thisArg; else let T be undefined.
@@ -229,7 +229,6 @@ if (!Array.prototype.map) {
 
     // 8. Repeat, while k < len
     while (k < len) {
-
       var kValue, mappedValue;
 
       // a. Let Pk be ToString(k).
@@ -239,7 +238,6 @@ if (!Array.prototype.map) {
       //   This step can be combined with c
       // c. If kPresent is true, then
       if (k in O) {
-
         // i. Let kValue be the result of calling the Get internal
         //    method of O with argument Pk.
         kValue = O[k];

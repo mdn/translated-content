@@ -1,7 +1,6 @@
 ---
 title: 例
 slug: orphaned/Games/Examples
-original_slug: Games/Examples
 ---
 
 {{GamesSidebar}}

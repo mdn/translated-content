@@ -37,7 +37,7 @@ void gl.vertexAttrib4fv(index, value);
 ## 示例
 
 ```js
-const a_foobar = gl.getAttribLocation(shaderProgram, 'foobar');
+const a_foobar = gl.getAttribLocation(shaderProgram, "foobar");
 //either set each component individually:
 gl.vertexAttrib3f(a_foobar, 10.0, 5.0, 2.0);
 //or provide a Float32Array:

@@ -53,21 +53,33 @@ Font stretch values are interpolated in discrete steps. The interpolation happen
 ### HTML
 
 ```html
-<div class="ultra stretch"> This is text with the font extremely expanded</div>
-<div class="stretch"> This is text with the font stretched</div>
-<div class="normal"> This is text without font stretching</div>
-<div class="condensed"> This is text with the font condensed</div>
-<div class="ultra condensed"> This is text with the font extremely condensed</div>
+<div class="ultra stretch">This is text with the font extremely expanded</div>
+<div class="stretch">This is text with the font stretched</div>
+<div class="normal">This is text without font stretching</div>
+<div class="condensed">This is text with the font condensed</div>
+<div class="ultra condensed">
+  This is text with the font extremely condensed
+</div>
 ```
 
 ### CSS
 
 ```css
-.ultra.stretch{font-stretch: ultra-expanded;}
-.stretch {font-stretch: expanded;}
-.normal {font-stretch: normal;}
-.condensed {font-stretch: condensed;}
-.ultra.condensed {font-stretch: ultra-condensed;}
+.ultra.stretch {
+  font-stretch: ultra-expanded;
+}
+.stretch {
+  font-stretch: expanded;
+}
+.normal {
+  font-stretch: normal;
+}
+.condensed {
+  font-stretch: condensed;
+}
+.ultra.condensed {
+  font-stretch: ultra-condensed;
+}
 ```
 
 ### Result

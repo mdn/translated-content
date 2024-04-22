@@ -45,10 +45,10 @@ function sum(a = 1, b = 2) {
 }
 ```
 
-함수가 [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) 모드에 있어야 하고 전체 스크립트 또는 포함된 함수가 [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)에 있어도 괜찮으면 함수 외부에서 `"use strict"` 지시문을 이동할 수 있습니다:
+함수가 [strict mode](/ko/docs/Web/JavaScript/Reference/Strict_mode) 모드에 있어야 하고 전체 스크립트 또는 포함된 함수가 [strict mode](/ko/docs/Web/JavaScript/Reference/Strict_mode)에 있어도 괜찮으면 함수 외부에서 `"use strict"` 지시문을 이동할 수 있습니다:
 
 ```js example-good
-'use strict';
+"use strict";
 function sum(a = 1, b = 2) {
   return a + b;
 }
@@ -69,8 +69,8 @@ var sum = function sum([a, b]) {
 이것은 다음 표현식으로 변환 될 수 있습니다:
 
 ```js example-good
-var sum = (function() {
-  'use strict';
+var sum = (function () {
+  "use strict";
   return function sum([a, b]) {
     return a + b;
   };
@@ -93,14 +93,14 @@ var callback = (...args) => {
 
 ```js example-good
 var callback = (() => {
-  'use strict';
+  "use strict";
   return (...args) => {
     return this.run(args);
   };
 })();
 ```
 
-## See also
+## 같이 보기
 
 - {{jsxref("Strict_mode", "Strict mode", "", 1)}}
 - {{jsxref("Statements/function", "function statement", "", 1)}}

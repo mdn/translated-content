@@ -1,9 +1,6 @@
 ---
 title: WebAssembly.Instance()
 slug: WebAssembly/JavaScript_interface/Instance
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance
-browser-compat: javascript.builtins.WebAssembly.Instance
 ---
 
 {{WebAssemblySidebar}}
@@ -29,19 +26,19 @@ Le constructeur `WebAssembly.Instance()` peut être appelé afin d'instancier un
 ```js
 const importObject = {
   imports: {
-    imported_func: function(arg) {
+    imported_func: function (arg) {
       console.log(arg);
-    }
-  }
+    },
+  },
 };
 
-fetch('simple.wasm').then(response =>
-  response.arrayBuffer()
-).then(bytes => {
-  let mod = new WebAssembly.Module(bytes);
-  let instance = new WebAssembly.Instance(mod, importObject);
-  instance.exports.exported_func();
-})
+fetch("simple.wasm")
+  .then((response) => response.arrayBuffer())
+  .then((bytes) => {
+    let mod = new WebAssembly.Module(bytes);
+    let instance = new WebAssembly.Instance(mod, importObject);
+    instance.exports.exported_func();
+  });
 ```
 
 La façon préconisée de récupérer un objet `Instance` est asynchrone, par exemple en utilisant la fonction [`WebAssembly.instantiateStreaming()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateStreaming) de cette façon&nbsp;:
@@ -49,14 +46,15 @@ La façon préconisée de récupérer un objet `Instance` est asynchrone, par ex
 ```js
 const importObject = {
   imports: {
-    imported_func: function(arg) {
+    imported_func: function (arg) {
       console.log(arg);
-    }
-  }
+    },
+  },
 };
 
-WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
-.then(obj => obj.instance.exports.exported_func());
+WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
+  (obj) => obj.instance.exports.exported_func(),
+);
 ```
 
 Cet exemple illustre également comment la propriété `exports` est utilisée afin d'accéder aux fonctions exportées.

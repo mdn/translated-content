@@ -17,6 +17,6 @@ O código de status **`Variant Also Negotiates`** indica um erro na configuraç�
 
 ## Especificações
 
-| Especificação                                                            | Título                                  |
-| ------------------------------------------------------------------------ | --------------------------------------- |
+| Especificação                                          | Título                                  |
+| ------------------------------------------------------ | --------------------------------------- |
 | {{RFC("2295", "506 Variant Also Negotiates" , "8.1")}} | Transparent Content Negotiation in HTTP |

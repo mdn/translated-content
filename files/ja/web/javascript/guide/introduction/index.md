@@ -91,7 +91,7 @@ Firefox に組み込まれている*ウェブコンソール*ツールは、Java
 コンソールは `eval` と全く同じように動作します。最後に入力された式が返されます。分かりやすくするために、コンソールに何か入力されるたびに、実際には `eval` の周りを `console.log` で囲むと想像してみると、このようになります。
 
 ```js
-console.log(eval('3 + 5'))
+console.log(eval("3 + 5"));
 ```
 
 ### ウェブコンソールでの複数行入力
@@ -103,14 +103,14 @@ console.log(eval('3 + 5'))
 JavaScript を書き始めるあたり、ウェブコンソールを複数行モードで開いて、初めての JavaScript コード "Hello world" を書いてみましょう。
 
 ```js
-(function(){
+(function () {
   "use strict";
   /* コードの開始 */
   function greetMe(yourName) {
     alert(`Hello ${yourName}`);
   }
 
-  greetMe('World');
+  greetMe("World");
   /* コードの終了 */
 })();
 ```

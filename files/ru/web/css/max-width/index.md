@@ -1,7 +1,6 @@
 ---
 title: max-width
 slug: Web/CSS/max-width
-translation_of: Web/CSS/max-width
 ---
 
 {{CSSRef}}
@@ -15,18 +14,18 @@ translation_of: Web/CSS/max-width
 ## Синтаксис
 
 ```css
-/* <length> значение */
-max-width: 3.5em;
-
-/* <percentage> значение */
-max-width: 75%;
-
-/* Значения-ключевые слова */
+/* Ключевые слова */
 max-width: none;
 max-width: max-content;
 max-width: min-content;
 max-width: fit-content;
 max-width: fill-available;
+
+/* Значения длины */
+max-width: 3.5em;
+
+/* <percentage> значение */
+max-width: 75%;
 
 /* Глобальные значения */
 max-width: inherit;
@@ -89,9 +88,7 @@ max-width: unset;
 
 ```html
 <div id="parent">
-    <div id="child">
-        Child Text
-    </div>
+  <div id="child">Child Text</div>
 </div>
 ```
 
@@ -101,7 +98,7 @@ max-width: unset;
   width: 300px;
 }
 
-#child  {
+#child {
   background: gold;
   width: 100%;
   max-width: -moz-fit-content;
@@ -124,7 +121,7 @@ max-width: unset;
 
 {{cssinfo}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

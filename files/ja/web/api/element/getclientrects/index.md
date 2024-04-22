@@ -1,5 +1,6 @@
 ---
-title: Element.getClientRects()
+title: "Element: getClientRects() メソッド"
+short-title: getClientRects()
 slug: Web/API/Element/getClientRects
 l10n:
   sourceCommit: 88ecc11b7d151365a93dad4536a350a832b14d20
@@ -7,9 +8,9 @@ l10n:
 
 {{APIRef("DOM")}}
 
-**`getClientRects()`** は {{domxref("Element")}} インターフェイスのメソッドで、クライアントにあるそれぞれの [CSS 境界ボックス](/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)の境界線を示す {{DOMxRef("DOMRect")}} オブジェクトのコレクションを返します。
+**`getClientRects()`** は {{domxref("Element")}} インターフェイスのメソッドで、クライアントにあるそれぞれの [CSS 境界ボックス](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)の境界線を示す {{DOMxRef("DOMRect")}} オブジェクトのコレクションを返します。
 
-多くの要素には、境界ボックスが 1 つずつしかありませんが、複数行の[インライン要素](/ja/docs/Web/HTML/Inline_elements) （例えば複数行にまたがる {{HTMLElement("span")}} 要素、既定の場合）には、行ごとに囲む境界ボックスがあります。
+多くの要素には、境界ボックスが 1 つずつしかありませんが、複数行の[インラインレベル要素](/ja/docs/Glossary/Inline-level_content) （例えば複数行にまたがる {{HTMLElement("span")}} 要素、既定の場合）には、行ごとに囲む境界ボックスがあります。
 
 ## 構文
 

@@ -40,9 +40,13 @@ var channels = 2;
 // Create an empty two second stereo buffer at the
 // sample rate of the AudioContext
 var frameCount = audioCtx.sampleRate * 2.0;
-var myArrayBuffer = audioCtx.createBuffer(channels, frameCount, audioCtx.sampleRate);
+var myArrayBuffer = audioCtx.createBuffer(
+  channels,
+  frameCount,
+  audioCtx.sampleRate,
+);
 
-button.onclick = function() {
+button.onclick = function () {
   // Fill the buffer with white noise;
   // just random values between -1.0 and 1.0
   for (var channel = 0; channel < channels; channel++) {
@@ -68,8 +72,7 @@ button.onclick = function() {
 
   // start the source playing
   source.start();
-
-}
+};
 ```
 
 ## 规格参数

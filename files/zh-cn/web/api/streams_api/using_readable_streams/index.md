@@ -25,9 +25,9 @@ slug: Web/API/Streams_API/Using_readable_streams
 
 ```js
 // Fetch the original image
-fetch('./tortoise.png')
+fetch("./tortoise.png")
   // Retrieve its body as ReadableStream
-  .then((response) => response.body)
+  .then((response) => response.body);
 ```
 
 这为我们提供了 {{domxref("ReadableStream")}} 对象。
@@ -38,7 +38,7 @@ fetch('./tortoise.png')
 
 ```js
 // Fetch the original image
-fetch('./tortoise.png')
+fetch("./tortoise.png")
   // Retrieve its body as ReadableStream
   .then((response) => response.body)
   .then((body) => {
@@ -53,7 +53,7 @@ fetch('./tortoise.png')
 
 ```js
 // Fetch the original image
-fetch('./tortoise.png')
+fetch("./tortoise.png")
   // Retrieve its body as ReadableStream
   .then((response) => {
     const reader = response.body.getReader();
@@ -67,7 +67,7 @@ fetch('./tortoise.png')
 
 ```js
 // Fetch the original image
-fetch('./tortoise.png')
+fetch("./tortoise.png")
   // Retrieve its body as ReadableStream
   .then((response) => {
     const reader = response.body.getReader();
@@ -86,8 +86,8 @@ fetch('./tortoise.png')
             return pump();
           });
         }
-      }
-    })
+      },
+    });
   })
   // Create a new response out of the stream
   .then((stream) => new Response(stream))
@@ -95,14 +95,16 @@ fetch('./tortoise.png')
   .then((response) => response.blob())
   .then((blob) => URL.createObjectURL(blob))
   // Update image
-  .then((url) => console.log(image.src = url))
+  .then((url) => console.log((image.src = url)))
   .catch((err) => console.error(err));
 ```
 
 让我们详细看看如何使用 `read()`。在 `pump()` 函数中，我们首先调用 `read()`，其返回一个包含对象的 promise——这里有我们要读去的结果，其形式为 `{ done, value }`：
 
 ```js
-reader.read().then(({ done, value }) => { /* … */ });
+reader.read().then(({ done, value }) => {
+  /* … */
+});
 ```
 
 这个结果可能是三种不同的类型之一：
@@ -150,22 +152,19 @@ return pump();
 通用的语法框架像这样：
 
 ```js
-const stream = new ReadableStream({
-  start(controller) {
-
+const stream = new ReadableStream(
+  {
+    start(controller) {},
+    pull(controller) {},
+    cancel() {},
+    type,
+    autoAllocateChunkSize,
   },
-  pull(controller) {
-
+  {
+    highWaterMark: 3,
+    size: () => 1,
   },
-  cancel() {
-
-  },
-  type,
-  autoAllocateChunkSize,
-}, {
-  highWaterMark: 3,
-  size: () => 1,
-});
+);
 ```
 
 构造函数需要两个对象作为参数。第一个对象时必需的，并在 JavaScript 中创建一个正在读取数据的底层源模型。第二个对象是可选的，并且允许你去指定一个[自定义的队列策略](/zh-CN/docs/Web/API/Streams_API/Concepts#内置队列和队列策略)用于自己的流。你将很少这么做，所以我们现在只要专注于第一个。
@@ -181,7 +180,7 @@ const stream = new ReadableStream({
 
 ```js
 // Fetch the original image
-fetch('./tortoise.png')
+fetch("./tortoise.png")
   // Retrieve its body as ReadableStream
   .then((response) => {
     const reader = response.body.getReader();
@@ -200,8 +199,8 @@ fetch('./tortoise.png')
             return pump();
           });
         }
-      }
-    })
+      },
+    });
   });
 ```
 
@@ -222,7 +221,7 @@ readableStream
   .then((stream) => new Response(stream))
   .then((response) => response.blob())
   .then((blob) => URL.createObjectURL(blob))
-  .then((url) => console.log(image.src = url))
+  .then((url) => console.log((image.src = url)))
   .catch((err) => console.error(err));
 ```
 
@@ -240,15 +239,15 @@ const stream = new ReadableStream({
       // Add the string to the stream
       controller.enqueue(string);
       // show it on the screen
-      const listItem = document.createElement('li');
+      const listItem = document.createElement("li");
       listItem.textContent = string;
       list1.appendChild(listItem);
     }, 1000);
-    button.addEventListener('click', () => {
+    button.addEventListener("click", () => {
       clearInterval(interval);
       readStream();
       controller.close();
-    })
+    });
   },
   pull(controller) {
     // We don't really need a pull in this example
@@ -257,7 +256,7 @@ const stream = new ReadableStream({
     // This is called if the reader cancels,
     // so we should stop generating strings
     clearInterval(interval);
-  }
+  },
 });
 ```
 
@@ -267,7 +266,7 @@ const stream = new ReadableStream({
 function readStream() {
   const reader = stream.getReader();
   let charsReceived = 0;
-  let result = '';
+  let result = "";
 
   // read() returns a promise that resolves
   // when a value has been received
@@ -283,7 +282,7 @@ function readStream() {
 
     charsReceived += value.length;
     const chunk = value;
-    const listItem = document.createElement('li');
+    const listItem = document.createElement("li");
     listItem.textContent = `Read ${charsReceived} characters so far. Current chunk = ${chunk}`;
     list2.appendChild(listItem);
 
@@ -325,13 +324,13 @@ function teeStream() {
 
 ```js
 // Fetch the original image
-fetch('png-logo.png')
+fetch("png-logo.png")
   // Retrieve its body as ReadableStream
   .then((response) => response.body)
   // Create a gray-scaled PNG stream out of the original
-  .then((rs) => logReadableStream('Fetch Response Stream', rs))
+  .then((rs) => logReadableStream("Fetch Response Stream", rs))
   .then((body) => body.pipeThrough(new PNGTransformStream()))
-  .then((rs) => logReadableStream('PNG Chunk Stream', rs))
+  .then((rs) => logReadableStream("PNG Chunk Stream", rs));
 ```
 
 我们仍然没有使用 {{domxref("TransformStream")}} 的例子。

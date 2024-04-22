@@ -2,6 +2,7 @@
 title: Address bar button
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
 ---
+
 {{AddonSidebar}}
 
 주소줄에 추가되는 버튼으로 사용자가 확장 프로그램과 상호작용하는 일명 [페이지 액션](/ko/docs/Mozilla/Add-ons/WebExtensions/API/pageAction) 을 말한다.
@@ -33,7 +34,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
 
 ## 페이지 액션 기술하기
 
-페이지 액션의 속성은 manifest.json의 [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) 항목에서 정의한다:
+페이지 액션의 속성은 manifest.json의 [`page_action`](/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) 항목에서 정의한다:
 
 ```json
 "page_action": {
@@ -58,7 +59,7 @@ browser.pageAction.onClicked.addListener(handleClick);
 
 주목! 확장 프로그램은 페이지 액션을 하나만 가질 수 있다.
 
-페이지 액션의 속성은 [`pageAction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction) API로 프로그램적으로 바꿀 수 있다.
+페이지 액션의 속성은 [`pageAction`](/ko/docs/Mozilla/Add-ons/WebExtensions/API/pageAction) API로 프로그램적으로 바꿀 수 있다.
 
 ## 아이콘
 

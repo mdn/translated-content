@@ -1,13 +1,6 @@
 ---
 title: slot
 slug: Web/HTML/Global_attributes/slot
-tags:
-  - Attribut
-  - Attribut universel
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/slot
-original_slug: Web/HTML/Attributs_universels/slot
 ---
 
 {{HTMLSidebar("Global_attributes")}}{{SeeCompatTable}}

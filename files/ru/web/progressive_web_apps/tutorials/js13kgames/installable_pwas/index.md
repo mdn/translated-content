@@ -1,8 +1,6 @@
 ---
 title: Как сделать PWA устанавливаемым
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
-translation_of: Web/Progressive_web_apps/Installable_PWAs
-original_slug: Web/Progressive_web_apps/Installable_PWAs
 ---
 
 {{PreviousMenuNext("Web/Apps/Progressive/Offline_Service_workers", "Web/Apps/Progressive/Re-engageable_Notifications_Push", "Web/Apps/Progressive")}}
@@ -29,7 +27,7 @@ original_slug: Web/Progressive_web_apps/Installable_PWAs
 Файл `js13kpwa.webmanifest` веб-приложения [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) включён в раздел {{htmlelement("head")}} файла `index.html` с помощью следующей строчки кода:
 
 ```html
-<link rel="manifest" href="js13kpwa.webmanifest">
+<link rel="manifest" href="js13kpwa.webmanifest" />
 ```
 
 > **Примечание:** Существует несколько расширений, используемых в прошлом: `manifest.webapp` был популярен в манифестах приложений Firefox OS, также многие используют `manifest.json` потому что содержание организовано по структуре JSON. Однако, расширение `.webmanifest` явно упоминается в [W3C manifest specification](https://w3c.github.io/manifest/), поэтому давайте придерживаться именно этого стандарта.
@@ -38,26 +36,26 @@ original_slug: Web/Progressive_web_apps/Installable_PWAs
 
 ```json
 {
-    "name": "js13kGames Progressive Web App",
-    "short_name": "js13kPWA",
-    "description": "Progressive Web App that lists games submitted to the A-Frame category in the js13kGames 2017 competition.",
-    "icons": [
-        {
-            "src": "icons/icon-32.png",
-            "sizes": "32x32",
-            "type": "image/png"
-        },
-        // ...
-        {
-            "src": "icons/icon-512.png",
-            "sizes": "512x512",
-            "type": "image/png"
-        }
-    ],
-    "start_url": "/pwa-examples/js13kpwa/index.html",
-    "display": "fullscreen",
-    "theme_color": "#B12A34",
-    "background_color": "#B12A34"
+  "name": "js13kGames Progressive Web App",
+  "short_name": "js13kPWA",
+  "description": "Progressive Web App that lists games submitted to the A-Frame category in the js13kGames 2017 competition.",
+  "icons": [
+    {
+      "src": "icons/icon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    // ...
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/pwa-examples/js13kpwa/index.html",
+  "display": "fullscreen",
+  "theme_color": "#B12A34",
+  "background_color": "#B12A34"
 }
 ```
 
@@ -114,4 +112,4 @@ original_slug: Web/Progressive_web_apps/Installable_PWAs
 
 {{PreviousMenuNext("Web/Apps/Progressive/Offline_Service_workers", "Web/Apps/Progressive/Re-engageable_Notifications_Push", "Web/Apps/Progressive")}}
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/")}}
+{{QuickLinksWithSubpages("/ru/docs/Web/Progressive_web_apps/")}}

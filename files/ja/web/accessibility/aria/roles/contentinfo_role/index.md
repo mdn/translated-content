@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: contentinfo ロール'
+title: "ARIA: contentinfo ロール"
 slug: Web/Accessibility/ARIA/Roles/contentinfo_role
 ---
 
@@ -33,7 +33,6 @@ slug: Web/Accessibility/ARIA/Roles/contentinfo_role
 
 ```html
 <body>
-
   <!-- 他のページのコンテンツ -->
 
   <div role="contentinfo">
@@ -44,7 +43,10 @@ slug: Web/Accessibility/ARIA/Roles/contentinfo_role
       <li><a href="#">MDN について</a></li>
       <li><a href="#">フィードバック</a></li>
     </ul>
-    <p>© 2005-2018 Mozilla および各貢献者 コンテンツは <a href="#">これらのライセンス</a> の下で公開されています。</p>
+    <p>
+      © 2005-2018 Mozilla および各貢献者 コンテンツは
+      <a href="#">これらのライセンス</a> の下で公開されています。
+    </p>
   </div>
 </body>
 ```
@@ -73,14 +75,17 @@ slug: Web/Accessibility/ARIA/Roles/contentinfo_role
 
 ```html
 <body>
-
   ...
 
   <article>
     <h2>毎日パッタイ</h2>
     <!-- 記事のコンテンツ -->
     <footer aria-label="毎日パッタイのメタデータ">
-      <p><a href="#">リサ</a>によって<time datetime="2018-09-23 12:17">5月16日</time>に投稿されました。</p>
+      <p>
+        <a href="#">リサ</a>によって<time datetime="2018-09-23 12:17"
+          >5月16日</time
+        >に投稿されました。
+      </p>
     </footer>
   </article>
 

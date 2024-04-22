@@ -1,5 +1,5 @@
 ---
-title: '::-webkit-meter-bar'
+title: "::-webkit-meter-bar"
 slug: Web/CSS/::-webkit-meter-bar
 ---
 
@@ -17,13 +17,13 @@ La pseudo-clase `::-webkit-meter-bar` establece el estilo para el fondo del elem
 
 ```css
 meter {
-   /* Resetea a la apariencia por defecto */
+  /* Resetea a la apariencia por defecto */
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-meter::-webkit-meter-bar  {
+meter::-webkit-meter-bar {
   background: #eee;
   box-shadow: 0 2px 3px rgba (0, 0, 0, 0.2) inset;
   border-radius: 3px;

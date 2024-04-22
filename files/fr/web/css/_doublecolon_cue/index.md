@@ -1,12 +1,6 @@
 ---
-title: '::cue'
+title: "::cue"
 slug: Web/CSS/::cue
-tags:
-  - CSS
-  - Pseudo-element
-  - Reference
-  - WebVTT
-translation_of: Web/CSS/::cue
 ---
 
 {{CSSRef}}

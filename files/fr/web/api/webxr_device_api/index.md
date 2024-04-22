@@ -1,15 +1,6 @@
 ---
 title: L'API de périphérique WebXR
 slug: Web/API/WebXR_Device_API
-tags:
-  - API
-  - AR
-  - Réalité augmentée
-  - Réalité virtuelle
-  - VR
-  - WebXR
-  - WebXR API
-translation_of: Web/API/WebXR_Device_API
 ---
 
 {{DefaultAPISidebar("WebXR Device API")}}
@@ -24,7 +15,7 @@ Pour accomplir toutes ces choses, l'API de périphériques WebXR fournit les fon
 
 - Trouver un périphérique de sortie VR ou AR compatible
 - Afficher une scène 3D sur le périphérique à la fréquence d'images appropriée
-- (Optionellement) refléter la sortie sur un affichage 2D
+- (Optionnellement) refléter la sortie sur un affichage 2D
 - Créer des vecteurs représentant les mouvements des commandes d'entrée
 
 Au niveau le plus basique, une scène est présentée en 3D en calculant la perspective à appliquer à la scène dans le but de l'afficher du point de vue de chacun des yeux de l'utilisateur en calculant la position de chaque oeil et en affichant la scène de cette position, regardant dans la même direction que l'utilisateur. Ces deux images sont conçuent à l'intérieur d'une seule mémoire tampon, avec l'image de rendu pour l'oeil gauche dans la partie gauche et l'image de rendu de l'oeil droit dans la partie droite de la mémoire tampon. Une fois que les perspectives des deux yeux sur la scène ont été conçues, la mémoire résultante est délivrée au périphérique WebXR pour être présentée à l'utilisateur via son casque ou tout autre périphérique d'affichage approprié.
@@ -59,7 +50,7 @@ Pour accéder à l'API WebXR à l'intérieur du contexte d'une fenêtre donnée,
 - {{DOMxRef("XRReferenceSpace")}}
   - : Une sous classe de {{domxref("XRSpace")}} qui est utilisée pour identifier une relation spatiale en relation avec l'environnement physique de l'utilisateur. Le système de coordonées `XRReferenceSpace` devrait rester inchangé pendant toute la durée de vie du {{domxref("XRSession")}}. Le monde n'a pas de frontières et s'étend infiniment dans toutes les directions.
 - {{DOMxRef("XRBoundedReferenceSpace")}}
-  - : `XRBoundedReferenceSpace` étend le système de coordonées {{domxref("XRReferenceSpace")}} pour inclure en plus la prise en charge d'un monde aux limites définies. Contrairement à `XRReferenceSpace`, l'origine doit être localisée au niveau du sol (c'est à dire *y* = 0). Les composantes x et z de l'origine sont présumées être localisées au centre ou à proximité du centre de la pièce ou de la surface.
+  - : `XRBoundedReferenceSpace` étend le système de coordonées {{domxref("XRReferenceSpace")}} pour inclure en plus la prise en charge d'un monde aux limites définies. Contrairement à `XRReferenceSpace`, l'origine doit être localisée au niveau du sol (c'est à dire _y_ = 0). Les composantes x et z de l'origine sont présumées être localisées au centre ou à proximité du centre de la pièce ou de la surface.
 - {{DOMxRef("XRView")}}
   - : Représente une vue unique dans la scène XR pour une image particulière. Chaque XRView correspond à la surface d'affichage vidéo utilisée pour présenter la scène à l'utilisateur. Par exemple, un appareil XR donné peut avoir deux vues: une pour l'œil gauche et une pour la droite. Chaque vue a un décalage utilisé pour déplacer la position de la vue par rapport à la caméra, afin de permettre la création d'effets stéréographiques.
 - {{DOMxRef("XRViewport")}}

@@ -59,7 +59,7 @@ function addData(e) {
     // 읽기/쓰기 DB 트랜잭션을 열고, 데이터를 추가할 준비를 합니다.
     const transaction = db.transaction(["toDoList"], "readwrite");
 
-    // 트랜잭션 열기 성공 여부에 대한 보고입니다. 
+    // 트랜잭션 열기 성공 여부에 대한 보고입니다.
     transaction.oncomplete = (event) => {
       note.innerHTML += '<li>데이터 추가를 위한 트랜잭션을 열었습니다..</li>';
     };
@@ -181,10 +181,10 @@ if (
     // 우리는 이제 이 데이터 객체에서 notified 값을 "yes"로 변경해야 합니다.
     // 이렇게 하면 알림이 다시 설정되지 않습니다.
 
-    // 처음에는 일반적인 방식으로 트랜잭션을 엽니다. 
+    // 처음에는 일반적인 방식으로 트랜잭션을 엽니다.
     const objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
 
-    // 이 제목을 통해 이 제목을 갖고 있는 to-do 리스트 객체를 가져옵니다. 
+    // 이 제목을 통해 이 제목을 갖고 있는 to-do 리스트 객체를 가져옵니다.
     const request = objectStore.get(title);
 
     request.onsuccess = () => {

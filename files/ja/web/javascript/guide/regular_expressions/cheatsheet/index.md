@@ -219,7 +219,7 @@ l10n:
         </ul>
         <p>
           なお、 <code>:</code>, <code>-</code>,
-          <code>@</code>, などの一部の文字は、エスケープされたときにもエスケープされていないときにも、特別な意味を持たないことに注意してください。正規表現では <code>\:</code>, <code>\-</code>, <code>\@</code> のようなエスケープシーケンスは、エスケープされていないリテラル文字と同じになります。しかし、<a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags">unicode フラグ</a>を持つ正規表現では、これらは <em>invalid identity escape</em> エラーが発生します。これは、<code>p</code>や<code>k</code>のような新しいエスケープシーケンスを使用する既存のコードとの後方互換性を確保するために行われます。
+          <code>@</code>, などの一部の文字は、エスケープされたときにもエスケープされていないときにも、特別な意味を持たないことに注意してください。正規表現では <code>\:</code>, <code>\-</code>, <code>\@</code> のようなエスケープシーケンスは、エスケープされていないリテラル文字と同じになります。しかし、<a href="/ja/docs/Web/JavaScript/Guide/Regular_expressions#フラグを用いた高度な検索">unicode フラグ</a>を持つ正規表現では、これらは <em>invalid identity escape</em> エラーが発生します。これは、<code>p</code>や<code>k</code>のような新しいエスケープシーケンスを使用する既存のコードとの後方互換性を確保するために行われます。
         </p>
         <div class="notecard note">
           <p>

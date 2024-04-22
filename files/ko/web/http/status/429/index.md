@@ -23,7 +23,7 @@ Content-Type: text/html
 Retry-After: 3600
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

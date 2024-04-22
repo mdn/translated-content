@@ -8,7 +8,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage
 ## 语法
 
 ```js
-var openingPage = browser.runtime.openOptionsPage()
+var openingPage = browser.runtime.openOptionsPage();
 ```
 
 ### 参数

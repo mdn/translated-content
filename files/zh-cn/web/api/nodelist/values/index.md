@@ -30,7 +30,7 @@ node.appendChild(kid3);
 var list = node.childNodes;
 
 // Using for..of
-for(var value of list.values()) {
+for (var value of list.values()) {
   console.log(value);
 }
 ```

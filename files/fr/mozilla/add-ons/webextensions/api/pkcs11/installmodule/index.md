@@ -1,19 +1,9 @@
 ---
 title: pkcs11.installModule()
 slug: Mozilla/Add-ons/WebExtensions/API/pkcs11/installModule
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - installModule
-  - pkcs11
-translation_of: Mozilla/Add-ons/WebExtensions/API/pkcs11/installModule
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Installe le module PKCS # 11 nommé, le rendant disponible pour Firefox
 
@@ -23,9 +13,9 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var installing = browser.pkcs11.installModule(
-  name,              // string
-  flags              // integer
-)
+  name, // string
+  flags, // integer
+);
 ```
 
 ### Paramètres
@@ -60,14 +50,12 @@ function onGotSlots(slots) {
     if (slot.token) {
       console.log(`Contains token: ${slot.token.name}`);
     } else {
-      console.log('Is empty');
+      console.log("Is empty");
     }
   }
 }
 
-browser.pkcs11.installModule("my_module")
-.then(onInstalled)
-.then(onGotSlots);
+browser.pkcs11.installModule("my_module").then(onInstalled).then(onGotSlots);
 ```
 
 {{WebExtExamples}}

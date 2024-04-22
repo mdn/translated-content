@@ -20,7 +20,7 @@ slug: Web/API/Window/orientationchange_event
 ```js
 window.addEventListener("orientationchange", function () {
   console.log(
-    "the orientation of the device is now " + screen.orientation.angle
+    "the orientation of the device is now " + screen.orientation.angle,
   );
 });
 ```
@@ -30,7 +30,7 @@ window.addEventListener("orientationchange", function () {
 ```js
 window.onorientationchange = function () {
   console.log(
-    "the orientation of the device is now " + screen.orientation.angle
+    "the orientation of the device is now " + screen.orientation.angle,
   );
 };
 ```

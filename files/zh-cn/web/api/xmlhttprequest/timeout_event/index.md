@@ -29,12 +29,12 @@ slug: Web/API/XMLHttpRequest/timeout_event
 ## 示例
 
 ```js
-var client = new XMLHttpRequest()
-  client.open("GET", "http://www.example.org/example.txt")
-  client.ontimeout = function(e) {
-    console.error("Timeout!!")
-  }
-  client.send()
+var client = new XMLHttpRequest();
+client.open("GET", "http://www.example.org/example.txt");
+client.ontimeout = function (e) {
+  console.error("Timeout!!");
+};
+client.send();
 ```
 
 ## 继承
@@ -49,6 +49,6 @@ var client = new XMLHttpRequest()
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - [XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest)

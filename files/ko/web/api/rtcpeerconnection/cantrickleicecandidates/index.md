@@ -14,7 +14,7 @@ slug: Web/API/RTCPeerConnection/canTrickleIceCandidates
 ## Syntax
 
 ```js
- var canTrickle = RTCPeerConnection.canTrickleIceCandidates;
+var canTrickle = RTCPeerConnection.canTrickleIceCandidates;
 ```
 
 ### 값

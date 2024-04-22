@@ -1,11 +1,6 @@
 ---
 title: border-bottom
 slug: Web/CSS/border-bottom
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/border-bottom
 ---
 
 {{CSSRef}}
@@ -25,15 +20,15 @@ Ces propriétés permettent de décrire la bordure du côté bas d'un élément.
 > **Note :** Comme pour les autres propriétés raccourcies, `border-bottom` définit toujours les valeurs de toutes les propriétés qu'elle peut définir, même si celles-ci ne sont pas indiquées. Pour les valeurs qui ne sont pas indiquées, on prendra les valeurs par défaut. Ainsi :
 >
 > ```css
->   border-bottom-style: dotted;
->   border-bottom: thick green;
+> border-bottom-style: dotted;
+> border-bottom: thick green;
 > ```
 >
 > est équivalent à :
 >
 > ```css
->   border-bottom-style: dotted;
->   border-bottom: none thick green;
+> border-bottom-style: dotted;
+> border-bottom: none thick green;
 > ```
 >
 > et la valeur {{cssxref("border-bottom-style")}} fournie avant `border-bottom` est ignorée.
@@ -81,8 +76,7 @@ Les trois valeurs de la propriété raccourcie peuvent être définies dans n'im
 
 ```html
 <p class="exemple">
-  En passant elle prit sur un rayon un pot
-  de confiture portant cette étiquette,
+  En passant elle prit sur un rayon un pot de confiture portant cette étiquette,
   « MARMELADE D’ORANGES. »
 </p>
 ```

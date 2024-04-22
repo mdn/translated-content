@@ -1,11 +1,14 @@
 ---
-title: MediaQueryList.media
+title: "MediaQueryList: media プロパティ"
+short-title: media
 slug: Web/API/MediaQueryList/media
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("CSSOM")}}
 
-**`media`** は {{DOMxRef("MediaQueryList")}} インターフェイスの読取専用プロパティであり、 文字列で、シリアライズされたメディアクエリーを表します。
+**`media`** は {{DOMxRef("MediaQueryList")}} インターフェイスの読み取り専用プロパティであり、シリアライズされたメディアクエリーを表す文字列を返します。
 
 ### 値
 
@@ -18,7 +21,7 @@ slug: Web/API/MediaQueryList/media
 ### JavaScript
 
 ```js
-let mql = window.matchMedia('(max-width: 600px)');
+let mql = window.matchMedia("(max-width: 600px)");
 
 document.querySelector(".mq-value").innerText = mql.media;
 ```
@@ -35,7 +38,9 @@ document.querySelector(".mq-value").innerText = mql.media;
 
 ```css hidden
 .mq-value {
-  font: 18px arial, sans-serif;
+  font:
+    18px arial,
+    sans-serif;
   font-weight: bold;
   color: #88f;
   padding: 0.4em;
@@ -57,8 +62,8 @@ document.querySelector(".mq-value").innerText = mql.media;
 
 ## 関連情報
 
-- [メディアクエリー](/ja/docs/Web/CSS/Media_Queries)
-- [プログラムによるメディアクエリーの評価](/ja/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [プログラムによるメディアクエリーの評価](/ja/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
 - {{DOMxRef("window.matchMedia()")}}
 - {{DOMxRef("MediaQueryList")}}
 - {{DOMxRef("MediaQueryListEvent")}}

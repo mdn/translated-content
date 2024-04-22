@@ -1,12 +1,13 @@
 ---
 title: circle()
 slug: Web/CSS/basic-shape/circle
-original_slug: Web/CSS/basic-shape/circle()
 ---
 
 {{CSSRef}}
 
 **`circle()`** は [CSS](/ja/docs/Web/CSS) の関数で、{{cssxref("&lt;basic-shape&gt;")}} [データ型](/ja/docs/Web/CSS/CSS_Types)の一つです。
+
+{{EmbedInteractiveExample("pages/css/function-circle.html")}}
 
 ## 構文
 

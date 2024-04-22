@@ -1,7 +1,6 @@
 ---
 title: フィルター効果
 slug: Web/CSS/CSS_filter_effects
-original_slug: Web/CSS/Filter_Effects
 ---
 
 {{CSSRef}}
@@ -27,8 +26,8 @@ original_slug: Web/CSS/Filter_Effects
 
 ### `backdrop-filter` プロパティ
 
-{{Compat("css.properties.backdrop-filter")}}
+{{Compat}}
 
 ### `filter` プロパティ
 
-{{Compat("css.properties.filter")}}
+{{Compat}}

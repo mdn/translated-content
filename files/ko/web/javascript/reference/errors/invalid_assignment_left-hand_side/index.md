@@ -1,5 +1,5 @@
 ---
-title: 'ReferenceError: invalid assignment left-hand side'
+title: "ReferenceError: invalid assignment left-hand side"
 slug: Web/JavaScript/Reference/Errors/Invalid_assignment_left-hand_side
 ---
 
@@ -17,7 +17,7 @@ slug: Web/JavaScript/Reference/Errors/Invalid_assignment_left-hand_side
 
 ## 무엇이 잘못되었을까?
 
-예상치 못한 할당이 일어났습니다. 이것은 할당 연산자([assignment operator](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators))와 비교 연산자([comparison operator](/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)) 간의 불일치로 인한 것일 겁니다. 예를 들면, "`=`" 부호는 값을 변수에 할당합니다. "`==`" 나 "`===`"는 값을 비교하는 연산을 합니다.
+예상치 못한 할당이 일어났습니다. 이것은 할당 연산자([assignment operator](/ko/docs/Web/JavaScript/Reference/Operators/Assignment_Operators))와 비교 연산자([comparison operator](/ko/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)) 간의 불일치로 인한 것일 겁니다. 예를 들면, "`=`" 부호는 값을 변수에 할당합니다. "`==`" 나 "`===`"는 값을 비교하는 연산을 합니다.
 
 ## 예
 
@@ -37,15 +37,13 @@ var str = 'Hello, '
 
 ```js example-good
 if (Math.PI == 3 || Math.PI == 4) {
-  console.log('no way!');
+  console.log("no way!");
 }
 
-var str = 'Hello, '
-+ 'from the '
-+ 'other side!';
+var str = "Hello, " + "from the " + "other side!";
 ```
 
 ## 참조
 
-- [Assignment operators](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators)
-- [Comparison operators](/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)
+- [Assignment operators](/ko/docs/Web/JavaScript/Reference/Operators/Assignment_Operators)
+- [Comparison operators](/ko/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)

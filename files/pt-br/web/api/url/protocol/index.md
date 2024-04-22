@@ -17,7 +17,7 @@ Uma {{domxref("USVString")}}.
 
 ```js
 const url = new URL(
-  "https://developer.mozilla.org/pt-BR/docs/Web/API/URL/protocol"
+  "https://developer.mozilla.org/pt-BR/docs/Web/API/URL/protocol",
 );
 console.log(url.protocol); // Logs "https:"
 ```

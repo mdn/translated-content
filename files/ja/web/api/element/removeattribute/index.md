@@ -1,6 +1,9 @@
 ---
-title: Element.removeAttribute()
+title: "Element: removeAttribute() メソッド"
+short-title: removeAttribute()
 slug: Web/API/Element/removeAttribute
+l10n:
+  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
 {{ APIRef("DOM") }}
@@ -9,20 +12,20 @@ slug: Web/API/Element/removeAttribute
 
 ## 構文
 
-```
-element.removeAttribute(attrName);
+```js-nolint
+removeAttribute(attrName)
 ```
 
-### Parameters
+### 引数
 
 - `attrName`
-  - : {{domxref("DOMString")}} で、要素から削除する属性の名前を指定します。指定された属性が存在しない場合、 `removeAttribute()` はエラーを発生させずに戻ります。
+  - : 文字列で、要素から削除する属性名を指定します。指定した属性が存在しなかった場合、`removeAttribute()` はエラーを発生させずに戻ります。
 
 ### 返値
 
-`undefined` です。
+なし ({{jsxref("undefined")}})。
 
-## 使用上の注意
+## 使用上のメモ
 
 属性の値を直接、または {{domxref("Element.setAttribute", "setAttribute()")}} を使用して `null` に設定するのではなく、 `removeAttribute()` を使用してください。多くの属性は `null` に設定しても、期待通りの動作をしません。
 

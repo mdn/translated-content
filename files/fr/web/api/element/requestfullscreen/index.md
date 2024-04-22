@@ -1,10 +1,6 @@
 ---
 title: Element.requestFullscreen()
 slug: Web/API/Element/requestFullscreen
-tags:
-  - Méthode
-  - Plein écran
-translation_of: Web/API/Element/requestFullScreen
 ---
 
 {{APIRef("Fullscreen API")}}

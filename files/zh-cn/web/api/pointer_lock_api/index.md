@@ -117,9 +117,10 @@ Pointer lock API 还扩展了 `document` 接口，添加了一个新的属性和
 `pointerLockElement` 属性适用于确定当前是否有被指针锁定的元素（例如，用来做一个布尔检查），以及当有元素被锁定时获取该元素的一个引用。下面是这两种用法的一个例子：
 
 ```js
-document.pointerLockElement = document.pointerLockElement    ||
-                              document.mozPointerLockElement ||
-                              document.webkitPointerLockElement;
+document.pointerLockElement =
+  document.pointerLockElement ||
+  document.mozPointerLockElement ||
+  document.webkitPointerLockElement;
 
 // 1) 用于布尔检查 -- 我们被指针锁定了吗？
 if (!!document.pointerLockElement) {
@@ -137,14 +138,16 @@ if (document.pointerLockElement === someElement) {
 `document` 的 `exitPointerLock` 方法被用来退出指针锁定，而且和 requestPointerLock 一样，使用 `pointerlockchange` 和 `pointerlockerror`事件以异步方式工作：
 
 ```js
-document.exitPointerLock = document.exitPointerLock    ||
-                           document.mozExitPointerLock ||
-                           document.webkitExitPointerLock;
+document.exitPointerLock =
+  document.exitPointerLock ||
+  document.mozExitPointerLock ||
+  document.webkitExitPointerLock;
 
 function pointerLockChange() {
-  document.pointerLockElement = document.pointerLockElement    ||
-                                document.mozPointerLockElement ||
-                                document.webkitPointerLockElement;
+  document.pointerLockElement =
+    document.pointerLockElement ||
+    document.mozPointerLockElement ||
+    document.webkitPointerLockElement;
 
   if (!!document.pointerLockElement) {
     console.log("目前还是被锁定。");
@@ -153,9 +156,9 @@ function pointerLockChange() {
   }
 }
 
-document.addEventListener('pointerlockchange', pointerLockChange, false);
-document.addEventListener('mozpointerlockchange', pointerLockChange, false);
-document.addEventListener('webkitpointerlockchange', pointerLockChange, false);
+document.addEventListener("pointerlockchange", pointerLockChange, false);
+document.addEventListener("mozpointerlockchange", pointerLockChange, false);
+document.addEventListener("webkitpointerlockchange", pointerLockChange, false);
 
 // 试图解除锁定
 document.exitPointerLock();

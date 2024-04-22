@@ -13,8 +13,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty
 
 ```js
 new Proxy(target, {
-  deleteProperty(target, property) {
-  }
+  deleteProperty(target, property) {},
 });
 ```
 
@@ -56,24 +55,27 @@ new Proxy(target, {
 다음 코드는 {{jsxref("Operators/delete", "delete")}} 연산자를 트랩합니다.
 
 ```js
-const p = new Proxy({}, {
-  deleteProperty(target, prop) {
-    if (!(prop in target)) {
-      console.log(`property not found: ${prop}`);
-      return false;
-    }
-    delete target[prop];
-    console.log(`property removed: ${prop}`);
-    return true;
+const p = new Proxy(
+  {},
+  {
+    deleteProperty(target, prop) {
+      if (!(prop in target)) {
+        console.log(`property not found: ${prop}`);
+        return false;
+      }
+      delete target[prop];
+      console.log(`property removed: ${prop}`);
+      return true;
+    },
   },
-});
+);
 
 p.a = 10;
-console.log('a' in p); // true
+console.log("a" in p); // true
 
 const result1 = delete p.a; // "property removed: a"
 console.log(result1); // true
-console.log('a' in p); // false
+console.log("a" in p); // false
 
 const result2 = delete p.a; // "property not found: a"
 console.log(result2); // false

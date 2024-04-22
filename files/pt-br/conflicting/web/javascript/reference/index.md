@@ -1,7 +1,6 @@
 ---
 title: Sobre esta referência
 slug: conflicting/Web/JavaScript/Reference
-original_slug: Web/JavaScript/Reference/About
 ---
 
 {{JsSidebar}}

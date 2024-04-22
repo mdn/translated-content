@@ -1,7 +1,6 @@
 ---
 title: CanvasRenderingContext2D.textBaseline
 slug: Web/API/CanvasRenderingContext2D/textBaseline
-translation_of: Web/API/CanvasRenderingContext2D/textBaseline
 ---
 
 {{APIRef}}
@@ -11,7 +10,8 @@ La propriété **`CanvasRenderingContext2D.textBaseline`** de l'API Canvas 2D sp
 ## Syntaxe
 
 ```js
-ctx.textBaseline = "top" || "hanging" || "middle" || "alphabetic" || "ideographic" || "bottom";
+ctx.textBaseline =
+  "top" || "hanging" || "middle" || "alphabetic" || "ideographic" || "bottom";
 ```
 
 ### Options
@@ -48,12 +48,12 @@ Ceci est seulement un fragment de code simple utilisant la propriété `textBase
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 
-ctx.font = '48px serif';
-ctx.textBaseline = 'hanging';
-ctx.strokeText('Hello world', 0, 100);
+ctx.font = "48px serif";
+ctx.textBaseline = "hanging";
+ctx.strokeText("Hello world", 0, 100);
 ```
 
 Modifiez le code ci-dessous et voyez vos changements mis à jour en temps réel dans le canevas :
@@ -69,15 +69,16 @@ Modifiez le code ci-dessous et voyez vos changements mis à jour en temps réel 
 <textarea id="code" class="playable-code">
 ctx.font = '48px serif';
 ctx.textBaseline = 'hanging';
-ctx.strokeText('Hello world', 0, 100);</textarea>
+ctx.strokeText('Hello world', 0, 100);</textarea
+>
 ```
 
 ```js hidden
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var edit = document.getElementById('edit');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var edit = document.getElementById("edit");
 var code = textarea.value;
 
 function drawCanvas() {
@@ -85,17 +86,17 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener('click', function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
-textarea.addEventListener('input', drawCanvas);
-window.addEventListener('load', drawCanvas);
+textarea.addEventListener("input", drawCanvas);
+window.addEventListener("load", drawCanvas);
 ```
 
 {{ EmbedLiveSample('Code_jouable', 700, 360) }}

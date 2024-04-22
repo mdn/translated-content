@@ -1,7 +1,6 @@
 ---
 title: Utilização básica do Canvas
 slug: Web/API/Canvas_API/Tutorial/Basic_usage
-original_slug: Web/Guide/HTML/Canvas_tutorial/Utilizacao_basica
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial", "Web/API/Canvas_API/Tutorial/Drawing_shapes")}}Vamos começar este tutorial olhando para o elemento {{HTMLElement("canvas")}} {{Glossary("HTML")}} em si. No final desta página, você saberá como configurar um contexto de canvas 2D e desenhar um primeiro exemplo em seu navegador.
@@ -36,7 +35,7 @@ Por exemplo, podemos prover um texto descritivo do canvas ou uma imagem estátic
 </canvas>
 
 <canvas id="clock" width="150" height="150">
-  <img src="images/clock.png" width="150" height="150" alt=""/>
+  <img src="images/clock.png" width="150" height="150" alt="" />
 </canvas>
 ```
 
@@ -55,8 +54,8 @@ Se o conteúdo alternativo não for necessário, um simples `<canvas id="foo" ..
 Inicialmente o canvas é branco. Para mostrar alguma coisa, primeiro um _script_ precisa acessar o contexto de renderização e desenhar sobre ele. O elemento {{HTMLElement("canvas")}} tem um [método](/pt-BR/docs/Web/API/HTMLCanvasElement#Methods) chamado `getContext()`, usado para obter o contexto de renderização e suas funções de desenho. `getContext()` recebe o tipo de contexto como parâmetro. Para gráficos 2D, que serão abrangidos nesse tutorial, deverá ser especificado "2d".
 
 ```js
-var canvas = document.getElementById('tutorial');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("tutorial");
+var ctx = canvas.getContext("2d");
 ```
 
 A primeira linha recupera o nó DOM do elemento {{HTMLElement ("canvas")}} chamando o método {{domxref ("document.getElementById()")}}. Depois de ter o nó do elemento, podemos acessar o contexto de desenho usando o método `getContext()`.
@@ -66,10 +65,10 @@ A primeira linha recupera o nó DOM do elemento {{HTMLElement ("canvas")}} chama
 O conteúdo alternativo é mostrado nos navegadores que não suportam o elemento {{HTMLElement("canvas")}}, mas essa checagem pode ser feita através de um _script_ simplesmente testando a presença do método `getContext()`:
 
 ```js
-var canvas = document.getElementById('tutorial');
+var canvas = document.getElementById("tutorial");
 
-if (canvas.getContext){
-  var ctx = canvas.getContext('2d');
+if (canvas.getContext) {
+  var ctx = canvas.getContext("2d");
   // codigo de desenho aqui
 } else {
   // codigo para quando o canvas nao for suportado aqui
@@ -87,15 +86,17 @@ Aqui, um modelo minimalista, que vamos usar como ponto de partida para os exempl
   <head>
     <title>Canvas tutorial</title>
     <script type="text/javascript">
-      function draw(){
-        var canvas = document.getElementById('tutorial');
-        if (canvas.getContext){
-          var ctx = canvas.getContext('2d');
+      function draw() {
+        var canvas = document.getElementById("tutorial");
+        if (canvas.getContext) {
+          var ctx = canvas.getContext("2d");
         }
       }
     </script>
     <style type="text/css">
-      canvas { border: 1px solid black; }
+      canvas {
+        border: 1px solid black;
+      }
     </style>
   </head>
   <body onload="draw();">
@@ -114,25 +115,25 @@ Para começar, vamos dar uma olhada num exemplo simples que desenha a interseç�
 
 ```html
 <html>
- <head>
-  <script type="application/javascript">
-    function draw() {
-      var canvas = document.getElementById("canvas");
-      if (canvas.getContext) {
-        var ctx = canvas.getContext("2d");
+  <head>
+    <script type="application/javascript">
+      function draw() {
+        var canvas = document.getElementById("canvas");
+        if (canvas.getContext) {
+          var ctx = canvas.getContext("2d");
 
-        ctx.fillStyle = "rgb(200,0,0)";
-        ctx.fillRect (10, 10, 55, 50);
+          ctx.fillStyle = "rgb(200,0,0)";
+          ctx.fillRect(10, 10, 55, 50);
 
-        ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
-        ctx.fillRect (30, 30, 55, 50);
+          ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
+          ctx.fillRect(30, 30, 55, 50);
+        }
       }
-    }
-  </script>
- </head>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+    </script>
+  </head>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 

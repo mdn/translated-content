@@ -21,8 +21,7 @@ Aquí está el marcado para una barra de progreso:
   role="progressbar"
   aria-valuenow="75"
   aria-valuemin="0"
-  aria-valuemax="100"
-></div>
+  aria-valuemax="100"></div>
 ```
 
 Esta barra de progreso se construye usando un {{HTMLElement("div")}}, que no tiene significado. Incluimos roles y propiedades de ARIA para agregar significado. En este ejemplo, el atributo [`role="progressbar"`](/es/docs/Web/Accessibility/ARIA/Roles/progressbar_role) informa al navegador que este elemento es en realidad un widget de barra de progreso impulsado por JavaScript. [`aria-valuemin`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) y [`aria-valuemax`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) especifican los valores mínimo y máximo para la barra de progreso, y [`aria-valuenow`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) describe el actual estado del mismo y por lo tanto debe mantenerse actualizado con JavaScript.

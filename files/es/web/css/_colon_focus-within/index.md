@@ -1,5 +1,5 @@
 ---
-title: ':focus-within'
+title: ":focus-within"
 slug: Web/CSS/:focus-within
 ---
 
@@ -31,10 +31,10 @@ En este ejemplo, el formulario recibirá estilos de color especiales cuando cual
 
 <form>
   <label for="given_name">Nombre:</label>
-  <input id="given_name" type="text">
-  <br>
+  <input id="given_name" type="text" />
+  <br />
   <label for="family_name">Apellido:</label>
-  <input id="family_name" type="text">
+  <input id="family_name" type="text" />
 </form>
 ```
 

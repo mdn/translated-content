@@ -73,9 +73,9 @@ _从父级的 {{domxref("AudioNode")}} 继承方法。_
 
 ```js
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var button = document.querySelector('button');
-var pre = document.querySelector('pre');
-var myScript = document.querySelector('script');
+var button = document.querySelector("button");
+var pre = document.querySelector("pre");
+var myScript = document.querySelector("script");
 
 pre.innerHTML = myScript.innerHTML;
 
@@ -87,17 +87,17 @@ var frameCount = audioCtx.sampleRate * 2.0;
 
 var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
 
-button.onclick = function() {
+button.onclick = function () {
   // Fill the buffer with white noise;
   //just random values between -1.0 and 1.0
   for (var channel = 0; channel < channels; channel++) {
-   // This gives us the actual ArrayBuffer that contains the data
-   var nowBuffering = myArrayBuffer.getChannelData(channel);
-   for (var i = 0; i < frameCount; i++) {
-     // Math.random() is in [0; 1.0]
-     // audio needs to be in [-1.0; 1.0]
-     nowBuffering[i] = Math.random() * 2 - 1;
-   }
+    // This gives us the actual ArrayBuffer that contains the data
+    var nowBuffering = myArrayBuffer.getChannelData(channel);
+    for (var i = 0; i < frameCount; i++) {
+      // Math.random() is in [0; 1.0]
+      // audio needs to be in [-1.0; 1.0]
+      nowBuffering[i] = Math.random() * 2 - 1;
+    }
   }
 
   // Get an AudioBufferSourceNode.
@@ -110,7 +110,7 @@ button.onclick = function() {
   source.connect(audioCtx.destination);
   // start the source playing
   source.start();
-}
+};
 ```
 
 > **备注：** 音频数据解码的例子请查看 {{domxref("AudioContext.decodeAudioData")}} 页面。

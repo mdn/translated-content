@@ -10,8 +10,8 @@ slug: Web/API/WebGL_API/Constants
 标准 WebGL 常量挂载在 WebGL 的两个渲染上下文环境（{{domxref("WebGLRenderingContext")}} 和{{domxref("WebGL2RenderingContext")}}）中，因此，以形如`gl.CONSTANT_NAME`的形式使用 WebGL 常量：
 
 ```js
-var canvas = document.getElementById('myCanvas');
-var gl = canvas.getContext('webgl');
+var canvas = document.getElementById("myCanvas");
+var gl = canvas.getContext("webgl");
 
 gl.getParameter(gl.LINE_WIDTH);
 ```
@@ -19,7 +19,7 @@ gl.getParameter(gl.LINE_WIDTH);
 其中一些常量也由 [WebGL 扩展](/zh-CN/docs/Web/API/WebGL_API/Using_Extensions) 提供，如下方提供的 [清单](#Constants_defined_in_WebGL_extensions)：
 
 ```js
-var debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
+var debugInfo = gl.getExtension("WEBGL_debug_renderer_info");
 var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);
 ```
 
@@ -52,10 +52,10 @@ var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);
 | 常量名称         | 值     | 说明                                                                                                                            |
 | ---------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------- |
 | `POINTS`         | 0x0000 | 传递给 `drawElements` 或`drawArrays` 画点。                                                                                     |
-| `LINES`          | 0x0001 | 传递给 `drawElements` 或`drawArrays` 画线段。每个顶点链接到它的下一个顶点。每两点画一条线段。                                  |
-| `LINE_LOOP`      | 0x0002 | 传递给 `drawElements` 或`drawArrays` 画回路。每两个点被当作是一条独立的线段。线段首尾相连。                                    |
+| `LINES`          | 0x0001 | 传递给 `drawElements` 或`drawArrays` 画线段。每个顶点链接到它的下一个顶点。每两点画一条线段。                                   |
+| `LINE_LOOP`      | 0x0002 | 传递给 `drawElements` 或`drawArrays` 画回路。每两个点被当作是一条独立的线段。线段首尾相连。                                     |
 | `LINE_STRIP`     | 0x0003 | 传递给 `drawElements` 或`drawArrays` 画一个从第一个顶点到最后一个顶点绘制一组相连的线段。                                       |
-| `TRIANGLES`      | 0x0004 | 传递给`drawElements` 或`drawArrays`画三角形。每三个点创建一个独立的三角形。                                                    |
+| `TRIANGLES`      | 0x0004 | 传递给`drawElements` 或`drawArrays`画三角形。每三个点创建一个独立的三角形。                                                     |
 | `TRIANGLE_STRIP` | 0x0005 | 传递给 `drawElements` 或 `drawArrays` 画一组相连的三角形带。                                                                    |
 | `TRIANGLE_FAN`   | 0x0006 | 传递给 `drawElements` 或`drawArrays` 画一组连接的三角形。以第一个点做原点，每个顶点都连着它的前一个点和第一个顶点（类似风扇）。 |
 
@@ -110,7 +110,7 @@ var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);
 | `LINE_WIDTH`                       | 0x0B21 | 传递给 `getParameter` 获取当前的 `lineWidth` (由 `lineWidth` 方法设置)。                                                                                    |
 | `ALIASED_POINT_SIZE_RANGE`         | 0x846D | 传递给 `getParameter` 获取使用 `gl.POINTS` 绘制的点的大小。                                                                                                 |
 | `ALIASED_LINE_WIDTH_RANGE`         | 0x846E | 传递给 `getParameter` 得到一条线的可用宽度范围。返回一个长度为 2 的数组。其中低值为 0，高值为 1。                                                           |
-| `CULL_FACE_MODE`                   | 0x0B45 | 传递给 `getParameter` 获取当前的`cullFace` 值。应该返回 `FRONT`, `BACK`, 或 `FRONT_AND_BACK`。                                                             |
+| `CULL_FACE_MODE`                   | 0x0B45 | 传递给 `getParameter` 获取当前的`cullFace` 值。应该返回 `FRONT`, `BACK`, 或 `FRONT_AND_BACK`。                                                              |
 | `FRONT_FACE`                       | 0x0B46 | 传递给 `getParameter` 以确定当前的 `frontFace` 值。应该 `CW` 或 `CCW`。                                                                                     |
 | `DEPTH_RANGE`                      | 0x0B70 | 传递给 `getParameter` 返回长度为 2 的浮点数数组，以表示当前深度范围。                                                                                       |
 | `DEPTH_WRITEMASK`                  | 0x0B72 | 传递给 `getParameter` 确定是否启用深度缓冲区写入操作。                                                                                                      |
@@ -131,8 +131,8 @@ var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);
 | `STENCIL_BACK_REF`                 | 0x8CA3 |                                                                                                                                                             |
 | `STENCIL_BACK_VALUE_MASK`          | 0x8CA4 |                                                                                                                                                             |
 | `STENCIL_BACK_WRITEMASK`           | 0x8CA5 |                                                                                                                                                             |
-| `VIEWPORT`                         | 0x0BA2 | 返回带有当前视口尺寸的四个元素的 {{jsxref("Int32Array")}}                                                                                           |
-| `SCISSOR_BOX`                      | 0x0C10 | 返回带有当前裁剪盒子尺寸的四个元素的 {{jsxref("Int32Array")}} 。                                                                                    |
+| `VIEWPORT`                         | 0x0BA2 | 返回带有当前视口尺寸的四个元素的 {{jsxref("Int32Array")}}                                                                                                   |
+| `SCISSOR_BOX`                      | 0x0C10 | 返回带有当前裁剪盒子尺寸的四个元素的 {{jsxref("Int32Array")}} 。                                                                                            |
 | `COLOR_CLEAR_VALUE`                | 0x0C22 |                                                                                                                                                             |
 | `COLOR_WRITEMASK`                  | 0x0C23 |                                                                                                                                                             |
 | `UNPACK_ALIGNMENT`                 | 0x0CF5 |                                                                                                                                                             |
@@ -208,7 +208,7 @@ Constants passed to {{domxref("WebGLRenderingContext.enable()")}} or {{domxref("
 | 常量名称                   | 值     | 说明                                                                                                                                                                                                                   |
 | -------------------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `BLEND`                    | 0x0BE2 | Passed to `enable`/`disable` to turn on/off blending. Can also be used with `getParameter` to find the current blending method.                                                                                        |
-| `DEPTH_TEST`               | 0x0B71 | 通过 `enable`/`disable` 来打开/关闭深度测试。也可以使用 `getParameter` 来查询深度测试。LEQUAL                                                                                                                         |
+| `DEPTH_TEST`               | 0x0B71 | 通过 `enable`/`disable` 来打开/关闭深度测试。也可以使用 `getParameter` 来查询深度测试。LEQUAL                                                                                                                          |
 | `DITHER`                   | 0x0BD0 | Passed to `enable`/`disable` to turn on/off dithering. Can also be used with `getParameter` to find the current dithering method.                                                                                      |
 | `POLYGON_OFFSET_FILL`      | 0x8037 | Passed to `enable`/`disable` to turn on/off the polygon offset. Useful for rendering hidden-line images, decals, and or solids with highlighted edges. Can also be used with `getParameter` to query the scissor test. |
 | `SAMPLE_ALPHA_TO_COVERAGE` | 0x809E | Passed to `enable`/`disable` to turn on/off the alpha to coverage. Used in multi-sampling alpha channels.                                                                                                              |
@@ -243,11 +243,11 @@ Constants passed to {{domxref("WebGLRenderingContext.frontFace()")}}.
 
 Constants passed to {{domxref("WebGLRenderingContext.hint()")}}
 
-| 常量名称               | 值     | 说明                                                                                                                                           |
-| ---------------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `DONT_CARE`            | 0x1100 | There is no preference for this behavior.                                                                                                      |
-| `FASTEST`              | 0x1101 | The most efficient behavior should be used.                                                                                                    |
-| `NICEST`               | 0x1102 | The most correct or the highest quality option should be used.                                                                                 |
+| 常量名称               | 值     | 说明                                                                                                                        |
+| ---------------------- | ------ | --------------------------------------------------------------------------------------------------------------------------- |
+| `DONT_CARE`            | 0x1100 | There is no preference for this behavior.                                                                                   |
+| `FASTEST`              | 0x1101 | The most efficient behavior should be used.                                                                                 |
+| `NICEST`               | 0x1102 | The most correct or the highest quality option should be used.                                                              |
 | `GENERATE_MIPMAP_HINT` | 0x8192 | Hint for the quality of filtering when generating mipmap images with {{domxref("WebGLRenderingContext.generateMipmap()")}}. |
 
 ### Data types

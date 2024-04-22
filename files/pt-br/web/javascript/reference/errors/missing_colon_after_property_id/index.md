@@ -1,5 +1,5 @@
 ---
-title: 'Erro de Sintaxe: faltando : depois da propriedade id'
+title: "Erro de Sintaxe: faltando : depois da propriedade id"
 slug: Web/JavaScript/Reference/Errors/Missing_colon_after_property_id
 ---
 
@@ -20,7 +20,7 @@ SyntaxError: missing : after property id
 Ao criar objetos com a sintaxe do [iniciador do objeto](/pt-BR/docs/Web/JavaScript/Reference/Operators/Object_initializer), dois pontos (`:`) separam chaves e valores para as propriedades do objeto.
 
 ```js
-var obj = { propertyKey: 'value' };
+var obj = { propertyKey: "value" };
 ```
 
 ## Exemplos
@@ -37,12 +37,12 @@ var obj = { propertyKey = 'value' };
 Correto seria usar um dois-pontos, ou usar colchetes para atribuir uma nova propriedade depois que o objeto já foi criado.
 
 ```js example-good
-var obj = { propertyKey: 'value' };
+var obj = { propertyKey: "value" };
 
 // or alternatively
 
-var obj = { };
-obj['propertyKey'] = 'value';
+var obj = {};
+obj["propertyKey"] = "value";
 ```
 
 ### Propriedades vazia
@@ -72,7 +72,7 @@ var obj = { 'b'+'ar': 'foo' };
 Coloque a expressão entre parênteses `[]`:
 
 ```js example-good
-var obj = { ['b'+'ar']: 'foo' };
+var obj = { ["b" + "ar"]: "foo" };
 ```
 
 ## Veja também

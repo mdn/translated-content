@@ -1,13 +1,6 @@
 ---
 title: Object.fromEntries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/fromEntries
-tags:
-  - JavaScript
-  - Méthode
-  - Object
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/fromEntries
-original_slug: Web/JavaScript/Reference/Objets_globaux/Object/fromEntries
 ---
 
 {{JSRef}}
@@ -44,7 +37,10 @@ La méthode `Object.fromEntries()` prend comme argument une liste de paires de c
 Grâce à `Object.fromEntries`, on peut convertir des objets {{jsxref("Map")}} en {{jsxref("Object")}} :
 
 ```js
-const map = new Map([ ['toto', 'truc'], ['machin', 42] ]);
+const map = new Map([
+  ["toto", "truc"],
+  ["machin", 42],
+]);
 const obj = Object.fromEntries(map);
 console.log(obj); // { toto: "truc", machin: 42 }
 ```
@@ -54,7 +50,11 @@ console.log(obj); // { toto: "truc", machin: 42 }
 Grâce à `Object.fromEntries`, on peut convertir des objets {{jsxref("Array")}} en {{jsxref("Object")}} :
 
 ```js
-const arr = [ ['0', 'a'], ['1', 'b'], ['2', 'c'] ];
+const arr = [
+  ["0", "a"],
+  ["1", "b"],
+  ["2", "c"],
+];
 const obj = Object.fromEntries(arr);
 console.log(obj); // { 0: "a", 1: "b", 2: "c" }
 ```
@@ -67,8 +67,7 @@ Avec `Object.fromEntries` et la méthode réciproque {{jsxref("Object.entries()"
 const object1 = { a: 1, b: 2, c: 3 };
 
 const object2 = Object.fromEntries(
-  Object.entries(object1)
-  .map(([ key, val ]) => [ key, val * 2 ])
+  Object.entries(object1).map(([key, val]) => [key, val * 2]),
 );
 
 console.log(object2);

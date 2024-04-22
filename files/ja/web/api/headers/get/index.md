@@ -32,23 +32,26 @@ get(name)
 
 ```js
 const myHeaders = new Headers(); // 現在空です
-myHeaders.get('Not-Set'); // null を返します
+myHeaders.get("Not-Set"); // null を返します
 ```
 
 {{domxref("Headers.append")}} を使用してヘッダーを追加し、`get()` を使用してヘッダーを取得できます。
 
 ```js
-myHeaders.append('Content-Type', 'image/jpeg');
-myHeaders.get('Content-Type'); // "image/jpeg" を返します
+myHeaders.append("Content-Type", "image/jpeg");
+myHeaders.get("Content-Type"); // "image/jpeg" を返します
 ```
 
 ヘッダーに複数の値が関連付けられている場合、ByteString には、`Headers` オブジェクトに追加された順序ですべての値が含まれます。
 
 ```js
-myHeaders.append('Accept-Encoding', 'deflate');
-myHeaders.append('Accept-Encoding', 'gzip');
-myHeaders.get('Accept-Encoding'); // "deflate,gzip" を返します
-myHeaders.get('Accept-Encoding').split(',').map((v) => v.trimStart()); // [ "deflate", "gzip" ] を返します。
+myHeaders.append("Accept-Encoding", "deflate");
+myHeaders.append("Accept-Encoding", "gzip");
+myHeaders.get("Accept-Encoding"); // "deflate,gzip" を返します
+myHeaders
+  .get("Accept-Encoding")
+  .split(",")
+  .map((v) => v.trimStart()); // [ "deflate", "gzip" ] を返します。
 ```
 
 ## 仕様書

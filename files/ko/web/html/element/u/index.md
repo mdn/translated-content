@@ -130,7 +130,7 @@ CSS는 `spelling` 클래스를 가진 `<u>` 요소에 빨간 물결 밑줄을 �
 
 ```html
 <span class="underline">Today's Special</span>
-<br>
+<br />
 Chicken Noodle Soup With Carrots
 ```
 

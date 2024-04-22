@@ -1,8 +1,6 @@
 ---
 title: Модель визуального форматирования
 slug: Web/CSS/Visual_formatting_model
-translation_of: Web/CSS/Visual_formatting_model
-original_slug: Web/Guide/CSS/Visual_formatting_model
 ---
 
 {{CSSRef}}
@@ -31,7 +29,7 @@ _Модель визуального форматирования_ CSS - это 
 
 Главный блок-бокс содержит сгенерированные боксы-потомки и сгенерированный контекст. Он так же будет боксом, участвующем в [схеме позиционирования](/ru/docs/CSS/Positioning_scheme).
 
-![venn_blocks.png](/@api/deki/files/5995/=venn_blocks.png)Элемент блочного уровня так же может быть блоком-контейнером. Блок-контейнер - это блок, который содержит либо только другие элементы блочного уровня, либо создаёт [контекст инлайнового форматирования](/ru/docs/CSS/Inline_formatting_context) и, таким образом, содержит только инлайновые элементы.
+Элемент блочного уровня так же может быть блоком-контейнером. Блок-контейнер - это блок, который содержит либо только другие элементы блочного уровня, либо создаёт [контекст инлайнового форматирования](/ru/docs/CSS/Inline_formatting_context) и, таким образом, содержит только инлайновые элементы.
 
 Важно понимать, что понятие блочного элемента и понятие блочного контейнера - это разные вещи. Первое описывает, как блок будет себя вести по отношению к своему родителю и своим соседям/братьям. А второе - описывает, как блок будет взаимодействовать со своими потомками. Некоторые элементы блочного уровня, например, таблицы, не являются содержащими блоками. И наоборот, некоторые блоки-контейнеры, например, ячейки таблицы, не являются элементами блочного уровня.
 
@@ -45,21 +43,23 @@ _Модель визуального форматирования_ CSS - это 
 
 Блоки-контейнеры содержат либо только инлайн-боксы, либо только элементы блочного уровня. Но, как правило, документ содержит и те и другие. В этом случае анонимные блок-боксы создаются вокруг примыкающих к ним инлайн-боксов.
 
-### Пример
+### Пример 1
 
-Возьмём следующий HTML код (со стилями по умолчанию, то есть элементы {{ HTMLElement("div") }} и {{ HTMLElement("p") }} имеют значение `display:block` :
+Возьмём следующий HTML код (со стилями по умолчанию, то есть элементы {{ HTMLElement("div") }} и {{ HTMLElement("p") }} имеют значение `display:block`:
 
 ```html
-<div>Some inline text <p>followed by a paragraph</p> followed by more inline text.</div>
+<div>
+  Some inline text
+  <p>followed by a paragraph</p>
+  followed by more inline text.
+</div>
 ```
 
-Здесь создались два анонимных блока: один для текста перед параграфом (`Some inline text`), и второй для текста после параграфа (`followed by more inline text.`). И у нас получилась вот такая структура:
-
-![anonymous_block-level_boxes.png](/@api/deki/files/5996/=anonymous_block-level_boxes.png)
+Здесь создались два анонимных блока: один для текста перед параграфом (`Some inline text`), и второй для текста после параграфа (`followed by more inline text.`).
 
 Выглядеть это будет так:
 
-```html
+```html-nolint
 Some inline text
 followed by a paragraph
 followed by more inline text.
@@ -71,12 +71,15 @@ followed by more inline text.
 
 Если есть несколько блок-боксов, идущих подряд, без инлайн-элементов между ними, то анонимные блок-боксы создаются только перед и после такого набора блок-боксов.
 
-### Пример
+### Пример 2
 
-Возьмём следующий HTML код, где установим для элемента {{ HTMLElement("p") }} значение `display:inline` и для элемента {{ HTMLElement("span") }} значение `display:block` :
+Возьмём следующий HTML код, где установим для элемента {{ HTMLElement("p") }} значение `display:inline` и для элемента {{ HTMLElement("span") }} значение `display:block`:
 
 ```html
-<p>Some <em>inline</em> text <span>followed by a paragraph</span> followed by more inline text.</p>
+<p>
+  Some <em>inline</em> text <span>followed by a paragraph</span> followed by
+  more inline text.
+</p>
 ```
 
 Создадутся два анонимных блок-бокса, один для текста перед элементом span (`Some inline text`) и один для текста после него (`followed by more inline text`), и у нас получится вот такая структура:
@@ -86,18 +89,12 @@ followed by more inline text.
 Выглядеть она будет так:
 
 ```html
-Some inline text
-followed by a paragraph
-followed by more inline text.
+Some inline text followed by a paragraph followed by more inline text.
 ```
 
 ### Элементы инлайн-уровня и инлайн-боксы
 
 Элементы, которые называются _элементами инлайн-уровня_ - это элементы, у которых вычисленное значение CSS-свойства {{ cssxref("display") }} установлено в : `inline`, `inline-block` или `inline-table`. Визуально они не представляют собой какие-то отдельные блоки, но они они располагаются в одну линию с другим контентом инлайн-уровня. Например, содержание параграфа, с различным форматированием, таким как подчёркивание или картинка, состоит из элементов инлайн-уровня.
-
-![venn_inlines.png](/@api/deki/files/6008/=venn_inlines.png)
-
-> **Предупреждение:** Эта диаграмма использует устаревшую терминологию; см. примечания ниже. К тому же она некорректна, потому что жёлтый эллипс справа по определению должен быть изображён одинаковым по размеру с эллипсом слева или больше него (it could be a mathematical superset), потому что в спецификации сказано: "Элемент инлайн-уровня генерируют боксы инлайн-уровня, участвующие в форматировании инлайн-уровня", см. CSS 2.2, глава 9.2.2
 
 Элементы инлайн-уровня создают _боксы инлайн-уровня_, которые определены как боксы, участвующие в [контексте форматирования инлайн-уровня](/ru/docs/CSS/Inline_formatting_context). _Inline boxes_ are both inline-level boxes and boxes, whose contents participate in their container's inline formatting context. This is the case, for example, for all non-replaced boxes with `display:inline`. Inline-level boxes, whose contents do not participate in an inline formatting context, are called _atomic inline-level boxes_. These boxes, generated by replaced inline-level elements or by elements with a calculated {{ cssxref("display") }} value of `inline-block` or `inline-table`, are never split into several boxes, as is possible with inline boxes.
 
@@ -108,12 +105,12 @@ followed by more inline text.
 > ```html
 > <style>
 >   span {
->     display:inline; /* default value*/
+>     display: inline; /* default value*/
 >   }
 > </style>
 > <div style="width:20em;">
->    The text in the span <span>can be split in several
->    lines as it</span> is an inline box.
+>   The text in the span <span>can be split in several lines as it</span> is an
+>   inline box.
 > </div>
 > ```
 
@@ -124,12 +121,12 @@ The text in the span can be split into several lines as it is an inline box.
 ```html
 <style>
   span {
-    display:inline-block;
+    display: inline-block;
   }
 </style>
 <div style="width:20em;">
-   The text in the span <span>cannot be split in several
-   lines as it</span> is an inline-block box.
+  The text in the span <span>cannot be split in several lines as it</span> is an
+  inline-block box.
 </div>
 ```
 

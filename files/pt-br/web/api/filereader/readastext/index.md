@@ -22,13 +22,11 @@ instanceOfFileReader.readAsText(blob[, encoding]);
 
 ## Especificações
 
-| Especificação                                                                        | Status                       | Comentário        |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ----------------- |
-| {{SpecName("File API", "#FileReader-interface", "FileReader")}} | {{Spec2("File API")}} | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.FileReader.readAsText")}}
+{{Compat}}
 
 ## Veja também
 

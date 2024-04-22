@@ -3,6 +3,8 @@ title: 控制流
 slug: Glossary/Control_flow
 ---
 
+{{GlossarySidebar}}
+
 _控制流_ 是计算机执行一个程序中语句的顺序。
 
 程序会从第一行代码开始执行直至最后一行，除非遇到（实际中是非常普遍地）改变控制流的代码结构，比如条件语句和循环。
@@ -23,16 +25,8 @@ if (field == empty) {
 
 控制流的存在意味着在读代码时，你不能只从第一行读到最后一行，你还要注意代码的结构以及它对语句执行顺序的影响。
 
-## Learn more
+## 参见
 
-### General knowledge
-
-- [Control flow](https://zh.wikipedia.org/wiki/Control_flow) on Wikipedia
-
-### Technical reference
-
-- [JavaScript Reference - Control flow](/zh-CN/docs/Web/JavaScript/Reference#Control_flow) on MDN
-
-### Learn about it
-
-- [Statements (Control flow)](/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling) on MDN
+- 维基百科上的[控制流程](https://zh.wikipedia.org/wiki/控制流程)
+- MDN 上的 [JavaScript 参考——控制流](/zh-CN/docs/Web/JavaScript/Reference#control_flow)
+- MDN 上的[语句（控制流）](/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)

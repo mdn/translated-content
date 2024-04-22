@@ -2,6 +2,7 @@
 title: RTCDataChannelEvent
 slug: Web/API/RTCDataChannelEvent
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 **`RTCDataChannelEvent()`** 생성자는 {{domxref("datachannel")}}을 나타내는 신규 {{domxref("RTCDataChannelEvent")}} 객체를 반환합니다. 이 이벤트는 두 피어 사이에서 원격 피어가 {{domxref("RTCDataChannel")}}을 개통하도록 요청되었을때, {{domxref("RTCPeerConnection")}} 에 전달됩니다.
@@ -29,12 +30,12 @@ _[`Event`](/ko/docs/Web/API/Event)의 속성을 상속합니다._
 아래의 예제에서는 `datachannel` 이벤트 핸들러를 설정해서 데이터 채널의 참조된 정보를 저장하고, 모니터링 할 이벤트들에 대한 핸들러를 새로 설정합니다. {{domxref("RTCDataChannelEvent.channel", "channel")}} 속성은 다른 피어와의 연결을 나타내는 {{domxref("RTCDataChannel")}}을 제공합니다.
 
 ```js
-pc.ondatachannel = function(event) {
+pc.ondatachannel = function (event) {
   inboundDataChannel = event.channel;
   inboundDataChannel.onmessage = handleIncomingMessage;
   inboundDataChannel.onopen = handleChannelOpen;
   inboundDataChannel.onclose = handleChannelClose;
-}
+};
 ```
 
 데이터 채널을 어떤 방식으로 사용하는지에 대한 더 좋은 예제는 [A simple RTCDataChannel sample](/ko/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)를 확인하십시오.

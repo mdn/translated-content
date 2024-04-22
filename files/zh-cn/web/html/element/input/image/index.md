@@ -38,7 +38,7 @@ slug: Web/HTML/Element/input/image
 - `application/x-www-form-urlencoded`
   - : 这是默认值，它将会将表单数据在使用 {{jsxref("encodeURI", "encodeURI()")}} 等算法进行 URL 编码后发送。
 - `multipart/form-data`
-  - : 使用 {{domxref("FormData")}} API 来管理数据，允许向服务器提交文件。你_必须_使用该编码方式，如果你的表单包含 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 为 `file`（[`<input type="file">`](/zh-CN/docs/Web/HTML/Element/input/file)）的任何 {{HTMLElement("input")}} 元素。
+  - : 使用 {{domxref("FormData")}} API 来管理数据，允许向服务器提交文件。你*必须*使用该编码方式，如果你的表单包含 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 为 `file`（[`<input type="file">`](/zh-CN/docs/Web/HTML/Element/input/file)）的任何 {{HTMLElement("input")}} 元素。
 - `text/plain`
   - : 纯文本；通常只在调试时有作用，你可以很容易看到要被提交的数据。
 

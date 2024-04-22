@@ -46,7 +46,7 @@ function loadTexture(gl, url) {
     border,
     srcFormat,
     srcType,
-    pixel
+    pixel,
   );
 
   const image = new Image();
@@ -58,7 +58,7 @@ function loadTexture(gl, url) {
       internalFormat,
       srcFormat,
       srcType,
-      image
+      image,
     );
 
     // WebGL1 has different requirements for power of 2 images
@@ -152,7 +152,7 @@ function initTextureBuffer(gl) {
   gl.bufferData(
     gl.ARRAY_BUFFER,
     new Float32Array(textureCoordinates),
-    gl.STATIC_DRAW
+    gl.STATIC_DRAW,
   );
 
   return textureCoordBuffer;
@@ -274,7 +274,7 @@ function setTextureAttribute(gl, buffers, programInfo) {
     type,
     normalize,
     stride,
-    offset
+    offset,
   );
   gl.enableVertexAttribArray(programInfo.attribLocations.textureCoord);
 }

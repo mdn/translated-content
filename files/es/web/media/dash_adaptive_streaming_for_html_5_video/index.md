@@ -1,88 +1,113 @@
 ---
 title: Transmisión Adaptativa DASH para Video en HTML 5
 slug: Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
-original_slug: Web/HTML/Transision_adaptativa_DASH
+l10n:
+  sourceCommit: e74627e6fd9ba19696b918c2bdddfff8aa160787
 ---
 
-La Transmisión Adaptable y Dinámica sobre HTTP (DASH - _Dynamic Adaptive Streaming over HTTP_) es un protocolo de transmisión adaptable. Esto signfica que le permite a un flujo de vídeo cambiar entre diversas tazas de bits con base en el desempeño de la red, para mantener la reproducción de un vídeo.
+{{QuickLinksWithSubpages("/es/docs/Web/Media")}}
 
-## Soporte de Navegadores
+La Transmisión Adaptativa Dinámica sobre HTTP (_DASH_, por sus siglas en Inglés) es un protocolo de transmisión adaptativa. Esto significa que permite a una transmisión de video cambiar las tasas de bits con base al rendimiento de la red, para mantener un video reproduciendo.
 
-Firefox 21 incluye una implementación de DASH para video WebM con HTML5 que está desactivada por defecto. Se puede activar a través de "about:config" activando la opción "media.dash.enabled".
+## Soporte de navegadores
 
-Firefox 23 eliminó el soporte para DASH para WebM con HTML 5. Ésta será reemplazada por una implementación de la [Media Source Extensions API](http://www.w3.org/TR/media-source/)que de soporte a DASH a través de javascript usando librerías como dash.js. Ver el bug [778617](https://bugzilla.mozilla.org/show_bug.cgi?id=778617) para más detalles.
+Firefox 21 incluye un implementación de _DASH_ para videos HTML WebM la cual está deshabilitada por defecto. Puede ser habilitada a través de "about:config" y la preferencia "media.dash.enabled".
 
-## Usando DASH del lado del servidor
+Firefox 23 removió el soporte para _DASH_ para videos HTML WebM. Será reemplazado por una implementación de [Media Source Extensions API](https://www.w3.org/TR/media-source/) la cual permitirá el soporte para _DASH_ a través de librerías de Javascript como dash.js. Véase el error [778617](https://bugzil.la/778617) para más detalles.
 
-Lo primero que necesitas es convertir tu video WebM en un manifiesto DASH con todos los archivos en los diferentes bitrates. Para comenzar necesitas:
+## Usando _DASH_ - Desde el servidor
 
-- ffpmeg - con libvpx y libvorbis activado para dar soporte al audio y video de WebM ([ffmpeg.org](http://www.ffmpeg.org/)).
-- libwebm - concretamente para la herramienta samplemuxer (git clone <https://gerrit.chromium.org/gerrit/p/webm/libwebm.git>).
-- webm-tools - concretamente para la herramienta de creación de manifiestos, webm_dash_manifest (git clone <https://gerrit.chromium.org/gerrit/p/webm/webm-tools.git>).
+Primero tendrás que convertir tu video WebM a un manifiesto _DASH_ acompañado de los archivos de video en varias tasas de bits. Para empezar solo necesitarás el programa ffmpeg de [ffmpeg.org](https://www.ffmpeg.org/), con soporte para libvpx and libvorbis para video y audio WebM, al menos en versión 2.5 (probablemente; esto fue probado con 3.2.5).
 
-### 1. Use your existing WebM file to create one audio file and multiple video files.
+### 1. Usa tu archivo WebM para crear un archivo de audio y múltiples archivos de video
 
 Por ejemplo:
 
-Creamos el archivo de audio usando:
+El archivo **_in.video_** puede ser cualquier contenedor con al menos un flujo de datos de audio y uno de video que pueden ser decodificados por ffmpeg.
 
-```
-ffmpeg -i my_master_file.webm -vn -acodec libvorbis -ab 128k my_audio.webm
-```
+Crea el audio usando:
 
-Creamos los archivos de vídeo usando:
-
-```
-ffmpeg -i my_master_file.webm -vcodec libvpx -vb 250k -keyint_min 150 -g 150 -an my_video-250kbps.webm
-ffmpeg -i my_master_file.webm -vcodec libvpx -vb 100k -keyint_min 150 -g 150 -an my_video-100kbps.webm
-ffmpeg -i my_master_file.webm -vcodec libvpx -vb 50k -keyint_min 150 -g 150 -an my_video-50kbps.webm
+```bash
+ffmpeg -i in.video -vn -acodec libvorbis -ab 128k -dash 1 my_audio.webm
 ```
 
-### 2. Align the clusters to enable switching at cluster boundaries.
+Crea cada variante de video.
 
-For video:
-
-```
-samplemuxer -i my_video-250kbps.webm -o my_video-250kbps-final.webm
-etc.
+```bash
+ffmpeg -i in.video -c:v libvpx-vp9 -keyint_min 150 -g 150 -tile-columns 4 -frame-parallel 1 -f webm -dash 1 \
+-an -vf scale=160:90 -b:v 250k -dash 1 video_160x90_250k.webm
 ```
 
-Although we don't switch audio streams, it's still necessary to run it through samplemuxer to ensure a cues element is added. Note: to be compatible with playing on Chrome, it is suggested to change the track number to something other than the one in the video files, most likely 0.
-
-```
-samplemuxer -i my_audio.webm -o my_audio-final.webm -output_cues 1 -cues_on_audio_track 1 -max_cluster_duration 2 -audio_track_number
-```
-
-### 3. Create the manifest file:
-
-```
-webm_dash_manifest -o my_video_manifest.mpd \
-  -as id=0,lang=eng \
-  -r id=0,file=my_video-250kbps-final.webm \
-  -r id=1,file=my_video-100kbps-final.webm \
-  -r id=2,file=my_video-50kbps-final.webm \
-  -as id=1,lang=eng \
-  -r id=4,file=my_audio-final.webm
+```bash
+ffmpeg -i in.video -c:v libvpx-vp9 -keyint_min 150 -g 150 -tile-columns 4 -frame-parallel 1  -f webm -dash 1 \
+-an -vf scale=320:180 -b:v 500k -dash 1 video_320x180_500k.webm
 ```
 
-Put the manifest and the associated video files on your web server or CDN. DASH works via HTTP, so as long as your HTTP server supports byte range requests, and it's set up to serve .mpd files with mimetype="application/dash+xml", then you're all set.
+```bash
+ffmpeg -i in.video -c:v libvpx-vp9 -keyint_min 150 -g 150 -tile-columns 4 -frame-parallel 1  -f webm -dash 1 \
+-an -vf scale=640:360 -b:v 750k -dash 1 video_640x360_750k.webm
+```
 
-## Using DASH - Client Side
+```bash
+ffmpeg -i in.video -c:v libvpx-vp9 -keyint_min 150 -g 150 -tile-columns 4 -frame-parallel 1  -f webm -dash 1 \
+-an -vf scale=640:360 -b:v 1000k -dash 1 video_640x360_1000k.webm
+```
 
-You'll want to modify your web page to point to the DASH manifest first, instead of directly to a particular video file:
+```bash
+ffmpeg -i in.video -c:v libvpx-vp9 -keyint_min 150 -g 150 -tile-columns 4 -frame-parallel 1  -f webm -dash 1 \
+-an -vf scale=1280:720 -b:v 1500k -dash 1 video_1280x720_1500k.webm
+```
+
+O hazlo todo en un solo comando.
+
+```bash
+ffmpeg -i in.video -c:v libvpx-vp9 -keyint_min 150 \
+-g 150 -tile-columns 4 -frame-parallel 1 -f webm -dash 1 \
+-an -vf scale=160:90 -b:v 250k -dash 1 video_160x90_250k.webm \
+-an -vf scale=320:180 -b:v 500k -dash 1 video_320x180_500k.webm \
+-an -vf scale=640:360 -b:v 750k -dash 1 video_640x360_750k.webm \
+-an -vf scale=640:360 -b:v 1000k -dash 1 video_640x360_1000k.webm \
+-an -vf scale=1280:720 -b:v 1500k -dash 1 video_1280x720_1500k.webm
+```
+
+### 2. Crea el archivo manifiesto
+
+```bash
+ffmpeg \
+  -f webm_dash_manifest -i video_160x90_250k.webm \
+  -f webm_dash_manifest -i video_320x180_500k.webm \
+  -f webm_dash_manifest -i video_640x360_750k.webm \
+  -f webm_dash_manifest -i video_1280x720_1500k.webm \
+  -f webm_dash_manifest -i my_audio.webm \
+  -c copy \
+  -map 0 -map 1 -map 2 -map 3 -map 4 \
+  -f webm_dash_manifest \
+  -adaptation_sets "id=0,streams=0,1,2,3 id=1,streams=4" \
+  my_video_manifest.mpd
+```
+
+El parámetro `-map` corresponde a los archivos de entrada en la secuencia que fueron dados; debes tener uno por cada archivo. El parámetro `-adaptation_sets` los asigna en conjuntos de adaptación; por ejemplo, esto crea un conjunto (0) que contiene los flujos de datos 0, 1, 2 y 3 (los videos), y otro conjunto (1) que contiene solo el flujo de datos 4, el flujo de datos de audio.
+
+Pon el manifiesto y los archivos de video asociados en tu servidor web o CDN. _DASH_ trabaja via HTTP, siempre y cuando tu servidor HTTP soporte peticiones de rangos de bytes, y esté configurado para servir archivos `.mpd` con `mimetype="application/dash+xml"`, entonces tendrás todo listo.
+
+## Usando _DASH_ - Desde el cliente
+
+Querrás modificar tu página web para apuntar al manifiesto _DASH_ primero, en lugar de a un video en particular directamente:
 
 ```html
 <video>
-  <source src="movie.mpd">
-  <source src="movie.webm">
-  Your browser does not support the video tag.
+  <source src="movie.mpd" />
+  <source src="movie.webm" />
+  Tu navegador no soporta la etiqueta video.
 </video>
 ```
 
-That's it! If DASH is supported by the browser, your video will now stream adaptively.
+¡Eso es todo! Si _DASH_ es soportado por tu navegador, tu video ahora tendrá una transmisión adaptativa.
 
-## Links
+## Enlaces
 
-[WebM DASH Specification at The WebM Project](http://wiki.webmproject.org/adaptive-streaming/webm-dash-specification)
+[Especificación WebM DASH en El Proyecto WebM](http://wiki.webmproject.org/adaptive-streaming/webm-dash-specification)
 
-[DASH Industry Forum](http://dashif.org/)
+[Foro DASH Industry](https://dashif.org/)
+
+[Descripción del proyecto WebM de cómo crear archivos DASH con FFMPEG](http://wiki.webmproject.org/adaptive-streaming/instructions-to-playback-adaptive-webm-using-dash)

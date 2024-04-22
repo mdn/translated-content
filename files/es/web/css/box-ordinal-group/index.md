@@ -1,7 +1,6 @@
 ---
-title: '-moz-box-ordinal-group'
+title: "-moz-box-ordinal-group"
 slug: Web/CSS/box-ordinal-group
-original_slug: Web/CSS/-moz-box-ordinal-group
 ---
 
 {{CSSRef}}

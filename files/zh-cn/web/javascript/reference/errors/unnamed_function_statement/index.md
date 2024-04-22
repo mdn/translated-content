@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: function statement requires a name'
+title: "SyntaxError: function statement requires a name"
 slug: Web/JavaScript/Reference/Errors/Unnamed_function_statement
 ---
 
@@ -36,17 +36,15 @@ function () {
 你可以使用[函数表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function)（赋值）来代替：
 
 ```js example-good
-var greet = function() {
-  return 'Hello world';
+var greet = function () {
+  return "Hello world";
 };
 ```
 
 者是你想将其作为立即调用函数表达式（[IIFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)，Immediately Invoked Function Expression），也就是定义后立即执行的函数。在这种情况下你需要用到更多的括号：
 
 ```js example-good
-(function () {
-
-})();
+(function () {})();
 ```
 
 ### 标号函数 (Labeled functions)
@@ -80,7 +78,7 @@ function Greeter() {
 var greeter = {
   german: function () {
     return "Moin";
-  }
+  },
 };
 ```
 

@@ -3,6 +3,8 @@ title: 交叉轴
 slug: Glossary/Cross_Axis
 ---
 
+{{GlossarySidebar}}
+
 弹性容器 {{glossary("flexbox")}} 的交叉轴和主轴 {{glossary("main axis")}} 垂直，因此如果弹性方向是 {{cssxref("flex-direction")}} 行 `row` 或者反向行 `row-reverse` ，那么交叉轴就是从上至下地垂直走向的。
 
 ![The cross axis runs down the column](basics3.png)
@@ -13,7 +15,7 @@ slug: Glossary/Cross_Axis
 
 要在交叉轴上对齐，是通过弹性容器的 `align-items` 属性来控制的，或者通过弹性元素的 `align-self` 属性来单独决定的对齐方式。在多行弹性容器中，交叉轴上有多余控件的话，你还可以用 `align-content` 来控制行的间距。
 
-## 学习更多
+## 参见
 
 ### 属性参考
 

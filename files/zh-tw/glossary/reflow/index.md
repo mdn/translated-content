@@ -3,6 +3,8 @@ title: Reflow
 slug: Glossary/Reflow
 ---
 
+{{GlossarySidebar}}
+
 **Reflow（回流）**會發生於瀏覽器（{{glossary("browser")}}）必須再次處理和繪製部分或整個網頁時，如在互動式網站更新後。
 
 ## 深入了解

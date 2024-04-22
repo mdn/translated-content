@@ -1,11 +1,6 @@
 ---
 title: box-shadow
 slug: Web/CSS/box-shadow
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/box-shadow
 ---
 
 {{CSSRef}}
@@ -32,7 +27,9 @@ box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 box-shadow: inset 5em 1em gold;
 
 /* Une liste d'ombres, séparées par des virgules */
-box-shadow: 3px 3px red, -1em 0 0.4em olive;
+box-shadow:
+  3px 3px red,
+  -1em 0 0.4em olive;
 
 /* Mots-clés globaux */
 box-shadow: inherit;
@@ -86,7 +83,7 @@ Chaque ombre de la liste (`none` sera traitée comme une liste de longueur nulle
 p {
   height: 5em;
   width: 300px;
-  background-color: rgba(128,128,128,0.1);
+  background-color: rgba(128, 128, 128, 0.1);
 }
 .ombre_droite_haut {
   box-shadow: 60px -16px teal; /* la valeur négative décale vers le haut */
@@ -98,7 +95,9 @@ p {
 }
 
 .ombres_multiples_diffuses {
-  box-shadow: inset 0 0 1em gold, 0 0 2em red;
+  box-shadow:
+    inset 0 0 1em gold,
+    0 0 2em red;
   /* deux ombres dans la liste et des rayons de flou pour chacune */
 }
 ```

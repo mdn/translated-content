@@ -1,5 +1,5 @@
 ---
-title: ':-moz-drag-over'
+title: ":-moz-drag-over"
 slug: Web/CSS/:-moz-drag-over
 ---
 
@@ -10,7 +10,7 @@ slug: Web/CSS/:-moz-drag-over
 ## 構文
 
 ```css
-:-moz-drag-over
+:-moz-drag-over;
 ```
 
 ## 例

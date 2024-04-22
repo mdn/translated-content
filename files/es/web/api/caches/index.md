@@ -1,7 +1,6 @@
 ---
 title: caches
 slug: Web/API/caches
-original_slug: Web/API/WindowOrWorkerGlobalScope/caches
 ---
 
 {{APIRef()}}{{SeeCompatTable}}
@@ -23,22 +22,22 @@ Un objeto {{domxref("CacheStorage")}}.
 El siguiente ejemplo muestra la forma en la que utilizarías una cache en un contexto de [service worker](/es/docs/Web/API/Service_Worker_API) para guardar assets _offline_.
 
 ```js
-this.addEventListener('install', function(event) {
+this.addEventListener("install", function (event) {
   event.waitUntil(
-    caches.open('v1').then(function(cache) {
+    caches.open("v1").then(function (cache) {
       return cache.addAll(
-        '/sw-test/',
-        '/sw-test/index.html',
-        '/sw-test/style.css',
-        '/sw-test/app.js',
-        '/sw-test/image-list.js',
-        '/sw-test/star-wars-logo.jpg',
-        '/sw-test/gallery/',
-        '/sw-test/gallery/bountyHunters.jpg',
-        '/sw-test/gallery/myLittleVader.jpg',
-        '/sw-test/gallery/snowTroopers.jpg'
+        "/sw-test/",
+        "/sw-test/index.html",
+        "/sw-test/style.css",
+        "/sw-test/app.js",
+        "/sw-test/image-list.js",
+        "/sw-test/star-wars-logo.jpg",
+        "/sw-test/gallery/",
+        "/sw-test/gallery/bountyHunters.jpg",
+        "/sw-test/gallery/myLittleVader.jpg",
+        "/sw-test/gallery/snowTroopers.jpg",
       );
-    })
+    }),
   );
 });
 ```

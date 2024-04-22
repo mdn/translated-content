@@ -12,7 +12,7 @@ slug: Web/API/ServiceWorkerRegistration/installing
 ## Syntax
 
 ```js
-sw = ServiceWorker.installing
+sw = ServiceWorker.installing;
 ```
 
 ### Value

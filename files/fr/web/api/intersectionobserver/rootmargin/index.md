@@ -1,15 +1,6 @@
 ---
 title: IntersectionObserver.rootMargin
 slug: Web/API/IntersectionObserver/rootMargin
-tags:
-  - API
-  - Intersection Observer
-  - Intersection Observer API
-  - IntersectionObserver
-  - Property
-  - Reference
-  - rootMargin
-translation_of: Web/API/IntersectionObserver/rootMargin
 ---
 
 {{APIRef("Intersection Observer API")}}{{SeeCompatTable}}

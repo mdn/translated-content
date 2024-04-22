@@ -13,27 +13,27 @@ slug: Web/API/IDBObjectStore
 
 ## 方法预览
 
-| `IDBRequest add (in any value, in optional any key) raises (DOMException);`                                                                  |
-| -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `IDBRequest clear() raises (DOMException);`                                                                                                 |
-| `IDBRequest count (in optional any key) raises (DOMException);`                                                                           |
+| `IDBRequest add (in any value, in optional any key) raises (DOMException);`                                         |
+| ------------------------------------------------------------------------------------------------------------------- |
+| `IDBRequest clear() raises (DOMException);`                                                                         |
+| `IDBRequest count (in optional any key) raises (DOMException);`                                                     |
 | `IDBIndex createIndex (in DOMString name, in DOMString keyPath, in optional boolean unique) raises (DOMException);` |
-| ` IDBRequest delete (in any key) raises (DOMException); `                                                                                  |
-| `void deleteIndex (in any DOMString indexName) raises (DOMException);                                              |
-| `IDBRequest get (in any key) raises (DOMException);`                                                                                         |
+| `IDBRequest delete (in any key) raises (DOMException);`                                                             |
+| `void deleteIndex (in any DOMString indexName) raises (DOMException);                                               |
+| `IDBRequest get (in any key) raises (DOMException);`                                                                |
 | `IDBIndex index (in DOMString name) raises (DOMException);`                                                         |
-| `IDBRequest openCursor (in optional IDBKeyRange range, in optional unsigned short direction) raises(DOMException);`                          |
-| `IDBRequest put (in any value, in optional any key) raises (DOMException);`                                                                  |
+| `IDBRequest openCursor (in optional IDBKeyRange range, in optional unsigned short direction) raises(DOMException);` |
+| `IDBRequest put (in any value, in optional any key) raises (DOMException);`                                         |
 
 ## 属性
 
-| Attribute       | Type                                        | Description                                                                                                                  |
-| --------------- | ------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| Attribute       | Type                                        | Description                                                                                        |
+| --------------- | ------------------------------------------- | -------------------------------------------------------------------------------------------------- |
 | `indexNames`    | `readonly DOMStringList`                    | 表中对象的[索引](/zh-CN/IndexedDB#gloss_index)名列表。                                             |
 | `keyPath`       | `readonly` [`DOMString`](/En/DOM/DOMString) | 表中的[键路径](/zh-CN/IndexedDB#gloss_key_path)，如果该属性为 null，每次操作表时必须提供一个键名。 |
-| `name`          | `readonly` [`DOMString`](/En/DOM/DOMString) | 表名                                                                                                                         |
-| `transaction`   | `readonly IDBTransaction`                   | 事务的名称，该表属于此事务。                                                                                                 |
-| `autoIncrement` | `readonly boolean`                          | 表中自增字段的值                                                                                                             |
+| `name`          | `readonly` [`DOMString`](/En/DOM/DOMString) | 表名                                                                                               |
+| `transaction`   | `readonly IDBTransaction`                   | 事务的名称，该表属于此事务。                                                                       |
+| `autoIncrement` | `readonly boolean`                          | 表中自增字段的值                                                                                   |
 
 ## 方法
 
@@ -239,7 +239,7 @@ This method may raise a [DOMException](/zh-CN/docs/DOM/DOMException) with a [DOM
 > **备注：** If the key that identifies the record is a Number, the key passed to the delete method must be a Number too, and not a String. So for example you might need to do the following:
 >
 > ```js
-> var key_val = '42';
+> var key_val = "42";
 > var key = Number(key_val);
 > objectstore.delete(key);
 > ```
@@ -446,8 +446,8 @@ This example shows a variety of different uses of object stores, from updating t
 // Let us open our database
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Database initialised.</li>';
+DBOpenRequest.onsuccess = function (event) {
+  note.innerHTML += "<li>Database initialised.</li>";
 
   // store the result of opening the database in db.
   db = DBOpenRequest.result;
@@ -457,11 +457,11 @@ DBOpenRequest.onsuccess = function(event) {
 // the database needs to be created Either one has not
 // been created before, or a new version number has been
 // submitted via the window.indexedDB.open line above
-DBOpenRequest.onupgradeneeded = function(event) {
+DBOpenRequest.onupgradeneeded = function (event) {
   var db = event.target.result;
 
-  db.onerror = function(event) {
-    note.innerHTML += '<li>Error loading database.</li>';
+  db.onerror = function (event) {
+    note.innerHTML += "<li>Error loading database.</li>";
   };
 
   // Create an objectStore for this database
@@ -478,24 +478,33 @@ DBOpenRequest.onupgradeneeded = function(event) {
 
   objectStore.createIndex("notified", "notified", { unique: false });
 
-  note.innerHTML += '<li>Object store created.</li>';
+  note.innerHTML += "<li>Object store created.</li>";
 };
 
 // Create a new item to add in to the object store
 var newItem = [
-  { taskTitle: "Walk dog", hours: 19, minutes: 30, day: 24, month: 'December', year: 2013, notified: "no" }
+  {
+    taskTitle: "Walk dog",
+    hours: 19,
+    minutes: 30,
+    day: 24,
+    month: "December",
+    year: 2013,
+    notified: "no",
+  },
 ];
 
 // open a read/write db transaction, ready for adding the data
 var transaction = db.transaction(["toDoList"], "readwrite");
 
 // report on the success of the transaction completing, when everything is done
-transaction.oncomplete = function(event) {
-  note.innerHTML += '<li>Transaction completed.</li>';
+transaction.oncomplete = function (event) {
+  note.innerHTML += "<li>Transaction completed.</li>";
 };
 
-transaction.onerror = function(event) {
-  note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
+transaction.onerror = function (event) {
+  note.innerHTML +=
+    "<li>Transaction not opened due to error. Duplicate items not allowed.</li>";
 };
 
 // create an object store on the transaction
@@ -503,9 +512,9 @@ var objectStore = transaction.objectStore("toDoList");
 // make a request to add our newItem object to the object store
 var objectStoreRequest = objectStore.add(newItem[0]);
 
-objectStoreRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Request successful .</li>';
-}
+objectStoreRequest.onsuccess = function (event) {
+  note.innerHTML += "<li>Request successful .</li>";
+};
 ```
 
 ## Specifications

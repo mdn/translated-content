@@ -1,7 +1,6 @@
 ---
 title: <easing-function>
 slug: Web/CSS/easing-function
-translation_of: Web/CSS/easing-function
 ---
 
 {{CSSRef}}
@@ -22,7 +21,7 @@ Toutefois, certaines propriétés restreindront la valeur de sortie au sein d'un
 
 ## Syntaxe
 
-Il existe trois types de [fonctions de transition](#easing_functions) : linéaires, [courbes de Bézier cubiques](https://en.wikipedia.org/wiki/B%C3%A9zier_curve#Cubic_B.C3.A9zier_curves) et les fonctions en escalier. Une valeur du type `<easing-function>` décrit la fonction de transition en utilisant l'un de ces trois types.
+Il existe trois types de [fonctions de transition](#easing_functions) : linéaires, [courbes de Bézier cubiques](https://en.wikipedia.org/wiki/Bézier_curve#Cubic_B.C3.A9zier_curves) et les fonctions en escalier. Une valeur du type `<easing-function>` décrit la fonction de transition en utilisant l'un de ces trois types.
 
 ### Fonctions de transition
 
@@ -40,11 +39,11 @@ L'interpolation se fait à évolution constante, du début jusqu'à la fin. Ce m
 
 ![Un graphe où les axes X et Y vont de 0 à 1 et où l'axe X est intitulé « Time ratio » et où l'axe Y est intitulé « Output ratio ». Une ligne courbe par de l'origine jusqu'à atteindre la position 1 1. Le point à l'origine est appelé 'P₀ = (0, 0)'. En partant de l'origine, on a une poignée de Bézier intitulée 'P₁ = (0.075, 0.75)'. Le point aux coordonnées 1 1 est intitulé 'P₃ = (1, 1)'. En partant du point 1 1, on a une poignée de Bézier intitulée 'P₂ = (0.0875, 0.36)'.](cubic-bezier-example.png)
 
-La notation fonctionnelle `cubic-bezier()` définit [une courbe de Bézier cubique](https://fr.wikipedia.org/wiki/Courbe_de_B%C3%A9zier#Courbes_de_B%C3%A9zier_cubiques). Ces courbes étant continues, elles sont souvent utilisées afin de démarrer et de finir progressivement une interpolation. Elles sont parfois appelées _fonctions de transition_.
+La notation fonctionnelle `cubic-bezier()` définit [une courbe de Bézier cubique](https://fr.wikipedia.org/wiki/Courbe_de_Bézier#Courbes_de_Bézier_cubiques). Ces courbes étant continues, elles sont souvent utilisées afin de démarrer et de finir progressivement une interpolation. Elles sont parfois appelées _fonctions de transition_.
 
 Une courbe de Bézier cubique est définie par quatre points P<sub>0</sub>, P<sub>1</sub>, P<sub>2</sub> et P<sub>3</sub>. P<sub>0</sub> et P<sub>3</sub> représentent les points de début et de fin de la courbe. Pour les fonctions de transition CSS, ces points sont fixes, car les coordonnées représentent des ratios (sur les abscisses, le ratio en temps et sur les ordonnées, le ratio en sortie). P<sub>0</sub> est donc situé en `(0, 0)` et représente l'état initial. P<sub>3</sub> est en `(1, 1)` et réprésente l'état final.
 
-Toutes les courbes de Bézier cubiques ne sont pas des fonctions de transition, car toutes ne sont pas [des fonctions mathématiques](<https://fr.wikipedia.org/wiki/Fonction_(math%C3%A9matiques)>) (c'est-à-dire des courbes qui, pour une abscisse donnée, ont une seule ou zéro valeur). Avec les contraintes imposées sur P<sub>0</sub> et P<sub>3</sub> en CSS, une courbe de Bézier cubique sera une fonction mathématique et pourra être utilisée comme fonction de transition, si et seulement si les abscisses de P<sub>1</sub> et P<sub>2</sub> appartiennent, tous les deux, à l'intervalle `[0, 1]`.
+Toutes les courbes de Bézier cubiques ne sont pas des fonctions de transition, car toutes ne sont pas [des fonctions mathématiques](<https://fr.wikipedia.org/wiki/Fonction_(mathématiques)>) (c'est-à-dire des courbes qui, pour une abscisse donnée, ont une seule ou zéro valeur). Avec les contraintes imposées sur P<sub>0</sub> et P<sub>3</sub> en CSS, une courbe de Bézier cubique sera une fonction mathématique et pourra être utilisée comme fonction de transition, si et seulement si les abscisses de P<sub>1</sub> et P<sub>2</sub> appartiennent, tous les deux, à l'intervalle `[0, 1]`.
 
 Les courbes de Bézier cubiques pour lesquelles les ordonnées des points P<sub>1</sub> ou P<sub>2</sub> sont en dehors de l'intervalle `[0, 1]` pourront générer un effet de rebond.
 
@@ -205,7 +204,11 @@ div > div {
   width: 50px;
   height: 50px;
   background-color: blue;
-  background-image: radial-gradient(circle at 10px 10px, rgba(25,255,255,0.8),rgba(25,255,255,0.4));
+  background-image: radial-gradient(
+    circle at 10px 10px,
+    rgba(25, 255, 255, 0.8),
+    rgba(25, 255, 255, 0.4)
+  );
   border-radius: 50%;
   top: 25px;
   animation: 1.5s infinite alternate;
@@ -237,7 +240,7 @@ const startBtn = document.querySelector("button");
 const divElem = document.querySelector("div > div");
 
 startBtn.addEventListener("click", () => {
-  if(startBtn.textContent === "Démarrer l'animation") {
+  if (startBtn.textContent === "Démarrer l'animation") {
     divElem.style.animationName = "move-right";
     startBtn.textContent = "Arrêter l'animation";
     divElem.style.animationTimingFunction = selectElem.value;

@@ -1,5 +1,6 @@
 ---
-title: CompositionEvent()
+title: "CompositionEvent: CompositionEvent() コンストラクター"
+short-title: CompositionEvent()
 slug: Web/API/CompositionEvent/CompositionEvent
 l10n:
   sourceCommit: da88b2f3a23b9d93f083003f13c06f9d96073f6a

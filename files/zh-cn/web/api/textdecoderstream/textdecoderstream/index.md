@@ -9,7 +9,7 @@ slug: Web/API/TextDecoderStream/TextDecoderStream
 
 ## 语法
 
-```js
+```js-nolint
 new TextDecoderStream(label)
 new TextDecoderStream(label, options)
 ```

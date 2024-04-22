@@ -32,8 +32,8 @@ var sharePromise = window.navigator.share(data);
 ```js
 navigator.share({
   title: document.title,
-  text: 'Hello World',
-  url: 'https://developer.mozilla.org',
+  text: "Hello World",
+  url: "https://developer.mozilla.org",
 }); // share the URL of MDN
 ```
 

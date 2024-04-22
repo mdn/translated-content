@@ -24,15 +24,15 @@ void expression
 需要注意考虑 `void` 运算符的[优先级](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_precedence)，以下加括号的表达式的例子可以帮助你清楚地理解 `void` 操作符的优先级：
 
 ```js
-void 2 === '2';   // (void 2) === '2'，返回 false
-void (2 === '2'); // void (2 === '2')，返回 undefined
+void 2 === "2"; // (void 2) === '2'，返回 false
+void (2 === "2"); // void (2 === '2')，返回 undefined
 ```
 
 ## 示例
 
 ### 立即调用的函数表达式
 
-在使用[立即调用的函数表达式](/zh-CN/docs/Glossary/IIFE)时，`function` 关键字不可直接位于语句开头，因为该表达式会被解析为[函数声明](zh-CN/docs/Web/JavaScript/Reference/Statements/function)，并会在解析到代表调用的括号时产生语法错误。如果是匿名函数，那么如果函数被解析为声明，就会立即产生语法错误。
+在使用[立即调用的函数表达式](/zh-CN/docs/Glossary/IIFE)时，`function` 关键字不可直接位于语句开头，因为该表达式会被解析为[函数声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/function)，并会在解析到代表调用的括号时产生语法错误。如果是匿名函数，那么如果函数被解析为声明，就会立即产生语法错误。
 
 ```js example-bad
 function iife() {
@@ -49,9 +49,9 @@ function () {
 在所有的一元运算符中，`void` 提供了最好的语义，因为它明确表示函数调用的返回值应该被丢弃。
 
 ```js
-void function () {
+void (function () {
   console.log("Executed!");
-}();
+})();
 
 // Output: "Executed!"
 ```
@@ -69,9 +69,7 @@ void function () {
 当用户点击一个以 `javascript:` 开头的 URI 时，它会执行 URI 中的代码，然后用返回的值替换页面内容，除非返回的值是 {{jsxref("undefined")}}。`void` 运算符可用于返回 `undefined`。例如：
 
 ```html
-<a href="javascript:void(0);">
-  这个链接点击之后不会做任何事情
-</a>
+<a href="javascript:void(0);"> 这个链接点击之后不会做任何事情 </a>
 
 <a href="javascript:void(document.body.style.backgroundColor='green');">
   点击这个链接会让页面背景变成绿色。

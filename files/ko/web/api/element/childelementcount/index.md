@@ -1,7 +1,6 @@
 ---
 title: ParentNode.childElementCount
 slug: Web/API/Element/childElementCount
-original_slug: Web/API/ParentNode/childElementCount
 ---
 
 {{ APIRef("DOM") }}
@@ -24,7 +23,7 @@ var count = node.childElementCount;
 ## 예제
 
 ```js
-var foo = document.getElementById('foo');
+var foo = document.getElementById("foo");
 if (foo.childElementCount > 0) {
   // Do something
 }
@@ -35,18 +34,23 @@ if (foo.childElementCount > 0) {
 이 속성은 IE9 이전 버전에서는 지원하지 않습니다. IE9과 Safari는 `Document`와 `DocumentFragment` 객체에서 이 속성을 지원하지 않습니다.
 
 ```js
-;(function(constructor) {
-  if (constructor &&
-      constructor.prototype &&
-      constructor.prototype.childElementCount == null) {
-    Object.defineProperty(constructor.prototype, 'childElementCount', {
-      get: function() {
-        var i = 0, count = 0, node, nodes = this.childNodes;
-        while (node = nodes[i++]) {
+(function (constructor) {
+  if (
+    constructor &&
+    constructor.prototype &&
+    constructor.prototype.childElementCount == null
+  ) {
+    Object.defineProperty(constructor.prototype, "childElementCount", {
+      get: function () {
+        var i = 0,
+          count = 0,
+          node,
+          nodes = this.childNodes;
+        while ((node = nodes[i++])) {
           if (node.nodeType === 1) count++;
         }
         return count;
-      }
+      },
     });
   }
 })(window.Node || window.Element);

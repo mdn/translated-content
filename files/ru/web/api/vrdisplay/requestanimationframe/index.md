@@ -1,7 +1,6 @@
 ---
 title: VRDisplay.requestAnimationFrame()
 slug: Web/API/VRDisplay/requestAnimationFrame
-translation_of: Web/API/VRDisplay/requestAnimationFrame
 ---
 
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
@@ -93,15 +92,12 @@ function drawVRScene() {
 
 ## Specifications
 
-| Specification                                                                                                                | Status                       | Comment            |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('WebVR 1.1', '#dom-vrdisplay-requestanimationframe', 'requestAnimationFrame()')}} | {{Spec2('WebVR 1.1')}} | Initial definition |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 
 ## See also
 
-- [WebVR API homepage](/ru/docs/Web/API/WebVR_API)
-- [MozVr.com](http://mozvr.com/) — demos, downloads, and other resources from the Mozilla VR team.
+- [WebVR API](/ru/docs/Web/API/WebVR_API)

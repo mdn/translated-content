@@ -10,7 +10,7 @@ slug: Web/API/CSSNumericValue/min
 ## 構文
 
 ```js
-min(number1, /* ..., */ numberN)
+min(number1, /* ..., */ numberN);
 ```
 
 ### 引数

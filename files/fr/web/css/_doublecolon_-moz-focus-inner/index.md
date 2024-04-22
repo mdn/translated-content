@@ -1,8 +1,6 @@
 ---
-title: '::-moz-focus-inner'
+title: "::-moz-focus-inner"
 slug: Web/CSS/::-moz-focus-inner
-translation_of: Web/CSS/::-moz-focus-inner
-browser-compat: css.selectors.-moz-focus-inner
 l10n:
   sourceCommit: 257486f64b2472dda4996a4ea7b6b5305e46f863
 ---
@@ -24,8 +22,7 @@ Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) 
 ### HTML
 
 ```html
-<input type="submit" value="Input"/>
-<button type="submit">Bouton</button>
+<input type="submit" value="Input" /> <button type="submit">Bouton</button>
 ```
 
 ### CSS
@@ -33,11 +30,11 @@ Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/fr/docs/Web/CSS) 
 ```css
 button::-moz-focus-inner,
 input[type="submit"]::-moz-focus-inner {
-    padding-block-start: 0px;
-    padding-inline-end: 2px;
-    padding-block-end: 0px;
-    padding-inline-start: 2px;
-    border: 2px dotted red;
+  padding-block-start: 0px;
+  padding-inline-end: 2px;
+  padding-block-end: 0px;
+  padding-inline-start: 2px;
+  border: 2px dotted red;
 }
 ```
 

@@ -1,8 +1,8 @@
 ---
 title: Element.accessKey
 slug: Web/API/HTMLElement/accessKey
-original_slug: Web/API/Element/accessKey
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.accessKey`** 속성은 주어진 사용자가 눌러 주어진 엘리먼트로 이동할 수 있는 키 입력 세트입니다.

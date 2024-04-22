@@ -973,8 +973,9 @@ El color de la una line (un div relleno de color) se adapta al color de su propi
 
 ```html
 <div style="color:darkred">
- EL color de este texto es el mismo que el de la línea  <div style="background:currentcolor; height:1px"></div>
- Algo más de texto
+  EL color de este texto es el mismo que el de la línea
+  <div style="background:currentcolor; height:1px"></div>
+  Algo más de texto
 </div>
 ```
 
@@ -984,9 +985,9 @@ El color de la una line (un div relleno de color) se adapta al color de su propi
 
 ```html
 <div style="color:blue; border-bottom: 1px dashed currentcolor;">
- El color de este texto es el mimso que el color de la línea:
+  El color de este texto es el mimso que el color de la línea:
   <div style="background:currentcolor; height:1px"></div>
- Algo más de texto.
+  Algo más de texto.
 </div>
 ```
 

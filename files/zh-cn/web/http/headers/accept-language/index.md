@@ -11,10 +11,10 @@ slug: Web/HTTP/Headers/Accept-Language
 
 如果服务器不能提供任何可以匹配的语言的版本，那么理论上来说应该返回一个 {{HTTPStatus("406")}}（Not Acceptable，不被接受）的错误码。但是为了更好的用户体验，这种方法很少被采用，取而代之的是将其忽略。
 
-| Header type                                                                          | {{Glossary("Request header")}} |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}}                                     | no                                       |
-| {{Glossary("Simple header", "CORS-safelisted request-header")}} | yes                                      |
+| Header type                                                     | {{Glossary("Request header")}} |
+| --------------------------------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden header name")}}                           | no                             |
+| {{Glossary("Simple header", "CORS-safelisted request-header")}} | yes                            |
 
 ## 语法
 

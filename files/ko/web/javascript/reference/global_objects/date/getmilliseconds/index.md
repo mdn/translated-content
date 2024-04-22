@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getMilliseconds
 ## 구문
 
 ```js
-    dateObj.getMilliseconds()
+dateObj.getMilliseconds();
 ```
 
 ### 반환 값

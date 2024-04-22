@@ -1,8 +1,9 @@
 ---
 title: "HTMLInputElement: files プロパティ"
+short-title: files
 slug: Web/API/HTMLInputElement/files
 l10n:
-  sourceCommit: bbedc393bbeb2fc0ca6c5681f6a0d30898886418
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{APIRef("File and Directory Entries API")}}
@@ -38,7 +39,7 @@ for (const file of fileInput.files) {
   let fileDate = new Date(file.lastModified);
   console.log(fileDate.toLocaleDateString()); // 日付を表示
   console.log(
-    file.size < 1000 ? file.size : Math.round(file.size / 1000) + "KB"
+    file.size < 1000 ? file.size : Math.round(file.size / 1000) + "KB",
   );
   console.log(file.type); // MIME タイプを表示
 }

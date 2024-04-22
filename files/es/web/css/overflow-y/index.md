@@ -51,27 +51,49 @@ La propiedad `overflow-y` es especificada con una sola palabra clave escogida de
 
 ```html
 <ul>
-  <li><code>overflow-y:hidden</code> — Esconde el texto fuera de la caja
-  <div id="div1">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  <li>
+    <code>overflow-y:hidden</code> — Esconde el texto fuera de la caja
+    <div id="div1">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur.
     </div>
   </li>
 
-  <li><code>overflow-y:scroll</code> — Agrega una barra scroll si se necesita
-  <div id="div2">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  <li>
+    <code>overflow-y:scroll</code> — Agrega una barra scroll si se necesita
+    <div id="div2">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur.
     </div>
   </li>
 
-  <li><code>overflow-y:visible</code> — Muestra el texto fuera de la caja si se necesita
-  <div id="div3">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  <li>
+    <code>overflow-y:visible</code> — Muestra el texto fuera de la caja si se
+    necesita
+    <div id="div3">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur.
     </div>
   </li>
 
-  <li><code>overflow-y:auto</code> — En la mayoría de los navegadores, equivalente a <code>scroll</code>
-  <div id="div4">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  <li>
+    <code>overflow-y:auto</code> — En la mayoría de los navegadores, equivalente
+    a <code>scroll</code>
+    <div id="div4">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur.
     </div>
   </li>
 </ul>
@@ -85,14 +107,26 @@ La propiedad `overflow-y` es especificada con una sola palabra clave escogida de
 #div3,
 #div4 {
   border: 1px solid black;
-  width:  250px;
+  width: 250px;
   height: 100px;
 }
 
-#div1 { overflow-y: hidden; margin-bottom: 12px;}
-#div2 { overflow-y: scroll; margin-bottom: 12px;}
-#div3 { overflow-y: visible; margin-bottom: 120px;}
-#div4 { overflow-y: auto; margin-bottom: 120px;}
+#div1 {
+  overflow-y: hidden;
+  margin-bottom: 12px;
+}
+#div2 {
+  overflow-y: scroll;
+  margin-bottom: 12px;
+}
+#div3 {
+  overflow-y: visible;
+  margin-bottom: 120px;
+}
+#div4 {
+  overflow-y: auto;
+  margin-bottom: 120px;
+}
 ```
 
 ### Resultado

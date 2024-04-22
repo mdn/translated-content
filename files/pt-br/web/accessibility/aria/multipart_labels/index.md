@@ -1,7 +1,6 @@
 ---
 title: Usando ARIA para rótulos com campos incorporados - Multipart labels
 slug: Web/Accessibility/ARIA/Multipart_labels
-original_slug: Web/Accessibility/ARIA/forms/Multipart_labels
 ---
 
 ## O problema
@@ -17,9 +16,15 @@ Tanto o atributo **aria-labelledby**, como o **aria-describedby** (_aria-descrit
 Exemplo:
 
 ```html
-<input aria-labelledby="labelShutdown shutdownTime shutdownUnit" type="checkbox" />
+<input
+  aria-labelledby="labelShutdown shutdownTime shutdownUnit"
+  type="checkbox" />
 <span id="labelShutdown">Shut down computer after</span>
-<input aria-labelledby="labelShutdown shutdownTime shutdownUnit" id="shutdownTime" type="text" value="10" />
+<input
+  aria-labelledby="labelShutdown shutdownTime shutdownUnit"
+  id="shutdownTime"
+  type="text"
+  value="10" />
 <span id="shutdownUnit"> minutes</span>
 ```
 

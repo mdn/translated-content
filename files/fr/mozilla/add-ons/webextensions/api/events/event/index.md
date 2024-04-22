@@ -1,20 +1,9 @@
 ---
 title: events.Event
 slug: Mozilla/Add-ons/WebExtensions/API/events/Event
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - events
-translation_of: Mozilla/Add-ons/WebExtensions/API/events/Event
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Un objet qui permet l'ajout et la suppression d'écouteurs pour un événement de navigateur.
 

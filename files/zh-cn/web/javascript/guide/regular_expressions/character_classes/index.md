@@ -119,7 +119,7 @@ slug: Web/JavaScript/Guide/Regular_expressions/Character_classes
   </tr>
   <tr>
    <td><code>[\b]</code></td>
-   <td>匹配退格键。如果您正在寻找单词边界字符（<code>\b</code>），请参阅<a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Assertions">断言</a>。</td>
+   <td>匹配退格键。如果你正在寻找单词边界字符（<code>\b</code>），请参阅<a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Assertions">断言</a>。</td>
   </tr>
   <tr>
    <td><code>\0</code></td>
@@ -200,7 +200,8 @@ console.table(randomData.match(regexpFourDigits));
 ### 寻找以 A 开头的拉丁字母单词
 
 ```js
-const aliceExcerpt = "I'm sure I'm not Ada,' she said, 'for her hair goes in such long ringlets, and mine doesn't go in ringlets at all.";
+const aliceExcerpt =
+  "I'm sure I'm not Ada,' she said, 'for her hair goes in such long ringlets, and mine doesn't go in ringlets at all.";
 const regexpWordStartingWithA = /\b[aA]\w+/g;
 // \b 表示边界（即不要在单词中间开始匹配）
 // [aA] 表示字母 a 或 A
@@ -220,13 +221,14 @@ const regexpBMPWord = /([\u0000-\u0019\u0021-\uFFFF])+/gu;
 // 基本多文种平面范围是 U+0000 到 U+FFFF 但空格是 U+0020
 
 console.table(nonEnglishText.match(regexpBMPWord));
-[ '爱丽丝', '梦游', '仙境' ]
+["爱丽丝", "梦游", "仙境"];
 ```
 
 ### 计算元音个数
 
 ```js
-const aliceExcerpt = "There was a long silence after this, and Alice could only hear whispers now and then.";
+const aliceExcerpt =
+  "There was a long silence after this, and Alice could only hear whispers now and then.";
 const regexpVowels = /[AEIOUYaeiouy]/g;
 
 console.log("元音数：", aliceExcerpt.match(regexpVowels).length);

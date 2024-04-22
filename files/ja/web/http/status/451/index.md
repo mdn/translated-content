@@ -42,15 +42,15 @@ Content-Type: text/html
 
 ## 仕様書
 
-| 仕様書                                                               | 題名                                          |
-| -------------------------------------------------------------------- | --------------------------------------------- |
+| 仕様書                                               | 題名                                          |
+| ---------------------------------------------------- | --------------------------------------------- |
 | {{RFC("7725", "451 Unavailable For Legal Reasons")}} | An HTTP Status Code to Report Legal Obstacles |
 
 ## ブラウザーの互換性
 
 以下に示す情報は、 MDN の GitHub から取得したものです。 (<https://github.com/mdn/browser-compat-data>).
 
-{{Compat("http.status.451")}}
+{{Compat}}
 
 ## 関連情報
 

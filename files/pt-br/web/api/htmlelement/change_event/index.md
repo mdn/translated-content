@@ -1,7 +1,6 @@
 ---
 title: GlobalEventHandlers.onchange
 slug: Web/API/HTMLElement/change_event
-original_slug: Web/API/GlobalEventHandlers/onchange
 ---
 
 {{ ApiRef("HTML DOM") }}
@@ -23,8 +22,10 @@ Veja a página do [manipulador de eventos do DOM](/pt-BR/docs/Web/Guide/Events/E
 
 Veja a documentação do evento {{event("change")}} para informações sobre o evento.
 
-## Especificação
+## Especificações
 
-| Especificação                                                                                    | Status                           | Comentários |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG','webappapis.html#handler-onchange','onchange')}} | {{Spec2('HTML WHATWG')}} |             |
+{{Specifications}}
+
+## Compatibilidade com navegadores
+
+{{Compat}}

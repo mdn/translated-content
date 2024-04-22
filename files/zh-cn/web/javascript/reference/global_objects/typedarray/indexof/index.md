@@ -33,9 +33,9 @@ indexOf(searchElement, fromIndex)
 
 ```js
 let uint8 = new Uint8Array([2, 5, 9]);
-uint8.indexOf(2);     // 0
-uint8.indexOf(7);     // -1
-uint8.indexOf(9, 2);  // 2
+uint8.indexOf(2); // 0
+uint8.indexOf(7); // -1
+uint8.indexOf(9, 2); // 2
 uint8.indexOf(2, -1); // -1
 uint8.indexOf(2, -3); // 0
 ```
@@ -48,7 +48,7 @@ uint8.indexOf(2, -3); // 0
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{jsxref("TypedArray.prototype.lastIndexOf()")}}
 - {{jsxref("Array.prototype.indexOf()")}}

@@ -20,13 +20,21 @@ HTMLFormElement.reportValidity()
 ## Example
 
 ```js
-document.forms['myform'].addEventListener('invalid', function() {
-  // Optional response here
-}, false);
+document.forms["myform"].addEventListener(
+  "invalid",
+  function () {
+    // Optional response here
+  },
+  false,
+);
 
-document.forms['myform'].addEventListener('submit', function() {
-  document.forms['myform'].reportValidity();
-}, false);
+document.forms["myform"].addEventListener(
+  "submit",
+  function () {
+    document.forms["myform"].reportValidity();
+  },
+  false,
+);
 ```
 
 ## Specifications

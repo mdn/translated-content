@@ -1,5 +1,5 @@
 ---
-title: ':any-link'
+title: ":any-link"
 slug: Web/CSS/:any-link
 ---
 

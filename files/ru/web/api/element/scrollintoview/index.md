@@ -1,7 +1,6 @@
 ---
 title: Element.scrollIntoView()
 slug: Web/API/Element/scrollIntoView
-translation_of: Web/API/Element/scrollIntoView
 ---
 
 {{ APIRef("DOM")}}
@@ -52,17 +51,17 @@ element.scrollIntoView(scrollIntoViewOptions); // аргумент типа Obje
 
 ```css
 .big {
-   background: #ccc;
-   height: 300px;
+  background: #ccc;
+  height: 300px;
 }
 
 .btn {
-   font-size: 14px;
+  font-size: 14px;
 }
 
 .box {
-   background: lightgreen;
-   height: 40px;
+  background: lightgreen;
+  height: 40px;
 }
 ```
 
@@ -70,13 +69,13 @@ element.scrollIntoView(scrollIntoViewOptions); // аргумент типа Obje
 
 ```js
 var hiddenElement = document.getElementById("box");
-var btn = document.querySelector('.btn');
+var btn = document.querySelector(".btn");
 
 function handleButtonClick() {
-   hiddenElement.scrollIntoView({block: "center", behavior: "smooth"});
+  hiddenElement.scrollIntoView({ block: "center", behavior: "smooth" });
 }
 
-btn.addEventListener('click', handleButtonClick);
+btn.addEventListener("click", handleButtonClick);
 ```
 
 ### Результат

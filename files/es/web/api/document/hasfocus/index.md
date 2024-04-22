@@ -12,7 +12,7 @@ El atributo `hasFocus` devuelve `true` si el foco está en en algún sitio del d
 ### Sintaxis
 
 ```js
-focused = element.hasFocus
+focused = element.hasFocus;
 ```
 
 ## Especificaciones

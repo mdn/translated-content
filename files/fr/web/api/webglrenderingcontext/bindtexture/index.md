@@ -1,14 +1,6 @@
 ---
 title: WebGLRenderingContext.bindTexture()
 slug: Web/API/WebGLRenderingContext/bindTexture
-tags:
-  - API
-  - Méthode
-  - Reference
-  - Textures
-  - WebGL
-  - WebGLRenderingContext
-translation_of: Web/API/WebGLRenderingContext/bindTexture
 ---
 
 {{APIRef("WebGL")}}
@@ -50,8 +42,8 @@ Une erreur `gl.INVALID_ENUM` est déclenchée si `cible` n'est pas `gl.TEXTURE_2
 ### Liaison d'une texture
 
 ```js
-var canevas = document.getElementById('canevas');
-var gl = canevas.getContext('webgl');
+var canevas = document.getElementById("canevas");
+var gl = canevas.getContext("webgl");
 var texture = gl.createTexture();
 
 gl.bindTexture(gl.TEXTURE_2D, texture);

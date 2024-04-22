@@ -1,12 +1,6 @@
 ---
 title: margin-inline-end
 slug: Web/CSS/margin-inline-end
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-translation_of: Web/CSS/margin-inline-end
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -22,9 +16,9 @@ Cette propriété est à rapprocher de {{cssxref("margin-block-start")}}, {{cssx
 ```css
 /* Valeurs de longueur */
 /* Type <length>       */
-margin-inline-end: 10px;      /* Une longueur absolue */
-margin-inline-end: 1em;       /* Une longueur relative à la taille du texte */
-margin-inline-end: 5%;        /* Une largeur relative à la
+margin-inline-end: 10px; /* Une longueur absolue */
+margin-inline-end: 1em; /* Une longueur relative à la taille du texte */
+margin-inline-end: 5%; /* Une largeur relative à la
                                    largeur du bloc englobant */
 
 /* Valeurs avec un mot-clé */

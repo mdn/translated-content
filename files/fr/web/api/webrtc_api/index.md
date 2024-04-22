@@ -1,18 +1,6 @@
 ---
 title: L'API WebRTC
 slug: Web/API/WebRTC_API
-tags:
-  - API
-  - API WebRTC
-  - Atterrissage
-  - Audio
-  - Conference
-  - Media
-  - Réseau
-  - Video
-  - WebRTC
-  - diffusion
-translation_of: Web/API/WebRTC_API
 ---
 
 {{APIRef("WebRTC")}}

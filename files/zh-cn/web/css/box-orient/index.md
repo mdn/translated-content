@@ -39,11 +39,11 @@ box-orient: unset;
 
 内联轴和块轴取决于写入模式的关键字，在英语中，分别对应水平和垂直方向。
 
-## 规范
+## 形式定义
 
 {{CSSInfo}}
 
-## 正式语法
+## 形式语法
 
 {{CSSSyntax}}
 
@@ -66,14 +66,14 @@ box-orient: unset;
 
 ```css
 div.example {
-  display: -moz-box;                /* Mozilla */
-  display: -webkit-box;             /* WebKit */
-  display: box;                     /* As specified */
+  display: -moz-box; /* Mozilla */
+  display: -webkit-box; /* WebKit */
+  display: box; /* As specified */
 
   /* Children should be oriented vertically */
-  -moz-box-orient: horizontal;      /* Mozilla */
-  -webkit-box-orient: horizontal;   /* WebKit */
-  box-orient: horizontal;           /* As specified */
+  -moz-box-orient: horizontal; /* Mozilla */
+  -webkit-box-orient: horizontal; /* WebKit */
+  box-orient: horizontal; /* As specified */
 }
 ```
 

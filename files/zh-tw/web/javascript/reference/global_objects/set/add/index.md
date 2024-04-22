@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/add
 
 ## 語法
 
-```plain
+```js
 mySet.add(value);
 ```
 
@@ -32,7 +32,7 @@ mySet.add(value);
 var mySet = new Set();
 
 mySet.add(1);
-mySet.add(5).add('some text'); // chainable
+mySet.add(5).add("some text"); // chainable
 
 console.log(mySet);
 // Set [1, 5, "some text"]
@@ -46,7 +46,7 @@ console.log(mySet);
 
 {{Compat}}
 
-## 另見
+## 參見
 
 - {{jsxref("Set")}}
 - {{jsxref("Set.prototype.delete()")}}

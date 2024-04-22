@@ -1,5 +1,5 @@
 ---
-title: ':not()'
+title: ":not()"
 slug: Web/CSS/:not
 ---
 

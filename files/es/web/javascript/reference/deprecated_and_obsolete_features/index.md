@@ -1,7 +1,6 @@
 ---
 title: Características en desuso y obsoletas
 slug: Web/JavaScript/Reference/Deprecated_and_obsolete_features
-original_slug: Web/JavaScript/Referencia/Características_Desaprobadas
 ---
 
 {{JsSidebar("More")}}
@@ -16,30 +15,30 @@ Estas características desaconsejadas aún se pueden usar, pero se deben usar co
 
 las siguientes propiedades están en desuso. Esto no afecta su uso en el {{jsxref("String.replace", "reemplazo de cadenas", "", 1)}}:
 
-| Propiedad                                                        | Descripción                                                                                                                                                                                         |
-| ---------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{jsxref("RegExp.n", "$1-$9")}}                         | Coincidencias de subcadenas entre paréntesis, si las hay. **Precaución:** El uso de estas propiedades puede generar problemas, ya que las extensiones del navegador pueden modificarlas. ¡Evítalas! |
-| {{jsxref("RegExp.input", "$_")}}                     | Consulta `entrada`.                                                                                                                                                                                 |
-| {{jsxref("RegExp.multiline", "$*")}}                 | Consulta `multiline`.                                                                                                                                                                               |
-| {{jsxref("RegExp.lastMatch", "$&amp;")}}             | Consulta `lastMatch`.                                                                                                                                                                               |
-| {{jsxref("RegExp.lastParen", "$+")}}                 | Consulta `lastParen`.                                                                                                                                                                               |
-| {{jsxref("RegExp.leftContext", "$`")}}             | Consulta `leftContext`.                                                                                                                                                                             |
-| {{jsxref("RegExp.rightContext", "$'")}}             | Consulta `rightContext`.                                                                                                                                                                            |
-| {{jsxref("RegExp.input", "input")}}                 | La cadena contra la que se compara una expresión regular.                                                                                                                                           |
-| {{jsxref("RegExp.lastMatch", "lastMatch")}}         | Los últimos caracteres coincidentes.                                                                                                                                                                |
-| {{jsxref("RegExp.lastParen", "lastParen")}}         | La última coincidencia de subcadena entre paréntesis, si la hubiera.                                                                                                                                |
-| {{jsxref("RegExp.leftContext", "leftContext")}} | La subcadena que precede a la coincidencia más reciente.                                                                                                                                            |
+| Propiedad                                         | Descripción                                                                                                                                                                                         |
+| ------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{jsxref("RegExp.n", "$1-$9")}}                   | Coincidencias de subcadenas entre paréntesis, si las hay. **Precaución:** El uso de estas propiedades puede generar problemas, ya que las extensiones del navegador pueden modificarlas. ¡Evítalas! |
+| {{jsxref("RegExp.input", "$_")}}                  | Consulta `entrada`.                                                                                                                                                                                 |
+| {{jsxref("RegExp.multiline", "$*")}}              | Consulta `multiline`.                                                                                                                                                                               |
+| {{jsxref("RegExp.lastMatch", "$&amp;")}}          | Consulta `lastMatch`.                                                                                                                                                                               |
+| {{jsxref("RegExp.lastParen", "$+")}}              | Consulta `lastParen`.                                                                                                                                                                               |
+| {{jsxref("RegExp.leftContext", "$`")}}            | Consulta `leftContext`.                                                                                                                                                                             |
+| {{jsxref("RegExp.rightContext", "$'")}}           | Consulta `rightContext`.                                                                                                                                                                            |
+| {{jsxref("RegExp.input", "input")}}               | La cadena contra la que se compara una expresión regular.                                                                                                                                           |
+| {{jsxref("RegExp.lastMatch", "lastMatch")}}       | Los últimos caracteres coincidentes.                                                                                                                                                                |
+| {{jsxref("RegExp.lastParen", "lastParen")}}       | La última coincidencia de subcadena entre paréntesis, si la hubiera.                                                                                                                                |
+| {{jsxref("RegExp.leftContext", "leftContext")}}   | La subcadena que precede a la coincidencia más reciente.                                                                                                                                            |
 | {{jsxref("RegExp.rightContext", "rightContext")}} | La subcadena que sigue a la coincidencia más reciente.                                                                                                                                              |
 
 Las siguientes ahora son propiedades de instancias de `RegExp`, ya no del objeto `RegExp`:
 
-| Propiedad                                                    | Descripción                                                                                                            |
-| ------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
-| {{jsxref("RegExp.global", "global")}}             | Si se debe probar o no la expresión regular con todas las posibles coincidencias en una cadena, o solo con la primera. |
+| Propiedad                                     | Descripción                                                                                                            |
+| --------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| {{jsxref("RegExp.global", "global")}}         | Si se debe probar o no la expresión regular con todas las posibles coincidencias en una cadena, o solo con la primera. |
 | {{jsxref("RegExp.ignoreCase", "ignoreCase")}} | Si se deben o no ignorar las mayúsculas/minúsculas al intentar una coincidencia en una cadena.                         |
-| {{jsxref("RegExp.lastIndex", "lastIndex")}}     | El índice en el que comenzará la siguiente coincidencia.                                                               |
-| {{jsxref("RegExp.multiline", "multiline")}}     | Si buscar o no en cadenas de varias líneas.                                                                            |
-| {{jsxref("RegExp.source", "source")}}             | El texto del patrón.                                                                                                   |
+| {{jsxref("RegExp.lastIndex", "lastIndex")}}   | El índice en el que comenzará la siguiente coincidencia.                                                               |
+| {{jsxref("RegExp.multiline", "multiline")}}   | Si buscar o no en cadenas de varias líneas.                                                                            |
+| {{jsxref("RegExp.source", "source")}}         | El texto del patrón.                                                                                                   |
 
 ### Métodos RegExp
 
@@ -104,26 +103,26 @@ Estas características obsoletas se han eliminado por completo de JavaScript y y
 
 ### Objeto
 
-| Propiedad                                                                                | Descripción                                                                                      |
-| ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
-| `__count__`                 | Devuelve el número de propiedades enumerables directamente en un objeto definido por el usuario. |
-| `__parent__`             | Apunta al contexto de un objeto.                                                                 |
+| Propiedad                 | Descripción                                                                                      |
+| ------------------------- | ------------------------------------------------------------------------------------------------ |
+| `__count__`               | Devuelve el número de propiedades enumerables directamente en un objeto definido por el usuario. |
+| `__parent__`              | Apunta al contexto de un objeto.                                                                 |
 | `Object.prototype.eval()` | Evalúa una cadena de código JavaScript en el contexto del objeto especificado.                   |
-| `Object.observe()`                                                 | Observar de forma asincrónica los cambios en un objeto.                                          |
-| `Object.unobserve()`                                             | Elimina observadores.                                                                            |
-| `Object.getNotifier()`                                             | Crea un objeto que permite desencadenar sintéticamente un cambio.                                |
+| `Object.observe()`        | Observar de forma asincrónica los cambios en un objeto.                                          |
+| `Object.unobserve()`      | Elimina observadores.                                                                            |
+| `Object.getNotifier()`    | Crea un objeto que permite desencadenar sintéticamente un cambio.                                |
 
 ### Función
 
-| Propiedad                                                            | Descripción                    |
-| -------------------------------------------------------------------- | ------------------------------ |
+| Propiedad                                            | Descripción                    |
+| ---------------------------------------------------- | ------------------------------ |
 | {{jsxref("Global_Objects/Function/arity", "arity")}} | Número de argumentos formales. |
 
 ### Array
 
-| Propiedad                                | Descripción                                         |
-| ---------------------------------------- | --------------------------------------------------- |
-| {{jsxref("Array.observe()")}} | Observación asincrónica de cambios en los arreglos. |
+| Propiedad                       | Descripción                                         |
+| ------------------------------- | --------------------------------------------------- |
+| {{jsxref("Array.observe()")}}   | Observación asincrónica de cambios en los arreglos. |
 | {{jsxref("Array.unobserve()")}} | Elimina observadores.                               |
 
 ### Número

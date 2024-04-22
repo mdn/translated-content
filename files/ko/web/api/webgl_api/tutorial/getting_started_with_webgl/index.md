@@ -5,7 +5,7 @@ slug: Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 
 {{DefaultAPISidebar("WebGL")}} {{Next("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context")}}
 
-[WebGL](http://www.khronos.org/webgl/)은 플러그인을 사용하지 않고 [OpenGL ES](http://www.khronos.org/opengles/) 2.0 기반 API를 이용하여 브라우저의 HTML [`canvas`](/en/HTML/Canvas)에 렌더링하여 3D 웹 콘텐츠 제작을 가능하게 합니다. WebGL 프로그램은 컴퓨터의 그래픽 처리 장치(GPU)에서 실행되는 자바스크립트나 특수 효과(셰이더 코드)코드로 구성됩니다. WebGL 요소들은 다른 HTML 요소들과 혼합될 수 있고 페이지나 페이지 배경의 다른 부분과 합성될 수 있습니다.
+[WebGL](http://www.khronos.org/webgl/)은 플러그인을 사용하지 않고 [OpenGL ES](http://www.khronos.org/opengles/) 2.0 기반 API를 이용하여 브라우저의 HTML [`canvas`](/en/HTML/Canvas)에 렌더링하여 3D 웹 콘텐츠 제작을 가능하게 합니다. WebGL 프로그램은 컴퓨터의 그래픽 처리 장치(GPU)에서 실행되는 JavaScript나 특수 효과(셰이더 코드)코드로 구성됩니다. WebGL 요소들은 다른 HTML 요소들과 혼합될 수 있고 페이지나 페이지 배경의 다른 부분과 합성될 수 있습니다.
 
 이 문서는 기본 WebGL 기본 사항을 소개합니다. 이 문서에서는 3D 그래픽에 관련된 수학적 이해를 이미 이해하고 있다고 간주하고 OpenGL 자체에 대하여 설명하지 않을 것입니다.
 
@@ -16,14 +16,15 @@ WebGL을 사용하여 3D 렌더링을 하는 데 첫 번째로 필요한 것은 
 ```html
 <body onload="start()">
   <canvas id="glcanvas" width="640" height="480">
-    Your browser doesn't appear to support the HTML5 <code>&lt;canvas&gt;</code> element.
+    Your browser doesn't appear to support the HTML5
+    <code>&lt;canvas&gt;</code> element.
   </canvas>
 </body>
 ```
 
 ### WebGL 컨텍스트 준비
 
-자바스크립트 코드에서 `start()` 함수는 문서가 다 불러와지면 호출됩니다. 이 함수의 기능은 WebGL 컨텍스트를 설정하고 콘텐츠 렌더링을 시작하는 것입니다.
+JavaScript 코드에서 `start()` 함수는 문서가 다 불러와지면 호출됩니다. 이 함수의 기능은 WebGL 컨텍스트를 설정하고 콘텐츠 렌더링을 시작하는 것입니다.
 
 ```js
 var gl; // A global variable for the WebGL context
@@ -31,15 +32,15 @@ var gl; // A global variable for the WebGL context
 function start() {
   var canvas = document.getElementById("glcanvas");
 
-  gl = initWebGL(canvas);      // Initialize the GL context
+  gl = initWebGL(canvas); // Initialize the GL context
 
   // Only continue if WebGL is available and working
 
   if (gl) {
-    gl.clearColor(0.0, 0.0, 0.0, 1.0);                      // Set clear color to black, fully opaque
-    gl.enable(gl.DEPTH_TEST);                               // Enable depth testing
-    gl.depthFunc(gl.LEQUAL);                                // Near things obscure far things
-    gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);      // Clear the color as well as the depth buffer.
+    gl.clearColor(0.0, 0.0, 0.0, 1.0); // Set clear color to black, fully opaque
+    gl.enable(gl.DEPTH_TEST); // Enable depth testing
+    gl.depthFunc(gl.LEQUAL); // Near things obscure far things
+    gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT); // Clear the color as well as the depth buffer.
   }
 }
 ```
@@ -63,8 +64,7 @@ function initWebGL(canvas) {
   try {
     // Try to grab the standard context. If it fails, fallback to experimental.
     gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
-  }
-  catch(e) {}
+  } catch (e) {}
 
   // If we don't have a GL context, give up now
   if (!gl) {

@@ -1,13 +1,6 @@
 ---
-title: '<ol> : l''élément de liste ordonnée'
+title: "<ol> : l'élément de liste ordonnée"
 slug: Web/HTML/Element/ol
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - HTML:Flow content
-  - Reference
-translation_of: Web/HTML/Element/ol
 ---
 
 {{HTMLSidebar}}
@@ -179,7 +172,10 @@ Pour déterminer la liste à utiliser, essayez de modifier l'ordre des élément
 ### Utilisation de l'attribut start
 
 ```html
-<p>Les places d'arrivée des concurrents qui ne sont pas dans le cercle des gagnants :</p>
+<p>
+  Les places d'arrivée des concurrents qui ne sont pas dans le cercle des
+  gagnants :
+</p>
 
 <ol start="4">
   <li>Speedwalk Stu</li>
@@ -197,13 +193,16 @@ Pour déterminer la liste à utiliser, essayez de modifier l'ordre des élément
 ```html
 <ol>
   <li>Premier élément</li>
-  <li>Deuxième élément  <!-- La fermeture </li> n'est pas encore placée ! -->
+  <li>
+    Deuxième élément
+    <!-- La fermeture </li> n'est pas encore placée ! -->
     <ol>
       <li>Premier élément de la liste imbriquée</li>
       <li>Deuxième élément de la liste imbriquée</li>
       <li>Troisième élément de la liste imbriquée</li>
     </ol>
-  </li>                 <!-- Voici la fermeture </li> ! -->
+  </li>
+  <!-- Voici la fermeture </li> ! -->
   <li>Troisième élément</li>
 </ol>
 ```
@@ -217,13 +216,16 @@ Pour déterminer la liste à utiliser, essayez de modifier l'ordre des élément
 ```html
 <ol>
   <li>Premier élément</li>
-  <li>Deuxième élément  <!-- La fermeture </li> n'est pas placée ici ! -->
+  <li>
+    Deuxième élément
+    <!-- La fermeture </li> n'est pas placée ici ! -->
     <ul>
       <li>Premier élément de la liste non-ordonnée imbriquée</li>
       <li>Deuxième élément de la liste non-ordonnée imbriquée</li>
       <li>Troisième élément de la liste non-ordonnée imbriquée</li>
     </ul>
-  </li>                 <!-- La fermeture </li> est ici. -->
+  </li>
+  <!-- La fermeture </li> est ici. -->
   <li>Troisième élément</li>
 </ol>
 ```

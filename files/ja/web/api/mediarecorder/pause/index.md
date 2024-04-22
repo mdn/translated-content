@@ -39,9 +39,9 @@ pause()
 
 ```js
 pause.onclick = () => {
-    mediaRecorder.pause();
-    console.log("recording paused");
-}
+  mediaRecorder.pause();
+  console.log("recording paused");
+};
 ```
 
 ## 仕様書

@@ -1,20 +1,9 @@
 ---
 title: downloads.StringDelta
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/StringDelta
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - StringDelta
-  - Type
-  - Téléchargement
-  - WebExtensions
-  - download
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/StringDelta
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Le type `StringDelta` de l'API {{WebExtAPIRef("downloads")}} représente la différence entre deux chaînes.
 

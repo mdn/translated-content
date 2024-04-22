@@ -1,7 +1,6 @@
 ---
 title: MIME types
 slug: Web/HTTP/Basics_of_HTTP/MIME_types
-original_slug: Web/HTTP/Basico_sobre_HTTP/MIME_types
 ---
 
 {{HTTPSidebar}}
@@ -109,14 +108,14 @@ Como as imagens, o HTML não define um conjunto de tipos suportados para usar co
 
 O tipo MIME de tais arquivos principalmente representam os formatos de contêiner e os mais comuns em um contexto da Web são:
 
-| MIME type                                               | Audio or video type                                                                                                                                                                          |
-| ------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `audio/wave` `audio/wav` `audio/x-wav` `audio/x-pn-wav` | Um arquivo de áudio no formato de recipiente WAVE. O codec de áudio PCM (WAVE codec "1") é freqüentemente suportado, mas outros codecs têm suporte mais limitado (se houver).                |
-| `audio/webm`                                            | Um arquivo de áudio no formato de contêiner WebM. Vorbis e Opus são os codecs de áudio mais comuns.                                                                                          |
+| MIME type                                               | Audio or video type                                                                                                                                                                        |
+| ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `audio/wave` `audio/wav` `audio/x-wav` `audio/x-pn-wav` | Um arquivo de áudio no formato de recipiente WAVE. O codec de áudio PCM (WAVE codec "1") é freqüentemente suportado, mas outros codecs têm suporte mais limitado (se houver).              |
+| `audio/webm`                                            | Um arquivo de áudio no formato de contêiner WebM. Vorbis e Opus são os codecs de áudio mais comuns.                                                                                        |
 | `video/webm`                                            | Um arquivo de vídeo, possivelmente com áudio, no formato de contêiner WebM. VP8 e VP9 são os codecs video os mais comuns usados dentro dele; Vorbis e Opus os codecs de áudio mais comuns. |
-| `audio/ogg`                                             | Um arquivo de áudio no formato de contêiner OGG. Vorbis é o codec de áudio mais comum usado em tal recipiente.                                                                               |
-| `video/ogg`                                             | Um arquivo de vídeo, possivelmente com áudio, no formato de contêiner OGG. Theora é o codec video usual usado dentro dele; Vorbis é o codec de áudio usual.                                  |
-| `application/ogg`                                       | Um arquivo de áudio ou vídeo usando o formato de contêiner OGG. Theora é o codec video usual usado dentro dele; Vorbis é o codec de áudio usual.                                             |
+| `audio/ogg`                                             | Um arquivo de áudio no formato de contêiner OGG. Vorbis é o codec de áudio mais comum usado em tal recipiente.                                                                             |
+| `video/ogg`                                             | Um arquivo de vídeo, possivelmente com áudio, no formato de contêiner OGG. Theora é o codec video usual usado dentro dele; Vorbis é o codec de áudio usual.                                |
+| `application/ogg`                                       | Um arquivo de áudio ou vídeo usando o formato de contêiner OGG. Theora é o codec video usual usado dentro dele; Vorbis é o codec de áudio usual.                                           |
 
 ### `multipart/form-data`
 

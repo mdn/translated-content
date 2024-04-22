@@ -1,20 +1,9 @@
 ---
 title: windows.WindowType
 slug: Mozilla/Add-ons/WebExtensions/API/windows/WindowType
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - WindowType
-  - Windows
-translation_of: Mozilla/Add-ons/WebExtensions/API/windows/WindowType
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Le type de la fenêtre du navigateur est comme çà.
 

@@ -2,6 +2,7 @@
 title: Object.getOwnPropertyDescriptors()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors
 ---
+
 {{JSRef}}
 
 **`Object.getOwnPropertyDescriptors()`** 메서드는 주어진 객체의 모든 속성들의 설명자(descriptor)들을 반환합니다.
@@ -11,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors
 ## 구문
 
 ```js
-Object.getOwnPropertyDescriptors(obj)
+Object.getOwnPropertyDescriptors(obj);
 ```
 
 ### 매개변수
@@ -26,7 +27,7 @@ Object.getOwnPropertyDescriptors(obj)
 ## 설명
 
 이 메서드를 사용하면, 객체의 모든 속성들에 대한 설명자를 정확하게 확인할 수 있습니다.
-자바스크립트의 *속성*은 문자열로된 이름 또는 심볼, 그리고 속성 설명자로 이루어져 있습니다.
+JavaScript의 *속성*은 문자열로된 이름 또는 심볼, 그리고 속성 설명자로 이루어져 있습니다.
 속성 설명자 종류와 특성에 대한 자세한 정보는 {{jsxref("Object.defineProperty()")}}에 있습니다..
 
 _속성 설명자_ 는 다음과 같은 특징들을 가진 레코드입니다.
@@ -56,7 +57,7 @@ _속성 설명자_ 는 다음과 같은 특징들을 가진 레코드입니다.
 ```js
 Object.create(
   Object.getPrototypeOf(obj),
-  Object.getOwnPropertyDescriptors(obj)
+  Object.getOwnPropertyDescriptors(obj),
 );
 ```
 
@@ -71,12 +72,9 @@ superclass.prototype = {
   // 여기에 슈퍼 클래스의 생성자, 매서드, 속성을 정의합니다.
 };
 function subclass() {}
-subclass.prototype = Object.create(
-  superclass.prototype,
-  {
-    // 여기에 서브클래스의 생성자, 매서드, 속성을 정의합니다.
-  }
-);
+subclass.prototype = Object.create(superclass.prototype, {
+  // 여기에 서브클래스의 생성자, 매서드, 속성을 정의합니다.
+});
 ```
 
 ## 명세

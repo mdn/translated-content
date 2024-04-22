@@ -1,7 +1,6 @@
 ---
 title: ServiceWorker.scriptURL
 slug: Web/API/ServiceWorker/scriptURL
-translation_of: Web/API/ServiceWorker/scriptURL
 ---
 
 {{APIRef("Service Workers API")}}
@@ -21,13 +20,13 @@ someURL = ServiceWorker.scriptURL
 ## Примеры
 
 ```js
-TBD
+TBD;
 ```
 
 ## Спецификации
 
 {{Specifications}}
 
-## Поддержка в браузерах
+## Совместимость с браузерами
 
 {{Compat}}

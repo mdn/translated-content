@@ -84,11 +84,15 @@ if (elem.requestFullscreen) {
 当页面加载完成时，这段代码可以设置一个事件监听器以监听 <kbd>Enter</kbd> 键。
 
 ```js
-document.addEventListener("keydown", function(e) {
-  if (e.keyCode == 13) {
-    toggleFullScreen();
-  }
-}, false);
+document.addEventListener(
+  "keydown",
+  function (e) {
+    if (e.keyCode == 13) {
+      toggleFullScreen();
+    }
+  },
+  false,
+);
 ```
 
 ### 切换全屏模式
@@ -117,15 +121,15 @@ function toggleFullScreen() {
 
 目前并不是所有的浏览器都实现了 API 的无前缀版本（你可以使用 [Fscreen](https://github.com/rafrex/fscreen) 获取跨浏览器全屏 API），这里有一份表格总结了前缀和它们之间的命名区别：
 
-| Standard                                                                  | WebKit (Safari) / Blink (Chrome & Opera) / Edge | Gecko (Firefox)          | Internet Explorer       |
-| ------------------------------------------------------------------------- | ----------------------------------------------- | ------------------------ | ----------------------- |
+| Standard                                                 | WebKit (Safari) / Blink (Chrome & Opera) / Edge | Gecko (Firefox)          | Internet Explorer       |
+| -------------------------------------------------------- | ----------------------------------------------- | ------------------------ | ----------------------- |
 | {{DOMxRef("Document.fullscreen")}} {{Deprecated_Inline}} | `webkitIsFullScreen`                            | `mozFullScreen`          | -                       |
-| {{DOMxRef("Document.fullscreenEnabled")}}                  | `webkitFullscreenEnabled`                       | `mozFullScreenEnabled`   | `msFullscreenEnabled`   |
-| {{DOMxRef("DocumentOrShadowRoot.fullscreenElement")}}  | `webkitFullscreenElement`                       | `mozFullScreenElement`   | `msFullscreenElement`   |
-| {{DOMxRef("Document.onfullscreenchange")}}                  | `onwebkitfullscreenchange`                      | `onmozfullscreenchange`  | `onMSFullscreenChange`  |
-| {{DOMxRef("Document.onfullscreenerror")}}                  | `onwebkitfullscreenerror`                       | `onmozfullscreenerror`   | `onMSFullscreenError`   |
-| {{DOMxRef("Document.exitFullscreen()")}}                      | `webkitExitFullscreen()`                        | `mozCancelFullScreen()`  | `msExitFullscreen()`    |
-| {{DOMxRef("Element.requestFullscreen()")}}                  | `webkitRequestFullscreen()`                     | `mozRequestFullScreen()` | `msRequestFullscreen()` |
+| {{DOMxRef("Document.fullscreenEnabled")}}                | `webkitFullscreenEnabled`                       | `mozFullScreenEnabled`   | `msFullscreenEnabled`   |
+| {{DOMxRef("DocumentOrShadowRoot.fullscreenElement")}}    | `webkitFullscreenElement`                       | `mozFullScreenElement`   | `msFullscreenElement`   |
+| {{DOMxRef("Document.onfullscreenchange")}}               | `onwebkitfullscreenchange`                      | `onmozfullscreenchange`  | `onMSFullscreenChange`  |
+| {{DOMxRef("Document.onfullscreenerror")}}                | `onwebkitfullscreenerror`                       | `onmozfullscreenerror`   | `onMSFullscreenError`   |
+| {{DOMxRef("Document.exitFullscreen()")}}                 | `webkitExitFullscreen()`                        | `mozCancelFullScreen()`  | `msExitFullscreen()`    |
+| {{DOMxRef("Element.requestFullscreen()")}}               | `webkitRequestFullscreen()`                     | `mozRequestFullScreen()` | `msRequestFullscreen()` |
 
 ## 规范
 

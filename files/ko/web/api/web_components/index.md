@@ -1,7 +1,6 @@
 ---
 title: 웹 컴포넌트
 slug: Web/API/Web_components
-original_slug: Web/Web_Components
 ---
 
 {{DefaultAPISidebar("Web Components")}}
@@ -14,9 +13,7 @@ original_slug: Web/Web_Components
 
 웹 컴포넌트는 다음 문제들을 해결하는 것을 목표로 합니다 — 세 가지 주요 기술들로 구성되며, 재사용을 원하는 어느곳이든 코드 충돌에 대한 걱정이 없는 캡슐화된 기능을 갖춘 다용도의 커스텀 엘리먼트를 생성하기 위해 함께 사용될 수 있습니다.
 
-**커스텀 엘리먼트**: 커스텀 엘리먼트와 그 동작을 정의할 수 있도록 해주는 JavaScript API 의 집합으로, 사용자 인터페이스에서 원했던대로 사용될 수 있습니다.
-
-- **Custom elements**: 사용자 인터페이스에서 원하는대로 사용할 수있는 사용자 정의 요소 및 해당 동작을 정의 할 수있는 JavaScript API 세트입니다.
+- **Custom elements**: 사용자 인터페이스에서 원하는 대로 사용할 수 있는 사용자 정의 요소 및 해당 동작을 정의 할 수 있는 JavaScript API 세트입니다.
 - **Shadow DOM**: 캡슐화된 "그림자" DOM 트리를 엘리먼트 — 메인 다큐먼트 DOM 으로부터 독립적으로 렌더링 되는 — 를 추가하고 연관된 기능을 제어하기 위한 JavaScript API 의 집합. 이 방법으로 엘리먼트의 기능을 프라이빗하게 유지할 수 있어, 다큐먼트의 다른 부분과의 충돌에 대한 걱정 없이 스크립트와 스타일을 작성할 수 있습니다.
 - **HTML 템플릿**: {{HTMLElement("template")}} 과 {{HTMLElement("slot")}} 엘리먼트는 렌더링된 페이지에 나타나지 않는 마크업 템플릿을 작성할 수 있게 해줍니다. 그 후, 커스텀 엘리먼트의 구조를 기반으로 여러번 재사용할 수 있습니다.
 
@@ -46,6 +43,7 @@ original_slug: Web/Web_Components
 - {{domxref("Window.customElements")}}
   - : `CustomElementRegistry` 객체에 대한 참조를 반환합니다.
 - [라이프 사이클 콜백](/ko/docs/Web/Web_Components/Using_custom_elements#Using_the_lifecycle_callbacks)
+
   - : 커스텀 엘리먼트의 클래스 정의 내에 정의되어 동작에 영향을 주는 특별한 콜백 함수입니다.
 
     - `connectedCallback`: 커스텀 엘리먼트가 처음으로 다큐먼트의 DOM 에 연결되었을 때 호출됩니다.
@@ -57,7 +55,7 @@ original_slug: Web/Web_Components
 
   - : The following extensions are defined:
 
-    - {{htmlattrxref("is")}} 전역 HTML 어트리뷰트: 표준 HTML 엘리먼트가 등록된 커스텀 내장 엘리먼트처럼 동작하도록 지정을 허용합니다.
+    - [`is`](/ko/docs/Web/HTML/Global_attributes#is) 전역 HTML 어트리뷰트: 표준 HTML 엘리먼트가 등록된 커스텀 내장 엘리먼트처럼 동작하도록 지정을 허용합니다.
     - {{domxref("Document.createElement()")}} 메소드의 "is" 옵션: 주어진 등록된 커스텀 내장 엘리먼트처럼 동작하는 표준 HTML 엘리먼트의 인스턴스를 생성하는 것을 허용합니다.
 
 - CSS 수도(pseudo) 클래스
@@ -105,6 +103,7 @@ original_slug: Web/Web_Components
 - [`slot`](/ko/docs/Web/HTML/Global_attributes/slot) 전역 HTML 어트리뷰트
   - : shadow DOM shadow 트리내의 slot을 엘리먼트로 할당합니다.
 - {{domxref("Slotable")}}
+
   - : {{domxref("Element")}} 와 {{domxref("Text")}} 노드로 구현된 믹스인입니다. {{htmlelement("slot")}} 엘리먼트의 컨텐츠로 만들기 위한 기능들을 정의합니다. 믹스인은 노드가 삽입된 슬롯의 참조를 반환하는 하나의 어트리뷰트 {{domxref("Slotable.assignedSlot")}} 을 정의합니다.
 
 - {{domxref("Element")}} 확장 기능

@@ -38,8 +38,8 @@ if (parg.hasChildNodes()) {
 // box is an object reference to an element
 
 while (box.firstChild) {
-    //The list is LIVE so it will re-index each call
-    box.removeChild(box.firstChild);
+  //The list is LIVE so it will re-index each call
+  box.removeChild(box.firstChild);
 }
 ```
 

@@ -1,12 +1,8 @@
 ---
-title: ':where()'
+title: ":where()"
 slug: Web/CSS/:where
-tags:
-  - ':where'
-  - CSS
-  - псевдокласс
-translation_of: Web/CSS/:where
 ---
+
 {{CSSRef}}[CSS](/ru/docs/Web/CSS) [псевдокласс](/ru/docs/Web/CSS/Псевдо-классы) **`:where()`** в качестве аргумента принимает список селекторов и выбирает только те элементы, которые могут быть выбраны из переданного списка.
 
 ```css
@@ -62,30 +58,48 @@ footer p:hover {
 <article>
   <h2>:is()-styled links</h2>
   <section class="is-styling">
-    <p>Here is my main content. This <a href="https://mozilla.org">contains a link</a>.
+    <p>
+      Here is my main content. This
+      <a href="https://mozilla.org">contains a link</a>.
+    </p>
   </section>
 
   <aside class="is-styling">
-    <p>Here is my aside content. This <a href="https://developer.mozilla.org">also contains a link</a>.
+    <p>
+      Here is my aside content. This
+      <a href="https://developer.mozilla.org">also contains a link</a>.
+    </p>
   </aside>
 
   <footer class="is-styling">
-    <p>This is my footer, also containing <a href="https://github.com/mdn">a link</a>.
+    <p>
+      This is my footer, also containing
+      <a href="https://github.com/mdn">a link</a>.
+    </p>
   </footer>
 </article>
 
 <article>
   <h2>:where()-styled links</h2>
   <section class="where-styling">
-    <p>Here is my main content. This <a href="https://mozilla.org">contains a link</a>.
+    <p>
+      Here is my main content. This
+      <a href="https://mozilla.org">contains a link</a>.
+    </p>
   </section>
 
   <aside class="where-styling">
-    <p>Here is my aside content. This <a href="https://developer.mozilla.org">also contains a link</a>.
+    <p>
+      Here is my aside content. This
+      <a href="https://developer.mozilla.org">also contains a link</a>.
+    </p>
   </aside>
 
   <footer class="where-styling">
-    <p>This is my footer, also containing <a href="https://github.com/mdn">a link</a>.
+    <p>
+      This is my footer, also containing
+      <a href="https://github.com/mdn">a link</a>.
+    </p>
   </footer>
 </article>
 ```

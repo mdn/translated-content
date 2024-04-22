@@ -18,7 +18,7 @@ _AbortSignal 인터페이스는 또한 부모 인터페이스 {{domxref("EventTa
 
 [`addEventListener()`](/ko/docs/Web/API/EventTarget/addEventListener)를 사용하거나 이 인터페이스의 `oneventname` 프로퍼티로 이벤트 리스너를 할당하여 이벤트를 리슨합니다.
 
-- [`abort`](/en-US/docs/Web/API/AbortSignal/abort_event)
+- [`abort`](/ko/docs/Web/API/AbortSignal/abort_event)
   - : 신호가 통신하는 요청이 취소되었을 때 호출됩니다. [`onabort`](/ko/docs/Web/API/AbortSignal/onabort) 프로퍼티를 통해서도 사용이 가능합니다.
 
 ## 메소드

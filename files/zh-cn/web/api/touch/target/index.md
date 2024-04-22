@@ -30,12 +30,18 @@ var el = touchPoint.target;
 // 为'source'元素注册一个触摸监听器
 var src = document.getElementById("source");
 
-src.addEventListener('touchstart', function(e) {
-  // 在这个元素上激活的触点间循环
-  for (var i=0; i < e.targetTouches.length; i++) {
-    console.log("touchpoint[" + i + "].target = " + e.targetTouches[i].target);
-  }
-}, false);
+src.addEventListener(
+  "touchstart",
+  function (e) {
+    // 在这个元素上激活的触点间循环
+    for (var i = 0; i < e.targetTouches.length; i++) {
+      console.log(
+        "touchpoint[" + i + "].target = " + e.targetTouches[i].target,
+      );
+    }
+  },
+  false,
+);
 ```
 
 ## 规范

@@ -21,7 +21,7 @@ var aHead = document.head;
 
 alert(aHead.id); // "my-document-head";
 
-alert( document.head === document.querySelector("head") ); // true
+alert(document.head === document.querySelector("head")); // true
 ```
 
 ## Notas
@@ -30,13 +30,11 @@ alert( document.head === document.querySelector("head") ); // true
 
 ## Especificações
 
-| Especificação                                                                                    | Status                       | Comentário        |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------- |
-| {{SpecName("HTML5 W3C", "dom.html#dom-tree-accessors", "document.head")}} | {{Spec2("HTML5 W3C")}} | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Document.head")}}
+{{Compat}}
 
 ## Veja Também
 

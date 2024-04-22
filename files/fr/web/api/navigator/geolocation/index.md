@@ -1,13 +1,6 @@
 ---
 title: Navigator.geolocation
 slug: Web/API/Navigator/geolocation
-tags:
-  - API
-  - Géolocalisation API
-  - Navigateur
-  - Propriété
-  - Reference
-translation_of: Web/API/Navigator/geolocation
 ---
 
 {{APIRef("Geolocation API")}}
@@ -19,7 +12,7 @@ translation_of: Web/API/Navigator/geolocation
 ## Syntaxe
 
 ```js
-geo = navigator.geolocation
+geo = navigator.geolocation;
 ```
 
 ## Spécifications

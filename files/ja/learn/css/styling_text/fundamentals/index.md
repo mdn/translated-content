@@ -1,21 +1,23 @@
 ---
 title: 基本的なテキストとフォントの装飾
 slug: Learn/CSS/Styling_text/Fundamentals
+l10n:
+  sourceCommit: 18696d0c4bedd2dbc7b415be4da72e2beaf6bfbb
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
 
 この記事では、{{glossary("CSS")}} によるテキストの装飾の習得に向けて旅を始めましょう。 ここでは、フォントの太さ、ファミリーそしてスタイルの設定、フォントの一括指定、テキストの配置とその他のエフェクト、ラインと文字の間隔などを含んだ、テキストやフォントの装飾の基本について詳しく説明します。
 
-| 前提知識: | 基本的なコンピューターリテラシー、HTML の基本（[HTML 入門](/ja/docs/Learn/HTML/Introduction_to_HTML)を学ぶ）、CSS の基本（[CSS 入門](/ja/docs/Learn/CSS/Introduction_to_CSS)を学ぶ）。 |
-| --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 学習目標: | ウェブページのテキストを装飾するために必要な基本的なプロパティとテクニックを学ぶこと。                                                                                                 |
+| 前提知識: | 基本的なコンピューターリテラシー、HTML の基本（[HTML 入門](/ja/docs/Learn/HTML/Introduction_to_HTML)を学ぶ）、CSS の基本（[CSS 入門](/ja/docs/Learn/CSS/First_steps)を学ぶ）。 |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 学習目標: | ウェブページのテキストを装飾するために必要な基本的なプロパティとテクニックを学ぶこと。                                                                                         |
 
 ## CSS においてテキストの装飾には何が関係していますか？
 
 HTML と CSS を使った作業ですでに経験したように、要素内のテキストは要素のコンテンツボックス内にレイアウトされます。 コンテンツ領域の左上（RTL 言語のコンテンツの場合は右上）から始まり、ラインの終りに向かって流れます。 終りに達すると、次のラインに進み、続けてすべてのコンテンツがボックスに配置されるまで次のラインに進みます。 テキストコンテンツは事実上一連のインライン要素のようにふるまい、互いに隣接するラインに配置され、ラインの終りに達するまで、または、{{htmlelement("br")}} 要素を使用して手動で改行を強制しない限り改行を作成しません。
 
-> **メモ:** 上の段落で混乱していると感じても問題ありません — 先に進む前に、ボックスモデル理論を磨くために、[ボックスモデル](/ja/docs/Learn/CSS/Introduction_to_CSS/Box_model)の記事に戻って見直してください。
+> **メモ:** 上の段落で混乱していると感じても問題ありません — 先に進む前に、ボックスモデル理論を磨くために、[ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)の記事に戻って見直してください。
 
 テキストを装飾するために使用される CSS プロパティは、一般的に次の 2 つのカテゴリに分類されます。 この記事では、これらのプロパティを個別に説明します。
 
@@ -33,21 +35,22 @@ HTML と CSS を使った作業ですでに経験したように、要素内の�
 
 <p>I remember as if it were a meal ago...</p>
 
-<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
- may have nestled its way into his mighty throat. Many a fat alley rat
-had met its demise while staring point blank down the cavernous barrel of
- this awesome prowling machine. Truly a wonder of nature this urban
-predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.</p>
+<p>
+  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
+  nestled its way into his mighty throat. Many a fat alley rat had met its
+  demise while staring point blank down the cavernous barrel of this awesome
+  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
+  had many a story to tell. But it was a rare occasion such as this that he did.
+</p>
 ```
 
-[完成した例](http://mdn.github.io/learning-area/css/styling-text/fundamentals/)は Github にあります（[ソースコード](https://github.com/mdn/learning-area/blob/master/css/styling-text/fundamentals/index.html)も参照してください）。
+[完成した例](https://mdn.github.io/learning-area/css/styling-text/fundamentals/)は Github にあります（[ソースコード](https://github.com/mdn/learning-area/blob/master/css/styling-text/fundamentals/index.html)も参照してください）。
 
 ### 色
 
 {{cssxref("color")}} プロパティは、選択された要素の前景のコンテンツの色を設定します（通常はテキストですが、{{cssxref("text-decoration")}} プロパティを使用してテキストに下線や上線を配置するなど、他のいくつかの要素を含めることもできます）。
 
-`color` は次のように任意の [CSS カラー単位](/ja/Learn/CSS/Introduction_to_CSS/Values_and_units#Colors)を受け入れることができます。
+`color` は次のように任意の [CSS カラー単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units#colors)を受け入れることができます。
 
 ```css
 p {
@@ -62,12 +65,13 @@ p {
 
 <p>I remember as if it were a meal ago...</p>
 
-<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
- may have nestled its way into his mighty throat. Many a fat alley rat
-had met its demise while staring point blank down the cavernous barrel of
- this awesome prowling machine. Truly a wonder of nature this urban
-predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.</p>
+<p>
+  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
+  nestled its way into his mighty throat. Many a fat alley rat had met its
+  demise while staring point blank down the cavernous barrel of this awesome
+  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
+  had many a story to tell. But it was a rare occasion such as this that he did.
+</p>
 ```
 
 {{ EmbedLiveSample('Color', '100%', 220) }}
@@ -94,7 +98,7 @@ p {
 
 | 名前            | 総称タイプ | 注                                                                                                                                                                                                                                            |
 | --------------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Arial           | sans-serif | _Arial_ に好ましい代替として _Helvetica_ を追加するのがベストプラクティスと考えられることがよくあります。 それらのフォントフェースはほぼ同じですが、_Arial_ の方が広く入手可能であっても _Helvetica_ はより良い形状をしていると考えられます。 |
+| Arial           | sans-serif | _Arial_ に好ましい代替として _Helvetica_ を追加するのがベストプラクティスと考えられることがよくあります。 それらのフォントフェイスはほぼ同じですが、_Arial_ の方が広く入手可能であっても _Helvetica_ はより良い形状をしていると考えられます。 |
 | Courier New     | monospace  | いくつかの OS は _Courier_ と呼ばれる _Courier New_ フォントの代替（おそらく古い）バージョンを持っています。 _Courier New_ と一緒に両方を使用することを推奨します。                                                                           |
 | Georgia         | serif      |                                                                                                                                                                                                                                               |
 | Times New Roman | serif      | いくつかの OS は _Times_ と呼ばれる _Times New Roman_ フォントの代替（おそらく古い）バージョンを持っています。 _Times New Roman_ と一緒に両方を使用することを推奨します。                                                                     |
@@ -153,19 +157,20 @@ p {
 
 <p>I remember as if it were a meal ago...</p>
 
-<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
- may have nestled its way into his mighty throat. Many a fat alley rat
-had met its demise while staring point blank down the cavernous barrel of
- this awesome prowling machine. Truly a wonder of nature this urban
-predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.</p>
+<p>
+  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
+  nestled its way into his mighty throat. Many a fat alley rat had met its
+  demise while staring point blank down the cavernous barrel of this awesome
+  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
+  had many a story to tell. But it was a rare occasion such as this that he did.
+</p>
 ```
 
 {{ EmbedLiveSample('A_font-family_example', '100%', 220) }}
 
 ### フォントサイズ
 
-前のモジュールの [CSS の値と単位](/ja/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)の記事で、[長さとサイズの単位](/ja/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size)を確認しました。 フォントサイズ（{{cssxref("font-size")}} プロパティで設定）は、これらの単位のほとんど（および[パーセント](/ja/Learn/CSS/Introduction_to_CSS/Values_and_units#Percentages)などの他の単位）で測定された値を取ることができますが、テキストのサイズを設定するために使用する最も一般的な単位は次のとおりです。
+前のモジュールの [CSS の値と単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)の記事で、[長さとサイズの単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units#length_and_size)を確認しました。 フォントサイズ（{{cssxref("font-size")}} プロパティで設定）は、これらの単位のほとんど（および[パーセント](/ja/docs/Learn/CSS/Building_blocks/Values_and_units#percentages)などの他の単位）で測定された値を取ることができますが、テキストのサイズを設定するために使用する最も一般的な単位は次のとおりです。
 
 - `px` (pixels): テキストを表示したい高さのピクセル数。 これは絶対的な単位です — それはほとんどどんな状況でもページ上のフォントの同じ最終的な計算値になります。
 - `em`: `1em` は、現在装飾している要素の親要素に設定されているフォントサイズ（より具体的には、親要素の内側に含まれる大文字の M の幅）に等しくなります。 フォントサイズの異なるネストされた要素が多数設定されている場合には厄介な作業になるかもしれませんが、以下に示すように、それは実行可能です。 なぜわざわざそうする？ 慣れると非常に自然になり、テキストだけでなく、`em` を使用してすべてのサイズを変更できます。 ウェブサイト全体を `em` を使用してサイズ設定することができ、これにより、メンテナンスが簡単になります。
@@ -177,8 +182,10 @@ occasion such as this that he did.</p>
 
 ```html
 <!-- ドキュメントのベースフォントサイズは 16px です -->
-<article> <!-- ここのフォントサイズが 1.5em の場合 -->
-  <p>My paragraph</p> <!-- 20px のフォントサイズにするにはどう計算しますか？ -->
+<article>
+  <!-- ここのフォントサイズが 1.5em の場合 -->
+  <p>My paragraph</p>
+  <!-- 20px のフォントサイズにするにはどう計算しますか？ -->
 </article>
 ```
 
@@ -195,12 +202,13 @@ occasion such as this that he did.</p>
 
 <p>I remember as if it were a meal ago...</p>
 
-<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
- may have nestled its way into his mighty throat. Many a fat alley rat
-had met its demise while staring point blank down the cavernous barrel of
- this awesome prowling machine. Truly a wonder of nature this urban
-predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.</p>
+<p>
+  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
+  nestled its way into his mighty throat. Many a fat alley rat had met its
+  demise while staring point blank down the cavernous barrel of this awesome
+  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
+  had many a story to tell. But it was a rare occasion such as this that he did.
+</p>
 ```
 
 ```css
@@ -246,6 +254,7 @@ CSS は、テキストの視覚的な太さや強調を変更するために次�
   - `full-width`: 例えば、ラテン文字を（中国語、日本語、韓国語など）アジア言語のグリフと一緒に揃えて、等幅フォントのように、固定幅の四角形の中にすべてのグリフを書く（written inside a fixed-width square）ように変換します。
 
 - {{cssxref("text-decoration")}}: フォントのテキスト飾りを設定/設定解除します（主にリンクのデフォルトの下線を解除するために使用します）。 使用可能な値は次のとおりです。
+
   - `none`: 既に存在するテキスト飾りをすべて解除します。
   - `underline`: **テキストに下線を引きます**。
   - `overline`: テキストに上線を付けます。
@@ -262,12 +271,13 @@ CSS は、テキストの視覚的な太さや強調を変更するために次�
 
 <p>I remember as if it were a meal ago...</p>
 
-<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
- may have nestled its way into his mighty throat. Many a fat alley rat
-had met its demise while staring point blank down the cavernous barrel of
- this awesome prowling machine. Truly a wonder of nature this urban
-predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.</p>
+<p>
+  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
+  nestled its way into his mighty throat. Many a fat alley rat had met its
+  demise while staring point blank down the cavernous barrel of this awesome
+  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
+  had many a story to tell. But it was a rare occasion such as this that he did.
+</p>
 ```
 
 ```css
@@ -303,10 +313,10 @@ text-shadow: 4px 4px 5px red;
 
 4 つのプロパティは次のとおりです。
 
-1. 元のテキストからの影の水平方向のオフセット — これは、ほとんどの CSS の[長さとサイズの単位](/ja/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size)を取ることができますが、最も一般的には `px` を使用します。 この値を含める必要があります。
+1. 元のテキストからの影の水平方向のオフセット — これは、ほとんどの CSS の[長さとサイズの単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units#length_and_size)を取ることができますが、最も一般的には `px` を使用します。 この値を含める必要があります。
 2. 元のテキストからの影の垂直方向のオフセット — 基本的に水平方向のオフセットと同じようにふるまいますが、影を左右に移動するのではなく上下に移動する点が異なります。 この値を含める必要があります。
-3. ぼかし半径 — 値が大きいほど、影はより広く分散されます。 この値が含まれていない場合、デフォルトは 0 になり、ぼかしは行われません。 これは、ほとんどの CSS の[長さとサイズの単位](/ja/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size)を取ることができます。
-4. 影のベースカラー — 任意の [CSS カラー単位](/ja/Learn/CSS/Introduction_to_CSS/Values_and_units#Colors)を取ります。 含まれていない場合、デフォルトは `black` です。
+3. ぼかし半径 — 値が大きいほど、影はより広く分散されます。 この値が含まれていない場合、デフォルトは 0 になり、ぼかしは行われません。 これは、ほとんどの CSS の[長さとサイズの単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units#length_and_size)を取ることができます。
+4. 影のベースカラー — 任意の [CSS カラー単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units#colors)を取ります。 含まれていない場合、デフォルトは `black` です。
 
 > **メモ:** 正のオフセット値は影を右下に移動させますが、`-1px -1px` のように負のオフセット値を使用して影を左上に移動させることもできます。
 
@@ -315,10 +325,11 @@ text-shadow: 4px 4px 5px red;
 複数の影の値をコンマで区切って含めることで、次のように同じテキストに複数の影を付けることができます。
 
 ```css
-text-shadow: -1px -1px 1px #aaa,
-             0px 4px 1px rgba(0,0,0,0.5),
-             4px 4px 5px rgba(0,0,0,0.7),
-             0px 0px 7px rgba(0,0,0,0.4);
+text-shadow:
+  -1px -1px 1px #aaa,
+  0px 4px 1px rgba(0, 0, 0, 0.5),
+  4px 4px 5px rgba(0, 0, 0, 0.7),
+  0px 0px 7px rgba(0, 0, 0, 0.4);
 ```
 
 これを Tommy the cat の例の {{htmlelement("h1")}} 要素に適用すると、結果は次のようになります。
@@ -328,12 +339,13 @@ text-shadow: -1px -1px 1px #aaa,
 
 <p>I remember as if it were a meal ago...</p>
 
-<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
- may have nestled its way into his mighty throat. Many a fat alley rat
-had met its demise while staring point blank down the cavernous barrel of
- this awesome prowling machine. Truly a wonder of nature this urban
-predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.</p>
+<p>
+  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
+  nestled its way into his mighty throat. Many a fat alley rat had met its
+  demise while staring point blank down the cavernous barrel of this awesome
+  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
+  had many a story to tell. But it was a rare occasion such as this that he did.
+</p>
 ```
 
 ```css hidden
@@ -344,10 +356,11 @@ html {
 h1 {
   font-size: 26px;
   text-transform: capitalize;
-  text-shadow: -1px -1px 1px #aaa,
-               0px 2px 1px rgba(0,0,0,0.5),
-               2px 2px 2px rgba(0,0,0,0.7),
-               0px 0px 3px rgba(0,0,0,0.4);
+  text-shadow:
+    -1px -1px 1px #aaa,
+    0px 2px 1px rgba(0, 0, 0, 0.5),
+    2px 2px 2px rgba(0, 0, 0, 0.7),
+    0px 0px 3px rgba(0, 0, 0, 0.4);
 }
 
 h1 + p {
@@ -363,7 +376,7 @@ p {
 
 {{ EmbedLiveSample('Multiple_shadows', '100%', 220) }}
 
-> **メモ:** Sitepoint の記事 [Moonlighting with CSS text-shadow](http://www.sitepoint.com/moonlighting-css-text-shadow/) で、`text-shadow` の使い方のより興味深い例を見ることができます。
+> **メモ:** Sitepoint の記事 [Moonlighting with CSS text-shadow](https://www.sitepoint.com/moonlighting-css-text-shadow/) で、`text-shadow` の使い方のより興味深い例を見ることができます。
 
 ## テキストのレイアウト
 
@@ -385,12 +398,13 @@ p {
 
 <p>I remember as if it were a meal ago...</p>
 
-<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
- may have nestled its way into his mighty throat. Many a fat alley rat
-had met its demise while staring point blank down the cavernous barrel of
- this awesome prowling machine. Truly a wonder of nature this urban
-predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.</p>
+<p>
+  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
+  nestled its way into his mighty throat. Many a fat alley rat had met its
+  demise while staring point blank down the cavernous barrel of this awesome
+  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
+  had many a story to tell. But it was a rare occasion such as this that he did.
+</p>
 ```
 
 ```css hidden
@@ -401,10 +415,11 @@ html {
 h1 {
   font-size: 2.6rem;
   text-transform: capitalize;
-  text-shadow: -1px -1px 1px #aaa,
-               0px 2px 1px rgba(0,0,0,0.5),
-               2px 2px 2px rgba(0,0,0,0.7),
-               0px 0px 3px rgba(0,0,0,0.4);
+  text-shadow:
+    -1px -1px 1px #aaa,
+    0px 2px 1px rgba(0, 0, 0, 0.5),
+    2px 2px 2px rgba(0, 0, 0, 0.7),
+    0px 0px 3px rgba(0, 0, 0, 0.4);
   text-align: center;
 }
 
@@ -423,7 +438,7 @@ p {
 
 ### ラインの高さ
 
-{{cssxref("line-height")}} プロパティはテキストの各ラインの高さを設定します — これはほとんどの[長さとサイズの単位](/ja/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size)をとることができますが、乗数として機能し、一般的に最良の選択肢と考えられる単位なしの値をとることもできます — `line-height` を得るために {{cssxref("font-size")}} が乗算されます。 本文はラインが離れていると、一般的に見栄えがよく、読みやすくなります。 推奨されるラインの高さは約 1.5 〜 2（ダブルスペース）です。 したがって、テキストのラインをフォントの高さの 1.5 倍に設定するには、次のようにします。
+{{cssxref("line-height")}} プロパティはテキストの各ラインの高さを設定します — これはほとんどの[長さとサイズの単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units#length_and_size)をとることができますが、乗数として機能し、一般的に最良の選択肢と考えられる単位なしの値をとることもできます — `line-height` を得るために {{cssxref("font-size")}} が乗算されます。 本文はラインが離れていると、一般的に見栄えがよく、読みやすくなります。 推奨されるラインの高さは約 1.5 〜 2（ダブルスペース）です。 したがって、テキストのラインをフォントの高さの 1.5 倍に設定するには、次のようにします。
 
 ```css
 line-height: 1.5;
@@ -436,12 +451,13 @@ line-height: 1.5;
 
 <p>I remember as if it were a meal ago...</p>
 
-<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
- may have nestled its way into his mighty throat. Many a fat alley rat
-had met its demise while staring point blank down the cavernous barrel of
- this awesome prowling machine. Truly a wonder of nature this urban
-predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.</p>
+<p>
+  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
+  nestled its way into his mighty throat. Many a fat alley rat had met its
+  demise while staring point blank down the cavernous barrel of this awesome
+  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
+  had many a story to tell. But it was a rare occasion such as this that he did.
+</p>
 ```
 
 ```css hidden
@@ -452,10 +468,11 @@ html {
 h1 {
   font-size: 2.6rem;
   text-transform: capitalize;
-  text-shadow: -1px -1px 1px #aaa,
-               0px 2px 1px rgba(0,0,0,0.5),
-               2px 2px 2px rgba(0,0,0,0.7),
-               0px 0px 3px rgba(0,0,0,0.4);
+  text-shadow:
+    -1px -1px 1px #aaa,
+    0px 2px 1px rgba(0, 0, 0, 0.5),
+    2px 2px 2px rgba(0, 0, 0, 0.7),
+    0px 0px 3px rgba(0, 0, 0, 0.4);
   text-align: center;
 }
 
@@ -475,7 +492,7 @@ p {
 
 ### 文字と単語の間隔設定
 
-{{cssxref("letter-spacing")}} プロパティと {{cssxref("word-spacing")}} プロパティを使用すると、テキスト内の文字と単語の間隔を設定できます。 これらはあまり使用しませんが、ある外観を得るためや、特に濃いフォントの読みやすさを向上させるために使用することがあります。 それらはほとんどの[長さとサイズの単位](/ja/Learn/CSS/Introduction_to_CSS/Values_and_units#Length_and_size)を取ることができます。
+{{cssxref("letter-spacing")}} プロパティと {{cssxref("word-spacing")}} プロパティを使用すると、テキスト内の文字と単語の間隔を設定できます。 これらはあまり使用しませんが、ある外観を得るためや、特に濃いフォントの読みやすさを向上させるために使用することがあります。 それらはほとんどの[長さとサイズの単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units#length_and_size)を取ることができます。
 
 例として、この例の {{htmlelement("p")}} 要素の最初のラインに次を適用したとします。
 
@@ -493,12 +510,13 @@ p::first-line {
 
 <p>I remember as if it were a meal ago...</p>
 
-<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
- may have nestled its way into his mighty throat. Many a fat alley rat
-had met its demise while staring point blank down the cavernous barrel of
- this awesome prowling machine. Truly a wonder of nature this urban
-predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.</p>
+<p>
+  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
+  nestled its way into his mighty throat. Many a fat alley rat had met its
+  demise while staring point blank down the cavernous barrel of this awesome
+  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
+  had many a story to tell. But it was a rare occasion such as this that he did.
+</p>
 ```
 
 ```css hidden
@@ -509,10 +527,11 @@ html {
 h1 {
   font-size: 2.6rem;
   text-transform: capitalize;
-  text-shadow: -1px -1px 1px #aaa,
-               0px 2px 1px rgba(0,0,0,0.5),
-               2px 2px 2px rgba(0,0,0,0.7),
-               0px 0px 3px rgba(0,0,0,0.4);
+  text-shadow:
+    -1px -1px 1px #aaa,
+    0px 2px 1px rgba(0, 0, 0, 0.5),
+    2px 2px 2px rgba(0, 0, 0, 0.7),
+    0px 0px 3px rgba(0, 0, 0, 0.4);
   text-align: center;
 }
 
@@ -544,7 +563,7 @@ p {
 - {{cssxref("font-variant")}}: スモールキャップと通常の代替フォントを切り替えます。
 - {{cssxref("font-kerning")}}: フォントのカーニングオプションのオンとオフを切り替えます。
 - {{cssxref("font-feature-settings")}}: さまざまな [OpenType](https://en.wikipedia.org/wiki/OpenType) フォント機能のオンとオフを切り替えます。
-- {{cssxref("font-variant-alternates")}}: 与えられたフォントフェースのための代替グリフの使用を制御します。
+- {{cssxref("font-variant-alternates")}}: 与えられたフォントフェイスのための代替グリフの使用を制御します。
 - {{cssxref("font-variant-caps")}}: 代替大文字グリフの使用を制御します。
 - {{cssxref("font-variant-east-asian")}}: 日本語や中国語など、東アジアの文字の代替グリフの使用方法を制御します。
 - {{cssxref("font-variant-ligatures")}}:テキストで使用される合字と文脈形式を制御します。
@@ -580,7 +599,10 @@ p {
 完全な例は次のようになります。
 
 ```css
-font: italic normal bold normal 3em/1.5 Helvetica, Arial, sans-serif;
+font:
+  italic normal bold normal 3em/1.5 Helvetica,
+  Arial,
+  sans-serif;
 ```
 
 ## 能動的学習: テキストの装飾で遊ぶ
@@ -590,20 +612,37 @@ font: italic normal bold normal 3em/1.5 Helvetica, Arial, sans-serif;
 間違えた場合は、_Reset_ ボタンを使用していつでもリセットできます。
 
 ```html hidden
-<div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
+<div
+  class="body-wrapper"
+  style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
   <h2>HTML Input</h2>
-  <textarea id="code" class="html-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
-  <p>Some sample text for your delight</p></textarea>
+  <textarea
+    id="code"
+    class="html-input"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
+  <p>Some sample text for your delight</p></textarea
+  >
 
   <h2>CSS Input</h2>
-  <textarea id="code" class="css-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">p {
+  <textarea
+    id="code"
+    class="css-input"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
+p {
 
-  }</textarea>
+  }</textarea
+  >
 
   <h2>Output</h2>
-  <div class="output" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></div>
+  <div
+    class="output"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></div>
   <div class="controls">
-    <input id="reset" type="button" value="Reset" style="margin: 10px 10px 0 0;">
+    <input
+      id="reset"
+      type="button"
+      value="Reset"
+      style="margin: 10px 10px 0 0;" />
   </div>
 </div>
 ```
@@ -616,8 +655,8 @@ var htmlCode = htmlInput.value;
 var cssCode = cssInput.value;
 var output = document.querySelector(".output");
 
-var styleElem = document.createElement('style');
-var headElem = document.querySelector('head');
+var styleElem = document.createElement("style");
+var headElem = document.querySelector("head");
 headElem.appendChild(styleElem);
 
 function drawOutput() {
@@ -625,7 +664,7 @@ function drawOutput() {
   styleElem.textContent = cssInput.value;
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   htmlInput.value = htmlCode;
   cssInput.value = cssCode;
   drawOutput();

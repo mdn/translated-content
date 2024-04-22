@@ -1,7 +1,6 @@
 ---
 title: Range.surroundContents()
 slug: Web/API/Range/surroundContents
-translation_of: Web/API/Range/surroundContents
 ---
 
 {{ApiRef("DOM")}}
@@ -12,12 +11,12 @@ Cette méthode est à peu près équivalente à&nbsp;:
 
 ```js
 newNode.appendChild(range.extractContents());
-range.insertNode(newNode)
+range.insertNode(newNode);
 ```
 
 Après déplacement, les bornes du `range` incluent `newNode`.
 
-Cependant, une exception sera levée si le {{ domxref("Range") }} découpe un nœud non-{{ domxref("Text") }} sur une seule de ses bornes. C’est-à-dire que, contrairement à l’alternative ci-dessus, s’il y a des nœuds partiellement sélectionnés, ils ne seront pas clonés&nbsp;; à la place, l’opération échouera.
+Cependant, une exception sera levée si le {{ domxref("Range") }} découpe un nœud non-{{ domxref("Text") }} sur une seule de ses bornes. C'est-à-dire que, contrairement à l'alternative ci-dessus, s'il y a des nœuds partiellement sélectionnés, ils ne seront pas clonés&nbsp;; à la place, l'opération échouera.
 
 ## Syntaxe
 
@@ -28,7 +27,7 @@ range.surroundContents(newNode);
 ### Paramètres
 
 - _newNode_
-  - : Un {{ domxref("Node") }} à insérer à l’emplacement du `range`.
+  - : Un {{ domxref("Node") }} à insérer à l'emplacement du `range`.
 
 ## Exemple
 
@@ -50,4 +49,4 @@ range.surroundContents(newNode);
 
 ## Voir aussi
 
-- [L’index des interfaces DOM](/fr/docs/DOM/DOM_Reference)
+- [L'index des interfaces DOM](/fr/docs/DOM/DOM_Reference)

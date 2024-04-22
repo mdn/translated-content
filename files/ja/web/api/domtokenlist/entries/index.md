@@ -1,16 +1,19 @@
 ---
-title: DOMTokenList.entries()
+title: "DOMTokenList: entries() メソッド"
+short-title: entries()
 slug: Web/API/DOMTokenList/entries
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
 {{APIRef("DOM")}}
 
-**`entries()`** は {{domxref("DOMTokenList")}} インターフェイスのメソッドで、このオブジェクトに含まれるすべてのキー/値の組を処理することができる{{jsxref("Iteration_protocols","イテレーター","",1)}}を返します。値は [キー, 値] の組を持つ配列 ({{jsxref("Array")}}) であり、それぞれが単一のトークンを表します。</span>
+**`entries()`** は {{domxref("DOMTokenList")}} インターフェイスのメソッドで、このオブジェクトに含まれるすべてのキー/値の組を処理することができる{{jsxref("Iteration_protocols","イテレーター","",1)}}を返します。値は [キー, 値] の組を持つ配列 ({{jsxref("Array")}}) であり、それぞれが単一のトークンを表します。
 
 ## 構文
 
-```js
-entries();
+```js-nolint
+entries()
 ```
 
 ### 返値
@@ -34,7 +37,7 @@ const span = document.querySelector("span");
 const classes = span.classList;
 const iterator = classes.entries();
 
-for (let value of iterator) {
+for (const value of iterator) {
   span.textContent += `(${value})`;
 }
 ```

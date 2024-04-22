@@ -40,7 +40,7 @@ function setupVideo(url) {
       playing = true;
       checkReady();
     },
-    true
+    true,
   );
 
   video.addEventListener(
@@ -49,7 +49,7 @@ function setupVideo(url) {
       timeupdate = true;
       checkReady();
     },
-    true
+    true,
   );
 
   video.src = url;
@@ -101,7 +101,7 @@ function initTexture(gl) {
     border,
     srcFormat,
     srcType,
-    pixel
+    pixel,
   );
 
   // 关闭 mips 并将包裹（wrapping）设置为边缘分割（clamp to edge）
@@ -129,7 +129,7 @@ function updateTexture(gl, texture, video) {
     internalFormat,
     srcFormat,
     srcType,
-    video
+    video,
   );
 }
 ```

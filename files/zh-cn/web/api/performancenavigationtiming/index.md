@@ -11,8 +11,6 @@ slug: Web/API/PerformanceNavigationTiming
 
 {{InheritanceDiagram}}
 
-## 属性
-
 下图显示了 `PerformanceNavigationTiming` 中定义的所有时间戳属性。
 
 ![按获取文档记录的顺序列出时间戳的时间戳图](timestamp-diagram.svg)

@@ -1,7 +1,6 @@
 ---
-title: 'Testez vos compétences : les contrôles de base'
+title: "Testez vos compétences : les contrôles de base"
 slug: Learn/Forms/Test_your_skills:_Basic_controls
-translation_of: Learn/Forms/Test_your_skills:_Basic_controls
 ---
 
 {{LearnSidebar}}

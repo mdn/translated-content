@@ -73,7 +73,7 @@ l10n:
 
 #### Web Components
 
-[シャドウ DOM](/ja/docs/Web/Web_Components/Using_shadow_DOM) の実験的な実装を変更しました。
+[シャドウ DOM](/ja/docs/Web/API/Web_components/Using_shadow_DOM) の実験的な実装を変更しました。
 
 - {{domxref('ShadowRoot')}} で {{domxref('Node.cloneNode()')}} を実行しようとすると、`DataCloneError` 例外が発生します ([Firefox バグ 1176757](https://bugzil.la/1176757))。
 - {{domxref('ShadowRoot')}} を引数として {{domxref('Document.importNode()')}} を実行すると、`NotSupportedError` の {{domxref("DOMException")}} が発生します ([Firefox バグ 1177914](https://bugzil.la/1177914))。
@@ -98,7 +98,7 @@ l10n:
 
 - {{domxref('IDBCursorWithValue')}} インターフェイスが[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で使用可能になりました ([Firefox バグ 1188115](https://bugzil.la/1188115))。
 - [ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)が発したエラーイベントがバブリングしないようになりました ([Firefox バグ 1188141](https://bugzil.la/1188141))。
-- [Media Source Extensions](/ja/docs/Web/API/Media_Source_Extensions_API) (MSE) がホワイトリストに記載されたサイトだけでなく、すべての Web サイトで有効になりました ([Firefox バグ 1185611](https://bugzil.la/1185611))。
+- [Media Source Extensions](/ja/docs/Web/API/Media_Source_Extensions_API) (MSE) がホワイトリストに記載されたサイトだけでなく、すべてのウェブサイトで有効になりました ([Firefox バグ 1185611](https://bugzil.la/1185611))。
 - 非標準かつ非推奨である `Window.mozRequestAnimationFrame()` を削除しました ([Firefox バグ 909154](https://bugzil.la/909154))。代わりに、標準の {{domxref('Window.requestAnimationFrame()')}} を使用してください。
 - 音声合成 (text-to-speech) を Windows 向けのデスクトップ版 Firefox に実装しました。ただし、`about:config` の `media.webspeech.synth.enabled` フラグで無効化しています ([Firefox バグ 1003457](https://bugzil.la/1003457))。詳しくは[ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API) をご覧ください。
 

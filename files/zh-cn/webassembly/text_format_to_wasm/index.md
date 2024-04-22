@@ -34,9 +34,9 @@ WebAssembly 函数 exported_func 是被导出供我们的环境（比如，使�
 3. 当你安装好工具之后，将/wabt/out 目录添加到你的系统路径。
 4. 下一步，执行 wat2wasm 程序，把输入文件的路径传递给它，紧跟一个-o 参数，然后是输出文件的路径：
 
-    ```bash
-    wat2wasm simple.wat -o simple.wasm
-    ```
+   ```bash
+   wat2wasm simple.wat -o simple.wasm
+   ```
 
 该命令会把 wasm 输出到一个叫做 simple.wasm 的文件，该文件包含了.wasm 汇编代码。
 
@@ -54,9 +54,9 @@ wat2wasm simple.wat -v
 
 ![several strings of binary with textual descriptions beside them. For example: 0000008: 01 ; section code ](assembly-output.png)
 
-## 另见
+## 参见
 
 - [理解 WebAssembly 文本格式](/zh-CN/docs/WebAssembly/Understanding_the_text_format)——详细解释文本格式语法。
-- [从 C/C++编译为 WebAssembly](/zh-CN/docs/WebAssembly/C_to_wasm)——诸如 Binaryen/Emscripten 的工具不但把你的代码编译为 wasm 而且创建必要的用来在一个 JavaScript 上下文中运行模块的 API 代码。关于如何使用它们，可以探究更多内容。
+- [从 C/C++ 编译为 WebAssembly](/zh-CN/docs/WebAssembly/C_to_wasm)——诸如 Binaryen/Emscripten 的工具不但把你的代码编译为 wasm 而且创建必要的用来在一个 JavaScript 上下文中运行模块的 API 代码。关于如何使用它们，可以探究更多内容。
 - 使用 WebAssembly 的 JavaScript API——如果你想探究关于 WebAssembly API 代码是如何工作的更多内容，可以阅读这篇文章。
 - [文本格式](https://github.com/WebAssembly/design/blob/master/TextFormat.md)——在 WebAssembly 的 GitHub 仓库上面关于文本格式的更多解释。

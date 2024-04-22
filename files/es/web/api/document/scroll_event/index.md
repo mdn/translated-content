@@ -22,14 +22,14 @@ El evento **`scroll`** se produce cuando la vista del documento o un elemento es
 
 ## Propiedades
 
-| Property                              | Type                                                                                                                                                         | Description                                                                                                                                                                                                        |
-| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `target` {{readonlyInline}}     | [`EventTarget`](/es/docs/Web/API/EventTarget)  | El objetivo de evento (el objetivo superior en el árbol DOM).                                                                                                                                                      |
-| `type` {{readonlyInline}}       | [`DOMString`](/es/docs/Web/API/DOMString) | El tipo de evento.                                                                                                                                                                                                 |
-| `bubbles` {{readonlyInline}}    | [`Boolean`](/es/docs/Web/API/Boolean)                                                         | Si el evento burbujea o no.                                                                                                                                                                                        |
-| `cancelable` {{readonlyInline}} | [`Boolean`](/es/docs/Web/API/Boolean)                                                         | Si el evento puede ser cancelado o no.                                                                                                                                                                             |
-| `view` {{readonlyInline}}       | [`WindowProxy`](/es/docs/Web/API/WindowProxy)                         | [`document.defaultView`](/es/docs/Web/API/Document/defaultView) (`window` de el documento) |
-| `detail` {{readonlyInline}}     | `long` (`float`)                                                                                                                                             | 0.                                                                                                                                                                                                                 |
+| Property                        | Type                                          | Description                                                                                |
+| ------------------------------- | --------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| `target` {{readonlyInline}}     | [`EventTarget`](/es/docs/Web/API/EventTarget) | El objetivo de evento (el objetivo superior en el árbol DOM).                              |
+| `type` {{readonlyInline}}       | [`DOMString`](/es/docs/Web/API/DOMString)     | El tipo de evento.                                                                         |
+| `bubbles` {{readonlyInline}}    | [`Boolean`](/es/docs/Web/API/Boolean)         | Si el evento burbujea o no.                                                                |
+| `cancelable` {{readonlyInline}} | [`Boolean`](/es/docs/Web/API/Boolean)         | Si el evento puede ser cancelado o no.                                                     |
+| `view` {{readonlyInline}}       | [`WindowProxy`](/es/docs/Web/API/WindowProxy) | [`document.defaultView`](/es/docs/Web/API/Document/defaultView) (`window` de el documento) |
+| `detail` {{readonlyInline}}     | `long` (`float`)                              | 0.                                                                                         |
 
 ## Ejemplo
 
@@ -47,10 +47,10 @@ function doSomething(scroll_pos) {
   // Hacer algo con la posición del scroll
 }
 
-window.addEventListener('scroll', function(e) {
+window.addEventListener("scroll", function (e) {
   last_known_scroll_position = window.scrollY;
   if (!ticking) {
-    window.requestAnimationFrame(function() {
+    window.requestAnimationFrame(function () {
       doSomething(last_known_scroll_position);
       ticking = false;
     });

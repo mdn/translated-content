@@ -1,13 +1,6 @@
 ---
 title: document.execCommand
 slug: Web/API/Document/execCommand
-tags:
-  - API
-  - DOM
-  - Method
-  - Méthodes
-  - Reference
-translation_of: Web/API/Document/execCommand
 ---
 
 {{ApiRef("DOM")}}{{deprecated_header}}
@@ -22,7 +15,7 @@ courant.
 ## Syntaxe
 
 ```js
-document.execCommand(aCommandName, aShowDefaultUI, aValueArgument)
+document.execCommand(aCommandName, aShowDefaultUI, aValueArgument);
 ```
 
 ### Valeur de retour

@@ -17,13 +17,10 @@ Os Documentos HTML tem uma propriedade {{domxref("document.URL")}} que retorna o
 
 A diferençã é que **`document.URL`** só pode ser usado em documentos HTML, enquanto **`documentURI`** está disponivel para todos os documentos web.
 
-## Specificações
+## Especificações
 
-| Specificação                                                                                 | Status                           | Comentário         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('DOM WHATWG', '#dom-document-documenturi','documentURI')}} | {{Spec2('DOM WHATWG')}} |                    |
-| {{SpecName('DOM3 Core', '#Document3-documentURI', 'documentURI')}}     | {{Spec2('DOM3 Core')}}     | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Document.documentURI")}}
+{{Compat}}

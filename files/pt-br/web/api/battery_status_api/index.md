@@ -1,7 +1,6 @@
 ---
 title: Battery Status API
 slug: Web/API/Battery_Status_API
-original_slug: WebAPI/Battery_Status
 ---
 
 {{DefaultAPISidebar("Battery API")}}
@@ -15,7 +14,8 @@ A API Battery Status API estende {{domxref("Window.navigator")}} com uma proprie
 Neste exemplo, nós observamos as mudanças em ambos os status de carregamento (se estamos ou não conectados e carregando) e para mudanças no nível da bateria. Isto é feito escutando pelos eventos {{event("chargingchange")}} e {{event("levelchange")}}, respectivamente.
 
 ```js
-var battery = navigator.battery || navigator.mozBattery || navigator.webkitBattery;
+var battery =
+  navigator.battery || navigator.mozBattery || navigator.webkitBattery;
 
 function updateBatteryStatus() {
   console.log("Status da bateria: " + battery.level * 100 + " %");
@@ -34,11 +34,11 @@ Veja também [o exemplo na especificação](http://dev.w3.org/2009/dap/system-in
 
 ## Especificações
 
-{{page("/pt-BR/docs/Web/API/BatteryManager","Specifications")}}
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{page("/pt-BR/docs/Web/API/BatteryManager","Browser_compatibility")}}
+{{Compat}}
 
 ## Veja também
 

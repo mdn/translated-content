@@ -10,7 +10,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__
 ## 構文
 
 ```js
-__lookupSetter__(sprop)
+__lookupSetter__(sprop);
 ```
 
 ### 引数
@@ -36,15 +36,15 @@ __lookupSetter__(sprop)
 var obj = {
   set foo(value) {
     this.bar = value;
-  }
+  },
 };
 
 // 標準外かつ非推奨の方法
-obj.__lookupSetter__('foo')
+obj.__lookupSetter__("foo");
 // (function(value) { this.bar = value; })
 
 // 標準準拠の方法
-Object.getOwnPropertyDescriptor(obj, 'foo').set;
+Object.getOwnPropertyDescriptor(obj, "foo").set;
 // (function(value) { this.bar = value; })
 ```
 
@@ -65,4 +65,4 @@ Object.getOwnPropertyDescriptor(obj, 'foo').set;
   {{jsxref("Object.getPrototypeOf()")}}
 - [`Object.prototype.__defineGetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
 - [`Object.prototype.__defineSetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
-- [JavaScript ガイド: ゲッターとセッターの定義](/ja/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters)
+- [JavaScript ガイド: ゲッターとセッターの定義](/ja/docs/Web/JavaScript/Guide/Working_with_objects#ゲッターとセッターの定義)

@@ -70,66 +70,17 @@ var s = new Set([1, 2, 3]);
 Uint8Array.from(s);
 // Uint8Array [ 1, 2, 3 ]
 
-
 // 使用字符串
-Int16Array.from('123');
+Int16Array.from("123");
 // Int16Array [ 1, 2, 3 ]
 
-
 // 使用箭头函数对数组元素进行映射
-Float32Array.from([1, 2, 3], x => x + x);
+Float32Array.from([1, 2, 3], (x) => x + x);
 // Float32Array [ 2, 4, 6 ]
 
-
 // 生成一个数字序列
-Uint8Array.from({length: 5}, (v, k) => k);
+Uint8Array.from({ length: 5 }, (v, k) => k);
 // Uint8Array [ 0, 1, 2, 3, 4 ]
-```
-
-## Polyfill
-
-在不支持 `from()` 的环境中，你可以在你代码的起始位置插入以下代码，来实现对其功能的大部分支持。
-
-```js
-if (!Int8Array.__proto__.from) {
-    (function () {
-        Int8Array.__proto__.from = function (obj, func, thisObj) {
-
-            var typedArrayClass = Int8Array.__proto__;
-            if(typeof this !== 'function') {
-                throw new TypeError('# is not a constructor');
-            }
-            if (this.__proto__ !== typedArrayClass) {
-                throw new TypeError('this is not a typed array.');
-            }
-
-            func = func || function (elem) {
-                    return elem;
-                };
-
-            if (typeof func !== 'function') {
-                throw new TypeError('specified argument is not a function');
-            }
-
-            obj = Object(obj);
-            if (!obj['length']) {
-                return new this(0);
-            }
-            var copy_data = [];
-            for(var i = 0; i < obj.length; i++) {
-                copy_data.push(obj[i]);
-            }
-
-            copy_data = copy_data.map(func, thisObj);
-
-            var typed_array = new this(copy_data.length);
-            for(var i = 0; i < typed_array.length; i++) {
-                typed_array[i] = copy_data[i];
-            }
-            return typed_array;
-        }
-    })();
-}
 ```
 
 ## 规范
@@ -140,8 +91,11 @@ if (!Int8Array.__proto__.from) {
 
 {{Compat}}
 
-## 另见
+## 参见
 
+- [`core-js` 中 `TypedArray.from` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [JavaScript 类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)指南
+- {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.of()")}}
+- {{jsxref("TypedArray.prototype.map()")}}
 - {{jsxref("Array.from()")}}
-- {{jsxref("Array.prototype.map()")}}

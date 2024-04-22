@@ -1,10 +1,6 @@
 ---
-title: '-webkit-line-clamp'
+title: "-webkit-line-clamp"
 slug: Web/CSS/-webkit-line-clamp
-tags:
-  - CSS
-  - Propriété
-translation_of: Web/CSS/-webkit-line-clamp
 ---
 
 {{CSSRef}}
@@ -55,8 +51,9 @@ Lorsqu'on applique ce style à une ancre, la troncature pourra intervenir au mil
 
 ```html
 <p>
-  Dans cet exemple <code>-webkit-line-clamp</code> vaut <code>3</code>, ce qui signifie que le texte sera rogné après trois lignes.
-  Une ellipse sera affichée au n ellipsis will be shown at the point where the text is clamped.
+  Dans cet exemple <code>-webkit-line-clamp</code> vaut <code>3</code>, ce qui
+  signifie que le texte sera rogné après trois lignes. Une ellipse sera affichée
+  au n ellipsis will be shown at the point where the text is clamped.
 </p>
 ```
 
@@ -86,5 +83,5 @@ p {
 
 ## Voir aussi
 
-- [Line Clampin’ (Truncating Multiple Line Text)](https://css-tricks.com/line-clampin/)
+- [Line Clampin' (Truncating Multiple Line Text)](https://css-tricks.com/line-clampin/)
 - {{cssxref("line-clamp")}}

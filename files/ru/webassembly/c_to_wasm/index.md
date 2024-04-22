@@ -1,7 +1,6 @@
 ---
 title: Компиляция кода C/C++ в WebAssembly
 slug: WebAssembly/C_to_Wasm
-translation_of: WebAssembly/C_to_wasm
 ---
 
 {{WebAssemblySidebar}}
@@ -31,19 +30,19 @@ translation_of: WebAssembly/C_to_wasm
 
 1. Нам понадобится простой пример для компиляции. Скопируйте следующий код программы на Си и сохраните его в файле `hello.c` в новой папке на вашем локальном диске:
 
-    ```cpp
-    #include <stdio.h>
+   ```cpp
+   #include <stdio.h>
 
-    int main(int argc, char ** argv) {
-      printf("Hello World\n");
-    }
-    ```
+   int main(int argc, char ** argv) {
+     printf("Hello World\n");
+   }
+   ```
 
 2. Теперь, используя терминал, перейдите в каталог, в котором находится ваш файл hello.c, и выполните следующую команду:
 
-    ```bash
-    emcc hello.c -s WASM=1 -o hello.html
-    ```
+   ```bash
+   emcc hello.c -s WASM=1 -o hello.html
+   ```
 
 Рассмотрим параметры, которые мы передали компилятору:
 
@@ -70,26 +69,26 @@ translation_of: WebAssembly/C_to_wasm
 
 1. Прежде всего, сохраните следующий код в файле hello2.c в новом каталоге:
 
-    ```cpp
-    #include <stdio.h>
+   ```cpp
+   #include <stdio.h>
 
-    int main(int argc, char ** argv) {
-        printf("Hello World\n");
+   int main(int argc, char ** argv) {
+       printf("Hello World\n");
 
-    }
-    ```
+   }
+   ```
 
 2. Найдите файл `shell_minimal.html` в вашем репозитории emsdk. Скопируйте его в подкаталог `html_template` внутри вашего нового каталога.
 3. Теперь, используя терминал, перейдите в ваш новый каталог и выполните следующую команду:
 
-    ```bash
-    emcc -o hello2.html hello2.c -O3 -s WASM=1 --shell-file html_template/shell_minimal.html
-    ```
+   ```bash
+   emcc -o hello2.html hello2.c -O3 -s WASM=1 --shell-file html_template/shell_minimal.html
+   ```
 
-    В этот раз мы использовали немного другие параметры компиляции:
+   В этот раз мы использовали немного другие параметры компиляции:
 
-    - Мы указали `-o hello2.html`, чтобы компилятор по прежнему генерировал необходимый JavaScript-код и `.html` файл.
-    - Также, мы указали `--shell-file html_template/shell_minimal.html` чтобы компилятор использовал ваш шаблон для создания HTML страницы запускающей этот пример.
+   - Мы указали `-o hello2.html`, чтобы компилятор по прежнему генерировал необходимый JavaScript-код и `.html` файл.
+   - Также, мы указали `--shell-file html_template/shell_minimal.html` чтобы компилятор использовал ваш шаблон для создания HTML страницы запускающей этот пример.
 
 4. Теперь давайте запустим этот пример. Команда, указанная выше, сгенерирует файл `hello2.html`, который будет иметь тоже содержание что и шаблон, но с некоторым кодом, добавленным в процесс загрузки сгенерированного wasm, запускающим его и т.д. Откройте его в своём браузере, и вы увидите тот же результат, что и прошлом примере.
 
@@ -101,56 +100,58 @@ translation_of: WebAssembly/C_to_wasm
 
 1. Для начала сохраните следующий код в файле `hello3.c` в новом каталоге:
 
-    ```cpp
-    #include <stdio.h>
-    #include <emscripten/emscripten.h>
+   ```cpp
+   #include <stdio.h>
+   #include <emscripten/emscripten.h>
 
-    int main(int argc, char ** argv) {
-        printf("Hello World\n");
-    }
+   int main(int argc, char ** argv) {
+       printf("Hello World\n");
+   }
 
-    #ifdef __cplusplus
-    extern "C" {
-    #endif
+   #ifdef __cplusplus
+   extern "C" {
+   #endif
 
-    void EMSCRIPTEN_KEEPALIVE myFunction(int argc, char ** argv) {
-      printf("MyFunction Called\n");
-    }
+   void EMSCRIPTEN_KEEPALIVE myFunction(int argc, char ** argv) {
+     printf("MyFunction Called\n");
+   }
 
-    #ifdef __cplusplus
-    }
-    #endif
-    ```
+   #ifdef __cplusplus
+   }
+   #endif
+   ```
 
-    По умолчанию, код созданный Emscripten, всегда просто вызывает функцию `main()` , а остальные неиспользуемые функции удаляются. Добавьте определение `EMSCRIPTEN_KEEPALIVE` перед именем функции чтобы этого не происходило. Также вы должны подключить библиотеку `emscripten.h` для использования `EMSCRIPTEN_KEEPALIVE`.
+   По умолчанию, код созданный Emscripten, всегда просто вызывает функцию `main()` , а остальные неиспользуемые функции удаляются. Добавьте определение `EMSCRIPTEN_KEEPALIVE` перед именем функции чтобы этого не происходило. Также вы должны подключить библиотеку `emscripten.h` для использования `EMSCRIPTEN_KEEPALIVE`.
 
-    > **Примечание:** Мы используем блоки `#ifdef` чтобы, пример оставался рабочим если вы попытаетесь использовать C++ код. Из за различия в правилах преобразования имён между Си и Си++, этот код может сломаться, но мы написали его так, что функция будет рассматриваться как функция Си даже если вы будете использовать Си++.
+   > **Примечание:** Мы используем блоки `#ifdef` чтобы, пример оставался рабочим если вы попытаетесь использовать C++ код. Из за различия в правилах преобразования имён между Си и Си++, этот код может сломаться, но мы написали его так, что функция будет рассматриваться как функция Си даже если вы будете использовать Си++.
 
 2. Теперь добавьте `html_template/shell_minimal.html` в ваш новый каталог, просто для удобства. В настоящем проекте стоит размещать его в специально определённый каталог.
 3. Теперь снова займёмся этапом компиляции. Внутри вашего последнего каталога, используя терминал, скомпилируйте ваш Си код следующей командой. (Обратите внимание что при компиляции обязательно нужно использовать опцию NO_EXIT_RUNTIME, иначе после выполнения функции `main()`, рабочий цикл будет завершён. Это приведёт, например, к вызову функции atexits и дальше будет невозможно использовать наш скомпилированный код. Другими словами это необходимо для правильной эмуляции Си.)
 
-    ```bash
-    emcc -o hello3.html hello3.c -O3 -s WASM=1 --shell-file html_template/shell_minimal.html -s NO_EXIT_RUNTIME=1  -s EXTRA_EXPORTED_RUNTIME_METHODS='["ccall"]'
-    ```
+   ```bash
+   emcc -o hello3.html hello3.c -O3 -s WASM=1 --shell-file html_template/shell_minimal.html -s NO_EXIT_RUNTIME=1  -s EXTRA_EXPORTED_RUNTIME_METHODS='["ccall"]'
+   ```
 
 4. Если вы снова запустите пример в своём браузере, вы увидите тоже самое что и до этого!
 5. Теперь нам нужно вызвать нашу новую функцию `myFunction()` из JavaScript. Прежде всего, добавьте {{htmlelement("button")}} как показано ниже, чуть выше первого открывающего тега `<script type='text/javascript'>`.
 
-    ```html
-    <button class="mybutton">Run myFunction</button>
-    ```
+   ```html
+   <button class="mybutton">Run myFunction</button>
+   ```
 
 6. Теперь добавьте следующий код в конце первого элемента {{htmlelement("script")}} (чуть выше закрывающего тега `</script>`):
 
-    ```js
-    document.querySelector('.mybutton').addEventListener('click', function(){
-      alert('check console');
-      var result = Module.ccall('myFunction', // name of C function
-                                 null, // return type
-                                 null, // argument types
-                                 null); // arguments
-    });
-    ```
+   ```js
+   document.querySelector(".mybutton").addEventListener("click", function () {
+     alert("check console");
+     var result = Module.ccall(
+       "myFunction", // name of C function
+       null, // return type
+       null, // argument types
+       null,
+     ); // arguments
+   });
+   ```
 
 Это показывает как использовать `ccall()` для вызова экспортируемой функции.
 

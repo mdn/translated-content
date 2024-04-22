@@ -16,7 +16,7 @@ slug: Web/API/FetchEvent/clientId
 ## 示例
 
 ```js
-self.addEventListener('fetch', (event) => {
+self.addEventListener("fetch", (event) => {
   console.log(event.clientId);
 });
 ```

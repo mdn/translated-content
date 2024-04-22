@@ -1,5 +1,5 @@
 ---
-title: ':only-child'
+title: ":only-child"
 slug: Web/CSS/:only-child
 ---
 
@@ -13,6 +13,8 @@ p:only-child {
   background-color: lime;
 }
 ```
+
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-only-child.html", "tabbed-shorter")}}
 
 > **メモ:** 最初の定義では、親のある要素のみが選択されていました。 Selectors Level 4 の初期に、これは必要なくなりました。
 
@@ -36,7 +38,10 @@ p:only-child {
 <div>
   <div>I am the 1st sibling.</div>
   <div>I am the 2nd sibling.</div>
-  <div>I am the 3rd sibling, <div>but this is an only child.</div></div>
+  <div>
+    I am the 3rd sibling,
+    <div>but this is an only child.</div>
+  </div>
 </div>
 ```
 
@@ -64,12 +69,14 @@ div {
 
 ```html
 <ol>
-  <li>First
+  <li>
+    First
     <ul>
       <li>This list has just one element.</li>
     </ul>
   </li>
-  <li>Second
+  <li>
+    Second
     <ul>
       <li>This list has three elements.</li>
       <li>This list has three elements.</li>

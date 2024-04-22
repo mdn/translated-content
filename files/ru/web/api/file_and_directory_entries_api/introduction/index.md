@@ -1,9 +1,8 @@
 ---
 title: Введение в API файлов и каталогов
 slug: Web/API/File_and_Directory_Entries_API/Introduction
-translation_of: Web/API/File_and_Directory_Entries_API/Introduction
-original_slug: Web/API/File_and_Directory_Entries_API/Введение
 ---
+
 {{DefaultAPISidebar("File System API")}}{{Non-standard_header}}
 
 API файлов и каталогов эмулирует для веб-приложений локальную файловую систему. У вас есть возможность создания приложений, которые могут читать, записывать и создавать файлы и директории в изолированной виртуальной файловой системе.
@@ -168,23 +167,13 @@ This section defines and explains terms used in the File and Directory Entries A
 - temporary storage
   - : Transient storage is available to any web app. It is automatic and does not need to be requested, but the browser can delete the storage without warning.
 
-## Specifications
+## Спецификации
 
-| Specification                            | Status                               | Comment               |
-| ---------------------------------------- | ------------------------------------ | --------------------- |
-| {{SpecName('File System API')}} | {{Spec2('File System API')}} | Draft of proposed API |
+{{Specifications}}
 
-This API has no official W3C or WHATWG specification.
-
-## Browser compatibility
-
-### `FileSystem`
+## Совместимость с браузерами
 
 {{Compat}}
-
-### `FileSystemSync` property
-
-{{Compat("api.FileSystemSync", 0)}}
 
 ## See also
 

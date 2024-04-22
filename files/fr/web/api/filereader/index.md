@@ -1,12 +1,6 @@
 ---
 title: FileReader
 slug: Web/API/FileReader
-tags:
-  - API
-  - File
-  - Interface
-  - Référence(2)
-translation_of: Web/API/FileReader
 ---
 
 {{APIRef("File API")}}

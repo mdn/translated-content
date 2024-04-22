@@ -1,8 +1,6 @@
 ---
 title: Mise en forme avancée des formulaires HTML
 slug: Learn/Forms/Advanced_form_styling
-translation_of: Learn/Forms/Advanced_form_styling
-original_slug: Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Styling_web_forms", "Learn/Forms/UI_pseudo-classes", "Learn/Forms")}}
@@ -59,26 +57,26 @@ Prenons l'exemple suivant avec ces différents contrôles&nbsp;:
 <form>
   <p>
     <label for="search">search:</label>
-    <input id="search" name="search" type="search">
+    <input id="search" name="search" type="search" />
   </p>
   <p>
     <label for="text">text:</label>
-    <input id="text" name="text" type="text">
+    <input id="text" name="text" type="text" />
   </p>
   <p>
     <label for="date">date:</label>
-    <input id="date" name="date" type="datetime-local">
+    <input id="date" name="date" type="datetime-local" />
   </p>
   <p>
     <label for="radio">radio:</label>
-    <input id="radio" name="radio" type="radio">
+    <input id="radio" name="radio" type="radio" />
   </p>
   <p>
     <label for="checkbox">checkbox:</label>
-    <input id="checkbox" name="checkbox" type="checkbox">
+    <input id="checkbox" name="checkbox" type="checkbox" />
   </p>
-  <p><input type="submit" value="submit"></p>
-  <p><input type="button" value="button"></p>
+  <p><input type="submit" value="submit" /></p>
+  <p><input type="button" value="button" /></p>
 </form>
 ```
 
@@ -120,7 +118,7 @@ De façon intéressante, définir la boardule ou l'arrière-plan du champ de rec
 
 {{EmbedGHLiveSample("learning-area/html/forms/styling-examples/styled-search.html", '100%', 200)}}
 
-> **Note :** Vous pourrez remarquer que, dans le champ de recherche, l'icône de croix pour la suppression disparaît quand le champ perd le focus sur Edge et Chrome mais qu'il reste sur Safari. Pour la retirer en CSS (*y compris lorsqu'il y a le focus*), vous pouvez utiliser `input[type="search"]::-webkit-search-cancel-button { display: none; }`.
+> **Note :** Vous pourrez remarquer que, dans le champ de recherche, l'icône de croix pour la suppression disparaît quand le champ perd le focus sur Edge et Chrome mais qu'il reste sur Safari. Pour la retirer en CSS (_y compris lorsqu'il y a le focus_), vous pouvez utiliser `input[type="search"]::-webkit-search-cancel-button { display: none; }`.
 
 ### Mettre en forme les cases à cocher et les boutons radio
 
@@ -129,7 +127,7 @@ La mise en forme d'une case à cocher ou d'un bouton radio s'avère délicate pa
 Prenons un cas de test simple&nbsp;:
 
 ```html
-<span><input type="checkbox"></span>
+<span><input type="checkbox" /></span>
 ```
 
 ```css
@@ -166,19 +164,19 @@ Comme nous l'avons vu, il est possible de retirer l'apparence par défaut d'une 
 
     <p>
       <label>
-        <input type="checkbox" name="fruit-1" value="cherry">
+        <input type="checkbox" name="fruit-1" value="cherry" />
         J'aime les cerises
       </label>
     </p>
     <p>
       <label>
-        <input type="checkbox" name="fruit-2" value="banana" disabled>
+        <input type="checkbox" name="fruit-2" value="banana" disabled />
         Je ne peux pas aimer les bananes
       </label>
     </p>
     <p>
       <label>
-        <input type="checkbox" name="fruit-3" value="strawberry">
+        <input type="checkbox" name="fruit-3" value="strawberry" />
         J'aime les fraises
       </label>
     </p>
@@ -266,7 +264,7 @@ Dans cet exemple, on utilise le CSS suivant&nbsp;:
 
 ```css
 body {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   margin: 20px auto;
   max-width: 400px;
 }
@@ -292,7 +290,12 @@ select {
   position: absolute;
 }
 
-button, label, input, select, progress, meter {
+button,
+label,
+input,
+select,
+progress,
+meter {
   display: block;
   font-family: inherit;
   font-size: 100%;
@@ -303,7 +306,10 @@ button, label, input, select, progress, meter {
   height: 30px;
 }
 
-input[type="text"], input[type="datetime-local"], input[type="color"], select {
+input[type="text"],
+input[type="datetime-local"],
+input[type="color"],
+select {
   box-shadow: inset 1px 1px 3px #ccc;
   border-radius: 5px;
 }
@@ -327,7 +333,12 @@ Comme vous pouvez le voir, on arrive à avoir un aspect relativement uniforme po
 Nous avons appliqué quelques règles CSS pour normaliser les contrôles et les libellés associés afin que leur dimensionnement, le choix de la police, etc. soient cohérents (voir l'article précédent pour plus d'explications)&nbsp;:
 
 ```css
-button, label, input, select, progress, meter {
+button,
+label,
+input,
+select,
+progress,
+meter {
   display: block;
   font-family: inherit;
   font-size: 100%;
@@ -342,7 +353,10 @@ button, label, input, select, progress, meter {
 Nous ajoutons également des ombres et des coins arrondis aux contrôles qui le nécessitent&nbsp;:
 
 ```css
-input[type="text"], input[type="datetime-local"], input[type="color"], select {
+input[type="text"],
+input[type="datetime-local"],
+input[type="color"],
+select {
   box-shadow: inset 1px 1px 3px #ccc;
   border-radius: 5px;
 }
@@ -370,11 +384,13 @@ select {
 Nous allons créer notre propre icone à l'aide de contenu généré. On place un élément contenant le contrôle afin que [`::before`](/fr/docs/Web/CSS/::before)/[`::after`](/fr/docs/Web/CSS/::after) puissent fonctionner (en effet, ils n'ont pas d'effet sur les éléments `<select>`, car le contenu généré est placé relativement à la boîte de formatage d'un élément et que les champs de formulaires fonctionnent comme des éléments remplacés et ils n'ont donc pas de boîte de formatage)&nbsp;:
 
 ```html
-<div class="select-wrapper"><select id="select" name="select">
-  <option>Banane</option>
-  <option>Cerise</option>
-  <option>Citron</option>
-</select></div>
+<div class="select-wrapper">
+  <select id="select" name="select">
+    <option>Banane</option>
+    <option>Cerise</option>
+    <option>Citron</option>
+  </select>
+</div>
 ```
 
 On utilise alors du contenu généré afin de créer une flèche qui pointe vers le bas et on la situe à la bonne place avec du positionnement&nbsp;:

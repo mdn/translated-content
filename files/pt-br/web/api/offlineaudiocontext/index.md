@@ -49,7 +49,7 @@ Neste ponto, criamos outro contexto de áudio, criamos um {{domxref("AudioBuffer
 // define o contexto de áudio online e offline
 
 var audioCtx = new AudioContext();
-var offlineCtx = new OfflineAudioContext(2,44100*40,44100);
+var offlineCtx = new OfflineAudioContext(2, 44100 * 40, 44100);
 
 source = offlineCtx.createBufferSource();
 
@@ -59,36 +59,40 @@ source = offlineCtx.createBufferSource();
 function getData() {
   request = new XMLHttpRequest();
 
-  request.open('GET', 'viper.ogg', true);
+  request.open("GET", "viper.ogg", true);
 
-  request.responseType = 'arraybuffer';
+  request.responseType = "arraybuffer";
 
-  request.onload = function() {
+  request.onload = function () {
     var audioData = request.response;
 
-    audioCtx.decodeAudioData(audioData, function(buffer) {
+    audioCtx.decodeAudioData(audioData, function (buffer) {
       myBuffer = buffer;
       source.buffer = myBuffer;
       source.connect(offlineCtx.destination);
       source.start();
       //source.loop = true;
-      offlineCtx.startRendering().then(function(renderedBuffer) {
-        console.log('Rendering completed successfully');
-        var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-        var song = audioCtx.createBufferSource();
-        song.buffer = renderedBuffer;
+      offlineCtx
+        .startRendering()
+        .then(function (renderedBuffer) {
+          console.log("Rendering completed successfully");
+          var audioCtx = new (window.AudioContext ||
+            window.webkitAudioContext)();
+          var song = audioCtx.createBufferSource();
+          song.buffer = renderedBuffer;
 
-        song.connect(audioCtx.destination);
+          song.connect(audioCtx.destination);
 
-        play.onclick = function() {
-          song.start();
-        }
-      }).catch(function(err) {
-          console.log('Rendering failed: ' + err);
+          play.onclick = function () {
+            song.start();
+          };
+        })
+        .catch(function (err) {
+          console.log("Rendering failed: " + err);
           // Nota: A promessa deve rejeitar quando o StartRendering é chamado uma segunda vez em um OfflineAudioContext
-      });
+        });
     });
-  }
+  };
 
   request.send();
 }
@@ -100,13 +104,11 @@ getData();
 
 ## Especificações
 
-| Specification                                                                                        | Status                               | Comment            |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('Web Audio API', '#OfflineAudioContext', 'OfflineAudioContext')}} | {{Spec2('Web Audio API')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.OfflineAudioContext")}}
+{{Compat}}
 
 ## Veja também
 

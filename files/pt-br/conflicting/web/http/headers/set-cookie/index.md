@@ -1,7 +1,6 @@
 ---
 title: Set-Cookie2
 slug: conflicting/Web/HTTP/Headers/Set-Cookie
-original_slug: Web/HTTP/Headers/Set-Cookie2
 ---
 
 {{HTTPSidebar}}
@@ -50,7 +49,7 @@ Set-Cookie2: <cookie-name>=<cookie-value>, <cookie-name>=<cookie-value>, ...
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Set-Cookie2")}}
+{{Compat}}
 
 ## Veja também
 

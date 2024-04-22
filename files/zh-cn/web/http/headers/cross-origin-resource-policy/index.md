@@ -9,9 +9,9 @@ slug: Web/HTTP/Headers/Cross-Origin-Resource-Policy
 
 **`Cross-Origin-Resource-Policy`** 响应头会指示浏览器阻止对指定资源的无源跨域/跨站点请求。
 
-| Header type                                      | {{Glossary("Response header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| Header type                           | {{Glossary("Response header")}} |
+| ------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                              |
 
 ## 语法
 

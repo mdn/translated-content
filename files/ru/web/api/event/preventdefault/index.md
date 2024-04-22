@@ -1,12 +1,6 @@
 ---
 title: Event.preventDefault()
 slug: Web/API/Event/preventDefault
-tags:
-  - DOM
-  - preventDefault
-  - метод
-  - события
-translation_of: Web/API/Event/preventDefault
 ---
 
 {{ apiRef("DOM") }}Метод preventDefault () интерфейса {{domxref ("Event")}} сообщает {{Glossary("User agent")}}, что если событие не обрабатывается явно, его действие по умолчанию не должно выполняться так, как обычно. Событие продолжает распространяться как обычно, до тех пор, пока один из его обработчиков не вызывает методы {{domxref ("Event.stopPropagation", " stopPropagation ()")}} или {{domxref (" Event.stopImmediatePropagation", " stopImmediatePropagation ()")}}, любой из которых сразу же прекращает распространение.Как отмечено ниже, вызов метода preventDefault () для события, не подлежащего отмене, например события, отправленного через {{domxref("EventTarget.dispatchEvent ()")}}, без указания cancelable: true не имеет эффекта.
@@ -22,32 +16,30 @@ event.preventDefault();
 По умолчанию щелчок по флажку переключает его состояние на противоположное. В этом примере показано, как предотвратить такое поведение:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-<title>Пример preventDefault</title>
+  <head>
+    <title>Пример preventDefault</title>
 
-<script>
-function stopDefAction(evt) {
-    evt.preventDefault();
-}
+    <script>
+      function stopDefAction(evt) {
+        evt.preventDefault();
+      }
 
-document.getElementById('my-checkbox').addEventListener(
-    'click', stopDefAction, false
-);
-</script>
-</head>
+      document
+        .getElementById("my-checkbox")
+        .addEventListener("click", stopDefAction, false);
+    </script>
+  </head>
 
-<body>
+  <body>
+    <p>Пожалуйста, щёлкните по флажку.</p>
 
-<p>Пожалуйста, щёлкните по флажку.</p>
-
-<form>
-    <input type="checkbox" id="my-checkbox" />
-    <label for="my-checkbox">Checkbox</label>
-</form>
-
-</body>
+    <form>
+      <input type="checkbox" id="my-checkbox" />
+      <label for="my-checkbox">Checkbox</label>
+    </form>
+  </body>
 </html>
 ```
 
@@ -65,22 +57,25 @@ document.getElementById('my-checkbox').addEventListener(
 ```
 
 ```js
-function Init () {
-    var myTextbox = document.getElementById('my-textbox');
-    myTextbox.addEventListener( 'keypress', checkName, false );
+function Init() {
+  var myTextbox = document.getElementById("my-textbox");
+  myTextbox.addEventListener("keypress", checkName, false);
 }
 
 function checkName(evt) {
-    var charCode = evt.charCode;
-    if (charCode != 0) {
-        if (charCode < 97 || charCode > 122) {
-            evt.preventDefault();
-            alert(
-                "Пожалуйста, используйте только буквы нижнего регистра на латинице"
-                + "\n" + "charCode: " + charCode + "\n"
-            );
-        }
+  var charCode = evt.charCode;
+  if (charCode != 0) {
+    if (charCode < 97 || charCode > 122) {
+      evt.preventDefault();
+      alert(
+        "Пожалуйста, используйте только буквы нижнего регистра на латинице" +
+          "\n" +
+          "charCode: " +
+          charCode +
+          "\n",
+      );
     }
+  }
 }
 ```
 
@@ -113,3 +108,7 @@ function checkName(evt) {
 ## Спецификации
 
 {{Specifications}}
+
+## Совместимость с браузерами
+
+{{Compat}}

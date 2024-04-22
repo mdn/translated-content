@@ -1,14 +1,6 @@
 ---
 title: Document.location
 slug: Web/API/Document/location
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Propriété
-  - Reference
-  - lecture seule
-translation_of: Web/API/Document/location
 ---
 
 La propriété en lecture seule **`Document.location`** renvoie un objet [`Location`](/fr/docs/Web/API/Location), contenant les informations sur l'URL du document et fournit des moyens pour modifier cette URL ou charger une autre URL.
@@ -22,8 +14,8 @@ Si le document courant n'est pas un contexte de navigation, la valeur renvoyée 
 ## Syntaxe
 
 ```js
-locationObj = document.location
-document.location = 'http://www.mozilla.org' // équivalent à document.location.href = 'http://www.mozilla.org'
+locationObj = document.location;
+document.location = "http://www.mozilla.org"; // équivalent à document.location.href = 'http://www.mozilla.org'
 ```
 
 ## Exemple

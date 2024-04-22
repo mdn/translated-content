@@ -16,7 +16,7 @@ slug: Web/API/EventTarget/dispatchEvent
 ## 구문
 
 ```js
-dispatchEvent(event)
+dispatchEvent(event);
 ```
 
 ### 매개변수

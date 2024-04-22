@@ -1,7 +1,7 @@
 ---
 title: Firefox 108 for developers
 slug: Mozilla/Firefox/Releases/108
-l10n: 
+l10n:
   sourceCommit: edeb48d22b0865ede34c8ca70cd2eb60010cbf9c
 ---
 

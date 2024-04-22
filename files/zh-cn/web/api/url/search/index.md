@@ -25,7 +25,9 @@ object.search = string;
 ## 例子
 
 ```js
-var url = new URL('https://developer.mozilla.org/en-US/docs/Web/API/URL/search?q=123');
+var url = new URL(
+  "https://developer.mozilla.org/zh-CN/docs/Web/API/URL/search?q=123",
+);
 var queryString = url.search; // Returns:"?q=123"
 ```
 

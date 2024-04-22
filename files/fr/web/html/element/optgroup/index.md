@@ -1,13 +1,6 @@
 ---
 title: <optgroup>
 slug: Web/HTML/Element/optgroup
-tags:
-  - Element
-  - Formulaires
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/optgroup
 ---
 
 {{HTMLSidebar}}
@@ -22,9 +15,9 @@ L'élément HTML **`<optgroup>`**, utilisé dans un formulaire, permet de créer
 
 Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
 
-- {{htmlattrdef("disabled")}}
+- `disabled`
   - : Si cet attribut booléen est défini et aucun élément du groupe d'options ne peut être sélectionné. Cet élément ne recevra pas les évènements de navigation (tels que les clics ou les changements de focus). Les navigateurs affichent ces éléments en les grisant.
-- {{htmlattrdef("label")}}
+- `label`
   - : Le nom du groupe d'options qui peut être affiché par le navigateur. Cet attribut est obligatoire.
 
 ## Exemples
@@ -101,4 +94,4 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
 
 ## Voir aussi
 
-- Les autres éléments relatifs aux formulaires : {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("option")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} et {{HTMLElement("meter")}}.
+- Les autres éléments relatifs aux formulaires : {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("option")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} et {{HTMLElement("meter")}}.

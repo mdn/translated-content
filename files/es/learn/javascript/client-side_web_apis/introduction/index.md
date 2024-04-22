@@ -1,7 +1,6 @@
 ---
 title: Introducción a las APIs web
 slug: Learn/JavaScript/Client-side_web_APIs/Introduction
-original_slug: Learn/JavaScript/Client-side_web_APIs/Introducción
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs")}}
@@ -91,15 +90,21 @@ Volvamos al ejemplo de la API de Geolocalización, que es una API muy simple que
 ¿Cómo interactúan estos objetos? Si miras a nuestro ejemplo [maps-example.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/maps-example.html) ([ver también en vivo](http://mdn.github.io/learning-area/javascript/apis/introduction/maps-example.html)), encontrarás el siguiente código:
 
 ```js
-navigator.geolocation.getCurrentPosition(function(position) {
-  var latlng = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+navigator.geolocation.getCurrentPosition(function (position) {
+  var latlng = new google.maps.LatLng(
+    position.coords.latitude,
+    position.coords.longitude,
+  );
   var myOptions = {
     zoom: 8,
     center: latlng,
     mapTypeId: google.maps.MapTypeId.TERRAIN,
-    disableDefaultUI: true
-  }
-  var map = new google.maps.Map(document.querySelector("#map_canvas"), myOptions);
+    disableDefaultUI: true,
+  };
+  var map = new google.maps.Map(
+    document.querySelector("#map_canvas"),
+    myOptions,
+  );
 });
 ```
 
@@ -136,13 +141,18 @@ Si la primera línea no ha retornado todavía su resultado, la segunda línea la
 Vamos a combinar la API de geolocalización con una API de terceros — la API de Google Maps — que se usa para dibujar la localización retornada por `getCurrentPosition()` en un mapa de Google. Haremos disponible esta API en nuestra página vinculándonos a ella — encontrarás esta línea en el HTML:
 
 ```html
-<script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyDDuGt0E5IEGkcE6ZfrKfUtE9Ko_de66pA"></script>
+<script
+  type="text/javascript"
+  src="https://maps.google.com/maps/api/js?key=AIzaSyDDuGt0E5IEGkcE6ZfrKfUtE9Ko_de66pA"></script>
 ```
 
 Para usar la API, primero creamos una instancia del objeto `LatLng` usando el constructor `google.maps.LatLng()`, que toma los valores de nuestra {{domxref("Coordinates.latitude")}} y {{domxref("Coordinates.longitude")}} geolocalizada como parámetros:
 
 ```js
-var latlng = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+var latlng = new google.maps.LatLng(
+  position.coords.latitude,
+  position.coords.longitude,
+);
 ```
 
 Este objeto quedará establecido como el valor de la propiedad `center` de un objeto de opciones que hemos llamado `myOptions`. Entonces crearemos una instancia de objeto para representar nuestro mapa llamando al constructor de `google.maps.Map()`, pasándole sus dos parámetros — una referencia al elemento {{htmlelement("div")}} donde queremos presentar el mapa (con ID `map_canvas`), y el objeto de opciones que acabamos de definir.
@@ -152,8 +162,8 @@ var myOptions = {
   zoom: 8,
   center: latlng,
   mapTypeId: google.maps.MapTypeId.TERRAIN,
-  disableDefaultUI: true
-}
+  disableDefaultUI: true,
+};
 
 var map = new google.maps.Map(document.querySelector("#map_canvas"), myOptions);
 ```
@@ -171,23 +181,23 @@ Cuando uses una API, debes estar seguro que conoces dónde están los puntos de 
 La API del Modelo de Objetos del Navegador (DOM) tiene un punto de acceso todavía más simple — sus características las podemos encontrar colgando del objeto {{domxref("Document")}}, o una instancia de un elemento HTML que queremos modificar de alguna forma, por ejemplo:
 
 ```js
-var em = document.createElement('em'); // crear un nuevo elemento em
-var para = document.querySelector('p'); // referencia a un elemento p existente
-em.textContent = 'Hello there!'; // dar al em algo de contenido textual
+var em = document.createElement("em"); // crear un nuevo elemento em
+var para = document.querySelector("p"); // referencia a un elemento p existente
+em.textContent = "Hello there!"; // dar al em algo de contenido textual
 para.appendChild(em); // ubicar el em dentro del párrafo
 ```
 
 Otras APIs tienen puntos de acceso ligeramente más complejos, que a menudo implican crear un contexto específico para escribir el código de la API. Por ejemplo, el objeto de contexto de la API Canvas se crea obteniendo una referencia al elemento {{htmlelement("canvas")}} en el que quieres dibujar, y a continuación invocando su método {{domxref("HTMLCanvasElement.getContext()")}}:
 
 ```js
-var canvas = document.querySelector('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.querySelector("canvas");
+var ctx = canvas.getContext("2d");
 ```
 
 Cualquier cosa que queramos hacerle al canvas, se conseguirá llamando a las propiedades y métodos del objeto de contexto (que es una instancia de {{domxref("CanvasRenderingContext2D")}}), por ejemplo:
 
 ```js
-Ball.prototype.draw = function() {
+Ball.prototype.draw = function () {
   ctx.beginPath();
   ctx.fillStyle = this.color;
   ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
@@ -206,17 +216,18 @@ Algunas APIs web no contienen eventos, pero algunas otras sí contienen un buen 
 El siguiente código aporta un ejemplo simple de cómo se debe usar esto:
 
 ```js
-var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+var requestURL =
+  "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json";
 var request = new XMLHttpRequest();
-request.open('GET', requestURL);
-request.responseType = 'json';
+request.open("GET", requestURL);
+request.responseType = "json";
 request.send();
 
-request.onload = function() {
+request.onload = function () {
   var superHeroes = request.response;
   populateHeader(superHeroes);
   showHeroes(superHeroes);
-}
+};
 ```
 
 > **Nota:** puedes ver este código en acción en nuestro ejemplo [ajax.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/ajax.html) ([verlo en vivo](http://mdn.github.io/learning-area/javascript/apis/introduction/ajax.html)).

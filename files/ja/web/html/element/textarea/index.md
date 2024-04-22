@@ -1,8 +1,8 @@
 ---
-title: '<textarea>: テキストエリア要素'
+title: "<textarea>: テキストエリア要素"
 slug: Web/HTML/Element/textarea
 l10n:
-  sourceCommit: b56483692fd247dd7c5f11af4233ad40bf19ac31
+  sourceCommit: 0f4b28bdc51e89cd25d132b9db12e3e903a9c5aa
 ---
 
 {{HTMLSidebar}}
@@ -15,14 +15,18 @@ l10n:
 
 - `id` 属性により、アクセシビリティのために `<textarea>` を {{htmlelement("label")}} 要素に結びつけることができる
 - `name` 属性により、フォームが送信されたときにデータポイントに関連付けられた名前を設定している
-- `rows` 属性と `cols` 属性により、 `<textarea>` が占める実際の大きさを指定することができます。ブラウザーの既定値が様々である可能性があるため、一貫性のためにこれらの値を設定することはよいことでしょう。
-- 既定のコンテンツが開始タグと終了タグの間に入っています。 `<textarea>` は `value` 属性に対応していません。
+- `rows` 属性と `cols` 属性により、`<textarea>` が占める実際の大きさを指定することができます。ブラウザーの既定値が様々である可能性があるため、一貫性のためにこれらの値を設定することはよいことでしょう。
+- 既定のコンテンツが開始タグと終了タグの間に入っています。`<textarea>` は `value` 属性に対応していません。
 
-`<textarea>` 要素は他にも、フォームの `<input>` と共通の属性のいくつか、例えば `autocomplete`, `autofocus`, `disabled`, `placeholder`, `readonly`, `required` などを受け付けます。
+`<textarea>` 要素は他にも、フォームの `<input>` と共通の属性のいくつか、例えば `autocapitalize`, `autocomplete`, `autofocus`, `disabled`, `placeholder`, `readonly`, `required` などを受け付けます。
 
 ## 属性
 
-この要素は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)を持ちます。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
+
+- `autocapitalize`
+
+  - : 入力されたテキストを自動的に大文字にするかどうか、大文字にする場合はその方法を制御します。詳しい情報はグローバル属性 [`autocapitalize`](/ja/docs/Web/HTML/Global_attributes/autocapitalize) のページを参照してください。
 
 - `autocomplete`
 
@@ -31,7 +35,7 @@ l10n:
     - `off`: ユーザーはフォームを使用するたびにフィールドへ値を明示的に入力しなければならないか、ドキュメントが独自の自動補完を提供します。ブラウザーは入力内容の自動補完を行いません。
     - `on`: ブラウザーはユーザーが以前入力した値を元に、値の自動補完を行うことができます。
 
-     `autocomplete` 属性を `<textarea>` 要素に指定していない場合、ブラウザーは `<textarea>` 要素のフォームオーナーの `autocomplete` 属性の値を使用します。フォームオーナーは当該 `<textarea>` 要素が子孫になっている {{HTMLElement("form")}} 要素か、textarea 要素の `form` 属性で `id` を指定されている form 要素です。詳しくは、{{HTMLElement("form")}} 要素の [`autocomplete`](/ja/docs/Web/HTML/Element/form#autocomplete) 属性をご覧ください。
+    `autocomplete` 属性を `<textarea>` 要素に指定していない場合、ブラウザーは `<textarea>` 要素のフォームオーナーの `autocomplete` 属性の値を使用します。フォームオーナーは当該 `<textarea>` 要素が子孫になっている {{HTMLElement("form")}} 要素か、textarea 要素の `form` 属性で `id` を指定されている form 要素です。詳しくは、{{HTMLElement("form")}} 要素の [`autocomplete`](/ja/docs/Web/HTML/Element/form#autocomplete) 属性をご覧ください。
 
 - `autocorrect` {{non-standard_inline}}
 
@@ -46,6 +50,11 @@ l10n:
   - : この論理属性で、ページ読み込み時にフォームコントロールがフォーカスを持つべきであることを指定できます。文書内でこの属性を指定することができる要素は、フォーム関連要素のうちのひとつだけです。
 - `cols`
   - : 平均的な文字幅による、テキストコントロールの外見上の幅です。この属性を指定する場合は、正の整数を与えなければなりません。指定されなかった場合の既定値は `20` です。
+- `dirname`
+
+  - : この属性は `<input>` 要素の [`dirname`](/ja/docs/Web/HTML/Element/input#dirname) 属性と同様に、要素の内容のテキストの書字方向を示すために使用します。
+    詳しくは、 [`dirname` 属性](/ja/docs/Web/HTML/Attributes/dirname)を参照してください。
+
 - `disabled`
   - : この真偽値属性は、ユーザーがそのコントロールを利用できないことを示します。(もしこの属性が指定されていない場合、コントロールはその設定を親要素、例えば {{ HTMLElement("fieldset") }} 要素から継承します。もし親要素に `disabled` 属性を持つものがなければ、そのコントロールは利用可能です。)
 - `form`
@@ -58,9 +67,9 @@ l10n:
   - : コントロールの名前です。
 - `placeholder`
 
-  - : コントロールに何を入力できるかに関する、ユーザーへの助言です。プレイスホルダーのテキスト内にあるキャリッジリターンやラインフィードは、ヒントを表示する際に改行として扱わなければなりません。
+  - : コントロールに何を入力できるかに関する、ユーザーへの助言です。プレースホルダーのテキスト内にあるキャリッジリターンやラインフィードは、ヒントを表示する際に改行として扱わなければなりません。
 
-    > **メモ:** プレイスホルダーはフォームに入力されるべきデータの種類の例を示すためだけに使用してください。入力欄に関連付けられた {{HTMLElement("label")}} 要素の代わりとして使用*しない*でください。全体的な説明は、[`<input>` ラベル](/ja/docs/Web/HTML/Element/input#%E3%83%A9%E3%83%99%E3%83%AB)を参照してください。
+    > **メモ:** プレースホルダーはフォームに入力されるべきデータの種類の例を示すためだけに使用してください。入力欄に関連付けられた {{HTMLElement("label")}} 要素の代わりとして使用*しない*でください。全体的な説明は、[`<input>` ラベル](/ja/docs/Web/HTML/Element/input#%E3%83%A9%E3%83%99%E3%83%AB)を参照してください。
 
 - `readonly`
   - : これは論理属性で、ユーザーがコントロールの値を変更できないことを示します。`disabled` 属性とは異なり、`readonly` 属性はユーザーがコントロールをクリックしたり選択することを妨げません。読み取り専用のコントロールの値は、フォームとともに送信可能です。
@@ -78,10 +87,10 @@ l10n:
 
 - `wrap`
 
-  - : テキストの折り返しの制御法を示します。以下の値を指定可能です。
+  - : フォームの送信において、どのように値を折り返すかを制御するかを示します。以下の値を指定可能です。
 
-    - `hard` : 各行の長さがコントロールの幅を超えないように、ブラウザーが自動的に改行 (CR+LF) を挿入します。`cols` 属性を指定しなければなりません。
-    - `soft` : ブラウザーは値に含まれる改行 (CR+LF のペア) をすべて維持しますが、改行の付加は行いません。
+    - `hard`: ブラウザーは自動的に改行 (CR+LF) を挿入し、各行がコントロールの幅より長くならないようにします。有効にするには、[`cols`](#cols) 属性を指定する必要があります。
+    - `soft`: ブラウザーは、入力された値の改行がすべて `CR+LF` のペアであることを保証しますが、値にそれ以外の改行が追加されることはありません。
     - `off` {{non-standard_inline}}: `soft` に似ていますが外観を `white-space: pre` に変更しますので、`cols` を超えた部分は折り返されず、水平方向にスクロール可能になります。
 
     この属性を指定しない場合の既定値は `soft` です。
@@ -108,7 +117,7 @@ textarea {
 
 ### 有効・無効な値のスタイル付け
 
- `<textarea>` の値が有効であるか無効であるかを (例えば `minlength` と `maxlength` の範囲の中に収まっているか外れているか、または `required`)、 {{cssxref(":valid")}} および {{cssxref(":invalid")}} 擬似クラスを用いて強調表示することができます。例えば以下のように、中の値が有効か無効かでテキストエリアの境界を異なる表示にすることができます。
+`<textarea>` の値が有効であるか無効であるかを (例えば `minlength` と `maxlength` の範囲の中に収まっているか外れているか、または `required`)、 {{cssxref(":valid")}} および {{cssxref(":invalid")}} 擬似クラスを用いて強調表示することができます。例えば以下のように、中の値が有効か無効かでテキストエリアの境界を異なる表示にすることができます。
 
 ```css
 textarea:invalid {
@@ -124,29 +133,49 @@ textarea:valid {
 
 ### 基本的な例
 
-以下の例は、行数と列数と既定の内容だけを設定した、とても単純なテキストエリアを表示します。
+次の例ではテキストエリアを表示させ、行と列の数を設定し、既定のコンテンツを表示させ、ユーザーが要素のサイズを幅 500px、高さ 130px 以上に変更できないように CSS スタイルを設定しています。
 
-```html
-<textarea name="textarea" rows="10" cols="50">ここに何か書いてください</textarea>
+```html-nolint
+<textarea name="textarea" rows="5" cols="15">ここに何か書いてください</textarea>
 ```
 
-{{ EmbedLiveSample('Basic_example','600','150') }}
+```css
+textarea {
+  max-height: 130px;
+  max-width: 500px;
+}
+```
+
+#### 結果
+
+{{EmbedLiveSample('Basic_example')}}
 
 ### "minlength" と "maxlength" を使用した例
 
 この例は文字数の最小値と最大値を、それぞれ 10 と 20 に設定しています。見てみましょう。
 
-```html
-<textarea name="textarea" rows="5" cols="30" minlength="10" maxlength="20">ここに何か書いてください</textarea>
+```html-nolint
+<textarea name="textarea" rows="5" cols="30" minlength="10" maxlength="20">
+ここに何か書いてください…
+</textarea>
 ```
 
-{{ EmbedLiveSample('Example using "minlength" and "maxlength"','600','80') }}
+```css
+textarea {
+  max-height: 130px;
+  max-width: 500px;
+}
+```
 
-なお、 `minlength` は最小値を超えて入力された文字をユーザーが削除することを阻止しませんので、入力された値により `<textarea>` が無効になることがあります。また、 `minlength` の値が (例えば 3 に) 設定されていた場合であっても、 `<textarea>` が空欄である場合は `required` 属性が設定されていない限り有効として扱われます。
+#### 結果
+
+{{EmbedLiveSample('Example using "minlength" and "maxlength"')}}
+
+なお、`minlength` は最小値を超えて入力された文字をユーザーが削除することを阻止しませんので、入力された値により `<textarea>` が無効になることがあります。また、`minlength` の値が (例えば 3 に) 設定されていた場合であっても、`<textarea>` が空欄である場合は `required` 属性が設定されていない限り有効として扱われます。
 
 ### "placeholder" の使用
 
-この例はプレイスホルダーを設定します。ボックスに入力を開始した時に消えることを確認して下さい。
+この例はプレースホルダーを設定します。ボックスに入力を開始した時に消えることを確認して下さい。
 
 ```html
 <textarea
@@ -156,24 +185,45 @@ textarea:valid {
   placeholder="コメントのテキスト"></textarea>
 ```
 
-{{ EmbedLiveSample('Example using "placeholder"','600','80') }}
+```css
+textarea {
+  max-height: 130px;
+  max-width: 500px;
+}
+```
 
-> **メモ:** プレイスホルダーはフォームに入力されるべきデータの種類の例を示すためだけに使用してください。入力欄に関連付けられた {{HTMLElement("label")}} 要素の代わりとして使用*しない*でください。全体的な説明は、[ラベルとプレイスホルダー](/ja/docs/Web/HTML/Element/input)を参照してください。
+#### 結果
+
+{{EmbedLiveSample('Example using "placeholder"')}}
+
+> **メモ:** プレースホルダーはフォームに入力されるべきデータの種類の例を示すためだけに使用してください。入力欄に関連付けられた {{HTMLElement("label")}} 要素の代わりとして使用*しない*でください。全体的な説明は、[ラベルとプレースホルダー](/ja/docs/Web/HTML/Element/input)を参照してください。
 
 ### 無効と読み取り専用
 
-この例では 2 つの `<textarea>` を示しています。一方は `disabled` であり、もう一方は `readonly` です。両方を試してみて動作の違いを確認してください。 `disabled` の要素はどのような方法でも選択できず (値の送信もされません)、 `readonly` の要素は選択可能で内容をコピーできます (そして値は送信されます)。内容が編集できないだけです。
-
-> **メモ:** Chrome など、 Firefox 以外のブラウザーでは、 `disabled` のテキストエリアのコンテンツが選択可能でコピー可能である場合もあります
+この例では 2 つの `<textarea>` を示しています。一方は [`readonly`](/ja/docs/Web/HTML/Attributes/readonly) であり、もう一方は [`disabled`](/ja/docs/Web/HTML/Attributes/disabled) です。
+どちらも編集できませんが、 `readonly` の要素はフォーカスを設定することができ、値がフォームで送信されます。
+`disabled` の要素は送信されず、フォーカスも設定できません。
 
 ```html
-<textarea name="textarea" rows="5" cols="30" disabled>
-disabled のテキストエリアです。</textarea>
 <textarea name="textarea" rows="5" cols="30" readonly>
-readonly のテキストエリアです。</textarea>
+readonly のテキストエリアです。
+</textarea>
+<textarea name="textarea" rows="5" cols="30" disabled>
+disabled のテキストエリアです。
+</textarea>
 ```
 
-{{ EmbedLiveSample('Disabled_and_readonly','600','80') }}
+```css
+textarea {
+  display: block;
+  resize: horizontal;
+  max-width: 500px;
+}
+```
+
+#### 結果
+
+{{EmbedLiveSample('disabled_and_readonly_textareas', '', '230')}}
 
 ## 技術的概要
 
@@ -181,29 +231,33 @@ readonly のテキストエリアです。</textarea>
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Content_categories"
+          >コンテンツカテゴリー</a
+        >
       </th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >,
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >,
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#対話型コンテンツ"
+        <a href="/ja/docs/Web/HTML/Content_categories#対話型コンテンツ"
           >対話型コンテンツ</a
         >,
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#リスト化">リスト化</a>,
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#ラベル付け可能"
+        <a href="/ja/docs/Web/HTML/Content_categories#リスト化"
+          >リスト化</a
+        >,
+        <a href="/ja/docs/Web/HTML/Content_categories#ラベル付け可能"
           >ラベル付け可能</a
         >,
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#リセット可能"
+        <a href="/ja/docs/Web/HTML/Content_categories#リセット可能"
           >リセット可能</a
         >,
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#送信可能"
-          >サブミット可能</a
-        >,
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フォーム関連コンテンツ"
+        <a href="/ja/docs/Web/HTML/Content_categories#送信可能"
+          >送信可能</a
+        >
+        <a href="/ja/docs/Web/HTML/Content_categories#フォーム関連コンテンツ"
           >フォーム関連</a
         >
         要素
@@ -215,12 +269,12 @@ readonly のテキストエリアです。</textarea>
     </tr>
     <tr>
       <th scope="row">タグの省略</th>
-      <td>{{no_tag_omission}}</td>
+      <td>不可。開始および終了タグの両方が必要。</td>
     </tr>
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >を受け入れるすべての要素
       </td>
@@ -256,19 +310,17 @@ readonly のテキストエリアです。</textarea>
 
 ## 関連情報
 
-他のフォーム関連要素:
-
-- {{ HTMLElement("form") }}
-- {{ HTMLElement("button") }}
-- {{ HTMLElement("datalist") }}
-- {{ HTMLElement("legend") }}
-- {{ HTMLElement("label") }}
-- {{ HTMLElement("select") }}
-- {{ HTMLElement("optgroup") }}
-- {{ HTMLElement("option") }}
-- {{ HTMLElement("input") }}
-- {{ HTMLElement("keygen") }}
-- {{ HTMLElement("fieldset") }}
-- {{ HTMLElement("output") }}
-- {{ HTMLElement("progress") }}
-- {{ HTMLElement("meter") }}
+- 他のフォーム関連要素:
+  - {{ HTMLElement("form") }}
+  - {{ HTMLElement("button") }}
+  - {{ HTMLElement("datalist") }}
+  - {{ HTMLElement("legend") }}
+  - {{ HTMLElement("label") }}
+  - {{ HTMLElement("select") }}
+  - {{ HTMLElement("optgroup") }}
+  - {{ HTMLElement("option") }}
+  - {{ HTMLElement("input") }}
+  - {{ HTMLElement("fieldset") }}
+  - {{ HTMLElement("output") }}
+  - {{ HTMLElement("progress") }}
+  - {{ HTMLElement("meter") }}

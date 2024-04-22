@@ -1,10 +1,6 @@
 ---
 title: dur
 slug: Web/SVG/Attribute/dur
-tags:
-  - SVG
-  - SVG атрибуты
-translation_of: Web/SVG/Attribute/dur
 ---
 
 {{SVGRef}}
@@ -13,8 +9,12 @@ translation_of: Web/SVG/Attribute/dur
 
 Пять элементов используют данный атрибут: {{SVGElement("animate")}}, {{SVGElement("animateColor")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, и {{SVGElement("set")}}
 
+## Пример
+
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
@@ -22,17 +22,27 @@ html, body, svg {
 ```html
 <svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg">
   <rect x="0" y="0" width="100" height="100">
-    <animate attributeType="XML" attributeName="y" from="0" to="50"
-        dur="1s" repeatCount="indefinite"/>
+    <animate
+      attributeType="XML"
+      attributeName="y"
+      from="0"
+      to="50"
+      dur="1s"
+      repeatCount="indefinite" />
   </rect>
   <rect x="120" y="0" width="100" height="100">
-    <animate attributeType="XML" attributeName="y" from="0" to="50"
-        dur="3s" repeatCount="indefinite"/>
+    <animate
+      attributeType="XML"
+      attributeName="y"
+      from="0"
+      to="50"
+      dur="3s"
+      repeatCount="indefinite" />
   </rect>
 </svg>
 ```
 
-{{EmbedLiveSample("topExample", "220", "150")}}
+{{EmbedLiveSample("Пример", 220, 150)}}
 
 ## Примечания к использованию
 

@@ -36,8 +36,8 @@ DPI の高い（高解像度の）ディスプレイのために高解像度版�
     <tr>
       <th scope="row">
         <a href="/ja/docs/Web/HTML/Content_categories"
-          >コンテンツカテゴリー<
-        /a>
+          >コンテンツカテゴリー</a
+        >
       </th>
       <td>
         <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"

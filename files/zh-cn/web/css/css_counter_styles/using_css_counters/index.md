@@ -51,8 +51,8 @@ h3::before {
 
 ```css
 h3::before {
-  counter-increment: section;                 /* Increment the value of section counter by 1 */
-  content: "Section " counter(section) ": ";  /* Display counter value in default style (decimal) */
+  counter-increment: section; /* Increment the value of section counter by 1 */
+  content: "Section " counter(section) ": "; /* Display counter value in default style (decimal) */
 }
 ```
 
@@ -87,7 +87,7 @@ h3::before {
 {{cssxref("counters", "counters()")}} 函数也同样有两种形式：`counters(<counter-name>, <separator>)` 和 `counters(<counter-name>, <separator>, <counter-style>)`。生成的文本由在伪元素范围内所有指定名称的计数器的值组成。这些值从最外层到最内层，使用指定的字符串（`<separator>`）分隔。
 
 以上两个函数均可以使用指定的 `<counter-style>` 来渲染其值（默认值为 `decimal`）。你也可以使用
- {{cssxref("list-style-type")}} 属性其他可选的值，或[自定义样式](/zh-CN/docs/Web/CSS/CSS_counter_styles)。
+{{cssxref("list-style-type")}} 属性其他可选的值，或[自定义样式](/zh-CN/docs/Web/CSS/CSS_counter_styles)。
 
 [基础示例](#基础示例)和[计数器嵌套示例](#计数器嵌套示例)这两个示例分别展示了 `counter()` 和 `counters()` 的使用方法。
 
@@ -127,12 +127,12 @@ counter-reset: reversed(section);
 
 ```css
 body {
-  counter-reset: section;                      /* Set a counter named 'section', and its initial value is 0. */
+  counter-reset: section; /* Set a counter named 'section', and its initial value is 0. */
 }
 
 h3::before {
-  counter-increment: section;                  /* Increment the value of section counter by 1 */
-  content: "Section " counter(section) ": ";   /* Display the word 'Section ', the value of
+  counter-increment: section; /* Increment the value of section counter by 1 */
+  content: "Section " counter(section) ": "; /* Display the word 'Section ', the value of
                                                   section counter, and a colon before the content
                                                   of each h3 */
 }
@@ -160,12 +160,14 @@ h3::before {
 
 ```css
 body {
-  counter-reset: reversed(section);           /* Set a counter named 'section', and its initial value is 0. */
+  counter-reset: reversed(
+    section
+  ); /* Set a counter named 'section', and its initial value is 0. */
 }
 
 h3::before {
-  counter-increment: section -1;              /* Decrement the value of section counter by 1 */
-  content: "Section " counter(section) ": ";  /* Display the word 'Section ', the value of
+  counter-increment: section -1; /* Decrement the value of section counter by 1 */
+  content: "Section " counter(section) ": "; /* Display the word 'Section ', the value of
                                                  section counter, and a colon before the content
                                                  of each h3 */
 }
@@ -221,16 +223,16 @@ CSS 计数器对创建目录（多级有序列表）特别有用，因为其会�
 
 ```css
 ol {
-  counter-reset: section;                /* Creates a new instance of the
+  counter-reset: section; /* Creates a new instance of the
                                             section counter with each ol
                                             element */
   list-style-type: none;
 }
 
 li::before {
-  counter-increment: section;            /* Increments only this instance
+  counter-increment: section; /* Increments only this instance
                                             of the section counter */
-  content: counters(section, ".") " ";   /* Combines the values of all instances
+  content: counters(section, ".") " "; /* Combines the values of all instances
                                             of the section counter, separated
                                             by a period */
 }
@@ -238,7 +240,7 @@ li::before {
 
 #### HTML
 
-```html
+```html-nolint
 <ol>
   <li>item</li>          <!-- 1     -->
   <li>item               <!-- 2     -->

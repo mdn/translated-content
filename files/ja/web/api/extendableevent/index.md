@@ -46,28 +46,38 @@ _親である {{domxref("Event")}} からメソッドを継承しています。
 ```js
 const CACHE_VERSION = 1;
 const CURRENT_CACHES = {
-  prefetch: `prefetch-cache-v${CACHE_VERSION}`
+  prefetch: `prefetch-cache-v${CACHE_VERSION}`,
 };
 
-self.addEventListener('install', (event) => {
+self.addEventListener("install", (event) => {
   const urlsToPrefetch = [
-    './static/pre_fetched.txt',
-    './static/pre_fetched.html',
-    'https://www.chromium.org/_/rsrc/1302286216006/config/customLogo.gif'
+    "./static/pre_fetched.txt",
+    "./static/pre_fetched.html",
+    "https://www.chromium.org/_/rsrc/1302286216006/config/customLogo.gif",
   ];
 
-  console.log('Handling install event. Resources to pre-fetch:', urlsToPrefetch);
+  console.log(
+    "Handling install event. Resources to pre-fetch:",
+    urlsToPrefetch,
+  );
 
   event.waitUntil(
-    caches.open(CURRENT_CACHES['prefetch']).then((cache) => {
-      return cache.addAll(urlsToPrefetch.map((urlToPrefetch) => {
-        return new Request(urlToPrefetch, {mode: 'no-cors'});
-      })).then(() => {
-        console.log('すべてのリソースをフェッチし、キャッシュしました。');
-      });
-    }).catch((error) => {
-      console.error('プリフェッチに失敗:', error);
-    })
+    caches
+      .open(CURRENT_CACHES["prefetch"])
+      .then((cache) => {
+        return cache
+          .addAll(
+            urlsToPrefetch.map((urlToPrefetch) => {
+              return new Request(urlToPrefetch, { mode: "no-cors" });
+            }),
+          )
+          .then(() => {
+            console.log("すべてのリソースをフェッチし、キャッシュしました。");
+          });
+      })
+      .catch((error) => {
+        console.error("プリフェッチに失敗:", error);
+      }),
   );
 });
 ```

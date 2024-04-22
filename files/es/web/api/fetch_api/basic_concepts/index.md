@@ -1,7 +1,6 @@
 ---
 title: Conceptos básicos de Fetch
 slug: Web/API/Fetch_API/Basic_concepts
-original_slug: Web/API/Fetch_API/Conceptos_basicos
 ---
 
 {{DefaultAPISidebar("Fetch API")}}

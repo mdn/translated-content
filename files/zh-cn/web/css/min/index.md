@@ -1,7 +1,6 @@
 ---
 title: min()
 slug: Web/CSS/min
-original_slug: Web/CSS/min()
 ---
 
 {{CSSRef}}
@@ -17,7 +16,7 @@ width: min(1vw, 4em, 80px);
 
 ## 语法
 
-`min()` 方法拥有一个或多个逗号分隔符表达式作为参数，表达式的值中最小的值作为参数值。表达式可以是数学函数 (查看 {{CSSxRef("calc", "calc()")}} 了解更多), 字面量，或者其他表达式，比如 {{CSSxRef("attr", "attr()")}}, 可以求得有效值的的类型 (比如 {{CSSxRef("&lt;length&gt;")}})。如果你愿意，你甚至可以在表达式中给每个值一个不同的单位。并且在需要的地方只用圆括号改变计算优先级。
+`min()` 方法拥有一个或多个逗号分隔符表达式作为参数，表达式的值中最小的值作为参数值。表达式可以是数学函数（查看 {{CSSxRef("calc", "calc()")}} 了解更多）、字面量，或者其他表达式，比如 {{CSSxRef("attr", "attr()")}}，可以求得有效值的类型（比如 {{CSSxRef("&lt;length&gt;")}}）。如果你愿意，你甚至可以在表达式中给每个值一个不同的单位。并且在需要的地方只用圆括号改变计算优先级。
 
 ### 注意
 
@@ -44,7 +43,10 @@ width: min(1vw, 4em, 80px);
 ```
 
 ```html
-<img src="https://developer.mozilla.org/static/img/web-docs-sprite.svg" alt="MDN Web Docs" class="logo">
+<img
+  src="https://developer.mozilla.org/static/img/web-docs-sprite.svg"
+  alt="MDN Web Docs"
+  class="logo" />
 ```
 
 {{EmbedLiveSample("Growing_images_to_a_maximum_size", "100%", "60")}}
@@ -58,7 +60,8 @@ CSS 方法的另一个用途时设置响应式组件（form）的最大尺寸：
 看下面的样式：
 
 ```css
-input, label {
+input,
+label {
   padding: 2px;
   box-sizing: border-box;
   display: inline-block;
@@ -78,7 +81,7 @@ form {
 ```html
 <form>
   <label>Type something:</label>
-  <input type="text">
+  <input type="text" />
 </form>
 ```
 

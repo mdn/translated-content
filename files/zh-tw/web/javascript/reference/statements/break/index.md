@@ -46,11 +46,11 @@ The following code uses `break` statements with labeled blocks. A `break` statem
 ```js
 outer_block: {
   inner_block: {
-    console.log('1');
+    console.log("1");
     break outer_block; // breaks out of both inner_block and outer_block
-    console.log(':-('); // skipped
+    console.log(":-("); // skipped
   }
-  console.log('2'); // skipped
+  console.log("2"); // skipped
 }
 ```
 

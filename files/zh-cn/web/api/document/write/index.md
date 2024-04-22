@@ -24,9 +24,8 @@ document.write(markup);
 
 ```html
 <html>
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title><code>document.write()</code> example</title>
 
     <script>
@@ -36,11 +35,10 @@ document.write(markup);
         document.close();
       }
     </script>
-</head>
-<body onload="newContent();">
+  </head>
+  <body onload="newContent();">
     <p>Some original document content.</p>
-</body>
-
+  </body>
 </html>
 ```
 
@@ -54,7 +52,7 @@ document.write(markup);
 
 ```html
 <script>
-  document.write("<h1>Main title</h1>")
+  document.write("<h1>Main title</h1>");
 </script>
 ```
 

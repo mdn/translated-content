@@ -1,13 +1,6 @@
 ---
 title: Element.scrollTo()
 slug: Web/API/Element/scrollTo
-tags:
-  - API
-  - Element
-  - Méthode
-  - Reference
-  - scrollTo
-translation_of: Web/API/Element/scrollTo
 ---
 
 {{ APIRef }}
@@ -17,14 +10,14 @@ La méthode **`scrollTo()`** de l'interface {{domxref("Element")}} permet de fai
 ## Syntaxe
 
 ```js
-element.scrollTo(x-coord, y-coord)
-element.scrollTo(options)
+element.scrollTo(x_coord, y_coord);
+element.scrollTo(options);
 ```
 
 ### Paramètres
 
-- `x-coord` est le pixel le long de l'axe horizontal du document qui doit être affiché en haut à gauche.
-- `y-coord` est le pixel le long de l'axe vertical du document qui doit être affiché en haut à gauche.
+- `x_coord` est le pixel le long de l'axe horizontal du document qui doit être affiché en haut à gauche.
+- `y_coord` est le pixel le long de l'axe vertical du document qui doit être affiché en haut à gauche.
 
 \- ou -
 
@@ -44,7 +37,7 @@ Ou en utilisant `options`&nbsp;:
 element.scrollTo({
   top: 100,
   left: 100,
-  behavior: 'smooth'
+  behavior: "smooth",
 });
 ```
 

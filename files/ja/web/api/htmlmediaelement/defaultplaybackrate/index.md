@@ -21,7 +21,7 @@ double 型です。 `1.0` が「標準速度」で、 `1.0` より小さい値�
 ## 例
 
 ```js
-const obj = document.createElement('video');
+const obj = document.createElement("video");
 console.log(obj.defaultPlaybackRate); // 1
 ```
 

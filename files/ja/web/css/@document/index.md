@@ -37,7 +37,7 @@ l10n:
 
 エスケープされた値を `regexp()` 関数に与える場合は、 CSS でさらにエスケープする必要があります。例えば、一つの `.` (ピリオド) は正規表現ではどんな文字にも一致します。リテラルのピリオドに一致させるには、まず正規表現のルールを使ってエスケープし (`\.` にします)、次に CSS のルールを使ってエスケープしなければなりません (`\\.` にします)。
 
-`@document` は現在のところ Firefox のみが対応しています。 Firefox 以外のブラウザーでこの機能を再現したい場合は、[このポリフィル](https://github.com/An-Error94/Handy-Scripts/tree/master/%40document-polyfill) (@An-Error94 氏作) を使ってみてください。これは、ユーザースクリプトと [data-* 属性](/ja/docs/Web/HTML/Global_attributes/data-*)と[属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)を組み合わせて使用するものです。
+`@document` は現在のところ Firefox のみが対応しています。 Firefox 以外のブラウザーでこの機能を再現したい場合は、[このポリフィル](https://github.com/An-Error94/Handy-Scripts/tree/master/%40document-polyfill) (@An-Error94 氏作) を使ってみてください。これは、ユーザースクリプトと [data-\* 属性](/ja/docs/Web/HTML/Global_attributes/data-*)と[属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)を組み合わせて使用するものです。
 
 > **メモ:** このプロパティの -moz 接頭辞がついたバージョン `@-moz-document` があります。これは Firefox 59 の Nightly および Beta で、潜在的な CSS インジェクション攻撃を緩和するための実験として、ユーザー定義スタイルシートとユーザーエージェントスタイルシートでしか使用できないように制限されました ([Firefox バグ 1035091](https://bugzil.la/1035091) を参照)。
 

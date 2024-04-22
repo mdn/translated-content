@@ -1,10 +1,6 @@
 ---
 title: key
 slug: Web/XPath/Functions/key
-tags:
-  - Référence_XSLT
-translation_of: Web/XPath/Functions/key
-original_slug: Web/XPath/Fonctions/key
 ---
 
 {{ XsltRef() }}

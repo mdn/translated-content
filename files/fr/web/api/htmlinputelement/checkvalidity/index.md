@@ -1,9 +1,6 @@
 ---
 title: HTMLInputElement.checkValidity()
 slug: Web/API/HTMLInputElement/checkValidity
-page-type: web-api-instance-method
-browser-compat: api.HTMLObjectElement.checkValidity
-translation_of: Web/API/HTMLInputElement/checkValidity
 ---
 
 {{APIRef("HTML DOM")}}
@@ -13,7 +10,7 @@ La méthode **`HTMLInputElement.checkValidity()`** renvoie une valeur booléenne
 ## Syntaxe
 
 ```js
-checkValidity()
+checkValidity();
 ```
 
 ### Paramètres

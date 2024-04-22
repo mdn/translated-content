@@ -13,7 +13,7 @@ slug: Web/API/Event
 
 許多 DOM 元素可被設定接受（accept，或稱為 listen "監聽"）這些事件，並在發生時執行處理（process、handle）事件的程式碼。事件處理器（Event-handlers）通常會使用 `EventTarget.addEventListener()` 來被連結（connected，或稱為 attached "附加"）至各個 [HTML 元素](/zh-TW/docs/Web/HTML/Element)（例如 \<button>、\<div>、\<div>、\<span> 等），且此方式一般也是用來取代舊的 HTML [事件處理器屬性（attributes）](/zh-TW/docs/HTML/Global_attributes)。此外，在需要時也可以使用 [`removeEventListener()`](/zh-TW/docs/Web/API/EventTarget/removeEventListener) 來中斷事件處理器與元素的連結。請留意一個元素可以擁有多個事件處理器（即使是處理同一種事件的不同處理器），特別是那些被切分開來彼此獨立且有不同目標的程式模組（舉例來說，廣告及統計模組可以同時監控網頁中的影片觀看資訊）。
 
-When there are many nested elements, each with its own handler(s), event processing can become very complicated -- especially where a parent element receives the very same event as its child elements because "spatially" they overlap so the event technically occurs in both, and the processing order of such events depends on the [Event bubbling and capture](/zh-TW/docs/Learn/JavaScript/Building_blocks/Events#Event_bubbling_and_capture) settings of each handler triggered.
+When there are many nested elements, each with its own handler(s), event processing can become very complicated — especially where a parent element receives the very same event as its child elements because "spatially" they overlap so the event technically occurs in both, and the processing order of such events depends on the [Event bubbling and capture](/zh-TW/docs/Learn/JavaScript/Building_blocks/Events#Event_bubbling_and_capture) settings of each handler triggered.
 
 ## 基於 `Event` 的子介面
 
@@ -123,7 +123,7 @@ Below is a list of interfaces which are based on the main `Event` interface, wit
 - {{domxref("Event.createEvent()")}} {{deprecated_inline}}
   - : Creates a new event, which must then be initialized by calling its `initEvent()` method.
 - {{domxref("Event.composedPath()")}}
-  - : Returns the event’s path (objects on which listeners will be invoked). This does not include nodes in shadow trees if the shadow root was created with its {{domxref("ShadowRoot.mode")}} closed.
+  - : Returns the event's path (objects on which listeners will be invoked). This does not include nodes in shadow trees if the shadow root was created with its {{domxref("ShadowRoot.mode")}} closed.
 - {{domxref("Event.initEvent()")}} {{deprecated_inline}}
   - : 初始化已經建立的事件。若該事件已經被處理過，這方法就不會執行任何東西。
 - {{domxref("Event.preventDefault()")}}

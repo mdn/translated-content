@@ -5,9 +5,7 @@ slug: Web/CSS/image
 
 {{CSSRef}}
 
-## 综述：
-
-CSS 的\<image>数据类型描述的是 2D 图形。在 CSS 中有两种类型的图像：简单的静态图像，经常被一个在使用的 URL 引用，动态生成的图像，比如 DOM 树的部分元素样式渐变或者计算样式产生。
+CSS 的 **`<image>`** 数据类型描述的是 2D 图形。在 CSS 中有两种类型的图像：简单的静态图像，经常被一个在使用的 URL 引用，动态生成的图像，比如 DOM 树的部分元素样式渐变或者计算样式产生。
 
 CSS 可以处理以下情形中的不同类型图像：
 
@@ -18,13 +16,13 @@ CSS 可以处理以下情形中的不同类型图像：
 
 CSS 确定一个图像对象实际尺寸的依据有三条：(1) 图像的原始尺寸；(2) 用 CSS 属性指定的宽和高，比如{{ cssxref("width") }}, {{ cssxref("height") }} or {{ cssxref("background-size") }}中，(3) 图像对象默认大小，由图像使用用途的属性类型决定：
 
-| 图像对象类型                                                                                                                                | 默认的图像对象尺寸                                     |
-| ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
-| {{ cssxref("background-image") }}                                                                                                | DOM 元素的背景定位的范围尺寸（大小）                   |
-| {{ cssxref("list-style-image") }}                                                                                                | 字符的 `1em` 尺寸（大小）                                |
-| {{ cssxref("border-image") }}                                                                                                    | DOM 元素的边框图像范围尺寸（大小）                     |
-| {{ cssxref("cursor") }}                                                                                                            | 浏览器定义的光标尺寸匹配在使用操作系统上常规的光标尺寸 |
-| 用 CSS {{ cssxref("content") }}属性，和 CSS 伪元素 {{ cssxref("::after") }} 和 {{ cssxref("::before") }}替换元素内容 | 一个 `300px × 150px` 矩形                           |
+| 图像对象类型                                                                                                         | 默认的图像对象尺寸                                     |
+| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
+| {{ cssxref("background-image") }}                                                                                    | DOM 元素的背景定位的范围尺寸（大小）                   |
+| {{ cssxref("list-style-image") }}                                                                                    | 字符的 `1em` 尺寸（大小）                              |
+| {{ cssxref("border-image") }}                                                                                        | DOM 元素的边框图像范围尺寸（大小）                     |
+| {{ cssxref("cursor") }}                                                                                              | 浏览器定义的光标尺寸匹配在使用操作系统上常规的光标尺寸 |
+| 用 CSS {{ cssxref("content") }}属性，和 CSS 伪元素 {{ cssxref("::after") }} 和 {{ cssxref("::before") }}替换元素内容 | 一个 `300px × 150px` 矩形                              |
 
 图像对象的实际尺寸计算算法如下：
 
@@ -71,7 +69,10 @@ element(#fakeid)                       如果 fakeid 是一个不存在与页面
 
 {{Compat}}
 
-## 参阅：
+## 参见
 
-- [Using CSS gradients](/zh-CN/docs/Web/Guide/CSS/Using_CSS_gradients), {{cssxref("&lt;gradient&gt;")}}, {{cssxref("linear-gradient","linear-gradient()")}}, {{cssxref("radial-gradient","radial-gradient()")}}, {{cssxref("repeating-linear-gradient","repeating-linear-gradient()")}}, {{cssxref("repeating-radial-gradient","repeating-radial-gradient()")}}
-- {{cssxref("element","element()")}}
+- {{CSSxRef("&lt;gradient&gt;")}}
+- {{CSSxRef("element","element()")}} {{Experimental_Inline}}
+- {{CSSxRef("image/image", "image()")}}
+- {{CSSxRef("image/image-set","image-set()")}}
+- {{CSSxRef("cross-fade","cross-fade()")}}

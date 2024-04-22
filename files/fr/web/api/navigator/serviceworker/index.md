@@ -1,15 +1,6 @@
 ---
 title: Navigator.serviceWorker
 slug: Web/API/Navigator/serviceWorker
-tags:
-  - API
-  - Navigateur
-  - Propriété
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
-translation_of: Web/API/Navigator/serviceWorker
 ---
 
 {{APIRef("Service Workers API")}}
@@ -31,7 +22,7 @@ L'objet {{domxref("ServiceWorkerContainer")}}.
 Le code ci-dessous vérifie si le navigateur supporte les service workers.
 
 ```js
-if ('serviceWorker' in navigator) {
+if ("serviceWorker" in navigator) {
   // Supported!
 }
 ```

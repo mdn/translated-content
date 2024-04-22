@@ -1,7 +1,6 @@
 ---
 title: El objeto arguments
 slug: Web/JavaScript/Reference/Functions/arguments
-original_slug: Web/JavaScript/Referencia/Funciones/arguments
 ---
 
 {{jsSidebar("Functions", "Funciones")}}
@@ -21,15 +20,15 @@ El objeto `arguments` es una variable local disponible en todas las funciones qu
 Por ejemplo, si a una función se le pasan 3 argumentos, puedes acceder a ellos de la siguiente manera:
 
 ```js
-arguments[0] // primer argumento
-arguments[1] // segundo argumento
-arguments[2] // tercer argumento
+arguments[0]; // primer argumento
+arguments[1]; // segundo argumento
+arguments[2]; // tercer argumento
 ```
 
 También puedes establecer o reasignar cada argumento:
 
 ```js
-arguments[1] = 'new value';
+arguments[1] = "new value";
 ```
 
 El objeto `arguments` no es un {{jsxref("Array")}}. Es similar, pero carece de todas las propiedades de `Array` excepto de {{jsxref("Array.length", "length")}}. Por ejemplo, no tiene el método {{jsxref("Array.pop", "pop()")}}.
@@ -54,8 +53,8 @@ El objeto `arguments` es útil para funciones llamadas con más argumentos de lo
 
 ```js
 function longestString() {
-  var longest = '';
-  for (var i=0; i < arguments.length; i++) {
+  var longest = "";
+  for (var i = 0; i < arguments.length; i++) {
     if (arguments[i].length > longest.length) {
       longest = arguments[i];
     }
@@ -106,13 +105,13 @@ Puedes pasar tantos argumentos como desees a esta función. Devuelve una lista d
 
 ```js
 // returns "red, orange, blue"
-myConcat(', ', 'red', 'orange', 'blue');
+myConcat(", ", "red", "orange", "blue");
 
 // devuelve "elephant; giraffe; lion; cheetah"
-myConcat('; ', 'elephant', 'giraffe', 'lion', 'cheetah');
+myConcat("; ", "elephant", "giraffe", "lion", "cheetah");
 
 // devuelve "sage. basil. oregano. pepper. parsley"
-myConcat('. ', 'sage', 'basil', 'oregano', 'pepper', 'parsley');
+myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");
 ```
 
 ### Definición de una función que crea listas HTML
@@ -121,10 +120,10 @@ Este ejemplo define una función que crea una cadena que contiene HTML para una 
 
 ```js
 function list(type) {
-  var html = '<' + type + 'l><li>';
+  var html = "<" + type + "l><li>";
   var args = Array.prototype.slice.call(arguments, 1);
-  html += args.join('</li><li>');
-  html += '</li></' + type + 'l>'; // fin de la lista
+  html += args.join("</li><li>");
+  html += "</li></" + type + "l>"; // fin de la lista
   return html;
 }
 ```
@@ -132,7 +131,7 @@ function list(type) {
 Puedes pasar cualquier número de argumentos a esta función y agregar cada argumento como un elemento de lista a una lista del tipo indicado. Por ejemplo:
 
 ```js
-let listHTML = list('u', 'One', 'Two', 'Three');
+let listHTML = list("u", "One", "Two", "Three");
 
 /* la listHTML es:
 "<ul><li>One</li><li>Two</li><li>Three</li></ul>"

@@ -1,8 +1,8 @@
 ---
 title: MediaDevices.enumerateDevices()
 slug: Web/API/MediaDevices/enumerateDevices
-translation_of: Web/API/MediaDevices/enumerateDevices
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 Метод **`MediaDevices.enumerateDevices()`** собирает информацию о медиа-устройствах ввода и вывода, доступных в системе.
@@ -30,16 +30,18 @@ if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
 
 // Перечисление в цикле камер и микрофонов
 
-navigator.mediaDevices.enumerateDevices()
-.then(function(devices) {
-  devices.forEach(function(device) {
-    console.log(device.kind + ": " + device.label +
-                " id = " + device.deviceId);
+navigator.mediaDevices
+  .enumerateDevices()
+  .then(function (devices) {
+    devices.forEach(function (device) {
+      console.log(
+        device.kind + ": " + device.label + " id = " + device.deviceId,
+      );
+    });
+  })
+  .catch(function (err) {
+    console.log(err.name + ": " + err.message);
   });
-})
-.catch(function(err) {
-  console.log(err.name + ": " + err.message);
-});
 ```
 
 результат перечисления в цикле:

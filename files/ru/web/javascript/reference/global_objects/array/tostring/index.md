@@ -1,14 +1,9 @@
 ---
 title: Array.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toString
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/toString
 ---
-{{JSRef("Global_Objects", "Array")}}
+
+{{JSRef}}
 
 ## Сводка
 
@@ -29,7 +24,7 @@ arr.toString()
 Объект {{jsxref("Global_Objects/Array", "Array")}} переопределяет метод `toString` объекта {{jsxref("Global_Objects/Object", "Object")}}. Для объектов класса `Array`, метод `toString` соединяет массив и возвращает одну строку, содержащую каждый элемент массива, разделённый запятыми. Например, следующий код создаёт массив и использует метод `toString` для преобразования массива в строку.
 
 ```js
-var monthNames = ['Янв', 'Фев', 'Мар', 'Апр'];
+var monthNames = ["Янв", "Фев", "Мар", "Апр"];
 var myVar = monthNames.toString(); // присваивает 'Янв,Фев,Мар,Апр' переменной myVar.
 ```
 

@@ -62,7 +62,7 @@ article:nth-child(2) {
 
 ## ブラウザーの互換性
 
-{{Compat("css.properties.box-ordinal-group")}}
+{{Compat}}
 
 ## 関連情報
 

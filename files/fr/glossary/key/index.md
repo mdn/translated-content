@@ -1,13 +1,9 @@
 ---
 title: Clé
 slug: Glossary/Key
-tags:
-  - Cryptographie
-  - Glossaire
-  - Sécurité
-translation_of: Glossary/Key
-original_slug: Glossaire/Clé
 ---
+
+{{GlossarySidebar}}
 
 Une clé est une information utilisée par un {{Glossary("Cipher","chiffre")}} pour l'{{Glossary("Encryption","encryptage")}} et/ou le {{Glossary("Decryption","décryptage")}}. Les messages cryptés doivent rester sécurisés même si tout ce qui concerne le {{Glossary("Cryptosystem","système de cryptage")}}, sauf la clé, est de notoriété publique.
 

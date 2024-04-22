@@ -49,7 +49,7 @@ function sum(a=1, b=2) {
 
 ```js example-good
 "use strict";
-function sum(a=1, b=2) {
+function sum(a = 1, b = 2) {
   return a + b;
 }
 ```
@@ -69,7 +69,7 @@ var sum = function sum([a, b]) {
 这可以转换为以下表达式：
 
 ```js example-good
-var sum = (function() {
+var sum = (function () {
   "use strict";
   return function sum([a, b]) {
     return a + b;

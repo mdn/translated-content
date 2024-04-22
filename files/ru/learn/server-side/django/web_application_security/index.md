@@ -1,7 +1,6 @@
 ---
 title: Безопасность веб-приложения Django
 slug: Learn/Server-side/Django/web_application_security
-translation_of: Learn/Server-side/Django/web_application_security
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Deployment", "Learn/Server-side/Django/django_assessment_blog", "Learn/Server-side/Django")}}
@@ -34,10 +33,10 @@ XSS это термин, применяющийся для описания кл
 2. Откройте сайт в вашем браузере и войдите под аккаунтом супер-пользователя.
 3. Перейдите на страницу добавления автора (она должна быть доступна по URL: [`http://127.0.0.1:8000/catalog/author/create/`](http://127.0.0.1:8000/catalog/author/create/)).
 4. Введите данные об имени и фамилии, датах рождения и смерти автора. Затем добавьте следующую строку в поле фамилии:
-    `<script>alert('Test alert');</script>`.
-    ![Author Form XSS test](author_create_form_alert_xss.png)
+   `<script>alert('Test alert');</script>`.
+   ![Author Form XSS test](author_create_form_alert_xss.png)
 
-    > **Примечание:** Это безобидный скрипт, который, если будет выполнен, отобразит окно с сообщением "Test alert" в вашем браузере. Если данное окно отображается при открытии страницы с созданной подобным образом записью - значит сайт уязвим перед атаками XSS.
+   > **Примечание:** Это безобидный скрипт, который, если будет выполнен, отобразит окно с сообщением "Test alert" в вашем браузере. Если данное окно отображается при открытии страницы с созданной подобным образом записью - значит сайт уязвим перед атаками XSS.
 
 5. Нажмите **Submit** для сохранения записи.
 6. После сохранения автора - он должен быть отображён, как показано ниже. Так как сработала защита от XSS - команда `alert()` не будет запущена. Вместо этого скрипт будет отображаться как обычный текст.![Author detail view XSS test](author_detail_alert_xss.png)
@@ -45,7 +44,10 @@ XSS это термин, применяющийся для описания кл
 Если вы посмотрите исходный HTML код, вы увидите, что "опасные" символы - например такие как скобки тегов - были заменены на их безопасные эквивалентные html сущности (к примеру `>` на `&gt;`)
 
 ```html
-<h1>Author: Boon&lt;script&gt;alert(&#39;Test alert&#39;);&lt;/script&gt;, David (Boonie) </h1>
+<h1>
+  Author: Boon&lt;script&gt;alert(&#39;Test alert&#39;);&lt;/script&gt;, David
+  (Boonie)
+</h1>
 ```
 
 Использование шаблонов Django защищает вас от большинства XSS-атак. Однако существует возможность отключения данной защиты, при котором экранирование не будет автоматически применятся ко всем полям, которые не должны будут заполнятся пользователем(к примеру, поле `help_text` обычно заполняется не пользователем, поэтому Django не будет экранировать его значение).
@@ -62,19 +64,56 @@ CSRF атаки позволяют атакующему выполнять де�
 
 ```html
 <html>
-<body onload='document.EvilForm.submit()'>
-
-<form action="http://127.0.0.1:8000/catalog/author/create/" method="post" name='EvilForm'>
-  <table>
-    <tr><th><label for="id_first_name">First name:</label></th><td><input id="id_first_name" maxlength="100" name="first_name" type="text" value="Mad" required /></td></tr>
-    <tr><th><label for="id_last_name">Last name:</label></th><td><input id="id_last_name" maxlength="100" name="last_name" type="text" value="Man" required /></td></tr>
-    <tr><th><label for="id_date_of_birth">Date of birth:</label></th><td><input id="id_date_of_birth" name="date_of_birth" type="text" /></td></tr>
-    <tr><th><label for="id_date_of_death">Died:</label></th><td><input id="id_date_of_death" name="date_of_death" type="text" value="12/10/2016" /></td></tr>
-  </table>
-  <input type="submit" value="Submit" />
-</form>
-
-</body>
+  <body onload="document.EvilForm.submit()">
+    <form
+      action="http://127.0.0.1:8000/catalog/author/create/"
+      method="post"
+      name="EvilForm">
+      <table>
+        <tr>
+          <th><label for="id_first_name">First name:</label></th>
+          <td>
+            <input
+              id="id_first_name"
+              maxlength="100"
+              name="first_name"
+              type="text"
+              value="Mad"
+              required />
+          </td>
+        </tr>
+        <tr>
+          <th><label for="id_last_name">Last name:</label></th>
+          <td>
+            <input
+              id="id_last_name"
+              maxlength="100"
+              name="last_name"
+              type="text"
+              value="Man"
+              required />
+          </td>
+        </tr>
+        <tr>
+          <th><label for="id_date_of_birth">Date of birth:</label></th>
+          <td>
+            <input id="id_date_of_birth" name="date_of_birth" type="text" />
+          </td>
+        </tr>
+        <tr>
+          <th><label for="id_date_of_death">Died:</label></th>
+          <td>
+            <input
+              id="id_date_of_death"
+              name="date_of_death"
+              type="text"
+              value="12/10/2016" />
+          </td>
+        </tr>
+      </table>
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
 </html>
 ```
 
@@ -83,7 +122,10 @@ CSRF атаки позволяют атакующему выполнять де�
 Механизм защиты заключается в том, что вы добавляете тег шаблона `{% csrf_token %}` в вашу форму. Этот токен будет отображён в вашем HTML как показано ниже, со значением, уникальным для каждого запрашивающего форму пользователя.
 
 ```html
-<input type='hidden' name='csrfmiddlewaretoken' value='0QRWHnYVg776y2l66mcvZqp8alrv4lb8S8lZ4ZJUWGZFA5VHrVfL2mpH29YZ39PW' />
+<input
+  type="hidden"
+  name="csrfmiddlewaretoken"
+  value="0QRWHnYVg776y2l66mcvZqp8alrv4lb8S8lZ4ZJUWGZFA5VHrVfL2mpH29YZ39PW" />
 ```
 
 Django генерирует уникальный для пользователя/браузера токен и отклоняет все формы, которые не содержат его или содержат его неверное значение.
@@ -108,7 +150,7 @@ Django так же предоставляет защиту от других в�
 - [`SECURE_PROXY_SSL_HEADER`](https://docs.djangoproject.com/en/2.0/ref/settings/#std:setting-SECURE_PROXY_SSL_HEADER) может быть использовано для проверки что всегда используется безопасное подключение, даже если данные поступают из прокси, использующего протокол отличный от HTTP.
 - [`SECURE_SSL_REDIRECT`](https://docs.djangoproject.com/en/2.0/ref/settings/#std:setting-SECURE_SSL_REDIRECT) используется для перенаправления всех запросов с HTTP на HTTPS.
 - Используйте [HTTP Strict Transport Security](https://docs.djangoproject.com/en/2.0/ref/middleware/#http-strict-transport-security) (HSTS). Этот HTTP заголовок информирует браузер о том, что все последующие запросы должны всегда использовать HTTPS. Совместно с перенаправлением HTTP запросов на HTTPS, эта опция позволяет обеспечить использование HTTPS в каждом запросе. HSTS может так же быть настроен опциями [`SECURE_HSTS_SECONDS`](https://docs.djangoproject.com/en/2.0/ref/settings/#std:setting-SECURE_HSTS_SECONDS) и [`SECURE_HSTS_INCLUDE_SUBDOMAINS`](https://docs.djangoproject.com/en/2.0/ref/settings/#std:setting-SECURE_HSTS_INCLUDE_SUBDOMAINS) или на веб-сервере.
-- Используйте ‘безопасные’ cookies выставив [`SESSION_COOKIE_SECURE`](https://docs.djangoproject.com/en/2.0/ref/settings/#std:setting-SESSION_COOKIE_SECURE) и [`CSRF_COOKIE_SECURE`](https://docs.djangoproject.com/en/2.0/ref/settings/#std:setting-CSRF_COOKIE_SECURE) в `True`. Это позволит обеспечить пересылку данных cookies только через протокол HTTPS.
+- Используйте 'безопасные' cookies выставив [`SESSION_COOKIE_SECURE`](https://docs.djangoproject.com/en/2.0/ref/settings/#std:setting-SESSION_COOKIE_SECURE) и [`CSRF_COOKIE_SECURE`](https://docs.djangoproject.com/en/2.0/ref/settings/#std:setting-CSRF_COOKIE_SECURE) в `True`. Это позволит обеспечить пересылку данных cookies только через протокол HTTPS.
 
 <!---->
 

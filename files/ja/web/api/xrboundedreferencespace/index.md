@@ -26,7 +26,7 @@ _`XRBoundedReferenceSpace` は、その親インターフェイスである {{do
 
 ## ブラウザーの互換性
 
-{{Compat("api.XRBoundedReferenceSpace")}}
+{{Compat}}
 
 ## 関連情報
 

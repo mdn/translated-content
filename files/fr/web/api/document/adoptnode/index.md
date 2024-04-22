@@ -1,21 +1,11 @@
 ---
 title: Document.adoptNode()
 slug: Web/API/Document/adoptNode
-tags:
-  - API
-  - DOM
-  - Document
-  - Méthodes
-  - Noeuds
-  - Propriétaire
-translation_of: Web/API/Document/adoptNode
 ---
 
 {{ ApiRef("DOM") }}
 
 Adopte un noeud. Le noeud (et son sous-arbre) est supprimé du document dans lequel il se trouve (le cas échéant) et son [`ownerDocument`](/fr/docs/Web/API/Node/ownerDocument) (_document propriétaire_) est remplacé par le document en cours. Le noeud peut ensuite être inséré dans le document en cours.
-
-**Pris en charge depuis Gecko 1.9 (Firefox 3)**
 
 ## Syntaxe
 
@@ -31,13 +21,13 @@ node = document.adoptNode(externalNode);
 ## Exemple
 
 ```js
-var iframe = document.getElementById('my-iframe');
-var iframeImages = iframe.contentDocument.getElementsByTagName('img');
+var iframe = document.getElementById("my-iframe");
+var iframeImages = iframe.contentDocument.getElementsByTagName("img");
 
-var newParent = document.getElementByTagName('images');
+var newParent = document.getElementByTagName("images");
 
 for (var i = 0; i < iframeImages.length; i++) {
-    newParent.appendChild(document.adoptNode(iframeImages[i]));
+  newParent.appendChild(document.adoptNode(iframeImages[i]));
 }
 ```
 

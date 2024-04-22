@@ -1,7 +1,6 @@
 ---
-title: 'Prueba tus habilidades: Strings'
+title: "Prueba tus habilidades: Strings"
 slug: Learn/JavaScript/First_steps/Test_your_skills:_Strings
-original_slug: Learn/JavaScript/First_steps/Prueba_tus_habilidades:_Strings
 ---
 
 {{learnsidebar}}
@@ -64,9 +63,9 @@ En la tarea de cadena final, te hemos dado el nombre de un teorema, dos valores 
 1. Cámbiala de un literal de cadena normal a una plantilla literal.
 2. Reemplaza los cuatro asteriscos con cuatro marcadores de posición en la plantilla literal. Estos deben ser:
 
-    1. El nombre del teorema.
-    2. Los dos valores numéricos que tenemos.
-    3. La longitud de la hipotenusa de un triángulo rectángulo, dado que las longitudes de los otros dos lados son iguales a los dos valores que tenemos. Deberás buscar cómo calcular esto a partir de lo que tienes. Haz el cálculo dentro del marcador de posición.
+   1. El nombre del teorema.
+   2. Los dos valores numéricos que tenemos.
+   3. La longitud de la hipotenusa de un triángulo rectángulo, dado que las longitudes de los otros dos lados son iguales a los dos valores que tenemos. Deberás buscar cómo calcular esto a partir de lo que tienes. Haz el cálculo dentro del marcador de posición.
 
 Intenta actualizar el código en vivo a continuación para recrear el ejemplo terminado:
 
@@ -83,7 +82,7 @@ Si deseas que se evalúe tu trabajo o estás atascado y deseas pedir ayuda:
 1. Coloca tu trabajo en un editor que se pueda compartir en línea, como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) o [Glitch](https://glitch.com/). Puedes escribir el código tú mismo o utilizar los archivos de punto de partida vinculados en las secciones anteriores.
 2. Escribe una publicación solicitando evaluación y/o ayuda en la [categoría de aprendizaje del foro de discusión de MDN](https://discourse.mozilla.org/c/mdn/learn). Tu publicación debe incluir:
 
-    - Un título descriptivo como "Se busca evaluación para la prueba de habilidad de Cadenas 1".
-    - Detalles de lo que ya has probado y lo que te gustaría que hiciéramos, p. ej. si estás atascado y necesitas ayuda, o quiere una evaluación.
-    - Un enlace al ejemplo que deseas evaluar o con el que necesitas ayuda, en un editor que se pueda compartir en línea (como se mencionó en el paso 1 anterior). Esta es una buena práctica para entrar — es muy difícil ayudar a alguien con un problema de codificación si no puedes ver su código.
-    - Un enlace a la página de la tarea o evaluación real, para que podamos encontrar la pregunta con la que deseas ayuda.
+   - Un título descriptivo como "Se busca evaluación para la prueba de habilidad de Cadenas 1".
+   - Detalles de lo que ya has probado y lo que te gustaría que hiciéramos, p. ej. si estás atascado y necesitas ayuda, o quiere una evaluación.
+   - Un enlace al ejemplo que deseas evaluar o con el que necesitas ayuda, en un editor que se pueda compartir en línea (como se mencionó en el paso 1 anterior). Esta es una buena práctica para entrar — es muy difícil ayudar a alguien con un problema de codificación si no puedes ver su código.
+   - Un enlace a la página de la tarea o evaluación real, para que podamos encontrar la pregunta con la que deseas ayuda.

@@ -1,13 +1,6 @@
 ---
 title: Valeurs par défaut des arguments
 slug: Web/JavaScript/Reference/Functions/Default_parameters
-tags:
-  - ECMAScript 2015
-  - Fonctions
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Functions/Default_parameters
-original_slug: Web/JavaScript/Reference/Fonctions/Valeurs_par_défaut_des_arguments
 ---
 
 {{jsSidebar("Functions")}}
@@ -32,14 +25,14 @@ Auparavant, pour définir une valeur par défaut pour un paramètre, il fallait 
 
 ```js
 function multiplier(a, b) {
-  var b = (typeof b !== 'undefined') ? b : 1;
+  var b = typeof b !== "undefined" ? b : 1;
 
   return a * b;
 }
 
 multiplier(5, 2); // 10
 multiplier(5, 1); // 5
-multiplier(5);    // 5
+multiplier(5); // 5
 ```
 
 Grâce aux paramètres par défaut qui existent depuis ECMAScript 2015 (ES6), on peut se passer de cette vérification et alléger le code de la fonction :
@@ -66,10 +59,10 @@ function test(num = 1) {
   console.log(typeof num);
 }
 
-test();           // number (num vaut 1)
-test(undefined);  // number (num vaut 1 également)
-test("");         // string (num vaut "")
-test(null);       // object (num vaut null)
+test(); // number (num vaut 1)
+test(undefined); // number (num vaut 1 également)
+test(""); // string (num vaut "")
+test(null); // object (num vaut null)
 ```
 
 ### Évaluation à l'appel
@@ -89,11 +82,13 @@ append(2); //[2], et non [1, 2]
 Cela est également valable pour les fonctions et les variables
 
 ```js
-function appelQqc(truc = qqc()) { return truc }
+function appelQqc(truc = qqc()) {
+  return truc;
+}
 
 appelQqc(); //lève une ReferenceError
 
-let qqc = () => "machin"
+let qqc = () => "machin";
 
 appelQqc(); // "machin"
 ```
@@ -103,14 +98,14 @@ appelQqc(); // "machin"
 Les paramètres déjà rencontrés dans la définition peuvent être utilisés comme paramètres par défaut dans la suite de la définition :
 
 ```js
-function salutation(nom, salut, message = salut + ' ' + nom){
-    return [nom, salut, message];
+function salutation(nom, salut, message = salut + " " + nom) {
+  return [nom, salut, message];
 }
 
-salutation('David', 'Coucou');
+salutation("David", "Coucou");
 // ["David", "Coucou", "Coucou David"]
 
-salutation('David', 'Coucou', 'Bon anniversaire !');
+salutation("David", "Coucou", "Bon anniversaire !");
 // ["David", "Coucou", "Bon anniversaire !"]
 ```
 
@@ -118,39 +113,45 @@ On peut utiliser cette fonctionnalité afin de gérer beaucoup de cas aux limite
 
 ```js
 function go() {
-  return ":P"
+  return ":P";
 }
 
-function avecDéfaut(a, b = 5, c = b, d = go(), e = this,
-                      f = arguments, g = this.value) {
-  return [a,b,c,d,e,f,g];
+function avecDéfaut(
+  a,
+  b = 5,
+  c = b,
+  d = go(),
+  e = this,
+  f = arguments,
+  g = this.value,
+) {
+  return [a, b, c, d, e, f, g];
 }
-function sansDéfaut(a, b, c, d, e, f, g){
-  switch(arguments.length){
+function sansDéfaut(a, b, c, d, e, f, g) {
+  switch (arguments.length) {
     case 0:
-      a
+      a;
     case 1:
-      b = 5
+      b = 5;
     case 2:
-      c = b
+      c = b;
     case 3:
       d = go();
     case 4:
-      e = this
+      e = this;
     case 5:
-      f = arguments
+      f = arguments;
     case 6:
       g = this.value;
     default:
   }
-  return [a,b,c,d,e,f,g];
+  return [a, b, c, d, e, f, g];
 }
 
-avecDéfaut.call({value:"=^_^="});
+avecDéfaut.call({ value: "=^_^=" });
 // [undefined, 5, 5, ":P", {value:"=^_^="}, arguments, "=^_^="]
 
-
-sansDéfaut.call({value:"=^_^="});
+sansDéfaut.call({ value: "=^_^=" });
 // [undefined, 5, 5, ":P", {value:"=^_^="}, arguments, "=^_^="]
 ```
 
@@ -161,7 +162,9 @@ sansDéfaut.call({value:"=^_^="});
 ```js
 // Ne fonctionnera pas, entraîne une ReferenceError.
 function f(a = go()) {
-  function go(){return ":P"}
+  function go() {
+    return ":P";
+  }
 }
 ```
 
@@ -170,11 +173,11 @@ function f(a = go()) {
 Avant Gecko 26, le code suivant aurait entraîné une exception {{jsxref("SyntaxError")}}. Cela a été corrigé avec le [bug Firefox 777060](https://bugzil.la/777060). Les paramètres sont toujours ordonnés de gauche à droite et les valeurs par défaut sont surchargées s'ils viennent avant les autres paramètres :
 
 ```js
-function f(x=1, y) {
+function f(x = 1, y) {
   return [x, y];
 }
 
-f();  // [1, undefined]
+f(); // [1, undefined]
 f(2); // [2, undefined]
 ```
 
@@ -183,7 +186,7 @@ f(2); // [2, undefined]
 Il est possible d'utiliser les valeurs par défaut avec [la syntaxe de décomposition](/fr/docs/Web/JavaScript/Reference/Opérateurs/Affecter_par_décomposition) :
 
 ```js
-function f([x, y] = [1, 2], {z: z} = {z: 3}) {
+function f([x, y] = [1, 2], { z: z } = { z: 3 }) {
   return x + y + z;
 }
 

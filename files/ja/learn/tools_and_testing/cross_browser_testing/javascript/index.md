@@ -1,33 +1,31 @@
 ---
-title: JavaScript のよくある問題を扱う
+title: よくある JavaScript の問題の扱い
 slug: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
+l10n:
+  sourceCommit: b59c2c5d26c86704c0f16e02fa5e0ec9475314c9
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS","Learn/Tools_and_testing/Cross_browser_testing/Accessibility", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
-ここではよくあるクロスブラウザー JavaScript 問題と、その直し方を見てみます。
-これにはブラウザーの開発ツールを使って問題をつきとめて修正したり、問題の回避に Polyfills やライブラリーを使ったりモダンな JavaScript 機能を古いブラウザーで使ったりなどです。
+今度は一般的なブラウザー間の JavaScript の問題と、それを修正する方法を見ていきます。
+この情報には、問題を追跡して修正するためにブラウザー開発ツールを使用すること、問題を回避するためにポリフィルとライブラリーを使用すること、現行の JavaScript 機能を古いブラウザーで動作させること、などが記載されています。
 
 <table>
   <tbody>
     <tr>
-      <th scope="row">前提知識:</th>
+      <th scope="row">前提条件:</th>
       <td>
-        Familiarity with the core <a href="/ja/docs/Learn/HTML">HTML</a>,
-        <a href="/ja/docs/Learn/CSS">CSS</a>, and
-        <a href="/ja/docs/Learn/JavaScript">JavaScript</a> languages; an idea
-        of the high-level
+        <a href="/ja/docs/Learn/HTML">HTML</a>、<a href="/ja/docs/Learn/CSS">CSS</a>、<a href="/ja/docs/Learn/JavaScript">JavaScript</a> 言語の主要部に通じていること。
         <a
           href="/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
-          >principles of cross browser testing</a
-        >.
+          >ブラウザー横断テストの基本</a
+        >について高水準の考えを持っていること。
       </td>
     </tr>
     <tr>
       <th scope="row">目標:</th>
       <td>
-        To be able to diagnose common JavaScript cross-browser problems, and use
-        appropriate tools and techniques to fix them.
+        一般的な JavaScript のブラウザー間の問題を診断し、適切なツールやテクニックを使用して修正することができること。
       </td>
     </tr>
   </tbody>
@@ -35,319 +33,303 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 
 ## JavaScript のトラブル
 
-Historically, JavaScript was plagued with cross-browser compatibility problems — back in the 1990s, the main browser choices back then (Internet Explorer and Netscape) had scripting implemented in different language flavors (Netscape had JavaScript, IE had JScript and also offered VBScript as an option), and while at least JavaScript and JScript were compatible to some degree (both based on the {{glossary("ECMAScript")}} specification), things were often implemented in conflicting, incompatible ways, causing developers many nightmares.
+過去には、JavaScript はブラウザー間の互換性の問題に悩まされていました。1990 年代には、当時の主要ブラウザー（Internet Explorer と Netscape）は異なる言語フレーバーでスクリプトを実装していました（Netscape は JavaScript、IE は JScript で、オプションとして VBScript も提供していました）が、少なくとも JavaScript と JScript はある程度互換性がありました（どちらも {{glossary("ECMAScript")}} 仕様に基づいています）が、よく競合し、互換性のない方法で実装され、開発者に多くの悪夢を発生させていました。
+このようなブラウザーの非互換性の問題は、古いブラウザーがまだ使用されており、対応する必要があったため、 2000 年代初頭まで続きました。例えば、 {{domxref("XMLHttpRequest")}} オブジェクトを作成するコードは、 Internet Explorer 6 用に特別な処理をする必要がありました。
 
-Such incompatibility problems persisted well into the early 2000s, as old browsers were still being used and still needed supporting. This is one of the main reasons why libraries like [jQuery](https://jquery.com/) came into existence — to abstract away differences in browser implementations (e.g. see the code snippet in [How to make an HTTP request](/ja/docs/Web/Guide/AJAX/Getting_Started#step_1_%e2%80%93_how_to_make_an_http_request)) so developers only have to write one simple bit of code (see [`jQuery.ajax()`](https://api.jquery.com/jquery.ajax/)). jQuery (or whatever library you are using) will then handle the differences in the background, so you don't have to.
+```js
+if (window.XMLHttpRequest) {
+  // Mozilla, Safari, IE7+ ...
+  httpRequest = new XMLHttpRequest();
+} else if (window.ActiveXObject) {
+  // IE 6 and older
+  httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+}
+```
 
-Things have improved significantly since then; modern browsers do a good job of supporting "classic JavaScript features", and the requirement to use such code has diminished as the requirement to support older browsers has lessened (although bear in mind that they have not gone away altogether).
+これは、 [jQuery](https://jquery.com/) のようなライブラリーが登場した主要な理由の 1 つです。ブラウザーでの実装の違いを抽象化し、開発者が例えば [`jQuery.ajax()`](https://api.jquery.com/jquery.ajax/) を使用することができるようにするためで、バックグラウンドで違いを処理することができます。
 
-These days, most cross-browser JavaScript problems are seen:
+それから状況は大きく改善され、現行のブラウザーは「古典的な JavaScript 機能」によく対応していますし、古いブラウザーに対応する必要性が少なくなるにつれて、そのようなコードを使用する要求も少なくなっています（完全になくなったわけではないことを覚えておいてください）。
 
-- When poor-quality browser-sniffing code, feature-detection code, and vendor prefix usage block browsers from running code they could otherwise use just fine.
-- When developers make use of new/nascent JavaScript features, modern Web APIs, etc.) in their code, and find that such features don't work in older browsers.
+最近では、ほとんどのブラウザー間の JavaScript の問題は次のような場面で見られます。
 
-We'll explore all these problems and more below.
+- 質の悪いブラウザー推測コード、機能検出コード、接頭辞などを使用していることで、本来であれば問題なく使用することができるコードをブラウザーが実行することができなくなっている場合。
+- 開発者が JavaScript の新しい機能や最新の Web API などをコードで使用していて、古いブラウザーではこの機能がうまく動作しないことが分かったとき。
 
-## 一般的な JavaScript の問題を修正する
+このような問題をすべて含め、下記でご紹介します。
 
-As we said in the [previous article](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#first_things_first_fixing_general_problems) on HTML/CSS, you should make sure your code is working generally, before going on to concentrate on the cross-browser issues. If you are not already familiar with the basics of [Troubleshooting JavaScript](/ja/docs/Learn/JavaScript/First_steps/What_went_wrong), you should study that article before moving on. There are a number of common JavaScript problems that you will want to be mindful of, such as:
+## 一般的な JavaScript の問題の修正
 
-- Basic syntax and logic problems (again, check out [Troubleshooting JavaScript](/ja/docs/Learn/JavaScript/First_steps/What_went_wrong)).
-- Making sure variables, etc. are defined in the correct scope, and you are not running into conflicts between items declared in different places (see [Function scope and conflicts](/ja/docs/Learn/JavaScript/Building_blocks/Functions#function_scope_and_conflicts)).
-- Confusion about [this](/ja/docs/Web/JavaScript/Reference/Operators/this), in terms of what scope it applies to, and therefore if its value is what you intended. You can read [What is "this"?](/ja/docs/Learn/JavaScript/Objects/Basics#this_とは何か) for a light introduction; you should also study examples like [this one](https://github.com/mdn/learning-area/blob/7ed039d17e820c93cafaff541aa65d874dde8323/javascript/oojs/assessment/main.js#L143), which shows a typical pattern of saving a `this` scope to a separate variable, then using that variable in nested functions so you can be sure you are applying functionality to the correct `this` scope.
-- Incorrectly using functions inside loops that iterate with a global variable (more generally "getting the scope wrong"). For example, in [bad-for-loop.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/bad-for-loop.html) (see [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/bad-for-loop.html)), we loop through 10 iterations using a variable defined with `var`, each time creating a paragraph and adding an [onclick](/ja/docs/Web/API/Element/click_event) event handler to it. When clicked, we want each one to display an alert message containing its number (the value of `i` at the time it was created). Instead they all report `i` as 11 — because the `for` loop does all its iterating before nested functions are invoked.
+[前回の記事](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#まず最初に：一般的な問題を解決する)で HTML/CSS について述べたように、ブラウザー間の問題に集中する前に、自分のコードが一般的に動作していることを確認するべきです。もしまだ [JavaScript のトラブルシューティング](/ja/docs/Learn/JavaScript/First_steps/What_went_wrong)の基本に慣れていないのであれば、先に進む前にこの記事を勉強してください。 JavaScript には、以下のようなよくある問題があります。
 
-  > **メモ:** The easiest solution is to declare the iteration variable with `let` instead of `var`—the value of `i` associated with the function is then unique to each iteration. Unfortunately this does not work correctly with IE11, which is why we haven't used this approach in the "good" for loop.
+- 基本的な構文やロジックの問題（こちらも [JavaScript のトラブルシューティング](/ja/docs/Learn/JavaScript/First_steps/What_went_wrong)を参照してください）。
+- 変数などが正しいスコープで定義され、異なる場所で宣言された項目間で競合していないことを確認してください（[関数のスコープと競合](/ja/docs/Learn/JavaScript/Building_blocks/Functions#関数のスコープと競合)を参照してください）。
+- [this](/ja/docs/Web/JavaScript/Reference/Operators/this) が、どのスコープに適用されるのか、したがってその値が意図通りなのかが混乱しています。 ["this" とは何か](/ja/docs/Learn/JavaScript/Objects/Basics#this_とは何か)で軽く紹介されています。[これ](https://github.com/mdn/learning-area/blob/7ed039d17e820c93cafaff541aa65d874dde8323/javascript/oojs/assessment/main.js#L143)のような例も勉強してください。この例では、 `this` スコープを別な変数に保存し、その変数を入れ子関数で使用する典型的なパターンを示しているので、正しい `this` スコープに機能を適用していることを確認できます。
+- グローバル変数で反復処理するループ内で関数を誤って使用する（より一般的には「スコープを間違える」）。
 
-  If you want this to work correctly, you can define a function to add the handler separately, calling it on each iteration and passing it the current value of `para` and `i` each time (or something similar). See [good-for-loop.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/good-for-loop.html) (see the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/good-for-loop.html) also) for a version that works.
+> **注目:**
+> 例えば、 [bad-for-loop.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/bad-for-loop.html) （[ソースコード](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/bad-for-loop.html)を参照）では、 `var` で定義した変数を使って10回の反復処理をループし、そのたびに段落を作成して [onclick](/ja/docs/Web/API/Element/click_event) イベントハンドラーを追加しています。クリックされると、それぞれにその番号（作成した時点での `i` の値）を格納したアラートメッセージが表示されるようにします。なぜなら、 `for` ループはネストされた関数を呼び出す前にすべての反復処理を行うからです。
+>
+> 最も簡単な解決策は、反復処理変数を `var` の代わりに `let` で宣言することです。動作するバージョンについては [good-for-loop.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/good-for-loop.html) （[ソースコード](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/good-for-loop.html)も参照）を参照してください。
 
-- Making sure asynchronous operations have returned before trying to use the values they return. For example, [this Ajax example](/ja/docs/Web/Guide/AJAX/Getting_Started#step_3_%e2%80%93_a_simple_example) checks to make sure the request is complete and the response has been returned before trying to use the response for anything. This kind of operation has been made easier to handle by the introduction of [Promises](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) to the JavaScript language.
+- [非同期処理](/ja/docs/Learn/JavaScript/Asynchronous)が完了したことを確認してから、それが返す値を使用するようにします。これは通常、プロミスの使用方法を理解することを意味しています。 [`await`](/ja/docs/Web/JavaScript/Reference/Operators/await) を適切に使用するか、プロミスの {{jsxref("Promise.then()", "then()")}} ハンドラーで非同期呼び出しの結果を処理するコードを実行します。このトピックの初心者向け記事は、[プロミスの使用方法](/ja/docs/Learn/JavaScript/Asynchronous/Promises)を参照してください。
 
-> **メモ:** [Buggy JavaScript Code: The 10 Most Common Mistakes JavaScript Developers Make](https://www.toptal.com/javascript/10-most-common-javascript-mistakes) has some nice discussions of these common mistakes and more.
+> **メモ:** [Buggy JavaScript Code: The 10 Most Common Mistakes JavaScript Developers Make](https://www.toptal.com/javascript/10-most-common-javascript-mistakes) には、これらのよくある間違いについての解説などがあります。
 
 ### リンター
 
-[HTML や CSS](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#linters)と同じく、良い品質を保つことができて、エラーを示して悪いやり方の警告をつけ、エラー/警告の報告を厳しくもゆるくも変えられる Linter を使ってエラーがちな JavaScript コードを減らすことが確実にできます。我々が勧める JavaScript/ECMAScript linters は [JSHint](http://jshint.com/) と [ESLint](http://eslint.org/); これらは色々な方法で使用でき、そのいくつかを以下で紹介します。
+[HTML や CSS](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#リンター) と同様に、リンターを使用することで、 JavaScrip tコードをより高品質でエラーの可能性の低いものにすることができます。リンターはエラーを指摘し、悪い習慣などに関する警告を表示することができ、エラーや警告の報告を厳しくしたり緩くしたりするようにカスタマイズすることができます。私たちが推奨する JavaScript/ECMAScript リンターは [JSHint](https://jshint.com/) と [ESLint](https://eslint.org/) です。これらは様々な方法で使用することができますが、下記で詳しく説明します。
 
 #### オンライン
 
-The [JSHint homepage](https://jshint.com/) provides an online linter, which allows you to enter your JavaScript code on the left and provides an output on the right, including metrics, warnings, and errors.
+[JSHint のホームページ](https://jshint.com/)では、左側に JavaScript コードを入力すると、右側にメトリクス、警告、エラーを含む出力を提供するオンラインリンターを提供しています。
 
-![](jshint-online.png)
+![JSHintのスクリーンショット。左のパネルは色分けされた行番号付きのコードエディターです。右のパネルは、関数と警告の数、サイズ、構成に関するメトリクスに分かれています。警告には、課題と行番号が記載されています。](jshint-online.png)
 
-#### コードエディターのプラグイン
+#### コードエディタープラグイン
 
-It is not very convenient to have to copy and paste your code over to a web page to check its validity several times. What you really want is a linter that will fit into your standard workflow with the minimum of hassle. Many code editors have linter plugins, for example GitHub's [Atom](https://atom.io/) code editor has a JSHint plugin available.
+コードをコピーしてウェブページに貼り付け、その有効性を何度も調べなければならないのはとても不便です。あなたが実に望んでいるのは、標準的なワークフローに最小限の手間で適合するリンターです。多くのコードエディターにはリンタープラグインがあります。例えば、 [JSHint インストールページ](https://jshint.com/install/)の "Plugins for text editors and IDEs" の節を参照してください。
 
-To install it:
+#### その他の使用方法
 
-1. Install Atom (if you haven't got an up-to-date version already installed) — download it from the Atom page linked above.
-2. Go to Atom's _Preferences…_ dialog (e.g. by Choosing _Atom > Preferences…_ on Mac, or _File > Preferences…_ on Windows/Linux) and choose the _Install_ option in the left-hand menu.
-3. In the _Search packages_ text field, type "jslint" and press Enter/Return to search for linting-related packages.
-4. You should see a package called **lint** at the top of the list. Install this first (using the _Install_ button), as other linters rely on it to work. After that, install the **linter-jshint** plugin.
-5. After the packages have finished installing, try loading up a JavaScript file: you'll see any issues highlighted with green (for warnings) and red (for errors) circles next to the line numbers, and a separate panel at the bottom provides line numbers, error messages, and sometimes suggested values or other fixes.
+このようなリンターを使用する方法は他にもあります。 [JSHint](https://jshint.com/install/) や [ESLint](https://eslint.org/docs/user-guide/getting-started) のインストールページで読むことができます。
 
-![](jshint-linter.png)Other popular editors have similar linting packages available. For example, see the "Plugins for text editors and IDEs" section of the [JSHint install page](https://jshint.com/install/).
-
-#### その他
-
-There are other ways to use such linters; you can read about them on the [JSHint](https://jshint.com/install/) and [ESLint](https://eslint.org/docs/user-guide/getting-started) install pages.
-
-It is worth mentioning command line uses — you can install these tools as command line utilities (available via the CLI — command line interface) using npm (Node Package Manager — you'll have to install [NodeJS](https://nodejs.org/en/) first). For example, the following command installs JSHint:
+コマンドラインを使用することができることに触れておきましょう - npm（Node Package Manager - 先に [NodeJS](https://nodejs.org/en/) をインストールする必要があります）を使用して、コマンドラインユーティリティ（CLI - コマンドラインインターフェイスで利用できます）としてこれらのツールをインストールすることができます。例えば、以下のコマンドで JSHint をインストールします：
 
 ```bash
 npm install -g jshint
 ```
 
-You can then point these tools at JavaScript files you want to lint, for example:
+それから、次のように検証したい JavaScript ファイルを次のように指定します。
 
-![](js-hint-commandline.png)You can also use these tools with a task runner/build tool such as [Gulp](https://gulpjs.com/) or [Webpack](https://webpack.github.io/) to automatically lint your JavaScript during development. (see [Using a task runner to automate testing tools](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing#using_a_task_runner_to_automate_testing_tools) in a later article.) See [ESLint integrations](https://eslint.org/docs/user-guide/integrations) for ESLint options; JSHint is supported out of the box by Grunt, and also has other integrations available, e.g. [JSHint loader for Webpack](https://github.com/webpack-contrib/jshint-loader).
+![jshint filename.js がコマンド行に入力されています。応答は行番号のリストと得られるエラーの説明です。](js-hint-commandline.png)
 
-> **メモ:** ESLint takes a bit more setup and configuration than JSHint, but it is more powerful too.
+これらのツールを [Gulp](https://gulpjs.com/) や [Webpack](https://webpack.github.io/) のようなタスクランナー/ビルドツールと使用して、開発中に JavaScript を自動的に検証することもできます。（後の記事で[テストツールを自動化するタスクランナーの使用](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing#using_a_task_runner_to_automate_testing_tools)を参照してください） ESLint のオプションについては [ESLint integrations](https://eslint.org/docs/user-guide/integrations) を参照してください。 JSHint は Grunt ですぐに対応しており、他にも [Webpack 用の JSHint loader](https://github.com/webpack-contrib/jshint-loader) などの統合があります。
 
-### ブラウザーの開発ツール
+> **メモ:** ESLint は JSHint よりも設定や構成が少し面倒ですが、より強力です。
 
-Browser developer tools have many useful features for helping to debug JavaScript. For a start, the JavaScript console will report errors in your code.
+### ブラウザーの開発者ツール
 
-Make a local copy of our [broken-ajax.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/broken-ajax.html) example (see the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/broken-ajax.html) also).
+ブラウザーの開発者ツールには、 JavaScript のデバッグを助ける便利な機能がたくさんあります。手始めに、 JavaScript コンソールはコードのエラーを報告してくれます。
 
-If you look at the console, you'll see the error message "Uncaught TypeError: can't access property "length", heroes is undefined", and the referenced line number is 49. If we look at the source code, the relevant code section is this:
+[fetch-broken](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-broken) のサンプルをローカルにコピーしてください（[ソースコード](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-broken)も参照してください）。
+
+コンソールを見ると、エラーメッセージが表示されます。正確な文言はブラウザーによりますが、 "Uncaught TypeError: heroes is not iterable" のようなものです。参照されている行番号は 25 です。ソースコードを見ると、関連するコードセクションは次のとおりです。
 
 ```js
 function showHeroes(jsonObj) {
-  let heroes = jsonObj['members'];
+  const heroes = jsonObj["members"];
 
   for (const hero of heroes) {
-    // …
-   }
-
-   // …
- }
-```
-
-So the code falls over as soon as we try to access a property of `jsonObj` (which as you might expect, is supposed to be a [JSON object](/ja/docs/Learn/JavaScript/Objects/JSON)). This is supposed to be fetched from an external `.json` file using the following XMLHttpRequest call:
-
-```js
-let requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
-let request = new XMLHttpRequest();
-request.open('GET', requestURL);
-request.send();
-
-let superHeroes = request.response;
-populateHeader(superHeroes);
-showHeroes(superHeroes);
-```
-
-But this fails.
-
-#### コンソール API
-
-You may already know what is wrong with this code, but let's explore it some more to show how you could investigate this. For a start, there is a [Console](/ja/docs/Web/API/console) API that allows JavaScript code to interact with the browser's JavaScript console. It has a number of features available, but the main one you'll use often is [`console.log()`](/ja/docs/Web/API/console/log), which prints a custom message to the console.
-
-Try inserting the following line just below line 31 (bolded above):
-
-```js
-console.log('Response value: ', superHeroes);
-```
-
-Refresh the page in the browser, and you will get an output in the console of "Response value:", plus the same error message we saw before
-
-The `console.log()` output shows that the `superHeroes` object doesn't appear to contain anything. A very common problem with async requests like this is when you try to do something with the `response` object before it has actually been returned from the network. Let's fix this problem by running the code once the `load` event has been fired — remove the `console.log()` line, and update this code block:
-
-```js
-const superHeroes = request.response;
-populateHeader(superHeroes);
-showHeroes(superHeroes);
-```
-
-to the following:
-
-```js
-request.onload = function() {
-  let superHeroes = request.response;
-  populateHeader(superHeroes);
-  showHeroes(superHeroes);
+    // ...
+  }
 }
 ```
 
-To summarize, anytime something is not working and a value does not appear to be what it is meant to be at some point in your code, you can use `console.log()` to print it out and see what is happening.
+すなわち、 `jsonObj` （期待通り、 [JSON オブジェクト](/ja/docs/Learn/JavaScript/Objects/JSON)であるはずです）を使用しようとすると、すぐにコードが崩れてしまいます。これは、外部の `.json` ファイルから、以下の {{domxref("fetch()")}} 呼び出しを使用して取得することになっています。
 
-#### JavaScript デバッガーを使う
+```js
+const requestURL =
+  "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json";
 
-Unfortunately, we still have the same error — the problem has not gone away. Let's investigate this now, using a more sophisticated feature of browser developer tools: the [JavaScript debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) as it is called in Firefox.
+const response = fetch(requestURL);
+populateHeader(response);
+showHeroes(response);
+```
 
-> **メモ:** Similar tools are available in other browsers; the [Sources tab](https://developer.chrome.com/docs/devtools/#sources) in Chrome, Debugger in Safari (see [Safari Web Development Tools](https://developer.apple.com/safari/tools/)), etc.
+ただし、これは失敗します。
 
-In Firefox, the Debugger tab looks as follows:
+#### コンソール API
 
-![](debugger-tab.png)
+このコードの何が問題なのか、もうお分かりかもしれませんが、これを調査する方法を示すために、もう少し調べてみましょう。手始めに、[コンソール](/ja/docs/Web/API/console) API を使って、 JavaScript コードがブラウザーにある JavaScript コンソールと対話することができます。利用できる機能はたくさんありますが、一番多く使用するのは [`console.log()`](/ja/docs/Web/API/console/log_static) で、コンソールに独自のメッセージを出力します。
 
-- On the left, you can select the script you want to debug (in this case we have only one).
-- The center panel shows the code in the selected script.
-- The right-hand panel shows useful details pertaining to the current environment — _Breakpoints_, _Callstack_ and currently active _Scopes_.
+次のように、 `console.log()` 呼び出しを追加し、 `fetch()` の返値をログ出力してみてください。
 
-The main feature of such tools is the ability to add breakpoints to code — these are points where the execution of the code stops, and at that point you can examine the environment in its current state and see what is going on.
+```js
+const requestURL =
+  "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json";
 
-Let's get to work. The error is now being thrown at line 51. Click on line number 51 in the center panel to add a breakpoint to it (you'll see a blue arrow appear over the top of it). Now refresh the page (Cmd/Ctrl + R) — the browser will pause execution of the code at line 51. At this point, the right-hand side will update to show some very useful information.
+const response = fetch(requestURL);
+console.log(`Response value: ${response}`);
+const superHeroes = response;
+populateHeader(superHeroes);
+showHeroes(superHeroes);
+```
 
-![](breakpoint.png)
+ブラウザーのページを更新してください。今度は、エラーメッセージの前に、コンソールに記録された新しいメッセージが表示されます。
 
-- Under _Breakpoints_, you'll see the details of the break-point you have set.
-- Under _Call Stack_, you'll see a few entries — this is basically a list of the series of functions that were invoked to cause the current function to be invoked. At the top, we have `showHeroes()` the function we are currently in, and second we have `onload`, which stores the event handler function containing the call to `showHeroes()`.
-- Under _Scopes_, you'll see the currently active scope for the function we are looking at. We only have three — `showHeroes`, `block`, and `Window` (the global scope). Each scope can be expanded to show the values of variables inside the scope when execution of the code was stopped.
+```plain
+Response value: [object Promise]
+```
 
-We can find out some very useful information in here.
+`console.log()` の出力は、 `fetch()` の返値が JSON データではなく {{jsxref("Promise")}} であることを示しています。 `fetch()` 関数は非同期です。ネットワークから実際のレスポンスを受け取ったときにのみ履行される `Promise` を返します。レスポンスを使用することができますが、その前に `Promise` が履行されるのを待つ必要があります。
 
-1. Expand the `showHeroes` scope — you can see from this that the heroes variable is `undefined`, indicating that accessing the `members` property of `jsonObj` (first line of the function) didn't work.
-2. You can also see that the `jsonObj` variable is storing a text string, not a JSON object.
-3. Exploring further down the call stack, click `onload` in the _Call Stack_ section. The view will update to show the `request.onload` function in the center panel, and its scopes in the _Scopes_ section.
-4. If you expand the `onload` scope, you'll see that the `superHeroes` variable is a text string too, not an object. This settles it — our [`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest) call is returning the JSON as text, not JSON.
+これを行うには、返された `Promise` の {{jsxref("Promise.prototype.then()", "then()")}} メソッド内にレスポンスを使用するコードを記述してください。
 
-We'd like you to try fixing this problem yourself. To give you a clue, you can either [tell the XMLHttpRequest object explicitly to return JSON format](/ja/docs/Web/API/XMLHttpRequest/responseType), or [convert the returned text to JSON](/ja/docs/Learn/JavaScript/Objects/JSON#オブジェクトとテキスト間の変換) after the response arrives. If you get stuck, consult our [fixed-ajax.html](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fixed-ajax.html) example.
+```js
+const response = fetch(requestURL);
+fetch(requestURL).then((response) => {
+  populateHeader(response);
+  showHeroes(response);
+});
+```
 
-> **メモ:** The debugger tab has many other useful features that we've not discussed here, for example conditional breakpoints and watch expressions. For a lot more information, see the [Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) page.
+まとめると、何かうまく動作しないときや、コードのある点で値が意味している値になっていないように見えるときはいつでも、 `console.log()` を使用してそれを出力し、何が起こっているのかを確認することができます。
+
+#### デバッガーの使用
+
+残念ながら、まだ同じエラーが出ています。ブラウザー開発者ツールのより洗練された機能、 Firefox でいうところの [JavaScript デバッガー](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)を使って、この問題を調査してみましょう。
+
+> **メモ:** 他のブラウザーでも似たツールが利用できます。 Chrome の[ソースタブ](https://developer.chrome.com/docs/devtools/#sources)、 Safari の Debugger （[Safari Web Development Tools](https://developer.apple.com/safari/tools/)を参照）などです。
+
+Firefoxでは、デバッガータブは次のようになります。
+
+![Firefox デバッガー](debugger-tab.png)
+
+- 左側で、デバッグしたいスクリプトを選択します（この場合は1つだけです）。
+- 中央のパネルには、選択したスクリプトのコードが表示されます。
+- 右側のパネルには、現在の環境に関する便利な詳細（ブレークポイント、コールスタック、現在アクティブなスコープ）が表示されます。
+
+このようなツールの主な特徴は、コードにブレークポイントを追加できることです。ブレークポイントとは、コードの実行が停止する位置のことで、その位置で現在の状態の環境を調べ、何が起こっているかを確認することができます。
+
+さっそくやってみましょう。エラーは現在 26 行目で発生しています。中央のパネルで 26 行目をクリックし、ブレークポイントを追加してください（一番上に青い矢印が表示されます）。ページを更新してみてください (Cmd/Ctrl + R)。ブラウザーは 51 行目でコードの実行を一時停止します。この時点で右側が更新され、とても有益な情報が表示されます。
+
+![ブレークポイント付き Firefox デバッガー](breakpoint.png)
+
+- 「ブレークポイント」の下に、設定したブレークポイントの詳細が表示されます。
+- 「コールスタック」の下にいくつかの項目が表示されます。これは基本的に、現在の関数を呼び出すために呼び出された一連の関数のリストです。一番上には現在呼び出している関数である `showHeroes()` があり、 2 つ目には `onload` が、すなわち `showHeroes()` の呼び出しを含んでいるイベントハンドラー関数があります。
+- 「スコープ」の下には、見ている関数の現在アクティブなスコープが表示されます。 `showHeroes`、`block`、`Window` （グローバルスコープ）の 3 つのみ指定されました。それぞれのスコープは展開させることができ、コードの実行を停止したときのスコープ内の変数の値を表示させることができます。
+
+私たちはここでとても有益な情報を得ることができます。
+
+1. `showHeroes` スコープを展開してください。これを見ると、変数 heroes が `undefined` になっており、 `jsonObj` の `members` プロパティへのアクセス（関数の 1 行目）がうまくいっていないことがわかります。
+2. また、 `jsonObj` 変数には、 JSON オブジェクトではなく、 {{domxref("Response")}} オブジェクトが格納されていることがわかります。
+
+`showHeroes()` の引数は `fetch()` のプロミスが履行された値です。つまり、このプロミスは JSON 形式ではなく、 `Response` オブジェクトです。レスポンスの内容を JSON オブジェクトとして取得するには、追加のステップが必要です。
+
+あなた自身でこの問題を解決してみてください。まずは {{domxref("Response")}} オブジェクトのドキュメントをご覧ください。もし行き詰まったら、 <https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-fixed> に修正されたソースコードがあります。
+
+> **メモ:** デバッガーのタブには、例えば条件付きブレークポイントやウォッチ式など、ここでは指定し ていない他にも有益な機能がたくさんあります。より多くの情報については、[デバッガー](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)ページを参照してください。
 
 ### パフォーマンスの問題
 
-As your apps get more complex and you start to use more JavaScript, you may start to run into performance problems, especially when viewing apps on slower devices. Performance is a big topic, and we don't have time to cover it in detail here. Some quick tips are as follows:
+アプリがより複雑になり、より多くの JavaScript を使用するようになると、特に低速な端末でアプリを表示するときにパフォーマンスの問題に直面し始めるかもしれません。パフォーマンスは大きなトピックであり、ここで詳細に指定する時間はありません。以下にいくつかの簡単なヒントを示します。
 
-- To avoid loading more JavaScript than you need, bundle your scripts into a single file using a solution like [Browserify](https://browserify.org/). In general, reducing the number of HTTP requests is very good for performance.
-- Make your files even smaller by minifying them before you load them onto your production server. Minifying squashes all the code together onto a huge single line, making it take up far less file size. It is ugly, but you don't need to read it when it is finished! This is best done using a minification tool like [Uglify](https://github.com/mishoo/UglifyJS) (there's also an online version — see [JSCompress.com](https://jscompress.com/))
-- When using APIs, make sure you turn off the API features when they are not being used; some API calls can be really expensive on processing power. For example, when showing a video stream, make sure it is turned off when you can't see it. When tracking a device's location using repeated Geolocation calls, make sure you turn it off when the user stops using it.
-- Animations can be really costly for performance. A lot of JavaScript libraries provide animation capabilities programmed by JavaScript, but it is much more cost effective to do the animations via native browser features like [CSS Animations](/ja/docs/Web/CSS/CSS_Animations) (or the nascent [Web Animations API](/ja/docs/Web/API/Web_Animations_API)) than JavaScript. Read Brian Birtles' [Animating like you just don't care with Element.animate](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/) for some really useful theory on why animation is expensive, tips on how to improve animation performance, and information on the Web Animations API.
+- 必要以上の JavaScript の読み込みを避けるには、 [Browserify](https://browserify.org/) のようなソリューションを使ってスクリプトを 1 つのファイルにまとめてください。一般的に、 HTTP リクエストの数を減らすことはパフォーマンスにとってとても良いことです。
+- 本番サーバーにアップロードする前に、ファイルを最小化することで、ファイルをさらに小さくしましょう。最小化すると、すべてのコードが巨大な単一の行に集約され、ファイルサイズがはるかに小さくなります。醜いですが、完了したら読む必要はありません。これは [Uglify](https://github.com/mishoo/UglifyJS) のような最小化ツールを使用して行うのがベストです（オンライン版もあります。 [JSCompress.com](https://jscompress.com/) を参照してください）。
+- API を使用する場合、使用していないときは API 機能を必ずオフにしてください。 API 呼び出しによっては処理能力を実に高く消費することがあります。例えば、動画ストリームを表示させる場合、それが見えないときは必ずオフにしてください。 Geolocation の呼び出しを繰り返し使用して端末の位置を追跡する場合は、ユーザーが使用するのを止めたときにオフにするようにしてください。
+- アニメーションは実にパフォーマンスコストがかかります。多くの JavaScript ライブラリーは JavaScript でプログラムされたアニメーション機能を提供していますが、 JavaScript よりも [CSSアニメーション](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations) (または新進の [ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API)) のようなブラウザーネイティブ機能でアニメーションを行う方が、はるかにコストパフォーマンスが高いです。 Brian Birtles の [Animating like you just don't care with Element.animate](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/) を読むと、アニメーションにコストがかかる理由や、アニメーションのパフォーマンスを向上させるためのヒント、ウェブアニメーションAPIに関する情報など、実に有益な理論が書かれています。
 
-> **メモ:** Addy Osmani's [Writing Fast, Memory-Efficient JavaScript](https://www.smashingmagazine.com/2012/11/writing-fast-memory-efficient-javascript/) contains a lot of detail and some excellent tips for boosting JavaScript performance.
+> **メモ:** Addy Osmani の [Writing Fast, Memory-Efficient JavaScript](https://www.smashingmagazine.com/2012/11/writing-fast-memory-efficient-javascript/) には、 JavaScript のパフォーマンスを向上させるための多くの詳細と優れたヒントが格納されています。
 
-## クロスブラウザー JavaScript の問題
+## ブラウザー間の JavaScript の問題
 
-In this section, we'll look at some of the more common cross-browser JavaScript problems. We'll break this down into:
+この節では、より一般的なブラウザー間の JavaScript の問題を見ていきます。以下に分けて説明します。
 
-- Using modern core JavaScript features
-- Using modern Web API features
-- Using bad browser sniffing code
-- Performance problems
+- 最新の JavaScript コア機能を使用します。
+- 最新のウェブ API 機能を使用すること
+- 悪質なブラウザー検出コードを使用しています。
+- パフォーマンスの問題
 
-### モダン JavaScript/API 機能を使う
+### 最新の JavaScript/API 機能の使用
 
-In the [previous article](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#older_browsers_not_supporting_modern_features) we described some of the ways in which HTML and CSS errors and unrecognized features can be handled due to the nature of the languages. JavaScript is not as permissive as HTML and CSS however — if the JavaScript engine encounters mistakes or unrecognized syntax, more often than not it will throw errors.
+[前回の記事](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#older_browsers_not_supporting_modern_features)では、言語の性質上、 HTML や CSS のエラーや認識できない機能を処理する方法について説明しました。しかし JavaScript は HTML や CSS ほど寛容ではありません。 JavaScript エンジンが間違いや認識されない構文に遭遇した場合、例えば対応していない新しい機能が使われた場合など、多くの場合エラーになります。
 
-There are a number of modern JavaScript language features defined in recent versions of the specs that won't work in older browsers.
-Some of these are syntactic sugar (basically an easier, nicer way of writing what you can already do using existing features), and some offer interesting new possibilities.
+新機能への対応にはいくつか戦略がありますが、最も一般的なものを見てみましょう。
 
-For example:
-
-- [Promises](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) are a great new feature for performing asynchronous operations and making sure those operations are complete before code that relies on their results is used for something else.
-  As an example, the [Fetch API](/ja/docs/Web/API/fetch) (a modern equivalent to [XMLHTTPRequest](/ja/docs/Web/API/XMLHttpRequest)) uses promises to fetch resources across the network and make sure that the response has been returned before they are used (for example, displaying an image inside an {{htmlelement("img")}} element).
-  They are not supported in IE at all but are supported across all modern browsers.
-- [Arrow functions](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions) provide a shorter, more convenient syntax for writing [anonymous functions](/ja/docs/Learn/JavaScript/Building_blocks/Functions#anonymous_functions).
-  For a quick example, see [arrow-function.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/arrow-function.html) (see the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/arrow-function.html) also).
-  Arrow functions are supported across all modern browsers, except for IE.
-- Declaring [strict mode](/ja/docs/Web/JavaScript/Reference/Strict_mode) at the top of your JavaScript code causes it to be parsed with a stricter set of rules, meaning that more warnings and errors will be thrown, and some things will be disallowed that would otherwise be acceptable.
-  It is arguably a good idea to use strict mode, as it makes for better, more efficient code, however it has limited/patchy support across browsers (see [Strict mode in browsers](/ja/docs/Web/JavaScript/Reference/Strict_mode#strict_mode_in_browsers)).
-- [Typed arrays](/ja/docs/Web/JavaScript/Typed_arrays) allow JavaScript code to access and manipulate raw binary data, which is necessary as browser APIs for example start to manipulate streams of raw video and audio data.
-  These are available in IE10 and above, and all modern browsers.
-
-There are also many new APIs appearing in recent browsers, which don't work in older browsers, for example:
-
-- [IndexedDB API](/ja/docs/Web/API/IndexedDB_API), [Web Storage API](/ja/docs/Web/API/Web_Storage_API), and others for storing website data on the client-side.
-- [Web Workers API](/ja/docs/Web/API/Web_Workers_API) for running JavaScript in a separate thread, helping to improve performance.
-- [WebGL API](/ja/docs/Web/API/WebGL_API) for real 3D graphics.
-- [Web Audio API](/ja/docs/Web/API/Web_Audio_API) for advanced audio manipulation.
-- [WebRTC API](/ja/docs/Web/API/WebRTC_API) for multi-person, real-time video/audio connectivity (e.g. video conferencing).
-- [WebVR API](/ja/docs/Web/API/WebVR_API) for engineering virtual reality experiences in the browser (e.g. controlling a 3D view with data input from VR Hardware)
-
-There are a few strategies for handling incompatibilities between browsers relating to feature support; let's explore the most common ones.
-
-> **メモ:** These strategies do not exist in separate silos — you can, of course combine them as needed. For example, you could use feature detection to determine whether a feature is supported; if it isn't, you could then run code to load a polyfill or a library to handle the lack of support.
+> **メモ:** もちろん、必要に応じて組み合わせることもできます。例えば、ある機能が対応しているかどうかを判断するために機能検出を使用することができます。対応していない場合は、ポリフィルや ライブラリーを読み込むコードを実行して、対応していない部分を処理することができます。
 
 #### 機能検出
 
-The idea behind feature detection is that you can run a test to determine whether a JavaScript feature is supported in the current browser, and then conditionally run code to provide an acceptable experience both in browsers that do and don't support the feature. As a quick example, the [Geolocation API](/ja/docs/Web/API/Geolocation_API) (which exposes available location data for the device the web browser is running on) has a main entry point for its use — a `geolocation` property available on the global [Navigator](/ja/docs/Web/API/Navigator) object. Therefore, you can detect whether the browser supports geolocation or not by using something like the following:
+機能検出の考えは、JavaScript のある機能に現在のブラウザーが対応しているかどうかを判断するテストを実行し、その機能に対応しているブラウザーでも対応していないブラウザーでも受け入れられるサービスを提供するコードを条件付きで実行することができるということです。簡単な例として、[位置情報 API](/ja/docs/Web/API/Geolocation_API)（ウェブブラウザーが動作している端末で利用可能な位置情報を公開する）には、それを利用するための主要エントリーポイント、つまりグローバルな [Navigator](/ja/docs/Web/API/Navigator) オブジェクトで利用可能な `geolocation` プロパティを持っています。したがって、以下のように使用することで、ブラウザーが位置情報に対応しているかどうかを検出することができます。
 
 ```js
 if ("geolocation" in navigator) {
   navigator.geolocation.getCurrentPosition((position) => {
-    // show the location on a map, perhaps using the Google Maps API
+    // おそらく Google Maps API を使用し、地図上に場所を表示させる
   });
 } else {
-  // Give the user a choice of static maps instead perhaps
+  // ユーザーに静的地図の選択肢を与える
 }
 ```
 
-You could also write such a test for a CSS feature, for example by testing for the existence of _[element.style.property](/ja/docs/Web/API/HTMLElement/style)_ (e.g. `paragraph.style.transform !== undefined`). But for both CSS and JavaScript, it is probably better to use an established feature detection library rather than writing your own all the time. Modernizr is the industry standard for feature detection tests.
+CSS 機能に対して、このようなテストを書くこともできます。例えば、 _[element.style.property](/ja/docs/Web/API/HTMLElement/style)_ が存在するかどうかをテストすることで（例えば `paragraph.style.transform !== undefined`）、そのプロパティに対応していることを示します。
+CSS 機能が対応している場合にスタイルを適用したい場合は、 [@supports](/ja/docs/Web/CSS/@supports) アットルール（機能クエリーとして知られています）を直接使用することができます。
+例えば、ブラウザーが CSS コンテナークエリーに対応しているかどうかを調べるには、このようにします。
 
-As a last point, don't confuse feature detection with **browser sniffing** (detecting what specific browser is accessing the site) — this is a terrible practice that should be discouraged at all costs. See [Using bad browser sniffing code](#using_bad_browser_sniffing_code), later on, for more details.
+```css
+@supports (container-type: inline-size) {
+  /* 対応している場合はコンテナクエリーを使用します。 */
+}
+```
 
-> **メモ:** Some features are known to be undetectable — see Modernizr's list of [Undetectables](https://github.com/Modernizr/Modernizr/wiki/Undetectables).
+最後に、機能検出を**ブラウザー検出**（具体的にどのブラウザーがサイトにアクセスしているかを検出すること）と混同しないでください。これはひどい行為なので、まったくお勧めできません。詳細は後述の[悪いブラウザー検出コードの使用](#悪いブラウザー検出コードの使用)を参照してください。
 
-> **メモ:** Feature detection will be covered in a lot more detail in its own dedicated article, later in the module.
+> **メモ:** 機能検出については、このモジュールの後の方で、専用の記事で詳しく述べます。
 
 #### ライブラリー
 
-JavaScript libraries are essentially third party units of code that you can attach to your page, providing you with a wealth of ready-made functionality that can be used straight away, saving you a lot of time in the process. A lot of JavaScript libraries probably came into existence because their developer was writing a set of common utility functions to save them time when writing future projects, and decided to release them into the wild because other people might find them useful too.
+JavaScript ライブラリーは基本的にサードパーティ製のコード単位で、ページに添付することができ、すぐに使用することができる豊富な既製の機能を提供します。 JavaScript ライブラリーの多くは、開発者が将来自分のプロジェクトを書くときの時刻を節約するために一般的なユーティリティ関数の設定をしていて、他の人も有益な機能を探すかもしれないので公開することにしたために決まります。
 
-JavaScript libraries tend to come in a few main varieties (some libraries will serve more than one of these purposes):
+JavaScript ライブラリーには、いくつかの主な種類がある傾向があります（複数の目的を果たすライブラリもあります）。
 
-- Utility libraries: Provide a bunch of functions to make mundane tasks easier and less boring to manage. [jQuery](https://jquery.com/) for example provides its own fully-featured selectors and DOM manipulation libraries, to allow CSS-selector type selecting of elements in JavaScript and easier DOM building. It is not so important now we have modern features like {{domxref("Document.querySelector()")}}/{{domxref("Document.querySelectorAll()")}}/{{domxref("Node")}} methods available across browsers, but it can still be useful when older browsers need supporting.
-- Convenience libraries: Make difficult things easier to do. For example, the [WebGL API](/ja/docs/Web/API/WebGL_API) is really complex and challenging to use when you write it directly, so the [Three.js](https://threejs.org/) library (and others) is built on top of WebGL and provides a much easier API for creating common 3D objects, lighting, textures, etc.
-  The [Service Worker API](/ja/docs/Web/API/Service_Worker_API) is also very complex to use, so code libraries have started appearing to make common Service Worker uses-cases much easier to implement (see the [Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook) for several useful code samples).
-- Effects libraries: These libraries are designed to allow you to easily add special effects to your websites. This was more useful back when "DHTML" was a popular buzzword, and implementing an effect involved a lot of complex JavaScript, but these days browsers have a lot of built in CSS features and APIs to implementing effects more easily.
-- UI libraries: Provide methods for implementing complex UI features that would otherwise be challenging to implement and get working cross browser, for example [Foundation](https://get.foundation/), [Bootstrap](https://getbootstrap.com/), and [Material-UI](https://mui.com/) (the latter is a set of components for use with the React framework). These tend to be used as the basis of an entire site layout; it is often difficult to drop them in just for one UI feature.
-- Normalization libraries: Give you a simple syntax that allows you to easily complete a task without having to worry about cross browser differences. The library will manipulate appropriate APIs in the background so the functionality will work whatever the browser (in theory). For example, [LocalForage](https://github.com/localForage/localForage) is a library for client-side data storage, which provides a simple syntax for storing and retrieving data. In the background, it uses the best API the browser has available for storing the data, whether that is [IndexedDB](/ja/docs/Web/API/IndexedDB_API), [Web Storage](/ja/docs/Web/API/Web_Storage_API), or even WebSQL (which is now deprecated, but is still supported in some older versions of Safari/IE). As another example, jQuery
+- ユーティリティライブラリー： ありふれた課題をより簡単に、退屈しないように管理するための関数を提供します。例えば [jQuery](https://jquery.com/) は、自分自身で指定された機能を持つセレクターと DOM 操作のライブラリーを提供し、 JavaScript で CSS セレクターを入力するような要素の選択や、 DOM の構築を簡単にします。 {{domxref("Document.querySelector()")}}/{{domxref("Document.querySelectorAll()")}}/{{domxref("Node")}} のメソッドのような最新の機能がブラウザーを通して利用できるようになった今ではさほど重要ではなくなりましたが、古いブラウザーの対応が必要な場合にはなお利用価値があります。
+- 便利なライブラリー： 難しいことを簡単にします。例えば、 [WebGL API](/ja/docs/Web/API/WebGL_API) は実際に使用すると複雑で難しいので、 [Three.js](https://threejs.org/) ライブラリー（他にもあります）は WebGL の上に構築されており、一般的な 3D オブジェクト、ライティング、テクスチャなどを作成するための API をより簡単に提供します。
+  [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API) も使用するのが非常に複雑なので、一般的なサービスワーカーのユースケースをより簡単に実装するためのコードライブラリーが現れ始めました（いくつかの便利なコード例は [Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook) を参照してください）。
+- 効果ライブラリー： これらのライブラリーは、ウェブサイトに特殊効果を簡単に追加できるように設計されています。 "DHTML" が流行語であった頃、効果の実装には複雑な JavaScript が必要でしたが、最近のブラウザーには多数の CSS 機能と API があり、より簡単に効果を実装することができます。
+- UI ライブラリー： 例えば [Foundation](https://get.foundation/)、[Bootstrap](https://getbootstrap.com/)、[Material-UI](https://mui.com/) （後者は React フレームワークで使用するための部品設定です）のような、ブラウザー横断でで実装し、取得するのが難しい複雑な UI 機能を実装するメソッドを提供します。これらはサイト全体のレイアウトの基礎として用いられる傾向があります。 1 つの UI 機能のためだけに使用するのは難しいことが多いです。
+- 正規化ライブラリー： ブラウザー間の違いを気にすることなく、課題を簡単に完了できる単純な構文を提供します。ライブラリーはバックグラウンドで適切な API を操作するので、（理論上は）どんなブラウザーでも機能は動作します。例えば、 [LocalForage](https://github.com/localForage/localForage) はクライアント側データストアのためのライブラリーで、データを格納したり取得したりするための単純な構文を提供します。バックグラウンドでは、 [IndexedDB](/ja/docs/Web/API/IndexedDB_API)、[Web Storage](/ja/docs/Web/API/Web_Storage_API)、あるいは Web SQL （これで非推奨ですが、 Chromium ベースのブラウザーでは安全なコンテキストでまだ対応しています）など、ブラウザーがデータストアのために利用できる最適な API を使用します。他の例として、 jQuery があります。
 
-When choosing a library to use, make sure that it works across the set of browsers you want to support, and test your implementation thoroughly. Also make sure that the library is popular and well-supported, and isn't likely to just become obsolete next week. Talk to other developers to find out what they recommend, see how much activity and how many contributors the library has on GitHub (or wherever else it is stored), etc.
+使用するライブラリーを選ぶ際には、対応したいブラウザーの間でこれはうまく動作することを確認し、実装を十分にテストしてください。また、そのライブラリーが人気があり、よく対応していて、来週陳腐化する可能性がないことも確認してください。他の開発者に話を聞いて彼らが何を推奨しているかを探したり、 GitHub （またはライブラリーが格納されている場所）でそのライブラリーの活動状況や協力者の数を確認したりしましょう。
 
-Library usage at a basic level tends to consist of downloading the library's files (JavaScript, possibly some CSS or other dependencies too) and attaching them to your page (e.g. via a {{htmlelement("script")}} element), although there are normally many other usage options for such libraries, like installing them as [Bower](https://bower.io/) components, or including them as dependencies via the [Webpack](https://webpack.github.io/) module bundler. You will have to read the libraries' individual install pages for more information.
+基本的なレベルでのライブラリーの使い方は、ライブラリーのファイル（JavaScript、場合によっては CSS やその他の依存関係も）をダウンロードし、ページに添付する（例えば {{htmlelement("script")}} 要素で）ことです。しかし、このようなライブラリーには、 [Bower](https://bower.io/) コンポーネントとしてインストールしたり、 [Webpack](https://webpack.github.io/) モジュールバンドラーに依存関係として記載するなど、他にも多くの使用方法があります。より詳細な情報については、ライブラリーの個別のインストールページを読む必要があります。
 
-> **メモ:** You will also come across JavaScript frameworks in your travels around the Web, like [Ember](https://emberjs.com/) and [Angular](https://angularjs.org/). Whereas libraries are often usable for solving individual problems and dropping into existing sites, frameworks tend to be more along the lines of complete solutions for developing complex web applications.
+> **メモ:** JavaScript のフレームワークである [Ember](https://emberjs.com/) や [Angular](https://angularjs.org/) もウェブ上で見かけます。ライブラリーは個々の問題を解決したり、既存のウェブサイトに取り込んだりするのに多いのに対し、フレームワークは複雑なウェブアプリケーションを開発するための完全なソリューションという傾向があります。
 
-#### Polyfills
+#### ポリフィル
 
-Polyfills also consist of 3rd party JavaScript files that you can drop into your project, but they differ from libraries — whereas libraries tend to enhance existing functionality and make things easier, polyfills provide functionality that doesn't exist at all. Polyfills use JavaScript or other technologies entirely to build in support for a feature that a browser doesn't support natively. For example, you might use a polyfill like [es6-promise](https://github.com/stefanpenner/es6-promise) to make promises work in browsers where they are not supported natively.
+ポリフィルもまた、自分のプロジェクトに組み込むことができるサードパーティの JavaScript ファイルで構成されていますが、ライブラリーとは異なります。ライブラリーが既存の機能を拡張して物事を簡単にする傾向があるのに対して、ポリフィルはまったく存在しない機能を提供します。ポリフィルは JavaScript や他の技術を完全に使用して、ブラウザーがネイティブに対応していない機能に対応します。例えば、 [es6-promise](https://github.com/stefanpenner/es6-promise) のようなポリフィルを使用すると、プロミスがネイティブで対応していないブラウザーでも動作するようになります。
 
-Modernizr's list of [HTML5 Cross Browser Polyfills](https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills) is a useful place to find polyfills for different purposes. Again, you should research them before you use them — make sure they work and are maintained.
+それでは実際に作業してみましょう。この例ではデモのためだけに、 Fetch のポリフィルと es6-promise ポリフィルを使用しています。フェッチとプロミスは現行のブラウザーでは完全に対応していますが、もしフェッチに対応していないブラウザーを対象にしていた場合、ブラウザーはフェッチにも対応していない可能性が高く、フェッチはプロミスを多用します。
 
-Let's work through an exercise — in this example we will use a Fetch polyfill to provide support for the Fetch API in older browsers; however we also need to use the es6-promise polyfill, as Fetch makes heavy use of promises, and browsers that don't support them will still be in trouble.
+1. まず、 [fetch-polyfill.html](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-polyfill.html) と [花の画像](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/flowers.jpg) を新しいディレクトリーにコピーしてください。これから、花の画像をフェッチしてページに表示するコードを書きます。
+2. 次に、 [Fetch のポリフィル](https://raw.githubusercontent.com/github/fetch/master/fetch.js)のコピーを HTML と同じディレクトリーに保存します。
+3. 以下のコードを使用して、ポリフィルスクリプトをページに適用します。既存の {{htmlelement("script")}} 要素の上に配置して、フェッチを使用し始めたときにすでにページ上で利用できるようにします（IE11 はフェッチで要求されるプロミスに対応しているので、 CDN からプロミスのポリフィルも読み込んでいます）。
 
-1. To get started, make a local copy of our [fetch-polyfill.html](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-polyfill.html) example and [our nice image of some flowers](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/flowers.jpg) in a new directory. We are going to write code to fetch the flowers image and display it in the page.
-2. Next, save a copy of the [Fetch polyfill](https://raw.githubusercontent.com/github/fetch/master/fetch.js) in the same directory as the HTML.
-3. Apply the polyfill scripts to the page using the following code — place these above the existing {{htmlelement("script")}} element so they will be available on the page already when we start trying to use Fetch (we are also loading a Promise polyfill from a CDN, as IE11 does support promises, which fetch requires):
+   ```html
+   <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+   <script src="fetch.js"></script>
+   ```
 
-    ```html
-    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
-    <script src="fetch.js"></script>
-    ```
+4. 元の {{htmlelement("script")}} の中に、以下のコードを追加します。
 
-4. Inside the original {{htmlelement("script")}}, add the following code:
+   ```js
+   const myImage = document.querySelector(".my-image");
 
-    ```js
-    const myImage = document.querySelector('.my-image');
+   fetch("flowers.jpg").then((response) => {
+     response.blob().then((myBlob) => {
+       const objectURL = URL.createObjectURL(myBlob);
+       myImage.src = objectURL;
+     });
+   });
+   ```
 
-    fetch('flowers.jpg').then((response) => {
-      response.blob().then((myBlob) => {
-        const objectURL = URL.createObjectURL(myBlob);
-        myImage.src = objectURL;
-      });
-    });
-    ```
+5. [フェッチ](/ja/docs/Web/API/fetch)に対応していないブラウザーで読み込んでも、花の画像が現れるはずです。
+   ![Fetch basic example という見出しと紫の花の写真](fetch-image.jpg)
 
-5. Now if you load it in a browser that doesn't support [Fetch](/ja/docs/Web/API/fetch) (IE is an obvious candidate), you should still see the flower image appear — cool!
-    ![](fetch-image.jpg)
+> **メモ:** 完成版は [fetch-polyfill-finished.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html) にあります（[ソースコード](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html)も参照してください）。
 
-> **メモ:** You can find our finished version at [fetch-polyfill-finished.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html) (see also the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html)).
+> **メモ:** 繰り返しになりますが、これから出会う様々なポリフィルを使用する方法はたくさんあります - それぞれのポリフィルのドキュメントを参照してください。
 
-> **メモ:** Again, there are many different ways to make use of the different polyfills you will encounter — consult each polyfill's individual documentation.
+「なぜポリフィルは必要がなくても、常にコードを読み込むべきなのか」と思うかもしれません。これは良い点です。サイトが複雑になり、より多くのライブラリーやポリフィルなどを使用するようになると、多くの余分なコードを読み込むようになり、特に性能の低い端末ではパフォーマンスに影響を及ぼし始める可能性があります。必要なファイルだけを読み込むのが意味あることです。
 
-One thing you might be thinking is "why should we always load the polyfill code, even if we don't need it?" This is a good point — as your sites get more complex and you start to use more libraries, polyfills, etc., you can start to load a lot of extra code, which can start to affect performance, especially on less-powerful devices. It makes sense to only load files as needed.
-
-Doing this requires some extra setup in your JavaScript. You need some kind of a feature detection test that detects whether the browser supports the feature we are trying to use:
+これを行うには、 JavaScript で特別な設定を要求されます。使用しようとしている機能をブラウザーが対応しているかどうかを検出する、何らかの機能検出テストが必要です。
 
 ```js
 if (browserSupportsAllFeatures()) {
   main();
 } else {
-  loadScript('polyfills.js', main);
+  loadScript("polyfills.js", main);
 }
 
 function main(err) {
@@ -355,7 +337,7 @@ function main(err) {
 }
 ```
 
-So first we run a conditional that checks whether the function `browserSupportsAllFeatures()` returns true. If it does, we run the `main()` function, which will contain all our app's code. `browserSupportsAllFeatures()` looks like this:
+そこで最初に、関数 `browserSupportsAllFeatures()` が true を返すかどうかを調べる条件を実行します。もし true を返したら、アプリのコードをすべて格納する `main()` 関数を実行します。 `browserSupportsAllFeatures()` は次のようになります：
 
 ```js
 function browserSupportsAllFeatures() {
@@ -363,11 +345,11 @@ function browserSupportsAllFeatures() {
 }
 ```
 
-Here we are testing whether the [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) object and [`fetch()`](/ja/docs/Web/API/fetch) function exist in the browser. If both do, the function returns true. If the function returns `false`, then we run the code inside the second part of the conditional — this runs a function called loadScript(), which loads the polyfills into the page, then runs `main()` after the loading has finished. `loadScript()` looks like this:
+ここでは、[`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) オブジェクトと [`fetch()`](/ja/docs/Web/API/fetch) 関数がブラウザーで存在するかどうかをテストしています。両方が存在する場合、関数は true を返します。もし関数が `false` を返したら、条件分岐の2つ目の部分のコードを実行します。これは loadScript() と呼ばれる関数を実行し、ポリフィルをページに読み込み、読み込み完了後に `main()` を実行します。 `loadScript()` は次のようになります。
 
 ```js
 function loadScript(src, done) {
-  const js = document.createElement('script');
+  const js = document.createElement("script");
   js.src = src;
   js.onload = () => {
     done();
@@ -379,105 +361,66 @@ function loadScript(src, done) {
 }
 ```
 
-This function creates a new `<script>` element, then sets its `src` attribute to the path we specified as the first argument (`'polyfills.js'` when we called it in the code above). When it has loaded, we run the function we specified as the second argument (`main()`). If an error occurs in the loading of the script, we still call the function, but with a custom error that we can retrieve to help debug a problem if it occurs.
+この関数は新しい `<script>` 要素を作成し、その `src` 属性に最初の引数で指定したパス（上のコードで呼び出したときは `'polyfills.js'`）を設定します。読み込んだら、 2 つ目の引数に指定した関数 (`main()`) を実行します。スクリプトの読み込みでエラーが発生した場合は、関数を呼び出しますが、その際、問題が発生した場合にデバッグに役立つよう、カスタムエラーを取得します。
 
-Note that polyfills.js is basically the two polyfills we are using put together into one file. We did this manually, but there are cleverer solutions that will automatically generate bundles for you — see [Browserify](https://browserify.org/) (see [Getting started with Browserify](https://www.sitepoint.com/getting-started-browserify/) for a basic tutorial). It is a good idea to bundle JS files into one like this — reducing the number of HTTP requests you need to make improves the performance of your site.
+polyfills.js は基本的に使用している 2 つのポリフィルを 1 つのファイルにまとめたものです。私たちは手動でこれを行いましたが、自動的にバンドルを生成してくれる賢いソリューションもあります。 [Browserify](https://browserify.org/) を参照してください（基本的なチュートリアルは [Getting started with Browserify](https://www.sitepoint.com/getting-started-browserify/) を参照してください）。このように JS ファイルを 1 つにバンドルするのはよいアイディアです。 HTTP リクエストを縮小することで、サイトのパフォーマンスが向上します。
 
-You can see this code in action in [fetch-polyfill-only-when-needed.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-only-when-needed.html) (see the [source code also](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-polyfill-only-when-needed.html)). We'd like to make it clear that we can't take credit for this code — it was originally written by Philip Walton. Check out his article [Loading Polyfills Only When Needed](https://philipwalton.com/articles/loading-polyfills-only-when-needed/) for the original code, plus a lot of useful explanation around the wider subject).
+このコードが動作している様子は、 [fetch-polyfill-only-when-need.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-only-when-needed.html) で見ることができます（[ソースコード](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-polyfill-only-when-needed.html)も参照）。このコードは元々 Philip Walton によって書かれたものです。元コードは Philip Walton 氏の記事 [Loading Polyfills Only When Needed](https://philipwalton.com/articles/loading-polyfills-only-when-needed/) を調べてください（この記事には有益な説明がたくさんあります）。
 
-> **メモ:** There are some 3rd party options to consider, for example [Polyfill.io](https://polyfill.io/v3/api/) — this is a meta-polyfill library that will look at each browser's capabilities and apply polyfills as needed, depending on what APIs and JS features you are using in your code.
+#### JavaScript のトランスパイル
 
-#### JavaScript トランスパイルする
+最新の JavaScript の機能を使用したい人のために人気が出てきているもう一つのオプションは、最近の ECMAScript の機能を使用するコードを、古いブラウザーで作業するバージョンに変換することです。
 
-Another option that is becoming popular for people that want to use modern JavaScript features now is converting code that makes use of ECMAScript 6/ECMAScript 2015 features to a version that will work in older browsers.
+> **メモ:** これは「トランスパイル」と呼ばれます。（C コードで言うような）コンピューターで実行するためにコードを低レベルにコンパイルするのではなく、同じような抽象度で存在する構文に変更することで、同じように使用することができますが、状況は少し異なります（この場合、 JavaScript のある種類を別の種類に変換します）。
 
-> **メモ:** This is called "transpiling" — you are not compiling code into a lower level to be run on a computer (like you would say with C code); instead, you are changing it into a syntax that exists at a similar level of abstraction so it can be used in the same way, but in slightly different circumstances (in this case, transforming one flavor of JavaScript into another).
+よく使われるトランスパイラーは [Babel.js](https://babeljs.io/) ですが、他にもあります。
 
-So for example, we talked about arrow functions (see [arrow-function.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/arrow-function.html) live, and see the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/arrow-function.html)) earlier in the article, which only work in the newest browsers:
+### ブラウザー検出をしない
 
-```js
-addEventListener("click", () => { });
-```
+過去には、開発者はブラウザー検出コードを使用して、ユーザーがどのブラウザーを使用しているかを検出し、このブラウザーで動作するように適切なコードを与えていました。
 
-We could transpile this across to a traditional old-fashioned anonymous function, so it would work in older browsers:
+すべてのブラウザーには**ユーザーエージェント**文字列があり、ブラウザーの種類（バージョン、名前、OS など）を識別します。多くの開発者は悪質なブラウザー検出コードを実装し、それを保守しませんでした。そのため、対応するブラウザーは、簡単にレンダリングできるウェブサイトを使用することができなくなりました。これが一般的になったため、ブラウザーは検出コードを取得しないように、ユーザーエージェント文字列でどのブラウザーであるかを偽るようになりました（あるいは、すべてのブラウザーであると主張するようになりました）。ブラウザーはまた、ユーザーがブラウザーに JavaScript で問い合わせたときに、報告するユーザーエージェント文字列を変更できる機能を実装しました。これらすべてによって、ブラウザー検出はさらにエラーの可能性が高くなり、最終的には無意味になりました。
 
-```js
-addEventListener("click", function() { /* … */ });
-```
+Aaron Andersen による [History of the browser user-agent string](https://webaim.org/blog/user-agent-string-history/) は、ブラウザー検出の歴史について有益で面白い考察を提供しています。
+機能が対応しているかどうかを確実に検出するには、[機能検出](#機能検出) (および CSS 機能検出のための CSS @supports)を使用してください。そうすることで、新しいブラウザーが登場したときに、コードを変更する必要がなくなります。
 
-The recommended tool for JavaScript transpiling is currently [Babel](https://babeljs.io/). This offers transpilation capabilities for language features that are appropriate for transpilation. For features that can't just be easily transpiled into an older equivalent, Babel also offers polyfills to provide support.
+### JavaScript の接頭辞の扱い
 
-The easiest way to give Babel a try is to use the [online version](https://babeljs.io/repl/), which allows you to enter your source code on the left, and outputs a transpiled version on the right.
+前回の記事では、[CSS 接頭辞の扱い](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#css_接頭辞の扱い)についてたくさんの解説をしました。さて、新しい JavaScript の実装でも接頭辞を使用していました。 JavaScript では CSS のように{{Glossary("kebab_case", "ハイフン区切り")}}ではなく{{Glossary("camel_case", "キャメルケース")}}を使用していました。例えば、接頭辞が `Object` という新しい jshint API オブジェクトで使用されていたとします。
 
-> **メモ:** There are many ways to use Babel (task runners, automation tools, etc.), as you'll see on the [setup page](https://babeljs.io/en/setup/).
+- Mozilla は `mozObject` を使用
+- Chrome/Opera/Safari は `webkitObject` を使用
+- Microsoft は `msObject` を使用
 
-### 悪いブラウザーを検出するコードを使う
-
-All browsers have a **user-agent** string, which identifies what the browser is (version, name, OS, etc.) In the bad only days when pretty much everyone used Netscape or Internet Explorer, developers used to use so-called **browser sniffing code** to detect which browser the user was using, and give them appropriate code to work on that browser.
-
-The code used to look something like this (although this is a simplified example):
-
-```js
-let ua = navigator.userAgent;
-
-if (ua.includes('Firefox')) {
-  // run Firefox-specific code
-} else if (ua.includes('Chrome')) {
-  // run Chrome-specific code
-}
-```
-
-The idea was fairly good — detect what browser is viewing the site, and run code as appropriate to make sure the browser will be able to use your site OK.
-
-> **メモ:** Try opening up your JavaScript console now and running navigator.userAgent, to see what you get returned.
-
-However, as time went on, developers started to see major problems with this approach. For a start, the code was error prone. What if you knew a feature didn't work in say, Firefox 10 and below, and implemented code to detect this, and then Firefox 11 came out — which did support that feature? Firefox 11 probably wouldn't be supported because it's not Firefox 10. You'd have to change all your sniffing code regularly.
-
-Many developers implemented bad browser sniffing code and didn't maintain it, and browsers start getting locked out of using websites containing features that they had since implemented. This became so common that browsers started to lie about what browser they were in their user-agent strings (or claim they were all browsers), to get around sniffing code. Browsers also implemented facilities to allow users to change what user-agent string the browser reported when queried with JavaScript. This all made browser sniffing even more error prone, and ultimately pointless.
-
-> **メモ:** You should read [History of the browser user-agent string](https://webaim.org/blog/user-agent-string-history/) by Aaron Andersen for a useful and amusing take on this situation.
-
-The lesson to be learned here is — NEVER use browser sniffing. The only real use case for browser sniffing code in the modern day is if you are implementing a fix for a bug in a very specific version of a particular browser. But even then, most bugs get fixed pretty quickly in browser vendor rapid release cycles. It won't come up very often. [Feature detection](#feature_detection) is almost always a better option — if you detect whether a feature is supported, you won't need to change your code when new browser versions come out, and the tests are much more reliable.
-
-If you come across browser sniffing when joining an existing project, look at whether it can be replaced with something more sensible. Browser sniffing causes all kind of interesting bugs, like [Firefox バグ 1308462](https://bugzil.la/1308462).
-
-### JavaScript プレフィックスを扱う
-
-In the previous article, we included quite a lot of discussion about [handling CSS prefixes](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#handling_css_prefixes). Well, new JavaScript implementations sometimes use prefixes too, although JavaScript uses camel case rather than hyphenation like CSS. For example, if a prefix was being used on a new jshint API object called `Object`:
-
-- Mozilla would use `mozObject`
-- Chrome/Opera/Safari would use `webkitObject`
-- Microsoft would use `msObject`
-
-Here's an example, taken from our [violent-theremin demo](http://mdn.github.io/violent-theremin/) (see [source code](https://github.com/mdn/violent-theremin)), which uses a combination of the [Canvas API](/ja/docs/Web/API/Canvas_API) and the [Web Audio API](/ja/docs/Web/API/Web_Audio_API) to create a fun (and noisy) drawing tool:
+これは [violent-theremin demo](https://mdn.github.io/webaudio-examples/violent-theremin/) （[ソースコード](https://github.com/mdn/webaudio-examples/tree/main/violent-theremin) を参照）から抜粋した例で、[キャンバス API](/ja/docs/Web/API/Canvas_API) と [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) を組み合わせて、楽しい（そしてうるさい）描画ツールを作っています。
 
 ```js
 const AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioCtx = new AudioContext();
 ```
 
-In the case of the Web Audio API, the key entry points to using the API were supported in Chrome/Opera via `webkit` prefixed versions (they now support the unprefixed versions). The easy way to get around this situation is to create a new version of the objects that are prefixed in some browsers, and make it equal to the non-prefixed version, OR the prefixed version (OR any other prefixed versions that need consideration) — whichever one is supported by the browser currently viewing the site will be used.
+ウェブオーディオ API の場合、 API を使用するための重要なエントリーポイントは、 Chrome/Operaでは `webkit` 接頭辞付きバージョンで対応していました（現在は接頭辞なしバージョンで対応しています）。この状況を回避する簡単な方法は、いくつかのブラウザーで接頭辞の付いたオブジェクトの新しいバージョンを作成し、接頭辞の付いていないバージョン、または接頭辞の付いたバージョン（または考慮が必要な他の接頭辞の付いたバージョン）と同じにすることです。
 
-Then we use that object to manipulate the API, rather than the original one. In this case we are creating a modified [AudioContext](/ja/docs/Web/API/AudioContext) constructor, then creating a new audio context instance to use for our Web Audio coding.
+そして、元のオブジェクトではなく、そのオブジェクトを使用して API を操作します。このケースでは、変更した [AudioContext](/ja/docs/Web/API/AudioContext) コンストラクターを作成し、新しいオーディオコンテキストのインスタンスを作成して、ウェブオーディオコーディングに使用しています。
 
-This pattern can be applied to just about any prefixed JavaScript feature. JavaScript libraries/polyfills also make use of this kind of code, to abstract browser differences away from the developer as much as possible.
+このパターンは、接頭辞を持つ JavaScript の機能すべてに適用できます。 JavaScript ライブラリー/ポリフィルもこのようなコードを使用し、可能な限りブラウザーの違いを抽象化して開発者から遠ざけています。
 
-Again, prefixed features were never supposed to be used in production websites — they are subject to change or removal without warning, and cause cross browser issues. If you insist on using prefixed features, make sure you use the right ones. You can look up what browsers require prefixes for different JavaScript/API features on MDN reference pages, and sites like [caniuse.com](https://caniuse.com/). If you are unsure, you can also find out by doing some testing directly in browsers.
+繰り返しますが、接頭辞機能は本番のウェブサイトで使用することは想定されていません。予告なしに変更または除去される可能性があり、ブラウザー間の問題を発生させます。接頭辞機能をどうしても用いるのであれば、正しいものを使用してください。さまざまな JavaScript/API 機能で接頭辞が要求されるブラウザーは、 MDN リファレンスページや [caniuse.com](https://caniuse.com/) のようなサイトで見ていくことができます。わからない場合は、ブラウザーで直接テストすることで調べることもできます。
 
-For example, try going into your browser's developer console and start typing
+例えば、ブラウザーの開発者コンソールに入り、次のように入力し始めてください。
 
 ```js
-window.AudioContext
+window.AudioContext;
 ```
 
-If this feature is supported in your browser, it will autocomplete.
+この機能がブラウザーで対応している場合、自動補完されます。
 
-## help を見つける
+## ヘルプを探す
 
-There are many other issues you'll encounter with JavaScript; the most important thing to know really is how to find answers online. Consult the HTML and CSS article's [Finding help section](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#finding_help) for our best advice.
+JavaScript で遭遇する課題は他にもたくさんあります。実際に知っておくべき最も重要なことは、オンラインで答えを探す方法です。 HTML と CSS の記事の[ヘルプを探すの節](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#ヘルプを探す)を参考にしてください。
 
 ## まとめ
 
-So that's JavaScript. Simple huh? Maybe not so simple, but this article should at least give you a start, and some ideas on how to tackle the JavaScript-related problems you will come across.
+これが JavaScript です。単純でしょう？といった具合には単純ではないかもしれませんが、この記事を読むことで、少なくとも JavaScript に関連する問題に取り組み、解決するためのヒントが得られるはずです。
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS","Learn/Tools_and_testing/Cross_browser_testing/Accessibility", "Learn/Tools_and_testing/Cross_browser_testing")}}

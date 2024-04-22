@@ -1,8 +1,6 @@
 ---
 title: Constructeur InternalError()
 slug: Web/JavaScript/Reference/Global_Objects/InternalError/InternalError
-translation_of: Web/JavaScript/Reference/Global_Objects/InternalError/InternalError
-browser-compat: javascript.builtins.InternalError.InternalError
 ---
 
 {{JSRef}}{{non-standard_header}}
@@ -12,10 +10,10 @@ Le constructeur **`InternalError()`** permet de créer une erreur qui s'est prod
 ## Syntaxe
 
 ```js
-new InternalError()
-new InternalError(message)
-new InternalError(message, nomFichier)
-new InternalError(message, nomFichier, numeroLigne)
+new InternalError();
+new InternalError(message);
+new InternalError(message, nomFichier);
+new InternalError(message, nomFichier, numeroLigne);
 ```
 
 ### Paramètres
@@ -32,7 +30,7 @@ new InternalError(message, nomFichier, numeroLigne)
 ### Créer une nouvelle exception `InternalError`
 
 ```js
-new InternalError('Échec du moteur');
+new InternalError("Échec du moteur");
 ```
 
 ## Spécifications

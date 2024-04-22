@@ -1,13 +1,6 @@
 ---
-title: 'RangeError: invalid array length'
+title: "RangeError: invalid array length"
 slug: Web/JavaScript/Reference/Errors/Invalid_array_length
-tags:
-  - JavaScript
-  - Диапазон
-  - Массив
-  - Ошибка
-  - Размер массива
-translation_of: Web/JavaScript/Reference/Errors/Invalid_array_length
 ---
 
 {{jsSidebar("Errors")}}
@@ -38,23 +31,23 @@ RangeError: Invalid array buffer length (Chrome)
 ## Примеры
 
 ```js example-bad
-new Array(Math.pow(2, 40))
-new Array(-1)
-new ArrayBuffer(Math.pow(2, 32))
-new ArrayBuffer(-1)
+new Array(Math.pow(2, 40));
+new Array(-1);
+new ArrayBuffer(Math.pow(2, 32));
+new ArrayBuffer(-1);
 
 let a = [];
-a.length = a.length - 1;         // установка длинны -1
+a.length = a.length - 1; // установка длинны -1
 
 let b = new Array(Math.pow(2, 32) - 1);
-b.length = b.length + 1;         // установка длинны 2^32
+b.length = b.length + 1; // установка длинны 2^32
 ```
 
 ```js example-good
-[ Math.pow(2, 40) ]                     // [ 1099511627776 ]
-[ -1 ]                                  // [ -1 ]
-new ArrayBuffer(Math.pow(2, 32) - 1)
-new ArrayBuffer(0)
+[Math.pow(2, 40)]; // [ 1099511627776 ]
+[-1]; // [ -1 ]
+new ArrayBuffer(Math.pow(2, 32) - 1);
+new ArrayBuffer(0);
 
 let a = [];
 a.length = Math.max(0, a.length - 1);

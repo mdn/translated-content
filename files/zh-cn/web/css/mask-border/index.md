@@ -13,16 +13,16 @@ slug: Web/CSS/mask-border
 
 ```css
 /* source | slice */
-mask-border: url('border-mask.png') 25;
+mask-border: url("border-mask.png") 25;
 
 /* source | slice | repeat */
-mask-border: url('border-mask.png') 25 space;
+mask-border: url("border-mask.png") 25 space;
 
 /* source | slice | width */
-mask-border: url('border-mask.png') 25 / 35px;
+mask-border: url("border-mask.png") 25 / 35px;
 
 /* source | slice | width | outset | repeat | mode */
-mask-border: url('border-mask.png') 25 / 35px / 12px space alpha;
+mask-border: url("border-mask.png") 25 / 35px / 12px space alpha;
 ```
 
 ### Values
@@ -55,7 +55,10 @@ mask-border: url('border-mask.png') 25 / 35px / 12px space alpha;
 #### HTML
 
 ```html
-<div id="bitmap">This element is surrounded by a bitmap-based mask border! Pretty neat, isn't it?</div>
+<div id="bitmap">
+  This element is surrounded by a bitmap-based mask border! Pretty neat, isn't
+  it?
+</div>
 ```
 
 #### CSS
@@ -69,11 +72,7 @@ div {
   border: 18px solid salmon;
   padding: 10px;
 
-  mask-border:
-    url("mask-border-diamonds.png")  /* source */
-    30 /         /* slice */
-    36px 18px    /* width */
-    round;       /* repeat */
+  mask-border: url("mask-border-diamonds.png") 30 / 36px 18px round;
 }
 ```
 

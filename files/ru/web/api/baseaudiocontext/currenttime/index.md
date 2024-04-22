@@ -1,8 +1,6 @@
 ---
 title: AudioContext.currentTime
 slug: Web/API/BaseAudioContext/currentTime
-translation_of: Web/API/BaseAudioContext/currentTime
-original_slug: Web/API/AudioContext/currentTime
 ---
 
 {{ APIRef("AudioContext") }}
@@ -36,11 +34,9 @@ console.log(audioCtx.currentTime);
 
 ## Specifications
 
-| Specification                                                                                            | Status                               | Comment |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('Web Audio API', '#widl-AudioContext-currentTime', 'currentTime')}} | {{Spec2('Web Audio API')}} |         |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

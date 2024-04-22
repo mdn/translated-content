@@ -1,7 +1,6 @@
 ---
 title: Window.performance
 slug: Web/API/performance_property
-original_slug: Web/API/Window/performance
 ---
 
 {{APIRef("High Resolution Time")}}

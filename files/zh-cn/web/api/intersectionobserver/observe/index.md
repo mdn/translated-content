@@ -3,7 +3,7 @@ title: IntersectionObserver.observe()
 slug: Web/API/IntersectionObserver/observe
 ---
 
-{{APIRef("Intersection Observer API")}}{{SeeCompatTable}}
+{{APIRef("Intersection Observer API")}}
 
 {{domxref("IntersectionObserver")}} 对象的**`observe()`** 方法向 IntersectionObserver 对象监听的目标集合添加一个元素。一个监听者有一组阈值和一个根，但是可以监视多个目标元素，以查看这些目标元素可见区域的变化。调用{{domxref("IntersectionObserver.unobserve()")}}方法可以停止观察元素。
 
@@ -29,24 +29,24 @@ IntersectionObserver.observe(targetElement);
 
 ```js
 // Register IntersectionObserver
-const io = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
+const io = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
     // Add 'active' class if observation target is inside viewport
     if (entry.intersectionRatio > 0) {
-      entry.target.classList.add('active');
+      entry.target.classList.add("active");
     }
     // Remove 'active' class otherwise
     else {
-      entry.target.classList.remove('active');
+      entry.target.classList.remove("active");
     }
-  })
-})
+  });
+});
 
 // Declares what to observe, and observes its properties.
-const boxElList = document.querySelectorAll('.box');
+const boxElList = document.querySelectorAll(".box");
 boxElList.forEach((el) => {
-    io.observe(el);
-})
+  io.observe(el);
+});
 ```
 
 ## 规范

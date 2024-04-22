@@ -1,15 +1,6 @@
 ---
 title: Math.expm1()
 slug: Web/JavaScript/Reference/Global_Objects/Math/expm1
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/expm1
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/expm1
 ---
 
 {{JSRef}}
@@ -21,7 +12,7 @@ La fonction **`Math.expm1()`** renvoie `e^x` - 1, avec `x` l'argument donné et 
 ## Syntaxe
 
 ```js
-Math.expm1(x)
+Math.expm1(x);
 ```
 
 ### Paramètres
@@ -43,8 +34,8 @@ Un nombre qui représente `e^x- 1` où `x` est la valeur passée en argument et 
 
 ```js
 Math.expm1(-1); // -0.6321205588285577
-Math.expm1(0);  // 0
-Math.expm1(1);  // 1.718281828459045
+Math.expm1(0); // 0
+Math.expm1(1); // 1.718281828459045
 ```
 
 ## Prothèse d'émulation (_polyfill_)
@@ -52,9 +43,11 @@ Math.expm1(1);  // 1.718281828459045
 Cette fonction peut être émulée en utilisant la fonction {{jsxref("Objets_globaux/Math/exp", "Math.exp()")}} :
 
 ```js
-Math.expm1 = Math.expm1 || function(x) {
+Math.expm1 =
+  Math.expm1 ||
+  function (x) {
     return Math.exp(x) - 1;
-};
+  };
 ```
 
 ## Spécifications

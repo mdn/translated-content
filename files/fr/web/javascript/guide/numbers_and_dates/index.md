@@ -1,14 +1,9 @@
 ---
 title: Nombres et dates
 slug: Web/JavaScript/Guide/Numbers_and_dates
-tags:
-  - Guide
-  - JavaScript
-translation_of: Web/JavaScript/Guide/Numbers_and_dates
-original_slug: Web/JavaScript/Guide/Nombres_et_dates
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_et_Op%C3%A9rateurs", "Web/JavaScript/Guide/Formatage_du_texte")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_et_Opérateurs", "Web/JavaScript/Guide/Formatage_du_texte")}}
 
 Ce chapitre illustre le fonctionnement des nombres et des dates en JavaScript grâce aux concepts, objets et fonctions utilisables avec ce langage. Cela inclut notamment l'écriture de nombre selon différentes bases (décimale, binaire, hexadécimale) et l'utilisation de l'objet global {{jsxref("Math")}}.
 
@@ -35,8 +30,8 @@ Il est possible d'utiliser quatre types de littéraux numériques : décimal, bi
 
 0888; // 888 analysé en base décimale
 0777; // en mode non-strict, analysé en base octale,
-      // ce qui correspond
-      // à 511 en base décimale
+// ce qui correspond
+// à 511 en base décimale
 ```
 
 On voit ici que les littéraux numériques qui commencent par un zéro (`0`) et contiennent un chiffre strictement inférieur à 8 après ce 0 sont analysés comme étant exprimés en base octale.
@@ -48,7 +43,7 @@ Pour utiliser des nombres binaires, on utilise un littéral qui commence par un 
 ```js
 var FLT_BITSIGNE = 0b10000000000000000000000000000000; // 2147483648
 var FLT_EXPOSANT = 0b01111111100000000000000000000000; // 2139095040
-var FLT_MANTISSE = 0B00000000011111111111111111111111; // 8388607
+var FLT_MANTISSE = 0b00000000011111111111111111111111; // 8388607
 ```
 
 ### Les nombres octaux
@@ -71,17 +66,17 @@ var a = 0o10; // Notation octale pour ES2015
 Pour utiliser des nombres exprimés en base hexadécimale, on utilisera un préfixe avec un zéro suivi d'un x majuscule ou minuscule (`0x` ou `0X`). Si les chiffres qui suivent ce préfixe ne sont pas 0123456789ABCDEF, cela provoquera une exception {{jsxref("SyntaxError")}}.
 
 ```js
-0xFFFFFFFFFFFFFFFFF // 295147905179352830000
-0x123456789ABCDEF   // 81985529216486900
-0XA                 // 10
+0xfffffffffffffffff; // 295147905179352830000
+0x123456789abcdef; // 81985529216486900
+0xa; // 10
 ```
 
 ### Notation scientifique
 
 ```js
-1E3   // 100
-2e6   // 2000000
-0.1e2 // 10
+1e3; // 100
+2e6; // 2000000
+0.1e2; // 10
 ```
 
 ## L'objet `Number`
@@ -163,56 +158,56 @@ Le tableau qui suit liste certaines des propriétés de `Number`.
   </tbody>
 </table>
 
-| Méthode                                          | Description                                                                                                                                                                                           |
-| ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{jsxref("Number.parseFloat()")}}     | Analyse un argument qui est une chaîne de caractères et renvoie un nombre décimal. Cette méthode est équivalente à la fonction {{jsxref("parseFloat", "parseFloat()")}}.                  |
-| {{jsxref("Number.parseInt()")}}         | Analyse un argument qui est une chaîne de caractères et renvoie un entier exprimé dans une base donnée. Cette méthode est équivalente à la fonction {{jsxref("parseInt", "parseInt()")}}. |
-| {{jsxref("Number.isFinite()")}}         | Détermine si la valeur passée en argument est un nombre fini.                                                                                                                                         |
-| {{jsxref("Number.isInteger()")}}     | Détermine si la valeur passée en argument est un nombre entier.                                                                                                                                       |
-| {{jsxref("Number.isNaN()")}}             | Détermine si la valeur passée en argument est {{jsxref("NaN")}}. Cette version est plus robuste que la fonction globale {{jsxref("Objets_globaux/isNaN", "isNaN()")}}.          |
-| {{jsxref("Number.isSafeInteger()")}} | Détermine si la valeur fournie est un nombre qu'il est possible de représenter comme un entier sans perdre d'information.                                                                             |
+| Méthode                              | Description                                                                                                                                                                               |
+| ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{jsxref("Number.parseFloat()")}}    | Analyse un argument qui est une chaîne de caractères et renvoie un nombre décimal. Cette méthode est équivalente à la fonction {{jsxref("parseFloat", "parseFloat()")}}.                  |
+| {{jsxref("Number.parseInt()")}}      | Analyse un argument qui est une chaîne de caractères et renvoie un entier exprimé dans une base donnée. Cette méthode est équivalente à la fonction {{jsxref("parseInt", "parseInt()")}}. |
+| {{jsxref("Number.isFinite()")}}      | Détermine si la valeur passée en argument est un nombre fini.                                                                                                                             |
+| {{jsxref("Number.isInteger()")}}     | Détermine si la valeur passée en argument est un nombre entier.                                                                                                                           |
+| {{jsxref("Number.isNaN()")}}         | Détermine si la valeur passée en argument est {{jsxref("NaN")}}. Cette version est plus robuste que la fonction globale {{jsxref("Objets_globaux/isNaN", "isNaN()")}}.                    |
+| {{jsxref("Number.isSafeInteger()")}} | Détermine si la valeur fournie est un nombre qu'il est possible de représenter comme un entier sans perdre d'information.                                                                 |
 
 Le prototype de `Number` fournit certaines méthodes pour exprimer les valeurs représentées par les objets `Number` dans différents formats. Le tableau suivant liste certaines de ces méthodes de `Number.prototype`.
 
-| Méthode                                                                  | Description                                                                                                 |
-| ------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------- |
+| Méthode                                               | Description                                                                                                 |
+| ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
 | {{jsxref("Number.toExponential", "toExponential()")}} | Renvoie une chaîne de caractères représentant le nombre en notation exponentielle.                          |
-| {{jsxref("Number.toFixed", "toFixed()")}}                 | Renvoie une chaîne de caractères représentant le nombre en notation à point fixe.                           |
-| {{jsxref("Number.toPrecision", "toPrecision()")}}         | Renvoie une chaîne de caractères représentant le nombre en notation à point fixe avec une précision donnée. |
+| {{jsxref("Number.toFixed", "toFixed()")}}             | Renvoie une chaîne de caractères représentant le nombre en notation à point fixe.                           |
+| {{jsxref("Number.toPrecision", "toPrecision()")}}     | Renvoie une chaîne de caractères représentant le nombre en notation à point fixe avec une précision donnée. |
 
 ## L'objet `Math`
 
 L'objet natif {{jsxref("Math")}} possède des propriétés et des méthodes statiques pour représenter des constantes et des fonctions mathématiques. Ainsi, la propriété `PI` de l'objet `Math` représente la valeur de la constante <math><semantics><mi>π</mi><annotation encoding="TeX">\pi</annotation></semantics></math> (3.141...), on peut l'utiliser dans les applications avec :
 
 ```js
-Math.PI
+Math.PI;
 ```
 
 De la même façon, les fonctions mathématiques usuelles sont des méthodes de `Math`. On retrouve par exemple les fonctions trigonométriques, logarithmiques et exponentielles ainsi que d'autres fonctions. Si on souhaite utiliser la fonction sinus, on pourra écrire :
 
 ```js
-Math.sin(1.56)
+Math.sin(1.56);
 ```
 
 > **Note :** Les méthodes trigonométriques de `Math` prennent des arguments exprimés en radians.
 
 Le tableau suivant liste les méthodes de l'objet `Math`.
 
-| Méthode                                                                                                                                                                                                                                                                                | Description                                                                                                                                                             |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{jsxref("Math.abs", "abs()")}}                                                                                                                                                                                                                                               | Valeur absolue                                                                                                                                                          |
-| {{jsxref("Math.sin", "sin()")}}, {{jsxref("Math.cos", "cos()")}}, {{jsxref("Math.tan", "tan()")}}                                                                                                                                                           | Fonctions trigonométriques standards (les arguments sont exprimés en radians)                                                                                           |
-| {{jsxref("Math.asin", "asin()")}}, {{jsxref("Math.acos", "acos()")}}, {{jsxref("Math.atan", "atan()")}}, {{jsxref("Math.atan2", "atan2()")}}                                                                                             | Fonctions trigonométriques inverses (les valeurs renvoyées sont exprimées en radians)                                                                                   |
-| {{jsxref("Math.sinh", "sinh()")}}, {{jsxref("Math.cosh", "cosh()")}}, {{jsxref("Math.tanh", "tanh()")}}                                                                                                                                               | Fonctions trigonométriques hyperboliques (les arguments sont exprimés en radians)                                                                                       |
-| {{jsxref("Math.asinh", "asinh()")}}, {{jsxref("Math.acosh", "acosh()")}}, {{jsxref("Math.atanh", "atanh()")}}                                                                                                                                   | Fonctions trigonométriques hyperboliques inverses (les valeurs renvoyées sont exprimées en radians).                                                                    |
+| Méthode                                                                                                                                                                                                            | Description                                                                                                                                                             |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{jsxref("Math.abs", "abs()")}}                                                                                                                                                                                    | Valeur absolue                                                                                                                                                          |
+| {{jsxref("Math.sin", "sin()")}}, {{jsxref("Math.cos", "cos()")}}, {{jsxref("Math.tan", "tan()")}}                                                                                                                  | Fonctions trigonométriques standards (les arguments sont exprimés en radians)                                                                                           |
+| {{jsxref("Math.asin", "asin()")}}, {{jsxref("Math.acos", "acos()")}}, {{jsxref("Math.atan", "atan()")}}, {{jsxref("Math.atan2", "atan2()")}}                                                                       | Fonctions trigonométriques inverses (les valeurs renvoyées sont exprimées en radians)                                                                                   |
+| {{jsxref("Math.sinh", "sinh()")}}, {{jsxref("Math.cosh", "cosh()")}}, {{jsxref("Math.tanh", "tanh()")}}                                                                                                            | Fonctions trigonométriques hyperboliques (les arguments sont exprimés en radians)                                                                                       |
+| {{jsxref("Math.asinh", "asinh()")}}, {{jsxref("Math.acosh", "acosh()")}}, {{jsxref("Math.atanh", "atanh()")}}                                                                                                      | Fonctions trigonométriques hyperboliques inverses (les valeurs renvoyées sont exprimées en radians).                                                                    |
 | {{jsxref("Math.pow", "pow()")}}, {{jsxref("Math.exp", "exp()")}}, {{jsxref("Math.expm1", "expm1()")}}, {{jsxref("Math.log10", "log10()")}}, {{jsxref("Math.log1p", "log1p()")}}, {{jsxref("Math.log2", "log2()")}} | Fonctions exponentielles et logarithmiques                                                                                                                              |
-| {{jsxref("Math.floor", "floor()")}}, {{jsxref("Math.ceil", "ceil()")}}                                                                                                                                                                                         | Renvoie le plus petit/grand entier inférieur/supérieur ou égal à l'argument donné                                                                                       |
-| {{jsxref("Math.min", "min()")}}, {{jsxref("Math.max", "max()")}}                                                                                                                                                                                                     | Renvoie le plus petit (resp. grand) nombre d'une liste de nombres séparés par des virgules                                                                              |
-| {{jsxref("Math.random", "random()")}}                                                                                                                                                                                                                                       | Renvoie un nombre aléatoire compris entre 0 et 1                                                                                                                        |
-| {{jsxref("Math.round", "round()")}}, {{jsxref("Math.fround", "fround()")}}, {{jsxref("Math.trunc", "trunc()")}},                                                                                                                                  | Fonctions d'arrondis et de troncature                                                                                                                                   |
-| {{jsxref("Math.sqrt", "sqrt()")}}, {{jsxref("Math.cbrt", "cbrt()")}}, {{jsxref("Math.hypot", "hypot()")}}                                                                                                                                           | Racine carrée, cubique et racine carrée de la somme des carrés des arguments                                                                                            |
-| {{jsxref("Math.sign", "sign()")}}                                                                                                                                                                                                                                           | Renvoie le signe d'un nombre et indique si la valeur est négative, positive ou nulle                                                                                    |
-| {{jsxref("Math.clz32", "clz32()")}}, {{jsxref("Math.imul", "imul()")}}                                                                                                                                                                                         | Le nombre de zéros qui commencent un nombre sur 32 bits en représentation binaire. La résultat de la multiplication de deux arguments sur 32 bits effectuée comme en C. |
+| {{jsxref("Math.floor", "floor()")}}, {{jsxref("Math.ceil", "ceil()")}}                                                                                                                                             | Renvoie le plus petit/grand entier inférieur/supérieur ou égal à l'argument donné                                                                                       |
+| {{jsxref("Math.min", "min()")}}, {{jsxref("Math.max", "max()")}}                                                                                                                                                   | Renvoie le plus petit (resp. grand) nombre d'une liste de nombres séparés par des virgules                                                                              |
+| {{jsxref("Math.random", "random()")}}                                                                                                                                                                              | Renvoie un nombre aléatoire compris entre 0 et 1                                                                                                                        |
+| {{jsxref("Math.round", "round()")}}, {{jsxref("Math.fround", "fround()")}}, {{jsxref("Math.trunc", "trunc()")}},                                                                                                   | Fonctions d'arrondis et de troncature                                                                                                                                   |
+| {{jsxref("Math.sqrt", "sqrt()")}}, {{jsxref("Math.cbrt", "cbrt()")}}, {{jsxref("Math.hypot", "hypot()")}}                                                                                                          | Racine carrée, cubique et racine carrée de la somme des carrés des arguments                                                                                            |
+| {{jsxref("Math.sign", "sign()")}}                                                                                                                                                                                  | Renvoie le signe d'un nombre et indique si la valeur est négative, positive ou nulle                                                                                    |
+| {{jsxref("Math.clz32", "clz32()")}}, {{jsxref("Math.imul", "imul()")}}                                                                                                                                             | Le nombre de zéros qui commencent un nombre sur 32 bits en représentation binaire. La résultat de la multiplication de deux arguments sur 32 bits effectuée comme en C. |
 
 À la différence des autres objets, on ne crée pas d'objet de type `Math`. Ses propriétés sont statiques, on les appelle donc toujours depuis l'objet `Math`.
 
@@ -326,4 +321,4 @@ L'instruction qui suit concatène la valeur de `minutes` à `calc`. Si la valeur
 
 Enfin, une expression conditionnelle est utilisée pour ajouter "P.M." à `calc` si `heures` vaut 12 ou plus, sinon ce sera la chaîne "A.M." qui sera ajoutée à la fin de `calc`.
 
-{{PreviousNext("Web/JavaScript/Guide/Expressions_et_Op%C3%A9rateurs", "Web/JavaScript/Guide/Formatage_du_texte")}}
+{{PreviousNext("Web/JavaScript/Guide/Expressions_et_Opérateurs", "Web/JavaScript/Guide/Formatage_du_texte")}}

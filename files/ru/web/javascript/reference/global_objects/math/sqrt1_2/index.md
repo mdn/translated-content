@@ -1,14 +1,9 @@
 ---
 title: Math.SQRT1_2
 slug: Web/JavaScript/Reference/Global_Objects/Math/SQRT1_2
-tags:
-  - JavaScript
-  - Math
-  - Property
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/SQRT1_2
 ---
-{{JSRef("Global_Objects", "Math")}}
+
+{{JSRef}}
 
 ## Сводка
 
@@ -38,11 +33,7 @@ getRoot1_2(); // 0.7071067811865476
 
 ## Спецификации
 
-| Спецификация                                                                 | Статус                   | Комментарии                                            |
-| ---------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------ |
-| ECMAScript 1-е издание.                                                      | Стандарт                 | Изначальное определение. Реализована в JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.1.7', 'Math.SQRT1_2')}}     | {{Spec2('ES5.1')}} |                                                        |
-| {{SpecName('ES6', '#sec-math.sqrt1_2', 'Math.SQRT1_2')}} | {{Spec2('ES6')}}     |                                                        |
+{{Specifications}}
 
 ## Совместимость с браузерами
 

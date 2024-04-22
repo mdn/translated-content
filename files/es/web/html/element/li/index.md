@@ -1,12 +1,12 @@
 ---
 title: li
 slug: Web/HTML/Element/li
-original_slug: Web/HTML/Elemento/li
 ---
 
 ### Definición
 
 - El elemento `li` del ingles _item list_ o _elemento de lista_ declara cada uno de los elementos de una lista.
+
   - : **Sus etiquetas son**: \<li> y \</li> (la de cierre es opcional).
 
     **Crea una caja**: [en bloque](/es/HTML/Elemento/Tipos_de_elementos#en_bloque).

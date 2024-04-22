@@ -1,7 +1,6 @@
 ---
 title: Media Capture and Streams API (미디어 스트림)
 slug: Web/API/Media_Capture_and_Streams_API
-original_slug: Web/API/Media_Streams_API
 ---
 
 {{DefaultAPISidebar("Media Capture and Streams")}}

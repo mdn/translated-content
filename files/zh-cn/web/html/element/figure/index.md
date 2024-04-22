@@ -26,7 +26,7 @@ slug: Web/HTML/Element/figure
   </tr>
   <tr>
    <th scope="row">标签省略</th>
-   <td>{{no_tag_omission}}</td>
+   <td>不允许，开始标签和结束标签都不能省略。</td>
   </tr>
   <tr>
    <th scope="row">允许的父元素</th>
@@ -69,12 +69,16 @@ slug: Web/HTML/Element/figure
 ```html
 <!-- 只有图像 -->
 <figure>
-  <img src="favicon-192x192.png" alt="The beautiful MDN logo." />
+  <img
+    src="/zh-CN/docs/Web/HTML/Element/figure/favicon-192x192.png"
+    alt="The beautiful MDN logo." />
 </figure>
 
 <!-- 有标题的图像 -->
 <figure>
-  <img src="favicon-192x192.png" alt="The beautiful MDN logo." />
+  <img
+    src="/zh-CN/docs/Web/HTML/Element/figure/favicon-192x192.png"
+    alt="The beautiful MDN logo." />
   <figcaption>MDN Logo</figcaption>
 </figure>
 ```

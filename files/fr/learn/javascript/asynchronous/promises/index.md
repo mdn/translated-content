@@ -1,7 +1,6 @@
 ---
 title: Comment utiliser les promesses
 slug: Learn/JavaScript/Asynchronous/Promises
-translation_of: Learn/JavaScript/Asynchronous/Promises
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous")}}
@@ -40,11 +39,13 @@ Pour cela, nous allons envoyer une **requête HTTP** au serveur. Lors d'une requ
 Copiez ce qui suit dans la console JavaScript de votre navigateur&nbsp;:
 
 ```js
-const fetchPromise = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+const fetchPromise = fetch(
+  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+);
 
 console.log(fetchPromise);
 
-fetchPromise.then(reponse => {
+fetchPromise.then((reponse) => {
   console.log(`Réponse reçue : ${reponse.status}`);
 });
 
@@ -77,11 +78,13 @@ Avec l'API `fetch()`, une fois l'objet `Response` obtenu, il faut appeler une au
 Après avoir rechargé la page, copiez ce qui suit dans la console&nbsp;:
 
 ```js
-const fetchPromise = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+const fetchPromise = fetch(
+  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+);
 
-fetchPromise.then(reponse => {
+fetchPromise.then((reponse) => {
   const jsonPromise = reponse.json();
-  jsonPromise.then(json => {
+  jsonPromise.then((json) => {
     console.log(json[0].name);
   });
 });
@@ -93,35 +96,39 @@ Cela devrait afficher `"baked beans"` (qui est le nom (`name`) du premier produi
 
 Mais attendez&nbsp;! Dans l'article précédent, nous avions dit qu'appeler une fonction de rappel dans une autre fonction de rappel créait de plus en plus de niveaux de code imbriqués. Et même que cela pouvait engendrer un <i lang="en">callback hell</i> qui rendrait le code moins compréhensible. N'y a-t-il pas le même risque avec les appels à `then()`&nbsp;?
 
-Bien entendu, il peut y avoir ce risque, mais les promesses disposent d'une caractéristique élégante&nbsp;: *`then()` renvoie lui-même une promesse qui sera réalisée avec le résultat de la fonction qu'on lui a passée*. Cela signifie qu'on peut (et en fait qu'on devrait) réécrire l'exemple précédent comme ceci&nbsp;:
+Bien entendu, il peut y avoir ce risque, mais les promesses disposent d'une caractéristique élégante&nbsp;: _`then()` renvoie lui-même une promesse qui sera réalisée avec le résultat de la fonction qu'on lui a passée_. Cela signifie qu'on peut (et en fait qu'on devrait) réécrire l'exemple précédent comme ceci&nbsp;:
 
 ```js
-const fetchPromise = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+const fetchPromise = fetch(
+  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+);
 
 fetchPromise
-  .then(reponse => {
+  .then((reponse) => {
     return reponse.json();
   })
-  .then(json => {
+  .then((json) => {
     console.log(json[0].name);
   });
 ```
 
-Ici, au lieu d'appeler le deuxième `then()` au sein du gestionnaire pour le premier `then()`, on peut *renvoyer* la promesse renvoyée par `json()`, puis appeler le deuxième `then()` sur cette valeur de retour. C'est ce qu'on appelle **le chainage de promesses** et cela signifie qu'on peut éviter d'avoir des niveaux croissants d'imbrication des appels de fonctions asynchrones.
+Ici, au lieu d'appeler le deuxième `then()` au sein du gestionnaire pour le premier `then()`, on peut _renvoyer_ la promesse renvoyée par `json()`, puis appeler le deuxième `then()` sur cette valeur de retour. C'est ce qu'on appelle **le chainage de promesses** et cela signifie qu'on peut éviter d'avoir des niveaux croissants d'imbrication des appels de fonctions asynchrones.
 
 Avant de passer à la prochaine étape, il reste quelque chose à ajouter. Il faut vérifier que le serveur a accepté notre requête et a été en mesure d'y répondre avant de tenter de lire la réponse. Pour cela, nous allons vérifier le code de statut de la réponse et lever une exception si ce n'était pas «&nbsp;OK&nbsp;»&nbsp;:
 
 ```js
-const fetchPromise = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+const fetchPromise = fetch(
+  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+);
 
 fetchPromise
-  .then(reponse => {
+  .then((reponse) => {
     if (!reponse.ok) {
       throw new Error(`Erreur HTTP : ${reponse.status}`);
     }
     return reponse.json();
   })
-  .then(json => {
+  .then((json) => {
     console.log(json[0].name);
   });
 ```
@@ -132,26 +139,28 @@ Cela nous amène au dernier sujet&nbsp;: comment gérer les erreurs&nbsp;? L'API
 
 Dans l'article précédent, nous avons vu que la gestion d'erreur peut s'avérer délicate avec les fonctions de rappel imbriquées, où il fallait gérer les erreurs à chaque niveau d'imbrication.
 
-Pour la gestion des erreurs, les objets `Promise` fournissent une méthode [`catch()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch). Elle se comporte un peu comme `then()`&nbsp;: on l'appelle en lui passant une fonction de gestion en argument. Si le gestionnaire passé à `then()` est appelé lorsque l'opération asynchrone a *réussi*, le gestionnaire passé à `catch()` est, quant à lui, appelé lorsque l'opération asynchrone *échoue*.
+Pour la gestion des erreurs, les objets `Promise` fournissent une méthode [`catch()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch). Elle se comporte un peu comme `then()`&nbsp;: on l'appelle en lui passant une fonction de gestion en argument. Si le gestionnaire passé à `then()` est appelé lorsque l'opération asynchrone a _réussi_, le gestionnaire passé à `catch()` est, quant à lui, appelé lorsque l'opération asynchrone _échoue_.
 
 Si on ajoute `catch()` à la fin de la chaîne des promesses, il sera appelé dès qu'un des appels de fonction asynchrone échoue. Ainsi, il est possible d'implémenter une opération composée de plusieurs appels successifs de fonctions asynchrones et de gérer toutes les erreurs à un seul endroit.
 
 Rechargez la page et essayez la version qui suit `fetch()`. On a ajouté un gestionnaire d'erreur grâce à `catch()`, et on a aussi modifié l'URL afin de faire échouer la requête.
 
 ```js
-const fetchPromise = fetch('bad-scheme://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+const fetchPromise = fetch(
+  "bad-scheme://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+);
 
 fetchPromise
-  .then(reponse => {
+  .then((reponse) => {
     if (!reponse.ok) {
       throw new Error(`Erreur HTTP : ${reponse.status}`);
     }
     return reponse.json();
   })
-  .then(json => {
+  .then((json) => {
     console.log(json[0].name);
   })
-  .catch(error => {
+  .catch((error) => {
     console.error(`Impossible de récupérer les produits : ${error}`);
   });
 ```
@@ -187,24 +196,30 @@ Parfois, on a besoin que toutes les promesses soient tenues, mais leur exécutio
 
 La promesse renvoyée par `Promise.all()` est&nbsp;:
 
-- Tenue lorsque *toutes* les promesses du tableau ont été tenues. Dans ce cas, le gestionnaire `then()` est appelé avec un tableau contenant toutes les réponses, dans le même ordre que le tableau des promesses passé à `all()`
-- Rompue si *au moins une* des promesses du tableau a été rompue. Dans ce cas, le gestionnaire `catch()` est appelé avec l'erreur levée par la promesse du tableau qui a été rompue.
+- Tenue lorsque _toutes_ les promesses du tableau ont été tenues. Dans ce cas, le gestionnaire `then()` est appelé avec un tableau contenant toutes les réponses, dans le même ordre que le tableau des promesses passé à `all()`
+- Rompue si _au moins une_ des promesses du tableau a été rompue. Dans ce cas, le gestionnaire `catch()` est appelé avec l'erreur levée par la promesse du tableau qui a été rompue.
 
 Ainsi&nbsp;:
 
 ```js
-const fetchPromise1 = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
-const fetchPromise2 = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/not-found');
-const fetchPromise3 = fetch('https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json');
+const fetchPromise1 = fetch(
+  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+);
+const fetchPromise2 = fetch(
+  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/not-found",
+);
+const fetchPromise3 = fetch(
+  "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json",
+);
 
 Promise.all([fetchPromise1, fetchPromise2, fetchPromise3])
-  .then(reponses => {
+  .then((reponses) => {
     for (const reponse of reponses) {
       console.log(`${reponse.url} : ${reponse.status}`);
     }
   })
-  .catch(error => {
-    console.error(`Erreur de récupération : ${error}`)
+  .catch((error) => {
+    console.error(`Erreur de récupération : ${error}`);
   });
 ```
 
@@ -221,18 +236,24 @@ https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json : 200
 Si on essaye le même code avec une URL mal-formée, comme avec&nbsp;:
 
 ```js
-const fetchPromise1 = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
-const fetchPromise2 = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/not-found');
-const fetchPromise3 = fetch('bad-scheme://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json');
+const fetchPromise1 = fetch(
+  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+);
+const fetchPromise2 = fetch(
+  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/not-found",
+);
+const fetchPromise3 = fetch(
+  "bad-scheme://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json",
+);
 
 Promise.all([fetchPromise1, fetchPromise2, fetchPromise3])
-  .then(reponses => {
+  .then((reponses) => {
     for (const reponse of reponses) {
       console.log(`${reponse.url}: ${reponse.status}`);
     }
   })
-  .catch(error => {
-    console.error(`Échec de récupération : ${error}`)
+  .catch((error) => {
+    console.error(`Échec de récupération : ${error}`);
   });
 ```
 
@@ -245,16 +266,22 @@ On peut alors s'attendre à ce que le gestionnaire `catch()` soit exécuté et q
 Il arrive aussi qu'on ait plusieurs promesses et que la réussite d'une seule suffise, quelle que soit la promesse qui réussit. Dans ce cas, on pourra utiliser [`Promise.any()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/any). Elle fonctionne comme `Promise.all()`, mais elle est tenue dès qu'une des promesses du tableau a été tenue et rompue uniquement si toutes les promesses du tableau sont rompues&nbsp;:
 
 ```js
-const fetchPromise1 = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
-const fetchPromise2 = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/not-found');
-const fetchPromise3 = fetch('https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json');
+const fetchPromise1 = fetch(
+  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+);
+const fetchPromise2 = fetch(
+  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/not-found",
+);
+const fetchPromise3 = fetch(
+  "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json",
+);
 
 Promise.any([fetchPromise1, fetchPromise2, fetchPromise3])
-  .then(reponse => {
+  .then((reponse) => {
     console.log(`${reponse.url}: ${reponse.status}`);
   })
-  .catch(error => {
-    console.error(`Erreur de récupération : ${error}`)
+  .catch((error) => {
+    console.error(`Erreur de récupération : ${error}`);
   });
 ```
 
@@ -282,7 +309,9 @@ async function fetchProducts() {
     // Après cette ligne, notre fonction attendra que l'appel à `fetch()`
     // soit réglé, soit on aura un objet Response dans la variable reponse
     // soit on aura une erreur qui sera levée
-    const response = await fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+    const response = await fetch(
+      "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+    );
     if (!response.ok) {
       throw new Error(`Erreur HTTP : ${response.status}`);
     }
@@ -291,8 +320,7 @@ async function fetchProducts() {
     // un objet JSON ou alors une erreur sera levée
     const json = await response.json();
     console.log(json[0].name);
-  }
-  catch(error) {
+  } catch (error) {
     console.error(`Impossible d'obtenir les produits : ${error}`);
   }
 }
@@ -309,20 +337,21 @@ Attention, ceci ne fonctionne qu'au sein des fonctions asynchrones. Les fonction
 ```js example-bad
 async function fetchProducts() {
   try {
-    const reponse = await fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+    const reponse = await fetch(
+      "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+    );
     if (!reponse.ok) {
       throw new Error(`Erreur HTTP : ${reponse.status}`);
     }
     const json = await reponse.json();
     return json;
-  }
-  catch(error) {
+  } catch (error) {
     console.error(`Impossible d'obtenir les produits : ${error}`);
   }
 }
 
 const json = fetchProducts();
-console.log(json[0].name);   // json est un objet Promise, ça ne fonctionnera pas
+console.log(json[0].name); // json est un objet Promise, ça ne fonctionnera pas
 ```
 
 À la place, il faut plutôt écrire comme ceci&nbsp;:
@@ -330,14 +359,15 @@ console.log(json[0].name);   // json est un objet Promise, ça ne fonctionnera p
 ```js
 async function fetchProducts() {
   try {
-    const reponse = await fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+    const reponse = await fetch(
+      "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+    );
     if (!reponse.ok) {
       throw new Error(`Erreur HTTP : ${reponse.status}`);
     }
     const json = await reponse.json();
     return json;
-  }
-  catch(error) {
+  } catch (error) {
     console.error(`Impossible d'obtenir les produits : ${error}`);
   }
 }

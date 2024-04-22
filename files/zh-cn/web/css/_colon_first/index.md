@@ -1,5 +1,5 @@
 ---
-title: ':first'
+title: ":first"
 slug: Web/CSS/:first
 ---
 

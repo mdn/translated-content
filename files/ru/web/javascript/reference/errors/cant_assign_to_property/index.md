@@ -1,8 +1,8 @@
 ---
 title: 'TypeError: can''t assign to property "x" on "y": not an object'
 slug: Web/JavaScript/Reference/Errors/Cant_assign_to_property
-translation_of: Web/JavaScript/Reference/Errors/Cant_assign_to_property
 ---
+
 {{jsSidebar("Errors")}}Ошибка строгого режима JavaScript "can't assign to property" ("невозможно присвоить свойство") происходит в тот момент, когда вы пытаетесь создать свойство примитивного типа данных (такого как символ, строка, число или булевое значение). Примитивные типы данных не могут содержать никаких свойств.
 
 ## Message
@@ -27,7 +27,7 @@ The problem might be that an unexpected value is flowing at an unexpected place,
 ### Invalid cases
 
 ```js example-bad
-'use strict';
+"use strict";
 
 var foo = "my string";
 // The following line does nothing if not in strict mode.
@@ -39,7 +39,7 @@ foo.bar = {}; // TypeError: can't assign to property "bar" on "my string": not a
 Either fix the code to prevent the [primitive](/ru/docs/Glossary/primitive) from being used in such places, or fix the issue is to create the object equivalent {{jsxref("Object")}}.
 
 ```js example-good
-'use strict';
+"use strict";
 
 var foo = new String("my string");
 foo.bar = {};

@@ -1,7 +1,6 @@
 ---
 title: Secure Contexts
 slug: Web/Security/Secure_Contexts
-translation_of: Web/Security/Secure_Contexts
 ---
 
 Un navigateur entre dans un **contexte sécurisé** quand il a satisfait les exigences minimale de sécurité. Un contexte sécurisé permet au navigateur de mettre à disposition des APIs qui nécessitent des transferts sécurisés avec l'utilisateur.
@@ -20,7 +19,7 @@ Un contexte sera considéré comme sécurisé s'il est servi locallement, ou dep
 
 Les fichiers servis locallement avec des chemins comme `http://localhost` et `file://` sont considérés sécurisés.
 
-Les contextes qui ne sont pas servis locallement doivent être servis avec *https\://* ou *wss\://* et les protocoles utilisés ne doivent pas être considérés obsolètes.
+Les contextes qui ne sont pas servis locallement doivent être servis avec _https\://_ ou _wss\://_ et les protocoles utilisés ne doivent pas être considérés obsolètes.
 
 ## Détection des fonctionnalités
 

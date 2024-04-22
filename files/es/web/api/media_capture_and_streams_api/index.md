@@ -1,12 +1,11 @@
 ---
 title: API de MediaStream
 slug: Web/API/Media_Capture_and_Streams_API
-original_slug: Web/API/Media_Streams_API
 ---
 
 {{SeeCompatTable}}
 
-La **API de proceso **_MediaStream_**, a veces llamada *Media Stream API* o _Stream API_, es parte de la norma [WebRTC](/es/docs/WebRTC) y describe un flujo de datos de audio o video, los métodos para trabajar con ellos, las limitaciones asociadas con este tipo de datos, las respuestas de error y éxito al usar los datos asincrónicamente y los eventos que se disparan durante el proceso.
+La API de proceso **_MediaStream_**, a veces llamada _Media Stream API_ o _Stream API_, es parte de la norma [WebRTC](/es/docs/WebRTC) y describe un flujo de datos de audio o video, los métodos para trabajar con ellos, las limitaciones asociadas con este tipo de datos, las respuestas de error y éxito al usar los datos asincrónicamente y los eventos que se disparan durante el proceso.
 
 ## Conceptos Básicos
 
@@ -22,8 +21,8 @@ Los objetos `MediaStream` poseen una sola **entrada** y **salida[**\[ii\]**](#ed
 - {{domxref("AudioStreamTrack")}}
 - {{domxref("BlobEvent")}}
 - {{domxref("BlobEventInit")}}
-- [`ended (MediaStream)`](/es/docs/Web/Reference/Events/ended (MediaStream)) (event)
-- [`ended (MediaStreamTrack)`](/es/docs/Web/Reference/Events/ended (MediaStreamTrack)) (event)
+- [`ended (MediaStream)`](/es/docs/Web/Reference/Events/ended "MediaStream") (event)
+- [`ended (MediaStreamTrack)`](/es/docs/Web/Reference/Events/ended "MediaStreamTrack") (event)
 - {{domxref("MediaStream")}}
 - {{domxref("MediaStreamConstraints")}}
 - {{domxref("MediaStreamTrack")}}

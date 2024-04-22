@@ -139,7 +139,7 @@ First, we dynamically create the array buffer from JSON data using a {{domxref("
 
 ```js
 //load geometry with fetch() and Response.json()
-const response = await fetch('assets/geometry.json');
+const response = await fetch("assets/geometry.json");
 const vertices = await response.json();
 
 //Create array buffer
@@ -150,19 +150,19 @@ for (let i = 0; i < vertices.length; i++) {
   dv.setFloat32(20 * i, vertices[i].position[0], true);
   dv.setFloat32(20 * i + 4, vertices[i].position[1], true);
   dv.setFloat32(20 * i + 8, vertices[i].position[2], true);
-  dv.setInt8(20 * i + 12, vertices[i].normal[0] * 0x7F);
-  dv.setInt8(20 * i + 13, vertices[i].normal[1] * 0x7F);
-  dv.setInt8(20 * i + 14, vertices[i].normal[2] * 0x7F);
+  dv.setInt8(20 * i + 12, vertices[i].normal[0] * 0x7f);
+  dv.setInt8(20 * i + 13, vertices[i].normal[1] * 0x7f);
+  dv.setInt8(20 * i + 14, vertices[i].normal[2] * 0x7f);
   dv.setInt8(20 * i + 15, 0);
-  dv.setUint16(20 * i + 16, vertices[i].texCoord[0] * 0xFFFF, true);
-  dv.setUint16(20 * i + 18, vertices[i].texCoord[1] * 0xFFFF, true);
+  dv.setUint16(20 * i + 16, vertices[i].texCoord[0] * 0xffff, true);
+  dv.setUint16(20 * i + 18, vertices[i].texCoord[1] * 0xffff, true);
 }
 ```
 
 For higher performance, we could also do the previous JSON to ArrayBuffer conversion on the server-side, e.g. with Node.js. Then we could load the binary file and interpret it as an array buffer:
 
 ```js
-const response = await fetch('assets/geometry.bin');
+const response = await fetch("assets/geometry.bin");
 const buffer = await response.arrayBuffer();
 ```
 
@@ -192,9 +192,9 @@ gl.vertexAttribPointer(2, 2, gl.UNSIGNED_SHORT, true, 20, 16);
 gl.enableVertexAttribArray(2);
 
 //Set the attributes in the vertex shader to the same indices
-gl.bindAttribLocation(shaderProgram, 0, 'position');
-gl.bindAttribLocation(shaderProgram, 1, 'normal');
-gl.bindAttribLocation(shaderProgram, 2, 'texUV');
+gl.bindAttribLocation(shaderProgram, 0, "position");
+gl.bindAttribLocation(shaderProgram, 1, "normal");
+gl.bindAttribLocation(shaderProgram, 2, "texUV");
 //Since the attribute indices have changed, we must re-link the shader
 //Note that this will reset all uniforms that were previously set.
 gl.linkProgram(shaderProgram);
@@ -203,15 +203,15 @@ gl.linkProgram(shaderProgram);
 Or we can use the index provided by the graphics card instead of setting the index ourselves; this avoids the re-linking of the shader program.
 
 ```js
-const locPosition = gl.getAttribLocation(shaderProgram, 'position');
+const locPosition = gl.getAttribLocation(shaderProgram, "position");
 gl.vertexAttribPointer(locPosition, 3, gl.FLOAT, false, 20, 0);
 gl.enableVertexAttribArray(locPosition);
 
-const locNormal = gl.getAttribLocation(shaderProgram, 'normal');
+const locNormal = gl.getAttribLocation(shaderProgram, "normal");
 gl.vertexAttribPointer(locNormal, 4, gl.BYTE, true, 20, 12);
 gl.enableVertexAttribArray(locNormal);
 
-const locTexUV = gl.getAttribLocation(shaderProgram, 'texUV');
+const locTexUV = gl.getAttribLocation(shaderProgram, "texUV");
 gl.vertexAttribPointer(locTexUV, 2, gl.UNSIGNED_SHORT, true, 20, 16);
 gl.enableVertexAttribArray(locTexUV);
 ```

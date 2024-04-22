@@ -1,16 +1,6 @@
 ---
 title: RegExp.prototype.sticky
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/sticky
-tags:
-  - ECMAScript 2015
-  - Expressions rationnelles
-  - JavaScript
-  - Propriété
-  - Prototype
-  - Reference
-  - RegExp
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/sticky
-original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/sticky
 ---
 
 {{JSRef}}
@@ -30,7 +20,7 @@ La propriété `sticky` ne peut pas être modifiée directement. Elle est unique
 ### Utiliser une expression rationnelle avec le _flag_ _sticky_
 
 ```js
-var str = '#toto#';
+var str = "#toto#";
 var regex = /toto/y;
 
 regex.lastIndex = 1;

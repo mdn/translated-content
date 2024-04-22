@@ -68,7 +68,7 @@ const sab = new SharedArrayBuffer(1024);
 const ta = new Uint8Array(sab);
 ta[0] = 5;
 Atomics.xor(ta, 0, 1); // 이전 값인 5를 반환합니다
-Atomics.load(ta, 0);  // 4
+Atomics.load(ta, 0); // 4
 ```
 
 ## 명세

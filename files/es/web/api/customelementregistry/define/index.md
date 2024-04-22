@@ -36,11 +36,11 @@ Void.
 
 ### Excepciones
 
-| Excepción           | Descripción                                                                                                                                                                                                                                                             |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Excepción           | Descripción                                                                                                                                                                                                                                                 |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `NotSupportedError` | El {{domxref("CustomElementRegistry")}} ya contiene una entrada con el mismo nombre o el mismo constructor (o se ha definido ya de alguna otra manera), o se ha especificado `extends` pero el elemento del que se está intentando extender es desconocido. |
-| `SyntaxError`       | El nombre proporcionado no es un [nombre válido de elemento personalizado](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name).                                                                                                      |
-| `TypeError`         | El constructor referenciado no es un constructor                                                                                                                                                                                                                        |
+| `SyntaxError`       | El nombre proporcionado no es un [nombre válido de elemento personalizado](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name).                                                                                          |
+| `TypeError`         | El constructor referenciado no es un constructor                                                                                                                                                                                                            |
 
 > **Nota:** A menudo se obtienen excepciones `NotSupportedError`s cuando el método `define()` está fallando, pero realmente es un problema relacionado con {{domxref("Element.attachShadow()")}}.
 
@@ -58,66 +58,64 @@ class PopUpInfo extends HTMLElement {
     super();
 
     // Crear una shadow root
-    var shadow = this.attachShadow({mode: 'open'});
+    var shadow = this.attachShadow({ mode: "open" });
 
     // Crear tres elementos span
-    var wrapper = document.createElement('span');
-    wrapper.setAttribute('class','wrapper');
+    var wrapper = document.createElement("span");
+    wrapper.setAttribute("class", "wrapper");
 
-    var icon = document.createElement('span');
-    icon.setAttribute('class','icon');
-    icon.setAttribute('tabindex', 0);
+    var icon = document.createElement("span");
+    icon.setAttribute("class", "icon");
+    icon.setAttribute("tabindex", 0);
 
-    var info = document.createElement('span');
-    info.setAttribute('class','info');
+    var info = document.createElement("span");
+    info.setAttribute("class", "info");
 
     // Coger el contenido del atributo text y ponerlo en el span info
-    var text = this.getAttribute('text');
+    var text = this.getAttribute("text");
     info.textContent = text;
 
     // Coger el contenido del atributo img (si existe) y ponerlo en el span icon
     var imgUrl;
-    if(this.hasAttribute('img')) {
-      imgUrl = this.getAttribute('img');
+    if (this.hasAttribute("img")) {
+      imgUrl = this.getAttribute("img");
     } else {
-      imgUrl = 'img/default.png';
+      imgUrl = "img/default.png";
     }
 
     // El span no puede tener directamente una imagen, pero si contener un elemento img
-    var img = document.createElement('img');
+    var img = document.createElement("img");
     img.src = imgUrl;
     icon.appendChild(img);
 
     // Crear los estilos CSS e incluirlos en el shadow DOM
-    var style = document.createElement('style');
+    var style = document.createElement("style");
 
-    style.textContent = '.wrapper {' +
-                           'position: relative;' +
-                        '}' +
-
-                         '.info {' +
-                            'font-size: 0.8rem;' +
-                            'width: 200px;' +
-                            'display: inline-block;' +
-                            'border: 1px solid black;' +
-                            'padding: 10px;' +
-                            'background: white;' +
-                            'border-radius: 10px;' +
-                            'opacity: 0;' +
-                            'transition: 0.6s all;' +
-                            'position: absolute;' +
-                            'bottom: 20px;' +
-                            'left: 10px;' +
-                            'z-index: 3;' +
-                          '}' +
-
-                          'img {' +
-                            'width: 1.2rem' +
-                          '}' +
-
-                          '.icon:hover + .info, .icon:focus + .info {' +
-                            'opacity: 1;' +
-                          '}';
+    style.textContent =
+      ".wrapper {" +
+      "position: relative;" +
+      "}" +
+      ".info {" +
+      "font-size: 0.8rem;" +
+      "width: 200px;" +
+      "display: inline-block;" +
+      "border: 1px solid black;" +
+      "padding: 10px;" +
+      "background: white;" +
+      "border-radius: 10px;" +
+      "opacity: 0;" +
+      "transition: 0.6s all;" +
+      "position: absolute;" +
+      "bottom: 20px;" +
+      "left: 10px;" +
+      "z-index: 3;" +
+      "}" +
+      "img {" +
+      "width: 1.2rem" +
+      "}" +
+      ".icon:hover + .info, .icon:focus + .info {" +
+      "opacity: 1;" +
+      "}";
 
     // adjuntar los elementos creados (spans y estilo) al shadow DOM
     // notese que el span wrapper contiene los spans icon e info
@@ -130,13 +128,13 @@ class PopUpInfo extends HTMLElement {
 }
 
 // Definir el nuevo elemento
-customElements.define('popup-info', PopUpInfo);
+customElements.define("popup-info", PopUpInfo);
 ```
 
 ```html
-<popup-info img="img/alt.png" text="Su código de validación de tarjeta (CVC) es una característica
-                                    extra de seguridad — consiste en 3 o 4
-                                    numeros en la parte posterior de su tarjeta.">
+<popup-info
+  img="img/alt.png"
+  text="Su código de validación de tarjeta (CVC) es una característica extra de seguridad — consiste en 3 o 4 numeros en la parte posterior de su tarjeta."></popup-info>
 ```
 
 > **Nota:** Los constructores de elementos personalizados autónomos deben extender {{domxref("HTMLElement")}}.
@@ -160,35 +158,33 @@ class WordCount extends HTMLParagraphElement {
     // innerText está definido para objetos HTMLElement, mientras que textContent para todos los objetos Node
     // el operador || hace que obtengamos al menos uno de los dos
 
-    function countWords(node){
-      var text = node.innerText || node.textContent
+    function countWords(node) {
+      var text = node.innerText || node.textContent;
       return text.split(/\s+/g).length;
     }
 
-    var count = 'Words: ' + countWords(wcParent);
+    var count = "Words: " + countWords(wcParent);
 
     // // Crear una shadow root
-    var shadow = this.attachShadow({mode: 'open'});
+    var shadow = this.attachShadow({ mode: "open" });
 
     // Crear un nodo span con el número de palabras
-    var text = document.createElement('span');
+    var text = document.createElement("span");
     text.textContent = count;
 
     // Añadirlo a la shadow root
     shadow.appendChild(text);
 
-
     // Actualizar el contador cuando el contenido del elemento cambie
-    setInterval(function() {
-      var count = 'Words: ' + countWords(wcParent);
+    setInterval(function () {
+      var count = "Words: " + countWords(wcParent);
       text.textContent = count;
-    }, 200)
-
+    }, 200);
   }
 }
 
 // Define the new element
-customElements.define('word-count', WordCount, { extends: 'p' });
+customElements.define("word-count", WordCount, { extends: "p" });
 ```
 
 ```html

@@ -15,12 +15,13 @@ slug: Web/SVG/Attribute/preserveAspectRatio
 
 ## 上下文用法
 
-| Categories | None                    |
-| ---------- | ----------------------- |
+| Categories | None                      |
+| ---------- | ------------------------- |
 | Value      | \<align> [\<meetOrSlice>] |
-| Animatable | Yes                     |
+| Animatable | Yes                       |
 
 - \<align>
+
   - : `<align>` 属性值表示是否强制统一缩放，当 SVG 的 viewbox 属性与视图属性宽高比不一致时使用。`<align>` 属性的值一定是下列的值之一：
 
     - **none** 不会进行强制统一缩放，如果需要，会缩放指定元素的图形内容，使元素的边界完全匹配视图矩形。（注意：如果 `<align>` 的值是 `none` ，则 `<meetOrSlice>` 属性的值将会被忽略。）
@@ -33,7 +34,9 @@ slug: Web/SVG/Attribute/preserveAspectRatio
     - **xMinYMax** - 强制统一缩放。将 SVG 元素的 viewbox 属性的 X 的最小值与视图的 X 的最小值对齐。将 SVG 元素的 viewbox 属性的 Y 的最小值 + 元素的高度与视图的 Y 的最大值对齐。
     - **xMidYMax** - 强制统一缩放。将 SVG 元素的 viewbox 属性的 X 的中点值与视图的 X 的中点值对齐。将 SVG 元素的 viewbox 属性的 Y 的最小值 + 元素的高度与视图的 Y 的最大值对齐。
     - **xMaxYMax** - 强制统一缩放。将 SVG 元素的 viewbox 属性的 X 的最小值 + 元素的宽度与视图的 X 的最大值对齐。将 SVG 元素的 viewbox 属性的 Y 的最小值 + 元素的高度与视图的 Y 的最大值对齐。
+
 - \<meetOrSlice>
+
   - : `<meetOrSlice>` 是可选的，如果提供的话，与 `<align>` 间隔一个或多个的空格，参数所选值必须是以下值之一：
 
     - **meet** (默认值) - 图形将缩放到：

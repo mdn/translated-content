@@ -1,7 +1,6 @@
 ---
 title: Les variables CSS
 slug: Web/CSS/Using_CSS_custom_properties
-translation_of: Web/CSS/Using_CSS_custom_properties
 ---
 
 {{CSSRef}}
@@ -93,10 +92,10 @@ Appliquons-le à ce code HTML :
 
 ```html
 <div>
-    <div class="un">Toto</div>
-    <div class="deux">Texte <span class="cinq">- encore du texte</span></div>
-    <input class="trois">
-    <textarea class="quatre">Lorem Ipsum</textarea>
+  <div class="un">Toto</div>
+  <div class="deux">Texte <span class="cinq">- encore du texte</span></div>
+  <input class="trois" />
+  <textarea class="quatre">Lorem Ipsum</textarea>
 </div>
 ```
 
@@ -150,10 +149,10 @@ Remarquez la répétition dans le CSS. La couleur d'arrière-plan est définie �
 
 ```html hidden
 <div>
-    <div class="un">Toto</div>
-    <div class="deux">Text <span class="cinq">- more text</span></div>
-    <input class="trois">
-    <textarea class="quatre">Lorem Ipsum</textarea>
+  <div class="un">Toto</div>
+  <div class="deux">Text <span class="cinq">- more text</span></div>
+  <input class="trois" />
+  <textarea class="quatre">Lorem Ipsum</textarea>
 </div>
 ```
 
@@ -166,10 +165,8 @@ Il y a un héritage des propriétés personnalisées. Cela signifie que si une p
 ```html
 <div class="un">
   <div class="deux">
-    <div class="trois">
-    </div>
-    <div class="quatre">
-    </div>
+    <div class="trois"></div>
+    <div class="quatre"></div>
   </div>
 </div>
 ```
@@ -243,9 +240,15 @@ Lorsque le navigateur analyse une substitution `var()` invalide, c'est la valeur
 ### CSS
 
 ```css
-:root { --text-color: 16px; }
-p { color: blue; }
-p { color: var(--text-color); }
+:root {
+  --text-color: 16px;
+}
+p {
+  color: blue;
+}
+p {
+  color: var(--text-color);
+}
 ```
 
 Comme on pourrait s'y attendre, la valeur applique la substitution avec `--text-color` à la place de `var(--text-color)` mais `16px` n'est pas une valeur valide pour {{cssxref("color")}}. Après la substitution, la déclaration n'a plus aucun sens. Le navigateur résoud ce problème en deux étapes :

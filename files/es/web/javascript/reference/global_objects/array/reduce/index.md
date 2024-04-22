@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.reduce()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reduce
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/reduce
 ---
 
 {{JSRef}}
@@ -55,21 +54,21 @@ Si el `array` está vacío y no se proveyó un `valorInicial` lanzará un {{jsxr
 Suponga que ocurre el siguiente uso de `reduce`:
 
 ```js
-[0,1,2,3,4].reduce(function(valorAnterior, valorActual, indice, vector){
+[0, 1, 2, 3, 4].reduce(function (valorAnterior, valorActual, indice, vector) {
   return valorAnterior + valorActual;
 });
 
 // Primera llamada
-valorAnterior = 0, valorActual = 1, indice = 1
+(valorAnterior = 0), (valorActual = 1), (indice = 1);
 
 // Segunda llamada
-valorAnterior = 1, valorActual = 2, indice = 2
+(valorAnterior = 1), (valorActual = 2), (indice = 2);
 
 // Tercera llamada
-valorAnterior = 3, valorActual = 3, indice = 3
+(valorAnterior = 3), (valorActual = 3), (indice = 3);
 
 // Cuarta llamada
-valorAnterior = 6, valorActual = 4, indice = 4
+(valorAnterior = 6), (valorActual = 4), (indice = 4);
 
 // el array sobre el que se llama a reduce siempre es el objeto [0,1,2,3,4]
 
@@ -79,24 +78,24 @@ valorAnterior = 6, valorActual = 4, indice = 4
 Y si proporcionas un `valorInicial`, el resultado sería como este:
 
 ```js
-[0,1,2,3,4].reduce(function(valorAnterior, valorActual, indice, vector){
+[0, 1, 2, 3, 4].reduce(function (valorAnterior, valorActual, indice, vector) {
   return valorAnterior + valorActual;
 }, 10);
 
 // Primera llamada
-valorAnterior = 10, valorActual = 0, indice = 0
+(valorAnterior = 10), (valorActual = 0), (indice = 0);
 
 // Segunda llamada
-valorAnterior = 10, valorActual = 1, indice = 1
+(valorAnterior = 10), (valorActual = 1), (indice = 1);
 
 // Tercera llamada
-valorAnterior = 11, valorActual = 2, indice = 2
+(valorAnterior = 11), (valorActual = 2), (indice = 2);
 
 // Cuarta llamada
-valorAnterior = 13, valorActual = 3, indice = 3
+(valorAnterior = 13), (valorActual = 3), (indice = 3);
 
 // Quinta llamada
-valorAnterior = 16, valorActual = 4, indice = 4
+(valorAnterior = 16), (valorActual = 4), (indice = 4);
 
 // el array sobre el que se llama a reduce siempre es el objeto [0,1,2,3,4]
 
@@ -110,44 +109,31 @@ valorAnterior = 16, valorActual = 4, indice = 4
 `reduce` es una extensión de JavaScript al estándar ECMA-262; como tal puede que no esté presente en otras implementaciones del estándar. Puedes trabajar con ésto insertando el siguiente código al comienzo de tus scripts, permitiendo el uso de `reduce` en implementaciones de ECMA-262 que no lo implementan de modo nativo. Este algoritmo es exactamente el mismo usando en Firefox y SpiderMonkey.
 
 ```js
-if (!Array.prototype.reduce)
-{
-  Array.prototype.reduce = function(fun /*, inicial*/)
-  {
+if (!Array.prototype.reduce) {
+  Array.prototype.reduce = function (fun /*, inicial*/) {
     var longitud = this.length;
-    if (typeof fun != "function")
-      throw new TypeError();
+    if (typeof fun != "function") throw new TypeError();
 
     // no se devuelve ningún valor si no hay valor inicial y el array está vacío
-    if (longitud == 0 && arguments.length == 1)
-      throw new TypeError();
+    if (longitud == 0 && arguments.length == 1) throw new TypeError();
 
     var indice = 0;
-    if (arguments.length >= 2)
-    {
+    if (arguments.length >= 2) {
       var rv = arguments[1];
-    }
-    else
-    {
-      do
-      {
-        if (indice in this)
-        {
+    } else {
+      do {
+        if (indice in this) {
           rv = this[indice++];
           break;
         }
 
         // si el array no contiene valores, no existe valor inicial a devolver
-        if (++indice >= longitud)
-          throw new TypeError();
-      }
-      while (true);
+        if (++indice >= longitud) throw new TypeError();
+      } while (true);
     }
 
-    for (; indice < longitud; indice++)
-    {
-      if (indice in this)
-        rv = fun.call(null, rv, this[indice], indice, this);
+    for (; indice < longitud; indice++) {
+      if (indice in this) rv = fun.call(null, rv, this[indice], indice, this);
     }
 
     return rv;
@@ -160,14 +146,20 @@ if (!Array.prototype.reduce)
 ### Ejemplo: Sumar todos los valores de un `array`
 
 ```js
-var total = [0, 1, 2, 3].reduce(function(a, b){ return a + b; });
+var total = [0, 1, 2, 3].reduce(function (a, b) {
+  return a + b;
+});
 // total == 6
 ```
 
 ### Ejemplo: Integrar un `array` a partir de varios `arrays`
 
 ```js
-var integrado = [[0,1], [2,3], [4,5]].reduce(function(a,b) {
+var integrado = [
+  [0, 1],
+  [2, 3],
+  [4, 5],
+].reduce(function (a, b) {
   return a.concat(b);
 });
 // integrado es [0, 1, 2, 3, 4, 5]

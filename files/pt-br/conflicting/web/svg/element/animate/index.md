@@ -1,7 +1,6 @@
 ---
 title: animateColor
 slug: conflicting/Web/SVG/Element/animate
-original_slug: Web/SVG/Element/animateColor
 ---
 
 {{SVGRef}}{{deprecated_header}}

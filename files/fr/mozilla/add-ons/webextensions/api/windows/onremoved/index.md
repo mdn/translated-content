@@ -1,29 +1,18 @@
 ---
 title: windows.onRemoved
 slug: Mozilla/Add-ons/WebExtensions/API/windows/onRemoved
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Référence(2)
-  - WebExtensions
-  - Windows
-  - onRemoved
-translation_of: Mozilla/Add-ons/WebExtensions/API/windows/onRemoved
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Lancer quand une fenêtre est fermée.
 
 ## Syntaxe
 
 ```js
-browser.windows.onRemoved.addListener(listener)
-browser.windows.onRemoved.removeListener(listener)
-browser.windows.onRemoved.hasListener(listener)
+browser.windows.onRemoved.addListener(listener);
+browser.windows.onRemoved.removeListener(listener);
+browser.windows.onRemoved.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :

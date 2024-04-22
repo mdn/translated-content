@@ -1,6 +1,8 @@
 ---
 title: HTMLHeadElement
 slug: Web/API/HTMLHeadElement
+l10n:
+  sourceCommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
 ---
 
 {{APIRef("HTML DOM")}}
@@ -9,16 +11,16 @@ slug: Web/API/HTMLHeadElement
 
 {{InheritanceDiagram}}
 
-## プロパティ
+## インスタンスプロパティ
 
 _親である {{domxref("HTMLElement")}} から継承したプロパティもあります。_
 
 - {{domxref("HTMLHeadElement.profile")}} {{deprecated_inline}}
   - : 文字列で、 1 つ以上のメタデータプロファイルの URI を（ホワイトスペース区切りで）表します。
 
-## メソッド
+## インスタンスメソッド
 
-_独自のメソッドはありません。親である {{domxref("HTMLElement")}} からメソッドを継承しています。_
+_独自のメソッドはありません。親である {{domxref("HTMLElement")}} から継承したメソッドもあります。_
 
 ## 仕様書
 

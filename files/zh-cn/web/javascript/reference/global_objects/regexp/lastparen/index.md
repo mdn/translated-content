@@ -28,9 +28,9 @@ RegExp['$+']
 
 ```js
 var re = /(hi)/g;
-re.test('hi there!');
+re.test("hi there!");
 RegExp.lastParen; // "hi"
-RegExp['$+'];     // "hi"
+RegExp["$+"]; // "hi"
 ```
 
 ## 规范
@@ -41,7 +41,7 @@ RegExp['$+'];     // "hi"
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{non-standard_inline}} {{jsxref("RegExp.input", "RegExp.input ($_)")}}
 - {{non-standard_inline}} {{jsxref("RegExp.lastMatch", "RegExp.lastMatch ($&amp;)")}}

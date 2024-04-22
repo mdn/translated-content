@@ -1,7 +1,6 @@
 ---
 title: FileReader.onload
 slug: Web/API/FileReader/load_event
-original_slug: Web/API/FileReader/onload
 ---
 
 {{APIRef}}
@@ -15,9 +14,9 @@ A propriedade **FileReader.onload** contém um manipulador de eventos (event han
 function onChange(event) {
   var file = event.target.files[0];
   var reader = new FileReader();
-  reader.onload = function(event) {
+  reader.onload = function (event) {
     // O arquivo de texto será impresso aqui
-    console.log(event.target.result)
+    console.log(event.target.result);
   };
 
   reader.readAsText(file);

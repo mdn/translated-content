@@ -47,7 +47,7 @@ myFunction();
 
 #### 函數作用域
 
-記得[函數有自己的作用域](/zh-TW/docs/Learn/JavaScript/Building_blocks/Functions#Function_scope_and_conflicts)——你無法從函數外部存取函數內部宣告的變數，除非你將該變數設為全域變數（也就是不在任何函數內部），或是[回傳變數的值](/zh-TW/docs/Learn/JavaScript/Building_blocks/Return_values)。
+記得[函數有自己的作用域](/zh-TW/docs/Learn/JavaScript/Building_blocks/Functions#函數作用域及衝突)——你無法從函數外部存取函數內部宣告的變數，除非你將該變數設為全域變數（也就是不在任何函數內部），或是[回傳變數的值](/zh-TW/docs/Learn/JavaScript/Building_blocks/Return_values)。
 
 #### 在 return 敘述後執行語法
 
@@ -74,85 +74,85 @@ const myObject = {
 
 ## 基本定義
 
-- [什麼是 JavaScript？](/zh-TW/docs/Learn/JavaScript/First_steps/What_is_JavaScript#A_high-level_definition)
-- [什麼是變數？](/zh-TW/docs/Learn/JavaScript/First_steps/Variables#What_is_a_variable)
+- [什麼是 JavaScript？](/zh-TW/docs/Learn/JavaScript/First_steps/What_is_JavaScript#高層次的定義)
+- [什麼是變數？](/zh-TW/docs/Learn/JavaScript/First_steps/Variables#什麼是變量／變數_variable_？)
 - [什麼是字串？](/zh-TW/docs/Learn/JavaScript/First_steps/Strings)
-- [什麼是陣列？](/zh-TW/docs/Learn/JavaScript/First_steps/Arrays#What_is_an_Array)
+- [什麼是陣列？](/zh-TW/docs/Learn/JavaScript/First_steps/Arrays#what_is_an_array)
 - [什麼是迴圈？](/zh-TW/docs/Learn/JavaScript/Building_blocks/Looping_code)
 - [什麼是函數？](/zh-TW/docs/Learn/JavaScript/Building_blocks/Functions)
 - [什麼是事件？](/zh-TW/docs/Learn/JavaScript/Building_blocks/Events)
-- [什麼是物件？](/zh-TW/docs/Learn/JavaScript/Objects/Basics#Object_basics)
-- [什麼是 JSON？](/zh-TW/docs/Learn/JavaScript/Objects/JSON#No_really_what_is_JSON)
-- [什麼是 Web API？](/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs/Introduction#What_are_APIs)
-- [什麼是 DOM？](/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#The_document_object_model)
+- [什麼是物件？](/zh-TW/docs/Learn/JavaScript/Objects/Basics#物件基礎概念)
+- [什麼是 JSON？]/zh-TW/docs/Learn/JavaScript/Objects/JSON#說真的，到底什麼是\_json？)
+- [什麼是 Web API？](/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs/Introduction#什麼是_api)
+- [什麼是 DOM？](/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#the_document_object_model)
 
 ## 基本使用例子
 
 ### 概括
 
-- [如何將 JavaScript 加到網頁裡？](/zh-TW/docs/Learn/JavaScript/First_steps/What_is_JavaScript#How_do_you_add_JavaScript_to_your_page)
-- [如何在 JavaScript 裡新增註解？](/zh-TW/docs/Learn/JavaScript/First_steps/What_is_JavaScript#Comments)
+- [如何將 JavaScript 加到網頁裡？](/zh-TW/docs/Learn/JavaScript/First_steps/What_is_JavaScript#如何在網頁中增加_javascript？)
+- [如何在 JavaScript 裡新增註解？](/zh-TW/docs/Learn/JavaScript/First_steps/What_is_JavaScript#註解)
 
 ### 變數
 
-- [如何宣告變數？](/zh-TW/docs/Learn/JavaScript/First_steps/Variables#Declaring_a_variable)
-- [如何初始化變數的值？](/zh-TW/docs/Learn/JavaScript/First_steps/Variables#Initializing_a_variable)
-- [如何改變變數的值？](/zh-TW/docs/Learn/JavaScript/First_steps/Variables#Updating_a_variable)（更多請看[指定運算子](/zh-TW/docs/Learn/JavaScript/First_steps/Math#Assignment_operators)）
-- [JavaScript 有哪些資料型態？](/zh-TW/docs/Learn/JavaScript/First_steps/Variables#Variable_types)
-- [「弱型別」是什麼意思？](/zh-TW/docs/Learn/JavaScript/First_steps/Variables#Loose_typing)
+- [如何宣告變數？](/zh-TW/docs/Learn/JavaScript/First_steps/Variables#定義變量_declaring_a_variable)
+- [如何初始化變數的值？](/zh-TW/docs/Learn/JavaScript/First_steps/Variables#初始化變量_initializing_a_variable)
+- [如何改變變數的值？](/zh-TW/docs/Learn/JavaScript/First_steps/Variables#updating_a_variable)（更多請看[指定運算子](/zh-TW/docs/Learn/JavaScript/First_steps/Math#賦值運算符)）
+- [JavaScript 有哪些資料型態？](/zh-TW/docs/Learn/JavaScript/First_steps/Variables#變數資料類型)
+- [「弱型別」是什麼意思？](/zh-TW/docs/Learn/JavaScript/First_steps/Variables#動態型別)
 
 ### 數學運算
 
-- [網路開發需要處理哪些型態的數字？](/zh-TW/docs/Learn/JavaScript/First_steps/Math#Types_of_numbers)
-- [如何在 JavaScript 中進行基本數學運算？](/zh-TW/docs/Learn/JavaScript/First_steps/Math#Arithmetic_operators)
-- [什麼是運算次序，以及它在 JavaScript 中是如何運作的？](/zh-TW/docs/Learn/JavaScript/First_steps/Math#Operator_precedence)
-- [如何在 JavaScript 中遞增與遞減值？](/zh-TW/docs/Learn/JavaScript/First_steps/Math#Increment_and_decrement_operators)
-- [如何在 JavaScript 比較不同的值？](/zh-TW/docs/Learn/JavaScript/First_steps/Math#Comparison_operators)（例如比較哪一個值比較大，或是比較該值是否等同於另一個值）
+- [網路開發需要處理哪些型態的數字？](/zh-TW/docs/Learn/JavaScript/First_steps/Math#數字的種類)
+- [如何在 JavaScript 中進行基本數學運算？](/zh-TW/docs/Learn/JavaScript/First_steps/Math#算術運算符)
+- [什麼是運算次序，以及它在 JavaScript 中是如何運作的？](/zh-TW/docs/Learn/JavaScript/First_steps/Math#operator_precedence)
+- [如何在 JavaScript 中遞增與遞減值？](/zh-TW/docs/Learn/JavaScript/First_steps/Math#遞增和遞減運算符)
+- [如何在 JavaScript 比較不同的值？](/zh-TW/docs/Learn/JavaScript/First_steps/Math#比較運算符)（例如比較哪一個值比較大，或是比較該值是否等同於另一個值）
 
 ### 字串
 
-- [如何在 JavaScript 中建立字串？](/zh-TW/docs/Learn/JavaScript/First_steps/Strings#Creating_a_string)
-- [要使用單引號還是雙引號？](/zh-TW/docs/Learn/JavaScript/First_steps/Strings#Single_quotes_versus_double_quotes)
-- [如何在字串中處理跳脫字元？](/zh-TW/docs/Learn/JavaScript/First_steps/Strings#Escaping_characters_in_a_string)
-- [如何串接字串？](/zh-TW/docs/Learn/JavaScript/First_steps/Strings#Concatenating_strings)
-- [可以將字串和數字串接在一起嗎？](/zh-TW/docs/Learn/JavaScript/First_steps/Strings#Numbers_versus_strings)
-- [如何獲得字串長度？](/zh-TW/docs/Learn/JavaScript/First_steps/Useful_string_methods#Finding_the_length_of_a_string)
-- [如何獲得位於字串特定位置的字元？](/zh-TW/docs/Learn/JavaScript/First_steps/Useful_string_methods#Retrieving_a_specific_string_character)
-- [如何從字串裡找到並擷取指定子字串？](/zh-TW/docs/Learn/JavaScript/First_steps/Useful_string_methods#Finding_a_substring_inside_a_string_and_extracting_it)
-- [如何改變字串大小寫？](/zh-TW/docs/Learn/JavaScript/First_steps/Useful_string_methods#Changing_case)
-- [如何替換指定子字串？](/zh-TW/docs/Learn/JavaScript/First_steps/Useful_string_methods#Updating_parts_of_a_string)
+- [如何在 JavaScript 中建立字串？](/zh-TW/docs/Learn/JavaScript/First_steps/Strings#建立字串)
+- [要使用單引號還是雙引號？](/zh-TW/docs/Learn/JavaScript/First_steps/Strings#單引號與雙引號)
+- [如何在字串中處理跳脫字元？](/zh-TW/docs/Learn/JavaScript/First_steps/Strings#字串中的跳脫字元（escaping_characters）)
+- [如何串接字串？](/zh-TW/docs/Learn/JavaScript/First_steps/Strings#連接字串（concatenating_strings）)
+- [可以將字串和數字串接在一起嗎？](/zh-TW/docs/Learn/JavaScript/First_steps/Strings#數字_vs._字串)
+- [如何獲得字串長度？](/zh-TW/docs/Learn/JavaScript/First_steps/Useful_string_methods#找出字串的長度（length）)
+- [如何獲得位於字串特定位置的字元？](/zh-TW/docs/Learn/JavaScript/First_steps/Useful_string_methods#取得字串中的特定字元（string_character）)
+- [如何從字串裡找到並擷取指定子字串？](/zh-TW/docs/Learn/JavaScript/First_steps/Useful_string_methods#尋找字串中的子字串（substring）並提出子字串)
+- [如何改變字串大小寫？](/zh-TW/docs/Learn/JavaScript/First_steps/Useful_string_methods#改變大小寫)
+- [如何替換指定子字串？](/zh-TW/docs/Learn/JavaScript/First_steps/Useful_string_methods#更動部分字串)
 
 ### 陣列
 
-- [如何建立陣列？](/zh-TW/docs/Learn/JavaScript/First_steps/Arrays#Creating_an_array)
-- [如何存取與修改陣列元素？](/zh-TW/docs/Learn/JavaScript/First_steps/Arrays#Accessing_and_modifying_array_items)（此篇文章包含多維陣列）
-- [如何獲得陣列長度？](/zh-TW/docs/Learn/JavaScript/First_steps/Arrays#Finding_the_length_of_an_array)
-- [如何新增與移除陣列元素？](/zh-TW/docs/Learn/JavaScript/First_steps/Arrays#Adding_and_removing_array_items)
-- [如何將字串分割成陣列元素，或將陣列元素串接成字串？](/zh-TW/docs/Learn/JavaScript/First_steps/Arrays#Converting_between_strings_and_arrays)
+- [如何建立陣列？](/zh-TW/docs/Learn/JavaScript/First_steps/Arrays#建立陣列)
+- [如何存取與修改陣列元素？](/zh-TW/docs/Learn/JavaScript/First_steps/Arrays#存取並修改陣列的單位)（此篇文章包含多維陣列）
+- [如何獲得陣列長度？](/zh-TW/docs/Learn/JavaScript/First_steps/Arrays#找出陣列長度)
+- [如何新增與移除陣列元素？](/zh-TW/docs/Learn/JavaScript/First_steps/Arrays#新增與移除陣列單位)
+- [如何將字串分割成陣列元素，或將陣列元素串接成字串？](/zh-TW/docs/Learn/JavaScript/First_steps/Arrays#在字串與陣列之間轉換)
 
 ### JavaScript 除錯
 
-- [有哪些 error 的基本型態？](/zh-TW/docs/Learn/JavaScript/First_steps/What_went_wrong#Types_of_error)
+- [有哪些 error 的基本型態？](/zh-TW/docs/Learn/JavaScript/First_steps/What_went_wrong#錯誤類型)
 - [什麼是瀏覽器開發人員工具以及如何獲取？](/zh-TW/docs/Learn/Common_questions/What_are_browser_developer_tools)
-- [如何在 JavaScript 主控台輸出一個值？](/zh-TW/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#The_Console_API)
-- [如何使用中斷點及其它 JavaScript 除錯功能？](/zh-TW/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#Using_the_JavaScript_debugger)
+- [如何在 JavaScript 主控台輸出一個值？](/zh-TW/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#the_console_api)
+- [如何使用中斷點及其它 JavaScript 除錯功能？](/zh-TW/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#using_the_javascript_debugger)
 
-欲獲得更多 JavaScript 除錯相關資訊，參閱[處理 JavaScript 常見問題](/zh-TW/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)；此外，參閱[其它常見 error](/zh-TW/docs/Learn/JavaScript/First_steps/What_went_wrong#Other_common_errors) 以了解常見 error。
+欲獲得更多 JavaScript 除錯相關資訊，參閱[處理 JavaScript 常見問題](/zh-TW/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)；此外，參閱[其它常見 error](/zh-TW/docs/Learn/JavaScript/First_steps/What_went_wrong#其他常見錯誤) 以了解常見 error。
 
 ### 程式碼的條件判斷
 
 - [如何基於變數的值或其它條件來執行不同程式碼區塊？](/zh-TW/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [如何使用 if ...else 敘述？](/zh-TW/docs/Learn/JavaScript/Building_blocks/conditionals#if_..._else_statements)
-- [如何置入巢狀條件區塊？](/zh-TW/docs/Learn/JavaScript/Building_blocks/conditionals#Nesting_if_..._else)
-- [如何在 JavaScript 使用運算子「且」、「或」與「非」？](/zh-TW/docs/Learn/JavaScript/Building_blocks/conditionals#Logical_operators_AND_OR_and_NOT)
+- [如何使用 if ...else 敘述？](/zh-TW/docs/Learn/JavaScript/Building_blocks/conditionals#if_..._else_敘述句)
+- [如何置入巢狀條件區塊？](/zh-TW/docs/Learn/JavaScript/Building_blocks/conditionals#nesting_if_..._else)
+- [如何在 JavaScript 使用運算子「且」、「或」與「非」？](/zh-TW/docs/Learn/JavaScript/Building_blocks/conditionals#logical_operators_and_or_and_not)
 - [如何方便地基於一個條件處理大量決定？](/zh-TW/docs/Learn/JavaScript/Building_blocks/conditionals#switch_statements)
-- [如何使用三元運算子來在基於 true 或 false 判斷的兩個選項間快速決定](/zh-TW/docs/Learn/JavaScript/Building_blocks/conditionals#Ternary_operator)
+- [如何使用三元運算子來在基於 true 或 false 判斷的兩個選項間快速決定](/zh-TW/docs/Learn/JavaScript/Building_blocks/conditionals#三元運算符)
 
 ### 循環/迭代
 
 - [如何一遍一遍地重覆執行相同的程式碼片段？](/zh-TW/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [如何在滿足特定條件時提前離開迴圈？](/zh-TW/docs/Learn/JavaScript/Building_blocks/Looping_code#Exiting_loops_with_break)
-- [如何在滿足特定條件時跳到下一次迴圈？](/zh-TW/docs/Learn/JavaScript/Building_blocks/Looping_code#Skipping_iterations_with_continue)
+- [如何在滿足特定條件時提前離開迴圈？](/zh-TW/docs/Learn/JavaScript/Building_blocks/Looping_code#中斷退出循環)
+- [如何在滿足特定條件時跳到下一次迴圈？](/zh-TW/docs/Learn/JavaScript/Building_blocks/Looping_code#skipping_iterations_with_continue)
 - [如何使用 while 與 do ... while 迴圈？](/zh-TW/docs/Learn/JavaScript/Building_blocks/Looping_code#while_and_do_..._while)
 - 如何遍歷陣列元素？
 - 如何遍歷多維陣列元素？
@@ -163,51 +163,51 @@ const myObject = {
 
 ### 函數
 
-- [如何在瀏覽器裡找到函數](/zh-TW/docs/Learn/JavaScript/Building_blocks/Functions#Built-in_browser_functions)
-- [函數（function）與方法（method）的區別是什麼？](/zh-TW/docs/Learn/JavaScript/Building_blocks/Functions#Functions_versus_methods)
+- [如何在瀏覽器裡找到函數](/zh-TW/docs/Learn/JavaScript/Building_blocks/Functions#瀏覽器內建函數)
+- [函數（function）與方法（method）的區別是什麼？](/zh-TW/docs/Learn/JavaScript/Building_blocks/Functions#函數（function）_vs_方法（method）)
 - [如何創建自己的函數？](/zh-TW/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [如何執行（呼叫）一個函數？](/zh-TW/docs/Learn/JavaScript/Building_blocks/Functions#Invoking_functions)
-- [什麼是匿名函數？](/zh-TW/docs/Learn/JavaScript/Building_blocks/Functions#Anonymous_functions)
-- [如何在呼叫函數時指定參數？](/zh-TW/docs/Learn/JavaScript/Building_blocks/Functions#Function_parameters)
-- [什麼是函數作用域？](/zh-TW/docs/Learn/JavaScript/Building_blocks/Functions#Function_scope_and_conflicts)
+- [如何執行（呼叫）一個函數？](/zh-TW/docs/Learn/JavaScript/Building_blocks/Functions#呼叫函數)
+- [什麼是匿名函數？](/zh-TW/docs/Learn/JavaScript/Building_blocks/Functions#匿名函數)
+- [如何在呼叫函數時指定參數？](/zh-TW/docs/Learn/JavaScript/Building_blocks/Functions#函數參數)
+- [什麼是函數作用域？](/zh-TW/docs/Learn/JavaScript/Building_blocks/Functions#函數作用域及衝突)
 - [什麼是回傳值以及如何利用它？](/zh-TW/docs/Learn/JavaScript/Building_blocks/Return_values)
 
 ### 物件
 
-- [如何創建物件？](/zh-TW/docs/Learn/JavaScript/Objects/Basics#Object_basics)
-- [什麼是點記法（dot notation）？](/zh-TW/docs/Learn/JavaScript/Objects/Basics#Dot_notation)
-- [什麼是括弧記法（bracket notation）？](/zh-TW/docs/Learn/JavaScript/Objects/Basics#Bracket_notation)
-- [如何獲取與設定物件方法與屬性？](/zh-TW/docs/Learn/JavaScript/Objects/Basics#Setting_object_members)
-- [這個`this`是什麼？](/zh-TW/docs/Learn/JavaScript/Objects/Basics#What_is_this)
-- [什麼是物件導向？](/docs/Learn/JavaScript/Objects/Object-oriented_JS#Object-oriented_programming_from_10000_meters)
-- [什麼是建構子與實例以及如何創建？](/zh-TW/docs/Learn/JavaScript/Objects/Object-oriented_JS#Constructors_and_object_instances)
-- [有哪些創建 JavaScript 物件的方式？](/zh-TW/docs/Learn/JavaScript/Objects/Object-oriented_JS#Other_ways_to_create_object_instances)
+- [如何創建物件？](/zh-TW/docs/Learn/JavaScript/Objects/Basics#物件基礎概念)
+- [什麼是點記法（dot notation）？](/zh-TW/docs/Learn/JavaScript/Objects/Basics#點記法_dot_notation)
+- [什麼是括弧記法（bracket notation）？](/zh-TW/docs/Learn/JavaScript/Objects/Basics#括弧記法_bracket_notation)
+- [如何獲取與設定物件方法與屬性？](/zh-TW/docs/Learn/JavaScript/Objects/Basics#設定物件成員)
+- [這個 `this` 是什麼？](/zh-TW/docs/Learn/JavaScript/Objects/Basics#這個「this」是什麼？)
+- [什麼是物件導向？](/zh-TW/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)
+- [什麼是建構子與實例以及如何創建？](/zh-TW/docs/Learn/JavaScript/Objects/Classes_in_JavaScript#constructors_and_object_instances)
+- [有哪些創建 JavaScript 物件的方式？](/zh-TW/docs/Learn/JavaScript/Objects/Classes_in_JavaScript#other_ways_to_create_object_instances)
 
 ### JSON
 
-- [如何建構 JSON 資料並從 JavaScript 讀取？](/zh-TW/docs/Learn/JavaScript/Objects/JSON#JSON_structure)
-- [如何在網頁中載入 JSON 檔案？](/zh-TW/docs/Learn/JavaScript/Objects/JSON#Loading_our_JSON)
-- [如何把 JSON 物件轉換成字串以及轉換回去？](/zh-TW/docs/Learn/JavaScript/Objects/JSON#Converting_between_objects_and_text)
+- [如何建構 JSON 資料並從 JavaScript 讀取？](/zh-TW/docs/Learn/JavaScript/Objects/JSON#json_的架構)
+- [如何在網頁中載入 JSON 檔案？](/zh-TW/docs/Learn/JavaScript/Objects/JSON#載入我們的_json)
+- [如何把 JSON 物件轉換成字串以及轉換回去？](/zh-TW/docs/Learn/JavaScript/Objects/JSON#物件與文字交互轉換)
 
 ### 事件
 
-- [什麼是事件處理器以及如何使用？](/zh-TW/docs/Learn/JavaScript/Building_blocks/Events#Event_handler_properties)
-- [什麼是行內事件處理器？](/zh-TW/docs/Learn/JavaScript/Building_blocks/Events#Inline_event_handlers_%E2%80%94_don%27t_use_these)
+- [什麼是事件處理器以及如何使用？](/zh-TW/docs/Learn/JavaScript/Building_blocks/Events#event_handler_properties)
+- [什麼是行內事件處理器？](/zh-TW/docs/Learn/JavaScript/Building_blocks/Events#inline_event_handlers_—_dont_use_these)
 - [`addEventListener()`函數在做什麼以及如何使用？](/zh-TW/docs/Learn/JavaScript/Building_blocks/Events#example_using_event_listeners)
-- [我該使用哪種機制來在網頁中新增事件程式嗎？](/zh-TW/docs/Learn/JavaScript/Building_blocks/Events#What_mechanism_should_I_use)
-- [什麼是事件物件以及如何使用？](/zh-TW/docs/Learn/JavaScript/Building_blocks/Events#Event_objects)
-- [如何阻止事件預設行為？](/zh-TW/docs/Learn/JavaScript/Building_blocks/Events#Preventing_default_behaviour)
-- [如何在巢狀元素中觸發事件？（事件傳遞機制：事件冒泡與捕獲）](/zh-TW/docs/Learn/JavaScript/Building_blocks/Events#Event_bubbling_and_capture)
-- [什麼是事件指派以及如何運作？](/zh-TW/docs/Learn/JavaScript/Building_blocks/Events#Event_delegation)
+- [我該使用哪種機制來在網頁中新增事件程式嗎？](/zh-TW/docs/Learn/JavaScript/Building_blocks/Events#what_mechanism_should_I_use)
+- [什麼是事件物件以及如何使用？](/zh-TW/docs/Learn/JavaScript/Building_blocks/Events#event_objects)
+- [如何阻止事件預設行為？](/zh-TW/docs/Learn/JavaScript/Building_blocks/Events#preventing_default_behaviour)
+- [如何在巢狀元素中觸發事件？（事件傳遞機制：事件冒泡與捕獲）](/zh-TW/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling_and_capture)
+- [什麼是事件指派以及如何運作？](/zh-TW/docs/Learn/JavaScript/Building_blocks/Events#event_delegation)
 
 ### JavaScript 物件導向
 
 - [什麼是物件原型？](/zh-TW/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [什麼是建構子屬型以及如何使用？](/zh-TW/docs/Learn/JavaScript/Objects/Object_prototypes#The_constructor_property)
-- [如何在建構子中新增方法？](/zh-TW/docs/Learn/JavaScript/Objects/Object_prototypes#Modifying_prototypes)
-- [如何新增一個繼承了父建構子成員的新建構子？](/zh-TW/docs/Learn/JavaScript/Objects/Inheritance)
-- [JavaScript 中什麼時候該使用繼承？](/zh-TW/docs/Learn/JavaScript/Objects/Inheritance#Object_member_summary)
+- [什麼是建構子屬型以及如何使用？](/zh-TW/docs/Learn/JavaScript/Objects/Object_prototypes#建構子的屬性)
+- [如何在建構子中新增方法？](/zh-TW/docs/Learn/JavaScript/Objects/Object_prototypes#修改原型)
+- [如何新增一個繼承了父建構子成員的新建構子？](/zh-TW/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)
+- [JavaScript 中什麼時候該使用繼承？](/zh-TW/docs/Learn/JavaScript/Objects/Classes_in_JavaScript#物件成員摘要)
 
 ### 網頁 Web API
 
-- [如何使用 JavaScript 操控 DOM（例如新增或移除元素）？](/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#Active_learning_Basic_DOM_manipulation)
+- [如何使用 JavaScript 操控 DOM（例如新增或移除元素）？](/zh-TW/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#active_learning_basic_dom_manipulation)

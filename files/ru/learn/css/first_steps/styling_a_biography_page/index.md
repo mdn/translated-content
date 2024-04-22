@@ -1,16 +1,8 @@
 ---
 title: Использование ваших новых знаний
 slug: Learn/CSS/First_steps/Styling_a_biography_page
-tags:
-  - Beginner
-  - CSS
-  - Learn
-  - Playground
-  - Начинающий
-  - Обучение
-translation_of: Learn/CSS/First_steps/Using_your_new_knowledge
-original_slug: Learn/CSS/First_steps/Using_your_new_knowledge
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
 
 С учётом того что вы узнали за последние несколько уроков, вы должны обнаружить, что вы можете форматировать простые текстовые документы с использованием CSS, чтобы добавить к ним свой собственный стиль. Эта статья даёт вам возможность сделать это.
@@ -63,20 +55,13 @@ original_slug: Learn/CSS/First_steps/Using_your_new_knowledge
 1. Загрузите ваш код на [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) или [Glitch](https://glitch.com/).
 2. Напишите пост с просьбой о помощи и / или оценке на [форуме MDN](https://discourse.mozilla.org/c/mdn). Добавьте тег "learning" к вашему посту, чтобы нам легче было его найти. В вашем посте должны быть:
 
-    - Заголовок с описанием наподобие "Assessment wanted for CSS First Steps".
-    - Описание того, что вам нужно, — к примеру, что вы уже пробовали, что у вас не получается и вам нужна помощь.
-    - Ссылка на ваш код в онлайн-редакторе.
-    - Ссылка на страницу о помощи, чтобы мы смогли помочь вам с вашим вопросом.
+   - Заголовок с описанием наподобие "Assessment wanted for CSS First Steps".
+   - Описание того, что вам нужно, — к примеру, что вы уже пробовали, что у вас не получается и вам нужна помощь.
+   - Ссылка на ваш код в онлайн-редакторе.
+   - Ссылка на страницу о помощи, чтобы мы смогли помочь вам с вашим вопросом.
 
 ## Что дальше?
 
 Поздравляем вас с завершением первого модуля! Теперь вы неплохо разбираетесь в CSS и можете разобраться в таблицах стилей. В следующем модуле, [Как устроен CSS](/ru/docs/Learn/CSS/Building_blocks), мы глубже разберёмся в некоторых аспектах языка.
 
 {{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
-
-## В этом модуле
-
-1. [Что такое CSS?](/ru/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [Начало работы с CSS](/ru/docs/Learn/CSS/First_steps/Getting_started)
-3. [Как структурирован CSS](/ru/docs/Learn/CSS/First_steps/How_CSS_works)
-4. [Как работает CSS](/ru/docs/Learn/CSS/First_steps/How_CSS_works)

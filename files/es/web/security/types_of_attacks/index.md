@@ -3,7 +3,6 @@ title: Tipos de ataques
 slug: Web/Security/Types_of_attacks
 ---
 
-
 Este artículo describe varios tipos de ataques de seguridad y técnicas para mitigarlos.
 
 ## Click-jacking
@@ -36,18 +35,21 @@ CSRF (a veces también llamado XSRF) es una clase de ataque relacionada. El atac
 Wikipedia menciona un buen ejemplo para CSRF. En esta situación, alguien incluye una imagen que no es realmente una imagen (por ejemplo en un chat o foro sin filtrar), sino que en realidad es una solicitud a su servidor de bancos para retirar dinero:
 
 ```html
-<img src="https://bank.example.com/withdraw?account=bob&amount=1000000&for=mallory">
+<img
+  src="https://bank.example.com/withdraw?account=bob&amount=1000000&for=mallory" />
 ```
 
 Ahora, si ha iniciado sesión en su cuenta bancaria y sus cookies aún son válidas (y no hay otra validación), transferirá el dinero tan pronto cargue la página que contiene esta imagen. Para endpoints (enlaces) que requieren una solicitud POST, es posible programáticamente activar una solicitud de \<form> (quizás en un \<iframe> invisible) cuando se cargue la página:
 
 ```html
 <form action="https://bank.example.com/withdraw" method="POST">
-  <input type="hidden" name="account" value="bob">
-  <input type="hidden" name="amount" value="1000000">
-  <input type="hidden" name="for" value="mallory">
+  <input type="hidden" name="account" value="bob" />
+  <input type="hidden" name="amount" value="1000000" />
+  <input type="hidden" name="for" value="mallory" />
 </form>
-<script>window.addEventListener('DOMContentLoaded', (e) => { document.querySelector('form').submit(); }</script>
+<script>
+  window.addEventListener('DOMContentLoaded', (e) => { document.querySelector('form').submit(); }
+</script>
 ```
 
 Hay algunas técnicas que deben usarse para evitar que esto ocurra:

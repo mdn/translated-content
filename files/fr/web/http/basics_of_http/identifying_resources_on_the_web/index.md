@@ -1,10 +1,6 @@
 ---
 title: Identifier des ressources sur le Web
 slug: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
-tags:
-  - HTTP
-translation_of: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
-original_slug: Web/HTTP/Basics_of_HTTP/Identifier_des_ressources_sur_le_Web
 ---
 
 {{HTTPSidebar}}
@@ -52,7 +48,7 @@ Ces deux URNs correspondent :
 ### Schéma ou protocole
 
 - ![Protocole](mdn-url-protocol@x2.png)
-  - : `http://` constitue le protocole, il indique le protocole qui doit être utilisé par le navigateur. Il s'agit généralement de HTTP ou de sa variante sécurisée HTTPS. Le Web nécessite l'un ou l'autre de ces protocoles néanmoins, les navigateurs sont capables de gérer d'autres protocoles tels que `mailto:` (pour ouvrir un client mail) or `ftp:` pour gérer un transfert de fichier. Essayez, lorsque vous naviguez, d'identifier les protocoles utilisés. Les schémas usuels sont :
+  - : `http://` constitue le protocole, il indique le protocole qui doit être utilisé par le navigateur. Il s'agit généralement de HTTP ou de sa variante sécurisée HTTPS. Le Web nécessite l'un ou l'autre de ces protocoles néanmoins, les navigateurs sont capables de gérer d'autres protocoles tels que `mailto:` (pour ouvrir un client mail) ou `ftp:` pour gérer un transfert de fichier. Essayez, lorsque vous naviguez, d'identifier les protocoles utilisés. Les schémas usuels sont :
 
 | Schéma      | Description                                                         |
 | ----------- | ------------------------------------------------------------------- |
@@ -95,7 +91,7 @@ Ces deux URNs correspondent :
 ## Exemples
 
 ```
-https://developer.mozilla.org/en-US/docs/Learn
+https://developer.mozilla.org/fr/docs/Learn
 tel:+1-816-555-1212
 git@github.com:mdn/browser-compat-data.git
 ftp://example.org/resource.txt

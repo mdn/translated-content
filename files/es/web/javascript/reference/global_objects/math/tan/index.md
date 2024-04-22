@@ -1,7 +1,6 @@
 ---
 title: Math.tan()
 slug: Web/JavaScript/Reference/Global_Objects/Math/tan
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/tan
 ---
 
 {{JSRef}}
@@ -45,7 +44,7 @@ Ya que la función `Math.tan()` acepta radianes, pero es más fácil trabajar co
 
 ```js
 function getTanDeg(deg) {
-  var rad = deg * Math.PI/180;
+  var rad = (deg * Math.PI) / 180;
   return Math.tan(rad);
 }
 ```

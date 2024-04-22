@@ -64,30 +64,34 @@ console.log(bigint.toLocaleString());
 
 这个例子展示了本地化数字格式的一些变体。为了获得应用程序用户界面中使用的语言的格式，请确保使用 `locales` 参数指定该语言（可能还有一些回退语言）：
 
+<!-- autocorrect-disable -->
+
 ```js
 const bigint = 123456789123456789n;
 
 // 德国使用句号表示千位
-console.log(bigint.toLocaleString('de-DE'));
+console.log(bigint.toLocaleString("de-DE"));
 // 123.456.789.123.456.789
 
 // 大多数说阿拉伯语的阿拉伯国家使用东阿拉伯数字
-console.log(bigint.toLocaleString('ar-EG'));
+console.log(bigint.toLocaleString("ar-EG"));
 // ١٢٣٬٤٥٦٬٧٨٩٬١٢٣٬٤٥٦٬٧٨٩
 
 // 印度使用千、万、千万分隔符
-console.log(bigint.toLocaleString('en-IN'));
+console.log(bigint.toLocaleString("en-IN"));
 // 1,23,45,67,89,12,34,56,789
 
 // nu 扩展键要求使用编号系统，例如中文十进制数
-console.log(bigint.toLocaleString('zh-Hans-CN-u-nu-hanidec'));
+console.log(bigint.toLocaleString("zh-Hans-CN-u-nu-hanidec"));
 // 一二三,四五六,七八九,一二三,四五六,七八九
 
 // 当使用的语言不被支持，例如
 // 巴厘岛语，则可以包含一种回退语言，这里以印尼语为例
-console.log(bigint.toLocaleString(['ban', 'id']));
+console.log(bigint.toLocaleString(["ban", "id"]));
 // 123.456.789.123.456.789
 ```
+
+<!-- autocorrect-enable -->
 
 ### 使用 `options`
 
@@ -97,15 +101,19 @@ console.log(bigint.toLocaleString(['ban', 'id']));
 const bigint = 123456789123456789n;
 
 // 要求使用货币格式
-console.log(bigint.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' }));
+console.log(
+  bigint.toLocaleString("de-DE", { style: "currency", currency: "EUR" }),
+);
 // 123.456.789.123.456.789,00 €
 
 // 日元不使用小数单位
-console.log(bigint.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' }))
+console.log(
+  bigint.toLocaleString("ja-JP", { style: "currency", currency: "JPY" }),
+);
 // ￥123,456,789,123,456,789
 
 // 保留三位有效数字
-console.log(bigint.toLocaleString('en-IN', { maximumSignificantDigits: 3 }));
+console.log(bigint.toLocaleString("en-IN", { maximumSignificantDigits: 3 }));
 // 1,23,00,00,00,00,00,00,000
 ```
 

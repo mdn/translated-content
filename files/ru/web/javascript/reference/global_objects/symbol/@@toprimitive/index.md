@@ -1,15 +1,8 @@
 ---
 title: Symbol.prototype[@@toPrimitive]
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive
-tags:
-  - ECMAScript 2015
-  - ECMAScript6
-  - JavaScript
-  - Method
-  - Prototype
-  - Symbol
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive
 ---
+
 {{JSRef}}
 
 Метод **`[@@toPrimitive]()`** преобразует объект Symbol в примитивное значение.

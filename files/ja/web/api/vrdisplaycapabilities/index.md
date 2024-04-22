@@ -34,8 +34,9 @@ function reportDisplays() {
     displays.forEach((display, i) => {
       const cap = display.capabilities;
       // cap is a VRDisplayCapabilities object
-      const listItem = document.createElement('li');
-      listItem.innerHTML = `<strong>Display ${i + 1}</strong><br>` +
+      const listItem = document.createElement("li");
+      listItem.innerHTML =
+        `<strong>Display ${i + 1}</strong><br>` +
         `VR Display ID: ${display.displayId}<br>` +
         `VR Display Name: ${display.displayName}<br>` +
         `Display can present content: ${cap.canPresent}<br>` +
@@ -61,5 +62,4 @@ function reportDisplays() {
 
 ## 関連情報
 
-- [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — Mozilla VR チームが提供するデモ、ダウンロード、その他のリソース。
+- [WebVR API](/ja/docs/Web/API/WebVR_API)

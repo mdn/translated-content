@@ -1,20 +1,9 @@
 ---
 title: extension.getViews()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/getViews
-tags:
-  - API
-  - Add-ons
-  - Extension
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getViews
-translation_of: Mozilla/Add-ons/WebExtensions/API/extension/getViews
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Renvoie un tableau des objets [Window](/fr/docs/Web/API/Window) pour chacune des pages exécutées dans l'extension en cours. Cela inclut, par exemple :
 
@@ -29,8 +18,8 @@ Dans Firefox, si cette méthode est appelée à partir d'une page faisant partie
 
 ```js
 var windows = browser.extension.getViews(
-  fetchProperties // optional object
-)
+  fetchProperties, // optional object
+);
 ```
 
 ### Paramètres
@@ -67,13 +56,13 @@ for (var extensionWindow of windows) {
 Obtenez uniquement des fenêtres dans les onglets du navigateur hébergeant du contenu fourni avec l'extension :
 
 ```js
-var windows = browser.extension.getViews({type: "tab"});
+var windows = browser.extension.getViews({ type: "tab" });
 ```
 
 Obtenir seulement des fenêtres dans les popups :
 
 ```js
-var windows = browser.extension.getViews({type: "popup"});
+var windows = browser.extension.getViews({ type: "popup" });
 ```
 
 {{WebExtExamples}}

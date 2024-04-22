@@ -1,7 +1,6 @@
 ---
 title: 渐进式加载
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Loading
-original_slug: Web/Progressive_web_apps/Loading
 ---
 
 {{PWASidebar}} {{PreviousMenu("Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
@@ -33,8 +32,8 @@ original_slug: Web/Progressive_web_apps/Loading
 它们会等到文档解析完成之后再开始下载和执行，所以不会阻塞 HTML 页面的渲染。我们还可以拆分 CSS 文件并给它们加上 media 属性：
 
 ```html
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="print.css" media="print">
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="print.css" media="print" />
 ```
 
 这种做法告诉浏览器，只有在条件满足的情况下才加载这些资源（例如指定了 print，则在打印环境下才会加载这些资源，译者注）。
@@ -52,7 +51,7 @@ original_slug: Web/Progressive_web_apps/Loading
 在 js13kPWA 示例中，我们可以通过 JavaScript 有选择地加载图片，而不是把所有的游戏截图路径都直接放进 `<img>` 标签的 `src` 属性里面，因为这会使浏览器自动下载所有的图片。在图片最终加载之前，示例页面会将图片的最终路径存放到 `data-src` 中。在这个阶段，应用会使用图片占位符来代替真正的图片，它更轻量级，体积更小（加载也更快，译者注）。
 
 ```html
-<img src='data/img/placeholder.png' data-src='data/img/SLUG.jpg' alt='NAME'>
+<img src="data/img/placeholder.png" data-src="data/img/SLUG.jpg" alt="NAME" />
 ```
 
 这些图片会在网站构建完 HTML 主体框架之后通过 JavaScript 进行加载。图片占位符被缩放到和真正的图片一样大小，所以它会占据同样的空间，在真正的图片完成加载后，也不会导致页面重绘。
@@ -62,11 +61,11 @@ original_slug: Web/Progressive_web_apps/Loading
 `app.js` 这个文件处理 `data-src` 属性的过程如下所示：
 
 ```js
-let imagesToLoad = document.querySelectorAll('img[data-src]');
+let imagesToLoad = document.querySelectorAll("img[data-src]");
 const loadImages = (image) => {
-  image.setAttribute('src', image.getAttribute('data-src'));
+  image.setAttribute("src", image.getAttribute("data-src"));
   image.onload = () => {
-    image.removeAttribute('data-src');
+    image.removeAttribute("data-src");
   };
 };
 ```
@@ -113,10 +112,10 @@ article img {
 这里有相关的代码示例：
 
 ```js
-if('IntersectionObserver' in window) {
+if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver((items, observer) => {
     items.forEach((item) => {
-      if(item.isIntersecting) {
+      if (item.isIntersecting) {
         loadImages(item.target);
         observer.unobserve(item.target);
       }
@@ -152,7 +151,7 @@ if('IntersectionObserver' in window) {
 
 ## 结语
 
-这就是这个系列的所有内容了。我们通过 [js13kPWA 示例应用的源码](https://github.com/mdn/pwa-examples/tree/main/js13kpwa) 学习了渐进式 Web 应用的的用法，包括 [PWA 介绍](/zh-CN/docs/Web/Apps/Progressive/Introduction)、[PWA 结构](/zh-CN/docs/Web/Apps/Progressive/App_structure)、[通过 Service Worker 让 PWA 离线工作](/zh-CN/docs/Web/Apps/Progressive/Offline_Service_workers)、[让 PWA 易于安装](/zh-CN/docs/Web/Apps/Progressive/Installable_PWAs)，以及最后的通知功能。在 [Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook/) 的帮助下，我们还解释了推送的原理。而在本篇文章中，我们探讨了渐进式加载的概念，包括一个使用了 [Intersection Observer API](/zh-CN/docs/Web/API/Intersection_Observer_API) 的有趣示例。
+这就是这个系列的所有内容了。我们通过 [js13kPWA 示例应用的源码](https://github.com/mdn/pwa-examples/tree/main/js13kpwa) 学习了渐进式 Web 应用的用法，包括 [PWA 介绍](/zh-CN/docs/Web/Apps/Progressive/Introduction)、[PWA 结构](/zh-CN/docs/Web/Apps/Progressive/App_structure)、[通过 Service Worker 让 PWA 离线工作](/zh-CN/docs/Web/Apps/Progressive/Offline_Service_workers)、[让 PWA 易于安装](/zh-CN/docs/Web/Apps/Progressive/Installable_PWAs)，以及最后的通知功能。在 [Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook/) 的帮助下，我们还解释了推送的原理。而在本篇文章中，我们探讨了渐进式加载的概念，包括一个使用了 [Intersection Observer API](/zh-CN/docs/Web/API/Intersection_Observer_API) 的有趣示例。
 
 请随意试验这些代码，使用 PWA 的特性来让你现有的应用更加健壮，或者创作出一点新东西。相对于常规的 Web 应用，PWA 存在巨大的优势。
 

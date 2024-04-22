@@ -2,7 +2,7 @@
 title: 全画面 API
 slug: Web/API/Fullscreen_API
 l10n:
-  sourceCommit: 5f80944f03f785c729c12ac143cf88a1c12e72cd
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{DefaultAPISidebar("Fullscreen API")}}
@@ -59,9 +59,7 @@ _全画面 API は 2 つのイベントを定義しており、全画面モー�
 
 ## アクセス制御
 
-全画面モードが利用可能であるかは、[機能ポリシー](/ja/docs/Web/HTTP/Feature_Policy)を使用して制御することができます。全画面モードの機能は `"fullscreen"` の文字列によって識別され、既定の許可リストの値は `"self"` であり、最上位の文書コンテキストでは全画面モードが許可されており、最上位文書と同じオリジンから読み込まれた内側の閲覧コンテキストも同様です。
-
-機能ポリシーを使用して API へのアクセスを制御することについて、詳しくは[機能ポリシーの使用](/ja/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)を参照してください。
+全画面モードが利用可能であるかは、[権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)を使用して制御することができます。全画面モードの機能は `"fullscreen"` の文字列によって識別され、既定の許可リストの値は `"self"` であり、最上位の文書コンテキストでは全画面モードが許可されており、最上位文書と同じオリジンから読み込まれた内側の閲覧コンテキストも同様です。
 
 ## 使用上のメモ
 
@@ -82,11 +80,15 @@ _全画面 API は 2 つのイベントを定義しており、全画面モー�
 ページが読み込まれると、 <kbd>Enter</kbd> キーを監視するイベントリスナーを設定するコードが実行されます。
 
 ```js
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Enter") {
-    toggleFullScreen();
-  }
-}, false);
+document.addEventListener(
+  "keydown",
+  (e) => {
+    if (e.key === "Enter") {
+      toggleFullScreen();
+    }
+  },
+  false,
+);
 ```
 
 ### 全画面モードの切り替え
@@ -117,7 +119,6 @@ function toggleFullScreen() {
 
 ## 関連情報
 
-- [全画面モードの使用](/ja/docs/Web/API/Fullscreen_API)
 - {{DOMxRef("Element.requestFullscreen()")}}
 - {{DOMxRef("Document.exitFullscreen()")}}
 - {{DOMxRef("Document.fullscreen")}}

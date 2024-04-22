@@ -28,10 +28,10 @@ JavaScript 코드에서 `37`과 같은 숫자 리터럴은 정수가 아니라 �
 ### 함수 구문
 
 ```js
-Number('123'); // 숫자 123을 반환
-Number('123') === 123; // 참
+Number("123"); // 숫자 123을 반환
+Number("123") === 123; // 참
 
-Number('unicorn'); // NaN
+Number("unicorn"); // NaN
 Number(undefined); // NaN
 ```
 
@@ -125,7 +125,7 @@ JSON으로 직렬화한 데이터를 읽을 때, 위의 범위를 벗어나는 �
 다음 예제는 `Number`를 함수로 사용하여 {{jsxref("Date")}} 객체를 숫자 값으로 변환합니다.
 
 ```js
-let d = new Date('December 17, 1995 03:24:00');
+let d = new Date("December 17, 1995 03:24:00");
 console.log(Number(d));
 ```
 
@@ -134,19 +134,19 @@ console.log(Number(d));
 ### 숫자형 문자열에서 숫자로 변환
 
 ```js
-Number('123'); // 123
-Number('123') === 123; // true
-Number('12.3'); // 12.3
-Number('12.00'); // 12
-Number('123e-1'); // 12.3
-Number(''); // 0
+Number("123"); // 123
+Number("123") === 123; // true
+Number("12.3"); // 12.3
+Number("12.00"); // 12
+Number("123e-1"); // 12.3
+Number(""); // 0
 Number(null); // 0
-Number('0x11'); // 17
-Number('0b11'); // 3
-Number('0o11'); // 9
-Number('foo'); // NaN
-Number('100a'); // NaN
-Number('-Infinity'); // -Infinity
+Number("0x11"); // 17
+Number("0b11"); // 3
+Number("0o11"); // 9
+Number("foo"); // NaN
+Number("100a"); // NaN
+Number("-Infinity"); // -Infinity
 ```
 
 ## 명세

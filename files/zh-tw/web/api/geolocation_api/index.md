@@ -1,7 +1,6 @@
 ---
 title: 地理位置定位 (Geolocation)
 slug: Web/API/Geolocation_API
-original_slug: Web/API/Geolocation/Using_geolocation
 ---
 
 Web Apps 若需要使用者的位置，可透過 **Geolocation API** 取得相關資訊。而基於隱私權的考量，這些 Web Apps 均必須取得使用者的許可之後，才能發佈位置資訊。
@@ -79,7 +78,7 @@ var geo_options = {
 var wpid = navigator.geolocation.watchPosition(
   geo_success,
   geo_error,
-  geo_options
+  geo_options,
 );
 ```
 
@@ -220,7 +219,7 @@ function prompt(window, pref, message, callback) {
         }
       },
       persistWhileVisible: true,
-    }
+    },
   );
 }
 
@@ -230,7 +229,7 @@ prompt(
   "Foo Add-on wants to know your location.",
   function callback(allowed) {
     alert(allowed);
-  }
+  },
 );
 ```
 

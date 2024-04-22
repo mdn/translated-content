@@ -1,7 +1,6 @@
 ---
 title: Notificações
 slug: Web/API/Notification
-original_slug: Web/API/notificacoes
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
@@ -85,7 +84,7 @@ Estes métodos estão disponíveis apenas no próprio objeto `Notification`.
 
 ### Métodos de instância
 
-Estas propriedades estão disponíveis apenas no objeto Notification ou através do seu [`prototype`](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain). O objeto de notificação também herda a interface {{domxref("EventTarget")}}.
+Estas propriedades estão disponíveis apenas no objeto Notification ou através do seu [`prototype`](/pt-BR/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain). O objeto de notificação também herda a interface {{domxref("EventTarget")}}.
 
 - {{domxref("Notification.close()")}}
   - : Programaticamente fecha uma notificação.
@@ -114,7 +113,7 @@ function notifyMe() {
   }
 
   // Otherwise, we need to ask the user for permission
-  else if (Notification.permission !== 'denied') {
+  else if (Notification.permission !== "denied") {
     Notification.requestPermission(function (permission) {
       // If the user accepts, let's create a notification
       if (permission === "granted") {
@@ -139,24 +138,22 @@ Notification.requestPermission();
 Em seguida executar um simples `spawnNotification()` quando queremos disparar uma notificação — este é passado argumentos para especificar o, ícone corpo e título que queremos, então ele cria as opções necessárias objeto e dispara a notificação usando o construtor {{domxref("Notification.Notification","Notification()")}}.
 
 ```js
-function spawnNotification(corpo,icone,titulo) {
+function spawnNotification(corpo, icone, titulo) {
   var opcoes = {
-      body: corpo,
-      icon: icone
-  }
-  var n = new Notification(titulo,opcoes);
+    body: corpo,
+    icon: icone,
+  };
+  var n = new Notification(titulo, opcoes);
 }
 ```
 
 ## Especificações
 
-| Especificação                                | Estado                                   | Comentário      |
-| -------------------------------------------- | ---------------------------------------- | --------------- |
-| {{SpecName('Web Notifications')}} | {{Spec2('Web Notifications')}} | Living standard |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Notification")}}
+{{Compat}}
 
 ## Veja também
 

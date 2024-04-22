@@ -1,7 +1,6 @@
 ---
 title: GamepadButton.pressed
 slug: Web/API/GamepadButton/pressed
-translation_of: Web/API/GamepadButton/pressed
 ---
 
 {{APIRef("Gamepad API")}}
@@ -19,7 +18,7 @@ var isPressed = navigator.getGamepads()[0].pressed;
 ```js
 var gp = navigator.getGamepads()[0]; // Get the first gamepad object
 
-if(gp.buttons[0].pressed == true) {
+if (gp.buttons[0].pressed == true) {
   // respond to button being pressed
 }
 ```
@@ -28,13 +27,11 @@ if(gp.buttons[0].pressed == true) {
 
 {{domxref("boolean")}}.
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                            | Status                       | Comment            |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName("Gamepad", "#dom-gamepadbutton-pressed", "GamepadButton.pressed")}} | {{Spec2("Gamepad")}} | Initial definition |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}
 

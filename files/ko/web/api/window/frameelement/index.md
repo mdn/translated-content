@@ -2,6 +2,7 @@
 title: Window.frameElement
 slug: Web/API/Window/frameElement
 ---
+
 {{ApiRef}}
 
 **`Window.frameElement`** 속성은 {{HTMLElement("iframe")}}이나 {{HTMLElement("object")}}처럼 현재 창을 포함한 요소를 반환합니다. 창이 다른 문서에 포함된 것이 아니거나, 문서의 출처가 다른 경우, 즉 창과 해당 문서의 도메인이 서로 다른 경우 {{jsxref("null")}}을 반환합니다.
@@ -14,7 +15,7 @@ slug: Web/API/Window/frameElement
 var frameEl = window.frameElement;
 // If we're embedded, change the containing element's URL to 'http://mozilla.org/'
 if (frameEl) {
-  frameEl.src = 'http://mozilla.org/';
+  frameEl.src = "http://mozilla.org/";
 }
 ```
 

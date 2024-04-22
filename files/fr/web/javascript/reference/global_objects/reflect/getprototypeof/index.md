@@ -1,14 +1,6 @@
 ---
 title: Reflect.getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/getPrototypeOf
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Reference
-  - Reflect
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/getPrototypeOf
-original_slug: Web/JavaScript/Reference/Objets_globaux/Reflect/getPrototypeOf
 ---
 
 {{JSRef}}
@@ -20,7 +12,7 @@ La méthode statique **`Reflect.getPrototypeOf()`** est semblable à la méthode
 ## Syntaxe
 
 ```js
-Reflect.getPrototypeOf(cible)
+Reflect.getPrototypeOf(cible);
 ```
 
 ### Paramètres
@@ -54,21 +46,21 @@ Reflect.getPrototypeOf(Object.create(null)); // null
 
 ```js
 // Résultat identiques pour les objets
-Object.getPrototypeOf({});  // Object.prototype
+Object.getPrototypeOf({}); // Object.prototype
 Reflect.getPrototypeOf({}); // Object.prototype
 
 // Exception levée avec ES5 pour les valeurs qui ne sont pas des objets
-Object.getPrototypeOf('toto');  // Throws TypeError
-Reflect.getPrototypeOf('toto'); // Throws TypeError
+Object.getPrototypeOf("toto"); // Throws TypeError
+Reflect.getPrototypeOf("toto"); // Throws TypeError
 
 // Avec ES2015 (ES6), seul Reflect lève une exception
 // Object convertit automatiquement les valeurs en objets
-Object.getPrototypeOf('toto');  // String.prototype
-Reflect.getPrototypeOf('toto'); // Throws TypeError
+Object.getPrototypeOf("toto"); // String.prototype
+Reflect.getPrototypeOf("toto"); // Throws TypeError
 
 // Pour obtenir le même effet qu'avec Object en ES2015, il
 // faut ajouter une opération de conversion explicite
-Reflect.getPrototypeOf(Object('toto')); // String.prototype
+Reflect.getPrototypeOf(Object("toto")); // String.prototype
 ```
 
 ## Spécifications

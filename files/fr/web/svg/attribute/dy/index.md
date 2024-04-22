@@ -1,10 +1,6 @@
 ---
 title: dy
 slug: Web/SVG/Attribute/dy
-tags:
-  - SVG
-  - SVG Attribute
-translation_of: Web/SVG/Attribute/dy
 ---
 
 {{SVGRef}}
@@ -16,15 +12,19 @@ Sept éléments utilisent cet attribut: {{SVGElement('altGlyph')}}, {{SVGElement
 ## Exemple
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
   <!-- Lignes indiquant la position des glyphes -->
-  <line x1="10%" x2="10%"  y1="0"   y2="100%" />
-  <line x1="0"   x2="100%" y1="30%" y2="30%"  />
-  <line x1="0"   x2="100%" y1="80%" y2="80%"  />
+  <line x1="10%" x2="10%" y1="0" y2="100%" />
+  <line x1="0" x2="100%" y1="30%" y2="30%" />
+  <line x1="0" x2="100%" y1="80%" y2="80%" />
 
   <!-- Un texte de référence -->
   <text x="10%" y="30%" fill="grey">SVG</text>
@@ -37,7 +37,7 @@ html,body,svg { height:100% }
 ```css
 line {
   stroke: red;
-  stroke-width: .5px;
+  stroke-width: 0.5px;
   stroke-dasharray: 3px;
 }
 ```
@@ -182,7 +182,11 @@ S'il a plusieurs valeurs, `dx` définit un décalage sur l'axe x individuellemen
 ### Exemple
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -199,8 +203,8 @@ html,body,svg { height:100% }
   <line x1="90" x2="90" y1="0" y2="100%" />
 
   <!-- Le comportement change en fonction du nombre de valeurs de l'attribut -->
-  <text dy="20"      x="10" y="30">SVG</text>
-  <text dy="0 10"    x="50" y="30">SVG</text>
+  <text dy="20" x="10" y="30">SVG</text>
+  <text dy="0 10" x="50" y="30">SVG</text>
   <text dy="0 10 20" x="90" y="30">SVG</text>
 </svg>
 ```
@@ -208,7 +212,7 @@ html,body,svg { height:100% }
 ```css
 line {
   stroke: red;
-  stroke-width: .5px;
+  stroke-width: 0.5px;
   stroke-dasharray: 3px;
 }
 ```

@@ -2,6 +2,7 @@
 title: Bloques de construcción CSS
 slug: Learn/CSS/Building_blocks
 ---
+
 {{LearnSidebar}}
 
 Este módulo retoma donde [Primeros pasos en CSS](/es/docs/Learn/CSS/First_steps) finalizó — ahora que estás familiarizado con el lenguaje y su sintaxis, y que tienes algo de experiencia en su uso, es hora de bucear un poco más profundo. Este módulo se centra en el estilo en cascada de css y en el concepto de herencia, también veremos todos los tipos de selectores, unidades, tamaños, estilos de fondo, bordes, debugging y mucho más.
@@ -13,7 +14,7 @@ El objetivo aqui es proveerte de herramientas para que puedas escribir código C
 Antes de comenzar este módulo deberías poseer:
 
 1. Un entendimiento básico de la utilización de una computadora y de la
-    navegación web a nivel de usuario.
+   navegación web a nivel de usuario.
 2. Un entorno básico constituido en base a lo dispuesto en la guía [Instalación de software básico](/es/docs/Learn/Getting_started_with_the_web/Instalacion_de_software_basico), tanto como conocimiento acerca de la creación y la administración de archivos, como es detallado en [Dealing with files](/es/docs/Learn/Getting_started_with_the_web/Dealing_with_files).
 3. Una familiaridad básica con html, como es establecido en el módulo [Introdución a HTML](/es/docs/Learn/HTML/Introduccion_a_HTML).
 4. Un entendimiento elemental de CSS, como es discutido en el módulo [CSS first steps](/es/docs/Learn/CSS/First_steps).

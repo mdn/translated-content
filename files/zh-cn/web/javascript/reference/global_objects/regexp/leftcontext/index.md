@@ -16,7 +16,7 @@ RegExp['$`']
 
 ## 描述
 
-`leftContext` 属性是静态的，不是正则表达式独立对象的属性。反之，你应始终将其使用为 `RegExp.leftContext` 或者 `` RegExp['$`'] ``。
+`leftContext` 属性是静态的，不是正则表达式独立对象的属性。反之，你应始终将其使用为 `RegExp.leftContext` 或者 ``RegExp['$`']``。
 
 `leftContext` 属性的值是只读的，并且会在匹配成功时修改。
 
@@ -28,9 +28,9 @@ RegExp['$`']
 
 ```js
 var re = /world/g;
-re.test('hello world!');
+re.test("hello world!");
 RegExp.leftContext; // "hello "
-RegExp['$`'];       // "hello "
+RegExp["$`"]; // "hello "
 ```
 
 ## 规范
@@ -41,7 +41,7 @@ RegExp['$`'];       // "hello "
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{non-standard_inline}} {{jsxref("RegExp.input", "RegExp.input ($_)")}}
 - {{non-standard_inline}} {{jsxref("RegExp.lastMatch", "RegExp.lastMatch ($&amp;)")}}

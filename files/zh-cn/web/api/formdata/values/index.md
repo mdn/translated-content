@@ -24,12 +24,12 @@ formData.values();
 ```js
 //创建一个 FormData 测试对象
 var formData = new FormData();
-formData.append('key1', 'value1');
-formData.append('key2', 'value2');
+formData.append("key1", "value1");
+formData.append("key2", "value2");
 
 //显示值
 for (var value of formData.values()) {
-   console.log(value);
+  console.log(value);
 }
 ```
 
@@ -48,9 +48,7 @@ value2
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/zh-CN/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
-- [Using FormData objects](/zh-CN/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
+- [使用 FormData 对象](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

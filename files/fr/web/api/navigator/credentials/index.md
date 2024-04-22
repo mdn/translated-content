@@ -1,13 +1,6 @@
 ---
 title: Navigator.credentials
 slug: Web/API/Navigator/credentials
-tags:
-  - API
-  - Credential Management API
-  - CredentialsContainer
-  - Propriété
-  - Reference
-translation_of: Web/API/Navigator/credentials
 ---
 
 {{securecontext_header}}{{APIRef("")}}
@@ -17,7 +10,7 @@ La propriété **`credentials`**, rattachée à l'interface {{domxref("Navigator
 ## Syntaxe
 
 ```js
-var credentialsContainer = navigator.credentials
+var credentialsContainer = navigator.credentials;
 ```
 
 ### Valeur
@@ -27,14 +20,13 @@ L'interface {{domxref("CredentialsContainer")}}.
 ## Exemples
 
 ```js
-if ('credentials' in navigator) {
-  navigator.credentials.get({password: true})
-  .then(function(creds) {
+if ("credentials" in navigator) {
+  navigator.credentials.get({ password: true }).then(function (creds) {
     // Gérer les informations d'authentification
   });
 } else {
   // Gérer la connexion comme avant
-};
+}
 ```
 
 ## Spécifications

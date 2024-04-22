@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: document ロール'
+title: "ARIA: document ロール"
 slug: Web/Accessibility/ARIA/Roles/document_role
 ---
 
@@ -7,12 +7,12 @@ slug: Web/Accessibility/ARIA/Roles/document_role
 
 ```html
 <div role="dialog">
- ...
- <div id="InfoText" role="document" tabindex="0">
-  <p>いくつかの情報テキストがここに入ります。</p>
- </div>
- ...
- <button>閉じる</button>
+  ...
+  <div id="InfoText" role="document" tabindex="0">
+    <p>いくつかの情報テキストがここに入ります。</p>
+  </div>
+  ...
+  <button>閉じる</button>
 </div>
 ```
 

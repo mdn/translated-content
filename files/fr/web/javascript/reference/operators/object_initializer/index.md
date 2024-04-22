@@ -1,13 +1,6 @@
 ---
 title: Initialisateur d'objet
 slug: Web/JavaScript/Reference/Operators/Object_initializer
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Object
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/Object_initializer
-original_slug: Web/JavaScript/Reference/Opérateurs/Initialisateur_objet
 ---
 
 {{JsSidebar("Operators")}}
@@ -22,13 +15,15 @@ Il est possible d'initialiser un objet en utilisant les notations [`new Object()
 var o = {};
 var o = { a: "toto", b: 42, c: {} };
 
-var a = "toto", b = 42, c = {};
+var a = "toto",
+  b = 42,
+  c = {};
 var o = { a: a, b: b, c: c };
 
 var o = {
   property: function (paramètres) {},
   get property() {},
-  set property(valeur) {}
+  set property(valeur) {},
 };
 ```
 
@@ -38,12 +33,14 @@ ECMAScript 2015 (ES6) introduit de nouvelles notations. Pour plus d'informations
 
 ```js
 // Raccourcis pour les noms de propriétés (ES2015)
-var a = "toto", b = 42, c = {};
+var a = "toto",
+  b = 42,
+  c = {};
 var o = { a, b, c };
 
 // Raccourcis pour les noms de méthodes(ES2015)
 var o = {
-  property(paramètres) {}
+  property(paramètres) {},
 };
 
 // Noms calculés pour les propriétés (ES2015)
@@ -70,10 +67,10 @@ Cependant, en utilisant un littéral ou un initialisateur, on peut créer des ob
 
 ```js
 var object = {
-  toto: 'truc',
+  toto: "truc",
   âge: 42,
   machin: { maProp: 12 },
-}
+};
 ```
 
 ### Accéder à des propriétés
@@ -82,9 +79,9 @@ Après la création d'un objet, vous pourrez avoir besoin de consulter ou de mod
 
 ```js
 object.toto; // "truc"
-object['âge']; // 42
+object["âge"]; // 42
 
-object.toto = 'machin';
+object.toto = "machin";
 ```
 
 ### Définir des propriétés
@@ -92,29 +89,29 @@ object.toto = 'machin';
 On a déjà vu comment on pouvait utiliser la syntaxe de l'initialisateur pour définir des propriétés. Il arrive souvent de vouloir utiliser des variables comme propriétés d'un objet. C'est pourquoi on peut trouver le code suivant :
 
 ```js
-var a = 'toto',
-    b = 42,
-    c = {};
+var a = "toto",
+  b = 42,
+  c = {};
 
 var o = {
   a: a,
   b: b,
-  c: c
+  c: c,
 };
 ```
 
 Avec ECMAScript 2015 (ES6), on peut utiliser une notation plus courte pour un résultat égal :
 
 ```js
-var a = 'toto',
-    b = 42,
-    c = {};
+var a = "toto",
+  b = 42,
+  c = {};
 
 // Raccourcis sur les noms de propriétés (ES2015)
 var o = { a, b, c };
 
 // Autrement dit
-console.log((o.a === { a }.a)); // true
+console.log(o.a === { a }.a); // true
 ```
 
 #### Les duplicatas et les noms de propriétés
@@ -122,15 +119,15 @@ console.log((o.a === { a }.a)); // true
 Si le même nom est utilisé plusieurs fois pour différentes propriétés, ce sera la dernière propriété qui sera prise en compte :
 
 ```js
-var a = {x: 1, x: 2};
+var a = { x: 1, x: 2 };
 console.log(a); // { x: 2}
 ```
 
 Le mode strict d'ECMAScript 5 renvoyait une exception {{jsxref("SyntaxError")}} lorsque plusieurs propriétés avaient le même nom. ECMAScript 2015 (ES6) permettant de créer des propriétés avec des noms qui sont calculés à l'exécution, cette restriction a été retirée.
 
 ```js
-function vérifierSémantiqueES2015(){
-  'use strict';
+function vérifierSémantiqueES2015() {
+  "use strict";
   try {
     ({ prop: 1, prop: 2 });
 
@@ -151,7 +148,7 @@ Une propriété d'un objet peut être une [function](/fr/docs/Web/JavaScript/Ref
 var o = {
   property: function (paramètres) {},
   get property() {},
-  set property(valeur) {}
+  set property(valeur) {},
 };
 ```
 
@@ -161,7 +158,7 @@ Avec ECMAScript 2015 (ES6), une notation raccourcie permet de ne plus utiliser l
 // Raccourci pour les noms de méthodes (ES2015)
 var o = {
   property(paramètres) {},
-  *generator() {}
+  *generator() {},
 };
 ```
 
@@ -181,7 +178,7 @@ _(Il n'y a pas de function génératrice en ECMAScript5, mais l'exemple permet d
 
 ```js
 var o = {
-  generator: function* (){}
+  generator: function* () {},
 };
 ```
 
@@ -195,19 +192,19 @@ Avec ECMAScript 2015 (ES6), on peut utiliser un initialisateur et avoir des noms
 // Calcul des noms de propriétés (ES2015)
 var i = 0;
 var a = {
-  ['toto' + ++i]: i,
-  ['toto' + ++i]: i,
-  ['toto' + ++i]: i
+  ["toto" + ++i]: i,
+  ["toto" + ++i]: i,
+  ["toto" + ++i]: i,
 };
 
 console.log(a.toto1); // 1
 console.log(a.toto2); // 2
 console.log(a.toto3); // 3
 
-var param = 'taille';
+var param = "taille";
 var config = {
   [param]: 12,
-  ['mobile' + param.charAt(0).toUpperCase() + param.slice(1)]: 4
+  ["mobile" + param.charAt(0).toUpperCase() + param.slice(1)]: 4,
 };
 
 console.log(config); // { taille: 12, mobileTaille: 4 }
@@ -220,8 +217,8 @@ La proposition de la décomposition des propriétés à ECMAScript (au niveau 4,
 Le clonage superficiel (sans rattacher le prototype) ou la fusion d'objets pourra désormais être écrite de façon plus concise qu'avec {{jsxref("Object.assign()")}}.
 
 ```js
-var obj1 = { toto: 'truc', x: 42 };
-var obj2 = { toto: 'bidule', y: 13 };
+var obj1 = { toto: "truc", x: 42 };
+var obj2 = { toto: "bidule", y: 13 };
 
 var clone = { ...obj1 };
 // Object { toto: 'truc', x: 42 }
@@ -244,7 +241,7 @@ var obj2 = { __proto__: null };
 assert(Object.getPrototypeOf(obj2) === null);
 
 var protoObj = {};
-var obj3 = { '__proto__': protoObj };
+var obj3 = { __proto__: protoObj };
 assert(Object.getPrototypeOf(obj3) === protoObj);
 
 var obj4 = { __proto__: "not an object or null" };
@@ -257,17 +254,21 @@ On ne peut modifier le prototype qu'une seule fois pour une même notation litt�
 Les définitions de propriétés qui n'utilisent pas les deux points ne permettent pas de modifier le prototype, elles définieront une propriété de façon classique.
 
 ```js
-var __proto__ = 'variable';
+var __proto__ = "variable";
 
 var obj1 = { __proto__ };
 assert(Object.getPrototypeOf(obj1) === Object.prototype);
-assert(obj1.hasOwnProperty('__proto__'));
-assert(obj1.__proto__ === 'variable');
+assert(obj1.hasOwnProperty("__proto__"));
+assert(obj1.__proto__ === "variable");
 
-var obj2 = { __proto__() { return 'hello'; } };
-assert(obj2.__proto__() === 'hello');
+var obj2 = {
+  __proto__() {
+    return "hello";
+  },
+};
+assert(obj2.__proto__() === "hello");
 
-var obj3 = { ['__prot' + 'o__']: 17 };
+var obj3 = { ["__prot" + "o__"]: 17 };
 assert(obj3.__proto__ === 17);
 ```
 
@@ -292,6 +293,6 @@ La notation utilisant un littéral objet n'est pas identique à celle utilisée 
 ## Voir aussi
 
 - [Accesseurs de propriétés](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_membres)
-- [`get`](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_get) / [`set`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_set)
+- [`get`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_get) / [`set`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_set)
 - [Définitions de méthode](/fr/docs/Web/JavaScript/Reference/Fonctions/Définition_de_méthode)
 - [Grammaire lexicale](/fr/docs/Web/JavaScript/Reference/Grammaire_lexicale) de JavaScript

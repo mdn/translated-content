@@ -1,8 +1,6 @@
 ---
 title: IDBObjectStore.get()
 slug: Web/API/IDBObjectStore/get
-translation_of: Web/API/IDBObjectStore/get
-browser-compat: api.IDBObjectStore.get
 ---
 
 {{APIRef("IndexedDB")}}
@@ -18,7 +16,7 @@ Si une valeur est trouvée, un clone structuré est créé et placé comme valeu
 ## Syntaxe
 
 ```js
-get(key)
+get(key);
 ```
 
 ### Paramètres
@@ -49,8 +47,8 @@ Dans le fragment de code qui suit, on ouvre une transaction en lecture/écriture
 // On ouvre la base de données
 const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Base de données initialisée.</li>';
+DBOpenRequest.onsuccess = function (event) {
+  note.innerHTML += "<li>Base de données initialisée.</li>";
 
   // On récupère le résultat de l'ouverture dans la variable db
   // qui sera utilisée ensuite
@@ -67,12 +65,15 @@ function getData() {
   const transaction = db.transaction(["toDoList"], "readwrite");
 
   // On indique le succès ou l'échec de l'opération
-  transaction.oncomplete = function(event) {
-    note.innerHTML += '<li>Transaction terminée.</li>';
+  transaction.oncomplete = function (event) {
+    note.innerHTML += "<li>Transaction terminée.</li>";
   };
 
-  transaction.onerror = function(event) {
-    note.innerHTML += "<li>Transaction non ouverte pour cause d'erreur : " + transaction.error + "</li>";
+  transaction.onerror = function (event) {
+    note.innerHTML +=
+      "<li>Transaction non ouverte pour cause d'erreur : " +
+      transaction.error +
+      "</li>";
   };
 
   // On crée un magasin d'objets sur la transaction
@@ -82,14 +83,13 @@ function getData() {
   // à partir de la clé dans le magasin d'objets
   const objectStoreRequest = objectStore.get("Walk dog");
 
-  objectStoreRequest.onsuccess = function(event) {
+  objectStoreRequest.onsuccess = function (event) {
     // On indique que la requête a réussi
-    note.innerHTML += '<li>Requête réussie.</li>';
+    note.innerHTML += "<li>Requête réussie.</li>";
 
     const myRecord = objectStoreRequest.result;
   };
-
-};
+}
 ```
 
 ## Spécifications

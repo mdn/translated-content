@@ -1,14 +1,8 @@
 ---
 title: CanvasRenderingContext2D.clearRect()
 slug: Web/API/CanvasRenderingContext2D/clearRect
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
-translation_of: Web/API/CanvasRenderingContext2D/clearRect
 ---
+
 {{APIRef}}
 
 Метод **`CanvasRenderingContext2D.clearRect()`**, предоставляемый Canvas 2D API, устанавливает прозрачный чёрный цвет для всех пикселей, расположенных внутри прямоугольника, заданного начальной точкой _(x, y)_ и размерами _(width, height)_, таким образом стирая любое ранее нарисованное содержимое.
@@ -49,9 +43,9 @@ var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 ctx.beginPath();
-ctx.moveTo(20,20);
-ctx.lineTo(200,20);
-ctx.lineTo(120,120);
+ctx.moveTo(20, 20);
+ctx.lineTo(200, 20);
+ctx.lineTo(120, 120);
 ctx.closePath(); // рисует последнюю линию треугольника
 ctx.stroke();
 
@@ -77,7 +71,8 @@ ctx.lineTo(120,120);
 ctx.closePath(); // рисует последнюю линию треугольника
 ctx.stroke();
 
-ctx.clearRect(10, 10, 100, 100);</textarea>
+ctx.clearRect(10, 10, 100, 100);</textarea
+>
 ```
 
 ```js hidden
@@ -93,14 +88,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);

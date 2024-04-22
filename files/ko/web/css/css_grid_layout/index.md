@@ -12,16 +12,18 @@ slug: Web/CSS/CSS_grid_layout
 아래 예제는 3개의 세로 열 트랙으로 이루어졌으며, 저절로 채워지며 생성되는 가로 행 트랙은 높이가 최소 100픽셀 이상, 콘텐츠 최대치까지 자동으로 늘어나는 구조의 그리드를 보여줍니다. 각 아이템은 그리드 라인을 기준으로 배치되었습니다.
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 .wrapper {
   max-width: 940px;
   margin: 0 auto;
 }
 
 .wrapper > div {
-  border: 2px solid rgb(233,171,88);
+  border: 2px solid rgb(233, 171, 88);
   border-radius: 5px;
-  background-color: rgba(233,171,88,.5);
+  background-color: rgba(233, 171, 88, 0.5);
   padding: 1em;
   color: #d9480f;
 }
@@ -158,8 +160,8 @@ slug: Web/CSS/CSS_grid_layout
 - [CSS Grid Layout and Accessibility](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
 - [CSS Grid Layout and Progressive Enhancement](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
 - [Realizing common layouts using grids](/ko/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
-- [Subgrid](/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid)
-- [Masonry layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout) {{Experimental_Inline}}
+- [Subgrid](/ko/docs/Web/CSS/CSS_Grid_Layout/Subgrid)
+- [Masonry layout](/ko/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout) {{Experimental_Inline}}
 
 ## 명세서
 
@@ -168,15 +170,15 @@ slug: Web/CSS/CSS_grid_layout
 ## 같이 보기
 
 - Glossary terms:
-  - [Grid](/en-US/docs/Glossary/Grid)
-  - [Grid lines](/en-US/docs/Glossary/Grid_Lines)
-  - [Grid tracks](/en-US/docs/Glossary/Grid_Tracks)
-  - [Grid cell](/en-US/docs/Glossary/Grid_Cell)
-  - [Grid area](/en-US/docs/Glossary/Grid_Areas)
-  - [Gutters](/en-US/docs/Glossary/Gutters)
-  - [Grid axis](/en-US/docs/Glossary/Grid_Axis)
-  - [Grid row](/en-US/docs/Glossary/Grid_Rows)
-  - [Grid column](/en-US/docs/Glossary/Grid_Column)
+  - [Grid](/ko/docs/Glossary/Grid)
+  - [Grid lines](/ko/docs/Glossary/Grid_Lines)
+  - [Grid tracks](/ko/docs/Glossary/Grid_Tracks)
+  - [Grid cell](/ko/docs/Glossary/Grid_Cell)
+  - [Grid area](/ko/docs/Glossary/Grid_Areas)
+  - [Gutters](/ko/docs/Glossary/Gutters)
+  - [Grid axis](/ko/docs/Glossary/Grid_Axis)
+  - [Grid row](/ko/docs/Glossary/Grid_Rows)
+  - [Grid column](/ko/docs/Glossary/Grid_Column)
 - [Grid by Example](https://gridbyexample.com/) - A collection of usage examples and video tutorials
 - [CSS Grid Reference - Codrops](https://tympanus.net/codrops/css_reference/grid/)
 - [CSS Grid Inspector - Firefox DevTools](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)

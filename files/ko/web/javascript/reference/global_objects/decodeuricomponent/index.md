@@ -2,6 +2,7 @@
 title: decodeURIComponent()
 slug: Web/JavaScript/Reference/Global_Objects/decodeURIComponent
 ---
+
 {{jsSidebar("Objects")}}
 
 **`decodeURIComponent()`** 함수는 {{jsxref("encodeURIComponent")}} 나 비슷한 방법으로 생성된 Uniform Resource Identifier(URI) 컴포넌트를 해독합니다.
@@ -11,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/decodeURIComponent
 ## 구문
 
 ```js
-    decodeURIComponent(encodedURI)
+decodeURIComponent(encodedURI);
 ```
 
 ### 매개변수

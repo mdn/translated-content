@@ -20,7 +20,7 @@ var mediaUrl = HTMLMediaElement.src;
 ## Example
 
 ```js
-var obj = document.createElement('video');
+var obj = document.createElement("video");
 console.log(obj.src); // ""
 ```
 

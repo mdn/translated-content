@@ -16,9 +16,9 @@ slug: Web/API/Element/wheel_event
 在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 方法中使用事件名称，或设置事件处理器属性。
 
 ```js
-addEventListener('wheel', (event) => {});
+addEventListener("wheel", (event) => {});
 
-onwheel = (event) => { };
+onwheel = (event) => {};
 ```
 
 ## 事件类型
@@ -41,11 +41,11 @@ _此接口从父接口：{{DOMxRef("MouseEvent")}}、{{DOMxRef("UIEvent")}} 和 
 
   - : 返回一个无符号长整型数（`unsigned long`），表示 `delta*` 值滚动量的单位。允许的值为：
 
-    | 常量                          | 值     | 描述                                                                       |
-    | ---------------------------- | ------ | ------------------------------------------------------------------------- |
-    | `WheelEvent.DOM_DELTA_PIXEL` | `0x00` | `delta*` 值以像素为单位。                                                    |
+    | 常量                         | 值     | 描述                                                                                  |
+    | ---------------------------- | ------ | ------------------------------------------------------------------------------------- |
+    | `WheelEvent.DOM_DELTA_PIXEL` | `0x00` | `delta*` 值以像素为单位。                                                             |
     | `WheelEvent.DOM_DELTA_LINE`  | `0x01` | `delta*` 值以行为单位。每次鼠标单击都会滚动一行内容，其中行高计算的方法取决于浏览器。 |
-    | `WheelEvent.DOM_DELTA_PAGE`  | `0x02` | `delta*` 值以页为单位。每次鼠标单击都会滚动一页内容。                            |
+    | `WheelEvent.DOM_DELTA_PAGE`  | `0x02` | `delta*` 值以页为单位。每次鼠标单击都会滚动一页内容。                                 |
 
 - {{DOMxRef("WheelEvent.wheelDelta")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : 返回一个（32 位）整型数，表示像素距离。
@@ -88,14 +88,14 @@ function zoom(event) {
   scale += event.deltaY * -0.01;
 
   // Restrict scale
-  scale = Math.min(Math.max(.125, scale), 4);
+  scale = Math.min(Math.max(0.125, scale), 4);
 
   // Apply scale transform
   el.style.transform = `scale(${scale})`;
 }
 
 let scale = 1;
-const el = document.querySelector('div');
+const el = document.querySelector("div");
 el.onwheel = zoom;
 ```
 
@@ -106,7 +106,7 @@ el.onwheel = zoom;
 上面的事件处理器也可以通过 {{domxref("EventTarget/addEventListener", "addEventListener()")}} 方法来设置：
 
 ```js
-el.addEventListener('wheel', zoom, { passive: false });
+el.addEventListener("wheel", zoom, { passive: false });
 ```
 
 ## 规范

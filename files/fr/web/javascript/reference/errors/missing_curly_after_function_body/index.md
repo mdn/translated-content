@@ -1,12 +1,6 @@
 ---
-title: 'SyntaxError: missing } after function body'
+title: "SyntaxError: missing } after function body"
 slug: Web/JavaScript/Reference/Errors/Missing_curly_after_function_body
-tags:
-  - Erreurs
-  - JavaScript
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/Missing_curly_after_function_body
-original_slug: Web/JavaScript/Reference/Erreurs/Missing_curly_after_function_body
 ---
 
 {{jsSidebar("Errors")}}
@@ -44,7 +38,7 @@ var charge = function() {
 La forme correcte est :
 
 ```js example-good
-var charge = function() {
+var charge = function () {
   if (soleil) {
     utiliserPanneauSolaire();
   } else {
@@ -62,7 +56,7 @@ Une erreur de ce type peut être moins visible lorsqu'on utilise les fonctions q
 Généralement, mettre en forme et vérifier l'indentation permet de repérer ces erreurs.
 
 ```js example-good
-(function() {
+(function () {
   if (true) {
     return false;
   }

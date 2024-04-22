@@ -1,8 +1,6 @@
 ---
 title: FormData.get()
 slug: Web/API/FormData/get
-translation_of: Web/API/FormData/get
-browser-compat: api.FormData.get
 ---
 
 {{APIRef("XMLHttpRequest")}}
@@ -37,14 +35,14 @@ var formData = new FormData();
 Si nous ajoutons deux valeurs `username` en utilisant [`FormData.append`](/fr/docs/Web/API/FormData/append) :
 
 ```js
-formData.append('username', 'Chris');
-formData.append('username', 'Bob');
+formData.append("username", "Chris");
+formData.append("username", "Bob");
 ```
 
 L'appel suivant à `get()` renverra uniquement la première valeur `username` indexée :
 
 ```js
-formData.get('username'); // Renvoie "Chris"
+formData.get("username"); // Renvoie "Chris"
 ```
 
 ## Spécifications

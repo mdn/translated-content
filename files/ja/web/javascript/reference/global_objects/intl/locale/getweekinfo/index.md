@@ -1,7 +1,6 @@
 ---
 title: Intl.Locale.prototype.weekInfo
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/getWeekInfo
-original_slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/weekInfo
 ---
 
 {{JSRef}}
@@ -26,10 +25,10 @@ let af = new Intl.Locale("af");
 console.log(af.weekInfo); // logs {firstDay: 7, weekend: [6, 7], minimalDays: 1}
 
 let enGB = new Intl.Locale("en-GB");
-console.log(enGB.weekInfo) // logs {firstDay: 1, weekend: [6, 7], minimalDays: 4}
+console.log(enGB.weekInfo); // logs {firstDay: 1, weekend: [6, 7], minimalDays: 4}
 
 let msBN = new Intl.Locale("ms-BN");
-console.log(msBN.weekInfo) // logs {firstDay: 7, weekend: [5, 7], minimalDays: 1}  // ブルネイでは週末は金曜日と日曜日ですが、土曜日ではありません
+console.log(msBN.weekInfo); // logs {firstDay: 7, weekend: [5, 7], minimalDays: 1}  // ブルネイでは週末は金曜日と日曜日ですが、土曜日ではありません
 ```
 
 ## 仕様書

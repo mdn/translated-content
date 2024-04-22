@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: gridcell ロール'
+title: "ARIA: gridcell ロール"
 slug: Web/Accessibility/ARIA/Roles/gridcell_role
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: Использование событий касания
 slug: Web/API/Touch_events/Using_Touch_Events
-translation_of: Web/API/Touch_events/Using_Touch_Events
 ---
+
 {{DefaultAPISidebar("Touch Events")}}
 
 На сегодняшний день бо́льшая часть содержимого в вебе рассчитана на работу с использованием клавиатуры и мыши. Тем не менее, всё больше появляется устройств с сенсорным экраном (особенно мобильных) и веб-приложения могут либо напрямую обрабатывать сенсорный ввод с помощью {{domxref("Touch_events","Событий касаний")}}, либо интерпретировать события мыши. Недостатком использования событий мыши является то, что они не поддерживают одновременный ввод, тогда как события касаний поддерживают несколько одновременных прикосновений (возможно в разных местах сенсорной поверхности), повышая тем самым удобство работы с интерфейсом.
@@ -50,10 +50,10 @@ translation_of: Web/API/Touch_events/Using_Touch_Events
 
 ```js
 // Назначение обработчика событий касания
-someElement.addEventListener('touchstart', process_touchstart, false);
-someElement.addEventListener('touchmove', process_touchmove, false);
-someElement.addEventListener('touchcancel', process_touchcancel, false);
-someElement.addEventListener('touchend', process_touchend, false);
+someElement.addEventListener("touchstart", process_touchstart, false);
+someElement.addEventListener("touchmove", process_touchmove, false);
+someElement.addEventListener("touchcancel", process_touchcancel, false);
+someElement.addEventListener("touchend", process_touchend, false);
 ```
 
 Обработчик события, реализующий семантику жестов приложения
@@ -75,13 +75,17 @@ function process_touchstart(ev) {
 
 ```js
 // Создание обработчика события "touchstart"
-someElement.addEventListener('touchstart', function(ev) {
-  // Перебор точек события, которые были активированы
-  // для этого элемента и обработка каждого целевого элемента события
-  for (var i=0; i < ev.targetTouches.length; i++) {
-    process_target(ev.targetTouches[i].target);
-  }
-}, false);
+someElement.addEventListener(
+  "touchstart",
+  function (ev) {
+    // Перебор точек события, которые были активированы
+    // для этого элемента и обработка каждого целевого элемента события
+    for (var i = 0; i < ev.targetTouches.length; i++) {
+      process_target(ev.targetTouches[i].target);
+    }
+  },
+  false,
+);
 ```
 
 Предотвращение эмуляции событий мыши
@@ -103,7 +107,7 @@ function process_touchmove(ev) {
 - Добавляйте обработчики событий {{event("touchmove")}}, {{event("touchend")}} и {{event("touchcancel")}} внутрь {{event("touchstart")}}.
 - Целевой элемент или узел для события касания должен быть достаточно большим, для касания пальцем. Если целевая область слишком мала, прикосновений к ней может привести к вызову событий для других прилегающих элементов.
 
-## Поддержка браузерами
+## Информация о совместимости с браузерами
 
 Согласно [данным о совместимости с браузерами](/ru/docs/Web/API/Touch_events#Browser_compatibility), поддержка событий касания среди мобильных браузеров относительно неплохая. Десктопные браузеры немного отстают, хотя над этим уже ведётся работа.
 

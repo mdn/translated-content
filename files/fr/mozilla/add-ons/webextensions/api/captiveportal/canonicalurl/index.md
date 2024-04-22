@@ -1,16 +1,9 @@
 ---
 title: captivePortal.canonicalURL
 slug: Mozilla/Add-ons/WebExtensions/API/captivePortal/canonicalURL
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - canonicalURL
-  - captivePortal
-translation_of: Mozilla/Add-ons/WebExtensions/API/captivePortal/canonicalURL
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Renvoyer l'URL canonique de la page de détection du portail des prisonniers. En lecture seule.
 

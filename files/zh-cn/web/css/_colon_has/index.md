@@ -1,17 +1,19 @@
 ---
-title: ':has()'
+title: ":has()"
 slug: Web/CSS/:has
 ---
 
 {{CSSRef}}
 
-CSS 函数式[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) **`:has()`** 表示一个元素，如果作为参数传递的任何[相对选择器](/zh-CN/docs/Web/CSS/CSS_Selectors#relative_selector)在锚定到该元素时，至少匹配一个元素。这个伪类通过把[可容错相对选择器列表](/zh-CN/docs/Web/CSS/Selector_list#可容错相对选择器列表)作为参数，提供了一种针对引用元素选择父元素或者先前的兄弟元素的方法。
+CSS 函数式[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) **`:has()`** 表示一个元素，如果作为参数传递的任何[相对选择器](/zh-CN/docs/Web/CSS/CSS_selectors#relative_selector)在锚定到该元素时，至少匹配一个元素。这个伪类通过把[可容错相对选择器列表](/zh-CN/docs/Web/CSS/Selector_list#可容错相对选择器列表)作为参数，提供了一种针对引用元素选择父元素或者先前的兄弟元素的方法。
 
 ```css
 /* Selects an h1 heading with a
 paragraph element that immediately follows
 the h1 and applies the style to h1 */
-h1:has(+ p) { margin-bottom: 0; }
+h1:has(+ p) {
+  margin-bottom: 0;
+}
 ```
 
 `:has()` 伪类的[优先级](/zh-CN/docs/Web/CSS/Specificity)计算方法与 {{CSSxRef(":is", ":is()")}} 和 {{CSSxRef(":not", ":not()")}} 相同：以其参数中具体的选择器进行计算。
@@ -40,12 +42,18 @@ h1:has(+ p) { margin-bottom: 0; }
 <section>
   <article>
     <h1>Morning Times</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.
+    </p>
   </article>
   <article>
     <h1>Morning Times</h1>
     <h2>Delivering you news every morning</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.
+    </p>
   </article>
 </section>
 ```
@@ -54,9 +62,9 @@ h1:has(+ p) { margin-bottom: 0; }
 
 ```css hidden
 section {
-    display: flex;
-    align-items: start;
-    justify-content: space-around;
+  display: flex;
+  align-items: start;
+  justify-content: space-around;
 }
 
 article {
@@ -64,19 +72,21 @@ article {
   width: 40%;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-size: 1.2em;
 }
 
 h2 {
-  font-size: 1.0em;
+  font-size: 1em;
   color: rgb(150, 149, 149);
 }
 ```
 
 ```css
-h1, h2 {
-  margin: 0 0 1.0rem 0;
+h1,
+h2 {
+  margin: 0 0 1rem 0;
 }
 
 h1:has(+ h2) {
@@ -88,7 +98,7 @@ h1:has(+ h2) {
 
 {{EmbedLiveSample('与兄弟组合器一起使用', 600, 150)}}
 
-该示例并排显示了两个相似的文本，以进行比较：左侧的带有 `H1` 标题，并紧跟一个段落，而右侧的带有 `H1` 标题，并紧跟一个 `H2` 标题和一个段落。该示例的右侧，`:has()` 可以帮助选择 `H1` 元素后紧跟的 `H2` 元素（由兄弟选择器 [`+`](/zh-CN/docs/Web/CSS/Adjacent_sibling_combinator) 指示），并通过 CSS 规则来减少此类 `H1` 元素后的间距。若没有 `:has()` 伪类，你就无法使用 CSS 选择器来选择具有不同类型的前一个兄弟元素或父元素。
+该示例并排显示了两个相似的文本，以进行比较：左侧的带有 `H1` 标题，并紧跟一个段落，而右侧的带有 `H1` 标题，并紧跟一个 `H2` 标题和一个段落。该示例的右侧，`:has()` 可以帮助选择 `H1` 元素后紧跟的 `H2` 元素（由兄弟选择器 [`+`](/zh-CN/docs/Web/CSS/Next-sibling_combinator) 指示），并通过 CSS 规则来减少此类 `H1` 元素后的间距。若没有 `:has()` 伪类，你就无法使用 CSS 选择器来选择具有不同类型的前一个兄弟元素或父元素。
 
 ### 与 :is() 伪类一起使用
 
@@ -101,13 +111,19 @@ h1:has(+ h2) {
   <article>
     <h1>Morning Times</h1>
     <h2>Delivering you news every morning</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.
+    </p>
   </article>
   <article>
     <h1>Morning Times</h1>
     <h2>Delivering you news every morning</h2>
     <h3>8:00 am</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.
+    </p>
   </article>
 </section>
 ```
@@ -116,9 +132,9 @@ h1:has(+ h2) {
 
 ```css hidden
 section {
-    display: flex;
-    align-items: start;
-    justify-content: space-around;
+  display: flex;
+  align-items: start;
+  justify-content: space-around;
 }
 
 article {
@@ -131,7 +147,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.0em;
+  font-size: 1em;
   color: rgb(150, 149, 149);
 }
 
@@ -142,8 +158,10 @@ h3 {
 ```
 
 ```css
-h1, h2, h3 {
-  margin: 0 0 1.0rem 0;
+h1,
+h2,
+h3 {
+  margin: 0 0 1rem 0;
 }
 
 :is(h1, h2, h3):has(+ :is(h2, h3, h4)) {
@@ -155,7 +173,7 @@ h1, h2, h3 {
 
 {{EmbedLiveSample('与 :is() 伪类一起使用', 600, 170)}}
 
-这里，第一个 [`:is()`](/zh-CN/docs/Web/CSS/:is) 伪类用于选择列表中的任何标题元素。第二个 `:is()` 伪类用于将相邻的兄弟选择器的列表作为参数传递给 `:has()`。`:has()` 伪类用于选择任何一个紧跟 `H2`、`H3` 或 `H4` 的 `H1`、`H2`、`H3` 元素（使用 [`+`](/zh-CN/docs/Web/CSS/Adjacent_sibling_combinator) 指示），并使用 CSS 规则来减少此类 `H1`、`H2` 或 `H3` 元素后的间距。
+这里，第一个 [`:is()`](/zh-CN/docs/Web/CSS/:is) 伪类用于选择列表中的任何标题元素。第二个 `:is()` 伪类用于将相邻的兄弟选择器的列表作为参数传递给 `:has()`。`:has()` 伪类用于选择任何一个紧跟 `H2`、`H3` 或 `H4` 的 `H1`、`H2`、`H3` 元素（使用 [`+`](/zh-CN/docs/Web/CSS/Next-sibling_combinator) 指示），并使用 CSS 规则来减少此类 `H1`、`H2` 或 `H3` 元素后的间距。
 
 这个选择器也可以写作：
 
@@ -176,7 +194,7 @@ h1, h2, h3 {
 ## 参见
 
 - [`:is()`](/zh-CN/docs/Web/CSS/:is)、[`:where()`](/zh-CN/docs/Web/CSS/:where)、[`:not()`](/zh-CN/docs/Web/CSS/:not)
-- [CSS 选择器](/zh-CN/docs/Web/CSS/CSS_Selectors)
+- [CSS 选择器](/zh-CN/docs/Web/CSS/CSS_selectors)
 - [CSS 组合符](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 - [选择器列表](/zh-CN/docs/Web/CSS/Selector_list)
 - [使用选择器定位 DOM 元素](/zh-CN/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)

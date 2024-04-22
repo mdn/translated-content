@@ -1,11 +1,6 @@
 ---
 title: node-set
 slug: Web/EXSLT/exsl/node-set
-tags:
-  - EXSLT
-  - Référence_XSLT
-  - XSLT
-translation_of: Web/EXSLT/exsl/node-set
 ---
 
 {{ XsltRef() }}

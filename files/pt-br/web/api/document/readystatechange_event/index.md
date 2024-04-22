@@ -1,7 +1,6 @@
 ---
 title: readystatechange
 slug: Web/API/Document/readystatechange_event
-original_slug: Web/Events/readystatechange
 ---
 
 {{ApiRef}}
@@ -25,22 +24,22 @@ O evento `readystatechange` é ativado quando o atributo [`readyState`](/pt-BR/d
 
 ## Propriedades
 
-| Property                              | Type                                 | Description                                            |
-| ------------------------------------- | ------------------------------------ | ------------------------------------------------------ |
+| Property                        | Type                       | Description                                            |
+| ------------------------------- | -------------------------- | ------------------------------------------------------ |
 | `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | The type of event.                                     |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Whether the event normally bubbles or not.             |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Whether the event is cancellable or not.               |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | The type of event.                                     |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.             |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.               |
 
 ## Exemplo
 
 ```js
 // alternativa ao DOMContentLoaded
 document.onreadystatechange = function () {
-    if (document.readyState == "interactive") {
-        initApplication();
-    }
-}
+  if (document.readyState == "interactive") {
+    initApplication();
+  }
+};
 ```
 
 ## Compatibilidade com navegadores

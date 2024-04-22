@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Operators/Subtraction_assignment
 ## 構文
 
 ```js
-x -= y // x = x - y
+x -= y; // x = x - y
 ```
 
 ## 例
@@ -23,8 +23,8 @@ x -= y // x = x - y
 // 次の変数を想定
 //  bar = 5
 
-bar -= 2     // 3
-bar -= 'foo' // NaN
+bar -= 2; // 3
+bar -= "foo"; // NaN
 ```
 
 ## 仕様書
@@ -37,5 +37,5 @@ bar -= 'foo' // NaN
 
 ## 関連情報
 
-- [JavaScript ガイドの代入演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#代入演算子)
+- [JavaScript ガイドの代入演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#代入演算子)
 - [減算演算子](/ja/docs/Web/JavaScript/Reference/Operators/Subtraction)

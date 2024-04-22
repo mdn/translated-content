@@ -1,7 +1,6 @@
 ---
 title: Cómo manejan el espacio en blanco HTML, CSS y el DOM
 slug: Web/API/Document_Object_Model/Whitespace
-original_slug: Referencia_DOM_de_Gecko/Cómo_espacioenblanco
 ---
 
 {{APIRef("DOM")}}
@@ -18,8 +17,8 @@ En el caso de HTML, los espacios en blanco se ignoran en gran medida: los espaci
 
 ### HTML largely ignores whitespace?
 
-```html
-<!DOCTYPE html>
+```html-nolint
+<!doctype html>
 
     <h1>       ¡Hola      mundo!     </h1>
 ```
@@ -41,18 +40,18 @@ Cualquier carácter de espacio en blanco que esté fuera de los elementos HTML d
 
 Tomemos el siguiente documento, por ejemplo:
 
-```html
-<!DOCTYPE html>
+```html-nolint
+<!doctype html>
 <html>
-<head>
-  <title>Mi Documento</title>
-</head>
-<body>
-  <h1>Encabezado</h1>
-  <p>
-    Párrafo
-  </p>
-</body>
+  <head>
+    <title>Mi Documento</title>
+  </head>
+  <body>
+    <h1>Encabezado</h1>
+    <p>
+      Párrafo
+    </p>
+  </body>
 </html>
 ```
 
@@ -70,7 +69,7 @@ Tomemos otro ejemplo realmente simple. Para hacerlo más fácil, ilustramos todo
 
 Este ejemplo:
 
-```html
+```html-nolint
 <h1>◦◦◦¡Hola◦⏎
 ⇥⇥⇥⇥<span>◦mundo!</span>⇥◦◦</h1>
 ```
@@ -79,7 +78,7 @@ se representa en el navegador así:
 
 #### Ejemplo
 
-```html hidden
+```html-nolint hidden
 <h1>   ¡Hola
     <span> mundo!</span>   </h1>
 ```
@@ -100,35 +99,35 @@ Dentro de este contexto, el procesamiento de caracteres de espacio en blanco se 
 
 1. Primero, todos los espacios y tabulaciones inmediatamente antes y después de un salto de línea se ignoran, por lo que, si tomamos nuestro marcado de ejemplo anterior y aplicamos esta primera regla, obtenemos:
 
-    ```html
-    <h1>◦◦◦¡Hola⏎
-    <span>◦mundo!</span>⇥◦◦</h1>
-    ```
+   ```html-nolint
+   <h1>◦◦◦¡Hola⏎
+   <span>◦mundo!</span>⇥◦◦</h1>
+   ```
 
 2. A continuación, todos los caracteres de tabulación se tratan como caracteres de espacio, por lo que el ejemplo se convierte en:
 
-    ```html
-    <h1>◦◦◦¡Hola⏎
-    <span>◦mundo!</span>◦◦◦</h1>
-    ```
+   ```html-nolint
+   <h1>◦◦◦¡Hola⏎
+   <span>◦mundo!</span>◦◦◦</h1>
+   ```
 
 3. A continuación, los saltos de línea se convierten en espacios:
 
-    ```html
-    <h1>◦◦◦¡Hola◦<span>◦mundo!</span>◦◦◦</h1>
-    ```
+   ```html
+   <h1>◦◦◦¡Hola◦<span>◦mundo!</span>◦◦◦</h1>
+   ```
 
 4. Después de eso, cualquier espacio inmediatamente después de otro espacio (incluso a través de dos elementos en línea separados) se ignora, por lo que terminamos con:
 
-    ```html
-    <h1>◦¡Hola◦<span>mundo!</span>◦</h1>
-    ```
+   ```html
+   <h1>◦¡Hola◦<span>mundo!</span>◦</h1>
+   ```
 
 5. Y finalmente, las secuencias de espacios al principio y al final de una línea se eliminan, por lo que eventualmente obtenemos esto:
 
-    ```html
-    <h1>¡Hola◦<span>mundo!</span></h1>
-    ```
+   ```html
+   <h1>¡Hola◦<span>mundo!</span></h1>
+   ```
 
 Es por eso que las personas que visitan la página web simplemente verán la frase "¡Hola mundo!" muy bien escrita en la parte superior de la página, en lugar de un "!Hola" con una sangría extraña, seguido de un "mundo!" en la línea debajo de esa.
 
@@ -140,7 +139,7 @@ Anteriormente, solo miramos elementos que contienen elementos en línea y contex
 
 En este contexto, los espacios en blanco se tratan de manera muy diferente. Veamos un ejemplo para explicar cómo. Hemos marcado los espacios en blanco como antes.
 
-```html
+```html-nolint
 <body>⏎
 ⇥<div>◦◦¡Hola◦◦</div>⏎
 ⏎
@@ -154,7 +153,7 @@ Esto se renderiza así:
 
 #### Ejemplo
 
-```html hidden
+```html-nolint hidden
 <body>
   <div>  ¡Hola  </div>
 
@@ -170,23 +169,23 @@ Podemos resumir cómo se maneja el espacio en blanco aquí de la siguiente maner
 
 1. Debido a que estamos dentro de un contexto de formato de bloque, todo debe ser un bloque, por lo que nuestros 3 nodos de texto también se convierten en bloques, al igual que los 2 `<div>`s. Los bloques ocupan todo el ancho disponible y se apilan unos encima de los otros, lo cual significa que terminamos con un diseño compuesto por esta lista de bloques:
 
-    ```html
-    <block>⏎⇥</block>
-    <block>◦◦¡Hola◦◦</block>
-    <block>⏎◦◦◦</block>
-    <block>◦◦mundo!◦◦</block>
-    <block>◦◦⏎</block>
-    ```
+   ```html
+   <block>⏎⇥</block>
+   <block>◦◦¡Hola◦◦</block>
+   <block>⏎◦◦◦</block>
+   <block>◦◦mundo!◦◦</block>
+   <block>◦◦⏎</block>
+   ```
 
 2. Esto luego se simplifica aún más aplicando las reglas de procesamiento para espacios en blanco en contextos de formato en línea a estos bloques:
 
-    ```html
-    <block></block>
-    <block>¡Hola</block>
-    <block></block>
-    <block>mundo!</block>
-    <block></block>
-    ```
+   ```html
+   <block></block>
+   <block>¡Hola</block>
+   <block></block>
+   <block>mundo!</block>
+   <block></block>
+   ```
 
 3. Los 3 bloques vacíos que tenemos ahora no van a ocupar ningún espacio en el diseño final, porque no contienen nada, así que terminaremos con solo 2 bloques ocupando espacio en la página. Las personas que visitan la página web ven las palabras "!Hola" y "mundo!" en 2 líneas separadas, ya que esperarías que se distribuyeran 2 `<div>`s. El motor del navegador esencialmente ha ignorado todos los espacios en blanco que se agregaron en el código fuente.
 
@@ -218,7 +217,7 @@ Considera este ejemplo (nuevamente, los espacios en blanco en el HTML están mar
 }
 ```
 
-```html
+```html-nolint
 <ul class="people-list">⏎
 
 ◦◦<li></li>⏎
@@ -239,13 +238,22 @@ Esto se traduce de la siguiente manera:
 #### Ejemplo
 
 ```css hidden
-.people-list { list-style-type: none; margin: 0; padding: 0; }
-.people-list li { display: inline-block; width: 2em; height: 2em; background: #f06; border: 1px solid; }
+.people-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.people-list li {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  background: #f06;
+  border: 1px solid;
+}
 ```
 
 ```html hidden
 <ul class="people-list">
-
   <li></li>
 
   <li></li>
@@ -255,7 +263,6 @@ Esto se traduce de la siguiente manera:
   <li></li>
 
   <li></li>
-
 </ul>
 ```
 
@@ -311,7 +318,7 @@ li {
 
 También puedes resolver este problema colocando los elementos de tu lista en la misma línea en la fuente, lo cual hace que los nodos de espacios en blanco no se creen en primer lugar:
 
-```html
+```html-nolint
 <li></li><li></li><li></li><li></li><li></li>
 ```
 
@@ -337,7 +344,6 @@ El siguiente código JavaScript define varias funciones que facilitan el manejo 
  * espacios irrompibles (y también algunos otros caracteres).
  */
 
-
 /**
  * Determina si el contenido de texto de un nodo es completamente de espacios en blanco.
  *
@@ -346,12 +352,10 @@ El siguiente código JavaScript define varias funciones que facilitan el manejo 
  * @return     True si todo el contenido de texto de |nod| es espacio en blanco,
  *             de lo contrario false.
  */
-function is_all_ws( nod )
-{
+function is_all_ws(nod) {
   // Usa las características de String y RegExp de ECMA-262 Edición 3
-  return !(/[^\t\n\r ]/.test(nod.textContent));
+  return !/[^\t\n\r ]/.test(nod.textContent);
 }
-
 
 /**
  * Determina si un nodo debe ser ignorado por las funciones del iterador.
@@ -363,10 +367,11 @@ function is_all_ws( nod )
  *             y de lo contrario false.
  */
 
-function is_ignorable( nod )
-{
-  return ( nod.nodeType == 8) || // Un nodo comment
-         ( (nod.nodeType == 3) && is_all_ws(nod) ); // un nodo text, todo es eeb
+function is_ignorable(nod) {
+  return (
+    nod.nodeType == 8 || // Un nodo comment
+    (nod.nodeType == 3 && is_all_ws(nod))
+  ); // un nodo text, todo es eeb
 }
 
 /**
@@ -382,8 +387,7 @@ function is_ignorable( nod )
  *                  ignorable según |is_ignorable|, o
  *               2) null si no existe tal nodo.
  */
-function node_before( sib )
-{
+function node_before(sib) {
   while ((sib = sib.previousSibling)) {
     if (!is_ignorable(sib)) return sib;
   }
@@ -400,8 +404,7 @@ function node_before( sib )
  *                  ignorable según |is_ignorable|, o
  *               2) null si no existe tal nodo.
  */
-function node_after( sib )
-{
+function node_after(sib) {
   while ((sib = sib.nextSibling)) {
     if (!is_ignorable(sib)) return sib;
   }
@@ -420,9 +423,8 @@ function node_after( sib )
  *                  ignorable según |is_ignorable|, o
  *               2) null si no existe tal nodo.
  */
-function last_child( par )
-{
-  var res=par.lastChild;
+function last_child(par) {
+  var res = par.lastChild;
   while (res) {
     if (!is_ignorable(res)) return res;
     res = res.previousSibling;
@@ -440,9 +442,8 @@ function last_child( par )
  *                  ignorable según |is_ignorable|, o
  *               2) null si no existe tal nodo.
  */
-function first_child( par )
-{
-  var res=par.firstChild;
+function first_child(par) {
+  var res = par.firstChild;
   while (res) {
     if (!is_ignorable(res)) return res;
     res = res.nextSibling;
@@ -459,13 +460,11 @@ function first_child( par )
  * @return     Una cadena que proporciona el contenido del nodo de texto con
  *             espacios en blanco colapsados.
  */
-function data_of( txt )
-{
+function data_of(txt) {
   var data = txt.textContent;
   // Usa las características de String y RegExp de ECMA-262 Edición 3
   data = data.replace(/[\t\n\r ]+/g, " ");
-  if (data.charAt(0) == " ")
-    data = data.substring(1, data.length);
+  if (data.charAt(0) == " ") data = data.substring(1, data.length);
   if (data.charAt(data.length - 1) == " ")
     data = data.substring(0, data.length - 1);
   return data;
@@ -478,10 +477,8 @@ El siguiente código demuestra el uso de las funciones anteriores. Itera sobre l
 
 ```js
 var cur = first_child(document.getElementById("test"));
-while (cur)
-{
-  if (data_of(cur.firstChild) == "Este es el tercer párrafo.")
-  {
+while (cur) {
+  if (data_of(cur.firstChild) == "Este es el tercer párrafo.") {
     cur.className = "magic";
     cur.firstChild.textContent = "Este es el párrafo mágico.";
   }

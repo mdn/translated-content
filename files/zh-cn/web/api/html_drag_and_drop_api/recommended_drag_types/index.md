@@ -119,7 +119,7 @@ Note that the latest spec now dictates that {{domxref("DataTransfer.types")}} sh
 As a result, the [contains](/zh-CN/docs/Web/API/Node/contains) method no longer works on the property; the [includes](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) method should be used instead to check if a specific type of data is provided, using code like the following:
 
 ```js
-if ([...event.dataTransfer.types].includes('text/html')) {
+if ([...event.dataTransfer.types].includes("text/html")) {
   // Do something
 }
 ```
@@ -167,52 +167,79 @@ There are cases in which you may want to add a file to an existing drag event se
 
 currentEvent.dataTransfer.setData("text/x-moz-url", URL);
 currentEvent.dataTransfer.setData("application/x-moz-file-promise-url", URL);
-currentEvent.dataTransfer.setData("application/x-moz-file-promise-dest-filename", leafName);
-currentEvent.dataTransfer.mozSetDataAt('application/x-moz-file-promise',
-                  new dataProvider(success,error),
-                  0, Components.interfaces.nsISupports);
+currentEvent.dataTransfer.setData(
+  "application/x-moz-file-promise-dest-filename",
+  leafName,
+);
+currentEvent.dataTransfer.mozSetDataAt(
+  "application/x-moz-file-promise",
+  new dataProvider(success, error),
+  0,
+  Components.interfaces.nsISupports,
+);
 
-function dataProvider(){}
+function dataProvider() {}
 
 dataProvider.prototype = {
-  QueryInterface : function(iid) {
-    if (iid.equals(Components.interfaces.nsIFlavorDataProvider)
-                  || iid.equals(Components.interfaces.nsISupports))
+  QueryInterface: function (iid) {
+    if (
+      iid.equals(Components.interfaces.nsIFlavorDataProvider) ||
+      iid.equals(Components.interfaces.nsISupports)
+    )
       return this;
     throw Components.results.NS_NOINTERFACE;
   },
-  getFlavorData : function(aTransferable, aFlavor, aData, aDataLen) {
-    if (aFlavor == 'application/x-moz-file-promise') {
+  getFlavorData: function (aTransferable, aFlavor, aData, aDataLen) {
+    if (aFlavor == "application/x-moz-file-promise") {
+      var urlPrimitive = {};
+      var dataSize = {};
 
-       var urlPrimitive = {};
-       var dataSize = {};
+      aTransferable.getTransferData(
+        "application/x-moz-file-promise-url",
+        urlPrimitive,
+        dataSize,
+      );
+      var url = urlPrimitive.value.QueryInterface(
+        Components.interfaces.nsISupportsString,
+      ).data;
+      console.log("URL file orignal is = " + url);
 
-       aTransferable.getTransferData('application/x-moz-file-promise-url', urlPrimitive, dataSize);
-       var url = urlPrimitive.value.QueryInterface(Components.interfaces.nsISupportsString).data;
-       console.log("URL file orignal is = " + url);
+      var namePrimitive = {};
+      aTransferable.getTransferData(
+        "application/x-moz-file-promise-dest-filename",
+        namePrimitive,
+        dataSize,
+      );
+      var name = namePrimitive.value.QueryInterface(
+        Components.interfaces.nsISupportsString,
+      ).data;
 
-       var namePrimitive = {};
-       aTransferable.getTransferData('application/x-moz-file-promise-dest-filename', namePrimitive, dataSize);
-       var name = namePrimitive.value.QueryInterface(Components.interfaces.nsISupportsString).data;
+      console.log("target filename is = " + name);
 
-       console.log("target filename is = " + name);
+      var dirPrimitive = {};
+      aTransferable.getTransferData(
+        "application/x-moz-file-promise-dir",
+        dirPrimitive,
+        dataSize,
+      );
+      var dir = dirPrimitive.value.QueryInterface(
+        Components.interfaces.nsILocalFile,
+      );
 
-       var dirPrimitive = {};
-       aTransferable.getTransferData('application/x-moz-file-promise-dir', dirPrimitive, dataSize);
-       var dir = dirPrimitive.value.QueryInterface(Components.interfaces.nsILocalFile);
+      console.log("target folder is = " + dir.path);
 
-       console.log("target folder is = " + dir.path);
+      var file = Cc["@mozilla.org/file/local;1"].createInstance(
+        Components.interfaces.nsILocalFile,
+      );
+      file.initWithPath(dir.path);
+      file.appendRelativePath(name);
 
-       var file = Cc['@mozilla.org/file/local;1'].createInstance(Components.interfaces.nsILocalFile);
-       file.initWithPath(dir.path);
-       file.appendRelativePath(name);
+      console.log("output final path is =" + file.path);
 
-       console.log("output final path is =" + file.path);
-
-       // now you can write or copy the file yourself...
+      // now you can write or copy the file yourself...
     }
-  }
-}
+  },
+};
 ```
 
 ## 参见

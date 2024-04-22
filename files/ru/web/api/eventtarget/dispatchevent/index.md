@@ -1,7 +1,6 @@
 ---
 title: EventTarget.dispatchEvent()
 slug: Web/API/EventTarget/dispatchEvent
-translation_of: Web/API/EventTarget/dispatchEvent
 ---
 
 {{ ApiRef("DOM Events") }}
@@ -47,6 +46,6 @@ dispatchEvent является последним шагом для процес
 
 Смотрите также [справку по Event object](/en/DOM/event).
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}

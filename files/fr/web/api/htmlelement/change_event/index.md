@@ -1,7 +1,6 @@
 ---
 title: change
 slug: Web/API/HTMLElement/change_event
-translation_of: Web/API/HTMLElement/change_event
 ---
 
 {{APIRef}}
@@ -50,7 +49,8 @@ Le code suivant gère l'évènement **change** sur [`<select>`](/fr/docs/Web/HTM
 #### HTML
 
 ```html
-<label>Choose an ice cream flavor:
+<label
+  >Choose an ice cream flavor:
   <select class="ice-cream" name="ice-cream">
     <option value="">Select One …</option>
     <option value="chocolate">Chocolate</option>
@@ -80,10 +80,10 @@ select {
 #### Javascript
 
 ```js
-const selectElement = document.querySelector('.ice-cream');
+const selectElement = document.querySelector(".ice-cream");
 
-selectElement.addEventListener('change', (event) => {
-  const result = document.querySelector('.result');
+selectElement.addEventListener("change", (event) => {
+  const result = document.querySelector(".result");
   result.textContent = `You like ${event.target.value}`;
 });
 ```
@@ -99,17 +99,17 @@ Pour certains éléments, notamment `<input type="text">`, l'événement de chan
 #### HTML
 
 ```html
-<input placeholder="Enter some text" name="name"/>
+<input placeholder="Enter some text" name="name" />
 <p id="log"></p>
 ```
 
 #### JavaScript
 
 ```js
-const input = document.querySelector('input');
-const log = document.getElementById('log');
+const input = document.querySelector("input");
+const log = document.getElementById("log");
 
-input.addEventListener('change', updateValue);
+input.addEventListener("change", updateValue);
 
 function updateValue(e) {
   log.textContent = e.target.value;

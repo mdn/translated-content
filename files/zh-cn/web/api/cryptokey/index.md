@@ -12,6 +12,7 @@ slug: Web/API/CryptoKey
 ## 实例属性
 
 - `CryptoKey.type`
+
   - : 返回一个表示密钥类型的字符串，可使用以下值：
 
     - `"secret"`：为密钥（secret key），用于{{Glossary("Symmetric-key cryptography", "对称加密算法")}}。
@@ -19,12 +20,14 @@ slug: Web/API/CryptoKey
     - `"public"`：为{{Glossary("Public-key cryptography", "非对称加密算法")}}的 [`CryptoKeyPair`](/zh-CN/docs/Web/API/CryptoKeyPair) 的公钥（public key）部分。
 
 - `CryptoKey.extractable`
+
   - : 一个布尔值，表示原始信息是否能使用 [`SubtleCrypto.exportKey()`](/zh-CN/docs/Web/API/SubtleCrypto/exportKey) 或 [`SubtleCrypto.wrapKey()`](/zh-CN/docs/Web/API/SubtleCrypto/wrapKey) 导出。
 
     - `true`：密钥可以导出。
     - `false`：密钥不能导出。使用 [`exportKey()`](/zh-CN/docs/Web/API/SubtleCrypto/exportKey) 或 [`wrapKey()`](/zh-CN/docs/Web/API/SubtleCrypto/wrapKey) 方法来导出此密钥将会抛出异常。
 
 - `CryptoKey.algorithm`
+
   - : 一个描述可使用此密钥的算法及任何关联的额外参数的对象。
 
     - [`AesKeyGenParams`](/zh-CN/docs/Web/API/AesKeyGenParams) 如果算法是任意高级加密标准（AES）的变体。
@@ -33,6 +36,7 @@ slug: Web/API/CryptoKey
     - [`HmacKeyGenParams`](/zh-CN/docs/Web/API/HmacKeyGenParams) 如果算法是任意密钥散列消息认证码（HMAC）的变体。
 
 - `CryptoKey.usages`
+
   - : 一个字符串的{{jsxref("Array", "数组", "", 1)}}，指明密钥的用途。数组元素可能的值有：
 
     - `"encrypt"`：密钥可用于{{domxref("SubtleCrypto.encrypt()", "加密", "", 1)}}消息。

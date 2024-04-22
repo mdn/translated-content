@@ -1,53 +1,50 @@
 ---
 title: Number.parseInt()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseInt
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/parseInt
+l10n:
+  sourceCommit: 6a0f9553932823cd0c4dcf695d4b4813474964fb
 ---
 
 {{JSRef}}
 
-The **`Number.parseInt()`** method parses a string argument and returns an integer of the specified radix or base.
-
-The **`Number.parseInt()`** El método Number.parseInt () analiza un argumento de cadena y devuelve un entero de la raíz o base especificada.
+El método estático **`Number.parseInt()`** analiza un argumento de cadena y devuelve un número entero de la raíz o base especificada.
 
 {{EmbedInteractiveExample("pages/js/number-parseint.html", "taller")}}
 
 ## Sintaxis
 
-```
-Number.parseInt(string,[ radix])
+```js-nolint
+Number.parseInt(string)
+Number.parseInt(string, radix)
 ```
 
-### Parameters
+### Parámetros
 
 - `string`
-  - : The value to parse. If this argument is not a string, then it is converted to one using the [`ToString`](https://tc39.es/ecma262/#sec-tostring) abstract operation. Leading whitespace in this argument is ignored.
+  - : El valor a analizar, [forzado a una cadena](/es/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion). Se ignoran los espacios en blanco iniciales en este argumento.
 - `radix` {{optional_inline}}
-  - : An integer between `2` and `36` that represents the _radix_ (the base in mathematical numeral systems) of the `string`. Be careful—this does **_not_** default to `10`!
 
-### Return value
+  - : Un número entero entre `2` y `36` que representa la _base_ (la base en los sistemas numéricos matemáticos) del `string`.
 
-An integer parsed from the given `string`.
+    Si `radix` no está definida o es `0`, se supone que es `10`, excepto cuando el número comienza con los pares de unidades de código `0x` o `0X`, en cuyo caso se asume una base de `16`.
 
-If the `radix` is smaller than `2` or bigger than `36`, and the first non-whitespace character cannot be converted to a number, {{jsxref("NaN")}} is returned.
+### Valor devuelto
 
-## Description
+Un entero analizado a partir del `string` dado.
 
-This method has the same functionality as the global {{jsxref("parseInt", "parseInt()")}} function:
+Si `radix` es menor que `2` o mayor que `36`, o el primer carácter que no es un espacio en blanco no se puede convertir en un número, se devuelve {{jsxref("NaN")}}.
 
-```js
-Number.parseInt === parseInt // true
-```
+## Ejemplos
 
-and is part of ECMAScript 2015 (its purpose is modularization of globals). Please see {{jsxref("parseInt", "parseInt()")}} for more detail and examples.
+### Number.parseInt vs. parseInt
 
-## Polyfill
+Este método tiene la misma funcionalidad que la función global {{jsxref("parseInt", "parseInt()")}}:
 
 ```js
-if (Number.parseInt === undefined) {
-    Number.parseInt = window.parseInt
-}
+Number.parseInt === parseInt; // true
 ```
+
+Su propósito es la modularización de globales. Consulte {{jsxref("parseInt", "parseInt()")}} para obtener más detalles y ejemplos.
 
 ## Especificaciones
 
@@ -57,7 +54,8 @@ if (Number.parseInt === undefined) {
 
 {{Compat}}
 
-## See also
+## Véase también
 
-- The {{jsxref("Number")}} object it belongs to.
-- The global {{jsxref("parseInt", "parseInt()")}} method.
+- [Polyfill de `Number.parseInt` en `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
+- El objeto {{jsxref("Number")}} al que pertenece.
+- El método global {{jsxref("parseInt", "parseInt()")}}.

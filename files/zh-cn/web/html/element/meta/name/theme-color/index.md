@@ -10,7 +10,7 @@ slug: Web/HTML/Element/meta/name/theme-color
 ## 示例
 
 ```html
-<meta name="theme-color" content="#4285f4">
+<meta name="theme-color" content="#4285f4" />
 ```
 
 下图展示了上方所示的 {{htmlelement("meta")}} 元素对于 Android 端 Chrome 浏览器造成的影响。
@@ -22,8 +22,11 @@ _图片来源：[《图标和浏览器颜色》](https://developers.google.cn/we
 你可以用 [`media`](/zh-CN/docs/Web/HTML/Element/meta#media) 来查询一个媒体类型，如果条件符合则使用对应颜色。比如：
 
 ```html
-<meta name="theme-color" media="(prefers-color-scheme: light)" content="white">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="black">
+<meta
+  name="theme-color"
+  media="(prefers-color-scheme: light)"
+  content="white" />
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="black" />
 ```
 
 ## 规范

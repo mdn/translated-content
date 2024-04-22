@@ -1,15 +1,6 @@
 ---
 title: Date.prototype.getYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getYear
-tags:
-  - Date
-  - Déprécié
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getYear
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/getYear
 ---
 
 {{JSRef}} {{Deprecated_header}}
@@ -19,7 +10,7 @@ La méthode **`getYear()`** renvoie l'année de la date renseignée, d'après l'
 ## Syntaxe
 
 ```js
-dateObj.getYear()
+dateObj.getYear();
 ```
 
 ### Valeur de retour

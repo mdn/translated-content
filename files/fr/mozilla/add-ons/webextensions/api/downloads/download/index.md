@@ -1,20 +1,9 @@
 ---
 title: downloads.download()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/download
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - download
-  - downloads
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/download
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 La fonction **`download()`** de l'API {{WebExtAPIRef("downloads")}} télécharge le fichier, compte tenu de son URL et d'autres préférences optionnelles.
 
@@ -27,8 +16,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var downloading = browser.downloads.download(
-  options                   // object
-)
+  options, // object
+);
 ```
 
 ### Paramètres
@@ -93,9 +82,9 @@ function onFailed(error) {
 var downloadUrl = "https://example.org/image.png";
 
 var downloading = browser.downloads.download({
-  url : downloadUrl,
-  filename : 'my-image-again.png',
-  conflictAction : 'uniquify'
+  url: downloadUrl,
+  filename: "my-image-again.png",
+  conflictAction: "uniquify",
 });
 
 downloading.then(onStartedDownload, onFailed);

@@ -1,7 +1,6 @@
 ---
-title: 'Feature-Policy: fullscreen'
+title: "Feature-Policy: fullscreen"
 slug: Web/HTTP/Headers/Permissions-Policy/fullscreen
-original_slug: Web/HTTP/Headers/Feature-Policy/fullscreen
 ---
 
 {{HTTPSidebar}} {{SeeCompatTable}}

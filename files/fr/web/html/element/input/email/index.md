@@ -1,8 +1,6 @@
 ---
 title: <input type="email">
 slug: Web/HTML/Element/input/email
-translation_of: Web/HTML/Element/input/email
-browser-compat: html.elements.input.input-email
 ---
 
 {{HTMLSidebar}}
@@ -121,7 +119,7 @@ On notera toutefois que le navigateur ne vérifie pas si l'adresse saisie existe
 À l'heure actuelle, l'ensemble des navigateurs qui implémentent cet élément le gèrent comme un champ texte standard auquel certaines fonctionnalités de validation sont ajoutées. La spécification laisse toutefois une marge de manœuvre pour cette validation (l'élément pourrait, par exemple, consulter le répertoire de l'appareil pour choisir une adresse parmi cette liste). Dans sa forme la plus simple, un champ `email` peut être écrit de cette façon&nbsp;:
 
 ```html
-<input id="emailAddress" type="email">
+<input id="emailAddress" type="email" />
 ```
 
 {{EmbedLiveSample('', 600, 40)}}
@@ -133,7 +131,7 @@ Un tel champ est considéré comme valide lorsqu'il est vide ou lorsqu'une adres
 Grâce à l'attribut [`multiple`](/fr/docs/Web/HTML/Attributes/multiple), on peut configurer le champ afin de saisir plusieurs adresses mail.
 
 ```html
-<input id="emailAddress" type="email" multiple>
+<input id="emailAddress" type="email" multiple />
 ```
 
 {{EmbedLiveSample('', 600, 40)}}
@@ -162,7 +160,7 @@ Il est parfois utile de fournir une indication contextuelle quant à la valeur q
 Dans l'exemple qui suit, on utilise un élément `<input>` de type `email` avec le texte indicatif `sophie@example.com`. Vous pouvez manipuler l'exemple afin de voir comment ce texte disparaît/réapparaît lorsqu'on édite la valeur du champ.
 
 ```html
-<input type="email" placeholder="sophie@example.com">
+<input type="email" placeholder="sophie@example.com" />
 ```
 
 {{EmbedLiveSample('', 600, 40)}}
@@ -176,7 +174,7 @@ Il est possible de contrôler la taille physique de la boîte de saisie et égal
 La taille physique de la boîte de saisie peut être paramétrée grâce à l'attribut [`size`](/fr/docs/Web/HTML/Element/Input#attr-size). Grâce à cet attribut, on peut indiquer le nombre de caractères que le champ peut afficher. Dans l'exemple qui suit, la boîte d'édition pourra contenir jusqu'à 15 caractères&nbsp;:
 
 ```html
-<input type="email" size="15">
+<input type="email" size="15" />
 ```
 
 {{EmbedLiveSample('', 600, 40)}}
@@ -188,7 +186,7 @@ L'attribut `size` ne contraint pas la longueur de l'adresse qu'on pourra saisir.
 Dans l'exemple qui suit, on affiche une boîte de saisie qui mesure 32 caractères de large et dans laquelle on ne peut saisir des adresses qui ont au moins 3 caractères et au plus 64 caractères.
 
 ```html
-<input type="email" size="32" minlength="3" maxlength="64">
+<input type="email" size="32" minlength="3" maxlength="64" />
 ```
 
 {{EmbedLiveSample("", 600, 40)}}
@@ -200,7 +198,7 @@ Dans l'exemple qui suit, on affiche une boîte de saisie qui mesure 32 caractèr
 On peut également fournir une valeur par défaut en remplissant l'attribut [`value`](/fr/docs/Web/HTML/Element/Input#attr-value) de l'élément&nbsp;:
 
 ```html
-<input type="email" value="default@example.com">
+<input type="email" value="default@example.com" />
 ```
 
 {{EmbedLiveSample("", 600, 40)}}
@@ -210,14 +208,14 @@ On peut également fournir une valeur par défaut en remplissant l'attribut [`va
 Pour améliorer encore l'ergonomie, on peut fournir une liste d'options par défaut parmi laquelle l'utilisatrice ou l'utilisateur peut choisir. Cela fonctionne en utilisant l'attribut [`list`](/fr/docs/Web/HTML/Element/Input#attr-list) dont la valeur est un identifiant d'un élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) qui contient différents éléments [`<option>`](/fr/docs/Web/HTML/Element/Option) dont les valeurs des attributs `value` fournissent les adresses suggérées. L'utilisatrice ou l'utilisateur n'est pas contraint à saisir une valeur parmi celles-ci, elles sont uniquement fournies à titre indicatif.
 
 ```html
-<input type="email" size="40" list="defaultEmails">
+<input type="email" size="40" list="defaultEmails" />
 
 <datalist id="defaultEmails">
-  <option value="jbond007@mi6.defence.gov.uk">
-  <option value="jbourne@unknown.net">
-  <option value="nfury@shield.org">
-  <option value="tony@starkindustries.com">
-  <option value="hulk@grrrrrrrr.arg">
+  <option value="jbond007@mi6.defence.gov.uk"></option>
+  <option value="jbourne@unknown.net"></option>
+  <option value="nfury@shield.org"></option>
+  <option value="tony@starkindustries.com"></option>
+  <option value="hulk@grrrrrrrr.arg"></option>
 </datalist>
 ```
 
@@ -276,19 +274,29 @@ label::after {
 
 ```html
 <form>
- <div class="emailBox">
-   <label for="emailAddress">Votre adresse mail</label><br>
-   <input id="emailAddress" type="email" size="64" maxLength="64" required
-          placeholder="nomutilisateur@beststartupever.com" pattern=".+@beststartupever.com"
-          title="Merci de fournir uniquement une adresse Best Startup Ever">
- </div>
+  <div class="emailBox">
+    <label for="emailAddress">Votre adresse mail</label><br />
+    <input
+      id="emailAddress"
+      type="email"
+      size="64"
+      maxlength="64"
+      required
+      placeholder="nomutilisateur@beststartupever.com"
+      pattern=".+@beststartupever.com"
+      title="Merci de fournir uniquement une adresse Best Startup Ever" />
+  </div>
 
- <div class="messageBox">
-   <label for="message">Requête</label><br>
-   <textarea id="message" cols="80" rows="8" required
-             placeholder="Mes chaussures sont trop petites."></textarea>
- </div>
-  <input type="submit" value="Envoyer la requête">
+  <div class="messageBox">
+    <label for="message">Requête</label><br />
+    <textarea
+      id="message"
+      cols="80"
+      rows="8"
+      required
+      placeholder="Mes chaussures sont trop petites."></textarea>
+  </div>
+  <input type="submit" value="Envoyer la requête" />
 </form>
 ```
 
@@ -321,16 +329,22 @@ Dans l'exemple qui suit, on peut saisir une adresse électronique qui contient a
 L'élément [`<label>`](/fr/docs/Web/HTML/Element/Label) qui précède l'élément `<input>` permettra d'afficher un libellé avant la boîte de saisie. Le lien entre les deux est fait grâce à l'attribut `for` qui contient `"emailAddress"` qui est l'identifiant de l'élément [`<input>`](/fr/docs/Web/HTML/Element/Input). Grâce à cette association, cliquer sur l'étiquette permettra de placer le focus sur le champ de saisie.
 
 ```html
-<label for="emailAddress">Adresse mail</label><br/>
-<input id="emailAddress" type="email" placeholder="user@example.gov"
-       list="defaultEmails" size="64" maxlength="256" multiple>
+<label for="emailAddress">Adresse mail</label><br />
+<input
+  id="emailAddress"
+  type="email"
+  placeholder="user@example.gov"
+  list="defaultEmails"
+  size="64"
+  maxlength="256"
+  multiple />
 
 <datalist id="defaultEmails">
-  <option value="jbond007@mi6.defence.gov.uk">
-  <option value="jbourne@unknown.net">
-  <option value="nfury@shield.org">
-  <option value="tony@starkindustries.com">
-  <option value="hulk@grrrrrrrr.arg">
+  <option value="jbond007@mi6.defence.gov.uk"></option>
+  <option value="jbourne@unknown.net"></option>
+  <option value="nfury@shield.org"></option>
+  <option value="tony@starkindustries.com"></option>
+  <option value="hulk@grrrrrrrr.arg"></option>
 </datalist>
 ```
 

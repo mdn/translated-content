@@ -3,7 +3,7 @@ title: Date.prototype.toDateString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toDateString
 ---
 
-{{JSRef("Global_Objects", "Date")}}
+{{JSRef}}
 
 **`toDateString()`** 方法以美式英语和人类易读的形式返回一个日期对象日期部分的字符串。
 
@@ -28,7 +28,7 @@ The `toDateString` method is especially useful because compliant engines impleme
 ```js
 var d = new Date(1993, 6, 28, 14, 39, 7);
 
-println(d.toString());     // prints Wed Jul 28 1993 14:39:07 GMT-0600 (PDT)
+println(d.toString()); // prints Wed Jul 28 1993 14:39:07 GMT-0600 (PDT)
 println(d.toDateString()); // prints Wed Jul 28 1993
 ```
 
@@ -40,7 +40,7 @@ println(d.toDateString()); // prints Wed Jul 28 1993
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.toLocaleDateString()")}}
 - {{jsxref("Date.prototype.toTimeString()")}}

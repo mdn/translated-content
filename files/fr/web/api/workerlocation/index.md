@@ -1,10 +1,6 @@
 ---
 title: WorkerLocation
 slug: Web/API/WorkerLocation
-tags:
-  - API
-  - Web Workers
-translation_of: Web/API/WorkerLocation
 ---
 
 {{APIRef("Web Workers API")}}
@@ -22,7 +18,7 @@ _L'interface `WorkerLocation` n'hérite d'aucune propriété mais implémente le
 - {{domxref("URLUtilsReadOnly.protocol")}} {{readOnlyInline}}
   - : {{domxref("DOMString")}} contenant le schéma du protocole de l'URL du script exécuté dans le {{domxref("Worker")}}, incluant les deux points de terminaison`':'`.
 - {{domxref("URLUtilsReadOnly.host")}} {{readOnlyInline}}
-  - : {{domxref("DOMString")}} contenant l'hôte, constitué du nom d'hôte *hostname*, de deux points `':'`, et du numéro de _port_ de l'URL du script exécuté dans le {{domxref("Worker")}}.
+  - : {{domxref("DOMString")}} contenant l'hôte, constitué du nom d'hôte _hostname_, de deux points `':'`, et du numéro de _port_ de l'URL du script exécuté dans le {{domxref("Worker")}}.
 - {{domxref("URLUtilsReadOnly.hostname")}} {{readOnlyInline}}
   - : {{domxref("DOMString")}} contenant le nom de domaine du script exécuté dans le {{domxref("Worker")}}.
 - {{domxref("URLUtilsReadOnly.origin")}} {{readOnlyInline}}
@@ -53,5 +49,5 @@ _L'interface `WorkerLocation` n'hérite d'aucune méthode mais implémente les m
 
 ## Voir aussi
 
-- Autres interfaces apparentées au *Worker*: {{domxref("Worker")}}, {{domxref("WorkerNavigator")}} et {{domxref("WorkerGlobalScope")}}.
+- Autres interfaces apparentées au _Worker_: {{domxref("Worker")}}, {{domxref("WorkerNavigator")}} et {{domxref("WorkerGlobalScope")}}.
 - [Utilisation des web workers](/fr/docs/Utilisation_des_web_workers)

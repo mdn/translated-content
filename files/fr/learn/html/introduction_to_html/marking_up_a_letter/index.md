@@ -1,19 +1,9 @@
 ---
 title: Faire une lettre
 slug: Learn/HTML/Introduction_to_HTML/Marking_up_a_letter
-tags:
-  - Codage
-  - Débutant
-  - Evaluation
-  - HTML
-  - Liens
-  - Texte
-  - en-tête
-translation_of: Learn/HTML/Introduction_to_HTML/Marking_up_a_letter
-original_slug: Apprendre/HTML/Introduction_à_HTML/Marking_up_a_letter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/Debugging_HTML", "Apprendre/HTML/Introduction_%C3%A0_HTML/Structuring_a_page_of_content", "Apprendre/HTML/Introduction_à_HTML")}}
+{{LearnSidebar}}{{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/Debugging_HTML", "Apprendre/HTML/Introduction_à_HTML/Structuring_a_page_of_content", "Apprendre/HTML/Introduction_à_HTML")}}
 
 Tôt ou tard nous apprenons tous à écrire une lettre&nbsp;; c'est aussi un exemple utile pour tester nos compétences en matière de mise en forme&nbsp;! Dans cet exercice, vous devrez opérer le balisage d'une lettre en utilisant les fonctionnalités textes élémentaires et avancées, y compris les hyperliens, et en plus nous testerons vos connaissances avec certains contenus de `<head>` en HTML.
 
@@ -100,4 +90,4 @@ La capture d'écran suivante montre ce à quoi la lettre devrait ressembler apr�
 
 Si cette évaluation fait partie d'un cours organisé, vous devez pouvoir donner votre travail à votre professeur/formateur pour notation. Si vous faites de l'auto‑formation vous pouvez obtenir un guide d'auto‑évaluation en le demandant sur le [Learning Area Discourse thread](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294) ou sur le canal IRC [#mdn](irc://irc.mozilla.org/mdn) sur [Mozilla IRC](https://wiki.mozilla.org/IRC). Essayez l'exercice d'abord — il n'y a rien à gagner à tricher&nbsp;!
 
-{{PreviousMenuNext("Apprendre/HTML/Introduction_to_HTML/Debugging_HTML", "Apprendre/HTML/Introduction_%C3%A0_HTML/Structuring_a_page_of_content", "Apprendre/HTML/Introduction_to_HTML")}}
+{{PreviousMenuNext("Apprendre/HTML/Introduction_to_HTML/Debugging_HTML", "Apprendre/HTML/Introduction_à_HTML/Structuring_a_page_of_content", "Apprendre/HTML/Introduction_to_HTML")}}

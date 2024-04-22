@@ -1,14 +1,6 @@
 ---
 title: handler.set()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Proxy
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
-original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/set
 ---
 
 {{JSRef}}
@@ -21,8 +13,7 @@ La méthode **`handler.set()`** est une trappe permettant d'intercepter les opé
 
 ```js
 var p = new Proxy(cible, {
-  set: function(cible, propriété, valeur, récepteur) {
-  }
+  set: function (cible, propriété, valeur, récepteur) {},
 });
 ```
 
@@ -68,19 +59,22 @@ Si les invariants suivants ne sont pas respectés, le proxy renverra une excepti
 Dans l'exemple qui suit, on intercepte la définition d'une nouvelle propriété.
 
 ```js
-var p = new Proxy({}, {
-  set: function(target, prop, value, receiver) {
-    target[prop] = value;
-    console.log('property set: ' + prop + ' = ' + value);
-    return true;
-  }
-});
+var p = new Proxy(
+  {},
+  {
+    set: function (target, prop, value, receiver) {
+      target[prop] = value;
+      console.log("property set: " + prop + " = " + value);
+      return true;
+    },
+  },
+);
 
-console.log('a' in p);  // false
+console.log("a" in p); // false
 
-p.a = 10;               // "property set: a = 10"
-console.log('a' in p);  // true
-console.log(p.a);       // 10
+p.a = 10; // "property set: a = 10"
+console.log("a" in p); // true
+console.log(p.a); // 10
 ```
 
 ## Spécifications

@@ -3,7 +3,7 @@ title: Date.prototype.getSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getSeconds
 ---
 
-{{JSRef("Global_Objects", "Date")}}
+{{JSRef}}
 
 **`getSeconds()`** 方法根据本地时间，返回一个指定的日期对象的秒数。
 
@@ -11,8 +11,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getSeconds
 
 ## 语法
 
-```js
-dateObj.getSeconds()
+```js-nolint
+getSeconds()
 ```
 
 ### 参数
@@ -42,7 +42,7 @@ var secs = Xmas95.getSeconds();
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Date.prototype.getUTCSeconds()")}}
 - {{jsxref("Date.prototype.setSeconds()")}}

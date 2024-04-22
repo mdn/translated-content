@@ -1,5 +1,5 @@
 ---
-title: 'InternalError: too much recursion'
+title: "InternalError: too much recursion"
 slug: Web/JavaScript/Reference/Errors/Too_much_recursion
 ---
 
@@ -29,9 +29,10 @@ Esta função recursiva roda 10 vezes, como definido pela condição de saída.
 
 ```js
 function loop(x) {
-  if (x >= 10) // "x >= 10" é a condição de saída
+  if (x >= 10) {
+    // "x >= 10" é a condição de saída
     return;
-
+  }
   loop(x + 1); // o código recursivo em si
 }
 loop(0);
@@ -41,9 +42,7 @@ Mudar esta condição para um valor extremamente alto não vai funcionar:
 
 ```js example-bad
 function loop(x) {
-  if (x >= 1000000000000)
-    return;
-
+  if (x >= 1000000000000) return;
   loop(x + 1);
 }
 loop(0);
@@ -55,9 +54,9 @@ A seguinte função recursiva não possui condição de saída. Assim, ela vai c
 
 ```js example-bad
 function loop(x) {
- // Não há condição de saída
+  // Não há condição de saída
 
-loop(x + 1); // Código recursivo
+  loop(x + 1); // Código recursivo
 }
 
 loop(0);

@@ -1,7 +1,6 @@
 ---
 title: Pseudo-elementos
 slug: Web/CSS/Pseudo-elements
-original_slug: Web/CSS/Pseudo-elementos
 ---
 
 {{ CSSRef() }}Um **pseudo-elemento** CSS é uma palavra-chave adicionada a um seletor que permite que você estilize uma parte específica do elemento selecionado. Por exemplo, o pseudo-elemento {{CSSxRef("::first-line")}} aplica o estilo apenas na primeira linha de um parágrafo.

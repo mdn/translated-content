@@ -1,19 +1,9 @@
 ---
 title: tabs.moveInSuccession()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/moveInSuccession
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - onglets
-  - tabs
-translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/moveInSuccession
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Modifie la relation de succession pour un groupe d'onglets.
 
@@ -28,7 +18,7 @@ While the successor tab can be assigned with {{WebExtAPIRef('tabs.update()')}}, 
 ## Syntaxe
 
 ```js
-browser.tabs.moveInSuccession([1, 3, 5, 7, 2, 9], 4, {insert:true})
+browser.tabs.moveInSuccession([1, 3, 5, 7, 2, 9], 4, { insert: true });
 ```
 
 ### Paramètres

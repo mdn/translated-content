@@ -27,4 +27,4 @@ slug: Web/HTTP/Status/405
 - [HTTP/1.1: Status Code Definitions](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
 - [How to Fix 405 Method Not Allowed](https://kinsta.com/blog/405-method-not-allowed-error/)
 - [Troubleshooting HTTP 405](https://docs.microsoft.com/aspnet/web-api/overview/testing-and-debugging/troubleshooting-http-405-errors-after-publishing-web-api-applications)
-Footer
+  Footer

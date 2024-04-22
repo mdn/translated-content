@@ -1,13 +1,6 @@
 ---
 title: Symbol.matchAll
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/matchAll
-tags:
-  - JavaScript
-  - Propriété
-  - Reference
-  - Symbol
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/matchAll
-original_slug: Web/JavaScript/Reference/Objets_globaux/Symbol/matchAll
 ---
 
 {{JSRef}}
@@ -21,9 +14,9 @@ Le symbole connu **`Symbol.matchAll`** renvoie un itérateur qui fournit l'ensem
 Ce symbole est utilisé par {{jsxref("String.prototype.matchAll()")}} et plus particulièrement par {{jsxref("RegExp.@@matchAll", "RegExp.prototype[@@matchAll]()")}}. Les deux lignes qui suivent renverront le même résultat :
 
 ```js
-'abc'.matchAll(/a/);
+"abc".matchAll(/a/);
 
-/a/[Symbol.matchAll]('abc');
+/a/[Symbol.matchAll]("abc");
 ```
 
 Cette méthode existe afin de personnaliser le comportement des correspondances pour les sous-classes de {{jsxref("RegExp")}}.

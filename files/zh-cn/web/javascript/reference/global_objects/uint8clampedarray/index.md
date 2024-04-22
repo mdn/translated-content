@@ -81,7 +81,7 @@ new Uint8ClampedArray(buffer [, byteOffset [, length]]);
   - : Returns the last (greatest) index of an element within the array equal to the specified value, or -1 if none is found. See also {{jsxref("Array.prototype.lastIndexOf()")}}.
 - {{jsxref("TypedArray.map", "Uint8ClampedArray.prototype.map()")}}
   - : Creates a new array with the results of calling a provided function on every element in this array. See also {{jsxref("Array.prototype.map()")}}.
-- {{jsxref("TypedArray.move", "Uint8ClampedArray.prototype.move()")}} {{non-standard_inline}} {{unimplemented_inline}}
+- {{jsxref("TypedArray.move", "Uint8ClampedArray.prototype.move()")}} {{non-standard_inline}}
   - : Former non-standard version of {{jsxref("TypedArray.copyWithin", "Uint8ClampedArray.prototype.copyWithin()")}}.
 - {{jsxref("TypedArray.reduce", "Uint8ClampedArray.prototype.reduce()")}}
   - : Apply a function against an accumulator and each value of the array (from left-to-right) as to reduce it to a single value. See also {{jsxref("Array.prototype.reduce()")}}.
@@ -123,7 +123,7 @@ console.log(uintc8.length); // 2
 console.log(uintc8.BYTES_PER_ELEMENT); // 1
 
 // From an array
-var arr = new Uint8ClampedArray([21,31]);
+var arr = new Uint8ClampedArray([21, 31]);
 console.log(arr[1]); // 31
 
 // From another TypedArray
@@ -136,7 +136,9 @@ var buffer = new ArrayBuffer(8);
 var z = new Uint8ClampedArray(buffer, 1, 4);
 
 // From an iterable
-var iterable = function*(){ yield* [1,2,3]; }();
+var iterable = (function* () {
+  yield* [1, 2, 3];
+})();
 var uintc8 = new Uint8ClampedArray(iterable);
 // Uint8ClampedArray[1, 2, 3]
 ```

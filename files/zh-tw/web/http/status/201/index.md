@@ -1,15 +1,19 @@
 ---
 title: 201 Created
 slug: Web/HTTP/Status/201
+l10n:
+  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-HTTP **`201 Created`** 成功狀態碼表示請求成功且有一個新的資源已經依據需要而被建立。實際上，在此回應傳送前，新資源就已被建立，且其內容在訊息的主體中傳回，其位置為請求的 URL 或是 {{HTTPHeader("Location")}} 標頭的內容。
+{{HTTPSidebar}}
 
-此狀態碼通常用於 {{HTTPMethod("POST")}} 請求的回應中。
+HTTP **`201 Created`** 成功回應碼表示請求已成功並導致資源的創建。新資源或對新資源的描述和連結在回應發送回來之前就已有效地被創建，新創建的項目會在消息主體中返回，位於請求的 URL 或 {{HTTPHeader("Location")}} 標頭值的 URL 中。
+
+這個狀態碼的常見用法是作為 {{HTTPMethod("POST")}} 請求的結果。
 
 ## 狀態
 
-```plain
+```http
 201 Created
 ```
 
@@ -24,5 +28,3 @@ HTTP **`201 Created`** 成功狀態碼表示請求成功且有一個新的資源
 ## 參見
 
 - [HTTP 請求方法](/zh-TW/docs/Web/HTTP/Methods)
-
-{{HTTPSidebar}}

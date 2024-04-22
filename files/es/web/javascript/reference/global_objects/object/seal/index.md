@@ -1,7 +1,6 @@
 ---
 title: Object.seal()
 slug: Web/JavaScript/Reference/Global_Objects/Object/seal
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/seal
 ---
 
 {{JSRef}}
@@ -31,13 +30,13 @@ Retorna una referencia al Objeto pasado.
 
 ```js
 var obj = {
-  prop: function() {},
-  foo: 'bar'
+  prop: function () {},
+  foo: "bar",
 };
 
 // Pueden añadirse nuevas propiedades, propiedades existentes pueden cambiarse o eliminarse.
-obj.foo = 'baz';
-obj.lumpy = 'woof';
+obj.foo = "baz";
+obj.lumpy = "woof";
 delete obj.prop;
 
 var o = Object.seal(obj);
@@ -46,26 +45,30 @@ o === obj; // true
 Object.isSealed(obj); // === true
 
 // Sigue permitido modificar valores de propiedades en un objeto sellado.
-obj.foo = 'quux';
+obj.foo = "quux";
 
 // Pero no puedes convertir propiedades de datos en propiedades de acceso, ni viveversa
-Object.defineProperty(obj, 'foo', { get: function() { return 'g'; } }); // produce un TypeError
+Object.defineProperty(obj, "foo", {
+  get: function () {
+    return "g";
+  },
+}); // produce un TypeError
 
 // Ahora, cualquier cambio que no sea modificar valores de propiedades fallará
-obj.quaxxor = 'the friendly duck'; // silenciosamente, no añadirá la propiedad
+obj.quaxxor = "the friendly duck"; // silenciosamente, no añadirá la propiedad
 delete obj.foo; // silenciosamente, no eliminará la propiedad
 
 // ...y en modo estricto esos intentos producirán TypeErrors.
 function fail() {
-  'use strict';
+  "use strict";
   delete obj.foo; // genera un TypeError
-  obj.sparky = 'arf'; // genera un TypeError
+  obj.sparky = "arf"; // genera un TypeError
 }
 fail();
 
 // Intentar añadir propiedades mediante Object.defineProperty también fallará.
-Object.defineProperty(obj, 'ohai', { value: 17 }); // genera un TypeError
-Object.defineProperty(obj, 'foo', { value: 'eit' }); // cambia el valor exisitente
+Object.defineProperty(obj, "ohai", { value: 17 }); // genera un TypeError
+Object.defineProperty(obj, "foo", { value: "eit" }); // cambia el valor exisitente
 ```
 
 ## Notas

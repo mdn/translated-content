@@ -1,25 +1,20 @@
 ---
-title: Element.innerHTML
+title: "Element: innerHTML プロパティ"
+short-title: innerHTML
 slug: Web/API/Element/innerHTML
+l10n:
+  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
 {{APIRef("DOM")}}
 
 {{domxref("Element")}} オブジェクトの **`innerHTML`** プロパティは、要素内の HTML または XML のマークアップを取得したり設定したりします。
 
-要素の内容を置き換えるというより、文書に HTML を挿入するという場合には、 {{domxref("Element.insertAdjacentHTML", "insertAdjacentHTML()")}} メソッドを使用してください。
+要素の内容を置き換えるというより、文書に HTML を挿入するという場合には、{{domxref("Element.insertAdjacentHTML", "insertAdjacentHTML()")}} メソッドを使用してください。
 
-## 構文
+## 値
 
-```js
-const content = element.innerHTML;
-
-element.innerHTML = content;
-```
-
-### 値
-
-要素の子孫を HTML にシリアライズしたものを含んだ {{domxref("DOMString")}} です。 `innerHTML` に値を設定すると、要素のすべての子孫を削除して、 _htmlString_ の文字列で与えられた HTML を解釈して構築されたノードに置き換えます。
+要素の子孫を HTML にシリアライズしたものを含んだ文字列です。`innerHTML` に値を設定すると、要素のすべての子孫を削除して、_htmlString_ の文字列で与えられた HTML を解釈して構築されたノードに置き換えます。
 
 ### 例外
 
@@ -49,7 +44,7 @@ let contents = myElement.innerHTML;
 `innerHTML` の値を設定することで、既存の要素の内容を新しい内容に置き換えることが簡単にできます。
 
 > **メモ:** 挿入される文字列に悪意のある内容が含まれる可能性がある場合、[セキュリティ上のリスク](#セキュリティの考慮事項)になります。
-> ユーザーが提供したデータを挿入する場合は、 {{domxref("Element.SetHTML()")}} を使用するよう常に検討してください。こちらは挿入する前に無害化を行います。
+> ユーザーが提供したデータを挿入する場合は、 {{domxref("Element.setHTML()")}} を使用するよう常に検討してください。こちらは挿入する前に無害化を行います。
 
 例えば、文書の {{domxref("Document.body", "body")}} 属性の内容を消去することで、文書の内容全体を消去することができます。
 
@@ -60,9 +55,10 @@ document.body.innerHTML = "";
 この例は文書の現在の HTML マークアップを走査し、 `"<"` の文字を HTML エンティティの `"&lt;"` に置き換え、それによって本質的に HTML を生テキストに変換します。そしてこれを {{HTMLElement("pre")}} で囲みます。そして、 `innerHTML` の値をこの新しい文字列に変更します。結果として、文書の内容がページ全体のソースコードの表示に置き換わります。
 
 ```js
-document.documentElement.innerHTML = "<pre>" +
-         document.documentElement.innerHTML.replace(/</g,"&lt;") +
-            "</pre>";
+document.documentElement.innerHTML = `<pre>${document.documentElement.innerHTML.replace(
+  /</g,
+  "&lt;",
+)}</pre>`;
 ```
 
 #### 操作の詳細
@@ -97,7 +93,7 @@ const list = document.getElementById("list");
 list.innerHTML += `<li><a href="#">Item ${list.children.length + 1}</a></li>`;
 ```
 
-なお、 `innerHTML` を使用して HTML 要素を追加すると（例えば `el.innerHTML += "<a href='...'>link</a>"`）、以前設定したイベントリスナーを取り除くことになります。
+なお、`innerHTML` を使用して HTML 要素を追加すると（例えば `el.innerHTML += "<a href='…'>link</a>"`）、以前設定したイベントリスナーを取り除くことになります。
 つまり、この方法で HTML 要素を追加すると、以前設定したイベントリスナーで待ち受けすることができなくなります。
 
 ### セキュリティの考慮事項
@@ -105,11 +101,11 @@ list.innerHTML += `<li><a href="#">Item ${list.children.length + 1}</a></li>`;
 ウェブページにテキストを挿入するために `innerHTML` を使用している例は珍しくありません。これがサイト上の攻撃ベクトルになる可能性があり、潜在的なセキュリティリスクが生じます。
 
 ```js
-const name = "John";
+let name = "John";
 // 'el' を HTML の DOM 要素と想定します
 el.innerHTML = name; // この場合は無害
 
-// ...
+// …
 
 name = "<script>alert('I am John in an annoying alert!')</script>";
 el.innerHTML = name; // この場合は無害
@@ -126,7 +122,7 @@ el.innerHTML = name; // アラートが表示される
 
 このため、 `innerHTML` を使用する代わりに次のようにしてください。
 
-- {{domxref("Element.SetHTML()")}} で DOM に挿入する前にテキストを無害化する。
+- {{domxref("Element.setHTML()")}} で DOM に挿入する前にテキストを無害化する。
 - プレーンテキストを挿入する際には、代わりに {{domxref("Node.textContent")}} を使用する。これは渡されたコンテンツを HTML として解釈するのではなく、生のテキストとして挿入します。
 
 > **警告:** プロジェクトに対して何らかの形のセキュリティレビューが行われた場合、 `innerHTML` は多くの場合で、コードが拒絶される結果になります。
@@ -141,14 +137,14 @@ el.innerHTML = name; // アラートが表示される
 
 ```js
 function log(msg) {
-  var logElem = document.querySelector(".log");
+  const logElem = document.querySelector(".log");
 
-  var time = new Date();
-  var timeStr = time.toLocaleTimeString();
-  logElem.innerHTML += timeStr + ": " + msg + "<br/>";
+  const time = new Date();
+  const timeStr = time.toLocaleTimeString();
+  logElem.innerHTML += `${timeStr}: ${msg}<br/>`;
 }
 
-log("Logging mouse events inside this container...");
+log("Logging mouse events inside this container…");
 ```
 
 `log()` 関数は {{jsxref("Date")}} オブジェクトから {{jsxref("Date.toLocaleTimeString", "toLocaleTimeString()")}} を使用して現在時刻を取得し、タイムスタンプとメッセージテキストから成る文字列を構築してログ出力を生成します。それから `"log"` クラスのボックスにメッセージを追加します。
@@ -157,8 +153,7 @@ log("Logging mouse events inside this container...");
 
 ```js
 function logEvent(event) {
-  var msg = "Event <strong>" + event.type + "</strong> at <em>" +
-            event.clientX + ", " + event.clientY + "</em>";
+  const msg = `Event <strong>${event.type}</strong> at <em>${event.clientX}, ${event.clientY}</em>`;
   log(msg);
 }
 ```
@@ -166,7 +161,7 @@ function logEvent(event) {
 それから、これをログを収めるボックスの様々なマウスイベントのイベントハンドラーとして登録します。
 
 ```js
-var boxElem = document.querySelector(".box");
+const boxElem = document.querySelector(".box");
 
 boxElem.addEventListener("mousedown", logEvent);
 boxElem.addEventListener("mouseup", logEvent);
@@ -214,7 +209,7 @@ boxElem.addEventListener("mouseleave", logEvent);
 結果の内容はこのように見えます。
 マウスを移動してボックスを出入りさせたり、中でクリックしたりすると、ログが出力されるのを見ることができます。
 
-{{EmbedLiveSample("Example", 640, 350)}}
+{{EmbedLiveSample("Examples", 640, 350)}}
 
 ## 仕様書
 

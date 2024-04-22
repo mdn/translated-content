@@ -1,46 +1,44 @@
 ---
-title: WindowOrWorkerGlobalScope.caches
+title: Глобальное свойство caches
 slug: Web/API/caches
-translation_of: Web/API/WindowOrWorkerGlobalScope/caches
-original_slug: Web/API/WindowOrWorkerGlobalScope/caches
+l10n:
+  sourceCommit: cb279e20569055b200f93802d1704846c28aa04f
 ---
-{{APIRef()}}{{SeeCompatTable}}
 
-**`caches`** {{domxref("WindowOrWorkerGlobalScope")}} свойство только для чтения интерфейса возвращающее объект ассоциированный с текущим контекстом {{domxref("CacheStorage")}}.
+{{APIRef("Service Workers API")}}{{AvailableInWorkers}}
 
-Этот объект реализует такую функциональность как строгое соответствие для офлайн-использования и генерирование пользовательских ответов на запросы.
+Доступное только для чтения глобальное свойство **`caches`** возвращает объект {{domxref("CacheStorage")}} связанный с текущим контекстом.
+С помощью этого объекта можно реализовать хранение ресурсов в автономном режиме и генерацию индивидуальных ответов на запросы.
 
-## Синтаксис
+{{securecontext_header}}
 
-```
-var myCacheStorage = self.caches; // or just caches
-```
+## Значение
 
-### Значение
+Объект {{domxref("CacheStorage")}}.
 
-Возвращает значение {{domxref("CacheStorage")}} .
+## Примеры
 
-## Пример
-
-Данный пример показывает как надо использовать кеш в контексте [service worker](/ru/docs/Web/API/Service_Worker_API) для хранения в автономном режиме
+Данный пример показывает как использовать кеш в контексте [service worker](/ru/docs/Web/API/Service_Worker_API) для хранения в автономном режиме.
 
 ```js
-this.addEventListener('install', function(event) {
+this.addEventListener("install", (event) => {
   event.waitUntil(
-    caches.open('v1').then(function(cache) {
-      return cache.addAll([
-        '/sw-test/',
-        '/sw-test/index.html',
-        '/sw-test/style.css',
-        '/sw-test/app.js',
-        '/sw-test/image-list.js',
-        '/sw-test/star-wars-logo.jpg',
-        '/sw-test/gallery/',
-        '/sw-test/gallery/bountyHunters.jpg',
-        '/sw-test/gallery/myLittleVader.jpg',
-        '/sw-test/gallery/snowTroopers.jpg'
-      ]);
-    })
+    caches
+      .open("v1")
+      .then((cache) =>
+        cache.addAll([
+          "/",
+          "/index.html",
+          "/style.css",
+          "/app.js",
+          "/image-list.js",
+          "/star-wars-logo.jpg",
+          "/gallery/",
+          "/gallery/bountyHunters.jpg",
+          "/gallery/myLittleVader.jpg",
+          "/gallery/snowTroopers.jpg",
+        ]),
+      ),
   );
 });
 ```

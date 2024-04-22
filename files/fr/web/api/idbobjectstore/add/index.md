@@ -1,7 +1,6 @@
 ---
 title: IDBObjectStore.add()
 slug: Web/API/IDBObjectStore/add
-translation_of: Web/API/IDBObjectStore/add
 ---
 
 {{APIRef("IndexedDB")}}
@@ -104,8 +103,8 @@ Dans le fragment de code suivant, on ouvre une transaction en lecture/écriture 
 // On ouvre la base de données
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Database initialisée.</li>';
+DBOpenRequest.onsuccess = function (event) {
+  note.innerHTML += "<li>Database initialisée.</li>";
 
   // On enregistre le résultat dans la variable db
   // afin de l'utiliser par la suite
@@ -119,7 +118,17 @@ DBOpenRequest.onsuccess = function(event) {
 function addData() {
   // On crée un nouvel objet qu'on insèrera ensuite
   // dans la base de données
-  var newItem = [ { taskTitle: "Walk dog", hours: 19, minutes: 30, day: 24, month: "December", year: 2013, notified: "no" } ];
+  var newItem = [
+    {
+      taskTitle: "Walk dog",
+      hours: 19,
+      minutes: 30,
+      day: 24,
+      month: "December",
+      year: 2013,
+      notified: "no",
+    },
+  ];
 
   // On ouvre une transaction en lecture/écriture
   // afin d'ajouter les données
@@ -127,13 +136,13 @@ function addData() {
 
   // On indique si la transaction s'est déroulées
   // sans problème
-  transaction.oncomplete = function(event) {
-    note.innerHTML += '<li>Transaction terminée : modification effectuée.</li>';
+  transaction.oncomplete = function (event) {
+    note.innerHTML += "<li>Transaction terminée : modification effectuée.</li>";
   };
 
-
-  transaction.onerror = function(event) {
-    note.innerHTML += '<li>Ouverture de la transaction impossible : les objets dupliqués ne sont pas autorisés.</li>';
+  transaction.onerror = function (event) {
+    note.innerHTML +=
+      "<li>Ouverture de la transaction impossible : les objets dupliqués ne sont pas autorisés.</li>";
   };
 
   // On crée un magasin d'objets pour la transaction
@@ -142,11 +151,11 @@ function addData() {
   // On ajoute l'objet newItem dans le magasin d'objets
   var objectStoreRequest = objectStore.add(newItem[0]);
 
-  objectStoreRequest.onsuccess = function(event) {
+  objectStoreRequest.onsuccess = function (event) {
     // On indique la réussite de l'insertion
-    note.innerHTML += '<li>Nouvel objet ajouté dans la base de données.</li>';
+    note.innerHTML += "<li>Nouvel objet ajouté dans la base de données.</li>";
   };
-};
+}
 ```
 
 > **Note :** pour un exemple fonctionnel complet, voir notre [application To-do](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple](https://mdn.github.io/dom-examples/to-do-notifications/)).

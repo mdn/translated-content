@@ -1,20 +1,6 @@
 ---
-title: '<dt> : l''élément pour le terme d''une description'
+title: "<dt> : l'élément pour le terme d'une description"
 slug: Web/HTML/Element/dt
-tags:
-  - Definition
-  - Description list
-  - Definition Term
-  - Description Term
-  - Element
-  - HTML
-  - HTML grouping content
-  - Reference
-  - Term
-  - Web
-  - dt
-translation_of: Web/HTML/Element/dt
-browser-compat: html.elements.dt
 ---
 
 {{HTMLSidebar}}

@@ -1,8 +1,6 @@
 ---
 title: Определение методов
 slug: Web/JavaScript/Reference/Functions/Method_definitions
-translation_of: Web/JavaScript/Reference/Functions/Method_definitions
-original_slug: Web/JavaScript/Reference/Functions/Определение_методов
 ---
 
 {{JsSidebar("Functions")}}
@@ -28,8 +26,8 @@ var obj = {
 
 ```js
 var obj = {
-  foo: function() {},
-  bar: function() {}
+  foo: function () {},
+  bar: function () {},
 };
 ```
 
@@ -38,7 +36,7 @@ var obj = {
 ```js
 var obj = {
   foo() {},
-  bar() {}
+  bar() {},
 };
 ```
 
@@ -49,20 +47,18 @@ var obj = {
 ```js
 // Используя свойство с именем (pre-ES6)
 var obj2 = {
-  g: function*() {
+  g: function* () {
     var index = 0;
-    while(true)
-      yield index++;
-  }
+    while (true) yield index++;
+  },
 };
 
 // Тот же объект используя короткий синтаксис
 var obj2 = {
-  * g() {
+  *g() {
     var index = 0;
-    while(true)
-      yield index++;
-  }
+    while (true) yield index++;
+  },
 };
 
 var it = obj2.g();
@@ -78,12 +74,12 @@ console.log(it.next().value); // 1
 var obj = {
   method() {},
 };
-new obj.method; // TypeError: obj.method is not a constructor
+new obj.method(); // TypeError: obj.method is not a constructor
 
 var obj = {
-  * g() {}
+  *g() {},
 };
-new obj.g; // Генератор
+new obj.g(); // Генератор
 ```
 
 ## Примеры
@@ -92,8 +88,10 @@ new obj.g; // Генератор
 
 ```js
 var obj = {
-  a : "foo",
-  b(){ return this.a; }
+  a: "foo",
+  b() {
+    return this.a;
+  },
 };
 console.log(obj.b()); // "foo"
 ```
@@ -104,9 +102,15 @@ console.log(obj.b()); // "foo"
 
 ```js
 var bar = {
-  foo0 : function (){return 0;},
-  foo1(){return 1;},
-  ["foo" + 2](){return 2;},
+  foo0: function () {
+    return 0;
+  },
+  foo1() {
+    return 1;
+  },
+  ["foo" + 2]() {
+    return 2;
+  },
 };
 
 console.log(bar.foo0()); // 0
@@ -122,19 +126,8 @@ console.log(bar.foo2()); // 2
 
 {{Compat}}
 
-## SpiderMonkey-specific notes
-
-- Prior to SpiderMonkey 38, "`get`" and "`set`" were invalid names for generator methods. This has been fixed in {{bug(1073809)}}.
-- Prior to SpiderMonkey 41, curly braces were not required in method definitions. They are required from now on to conform to the ES6 specification and will throw a {{jsxref("SyntaxError")}} in this and later versions ({{bug(1150855)}}).
-
-  ```js example-bad
-  var o = {x() 12}; // SyntaxError
-  ```
-
-- The restriction that only generator methods are constructors has been implemented in SpiderMonkey 41. See also {{bug(1059908)}} and {{bug(1166950)}}.
-
 ## Смотрите также
 
-- [`get`](/en-US/docs/Web/JavaScript/Reference/Functions/get)
-- [`set`](/en-US/docs/Web/JavaScript/Reference/Functions/set)
+- [`get`](/ru/docs/Web/JavaScript/Reference/Functions/get)
+- [`set`](/ru/docs/Web/JavaScript/Reference/Functions/set)
 - [Lexical grammar](/ru/docs/Web/JavaScript/Reference/Lexical_grammar)

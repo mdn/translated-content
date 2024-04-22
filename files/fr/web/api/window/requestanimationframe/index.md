@@ -1,9 +1,6 @@
 ---
 title: Window.requestAnimationFrame()
 slug: Web/API/window/requestAnimationFrame
-page-type: web-api-instance-method
-translation_of: Web/API/window/requestAnimationFrame
-browser-compat: api.Window.requestAnimationFrame
 ---
 
 {{APIRef}}
@@ -21,7 +18,7 @@ La fonction de rappel reçoit un seul argument, une valeur [`DOMHighResTimeStamp
 ## Syntaxe
 
 ```js
-requestAnimationFrame(callback)
+requestAnimationFrame(callback);
 ```
 
 ### Paramètres
@@ -38,14 +35,14 @@ Une valeur entière de type `long` qui est un identifiant unique pour la requêt
 Dans cet exemple, un élément est animé pour 2 secondes (2000 millisecondes). L'élément se déplace à une vitesse de 0.1px/ms vers la droite. Sa position relative (en pixels CSS) peut donc être calculée en fonction du temps écoulé entre le début de l'animation (en millisecondes) et `0.1 * ecoule`. La position finale de l'élément est située 200px (`0.1 * 2000`) à droite de sa position initiale.
 
 ```js
-const element = document.getElementById('un-élément-à-animer');
+const element = document.getElementById("un-élément-à-animer");
 let debut, tempsPrecedent;
 let fini = false;
 
 function iteration(chrono) {
   if (debut === undefined) {
     debut = chrono;
-    }
+  }
   const ecoule = chrono - debut;
 
   if (tempsPrecedent !== chrono) {

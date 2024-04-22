@@ -1,83 +1,117 @@
 ---
-title: Tecla Arriba
+title: "Element: evento keyup"
+short-title: keyup
 slug: Web/API/Element/keyup_event
-original_slug: Web/API/Document/keyup_event
+l10n:
+  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
-{{ APIRef }}
+{{APIRef}}
 
-El evento es iniciado cuando la tecla es soltada.
+El evento **`keyup`** se activa cuando se suelta una tecla.
 
-## Información General
+Los eventos [`keydown`](/es/docs/Web/API/Element/keydown_event) y `keyup` brindan un código que indica qué tecla se presiona, mientras que `keypress` indica qué carácter se ingresó. Por ejemplo, una "a" minúscula será reportada como 65 por `keydown` y `keyup`, pero como 97 por `keypress`. Todos los eventos notifican una "A" mayúscula como 65.
 
-- Specification
-  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-keyup)
-- Interface
-  - : [KeyboardEvent](/es/docs/DOM/KeyboardEvent)
-- Bubbles
-  - : Si
-- Cancelable
-  - : Si
-- Target
-  - : Document, Element
-- Default Action
-  - : Ninguna
+Los eventos de teclado solo son generados por `<input>`, `<textarea>`, `<summary>` y cualquier cosa con el atributo `contentEditable` o `tabindex`.
 
-## Propiedades
+Desde Firefox 65, los eventos `keyup` y [`keydown`](/es/docs/Web/API/Element/keydown_event) ahora se activan durante la composición del IME, para mejorar la compatibilidad entre navegadores para los usuarios de CJKT ([error 354358, en Firefox](https://bugzil.la/354358). Para ignorar todos los eventos `keyup` que forman parte de la composición, haga algo como esto (229 es un valor especial establecido para un `keyCode` relacionado con un evento que ha sido procesado por un editor de método de entrada ([IME](https://www.w3.org/TR/ime-api/#IME))):
 
-- `target` - EventTarget {{readonlyInline}}
-  - : The event target (the topmost target in the DOM tree).
-- `type` - DOMString {{readonlyInline}}
-  - : The type of event.
-- `bubbles` - Boolean {{readonlyInline}}
-  - : Whether the event normally bubbles or not
-- `cancelable` - Boolean {{readonlyInline}}
-  - : Whether the event is cancellable or not?
-- `view` - WindowProxy {{readonlyInline}}
-  - : In browsers, [`document.defaultView`](/es/docs/Web/API/Document/defaultView) returns the window object associated with a document, or null if none is available. (`window` of the document)
-- `detail` - `long` (`float`) {{readonlyInline}}
-  - : 0.
-- `target` - EventTarget (DOM element) {{readonlyInline}}
-  - : Focused element processing the key event, root element if no suitable input element focused.
-- `char` - DOMString (string) {{readonlyInline}}
-  - : The character value of the key. If the key corresponds to a printable character, this value is a non-empty Unicode string containing that character. If the key doesn't have a printable representation, this is an empty string. See [key names and char values](/es/docs/Web/API/KeyboardEvent#Key_names_and_Char_values) for the detail.
+```js
+eventTarget.addEventListener("keyup", (event) => {
+  if (event.isComposing || event.keyCode === 229) {
+    return;
+  }
+  // hacer algo
+});
+```
 
-     > **Nota:** If the key is used as a macro that inserts multiple characters, this attribute's value is the entire string, not just the first character.
-- `key` - DOMString (string) {{readonlyInline}}
-  - : The key value of the key represented by the event. If the value has a printed representation, this attribute's value is the same as the `char` attribute. Otherwise, it's one of the key value strings specified in [Key values](#key_values). If the key can't be identified, this is the string "Unidentified". See [key names and char values](/es/docs/Web/API/KeyboardEvent#Key_names_and_Char_values) for the detail. Read Only.
-- `charCode` - Unsigned long (int) {{readonlyInline}}
-  - : The Unicode reference number of the key; this attribute is used only by the [`keypress`](/en-US/docs/Mozilla_event_reference/keypress) event. For keys whose `char` attribute contains multiple characters, this is the Unicode value of the first character in that attribute.
+## Sintaxis
 
-    > **Advertencia:** This attribute is deprecated; you should use `char` instead, if available.
-- `keyCode` - Unsigned long (int) {{readonlyInline}}
-  - : A system and implementation dependent numerical code identifying the unmodified value of the pressed key. This is usually the decimal ASCII ({{ RFC(20) }}) or Windows 1252 code corresponding to the key; see [Virtual key codes](#virtual_key_codes) for a list of common values. If the key can't be identified, this value is 0.
+Utilice el nombre del evento en métodos como {{domxref("EventTarget.addEventListener", "addEventListener()")}}, o establezca una propiedad de manejador de eventos.
 
-    > **Advertencia:** This attribute is deprecated; you should use `key` instead, if available.
-- `which` - Unsigned long (int) {{readonlyInline}}
-  - : A system and implementation dependent numeric code identifying the unmodified value of the pressed key; this is usually the same as `keyCode`.
+```js
+addEventListener("keyup", (event) => {});
 
-    > **Advertencia:** This attribute is deprecated; you should use `key` instead, if available.
-- `location` - long (float) {{readonlyInline}}
-  - : The location of the device.
-- `repeat` - boolean {{readonlyInline}}
-  - : `true` if a key has been depressed long enough to trigger key repetition, otherwise `false`.
-- `locale` - string {{readonlyInline}}
-  - : The language code for the key event, if available; otherwise, the empty string.
-- `ctrlKey` - boolean {{readonlyInline}}
-  - : `true` if the control key was down when the event was fired. `false` otherwise.
-- `shiftKey` - boolean {{readonlyInline}}
-  - : `true` if the shift key was down when the event was fired. `false` otherwise.
-- `altKey` - boolean {{readonlyInline}}
-  - : `true` if the alt key was down when the event was fired. `false` otherwise.
-- `metaKey` - boolean {{readonlyInline}}
-  - : `true` if the meta key was down when the event was fired. `false` otherwise.
+onkeyup = (event) => {};
+```
 
-## Eventos Relacionados
+## Tipo de evento
 
-- [`keydown`](/es/docs/Web/Reference/Events/keydown)
-- [`keyup`](/es/docs/Web/Reference/Events/keyup)
-- [`keypress`](/es/docs/Web/Reference/Events/keypress)
-- [`input`](/es/docs/Web/Reference/Events/input)
+{{domxref("KeyboardEvent")}}. Hereda de {{domxref("Event")}}.
+
+{{InheritanceDiagram("KeyboardEvent")}}
+
+## Propiedades del evento
+
+_Esta interfaz también hereda propiedades de sus padres, {{domxref("UIEvent")}} y {{domxref("Event")}}._
+
+- {{domxref("KeyboardEvent.altKey")}} {{ReadOnlyInline}}
+
+  - : Devuelve un valor booleano que es `true` si la tecla <kbd>Alt</kbd> (<kbd>Option</kbd> o <kbd>⌥</kbd> en macOS) estaba activa cuando se generó el evento.
+
+- {{domxref("KeyboardEvent.code")}} {{ReadOnlyInline}}
+
+  - : Devuelve una cadena con el valor del código de la clave física representada por el evento.
+
+    > **Advertencia:** Esto ignora el diseño del teclado del usuario, de modo que si el usuario presiona la tecla en la posición "Y" en un diseño de teclado QWERTY (cerca del medio de la fila sobre la fila de inicio), esto siempre devolverá "KeyY", incluso si el el usuario tiene un teclado QWERTZ (lo que significaría que el usuario espera una "Z" y todas las demás propiedades indicarían una "Z") o un diseño de teclado Dvorak (donde el usuario esperaría una "F"). Si desea mostrar las pulsaciones de teclas correctas al usuario, puede usar {{domxref("Keyboard.getLayoutMap()")}}.
+
+- {{domxref("KeyboardEvent.ctrlKey")}} {{ReadOnlyInline}}
+
+  - : Devuelve un valor booleano que es `true` si la tecla <kbd>Ctrl</kbd> estaba activa cuando se generó el evento.
+
+- {{domxref("KeyboardEvent.isComposing")}} {{ReadOnlyInline}}
+  - : Devuelve un valor booleano que es `true` si el evento se activa después de `compositionstart` y antes de `compositionend`.
+- {{domxref("KeyboardEvent.key")}} {{ReadOnlyInline}}
+  - : Devuelve una cadena que representa el valor clave de la tecla representada por el evento.
+- {{domxref("KeyboardEvent.locale")}} {{ReadOnlyInline}}
+
+  - : Devuelve una cadena que representa una cadena de configuración regional que indica la configuración regional para la que está configurado el teclado. Esta puede ser la cadena vacía si el navegador o el dispositivo no conocen la configuración regional del teclado.
+
+    > **Nota:** Esto no describe la configuración regional de los datos que se ingresan. Un usuario puede estar usando un diseño de teclado mientras escribe texto en un idioma diferente.
+
+- {{domxref("KeyboardEvent.location")}} {{ReadOnlyInline}}
+  - : Devuelve un número que representa la ubicación de la tecla en el teclado u otro dispositivo de entrada. Una lista de las constantes que identifican las ubicaciones se muestra en [Ubicaciones del teclado](/es/docs/Web/API/KeyboardEvent#keyboard_locations).
+- {{domxref("KeyboardEvent.metaKey")}} {{ReadOnlyInline}}
+
+  - : Devuelve un valor booleano que es `true` si la tecla <kbd>Meta</kbd> (en teclados Mac, la tecla <kbd>⌘ Command</kbd>; en teclados Windows, la tecla Windows (<kbd>⊞</kbd>)) estaba activo cuando se generó el evento.
+
+- {{domxref("KeyboardEvent.repeat")}} {{ReadOnlyInline}}
+  - : Devuelve un valor booleano que es `true` si la tecla se mantiene presionada de manera que se repite automáticamente.
+- {{domxref("KeyboardEvent.shiftKey")}} {{ReadOnlyInline}}
+
+  - : Devuelve un valor booleano que es `true` si la tecla <kbd>Shift</kbd> estaba activa cuando se generó el evento.
+
+## Ejemplos
+
+### Ejemplo de keyup con addEventListener
+
+Este ejemplo registra el valor {{domxref("KeyboardEvent.code")}} cada vez que suelta una tecla dentro del elemento {{HtmlElement("input")}}.
+
+```html
+<input
+  placeholder="Haga clic aquí, luego presione y suelte una tecla."
+  size="40" />
+<p id="log"></p>
+```
+
+```js
+const input = document.querySelector("input");
+const log = document.getElementById("log");
+
+input.addEventListener("keyup", logKey);
+
+function logKey(e) {
+  log.textContent += ` ${e.code}`;
+}
+```
+
+{{EmbedLiveSample("Ejemplo_de_keyup_con_addEventListener")}}
+
+### Equivalente onkeyup
+
+```js
+input.onkeyup = logKey;
+```
 
 ## Especificaciones
 
@@ -86,3 +120,9 @@ El evento es iniciado cuando la tecla es soltada.
 ## Compatibilidad con navegadores
 
 {{Compat}}
+
+## Véase también
+
+- [`input`](/es/docs/Web/API/HTMLElement/input_event)
+- [`keydown`](/es/docs/Web/API/Element/keydown_event)
+- [`keypress`](/es/docs/Web/API/Element/keypress_event)

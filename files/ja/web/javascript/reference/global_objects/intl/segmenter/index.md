@@ -38,12 +38,12 @@ l10n:
 const str = "吾輩は猫である。名前はたぬき。";
 console.table(str.split(" "));
 // ['吾輩は猫である。名前はたぬき。']
-// The two sentences are not correctly segmented.
+// この 2 文をきちんと分割できていません。
 ```
 
 ```js example-good
 const str = "吾輩は猫である。名前はたぬき。";
-const segmenterJa = new Intl.Segmenter('ja-JP', { granularity: 'word' });
+const segmenterJa = new Intl.Segmenter("ja-JP", { granularity: "word" });
 
 const segments = segmenterJa.segment(str);
 console.table(Array.from(segments));

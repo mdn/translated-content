@@ -2,6 +2,7 @@
 title: RTCPeerConnection.getIdentityAssertion()
 slug: Web/API/RTCPeerConnection/getIdentityAssertion
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 **`RTCPeerConnection.getIdentityAssertion()`** 메소드는 식별 주장의 수집을 시작합니다. 이 메소드는 {{domxref("RTCPeerConnection.signalingState", "signalingState")}}가 `"closed"` 상태가 아닐 때에만 유효합니다.

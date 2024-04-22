@@ -20,6 +20,7 @@ Com "_chrome privileges_" (privilégios para acesso a funções de baixo nível)
 ## Valor de Retorno
 
 - `isInFullScreen`
+
   - : Um booleano. Valores possíveis:
 
     - `true`: A janela está em modo de tela cheia.
@@ -29,11 +30,15 @@ Com "_chrome privileges_" (privilégios para acesso a funções de baixo nível)
 
 {{todo}}
 
-## Especificação
+## Especificações
 
-DOM Level 0. `window.fullScreen` não é parte de nenhuma especificação do W3C ou recomendação técnica.
+{{Specifications}}
+
+## Compatibilidade com navegadores
+
+{{Compat}}
 
 ## Notas
 
-- Esta propriedade só é confiável no Mozilla 1.9 (Firefox 3) e posteriores. Mozilla 1.8 e anteriores têm esta propriedade, mas sempre retorna `false`, mesmo quando a janela está em modo de tela cheia ({{Bug("127013")}}).
+- Esta propriedade só é confiável no Mozilla 1.9 (Firefox 3) e posteriores. Mozilla 1.8 e anteriores têm esta propriedade, mas sempre retorna `false`, mesmo quando a janela está em modo de tela cheia ([Erro do Firefox 127013](https://bugzil.la/127013)).
 - Alternar entre a janela normal e tela cheia irá disparar o evento "resize" na janela correspondente.

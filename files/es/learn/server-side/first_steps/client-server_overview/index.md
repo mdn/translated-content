@@ -1,7 +1,6 @@
 ---
 title: Visión General Cliente-Servidor
 slug: Learn/Server-side/First_steps/Client-Server_overview
-original_slug: Learn/Server-side/Primeros_pasos/Vision_General_Cliente_Servidor
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Introduction", "Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
@@ -130,13 +129,24 @@ Content-Length: 41823
 ```
 
 ```html
-<!DOCTYPE html>
-<html lang="en-US" dir="ltr" class="redesign no-js"  data-ffo-opensanslight=false data-ffo-opensans=false >
-<head prefix="og: http://ogp.me/ns#">
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
-  ...
+<!doctype html>
+<html
+  lang="en-US"
+  dir="ltr"
+  class="redesign no-js"
+  data-ffo-opensanslight="false"
+  data-ffo-opensans="false">
+  <head prefix="og: http://ogp.me/ns#">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <script>
+      (function (d) {
+        d.className = d.className.replace(/\bno-js/, "");
+      })(document.documentElement);
+    </script>
+    ...
+  </head>
+</html>
 ```
 
 El resto de la cabecera de la respuesta incluye información sobre la respuesta (ej. cuándo se generó), el servidor, y cómo espera el explorador manejar la página (ej. la linea `X-Frame-Options: DENY` le dice que al explorador que no está permitido incrustar esta página en un {{htmlelement("iframe")}} en otro sitio).

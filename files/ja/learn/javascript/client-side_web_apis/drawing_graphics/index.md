@@ -95,9 +95,9 @@ canvas タグの内部には、ユーザーのブラウザーが canvas に対�
 3. 次に、 "script.js" を開き、以下の JavaScript の行を追加してください。
 
    ```js
-   const canvas = document.querySelector('.myCanvas');
-   const width = canvas.width = window.innerWidth;
-   const height = canvas.height = window.innerHeight;
+   const canvas = document.querySelector(".myCanvas");
+   const width = (canvas.width = window.innerWidth);
+   const height = (canvas.height = window.innerHeight);
    ```
 
    ここでは、定数 `canvas` にキャンバスへの参照を格納しています。2 つ目の行では、新しい定数 `width` とキャンバスの `width` プロパティを {{domxref("Window.innerWidth")}} （ビューポート幅に等しい値）に設定しています。3 行目では、新しい定数 `height` とキャンバスの `height` プロパティを {{domxref("Window.innerHeight")}} （ビューポートの高さを指定）に等しくなるように設定しています。これで、ブラウザーウィンドウの幅と高さをすべて満たすキャンバスを保有することができます。
@@ -113,7 +113,7 @@ canvas タグの内部には、ユーザーのブラウザーが canvas に対�
 この場合、 2D キャンバスを取得したいので、 "script.js" の他の行の下に、以下の JavaScript を追加してください。
 
 ```js
-const ctx = canvas.getContext('2d');
+const ctx = canvas.getContext("2d");
 ```
 
 > **メモ:** 他にも、 WebGL の場合は `webgl`、WebGL 2 の場合は `webgl2` などのコンテキスト値を選ぶことができますが、この記事では必要ありません。
@@ -123,7 +123,7 @@ const ctx = canvas.getContext('2d');
 次に移動する前に最後のことをしましょう。キャンバスの背景を黒く塗って、キャンバス API を最初に体験してもらいましょう。 JavaScript の一番下に以下の行を追加してください。
 
 ```js
-ctx.fillStyle = 'rgb(0, 0, 0)';
+ctx.fillStyle = "rgb(0, 0, 0)";
 ctx.fillRect(0, 0, width, height);
 ```
 
@@ -147,7 +147,7 @@ ctx.fillRect(0, 0, width, height);
 2. 次に、 JavaScript の一番下に、以下の行を追加してください。
 
    ```js
-   ctx.fillStyle = 'rgb(255, 0, 0)';
+   ctx.fillStyle = "rgb(255, 0, 0)";
    ctx.fillRect(50, 50, 100, 150);
    ```
 
@@ -156,7 +156,7 @@ ctx.fillRect(0, 0, width, height);
 3. もうひとつ矩形を追加してみましょう。今度は緑色の矩形です。 JavaScript の一番下に以下のものを追加してください。
 
    ```js
-   ctx.fillStyle = 'rgb(0, 255, 0)';
+   ctx.fillStyle = "rgb(0, 255, 0)";
    ctx.fillRect(75, 75, 100, 100);
    ```
 
@@ -165,7 +165,7 @@ ctx.fillRect(0, 0, width, height);
 4. 半透明の色を指定することで、例えば `rgba()` を使用して半透明のグラフィックを描画することができることに注意してください。 `a` 値は「アルファチャンネル」と呼ばれるもの、つまり色が持つ透明度の量を定義します。この値が高いほど、その背後にあるものをより見えなくすることができます。あなたのコードに以下のように追加してください。
 
    ```js
-   ctx.fillStyle = 'rgba(255, 0, 255, 0.75)';
+   ctx.fillStyle = "rgba(255, 0, 255, 0.75)";
    ctx.fillRect(25, 100, 175, 50);
    ```
 
@@ -178,7 +178,7 @@ ctx.fillRect(0, 0, width, height);
 1. 前の例に以下のものを追加してください。また、前の JavaScript の行の下に追加してください。
 
    ```js
-   ctx.strokeStyle = 'rgb(255, 255, 255)';
+   ctx.strokeStyle = "rgb(255, 255, 255)";
    ctx.strokeRect(25, 25, 175, 200);
    ```
 
@@ -211,7 +211,7 @@ ctx.fillRect(0, 0, width, height);
 典型的な、簡単なパス描画処理をすると、次のようになります。
 
 ```js
-ctx.fillStyle = 'rgb(255, 0, 0)';
+ctx.fillStyle = "rgb(255, 0, 0)";
 ctx.beginPath();
 ctx.moveTo(50, 50);
 // draw your path
@@ -226,14 +226,14 @@ ctx.fill();
 
    ```js
    function degToRad(degrees) {
-     return degrees * Math.PI / 180;
+     return (degrees * Math.PI) / 180;
    }
    ```
 
 2. 次に、先ほどの追加部分の下に従うことでパスを開始します。ここでは、三角形の色を設定し、パスを描き始め、何も描かずにペンを (50, 50) に移動させています。そこが三角形を描き始める場所です。
 
    ```js
-   ctx.fillStyle = 'rgb(255, 0, 0)';
+   ctx.fillStyle = "rgb(255, 0, 0)";
    ctx.beginPath();
    ctx.moveTo(50, 50);
    ```
@@ -273,7 +273,7 @@ ctx.fill();
 1. キャンバスには円弧を追加してみましょう。コードの一番下に以下のように追加してください。
 
    ```js
-   ctx.fillStyle = 'rgb(0, 0, 255)';
+   ctx.fillStyle = "rgb(0, 0, 255)";
    ctx.beginPath();
    ctx.arc(150, 106, 50, degToRad(0), degToRad(360), false);
    ctx.fill();
@@ -286,7 +286,7 @@ ctx.fill();
 2. もうひとつ、円弧を加えてみましょう。
 
    ```js
-   ctx.fillStyle = 'yellow';
+   ctx.fillStyle = "yellow";
    ctx.beginPath();
    ctx.arc(200, 106, 50, degToRad(-45), degToRad(45), true);
    ctx.lineTo(200, 106);
@@ -322,14 +322,14 @@ ctx.fill();
 以下のブロックを JavaScript の最下部に追加してみてください。
 
 ```js
-ctx.strokeStyle = 'white';
+ctx.strokeStyle = "white";
 ctx.lineWidth = 1;
-ctx.font = '36px arial';
-ctx.strokeText('Canvas text', 50, 50);
+ctx.font = "36px arial";
+ctx.strokeText("Canvas text", 50, 50);
 
-ctx.fillStyle = 'red';
-ctx.font = '48px georgia';
-ctx.fillText('Canvas text', 50, 150);
+ctx.fillStyle = "red";
+ctx.font = "48px georgia";
+ctx.fillText("Canvas text", 50, 150);
 ```
 
 ここでは、アウトラインとストロークの 2 つのテキストを描きます。最終的な例はこのようになるはずです。
@@ -352,7 +352,7 @@ ctx.fillText('Canvas text', 50, 150);
 
    ```js
    const image = new Image();
-   image.src = 'firefox.png';
+   image.src = "firefox.png";
    ```
 
    ここでは {{domxref("HTMLImageElement.Image()", "Image()")}} コンストラクターを使用して、新しい {{domxref("HTMLImageElement")}} オブジェクトを作成しています。返されるオブジェクトは、既存の {{htmlelement("img")}} 要素への参照を取得したときに返されるオブジェクトと同じ型です。次に、その [`src`](/ja/docs/Web/HTML/Element/img#src) 属性を、Firefox ロゴ画像と同じになるように設定します。この時点で、ブラウザーは画像の読み込みを開始します。
@@ -360,7 +360,7 @@ ctx.fillText('Canvas text', 50, 150);
 3. ここで、`drawImage()` を使用して画像を埋め込むことができますが、最初に画像ファイルが読み込まれたことを確認する必要があり、そうでなければコードは失敗してしまいます。これは `load` イベントを使用して実現することができます。このイベントは画像の読み込みが完了したときにのみ発行されます。前のブロックの下に、以下のブロックを追加してください。
 
    ```js
-   image.addEventListener('load', () => ctx.drawImage(image, 20, 20));
+   image.addEventListener("load", () => ctx.drawImage(image, 20, 20));
    ```
 
    今、ブラウザーで例を読み込むと、キャンバスに埋め込まれた画像が表示されるはずです。
@@ -397,7 +397,7 @@ ctx.fillText('Canvas text', 50, 150);
 2. 以下の行を JavaScript の一番下に追加します。これには新しいメソッド {{domxref("CanvasRenderingContext2D.translate", "translate()")}} が含まれていて、キャンバスの原点を移動させます。
 
    ```js
-   ctx.translate(width/2, height/2);
+   ctx.translate(width / 2, height / 2);
    ```
 
    これにより、座標原点 (0, 0) は左上隅ではなく、キャンバスの中央に移されます。これは、今回のようにキャンバスの中心から相対的にデザインを描画させたい多くの状況でとても有用です。
@@ -406,19 +406,17 @@ ctx.fillText('Canvas text', 50, 150);
 
    ```js
    function degToRad(degrees) {
-     return degrees * Math.PI / 180;
+     return (degrees * Math.PI) / 180;
    }
 
    function rand(min, max) {
-     return Math.floor(Math.random() * (max-min+1)) + (min);
+     return Math.floor(Math.random() * (max - min + 1)) + min;
    }
 
    let length = 250;
    let moveOffset = 20;
 
-   for (let i = 0; i < length; i++) {
-
-   }
+   for (let i = 0; i < length; i++) {}
    ```
 
    ここでは、上の三角形の例で見たのと同じ `degToRad()` 関数、指定された下限と上限の間の乱数を返す `rand()` 関数、変数 `length` と `moveOffset` （これについては後で詳しく説明します）、そして空の `for` ループを実装しています。
@@ -426,13 +424,13 @@ ctx.fillText('Canvas text', 50, 150);
 4. ここでのアイディアは、 `for` ループの中でキャンバス上に何かを描くことができ、それを毎回反復処理することで、何か面白いものを作成することができるというものです。以下のコードを `for` ループの中に追加してください。
 
    ```js
-   ctx.fillStyle = `rgba(${255-length},0,${255-length},0.9)`;
+   ctx.fillStyle = `rgba(${255 - length},0,${255 - length},0.9)`;
    ctx.beginPath();
-   ctx.moveTo(moveOffset,moveOffset);
-   ctx.lineTo(moveOffset+length,moveOffset);
-   const triHeight = length/2 * Math.tan(degToRad(60));
-   ctx.lineTo(moveOffset+(length/2),moveOffset+triHeight);
-   ctx.lineTo(moveOffset,moveOffset);
+   ctx.moveTo(moveOffset, moveOffset);
+   ctx.lineTo(moveOffset + length, moveOffset);
+   const triHeight = (length / 2) * Math.tan(degToRad(60));
+   ctx.lineTo(moveOffset + length / 2, moveOffset + triHeight);
+   ctx.lineTo(moveOffset, moveOffset);
    ctx.fill();
 
    length--;
@@ -458,7 +456,7 @@ ctx.fillText('Canvas text', 50, 150);
 この点については、ぜひこの例で遊んでみて、自分自身で作ってみてください。例えば、
 
 - 三角形の代わりに長方形や円弧を描画したり、画像を埋め込んだりする。
-- length` と `moveOffset` の値で遊んでみる。
+- length`と`moveOffset` の値で遊んでみる。
 - 上で記載したが使用しなかった `rand()` 関数を使用して乱数を導入する。
 
 > **メモ:** 完成したコードは、GitHub で [6_canvas_for_loop](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/loops_animation/6_canvas_for_loop) として利用することができます。
@@ -477,16 +475,16 @@ JavaScript で、関数を 1 秒間に数回繰り返し実行することがで
 
 ```js
 function loop() {
-   ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
-   ctx.fillRect(0, 0, width, height);
+  ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
+  ctx.fillRect(0, 0, width, height);
 
-   for (const ball of balls) {
-     ball.draw();
-     ball.update();
-     ball.collisionDetect();
-   }
+  for (const ball of balls) {
+    ball.draw();
+    ball.update();
+    ball.collisionDetect();
+  }
 
-   requestAnimationFrame(loop);
+  requestAnimationFrame(loop);
 }
 
 loop();
@@ -516,14 +514,14 @@ loop();
 2. JavaScript の一番下に、以下の行を追加して、座標原点が再びキャンバスの中央に来るようにします。
 
    ```js
-   ctx.translate(width/2, height/2);
+   ctx.translate(width / 2, height / 2);
    ```
 
 3. では、新しい {{domxref("HTMLImageElement")}} オブジェクトを作成し、その [`src`](/ja/docs/Web/HTML/Element/img#src) に読み込ませたい画像を設定しましょう。そして、`onload` イベントハンドラーを追加して、画像を読み込んだら `draw()` 関数が起動するよう設定しましょう。
 
    ```js
    const image = new Image();
-   image.src = 'walk-right.png';
+   image.src = "walk-right.png";
    image.onload = draw;
    ```
 
@@ -543,21 +541,19 @@ loop();
 5. では、コードの一番下に空の `draw()` 関数を挿入して、いくつかのコードで埋められるようにしましょう。
 
    ```js
-   function draw() {
-
-   }
+   function draw() {}
    ```
 
 6. この節の残りのコードは `draw()` の中に記述します。まず、以下の行を追加します。これはキャンバスで各フレームを描画するための準備をするものです。長方形の左上隅を `-(width/2), -(height/2)` と指定しなければならないことに注意してください先ほど原点位置を `width/2, height/2` と指定したためです。
 
    ```js
-   ctx.fillRect(-(width/2), -(height/2), width, height);
+   ctx.fillRect(-(width / 2), -(height / 2), width, height);
    ```
 
 7. 次に、drawImage の引数 9 個版を使用して画像を描画します。従うことで以下が追加されます。
 
    ```js
-   ctx.drawImage(image, (sprite*102), 0, 102, 148, 0+posX, -74, 102, 148);
+   ctx.drawImage(image, sprite * 102, 0, 102, 148, 0 + posX, -74, 102, 148);
    ```
 
    見ての通りです。
@@ -571,13 +567,13 @@ loop();
 8. 今度は、描画するたびに `sprite` の値を変更します。まあ、とにかくいくつかの描画の後で。以下のブロックを `draw()` 関数の末尾に追加してください。
 
    ```js
-     if (posX % 13 === 0) {
-       if (sprite === 5) {
-         sprite = 0;
-       } else {
-         sprite++;
-       }
+   if (posX % 13 === 0) {
+     if (sprite === 5) {
+       sprite = 0;
+     } else {
+       sprite++;
      }
+   }
    ```
 
    ブロック全体を `if (posX % 13 === 0) { }` で囲んでいます。モジュロ演算子(`%`)（[剰余演算子](/ja/docs/Web/JavaScript/Reference/Operators/Remainder)とも呼ばれます）を使用して、 `posX` の値が余りなく 13 で正確に割り切れるかどうかを調べています。もしそうなら、 `sprite` を増加して次のスプライトに移動します（スプライト #5 が終わったら 0 に戻ります）。これは事実上、 13 フレームごとにしかスプライトを更新していないことを意味し、およそ 1 秒間に 5 フレーム程度です（`requestAnimationFrame()` では、可能であれば 1 秒間に 60 フレームまで呼び出されます）。フレームレートを意図的に遅くしているのは、作業するスプライトが 6 つしかないためで、 60 分の 1 秒ごとに 1 つずつ表示すると、キャラクターの移動が速くなりすぎてしまうからです。
@@ -587,13 +583,13 @@ loop();
 9. 次に、各フレームで `posX` 値を変更する方法を作業する必要があります。次のコードブロックを、前回のコードのすぐ下に追加してください。
 
    ```js
-     if (posX > width/2) {
-       let newStartPos = -((width/2) + 102);
-       posX = Math.ceil(newStartPos);
-       console.log(posX);
-     } else {
-       posX += 2;
-     }
+   if (posX > width / 2) {
+     let newStartPos = -(width / 2 + 102);
+     posX = Math.ceil(newStartPos);
+     console.log(posX);
+   } else {
+     posX += 2;
+   }
    ```
 
    別の `if...else` 文を使用して、 `posX` の値が `width/2` よりも大きくなったかどうか、つまりキャラクターが画面の右端から歩き出したかどうかを確認しています。もしそうなら、キャラクターが画面の左側の辺のすぐ左に来るように位置を計算します。
@@ -628,22 +624,22 @@ let curY;
 let pressed = false;
 
 // マウスポインターの座標を更新する
-document.addEventListener('mousemove', (e) => {
+document.addEventListener("mousemove", (e) => {
   curX = e.pageX;
   curY = e.pageY;
 });
 
-canvas.addEventListener('mousedown', () => pressed = true);
+canvas.addEventListener("mousedown", () => (pressed = true));
 
-canvas.addEventListener('mouseup', () => pressed = false);
+canvas.addEventListener("mouseup", () => (pressed = false));
 ```
 
 "Clear canvas" ボタンが押されたら、キャンバス全体を黒に戻す簡単な関数を実行します。これは、これまでと同じ方法です。
 
 ```js
-clearBtn.addEventListener('click', () => {
-  ctx.fillStyle = 'rgb(0,0,0)';
-  ctx.fillRect(0,0,width,height);
+clearBtn.addEventListener("click", () => {
+  ctx.fillStyle = "rgb(0,0,0)";
+  ctx.fillRect(0, 0, width, height);
 });
 ```
 
@@ -654,7 +650,14 @@ function draw() {
   if (pressed) {
     ctx.fillStyle = colorPicker.value;
     ctx.beginPath();
-    ctx.arc(curX, curY-85, sizePicker.value, degToRad(0), degToRad(360), false);
+    ctx.arc(
+      curX,
+      curY - 85,
+      sizePicker.value,
+      degToRad(0),
+      degToRad(360),
+      false,
+    );
     ctx.fill();
   }
 
@@ -696,7 +699,12 @@ WebGLライブラリーを使って何かを作成する簡単な例を見てみ
 5. 次に、シーンを見るための**カメラ**が必要です。 3D 画像の用語では、カメラは世界における視聴者の位置を表します。カメラを作成するには、以下の行を次に追加してください。
 
    ```js
-   const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+   const camera = new THREE.PerspectiveCamera(
+     75,
+     window.innerWidth / window.innerHeight,
+     0.1,
+     1000,
+   );
    camera.position.z = 5;
    ```
 
@@ -726,12 +734,12 @@ WebGLライブラリーを使って何かを作成する簡単な例を見てみ
 
    const loader = new THREE.TextureLoader();
 
-   loader.load('metal003.png', (texture) => {
+   loader.load("metal003.png", (texture) => {
      texture.wrapS = THREE.RepeatWrapping;
      texture.wrapT = THREE.RepeatWrapping;
      texture.repeat.set(2, 2);
 
-     const geometry = new THREE.BoxGeometry(2.4,2.4,2.4);
+     const geometry = new THREE.BoxGeometry(2.4, 2.4, 2.4);
      const material = new THREE.MeshLambertMaterial({ map: texture });
      cube = new THREE.Mesh(geometry, material);
      scene.add(cube);
@@ -750,10 +758,10 @@ WebGLライブラリーを使って何かを作成する簡単な例を見てみ
 8. `draw()` の定義に入る前に、シーンを少し盛り上げるために、ライトをいくつか追加します。以下、ブロックを追加していきます。
 
    ```js
-   const light = new THREE.AmbientLight('rgb(255,255,255)'); // soft white light
+   const light = new THREE.AmbientLight("rgb(255,255,255)"); // soft white light
    scene.add(light);
 
-   const spotLight = new THREE.SpotLight('rgb(255,255,255)');
+   const spotLight = new THREE.SpotLight("rgb(255,255,255)");
    spotLight.position.set(100, 1000, 1000);
    spotLight.castShadow = true;
    scene.add(spotLight);

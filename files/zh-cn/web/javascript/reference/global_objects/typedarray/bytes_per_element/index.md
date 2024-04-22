@@ -3,7 +3,7 @@ title: TypedArray.BYTES_PER_ELEMENT
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT
 ---
 
-{{JSRef("Global_Objects", "TypedArray", "Int8Array,Uint8Array,Uint8ClampedArray,Int16Array,Uint16Array,Int32Array,Uint32Array,Float32Array,Float64Array")}}
+{{JSRef}}
 
 ## 概要
 
@@ -24,15 +24,15 @@ TypedArray.BYTES_PER_ELEMENT;
 ## 示例
 
 ```js
-Int8Array.BYTES_PER_ELEMENT;         // 1
-Uint8Array.BYTES_PER_ELEMENT;        // 1
+Int8Array.BYTES_PER_ELEMENT; // 1
+Uint8Array.BYTES_PER_ELEMENT; // 1
 Uint8ClampedArray.BYTES_PER_ELEMENT; // 1
-Int16Array.BYTES_PER_ELEMENT;        // 2
-Uint16Array.BYTES_PER_ELEMENT;       // 2
-Int32Array.BYTES_PER_ELEMENT;        // 4
-Uint32Array.BYTES_PER_ELEMENT;       // 4
-Float32Array.BYTES_PER_ELEMENT;      // 4
-Float64Array.BYTES_PER_ELEMENT;      // 8
+Int16Array.BYTES_PER_ELEMENT; // 2
+Uint16Array.BYTES_PER_ELEMENT; // 2
+Int32Array.BYTES_PER_ELEMENT; // 4
+Uint32Array.BYTES_PER_ELEMENT; // 4
+Float32Array.BYTES_PER_ELEMENT; // 4
+Float64Array.BYTES_PER_ELEMENT; // 8
 ```
 
 ## 规范

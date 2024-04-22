@@ -28,13 +28,14 @@ var supportedConstraints = navigator.mediaDevices.getSupportedConstraints();
 ```html hidden
 <p>The following media constraints are supported by your browser:</p>
 
-<ul id="constraintList">
-</ul>
+<ul id="constraintList"></ul>
 ```
 
 ```css hidden
 body {
-  font: 15px Arial, sans-serif;
+  font:
+    15px Arial,
+    sans-serif;
 }
 ```
 

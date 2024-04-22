@@ -1,8 +1,8 @@
 ---
 title: FormData.append()
 slug: Web/API/FormData/append
-translation_of: Web/API/FormData/append
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 Метод **`append()`** из интерфейса {{domxref("FormData")}} добавляет новое значение в существующий ключ внутри объекта `FormData`, или создаёт ключ, в случае если он отсутствует.
@@ -46,26 +46,24 @@ var formData = new FormData(); // Currently empty
 Вы можете добавлять пару ключ/значение с помощью {{domxref("FormData.append")}}:
 
 ```js
-formData.append('username', 'Chris');
-formData.append('userpic', myFileInput.files[0], 'chris.jpg');
+formData.append("username", "Chris");
+formData.append("userpic", myFileInput.files[0], "chris.jpg");
 ```
 
 Также вы можете использовать обозначения массива для первого аргумента:
 
 ```js
-formData.append('userpic[]', myFileInput1.files[0], 'chris1.jpg');
-formData.append('userpic[]', myFileInput2.files[0], 'chris2.jpg');
+formData.append("userpic[]", myFileInput1.files[0], "chris1.jpg");
+formData.append("userpic[]", myFileInput2.files[0], "chris2.jpg");
 ```
 
 Эта техника позволяет упростить мультифайловую загрузку данных потому, что в результате структура данных является более благоприятной для цикла.
 
 ## Спецификации
 
-| Спецификация                                                                         | Состояние                            | Примечания         |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------------ |
-| {{SpecName('XMLHttpRequest','#dom-formdata-append','append()')}} | {{Spec2('XMLHttpRequest')}} | Initial definition |
+{{Specifications}}
 
-## Поддержка
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -1,7 +1,6 @@
 ---
 title: Tutoriais
 slug: Web/Tutorials
-original_slug: Web/Tutoriais
 ---
 
 Os links nesta página levam a uma variedade de tutoriais e materiais de treinamento. **Se você está apenas começando, aprendendo o básico ou é um veterano em desenvolvimento web, aqui você pode encontrar recursos úteis, bem como as melhores práticas**. Esses recursos são criados por empresas com visão de futuro e desenvolvedores que adotaram padrões e boas práticas para desenvolvimento na web, e que fornecem e permitem diferentes interpretações de acordo com a solução adotada pelo usuário, tudo isso através de uma licença de conteúdo aberto, como é o caso da Creative Commons.

@@ -26,11 +26,11 @@ l10n:
 以下の例では、接続および切断のイベントを監視することで、アプリケーションのユーザーインターフェイスにデバイスを追加したり取り除いたりします。
 
 ```js
-navigator.usb.addEventListener('connect', (event) => {
+navigator.usb.addEventListener("connect", (event) => {
   // UI に event.device を追加する
 });
 
-navigator.usb.addEventListener('disconnect', (event) => {
+navigator.usb.addEventListener("disconnect", (event) => {
   // UI から event.device を取り除く
 });
 ```

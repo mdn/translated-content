@@ -1,8 +1,6 @@
 ---
 title: SharedWorkerGlobalScope.onconnect
 slug: Web/API/SharedWorkerGlobalScope/connect_event
-translation_of: Web/API/SharedWorkerGlobalScope/onconnect
-original_slug: Web/API/SharedWorkerGlobalScope/onconnect
 ---
 
 {{APIRef("Web Workers API")}}
@@ -22,16 +20,16 @@ Cet exemple montre le gestionnaire d'évènement `onconnect` quand une connectio
 Le port de connexion peut-être récupéré avec la propriété `ports` de l'objet évènement. Le port a un gestionnaire d'évènement `onmessage` pour gérer les évènement venant de cet port et la méthode `postMessage()` peut-être utilisée pour répondre au _thread_ principale qui utilise le _worker_.
 
 ```js
-onconnect = function(e) {
-    var port = e.ports[0];
+onconnect = function (e) {
+  var port = e.ports[0];
 
-    port.onmessage = function(e) {
-      var workerResult = 'Result: ' + (e.data[0] * e.data[1]);
-      port.postMessage(workerResult);
-    }
+  port.onmessage = function (e) {
+    var workerResult = "Result: " + e.data[0] * e.data[1];
+    port.postMessage(workerResult);
+  };
 
-    port.start();
-}
+  port.start();
+};
 ```
 
 Pour l'exemple complet en fonctionnement, voir [Basic shared worker example](https://github.com/mdn/simple-shared-worker) ([run shared worker](http://mdn.github.io/simple-shared-worker/).)

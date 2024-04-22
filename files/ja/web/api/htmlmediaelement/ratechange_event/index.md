@@ -1,5 +1,5 @@
 ---
-title: 'HTMLMediaElement: ratechange イベント'
+title: "HTMLMediaElement: ratechange イベント"
 slug: Web/API/HTMLMediaElement/ratechange_event
 l10n:
   sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
@@ -16,9 +16,9 @@ l10n:
 このイベントを {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('ratechange', (event) => {});
+addEventListener("ratechange", (event) => {});
 
-onratechange = (event) => { };
+onratechange = (event) => {};
 ```
 
 ## イベント型
@@ -32,20 +32,20 @@ onratechange = (event) => { };
 `addEventListener()` を使用する場合:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('ratechange', (event) => {
-  console.log('再生レートが変わりました。');
+video.addEventListener("ratechange", (event) => {
+  console.log("再生レートが変わりました。");
 });
 ```
 
 `onratechange` イベントハンドラープロパティを使用する場合:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.onratechange = (event) => {
-  console.log('再生レートが変わりました。');
+  console.log("再生レートが変わりました。");
 };
 ```
 

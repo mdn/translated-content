@@ -1,11 +1,6 @@
 ---
 title: grid-row-end
 slug: Web/CSS/grid-row-end
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/grid-row-end
 ---
 
 {{CSSRef}}
@@ -108,7 +103,9 @@ grid-row-end: unset;
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;

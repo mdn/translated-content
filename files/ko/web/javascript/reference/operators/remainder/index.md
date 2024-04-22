@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Operators/Remainder
 ## 구문
 
 ```js
-x % y
+x % y;
 ```
 
 ## 예제
@@ -20,33 +20,33 @@ x % y
 ### 양의 피제수의 나머지
 
 ```js
- 12 % 5  //  2
-  1 % -2 //  1
-  1 % 2  //  1
-  2 % 3  //  2
-5.5 % 2  // 1.5
+12 % 5; //  2
+1 % -2; //  1
+1 % 2; //  1
+2 % 3; //  2
+5.5 % 2; // 1.5
 ```
 
 ### 음의 피제수의 나머지
 
 ```js
--12 % 5 // -2
--1 % 2  // -1
--4 % 2  // -0
+(-12 % 5) - // -2
+  (1 % 2) - // -1
+  (4 % 2); // -0
 ```
 
 ### NaN의 나머지
 
 ```js
-NaN % 2 // NaN
+NaN % 2; // NaN
 ```
 
 ### Infinity의 나머지
 
 ```js
-Infinity % 2 // NaN
-Infinity % 0 // NaN
-Infinity % Infinity // NaN
+Infinity % 2; // NaN
+Infinity % 0; // NaN
+Infinity % Infinity; // NaN
 ```
 
 ## 명세

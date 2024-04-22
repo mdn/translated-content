@@ -1,12 +1,6 @@
 ---
 title: background
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/background
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/background
-original_slug: Mozilla/Add-ons/WebExtensions/manifest.json/arriere-plan
 ---
 
 {{AddonSidebar}}

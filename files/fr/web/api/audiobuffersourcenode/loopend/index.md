@@ -1,14 +1,6 @@
 ---
 title: AudioBufferSourceNode.loopEnd
 slug: Web/API/AudioBufferSourceNode/loopEnd
-tags:
-  - API
-  - Audio
-  - AudioBufferSourceNode
-  - Propriété
-  - Reference
-  - Web Audio API
-translation_of: Web/API/AudioBufferSourceNode/loopEnd
 ---
 
 {{ APIRef("Web Audio API") }}

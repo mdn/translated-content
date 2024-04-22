@@ -1,7 +1,6 @@
 ---
 title: Array.prototype.length
 slug: Web/JavaScript/Reference/Global_Objects/Array/length
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/length
 ---
 
 {{JSRef}}
@@ -16,15 +15,13 @@ El valor de la propiedad `length` es un número entero con un signo positivo y u
 
 ```js
 var namelistA = new Array(4294967296); //2 a la 32a potencia = 4294967296
-var namelistC = new Array(-100) //signo negativo
+var namelistC = new Array(-100); //signo negativo
 
 console.log(namelistA.length); //RangeError: longitud de la matriz inválida
 console.log(namelistC.length); //RangeError: longitud de la matriz inválida
 
-
-
 var namelistB = [];
-namelistB.length = Math.pow(2,32)-1; //establecer una longitud de la matriz menor que 2 a la 32ª potencia
+namelistB.length = Math.pow(2, 32) - 1; //establecer una longitud de la matriz menor que 2 a la 32ª potencia
 console.log(namelistB.length);
 
 //4294967295
@@ -44,7 +41,7 @@ function printEntries(arr) {
   for (var i = 0; i < length; i++) {
     console.log(arr[i]);
   }
-  console.log('=== printed ===');
+  console.log("=== printed ===");
 }
 
 // 1

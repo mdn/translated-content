@@ -1,8 +1,8 @@
 ---
 title: How to turn off form autocompletion
 slug: Web/Security/Securing_your_site/Turning_off_form_autocompletion
-translation_of: Web/Security/Securing_your_site/Turning_off_form_autocompletion
 ---
+
 В этой статье объясняется как можно отключить автозаполнение полей на сайте.
 
 По умолчанию браузеры запоминают информацию, которую пользователи отправляют через {{HTMLElement("input")}} поля на сайтах. Это позволяет браузеру предлагать варианты для автодополнения (то есть предлагать возможные дополнения для полей, в которые пользователь начал вводить данные) или автозаполнение (то есть предварительно заполнять определённые поля при загрузке).
@@ -13,7 +13,7 @@ It is important to know that if you turn off autocomplete, you are **breaking** 
 
 ## Disabling autocompletion
 
-To disable autocompletion in forms, you can set the [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete) attribute to "off":
+To disable autocompletion in forms, you can set the [`autocomplete`](/ru/docs/Web/HTML/Attributes/autocomplete) attribute to "off":
 
 ```html
 autocomplete="off"
@@ -22,9 +22,7 @@ autocomplete="off"
 You can do this either for an entire form, or for specific input elements in a form:
 
 ```html
-<form method="post" action="/form" autocomplete="off">
-[…]
-</form>
+<form method="post" action="/form" autocomplete="off">[…]</form>
 ```
 
 ```html
@@ -32,7 +30,7 @@ You can do this either for an entire form, or for specific input elements in a f
   […]
   <div>
     <label for="cc">Credit card:</label>
-    <input type="text" id="cc" name="cc" autocomplete="off">
+    <input type="text" id="cc" name="cc" autocomplete="off" />
   </div>
 </form>
 ```
@@ -63,10 +61,10 @@ This is the behavior in Firefox (since version 38), Google Chrome (since 34), an
 
 If you are defining a user management page where a user can specify a new password for another person, and therefore you want to prevent autofilling of password fields, you can use `autocomplete="new-password"`.
 
-This is a hint, which browsers are not required to comply with. However modern browsers have stopped autofilling `<input>` elements with `autocomplete="new-password"` for this very reason. For example, Firefox version 67 (see {{bug(1119063)}}) stopped autofilling in this case; however, Firefox 70 (see {{bug(1565407)}}) can suggest securely-generated passwords, but does not autofill a saved password. See the [`autocomplete` compat table](/ru/docs/Web/HTML/Attributes/autocomplete#Browser_compatibility) for more details.
+This is a hint, which browsers are not required to comply with. However modern browsers have stopped autofilling `<input>` elements with `autocomplete="new-password"` for this very reason. For example, Firefox version 67 (see [Firefox bug 1119063](https://bugzil.la/1119063)) stopped autofilling in this case; however, Firefox 70 (see [Firefox bug 1565407](https://bugzil.la/1565407)) can suggest securely-generated passwords, but does not autofill a saved password. See the [`autocomplete` compat table](/ru/docs/Web/HTML/Attributes/autocomplete#Browser_compatibility) for more details.
 
 ## Tools for disabling autocompletion
 
 The [jquery.disableAutoFill](https://terrylinooo.github.io/jquery.disableAutoFill/) plugin randomizes an input's `name` attribute by default. When the form is submitted, the plugin restores the original name. This prevents auto-completion for all browsers (includes third-party auto-completion extensions) but doesn't necessarily help with login fields.
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
+{{QuickLinksWithSubpages("/ru/docs/Web/Security")}}

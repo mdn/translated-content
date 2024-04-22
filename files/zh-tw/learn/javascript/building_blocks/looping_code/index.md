@@ -35,8 +35,8 @@ slug: Learn/JavaScript/Building_blocks/Looping_code
 
 循環通常具有以下一項或多項功能：
 
-- 一個用一定值初始化的計數器-這是循環的起點（上面的“開始：我沒有食物”）。
-- 一種條件，它是對/錯測試，用於確定循環是繼續運行還是停止（通常在計數器達到某個值時）。 “我是否有足夠的食物？”對此進行了說明。 以上。 假設他需要 10 份食物來養家糊口的話。
+- 一個用一定值初始化的計數器-這是循環的起點（上面的「開始：我沒有食物」）。
+- 一種條件，它是對/錯測試，用於確定循環是繼續運行還是停止（通常在計數器達到某個值時）。 「我是否有足夠的食物？」對此進行了說明。 以上。 假設他需要 10 份食物來養家糊口的話。
 - 一個迭代器，通常在每個連續循環上使計數器增加一小部分，直到條件不再成立為止。 上面我們沒有明確說明這一點，但是我們可以考慮一下農民每小時可以收集 2 份食物。 每小時之後，他收集的食物數量增加了 2，然後他檢查是否有足夠的食物。 如果他已達到 10 個部分（此時條件不再成立，則循環退出），他可以停止收集並回家。
 
 In {{glossary("pseudocode")}}, this would look something like the following:
@@ -57,14 +57,14 @@ loop(food = 0; foodNeeded = 10) {
 
 ### 不用麻煩
 
-在這一點上，您可能了解了循環背後的高級概念，但您可能在想：“好，很好，但這如何幫助我編寫更好的 JavaScript 代碼？” 如前所述，循環與一次又一次地執行同一操作有關，這對於快速完成重複性任務非常有用。
+在這一點上，你可能了解了循環背後的高級概念，但你可能在想：「好，很好，但這如何幫助我編寫更好的 JavaScript 代碼？」 如前所述，循環與一次又一次地執行同一操作有關，這對於快速完成重複性任務非常有用。
 
-通常，代碼在每次循環的每次迭代中都會略有不同，這意味著您可以完成全部相似但略有不同的任務，一般情況，如果您要執行許多不同的計算，則需要不斷地執行不同的式子，而不能一遍又一遍重複！
+通常，代碼在每次循環的每次迭代中都會略有不同，這意味著你可以完成全部相似但略有不同的任務，一般情況，如果你要執行許多不同的計算，則需要不斷地執行不同的式子，而不能一遍又一遍重複！
 
 讓我們看一個示例，以完美地說明為什麼循環是如此便利。 Let's say we wanted to draw 100 random circles on a {{htmlelement("canvas")}} element (press the _Update_ button to run the example again and again to see different random sets):
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -129,7 +129,7 @@ loop(food = 0; foodNeeded = 10) {
 
 {{ EmbedLiveSample('不用麻煩', '100%', 400) }}
 
-您現在不必了解所有代碼，但讓我們看一下實際繪製 100 個圓圈的代碼部分：
+你現在不必了解所有代碼，但讓我們看一下實際繪製 100 個圓圈的代碼部分：
 
 ```js
 for (var i = 0; i < 100; i++) {
@@ -143,7 +143,7 @@ for (var i = 0; i < 100; i++) {
 - `代碼前面定義的random（），返回0到x-1之間的整數。`
 - `WIDTH和HEIGHT是內部瀏覽器窗口的寬度和高度。`
 
-您應該了解基本概念-我們正在使用一個循環來運行此代碼的 100 次迭代，每個迭代在頁面上的隨機位置繪製一個圓圈。 無論我們繪製 100 個圓，1000 個還是 10,000 個，所需的代碼量都是相同的。 只需更改一個數字。
+你應該了解基本概念-我們正在使用一個循環來運行此代碼的 100 次迭代，每個迭代在頁面上的隨機位置繪製一個圓圈。 無論我們繪製 100 個圓，1000 個還是 10,000 個，所需的代碼量都是相同的。 只需更改一個數字。
 
 如果我們不在此處使用循環，則必須為每個要繪製的圓重複以下代碼：
 
@@ -158,7 +158,7 @@ ctx.fill();
 
 ## 循環的規範
 
-讓我們開始探索一些特定的循環結構。 第一個是 for 循環，您將在大多數時候使用它，它具有以下語法：
+讓我們開始探索一些特定的循環結構。 第一個是 for 循環，你將在大多數時候使用它，它具有以下語法：
 
 ```js
 for (initializer; exit - condition; final - expression) {
@@ -168,7 +168,7 @@ for (initializer; exit - condition; final - expression) {
 
 這裡我們有：
 
-1. 關鍵字“ for”，即跟隨其後的一些括號。
+1. 關鍵字「 for」，即跟隨其後的一些括號。
 2. 在括號內，我們有三個項目，以 ; 分隔：
 
    1. 初始化程序-通常是一個設置為數字的變量，該變量將遞增以計算循環運行的次數。 有時也稱為計數器變量。
@@ -194,7 +194,7 @@ para.textContent = info;
 這為我們提供了以下輸出：
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -229,8 +229,8 @@ para.textContent = info;
 2. 它被告知運行，直到它不再小於 cats 數組的長度為止。 這很重要,退出條件顯示了循環仍將運行的條件。 因此，在這種情況下，儘管 i \<cats.length 仍然為 true，循環仍將運行。
 3. 在循環內部，我們將當前循環項（cats \[i]是 cats \[無論 i 當時是什麼]）與一個逗號和一個空格連接到 info 變量的末尾。 所以：
 
-   1. 在第一次運行中，i = 0，因此 cats \[0] +'，'將連接到 info（“ Bill，”）上。
-   2. 在第二次運行中，i = 1，因此 cats \[1] +'，'將連接到 info（“ Jeff，”）上
+   1. 在第一次運行中，i = 0，因此 cats \[0] +'，'將連接到 info（「 Bill，」）上。
+   2. 在第二次運行中，i = 1，因此 cats \[1] +'，'將連接到 info（「 Jeff，」）上
    3. 等等。每次循環運行後，將 1 加到 i（i ++），然後該過程將再次開始。
 
 4. 當 i 等於 cats.length 時，循環將停止，瀏覽器將繼續循環下方的下一段代碼。
@@ -307,7 +307,7 @@ btn.addEventListener("click", function () {
 ```
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -363,7 +363,7 @@ btn.addEventListener("click", function () {
    2. 在循環內部，我們首先將當前觸點（contacts \[i]）分割為冒號字符，並將得到的兩個值存儲在名為 splitContact 的數組中。
    3. 然後，我們使用條件語句來測試 splitContact \[0]（聯繫人的姓名）是否等於輸入的 searchName。 如果是這樣，我們在段落中輸入一個字符串以報告聯繫人的電話號碼，然後使用 break 結束循環。
 
-5. 在（contacts.length-1）迭代之後，如果聯繫人姓名與輸入的搜索不匹配，則將段落文本設置為“找不到聯繫人。”，然後循環繼續進行迭代。
+5. 在（contacts.length-1）迭代之後，如果聯繫人姓名與輸入的搜索不匹配，則將段落文本設置為「找不到聯繫人。」，然後循環繼續進行迭代。
 
 > **備註：** You can view the [full source code on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/contact-search.html) too (also [see it running live](http://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html)).
 
@@ -389,7 +389,7 @@ for (var i = 1; i <= num; i++) {
 Here's the output:
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -634,7 +634,7 @@ function insertAtCaret(text) {
   var front = textarea.value.substring(0, caretPos);
   var back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
@@ -795,7 +795,7 @@ function insertAtCaret(text) {
   var front = textarea.value.substring(0, caretPos);
   var back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
@@ -872,6 +872,6 @@ If there is anything you didn't understand, feel free to read through the articl
 - [for statement reference](/zh-TW/docs/Web/JavaScript/Reference/Statements/for)
 - [while](/zh-TW/docs/Web/JavaScript/Reference/Statements/while) and [do...while](/zh-TW/docs/Web/JavaScript/Reference/Statements/do...while) references
 - [break](/zh-TW/docs/Web/JavaScript/Reference/Statements/break) and [continue](/zh-TW/docs/Web/JavaScript/Reference/Statements/continue) references
-- [What’s the Best Way to Write a JavaScript For Loop?](https://www.impressivewebs.com/javascript-for-loop/) — some advanced loop best practices
+- [What's the Best Way to Write a JavaScript For Loop?](https://www.impressivewebs.com/javascript-for-loop/) — some advanced loop best practices
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}

@@ -24,7 +24,10 @@ HTML 拖放接口使得 web 应用能够在网页中拖放文件。这篇文档�
 一般来说，在实际应用中需要定义一个 [`dragover`](/zh-CN/docs/Web/API/HTMLElement/dragover_event) 事件的处理函数并在其中加入关闭浏览器默认拖放行为的代码。你需要定义一个 {{domxref("GlobalEventHandlers.ondragover","ondragover")}} 事件处理函数：
 
 ```html
-<div id="drop_zone" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
+<div
+  id="drop_zone"
+  ondrop="dropHandler(event);"
+  ondragover="dragOverHandler(event);">
   <p>Drag one or more files to this Drop Zone ...</p>
 </div>
 ```
@@ -34,7 +37,7 @@ HTML 拖放接口使得 web 应用能够在网页中拖放文件。这篇文档�
 ```css
 #drop_zone {
   border: 5px solid blue;
-  width:  200px;
+  width: 200px;
   height: 100px;
 }
 ```
@@ -51,7 +54,7 @@ HTML 拖放接口使得 web 应用能够在网页中拖放文件。这篇文档�
 
 ```js
 function dropHandler(ev) {
-  console.log('File(s) dropped');
+  console.log("File(s) dropped");
 
   // Prevent default behavior (Prevent file from being opened)
   ev.preventDefault();
@@ -60,15 +63,17 @@ function dropHandler(ev) {
     // Use DataTransferItemList interface to access the file(s)
     for (var i = 0; i < ev.dataTransfer.items.length; i++) {
       // If dropped items aren't files, reject them
-      if (ev.dataTransfer.items[i].kind === 'file') {
+      if (ev.dataTransfer.items[i].kind === "file") {
         var file = ev.dataTransfer.items[i].getAsFile();
-        console.log('... file[' + i + '].name = ' + file.name);
+        console.log("... file[" + i + "].name = " + file.name);
       }
     }
   } else {
     // Use DataTransfer interface to access the file(s)
     for (var i = 0; i < ev.dataTransfer.files.length; i++) {
-      console.log('... file[' + i + '].name = ' + ev.dataTransfer.files[i].name);
+      console.log(
+        "... file[" + i + "].name = " + ev.dataTransfer.files[i].name,
+      );
     }
   }
 }
@@ -80,7 +85,7 @@ function dropHandler(ev) {
 
 ```js
 function dragOverHandler(ev) {
-  console.log('File(s) in drop zone');
+  console.log("File(s) in drop zone");
 
   // Prevent default behavior (Prevent file from being opened)
   ev.preventDefault();

@@ -1,7 +1,6 @@
 ---
 title: "HTMLElement: focus() メソッド"
 slug: Web/API/HTMLElement/focus
-original_slug: Web/API/HTMLElement/focus
 l10n:
   sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
@@ -77,8 +76,7 @@ document.getElementById("focusButton").addEventListener("click", () => {
 
 ```html
 <button id="myButton">クリックしてください</button>
-<button id="focusButton">クリックで
-「ボタン」にフォーカスを設定</button>
+<button id="focusButton">クリックで 「ボタン」にフォーカスを設定</button>
 <button id="focusButtonVisibleIndication">
   クリックで「Button」にフォーカスと focusVisible を設定
 </button>

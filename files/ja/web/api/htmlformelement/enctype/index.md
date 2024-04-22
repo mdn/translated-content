@@ -1,8 +1,9 @@
 ---
-title: HTMLFormElement.enctype
+title: "HTMLFormElement: enctype プロパティ"
+short-title: enctype
 slug: Web/API/HTMLFormElement/enctype
 l10n:
-  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef("HTML DOM")}}
@@ -22,7 +23,7 @@ l10n:
 ## 例
 
 ```js
-form.enctype = 'application/x-www-form-urlencoded';
+form.enctype = "application/x-www-form-urlencoded";
 ```
 
 ## 仕様書

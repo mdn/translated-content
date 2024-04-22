@@ -1,22 +1,6 @@
 ---
 title: Tutoriels
 slug: Web/Tutorials
-tags:
-  - Beginner
-  - Browser
-  - CSS
-  - Code
-  - Coding
-  - GitHub
-  - Guide
-  - HTML
-  - JavaScript
-  - MDN
-  - Tutorial
-  - Web Article
-  - Web Development
-translation_of: Web/Tutorials
-original_slug: Web/Tutoriels
 ---
 
 Les liens de cette page mènent à une variété de tutoriels et de matériel de formation. Que vous soyez débutante ou débutant, que vous appreniez les bases ou que vous soyez habitué⋅e au développement web, vous trouverez ici des ressources utiles pour les meilleures pratiques.

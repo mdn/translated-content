@@ -11,7 +11,7 @@ slug: Web/API/TextDecoder/decode
 
 ## 语法
 
-```js
+```js-nolint
 decode()
 decode(buffer)
 decode(buffer, options)
@@ -52,12 +52,12 @@ decode(buffer, options)
 
 ```js
 const encoder = new TextEncoder();
-const array = encoder.encode('€'); // Uint8Array(3) [226, 130, 172]
-document.getElementById('encoded-value').textContent = array;
+const array = encoder.encode("€"); // Uint8Array(3) [226, 130, 172]
+document.getElementById("encoded-value").textContent = array;
 
 const decoder = new TextDecoder();
 const str = decoder.decode(array); // String "€"
-document.getElementById('decoded-value').textContent = str;
+document.getElementById("decoded-value").textContent = str;
 ```
 
 ### 结果

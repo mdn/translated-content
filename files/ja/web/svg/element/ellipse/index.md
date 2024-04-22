@@ -10,7 +10,11 @@ slug: Web/SVG/Element/ellipse
 > **メモ:** 楕円要素は楕円の傾きを指定することはできません (例えば、45 度の角度で傾斜した楕円を描画したい場合)、しかし {{SVGAttr("transform")}} 属性を使用することで回転させることは可能です。
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -50,7 +54,7 @@ html,body,svg { height:100% }
 - [条件処理属性](/ja/docs/Web/SVG/Attribute/Conditional_Processing)
   - : 注目すべき属性: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
 - イベント属性
-  - : [グローバルイベント属性](/ja/docs/Web/SVG/Attribute/Events#Global_Event_Attributes)、[Graphical イベント属性](/ja/docs/Web/SVG/Attribute/Events#Graphical_Event_Attributes)
+  - : [グローバルイベント属性](/ja/docs/Web/SVG/Attribute/Events#グローバルイベント属性)、[グラフィックイベント属性](/ja/docs/Web/SVG/Attribute/Events#グラフィックイベント属性)
 - [プレゼンテーション属性](/ja/docs/Web/SVG/Attribute/Presentation)
   - : 注目すべき属性: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
 - ARIA 属性
@@ -66,7 +70,7 @@ html,body,svg { height:100% }
 
 ## ブラウザー実装状況
 
-{{Compat("svg.elements.ellipse")}}
+{{Compat}}
 
 ## 関連情報
 

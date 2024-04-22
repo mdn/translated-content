@@ -1,7 +1,6 @@
 ---
 title: SyncManager
 slug: Web/API/SyncManager
-translation_of: Web/API/SyncManager
 ---
 
 {{APIRef("Service Workers API")}}{{Non-standard_header}}

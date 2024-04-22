@@ -71,8 +71,6 @@ let promise2 = doSomething().then(successCallback, failureCallback);
 
 在古時候，多個非同步函數會使用 Callback 方式，導致波動拳問題：
 
-_（原文 Pyramid of Doom 查無中文翻譯，以較常見之波動拳取代）_
-
 ```js
 doSomething(function (result) {
   doSomethingElse(
@@ -83,10 +81,10 @@ doSomething(function (result) {
         function (finalResult) {
           console.log("Got the final result: " + finalResult);
         },
-        failureCallback
+        failureCallback,
       );
     },
-    failureCallback
+    failureCallback,
   );
 }, failureCallback);
 ```

@@ -78,13 +78,13 @@ Content-Location: /existing.html
 
 ## Especificações
 
-| Specification                            | Title                                                         |
-| ---------------------------------------- | ------------------------------------------------------------- |
+| Specification                   | Title                                                         |
+| ------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "PUT", "4.3.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semântica e conteúdo. |
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.methods.PUT")}}
+{{Compat}}
 
 ## Veja também
 

@@ -14,7 +14,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__
 ## 構文
 
 ```js
-__defineSetter__(prop, fun)
+__defineSetter__(prop, fun);
 ```
 
 ### 引数
@@ -26,8 +26,8 @@ __defineSetter__(prop, fun)
   - : プロパティへ値を設定しようとしたときに呼び出される関数です。この関数は以下の形式をとります。
 
     ```js
-        function(val) { . . . }
-        ```
+    function(val) { . . . }
+    ```
 
     - `val`
       - : `prop` へ代入しようとする値を保持する変数の別名です。
@@ -47,7 +47,9 @@ __defineSetter__(prop, fun)
 
 ```js
 var o = {};
-o.__defineSetter__('value', function(val) { this.anotherValue = val; });
+o.__defineSetter__("value", function (val) {
+  this.anotherValue = val;
+});
 o.value = 5;
 console.log(o.value); // undefined
 console.log(o.anotherValue); // 5
@@ -57,17 +59,21 @@ console.log(o.anotherValue); // 5
 
 ```js
 // set 演算子の使用
-var o = { set value(val) { this.anotherValue = val; } };
+var o = {
+  set value(val) {
+    this.anotherValue = val;
+  },
+};
 o.value = 5;
 console.log(o.value); // undefined
 console.log(o.anotherValue); // 5
 
 // Object.defineProperty の使用
 var o = {};
-Object.defineProperty(o, 'value', {
-  set: function(val) {
+Object.defineProperty(o, "value", {
+  set: function (val) {
     this.anotherValue = val;
-  }
+  },
 });
 o.value = 5;
 console.log(o.value); // undefined
@@ -90,6 +96,6 @@ console.log(o.anotherValue); // 5
 - {{jsxref("Object.defineProperty()")}}
 - [`Object.prototype.__lookupGetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)
 - [`Object.prototype.__lookupSetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
-- [JavaScript ガイド: ゲッターとセッターの定義](/ja/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters)
+- [JavaScript ガイド: ゲッターとセッターの定義](/ja/docs/Web/JavaScript/Guide/Working_with_objects#ゲッターとセッターの定義)
 - [\[Blog Post\] Deprecation of \_\_defineGetter\_\_ and \_\_defineSetter\_\_](http://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/)
 - [Firefox バグ 647423](https://bugzil.la/647423)

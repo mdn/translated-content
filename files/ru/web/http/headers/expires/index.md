@@ -1,14 +1,8 @@
 ---
 title: Expires
 slug: Web/HTTP/Headers/Expires
-tags:
-  - HTTP
-  - Заголовки
-  - Кеширование
-  - Ответ сервера
-translation_of: Web/HTTP/Headers/Expires
-original_slug: Web/HTTP/Заголовки/Expires
 ---
+
 {{HTTPSidebar}}
 
 Заголовок **`Expires`** содержит дату/время, по истечении которой ответ сервера считается устаревшим.
@@ -59,7 +53,7 @@ Expires: Wed, 21 Oct 2015 07:28:00 GMT
 
 {{Specifications}}
 
-## Совместимость браузера
+## Совместимость с браузерами
 
 {{Compat}}
 

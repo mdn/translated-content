@@ -1,14 +1,8 @@
 ---
 title: invert()
 slug: Web/CSS/filter-function/invert
-tags:
-  - CSS
-  - CSS Function
-  - Filter Effects
-  - Function
-  - Reference
-browser-compat: css.types.filter-function.invert
 ---
+
 {{CSSRef}}
 
 [Функция](/ru/docs/Web/CSS/CSS_Functions) [CSS](/ru/docs/Web/CSS) **`invert()`** инвертирует цвета изображения. Его результатом является {{cssxref("&lt;filter-function&gt;")}}.
@@ -40,7 +34,7 @@ invert(100%)  /* Полностью инвертированный цвет */
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -19,7 +19,7 @@ toLocaleUpperCase(locales)
 ### 매개변수
 
 - `locales` {{optional_inline}}
-  - : BCP 47 언어 태그가 있는 문자열 또는 이런 문자열을 가진 배열. 어떤 지역 특정 대/소문자 매핑에 따른 대문자로 변환하는데 사용된 지역을 나타냅니다. 일반 양식과 `locales` 인수의 설명에 대해서 [Locale identification and negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation)를 참조하세요.
+  - : BCP 47 언어 태그가 있는 문자열 또는 이런 문자열을 가진 배열. 어떤 지역 특정 대/소문자 매핑에 따른 대문자로 변환하는데 사용된 지역을 나타냅니다. 일반 양식과 `locales` 인수의 설명에 대해서 [Locale identification and negotiation](/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation)를 참조하세요.
 
 ### 반환 값
 

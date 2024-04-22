@@ -1,12 +1,9 @@
 ---
 title: Инструменты разработчика
 slug: Glossary/Developer_Tools
-tags:
-  - Инспектор
-  - инструменты
-translation_of: Glossary/Developer_Tools
-original_slug: Глоссарий/Инструменты_разработчика
 ---
+
+{{GlossarySidebar}}
 
 Инструменты разработчика (от англ. "development tools" или сокращённо "DevTools") - это программы, которые позволяют создавать, тестировать и отлаживать ({{Glossary("debug")}}) программное обеспечение.
 

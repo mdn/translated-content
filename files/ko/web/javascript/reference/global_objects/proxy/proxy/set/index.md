@@ -13,8 +13,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
 
 ```js
 new Proxy(target, {
-  set(target, property, value, receiver) {
-  }
+  set(target, property, value, receiver) {},
 });
 ```
 
@@ -74,19 +73,22 @@ new Proxy(target, {
 다음 코드는 속성 값을 설정하는 것을 트랩합니다.
 
 ```js
-const p = new Proxy({}, {
-  set(target, prop, value, receiver) {
-    target[prop] = value;
-    console.log(`property set: ${prop} = ${value}`);
-    return true;
-  }
-})
+const p = new Proxy(
+  {},
+  {
+    set(target, prop, value, receiver) {
+      target[prop] = value;
+      console.log(`property set: ${prop} = ${value}`);
+      return true;
+    },
+  },
+);
 
-console.log('a' in p);  // false
+console.log("a" in p); // false
 
-p.a = 10;               // "property set: a = 10"
-console.log('a' in p);  // true
-console.log(p.a);       // 10
+p.a = 10; // "property set: a = 10"
+console.log("a" in p); // true
+console.log(p.a); // 10
 ```
 
 ## 명세서

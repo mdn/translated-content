@@ -1,7 +1,6 @@
 ---
 title: Element.clientHeight
 slug: Web/API/Element/clientHeight
-translation_of: Web/API/Element/clientHeight
 ---
 
 {{ APIRef("DOM") }}
@@ -22,17 +21,11 @@ var h = element.clientHeight;
 
 ## Пример
 
-![Image:Dimensions-client.png](/@api/deki/files/185/=Dimensions-client.png)
+![Как свойство clientHeight определяет внутреннюю высоту элемента с учетом высоты и заполнения](dimensions-client.png)
 
-## Спецификация
+## Спецификации
 
-| Спецификация                                                                                     | Статус                           | Примечание |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('CSSOM View', '#dom-element-clientheight', 'clientHeight')}} | {{Spec2('CSSOM View')}} |            |
-
-### К сведению
-
-Свойство `clientHeight` впервые было представлено в объектной модели Internet Explorer.
+{{Specifications}}
 
 ## Совместимость с браузерами
 

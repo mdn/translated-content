@@ -1,7 +1,6 @@
 ---
 title: DOMTokenList.forEach()
 slug: Web/API/DOMTokenList/forEach
-translation_of: Web/API/DOMTokenList/forEach
 ---
 
 {{APIRef("DOM")}}
@@ -52,12 +51,9 @@ var span = document.querySelector("span");
 var classes = span.classList;
 var iterator = classes.values();
 
-classes.forEach(
-  function(value, key, listObj) {
-    span.textContent += value + ' ' + key + "/" + this + '  ++  ';
-  },
-  "arg"
-);
+classes.forEach(function (value, key, listObj) {
+  span.textContent += value + " " + key + "/" + this + "  ++  ";
+}, "arg");
 ```
 
 ### Résultat

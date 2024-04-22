@@ -1,15 +1,6 @@
 ---
 title: IntersectionObserver.root
 slug: Web/API/IntersectionObserver/root
-tags:
-  - API
-  - Intersection Observer
-  - Intersection Observer API
-  - IntersectionObserver
-  - Property
-  - Reference
-  - root
-translation_of: Web/API/IntersectionObserver/root
 ---
 
 {{APIRef("Intersection Observer API")}}

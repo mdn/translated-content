@@ -2,6 +2,7 @@
 title: Element.getElementsByClassName()
 slug: Web/API/Element/getElementsByClassName
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("Element")}}의 메소드 **`getElementsByClassName()`** 는 주어진 클래스를 가진 모든 자식 엘리먼트의 실시간 {{domxref("HTMLCollection")}} 을 반환합니다.
@@ -38,13 +39,13 @@ var elements = element.getElementsByClassName(names);
 요소들 중 하나의 클래스를 포함하고 있는 요소를 검색하기 위해서는, 그 클래스명을 `getElementsByClassName()`의 인자로 넣으세요:
 
 ```js
-element.getElementsByClassName('test');
+element.getElementsByClassName("test");
 ```
 
 아래의 예시는 `main` 이라는 `id` 를 가진 요소의 하위 요소들 중 `test`라는 클래스를 가진 모든 요소를 탐색합니다.
 
 ```js
-document.getElementById('main').getElementsByClassName('test');
+document.getElementById("main").getElementsByClassName("test");
 ```
 
 ### 여러개의 클래스로 탐색하기
@@ -52,7 +53,7 @@ document.getElementById('main').getElementsByClassName('test');
 `red` 와 `test` 라는 클래스를 모두 포함하고 있는 요소를 탐색하기 위해서는 다음과 같이 합니다:
 
 ```js
-element.getElementsByClassName('red test');
+element.getElementsByClassName("red test");
 ```
 
 ### 결과값 검토하기
@@ -60,22 +61,22 @@ element.getElementsByClassName('red test');
 collection의 개별 요소를 가져오기 위해 `HTMLCollection` 의{{domxref("HTMLCollection.item", "item()")}} 메소드를 이용하거나 표준 배열 문법을 사용할 수 있습니다. 아래는 잘못된 코드의 예시입니다. `"matches"` 는 `"colorbox"` 클래스가 삭제됨에 따라 바로 변경될것이기 때문에 **아래의 코드는 작동하지 않습니다.**
 
 ```js
-var matches = element.getElementsByClassName('colorbox');
+var matches = element.getElementsByClassName("colorbox");
 
-for (var i=0; i<matches.length; i++) {
-  matches[i].classList.remove('colorbox');
-  matches.item(i).classList.add('hueframe');
+for (var i = 0; i < matches.length; i++) {
+  matches[i].classList.remove("colorbox");
+  matches.item(i).classList.add("hueframe");
 }
 ```
 
 대신 다른 방법을 사용하세요. 예시:
 
 ```js
-var matches = element.getElementsByClassName('colorbox');
+var matches = element.getElementsByClassName("colorbox");
 
 while (matches.length > 0) {
-  matches.item(0).classList.add('hueframe');
-  matches[0].classList.remove('colorbox');
+  matches.item(0).classList.add("hueframe");
+  matches[0].classList.remove("colorbox");
 }
 ```
 
@@ -86,10 +87,13 @@ while (matches.length > 0) {
 {{domxref("HTMLCollection")}}을 `this` 로 사용하면 {{jsxref("Array.prototype")}} 을 어떤 {{ domxref("HTMLCollection") }}에서든 사용할 수 있습니다. 아래의 예제에서는 `test` 클래스를 가진 모든 {{HTMLElement("div")}} 요소를 찾아봅니다 :
 
 ```js
-var testElements = document.getElementsByClassName('test');
-var testDivs = Array.prototype.filter.call(testElements, function(testElement) {
-  return testElement.nodeName === 'DIV';
-});
+var testElements = document.getElementsByClassName("test");
+var testDivs = Array.prototype.filter.call(
+  testElements,
+  function (testElement) {
+    return testElement.nodeName === "DIV";
+  },
+);
 ```
 
 ## 명세서

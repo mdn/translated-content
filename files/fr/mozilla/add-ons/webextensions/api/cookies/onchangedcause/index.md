@@ -1,20 +1,9 @@
 ---
 title: cookies.OnChangedCause
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/OnChangedCause
-tags:
-  - API
-  - Add-ons
-  - Cookies
-  - Extensions
-  - Non-standard
-  - OnChangedCause
-  - Reference
-  - Type
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/OnChangedCause
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Le type `OnChangedCause` de l'API {{WebExtAPIRef("cookies")}} représente la raison pour laquelle un cookie a été modifié.
 
@@ -42,11 +31,16 @@ Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
 Vous pouvez écouter l'événement {{WebExtAPIRef("cookies.onChanged")}} pour être averti lorsque les cookies changent. L'écouteur reçoit un objet `changeInfo` qui contient une propriété `cause`, dont la valeur est une chaîne `OnChangeCaused` :
 
 ```js
-browser.cookies.onChanged.addListener(function(changeInfo) {
-  console.log('Cookie changed: ' +
-              '\n * Cookie: ' + JSON.stringify(changeInfo.cookie) +
-              '\n * Cause: ' + changeInfo.cause +
-              '\n * Removed: ' + changeInfo.removed);
+browser.cookies.onChanged.addListener(function (changeInfo) {
+  console.log(
+    "Cookie changed: " +
+      "\n * Cookie: " +
+      JSON.stringify(changeInfo.cookie) +
+      "\n * Cause: " +
+      changeInfo.cause +
+      "\n * Removed: " +
+      changeInfo.removed,
+  );
 });
 ```
 

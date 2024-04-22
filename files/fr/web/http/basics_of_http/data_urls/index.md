@@ -1,14 +1,6 @@
 ---
 title: URLs de données
 slug: Web/HTTP/Basics_of_HTTP/Data_URLs
-tags:
-  - Base64
-  - Guide
-  - HTTP
-  - Intermédiaire
-  - URL
-translation_of: Web/HTTP/Basics_of_HTTP/Data_URIs
-original_slug: Web/HTTP/Basics_of_HTTP/Data_URIs
 ---
 
 {{HTTPSidebar}}

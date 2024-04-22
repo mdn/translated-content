@@ -1,15 +1,6 @@
 ---
-title: 'Tutoriel Django - 6e partie : Vues génériques pour les listes et les détails'
+title: "Tutoriel Django - 6e partie : Vues génériques pour les listes et les détails"
 slug: Learn/Server-side/Django/Generic_views
-tags:
-  - Beginner
-  - Learn
-  - Tutorial
-  - django
-  - django templates
-  - django views
-translation_of: Learn/Server-side/Django/Generic_views
-original_slug: Learn/Server-side/Django/Vues_generiques
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Home_page", "Learn/Server-side/Django/Sessions", "Learn/Server-side/Django")}}Ce tutoriel améliore notre site web [LocalLibrary](/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website), en ajoutant des pages de listes et de détails pour les livres et les auteurs. Ici nous allons apprendre les vues génériques basées sur des classes, et montrer comment elles peuvent réduire le volume de code à écrire pour les cas ordinaires. Nous allons aussi entrer plus en détail dans la gestion des URLs, en montrant comment réaliser des recherches de patterns simples.
@@ -138,7 +129,7 @@ Créez le fichier HTML **/locallibrary/catalog/templates/catalog/book_list.html*
 
 Les templates pour vues génériques sont exactement comme les autres templates (cependant, bien sûr, le contexte et les informations envoyées au templates peuvent être différents). Comme pour notre template _index_, nous étendons notre template de base à la première ligne, et remplaçons ensuite le bloc appelé `content`.
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -163,7 +154,7 @@ La vue envoie le contexte (liste de livres), en utilisant par défaut les alias 
 
 Nous utilisons les balises de templates [`if`](https://docs.djangoproject.com/en/2.1/ref/templates/builtins/#if), `else`, et `endif` pour vérifier que la `book_list` a été définie et n'est pas vide. Si `book_list` est vide, alors la condition `else` affiche un texte expliquant qu'il n'y a pas de livres à lister. Si `book_list` n'est pas vide, nous parcourons la liste de livres.
 
-```html
+```django
 {% if book_list %}
   <!-- code here to list the books -->
 {% else %}
@@ -177,7 +168,7 @@ La condition ci-dessus ne vérifie qu'un seul cas, mais vous pouvez ajouter d'au
 
 Le template utilise les balises de template [for](https://docs.djangoproject.com/en/2.1/ref/templates/builtins/#for) et `endfor` pour boucler à travers la liste de livres, comme montré ci-dessous. Chaque itération peuple la variable de template `book` avec l'information concernant l'élément courant de la liste.
 
-```html
+```django
 {% for book in book_list %}
   <li> <!-- code here get information from each book item --> </li>
 {% endfor %}
@@ -229,7 +220,7 @@ urlpatterns = [
 ]
 ```
 
-Pour le chemin *book-detail*, le pattern d'URL utilise une syntaxe spéciale pour capturer l'id exact du livre que nous voulons voir. La syntaxe est très simple : les chevrons ('<' et '>') définissent la partie de l'URL qui doit être capturée et encadrent le nom de la variable que la vue pourra utiliser pour accéder aux données capturées. Par exemple, **\<something>** va capturer le pattern marqué et passer la valeur à la vue en tant que variable "something". De manière optionnelle, vous pouvez faire précéder le nom de variable d'une [spécification de convertisseur](https://docs.djangoproject.com/en/2.1/topics/http/urls/#path-converters), qui définit le type de la donnée (int, str, slug, uuid, path).
+Pour le chemin _book-detail_, le pattern d'URL utilise une syntaxe spéciale pour capturer l'id exact du livre que nous voulons voir. La syntaxe est très simple : les chevrons ('<' et '>') définissent la partie de l'URL qui doit être capturée et encadrent le nom de la variable que la vue pourra utiliser pour accéder aux données capturées. Par exemple, **\<something>** va capturer le pattern marqué et passer la valeur à la vue en tant que variable "something". De manière optionnelle, vous pouvez faire précéder le nom de variable d'une [spécification de convertisseur](https://docs.djangoproject.com/en/2.1/topics/http/urls/#path-converters), qui définit le type de la donnée (int, str, slug, uuid, path).
 
 Dans ce cas, nous utilisons `'<int:pk>'` pour capturer l'id du livre, qui doit être une chaîne formatée d'une certaine manière, et passer cet id à la vue en tant que paramètre nommé `pk` (abréviation pour primary key - clé primaire). C'est l'id qui doit être utilisé pour stocker le livre de manière unique dans la base de données, comme défini dans le modèle Book.
 
@@ -261,11 +252,11 @@ L'essentiel de ce que vous aurez besoin de savoir pour déclarer une recherche d
 | $               | Recherche la fin du texte.                                                                                                                                                                                                                                                 |
 | \d              | Recherche un digit (0, 1, 2, ... 9).                                                                                                                                                                                                                                       |
 | \w              | Recherche un caractère de mot, c'est-à-dire tout caractère dans l'alphabet (majuscule ou minuscule), un digit ou un underscore (\_).                                                                                                                                       |
-| +               | Recherche au moins une occurrence du caractère précédent. Par exemple, pour rechercher au moins 1 digit, vous utiliseriez `\d+`. Pour rechercher au moins 1 caractère "a", vous utiliseriez `a+`.                                                                           |
+| +               | Recherche au moins une occurrence du caractère précédent. Par exemple, pour rechercher au moins 1 digit, vous utiliseriez `\d+`. Pour rechercher au moins 1 caractère "a", vous utiliseriez `a+`.                                                                          |
 | \*              | Recherche zéro ou plus occurrence(s) du caractère précédent. Par exemple, pour rechercher "rien ou un mot", vous pourriez utiliser `\w*`.                                                                                                                                  |
 | ( )             | Capture la partie du pattern contenue dans les parenthèses. Toutes les valeurs capturées seront passées à la vue en tant que paramètres non nommés (si plusieurs patterns sont capturés, les paramètres associés seront fournis dans l'ordre de déclaration des captures). |
-| (?P<_name_>...) | Capture le pattern (indiqué par…) en tant que variable nommée (dans ce cas "name"). Les valeurs capturées sont passées à la vue avec le nom spécifié. Votre vue doit par conséquent déclarer un argument avec le même nom !                                               |
-| [ ]            | Recherche l'un des caractères contenus dans cet ensemble. Par exemple, [abc] va rechercher "a" ou "b" ou "c". [-\w] va rechercher le caractère "-" ou tout caractère de mot.                                                                                               |
+| (?P<_name_>...) | Capture le pattern (indiqué par…) en tant que variable nommée (dans ce cas "name"). Les valeurs capturées sont passées à la vue avec le nom spécifié. Votre vue doit par conséquent déclarer un argument avec le même nom !                                                |
+| [ ]             | Recherche l'un des caractères contenus dans cet ensemble. Par exemple, [abc] va rechercher "a" ou "b" ou "c". [-\w] va rechercher le caractère "-" ou tout caractère de mot.                                                                                               |
 
 La plupart des autres caractères peuvent être pris littéralement.
 
@@ -397,7 +388,7 @@ def book_detail_view(request, primary_key):
 
 Créez le fichier HTML **/locallibrary/catalog/templates/catalog/book_detail.html**, et copiez-y le code ci-dessous. Comme on l'a dit plus haut, c'est là le nom de template attendu par défaut par la vue générique basée sur classe _detail_ (pour un modèle appelé `Book` dans une application appelée `catalog`).
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -579,8 +570,11 @@ Le code requis pour le mappeur d'URL et les vues sera virtuellement identique au
 > - Une fois que vous aurez créé le mappeur d'URL pour la page "liste d'auteurs", vous aurez besoin de mettre aussi à jour le lien **All authors** dans le template de base. Suivez la [même procédure](#Update_the_base_template) que celle adoptée quand nous avons mis à jour le lien **All books**.
 > - Une fois créé le mappeur d'URL pour la page de détails sur l'auteur, vous devrez aussi mettre à jour le [template de la vue détail d'un livre](#Creating_the_Detail_View_template) (**/locallibrary/catalog/templates/catalog/book_detail.html**), de sorte que le lien vers l'auteur pointe vers votre nouvelle page de détails sur l'auteur (au lieu d'être une URL vide). La ligne va avoir comme changement la balise montrée en gras ci-dessous.
 >
->   ```html
->   <p><strong>Author:</strong> <a href="{% url 'author-detail' book.author.pk %}">\{{ book.author }}</a></p>
+>   ```django
+>   <p>
+>     <strong>Author:</strong>
+>     <a href="{% url 'author-detail' book.author.pk %}">\{{ book.author }}</a>
+>   </p>
 >   ```
 
 Quand vous aurez fini, vos pages vont ressembler aux captures d'écran suivantes.

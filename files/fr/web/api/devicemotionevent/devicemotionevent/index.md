@@ -1,14 +1,6 @@
 ---
 title: DeviceMotionEvent.DeviceMotionEvent()
 slug: Web/API/DeviceMotionEvent/DeviceMotionEvent
-tags:
-  - API
-  - Constructeurs
-  - Mobile
-  - Mouvement
-  - Orientation
-  - axes
-translation_of: Web/API/DeviceMotionEvent/DeviceMotionEvent
 ---
 
 {{APIRef("Device Orientation Events")}}{{Non-standard_header}}

@@ -1,7 +1,6 @@
 ---
-title: '::file-selector-button'
+title: "::file-selector-button"
 slug: Web/CSS/::file-selector-button
-original_slug: Web/CSS/::file-selector-button
 ---
 
 {{CSSRef}}
@@ -31,7 +30,7 @@ selector::file-selector-button
 ```html
 <form>
   <label for="fileUpload">Subir archivo</label>
-  <input type="file" id="fileUpload">
+  <input type="file" id="fileUpload" />
 </form>
 ```
 
@@ -46,15 +45,15 @@ form {
 ```
 
 ```css
-input[type=file]::file-selector-button {
+input[type="file"]::file-selector-button {
   border: 2px solid #6c5ce7;
-  padding: .2em .4em;
-  border-radius: .2em;
+  padding: 0.2em 0.4em;
+  border-radius: 0.2em;
   background-color: #a29bfe;
   transition: 1s;
 }
 
-input[type=file]::file-selector-button:hover {
+input[type="file"]::file-selector-button:hover {
   background-color: #81ecec;
   border: 2px solid #00cec9;
 }
@@ -75,7 +74,7 @@ Tenga en cuenta que `::file-selector-button` es un elemento completo y, como tal
 ```html
 <form>
   <label for="fileUpload">Subir archivo</label>
-  <input type="file" id="fileUpload">
+  <input type="file" id="fileUpload" />
 </form>
 ```
 
@@ -90,40 +89,40 @@ form {
 ```
 
 ```css
-input[type=file]::-ms-browse {
+input[type="file"]::-ms-browse {
   border: 2px solid #6c5ce7;
-  padding: .2em .4em;
-  border-radius: .2em;
+  padding: 0.2em 0.4em;
+  border-radius: 0.2em;
   background-color: #a29bfe;
 }
 
-input[type=file]::-webkit-file-upload-button {
+input[type="file"]::-webkit-file-upload-button {
   border: 2px solid #6c5ce7;
-  padding: .2em .4em;
-  border-radius: .2em;
-  background-color: #a29bfe;
-  transition: 1s;
-}
-
-input[type=file]::file-selector-button {
-  border: 2px solid #6c5ce7;
-  padding: .2em .4em;
-  border-radius: .2em;
+  padding: 0.2em 0.4em;
+  border-radius: 0.2em;
   background-color: #a29bfe;
   transition: 1s;
 }
 
-input[type=file]::-ms-browse:hover {
+input[type="file"]::file-selector-button {
+  border: 2px solid #6c5ce7;
+  padding: 0.2em 0.4em;
+  border-radius: 0.2em;
+  background-color: #a29bfe;
+  transition: 1s;
+}
+
+input[type="file"]::-ms-browse:hover {
   background-color: #81ecec;
   border: 2px solid #00cec9;
 }
 
-input[type=file]::-webkit-file-upload-button:hover {
+input[type="file"]::-webkit-file-upload-button:hover {
   background-color: #81ecec;
   border: 2px solid #00cec9;
 }
 
-input[type=file]::file-selector-button:hover {
+input[type="file"]::file-selector-button:hover {
   background-color: #81ecec;
   border: 2px solid #00cec9;
 }

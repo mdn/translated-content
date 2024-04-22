@@ -1,7 +1,6 @@
 ---
 title: Seguridad en Firefox 2
 slug: Mozilla/Firefox/Releases/2/Security_changes
-original_slug: Seguridad_en_Firefox_2
 ---
 
 {{FirefoxSidebar}}

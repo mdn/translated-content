@@ -1,19 +1,16 @@
 ---
-title: GeolocationCoordinates.latitude
+title: "GeolocationCoordinates: latitude プロパティ"
+short-title: latitude
 slug: Web/API/GeolocationCoordinates/latitude
+l10n:
+  sourceCommit: b6984118ac9482e683a654edfefa4b426ca3c7ca
 ---
 
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 **`GeolocationCoordinates.latitude`** は読み取り専用のプロパティであり、 `double` 値でその位置の緯度を 10 進形式で表します。
 
-## 構文
-
-```js
-let lat = geolocationCoordinatesInstance.latitude
-```
-
-### 値
+## 値
 
 `double` 値でその位置の緯度を 10 進形式で表します。
 

@@ -1,5 +1,5 @@
 ---
-title: 'RangeError: x can''t be converted to BigInt because it isn''t an integer'
+title: "RangeError: x can't be converted to BigInt because it isn't an integer"
 slug: Web/JavaScript/Reference/Errors/Cant_be_converted_to_BigInt_because_it_isnt_an_integer
 l10n:
   sourceCommit: ac4ad443e29371b7c807051e8d10cac4d53d00c4

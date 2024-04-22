@@ -1,13 +1,6 @@
 ---
 title: window.prompt
 slug: Web/API/Window/prompt
-tags:
-  - API
-  - DOM
-  - Méthode
-  - Reference
-  - Window
-translation_of: Web/API/Window/prompt
 ---
 
 {{ApiRef("Window")}}
@@ -42,14 +35,14 @@ if (signe.toLowerCase() == "verseau") {
 
 // Différentes façons d'utiliser prompt
 signe = window.prompt(); // ouvre une fenêtre de saisie sans texte
-signe = prompt();       //  ouvre une fenêtre de saisie sans texte
+signe = prompt(); //  ouvre une fenêtre de saisie sans texte
 
- // ouvre une fenêtre avec le texte "Quelle est la réponse ?"
-signe = window.prompt('Quelle est la réponse ?');
+// ouvre une fenêtre avec le texte "Quelle est la réponse ?"
+signe = window.prompt("Quelle est la réponse ?");
 
 // ouvre une fenêtre avec le texte "Quelle est la réponse ?"
 // avec la valeur "42" comme réponse par défaut
-signe = window.prompt('Quelle est la réponse ?', '42');
+signe = window.prompt("Quelle est la réponse ?", "42");
 ```
 
 Lorsque l'utilisateur clique sur le bouton OK, le texte saisi dans le champ est renvoyé par la fonction. Si l'utilisateur clique sur OK sans avoir saisi de texte, c'est la chaîne vide qui est renvoyée. Si l'utilisateur clique sur le bouton "Annuler", la fonction renvoie `null`.

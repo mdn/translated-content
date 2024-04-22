@@ -29,19 +29,17 @@ O **`Event()`** cria uma nova {{domxref("Event")}}.
 ```js
 // criar um evento com bubbles true e que não pode ser cancelado
 
-var ev = new Event("look", {"bubbles":true, "cancelable":false});
+var ev = new Event("look", { bubbles: true, cancelable: false });
 document.dispatchEvent(ev);
 ```
 
 ## Especificações
 
-| Especificação                                                            | Status                           | Comentário         |
-| ------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('DOM WHATWG','#interface-event','Event()')}} | {{Spec2('DOM WHATWG')}} | Definição inicial. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Event.Event")}}
+{{Compat}}
 
 ## Veja também
 

@@ -1,14 +1,6 @@
 ---
 title: Boolean.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Boolean/toString
-tags:
-  - Boolean
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Boolean/toString
-original_slug: Web/JavaScript/Reference/Objets_globaux/Boolean/toString
 ---
 
 {{JSRef}}
@@ -20,7 +12,7 @@ La méthode **`toString()`** renvoie une chaine de caractères correspondant à 
 ## Syntaxe
 
 ```js
-bool.toString()
+bool.toString();
 ```
 
 ### Valeur de retour

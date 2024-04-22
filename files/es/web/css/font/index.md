@@ -39,25 +39,8 @@ También se pueden especificar los tipos de letra del sistema usando la propieda
   - : el tipo de letra usado para etiquetar pequeños controles (small control).
 - status-bar
   - : el tipo de letra usado en la barra de estado de la ventana.
--moz-window
-
-  \-moz-document
-
-  \-moz-workspace
-
-  \-moz-desktop
-
-  \-moz-info
-
-  \-moz-dialog
-
-  \-moz-button
-
-  \-moz-pull-down-menu
-
-  \-moz-list
-
-  \-moz-field
+- Gecko implementa:
+  - : `-moz-window`, `-moz-document`, `-moz-workspace`, `-moz-desktop`, `-moz-info`, `-moz-dialog`, `-moz-button`, `-moz-pull-down-menu`, `-moz-list`, `-moz-field`
 
 ## Ejemplos
 
@@ -86,17 +69,10 @@ Si no se establece un valor concreto, las propiedades tomarán el valor por defe
 
 La propiedad {{ Cssxref("font-size-adjust") }} también se establece a su valor inicial (`none`) cuando se usa la propiedad general {{ Cssxref("font") }}.
 
-## Especificaciones
+### Especificaciones
 
-- [CSS 1](http://www.w3.org/TR/CSS1#font)
-- [CSS 2](http://www.w3.org/TR/1998/REC-CSS2-19980512/fonts.html#propdef-font) (para {{ Cssxref("font-size-adjust") }})
-- [CSS 2.1](http://www.w3.org/TR/CSS21/fonts.html#propdef-font)
-- [css3-ui](http://www.w3.org/TR/css3-ui/#font) (para los nuevos valores de fuentes de sistema])
+{{Specifications}}
 
-## Compatibilidades
+### Compatibilidad con navegadores
 
-| Navegador         | Versión mínima |
-| ----------------- | -------------- |
-| Internet Explorer | 3              |
-| Netscape          | 4              |
-| Opera             | 3.5            |
+{{Compat}}

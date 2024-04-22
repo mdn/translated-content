@@ -1,7 +1,6 @@
 ---
 title: Window.scrollMaxX
 slug: Web/API/Window/scrollMaxX
-translation_of: Web/API/Window/scrollMaxX
 ---
 
 {{APIRef}} {{Non-standard_header}}

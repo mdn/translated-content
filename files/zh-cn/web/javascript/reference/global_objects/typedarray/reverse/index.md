@@ -34,6 +34,6 @@ console.log(uint8); // Uint8Array [3, 2, 1]
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{jsxref("Array.prototype.reverse()")}}

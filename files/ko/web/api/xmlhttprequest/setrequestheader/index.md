@@ -2,6 +2,7 @@
 title: XMLHttpRequest.setRequestHeader()
 slug: Web/API/XMLHttpRequest/setRequestHeader
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 **XMLHttpRequest.setRequestHeader()** 메소드는 HTTP요청 헤더의 값을 설정합니다. 반드시 `setRequestHeader()`를 [`open()`](#open)뒤에 호출하여야 하며, 또한 `send()`가 호출되기 전에 호출해야 합니다. 만약 이 메소드가 같은 헤더에 대하여 여러번 호출이 되면, 그 값은 단일 요청 헤더에 병합됩니다.

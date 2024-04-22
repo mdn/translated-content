@@ -1,7 +1,8 @@
 ---
-title: ':root'
+title: ":root"
 slug: Web/CSS/:root
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`:root`** [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)는 문서 트리의 루트 요소를 선택합니다 HTML의 루트 요소는 {{htmlelement("html")}} 요소이므로, `:root`의 [명시도](/ko/docs/Web/CSS/Specificity)가 더 높다는 점을 제외하면 `html` 선택자와 똑같습니다.

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4cf1362de4a7634f5f21deba949973cc240f5fd4
 ---
 
-{{MDNSidebar}}
+{{GlossarySidebar}}
 
 Une **copie profonde** d'un objet est une copie dont les propriétés ne partagent pas les mêmes références (ne pointent pas vers les mêmes valeurs sous-jacentes) que celles de l'objet source de laquelle la copie a été faite. Par conséquent, lorsque vous modifiez la source ou la copie, vous pouvez être assuré que vous ne modifiez pas également l'autre objet&nbsp;; c'est-à-dire que vous ne provoquerez pas involontairement des modifications inattendues de la source ou de la copie. Ce comportement contraste avec celui d'une [copie superficielle](/fr/docs/Glossary/Shallow_copy), dans lequel les modifications apportées à la source ou à la copie peuvent également entraîner la modification de l'autre objet (car les deux objets partagent les mêmes références).
 
@@ -14,8 +14,10 @@ En JavaScript, les opérations de copie d'objet intégrées standards (telles qu
 Une façon de faire une copie complète d'un objet JavaScript, s'il peut être [sérialisé](/fr/docs/Glossary/Serialization), est d'utiliser [`JSON.stringify()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) pour convertir l'objet en une chaîne JSON, puis de reconvertir la chaîne en un (entièrement nouvel) objet JavaScript avec [`JSON.parse()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)&nbsp;:
 
 ```js
-let liste_ingredients = ["nouilles", {"liste": ["œufs", "farine", "eau"]}];
-let liste_ingredients_copieprofonde = JSON.parse(JSON.stringify(liste_ingredients));
+let liste_ingredients = ["nouilles", { liste: ["œufs", "farine", "eau"] }];
+let liste_ingredients_copieprofonde = JSON.parse(
+  JSON.stringify(liste_ingredients),
+);
 
 // Modifier la valeur de la propriété 'liste' dans liste_ingredients_copieprofonde
 liste_ingredients_copieprofonde[1].liste = ["farine de riz", "water"];

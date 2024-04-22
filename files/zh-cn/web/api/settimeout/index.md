@@ -5,7 +5,7 @@ slug: Web/API/setTimeout
 
 {{APIRef("HTML DOM")}}
 
-全局的 **`setTimeout()`** 方法设置一个定时器，该定时器在定时器到期后执行一个函数或指定的一段代码。
+全局的 **`setTimeout()`** 方法设置一个定时器，一旦定时器到期，就会执行一个函数或指定的代码片段。
 
 ## 语法
 
@@ -172,10 +172,10 @@ const myBoundMethod = function (sProperty) {
   console.log(arguments.length > 0 ? this[sProperty] : this);
 }.bind(myArray);
 
-myBoundMethod(); // 输出 "zero,one,two"。因为 'this' 在函数中绑定到了 myArray 
+myBoundMethod(); // 输出 "zero,one,two"。因为 'this' 在函数中绑定到了 myArray
 myBoundMethod(1); // 输出 "one"
 setTimeout(myBoundMethod, 1.0 * 1000); // 由于绑定问题，还是在 1 秒后输出 "zero,one,two"
-setTimeout(myBoundMethod, 1.5 * 1000, "1"); // 在 1.5 秒后输出 "one" 
+setTimeout(myBoundMethod, 1.5 * 1000, "1"); // 在 1.5 秒后输出 "one"
 ```
 
 ### 传递字符串字面量

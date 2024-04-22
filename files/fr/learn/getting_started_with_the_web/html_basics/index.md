@@ -11,7 +11,7 @@ HTML (pour <i lang="en">HyperText Markup Language</i>, qu'on peut traduire en «
 
 ## Qu'est-ce que HTML&nbsp;?
 
-HTML est _un langage de balisage_ qui définit la structure du contenu. Un document HTML est une suite d'**[éléments](/fr/docs/Glossary/Element) utilisés pour encadrer différentes parties du contenu afin de les faire apparaître ou se comporter d'une certaine façon. Les [balises](/fr/docs/Glossary/Tag) autour du contenu permettent de transformer une image ou un texte pour obtenir un lien vers une autre page, de créer des titres, etc. Prenons comme exemple le contenu qui suit&nbsp;:
+HTML est _un langage de balisage_ qui définit la structure du contenu. Un document HTML est une suite d'[éléments](/fr/docs/Glossary/Element) utilisés pour encadrer différentes parties du contenu afin de les faire apparaître ou se comporter d'une certaine façon. Les [balises](/fr/docs/Glossary/Tag) autour du contenu permettent de transformer une image ou un texte pour obtenir un lien vers une autre page, de créer des titres, etc. Prenons comme exemple le contenu qui suit&nbsp;:
 
 ```text
 Mon chat est très grincheux.
@@ -83,7 +83,7 @@ Cet élément contient deux attributs (`src` et `alt`) mais n'a pas de contenu e
 Voilà ce qu'on peut dire individuellement sur les éléments HTML. En revanche, un élément HTML seul n'a pas vraiment d'intérêt. Nous allons donc voir comment sont assemblés les éléments pour former une page HTML complète. Reprenons le code que nous avions mis dans le fichier d'exemple `index.html` (voir l'article [Manipuler les fichiers](/fr/docs/Learn/Getting_started_with_the_web/Dealing_with_files))&nbsp;:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
@@ -183,7 +183,8 @@ Ainsi, si on veut qu'une partie de notre paragraphe devienne une liste, à la pl
 
 ```html
 <p>
-  À Mozilla, nous formons une communauté de bidouilleuses, concepteurs, constructrices qui travaillent ensemble…
+  À Mozilla, nous formons une communauté de bidouilleuses, concepteurs,
+  constructrices qui travaillent ensemble…
 </p>
 ```
 

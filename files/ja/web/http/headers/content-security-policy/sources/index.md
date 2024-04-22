@@ -1,5 +1,5 @@
 ---
-title: "CSP ソース値"
+title: CSP ソース値
 slug: Web/HTTP/Headers/Content-Security-Policy/Sources
 l10n:
   sourceCommit: af967bb052695baa631c004b9b149c6f91920776

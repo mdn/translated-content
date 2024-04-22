@@ -100,14 +100,14 @@ web 应用程序生命周期的这个阶段通常允许你编写“未来代码�
 
 1. 能够使用最新的语言特性编写代码，并将其转换为可在日常设备上使用的代码。例如，你可能希望使用尖端的新语言特性来编 JavaScript，但是你的最终产品代码仍然可以在不支持这些特性的旧浏览器上工作。例如：
 
-    - [Babel](https://babeljs.io/):一个 JavaScript 编译器，允许开发人员使用最前沿的 JavaScript 编写代码，然后 Babel 将其转换为老式的 JavaScript，让更多的浏览器能够理解。开发人员也可以编写和发布[plugins for Babel](https://babeljs.io/docs/en/plugins).
-    - [PostCSS](https://postcss.org/):和 Babel 做同样的事情，但是有先进的 CSS 特性。如果没有相同的方法使用旧的 CSS 特性来做一些事情，PostCSS 将安装一个 JavaScript 填充来模拟你想要的 CSS 效果。
+   - [Babel](https://babeljs.io/):一个 JavaScript 编译器，允许开发人员使用最前沿的 JavaScript 编写代码，然后 Babel 将其转换为老式的 JavaScript，让更多的浏览器能够理解。开发人员也可以编写和发布[plugins for Babel](https://babeljs.io/docs/en/plugins).
+   - [PostCSS](https://postcss.org/):和 Babel 做同样的事情，但是有先进的 CSS 特性。如果没有相同的方法使用旧的 CSS 特性来做一些事情，PostCSS 将安装一个 JavaScript 填充来模拟你想要的 CSS 效果。
 
 2. 选择用一种完全不同的语言编写代码，并将其转换为与 web 兼容的语言。例如：
 
-    - [Sass/SCSS](https://sass-lang.com/)：这个 CSS 扩展允许你使用变量、嵌套规则、混合、函数和许多其他特性，其中一些特性在本地 CSS 中是可用的 (比如变量)，而另一些则不是。
-    - [TypeScript](https://www.typescriptlang.org/)：TypeScript 是 JavaScript 的一个超集，它提供了一堆额外的特性。TypeScript 编译器在生成产品时将 TypeScript 代码转换为 JavaScript。
-    - 框架例如 [React](https://reactjs.org/)、[Ember](https://emberjs.com/) 和 [Vue](https://vuejs.org/)：框架提供了许多免费的功能，并允许你通过构建在普通 JavaScript 之上的自定义语法来使用它们。在后台，框架的 JavaScript 代码努力解释这个定制语法，并将其呈现为最终的 web 应用程序。
+   - [Sass/SCSS](https://sass-lang.com/)：这个 CSS 扩展允许你使用变量、嵌套规则、混合、函数和许多其他特性，其中一些特性在本地 CSS 中是可用的 (比如变量)，而另一些则不是。
+   - [TypeScript](https://www.typescriptlang.org/)：TypeScript 是 JavaScript 的一个超集，它提供了一堆额外的特性。TypeScript 编译器在生成产品时将 TypeScript 代码转换为 JavaScript。
+   - 框架例如 [React](https://reactjs.org/)、[Ember](https://emberjs.com/) 和 [Vue](https://vuejs.org/)：框架提供了许多免费的功能，并允许你通过构建在普通 JavaScript 之上的自定义语法来使用它们。在后台，框架的 JavaScript 代码努力解释这个定制语法，并将其呈现为最终的 web 应用程序。
 
 ### 开发后阶段
 

@@ -1,18 +1,6 @@
 ---
-title: 'Django didactique Section 5: Créer la page d''accueil'
+title: "Django didactique Section 5: Créer la page d'accueil"
 slug: Learn/Server-side/Django/Home_page
-tags:
-  - Article
-  - Cadriciel
-  - Code
-  - Didactique
-  - Django (Vues)
-  - Django (gabarits)
-  - Débutant
-  - Programmation
-  - Python
-  - django
-translation_of: Learn/Server-side/Django/Home_page
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}
@@ -198,16 +186,22 @@ Dans l'extrait ci-dessous vous avec trois sections nommées qui pourront être r
 - sidebar : une barre de navigation latérale à gauche
 - content : le contenu de la page
 
-```html
-<!DOCTYPE html>
+```django
+<!doctype html>
 <html lang="fr">
-<head>
-  {% block title %}<title>Bibliothèque locale</title>{% endblock %}
-</head>
-<body>
-  {% block sidebar %}<!-- insert default navigation text for every page -->{% endblock %}
-  {% block content %}<!-- default content text (typically empty) -->{% endblock %}
-</body>
+  <head>
+    {% block title %}
+      <title>Bibliothèque locale</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block sidebar %}
+      <!-- insert default navigation text for every page -->
+    {% endblock %}
+    {% block content %}
+      <!-- default content text (typically empty) -->
+    {% endblock %}
+  </body>
 </html>
 ```
 
@@ -215,12 +209,15 @@ Lorsque l'on définit un gabarit pour une vue particulière, il convient de déf
 
 À titre indicatif, l'extrait ci-dessous présente la manière d'activer à l'aide de la balise `extends` le remplacement de la section `content`. La page HTML générée inclura la structure de la page définie plus haut et le code généré à la fois pour la section `title`, mais avec les éléments nouveaux, ci-dessous, pour la section `content`.
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
-  <h1>Accueil de la bibliothèque locale</h1>
-  <p>Bienvenue sur la bibliothèque locale, un site web développé par <em>Mozilla Developer Network</em>!</p>
+<h1>Accueil de la bibliothèque locale</h1>
+<p>
+  Bienvenue sur la bibliothèque locale, un site web développé par
+  <em>Mozilla Developer Network</em>!
+</p>
 {% endblock %}
 ```
 
@@ -232,37 +229,40 @@ Nous allons nous appuyer sur le gabarit ci-dessous pour construire la page de ba
 
 Créez un nouveau fichier nommé **_base_generic.html_** dans le dossier **/locallibrary/catalog/templates/** (à créer aussi) et copiez-y le texte ci-dessous :
 
-```html
-<!DOCTYPE html>
+```django
+<!doctype html>
 <html lang="en">
-<head>
-  {% block title %}<title>Bibliothèque locale</title>{% endblock %}
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <!-- Add additional CSS in static file -->
-  {% load static %}
-  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-</head>
-<body>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-2">
+  <head>
+    {% block title %}
+      <title>Bibliothèque locale</title>
+    {% endblock %}
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous" />
+    <!-- Add additional CSS in static file -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-2">
           {% block sidebar %}
-           <ul class="sidebar-nav">
-               <li><a href="{% url 'index' %}">Home</a></li>
-               <li><a href="">Tous les livres</a></li>
-               <li><a href="">Tous les auteurs</a></li>
-           </ul>
+          <ul class="sidebar-nav">
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="">Tous les livres</a></li>
+            <li><a href="">Tous les auteurs</a></li>
+          </ul>
           {% endblock %}
+        </div>
+        <div class="col-sm-10">{% block content %} {% endblock %}</div>
       </div>
-         <div class="col-sm-10 ">
-             {% block content %}
-             {% endblock %}
-         </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>
 ```
 
@@ -272,9 +272,9 @@ De même, ce gabarit fait appel à une feuille de style - _en ligne 10_ - locale
 
 ```css
 .sidebar-nav {
-    margin-top: 20px;
-    padding: 0;
-    list-style: none;
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
 }
 ```
 
@@ -282,20 +282,23 @@ De même, ce gabarit fait appel à une feuille de style - _en ligne 10_ - locale
 
 Maintenant créez le fichier HTML **_index.html_** dans le dossier **/locallibrary/catalog/templates/** et copiez-y le code ci-dessous. Ce code étend le template de base sur la première ligne et remplace le bloc par défaut `content` pour le template.
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
-  <h1>Accueil de la bibliothèque locale</h1>
-  <p>Bienvenue à la bibliothèque locale, un site web développé par <em>Mozilla Developer Network</em>!</p>
-  <h2>Contenu dynamique</h2>
-  <p>La bibliothèque dispose des enregistrements suivants:</p>
-  <ul>
-    <li><strong>Livres:</strong> \{{ num_books }}</li>
-    <li><strong>Copies:</strong> \{{ num_instances }}</li>
-    <li><strong>Copies disponibles:</strong> \{{ num_instances_available }}</li>
-    <li><strong>Auteurs:</strong> \{{ num_authors }}</li>
-  </ul>
+<h1>Accueil de la bibliothèque locale</h1>
+<p>
+  Bienvenue à la bibliothèque locale, un site web développé par
+  <em>Mozilla Developer Network</em>!
+</p>
+<h2>Contenu dynamique</h2>
+<p>La bibliothèque dispose des enregistrements suivants:</p>
+<ul>
+  <li><strong>Livres:</strong> \{{ num_books }}</li>
+  <li><strong>Copies:</strong> \{{ num_instances }}</li>
+  <li><strong>Copies disponibles:</strong> \{{ num_instances_available }}</li>
+  <li><strong>Auteurs:</strong> \{{ num_authors }}</li>
+</ul>
 {% endblock %}
 ```
 
@@ -322,17 +325,20 @@ Vos projets utiliseront probablement de fichiers statiques, par exemple des imag
 
 Au sein du gabarit, vous faites appel à la balise `load` en précisant "static" pour faire votre ajout, comme décrits dans l'extrait ci-dessous. Vous utilisez la balise `static` et vous spécifiez ensuite l'URL pour accéder au fichier nécessaire.
 
-```html
+```django
 <!-- Add additional CSS in static file -->
 {% load static %}
-<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+<link rel="stylesheet" href="{% static 'css/styles.css' %}" />
 ```
 
 De la même manière, vous pouvez par exemple :
 
-```html
+```django
 {% load static %}
-<img src="{% static 'catalog/images/local_library_model_uml.png' %}" alt="UML diagram" style="width:555px;height:540px;">
+<img
+  src="{% static 'catalog/images/local_library_model_uml.png' %}"
+  alt="UML diagram"
+  style="width:555px;height:540px;" />
 ```
 
 > **Note :** Les exemples ci-dessus indiquent où se trouvent les fichiers, mais le cadriciel ne travaille pas ainsi par défaut. Nous avons configuré le serveur web de développement en modifiant le routage des URL (**/locallibrary/locallibrary/urls.py**) à [la création du squelette du site](/fr/docs/Learn/Server-side/Django/skeleton_website). Cependant nous devrons travailler plus tard la mise en production.
@@ -349,7 +355,7 @@ L'exemple ci-dessous introduit l'utilisation de la balise de gabarit `url`.
 
 Cette balise accepte des références enregistrées par la fonction `path()` appelée dans les fichiers **urls.py** ainsi que les valeurs pour chacun des arguments associés à une vue. Elle retourne une URL qui peut être utilisée pour lier une ressource.
 
-#### Où trouver les gabarits...
+#### Où trouver les gabarits
 
 Par défaut Django ne sait pas où sont vos gabarits, vous devez lui indiquer où les trouver. Pour ce faire, vous allez ajouter le répertoire des gabarits (templates) à la variable d'environnement du projet TEMPLATES en éditant le fichier **settings.py** comme indiqué en gras ci-dessous :
 
@@ -387,7 +393,7 @@ Voici deux suggestions pour tester votre connaissance de Django et des requêtes
 
 1. La bibliothèque locale dispose d'un gabarit d'origine qui inclut une section `title`. Surchargez cette section dans le gabarit index et créer un nouveau titre.
 
-    > **Note :** La section Concevoir un gabarit détaille la manière de modifier une section.
+   > **Note :** La section Concevoir un gabarit détaille la manière de modifier une section.
 
 2. Modifiez la vue pour disposer de décomptes pour les genres et les titres de livre qui contiennent un mot (en repectant la casse) et transmettez cela via le `context.` Pour faire cela utilisez les variables `num_books` et `num_instances_available`. Ensuite vous pourrez mettre à jour le gabarit de la page d'accueil.
 

@@ -1,13 +1,6 @@
 ---
 title: Politique de sécurité de contenu
 slug: Web/HTTP/Headers/Content-Security-Policy
-tags:
-  - CSP
-  - HTTP
-  - Référence(2)
-  - Sécurité
-  - en-tête
-translation_of: Web/HTTP/Headers/Content-Security-Policy
 ---
 
 {{HTTPSidebar}}

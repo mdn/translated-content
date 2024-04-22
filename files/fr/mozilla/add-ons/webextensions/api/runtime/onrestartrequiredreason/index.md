@@ -1,20 +1,9 @@
 ---
 title: runtime.OnRestartRequiredReason
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/OnRestartRequiredReason
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - OnRestartsRequiredReason
-  - Reference
-  - Type
-  - WebExtensions
-  - runtime
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/OnRestartRequiredReason
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 La raison pour laquelle l'événement {{WebExtAPIRef("runtime.onRestartRequired", "onRestartRequired")}} est en cours d'exécution.
 

@@ -4,6 +4,7 @@ slug: Games/Techniques/Async_scripts
 l10n:
   sourceCommit: f3ef176745e4875e42584df143fba15a63c7ad32
 ---
+
 {{GamesSidebar}}
 
 Chaque jeu moyen ou volumineux doit compiler le code [asm.js](/fr/docs/Games/Tools/asm.js) dans le cadre d'un script asynchrone afin de donner au navigateur le maximum de flexibilité pour optimiser le processus de compilation.
@@ -21,7 +22,7 @@ Obtenir une compilation asynchrone est facile&nbsp;: lors de l'écriture de votr
 ou, pour faire la même chose via un script&nbsp;:
 
 ```js
-const script = document.createElement('script');
+const script = document.createElement("script");
 script.src = "file.js";
 document.body.appendChild(script);
 ```
@@ -33,13 +34,15 @@ document.body.appendChild(script);
 Il existe deux situations courantes où un script n'est \*pas\* asynchrone malgré l'utilisation d'`async` ou du chargement d'un script (voir [la spécification HTML à ce sujet](https://html.spec.whatwg.org/multipage/scripting.html))&nbsp;:
 
 ```html
-<script async>code</script>
+<script async>
+  code;
+</script>
 ```
 
 et
 
 ```js
-const script = document.createElement('script');
+const script = document.createElement("script");
 script.textContent = "code";
 document.body.appendChild(script);
 ```
@@ -50,7 +53,7 @@ Que faire si votre code est dans une chaîne de caractères JavaScript&nbsp;? Au
 
 ```js
 const blob = new Blob([codeString]);
-const script = document.createElement('script');
+const script = document.createElement("script");
 const url = URL.createObjectURL(blob);
 script.onload = script.onerror = () => URL.revokeObjectURL(url);
 script.src = url;

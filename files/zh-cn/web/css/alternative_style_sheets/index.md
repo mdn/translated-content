@@ -24,11 +24,23 @@ The alternate stylesheets are commonly specified using a {{HTMLElement("link")}}
 一般使用<{{HTMLElement("link")}}>指定可替换样式表。在这个标签中指定`rel="alternate stylesheet"` 属性和 `title="..."`属性
 
 ```html
-<link href="reset.css" rel="stylesheet" type="text/css">
+<link href="reset.css" rel="stylesheet" type="text/css" />
 
-<link href="default.css" rel="stylesheet" type="text/css" title="Default Style">
-<link href="fancy.css" rel="alternate stylesheet" type="text/css" title="Fancy">
-<link href="basic.css" rel="alternate stylesheet" type="text/css" title="Basic">
+<link
+  href="default.css"
+  rel="stylesheet"
+  type="text/css"
+  title="Default Style" />
+<link
+  href="fancy.css"
+  rel="alternate stylesheet"
+  type="text/css"
+  title="Fancy" />
+<link
+  href="basic.css"
+  rel="alternate stylesheet"
+  type="text/css"
+  title="Basic" />
 ```
 
 In this example, the styles "Default Style", "Fancy", and "Basic" will be listed in the _Page Style_ submenu, with "Default Style" pre-selected. When the user selects a different style, the page will immediately be re-rendered using that style sheet.

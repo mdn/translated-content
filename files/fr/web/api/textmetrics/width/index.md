@@ -1,13 +1,6 @@
 ---
 title: TextMetrics.width
 slug: Web/API/TextMetrics/width
-tags:
-  - API
-  - Canevas
-  - Propriété
-  - Référence(2)
-  - TextMetrics
-translation_of: Web/API/TextMetrics/width
 ---
 
 {{APIRef("Canvas API")}}

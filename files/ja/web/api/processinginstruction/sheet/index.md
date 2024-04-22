@@ -20,7 +20,7 @@ l10n:
 ```html
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/css" href="rule.css"?>
-…
+<!-- … -->
 ```
 
 この処理命令の `sheet` プロパティは {{domxref("StyleSheet")}} オブジェクトで、`rule.css` を示します。

@@ -84,7 +84,10 @@ CSS
 }
 
 /* To make the Demo clearer */
-* { outline-width: 10px; padding: 15px; }
+* {
+  outline-width: 10px;
+  padding: 15px;
+}
 ```
 
 {{ EmbedLiveSample('Example_1_-_dotted_and_dashed') }}
@@ -112,7 +115,10 @@ CSS
 }
 
 /* To make the Demo clearer */
-* { outline-width: 10px; padding: 15px; }
+* {
+  outline-width: 10px;
+  padding: 15px;
+}
 ```
 
 {{ EmbedLiveSample('Example_2_-_solid_and_double') }}
@@ -140,7 +146,10 @@ CSS
 }
 
 /* To make the Demo clearer */
-* { outline-width: 10px; padding: 15px; }
+* {
+  outline-width: 10px;
+  padding: 15px;
+}
 ```
 
 {{ EmbedLiveSample('Example_3_-_groove_and_ridge') }}
@@ -168,7 +177,10 @@ CSS
 }
 
 /* To make the Demo clearer */
-* { outline-width: 10px; padding: 15px; }
+* {
+  outline-width: 10px;
+  padding: 15px;
+}
 ```
 
 {{ EmbedLiveSample('Example_4_-_inset_and_outset') }}

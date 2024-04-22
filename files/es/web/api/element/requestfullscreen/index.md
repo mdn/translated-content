@@ -35,4 +35,4 @@ Ve a [Using full-screen mode](/es/docs/Web/Guide/API/DOM/Using_full_screen_mode)
 - {{domxref("document.mozFullScreenElement")}}
 - {{domxref("document.mozFullScreenEnabled")}}
 - {{cssxref(":-moz-full-screen")}}
-- {{HTMLAttrXRef("allowfullscreen", "iframe")}}
+- [`allowfullscreen`](/es/docs/Web/HTML/Element/iframe#allowfullscreen)

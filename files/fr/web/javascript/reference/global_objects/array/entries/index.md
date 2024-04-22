@@ -1,15 +1,6 @@
 ---
 title: Array.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Array/entries
-tags:
-  - Array
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Méthode
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/entries
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/entries
 ---
 
 {{JSRef}}
@@ -21,7 +12,7 @@ La méthode **`entries()`** renvoie un nouvel objet de type **`Array Iterator`**
 ## Syntaxe
 
 ```js
-arr.entries()
+arr.entries();
 ```
 
 ### Valeur de retour
@@ -47,7 +38,7 @@ for (const [index, element] of arr.entries()) {
 On peut avoir le même résultat en utilisant une boucle [for...of](/fr/docs/Web/JavaScript/Reference/Instructions/for...of) :
 
 ```js
-var arr = ['a', 'b', 'c'];
+var arr = ["a", "b", "c"];
 var eArr = arr.entries();
 
 for (let e of eArr) {

@@ -1,12 +1,6 @@
 ---
 title: La disposition en flux et le dépassement
 slug: Web/CSS/CSS_flow_layout/Flow_layout_and_overflow
-tags:
-  - CSS
-  - Guide
-  - Intermédiaire
-translation_of: Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Overflow
-original_slug: Web/CSS/CSS_Flow_Layout/Disposition_flux_et_dépassement
 ---
 
 {{QuickLinksWithSubpages("/fr/docs/Web/CSS/CSS_Flow_Layout/")}}

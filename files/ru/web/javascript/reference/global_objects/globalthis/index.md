@@ -1,14 +1,8 @@
 ---
 title: globalThis
 slug: Web/JavaScript/Reference/Global_Objects/globalThis
-tags:
-  - JavaScript
-  - Reference
-  - global
-  - globalThis
-  - this
-translation_of: Web/JavaScript/Reference/Global_Objects/globalThis
 ---
+
 {{jsSidebar("Objects")}}
 
 Глобальное свойство **`globalThis`** содержит значение глобального `this`, который является глобальным объектом.
@@ -43,15 +37,21 @@ globalThis
 
 ```js
 var getGlobal = function () {
-  if (typeof self !== 'undefined') { return self; }
-  if (typeof window !== 'undefined') { return window; }
-  if (typeof global !== 'undefined') { return global; }
-  throw new Error('unable to locate global object');
+  if (typeof self !== "undefined") {
+    return self;
+  }
+  if (typeof window !== "undefined") {
+    return window;
+  }
+  if (typeof global !== "undefined") {
+    return global;
+  }
+  throw new Error("unable to locate global object");
 };
 
 var globals = getGlobal();
 
-if (typeof globals.setTimeout !== 'function') {
+if (typeof globals.setTimeout !== "function") {
   // в данном окружении не существует setTimeout!
 }
 ```
@@ -59,8 +59,8 @@ if (typeof globals.setTimeout !== 'function') {
 С `globalThis` дополнительный поиск глобального объекта в разных средах больше не нужен:
 
 ```js
-if (typeof globalThis.setTimeout !== 'function') {
-// в данном окружении не существует setTimeout!
+if (typeof globalThis.setTimeout !== "function") {
+  // в данном окружении не существует setTimeout!
 }
 ```
 

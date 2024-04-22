@@ -1,7 +1,6 @@
 ---
 title: Public-Key-Pins-Report-Only
 slug: conflicting/Web/HTTP/Headers/Expect-CT_63e560324d2c47190db4456d746ba07b
-original_slug: Web/HTTP/Headers/Public-Key-Pins-Report-Only
 ---
 
 {{HTTPSidebar}}{{deprecated_header}}
@@ -65,7 +64,7 @@ Neste exemplo, **pin-sha256="cUPcTAZWKaASuYWhhneDttWpY3oBAkE3h2+soZS7sWs="** fix
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.Public-Key-Pins-Report-Only")}}
+{{Compat}}
 
 ## Veja também
 

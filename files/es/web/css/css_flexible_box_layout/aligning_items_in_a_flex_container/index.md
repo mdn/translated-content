@@ -15,7 +15,7 @@ Puedes echar un vistazo al código de este ejemplo a continuación. Cambia el ta
 
 {{EmbedGHLiveSample("css-examples/flexbox/alignment/intro.html", '100%', 700)}}
 
-## Propiedades que controlan la alineación.
+## Propiedades que controlan la alineación
 
 Las propiedades que veremos en esta guía son las siguientes.
 

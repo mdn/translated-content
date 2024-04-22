@@ -4,6 +4,7 @@ slug: Web/API/Geolocation_API
 l10n:
   sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Geolocation API")}}
 
 **Geolocation API**는 사용자의 동의 하에 웹 애플리케이션에서 위치 정보에 접근할 수 있는 API입니다. 개인정보 보호를 위해, 브라우저는 위치 정보를 제공하기 전에 사용자에게 위치 정보 권한에 대한 확인을 받습니다.

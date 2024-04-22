@@ -22,32 +22,22 @@ Math.atanh(x)
 
 ## 描述
 
-由于 `atanh()` 是 `Math 的静态方法`,所以应该像这样使用：`Math.atanh()`，而不是作为你创建的 `Math` 实例的方法（`Math 不是一个构造函数`）。
+由于 `atanh()` 是 `Math` 的静态方法，所以应该像这样使用：`Math.atanh()`，而不是作为你创建的 `Math` 实例的方法（`Math` 不是一个构造函数）。
 
 ## 示例
 
-### `使用 Math.atanh()`
+### 使用 `Math.atanh()`
 
 ```js
-Math.atanh(-2);  // NaN
-Math.atanh(-1);  // -Infinity
-Math.atanh(0);   // 0
+Math.atanh(-2); // NaN
+Math.atanh(-1); // -Infinity
+Math.atanh(0); // 0
 Math.atanh(0.5); // 0.5493061443340548
-Math.atanh(1);   // Infinity
-Math.atanh(2);   // NaN
+Math.atanh(1); // Infinity
+Math.atanh(2); // NaN
 ```
 
 对于大于 1 或是小于－1 的值，函数返回 {{jsxref("NaN")}} 。
-
-## Polyfill
-
-For \left|x\right| < 1, we have \operatorname {artanh} (x) = \frac{1}{2}\ln \left( \frac{1 + x}{1 - x} \right) so this can be emulated by the following function:
-
-```js
-Math.atanh = Math.atanh || function(x) {
-  return Math.log((1+x)/(1-x)) / 2;
-};
-```
 
 ## 规范
 
@@ -57,7 +47,7 @@ Math.atanh = Math.atanh || function(x) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Math.acosh()")}}
 - {{jsxref("Math.asinh()")}}

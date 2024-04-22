@@ -15,7 +15,7 @@ slug: Mozilla/Firefox/Releases/96
 
 ### CSS
 
-- [CSS の色の値](/ja/docs/Web/CSS/color_value) として使用する [`hwb()`](/ja/docs/Web/CSS/color_value/hwb()) 関数を実装しました。`hwb()` 関数表記は、色相・白さ・黒さで表現した色を表します。省略可能なアルファ値は、色の透明度を表します ([Firefox バグ 1352755](https://bugzil.la/1352755))。
+- [CSS の色の値](/ja/docs/Web/CSS/color_value) として使用する [`hwb()`](</ja/docs/Web/CSS/color_value/hwb()>) 関数を実装しました。`hwb()` 関数表記は、色相・白さ・黒さで表現した色を表します。省略可能なアルファ値は、色の透明度を表します ([Firefox バグ 1352755](https://bugzil.la/1352755))。
 
 - Firefox で {{CSSxRef("color-scheme")}} プロパティをサポートしました。これは、要素がどの配色で快適に表示できるかを示すことができます。一般的なオプションは "ライト" と "ダーク"、または "昼間モード" と "夜間モード" です ([Firefox バグ 1576289](https://bugzil.la/1576289))。
 
@@ -39,7 +39,7 @@ slug: Mozilla/Firefox/Releases/96
 - {{domxref("navigator.canShare()")}} を Android でサポートしました。特定のターゲットに対して {{domxref("navigator.share()")}} が成功するかをコードから確認できます。
   この機能は、デスクトップオペレーティングシステムでは設定項目で制御されています
   ([Firefox バグ 1666203](https://bugzil.la/1666203))。
-- [Web Locks API](/ja/docs/Web/API/Web_Locks_API) をデフォルトで有効にしました。複数のタブや worker で実行されている Web アプリが、使用するリソースを調整できます ([Firefox バグ 1740044](https://bugzil.la/1740044))。
+- [Web Locks API](/ja/docs/Web/API/Web_Locks_API) をデフォルトで有効にしました。複数のタブや worker で実行されているウェブアプリが、使用するリソースを調整できます ([Firefox バグ 1740044](https://bugzil.la/1740044))。
 
 #### Canvas
 

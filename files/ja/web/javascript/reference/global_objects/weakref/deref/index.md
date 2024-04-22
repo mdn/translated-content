@@ -1,6 +1,8 @@
 ---
 title: WeakRef.prototype.deref()
 slug: Web/JavaScript/Reference/Global_Objects/WeakRef/deref
+l10n:
+  sourceCommit: 270351317fdaa57ba9123a19aa281e9e40bb0baa
 ---
 
 {{JSRef}}
@@ -9,23 +11,27 @@ slug: Web/JavaScript/Reference/Global_Objects/WeakRef/deref
 
 ## 構文
 
-```js
+```js-nolint
 deref()
 ```
 
+### 引数
+
+なし。
+
 ### 返値
 
-WeakRef のターゲットオブジェクトです。そのオブジェクトが既にガベージコレクションされている場合は `undefined` です。
+WeakRef の参照先となるターゲット値で、オブジェクトまたは[未登録のシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#グローバルシンボルレジストリー)でなければなりません。そのオブジェクトが既にガベージコレクションされている場合は `undefined` です。
 
-## 注意事項
+## 解説
 
-重要な注意事項については {{jsxref("WeakRef")}} ページの [WeakRef の注意事項](/ja/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#notes_on_weakrefs)の節を参照してください。
+重要な注意事項については {{jsxref("WeakRef")}} ページの [WeakRef の注意事項](/ja/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#weakref_における注意)の節を参照してください。
 
 ## 例
 
 ### deref の使用
 
-完全な例については {{jsxref("WeakRef")}} ページ内の[例](/ja/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#examples)の節を参照してください。
+完全な例については {{jsxref("WeakRef")}} ページ内の[例](/ja/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#例)の節を参照してください。
 
 ```js
 const tick = () => {

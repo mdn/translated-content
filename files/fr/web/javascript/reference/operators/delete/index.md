@@ -1,12 +1,6 @@
 ---
 title: L'opérateur delete
 slug: Web/JavaScript/Reference/Operators/delete
-tags:
-  - JavaScript
-  - Opérateur
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/delete
-original_slug: Web/JavaScript/Reference/Opérateurs/L_opérateur_delete
 ---
 
 {{jsSidebar("Operators")}}
@@ -18,14 +12,14 @@ L'opérateur **`delete`** permet de retirer une propriété d'un objet.
 ## Syntaxe
 
 ```js
-delete expression
+delete expression;
 ```
 
 où _expression_ est évaluée comme une référence à une propriété :
 
 ```js
-delete objet.propriete
-delete objet['propriete']
+delete objet.propriete;
+delete objet["propriete"];
 ```
 
 ### Paramètres
@@ -64,12 +58,12 @@ Voici un fragment de code qui illustre certains cas :
 ```js
 var Employe = {
   age: 28,
-  nom: 'abc',
-  designation: 'developpeur'
-}
+  nom: "abc",
+  designation: "developpeur",
+};
 
-console.log(delete Employe.nom);  // renvoie true
-console.log(delete Employe.age);  // renvoie true
+console.log(delete Employe.nom); // renvoie true
+console.log(delete Employe.age); // renvoie true
 
 // Lorsqu'on souhaite supprimer une propriété
 // inexistante, on obtient true
@@ -82,19 +76,19 @@ Lorsqu'une propriété est marquée comme non-configurable, `delete` n'aura aucu
 
 ```js
 var Employe = {};
-Object.defineProperty(Employe, 'nom', {configurable: false});
+Object.defineProperty(Employe, "nom", { configurable: false });
 
-console.log(delete Employe.nom);  // renvoie false
+console.log(delete Employe.nom); // renvoie false
 ```
 
 {{jsxref("Instructions/var","var")}} (ou `let` ou `const`) crée des propriétés non-configurables qui ne peuvent pas être supprimées via `delete` :
 
 ```js
-var autreNom = 'XYZ';
+var autreNom = "XYZ";
 
 // On peut accéder à la description de cette
 // propriété globale grâce à :
-Object.getOwnPropertyDescriptor(window, 'autreNom')
+Object.getOwnPropertyDescriptor(window, "autreNom");
 
 /* Object {value: "XYZ",
                   writable: true,
@@ -105,7 +99,7 @@ Object.getOwnPropertyDescriptor(window, 'autreNom')
 // On voit que "autreNom", ajouté avec var
 // est marquée comme "non-configurable"
 
-delete autreNom;   // renvoie false
+delete autreNom; // renvoie false
 ```
 
 En mode strict, cela aurait déclenché une exception.
@@ -131,7 +125,7 @@ Voyons comment ce code se comporte en mode strict : au lieu de renvoyer false, l
 "use strict";
 
 function Employe() {
-  delete salaire;  // SyntaxError
+  delete salaire; // SyntaxError
   var salaire;
 }
 
@@ -149,25 +143,25 @@ delete DemoFunction; // SyntaxError
 
 ```js
 // on crée la propriété adminName sur la portée globale
-adminName = 'xyz';
+adminName = "xyz";
 
 // on crée la propriété empCount sur la portée globale
 // On utilise var, elle est donc non-configurable
 var empCount = 43;
 
 EmployeeDetails = {
-  name: 'xyz',
+  name: "xyz",
   age: 5,
-  designation: 'Developer'
+  designation: "Developer",
 };
 
 // adminName est une propriété de la portée globale
 // qui peut être supprimée car configurable.
-delete adminName;       // renvoie true
+delete adminName; // renvoie true
 
 // En revanche empCount n'est pas configurable
 // car c'est var qui a été utilisée.
-delete empCount;        // renvoie false
+delete empCount; // renvoie false
 
 // delete peut être utilisé pour retirer des propriétés
 // d'objets
@@ -183,14 +177,14 @@ delete Math.PI; // renvoie false
 
 // EmployeeDetails est une propriété de la portée globale
 // définie sans var, elle est donc configurable
-delete EmployeeDetails;   // renvoie true
+delete EmployeeDetails; // renvoie true
 
 function f() {
   var z = 44;
 
   // delete n'a pas d'impact sur les noms
   // des variables locales
-  delete z;     // returns false
+  delete z; // returns false
 }
 ```
 
@@ -199,7 +193,7 @@ function f() {
 Dans l'exemple qui suit, on supprime une propriété directement rattachée à un objet (une propriété « propre ») alors qu'une propriété du même nom existe sur la chaîne de prototypes :
 
 ```js
-function Toto(){
+function Toto() {
   this.truc = 10;
 }
 
@@ -233,17 +227,17 @@ Lorsqu'on supprime un élément d'un tableau, la longueur du tableau n'est pas m
 Lorsqu'on utilise `delete` pour retirer un élément du tableau, cet élément n'est plus dans le tableau. Dans l'exemple suivant, on retire `arbres[3]` grâce à `delete`.
 
 ```js
-var arbres = ["cèdre","pin","chêne","érable","sapin"];
+var arbres = ["cèdre", "pin", "chêne", "érable", "sapin"];
 delete arbres[3];
 if (3 in arbres) {
-    // Le code ici ne sera pas exécuté
+  // Le code ici ne sera pas exécuté
 }
 ```
 
 Si on veut conserver l'existence d'un élément du tableau avec une valeur indéfinie, on pourra affecter la valeur `undefined` à cet élément. Ainsi, contrairement à l'exemple précédent, en utilisant `undefined`, `arbres[3]` continue d'être présent :
 
 ```js
-var arbres = ["cèdre","pin","chêne","érable","sapin"];
+var arbres = ["cèdre", "pin", "chêne", "érable", "sapin"];
 arbres[3] = undefined;
 if (3 in arbres) {
   // Le code ici sera bien exécuté
@@ -253,14 +247,14 @@ if (3 in arbres) {
 Si on souhaite plutôt retirer un élément du tableau en changeant le contenu du tableau, on pourra utiliser la méthode {{jsxref("Array.splice()")}}. Dans l'exemple qui suit, la valeur actuelle de `arbres[3]` est retirée du tableau grâce à `splice()` mais l'index suivant se décale et arbres\[4] devient arbres\[3] :
 
 ```js
-var arbres = ["cèdre","pin","chêne","érable","sapin"];
+var arbres = ["cèdre", "pin", "chêne", "érable", "sapin"];
 if (3 in arbres) {
- // Le code ici sera exécuté
+  // Le code ici sera exécuté
 }
 arbres.splice(3, 1);
 console.log(arbres); // ["cèdre","pin","chêne","sapin"];
 if (3 in arbres) {
- // Le code ici sera également exécuté
+  // Le code ici sera également exécuté
 }
 ```
 

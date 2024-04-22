@@ -1,5 +1,5 @@
 ---
-title: 'RangeError: radix must be an integer'
+title: "RangeError: radix must be an integer"
 slug: Web/JavaScript/Reference/Errors/Bad_radix
 ---
 
@@ -56,10 +56,10 @@ JavaScript 예외 "radix must be an integer at least 2 and no greater than 36"�
 ### 허용된 경우
 
 ```js example-good
-(42).toString(2);     // "101010" (2진수)
-(13).toString(8);     // "15"     (8진수)
-(0x42).toString(10);  // "66"     (10진수)
-(100000).toString(16) // "186a0"  (16진수)
+(42).toString(2); // "101010" (2진수)
+(13).toString(8); // "15"     (8진수)
+(0x42).toString(10); // "66"     (10진수)
+(100000).toString(16); // "186a0"  (16진수)
 ```
 
 ## 또 다른 내용

@@ -1,15 +1,6 @@
 ---
 title: WeakMap.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/delete
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - WeakMap
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/delete
-original_slug: Web/JavaScript/Reference/Objets_globaux/WeakMap/delete
 ---
 
 {{JSRef}}
@@ -41,7 +32,7 @@ wm.set(window, "toto");
 
 wm.delete(window); // Renvoie true. La suppression a bien eu lieu.
 
-wm.has(window);    // Renvoie false. L'objet window n'est plus dans la WeakMap.
+wm.has(window); // Renvoie false. L'objet window n'est plus dans la WeakMap.
 ```
 
 ## Spécifications

@@ -1,20 +1,9 @@
 ---
 title: cookies.SameSiteStatus
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/SameSiteStatus
-tags:
-  - API
-  - Add-ons
-  - Cookies
-  - Extensions
-  - Interface
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/SameSiteStatus
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Le type `SameSiteStatus` de l'API {{WebExtAPIRef("cookies")}} représente des informations sur l'état `SameSite` d'un cookie.
 

@@ -50,16 +50,18 @@ var myRequest = new Request(input[, init]);
 在我们的获取请求示例 [Fetch Request example](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request) (see [Fetch Request live](http://mdn.github.io/fetch-examples/fetch-request/)) 中，我们使用构造函数创建一个新的`Request`对象，然后使用 {{domxref("GlobalFetch.fetch")}} 发送请求。由于我们正在获取图像，我们在响应上运行 {{domxref("Body.blob")}} 以为其提供正确的 MIME 类型，以便对其进行正确处理，然后为其创建一个 Object URL，并将其显示在 {{htmlelement("img")}} 元素中。
 
 ```js
-var myImage = document.querySelector('img');
+var myImage = document.querySelector("img");
 
-var myRequest = new Request('flowers.jpg');
+var myRequest = new Request("flowers.jpg");
 
-fetch(myRequest).then(function(response) {
-  return response.blob();
-}).then(function(response) {
-  var objectURL = URL.createObjectURL(response);
-  myImage.src = objectURL;
-});
+fetch(myRequest)
+  .then(function (response) {
+    return response.blob();
+  })
+  .then(function (response) {
+    var objectURL = URL.createObjectURL(response);
+    myImage.src = objectURL;
+  });
 ```
 
 在[Fetch Request with init example](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request-with-init) (参见 [Fetch Request init live](http://mdn.github.io/fetch-examples/fetch-request-with-init/)) 我们做了同样的事情，只不过我们在调用`fetch() 时，还`传递进了一个 init 对象：
@@ -93,14 +95,16 @@ fetch(myRequest,myInit).then(function(response) {
 也可以使用在 init 中使用对象字面量作为 `headers`。
 
 ```js
-var myInit = { method: 'GET',
-               headers: {
-                   'Content-Type': 'image/jpeg'
-               },
-               mode: 'cors',
-               cache: 'default' };
+var myInit = {
+  method: "GET",
+  headers: {
+    "Content-Type": "image/jpeg",
+  },
+  mode: "cors",
+  cache: "default",
+};
 
-var myRequest = new Request('flowers.jpg', myInit);
+var myRequest = new Request("flowers.jpg", myInit);
 ```
 
 也可以把 {{domxref("Request")}} 对象再作参数传递进 `Request()` 构造器来创建一个请求的副本（就像调用{{domxref("Request.clone","clone()")}}一样）。

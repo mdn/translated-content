@@ -58,9 +58,9 @@ console.log(B() || A());
 
 以下表达式看起来等价，但实际上不是，因为 `&&` 运算符比 `||` 运算符先执行（参见[运算符优先级](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_precedence)）。
 
-```js
-true || false && false      // 返回 true，因为 && 先执行
-(true || false) && false    // 返回 false，因为分组运算符优先级更高
+```js-nolint
+true || false && false; // 返回 true，因为 && 先执行
+(true || false) && false; // 返回 false，因为分组运算符优先级更高
 ```
 
 ## 示例

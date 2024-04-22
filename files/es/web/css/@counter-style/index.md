@@ -1,48 +1,53 @@
 ---
-title: '@counter-style'
+title: "@counter-style"
 slug: Web/CSS/@counter-style
+l10n:
+  sourceCommit: 5fea7c9593f5e4b4ef13ec65064acf1eabf01e4e
 ---
 
 {{CSSRef}}
 
-## Summary
+La [regla arroba](/es/docs/Web/CSS/At-rule) **`@counter-style`** de [CSS](/es/docs/Web/CSS) le permite definir estilos de contador que no forman parte del conjunto predefinido de estilos. Una regla `@counter-style` define cómo convertir un valor de contador en una representación de cadena.
 
-The **`@counter-style`** [CSS](/en/CSS) [at-rule](/en/CSS/At-rule) lets authors define specific counter styles that are not part of the predefined set of styles. A `@counter-style` rule defines how to convert a counter value into a string representation.
+```css
+@counter-style thumbs {
+  system: cyclic;
+  symbols: "\1F44D";
+  suffix: " ";
+}
 
-Initial version of CSS defined a set of useful counter styles. Although more styles were added to this set of predefined styles over the years, this restrictive way proved unable to fulfill the needs of worldwide typography. The `@counter-style` at-rule addresses this shortcoming in an open-ended manner, by allowing authors to define their own counter styles when the pre-defined styles aren't fitting their needs.
+ul {
+  list-style: thumbs;
+}
+```
 
-## Syntax
+La versión inicial de CSS definía un conjunto de estilos de contador útiles. Sin embargo, aunque se agregaron más estilos a este conjunto de estilos predefinidos a lo largo de los años, este sistema resultó demasiado restrictivo para satisfacer las necesidades de la tipografía mundial. La regla arroba `@counter-style` aborda esta deficiencia de manera abierta, al permitir que los autores definan sus propios estilos de contador cuando los estilos predefinidos no se ajustan a sus necesidades.
 
-### Descriptors
+## Sintaxis
 
-Each `@counter-style` is identified by a name and has a set of descriptors.
+### Descriptores
+
+Cada `@counter-style` se identifica con un nombre y tiene un conjunto de descriptores.
 
 - {{cssxref("@counter-style/system", "system")}}
-  - : Specifies the algorithm to be used for converting the integer value of a counter to a string representation.
-
+  - : Especifica el algoritmo que se utilizará para convertir el valor entero de un contador en una representación de cadena.
 - {{cssxref("@counter-style/negative", "negative")}}
-  - : Lets the author specify symbols to be appended or prepended to the counter representation if the value is negative.
-
+  - : Permite al autor especificar los símbolos que se agregarán o antepondrán a la representación del contador si el valor es negativo.
 - {{cssxref("@counter-style/prefix", "prefix")}}
-  - : Specifies a symbol that should be prepended to the marker representation. Prefixes are added to the representation in the final stage, so in the final representation of the counter, it comes before the negative sign.
-
+  - : Especifica un símbolo que debe anteponerse a la representación del marcador. Los prefijos se agregan a la representación en la etapa final, por lo que en la representación final del contador, viene antes del signo negativo.
 - {{cssxref("@counter-style/suffix", "suffix")}}
-  - : Specifies, similar to the prefix descriptor, a symbol that is appended to the marker representation. Prefixes come after the marker representation.
-
+  - : Especifica, de forma similar al descriptor de prefijo, un símbolo que se adjunta a la representación del marcador. Los sufijos vienen después de la representación del marcador.
 - {{cssxref("@counter-style/range", "range")}}
-  - : Defines the range of values over which the conter style is applicable. If a counter style is used to represent a counter value outside of its ranges, the counter style will drop back to its fallback style.
-
+  - : Define el rango de valores sobre los que se aplica el estilo de contador. Si se usa un estilo de contador para representar un valor de contador fuera de sus rangos, el estilo de contador volverá a su estilo alternativo.
 - {{cssxref("@counter-style/pad", "pad")}}
-  - : Is used when you need the marker representations to be of a minimum length. For example if you want the counters to start start at 01 and go through 02, 03, 04 etc, then the pad descriptor is to be used. For representations larger than the specified pad value, the marker is constructed as normal.
-
+  - : Se utiliza cuando necesita que las representaciones de marcador tengan una longitud mínima. Por ejemplo, si desea que los contadores comiencen en 01 y pasen por 02, 03, 04, etc., se utilizará el descriptor de pad. Para representaciones más grandes que el valor de relleno especificado, el marcador se construye normalmente.
 - {{cssxref("@counter-style/fallback", "fallback")}}
-  - : Specifies a system to fall back into if either the specified system is unable to construct the representation of or a counter value or if the counter value outside the specified range. If the specified fallback also fails to represent the value, then the fallback style's fallback is used, if one is specified. If there are either no fallback systems described or if the chain of fallback systems are unable to represent a counter value, then it will ultimately fall back to the decimal style.
-
+  - : Especifica un sistema al que recurrir si el sistema especificado no puede construir la representación de un valor de contador o si el valor de contador está fuera del rango especificado. Si el respaldo especificado tampoco representa el valor, entonces se usa el respaldo del estilo de respaldo, si se especifica uno. Si no se describen sistemas de respaldo o si la cadena de sistemas de respaldo no puede representar un valor de contador, finalmente volverá al estilo decimal.
 - {{cssxref("@counter-style/symbols", "symbols")}}
 
-  - : Specifies the symbols that are to be used for the marker representations. Symbols can contain string, images or custom identifiers. How the symbols are used to construct the marker representation is up to the algorithm specified in the system descriptor. For example, if the system specified is fixed, then each of the N symbols specified in the descriptor will be used to represent the first N counter symbols. Once the specified set of symbols have exhausted, the fallback style will be used for the rest of the list.
+  - : Especifica los símbolos que se utilizarán para las representaciones de marcador. Los símbolos pueden contener cadenas, imágenes o identificadores personalizados. La forma en que se utilizan los símbolos para construir la representación del marcador depende del algoritmo especificado en el descriptor del sistema. Por ejemplo, si el sistema especificado es fijo, cada uno de los N símbolos especificados en el descriptor se utilizará para representar los primeros N símbolos de contador. Una vez que se haya agotado el conjunto de símbolos especificado, se utilizará el estilo alternativo para el resto de la lista.
 
-    The below @counter-style rule uses images instead of character symbols.
+    La siguiente regla `@counter-style` utiliza imágenes en lugar de símbolos de caracteres. Los valores de imagen para los símbolos son actualmente una función "en riesgo" y no están implementadas en ningún navegador.
 
     ```css
     @counter-style winners-list {
@@ -53,16 +58,17 @@ Each `@counter-style` is identified by a name and has a set of descriptors.
     ```
 
 - {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}
-  - : While the symbols specified in the symbols descriptor is used for constructing marker representation by most algorithms, some systems such as 'additive' rely on _additive tuples_ described in this descriptor. Each additive tuple consists of a counter symbol and a non negative integer weight. The additive tuples must be specified in the descending order of their weights.
-
+  - : Si bien la mayoría de los algoritmos utilizan los símbolos especificados en el descriptor de símbolos para construir la representación de marcadores, algunos sistemas, como 'aditivo', se basan en _tuplas aditivas_ descritas en este descriptor. Cada tupla aditiva consta de un símbolo de contador y un peso entero no negativo. Las tuplas aditivas deben especificarse en orden descendente de sus pesos.
 - {{cssxref("@counter-style/speak-as", "speak-as")}}
-  - : Describes how to read out the counter style in speech synthesizers, such as screen readers. For example, the value of the marker symbol can be read out as numbers or alphabets for ordered lists or as audio cues for unordered lists, based on the value of this descriptor.
+  - : Describe cómo leer el estilo de contador en sintetizadores de voz, como lectores de pantalla. Por ejemplo, el valor del símbolo del marcador se puede leer como números o letras para listas ordenadas o como señales de audio para listas desordenadas, según el valor de este descriptor.
 
-### Formal syntax
+## Sintaxis formal
 
 {{csssyntax}}
 
-## Examples
+## Ejemplos
+
+### Especificación de símbolos con @counter-style
 
 ```css
 @counter-style circled-alpha {
@@ -72,15 +78,15 @@ Each `@counter-style` is identified by a name and has a set of descriptors.
 }
 ```
 
-The above counter style rule can be applied to lists like this:
+La regla de estilo de contador anterior se puede aplicar a listas como esta:
 
 ```css
 .items {
-   list-style: circled-alpha;
+  list-style: circled-alpha;
 }
 ```
 
-Which will produce lists like this:
+Lo que producirá listas como esta:
 
 Ⓐ One
 
@@ -90,25 +96,29 @@ Which will produce lists like this:
 
 Ⓓ Four
 
-Ⓔ FIve
+Ⓔ Five
 
-....
+…
 
-...
+Ⓨ Twenty-five
 
-Ⓨ Twenty Five
+Ⓩ Twenty-six
 
-Ⓩ Twenty Six
+27 Twenty-seven
 
-27 Twenty Seven
+28 Twenty-eight
 
-28 Twenty Eight
-
-29 Twenty Nine
+29 Twenty-nine
 
 30 Thirty
 
-Checkout more examples on the [demo page](https://mdn.github.io/css-counter-style-demo/).
+Vea más ejemplos en la [página de demostración](https://mdn.github.io/css-examples/counter-style-demo/).
+
+### Estilos de contador listos para usar
+
+Encuentre una colección de más de 100 fragmentos de código de estilo de contador en el documento [Estilos de contador listos para usar](https://www.w3.org/TR/predefined-counter-styles/). Este documento proporciona estilos de contador que satisfacen las necesidades de los idiomas y culturas de todo el mundo.
+
+El [Conversor de estilos de contador](https://r12a.github.io/app-counters/) extrae de esta lista para probar y crear código de copiar y pegar para estilos de contador.
 
 ## Especificaciones
 
@@ -118,7 +128,9 @@ Checkout more examples on the [demo page](https://mdn.github.io/css-counter-styl
 
 {{Compat}}
 
-## See also
+## Véase también
 
-- {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
-- {{cssxref("symbols", "symbols()")}}, the functional notation creating anonymous counter styles.
+- {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}, {{Cssxref("list-style-type")}}
+- {{cssxref("symbols", "symbols()")}}, la notación funcional que crea estilos de contador anónimos.
+- Funciones CSS {{Cssxref("counter", "counter()")}} y {{Cssxref("counters", "counters()")}}
+- [Demostración de estilo contador](https://mdn.github.io/css-examples/counter-style-demo/) ([código](https://github.com/mdn/css-examples/tree/main/counter-style-demo))

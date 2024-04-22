@@ -1,20 +1,9 @@
 ---
 title: idle.IdleState
 slug: Mozilla/Add-ons/WebExtensions/API/idle/IdleState
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Idle
-  - IdleState
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/idle/IdleState
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Chaîne d'écrivant l'état d'inactivité du périphérique.
 

@@ -1,15 +1,6 @@
 ---
 title: Où se trouve tout sur MDN ? Un guide de nos dépôts
 slug: MDN/Community/Contributing/Our_repositories
-tags:
-  - Best practices
-  - Community
-  - GitHub
-  - MDN
-  - Beginners
-  - Repos
-translation_of: MDN/Contribute/Where_is_everything
-original_slug: MDN/Contribute/Where_is_everything
 ---
 
 {{MDNSidebar}}

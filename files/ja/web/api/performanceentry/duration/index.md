@@ -1,84 +1,60 @@
 ---
-title: PerformanceEntry.duration
+title: "PerformanceEntry: duration プロパティ"
+short-title: duration
 slug: Web/API/PerformanceEntry/duration
+l10n:
+  sourceCommit: 99a75e695dbb46731dca4757e9d4c42d80bb52fc
 ---
 
-{{APIRef("Performance Timeline API")}}
+{{APIRef("Performance API")}}
 
-**`duration`** プロパティは、{{domxref("PerformanceEntry","パフォーマンスエントリ")}}の期間である{{domxref("DOMHighResTimeStamp","タイムスタンプ")}}を返します。
+**`duration`** プロパティは、{{domxref("PerformanceEntry", "パフォーマンス項目", "", "no-code")}}の時間である{{domxref("DOMHighResTimeStamp","タイムスタンプ", "", "no-code")}}を返します。このプロパティの意味は、この項目の {{domxref("PerformanceEntry.entryType", "entryType")}} の値によって異なります。
 
-{{AvailableInWorkers}}
+## 値
 
-このプロパティによって返される値は、パフォーマンスエントリの{{domxref("PerformanceEntry.entryType","タイプ")}}によって異なります。
+{{domxref("DOMHighResTimeStamp")}} で、{{domxref("PerformanceEntry", "パフォーマンス項目", "", "no-code")}}の継続時間を表します。具体的なパフォーマンス指標に長さの概念が適用されない場合は、`0` の時間を返します。
 
-- "`frame`" - 連続する 2 つのフレームの `startTime` 間の差を示す{{domxref("DOMHighResTimeStamp","タイムスタンプ")}}を返します
-- "`mark`" - "`0`" を返します (マークには長さがありません)
-- "`measure`" - メジャーの期間である{{domxref("DOMHighResTimeStamp","タイムスタンプ")}}を返します
-- "`navigation`" - それぞれ {{domxref("PerformanceNavigationTiming.loadEventEnd")}} と {{domxref("PerformanceEntry.startTime")}} のプロパティの差である{{domxref("DOMHighResTimeStamp","タイムスタンプ")}}を返します
-- "`resource`" - リソースの {{domxref("PerformanceEntry.responseEnd","responseEnd")}} {{domxref("DOMHighResTimeStamp","タイムスタンプ")}}とその {{domxref("PerformanceEntry.startTime","startTime")}} {{domxref("DOMHighResTimeStamp","タイムスタンプ")}}の差を返します
+このプロパティの意味は、このパフォーマンス項目の {{domxref("PerformanceEntry.entryType", "entryType")}} の値によって異なります。
 
-このプロパティは {{readonlyInline}} です。
+- `event`
+  - : イベントの `startTime` から次のレンダリングペイントまでの時間です（8 ミリ秒単位に丸めた値）。
+- `first-input`
+  - : 最初の入力イベントの `startTime` から次のレンダリングペイントまでの時間です（8 ミリ秒単位に丸めた値）。
+- `longtask`
+  - : タスクの開始から終わりまでの経過時間です（1 ミリ秒単位）。
+- `measure`
+  - : 測定の時間です。
+- `navigation`
+  - : この項目の {{domxref("PerformanceNavigationTiming.loadEventEnd", "loadEventEnd")}} プロパティと {{domxref("PerformanceEntry.startTime", "startTime")}} プロパティの差です。
+- `resource`
+  - : この項目の {{domxref("PerformanceResourceTiming/responseEnd", "responseEnd")}} 値からこの項目の {{domxref("PerformanceEntry.startTime","startTime")}} 値を引いたものです。
 
-## 構文
+以下の種類の項目では `duration` は適用されず、この場合の値は常に `0` になります。
 
-```
-entry.duration;
-```
-
-### 返値
-
-{{domxref("PerformanceEntry","パフォーマンスエントリ")}}の長さを表す {{domxref("DOMHighResTimeStamp")}}。期間の概念が特定のパフォーマンスメトリックに適用されない場合、ブラウザーは期間 0 を返すように選択することがあります。
-
-> **メモ:** パフォーマンスエントリが "`resource`" の {{domxref("PerformanceEntry.entryType","entryType")}} を持つ場合 (つまり、エントリが {{domxref("PerformanceResourceTiming")}} オブジェクトである場合)、このプロパティは {{domxref("PerformanceEntry.responseEnd")}} と {{domxref("PerformanceEntry.startTime")}} の差の{{domxref("DOMHighResTimeStamp","タイムスタンプ")}}を返します。
+- `element`
+- `largest-contentful-paint`
+- `layout-shift`
+- `mark`
+- `paint`
+- `taskattribution`
+- `visibility-state`
 
 ## 例
 
-次の例は、`duration` プロパティの使用方法を示しています。
+### duration プロパティの使用
+
+次の例では、`duration` が `0` より大きいパフォーマンス項目をすべてログ出力します。
 
 ```js
-function run_PerformanceEntry() {
-  log("PerformanceEntry support ...");
-
-  if (performance.mark === undefined) {
-    log("... performance.mark Not supported");
-    return;
-  }
-
-  // Create some performance entries via the mark() method
-  performance.mark("Begin");
-  do_work(50000);
-  performance.mark("End");
-
-  // Use getEntries() to iterate through the each entry
-  var p = performance.getEntries();
-  for (var i=0; i < p.length; i++) {
-    log("Entry[" + i + "]");
-    check_PerformanceEntry(p[i]);
-  }
-}
-function check_PerformanceEntry(obj) {
-  var properties = ["name", "entryType", "startTime", "duration"];
-  var methods = ["toJSON"];
-
-  for (var i=0; i < properties.length; i++) {
-    // check each property
-    var supported = properties[i] in obj;
-    if (supported)
-      log("..." + properties[i] + " = " + obj[properties[i]]);
-    else
-      log("..." + properties[i] + " = Not supported");
-  }
-  for (var i=0; i < methods.length; i++) {
-    // check each method
-    var supported = typeof obj[methods[i]] == "function";
-    if (supported) {
-      var js = obj[methods[i]]();
-      log("..." + methods[i] + "() = " + JSON.stringify(js));
-    } else {
-      log("..." + methods[i] + " = Not supported");
+function perfObserver(list, observer) {
+  list.getEntries().forEach((entry) => {
+    if (entry.duration > 0) {
+      console.log(`${entry.name}'s duration: ${entry.duration}`);
     }
-  }
+  });
 }
+const observer = new PerformanceObserver(perfObserver);
+observer.observe({ entryTypes: ["measure", "mark", "resource"] });
 ```
 
 ## 仕様書
@@ -87,4 +63,4 @@ function check_PerformanceEntry(obj) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.PerformanceEntry.duration")}}
+{{Compat}}

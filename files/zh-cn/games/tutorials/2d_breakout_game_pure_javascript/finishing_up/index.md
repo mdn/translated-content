@@ -23,9 +23,9 @@ var lives = 3;
 
 ```js
 function drawLives() {
-    ctx.font = "16px Arial";
-    ctx.fillStyle = "#0095DD";
-    ctx.fillText("Lives: "+lives, canvas.width-65, 20);
+  ctx.font = "16px Arial";
+  ctx.fillStyle = "#0095DD";
+  ctx.fillText("Lives: " + lives, canvas.width - 65, 20);
 }
 ```
 
@@ -41,17 +41,16 @@ clearInterval(interval); // Needed for Chrome to end game
 
 ```js
 lives--;
-if(!lives) {
-    alert("GAME OVER");
-    document.location.reload();
-    clearInterval(interval); // Needed for Chrome to end game
-}
-else {
-    x = canvas.width/2;
-    y = canvas.height-30;
-    dx = 2;
-    dy = -2;
-    paddleX = (canvas.width-paddleWidth)/2;
+if (!lives) {
+  alert("GAME OVER");
+  document.location.reload();
+  clearInterval(interval); // Needed for Chrome to end game
+} else {
+  x = canvas.width / 2;
+  y = canvas.height - 30;
+  dx = 2;
+  dy = -2;
+  paddleX = (canvas.width - paddleWidth) / 2;
 }
 ```
 

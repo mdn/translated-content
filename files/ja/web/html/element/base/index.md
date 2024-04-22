@@ -1,6 +1,8 @@
 ---
-title: '<base>: 文書の基底 URL 要素'
+title: "<base>: 文書の基底 URL 要素"
 slug: Web/HTML/Element/base
+l10n:
+  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
 {{HTMLSidebar}}
@@ -13,13 +15,13 @@ slug: Web/HTML/Element/base
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>メタデータコンテンツ</td>
     </tr>
     <tr>
       <th scope="row">許可されている内容</th>
-      <td>なし。この要素は{{Glossary("empty element", "空要素")}}です。</td>
+      <td>なし。この要素は{{Glossary("void element", "空要素")}}です。</td>
     </tr>
     <tr>
       <th scope="row">タグの省略</th>
@@ -60,7 +62,7 @@ slug: Web/HTML/Element/base
 
   - : **キーワード**または**作者が定義した名前**で、既定の{{Glossary("browsing context", "閲覧コンテキスト")}}を表し、 {{HTMLElement("a")}} または {{HTMLElement("form")}} 要素が明示的に `target` 属性を持たない場合に、移動の結果を表示する先として使用されます。以下のキーワードは特別な意味を持ちます。
 
-    - `_self` (既定値): 現在の閲覧コンテキストに結果を表示します。
+    - `_self` （既定値）: 現在の閲覧コンテキストに結果を表示します。
     - `_blank`: 新しい無名の閲覧コンテキストに結果を表示します。
     - `_parent`: 現在のコンテキストの親の閲覧コンテキストに結果を表示します。親がない場合、このオプションは `_self` と同じ振る舞いをします。
     - `_top`: 最上位の閲覧コンテキスト (現在のコンテキストの祖先で、それ以上の親をもたない閲覧コンテキスト）に結果を表示します。親がない場合、このオプションは `_self` と同じ振る舞いをします。
@@ -73,26 +75,24 @@ slug: Web/HTML/Element/base
 
 ### ページ内アンカー
 
-文書内のフラグメントを指すリンク — 例えば `<a href="#some-id">` — は `<base>` を使用して解決され、基底 URL にフラグメントを付けて HTTP リクエストを発行します。例を示します。
+文書内のフラグメントを指すリンク — 例えば `<a href="#some-id">` — は `<base>` を使用して解決され、基底 URL にフラグメントを付けて HTTP リクエストを発行します。
 
-1. `<base href="https://example.com">` が指定された場合
-2. ...そこで `<a href="#anchor">To anchor</a>` というリンクの場合
-3. ...リンク先は `https://example.com/#anchor` となります。
+例えば、 `<base href="https://example.com/">` が指定され、`<a href="#anchor">To anchor</a>` というリンクがあったとします。リンク先は `https://example.com/#anchor` となります。
 
 ### Open Graph
 
 [Open Graph](https://ogp.me/) のメタタグは `<base>` を認識しないので、次のように常に完全 URL を使用してください。
 
 ```html
-<meta property="og:image" content="https://example.com/thumbnail.jpg">
+<meta property="og:image" content="https://example.com/thumbnail.jpg" />
 ```
 
 ## 例
 
 ```html
-<base href="https://www.example.com/">
-<base target="_blank">
-<base target="_top" href="https://example.com/">
+<base href="https://www.example.com/" />
+<base target="_blank" />
+<base target="_top" href="https://example.com/" />
 ```
 
 ## 仕様書

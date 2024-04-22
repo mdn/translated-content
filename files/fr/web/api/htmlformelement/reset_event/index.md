@@ -1,14 +1,6 @@
 ---
 title: GlobalEventHandlers.onreset
 slug: Web/API/HTMLFormElement/reset_event
-tags:
-  - API
-  - DOM
-  - Gestionnaires d'évènements
-  - Propriété
-  - évènements
-translation_of: Web/API/GlobalEventHandlers/onreset
-original_slug: Web/API/GlobalEventHandlers/onreset
 ---
 
 {{ ApiRef() }}
@@ -29,23 +21,23 @@ window.onreset = funcRef;
 
 ```html
 <html>
-<script>
-function reg() {
-  window.captureEvents(Event.RESET);
-  window.onreset = hit;
-}
+  <script>
+    function reg() {
+      window.captureEvents(Event.RESET);
+      window.onreset = hit;
+    }
 
-function hit() {
- alert('hit');
-}
-</script>
+    function hit() {
+      alert("hit");
+    }
+  </script>
 
-<body onload="reg();">
- <form>
-   <input type="reset" value="reset" />
- </form>
- <div id="d"> </div>
-</body>
+  <body onload="reg();">
+    <form>
+      <input type="reset" value="reset" />
+    </form>
+    <div id="d"></div>
+  </body>
 </html>
 ```
 

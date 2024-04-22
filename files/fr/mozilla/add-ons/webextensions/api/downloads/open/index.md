@@ -1,20 +1,9 @@
 ---
 title: downloads.open()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/open
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
-  - open
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/open
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 La fonction **`open()`** de l'API {{WebExtAPIRef("downloads")}} ouvre le fichier téléchargé avec son application associée. Un événement {{WebExtAPIRef("downloads.onChanged")}} se déclenche lorsque l'élément est ouvert pour la première fois.
 
@@ -26,8 +15,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var opening = browser.downloads.open(
-  downloadId      // integer
-)
+  downloadId, // integer
+);
 ```
 
 ### Paramètres
@@ -57,15 +46,15 @@ function onError(error) {
 }
 
 function openDownload(downloadItems) {
-    if (downloadItems.length > 0) {
-      var opening = browser.downloads.open(downloadItems[0].id);
-      opening.then(onOpened, onError);
-    }
+  if (downloadItems.length > 0) {
+    var opening = browser.downloads.open(downloadItems[0].id);
+    opening.then(onOpened, onError);
   }
+}
 
 var searching = browser.downloads.search({
   limit: 1,
-  orderBy: ["-startTime"]
+  orderBy: ["-startTime"],
 });
 
 searching.then(openDownload, onError);

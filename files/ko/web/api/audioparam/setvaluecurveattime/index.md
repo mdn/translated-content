@@ -2,6 +2,7 @@
 title: AudioParam.setValueCurveAtTime()
 slug: Web/API/AudioParam/setValueCurveAtTime
 ---
+
 {{APIRef("Web Audio API")}}
 
 {{domxref("AudioParam")}} 인터페이스의 **`setValueCurveAtTime()`** 메서드는 파라미터의 값이 값들의 리스트에 의해 정의되는 커브를 따라 변화하도록 예정합니다.
@@ -54,13 +55,13 @@ var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioCtx = new AudioContext();
 
 // 예제를 위한 기본 변수를 설정합니다
-var myAudio = document.querySelector('audio');
-var pre = document.querySelector('pre');
-var myScript = document.querySelector('script');
+var myAudio = document.querySelector("audio");
+var pre = document.querySelector("pre");
+var myScript = document.querySelector("script");
 
 pre.innerHTML = myScript.innerHTML;
 
-var valueCurve = document.querySelector('.value-curve');
+var valueCurve = document.querySelector(".value-curve");
 
 // MediaElementAudioSourceNode를 생성합니다
 // HTMLMediaElement를 노드 내로 전달합니다
@@ -89,9 +90,9 @@ waveArray[6] = 0.5;
 waveArray[7] = 0;
 waveArray[8] = 0.5;
 
-valueCurve.onclick = function() {
+valueCurve.onclick = function () {
   gainNode.gain.setValueCurveAtTime(waveArray, audioCtx.currentTime, 2);
-}
+};
 ```
 
 ## 명세서

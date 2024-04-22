@@ -20,7 +20,7 @@ var myIsFinal = speechRecognitionResultInstance.isFinal;
 ## 示例
 
 ```js
-recognition.onresult = function(event) {
+recognition.onresult = function (event) {
   // The SpeechRecognitionEvent results property returns a SpeechRecognitionResultList object
   // SpeechRecognitionResultList 对象包含 SpeechRecognitionResult 对象。
   // 它有一个 getter，所以它可以像数组一样被访问
@@ -30,11 +30,11 @@ recognition.onresult = function(event) {
   // 第二个 [0] 返回 SpeechRecognitionAlternative 所在的第 0 个下标。
   // 然后我们返回的记录属性 SpeechRecognitionAlternative 对象
   var color = event.results[0][0].transcript;
-  diagnostic.textContent = 'Result received: ' + color + '.';
+  diagnostic.textContent = "Result received: " + color + ".";
   bg.style.backgroundColor = color;
 
   console.log(event.results[0].isFinal);
-}
+};
 ```
 
 ## 规范

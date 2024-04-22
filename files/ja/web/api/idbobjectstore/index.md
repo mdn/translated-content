@@ -64,7 +64,7 @@ l10n:
 const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += '<li>データベースを初期化しました。</li>';
+  note.innerHTML += "<li>データベースを初期化しました。</li>";
 
   // データベースを開いた結果を db に格納します
   db = DBOpenRequest.result;
@@ -78,12 +78,15 @@ DBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
   db.onerror = (event) => {
-    note.innerHTML += '<li>データベースの読み込み中にエラーが発生しました。</li>';
+    note.innerHTML +=
+      "<li>データベースの読み込み中にエラーが発生しました。</li>";
   };
 
   // このデータベース用の objectStore を作ります
 
-  const objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
+  const objectStore = db.createObjectStore("toDoList", {
+    keyPath: "taskTitle",
+  });
 
   // objectStore に格納するデータアイテムを定義します
 
@@ -95,12 +98,20 @@ DBOpenRequest.onupgradeneeded = (event) => {
 
   objectStore.createIndex("notified", "notified", { unique: false });
 
-  note.innerHTML += '<li>オブジェクトストアを作成しました。</li>';
+  note.innerHTML += "<li>オブジェクトストアを作成しました。</li>";
 };
 
 // オブジェクトストアに追加する新しいアイテムを作成します
 const newItem = [
-  { taskTitle: "Walk dog", hours: 19, minutes: 30, day: 24, month: 'December', year: 2013, notified: "no" }
+  {
+    taskTitle: "Walk dog",
+    hours: 19,
+    minutes: 30,
+    day: 24,
+    month: "December",
+    year: 2013,
+    notified: "no",
+  },
 ];
 
 // 読み書き用のトランザクションを開き、データを追加する準備をします
@@ -108,11 +119,12 @@ const transaction = db.transaction(["toDoList"], "readwrite");
 
 // 全て完了した時、トランザクションの正常終了を報告します
 transaction.oncomplete = (event) => {
-  note.innerHTML += '<li>トランザクションが完了しました。</li>';
+  note.innerHTML += "<li>トランザクションが完了しました。</li>";
 };
 
 transaction.onerror = (event) => {
-  note.innerHTML += '<li>トランザクションはエラーのため開けませんでした。アイテムの重複は許可されていません。</li>';
+  note.innerHTML +=
+    "<li>トランザクションはエラーのため開けませんでした。アイテムの重複は許可されていません。</li>";
 };
 
 // トランザクションでオブジェクトストアを作成します
@@ -121,8 +133,8 @@ const objectStore = transaction.objectStore("toDoList");
 const objectStoreRequest = objectStore.add(newItem[0]);
 
 objectStoreRequest.onsuccess = (event) => {
-  note.innerHTML += '<li>要求は成功しました。</li>';
-}
+  note.innerHTML += "<li>要求は成功しました。</li>";
+};
 ```
 
 ## 仕様書

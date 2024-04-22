@@ -13,23 +13,26 @@ slug: Web/API/Window/customElements
 
 ```js
 let customElementRegistry = window.customElements;
-customElementRegistry.define('my-custom-element', MyCustomElement);
+customElementRegistry.define("my-custom-element", MyCustomElement);
 ```
 
 However, it is usually shortened to something like the following:
 
 ```js
-customElements.define('element-details',
+customElements.define(
+  "element-details",
   class extends HTMLElement {
     constructor() {
       super();
-      const template = document
-        .getElementById('element-details-template')
-        .content;
-      const shadowRoot = this.attachShadow({mode: 'open'})
-        .appendChild(template.cloneNode(true));
-  }
-});
+      const template = document.getElementById(
+        "element-details-template",
+      ).content;
+      const shadowRoot = this.attachShadow({ mode: "open" }).appendChild(
+        template.cloneNode(true),
+      );
+    }
+  },
+);
 ```
 
 参阅我们的 [web-components-examples](https://github.com/mdn/web-components-examples/) 获取更多有用的例子。

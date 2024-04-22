@@ -1,7 +1,6 @@
 ---
 title: Set() конструктор
 slug: Web/JavaScript/Reference/Global_Objects/Set/Set
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/Set
 ---
 
 {{JSRef}}
@@ -33,14 +32,14 @@ new Set([iterable])
 ### Использование объекта Set
 
 ```js
-let mySet = new Set()
+let mySet = new Set();
 
-mySet.add(1)           // Set [ 1 ]
-mySet.add(5)           // Set [ 1, 5 ]
-mySet.add(5)           // Set [ 1, 5 ]
-mySet.add('какой-то текст') // Set [ 1, 5, 'какой-то текст' ]
-let o = {a: 1, b: 2}
-mySet.add(o)
+mySet.add(1); // Set [ 1 ]
+mySet.add(5); // Set [ 1, 5 ]
+mySet.add(5); // Set [ 1, 5 ]
+mySet.add("какой-то текст"); // Set [ 1, 5, 'какой-то текст' ]
+let o = { a: 1, b: 2 };
+mySet.add(o);
 ```
 
 ## Спецификации

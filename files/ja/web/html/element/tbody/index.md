@@ -1,21 +1,23 @@
 ---
-title: '<tbody>: テーブル本体要素'
+title: "<tbody>: テーブル本体要素"
 slug: Web/HTML/Element/tbody
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{HTMLSidebar}}
 
-**HTML の表本体要素** (**`<tbody>`**) は、表の一連の行 ({{HTMLElement("tr")}} 要素) を内包し、その部分が表 ({{HTMLELement("table")}}) の本体部分を構成することを表します。
+**`<tbody>`** は [HTML](/ja/docs/Web/HTML) の要素で、表の一連の行（{{HTMLElement("tr")}} 要素）を内包し、その部分が表（{{HTMLELement("table")}}）の本体部分を構成することを表します。
 
 {{EmbedInteractiveExample("pages/tabbed/tbody.html","tabbed-taller")}}
 
-`<tbody>` 要素は、親戚である {{HTMLElement("thead")}} や {{HTMLElement("tfoot")}} と共に有用な意味的情報を提供し、画面への表示や印刷ばかりでなく、{{Glossary("accessibility", "アクセシビリティ")}}目的にも利用できます。
+`<tbody>` 要素は、親戚である {{HTMLElement("thead")}} や {{HTMLElement("tfoot")}} と共に、画面やプリンターでの描画で利用できる有用な意味的情報を提供します。
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a>
+        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>なし</td>
     </tr>
@@ -26,19 +28,16 @@ slug: Web/HTML/Element/tbody
     <tr>
       <th scope="row">タグの省略</th>
       <td>
-        <code>&#x3C;tbody></code> 要素は、 {{HTMLElement("table")}}
-        要素をグラフィカルに表示するにあたって必須ではない子要素です。ただし、
-        {{HTMLElement("table")}} 要素の子要素として
-        {{HTMLElement("tr")}} 要素が存在する場合は配置してはいけません。
+        <code>&lt;tbody&gt;</code> 要素の開始タグは、<code>&lt;tbody&gt;</code> 要素の中の最初のものが {{HTMLElement("tr")}} 要素であり、その要素の直前に終了タグが省略された <code>&lt;tbody&gt;</code> 要素、{{HTMLElement("thead")}} 要素、{{HTMLElement("tfoot")}} 要素がない場合、省略できます。（空要素の場合は省略できません。）
+        <code>&lt;tbody&gt;</code> 要素の終了タグは、<code>&lt;tbody&gt;</code> 要素の直後に <code>&lt;tbody&gt;</code> 要素または {{HTMLElement("tfoot")}} 要素が続く場合、または親要素にまだコンテンツがない場合に省略できます。
       </td>
     </tr>
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        {{HTMLElement("table")}} 要素。 <code>&#x3C;tbody></code> 要素は
+        {{HTMLElement("table")}} 要素。 <code>&lt;tbody&gt;</code> 要素は
         {{HTMLElement("caption")}},
-        {{HTMLElement("colgroup")}}, {{HTMLElement("thead")}},
-        {{HTMLElement("tfoot")}} の各要素の後に配置することができます。
+        {{HTMLElement("colgroup")}}, {{HTMLElement("thead")}} の各要素の後に配置することができます。
       </td>
     </tr>
     <tr>
@@ -76,22 +75,22 @@ slug: Web/HTML/Element/tbody
     - `center`: 中身をセル内で中央揃えにします。
     - `right`: 中身をセルの右側に揃えます。
     - `justify`: 中身がセル内で両端揃えになるように、テキストコンテンツに空白を挿入します。
-    - `char`: テキストコンテンツを特定の文字に対して、最小のオフセットで揃えます。特定の文字は [`char`](/ja/docs/Web/HTML/Element/tbody#char) 属性および [`charoff`](/ja/docs/Web/HTML/Element/tbody#charoff) 属性で定義します。
+    - `char`: テキストコンテンツを特定の文字に対して、最小のオフセットで揃えます。特定の文字は [`char`](#char) 属性および [`charoff`](#charoff) 属性で定義します。
 
     この属性を設定しない場合は、値が `left` であるとみなされます。
 
     この属性は非推奨であるため、代わりに CSS の {{cssxref("text-align")}} プロパティを使用してください。
 
-    > **メモ:** `text-align` プロパティには、 `align="char"` と同等の機能がどのブラウザーでも実装されていません。 [`text-align` のブラウザーの互換性の節](/ja/docs/Web/CSS/text-align#Browser_compatibility) で `<string>` の値を確認してください。
+    > **メモ:** `text-align` プロパティには、 `align="char"` と同等の機能がどのブラウザーでも実装されていません。 [`text-align` のブラウザーの互換性の節](/ja/docs/Web/CSS/text-align#ブラウザーの互換性) で `<string>` の値を確認してください。
 
 - `bgcolor` {{Deprecated_inline}}
 
-  - : 表の背景色です。 [6 桁の 16 進 RGB コード](/ja/docs/Web/CSS/color_value#RGB_colors)の先頭に '`#`' をつけたものです。定義済みの[色キーワード](/ja/docs/Web/CSS/color_value#Color_keywords)のうちの一つを利用することもできます。
+  - : 表の背景色です。 [6 桁の 16 進 RGB コード](/ja/docs/Web/CSS/hex-color)の先頭に '`#`' をつけたものです。定義済みの[色キーワード](/ja/docs/Web/CSS/named-color)のうちの一つを利用することもできます。
 
     この属性は非推奨であり、代わりに CSS の {{cssxref("background-color")}} プロパティを使用してください。
 
 - `char` {{deprecated_inline}}
-  - : この属性は、列内のセルで揃える文字を設定します。よくある値としては、数値や金額を揃えようとするときのピリオド (.) があります。[`align`](/ja/docs/Web/HTML/Element/tbody#align) 属性を `char` に設定していない場合は、この属性は無視されます。
+  - : この属性は、列内のセルで揃える文字を設定します。よくある値としては、数値や金額を揃えようとするときのピリオド (.) があります。[`align`](#align) 属性を `char` に設定していない場合は、この属性は無視されます。
 - `charoff` {{deprecated_inline}}
   - : この属性は、 `char` 属性で指定した揃え文字から列のデータをオフセットする文字数を示します。
 - `valign` {{deprecated_inline}}
@@ -115,7 +114,7 @@ slug: Web/HTML/Element/tbody
 
 ## 例
 
-以下の例では、 `<tbody>` 要素の使用例を示します。このタグが使われているその他の例は、 {{ HTMLElement("table", "", "#Examples") }} の例を参照してください。
+以下の例では、 `<tbody>` 要素の使用例を示します。このタグが使われているその他の例は、 {{ HTMLElement("table", "", "#例") }} の例を参照してください。
 
 ### 基本的な例
 
@@ -162,21 +161,26 @@ slug: Web/HTML/Element/tbody
 table {
   border: 2px solid #555;
   border-collapse: collapse;
-  font: 16px "Lucida Grande", "Helvetica", "Arial", sans-serif;
+  font:
+    16px "Lucida Grande",
+    "Helvetica",
+    "Arial",
+    sans-serif;
 }
 ```
 
-まず、表の全体的なスタイル属性を設定し、表の外枠の太さ、スタイル、色を設定し、 {{cssxref("border-collapse")}} を使用して、セル間に間隔と独自の境界線を置くのではなく、境界線が隣接セル間で共有されるようにします。 {{cssxref("font")}} は、表の初期フォントを設定するために使用されます。
+まず、表の全体的なスタイル属性を設定し、表の外枠の太さ、スタイル、色を設定し、{{cssxref("border-collapse")}} を使用して、セル間に間隔と独自の境界線を置くのではなく、境界線が隣接セル間で共有されるようにします。{{cssxref("font")}} は、表の初期フォントを設定するために使用されます。
 
 ```css
-th, td {
+th,
+td {
   border: 1px solid #bbb;
   padding: 2px 8px 0;
   text-align: left;
 }
 ```
 
-それから、すべてのデータセルだけでなく、 {{HTMLElement("td")}} および {{HTMLElement("th")}} のセルの間で共有されるスタイルを含む、テーブル内の大部分のセルに設定されるスタイルです。セルに対して、1 ピクセルの太さで薄い灰色の輪郭、パディングの調整、すべてのセルを {{cssxref("text-align")}} を使用して左揃えにします。
+それから、すべてのデータセルだけでなく、{{HTMLElement("td")}} および {{HTMLElement("th")}} のセルの間で共有されるスタイルを含む、テーブル内の大部分のセルに設定されるスタイルです。セルに対して、1 ピクセルの太さで薄い灰色の輪郭、パディングの調整、すべてのセルを {{cssxref("text-align")}} を使用して左揃えにします。
 
 ```css
 thead > tr > th {
@@ -186,7 +190,7 @@ thead > tr > th {
 }
 ```
 
-最後に、 {{HTMLElement("thead")}} ブロックに含まれるヘッダーのセルには追加の整形を行います。より暗い {{cssxref("background-color")}} にし、大きなフォントサイズにして、下の境界線に他のセルの境界線よりも太く暗い線を引きます。
+最後に、{{HTMLElement("thead")}} ブロックに含まれるヘッダーのセルには追加の整形を行います。より暗い {{cssxref("background-color")}} にし、大きなフォントサイズにして、下の境界線に他のセルの境界線よりも太く暗い線を引きます。
 
 #### 結果
 
@@ -196,7 +200,7 @@ thead > tr > th {
 
 ### 複数の本体
 
-複数の `<tbody>` 要素を使用することで、表内の複数のセクションを作成することができます。それぞれに独自のヘッダー行がある場合もありますが、 *{{HTMLElement("thead")}} は表 1 つあたり 1 つしか置けません！* そのため、それぞれの `<tbody>` にヘッダーを作成するには、 {{HTMLElement("th")}} 要素で埋められた {{HTMLElement("tr")}} を使用する必要があります。どのようにするかを見てみましょう。
+複数の `<tbody>` 要素を使用することで、表内の複数のセクションを作成することができます。それぞれに独自のヘッダー行がある場合もありますが、{{HTMLElement("thead")}} は表 1 つあたり 1 つしか置けません！。そのため、それぞれの `<tbody>` にヘッダーを作成するには、{{HTMLElement("th")}} 要素で埋められた {{HTMLElement("tr")}} を使用する必要があります。どのようにするかを見てみましょう。
 
 前回の例から、リストに数人の学生を追加し、各行に学生の専攻を書く代わりに、学生を選考でグループ化し、ヘッダー行で選考を表すように更新しましょう。
 
@@ -260,7 +264,7 @@ thead > tr > th {
 </table>
 ```
 
-なお、各専攻は個別の `<tbody>` ブロックに配置され、最初の行に単一の {{HTMLElement("th")}} 要素に [`colspan`](/ja/docs/Web/HTML/Element/th#colspan) 属性を付けて表の幅全体に広がるようにしています。このヘッダーが `<tbody>` 内の専攻の名前を示します。
+なお、各専攻は個別の `<tbody>` ブロックに配置され、最初の行に単一の {{HTMLElement("th")}} 要素に [`colspan`](#colspan) 属性を付けて表の幅全体に広がるようにしています。このヘッダーが `<tbody>` 内の専攻の名前を示します。
 
 そして、それぞれの専攻の `<tbody>` で残りの行は 2 つのセルから成り、最初の行は学生番号で、2 つ目の行は名前です。
 
@@ -270,10 +274,15 @@ thead > tr > th {
 table {
   border: 2px solid #555;
   border-collapse: collapse;
-  font: 16px "Lucida Grande", "Helvetica", "Arial", sans-serif;
+  font:
+    16px "Lucida Grande",
+    "Helvetica",
+    "Arial",
+    sans-serif;
 }
 
-th, td {
+th,
+td {
   border: 1px solid #bbb;
   padding: 2px 8px 0;
   text-align: left;
@@ -302,7 +311,7 @@ tbody > tr > th {
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.tbody")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -2,6 +2,7 @@
 title: URL
 slug: Web/API/URL
 ---
+
 {{APIRef("URL API")}}
 
 **`URL`** 인터페이스는 {{glossary("URL")}}을 분석, 생성, 정규화, 인코딩 할 때 사용하며, URL의 각 구성요소를 쉽게 읽고 쓸 수 있는 속성을 제공합니다. `URL` 객체 생성은 생성자에 전체 URL 문자열, 또는 상대 URL과 기준 URL을 생성자에 전달해 진행합니다. 이렇게 생성한 URL 객체를 사용해 URL을 쉽게 바꾸거나 읽을 수 있습니다.
@@ -61,7 +62,7 @@ slug: Web/API/URL
 생성자는 `url` 매개변수를 받으며, URL이 상대 URL인 경우 선택적으로 `base` 매개변수를 지정해 기준으로 사용할 수 있습니다.
 
 ```js
-const url = new URL('../cats', 'http://www.example.com/dogs');
+const url = new URL("../cats", "http://www.example.com/dogs");
 console.log(url.hostname); // "www.example.com"
 console.log(url.pathname); // "/cats"
 ```
@@ -69,14 +70,14 @@ console.log(url.pathname); // "/cats"
 URL 속성을 사용해 URL을 만들 수 있습니다.
 
 ```js
-url.hash = 'tabby';
+url.hash = "tabby";
 console.log(url.href); // "http://www.example.com/cats#tabby"
 ```
 
 URL은 {{RFC(3986)}}의 규칙을 따라 인코딩 됩니다.
 
 ```js
-url.pathname = 'démonstration.html';
+url.pathname = "démonstration.html";
 console.log(url.href); // "http://www.example.com/d%C3%A9monstration.html"
 ```
 
@@ -93,7 +94,9 @@ console.log(parsedUrl.searchParams.get("id")); // "123"
 {{domxref("URL.toString", "toString()")}} 메서드는 단순히 {{domxref("URL.href", "href")}} 속성의 값을 반환하는 것이므로, URL 정규화와 인코딩에 생성자를 직접 사용할 수 있습니다.
 
 ```js
-const response = await fetch(new URL('http://www.example.com/démonstration.html'));
+const response = await fetch(
+  new URL("http://www.example.com/démonstration.html"),
+);
 ```
 
 ## 명세

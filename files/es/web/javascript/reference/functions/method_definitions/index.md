@@ -1,7 +1,6 @@
 ---
 title: Method definitions
 slug: Web/JavaScript/Reference/Functions/Method_definitions
-original_slug: Web/JavaScript/Referencia/Funciones/Method_definitions
 ---
 
 {{JsSidebar("Functions")}}A partir de ECMAScript 2015 (ES6), se introdujo una sintaxis abreviada para la definición de métodos en inicializadores de objetos. Es una forma abreviada para la asignación de una función al nombre del método.
@@ -29,8 +28,8 @@ Dado el siguiente código:
 
 ```js
 var obj = {
-  foo: function() {},
-  bar: function() {}
+  foo: function () {},
+  bar: function () {},
 };
 ```
 
@@ -39,7 +38,7 @@ Ahora se puede abreviar esto mismo como:
 ```js
 var obj = {
   foo() {},
-  bar() {}
+  bar() {},
 };
 ```
 
@@ -81,12 +80,12 @@ Las las definiciones de métodos no son constructores y generarán un {{jsxref("
 var obj = {
   method() {},
 };
-new obj.method; // TypeError: obj.method no es un constructor
+new obj.method(); // TypeError: obj.method no es un constructor
 
 var obj = {
-  * g() {}
+  *g() {},
 };
-new obj.g; // TypeError: obj.g no es un constructor (cambiado en ES2016)
+new obj.g(); // TypeError: obj.g no es un constructor (cambiado en ES2016)
 ```
 
 ## Ejemplos

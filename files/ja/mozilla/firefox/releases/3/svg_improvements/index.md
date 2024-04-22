@@ -1,7 +1,6 @@
 ---
 title: Firefox 3 における SVG の改良
 slug: Mozilla/Firefox/Releases/3/SVG_improvements
-original_slug: SVG_improvements_in_Firefox_3
 l10n:
   sourceCommit: 1ee49b729dc4cd02b862d910f279861f4b30e704
 ---

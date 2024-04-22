@@ -1,7 +1,6 @@
 ---
 title: Error.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Error/toString
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Error/toString
 ---
 
 {{JSRef}}
@@ -23,8 +22,8 @@ Una cadena que representa el objeto {{JSxRef("Error")}} especificado.
 El objeto {{JSxRef("Error")}} redefine el método {{JSxRef("Object.prototype.toString()")}} heredado por todos los objetos. Su semántica es la siguiente (asumiendo que {{JSxRef("Object")}} y {{JSxRef("String")}} tienen sus valores originales):
 
 ```js
-Error.prototype.toString = function() {
-  'use strict';
+Error.prototype.toString = function () {
+  "use strict";
 
   var obj = Object(this);
   if (obj !== this) {
@@ -32,19 +31,19 @@ Error.prototype.toString = function() {
   }
 
   var name = this.name;
-  name = (name === undefined) ? 'Error' : String(name);
+  name = name === undefined ? "Error" : String(name);
 
   var msg = this.message;
-  msg = (msg === undefined) ? '' : String(msg);
+  msg = msg === undefined ? "" : String(msg);
 
-  if (name === '') {
+  if (name === "") {
     return msg;
   }
-  if (msg === '') {
+  if (msg === "") {
     return name;
   }
 
-  return name + ': ' + msg;
+  return name + ": " + msg;
 };
 ```
 
@@ -53,19 +52,19 @@ Error.prototype.toString = function() {
 ### Usar `toString()`
 
 ```js
-var e = new Error('fatal error');
+var e = new Error("fatal error");
 console.log(e.toString()); // 'Error: error fatal'
 
 e.name = undefined;
 console.log(e.toString()); // 'Error: error fatal'
 
-e.name = '';
+e.name = "";
 console.log(e.toString()); // 'error fatal'
 
 e.message = undefined;
 console.log(e.toString()); // ''
 
-e.name = 'hola';
+e.name = "hola";
 console.log(e.toString()); // 'hola'
 ```
 

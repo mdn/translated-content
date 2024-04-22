@@ -47,30 +47,30 @@ Dentro do tratamento `inputForm.onsubmit`, nós impedimos a submissão do formul
 ```js
 var synth = window.speechSynthesis;
 
-var inputForm = document.querySelector('form');
-var inputTxt = document.querySelector('.txt');
-var voiceSelect = document.querySelector('select');
+var inputForm = document.querySelector("form");
+var inputTxt = document.querySelector(".txt");
+var voiceSelect = document.querySelector("select");
 
-var pitch = document.querySelector('#pitch');
-var pitchValue = document.querySelector('.pitch-value');
-var rate = document.querySelector('#rate');
-var rateValue = document.querySelector('.rate-value');
+var pitch = document.querySelector("#pitch");
+var pitchValue = document.querySelector(".pitch-value");
+var rate = document.querySelector("#rate");
+var rateValue = document.querySelector(".rate-value");
 
 var voices = [];
 
 function populateVoiceList() {
   voices = synth.getVoices();
 
-  for(i = 0; i < voices.length ; i++) {
-    var option = document.createElement('option');
-    option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
+  for (i = 0; i < voices.length; i++) {
+    var option = document.createElement("option");
+    option.textContent = voices[i].name + " (" + voices[i].lang + ")";
 
-    if(voices[i].default) {
-      option.textContent += ' -- DEFAULT';
+    if (voices[i].default) {
+      option.textContent += " -- DEFAULT";
     }
 
-    option.setAttribute('data-lang', voices[i].lang);
-    option.setAttribute('data-name', voices[i].name);
+    option.setAttribute("data-lang", voices[i].lang);
+    option.setAttribute("data-name", voices[i].name);
     voiceSelect.appendChild(option);
   }
 }
@@ -80,13 +80,13 @@ if (speechSynthesis.onvoiceschanged !== undefined) {
   speechSynthesis.onvoiceschanged = populateVoiceList;
 }
 
-inputForm.onsubmit = function(event) {
+inputForm.onsubmit = function (event) {
   event.preventDefault();
 
   var utterThis = new SpeechSynthesisUtterance(inputTxt.value);
-  var selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-  for(i = 0; i < voices.length ; i++) {
-    if(voices[i].name === selectedOption) {
+  var selectedOption = voiceSelect.selectedOptions[0].getAttribute("data-name");
+  for (i = 0; i < voices.length; i++) {
+    if (voices[i].name === selectedOption) {
       utterThis.voice = voices[i];
     }
   }
@@ -95,18 +95,16 @@ inputForm.onsubmit = function(event) {
   synth.speak(utterThis);
 
   inputTxt.blur();
-}
+};
 ```
 
 ## Especificações
 
-| Especificação                                                                            | Situação                             | Comentários |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Speech API', '#tts-section', 'SpeechSynthesis')}} | {{Spec2('Web Speech API')}} |             |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.SpeechSynthesis")}}
+{{Compat}}
 
 ## Veja também
 

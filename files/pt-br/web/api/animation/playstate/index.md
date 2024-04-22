@@ -37,29 +37,25 @@ No [jogo](http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010) [Growing/Shrin
 ```js
 // Configurando a animação das lágrimas
 
-tears.forEach(function(el) {
-  el.animate(
-    tearsFalling,
-    {
-      delay: getRandomMsRange(-1000, 1000), // aleatório para cada lágrima
-      duration: getRandomMsRange(2000, 6000), // aleatório para cada lágrima
-      iterations: Infinity,
-      easing: "cubic-bezier(0.6, 0.04, 0.98, 0.335)"
-    });
-  el.playState = 'paused';
+tears.forEach(function (el) {
+  el.animate(tearsFalling, {
+    delay: getRandomMsRange(-1000, 1000), // aleatório para cada lágrima
+    duration: getRandomMsRange(2000, 6000), // aleatório para cada lágrima
+    iterations: Infinity,
+    easing: "cubic-bezier(0.6, 0.04, 0.98, 0.335)",
+  });
+  el.playState = "paused";
 });
-
 
 // Rodar as lágrimas caindo quando o final precisa aparecer.
 
-tears.forEach(function(el) {
-  el.playState = 'playing';
+tears.forEach(function (el) {
+  el.playState = "playing";
 });
-
 
 // Reseta a animação e coloca o estado em pause.
 
-tears.forEach(function(el) {
+tears.forEach(function (el) {
   el.playState = "paused";
   el.currentTime = 0;
 });
@@ -67,13 +63,11 @@ tears.forEach(function(el) {
 
 ## Especificações
 
-| Especificações                                                               | Status                               | Comentários         |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Web Animations', '#play-state', 'playState')}} | {{Spec2("Web Animations")}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Animation.playState")}}
+{{Compat}}
 
 ## Veja também
 

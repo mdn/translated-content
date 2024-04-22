@@ -1,8 +1,6 @@
 ---
 title: stroke-dasharray
 slug: Web/SVG/Attribute/stroke-dasharray
-translation_of: Web/SVG/Attribute/stroke-dasharray
-browser-compat: svg.attributes.presentation.stroke-dasharray
 ---
 
 {{SVGRef}}
@@ -29,7 +27,11 @@ Cet attribut peut être utilisé avec les éléments SVG suivants&nbsp;:
 ## Exemple
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -38,24 +40,31 @@ html,body,svg { height:100% }
   <line x1="0" y1="1" x2="30" y2="1" stroke="black" />
 
   <!-- Traits et espaces de même taille -->
-  <line x1="0" y1="3" x2="30" y2="3" stroke="black"
-          stroke-dasharray="4" />
+  <line x1="0" y1="3" x2="30" y2="3" stroke="black" stroke-dasharray="4" />
 
   <!-- Traits et espaces de tailles différentes -->
-  <line x1="0" y1="5" x2="30" y2="5" stroke="black"
-          stroke-dasharray="4 1" />
+  <line x1="0" y1="5" x2="30" y2="5" stroke="black" stroke-dasharray="4 1" />
 
   <!-- Traits et espaces de tailles différentes avec un nombre impair de valeurs -->
-  <line x1="0" y1="7" x2="30" y2="7" stroke="black"
-          stroke-dasharray="4 1 2" />
+  <line x1="0" y1="7" x2="30" y2="7" stroke="black" stroke-dasharray="4 1 2" />
 
   <!-- Traits et espaces de tailles différentes avec un nombre pair de valeurs -->
-  <line x1="0" y1="9" x2="30" y2="9" stroke="black"
-          stroke-dasharray="4 1 2 3" />
+  <line
+    x1="0"
+    y1="9"
+    x2="30"
+    y2="9"
+    stroke="black"
+    stroke-dasharray="4 1 2 3" />
 
   <!-- Traits commençant par un espace -->
-  <line x1="0" y1="11" x2="30" y2="11" stroke="black"
-          stroke-dasharray="0 4 0" />
+  <line
+    x1="0"
+    y1="11"
+    x2="30"
+    y2="11"
+    stroke="black"
+    stroke-dasharray="0 4 0" />
 </svg>
 ```
 
@@ -81,6 +90,7 @@ html,body,svg { height:100% }
 </table>
 
 - `<dasharray>`
+
   - : Une liste de valeurs [`<length>`](/fr/docs/Web/SVG/Content_type#length) et [`<percentage>`](/fr/docs/Web/SVG/Content_type#percentage), séparées par des espaces ou des virgules, qui indiquent les longueurs alternées des traits et des espaces.
 
     Si un nombre impair de valeurs est fourni, la liste est répétée afin d'obtenir un nombre pair de valeur. Ainsi, `5,3,2` sera équivalent à `5,3,2,5,3,2`.

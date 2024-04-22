@@ -14,13 +14,14 @@ slug: Web/API/MediaDevices/getUserMedia
 通常你可以使用 {{domxref("navigator.mediaDevices")}} 来获取 {{domxref("MediaDevices")}} ，例如：
 
 ```js
-navigator.mediaDevices.getUserMedia(constraints)
-.then(function(stream) {
-  /* 使用这个 stream stream */
-})
-.catch(function(err) {
-  /* 处理 error */
-});
+navigator.mediaDevices
+  .getUserMedia(constraints)
+  .then(function (stream) {
+    /* 使用这个 stream stream */
+  })
+  .catch(function (err) {
+    /* 处理 error */
+  });
 ```
 
 ## 语法
@@ -149,15 +150,18 @@ var promise = navigator.mediaDevices.getUserMedia(constraints);
 // 想要获取一个最接近 1280x720 的相机分辨率
 var constraints = { audio: true, video: { width: 1280, height: 720 } };
 
-navigator.mediaDevices.getUserMedia(constraints)
-.then(function(mediaStream) {
-  var video = document.querySelector('video');
-  video.srcObject = mediaStream;
-  video.onloadedmetadata = function(e) {
-    video.play();
-  };
-})
-.catch(function(err) { console.log(err.name + ": " + err.message); }); // 总是在最后检查错误
+navigator.mediaDevices
+  .getUserMedia(constraints)
+  .then(function (mediaStream) {
+    var video = document.querySelector("video");
+    video.srcObject = mediaStream;
+    video.onloadedmetadata = function (e) {
+      video.play();
+    };
+  })
+  .catch(function (err) {
+    console.log(err.name + ": " + err.message);
+  }); // 总是在最后检查错误
 ```
 
 ### 在旧的浏览器中使用新的 API
@@ -173,40 +177,43 @@ if (navigator.mediaDevices === undefined) {
 // 一些浏览器部分支持 mediaDevices。我们不能直接给对象设置 getUserMedia
 // 因为这样可能会覆盖已有的属性。这里我们只会在没有 getUserMedia 属性的时候添加它。
 if (navigator.mediaDevices.getUserMedia === undefined) {
-  navigator.mediaDevices.getUserMedia = function(constraints) {
-
+  navigator.mediaDevices.getUserMedia = function (constraints) {
     // 首先，如果有 getUserMedia 的话，就获得它
-    var getUserMedia = navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+    var getUserMedia =
+      navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
 
     // 一些浏览器根本没实现它 - 那么就返回一个 error 到 promise 的 reject 来保持一个统一的接口
     if (!getUserMedia) {
-      return Promise.reject(new Error('getUserMedia is not implemented in this browser'));
+      return Promise.reject(
+        new Error("getUserMedia is not implemented in this browser"),
+      );
     }
 
     // 否则，为老的 navigator.getUserMedia 方法包裹一个 Promise
-    return new Promise(function(resolve, reject) {
+    return new Promise(function (resolve, reject) {
       getUserMedia.call(navigator, constraints, resolve, reject);
     });
-  }
+  };
 }
 
-navigator.mediaDevices.getUserMedia({ audio: true, video: true })
-.then(function(stream) {
-  var video = document.querySelector('video');
-  // 旧的浏览器可能没有 srcObject
-  if ("srcObject" in video) {
-    video.srcObject = stream;
-  } else {
-    // 防止在新的浏览器里使用它，应为它已经不再支持了
-    video.src = window.URL.createObjectURL(stream);
-  }
-  video.onloadedmetadata = function(e) {
-    video.play();
-  };
-})
-.catch(function(err) {
-  console.log(err.name + ": " + err.message);
-});
+navigator.mediaDevices
+  .getUserMedia({ audio: true, video: true })
+  .then(function (stream) {
+    var video = document.querySelector("video");
+    // 旧的浏览器可能没有 srcObject
+    if ("srcObject" in video) {
+      video.srcObject = stream;
+    } else {
+      // 防止在新的浏览器里使用它，应为它已经不再支持了
+      video.src = window.URL.createObjectURL(stream);
+    }
+    video.onloadedmetadata = function (e) {
+      video.play();
+    };
+  })
+  .catch(function (err) {
+    console.log(err.name + ": " + err.message);
+  });
 ```
 
 ### 帧率
@@ -223,9 +230,11 @@ var constraints = { video: { frameRate: { ideal: 10, max: 15 } } };
 
 ```js
 var front = false;
-document.getElementById('flip-button').onclick = function() { front = !front; };
+document.getElementById("flip-button").onclick = function () {
+  front = !front;
+};
 
-var constraints = { video: { facingMode: (front? "user" : "environment") } };
+var constraints = { video: { facingMode: front ? "user" : "environment" } };
 ```
 
 ## 权限

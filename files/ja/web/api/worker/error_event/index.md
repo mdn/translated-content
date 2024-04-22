@@ -1,7 +1,6 @@
 ---
-title: 'Worker: error イベント'
+title: "Worker: error イベント"
 slug: Web/API/Worker/error_event
-original_slug: Web/API/Worker/onerror
 l10n:
   sourceCommit: 6d697b8a86ea3ce1bf82615c5dc006aeaa22d90b
 ---
@@ -15,9 +14,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('error', (event) => { });
+addEventListener("error", (event) => {});
 
-onerror = (event) => { };
+onerror = (event) => {};
 ```
 
 ## イベント型
@@ -29,11 +28,11 @@ onerror = (event) => { };
 以下の例では {{domxref("Worker")}} オブジェクトを {{domxref("Worker.Worker", "Worker()")}} コンストラクターを使用して生成し、結果のオブジェクトに `onerror` ハンドラーを設定しています。
 
 ```js
-const myWorker = new Worker('worker.js');
+const myWorker = new Worker("worker.js");
 
 myWorker.onerror = (event) => {
-  console.log('There is an error with your worker!');
-}
+  console.log("There is an error with your worker!");
+};
 ```
 
 ## 仕様書

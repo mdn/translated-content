@@ -1,7 +1,6 @@
 ---
 title: Использование каналов данных в WebRTC
 slug: Web/API/WebRTC_API/Using_data_channels
-translation_of: Web/API/WebRTC_API/Using_data_channels
 ---
 
 {{DefaultAPISidebar("WebRTC")}}
@@ -41,7 +40,7 @@ dataChannel.addEventListener("open", (event) => {
 
 ```js
 let dataChannel = pc.createDataChannel("MyApp Channel", {
-  negotiated: true
+  negotiated: true,
 });
 
 dataChannel.addEventListener("open", (event) => {
@@ -56,10 +55,6 @@ requestRemoteChannel(dataChannel.id);
 ## Буферизация
 
 Каналы данных WebRTC поддерживают буферизацию исходящих данных. Это работает автоматически. Несмотря на то, что нет способа контролировать размер буфера, вы можете узнать, сколько данных в настоящее время буферизуется, и вы можете выбрать уведомление о событии, когда в буфере начинают заканчиваться данные в очереди. Это облегчает написание эффективных подпрограмм, которые гарантируют, что всегда есть данные, готовые к отправке, без чрезмерного использования памяти или полного переполнения канала.
-
-**<<\<write more about using bufferedAmount, bufferedAmountLowThreshold, onbufferedamountlow, and bufferedamountlow here>>>**
-
-...
 
 ## Ограничения размеров сообщений
 

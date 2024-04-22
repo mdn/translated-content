@@ -1,20 +1,9 @@
 ---
 title: webNavigation.onCompleted
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onCompleted
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onCompleted
-  - webNavigation
-translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/onCompleted
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Lancé lorsqu'un document, y compris les ressources auxquelles il fait référence, est complètement chargé et initialisé. Ceci est équivalent à l'événement [`chargement`](/fr/docs/Web/Events/load) du DOM.
 
@@ -22,11 +11,11 @@ Lancé lorsqu'un document, y compris les ressources auxquelles il fait référen
 
 ```js
 browser.webNavigation.onCompleted.addListener(
-  listener,                   // function
-  filter                      // optional object
-)
-browser.webNavigation.onCompleted.removeListener(listener)
-browser.webNavigation.onCompleted.hasListener(listener)
+  listener, // function
+  filter, // optional object
+);
+browser.webNavigation.onCompleted.removeListener(listener);
+browser.webNavigation.onCompleted.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -77,12 +66,8 @@ Consigne les URL cibles de `onCompleted`, si le nom d'hôte de l'URL cible conti
 
 ```js
 var filter = {
-  url:
-  [
-    {hostContains: "example.com"},
-    {hostPrefix: "developer"}
-  ]
-}
+  url: [{ hostContains: "example.com" }, { hostPrefix: "developer" }],
+};
 
 function logOnCompleted(details) {
   console.log("onCompleted: " + details.url);

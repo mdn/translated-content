@@ -1,20 +1,9 @@
 ---
 title: webRequest.RequestFilter
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/RequestFilter
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - RequestFilter
-  - Type
-  - WebExtensions
-  - webRequest
-translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/RequestFilter
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Un objet décrivant les filtres à appliquer aux événements webRequest.
 

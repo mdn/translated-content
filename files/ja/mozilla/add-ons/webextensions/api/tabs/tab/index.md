@@ -3,7 +3,7 @@ title: tabs.Tab
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 **`tabs.Tab`** 型はタブについての情報を含んでいます。これはタブの中のコンテンツについての情報へのアクセスを提供します。例えば、コンテンツはどれくらいの大きさか、どのような特別な状態もしくは制限が有効になっているか、など。
 
@@ -40,7 +40,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
     Firefox for Android doesn't support highlighting multiple tabs, and Firefox desktop requires the `browser.tabs.multiselect` preference.
 
 - `id` {{optional_inline}}
-  - : `integer`. タブの ID。 タブの ID はブラウザセッショの中でユニークです。The tab ID may also be set to {{WebExtAPIRef('tabs.TAB_ID_NONE')}} for browser windows that don't host content tabs (for example, devtools windows).
+  - : `integer`. タブの ID。 タブの ID はブラウザーセッショの中でユニークです。The tab ID may also be set to {{WebExtAPIRef('tabs.TAB_ID_NONE')}} for browser windows that don't host content tabs (for example, devtools windows).
 - `incognito`
   - : `boolean`. タブがプライベートブラウジングウィンドウの中にあるかどうか。
 - `index`
@@ -76,9 +76,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
 
 > **メモ:** In extension background scripts, the only properties that are available are tabId and **windowId.**
 
-## Browser compatibility
+## ブラウザーの互換性
 
-{{Compat("webextensions.api.tabs.Tab", 10)}}
+{{Compat}}
 
 {{WebExtExamples}}
 

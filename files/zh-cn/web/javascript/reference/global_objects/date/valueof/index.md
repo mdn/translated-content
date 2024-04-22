@@ -33,7 +33,7 @@ dateObj.valueOf()
 
 ```js
 var x = new Date(56, 6, 17);
-var myVar = x.valueOf();      // assigns -424713600000 to myVar
+var myVar = x.valueOf(); // assigns -424713600000 to myVar
 ```
 
 ## 规范
@@ -44,7 +44,7 @@ var myVar = x.valueOf();      // assigns -424713600000 to myVar
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Object.prototype.valueOf()")}}
 - {{jsxref("Date.prototype.getTime()")}}

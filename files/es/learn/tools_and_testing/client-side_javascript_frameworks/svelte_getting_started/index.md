@@ -1,7 +1,6 @@
 ---
 title: Introducción a Svelte
-slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started
 l10n:
   sourceCommit: 1ad0cd5faac577bf7b13990242db455f2be2058d
 ---
@@ -371,7 +370,7 @@ Además compila el marcado y la sección de `<script>` de cada componente y alma
 Por último, el archivo `public/index.html` incluye los archivos `bundle.css` y `bundle.js` que fueron generados:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />

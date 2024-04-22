@@ -1,7 +1,6 @@
 ---
 title: "MediaRecorder: pause イベント"
 slug: Web/API/MediaRecorder/pause_event
-original_slug: Web/API/MediaRecorder/onpause
 l10n:
   sourceCommit: bbecba9e7d688493adbdc37fc70e02d87adfe371
 ---
@@ -35,17 +34,17 @@ pause.onclick = () => {
     mediaRecorder.resume();
     // 記録を再開
   }
-}
+};
 
 mediaRecorder.onpause = () => {
   // 記録の一時停止に
   // 応答して何かをする
-}
+};
 
 mediaRecorder.onresume = () => {
   // 記録の再開に
   // 応答して何かをする
-}
+};
 ```
 
 ## インスタンスプロパティ

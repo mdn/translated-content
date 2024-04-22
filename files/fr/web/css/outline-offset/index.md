@@ -1,11 +1,6 @@
 ---
 title: outline-offset
 slug: Web/CSS/outline-offset
-tags:
-  - CSS
-  - Propriété
-  - Reference
-translation_of: Web/CSS/outline-offset
 ---
 
 {{CSSRef}}
@@ -59,7 +54,7 @@ outline-offset: unset;
 ### HTML
 
 ```html
-<p class="exemple">La bordure est décalée<p>
+<p class="exemple">La bordure est décalée</p>
 ```
 
 ### Résultat

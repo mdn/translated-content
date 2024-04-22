@@ -2,6 +2,7 @@
 title: Geolocation.getCurrentPosition()
 slug: Web/API/Geolocation/getCurrentPosition
 ---
+
 {{securecontext_header}}{{ APIRef("Geolocation API") }}
 
 **`Geolocation.getCurrentPosition()`** 메서드는 장치의 현재 위치를 가져옵니다.
@@ -9,7 +10,7 @@ slug: Web/API/Geolocation/getCurrentPosition
 ## 구문
 
 ```js
-navigator.geolocation.getCurrentPosition(success, error, [options])
+navigator.geolocation.getCurrentPosition(success, error, [options]);
 ```
 
 ### 매개변수
@@ -33,13 +34,13 @@ navigator.geolocation.getCurrentPosition(success, error, [options])
 var options = {
   enableHighAccuracy: true,
   timeout: 5000,
-  maximumAge: 0
+  maximumAge: 0,
 };
 
 function success(pos) {
   var crd = pos.coords;
 
-  console.log('Your current position is:');
+  console.log("Your current position is:");
   console.log(`Latitude : ${crd.latitude}`);
   console.log(`Longitude: ${crd.longitude}`);
   console.log(`More or less ${crd.accuracy} meters.`);

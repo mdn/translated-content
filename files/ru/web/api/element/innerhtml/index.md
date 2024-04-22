@@ -1,8 +1,8 @@
 ---
 title: Element.innerHTML
 slug: Web/API/Element/innerHTML
-translation_of: Web/API/Element/innerHTML
 ---
+
 {{APIRef("DOM")}}
 
 Свойство интерфейса {{domxref("Element")}} **`innerHTML`** устанавливает или получает HTML или XML разметку дочерних элементов.
@@ -35,14 +35,16 @@ element.innerHTML = htmlString;
 Это свойство предоставляет простой способ полностью заменить содержимое элемента. Например, все содержимое элемента body может быть удалено:
 
 ```js
-document.body.innerHTML = "";  // Заменяет содержимое тела пустой строкой.
+document.body.innerHTML = ""; // Заменяет содержимое тела пустой строкой.
 ```
 
 Свойство innerHTML многих типов элементов, включая {{HTMLElement("body")}} или {{HTMLElement("html")}}, могут быть возвращены или перемещены. Это может так же быть использовано для просмотра кода страницы, которая была изменена динамически:
 
 ```js
 // Скопируйте и вставьте в адресную строку в виде одной строки.
-javascript:"<pre>"+document.documentElement.innerHTML.replace(/</g,"&lt;") + "</pre>";
+javascript: "<pre>" +
+  document.documentElement.innerHTML.replace(/</g, "&lt;") +
+  "</pre>";
 ```
 
 Это свойство было первоначально реализовано веб браузерами, затем описано WHATWG и W3C в HTML5. Старые реализации могут отличаться от новых. Для примера, когда введён текст в поле ввода \<input>, IE меняет значение атрибута \<input> свойства innerHTML, но браузеры Gecko не делают этого.
@@ -97,8 +99,14 @@ log("Регистрация событий мыши внутри этого ко
 
 ```js
 function logEvent(event) {
-  var msg = "Event <strong>" + event.type + "</strong> at <em>" +
-            event.clientX + ", " + event.clientY + "</em>";
+  var msg =
+    "Event <strong>" +
+    event.type +
+    "</strong> at <em>" +
+    event.clientX +
+    ", " +
+    event.clientY +
+    "</em>";
   log(msg);
 }
 ```

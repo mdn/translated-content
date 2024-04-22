@@ -123,14 +123,14 @@ Googlebot/2.1 (+http://www.google.com/bot.html)
 
 ## 仕様書
 
-| 仕様書                                           | 題名                                                          |
-| ------------------------------------------------ | ------------------------------------------------------------- |
+| 仕様書                               | 題名                                                          |
+| ------------------------------------ | ------------------------------------------------------------- |
 | {{RFC(7231, "User-Agent", "5.5.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
-| {{RFC(2616, "User-Agent", "14.43")}} | Hypertext Transfer Protocol -- HTTP/1.1                       |
+| {{RFC(2616, "User-Agent", "14.43")}} | Hypertext Transfer Protocol — HTTP/1.1                        |
 
 ## ブラウザーの互換性
 
-{{Compat("http.headers.User-Agent")}}
+{{Compat}}
 
 ## 関連情報
 

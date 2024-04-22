@@ -1,8 +1,6 @@
 ---
 title: Types et structures de données JavaScript
 slug: Web/JavaScript/Data_structures
-translation_of: Web/JavaScript/Data_structures
-original_slug: Web/JavaScript/Structures_de_données
 ---
 
 {{jsSidebar("More")}}
@@ -14,9 +12,9 @@ Les langages de programmation disposent de structures de données natives. Selon
 JavaScript est un langage dont le typage est _faible_ et _dynamique_. Cela signifie qu'il n'est pas nécessaire de déclarer le type d'une variable avant de l'utiliser. Le type de la variable sera automatiquement déterminé lorsque le programme sera exécuté. Cela signifie également que la même variable pourra avoir différents types au cours de son existence&nbsp;:
 
 ```js
-let toto = 42;     // toto est un nombre
-    toto = 'truc'; // toto est désormais une chaîne de caractères
-    toto = true;   // toto est désormais un booléen
+let toto = 42; // toto est un nombre
+toto = "truc"; // toto est désormais une chaîne de caractères
+toto = true; // toto est désormais un booléen
 ```
 
 ## Les types de données JavaScript
@@ -24,6 +22,7 @@ let toto = 42;     // toto est un nombre
 L'ensemble des types disponible en JavaScript se compose [_des valeurs primitives_](#les_valeurs_primitives) et [_des objets_](#les_objects).
 
 - [Les valeurs primitives](#les_valeurs_primitives) (des données immuables, représentées au niveau le plus bas du langage)
+
   - [Le type booléen](#le_type_booléen)
   - [Le type nul](#le_type_nul)
   - [Le type indéfini](#le_type_indéfini)
@@ -146,7 +145,7 @@ En JavaScript, les objets peuvent être considérés comme des collections de pr
 
 Il existe deux types de propriétés qui ont certains attributs&nbsp;: des [propriétés de _données_](#propriétés_de_données) (<i lang="en">data property</i>) et des [propriétés d'_accesseur_](#propriétés_daccesseur).
 
-> **Note :** Chaque propriété est décrite par des *attributs* correspondants. Ceux-ci sont utilisés par le moteur JavaScript et ne peuvent pas être manipulés depuis le code. Pour les identifier, les attributs sont indiqués entre double crochets.
+> **Note :** Chaque propriété est décrite par des _attributs_ correspondants. Ceux-ci sont utilisés par le moteur JavaScript et ne peuvent pas être manipulés depuis le code. Pour les identifier, les attributs sont indiqués entre double crochets.
 >
 > Voir la page [`Object.defineProperty()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) pour en savoir plus.
 
@@ -220,7 +219,7 @@ Elles possèdent les attributs suivants&nbsp;:
 | ------------------ | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------- |
 | `[[Get]]`          | Un objet `Function` ou `undefined` | La fonction qui est appelée sans argument afin de récupérer la valeur de la propriété quand on souhaite y accéder. Voir aussi la page sur [`get`](/fr/docs/Web/JavaScript/Reference/Functions/get).                                                    | `undefined`       |
 | `[[Set]]`          | Un objet `Function` ou `undefined` | La fonction, appelée avec un argument qui contient la valeur qu'on souhaite affecter à la valeur et qui est exécutée à chaque fois qu'on souhaite modifier la valeur. Voir aussi la page sur [`set`](/fr/docs/Web/JavaScript/Reference/Functions/set). | `undefined`       |
-| `[[Enumerable]]`   | Booléen                            | S'il vaut `true`, la propriété sera listée dans les boucles [`for…in`](/fr/docs/Web/JavaScript/Reference/Statements/for...in).                                                                                                                     | `false`           |
+| `[[Enumerable]]`   | Booléen                            | S'il vaut `true`, la propriété sera listée dans les boucles [`for…in`](/fr/docs/Web/JavaScript/Reference/Statements/for...in).                                                                                                                         | `false`           |
 | `[[Configurable]]` | Booléen                            | S'il vaut `false`, la propriété ne pourra pas être supprimée et ne pourra pas être transformée en une propriété de données.                                                                                                                            | `false`           |
 
 ### Les objets «&nbsp;normaux&nbsp;» et les fonctions

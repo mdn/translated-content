@@ -33,16 +33,16 @@ slug: Web/CSS/Privacy_and_the_:visited_selector
 
 ```css
 :link {
-   outline: 1px dotted blue;
-   background-color: white;
-   /* background-color 的默认值为 'transparent'。
+  outline: 1px dotted blue;
+  background-color: white;
+  /* background-color 的默认值为 'transparent'。
       你必须指定一个不同值，否则无法应用对 :visited 的修改 */
 }
 
 :visited {
-   outline-color: orange;     /* 已访问链接的轮廓为橘色 */
-   color: yellow;             /* 已访问链接的文本为黄色 */
-   background-color: green;   /* 已访问链接的背景为绿色 */
+  outline-color: orange; /* 已访问链接的轮廓为橘色 */
+  color: yellow; /* 已访问链接的文本为黄色 */
+  background-color: green; /* 已访问链接的背景为绿色 */
 }
 ```
 

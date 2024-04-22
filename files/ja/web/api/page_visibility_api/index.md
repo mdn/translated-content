@@ -1,7 +1,6 @@
 ---
 title: ページ可視性 API
 slug: Web/API/Page_Visibility_API
-original_slug: Web/Guide/User_experience/Using_the_Page_Visibility_API
 l10n:
   sourceCommit: c41a14a44308f59a7e3bbe73988044bf547172d3
 ---

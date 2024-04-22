@@ -2,6 +2,7 @@
 title: JSON.parse()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/parse
 ---
+
 {{JSRef}}
 
 **`JSON.parse()`** 메서드는 JSON 문자열의 구문을 분석하고, 그 결과에서 JavaScript 값이나 객체를 생성합니다. 선택적으로, `reviver` 함수를 인수로 전달할 경우, 결과를 반환하기 전에 변형할 수 있습니다.
@@ -34,11 +35,11 @@ slug: Web/JavaScript/Reference/Global_Objects/JSON/parse
 ### `JSON.parse()` 사용하기
 
 ```js
-JSON.parse('{}');              // {}
-JSON.parse('true');            // true
-JSON.parse('"foo"');           // "foo"
+JSON.parse("{}"); // {}
+JSON.parse("true"); // true
+JSON.parse('"foo"'); // "foo"
 JSON.parse('[1, 5, "false"]'); // [1, 5, "false"]
-JSON.parse('null');            // null
+JSON.parse("null"); // null
 ```
 
 ### `reviver` 매개변수 사용하기
@@ -48,17 +49,19 @@ JSON.parse('null');            // null
 만약 `reviver`가 일부 값만 변환하고 나머지는 건드리지 않는다면, 나머지 값을 그대로 반환하는걸 잊지 마세요. 그렇지 않으면 변환한 값 외에는 결과에서 모두 제외됩니다.
 
 ```js
-JSON.parse('{"p": 5}', (key, value) =>
-  typeof value === 'number'
-    ? value * 2 // 숫자라면 2배
-    : value     // 나머진 그대로
+JSON.parse(
+  '{"p": 5}',
+  (key, value) =>
+    typeof value === "number"
+      ? value * 2 // 숫자라면 2배
+      : value, // 나머진 그대로
 );
 
 // { p: 10 }
 
 JSON.parse('{"1": 1, "2": 2, "3": {"4": 4, "5": {"6": 6}}}', (key, value) => {
   console.log(key); // 현재 속성명 출력, 마지막은 빈 문자열("")
-  return value;     // 변환하지 않고 그대로 반환
+  return value; // 변환하지 않고 그대로 반환
 });
 
 // 1
@@ -74,11 +77,11 @@ JSON.parse('{"1": 1, "2": 2, "3": {"4": 4, "5": {"6": 6}}}', (key, value) => {
 
 ```js example-bad
 // 둘 다 SyntaxError
-JSON.parse('[1, 2, 3, 4, ]');
+JSON.parse("[1, 2, 3, 4, ]");
 JSON.parse('{"foo" : 1, }');
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

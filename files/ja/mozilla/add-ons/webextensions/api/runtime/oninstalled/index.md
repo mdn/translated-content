@@ -3,7 +3,7 @@ title: runtime.onInstalled
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onInstalled
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 拡張機能が最初にインストールされた時や、新しいバージョンへ更新された時、ブラウザーが新しいバージョンへ更新された時に発火します。
 
@@ -59,7 +59,7 @@ browser.runtime.onInstalled.hasListener(listener)
 function handleInstalled(details) {
   console.log(details.reason);
   browser.tabs.create({
-    url: "https://example.com"
+    url: "https://example.com",
   });
 }
 

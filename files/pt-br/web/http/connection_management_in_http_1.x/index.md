@@ -1,7 +1,6 @@
 ---
 title: Gerenciamento de Conexão em HTTP/1.x
 slug: Web/HTTP/Connection_management_in_HTTP_1.x
-original_slug: Web/HTTP/Gerenciamento_de_Conexão_em_HTTP_1.x
 ---
 
 Gerenciamento de Conexão é um tema central em HTTP: abertura e manutenção de conexões e em grande parte tem impacto sobre o desempenho de Web sites e aplicações Web. Existem vários modelos, em HTTP/1.x: _ligações de curta duração, conexões persistentes, canalização e HTTP (HTTP pipelining)_.

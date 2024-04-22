@@ -1,7 +1,6 @@
 ---
 title: counter()
 slug: Web/CSS/counter
-original_slug: Web/CSS/counter()
 ---
 
 {{CSSRef}}
@@ -15,6 +14,8 @@ counter(countername);
 /* カウンターの表示の変更 */
 counter(countername, upper-roman)
 ```
+
+{{EmbedInteractiveExample("pages/tabbed/function-counter.html", "tabbed-shorter")}}
 
 [カウンター](/ja/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)自身には視覚的効果が何もありません。 `counter()` 関数 (および {{cssxref("counters()")}} 関数) は開発者が定義した文字列 (または画像) を返すことでカウンターは利用価値が生まれます。
 
@@ -59,8 +60,8 @@ li {
   counter-increment: listCounter;
 }
 li::after {
-  content: "[" counter(listCounter) "] == ["
-               counter(listCounter, upper-roman) "]";
+  content: "[" counter(listCounter) "] == [" counter(listCounter, upper-roman)
+    "]";
 }
 ```
 
@@ -90,8 +91,11 @@ li {
   counter-increment: count;
 }
 li::after {
-  content: "[" counter(count, decimal-leading-zero) "] == ["
-               counter(count, lower-alpha) "]";
+  content: "[" counter(count, decimal-leading-zero) "] == [" counter(
+      count,
+      lower-alpha
+    )
+    "]";
 }
 ```
 
@@ -114,4 +118,4 @@ li::after {
 - {{cssxref("counter-set")}}
 - {{cssxref("counter-increment")}}
 - {{cssxref("@counter-style")}}
-- CSS の [`counters()`](/ja/docs/Web/CSS/counters()) 関数
+- CSS の [`counters()`](</ja/docs/Web/CSS/counters()>) 関数

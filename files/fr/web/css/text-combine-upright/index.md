@@ -1,8 +1,6 @@
 ---
 title: text-combine-upright
 slug: Web/CSS/text-combine-upright
-translation_of: Web/CSS/text-combine-upright
-browser-compat: css.properties.text-combine-upright
 ---
 
 {{CSSRef}}
@@ -17,7 +15,7 @@ text-combine-upright: none;
 text-combine-upright: all;
 
 /* Valeurs pour les chiffres */
-text-combine-upright: digits;   /* 2 chiffres qui se suivent prendront la place d'un caractère dans du texte 
+text-combine-upright: digits; /* 2 chiffres qui se suivent prendront la place d'un caractère dans du texte 
                                    vertical */
 text-combine-upright: digits 4; /* Compresse jusqu'à 4 chiffres consécutifs afin qu'ils occupent l'espace 
                                    d'un caractère dans du texte vertical */
@@ -81,16 +79,24 @@ Pour utiliser `all`, on devra baliser chaque fragment de texte horizontal mais c
 #### HTML
 
 ```html
-<p lang="zh-Hant">民國<span class="num">105</span
->年<span class="num">4</span
->月<span class="num">29</span>日</p>
+<p lang="zh-Hant">
+  民國<span class="num">105</span>年<span class="num">4</span>月<span
+    class="num"
+    >29</span
+  >日
+</p>
 ```
 
 #### CSS
 
 ```css
-html { writing-mode: vertical-rl; font: 24px serif }
-.num { text-combine-upright: all }
+html {
+  writing-mode: vertical-rl;
+  font: 24px serif;
+}
+.num {
+  text-combine-upright: all;
+}
 ```
 
 #### Résultat

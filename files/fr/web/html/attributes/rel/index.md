@@ -1,14 +1,6 @@
 ---
-title: 'Attribut HTML : rel'
+title: "Attribut HTML : rel"
 slug: Web/HTML/Attributes/rel
-tags:
-  - Attribute
-  - Attributes
-  - Constraint validation
-  - Link
-  - form
-  - rel
-translation_of: Web/HTML/Attributes/rel
 ---
 
 {{HTMLSidebar}}
@@ -67,16 +59,23 @@ S'il existe plusieurs `<link rel="icon">`, le navigateur utilise leur attribut [
 
       ```html
       <!-- une feuille de style persistante -->
-      <link rel="stylesheet" href="default.css">
+      <link rel="stylesheet" href="default.css" />
       <!-- feuilles de style alternativement -->
-      <link rel="alternate stylesheet" href="highcontrast.css" title="Contraste élevé">
+      <link
+        rel="alternate stylesheet"
+        href="highcontrast.css"
+        title="Contraste élevé" />
       ```
 
     - Avec un attribut [`hreflang`](hreflang) qui diffère de la langue du document, cela indique une traduction.
     - Avec l'attribut [`type`](type), il indique que le document référencé est le même contenu dans un format différent. Par exemple, avec `type="application/rss+xml"`, il crée un lien hypertexte référençant un flux de syndication.
 
       ```html
-      <link rel="alternate" type="application/atom+xml" href="posts.xml" title="Blog">
+      <link
+        rel="alternate"
+        type="application/atom+xml"
+        href="posts.xml"
+        title="Blog" />
       ```
 
     - Les attributs [`hreflang`](hreflang) et [`type`](type) spécifient des liens vers des versions du document dans un format et une langue alternatifs, destinés à d'autres médias :
@@ -107,7 +106,7 @@ S'il existe plusieurs `<link rel="icon">`, le navigateur utilise leur attribut [
     L'utilisation la plus courante de la valeur `icon` est le favicon :
 
     ```html
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="favicon.ico" />
     ```
 
     S'il existe plusieurs `<link rel="icon">`, le navigateur utilise leurs attributs [`media`](media), [`type`](type), et [`sizes`](sizes) pour sélectionner l'icône la plus appropriée. Si plusieurs icônes sont également appropriées, la dernière est utilisée. Si l'icône la plus appropriée s'avère ultérieurement inappropriée, par exemple parce qu'elle utilise un format non pris en charge, le navigateur passe à l'icône suivante la plus appropriée, et ainsi de suite.
@@ -123,7 +122,7 @@ S'il existe plusieurs `<link rel="icon">`, le navigateur utilise leur attribut [
   - : Valable sur les éléments [`<a>`](/fr/docs/Web/HTML/Element/a), [`<area>`](/fr/docs/Web/HTML/Element/area), [`<form>`](/fr/docs/Web/HTML/Element/Form) et [`<link>`](/fr/docs/Web/HTML/Element/link), la valeur `license` indique que l'hyperlien mène à un document décrivant les informations relatives à la licence ; que le contenu principal du document actuel est couvert par la licence de droit d'auteur décrite par le document référencé. Si elle ne se trouve pas à l'intérieur de l'élément [`<head>`](/fr/docs/Web/HTML/Element/head), la norme ne fait pas de distinction entre un hyperlien s'appliquant à une partie spécifique du document ou au document dans son ensemble. Seules les données de la page peuvent l'indiquer.
 
     ```html
-    <link rel="license" href="#license">
+    <link rel="license" href="#license" />
     ```
 
     > **Note :** Bien que reconnu, le synonyme `copyright` est incorrect et doit être évité.
@@ -191,15 +190,26 @@ S'il existe plusieurs `<link rel="icon">`, le navigateur utilise leur attribut [
 
     ```html
     <!-- iPad de troisième génération avec écran Retina haute résolution : -->
-      <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/static/img/favicon144.e7e21ca263ca.png">
-      <!-- iPhone avec écran Retina haute résolution : -->
-      <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/static/img/favicon114.d526f38b09c5.png">
-      <!-- première et deuxième génération d'iPad: -->
-      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/static/img/favicon72.cc65d1d762a0.png">
-      <!-- Appareils iPhone non Retina, iPod Touch et Android 2.1+ : -->
-      <link rel="apple-touch-icon-precomposed" href="/static/img/favicon57.de33179910ae.png">
-      <!-- favicône de base -->
-      <link rel="shortcut icon" href="/static/img/favicon32.7f3da72dcea1.png">
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="144x144"
+      href="/static/img/favicon144.e7e21ca263ca.png" />
+    <!-- iPhone avec écran Retina haute résolution : -->
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="114x114"
+      href="/static/img/favicon114.d526f38b09c5.png" />
+    <!-- première et deuxième génération d'iPad: -->
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="72x72"
+      href="/static/img/favicon72.cc65d1d762a0.png" />
+    <!-- Appareils iPhone non Retina, iPod Touch et Android 2.1+ : -->
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="/static/img/favicon57.de33179910ae.png" />
+    <!-- favicône de base -->
+    <link rel="shortcut icon" href="/static/img/favicon32.7f3da72dcea1.png" />
     ```
 
 ## Spécifications

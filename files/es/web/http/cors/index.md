@@ -23,7 +23,7 @@ Este [estándar para el intercambio de recursos de origen cruzado](https://fetch
 
 - Invocaciones de las API {{domxref("XMLHttpRequest")}} o [Fetch](/es/docs/Web/API/Fetch_API), como se explicó anteriormente.
 - Web Fonts (para el uso de fuentes entre dominios en `@font-face` dentro de CSS), [para que los servidores puedan desplegar fuentes TrueType que solo puedan cargarse entre orígenes y ser utilizadas por sitios web autorizados para ello](https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements)
-- [Texturas WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)
+- [Texturas WebGL](/es/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)
 - Imágenes / cuadros de vídeo dibujados en un _canvas_ utilizando {{domxref("CanvasRenderingContext2D.drawImage()", "drawImage()")}}.
 - [Formas CSS a partir de imágenes](/es/docs/Web/CSS/CSS_Shapes/Shapes_From_Images)
 
@@ -31,7 +31,7 @@ Este es un artículo general sobre el uso compartido de recursos de origen cruza
 
 ## Resumen funcional
 
-El estándar para recursos compartidos de origen cruzado funciona añadiendo nuevas [Cabeceras HTTP](/es/docs/Web/HTTP/Headers) que permiten a los servidores describir qué orígenes tienen permiso para leer esa información de un navegador web. Además, para los métodos de petición HTTP que pueden causar efectos secundarios en los datos del servidor (en particular los métodos HTTP distintos de {{HTTPMethod("GET")}} o {{HTTPMethod("POST")}} con determinados [tipos MIME](es/docs/Web/HTTP/Basics_of_HTTP/MIME_types)), la especificación exige que los navegadores "comprueben previamente" la petición, solicitando al servidor los métodos admitidos con el método de solicitud HTTP {{HTTPMethod("OPTIONS")}}, y entonces, tras la "aprobación" del servidor, enviando la solicitud real. Los servidores también pueden informar a los clientes de si deben enviar "credenciales" (como [cookies](/es/docs/Web/HTTP/Cookies) y [Autenticación HTTP](/es/docs/Web/HTTP/Authentication)) con las solicitudes.
+El estándar para recursos compartidos de origen cruzado funciona añadiendo nuevas [Cabeceras HTTP](/es/docs/Web/HTTP/Headers) que permiten a los servidores describir qué orígenes tienen permiso para leer esa información de un navegador web. Además, para los métodos de petición HTTP que pueden causar efectos secundarios en los datos del servidor (en particular los métodos HTTP distintos de {{HTTPMethod("GET")}} o {{HTTPMethod("POST")}} con determinados [tipos MIME](/es/docs/Web/HTTP/Basics_of_HTTP/MIME_types)), la especificación exige que los navegadores "comprueben previamente" la petición, solicitando al servidor los métodos admitidos con el método de solicitud HTTP {{HTTPMethod("OPTIONS")}}, y entonces, tras la "aprobación" del servidor, enviando la solicitud real. Los servidores también pueden informar a los clientes de si deben enviar "credenciales" (como [cookies](/es/docs/Web/HTTP/Cookies) y [Autenticación HTTP](/es/docs/Web/HTTP/Authentication)) con las solicitudes.
 
 Los fallos de CORS provocan errores, pero por razones de seguridad, los detalles del error _no están disponibles para JavaScript_. Todo lo que el código sabe es que se ha producido un error. La única forma de determinar específicamente qué salió mal, es mirar en la consola del navegador para obtener más detalles.
 
@@ -50,6 +50,7 @@ El motivo de esto es que el elemento {{HTMLElement("form")}} de HTML4 (que es an
 Una petición simple es aquella que cumple todas las siguientes condiciones:
 
 - Uno de los métodos permitidos:
+
   - {{HTTPMethod("GET")}}
   - {{HTTPMethod("HEAD")}}
   - {{HTTPMethod("POST")}}
@@ -73,13 +74,13 @@ Una petición simple es aquella que cumple todas las siguientes condiciones:
 - Si la petición se realiza utilizando un objeto {{domxref("XMLHttpRequest")}}, no se registran detectores de eventos en el objeto devuelto por la propiedad {{domxref("XMLHttpRequest.upload")}} utilizada en la petición; Es decir, dada una instancia `xhr` de {{domxref("XMLHttpRequest")}}, ningún código ha llamado a `xhr.upload.addEventListener()` para añadir un detector de eventos para monitorizar la subida.
 - No se utiliza ningún objeto {{domxref("ReadableStream")}} en la solicitud.
 
- > **Nota:** _WebKit Nightly_ y _Safari Technology Preview_ imponen restricciones adicionales a lo valores permitidos en las cabeceras {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}} y {{HTTPHeader("Content-Language")}}. Si alguna de esas cabeceras tiene valores "no estándar", WebKit/Safari no consideran que la petición sea una "solicitud simple". Los valores que WebKit/Safari consideran "no estándar" no están documentados, excepto en los siguientes errores de WebKit:
- >
- > - [Comprobación previa requerida para cabeceras de solicitud CORS-safelisted no estándar: Accept, Accept-Language y Content-Language](https://webkit.org/b/165178)
- > - [Permitir comas en las cabeceras para CORS simple en Accept, Accept-Language y Content-Language](https://webkit.org/b/165566)
- > - [Cambio a un modelo de lista negra para cabeceras Accept restringidas en peticiones CORS simples](https://webkit.org/b/166363)
- >
- > Ningún otro navegador aplica estas restricciones adicionales porque no forman parte de la especificación.
+> **Nota:** _WebKit Nightly_ y _Safari Technology Preview_ imponen restricciones adicionales a lo valores permitidos en las cabeceras {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}} y {{HTTPHeader("Content-Language")}}. Si alguna de esas cabeceras tiene valores "no estándar", WebKit/Safari no consideran que la petición sea una "solicitud simple". Los valores que WebKit/Safari consideran "no estándar" no están documentados, excepto en los siguientes errores de WebKit:
+>
+> - [Comprobación previa requerida para cabeceras de solicitud CORS-safelisted no estándar: Accept, Accept-Language y Content-Language](https://webkit.org/b/165178)
+> - [Permitir comas en las cabeceras para CORS simple en Accept, Accept-Language y Content-Language](https://webkit.org/b/165566)
+> - [Cambio a un modelo de lista negra para cabeceras Accept restringidas en peticiones CORS simples](https://webkit.org/b/166363)
+>
+> Ningún otro navegador aplica estas restricciones adicionales porque no forman parte de la especificación.
 
 Por ejemplo, supongamos que el contenido web en `https://foo.example` desea invocar contenido en `https://bar/other`. El código del siguiente ejemplo podría ser utilizado en el JavaScript desplegado en `foo.example`:
 
@@ -138,7 +139,7 @@ Este patrón de las cabeceras {{HTTPHeader("Origin")}} y {{HTTPHeader("Access-Co
 Access-Control-Allow-Origin: https://foo.example
 ```
 
-> **Nota:** Al responder a una petición con [solicitud con credenciales](#requests_with_credentials), el servidor debe especificar un origen en el valor de la cabecera `Access-Control-Allow-Origin`, en lugar de especificar el comodín "*".
+> **Nota:** Al responder a una petición con [solicitud con credenciales](#requests_with_credentials), el servidor debe especificar un origen en el valor de la cabecera `Access-Control-Allow-Origin`, en lugar de especificar el comodín "\*".
 
 ### Solicitudes verificadas previamente
 

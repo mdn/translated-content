@@ -1,8 +1,6 @@
 ---
 title: Constructeur Symbol()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/Symbol
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/Symbol
-browser-compat: javascript.builtins.Symbol.Symbol
 ---
 
 {{JSRef}}
@@ -14,8 +12,8 @@ Le constructeur `Symbol()` renvoie une valeur de type **`symbol`**. Ce n'est pas
 ## Syntaxe
 
 ```js
-Symbol()
-Symbol(description)
+Symbol();
+Symbol(description);
 ```
 
 ### Paramètres
@@ -31,14 +29,14 @@ Pour créer un nouveau symbole primitif, on écrit `Symbol()` en fournissant év
 
 ```js
 let sym1 = Symbol();
-let sym2 = Symbol('toto');
-let sym3 = Symbol('toto');
+let sym2 = Symbol("toto");
+let sym3 = Symbol("toto");
 ```
 
 Dans le code précédent, on crée trois nouveaux symboles. On notera que `Symbol("toto")` ne convertit pas la chaîne de caractères `"toto"` en un symbole. C'est bien un nouveau symbole qui est créé chaque fois&nbsp;:
 
 ```js
-Symbol('toto') === Symbol('toto');  // false
+Symbol("toto") === Symbol("toto"); // false
 ```
 
 ### `new Symbol(…)`
@@ -46,7 +44,7 @@ Symbol('toto') === Symbol('toto');  // false
 La syntaxe qui suit, utilisant l'opérateur [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new), déclenchera une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError)&nbsp;:
 
 ```js
-let sym = new Symbol();  // TypeError
+let sym = new Symbol(); // TypeError
 ```
 
 Cela permet d'éviter aux développeuses et développeurs de créer un objet enveloppant une valeur symbole primitive plutôt qu'un nouveau symbole. Ce comportement se distingue des autres types de données primitifs pour lesquels c'est possible (par exemple `new Boolean()`, `new String()` et `new Number()`).
@@ -54,9 +52,9 @@ Cela permet d'éviter aux développeuses et développeurs de créer un objet env
 Si on souhaite vraiment envelopper un symbole dans une valeur objet, il faudra utiliser la fonction `Object()`&nbsp;:
 
 ```js
-let sym    = Symbol('toto');
+let sym = Symbol("toto");
 let symObj = Object(sym);
-typeof sym;    // => "symbol"
+typeof sym; // => "symbol"
 typeof symObj; // => "object"
 ```
 

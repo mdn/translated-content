@@ -14,7 +14,8 @@ slug: Web/API/Screen_Capture_API
 要开始从屏幕上捕捉视频，你需要在 `getDisplayMedia()` 的实例上调用 `Media` `navigator.mediaDevices`：
 
 ```js
-captureStream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
+captureStream =
+  await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
 ```
 
 The {{jsxref("Promise")}} returned by `getDisplayMedia()` resolves to a {{domxref("MediaStream")}} which streams the captured media.
@@ -75,7 +76,7 @@ The following dictionaries are defined by the Screen Capture API.
 {{Glossary("User agent", "User agents")}} that support Feature Policy (either using HTTP's {{HTTPHeader("Permissions-Policy")}} header or the {{HTMLElement("iframe")}} attribute [`allow`](/zh-CN/docs/Web/HTML/Element/iframe#allow)) can specify a desire to use the Screen Capture API using the policy control directive `display-capture`:
 
 ```html
-<iframe allow="display-capture" src="/some-other-document.html">
+<iframe allow="display-capture" src="/some-other-document.html"></iframe>
 ```
 
 The default allow list is `self`, which lets the any content within the document use Screen Capture.

@@ -39,32 +39,38 @@ The examples described here should be taken together to get a better understandi
 The following example uses the default value of `scope` (by omitting it). The service worker in this case will control `example.com/index.html` as well as pages underneath it, like `example.com/product/description.html`.
 
 ```js
-if ('serviceWorker' in navigator) {
+if ("serviceWorker" in navigator) {
   // Register a service worker hosted at the root of the
   // site using the default scope.
-  navigator.serviceWorker.register('/sw.js').then(function(registration) {
-    console.log('Service worker registration succeeded:', registration);
-  }).catch(function(error) {
-    console.log('Service worker registration failed:', error);
-  });
+  navigator.serviceWorker
+    .register("/sw.js")
+    .then(function (registration) {
+      console.log("Service worker registration succeeded:", registration);
+    })
+    .catch(function (error) {
+      console.log("Service worker registration failed:", error);
+    });
 } else {
-  console.log('Service workers are not supported.');
+  console.log("Service workers are not supported.");
 }
 ```
 
 The following code, if included in a page at the root of a site, would apply to exactly the same pages as the example above. Remember the scope, when included, uses the page's location as its base. Alternatively, if this code were included in a page at `example.com/product/description.html`, the scope of `'./'` would mean that the service worker only applies to resources under `example.com/product`. If I needed to register a service worker on `example.com/product/description.html` that applied to all of `example.com`, I would leave off the scope as above.
 
 ```js
-if ('serviceWorker' in navigator) {
+if ("serviceWorker" in navigator) {
   // Register a service worker hosted at the root of the
   // site using a more restrictive scope.
-  navigator.serviceWorker.register('/sw.js', {scope: './'}).then(function(registration) {
-    console.log('Service worker registration succeeded:', registration);
-  }).catch(function(error) {
-    console.log('Service worker registration failed:', error);
-  });
+  navigator.serviceWorker
+    .register("/sw.js", { scope: "./" })
+    .then(function (registration) {
+      console.log("Service worker registration succeeded:", registration);
+    })
+    .catch(function (error) {
+      console.log("Service worker registration failed:", error);
+    });
 } else {
-  console.log('Service workers are not supported.');
+  console.log("Service workers are not supported.");
 }
 ```
 

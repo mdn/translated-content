@@ -1,18 +1,6 @@
 ---
 title: Notre premier code JavaScript
 slug: Learn/JavaScript/First_steps/A_first_splash
-tags:
-  - Apprendre
-  - Article
-  - CodingScripting
-  - Débutant
-  - Fonctions
-  - JavaScript
-  - Objets
-  - Opérateurs
-  - Variables
-  - structures conditionnelles
-translation_of: Learn/JavaScript/First_steps/A_first_splash
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}
@@ -52,115 +40,121 @@ Maintenant que vous avez cela en tête, regardons l'exemple que nous allons cons
 Dans cet article, nous allons vous montrer comment construire le jeu simple que vous pouvez voir ci-dessous :
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Number guessing game</title>
     <style>
-        html {
-            font-family: sans-serif;
-        }
+      html {
+        font-family: sans-serif;
+      }
 
-        body {
-            width: 50%;
-            max-width: 800px;
-            min-width: 480px;
-            margin: 0 auto;
-        }
+      body {
+        width: 50%;
+        max-width: 800px;
+        min-width: 480px;
+        margin: 0 auto;
+      }
 
-        .lastResult {
-            color: white;
-            padding: 3px;
-        }
+      .lastResult {
+        color: white;
+        padding: 3px;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>Deviner un nombre</h1>
-    <p>Nous avons généré un nombre aléatoire entre 1 et 100, tentez de le deviner en 10 tours maximum. Pour chaque tentative, nous vous dirons si votre estimation est trop ou pas assez élevée.</p>
-    <div class="form"> <label for="guessField">Entrez votre proposition : </label><input type="text" id="guessField" class="guessField"> <input type="submit" value="Valider" class="guessSubmit"> </div>
-    <div class="resultParas">
-        <p class="guesses"></p>
-        <p class="lastResult"></p>
-        <p class="lowOrHi"></p>
+    <p>
+      Nous avons généré un nombre aléatoire entre 1 et 100, tentez de le deviner
+      en 10 tours maximum. Pour chaque tentative, nous vous dirons si votre
+      estimation est trop ou pas assez élevée.
+    </p>
+    <div class="form">
+      <label for="guessField">Entrez votre proposition : </label
+      ><input type="text" id="guessField" class="guessField" />
+      <input type="submit" value="Valider" class="guessSubmit" />
     </div>
-</body>
-<script>
+    <div class="resultParas">
+      <p class="guesses"></p>
+      <p class="lastResult"></p>
+      <p class="lowOrHi"></p>
+    </div>
+  </body>
+  <script>
     // Le JavaScript se place ici
     let randomNumber = Math.floor(Math.random() * 100) + 1;
-    let guesses = document.querySelector('.guesses');
-    let lastResult = document.querySelector('.lastResult');
-    let lowOrHi = document.querySelector('.lowOrHi');
-    let guessSubmit = document.querySelector('.guessSubmit');
-    let guessField = document.querySelector('.guessField');
+    let guesses = document.querySelector(".guesses");
+    let lastResult = document.querySelector(".lastResult");
+    let lowOrHi = document.querySelector(".lowOrHi");
+    let guessSubmit = document.querySelector(".guessSubmit");
+    let guessField = document.querySelector(".guessField");
     let guessCount = 1;
     let resetButton;
 
     function checkGuess() {
       let userGuess = Number(guessField.value);
       if (guessCount === 1) {
-        guesses.textContent = 'Propositions précédentes : ';
+        guesses.textContent = "Propositions précédentes : ";
       }
 
-      guesses.textContent += userGuess + ' ';
+      guesses.textContent += userGuess + " ";
 
       if (userGuess === randomNumber) {
-        lastResult.textContent = 'Bravo, vous avez trouvé le nombre !';
-        lastResult.style.backgroundColor = 'green';
-        lowOrHi.textContent = '';
+        lastResult.textContent = "Bravo, vous avez trouvé le nombre !";
+        lastResult.style.backgroundColor = "green";
+        lowOrHi.textContent = "";
         setGameOver();
       } else if (guessCount === 10) {
-        lastResult.textContent = '!!! PERDU !!!';
-        lowOrHi.textContent = '';
+        lastResult.textContent = "!!! PERDU !!!";
+        lowOrHi.textContent = "";
         setGameOver();
       } else {
-        lastResult.textContent = 'Faux!';
-        lastResult.style.backgroundColor = 'red';
+        lastResult.textContent = "Faux!";
+        lastResult.style.backgroundColor = "red";
         if (userGuess < randomNumber) {
-          lowOrHi.textContent='Le nombre saisi est trop petit !' ;
-        } else if(userGuess > randomNumber) {
-          lowOrHi.textContent = 'Le nombre saisi est trop grand!';
+          lowOrHi.textContent = "Le nombre saisi est trop petit !";
+        } else if (userGuess > randomNumber) {
+          lowOrHi.textContent = "Le nombre saisi est trop grand!";
         }
       }
 
       guessCount++;
-      guessField.value = '';
+      guessField.value = "";
     }
 
-    guessSubmit.addEventListener('click', checkGuess);
+    guessSubmit.addEventListener("click", checkGuess);
 
     function setGameOver() {
       guessField.disabled = true;
       guessSubmit.disabled = true;
-      resetButton = document.createElement('button');
-      resetButton.textContent = 'Rejouer';
+      resetButton = document.createElement("button");
+      resetButton.textContent = "Rejouer";
       document.body.appendChild(resetButton);
-      resetButton.addEventListener('click', resetGame);
+      resetButton.addEventListener("click", resetGame);
     }
 
     function resetGame() {
       guessCount = 1;
-      let resetParas = document.querySelectorAll('.resultParas p');
-      for (let i = 0 ; i < resetParas.length ; i++) {
-        resetParas[i].textContent='';
+      let resetParas = document.querySelectorAll(".resultParas p");
+      for (let i = 0; i < resetParas.length; i++) {
+        resetParas[i].textContent = "";
       }
 
       resetButton.parentNode.removeChild(resetButton);
       guessField.disabled = false;
       guessSubmit.disabled = false;
-      guessField.value='';
+      guessField.value = "";
       guessField.focus();
-      lastResult.style.backgroundColor='white';
-      randomNumber=Math.floor(Math.random() * 100) + 1;
+      lastResult.style.backgroundColor = "white";
+      randomNumber = Math.floor(Math.random() * 100) + 1;
     }
-</script>
-
+  </script>
 </html>
 ```
 
-{{ EmbedLiveSample('', '100%', 320, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('', '100%', 320) }}
 
 Essayez de jouer et familiarisez-vous avec ce jeu avant de continuer.
 
@@ -177,21 +171,21 @@ La première chose à faire en regardant ce résumé, c'est de le décomposer en
 5. Vérifier si le nombre saisi par le joueur est correct.
 6. S'il est correct :
 
-    1. Afficher un message de félicitations.
-    2. Empêcher que le joueur saisisse de nouveau un nombre.
-    3. Afficher un contrôle pour que le joueur puisse rejouer.
+   1. Afficher un message de félicitations.
+   2. Empêcher que le joueur saisisse de nouveau un nombre.
+   3. Afficher un contrôle pour que le joueur puisse rejouer.
 
 7. S'il est faux et que le joueur a encore des tours à jouer :
 
-    1. Informer le joueur que sa proposition de nombre est fausse.
-    2. Lui permettre d'entrer une nouvelle proposition de nombre.
-    3. Incrémenter le nombre de tours de 1.
+   1. Informer le joueur que sa proposition de nombre est fausse.
+   2. Lui permettre d'entrer une nouvelle proposition de nombre.
+   3. Incrémenter le nombre de tours de 1.
 
 8. S'il est faux et que le joueur n'a plus de tours à jouer :
 
-    1. Informer le joueur qu'il a perdu et que la partie est finie.
-    2. Empêcher que le joueur saisisse de nouveau un nombre.
-    3. Afficher un contrôle pour que le joueur puisse rejouer.
+   1. Informer le joueur qu'il a perdu et que la partie est finie.
+   2. Empêcher que le joueur saisisse de nouveau un nombre.
+   3. Afficher un contrôle pour que le joueur puisse rejouer.
 
 9. Une fois le jeu redémarré, s'assurer que la logique du jeu et l'interface utilisateur sont complètement réinitialisées, puis revenir à l'étape 1.
 
@@ -205,9 +199,7 @@ L'endroit où nous allons ajouter tout notre code se trouve dans l'élément {{h
 
 ```html
 <script>
-
   // Votre code JavaScript se place ici
-
 </script>
 ```
 
@@ -218,12 +210,12 @@ Commençons. Tout d'abord, ajoutez les lignes suivantes dans l'élément {{htmle
 ```js
 let randomNumber = Math.floor(Math.random() * 100) + 1;
 
-let guesses = document.querySelector('.guesses');
-let lastResult = document.querySelector('.lastResult');
-let lowOrHi = document.querySelector('.lowOrHi');
+let guesses = document.querySelector(".guesses");
+let lastResult = document.querySelector(".lastResult");
+let lowOrHi = document.querySelector(".lowOrHi");
 
-let guessSubmit = document.querySelector('.guessSubmit');
-let guessField = document.querySelector('.guessField');
+let guessSubmit = document.querySelector(".guessSubmit");
+let guessField = document.querySelector(".guessField");
 
 let guessCount = 1;
 let resetButton;
@@ -245,8 +237,9 @@ Dans notre exemple&nbsp;:
 - Les deux variables suivantes stockent des références au champ de saisie du formulaire et au bouton de soumission ; elles sont utilisées pour écouter l'envoi de la supposition (guess) plus tard.
 
   ```html
-  <label for="guessField">Enter a guess: </label><input type="text" id="guessField" class="guessField">
-  <input type="submit" value="Submit guess" class="guessSubmit">
+  <label for="guessField">Enter a guess: </label
+  ><input type="text" id="guessField" class="guessField" />
+  <input type="submit" value="Submit guess" class="guessSubmit" />
   ```
 
 - Nos deux dernières variables stockent un nombre de suppositions qui vaut initialement 1 (utilisées pour garder une trace du nombre de suppositions que le joueur a faite) et une référence à un bouton de réinitialisation qui n'existe pas encore.
@@ -259,7 +252,7 @@ Ajoutez maintenant ce qui suit dans votre code JavaScript&nbsp;:
 
 ```js
 function checkGuess() {
-  alert('Je suis un espace réservé');
+  alert("Je suis un espace réservé");
 }
 ```
 
@@ -267,7 +260,7 @@ Les fonctions sont des blocs de code réutilisables que vous pouvez écrire une 
 
 Quand nous voulons exécuter le code, nous saisissons le nom de la fonction suivi des parenthèses.
 
-Essayez. Enregistrez le code et actualisez la page du navigateur. Puis, allez dans les [outils de développement et la console JavaScript](/fr/Apprendre/D%C3%A9couvrir_outils_d%C3%A9veloppement_navigateurs) et entrez la ligne suivante :
+Essayez. Enregistrez le code et actualisez la page du navigateur. Puis, allez dans les [outils de développement et la console JavaScript](/fr/Apprendre/Découvrir_outils_développement_navigateurs) et entrez la ligne suivante :
 
 ```js
 checkGuess();
@@ -281,13 +274,13 @@ Après avoir pressé <kbd>Entrée</kbd> ou <kbd>Retour</kbd>, vous devriez voir 
 
 Les opérateurs en JavaScript nous permettent d'effectuer des tests, de faire des calculs, de joindre des chaînes ensemble et d'autres choses de ce genre.
 
-Si vous ne l'avez pas déjà fait, sauvegardez ce code, actualisez la page affichée dans le navigateur et ouvrez les [outils de développement et la console Javascript](/fr/Apprendre/D%C3%A9couvrir_outils_d%C3%A9veloppement_navigateurs). Ensuite, vous pouvez saisir les exemples ci‑dessous — saisissez chacun dans les colonnes «&nbsp;Exemple&nbsp;» exactement comme indiqué, en appuyant sur la touche <kbd>Entrée</kbd> du clavier après chacun et regardez le résultat renvoyé. Si vous n'avez pas facilement accès aux outils de développement du navigateur, vous pouvez toujours utiliser la console intégrée ci-dessous&nbsp;:
+Si vous ne l'avez pas déjà fait, sauvegardez ce code, actualisez la page affichée dans le navigateur et ouvrez les [outils de développement et la console Javascript](/fr/Apprendre/Découvrir_outils_développement_navigateurs). Ensuite, vous pouvez saisir les exemples ci‑dessous — saisissez chacun dans les colonnes «&nbsp;Exemple&nbsp;» exactement comme indiqué, en appuyant sur la touche <kbd>Entrée</kbd> du clavier après chacun et regardez le résultat renvoyé. Si vous n'avez pas facilement accès aux outils de développement du navigateur, vous pouvez toujours utiliser la console intégrée ci-dessous&nbsp;:
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Console JavaScript</title>
     <style>
       * {
@@ -295,7 +288,7 @@ Si vous ne l'avez pas déjà fait, sauvegardez ce code, actualisez la page affic
       }
 
       html {
-        background-color: #0C323D;
+        background-color: #0c323d;
         color: #809089;
         font-family: monospace;
       }
@@ -329,71 +322,66 @@ Si vous ne l'avez pas déjà fait, sauvegardez ce code, actualisez la page affic
         line-height: 1.5;
         font-family: monospace;
         padding: 0;
-        background: #0C323D;
+        background: #0c323d;
         color: #809089;
       }
 
       div {
         clear: both;
       }
-
     </style>
   </head>
-  <body>
-
-
-  </body>
+  <body></body>
 
   <script>
     let geval = eval;
 
     function createInput() {
-      let inputDiv = document.createElement('div');
-      let inputPara = document.createElement('p');
-      let inputForm = document.createElement('input');
+      let inputDiv = document.createElement("div");
+      let inputPara = document.createElement("p");
+      let inputForm = document.createElement("input");
 
-      inputDiv.setAttribute('class','input');
-      inputPara.textContent = '>';
+      inputDiv.setAttribute("class", "input");
+      inputPara.textContent = ">";
       inputDiv.appendChild(inputPara);
       inputDiv.appendChild(inputForm);
       document.body.appendChild(inputDiv);
       inputDiv.focus();
 
-      if (document.querySelectorAll('div').length > 1) {
+      if (document.querySelectorAll("div").length > 1) {
         inputForm.focus();
       }
 
-      inputForm.addEventListener('change', executeCode);
+      inputForm.addEventListener("change", executeCode);
     }
 
     function executeCode(e) {
       try {
         let result = geval(e.target.value);
-      } catch(e) {
-        let result = 'error — ' + e.message;
+      } catch (e) {
+        let result = "error — " + e.message;
       }
 
-      let outputDiv = document.createElement('div');
-      let outputPara = document.createElement('p');
+      let outputDiv = document.createElement("div");
+      let outputPara = document.createElement("p");
 
-      outputDiv.setAttribute('class','output');
-      outputPara.textContent = 'Résultat&nbsp;: ' + result;
+      outputDiv.setAttribute("class", "output");
+      outputPara.textContent = "Résultat&nbsp;: " + result;
       outputDiv.appendChild(outputPara);
       document.body.appendChild(outputDiv);
 
       e.target.disabled = true;
-      e.target.parentNode.style.opacity = '0.5';
+      e.target.parentNode.style.opacity = "0.5";
 
-      createInput()
+      createInput();
     }
 
     createInput();
-
   </script>
 </html>
 ```
 
-{{ EmbedLiveSample('Opérateurs', '100%', 300,"", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('Opérateurs', '100%', 300) }}
 
 Regardons d'abord les opérateurs arithmétiques, par exemple&nbsp;:
 
@@ -404,12 +392,12 @@ Regardons d'abord les opérateurs arithmétiques, par exemple&nbsp;:
 | `*`      | Multiplication | `3 * 7`   |
 | `/`      | Division       | `10 / 5`  |
 
-L'opérateur `+` peut aussi s'utiliser pour unir des chaînes de caractères (en informatique, on dit *concaténer*). Entrez les lignes suivantes, une par une&nbsp;:
+L'opérateur `+` peut aussi s'utiliser pour unir des chaînes de caractères (en informatique, on dit _concaténer_). Entrez les lignes suivantes, une par une&nbsp;:
 
 ```js
-let name = 'Bingo';
+let name = "Bingo";
 name;
-let hello = ' dit bonjour&nbsp;!';
+let hello = " dit bonjour&nbsp;!";
 hello;
 let greeting = name + hello;
 greeting;
@@ -418,23 +406,23 @@ greeting;
 Des raccourcis d'opérateurs sont également disponibles, appelés [opérateurs d'assignation](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_d_affectation) augmentés. Par exemple, si vous voulez simplement ajouter une nouvelle chaîne de texte à une chaîne existante et renvoyer le résultat, vous pouvez faire :
 
 ```js
-name += ' dit bonjour&nbsp;!';
+name += " dit bonjour&nbsp;!";
 ```
 
 Cela équivaut à :
 
 ```js
-name = name + ' dit bonjour&nbsp;!';
+name = name + " dit bonjour&nbsp;!";
 ```
 
 Lorsque nous exécutons des tests vrai/faux (par exemple, dans des conditions — voir [ci-dessous](#structures_conditionnelles), nous utilisons des [opérateurs de comparaison](/fr/docs/Web/JavaScript/Reference/Operators/Comparison_Operators), par exemple :
 
-| Operator | Name                                            | Example                    |
-| -------- | ----------------------------------------------- | -------------------------- |
+| Operator | Name                                                 | Example                    |
+| -------- | ---------------------------------------------------- | -------------------------- |
 | `===`    | Égalité stricte (est-ce exactement identique&nbsp;?) | `5 === 2 + 4`              |
 | `!==`    | Non égalité (est-ce différent&nbsp;?)                | `'Chris' !== 'Ch' + 'ris'` |
-| `<`      | Inférieur à                                     | `10 < 6`                   |
-| `>`      | Supérieur à                                     | `10 > 20`                  |
+| `<`      | Inférieur à                                          | `10 < 6`                   |
+| `>`      | Supérieur à                                          | `10 > 20`                  |
 
 ### Structures conditionnelles
 
@@ -443,33 +431,33 @@ Revenons à la fonction `checkGuess()`. Nous pouvons assurément dire que nous n
 Donc, remplacez l'actuelle fonction `checkGuess()` par celle-ci&nbsp;:
 
 ```js
-function checkGuess(){
+function checkGuess() {
   let userGuess = Number(guessField.value);
   if (guessCount === 1) {
-    guesses.textContent = 'Propositions précédentes&nbsp;: ';
+    guesses.textContent = "Propositions précédentes&nbsp;: ";
   }
-  guesses.textContent += userGuess + ' ';
+  guesses.textContent += userGuess + " ";
 
   if (userGuess === randomNumber) {
-    lastResult.textContent = 'Bravo, vous avez trouvé le nombre !';
-    lastResult.style.backgroundColor = 'green';
-    lowOrHi.textContent = '';
+    lastResult.textContent = "Bravo, vous avez trouvé le nombre !";
+    lastResult.style.backgroundColor = "green";
+    lowOrHi.textContent = "";
     setGameOver();
   } else if (guessCount === 10) {
-     lastResult.textContent = '!!! PERDU&nbsp;!!!';
-     setGameOver();
+    lastResult.textContent = "!!! PERDU&nbsp;!!!";
+    setGameOver();
   } else {
-     lastResult.textContent = 'Faux&nbsp;!';
-     lastResult.style.backgroundColor = 'red';
-     if (userGuess < randomNumber) {
-      lowOrHi.textContent = 'Le nombre saisi est trop petit !';
-     } else if (userGuess > randomNumber) {
-      lowOrHi.textContent = 'Le nombre saisi est trop grand !';
-     }
+    lastResult.textContent = "Faux&nbsp;!";
+    lastResult.style.backgroundColor = "red";
+    if (userGuess < randomNumber) {
+      lowOrHi.textContent = "Le nombre saisi est trop petit !";
+    } else if (userGuess > randomNumber) {
+      lowOrHi.textContent = "Le nombre saisi est trop grand !";
+    }
   }
 
   guessCount++;
-  guessField.value = '';
+  guessField.value = "";
   guessField.focus();
 }
 ```
@@ -481,7 +469,7 @@ Pas mal de code — ouf&nbsp;! Passons en revue chaque section et expliquons ce 
   A l'intérieur de ces parenthèses, nous mettons le test. S'il renvoie `true` , nous exécutons le code à l'intérieur des accolades. Sinon, nous ne le faisons pas, et passons au morceau de code suivant. Dans ce cas, le test vérifie si la variable `guessCount` est égale à `1` (c'est-à-dire s'il s'agit de la première supposition du joueur)&nbsp;:
 
   ```js
-  guessCount === 1
+  guessCount === 1;
   ```
 
   Si c'est le cas, nous faisons en sorte que le texte affiché soit «&nbsp;Propositions précédentes&nbsp;: ». Sinon, nous ne le faisons pas.
@@ -505,10 +493,10 @@ Idéalement, nous voulons l'appeler lorsque le bouton <kbd>Soumettre</kbd> est c
 Ajoutez la ligne suivante sous l'accolade de fermeture de votre fonction `checkGuess()` :
 
 ```js
-guessSubmit.addEventListener('click', checkGuess);
+guessSubmit.addEventListener("click", checkGuess);
 ```
 
-Ici, nous ajoutons un écouteur d'événement au bouton `guessSubmit` . C'est une méthode qui prend deux valeurs d'entrée (appelées arguments) - le type d'événement que nous écoutons (dans ce cas, `click`) qui est une chaîne de caractères, et le code que nous voulons exécuter quand l'événement se produit (dans ce cas, la fonction `checkGuess()`  — notez que nous n'avons pas besoin de spécifier les parenthèses lors de l'écriture dans {{domxref("EventTarget.addEventListener", "addEventListener()")}}).
+Ici, nous ajoutons un écouteur d'événement au bouton `guessSubmit` . C'est une méthode qui prend deux valeurs d'entrée (appelées arguments) - le type d'événement que nous écoutons (dans ce cas, `click`) qui est une chaîne de caractères, et le code que nous voulons exécuter quand l'événement se produit (dans ce cas, la fonction `checkGuess()` — notez que nous n'avons pas besoin de spécifier les parenthèses lors de l'écriture dans {{domxref("EventTarget.addEventListener", "addEventListener()")}}).
 
 Essayez d'enregistrer et d'actualiser votre code, votre exemple devrait désormais fonctionner, jusqu'à un certain point. Maintenant, le seul problème est que si vous devinez la bonne réponse ou si vous n'avez plus de tours à jouer, le jeu "va se casser" parce que nous n'avons pas encore implémenté la fonction `setGameOver()` dont le rôle est de terminer proprement le jeu. Ajoutons maintenant le code manquant pour compléter notre exemple.
 
@@ -520,10 +508,10 @@ Pour définir la fonction `setGameOver()` à la fin de notre programme, ajoutez 
 function setGameOver() {
   guessField.disabled = true;
   guessSubmit.disabled = true;
-  resetButton = document.createElement('button');
-  resetButton.textContent = 'Start new game';
+  resetButton = document.createElement("button");
+  resetButton.textContent = "Start new game";
   document.body.appendChild(resetButton);
-  resetButton.addEventListener('click', resetGame);
+  resetButton.addEventListener("click", resetGame);
 }
 ```
 
@@ -537,19 +525,19 @@ Reste à définir cette fonction&nbsp;! Ajoutez le code suivant, tout en bas de 
 function resetGame() {
   guessCount = 1;
 
-  let resetParas = document.querySelectorAll('.resultParas p');
-  for (let i = 0 ; i < resetParas.length ; i++) {
-    resetParas[i].textContent = '';
+  let resetParas = document.querySelectorAll(".resultParas p");
+  for (let i = 0; i < resetParas.length; i++) {
+    resetParas[i].textContent = "";
   }
 
   resetButton.parentNode.removeChild(resetButton);
 
   guessField.disabled = false;
   guessSubmit.disabled = false;
-  guessField.value = '';
+  guessField.value = "";
   guessField.focus();
 
-  lastResult.style.backgroundColor = 'white';
+  lastResult.style.backgroundColor = "white";
 
   randomNumber = Math.floor(Math.random() * 100) + 1;
 }
@@ -572,28 +560,30 @@ Pour finir, c'est le moment de faire une synthèse sur quelques caractéristique
 
 Dans le code précédent, une partie à examiner de plus près est la boucle [for](/fr/docs/Web/JavaScript/Reference/Instructions/for). Les boucles sont un concept très important dans la programmation, qui vous permet de continuer à exécuter un morceau de code encore et encore, jusqu'à ce qu'une certaine condition soit remplie.
 
-Pour commencer, allez sur votre [console developpeur Javascript](/fr/Apprendre/D%C3%A9couvrir_outils_d%C3%A9veloppement_navigateurs) et entrez ce qui suit :
+Pour commencer, allez sur votre [console developpeur Javascript](/fr/Apprendre/Découvrir_outils_développement_navigateurs) et entrez ce qui suit :
 
 ```js
-for (let i = 1 ; i < 21 ; i++) { console.log(i) }
+for (let i = 1; i < 21; i++) {
+  console.log(i);
+}
 ```
 
-Que s'est-il passé&nbsp;? Les nombres de 1 à 20 s'affichent dans la console. C'est à cause de la boucle. Une boucle : `for`  prend trois valeurs d'entrée (arguments)
+Que s'est-il passé&nbsp;? Les nombres de 1 à 20 s'affichent dans la console. C'est à cause de la boucle. Une boucle : `for` prend trois valeurs d'entrée (arguments)
 
 1. **Une valeur de départ** : Dans ce cas, nous commençons un compte à 1, mais cela pourrait être n'importe quel nombre. Vous pouvez remplacer `i` par n'importe quel nom (ou presque...), mais `i` est utilisé par convention car il est court et facile à retenir.
-2. **Une condition de fin** : Ici, nous avons spécifié `i < 21` la boucle continuera jusqu'à ce que `i`  ne soit plus inférieur à 21. Quand `i` atteindra ou dépassera 21, la boucle s'arrêtera.
-3. **Un incrémenteur** : Nous avons spécifié `i++`, ce qui signifie "ajouter 1 à i". La boucle sera exécutée une fois pour chaque valeur de `i`, jusqu'a ce que `i` atteigne une valeur de 21 (comme indiqué ci-dessus). Dans ce cas, nous imprimons simplement la valeur de `i`  sur la console à chaque itération en utilisant {{domxref("Console.log", "console.log()")}}.
+2. **Une condition de fin** : Ici, nous avons spécifié `i < 21` la boucle continuera jusqu'à ce que `i` ne soit plus inférieur à 21. Quand `i` atteindra ou dépassera 21, la boucle s'arrêtera.
+3. **Un incrémenteur** : Nous avons spécifié `i++`, ce qui signifie "ajouter 1 à i". La boucle sera exécutée une fois pour chaque valeur de `i`, jusqu'a ce que `i` atteigne une valeur de 21 (comme indiqué ci-dessus). Dans ce cas, nous imprimons simplement la valeur de `i` sur la console à chaque itération en utilisant {{domxref("Console.log", "console.log()")}}.
 
 Maintenant, regardons la boucle dans notre jeu de devinettes de nombres **—** ce qui suit peut être trouvé dans la fonction `resetGame()` :
 
 ```js
-let resetParas = document.querySelectorAll('.resultParas p');
-for (let i = 0 ; i < resetParas.length ; i++) {
-  resetParas[i].textContent = '';
+let resetParas = document.querySelectorAll(".resultParas p");
+for (let i = 0; i < resetParas.length; i++) {
+  resetParas[i].textContent = "";
 }
 ```
 
-Ce code crée une variable contenant une liste de tous les paragraphes à l'intérieur de `<div class="resultParas">`  en utilisant la méthode {{domxref ("Document.querySelectorAll", "querySelectorAll ()")}}, puis il passe dans la boucle et pour chacun d'entre eux supprime le contenu du texte.
+Ce code crée une variable contenant une liste de tous les paragraphes à l'intérieur de `<div class="resultParas">` en utilisant la méthode {{domxref ("Document.querySelectorAll", "querySelectorAll ()")}}, puis il passe dans la boucle et pour chacun d'entre eux supprime le contenu du texte.
 
 ### Une petite discussion sur les objets
 
@@ -610,7 +600,7 @@ Analysons ce qui se passe ici un peu plus en détail. En JavaScript, tout est ob
 Dans ce cas particulier, nous avons d'abord créé une variable `guessField` qui stocke une référence au champ de formulaire de saisie de texte dans notre HTML **—** la ligne suivante se trouve parmi nos déclarations de variables en haut du code :
 
 ```js
-let guessField = document.querySelector('.guessField');
+let guessField = document.querySelector(".guessField");
 ```
 
 Pour obtenir cette référence, nous avons utilisé la méthode {{domxref("document.querySelector", "querySelector()")}} de l'objet {{domxref ("document")}}. `querySelector()` prend une information - un [sélecteur CSS](/fr/docs/Apprendre/CSS/Introduction_à_CSS/Les_sélecteurs) qui sélectionne l'élément auquel vous voulez faire référence.
@@ -632,40 +622,40 @@ Jouons un peu avec certains objets du navigateur.
 3. Tapez `guessField` et la console vous montrera que la variable contient un élément {{htmlelement ("input")}}. Vous remarquerez également que la console complète automatiquement les noms d'objets existant dans l'environnement d'exécution, y compris vos variables!
 4. Maintenant, tapez ce qui suit :
 
-    ```js
-    guessField.value = 'Hello';
-    ```
+   ```js
+   guessField.value = "Hello";
+   ```
 
-    La propriété `value` représente la valeur courante entrée dans un champs de texte. Vous verrez qu'en entrant cette commande nous avons changé ce que c'est.
+   La propriété `value` représente la valeur courante entrée dans un champs de texte. Vous verrez qu'en entrant cette commande nous avons changé ce que c'est.
 
 5. Tapez maintenant `guesses` and appuyez sur entrée. La console vous montrera que la variable contient un élément {{htmlelement ("p")}}.
 6. Maintenant, essayez d'entrer la ligne suivante :
 
-    ```js
-    guesses.value
-    ```
+   ```js
+   guesses.value;
+   ```
 
-    Le navigateur va retourner `undefined`, parce que `value` n'existe pas dans le paragraphe.
+   Le navigateur va retourner `undefined`, parce que `value` n'existe pas dans le paragraphe.
 
 7. Pour changer le texte dans le paragraphe vous aurez besoin de la propriété {{domxref("Node.textContent", "textContent")}} à la place.
-    Essayez ceci :
+   Essayez ceci :
 
-    ```js
-    guesses.textContent = 'Where is my paragraph?';
-    ```
+   ```js
+   guesses.textContent = "Where is my paragraph?";
+   ```
 
 8. Maintenant, pour des trucs amusants. Essayez d'entrer les lignes ci-dessous, une par une :
 
 ```js
-guesses.style.backgroundColor = 'yellow';
-guesses.style.fontSize = '200%';
-guesses.style.padding = '10px';
-guesses.style.boxShadow = '3px 3px 6px black';
+guesses.style.backgroundColor = "yellow";
+guesses.style.fontSize = "200%";
+guesses.style.padding = "10px";
+guesses.style.boxShadow = "3px 3px 6px black";
 ```
 
 Chaque élément d'une page possède une propriété de `style` , qui contient elle-même un objet dont les propriétés contiennent tous les styles CSS en ligne appliqués à cet élément. Cela nous permet de définir dynamiquement de nouveaux styles CSS sur des éléments en utilisant JavaScript.
 
-## C'est fini pour le moment...
+## C'est fini pour le moment
 
 Vous voilà parvenu au bout de cet exemple, bravo ! Essayez votre code enfin complété ou [jouez avec notre version finale ici](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game.html). Si vous ne parvenez pas à faire fonctionner l'exemple, vérifiez-le par rapport [au code source.](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game.html)
 

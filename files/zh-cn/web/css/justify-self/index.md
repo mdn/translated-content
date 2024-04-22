@@ -26,15 +26,15 @@ justify-self: normal;
 justify-self: stretch;
 
 /* 位置对齐 */
-justify-self: center;     /* 在中间放置元素 */
-justify-self: start;      /* 在开始处放置元素 */
-justify-self: end;        /* 在结束处放置元素 */
+justify-self: center; /* 在中间放置元素 */
+justify-self: start; /* 在开始处放置元素 */
+justify-self: end; /* 在结束处放置元素 */
 justify-self: flex-start; /* 与 'start' 等效。注意 justify-self 在 Flexbox 布局中被忽略。 */
-justify-self: flex-end;   /* 与 'end' 等效。注意 justify-self 在 Flexbox 布局中被忽略。 */
+justify-self: flex-end; /* 与 'end' 等效。注意 justify-self 在 Flexbox 布局中被忽略。 */
 justify-self: self-start;
 justify-self: self-end;
-justify-self: left;       /* 在左侧放置元素 */
-justify-self: right;      /* 在右侧放置元素 */
+justify-self: left; /* 在左侧放置元素 */
+justify-self: right; /* 在右侧放置元素 */
 
 /* 基线对齐 */
 justify-self: baseline;
@@ -153,11 +153,11 @@ span:nth-child(2) {
 }
 
 span:nth-child(3) {
-justify-self: center;
+  justify-self: center;
 }
 
 span:nth-child(4) {
-justify-self: end;
+  justify-self: end;
 }
 
 article span {
@@ -167,7 +167,8 @@ article span {
   text-align: center;
 }
 
-article, span {
+article,
+span {
   padding: 10px;
   border-radius: 7px;
 }

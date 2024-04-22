@@ -1,20 +1,9 @@
 ---
 title: extension.lastError
 slug: Mozilla/Add-ons/WebExtensions/API/extension/lastError
-tags:
-  - API
-  - Add-ons
-  - Extension
-  - Extensions
-  - Non-standard
-  - Property
-  - Reference
-  - WebExtensions
-  - lastError
-translation_of: Mozilla/Add-ons/WebExtensions/API/extension/lastError
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Un alias de {{WebExtAPIRef("runtime.lastError")}}.
 

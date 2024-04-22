@@ -1,7 +1,6 @@
 ---
 title: Matemática básica no JavaScript — números e operadores
 slug: Learn/JavaScript/First_steps/Math
-original_slug: Learn/JavaScript/First_steps/Matematica
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
@@ -58,22 +57,22 @@ Vamos brincar rapidamente com alguns números para nos familiarizarmos com a sin
 
 1. Primeiramente, vamos declarar duas variáveis e as inicializar com um _integer_ e um _float_, respectivamente, então digitaremos os nomes das variáveis para verificar se está tudo em ordem:
 
-    ```js
-    var meuInt = 5;
-    var meuFloat = 6.667;
-    meuInt;
-    meuFloat;
-    ```
+   ```js
+   var meuInt = 5;
+   var meuFloat = 6.667;
+   meuInt;
+   meuFloat;
+   ```
 
 2. Valores numéricos são inseridos sem aspas — tente declarar e inicializar mais duas variáveis contendo números antes de seguir em frente.
 3. Agora vamos checar se nossas duas variáveis originais são do mesmo tipo de dados. Há um operador chamado {{jsxref("Operators/typeof", "typeof")}} no JavaScript que faz isso. Insira as duas linhas conforme mostradas abaixo:
 
-    ```js
-    typeof meuInt;
-    typeof meuFloat;
-    ```
+   ```js
+   typeof meuInt;
+   typeof meuFloat;
+   ```
 
-    Você deve obter `"number"` de volta nos dois casos — isso torna as coisas muito mais fáceis para nós do que se diferentes tipos de números tivessem diferentes tipos de dados, e tivéssemos que lidar com eles em diferentes maneiras. Ufa!
+   Você deve obter `"number"` de volta nos dois casos — isso torna as coisas muito mais fáceis para nós do que se diferentes tipos de números tivessem diferentes tipos de dados, e tivéssemos que lidar com eles em diferentes maneiras. Ufa!
 
 ## Operadores aritméticos
 
@@ -93,28 +92,28 @@ Nós provavelmente não precisamos ensinar a você como fazer matemática básic
 
 1. Primeiro tente inserir alguns exemplos simples por sua conta, como
 
-    ```js
-    10 + 7
-    9 * 8
-    60 % 3
-    ```
+   ```js
+   10 + 7;
+   9 * 8;
+   60 % 3;
+   ```
 
 2. Você pode tentar declarar e inicializar alguns números dentro de variáveis, e tentar usá-los nas operações — as variáveis irão se comportar exatamente como os valores que elas armazenam para a finalidade das operações. Por exemplo:
 
-    ```js
-    var num1 = 10;
-    var num2 = 50;
-    9 * num1;
-    num2 / num1;
-    ```
+   ```js
+   var num1 = 10;
+   var num2 = 50;
+   9 * num1;
+   num2 / num1;
+   ```
 
 3. Por último, nesta seção, tente inserir algumas expressões mais complexas, como:
 
-    ```js
-    5 + 10 * 3;
-    num2 % 9 * num1;
-    num2 + num1 / 8 + 2;
-    ```
+   ```js
+   5 + 10 * 3;
+   (num2 % 9) * num1;
+   num2 + num1 / 8 + 2;
+   ```
 
 Alguns dos exemplos do último bloco podem não ter retornado os valores que você estava esperando; a seção abaixo pode lhe explicar o porquê.
 
@@ -261,19 +260,19 @@ Veremos como codificar essa lógica quando examinarmos instruções condicionais
 ```
 
 ```js
-var btn = document.querySelector('button');
-var txt = document.querySelector('p');
+var btn = document.querySelector("button");
+var txt = document.querySelector("p");
 
-btn.addEventListener('click', updateBtn);
+btn.addEventListener("click", updateBtn);
 
 function updateBtn() {
-   if (btn.textContent === 'Iniciar máquina') {
-       btn.textContent = 'Parar máquina';
-       txt.textContent = 'A máquina iniciou!';
-   } else {
-       btn.textContent = 'Iniciar máquina';
-       txt.textContent = 'A máquina está parada.';
-   }
+  if (btn.textContent === "Iniciar máquina") {
+    btn.textContent = "Parar máquina";
+    txt.textContent = "A máquina iniciou!";
+  } else {
+    btn.textContent = "Iniciar máquina";
+    txt.textContent = "A máquina está parada.";
+  }
 }
 ```
 

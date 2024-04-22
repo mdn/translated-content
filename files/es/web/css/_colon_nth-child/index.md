@@ -1,5 +1,5 @@
 ---
-title: ':nth-child'
+title: ":nth-child"
 slug: Web/CSS/:nth-child
 ---
 
@@ -61,8 +61,10 @@ La pseudo-clase `nth-child` se especifica con un único argumento, que represent
 #### HTML
 
 ```html
-<h3><code>span:nth-child(2n+1)</code>, SIN un
-   <code>&lt;em&gt;</code> entre los hijos.</h3>
+<h3>
+  <code>span:nth-child(2n+1)</code>, SIN un <code>&lt;em&gt;</code> entre los
+  hijos.
+</h3>
 <p>Los hijos 1, 3, 5 y 7 son seleccionados.</p>
 <div class="first">
   <span>Span 1!</span>
@@ -74,13 +76,17 @@ La pseudo-clase `nth-child` se especifica con un único argumento, que represent
   <span>Span 7!</span>
 </div>
 
-<br>
+<br />
 
-<h3><code>span:nth-child(2n+1)</code>, CON un
-   <code>&lt;em&gt;</code> entre los hijos.</h3>
-<p>Los hijos 1, 5 y 7 son seleccionados.<br>
-   3 se usa en el conteo porque es un hijo, pero
-   no se selecciona porque no es un <code>&lt;span&gt;</code>.</p>
+<h3>
+  <code>span:nth-child(2n+1)</code>, CON un <code>&lt;em&gt;</code> entre los
+  hijos.
+</h3>
+<p>
+  Los hijos 1, 5 y 7 son seleccionados.<br />
+  3 se usa en el conteo porque es un hijo, pero no se selecciona porque no es un
+  <code>&lt;span&gt;</code>.
+</p>
 <div class="second">
   <span>Span!</span>
   <span>Span</span>
@@ -92,14 +98,19 @@ La pseudo-clase `nth-child` se especifica con un único argumento, que represent
   <span>Span</span>
 </div>
 
-<br>
+<br />
 
-<h3><code>span:nth-of-type(2n+1)</code>, CON un
-   <code>&lt;em&gt;</code> entre los hijos.</h3>
-<p>Los hijos 1, 4, 6 y 8 son seleccionados.<br>
-   3 no se usa en el conteo ni se selecciona porque es un <code>&lt;em&gt;</code>,
-   no un <code>&lt;span&gt;</code>, y <code>nth-of-type</code> solo selecciona
-   hijos de ese tipo. El <code>&lt;em&gt;</code> se omite por completo y se ignora.</p>
+<h3>
+  <code>span:nth-of-type(2n+1)</code>, CON un <code>&lt;em&gt;</code> entre los
+  hijos.
+</h3>
+<p>
+  Los hijos 1, 4, 6 y 8 son seleccionados.<br />
+  3 no se usa en el conteo ni se selecciona porque es un
+  <code>&lt;em&gt;</code>, no un <code>&lt;span&gt;</code>, y
+  <code>nth-of-type</code> solo selecciona hijos de ese tipo. El
+  <code>&lt;em&gt;</code> se omite por completo y se ignora.
+</p>
 <div class="third">
   <span>Span!</span>
   <span>Span</span>
@@ -127,9 +138,9 @@ div em {
   margin-bottom: 3px;
 }
 
-.first span:nth-child(2n+1),
-.second span:nth-child(2n+1),
-.third span:nth-of-type(2n+1) {
+.first span:nth-child(2n + 1),
+.second span:nth-child(2n + 1),
+.third span:nth-of-type(2n + 1) {
   background-color: lime;
 }
 ```

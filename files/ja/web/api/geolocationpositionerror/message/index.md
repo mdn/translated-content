@@ -1,21 +1,18 @@
 ---
-title: GeolocationPositionError.message
+title: "GeolocationPositionError: message プロパティ"
+short-title: message
 slug: Web/API/GeolocationPositionError/message
+l10n:
+  sourceCommit: b6984118ac9482e683a654edfefa4b426ca3c7ca
 ---
 
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
-**`GeolocationPositionError.message`** は読み取り専用のプロパティで、エラーの詳細を説明する、人間が読める {{domxref("DOMString")}} を返します。
+**`GeolocationPositionError.message`** は読み取り専用のプロパティで、エラーの詳細を説明する、人間が読める文字列を返します。
 
-## 構文
+## 値
 
-```js
-let msg = geolocationPositionErrorInstance.message
-```
-
-### 値
-
-エラーの詳細を説明する、人間が読める {{domxref("DOMString")}} です。
+エラーの詳細を説明する、人間が読める文字列です。
 
 ## 仕様書
 

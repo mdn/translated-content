@@ -1,11 +1,6 @@
 ---
 title: <length-percentage>
 slug: Web/CSS/length-percentage
-tags:
-  - CSS
-  - Reference
-  - Type
-translation_of: Web/CSS/length-percentage
 ---
 
 {{CSSRef}}

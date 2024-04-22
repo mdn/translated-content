@@ -1,7 +1,6 @@
 ---
 title: Alterando a escala das imagens de background
 slug: Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images
-original_slug: Web/Guide/CSS/Scaling_background_images
 ---
 
 A propriedade CSS {{ cssxref("background-size") }} possibilita o ajuste das imagens do background, ao invés do comportamento padrão do navegador de mostrar a imagem no seu tamanho real. Você pode tanto aumentar como diminuir a imagem.
@@ -82,7 +81,8 @@ O valor contain especifica que, independentemente do tamanho da caixa que conté
   background-image: url(firefox_logo.png);
   background-size: contain;
   border: 2px solid darkgray;
-  color: #000; text-shadow: 1px 1px 0 #fff;
+  color: #000;
+  text-shadow: 1px 1px 0 #fff;
 }
 ```
 

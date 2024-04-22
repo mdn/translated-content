@@ -1,21 +1,22 @@
 ---
-title: Element.clientTop
+title: "Element: clientTop プロパティ"
+short-title: clientTop
 slug: Web/API/Element/clientTop
+l10n:
+  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
 {{ APIRef("DOM") }}
 
 要素の上境界の幅をピクセル数で表します。これは要素の読み取り専用で整数型のプロパティです。
 
-たまたま、 2 つの位置（`offsetTop` とクライアント領域の上端）の間にあるのは、要素の境界だけです。これは、 `offsetTop` が（マージンではなく）境界の上端の位置を示し、クライアント領域は境界の直下から始まるからです（クライアント領域はパディングを含みます）。したがって、 **clientTop** 値は常に "border-top-width" に対する `.getComputedStyle()` 値の整数部分と一致します。（実際には Math.round(parseFloat()) かもしれません。）例えば、計算された "border-top-width" が 0 の場合、 **`clientTop`** も 0 になります。
+たまたま、2 つの位置（`offsetTop` とクライアント領域の上端）の間にあるのは、要素の境界だけです。これは、 `offsetTop` が（マージンではなく）境界の上端の位置を示し、クライアント領域は境界の直下から始まるからです（クライアント領域はパディングを含みます）。したがって、 **clientTop** 値は常に "border-top-width" に対する `.getComputedStyle()` 値の整数部分と一致します。（実際には Math.round(parseFloat()) かもしれません。）例えば、計算された "border-top-width" が 0 の場合、 **`clientTop`** も 0 になります。
 
 > **メモ:** このプロパティは値を整数に丸めます。小数の値が必要な場合は、 {{ domxref("element.getBoundingClientRect()") }} を使用してください。
 
-## 構文
+## 値
 
-```js
-var top = element.clientTop;
-```
+数値です。
 
 ## 例
 
@@ -26,9 +27,12 @@ var top = element.clientTop;
 ```html
 <div id="container">
   <div id="contained">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.
+    </p>
   </div>
 </div>
 ```
@@ -36,7 +40,6 @@ var top = element.clientTop;
 ### CSS
 
 ```css
-
 #container {
   margin: 3rem;
   background-color: rgb(255, 255, 204);
@@ -54,7 +57,7 @@ var top = element.clientTop;
 
 ### 結果
 
-{{EmbedLiveSample("Example", 400, 350)}}
+{{EmbedLiveSample("Examples", 400, 350)}}
 
 ## メモ
 

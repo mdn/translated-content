@@ -1,13 +1,18 @@
 ---
 title: 文書の構造
 slug: MDN/Writing_guidelines/Page_structures
-original_slug: MDN/Structures
 l10n:
-  sourceCommit: 8dbe0b2acd7fdbf533a9bd2f517999cc2035d952
+  sourceCommit: 137a960f52b744eabd33a2b56e54450653b06f45
 ---
 
 {{MDNSidebar}}
 
-MDN 全体を通して、MDN の記事で一貫した情報を表示するために繰り返し使用される様々な文書化構造があります。ここでは、MDN の執筆者として、あなたが書いたり、編集したり、翻訳したりする文書で、これらの構造を認識し、適用し、適切に変更できるように、これらの構造を説明した記事を紹介します。
+MDN 全体を通して、MDN の記事内の情報を一貫して表現するために使用する文書化構造があります。
+このページは、あなたが書いたり、編集したり、対応させたりする文書に対して、ページの内容を適切に変更することができるように、これらの構造を記述した記事を掲載しています。
 
-{{LandingPageListSubPages()}}
+{{LandingPageListSubPages}}
+
+## 関連情報
+
+- [ページテンプレート](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types#page_templates)
+- [ページの構成成分](/ja/docs/MDN/Writing_guidelines/Writing_style_guide#page_components)

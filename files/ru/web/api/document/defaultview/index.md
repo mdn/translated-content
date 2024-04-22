@@ -1,11 +1,6 @@
 ---
 title: Document.defaultView
 slug: Web/API/Document/defaultView
-tags:
-  - API
-  - DOM
-  - Property
-translation_of: Web/API/Document/defaultView
 ---
 
 {{ ApiRef() }}
@@ -24,6 +19,6 @@ var win = document.defaultView;
 
 {{Specifications}}
 
-## Браузерная поддержка
+## Совместимость с браузерами
 
 {{Compat}}

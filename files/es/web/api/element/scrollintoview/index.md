@@ -43,8 +43,8 @@ var element = document.getElementById("box");
 
 element.scrollIntoView();
 element.scrollIntoView(false);
-element.scrollIntoView({block: "end"});
-element.scrollIntoView({block: "end", behavior: "smooth"});
+element.scrollIntoView({ block: "end" });
+element.scrollIntoView({ block: "end", behavior: "smooth" });
 ```
 
 ## Notas

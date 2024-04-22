@@ -3,6 +3,8 @@ title: 行级内容
 slug: Glossary/Inline-level_content
 ---
 
+{{GlossarySidebar}}
+
 在 CSS 中，参与行内布局的内容被称为**行级内容**（inline-level content）。默认情况下，大多数文本、替换元素以及生成的内容都是行级的。
 
 在行内布局中，通常将文本、[替换元素](/zh-CN/docs/Web/CSS/Replaced_element)以及其它的行级盒分段为一堆按顺序排列的盒子来进行布局。在每个行盒中，行级盒子相互垂直或者水平对齐，具体取决于书写模式。通常，它们与文本的基线进行对齐。这可以使用 CSS 进行更改。

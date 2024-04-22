@@ -1,12 +1,6 @@
 ---
 title: Le mode strict
 slug: Web/JavaScript/Reference/Strict_mode
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - Reference
-  - Strict Mode
-translation_of: Web/JavaScript/Reference/Strict_mode
 ---
 
 {{JsSidebar("More")}}
@@ -48,11 +42,15 @@ De même, pour activer le mode strict pour une fonction, on placera l'instructio
 ```js
 function strict() {
   // Syntaxe en mode strict au niveau de la fonction
-  'use strict';
-  function nested() { return "Ho que oui, je le suis !"; }
+  "use strict";
+  function nested() {
+    return "Ho que oui, je le suis !";
+  }
   return "Allô ! Je suis une fonction en mode strict ! " + nested();
 }
-function notStrict() { return "Je ne suis pas strict."; }
+function notStrict() {
+  return "Je ne suis pas strict.";
+}
 ```
 
 ### Mode strict pour les modules
@@ -88,8 +86,8 @@ Deuxièmement, le mode strict fait en sorte que les affectations qui échoueraie
 "use strict";
 
 // Affectation à une propriété globale en lecture seule
-var undefined = 5;  // déclenche une exception TypeError
-var Infinity = 5;   // déclenche une exception TypeError
+var undefined = 5; // déclenche une exception TypeError
+var Infinity = 5; // déclenche une exception TypeError
 
 // Affectation à une propriété en lecture seule
 var obj1 = {};
@@ -97,11 +95,15 @@ Object.defineProperty(obj1, "x", { value: 42, writable: false });
 obj1.x = 9; // lève un TypeError
 
 // Affectation à une propriété qui n'a qu'une méthode get
-var obj2 = { get x() { return 17; } };
+var obj2 = {
+  get x() {
+    return 17;
+  },
+};
 obj2.x = 5; // lève un TypeError
 
 // Affectation d'une nouvelle propriété à un objet non-extensible
-var gele= {};
+var gele = {};
 Object.preventExtensions(gele);
 gele.nouvelleProp = "ohé"; // lève un TypeError
 ```
@@ -125,7 +127,8 @@ var o = { p: 1, p: 2 }; // !!! erreur de syntaxe
 Cinquièmement, le mode strict requiert que les noms de paramètres de fonction soient uniques. En mode non-strict, le dernier argument dupliqué cache les arguments précédents ayant le même nom. Ces arguments précédents demeurent disponibles via `arguments[i]`, ils ne sont donc pas complètement inaccessibles. Pourtant, cette cachette n'a guère de sens et n'est probablement pas souhaitable (cela pourrait cacher une faute de frappe, par exemple). Donc en mode strict, les doublons de noms d'arguments sont une erreur de syntaxe :
 
 ```js
-function somme(a, a, c) { // !!! erreur de syntaxe
+function somme(a, a, c) {
+  // !!! erreur de syntaxe
   "use strict";
   return a + b + c; // Ce code va planter s'il est exécuté
 }
@@ -141,21 +144,21 @@ Les développeurs novices croient parfois qu'un zéro débutant un nombre n'a pa
 
 ```js
 "use strict";
-var somme = 015 + // !!! erreur de syntaxe
-            197 +
-            142;
+var somme =
+  015 + // !!! erreur de syntaxe
+  197 +
+  142;
 ```
 
 Septièmement, le mode strict, à partir d'ECMAScript 2015 interdit de définir des propriétés sur des valeurs primitives. Sans mode strict, de telles définitions sont ignorées. En activant le mode strict cela lèvera une exception {{jsxref("TypeError")}}.
 
 ```js
-(function() {
-"use strict";
+(function () {
+  "use strict";
 
-false.true = "";         // TypeError
-(14).calvados= "maison";     // TypeError
-"une chaîne".de = "caractères"; // TypeError
-
+  false.true = ""; // TypeError
+  (14).calvados = "maison"; // TypeError
+  "une chaîne".de = "caractères"; // TypeError
 })();
 ```
 
@@ -168,8 +171,8 @@ Premièrement, le mode strict interdit l'utilisation de `with`. Le problème ave
 ```js
 "use strict";
 var x = 17;
-with (obj) // !!! erreur de syntaxe
-{
+with (obj) {
+  // !!! erreur de syntaxe
   // Si on n'était pas en mode strict, serait-ce var x,
   // ou serait-ce plutôt obj.x?  Il est impossible en général
   // de le dire sans faire tourner le code, donc
@@ -232,12 +235,13 @@ Premièrement, les chaînes `eval` et `arguments` ne peuvent pas être utilisée
 eval = 17;
 arguments++;
 ++eval;
-var obj = { set p(arguments) { } };
+var obj = { set p(arguments) {} };
 var eval;
-try { } catch (arguments) { }
-function x(eval) { }
-function arguments() { }
-var y = function eval() { };
+try {
+} catch (arguments) {}
+function x(eval) {}
+function arguments() {}
+var y = function eval() {};
 var f = new Function("arguments", "'use strict'; return 17;");
 ```
 
@@ -258,7 +262,9 @@ Troisièmement, `arguments.callee` n'est plus supporté. En temps normal `argume
 
 ```js
 "use strict";
-var f = function() { return arguments.callee; };
+var f = function () {
+  return arguments.callee;
+};
 f(); // lève une TypeError
 ```
 
@@ -270,7 +276,9 @@ Tout d'abord, la valeur passée en tant que `this` à une fonction n'est pas né
 
 ```js
 "use strict";
-function fun() { return this; }
+function fun() {
+  return this;
+}
 console.log(fun() === undefined);
 console.log(fun.call(2) === 2);
 console.log(fun.apply(null) === null);
@@ -283,14 +291,12 @@ Cela signifie entre autres qu'il est impossible de faire référence à l'objet 
 Ensuite, en mode strict, il n'est plus possible de remonter la pile d'appels grâce aux extensions communément implémentées. Par exemple, dans du code non strict, lorsqu'une fonction `fun` est en train d'être appelée, `fun.caller` fait référence à la fonction qui a appelé `fun` la dernière et `fun.arguments` correspond à l'objet `arguments` pour cet appel à `fun`. Ces deux extensions posent problème pour la sécurité car elles permettent au code d'accéder à des fonctions privilégiées et à leurs arguments (éventuellement non sécurisés). Si `fun` est passée en mode strict, `fun.caller` et `fun.arguments` seront des propriétés non-supprimables qui lèveront une exception pour chaque tentative d'accès ou de modification :
 
 ```js
-function restricted()
-{
+function restricted() {
   "use strict";
-  restricted.caller;    // lève une TypeError
+  restricted.caller; // lève une TypeError
   restricted.arguments; // lève une TypeError
 }
-function privilegedInvoker()
-{
+function privilegedInvoker() {
   return restricted();
 }
 privilegedInvoker();
@@ -300,8 +306,7 @@ Enfin, pour une fonction en mode strict, `arguments` ne permet pas d'accéder au
 
 ```js
 "use strict";
-function fun(a, b)
-{
+function fun(a, b) {
   "use strict";
   var v = 12;
   return arguments.caller; // lève une TypeError
@@ -316,18 +321,21 @@ Les prochaines versions d'ECMAScript inclueront certainement une nouvelle syntax
 Premièrement, en mode strict, une liste d'identifiants fait partie des mots-clés réservés. Ces termes sont : `implements`, `interface`, `let`, `package`, `private`, `protected`, `public`, `static`, et `yield`. En mode strict, il est donc impossible de nommer des variables ou des arguments avec ces noms.
 
 ```js
-function package(protected) { // !!!
+function package(protected) {
+  // !!!
   "use strict";
   var implements; // !!!
 
-  interface: // !!!
-  while (true) {
+  // !!!
+  interface: while (true) {
     break interface; // !!!
   }
 
-  function private() { } // !!!
+  function private() {} // !!!
 }
-function fun(static) { 'use strict'; } // !!!
+function fun(static) {
+  "use strict";
+} // !!!
 ```
 
 Deux défauts liés à Mozilla Firefox : tout d'abord si votre code est en JavaScript 1.7 ou supérieur (par exemple pour du code qui concerne le chrome dans les extensions ou lorsqu'on utilise les balises `<script type="">`) et qu'il est en mode strict, `let` et `yield` fonctionnent de la façon dont ils fonctionnaient originellement au sein de Firefox. En revanche, pour du code strict utilisé sur une page web et chargé avec `<script src="">` ou `<script>...</script>`, on ne pourra pas utiliser `let`/`yield` comme identifiants. Ensuite, bien qu'ES5 réserve les mots-clés `class`, `enum`, `export`, `extends`, `import`, et `super` pour le mode strict et le mode non strict, les versions antérieures à Firefox 5 ne réservaient ces mots-clés que pour le mode strict.
@@ -337,17 +345,18 @@ Deuxièmement, [le mode strict interdit les déclarations de fonctions qui ne so
 ```js
 "use strict";
 if (true) {
-  function f() { } // !!! erreur de syntaxe
+  function f() {} // !!! erreur de syntaxe
   f();
 }
 
 for (var i = 0; i < 5; i++) {
-  function f2() { } // !!! erreur de syntaxe
+  function f2() {} // !!! erreur de syntaxe
   f2();
 }
 
-function truc() { // OK
-  function bidule() { } // OK également
+function truc() {
+  // OK
+  function bidule() {} // OK également
 }
 ```
 

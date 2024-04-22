@@ -2,6 +2,7 @@
 title: Server-sent events
 slug: Web/API/Server-sent_events
 ---
+
 {{DefaultAPISidebar("Server Sent Events")}}
 
 전통적으로 웹페이지는 새로운 데이터를 받기 위해 서버로 요청을 보내야만 합니다; 서버로 데이터를 요청하는 방식입니다. 하지만 Server-Sent Events 방식으로 웹페이지의 요청 없이도 언제든지 서버가 새로운 데이터를 보내는 것이 가능합니다. 이렇게 보내진 메시지는 웹페이지 안에서 *[Events](/ko/docs/DOM/event) + 데이터*로 다룰 수 있습니다.

@@ -1,7 +1,6 @@
 ---
 title: Aplicación de efectos de SVG para el contenido HTML
 slug: Web/SVG/Applying_SVG_effects_to_HTML_content
-original_slug: Applying_SVG_effects_to_HTML_content
 ---
 
 Aplicación de efectos de SVG para el contenido HTML.
@@ -17,7 +16,11 @@ Puede especificar SVG en los estilos, ya sea dentro del mismo documento, o dentr
 Para aplicar un efecto SVG usando estilos CSS, primero tiene que crear el estilo CSS que hace referencia al SVG para aplicar.
 
 ```html
-<style>.stylename { mask: url(#localstyle); }</style>
+<style>
+  .stylename {
+    mask: url(#localstyle);
+  }
+</style>
 ```
 
 En el ejemplo anterior, el nuevo estilo, por "stylename," es una máscara de SVG que hace referencia a el identificador "localstyle". Una vez que se estableció, que la máscara se aplica a todos los elementos con este estilo CSS.

@@ -39,7 +39,9 @@ element.appendChild(aChild)
 由于 `appendChild()` 返回的是被附加的子元素，所以链式调用可能无法按照你的预期去执行：
 
 ```js
-let aBlock = document.createElement('block').appendChild( document.createElement('b') );
+let aBlock = document
+  .createElement("block")
+  .appendChild(document.createElement("b"));
 ```
 
 （上述代码）只会将 `aBlock` 设置为 `<b></b>` ，这可能不是你所想要的。

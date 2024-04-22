@@ -18,29 +18,35 @@ HTML Center 元素（`<center>`）是个[块级元素](/zh-CN/docs/HTML/Block-le
 ## 示例 1
 
 ```html
-<center>This text will be centered.
-<p>So will this paragraph.</p></center>
+<center>
+  This text will be centered.
+  <p>So will this paragraph.</p>
+</center>
 ```
 
 ## 示例 2 (CSS 替代)
 
 ```html
-<div style="text-align:center">This text will be centered.
-<p>So will this paragraph.</p></div>
+<div style="text-align:center">
+  This text will be centered.
+  <p>So will this paragraph.</p>
+</div>
 ```
 
 ## 示例 3 (CSS 替代)
 
 ```html
-<p style="text-align:center">This line will be centered.<br>
-And so will this line.</p>
+<p style="text-align:center">
+  This line will be centered.<br />
+  And so will this line.
+</p>
 ```
 
 ## 注
 
 向 {{HTMLElement("div")}} 或者 {{HTMLElement("p")}} 元素应用 {{Cssxref("text-align")}}`:center` 会使这些元素的*内容*居中，同时保留其整体大小不变。
 
-## 另见
+## 参见
 
 - {{Cssxref("text-align")}}
 - {{Cssxref("display")}}

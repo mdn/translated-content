@@ -1,6 +1,8 @@
 ---
 title: CSS の整理
 slug: Learn/CSS/Building_blocks/Organizing
+l10n:
+  sourceCommit: bed92df387c4a8d94ee1e682cd33dab06cb30f4c
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks/Fundamental_CSS_comprehension", "Learn/CSS/Building_blocks")}}
@@ -12,10 +14,19 @@ slug: Learn/CSS/Building_blocks/Organizing
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        基本的なコンピューターリテラシー、
-        <a href="/ja/Learn/Getting_started_with_the_web/Installing_basic_software">基本的なソフトウェアがインストールされている</a>こと、
-        <a href="/ja/Learn/Getting_started_with_the_web/Dealing_with_files">ファイルの扱い</a>、
-        HTML の基本（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML">HTML 入門</a>）および CSS に関するアイデア（<a href="/ja/docs/Learn/CSS/First_steps">CSS の第一歩</a>）に関する基本的な知識を得ていること。
+        <a
+          href="/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          >基本的なソフトウェアがインストールされている</a
+        >こと、
+        <a
+          href="/ja/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+          >ファイルの扱い</a
+        >、 HTML の基本（<a
+          href="/ja/docs/Learn/HTML/Introduction_to_HTML"
+          >HTML 入門</a
+        >）および CSS に関するアイデア（<a
+          href="/ja/docs/Learn/CSS/First_steps"
+          >CSS の第一歩</a>）に関する基本的な知識を得ていること。
       </td>
     </tr>
     <tr>
@@ -35,7 +46,7 @@ slug: Learn/CSS/Building_blocks/Organizing
 
 既存のプロジェクトでチームと作業している場合、最初に確認することは、プロジェクトに CSS の既存のコーディング規約があるかどうかです。チームコーディング規約は常に自分の個人的な好みより優先する必要があります。多くの場合、何かを行うのに何が正しくて何が間違っているということはありませんが、一貫性が重要です。
 
-例えば、[MDN コードの例の CSS ガイドライン](/ja/docs/MDN/Guidelines/Code_guidelines/CSS)を見てみましょう。
+例えば、[MDN コードの例の CSS ガイドライン](/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS)を見てみましょう。
 
 ### 一貫性を保つ
 
@@ -47,9 +58,9 @@ slug: Learn/CSS/Building_blocks/Organizing
 
 CSS をフォーマットする方法には、いくつかの方法を見かけるでしょう。開発者によっては、次のようにすべてのルールを 1 行に配置しています。
 
-```css
-.box { background-color: #567895; }
-h2 { background-color: black; color: white; }
+```css-nolint
+.box {background-color: #567895; }
+h2 {background-color: black; color: white; }
 ```
 
 また、すべてを新しい行に分割したがる開発者もいます。
@@ -121,13 +132,24 @@ CSS に書かれていることの多くは自明なことなので、いちい�
 ```css
 /* || 一般的なスタイル */
 
-body { /* … */ }
+body {
+  /* … */
+}
 
-h1, h2, h3, h4 { /* … */ }
+h1,
+h2,
+h3,
+h4 {
+  /* … */
+}
 
-ul { /* … */ }
+ul {
+  /* … */
+}
 
-blockquote { /* … */ }
+blockquote {
+  /* … */
+}
 ```
 
 この部分の後で、いくつかのユーティリティクラスを定義することができます。例えば、フレックスアイテムとして表示するリストや他の方法で表示するリストの既定リストスタイルを削除するクラスなどです。多くの異なる要素に適用することが分かっているいくつかのスタイル指定がある場合、この部分に記述することができます。
@@ -149,9 +171,13 @@ blockquote { /* … */ }
 ```css
 /* || サイト全体 */
 
-.main-nav { /* … */ }
+.main-nav {
+  /* … */
+}
 
-.logo { /* … */ }
+.logo {
+  /* … */
+}
 ```
 
 最後に、特定のものを使用するための CSS を、それらが使用されるコンテキスト、ページ、あるいはコンポーネントごとに分けて記載します。
@@ -159,9 +185,13 @@ blockquote { /* … */ }
 ```css
 /* || 店のページ */
 
-.product-listing { /* … */ }
+.product-listing {
+  /* … */
+}
 
-.product-box { /* … */ }
+.product-box {
+  /* … */
+}
 ```
 
 このように物事を順番に並べることで、少なくともスタイルシートのどの部分に変更したいものがあるのかを知ることができます。
@@ -221,7 +251,7 @@ CSS を記述するための独自のルールを考え出す代わりに、コ�
 }
 
 .comment .content {
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .list-item {
@@ -231,7 +261,7 @@ CSS を記述するための独自のルールを考え出す代わりに、コ�
 }
 
 .list-item .content {
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 ```
 
@@ -244,7 +274,7 @@ OOCSS では、`media` と呼ばれる 1 つのパターンを作成して、両
 }
 
 .media .content {
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .comment img {
@@ -260,7 +290,7 @@ HTMLでは、コメントに `media` と `comment` クラスの両方を適用�
 
 ```html
 <div class="media comment">
-  <img />
+  <img src="" alt="" />
   <div class="content"></div>
 </div>
 ```
@@ -270,7 +300,7 @@ HTMLでは、コメントに `media` と `comment` クラスの両方を適用�
 ```html
 <ul>
   <li class="media list-item">
-    <img />
+    <img src="" alt="" />
     <div class="content"></div>
   </li>
 </ul>
@@ -280,14 +310,17 @@ Nicole Sullivan がこのアプローチを記述し、普及させたことで�
 
 #### BEM
 
-BEM とは、 Block Element Modifier の略です。 BEM では、ブロックは、ボタン、メニュー、ロゴなどの独立した実体として扱われます。要素は、リスト項目やタイトルのようなもので、それが含まれているブロックと結びついています。修飾子は、ブロックや要素に付けられたフラグで、スタイルや動作を変更するものです。 BEM を使用したコードは、 CSS のクラスにダッシュとアンダースコアが多用されているため、見分けがつくと思います。例えば、[BEMの命名規則](http://getbem.com/naming/)についてのページから、この HTML に適用されたクラスを見てみましょう。
+BEM とは、 Block Element Modifier の略です。 BEM では、ブロックは、ボタン、メニュー、ロゴなどの独立した実体として扱われます。要素は、リスト項目やタイトルのようなもので、それが含まれているブロックと結びついています。修飾子は、ブロックや要素に付けられたフラグで、スタイルや動作を変更するものです。 BEM を使用したコードは、 CSS のクラスにダッシュとアンダースコアが多用されているため、見分けがつくと思います。例えば、 [BEM の命名規則](https://getbem.com/naming/)についてのページから、この HTML に適用されたクラスを見てみましょう。
 
 ```html
 <form class="form form--theme-xmas form--simple">
-  <input class="form__input" type="text" />
+  <label class="label form__label" for="inputId"></label>
+  <input class="form__input" type="text" id="inputId" />
+
   <input
     class="form__submit form__submit--disabled"
-    type="submit" />
+    type="submit"
+    value="Submit" />
 </form>
 ```
 
@@ -299,7 +332,7 @@ BEM は大規模なウェブプロジェクトで広く使用されており、�
 
 #### その他の一般的なシステム
 
-これらのシステムは多数使用されています。その他の一般的なアプローチには、 Jonathan Snook によって作成された [CSS のスケーラブルでモジュール式のアーキテクチャ (SMACSS)](http://smacss.com/)、 Harry Roberts の [ITCSS](https://itcss.io/)、および Yahoo! によって最初に作成された [Atomic CSS (ACSS)](https://acss.io/) があります。これらのアプローチのいずれかを使用するプロジェクトに遭遇した場合の利点は、同じスタイルでコーディングする方法を理解するのに役立つ多くの記事とガイドを検索して見つけることができることです。
+これらのシステムは多数使用されています。その他の一般的なアプローチには、 Jonathan Snook によって作成された [SMACSS (CSS のスケーラブルでモジュール式のアーキテクチャ)](https://smacss.com/)、 Harry Roberts の [ITCSS](https://itcss.io/)、および Yahoo! によって最初に作成された [Atomic CSS (ACSS)](https://acss.io/) があります。これらのアプローチのいずれかを使用するプロジェクトに遭遇した場合の利点は、同じスタイルでコーディングする方法を理解するのに役立つ多くの記事とガイドを検索して見つけることができることです。
 
 このようなシステムを使用することの欠点は、特に小規模なプロジェクトの場合、過度に複雑に見える可能性があることです。
 
@@ -317,7 +350,7 @@ CSS にネイティブ[カスタムプロパティが追加された](/ja/docs/W
 
 `$base-color` 以下の最初の行のように呼び出される変数を作成した場合、その色が必要な場所であればどこでも、スタイルシートを介してその変数を使用できます。
 
-```css
+```scss
 $base-color: #c6538c;
 
 .alert {
@@ -335,23 +368,23 @@ CSS にコンパイルすると、最終的なスタイルシートには次の 
 
 #### コンポーネントスタイルシートのコンパイル
 
-CSS を整理する 1 つの方法は、スタイルシートを小さなスタイルシートに分解することであると上記で述べました。Sass を使用すると、これを別のレベルに引き上げ、非常に小さなスタイルシートをたくさん持つことができます。コンポーネントごとに個別のスタイルシートを用意することもできます。Sass のインクルード機能を使用することで、これらすべてを 1 つまたは少数のスタイルシートにまとめて、実際にウェブサイトにリンクすることができます。
+CSS を整理する 1 つの方法は、スタイルシートを小さなスタイルシートに分解することであると上記で述べました。 Sass を使用すると、これを別のレベルに引き上げ、非常に小さなスタイルシートをたくさん持つことができます。コンポーネントごとに個別のスタイルシートを用意することもできます。 Sass のインクルード機能を使用することで、これらすべてを 1 つまたは少数のスタイルシートにまとめて、実際にウェブサイトにリンクすることができます。
 
 例えば、[パーシャル](https://sass-lang.com/documentation/at-rules/use#partials)を使って、ディレクトリー内にいくつかのスタイルファイル、例えば `foundation/_code.scss`、`foundation/_lists.scss`、`foundation/_footer.scss`、`foundation/_links.scss` などを作成し、Sass の `@use` ロールを使って他のスタイルシートに読み込むことができます。
 
-```css
-// foundation/_index.sass
-@use 'code'
-@use 'lists'
-@use 'footer'
-@use 'links'
+```scss
+// foundation/_index.scss
+@use "code";
+@use "lists";
+@use "footer";
+@use "links";
 ```
 
 上記のように、パーシャルがすべてインデックスファイルに読み込まれている場合、ディレクトリー全体を一度に別のスタイルシートに読み込むことができます。
 
-```css
-// style.sass
-@use 'foundation'
+```scss
+// style.scss
+@use "foundation";
 ```
 
 > **メモ:** Sass を試す簡単な方法は、[CodePen](https://codepen.io) を使用することです。これを有効にすると、 CodePen が Sass パーサーを実行してくれるので、通常の CSS を適用したウェブページを見ることができます。CSS チュートリアルでは、CodePen のデモでプレーンな CSS ではなく Sass を使用しているのを見つけることがありますので、少しでも知っておくと便利です。
@@ -366,6 +399,6 @@ CSS を整理する 1 つの方法は、スタイルシートを小さなスタ�
 
 CSS のレイアウトの詳細については、「[CSS レイアウトの学習](/ja/docs/Learn/CSS/CSS_layout)」部分を参照してください。
 
-また、これで [MDN の CSS の資料](/ja/docs/Web/CSS)の残りの部分を探索するためのスキルを身につけることができます。プロパティや値を調べたり、[CSS 料理帳](/ja/docs/Web/CSS/Layout_cookbook)で使用するパターンを調べたり、[CSS グリッドレイアウトのガイド](/ja/docs/Web/CSS/CSS_Grid_Layout)などの特定のガイドを読んだりすることができます。
+また、これで [MDN の CSS の資料](/ja/docs/Web/CSS)の残りの部分を探索するためのスキルを身につけることができます。プロパティや値を調べたり、[CSS 料理帳](/ja/docs/Web/CSS/Layout_cookbook)で使用するパターンを調べたり、[CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)などの特定のガイドを読んだりすることができます。
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks/Fundamental_CSS_comprehension", "Learn/CSS/Building_blocks")}}

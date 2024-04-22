@@ -1,13 +1,6 @@
 ---
 title: FileReader
 slug: Web/API/FileReader
-tags:
-  - API
-  - DOM
-  - File API
-  - WebAPI
-  - Файлы
-translation_of: Web/API/FileReader
 ---
 
 {{ APIRef("File API") }}
@@ -79,7 +72,7 @@ FileReader FileReader();
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

@@ -1,7 +1,6 @@
 ---
 title: get Array[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@species
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/@@species
 ---
 
 {{JSRef}}
@@ -35,7 +34,9 @@ In a derived collection object (e.g. your custom array `MyArray`), the `MyArray`
 ```js
 class MyArray extends Array {
   // Overwrite MyArray species to the parent Array constructor
-  static get [Symbol.species]() { return Array; }
+  static get [Symbol.species]() {
+    return Array;
+  }
 }
 ```
 

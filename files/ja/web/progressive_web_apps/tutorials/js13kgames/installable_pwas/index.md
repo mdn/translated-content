@@ -1,7 +1,6 @@
 ---
 title: PWA をインストール可能にするには
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
-original_slug: Web/Progressive_web_apps/Installable_PWAs
 ---
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Offline_Service_workers", "Web/Progressive_web_apps/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}
@@ -30,7 +29,7 @@ original_slug: Web/Progressive_web_apps/Installable_PWAs
 [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) ウェブアプリの `js13kpwa.webmanifest` ファイルは、 `index.html` ファイルの {{HTMLElement("head")}} ブロックに次のコード行を使用して含まれています。
 
 ```html
-<link rel="manifest" href="js13kpwa.webmanifest">
+<link rel="manifest" href="js13kpwa.webmanifest" />
 ```
 
 > **メモ:** 過去にマニフェストに使用されてきた一般的な拡張機能がいくつかあります。 `manifest.webapp` は Firefox OS アプリのマニフェストで一般的でしたが、多くの場合、コンテンツは JSON 構造で編成されているためウェブマニフェストには `manifest.json` を使用します。 しかし、`.webmanifest` ファイル形式は [W3C マニフェスト仕様書](https://w3c.github.io/manifest/) (英語) で明示的に言及されており、ここでは使用するのはこれです。

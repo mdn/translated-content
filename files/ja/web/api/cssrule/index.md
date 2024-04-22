@@ -2,13 +2,14 @@
 title: CSSRule
 slug: Web/API/CSSRule
 l10n:
-  sourceCommit: 164d2b6e6c9ce32fcb8ad19436fe44766cb5c3eb
+  sourceCommit: 7eff4df25ad857f65577930903797127ebabf991
 ---
 
 {{APIRef("CSSOM")}}
 
 **`CSSRule`** インターフェイスは、1 つの CSS ルールを表します。 `CSSRule` からプロパティを継承しているルールを表す型がいくつかあります。
 
+- {{DOMXRef("CSSGroupingRule")}}
 - {{DOMXRef("CSSStyleRule")}}
 - {{DOMXRef("CSSImportRule")}}
 - {{DOMXRef("CSSMediaRule")}}
@@ -18,10 +19,12 @@ l10n:
 - {{DOMXRef("CSSKeyframesRule")}}
 - {{DOMXRef("CSSKeyframeRule")}}
 - {{DOMXRef("CSSCounterStyleRule")}}
-- {{DOMXRef("CSSDocumentRule")}}
 - {{DOMXRef("CSSSupportsRule")}}
 - {{DOMXRef("CSSFontFeatureValuesRule")}}
-- {{DOMXRef("CSSViewportRule")}}
+- {{DOMXRef("CSSFontPaletteValuesRule")}}
+- {{DOMXRef("CSSLayerBlockRule")}}
+- {{DOMXRef("CSSLayerStatementRule")}}
+- {{DOMXRef("CSSPropertyRule")}}
 
 ## インスタンスプロパティ
 

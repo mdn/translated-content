@@ -1,20 +1,9 @@
 ---
 title: downloads.getFileIcon()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/getFileIcon
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
-  - getFileIcon
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/getFileIcon
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 La fonction **`getFileIcon()`** de l'API {{WebExtAPIRef("downloads")}} récupère une icône pour le téléchargement spécifié.
 
@@ -28,9 +17,9 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var gettingIcon = browser.downloads.getFileIcon(
-  downloadId,           // integer
-  options               // optional object
-)
+  downloadId, // integer
+  options, // optional object
+);
 ```
 
 ### Paramètres
@@ -66,16 +55,16 @@ function onError(error) {
 }
 
 function getIcon(downloadItems) {
-    if (downloadItems.length > 0) {
-      latestDownloadId = downloadItems[0].id;
-      var gettingIcon = browser.downloads.getFileIcon(latestDownloadId);
-      gettingIcon.then(gotIcon, onError);
-    }
+  if (downloadItems.length > 0) {
+    latestDownloadId = downloadItems[0].id;
+    var gettingIcon = browser.downloads.getFileIcon(latestDownloadId);
+    gettingIcon.then(gotIcon, onError);
   }
+}
 
 var searching = browser.downloads.search({
   limit: 1,
-  orderBy: ["-startTime"]
+  orderBy: ["-startTime"],
 });
 
 searching.then(getIcon, onError);

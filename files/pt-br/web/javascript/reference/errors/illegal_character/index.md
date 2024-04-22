@@ -1,5 +1,5 @@
 ---
-title: 'SyntaxError: illegal character'
+title: "SyntaxError: illegal character"
 slug: Web/JavaScript/Reference/Errors/Illegal_character
 ---
 
@@ -19,7 +19,7 @@ SyntaxError: Invalid or unexpected token (Chrome)
 
 ## O que deu errado?
 
-Há um token inválido ou inesperado que não pertence a esta posição no código. Utilize um editor que realce a sintaxe e cuidadosamente verifique seu código em relação a desajustes como um sinal de menos (` - `) no lugar de um travessão (` – `) ou aspas simples (` " `) no lugar de aspas não padronizadas(` “ `).
+Há um token inválido ou inesperado que não pertence a esta posição no código. Utilize um editor que realce a sintaxe e cuidadosamente verifique seu código em relação a desajustes como um sinal de menos (`-`) no lugar de um travessão (`–`) ou aspas simples (`"`) no lugar de aspas não padronizadas(`“`).
 
 ## Exemplos
 
@@ -55,7 +55,7 @@ var colors = ['#000', #333', '#666'];
 Adicione as aspas que faltam no `'#333'`.
 
 ```js example-good
-var colors = ['#000', '#333', '#666'];
+var colors = ["#000", "#333", "#666"];
 ```
 
 ### Caracteres escondidos

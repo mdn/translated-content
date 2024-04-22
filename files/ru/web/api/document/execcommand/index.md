@@ -1,13 +1,8 @@
 ---
 title: Document.execCommand()
 slug: Web/API/Document/execCommand
-tags:
-  - API
-  - DOM
-  - editor
-  - wysiwyg
-translation_of: Web/API/Document/execCommand
 ---
+
 {{ApiRef("DOM")}}
 
 ## Обзор
@@ -263,15 +258,13 @@ iframeNode.execCommand("undo"); // Отмена последнего дейст�
 iframeNode.execCommand("insertText", false, "Lorem ipsum dolor sit amet, consectetur adipisicing elit."); // Вставка текста
 ```
 
+## Спецификации
+
+{{Specifications}}
+
 ## Совместимость с браузерами
 
 {{Compat}}
-
-## Спецификация
-
-| Спецификация                                                                     | Статус                           | Комментарий |
-| -------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML Editing','#execcommand()','execCommand')}} | {{Spec2('HTML Editing')}} |             |
 
 ## Смотрите также
 

@@ -1,13 +1,6 @@
 ---
 title: Utiliser le mode plein écran
 slug: Web/API/Fullscreen_API
-tags:
-  - API
-  - DOM
-  - Plein écran
-  - Tutoriel
-translation_of: Web/API/Fullscreen_API
-original_slug: Web/Guide/DOM/Using_full_screen_mode
 ---
 
 {{DefaultAPISidebar("Fullscreen API")}}
@@ -43,7 +36,7 @@ if (elem.requestFullscreen) {
 Il est important de savoir qu'il y a une différence clef entre les implémentations de Gecko et WebKit : Gecko ajoute automatiquement des règles CSS à l'élément afin qu'il remplisse l'écran : "`width: 100%; height: 100%`". WebKit ne fait pas ça ; à la place, il centre l'élément sans le redimensionner au milieu d'un écran noir. Pour obtenir le même comportement que Gecko dans WebKit, vous devez ajouter votre propre règle "`width: 100%; height: 100%;`" à l'élément :
 
 ```css
-#myvideo:-webkit-full-screen  {
+#myvideo:-webkit-full-screen {
   width: 100%;
   height: 100%;
 }
@@ -76,13 +69,13 @@ Le {{ domxref("document") }} fournit des informations supplémentaires pouvant �
 
 ## Choses que vos utilisateurs doivent savoir
 
-Vous voulez faire savoir à vos utilisateurs qu'il peuvent utiliser la touche <kbd>ECHAP</kbd>  (ou <kbd>F11</kbd>) pour sortir du mode plein écran.
+Vous voulez faire savoir à vos utilisateurs qu'il peuvent utiliser la touche <kbd>ECHAP</kbd> (ou <kbd>F11</kbd>) pour sortir du mode plein écran.
 
 En même temps, naviguer sur une autre page, changer d'onglet, ou changer d'application (en utilisant, par exemple, <kbd>Alt</kbd>-<kbd>Tab</kbd> ) pendant le mode plein écran, implique la sortie du mode plein écran de toute façon.
 
 ## Exemple
 
-Dans cet exemple, une vidéo est affichée dans une page web. Taper sur l'une des touches <kbd>Retour</kbd>  ou <kbd>Entrée</kbd>, permet à l'utilisateur de passer d'une présentation dans une fenêtre à une présentation en mode plein écran de la vidéo.
+Dans cet exemple, une vidéo est affichée dans une page web. Taper sur l'une des touches <kbd>Retour</kbd> ou <kbd>Entrée</kbd>, permet à l'utilisateur de passer d'une présentation dans une fenêtre à une présentation en mode plein écran de la vidéo.
 
 [Voir l'exemple sur une page](/samples/domref/fullscreen.html)
 
@@ -91,11 +84,15 @@ Dans cet exemple, une vidéo est affichée dans une page web. Taper sur l'une de
 Quand la page est chargée, ce code est exécuté pour mettre en place un évènement "listener" permettant de surveiller la moindre action sur la touche <kbd>Entrée</kbd> .
 
 ```js
-document.addEventListener("keydown", function(e) {
-  if (e.keyCode == 13) {
-    toggleFullScreen();
-  }
-}, false);
+document.addEventListener(
+  "keydown",
+  function (e) {
+    if (e.keyCode == 13) {
+      toggleFullScreen();
+    }
+  },
+  false,
+);
 ```
 
 ### Passer en mode plein écran
@@ -105,7 +102,7 @@ Ce code est appelé lorsque l'utilisateur appuie sur la touche <kbd>Entrée</kbd
 ```js
 function toggleFullScreen() {
   if (!document.fullscreenElement) {
-      document.documentElement.requestFullscreen();
+    document.documentElement.requestFullscreen();
   } else {
     if (document.exitFullscreen) {
       document.exitFullscreen();
@@ -122,14 +119,14 @@ Si le mode plein écran est déjà activé (`fullscreenElement` est non nul), no
 
 Pour le moment, tous les navigateurs n'ont pas implémenté la version sans préfixe de l'API (pour l'accès du fournisseur de l'API, vous pouvez utiliser [Fscreen](https://github.com/rafrex/fscreen)) . Voici le tableau résumant les préfixes et les différences de noms entre eux :
 
-| Standard                                                 | Blink (Chrome & Opera)      | Gecko (Firefox)          | Internet Explorer 11    | Edge                        | Safari (WebKit)             |
-| -------------------------------------------------------- | --------------------------- | ------------------------ | ----------------------- | --------------------------- | --------------------------- |
-| {{domxref("Document.fullscreen")}}             | `webkitIsFullScreen`        | `mozFullScreen`          | _-_                     | `webkitIsFullScreen`        | `webkitIsFullScreen`        |
-| {{domxref("Document.fullscreenEnabled")}} | `webkitFullscreenEnabled`   | `mozFullScreenEnabled`   | `msFullscreenEnabled`   | `webkitFullscreenEnabled`   | `webkitFullscreenEnabled`   |
-| {{domxref("Document.fullscreenElement")}} | `webkitFullscreenElement`   | `mozFullScreenElement`   | `msFullscreenElement`   | `webkitFullscreenElement`   | `webkitFullscreenElement`   |
+| Standard                                   | Blink (Chrome & Opera)      | Gecko (Firefox)          | Internet Explorer 11    | Edge                        | Safari (WebKit)             |
+| ------------------------------------------ | --------------------------- | ------------------------ | ----------------------- | --------------------------- | --------------------------- |
+| {{domxref("Document.fullscreen")}}         | `webkitIsFullScreen`        | `mozFullScreen`          | _-_                     | `webkitIsFullScreen`        | `webkitIsFullScreen`        |
+| {{domxref("Document.fullscreenEnabled")}}  | `webkitFullscreenEnabled`   | `mozFullScreenEnabled`   | `msFullscreenEnabled`   | `webkitFullscreenEnabled`   | `webkitFullscreenEnabled`   |
+| {{domxref("Document.fullscreenElement")}}  | `webkitFullscreenElement`   | `mozFullScreenElement`   | `msFullscreenElement`   | `webkitFullscreenElement`   | `webkitFullscreenElement`   |
 | {{domxref("Document.onfullscreenchange")}} | `onwebkitfullscreenchange`  | `onmozfullscreenchange`  | `MSFullscreenChange`    | `onwebkitfullscreenchange`  | `onwebkitfullscreenchange`  |
-| {{domxref("Document.onfullscreenerror")}} | `onwebkitfullscreenerror`   | `onmozfullscreenerror`   | `MSFullscreenError`     | `onwebkitfullscreenerror`   | `onwebkitfullscreenerror`   |
-| {{domxref("Document.exitFullscreen()")}}     | `webkitExitFullscreen()`    | `mozCancelFullScreen()`  | `msExitFullscreen()`    | `webkitExitFullscreen()`    | `webkitExitFullscreen()`    |
+| {{domxref("Document.onfullscreenerror")}}  | `onwebkitfullscreenerror`   | `onmozfullscreenerror`   | `MSFullscreenError`     | `onwebkitfullscreenerror`   | `onwebkitfullscreenerror`   |
+| {{domxref("Document.exitFullscreen()")}}   | `webkitExitFullscreen()`    | `mozCancelFullScreen()`  | `msExitFullscreen()`    | `webkitExitFullscreen()`    | `webkitExitFullscreen()`    |
 | {{domxref("Element.requestFullscreen()")}} | `webkitRequestFullscreen()` | `mozRequestFullScreen()` | `msRequestFullscreen()` | `webkitRequestFullscreen()` | `webkitRequestFullscreen()` |
 
 ## Spécifications

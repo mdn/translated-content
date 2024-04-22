@@ -12,7 +12,7 @@ slug: Web/API/NodeList/length
 ## 语法
 
 ```js
-numItems =nodeList.length
+numItems = nodeList.length;
 ```
 
 - `numItems` 是一个整数，表示 `NodeList` 子节点的数量。

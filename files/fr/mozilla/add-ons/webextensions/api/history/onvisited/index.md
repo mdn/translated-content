@@ -1,29 +1,18 @@
 ---
 title: history.onVisited
 slug: Mozilla/Add-ons/WebExtensions/API/history/onVisited
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - History
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onVisited
-translation_of: Mozilla/Add-ons/WebExtensions/API/history/onVisited
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Mise en place à chaque fois que l'utilisateur visite une page. Un objet {{WebExtAPIRef("history.HistoryItem")}} est transmis à l'écouteur. Cet événement se déclenche avant que la page ne soit chargée.
 
 ## Syntaxe
 
 ```js
-browser.history.onVisited.addListener(listener)
-browser.history.onVisited.removeListener(listener)
-browser.history.onVisited.hasListener(listener)
+browser.history.onVisited.addListener(listener);
+browser.history.onVisited.removeListener(listener);
+browser.history.onVisited.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :

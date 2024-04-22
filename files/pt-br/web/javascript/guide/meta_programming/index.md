@@ -13,9 +13,10 @@ Introduzido em ECMAScript 6, objetos {{jsxref("Proxy")}} permitem que você inte
 
 ```js
 var handler = {
-  get: function(target, name){
+  get: function (target, name) {
     return name in target ? target[name] : 42;
-}};
+  },
+};
 var p = new Proxy({}, handler);
 p.a = 1;
 console.log(p.a, p.b); // 1, 42
@@ -268,7 +269,7 @@ A tabela a seguir resume as traps disponíveis aos objetos do tipo Proxy. Veja a
           <li>
             No modo estrito, um valor de retorno <code>false</code> do
             manipulador <code>set</code> lançará uma exceção
-            {{jsxref ("TypeError")}}}.
+            {{jsxref ("TypeError")}}.
           </li>
         </ul>
       </td>
@@ -357,20 +358,23 @@ A tabela a seguir resume as traps disponíveis aos objetos do tipo Proxy. Veja a
 O método {{jsxref("Proxy.revocable()")}} é utilizado para criar um objeto Proxy revogável. Isso significa que o proxy pode ser revogado através da função `revoke`, desligando-o. Depois disso, qualquer operação com o proxy lançará um {{jsxref("TypeError")}}.
 
 ```js
-var revocable = Proxy.revocable({}, {
-  get: function(target, name) {
-    return "[[" + name + "]]";
-  }
-});
+var revocable = Proxy.revocable(
+  {},
+  {
+    get: function (target, name) {
+      return "[[" + name + "]]";
+    },
+  },
+);
 var proxy = revocable.proxy;
 console.log(proxy.foo); // "[[foo]]"
 
 revocable.revoke();
 
 console.log(proxy.foo); // TypeError é lançado
-proxy.foo = 1           // TypeError novamente
-delete proxy.foo;       // ainda um TypeError
-typeof proxy            // "object", typeof não desencadeia nenhuma trap
+proxy.foo = 1; // TypeError novamente
+delete proxy.foo; // ainda um TypeError
+typeof proxy; // "object", typeof não desencadeia nenhuma trap
 ```
 
 ## Reflexão

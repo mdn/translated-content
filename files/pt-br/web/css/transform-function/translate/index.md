@@ -1,7 +1,6 @@
 ---
 title: translate()
 slug: Web/CSS/transform-function/translate
-original_slug: Web/CSS/transform-function/translate()
 ---
 
 {{CSSRef}}
@@ -121,7 +120,9 @@ div {
 }
 
 .moved {
-  transform: translate(10px); /* Igual a: translateX(10px) ou translate(10px, 0) */
+  transform: translate(
+    10px
+  ); /* Igual a: translateX(10px) ou translate(10px, 0) */
   background-color: pink;
 }
 ```
@@ -161,9 +162,7 @@ div {
 
 ## Especificações
 
-| Especificações                                                                                           | Estado                               | Comentário        |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------------- |
-| {{SpecName('CSS3 Transforms', '#funcdef-transform-translate', 'translate()')}} | {{Spec2('CSS3 Transforms')}} | Definição inicial |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

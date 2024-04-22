@@ -1,7 +1,6 @@
 ---
 title: 通过通知推送让 PWA 可重用
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push
-original_slug: Web/Progressive_web_apps/Re-engageable_Notifications_Push
 ---
 
 {{PWASidebar}} {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs", "Web/Progressive_web_apps/Tutorials/js13kGames/Loading", "Web/Progressive_web_apps/Tutorials/js13kGames")}}
@@ -24,12 +23,12 @@ original_slug: Web/Progressive_web_apps/Re-engageable_Notifications_Push
 
 ```js
 var button = document.getElementById("notifications");
-button.addEventListener('click', function(e) {
-    Notification.requestPermission().then(function(result) {
-        if(result === 'granted') {
-            randomNotification();
-        }
-    });
+button.addEventListener("click", function (e) {
+  Notification.requestPermission().then(function (result) {
+    if (result === "granted") {
+      randomNotification();
+    }
+  });
 });
 ```
 
@@ -47,16 +46,16 @@ button.addEventListener('click', function(e) {
 
 ```js
 function randomNotification() {
-    var randomItem = Math.floor(Math.random()*games.length);
-    var notifTitle = games[randomItem].name;
-    var notifBody = 'Created by '+games[randomItem].author+'.';
-    var notifImg = 'data/img/'+games[randomItem].slug+'.jpg';
-    var options = {
-        body: notifBody,
-        icon: notifImg
-    }
-    var notif = new Notification(notifTitle, options);
-    setTimeout(randomNotification, 30000);
+  var randomItem = Math.floor(Math.random() * games.length);
+  var notifTitle = games[randomItem].name;
+  var notifBody = "Created by " + games[randomItem].author + ".";
+  var notifImg = "data/img/" + games[randomItem].slug + ".jpg";
+  var options = {
+    body: notifBody,
+    icon: notifImg,
+  };
+  var notif = new Notification(notifTitle, options);
+  setTimeout(randomNotification, 30000);
 }
 ```
 
@@ -71,17 +70,19 @@ function randomNotification() {
 之前提到，为了接收到推送的消息，你需要有一个 Service Worker，这部分的基础知识我们已经在文章[通过 Service workers 让 PWA 离线工作](/zh-CN/docs/Web/Apps/Progressive/Offline_Service_workers)里面解释过。在 Service Worker 内部，存在一个消息推送服务订阅机制。
 
 ```js
-registration.pushManager.getSubscription() .then( /* ... */ );
+registration.pushManager.getSubscription().then(/* ... */);
 ```
 
 一旦用户订阅了通知服务，他们就能接收到服务器推送的通知。
 
-从服务端的角度来看，出于安全的目的，这整个过程必须使用非对称加密技术进行保护：允许任何人用你的应用发送未加密的消息就大有问题了。你可以通过阅读[Web 推送数据加密测试页](https://jrconlin.github.io/WebPushDataTestPage/)里面的详细信息来保护你的服务器。当用户订阅服务时，服务器会储存所有接收到的信息，以便在后续需要的时候能将信息推送出去。
+从服务端的角度来看，出于安全的目的，这整个过程必须使用非对称加密技术进行保护：允许任何人用你的应用发送未加密的消息就大有问题了。你可以通过阅读 [Web 推送数据加密测试页](https://jrconlin.github.io/WebPushDataTestPage/)里面的详细信息来保护你的服务器。当用户订阅服务时，服务器会储存所有接收到的信息，以便在后续需要的时候能将信息推送出去。
 
 为了能够接收到推送的消息，我们需要在 Service Worker 文件里面监听 {{domxref("ServiceWorkerGlobalScope.push_event", "push")}} 事件：
 
 ```js
-self.addEventListener('push', function(e) { /* ... */ });
+self.addEventListener("push", function (e) {
+  /* ... */
+});
 ```
 
 这些数据被接收后，将会以通知的方式立刻展现给用户，例如提醒用户一些待办事项，或者让用户知道 App 有了新内容。
@@ -103,16 +104,18 @@ self.addEventListener('push', function(e) { /* ... */ });
 index.js 的开头注册了 Service Worker：
 
 ```js
-navigator.serviceWorker.register('service-worker.js')
-.then(function(registration) {
-  return registration.pushManager.getSubscription()
-  .then(async function(subscription) {
-      // 注册部分
-  });
-})
-.then(function(subscription) {
+navigator.serviceWorker
+  .register("service-worker.js")
+  .then(function (registration) {
+    return registration.pushManager
+      .getSubscription()
+      .then(async function (subscription) {
+        // 注册部分
+      });
+  })
+  .then(function (subscription) {
     // 订阅部分
-});
+  });
 ```
 
 这个 Service Worker 比我们在 [js13kPWA demo](https://mdn.github.io/pwa-examples/js13kpwa/) 看到的要稍微复杂一些。在这部分代码里，Service Worker 注册完成之后，我们使用 registration 对象来发起订阅，然后使用 subscription 对象来完成整个流程。
@@ -120,15 +123,15 @@ navigator.serviceWorker.register('service-worker.js')
 注册部分的代码看起来大致是这个样子：
 
 ```js
-if(subscription) {
-    return subscription;
+if (subscription) {
+  return subscription;
 }
 ```
 
 如果用户已经完成订阅，我们直接返回 subscription 对象并且跳转到订阅部分。如果没有，我们会初始化一个新的 subscription 对象：
 
 ```js
-const response = await fetch('./vapidPublicKey');
+const response = await fetch("./vapidPublicKey");
 const vapidPublicKey = await response.text();
 const convertedVapidKey = urlBase64ToUint8Array(vapidPublicKey);
 ```
@@ -139,45 +142,45 @@ App 现在可以使用 {{domxref("PushManager")}} 来订阅新用户。这个方
 
 ```js
 return registration.pushManager.subscribe({
-    userVisibleOnly: true,
-    applicationServerKey: convertedVapidKey
+  userVisibleOnly: true,
+  applicationServerKey: convertedVapidKey,
 });
 ```
 
 现在我们把注意力转移到订阅部分：App 首先使用 fetch 将 subscription 以 JSON 的方式发送给服务器。
 
 ```js
-fetch('./register', {
-    method: 'post',
-    headers: {
-        'Content-type': 'application/json'
-    },
-    body: JSON.stringify({
-        subscription: subscription
-    }),
+fetch("./register", {
+  method: "post",
+  headers: {
+    "Content-type": "application/json",
+  },
+  body: JSON.stringify({
+    subscription: subscription,
+  }),
 });
 ```
 
 接着给“注册”按钮绑定了一个函数：
 
 ```js
-document.getElementById('doIt').onclick = function() {
-    const payload = document.getElementById('notification-payload').value;
-    const delay = document.getElementById('notification-delay').value;
-    const ttl = document.getElementById('notification-ttl').value;
+document.getElementById("doIt").onclick = function () {
+  const payload = document.getElementById("notification-payload").value;
+  const delay = document.getElementById("notification-delay").value;
+  const ttl = document.getElementById("notification-ttl").value;
 
-    fetch('./sendNotification', {
-        method: 'post',
-        headers: {
-            'Content-type': 'application/json'
-        },
-        body: JSON.stringify({
-            subscription: subscription,
-            payload: payload,
-            delay: delay,
-            ttl: ttl,
-        }),
-    });
+  fetch("./sendNotification", {
+    method: "post",
+    headers: {
+      "Content-type": "application/json",
+    },
+    body: JSON.stringify({
+      subscription: subscription,
+      payload: payload,
+      delay: delay,
+      ttl: ttl,
+    }),
+  });
 };
 ```
 
@@ -191,52 +194,54 @@ document.getElementById('doIt').onclick = function() {
 
 [web-push](https://www.npmjs.com/package/web-push) 模块被用来配置 VAPID 密钥，如果没有的话，还可以生成一个。
 
-```plain
-const webPush = require('web-push');
+```js
+const webPush = require("web-push");
 
 if (!process.env.VAPID_PUBLIC_KEY || !process.env.VAPID_PRIVATE_KEY) {
-  console.log("You must set the VAPID_PUBLIC_KEY and VAPID_PRIVATE_KEY "+
-    "environment variables. You can use the following ones:");
+  console.log(
+    "You must set the VAPID_PUBLIC_KEY and VAPID_PRIVATE_KEY " +
+      "environment variables. You can use the following ones:",
+  );
   console.log(webPush.generateVAPIDKeys());
   return;
 }
 
 webPush.setVapidDetails(
-  'https://github.com/mdn/serviceworker-cookbook/',
+  "https://github.com/mdn/serviceworker-cookbook/",
   process.env.VAPID_PUBLIC_KEY,
-  process.env.VAPID_PRIVATE_KEY
+  process.env.VAPID_PRIVATE_KEY,
 );
 ```
 
 接着，一个模块定义并导出了所有应用需要处理的路由：获取 VAPID 公钥、注册、发送通知等等。你可以看到来自 `index.js` 的 `payload`, `delay` 和`ttl` 变量在这里被用到了。
 
-```plain
-module.exports = function(app, route) {
-  app.get(route + 'vapidPublicKey', function(req, res) {
+```js
+module.exports = function (app, route) {
+  app.get(route + "vapidPublicKey", function (req, res) {
     res.send(process.env.VAPID_PUBLIC_KEY);
   });
 
-  app.post(route + 'register', function(req, res) {
-
+  app.post(route + "register", function (req, res) {
     res.sendStatus(201);
   });
 
-  app.post(route + 'sendNotification', function(req, res) {
+  app.post(route + "sendNotification", function (req, res) {
     const subscription = req.body.subscription;
     const payload = req.body.payload;
     const options = {
-      TTL: req.body.ttl
+      TTL: req.body.ttl,
     };
 
-    setTimeout(function() {
-      webPush.sendNotification(subscription, payload, options)
-      .then(function() {
-        res.sendStatus(201);
-      })
-      .catch(function(error) {
-        console.log(error);
-        res.sendStatus(500);
-      });
+    setTimeout(function () {
+      webPush
+        .sendNotification(subscription, payload, options)
+        .then(function () {
+          res.sendStatus(201);
+        })
+        .catch(function (error) {
+          console.log(error);
+          res.sendStatus(500);
+        });
     }, req.body.delay * 1000);
   });
 };
@@ -246,14 +251,14 @@ module.exports = function(app, route) {
 
 最后我们要看的文件是 Service Worker。
 
-```plain
-self.addEventListener('push', function(event) {
-    const payload = event.data ? event.data.text() : 'no payload';
-    event.waitUntil(
-        self.registration.showNotification('ServiceWorker Cookbook', {
-            body: payload,
-        })
-    );
+```js
+self.addEventListener("push", function (event) {
+  const payload = event.data ? event.data.text() : "no payload";
+  event.waitUntil(
+    self.registration.showNotification("ServiceWorker Cookbook", {
+      body: payload,
+    }),
+  );
 });
 ```
 

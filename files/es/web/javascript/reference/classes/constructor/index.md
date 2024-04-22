@@ -1,7 +1,6 @@
 ---
 title: constructor
 slug: Web/JavaScript/Reference/Classes/constructor
-original_slug: Web/JavaScript/Referencia/Classes/constructor
 ---
 
 {{jsSidebar("Classes")}}
@@ -39,7 +38,7 @@ class Square extends Polygon {
     // Nota: En las clases derivadas, super() se debe llamar primero
     // Se puede utilizar "this". Dejando esto causará un error de
     //referencia.
-    this.name = 'Square';
+    this.name = "Square";
   }
 
   get area() {

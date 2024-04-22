@@ -26,7 +26,7 @@ terminate()
 以下代码示例表明，通过使用 {{domxref("Worker.Worker", "Worker()")}} 构造器创建出的 {{domxref("Worker")}} 对象，在下一步操作之后会被立即终止。
 
 ```js
-var myWorker = new Worker('worker.js');
+var myWorker = new Worker("worker.js");
 
 myWorker.terminate();
 ```

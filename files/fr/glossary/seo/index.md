@@ -1,14 +1,9 @@
 ---
 title: SEO
 slug: Glossary/SEO
-tags:
-  - Glossaire
-  - Mécanismes web
-  - Recherches
-  - Visibilité
-translation_of: Glossary/SEO
-original_slug: Glossaire/SEO
 ---
+
+{{GlossarySidebar}}
 
 **SEO** (Search Engine Optimization ou, en français, _Optimisation pour les moteurs de recherche_) est le processus permettant de rendre un site web plus visible dans les résultats de recherche, également appelé amélioration des classements de recherche.
 
@@ -20,8 +15,8 @@ Les méthodes de SEO se répartissent en trois grandes classes :
 
 - technique
   - : Marque le contenu en utilisant la sémantique {{Glossary("HTML")}}. Lors de l'exploration du site Web, les robots d'exploration ne doivent trouver que le contenu que vous souhaitez indexer.
-- copie-l'écriture (_copywriting_)
-  - : Ecrit du contenu en utilisant le vocabulaire de vos visiteurs. Utilise du texte ainsi que des images pour que les robots puissent comprendre le sujet.
+- rédaction
+  - : Écrit du contenu en utilisant le vocabulaire de vos visiteurs. Utilise du texte ainsi que des images pour que les robots puissent comprendre le sujet.
 - popularité
   - : Vous obtenez plus de trafic lorsque d'autres sites établis pointent vers votre site.
 

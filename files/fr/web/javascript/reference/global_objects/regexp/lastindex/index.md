@@ -1,13 +1,6 @@
 ---
 title: regExp.lastIndex
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex
-tags:
-  - JavaScript
-  - Propriété
-  - Reference
-  - RegExp
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex
-original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/lastIndex
 ---
 
 {{JSRef}}
@@ -19,7 +12,7 @@ La propriété **`lastIndex`** est un entier en lecture/écriture qui permet de 
 ## Syntaxe
 
 ```js
-regExpObj.lastIndex
+regExpObj.lastIndex;
 ```
 
 ## Description
@@ -42,14 +35,14 @@ var re = /(hi)?/g;
 Correspond à la chaîne vide.
 
 ```js
-console.log(re.exec('hi'));
+console.log(re.exec("hi"));
 console.log(re.lastIndex);
 ```
 
 Renvoie `["hi", "hi"]` avec `lastIndex` égal à 2.
 
 ```js
-console.log(re.exec('hi'));
+console.log(re.exec("hi"));
 console.log(re.lastIndex);
 ```
 

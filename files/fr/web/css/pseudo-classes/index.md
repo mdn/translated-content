@@ -1,13 +1,6 @@
 ---
 title: Pseudo-classes
 slug: Web/CSS/Pseudo-classes
-tags:
-  - CSS
-  - Intermédiaire
-  - Pseudo-classe
-  - Reference
-  - Sélecteur
-translation_of: Web/CSS/Pseudo-classes
 ---
 
 {{CSSRef}}
@@ -16,13 +9,13 @@ Une **pseudo-classe** est un mot-clé qui peut être ajouté à un sélecteur af
 
 ```css
 div:hover {
-  background-color: #F89B4D;
+  background-color: #f89b4d;
 }
 ```
 
 Les pseudo-classes permettent d'appliquer un style à un élément non seulement en fonction de son contenu dans l'arbre du document mais aussi en fonction de facteurs externes (l'historique de navigation par exemple avec {{cssxref(":visited")}} ; le statut du contenu avec {{cssxref(":checked")}} ; la position de la souris {{cssxref(":hover")}}).
 
-> **Note :** À la différence des pseudo-classes, [les pseudo-éléments](/fr/docs/Web/CSS/Pseudo-%C3%A9l%C3%A9ments) peuvent être utilisés afin d'appliquer un style sur une certaine partie d'un élément.
+> **Note :** À la différence des pseudo-classes, [les pseudo-éléments](/fr/docs/Web/CSS/Pseudo-éléments) peuvent être utilisés afin d'appliquer un style sur une certaine partie d'un élément.
 
 ## Syntaxe
 
@@ -106,7 +99,7 @@ sélecteur:pseudo-classe {
   background-color: palegreen;
 }
 
-p:nth-child(2n+1) {
+p:nth-child(2n + 1) {
   background-color: lime;
 }
 ```
@@ -116,19 +109,17 @@ p:nth-child(2n+1) {
 ```html
 <div>
   <p class="survol">
-    La Reine devint pourpre de colère&nbsp;; et après
-    l’avoir considérée un moment avec des yeux
-    flamboyants comme ceux d’une bête fauve, elle
-    se mit à crier&nbsp;: «&nbsp;Qu’on lui coupe la tête&nbsp;!&nbsp;»
+    La Reine devint pourpre de colère&nbsp;; et après l’avoir considérée un
+    moment avec des yeux flamboyants comme ceux d’une bête fauve, elle se mit à
+    crier&nbsp;: «&nbsp;Qu’on lui coupe la tête&nbsp;!&nbsp;»
   </p>
   <p>
-    «&nbsp;Quelle idée&nbsp;!&nbsp;» dit Alice très-haut et d’un
-    ton décidé. La Reine se tut.
+    «&nbsp;Quelle idée&nbsp;!&nbsp;» dit Alice très-haut et d’un ton décidé. La
+    Reine se tut.
   </p>
   <p>
-    Le Roi lui posa la main sur le bras, et lui
-    dit timidement&nbsp;: «&nbsp;Considérez donc, ma chère
-    amie, que ce n’est qu’une enfant.&nbsp;»
+    Le Roi lui posa la main sur le bras, et lui dit timidement&nbsp;:
+    «&nbsp;Considérez donc, ma chère amie, que ce n’est qu’une enfant.&nbsp;»
   </p>
 </div>
 ```
@@ -143,4 +134,4 @@ p:nth-child(2n+1) {
 
 ## Voir aussi
 
-- [Les pseudo-éléments](/fr/docs/Web/CSS/Pseudo-%C3%A9l%C3%A9ments)
+- [Les pseudo-éléments](/fr/docs/Web/CSS/Pseudo-éléments)

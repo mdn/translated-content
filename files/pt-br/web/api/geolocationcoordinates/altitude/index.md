@@ -15,9 +15,7 @@ alt = coordinates.altitude
 
 ## Especificações
 
-| Specification                                                                        | Status                           | Comment            |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('Geolocation', '#altitude', 'Coordinates.altitude')}} | {{Spec2('Geolocation')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 

@@ -1,12 +1,6 @@
 ---
 title: PerformanceElementTiming
 slug: Web/API/PerformanceElementTiming
-tags:
-  - API
-  - Interface
-  - Reference
-  - PerformanceElementTiming
-translation_of: Web/API/PerformanceElementTiming
 ---
 
 {{SeeCompatTable}}{{Non-Standard_Header}}{{APIRef("Element Timing API")}}
@@ -46,14 +40,14 @@ Dans cet exemple, nous avons deux éléments qui sont observés. Nous utilisons 
 Deux entrées seront affichées dans la console. La première contenant les détails de l'image, la seconde les détails du nœud texte.
 
 ```html
-<img src="image.jpg" elementtiming="big-image">
+<img src="image.jpg" elementtiming="big-image" />
 <p elementtiming="text" id="text-id">le texte ici</p>
 ```
 
 ```js
 const observer = new PerformanceObserver((list) => {
   let entries = list.getEntries().forEach(function (entry) {
-      console.log(entry);
+    console.log(entry);
   });
 });
 observer.observe({ entryTypes: ["element"] });

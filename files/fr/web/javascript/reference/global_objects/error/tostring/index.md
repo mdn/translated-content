@@ -1,14 +1,6 @@
 ---
 title: Error.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Error/toString
-tags:
-  - Error
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Error/toString
-original_slug: Web/JavaScript/Reference/Objets_globaux/Error/toString
 ---
 
 {{JSRef}}
@@ -18,7 +10,7 @@ La méthode **`toString()`** renvoie une représentation de l'objet {{jsxref("Er
 ## Syntaxe
 
 ```js
-e.toString()
+e.toString();
 ```
 
 ### Valeur de retour
@@ -34,19 +26,16 @@ Error.prototype.toString = function () {
   "use strict";
 
   var obj = Object(this);
-  if (obj !== this)
-    throw new TypeError();
+  if (obj !== this) throw new TypeError();
 
   var name = this.name;
-  name = (name === undefined) ? "Error" : String(name);
+  name = name === undefined ? "Error" : String(name);
 
   var msg = this.message;
-  msg = (msg === undefined) ? "" : String(msg);
+  msg = msg === undefined ? "" : String(msg);
 
-  if (name === "")
-    return msg;
-  if (msg === "")
-    return name;
+  if (name === "") return msg;
+  if (msg === "") return name;
 
   return name + ": " + msg;
 };

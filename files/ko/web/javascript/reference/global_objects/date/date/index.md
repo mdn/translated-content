@@ -14,21 +14,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/Date
 ## 구문
 
 ```js
-new Date()
-new Date(value)
-new Date(dateString)
+new Date();
+new Date(value);
+new Date(dateString);
 
-new Date(year, monthIndex)
-new Date(year, monthIndex, day)
-new Date(year, monthIndex, day, hours)
-new Date(year, monthIndex, day, hours, minutes)
-new Date(year, monthIndex, day, hours, minutes, seconds)
-new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
+new Date(year, monthIndex);
+new Date(year, monthIndex, day);
+new Date(year, monthIndex, day, hours);
+new Date(year, monthIndex, day, hours, minutes);
+new Date(year, monthIndex, day, hours, minutes, seconds);
+new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds);
 ```
 
 > **참고:** 새로운 `Date<` 객체를 생성하는 방법은 {{jsxref("operators/new", "new")}} 연산자를
-사용하는 것이 유일합니다. `now = Date()<`처럼 `Date<`를 직접 호출하면 새로운
-`Date<` 객체가 아니라 문자열을 반환합니다.
+> 사용하는 것이 유일합니다. `now = Date()<`처럼 `Date<`를 직접 호출하면 새로운
+> `Date<` 객체가 아니라 문자열을 반환합니다.
 
 ### 매개변수
 
@@ -48,18 +48,19 @@ new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
 #### 타임스탬프 문자열
 
 - `dateString`
+
   - : {{jsxref("Date.parse()")}} 메서드가 인식할 수 있는 형태로 나타낸 날짜 문자열입니다.
     [IETF 호환 RFC 2822 타임스탬프](https://datatracker.ietf.org/doc/html/rfc2822#page-14)와,
     [ISO8601의 특정 버전](https://www.ecma-international.org/ecma-262/11.0/#sec-date.parse)을 인식할 수
     있습니다.
 
     > **참고:** `Date` 생성자(및 동일한 동작의 `Date.parse()`)를 사용한 날짜
-    파싱은 동작이 일관적이지 못하고 브라우저끼리 차이가 존재하므로 사용하지 않는 것이 좋습니다.
+    > 파싱은 동작이 일관적이지 못하고 브라우저끼리 차이가 존재하므로 사용하지 않는 것이 좋습니다.
     >
     > - [RFC 2822](https://datatracker.ietf.org/doc/html/rfc2822)
-    형식 문자열은 관례적으로만 지원하는 것 뿐입니다.
+    >   형식 문자열은 관례적으로만 지원하는 것 뿐입니다.
     > - ISO 8601 형식 문자열은 시간 정보 없는 문자열(`"1970-01-01"`
-    등)을 현지 시간이 아닌 UTC 기준으로 처리하는 점에서 표준과 다릅니다.
+    >   등)을 현지 시간이 아닌 UTC 기준으로 처리하는 점에서 표준과 다릅니다.
 
 #### 개별 날짜 및 시간 구성 요소
 
@@ -99,11 +100,11 @@ new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
 > 동작이 일관적이지 못하고 브라우저끼리 차이가 존재하므로 사용하지 않는 것이 좋습니다.
 
 ```js
-let today = new Date()
-let birthday = new Date('December 17, 1995 03:24:00')
-let birthday = new Date('1995-12-17T03:24:00')
-let birthday = new Date(1995, 11, 17)            // 월은 0부터 시작
-let birthday = new Date(1995, 11, 17, 3, 24, 0)
+let today = new Date();
+let birthday = new Date("December 17, 1995 03:24:00");
+let birthday = new Date("1995-12-17T03:24:00");
+let birthday = new Date(1995, 11, 17); // 월은 0부터 시작
+let birthday = new Date(1995, 11, 17, 3, 24, 0);
 ```
 
 ## 명세

@@ -1,5 +1,5 @@
 ---
-title: 'TypeError: ''x'' is not iterable'
+title: "TypeError: 'x' is not iterable"
 slug: Web/JavaScript/Reference/Errors/is_not_iterable
 ---
 
@@ -29,43 +29,42 @@ TypeError: 'x' is not a function or its return value is not iterable (Chrome)
 JavaScript では、 {{jsxref("Object")}} は[反復可能プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)を実装していない限り反復処理できません。したがって、オブジェクトのプロパティを反復処理するために [for…of](/ja/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement) を使用することはできません。</p>
 
 ```js example-bad
-var obj = { 'France': 'Paris', 'England': 'London' };
-for (let p of obj) { // TypeError: obj is not iterable
-    // …
+var obj = { France: "Paris", England: "London" };
+for (let p of obj) {
+  // TypeError: obj is not iterable
+  // …
 }
 ```
 
 代わりに、オブジェクトのプロパティを反復処理するためには {{jsxref("Object.keys")}} か {{jsxref("Object.entries")}} を使用してください。
 
 ```js example-good
-var obj = { 'France': 'Paris', 'England': 'London' };
+var obj = { France: "Paris", England: "London" };
 // Iterate over the property names:
 for (let country of Object.keys(obj)) {
-    var capital = obj[country];
-    console.log(country, capital);
+  var capital = obj[country];
+  console.log(country, capital);
 }
 
 for (const [country, capital] of Object.entries(obj))
-    console.log(country, capital);
+  console.log(country, capital);
 ```
 
 この使用例のそのほかの選択肢として、{{jsxref("Map")}} を使用することもできます。
 
 ```js example-good
-var map = new Map;
-map.set('France', 'Paris');
-map.set('England', 'London');
+var map = new Map();
+map.set("France", "Paris");
+map.set("England", "London");
 // Iterate over the property names:
 for (let country of map.keys()) {
-    let capital = map[country];
-    console.log(country, capital);
+  let capital = map[country];
+  console.log(country, capital);
 }
 
-for (let capital of map.values())
-    console.log(capital);
+for (let capital of map.values()) console.log(capital);
 
-for (const [country, capital] of map.entries())
-    console.log(country, capital);
+for (const [country, capital] of map.entries()) console.log(country, capital);
 ```
 
 ### ジェネレーターの反復処理
@@ -79,19 +78,18 @@ function* generate(a, b) {
 }
 
 for (let x of generate) // TypeError: generate is not iterable
-    console.log(x);
+  console.log(x);
 ```
 
 ジェネレーターを呼び出していないとき、ジェネレーターに対応した {{jsxref("Function")}} オブジェクトは呼び出し可能ですが、反復処理はできません。ジェネレーターを呼び出すと、ジェネレーターの実行中に生成された値を反復処理する反復可能オブジェクトが生成されます。
 
 ```js example-good
 function* generate(a, b) {
-    yield a;
-    yield b;
+  yield a;
+  yield b;
 }
 
-for (let x of generate(1,2))
-    console.log(x);
+for (let x of generate(1, 2)) console.log(x);
 ```
 
 ### 独自の反復可能オブジェクトでの反復処理
@@ -100,24 +98,24 @@ for (let x of generate(1,2))
 
 ```js example-bad
 const myEmptyIterable = {
-    [Symbol.iterator]() {
-        return [] // [] は反復可能ですが、イテレーターではありません。 -- next メソッドがないからです。
-    }
-}
+  [Symbol.iterator]() {
+    return []; // [] は反復可能ですが、イテレーターではありません。 -- next メソッドがないからです。
+  },
+};
 
-Array.from(myEmptyIterable);  // TypeError: myEmptyIterable is not iterable
+Array.from(myEmptyIterable); // TypeError: myEmptyIterable is not iterable
 ```
 
 こちらは正しい実装です。
 
 ```js example-good
 const myEmptyIterable = {
-    [Symbol.iterator]() {
-        return [][Symbol.iterator]()
-    }
-}
+  [Symbol.iterator]() {
+    return [][Symbol.iterator]();
+  },
+};
 
-Array.from(myEmptyIterable);  // []
+Array.from(myEmptyIterable); // []
 ```
 
 ## 関連情報

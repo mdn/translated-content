@@ -18,7 +18,7 @@ l10n:
 以下の例では、動画に新しい `TextTrack` を追加しています。 `activeCues` はコンソールに表示されます。
 
 ```js
-let video = document.querySelector('video');
+let video = document.querySelector("video");
 let track = video.addTextTrack("captions", "Captions", "en");
 track.mode = "showing";
 console.log(track.activeCues);

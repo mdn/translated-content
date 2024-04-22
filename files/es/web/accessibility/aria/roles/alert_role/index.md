@@ -1,7 +1,6 @@
 ---
 title: Using the alert role
 slug: Web/Accessibility/ARIA/Roles/alert_role
-original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role
 ---
 
 ### Descripción
@@ -37,7 +36,9 @@ Productos de tecnología asistencial deben escuchar por dicho evento y notificar
 The snippet below shows how the alert role is added directly into the html source code. The moment the element finishes loading the screen reader should be notified of the alert. If the element was already in the original source code when the page loaded, the screen reader will announce the error immediately after announcing the page title.
 
 ```html
-<h2 role="alert">Your form could not be submitted because of 3 validation errors.</h2>
+<h2 role="alert">
+  Your form could not be submitted because of 3 validation errors.
+</h2>
 ```
 
 #### Ejemplo 2: Dinámicamente añadir un elemento con el rol de alerta
@@ -47,7 +48,9 @@ This snippet dynamically creates an element with an alert role and adds it to th
 ```js
 var myAlert = document.createElement("p");
 myAlert.setAttribute("role", "alert");
-var myAlertText = document.createTextNode("You must agree with our terms of service to create an account.");
+var myAlertText = document.createTextNode(
+  "You must agree with our terms of service to create an account.",
+);
 myAlert.appendChild(myAlertText);
 document.body.appendChild(myAlert);
 ```
@@ -55,7 +58,9 @@ document.body.appendChild(myAlert);
 **Note:** The same result can be achieved with less code when using a script library like jQuery:
 
 ```js
-$("<p role='alert'>You must agree with our terms of service to create an account.</p>").appendTo(document.body);
+$(
+  "<p role='alert'>You must agree with our terms of service to create an account.</p>",
+).appendTo(document.body);
 ```
 
 #### Ejemplo 3: Añadir un rol de alerta a un elemento ya existente
@@ -79,12 +84,14 @@ If an element already has `role="alert"`and is initially hidden using CSS, makin
 
 ```css
 .hidden {
-  display:none;
+  display: none;
 }
 ```
 
 ```html
-<p id="expirationWarning" role="alert" class="hidden">Your log in session will expire in 2 minutes</p>
+<p id="expirationWarning" role="alert" class="hidden">
+  Your log in session will expire in 2 minutes
+</p>
 ```
 
 ```js

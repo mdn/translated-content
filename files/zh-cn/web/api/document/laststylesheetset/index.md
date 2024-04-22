@@ -23,10 +23,9 @@ var lastStyleSheetSet = document.lastStyleSheetSet
 let lastSheetSet = document.lastStyleSheetSet;
 
 if (!lastSheetSet) {
-  lastSheetSet = 'Style sheet not yet changed';
-}
-else {
-  console.log('The last style sheet set is: ' + lastSheetSet);
+  lastSheetSet = "Style sheet not yet changed";
+} else {
+  console.log("The last style sheet set is: " + lastSheetSet);
 }
 ```
 
@@ -34,7 +33,7 @@ else {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{domxref("document.preferredStyleSheetSet")}}
 - {{domxref("document.selectedStyleSheetSet")}}

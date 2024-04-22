@@ -1,7 +1,6 @@
 ---
 title: Drawing text
 slug: Web/API/Canvas_API/Tutorial/Drawing_text
-original_slug: Web/Guide/HTML/Canvas_tutorial/Drawing_text
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}
@@ -23,9 +22,9 @@ O texto a seguir é rederizado utilizando `fillStyle`.
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  ctx.font = '48px serif';
-  ctx.fillText('Hello world', 10, 50);
+  var ctx = document.getElementById("canvas").getContext("2d");
+  ctx.font = "48px serif";
+  ctx.fillText("Hello world", 10, 50);
 }
 ```
 
@@ -45,9 +44,9 @@ O texto é preenchido usando o strokeStyle atual.
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  ctx.font = '48px serif';
-  ctx.strokeText('Hello world', 10, 50);
+  var ctx = document.getElementById("canvas").getContext("2d");
+  ctx.font = "48px serif";
+  ctx.strokeText("Hello world", 10, 50);
 }
 ```
 
@@ -92,9 +91,9 @@ baselines, due to glyphs extending far outside the em square.](http://www.whatwg
 Edite o código abaixo e veja as atualizações em tempo real no canvas.
 
 ```js
-ctx.font = '48px serif';
-ctx.textBaseline = 'hanging';
-ctx.strokeText('Hello world', 0, 100);
+ctx.font = "48px serif";
+ctx.textBaseline = "hanging";
+ctx.strokeText("Hello world", 0, 100);
 ```
 
 ```html hidden
@@ -106,15 +105,16 @@ ctx.strokeText('Hello world', 0, 100);
 <textarea id="code" class="playable-code">
 ctx.font = "48px serif";
 ctx.textBaseline = "hanging";
-ctx.strokeText("Hello world", 0, 100);</textarea>
+ctx.strokeText("Hello world", 0, 100);</textarea
+>
 ```
 
 ```js hidden
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var edit = document.getElementById('edit');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var edit = document.getElementById("edit");
 var code = textarea.value;
 
 function drawCanvas() {
@@ -122,17 +122,17 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener('click', function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
-textarea.addEventListener('input', drawCanvas);
-window.addEventListener('load', drawCanvas);
+textarea.addEventListener("input", drawCanvas);
+window.addEventListener("load", drawCanvas);
 ```
 
 {{ EmbedLiveSample('Playable_code', 700, 360) }}
@@ -148,8 +148,8 @@ The following code snippet shows how you can measure a text and get its width.
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
-  var text = ctx.measureText('foo'); // TextMetrics object
+  var ctx = document.getElementById("canvas").getContext("2d");
+  var text = ctx.measureText("foo"); // TextMetrics object
   text.width; // 16;
 }
 ```

@@ -1,20 +1,9 @@
 ---
 title: bookmarks.onImportBegan
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onImportBegan
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onImportBegan
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/onImportBegan
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Lancé lorsque le navigateur a commencé à importer un ensemble de signet.
 
@@ -23,9 +12,9 @@ Pendant l'importation d'un ensemble de signets, {{WebExtAPIRef("bookmarks.onCrea
 ## Syntaxe
 
 ```js
-browser.bookmarks.onImportBegan.addListener(listener)
-browser.bookmarks.onImportBegan.removeListener(listener)
-browser.bookmarks.onImportBegan.hasListener(listener)
+browser.bookmarks.onImportBegan.addListener(listener);
+browser.bookmarks.onImportBegan.removeListener(listener);
+browser.bookmarks.onImportBegan.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :

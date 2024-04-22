@@ -1,7 +1,6 @@
 ---
 title: Utiliser la Web Audio API
 slug: Web/API/Web_Audio_API/Using_Web_Audio_API
-translation_of: Web/API/Web_Audio_API/Using_Web_Audio_API
 ---
 
 La [Web Audio API](/fr/docs/Web_Audio_API) offre un méchanisme à la fois simple et puissant pour implémenter et manipuler le contenu audio dans une application web. Elle permet de manipuler mixages audio, effets, balance, etc. Cet article donne les bases pour l'utiliser, à travers quelques exemples simples.
@@ -106,7 +105,7 @@ Il est possible de connecter plusieurs noeuds à un seul noeud, par exemple pour
 Maintenant que le graphe audio est en place, nous pouvons ajuster certains aspects du son en définissant la valeur de certaines propriétés ou en utilsant ses méthodes. L'exemple suivant spécifie un pitch en hertz pour un oscillateur, lui assigne un type, et demande à l'oscillateur de jouer le son.
 
 ```js
-oscillateur.type = 'sine'; // onde sinusoïdale — les autres valeurs possible sont : 'square', 'sawtooth', 'triangle' et 'custom'
+oscillateur.type = "sine"; // onde sinusoïdale — les autres valeurs possible sont : 'square', 'sawtooth', 'triangle' et 'custom'
 oscillateur.frequency.value = 2500; // valeur en hertz
 oscillateur.start();
 ```
@@ -125,7 +124,7 @@ var volumeInitial = 0.5;
 
 // paramètres de l'oscillateur
 
-oscillateur.type = 'sine'; // onde sinusoïdale — les autres valeurs possible sont : 'square', 'sawtooth', 'triangle' et 'custom'
+oscillateur.type = "sine"; // onde sinusoïdale — les autres valeurs possible sont : 'square', 'sawtooth', 'triangle' et 'custom'
 oscillateur.frequency.value = frequenceInitiale; // valeur en hertz
 oscillateur.start();
 
@@ -146,13 +145,23 @@ var positionY;
 document.onmousemove = updatePage;
 
 function updatePage(e) {
-    positionX = (window.Event) ? e.pageX : e.clientX + (document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft);
-    positionY = (window.Event) ? e.pageY : e.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
+  positionX = window.Event
+    ? e.pageX
+    : e.clientX +
+      (document.documentElement.scrollLeft
+        ? document.documentElement.scrollLeft
+        : document.body.scrollLeft);
+  positionY = window.Event
+    ? e.pageY
+    : e.clientY +
+      (document.documentElement.scrollTop
+        ? document.documentElement.scrollTop
+        : document.body.scrollTop);
 
-    oscillateur.frequency.value = (positionX/largeur) * frequenceMax;
-    noeudGain.gain.value = (positionY/hauteur) * volumeMax;
+  oscillateur.frequency.value = (positionX / largeur) * frequenceMax;
+  noeudGain.gain.value = (positionY / hauteur) * volumeMax;
 
-    canvasDraw();
+  canvasDraw();
 }
 ```
 
@@ -165,11 +174,11 @@ function aleatoire(number1, number2) {
   return number1 + (Math.floor(Math.random() * (number2 - number1)) + 1);
 }
 
-var canvas = document.querySelector('.canvas');
+var canvas = document.querySelector(".canvas");
 canvas.width = largeur;
 canvas.height = hauteur;
 
-var contexteCanvas = canvas.getContext('2d');
+var contexteCanvas = canvas.getContext("2d");
 
 function canvasDraw() {
   rX = positionX;
@@ -178,12 +187,27 @@ function canvasDraw() {
 
   canvasCtx.globalAlpha = 0.2;
 
-  for(i=1;i<=15;i=i+2) {
+  for (i = 1; i <= 15; i = i + 2) {
     contexteCanvas.beginPath();
-    var chaineStyle = 'rgb(' + 100 + (i * 10) + ',' + Math.floor((noeudGain.gain.value / volumeMax) * 255);
-    chaineStyle += ',' + Math.floor((oscillateur.frequency.value / frequenceMax) * 255) + ')';
+    var chaineStyle =
+      "rgb(" +
+      100 +
+      i * 10 +
+      "," +
+      Math.floor((noeudGain.gain.value / volumeMax) * 255);
+    chaineStyle +=
+      "," +
+      Math.floor((oscillateur.frequency.value / frequenceMax) * 255) +
+      ")";
     contexteCanvas.fillStyle = chaineStyle;
-    contexteCanvas.arc(rX + aleatoire(0, 50), rY + aleatoire(0, 50), rC / 2 + i, (Math.PI / 180) * 0, (Math.PI / 180) * 360, false);
+    contexteCanvas.arc(
+      rX + aleatoire(0, 50),
+      rY + aleatoire(0, 50),
+      rC / 2 + i,
+      (Math.PI / 180) * 0,
+      (Math.PI / 180) * 360,
+      false,
+    );
     contexteCanvas.fill();
     contexteCanvas.closePath();
   }
@@ -195,10 +219,10 @@ function canvasDraw() {
 Quand on appuie sur le bouton pour couper le son, la fonction ci-dessous est appelée, qui déconnecte le noeud de gain du noeud de destination, cassant ainsi le graphe de façon à ce qu'aucun son ne soit produit. Appuyer de nouveau sur le bouton a l'effet inverse.
 
 ```js
-var coupeSon = document.querySelector('.mute');
+var coupeSon = document.querySelector(".mute");
 
-coupeSon.onclick = function() {
-  if(coupeSon.id == "") {
+coupeSon.onclick = function () {
+  if (coupeSon.id == "") {
     noeudGain.disconnect(contexteAudio.destination);
     coupeSon.id = "activated";
     coupeSon.innerHTML = "Unmute";
@@ -207,7 +231,7 @@ coupeSon.onclick = function() {
     coupeSon.id = "";
     coupeSon.innerHTML = "Mute";
   }
-}
+};
 ```
 
 ## Autres options des noeuds
@@ -228,18 +252,18 @@ On associe ensuite à cet objet une forme d'onde définie mathématiquement, qui
 
 ```js
 function genererCourbeDistortion(amount) {
-  var k = typeof amount === 'number' ? amount : 50,
+  var k = typeof amount === "number" ? amount : 50,
     n_samples = 44100,
     curve = new Float32Array(n_samples),
     deg = Math.PI / 180,
     i = 0,
     x;
-  for ( ; i < n_samples; ++i ) {
-    x = i * 2 / n_samples - 1;
-    curve[i] = ( 3 + k ) * x * 20 * deg / ( Math.PI + k * Math.abs(x) );
+  for (; i < n_samples; ++i) {
+    x = (i * 2) / n_samples - 1;
+    curve[i] = ((3 + k) * x * 20 * deg) / (Math.PI + k * Math.abs(x));
   }
   return curve;
-};
+}
 ```
 
 L'exemple suivant, qui vient de [Voice-change-O-matic](https://github.com/mdn/voice-change-o-matic), connecte un noeud de `distortion` à un graphe audio, puis applique l'algorithme de forme d'onde précédent au noeud de distortion :

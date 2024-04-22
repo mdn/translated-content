@@ -1,9 +1,6 @@
 ---
 title: HTMLInputElement
 slug: Web/API/HTMLInputElement
-translation_of: Web/API/HTMLInputElement
-page-type: web-api-interface
-browser-compat: api.HTMLInputElement
 ---
 
 {{APIRef("HTML DOM")}}
@@ -160,6 +157,7 @@ Certaines propriétés ne s'appliquent qu'aux types d'éléments `<input>` qui p
 - [`reportValidity()`](/fr/docs/Web/API/HTMLInputElement/reportValidity)
   - : Exécute la méthode `checkValidity()` et, si celle-ci renvoie `false` (si un champ est invalide ou si aucun motif n'a été fourni), fourni la même indication à l'utilisatrice ou l'utilisateur, que celle affichée en cas de champ invalide lorsque le formulaire est envoyé.
 - [`stepDown()`](/fr/docs/Web/API/HTMLInputElement/stepDown)
+
   - : Décrémente la valeur de l'attribut [`value`](/fr/docs/Web/HTML/Element/input#value) de ([`step`](/fr/docs/Web/HTML/Element/input#step) \* n), où n vaut 1 par défaut. Cette méthode déclenche une exception si&nbsp;:
     - Elle n'est pas applicable pour un champ qui a cet attribut [`type`](/fr/docs/Web/HTML/Element/input#type),
     - L'élément n'a pas de valeur pour l'attribut [`step`](/fr/docs/Web/HTML/Element/input#step),

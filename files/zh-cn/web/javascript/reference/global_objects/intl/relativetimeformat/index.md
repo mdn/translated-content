@@ -38,9 +38,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
 // 在你的区域下创建相对时间格式化程序
 // 显式传入默认值。
 const rtf = new Intl.RelativeTimeFormat("en", {
-  localeMatcher: "bestfit",// 其他值："lookup"
-  numeric: "always",// 其他值："auto"
-  style: "long",// 其他值："short"或"narrow"
+  localeMatcher: "bestfit", // 其他值："lookup"
+  numeric: "always", // 其他值："auto"
+  style: "long", // 其他值："short"或"narrow"
 });
 
 // 使用负值（-1）格式化相对时间。
@@ -55,13 +55,13 @@ rtf.format(1, "day"); // "in 1 day"
 以下示例展示了如何创建一个用于返回格式化后的每一个部分的相对时间格式化程序。
 
 ```js
-const rtf = new Intl.RelativeTimeFormat("en",{numeric: "auto"});
+const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
 
 // 使用日期单位格式化相对时间。
-rtf.formatToParts(-1,"day");
+rtf.formatToParts(-1, "day");
 // [{type: "literal", value: "yesterday"}]
 
-rtf.formatToParts(100,"day");
+rtf.formatToParts(100, "day");
 // [
 //   { type: "literal", value: "in " },
 //   { type: "integer", value: "100", unit: "day" },

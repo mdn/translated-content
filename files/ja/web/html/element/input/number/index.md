@@ -2,7 +2,7 @@
 title: <input type="number">
 slug: Web/HTML/Element/input/number
 l10n:
-  sourceCommit: b56483692fd247dd7c5f11af4233ad40bf19ac31
+  sourceCommit: 72ca3d725e3e56b613de3ac9727bd0d6d619c38a
 ---
 
 {{HTMLSidebar}}
@@ -14,47 +14,6 @@ l10n:
 {{EmbedInteractiveExample("pages/tabbed/input-number.html", "tabbed-shorter")}}
 
 `number` 型に対応していないブラウザーでは、 `number` 入力欄は `text` 入力欄で代替されます。
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <td><strong><a href="#値">値</a></strong></td>
-      <td>数字を表す {{jsxref("Number")}}、または空欄</td>
-    </tr>
-    <tr>
-      <td><strong>イベント</strong></td>
-      <td>
-        {{domxref("HTMLElement/change_event", "change")}} および
-        {{domxref("HTMLElement/input_event", "input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><strong>対応している共通属性</strong></td>
-      <td>
-        <a href="/ja/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>
-      </td>
-    </tr>
-    <tr>
-      <td><strong>IDL 属性</strong></td>
-      <td><code>list</code>, <code>value</code>, <code>valueAsNumber</code></td>
-    </tr>
-    <tr>
-      <td><strong>DOM インターフェイス</strong></td>
-      <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>メソッド</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.stepUp", "stepUp()")}},
-        {{domxref("HTMLInputElement.stepDown", "stepDown()")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## 値
 
@@ -92,7 +51,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 コントロールの内容がある書字方向 ({{Glossary("LTR")}} または {{Glossary("RTL")}}) であるものの、プレイスホルダーを逆の方向に表示する必要がある場合、 Unicode 双方向アルゴリズム書式文字を使用してプレイスホルダーの中で書字方向を上書きすることができます。詳しくは、[双方向テキストでの Unicode コードの使い方（英語）](https://www.w3.org/International/questions/qa-bidi-unicode-controls)を参照してください。
 
-> **メモ:** 可能であれば `placeholder` を使用することは避けてください。フォームを説明する他の方法ほど意味論的に有益ではなく、コンテンツに予期しない技術的な問題を引き起こす可能性があります。詳しくは、[\<input>: 入力欄 (フォーム入力) 要素](/ja/docs/Web/HTML/Element/input)の[プレイスホルダーはアクセシブルではない](/ja/docs/Web/HTML/Element/input#プレイスホルダーはアクセシブルではない)を参照してください。
+> **メモ:** 可能であれば `placeholder` を使用することは避けてください。フォームを説明する他の方法ほど意味論的に有益ではなく、コンテンツに予期しない技術的な問題を引き起こす可能性があります。詳しくは、[`<input>` のラベル](/ja/docs/Web/HTML/Element/input#ラベル)を参照してください。
 
 ### `readonly`
 
@@ -309,7 +268,7 @@ input:valid + span::after {
 
 すでに既定では増分が `1` であるという事実を扱いましたので、 [`step`](/ja/docs/Web/HTML/Element/input#step) 属性を使用して実数を入力できるようにすることができます。もう少し詳しく見てみましょう。
 
-以下の例は、ユーザーの身長を入力するフォームです。既定では慎重をメートル単位で受け付けますが、関連するボタンをクリックすることでフォームがフィートとインチを受け付けるように変更することができます。メートル単位の身長の入力欄は小数第2位まで受け付けます。
+以下の例は、ユーザーの身長を入力するフォームです。既定では慎重をメートル単位で受け付けますが、関連するボタンをクリックすることでフォームがフィートとインチを受け付けるように変更することができます。メートル単位の身長の入力欄は小数第 2 位まで受け付けます。
 
 {{EmbedLiveSample("Examples", 600, 150)}}
 
@@ -339,10 +298,7 @@ HTML は次のようになります。
     <span class="validity"></span>
   </div>
   <div>
-    <input
-      type="button"
-      class="meters"
-      value="身長をフィートとインチで入力" />
+    <input type="button" class="meters" value="身長をフィートとインチで入力" />
   </div>
   <div>
     <input type="submit" value="フォームを送信" />
@@ -386,56 +342,105 @@ input:valid + span::after {
 そして最後に、 JavaScript です。
 
 ```js
-const metersInputGroup = document.querySelector('.metersInputGroup');
-const feetInputGroup = document.querySelector('.feetInputGroup');
-const metersInput = document.querySelector('#meters');
-const feetInput = document.querySelector('#feet');
-const inchesInput = document.querySelector('#inches');
+const metersInputGroup = document.querySelector(".metersInputGroup");
+const feetInputGroup = document.querySelector(".feetInputGroup");
+const metersInput = document.querySelector("#meters");
+const feetInput = document.querySelector("#feet");
+const inchesInput = document.querySelector("#inches");
 const switchBtn = document.querySelector('input[type="button"]');
 
-switchBtn.addEventListener('click', () => {
-  if (switchBtn.getAttribute('class') === 'meters') {
-    switchBtn.setAttribute('class', 'feet');
-    switchBtn.value = '身長をメートルで入力';
+switchBtn.addEventListener("click", () => {
+  if (switchBtn.getAttribute("class") === "meters") {
+    switchBtn.setAttribute("class", "feet");
+    switchBtn.value = "身長をメートルで入力";
 
-    metersInputGroup.style.display = 'none';
-    feetInputGroup.style.display = 'block';
+    metersInputGroup.style.display = "none";
+    feetInputGroup.style.display = "block";
 
-    feetInput.setAttribute('required', '');
-    inchesInput.setAttribute('required', '');
-    metersInput.removeAttribute('required');
+    feetInput.setAttribute("required", "");
+    inchesInput.setAttribute("required", "");
+    metersInput.removeAttribute("required");
 
-    metersInput.value = '';
+    metersInput.value = "";
   } else {
-    switchBtn.setAttribute('class', 'meters');
-    switchBtn.value = '身長をフィートとインチで入力';
+    switchBtn.setAttribute("class", "meters");
+    switchBtn.value = "身長をフィートとインチで入力";
 
-    metersInputGroup.style.display = 'block';
-    feetInputGroup.style.display = 'none';
+    metersInputGroup.style.display = "block";
+    feetInputGroup.style.display = "none";
 
-    feetInput.removeAttribute('required');
-    inchesInput.removeAttribute('required');
-    metersInput.setAttribute('required', '');
+    feetInput.removeAttribute("required");
+    inchesInput.removeAttribute("required");
+    metersInput.setAttribute("required", "");
 
-    feetInput.value = '';
-    inchesInput.value = '';
+    feetInput.value = "";
+    inchesInput.value = "";
   }
 });
 ```
 
 いくつかの変数を宣言した後、イベントリスナーを `button` に追加し、切り替えの仕組みを制御しています。これはとても単純で、ほとんどがボタンの `class` と {{HTMLElement("label")}} を変更するためのものであり、そしてボタンが押されたときに2組の入力の display 値を更新しています。
 
-(なお、ここではメートルとフィート/インチの間の変換は行っていませんが、実際のウェブアプリケーションではおそらく行うでしょう。)
+（なお、ここではメートルとフィート/インチの間の変換は行っていませんが、実際のウェブアプリケーションではおそらく行うでしょう。）
 
 > **メモ:** ユーザーがボタンをクリックしたとき、 `required` 属性を非表示にする入力欄から削除し、 `value` 属性を空にしています。これは入力欄の両方の組が入力されていなくてもフォームを送信することができるようにしています。これはユーザーが意図していないデータをフォームが送信しないことを保証するものでもあります。
 >
 > これを行わないと、フィート/インチ**と**メートルの両方を入力してフォームを送信することができてしまいます。
 
-## アクセシビリティ
+## アクセシビリティの考慮
 
 `<input type="number">` 要素の暗黙の[ロール](/ja/docs/Web/Accessibility/ARIA/Roles)は [`spinbutton`](/ja/docs/Web/Accessibility/ARIA/Roles/spinbutton_role) です。もしスピンボタンがフォームコントロールにとって重要な機能でないなら、 `type="number"` を使用しないよう検討してください。代わりに [`inputmode="numeric"`](/ja/docs/Web/HTML/Global_attributes/inputmode) を使用し、 [`pattern`](/ja/docs/Web/HTML/Attributes/pattern) 属性で文字列を数字とそれに付随する文字に限定してください。 `<input type="number">` では、ユーザーが何か他のことをしようとしているときに、誤って数値を増加してしまう危険性があります。さらに、ユーザーが数字でないものを入力しようとした場合、何が間違っているのか明示的なフィードバックがありません。
 
 また、 [`autocomplete`](/ja/docs/Web/HTML/Attributes/autocomplete) 属性を使用して、ユーザーがよりすばやく、エラーの可能性を低くしてフォームを記入できるようにすることも検討してください。例えば、郵便番号のフィールドで自動補完を有効にするには、 `autocomplete="postal-code"` と設定してください。
+
+## 技術的概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <td><strong><a href="#値">値</a></strong></td>
+      <td>数字を表す {{jsxref("Number")}}、または空欄</td>
+    </tr>
+    <tr>
+      <td><strong>イベント</strong></td>
+      <td>
+        {{domxref("HTMLElement/change_event", "change")}} および
+        {{domxref("Element/input_event", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>対応している共通属性</strong></td>
+      <td>
+         <a href="/ja/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+         <a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+         <a href="/ja/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
+         <a href="/ja/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL 属性</strong></td>
+      <td><code>list</code>, <code>value</code>, <code>valueAsNumber</code></td>
+    </tr>
+    <tr>
+      <td><strong>DOM インターフェイス</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
+      <td><strong>メソッド</strong></td>
+      <td>
+        {{domxref("HTMLInputElement.select", "select()")}},
+        {{domxref("HTMLInputElement.stepUp", "stepUp()")}},
+        {{domxref("HTMLInputElement.stepDown", "stepDown()")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>暗黙の ARIA ロール</strong></td>
+      <td>
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/spinbutton_role">spinbutton</a></code>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## 仕様書
 

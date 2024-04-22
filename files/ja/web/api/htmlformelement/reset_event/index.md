@@ -1,8 +1,9 @@
 ---
 title: "HTMLFormElement: reset イベント"
+short-title: reset
 slug: Web/API/HTMLFormElement/reset_event
 l10n:
-  sourceCommit: a36633398f827c87eb593f9647ed00bf33fd5b34
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef}}
@@ -14,9 +15,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを使用するかしてください。
 
 ```js
-addEventListener('reset', (event) => {});
+addEventListener("reset", (event) => {});
 
-onreset = (event) => { };
+onreset = (event) => {};
 ```
 
 ## イベント型
@@ -42,12 +43,12 @@ onreset = (event) => { };
 
 ```js
 function logReset(event) {
-  log.textContent = `Form reset! Time stamp: ${event.timeStamp}`;
+  log.textContent = `Form reset! Timestamp: ${event.timeStamp}`;
 }
 
-const form = document.getElementById('form');
-const log = document.getElementById('log');
-form.addEventListener('reset', logReset);
+const form = document.getElementById("form");
+const log = document.getElementById("log");
+form.addEventListener("reset", logReset);
 ```
 
 ### 結果

@@ -9,8 +9,6 @@ slug: Web/HTML/Global_attributes/dir
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-dir.html","tabbed-standard")}}
 
-<p class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples </a>and send us a pull request.</p>
-
 가능한 값은 다음과 같습니다.
 
 - `ltr`은 왼쪽에서 오른쪽을 뜻하며, 좌횡서 언어인 한국어나 영어에 사용합니다.

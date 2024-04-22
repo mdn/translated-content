@@ -1,20 +1,9 @@
 ---
 title: runtime.PlatformInfo
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformInfo
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - PlatformInfo
-  - Reference
-  - Type
-  - WebExtensions
-  - runtime
-translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformInfo
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Un objet contenant des informations sur la plate-forme actuelle.
 

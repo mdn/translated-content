@@ -1,7 +1,6 @@
 ---
 title: BatteryManager.onlevelchange
 slug: Web/API/BatteryManager/levelchange_event
-original_slug: Web/API/BatteryManager/onlevelchange
 ---
 
 {{deprecated_header}} {{APIRef("Battery API")}}
@@ -31,17 +30,16 @@ y `funcRef` es una función que se convoca cuando el evento de [`levelchange`](/
 ### Contenido JavaScript
 
 ```js
-navigator.getBattery().then(function(battery) {
-  battery.onlevelchange = function(){
-    document.querySelector('#level').textContent = battery.level;
+navigator.getBattery().then(function (battery) {
+  battery.onlevelchange = function () {
+    document.querySelector("#level").textContent = battery.level;
 
-    if(battery.charging) {
-      document.querySelector('#stateBattery').textContent =
-          "Charging time: " + (battery.chargingTime / 60);
-    }
-    else {
-      document.querySelector('#stateBattery').textContent =
-          "Discharging time: " + (battery.dischargingTime / 60);
+    if (battery.charging) {
+      document.querySelector("#stateBattery").textContent =
+        "Charging time: " + battery.chargingTime / 60;
+    } else {
+      document.querySelector("#stateBattery").textContent =
+        "Discharging time: " + battery.dischargingTime / 60;
     }
   };
 });

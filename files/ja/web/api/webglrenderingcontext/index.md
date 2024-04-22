@@ -1,6 +1,8 @@
 ---
 title: WebGLRenderingContext
 slug: Web/API/WebGLRenderingContext
+l10n:
+  sourceCommit: d65814793b7c76e11cb03ed60267d0d447dc0a64
 ---
 
 {{APIRef("WebGL")}}
@@ -10,8 +12,8 @@ slug: Web/API/WebGLRenderingContext
 このインターフェースを取得するためには、 {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} を `<canvas>` 要素に対して、 "webgl" の引数を与えて呼び出します。
 
 ```js
-var canvas = document.getElementById('myCanvas');
-var gl = canvas.getContext('webgl');
+const canvas = document.getElementById("myCanvas");
+const gl = canvas.getContext("webgl");
 ```
 
 キャンバスの WebGL 描画コンテキストを取得すると、そのキャンバス内で描画を行うことができます。 [WebGL チュートリアル](/ja/docs/Web/API/WebGL_API/Tutorial)には、 WebGL を使い始めるための詳細な情報、例、リソースが掲載されています。
@@ -27,15 +29,13 @@ WebGL 2.0 のコンテキストが必要な場合は、{{domxref("WebGL2Renderin
 以下のプロパティとメソッドは、 WebGL コンテキストを扱うための一般的な情報と機能を提供します。
 
 - {{domxref("WebGLRenderingContext.canvas")}}
-  - : 読み取り専用の {{domxref("HTMLCanvasElement")}} への後方参照です。{{HTMLElement("canvas")}} 要素と関連付けられていない場合は {{jsxref("Operators/null", "null")}} を返すことがあります。
-- {{domxref("WebGLRenderingContext.commit()")}} {{experimental_inline}}
-  - : コンテキストが直接指定されたキャンバスに固定されていない場合、フレームを元の {{domxref("HTMLCanvasElement")}} にプッシュします。
+  - : 読み取り専用の {{domxref("HTMLCanvasElement")}} への後方参照です。{{HTMLElement("canvas")}} 要素と関連付けられていない場合は [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) を返すことがあります。
 - {{domxref("WebGLRenderingContext.drawingBufferWidth")}}
   - : 読み取り専用の現在の描画バッファーの幅です。コンテキストが関連付けされた canvas 要素の幅と一致しているといえます。
 - {{domxref("WebGLRenderingContext.drawingBufferHeight")}}
   - : 読み取り専用の現在の描画バッファーの高さです。コンテキストが関連付けされた canvas 要素の高さと一致しているといえます。
 - {{domxref("WebGLRenderingContext.getContextAttributes()")}}
-  - : 実際のコンテキスト引数を含む `WebGLContextAttributes` オブジェクトを返します。コンテキストが失われていた場合は {{jsxref("Operators/null", "null")}} を返すことがあります。
+  - : 実際のコンテキスト引数を含む `WebGLContextAttributes` オブジェクトを返します。コンテキストが失われていた場合は [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) を返すことがあります。
 - {{domxref("WebGLRenderingContext.isContextLost()")}}
   - : コンテキストが失われている場合は `true` を返し、そうでない場合は `false` を返します。
 - {{domxref("WebGLRenderingContext.makeXRCompatible()")}}
@@ -55,13 +55,13 @@ WebGL 2.0 のコンテキストが必要な場合は、{{domxref("WebGL2Renderin
 - {{domxref("WebGLRenderingContext.blendColor()")}}
   - : ブレンド元とブレンド先のブレンド係数を設定します。
 - {{domxref("WebGLRenderingContext.blendEquation()")}}
-  - : RGBのブレンド式とアルファのブレンド式をひとつの式に設定します。
+  - : RGB のブレンド式とアルファのブレンド式をひとつの式に設定します。
 - {{domxref("WebGLRenderingContext.blendEquationSeparate()")}}
-  - : RGBのブレンド式とアルファのブレンド式を分けて式に設定します。
+  - : RGB のブレンド式とアルファのブレンド式を分けて式に設定します。
 - {{domxref("WebGLRenderingContext.blendFunc()")}}
   - : どの関数がピクセルのブレンド演算に使用されるかを定義します。
 - {{domxref("WebGLRenderingContext.blendFuncSeparate()")}}
-  - : RGB　とアルファ成分のピクセル演算を別々にブレンドするために、どの関数を使用するかを定義します。
+  - : RGB とアルファ成分のピクセル演算を別々にブレンドするために、どの関数を使用するかを定義します。
 - {{domxref("WebGLRenderingContext.clearColor()")}}
   - : カラーバッファーをクリアする時に使われる色を指定します。
 - {{domxref("WebGLRenderingContext.clearDepth()")}}
@@ -79,9 +79,9 @@ WebGL 2.0 のコンテキストが必要な場合は、{{domxref("WebGL2Renderin
 - {{domxref("WebGLRenderingContext.depthRange()")}}
   - : 正規化デバイス座標系からウィンドウまたはビューポート座標系への深度レンジマッピングを指定します。
 - {{domxref("WebGLRenderingContext.disable()")}}
-  - : このコンテキストにおいて、指定したWebGL機能を無効にします。
+  - : このコンテキストにおいて、指定した WebGL 機能を無効にします。
 - {{domxref("WebGLRenderingContext.enable()")}}
-  - : このコンテキストにおいて、指定したWebGL機能を有効にします。
+  - : このコンテキストにおいて、指定した WebGL 機能を有効にします。
 - {{domxref("WebGLRenderingContext.frontFace()")}}
   - : 前面ポリゴンなのか後面ポリゴンなのかを周る方向によって指定します。
 - {{domxref("WebGLRenderingContext.getParameter()")}}
@@ -151,7 +151,7 @@ WebGL 2.0 のコンテキストが必要な場合は、{{domxref("WebGL2Renderin
 - {{domxref("WebGLRenderingContext.readPixels()")}}
   - : `WebGLFrameBuffer` からピクセルブロックを読み取ります。
 
-<h2 id="レンダーバッファー">レンダーバッファー</h2>
+## レンダーバッファー
 
 - {{domxref("WebGLRenderingContext.bindRenderbuffer()")}}
   - : 与えられたターゲットに `WebGLRenderBuffer` オブジェクトをバインドします。
@@ -166,18 +166,18 @@ WebGL 2.0 のコンテキストが必要な場合は、{{domxref("WebGL2Renderin
 - {{domxref("WebGLRenderingContext.renderbufferStorage()")}}
   - : レンダーバッファーデータストアを作成します。
 
-<h2 id="テクスチャ">テクスチャ</h2>
+## テクスチャ
 
 - {{domxref("WebGLRenderingContext.bindTexture()")}}
   - : 与えられたターゲットに `WebGLTexture` オブジェクトをバインドします。
 - {{domxref("WebGLRenderingContext.compressedTexImage2D()")}}
-  - : 2D テクスチャ画像を圧縮フォーマットで指定します。
+  - : 2D テクスチャの画像を圧縮フォーマットで指定します。
 - {{domxref("WebGLRenderingContext.compressedTexSubImage2D()")}}
-  - : 2D テクスチャ部分画像を圧縮フォーマットで指定します。
+  - : 2D テクスチャの部分画像を圧縮フォーマットで指定します。
 - {{domxref("WebGLRenderingContext.copyTexImage2D()")}}
-  - : 2D テクスチャ画像をコピーします。
+  - : 2D テクスチャの画像をコピーします。
 - {{domxref("WebGLRenderingContext.copyTexSubImage2D()")}}
-  - : 2D テクスチャ部分画像をコピーします。
+  - : 2D テクスチャの部分画像をコピーします。
 - {{domxref("WebGLRenderingContext.createTexture()")}}
   - : `WebGLTexture` オブジェクトを作成します。
 - {{domxref("WebGLRenderingContext.deleteTexture()")}}
@@ -245,9 +245,9 @@ WebGL 2.0 のコンテキストが必要な場合は、{{domxref("WebGL2Renderin
 ## ユニフォームと属性
 
 - {{domxref("WebGLRenderingContext.disableVertexAttribArray()")}}
-  - : 与えられたポジションの頂点属性配列を無効にします。
+  - : 指定された位置の頂点属性配列を無効にします。
 - {{domxref("WebGLRenderingContext.enableVertexAttribArray()")}}
-  - : 与えられたポジションの頂点属性配列を有効にします。
+  - : 指定された位置の頂点属性配列を有効にします。
 - {{domxref("WebGLRenderingContext.getActiveAttrib()")}}
   - : 有効な属性変数についての情報を返します。
 - {{domxref("WebGLRenderingContext.getActiveUniform()")}}
@@ -259,10 +259,11 @@ WebGL 2.0 のコンテキストが必要な場合は、{{domxref("WebGL2Renderin
 - {{domxref("WebGLRenderingContext.getUniformLocation()")}}
   - : ユニフォーム変数のロケーションを返します。
 - {{domxref("WebGLRenderingContext.getVertexAttrib()")}}
-  - : 与えられたポジションの頂点属性についての情報を返します。
+  - : 指定された位置の頂点属性についての情報を返します。
 - {{domxref("WebGLRenderingContext.getVertexAttribOffset()")}}
   - : 与えられた頂点配列のアドレスを返します。
-- {{domxref("WebGLRenderingContext.uniform()", "WebGLRenderingContext.uniform[1234][fi][v]()")}}
+  <!-- markdownlint-disable MD052 -- text in code block is misidentified as image -->
+- [`WebGLRenderingContext.uniform[1234][fi][v]()`](/ja/docs/Web/API/WebGLRenderingContext/uniform)
   - : ユニフォーム変数の値を指定します。
 - {{domxref("WebGLRenderingContext.uniformMatrix()", "WebGLRenderingContext.uniformMatrix[234]fv()")}}
   - : ユニフォーム変数の行列を指定します。
@@ -283,6 +284,13 @@ WebGL 2.0 のコンテキストが必要な場合は、{{domxref("WebGL2Renderin
   - : 以前に呼び出されたコマンドが終了するまで処理をブロックします。
 - {{domxref("WebGLRenderingContext.flush()")}}
   - : 可能な限り速くすべてのコマンドを実行し、バッファーコマンドを空にします。
+
+## 色空間
+
+- {{domxref("WebGLRenderingContext.drawingBufferColorSpace")}}
+  - : WebGL 描画バッファーの色空間を指定します。
+- {{domxref("WebGLRenderingContext.unpackColorSpace")}} {{Experimental_Inline}}
+  - : テクスチャのインポート時に変換する色空間を指定します。
 
 ## 拡張機能の使用
 

@@ -23,8 +23,8 @@ slug: Web/HTML/Element/div
     Or (in {{glossary("WHATWG")}} HTML): If the parent is a {{HTMLElement("dl")}} element: one or more {{HTMLElement("dt")}} elements followed by one or more {{HTMLElement("dd")}} elements, optionally intermixed with {{HTMLElement("script")}} and {{HTMLElement("template")}} elements.</td>
   </tr>
   <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
+   <th scope="row">标签省略</th>
+   <td>不允许，开始标签和结束标签都不能省略。</td>
   </tr>
   <tr>
    <th scope="row">允许的父元素</th>
@@ -58,8 +58,7 @@ slug: Web/HTML/Element/div
 
 ```html
 <div>
-  <p>这里可以是任何内容，比如 &lt;p&gt;,
-  &lt;table&gt;，一切由你作主！</p>
+  <p>这里可以是任何内容，比如 &lt;p&gt;, &lt;table&gt;，一切由你作主！</p>
 </div>
 ```
 
@@ -75,8 +74,7 @@ slug: Web/HTML/Element/div
 
 ```html
 <div class="shadowbox">
-  <p>Here's a very interesting note displayed in a
-  lovely shadowed box.</p>
+  <p>Here's a very interesting note displayed in a lovely shadowed box.</p>
 </div>
 ```
 

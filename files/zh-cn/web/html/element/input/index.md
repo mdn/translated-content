@@ -319,7 +319,7 @@ slug: Web/HTML/Element/input
 
   - : 一个布尔属性，如果存在，表示当页面加载完毕（或包含该元素的 `<dialog>` 显示完毕）时，该 input 元素应该自动拥有焦点。
 
-    > **备注：** 具有 `autofocus` 属性的元素可能在 {{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}} 事件触发前获得焦点。
+    > **备注：** 具有 `autofocus` 属性的元素可能在 {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} 事件触发前获得焦点。
 
     文档中只有一个表单元素可以具有 `autofocus` 属性。如果放置了多于一个元素，会聚焦第一个具有该属性的元素。
 
@@ -462,6 +462,7 @@ slug: Web/HTML/Element/input
     此段代码运行后，`guestName` 将成为 `guest` 字段的 {{domxref("HTMLInputElement")}}，`hatSize` 将成为 `hat-size` 字段的 {{domxref("HTMLInputElement")}}。
 
     > **警告：** 避免给表单元素一个与表单内置属性相对应的 `name`，因为这样你就会用这个对相应输入的引用来覆盖预定义的属性或方法。
+
 - `pattern`
 
   - : 对 `text`、`search`、`url`、`tel`、`email` 和 `password` 类型有效。为了使 `value` 通过[约束验证](/zh-CN/docs/Web/HTML/Constraint_validation)，必须满足 `pattern` 属性给定的正则表达式。它必须是 {{jsxref("RegExp")}} 类型的有效 JavaScript 正则表达式，并且已在我们的[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)中进行了说明；在编译正则表达式时指定了 `'u'` 标志，因此该模式被视为 Unicode 代码点的序列，而不是 ASCII。模式文本周围无需指定正斜杠。
@@ -469,13 +470,14 @@ slug: Web/HTML/Element/input
     如果 `pattern` 属性存在，但是未指定模式或无效，则不应用任何正则表达式，并且将完全忽略此属性。如果模式属性是有效的，并且该非空值与模式不匹配，约束验证将阻止表单提交。
 
     > **备注：** 如果使用了 `pattern` 属性，要在附近告知用户所期望的输入格式。你可以包含 [`title`](#title) 属性来解释满足模式的需求说明，大多数浏览器将它们显示为工具提示（tooltip）。对于无障碍来说，视觉的解释是必要的，工具提示是一种改进点。
-    参见[客户端验证](#客户端验证)一节以了解更多信息。
+    > 参见[客户端验证](#客户端验证)一节以了解更多信息。
 
 - `placeholder`
 
   - : 对 `text`、`search`、`url`、`tel`、`email`、`password` 和 `number` 有效。`placeholder` 属性可向用户提供有关该字段中需要什么样的信息的简短提示。它应该是一个单词或短语来说明预期的数据类型，而不是说明性消息。文本中*不得*包含回车符或换行符。例如，某个字段需要收集用户的姓氏，其标签为“First Name”，一个适合的占位文字可能是“如 Mustafa”。
 
     > **备注：** `placeholder` 属性在语义上不如其他解释表单的方式有用，而且会对你的内容造成意想不到的技术问题。参见[标签](#标签)以获得更多信息。
+
 - `readonly`
 
   - : 一个布尔属性，如果存在，则表示该字段不能由用户编辑。`readonly` 属性支持 `text`、`search`、`url`、`tel`、`email`、`date`、`month`、`week`、`time`、`datetime-local`、`number` 和 `password` 输入类型。
@@ -512,11 +514,12 @@ slug: Web/HTML/Element/input
     例如，如果存在这样一个元素 `<input type="number" min="10" step="2">`，那么任何大于等于 `10` 的偶整数都是有效的。如果省略（`<input type="number">`），任何整数都有效，但浮点数（如 `4.2`）无效，因为 `step` 默认为`1`。为了使 `4.2` 有效，`step` 必须被设置为 `any`、0.1、0.2 或任何 `min` 值以 `.2` 结尾的数字，例如 `<input type="number" min="-5.2">`。
 
     > **备注：** 当用户输入的数据不符合步进配置时，该值在约束验证中被认为是无效的，将匹配 `:invalid` 伪类。
-    参见[客户端验证](#客户端验证)以获取更多信息。
+    > 参见[客户端验证](#客户端验证)以获取更多信息。
 
 - `tabindex`
 
   - : 对所有元素有效的全局属性，包括所有的输入类型，是一个整数属性，表示该元素如果参与顺序键盘导航，是否可以接受输入焦点（可聚焦）。由于除了隐藏类型的输入外，所有的输入类型都是可聚焦的，这个属性不应该用在表单控件上，因为这样做需要管理文档中所有元素的聚焦顺序，如果设置错误，就有可能损害可用性和无障碍性。
+
 - `title`
 
   - : 对所有元素有效的全局属性，包括所有的输入类型，包含一个代表与它所属的元素相关的咨询信息的文本。这样的信息通常以工具提示的形式呈现给用户（但不必要）。标题不应作为表单控件用途的主要解释。相反，可以使用 {{htmlelement('label')}} 元素，其 `for` 属性设置为表单控件的 [`id`](#id) 属性。参见下面的[标签](#标签)。
@@ -529,7 +532,7 @@ slug: Web/HTML/Element/input
 
 - `value`
 
-  - : 输入控件的值。当在 HTML 中指定时，这是初始值。从那时起，它可以在任何时候用 JavaScript 访问相应的 {{domxref("HTMLInputElement")}} 对象的 `value` 属性，用于改变或检索。`value` 属性总是可选的，不过对于 `checkbox'、`radio` 和 `hidden` 来说，应该被认为是必须的。
+  - : 输入控件的值。当在 HTML 中指定时，这是初始值。从那时起，它可以在任何时候用 JavaScript 访问相应的 {{domxref("HTMLInputElement")}} 对象的 `value` 属性，用于改变或检索。`value` 属性总是可选的，不过对于 `checkbox'、`radio`和`hidden` 来说，应该被认为是必须的。
 
 - `width`
 
@@ -825,7 +828,10 @@ input[pattern] {
 ```css
 input.custom {
   caret-color: red;
-  font: 16px "Helvetica", "Arial", "sans-serif";
+  font:
+    16px "Helvetica",
+    "Arial",
+    "sans-serif";
 }
 ```
 
@@ -897,7 +903,7 @@ input.custom {
 
 除了如上文 [UI 伪类](#ui_伪类)部分所述，使用 CSS 根据 {{cssxref(":valid")}} 或 {{cssxref(":invalid")}} 每个输入的当前状态来设计输入的样式之外，浏览器还在（试图）提交表单时提供了客户端验证。在表单提交时，如果有一个表单控件没有通过约束验证，支持的浏览器将在第一个无效的表单控件上显示一个错误信息；根据错误类型显示一个默认信息，或者由你设置的信息。
 
-某些输入类型和其他属性对特定输入的有效值进行了限制。例如，`<input type="number" min="2" max="10" step="2">` 意味着只有数字2、4、6、8 或 10 有效。某些错误可能发生，当值小于 2 时会发生 `rangeUnderflow` 错误，值大于 10 时会发生 `rangeOverflow` 错误，当值在 2 至 10 之间，但不是偶数（不满足 `step` 属性的需求）时会发生 `stepMismatch` 错误，如果值不是一个数字时会发生 `typeMismatch` 错误。
+某些输入类型和其他属性对特定输入的有效值进行了限制。例如，`<input type="number" min="2" max="10" step="2">` 意味着只有数字 2、4、6、8 或 10 有效。某些错误可能发生，当值小于 2 时会发生 `rangeUnderflow` 错误，值大于 10 时会发生 `rangeOverflow` 错误，当值在 2 至 10 之间，但不是偶数（不满足 `step` 属性的需求）时会发生 `stepMismatch` 错误，如果值不是一个数字时会发生 `typeMismatch` 错误。
 
 对于可能的值域是周期性的输入类型（也就是说，在可能的最高值时，值会绕回开始而不是结束），[`max`](#max) 和 [`min`](#min) 属性的值有可能是相反的，这表明允许的值范围从 `min` 开始，绕到可能的最低值，然后继续下去直到达到 `max`。这对日期和时间特别有用，比如你想让范围从晚上 8 点到早上 8 点：
 
@@ -1043,9 +1049,7 @@ nameInput.addEventListener("invalid", () => {
   if (nameInput.value === "") {
     nameInput.setCustomValidity("输入一个用户名！");
   } else {
-    nameInput.setCustomValidity(
-      "用户名只能包含大写或小写字母，请再试一遍。"
-    );
+    nameInput.setCustomValidity("用户名只能包含大写或小写字母，请再试一遍。");
   }
 });
 ```
@@ -1196,7 +1200,7 @@ Firefox 使用以下启发式方法来确定验证用户输入的语言（至少
 
 ```html
 <label for="peas">你喜欢豌豆吗？</label>
-<input type="checkbox" name="peas" id="peas">
+<input type="checkbox" name="peas" id="peas" />
 ```
 
 ### 尺寸

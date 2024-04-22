@@ -11,7 +11,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/pageAction
 
 아이콘 클릭에 대한 대응은 리스너를 등록하고 클릭 이벤트를 기다리는 것이나, [팝업창](/ko/docs/Mozilla/Add-ons/WebExtensions/Popups)이 열리게 하는 것일 수 있다.
 
-팝업창은 보통의 웹페이지처럼 HTML, CSS, 그리고 자바스크립트로 내용과 동작을 작성할 수 있다. 팝업창에서 실행되는 자바스크립트는 백그라운드 스크립트와 마찬가지로 모든 확장앱 API를 사용할 수 있다.
+팝업창은 보통의 웹페이지처럼 HTML, CSS, 그리고 JavaScript로 내용과 동작을 작성할 수 있다. 팝업창에서 실행되는 JavaScript는 백그라운드 스크립트와 마찬가지로 모든 확장앱 API를 사용할 수 있다.
 
 [manifest.json](/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json)의 [page_action 키](/en-US/Add-ons/WebExtensions/manifest.json/page_action)에 페이지 액션의 대부분의 속성들을 정의할 수 있지만, 이것들은 확정되는 것이라 이후에 바꿀 수 없다. 하지만 이 API는 그것들을 프로그램적으로 재정의하는 것도 가능하다. 그러나 API는 [manifest.json](/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json)에 [page_action](/en-US/Add-ons/WebExtensions/manifest.json/page_action) 키가 있어야만 사용할 수 있게 되므로 설사 모든 것을 프로그램적으로 할 계획이더라도 [page_action 키](/en-US/Add-ons/WebExtensions/manifest.json/page_action)는 있어야 한다.
 
@@ -54,9 +54,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/pageAction
 
 {{WebExtExamples("h2")}}
 
-> **참고:** **Acknowledgements**This API is based on Chromium's [`chrome.pageAction`](https://developer.chrome.com/extensions/pageAction) API. This documentation is derived from [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **참고:** **Acknowledgements** This API is based on Chromium's [`chrome.pageAction`](https://developer.chrome.com/extensions/pageAction) API. This documentation is derived from [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
-```
+<!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
@@ -84,3 +84,4 @@ slug: Mozilla/Add-ons/WebExtensions/API/pageAction
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->

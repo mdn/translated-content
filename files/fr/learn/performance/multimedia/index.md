@@ -1,7 +1,6 @@
 ---
-title: 'Multimédia : Images'
+title: "Multimédia : Images"
 slug: Learn/Performance/Multimedia
-translation_of: Learn/Performance/Multimedia
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/measuring_performance", "Learn/Performance/video", "Learn/Performance")}}
@@ -96,9 +95,9 @@ Pour finir, si vous avez besoin d'afficher des images animées sur votre page, s
 
 ```html
 <picture>
-   <source type="video/mp4" src="giphy.mp4">
-   <source type="image/webp" src="giphy.webp">
-   <img src="giphy.gif">
+  <source type="video/mp4" src="giphy.mp4" />
+  <source type="image/webp" src="giphy.webp" />
+  <img src="giphy.gif" />
 </picture>
 ```
 

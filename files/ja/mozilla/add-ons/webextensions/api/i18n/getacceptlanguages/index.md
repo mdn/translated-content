@@ -3,7 +3,7 @@ title: i18n.getAcceptLanguages()
 slug: Mozilla/Add-ons/WebExtensions/API/i18n/getAcceptLanguages
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 ブラウザーの [accept-languages](/ja/docs/Web/HTTP/Content_negotiation#The_Accept-Language_header) を取得します。これは、ブラウザーに使用されているロケールとは異なります。ロケールを取得するには、{{WebExtAPIRef('i18n.getUILanguage')}} を使用してください。
 
@@ -12,7 +12,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/i18n/getAcceptLanguages
 ## 構文
 
 ```js
-var gettingAcceptLanguages = browser.i18n.getAcceptLanguages()
+var gettingAcceptLanguages = browser.i18n.getAcceptLanguages();
 ```
 
 ### 引数
@@ -25,7 +25,7 @@ var gettingAcceptLanguages = browser.i18n.getAcceptLanguages()
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.i18n.getAcceptLanguages")}}
+{{Compat}}
 
 ## 例
 

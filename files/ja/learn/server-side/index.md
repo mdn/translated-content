@@ -19,9 +19,9 @@ slug: Learn/Server-side
 
 「Web の動作原理」を理解する必要があります。最初に次のトピックを読むのをお勧めします:
 
-- [Web サーバとは](/ja/docs/Learn/Common_questions/What_is_a_web_server)
-- [Web サイトを作成するのにどんなソフトウェアが必要か？](/ja/docs/Learn/Common_questions/What_software_do_I_need)
-- [Web サーバにファイルをアップロードする方法は？](/ja/docs/Learn/Common_questions/Upload_files_to_a_web_server)
+- [ウェブサーバとは](/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
+- [ウェブサイトを作るのにどんなソフトウェアが必要か](/ja/docs/Learn/Common_questions/Tools_and_setup/What_software_do_I_need)
+- [Web サーバにファイルをアップロードする方法は？](/ja/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)
 
 基本的な理解があれば、この節のモジュールに進む準備ができているでしょう。
 

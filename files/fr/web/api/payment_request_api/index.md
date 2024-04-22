@@ -1,18 +1,17 @@
 ---
 title: Payment Request API
 slug: Web/API/Payment_Request_API
-translation_of: Web/API/Payment_Request_API
 ---
 
 {{DefaultAPISidebar("Payment Request API")}}{{securecontext_header}}
 
-L'API *Payment Request* fournit une expérience utilisateur cohérente à la fois pour les acheteurs et pour les vendeurs. Ce n'est pas une nouvelle façon de payer ses achats, c'est plutôt une façon pour les utilisateurs de sélectionner leur moyen de paiement privilégié et de rendre cette information disponible pour le marchand.
+L'API _Payment Request_ fournit une expérience utilisateur cohérente à la fois pour les acheteurs et pour les vendeurs. Ce n'est pas une nouvelle façon de payer ses achats, c'est plutôt une façon pour les utilisateurs de sélectionner leur moyen de paiement privilégié et de rendre cette information disponible pour le marchand.
 
 ## Concepts et usages de l'API _Payment Request_
 
 De nombreux problèmes concernant l'abandon du panier d'achat en ligne peuvent découler de formulaires de validation finale longs et difficiles à remplir, et nécessitant souvent plusieurs étapes. L'**API <i lang="en">Payment Request</i>** a pour vocation de réduire le nombre d'étapes nécessaires pour terminer un paiement en ligne, faisant potentiellement ainsi disparaître les formulaires de validation finale. Elle vise à rendre le processus de validation final plus facile en conservant les informations de l'utilisatrice ou l'utilisateur, qui sont transmises au marchand sans nécessiter de formulaire HTML.
 
-Les avantages de l'utilisation de l'API *Payment Request* avec des règlements par cartes ("basic-card") :
+Les avantages de l'utilisation de l'API _Payment Request_ avec des règlements par cartes ("basic-card") :
 
 - **Une expérience d'achat rapide**&nbsp;: les utilisateurs renseignent leurs informations une fois dans le navigateur et sont alors prêts pour payer des biens et services en ligne. Ils n'ont plus besoin de renseigner les mêmes informations à chaque fois sur différents sites.
 - **Une expérience cohérente sur chaque site qui fonctionne avec l'API :** dans la mesure où l'affichage des informations de paiement est contrôlé par le navigateur, celui-ci peut adapter l'expérience de l'utilisateur. Ceci peut impliquer d'afficher l'interface utilisateur dans le langage favori de l'utilisateur.

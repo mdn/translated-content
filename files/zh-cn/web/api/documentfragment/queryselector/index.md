@@ -41,10 +41,10 @@ var el = documentfragment.querySelector(".myclass");
 <div id="foo:bar"></div>
 
 <script>
-document.querySelector('#foo\bar')    // 啥也不匹配
-document.querySelector('#foo\\\\bar') // 第一个 DIV
-document.querySelector('#foo:bar')     // 啥也不匹配
-document.querySelector('#foo\\:bar')   // 第二个 DIV
+  document.querySelector("#foo\bar"); // 啥也不匹配
+  document.querySelector("#foo\\\\bar"); // 第一个 DIV
+  document.querySelector("#foo:bar"); // 啥也不匹配
+  document.querySelector("#foo\\:bar"); // 第二个 DIV
 </script>
 ```
 

@@ -2,6 +2,7 @@
 title: URL.username
 slug: Web/API/URL/username
 ---
+
 {{ApiRef("URL API")}}
 
 {{domxref("URL")}} 인터페이스의 **`username`** 속성은 도메인 이전의 사용자 이름을 담은 {{domxref("USVString")}}을 반환합니다.
@@ -11,8 +12,8 @@ slug: Web/API/URL/username
 ## 구문
 
 ```js
-const usernameString = url.username
-url.username = newUsername
+const usernameString = url.username;
+url.username = newUsername;
 ```
 
 ### 값
@@ -22,8 +23,11 @@ url.username = newUsername
 ## 예제
 
 ```js
-const url = new URL('https://anonymous:flabada@developer.mozilla.org/en-US/docs/Web/API/URL/username');
-console.log(url.username) // Logs "anonymous"
+const url = new URL(
+  "https://anonymous:flabada@developer.mozilla.org/ko/docs/Web/API/URL/username",
+);
+console.log(url.username); // Logs "anonymous"
+=======
 ```
 
 ## 명세

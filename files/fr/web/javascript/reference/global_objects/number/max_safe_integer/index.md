@@ -1,19 +1,11 @@
 ---
 title: Number.MAX_SAFE_INTEGER
 slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Number
-  - Propriété
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER
-original_slug: Web/JavaScript/Reference/Objets_globaux/Number/MAX_SAFE_INTEGER
 ---
 
 {{JSRef}}
 
-La constante **`Number.MAX_SAFE_INTEGER`** représente la valeur (sûre) maximale d’un nombre entier en JavaScript (2^53 -1).
+La constante **`Number.MAX_SAFE_INTEGER`** représente la valeur (sûre) maximale d'un nombre entier en JavaScript (2^53 -1).
 
 > **Note :** Pour représenter des entiers supérieurs à cette valeur, on pourra utiliser le type {{jsxref("BigInt")}}.
 
@@ -23,7 +15,7 @@ La constante **`Number.MAX_SAFE_INTEGER`** représente la valeur (sûre) maximal
 
 ## Description
 
-La constante `MAX_SAFE_INTEGER` a une valeur de `9007199254740991`. Cette valeur s'explique par le fait que JavaScript utilise [les nombres au format de virgule flottante à double précision](http://en.wikipedia.org/wiki/Double_precision_floating-point_format) comme spécifié dans [IEEE 754](http://fr.wikipedia.org/wiki/IEEE_754) et ne peut représenter avec certitude qu’un nombre entre `-(2^53-1)` et `2^53 -1`.
+La constante `MAX_SAFE_INTEGER` a une valeur de `9007199254740991`. Cette valeur s'explique par le fait que JavaScript utilise [les nombres au format de virgule flottante à double précision](http://en.wikipedia.org/wiki/Double_precision_floating-point_format) comme spécifié dans [IEEE 754](http://fr.wikipedia.org/wiki/IEEE_754) et ne peut représenter avec certitude qu'un nombre entre `-(2^53-1)` et `2^53 -1`.
 
 Dans ce contexte, « sûr » fait référence à la capacité à représenter exactement les entiers et à les comparer entre eux. Par exemple, `Number.MAX_SAFE_INTEGER + 1 === Number.MAX_SAFE_INTEGER + 2` vaudra `true` ce qui est mathématiquement incorrect. Pour plus d'informations, voir également {{jsxref("Number.isSafeInteger()")}}.
 
@@ -32,8 +24,8 @@ Dans ce contexte, « sûr » fait référence à la capacité à représenter ex
 ## Exemples
 
 ```js
-Number.MAX_SAFE_INTEGER // 9007199254740991
-Math.pow(2, 53) -1      // 9007199254740991
+Number.MAX_SAFE_INTEGER; // 9007199254740991
+Math.pow(2, 53) - 1; // 9007199254740991
 ```
 
 ## Spécifications

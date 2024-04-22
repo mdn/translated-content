@@ -1,12 +1,6 @@
 ---
-title: '<head> : l''élément de métadonnées (en-tête) du document'
+title: "<head> : l'élément de métadonnées (en-tête) du document"
 slug: Web/HTML/Element/head
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/head
 ---
 
 {{HTMLSidebar}}
@@ -19,7 +13,7 @@ L'élément HTML **\<head>** fournit des informations générales (métadonnées
 
 Comme tous les éléments HTML, cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
 
-- {{htmlattrdef("profile")}}{{deprecated_inline}}
+- `profile`{{deprecated_inline}}
   - : L'URI d'un ou plusieurs profils de métadonnées, séparés par un espace.
 
 ## Exemples

@@ -1,20 +1,9 @@
 ---
 title: downloads.DownloadTime
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadTime
-tags:
-  - API
-  - Add-ons
-  - DownloadTime
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - downloads
-translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadTime
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Le type `DownloadTime` de l'API {{WebExtAPIRef("downloads")}} représente le temps nécessaire au téléchargement.
 

@@ -1,16 +1,6 @@
 ---
 title: Intl.ListFormat.prototype.formatToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/formatToParts
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - ListFormat
-  - Méthode
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/formatToParts
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/ListFormat/formatToParts
 ---
 
 {{JSRef}}
@@ -20,7 +10,7 @@ La méthode **`Intl.ListFormat.prototype.formatToParts()`** renvoie un tableau (
 ## Syntaxe
 
 ```js
-Intl.ListFormat.prototype.formatToParts(list)
+Intl.ListFormat.prototype.formatToParts(list);
 ```
 
 ### Paramètres
@@ -43,8 +33,11 @@ Les options de locale et de style utilisées pour le formatage sont fournies lor
 ## Exemples
 
 ```js
-const fruits = ['Apple', 'Orange', 'Pineapple'];
-const myListFormat = new Intl.ListFormat('en-GB', { style: 'long', type: 'conjunction' });
+const fruits = ["Apple", "Orange", "Pineapple"];
+const myListFormat = new Intl.ListFormat("en-GB", {
+  style: "long",
+  type: "conjunction",
+});
 
 console.table(myListFormat.formatToParts(fruits));
 // [

@@ -1,5 +1,5 @@
 ---
-title: 'Django 튜토리얼 파트 9: 폼(form)으로 작업하기'
+title: "Django 튜토리얼 파트 9: 폼(form)으로 작업하기"
 slug: Learn/Server-side/Django/Forms
 ---
 
@@ -14,7 +14,7 @@ slug: Learn/Server-side/Django/Forms
       <td>
         아래 파트를 포함하여 앞선 모든 튜토리얼 파트의 학습을 완료할것
         <a
-          href="/en-US/docs/Learn/Server-side/Django/authentication_and_sessions"
+          href="/ko/docs/Learn/Server-side/Django/authentication_and_sessions"
           >Django 튜토리얼 파트 8: 사용자 인증과 이용권한</a
         >.
       </td>
@@ -52,9 +52,13 @@ slug: Learn/Server-side/Django/Forms
 
 ```html
 <form action="/team_name_url/" method="post">
-    <label for="team_name">Enter name: </label>
-    <input id="team_name" type="text" name="name_field" value="Default name for team.">
-    <input type="submit" value="OK">
+  <label for="team_name">Enter name: </label>
+  <input
+    id="team_name"
+    type="text"
+    name="name_field"
+    value="Default name for team." />
+  <input type="submit" value="OK" />
 </form>
 ```
 
@@ -84,17 +88,17 @@ Django의 폼 처리 과정은 (모델에 대한 정보를 보여주는데 있�
 
 1. 사용자가 처음으로 폼을 요청할 때 기본 폼을 보여준다.
 
-    - 폼은 비어있는 필드가 있을 수 있다 (예를 들면, 새로운 책을 등록할 경우) 아니면 초기값으로 채워진 필드가 있을 수도 있다. ( 예를 들면, 기존의 책을 수정하거나, 흔히 사용하는 초기값이 있을경우)
-    - 이 시점의 폼은 (초기값이 있긴해도) 유저가 입력한 값에 연관되지 않았기에 unbound 상태라고 불린다.
+   - 폼은 비어있는 필드가 있을 수 있다 (예를 들면, 새로운 책을 등록할 경우) 아니면 초기값으로 채워진 필드가 있을 수도 있다. ( 예를 들면, 기존의 책을 수정하거나, 흔히 사용하는 초기값이 있을경우)
+   - 이 시점의 폼은 (초기값이 있긴해도) 유저가 입력한 값에 연관되지 않았기에 unbound 상태라고 불린다.
 
 2. 제출 요청으로 부터 데이타를 수집하고 그것을 폼에 결합한다.
 
-    - 데이타를 폼에 결합(binding) 한다는 것은 사용자 입력 데이타와 유효성을 위반한 경우의 에러메시지가 폼을 재표시할 필요가 있을 때 준비되었다는 의미이다.
+   - 데이타를 폼에 결합(binding) 한다는 것은 사용자 입력 데이타와 유효성을 위반한 경우의 에러메시지가 폼을 재표시할 필요가 있을 때 준비되었다는 의미이다.
 
 3. 데이타를 다듬어서 유효성을 검증한다.
 
-    - 데이타를 다듬는다는 것은 사용자 입력을 정화(sanitisation) 하고 (예를 들면, 잠재적으로 악의적인 콘덴츠를 서버로 보낼수도 있는 유효하지 않은 문자를 제거하는 것) python에서 사용하는 타입의 데이타로 변환하는 것이다.
-    - 유효성검증은 입력된 값이 해당 필드에 적절한 값인지 검사한다. (예를 들면, 데이타가 허용된 범위에 있는 값인지, 너무 짧거나 길지 않은지 등등)
+   - 데이타를 다듬는다는 것은 사용자 입력을 정화(sanitisation) 하고 (예를 들면, 잠재적으로 악의적인 콘덴츠를 서버로 보낼수도 있는 유효하지 않은 문자를 제거하는 것) python에서 사용하는 타입의 데이타로 변환하는 것이다.
+   - 유효성검증은 입력된 값이 해당 필드에 적절한 값인지 검사한다. (예를 들면, 데이타가 허용된 범위에 있는 값인지, 너무 짧거나 길지 않은지 등등)
 
 4. 입력된 어떤 데이타가 유효하지 않다면, 폼을 다시 표시하는데 이번에는 초기값이 아니라 유저가 입력한 데이타와 문제가 있는 필드의 에러 메시지와 함께 표시한다.
 5. 입력된 모든 데이타가 유효하다면, 요청된 동작을 수행한다. (예를 들면, 데이타를 저장하거나, 이메일을 보내거나, 검색결과를 반환하거나, 파일을 업로딩하는 작업 등등)
@@ -361,19 +365,19 @@ def renew_book_librarian(request, pk):
 
 뷰 에서 참조되는 템플릿 (**/catalog/templates/catalog/book_renew_librarian.html**)을 생성하고 아래 코드를 복사해넣어라 :
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
-    <h1>Renew: {{ book_instance.book.title }}</h1>
-    <p>Borrower: {{ book_instance.borrower }}</p>
-    <p> if book_instance.is_overdue %} class="text-danger"{% endif %}>Due date: {{book_instance.due_back}}</p>
+  <h1>Renew: {{ book_instance.book.title }}</h1>
+  <p>Borrower: {{ book_instance.borrower }}</p>
+  <p> if book_instance.is_overdue %} class="text-danger"{% endif %}>Due date: {{book_instance.due_back}}</p>
 
-    <form action="" method="post">
-        {% csrf_token %}
-        {{ form.as_table }}
-        <input type="submit" value="Submit">
-    </form>
+  <form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_table }}
+    <input type="submit" value="Submit">
+  </form>
 {% endblock %}
 ```
 
@@ -389,9 +393,16 @@ def renew_book_librarian(request, pk):
 <tr>
   <th><label for="id_renewal_date">Renewal date:</label></th>
   <td>
-    <input id="id_renewal_date" name="renewal_date" type="text" value="2016-11-08" required />
+    <input
+      id="id_renewal_date"
+      name="renewal_date"
+      type="text"
+      value="2016-11-08"
+      required />
     <br />
-    <span class="helptext">Enter date between now and 4 weeks (default 3 weeks).</span>
+    <span class="helptext"
+      >Enter date between now and 4 weeks (default 3 weeks).</span
+    >
   </td>
 </tr>
 ```
@@ -403,14 +414,21 @@ def renew_book_librarian(request, pk):
 ```html
 <tr>
   <th><label for="id_renewal_date">Renewal date:</label></th>
-   <td>
-      <ul class="errorlist">
-        <li>Invalid date - renewal in past</li>
-      </ul>
-      <input id="id_renewal_date" name="renewal_date" type="text" value="2015-11-08" required />
-      <br />
-      <span class="helptext">Enter date between now and 4 weeks (default 3 weeks).</span>
-    </td>
+  <td>
+    <ul class="errorlist">
+      <li>Invalid date - renewal in past</li>
+    </ul>
+    <input
+      id="id_renewal_date"
+      name="renewal_date"
+      type="text"
+      value="2015-11-08"
+      required />
+    <br />
+    <span class="helptext"
+      >Enter date between now and 4 weeks (default 3 weeks).</span
+    >
+  </td>
 </tr>
 ```
 
@@ -431,8 +449,10 @@ def renew_book_librarian(request, pk):
 
 If you accepted the "challenge" in [Django Tutorial Part 8: User authentication and permissions](/ko/docs/Learn/Server-side/Django/authentication_and_sessions#Challenge_yourself) you'll have a list of all books on loan in the library, which is only visible to library staff. We can add a link to our renew page next to each item using the template code below.
 
-```html
-{% if perms.catalog.can_mark_returned %}- <a href="{% url 'renew-book-librarian' bookinst.id %}">Renew</a>  {% endif %}
+```django
+{% if perms.catalog.can_mark_returned %}-
+  <a href="{% url 'renew-book-librarian' bookinst.id %}">Renew</a>
+{% endif %}
 ```
 
 > **참고:** Remember that your test login will need to have the permission "`catalog.can_mark_returned`" in order to access the renew book page (perhaps use your superuser account).
@@ -556,19 +576,17 @@ The "create" and "update" views use the same template by default, which will be 
 
 Create the template file **locallibrary/catalog/templates/catalog/author_form.html** and copy in the text below.
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
-
-<form action="" method="post">
+  <form action="" method="post">
     {% csrf_token %}
     <table>
-    {{ form.as_table }}
+      {{ form.as_table }}
     </table>
     <input type="submit" value="Submit" />
-
-</form>
+  </form>
 {% endblock %}
 ```
 
@@ -576,20 +594,18 @@ This is similar to our previous forms, and renders the fields using a table. Not
 
 The "delete" view expects to find a template named with the format _model_name_**\_confirm_delete.html** (again, you can change the suffix using `template_name_suffix` in your view). Create the template file **locallibrary/catalog/templates/catalog/author_confirm_delete.html** and copy in the text below.
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
+  <h1>Delete Author</h1>
 
-<h1>Delete Author</h1>
+  <p>Are you sure you want to delete the author: \{{ author }}?</p>
 
-<p>Are you sure you want to delete the author: \{{ author }}?</p>
-
-<form action="" method="POST">
-  {% csrf_token %}
-  <input type="submit" action="" value="Yes, delete." />
-</form>
-
+  <form action="" method="POST">
+    {% csrf_token %}
+    <input type="submit" action="" value="Yes, delete." />
+  </form>
 {% endblock %}
 ```
 

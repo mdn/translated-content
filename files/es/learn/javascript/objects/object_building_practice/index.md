@@ -1,7 +1,6 @@
 ---
 title: Ejercicio práctico de construcción de objetos
 slug: Learn/JavaScript/Objects/Object_building_practice
-original_slug: Learn/JavaScript/Objects/Ejercicio_práctico_de_construcción_de_objetos
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
@@ -31,12 +30,12 @@ Para comenzar haga una copia en su computador de los archivos: [`index.html`](ht
 La primera parte del script es:
 
 ```js
-var canvas = document.querySelector('canvas');
+var canvas = document.querySelector("canvas");
 
-var ctx = canvas.getContext('2d');
+var ctx = canvas.getContext("2d");
 
-var width = canvas.width = window.innerWidth;
-var height = canvas.height = window.innerHeight;
+var width = (canvas.width = window.innerWidth);
+var height = (canvas.height = window.innerHeight);
 ```
 
 Este script obtiene una referencia del elemento `<canvas>`, luego llama al método [`getContext()`](/es/docs/Web/API/HTMLCanvasElement/getContext) para definir un contexto en el cual se pueda comenzar a dibujar. El resultado de la variable (`ctx`) es el objeto que representa directamente el área de dibujo del `<canvas>` y permite dibujar elementos 2D en él.
@@ -85,12 +84,12 @@ Con esto se resuelven las propiedades del objeto, ¿Pero qué hacemos con los m�
 Para dibujar, añadiremos el siguiente método `draw()` al prototipo del objeto `Ball():`
 
 ```js
-Ball.prototype.draw = function() {
+Ball.prototype.draw = function () {
   ctx.beginPath();
   ctx.fillStyle = this.color;
   ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
   ctx.fill();
-}
+};
 ```
 
 Con esta función cada objeto pelota `Ball()` puede dibujarse en la pantalla utilizando el contexto 2D definido anteriormente (`ctx`)
@@ -111,18 +110,18 @@ Ya se puede empezar a testear el objeto.
 2. Abra la consola de JavaScript en el navegador, y refresque la página, para que el tamaño del _canvas_ modifique sus dimensiones adaptándose al _viewport_ con la consola abierta.
 3. Teclee lo siguiente en la consola para crear una nueva pelota.
 
-    ```js
-    var testBall = new Ball(50, 100, 4, 4, 'blue', 10);
-    ```
+   ```js
+   var testBall = new Ball(50, 100, 4, 4, "blue", 10);
+   ```
 
 4. Pruebe a llamar a las variables miembro:
 
-    ```js
-    testBall.x
-    testBall.size
-    testBall.color
-    testBall.draw()
-    ```
+   ```js
+   testBall.x;
+   testBall.size;
+   testBall.color;
+   testBall.draw();
+   ```
 
 5. Al teclear la última línea, debería ver que la pelota se dibuja en alguna parte del _canvas_.
 
@@ -131,26 +130,26 @@ Ya se puede empezar a testear el objeto.
 Ahora podemos dibujar una pelota en una posición dada, pero para empezar a moverla, se necesita una función de actualización de algún tipo. Podemos añadir el código a continuación, al final del archivo de JavaScript, para añidir un método de actualización `update()` en el prototipo de la clase `Ball()`
 
 ```js
-Ball.prototype.update = function() {
-  if ((this.x + this.size) >= width) {
-    this.velX = -(this.velX);
+Ball.prototype.update = function () {
+  if (this.x + this.size >= width) {
+    this.velX = -this.velX;
   }
 
-  if ((this.x - this.size) <= 0) {
-    this.velX = -(this.velX);
+  if (this.x - this.size <= 0) {
+    this.velX = -this.velX;
   }
 
-  if ((this.y + this.size) >= height) {
-    this.velY = -(this.velY);
+  if (this.y + this.size >= height) {
+    this.velY = -this.velY;
   }
 
-  if ((this.y - this.size) <= 0) {
-    this.velY = -(this.velY);
+  if (this.y - this.size <= 0) {
+    this.velY = -this.velY;
   }
 
   this.x += this.velX;
   this.y += this.velY;
-}
+};
 ```
 
 Las cuatro primeras partes de la función verifican si la pelota ha alcanzado el borde del _canvas_. Si es así, se invierte la dirección de la velocidad, para que la pelota se mueva en la dirección contraria. Así, si la pelota va hacia arriba, (`velY` positiva) , entonces la velocidad vertical es cambiada, para que se mueva hacia abajo (`velY` negativa).
@@ -184,21 +183,21 @@ Todos los programas que generan animaciones normalmente tienen un bucle de anima
 
 ```js
 function loop() {
-  ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
+  ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
   ctx.fillRect(0, 0, width, height);
 
   while (balls.length < 25) {
-    var size = random(10,20);
+    var size = random(10, 20);
     var ball = new Ball(
       // la posición de las pelotas, se dibujará al menos siempre
       // como mínimo a un ancho de la pelota de distancia al borde del
       // canvas, para evitar errores en el dibujo
-      random(0 + size,width - size),
-      random(0 + size,height - size),
-      random(-7,7),
-      random(-7,7),
-      'rgb(' + random(0,255) + ',' + random(0,255) + ',' + random(0,255) +')',
-      size
+      random(0 + size, width - size),
+      random(0 + size, height - size),
+      random(-7, 7),
+      random(-7, 7),
+      `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`,
+      size,
     );
     balls.push(ball);
   }
@@ -233,34 +232,37 @@ Ahora, un poco de diversión, añadamos la detección de colisiones a nuestro c�
 
 1. El primer paso, será añadir el código a continuación a continuación de donde se definió el método `update()`. (en código de `Ball.prototype.update`)
 
-    ```js
-    Ball.prototype.collisionDetect = function() {
-      for (var j = 0; j < balls.length; j++) {
-        if (!(this === balls[j])) {
-          var dx = this.x - balls[j].x;
-          var dy = this.y - balls[j].y;
-          var distance = Math.sqrt(dx * dx + dy * dy);
+   ```js
+   Ball.prototype.collisionDetect = function () {
+     for (var j = 0; j < balls.length; j++) {
+       if (!(this === balls[j])) {
+         var dx = this.x - balls[j].x;
+         var dy = this.y - balls[j].y;
+         var distance = Math.sqrt(dx * dx + dy * dy);
 
-          if (distance < this.size + balls[j].size) {
-            balls[j].color = this.color = 'rgb(' + random(0, 255) + ',' + random(0, 255) + ',' + random(0, 255) +')';
-          }
-        }
-      }
-    }
-    ```
+         if (distance < this.size + balls[j].size) {
+           balls[j].color = this.color = `rgb(${random(0, 255)},${random(
+             0,
+             255,
+           )},${random(0, 255)})`;
+         }
+       }
+     }
+   };
+   ```
 
-    Esta función es un poco complicada, así que no hay que preocuparse mucho si de momento no se comprende del todo.
+   Esta función es un poco complicada, así que no hay que preocuparse mucho si de momento no se comprende del todo.
 
-    - Para cada pelota, necesitamos comprobar si chocará con cada una de las otras pelotas. Para esto, en un bucle `for` para recorrer todas las pelotas.
-    - Dentro del bucle, usamos un `if` para comprobar si la pelota que estamos mirando en ese ciclo del bucle `for` es la pelota que estamos mirando. No queremos mirar si una pelota ha chocado consigo misma. Para esto miramos si la pelota actual (es decir la pelota que está invocando al método que resuelve la detección de colisiones) es la misma que la indicada por el bucle. Usamos un operador `!` para indicar una negación en la comparación, así que el código dentro de la condición solo se ejecuta si estamos mirando dos pelotas distintas.
-    - Usamos un algoritmo común para comprobar la colisión de los dos pelotas. Básicamente miramos si el área de dos círculos se superponen. Esto se explica mejor en el enlace [detección de colision 2D](/es/docs/Games/Techniques/2D_collision_detection).
-    - En este caso, únicamente se define la propiedad de `color` para las dos pelotas, cambiándolas a un nuevo color aleatorio. Se podría haber hecho cosas más complicadas, como que las pelotas rebotasen una con la otra de forma realista, pero esto habría supuesto un desarrollo más complejo. Para desarrollar esos efectos de simulación física, los desarrolladores tienden a usar librerías de física como [PhysicsJS](http://wellcaffeinated.net/PhysicsJS/), [matter.js](http://brm.io/matter-js/), [Phaser](http://phaser.io/), etc.
+   - Para cada pelota, necesitamos comprobar si chocará con cada una de las otras pelotas. Para esto, en un bucle `for` para recorrer todas las pelotas.
+   - Dentro del bucle, usamos un `if` para comprobar si la pelota que estamos mirando en ese ciclo del bucle `for` es la pelota que estamos mirando. No queremos mirar si una pelota ha chocado consigo misma. Para esto miramos si la pelota actual (es decir la pelota que está invocando al método que resuelve la detección de colisiones) es la misma que la indicada por el bucle. Usamos un operador `!` para indicar una negación en la comparación, así que el código dentro de la condición solo se ejecuta si estamos mirando dos pelotas distintas.
+   - Usamos un algoritmo común para comprobar la colisión de los dos pelotas. Básicamente miramos si el área de dos círculos se superponen. Esto se explica mejor en el enlace [detección de colision 2D](/es/docs/Games/Techniques/2D_collision_detection).
+   - En este caso, únicamente se define la propiedad de `color` para las dos pelotas, cambiándolas a un nuevo color aleatorio. Se podría haber hecho cosas más complicadas, como que las pelotas rebotasen una con la otra de forma realista, pero esto habría supuesto un desarrollo más complejo. Para desarrollar esos efectos de simulación física, los desarrolladores tienden a usar librerías de física como [PhysicsJS](http://wellcaffeinated.net/PhysicsJS/), [matter.js](http://brm.io/matter-js/), [Phaser](http://phaser.io/), etc.
 
 2. También es necesario llamar este método en cada instante de la animación. `balls[i].update();` en la línea:
 
-    ```js
-    balls[i].collisionDetect();
-    ```
+   ```js
+   balls[i].collisionDetect();
+   ```
 
 3. Guardar y refrescar la demo de nuevo y podrá ver como las pelotas cambian de color cuando chocan entre ellas.
 

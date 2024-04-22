@@ -1,12 +1,6 @@
 ---
-title: '::-moz-color-swatch'
+title: "::-moz-color-swatch"
 slug: Web/CSS/::-moz-color-swatch
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-element
-  - Reference
-translation_of: Web/CSS/::-moz-color-swatch
 ---
 
 {{CSSRef}}{{Non-standard_header}}
@@ -24,13 +18,13 @@ Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) **`::-moz-color-swatch`*
 ### HTML
 
 ```html
-<input type="color" value="#de2020"/>
+<input type="color" value="#de2020" />
 ```
 
 ### CSS
 
 ```css
-input[type=color]::-moz-color-swatch {
+input[type="color"]::-moz-color-swatch {
   border-radius: 10px;
   border-style: none;
 }

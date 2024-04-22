@@ -1,13 +1,6 @@
 ---
 title: element.cloneNode
 slug: Web/API/Node/cloneNode
-tags:
-  - API
-  - DOM
-  - Duplication
-  - Méthodes
-  - Noeuds
-translation_of: Web/API/Node/cloneNode
 ---
 
 {{APIRef("DOM")}}

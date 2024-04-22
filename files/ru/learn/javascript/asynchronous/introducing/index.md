@@ -1,18 +1,9 @@
 ---
 title: Введение в асинхронный JavaScript
 slug: Learn/JavaScript/Asynchronous/Introducing
-tags:
-  - Асинхронность
-  - Введение
-  - Гайд
-  - Начинающий
-  - Промисы
-  - Статья
-  - колбэк
-translation_of: Learn/JavaScript/Asynchronous/Introducing
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Concepts", "Learn/JavaScript/Asynchronous/Timeouts_and_intervals", "Learn/JavaScript/Asynchronous")}}
+{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
 
 В этой статье мы кратко остановимся на проблемах, связанных с синхронным Javascript, а также ознакомимся с несколькими асинхронными методами, демонстрирующими как они могут помочь нам подобные проблемы решить.
 
@@ -22,17 +13,15 @@ translation_of: Learn/JavaScript/Asynchronous/Introducing
 
 ## Синхронный JavaScript
 
-Чтобы (позволить нам) понять что есть **{{Glossary("асинхронный")}}** JavaScript, нам следовало бы для начала убедиться, что мы понимаем что такое **{{Glossary("синхронный")}}** JavaScript. Этот раздел резюмирует некоторую информацию из прошлой статьи.
-
-Большая часть функциональности, которую мы рассматривали в предыдущих обучающих модулях, является синхронной — вы запускаете какой-то код, а результат возвращается, как только браузер может его вернуть. Давайте рассмотрим простой пример ( посмотрите [онлайн](https://mdn.github.io/learning-area/javascript/asynchronous/introducing/basic-function.html), как это работает и посмотрите [исходный код](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/basic-function.html)):
+Большая часть функциональности, которую мы рассматривали в предыдущих обучающих модулях, является синхронной — вы запускаете какой-то код, а результат возвращается, как только браузер может его вернуть. Давайте рассмотрим простой пример, как это работает:
 
 ```js
-const btn = document.querySelector('button');
-btn.addEventListener('click', () => {
-  alert('You clicked me!');
+const btn = document.querySelector("button");
+btn.addEventListener("click", () => {
+  alert("You clicked me!");
 
-  let pElem = document.createElement('p');
-  pElem.textContent = 'This is a newly-added paragraph.';
+  let pElem = document.createElement("p");
+  pElem.textContent = "This is a newly-added paragraph.";
   document.body.appendChild(pElem);
 });
 ```
@@ -40,14 +29,14 @@ btn.addEventListener('click', () => {
 В этом блоке кода команды выполняются одна за другой:
 
 1. Получаем ссылку на элемент {{htmlelement("button")}}, который уже есть в DOM.
-2. Добавляем к кнопке обработчик события [`click`](/en-US/docs/Web/API/Element/click_event) так, что при нажатии на неё:
+2. Добавляем к кнопке обработчик события [`click`](/ru/docs/Web/API/Element/click_event) так, что при нажатии на неё:
 
-    1. Выводится сообщение [`alert()`](/en-US/docs/Web/API/Window/alert).
-    2. После закрытия сообщения создаём элемент {{htmlelement("p")}} (абзац).
-    3. Затем добавляем в абзац текст.
-    4. В конце добавляем созданный абзац в тело документа.
+   1. Выводится сообщение [`alert()`](/ru/docs/Web/API/Window/alert).
+   2. После закрытия сообщения создаём элемент {{htmlelement("p")}} (абзац).
+   3. Затем добавляем в абзац текст.
+   4. В конце добавляем созданный абзац в тело документа.
 
-Пока выполняется каждая операция, ничего больше не может произойти — обработка (отображение) документа приостановлена. Так происходит, как было сказано [в предыдущей статье](/ru/docs/Learn/JavaScript/Asynchronous/Introducing), потому что [JavaScript является однопоточным](/ru/docs/Learn/JavaScript/Asynchronous/Concepts#JavaScript_%D0%BE%D0%B4%D0%BD%D0%BE%D0%BF%D0%BE%D1%82%D0%BE%D1%87%D0%BD%D1%8B%D0%B9). В каждый момент времени может выполняться только одна команда, обрабатываемая в единственном — главном потоке. Все остальные действия блокируются до окончания выполнения текущей команды.
+Пока выполняется каждая операция, ничего больше не может произойти — обработка (отображение) документа приостановлена. Так происходит, потому что JavaScript является однопоточным. В каждый момент времени может выполняться только одна команда, обрабатываемая в единственном — главном потоке. Все остальные действия блокируются до окончания выполнения текущей команды.
 
 Так и в примере выше: после нажатия кнопки абзац не сможет появиться пока не будет нажата кнопка OK в окне сообщения. Попробуйте сами:
 
@@ -57,7 +46,7 @@ btn.addEventListener('click', () => {
 
 {{EmbedLiveSample('Синхронный_JavaScript', '100%', '70px')}}
 
-> **Примечание:** Важно помнить, что [`alert()`](/en-US/docs/Web/API/Window/alert), хоть и часто используется для демонстрации синхронных блокирующих операций, сильно не рекомендован к использованию в реальных приложениях.
+> **Примечание:** Важно помнить, что [`alert()`](/ru/docs/Web/API/Window/alert), хоть и часто используется для демонстрации синхронных блокирующих операций, сильно не рекомендован к использованию в реальных приложениях.
 
 ## Асинхронный JavaScript
 
@@ -66,7 +55,7 @@ btn.addEventListener('click', () => {
 Почему трудно работать, используя синхронный код? Давайте посмотрим на небольшой пример. Когда вы получаете картинку с сервера, вы не можете мгновенно вернуть результат. Это значит что следующий (псевдо) код не сработает:
 
 ```js
-let response = fetch('myImage.png');
+let response = fetch("myImage.png");
 let blob = response.blob();
 // display your image blob in the UI somehow
 ```
@@ -82,11 +71,11 @@ let blob = response.blob();
 Пример асинхронного колбэка вторым параметром {{domxref("EventTarget.addEventListener", "addEventListener()")}} (как мы видели выше):
 
 ```js
-btn.addEventListener('click', () => {
-  alert('You clicked me!');
+btn.addEventListener("click", () => {
+  alert("You clicked me!");
 
-  let pElem = document.createElement('p');
-  pElem.textContent = 'This is a newly-added paragraph.';
+  let pElem = document.createElement("p");
+  pElem.textContent = "This is a newly-added paragraph.";
   document.body.appendChild(pElem);
 });
 ```
@@ -95,15 +84,15 @@ btn.addEventListener('click', () => {
 
 При передаче колбэк-функции как аргумента в другую функцию, мы передаём только ссылку на функцию как аргумент, следовательно колбэк-функция **не** выполняется мгновенно. Она вызывается асинхронно внутри тела, содержащего функцию. Эта функция должна выполнять колбэк-функцию в нужный момент.
 
-Вы можете написать свою собственную функцию, содержащую колбэк-функцию. Давайте взглянем на ещё один пример, в котором происходит загрузка ресурсов через [`XMLHttpRequest` API](/ru/docs/Web/API/XMLHttpRequest) ([запустите пример](https://mdn.github.io/learning-area/javascript/asynchronous/introducing/xhr-async-callback.html), и [посмотрите исходный код](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/xhr-async-callback.html)):
+Вы можете написать свою собственную функцию, содержащую колбэк-функцию. Давайте взглянем на ещё один пример, в котором происходит загрузка ресурсов через [`XMLHttpRequest` API](/ru/docs/Web/API/XMLHttpRequest):
 
 ```js
 function loadAsset(url, type, callback) {
   const xhr = new XMLHttpRequest();
-  xhr.open('GET', url);
+  xhr.open("GET", url);
   xhr.responseType = type;
 
-  xhr.onload = function() {
+  xhr.onload = function () {
     callback(xhr.response);
   };
 
@@ -113,25 +102,25 @@ function loadAsset(url, type, callback) {
 function displayImage(blob) {
   const objectURL = URL.createObjectURL(blob);
 
-  const image = document.createElement('img');
+  const image = document.createElement("img");
   image.src = objectURL;
   document.body.appendChild(image);
 }
 
-loadAsset('coffee.jpg', 'blob', displayImage);
+loadAsset("coffee.jpg", "blob", displayImage);
 ```
 
-Мы создали функцию `displayImage()`, которая представляет blob, переданный в неё, как объект URL, и создаёт картинку, в которой отображается URL, добавляя её в элемент документа `<body>`. Однако, далее мы создаём функцию `loadAsset()`, которая принимает колбэк-функцию в качестве параметра, вместе с URL для получения данных и типом контента. Для получения данных из URL используется `XMLHttpRequest` (часто сокращается до аббревиатуры "XHR") , перед тем как передать ответ в колбэк-функцию для дальнейшей обработки. В этом случае колбэк-функция ждёт, пока XHR закончит загрузку данных (используя обработчик события [`onload`](/en-US/docs/Web/API/XMLHttpRequestEventTarget/onload)) перед отправкой данных в колбэк-функцию.
+Мы создали функцию `displayImage()`, которая представляет blob, переданный в неё, как объект URL, и создаёт картинку, в которой отображается URL, добавляя её в элемент документа `<body>`. Однако, далее мы создаём функцию `loadAsset()`, которая принимает колбэк-функцию в качестве параметра, вместе с URL для получения данных и типом контента. Для получения данных из URL используется `XMLHttpRequest` (часто сокращается до аббревиатуры "XHR") , перед тем как передать ответ в колбэк-функцию для дальнейшей обработки. В этом случае колбэк-функция ждёт, пока XHR закончит загрузку данных (используя обработчик события [`onload`](/ru/docs/Web/API/XMLHttpRequestEventTarget/onload)) перед отправкой данных в колбэк-функцию.
 
 Колбэк-функции универсальны — они не только позволяют вам контролировать порядок, в котором запускаются функции и данные, передающиеся между ними, они также позволяют передавать данные различным функциям, в зависимости от обстоятельств. Вы можете выполнять различные действия с загруженным ответом, такие как `processJSON()`, `displayText()`, и другие.
 
 Заметьте, что не все колбэк-функции асинхронны — некоторые запускаются синхронно. Например, при использовании {{jsxref("Array.prototype.forEach()")}} для перебора элементов массива ([запустите пример](https://mdn.github.io/learning-area/javascript/asynchronous/introducing/foreach.html), и [посмотрите исходный код](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/foreach.html)):
 
 ```js
-const gods = ['Apollo', 'Artemis', 'Ares', 'Zeus'];
+const gods = ["Apollo", "Artemis", "Ares", "Zeus"];
 
-gods.forEach(function (eachName, index){
-  console.log(index + '. ' + eachName);
+gods.forEach(function (eachName, index) {
+  console.log(index + ". " + eachName);
 });
 ```
 
@@ -139,18 +128,18 @@ gods.forEach(function (eachName, index){
 
 ## Промисы
 
-Промисы — новый стиль написания асинхронного кода, который используется в современных Web API. Хорошим примером является [`fetch()`](/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch) API, который современнее и эффективнее чем {{domxref("XMLHttpRequest")}}. Посмотрим на краткий пример, из нашей статьи [Fetching data from the server](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data):
+Промисы — новый стиль написания асинхронного кода, который используется в современных Web API. Хорошим примером является [`fetch()`](/ru/docs/Web/API/fetch) API, который современнее и эффективнее чем {{domxref("XMLHttpRequest")}}. Посмотрим на краткий пример, из нашей статьи [Fetching data from the server](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data):
 
 ```js
-fetch('products.json')
-  .then( response => {
+fetch("products.json")
+  .then((response) => {
     if (!response.ok) {
       throw new Error(`HTTP error: ${response.status}`);
     }
     return response.json();
   })
-  .then( json => initialize(json) )
-  .catch( err => console.error(`Fetch problem: ${err.message}`) );
+  .then((json) => initialize(json))
+  .catch((err) => console.error(`Fetch problem: ${err.message}`));
 ```
 
 > **Примечание:** вы можете посмотреть законченную версию на github ([посмотрите исходный код](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store/can-script.js) и [запустите пример](https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/)).
@@ -159,8 +148,8 @@ fetch('products.json')
 
 Может понадобиться много времени, чтобы привыкнуть к данной концепции; это немного напоминает [Кота Шрёдингера](https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D1%82_%D0%A8%D1%80%D1%91%D0%B4%D0%B8%D0%BD%D0%B3%D0%B5%D1%80%D0%B0) в действии. Ни один из возможных результатов ещё не произошёл, поэтому операция fetch в настоящее время ожидает результата. Далее у нас есть три блока кода следующих сразу после `fetch()`:
 
-- Два [`then()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) блока. Оба включают в себя функцию обратного вызова, которая запустится, если предыдущая операция закончилась успешно, и каждая колбэк-функция принимает на вход результат предыдущей успешно выполненной операции, таким образом вы можете выполнять операции последовательно. Каждый `.then()` блок возвращает новый promise, это значит что вы можете объединять в цепочки блоки `.then()`, таким образом можно выполнить несколько асинхронных операций по порядку, одну за другой.
-- [`catch()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch) блок описывается в конце и будет запущен если какой-либо `.then()` блок завершится с ошибкой — это аналогично синхронному [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch), ошибка становится доступной внутри `catch()`, что может быть использовано для сообщения пользователю о типе возникшей ошибки. Однако синхронный `try...catch` не будет работать с promise, хотя будет работать с [async/await](/ru/docs/Learn/JavaScript/Asynchronous/Async_await), с которыми вы познакомитесь позже.
+- Два [`then()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) блока. Оба включают в себя функцию обратного вызова, которая запустится, если предыдущая операция закончилась успешно, и каждая колбэк-функция принимает на вход результат предыдущей успешно выполненной операции, таким образом вы можете выполнять операции последовательно. Каждый `.then()` блок возвращает новый promise, это значит что вы можете объединять в цепочки блоки `.then()`, таким образом можно выполнить несколько асинхронных операций по порядку, одну за другой.
+- [`catch()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch) блок описывается в конце и будет запущен если какой-либо `.then()` блок завершится с ошибкой — это аналогично синхронному [`try...catch`](/ru/docs/Web/JavaScript/Reference/Statements/try...catch), ошибка становится доступной внутри `catch()`, что может быть использовано для сообщения пользователю о типе возникшей ошибки. Однако синхронный `try...catch` не будет работать с promise, хотя будет работать с [async/await](/ru/docs/Learn/JavaScript/Asynchronous/Promises), с которыми вы познакомитесь позже.
 
 > **Примечание:** вы узнаете намного больше о promise позже в этом модуле, так что не волнуйтесь если вы что-нибудь не поняли.
 
@@ -181,25 +170,30 @@ fetch('products.json')
 
 ## Природа асинхронного кода
 
-Давайте рассмотрим пример, который дополнительно иллюстрирует природу асинхронного кода, показывая, что может произойти, когда мы не полностью осознаем порядок выполнения кода, и проблемы, связанные с попыткой трактовать асинхронный код как синхронный. Следующий пример довольно похож на тот, что мы видели раньше. Одно из отличий состоит в том, что мы включили ряд операторов {{domxref("console.log()")}} чтобы проиллюстрировать порядок, в котором, как вы думаете, будет выполняться код.
+Давайте рассмотрим пример, который дополнительно иллюстрирует природу асинхронного кода, показывая, что может произойти, когда мы не полностью осознаем порядок выполнения кода, и проблемы, связанные с попыткой трактовать асинхронный код как синхронный. Следующий пример довольно похож на тот, что мы видели раньше. Одно из отличий состоит в том, что мы включили ряд операторов {{domxref("console.log_static")}} чтобы проиллюстрировать порядок, в котором, как вы думаете, будет выполняться код.
 
 ```js
-console.log ('Starting');
+console.log("Starting");
 let image;
 
-fetch('coffee.jpg').then((response) => {
-  console.log('It worked :)')
-  return response.blob();
-}).then((myBlob) => {
-  const objectURL = URL.createObjectURL(myBlob);
-  image = document.createElement('img');
-  image.src = objectURL;
-  document.body.appendChild(image);
-}).catch((error) => {
-  console.log('There has been a problem with your fetch operation: ' + error.message);
-});
+fetch("coffee.jpg")
+  .then((response) => {
+    console.log("It worked :)");
+    return response.blob();
+  })
+  .then((myBlob) => {
+    const objectURL = URL.createObjectURL(myBlob);
+    image = document.createElement("img");
+    image.src = objectURL;
+    document.body.appendChild(image);
+  })
+  .catch((error) => {
+    console.log(
+      "There has been a problem with your fetch operation: " + error.message,
+    );
+  });
 
-console.log ('All done!');
+console.log("All done!");
 ```
 
 Браузер начнёт выполнение кода, увидит первый консольный оператор `(Starting)` и выполнит его, а затем создаст переменную `image`.
@@ -217,7 +211,7 @@ console.log ('All done!');
 ```js
 console.log("registering click handler");
 
-button.addEventListener('click', () => {
+button.addEventListener("click", () => {
   console.log("get click");
 });
 
@@ -228,10 +222,10 @@ console.log("all done");
 
 В менее простом примере кода такая система может вызвать проблему — вы не можете включить блок асинхронного кода, который возвращает результат, на который вы потом будете полагаться в блоке синхронного кода. Вы просто не можете гарантировать, что асинхронная функция вернётся до того, как браузер обработает синхронный блок.
 
-Чтобы увидеть это в действии, попробуйте взять локальную копию нашего [примера](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/async-sync.html) и измените третий вызов `console.log ()` следующим образом:
+Чтобы увидеть это в действии попробуйте изменить третий вызов `console.log ()` следующим образом:
 
 ```js
-console.log ('All done! ' + image + 'displayed.');
+console.log("All done! " + image + "displayed.");
 ```
 
 Теперь вместо третьего сообщения должна возникнуть следующая ошибка:
@@ -242,13 +236,11 @@ TypeError: image is undefined; can't access its "src" property
 
 Это происходит потому, что в то же время браузер пытается запустить третий `console.log()`, блок `fetch()` ещё не закончил выполнение, поэтому переменная `image` ещё не имеет значения.
 
-> **Примечание:** Из соображений безопасности вы не можете применять `fetch()` к файлам из вашей локальной системы (или запустить другие такие операции локально); чтобы запустить локально пример выше вам необходимо запустить его через [локальный веб-сервер](/ru/docs/Learn/Common_questions/set_up_a_local_testing_server).
+> **Примечание:** Из соображений безопасности вы не можете применять `fetch()` к файлам из вашей локальной системы (или запустить другие такие операции локально); чтобы запустить локально пример выше вам необходимо запустить его через [локальный веб-сервер](/ru/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server).
 
 ## Активное обучение: сделайте все это асинхронно!
 
-Чтобы исправить проблемный пример с `fetch()` и заставить все три сообщения `console.log()` появиться в желаемом порядке, вы можете также запустить третье сообщение `console.log()` асинхронно. Этого можно добиться, переместив его внутрь другого блока `.then()` присоединённого к концу второго, или просто переместив его внутрь второго блока `then()`. Попробуйте исправить это сейчас..
-
-> **Примечание:** Если вы застряли, вы можете [найти ответ здесь](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/async-sync-fixed.html) (также можно посмотреть [запущенный пример](https://mdn.github.io/learning-area/javascript/asynchronous/introducing/async-sync-fixed.html)). Также вы можете найти много информации о промисах в нашем гайде [Основные понятия асинхронного программирования](/ru/docs/Learn/JavaScript/Asynchronous/Promises) позднее в этом модуле.
+Чтобы исправить проблемный пример с `fetch()` и заставить все три сообщения `console.log()` появиться в желаемом порядке, вы можете также запустить третье сообщение `console.log()` асинхронно. Этого можно добиться, переместив его внутрь другого блока `.then()` присоединённого к концу второго, или просто переместив его внутрь второго блока `then()`. Попробуйте исправить это.
 
 ## Заключение
 
@@ -260,13 +252,4 @@ TypeError: image is undefined; can't access its "src" property
 
 Если мы выполняем операцию, которая требует времени, например, запрос к базе данных и использование полученных результатов для заполнения шаблонов, лучше вытолкнуть это из основного потока и выполнить задачу асинхронно. Со временем вы узнаете, когда имеет смысл выбирать асинхронную технику вместо синхронной.
 
-{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Concepts", "Learn/JavaScript/Asynchronous/Timeouts_and_intervals", "Learn/JavaScript/Asynchronous")}}
-
-## В этом модуле
-
-- [Основные понятия асинхронного программирования](/ru/docs/Learn/JavaScript/Asynchronous/Concepts)
-- [Introducing asynchronous JavaScript](/ru/docs/Learn/JavaScript/Asynchronous/Introducing)
-- [Cooperative asynchronous JavaScript: Timeouts and intervals](/ru/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals)
-- [Graceful asynchronous programming with Promises](/ru/docs/Learn/JavaScript/Asynchronous/Promises)
-- [Making asynchronous programming easier with async and await](/ru/docs/Learn/JavaScript/Asynchronous/Async_await)
-- [Choosing the right approach](/ru/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach)
+{{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}

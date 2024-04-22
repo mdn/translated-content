@@ -30,8 +30,10 @@ var elt = element.closest(selectors);
 
 ```html
 <article>
-  <div id="div-01">Esta é a div-01
-    <div id="div-02">Esta é a div-02
+  <div id="div-01">
+    Esta é a div-01
+    <div id="div-02">
+      Esta é a div-02
       <div id="div-03">Esta é a div-03</div>
     </div>
   </div>
@@ -39,7 +41,7 @@ var elt = element.closest(selectors);
 ```
 
 ```js
-var el = document.getElementById('div-03');
+var el = document.getElementById("div-03");
 
 var r1 = el.closest("#div-02");
 // retorna o elemento com id=div-02
@@ -60,48 +62,46 @@ Para navegadores que não suportam `Element.closest()`, mas possuem suporte para
 
 ```js
 if (!Element.prototype.matches)
-    Element.prototype.matches = Element.prototype.msMatchesSelector ||
-                                Element.prototype.webkitMatchesSelector;
+  Element.prototype.matches =
+    Element.prototype.msMatchesSelector ||
+    Element.prototype.webkitMatchesSelector;
 
 if (!Element.prototype.closest)
-    Element.prototype.closest = function(s) {
-        var el = this;
-        if (!document.documentElement.contains(el)) return null;
-        do {
-            if (el.matches(s)) return el;
-            el = el.parentElement;
-        } while (el !== null);
-        return null;
-    };
+  Element.prototype.closest = function (s) {
+    var el = this;
+    if (!document.documentElement.contains(el)) return null;
+    do {
+      if (el.matches(s)) return el;
+      el = el.parentElement;
+    } while (el !== null);
+    return null;
+  };
 ```
 
 Contudo, se você de fato precisa dar suporte ao IE 8, você pode usar o polyfill abaixo, o qual é lento mas eficaz. Além disso, ele só garante suporte a seletores CSS 2.1 no IE 8 e ainda pode causar picos de lentidão em websites em produção.
 
 ```js
 if (window.Element && !Element.prototype.closest) {
-    Element.prototype.closest =
-    function(s) {
-        var matches = (this.document || this.ownerDocument).querySelectorAll(s),
-            i,
-            el = this;
-        do {
-            i = matches.length;
-            while (--i >= 0 && matches.item(i) !== el) {};
-        } while ((i < 0) && (el = el.parentElement));
-        return el;
-    };
+  Element.prototype.closest = function (s) {
+    var matches = (this.document || this.ownerDocument).querySelectorAll(s),
+      i,
+      el = this;
+    do {
+      i = matches.length;
+      while (--i >= 0 && matches.item(i) !== el) {}
+    } while (i < 0 && (el = el.parentElement));
+    return el;
+  };
 }
 ```
 
 ## Especificações
 
-| Especificação                                                                                    | Status                           | Comentário         |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('DOM WHATWG', '#dom-element-closest', 'Element.closest()')}} | {{Spec2('DOM WHATWG')}} | Definição inicial. |
+{{Specifications}}
 
-## Compatibilidade em navegadores
+## Compatibilidade com navegadores
 
-{{Compat("api.Element.closest")}}
+{{Compat}}
 
 ## Veja também
 

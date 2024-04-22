@@ -15,7 +15,7 @@ slug: Web/CSS/border-bottom-color
 
 ```css
 border-bottom-color: yellow;
-border-bottom-color: #F5F6F7;
+border-bottom-color: #f5f6f7;
 ```
 
 ### 值
@@ -37,9 +37,10 @@ border-bottom-color: #F5F6F7;
 
 ```html
 <div class="mybox">
-  <p>This is a box with a border around it.
-     Note which side of the box is
-     <span class="redtext">red</span>.</p>
+  <p>
+    This is a box with a border around it. Note which side of the box is
+    <span class="redtext">red</span>.
+  </p>
 </div>
 ```
 

@@ -205,7 +205,7 @@ window.addEventListener(
     // 두 번 동작하는 것을 막기 위해 기본 동작을 취소합니다.
     event.preventDefault();
   },
-  true
+  true,
 );
 ```
 

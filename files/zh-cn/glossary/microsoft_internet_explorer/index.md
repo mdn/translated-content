@@ -3,6 +3,8 @@ title: Microsoft Internet Explorer 浏览器
 slug: Glossary/Microsoft_Internet_Explorer
 ---
 
+{{GlossarySidebar}}
+
 Internet Explorer（或 IE）是一个免费的图形{{glossary("browser","浏览器")}}，曾经由微软为企业用户维护。目前，{{glossary("Microsoft Edge")}} 是 Windows 默认的浏览器。
 
 微软在 1995 年首次将 IE 和 Windows 捆绑，作为“Microsoft Plus!”包的一部分出售。在大约 2002 年时，Internet Explorer 已经成了世界上使用最多的浏览器，但目前已经落后于 Chrome、Firefox、Edge 和 Safari。
@@ -11,6 +13,6 @@ IE 经历了许多版本，并为桌面、手机和 Xbox 控制台提供了版�
 
 ## 参见
 
-- [Internet Explorer](https://zh.wikipedia.org/wiki/Internet_Explorer) 维基百科
-- [Internet Explorer 的历史](https://zh.wikipedia.org/wiki/History_of_Internet_Explorer)维基百科
-- [Internet Explorer 版本](https://zh.wikipedia.org/wiki/Internet_Explorer_versions)维基百科
+- 维基百科上的 [Internet Explorer](https://zh.wikipedia.org/wiki/Internet_Explorer)
+- 维基百科上的 [Internet Explorer 的历史](https://zh.wikipedia.org/wiki/Internet_Explorer歷史)
+- 维基百科上的 [Internet Explorer 的版本](https://en.wikipedia.org/wiki/Internet_Explorer_version_history)

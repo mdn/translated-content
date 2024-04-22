@@ -1,7 +1,6 @@
 ---
 title: Valores y unidades CSS
 slug: Learn/CSS/Building_blocks/Values_and_units
-original_slug: Learn/CSS/Building_blocks/Valores_y_unidades_CSS
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}
@@ -51,7 +50,7 @@ En el ejemplo siguiente hemos establecido el color de nuestro encabezado con una
 ```css
 h1 {
   color: black;
-  background-color: rgb(197,93,161);
+  background-color: rgb(197, 93, 161);
 }
 ```
 
@@ -63,11 +62,11 @@ Echemos un vistazo a algunos de los tipos de valores y unidades con los que pued
 
 Al utilizar CSS te puedes encontrar con varios tipos de datos numéricos. Todos los siguientes están clasificados como tipos de datos numéricos:
 
-| Tipo de datos                                    | Descripción                                                                                                                                                                                                                                                                                                                                                                               |
-| ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`<integer>`](/es/docs/Web/CSS/integer)          | Un `<integer>` es un número entero, como `1024` o `-55`.                                                                                                                                                                                                                                                                                                                                  |
-| [`<number>`](/es/docs/Web/CSS/number)            | Un `<number>` representa un número decimal; puede tener o no un punto de separación decimal con un componente fraccionario, por ejemplo: `0.255`, `128` o `-1.2`.                                                                                                                                                                                                                         |
-| `<dimension>`                                    | Una `<dimension>` es un `<number>` con una unidad asociada, por ejemplo: `45deg` (grados), `5s` (segundos) o `10px` (píxeles). `<dimension>` es una categoría general que incluye los tipos [`<length>`](/es/docs/Web/CSS/length), [`<angle>`](/es/docs/Web/CSS/angle), [`<time>`](/es/docs/Web/CSS/time) y [`<resolution>`](/es/docs/Web/CSS/resolution)[.](/es/docs/Web/CSS/resolution) |
+| Tipo de datos                                 | Descripción                                                                                                                                                                                                                                                                                                                                                                               |
+| --------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`<integer>`](/es/docs/Web/CSS/integer)       | Un `<integer>` es un número entero, como `1024` o `-55`.                                                                                                                                                                                                                                                                                                                                  |
+| [`<number>`](/es/docs/Web/CSS/number)         | Un `<number>` representa un número decimal; puede tener o no un punto de separación decimal con un componente fraccionario, por ejemplo: `0.255`, `128` o `-1.2`.                                                                                                                                                                                                                         |
+| `<dimension>`                                 | Una `<dimension>` es un `<number>` con una unidad asociada, por ejemplo: `45deg` (grados), `5s` (segundos) o `10px` (píxeles). `<dimension>` es una categoría general que incluye los tipos [`<length>`](/es/docs/Web/CSS/length), [`<angle>`](/es/docs/Web/CSS/angle), [`<time>`](/es/docs/Web/CSS/time) y [`<resolution>`](/es/docs/Web/CSS/resolution)[.](/es/docs/Web/CSS/resolution) |
 | [`<percentage>`](/es/docs/Web/CSS/percentage) | Un `<percentage>` representa una fracción de algún otro valor, por ejemplo, `50%`. Los valores de porcentaje siempre son relativos a otra cantidad, por ejemplo, la longitud de un elemento es relativa a la longitud de su elemento padre.                                                                                                                                               |
 
 ### Longitudes
@@ -94,17 +93,17 @@ La mayoría de estos valores son más útiles cuando se usan en una salida en fo
 
 Las unidades de longitud relativa son relativas a algo más, por ejemplo, al tamaño de letra del elemento principal o al tamaño de la ventana gráfica. La ventaja de usar unidades relativas es que con una planificación cuidadosa puedes lograr que el tamaño del texto u otros elementos escalen en relación con todo lo demás en la página. En la tabla siguiente se enumeran algunas de las unidades más útiles para el desarrollo web.
 
-| Unidad | Relativa a                                                                                                                                                                                                                      |
-| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Unidad | Relativa a                                                                                                                                                                                                      |
+| ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `em`   | Tamaño de letra del elemento padre, en el caso de propiedades tipográficas como {{cssxref("font-size")}}, y tamaño de la fuente del propio elemento en el caso de otras propiedades, como {{cssxref("width")}}. |
-| `ex`   | Altura x de la fuente del elemento.                                                                                                                                                                                             |
-| `ch`   | La medida de avance (ancho) del glifo "0" de la letra del elemento.                                                                                                                                                             |
-| `rem`  | Tamaño de la letra del elemento raíz.                                                                                                                                                                                           |
-| `lh`   | Altura de la línea del elemento.                                                                                                                                                                                                |
-| `vw`   | 1% del ancho de la ventana gráfica.                                                                                                                                                                                             |
-| `vh`   | 1% de la altura de la ventana gráfica.                                                                                                                                                                                          |
-| `vmin` | 1% de la dimensión más pequeña de la ventana gráfica.                                                                                                                                                                           |
-| `vmax` | 1% de la dimensión más grande de la ventana gráfica.                                                                                                                                                                            |
+| `ex`   | Altura x de la fuente del elemento.                                                                                                                                                                             |
+| `ch`   | La medida de avance (ancho) del glifo "0" de la letra del elemento.                                                                                                                                             |
+| `rem`  | Tamaño de la letra del elemento raíz.                                                                                                                                                                           |
+| `lh`   | Altura de la línea del elemento.                                                                                                                                                                                |
+| `vw`   | 1% del ancho de la ventana gráfica.                                                                                                                                                                             |
+| `vh`   | 1% de la altura de la ventana gráfica.                                                                                                                                                                          |
+| `vmin` | 1% de la dimensión más pequeña de la ventana gráfica.                                                                                                                                                           |
+| `vmax` | 1% de la dimensión más grande de la ventana gráfica.                                                                                                                                                            |
 
 #### Un ejemplo de análisis
 

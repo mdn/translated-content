@@ -3,9 +3,9 @@ title: browsingData.removeCache()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeCache
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
-ブラウザのキャッシュを消去します。
+ブラウザーのキャッシュを消去します。
 
 この関数は{{WebExtAPIRef("browsingData.RemovalOptions")}} オブジェクトを引数に取りますが無視されます。そのためこの関数を使うとすべてのキャッシュが消去されるため注意してください。
 
@@ -15,14 +15,14 @@ slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeCache
 
 ```js
 var removing = browser.browsingData.removeCache(
-  removalOptions            // RemovalOptions オブジェクト
-)
+  removalOptions, // RemovalOptions オブジェクト
+);
 ```
 
 ### 引数
 
 - `removalOptions` {{optional_inline}}
-  - : {{WebExtAPIRef("browsingData.RemovalOptions")}} オブジェクト このパラメータは無視されます。
+  - : {{WebExtAPIRef("browsingData.RemovalOptions")}} オブジェクト このパラメーターは無視されます。
 
 ### 返り値
 
@@ -30,11 +30,11 @@ var removing = browser.browsingData.removeCache(
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.browsingData.removeCache")}}
+{{Compat}}
 
 ## 例
 
-ブラウザキャッシュを消去します。
+ブラウザーキャッシュを消去します。
 
 ```js
 function onRemoved() {
@@ -45,8 +45,7 @@ function onError(error) {
   console.error(error);
 }
 
-browser.browsingData.removeCache({}).
-then(onRemoved, onError);
+browser.browsingData.removeCache({}).then(onRemoved, onError);
 ```
 
 {{WebExtExamples}}

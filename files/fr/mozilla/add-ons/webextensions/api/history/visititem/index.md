@@ -1,20 +1,9 @@
 ---
 title: history.VisitItem
 slug: Mozilla/Add-ons/WebExtensions/API/history/VisitItem
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - History
-  - Non-standard
-  - Reference
-  - Type
-  - VisiItem
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/API/history/VisitItem
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Un objet décrivant une seule visite sur une page.
 

@@ -2,6 +2,7 @@
 title: isNaN()
 slug: Web/JavaScript/Reference/Global_Objects/isNaN
 ---
+
 {{jsSidebar("Objects")}}
 
 **`isNaN()`** 함수는 어떤 값이 {{jsxref("NaN")}}인지 판별합니다. `isNaN` 함수는 몇몇 [혼란스러운 케이스](special-behavior)을 가지고 있으므로, ECMAScript 2015에서 추가한 {{jsxref("Number.isNaN()")}}으로 바꾸는 편이 좋을 수도 있습니다.
@@ -11,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/isNaN
 ## 구문
 
 ```js
-    isNaN(value)
+isNaN(value);
 ```
 
 ### 매개변수
@@ -44,36 +45,36 @@ ECMAScript (ES2015) 최근 버전은 {{jsxref("Number.isNaN()")}} 함수를 포�
 당신은 isNaN을 다음과 같이 생각할 수 있습니다:
 
 ```js
-isNaN = function(value) {
-    Number.isNaN(Number(value));
-}
+isNaN = function (value) {
+  Number.isNaN(Number(value));
+};
 ```
 
 ## 예제
 
 ```js
-isNaN(NaN);       // 참
+isNaN(NaN); // 참
 isNaN(undefined); // 참
-isNaN({});        // 참
+isNaN({}); // 참
 
-isNaN(true);      // 거짓
-isNaN(null);      // 거짓
-isNaN(37);        // 거짓
+isNaN(true); // 거짓
+isNaN(null); // 거짓
+isNaN(37); // 거짓
 
 // 문자열
-isNaN("37");      // 거짓: "37"은 NaN이 아닌 숫자 37로 변환됩니다
-isNaN("37.37");   // 거짓: "37.37"은 NaN이 아닌 숫자 37.37로 변환됩니다
-isNaN("123ABC");  // 참: parseInt("123ABC")는 123이지만 Number("123ABC")는 NaN입니다
-isNaN("");        // 거짓: 빈 문자열은 NaN이 아닌 0으로 변환됩니다
-isNaN(" ");       // 거짓: 공백이 있는 문자열은 NaN이 아닌 0으로 변환됩니다
+isNaN("37"); // 거짓: "37"은 NaN이 아닌 숫자 37로 변환됩니다
+isNaN("37.37"); // 거짓: "37.37"은 NaN이 아닌 숫자 37.37로 변환됩니다
+isNaN("123ABC"); // 참: parseInt("123ABC")는 123이지만 Number("123ABC")는 NaN입니다
+isNaN(""); // 거짓: 빈 문자열은 NaN이 아닌 0으로 변환됩니다
+isNaN(" "); // 거짓: 공백이 있는 문자열은 NaN이 아닌 0으로 변환됩니다
 
 // dates
-isNaN(new Date());                // 거짓
-isNaN(new Date().toString());     // 참
+isNaN(new Date()); // 거짓
+isNaN(new Date().toString()); // 참
 
 // 이것이 허위 양성이고 isNaN이 완전히 신뢰할 수 없는 이유이다.
-isNaN("blabla")   // 참: "blabla"는 숫자로 변환됩니다.
-                  // 이것을 숫자롯 parsing 하는 것을 실패하고 NaN을 반환한다.
+isNaN("blabla"); // 참: "blabla"는 숫자로 변환됩니다.
+// 이것을 숫자로 parsing 하는 것을 실패하고 NaN을 반환한다.
 ```
 
 ### 유용한 특별 케이스 행동
@@ -88,64 +89,64 @@ isNaN("blabla")   // 참: "blabla"는 숫자로 변환됩니다.
 function increment(x) {
   if (isNaN(x)) x = 0;
   return x + 1;
-};
+}
 
 // Number.isNaN()과 같은 효과:
 function increment(x) {
   if (Number.isNaN(Number(x))) x = 0;
   return x + 1;
-};
+}
 
 // 함수의 인수 x에 대해 다음 경우에,
 // isNaN(x)는 항상 거짓, x가 실제 숫자가 아닐지라도
 // 하지만 산술 식에 그대로
 // 사용될 수 있습니다
-increment("");            // 1: ""는 0으로 변환됩니다
-increment(new String());  // 1: 빈 문자열을 나타내는 String 객체는 0으로 변환됩니다
-increment([]);            // 1: []는 0으로 변환됩니다
-increment(new Array());   // 1: 빈 배열을 나타내는 Array 객체는 0으로 변환됩니다
-increment("0");           // 1: "0"은 0으로 변환됩니다
-increment("1");           // 2: "1"은 1로 변환됩니다
-increment("0.1");         // 1.1: "0.1"은 0.1로 변환됩니다
-increment("Infinity");    // Infinity: "Infinity"는 Infinity로 변환됩니다
-increment(null);          // 1: null은 0으로 변환됩니다
-increment(false);         // 1: false는 0으로 변환됩니다
-increment(true);          // 2: true는 1로 변환됩니다
-increment(new Date());    // 밀리초로 현재 date/time + 1을 반환합니다
+increment(""); // 1: ""는 0으로 변환됩니다
+increment(new String()); // 1: 빈 문자열을 나타내는 String 객체는 0으로 변환됩니다
+increment([]); // 1: []는 0으로 변환됩니다
+increment(new Array()); // 1: 빈 배열을 나타내는 Array 객체는 0으로 변환됩니다
+increment("0"); // 1: "0"은 0으로 변환됩니다
+increment("1"); // 2: "1"은 1로 변환됩니다
+increment("0.1"); // 1.1: "0.1"은 0.1로 변환됩니다
+increment("Infinity"); // Infinity: "Infinity"는 Infinity로 변환됩니다
+increment(null); // 1: null은 0으로 변환됩니다
+increment(false); // 1: false는 0으로 변환됩니다
+increment(true); // 2: true는 1로 변환됩니다
+increment(new Date()); // 밀리초로 현재 date/time + 1을 반환합니다
 
 // 함수의 인수 x에 대해 다음 경우에,
 // isNaN(x)는 항상 거짓이고 x는 실제로 숫자입니다
-increment(-1);            // 0
-increment(-0.1);          // 0.9
-increment(0);             // 1
-increment(1);             // 2
-increment(2);             // 3
+increment(-1); // 0
+increment(-0.1); // 0.9
+increment(0); // 1
+increment(1); // 2
+increment(2); // 3
 // ... 등등 ...
-increment(Infinity);      // Infinity
+increment(Infinity); // Infinity
 
 // 함수의 인수 x에 대해 다음 경우에,
 // isNaN(x)는 항상 참이고 x는 실제로 숫자가 아닙니다,
 // 따라서 함수는 인수를 0으로 대체하고 1을 반환합니다
-increment(String);            // 1
-increment(Array);             // 1
-increment("blabla");          // 1
-increment("-blabla");         // 1
-increment(0/0);               // 1
-increment("0/0");             // 1
-increment(Infinity/Infinity); // 1
-increment(NaN);               // 1
-increment(undefined);         // 1
-increment();                  // 1
+increment(String); // 1
+increment(Array); // 1
+increment("blabla"); // 1
+increment("-blabla"); // 1
+increment(0 / 0); // 1
+increment("0/0"); // 1
+increment(Infinity / Infinity); // 1
+increment(NaN); // 1
+increment(undefined); // 1
+increment(); // 1
 
 // isNaN(x)는 항상 isNaN(Number(x))과 같지만,
 // x의 존재는 여기서 필수입니다!
-isNaN(x) == isNaN(Number(x)) // x == undefined 포함 x의 어떤 값도 참,
-                             // isNaN(undefined) == true 및 Number(undefined)가 NaN을 반환하기에,
-                             // 하지만 ...
-isNaN() == isNaN(Number())   // 거짓, isNaN() == true 및 Number() == 0 때문에
+isNaN(x) == isNaN(Number(x)); // x == undefined 포함 x의 어떤 값도 참,
+// isNaN(undefined) == true 및 Number(undefined)가 NaN을 반환하기에,
+// 하지만 ...
+isNaN() == isNaN(Number()); // 거짓, isNaN() == true 및 Number() == 0 때문에
 ```
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

@@ -43,9 +43,13 @@ function setView() {
   var posState = gPositionSensor.getState();
 
   if (posState.hasPosition) {
-    posPara.textContent = 'Position: x' + roundToTwo(posState.position.x) + " y"
-                                        + roundToTwo(posState.position.y) + " z"
-                                        + roundToTwo(posState.position.z);
+    posPara.textContent =
+      "Position: x" +
+      roundToTwo(posState.position.x) +
+      " y" +
+      roundToTwo(posState.position.y) +
+      " z" +
+      roundToTwo(posState.position.z);
     xPos = -posState.position.x * WIDTH * 2;
     yPos = posState.position.y * HEIGHT * 2;
 
@@ -57,7 +61,6 @@ function setView() {
   }
 
   /* ... */
-
 }
 ```
 

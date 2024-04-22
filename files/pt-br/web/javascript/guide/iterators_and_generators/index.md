@@ -1,7 +1,6 @@
 ---
 title: Iteratores e geradores
 slug: Web/JavaScript/Guide/Iterators_and_generators
-original_slug: Web/JavaScript/Guide/Iteratores_e_geradores
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Meta_programming")}}
@@ -23,26 +22,25 @@ Uma vez criado, um objeto iterator pode ser usado explicitamente ao chamar repet
 
 ```js
 const makeIterator = (array) => {
+  let nextIndex = 0;
 
-let nextIndex = 0;
-
-return {
- next : () => {
-   return nextIndex < array.length ?
-    {value: array[nextIndex ++], done: false} :
-    {done: true};
-   }
- }
+  return {
+    next: () => {
+      return nextIndex < array.length
+        ? { value: array[nextIndex++], done: false }
+        : { done: true };
+    },
+  };
 };
 ```
 
 Uma vez inicializado, o método `next()` pode ser chamado para acessar os pares chave/valor do objeto da vez.
 
 ```js
-let it = makeIterator(['yo', 'ya']);
+let it = makeIterator(["yo", "ya"]);
 console.log(it.next().value); // 'yo'
 console.log(it.next().value); // 'ya'
-console.log(it.next().done);  // true
+console.log(it.next().done); // true
 ```
 
 ## Iterables (Iteráveis)
@@ -56,13 +54,13 @@ Para que um objeto seja **iterable**, o objeto precisa implementar o método **@
 Você pode fazer seus próprios iteráveis da seguinte maneira:
 
 ```js
-var myIterable = {}
+var myIterable = {};
 myIterable[Symbol.iterator] = function* () {
-    yield 1;
-    yield 2;
-    yield 3;
+  yield 1;
+  yield 2;
+  yield 3;
 };
-[...myIterable] // [1, 2, 3]
+[...myIterable]; // [1, 2, 3]
 ```
 
 ### Iterables Built-in (Iteráveis Embutidos)
@@ -74,23 +72,23 @@ myIterable[Symbol.iterator] = function* () {
 Algumas declarações e expressões esperam por iteradores, por exemplo o {{jsxref("Statements/for...of","for-of")}} loops, {{jsxref("Operators/Spread_operator","spread operator","","true")}}, {{jsxref("Operators/yield*","yield*")}}, e {{jsxref("Operators/Destructuring_assignment","destructuring assignment","","true")}}.
 
 ```js
-for(let value of ["a", "b", "c"]){
-    console.log(value)
+for (let value of ["a", "b", "c"]) {
+  console.log(value);
 }
 // "a"
 // "b"
 // "c"
 
-[..."abc"] // ["a", "b", "c"]
+[..."abc"]; // ["a", "b", "c"]
 
-function* gen(){
-  yield* ["a", "b", "c"]
+function* gen() {
+  yield* ["a", "b", "c"];
 }
 
-gen().next() // { value:"a", done:false }
+gen().next(); // { value:"a", done:false }
 
-[a, b, c] = new Set(["a", "b", "c"])
-a // "a"
+[(a, b, c)] = new Set(["a", "b", "c"]);
+a; // "a"
 ```
 
 ## Generators
@@ -100,10 +98,9 @@ Enquanto os iteradores são ferramentas muito úteis, sua criação requer um cu
 Generator é um tipo especial de função que trabalha como uma factory para iteradores. A função vira um generator se ela contém uma ou mais expressões {{jsxref("Operators/yield","yield")}} e se ela usa a sintaxe {{jsxref("Statements/function*","function*")}}.
 
 ```js
-function* idMaker(){
+function* idMaker() {
   var index = 0;
-  while(true)
-    yield index++;
+  while (true) yield index++;
 }
 
 var gen = idMaker();
@@ -123,33 +120,33 @@ O método {{jsxref("Global_Objects/Generator/next","next()")}} também aceita um
 Aqui um gerador de sequência Fibonacci usando `next(x)` pra restartar a sequência:
 
 ```js
-function* fibonacci(){
+function* fibonacci() {
   var fn1 = 1;
   var fn2 = 1;
-  while (true){
+  while (true) {
     var current = fn2;
     fn2 = fn1;
     fn1 = fn1 + current;
     var reset = yield current;
-    if (reset){
-        fn1 = 1;
-        fn2 = 1;
+    if (reset) {
+      fn1 = 1;
+      fn2 = 1;
     }
   }
 }
 
 var sequence = fibonacci();
-console.log(sequence.next().value);     // 1
-console.log(sequence.next().value);     // 1
-console.log(sequence.next().value);     // 2
-console.log(sequence.next().value);     // 3
-console.log(sequence.next().value);     // 5
-console.log(sequence.next().value);     // 8
-console.log(sequence.next().value);     // 13
+console.log(sequence.next().value); // 1
+console.log(sequence.next().value); // 1
+console.log(sequence.next().value); // 2
+console.log(sequence.next().value); // 3
+console.log(sequence.next().value); // 5
+console.log(sequence.next().value); // 8
+console.log(sequence.next().value); // 13
 console.log(sequence.next(true).value); // 1
-console.log(sequence.next().value);     // 1
-console.log(sequence.next().value);     // 2
-console.log(sequence.next().value);     // 3
+console.log(sequence.next().value); // 1
+console.log(sequence.next().value); // 2
+console.log(sequence.next().value); // 3
 ```
 
 > **Nota:** Como um ponto de interesse, chamando `next(undefined)` é o mesmo que chamar `next()`. Entretanto, estartar um novo generator com qualquer valor que não seja undefined na chamada next() terá `TypeError` exception.

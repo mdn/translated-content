@@ -88,8 +88,12 @@ var promise = document.requestStorageAccess();
 
 ```js
 document.requestStorageAccess().then(
-  () => { console.log('access granted') },
-  () => { console.log('access denied') }
+  () => {
+    console.log("access granted");
+  },
+  () => {
+    console.log("access denied");
+  },
 );
 ```
 

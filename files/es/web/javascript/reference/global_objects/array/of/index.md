@@ -1,7 +1,6 @@
 ---
 title: Array.of()
 slug: Web/JavaScript/Reference/Global_Objects/Array/of
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/of
 ---
 
 {{JSRef}}
@@ -11,11 +10,11 @@ El método **`Array.of()`** crea una nueva instancia `Array` con un número vari
 La diferencia entre **`Array.of()`** y el constructor **`Array`** reside en como maneja los parámetros de tipo entero: **`Array.of(7)`** crea un array con un solo elemento, `7`, mientras que **`Array(7)`** crea un array vacío con una propiedad `length` de 7 (**Nota:** esto implica un array de 7 ranuras vacías, no ranuras con valores `undefined`).
 
 ```js
-Array.of(7);       // [7]
+Array.of(7); // [7]
 Array.of(1, 2, 3); // [1, 2, 3]
 
-Array(7);          // [ , , , , , , ]
-Array(1, 2, 3);    // [1, 2, 3]
+Array(7); // [ , , , , , , ]
+Array(1, 2, 3); // [1, 2, 3]
 ```
 
 ## Sintaxis
@@ -40,8 +39,8 @@ Esta función es parte del estándar ECMAScript 2015. Para obtener más informac
 ## Ejemplos
 
 ```js
-Array.of(1);         // [1]
-Array.of(1, 2, 3);   // [1, 2, 3]
+Array.of(1); // [1]
+Array.of(1, 2, 3); // [1, 2, 3]
 Array.of(undefined); // [undefined]
 ```
 
@@ -51,7 +50,7 @@ Escribiendo el siguiente código antes que cualquier otro, podemos emular la fun
 
 ```js
 if (!Array.of) {
-  Array.of = function() {
+  Array.of = function () {
     return Array.prototype.slice.call(arguments);
   };
 }

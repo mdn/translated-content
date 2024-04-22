@@ -131,7 +131,7 @@ background-size: unset;
 
 ## 案例
 
-[`background-size: cover 演示`](http://whereswalden.com/files/mozilla/background-size/page-cover.html) 与 [`background-size: contain 演示`](http://whereswalden.com/files/mozilla/background-size/page-contain.html) 在新窗口打开，这样你可以看到当背景区大小变化时 `contain` 与 `cover` 是怎样的。 [系列演示：`background-size` 及其与`background-*属性`的关联](http://whereswalden.com/files/mozilla/background-size/more-examples.html) 很好的说明了单独使用 `background-size` 及与其他属性共同使用。
+[`background-size: cover` 演示](http://whereswalden.com/files/mozilla/background-size/page-cover.html)与 [`background-size: contain` 演示](http://whereswalden.com/files/mozilla/background-size/page-contain.html)在新窗口打开，这样你可以看到当背景区大小变化时 `contain` 与 `cover` 是怎样的。 [系列演示：`background-size` 及其与 `background-*` 属性的关联](http://whereswalden.com/files/mozilla/background-size/more-examples.html)很好的说明了单独使用 `background-size` 及与其他属性共同使用。
 
 ## 示例
 
@@ -168,18 +168,19 @@ background-size: unset;
 
 ```css
 .bar {
-       width: 50px; height: 100px;
-       background-image: gradient(...);
+  width: 50px;
+  height: 100px;
+  background-image: gradient(...);
 
-       /* 不推荐 */
-       background-size: 25px;
-       background-size: 50%;
-       background-size: auto 50px;
-       background-size: auto 50%;
+  /* 不推荐 */
+  background-size: 25px;
+  background-size: 50%;
+  background-size: auto 50px;
+  background-size: auto 50%;
 
-       /* 可行 */
-       background-size: 25px 50px;
-       background-size: 50% 50%;
+  /* 可行 */
+  background-size: 25px 50px;
+  background-size: 50% 50%;
 }
 ```
 
@@ -213,12 +214,12 @@ While this property was added in Firefox 3.6, it is possible to stretch a image 
 .foo {
   background-image: url(bg-image.png);
 
-  -webkit-background-size: 100% 100%;           /* Safari 3.0 */
-     -moz-background-size: 100% 100%;           /* Gecko 1.9.2 (Firefox 3.6) */
-       -o-background-size: 100% 100%;           /* Opera 9.5 */
-          background-size: 100% 100%;           /* Gecko 2.0 (Firefox 4.0) and other CSS3-compliant browsers */
+  -webkit-background-size: 100% 100%; /* Safari 3.0 */
+  -moz-background-size: 100% 100%; /* Gecko 1.9.2 (Firefox 3.6) */
+  -o-background-size: 100% 100%; /* Opera 9.5 */
+  background-size: 100% 100%; /* Gecko 2.0 (Firefox 4.0) and other CSS3-compliant browsers */
 
-  -moz-border-image: url(bg-image.png) 0;    /* Gecko 1.9.1 (Firefox 3.5) */
+  -moz-border-image: url(bg-image.png) 0; /* Gecko 1.9.1 (Firefox 3.5) */
 }
 ```
 

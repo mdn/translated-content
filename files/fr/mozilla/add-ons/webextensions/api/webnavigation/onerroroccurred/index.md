@@ -1,20 +1,9 @@
 ---
 title: webNavigation.onErrorOccurred
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onErrorOccurred
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onErrorOccurred
-  - webNavigation
-translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/onErrorOccurred
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Lancé lorsqu'une erreur se produit et que la navigation est annulée. Cela peut se produire si une erreur réseau s'est produite ou si l'utilisateur a interrompu la navigation.
 
@@ -22,11 +11,11 @@ Lancé lorsqu'une erreur se produit et que la navigation est annulée. Cela peut
 
 ```js
 browser.webNavigation.onErrorOccurred.addListener(
-  listener,                   // function
-  filter                      // optional object
-)
-browser.webNavigation.onErrorOccurred.removeListener(listener)
-browser.webNavigation.onErrorOccurred.hasListener(listener)
+  listener, // function
+  filter, // optional object
+);
+browser.webNavigation.onErrorOccurred.removeListener(listener);
+browser.webNavigation.onErrorOccurred.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -79,12 +68,8 @@ Logs les URL cibles de `onErrorOccurred`, si le nom d'hôte de l'URL cible conti
 
 ```js
 var filter = {
-  url:
-  [
-    {hostContains: "example.com"},
-    {hostPrefix: "developer"}
-  ]
-}
+  url: [{ hostContains: "example.com" }, { hostPrefix: "developer" }],
+};
 
 function logOnErrorOccurred(details) {
   console.log("onErrorOccurred: " + details.url);

@@ -1,10 +1,6 @@
 ---
 title: element.onscroll
 slug: Web/API/Element/scroll_event
-tags:
-  - Référence_du_DOM_Gecko
-translation_of: Web/API/GlobalEventHandlers/onscroll
-original_slug: Web/API/GlobalEventHandlers/onscroll
 ---
 
 {{ ApiRef() }}

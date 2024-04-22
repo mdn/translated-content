@@ -1,13 +1,6 @@
 ---
-title: 'Attribut HTML : required'
+title: "Attribut HTML : required"
 slug: Web/HTML/Attributes/required
-tags:
-  - Attribute
-  - Attributes
-  - Constraint validation
-  - Forms
-  - required
-translation_of: Web/HTML/Attributes/required
 ---
 
 {{HTMLSidebar}}
@@ -43,14 +36,14 @@ Si l'élément est requis et que la valeur de l'élément est la chaîne vide, a
 ```html
 <form>
   <div class="group">
-    <input type="text">
+    <input type="text" />
     <label>Normal</label>
   </div>
   <div class="group">
-    <input type="text" required="required">
+    <input type="text" required="required" />
     <label>Requis</label>
   </div>
-  <input type="submit">
+  <input type="submit" />
 </form>
 ```
 

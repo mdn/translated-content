@@ -57,6 +57,7 @@ slug: Web/HTML/Element/menuitem
 - `radiogroup`
   - : 此属性指定要切换为单选按钮时，选定的一组命令的名称。只能作为 radio 的属性使用。
 - `type`
+
   - : 这个属性指定命令的类型，可以为以下三个命令之一。
 
     - `command`：有关联动作的常规命令。这是缺少时的值默认值。
@@ -69,20 +70,24 @@ slug: Web/HTML/Element/menuitem
 
 ```html
 <!-- A <div> element with a context menu -->
-<div contextmenu="popup-menu">
-  Right-click to see the adjusted context menu
-</div>
+<div contextmenu="popup-menu">Right-click to see the adjusted context menu</div>
 
 <menu type="context" id="popup-menu">
   <menuitem type="checkbox" checked>Checkbox</menuitem>
-  <hr>
-  <menuitem type="command" label="This command does nothing" icon="https://developer.mozilla.org/static/img/favicon144.png">
+  <hr />
+  <menuitem
+    type="command"
+    label="This command does nothing"
+    icon="https://developer.mozilla.org/static/img/favicon144.png">
     Commands don't render their contents.
   </menuitem>
-  <menuitem type="command" label="This command has javascript" onclick="alert('command clicked')">
+  <menuitem
+    type="command"
+    label="This command has javascript"
+    onclick="alert('command clicked')">
     Commands don't render their contents.
   </menuitem>
-  <hr>
+  <hr />
   <menuitem type="radio" radiogroup="group1">Radio Button 1</menuitem>
   <menuitem type="radio" radiogroup="group1">Radio Button 2</menuitem>
 </menu>

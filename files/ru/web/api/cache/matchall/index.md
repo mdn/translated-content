@@ -1,8 +1,8 @@
 ---
 title: Cache.matchAll()
 slug: Web/API/Cache/matchAll
-translation_of: Web/API/Cache/matchAll
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 Метод **`matchAll()`** интерфейса {{domxref("Cache")}} возвращает {{jsxref("Promise")}}, который разрешается в массив всех совпадающих запросов в объекте {{domxref("Cache")}}.
@@ -10,7 +10,7 @@ translation_of: Web/API/Cache/matchAll
 ## Синтаксис
 
 ```js
-cache.matchAll(request,{options}).then(function(response) {
+cache.matchAll(request, { options }).then(function (response) {
   // сделать что-нибудь с массивом ответов
 });
 ```
@@ -37,13 +37,13 @@ cache.matchAll(request,{options}).then(function(response) {
 ## Примеры
 
 ```js
-caches.open('v1').then(function(cache) {
-  cache.matchAll('/images/').then(function(response) {
-    response.forEach(function(element, index, array) {
+caches.open("v1").then(function (cache) {
+  cache.matchAll("/images/").then(function (response) {
+    response.forEach(function (element, index, array) {
       cache.delete(element);
     });
   });
-})
+});
 ```
 
 ## Спецификации

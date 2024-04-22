@@ -1,8 +1,8 @@
 ---
 title: Set.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Set/values
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/values
 ---
+
 {{JSRef}}
 
 Метод **`values()`** возвращает новый `Итератор`, который содержит значения для каждого элемента в объекте `Set` в порядке их добавления.
@@ -27,9 +27,9 @@ mySet.values();
 
 ```js
 var mySet = new Set();
-mySet.add('foo');
-mySet.add('bar');
-mySet.add('baz');
+mySet.add("foo");
+mySet.add("bar");
+mySet.add("baz");
 
 var setIter = mySet.values();
 

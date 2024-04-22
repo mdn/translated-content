@@ -1,48 +1,57 @@
 ---
-title: Window.confirm()
+title: Window：confirm() 方法
 slug: Web/API/Window/confirm
 ---
 
 {{ApiRef("Window")}}
 
-**`Window.confirm()`** 方法显示一个具有一个可选消息和两个按钮 (确定和取消) 的模态对话框。
+`window.confirm()` 令浏览器显示一个带有可选的信息的对话框，并等待用户确认或取消该对话框。
+
+在某些情况下（例如，当用户切换标签时）浏览器可能不会实际显示一个对话框，或者不等待用户确认或取消对话框。
 
 ## 语法
 
-```plain
-result = window.confirm(message);
+```js-nolint
+confirm(message)
 ```
 
-- message 是要在对话框中显示的可选字符串。
-- result 是一个布尔值，表示是选择确定还是取消 (true 表示 OK)。
+### 参数
+
+- `message`
+  - : 在确认对话框中要显示的字符串。
+
+### 返回值
+
+一个布尔值，表示是否选择了确定（`true`）或取消（`false`）。如果浏览器忽略了页面内的对话框，那么返回值总是 `false`。
 
 ## 示例
 
-```plain
+```js
 if (window.confirm("Do you really want to leave?")) {
   window.open("exit.html", "Thanks for Visiting!");
 }
 ```
 
-运行结果：
+会产生：
 
-![firefox confirm](firefoxcomfirmdialog_zpsf00ec381.png)
+![Firefox 确认对话框](firefox_confirm_dialog.png)
 
-## 注意事项：
+## 注意事项
 
-The following text is shared between this article, DOM:window\.prompt and DOM:window\.alert 对话框是弹出式 (modal) 的 (也即 alert 样式，译者注). 直到这个对话框被点击后，后面的脚本才会运行。请勿滥用此功能，这里列出了很多个理由：[请放弃使用对话框来确认信息](http://alistapart.com/article/neveruseawarning).
+对话框是模态窗口——它们阻止用户访问程序界面的其他部分，直到对话框被关闭。出于这个原因，你不应该过度使用任何创建对话框（或模态窗口）的函数。无论如何，有很好的应[避免使用对话框进行确认](https://alistapart.com/article/neveruseawarning/)的理由。
 
-[Mozilla Chrome](/zh-CN/Chrome) 的用户 (比如 Firefox 插件开发者) 应该使用`nsIPromptService`这个方法。
-
-Chrome 浏览器版本 V46.0 开始屏蔽内部 {{htmlelement("iframe")}} 元素，除非用户在沙箱内开启了 `allow-modal` 选项。
-
-在 gecko (23) 内核中，参数是可选的。
+另外，{{HTMLElement("dialog")}} 元素也可用于确认。
 
 ## 规范
 
 {{Specifications}}
 
-## 更多
+## 浏览器兼容性
 
-- {{domxref("window.alert","alert")}}
-- {{domxref("window.prompt","prompt")}}
+{{Compat}}
+
+## 参见
+
+- {{HTMLElement("dialog")}} 元素
+- {{domxref("window.alert()")}}
+- {{domxref("window.prompt()")}}

@@ -222,7 +222,7 @@ Você pode encontrar vários exemplos em nosso [repositório webaudio-example](h
 - [howler.js](https://github.com/goldfire/howler.js/): uma biblioteca de áudio JS que tem como padrão [Web Audio API](https://webaudio.github.io/web-audio-api/) e retorna para [HTML Audio](https://html.spec.whatwg.org/multipage/media.html#the-audio-element), além de fornecer outros recursos úteis.
 - [Mooog](https://github.com/mattlima/mooog): encadeamento de AudioNodes no estilo jQuery, envios/retornos no estilo do mixer e muito mais.
 - [XSound](https://xsound.jp/): Biblioteca Web Audio API para Sintetizador, Efeitos, Visualização, Gravação, etc.
-- [OpenLang](https://github.com/chrisjohndigital/OpenLang): aplicativo da Web do laboratório de linguagem de vídeo HTML usando a API de áudio da Web para gravar e combinar vídeo e áudio de diferentes fontes em um único arquivo ([fonte no GitHub]( https://github.com/chrisjohndigital/OpenLang))
+- [OpenLang](https://github.com/chrisjohndigital/OpenLang): aplicativo da Web do laboratório de linguagem de vídeo HTML usando a API de áudio da Web para gravar e combinar vídeo e áudio de diferentes fontes em um único arquivo ([fonte no GitHub](https://github.com/chrisjohndigital/OpenLang))
 - [Pts.js](https://ptsjs.org/): Simplifica a visualização de áudio na web ([guide](https://ptsjs.org/guide/sound-0800))
 
 ### Tópicos relacionados

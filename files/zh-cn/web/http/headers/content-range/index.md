@@ -7,10 +7,10 @@ slug: Web/HTTP/Headers/Content-Range
 
 在 HTTP 协议中，响应首部 **`Content-Range`** 显示的是一个数据片段在整个文件中的位置。
 
-| Header type                                                                                      | {{Glossary("Response header")}} |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}}                                                 | no                                       |
-| {{Glossary("Simple response header", "CORS-safelisted response-header")}} | no                                       |
+| Header type                                                               | {{Glossary("Response header")}} |
+| ------------------------------------------------------------------------- | ------------------------------- |
+| {{Glossary("Forbidden header name")}}                                     | no                              |
+| {{Glossary("Simple response header", "CORS-safelisted response-header")}} | no                              |
 
 ## 语法
 
@@ -48,7 +48,7 @@ Content-Range: bytes 200-1000/67589
 
 {{Compat}}
 
-## 相关内容
+## 参见
 
 - {{HTTPHeader("If-Range")}}
 - {{HTTPHeader("Range")}}

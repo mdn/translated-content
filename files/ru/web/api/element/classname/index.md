@@ -1,7 +1,6 @@
 ---
 title: Element.className
 slug: Web/API/Element/className
-translation_of: Web/API/Element/className
 ---
 
 {{APIRef("DOM")}}
@@ -38,7 +37,7 @@ alert(elm.className); //"class1 class2 class3"
 
 > **Примечание:** ##### Примечание:Свойство получило необычное название **`className`** из-за того, что во многих языках, работающих с DOM, слово _class_ является зарезервированным*.*
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

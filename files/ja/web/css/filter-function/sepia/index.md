@@ -1,7 +1,6 @@
 ---
 title: sepia()
 slug: Web/CSS/filter-function/sepia
-original_slug: Web/CSS/filter-function/sepia()
 ---
 
 {{CSSRef}}

@@ -74,7 +74,7 @@ const selectElement = document.querySelector(".ice-cream");
 const result = document.querySelector(".result");
 
 selectElement.addEventListener("change", (event) => {
-  const result = document.querySelector('.result');
+  const result = document.querySelector(".result");
   result.textContent = `${event.target.value}が好きですね`;
 });
 ```

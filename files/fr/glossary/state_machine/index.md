@@ -1,12 +1,9 @@
 ---
 title: Machine d'état
 slug: Glossary/State_machine
-tags:
-  - Glossaire
-  - états
-translation_of: Glossary/State_machine
-original_slug: Glossaire/Machine_d_état
 ---
+
+{{GlossarySidebar}}
 
 Une machine d'état est une abstraction mathématique utilisée pour concevoir des algorithmes. Une machine d'état lit un ensemble d'entrées et passe à un état différent en fonction de ces entrées.
 
@@ -21,13 +18,13 @@ Il existe deux types de machines d'état de base :
 - machine non déterministe à états finis
   - : Étant donné un état, une entrée peut conduire à plus d'un état différent.
 
-_Figure 1 : Machine déterministe à états finis_
+_Figure 1 : Machine déterministe à états finis._
 
 ![](statemachine1.png)
 
 Dans la _Figure 1_, l'état commence en State 1; l'état change vers State 2 en donnant l'entrée 'X', ou vers State 3 en donnant l'entrée 'Y'.
 
-_Figure 2 : Machine non déterministe à états finis_
+_Figure 2 : Machine non déterministe à états finis._
 
 ![](statemachine2.png)
 

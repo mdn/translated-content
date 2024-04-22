@@ -1,10 +1,6 @@
 ---
 title: Content Security Policy (CSP)
 slug: Web/HTTP/CSP
-tags:
-  - Безопасность
-  - Справка
-translation_of: Web/HTTP/CSP
 ---
 
 {{HTTPSidebar}}
@@ -162,11 +158,11 @@ Content-Security-Policy: default-src 'none'; style-src cdn.example.com; report-u
 HTML-код страницы `signup.html` выглядит следующим образом:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>Sign Up</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     ... Content ...

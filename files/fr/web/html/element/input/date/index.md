@@ -1,8 +1,6 @@
 ---
 title: <input type="date">
 slug: Web/HTML/Element/input/date
-translation_of: Web/HTML/Element/input/date
-browser-compat: html.elements.input.input-date
 ---
 
 {{HTMLSidebar}}
@@ -48,7 +46,7 @@ Une chaîne de caractères ([`DOMString`](/fr/docs/Web/API/DOMString)) qui repr�
 Il est possible de fournir une valeur par défaut en renseignant l'attribut [`value`](/fr/docs/Web/HTML/Element/Input#attr-value)&nbsp;:
 
 ```html
-<input id="date" type="date" value="2017-06-01">
+<input id="date" type="date" value="2017-06-01" />
 ```
 
 {{EmbedLiveSample('', 600, 40)}}
@@ -59,7 +57,7 @@ On peut également récupérer la valeur de la date en JavaScript grâce à la p
 
 ```js
 let dateControl = document.querySelector('input[type="date"]');
-dateControl.value = '2017-06-01';
+dateControl.value = "2017-06-01";
 console.log(dateControl.value); // affiche "2017-06-01"
 console.log(dateControl.valueAsNumber); // affiche 1496275200000, un timestamp JavaScript (exprimé en ms)
 ```
@@ -108,7 +106,7 @@ Dans son expression la plus simple `<input type="date">` s'utilise avec un élé
 <form action="https://example.com">
   <label>
     Veuillez saisir votre date de naissance :
-    <input type="date" name="bday">
+    <input type="date" name="bday" />
   </label>
 
   <p><button>Envoyer</button></p>
@@ -125,8 +123,9 @@ On peut utiliser les attributs [`min`](/fr/docs/Web/HTML/Element/Input#attr-min)
 
 ```html
 <form>
-  <label>Veuillez choisir la meilleure date pour la soirée :
-    <input type="date" name="party" min="2017-04-01" max="2017-04-30">
+  <label
+    >Veuillez choisir la meilleure date pour la soirée :
+    <input type="date" name="party" min="2017-04-01" max="2017-04-30" />
   </label>
 </form>
 ```
@@ -155,7 +154,12 @@ Prenons un exemple où la date est contrainte entre deux dates et que le champ e
 <form>
   <label>
     Sélectionner la meilleure date (entre le premier et le 20 avril) :
-    <input type="date" name="party" min="2017-04-01" max="2017-04-20" required>
+    <input
+      type="date"
+      name="party"
+      min="2017-04-01"
+      max="2017-04-20"
+      required />
     <span class="validity"></span>
   </label>
 
@@ -182,11 +186,11 @@ span::after {
 }
 
 input:invalid + span:after {
-  content: '✖';
+  content: "✖";
 }
 
-input:valid+span:after {
-  content: '✓';
+input:valid + span:after {
+  content: "✓";
 }
 ```
 
@@ -210,8 +214,9 @@ Une méthode permettant de parer à cette éventualité est d'utiliser l'attribu
 
 ```html
 <form>
-  <label>Veuillez saisir votre date de naissance :
-    <input type="date" name="bday" required pattern="\d{4}-\d{2}-\d{2}">
+  <label
+    >Veuillez saisir votre date de naissance :
+    <input type="date" name="bday" required pattern="\d{4}-\d{2}-\d{2}" />
     <span class="validity"></span>
   </label>
   <p>
@@ -235,11 +240,11 @@ span::after {
 }
 
 input:invalid + span::after {
-  content: '✖';
+  content: "✖";
 }
 
 input:valid + span::after {
-  content: '✓';
+  content: "✓";
 }
 ```
 
@@ -257,15 +262,14 @@ Voici le code HTML utilisé&nbsp;:
 <form>
   <div class="nativeDatePicker">
     <label for="bday">Veuillez saisir votre date de naissance :</label>
-    <input type="date" id="bday" name="bday">
+    <input type="date" id="bday" name="bday" />
     <span class="validity"></span>
   </div>
   <p class="fallbackLabel">Veuillez saisir votre date de naissance :</p>
   <div class="fallbackDatePicker">
     <span>
       <label for="day">Jour :</label>
-      <select id="day" name="day">
-      </select>
+      <select id="day" name="day"></select>
     </span>
     <span>
       <label for="month">Mois :</label>
@@ -286,8 +290,7 @@ Voici le code HTML utilisé&nbsp;:
     </span>
     <span>
       <label for="year">Année :</label>
-      <select id="year" name="year">
-      </select>
+      <select id="year" name="year"></select>
     </span>
   </div>
 </form>
@@ -301,11 +304,11 @@ span {
 }
 
 input:invalid + span::after {
-  content: '✖';
+  content: "✖";
 }
 
 input:valid + span::after {
-  content: '✓';
+  content: "✓";
 }
 ```
 
@@ -313,36 +316,36 @@ Une autre partie intéressante est celle où on détecte si le navigateur prend 
 
 ```js
 // On définit les différentes variables
-let nativePicker = document.querySelector('.nativeDatePicker');
-let fallbackPicker = document.querySelector('.fallbackDatePicker');
-let fallbackLabel = document.querySelector('.fallbackLabel');
+let nativePicker = document.querySelector(".nativeDatePicker");
+let fallbackPicker = document.querySelector(".fallbackDatePicker");
+let fallbackLabel = document.querySelector(".fallbackLabel");
 
-let yearSelect = document.querySelector('#year');
-let monthSelect = document.querySelector('#month');
-let daySelect = document.querySelector('#day');
+let yearSelect = document.querySelector("#year");
+let monthSelect = document.querySelector("#month");
+let daySelect = document.querySelector("#day");
 
 // Initialement, on masque le sélecteur non-natif
-fallbackPicker.style.display = 'none';
-fallbackLabel.style.display = 'none';
+fallbackPicker.style.display = "none";
+fallbackLabel.style.display = "none";
 
 // On teste si l'élément <input type="date">
 // se transforme en <input type="text">
-let test = document.createElement('input');
+let test = document.createElement("input");
 
 try {
-  test.type = 'date';
+  test.type = "date";
 } catch (e) {
   console.log(e.description);
 }
 
 // Si c'est le cas, cela signifie que l'élément
 // n'est pas pris en charge et
-if(test.type === 'text') {
+if (test.type === "text") {
   // On masque le sélecteur natif et on affiche
   // le sélecteur avec les <select>
-  nativePicker.style.display = 'none';
-  fallbackPicker.style.display = 'block';
-  fallbackLabel.style.display = 'block';
+  nativePicker.style.display = "none";
+  fallbackPicker.style.display = "block";
+  fallbackLabel.style.display = "block";
 
   // On affiche les jours et les années
   // de façon dynamique
@@ -353,7 +356,7 @@ if(test.type === 'text') {
 function populateDays(month) {
   // On supprime les éléments <option> pour l'élément
   // <select> des jours afin de pouvoir ajouter les prochains
-  while(daySelect.firstChild){
+  while (daySelect.firstChild) {
     daySelect.removeChild(daySelect.firstChild);
   }
 
@@ -362,12 +365,25 @@ function populateDays(month) {
   let dayNum;
 
   // 31 ou 30 jours ?
-  if(month === 'Janvier' || month === 'Mars' || month === 'Mai' || month === 'Juillet' || month === 'Août' || month === 'Octobre' || month === 'Décembre') {
+  if (
+    month === "Janvier" ||
+    month === "Mars" ||
+    month === "Mai" ||
+    month === "Juillet" ||
+    month === "Août" ||
+    month === "Octobre" ||
+    month === "Décembre"
+  ) {
     dayNum = 31;
-  } else if(month === 'Avril' || month === 'Juin' || month === 'Septembre' || month === 'Novembre') {
+  } else if (
+    month === "Avril" ||
+    month === "Juin" ||
+    month === "Septembre" ||
+    month === "Novembre"
+  ) {
     dayNum = 30;
   } else {
-  // Si le mois est février, on calcule si l'année est bissextile
+    // Si le mois est février, on calcule si l'année est bissextile
     let year = yearSelect.value;
     let leap = new Date(year, 1, 29).getMonth() == 1;
     dayNum = leap ? 29 : 28;
@@ -376,8 +392,8 @@ function populateDays(month) {
   // on ajoute le bon nombre de jours dans autant
   // d'éléments <option> pour l'élément <select>
   // pour la journée
-  for(i = 1; i <= dayNum; i++) {
-    let option = document.createElement('option');
+  for (i = 1; i <= dayNum; i++) {
+    let option = document.createElement("option");
     option.textContent = i;
     daySelect.appendChild(option);
   }
@@ -385,21 +401,21 @@ function populateDays(month) {
   // Si le jour précédent a déjà été défini on utilise
   // la valeur de ce jour pour daySelect afin d'éviter de
   // réinitialiser le jour lorsqu'on change l'année
-  if(previousDay) {
+  if (previousDay) {
     daySelect.value = previousDay;
 
     // Si le jour précédent correspond au dernier jour d'un mois
     // et que le mois sélectionné possède moins de jours (par
     // exemple en février)
-    if(daySelect.value === "") {
+    if (daySelect.value === "") {
       daySelect.value = previousDay - 1;
     }
 
-    if(daySelect.value === "") {
+    if (daySelect.value === "") {
       daySelect.value = previousDay - 2;
     }
 
-    if(daySelect.value === "") {
+    if (daySelect.value === "") {
       daySelect.value = previousDay - 3;
     }
   }
@@ -413,22 +429,22 @@ function populateYears() {
   // On affiche l'année courante et les 100 années
   // précédentes pour l'élément <select> destiné à
   // stocker l'année
-  for(let i = 0; i <= 100; i++) {
-    let option = document.createElement('option');
-    option.textContent = year-i;
+  for (let i = 0; i <= 100; i++) {
+    let option = document.createElement("option");
+    option.textContent = year - i;
     yearSelect.appendChild(option);
   }
 }
 
 // Lorsque la valeur du mois ou de l'année est modifiée
 // on relance populateDays()
-yearSelect.onchange = function() {
+yearSelect.onchange = function () {
   populateDays(monthSelect.value);
-}
+};
 
-monthSelect.onchange = function() {
+monthSelect.onchange = function () {
   populateDays(monthSelect.value);
-}
+};
 
 // On conserve le jour sélectionné
 let previousDay;
@@ -436,9 +452,9 @@ let previousDay;
 // On met à jour la journée utilisée précédemment
 // (voir la fin de populateDays() pour voir où
 // est utilisée cette valeur)
-daySelect.onchange = function() {
+daySelect.onchange = function () {
   previousDay = daySelect.value;
-}
+};
 ```
 
 > **Note :** Attention, certaines années peuvent contenir 53 semaines&nbsp;! (cf. [cet article Wikipédia (en anglais)](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year)) Il vous faudra prendre cela en compte si vous souhaitez développer des applications réelles.

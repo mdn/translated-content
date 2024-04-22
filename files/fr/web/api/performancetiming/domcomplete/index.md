@@ -1,18 +1,6 @@
 ---
 title: PerformanceTiming.domComplete
 slug: Web/API/PerformanceTiming/domComplete
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - Navigation Timing
-  - PerformanceTiming
-  - Property
-  - Propriété
-  - Read-only
-  - legacy
-  - domComplete
-translation_of: Web/API/PerformanceTiming/domComplete
 ---
 
 {{APIRef("Navigation Timing")}}

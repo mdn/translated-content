@@ -1,24 +1,6 @@
 ---
-title: 'Guide des types et formats de médias : contenu image, audio et vidéo'
+title: "Guide des types et formats de médias : contenu image, audio et vidéo"
 slug: Web/Media/Formats
-tags:
-  - API
-  - Accueil
-  - Audio
-  - Codecs
-  - Contenu
-  - Fichiers
-  - Image
-  - Images
-  - Media
-  - Médias
-  - Types
-  - Types de fichiers
-  - Video
-  - Videos
-  - Web
-  - formats
-translation_of: Web/Media/Formats
 ---
 
 {{QuickLinksWithSubpages("/fr/docs/Web/Media")}}

@@ -37,8 +37,8 @@ object-position: unset;
 #### Ejemplo de HTML
 
 ```html
-<img id="object-position-1" src="mdn.svg" alt="MDN Logo"/>
-<img id="object-position-2" src="mdn.svg" alt="MDN Logo"/>
+<img id="object-position-1" src="mdn.svg" alt="MDN Logo" />
+<img id="object-position-2" src="mdn.svg" alt="MDN Logo" />
 ```
 
 #### Ejemplo de CSS

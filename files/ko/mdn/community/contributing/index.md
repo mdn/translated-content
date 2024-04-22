@@ -1,7 +1,6 @@
 ---
 title: MDN Web Docs에 기여하기
 slug: MDN/Community/Contributing
-page-type: mdn-community-guide
 ---
 
 {{MDNSidebar}}

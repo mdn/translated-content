@@ -1,20 +1,9 @@
 ---
 title: pageAction.setPopup()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/setPopup
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - pageAction
-  - setPopup
-translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction/setPopup
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Définit le document HTML à ouvrir en tant que fenêtre contextuelle lorsque l'utilisateur clique sur l'icône de l'action de la page.
 
@@ -22,8 +11,8 @@ Définit le document HTML à ouvrir en tant que fenêtre contextuelle lorsque l'
 
 ```js
 browser.pageAction.setPopup(
-  details // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -52,12 +41,12 @@ browser.tabs.onUpdated.addListener((tabId, changeInfo, tabInfo) => {
     if (changeInfo.status == "loading") {
       browser.pageAction.setPopup({
         tabId,
-        popup: "/popup/loading.html"
+        popup: "/popup/loading.html",
       });
     } else {
       browser.pageAction.setPopup({
         tabId,
-        popup: "/popup/complete.html"
+        popup: "/popup/complete.html",
       });
     }
   }

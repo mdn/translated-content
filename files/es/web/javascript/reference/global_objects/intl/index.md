@@ -1,8 +1,8 @@
 ---
 title: Intl
 slug: Web/JavaScript/Reference/Global_Objects/Intl
-original_slug: Web/JavaScript/Referencia/Objetos_globales/Intl
 ---
+
 {{JSRef}}
 
 El objeto de ámbito global **`Intl`** es el espacio de nombres para el API de Internacionalización de ECMAScript, éste provee comparación de cadenas y formato de números, fechas y tiempos con sensibilidad al lenguaje. Los constructores para los objetos {{jsxref("Collator")}}, {{jsxref("NumberFormat")}}, y {{jsxref("DateTimeFormat")}} son propiedades del objeto `Intl`. En ésta página se documentan tales propiedades, así como la funcionalidad común a los constructores de internacionalización y otras funciones sensibles al lenguaje.

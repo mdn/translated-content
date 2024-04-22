@@ -1,8 +1,6 @@
 ---
 title: IDBRequest.onsuccess
 slug: Web/API/IDBRequest/success_event
-translation_of: Web/API/IDBRequest/onsuccess
-original_slug: Web/API/IDBRequest/onsuccess
 ---
 
 {{ APIRef("IndexedDB") }}
@@ -27,12 +25,14 @@ L'exemple suivant demande un titre d'enregistrement donné, `onsuccess` obtient 
 var title = "Walk dog";
 
 // Ouvrez une transaction comme d'habitude
-var objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
+var objectStore = db
+  .transaction(["toDoList"], "readwrite")
+  .objectStore("toDoList");
 
 // Obtenez l'objet toDoList qui a ce titre
 var objectStoreTitleRequest = objectStore.get(title);
 
-objectStoreTitleRequest.onsuccess = function() {
+objectStoreTitleRequest.onsuccess = function () {
   // Prenez l'objet de données renvoyé comme résultat
   var data = objectStoreTitleRequest.result;
 
@@ -43,14 +43,17 @@ objectStoreTitleRequest.onsuccess = function() {
   var updateTitleRequest = objectStore.put(data);
 
   // Lorsque cette requête réussit, appelle de la fonction displayData() pour mettre à jour l'affichage
-  updateTitleRequest.onsuccess = function() {
+  updateTitleRequest.onsuccess = function () {
     displayData();
   };
 };
 
-objectStoreTitleRequest.onerror = function() {
+objectStoreTitleRequest.onerror = function () {
   // Si une erreur se produit à la demande, on l'affiche
-  console.log("Il y a eu une erreur dans la récupération des données: " + objectStoreTitleRequest.error);
+  console.log(
+    "Il y a eu une erreur dans la récupération des données: " +
+      objectStoreTitleRequest.error,
+  );
 };
 ```
 

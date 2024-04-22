@@ -2,6 +2,7 @@
 title: EXSLT
 slug: Web/EXSLT
 ---
+
 {{ XsltRef() }} EXSLT는 [XSLT](/ko/XSLT)의 확장입니다. 많은 모듈이 있으며, Firefox에서 지원되는 것들은 다음과 같습니다.
 
 - [Common](#Common) (`exsl`)

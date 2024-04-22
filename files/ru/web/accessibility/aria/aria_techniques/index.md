@@ -1,12 +1,6 @@
 ---
 title: Использование ARIA
 slug: Web/Accessibility/ARIA/ARIA_Techniques
-tags:
-  - ARIA
-  - Accessibility
-  - NeedsTranslation
-  - TopicStub
-translation_of: Web/Accessibility/ARIA/ARIA_Techniques
 ---
 
 ## Роли
@@ -93,7 +87,7 @@ translation_of: Web/Accessibility/ARIA/ARIA_Techniques
 - aria-haspopup
 - aria-hidden
 - [aria-invalid](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-invalid_attribute)
-- [aria-label](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute)
+- [aria-label](/ru/docs/Web/Accessibility/ARIA/Attributes/aria-label)
 - aria-level
 - aria-multiline
 - aria-multiselectable
@@ -124,9 +118,9 @@ translation_of: Web/Accessibility/ARIA/ARIA_Techniques
 
 - [aria-activedescendant](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-activedescendant_attribute)
 - aria-controls
-- [aria-describedby](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute)
+- [aria-describedby](/ru/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
 - aria-flowto
-- [aria-labelledby](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute)
+- [aria-labelledby](/ru/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
 - aria-owns
 - aria-posinset
 - aria-setsize

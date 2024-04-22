@@ -1,7 +1,6 @@
 ---
 title: CSS básico
 slug: Learn/Getting_started_with_the_web/CSS_basics
-original_slug: Aprender/Getting_started_with_the_web/CSS_basico
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}
@@ -24,9 +23,9 @@ Ainda assim, precisamos aplicar o CSS ao seu documento HTML. Do contrário, o es
 
 1. Abra seu arquivo `index.html` e cole o seguinte código em algum lugar no cabeçalho, ou seja, entre as tags {{HTMLElement("head")}} e `</head>`:
 
-    ```html
-    <link href="estilos/estilo.css" rel="stylesheet">
-    ```
+   ```html
+   <link href="estilos/estilo.css" rel="stylesheet" />
+   ```
 
 2. Salve o arquivo `index.html` e abra ele no seu navegador. Você deve ver uma página como essa:
 
@@ -70,7 +69,9 @@ p {
 Você também pode selecionar vários tipos de elementos e aplicar um único conjunto de regras a todos eles. Inclua múltiplos seletores separados por vírgulas. Por exemplo:
 
 ```css
-p, li, h1 {
+p,
+li,
+h1 {
   color: red;
 }
 ```
@@ -95,37 +96,41 @@ Agora que exploramos algumas noções básicas de CSS, vamos começar a adiciona
 
 1. Primeiro de tudo, volte e encontre a [fonte do Google Fonts](/pt-BR/docs/Aprender/Getting_started_with_the_web/com_que_seu_site_vai_parecer#Fonte) que você armazenou em algum lugar seguro. Adicione o elemento {{htmlelement ("link")}} em algum lugar dentro do cabeçalho no `index.html` (novamente, em qualquer lugar entre as tags {{HTMLElement ("head")}} e `</ head>`). Será algo parecido com isto:
 
-    ```html
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    ```
+   ```html
+   <link
+     href="http://fonts.googleapis.com/css?family=Open+Sans"
+     rel="stylesheet" />
+   ```
 
-    Esse código vincula sua página a uma folha de estilo que baixa a família de fontes Open Sans junto com sua página web e permite que você a defina em seus elementos HTML usando sua própria folha de estilos.
+   Esse código vincula sua página a uma folha de estilo que baixa a família de fontes Open Sans junto com sua página web e permite que você a defina em seus elementos HTML usando sua própria folha de estilos.
 
 2. Em seguida, exclua a regra existente no seu arquivo `estilo.css`. Foi um bom teste, mas o texto vermelho não parece muito bom.
 3. Adicione as seguintes linhas em seu lugar, substituindo a linha do espaço reservado pela linha `font-family` que você obteve do Google Fonts. (`font-family` significa apenas a(s) fonte(s) que você deseja usar para o seu texto.) Esta regra primeiro define uma fonte base global e o tamanho da fonte para a página inteira (já que {{HTMLElement ("html")}} é o elemento pai de toda a página, e todos os elementos dentro dele herdam o mesmo `font-size` e `font-family`):
 
-    ```css
-    html {font-size: 10px; /* px significa "pixels": o tamanho da fonte base é agora de 10 pixels */
-      font-family: "Open Sans", sans-serif; /* este deve ser o nome da fonte que você obteve no Google Fonts */
-    }
-    ```
+   ```css
+   html {
+     font-size: 10px; /* px significa "pixels": o tamanho da fonte base é agora de 10 pixels */
+     font-family: "Open Sans", sans-serif; /* este deve ser o nome da fonte que você obteve no Google Fonts */
+   }
+   ```
 
-    > **Nota:** Qualquer coisa em um documento CSS entre `/*` e `*/` é um **comentário CSS**, que o navegador ignora quando renderiza o código. Este é um lugar para você escrever notas úteis sobre o que você está fazendo.
+   > **Nota:** Qualquer coisa em um documento CSS entre `/*` e `*/` é um **comentário CSS**, que o navegador ignora quando renderiza o código. Este é um lugar para você escrever notas úteis sobre o que você está fazendo.
 
 4. Agora definiremos tamanhos de fonte para elementos que contêm texto dentro do corpo HTML ({{htmlelement ("h1")}}, {{htmlelement ("li")}} e {{htmlelement ("p")}}). Também centralizaremos o texto do nosso cabeçalho e definiremos a altura da linha e o espaçamento das letras no conteúdo do corpo para torná-lo um pouco mais legível:
 
-    ```css
-    h1 {
-      font-size: 60px;
-      text-align: center;
-    }
+   ```css
+   h1 {
+     font-size: 60px;
+     text-align: center;
+   }
 
-    p, li {
-      font-size: 16px;
-      line-height: 2;
-      letter-spacing: 1px;
-    }
-    ```
+   p,
+   li {
+     font-size: 16px;
+     line-height: 2;
+     letter-spacing: 1px;
+   }
+   ```
 
 Você pode ajustar esses valores de `px` para o que você desejar, para deixar seu design com a aparência que quiser, mas no geral seu design deve parecer com isso:![a mozilla logo and some paragraphs. a sans-serif font has been set, the font sizes, line height and letter spacing are adjusted, and the main page heading has been centered](website-screenshot-font-small.png)
 
@@ -157,7 +162,7 @@ Então, vamos começar e adicionar mais CSS à nossa página! Continue adicionan
 
 ```css
 html {
-  background-color: #00539F;
+  background-color: #00539f;
 }
 ```
 
@@ -169,7 +174,7 @@ Essa regra define uma cor de fundo para toda a página. Mude a cor acima para a 
 body {
   width: 600px;
   margin: 0 auto;
-  background-color: #FF9500;
+  background-color: #ff9500;
   padding: 0 20px 20px 20px;
   border: 5px solid black;
 }
@@ -189,7 +194,7 @@ Agora para o elemento {{htmlelement ("body")}}. Há algumas declarações aqui, 
 h1 {
   margin: 0;
   padding: 20px 0;
-  color: #00539F;
+  color: #00539f;
   text-shadow: 3px 3px 1px black;
 }
 ```

@@ -1,11 +1,6 @@
 ---
 title: prefix
 slug: Web/CSS/@counter-style/prefix
-tags:
-  - CSS
-  - Descripteur
-  - Reference
-translation_of: Web/CSS/@counter-style/prefix
 ---
 
 {{CSSRef}}
@@ -41,7 +36,7 @@ prefix: "Page";
 @counter-style chapitres {
   system: numeric;
   symbols: "0" "1" "2" "3" "4" "5" "6" "7" "8" "9";
-  prefix: 'Chapitre ';
+  prefix: "Chapitre ";
 }
 
 .exemple {

@@ -1,8 +1,8 @@
 ---
 title: Element.requestPointerLock()
 slug: Web/API/Element/requestPointerLock
-translation_of: Web/API/Element/requestPointerLock
 ---
+
 {{ APIRef("DOM") }}{{ seeCompatTable }}
 
 Метод **`Element.requestPointerLock()`** позволяет асинхронно запросить блокировку курсора для заданного элемента.
@@ -19,7 +19,7 @@ instanceOfElement.requestPointerLock();
 
 {{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}
 

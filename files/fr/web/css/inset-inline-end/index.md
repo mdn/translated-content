@@ -1,13 +1,6 @@
 ---
 title: inset-inline-end
 slug: Web/CSS/inset-inline-end
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-translation_of: Web/CSS/inset-inline-end
-original_slug: inset-inline-end
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

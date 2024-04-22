@@ -1,7 +1,6 @@
 ---
 title: JavaScript
 slug: Learn/JavaScript
-original_slug: Aprender/JavaScript
 ---
 
 {{LearnSidebar}}

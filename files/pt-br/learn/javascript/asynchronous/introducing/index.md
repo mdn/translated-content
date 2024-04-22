@@ -42,7 +42,7 @@ Neste artigo, começaremos analisando o problema com funções síncronas de lon
 Considere o seguinte código:
 
 ```js
-const name = 'Miriam';
+const name = "Miriam";
 const greeting = `Hello, my name is ${name}!`;
 console.log(greeting);
 // "Hello, my name is Miriam!"
@@ -63,7 +63,7 @@ function makeGreeting(name) {
   return `Hello, my name is ${name}!`;
 }
 
-const name = 'Miriam';
+const name = "Miriam";
 const greeting = makeGreeting(name);
 console.log(greeting);
 // "Hello, my name is Miriam!"
@@ -112,15 +112,15 @@ function generatePrimes(quota) {
   return primes;
 }
 
-const quota = document.querySelector('#quota');
-const output = document.querySelector('#output');
+const quota = document.querySelector("#quota");
+const output = document.querySelector("#output");
 
-document.querySelector('#generate').addEventListener('click', () => {
+document.querySelector("#generate").addEventListener("click", () => {
   const primes = generatePrimes(quota.value);
   output.textContent = `Finished generating ${quota.value} primes!`;
 });
 
-document.querySelector('#reload').addEventListener('click', () => {
+document.querySelector("#reload").addEventListener("click", () => {
   document.location.reload();
 });
 ```
@@ -181,15 +181,15 @@ function generatePrimes(quota) {
   return primes;
 }
 
-const quota = document.querySelector('#quota');
-const output = document.querySelector('#output');
+const quota = document.querySelector("#quota");
+const output = document.querySelector("#output");
 
-document.querySelector('#generate').addEventListener('click', () => {
+document.querySelector("#generate").addEventListener("click", () => {
   const primes = generatePrimes(quota.value);
   output.textContent = `Terminou de gerar ${quota.value} primos!`;
 });
 
-document.querySelector('#reload').addEventListener('click', () => {
+document.querySelector("#reload").addEventListener("click", () => {
   document.location.reload();
 });
 ```
@@ -229,23 +229,27 @@ pre {
 ```
 
 ```js
-const log = document.querySelector('.event-log');
+const log = document.querySelector(".event-log");
 
-document.querySelector('#xhr').addEventListener('click', () => {
-  log.textContent = '';
+document.querySelector("#xhr").addEventListener("click", () => {
+  log.textContent = "";
 
   const xhr = new XMLHttpRequest();
 
-  xhr.addEventListener('loadend', () => {
+  xhr.addEventListener("loadend", () => {
     log.textContent = `${log.textContent}Concluído com status: ${xhr.status}`;
   });
 
-  xhr.open('GET', 'https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json');
+  xhr.open(
+    "GET",
+    "https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json",
+  );
   xhr.send();
-  log.textContent = `${log.textContent}Iniciada solicitação XHR\n`;});
+  log.textContent = `${log.textContent}Iniciada solicitação XHR\n`;
+});
 
-document.querySelector('#reload').addEventListener('click', () => {
-  log.textContent = '';
+document.querySelector("#reload").addEventListener("click", () => {
+  log.textContent = "";
   document.location.reload();
 });
 ```
@@ -254,7 +258,7 @@ document.querySelector('#reload').addEventListener('click', () => {
 
 Isso é exatamente como os [manipuladores de eventos que encontramos em um módulo anterior](/pt-BR/docs/Learn/JavaScript/Building_blocks/Events), exceto que, em vez de o evento ser uma ação do usuário, como o usuário clicar um botão, o evento é uma mudança no estado de algum objeto.
 
-## Manipuladores de eventos
+## Callback
 
 Um manipulador de eventos é um tipo específico de callback. Um callback é apenas uma função que é passada para outra função, com a expectativa de que o callback seja chamado no momento apropriado. Como acabamos de ver, os retornos de chamada costumavam ser a principal forma de implementação de funções assíncronas em JavaScript.
 

@@ -1,15 +1,6 @@
 ---
 title: WeakSet.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/has
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - WeakSet
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet/has
-original_slug: Web/JavaScript/Reference/Objets_globaux/WeakSet/has
 ---
 
 {{JSRef}}
@@ -41,8 +32,8 @@ var ws = new WeakSet();
 var obj = {};
 ws.add(window);
 
-mySet.has(window);  // renvoie true
-mySet.has(obj);     // renvoie false
+mySet.has(window); // renvoie true
+mySet.has(obj); // renvoie false
 ```
 
 ## Spécifications

@@ -1,22 +1,6 @@
 ---
 title: Les données en WebGL
 slug: Web/API/WebGL_API/Data
-tags:
-  - 3D
-  - API WebGL
-  - Attributs
-  - BesoinDExemple
-  - BesoinDeContenu
-  - Graphismes
-  - Graphismes 3D
-  - Guide
-  - Intermédiaire
-  - Uniformes
-  - Variants
-  - WebGL
-  - dessin
-translation_of: Web/API/WebGL_API/Data
-original_slug: Web/API/WebGL_API/Données
 ---
 
 {{DefaultAPISidebar("WebGL")}}
@@ -39,7 +23,7 @@ Les **attributes** sont des variables GLSL qui ne sont disponibles que pour le s
 
 ### Varyings
 
-Les **varyings** sont des variables déclarées par le shader de sommet et elle sont utilisées pour transmettre des données du shader de sommet au shader de fragment. Ceci est communément utilisé pour partager un sommet [normal](https://fr.wikipedia.org/wiki/Normale_(g%C3%A9om%C3%A9trie)) après qu'il a été calculé par le shader de sommet.
+Les **varyings** sont des variables déclarées par le shader de sommet et elle sont utilisées pour transmettre des données du shader de sommet au shader de fragment. Ceci est communément utilisé pour partager un sommet [normal](<https://fr.wikipedia.org/wiki/Normale_(géométrie)>) après qu'il a été calculé par le shader de sommet.
 
 <\<how to use>>
 

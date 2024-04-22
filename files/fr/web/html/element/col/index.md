@@ -1,15 +1,6 @@
 ---
-title: '<col> : l''élément représentant une colonne'
+title: "<col> : l'élément représentant une colonne"
 slug: Web/HTML/Element/col
-tags:
-  - Element
-  - HTML
-  - HTML tabular data
-  - Reference
-  - Tables
-  - Web
-translation_of: Web/HTML/Element/col
-browser-compat: html.elements.col
 ---
 
 {{HTMLSidebar}}

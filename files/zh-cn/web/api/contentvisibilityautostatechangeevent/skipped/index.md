@@ -1,5 +1,6 @@
 ---
 title: ContentVisibilityAutoStateChangeEvent：skipped 属性
+short-title: skipped
 slug: Web/API/ContentVisibilityAutoStateChangeEvent/skipped
 ---
 
@@ -49,6 +50,6 @@ function stopCanvasUpdates(canvas) {
 ## 参见
 
 - {{DOMXref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} 事件
-- [CSS 局限](/en-US/docs/Web/CSS/CSS_containment)
+- [CSS 局限](/zh-CN/docs/Web/CSS/CSS_containment)
 - {{CSSXref("content-visibility")}} 属性
 - {{CSSXref("contain")}} 属性

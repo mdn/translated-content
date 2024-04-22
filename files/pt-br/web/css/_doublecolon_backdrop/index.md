@@ -1,5 +1,5 @@
 ---
-title: '::backdrop'
+title: "::backdrop"
 slug: Web/CSS/::backdrop
 ---
 
@@ -13,13 +13,11 @@ Ele não herda de nenhum elemento e também não é herdado. Não há restriçã
 
 ## Especificações
 
-| Especificação                                                                                | Status                           | Comentário        |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ----------------- |
-| {{SpecName('Fullscreen', '#::backdrop-pseudo-element', '::backdrop')}} | {{Spec2('Fullscreen')}} | Definição inicial |
+{{Specifications}}
 
 ## Copatibilidade com navegadores
 
-{{Compat("css.selectors.backdrop")}}
+{{Compat}}
 
 ## Veja também
 

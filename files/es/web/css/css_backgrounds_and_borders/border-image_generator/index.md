@@ -1,7 +1,6 @@
 ---
 title: Generador Border-image
 slug: Web/CSS/CSS_backgrounds_and_borders/Border-image_generator
-original_slug: Web/CSS/CSS_Background_and_Borders/Border-image_generator
 ---
 
 Esta herramienta permite generar valores para CSS3 {{cssxref("border-image")}}

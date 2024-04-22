@@ -52,8 +52,12 @@ padding-left: unset;
 ### 使用“px”单位和百分比设置 padding-left 的样例
 
 ```css
-.content { padding-left: 5%; }
-.sidebox { padding-left: 10px; }
+.content {
+  padding-left: 5%;
+}
+.sidebox {
+  padding-left: 10px;
+}
 ```
 
 ## 规范
@@ -64,7 +68,7 @@ padding-left: unset;
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - [Introduction to the CSS basic box model](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
 - {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}} and the {{cssxref("padding")}} shorthand

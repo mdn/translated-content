@@ -1,7 +1,6 @@
 ---
 title: sort
 slug: Web/XSLT/Element/sort
-original_slug: Web/XSLT/sort
 ---
 
 {{ XsltRef() }}

@@ -1,8 +1,6 @@
 ---
 title: Empilement et éléments flottants
 slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elements
-translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float
-original_slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float
 ---
 
 {{PreviousMenuNext("Web/CSS/Comprendre_z-index/Empilement_sans_z-index","Web/CSS/Comprendre_z-index/Ajout_de_z-index", "Web/CSS/Comprendre_z-index")}}
@@ -35,22 +33,17 @@ Ce comportement peut être expliqué en améliorant la liste précédente :
 ### HTML
 
 ```html
-<div id="abs1">
-  <b>DIV #1</b><br />position: absolute;</div>
+<div id="abs1"><b>DIV #1</b><br />position: absolute;</div>
 
-<div id="flo1">
-  <b>DIV #2</b><br />float: left;</div>
+<div id="flo1"><b>DIV #2</b><br />float: left;</div>
 
-<div id="flo2">
-  <b>DIV #3</b><br />float: right;</div>
+<div id="flo2"><b>DIV #3</b><br />float: right;</div>
 
 <br />
 
-<div id="sta1">
-  <b>DIV #4</b><br />no positioning</div>
+<div id="sta1"><b>DIV #4</b><br />no positioning</div>
 
-<div id="abs2">
-  <b>DIV #5</b><br />position: absolute;</div>
+<div id="abs2"><b>DIV #5</b><br />position: absolute;</div>
 ```
 
 ### CSS

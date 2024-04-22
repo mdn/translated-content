@@ -3,6 +3,8 @@ title: 浅拷贝
 slug: Glossary/Shallow_copy
 ---
 
+{{GlossarySidebar}}
+
 {{MDNSidebar}}
 
 对象的**浅拷贝**是其属性与拷贝源对象的属性共享相同引用（指向相同的底层值）的副本。因此，当你更改源或副本时，也可能导致其他对象也发生更改——也就是说，你可能会无意中对源或副本造成意料之外的更改。这种行为与[深拷贝](/zh-CN/docs/Glossary/Deep_copy)的行为形成对比，在深拷贝中，源和副本是完全独立的。

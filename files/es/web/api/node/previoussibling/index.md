@@ -16,9 +16,9 @@ nodoAnterior = nodo.previousSibling;
 ## Ejemplo
 
 ```html
-<img id="b0">
-<img id="b1">
-<img id="b2">
+<img id="b0" />
+<img id="b1" />
+<img id="b2" />
 ```
 
 ```js

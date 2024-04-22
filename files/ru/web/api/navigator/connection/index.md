@@ -1,8 +1,6 @@
 ---
 title: NetworkInformation.connection
 slug: Web/API/Navigator/connection
-translation_of: Web/API/Navigator/connection
-original_slug: Web/API/NetworkInformation/connection
 ---
 
 {{ apiref("Network Information API") }}
@@ -21,7 +19,7 @@ connectionInfo = navigator.connection
 
 {{Specifications}}
 
-## Доступность в браузере
+## Совместимость с браузерами
 
 {{Compat}}
 

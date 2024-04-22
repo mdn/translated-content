@@ -11,11 +11,11 @@ slug: Web/SVG/Attribute/baseline-shift
 
 ## 用法
 
-| 类别     | 外观属性                                                                                                   |
-| -------- | ---------------------------------------------------------------------------------------------------------- |
+| 类别     | 外观属性                                                                                                        |
+| -------- | --------------------------------------------------------------------------------------------------------------- |
 | 值       | **auto** \| baseline \| super \| sub \| \<percentage> \| [\<length>](/zh-CN/SVG/Content_type#Length) \| inherit |
-| 可变性   | Yes                                                                                                        |
-| 规范文档 | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/text.html#BaselineShiftProperty)                        |
+| 可变性   | Yes                                                                                                             |
+| 规范文档 | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/text.html#BaselineShiftProperty)                             |
 
 - baseline
   - : 没有基线切换，`dominant-baseline`依然在原来的位置。

@@ -39,16 +39,16 @@ var myHeaders = new Headers(); // Currently empty
 你可以用[append()](/zh-CN/docs/Web/API/Headers/append)方法给`Headers` 对象增添一个新的键值对，然后用 **`set()`** 方法去改变这个键值对：
 
 ```js
-myHeaders.append('Content-Type', 'image/jpeg');
-myHeaders.set('Content-Type', 'text/html');
+myHeaders.append("Content-Type", "image/jpeg");
+myHeaders.set("Content-Type", "text/html");
 ```
 
 如果这个键值对不存在，那么 **`set()`** 方法首先创建一个键值对，然后给它赋值。如果这个键值对存在，那么 **`set()`** 方法将会覆盖之前的 **`value`** 值：
 
 ```js
-myHeaders.set('Accept-Encoding', 'deflate');
-myHeaders.set('Accept-Encoding', 'gzip');
-myHeaders.get('Accept-Encoding'); // Returns 'gzip'
+myHeaders.set("Accept-Encoding", "deflate");
+myHeaders.set("Accept-Encoding", "gzip");
+myHeaders.get("Accept-Encoding"); // Returns 'gzip'
 ```
 
 如果你需要增加一个键值对，而不是要覆盖之前的键值对，那么你需要用[append()](/zh-CN/docs/Web/API/Headers/append)方法。

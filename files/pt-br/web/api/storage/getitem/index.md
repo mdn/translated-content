@@ -28,17 +28,17 @@ A função seguinte recupera três itens armazenados no local storage e usa-os p
 
 ```js
 function setStyles() {
-  var currentColor = localStorage.getItem('bgcolor');
-  var currentFont = localStorage.getItem('font');
-  var currentImage = localStorage.getItem('image');
+  var currentColor = localStorage.getItem("bgcolor");
+  var currentFont = localStorage.getItem("font");
+  var currentImage = localStorage.getItem("image");
 
-  document.getElementById('bgcolor').value = currentColor;
-  document.getElementById('font').value = currentFont;
-  document.getElementById('image').value = currentImage;
+  document.getElementById("bgcolor").value = currentColor;
+  document.getElementById("font").value = currentFont;
+  document.getElementById("image").value = currentImage;
 
-  htmlElem.style.backgroundColor = '#' + currentColor;
+  htmlElem.style.backgroundColor = "#" + currentColor;
   pElem.style.fontFamily = currentFont;
-  imgElem.setAttribute('src', currentImage);
+  imgElem.setAttribute("src", currentImage);
 }
 ```
 
@@ -46,17 +46,11 @@ function setStyles() {
 
 ## Especificações
 
-| Especificação                                                                        | Status                           | Comment |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('Web Storage', '#dom-storage-getitem', 'getItem()')}} | {{Spec2('Web Storage')}} |         |
+{{Specifications}}
 
-## Compatibilidade
+## Compatibilidade com navegadores
 
-{{Compat("api.Storage.getItem")}}
-
-Os níveis de compatibilidade podem variar em todos os navegadores, tanto para o localStorage quanto para o sessionStorage. Aqui temos [estatísticas detalhadas dos níveis de compatibilidade para vários navegadores](http://dev-test.nemikor.com/web-storage/support-test/).
-
-> **Nota:**A partir da versão 5.1 do iOS, o Safari Mobile armazena os dados do localStorage na pasta do cache, sujeito a ser apagado em caso de espaço insificiente.
+{{Compat}}
 
 ## Veja também
 

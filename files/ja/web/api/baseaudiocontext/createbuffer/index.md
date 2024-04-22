@@ -1,7 +1,6 @@
 ---
 title: BaseAudioContext.createBuffer()
 slug: Web/API/BaseAudioContext/createBuffer
-original_slug: Web/API/AudioContext/createBuffer
 ---
 
 {{ APIRef("Web Audio API") }}
@@ -15,7 +14,7 @@ original_slug: Web/API/AudioContext/createBuffer
 ## 構文
 
 ```js
-createBuffer(numOfChannels, length, sampleRate)
+createBuffer(numOfChannels, length, sampleRate);
 ```
 
 ### 引数
@@ -66,7 +65,11 @@ var buffer = audioCtx.createBuffer(1, 22050, 22050);
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
 // AudioContext のサンプリングレートで空の 3 秒のステレオバッファーを作成する
-var myArrayBuffer = audioCtx.createBuffer(2, audioCtx.sampleRate * 3, audioCtx.sampleRate);
+var myArrayBuffer = audioCtx.createBuffer(
+  2,
+  audioCtx.sampleRate * 3,
+  audioCtx.sampleRate,
+);
 
 // バッファーにホワイトノイズを書き込む
 // 単なる -1.0 から 1.0 の間の乱数の値

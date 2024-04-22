@@ -24,7 +24,7 @@ Django 教學的第二篇文章，會展示怎樣創建一個網站的"框架"�
 
 這篇文章會展示怎樣創建一個網站的"框架"，在這個框架的基礎上,你可以繼續填充整站使用的 settings， urls，模型(models)，視圖(views)和模板(templates)（我們會在接下來的文章裡討論）。
 
-搭建 “框架” 的過程很直接:
+搭建 「框架」 的過程很直接:
 
 1. 使用 `django-admin`工具創建工程的文件夾，基本的文件模板和工程管理腳本（**manage.py**）。
 2. 用 **manage.py** 創建一個或多個*應用*。
@@ -47,7 +47,7 @@ locallibrary/         # Website folder
 
 ## 創建專案項目
 
-首先打開命令提示符/終端，確保您在[虛擬環境](/zh-TW/docs/Learn/Server-side/Django/development_environment#Using_a_virtual_environment)中，導航到您要存放 Django 應用程序的位置（在文檔文件夾中，輕鬆找到它的位置），並為您的新網站，創建一個文件夾（在這種情況下：locallibrary）。然後使用 cd 命令進入該文件夾：
+首先打開命令提示符/終端，確保你在[虛擬環境](/zh-TW/docs/Learn/Server-side/Django/development_environment#Using_a_virtual_environment)中，導航到你要存放 Django 應用程序的位置（在文檔文件夾中，輕鬆找到它的位置），並為你的新網站，創建一個文件夾（在這種情況下：locallibrary）。然後使用 cd 命令進入該文件夾：
 
 ```bash
 mkdir locallibrary
@@ -84,7 +84,7 @@ locallibrary 項目的子文件夾是整個網站的進入點：
 
 ## 創建 catalog 應用
 
-接下來，在 locallibrary 項目裡，使用下面的命令創建 catalog 應用（和您項目的**manage.py**在同一個文件夾下）
+接下來，在 locallibrary 項目裡，使用下面的命令創建 catalog 應用（和你項目的**manage.py**在同一個文件夾下）
 
 ```bash
 python3 manage.py startapp catalog
@@ -94,7 +94,7 @@ python3 manage.py startapp catalog
 >
 > 如果你是 windows 系統，在這個部分用`py -3`替代`python3`。
 >
-> 如果您使用的是 Python 3.7.0，則應使用`py manage.py startapp catalog`
+> 如果你使用的是 Python 3.7.0，則應使用`py manage.py startapp catalog`
 
 這個工具創建了一個新的文件夾，並為該應用創建了不同的文件（下面黑體所示）。絕大多數文件的命名和它們的目的有關（比如視圖函數就是**views.py，**模型就是**models.py，**測試是**tests.py，**網站管理設置是**admin.py，**註冊應用是**apps.py）**，並且還包含了為項目所用的最小模板。
 
@@ -116,7 +116,7 @@ locallibrary/
 
 除上面所說的文件外，我們還有：
 
-- 一個*migration*文件夾，用來存放 “migrations” ——當你修改你的數據模型時，這個文件會自動升級你的資料庫。
+- 一個*migration*文件夾，用來存放 「migrations」 ——當你修改你的數據模型時，這個文件會自動升級你的資料庫。
 - **\_\_init\_\_.py** —一個空文件，Django/Python 會將這個文件作為[Python 套件包](https://docs.python.org/3/tutorial/modules.html#packages)並允許你在項目的其他部分使用它。
 
 > **備註：** 你注意到上面的文件裡有些缺失嘛？儘管有了 views 和 models 的文件，可是 url 映射，網站模板，靜態文件在哪裡呢？我們會在接下來的部分展示如何創建它們（並不是每個網站都需要，不過這個例子需要）。
@@ -203,7 +203,7 @@ urlpatterns = [
 ]
 ```
 
-URL 映射通過`urlpatterns` 變量管理，它是一個`path()`函數的 Python 列表。每個`path()`函數，要么將 URL 式樣(URL pattern)關聯到特定視圖( _specific view)_，當模式匹配時將會顯示，要么關聯到某個 URL 式樣列表的測試代碼。(第二種情況下，URL 式樣是目標模型裡的“基本 URL”). `urlpatterns` 列表初始化定義了單一函數，把所有帶有 'admin/' 模式的 URL，映射到`admin.site.urls`。這個函數，包含了 Administration 應用自己的 URL 映射定義。
+URL 映射通過`urlpatterns` 變量管理，它是一個`path()`函數的 Python 列表。每個`path()`函數，要么將 URL 式樣(URL pattern)關聯到特定視圖( _specific view)_，當模式匹配時將會顯示，要么關聯到某個 URL 式樣列表的測試代碼。(第二種情況下，URL 式樣是目標模型裡的「基本 URL」). `urlpatterns` 列表初始化定義了單一函數，把所有帶有 'admin/' 模式的 URL，映射到`admin.site.urls`。這個函數，包含了 Administration 應用自己的 URL 映射定義。
 
 > **備註：** `path()`中的路由是一個字符串，用於定義要匹配的 URL 模式。該字符串可能包括一個命名變量（在尖括號中），例如`'catalog/<id>/'`。此模式將匹配 **/catalog/any_chars** 等 URL，並將 any_chars 作為參數名稱為`id` 的字符串，傳遞給視圖。我們將在後面的主題中，進一步討論路徑方法和路由模式
 
@@ -231,7 +231,7 @@ urlpatterns += [
 ]
 ```
 
-將路徑函數的第一個參數留空，用以表示'/'。如果您將第一個參數寫為'/'，Django 會在您啟動開發服務器時給出以下警告：
+將路徑函數的第一個參數留空，用以表示'/'。如果你將第一個參數寫為'/'，Django 會在你啟動開發服務器時給出以下警告：
 
 ```python
 System check identified some issues:
@@ -242,7 +242,7 @@ Remove this slash as it is unnecessary.
 If this pattern is targeted in an include(), ensure the include() pattern has a trailing '/'.
 ```
 
-Django 默認不提供 CSS，JavaScript 和圖像等靜態文件，但在創建站點時，開發 Web 服務器這樣做是有用的。作為此 URL 映射器的最終添加，您可以通過附加以下幾行，在開發期間啟用靜態文件的提供。
+Django 默認不提供 CSS，JavaScript 和圖像等靜態文件，但在創建站點時，開發 Web 服務器這樣做是有用的。作為此 URL 映射器的最終添加，你可以通過附加以下幾行，在開發期間啟用靜態文件的提供。
 
 現在將以下最終區塊，添加到文件的底部：
 

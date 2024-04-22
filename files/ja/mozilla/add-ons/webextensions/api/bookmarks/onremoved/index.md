@@ -3,9 +3,9 @@ title: bookmarks.onRemoved
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onRemoved
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
-ブックマークやフォルダが削除された際に発火します。フォルダが再帰的に削除された場合は、そのフォルダに対して 1 回だけ発火し、そのフォルダの中身に関しては発火しません。
+ブックマークやフォルダーが削除された際に発火します。フォルダーが再帰的に削除された場合は、そのフォルダーに対して 1 回だけ発火し、そのフォルダーの中身に関しては発火しません。
 
 ## 構文
 
@@ -56,9 +56,9 @@ browser.bookmarks.onRemoved.hasListener(listener)
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.bookmarks.onRemoved")}}
+{{Compat}}
 
-## Examples
+## 例
 
 ```js
 function handleRemoved(id, removeInfo) {

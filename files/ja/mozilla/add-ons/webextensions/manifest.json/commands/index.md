@@ -117,7 +117,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/commands
 次に、これらのコマンドの最初を下記のようにリッスンできます:
 
 ```js
-browser.commands.onCommand.addListener(function(command) {
+browser.commands.onCommand.addListener(function (command) {
   if (command == "toggle-feature") {
     console.log("toggling the feature!");
   }
@@ -209,4 +209,4 @@ Mac では、"Ctrl" は"Command" と翻訳され、実際の "Ctrl"が必要な�
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.manifest.commands")}}
+{{Compat}}

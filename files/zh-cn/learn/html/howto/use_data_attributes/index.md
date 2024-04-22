@@ -5,7 +5,7 @@ slug: Learn/HTML/Howto/Use_data_attributes
 
 {{LearnSidebar}}
 
-[HTML5](/zh-CN/docs/Web/Guide/HTML/HTML5)是具有扩展性的设计，它初衷是数据应与特定的元素相关联，但不需要任何定义。[data-\* 属性](/zh-CN/docs/Web/HTML/Global_attributes#data-*)允许我们在标准内于 HTML 元素中存储额外的信息，而不需要使用类似于 [classList](/zh-CN/docs/Web/API/Element.classList)，标准外属性，DOM 额外属性或是 [setUserData](/zh-CN/docs/Web/API/Node.setUserData) 之类的技巧。
+HTML 是具有扩展性的设计，它初衷是数据应与特定的元素相关联，但不需要任何定义。[data-\* 属性](/zh-CN/docs/Web/HTML/Global_attributes/data-*)允许我们在标准、语义化的 HTML 元素中存储额外的信息，而不需要使用类似于非标准属性或者 DOM 额外属性之类的技巧。
 
 ## HTML 语法
 
@@ -17,7 +17,7 @@ slug: Learn/HTML/Howto/Use_data_attributes
   data-columns="3"
   data-index-number="12314"
   data-parent="cars">
-...
+  ...
 </article>
 ```
 
@@ -28,11 +28,11 @@ slug: Learn/HTML/Howto/Use_data_attributes
 为了使用`dataset`对象去获取到数据属性，需要获取属性名中`data-`之后的部分 (要注意的是破折号连接的名称需要改写为骆驼拼写法 (如"index-number"转换为"indexNumber"))。
 
 ```js
-var article = document.querySelector('#electriccars');
+var article = document.querySelector("#electriccars");
 
-article.dataset.columns // "3"
-article.dataset.indexNumber // "12314"
-article.dataset.parent // "cars"
+article.dataset.columns; // "3"
+article.dataset.indexNumber; // "12314"
+article.dataset.parent; // "cars"
 ```
 
 每一个属性都是一个可读写的字符串。在上面的例子中，`article.dataset.columns = 5`.将会调整属性的值为 5。
@@ -50,10 +50,10 @@ article::before {
 你也同样可以在 CSS 中使用[属性选择器](/zh-CN/docs/Web/CSS/Attribute_selectors)根据 data 来改变样式：
 
 ```css
-article[data-columns='3'] {
+article[data-columns="3"] {
   width: 400px;
 }
-article[data-columns='4'] {
+article[data-columns="4"] {
   width: 600px;
 }
 ```
@@ -68,7 +68,7 @@ Data 属性同样可以存储不断变化的信息，比如游戏的得分。使
 
 不要在 data attribute 里储存需要显示及访问的内容，因为一些其他的技术可能访问不到它们。另外爬虫不能将 data attribute 的值编入索引中。
 
-IE 的支持度及显示效果是最主要讨论的问题。IE11+支持这个标准，但所有更早期的版本都不支持[dataset](http://caniuse.com/#feat=dataset)。为了支持 IE10 及以下的版本，你必须使用{{domxref("Element.getAttribute", "getAttribute()")}} 来访问。另外，[读取 data-attributes 的行为](http://jsperf.com/data-dataset)相比 JS 存储数据会慢。使用 dataset 会比使用 getAttribute() 读取数据来得慢。
+IE 的支持度及显示效果是最主要讨论的问题。IE11+ 支持这个标准，但所有更早期的版本都不支持 [dataset](http://caniuse.com/#feat=dataset)。为了支持 IE10 及以下的版本，你必须使用 {{domxref("Element.getAttribute", "getAttribute()")}} 来访问。另外，[读取 data-attributes 的行为](http://jsperf.com/data-dataset)相比 JS 存储数据会慢。使用 dataset 会比使用 getAttribute() 读取数据来得慢。
 
 尽管如此，对于那些与元素相关的数据，这依然是一个很好的解决方案。
 

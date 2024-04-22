@@ -19,7 +19,7 @@ HTML 的 **`<del>`** 标签表示一些被从文档中删除的文字内容。�
   </tr>
   <tr>
    <th scope="row">标签省略</th>
-   <td>{{no_tag_omission}}</td>
+   <td>不允许，开始标签和结束标签都不能省略。</td>
   </tr>
   <tr>
    <th scope="row">允许的父元素</th>
@@ -49,7 +49,7 @@ HTML 的 **`<del>`** 标签表示一些被从文档中删除的文字内容。�
 
 ```html
 <p><del>This text has been deleted</del>, here is the rest of the paragraph.</p>
-<del ><p >This paragraph has been deleted.</p ></del >
+<del><p>This paragraph has been deleted.</p></del>
 ```
 
 ### 结果

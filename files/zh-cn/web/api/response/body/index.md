@@ -18,40 +18,40 @@ slug: Web/API/Response/body
 在我们的[简单 pump 流](https://mdn.github.io/dom-examples/streams/simple-pump.html)示例中，我们获取一个图片，使用 `response.body` 暴露响应的流，用 {{domxref("ReadableStream.getReader()", "ReadableStream.getReader()")}} 创建一个 reader，然后将其置入第二个自定义读取流中——有效的创建了一个完全相同的图片副本。
 
 ```js
-const image = document.getElementById('target');
+const image = document.getElementById("target");
 
 // 请求原始图片
-fetch('./tortoise.png')
-// 取出 body
-.then(response => response.body)
-.then(body => {
-  const reader = body.getReader();
+fetch("./tortoise.png")
+  // 取出 body
+  .then((response) => response.body)
+  .then((body) => {
+    const reader = body.getReader();
 
-  return new ReadableStream({
-    start(controller) {
-      return pump();
+    return new ReadableStream({
+      start(controller) {
+        return pump();
 
-      function pump() {
-        return reader.read().then(({ done, value }) => {
-          // 读不到更多数据就关闭流
-          if (done) {
-            controller.close();
-            return;
-          }
+        function pump() {
+          return reader.read().then(({ done, value }) => {
+            // 读不到更多数据就关闭流
+            if (done) {
+              controller.close();
+              return;
+            }
 
-          // 将下一个数据块置入流中
-          controller.enqueue(value);
-          return pump();
-        });
-      }
-    }
+            // 将下一个数据块置入流中
+            controller.enqueue(value);
+            return pump();
+          });
+        }
+      },
+    });
   })
-})
-.then(stream => new Response(stream))
-.then(response => response.blob())
-.then(blob => URL.createObjectURL(blob))
-.then(url => console.log(image.src = url))
-.catch(err => console.error(err));
+  .then((stream) => new Response(stream))
+  .then((response) => response.blob())
+  .then((blob) => URL.createObjectURL(blob))
+  .then((url) => console.log((image.src = url)))
+  .catch((err) => console.error(err));
 ```
 
 ## 规范

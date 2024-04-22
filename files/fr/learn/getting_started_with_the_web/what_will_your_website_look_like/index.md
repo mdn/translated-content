@@ -1,15 +1,6 @@
 ---
 title: Quel sera l'aspect de votre site web ?
 slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
-tags:
-  - Apprendre
-  - Composition
-  - Conception
-  - Débutant
-  - Planification
-  - Polices de caractères
-translation_of: Learn/Getting_started_with_the_web/What_will_your_website_look_like
-original_slug: Apprendre/Commencer_avec_le_web/Quel_aspect_pour_votre_site
 ---
 
 {{LearnSidebar}}

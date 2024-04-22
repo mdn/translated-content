@@ -30,13 +30,18 @@ void initStorageEvent(
 
 ## 属性
 
-| 属性名        | 类型                         | 描述                                                                                                       |
-| ------------- | ---------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `key`         | [`DOMString`](/zh-CN/DOMString) | 该属性代表被修改的键值。当被 clear() 方法清除之后该属性值为 null。**（只读）**                             |
-| `newValue`    | [`DOMString`](/zh-CN/DOMString) | 该属性代表修改后的新值。当被 clear() 方法清理后或者该键值对被移除，`newValue` 的值为 `null` 。**（只读）** |
-| `oldValue`    | [`DOMString`](/zh-CN/DOMString) | 该属性代表修改前的原值。在设置新键值对时由于没有原始值，该属性值为 `null`。**（只读）**                    |
-| `storageArea` | `nsIDOMStorage`              | 被操作的 storage 对象。**（只读）**                                                                        |
-| `url`         | [`DOMString`](/zh-CN/DOMString) | key 发生改变的对象所在文档的 URL 地址。**（只读）**                                                        |
+_除了下面列出的属性以外，`StorageEvent` 还继承了父接口 {{domxref("Event")}} 的属性。_
+
+- {{domxref("StorageEvent.key", "key")}} {{ReadOnlyInline}}
+  - : 被修改的键名。当被 `clear()` 方法清除后该属性值为 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)。
+- {{domxref("StorageEvent.newValue", "newValue")}} {{ReadOnlyInline}}
+  - : 修改后的新值。当被 `clear()` 方法清除或者从存储中移除该键值对时，`newValue` 的值为 `null` 。
+- {{domxref("StorageEvent.oldValue", "oldValue")}} {{ReadOnlyInline}}
+  - : 该键（`key`）在修改前的旧值。在添加新键值对时由于没有原始值，该属性值为 `null`。
+- {{domxref("StorageEvent.storageArea", "storageArea")}} {{ReadOnlyInline}}
+  - : 被操作的 {{DOMxRef("Storage")}} 对象。
+- {{domxref("StorageEvent.url", "url")}} {{ReadOnlyInline}}
+  - : `key` 发生改变的对象所在文档的 URL 地址。
 
 ## 方法
 

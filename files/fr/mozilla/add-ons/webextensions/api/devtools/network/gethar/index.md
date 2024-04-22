@@ -1,17 +1,9 @@
 ---
 title: devtools.network.getHAR()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/network/getHAR
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
-  - devtools.network
-  - getHAR
-translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.network/getHAR
-original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.network/getHAR
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Obtenez un [journal HAR](http://www.softwareishard.com/blog/har-12-spec/#log) pour la page chargée dans l'onglet en cours.
 
@@ -20,7 +12,7 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 ## Syntaxe
 
 ```js
-var getting = browser.devtools.network.getHAR()
+var getting = browser.devtools.network.getHAR();
 ```
 
 ### Paramètres

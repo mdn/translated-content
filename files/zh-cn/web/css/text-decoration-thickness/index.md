@@ -1,7 +1,6 @@
 ---
 title: 文本装饰线厚度 (粗细)
 slug: Web/CSS/text-decoration-thickness
-original_slug: Web/CSS/文本装饰线厚度 (粗细)
 ---
 
 {{CSSRef}}

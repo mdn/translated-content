@@ -1,7 +1,6 @@
 ---
 title: Como a Internet funciona?
 slug: Learn/Common_questions/Web_mechanics/How_does_the_Internet_work
-original_slug: Learn/Common_questions/How_does_the_Internet_work
 ---
 
 {{LearnSidebar}}
@@ -69,7 +68,7 @@ Conectando computadores a roteadores, e então roteadores a roteadores nós pode
 
 ![Roteadores conectados a roteadores](internet-schema-5.png)
 
-Esta rede é muito parecida com o que chamamos de Internet, mas alguma coisa está faltando. Nós construímos tais redes para nossos próprios fins. Existem outras redes além das nossas ligadas em outros lugares: nossos amigos, vizinhos, qualquer pessoa pode ter uma rede de computadores. Mas é inviável ligarmos cabos entre nossas casas e o resto do mundo, então como nos podemos lidar com isso? Muito bem, já existem cabos ligados a sua casa, como por exemplo, cabos de eletricidade e telefone. A estrutura do telefone já conecta nossa casa com o resto do mundo, então é exatamente o que nós precisamos. Para conectar nossa rede a rede telefônica, precisamos de um equipamento especial chamado _modem_. Este *modem* transforma a informação da nossa rede em uma informação gerenciável pela rede telefônica e vice-versa.
+Esta rede é muito parecida com o que chamamos de Internet, mas alguma coisa está faltando. Nós construímos tais redes para nossos próprios fins. Existem outras redes além das nossas ligadas em outros lugares: nossos amigos, vizinhos, qualquer pessoa pode ter uma rede de computadores. Mas é inviável ligarmos cabos entre nossas casas e o resto do mundo, então como nos podemos lidar com isso? Muito bem, já existem cabos ligados a sua casa, como por exemplo, cabos de eletricidade e telefone. A estrutura do telefone já conecta nossa casa com o resto do mundo, então é exatamente o que nós precisamos. Para conectar nossa rede a rede telefônica, precisamos de um equipamento especial chamado _modem_. Este _modem_ transforma a informação da nossa rede em uma informação gerenciável pela rede telefônica e vice-versa.
 
 ![Um roteador conectado a um modem](internet-schema-6.png)
 

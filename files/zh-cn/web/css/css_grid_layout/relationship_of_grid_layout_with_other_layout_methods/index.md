@@ -20,7 +20,9 @@ CSS **网格布局**和**弹性盒布局**的主要区别在于 [CSS 弹性盒�
 我还设置了 {{cssxref("flex-wrap")}} 属性为 `wrap`，从而当容器变得太窄时，元素会换到新的一行。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -69,7 +71,9 @@ CSS **网格布局**和**弹性盒布局**的主要区别在于 [CSS 弹性盒�
 下例中我用网格创建同样的布局。这次我们有 3 个 `1fr` 的列轨道。我们并不需要给这些子元素设置任何属性，它们会自动按顺序填充到网格的单元格中。你可以看到它们按网格规整的排列，行与行、列与列对齐。当有 5 个子元素时，第二行的尾部会留出一个空隙。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -129,7 +133,9 @@ CSS **网格布局**和**弹性盒布局**的主要区别在于 [CSS 弹性盒�
 在这第一个示例中，我使用了弹性盒，一个容器内有三个元素。wrapper 设定了 {{cssxref("min-height")}}，确定了弹性容器的高度。我还在弹性容器中设定 {{cssxref("align-items")}} 为 `flex-end`，因此子元素会从弹性容器尾部开始排列。我还在 `box1` 上设定了 {{cssxref("align-self")}} 属性，这会覆盖默认值，使它延长至容器的高度，而 `box2` 则与弹性容器的起点对齐。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -175,43 +181,45 @@ CSS **网格布局**和**弹性盒布局**的主要区别在于 [CSS 弹性盒�
 这个第二个示例使用了网格创建一个同样的布局。这次我们使用了应用于网格布局的盒对齐属性。因此我们是相对网格而不是弹性盒的起始对齐。对于网格来说，我们是让元素在它们各自的网格区域中对齐。在本例中就是一个单元格，但它也可能是多个单元格组成的一个区域。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div class="box1">One</div>
-   <div class="box2">Two</div>
-   <div class="box3">Three</div>
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
 </div>
 ```
 
 ```css
 .wrapper {
-   display: grid;
-   grid-template-columns: repeat(3,1fr);
-   align-items: end;
-   grid-auto-rows: 200px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: end;
+  grid-auto-rows: 200px;
 }
 .box1 {
-   align-self: stretch;
+  align-self: stretch;
 }
 .box2 {
-   align-self: start;
+  align-self: start;
 }
 ```
 
@@ -232,7 +240,9 @@ CSS **网格布局**和**弹性盒布局**的主要区别在于 [CSS 弹性盒�
 在接下来的示例中，在 `repeat` 方法中使用 `auto-fill` 属性替换整数值，并且设置轨道的宽度为 200px。这意味着网格布局将会根据容器的宽度创建最多的宽度为 200px 的列轨道。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -271,7 +281,9 @@ CSS **网格布局**和**弹性盒布局**的主要区别在于 [CSS 弹性盒�
 到这为止就和弹性盒布局不太一样了。在弹性盒布局示例中，子元素在被包裹起来之前大于基准的 200px。我们可以用使用网格布局中的 `auto-fill` 和 {{cssxref("minmax", "minmax()")}} 函数实现同样的功能。在这个示例中，我创建了一个用 `minmax` 自动填充的轨道。我想要这个轨道的元素最小有 200px，最大 `1fr` 的宽度。一旦浏览器计算出有多少个 200px 会填充到这个容器里面，并算好网格间距，那么，浏览器就会把剩余的空间等分成以最大 `1fr` 单位计算的区域给其他元素。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -318,7 +330,9 @@ CSS **网格布局**和**弹性盒布局**的主要区别在于 [CSS 弹性盒�
 在下面的示例中，一个容器中包含了四个子项。第三项是绝对定位的，并且使用基于行定位的方式把自己放置在网格中。网格容器具有 `position: relative` 属性，因此网格就成为该元素的定位上下文。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -340,7 +354,9 @@ CSS **网格布局**和**弹性盒布局**的主要区别在于 [CSS 弹性盒�
   <div class="box1">One</div>
   <div class="box2">Two</div>
   <div class="box3">
-   This block is absolutely positioned. In this example the grid container is the containing block and so the absolute positioning offset values are calculated in from the outer edges of the area it has been placed into.
+    This block is absolutely positioned. In this example the grid container is
+    the containing block and so the absolute positioning offset values are
+    calculated in from the outer edges of the area it has been placed into.
   </div>
   <div class="box4">Four</div>
 </div>
@@ -349,7 +365,7 @@ CSS **网格布局**和**弹性盒布局**的主要区别在于 [CSS 弹性盒�
 ```css
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 200px;
   gap: 20px;
   position: relative;
@@ -386,7 +402,9 @@ CSS **网格布局**和**弹性盒布局**的主要区别在于 [CSS 弹性盒�
 `.box3` 被设置了 `position: relative` 属性，其子元素设置了定位的偏移属性。此时，子元素的定位的参照语境就变成了网格区域。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -407,9 +425,12 @@ CSS **网格布局**和**弹性盒布局**的主要区别在于 [CSS 弹性盒�
 <div class="wrapper">
   <div class="box1">One</div>
   <div class="box2">Two</div>
-  <div class="box3">Three
+  <div class="box3">
+    Three
     <div class="abspos">
-     This block is absolutely positioned. In this example the grid area is the containing block and so the absolute positioning offset values are calculated in from the outer edges of the grid area.
+      This block is absolutely positioned. In this example the grid area is the
+      containing block and so the absolute positioning offset values are
+      calculated in from the outer edges of the grid area.
     </div>
   </div>
   <div class="box4">Four</div>
@@ -419,7 +440,7 @@ CSS **网格布局**和**弹性盒布局**的主要区别在于 [CSS 弹性盒�
 ```css
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 200px;
   gap: 20px;
 }
@@ -434,8 +455,8 @@ CSS **网格布局**和**弹性盒布局**的主要区别在于 [CSS 弹性盒�
   position: absolute;
   top: 40px;
   left: 40px;
-  background-color: rgba(255,255,255,.5);
-  border: 1px solid rgba(0,0,0,0.5);
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.5);
   color: #000;
   padding: 10px;
 }
@@ -456,7 +477,9 @@ CSS **网格布局**和**弹性盒布局**的主要区别在于 [CSS 弹性盒�
 在下面的网格中，第一个元素设置为跨越三个列轨道，它包含三个嵌套的元素，由于这些元素不是直接子元素，因此它们不会成为网格布局的一部分，因此使用常规的块布局进行显示。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -512,7 +535,9 @@ CSS **网格布局**和**弹性盒布局**的主要区别在于 [CSS 弹性盒�
 现在如果将 `display：contents` 添加到 `box1` 的样式规则中，则该元素的盒子将消失，子元素成为网格元素，并且应用自动定位规则放置在网格中。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;

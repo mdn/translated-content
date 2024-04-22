@@ -1,7 +1,6 @@
 ---
 title: PermissionStatus.onchange
 slug: Web/API/PermissionStatus/change_event
-original_slug: Web/API/PermissionStatus/onchange
 ---
 
 {{APIRef("Permissions API")}}{{SeeCompatTable}}
@@ -18,12 +17,20 @@ PermissionStatus.addEventListener('change', function() { ... })
 ## 例
 
 ```js
-navigator.permissions.query({name:'geolocation'}).then(function(permissionStatus) {
-  console.log('位置情報のパーミッションの状態は ' + permissionStatus.state + ' です。');
-  permissionStatus.onchange = function() {
-    console.log('位置情報のパーミッションの状態が ' + this.state + ' に変更されました。');
-  };
-});
+navigator.permissions
+  .query({ name: "geolocation" })
+  .then(function (permissionStatus) {
+    console.log(
+      "位置情報のパーミッションの状態は " + permissionStatus.state + " です。",
+    );
+    permissionStatus.onchange = function () {
+      console.log(
+        "位置情報のパーミッションの状態が " +
+          this.state +
+          " に変更されました。",
+      );
+    };
+  });
 ```
 
 ## 仕様

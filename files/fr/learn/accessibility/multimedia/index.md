@@ -1,18 +1,6 @@
 ---
 title: Accessible multimedia
 slug: Learn/Accessibility/Multimedia
-tags:
-  - Accessibilité
-  - Apprendre
-  - Audio
-  - Débutant
-  - HTML
-  - Images
-  - JavaScript
-  - Multimedia
-  - Video
-translation_of: Learn/Accessibility/Multimedia
-original_slug: Apprendre/a11y/Multimedia
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/WAI-ARIA_basics","Learn/Accessibility/Mobile", "Learn/Accessibility")}}
@@ -45,19 +33,20 @@ Le multimédia est une autre catégorie de contenu susceptible de créer des pro
 
 Jusqu'ici, dans ce module, nous avons examiné une variété de contenus et ce qui doit être fait pour en assurer l'accessibilité, du simple contenu textuel aux tableaux de données, en passant par les images, les contrôles natifs tels que les éléments de formulaire et les boutons, et des structures de balisage encore plus complexes. (avec [WAI-ARIA](/fr/docs/Learn/Accessibility/WAI-ARIA_basics) l'attribut).
 
-Cet article, par contre, examine une autre catégorie générale de contenu pour laquelle il est difficile d’assurer l’accessibilité au multimédia. Les images, les vidéos, les éléments {{htmlelement ("canvas")}} les animations Flash, etc. ne sont pas aussi faciles à comprendre par les lecteurs d'écran ou à naviguer au clavier, et nous devons leur donner un coup de main.
+Cet article, par contre, examine une autre catégorie générale de contenu pour laquelle il est difficile d'assurer l'accessibilité au multimédia. Les images, les vidéos, les éléments {{htmlelement ("canvas")}} les animations Flash, etc. ne sont pas aussi faciles à comprendre par les lecteurs d'écran ou à naviguer au clavier, et nous devons leur donner un coup de main.
 
 Mais ne désespérez pas - nous vous aiderons ici à naviguer parmi les techniques disponibles pour rendre le multimédia plus accessible.
 
 ## Simple images
 
-Nous avons déjà couvert des alternatives textuelles simples pour les images HTML dans notre article [HTML&nbsp;: une bonne base pour l'accessibilité](/fr/docs/Apprendre/a11y/HTML), vous pouvez vous y référer pour plus de détails. En bref, vous devez vous assurer que, dans la mesure du possible, le contenu visuel dispose d’un texte alternatif que les lecteurs d’écran peuvent lire et lire à leurs utilisateurs.
+Nous avons déjà couvert des alternatives textuelles simples pour les images HTML dans notre article [HTML&nbsp;: une bonne base pour l'accessibilité](/fr/docs/Apprendre/a11y/HTML), vous pouvez vous y référer pour plus de détails. En bref, vous devez vous assurer que, dans la mesure du possible, le contenu visuel dispose d'un texte alternatif que les lecteurs d'écran peuvent lire et lire à leurs utilisateurs.
 
 Par exemple:
 
 ```html
-<img src="dinosaur.png"
-     alt=" Un Tyrannosaure Rex rouge: Un dinosaure a deux pattes se tenant droit comme un humain, avec de petits bras et une grosse tete avec beaucoup de dents acerees .">
+<img
+  src="dinosaur.png"
+  alt=" Un Tyrannosaure Rex rouge: Un dinosaure a deux pattes se tenant droit comme un humain, avec de petits bras et une grosse tete avec beaucoup de dents acerees ." />
 ```
 
 ## Commandes audio et vidéo accessibles
@@ -70,17 +59,23 @@ Les instances audio et vidéo HTML5 sont même fournies avec un ensemble de comm
 
 ```html
 <audio controls>
-  <source src="viper.mp3" type="audio/mp3">
-  <source src="viper.ogg" type="audio/ogg">
-  <p> Votre navigateur ne supporte pas l\'audio HTML5. Voici un <a href="viper.mp3"> lien vers l\'audio </a>  au lieu .</p>
+  <source src="viper.mp3" type="audio/mp3" />
+  <source src="viper.ogg" type="audio/ogg" />
+  <p>
+    Votre navigateur ne supporte pas l\'audio HTML5. Voici un
+    <a href="viper.mp3"> lien vers l\'audio </a> au lieu .
+  </p>
 </audio>
 
-<br>
+<br />
 
 <video controls>
-  <source src="rabbit320.mp4" type="video/mp4">
-  <source src="rabbit320.webm" type="video/webm">
-  <p>Votre navigateur ne supporte pas l\'audio HTML5. Voici un <a href="rabbit320.mp4">lien vers la video</a> instead.</p>
+  <source src="rabbit320.mp4" type="video/mp4" />
+  <source src="rabbit320.webm" type="video/webm" />
+  <p>
+    Votre navigateur ne supporte pas l\'audio HTML5. Voici un
+    <a href="rabbit320.mp4">lien vers la video</a> instead.
+  </p>
 </video>
 ```
 
@@ -109,14 +104,17 @@ Tout d'abord, prenez une copie de notre [custom-controls-start.html](https://git
 
 Créez un nouveau fichier appelé main.js et enregistrez-le dans le même répertoire .
 
-Tout d’abord, regardons le code HTML pour le lecteur vidéo, dans le code HTML:
+Tout d'abord, regardons le code HTML pour le lecteur vidéo, dans le code HTML:
 
 ```html
 <section class="player">
   <video controls>
-    <source src="rabbit320.mp4" type="video/mp4">
-    <source src="rabbit320.webm" type="video/webm">
-    <p>Votre navigateur ne supporte pas l\'audio HTML5. Voici un <a href="rabbit320.mp4">lien vers la video</a> instead.</p>
+    <source src="rabbit320.mp4" type="video/mp4" />
+    <source src="rabbit320.webm" type="video/webm" />
+    <p>
+      Votre navigateur ne supporte pas l\'audio HTML5. Voici un
+      <a href="rabbit320.mp4">lien vers la video</a> instead.
+    </p>
   </video>
 
   <div class="controls">
@@ -133,20 +131,20 @@ Tout d’abord, regardons le code HTML pour le lecteur vidéo, dans le code HTML
 
 Nous avons inséré quelques boutons de commande simples sous notre vidéo. Bien sûr, ces contrôles ne feront rien par défaut; pour ajouter des fonctionnalités, nous allons utiliser JavaScript .
 
-Nous devrons d’abord stocker les références à chacun des contrôles - ajoutez ce qui suit en haut de votre fichier JavaScript:
+Nous devrons d'abord stocker les références à chacun des contrôles - ajoutez ce qui suit en haut de votre fichier JavaScript:
 
 ```js
-var playPauseBtn = document.querySelector('.playpause');
-var stopBtn = document.querySelector('.stop');
-var rwdBtn = document.querySelector('.rwd');
-var fwdBtn = document.querySelector('.fwd');
-var timeLabel = document.querySelector('.time');
+var playPauseBtn = document.querySelector(".playpause");
+var stopBtn = document.querySelector(".stop");
+var rwdBtn = document.querySelector(".rwd");
+var fwdBtn = document.querySelector(".fwd");
+var timeLabel = document.querySelector(".time");
 ```
 
 Ensuite, nous devons saisir une référence au lecteur vidéo / audio lui-même - ajoutez cette ligne sous les lignes précédentes:
 
 ```js
-var player = document.querySelector('video');
+var player = document.querySelector("video");
 ```
 
 Ceci contient une référence à un objet {{domxref ("HTMLMediaElement")}} qui possède plusieurs propriétés et méthodes utiles disponibles qui peuvent être utilisées pour connecter des fonctionnalités à nos boutons.
@@ -154,7 +152,7 @@ Ceci contient une référence à un objet {{domxref ("HTMLMediaElement")}} qui p
 Avant de passer à la création de notre fonctionnalité de bouton, supprimons les contrôles natifs afin qu'ils ne gênent pas nos contrôles personnalisés. Ajoutez ce qui suit, encore une fois au bas de votre JavaScript:
 
 ```js
-player.removeAttribute('controls');
+player.removeAttribute("controls");
 ```
 
 Le fait de procéder ainsi plutôt que de ne pas inclure les attributs de contrôle en premier lieu présente l'avantage que si notre JavaScript échoue pour une raison quelconque, l'utilisateur dispose toujours de certains contrôles.
@@ -164,13 +162,13 @@ Le fait de procéder ainsi plutôt que de ne pas inclure les attributs de contr�
 Commençons par configurer le bouton lecture / pause. Nous pouvons le faire basculer entre lecture et pause avec une simple fonction conditionnelle, comme ci-dessous. Ajoutez-le à votre code, en bas:
 
 ```js
-playPauseBtn.onclick = function() {
-  if(player.paused) {
+playPauseBtn.onclick = function () {
+  if (player.paused) {
     player.play();
-    playPauseBtn.textContent = 'Pause';
+    playPauseBtn.textContent = "Pause";
   } else {
     player.pause();
-    playPauseBtn.textContent = 'Play';
+    playPauseBtn.textContent = "Play";
   }
 };
 ```
@@ -178,52 +176,52 @@ playPauseBtn.onclick = function() {
 Ensuite, ajoutez ce code en bas, qui contrôle le bouton d'arrêt:
 
 ```js
-stopBtn.onclick = function() {
+stopBtn.onclick = function () {
   player.pause();
   player.currentTime = 0;
-  playPauseBtn.textContent = 'Play';
+  playPauseBtn.textContent = "Play";
 };
 ```
 
-Il n'y a pas de fonction `stop()`  disponible sur {{domxref("HTMLMediaElement")}}s, nous le mettons donc en `pause()`  et, dans le même temps, définissons la valeur `currentTime` sur 0.
+Il n'y a pas de fonction `stop()` disponible sur {{domxref("HTMLMediaElement")}}s, nous le mettons donc en `pause()` et, dans le même temps, définissons la valeur `currentTime` sur 0.
 
-Ensuite, nos boutons de rembobinage et d’avance rapide - ajoutez les blocs suivants au bas de votre code:
+Ensuite, nos boutons de rembobinage et d'avance rapide - ajoutez les blocs suivants au bas de votre code:
 
 ```js
-rwdBtn.onclick = function() {
+rwdBtn.onclick = function () {
   player.currentTime -= 3;
 };
 
-fwdBtn.onclick = function() {
+fwdBtn.onclick = function () {
   player.currentTime += 3;
-  if(player.currentTime >= player.duration || player.paused) {
+  if (player.currentTime >= player.duration || player.paused) {
     player.pause();
     player.currentTime = 0;
-    playPauseBtn.textContent = 'Play';
+    playPauseBtn.textContent = "Play";
   }
 };
 ```
 
-Celles-ci sont très simples, il suffit d’ajouter ou de soustraire 3 secondes à `currentTime` chaque fois qu’on clique dessus. Dans un vrai lecteur vidéo, vous voudrez probablement une barre de recherche plus élaborée, ou similaire.
+Celles-ci sont très simples, il suffit d'ajouter ou de soustraire 3 secondes à `currentTime` chaque fois qu'on clique dessus. Dans un vrai lecteur vidéo, vous voudrez probablement une barre de recherche plus élaborée, ou similaire.
 
 Notez que nous vérifions également si la durée `currentTime` est supérieure à la durée totale du support ou si le support n'est pas en cours de lecture lorsque le bouton Fwd est enfoncé. Si l'une ou l'autre de ces conditions est vraie, nous arrêtons simplement la vidéo pour éviter que l'interface utilisateur ne se détériore si elle tente d'effectuer une avance rapide lorsque la vidéo n'est pas en cours de lecture ou si la fin de la vidéo est terminée. .
 
-Enfin, ajoutez ce qui suit à la fin du code pour contrôler l’affichage du temps écoulé:
+Enfin, ajoutez ce qui suit à la fin du code pour contrôler l'affichage du temps écoulé:
 
 ```js
-player.ontimeupdate = function() {
+player.ontimeupdate = function () {
   var minutes = Math.floor(player.currentTime / 60);
   var seconds = Math.floor(player.currentTime - minutes * 60);
   var minuteValue;
   var secondValue;
 
-  if (minutes<10) {
+  if (minutes < 10) {
     minuteValue = "0" + minutes;
   } else {
     minuteValue = minutes;
   }
 
-  if (seconds<10) {
+  if (seconds < 10) {
     secondValue = "0" + seconds;
   } else {
     secondValue = seconds;
@@ -238,7 +236,7 @@ Chaque fois que l'heure est mise à jour (une fois par seconde), nous activons c
 
 #### Lectures complémentaires
 
-Cela vous donne une idée de base sur la manière d’ajouter des fonctionnalités de lecteur personnalisées aux instances de lecteur vidéo / audio. Pour plus d'informations sur l'ajout de fonctionnalités plus complexes aux lecteurs vidéo / audio, y compris les solutions de secours Flash pour les navigateurs plus anciens, voir aussi:
+Cela vous donne une idée de base sur la manière d'ajouter des fonctionnalités de lecteur personnalisées aux instances de lecteur vidéo / audio. Pour plus d'informations sur l'ajout de fonctionnalités plus complexes aux lecteurs vidéo / audio, y compris les solutions de secours Flash pour les navigateurs plus anciens, voir aussi:
 
 - [Audio and video delivery](/fr/docs/Web/Apps/Fundamentals/Audio_and_video_delivery)
 - [Video player styling basics](/fr/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Video_player_styling_basics)
@@ -256,13 +254,13 @@ En termes de création de la transcription, vos options sont les suivantes:
 - Communauté / base / auto-transcription - Si vous faites partie d'une communauté ou d'une équipe active sur votre lieu de travail, vous pouvez leur demander de l'aide pour faire les traductions. Vous pouvez même essayer de les faire vous-même.
 - Services automatisés - Des services d'intelligence artificielle sont disponibles, tels que [Trint](https://trint.com). Téléchargez un fichier vidéo / audio sur le site, qui le transcrivera automatiquement pour vous. Sur YouTube, vous pouvez choisir de générer des sous-titres / transcriptions automatisés. Selon la clarté de l'audio parlé, la qualité de la transcription résultante variera considérablement. .
 
-Comme dans la plupart des choses de la vie, vous avez tendance à avoir ce que vous payez. la précision et le temps requis pour produire la transcription varient selon les services. Si vous payez une transcription pour une entreprise digne de confiance ou un service d’AI, vous le ferez probablement rapidement et avec une qualité élevée. Si vous ne voulez pas payer pour cela, vous le ferez probablement avec une qualité inférieure et / ou lentement.
+Comme dans la plupart des choses de la vie, vous avez tendance à avoir ce que vous payez. la précision et le temps requis pour produire la transcription varient selon les services. Si vous payez une transcription pour une entreprise digne de confiance ou un service d'AI, vous le ferez probablement rapidement et avec une qualité élevée. Si vous ne voulez pas payer pour cela, vous le ferez probablement avec une qualité inférieure et / ou lentement.
 
-Il n’est pas acceptable de publier une ressource audio mais de promettre de publier la transcription ultérieurement. De telles promesses ne sont souvent pas tenues, ce qui érodera la confiance entre vous et vos utilisateurs. Si le son que vous présentez ressemble à une réunion en face-à-face ou à une performance parlée en direct, il serait acceptable de prendre des notes pendant la performance, de les publier intégralement avec l'audio, puis de demander de l'aide pour les nettoyer par la suite.
+Il n'est pas acceptable de publier une ressource audio mais de promettre de publier la transcription ultérieurement. De telles promesses ne sont souvent pas tenues, ce qui érodera la confiance entre vous et vos utilisateurs. Si le son que vous présentez ressemble à une réunion en face-à-face ou à une performance parlée en direct, il serait acceptable de prendre des notes pendant la performance, de les publier intégralement avec l'audio, puis de demander de l'aide pour les nettoyer par la suite.
 
 ### Exemples de transcription
 
-Si vous utilisez un service automatisé, vous devrez probablement utiliser l'interface utilisateur fournie par l'outil. Par exemple, jetez un coup d’œil à [Audio Transcription Sample 1](https://www.youtube.com/watch?v=zFFBsj97Od8) _et choisissez plus > Transcript_.
+Si vous utilisez un service automatisé, vous devrez probablement utiliser l'interface utilisateur fournie par l'outil. Par exemple, jetez un coup d'œil à [Audio Transcription Sample 1](https://www.youtube.com/watch?v=zFFBsj97Od8) _et choisissez plus > Transcript_.
 
 Si vous créez votre propre interface utilisateur pour présenter votre audio et la transcription associée, vous pouvez le faire comme bon vous semble, mais il serait peut-être judicieux de l'inclure dans un panneau pouvant être affiché / masqué; voir notre exemple [transcription audio-ui](https://mdn.github.io/learning-area/accessibility/multimedia/audio-transcript-ui/) exemple (voir aussi le [code source](https://github.com/mdn/learning-area/tree/master/accessibility/multimedia/audio-transcript-ui)).
 
@@ -280,7 +278,7 @@ Cependant, il y a des cas extrêmes. Vous pouvez par exemple avoir un enregistre
 
 Pour rendre la vidéo accessible aux sourds, aux aveugles ou même à d'autres groupes d'utilisateurs (par exemple, ceux dont la bande passante est faible ou qui ne comprennent pas la langue dans laquelle la vidéo est enregistrée), vous devez inclure des pistes de texte avec votre contenu vidéo. .
 
-> **Note :** Les pistes de texte sont également utiles pour n'importe quel utilisateur, pas seulement pour les personnes handicapées. Par exemple, certains utilisateurs peuvent ne pas être en mesure d’entendre le son car ils se trouvent dans des environnements bruyants (comme un bar bondé lorsqu’un match de sport est diffusé) ou peuvent ne pas déranger les autres s’ils sont dans un endroit calme (comme une bibliothèque). .)
+> **Note :** Les pistes de texte sont également utiles pour n'importe quel utilisateur, pas seulement pour les personnes handicapées. Par exemple, certains utilisateurs peuvent ne pas être en mesure d'entendre le son car ils se trouvent dans des environnements bruyants (comme un bar bondé lorsqu'un match de sport est diffusé) ou peuvent ne pas déranger les autres s'ils sont dans un endroit calme (comme une bibliothèque). .)
 
 Ce n'est pas un nouveau concept - les sous-titres codés sont disponibles depuis assez longtemps dans les services de télévision:
 
@@ -320,15 +318,15 @@ WEBVTT
 Pour que ceci soit affiché avec la lecture du média HTML, vous devez:
 
 - Enregistrez-le en tant que fichier .vtt dans un endroit approprié.
-- Lien vers le fichier .vtt avec l'élément {{htmlelement("track")}} . `<track>`  devrait être placé dans `<audio>` ou `<video>`, mais après tout `<source>` éléments . Utilisez l’attribut [`kind`](/fr/docs/Web/HTML/Element/track#kind) pour indiquer si les signaux sont des sous-titres, des légendes ou des descriptions. De plus, utilisez [srclang](/fr/docs/Web/HTML/Element/track#srclang) pour indiquer au navigateur la langue dans laquelle vous avez écrit les sous-titres. .
+- Lien vers le fichier .vtt avec l'élément {{htmlelement("track")}} . `<track>` devrait être placé dans `<audio>` ou `<video>`, mais après tout `<source>` éléments . Utilisez l'attribut [`kind`](/fr/docs/Web/HTML/Element/track#kind) pour indiquer si les signaux sont des sous-titres, des légendes ou des descriptions. De plus, utilisez [srclang](/fr/docs/Web/HTML/Element/track#srclang) pour indiquer au navigateur la langue dans laquelle vous avez écrit les sous-titres. .
 
 Voici un exemple:
 
 ```html
 <video controls>
-    <source src="example.mp4" type="video/mp4">
-    <source src="example.webm" type="video/webm">
-    <track kind="subtitles" src="subtitles_en.vtt" srclang="en">
+  <source src="example.mp4" type="video/mp4" />
+  <source src="example.webm" type="video/webm" />
+  <track kind="subtitles" src="subtitles_en.vtt" srclang="en" />
 </video>
 ```
 
@@ -348,7 +346,7 @@ Les sections ci-dessus ne couvrent pas tous les types de contenu multimédia que
 - Flash
 - Silverlight
 
-Pour ce type de contenu, vous devez traiter les problèmes d’accessibilité au cas par cas. Dans certains cas, ce n'est pas si grave, par exemple:
+Pour ce type de contenu, vous devez traiter les problèmes d'accessibilité au cas par cas. Dans certains cas, ce n'est pas si grave, par exemple:
 
 - Si vous intégrez du contenu audio à l'aide d'une technologie de plug-in telle que Flash ou Silverlight, vous pouvez probablement simplement fournir une transcription audio de la même manière que celle décrite ci-dessus dans la section [Exemples de transcription](#exemples_de_transcription).
 - Si vous intégrez du contenu vidéo à l'aide d'une technologie de plug-in telle que Flash ou Silverlight, vous pouvez tirer parti des techniques de sous-titrage / sous-titrage disponibles pour ces technologies. Par exemple, voir [Flash captions](http://www.adobe.com/accessibility/products/flash/captions.html), [Using the Flash-Only Player API for Closed Captioning](https://support.brightcove.com/en/video-cloud/docs/using-flash-only-player-api-closed-captioning), ou [Playing Subtitles with Videos in Silverlight](https://blogs.msdn.microsoft.com/anilkumargupta/2009/05/01/playing-subtitles-with-videos-in-silverlight/).
@@ -359,6 +357,6 @@ Vous pouvez toutefois vous assurer qu'une telle application présente un contras
 
 ## Résumé
 
-Ce chapitre présente un résumé des problèmes d’accessibilité des contenus multimédias, ainsi que des solutions pratiques.
+Ce chapitre présente un résumé des problèmes d'accessibilité des contenus multimédias, ainsi que des solutions pratiques.
 
 {{PreviousMenuNext("Learn/Accessibility/WAI-ARIA_basics","Learn/Accessibility/Mobile", "Learn/Accessibility")}}

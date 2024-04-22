@@ -1,15 +1,6 @@
 ---
 title: MediaStreamEvent
 slug: Web/API/MediaStreamEvent
-tags:
-  - API
-  - Expérimentale
-  - Expérimentale(2)
-  - Interface
-  - Reference
-  - Référence(2)
-  - WebRTC
-translation_of: Web/API/MediaStreamEvent
 ---
 
 {{APIRef("WebRTC")}}{{deprecated_header}}
@@ -35,8 +26,10 @@ Un **`MediaStreamEvent`** étant un [`Event`](/fr/docs/Web/API/Event), cet évè
 ## Exemples
 
 ```js
-pc.onaddstream = function( ev ) {
-  alert("Un stream (id: '" + ev.stream.id + "') a été ajouté à cette connexion.");
+pc.onaddstream = function (ev) {
+  alert(
+    "Un stream (id: '" + ev.stream.id + "') a été ajouté à cette connexion.",
+  );
 };
 ```
 

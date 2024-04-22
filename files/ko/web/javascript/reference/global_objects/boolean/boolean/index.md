@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Boolean/Boolean
 ## 구문
 
 ```js
-    new Boolean([value])
+new Boolean([value]);
 ```
 
 ### 매개변수

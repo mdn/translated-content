@@ -1,8 +1,6 @@
 ---
 title: HTMLIFrameElement.allowPaymentRequest
 slug: Web/API/HTMLIFrameElement/allowPaymentRequest
-translation_of: HTMLIFrameElement.allowPaymentRequest
-browser-compat: api.HTMLIFrameElement.allowPaymentRequest
 ---
 
 {{APIRef("HTML DOM")}}{{deprecated_header}}{{non-standard_header}}
@@ -12,7 +10,7 @@ La propriété **`allowPaymentRequest`** de l'interface {{domxref("HTMLIFrameEle
 ## Syntaxe
 
 ```js
-var allow = htmlIFrameElement.allowPaymentRequest
+var allow = htmlIFrameElement.allowPaymentRequest;
 ```
 
 ### Valeur

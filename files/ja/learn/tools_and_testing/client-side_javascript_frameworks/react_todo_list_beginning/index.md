@@ -100,14 +100,11 @@ function App(props) {
           <span className="visually-hidden"> tasks</span>
         </button>
       </div>
-      <h2 id="list-heading">
-        3 tasks remaining
-      </h2>
+      <h2 id="list-heading">3 tasks remaining</h2>
       <ul
         role="list"
         className="todo-list stack-large stack-exception"
-        aria-labelledby="list-heading"
-      >
+        aria-labelledby="list-heading">
         <li className="todo stack-small">
           <div className="c-cb">
             <input id="todo-0" type="checkbox" defaultChecked={true} />
@@ -203,8 +200,7 @@ function App(props) {
 <ul
   role="list"
   className="todo-list stack-large stack-exception"
-  aria-labelledby="list-heading"
->
+  aria-labelledby="list-heading"></ul>
 ```
 
 `role`属性は、タグがどのような要素を表しているのかを説明するのに役立ちます。 `<ul>` はデフォルトではリストのように扱われますが、これから追加するスタイルはその機能を壊します。この `role` 属性は、`<ul>` 要素に「リスト」であることを再度伝えます。なぜこれが必要な理由なのか詳しく知りたい方は、[Scott O'Hara の記事「Fixing Lists」](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html) をご覧ください。
@@ -214,10 +210,8 @@ function App(props) {
 最後に、リスト項目のラベルと入力には、JSX 特有の属性がいくつかあります。
 
 ```html
-<input id="todo-0" type="checkbox" defaultChecked={true} />
-<label className="todo-label" htmlFor="todo-0">
-  Eat
-</label>
+<input id="todo-0" type="checkbox" defaultChecked="{true}" />
+<label className="todo-label" htmlFor="todo-0"> Eat </label>
 ```
 
 `<input/ >` タグの `defaultChecked` 属性は、React にこのチェックボックスを最初にチェックするように指示します。通常の HTML のように `checked` を使用した場合、React はチェックボックスのイベント処理に関連する警告をブラウザーコンソールに表示させます。今のところは気にしないで大丈夫です。後ほどイベントを使用するときにこれについては説明します。
@@ -293,7 +287,9 @@ body {
   width: 100%;
   max-width: 68rem;
   margin: 0 auto;
-  font: 1.6rem/1.25 Arial, sans-serif;
+  font:
+    1.6rem/1.25 Arial,
+    sans-serif;
   background-color: #f5f5f5;
   color: #4d4d4d;
 }
@@ -386,7 +382,9 @@ body {
   margin: 2rem 0 4rem 0;
   padding: 1rem;
   position: relative;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
+  box-shadow:
+    0 2px 4px 0 rgba(0, 0, 0, 0.2),
+    0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
 }
 @media screen and (min-width: 550px) {
   .todoapp {

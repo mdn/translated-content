@@ -260,7 +260,7 @@ h1 {
 如果你看看一张响应式页面的 HTML 源代码，你通常将会在文档的`<head>`看到下面的{{htmlelement("meta")}}标签。
 
 ```html
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1" />
 ```
 
 这个元标签告诉移动端浏览器，它们应该将视口宽度设定为设备的宽度，将文档放大到其预期大小的 100%，在移动端以你所希望的为移动优化的大小展示文档。

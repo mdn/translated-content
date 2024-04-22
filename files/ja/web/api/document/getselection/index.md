@@ -1,7 +1,6 @@
 ---
 title: Document.getSelection()
 slug: Web/API/Document/getSelection
-original_slug: Web/API/DocumentOrShadowRoot/getSelection
 ---
 
 {{APIRef("DOM")}}
@@ -11,7 +10,7 @@ original_slug: Web/API/DocumentOrShadowRoot/getSelection
 ## 構文
 
 ```js
-getSelection()
+getSelection();
 ```
 
 ### 引数

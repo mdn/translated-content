@@ -50,7 +50,7 @@ _親である {{domxref("AudioScheduledSourceNode")}} のプロパティを継�
 - {{domxref("AudioBufferSourceNode.buffer")}}
   - : 再生する音声資産を定義する {{domxref("AudioBuffer")}} で、この値を `null` に設定すると、 1 つの無音チャンネル（すべてのサンプルが 0.0 になる）を定義します。
 - {{domxref("AudioBufferSourceNode.detune")}}
-  - : [k-rate](/ja/docs/Web/API/AudioParam#k-rate) の {{domxref("AudioParam")}} 再生時の離調を[セント](https://ja.wikipedia.org/wiki/セント_(音楽))単位で表します。この値は `playbackRate` と合成され、音を再生する速度を決定します。既定値で `0` （離調なし）、公称範囲は -∞ から ∞ です。
+  - : [k-rate](/ja/docs/Web/API/AudioParam#k-rate) の {{domxref("AudioParam")}} 再生時の離調を[セント](<https://ja.wikipedia.org/wiki/セント_(音楽)>)単位で表します。この値は `playbackRate` と合成され、音を再生する速度を決定します。既定値で `0` （離調なし）、公称範囲は -∞ から ∞ です。
 - {{domxref("AudioBufferSourceNode.loop")}}
   - : 論理値で、 {{domxref("AudioBuffer")}} の終わりに達したとき、音声資産を再生しなければならないかどうかを示します。既定値は `false` です。
 - {{domxref("AudioBufferSourceNode.loopStart")}} {{optional_inline}}
@@ -84,7 +84,7 @@ const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 const myArrayBuffer = audioCtx.createBuffer(
   2,
   audioCtx.sampleRate * 3,
-  audioCtx.sampleRate
+  audioCtx.sampleRate,
 );
 
 // バッファーにホワイトノイズを書き込む
