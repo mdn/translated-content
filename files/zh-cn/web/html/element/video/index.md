@@ -367,7 +367,8 @@ AddType video/webm .webm
   poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
   width="620">
   抱歉，你的浏览器不支持嵌入式视频，不过不用担心，你可以<a
-    href="https://archive.org/details/BigBuckBunny_124">下载</a
+    href="https://archive.org/details/BigBuckBunny_124"
+    >下载</a
   >并用你最喜欢的视频播放器观看！
 </video>
 ```
