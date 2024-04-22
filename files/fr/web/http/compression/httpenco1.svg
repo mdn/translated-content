@@ -98,7 +98,7 @@
     <tspan x="425">Les nœuds intermédiaires ne</tspan>
   </text>
   <text x="425" y="255" alignment-baseline="middle" class="noteText" dominant-baseline="middle" dy="1em" font-size="16" font-weight="400" text-anchor="middle">
-    <tspan x="425">décompresse pas le corps.</tspan>
+    <tspan x="425">décompressent pas le corps.</tspan>
   </text>
   <rect width="175" height="58" y="299" fill="#EDF2AE" stroke="#666" class="note" rx="0" ry="0"/>
   <text x="88" y="304" alignment-baseline="middle" class="noteText" dominant-baseline="middle" dy="1em" font-size="16" font-weight="400" text-anchor="middle">

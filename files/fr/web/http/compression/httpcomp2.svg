@@ -122,7 +122,7 @@
     <tspan x="313">Décompresse la</tspan>
   </text>
   <text x="313" y="736" alignment-baseline="middle" class="noteText" dominant-baseline="middle" dy="1em" font-size="16" font-weight="400" text-anchor="middle">
-    <tspan x="313">resource et renvoie</tspan>
+    <tspan x="313">ressource et renvoie</tspan>
   </text>
   <text x="313" y="755" alignment-baseline="middle" class="noteText" dominant-baseline="middle" dy="1em" font-size="16" font-weight="400" text-anchor="middle">
     <tspan x="313">le message au client.</tspan>
