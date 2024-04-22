@@ -100,7 +100,7 @@ addIceCandidate(candidate, successCallback, failureCallback) // 已废弃
 - `OperationError`
 
   - : 在以下情况之一返回本错误类型：
-    - : 指定的 {{domxref("RTCIceCandidate.sdpMid", "sdpMid")}} 的值非空，但 {{domxref("RTCPeerConnection.remoteDescription", "remoteDescription")}} 中包含的媒体描述的媒体描述 ID 没有匹配的值。
+    - : 指定的 {{domxref("RTCIceCandidate.sdpMid", "sdpMid")}} 的值非空，且与 {{domxref("RTCPeerConnection.remoteDescription", "remoteDescription")}} 中包含的媒体描述的媒体描述 ID 不匹配。
     - : 指定的 {{domxref("RTCIceCandidate.sdpMLineIndex", "sdpMLineIndex")}} 的值大于等于远程描述中包含的媒体描述的数量。
     - : 指定的 {{domxref("RTCIceCandidate.usernameFragment", "ufrag")}} 未与任何远程描述中 `ufrag` 字段匹配。
     - : {{domxref("RTCIceCandidate", "candidate")}} 字符串中的一个或多个值无效或无法解析。
