@@ -35,8 +35,7 @@ a=candidate:4234997325 1 udp 2043278322 192.0.2.172 6502 typ srflx raddr 198.51.
 
 ## 示例
 
-在这个例子中，首先检查了候选者的 {{domxref("RTCIceCandidate.type", "候选者类型")}}，然后基于候选者类型调试输出候选者类型、候选者地址（ `ip地址` 和 {{domxref("RTCIceCandidate.port", "端口")}} ）以及 `关联地址` ({{domxref("RTCIceCandidate.relatedAddress",
-  "relatedAddress")}} 和 `relatedPort`）。
+在这个例子中，首先检查了候选者的{{domxref("RTCIceCandidate.type", "候选者类型")}}，然后基于候选者类型调试输出候选者类型、候选者地址（ `ip地址` 和 {{domxref("RTCIceCandidate.port", "端口")}}）以及 `关联地址` ({{domxref("RTCIceCandidate.relatedAddress","relatedAddress")}} 和 `relatedPort`）。
 
 ```js
 const ip = candidate.ip;
