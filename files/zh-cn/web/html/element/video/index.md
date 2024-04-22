@@ -23,10 +23,14 @@ l10n:
 
   - : 一个布尔属性；声明该属性后，视频会尽快自动开始播放，不会停下来等待数据全部加载完成。
 
-    > **备注：** 自动播放音频（或有声视频）可能会破坏用户体验，所以应该尽可能避免。如果你一定要提供自动播放功能，你应该加入开关（让用户主动打开自动播放）。然而，如果需要创建一些媒体元素，其播放源由用户在稍后设置，自动播放就会很有用。想了解如何正确使用自动播放，可参见我们的[自动播放指南](/zh-CN/docs/Web/Media/Autoplay_guide)。如果使用 `autoplay="false"` 来关闭视频的自动播放功能，会不起作用；只要 `<video>` 标签中有 autoplay 属性，视频就会自动播放。要移除自动播放，需要完全删除该属性。在某些浏览器（例如 Chrome 70.0）中，如果没有设置 `muted` 属性，autoplay 将不会生效。
+    > **备注：** 自动播放音频（或有声视频）可能会破坏用户体验，所以应该尽可能避免。如果你一定要提供自动播放功能，你应该加入开关（让用户主动打开自动播放）。然而，如果需要创建一些媒体元素，其播放源由用户在稍后设置，自动播放就会很有用。想了解如何正确使用自动播放，可参见我们的[自动播放指南](/zh-CN/docs/Web/Media/Autoplay_guide)。
+
+    无法使用 `autoplay="false"` 来关闭视频的自动播放功能；只要 `<video>` 标签中有这个属性，视频就会自动播放。要移除自动播放，需要完全删除该属性。
+
+    在某些浏览器（例如 Chrome 70.0）中，如果没有设置 `muted` 属性，autoplay 将不会生效。
 
 - `controls`
-  - : 如果存在该属性，浏览器会在视频底部提供一个控制面板，允许用户控制视频的播放，包括音量，跨帧，暂停或恢复播放。
+  - : 如果存在该属性，浏览器会在视频底部提供一个控制面板，允许用户控制视频的播放，包括音量、拖动进度、暂停或恢复播放。
 - `controlslist`
 
   - : 当浏览器显示视频底部的播放控制面板（例如，指定了 `controls` 属性）时，[`controlslist`](https://wicg.github.io/controls-list/explainer.html) 属性会帮助浏览器选择在控制面板上显示哪些 `video` 元素控件。
@@ -37,12 +41,14 @@ l10n:
 
 - `crossorigin`
 
-  - : 该[枚举](/zh-CN/docs/Glossary/Enumerated)属性指明是否使用 CORS（跨域资源共享）来获取相关视频。[允许 CORS 的资源](/zh-CN/docs/Web/HTML/CORS_enabled_image)可在 {{HTMLElement("canvas")}} 元素中被重用，而不会被*污染*。允许的值如下：
+  - : 该[枚举](/zh-CN/docs/Glossary/Enumerated)属性指明是否使用 CORS 来获取相关视频。[允许 CORS 的资源](/zh-CN/docs/Web/HTML/CORS_enabled_image)可在 {{HTMLElement("canvas")}} 元素中被重用，而不会被*污染*。允许的值如下：
 
     - `anonymous`
-      - : 在发送跨域请求时不携带凭证（credential）信息。也就是说，浏览器在发送 `Origin:` HTTP 请求标头时将不会携带 cookie、X.509 安全令牌、也不会执行任何 HTTP 基本身份验证。如果服务器没有给予源站点信任（也就是说没有设置 `Access-Control-Allow-Origin:` HTTP 响应标头），图像会被*污染*，并且它的使用会受到限制。
+      - : 在发送跨源请求时不携带凭据（credential）信息。也就是说，浏览器在发送 `Origin:` HTTP 标头时将不会携带 cookie、X.509 证书，也不会执行任何 HTTP 基本身份验证。如果服务器没有给予源站点信任（也就是说没有设置 `Access-Control-Allow-Origin:` HTTP 标头），资源会被*污染*，并且它的使用会受到限制。
     - `use-credentials`
-      - : 在发送跨域请求时携带凭证（credential）信息。也就是说，浏览器在发送 `Origin:` HTTP 请求标头时将会携带 cookie、安全令牌、并且执行 HTTP 基本身份验证。如果服务器没有给予源站点信任（通过设置 `Access-Control-Allow-Credentials:` HTTP 响应标头），图像会被*污染*，并且它的使用会受到限制。不加这个属性时，获取资源不会使用 CORS 请求（即不会发送 `Origin:` HTTP 请求标头），保证其在 {{HTMLElement('canvas')}} 元素中使用时不会被污染。如果指定非法值，会被当作指定了枚举关键字 `anonymous` 一样使用。查看 [CORS 设置属性](/zh-CN/docs/Web/HTML/Attributes/crossorigin)获取更多信息。
+      - : 在发送跨源请求时携带凭据信息。也就是说，浏览器在发送 `Origin:` HTTP 标头时将会携带 cookie、证书，或执行 HTTP 基本身份验证。如果服务器没有给予源站点信任（通过设置 `Access-Control-Allow-Credentials:` HTTP 标头），图像会被*污染*，并且它的使用会受到限制。
+
+      不加这个属性时，获取资源不会使用 CORS 请求（即不会发送 `Origin:` HTTP 请求标头），保证其在 {{HTMLElement('canvas')}} 元素中使用时不会被污染。如果指定无效值，会被当作指定了枚举关键字 `anonymous` 一样使用。查看 [CORS 设置属性](/zh-CN/docs/Web/HTML/Attributes/crossorigin)获取更多信息。
 
 - `disablepictureinpicture`
   - : 防止浏览器显示画中画上下文菜单或在某些情况下自动请求画中画模式。
@@ -59,7 +65,7 @@ l10n:
 - `muted`
   - : 一个布尔属性，指明在视频中音频的默认设置。设置后，音频会初始化为静音。默认值是 false, 意味着视频播放的时候音频也会播放。
 - `playsinline`
-  - : 一个布尔属性，指明视频将行内（inline）播放，即在元素的播放区域内。请注意，没有此属性并不意味着视频始终是全屏播放的。
+  - : 一个布尔属性，指明视频将内嵌（inline）播放，即在元素的播放区域内。请注意，没有此属性并不意味着视频始终是全屏播放的。
 - `poster`
   - : 海报帧图片 URL，用于在视频处于下载中的状态时显示。如果未指定该属性，则在视频第一帧可用之前不会显示任何内容，然后将视频的第一帧会作为海报（poster）帧来显示。
 - `preload`
@@ -69,11 +75,13 @@ l10n:
     - `none`: 表示不应该预加载视频。
     - `metadata`: 表示仅预先获取视频的元数据（例如长度）。
     - `auto`: 表示可以下载整个视频文件，即使用户不希望使用它。
-    - _空字符串_: 与 `auto` 值一致。每个浏览器的默认值都不相同，即使规范建议设置为 `metadata`。
+    - _空字符串_: 与 `auto` 值一致。
+
+    每个浏览器的默认值都不相同，即使规范建议设置为 `metadata`。
 
     > **备注：**
     >
-    > - `autoplay` 属性的优先级比 `preload` 高。如果制定了 `autoplay` 属性，浏览器显然需要开始下载视频以便回放。
+    > - `autoplay` 属性的优先级比 `preload` 高。如果指定了 `autoplay` 属性，浏览器显然需要开始下载视频以便回放。
     > - 规范中没有强制浏览器去遵循该属性的值，这仅仅只是个提示。
 
 - `src`
@@ -112,7 +120,7 @@ l10n:
         {{domxref("HTMLMediaElement.canplaythrough_event", 'canplaythrough')}}
       </td>
       <td>
-        浏览器估计它可以不间断地播放到媒体末尾，无需因内容缓冲而停止。
+        浏览器估计它可以不间断地播放到媒体末尾，无需暂停以进行内容缓冲。
       </td>
     </tr>
     <tr>
@@ -190,14 +198,14 @@ l10n:
         {{domxref("HTMLMediaElement.playing_event", 'playing ')}}
       </td>
       <td>
-        由于在暂停或因数据不足而延迟，播放已准备就绪。
+        已经在暂停或因数据不足而延迟后准备好进行播放。
       </td>
     </tr>
     <tr>
       <td>
         {{domxref("HTMLMediaElement.progress_event", 'progress')}}
       </td>
-      <td>浏览器加载资源时周期性触发。</td>
+      <td>在浏览器加载资源期间周期性触发。</td>
     </tr>
     <tr>
       <td>
@@ -209,13 +217,13 @@ l10n:
       <td>
         {{domxref("HTMLMediaElement.seeked_event", 'seeked')}}
       </td>
-      <td>跳<em>帧（seek）</em>操作完成。</td>
+      <td><em>拖动进度</em>（seek）操作完成。</td>
     </tr>
     <tr>
       <td>
         {{domxref("HTMLMediaElement.seeking_event", 'seeking')}}
       </td>
-      <td>跳<em>帧（seek）</em>操作开始。</td>
+      <td><em>拖动进度</em>操作开始。</td>
     </tr>
     <tr>
       <td>
@@ -256,15 +264,16 @@ l10n:
 
 ## 使用说明
 
-浏览器并不全都支持相同的视频格式；你可以在嵌套的 {{htmlelement("source")}} 元素中提供多个视频源，浏览器会使用它能识别的第一个源。
+浏览器并不全都支持相同的视频格式；你可以在嵌套的 {{htmlelement("source")}} 元素中提供多个媒体源，浏览器会使用它能识别的第一个源。
 
 ```html
 <video controls>
   <source src="myVideo.mp4" type="video/mp4" />
   <source src="myVideo.webm" type="video/webm" />
   <p>
-    你的浏览器不支持 HTML5 视频。这里有一个
-    <a href="myVideo.mp4">视频</a> 链接。
+    你的浏览器不支持 HTML5 视频。这里有一个<a
+      href="myVideo.mp4" download="myVideo.mp4"
+    >视频</a>链接。
   </p>
 </video>
 ```
@@ -278,15 +287,15 @@ l10n:
 - 你可以使用 {{cssxref("object-position")}} 属性调整视频在元素框内的位置，和使用 {{cssxref("object-fit")}} 属性控制视频如何调整大小以适应框架。
 - 如果想在视频里展示字幕或者标题，你可以在 {{htmlelement("track")}} 元素和 [WebVTT](/zh-CN/docs/Web/API/WebVTT_API) 格式的基础上使用 JavaScript 来实现。详细信息请参阅[向 HTML 视频中添加字幕](/zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)。
 - 你可以使用 `<video>` 元素播放音频文件。如果你需要结合 [WebVTT](/zh-CN/docs/Web/API/WebVTT_API) 字幕进行音频播放，这会非常有用，因为 {{HTMLElement("audio")}} 元素不支持使用 WebVTT 提供字幕。
-- 要在支持该元素的浏览器上测试备用内容，你可以将 `<video>` 替换为不存在的元素，如 `<notavideo>`。
+- 要在支持该元素的浏览器上测试回退内容，你可以将 `<video>` 替换为不存在的元素，如 `<notavideo>`。
 
 关于使用 HTML `<video>` 元素的综合信息资源，请参考[视频和音频内容](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)初学者教程。
 
 ### 使用 CSS 设置样式
 
-`<video>` 元素是一个替换元素——其 {{cssxref("display")}} 值默认为 `inline` ，但在视口中的默认宽度和高度由所嵌入的视频定义。
+`<video>` 元素是一个替换元素——其 {{cssxref("display")}} 值默认为 `inline`，但在视口中的默认宽度和高度由所嵌入的视频定义。
 
-对 `<video>` 元素进行样式化并无特殊考虑；一种常见策略是为其赋予 `display` 值为 `block`，以方便定位、调整大小等操作，然后根据需要提供样式和布局信息。[视频播放器样式基础](/zh-CN/docs/Web/Media/Audio_and_video_delivery/Video_player_styling_basics)提供了一些有用的样式化技巧。
+对 `<video>` 元素进行样式化并无特殊考虑；一种常见策略是为其 `display` 值赋为 `block`，以方便定位、调整大小等操作，然后根据需要提供样式和布局信息。[视频播放器样式基础](/zh-CN/docs/Web/Media/Audio_and_video_delivery/Video_player_styling_basics)提供了一些有用的样式化技巧。
 
 ### 检测轨道添加和移除
 
@@ -329,17 +338,17 @@ AddType video/ogg .ogv
 AddType video/ogg .ogg
 ```
 
-如果你提供的视频格式为 WebM 并在 Apache Web 服务器上，你可以通过“/etc/apache”中的“mime.types”文件，或者通过在 `httpd.conf` 中的 `"AddType"` 配置指令，把视频文件的扩展名（最常见的是“.webm”）添加到 MIME 类型“video/webm”，来解决这个问题。
+如果你在 Apache Web 服务器上提供格式为 WebM 的视频，你可以通过“/etc/apache”中的“mime.types”文件，或者通过在 `httpd.conf` 中的 `AddType` 配置指令，把视频文件的扩展名（最常见的是“.webm”）添加到 MIME 类型“video/webm”，来解决这个问题。
 
 ```plain
 AddType video/webm .webm
 ```
 
-你的 Web 服务器可能会提供一个简单的接口来修改 MIME 类型配置，直到服务器全面升级。
+你的 Web 主机可能会提供一个简单的接口来修改 MIME 类型配置，直到服务器全面升级。
 
 ## 示例
 
-### 单一 source
+### 单个 source
 
 这个示例在激活时播放视频，并为用户提供浏览器默认的视频控制以管理播放。
 
@@ -354,9 +363,9 @@ AddType video/webm .webm
   src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
   poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
   width="620">
-  抱歉，你的浏览器不支持嵌入式视频，不过不用担心，你可以
-  <a href="https://archive.org/details/BigBuckBunny_124">下载</a>
-  并用你最喜欢的视频播放器观看！
+  抱歉，你的浏览器不支持嵌入式视频，不过不用担心，你可以<a
+    href="https://archive.org/details/BigBuckBunny_124">下载</a
+  >并用你最喜欢的视频播放器观看！
 </video>
 ```
 
@@ -390,8 +399,7 @@ AddType video/webm .webm
     src="https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4"
     type="video/mp4" />
 
-  抱歉，你的浏览器不支持嵌入式视频，不过不用担心，你可以
-  <a
+  抱歉，你的浏览器不支持嵌入式视频，不过不用担心，你可以<a
     href="https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4"
     download="ed_1024_512kb.mp4">
     下载 MP4
@@ -410,7 +418,7 @@ AddType video/webm .webm
 
 ## 无障碍考虑
 
-视频应提供能准确描述其内容的字幕和脚本（请参阅[向 HTML 视频中添加字幕](/zh-CN/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)，了解如何实现这些功能的更多信息）字幕可以让有听力损失的人在播放视频时理解视频的音频内容，而文字稿可以让需要更多时间的人以舒适的速度和形式查看音频内容。
+视频应提供能准确描述其内容的字幕和脚本（请参阅[向 HTML 视频中添加字幕](/zh-CN/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)，了解如何实现这些功能的更多信息）。字幕可以让听力受损的人在播放视频时理解视频的音频内容，而文字稿可以让需要更多时间的人以舒适的速度和形式查看音频内容。
 
 值得注意的是，虽然可以为纯音频媒体添加字幕，但只有在 {{HTMLElement("video")}} 元素中播放音频时才能这样做，因为该元素的视频区域是用来显示字幕的。这是一种特殊情况，在视频元素中播放音频非常有用。
 
@@ -436,7 +444,7 @@ AddType video/webm .webm
 [碗碟碰撞声]
 ```
 
-字幕不应遮挡视频的主要主体。可以使用[设置 `align` VTT 字幕块](/zh-CN/docs/Web/API/WebVTT_API#cue_settings)对其进行定位。
+字幕不应遮挡视频的主要主体。可以使用[设置 `align` VTT 字幕块](/zh-CN/docs/Web/API/WebVTT_API#cue_设置)对其进行定位。
 
 - [Web 视频文本轨格式（WebVTT）](/zh-CN/docs/Web/API/WebVTT_API)
 - [WebAIM：字幕、脚本和音频描述](https://webaim.org/techniques/captions/)
@@ -467,7 +475,7 @@ AddType video/webm .webm
           如果元素拥有 <a href="#src"><code>src</code></a> 属性：允许的内容为 0 个或更多 {{HTMLElement("track")}} 元素，跟随着不包含 {{HTMLElement("audio")}} 或 {{HTMLElement("video")}} 媒体元素的透明内容。
         </p>
         <p>
-          否则：允许的内容为零个或多个 {{HTMLElement("source")}} 元素，跟随着 0 个或多个 {{HTMLElement("track")}} 元素，跟随着不包含 {{HTMLElement("audio")}} 或 {{HTMLElement("video")}} 媒体元素的透明内容。
+          否则：允许的内容为 0 个或多个 {{HTMLElement("source")}} 元素，跟随着 0 个或多个 {{HTMLElement("track")}} 元素，跟随着不包含 {{HTMLElement("audio")}} 或 {{HTMLElement("video")}} 媒体元素的透明内容。
         </p>
       </td>
     </tr>
@@ -477,7 +485,7 @@ AddType video/webm .webm
     </tr>
     <tr>
       <th scope="row">允许的父元素</th>
-      <td>任何能够作为容器的元素</td>
+      <td>任何接受嵌入内容的元素。</td>
     </tr>
     <tr>
       <th scope="row">隐含的 ARIA 角色</th>
