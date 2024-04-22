@@ -146,23 +146,21 @@ pc.ontrack = ({ streams: [stream] }) => (videoElem.srcObject = stream);
 - 新收发器的 {{domxref("RTCRtpTransceiver.direction", "direction")}} 的属性值设置为 `"sendrecv"`。
 - 新收发器被添加到 `RTCPeerConnection` 的收发器集合中。
 
-## 实例
+## 示例
 
-下面这个例子是从文章[信令与视频通话](/zh-CN/docs/Web/API/WebRTC_API/Signaling_and_video_calling)中给出的相应示例代码中提取的。它来自 `handleVideoOfferMsg()` 方法中，该方法在是远程对等端接收到邀请消息时被调用。
+下面这个例子是从文章[信令与视频通话](/zh-CN/docs/Web/API/WebRTC_API/Signaling_and_video_calling)中给出的相应示例代码中提取的。它来自远程对等端接收到邀请消息时被调用的方法 `handleVideoOfferMsg()` 中。
 
 ```js
-var mediaConstraints = {
+const mediaConstraints = {
   audio: true, // We want an audio track
-  video: true, // ...and we want a video track
+  video: true, // And we want a video track
 };
 
-var desc = new RTCSessionDescription(sdp);
+const desc = new RTCSessionDescription(sdp);
 
 pc.setRemoteDescription(desc)
-  .then(function () {
-    return navigator.mediaDevices.getUserMedia(mediaConstraints);
-  })
-  .then(function (stream) {
+  .then(() => navigator.mediaDevices.getUserMedia(mediaConstraints))
+  .then((stream) => {
     previewElement.srcObject = stream;
 
     stream.getTracks().forEach((track) => pc.addTrack(track, stream));
