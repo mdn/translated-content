@@ -195,18 +195,23 @@ background-size: contain;
 <div class="output" style="min-height: 50px;"></div>
 
 <h2>可编辑代码</h2>
-<p class="a11y-label">
-  按 ESC 退出编辑区域，按 Tab 可插入制表符
-</p>
+<p class="a11y-label">按 ESC 退出编辑区域，按 Tab 可插入制表符</p>
 
-<textarea
-  id="code"
-  class="input"
-  style="min-height: 100px; width: 95%"></textarea>
+<textarea id="code" class="input" style="width: 95%;min-height: 200px;">
+  <svg width="100%" height="100%">
+    <rect width="100%" height="100%" fill="red" />
+    <circle cx="100%" cy="100%" r="150" fill="blue" stroke="black" />
+    <polygon points="120,0 240,225 0,225" fill="green"/>
+    <text x="50" y="100" font-family="Verdana" font-size="55"
+          fill="white" stroke="black" stroke-width="2">
+            Hello!
+    </text>
+  </svg>
+</textarea>
 
 <div class="playable-buttons">
   <input id="reset" type="button" value="Reset" />
-  <input id="solution" type="button" value="Show solution" />
+  <input id="solution" type="button" value="Show solution" disabled />
 </div>
 ```
 
@@ -237,19 +242,14 @@ const textarea = document.getElementById("code");
 const reset = document.getElementById("reset");
 const solution = document.getElementById("solution");
 const output = document.querySelector(".output");
-const code = textarea.value;
+let code = textarea.value;
 let userEntry = textarea.value;
 
 function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-const htmlSolution =
-  '<svg width="100%" height="100%">\n    <rect width="100%" height="100%" fill="red" />\n    <circle cx="100%" cy="100%" r="150" fill="blue" stroke="black" />\n    <polygon points="120,0 240,225 0,225" fill="green"/>\n    <text x="50" y="100" font-family="Verdana" font-size="55"\n          fill="white" stroke="black" stroke-width="2">\n            Hello!\n    </text>\n  </svg>';
-
-let solutionEntry = htmlSolution;
-
-reset.addEventListener("click", () => {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
@@ -257,7 +257,7 @@ reset.addEventListener("click", () => {
   updateCode();
 });
 
-solution.addEventListener("click", () => {
+solution.addEventListener("click", function () {
   if (solution.value === "显示答案") {
     textarea.value = solutionEntry;
     solution.value = "隐藏答案";
@@ -268,13 +268,16 @@ solution.addEventListener("click", () => {
   updateCode();
 });
 
+const htmlSolution = "";
+let solutionEntry = htmlSolution;
+
 textarea.addEventListener("input", updateCode);
 window.addEventListener("load", updateCode);
 
 // 防止 Tab 键使 textarea 失去焦点，
 // 转而使其在当前光标位置插入一个制表符
 
-textarea.onkeydown = (e) => {
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
     insertAtCaret("\t");
@@ -288,12 +291,12 @@ textarea.onkeydown = (e) => {
 function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
   let caretPos = textarea.selectionStart;
-
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
     textarea.value.length,
   );
+
   textarea.value = front + text + back;
   caretPos += text.length;
   textarea.selectionStart = caretPos;
@@ -304,10 +307,10 @@ function insertAtCaret(text) {
 
 // 每次用户更新文本区域代码时，更新已保存的用户代码
 
-textarea.onkeyup = () => {
+textarea.onkeyup = function () {
   // 我们只希望在显示用户代码时保存状态，
   // 而不保存答案，以防止答案覆盖用户代码
-  if (solution.value === "显示答案") {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
