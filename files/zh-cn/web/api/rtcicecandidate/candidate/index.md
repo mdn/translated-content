@@ -9,7 +9,7 @@ l10n:
 
 **{{domxref("RTCIceCandidate")}}** 接口的 **`candidate`** 只读属性返回一个详细描述候选者的字符串。`RTCIceCandidate` 的大多数其他属性实际上都是从这个字符串中提取的。
 
-可以使用传递给 {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate()")}} 构造函数或 {{domxref("RTCPeerConnection.addIceCandidate()")}} 对象的 `candidate` 属性来配置此属性。
+可以使用传递给 {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate() 构造函数", "", "nocode")}} 或 {{domxref("RTCPeerConnection.addIceCandidate()")}} 对象的 `candidate` 属性来配置此属性。
 
 ## 值
 
