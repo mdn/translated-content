@@ -2,7 +2,7 @@
 title: Background Synchronization API
 slug: Web/API/Background_Synchronization_API
 l10n:
-  sourceCommit: 56df677713fecf43ec0eb8862cb91c141aaa0005
+  sourceCommit: 9ec7879386ae9435c7904b9db152ef17213fbb83
 ---
 
 {{DefaultAPISidebar("Background Sync")}}{{Securecontext_Header}}{{AvailableInWorkers}}
@@ -49,7 +49,7 @@ async function syncMessagesLater() {
   try {
     await registration.sync.register("sync-messages");
   } catch {
-    console.log("Background Sync could not be registered!");
+    console.log("Background Sync 无法被注册！");
   }
 }
 ```
@@ -61,8 +61,9 @@ async function syncMessagesLater() {
 ```js
 navigator.serviceWorker.ready.then((registration) => {
   registration.sync.getTags().then((tags) => {
-    if (tags.includes("sync-messages"))
-      console.log("Messages sync already requested");
+    if (tags.includes("sync-messages")) {
+      console.log("已请求同步消息");
+    }
   });
 });
 ```
