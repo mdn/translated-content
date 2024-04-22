@@ -46,6 +46,7 @@ l10n:
     - `anonymous`
       - : 在发送跨源请求时不携带凭据（credential）信息。也就是说，浏览器在发送 `Origin:` HTTP 标头时将不会携带 cookie、X.509 证书，也不会执行任何 HTTP 基本身份验证。如果服务器没有给予源站点信任（也就是说没有设置 `Access-Control-Allow-Origin:` HTTP 标头），资源会被*污染*，并且它的使用会受到限制。
     - `use-credentials`
+
       - : 在发送跨源请求时携带凭据信息。也就是说，浏览器在发送 `Origin:` HTTP 标头时将会携带 cookie、证书，或执行 HTTP 基本身份验证。如果服务器没有给予源站点信任（通过设置 `Access-Control-Allow-Credentials:` HTTP 标头），图像会被*污染*，并且它的使用会受到限制。
 
       不加这个属性时，获取资源不会使用 CORS 请求（即不会发送 `Origin:` HTTP 请求标头），保证其在 {{HTMLElement('canvas')}} 元素中使用时不会被污染。如果指定无效值，会被当作指定了枚举关键字 `anonymous` 一样使用。查看 [CORS 设置属性](/zh-CN/docs/Web/HTML/Attributes/crossorigin)获取更多信息。
@@ -272,8 +273,10 @@ l10n:
   <source src="myVideo.webm" type="video/webm" />
   <p>
     你的浏览器不支持 HTML5 视频。这里有一个<a
-      href="myVideo.mp4" download="myVideo.mp4"
-    >视频</a>链接。
+      href="myVideo.mp4"
+      download="myVideo.mp4"
+      >视频</a
+    >链接。
   </p>
 </video>
 ```
