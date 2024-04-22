@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("WebRTC")}}
 
-{{domxref("RTCPeerConnection")}} 接口的 **`addTrack()`** 方法将媒体轨道添加到将传输给其他对等点的轨道集合中。
+{{domxref("RTCPeerConnection")}} 接口的 **`addTrack()`** 方法将媒体轨道添加到将传输给其他对等端的轨道集合中。
 
 > **备注：** 通过向连接添加轨道来触发 {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} 事件，从而重新进行协商。详情请参见[开始协商](/zh-CN/docs/Web/API/WebRTC_API/Signaling_and_video_calling#开始协商)。
 
@@ -27,13 +27,13 @@ addTrack(track, stream1, stream2, /* …, */ streamN)
 - `stream1`、…、`streamN` {{optional_inline}}
   - : 一个或多个将要添加到轨道的本地 {{domxref("MediaStream")}} 对象。
 
-指定的 `track` 不一定必须是任何指定 `stream` 的一部分。相反的 `stream` 是连接的接收端将 `track` 组合在一起的一种方式，以确保它们是同步的。将任一轨道添在连接的本地端的同一个 `stream` 中，该轨道在远程端也将位于相应的同一个 `stream` 中。
+指定的 `track` 不一定必须是任何指定 `stream` 的一部分。相反，`stream` 是连接的接收端将 `track` 组合在一起的一种方式，以确保它们是同步的。将任一轨道添到连接的本地端的同一个 stream 中，该轨道在远程端也将位于同一个 stream 中。
 
 ### 返回值
 
 将用于传输媒体数据的 {{domxref("RTCRtpSender")}} 实例。
 
-> **备注：** 每个 `RTCRtpSender` 都与一个 {{domxref("RTCRtpReceiver")}} 配对，组成一个 {{domxref("RTCRtpTransceiver")}} 。相对应的接收器（RTCRtpReceiver）会被置于静默状态（无法传递数据包），直到远程对等端向接收器添加一个或多个流。
+> **备注：** 每个 `RTCRtpSender` 都与一个 {{domxref("RTCRtpReceiver")}} 配对，组成一个 {{domxref("RTCRtpTransceiver")}}。相对应的接收器会被置于静默状态（无法传递数据包），直到远程对等端向接收器添加一个或多个流。
 
 ### 异常
 
@@ -50,7 +50,9 @@ addTrack(track, stream1, stream2, /* …, */ streamN)
 
 #### 无流轨道
 
-如果没有给轨道指定任何流，那么该轨道就是**无流轨道**。尽管将轨道插入哪个流中（如果有的话）是由远程对等端来决定的，这（无流轨道）也完全可行的。使用 `addTrack()` 的这种方式来构建只需一个流的简单应用程序类型也是非常普遍的。例如，如果你只与远程对等方共享一个包含音频轨道和视频轨道的流，那么你不需要处理哪个轨道在哪个流中的问题，你完全可以让收发器为你处理这些事情。下面是一个示例函数，它使用 {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} 从用户的摄像头和麦克风获取流，然后将流中的每个轨道添加到对等连接中，而不需要为每个轨道指定流：
+如果没有给轨道指定任何流，那么该轨道就是**无流轨道**。尽管将轨道插入哪个流中（如果有的话）是由远程对等端来决定的，这（无流轨道）也完全可行的。使用 `addTrack()` 的这种方式来构建只需一个流的简单应用程序类型也是非常普遍的。例如，如果你只与远程对等方共享一个包含音频轨道和视频轨道的流，那么你不需要处理哪个轨道在哪个流中的问题，你完全可以让收发器为你处理这些事情。
+
+下面是一个示例函数，它使用 {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} 从用户的摄像头和麦克风获取流，然后将流中的每个轨道添加到对等连接中，而不需要为每个轨道指定流：
 
 ```js
 async function openCall(pc) {
@@ -82,7 +84,9 @@ pc.ontrack = (ev) => {
 };
 ```
 
-在这里，事件中如果指定了特定的流，则 `track` 事件处理器会将轨道添加到由事件对象所指定的第一个流中。否则，当 `ontrack` 第一次被调用时，会创建一个新的流并将其附加到视频元素上，然后将轨道添加到新流中。此后，新的轨道会被添加到该流中。你也可以为每个接收到的轨道创建一个新的流：
+在这里，事件中如果指定了特定的流，则 `track` 事件处理器会将轨道添加到由事件对象所指定的第一个流中。否则，当 `ontrack` 第一次被调用时，会创建一个新的流并将其附加到视频元素上，然后将轨道添加到新流中。此后，新的轨道会被添加到该流中。
+
+你也可以为每个接收到的轨道创建一个新的流：
 
 ```js
 pc.ontrack = (ev) => {
@@ -98,6 +102,7 @@ pc.ontrack = (ev) => {
 #### 轨道与流关联
 
 通过指定流并允许 {{domxref("RTCPeerConnection")}} 为你创建的流，WebRTC 底层会自动为你管理这个流的轨道关联。包括像收发器的 {{domxref("RTCRtpTransceiver.direction", "direction")}} 属性变更以及使用 {{domxref("RTCPeerConnection.removeTrack", "removeTrack()")}} 停止轨道传输等事情。
+
 例如，考虑以下函数，应用程序可能会使用它来开始通过 {{domxref("RTCPeerConnection")}} 将设备的摄像头和麦克风输入流传送到远程对等端：
 
 ```js
