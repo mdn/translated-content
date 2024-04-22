@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Picture-in-Picture API")}}
 
-{{domxref("PictureInPictureWindow")}} 接口的只读属性 **`width`** 只读属性返回浮动视频窗口的宽度（以像素为单位）。
+{{domxref("PictureInPictureWindow")}} 接口的 **`width`** 只读属性返回浮动视频窗口的宽度（以像素为单位）。
 
 ## 语法
 
@@ -29,5 +29,5 @@ pictureInPictureWindow.width
 
 ## 参见
 
-- [画中画（Picture-in-Picture）API](/zh-CN/docs/Web/API/Picture-in-Picture_API)
+- [画中画 API](/zh-CN/docs/Web/API/Picture-in-Picture_API)
 - {{DOMxRef("PictureInPictureWindow.height")}}

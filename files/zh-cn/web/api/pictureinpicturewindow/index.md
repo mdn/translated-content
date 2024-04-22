@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Picture-in-Picture API")}}
 
-**`PictureInPictureWindow`** 接口表示一个对象，能够以编程方式获取浮动视频窗口的 **`width`** 和 **`height`** 和 **`resize event`**。
+**`PictureInPictureWindow`** 接口表示一个能够以编程方式获取浮动视频窗口的 **`width`** 和 **`height`** 和 **`resize event`** 的对象。
 
 通过使用 {{domxref("HTMLVideoElement.requestPictureInPicture()")}} 函数返回的 promise 值，可以获得此接口的对象。
 
@@ -31,7 +31,7 @@ _`PictureInPictureWindow` 接口不继承任何方法。_
 _`PictureInPictureWindow` 接口不继承任何事件。_
 
 - {{domxref("PictureInPictureWindow.resize_event", "resize")}}
-  - : 当浮动视频窗口被调整大小时，发送给 {{DOMxRef("PictureInPictureWindow")}}。
+  - : 当浮动视频窗口的大小改变时，发送给 {{DOMxRef("PictureInPictureWindow")}}。
 
 ## 示例
 
@@ -65,4 +65,4 @@ button.onclick = () => {
 
 ## 参见
 
-- {{DOMxRef("Picture-in-Picture_API", "画中画（Picture-in-Picture）API")}}
+- {{DOMxRef("Picture-in-Picture_API", "画中画 API", "", 1)}}
