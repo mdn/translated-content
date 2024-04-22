@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("WebRTC")}}
 
-**{{domxref("RTCIceCandidate")}}** 接口的 **`address`** 只读属性是一个字符串，提供了候选者来源设备的 IP 地址。如果没有其它指定，其默认值为 `null`。
+**{{domxref("RTCIceCandidate")}}** 接口的 **`address`** 只读属性是一个提供了候选者来源设备 IP 地址的字符串。如果没有其它指定，其默认值为 `null`。
 
 `address` 字段的值是从传递给 {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate(candidateInfo)")}} 构造函数的 `candidateInfo` 可选参数对象中设置的。你不能直接在本对象中配置 `address` 的值，但如果属性行（`a-line`）的格式正确，则其值会从对象（candidateInfo）的 `candidate` 属性值（值为属性行）中自动提取。
 
