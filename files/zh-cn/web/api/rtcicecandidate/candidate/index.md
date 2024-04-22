@@ -2,7 +2,7 @@
 title: RTCIceCandidate：candidate 属性
 slug: Web/API/RTCIceCandidate/candidate
 l10n:
-  sourceCommit: 31fa0bbc78b87bf3ec7559906515fcd3dfde68de
+  sourceCommit: 1a91b0b63f0cbaca9125bd48d4e5bc8afed2a7a3
 ---
 
 {{APIRef("WebRTC")}}
