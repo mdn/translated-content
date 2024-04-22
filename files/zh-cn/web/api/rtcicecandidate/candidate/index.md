@@ -38,7 +38,7 @@ function handleNewIceCandidate(candidateSDP) {
   const candidateObj = new RTCIceCandidate(candidateSDP);
 
   myPeerConnection.addIceCandidate(candidateObj).catch({
-    /* 添加候选者失败的逻辑处理 */
+    /* 处理 addIceCandidate() 引发的错误 */
   });
 }
 ```
