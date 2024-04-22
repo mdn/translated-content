@@ -42,7 +42,7 @@ l10n:
 - {{domxref("RTCIceCandidate.sdpMid", "sdpMid")}} {{ReadOnlyInline}}
   - : 表示候选者的媒体流标识标签的字符串，该标签在候选者关联的组件中唯一标识媒体流，如果不存在这样的关联，则为 `null`。
 - {{domxref("RTCIceCandidate.sdpMLineIndex", "sdpMLineIndex")}} {{ReadOnlyInline}}
-  - : 如果值不为 `null`，`sdpMLineIndex` 表示 `SDP` 中候选者关联的从零开始的媒体描述索引编号（在[RFC 4566](https://datatracker.ietf.org/doc/html/rfc4566) 中定义）。
+  - : 如果值不为 `null`，`sdpMLineIndex` 表示 `SDP` 中候选者关联的从零开始的媒体描述索引编号（在 [RFC 4566](https://datatracker.ietf.org/doc/html/rfc4566)中定义）。
 - {{domxref("RTCIceCandidate.tcpType", "tcpType")}} {{ReadOnlyInline}}
   - : 如果协议 (`protocol`) 是 `"tcp"` ，`tcpType` 表示 `TCP` 类型的候选者。否则 `tcpType` 为 `null`。
 - {{domxref("RTCIceCandidate.type", "type")}} {{ReadOnlyInline}}
