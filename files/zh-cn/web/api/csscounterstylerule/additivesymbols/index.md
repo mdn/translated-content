@@ -3,7 +3,7 @@ title: CSSCounterStyleRule：additiveSymbols 属性
 slug: Web/API/CSSCounterStyleRule/additiveSymbols
 ---
 
-{{DefaultAPISidebar("CSS Counter Styles")}}
+{{APIRef("CSS Counter Styles")}}
 
 {{domxref("CSSCounterStyleRule")}} 接口的 **`additiveSymbols`** 属性用于获取或设置 {{cssxref("@counter-style/additive-symbols","additive-symbols")}} 描述符的值。如果描述符没有设置值，此属性返回空字符串。
 

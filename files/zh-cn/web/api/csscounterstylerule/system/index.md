@@ -3,7 +3,7 @@ title: CSSCounterStyleRule：system 属性
 slug: Web/API/CSSCounterStyleRule/system
 ---
 
-{{DefaultAPISidebar("CSS Counter Styles")}}
+{{APIRef("CSS Counter Styles")}}
 
 {{domxref("CSSCounterStyleRule")}} 接口的 **`system`** 属性用于获取或设置 {{cssxref("@counter-style/system", "system")}} 描述符的值。如果描述符没有设置值，此属性返回空字符串。
 
