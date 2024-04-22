@@ -7,7 +7,7 @@ l10n:
 
 {{HTMLSidebar}}
 
-**`<div>`** [HTML](/zh-CN/docs/Web/HTML) 元素是流式内容的通用容器。它对内容或布局没有影响。除非以某种方式使用 {{glossary("CSS")}} 对其进行样式设置（例如，直接应用样式，或者其父元素应用某种布局模型，如[弹性盒子](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)），否则它对内容或布局没有影响。
+**`<div>`** [HTML](/zh-CN/docs/Web/HTML) 元素是流式内容的通用容器。它对内容或布局没有影响。除非以某种方式使用 {{glossary("CSS")}} 对其进行样式设置（例如，直接应用样式，或者对其父元素应用某种布局模型，如[弹性盒子](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)），否则它对内容或布局没有影响。
 
 {{EmbedInteractiveExample("pages/tabbed/div.html","tabbed-standard")}}
 
@@ -17,7 +17,7 @@ l10n:
 
 这个元素包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-> **备注：** 请勿再使用已过时的 `align` 属性；相反，你应该使用 CSS 属性或技术，例如 [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout) 或 [CSS 弹性盒子](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)来对齐和定位页面上的 `<div>` 元素。
+> **备注：** 请勿再使用已过时的 `align` 属性；相反，你应该使用 CSS 属性或技术，例如 [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)或 [CSS 弹性盒子](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)来对齐和定位页面上的 `<div>` 元素。
 
 ## 使用说明
 
@@ -29,7 +29,7 @@ l10n:
 
 ```html
 <div>
-  <p>这里的任何一种内容。例如 &lt;p&gt;、&lt;table&gt;。你说什么就是什么！</p>
+  <p>这里可以是任何内容。例如 &lt;p&gt;、&lt;table&gt;。你说什么就是什么！</p>
 </div>
 ```
 
@@ -90,7 +90,7 @@ l10n:
       <td>
         <a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
           >流式内容</a
-        >。<br />或者（在 {{glossary("WHATWG")}} HTML 中）：如果父级是 {{HTMLElement("dl")}} 元素：一个或多个 {{HTMLElement("dt")}} 元素，后面跟一个或多个 {{HTMLElement("dd")}} 元素，与 {{HTMLElement("script")}} 和 {{HTMLElement("template")}} 可选元素混合。
+        >。<br />或者（在 {{glossary("WHATWG")}} HTML 中）：如果父级是 {{HTMLElement("dl")}} 元素：一个或多个 {{HTMLElement("dt")}} 元素，后面跟一个或多个 {{HTMLElement("dd")}} 元素，可选择与 {{HTMLElement("script")}} 和 {{HTMLElement("template")}} 元素混合使用。
       </td>
     </tr>
     <tr>
