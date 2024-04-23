@@ -43,7 +43,7 @@ addIceCandidate(candidate, successCallback, failureCallback) // 已弃用
       在其它属性相同的前提下，{{Glossary("user agent","用户代理")}}总是更优先选择具有更高{{domxref("RTCIceCandidate.priority", "优先级", "", "nocode")}}的候选者。在上面的示例中，优先级为 `2043278322`。所有属性都由单个空格字符分隔，并按特定顺序排列。这个示例的候选者完整属性列表包括：
 
       - {{domxref("RTCIceCandidate.foundation", "foundation")}} = 4234997325
-      - {{domxref("RTCIceCandidate.component", "component")}} = `"rtp"` (the number 1 is encoded to this string; 2 becomes `"rtcp"`)
+      - {{domxref("RTCIceCandidate.component", "component")}} = `"rtp"`（数值 1 将编码为 `"rtp"` 字符串，数值 2 将编码为 `"rtcp"` 字符串）
       - {{domxref("RTCIceCandidate.protocol", "protocol")}} = `"udp"`
       - {{domxref("RTCIceCandidate.priority", "priority")}} = 2043278322
       - {{domxref("RTCIceCandidate/address", "ip")}} = `"192.0.2.172"`
