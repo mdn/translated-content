@@ -3,7 +3,7 @@ title: MouseEvent.ctrlKey
 slug: Web/API/MouseEvent/ctrlKey
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 **`MouseEvent.ctrlKey`** 是只读属性，可返回一个布尔值，当 ctrl 键被按下，返回 true，否则返回 false。
 
