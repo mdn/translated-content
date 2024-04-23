@@ -36,7 +36,7 @@ a=candidate:4234997325 1 udp 2043278322 192.0.2.172 44323 typ host
 
 ## 示例
 
-此代码片段检查 `protocol` 的值以决定是否应查看 {{domxref("RTCIceCandidate.tcpType", "tcpType")}} 的值，以查看它是否是同时打开 **simultaneous-open** (**S-O**) 候选者
+此代码片段检查 `protocol` 的值以决定是否应查看 {{domxref("RTCIceCandidate.tcpType", "tcpType")}} 的值，以查看它是否是**同时打开**（simultaneous-open，**S-O**）候选者
 
 ```js
 if (candidate.protocol === "tcp") {
