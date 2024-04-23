@@ -24,11 +24,11 @@ l10n:
 - {{domxref("RTCIceCandidate.address", "address")}} {{ReadOnlyInline}}
   - : 表示候选者的 IP 地址的字符串。
 - {{domxref("RTCIceCandidate.candidate", "candidate")}} {{ReadOnlyInline}}
-  - : 表示用于连接检查的候选者的传输地址的字符串。此地址的格式是在 {{RFC(5245)}}中定义的候选者属性（`candidate-attribute`）。如果 `RTCIceCandidate` 是候选者结束（"end of candidates"）指示器，则此字符串为空字符串（`""`）。
+  - : 表示用于连接检查的候选者的传输地址的字符串。此地址的格式是在 {{RFC(5245)}} 中定义的候选者属性（`candidate-attribute`）。如果 `RTCIceCandidate` 是候选者结束（"end of candidates"）指示器，则此字符串为空字符串（`""`）。
 - {{domxref("RTCIceCandidate.component", "component")}} {{ReadOnlyInline}}
   - : 表示候选者是用 `RTP` 或者 `RTCP` 的字符串，返回值有 `rtp` 或 `rtcp`，该值是来自 `candidate` 属性行的 `"component-id"` 字段。
 - {{domxref("RTCIceCandidate.foundation", "foundation")}} {{ReadOnlyInline}}
-  - : 返回一个包含唯一标识符的字符串，该标识符对于来自相同的 `STUN` 服务器的相同类型、共享相同的基础（`ICE` 代理发送候选者的地址）的候选者都是相同的。这有助于优化 `ICE` 的性能，因为当在两个 `RTCIceTransport` 对象上出现多个候选者时，可以利用这些标识符来进行优先级排序和关联性判断。
+  - : 返回一个包含唯一标识符的字符串，该标识符对于来自相同的 {{Glossary("STUN")}} 服务器的相同类型、共享相同的基础（ICE 代理发送候选者的地址）的候选者都是相同的。这有助于优化 ICE 的性能，因为当在两个 {{domxref("RTCIceTransport")}} 对象上出现多个候选者时，可以利用这些标识符来进行优先级排序和关联性判断。
 - {{domxref("RTCIceCandidate.port", "port")}} {{ReadOnlyInline}}
   - : 表示候选者端口号的整型数值。
 - {{domxref("RTCIceCandidate.priority", "priority")}} {{ReadOnlyInline}}
@@ -42,18 +42,18 @@ l10n:
 - {{domxref("RTCIceCandidate.sdpMid", "sdpMid")}} {{ReadOnlyInline}}
   - : 表示候选者的媒体流标识标签的字符串，该标签在候选者关联的组件中唯一标识媒体流，如果不存在这样的关联，则为 `null`。
 - {{domxref("RTCIceCandidate.sdpMLineIndex", "sdpMLineIndex")}} {{ReadOnlyInline}}
-  - : 如果值不为 `null`，`sdpMLineIndex` 表示 `SDP` 中候选者关联的从零开始的媒体描述索引编号（在 [RFC 4566](https://datatracker.ietf.org/doc/html/rfc4566)中定义）。
+  - : 如果值不为 `null`，`sdpMLineIndex` 表示 `SDP` 中候选者关联的从零开始的媒体描述索引编号（在 [RFC 4566](https://datatracker.ietf.org/doc/html/rfc4566) 中定义）。
 - {{domxref("RTCIceCandidate.tcpType", "tcpType")}} {{ReadOnlyInline}}
-  - : 如果协议 (`protocol`) 是 `"tcp"` ，`tcpType` 表示 `TCP` 类型的候选者。否则 `tcpType` 为 `null`。
+  - : 如果 `protocol` 是 `"tcp"`，`tcpType` 表示 TCP 候选者的类型。否则 `tcpType` 为 `null`。
 - {{domxref("RTCIceCandidate.type", "type")}} {{ReadOnlyInline}}
-  - : 表示候选者类型的字符串，该值为 [`RTCIceCandidate.type`](/zh-CN/docs/Web/API/RTCIceCandidate/type#values) 中列出的字符串之一。
+  - : 表示候选者类型的字符串，该值为 [`RTCIceCandidate.type`](/zh-CN/docs/Web/API/RTCIceCandidate/type#值) 中列出的字符串之一。
 - {{domxref("RTCIceCandidate.usernameFragment", "usernameFragment")}} {{ReadOnlyInline}}
-  - : 一个包含随机生成的用户名片段（`“ice-ufrag”`）的字符串，`ICE` 与随机生成的密码（`“ice-pwd”`）一起用于消息完整性。你可以使用此字符串来验证 `ICE` 生成的代数；同一 `ICE` 进程的每一代将使用相同的用户名片段（`usernameFragment`），即使 `ICE` 重新启动也是如此。
+  - : 一个包含随机生成的用户名片段（“ice-ufrag”）的字符串，ICE 与随机生成的密码（“ice-pwd”）一起用于消息完整性。你可以使用此字符串来验证 ICE 生成的代数；同一 ICE 进程的每一代将使用相同的 `usernameFragment`，即使 ICE 重新启动也是如此。
 
 ## 实例方法
 
 - {{domxref("RTCIceCandidate.toJSON", "toJSON()")}}
-  - : 返回一个包含 `RTCIceCandidate` 当前配置的 {{Glossary("JSON")}} 对象。其格式与 `candidateInfo` 对象相同，可作为可选参数传入 {{domxref("RTCIceCandidate.RTCIceCandidate()","RTCIceCandidate()")}} 构造一个新的 `RTCIceCandidate` 实例。
+  - : 返回一个包含 `RTCIceCandidate` 当前配置的 {{Glossary("JSON")}} 对象。其格式与 `candidateInfo` 对象相同，可作为可选参数传入 {{domxref("RTCIceCandidate.RTCIceCandidate()","RTCIceCandidate()")}} 构造函数构造一个新的 `RTCIceCandidate` 实例。
 
 ## 示例
 

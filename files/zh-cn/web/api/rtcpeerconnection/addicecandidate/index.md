@@ -17,7 +17,7 @@ l10n:
 
 ## 语法
 
-```plain
+```js-nolint
 addIceCandidate(candidate)
 
 addIceCandidate(candidate, successCallback) // 已弃用
@@ -32,7 +32,7 @@ addIceCandidate(candidate, successCallback, failureCallback) // 已弃用
 
     - `candidate` {{optional_inline}}
 
-      描述候选者属性的字符串，直接从 [SDP](/zh-CN/docs/Web/API/WebRTC_API/Protocols#sdp) 属性 `"candidate"` 中取得。候选者字符串指定了候选者的网络连接信息。如果 `"candidate"` 是一个空字符串（`""`），则表示已到达候选者列表的末尾；此候选者被称为 "候选结束标记"("end-of-candidates")。候选者字符串的语法在 {{RFC(5245, "", 15.1)}} 中有描述。对于一个这样的属性行（a-line）：
+      描述候选者属性的字符串，直接从 [SDP](/zh-CN/docs/Web/API/WebRTC_API/Protocols#sdp) 属性 `"candidate"` 中取得。候选者字符串指定了候选者的网络连接信息。如果 `"candidate"` 是一个空字符串（`""`），则表示已到达候选者列表的末尾；此候选者被称为“候选结束标记（"end-of-candidates"）”。候选者字符串的语法在 {{RFC(5245, "", 15.1)}} 中有描述。对于一个这样的属性行（a-line）：
 
       ```plain
       a=candidate:4234997325 1 udp 2043278322 192.0.2.172 44323 typ host
@@ -40,7 +40,7 @@ addIceCandidate(candidate, successCallback, failureCallback) // 已弃用
 
       相应的 `candidate` 字符串的值将是 `"candidate:4234997325 1 udp 2043278322 192.0.2.172 44323 typ host"`。
 
-      在其它属性相同的前提下，{{Glossary("user agent","用户代理")}} 总是更喜欢具有更高 {{domxref("RTCIceCandidate.priority", "priority")}} 的候选者。在上面的例子中，优先级为 `2043278322`。所有属性都由单个空格字符分隔，并按特定顺序排列。这个例子的候选者完整属性列表包括：
+      在其它属性相同的前提下，{{Glossary("user agent","用户代理")}}总是更优先选择具有更高{{domxref("RTCIceCandidate.priority", "优先级", "", "nocode")}}的候选者。在上面的示例中，优先级为 `2043278322`。所有属性都由单个空格字符分隔，并按特定顺序排列。这个示例的候选者完整属性列表包括：
 
       - {{domxref("RTCIceCandidate.foundation", "foundation")}} = 4234997325
       - {{domxref("RTCIceCandidate.component", "component")}} = `"rtp"` (the number 1 is encoded to this string; 2 becomes `"rtcp"`)
@@ -50,7 +50,7 @@ addIceCandidate(candidate, successCallback, failureCallback) // 已弃用
       - {{domxref("RTCIceCandidate.port", "port")}} = 44323
       - {{domxref("RTCIceCandidate.type", "type")}} = `"host"`
 
-      更多信息请参见 {{domxref("RTCIceCandidate.candidate")}}
+      更多信息请参见 {{domxref("RTCIceCandidate.candidate")}}。
 
       > **备注：** 为了向后兼容历史版本的 WebRTC 规范，构造函数也接受一个字符串作为参数。
 
@@ -64,14 +64,14 @@ addIceCandidate(candidate, successCallback, failureCallback) // 已弃用
 
     - `usernameFragment` {{optional_inline}}
 
-      - : 一个包含用户名片段（通常简称为 "ufrag" 或 "ice-ufrag"）的字符串，此片段与 ICE 密码（"ice-pwd"）一起作为单个正在进行的 ICE 交互（包括与 {{Glossary("STUN")}} 服务器的任何通信）的唯一标识。该字符串由 WebRTC 在会话开始时生成。最多 256 个字符，并且至少有 24 位必须包含随机数据。它除非显式设置否则没有默认值，否则不会出现。更多信息参见 {{domxref("RTCIceCandidate.usernameFragment")}}。
+      - : 一个包含用户名片段（通常简称为“ufrag”或“ice-ufrag”）的字符串，此片段与 ICE 密码（“ice-pwd”）一起作为单个正在进行的 ICE 交互（包括与 {{Glossary("STUN")}} 服务器的任何通信）的唯一标识。该字符串由 WebRTC 在会话开始时生成。最多 256 个字符，并且至少有 24 位必须包含随机数据。它没有默认值，除非明确设置，否则不会出现。更多信息参见 {{domxref("RTCIceCandidate.usernameFragment")}}。
 
   如果 `sdpMid` 和 `sdpMLineIndex` 都为 `null`，则该方法将抛出 {{jsxref("TypeError")}} 异常。
 
-  对象的内容应该根据通过信令通道收到的消息构建，描述一个新接收准备传递给本地 ICE 代理的的 ICE 候选者。如果未指定 `candidate` 对象或其值为 `null`，则将通过属性行的（`end-of-candidates`）片段向远程对等端发送一个 格式如下的`end-of-candidates` 标记：
+  对象的内容应该根据通过信令通道收到的消息构建，该通道描述一个新接收准备传递给本地 ICE 代理的 ICE 候选者。如果未指定 `candidate` 对象或其值为 `null`，则将通过 `end-of-candidates` 属性行向远程对等端发送格式如下的候选结束标记信号：
 
   ```plain
-      a=end-of-candidates
+  a=end-of-candidates
   ```
 
 ### 废弃参数
@@ -79,9 +79,9 @@ addIceCandidate(candidate, successCallback, failureCallback) // 已弃用
 在旧代码和文档中，你可能会看到这个函数的基于回调的版本。这已被弃用，**强烈**不建议使用。你应该更新现有代码，改用基于 {{jsxref("Promise")}} 的 `addIceCandidate()` 版本。下面描述了旧版本 `addIceCandidate()` 的参数，以帮助更新现有代码。
 
 - `successCallback` {{deprecated_inline}}
-  - : 添加 ICE 候选者成功时要调用该函数。此函数不接收任何输入参数，也没有返回值。
+  - : 当添加 ICE 候选者时成功调用的函数。此函数不接收任何输入参数，也没有返回值。
 - `failureCallback` {{deprecated_inline}}
-  - : 如果尝试添加 ICE 候选者失败，则调用的函数。接收一个描述失败原因的 {{domxref("DOMException")}} 对象作为输入。
+  - : 当添加 ICE 候选者失败时调用的函数。接收一个描述失败原因的 {{domxref("DOMException")}} 对象作为输入。
 
 ### 返回值
 
@@ -91,15 +91,15 @@ addIceCandidate(candidate, successCallback, failureCallback) // 已弃用
 
 当尝试添加 ICE 候选者时发生错误时，此方法返回的 {{jsxref("Promise")}} 将被拒绝，将下面的错误之一作为传递给拒绝处理程序的指定 {{domxref("DOMException")}} 对象的 {{domxref("DOMException.name", "name")}} 属性返回。
 
-- `TypeError`
+- {{jsxref("TypeError")}}
 
-  - : 如果指定的候选者的 {{domxref("RTCIceCandidate.sdpMid", "sdpMid")}} 和 {{domxref("RTCIceCandidate.sdpMLineIndex", "sdpMLineIndex")}} 都为 `null`时，返回本错误类型。
+  - : 如果指定的候选者的 {{domxref("RTCIceCandidate.sdpMid", "sdpMid")}} 和 {{domxref("RTCIceCandidate.sdpMLineIndex", "sdpMLineIndex")}} 都为 `null` 时，返回本错误类型。
 
-- `InvalidStateError`
+- `InvalidStateError` {{domxref("DOMException")}}
 
   - : 如果 `RTCPeerConnection` 当前没有建立远程对等端（{{domxref("RTCPeerConnection.remoteDescription", "remoteDescription")}} 为 `null`）时，返回本错误类型。
 
-- `OperationError`
+- `OperationError` {{domxref("DOMException")}}
 
   - : 在以下情况之一返回本错误类型：
     - : 指定的 {{domxref("RTCIceCandidate.sdpMid", "sdpMid")}} 的值非空，且与 {{domxref("RTCPeerConnection.remoteDescription", "remoteDescription")}} 中包含的媒体描述的媒体描述 ID 不匹配。
