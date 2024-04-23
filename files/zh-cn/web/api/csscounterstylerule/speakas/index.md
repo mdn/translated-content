@@ -1,6 +1,8 @@
 ---
 title: CSSCounterStyleRule：speakAs 属性
 slug: Web/API/CSSCounterStyleRule/speakAs
+l10n:
+  sourceCommit: 59b1cd1f520971b89ccf521d53a1d9d3bf4c0756
 ---
 
 {{APIRef("CSS Counter Styles")}}

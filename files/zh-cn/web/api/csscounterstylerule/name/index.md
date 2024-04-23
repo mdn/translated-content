@@ -1,6 +1,8 @@
 ---
 title: CSSCounterStyleRule：name 属性
 slug: Web/API/CSSCounterStyleRule/name
+l10n:
+  sourceCommit: f75fd658f627b5730a14ada901120cfa4ee01bda
 ---
 
 {{APIRef("CSS Counter Styles")}}
