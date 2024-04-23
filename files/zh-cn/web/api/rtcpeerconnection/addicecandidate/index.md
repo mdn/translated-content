@@ -34,27 +34,27 @@ addIceCandidate(candidate, successCallback, failureCallback) // 已弃用
 
       - : 描述候选者属性的字符串，直接从 [SDP](/zh-CN/docs/Web/API/WebRTC_API/Protocols#sdp) 属性 `"candidate"` 中取得。候选者字符串指定了候选者的网络连接信息。如果 `"candidate"` 是一个空字符串（`""`），则表示已到达候选者列表的末尾；此候选者被称为“候选结束标记（"end-of-candidates"）”。
 
-          候选者字符串的语法在 {{RFC(5245, "", 15.1)}} 中有描述。对于一个这样的属性行（a-line）：
+        候选者字符串的语法在 {{RFC(5245, "", 15.1)}} 中有描述。对于一个这样的属性行（a-line）：
 
-          ```plain
-          a=candidate:4234997325 1 udp 2043278322 192.0.2.172 44323 typ host
-          ```
+        ```plain
+        a=candidate:4234997325 1 udp 2043278322 192.0.2.172 44323 typ host
+        ```
 
-          相应的 `candidate` 字符串的值将为：
+        相应的 `candidate` 字符串的值将为：
 
-          ```plain
-          "candidate:4234997325 1 udp 2043278322 192.0.2.172 44323 typ host"
-          ```
+        ```plain
+        "candidate:4234997325 1 udp 2043278322 192.0.2.172 44323 typ host"
+        ```
 
-          在其它属性相同的前提下，{{Glossary("user agent","用户代理")}}总是更优先选择具有更高{{domxref("RTCIceCandidate.priority", "优先级", "", "nocode")}}的候选者。在上面的示例中，优先级为 `2043278322`。所有属性都由单个空格字符分隔，并按特定顺序排列。这个示例的候选者完整属性列表包括：
+        在其它属性相同的前提下，{{Glossary("user agent","用户代理")}}总是更优先选择具有更高{{domxref("RTCIceCandidate.priority", "优先级", "", "nocode")}}的候选者。在上面的示例中，优先级为 `2043278322`。所有属性都由单个空格字符分隔，并按特定顺序排列。这个示例的候选者完整属性列表包括：
 
-          - {{domxref("RTCIceCandidate.foundation", "foundation")}} = 4234997325
-          - {{domxref("RTCIceCandidate.component", "component")}} = `"rtp"`（数值 1 将编码为 `"rtp"` 字符串，数值 2 将编码为 `"rtcp"` 字符串）
-          - {{domxref("RTCIceCandidate.protocol", "protocol")}} = `"udp"`
-          - {{domxref("RTCIceCandidate.priority", "priority")}} = 2043278322
-          - {{domxref("RTCIceCandidate/address", "ip")}} = `"192.0.2.172"`
-          - {{domxref("RTCIceCandidate.port", "port")}} = 44323
-          - {{domxref("RTCIceCandidate.type", "type")}} = `"host"`
+        - {{domxref("RTCIceCandidate.foundation", "foundation")}} = 4234997325
+        - {{domxref("RTCIceCandidate.component", "component")}} = `"rtp"`（数值 1 将编码为 `"rtp"` 字符串，数值 2 将编码为 `"rtcp"` 字符串）
+        - {{domxref("RTCIceCandidate.protocol", "protocol")}} = `"udp"`
+        - {{domxref("RTCIceCandidate.priority", "priority")}} = 2043278322
+        - {{domxref("RTCIceCandidate/address", "ip")}} = `"192.0.2.172"`
+        - {{domxref("RTCIceCandidate.port", "port")}} = 44323
+        - {{domxref("RTCIceCandidate.type", "type")}} = `"host"`
 
           更多信息请参见 {{domxref("RTCIceCandidate.candidate")}}。
 
