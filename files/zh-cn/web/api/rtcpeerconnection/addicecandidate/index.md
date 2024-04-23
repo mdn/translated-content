@@ -117,7 +117,7 @@ addIceCandidate(candidate, successCallback, failureCallback) // 已弃用
 
 // pc.onicecandidate = (event) => {
 //   if (event.candidate) {
-//     signalingChannel.send(JSON.stringify({ice: event.candidate})); // "ice" is arbitrary
+//     signalingChannel.send(JSON.stringify({ice: event.candidate})); // “ice”是任意的
 //   } else {
 //     // ICE 候选者全部发送完毕
 //   }
