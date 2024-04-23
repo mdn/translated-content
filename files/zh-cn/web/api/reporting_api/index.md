@@ -106,7 +106,7 @@ if (navigator.mozGetUserMedia) {
 
 目前浏览器的支持还处于早期阶段。Firefox 通过首选项来提供对 JavaScript API 和 `Report-To` 标头的支持：
 
-- JavaScript API: `dom.reporting.enabled` （仅在 Nightly 版本中可用）
+- JavaScript API: `dom.reporting.enabled`（仅在 Nightly 版本中可用）
 - HTTP 标头：`dom.reporting.header.enabled`
 
 Chrome 浏览器也在逐步实现该特性：[有关 Chrome 实现的信息](https://developer.chrome.com/docs/capabilities/web-apis/reporting-api)。
