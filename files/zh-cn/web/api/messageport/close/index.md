@@ -37,7 +37,7 @@ function handleMessage(e) {
 channel.port1.start();
 ```
 
-你可以随时通过以下方式停止发送信息
+你可以随时通过以下方式停止发送信息：
 
 ```js
 channel.port1.close();
