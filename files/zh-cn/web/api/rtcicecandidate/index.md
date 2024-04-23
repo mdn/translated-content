@@ -2,7 +2,7 @@
 title: RTCIceCandidate
 slug: Web/API/RTCIceCandidate
 l10n:
-  sourceCommit: 063ac8fa2390c6b8776a654c0746de6acef548c4
+  sourceCommit: 50ed08d7b506c19b7d073b05ea1e02a15f276878
 ---
 
 {{APIRef("WebRTC")}}
