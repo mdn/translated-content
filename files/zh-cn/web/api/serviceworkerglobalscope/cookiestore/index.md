@@ -2,7 +2,7 @@
 title: ServiceWorkerGlobalScope：cookieStore 属性
 slug: Web/API/ServiceWorkerGlobalScope/cookieStore
 l10n:
-  commitHash: 60c3843f55839380e0c0cdc293ea694fe9943158
+  sourceCommit: 60c3843f55839380e0c0cdc293ea694fe9943158
 ---
 
 {{APIRef("Cookie Store API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers("service")}}
