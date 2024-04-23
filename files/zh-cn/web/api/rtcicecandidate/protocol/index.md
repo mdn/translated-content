@@ -9,7 +9,7 @@ l10n:
 
 **{{domxref("RTCIceCandidate")}}** 接口的 `protocol` 只读属性是一个用于指示候选者使用的传输协议是 {{Glossary("UDP")}} 还是 {{Glossary("TCP")}} 的字符串。
 
-`protocol` 字段的值是从传递给 {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate(candidateInfo)")}} 构造函数的 `candidateInfo` 选项对象中设置的。你不能直接在选项对象中指定 `protocol` 的值，如果对象的 `candidate` 属性行 (`a-line`) 格式正确，其值将自动从对象的候选属性行中提取。
+`protocol` 字段的值是通过传递给 {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate(candidateInfo)")}} 构造函数的 `candidateInfo` 选项对象中设置的。你不能直接在选项对象中指定 `protocol` 的值，如果对象的 `candidate` 属性行（a-line）的格式正确，其值将自动从中提取。
 
 如果在 `SDP` 中未正确指定 `protocol`，则 `protocol` 默认为 `null`。如果没有设置，在调用 {{domxref("RTCPeerConnection.addIceCandidate()")}} 时将抛出异常。
 
