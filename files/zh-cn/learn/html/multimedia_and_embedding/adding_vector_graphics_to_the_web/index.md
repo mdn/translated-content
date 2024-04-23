@@ -187,7 +187,7 @@ background-size: contain;
 
 在本动手学习部分中，我们希望你能够体验一下 SVG 的乐趣。在下面的 _input_ 部分，你会看到我们已经提供了一些样例供你使用。你还可以访问 [SVG 元素参考](/zh-CN/docs/Web/SVG/Element)，了解更多 SVG 可以把玩的细节，当然也可以尝试一下。本部分都是为了锻炼你的研究技巧，并且有一些乐趣。
 
-如果你遇到了困难，无法使你的代码工作，你可以随时使用 _Reset_ 按钮进行重置。
+如果你遇到了困难，无法使你的代码工作，你可以随时使用*重置*按钮进行重置。
 
 ```html hidden
 <h2>实时输出</h2>
@@ -210,8 +210,8 @@ background-size: contain;
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset" />
-  <input id="solution" type="button" value="Show solution" disabled />
+  <input id="reset" type="button" value="重置" />
+  <input id="solution" type="button" value="显示答案" disabled />
 </div>
 ```
 
