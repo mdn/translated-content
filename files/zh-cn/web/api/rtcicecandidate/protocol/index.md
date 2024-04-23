@@ -18,9 +18,7 @@ l10n:
 指示候选者使用的网络协议的字符串
 
 - `tcp`
-
-  - : 如果选择 `tcp`，该候选者将使用 {{Glossary("TCP")}} 作为其数据的传输协议。 {{domxref("RTCIceCandidate.tcpType", "tcpType")}} 属性提供有关对象表示的 `TCP` 候选者类型的附加信息。
-
+  - : 如果选择 `tcp`，该候选者将使用 {{Glossary("TCP")}} 作为其数据的传输协议。 {{domxref("RTCIceCandidate.tcpType", "tcpType")}} 属性提供有关对象表示的 TCP 候选者类型的附加信息。
 - `udp`
   - : 该候选者将使用 {{Glossary("UDP")}} 传输协议进行数据传输。由于其更好的性能特点，是媒体交互的首选协议。
 
