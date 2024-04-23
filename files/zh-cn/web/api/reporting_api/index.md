@@ -7,7 +7,7 @@ l10n:
 
 {{SeeCompatTable}}{{DefaultAPISidebar("Reporting API")}}
 
-Reporting API 为 web 应用程序提供了一种通用的报告机制，用于根据各种平台特性以一致的方式提供报告（例如[内容安全策略](/zh-CN/docs/Web/HTTP/CSP)，[权限策略](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy)或特性弃用报告）。
+Reporting API 为 web 应用程序提供了一种通用的报告机制，用于根据各种平台特性以一致的方式提供报告（例如[内容安全策略](/zh-CN/docs/Web/HTTP/CSP)、[权限策略](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy)或特性弃用报告）。
 
 ## 概念和用法
 
@@ -23,25 +23,26 @@ Reporting API 的目的是提供一致的报告机制，该机制可用于以 Ja
 
 ### 来源和端点
 
-可以为希望检索报告的每个唯一来源提供一系列端点，这些端点是可以从用户代理接收给定报告的 url。
-{{httpheader("Report-To")}} HTTP 请求头用于指定用户代理可以向哪些不同的端点发送报告的详细信息。然后，你可以通过向这些 url 发出请求来检索报告。
+可以为希望检索报告的每个唯一来源提供一系列端点，这些端点是可以从用户代理接收给定报告的 URL。
 
-端点将会被分组。端点组可以协同工作以提供负载平衡（每个端点将接收指定比例的报告流量）和故障保护（可以指定备用端点，以便在主端点失败时使用）。
+{{httpheader("Report-To")}} HTTP 标头用于指定用户代理可以向哪些不同的端点发送报告的详细信息。然后，你可以通过向这些 URL 发出请求来检索报告。
+
+端点将会被分组。端点组可以协同工作以均衡负载（每个端点将接收指定比例的报告流量）和故障保护（可以指定备用端点，以便在主端点失败时使用）。
 
 > **备注：** 不保证绝对有交付报告——如果发生严重错误，报告仍然可能无法被收集。
 
 发送到端点的报告可以独立于与之相关的网站的运行进行检索，这很有用——例如，崩溃可能会导致网站崩溃并停止任何运行，但仍然可以获得报告，以便为开发人员提供有关发生原因的一些线索。
 
-### 报告侦听器
+### 报告观察器
 
 报告也可以通过在你希望获得报告的网站使用 JavaScript 创建的 {{domxref("ReportingObserver")}} 对象获取。此方法不像上面描述的 `Report-To` 方法那样万无一失——任何页面崩溃都可能阻止你检索报告——但它更容易设置，也更灵活。
 
 使用 {{domxref("ReportingObserver.ReportingObserver", "ReportingObserver()")}} 构造器来创建 `ReportingObserver`，它需要以下两个参数：
 
-- 一个回调函数，参数是侦听器报告队列中可用的报告，以及同一个 `ReportingObserver` 对象的副本，因此可以直接从回调函数内部控制侦听器。回调函数在侦听开始时运行。
-- 一个配置字典，允许你指定要收集的报告类型，以及指定观察者被创建之前生成的报告是否可被观察（`buffered: true`）。
+- 一个回调函数，参数是观察器报告队列中可用的报告，以及同一个 `ReportingObserver` 对象的副本，因此可以直接从回调函数内部控制观察器。回调函数在观察开始时运行。
+- 一个配置字典，允许你指定要收集的报告类型，以及指定观察器被创建之前生成的报告是否可被观察（`buffered: true`）。
 
-然后，侦听器上可用的方法开始收集报告（{{domxref("ReportingObserver.observe()")}}），检索当前在报告队列中的报告（{{domxref("ReportingObserver.takeRecords()")}}），并断开侦听器，使其不能再收集记录（{{domxref("ReportingObserver.disconnect()")}}）。
+观察器上可用的方法包括：开始收集报告（{{domxref("ReportingObserver.observe()")}}）、检索当前在报告队列中的报告（{{domxref("ReportingObserver.takeRecords()")}}），以及断开观察器而使其不能再收集记录（{{domxref("ReportingObserver.disconnect()")}}）。
 
 ### 通过 WebDriver 生成报告
 
@@ -62,7 +63,7 @@ Reporting API 的目的是提供一致的报告机制，该机制可用于以 Ja
 
 ## 示例
 
-在我们的 [deprecation_report.html](https://mdn.github.io/dom-examples/reporting-api/deprecation_report.html) 示例中，我们创建了一个简单的报告侦听器来观察我们网页上过时的特性的使用情况：
+在我们的 [deprecation_report.html](https://mdn.github.io/dom-examples/reporting-api/deprecation_report.html) 示例中，我们创建了一个简单的报告观察器来观察我们网页上已弃用特性的使用情况：
 
 ```js
 const options = {
@@ -75,7 +76,7 @@ const observer = new ReportingObserver((reports, observer) => {
 }, options);
 ```
 
-然后我们告诉它使用 {{domxref("ReportingObserver.observe()")}} 开始观察报告。这将告诉侦听器开始在它的报告队列中收集报告，并运行构造函数中指定的回调函数：
+然后我们告诉它使用 {{domxref("ReportingObserver.observe()")}} 开始观察报告。这将告诉观察器开始在它的报告队列中收集报告，并运行构造函数中指定的回调函数：
 
 ```js
 observer.observe();
@@ -91,11 +92,11 @@ if (navigator.mozGetUserMedia) {
 }
 ```
 
-这会生成一个弃用报告：由于在 `ReportingObserver()` 构造函数中设置了事件处理程序，现在可以单击按钮来显示报告详细信息。
+这会生成一个弃用报告：由于在 `ReportingObserver()` 构造函数中设置了事件处理器，现在可以单击按钮来显示报告的详细信息。
 
 ![一个快乐的大胡子男人的形象，下面显示了关于一个被弃用的功能的各种统计数据](reporting_api_example.png)
 
-> **备注：** 如果你查看 [完整的源代码](https://github.com/mdn/dom-examples/blob/main/reporting-api/deprecation_report.html)，你将注意到我们调用了两次 `getUserMedia()` 方法。在我们第一次调用 {{domxref("ReportingObserver.takeRecords()")}} 之后，它返回第一个生成的报告并清空队列。因此，当按下该按钮时，只会列出第二个报告。
+> **备注：** 如果你查看[完整的源代码](https://github.com/mdn/dom-examples/blob/main/reporting-api/deprecation_report.html)，你将注意到我们调用了两次 `getUserMedia()` 方法。在我们第一次调用 {{domxref("ReportingObserver.takeRecords()")}} 之后，它返回第一个生成的报告并清空队列。因此，当按下该按钮时，只会列出第二个报告。
 
 ## 规范
 
@@ -103,12 +104,12 @@ if (navigator.mozGetUserMedia) {
 
 ## 浏览器兼容性
 
-目前浏览器的支持还处于早期阶段。Firefox 在配置后的情况下支持 JavaScript API 和 `Report-To` 请求头：
+目前浏览器的支持还处于早期阶段。Firefox 通过首选项来提供对 JavaScript API 和 `Report-To` 标头的支持：
 
 - JavaScript API: `dom.reporting.enabled` （仅在 Nightly 版本中可用）
-- HTTP 请求头：`dom.reporting.header.enabled`
+- HTTP 标头：`dom.reporting.header.enabled`
 
-Chrome 浏览器也在逐步实现该功能：[有关 Chrome 实现的信息](https://developer.chrome.com/docs/capabilities/web-apis/reporting-api).
+Chrome 浏览器也在逐步实现该特性：[有关 Chrome 实现的信息](https://developer.chrome.com/docs/capabilities/web-apis/reporting-api)。
 
 ## 参见
 
