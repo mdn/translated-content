@@ -14,8 +14,8 @@ l10n:
     <tr>
       <th scope="row">前提：</th>
       <td>
-        你需要了解<a
-        href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
+        你需要了解
+        <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 的基本知识</a
         >并且知道如何<a
          href="/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML"
@@ -25,7 +25,7 @@ l10n:
     </tr>
     <tr>
       <th scope="row">目标：</th>
-      <td>了解如何在网页中嵌入 SVG (矢量) 图形。</td>
+      <td>了解如何在网页中嵌入 SVG（矢量）图形。</td>
     </tr>
   </tbody>
 </table>
@@ -34,9 +34,9 @@ l10n:
 
 ## 什么是矢量图形？
 
-在 web 上，你会和两种类型的图片打交道——**位图（raster image）**和**矢量图**：
+在 web 上，你会和两种类型的图片打交道——**位图**和**矢量图**：
 
-- **位图**使用像素网格来定义——位图文件精确包含每个像素的位置和它的色彩信息。流行的 web 位图格式包括 Bitmap（`.bmp`）、PNG（`.png`）、JPEG（`.jpg`），以及 GIF (`.gif`)。
+- **位图**使用像素网格来定义——位图文件精确包含每个像素的位置和它的色彩信息。流行的 web 位图格式包括 Bitmap（`.bmp`）、PNG（`.png`）、JPEG（`.jpg`），以及 GIF（`.gif`）。
 - **矢量图**使用算法来定义——矢量图文件包含了图形和路径的定义，电脑可以根据这些定义计算出当它们在屏幕上渲染时应该呈现的样子。借助 {{glossary("SVG")}} 格式，我们可以创造用于 Web 的精彩矢量图形。
 
 为了让你清楚的认识到两者的区别，我们来一个例子。你可以在我们的 Github 仓库中在线查看这个例子：[vector-versus-raster.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html)——它并排展示了两个看起来一致的图像，两个图像都是一个红色的五角星以及黑色的阴影。不同的是，左边的是 PNG，而右边的是 SVG 图像。
@@ -73,7 +73,7 @@ l10n:
 
 {{ EmbedLiveSample('SVG 是什么？', 300, 200) }}
 
-从上面的例子可以看出，SVG 很容易手工编码。是的，你可以在文本编辑器中手动编写简单的 SVG，但是随着图像复杂度提升，手动编码很快就开始变得非常困难。为了创建 SVG 图像，大多数人使用矢量图形编辑器，如 [Inkscape](https://inkscape.org/en/) 或 [Illustrator](https://zh.wikipedia.org/zh-cn/Adobe_Illustrator)。借助这些软件包，你可以使用各种图形工具创建插图，也可以创建近似照片的矢量图（例如 Inkscape 的跟踪位图功能）。
+从上面的例子可以看出，SVG 很容易手工编码。是的，你可以在文本编辑器中手动编写简单的 SVG，但是随着图像复杂度提升，手动编码很快就开始变得非常困难。为了创建 SVG 图像，大多数人使用矢量图形编辑器，如 [Inkscape](https://inkscape.org/) 或 [Illustrator](https://zh.wikipedia.org/wiki/Adobe_Illustrator)。借助这些软件包，你可以使用各种图形工具创建插图，也可以创建近似照片的矢量图（例如 Inkscape 的跟踪位图功能）。
 
 SVG 除了前面描述的以外还有其他优点：
 
@@ -100,7 +100,7 @@ SVG 除了前面描述的以外还有其他优点：
 ```html
 <img
   src="equilateral.svg"
-  alt="三条边相同的三角形"
+  alt="等边三角形"
   height="87px"
   width="100px" />
 ```
@@ -138,7 +138,7 @@ background-size: contain;
 
 与上文所述的 `<img>` 方法一样，使用 CSS 背景图片插入 SVG 意味着 SVG 无法使用 JavaScript 进行操作，并且同样受到相同的 CSS 限制。
 
-如果 SVG 根本没有显示，可能是因为你的服务器设置不正确。如果是这个问题，[这篇文章]将为你指出正确方向 (/zh-CN/docs/Web/SVG/Tutorial/Getting_Started#A_Word_on_Webservers)。
+如果 SVG 根本没有显示，可能是因为你的服务器设置不正确。如果是这个问题，[这篇文章](/zh-CN/docs/Web/SVG/Tutorial/Getting_Started#关于_web_服务器上_.svgz_文件的小提示)将为你指出正确方向。
 
 ### 如何在 HTML 中引入 SVG 代码
 
