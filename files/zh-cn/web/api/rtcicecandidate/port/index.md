@@ -9,7 +9,7 @@ l10n:
 
 **{{domxref("RTCIceCandidate")}}** 接口的 `port` 只读属性是 {{domxref("RTCIceCandidate.address")}} 给出的地址所包含的候选对等端可以到达的端口。
 
-`port` 字段的值是从传递给 {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate(candidateInfo)")}} 构造函数的 `candidateInfo` 选项对象中设置的。你不能直接在选项对象中指定 `port` 的值，如果对象的 `candidate` 属性行 (a-line) 格式正确，其值将自动从对象的 `candidate` 属性行中提取。
+`port` 字段的值是从传递给 {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate(candidateInfo)")}} 构造函数的 `candidateInfo` 选项对象中设置的。你不能直接在选项对象中指定 `port` 的值，如果对象的 `candidate` 属性行（a-line）格式正确，其值将自动从中提取。
 
 ## 值
 
