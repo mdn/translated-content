@@ -2,7 +2,7 @@
 title: RTCIceCandidate：protocol 属性
 slug: Web/API/RTCIceCandidate/protocol
 l10n:
-  sourceCommit: 063ac8fa2390c6b8776a654c0746de6acef548c4
+  sourceCommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
 ---
 
 {{APIRef("WebRTC")}}
