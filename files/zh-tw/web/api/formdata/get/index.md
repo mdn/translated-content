@@ -3,11 +3,11 @@ title: FormData.get()
 slug: Web/API/FormData/get
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{AvailableInWorkers}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 {{domxref("FormData")}} 的 **`get()`** 方法會返回 `FormData 物件中，指定 `key` 值所對應之第一組物件中的 value 值。然而，如果你想要獲得多組以及全部的 value，那應該使用 {{domxref("FormData.getAll()","getAll()")}} 方法。
-
-**注意**: 這個方法已可以在 [Web Worker](/zh-TW/docs/Web/API/Web_Workers_API) 中使用。
 
 ## 語法
 
