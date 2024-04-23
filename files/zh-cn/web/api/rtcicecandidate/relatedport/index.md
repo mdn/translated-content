@@ -2,7 +2,7 @@
 title: RTCIceCandidate：relatedPort 属性
 slug: Web/API/RTCIceCandidate/relatedPort
 l10n:
-  sourceCommit: 31fa0bbc78b87bf3ec7559906515fcd3dfde68de
+  sourceCommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
 ---
 
 {{APIRef("WebRTC")}}
