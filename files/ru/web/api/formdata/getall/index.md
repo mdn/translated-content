@@ -3,6 +3,8 @@ title: FormData.getAll()
 slug: Web/API/FormData/getAll
 ---
 
+{{AvailableInWorkers}}
+
 {{APIRef("XMLHttpRequest API")}}
 
 **`getAll()`** - метод объекта {{domxref("FormData")}}, который возвращает все значения, связанные с ключом в объекте FormData.

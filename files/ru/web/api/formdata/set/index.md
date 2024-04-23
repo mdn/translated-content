@@ -3,6 +3,8 @@ title: FormData.set()
 slug: Web/API/FormData/set
 ---
 
+{{AvailableInWorkers}}
+
 {{APIRef("XMLHttpRequest API")}}
 
 Метод set() из интерфейса {{domxref("FormData")}} присваивает новое значение существующему ключу внутри объекта `FormData`, или добавляет ключ/значение если до этого они не были установлены.

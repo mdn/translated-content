@@ -3,6 +3,8 @@ title: FormData.append()
 slug: Web/API/FormData/append
 ---
 
+{{AvailableInWorkers}}
+
 {{APIRef("XMLHttpRequest API")}}
 
 Метод **`append()`** из интерфейса {{domxref("FormData")}} добавляет новое значение в существующий ключ внутри объекта `FormData`, или создаёт ключ, в случае если он отсутствует.
