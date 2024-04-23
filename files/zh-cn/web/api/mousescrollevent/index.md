@@ -3,11 +3,7 @@ title: MouseScrollEvent
 slug: Web/API/MouseScrollEvent
 ---
 
-{{Non-standard_Header}}
-
-{{Deprecated_Header}}
-
-{{APIRef("UI Events")}}
+{{APIRef("UI Events")}}{{Non-standard_Header}}{{Deprecated_Header}}
 
 `MouseScrollEvent` 事件对象代表了当用户在滚动鼠标滚轮或操作其他类似的输入设备时触发的事件。
 
