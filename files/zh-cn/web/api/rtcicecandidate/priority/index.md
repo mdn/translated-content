@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("WebRTC")}}
 
-**{{domxref("RTCIceCandidate")}}** 接口的 `priority` 只读属性指示由远程对等端确定的候选者的优先级。优先级的值越高，远程对等端认为候选者越好。
+**{{domxref("RTCIceCandidate")}}** 接口的 **`priority`** 只读属性指示由远程对等端确定的候选者的优先级。优先级的值越高，远程对等端认为候选者越好。
 
 `priority` 字段的值是从传递给 {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate(candidateInfo)")}} 构造函数的 `candidateInfo` 选项对象中设置的。你不能直接在选项对象中指定 `priority` 的值，如果对象的 `candidate` 属性行（a-line）格式正确，其值将自动从对象的 `candidate` 属性行中提取。
 
