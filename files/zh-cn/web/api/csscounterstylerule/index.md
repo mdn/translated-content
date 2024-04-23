@@ -7,13 +7,13 @@ l10n:
 
 {{APIRef("CSS Counter Styles")}}
 
-The **`CSSCounterStyleRule`** 接口表示 {{CSSxRef("@counter-style")}} [At 规则](/zh-CN/docs/Web/CSS/At-rule)。
+**`CSSCounterStyleRule`** 接口表示 {{CSSxRef("@counter-style")}} [At 规则](/zh-CN/docs/Web/CSS/At-rule)。
 
 {{InheritanceDiagram}}
 
 ## 实例属性
 
-_该接口还继承了父级 {{DOMxRef("CSSRule")}} 的属性。_
+_该接口还继承了父接口 {{DOMxRef("CSSRule")}} 的属性。_
 
 - {{DOMxRef("CSSCounterStyleRule.name")}}
   - : 一个字符串对象，包含了 {{CSSxRef("&lt;custom-ident&gt;")}} 为关联规则 `name` 定义的序列化内容。
@@ -40,7 +40,7 @@ _该接口还继承了父级 {{DOMxRef("CSSRule")}} 的属性。_
 
 ## 实例方法
 
-_该接口未实现任何自定义方法，但是继承方法自父级 {{DOMxRef("CSSRule")}}。_
+_该接口未实现任何自定义方法，但是从其父接口 {{DOMxRef("CSSRule")}} 继承方法。_
 
 ## 规范
 
@@ -53,4 +53,4 @@ _该接口未实现任何自定义方法，但是继承方法自父级 {{DOMxRef
 ## 参见
 
 - {{CSSxRef("@counter-style")}}
-- [CSS counter styles](/zh-CN/docs/Web/CSS/CSS_counter_styles) module
+- [CSS 计数器样式](/zh-CN/docs/Web/CSS/CSS_counter_styles)模块
