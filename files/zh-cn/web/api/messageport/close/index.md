@@ -25,7 +25,7 @@ close()
 
 ## 示例
 
-在以下代码块中，你可以看到一个名为 `handleMessage` 处理函数，当使用 {{domxref("EventTarget.addEventListener")}} 向此文档发送回一条消息时运行。
+在以下代码块中，你可以看到一个名为 `handleMessage` 的处理函数，当使用 {{domxref("EventTarget.addEventListener")}} 向此文档发送回一条消息时运行。
 
 ```js
 channel.port1.addEventListener("message", handleMessage, false);
