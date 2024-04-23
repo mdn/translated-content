@@ -1,5 +1,5 @@
 ---
-title: <slot>：Web Component 插槽元素
+title: <slot>：Web 组件插槽元素
 slug: Web/HTML/Element/slot
 l10n:
   sourceCommit: fdd3ac5598c3ddceb71e59949b003936ae99f647
@@ -7,7 +7,7 @@ l10n:
 
 {{HTMLSidebar}}
 
-**`<slot>`** [HTML](/zh-CN/docs/Web/HTML) 元素是——[Web Components](/zh-CN/docs/Web/API/Web_components) 技术套件的一部分——它是一个在 web component 内部的占位符，你可以使用自己的标记来填充该占位符，从而创建单独的 DOM 树并将其一起呈现。
+**`<slot>`** [HTML](/zh-CN/docs/Web/HTML) 元素是——[Web 组件](/zh-CN/docs/Web/API/Web_components)技术套件的一部分——它是一个在 web 组件内部的占位符，你可以使用自己的标记来填充该占位符，从而创建单独的 DOM 树并将其一起呈现。
 
 ## 属性
 
@@ -17,7 +17,7 @@ l10n:
 
   - : 插槽名称。
 
-    **_命名插槽_** 是具有 `name` 属性的 `<slot>` 元素。
+    **_具名插槽_**是具有 `name` 属性的 `<slot>` 元素。
 
 ## 示例
 
@@ -52,9 +52,9 @@ l10n:
   <details>
     <summary>
       <code class="name">
-        &lt;<slot name="element-name">需要的名称</slot>&gt;
+        &lt;<slot name="element-name">需要名称</slot>&gt;
       </code>
-      <span class="desc"><slot name="description">需要的描述</slot></span>
+      <span class="desc"><slot name="description">需要描述</slot></span>
     </summary>
     <div class="attributes">
       <h4>属性</h4>
@@ -65,7 +65,7 @@ l10n:
 </template>
 ```
 
-> **备注：** 你可以在 [element-details](https://github.com/mdn/web-components-examples/tree/main/element-details)（参见[在线演示](https://mdn.github.io/web-components-examples/element-details/)）查看此完整示例。此外，你还可以在[使用模板和插槽](/zh-CN/docs/Web/API/Web_components/Using_templates_and_slots)找到相关解释。
+> **备注：** 你可以在 [element-details](https://github.com/mdn/web-components-examples/tree/main/element-details)（参见[在线演示](https://mdn.github.io/web-components-examples/element-details/)）查看完整示例。此外，你还可以在[使用模板和插槽](/zh-CN/docs/Web/API/Web_components/Using_templates_and_slots)找到相关解释。
 
 ## 技术概要
 
@@ -89,7 +89,7 @@ l10n:
       <th scope="row">允许的内容</th>
       <td>
         <a href="/zh-CN/docs/Web/HTML/Content_categories#透明内容模型"
-          >透明内容模型</a
+          >透明内容</a
         >
       </td>
     </tr>
@@ -141,4 +141,4 @@ l10n:
 - HTML {{HTMLElement("template")}} 元素
 - HTML [`slot`](/zh-CN/docs/Web/HTML/Global_attributes/slot) 属性
 - CSS {{CSSXref("::slotted")}} 伪元素
-- [CSS scoping](/zh-CN/docs/Web/CSS/CSS_scoping) 模块
+- [CSS 域](/zh-CN/docs/Web/CSS/CSS_scoping)模块
