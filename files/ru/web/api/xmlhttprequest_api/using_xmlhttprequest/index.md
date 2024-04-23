@@ -3,7 +3,9 @@ title: Использование XMLHttpRequest
 slug: Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{AvailableInWorkers("window_and_worker_except_service")}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 Это инструкция по использованию {{domxref("XMLHttpRequest")}} для обмена информацией между сайтом и сервером по [HTTP-протоколу](/ru/docs/Web/HTTP).
 
