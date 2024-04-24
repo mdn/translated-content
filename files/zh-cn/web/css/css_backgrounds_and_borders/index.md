@@ -13,21 +13,19 @@ l10n:
 
 无论元素是否具有可见边框，都可以对其进行圆角处理。
 
-box-shadow 包括内阴影和外阴影、单个或多阴影，以及实心或允许渐变为透明。外部阴影投射到元素的 border-box 上，就好像它是不透明的一样。
-
-内部 box-shadow 将阴影投射到填充边缘之外，就像一切都是不透明的一样。阴影可以是实心的，也可以包括过渡到透明的阴影颜色的扩散距离。
+box-shadow 包括内阴影和外阴影、单个或多阴影，以及实心或允许渐变为透明。外部阴影投射到元素的 border-box 上，就好像它是不透明的一样。内部 box-shadow 将阴影投射到填充边缘之外，就好像它是不透明的一样。阴影可以是实心的，也可以包括过渡到透明的阴影颜色的扩散距离。
 
 此模块中的属性还允许你定义 {{HTMLElement("table")}} 中的单元格应具有共享边框还是单独边框。
 
 ### 背景、边框和盒子阴影的实际应用
 
-此边框、背景和阴影示例由线性渐变和径向渐变组成的居中背景图像。一系列框阴影使边框看起来像是“弹出”的。左侧元素设置了边框图像。右侧元素具有圆角虚线边框。
+此边框、背景和阴影示例由线性渐变和径向渐变组成的居中背景图像组成。一系列框阴影使边框看起来像是“弹出”的。左侧元素设置了边框图像。右侧元素具有圆角虚线边框。
 
 {{EmbedGHLiveSample("css-examples/modules/backgrounds.html", '100%', 430)}}
 
-背景图像使用 {{cssxref("background-image")}} 定义。图像使用 {{cssxref("background-position")}} 居中。为多个背景图像使用 {{cssxref("background-clip")}} 属性的不同值，使背景图像保持在内容框内。背景颜色被裁剪到填充框，防止通过 {{cssxref("border-image")}} 和 {{cssxref("border-style", "dotted")}}，{{cssxref("border")}} 的透明部分出现背景。右侧元素中的圆角使用 {{cssxref("border-radius")}} 属性创建。使用单个 {{cssxref("box-shadow")}} 声明设置所有阴影，包括内阴影和外阴影。
+背景图像使用 {{cssxref("background-image")}} 定义。图像使用 {{cssxref("background-position")}} 居中。为多个背景图像使用 {{cssxref("background-clip")}} 属性的不同值，使背景图像保持在内容框内。背景颜色被裁剪到填充框，防止背景通过 {{cssxref("border-image")}} 和 {{cssxref("border-style", "dotted")}} {{cssxref("border")}} 的透明部分显示出来。右侧元素中的圆角使用 {{cssxref("border-radius")}} 属性创建。使用单个 {{cssxref("box-shadow")}} 声明设置所有阴影，包括内阴影和外阴影。
 
-要查看此示例的代码，请在[GitHub 上查看源代码](https://github.com/mdn/css-examples/blob/main/modules/backgrounds.html)。
+要查看此示例的代码，请在 [GitHub 上查看源代码](https://github.com/mdn/css-examples/blob/main/modules/backgrounds.html)。
 
 ## 参考
 
