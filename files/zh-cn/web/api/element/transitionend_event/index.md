@@ -13,7 +13,7 @@ slug: Web/API/Element/transitionend_event
 
 ## 语法
 
-在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 的方法中使用该事件的名称或者设置一个事件处理函数属性。
+在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 的方法中使用该事件的名称或者设置事件处理器属性。
 
 ```js
 addEventListener("transitionend", (event) => {});
