@@ -1,5 +1,5 @@
 ---
-title: "Element: transitionend 事件"
+title: Element：transitionend 事件
 slug: Web/API/Element/transitionend_event
 ---
 
