@@ -56,7 +56,7 @@ transition.addEventListener("transitionend", () => {
 const transition = document.querySelector(".transition");
 
 transition.ontransitionend = () => {
-  console.log("Transition ended");
+  console.log("过渡结束");
 };
 ```
 
