@@ -7,13 +7,13 @@ l10n:
 
 {{APIRef("WebRTC")}}
 
-**{{domxref("RTCIceCandidate")}}** 接口的 **`relatedAddress`** 只读属性是一个字符串，指示中继候选者或反射候选者的 **关联地址** 。
+**{{domxref("RTCIceCandidate")}}** 接口的 **`relatedAddress`** 只读属性是一个字符串，指示中继候选者或反射候选者的**关联地址** 。
 
 如果候选者是主机候选者（即其 {{domxref("RTCIceCandidate/address", "address")}} 属性是远程对等方的真实 IP 地址），则 `relatedAddress` 为 `null`。
 
-`relatedAddress` 字段的值是从传递给 {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate(candidateInfo)")}} 构造函数的 `candidateInfo` 选项对象中设置的。你不能直接在选项对象中指定 `relatedAddress` 的值，如果对象的 `candidate` 属性行 (`a-line`) 格式正确，其值将自动从对象的 `candidate` 属性行中 `rel-address` 的字段提取。
+`relatedAddress` 字段的值是从传递给 {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate()")}} 构造函数的 `candidateInfo` 选项对象中设置的。你不能直接在选项对象中指定 `relatedAddress` 的值，如果对象的 `candidate` 属性行（`a-line`）格式正确，其值将自动从对象的 `candidate` 属性行中 `rel-address` 的字段提取。
 
-{{Glossary("ICE")}} 本身根本不使用关联地址和{{domxref("RTCIceCandidate.relatedPort", "关联端口")}}；它们仅用于分析和诊断的目的，并且可能会被安全系统阻止（获取），因此不要对它们的非空值有所依赖。
+{{Glossary("ICE")}} 本身根本不使用关联地址和{{domxref("RTCIceCandidate.relatedPort", "关联端口", "", "nocode")}}；它们仅用于分析和诊断的目的，并且可能会被安全系统阻止（获取），因此不要对它们的非空值有所依赖。
 
 ## 值
 
@@ -23,7 +23,7 @@ l10n:
 
 ## 使用说明
 
-尽管 ICE 本身不使用关联地址，但关联地址包含在 ICE 候选者中。通过观察各种类型的候选者及其地址和关联地址之间的关系 `relatedAddress` 可用于调试目的。`relatedAddress` 也可被 服务质量（QoS）机制使用。
+尽管 ICE 本身不使用关联地址，但关联地址包含在 ICE 候选者中。通过观察各种类型的候选者及其地址和关联地址之间的关系 `relatedAddress` 可用于调试目的。`relatedAddress` 也可被服务质量（QoS）机制使用。
 
 下面是由 STUN 服务器发现的 ICE 候选者的 [SDP](/zh-CN/docs/Web/API/WebRTC_API/Protocols#sdp) 属性行描述：
 
