@@ -46,7 +46,7 @@ _同样继承来自父级 {{domxref("Event")}} 的属性_。
 const transition = document.querySelector(".transition");
 
 transition.addEventListener("transitionend", () => {
-  console.log("Transition ended");
+  console.log("过渡结束");
 });
 ```
 
