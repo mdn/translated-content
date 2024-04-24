@@ -353,7 +353,7 @@ for (const i of iterable) {
 
 `iterable` 物件繼承了 `objCustom` 和 `arrCustom` 屬性，因為其[原型鏈](/zh-TW/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)中同時包含了 `Object.prototype` 和 `Array.prototype`。
 
-`for...in` 迴圈只輸出了 `iterable` 物件的[可枚舉屬性](/zh-TW/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)。它不會輸出陣列中的*元素* `3`、`5`、`7` 或 `"hello"`，因為它們不是*屬性*，而是*值*。它輸出了陣列的*索引*以及 `arrCustom` 和 `objCustom`，它們是實際的屬性。如果你對為什麼迭代這些屬性感到困惑，可以查看關於[陣列迭代和 `for...in`](/zh-TW/docs/Web/JavaScript/Reference/Statements/for...in#description) 的工作原理，裡面有更詳細的解釋。
+`for...in` 迴圈只輸出了 `iterable` 物件的[可枚舉屬性](/zh-TW/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)。它不會輸出陣列中的*元素* `3`、`5`、`7` 或 `"hello"`，因為它們不是*屬性*，而是*值*。它輸出了陣列的*索引*以及 `arrCustom` 和 `objCustom`，它們是實際的屬性。如果你對為什麼迭代這些屬性感到困惑，可以查看關於[陣列迭代和 `for...in`](/zh-TW/docs/Web/JavaScript/Reference/Statements/for...in#陣列迭代和_for...in) 的工作原理，裡面有更詳細的解釋。
 
 第二個迴圈與第一個迴圈類似，但它使用 {{jsxref("Object.hasOwn()")}} 來檢查找到的可枚舉屬性是否為物件的自有屬性，即非繼承屬性。如果是，則輸出該屬性。屬性 `0`、`1`、`2` 和 `foo` 皆被輸出，因為它們是自有屬性。屬性 `arrCustom` 和 `objCustom` 都沒有被輸出，因為它們是繼承屬性。
 
