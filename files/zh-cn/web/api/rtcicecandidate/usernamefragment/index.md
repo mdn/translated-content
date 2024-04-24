@@ -7,11 +7,11 @@ l10n:
 
 {{APIRef("WebRTC")}}
 
-**{{domxref("RTCIceCandidate")}}** 接口的 **`usernameFragment`** 只读属性是一个字符串，指示一个 ICE 交互会话的用户名片段（"ufrag"）的唯一标识。此值是使用传递给 {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate(candidateInfo)")}} 构造函数的 `candidateInfo` 选项对象中的 `usernameFragment` 属性指定的。如果你使用属性行（a-line）字符串而不是选项对象调用构造函数，则从指定的候选属性字符串中提取 `usernameFragment` 的值。需要注意的是，浏览器需要将用户名片段的 24 位字符随机化。有关详细信息，请参阅下面的[随机化](#随机化) 。
+**{{domxref("RTCIceCandidate")}}** 接口的 **`usernameFragment`** 只读属性是一个字符串，指示一个 ICE 交互会话的用户名片段（“ufrag”）的唯一标识。此值是使用传递给 {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate()")}} 构造函数的 `candidateInfo` 选项对象中的 `usernameFragment` 属性指定的。如果你使用属性行（a-line）字符串而不是选项对象调用构造函数，则从指定的候选属性字符串中提取 `usernameFragment` 的值。需要注意的是，浏览器需要将用户名片段的 24 位字符随机化。有关详细信息，请参阅下面的[随机化](#随机化) 。
 
 ## 值
 
-一个包含用户名片段（通常简称为 "ufrag" 或 "ice-ufrag"）的字符串，通常其与 ICE 密码（"ice-pwd"）作为正在进行的 ICE 交互（包括与 {{Glossary("STUN")}} 服务器的任何通信）的唯一标识。该字符串最多可以长达 256 个字符，没有默认值。
+一个包含用户名片段（通常简称为 “ufrag” 或 “ice-ufrag”）的字符串，通常其与 ICE 密码（“ice-pwd”）作为正在进行的 ICE 交互（包括与 {{Glossary("STUN")}} 服务器的任何通信）的唯一标识。该字符串最多可以长达 256 个字符，没有默认值。
 
 ### 随机化
 
@@ -27,7 +27,7 @@ ICE 使用 `usernameFragment` 和密码来确保消息完整性。这可以避�
 
 ## 示例
 
-虽然 WebRTC 底层将在 ICE 重新启动后为你过滤过时的候选者，但如果你想压缩来回传递的消息数量，你可以在从信令服务器接收到候选者并在调用 {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} 将其添加到可能的候选者集之前，将 `usernameFragment` 的值与连接当前使用的 `usernameFragment` 进行比较。当 Web 应用程序从信令服务器接收到包含要添加到 {{domxref("RTCPeerConnection")}} 的候选者的消息时，你通常**应该**调用 `addIceCandidate()`；且通常不需要手动筛选 (过期的) 候选者。
+虽然 WebRTC 底层将在 ICE 重新启动后为你过滤过时的候选者，但如果你想压缩来回传递的消息数量，你可以在从信令服务器接收到候选者并在调用 {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} 将其添加到可能的候选者集之前，将 `usernameFragment` 的值与连接当前使用的 `usernameFragment` 进行比较。当 Web 应用程序从信令服务器接收到包含要添加到 {{domxref("RTCPeerConnection")}} 的候选者的消息时，你通常**应该**调用 `addIceCandidate()`；且通常不需要手动筛选（过期的）候选者。
 
 下面例子中，为了避免包含 ICE 重新启动后过时的候选者，可以在从信令服务器接收到包含要添加到 `RTCPeerConnection` 的 ICE 候选者的消息 `signalMsg` 时调用 `ssNewCandidate()` 函数。我们可以使用如下代码：
 
@@ -48,7 +48,7 @@ const ssNewCandidate = (signalMsg) => {
 };
 ```
 
-这将遍历用于接收 ICE 数据的 {{domxref("RTCRtpReceiver", "接收器")}} 对象列表，并查看候选者的 `usernameFragment` 属性自值是否与接收器列表中的任一 `usernameFragment` 匹配。如果匹配则 `ssNewCandidate()` 将中止。否则在检查每个接收器后，它将新候选者添加到连接中。
+这将遍历用于接收 ICE 数据的 {{domxref("RTCRtpReceiver")}} 对象列表，并查看候选者的 `usernameFragment` 属性自值是否与接收器列表中的任一 `usernameFragment` 匹配。如果匹配则 `ssNewCandidate()` 将中止。否则在检查每个接收器后，它将新候选者添加到连接中。
 
 ## 规范
 
