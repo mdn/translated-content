@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef}}
 
-**`HTMLIFrameElement.src`** 一个字符串，反映包含要嵌入内容地址的 [`src`](/zh-CN/docs/Web/HTML/Element/iframe#src) HTML 属性。
+**`HTMLIFrameElement.src`** 是一个字符串，反映包含要嵌入内容地址的 [`src`](/zh-CN/docs/Web/HTML/Element/iframe#src) HTML 属性。
 
 请注意，通过 {{domxref("Element.removeAttribute()")}} 等方法从 `<iframe>` 中程序性移除 `src` 属性会在框架中加载 `about:blank`。
 

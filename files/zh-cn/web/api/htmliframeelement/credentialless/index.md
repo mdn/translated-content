@@ -15,13 +15,13 @@ l10n:
 
 ## 值
 
-一个布尔值。默认值为 `false`；将其设为 `true` 可使 `<iframe>` 为无证书。
+一个布尔值。默认值为 `false`；将其设为 `true` 可使 `<iframe>` 为无凭据。
 
 ## 示例
 
 ### 获取
 
-像这样指定一个无证书的 `<iframe>`：
+像这样指定一个无凭据的 `<iframe>`：
 
 ```html
 <iframe
@@ -32,7 +32,7 @@ l10n:
   credentialless></iframe>
 ```
 
-返回 `dcredentialless` 属性值：
+返回 `credentialless` 属性值：
 
 ```js
 const iframeElem = document.querySelector("iframe");

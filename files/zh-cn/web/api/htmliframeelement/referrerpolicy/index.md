@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef}}
 
-**`HTMLIFrameElement.referrerPolicy`** 属性反映了 {{HTMLElement("iframe")}} 元素定义在获取资源时发送哪个引用者时的 HTML [`referrerpolicy`](/zh-CN/docs/Web/HTML/Element/iframe#referrerpolicy) 元素定义在获取资源时发送哪个引用者时的 HTML
+**`HTMLIFrameElement.referrerPolicy`** 属性反映了 {{HTMLElement("iframe")}} 元素定义在获取资源时发送哪个引用者时的 HTML [`referrerpolicy`](/zh-CN/docs/Web/HTML/Element/iframe#referrerpolicy) 属性定义在获取资源时发送哪个引用者时的 HTML
 
 ## 值
 
@@ -23,7 +23,7 @@ l10n:
   - : 将[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)发送给引用者，但跨源请求将不包含引用者信息。
 - `strict-origin`
   - : 当协议安全级别保持不变（HTTPS → HTTPS）时仅发送文档的源作为引用者，但不发送到安全性较低的目的地（HTTPS → HTTP）。
-- `strict-origin-when-cross-origin` (default)
+- `strict-origin-when-cross-origin`（默认值）
   - : 这是用户代理未指定策略时的默认行为。执行同源请求时发送完整的 URL，仅当协议安全级别保持不变（HTTPS → HTTPS）时发送源，并且不向安全性较低的目的地（HTTPS → HTTP）发送任何标头。
 - `unsafe-url`
 
