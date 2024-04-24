@@ -52,15 +52,9 @@ while (n < 3) {
 
 ### 使用赋值作为条件
 
-In some cases, it can make sense to use an assignment as a condition. This comes with readability tradeoffs, so there are certain stylistic recommendations that would make the pattern more obvious for everyone.
+在某些情况下，使用赋值作为条件是有意义的。但这会牺牲可读性，因此有一些样式建议可以让这种模式对所有人都更加清晰。
 
-Consider the following example, which iterates over a document's comments, logging them to the console.
-
-在某些情况下，使用赋值作为条件是合理的。这样做会带来可读性的权衡，所以有一些风格建议可以使这种模式对每个人更加明显。
-
-在某些情况下，使用赋值作为条件是有意义的。这会带来可读性的权衡，因此有一些风格建议可以让这种模式对每个人都更加明显。
-
-考虑下面的示例，它遍历文档的评论，并将它们记录到控制台中。
+考虑下面的示例，它遍历文档的评论，并将它们打印到控制台中。
 
 ```js-nolint example-bad
 const iterator = document.createNodeIterator(document, NodeFilter.SHOW_COMMENT);
@@ -70,31 +64,31 @@ while (currentNode = iterator.nextNode()) {
 }
 ```
 
-That's not completely a good-practice example, due to the following line specifically:
+这个例子并不完全符合最佳实践，特别是由于下面这一行代码：
 
 ```js-nolint example-bad
 while (currentNode = iterator.nextNode()) {
 ```
 
-The _effect_ of that line is fine — in that, each time a comment node is found:
+这行代码的*效果*是可以的——每当找到一个评论节点时：
 
-1. `iterator.nextNode()` returns that comment node, which gets assigned to `currentNode`.
-2. The value of `currentNode = iterator.nextNode()` is therefore [truthy](/zh-CN/docs/Glossary/Truthy).
-3. So the `console.log()` call executes and the loop continues.
+1. `iterator.nextNode()` 返回一个评论节点，并将其赋值给 `currentNode`。
+2. 因此 `currentNode = iterator.nextNode()` 的值为[真值](/zh-CN/docs/Glossary/Truthy)。
+3. 因此 `console.log()` 调用执行，循环继续。
 
-…and then, when there are no more comment nodes in the document:
+然后，当文档中不再有注释节点时：
 
-1. `iterator.nextNode()` returns [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null).
-2. The value of `currentNode = iterator.nextNode()` is therefore also `null`, which is [falsy](/zh-CN/docs/Glossary/Falsy).
-3. So the loop ends.
+1. `iterator.nextNode()` 返回 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)。
+2. 因此 `currentNode = iterator.nextNode()` 的值为 `null`，这也是[假值](/zh-CN/docs/Glossary/Falsy)。
+3. 因此循环终止。
 
-The problem with this line is: conditions typically use [comparison operators](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#comparison_operators) such as `===`, but the `=` in that line isn't a comparison operator — instead, it's an [assignment operator](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators). So that `=` _looks like_ it's a typo for `===` — even though it's _not_ actually a typo.
+这行代码的问题在于：条件通常使用[比较运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#比较运算符)，比如 `===`，但是这行代码中的 `=` 不是比较运算符，而是一个[赋值运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#赋值运算符)。所以，这个 `=` *看起来像*是 `===` 的拼写错误，尽管实际上它并*不是*拼写错误。
 
-Therefore, in cases like that one, some [code-linting tools](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain#code_linting_tools) such as ESLint's [`no-cond-assign`](https://eslint.org/docs/latest/rules/no-cond-assign) rule — in order to help you catch a possible typo so that you can fix it — will report a warning such as the following:
+因此，在这种情况下，一些[代码检查工具](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain#代码检查工具)（如 ESLint 的 `no-cond-assign` 规则）会报告警告，以帮助你捕捉可能的拼写错误，以便你可以进行修正。警告可能会类似于以下内容：
 
 > Expected a conditional expression and instead saw an assignment.
 
-Many style guides recommend more explicitly indicating the intention for the condition to be an assignment. You can do that minimally by putting additional parentheses as a [grouping operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Grouping) around the assignment:
+许多样式指南建议更明确地表示条件是一个赋值的意图。你可以通过在赋值周围加上额外的括号作为[分组运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Grouping)来做到这一点，以最小化地表示意图：
 
 ```js example-good
 const iterator = document.createNodeIterator(document, NodeFilter.SHOW_COMMENT);
@@ -104,21 +98,21 @@ while ((currentNode = iterator.nextNode())) {
 }
 ```
 
-In fact, this is the style enforced by ESLint's `no-cond-assign`'s default configuration, as well as [Prettier](https://prettier.io/), so you'll likely see this pattern a lot in the wild.
+实际上，这也是 ESLint 的 `no-cond-assign` 默认配置和 [Prettier](https://prettier.io/) 强制执行的样式，因此你可能会在实际代码中看到这种模式的很多实例。
 
-Some people may further recommend adding a comparison operator to turn the condition into an explicit comparison:
+有些人可能进一步建议添加比较运算符以将条件转变为显式比较：
 
 ```js-nolint example-good
 while ((currentNode = iterator.nextNode()) !== null) {
 ```
 
-There are other ways to write this pattern, such as:
+还有其他方法可以编写此模式，例如：
 
 ```js-nolint example-good
 while ((currentNode = iterator.nextNode()) && currentNode) {
 ```
 
-Or, forgoing the idea of using a `while` loop altogether:
+或者，完全放弃使用 `while` 循环的想法：
 
 ```js example-good
 const iterator = document.createNodeIterator(document, NodeFilter.SHOW_COMMENT);
@@ -131,7 +125,7 @@ for (
 }
 ```
 
-If the reader is sufficiently familiar with the assignment as condition pattern, all these variations should have equivalent readability. Otherwise, the last form is probably the most readable, albeit the most verbose.
+如果读者对将赋值用作条件的模式非常熟悉，那么所有这些变体的可读性应该是相等的。否则，最后一种形式可能是最易读的，尽管它是最冗长的。
 
 ## 规范
 
@@ -145,3 +139,5 @@ If the reader is sufficiently familiar with the assignment as condition pattern,
 
 - {{jsxref("Statements/do...while", "do...while")}}
 - {{jsxref("Statements/for", "for")}}
+- {{jsxref("Statements/break", "break")}}
+- {{jsxref("Statements/continue", "continue")}}
