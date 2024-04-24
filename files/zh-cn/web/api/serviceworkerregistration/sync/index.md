@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Background Sync")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
-{{domxref("ServiceWorkerRegistration")}} 接口的 **`sync`** 只读属性，返回 {{domxref("SyncManager")}} 的引用，该接口管理后台同步执行。
+{{domxref("ServiceWorkerRegistration")}} 接口的 **`sync`** 只读属性返回管理后台同步进程的 {{domxref("SyncManager")}} 接口的引用。
 
 ## 值
 

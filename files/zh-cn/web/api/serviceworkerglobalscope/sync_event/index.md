@@ -23,18 +23,18 @@ onsync = (event) => {};
 
 ## 事件类型
 
-{{domxref("SyncEvent")}} 继承自 {{domxref("ExtendableEvent")}} 和 {{domxref("Event")}}。
+{{domxref("SyncEvent")}}。其继承自 {{domxref("ExtendableEvent")}} 和 {{domxref("Event")}}。
 
 {{InheritanceDiagram("SyncEvent")}}
 
 ## 事件属性
 
-_继承属性自其父级 {{domxref("ExtendableEvent")}} 和 {{domxref("Event")}}_。
+_自其父级 {{domxref("ExtendableEvent")}} 和 {{domxref("Event")}} 继承属性_。
 
 - {{domxref("SyncEvent.tag")}} {{ReadOnlyInline}}
   - : 返回此 `SyncEvent` 的开发人员定义的标识符。
 - {{domxref("SyncEvent.lastChance")}} {{ReadOnlyInline}}
-  - : 如果用户代理在当前尝试之后不再进行进一步的同步尝试，则返回 `true`
+  - : 如果用户代理在当前尝试之后不再进行进一步的同步尝试，则返回 `true`。
 
 ## 示例
 

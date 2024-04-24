@@ -11,9 +11,9 @@ l10n:
 
 ## 概念和用法
 
-如果设备离线，Background Synchronization API 允许 Web 应用程序将服务器同步工作交给 Service Worker 延迟处理。用途可能包括在后台发送请求，如果在使用应用程序时无法发送它们。
+如果设备离线，Background Synchronization API 允许 Web 应用程序将服务器同步工作交给 Service Worker 延迟处理。其用途可能包括在应用程序使用期间无法发送请求的情况下在后台发送请求。
 
-例如，电子邮件客户端应用程序也可以允许其用户在任意时间撰写和发送消息，即使设备没有网络连接。应用程序前端仅注册一个同步请求，并且当网络再次存在时，Service Worker 会收到警报并处理同步。
+例如，电子邮件客户端应用程序可以允许其用户在任意时间撰写和发送消息，即使设备没有网络连接也是如此。应用程序前端仅需注册一个同步请求，并且当网络条件再次允许时，Service Worker 会收到警报并处理同步。
 
 {{domxref('SyncManager')}} 接口允许通过 {{domxref('ServiceWorkerRegistration.sync')}} 使用。使用唯一的标识符来设置同步事件的“名称”, 然后可以在 {{domxref('ServiceWorker')}} 脚本中监听。一旦收到事件，你可以运行任何可用的功能，比如向服务器发送请求。
 
@@ -24,11 +24,11 @@ l10n:
 - {{domxref('SyncManager')}} {{Experimental_Inline}}
   - : 注册网络恢复后需要在 Service Worker 中运行的任务。这些任务称为*后台同步请求（background sync requests）*。
 - {{domxref('SyncEvent')}} {{Experimental_Inline}}
-  - : 代表同步事件，发送到 {{domxref('ServiceWorker')}} 的[全局作用域](/zh-CN/docs/Web/API/ServiceWorkerGlobalScope)。
+  - : 代表同步事件，发送到 {{domxref('ServiceWorker')}} 的[全局作用域](/zh-CN/docs/Web/API/ServiceWorkerGlobalScope)。提供了一种在设备具有网络连接后在 Service Worker 中运行任务的方式。
 
-### 其他接口的扩展
+### 对其他接口的扩展
 
-[Service Worker API](/zh-CN/docs/Web/API/Service_Worker_API) 的以下新增内容提供了用于设置后台同步。
+[Service Worker API](/zh-CN/docs/Web/API/Service_Worker_API) 的以下新增内容提供了用于设置后台同步的入口点。
 
 - {{domxref("ServiceWorkerRegistration.sync")}} {{ReadOnlyInline}}
   - : 返回 {{domxref("SyncManager")}} 的引用，用于注册在设备具有网络连接后运行的任务。

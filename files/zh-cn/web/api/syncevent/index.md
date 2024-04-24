@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Background Sync")}}{{AvailableInWorkers("service")}}
 
-{{domxref("Background Synchronization API", "", "", "nocode")}} 的 **`SyncEvent`** 接口，表示在 ServiceWorker 的 {{domxref("ServiceWorkerGlobalScope")}} 上分派的同步操作。
+{{domxref("Background Synchronization API", "", "", "nocode")}} 的 **`SyncEvent`** 接口表示在 ServiceWorker 的 {{domxref("ServiceWorkerGlobalScope")}} 上分派的同步操作。
 
 此接口继承自 {{domxref("ExtendableEvent")}} 接口。
 
@@ -20,16 +20,16 @@ l10n:
 
 ## 实例属性
 
-_继承属性自其父级 {{domxref("ExtendableEvent")}} 和 {{domxref("Event")}}_。
+_自其父级 {{domxref("ExtendableEvent")}} 和 {{domxref("Event")}}继承属性_。
 
 - {{domxref("SyncEvent.tag")}} {{ReadOnlyInline}}
   - : 返回此 `SyncEvent` 的开发人员定义的标识符。
 - {{domxref("SyncEvent.lastChance")}} {{ReadOnlyInline}}
-  - : 如果用户代理在当前尝试之后不再进行进一步的同步尝试，则返回 `true`
+  - : 如果用户代理在当前尝试之后不再进行进一步的同步尝试，则返回 `true`。
 
 ## 实例方法
 
-_继承方法自其父级 {{domxref("ExtendableEvent")}} 和 {{domxref("Event")}}_。
+_自其父级 {{domxref("ExtendableEvent")}} 和 {{domxref("Event")}} 继承方法_。
 
 无。
 

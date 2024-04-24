@@ -7,8 +7,7 @@ l10n:
 
 {{APIRef("Background Sync")}}{{AvailableInWorkers("service")}}
 
-{{domxref("SyncEvent")}} 接口的 **`tag`** 只读属性将返回开发人员为此 `SyncEvent` 定义的标识符。
-这是通过 {{domxref("SyncEvent.SyncEvent","SyncEvent()")}} 构造函数的 `tag` 参数传递值。
+{{domxref("SyncEvent")}} 接口的 **`tag`** 只读属性将返回开发人员为此 `SyncEvent` 定义的标识符。这是通过 {{domxref("SyncEvent.SyncEvent","SyncEvent()")}} 构造函数的 `tag` 参数传递的值。
 
 ## 值
 
