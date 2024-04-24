@@ -28,12 +28,12 @@ l10n:
 
 `ArrayBuffer` 객체는 [Web Workers](/ko/docs/Web/API/Web_Workers_API) 혹은 [서비스 워커](/ko/docs/Web/API/Service_Worker_API), [structured clone algorithm](/ko/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) 사용과 같이 각기 다른 실행 문맥 간에 전송될 수 있습니다. 이는 {{domxref("Worker.postMessage()")}} 혹은 {{domxref("ServiceWorker.postMessage()")}} 호출에서 [전송 가능한 객체](/ko/docs/Web/API/Web_Workers_API/Transferable_objects)로 `ArrayBuffer`를 전달함으로서 처리될 수 있습니다. 순수한 JavaScript에서는 {{jsxref("ArrayBuffer/transfer", "transfer()")}} 혹은 {{jsxref("ArrayBuffer/transferToFixedLength", "transferToFixedLength()")}} 메서드를 사용하여 메모리 소유권을 하나의 `ArrayBuffer`에서 다른 `ArrayBuffer`로 이전할 수도 있습니다.
 
-`ArrayBuffer`가 전송되면 원본은 더 이상 사용할 수 없게 되는 분리 상태가 됩니다. 어느 순간에든 실제로 메모리에 액세스할 수 있는 `ArrayBuffer`의 복사본은 하나만 존재하게 됩니다. 분리된 버퍼는 다음과 같은 동작을 합니다.
+`ArrayBuffer`가 전송되면 원본은 더 이상 사용할 수 없게 되는 분리 상태가 됩니다. 어느 순간에든 실제로 메모리에 접근할 수 있는 `ArrayBuffer`의 복사본은 하나만 존재하게 됩니다. 분리된 버퍼는 다음과 같은 동작을 합니다.
 
 - {{jsxref("ArrayBuffer/byteLength", "byteLength")}}는 0이 됩니다(버퍼와 연관된 형식화 배열 뷰 모두에서).
 - {{jsxref("ArrayBuffer/resize", "resize()")}}와 {{jsxref("ArrayBuffer/slice", "slice()")}}와 같은 메서드는 호출될 때 {{jsxref("TypeError")}}를 발생시킵니다. 연관된 타입이 지정된 배열 뷰의 메서드도 `TypeError`를 던집니다. 연관된 형식화 배열 뷰의 메서드 역시 `TypeError`를 발생시킵니다.
 
-`ArrayBuffer`가 분리되었는지 여부는 {{jsxref("ArrayBuffer/detached", "detached")}} 속성으로 체크할 수 있습니다.
+`ArrayBuffer`가 분리되었는지 여부는 {{jsxref("ArrayBuffer/detached", "detached")}} 속성으로 확인할 수 있습니다.
 
 ## 생성자
 
@@ -63,7 +63,7 @@ l10n:
 - {{jsxref("ArrayBuffer.prototype.detached")}}
   - : 읽기 전용입니다. 만약 `ArrayBuffer`가 분리(전송)되었다면 `true`를 반환하고 그렇지 않으면 `false`를 반환합니다.
 - {{jsxref("ArrayBuffer.prototype.maxByteLength")}}
-  - : `ArrayBuffer`의 크기가 조절 가능한 바이트 단위의 읽기 전용 최대 크기 입니다. 배열이 생성될때 설정되며 변경될 수 없습ㄴ디ㅏ.
+  - : `ArrayBuffer`의 크기가 조절 가능한 바이트 단위의 읽기 전용 최대 크기 입니다. 배열이 생성될때 설정되며 변경될 수 없습니다.
 - {{jsxref("ArrayBuffer.prototype.resizable")}}
   - : 읽기 전용압니다. `ArrayBuffer`가 크기 조절이 가능하다면 `true`를 반환하고 그렇지 않으면 `false`를 반환합니다.
 - `ArrayBuffer.prototype[@@toStringTag]`
@@ -80,7 +80,7 @@ l10n:
 - {{jsxref("ArrayBuffer.prototype.transferToFixedLength()")}}
   - : 이 버퍼와 동일한 바이트 내용으로 크기 조절이 불가한 새 `ArrayBuffer`를 생성합니다. 그 다음 이 버퍼를 분리합니다.
 - {{jsxref("ArrayBuffer.prototype.slice()")}}
-  - : 컨탠츠의 `begin`을 포함한 지점부터 `end`미만까지 해당 `ArrayBuffer`의 바이트 복사본인 새 `ArrayBuffer`를 반환합니다. `begin` 또는 `end`가 음수이면 처음부터가 아니라 배열 끝에서 인덱스를 참조합니다.
+  - : 컨텐츠의 `begin`을 포함한 지점부터 `end`미만까지 해당 `ArrayBuffer`의 바이트 복사본인 새 `ArrayBuffer`를 반환합니다. `begin` 또는 `end`가 음수이면 처음부터가 아니라 배열 끝에서 인덱스를 참조합니다.
 
 ## 예제
 
