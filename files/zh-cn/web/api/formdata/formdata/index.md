@@ -3,9 +3,7 @@ title: FormData()
 slug: Web/API/FormData/FormData
 ---
 
-{{AvailableInWorkers}}
-
-{{APIRef("XMLHttpRequest API")}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers}}
 
 **`FormData()`** 构造函数用于创建一个新的{{domxref("FormData")}}对象。
 

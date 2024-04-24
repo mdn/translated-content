@@ -3,9 +3,7 @@ title: FormData.set()
 slug: Web/API/FormData/set
 ---
 
-{{AvailableInWorkers}}
-
-{{APIRef("XMLHttpRequest API")}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers}}
 
 **`set()`** 方法会对 `FormData` 对象里的某个 `key` 设置一个新的值，如果该 `key` 不存在，则添加。
 

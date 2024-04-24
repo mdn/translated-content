@@ -3,9 +3,7 @@ title: FormData.getAll()
 slug: Web/API/FormData/getAll
 ---
 
-{{AvailableInWorkers}}
-
-{{APIRef("XMLHttpRequest API")}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers}}
 
 **`getAll()`** 方法会返回该 {{domxref("FormData")}} 对象指定 key 的所有值。
 
