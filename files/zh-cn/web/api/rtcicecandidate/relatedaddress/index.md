@@ -40,21 +40,21 @@ a=candidate:4234997325 1 udp 2043278322 192.0.2.172 6502 typ srflx raddr 198.51.
 ```js
 switch (candidate.type) {
   case "host":
-    console.log(`Host candidate's IP address is ${candidate.ip}`);
+    console.log(`主机候选者的 IP 地址为 ${candidate.ip}`);
     break;
   case "srflx":
     console.log(
-      `Server reflexive candidate's base address is ${candidate.relatedAddress}; reachable at ${candidate.ip}`,
+      `服务器反射候选者的基地址为 ${candidate.relatedAddress}; 可达于 ${candidate.ip}`,
     );
     break;
   case "prflx":
     console.log(
-      `Peer reflexive candidate's base address is ${candidate.relatedAddress}; reachable at ${candidate.ip}`,
+      `对等端反射候选者基地址为 ${candidate.relatedAddress}; 可达于 ${candidate.ip}`,
     );
     break;
   case "relay":
     console.log(
-      `Relay candidate's address assigned by the TURN server is ${candidate.relatedAddress}; reachable at ${candidate.ip}`,
+      `由 TURN 服务器分配中继候选者地址 ${candidate.relatedAddress}; 可达于 ${candidate.ip}`,
     );
     break;
 }
