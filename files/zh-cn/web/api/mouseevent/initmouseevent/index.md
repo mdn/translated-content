@@ -3,7 +3,7 @@ title: MouseEvent.initMouseEvent()
 slug: Web/API/MouseEvent/initMouseEvent
 ---
 
-{{APIRef("DOM Events")}}{{deprecated_header}}
+{{APIRef("UI Events")}}{{deprecated_header}}
 
 **`MouseEvent.initMouseEvent()`** 方法用以在鼠标事件创建时 (一般用 {{domxref("Document.createEvent()")}}方法创建) 初始化其属性的值。
 

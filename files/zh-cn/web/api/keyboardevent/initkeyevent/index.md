@@ -3,7 +3,7 @@ title: KeyboardEvent.initKeyEvent()
 slug: Web/API/KeyboardEvent/initKeyEvent
 ---
 
-{{ ApiRef("DOM Events") }}
+{{APIRef("UI Events")}}
 
 > **警告：** 不要再使用这个方法，而是使用 {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} 构造函数。
 >

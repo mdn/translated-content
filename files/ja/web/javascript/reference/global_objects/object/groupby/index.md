@@ -34,7 +34,7 @@ Object.groupBy(items, callbackFn)
 
 ### 返値
 
-すべてのグループのプロパティを持つ [`null`-prototype object](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects) で、それぞれに関連するグループの要素を含む配列が割り当てられたものです。
+すべてのグループのプロパティを持つ [`null` プロトタイプオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object#null_プロトタイプオブジェクト) で、それぞれに関連するグループの要素を含む配列が割り当てられたものです。
 
 ## 解説
 
