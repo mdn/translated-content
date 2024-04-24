@@ -9,7 +9,7 @@ l10n:
 
 **`font-stretch`** [CSS](/zh-CN/docs/Web/CSS) 属性可从字体中选择正常、压缩或扩展的字体外观。
 
-{{cssinfo}}
+{{EmbedInteractiveExample("pages/css/font-stretch.html")}}
 
 ## 语法
 
