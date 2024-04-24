@@ -92,7 +92,7 @@ const message = document.querySelector(".message");
 const el = document.querySelector(".transition");
 
 el.addEventListener("transitionrun", () => {
-  message.textContent = "transitionrun fired";
+  message.textContent = "触发 transitionrun";
 });
 
 el.addEventListener("transitionstart", () => {
