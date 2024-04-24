@@ -100,7 +100,7 @@ el.addEventListener("transitionstart", () => {
 });
 
 el.addEventListener("transitioncancel", () => {
-  message.textContent = "transitioncancel fired";
+  message.textContent = "触发 transitioncancel";
 });
 
 el.addEventListener("transitionend", () => {
