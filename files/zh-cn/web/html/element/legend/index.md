@@ -36,7 +36,7 @@ l10n:
       <td>
         <a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
           >短语内容</a
-        >和<a href="/zh-CN/docs/Web/HTML/Element/标题内容">标题</a>（h1–h6 元素）。
+        >和<a href="/zh-CN/docs/Web/HTML/Element/Heading_Elements">标题</a>（h1–h6 元素）。
       </td>
     </tr>
     <tr>
