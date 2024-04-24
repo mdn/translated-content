@@ -104,7 +104,7 @@ el.addEventListener("transitioncancel", () => {
 });
 
 el.addEventListener("transitionend", () => {
-  message.textContent = "transitionend fired";
+  message.textContent = "触发 transitionend";
 });
 ```
 
