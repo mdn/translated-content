@@ -118,10 +118,7 @@ SVG 除了前面描述的以外还有其他优点：
 对于不支持 SVG（IE 8 及更低版本，Android 2.3 及更低版本）的浏览器，你可以用 `src` 属性引用 PNG 或 JPG，并使用 [`srcset`](/zh-CN/docs/Web/HTML/Element/img#srcset) 属性（只有较新的浏览器才能识别）来引用 SVG。在这种情况下，仅支持 SVG 的浏览器会加载 SVG——较旧的浏览器将加载 PNG：
 
 ```html
-<img
-  src="equilateral.png"
-  alt="triangle with equal sides"
-  srcset="equilateral.svg" />
+<img src="equilateral.png" alt="等边三角形" srcset="equilateral.svg" />
 ```
 
 你还可以使用 SVG 作为 CSS 背景图像，如下所示。在下面的代码中，旧版浏览器会加载它们能够理解的 PNG，而较新的浏览器将加载 SVG：
