@@ -7,11 +7,11 @@ l10n:
 
 {{DefaultAPISidebar("WebGL")}}
 
-**WebGL**（Web 图形库）是一种 JavaScript API，可在任何兼容的 web 浏览器中无需使用插件即可呈现高性能交互式 3D 和 2D 图形。WebGL 通过引入一个与 OpenGL ES 2.0 高度一致的 API 来做到这一点，该 API 可以在 HTML {{HTMLElement("canvas")}} 元素中使用。这种一致性使 API 可以利用用户设备提供的硬件图形加速。
+**WebGL**（Web 图形库）是一种可在任何兼容的 Web 浏览器中无需使用插件即可渲染高性能交互式 3D 和 2D 图形的 JavaScript API。WebGL 通过引入一个与 OpenGL ES 2.0 高度一致的 API 来做到这一点，该 API 可以在 HTML {{HTMLElement("canvas")}} 元素中使用。这种一致性使 API 可以利用用户设备提供的硬件图形加速。
 
-所有现代浏览器都支持 WebGL（请参阅下方的[兼容性表格](#浏览器兼容性)）；然而，用户的设备也必须支持这些功能。
+所有现代浏览器都支持 WebGL（请参阅下方的[兼容性表格](#浏览器兼容性)）；然而，用户的设备也必须支持这些特性。
 
-[WebGL 2](#webgl_2) API 引入了对 OpenGL ES 3.0 功能集的广泛支持；它通过 {{domxref("WebGL2RenderingContext")}} 接口提供。
+[WebGL 2](#webgl_2) API 引入了对 OpenGL ES 3.0 特性集的广泛支持；它通过 {{domxref("WebGL2RenderingContext")}} 接口提供。
 
 {{HTMLElement("canvas")}} 元素也被 [Canvas API](/zh-CN/docs/Web/API/Canvas_API) 用于在网页上进行 2D 图形处理。
 
@@ -100,7 +100,7 @@ WebGL 2 是对 WebGL 的一次重大更新，通过 {{domxref("WebGL2RenderingCo
 - [变换反馈对象](/zh-CN/docs/Web/API/WebGLTransformFeedback)、
 - 现在已成为 WebGL 2 核心的推广扩展：[顶点数组对象](/zh-CN/docs/Web/API/WebGLVertexArrayObject)、[实例化](/zh-CN/docs/Web/API/WebGL2RenderingContext/drawArraysInstanced)、[多个渲染目标](/zh-CN/docs/Web/API/WebGL2RenderingContext/drawBuffers)、[片段深度](/zh-CN/docs/Web/API/EXT_frag_depth)。
 
-另请参阅博客文章 [“WebGL 2 在 Firefox 中发布”](https://hacks.mozilla.org/2017/01/webgl-2-lands-in-firefox/)以及 [webglsamples.org/WebGL2Samples](https://webglsamples.org/WebGL2Samples/) 上的一些演示。
+另请参阅博客文章[“WebGL 2 在 Firefox 中发布”](https://hacks.mozilla.org/2017/01/webgl-2-lands-in-firefox/)以及 [webglsamples.org/WebGL2Samples](https://webglsamples.org/WebGL2Samples/) 上的一些演示。
 
 ## 指南和教程
 
@@ -113,12 +113,12 @@ WebGL 2 是对 WebGL 的一次重大更新，通过 {{domxref("WebGL2RenderingCo
 - [WebGL 最佳实践](/zh-CN/docs/Web/API/WebGL_API/WebGL_best_practices)
   - : 提示和建议，以帮助你提高 WebGL 内容的质量，性能和可靠性。
 - [使用扩展](/zh-CN/docs/Web/API/WebGL_API/Using_Extensions)
-  - : 一个 WebGL 扩展的使用指南。
+  - : WebGL 扩展的使用指南。
 
 ### 教程
 
 - [WebGL 教程](/zh-CN/docs/Web/API/WebGL_API/Tutorial)
-  - : 一个 WebGL 核心概念的初学者指南。如果你以前没有 WebGL 的经验，那么这是一个很好的起点。
+  - : WebGL 核心概念的初学者指南。如果你以前没有 WebGL 的经验，那么这是一个很好的起点。
 
 ### 示例
 
@@ -136,12 +136,12 @@ WebGL 2 是对 WebGL 的一次重大更新，通过 {{domxref("WebGL2RenderingCo
 
 ## 资源
 
-- [Khronos WebGL 站点](https://www.khronos.org/webgl/) Khronos 组织的 WebGL 官方站点。
-- [WebGL 基本教程](https://web.dev/articles/webgl-fundamentals) 提供了 WebGL 的基础知识。
-- [Raw WebGL：WebGL 入门](https://www.youtube.com/embed/H4c8t6myAWU/?feature=player_detailpage) 来自 Nick Desaulniers 主讲的 WebGL 基础知识。
-- [WebGL 演练场](http://webglplayground.net) 用于创建和共享 WebGL 项目的在线工具。适合快速制作原型和进行实验。
-- [WebGL 学院](http://www.webglacademy.com) 一款 HTML/JavaScript 编辑器，提供学习 Webgl 编程基础的教程。
-- [WebGL 统计](https://webglreport.com/) 一个提供不同平台上浏览器 WebGL 功能统计信息的站点。
+- [Khronos WebGL 站点](https://www.khronos.org/webgl/)：Khronos 组织的 WebGL 官方站点。
+- [WebGL 基本教程](https://web.dev/articles/webgl-fundamentals)：提供了 WebGL 的基础知识。
+- [Raw WebGL：WebGL 入门](https://www.youtube.com/embed/H4c8t6myAWU/?feature=player_detailpage)：来自 Nick Desaulniers 主讲的 WebGL 基础知识。
+- [WebGL 演练场](http://webglplayground.net)：用于创建和共享 WebGL 项目的在线工具。适合快速制作原型和进行实验。
+- [WebGL 学院](http://www.webglacademy.com)：一款 HTML/JavaScript 编辑器，提供学习 Webgl 编程基础的教程。
+- [WebGL 统计](https://webglreport.com/)：一个提供不同平台上浏览器 WebGL 功能统计信息的站点。
 
 ### 库
 
@@ -182,4 +182,4 @@ Firefox 提供了两个可用的偏好设置，让你可以控制 WebGL 的测�
 ## 参见
 
 - [Canvas API](/zh-CN/docs/Web/API/Canvas_API)
-- [有关 WebGL 扩展的兼容性信息](/zh-CN/docs/Web/API/WebGLRenderingContext/getSupportedExtensions#browser_compatibility)
+- [有关 WebGL 扩展的兼容性信息](/zh-CN/docs/Web/API/WebGLRenderingContext/getSupportedExtensions#浏览器兼容性)
