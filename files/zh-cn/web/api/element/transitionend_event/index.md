@@ -65,7 +65,7 @@ transition.ontransitionend = () => {
 在下面的示例中，我们有一个简单的 {{HTMLElement("div")}} 元素，它通过过渡样式进行了修饰，其中包括一个延迟：
 
 ```html
-<div class="transition">Hover over me</div>
+<div class="transition">让鼠标在这里悬停</div>
 <div class="message"></div>
 ```
 
