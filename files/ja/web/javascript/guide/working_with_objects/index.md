@@ -40,7 +40,7 @@ var myCar = {
 };
 ```
 
-オブジェクトに割り当てられていないプロパティは {{jsxref("undefined")}} です ({{jsxref("null")}} ではありません)。
+オブジェクトに割り当てられていないプロパティは {{jsxref("undefined")}} です ([`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) ではありません)。
 
 ```js
 myCar.color; // undefined
