@@ -19,7 +19,7 @@ l10n:
 const link = document.createElement("a");
 link.innerText = "葡萄";
 link.href = "https://zh.wikipedia.org/wiki/葡萄";
-link.title = "维基百科上对葡萄的描述";
+link.title = "维基百科页面上的葡萄";
 ```
 
 ## 规范
