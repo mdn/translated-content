@@ -14,7 +14,7 @@ l10n:
 ## 实例属性
 
 - {{domxref("PermissionStatus.name")}} {{ReadOnlyInline}}
-  - : 返回所请求权限的名称，与传递给 {{domxref("Permissions.query")}} 的 `name` 参数相同。
+  - : 返回所请求权限的名称，与传递给 {{domxref("Permissions.query")}} 的 `name` 相同。
 - {{domxref("PermissionStatus.state")}} {{ReadOnlyInline}}
   - : 返回所请求权限的状态；`'granted'`、`'denied'` 或 `'prompt'` 之一。
 
