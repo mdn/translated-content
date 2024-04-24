@@ -17,7 +17,7 @@ l10n:
 
 ## 描述
 
-访问 `contentWindow` 返回的 {{domxref("Window")}} 须遵守[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)所定义的规则，这意味着如果与 iframe 父级同源，则父级可以访问 iframe 的文档以及内部 DOM，如果它们跨源，则对窗口属性的访问受到严格限制。有关详细信息，请参阅[跨源脚本 API 访问](/zh-CN/docs/Web/Security/Same-origin_policy#cross-origin_script_api_access)。
+访问由 `contentWindow` 返回的 {{domxref("Window")}} 受到[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)规定的规则约束，这意味着，如果与 iframe 父级同源，那么父级页面可以访问 iframe 的文档以及内部 DOM，如果它们跨源，则父页面对窗口属性的访问权限极其有限。有关详细信息，请参阅[跨源脚本 API 访问](/zh-CN/docs/Web/Security/Same-origin_policy#cross-origin_script_api_access)。
 
 通过与消息事件的 {{domxref("MessageEvent.source", "source")}} 属性进行比较，还可以使用该属性找出是哪个 iframe 页面发送了 {{domxref("Window.postMessage()")}}。
 
