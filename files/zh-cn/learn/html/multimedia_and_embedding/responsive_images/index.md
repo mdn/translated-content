@@ -112,7 +112,7 @@ web 刚面世时，这样的问题并不存在，在上世纪 90 年代早期至
 就是这样！所以在这里，如果支持响应式图片的浏览器以 480px 的视口来加载页面，那么 `(max-width: 600px)` 的媒体条件为真，因此 `480px` 的槽会被选择，继而将加载 `elva-fairy-480w.jpg`，因为该图片的固有宽度（`480w`）最接近于槽宽度。800px 的照片大小为 128KB 而 480px 版本仅有 63KB 大小——节省了 65KB。现在想象一下，如果这是一个有很多图片的页面。使用这种技术会节省移动端用户的大量带宽。
 
 > **备注：** 在桌面端浏览器测试上面的示例时，如果你把浏览器设到最小宽度，却没有加载更小的图片，请检查一下此时的视口是什么（你可以打开浏览器的 JavaScript 控制台，输入 `document.querySelector('html').clientWidth` 来获得近似视口宽度）。不同的浏览器设置了窗口可以缩小到的最小宽度，它可能比你想的更宽一点。使用移动端浏览器测试时，可以使用类似 Firefox 的 `about:debugging` 页这样的工具，使用桌面端开发者工具检查在移动端加载的页面。
-> 
+>
 > 要查看加载了哪些图像，你可以使用 Firefox 开发者工具的 [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) 标签或 Chrome 开发者工具的 [Network](https://developer.chrome.com/docs/devtools/network/) 面板。对于 Chrome 浏览器，你可能还需要[禁用缓存](https://stackoverflow.com/a/7000899/13725861)，以防止它选取已下载的图片。
 
 不支持这些特性的旧版本浏览器，会忽略这些属性，它们直接越过并按常规加载 [`src`](/zh-CN/docs/Web/HTML/Element/img#src) 属性引用的图像文件。
