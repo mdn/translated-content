@@ -18,7 +18,7 @@ l10n:
 - `host`
   - : 主机候选者； {{domxref("RTCIceCandidate.address")}} 属性所包含的 IP 地址一个真实的远程对等端的 IP 地址。
 - `srflx`
-  - : 服务器反射候选者；`ip` 和端口是由 NAT 为一个代理分配绑定，当代理通过 NAT 向服务器发送数据包时。它们可以被 {{Glossary("STUN")}} 服务器和 {{Glossary("TURN")}} 服务器学习，以匿名表示候选者的对等端。
+  - : 服务器反射候选者；`ip` 和端口是由 NAT 为一个代理分配绑定的，当代理通过 NAT 向服务器发送数据包时。它们可以被 {{Glossary("STUN")}} 服务器和 {{Glossary("TURN")}} 服务器学习，以匿名表示候选者的对等端。
 - `prflx`
   - : 对等端反射候选；`ip` 和端口是 NAT 发送 STUN 请求时分配的绑定，以匿名表示候选者的对等端。
 - `relay`
