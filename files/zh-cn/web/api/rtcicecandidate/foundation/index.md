@@ -2,20 +2,20 @@
 title: RTCIceCandidate：foundation 属性
 slug: Web/API/RTCIceCandidate/foundation
 l10n:
-  sourceCommit: 063ac8fa2390c6b8776a654c0746de6acef548c4
+  sourceCommit: 82344461ebcbee0e79d7af1400b43d203e9d5d2c
 ---
 
 {{APIRef("WebRTC")}}
 
-**{{domxref("RTCIceCandidate")}}** 接口的 **`foundation`** 只读属性是一个用于在多个传输中唯一标识候选者的字符串。
+**{{domxref("RTCIceCandidate")}}** 接口的 **`foundation`** 只读属性是一个用于在多个传输中标识唯一候选者的字符串。
 
-因此，`foundation` 属性可以用于关联存在于多个 {{domxref("RTCIceTransport")}} 对象上的候选者。
+因此，`foundation` 属性可用于关联出现在多个 {{domxref("RTCIceTransport")}} 对象上的（相同）候选者。
 
 ## 值
 
-一个字符串，用于在该候选者所在所有可用的 {{domxref("RTCIceTransport")}} 上的候选者的唯一标识。
+在所有可用的 {{domxref("RTCIceTransport")}} 对象上标识唯一候选者的字符串。
 
-> **备注：** 如果候选者 `port`（端口）的值为 `null`，并且{{Glossary("user agent", "用户代理")}}支持 `port`，将这个候选者传递给 {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} 时将失败，并抛出`OperationError`异常。
+> **备注：** 如果候选者 `port`（端口）的值为 `null`，并且{{Glossary("user agent", "用户代理")}}支持 `port`，将这个候选者传递给 {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} 时将失败，并抛出 `OperationError` 异常。
 
 ## 使用说明
 
