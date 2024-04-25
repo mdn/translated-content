@@ -7,9 +7,9 @@ l10n:
 
 {{APIRef("Popover API")}}
 
-**`ToggleEvent`** 接口表示当[弹出式元素](/zh-CN/docs/Web/API/Popover_API)的状态在显示和隐藏之间切换时通知用户的事件。
+**`ToggleEvent`** 接口表示当[弹出框元素](/zh-CN/docs/Web/API/Popover_API)的状态在显示和隐藏之间切换时通知用户的事件。
 
-它为 `HTMLElement` 的 {{domxref("HTMLElement.beforetoggle_event", "beforetoggle")}} 和 {{domxref("HTMLElement.toggle_event", "toggle")}} 事件提供事件对象，这两个事件会在弹出式元素在显示与隐藏状态间切换时（分别在切换前与切换后）触发。
+它为 `HTMLElement` 的 {{domxref("HTMLElement.beforetoggle_event", "beforetoggle")}} 和 {{domxref("HTMLElement.toggle_event", "toggle")}} 事件提供事件对象，这两个事件会在弹出框元素在显示与隐藏状态间切换时（分别在切换前与切换后）触发。
 
 {{InheritanceDiagram}}
 
@@ -57,6 +57,6 @@ popover.addEventListener("beforetoggle", (event) => {
 
 ## 参见
 
-- [弹出式 API](/zh-CN/docs/Web/API/Popover_API)
+- [弹出框 API](/zh-CN/docs/Web/API/Popover_API)
 - [`beforetoggle` 事件](/zh-CN/docs/Web/API/HTMLElement/beforetoggle_event)
 - [`toggle` 事件](/zh-CN/docs/Web/API/HTMLElement/toggle_event)
