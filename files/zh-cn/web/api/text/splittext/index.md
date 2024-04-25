@@ -79,4 +79,4 @@ p.insertBefore(u, bar);
 ## 参见
 
 - 所属的接口： {{domxref("Text")}}。
-- 相反的方法: {{domxref("Node.normalize")}}.
+- 相反的方法：{{domxref("Node.normalize")}}。
