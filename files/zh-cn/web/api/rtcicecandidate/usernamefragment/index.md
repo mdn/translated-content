@@ -2,7 +2,7 @@
 title: RTCIceCandidate：usernameFragment 属性
 slug: Web/API/RTCIceCandidate/usernameFragment
 l10n:
-  sourceCommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
+  sourceCommit: 4e8db9b4072e90e349f3c18b2c6edfe898cfe6a2
 ---
 
 {{APIRef("WebRTC")}}
