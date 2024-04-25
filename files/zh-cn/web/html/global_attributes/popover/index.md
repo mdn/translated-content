@@ -19,7 +19,7 @@ l10n:
 
 ## 示例
 
-下述代码将呈现一个按钮，它将打开一个弹出式元素。
+下述代码将呈现一个按钮，它将打开一个弹出框元素。
 
 ```html
 <button popovertarget="my-popover">打开弹出框</button>
