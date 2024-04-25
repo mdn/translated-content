@@ -2,7 +2,7 @@
 title: NDEFMessage：NDEFMessage() 构造函数
 slug: Web/API/NDEFMessage/NDEFMessage
 l10n:
-  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
+  sourceCommit: 7793383ec44ad25f522b96cda00f8a745b27d865
 ---
 
 {{SecureContext_Header}}{{APIRef("Web NFC API")}}{{SeeCompatTable}}
