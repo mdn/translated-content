@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Permissions API")}}{{AvailableInWorkers}}
 
-[Permissions API](/zh-CN/docs/Web/API/Permissions_API) 的 **`Permissions`** 接口提供核心 Permission API 的功能，例如查询和撤消权限的方法。
+[Permissions API](/zh-CN/docs/Web/API/Permissions_API) 的 **`Permissions`** 接口提供 Permission API 的核心功能，例如查询和撤消权限的方法。
 
 ## 实例方法
 
