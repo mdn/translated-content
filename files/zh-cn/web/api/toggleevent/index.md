@@ -57,6 +57,6 @@ popover.addEventListener("beforetoggle", (event) => {
 
 ## 参见
 
-- [弹出式接口](/zh-CN/docs/Web/API/Popover_API)
+- [弹出式 API](/zh-CN/docs/Web/API/Popover_API)
 - [`beforetoggle` 事件](/zh-CN/docs/Web/API/HTMLElement/beforetoggle_event)
 - [`toggle` 事件](/zh-CN/docs/Web/API/HTMLElement/toggle_event)
