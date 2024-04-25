@@ -2,7 +2,7 @@
 title: 响应式图片
 slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: dee5effadcb82cf2de9b50c128f7a050919ed523
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page", "Learn/HTML/Multimedia_and_embedding")}}
