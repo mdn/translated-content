@@ -9,7 +9,7 @@ l10n:
 
 **{{domxref("RTCIceCandidate")}}** 接口的 **`foundation`** 只读属性是一个用于在多个传输中标识唯一候选者的字符串。
 
-因此，`foundation` 属性可用于关联出现在多个 {{domxref("RTCIceTransport")}} 对象上的（相同）候选者。
+因此，`foundation` 属性可用于关联出现在多个 {{domxref("RTCIceTransport")}} 对象上的候选者。
 
 ## 值
 
@@ -25,7 +25,7 @@ l10n:
 a=candidate:4234997325 1 udp 2043278322 192.0.2.172 44323 typ host
 ```
 
-这个 ICE 候选者的 {{domxref("RTCIceCandidate.foundation", "foundation")}} 的属性值为 `4234997325`。
+字段 `"4234997325"` 为 foundation 属性。
 
 ## 示例
 
