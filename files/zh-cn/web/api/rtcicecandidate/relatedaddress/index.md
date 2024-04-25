@@ -7,17 +7,17 @@ l10n:
 
 {{APIRef("WebRTC")}}
 
-**{{domxref("RTCIceCandidate")}}** 接口的 **`relatedAddress`** 只读属性是一个字符串，指示中继候选者或反射候选者的**关联地址** 。
+**{{domxref("RTCIceCandidate")}}** 接口的 **`relatedAddress`** 只读属性是一个指示中继候选者或反射候选者的**关联地址**的字符串。
 
 如果候选者是主机候选者（即其 {{domxref("RTCIceCandidate/address", "address")}} 属性是远程对等方的真实 IP 地址），则 `relatedAddress` 为 `null`。
 
-`relatedAddress` 字段的值是从传递给 {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate()")}} 构造函数的 `candidateInfo` 选项对象中设置的。你不能直接在选项对象中指定 `relatedAddress` 的值，如果对象的 `candidate` 属性行（`a-line`）格式正确，其值将自动从对象的 `candidate` 属性行中 `rel-address` 的字段提取。
+`relatedAddress` 字段的值是通过传递给 {{domxref("RTCIceCandidate.RTCIceCandidate", "RTCIceCandidate()")}} 构造函数的 `candidateInfo` 选项对象设置的。你不能直接在选项对象中指定 `relatedAddress` 的值，如果对象的 `candidate` 属性行（a-line）格式正确，该值将自动从其中的 `rel-address` 字段提取。
 
 {{Glossary("ICE")}} 本身根本不使用关联地址和{{domxref("RTCIceCandidate.relatedPort", "关联端口", "", "nocode")}}；它们仅用于分析和诊断的目的，并且可能会被安全系统阻止（获取），因此不要对它们的非空值有所依赖。
 
 ## 值
 
-一个包含候选者关联地址的字符串。对于对等端和服务器反射候选者，关联地址（和{{domxref("RTCIceCandidate.relatedPort", "关联端口")}}）是该服务器或对等端反射候选者的基础。对于中继候选者，关联地址和关联端口设置为 TURN 服务器选择的映射地址（和端口）。
+一个包含候选者关联地址的字符串。对于对等端和服务器反射候选者，关联地址（和{{domxref("RTCIceCandidate.relatedPort", "关联端口", "", "nocode")}}）是该服务器或对等端反射候选者的基础。对于中继候选者，关联地址和关联端口设置为 TURN 服务器选择的映射地址（和端口）。
 
 对于主机候选者，`relatedAddress` 为 `null`，这意味着该字段未包含在候选者的属性行中。
 
@@ -35,7 +35,7 @@ a=candidate:4234997325 1 udp 2043278322 192.0.2.172 6502 typ srflx raddr 198.51.
 
 ## 示例
 
-在此示例中，检查了候选者的{{domxref("RTCIceCandidate.type", "候选者类型")}}类型，然后根据候选者类型呈现了调试输出，包括候选者的{{domxref("RTCIceCandidate/address", " ip 地址")}} 和 `relatedAddress`。
+在此示例中，检查了候选者的类型（{{domxref("RTCIceCandidate.type", "type")}}），然后根据候选者类型呈现了调试输出，包括候选者的 {{domxref("RTCIceCandidate/address", "ip")}} 和 `relatedAddress`。
 
 ```js
 switch (candidate.type) {
@@ -44,17 +44,17 @@ switch (candidate.type) {
     break;
   case "srflx":
     console.log(
-      `服务器反射候选者的基地址为 ${candidate.relatedAddress}; 可达于 ${candidate.ip}`,
+      `服务器反射候选者的基地址为 ${candidate.relatedAddress}；可达 ${candidate.ip}`,
     );
     break;
   case "prflx":
     console.log(
-      `对等端反射候选者基地址为 ${candidate.relatedAddress}; 可达于 ${candidate.ip}`,
+      `对等端反射候选者基地址为 ${candidate.relatedAddress}；可达 ${candidate.ip}`,
     );
     break;
   case "relay":
     console.log(
-      `由 TURN 服务器分配中继候选者地址 ${candidate.relatedAddress}; 可达于 ${candidate.ip}`,
+      `由 TURN 服务器分配中继候选者地址 ${candidate.relatedAddress}；可达 ${candidate.ip}`,
     );
     break;
 }
