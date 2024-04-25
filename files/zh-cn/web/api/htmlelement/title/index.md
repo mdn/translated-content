@@ -7,7 +7,7 @@ l10n:
 
 {{ APIRef("HTML DOM") }}
 
-**`HTMLElement.title`** 属性表示元素的标题：当鼠标悬停于节点上时，通常会以“工具”（tooltip）提示的弹出形式显示该文本。
+**`HTMLElement.title`** 属性表示元素的标题：当鼠标悬停于节点上时，通常会以“工具提示”（tooltip）的弹出形式显示该文本。
 
 ## 值
 
