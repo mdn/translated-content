@@ -28,7 +28,7 @@ new NDEFMessage(records)
     - `id` {{optional_inline}}
       - : 开发人员为记录定义的标识符。
     - `lang` {{optional_inline}}
-      - : 根据 {{RFC(5646, "用于标识语言的标记（又称 BCP 47）")}} 规定的有效语言标签。
+      - : 根据 {{RFC(5646, "用于标识语言的标记（又称 BCP 47）")}}规定的有效语言标签。
     - `mediaType` {{optional_inline}}
       - : 有效的 [MIME 类型](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types)。
     - `recordType`
