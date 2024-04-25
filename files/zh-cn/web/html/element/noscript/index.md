@@ -20,18 +20,18 @@ l10n:
   <!-- 外部文件的锚链接 -->
   <a href="https://www.mozilla.org/">外部链接</a>
 </noscript>
-<p>乱石！</p>
+<p>摇滚！</p>
 ```
 
 ### 启用脚本后的结果
 
-乱石！
+摇滚！
 
 ### 禁用脚本后的结果
 
 [外部链接](https://www.mozilla.org/)
 
-乱石！
+摇滚！
 
 ## 技术概要
 
@@ -56,7 +56,7 @@ l10n:
     <tr>
       <th scope="row">允许的内容</th>
       <td>
-        当脚本被禁用并且是 {{HTMLElement("head")}} 元素的后代时：按任意顺序，零个或多个 {{HTMLElement("link")}} 元素，零个或多个 {{HTMLElement("style")}} 元素，以及零个或多个 {{HTMLElement("meta")}} 元素。<br />当脚本被禁用且不是 {{HTMLElement("head")}} 元素的后代时：任何<a href="/zh-CN/docs/Web/HTML/Content_categories#透明内容模型">透明内容</a>，但其后代中不得包含 <code>&#x3C;noscript></code> 元素。<br />否则：流内容或短语内容。
+        当脚本被禁用并且是 {{HTMLElement("head")}} 元素的后代时：按任意顺序，零个或多个 {{HTMLElement("link")}} 元素、零个或多个 {{HTMLElement("style")}} 元素，以及零个或多个 {{HTMLElement("meta")}} 元素。<br />当脚本被禁用且不是 {{HTMLElement("head")}} 元素的后代时：任何<a href="/zh-CN/docs/Web/HTML/Content_categories#透明内容模型">透明内容</a>，但其后代中不得包含 <code>&#x3C;noscript></code> 元素。<br />否则：流内容或短语内容。
       </td>
     </tr>
     <tr>
