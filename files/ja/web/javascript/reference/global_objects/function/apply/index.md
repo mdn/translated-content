@@ -21,11 +21,11 @@ func.apply(thisArg, [ argsArray])
 
   - : `this` の値で、 `func` の呼び出しで提供されます。
 
-    このメソッドで指定した `this` が必ず呼び出したメソッドで参照されるわけではないことに注意してください。もし呼び出したメソッドが{{jsxref("Strict_mode", "厳格モードではない", "", 1)}}コード内の関数であれば、ここで渡した値が {{jsxref("null")}} もしくは {{jsxref("undefined")}} であった場合はグローバルオブジェクトに置き換えられ、プリミティブ型の変数はボックス化されます。この引数は必須です。
+    このメソッドで指定した `this` が必ず呼び出したメソッドで参照されるわけではないことに注意してください。もし呼び出したメソッドが{{jsxref("Strict_mode", "厳格モードではない", "", 1)}}コード内の関数であれば、ここで渡した値が [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) もしくは {{jsxref("undefined")}} であった場合はグローバルオブジェクトに置き換えられ、プリミティブ型の変数はボックス化されます。この引数は必須です。
 
 - `argsArray` {{optional_inline}}
 
-  - : 1 つの配列風のオブジェクトであり、 `func` 関数が呼ぶことになる引数を列挙したものです。関数に引数が渡されない場合は {{jsxref("null")}} または {{jsxref("undefined")}} となります。
+  - : 1 つの配列風のオブジェクトであり、 `func` 関数が呼ぶことになる引数を列挙したものです。関数に引数が渡されない場合は [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) または {{jsxref("undefined")}} となります。
 
     ECMAScript 5 以降ではこれらの値は配列ではなく配列風のオブジェクトを用いる事になりました。後述の[ブラウザーの互換性](#browser_compatibility)を参照してください。
 

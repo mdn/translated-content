@@ -1,18 +1,20 @@
 ---
 title: Object.getOwnPropertySymbols()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols
+l10n:
+  sourceCommit: 892e4301623f10505dc19e56ba9fb7b505530722
 ---
 
 {{JSRef}}
 
-**`Object.getOwnPropertySymbols()`** メソッドは、与えられたオブジェクト上で直接見つかるシンボルプロパティすべての配列を返します。
+**`Object.getOwnPropertySymbols()`** 静的メソッドは、与えられたオブジェクト上で直接見つかるシンボルプロパティすべての配列を返します。
 
 {{EmbedInteractiveExample("pages/js/object-getownpropertysymbols.html")}}
 
 ## 構文
 
-```js
-Object.getOwnPropertySymbols(obj);
+```js-nolint
+Object.getOwnPropertySymbols(obj)
 ```
 
 ### 引数

@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Operators/Nullish_coalescing
 
 {{JSSidebar("Operators")}}
 
-**Null 合体演算子 (`??`)** は論理演算子の一種です。この演算子は左辺が {{jsxref("null")}} または {{jsxref("undefined")}} の場合に右の値を返し、それ以外の場合に左の値を返します。
+**Null 合体演算子 (`??`)** は論理演算子の一種です。この演算子は左辺が [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) または {{jsxref("undefined")}} の場合に右の値を返し、それ以外の場合に左の値を返します。
 
 これは[論理 OR 演算子 (`||`)](/ja/docs/Web/JavaScript/Reference/Operators/Logical_OR) の特殊形と見なすことができます。そちらは左辺の値が `null` や `undefined` だけでなく、何らかの{{Glossary("falsy", "偽値")}}であった場合に右辺値を返すものです。つまり、 `||` を使って別の変数 `foo` に何らかの既定値を与える場合、一部の偽値（例えば `''` や `0`）を使用可能とみなすと、予想外の動作に遭遇することがあります。詳しい例は以下を参照してください。
 

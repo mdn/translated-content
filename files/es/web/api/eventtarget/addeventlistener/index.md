@@ -3,7 +3,7 @@ title: element.addEventListener
 slug: Web/API/EventTarget/addEventListener
 ---
 
-{{apiref("DOM Events")}}
+{{APIRef("DOM")}}
 
 ## Resumen
 
