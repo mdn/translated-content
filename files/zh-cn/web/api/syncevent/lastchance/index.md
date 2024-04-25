@@ -7,8 +7,7 @@ l10n:
 
 {{APIRef("Background Sync")}}{{AvailableInWorkers("service")}}
 
-如果用户代理在当前尝试之后不会进行进一步的同步尝试，接口 {{domxref("SyncEvent")}} 的只读属性 **`lastChance`** 将返回 `true`。
-这是通过 {{domxref("SyncEvent.SyncEvent","SyncEvent()")}} 构造函数的 `lastChance` 参数中传递值。
+如果用户代理在当前尝试之后不会进行进一步的同步尝试，接口 {{domxref("SyncEvent")}} 的只读属性 **`lastChance`** 将返回 `true`。这是通过 {{domxref("SyncEvent.SyncEvent","SyncEvent()")}} 构造函数的 `lastChance` 参数传递的值。
 
 ## 值
 
