@@ -92,7 +92,7 @@ Accept-Encoding: br;q=1.0, gzip;q=0.8, *;q=0.1
 
 - HTTP [内容协商](/zh-CN/docs/Web/HTTP/Content_negotiation)
 - 包含有内容协商结果的响应标头：{{HTTPHeader("Content-Encoding")}}
-- 其他相似的请求标头：{{HTTPHeader("TE")}}、{{HTTPHeader("Accept")}}、{HTTPHeader("Accept-Language")}}
+- 其他相似的请求标头：{{HTTPHeader("TE")}}、{{HTTPHeader("Accept")}}、{{HTTPHeader("Accept-Language")}}
 - {{Glossary("Brotli compression", "Brotli 压缩")}}
 - {{Glossary("GZip compression", "GZip 压缩")}}
 - {{Glossary("Zstandard compression", "Zstandard 压缩")}}
