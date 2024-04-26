@@ -1,5 +1,5 @@
 ---
-title: row-gap (grid-row-gap)
+title: row-gap
 slug: Web/CSS/row-gap
 ---
 
