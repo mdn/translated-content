@@ -239,8 +239,8 @@ display.addEventListener("change", (evt) => {
 
 ## 같이 보기
 
-- CSS flexbox의 기본 개념: [Basic Concepts of Flexbox](/ko/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- CSS Flexbox Guide: _[Aligning items in a flex container](/ko/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
-- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/ko/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
+- CSS 플렉스박스의 기본 개념: [flexbox의 기본 개념](/ko/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- CSS 플렉스박스 가이드: [Aligning items in a flex container](/ko/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
+- CSS 그리드 레이아웃 가이드: [Box alignment in CSS Grid layouts](/ko/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
 - [CSS Box Alignment](/ko/docs/Web/CSS/CSS_box_alignment)
 - {{cssxref("align-self")}} 속성
