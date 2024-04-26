@@ -16,8 +16,8 @@ l10n:
 | 用户代理                  | 值                                                                                                                                  |
 | ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | Firefox 92 及更高版本 [1] | `text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8`                                             |
-| Firefox 72 至 91 [1]      | `text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8`                                                        |
-| Firefox 66 至 71 [1]      | `text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8`                                                                   |
+| Firefox 72 至 91 版本 [1]      | `text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8`                                                        |
+| Firefox 66 至 71 版本 [1]      | `text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8`                                                                   |
 | Firefox 65 [1]            | `text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8`                                                        |
 | Firefox 64 及更早版本 [1] | `text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8`                                                                   |
 | Safari、Chrome            | `text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8`                                             |
@@ -36,9 +36,9 @@ l10n:
 | 用户代理                           | 值                                                                         |
 | ---------------------------------- | -------------------------------------------------------------------------- |
 | Firefox 92 及更高版本 [1]          | `image/avif,image/webp,*/*`                                                |
-| Firefox 65 至 91 [1]               | `image/webp,*/*`                                                           |
-| Firefox 47 至 63 [1]               | `*/*`                                                                      |
-| Firefox 47 之前 [1]                | `image/png,image/*;q=0.8,*/*;q=0.5`                                        |
+| Firefox 65 至 91 版本 [1]               | `image/webp,*/*`                                                           |
+| Firefox 47 至 63 版本 [1]               | `*/*`                                                                      |
+| Firefox 47 之前版本 [1]                | `image/png,image/*;q=0.8,*/*;q=0.5`                                        |
 | Safari（自 Mac OS Big Sur 版本起） | `image/webp,image/png,image/svg+xml,image/*;q=0.8,video/*;q=0.8,*/*;q=0.5` |
 | Safari（Mac OS Big Sur 之前版本）  | `image/png,image/svg+xml,image/*;q=0.8,video/*;q=0.8,*/*;q=0.5`            |
 | Chrome 和 Edge 121 及更高版本      | `image/avif,image/webp,image/apng,image/*,*/*;q=0.8`                       |
