@@ -2,7 +2,7 @@
 title: RTCIceCandidate：type 属性
 slug: Web/API/RTCIceCandidate/type
 l10n:
-  sourceCommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
+  sourceCommit: 954612667bafd71241a93e8554e8f11afc474ff3
 ---
 
 {{APIRef("WebRTC")}}
