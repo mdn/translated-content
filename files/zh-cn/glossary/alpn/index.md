@@ -1,5 +1,5 @@
 ---
-title: ALPN
+title: 应用层协议协商（ALPN）
 slug: Glossary/ALPN
 l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
