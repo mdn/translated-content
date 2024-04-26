@@ -138,7 +138,7 @@ function write(data, { timeout } = {}) {
 
 await ndef.scan();
 try {
-  // Let's wait for 5 seconds only.
+  // 让我们只等待 5 秒钟。
   await write("你好，世界", { timeout: 5_000 });
 } catch (err) {
   console.error("出了一些问题", err);
