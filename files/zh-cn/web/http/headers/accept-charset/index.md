@@ -13,7 +13,7 @@ l10n:
 
 UTF-8 得到广泛支持，并且是字符编码的压倒性首选方案。为了[通过减少基于配置的熵来确保更好的隐私](https://www.eff.org/deeplinks/2010/01/primer-information-theory-and-privacy)，所有浏览器均省略了 `Accept-Charset` 标头。
 
-如今，`Accept-Charset` 最显著之处在于它是几个[禁止修改的标头](/zh-CN/docs/Glossary/Forbidden_header_name)之一。
+如今，`Accept-Charset` 值得注意之处在于它是几个[禁止修改的标头](/zh-CN/docs/Glossary/Forbidden_header_name)之一。
 
 <table class="properties">
   <tbody>
