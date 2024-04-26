@@ -7,7 +7,7 @@ l10n:
 
 {{SecureContext_Header}}{{SeeCompatTable}}{{APIRef("Web NFC API")}}
 
-{{DOMxRef("NDEFReader")}} 接口的 `scan()` 方法激活读取设备并返回一个 {{jsxref("Promise")}}，当计划执行 NFC 标签读取操作时敲定，或者在遇到硬件或权限错误时被拒绝。如果尚未授予“nfc”权限，则此方法会触发权限提示。
+{{DOMxRef("NDEFReader")}} 接口的 `scan()` 方法激活读取设备并返回一个 {{jsxref("Promise")}}，其会在添加执行 NFC 标签读取操作的计划后兑现，或者在遇到硬件或权限错误时拒绝。如果尚未授予“nfc”权限，则此方法会触发权限提示。
 
 ## 语法
 
@@ -26,20 +26,20 @@ scan(options)
 
 ### 返回值
 
-一个 {{JSxRef("Promise")}}，在为 NFC 适配器安排读取操作后立即敲定。
+一个 {{JSxRef("Promise")}}，在为 NFC 适配器安排读取操作后立即兑现。
 
-## 错误类型
+## 异常
 
-此方法不抛出异常；相反，它会拒绝返回的 promise，并传入一个 {{domxref("DOMException")}}，其 `name` 属性是以下之一：
+此方法不抛出异常；相反，它会拒绝返回的 promise，并传入一个 {{domxref("DOMException")}}，其 `name` 属性是以下值之一：
 
 - `AbortError` {{domxref("DOMException")}}
-  - : 如果使用 `options` 参数中传递的 {{DOMxRef("AbortSignal")}} 中止了扫描操作，则返回此错误。
+  - : 如果使用 `options` 参数中传递的 {{DOMxRef("AbortSignal")}} 中止了扫描操作，则返回此异常。
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : 如果有正在进行中的扫描，则返回此错误。
+  - : 如果有正在进行中的扫描，则返回此异常。
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : 如果拒绝了对此操作的权限，则返回此错误。
+  - : 如果拒绝了对此操作的权限，则返回此异常。
 - `NotSupportedError` {{domxref("DOMException")}}
-  - : 如果不存在与 Web NFC 兼容的 NFC 适配器或无法建立连接，则返回此错误。
+  - : 如果不存在与 Web NFC 兼容的 NFC 适配器或无法建立连接，则返回此异常。
 
 ## 示例
 
