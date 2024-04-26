@@ -27,7 +27,7 @@ delete(options)
 
 - `options` {{optional_inline}}
 
-  - : 一个包括以下信息的对象：
+  - : 一个包括以下属性的对象：
 
     - `name`
       - : 记录 cookie 名称的字符串。
@@ -36,13 +36,13 @@ delete(options)
     - `path` {{Optional_Inline}}
       - : 记录 cookie 路径的字符串。默认为 `/`。
     - `partitioned` {{Optional_Inline}}
-      - : 一个布尔值，默认为 `false`。将其设置为 `true` 指定要删除的 cookie 将是分区 cookie。更多信息请参阅 [具有独立分区状态 (CHIPS) 的 Cookie](/zh-CN/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies)。
+      - : 一个布尔值，默认为 `false`。将其设置为 `true` 指定要删除的 cookie 将是分区 cookie。更多信息请参阅[具有独立分区状态（CHIPS）的 Cookie](/zh-CN/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies)。
 
 > **Note:** `url` 选项可以修改特定 URL 下的 cookie。Service Worker 在其作用域下可以获得发送至任何 URL 的 cookie。在文档中，你只能在当前 URL 处获取 Cookie，因此文档上下文中唯一有效的 URL 是文档的 URL。
 
 ### 返回值
 
-一个删除完成后兑现为 {{jsxref("undefined")}} 的 {{jsxref("Promise")}}。
+一个在删除完成后兑现为 {{jsxref("undefined")}} 的 {{jsxref("Promise")}}。
 
 ### 异常
 

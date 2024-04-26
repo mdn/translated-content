@@ -27,7 +27,7 @@ get(options)
 
 - `options` {{optional_inline}}
 
-  - : 一个包括以下信息的对象：
+  - : 一个包括以下属性的对象：
 
     - `name`
       - : 记录 cookie 名称的字符串。
@@ -91,7 +91,7 @@ get(options)
 
 ## 示例
 
-在此示例中，我们返回一个命名为 "cookie1" 的 cookie。如果找到 cookie，Promise 的结果是一个包含单个 Cookie 的详细信息的对象。
+在此示例中，我们返回一个命名为 "cookie1" 的 cookie。如果找到 cookie，Promise 兑现的结果是一个包含单个 Cookie 的详细信息的对象。
 
 ```js
 const cookie = await cookieStore.get("cookie1");

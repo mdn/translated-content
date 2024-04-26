@@ -25,7 +25,7 @@ getAll(options)
 
 - `options` {{optional_inline}}
 
-  - :一个包括以下信息的对象：
+  - : 一个包括以下属性的对象：
 
     - `name`
       - : 记录 cookie 名称的字符串。

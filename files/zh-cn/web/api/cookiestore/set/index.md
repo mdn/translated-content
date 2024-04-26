@@ -29,7 +29,7 @@ set(options)
 
 - `options` {{optional_inline}}
 
-  - : 一个包括以下信息的对象：
+  - : 一个包括以下属性的对象：
 
     - `domain` {{Optional_Inline}}
       - : 记录 cookie 域名的字符串。默认为 `null`。

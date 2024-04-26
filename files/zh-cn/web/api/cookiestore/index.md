@@ -7,7 +7,7 @@ l10n:
 
 {{securecontext_header}}{{APIRef("Cookie Store API")}} {{AvailableInWorkers}}
 
-{{domxref("Cookie Store API", "", "", "nocode")}} 的 **`CookieStore`** 接口提供了在页面或 Service Worker 异步设置和获取 cookies 的方法
+{{domxref("Cookie Store API", "", "", "nocode")}} 的 **`CookieStore`** 接口提供了在页面或 Service Worker 中异步设置和获取 cookies 的方法
 
 `CookieStore` 通过 {{domxref("Window")}} 或 {{domxref("ServiceWorkerGlobalScope")}} 上下文的全局范围内的属性进行访问。因此，不存在构造函数。
 
