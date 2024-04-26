@@ -21,13 +21,13 @@ l10n:
 _`NDEFReader` 接口继承了其父接口 {{domxref("EventTarget")}} 的方法。_
 
 - {{DOMxRef("NDEFReader.scan", "NDEFReader.scan()")}} {{Experimental_Inline}}
-  - : 激活读取设备并返回一个 {{jsxref("Promise")}}，当执行 NFC 标签读取操作时敲定该 Promise，如果遇到硬件或权限错误则拒绝。如果尚未授予 "nfc" 权限，此方法将触发权限提示。
+  - : 激活读取设备并返回一个 {{jsxref("Promise")}}，当执行 NFC 标签读取操作时解析该 Promise，如果遇到硬件或权限错误则拒绝。如果尚未授予 "nfc" 权限，此方法将触发权限提示。
 - {{DOMxRef("NDEFReader.write", "NDEFReader.write()")}} {{Experimental_Inline}}
-  - : 尝试将 NDEF 消息写入标签并返回一个 {{jsxref("Promise")}}，当消息已写入标签时敲定该 Promise，或者在遇到硬件或权限错误时拒绝该 Promise。如果尚未授予 "nfc" 权限，则此方法会触发权限提示。
+  - : 尝试将 NDEF 消息写入标签并返回一个 {{jsxref("Promise")}}，当消息已写入标签时解析该 Promise，或者在遇到硬件或权限错误时拒绝该 Promise。如果尚未授予 "nfc" 权限，则此方法会触发权限提示。
 
 ## 事件
 
-_继承自其父接口 {{DOMxRef("EventTarget")}} 的属性。_
+_继承自其父接口 {{DOMxRef("EventTarget")}} 的事件。_
 
 - {{DOMxRef("NDEFReader.reading_event", "reading")}} {{Experimental_Inline}}
   - : 当有来自兼容 NFC 设备的新读取结果可用时触发。
