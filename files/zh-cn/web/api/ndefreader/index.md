@@ -21,9 +21,9 @@ l10n:
 _`NDEFReader` 接口继承了其父接口 {{domxref("EventTarget")}} 的方法。_
 
 - {{DOMxRef("NDEFReader.scan", "NDEFReader.scan()")}} {{Experimental_Inline}}
-  - : 激活读取设备并返回一个 {{jsxref("Promise")}}，当执行 NFC 标签读取操作时兑现该 Promise，如果遇到硬件或权限错误则拒绝。如果尚未授予 "nfc" 权限，此方法将触发权限提示。
+  - : 激活读取设备并返回一个 {{jsxref("Promise")}}，在添加执行 NFC 标签读取操作的计划后兑现该 Promise，如果遇到硬件或权限错误则拒绝。如果尚未授予“nfc”权限，此方法将触发权限提示。
 - {{DOMxRef("NDEFReader.write", "NDEFReader.write()")}} {{Experimental_Inline}}
-  - : 尝试将 NDEF 消息写入标签并返回一个 {{jsxref("Promise")}}，当消息已写入标签时解析该 Promise，或者在遇到硬件或权限错误时拒绝该 Promise。如果尚未授予 "nfc" 权限，则此方法会触发权限提示。
+  - : 尝试将 NDEF 消息写入标签并返回一个 {{jsxref("Promise")}}，当消息已写入标签时兑现该 Promise，或者在遇到硬件或权限错误时拒绝该 Promise。如果尚未授予“nfc”权限，则此方法会触发权限提示。
 
 ## 事件
 
@@ -38,7 +38,7 @@ _继承自其父接口 {{DOMxRef("EventTarget")}} 的事件。_
 
 ### 处理写入时的初始读取
 
-下面的示例展示了如何协调通用读取处理器和用于单次写入的专用处理器。为了写入，需要找到并读取标签。这样你就可以检查它是否确实是你想要写入的标签。这就是为什么建议你从读取事件中调用 `write()` 的原因。
+下面的示例展示了如何协调通用读取处理器和用于单次写入的专用处理器。要写入数据，则需要找到并读取标签。这样你就可以检查它是否确实是你想要写入的标签。这就是为什么建议你在读取事件中调用 `write()` 的原因。
 
 ```js
 const ndef = new NDEFReader();
