@@ -1,6 +1,7 @@
 ---
 title: isSecureContext 全局属性
-slug: Web/API/isSecureContext
+slug: Web/API/Window/isSecureContext
+original_slug: Web/API/isSecureContext
 ---
 
 {{APIRef()}}
