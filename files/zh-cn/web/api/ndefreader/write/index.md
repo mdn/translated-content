@@ -20,7 +20,7 @@ write(message, options)
 
 - `message`
 
-  - : 要写入的消息，可以是字符串对象或字面量、{{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}}、{{jsxref("DataView")}}，或者是记录数组。记录具有以下成员：
+  - : 要写入的消息，可以是字符串对象或字面量、{{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}}、{{jsxref("DataView")}}，或者是记录数组。具有以下成员：
 
     - `data` {{optional_inline}}
       - : 包含要传输的数据；可以是字符串、{{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}}、{{jsxref("DataView")}} 或嵌套记录数组之一。
