@@ -22,8 +22,8 @@ ndefReaderInst.onreading = (event) => {
   const ndefMessage = event.message;
   for (const record of ndefMessage.records) {
     console.log(`记录类型：  ${record.recordType}`);
-    console.log(`MIME 类型：    ${record.mediaType}`);
-    console.log(`记录 id：    ${record.id}`);
+    console.log(`MIME 类型： ${record.mediaType}`);
+    console.log(`记录 id：   ${record.id}`);
     switch (record.recordType) {
       case "text":
         // TODO：使用记录数据、语言和编码读取文本记录。
