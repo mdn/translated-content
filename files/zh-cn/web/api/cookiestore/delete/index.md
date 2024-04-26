@@ -2,7 +2,7 @@
 title: CookieStore：delete() 方法
 slug: Web/API/CookieStore/delete
 l10n:
-  sourceCommit: 2c641e08878722bf29fb784d58c61873ce4a133a
+  sourceCommit: f4fbfbf970640bfef77c8544bbfd9426ad540cc3
 ---
 
 {{securecontext_header}}{{APIRef("Cookie Store API")}} {{AvailableInWorkers}}
@@ -37,8 +37,6 @@ delete(options)
       - : 记录 cookie 路径的字符串。默认为 `/`。
     - `partitioned` {{Optional_Inline}}
       - : 一个布尔值，默认为 `false`。将其设置为 `true` 指定要删除的 cookie 将是分区 cookie。更多信息请参阅[具有独立分区状态（CHIPS）的 Cookie](/zh-CN/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies)。
-
-> **Note:** `url` 选项可以修改特定 URL 下的 cookie。Service Worker 在其作用域下可以获得发送至任何 URL 的 cookie。在文档中，你只能在当前 URL 处获取 Cookie，因此文档上下文中唯一有效的 URL 是文档的 URL。
 
 ### 返回值
 
