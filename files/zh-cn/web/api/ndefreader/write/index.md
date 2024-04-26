@@ -7,7 +7,7 @@ l10n:
 
 {{SecureContext_Header}}{{SeeCompatTable}}{{APIRef("Web NFC API")}}
 
-{{DOMxRef("NDEFReader")}} 接口的 `write()` 方法尝试将 NDEF 消息写入标签，并返回一个 {{jsxref("Promise")}}，当将消息写入标签时兑现该 Promise，或者在遇到硬件或权限错误时拒绝。如果尚未授予 "nfc" 权限，此方法会触发权限提示。
+{{DOMxRef("NDEFReader")}} 接口的 `write()` 方法尝试将 NDEF 消息写入标签，并返回一个 {{jsxref("Promise")}}，当将消息写入标签时兑现，或者在遇到硬件或权限错误时拒绝。如果尚未授予 "nfc" 权限，此方法会触发权限提示。
 
 ## 语法
 
