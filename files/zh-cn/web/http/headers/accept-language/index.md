@@ -2,7 +2,7 @@
 title: Accept-Language
 slug: Web/HTTP/Headers/Accept-Language
 l10n:
-  sourceCommit:
+  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
 {{HTTPSidebar}}
