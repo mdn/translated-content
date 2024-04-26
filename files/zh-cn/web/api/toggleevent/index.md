@@ -25,9 +25,9 @@ l10n:
 _此接口继承其父接口 {{DOMxRef("Event")}} 的属性。_
 
 - {{DOMxRef("ToggleEvent.newState")}} {{ReadOnlyInline}}
-  - : 一个字符串（取值为 `"open"` 或 `"closed"`），表示元素转换到的状态。
+  - : 一个字符串（取值为 `"open"` 或 `"closed"`），表示元素转换后的状态。
 - {{DOMxRef("ToggleEvent.oldState")}} {{ReadOnlyInline}}
-  - : 一个字符串（取值为 `"open"` 或 `"closed"`），表示元素从中转换的状态。
+  - : 一个字符串（取值为 `"open"` 或 `"closed"`），表示元素转换前的状态。
 
 ## 示例
 
