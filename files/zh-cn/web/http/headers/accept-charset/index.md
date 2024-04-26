@@ -2,7 +2,7 @@
 title: Accept-Charset
 slug: Web/HTTP/Headers/Accept-Charset
 l10n:
-  sourceCommit: https://github.com/mdn/content/commit/0880a90f3811475d78bc4b2c344eb4146f25f66c
+  sourceCommit:  0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
 {{HTTPSidebar}}
