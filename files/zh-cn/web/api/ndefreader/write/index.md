@@ -66,7 +66,7 @@ write(message, options)
 
 ## 异常
 
-此方法不会抛出异常，而是会拒绝返回的 promise，并传入一个 {{domxref("DOMException")}}，其 `name` 属性值为以下之一：
+此方法不抛出异常；相反，它会拒绝返回的 promise，并传入一个 {{domxref("DOMException")}}，其 `name` 属性是以下值之一：
 
 - `AbortError`
   - : 通过在 `options` 参数中传递的 {{DOMxRef("AbortSignal")}} 中止了扫描操作。
