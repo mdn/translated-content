@@ -2,7 +2,7 @@
 title: NDEFReader
 slug: Web/API/NDEFReader
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: a492b9739e10e7751797804228b360285e006858
 ---
 
 {{SecureContext_Header}}{{SeeCompatTable}}{{APIRef("Web NFC API")}}
