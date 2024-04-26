@@ -15308,6 +15308,10 @@
     "modified": "2020-10-15T22:30:06.986Z",
     "contributors": ["Jee"]
   },
+  "Web/API/Window/isSecureContext": {
+    "modified": "2019-09-21T03:37:23.951Z",
+    "contributors": ["Awe"]
+  },
   "Web/API/Window/length": {
     "modified": "2019-03-23T23:33:15.311Z",
     "contributors": ["teoli", "basemnassar11", "ziyunfei"]
@@ -16259,10 +16263,6 @@
       "camsong",
       "fuchao2012"
     ]
-  },
-  "Web/API/isSecureContext": {
-    "modified": "2019-09-21T03:37:23.951Z",
-    "contributors": ["Awe"]
   },
   "Web/API/notification": {
     "modified": "2020-09-28T00:03:47.900Z",

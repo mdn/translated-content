@@ -1901,7 +1901,7 @@
 /zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/crossOriginIsolated	/zh-CN/docs/Web/API/crossOriginIsolated
 /zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/fetch	/zh-CN/docs/Web/API/fetch
 /zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/indexedDB	/zh-CN/docs/Web/API/Window/indexedDB
-/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/isSecureContext	/zh-CN/docs/Web/API/isSecureContext
+/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/isSecureContext	/zh-CN/docs/Web/API/Window/isSecureContext
 /zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/origin	/zh-CN/docs/Web/API/origin
 /zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/queueMicrotask	/zh-CN/docs/Web/API/queueMicrotask
 /zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/setInterval	/zh-CN/docs/Web/API/setInterval
@@ -2013,6 +2013,7 @@
 /zh-CN/docs/Web/API/event.timeStamp	/zh-CN/docs/Web/API/Event/timeStamp
 /zh-CN/docs/Web/API/event.type	/zh-CN/docs/Web/API/Event/type
 /zh-CN/docs/Web/API/indexedDB	/zh-CN/docs/Web/API/Window/indexedDB
+/zh-CN/docs/Web/API/isSecureContext	/zh-CN/docs/Web/API/Window/isSecureContext
 /zh-CN/docs/Web/API/navigator.doNotTrack	/zh-CN/docs/Web/API/Navigator/doNotTrack
 /zh-CN/docs/Web/API/notification/Using_Web_Notifications	/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API
 /zh-CN/docs/Web/API/notification/onclick	/zh-CN/docs/Web/API/Notification/click_event
