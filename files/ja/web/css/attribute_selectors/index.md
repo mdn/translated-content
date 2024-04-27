@@ -24,7 +24,7 @@ a[href*="example"] {
   font-size: 2em;
 }
 
-/* href が "org" で終わる <a> 要素 */
+/* href が ".org" で終わる <a> 要素 */
 a[href$=".org"] {
   font-style: italic;
 }
@@ -126,7 +126,7 @@ div[lang] {
   font-weight: bold;
 }
 
-/* すべｔの div のうち `lang` 属性のない者をイタリックにする。 */
+/* すべての div のうち `lang` 属性のないものをイタリックにする。 */
 div:not([lang]) {
   font-style: italic;
 }
