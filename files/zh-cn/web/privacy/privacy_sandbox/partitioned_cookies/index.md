@@ -9,7 +9,7 @@ l10n:
 
 **具有独立分区状态的 Cookie**（Cookies Having Independent Partitioned State，CHIPS），也称之为**分区 Cookie**（Partitioned cookie），允许开发人员选择将 cookie 放入分区存储中，每个顶级站点都有一个单独的 cookie 存储空间。
 
-第三方分区 cookie 被绑定至最初设置的站点，无法从其他地方访问。目的是允许第三方服务设置 cookie，但只能在最初设置的顶级站点的上下文中阅读。这允许阻止跨站点跟踪，同时仍然启用第三方 cookie 的非跟踪使用，例如跨不同站点的嵌入式地图或聊天小部件的持久状态，以及保留子资源 CDN 负载平衡和 Headless CMS 提供程序的配置信息。
+第三方分区 cookie 被绑定至最初设置的站点，无法从其他地方访问。其目的是允许第三方服务设置 cookie，但只能在最初设置的顶级站点的上下文中读取。这可以阻止跨站点跟踪，同时仍然启用第三方 cookie 的非跟踪使用，例如跨不同站点的嵌入式地图或聊天小部件的持久状态，以及保留子资源 CDN 负载均衡和无头 CMS 供应商的配置信息。
 
 ## 简述跨站点跟踪
 
@@ -22,7 +22,7 @@ l10n:
 
 这是因为目前存储 cookie 的键基于设置 cookie 的网站的主机或域名（又称为**主机键**——host key）。在上面的示例中，cookie 会使用 `("3rd-party.example")` 这一个键进行存储。
 
-用户隐私是首要关注的问题，因此浏览器开始限制如何使用这种行为来跟踪用户，同时仍允许使用第三方 cookie，就像前面所说的一样。CHIPS 允许浏览器保护用户隐私的同时支持这些用例以及更多。
+用户隐私是首要关注的问题，因此浏览器开始限制可以用于跟踪用户的行为，但是，正如前面所描述，仍然有第三方 cookie 的有效用例。CHIPS 允许浏览器在保护用户隐私的同时支持这些用例以及更多用例。
 
 ## CHIPS 如何工作？
 
@@ -34,7 +34,7 @@ Set-Cookie: __Host-example=34d8g; SameSite=None; Secure; Path=/; Partitioned;
 
 > **备注：** 分区 cookie 必须与 `Secure` 一同设置。此外，建议在设置分区 cookie 时使用 `__Host` 前缀，以将它们绑定到主机名而不是可注册的域名。
 
-当 `Partitioned` 被设置，cookie 使用两个 key 进行存储，即主机 key 和一个新的**分区 key**。分区 key 基于格式和向设置 cookie 的 URL 端点发出请求时浏览器访问的顶级 URL 的 {{Glossary("eTLD", "有效顶级域名 +1")}}。
+如果设置了 `Partitioned`，cookie 将使用两个键进行存储，即主机键和一个新的**分区键**。分区键基于向设置 cookie 的 URL 端点发出请求时浏览器访问的顶级 URL 的方案（scheme）和 {{Glossary("eTLD", "eTLD +1")}}。
 
 回顾我们在上一节中描述的示例：
 
