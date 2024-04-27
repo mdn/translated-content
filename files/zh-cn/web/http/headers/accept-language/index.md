@@ -25,7 +25,7 @@ l10n:
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("CORS-safelisted request header", "CORS 安全列出的请求标头")}}
+        {{Glossary("CORS-safelisted request header", "列入 CORS 白名单的请求标头")}}
       </th>
       <td>
         是的，但有附加限制，即值只能是 <code>0-9</code>、<code>A-Z</code>、<code>a-z</code>、空格或 <code>*,-.;=</code>。
