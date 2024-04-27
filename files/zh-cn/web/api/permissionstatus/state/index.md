@@ -11,14 +11,14 @@ l10n:
 
 ## 值
 
-以下之一：
+以下值之一：
 
 - `'granted'`
-  - : 用户或代表用户的用户代理已明确许可使用[强大的功能](https://w3c.github.io/permissions/#dfn-powerful-feature)。调用者可以使用该功能，而无需用户代理询问用户的许可。
+  - : 用户或代表用户的用户代理已明确许可使用此[技术特性](https://w3c.github.io/permissions/#dfn-powerful-feature)。调用者可以使用该特性，而无需用户代理请求用户的许可。
 - `'denied'`
-  - : 用户或代表用户的用户代理已拒绝访问此[强大的功能](https://w3c.github.io/permissions/#dfn-powerful-feature)。调用者无法使用该功能。
+  - : 用户或代表用户的用户代理已拒绝访问此[技术特性](https://w3c.github.io/permissions/#dfn-powerful-feature)。调用者无法使用该特性。
 - `'prompt'`
-  - : 用户未明确授予使用该功能的权限（即与拒绝相同）。这还意味着，如果调用者尝试使用该功能，用户代理将提示用户授予许可，否则对该功能的访问将被拒绝。
+  - : 用户未明确授予使用该特性的权限（_即与拒绝相同_）。这还意味着，如果调用者尝试使用该特性，用户代理将提示用户授予许可，否则对该特性的访问将被拒绝。
 
 ## 示例
 
