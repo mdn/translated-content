@@ -43,11 +43,11 @@ l10n:
 | Safari（Mac OS Big Sur 之前版本）  | `image/png,image/svg+xml,image/*;q=0.8,video/*;q=0.8,*/*;q=0.5`            |
 | Chrome 和 Edge 121 及更高版本      | `image/avif,image/webp,image/apng,image/*,*/*;q=0.8`                       |
 
-\[1] 可以使用 `image.http.accept` 参数（_[source](https://searchfox.org/mozilla-central/search?q=image.http.accept)_）修改此值。
+\[1] 可以使用 `image.http.accept` 参数（_[源码](https://searchfox.org/mozilla-central/search?q=image.http.accept)_）修改此值。
 
 ## video 的值
 
-通过 HTML {{HTMLElement("video")}} 元素请求一个 video 时，大多数浏览器会使用特定值。
+通过 HTML {{HTMLElement("video")}} 元素请求一个视频时，大多数浏览器会使用特定值。
 
 | 用户代理               | 值                                                                                 |
 | ---------------------- | ---------------------------------------------------------------------------------- |
@@ -57,7 +57,7 @@ l10n:
 
 ## audio 资源的值
 
-通过 HTML {{HTMLElement("audio")}} 元素请求 audio 资源时，大多数浏览器会使用特定值。
+通过 HTML {{HTMLElement("audio")}} 元素请求音频资源时，大多数浏览器会使用特定值。
 
 | 用户代理                   | 值                                                                                           |
 | -------------------------- | -------------------------------------------------------------------------------------------- |
@@ -68,7 +68,7 @@ l10n:
 
 ## script 的值
 
-当通过 {{HTMLElement("script")}} 元素请求 script 时，一些浏览器使用特定值。
+当通过 {{HTMLElement("script")}} 元素请求脚本时，一些浏览器使用特定值。
 
 | 用户代理       | 值    |
 | -------------- | ----- |
