@@ -52,20 +52,20 @@ Accept-Encoding: deflate, gzip;q=1.0, *;q=0.5
 ## 指令
 
 - `gzip`
-  - : 一种使用 [Lempel-Ziv 编码](https://zh.wikipedia.org/wiki/LZ77与LZ78#LZ77)（LZ77）压缩算法，以及 32 位 CRC 校验的编码方式。
+  - : 一种使用 [Lempel-Ziv 编码](https://zh.wikipedia.org/wiki/LZ77与LZ78#LZ77)（LZ77）压缩算法，以及 32 位 CRC 校验的压缩格式。
 - `compress`
   - : 一种使用 [Lempel-Ziv-Welch](https://zh.wikipedia.org/wiki/LZW)（LZW）算法的压缩格式。
 - `deflate`
   - : 一种使用 [zlib](https://zh.wikipedia.org/wiki/Zlib) 结构和 [_deflate_](https://zh.wikipedia.org/wiki/DEFLATE) 压缩算法的压缩格式。
 - `br`
-  - : 一种使用 [Brotli](https://zh.wikipedia.org/wiki/Brotli) 算法的编码方式。
+  - : 一种使用 [Brotli](https://zh.wikipedia.org/wiki/Brotli) 算法的压缩格式。
 - `zstd`
-  - : 一种使用 [Zstandard](https://zh.wikipedia.org/wiki/Zstd) 算法的编码方式。
+  - : 一种使用 [Zstandard](https://zh.wikipedia.org/wiki/Zstd) 算法的压缩格式。
 - `identity`
-  - : 表示恒等函数（即不作任何修改或压缩）。即使省略，此值始终被视为接受。
+  - : 表示恒等函数（即不作任何修改或压缩）。即使省略，此值始终被视为是可接受的。
 - `*`
   - : 匹配其他任意未在该请求标头字段中列出的编码方式。假如该请求标头字段不存在的话，这个值是默认值。它并不代表任意算法都支持，而仅仅表示算法之间无优先次序。
-- `;q=`（优先顺序）
+- `;q=`（q 值加权）
   - : 任何值都按照使用称为*权重*的相对[质量价值](/zh-CN/docs/Glossary/Quality_values)表达的优先级顺序排列。
 
 ## 示例
