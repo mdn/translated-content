@@ -17,7 +17,7 @@ l10n:
 
 ## 範例
 
-此範例回應來自 IETF RFC（參見下文），並包含對[《萬世魔星》](https://zh.wikipedia.org/zh-tw/蒙提·派森之布莱恩的一生)的參考。
+此範例回應來自 IETF RFC（參見下文），並包含對[《萬世魔星》](https://zh.wikipedia.org/wiki/蒙提·派森之布莱恩的一生)的參考。
 
 > **備註：** {{HTTPHeader("Link")}} 標頭也可能包含 `rel="blocked-by"` 關係，識別實施封鎖的實體，而不是強制執行封鎖的任何其他實體。
 
