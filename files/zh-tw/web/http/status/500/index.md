@@ -27,4 +27,4 @@ l10n:
 
 ## 參見
 
-- [HTTP狀態碼定義](https://httpwg.org/specs/rfc9110.html#status.500)
+- [HTTP 狀態碼定義](https://httpwg.org/specs/rfc9110.html#status.500)
