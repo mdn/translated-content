@@ -1,13 +1,13 @@
 ---
-title: Window：crossOriginIsolated 属性
-slug: Web/API/Window/crossOriginIsolated
+title: WorkerGlobalScope：crossOriginIsolated 属性
+slug: Web/API/WorkerGlobalScope/crossOriginIsolated
 l10n:
   sourceCommit: 45fdc5d8cce894088d4c270b8f160841ecb11a2a
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("Web Workers API")}}
 
-{{domxref("Window")}} 接口的 **`crossOriginIsolated`** 只读属性返回一个指示网站是否处于跨源隔离状态的布尔值。该状态降低了旁路攻击的风险并解锁了一些功能：
+{{domxref("WorkerGlobalScope")}} 接口的 **`crossOriginIsolated`** 只读属性返回一个指示网站是否处于跨源隔离状态的布尔值。该状态降低了旁路攻击的风险并解锁了一些功能：
 
 - 可以创建并通过调用 {{DOMxRef("Window.postMessage()")}} 或 {{DOMxRef("MessagePort.postMessage()")}} 来发送 {{JSxRef("SharedArrayBuffer")}}。
 - 提升 {{DOMxRef("Performance.now()")}} 的精度。
