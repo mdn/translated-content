@@ -1,5 +1,5 @@
 ---
-title: Minification
+title: Минификация
 slug: Glossary/Minification
 ---
 
