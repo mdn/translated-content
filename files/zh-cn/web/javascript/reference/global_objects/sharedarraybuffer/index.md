@@ -44,7 +44,7 @@ Cross-Origin-Opener-Policy: same-origin
 Cross-Origin-Embedder-Policy: require-corp
 ```
 
-为了验证跨源隔离是否生效，你可以测试窗口和 worker 线程上下文中是否存在 [`crossOriginIsolated`](/zh-CN/docs/Web/API/crossOriginIsolated) 属性：
+为了验证跨源隔离是否生效，你可以测试窗口和 worker 上下文中的 {{domxref("Window.crossOriginIsolated")}} 或 {{domxref("WorkerGlobalScope.crossOriginIsolated")}} 属性：
 
 ```js
 const myWorker = new Worker("worker.js");
@@ -165,5 +165,5 @@ gl.bufferData(gl.ARRAY_BUFFER, sab, gl.STATIC_DRAW);
 - {{HTTPHeader("Cross-Origin-Opener-Policy")}}
 - {{HTTPHeader("Cross-Origin-Embedder-Policy")}}
 - {{HTTPHeader("Cross-Origin-Resource-Policy")}}
-- [`crossOriginIsolated`](/zh-CN/docs/Web/API/crossOriginIsolated)
+- {{domxref("Window.crossOriginIsolated")}} 和 {{domxref("WorkerGlobalScope.crossOriginIsolated")}}
 - [Android Chrome 88 和桌面版 Chrome 92 中的 SharedArrayBuffer 更新](https://developer.chrome.com/blog/enabling-shared-array-buffer/)，developer.chrome.com（2021）

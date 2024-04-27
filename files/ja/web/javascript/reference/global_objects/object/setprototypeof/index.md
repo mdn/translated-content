@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 
 {{JSRef}}
 
-**`Object.setPrototypeOf()`** メソッドは、指定されたオブジェクトのプロトタイプ (つまり、内部の `[[Prototype]]` プロパティ) を、別のオブジェクトまたは {{jsxref("null")}} に設定します。
+**`Object.setPrototypeOf()`** メソッドは、指定されたオブジェクトのプロトタイプ (つまり、内部の `[[Prototype]]` プロパティ) を、別のオブジェクトまたは [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) に設定します。
 
 > **警告:** オブジェクトの `[[Prototype]]` を変更すると、 [最近の JavaScript エンジンがプロパティへのアクセスを最適化する方法](https://mathiasbynens.be/notes/prototypes)の特質上、すべてのブラウザーや JavaScript エンジンで、操作がとても低速になります。さらに、プロトタイプを変更することの性能への影響は細かく広範囲にわたり、 `Object.setPrototypeOf(...)` 文に費やされる時間だけではなく、 `[[Prototype]]` が変更されたすべてのオブジェクトへのアクセスを持つ**_すべて_**のコードに影響する可能性があります。
 >
@@ -24,7 +24,7 @@ Object.setPrototypeOf(obj, prototype)
 - `obj`
   - : プロトタイプを設定するオブジェクト。
 - `prototype`
-  - : オブジェクトの新しいプロトタイプ (オブジェクトまたは {{jsxref("null")}})。
+  - : オブジェクトの新しいプロトタイプ (オブジェクトまたは [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null))。
 
 ### 返値
 
@@ -32,7 +32,7 @@ Object.setPrototypeOf(obj, prototype)
 
 ## 解説
 
-`[[Prototype]]` が変更されるオブジェクトが {{jsxref("Object.isExtensible()")}} に応じて拡張不可の場合、 {{jsxref("Global_Objects/TypeError", "TypeError")}} 例外を投げます。`prototype` 引数がオブジェクトまたは {{jsxref("null")}} ではない場合(つまり、数値、文字列、boolean、 {{jsxref("undefined")}} のいずれか)、何もしません。さもなければ、このメソッドは `obj` の `[[Prototype]]` を新しい値に変更します。
+`[[Prototype]]` が変更されるオブジェクトが {{jsxref("Object.isExtensible()")}} に応じて拡張不可の場合、 {{jsxref("Global_Objects/TypeError", "TypeError")}} 例外を投げます。`prototype` 引数がオブジェクトまたは [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) ではない場合(つまり、数値、文字列、boolean、 {{jsxref("undefined")}} のいずれか)、何もしません。さもなければ、このメソッドは `obj` の `[[Prototype]]` を新しい値に変更します。
 
 `Object.setPrototypeOf()` は、 ECMAScript 2015 仕様書にあります。一般的には、オブジェクトのプロトタイプを設定するための適切な方法と考えられています。もっと物議を醸す [`Object.prototype.__proto__`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) プロパティがあります。
 
