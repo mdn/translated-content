@@ -11,7 +11,7 @@ l10n:
 
 ## 值
 
-与传递给 {{domxref("Permissions.query", "navigator.permissions.query()")}} 方法的 `name` 参数相同的一个只读值。
+一个与传递给 {{domxref("Permissions.query", "navigator.permissions.query()")}} 方法的 `name` 参数相同的只读值。
 
 ## 示例
 
