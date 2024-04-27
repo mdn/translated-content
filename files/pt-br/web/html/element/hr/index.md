@@ -20,11 +20,11 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 - `align` {{deprecated_inline}} {{Non-standard_Inline}}
   - : Define a regra de alinhamento na página. Se nenhum valor for especificado, o valor padrão é `left`.
 - `color` {{Deprecated_Inline}} {{Non-standard_inline}}
-  - : Denife a regra da cor através do nome da cor ou um valor hexadecimal.
+  - : Define a regra da cor através do nome da cor ou um valor hexadecimal.
 - `noshade` {{deprecated_inline}} {{Non-standard_Inline}}
-  - : Deine a regra para não ter sombreamento.
+  - : Define a regra para não ter sombreamento.
 - `size` {{deprecated_inline}} {{Non-standard_Inline}}
-  - : Denife a altura, em pixels.
+  - : Define a altura, em pixels.
 - `width` {{deprecated_inline}} {{Non-standard_Inline}}
   - : Define a regra de comprimento na página através de um valor em pixel ou porcentagem.
 
