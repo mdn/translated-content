@@ -7,7 +7,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-超文字傳輸協定（HTTP）**`451 Unavailable For Legal Reasons`** 用戶端錯誤回應碼表示用戶請求的資源由於法律原因而無法提供，例如發出法律行動的網頁。
+超文字傳輸協定（HTTP）**`451 Unavailable For Legal Reasons`** 用戶端錯誤回應碼表示用戶請求的資源由於法律原因而無法提供，例如遭受法律訴訟的網頁。
 
 ## 狀態
 
@@ -17,7 +17,7 @@ l10n:
 
 ## 範例
 
-此範例回應來自 IETF RFC（參見下文），並包含對 [《蒙提·派森的布萊恩生活》](https://en.wikipedia.org/wiki/Monty_Python's_Life_of_Brian) 的參考。
+此範例回應來自 IETF RFC（參見下文），並包含對[《萬世魔星》](https://zh.wikipedia.org/zh-tw/蒙提·派森之布莱恩的一生)的參考。
 
 > **備註：** {{HTTPHeader("Link")}} 標頭也可能包含 `rel="blocked-by"` 關係，識別實施封鎖的實體，而不是強制執行封鎖的任何其他實體。
 
@@ -50,5 +50,5 @@ Content-Type: text/html
 
 ## 參見
 
-- [Wikipedia: HTTP 451](https://zh.wikipedia.org/wiki/HTTP_451)
-- [Wikipedia: 華氏 451](https://zh.wikipedia.org/wiki/華氏451度)（該回應碼的數字詞源）
+- [維基百科：HTTP 451](https://zh.wikipedia.org/wiki/HTTP_451)
+- [維基百科：華氏 451](https://zh.wikipedia.org/wiki/華氏451度)（該回應碼的數字詞源）
