@@ -7,7 +7,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP **`429 Too Many Requests`** 回應狀態碼表示用戶在一定時間內發送了太多請求（"速率限制"）。
+HTTP **`429 Too Many Requests`** 回應狀態碼表示用戶在一定時間內發送了太多請求（「速率限制」）。
 
 可能會在此回應中包含一個 {{HTTPHeader("Retry-After")}} 標頭，指示要等待多長時間才能發送新的請求。
 
