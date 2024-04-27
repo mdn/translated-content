@@ -15182,6 +15182,10 @@
     "modified": "2020-10-15T22:30:15.212Z",
     "contributors": ["Jee"]
   },
+  "Web/API/Window/crossOriginIsolated": {
+    "modified": "2020-10-15T22:26:03.129Z",
+    "contributors": ["Fulgrim"]
+  },
   "Web/API/Window/customElements": {
     "modified": "2020-10-15T22:02:36.021Z",
     "contributors": ["RainSlide", "shhider", "bluetomlee", "lltemplar", "Mmzer"]
@@ -16235,10 +16239,6 @@
   "Web/API/createImageBitmap": {
     "modified": "2019-03-18T20:44:01.174Z",
     "contributors": ["fanerge", "varcat"]
-  },
-  "Web/API/crossOriginIsolated": {
-    "modified": "2020-10-15T22:26:03.129Z",
-    "contributors": ["Fulgrim"]
   },
   "Web/API/crypto_property": {
     "modified": "2019-03-23T22:22:09.825Z",
