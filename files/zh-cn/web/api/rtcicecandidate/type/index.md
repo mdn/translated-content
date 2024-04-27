@@ -16,7 +16,7 @@ l10n:
 一个字符串，其值为以下定义之一。这些候选者类型按优先级顺序列出；它们在列表中的位置越高，则其效率越高。
 
 - `host`
-  - : 主机候选者； {{domxref("RTCIceCandidate.address")}} 是一个真实的远程对等端的 IP 地址。
+  - : 主机候选者；其 {{domxref("RTCIceCandidate.address")}} 属性中指定的 IP 地址是真实的远程对等端的地址。
 - `srflx`
   - : 服务器反射候选者；`ip` 和端口是由 NAT 为一个代理分配绑定的，当代理通过 NAT 向服务器发送数据包时。它们可以被 {{Glossary("STUN")}} 服务器和 {{Glossary("TURN")}} 服务器学习，以匿名表示候选者的对等端。
 - `prflx`
