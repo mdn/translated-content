@@ -36,7 +36,7 @@ prompt()
 
 ## 实例
 
-参见[来自 `BeforeInstallPromptEvent` 接口示例](/zh-CN/docs/Web/API/BeforeInstallPromptEvent#examples)。
+请参考[来自 `BeforeInstallPromptEvent` 接口示例](/zh-CN/docs/Web/API/BeforeInstallPromptEvent#示例)。
 
 ## 浏览器兼容性
 
