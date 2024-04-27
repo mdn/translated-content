@@ -9,7 +9,7 @@ l10n:
 
 > **警告：** 在[草案第 8 版](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-client-hints-08)中，该标头已被从规范中移除。
 
-**`Accept-CH-Lifetime`** 标头由服务器设置，用于指定其通过使用 {{HTTPHeader("Accept-CH")}} 指定的[客户端提示](/zh-CN/docs/Web/HTTP/Client_hints)标头在后续请求中应由客户端包含的持续时间。
+**`Accept-CH-Lifetime`** 标头由服务器设置，用于指定其通过使用 {{HTTPHeader("Accept-CH")}} 指定的[客户端提示](/zh-CN/docs/Web/HTTP/Client_hints)标头在客户端的后续请求中应被包含的持续时间。
 
 <table class="properties">
   <tbody>
@@ -23,7 +23,7 @@ l10n:
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("CORS-safelisted request header", "CORS 安全列出的请求标头")}}
+        {{Glossary("CORS-safelisted request header", "列入 CORS 白名单的请求标头")}}
       </th>
       <td>无</td>
     </tr>
