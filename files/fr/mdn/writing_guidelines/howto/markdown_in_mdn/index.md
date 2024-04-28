@@ -501,7 +501,9 @@ Même quand un tableau peut être écris en GFM, il est certaines fois mieux d'u
   <tr>
     <td>Quelque chose de court</td>
     <td>
-      Quelque chose de bien plus long qui rentre vraiment dans les détails de quelque chose, tellement que le formattage des tableaux en GFM commence à être illisible.
+      Quelque chose de bien plus long qui rentre vraiment dans les détails de
+      quelque chose, tellement que le formattage des tableaux en GFM commence à
+      être illisible.
     </td>
     <td>Quelque chose de court</td>
     <td>
