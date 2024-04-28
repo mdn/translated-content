@@ -507,7 +507,9 @@ Même quand un tableau peut être écris en GFM, il est certaines fois mieux d'u
     </td>
     <td>Quelque chose de court</td>
     <td>
-      Une autre cellule avec beaucoup de texte à l'intérieur, qui rentre aussi beaucoup dans les détails de quelque chose, tellement que le formattage des tableaux en GFM commence à être illisible.
+      Une autre cellule avec beaucoup de texte à l'intérieur, qui rentre aussi
+      beaucoup dans les détails de quelque chose, tellement que le formattage
+      des tableaux en GFM commence à être illisible.
     </td>
     <td>Quelque chose de court</td>
     <td>Quelque chose de court</td>
