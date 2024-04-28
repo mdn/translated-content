@@ -9,7 +9,7 @@ l10n:
 
 你可以启动一个计时器来跟踪某一个操作的占用时长。每一个计时器必须拥有唯一的名字，页面中最多能同时运行 10,000 个计时器。当以此计时器名字为参数调用 {{ domxref("console.timeEnd()") }} 时，浏览器将以毫秒为单位，输出对应计时器所经过的时间。
 
-关于 [Timers](/zh-CN/DOM/console#Timers) 的细节和示例请参考文档 {{ domxref("console") }}。
+关于[计时器](/zh-CN/docs/Web/API/console#计时器)的细节和示例请参考文档 {{ domxref("console") }}。
 
 ## 语法
 
