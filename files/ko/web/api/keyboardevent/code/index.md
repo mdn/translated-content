@@ -19,7 +19,7 @@ l10n:
 
 ## 값
 
-윈도우, 리눅스, 맥 운영체제에 대한 코드 값은 [KeyboardEvent: code values](/en-US/docs/Web/API/UI_Events/Keyboard_event_code_values) 페이지에 나열되어 있습니다.
+윈도우, 리눅스, 맥 운영체제에 대한 코드 값은 [KeyboardEvent: code values](/ko/docs/Web/API/UI_Events/Keyboard_event_code_values) 페이지에 나열되어 있습니다.
 
 ## 예제
 
@@ -109,7 +109,7 @@ window.addEventListener(
 
 #### JavaScript
 
-자바스크립트 코드의 첫번째 부분에서는 우리가 사용할 변수를 정의합니다. `shipSize` 는 편의성을 위해 플레이어가 조종하는 우주선의 크기를 포함합니다. `position` 는 플레이 필드 내에서 우주선이 움직이는 위치를 추적하기 위해 사용됩니다. `moveRate` 는 키 입력에 따라서 우주선이 전방이나 후방으로 이동하는 픽셀의 수를, `turnRate` 는 키를 눌러 왼쪽이나 오른쪽으로 조종하는 컨트롤로 인하여 얼마나 회전했는지 각도를 나타냅니다. `angle` 은 현재 우주선에 적용된 회전 각도로, 이는 0° 도 (직진)에서 시작합니다. 마지막으로, `spaceship` 은 플레이어가 조종하는 우주선을 SVG 폴리곤 요소의 ID인 `"spaceship"` 을 참조합니다. 
+자바스크립트 코드의 첫번째 부분에서는 우리가 사용할 변수를 정의합니다. `shipSize` 는 편의성을 위해 플레이어가 조종하는 우주선의 크기를 포함합니다. `position` 는 플레이 필드 내에서 우주선이 움직이는 위치를 추적하기 위해 사용됩니다. `moveRate` 는 키 입력에 따라서 우주선이 전방이나 후방으로 이동하는 픽셀의 수를, `turnRate` 는 키를 눌러 왼쪽이나 오른쪽으로 조종하는 컨트롤로 인하여 얼마나 회전했는지 각도를 나타냅니다. `angle` 은 현재 우주선에 적용된 회전 각도로, 이는 0° 도 (직진)에서 시작합니다. 마지막으로, `spaceship` 은 플레이어가 조종하는 우주선을 SVG 폴리곤 요소의 ID인 `"spaceship"` 을 참조합니다.
 
 ```js
 let shipSize = {
@@ -152,7 +152,7 @@ function updatePosition(offset) {
 }
 ```
 
-`refresh()` 함수는 [SVG transform](/en-US/docs/Web/SVG/Attribute/transform) 을 사용하여 우주선의 회전과 위치를 적용합니다.
+`refresh()` 함수는 [SVG transform](/ko/docs/Web/SVG/Attribute/transform) 을 사용하여 우주선의 회전과 위치를 적용합니다.
 
 ```js
 function refresh() {
