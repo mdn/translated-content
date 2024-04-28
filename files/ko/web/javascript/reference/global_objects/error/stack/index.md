@@ -71,7 +71,7 @@ function foo() {
 }
 ```
 
-에러를 발생시킨 다음 다시 처리할 필요가 없습니다.
+오류를 발생시킨 다음 다시 처리할 필요가 없습니다.
 
 V8에서는 비표준 `Error.captureStackTrace()`, `Error.stackTraceLimit` 및 `Error.prepareStackTrace()` API를 사용하여 스택 추적을 사용자 정의할 수 있습니다. 자세한 내용은 V8 문서에서 [스택 추적 API](https://v8.dev/docs/stack-trace-api)를 참조하세요.
 
