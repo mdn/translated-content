@@ -1,6 +1,8 @@
 ---
 title: CSS colors
 slug: Web/CSS/CSS_colors
+l10n:
+  sourceCommit: 5f13cbe7517ce96deeb521d4c8e6923266a22913
 ---
 
 {{CSSRef}}
