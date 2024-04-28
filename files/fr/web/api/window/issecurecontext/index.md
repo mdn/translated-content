@@ -1,16 +1,17 @@
 ---
-title: isSecureContext
+title: "Window : propriété isSecureContext"
 slug: Web/API/Window/isSecureContext
-original_slug: Web/API/isSecureContext
+l10n:
+  sourceCommit: c40fe6508ac4add549d315aa20f6bc2fca49c27e
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef("DOM")}}
 
-La propriété globale en lecture seule **`isSecureContext`** renvoie un booléen qui indique si [le contexte est sécurisé](/fr/docs/Web/Security/Secure_Contexts).
+La propriété en lecture seule **`isSecureContext`** de l'interface [`Window`](/fr/docs/Web/API/Window) renvoie un booléen qui indique si [le contexte est sécurisé](/fr/docs/Web/Security/Secure_Contexts).
 
 ## Valeur
 
-Une valeur booléenne (`true` ou `false`).
+Une valeur booléenne.
 
 ## Spécifications
 

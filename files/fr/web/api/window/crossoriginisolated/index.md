@@ -1,15 +1,19 @@
 ---
-title: crossOriginIsolated
+title: "Window : propriété crossOriginIsolated"
 slug: Web/API/Window/crossOriginIsolated
-original_slug: Web/API/crossOriginIsolated
+l10n:
+  sourceCommit: c40fe6508ac4add549d315aa20f6bc2fca49c27e
 ---
 
-{{APIRef()}}{{SeeCompatTable}}
+{{APIRef("DOM")}}
 
-La propriété globale en lecture seule **`crossOriginIsolated`** renvoie une valeur booléenne indiquant si un objet [`SharedArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer) peut être envoyé via un appel à [`Window.postMessage()`](/fr/docs/Web/API/Window/postMessage).
+La propriété en lecture seule **`crossOriginIsolated`** de l'interface [`Window`](/fr/docs/Web/API/Window) renvoie une valeur booléenne indiquant si le site web est isolé pour les requêtes entre origines multiples. Cet état réduit le risque d'attaque par canal auxiliaire et permet certaines choses&nbsp;:
 
-Cette valeur dépend des en-têtes [`Cross-Origin-Opener-Policy`](/fr/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy) et
-[`Cross-Origin-Embedder-Policy`](/fr/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy) présents dans la réponse HTTP.
+- Un objet [`SharedArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer) peut être créé et envoyé via un appel à [`Window.postMessage()`](/fr/docs/Web/API/Window/postMessage) ou [`MessagePort.postMessage()`](/fr/docs/Web/API/MessagePort/postMessage).
+- [`Performance.now()`](/fr/docs/Web/API/Performance/now) dispose d'une meilleure précision.
+- On peut accéder à la méthode [`Performance.measureUserAgentSpecificMemory()`](/fr/docs/Web/API/Performance/measureUserAgentSpecificMemory).
+
+Un site web est dans cet état d'isolation lorsque l'en-tête de réponse HTTP [`Cross-Origin-Opener-Policy`](/fr/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy) vaut `same-origin` et l'en-tête [`Cross-Origin-Embedder-Policy`](/fr/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy) vaut `require-corp` ou `credentialless`.
 
 ## Valeur
 
@@ -18,10 +22,14 @@ Une valeur booléenne.
 ## Exemples
 
 ```js
-if (crossOriginIsolated) {
-  // On peut envoyer un SharedArrayBuffer
+const monWorker = new Worker("worker.js");
+
+if (window.crossOriginIsolated) {
+  const buffer = new SharedArrayBuffer(16);
+  monWorker.postMessage(buffer);
 } else {
-  // Sinon on fait autre chose
+  const buffer = new ArrayBuffer(16);
+  monWorker.postMessage(buffer);
 }
 ```
 
@@ -32,8 +40,3 @@ if (crossOriginIsolated) {
 ## Compatibilité des navigateurs
 
 {{Compat}}
-
-## Voir aussi
-
-- [L'API <i lang="en">Service Workers</i>](/fr/docs/Web/API/Service_Worker_API)
-- [L'API <i lang="en">Web Workers</i>](/fr/docs/Web/API/Web_Workers_API)
