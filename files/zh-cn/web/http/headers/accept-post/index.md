@@ -9,7 +9,7 @@ l10n:
 
 **`Accept-Post`** HTTP 响应标头是用于告知客户端服务器在接受 HTTP 的 POST 请求时能处理哪些[媒体类型](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types)。
 
-响应中对于任何方法的 **`Accept-Post`** 字段意味着允许在请求的资源上执行 `POST` 操作（标头中任何提及的文档/媒体格式进一步表明该格式的文档也被允许）。
+响应中对于任何方法的 **`Accept-Post`** 字段意味着允许在请求的资源上执行 `POST` 操作（标头中任何提及的文档或媒体格式进一步表明该格式的文档也被允许）。
 
 例如，服务器接收到具有不支持的媒体类型的 `POST` 请求时，可以回复 {{HTTPStatus("415")}} `Unsupported Media Type` （不支持的媒体类型）状态码，并在响应中包含一个 **`Accept-Post`** 标头，其中引用了一个或多个支持的媒体类型。
 
