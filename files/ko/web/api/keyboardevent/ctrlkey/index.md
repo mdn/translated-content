@@ -6,6 +6,7 @@ l10n:
 ---
 
 {{APIRef("UI Events")}}
+ 
 **`KeyboardEvent.ctrlKey`** 는 어떤 이벤트가 발생했을 때 키보드의 <kbd>control</kbd> 키 가 눌려 있었는지 아닌지 (`true`) 혹은 (`false`) 를 나타내는 읽기 전용 속성입니다.
 
 ## 값
@@ -26,8 +27,8 @@ l10n:
   </head>
   <body onkeypress="showChar(event);">
     <p>
-      Press any character key, with or without holding down the CTRL key.<br />
-      You can also use the SHIFT key together with the CTRL key.
+      CTRL 키를 누른 상태에서든 아니든 아무 문자 키를 눌러보세요.<br />
+      SHIFT 키 또한 CTRL 와 함께 사용할 수 있습니다.
     </p>
   </body>
 </html>
