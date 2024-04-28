@@ -7,7 +7,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP 允許瀏覽器或其他{{Glossary("user agent", "使用者代理")}}與互聯網上的不同的*資源*進行通信：為此，瀏覽器需要資源的*識別*和*位置*。這兩個訊息由 {{glossary("URI")}} 描述。
+HTTP 允許瀏覽器或其他{{Glossary("user agent", "使用者代理")}}與互聯網上的不同的*資源*進行通信：為此，瀏覽器需要資源的*身份*和*位置*。這兩個訊息由 {{glossary("URI")}} 描述。
 
 - [識別網路上的資源](/zh-TW/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)
   - : URI 以及如何訪問網路上的資源。
