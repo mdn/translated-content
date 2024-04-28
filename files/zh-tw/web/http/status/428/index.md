@@ -9,7 +9,7 @@ l10n:
 
 HTTP **`428 Precondition Required`** 回應狀態碼表示伺服器要求請求是[有條件的](/zh-TW/docs/Web/HTTP/Conditional_requests)。
 
-通常這意味著必要的先決條件標頭，例如 {{HTTPHeader("If-Match")}}，**is missing**。
+通常這意味著必要的先決條件標頭（例如 {{HTTPHeader("If-Match")}}）的**缺失**。
 
 當先決條件標頭與伺服器端狀態**不匹配**時，回應應為 {{HTTPStatus(412)}} `Precondition Failed`。
 
