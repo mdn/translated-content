@@ -86,7 +86,7 @@ Sur MDN, les auteurs utiliserons les blocs de code pour les exemples de code. Il
   - `bash` - Bash/Shell
   - `batch` - Batch (Windows Shell)
   - `powershell` - PowerShell
-- Fichiers de configuration/données 
+- Fichiers de configuration/données
   - `json` - JSON
   - `ini` - INI
   - `yaml` - YAML
