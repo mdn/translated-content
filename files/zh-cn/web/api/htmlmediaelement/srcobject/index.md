@@ -91,7 +91,7 @@ let handle = mediaSource.handle;
 postMessage({ arg: handle }, [handle]);
 
 mediaSource.addEventListener("sourceopen", () => {
-  // 在创建 SourceBuffers 并用获取的媒体内容填充它们之前，请等待 MediaSource 上的 sourceopen 事件——直到 MediaSource 附加到 HTMLMediaElement。并且其 readyState 变为 "open"，MediaSource 才会接受 SourceBuffer 的创建。
+  // 在创建 SourceBuffers 并用获取的媒体内容填充它们之前，请等待 MediaSource 上的 sourceopen 事件——直到 MediaSource 附加到 HTMLMediaElement。并且其 readyState 变为“open”，MediaSource 才会接受 SourceBuffer 的创建。
 });
 ```
 
@@ -105,7 +105,7 @@ worker.addEventListener("message", (msg) => {
 });
 ```
 
-> **备注：** {{domxref("MediaSourceHandle")}} 无法成功传输到共享 worker 或服务 worker。
+> **备注：** {{domxref("MediaSourceHandle")}} 无法成功传输到共享 worker 或 service worker。
 
 ## 规范
 
