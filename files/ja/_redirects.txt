@@ -3213,7 +3213,7 @@
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap	/ja/docs/Web/API/createImageBitmap
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/fetch	/ja/docs/Web/API/fetch
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/indexedDB	/ja/docs/Web/API/Window/indexedDB
-/ja/docs/Web/API/WindowOrWorkerGlobalScope/isSecureContext	/ja/docs/Web/API/isSecureContext
+/ja/docs/Web/API/WindowOrWorkerGlobalScope/isSecureContext	/ja/docs/Web/API/Window/isSecureContext
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/origin	/ja/docs/Web/API/origin
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/setInterval	/ja/docs/Web/API/setInterval
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout	/ja/docs/Web/API/setTimeout
@@ -3359,6 +3359,7 @@
 /ja/docs/Web/API/form.submit	/ja/docs/Web/API/HTMLFormElement/submit
 /ja/docs/Web/API/form.target	/ja/docs/Web/API/HTMLFormElement/target
 /ja/docs/Web/API/indexedDB	/ja/docs/Web/API/Window/indexedDB
+/ja/docs/Web/API/isSecureContext	/ja/docs/Web/API/Window/isSecureContext
 /ja/docs/Web/API/range.intersectsNode	/ja/docs/Web/API/Range/intersectsNode
 /ja/docs/Web/API/range.setStart	/ja/docs/Web/API/Range/setStart
 /ja/docs/Web/API/tableRow.insertCell	/ja/docs/Web/API/HTMLTableRowElement/insertCell
