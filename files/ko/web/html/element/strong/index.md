@@ -128,7 +128,7 @@ l10n:
   </tbody>
 </table>
 
-## 명세
+## 명세서
 
 {{Specifications}}
 
