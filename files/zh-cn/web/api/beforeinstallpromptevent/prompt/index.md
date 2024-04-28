@@ -34,7 +34,7 @@ prompt()
 - `platform` {{experimental_inline}} {{non-standard_inline}}
   - : 如果用户选择安装应用，此参数为一个字符串，表示所选平台的名称，该名称是 {{domxref("BeforeInstallPromptEvent.platforms")}} 属性的值之一。如果用户选择不安装应用，此参数则为空字符串。
 
-## 实例
+## 示例
 
 请参考[来自 `BeforeInstallPromptEvent` 接口示例](/zh-CN/docs/Web/API/BeforeInstallPromptEvent#示例)。
 
