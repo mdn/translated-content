@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("UI Events")}}
 
-**`KeyboardEvent.altKey`** 는 어떤 이벤트가 발생했을 때 키보드의 <kbd>alt</kbd> 키 (맥 OS 에서는 <kbd>Option</kbd> 또는 <kbd>⌥</kbd>) 가 눌려 있었는지 아닌지 (`true`) 혹은 (`false`) 를 나타내는 읽기 전용 속성입니다. 
+**`KeyboardEvent.altKey`** 는 어떤 이벤트가 발생했을 때 키보드의 <kbd>alt</kbd> 키 (맥 OS 에서는 <kbd>Option</kbd> 또는 <kbd>⌥</kbd>) 가 눌려 있었는지 아닌지 (`true`) 혹은 (`false`) 를 나타내는 읽기 전용 속성입니다.
 
 ## 값
 
