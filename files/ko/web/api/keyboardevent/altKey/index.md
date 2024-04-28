@@ -42,8 +42,8 @@ l10n:
 
   <body onkeydown="showChar(event);">
     <p>
-      Press any character key, with or without holding down the ALT key.<br />
-      You can also use the SHIFT key together with the ALT key.
+      ALT 키를 누른 상태에서든 아니든 아무 문자 키를 눌러보세요.<br />
+      SHIFT 키 또한 ALT 키와 함께 사용할 수 있습니다.
     </p>
   </body>
 </html>
