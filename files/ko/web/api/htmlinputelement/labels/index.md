@@ -12,7 +12,7 @@ l10n:
 
 ## 값
 
-`<input>` 요소와 연관된 `<label>` 요소를 포함하는 {{domxref("NodeList")}} 입니다.
+`<input>` 요소와 연관된 `<label>` 요소를 포함하는 {{domxref("NodeList")}}입니다.
 
 ## 예제
 
