@@ -7,7 +7,7 @@ l10n:
 
 {{ApiRef("Location")}}
 
-{{domxref("Location")}} 接口的 **`toString()`** {{Glossary("stringifier", "字符串化")}}方法返回一个包含整个 URL 的字符串。他是 {{domxref("Location.href")}} 的只读版本。
+{{domxref("Location")}} 接口的 **`toString()`** {{Glossary("stringifier", "字符串化")}}方法返回一个包含整个 URL 的字符串。它是 {{domxref("Location.href")}} 的只读版本。
 
 ## 语法
 
