@@ -173,8 +173,8 @@ JavaScript 语言旨在用于更加广泛的环境，不论是浏览器、服务
 
 ### 其他
 
-- {{jsxref("Statements/Empty", "Empty", "", 1)}}
-- {{jsxref("Statements/block", "Block", "", 1)}}
+- {{jsxref("Statements/Empty", "空语句", "", 1)}}
+- {{jsxref("Statements/block", "块语句", "", 1)}}
 - {{jsxref("Statements/Expression_statement", "表达式语句", "", 1)}}
 - {{jsxref("Statements/debugger", "debugger")}}
 - {{jsxref("Statements/export", "export")}}
