@@ -604,4 +604,4 @@ Les marges haute et basse n'ont aucun effet sur les élements en ligne (inline) 
 (par exemple les \{{HTMLElement("span")}} ou \{{HTMLElement("code")}}).
 ```
 
-Voir [Utiliser les macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros) pour plus d'informations sur les macros.
+Voir [Utiliser les macros](/fr/docs/MDN/Writing_guidelines/Page_structures/Macros) pour plus d'informations sur les macros.
