@@ -177,6 +177,7 @@ Ce problème a été résolu dans :
 ## Notes, avertissements, et encadrés
 
 Certains auteurs veulent attirer l'attention sur une partie du contenu. Pour réaliser cela, ils utilisent un bloc de code GFM avec un premier paragraphe spécial. Il en existe trois types : les notes, les avertissements et les encadrés.
+
 - Pour ajouter une note, créez un bloc de code dont le premier paragraphe commence par `**Note:**`.
 - Pour ajouter un avertissement, créez un bloc de code dont le premier paragraphe commence par `**Warning:**`.
 - Pour ajouter un encadré, créez un bloc de code dont le premier paragraphe commence par `**Callout:**`.
