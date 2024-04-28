@@ -28,11 +28,11 @@ prompt()
 - `outcome` {{experimental_inline}} {{non-standard_inline}}
 
   - : 一个字符串，表示用户是否选择了安装应用。此字符串必须是以下其中一个值：
-    - `"accepted"`: 用户已安装该应用。
-    - `"dismissed"`: 用户未安装该应用。
+    - `"accepted"`：用户已安装该应用。
+    - `"dismissed"`：用户未安装该应用。
 
 - `platform` {{experimental_inline}} {{non-standard_inline}}
-  - : 如果用户选择安装应用，此参数为一个字符串，表示所选平台的名称，该名称来自 {{domxref("BeforeInstallPromptEvent.platforms")}} 属性的值之一。如果用户选择不安装应用，此参数则为空字符串。
+  - : 如果用户选择安装应用，此参数为一个字符串，表示所选平台的名称，该名称是 {{domxref("BeforeInstallPromptEvent.platforms")}} 属性的值之一。如果用户选择不安装应用，此参数则为空字符串。
 
 ## 实例
 
@@ -45,4 +45,4 @@ prompt()
 ## 参见
 
 - [制作可安装的 PWA](/zh-CN/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable)
-- web.dev（2021）上的[How to provide your own in-app install experience](https://web.dev/articles/customize-install)
+- web.dev（2021）上的[如何为应用提供安装体验](https://web.dev/articles/customize-install)
