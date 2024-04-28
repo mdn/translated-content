@@ -1,6 +1,7 @@
 ---
 title: crossOriginIsolated
-slug: Web/API/crossOriginIsolated
+slug: Web/API/Window/crossOriginIsolated
+original_slug: Web/API/crossOriginIsolated
 ---
 
 {{APIRef()}}{{SeeCompatTable}}
