@@ -27,7 +27,7 @@ prompt()
 
 - `outcome` {{experimental_inline}} {{non-standard_inline}}
 
-  - : 一个字符串，表示用户是否选择了安装应用。此字符串必须是以下其中一个值：
+  - : 一个字符串，表示用户是否选择了安装应用。此字符串必须是以下值之一：
     - `"accepted"`：用户已安装该应用。
     - `"dismissed"`：用户未安装该应用。
 
