@@ -7,7 +7,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-超文字傳輸協定（HTTP）**`503 Service Unavailable`** 伺服器錯誤回應代碼表示伺服器尚未準備好處理請求。
+超文本傳輸協定（HTTP）**`503 Service Unavailable`** 伺服器錯誤回應代碼表示伺服器尚未準備好處理請求。
 
 常見原因是伺服器正在進行維護或超載。此回應應用於臨時情況，如果可能，{{HTTPHeader("Retry-After")}} HTTP 標頭應包含恢復服務的預估時間。
 
