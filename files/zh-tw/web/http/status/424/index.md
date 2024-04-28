@@ -23,4 +23,4 @@ HTTP **`424 Failed Dependency`** 用戶端錯誤回應碼表示無法對資源�
 
 ## 參見
 
-- {{HTTPStatus("403")}} (Forbidden)
+- {{HTTPStatus("403")}}（Forbidden）
