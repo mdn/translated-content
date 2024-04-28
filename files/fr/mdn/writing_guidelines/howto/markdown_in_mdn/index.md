@@ -99,7 +99,7 @@ Sur MDN, les auteurs utiliserons les blocs de code pour les exemples de code. Il
   - `django` - Modèles Django
   - `svelte` - Modèles Svelte
   - `handlebars` - Modèles Handlebars
-  - `pug` - [Modèles Pug](https://pugjs.org/api/getting-started.html) (peuvent être utilisés par [Express](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer))
+  - `pug` - [Modèles Pug](https://pugjs.org/api/getting-started.html) (peuvent être utilisés par [Express](/fr/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer))
 - Autres
   - `plain` - Texte brut
   - `diff` - Fichier de différence
