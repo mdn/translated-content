@@ -9,7 +9,7 @@ l10n:
 
 {{domxref("HTMLMediaElement")}} 接口的 **`srcObject`** 属性设定或返回一个对象，这个对象提供了一个与 {{domxref("HTMLMediaElement")}} 关联的媒体源。
 
-该对象可以是一个 {{domxref("MediaStream")}}、一个 {{domxref("MediaSource")}}、一个 {{domxref("Blob")}} 或者一个（{{domxref("File")}} 类型继承自 `Blob`）。
+该对象可以是一个 {{domxref("MediaStream")}}、一个 {{domxref("MediaSource")}}、一个 {{domxref("Blob")}} 或者一个（{{domxref("File")}} 类型（该类型继承自 `Blob`）。
 
 > **备注：** 截至 2020 年 3 月，仅有 Safari 浏览器完全支持 `srcObject`，只能使用 `MediaSource`、`MediaStream`、`Blob` 和 `File` 对象作为其值。其他浏览器仅支持 `MediaStream` 对象；在它们跟进支持之前，可以考虑回退到 {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} 来使用创建 URL，并将其分配给 {{domxref("HTMLMediaElement.src")}}（下文会有示例）。另外，自 108 版本起，Chromium 支持通过将从 worker 传输过来的 `MediaSource` 对象的 {{domxref("MediaSourceHandle")}} 实例分配给 `srcObject`，来连接一个专用 worker 线程对象。
 
