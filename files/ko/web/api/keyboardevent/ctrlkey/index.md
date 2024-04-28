@@ -28,7 +28,7 @@ l10n:
   <body onkeypress="showChar(event);">
     <p>
       CTRL 키를 누른 상태에서든 아니든 아무 문자 키를 눌러보세요.<br />
-      SHIFT 키 또한 CTRL 와 함께 사용할 수 있습니다.
+      SHIFT 키 또한 CTRL 키와 함께 사용할 수 있습니다.
     </p>
   </body>
 </html>
