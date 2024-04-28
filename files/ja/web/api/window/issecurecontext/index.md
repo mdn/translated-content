@@ -1,8 +1,7 @@
 ---
 title: isSecureContext
-slug: Web/API/isSecureContext
-l10n:
-  sourceCommit: d42b609444efb915ab46117f59985d67dda21eb6
+slug: Web/API/Window/isSecureContext
+original_slug: Web/API/isSecureContext
 ---
 
 {{APIRef}}
