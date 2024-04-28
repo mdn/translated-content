@@ -199,6 +199,7 @@ Le bloc de code peut contenir d'autres éléments de type bloc.
 >
 > Elle peut avoir plusieurs lignes.
 ```
+
 Cela produira le HTML suivant :
 
 ```html
