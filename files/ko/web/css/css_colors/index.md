@@ -73,7 +73,11 @@ l10n:
 ## 안내서
 
 - [CSS를 사용하여 HTML 요소에 색상 적용하기](/ko/docs/Web/CSS/CSS_colors/Applying_color)
-  - : CSS를 사용하여 다양한 유형의 콘텐츠에 색상을 적용하는 방법에 대한 안내서입니다. 모든 색상 관련 CSS 속성이 다루고 있습니다.
+  - : CSS를 사용하여 `<color>`를 값으로 허용하는 모든 CSS 속성을 포함하여 다양한 유형의 콘텐츠에 색상을 적용하는 방법에 대한 안내서입니다.
+- [CSS 색상 값](/ko/docs/Web/CSS/CSS_colors/Color_values)
+  - : CSS에서 사용할 수 있는 색상 공간 및 다양한 `<color>` 기능 표기법에 대한 개요입니다.
+- [색상을 현명하게 사용하기](/ko/docs/Web/CSS/CSS_colors/Using_color_wisely)
+  - : 색상 이론 및 자료, 접근 가능한 색상 팔레트, 대비 및 색상 인쇄에 적합한 색상을 찾는 방법을 포함합니다.
 - [상대적인 색상 사용](/ko/docs/Web/CSS/CSS_colors/Relative_colors)
   - : 이 문서는 상대적인 CSS 색상 구문을 설명하며, 각 옵션의 차이를 보여주고, 몇 가지 예시를 살펴봅니다.
 - [색상과 휘도 이해하기](/ko/docs/Web/Accessibility/Understanding_Colors_and_Luminance)
