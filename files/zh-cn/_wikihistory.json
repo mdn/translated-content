@@ -15182,6 +15182,10 @@
     "modified": "2020-10-15T22:30:15.212Z",
     "contributors": ["Jee"]
   },
+  "Web/API/Window/crossOriginIsolated": {
+    "modified": "2020-10-15T22:26:03.129Z",
+    "contributors": ["Fulgrim"]
+  },
   "Web/API/Window/customElements": {
     "modified": "2020-10-15T22:02:36.021Z",
     "contributors": ["RainSlide", "shhider", "bluetomlee", "lltemplar", "Mmzer"]
@@ -15307,6 +15311,10 @@
   "Web/API/Window/innerWidth": {
     "modified": "2020-10-15T22:30:06.986Z",
     "contributors": ["Jee"]
+  },
+  "Web/API/Window/isSecureContext": {
+    "modified": "2019-09-21T03:37:23.951Z",
+    "contributors": ["Awe"]
   },
   "Web/API/Window/length": {
     "modified": "2019-03-23T23:33:15.311Z",
@@ -16232,10 +16240,6 @@
     "modified": "2019-03-18T20:44:01.174Z",
     "contributors": ["fanerge", "varcat"]
   },
-  "Web/API/crossOriginIsolated": {
-    "modified": "2020-10-15T22:26:03.129Z",
-    "contributors": ["Fulgrim"]
-  },
   "Web/API/crypto_property": {
     "modified": "2019-03-23T22:22:09.825Z",
     "contributors": ["koaqiu", "Taoja"]
@@ -16259,10 +16263,6 @@
       "camsong",
       "fuchao2012"
     ]
-  },
-  "Web/API/isSecureContext": {
-    "modified": "2019-09-21T03:37:23.951Z",
-    "contributors": ["Awe"]
   },
   "Web/API/notification": {
     "modified": "2020-09-28T00:03:47.900Z",

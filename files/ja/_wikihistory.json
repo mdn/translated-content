@@ -14121,6 +14121,10 @@
       "Potappo"
     ]
   },
+  "Web/API/Window/isSecureContext": {
+    "modified": "2020-10-15T22:08:54.038Z",
+    "contributors": ["k-kuwahara"]
+  },
   "Web/API/Window/languagechange_event": {
     "modified": "2020-10-15T22:28:08.684Z",
     "contributors": ["mfuji09"]
@@ -15183,10 +15187,6 @@
       "Piroro-hs",
       "chikoski"
     ]
-  },
-  "Web/API/isSecureContext": {
-    "modified": "2020-10-15T22:08:54.038Z",
-    "contributors": ["k-kuwahara"]
   },
   "Web/API/origin": {
     "modified": "2020-10-15T22:08:52.985Z",

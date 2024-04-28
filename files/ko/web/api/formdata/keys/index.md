@@ -3,7 +3,9 @@ title: FormData.keys()
 slug: Web/API/FormData/keys
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{AvailableInWorkers}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 **`FormData.keys()`** 메서드는 이 객체에 포함된 모든 키를 통과하는 {{jsxref("Iteration_protocols",'iterator')}} 를 반환합니다. 키는 {{domxref("USVString")}} 객체입니다.
 
