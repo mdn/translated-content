@@ -155,7 +155,7 @@ Set-Cookie: mykey=myvalue; SameSite=Strict
 
 子域上的易受攻擊應用程序可以使用 `Domain` 屬性設置 Cookie，這會使該 Cookie 在所有其他子域上都可訪問。這種機制可能被濫用，從而進行*會話固定*攻擊。請參見[會話固定](/zh-TW/docs/Web/Security/Types_of_attacks#session_fixation)以了解主要的緩解方法。
 
-作為[深度防禦措施](https://en.wikipedia.org/wiki/Defense_in_depth_(computing))，你可以使用 *cookie 前綴*來斷言有關 Cookie 的特定事實。兩種前綴可用：
+作為[深度防禦措施](<https://en.wikipedia.org/wiki/Defense_in_depth_(computing)>)，你可以使用 *cookie 前綴*來斷言有關 Cookie 的特定事實。兩種前綴可用：
 
 - `__Host-`
   - : 如果 Cookie 名稱具有此前綴，則僅當它也標記有 `Secure` 屬性、從安全來源發送且不包含 `Domain` 屬性，並且 `Path` 屬性設置為 `/` 時，才會在 {{HTTPHeader("Set-Cookie")}} 標頭中接受。這樣，這些 Cookie 可被視為「域鎖定」。
