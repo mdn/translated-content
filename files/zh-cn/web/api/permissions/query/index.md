@@ -137,7 +137,7 @@ async function getPermission(permission) {
 
 运行代码的日志如下所示：
 
-{{EmbedLiveSample('Test support for various permissions',"100%", "370px")}}
+{{EmbedLiveSample('测试对不同权限的支持',"100%", "370px")}}
 
 ## 规范
 
