@@ -17,6 +17,6 @@ l10n:
 508 Loop Detected
 ```
 
-## 規格
+## 規範
 
 {{Specifications}}
