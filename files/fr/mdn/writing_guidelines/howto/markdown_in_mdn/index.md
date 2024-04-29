@@ -11,24 +11,24 @@ Cette page décrit comment nous utilisons le Markdown pour écrire la documentat
 
 ## Base : le Markdown personnalisé de GitHub
 
-La base pour le Markdown de MDN est le Markdown personnalisé de Github (GFM) : <https://github.github.com/gfm/>. Cela signifie que vous pouvez vous référer à la spécification GFM pour tout ce qui n'est pas explicitement spécifié sur cette page. GFM à son tour est un surensemble de CommonMark (<https://spec.commonmark.org>).
+La base pour le Markdown de MDN est le Markdown personnalisé de Github (GFM)&nbsp;: <https://github.github.com/gfm/>. Cela signifie que vous pouvez vous référer à la spécification GFM pour tout ce qui n'est pas explicitement spécifié sur cette page. GFM à son tour est un surensemble de CommonMark (<https://spec.commonmark.org>).
 
 ## Liens
 
-La spécification GFM défini deux types basiques de liens :
+La spécification GFM défini deux types basiques de liens&nbsp;:
 
 - [les liens en ligne](https://github.github.com/gfm/#inline-link), dans lesquels la destination est donnée directement après le texte du lien
 - [les liens de référence](https://github.github.com/gfm/#reference-link), dans lesquels la destination est définie ailleurs dans le document.
 
 Sur MDN, nous autorisons uniquement les liens en ligne.
 
-Voici la manière correcte d'écrire des liens GFM sur MDN :
+Voici la manière correcte d'écrire des liens GFM sur MDN&nbsp;:
 
 ```md example-good
 Les [Macarons](https://fr.wikipedia.org/wiki/Macaron) sont délicieux mais difficiles à faire.
 ```
 
-Ceci est une manière incorrecte d'écrire des liens sur MDN :
+Ceci est une manière incorrecte d'écrire des liens sur MDN&nbsp;:
 
 ```md example-bad
 Les [Macarons][macaron] sont délicieux mais difficiles à faire.
@@ -38,11 +38,11 @@ Les [Macarons][macaron] sont délicieux mais difficiles à faire.
 
 ## Blocs de code d'exemple
 
-Dans GFM et CommonMark, les auteurs peuvent utiliser des "blocs de code" pour délimiter les blocs `<pre>`. Le bloc de code ouvrant peut être suivi par du texte appelé "texte d'information". La spécification établit ceci :
+Dans GFM et CommonMark, les auteurs peuvent utiliser des "blocs de code" pour délimiter les blocs `<pre>`. Le bloc de code ouvrant peut être suivi par du texte appelé "texte d'information". La spécification établit ceci&nbsp;:
 
 > Le premier mot du texte d'information est généralemennt utilisé pour spécifier le langage de l'exemple de code, et est rendu dans l'attribut de classe de la balise de code.
 
-Il est possible pour le texte d'information de contenir plusieurs mots :
+Il est possible pour le texte d'information de contenir plusieurs mots&nbsp;:
 
 ````md
 ```fee fi fo fum
@@ -50,7 +50,7 @@ Il est possible pour le texte d'information de contenir plusieurs mots :
 ```
 ````
 
-Sur MDN, les auteurs utiliserons les blocs de code pour les exemples de code. Ils doivent spécifier le langage de l'exemple de code dans le premier mot du texte d'information, et cela sera utiliser pour fournir de la coloration syntaxique pour le bloc. Les mots suivant sont supportés :
+Sur MDN, les auteurs utiliserons les blocs de code pour les exemples de code. Ils doivent spécifier le langage de l'exemple de code dans le premier mot du texte d'information, et cela sera utiliser pour fournir de la coloration syntaxique pour le bloc. Les mots suivant sont supportés&nbsp;:
 
 - Langages de programmation
   - JavaScript
@@ -107,7 +107,7 @@ Sur MDN, les auteurs utiliserons les blocs de code pour les exemples de code. Il
   - `regex` - Expression régulière
   - `uri` - URIs et URLs
 
-Par exemple:
+Par exemple&nbsp;:
 
 ````md
 ```js
@@ -119,7 +119,7 @@ Si la coloration syntaxique que vous souhaitez utiliser n'est pas listée au-des
 
 ### Supression du formattage
 
-Les auteurs peuvent ajouter le suffixe `-nolint` à n'importe quel identificateur de langage :
+Les auteurs peuvent ajouter le suffixe `-nolint` à n'importe quel identificateur de langage&nbsp;:
 
 ````md-nolint
 ```html-nolint
@@ -135,13 +135,13 @@ Les blocs de code comme cela auront bien la coloration syntaxique et seront reco
 
 GFM supporte les [textes d'information](https://github.github.com/gfm/#info-string), qui permettent aux auteurs d'ajouter des informations additionnelles à propos d'un bloc de code. Sur MDN, les textes d'information sont convertis en noms de classe.
 
-Les auteurs pourront ajouter l'un des textes d'information suivant :
+Les auteurs pourront ajouter l'un des textes d'information suivant&nbsp;:
 
-- `example-good`: mettre cet exemple en forme en tant que bon exemple (à suivre).
-- `example-bad`: mettre cet exemple en forme en tant que mauvais exemple (à éviter).
-- `hidden`: ne pas afficher ce bloc de code sur la page. À utiliser pour les exemples en direct.
+- `example-good`&nbsp;: mettre cet exemple en forme en tant que bon exemple (à suivre).
+- `example-bad`&nbsp;: mettre cet exemple en forme en tant que mauvais exemple (à éviter).
+- `hidden`&nbsp;: ne pas afficher ce bloc de code sur la page. À utiliser pour les exemples en direct.
 
-Par exemple:
+Par exemple&nbsp;:
 
 ````md
 ```js example-good
@@ -157,7 +157,7 @@ const greeting = "Je suis une salutation secrète";
 ```
 ````
 
-Ces exemples seront affichés comme suit :
+Ces exemples seront affichés comme suit&nbsp;:
 
 ```js example-good
 const greeting = "Je suis un bon exemple";
@@ -169,22 +169,22 @@ const greeting = "Je suis un mauvais exemple";
 
 ### Référence de la discussion
 
-Ce problème a été résolu dans :
+Ce problème a été résolu dans&nbsp;:
 
 - <https://github.com/mdn/content/issues/3512>
 - <https://github.com/mdn/yari/pull/7017>
 
 ## Notes, avertissements, et encadrés
 
-Certains auteurs veulent attirer l'attention sur une partie du contenu. Pour réaliser cela, ils utilisent un bloc de code GFM avec un premier paragraphe spécial. Il en existe trois types : les notes, les avertissements et les encadrés.
+Certains auteurs veulent attirer l'attention sur une partie du contenu. Pour réaliser cela, ils utilisent un bloc de code GFM avec un premier paragraphe spécial. Il en existe trois types&nbsp;: les notes, les avertissements et les remarques.
 
-- Pour ajouter une note, créez un bloc de code dont le premier paragraphe commence par `**Note:**`.
-- Pour ajouter un avertissement, créez un bloc de code dont le premier paragraphe commence par `**Warning:**`.
-- Pour ajouter un encadré, créez un bloc de code dont le premier paragraphe commence par `**Callout:**`.
+- Pour ajouter une note, créez un bloc de code dont le premier paragraphe commence par `**Note :**`.
+- Pour ajouter un avertissement, créez un bloc de code dont le premier paragraphe commence par `**Attention :**`.
+- Pour ajouter un encadré, créez un bloc de code dont le premier paragraphe commence par `**Remarque :**`.
 
-Les notes et les avertissements afficheront le texte **Note:** ou **Warning:** dans la sortie, tandis que les encadré ne le feront pas. Cela fait des encadrés un bon choix lorsqu'un auteur veut utiliser un titre personnalisé.
+Les notes et les avertissements afficheront le texte **Note :** ou **Attention :** dans la sortie, tandis que les remarques ne le feront pas. Cela fait des remarques un bon choix lorsqu'un auteur veut utiliser un titre personnalisé.
 
-Le traitement des mots de balisage fonctionne sur l'ASA produit, pas sur les caractères exactes fournis en entrée. Cela signifie que fournir `<strong>Note:</strong>` génèrera aussi une note. Cependant, la syntaxe Markdown est requise par souci de style.
+Le traitement des mots de balisage fonctionne sur l'ASA produit, pas sur les caractères exactes fournis en entrée. Cela signifie que fournir `<strong>Note :</strong>` génèrera aussi une note. Cependant, la syntaxe Markdown est requise par souci de style.
 
 Plusieurs lignes sont produites par un bloc de code vide de la même manière que pour les paragraphes normaux. De plus, plusieurs lignes sans espace sont aussi traitées comme une ligne de Markdown normale, et sont donc concaténées.
 
@@ -195,35 +195,35 @@ Le bloc de code peut contenir d'autres éléments de type bloc.
 #### Note
 
 ```md
-> **Note:** Voici comment écrire une note.
+> **Note :** Voici comment écrire une note.
 >
 > Elle peut avoir plusieurs lignes.
 ```
 
-Cela produira le HTML suivant :
+Cela produira le HTML suivant&nbsp;:
 
 ```html
 <div class="notecard note">
-  <p><strong>Note:</strong> Voici comment écrire une note.</p>
+  <p><strong>Note :</strong> Voici comment écrire une note.</p>
   <p>Elle peut avoir plusieurs lignes.</p>
 </div>
 ```
 
-Ce HTML sera affiché comme une boîte mise en valeur :
+Ce HTML sera affiché comme une boîte mise en valeur&nbsp;:
 
-> **Note:** Voici comment écrire une note.
+> **Note :** Voici comment écrire une note.
 >
 > Elle peut avoir plusieurs lignes.
 
 #### Avertissements
 
 ```md
-> **Warning:** Voici comment écrire un avertissement.
+> **Attention :** Voici comment écrire un avertissement.
 >
 > Il peut avoir plusieurs paragraphes.
 ```
 
-Cela produira le HTML suivant :
+Cela produira le HTML suivant&nbsp;:
 
 ```html
 <div class="notecard warning">
@@ -232,21 +232,21 @@ Cela produira le HTML suivant :
 </div>
 ```
 
-Ce HTML sera affiché comme une boîte mise en valeur :
+Ce HTML sera affiché comme une boîte mise en valeur&nbsp;:
 
-> **Warning:** Voici comment écrire un avertissement.
+> **Attention :** Voici comment écrire un avertissement.
 >
 > Il peut avoir plusieurs paragraphes.
 
 #### Encadrés
 
 ```md
-> **Callout:** **Voici comment écrire un encadré.**
+> **Remarque :** **Voici comment écrire un encadré.**
 >
 > Il peut avoir plusieurs paragraphes.
 ```
 
-Cela produira le HTML suivant :
+Cela produira le HTML suivant&nbsp;:
 
 ```html
 <div class="callout">
@@ -255,9 +255,9 @@ Cela produira le HTML suivant :
 </div>
 ```
 
-Ce HTML sera affiché comme une boîte mise en valeur :
+Ce HTML sera affiché comme une remarque&nbsp;:
 
-> **Callout:**
+> **Remarque :**
 >
 > **Voici comment écrire un encadré.**
 >
@@ -265,17 +265,17 @@ Ce HTML sera affiché comme une boîte mise en valeur :
 
 #### Avertissement traduit
 
-Comme les textes "Note:" ou "Warning:" apparaissent aussi dans la sortie affichée, ils doivent être sensibles aux traductions. En pratique, cela signifie que chaque locale supporté par MDN doit fournir ses propres traductions de ces textes, et que la plateforme doit les reconnaître comme indiquant que la construction à besoin d'un traitement spécial.
+Comme les textes «&nbsp;Note :&nbsp;» ou «&nbsp;Attention :&nbsp;» apparaissent aussi dans la sortie affichée, ils doivent être sensibles aux traductions. En pratique, cela signifie que chaque locale supporté par MDN doit fournir ses propres traductions de ces textes, et que la plateforme doit les reconnaître comme indiquant que la construction à besoin d'un traitement spécial.
 
-Les locales sont stockées dans [Yari](https://github.com/mdn/yari/tree/main/markdown/localizations) en tant que fichier JSON dans le format [gettext](https://www.gnu.org/software/gettext/). Réferez-vous à ces fichiers pour déterminer quel texte devrait être utilisé à la place de "Note:" ou "Warning:" pour cette locale. Si un fichier de locales n'est pas défini, l'anglais sera utilisé en dernier recours.
+Les locales sont stockées dans [Yari](https://github.com/mdn/yari/tree/main/markdown/localizations) en tant que fichier JSON dans le format [gettext](https://www.gnu.org/software/gettext/). Réferez-vous à ces fichiers pour déterminer quel texte devrait être utilisé à la place de «&nbsp;Note:&nbsp;» ou «&nbsp;Warning:&nbsp;» pour cette locale. Si un fichier de locales n'est pas défini, l'anglais sera utilisé en dernier recours.
 
-Par exemple, si nous voulons utiliser "Warnung" pour "Warning" en Allemand, alors dans la page allemande nous écririons :
+Par exemple, si nous voulons utiliser «&nbsp;Warnung&nbsp;» pour «&nbsp;Warning&nbsp;» en Allemand, alors dans la page allemande nous écririons&nbsp;:
 
 ```md
 > **Warnung:** So schreibt man eine Warnung.
 ```
 
-Et cela produira :
+Et cela produira&nbsp;:
 
 ```html
 <div class="notecard warning">
@@ -288,7 +288,7 @@ Et cela produira :
 Cet exemple contient un bloc de code.
 
 ````md
-> **Note:** Voici comment écrire une note.
+> **Note :** Voici comment écrire une note.
 >
 > Elle peut contenir des blocs de code.
 >
@@ -299,7 +299,7 @@ Cet exemple contient un bloc de code.
 > Comme cela.
 ````
 
-Cela produira le HTML suivant :
+Cela produira le HTML suivant&nbsp;:
 
 ```html
 <div class="notecard note">
@@ -310,9 +310,9 @@ Cela produira le HTML suivant :
 </div>
 ```
 
-Ce HTML sera affiché comme un bloc de code :
+Ce HTML sera affiché comme un bloc de code&nbsp;:
 
-> **Note:** Voici comment écrire une note.
+> **Note :** Voici comment écrire une note.
 >
 > Elle peut contenir des blocs de code.
 >
@@ -328,18 +328,18 @@ Ce problème a été résolu dans <https://github.com/mdn/content/issues/3483>.
 
 ## Listes de définitions
 
-Les listes de définitions sont souvent utilisées sur MDN, mais ne sont pas supportées par GFM. MDN introduit un format personnalisé pour les listes de définitions, qui est une forme modifiée des listes non-ordonnées de GFM ({{HTMLElement("ul")}}). Dans ce format :
+Les listes de définitions sont souvent utilisées sur MDN, mais ne sont pas supportées par GFM. MDN introduit un format personnalisé pour les listes de définitions, qui est une forme modifiée des listes non-ordonnées de GFM ([`<ul>`](/fr/docs/Web/HTML/Element/ul)). Dans ce format&nbsp;:
 
 - La liste `<ul>` de GFM contient n'importe quel nombre d'éléments GFM `<li>` de premier niveau.
 - Chacun de ces éléments GFM `<li>` de premier niveau doivent contenir un élément GFM `<ul>` en tant que dernier élément.
-- Le dernier `<ul>` imbriqué doit contenir un unique élément GFM `<li>`, dont le contenu textuel doit commencer par ": " (deux points suivis par un espace). Cet élément peut contenir des éléments de type bloc, dont des paragraphes, des blocs de code, des listes incrustées et des notes.
+- Le dernier `<ul>` imbriqué doit contenir un unique élément GFM `<li>`, dont le contenu textuel doit commencer par «&nbsp;: &nbsp;» (deux points suivis par un espace). Cet élément peut contenir des éléments de type bloc, dont des paragraphes, des blocs de code, des listes incrustées et des notes.
 
-Chacun de ces éléments GFM `<li>` de premier niveau sera transformé en une paire de `<dt>`/`<dd>` comme suit :
+Chacun de ces éléments GFM `<li>` de premier niveau sera transformé en une paire de `<dt>`/`<dd>` comme suit&nbsp;:
 
 - L'élément GFM `<li>` de premier niveau sera analysé comme un élément GFM `<li>` et son contenu comprendra le contenu du `<dt>`, excepté pour le dernier `<ul>` imbriqué qui ne sera pas inclus dans le `<dt>`.
-- L'élément `<li>` dans le dernier `<ul>` imbriqué sera analysé comme un élément GFM `<li>` et son contenu sera compris dans le contenu du `<dd>`, excepté le premier ": " qui sera rejeté.
+- L'élément `<li>` dans le dernier `<ul>` imbriqué sera analysé comme un élément GFM `<li>` et son contenu sera compris dans le contenu du `<dd>`, excepté le premier «&nbsp;: &nbsp;» qui sera rejeté.
 
-Par exemple, voici un `<dl>` :
+Par exemple, voici un `<dl>`&nbsp;:
 
 ````md
 - terme1
@@ -357,7 +357,7 @@ Par exemple, voici un `<dl>` :
     ```
 ````
 
-Dans GFM/CommonMark, cela aurait produit le HTML suivant :
+Dans GFM/CommonMark, cela aurait produit le HTML suivant&nbsp;:
 
 ```html
 <ul>
@@ -382,7 +382,7 @@ Dans GFM/CommonMark, cela aurait produit le HTML suivant :
 </ul>
 ```
 
-Sur MDN, cela produirait le HTML suivant :
+Sur MDN, cela produirait le HTML suivant&nbsp;:
 
 ```html
 <dl>
@@ -405,7 +405,7 @@ Sur MDN, cela produirait le HTML suivant :
 
 Les listes de définitions écrite avec cette syntaxe doivent être composées de paires d'éléments `<dt>`/`<dd>`. Avec cette syntaxe, il n'est pas possible d'écrire une liste avec plus d'un élément `<dt>` consécutif ou plus d'un élément `<dd>` consécutif : l'analyseur traiterai cela comme une erreur. Nous nous attendons à ce que presque toutes les listes de définitions sur MDN fonctionnent avec cette limitation, et pour celle qui ne fonctionne pas, les auteurs peuvent utiliser du HTML pur.
 
-Ceci n'est pas permi :
+Ceci n'est pas permi&nbsp;:
 
 ```md example-bad
 - `param1`, `param2`, `param3`
@@ -414,7 +414,7 @@ Ceci n'est pas permi :
   - : Ma description du `param3`
 ```
 
-Dans le cas où un auteur à besoin d'associer plusieurs éléments `<dt>` avec un seul élément `<dd>`, envisagez de les fournir comme un seul élément `<dt>` contenant plusieurs termes séparés par des virgules comme suit :
+Dans le cas où un auteur à besoin d'associer plusieurs éléments `<dt>` avec un seul élément `<dd>`, envisagez de les fournir comme un seul élément `<dt>` contenant plusieurs termes séparés par des virgules comme suit&nbsp;:
 
 ```md example-good
 - `param1`, `param2`, `param3`
@@ -429,7 +429,7 @@ Ce problème a été résolu dans <https://github.com/mdn/content/issues/4367>.
 
 ## Tableaux
 
-GFM fournit une syntaxe pour créer des [tableaux](https://github.github.com/gfm/#tables-extension-) qui nous utilisons dans MDN. Cependant, il existe certains cas dans lesquels les tableaux de GFM ne nous conviennent pas :
+GFM fournit une syntaxe pour créer des [tableaux](https://github.github.com/gfm/#tables-extension-) qui nous utilisons dans MDN. Cependant, il existe certains cas dans lesquels les tableaux de GFM ne nous conviennent pas&nbsp;:
 
 - La syntaxe GFM ne supporte qu'un sous-ensemble des fonctionnalités disponibles dans HTML. Si vous avez besoin d'utiliser des fonctionnalités de tableau qui ne sont pas disponibles dans GFM, utilisez HTML pour le tableau.
 - Si la représentation GFM du tableau fait plus de 150 caractères de large, utilisez HTML pour le tableau.
@@ -441,7 +441,7 @@ Le principe général est que les auteurs devraient utiliser la syntaxe Markdown
 
 Dans la syntaxe GFM, les auteurs peuvent omettre les premières et dernières barres verticales ("|") pour les lignes. Cependant, dans un soucis de lisibilité, les auteurs de MDN doivent inclure ces barres verticales. De plus, les auteurs doivent fournir les derniers espaces dans les lignes de manière à ce que les cellules d'une colonne fassent toutes la même longueur sous la forme du texte brut.
 
-En résumé, les auteurs MDN doivent utiliser ce style :
+En résumé, les auteurs MDN doivent utiliser ce style&nbsp;:
 
 ```md example-good
 | En-tête 1 | En-tête 2 | En-tête 3 |
@@ -450,7 +450,7 @@ En résumé, les auteurs MDN doivent utiliser ce style :
 | cellule 4 | cellule 5 | cellule 6 |
 ```
 
-and not this style:
+et pas ce style&nbsp;:
 
 ```md-nolint example-bad
 | En-tête 1 | En-tête 2 | En-tête 3 |
@@ -463,7 +463,7 @@ Par chance, le formattage des tableaux est résolu automatiquement par Prettier,
 
 ### Quand utiliser les tableaux HTML
 
-Il y a trois principales circonstances dans lesquelles les auteurs devraient utiliser les tabelaux HTML plutôt que la syntaxe GFM :
+Il y a trois principales circonstances dans lesquelles les auteurs devraient utiliser les tabelaux HTML plutôt que la syntaxe GFM&nbsp;:
 
 1. Le tableau utilise des fonctionnalités non supportées par GFM (voir dessous).
 2. Le tableau GFM serait trop large pour être lisible.
@@ -471,7 +471,7 @@ Il y a trois principales circonstances dans lesquelles les auteurs devraient uti
 
 #### Fonctionnalités de tableau non supportés par GFM
 
-Les principales limitations de la syntaxe des tableaux GFM sont :
+Les principales limitations de la syntaxe des tableaux GFM sont&nbsp;:
 
 - Les tableaux GFM doivent avoir une ligne d'en-têtes.
 - Les tableaux GFM peuvent ne pas avoir de colonne d'en-têtes.
@@ -486,7 +486,7 @@ Notez que nous ne recommandons pas l'usage général des éléments `<caption>` 
 
 #### Largeur maximum des tableaux GFM
 
-Même quand un tableau peut être écris en GFM, il est certaines fois mieux d'utiliser HTML, car GFM utilise une approche "{{Glossary("ASCII")}} art" pour les tableaux qui n'est pas lisible lorsque les lignes deviennent trop longues. Examinez les tableaux suivant :
+Même quand un tableau peut être écris en GFM, il est certaines fois mieux d'utiliser HTML, car GFM utilise une approche «&nbsp; de l'art [ASCII](/fr/docs/Glossary/ASCII)&nbsp;» pour les tableaux qui n'est pas lisible lorsque les lignes deviennent trop longues. Examinez les tableaux suivant&nbsp;:
 
 ```html
 <table>
@@ -517,7 +517,7 @@ Même quand un tableau peut être écris en GFM, il est certaines fois mieux d'u
 </table>
 ```
 
-In GFM this will look like:
+Avec un format de markdown, cela donne&nbsp;:
 
 ```md
 | Un en-tête 1           | Un en-tête 2                                                                                                                                                               | Un en-tête 3           | Un en-tête 4                                                                                                                                                                                    | Un en-tête 5           | Un en-tête 6           |
@@ -527,11 +527,11 @@ In GFM this will look like:
 
 Dans ce cas il serait mieux d'utiliser HTML.
 
-Cela nous amène à la directive suivante : _si la représentation GFM du tableau fait plus de 150 caractères de large, utilisez HTML pour le tableau_.
+Cela nous amène à la directive suivante&nbsp;: _si la représentation GFM du tableau fait plus de 150 caractères de large, utilisez HTML pour le tableau_.
 
 #### Tableaux de propriétés
 
-Les tableaux de propriétés sont un type de tableau spécifique utilisés pour afficher du contenu structuré de type propriété-valeur à travers un ensemble de pages d'un type particulier. Ces tableaux possèdent deux colonnes : la première colonne est un en-tête et liste les propriétés tandis que la seconde liste leurs valeurs pour cet élément en particulier. Par exemple, voici les propriétés de l'interface {{domxref("PannerNode")}} :
+Les tableaux de propriétés sont un type de tableau spécifique utilisés pour afficher du contenu structuré de type propriété-valeur à travers un ensemble de pages d'un type particulier. Ces tableaux possèdent deux colonnes&nbsp;: la première colonne est un en-tête et liste les propriétés tandis que la seconde liste leurs valeurs pour cet élément en particulier. Par exemple, voici les propriétés de l'interface [`PannerNode`](/fr/docs/Web/API/PannerNode)&nbsp;:
 
 <table class="properties">
   <tbody>
@@ -558,7 +558,7 @@ Les tableaux de propriétés sont un type de tableau spécifique utilisés pour 
   </tbody>
 </table>
 
-Ces pages ne peuvent pas être représentées en GFM car elles possèdent une colonne en-tête, donc les auteurs devraient utiliser HTML dans ce cas de figure. Pour obtenir la mise en forme spéciale, les auteurs devraient appliquer la classe `"properties"` au tableau :
+Ces pages ne peuvent pas être représentées en GFM car elles possèdent une colonne en-tête, donc les auteurs devraient utiliser HTML dans ce cas de figure. Pour obtenir la mise en forme spéciale, les auteurs devraient appliquer la classe `"properties"` au tableau&nbsp;:
 
 ```html
 <table class="properties"></table>
@@ -570,11 +570,11 @@ Ce problème a été résolu dans <https://github.com/mdn/content/issues/4325>, 
 
 ## Exposant et indice
 
-Les auteurs pourront utiliser les éléments HTML {{HTMLElement("sup")}} et {{HTMLElement("sub")}} si nécessaire, mais devraient tuiliser des alternatives si possible, en particulier :
+Les auteurs pourront utiliser les éléments HTML [`<sup>`](/fr/docs/Web/HTML/Element/sup) et [`<sub>`](/fr/docs/Web/HTML/Element/sub) si nécessaire, mais devraient tuiliser des alternatives si possible, en particulier&nbsp;:
 
-- Pour l'exponentiation, utilisez le caret : `2^53`.
-- Pour des expressions ordinales comme 1<sup>er</sup>, préférez des mots comme "premier".
-- Pour les notes de bas de page, ne pas marquer les références des notes, par exemple : `<sup>[1]</sup>`.
+- Pour l'exponentiation, utilisez le caret&nbsp;: `2^53`.
+- Pour des expressions ordinales comme 1<sup>er</sup>, préférez des mots comme «&nbsp;premier&nbsp;».
+- Pour les notes de bas de page, ne pas marquer les références des notes, par exemple&nbsp;: `<sup>[1]</sup>`.
 
 ### Référence de la discussion
 
@@ -582,7 +582,7 @@ Ce problème a été résolu dans <https://github.com/mdn/content/issues/4578>.
 
 ## Résumé de la page
 
-Le _résumé de la page_ est le premier paragraphe de "contenu" dans une page — le premier texte qui apparaît après l'en-tête de la page et la [barre latérale](/fr/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#barres-laterales-de-navigation) ou la [bannière de la page](/fr/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#indicateurs-pour-les-pages-ou-les-sections).
+Le _résumé de la page_ est le premier paragraphe de «&nbsp;contenu&nbsp;» dans une page — le premier texte qui apparaît après l'en-tête de la page et la [barre latérale](/fr/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#barres-laterales-de-navigation) ou la [bannière de la page](/fr/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#indicateurs-pour-les-pages-ou-les-sections).
 
 Ce résumé est utilisé pour l'optimisation pour les moteurs de recherche (SEO) et est automatiquement inclus à côté des listes de pages par certaines macros.
 Le premier paragraphe devrait donc être à la fois bref et informatif.
@@ -593,7 +593,7 @@ Ce problème a été résolu dans <https://github.com/mdn/content/issues/3923>.
 
 ## KumaScript
 
-Les auteurs seront capable d'inclure des appels à des macros KumaScript dans les contenus en prose :
+Les auteurs seront capable d'inclure des appels à des macros KumaScript dans les contenus en prose&nbsp;:
 
 ```md
 La propriété **`margin`** [CSS](/fr/docs/Web/CSS) définit la taille des marges sur les quatres côtés de l'élément. C'est une propriété raccourcie qui permet de manipuler les autres propriétés de marges : \{{cssxref("margin-top")}}, \{{cssxref("margin-right")}}, \{{cssxref("margin-bottom")}} et \{{cssxref("margin-left")}}.
