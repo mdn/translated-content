@@ -65,7 +65,7 @@ navigator.permissions.query({ name: "geolocation" }).then((result) => {
 本例显示了查询每个权限的结果。
 
 代码使用了 `navigator.permissions.query()` 来查询每个权限，记录权限状态或浏览器不支持该权限。
-请注意，`query() ` 是在一个 "try...catch "代码块中调用的，因为如果不支持权限，相关的  `Promise` 就会拒绝。
+请注意，`query() ` 是在一个 "try...catch "代码块中调用的，因为如果不支持权限，相关的 `Promise` 就会拒绝。
 
 ```html hidden
 <pre id="log"></pre>
