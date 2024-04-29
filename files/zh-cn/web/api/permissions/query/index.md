@@ -24,7 +24,7 @@ query(permissionDescriptor)
     - `name`
       - ：要查询其权限的 API 名称。每个浏览器支持不同的值集。Firefox 的值在[这里](https://searchfox.org/mozilla-central/source/dom/webidl/Permissions.webidl#10)，Chromium 的值在[这里](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/third_party/blink/renderer/modules/permissions/permission_descriptor.idl)，WebKit 的值在[这里](https://github.com/WebKit/WebKit/blob/main/Source/WebCore/Modules/permissions/PermissionName.idl)。
     - `userVisibleOnly`
-      - 仅推送，Firefox 不支持--请参阅下面的 "浏览器支持 "部分）表示是否希望为每条消息显示通知或发送静默推送通知。默认为 `false`。
+      - 仅推送，Firefox 不支持——请参阅下面的“浏览器兼容性”部分）表示是否希望为每条消息显示通知或发送静默推送通知。默认为 `false`。
     - `sysex`（仅限 MIDI）
       - 表示是否需要和/或接收系统专用信息。默认为 `false`。
 
