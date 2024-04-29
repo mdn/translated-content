@@ -1,63 +1,95 @@
 ---
 title: static
 slug: Web/JavaScript/Reference/Classes/static
+l10n:
+   sourceCommit: 41cddfdaeed4a73fb8234c332150df8e54df31e9
 ---
 
 {{jsSidebar("Classes")}}
 
-类（class）通过 **static** 关键字定义静态方法。不能在类的实例上调用静态方法，而应该通过类本身调用。这些通常是实用程序方法，例如创建或克隆对象的功能。
+类（class）或[静态初试块（static initialization block）](/zh-CN/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)（有关这种用法的更多信息，请参阅链接）通过 **static** 关键字定义[静态方法或字段](/zh-CN/docs/Web/JavaScript/Reference/Classes#static_methods_and_fields)，不能在类的实例上调用静态方法，而应该通过类本身调用。这些通常是实用程序方法，例如创建或克隆对象的功能。
 
-{{EmbedInteractiveExample("pages/js/classes-static.html")}}
+静态方法通常是实用函数，如创建或克隆对象的函数，而静态属性则适用于缓存、固定配置或其他不需要跨实例复制的数据。
+
+> **备注：** 在类的上下文中，MDN Web Docs 内容交替使用 properties 和 [fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields) 这两个术语。
+
+{{EmbedInteractiveExample("pages/js/classes-static.html", "taller")}}
 
 ## 语法
 
-```plain
-static methodName() { ... }
+```js-nolint
+class ClassWithStatic {
+  static staticField;
+  static staticFieldWithInitializer = value;
+  static staticMethod() {
+    // …
+  }
+}
 ```
+
+还有一些额外的语法限制：
+
+- 静态属性（字段或方法）的名称不能是 `prototype`。
+- 类字段（静态或实例）的名称不能是 `constructor`。
 
 ## 描述
 
-静态方法调用直接在类上进行，不能在类的实例上调用。静态方法通常用于创建实用程序函数。
+本页介绍类的公共静态属性，包括静态方法、静态访问器和静态字段。
 
-## 调用静态方法
+- 关于私有静态特性，请参阅 [private properties](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)。
+- 关于实例特性，请参阅 [methods definitions](/zh-CN/docs/Web/JavaScript/Reference/Functions/Method_definitions)、[getter](/zh-CN/docs/Web/JavaScript/Reference/Functions/get)、[setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set) 和 [public class fields](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)。
 
-### 从另一个静态方法
+公共静态特性是使用 `static` 关键字声明的。在 [class evaluation](/zh-CN/docs/Web/JavaScript/Reference/Classes#evaluation_order) 时，使用 [`[[DefineOwnProperty]]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty)语义（本质上是 {{jsxref("Object.defineProperty()")}}）将它们添加到类构造函数中。类构造函数会再次访问它们。
 
-静态方法调用同一个类中的其他静态方法，可使用 `this` 关键字。
+静态方法通常是实用函数，例如创建或克隆实例的函数。当你希望一个字段在每个类中只存在一次，而不是在你创建的每个类实例中都存在时，公共静态字段就很有用。这对缓存、固定配置或其他不需要在实例间复制的数据非常有用。
 
-```js
-class StaticMethodCall {
-  static staticMethod() {
-    return "Static method has been called";
-  }
-  static anotherStaticMethod() {
-    return this.staticMethod() + " from another static method";
-  }
-}
-StaticMethodCall.staticMethod();
-// 'Static method has been called'
+静态字段名称可以[计算](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names)。计算表达式中的 "this "值是类定义周围的 "this"，而引用类的名称则会导致{{jsxref("ReferenceError")}}，因为类尚未初始化。在此表达式中，{{jsxref("Operators/await", "await")}} 和 {{jsxref("Operators/yield", "yield")}} 按预期工作。
 
-StaticMethodCall.anotherStaticMethod();
-// 'Static method has been called from another static method'
-```
-
-### 从类的构造函数和其他方法
-
-非静态方法中，不能直接使用 [`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 关键字来访问静态方法。而是要用类名来调用：`CLASSNAME.STATIC_METHOD_NAME()` ，或者用构造函数的属性来调用该方法： `this.constructor.STATIC_METHOD_NAME()`.
+静态字段可以有初始化器。没有初始化器的静态字段将被初始化为 `undefined` 。公共静态字段不会在子类中重新初始化，但可以通过原型链访问。
 
 ```js
-class StaticMethodCall {
-  constructor() {
-    console.log(StaticMethodCall.staticMethod());
-    // 'static method has been called.'
-    console.log(this.constructor.staticMethod());
-    // 'static method has been called.'
-  }
-  static staticMethod() {
-    return "static method has been called.";
+class ClassWithStaticField {
+  static staticField;
+  static staticFieldWithInitializer = "static field";
+}
+
+class SubclassWithStaticField extends ClassWithStaticField {
+  static subStaticField = "subclass field";
+}
+
+console.log(Object.hasOwn(ClassWithStaticField, "staticField")); // true
+console.log(ClassWithStaticField.staticField); // undefined
+console.log(ClassWithStaticField.staticFieldWithInitializer); // "static field"
+console.log(SubclassWithStaticField.staticFieldWithInitializer); // "static field"
+console.log(SubclassWithStaticField.subStaticField); // "subclass field"
+```
+
+In the field initializer, [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) refers to the current class (which you can also access through its name), and [`super`](/en-US/docs/Web/JavaScript/Reference/Operators/super) refers to the base class constructor.
+
+```js
+class ClassWithStaticField {
+  static baseStaticField = "base static field";
+  static anotherBaseStaticField = this.baseStaticField;
+
+  static baseStaticMethod() {
+    return "base static method output";
   }
 }
+
+class SubClassWithStaticField extends ClassWithStaticField {
+  static subStaticField = super.baseStaticMethod();
+}
+
+console.log(ClassWithStaticField.anotherBaseStaticField); // "base static field"
+console.log(SubClassWithStaticField.subStaticField); // "base static method output"
 ```
+
+表达式是同步求值的。不能在初始化表达式中使用 {{jsxref("Operators/await", "await")}} 或 {{jsxref("Operators/yield", "yield")}}} 。(将初始化表达式视为隐式封装在函数中）。
+
+
+静态字段初始化器和[静态初始化块](/zh-CN/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks) 是逐个评估的。字段初始化器可以引用其上的字段值，但不能引用其下的字段值。所有静态方法都会事先添加并可被访问，但如果它们引用的字段低于被初始化的字段，则调用它们时可能会出现与预期不符的情况。
+
+> **备忘：** 对于 [私有静态字段](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) 而言，这一点更为重要，因为访问未初始化的私有字段会抛出 {{jsxref("TypeError")}}，即使该私有字段已在下面声明。(如果未声明私有字段，则会提前抛出{{jsxref("SyntaxError")}}）。
 
 ## 示例
 
@@ -68,25 +100,57 @@ class StaticMethodCall {
 3. 什么情况下静态方法可以调用，什么情况下不能调用。
 
 ```js
-class Tripple {
-  static tripple(n = 1) {
+class Triple {
+  static customName = "Tripler";
+  static description = "I triple any number you provide";
+  static calculate(n = 1) {
     return n * 3;
   }
 }
 
-class BiggerTripple extends Tripple {
-  static tripple(n) {
-    return super.tripple(n) * super.tripple(n);
+class SquaredTriple extends Triple {
+  static longDescription;
+  static description = "I square the triple of any number you provide";
+  static calculate(n) {
+    return super.calculate(n) * super.calculate(n);
   }
 }
 
-console.log(Tripple.tripple()); // 3
-console.log(Tripple.tripple(6)); // 18
+console.log(Triple.description); // 'I triple any number you provide'
+console.log(Triple.calculate()); // 3
+console.log(Triple.calculate(6)); // 18
 
 let tp = new Tripple();
 
 console.log(BiggerTripple.tripple(3)); // 81（不会受父类实例化的影响）
+console.log(SquaredTriple.description); // 'I square the triple of any number you provide'
+console.log(SquaredTriple.longDescription); // undefined
+console.log(SquaredTriple.customName); // 'Tripler'
+
+// 这是因为 calculate() 是静态成员，而不是实例成员。
 console.log(tp.tripple()); // 'tp.tripple 不是一个函数'.
+```
+
+### 从类的构造函数和其他方法中调用静态成员
+
+静态成员不能使用 {{jsxref("Operators/this", "this")}} 关键字从
+非静态方法直接访问静态成员。您需要使用类名来调用它们：
+`classname.static_method_name()` 或 `CLASSNAME.STATIC_PROPERTY_NAME` ，或将以下方法作为 `constructor` 的属性调用：`this.constructor.STATIC_Method_NAME()``this.constructor.STATIC_Method_NAME()`。
+
+```js
+class StaticMethodCall {
+  constructor() {
+    console.log(StaticMethodCall.staticProperty); // 'static property'
+    console.log(this.constructor.staticProperty); // 'static property'
+    console.log(StaticMethodCall.staticMethod()); // 'static method has been called.'
+    console.log(this.constructor.staticMethod()); // 'static method has been called.'
+  }
+
+  static staticProperty = "static property";
+  static staticMethod() {
+    return "static method has been called.";
+  }
+}
 ```
 
 ## 规范
@@ -99,6 +163,7 @@ console.log(tp.tripple()); // 'tp.tripple 不是一个函数'.
 
 ## 参见
 
-- [`class` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/class)
-- [`class` 声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/class)
+- [使用类](/zh-CN/docs/Web/JavaScript/Guide/Using_classes)手册
 - [类](/zh-CN/docs/Web/JavaScript/Reference/Classes)
+- [静态初始块](/zh-CN/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)
+- {{jsxref("Statements/class", "class")}}
