@@ -7,7 +7,7 @@ l10n:
 
 {{SecureContext_Header}}{{SeeCompatTable}}{{APIRef("Web NFC API")}}
 
-{{DOMxRef("NDEFReader")}} 接口的 `write()` 方法尝试将 NDEF 消息写入标签，并返回一个 {{jsxref("Promise")}}，当将消息写入标签时兑现，或者在遇到硬件或权限错误时拒绝。如果尚未授予“nfc”权限，此方法会触发权限提示。
+{{DOMxRef("NDEFReader")}} 接口的 `write()` 方法尝试将 NDEF 消息写入标签，并返回一个 {{jsxref("Promise")}}，当消息成功写入标签时兑现，或者在遇到硬件或权限错误时拒绝。如果尚未授予“nfc”权限，此方法会触发权限提示。
 
 ## 语法
 
@@ -62,7 +62,7 @@ write(message, options)
 
 ### 返回值
 
-一个 {{JSxRef("Promise")}}，当将消息成功写入标签时兑现，或者在遇到硬件或权限错误时拒绝。
+一个 {{JSxRef("Promise")}}，当消息成功写入标签时兑现，或者在遇到硬件或权限错误时拒绝。
 
 ## 异常
 
@@ -71,7 +71,7 @@ write(message, options)
 - `AbortError`
   - : 通过在 `options` 参数中传递的 {{DOMxRef("AbortSignal")}} 中止了扫描操作。
 - `NotAllowedError`
-  - : 此操作的权限已被拒绝，或者 `overwrite` 设置为 `false` 并且标签上已有记录。
+  - : 此操作的权限已被拒绝，或者 `overwrite` 设置为 `false` 而标签上已有记录。
 - `NotSupportedError`
   - : 没有与 Web NFC 兼容的 NFC 适配器，或者可用的 NFC 适配器不支持推送消息，或者无法建立连接。
 - `NotReadableError`
@@ -108,7 +108,7 @@ try {
     records: [{ recordType: "url", data: "http://example.com/" }],
   });
 } catch {
-  console.log("写入失败 :-( 再试一次。");
+  console.log("写入失败 :-( 请再试一次。");
 }
 ```
 
