@@ -1,5 +1,5 @@
 ---
-title: Using the Permissions API
+title: 使用 Permissions API
 slug: Web/API/Permissions_API/Using_the_Permissions_API
 l10n:
   sourceCommit: 3dbfd299e6f34873d6355bae4b12b5c1c69242f1
