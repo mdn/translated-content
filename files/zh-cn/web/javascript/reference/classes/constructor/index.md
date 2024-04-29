@@ -21,6 +21,7 @@ constructor(argument0) { /* … */ }
 constructor(argument0, argument1) { /* … */ }
 constructor(argument0, argument1, /* …, */ argumentN) { /* … */ }
 ```
+
 还有一些额外的语法限制：
 
 - 名为 `constructor` 的类方法不能是[getter](/zh-CN/docs/Web/JavaScript/Reference/Functions/get)、[setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set)、[async](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function)或[generator](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)。
