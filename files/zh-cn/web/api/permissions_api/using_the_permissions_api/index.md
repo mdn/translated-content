@@ -21,7 +21,7 @@ l10n:
 
 - [Push API](/zh-CN/docs/Web/API/Push_API)、[Web MIDI API](/zh-CN/docs/Web/API/Web_MIDI_API)。[API 概览](/zh-CN/docs/Web/API/Permissions_API#permission-aware_apis)中提供了许多启用权限的 API 的列表，你可以在[此处的兼容性表](/zh-CN/docs/Web/API/Permissions_API#api.permissions)中了解浏览器的支持情况。
 
-{{domxref("Permissions")}}还有其他方法可用于专门请求使用 API 的权限和撤销权限，但这些方法已被弃用（非标准和/或不被广泛支持）。
+{{domxref("Permissions")}} 还有其他方法可用于专门请求使用 API 的权限和撤销权限，但这些方法已被弃用（非标准及不被广泛支持）。
 
 ## 一个简单的例子
 
