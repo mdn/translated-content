@@ -29,7 +29,7 @@ l10n:
 
 ![Screenshot showing a map of Greenfield, UK.](location-finder-with-permissions-api.png)
 
-你可以 [在线运行](https://chrisdavidmills.github.io/location-finder-permissions-api/)，或 [在 Github 查看源码](https://github.com/chrisdavidmills/location-finder-permissions-api/tree/gh-pages)。大部分代码都很简单且常见 ── 所以接下来我们会重点关注和 Permission API 有关的代码，如果你想学习其他部分，请自行阅读。
+你可以[在线运行示例](https://chrisdavidmills.github.io/location-finder-permissions-api/)，或[在 Github 查看源代码](https://github.com/chrisdavidmills/location-finder-permissions-api/tree/gh-pages)。大部分代码都很简单且常见──所以接下来我们会重点关注和 Permissions API 有关的代码，如果你想学习其他部分，请自行阅读。
 
 ### 访问 Permissions API
 
