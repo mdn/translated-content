@@ -267,7 +267,7 @@ console.log(new D(1) instanceof Number); // true
 
 # Species
 
-你可能希望在派生数组类 `MyArray` 中返回 {{jsxref("Array")}} 对象。Species模式可让您覆盖默认构造函数。
+你可能希望在派生数组类 `MyArray` 中返回 {{jsxref("Array")}} 对象。Species 模式可让您覆盖默认构造函数。
 
 例如，在使用{{jsxref("Array.prototype.map()")}}等返回默认构造函数的方法时，你希望这些方法返回的是父 `Array` 对象，而不是 `MyArray` 对象。{{jsxref("Symbol.species")}}符号可让您做到这一点：
 
