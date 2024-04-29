@@ -230,7 +230,7 @@ API ランディングページは、 API の規模によって長さが大き�
 
 1. **\\{{APIRef}}**: 各インターフェイスページの最初の行に \\{{APIRef}} マクロを置き、引数に API の名前を入れてください。例えば \\{{APIRef("Web Audio API")}} のようにします。このマクロは、インターフェイスページの左側にリファレンスメニューを作成します。このマクロはインターフェイスページの左側のリファレンスメニューを構築します。そこにはプロパティやメソッド、および [GroupData](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json) マクロで定義されたその他のクイックリンクを含みます（既存の GroupData 項目に API を追加するか、まだリストにない場合は新しい項目を作成するよう誰かに依頼してください）。メニューは、以下のスクリーンショットのようなものになります。
    ![このスクリーンショットは、 APIRef マクロによって生成された、メソッドとプロパティの複数のサブリストを持つ OscillatorNode インターフェイスの垂直ナビゲーションメニューを示します。](apiref-links.png)
-2. **機能の状態**: [機能の状態を示すバナー](/ja/docs/MDN/Writing_guidelines/Page_structures/Feature_status#feature_status_page_banners) （非推奨、標準外、実験的）が必要に応じて自動的に追加されます。そのために必要なことは、 [browser-compat-data リポジトリーの状態を更新](/ja/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses)することです。
+2. **機能状態**: [機能状態を示すバナー](/ja/docs/MDN/Writing_guidelines/Page_structures/Feature_status#feature_status_page_banners) （非推奨、標準外、実験的）が必要に応じて自動的に追加されます。そのために必要なことは、 [browser-compat-data リポジトリーの状態を更新](/ja/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses)することです。
 3. **説明**: インターフェイスページの最初の段落では、インターフェイスの包括的な目的を簡潔に説明する必要があります。追加の説明が必要な場合は、さらに数段落を含めるとよいでしょう。インターフェイスが実質的には辞書である場合、「インターフェイス」の代わりにその用語を使用する必要があります。
 4. **継承図:** [`\{{InheritanceDiagram}}`](https://github.com/mdn/yari/blob/main/kumascript/macros/InheritanceDiagram.ejs) マクロを使用して、このインターフェイスの SVG の継承図を埋め込みます。
 5. **プロパティの一覧、メソッドの一覧**: これらの節は、「プロパティ」と「メソッド」というタイトルで、そのインターフェイスのそれぞれのプロパティ/メソッドのリファレンスページへのリンクと（\\{{domxref}} マクロを使用します）、それぞれのプロパティが何を行うかの説明を提供します。これらは[説明/定義リスト](/ja/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#定義リスト)を使用してマークアップしてください。それぞれの説明は短く簡潔にしてください。可能であれば 1 文で。他のページへのリンクを素早く作成する方法については、「\\{{domxref}} マクロによる他の API 機能の参照」を参照してください。
@@ -273,7 +273,7 @@ API ランディングページは、 API の規模によって長さが大き�
 1. **タイトル**: ページのタイトルは、**インターフェイス名.プロパティ名** とする必要があります。インターフェイス名は大文字で始めなければなりません。 JavaScript ではインターフェイスはオブジェクトのプロトタイプに実装されますが、 [JavaScript リファレンス](/ja/docs/Web/JavaScript/Reference)のようにタイトルに `.prototype.` を含めることはありません。
 2. **\\{{APIRef}}**: 各プロパティページの最初の行に \\{{APIRef}} マクロを置き、引数に API の名前を入れてください。例えば \\{{APIRef("Web Audio API")}} のようにします。このマクロは、プロパティページの左側にリファレンスメニューを作成します。このマクロはプロパティページの左側のリファレンスメニューを構築します。そこにはプロパティやメソッド、および [GroupData](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json) マクロで定義されたその他のクイックリンクを含みます（既存の GroupData 項目に API を追加するか、まだリストにない場合は新しい項目を作成するよう誰かに依頼してください）。メニューは、以下のスクリーンショットのようなものになります。
    ![このスクリーンショットは、 APIRef マクロによって生成された、メソッドとプロパティの複数のサブリストを持つ OscillatorNode インターフェイスの垂直ナビゲーションメニューを示します。](apiref-links.png)
-3. **機能の状態**: [機能の状態を示すバナー](/ja/docs/MDN/Writing_guidelines/Page_structures/Feature_status#feature_status_page_banners) （非推奨、標準外、実験的）が必要に応じて自動的に追加されます。そのために必要なことは、 [browser-compat-data リポジトリーの状態を更新](/ja/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses)することです。
+3. **機能状態**: [機能状態を示すバナー](/ja/docs/MDN/Writing_guidelines/Page_structures/Feature_status#feature_status_page_banners) （非推奨、標準外、実験的）が必要に応じて自動的に追加されます。そのために必要なことは、 [browser-compat-data リポジトリーの状態を更新](/ja/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses)することです。
 
 4. **説明**: プロパティページの最初の段落には、そのプロパティの包括的な目的を短く簡潔に説明する必要があります。また、追加の説明が必要な場合は、さらにいくつかの段落を書くととよいでしょう。明らかに記述すべき追加情報は、その既定値/初期値、および読み取り専用かどうかです。最初の文の構成は、次のようにしなければなりません。
 
@@ -307,7 +307,7 @@ API ランディングページは、 API の規模によって長さが大き�
 1. **タイトル**: ページのタイトルは、**インターフェイス名.メソッド名()** （最後に 2 つの括弧つき）とする必要がありますが、スラッグ（ページ URL の最後）は括弧をつけてはいけません。また、インターフェイス名は大文字で始めなければなりません。 JavaScript ではインターフェイスはオブジェクトのプロトタイプに実装されますが、 [JavaScript リファレンス](/ja/docs/Web/JavaScript/Reference)のようにタイトルに `.prototype.` を含めることはありません。
 2. **\\{{APIRef}}**: 各メソッドページの最初の行に \\{{APIRef}} マクロを置き、引数に API の名前を入れてください。例えば \\{{APIRef("Web Audio API")}} のようにします。このマクロは、メソッドページの左側にリファレンスメニューを作成します。このマクロはインターフェイスページの左側のリファレンスメニューを構築します。そこにはプロパティやメソッド、および [GroupData](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json) マクロで定義されたその他のクイックリンクを含みます（既存の GroupData 項目に API を追加するか、まだリストにない場合は新しい項目を作成するよう誰かに依頼してください）。メニューは、以下のスクリーンショットのようなものになります。
    ![このスクリーンショットは、 APIRef マクロによって生成された、メソッドとプロパティの複数のサブリストを持つ OscillatorNode インターフェイスの垂直ナビゲーションメニューを示します。](apiref-links.png)
-3. **機能の状態**: [機能の状態を示すバナー](/ja/docs/MDN/Writing_guidelines/Page_structures/Feature_status#feature_status_page_banners) （非推奨、標準外、実験的）が必要に応じて自動的に追加されます。そのために必要なことは、 [browser-compat-data リポジトリーの状態を更新](/ja/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses)することです。
+3. **機能状態**: [機能状態を示すバナー](/ja/docs/MDN/Writing_guidelines/Page_structures/Feature_status#feature_status_page_banners) （非推奨、標準外、実験的）が必要に応じて自動的に追加されます。そのために必要なことは、 [browser-compat-data リポジトリーの状態を更新](/ja/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses)することです。
 
 4. **説明**: メソッドページの最初の段落には、そのメソッドの包括的な目的を短く簡潔に説明する必要があります。また、追加の説明が必要な場合は、さらにいくつかの段落を書くととよいでしょう。明らかに追加すべき情報は、デフォルト引数の値、そのメソッドが依存する理論、および引数値が行うことです。
 

@@ -4,7 +4,7 @@ slug: Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
 original_slug: Web/API/XMLHttpRequest/Using_XMLHttpRequest
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{DefaultAPISidebar("XMLHttpRequest API")}}
 
 En esta guía le echaremos un vistazo a cómo usar
 {{domxref("XMLHttpRequest")}} para enviar solicitudes [HTTP](/es/docs/Web/HTTP)

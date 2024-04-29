@@ -1,47 +1,32 @@
 ---
 title: Accept-Charset
 slug: Web/HTTP/Headers/Accept-Charset
+l10n:
+  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
 {{HTTPSidebar}}
 
-**`Accept-Charset`** 请求头用来告知（服务器）客户端可以处理的字符集类型。借助[内容协商机制](/zh-CN/docs/Web/HTTP/Content_negotiation)，服务器可以从诸多备选项中选择一项进行应用，并使用{{HTTPHeader("Content-Type")}} 应答头通知客户端它的选择。浏览器通常不会设置此项值，因为每种内容类型的默认值通常都是正确的，但是发送它会更有利于识别。
+> **警告：** 请勿使用此标头。浏览器会省略此标头，服务器也应当忽略它。
 
-如果服务器不能提供任何可以匹配的字符集的版本，那么理论上来说应该返回一个 {{HTTPStatus("406")}}（Not Acceptable，不被接受）的错误码。但是为了更好的用户体验，这种方法很少采用，取而代之的是将其忽略。
+**`Accept-Charset`** 请求 HTTP 标头曾是一个用于声明客户端支持的{{glossary("character encoding", "字符编码")}}的标头。如今已不再广泛使用。
 
-> **备注：** 在早期版本的 HTTP/1.1 协议中，规定了一个默认的字符集 (ISO-8859-1)。但是现在情况不同了，目前每一种内容类型都有自己的默认字符集。
+UTF-8 得到广泛支持，并且是字符编码的压倒性首选方案。为了[通过减少基于配置的熵来确保更好的隐私](https://www.eff.org/deeplinks/2010/01/primer-information-theory-and-privacy)，所有浏览器均省略了 `Accept-Charset` 标头。
 
-| Header type                           | {{Glossary("Request header")}} |
-| ------------------------------------- | ------------------------------ |
-| {{Glossary("Forbidden header name")}} | yes                            |
+如今，`Accept-Charset` 值得注意之处在于它是几个[禁止修改的标头](/zh-CN/docs/Glossary/Forbidden_header_name)之一。
 
-## 句法
-
-```plain
-Accept-Charset: <charset>
-
-// Multiple types, weighted with the {{glossary("quality values", "quality value")}} syntax:
-Accept-Charset: utf-8, iso-8859-1;q=0.5
-```
-
-## 指令
-
-- `<charset>`
-  - : 诸如 `utf-8` 或 `iso-8859-15` 的字符集。
-- `*`
-  - : `在这个消息头中未提及的任意其他字符集；'*'` 用来表示通配符。
-- `;q=` (q-factor weighting)
-  - : 值代表优先顺序，用相对[质量价值](/zh-CN/docs/Glossary/Quality_values)表示，又称为权重。
-
-## 例子
-
-```plain
-Accept-Charset: iso-8859-1
-
-Accept-Charset: utf-8, iso-8859-1;q=0.5
-
-Accept-Charset: utf-8, iso-8859-1;q=0.5, *;q=0.1
-```
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">标头类型</th>
+      <td>{{Glossary("Request header", "请求标头")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name", "禁止修改的标头")}}</th>
+      <td>是</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 参见
 
