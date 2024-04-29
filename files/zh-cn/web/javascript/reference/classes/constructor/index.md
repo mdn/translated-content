@@ -44,7 +44,7 @@ class Person {
 
 const otto = new Person("Otto");
 
-otto.introduce(); // 你好，我的名字是Otto
+otto.introduce(); // 你好，我的名字是 Otto
 ```
 
 如果不指定一个构造函数 (constructor) 方法，则使用一个默认的构造函数 (constructor)。如果你的类是基类，默认构造函数会是空的：
