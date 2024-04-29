@@ -7,9 +7,9 @@ l10n:
 
 {{HTTPSidebar}}
 
-**`Accept-Language`** 请求 HTTP 标头表示客户端所偏好的自然语言和区域设置。服务器利用[内容协商](/zh-CN/docs/Web/HTTP/Content_negotiation)机制从这些提议中选出一项，并通过 {{HTTPHeader("Content-Language")}} 响应标头将这一选择告知客户端。浏览器会根据其当前活跃的用户界面语言为该标头设定所需的值。用户很少更改此设置，而且也不建议这样做，因为这可能导致[指纹识别](/zh-CN/docs/Glossary/Fingerprinting).
+**`Accept-Language`** 请求 HTTP 标头表示客户端所偏好的自然语言和区域设置。服务器利用[内容协商](/zh-CN/docs/Web/HTTP/Content_negotiation)机制从这些提议中选出一项，并通过 {{HTTPHeader("Content-Language")}} 响应标头将这一选择告知客户端。浏览器会根据其当前活跃的用户界面语言为该标头设定所需的值。用户很少更改此设置，而且也不建议这样做，因为这可能导致[指纹识别](/zh-CN/docs/Glossary/Fingerprinting)。
 
-当服务器无法通过其他方式（比如使用依赖于用户明确决定的特定 URL）确定目标内容语言时，这个标头可作为提示使用。服务器绝不应覆盖用户的明确语言选择。`Accept-Language` 的内容常常超出用户的控制范围（例如在旅行时）。用户也可能希望访问的语言与用户界面语言不同。
+当服务器无法通过其他方式（比如使用依赖于用户明确决定的特定 URL）确定目标内容语言时，这个标头可作为提示使用。服务器绝不应覆盖用户的明确语言选择。`Accept-Language` 的内容常常超出用户的控制范围（例如在旅行时）。用户也可能希望访问使用的语言与用户界面并不相同的页面。
 
 如果服务器不能提供任何可以匹配的语言的版本，那么理论上来说应该返回一个 {{HTTPStatus("406")}}（Not Acceptable，不被接受）的错误码。但是为了更好的用户体验，这种方法很少被采用，取而代之的是将其忽略。
 
@@ -40,7 +40,7 @@ l10n:
 Accept-Language: <language>
 Accept-Language: *
 
-//使用{{Glossary("Quality Values", "质量价值")}}语法对多个类型进行加权：
+// 使用质量价值语法对多个类型进行加权：
 Accept-Language: fr-CH, fr;q=0.9, en;q=0.8, de;q=0.7, *;q=0.5
 ```
 
@@ -78,5 +78,5 @@ Accept-Language: zh-CN,en;q=0.5
 ## 参见
 
 - HTTP [内容协商](/zh-CN/docs/Web/HTTP/Content_negotiation)
-- 表示此 Header 的内容协商结果的消息标头：{{HTTPHeader("Content-Language")}}
-- 其他类似的消息标头：{{HTTPHeader("TE")}}、{{HTTPHeader("Accept-Encoding")}}、{{HTTPHeader("Accept")}}
+- 表示内容协商结果的标头：{{HTTPHeader("Content-Language")}}
+- 其他类似的标头：{{HTTPHeader("TE")}}、{{HTTPHeader("Accept-Encoding")}}、{{HTTPHeader("Accept")}}
