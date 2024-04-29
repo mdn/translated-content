@@ -130,7 +130,7 @@ new (class C extends class B {
   #a = 1;
   foo() {
     return this.#a; // TypeError: 无法从类未声明私有成员 #a 的对象中读取该成员
-    // 这并不是因为class没有声明它，
+    // 这并不是因为 class 没有声明它，
     // 而是由于私有字段尚未初始化
     // 在超类构造函数运行的时候
   }
