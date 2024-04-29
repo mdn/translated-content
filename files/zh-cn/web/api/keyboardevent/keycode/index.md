@@ -3,7 +3,7 @@ title: KeyboardEvent.keyCode
 slug: Web/API/KeyboardEvent/keyCode
 ---
 
-{{APIRef("DOM Events")}}{{deprecated_header()}}
+{{APIRef("UI Events")}}{{Deprecated_Header}}
 
 这个只读的属性 **`KeyboardEvent.keyCode`** 代表着一个唯一标识的所按下的键的未修改值，它依据于一个系统和实现相关的数字代码。这通常是与密钥对应的二进制的 ASCII ({{RFC(20)}}) 或 Windows 1252 码。如果这个键不能被标志，这个值为 0。
 
