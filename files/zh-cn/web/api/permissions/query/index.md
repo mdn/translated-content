@@ -26,7 +26,7 @@ query(permissionDescriptor)
     - `userVisibleOnly`
       - 仅推送，Firefox 不支持——请参阅下面的“浏览器兼容性”部分）表示是否希望为每条消息显示通知或发送静默推送通知。默认为 `false`。
     - `sysex`（仅限 MIDI）
-      - 表示是否需要和/或接收系统专用信息。默认为 `false`。
+      - 表示是否需要接收系统专用信息。默认为 `false`。
 
 > **备注：** 从 Firefox 44 开始，[Notifications](/zh-CN/docs/Web/API/Notifications_API)和[Push](/zh-CN/docs/Web/API/Push_API)的权限已经合并。如果权限已授予（例如由用户在相关权限对话框中授予），`navigator.permissions.query()` 将为 `notifications`和 `push`返回 `true`。
 
