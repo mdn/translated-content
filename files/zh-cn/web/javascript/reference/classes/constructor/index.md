@@ -60,6 +60,7 @@ constructor(...args) {
   super(...args);
 }
 ```
+
 > **备注：** 像上面这样的显式构造函数与默认构造函数的区别在于，后者实际上并不通过[参数扩散](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)来调用[数组迭代器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)。
 
 这样代码才能正常工作：
