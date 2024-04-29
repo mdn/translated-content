@@ -23,7 +23,7 @@ new CookieChangeEvent(type, options)
 - `type`
   - : 写有此事件名称的字符串。大小写敏感且浏览器经常设置为 `change`。
 - `options` {{Optional_Inline}}
-  - : 一个对象，该对象除了 Event（） 中定义的属性之外，还可以具有以下属性：
+  - : 一个对象，该对象除了 Event（）中定义的属性之外，还可以具有以下属性：
     - `changed`{{Optional_Inline}}
       - : 返回包含已被修改的 cookie 的数组。
     - `deleted`{{Optional_Inline}}
