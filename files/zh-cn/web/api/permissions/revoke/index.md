@@ -19,8 +19,7 @@ revoke(descriptor)
 ### 参数
 
 - `descriptor`
-  - ：一个基于 `PermissionDescriptor` 字典的对象，用于设置由逗号分隔的名 - 值对列表组成的操作选项。
-    可用的选项有：
+  - ：一个基于 `PermissionDescriptor` 字典的对象，用于设置由逗号分隔的键——值对列表组成的操作选项。可用的选项有：
     - `name`
       - ：要查询其权限的 API 的名称。有效值为 `geolocation` 、 `midi` 、`notifications` 和 `push` 。
     - `userVisibleOnly`
