@@ -333,7 +333,7 @@ const m = new ReadOnlyMap([["a", 1]]); // TypeError: A read-only map must be set
 
 我们可以通过使用一个私有标志来指示是否正在构造实例来解决这个问题。然而，这种设计的一个更重要的问题是，它破坏了[Liskov 替换原则](https://en.wikipedia.org/wiki/Liskov_substitution_principle)，该原则规定子类应该可以替换其超类。如果函数期望使用一个 `Map` 对象，那么它也应该能够使用一个 `ReadOnlyMap` 对象，这在这里就会被打破。
 
-继承常常会导致[圆圈-椭圆问题](https://en.wikipedia.org/wiki/Circle%E2%80%93ellipse_problem)，因为两种类型虽然有很多共同特征，但都不能完美地包含另一种类型的行为。一般来说，除非有非常充分的理由使用继承，否则最好使用组合。组合是指一个类拥有另一个类对象的引用，但只将该对象用作实现细节。
+继承常常会导致[圆圈 - 椭圆问题](https://en.wikipedia.org/wiki/Circle%E2%80%93ellipse_problem)，因为两种类型虽然有很多共同特征，但都不能完美地包含另一种类型的行为。一般来说，除非有非常充分的理由使用继承，否则最好使用组合。组合是指一个类拥有另一个类对象的引用，但只将该对象用作实现细节。
 
 ```js
 class ReadOnlyMap {
