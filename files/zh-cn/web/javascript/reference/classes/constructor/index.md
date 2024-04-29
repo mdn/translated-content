@@ -52,6 +52,7 @@ otto.introduce(); // 你好，我的名字是 Otto
 ```js-nolint
 constructor() {}
 ```
+
 如果你的类是一个派生类，默认构造函数会调用父构造函数，并传递所提供的任何参数：
 
 ```js-nolint
