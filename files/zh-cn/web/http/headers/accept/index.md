@@ -2,7 +2,7 @@
 title: Accept
 slug: Web/HTTP/Headers/Accept
 l10n:
-  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+  sourceCommit: 7aab76c49ae49d606b4958f8dc8cd1269fb7b9b6
 ---
 
 {{HTTPSidebar}}
