@@ -54,7 +54,7 @@ get(options)
 
 - `partitioned`
 
-  - : 一个布尔值，表示 cookie 是否是分区 cookie (`true`) or (`false`)。更多信息请参阅 [具有独立分区状态 (CHIPS) 的 Cookie](/zh-CN/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies)。
+  - : 一个布尔值，表示 cookie 是否是分区 cookie（`true`）或（`false`）。更多信息请参阅 [具有独立分区状态（CHIPS）的 Cookie](/zh-CN/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies)。
 
 - `path`
 
@@ -91,7 +91,7 @@ get(options)
 
 ## 示例
 
-在此示例中，我们返回一个命名为 "cookie1" 的 cookie。如果找到 cookie，Promise 兑现的结果是一个包含单个 Cookie 的详细信息的对象。
+在此示例中，我们返回一个命名为“cookie1”的 cookie。如果找到 cookie，Promise 兑现的结果是一个包含单个 Cookie 的详细信息的对象。
 
 ```js
 const cookie = await cookieStore.get("cookie1");

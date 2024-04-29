@@ -54,7 +54,7 @@ getAll(options)
 
 - `partitioned`
 
-  - : 一个布尔值，表示 cookie 是否是分区 cookie (`true`) or (`false`)。更多信息请参阅 [具有独立分区状态 (CHIPS) 的 Cookie](/zh-CN/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies)。
+  - : 一个布尔值，表示 cookie 是否是分区 cookie（`true`）或（`false`）。更多信息请参阅 [具有独立分区状态 (CHIPS) 的 Cookie](/zh-CN/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies)。
 
 - `path`
 
@@ -83,7 +83,7 @@ getAll(options)
 - `SecurityError` {{domxref("DOMException")}}
   - : 如果源无法被{{glossary("Serialization", "序列化")}}成 URL，则抛出该异常。
 - {{jsxref("TypeError")}}
-  - : Thrown if:
+  - : 以下情况抛出该异常：
     - 在主线程中使用时，指定的 `url` 选项与创建的 URL 不一致。
     - 指定的 `url` 选项的源与创建的 URL 的源不一致。
     - 通过 `name` 或 `options` 查询 Cookie 失败。
