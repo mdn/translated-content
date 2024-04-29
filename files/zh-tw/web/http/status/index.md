@@ -9,11 +9,11 @@ l10n:
 
 HTTP 回應狀態碼表示特定的 [HTTP](/zh-TW/docs/Web/HTTP) 請求是否已成功完成。回應分為五類：
 
-1. [資訊回應](#資訊回應) (Informational responses, `100` – `199`)
-2. [成功回應](#成功回應) (Successful responses, `200` – `299`)
-3. [重新導向訊息](#重新導向訊息) (Redirection messages, `300` – `399`)
-4. [用戶端錯誤回應](#用戶端錯誤回應) (Client error responses, `400` – `499`)
-5. [伺服器錯誤回應](#伺服器錯誤回應) (Server error responses, `500` – `599`)
+1. [資訊回應](#資訊回應)（`100`——`199`）
+2. [成功回應](#成功回應)（`200`——`299`）
+3. [重新導向訊息](#重新導向訊息)（`300`——`399`）
+4. [用戶端錯誤回應](#用戶端錯誤回應)（`400`——`499`）
+5. [伺服器錯誤回應](#伺服器錯誤回應)（`500`——`599`）
 
 以下的狀態碼由 [RFC 9110](https://httpwg.org/specs/rfc9110.html#overview.of.status.codes) 定義。
 
@@ -117,9 +117,7 @@ HTTP 回應狀態碼表示特定的 [HTTP](/zh-TW/docs/Web/HTTP) 請求是否已
 - {{HTTPStatus(415, "415 Unsupported Media Type")}}
   - : 所請求資料的媒體格式不受伺服器支援，因此伺服器拒絕該請求。
 - {{HTTPStatus(416, "416 Range Not Satisfiable")}}
-  - : 請求中 `Range` 標頭欄位指定的範圍無法滿足。
-
-可能目標 URI 的資料大小超出了範圍。
+  - : 請求中 `Range` 標頭欄位指定的範圍無法滿足。可能是目標 URI 的資料大小超出了範圍。
 - {{HTTPStatus(417, "417 Expectation Failed")}}
   - : 此回應代碼意味著伺服器無法滿足 `Expect` 請求標頭欄位指示的期望。
 - {{HTTPStatus(418, "418 I'm a teapot")}}
