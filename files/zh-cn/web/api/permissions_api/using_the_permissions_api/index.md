@@ -1,27 +1,27 @@
 ---
 title: Using the Permissions API
 slug: Web/API/Permissions_API/Using_the_Permissions_API
+l10n:
+  sourceCommit: 3dbfd299e6f34873d6355bae4b12b5c1c69242f1
 ---
 
 {{DefaultAPISidebar("Permissions API")}}{{SeeCompatTable}}
 
-本文提供了使用 W3C Permission API 的基本说明，它提供了一种程序上的方式来查询当前上下文的 API 权限授权状态。
+本文提供了使用 W3C [Permission API](/zh-CN/docs/Web/API/Permissions_API)的基本说明，它提供了一种程序上的方式来查询当前上下文的 API 权限授权状态。
 
 ## 申请权限面临的困境
 
 惨淡的事实是，权限在 Web 开发中是令人厌恶却不得不面对的问题，对于开发者而言，处理它毫无乐趣。
 
-由于历史原因，不同的 API 使用各自不同的方式来处理自己的权限 ── 例如，Notification API 允许显式地检查权限状态和申请权限，然而，Geolocation API 却不能（如果用户拒绝了首次权限请求，就会造成我们下面将要看到的问题）。
+由于历史原因，不同的 API 使用各自不同的方式来处理自己的权限 ── 例如，[Notification API](/zh-CN/docs/Web/API/Notifications_API)允许显式地检查权限状态和申请权限，然而，[Geolocation API](/zh-CN/docs/Web/API/Geolocation_API) 却不能（如果用户拒绝了首次权限请求，就会造成我们下面将要看到的问题）。
 
-[Permissions API](/zh-CN/docs/Web/API/Permissions_API) 提供了一系列工具来让开发者在权限方面实现更好的用户体验。例如，它提供了特定的 API 来查询某个权限被授予了还是被拒绝了，以及可以使用 API 来申请特定的权限。
+[Permissions API](/zh-CN/docs/Web/API/Permissions_API) 提供了一系列工具来让开发者在权限方面实现更好的用户体验。具体来说，开发人员可以使用 {{domxref("Permissions.query()")}} 来检查在当前上下文中使用特定 API 的权限是已授予、已拒绝还是需要通过提示获得特定用户权限。在主线程中查询权限是被[广泛支持](/zh-CN/docs/Web/API/Permissions_API#api.navigator.permissions)的，在[Workers](/zh-CN/docs/Web/API/Permissions_API#api.workernavigator.permissions)中也是如此（但有一个明显的例外）。
 
-目前来说，该 API 的实现还在早期阶段，所以浏览器支持也是参差不齐：
+许多 API 现在都能进行权限查询，例如 [Clipboard API](/zh-CN/docs/Web/API/Clipboard_API)、[Notifications API](/zh-CN/docs/Web/API/Notifications_API)
 
-- 只在 Chrome 44 以上版本及 Firefox 43 以上版本实现了。
-- 当下仅支持 {{domxref("Permissions.query()")}} 方法，它用来查询权限。
-- Chrome 中目前可以被 Permission API 识别的权限仅有 [Geolocation](/zh-CN/docs/Web/API/Geolocation) 和 Notification，对于 Firefox 来说，还支持 [Push](/zh-CN/docs/Web/API/Push_API) and WebMIDI.
+- [Push API](/zh-CN/docs/Web/API/Push_API)、[Web MIDI API](/zh-CN/docs/Web/API/Web_MIDI_API)。[API 概览](/zh-CN/docs/Web/API/Permissions_API#permission-aware_apis)中提供了许多启用权限的 API 的列表，你可以在[此处的兼容性表](/zh-CN/docs/Web/API/Permissions_API#api.permissions)中了解浏览器的支持情况。
 
-更多特性将逐步实现。
+{{domxref("Permissions")}}还有其他方法可用于专门请求使用 API 的权限和撤销权限，但这些方法已被弃用（非标准和/或不被广泛支持）。
 
 ## 一个简单的例子
 
@@ -29,7 +29,7 @@ slug: Web/API/Permissions_API/Using_the_Permissions_API
 
 ![Screenshot showing a map of Greenfield, UK.](location-finder-with-permissions-api.png)
 
-You can [在线运行](https://chrisdavidmills.github.io/location-finder-permissions-api/)，或 [在 Github 查看源码](https://github.com/chrisdavidmills/location-finder-permissions-api/tree/gh-pages)。大部分代码都很简单且常见 ── 所以接下来我们会重点关注和 Permission API 有关的代码，如果你想学习其他部分，请自行阅读。
+你可以 [在线运行](https://chrisdavidmills.github.io/location-finder-permissions-api/)，或 [在 Github 查看源码](https://github.com/chrisdavidmills/location-finder-permissions-api/tree/gh-pages)。大部分代码都很简单且常见 ── 所以接下来我们会重点关注和 Permission API 有关的代码，如果你想学习其他部分，请自行阅读。
 
 ### 访问 Permissions API
 
