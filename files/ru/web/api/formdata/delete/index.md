@@ -46,7 +46,7 @@ formData.delete("username");
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref("XMLHTTPRequest")}}
 - [Using XMLHttpRequest](/ru/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)

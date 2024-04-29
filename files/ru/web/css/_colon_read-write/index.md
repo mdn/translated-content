@@ -28,7 +28,7 @@ input:read-write {
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [`:read-only`](/ru/docs/Web/CSS/:read-only)
 - HTML атрибут [`contenteditable`](/ru/docs/HTML/Content_Editable)

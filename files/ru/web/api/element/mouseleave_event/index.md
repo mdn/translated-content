@@ -137,7 +137,7 @@ The following example illustrates how to use `mouseout`, to simulate the princip
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{Event("mousedown")}}
 - {{Event("mouseup")}}

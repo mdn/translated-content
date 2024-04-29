@@ -53,7 +53,7 @@ The returned {{domxref("NodeList")}} Collection contains _all_ elements with the
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref("document.getElementById()")}} to return a reference to an element by its unique `id`
 - {{domxref("document.getElementsByTagName()")}} to return references to elements with the same [tag name](/ru/docs/Web/API/Element/tagName)

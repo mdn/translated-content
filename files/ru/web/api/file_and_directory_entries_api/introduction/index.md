@@ -175,7 +175,7 @@ This section defines and explains terms used in the File and Directory Entries A
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [File and Directory Entries API](/ru/docs/Web/API/File_and_Directory_Entries_API)
 - [Exploring the FileSystem APIs](http://www.html5rocks.com/en/tutorials/file/filesystem/) (HTML5 Rocks)

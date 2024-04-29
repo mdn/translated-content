@@ -28,7 +28,7 @@ slug: Web/API/Server-sent_events
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 ### Tools
 

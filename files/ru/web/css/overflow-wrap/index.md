@@ -133,7 +133,7 @@ p {
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{cssxref("word-break")}}
 - {{cssxref("hyphens")}}

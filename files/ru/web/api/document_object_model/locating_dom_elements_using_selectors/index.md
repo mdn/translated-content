@@ -36,7 +36,7 @@ var el = document.querySelector( "#main, #basic, #exclamation" );
 
 Вы можете использовать любые CSS-селекторы в методах `querySelector(), querySelectorAll()`
 
-## See also
+## Смотрите также
 
 - [Selectors API](http://www.w3.org/TR/selectors-api/)
 - [`element.querySelector`](/ru/docs/DOM/Element.querySelector)

@@ -72,6 +72,6 @@ The following elements can use the `text-rendering` attribute
 
 - {{ SVGElement("text") }}
 
-## See also
+## Смотрите также
 
 - {{ cssxref("text-rendering","CSS text-rendering") }}

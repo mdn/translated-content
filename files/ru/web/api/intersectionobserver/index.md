@@ -57,7 +57,7 @@ intersectionObserver.observe(document.querySelector(".scrollerFooter"));
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref('MutationObserver')}}
 - {{domxref('PerformanceObserver')}}

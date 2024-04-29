@@ -105,7 +105,7 @@ It may not be obvious as to why the focus indicator is appearing and disappearin
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{CSSxRef(":focus")}}
 - {{CSSxRef(":focus-within")}}

@@ -137,7 +137,7 @@ The value of the `origin` property when the sending window contains a `javascrip
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref("Document.domain")}}
 - {{domxref("CustomEvent")}}

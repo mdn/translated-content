@@ -88,7 +88,7 @@ When the available disk space is filled up, the quota manager will start clearin
 
 We track the "last access time" for each origin using temporary storage. Once the global limit for temporary storage is reached (more on the limit later), we try to find all currently unused origins (i.e., ones with no tabs/apps open that are keeping open datastores). These are then sorted according to "last access time." The least recently used origins are then deleted until there's enough space to fulfill the request that triggered this origin eviction.
 
-## See also
+## Смотрите также
 
 - [Working with quota on mobile browsers](http://www.html5rocks.com/en/tutorials/offline/quota-research/), by [Eiji Kitamura.](http://blog.agektmr.com) A detailed analysis of client-side storage on mobile browsers.
 - [Quota Management API: Fast Facts](https://developers.google.com/web/updates/2011/11/Quota-Management-API-Fast-Facts), by[Eiji Kitamura.](http://blog.agektmr.com) A look at the Quota Management API in Chrome/Blink (which should include Opera, too).

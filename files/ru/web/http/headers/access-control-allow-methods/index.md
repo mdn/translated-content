@@ -53,7 +53,7 @@ Access-Control-Allow-Methods: POST, GET, OPTIONS
   - Firefox: [Firefox bug 1309358](https://bugzil.la/1309358)
   - Servo: [Issue 13283](https://github.com/servo/servo/issues/13283)
 
-## See also
+## Смотрите также
 
 - {{HTTPHeader("Access-Control-Allow-Origin")}}
 - {{HTTPHeader("Access-Control-Expose-Headers")}}

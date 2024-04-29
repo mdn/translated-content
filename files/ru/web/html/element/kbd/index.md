@@ -163,7 +163,7 @@ The output from this HTML looks like this:
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{htmlelement("code")}}
 

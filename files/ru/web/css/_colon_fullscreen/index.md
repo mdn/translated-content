@@ -63,7 +63,7 @@ HTML выглядит так:
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [Fullscreen API](/ru/docs/Web/API/Fullscreen_API)
 - [Guide to the Fullscreen API](/ru/docs/Web/API/Fullscreen_API/Guide)

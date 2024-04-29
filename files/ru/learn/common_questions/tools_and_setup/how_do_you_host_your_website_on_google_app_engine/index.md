@@ -52,6 +52,6 @@ slug: Learn/Common_questions/Tools_and_setup/How_do_you_host_your_website_on_Goo
 7. Нажмите `Y` для подтверждения.
 8. Теперь перейдите по ссылке _your-project-id_.appspot.com, чтобы увидеть ваш сайт. Например, для проекта с ID _gaesamplesite,_ перейдите по ссылке [gaesamplesite.appspot.com](http://gaesamplesite.appspot.com/).
 
-## See also
+## Смотрите также
 
 Чтобы узнать больше, смотрите [Google App Engine Documentation](https://cloud.google.com/appengine/docs/).

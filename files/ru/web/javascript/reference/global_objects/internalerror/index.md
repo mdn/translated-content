@@ -80,7 +80,7 @@ loop(0);
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{jsxref("Error")}}
 - [InternalError: too much recursion](/ru/docs/Web/JavaScript/Reference/Errors/Too_much_recursion)

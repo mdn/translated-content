@@ -36,7 +36,7 @@ _Интерфейс **PositionError** не наследует никаких с�
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [Using geolocation](/ru/docs/WebAPI/Using_geolocation)
 - The {{domxref("Geolocation")}} interface that use it.
