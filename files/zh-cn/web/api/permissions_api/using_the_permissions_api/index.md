@@ -7,7 +7,7 @@ l10n:
 
 {{DefaultAPISidebar("Permissions API")}}
 
-本文提供了使用 W3C [Permission API](/zh-CN/docs/Web/API/Permissions_API)的基本说明，它提供了一种程序上的方式来查询当前上下文的 API 权限授权状态。
+本文提供了使用 W3C [Permissions API](/zh-CN/docs/Web/API/Permissions_API) 的基本说明，它提供了一种编程方式来查询当前上下文的 API 权限授权状态。
 
 ## 申请权限面临的困境
 
