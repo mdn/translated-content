@@ -2,7 +2,7 @@
 title: extends
 slug: Web/JavaScript/Reference/Classes/extends
 l10n:
-    sourceCommit: 41cddfdaeed4a73fb8234c332150df8e54df31e9
+  sourceCommit: 41cddfdaeed4a73fb8234c332150df8e54df31e9
 ---
 
 {{jsSidebar("Classes")}}
