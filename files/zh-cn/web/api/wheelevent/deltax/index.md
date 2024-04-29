@@ -3,7 +3,7 @@ title: WheelEvent.deltaX
 slug: Web/API/WheelEvent/deltaX
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 **`WheelEvent.deltaX`** 只读属性是一个 `double` 类型值，声明水平滚动量以{{domxref("WheelEvent.deltaMode")}} 为单位。
 

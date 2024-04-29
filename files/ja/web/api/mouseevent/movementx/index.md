@@ -6,7 +6,7 @@ l10n:
   sourceCommit: b3638d40efb549704bd2e73d8aa93514978892cf
 ---
 
-{{APIRef("UI Events")}}
+{{APIRef("Pointer Lock API")}}
 
 **`movementX`** は {{domxref("MouseEvent")}} インターフェイスの読み取り専用プロパティで、直前の {{domxref("Element/mousemove_event", "mousemove")}} イベントとこのイベントのマウスポインターの X 座標の差を示します。このプロパティの値は `currentEvent.movementX = currentEvent.screenX - previousEvent.screenX` のように計算されます。
 

@@ -3,7 +3,7 @@ title: UIEvent()
 slug: Web/API/UIEvent/UIEvent
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 **`UIEvent()`** 作为构造函数，可用于构造一个新的 {{domxref("UIEvent")}} 对象。
 

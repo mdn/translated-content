@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/ceil
 
 **`Math.ceil()`** 関数は、引数として与えた数以上の最小の整数を返します。
 
-**注:** `Math.ceil({{jsxref("null")}})` は整数の 0 を返し、 {{jsxref("NaN")}} エラーは返しません。
+**注:** `Math.ceil([`null`](/ja/docs/Web/JavaScript/Reference/Operators/null))` は整数の 0 を返し、 {{jsxref("NaN")}} エラーは返しません。
 
 {{EmbedInteractiveExample("pages/js/math-ceil.html")}}
 
