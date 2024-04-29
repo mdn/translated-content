@@ -8,7 +8,10 @@ l10n:
 
 {{APIRef("DOM")}}
 
-**`HTMLInputElement.labels`** 읽기 전용 속성은 요소가 숨겨져 있지 않은 경우 {{HTMLElement("input")}} 요소와 연관된 {{HTMLElement("label")}} 요소의 {{domxref("NodeList")}}를 반환합니다. 요소의 타입이 `hidden`인 경우, 속성은 `null`을 반환합니다.
+**`HTMLInputElement.labels`** 읽기 전용 속성은 요소가 숨겨져 있지 않은 경우
+{{HTMLElement("input")}} 요소와 연관된 {{HTMLElement("label")}} 요소의
+{{domxref("NodeList")}}를 반환합니다.
+요소의 타입이 `hidden`인 경우, 속성은 `null`을 반환합니다.
 
 ## 값
 
