@@ -25,4 +25,4 @@ HTTP **`511 Network Authentication Required`** 回應狀態碼表示用戶端需
 
 ## 參見
 
-- {{Glossary("Proxy server")}}
+- {{Glossary("Proxy server", "代理伺服器")}}
