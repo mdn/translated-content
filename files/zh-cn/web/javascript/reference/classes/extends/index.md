@@ -306,7 +306,7 @@ const randomizerMixin = (Base) =>
   };
 ```
 
-使用这些mix-ins的类可以这样编写：
+使用这些 mix-ins 的类可以这样编写：
 
 ```js
 class Foo {}
