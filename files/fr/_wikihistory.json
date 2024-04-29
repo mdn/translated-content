@@ -12685,6 +12685,10 @@
     "modified": "2020-10-15T22:33:31.446Z",
     "contributors": ["Voulto"]
   },
+  "Web/API/Window/crossOriginIsolated": {
+    "modified": "2020-10-15T22:26:34.641Z",
+    "contributors": ["Eliastik"]
+  },
   "Web/API/Window/customElements": {
     "modified": "2019-03-18T21:37:51.562Z",
     "contributors": ["NemoNobobyPersonne"]
@@ -12826,6 +12830,10 @@
       "Mgjbot",
       "Druss"
     ]
+  },
+  "Web/API/Window/isSecureContext": {
+    "modified": "2020-10-15T22:06:53.371Z",
+    "contributors": ["jonasgrilleres"]
   },
   "Web/API/Window/languagechange_event": {
     "modified": "2020-10-15T22:33:51.717Z",
@@ -13501,10 +13509,6 @@
     "modified": "2020-10-15T21:37:32.060Z",
     "contributors": ["loella16", "unpeudetout", "JulienItard"]
   },
-  "Web/API/crossOriginIsolated": {
-    "modified": "2020-10-15T22:26:34.641Z",
-    "contributors": ["Eliastik"]
-  },
   "Web/API/crypto_property": {
     "modified": "2019-06-12T16:41:52.512Z",
     "contributors": ["plyd", "foxstorm", "alandrieu"]
@@ -13512,10 +13516,6 @@
   "Web/API/fetch": {
     "modified": "2020-11-16T08:26:54.613Z",
     "contributors": ["JNa0", "PxlCtzn", "fscholz", "Hell_Carlito", "Bat41"]
-  },
-  "Web/API/isSecureContext": {
-    "modified": "2020-10-15T22:06:53.371Z",
-    "contributors": ["jonasgrilleres"]
   },
   "Web/API/origin": {
     "modified": "2020-10-15T22:06:53.236Z",
