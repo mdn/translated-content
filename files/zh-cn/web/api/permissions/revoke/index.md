@@ -22,7 +22,7 @@ revoke(descriptor)
     - `name`
       - ：要查询其权限的 API 的名称。有效值为 `geolocation`、`midi`、`notifications` 和 `push`。
     - `userVisibleOnly`
-      - ：（仅限推送，Firefox 不支持--请参阅下面的 [浏览器兼容性](#browser_compatibility) 部分）表示是否要为每条信息显示通知，还是能够发送静默推送通知。默认为 "false"。
+      - ：（仅限推送，Firefox 不支持——请参阅下面的[浏览器兼容性](#浏览器兼容性)部分）表示是否要为每条信息显示通知，还是能够发送静默推送通知。默认为 `false`。
     - `sysex` (仅限 MIDI)
       - ：表示是否需要接收系统专用信息。默认为 `false`。
 
