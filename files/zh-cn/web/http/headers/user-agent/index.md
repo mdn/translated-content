@@ -66,7 +66,7 @@ Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0
 Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:42.0) Gecko/20100101 Firefox/42.0
 ```
 
-## Chrome UA 字符串
+## Chrome 用户代理字符串
 
 基于 Chrome（Chromium 或 Blink 引擎）的浏览器用户代理字符串与 Firefox 相似。为了保持兼容性，它会添加诸如 `KHTML, like Gecko` 和 `Safari` 的字符串。
 
@@ -76,7 +76,7 @@ Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:42.0) Gecko/20100101 Firefox/42.0
 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36
 ```
 
-## Opera UA 字符串
+## Opera 用户代理字符串
 
 Opera 浏览器同样是基于 Blink 引擎，这就是为什么它看起来与 Chrome UA 字符串几乎一样，只是添加了 `"OPR/<version>"`。
 
@@ -93,7 +93,7 @@ Opera/9.80 (Macintosh; Intel Mac OS X; U; en) Presto/2.2.15 Version/10.00
 Opera/9.60 (Windows NT 6.0; U; en) Presto/2.1.1
 ```
 
-## 微软 Edge UA 字符串
+## 微软 Edge 用户代理字符串
 
 Edge 浏览器同样基于 Blink 引擎，它添加了 `"Edg/<version>"`。
 
@@ -103,7 +103,7 @@ Edge 浏览器同样基于 Blink 引擎，它添加了 `"Edg/<version>"`。
 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 Edg/91.0.864.59
 ```
 
-## Safari UA 字符串
+## Safari 用户代理字符串
 
 在此示例中，用户代理字符串是移动版 Safari 的版本信息，其中包含了单词 `"Mobile"`。
 
@@ -113,7 +113,7 @@ Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)
 Mozilla/5.0 (iPhone; CPU iPhone OS 13_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/604.1
 ```
 
-## 爬虫和机器人 UA 字符串
+## 爬虫和机器人用户代理字符串
 
 ### 示例
 
