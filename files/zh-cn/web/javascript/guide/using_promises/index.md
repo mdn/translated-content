@@ -37,7 +37,7 @@ createAudioFileAsync(audioSettings).then(successCallback, failureCallback);
 
 ## 链式调用
 
-连续执行两个或者多个异步操作是一个常见的需求，在上一个操作执行成功之后，开始下一个的操作，并带着上一步操作所返回的结果。在旧的回调风格中，这种操作会导致经典的回调地狱：
+连续执行两个或者多个异步操作是一个常见的需求，在上一个操作执行成功之后，开始下一个的操作，并带着上一步操作所返回的结果。在旧的回调风格中，这种操作会导致经典的[回调地狱](http://callbackhell.com/)：
 
 ```js-nolint
 doSomething(function (result) {
@@ -58,9 +58,26 @@ const promise = doSomething();
 const promise2 = promise.then(successCallback, failureCallback);
 ```
 
-`promise2` 不仅表示 `doSomething()` 函数的完成，也代表了你传入的 `successCallback` 或者 `failureCallback` 的完成，这两个函数也可以返回一个 Promise 对象，从而形成另一个异步操作，这样的话，在 `promise2` 上新增的回调函数会排在这个 Promise 对象的后面。
+第二个 promise（`promise2`）不仅表示 `doSomething()` 函数的完成，也代表了你传入的 `successCallback` 或者 `failureCallback` 的完成，这两个函数也可以是返回 Promise 对象的异步函数。这样的话，在 `promise2` 上新增的排在该 promise 后面的回调函数会通过 `successCallback` 或 `failureCallback` 返回。
 
-就像这样，每一个 Promise 都代表了链中另一个异步过程的完成。此外，`then` 的参数是可选的，`catch(failureCallback)` 等同于 `then(null, failureCallback)`——所以如果你的错误处理代码对所有步骤都是一样的，你可以把它附加到链的末尾：
+> **备注：** 如果你想要一个可以操作的示例，你可以使用下面的模板来创建任何返回 Promise 的函数：
+>
+> ```js
+> function doSomething() {
+>   return new Promise((resolve) => {
+>     setTimeout(() => {
+>       // 在完成 Promise 之前的其他操作
+>       console.log("完成了一些事情");
+>       // promise 的兑现值
+>       resolve("https://example.com/");
+>     }, 200);
+>   });
+> }
+> ```
+>
+> 该实现会在下面的[在旧式回调 API 中创建 Promise](##在旧式回调_api_中创建_promise)部分讨论。
+
+就像这样，你可以创建一个更长的处理链，其中的每个 Promise 都代表了链中的一个异步过程的完成。此外，`then` 的参数是可选的，`catch(failureCallback)` 等同于 `then(null, failureCallback)`——所以如果你的错误处理代码对所有步骤都是一样的，你可以把它附加到链的末尾：
 
 ```js
 doSomething()
@@ -88,28 +105,43 @@ doSomething()
   .catch(failureCallback);
 ```
 
-**注意**：一定要有返回值，否则，回调将无法获取上一个 Promise 的结果。（如果使用箭头函数，`() => x` 比 `() => { return x; }` 更简洁一些，但后一种保留 `return` 的写法才支持使用多个语句）。如果上一个处理程序启动了一个 Promise 但并没有返回它，那就没有办法再追踪它的状态了，这个 Promise 就是“漂浮”的。
+> **备注：** 箭头函数表达式可以有[隐式返回值](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions#函数体)；所以，`() => x` 是 `() => { return x; }` 的简写。
+
+`doSomethingElse` 和 `doThirdThing` 可以返回任何值——如果它们返回的是 Promise，那么会首先等待这个 Promise 的敲定，然后下一个回调函数会接收到它的兑现值，而不是 Promise 本身。在 `then` 回调中始终返回 Promise 是非常重要的，即使 Promise 总是兑现为 `undefined`。如果上一个处理器启动了一个 Promise 但并没有返回它，那么就没有办法再追踪它的敲定状态了，这个 Promise 就是“漂浮”的。
 
 ```js example-bad
 doSomething()
   .then((url) => {
-    // 忘记返回了！
+    // fetch(url) 前缺少 `return` 关键字。
     fetch(url);
   })
   .then((result) => {
-    // 结果是 undefined，因为上一个处理程序没有返回任何东西。
-    // 无法得知 fetch() 的返回值，不知道它是否成功。
+    // result 是 undefined，因为上一个处理器没有返回任何东西。
+    // 无法得知 fetch() 的返回值，也无法知道它是否成功。
   });
 ```
 
-如果有竞争条件的话，情况会更糟——如果上一个处理程序的 Promise 没有返回，那么下一个 `then` 处理程序会提前调用，而它读取的任何值都可能是不完整的。
+通过返回 `fetch` 调用的结果（一个 Promise），我们既可以追踪它的完成状态，也可以在它完成时接收到它的值。
+
+```js example-good
+doSomething()
+  .then((url) => {
+    // 添加 `return` 关键字
+    return fetch(url);
+  })
+  .then((result) => {
+    // result 是一个 Response 对象
+  });
+```
+
+如果有竞态条件的话，使 Promise 漂浮的情况会更糟——如果上一个处理器的 Promise 没有返回，那么下一个 `then` 处理器会被提前调用，而它读取的任何值都可能是不完整的。
 
 ```js example-bad
 const listOfIngredients = [];
 
 doSomething()
   .then((url) => {
-    // 忘记返回了！
+    // fetch(url) 前缺少 `return` 关键字。
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
@@ -118,18 +150,18 @@ doSomething()
   })
   .then(() => {
     console.log(listOfIngredients);
-    // 永远是 []，因为 fetch 请求还没有完成。
+    // listOfIngredients 永远为 []，因为 fetch 请求还没有完成。
   });
 ```
 
-因此，一个经验法则是，每当你的操作遇到一个 Promise，就返回它，并把它的处理推迟到下一个 `then` 处理程序中。
+因此，一个经验法则是，每当你的操作遇到一个 Promise，就返回它，并把它的处理推迟到下一个 `then` 处理器中。
 
 ```js example-good
 const listOfIngredients = [];
 
 doSomething()
   .then((url) => {
-    // fetch调用前面现在包含了”return“关键字。
+    // fetch 调用前面现在包含了 `return` 关键字。
     return fetch(url)
       .then((res) => res.json())
       .then((data) => {
@@ -138,7 +170,7 @@ doSomething()
   })
   .then(() => {
     console.log(listOfIngredients);
-    // listOfIngredients现在将包含来自fetch所调用的数据。
+    // listOfIngredients 现在将包含来自 fetch 调用的数据。
   });
 ```
 
@@ -156,7 +188,7 @@ doSomething()
   });
 ```
 
-使用 [`async`/`await`](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function)可以帮助您编写更直观、更类似同步代码的代码。下面是使用 `async`/`await` 的相同示例：
+使用 [`async`/`await`](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function) 可以帮助你编写更直观、更类似同步代码的代码。下面是使用 `async`/`await` 的相同示例：
 
 ```js
 async function logIngredients() {
@@ -168,11 +200,11 @@ async function logIngredients() {
 }
 ```
 
-请注意，除了前面的 `await` 关键字外，这段代码看起来与同步代码一模一样。唯一的折衷是，可能很容易忘记 [`await`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function)关键字，这只能在出现类型不匹配（例如试图将承诺作为值使用）时才能解决。
+请注意，除了前面的 `await` 关键字外，这段代码看起来与同步代码一模一样。唯一的折衷是，可能很容易忘记 [`await`](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function) 关键字，这只能在出现类型不匹配（例如试图将承诺作为值使用）时才能解决。
 
-`async`/`await` 基于 promises，例如，`doSomething()` 与之前的函数相同，因此从 promises 到 `async`/`await` 所需的重构工作微乎其微。有关 `async`/`await` 语法的更多信息，请参阅 [async functions](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function) 和 [`await`](/zh-CN/docs/Web/JavaScript/Reference/Operators/await)。
+`async`/`await` 基于 promise，例如，`doSomething()` 与之前的函数相同，因此从 promise 到 `async`/`await` 所需的重构工作微乎其微。有关 `async`/`await` 语法的更多信息，请参阅[异步函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function)和 [`await`](/zh-CN/docs/Web/JavaScript/Reference/Operators/await) 参考。
 
-> **备注：** async/await 的并发语义与普通Promise链相同。一个异步函数中的 `await` 不会停止整个程序，只会停止依赖其值的部分，因此在 `await` 挂起时，其他异步任务仍可运行。
+> **备注：** async/await 的并发语义与普通 Promise 链相同。异步函数中的 `await` 不会停止整个程序，只会停止依赖其值的部分，因此在 `await` 挂起时，其他异步任务仍可运行。
 
 ## 错误处理
 
@@ -216,18 +248,16 @@ async function foo() {
 
 ### 嵌套
 
-对比上述两个例子，第一个例子中有一个 Promise 链嵌套在另一个 `then()` 处理程序的返回值中；而第二个例子则是完全扁平化的链。简洁的 Promise 链式编程最好保持扁平化，不要嵌套 Promise，因为嵌套经常会是粗心导致的。详见[常见错误](#常见错误)。
+对比上述涉及 `listOfIngredients` 的两个例子，第一个例子中有一个 Promise 链嵌套在另一个 `then()` 处理器的返回值中；而第二个例子则是完全扁平化的链。简洁的 Promise 链式编程最好保持扁平化，不要嵌套 Promise，因为嵌套经常会是粗心导致的。
 
-嵌套 Promise 是一种可以限制 `catch` 语句的作用域的控制结构写法。明确来说，嵌套的 `catch` 只会捕获其作用域及以下的错误，而不会捕获链中更高层的错误。如果使用正确，可以实现高精度的错误恢复。
+嵌套是一种可以限制 `catch` 语句的作用域的控制结构写法。明确来说，嵌套的 `catch` 只会捕获其作用域及以下的错误，而不会捕获链中更高层的错误。如果使用正确，可以实现细粒度的错误恢复。
 
 ```js
 doSomethingCritical()
   .then((result) =>
-    doSomethingOptional() // 可选操作
+    doSomethingOptional()
       .then((optionalResult) => doSomethingExtraNice(optionalResult))
-      .catch((e) => {
-        console.log(e.message);
-      }),
+      .catch((e) => {}),
   ) // 即便可选操作失败了，也会继续执行
   .then(() => moreCriticalStuff())
   .catch((e) => console.log(`严重失败：${e.message}`));
@@ -251,12 +281,12 @@ async function main() {
     }
     await moreCriticalStuff();
   } catch (e) {
-    console.error(`严重失败: ${e.message}`);
+    console.error(`严重失败：${e.message}`);
   }
 }
 ```
 
-> **备注：** 如果没有复杂的错误处理，则很可能不需要嵌套的`then`处理程序。相反，可以使用扁平链，将错误处理逻辑放在最后。
+> **备注：** 如果没有复杂的错误处理，则很可能不需要嵌套的 `then` 处理器。相反，可以使用扁平链，将错误处理逻辑放在最后。
 
 ### Catch 的后续链式操作
 
