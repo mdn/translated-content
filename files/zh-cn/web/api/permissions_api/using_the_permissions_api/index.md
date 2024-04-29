@@ -13,7 +13,7 @@ l10n:
 
 惨淡的事实是，权限在 Web 开发中是令人厌恶却不得不面对的问题，对于开发者而言，处理它毫无乐趣。
 
-由于历史原因，不同的 API 使用各自不同的方式来处理自己的权限 ── 例如，[Notification API](/zh-CN/docs/Web/API/Notifications_API)允许显式地检查权限状态和申请权限，然而，[Geolocation API](/zh-CN/docs/Web/API/Geolocation_API) 却不能（如果用户拒绝了首次权限请求，就会造成我们下面将要看到的问题）。
+由于历史原因，不同的 API 使用各自不同的方式来处理自己的权限──例如，[Notification API](/zh-CN/docs/Web/API/Notifications_API) 允许显式地检查权限状态和申请权限，然而，[Geolocation API](/zh-CN/docs/Web/API/Geolocation_API) 却不能。
 
 [Permissions API](/zh-CN/docs/Web/API/Permissions_API) 提供了一系列工具来让开发者在权限方面实现更好的用户体验。具体来说，开发人员可以使用 {{domxref("Permissions.query()")}} 来检查在当前上下文中使用特定 API 的权限是已授予、已拒绝还是需要通过提示获得特定用户权限。在主线程中查询权限是被[广泛支持](/zh-CN/docs/Web/API/Permissions_API#api.navigator.permissions)的，在[Workers](/zh-CN/docs/Web/API/Permissions_API#api.workernavigator.permissions)中也是如此（但有一个明显的例外）。
 
