@@ -313,11 +313,11 @@ JavaScript 语言旨在用于更加广泛的环境，不论是浏览器、服务
 
 [JavaScript 函数](/zh-CN/docs/Web/JavaScript/Reference/Functions)。
 
-- {{jsxref("Functions/Arrow_functions", "Arrow 函数", "", "nocode")}}
-- {{jsxref("Functions/Default_parameters", "默认参数值", "", "nocode")}}
+- {{jsxref("Functions/Arrow_functions", "箭头函数", "", "nocode")}}
+- {{jsxref("Functions/Default_parameters", "默认参数", "", "nocode")}}
 - {{jsxref("Functions/rest_parameters", "剩余参数", "", "nocode")}}
 - {{jsxref("Functions/arguments", "arguments")}}
-- {{jsxref("Functions/Method_definitions", "方法的定义", "", "nocode")}}
+- {{jsxref("Functions/Method_definitions", "方法定义", "", "nocode")}}
 - {{jsxref("Functions/get", "getter", "", "nocode")}}
 - {{jsxref("Functions/set", "setter", "", "nocode")}}
 
