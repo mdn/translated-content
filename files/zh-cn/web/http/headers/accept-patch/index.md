@@ -7,11 +7,11 @@ l10n:
 
 {{HTTPSidebar}}
 
-**`Accept-Patch`** 响应 HTTP 标头中用来声明服务器能够理解的 PATCH 请求中的媒体类型。
+**`Accept-Patch`** 响应 HTTP 标头中用来声明服务器在 PATCH 请求中能够理解的媒体类型。
 
 在对任何方法的响应中包含 **`Accept-Patch`** 意味着允许对由 Request-URI 所标识的资源执行 PATCH 操作。导致这种情况的常见原因有两个：
 
-当服务器接收到带有不支持媒体类型的 PATCH 请求时，可以回复 {{HTTPStatus("415")}} `Unsupported Media Type` 状态码，并在 Accept-Patch 头部指明一个或多个支持的媒体类型。
+当服务器接收到带有不支持媒体类型的 PATCH 请求时，可以回复 {{HTTPStatus("415")}} `Unsupported Media Type` 状态码，并在 Accept-Patch 标头中指明一个或多个支持的媒体类型。
 
 > **备注：**
 >
