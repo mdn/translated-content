@@ -21,13 +21,14 @@ revoke(descriptor)
 - `descriptor`
   - ：一个基于 `PermissionDescriptor` 字典的对象，用于设置由逗号分隔的名 - 值对列表组成的操作选项。
     可用的选项有：
-        - `name`
-            - ：要查询其权限的 API 的名称。有效值为 `geolocation` 、 `midi` 、`notifications` 和 `push` 。
-        - `userVisibleOnly`
-            - ：（仅限推送，Firefox 不支持--请参阅下面的 [浏览器兼容性](#browser_compatibility) 部分）表示是否要为每条信息显示通知，还是能够发送静默推送通知。默认为 "false"。
-        - `sysex` (仅限 MIDI)
-            - ：表示是否需要和/或接收系统专用信息。默认为 "false"。
-> **备注：** 从Firefox 44开始，[Notifications](/zh-CN/docs/Web/API/Notifications_API)和[Push](/zh-CN/docs/Web/API/Push_API)的权限已经合并。如果权限已授予（例如由用户在相关权限对话框中授予），`navigator.permissions.query()` 将为 `notifications` 和 `push` 返回 `true` 。
+    - `name`
+      - ：要查询其权限的 API 的名称。有效值为 `geolocation` 、 `midi` 、`notifications` 和 `push` 。
+    - `userVisibleOnly`
+      - ：（仅限推送，Firefox 不支持--请参阅下面的 [浏览器兼容性](#browser_compatibility) 部分）表示是否要为每条信息显示通知，还是能够发送静默推送通知。默认为 "false"。
+    - `sysex` (仅限 MIDI)
+      - ：表示是否需要和/或接收系统专用信息。默认为 "false"。
+
+> **备注：** 从 Firefox 44 开始，[Notifications](/zh-CN/docs/Web/API/Notifications_API)和[Push](/zh-CN/docs/Web/API/Push_API)的权限已经合并。如果权限已授予（例如由用户在相关权限对话框中授予），`navigator.permissions.query()` 将为 `notifications` 和 `push` 返回 `true` 。
 
 > **备注：** `persistent-storage` 权限允许使用持久盒（即 [persistent storage](https://storage.spec.whatwg.org/#persistence)）进行存储，如 [Storage API](https://storage.spec.whatwg.org/) 所述。
 
