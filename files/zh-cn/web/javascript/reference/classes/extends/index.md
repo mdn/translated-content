@@ -136,7 +136,7 @@ console.log(new ChildClass()); // TypeError: Derived constructors may only retur
 
 这些问题并非内置类所独有。对于您自己的类，您也可能需要做出同样的决定。不过，对于内置类来说，可优化性和安全性是更大的问题。新的内置方法总是构造基类，并尽可能少地调用自定义方法。如果你想在实现上述期望的同时对内置类进行子类化，你需要重写所有已内置默认行为的方法。在基类上添加任何新方法都可能会破坏子类的语义，因为这些方法是默认继承的。因此，扩展内置类的更好方法是使用 [_composition_](#avoiding_inheritance)。
 
-### 拓展null
+### 拓展 null
 
 `extends null` 设计用于轻松创建 [不继承于 `Object.prototype` 的对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects)。然而，由于关于是否应在构造函数中调用 `super()` 的决定尚未确定，因此在实践中不可能使用任何不返回对象的构造函数实现来构造这样的类。[TC39 委员会正在努力重新启用这一功能](https://github.com/tc39/ecma262/pull/1321)。
 
