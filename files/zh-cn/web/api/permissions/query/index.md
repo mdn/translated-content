@@ -41,7 +41,7 @@ query(permissionDescriptor)
 - `InvalidStateError` {{domxref("DOMException")}}
   - ：如果在浏览上下文中调用了 `query()` 方法，而其关联文档尚未完全激活，则抛出此问题。
 - {{jsxref("TypeError")}}
-  - ： 如果检索 `PermissionDescriptor` 信息以某种方式失败，或者权限不存在或用户代理不支持该权限，则抛出此问题。
+  - ：如果检索 `PermissionDescriptor` 信息以某种方式失败，或者权限不存在或用户代理不支持该权限，则抛出此问题。
 
 ## 示例
 
