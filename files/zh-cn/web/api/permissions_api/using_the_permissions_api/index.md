@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 3dbfd299e6f34873d6355bae4b12b5c1c69242f1
 ---
 
-{{DefaultAPISidebar("Permissions API")}}{{SeeCompatTable}}
+{{DefaultAPISidebar("Permissions API")}}
 
 本文提供了使用 W3C [Permission API](/zh-CN/docs/Web/API/Permissions_API)的基本说明，它提供了一种程序上的方式来查询当前上下文的 API 权限授权状态。
 
