@@ -9,7 +9,7 @@ l10n:
 
 {{domxref("WorkerGlobalScope")}} 接口的 **`crossOriginIsolated`** 只读属性返回一个指示网站是否处于跨源隔离状态的布尔值。该状态降低了旁路攻击的风险并解锁了一些功能：
 
-- 可以创建并通过调用 {{DOMxRef("Window.postMessage()")}} 或 {{DOMxRef("MessagePort.postMessage()")}} 来发送 {{JSxRef("SharedArrayBuffer")}}。
+- 可以创建并通过调用 {{DOMxRef("DedicatedWorkerGlobalScope.postMessage()")}} 或 {{DOMxRef("MessagePort.postMessage()")}} 来发送 {{JSxRef("SharedArrayBuffer")}}。
 - 提升 {{DOMxRef("Performance.now()")}} 的精度。
 - 可以访问 {{DOMxRef("Performance.measureUserAgentSpecificMemory()")}}。
 
