@@ -18,7 +18,7 @@ class ChildClass extends ParentClass { /* … */ }
 ```
 
 - `ParentClass`
-  - ：求值为构造函数（包括类）或 `null` 的表达式。 
+  - ：求值为构造函数（包括类）或 `null` 的表达式。
 
 ## 描述
 
