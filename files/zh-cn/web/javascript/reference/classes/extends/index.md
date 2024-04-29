@@ -132,7 +132,7 @@ console.log(new ChildClass()); // TypeError: Derived constructors may only retur
 
 - 第一个要求静态方法读取 [`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 的值，以获取构造函数来构造返回的实例。这意味着 `[p1,p2,p3].map(Promise.resolve)`会出错，因为 `Promise.resolve` 中的 `this` 是 `undefined` 。解决这个问题的方法是，如果 `this` 不是构造函数，就返回到基类，就像 {{jsxref("Array.from()")}} 所做的那样，但这仍然意味着基类是特例。
 - 第二个要求实例方法读取 [`this.constructor`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) 以获取构造函数。但是，`new this.constructor()` 可能会破坏传统代码，因为 `constructor` 属性是可写和可配置的，而且不受任何保护。因此，许多复制的内置方法都使用构造函数的 [`@@species`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/species)属性（默认情况下只返回`this`，即构造函数本身）。然而，`@@species` 允许运行任意代码和创建任意类型的实例，这就带来了安全问题，并使子类化语义变得非常复杂。
-- 第三个会导致自定义代码的可见调用，从而使很多优化更难实现。例如，如果使用包含 _x_ 个元素的可迭代元素调用`Map()`构造函数，那么它必须明显地调用`set()`方法_x_次，而不仅仅是将元素复制到内部存储空间。
+- 第三个会导致自定义代码的可见调用，从而使很多优化更难实现。例如，如果使用包含 _x_ 个元素的可迭代元素调用`Map()`构造函数，那么它必须明显地调用`set()`方法 _x_ 次，而不仅仅是将元素复制到内部存储空间。
 
 这些问题并非内置类所独有。对于你自己的类，你也可能需要做出同样的决定。不过，对于内置类来说，可优化性和安全性是更大的问题。新的内置方法总是构造基类，并尽可能少地调用自定义方法。如果你想在实现上述期望的同时对内置类进行子类化，你需要重写所有已内置默认行为的方法。在基类上添加任何新方法都可能会破坏子类的语义，因为这些方法是默认继承的。因此，扩展内置类的更好方法是使用 [_composition_](#avoiding_inheritance)。
 
