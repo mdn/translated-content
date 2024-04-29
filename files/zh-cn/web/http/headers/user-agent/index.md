@@ -45,7 +45,7 @@ User-Agent: Mozilla/5.0 (<system-information>) <platform> (<platform-details>) <
 - \<comment>
   - : 零个或多个包含更多细节的注释。例如，子产品的信息。
 
-## Firefox UA 字符串
+## Firefox 用户代理字符串
 
 关于更多 Firefox 和基于 Gecko 的用户代理字符串的信息，请参阅 [Firefox 用户代理字符串参考](/zh-CN/docs/Web/HTTP/Headers/User-Agent/Firefox)。Firefox 的用户代理字符串分为 4 个组成部分：
 
@@ -78,7 +78,7 @@ Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51
 
 ## Opera 用户代理字符串
 
-Opera 浏览器同样是基于 Blink 引擎，这就是为什么它看起来与 Chrome UA 字符串几乎一样，只是添加了 `"OPR/<version>"`。
+Opera 浏览器同样是基于 Blink 引擎，这就是为什么它看起来与 Chrome 用户代理字符串几乎一样，只是添加了 `"OPR/<version>"`。
 
 ### 示例
 
