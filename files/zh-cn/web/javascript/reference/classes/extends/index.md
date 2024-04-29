@@ -215,7 +215,7 @@ class Dog {
 Object.setPrototypeOf(Dog.prototype, Animal);
 
 const d = new Dog("Mitzie");
-d.speak(); // Mitzie发出了噪音
+d.speak(); // Mitzie 发出了噪音
 ```
 
 ### 使用 `extends`与内置对象
