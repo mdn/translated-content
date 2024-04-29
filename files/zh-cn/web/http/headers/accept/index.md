@@ -37,7 +37,7 @@ Accept: <MIME_type>/<MIME_subtype>
 Accept: <MIME_type>/*
 Accept: */*
 
-// 多种类型，采用{{glossary("quality values", "权重值")}}语法区分：
+// 多种类型，采用权重值语法区分：
 Accept: text/html, application/xhtml+xml, application/xml;q=0.9, image/webp, */*;q=0.8
 ```
 
