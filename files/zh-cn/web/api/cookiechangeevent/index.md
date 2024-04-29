@@ -33,7 +33,7 @@ _该接口同样继承来自 {{domxref("Event")}} 的属性。_
 - {{domxref("CookieChangeEvent.deleted")}} {{ReadOnlyInline}}
   - : 返回一个包含一个或多个被删除的 cookie 的数组。
 
-## Instance methods
+## 实例方法
 
 _该接口同样继承来自 {{domxref("Event")}} 的方法。_
 
