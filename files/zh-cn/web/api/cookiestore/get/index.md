@@ -2,12 +2,12 @@
 title: "CookieStore: get() method"
 slug: Web/API/CookieStore/get
 l10n:
-  sourceCommit: 2c641e08878722bf29fb784d58c61873ce4a133a
+  sourceCommit: 01e7af5aeee7833c129ddfa41eb719b123a8cdcc
 ---
 
 {{securecontext_header}}{{APIRef("Cookie Store API")}} {{AvailableInWorkers}}
 
-{{domxref("CookieStore")}} 接口的 **`get()`** 方法通过名称或选项对象获取一个 cookie。该方法返回第一个通过参数匹配到的 cookie。
+{{domxref("CookieStore")}} 接口的 **`get()`** 方法通过 `name` 或 `options` 对象获取一个 cookie。该方法返回第一个通过参数匹配到的 cookie。
 
 ## 语法
 
@@ -38,7 +38,7 @@ get(options)
 
 ### 返回值
 
-一个兑现为与提交的名称或选项匹配的第一个 cookie 的 {{jsxref("Promise")}}。该对象包含以下属性：
+一个兑现为与提交的 `name` 或 `options` 匹配的第一个 cookie 的 {{jsxref("Promise")}}。该对象包含以下属性：
 
 - `domain`
 

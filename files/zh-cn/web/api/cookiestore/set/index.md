@@ -2,12 +2,12 @@
 title: CookieStore：set() 方法
 slug: Web/API/CookieStore/set
 l10n:
-  sourceCommit: 2c641e08878722bf29fb784d58c61873ce4a133a
+  sourceCommit: 01e7af5aeee7833c129ddfa41eb719b123a8cdcc
 ---
 
 {{securecontext_header}}{{APIRef("Cookie Store API")}} {{AvailableInWorkers}}
 
-{{domxref("CookieStore")}} 接口的 **`set()`** 方法通过给定的名称和值或选项对象设置 cookie。
+{{domxref("CookieStore")}} 接口的 **`set()`** 方法通过给定的 `name` 和 `value` 或 `options` 对象设置 cookie。
 
 ## 语法
 

@@ -2,7 +2,7 @@
 title: CookieStore
 slug: Web/API/CookieStore
 l10n:
-  sourceCommit: 2c641e08878722bf29fb784d58c61873ce4a133a
+  sourceCommit: 01e7af5aeee7833c129ddfa41eb719b123a8cdcc
 ---
 
 {{securecontext_header}}{{APIRef("Cookie Store API")}} {{AvailableInWorkers}}
@@ -16,13 +16,13 @@ l10n:
 ## 实例方法
 
 - {{domxref("CookieStore.delete()")}}
-  - : `delete()` 方法通过名称或选项对象删除 cookie，返回一个删除完成后兑现的 {{jsxref("Promise")}}。
+  - : `delete()` 方法通过 `name` 或 `options` 对象删除 cookie，返回一个删除完成后兑现的 {{jsxref("Promise")}}。
 - {{domxref("CookieStore.get()")}}
-  - : `get()` 方法获通过名称或选项对象获取一个 cookie，返回一个兑现为 cookie 详细信息的 {{jsxref("Promise")}}。
+  - : `get()` 方法获通过 `name` 或 `options` 对象获取一个 cookie，返回一个兑现为 cookie 详细信息的 {{jsxref("Promise")}}。
 - {{domxref("CookieStore.getAll()")}}
   - : `getAll()` 方法获取所有匹配的 cookie，返回一个兑现为 cookie 列表的 {{jsxref("Promise")}}。
 - {{domxref("CookieStore.set()")}}
-  - : `set()` 方法通过给定的名称和值或选项对象设置 cookie，返回一个设置成功后兑现的 {{jsxref("Promise")}}。
+  - : `set()` 方法通过给定的 `name` 和 `value` 或 `options` 对象设置 cookie，返回一个设置成功后兑现的 {{jsxref("Promise")}}。
 
 ## 事件
 

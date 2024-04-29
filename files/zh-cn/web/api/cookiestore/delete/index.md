@@ -2,12 +2,12 @@
 title: CookieStore：delete() 方法
 slug: Web/API/CookieStore/delete
 l10n:
-  sourceCommit: f4fbfbf970640bfef77c8544bbfd9426ad540cc3
+  sourceCommit: 01e7af5aeee7833c129ddfa41eb719b123a8cdcc
 ---
 
 {{securecontext_header}}{{APIRef("Cookie Store API")}} {{AvailableInWorkers}}
 
-{{domxref("CookieStore")}} 接口的 **`delete()`** 方法通过名称或选项对象删除 cookie。`delete()` 方法通过将日期更改为过去的日期来使 cookie 过期。
+{{domxref("CookieStore")}} 接口的 **`delete()`** 方法通过 `name` 或 `options` 对象删除 cookie。`delete()` 方法通过将日期更改为过去的日期来使 cookie 过期。
 
 ## 语法
 

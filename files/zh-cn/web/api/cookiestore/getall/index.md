@@ -2,12 +2,12 @@
 title: CookieStore：getAll() 方法
 slug: Web/API/CookieStore/getAll
 l10n:
-  sourceCommit: 2c641e08878722bf29fb784d58c61873ce4a133a
+  sourceCommit: 01e7af5aeee7833c129ddfa41eb719b123a8cdcc
 ---
 
 {{securecontext_header}}{{APIRef("Cookie Store API")}} {{AvailableInWorkers}}
 
-{{domxref("CookieStore")}} 接口的 **`getAll()`** 方法返回与传递给它的名称或 options 匹配的所有 cookie 列表。
+{{domxref("CookieStore")}} 接口的 **`getAll()`** 方法返回与传递给它的 `name` 或 `options` 匹配的所有 cookie 列表。
 
 ## 语法
 
@@ -36,7 +36,7 @@ getAll(options)
 
 ### 返回值
 
-一个兑现为与指定的名称或选项对象匹配的 cookie 信息对象的 {{jsxref("Promise")}}。
+一个兑现为与指定的 `name` 或 `options` 对象匹配的 cookie 信息对象的 {{jsxref("Promise")}}。
 
 每一个对象包含以下属性：
 
