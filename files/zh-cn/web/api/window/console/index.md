@@ -25,7 +25,7 @@ console.log("加载内容时发生错误");
 console.dir(someObject);
 ```
 
-更多示例，请参见 [`console`](/zh-CN/docs/Web/API/console)文章中的[示例](/zh-CN/docs/Web/API/console#examples)部分。
+更多示例，请参见 [`console`](/zh-CN/docs/Web/API/console) 文章中的[示例](/zh-CN/docs/Web/API/console#示例)部分。
 
 ## 规范
 
