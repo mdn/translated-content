@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Permissions API")}}{{AvailableInWorkers}}
 
-{{domxref("Permissions")}}接口的**`query()`**方法会返回用户权限在全局作用域中的状态。
+{{domxref("Permissions")}} 接口的 **`query()`** 方法会返回用户权限在全局作用域中的状态。
 
 ## 语法
 
