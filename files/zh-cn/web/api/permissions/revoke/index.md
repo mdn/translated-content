@@ -7,8 +7,7 @@ l10n:
 
 {{APIRef("Permissions API")}}{{AvailableInWorkers}}{{deprecated_header}}
 
-{{domxref("Permissions")}}接口的**`revoke()`**方法可将当前设置的权限还原为默认状态，即通常的 `prompt` 状态。
-该方法在全局 {{domxref("Permissions")}} 对象 {{domxref("navigator.permissions")}} 上调用。
+{{domxref("Permissions")}} 接口的 **`revoke()`** 方法可将当前设置的权限还原为默认状态，即通常的 `prompt` 状态。该方法在全局 {{domxref("Permissions")}} 对象 {{domxref("navigator.permissions")}} 上调用。
 
 ## 语法
 
