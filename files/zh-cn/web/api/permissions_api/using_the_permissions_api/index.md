@@ -27,7 +27,7 @@ l10n:
 
 在本文中，我们有一个简单的 demo 叫作 Location Finder. 它使用 Geolocation 获取用户的当前位置，并标注在 Google 地图上：
 
-![Screenshot showing a map of Greenfield, UK.](location-finder-with-permissions-api.png)
+![英国格林菲尔德地图的截图](location-finder-with-permissions-api.png)
 
 你可以[在线运行示例](https://chrisdavidmills.github.io/location-finder-permissions-api/)，或[在 Github 查看源代码](https://github.com/chrisdavidmills/location-finder-permissions-api/tree/gh-pages)。大部分代码都很简单且常见──所以接下来我们会重点关注和 Permissions API 有关的代码，如果你想学习其他部分，请自行阅读。
 
@@ -48,11 +48,11 @@ l10n:
 
 ```js
 function handlePermission() {
-  navigator.permissions.query({ name: "geolocation" }).then(function (result) {
-    if (result.state == "granted") {
+  navigator.permissions.query({ name: "geolocation" }).then((result) => {
+    if (result.state === "granted") {
       report(result.state);
       geoBtn.style.display = "none";
-    } else if (result.state == "prompt") {
+    } else if (result.state === "prompt") {
       report(result.state);
       geoBtn.style.display = "none";
       navigator.geolocation.getCurrentPosition(
@@ -60,18 +60,18 @@ function handlePermission() {
         positionDenied,
         geoSettings,
       );
-    } else if (result.state == "denied") {
+    } else if (result.state === "denied") {
       report(result.state);
       geoBtn.style.display = "inline";
     }
-    result.onchange = function () {
+    result.addEventListener("change", () => {
       report(result.state);
-    };
+    });
   });
 }
 
 function report(state) {
-  console.log("Permission " + state);
+  console.log(`Permission ${state}`);
 }
 
 handlePermission();
@@ -86,18 +86,18 @@ handlePermission();
 从 Firefox 47 开始，你可以使用 {{domxref("Permissions.revoke()")}} 方法重置现有权限。它的调用方式和 {{domxref("Permissions.query()")}} 方法几乎一模一样，区别是，当 promise 成功 resolve 时，它会让一个现有的权限恢复默认状态（通常是 `prompt`）。让我们看看 demo 中的代码：
 
 ```js
-var revokeBtn = document.querySelector('.revoke');
+const revokeBtn = document.querySelector(".revoke");
 
-  ...
+// ...
 
-revokeBtn.onclick = function() {
+revokeBtn.onclick = () => {
   revokePermission();
-}
+};
 
-  ...
+// ...
 
 function revokePermission() {
-  navigator.permissions.revoke({name:'geolocation'}).then(function(result) {
+  navigator.permissions.revoke({ name: "geolocation" }).then((result) => {
     report(result.state);
   });
 }
