@@ -125,7 +125,7 @@ Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)
 Mozilla/5.0 (compatible; YandexAccessibilityBot/3.0; +http://yandex.com/bots)
 ```
 
-## 库与网络工具的 UA 字符串
+## 库与网络工具的用户代理字符串
 
 ### 示例
 
