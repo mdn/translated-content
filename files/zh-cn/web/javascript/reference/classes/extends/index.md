@@ -134,7 +134,7 @@ console.log(new ChildClass()); // TypeError: Derived constructors may only retur
 - 第二个要求实例方法读取 [`this.constructor`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) 以获取构造函数。但是，`new this.constructor()` 可能会破坏传统代码，因为 `constructor` 属性是可写和可配置的，而且不受任何保护。因此，许多复制的内置方法都使用构造函数的 [`@@species`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/species)属性（默认情况下只返回`this`，即构造函数本身）。然而，`@@species` 允许运行任意代码和创建任意类型的实例，这就带来了安全问题，并使子类化语义变得非常复杂。
 - 第三个会导致自定义代码的可见调用，从而使很多优化更难实现。例如，如果使用包含 _x_ 个元素的可迭代元素调用`Map()`构造函数，那么它必须明显地调用`set()`方法_x_次，而不仅仅是将元素复制到内部存储空间。
 
-这些问题并非内置类所独有。对于您自己的类，您也可能需要做出同样的决定。不过，对于内置类来说，可优化性和安全性是更大的问题。新的内置方法总是构造基类，并尽可能少地调用自定义方法。如果你想在实现上述期望的同时对内置类进行子类化，你需要重写所有已内置默认行为的方法。在基类上添加任何新方法都可能会破坏子类的语义，因为这些方法是默认继承的。因此，扩展内置类的更好方法是使用 [_composition_](#avoiding_inheritance)。
+这些问题并非内置类所独有。对于你自己的类，你也可能需要做出同样的决定。不过，对于内置类来说，可优化性和安全性是更大的问题。新的内置方法总是构造基类，并尽可能少地调用自定义方法。如果你想在实现上述期望的同时对内置类进行子类化，你需要重写所有已内置默认行为的方法。在基类上添加任何新方法都可能会破坏子类的语义，因为这些方法是默认继承的。因此，扩展内置类的更好方法是使用 [_composition_](#avoiding_inheritance)。
 
 ### 拓展 null
 
@@ -265,11 +265,11 @@ class D extends MyObject {
 console.log(new D(1) instanceof Number); // true
 ```
 
-# Species
+### Species
 
-你可能希望在派生数组类 `MyArray` 中返回 {{jsxref("Array")}} 对象。Species 模式可让您覆盖默认构造函数。
+你可能希望在派生数组类 `MyArray` 中返回 {{jsxref("Array")}} 对象。Species 模式可让你覆盖默认构造函数。
 
-例如，在使用{{jsxref("Array.prototype.map()")}}等返回默认构造函数的方法时，你希望这些方法返回的是父 `Array` 对象，而不是 `MyArray` 对象。{{jsxref("Symbol.species")}}符号可让您做到这一点：
+例如，在使用{{jsxref("Array.prototype.map()")}}等返回默认构造函数的方法时，你希望这些方法返回的是父 `Array` 对象，而不是 `MyArray` 对象。{{jsxref("Symbol.species")}}符号可让你做到这一点：
 
 ```js
 class MyArray extends Array {
