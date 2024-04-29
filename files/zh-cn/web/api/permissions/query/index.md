@@ -47,7 +47,7 @@ query(permissionDescriptor)
 
 ### 根据地理位置权限显示新闻
 
-此示例显示了在授予 "地理位置 "权限的情况下，如何显示与当前位置相关的新闻，以及在其他情况下如何提示用户允许访问该位置。
+此示例显示了在授予 `geolocation` 权限的情况下，如何显示与当前位置相关的新闻，以及在其他情况下如何提示用户允许访问该位置。
 
 ```js
 navigator.permissions.query({ name: "geolocation" }).then((result) => {
