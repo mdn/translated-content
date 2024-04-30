@@ -31,7 +31,7 @@ Access-Control-Max-Age: <delta-seconds>
 ## 指令
 
 - \<delta-seconds>
-  - : 结果缓存的最大秒数，以无符号非负整数表示。Firefox 将上限[设置为 24 小时](https://searchfox.org/mozilla-central/source/netwerk/protocol/http/nsCORSListenerProxy.cpp#1207)（86400 秒）。Chromium（76 版本之前）将上限[设置为 10 分钟](https://source.chromium.org/chromium/chromium/src/+/main:services/network/public/cpp/cors/preflight_result.cc;drc=52002151773d8cd9ffc5f557cd7cc880fddcae3e;l=36)（600 秒）。Chromium（从 76 版本开始）将上限[调整为 2 小时](https://source.chromium.org/chromium/chromium/src/+/main:services/network/public/cpp/cors/preflight_result.cc;drc=49e7c0b4886cac1f3d09dc046bd528c9c811a0fa;l=31)（7200 秒）。默认值为 5 秒。
+  - : 结果缓存的最大秒数，以无符号非负整数表示。Firefox [上限为 24 小时](https://searchfox.org/mozilla-central/source/netwerk/protocol/http/nsCORSListenerProxy.cpp#1207)（86400 秒）。Chromium（76 版本之前）[上限为 10 分钟](https://source.chromium.org/chromium/chromium/src/+/main:services/network/public/cpp/cors/preflight_result.cc;drc=52002151773d8cd9ffc5f557cd7cc880fddcae3e;l=36)（600 秒）。Chromium（从 76 版本开始）[上限为 2 小时](https://source.chromium.org/chromium/chromium/src/+/main:services/network/public/cpp/cors/preflight_result.cc;drc=49e7c0b4886cac1f3d09dc046bd528c9c811a0fa;l=31)（7200 秒）。默认值为 5 秒。
 
 ## 示例
 
