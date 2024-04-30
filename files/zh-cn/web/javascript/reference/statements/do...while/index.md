@@ -2,7 +2,7 @@
 title: do...while
 slug: Web/JavaScript/Reference/Statements/do...while
 l10n:
-   sourceCommit: ab9d1f32df124ab355da0118b272f50c19ebc4d9
+  sourceCommit: ab9d1f32df124ab355da0118b272f50c19ebc4d9
 ---
 
 {{jsSidebar("Statements")}}
