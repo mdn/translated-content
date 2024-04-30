@@ -17,7 +17,7 @@ l10n:
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name", "禁止修改的標頭")}}</th>
-      <td>no</td>
+      <td>否</td>
     </tr>
     <tr>
       <th scope="row">
@@ -37,7 +37,7 @@ Accept: <MIME_type>/<MIME_subtype>
 Accept: <MIME_type>/*
 Accept: */*
 
-// Multiple types, weighted with the quality value syntax:
+// 多種類型，以品質值語法加權：
 Accept: text/html, application/xhtml+xml, application/xml;q=0.9, image/webp, */*;q=0.8
 ```
 
