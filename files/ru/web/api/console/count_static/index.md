@@ -1,7 +1,6 @@
 ---
 title: Console.count()
 slug: Web/API/console/count_static
-original_slug: Web/API/console/count
 ---
 
 {{APIRef("Console API")}}Выводит число, равное тому, сколько раз была вызвана конкретная функция `count()`. Эта функция также принимает необязательный аргумент `label`.
