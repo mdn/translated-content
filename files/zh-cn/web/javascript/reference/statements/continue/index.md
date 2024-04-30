@@ -1,6 +1,8 @@
 ---
 title: continue
 slug: Web/JavaScript/Reference/Statements/continue
+l10n:
+   sourceCommit: 4c26e8a3fb50d06963b06017f51ce19364350564
 ---
 
 {{jsSidebar("Statements")}}
@@ -11,8 +13,9 @@ slug: Web/JavaScript/Reference/Statements/continue
 
 ## 语法
 
-```plain
-continue [ label ];
+```js-nolint
+continue;
+continue label;
 ```
 
 - `label`
@@ -24,8 +27,11 @@ continue [ label ];
 
 - 在 {{jsxref("Statements/while", "while")}} 循环中，控制流跳转回条件判断；
 - 在 {{jsxref("Statements/for", "for")}} 循环中，控制流跳转到更新语句。
+- 在 {{jsxref("Statements/for...in", "for...in")}}, {{jsxref("Statements/for...of", "for...of")}}, 或 {{jsxref("Statements/for-await...of", "for await...of")}} 循环中，它会跳转到下一个迭代。
 
 `continue` 语句可以包含一个可选的标号以控制程序跳转到指定循环的下一次迭代，而非当前循环。此时要求 `continue` 语句在对应的循环内部。
+
+在脚本、模块、函数正文或[静态初始块](/zh-CN/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)的顶层不能使用 `continue` 语句（无论是否带有后续标签），即使该函数或类进一步包含在循环中也不行。
 
 ## 示例
 
@@ -38,6 +44,7 @@ i = 0;
 n = 0;
 while (i < 5) {
   i++;
+
   if (i === 3) {
     continue;
   }
@@ -51,55 +58,88 @@ while (i < 5) {
 
 但如果 `continue` 的标号被改为 `checkiandj` ，那程序将会从 `checkiandj` 语句的开始继续运行。
 
-参考 {{jsxref("Statements/label", "label")}} 。
-
 ```js
-var i = 0,
-  j = 8;
+let i = 0;
+let j = 8;
 
-checkiandj: while (i < 4) {
-  console.log("i: " + i);
+checkIAndJ: while (i < 4) {
+  console.log(`i: ${i}`);
   i += 1;
 
-  checkj: while (j > 4) {
-    console.log("j: " + j);
+  checkJ: while (j > 4) {
+    console.log(`j: ${j}`);
     j -= 1;
-    if (j % 2 == 0) continue checkj;
-    console.log(j + " is odd.");
+
+    if (j % 2 === 0) continue checkJ;
+    console.log(`${j} is odd.`);
   }
-  console.log("i = " + i);
-  console.log("j = " + j);
+  console.log(`i = ${i}`);
+  console.log(`j = ${j}`);
 }
 ```
 
 输出：
 
-```js
-"i: 0";
+```plain
+i: 0
 
 // start checkj
-"j: 8";
-"7 is odd.";
-"j: 7";
-"j: 6";
-"5 is odd.";
-"j: 5";
+j: 8
+7 is odd.
+j: 7
+j: 6
+5 is odd.
+j: 5
 // end checkj
 
-"i = 1";
-"j = 4";
+i = 1
+j = 4
 
-"i: 1";
-"i = 2";
-"j = 4";
+i: 1
+i = 2
+j = 4
 
-"i: 2";
-"i = 3";
-"j = 4";
+i: 2
+i = 3
+j = 4
 
-"i: 3";
-"i = 4";
-"j = 4";
+i: 3
+i = 4
+j = 4
+```
+
+### 非句法的 continue 语句
+
+`continue` 不能在跨越函数边界的循环中使用。
+
+```js-nolint example-bad
+for (let i = 0; i < 10; i++) {
+  (() => {
+    continue; // SyntaxError: Illegal continue statement: no surrounding iteration statement
+  })();
+}
+```
+
+引用标签时，标签语句必须包含 `continue` 语句。
+
+```js-nolint example-bad
+label: for (let i = 0; i < 10; i++) {
+  console.log(i);
+}
+
+for (let i = 0; i < 10; i++) {
+  continue label; // SyntaxError: Undefined label 'label'
+}
+```
+
+标签语句必须是一个循环。
+
+```js-nolint example-bad
+label: {
+  for (let i = 0; i < 10; i++) {
+    continue label; // SyntaxError: Illegal continue statement: 'label' does not denote an iteration statement
+  }
+}
 ```
 
 ## 规范
@@ -113,4 +153,4 @@ checkiandj: while (i < 4) {
 ## See also
 
 - {{jsxref("Statements/break", "break")}}
-- {{jsxref("Statements/label", "label")}}
+- {{jsxref("Statements/label", "label", "", 1)}}
