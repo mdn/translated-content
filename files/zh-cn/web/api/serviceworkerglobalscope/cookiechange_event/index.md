@@ -7,13 +7,13 @@ l10n:
 
 {{APIRef("Cookie Store API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers("service")}}
 
-当与 Service Worker 的 cookie 更改订阅列表相匹配的 cookie 发生更改时，就会触发 {{domxref("ServiceWorkerGlobalScope")}} 接口的 **`cookiechange`** 事件。
+{{domxref("ServiceWorkerGlobalScope")}} 接口的 **`cookiechange`** 事件会在与 Service Worker 的 cookie 更改订阅列表相匹配的 cookie 发生更改时触发。
 
 此事件不可取消且不会冒泡。
 
 ## 语法
 
-像 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 一样在方法里使用事件名称，或设置事件处理器属性。
+在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样方法中使用事件名称，或设置事件处理器属性。
 
 ```js
 addEventListener("cookiechange", (event) => {});
