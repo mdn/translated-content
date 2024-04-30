@@ -64,7 +64,7 @@ console.log(SubclassWithStaticField.staticFieldWithInitializer); // "static fiel
 console.log(SubclassWithStaticField.subStaticField); // "subclass field"
 ```
 
-In the field initializer, [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) refers to the current class (which you can also access through its name), and [`super`](/en-US/docs/Web/JavaScript/Reference/Operators/super) refers to the base class constructor.
+In the field initializer, [`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) refers to the current class (which you can also access through its name), and [`super`](/zh-CN/docs/Web/JavaScript/Reference/Operators/super) refers to the base class constructor.
 
 ```js
 class ClassWithStaticField {
