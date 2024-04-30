@@ -79,7 +79,7 @@ class MyClass {
   static {
     console.log("静态块 1");
   }
-  static field2 = console.log("静态字段2");
+  static field2 = console.log("静态字段 2");
   static {
     console.log("静态块2");
   }
