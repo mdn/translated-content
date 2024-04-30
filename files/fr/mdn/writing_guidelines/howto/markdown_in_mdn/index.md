@@ -523,7 +523,7 @@ Même quand un tableau peut être écris en GFM, il est certaines fois mieux d'u
 
 Avec un format de markdown, cela donne&nbsp;:
 
-```md
+```md-nolint
 | Un en-tête 1           | Un en-tête 2                                                                                                                                                               | Un en-tête 3           | Un en-tête 4                                                                                                                                                                                   | Un en-tête 5           | Un en-tête 6           |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------- | ---------------------- |
 | Quelque chose de court | Quelque chose de bien plus long qui rentre vraiment dans les détails de quelque chose, tellement que le formatage des tableaux en GFM commence à être vraiment illisible. | Quelque chose de court | Une autre cellule avec beaucoup de texte à l'intérieur, qui rentre aussi beaucoup dans les détails de quelque chose, tellement que le formatage des tableaux en GFM commence à être illisible. | Quelque chose de court | Quelque chose de court |
