@@ -271,9 +271,9 @@ console.log(newInstance.name); // Rectangle
 
 ## 参阅
 
-- [Using classes](/zh-CN/docs/Web/JavaScript/Guide/Using_classes) guide
-- [Classes](/zh-CN/docs/Web/JavaScript/Reference/Classes)
-- [Static initialization blocks](/zh-CN/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)
+- [使用类](/zh-CN/docs/Web/JavaScript/Guide/Using_classes) guide
+- [类](/zh-CN/docs/Web/JavaScript/Reference/Classes)
+- [静态初始块](/zh-CN/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)
 - {{jsxref("Statements/class", "class")}}
 - {{jsxref("Operators/super", "super()")}}
 - {{jsxref("Object.prototype.constructor")}}
