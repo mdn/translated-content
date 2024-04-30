@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-[**CSS 对象模型（CSSOM）**](/zh-CN/docs/Web/API/CSS_Object_Model)是一系列用于读取和修改文档样式相关的（CSS）信息的 API。换句话说，[DOM](/zh-CN/docs/Web/API/Document_Object_Model) 可以让 JavaScript 来读取和修改文档的结构和内容，CSSOM 则让 JavaScript 可以来进行读取和修改文档样式。
+[**CSS 对象模型（CSSOM）**](/zh-CN/docs/Web/API/CSS_Object_Model)是一系列用于读取和修改文档样式相关的（CSS）信息的 API。换句话说，[DOM](/zh-CN/docs/Web/API/Document_Object_Model) 使得 JavaScript 可以读取和修改文档的结构和内容，CSSOM 则使得 JavaScript 可以读取和修改文档样式。
 
 ## 参见
 
