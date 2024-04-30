@@ -9,13 +9,13 @@ l10n:
 
 {{domxref("HTMLMediaElement")}} 接口的 **`srcObject`** 属性设定或返回一个对象，这个对象提供了一个与 {{domxref("HTMLMediaElement")}} 关联的媒体源。
 
-该对象可以是一个 {{domxref("MediaStream")}}、一个 {{domxref("MediaSource")}}、一个 {{domxref("Blob")}} 或者一个（{{domxref("File")}} 类型（该类型继承自 `Blob`）。
+该对象可以是一个 {{domxref("MediaStream")}}、一个 {{domxref("MediaSource")}}、一个 {{domxref("Blob")}} 或者一个 {{domxref("File")}} 类型（该类型继承自 `Blob`）。
 
-> **备注：** 截至 2020 年 3 月，仅有 Safari 浏览器完全支持 `srcObject`，只能使用 `MediaSource`、`MediaStream`、`Blob` 和 `File` 对象作为其值。其他浏览器仅支持 `MediaStream` 对象；在它们跟进支持之前，可以考虑回退到 {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} 来使用创建 URL，并将其分配给 {{domxref("HTMLMediaElement.src")}}（下文会有示例）。另外，自 108 版本起，Chromium 支持通过将从 worker 传输过来的 `MediaSource` 对象的 {{domxref("MediaSourceHandle")}} 实例分配给 `srcObject`，来连接一个专用 worker 线程对象。
+> **备注：** 截至 2020 年 3 月，仅有 Safari 浏览器完全支持 `srcObject`，只能使用 `MediaSource`、`MediaStream`、`Blob` 和 `File` 对象作为其值。其他浏览器仅支持 `MediaStream` 对象；在它们跟进支持之前，可以考虑回退到使用 {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} 来创建 URL，并将其赋给 {{domxref("HTMLMediaElement.src")}}（下文会有示例）。另外，自 108 版本起，Chromium 支持通过将从 worker 传输过来的 `MediaSource` 对象的 {{domxref("MediaSourceHandle")}} 实例赋值给 `srcObject`，来连接一个专用 worker。
 
 ## 值
 
-一个 {{domxref('MediaStream')}}、{{domxref('MediaSource')}}、{{domxref('Blob')}} 或 {{domxref('File')}} 对象（具体支持请参见兼容表）。
+一个 {{domxref('MediaStream')}}、{{domxref('MediaSource')}}、{{domxref('Blob')}} 或 {{domxref('File')}} 对象（具体支持请参见兼容性表格）。
 
 ## 使用说明
 
@@ -25,7 +25,7 @@ l10n:
 
 ### 基础示例
 
-在此示例中，来自摄像头的 {{domxref("MediaStream")}} 被分配给了新创建的 {{HTMLElement("video")}} 元素。
+在此示例中，来自摄像头的 {{domxref("MediaStream")}} 被赋值给了新创建的 {{HTMLElement("video")}} 元素。
 
 ```js
 const mediaStream = await navigator.mediaDevices.getUserMedia({ video: true });
@@ -33,7 +33,7 @@ const video = document.createElement("video");
 video.srcObject = mediaStream;
 ```
 
-在此示例中，新创建的 {{domxref('MediaSource')}} 被分配给了新创建的 {{HTMLElement("video")}} 元素。
+在此示例中，新创建的 {{domxref('MediaSource')}} 被赋值给了新创建的 {{HTMLElement("video")}} 元素。
 
 ```js
 const mediaSource = new MediaSource();
@@ -43,9 +43,9 @@ video.srcObject = mediaSource;
 
 ### 支持回退到 src 属性
 
-以下示例支持需创建对象 URL 并将其分配给 `src` 的较旧浏览器版本，以防止 `srcObject` 不受支持。
+以下示例支持需创建对象 URL 并将其赋值给 `src` 的较旧浏览器版本，以防止 `srcObject` 不受支持。
 
-首先，来自摄像头的 {{domxref("MediaStream")}} 被分配给新创建的 {{HTMLElement("video")}} 元素，并为旧版浏览器提供了回退支持。
+首先，来自摄像头的 {{domxref("MediaStream")}} 被赋值给新创建的 {{HTMLElement("video")}} 元素，并为旧版浏览器提供了回退支持。
 
 ```js
 const mediaStream = await navigator.mediaDevices.getUserMedia({ video: true });
@@ -58,7 +58,7 @@ if ("srcObject" in video) {
 }
 ```
 
-其次，将新创建的 {{domxref('MediaSource')}} 分配给新创建的 {{HTMLElement("video")}} 元素，并为旧版浏览器以及尚不直接支持 {{domxref('MediaSource')}} 分配的浏览器提供了回退方案。
+其次，将新创建的 {{domxref('MediaSource')}} 赋值给新创建的 {{HTMLElement("video")}} 元素，并为旧版浏览器以及尚不直接支持 {{domxref('MediaSource')}} 分配的浏览器提供了回退方案。
 
 ```js
 const mediaSource = new MediaSource();
