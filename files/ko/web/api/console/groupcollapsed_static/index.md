@@ -1,7 +1,6 @@
 ---
 title: console.groupCollapsed()
 slug: Web/API/console/groupcollapsed_static
-original_slug: Web/API/console/groupCollapsed
 ---
 
 {{APIRef("Console API")}}
