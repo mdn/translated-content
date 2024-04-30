@@ -2,7 +2,7 @@
 title: 公有类字段
 slug: Web/JavaScript/Reference/Classes/Public_class_fields
 l10n:
-   sourceCommit: 41cddfdaeed4a73fb8234c332150df8e54df31e9
+  sourceCommit: 41cddfdaeed4a73fb8234c332150df8e54df31e9
 ---
 
 {{JsSidebar("Classes")}}
