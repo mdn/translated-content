@@ -1,7 +1,6 @@
 ---
 title: ウェブの音声や動画のライブストリーミング
 slug: Web/Media/Audio_and_video_delivery/Live_streaming_web_audio_and_video
-original_slug: Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video
 ---
 
 ライブストリーミング技術は、よくスポーツやコンサートなどのイベントの中継や、もっと一般的にはテレビやラジオの番組の配信などによく採用されています。よくストリーミングと略されるライブストリーミングは、コンピューターや機器へメディアを「ライブ」で転送するプロセスです。これは実に複雑で数多くの変量がある初期段階の主題ですので、この記事では主題を紹介し、どのように始めることができるかを説明します。

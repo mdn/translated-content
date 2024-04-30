@@ -1,7 +1,6 @@
 ---
 title: console.debug()
 slug: Web/API/console/debug_static
-original_slug: Web/API/console/debug
 ---
 
 {{APIRef("Console API")}}
