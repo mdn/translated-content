@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**实际参数**是一个作为输入传递给{{Glossary("function", "函数")}}的{{glossary("value", "值")}}，这个值可以是（{{Glossary("primitive", "原始值")}}或{{Glossary("object", "对象")}}）。
+**实际参数**是作为一个输入传递给{{Glossary("function", "函数")}}的{{glossary("value", "值")}}，这个值可以是（{{Glossary("primitive", "原始值")}}或{{Glossary("object", "对象")}}）。
 
 例如：
 
