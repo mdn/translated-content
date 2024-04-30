@@ -42,7 +42,7 @@ class ModernClass {
 class AnotherChildClass extends ModernClass {}
 ```
 
-`ParentClass` 的 `prototype` 属性必须是 {{jsxref("Object")}} 或 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null) ，但在实践中很少会担心这个问题，因为非对象的 `prototype` 无论如何都不会按照应有的方式运行（[`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 操作符会忽略它）。
+`ParentClass` 的 `prototype` 属性必须是 {{jsxref("Object")}} 或 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)，但在实践中很少会担心这个问题，因为非对象的 `prototype` 无论如何都不会按照应有的方式运行（[`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 操作符会忽略它）。
 
 ```js
 function ParentClass() {}
