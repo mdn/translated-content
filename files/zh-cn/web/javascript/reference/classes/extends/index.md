@@ -365,7 +365,7 @@ class ReadOnlyMap {
 }
 ```
 
-在这种情况下，`ReadOnlyMap`类不是`Map`的子类，但它仍然实现了大部分相同的方法。这意味着更多的代码重复，但也意味着 `ReadOnlyMap` 类与 `Map` 类不是强耦合的，并且在 `Map` 类更改时不会轻易中断，从而避免了 [内置子类的语义问题](#subclassing_built-ins)。例如，如果 `Map` 类添加了一个不调用 `set()` 的 [`emplace()`](https://github.com/tc39/proposal-upsert)方法，就会导致 `ReadOnlyMap` 类不再是只读的，除非后者也相应地更新以覆盖 `emplace()`。此外，`ReadOnlyMap` 对象根本没有 `set` 方法，这比在运行时抛出错误更准确。
+在这种情况下，`ReadOnlyMap` 类不是 `Map` 的子类，但它仍然实现了大部分相同的方法。这意味着更多的代码重复，但也意味着 `ReadOnlyMap` 类与 `Map` 类不是强耦合的，并且在 `Map` 类更改时不会轻易中断，从而避免了[内置子类的语义问题](#subclassing_built-ins)。例如，如果 `Map` 类添加了一个不调用 `set()` 的 [`emplace()`](https://github.com/tc39/proposal-upsert) 方法，就会导致 `ReadOnlyMap` 类不再是只读的，除非后者也相应地更新以覆盖 `emplace()`。此外，`ReadOnlyMap` 对象根本没有 `set` 方法，这比在运行时抛出错误更准确。
 
 ## 规范
 
