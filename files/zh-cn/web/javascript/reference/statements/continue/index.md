@@ -2,7 +2,7 @@
 title: continue
 slug: Web/JavaScript/Reference/Statements/continue
 l10n:
-   sourceCommit: 4c26e8a3fb50d06963b06017f51ce19364350564
+  sourceCommit: 4c26e8a3fb50d06963b06017f51ce19364350564
 ---
 
 {{jsSidebar("Statements")}}
