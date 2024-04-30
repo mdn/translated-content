@@ -23,19 +23,19 @@ l10n:
 
 并非所有 API 的权限状态都可以通过 Permissions API 查询。权限相关的 API 的非详尽列表包括：
 
-- [Background Synchronization API](/zh-CN/docs/Web/API/Background_Synchronization_API): `background-sync`（应当总是被授予）
-- [Geolocation API](/zh-CN/docs/Web/API/Geolocation_API): `geolocation`
-- [Local Font Access API](/zh-CN/docs/Web/API/Local_Font_Access_API): `local-fonts`
-- [Media Capture and Streams API](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API): `microphone`, `camera`
-- [Notifications API](/zh-CN/docs/Web/API/Notifications_API): `notifications`
-- [Payment Handler API](/zh-CN/docs/Web/API/Payment_Handler_API): `payment-handler`
-- [Push API](/zh-CN/docs/Web/API/Push_API): `push`
-- [Screen Wake Lock API](/zh-CN/docs/Web/API/Screen_Wake_Lock_API): `screen-wake-lock`
-- [Sensor APIs](/zh-CN/docs/Web/API/Sensor_APIs): `accelerometer`, `gyroscope`, `magnetometer`, `ambient-light-sensor`
-- [Storage Access API](/zh-CN/docs/Web/API/Storage_Access_API): `storage-access`, `top-level-storage-access`
-- [Storage API](/zh-CN/docs/Web/API/Storage_API): `persistent-storage`
-- [Web MIDI API](/zh-CN/docs/Web/API/Web_MIDI_API): `midi`
-- [Window Management API](/zh-CN/docs/Web/API/Window_Management_API): `window-management`
+- [Background Synchronization API](/zh-CN/docs/Web/API/Background_Synchronization_API)：`background-sync`（应当总是被授予）
+- [Geolocation API](/zh-CN/docs/Web/API/Geolocation_API)：`geolocation`
+- [Local Font Access API](/zh-CN/docs/Web/API/Local_Font_Access_API)：`local-fonts`
+- [Media Capture and Streams API](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API)：`microphone`、`camera`
+- [Notifications API](/zh-CN/docs/Web/API/Notifications_API)：`notifications`
+- [Payment Handler API](/zh-CN/docs/Web/API/Payment_Handler_API)：`payment-handler`
+- [Push API](/zh-CN/docs/Web/API/Push_API)：`push`
+- [Screen Wake Lock API](/zh-CN/docs/Web/API/Screen_Wake_Lock_API)：`screen-wake-lock`
+- [Sensor APIs](/zh-CN/docs/Web/API/Sensor_APIs)：`accelerometer`、`gyroscope`、`magnetometer`、`ambient-light-sensor`
+- [Storage Access API](/zh-CN/docs/Web/API/Storage_Access_API)：`storage-access`、`top-level-storage-access`
+- [Storage API](/zh-CN/docs/Web/API/Storage_API)：`persistent-storage`
+- [Web MIDI API](/zh-CN/docs/Web/API/Web_MIDI_API)：`midi`
+- [Window Management API](/zh-CN/docs/Web/API/Window_Management_API)：`window-management`
 
 ## 示例
 
