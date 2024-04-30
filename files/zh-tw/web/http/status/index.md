@@ -25,7 +25,7 @@ HTTP 回應狀態碼表示特定的 [HTTP](/zh-TW/docs/Web/HTTP) 請求是否已
   - : 這個臨時回應表示用戶端應該繼續請求，或者如果請求已經完成，則忽略該回應。
 - {{HTTPStatus(101, "101 Switching Protocols")}}
   - : 這個代碼是作為對來自用戶端的 {{HTTPHeader("Upgrade")}} 請求標頭的回應，並指示伺服器正在切換到的協議。
-- {{HTTPStatus(102, "102 Processing")}} ({{Glossary("WebDAV")}})
+- {{HTTPStatus(102, "102 Processing")}}（{{Glossary("WebDAV")}}）
   - : 這個代碼表示伺服器已收到並正在處理請求，但還沒有可用的回應。
 - {{HTTPStatus(103, "103 Early Hints")}}
   - : 這個狀態碼主要用於與 {{HTTPHeader("Link")}} 標頭一起使用，讓用戶代理在伺服器準備回應或者頁面需要從中獲取資源的原始來源時，開始[預加載](/zh-TW/docs/Web/HTML/Attributes/rel/preload)資源或者[預連接](/zh-TW/docs/Web/HTML/Attributes/rel/preconnect)。
@@ -53,11 +53,11 @@ HTTP 回應狀態碼表示特定的 [HTTP](/zh-TW/docs/Web/HTTP) 請求是否已
   - : 告訴用戶端重置發送此請求的文件。
 - {{HTTPStatus(206, "206 Partial Content")}}
   - : 當從用戶端發送的 `Range` 標頭請求部分資源時，使用此回應代碼。
-- {{HTTPStatus(207, "207 Multi-Status")}} ({{Glossary("WebDAV")}})
+- {{HTTPStatus(207, "207 Multi-Status")}}（{{Glossary("WebDAV")}}）
   - : 傳達有關多個資源的資訊，適用於可能適用多個狀態碼的情況。
-- {{HTTPStatus(208, "208 Already Reported")}} ({{Glossary("WebDAV")}})
+- {{HTTPStatus(208, "208 Already Reported")}}（{{Glossary("WebDAV")}}）
   - : 在 `<dav:propstat>` 回應元素中使用，以避免反復列舉對同一集合的多個綁定的內部成員。
-- {{HTTPStatus(226, "226 IM Used")}} ([HTTP Delta encoding](https://datatracker.ietf.org/doc/html/rfc3229))
+- {{HTTPStatus(226, "226 IM Used")}}（[HTTP 增量編碼](https://datatracker.ietf.org/doc/html/rfc3229)）
   - : 伺服器已滿足對資源的 `GET` 請求，並且回應是對當前實例應用的一個或多個實例操作的結果的表示。
 
 ## 重新導向訊息
@@ -126,9 +126,9 @@ HTTP 回應狀態碼表示特定的 [HTTP](/zh-TW/docs/Web/HTTP) 請求是否已
   - : 所發送的請求是針對無法產生回應的伺服器的。這可以由未配置為產生包含在請求 URI 中的方案和權限組合的回應的伺服器發送。
 - {{HTTPStatus(422, "422 Unprocessable Content")}} ({{Glossary("WebDAV")}})
   - : 請求格式良好，但由於語義錯誤而無法遵循。
-- {{HTTPStatus(423, "423 Locked")}} ({{Glossary("WebDAV")}})
+- {{HTTPStatus(423, "423 Locked")}}（{{Glossary("WebDAV")}}）
   - : 正在訪問的資源被鎖定。
-- {{HTTPStatus(424, "424 Failed Dependency")}} ({{Glossary("WebDAV")}})
+- {{HTTPStatus(424, "424 Failed Dependency")}}（{{Glossary("WebDAV")}}）
   - : 由於之前的請求失敗，請求失敗。
 - {{HTTPStatus(425, "425 Too Early")}} {{experimental_inline}}
   - : 表示伺服器不願冒險處理可能被重播的請求。
@@ -161,7 +161,7 @@ HTTP 回應狀態碼表示特定的 [HTTP](/zh-TW/docs/Web/HTTP) 請求是否已
   - : 伺服器存在內部配置錯誤：所選擇的變體資源被配置為自行參與透明內容協商，因此不是協商過程中的適當端點。
 - {{HTTPStatus(507, "507 Insufficient Storage")}} ({{Glossary("WebDAV")}})
   - : 由於伺服器無法存儲成功完成請求所需的表示，因此無法對資源執行該方法。
-- {{HTTPStatus(508, "508 Loop Detected")}} ({{Glossary("WebDAV")}})
+- {{HTTPStatus(508, "508 Loop Detected")}}（{{Glossary("WebDAV")}}）
   - : 伺服器在處理請求時檢測到無限循環。
 - {{HTTPStatus(510, "510 Not Extended")}}
   - : 需要對請求進行進一步擴展，以便伺服器能夠完成它。
