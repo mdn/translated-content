@@ -135,7 +135,7 @@ HTTP 回應狀態碼表示特定的 [HTTP](/zh-TW/docs/Web/HTTP) 請求是否已
 - {{HTTPStatus(426, "426 Upgrade Required")}}
   - : 伺服器拒絕使用當前協議執行請求，但在用戶端升級到不同協議後可能會願意這樣做。伺服器在 426 回應中使用 {{HTTPHeader("Upgrade")}} 標頭來指示所需的協議。
 - {{HTTPStatus(428, "428 Precondition Required")}}
-  - : 原始伺服器需要請求具有條件。此回應旨在防止 '丟失更新' 問題，即當用戶端 `GET` 資源的狀態、修改它並將其 `PUT` 回伺服器時，同時第三方已在伺服器上修改了狀態，導致衝突。
+  - : 原始伺服器需要請求具有條件。此回應旨在防止「丟失更新」問題，即當用戶端 `GET` 資源的狀態、修改它並將其 `PUT` 回伺服器時，同時第三方已在伺服器上修改了狀態，導致衝突。
 - {{HTTPStatus(429, "429 Too Many Requests")}}
   - : 用戶在給定時間內發送了過多的請求（「速率限制」）。
 - {{HTTPStatus(431, "431 Request Header Fields Too Large")}}
