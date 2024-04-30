@@ -1,7 +1,6 @@
 ---
 title: AJAX
 slug: Learn/JavaScript/Client-side_web_APIs/Fetching_data
-original_slug: Web/Guide/AJAX
 ---
 
 **[Primeros Pasos](/es/docs/Web/Guide/AJAX/Getting_Started)**
