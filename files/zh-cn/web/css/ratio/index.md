@@ -11,11 +11,9 @@ l10n:
 
 ## 语法
 
-在媒体查询第 3 版中，`<ratio>` 数据类型由一个严格的正整数 {{cssxref("&lt;integer&gt;")}} 后跟一个斜杠（“/”，Unicode `U+002F SOLIDUS`）以及第二个严格的正整数
-{{cssxref("&lt;integer&gt;")}} 组成。斜线前后的空格是可选的。第一个数字代表宽度，而第二个数字代表高度。
+在媒体查询第 3 版中，`<ratio>` 数据类型由一个严格正整数 {{cssxref("&lt;integer&gt;")}} 后跟一个斜杠（“/”，Unicode `U+002F SOLIDUS`）以及第二个严格正整数 {{cssxref("&lt;integer&gt;")}} 组成。斜线前后的空格是可选的。第一个数字代表宽度，而第二个数字代表高度。
 
-在媒体查询第 4 版中，`<ratio>` 数据类型已更新，现在由一个严格的正整数 {{cssxref("&lt;number&gt;")}} 开头，后跟一个斜杠（“/”，Unicode `U+002F SOLIDUS`
-），以及第二个严格的正整数 {{cssxref("&lt;number&gt;")}}。此外，也是允许使用单一的 {{cssxref("&lt;number&gt;")}} 值。
+在媒体查询第 4 版中，`<ratio>` 数据类型已更新，现在由一个严格正整数 {{cssxref("&lt;number&gt;")}} 开头，后跟一个斜杠（“/”，Unicode `U+002F SOLIDUS`）和第二个严格正整数 {{cssxref("&lt;number&gt;")}}。此外，也允许使用单一的 {{cssxref("&lt;number&gt;")}} 值。
 
 ## 形式语法
 
