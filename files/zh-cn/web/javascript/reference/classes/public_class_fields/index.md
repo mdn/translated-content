@@ -233,9 +233,9 @@ console.log(new Professor("Radev", 54).name); // "Professor Radev"
 
 ## 参见
 
-- [使用类](/en-US/docs/Web/JavaScript/Guide/Using_classes) guide
-- [类](/en-US/docs/Web/JavaScript/Reference/Classes)
-- [私有属性](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties)
+- [使用类](/zh-CN/docs/Web/JavaScript/Guide/Using_classes) guide
+- [类](/zh-CN/docs/Web/JavaScript/Reference/Classes)
+- [私有属性](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)
 - {{jsxref("Statements/class", "class")}}
 - [所有 JS 类元素的语义](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html)
 - v8.dev 站点中关于[公有和私有类字段](https://v8.dev/features/class-fields)的文章
