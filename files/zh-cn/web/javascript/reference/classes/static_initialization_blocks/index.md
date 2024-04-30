@@ -151,8 +151,8 @@ console.log(getDPrivateField(new D("private"))); // 'private'
 
 ## 参见
 
-- [使用类](/en-US/docs/Web/JavaScript/Guide/Using_classes) guide
-- [类](/en-US/docs/Web/JavaScript/Reference/Classes)
+- [使用类](/zh-CN/docs/Web/JavaScript/Guide/Using_classes) guide
+- [类](/zh-CN/docs/Web/JavaScript/Reference/Classes)
 - {{jsxref("Classes/static", "static")}}
 - {{jsxref("Statements/class", "class")}}
 - [类的静态初始块](https://v8.dev/features/class-static-initializer-blocks) on v8.dev (2021)
