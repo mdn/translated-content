@@ -138,7 +138,7 @@ console.log(new ChildClass()); // TypeError: Derived constructors may only retur
 
 ### 拓展 null
 
-`extends null` 设计用于轻松创建 [不继承于 `Object.prototype` 的对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects)。然而，由于关于是否应在构造函数中调用 `super()` 的决定尚未确定，因此在实践中不可能使用任何不返回对象的构造函数实现来构造这样的类。[TC39 委员会正在努力重新启用这一功能](https://github.com/tc39/ecma262/pull/1321)。
+`extends null` 设计用于轻松创建[不继承于 `Object.prototype` 的对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects)。然而，由于关于是否应在构造函数中调用 `super()` 的决定尚未确定，因此在实践中不可能使用任何不返回对象的构造函数实现来构造这样的类。[TC39 委员会正在努力重新启用这一功能](https://github.com/tc39/ecma262/pull/1321)。
 
 ```js
 new (class extends null {})();
