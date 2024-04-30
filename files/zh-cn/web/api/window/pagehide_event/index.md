@@ -22,7 +22,7 @@ onpagehide = (event) => {};
 
 ## 事件类型
 
-一个 {{domxref("PageTransitionEvent")}}。从 {{domxref("Event")}} 继承。
+{{domxref("PageTransitionEvent")}}。从 {{domxref("Event")}} 继承。
 
 {{InheritanceDiagram("PageTransitionEvent")}}
 
@@ -91,8 +91,7 @@ window.onpagehide = (event) => {
 
 ## 参见
 
-{{domxref("Window.pageshow_event", "pageshow")}} 事件。
-
+- {{domxref("Window.pageshow_event", "pageshow")}} 事件。
 - [页面生命周期 API](https://developer.chrome.com/blog/page-lifecycle-api/#developer-recommendations-for-each-state) 提供了在 web 应用程序中处理页面生命周期行为的最佳实践指南。
 - [PageLifecycle.js](https://github.com/GoogleChromeLabs/page-lifecycle)：是一个 JavaScript 库，用于处理跨浏览器的页面生命周期行为不一致问题。
-- [回退或前进缓存](https://web.dev/articles/bfcache) 解释了什么是回退或前进缓存，以及它对各种页面生命周期事件的影响。
+- [回退或前进缓存](https://web.dev/articles/bfcache)解释了什么是回退或前进缓存，以及它对各种页面生命周期事件的影响。
