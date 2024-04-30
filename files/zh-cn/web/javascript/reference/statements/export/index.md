@@ -1,53 +1,54 @@
 ---
 title: export
 slug: Web/JavaScript/Reference/Statements/export
+l10n:
+   sourceCommit: d055553630e3043ad50742e1817650993216ddd8
 ---
 
 {{jsSidebar("Statements")}}
 
 在创建 JavaScript 模块时，**`export`** 语句用于从模块中导出实时绑定的函数、对象或原始值，以便其他程序可以通过 {{jsxref("Statements/import", "import")}} 语句使用它们。被导出的绑定值依然可以在本地进行修改。在使用 import 进行导入时，这些绑定值只能被导入模块所读取，但在 export 导出模块中对这些绑定值进行修改，所修改的值也会实时地更新。
 
-无论你是否声明，导出的模块都处于{{jsxref("Strict_mode","严格模式")}}。export 语句不能用在嵌入式脚本中。
+要在源文件中使用 `export` 声明，运行时必须将该文件解释为 [模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)。在 HTML 中，可通过在 {{HTMLElement("script")}} 标记中添加 `type="module"` 或由其他模块导入来实现。模块会自动以 [严格](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode) 模式解释。
 
 ## 语法
 
-存在两种 exports 导出方式：
-
-1. 命名导出（每个模块包含任意数量）
-2. 默认导出（每个模块包含一个）
-
-```js
-// 导出单个特性
-export let name1, name2, …, nameN; // also var, const
-export let name1 = …, name2 = …, …, nameN; // also var, const
-export function FunctionName(){...}
-export class ClassName {...}
+```js-nolint
+// 导出声明
+export let name1, name2/*, … */; // also var
+export const name1 = 1, name2 = 2/*, … */; // also var, let
+export function functionName() { /* … */ }
+export class ClassName { /* … */ }
+export function* generatorFunctionName() { /* … */ }
+export const { name1, name2: bar } = o;
+export const [ name1, name2 ] = array;
 
 // 导出列表
-export { name1, name2, …, nameN };
-
-// 重命名导出
-export { variable1 as name1, variable2 as name2, …, nameN };
-
-// 解构导出并重命名
-export const { name1, name2: bar } = o;
+export { name1, /* …, */ nameN };
+export { variable1 as name1, variable2 as name2, /* …, */ nameN };
+export { variable1 as "string name" };
+export { name1 as default /*, … */ };
 
 // 默认导出
 export default expression;
-export default function (…) { … } // also class, function*
-export default function name1(…) { … } // also class, function*
-export { name1 as default, … };
+export default function functionName() { /* … */ }
+export default class ClassName { /* … */ }
+export default function* generatorFunctionName() { /* … */ }
+export default function () { /* … */ }
+export default class { /* … */ }
+export default function* () { /* … */ }
 
 // 导出模块合集
-export * from …; // does not set the default export
-export * as name1 from …; // Draft ECMAScript® 2O21
-export { name1, name2, …, nameN } from …;
-export { import1 as name1, import2 as name2, …, nameN } from …;
-export { default } from …;
+export * from "module-name";
+export * as name1 from "module-name";
+export { name1, /* …, */ nameN } from "module-name";
+export { import1 as name1, import2 as name2, /* …, */ nameN } from "module-name";
+export { default, /* …, */ } from "module-name";
+export { default as name1 } from "module-name";
 ```
 
 - `nameN`
-  - : 要导出的标识符（以便其他脚本通过 {{jsxref("Statements/import", "import")}} 语句进行导入）.
+  - : 要导出的标识符（以便其他脚本通过 {{jsxref("Statements/import", "import")}} 语句进行导入）。 如果使用带有 `as` 的别名，实际导出的名称可以指定为字符串字面形式，但它可能不是有效的标识符。
 
 ## 描述
 
@@ -56,13 +57,26 @@ export { default } from …;
 命名导出：
 
 ```js
-// 导出事先定义的特性
-export { myFunction, myVariable };
+// 导出其它地方声明的特征
+export { myFunction2, myVariable2 };
 
-// 导出单个特性（可以导出 var，let，
-//const,function,class）
+// 导出单个特征（可导出 var、let、
+// const、function、class）
 export let myVariable = Math.sqrt(2);
-export function myFunction() { ... };
+export function myFunction() {
+  // …
+}
+```
+
+在 `export` 关键字之后，你可以使用 `let`、`const` 和 `var` 声明，以及函数或类声明。你还可以使用 `export { name1, name2 }` 语法导出在其他地方声明的名称列表。请注意，"export {}"不会导出一个空对象——它是一个不导出任何东西（一个空的名称列表）的无操作声明。
+
+导出声明不受 [临时死区](/zh-CN/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz) 规则的限制。你可以在声明名称 `X` 之前声明模块导出 `X`。
+
+```js
+export { x };
+const x = 1;
+// 这样做是可行的，因为 `export` 只是一个声明，并没有
+// 使用 `x` 的值。
 ```
 
 默认导出：
@@ -70,39 +84,69 @@ export function myFunction() { ... };
 ```js
 // 导出事先定义的特性作为默认值
 export { myFunction as default };
+// 这等同于：
+export default myFunction;
 
 // 导出单个特性作为默认值
-export default function () { ... }
-export default class { .. }
-
-// 每个导出都覆盖前一个导出
+export default function () { /* … */ }
+export default class { /* … */ }
 ```
 
-在导出多个值时，命名导出非常有用。在导入期间，必须使用相应对象的相同名称。
+> **备忘：** 导出声明的名称必须相互独立。导出名称重复或使用多个 `default` 导出将导致{{jsxref("SyntaxError")}}并阻止模块被评估。
 
-但是，可以使用任何名称导入默认导出，例如：
+` export default` 语法允许任何表达式。
 
 ```js
-// 文件 test.js
-let k;
-export default k = 12;
+export default 1 + 1;
+```
+
+作为一种特殊情况，函数和类是作为 _声明_ 而不是表达式导出的，而且这些声明可以是匿名的。这意味着函数将被悬挂。
+
+```js
+// 有效是因为 `foo` 是函数声明，而
+// 不是函数表达式
+foo();
+
+export default function foo() {
+  console.log("Hi");
+}
+
+// 从技术上讲，它仍然是一个声明，
+// 但允许匿名
+export default function () {
+  console.log("Hi");
+}
+```
+
+命名导出在需要导出多个值时非常有用。导入此模块时，命名导出必须使用完全相同的名称（可选择用 `as` 重命名），但默认导出可以使用任何名称导入。例如：
+
+```js
+// file test.js
+const k = 12;
+export default k;
 ```
 
 ```js
-// 另一个文件
-import m from "./test"; // 由于 k 是默认导出，所以可以自由使用 import m 替代 import k
-console.log(m); // 输出为 12
+// some other file
+import m from "./test"; // 请注意，我们可以自由地使用导入 m 而不是导入 k，因为 k 是默认导出值
+console.log(m); // 12
 ```
 
-你也可以重命名命名导出以避免命名冲突：
+你还可以重命名已命名的导出，以避免命名冲突：
 
 ```js
 export { myFunction as function1, myVariable as variable };
 ```
 
+你可以使用字符串文字将名称重命名为非有效标识符。例如：
+
+```js
+export { myFunction as "my-function" };
+```
+
 ### 重导出 / 聚合
 
-为了使模块导入变得可用，在一个父模块中“导入/导出”这些不同模块也是可行的。也就是说，你可以创建单个模块，集中多个模块的多个导出。
+模块还可以 "中继 "从其他模块导出的值，而无需编写两条单独的导入/导出语句。这在创建一个集中了来自不同模块的各种导出值的单一模块（通常称为 "桶模块"）时通常非常有用。
 
 这个可以使用“export from”语法实现：
 
@@ -110,29 +154,57 @@ export { myFunction as function1, myVariable as variable };
 export { default as function1, function2 } from "bar.js";
 ```
 
-与之形成对比的是联合使用导入和导出：
+这类似于 import 和 export 的组合，只是 `function1` 和 `function2` 不会在当前模块中可用：
 
 ```js
 import { default as function1, function2 } from "bar.js";
 export { function1, function2 };
 ```
 
-但这里的 `function1` 和 `function2` 在当前模块中变得不可用。
-
-> **备注：** 尽管与 import 等效，但以下语法在语法上无效：
+大多数 "import from" 语法都有对应的 "export from" 语法。
 
 ```js
-import DefaultExport from "bar.js"; // 有效的
+export { x } from "mod";
+export { x as v } from "mod";
+export * as ns from "mod";
 ```
+
+虽然没有 `import * from "mod"`，但也有 `export * from "mod"`。这会将 `mod` 中的所有**命名**导出语句重新导出为当前模块的命名导出语句，但 `mod` 的默认导出语句不会被重新导出。如果有两个通配符 exports 语句隐式地重新导出了相同的名称，则这两个语句都不会被重新导出。
 
 ```js
-export DefaultExport from "bar.js"; // 无效的
+// -- mod1.js --
+export const a = 1;
+
+// -- mod2.js --
+export const a = 3;
+
+// -- barrel.js --
+export * from "./mod1.js";
+export * from "./mod2.js";
+
+// -- main.js --
+import * as ns from "./barrel.js";
+console.log(ns.a); // undefined
 ```
 
-这里正确的做法是重命名这个导出：
+如果试图直接导入重复的名称，则会出错。
+
+下面的语法无效，尽管其导入等效：
+
+```js-nolint example-bad
+export DefaultExport from "bar.js"; // 无效
+```
+
+正确的做法是重新命名导出：
 
 ```js
 export { default as DefaultExport } from "bar.js";
+```
+
+”export from“ 语法允许省略 `as` 标记，这使得默认导出仍作为默认导出重新导出。
+
+```js
+export { default, function2 } from "bar.js";
 ```
 
 ## 示例
@@ -252,6 +324,6 @@ import { myFunction, myVariable, myClass } from "parentModule.js";
 
 - {{jsxref("Statements/import", "import")}}
 - [JavaScript modules](/zh-CN/docs/Web/JavaScript/Guide/Modules) guide
-- [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), Hacks blog post by Jason Orendorff
-- [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/), Hacks blog post by Lin Clark
-- [Axel Rauschmayer's book: "Exploring JS: Modules"](http://exploringjs.com/es6/ch_modules.html)
+- [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) on hacks.mozilla.org (2015)
+- [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/) on hacks.mozilla.org (2018)
+- [Exploring JS, Ch.16: Modules](https://exploringjs.com/es6/ch_modules.html) by Dr. Axel Rauschmayer
