@@ -7,7 +7,7 @@ slug: Web/API/CanvasRenderingContext2D/globalCompositeOperation
 
 Esse exemplo demonstra várias [operações de composição](/pt-BR/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation). A saída se parece assim:
 
-{{ EmbedLiveSample('Exemplo_de_composição', '', '7240px', '', 'Web/Guide/HTML/Canvas_tutorial/Compositing/Exemplo') }}
+{{EmbedLiveSample("Exemplo_de_composição", "100%", 7250)}}
 
 ## Exemplo de composição
 
