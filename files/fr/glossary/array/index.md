@@ -7,23 +7,23 @@ l10n:
 
 {{GlossarySidebar}}
 
-En anglais, un **_array_**, parfois appelé en français « tableau » ou « liste », est une collection de données ([primitives](/fr/docs/Glossary/Primitive) ou [objets](/fr/docs/Glossary/Object) selon le langage). Ils sont utilisés pour stocker plusieurs valeurs dans une seule variable. Ceci est comparé à une variable qui ne peut stocker qu'une seule valeur.
+Un tableau (ou liste selon les contextes, <i lang="en">array</i> en anglais) est une collection de données ([primitives](/fr/docs/Glossary/Primitive) ou [objets](/fr/docs/Glossary/Object) selon le langage) ordonnées. Les tableaux permettent de stocker plusieurs valeurs dans une structure affectée à une seule variable, à la différence des variables qui ne stockent qu'une valeur si on leur affecte une valeur primitive.
 
-Chaque élément d'un _array_ a un numéro qui lui est associé, appelé index numérique ou indice, qui permet d'y accéder. En JavaScript, ils commencent à l'indice zéro et peuvent être manipulés avec différentes [méthodes](/fr/docs/Glossary/Method).
+Chaque élément d'un tableau est associé à un numéro, l'indice numérique, qui permet d'y accéder. En JavaScript, les tableaux sont numérotés à partir de l'indice zéro et peuvent être manipulés avec différentes [méthodes](/fr/docs/Glossary/Method).
 
-À quoi ressemble-t-il en JavaScript ?
+Voici quelques exemples utilisant les tableaux en JavaScript.
 
 ```js
-//Des arrays en JavaScript peuvent contenir différents types de données.
-const myArray = [1, 2, 3, 4];
-const catNamesArray = ["Jacqueline", "Sophia", "Felix"];
+//Des tableaux JavaScript peuvent contenir différents types de données.
+const monTableau = [1, 2, 3, 4];
+const tableauNomsChats = ["Jacqueline", "Sophia", "Felix"];
 
-// L'indice de l'array commence à 0.
-console.log(myArray[0]); // affiche : 1
-console.log(catNamesArray[2]); // affiche : "Felix"
+// Les indices commencent à 0 en JavaScript
+console.log(monTableau[0]); // affiche : 1
+console.log(tableauNomsChats[2]); // affiche : "Felix"
 ```
 
 ## Voir aussi
 
 - [Tableau (structure de données)](<https://fr.wikipedia.org/wiki/Tableau_(structure_de_données)>) sur Wikipédia
-- _[Array](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)_ en JavaScript sur MDN
+- [La documentation MDN sur `Array` en JavaScript](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)
