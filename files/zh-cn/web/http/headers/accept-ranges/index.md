@@ -9,7 +9,7 @@ l10n:
 
 **`Accept-Ranges`** HTTP 响应标头是服务器使用的一个标记，用于向客户端宣传其对文件下载的部分请求的支持。此字段的值表示可用于定义范围的单位。
 
-当存在 `Accept-Ranges` 标头时，浏览器可能会尝试*继续*中断的下载，而不是尝试重新启动下载。
+当存在 `Accept-Ranges` 标头时，浏览器可能会尝试*恢复*中断的下载，而不是尝试重新启动下载。
 
 <table class="properties">
   <tbody>
@@ -19,7 +19,7 @@ l10n:
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name", "禁止修改的标头")}}</th>
-      <td>无</td>
+      <td>否</td>
     </tr>
   </tbody>
 </table>
