@@ -5,7 +5,6 @@ l10n:
   sourceCommit: 46a16cc28c5da14b45a6f65e478d032532764122
 ---
 
-
 {{HTTPSidebar}}
 
 在用戶端—伺服器協定（例如 HTTP）中，會話由三個階段組成：
