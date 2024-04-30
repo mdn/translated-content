@@ -1,5 +1,5 @@
 ---
-title: 构造方法
+title: 构造函数
 slug: Web/JavaScript/Reference/Classes/constructor
 l10n:
   sourceCommit: a5c7f9bfb294da287c1877c5eeec69a42638be0e
