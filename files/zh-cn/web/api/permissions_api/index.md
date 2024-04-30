@@ -1,5 +1,5 @@
 ---
-title: Permissions API
+title: 权限 API
 slug: Web/API/Permissions_API
 l10n:
   sourceCommit: ee253ac58d71b2ed336b705ab97dbe93122b3e04
@@ -7,7 +7,7 @@ l10n:
 
 {{DefaultAPISidebar("Permissions API")}}{{AvailableInWorkers}}
 
-**Permissions API** 提供一致的编程方式来查询归因于当前上下文的 API 权限的状态。例如，Permissions API 可用于确定是否已授予或拒绝访问特定 API 的权限，或者是否需要特定的用户权限。
+**权限 API**（Permissions API）提供一致的编程方式来查询归因于当前上下文的 API 权限的状态。例如，权限 API 可用于确定是否已授予或拒绝访问特定 API 的权限，或者是否需要特定的用户权限。
 
 请注意，此 API 的权限有效地聚合了上下文的所有安全限制，包括在安全上下文中使用 API 的任何要求，[Permissions-Policy](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy) 应用于文档的限制以及用户提示。因此，例如，如果 API 受到权限策略的限制，则返回的权限将被“拒绝”，并且不会提示用户访问。
 
@@ -21,7 +21,7 @@ l10n:
 
 ### 权限相关的 API
 
-并非所有 API 的权限状态都可以通过 Permissions API 查询。权限相关的 API 的非详尽列表包括：
+并非所有 API 的权限状态都可以通过权限 API 查询。权限相关的 API 的非详尽列表包括：
 
 - [Background Synchronization API](/zh-CN/docs/Web/API/Background_Synchronization_API)：`background-sync`（应当总是被授予）
 - [Geolocation API](/zh-CN/docs/Web/API/Geolocation_API)：`geolocation`
@@ -41,7 +41,7 @@ l10n:
 
 我们创建了一个名为 Location Finder 的简单示例。你可以[实时运行示例](https://chrisdavidmills.github.io/location-finder-permissions-api/)，或[在 GitHub 上查看源代码](https://github.com/chrisdavidmills/location-finder-permissions-api/tree/gh-pages)。
 
-有关其工作原理的更多信息，请阅读我们的文章[使用 Permissions API](/zh-CN/docs/Web/API/Permissions_API/Using_the_Permissions_API)。
+有关其工作原理的更多信息，请阅读我们的文章[使用权限 API](/zh-CN/docs/Web/API/Permissions_API/Using_the_Permissions_API)。
 
 ## 接口
 
@@ -65,7 +65,7 @@ l10n:
 
 ## 参见
 
-- [使用 Permissions API](/zh-CN/docs/Web/API/Permissions_API/Using_the_Permissions_API)
-- [使用 Permissions API 检测用户允许或拒绝摄像头访问的频率](https://blog.addpipe.com/using-permissions-api-to-detect-getusermedia-responses/)
+- [使用权限 API](/zh-CN/docs/Web/API/Permissions_API/Using_the_Permissions_API)
+- [使用权限 API 检测用户允许或拒绝摄像头访问的频率](https://blog.addpipe.com/using-permissions-api-to-detect-getusermedia-responses/)
 - {{DOMxref("Notification.permission_static", "Notification.permission")}}
 - [隐私、权限和信息安全](/zh-CN/docs/Web/Privacy)
