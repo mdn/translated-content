@@ -15454,6 +15454,10 @@
     "modified": "2020-10-15T22:00:40.756Z",
     "contributors": ["Carllllo", "fscholz", "zxsunrise", "Jijmin"]
   },
+  "Web/API/Window/origin": {
+    "modified": "2019-03-23T22:03:28.077Z",
+    "contributors": ["xgqfrms-GitHub"]
+  },
   "Web/API/Window/outerHeight": {
     "modified": "2019-07-20T05:24:24.610Z",
     "contributors": ["teoli", "AlexChao"]
@@ -16276,10 +16280,6 @@
       "xgqfrms-GitHub",
       "Hawkeyes_Wind"
     ]
-  },
-  "Web/API/origin": {
-    "modified": "2019-03-23T22:03:28.077Z",
-    "contributors": ["xgqfrms-GitHub"]
   },
   "Web/API/performance_property": {
     "modified": "2019-08-22T06:18:57.970Z",
