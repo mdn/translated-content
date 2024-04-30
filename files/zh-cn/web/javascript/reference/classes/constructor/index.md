@@ -161,7 +161,7 @@ console.log(new ChildClass()); // TypeError: 派生构造函数只能返回对�
 
 如果父类构造函数返回一个对象，则该对象将被用作 `this` 值，派生类的[类字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)将在该值上定义。这种技巧被称为[“返回值重载”](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties#returning_overriding_object)，它允许在无关对象上定义派生类的字段（包括[私有](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)字段）。
 
-`constructor` 遵循正常的[method](/zh-CN/docs/Web/JavaScript/Reference/Functions/Method_definitions)语法，因此[参数默认值](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)、[其余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)等都可以使用。
+`constructor` 遵循正常的[方法](/zh-CN/docs/Web/JavaScript/Reference/Functions/Method_definitions)语法，因此[参数默认值](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)、[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)等都可以使用。
 
 ```js
 class Person {
