@@ -53,6 +53,7 @@ console.log(instance.field); // undefined
 console.log(instance.fieldWithInitializer); // "instance field"
 console.log(instance.prefixField); // "prefixed field"
 ```
+
 计算出的字段名只在[类定义时](/zh-CN/docs/Web/JavaScript/Reference/Classes#evaluation_order)评估一次。这意味着每个类总是有一组固定的字段名，两个实例不能通过计算的名称拥有不同的字段名。计算表达式中的 `this` 值是围绕类定义的 `this` ，而引用类名会导致{{jsxref("ReferenceError")}}，因为类尚未初始化。在此表达式中，{{jsxref("Operators/await", "await")}} 和 {{jsxref("Operators/yield", "yield")}} 按预期工作。
 
 ```js
