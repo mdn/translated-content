@@ -49,7 +49,7 @@ Accept: text/html, application/xhtml+xml, application/xml;q=0.9, image/webp, */*
   - : 一类 MIME 类型，但是没有指明子类。`image/*` 可以用来指代 `image/png`、`image/svg`、`image/gif` 以及任何其他的图片类型。
 - `*/*`
   - : 任意类型的 MIME 类型
-- `;q=` (q 因子权重)
+- `;q=` （q 因子权重）
   - : 值代表优先顺序，用相对[质量价值](/zh-CN/docs/Glossary/Quality_values)表示，又称作权重。
 
 ## 示例
