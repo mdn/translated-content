@@ -7,7 +7,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-**HTTP Cookie**（網頁 Cookie、瀏覽器 Cookie）是伺服器發送到使用者瀏覽器的一小段資料。瀏覽器可能會儲存這個 Cookie，並在之後的請求中將其發送回同一個伺服器。通常，HTTP Cookie 用於判斷兩個請求是否來自同一個瀏覽器，例如保持使用者登錄狀態。它為[無狀態](/zh-TW/docs/Web/HTTP/Overview#http_is_stateless_but_not_sessionless)的 HTTP 協定記住了有狀態的資訊。
+**HTTP Cookie**（Web Cookie、瀏覽器 Cookie）是伺服器發送到使用者瀏覽器的一小段資料。瀏覽器可能會儲存這個 Cookie，並在之後的請求中將其發送回同一個伺服器。通常，HTTP Cookie 用於判斷兩個請求是否來自同一個瀏覽器，例如保持使用者登錄狀態。它為[無狀態](/zh-TW/docs/Web/HTTP/Overview#http_is_stateless_but_not_sessionless)的 HTTP 協定記住了有狀態的資訊。
 
 Cookie 主要用於三個目的：
 
@@ -20,7 +20,7 @@ Cookie 主要用於三個目的：
 
 Cookie 曾經用於一般的用戶端儲存。儘管在它們是用戶端唯一儲存數據的方式時這是合理的，但現代儲存 API 現在被推薦使用。Cookie 會隨著每個請求發送，因此可能會降低性能（特別是對於移動數據連接）。現代用戶端儲存的 API 包括 [Web Storage API](/zh-TW/docs/Web/API/Web_Storage_API)（`localStorage` 和 `sessionStorage`）和 [IndexedDB](/zh-TW/docs/Web/API/IndexedDB_API)。
 
-> **備註：** 若要查看儲存的 Cookie（以及網頁可以使用的其他儲存），你可以在開發者工具中啟用[儲存空間](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html)，並從儲存樹中選擇 Cookie。
+> **備註：** 若要查看儲存的 Cookie（以及網頁可以使用的其他儲存），你可以在開發者工具中啟用[儲存空間檢測器](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html)，並從儲存樹中選擇 Cookie。
 
 ## 建立 Cookie
 
@@ -28,7 +28,7 @@ Cookie 曾經用於一般的用戶端儲存。儘管在它們是用戶端唯一�
 
 ### `Set-Cookie` 和 `Cookie` 標頭
 
-{{HTTPHeader("Set-Cookie")}} HTTP 回應標頭將 Cookie 從伺服器發送到用戶端代理。一個簡單的 Cookie 設置如下：
+{{HTTPHeader("Set-Cookie")}} HTTP 回應標頭將 Cookie 從伺服器發送到使用者代理。一個簡單的 Cookie 設置如下：
 
 ```http
 Set-Cookie: <cookie-name>=<cookie-value>
@@ -54,7 +54,7 @@ Cookie: yummy_cookie=choco; tasty_cookie=strawberry
 ```
 
 > **備註：** 以下是在各種伺服器端應用程序中如何使用 `Set-Cookie` 標頭的方法：
-
+>
 > - [PHP](https://www.php.net/manual/en/function.setcookie.php)
 > - [Node.JS](https://nodejs.org/dist/latest-v14.x/docs/api/http.html#http_response_setheader_name_value)
 > - [Python](https://docs.python.org/3/library/http.cookies.html)
@@ -185,12 +185,12 @@ console.log(document.cookie);
 
 ## 安全
 
-> **備註：** 在 Cookie 中儲存訊息時，請記住所有 Cookie 值都對終端用戶可見，並且可以被終端用戶更改。根據應用程序的不同，你可能希望使用伺服器查找的不透明標識符，或者研究替代的身份驗證/保密機制，例如 JSON Web Tokens。
+> **備註：** 在 Cookie 中儲存訊息時，請記住所有 Cookie 值都對終端用戶可見，並且可以被終端用戶更改。根據應用程序的不同，你可能希望使用伺服器查找的不透明標識符，或者研究替代的身份驗證/保密機制，例如 JSON Web Token。
 
 減少涉及 Cookie 的攻擊的方法：
 
 - 使用 `HttpOnly` 屬性防止通過 JavaScript 訪問 Cookie 值。
-- 用於敏感訊息（例如指示身份驗證的 Cookie）的 Cookie 應具有較短的生命期，並將 `SameSite` 屬性設置為 `Strict` 或 `Lax`。（請參見 [SameSite 屬性](#SameSite_屬性)）在 [支持 SameSite 的瀏覽器](/zh-TW/docs/Web/HTTP/Headers/Set-Cookie#browser_compatibility)中，這確保了身份驗證 Cookie 不會隨跨站請求發送。這將使應用伺服器對請求有效地未經身份驗證。
+- 用於敏感訊息（例如指示身份驗證的 Cookie）的 Cookie 應具有較短的生命期，並將 `SameSite` 屬性設置為 `Strict` 或 `Lax`。（請參見 [SameSite 屬性](#SameSite_屬性)）在[支持 SameSite 的瀏覽器](/zh-TW/docs/Web/HTTP/Headers/Set-Cookie#瀏覽器相容性)中，這確保了身份驗證 Cookie 不會隨跨站請求發送。這將使應用伺服器對請求有效地未經身份驗證。
 
 ## 追蹤和隱私
 
