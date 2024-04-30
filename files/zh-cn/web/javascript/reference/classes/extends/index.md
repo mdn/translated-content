@@ -273,7 +273,7 @@ console.log(new D(1) instanceof Number); // true
 
 ```js
 class MyArray extends Array {
-  // 将Species覆盖到父类Array的构造函数
+  // 将 Species 覆盖到父类 Array 的构造函数
   static get [Symbol.species]() {
     return Array;
   }
