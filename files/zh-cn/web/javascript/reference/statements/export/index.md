@@ -2,7 +2,7 @@
 title: export
 slug: Web/JavaScript/Reference/Statements/export
 l10n:
-   sourceCommit: d055553630e3043ad50742e1817650993216ddd8
+  sourceCommit: d055553630e3043ad50742e1817650993216ddd8
 ---
 
 {{jsSidebar("Statements")}}
