@@ -1,8 +1,7 @@
 ---
 title: origin
-slug: Web/API/origin
-l10n:
-  sourceCommit: 7060fc880765875bbee8d5cd8f54e9170eb2691d
+slug: Web/API/Window/origin
+original_slug: Web/API/origin
 ---
 
 {{APIRef()}}
