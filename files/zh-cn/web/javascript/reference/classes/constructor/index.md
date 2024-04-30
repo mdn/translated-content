@@ -87,7 +87,7 @@ try {
 
 `ValidationError` 类不需要显式构造函数，因为它不需要进行任何自定义初始化。默认构造函数会根据给定的参数初始化父类 `Error` 。
 
-但是，如果你提供了自己的构造函数，而你的类派生自某个父类，那么你必须使用 [`super()`](/zh-CN/docs/Web/JavaScript/Reference/Operators/super)显式地调用父类的构造函数。例如：
+但是，如果你提供了自己的构造函数，而你的类派生自某个父类，那么你必须使用 [`super()`](/zh-CN/docs/Web/JavaScript/Reference/Operators/super) 显式地调用父类的构造函数。例如：
 
 ```js
 class ValidationError extends Error {
