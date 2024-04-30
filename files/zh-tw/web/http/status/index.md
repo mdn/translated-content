@@ -124,7 +124,7 @@ HTTP 回應狀態碼表示特定的 [HTTP](/zh-TW/docs/Web/HTTP) 請求是否已
   - : 伺服器拒絕使用茶壺沖泡咖啡的嘗試。
 - {{HTTPStatus(421, "421 Misdirected Request")}}
   - : 所發送的請求是針對無法產生回應的伺服器的。這可以由未配置為產生包含在請求 URI 中的方案和權限組合的回應的伺服器發送。
-- {{HTTPStatus(422, "422 Unprocessable Content")}} ({{Glossary("WebDAV")}})
+- {{HTTPStatus(422, "422 Unprocessable Content")}}（{{Glossary("WebDAV")}}）
   - : 請求格式良好，但由於語義錯誤而無法遵循。
 - {{HTTPStatus(423, "423 Locked")}}（{{Glossary("WebDAV")}}）
   - : 正在訪問的資源被鎖定。
@@ -159,7 +159,7 @@ HTTP 回應狀態碼表示特定的 [HTTP](/zh-TW/docs/Web/HTTP) 請求是否已
   - : 請求中使用的 HTTP 版本不受伺服器支援。
 - {{HTTPStatus(506, "506 Variant Also Negotiates")}}
   - : 伺服器存在內部配置錯誤：所選擇的變體資源被配置為自行參與透明內容協商，因此不是協商過程中的適當端點。
-- {{HTTPStatus(507, "507 Insufficient Storage")}} ({{Glossary("WebDAV")}})
+- {{HTTPStatus(507, "507 Insufficient Storage")}}（{{Glossary("WebDAV")}}）
   - : 由於伺服器無法存儲成功完成請求所需的表示，因此無法對資源執行該方法。
 - {{HTTPStatus(508, "508 Loop Detected")}}（{{Glossary("WebDAV")}}）
   - : 伺服器在處理請求時檢測到無限循環。
