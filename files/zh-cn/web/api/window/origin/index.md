@@ -1,8 +1,7 @@
 ---
 title: origin 全局属性
-slug: Web/API/origin
-l10n:
-  sourceCommit: cb279e20569055b200f93802d1704846c28aa04f
+slug: Web/API/Window/origin
+original_slug: Web/API/origin
 ---
 
 {{APIRef}}{{AvailableInWorkers}}
