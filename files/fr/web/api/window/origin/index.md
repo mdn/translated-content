@@ -1,12 +1,13 @@
 ---
-title: origin
+title: "Window : propriété origin"
 slug: Web/API/Window/origin
-original_slug: Web/API/origin
+l10n:
+  sourceCommit: 5d19ba908628a2713c4ea9f30422dbd9563e1cf4
 ---
 
-{{APIRef()}}
+{{APIRef("DOM")}}
 
-La propriété globale en lecture seule **`origin`** renvoie l'origine de la portée globale, sérialisée sous la forme d'une chaîne de caractères.
+La propriété en lecture seule **`origin`** de l'interface [`Window`](/fr/docs/Web/API/Window) renvoie l'origine de la portée globale, sérialisée sous la forme d'une chaîne de caractères.
 
 ## Valeur
 
@@ -14,12 +15,10 @@ Une chaîne de caractères.
 
 ## Exemples
 
-Exécutée depuis le script d'un <i lang="en">worker</i>, le fragment de code suivant affichera l'origine de la portée globale du <i lang="en">worker</i> dans la console chaque fois qu'il reçoit un message.
+Exécuter le fragment de code suivant depuis la portée d'une fenêtre permettra d'afficher l'origine de la portée globale du document dans la console.
 
 ```js
-onmessage = () => {
-  console.log(self.origin);
-};
+console.log(window.origin);
 ```
 
 Si l'origine n'est pas une combinaison schéma/hôte/port (par exemple avec une exécution locale via une URL `file://`), `origin` renverra la chaîne de caractères `"null"`.
