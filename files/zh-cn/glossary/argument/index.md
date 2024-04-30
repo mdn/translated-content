@@ -38,5 +38,5 @@ function example(parameter) {
 
 ## 参见
 
-- [形式参数和实际参数之间的区别](/zh-CN/docs/Glossary/Parameter#parameters_versus_arguments)
+- [形式参数与实际参数之间的区别](/zh-CN/docs/Glossary/Parameter#parameters_versus_arguments)
 - {{glossary("JavaScript")}} 中的 {{jsxref("Functions/arguments","arguments")}} 对象
