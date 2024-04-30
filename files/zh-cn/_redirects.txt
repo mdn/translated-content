@@ -1405,7 +1405,7 @@
 /zh-CN/docs/Web/API/Document/ononline	/zh-CN/docs/Web/API/Window/online_event
 /zh-CN/docs/Web/API/Document/onreadystatechange	/en-US/docs/Web/API/Document/readystatechange_event
 /zh-CN/docs/Web/API/Document/onvisibilitychange	/zh-CN/docs/Web/API/Document/visibilitychange_event
-/zh-CN/docs/Web/API/Document/origin	/zh-CN/docs/Web/API/origin
+/zh-CN/docs/Web/API/Document/origin	/zh-CN/docs/Web/API/Window/origin
 /zh-CN/docs/Web/API/Document/registerElement	/zh-CN/docs/Web/API/CustomElementRegistry/define
 /zh-CN/docs/Web/API/Document/selectstart_event	/zh-CN/docs/Web/API/Node/selectstart_event
 /zh-CN/docs/Web/API/Document/touchcancel_event	/zh-CN/docs/Web/API/Element/touchcancel_event
@@ -1898,11 +1898,11 @@
 /zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval	/zh-CN/docs/Web/API/clearInterval
 /zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout	/zh-CN/docs/Web/API/clearTimeout
 /zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap	/zh-CN/docs/Web/API/createImageBitmap
-/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/crossOriginIsolated	/zh-CN/docs/Web/API/crossOriginIsolated
+/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/crossOriginIsolated	/zh-CN/docs/Web/API/Window/crossOriginIsolated
 /zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/fetch	/zh-CN/docs/Web/API/fetch
 /zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/indexedDB	/zh-CN/docs/Web/API/Window/indexedDB
 /zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/isSecureContext	/zh-CN/docs/Web/API/Window/isSecureContext
-/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/origin	/zh-CN/docs/Web/API/origin
+/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/origin	/zh-CN/docs/Web/API/Window/origin
 /zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/queueMicrotask	/zh-CN/docs/Web/API/queueMicrotask
 /zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/setInterval	/zh-CN/docs/Web/API/setInterval
 /zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout	/zh-CN/docs/Web/API/setTimeout
@@ -1952,6 +1952,7 @@
 /zh-CN/docs/Web/API/console/timeStamp	/zh-CN/docs/Web/API/console/timestamp_static
 /zh-CN/docs/Web/API/console/trace	/zh-CN/docs/Web/API/console/trace_static
 /zh-CN/docs/Web/API/console/warn	/zh-CN/docs/Web/API/console/warn_static
+/zh-CN/docs/Web/API/crossOriginIsolated	/zh-CN/docs/Web/API/Window/crossOriginIsolated
 /zh-CN/docs/Web/API/document.URL	/zh-CN/docs/Web/API/Document/URL
 /zh-CN/docs/Web/API/document.activeElement	/zh-CN/docs/Web/API/Document/activeElement
 /zh-CN/docs/Web/API/document.anchors	/zh-CN/docs/Web/API/Document/anchors
@@ -2020,6 +2021,7 @@
 /zh-CN/docs/Web/API/notification/onclose	/zh-CN/docs/Web/API/Notification/close_event
 /zh-CN/docs/Web/API/notification/onerror	/zh-CN/docs/Web/API/Notification/error_event
 /zh-CN/docs/Web/API/notification/onshow	/zh-CN/docs/Web/API/Notification/show_event
+/zh-CN/docs/Web/API/origin	/zh-CN/docs/Web/API/Window/origin
 /zh-CN/docs/Web/API/range.getBoundingClientRect	/zh-CN/docs/Web/API/Range/getBoundingClientRect
 /zh-CN/docs/Web/API/range.startOffset	/zh-CN/docs/Web/API/Range/startOffset
 /zh-CN/docs/Web/API/range.surroundContents	/zh-CN/docs/Web/API/Range/surroundContents

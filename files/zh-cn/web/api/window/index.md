@@ -81,7 +81,7 @@ _本接口从 {{domxref("EventTarget")}} 接口继承属性。_
   - : 返回对 navigator 对象的引用。
 - {{domxref("Window.opener")}}
   - : 返回对打开当前窗口的 window 的引用。
-- {{domxref("origin", "Window.origin")}} {{ReadOnlyInline}}
+- {{domxref("Window.origin")}} {{ReadOnlyInline}}
   - : 返回全局对象的源，序列化为一个字符串。
 - {{domxref("Window.outerHeight")}} {{ReadOnlyInline}}
   - : 获取浏览器窗口外侧的高度。

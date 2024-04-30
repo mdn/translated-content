@@ -63,6 +63,6 @@ Les ajouts à [l'API <i lang="en">Service Worker</i>](/fr/docs/Web/API/Service_W
 ## Voir aussi
 
 - [Using the Push API \[EN\]](/fr/docs/Web/API/Push_API/Using_the_Push_API)
-- [Démo API Push](https://github.com/chrisdavidmills/push-api-demo), sur Github
+- [Démo API Push](https://github.com/gauntface/simple-push-demo), sur GitHub
 - [Push Notifications on the Open Web](http://updates.html5rocks.com/2015/03/push-notificatons-on-the-open-web), Matt Gaunt
 - [API Service Worker](/fr/docs/Web/API/Service_Worker_API)
