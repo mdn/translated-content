@@ -1,7 +1,6 @@
 ---
 title: Screen.availLeft
 slug: Web/API/ScreenDetailed/availLeft
-original_slug: Web/API/Screen/availLeft
 ---
 
 {{APIRef("CSSOM")}}{{Non-standard_Header}}
