@@ -1,6 +1,6 @@
 ---
 title: Document.origin
-slug: Web/API/origin
+slug: Web/API/Window/origin
 ---
 
 {{APIRef("DOM")}}{{SeeCompatTable}}
