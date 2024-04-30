@@ -24,7 +24,7 @@ class ChildClass extends ParentClass { /* … */ }
 
 `extends` 关键字用来创建一个普通类或者内建对象的子类。
 
-任何可以用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)调用并具有 [`prototype`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype)属性的构造函数都可以作为父类的候选构造函数。这两个条件必须同时成立--例如，[bound functions](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) 和 {{jsxref("Proxy")}} 可以被构造，但它们没有 `prototype` 属性，因此不能被子类化。
+任何可以用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 调用并具有 [`prototype`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) 属性的构造函数都可以作为父类的候选构造函数。这两个条件必须同时成立——例如，[绑定函数（bound functions）](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) 和 {{jsxref("Proxy")}} 可以被构造，但它们没有 `prototype` 属性，因此不能被子类化。
 
 ```js
 function OldStyleClass() {
@@ -273,7 +273,7 @@ console.log(new D(1) instanceof Number); // true
 
 ```js
 class MyArray extends Array {
-  // Overwrite species to the parent Array constructor
+  // 将Species覆盖到父类Array的构造函数
   static get [Symbol.species]() {
     return Array;
   }
