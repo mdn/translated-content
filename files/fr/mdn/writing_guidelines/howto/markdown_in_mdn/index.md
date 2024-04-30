@@ -324,7 +324,7 @@ Ce HTML sera affiché comme un bloc de code&nbsp;:
 
 ### Référence de la discussion
 
-Ce problème a été résolu dans <https://github.com/mdn/content/issues/3483>.
+Ce problème a été résolu dans <https://github.com/mdn/content/issues/3483> (en anglais).
 
 ## Listes de définitions
 
@@ -372,7 +372,9 @@ Dans GFM/CommonMark, cela aurait produit le HTML suivant&nbsp;:
     <ul>
       <li>
         <p>: Ma description du terme2</p>
-        <p>Il peut avoir plusieurs paragraphes, et aussi des blocs de code&nbsp;:</p>
+        <p>
+          Il peut avoir plusieurs paragraphes, et aussi des blocs de code&nbsp;:
+        </p>
         <pre>
           <code class="brush: js">const thing = 1;</code>
         </pre>
@@ -395,7 +397,9 @@ Sur MDN, cela produirait le HTML suivant&nbsp;:
   </dt>
   <dd>
     <p>Ma description du terme2</p>
-    <p>Il peut avoir plusieurs paragraphes, et aussi des blocs de code&nbsp;:</p>
+    <p>
+      Il peut avoir plusieurs paragraphes, et aussi des blocs de code&nbsp;:
+    </p>
     <pre>
        <code class="brush: js">const thing = 1;</code>
     </pre>
@@ -508,8 +512,8 @@ Même quand un tableau peut être écris en GFM, il est certaines fois mieux d'u
     <td>Quelque chose de court</td>
     <td>
       Une autre cellule avec beaucoup de texte à l'intérieur, qui rentre aussi
-      beaucoup dans les détails de quelque chose, tellement que le formatage
-      des tableaux en GFM commence à être illisible.
+      beaucoup dans les détails de quelque chose, tellement que le formatage des
+      tableaux en GFM commence à être illisible.
     </td>
     <td>Quelque chose de court</td>
     <td>Quelque chose de court</td>
@@ -520,8 +524,8 @@ Même quand un tableau peut être écris en GFM, il est certaines fois mieux d'u
 Avec un format de markdown, cela donne&nbsp;:
 
 ```md
-| Un en-tête 1           | Un en-tête 2                                                                                                                                                               | Un en-tête 3           | Un en-tête 4                                                                                                                                                                                    | Un en-tête 5           | Un en-tête 6           |
-| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------- | ---------------------- |
+| Un en-tête 1           | Un en-tête 2                                                                                                                                                               | Un en-tête 3           | Un en-tête 4                                                                                                                                                                                   | Un en-tête 5           | Un en-tête 6           |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------- | ---------------------- |
 | Quelque chose de court | Quelque chose de bien plus long qui rentre vraiment dans les détails de quelque chose, tellement que le formatage des tableaux en GFM commence à être vraiment illisible. | Quelque chose de court | Une autre cellule avec beaucoup de texte à l'intérieur, qui rentre aussi beaucoup dans les détails de quelque chose, tellement que le formatage des tableaux en GFM commence à être illisible. | Quelque chose de court | Quelque chose de court |
 ```
 
@@ -566,7 +570,7 @@ Ces pages ne peuvent pas être représentées en GFM car elles possèdent une co
 
 ### Référence de la discussion
 
-Ce problème a été résolu dans <https://github.com/mdn/content/issues/4325>, <https://github.com/mdn/content/issues/7342> et <https://github.com/mdn/content/issues/7898#issuecomment-913265900>.
+Ce problème a été résolu dans <https://github.com/mdn/content/issues/4325> (en anglais), <https://github.com/mdn/content/issues/7342> (en anglais) et <https://github.com/mdn/content/issues/7898#issuecomment-913265900> (en anglais).
 
 ## Exposant et indice
 
@@ -578,7 +582,7 @@ La rédaction peut utiliser les éléments HTML [`<sup>`](/fr/docs/Web/HTML/Elem
 
 ### Référence de la discussion
 
-Ce problème a été résolu dans <https://github.com/mdn/content/issues/4578>.
+Ce problème a été résolu dans <https://github.com/mdn/content/issues/4578> (en anglais).
 
 ## Résumé de la page
 
@@ -589,9 +593,10 @@ Le premier paragraphe devrait donc être à la fois bref et informatif.
 
 ### Référence de la discussion
 
-Ce problème a été résolu dans <https://github.com/mdn/content/issues/3923>.
+Ce problème a été résolu dans <https://github.com/mdn/content/issues/3923> (en anglais).
 
 ## KumaScript
+
 La rédaction sera capable d'inclure des appels à des macros KumaScript dans les contenus en prose&nbsp;:
 
 ```md
