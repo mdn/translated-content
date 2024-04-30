@@ -75,7 +75,7 @@ console.log(y); // 'Outer y'
 
 ```js
 class MyClass {
-  static field1 = console.log("静态字段1");
+  static field1 = console.log("静态字段 1");
   static {
     console.log("静态块1");
   }
