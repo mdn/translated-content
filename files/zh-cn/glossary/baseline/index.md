@@ -13,4 +13,4 @@ l10n:
 
 ## 参见
 
-- 维基百科上的 [基线](https://zh.wikipedia.org/wiki/基线)
+- 维基百科上的[基线](https://zh.wikipedia.org/wiki/基线)
