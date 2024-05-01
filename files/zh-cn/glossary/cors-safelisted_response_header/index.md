@@ -21,7 +21,7 @@ _列入 CORS 白名单的响应标头_（CORS-safelisted response header）是 C
 
 可以使用 {{HTTPHeader("Access-Control-Expose-Headers")}} 标头将其他标头添加到白名单中。
 
-> **备注：** {{HTTPHeader("Content-Length")}} 不属于最初列入白名单的响应标头：\[[参考](https://github.com/whatwg/fetch/pull/626))
+> **备注：** {{HTTPHeader("Content-Length")}} 不属于最初列入白名单的响应标头：\[[参考](https://github.com/whatwg/fetch/pull/626)]
 
 ## 示例
 
