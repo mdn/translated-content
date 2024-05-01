@@ -2,7 +2,7 @@
 title: 对齐容器
 slug: Glossary/Alignment_Container
 l10n:
-  sourceCommit: 119706c695d0a9b738b846d552157a72f61af533
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
 {{GlossarySidebar}}
