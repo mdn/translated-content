@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-一个**应用程序上下文**是一个应用了 [Web 应用程序清单](/en-US/docs/Web/Manifest) 的顶层[浏览上下文](/en-US/docs/Glossary/Browsing_context)。
+一个**应用程序上下文**是一个应用了 [Web 应用程序清单](/zh-CN/docs/Web/Manifest) 的顶层[浏览上下文](/zh-CN/docs/Glossary/Browsing_context)。
 
 如果一个应用程序上下文是由于用户代理被要求导航到一个深度链接而创建的，那么用户代理必须立即以替换启用的方式导航到深度链接。否则，当应用程序上下文被创建时，用户代理必须立即以替换启用的方式导航到起始 URL。
 
