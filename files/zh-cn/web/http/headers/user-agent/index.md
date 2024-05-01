@@ -2,7 +2,7 @@
 title: User-Agent
 slug: Web/HTTP/Headers/User-Agent
 l10n:
-  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+  sourceCommit: 165f04fc4a77b053850bf6c5243831e1b17a2433
 ---
 
 {{HTTPSidebar}}
