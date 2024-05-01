@@ -15,7 +15,7 @@ l10n:
 
 历史上不同的 API 对自己的权限的处理方式不一致——例如，[Notifications API](/zh-CN/docs/Web/API/Notifications_API) 提供了自己的方法来请求权限和检查权限状态，而 [Geolocation API](/zh-CN/docs/Web/API/Geolocation) 没有。权限 API 提供的工具允许开发者在使用权限时实现一致且更好的用户体验。
 
-`permissions` 属性已在标准浏览上下文和 worker 上下文（{{domxref("WorkerNavigator")}} ——因此可以在 worker 内部进行权限检查）中的 {{domxref("Navigator")}} 对象上可用，并返回一个提供对 Permissions API 功能的访问的 {{domxref("Permissions")}} 对象。
+`permissions` 属性已在标准浏览上下文和 worker 上下文（{{domxref("WorkerNavigator")}} ——因此可以在 worker 内部进行权限检查）中的 {{domxref("Navigator")}} 对象上可用，并返回一个提供对权限 API 功能的访问的 {{domxref("Permissions")}} 对象。
 
 获得此对象后，你可以使用 {{domxref("Permissions.query()")}} 方法返回一个 promise，该 promise 为特定的 API 解析 {{domxref("PermissionStatus")}} 对象。请注意，如果状态为 `prompt`，则用户必须在访问该功能之前确认提示，并且启动此提示的机制将取决于特定的 API——它并未定义为权限 API 的一部分。
 
