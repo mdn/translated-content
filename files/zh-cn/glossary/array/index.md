@@ -19,8 +19,8 @@ const myArray = [1, 2, 3, 4];
 const barbieDollNamesArray = ["Barbie", "Ken", "Midge", "Allan", "Skipper"];
 
 // 数组的索引从 0 开始
-console.log(myArray[0]); // 输出: 1
-console.log(barbieDollNamesArray[2]); // 输出: "Midge"
+console.log(myArray[0]); // 输出：1
+console.log(barbieDollNamesArray[2]); // 输出："Midge"
 ```
 
 ## 参见
