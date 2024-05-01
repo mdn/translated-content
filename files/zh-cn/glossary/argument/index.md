@@ -9,7 +9,7 @@ l10n:
 
 **引数**是一个作为 {{Glossary("function")}} 输入的 {{glossary("value")}}（{{Glossary("primitive")}} 或 {{Glossary("object")}}）。
 
-例如:
+例如：
 
 ```js
 const argument1 = "Web";
