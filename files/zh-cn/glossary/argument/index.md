@@ -1,13 +1,40 @@
 ---
-title: Argument
+title: 引数
 slug: Glossary/Argument
 ---
 
 {{GlossarySidebar}}
 
-**argument** 是一个作为函数输入的[值](/zh-CN/docs/Glossary/value)（[原始数据](/zh-CN/docs/Glossary/primitive)或[对象](/zh-CN/docs/Glossary/object)）。
+**引数**是一个作为 {{Glossary("function")}} 输入的 {{glossary("value")}}（{{Glossary("primitive")}} 或 {{Glossary("object")}}）。
+
+例如:
+
+```js
+const argument1 = "Web";
+const argument2 = "Development";
+example(argument1, argument2); // 传入两个引数
+
+// 这个函数接受两个参数
+function example(parameter1, parameter2) {
+  console.log(parameter1); // 输出 = "Web"
+  console.log(parameter2); // 输出 = "Development"
+}
+```
+
+在函数调用中的引数顺序应该与函数定义中的 {{Glossary("parameter","parameters")}} 顺序相同。
+
+```js
+const argument1 = "foo";
+const argument2 = [1, 2, 3];
+example(argument1, argument2); // 传入两个引数
+
+// 这个函数接受一个参数，因而传入的第二个引数被忽略了
+function example(parameter) {
+  console.log(parameter); // 输出 = foo
+}
+```
 
 ## 参见
 
-- [Parameter 和 Argument 之间的差异](<https://en.wikipedia.org/wiki/Parameter_(computer_programming)>) - 维基百科
-- [JavaScript 中](/zh-CN/docs/Glossary/JavaScript)的 [`arguments`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments) 对象
+- 维基百科上的 [参数和引数](<https://zh.wikipedia.org/wiki/參數_(程式設計)#参数和引数)>)
+- {{glossary("JavaScript")}} 的 {{jsxref("Functions/arguments","arguments")}} 对象
