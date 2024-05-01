@@ -7,7 +7,7 @@ l10n:
 
 {{securecontext_header}}{{APIRef("Cookie Store API")}}
 
-{{domxref("CookieChangeEvent")}} 接口的 **`deleted`** 只读属性返回已被给定 CookieChangeEvent 实例删除的 cookie 数组。
+{{domxref("CookieChangeEvent")}} 接口的 **`deleted`** 只读属性返回已被给定 `CookieChangeEvent` 实例删除的 cookie 数组。
 
 ## 值
 

@@ -41,7 +41,7 @@ l10n:
 
 ## 示例
 
-在以下示例中，当 cookie 被设置，事件监听器打印 `CookieChangeEvent.changed` 属性的第一个元素至控制台。这个元素代表刚刚被修改的 cookie 的对象。
+在以下示例中，当 cookie 被设置，事件监听器打印 `CookieChangeEvent.changed` 属性的第一个元素至控制台。这个元素代表刚刚设置的 cookie 对象。
 
 ```js
 cookieStore.addEventListener("change", (event) => {
