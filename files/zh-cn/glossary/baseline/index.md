@@ -13,4 +13,4 @@ l10n:
 
 ## 参见
 
-- 维基百科上的 [Baseline](https://en.wikipedia.org/wiki/Baseline) 词条
+- 维基百科上的 [基线](https://zh.wikipedia.org/wiki/基线)
