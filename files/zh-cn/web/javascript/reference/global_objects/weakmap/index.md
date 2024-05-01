@@ -254,7 +254,7 @@ function handleObjectValues(obj) {
 }
 ```
 
-只有当函数的输入是对象时才有效。此外，即使输入不再传入，结果依然永远保留在缓存中，更有效的方法是将 {{jsxref("Map")}} 与 {{jsxref("WeakRef")}} 对象配对使用，这允许你讲任何类型的输入值与各自的（很可能的）计算结果关联。有关更多详细信息，请参阅 [WeakRef 和 FinalizationRegistry](/zh-CN/docs/Web/JavaScript/Memory_management#weakrefs_and_finalizationregistry) 示例。
+只有当函数的输入是对象时才有效。此外，即使输入不再传入，结果依然永远保留在缓存中，更有效的方法是将 {{jsxref("Map")}} 与 {{jsxref("WeakRef")}} 对象配对使用，这允许你将任何类型的输入值与各自的（很可能的）计算结果关联。有关更多详细信息，请参阅 [WeakRef 和 FinalizationRegistry](/zh-CN/docs/Web/JavaScript/Memory_management#weakrefs_and_finalizationregistry) 示例。
 
 ## 规范
 

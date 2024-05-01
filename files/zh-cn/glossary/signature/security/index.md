@@ -18,5 +18,5 @@ slug: Glossary/Signature/Security
 
 ## 参见
 
-- [Digital signature](https://zh.wikipedia.org/wiki/Digital_signature) on Wikipedia
+- 维基百科上的[数字签名](https://zh.wikipedia.org/wiki/數位簽章)
 - See {{glossary("digest")}}, {{glossary("encryption")}}

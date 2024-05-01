@@ -24,7 +24,7 @@ newNode = textNode.splitText(offset)
 
 ### 返回值
 
-返回一个新创建的 {{domxref("Text")}} 节点，该节点包含了 the text after the specified offset point.
+返回一个新创建的 {{domxref("Text")}} 节点，该节点包含了指定偏移量之后的文本。
 
 ### 异常
 
@@ -78,5 +78,5 @@ p.insertBefore(u, bar);
 
 ## 参见
 
-- The {{domxref("Text")}} interface it belongs to.
-- The opposite method: {{domxref("Node.normalize")}}.
+- 所属的接口：{{domxref("Text")}}。
+- 相反的方法：{{domxref("Node.normalize")}}。

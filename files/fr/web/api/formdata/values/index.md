@@ -3,7 +3,9 @@ title: FormData.values()
 slug: Web/API/FormData/values
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{AvailableInWorkers}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 La méthode **`FormData.values()`** renvoie une {{jsxref("Les_protocoles_iteration", "itération")}} permettant de passer en revue toutes les valeurs contenues dans cet objet. Les valeurs sont des objets {{domxref("USVString")}} ou {{domxref("Blob")}}.
 

@@ -10,4 +10,4 @@ slug: Glossary/XQuery
 ## 参见
 
 - [官方网站](https://www.w3.org/XML/Query/)
-- 维基百科上的 [XQuery](https://zh.wikipedia.org/wiki/XQuery)
+- 维基百科上的 [XQuery](https://en.wikipedia.org/wiki/XQuery)

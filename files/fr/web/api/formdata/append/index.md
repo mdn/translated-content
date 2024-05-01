@@ -3,7 +3,9 @@ title: FormData.append()
 slug: Web/API/FormData/append
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{AvailableInWorkers}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 La méthode **`append()`** de l'interface {{domxref("FormData")}} ajoute une nouvelle valeur à une clé existante dans un objet `FormData`, ou rajoute cette clé et cette valeur quand elle n'existe pas.
 

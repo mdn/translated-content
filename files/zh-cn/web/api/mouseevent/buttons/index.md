@@ -3,7 +3,7 @@ title: MouseEvent.buttons
 slug: Web/API/MouseEvent/buttons
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 只读属性 **`MouseEvent.buttons`** 指示事件触发时哪些鼠标按键被按下。
 
