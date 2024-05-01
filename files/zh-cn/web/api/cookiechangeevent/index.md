@@ -19,7 +19,7 @@ l10n:
 
 {{InheritanceDiagram}}
 
-## 构造器
+## 构造函数
 
 - {{domxref("CookieChangeEvent.CookieChangeEvent", "CookieChangeEvent()")}}
   - : 创建一个新的 `CookieChangeEvent`。
@@ -29,9 +29,9 @@ l10n:
 _该接口同样继承来自 {{domxref("Event")}} 的属性。_
 
 - {{domxref("CookieChangeEvent.changed")}} {{ReadOnlyInline}}
-  - : 返回一个包含一个或多个已变更的 cookie 的数组。
+  - : 返回包含一个或多个已变更的 cookie 的数组。
 - {{domxref("CookieChangeEvent.deleted")}} {{ReadOnlyInline}}
-  - : 返回一个包含一个或多个被删除的 cookie 的数组。
+  - : 返回包含一个或多个被删除的 cookie 的数组。
 
 ## 实例方法
 
