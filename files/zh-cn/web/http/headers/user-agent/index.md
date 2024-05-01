@@ -57,7 +57,7 @@ Mozilla/5.0 (platform; rv:geckoversion) Gecko/geckotrail Firefox/firefoxversion
 2. **_platform_** 描述浏览器运行的原生平台（Windows、Mac、Linux、Android 等）以及是否运行在手机上。{{Glossary("Firefox OS", "Firefox 操作系统")}}手机会标注为 `Mobile`——意指 web 即是平台。注意，**_platform_** 可能包含多个由“`;`”分隔的标记。详情和示例请见下文。
 3. **rv:_geckoversion_** 表示 Gecko 引擎的发布版本（例如“_17.0_”）。在近期的浏览器中，**_geckoversion_** 与 **_firefoxversion_** 相同。
 4. **_Gecko/geckotrail_** 表示浏览器基于 Gecko 引擎。（在桌面平台上，**_geckotrail_** 始终是固定的字符串 `20100101`。）
-5. **_Firefox/firefoxversion_** 表示浏览器为 Firefox，并提供其版本号（例如*“17.0”*）。
+5. **_Firefox/firefoxversion_** 表示浏览器为 Firefox，并提供其版本号（例如“_17.0_”）。
 
 ### 示例
 
