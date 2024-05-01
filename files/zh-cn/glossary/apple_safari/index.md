@@ -1,6 +1,8 @@
 ---
 title: Apple Safari
 slug: Glossary/Apple_Safari
+l10n:
+  sourceCommit: 09e550415b412a74c922cb48df92a85b397523ad
 ---
 
 {{GlossarySidebar}}
