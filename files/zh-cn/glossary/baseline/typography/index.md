@@ -13,5 +13,5 @@ l10n:
 
 ## 参见
 
-- 维基百科上的[基线](https://zh.wikipedia.org/wiki/基線)词条
-- MDN 上的 [CSS 盒子对齐](/zh-CN/docs/Web/CSS/CSS_box_alignment#对齐的种类)文档
+- 维基百科上的[基线](https://zh.wikipedia.org/wiki/基線)
+- MDN 上的 [CSS 盒子对齐](/zh-CN/docs/Web/CSS/CSS_box_alignment#对齐的种类)
