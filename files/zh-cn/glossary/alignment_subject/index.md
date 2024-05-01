@@ -9,7 +9,7 @@ l10n:
 
 在 [CSS 盒子对齐](/zh-CN/docs/Web/CSS/CSS_box_alignment)对齐中，对齐主体是由属性决定的进行对齐的事物。
 
-对于 {{cssxref("justify-self")}} 和 {{cssxref("align-self")}}，对齐主体是设置这些属性的盒子的外边距框，并且使用该盒子的书写模式。{{cssxref("justify-content")}}、{{cssxref("align-content")} 属性也会使用盒子的书写模式。
+对于 {{cssxref("justify-self")}} 和 {{cssxref("align-self")}}，对齐主体是设置这些属性的盒子的外边距框，并且使用该盒子的书写模式。{{cssxref("justify-content")}}、{{cssxref("align-content")}} 属性也会使用盒子的书写模式。
 
 对齐主体的定义取决于所使用的布局模式。
 
