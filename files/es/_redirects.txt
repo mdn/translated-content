@@ -1738,7 +1738,7 @@
 /es/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap	/es/docs/Web/API/createImageBitmap
 /es/docs/Web/API/WindowOrWorkerGlobalScope/fetch	/es/docs/Web/API/fetch
 /es/docs/Web/API/WindowOrWorkerGlobalScope/indexedDB	/es/docs/Web/API/Window/indexedDB
-/es/docs/Web/API/WindowOrWorkerGlobalScope/isSecureContext	/es/docs/Web/API/isSecureContext
+/es/docs/Web/API/WindowOrWorkerGlobalScope/isSecureContext	/es/docs/Web/API/Window/isSecureContext
 /es/docs/Web/API/WindowOrWorkerGlobalScope/setInterval	/es/docs/Web/API/setInterval
 /es/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout	/es/docs/Web/API/setTimeout
 /es/docs/Web/API/WindowTimers/clearInterval	/es/docs/Web/API/clearInterval
@@ -1764,6 +1764,7 @@
 /es/docs/Web/API/event.defaultPrevented	/es/docs/Web/API/Event/defaultPrevented
 /es/docs/Web/API/event.which	/es/docs/Web/API/UIEvent/which
 /es/docs/Web/API/indexedDB	/es/docs/Web/API/Window/indexedDB
+/es/docs/Web/API/isSecureContext	/es/docs/Web/API/Window/isSecureContext
 /es/docs/Web/Accesibilidad	/es/docs/Web/Accessibility
 /es/docs/Web/Accesibilidad/Comunidad	/es/docs/conflicting/Web/Accessibility
 /es/docs/Web/Accesibilidad/Understanding_WCAG	/es/docs/Web/Accessibility/Understanding_WCAG
