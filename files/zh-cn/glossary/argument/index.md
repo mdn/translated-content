@@ -1,6 +1,8 @@
 ---
 title: 引数
 slug: Glossary/Argument
+l10n:
+  sourceCommit: d842f8c32316dbe36cff9fc5e0e777602e32d958
 ---
 
 {{GlossarySidebar}}
