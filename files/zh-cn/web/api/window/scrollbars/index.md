@@ -11,14 +11,14 @@ l10n:
 
 这是一组包含布尔类型 `visible` 属性的 `Window` 属性之一，该属性过去用于表示 web 浏览器用户界面的特定部分是否可见。
 
-出于隐私和互操作性的原因，如果此 `Window` 是弹出窗口，则 `visible` 属性的值为 `false`，反之为 `true`。
+出于隐私和互操作性的原因，如果 `Window` 是弹出窗口，则 `visible` 属性的值为 `false`，反之为 `true`。
 
 ## 值
 
 包含单个属性的对象：
 
 - `visible` {{ReadOnlyInline}}
-  - : 布尔属性，如果此 `Window` 是弹出窗口，则为 `false`，反之为 `true`。
+  - : 布尔属性，如果 `Window` 是弹出窗口，则为 `false`，反之为 `true`。
 
 ## 规范
 
