@@ -17,9 +17,9 @@ l10n:
 
 ## 이벤트 처리기 등록
 
-이벤트 처리기를 등록하기 위해서는 두 가지 방법이 권장됩니다. 이벤트 처리기 코드는 대상 요소의 해당 onevent 속성에 할당하거나 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 메서드를 사용하여 이벤트 처리기를 요소의 이벤트 수신기로 등록하여 실행할 수 있습니다. 어느 경우에나 이벤트 수신기는 [`이벤트` 인테페이스](/ko/docs/Web/API/Event) 또는 [파생된 인테페이스](/ko/docs/Web/API/Event#introduction)를 준수하는 개체를 수신합니다. 주요 차이점은 이벤트 수신기 방법을 사용하여 여러 이벤트 처리기를 추가하거나 제거할 수 있다는 것입니다.
+이벤트 처리기를 등록하기 위해서는 두 가지 방법을 권장합니다. 이벤트 처리기 코드는 대상 요소의 해당 onevent 속성에 할당하거나 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 메서드를 사용하여 이벤트 처리기를 요소의 이벤트 수신기로 등록하여 실행할 수 있습니다. 어느 경우에나 이벤트 수신기는 [`이벤트` 인테페이스](/ko/docs/Web/API/Event) 또는 [파생된 인테페이스](/ko/docs/Web/API/Event#introduction)를 준수하는 개체를 수신합니다. 주요 차이점은 이벤트 수신기 방법을 사용하여 여러 이벤트 처리기를 추가하거나 제거할 수 있다는 것입니다.
 
-> **경고:** HTML onevent 특성을 사용하여 이벤트 처리기를 설정하는 세 번째 접근 방식은 권장되지 않습니다. 마크업을 부풀리고 읽기 어렵고 디버그하기 어렵게 만듭니다. 자세한 내용은 [인라인 이벤트 처리기](/ko/docs/Learn/JavaScript/Building_blocks/Events#inline_event_handlers_—_dont_use_these)를 참조하십시오.
+> **경고:** HTML onevent 특성을 사용하여 이벤트 처리기를 설정하는 세 번째 접근 방식은 권장하지 않습니다. 마크업을 부풀리고 읽기 어렵고 디버그하기 어렵게 만듭니다. 자세한 내용은 [인라인 이벤트 처리기](/ko/docs/Learn/JavaScript/Building_blocks/Events#inline_event_handlers_—_dont_use_these)를 참조하십시오.
 
 ### onevent 속성 사용
 
