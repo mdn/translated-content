@@ -70,7 +70,7 @@ Content-Length: 1024
 （二进制内容）
 ```
 
-现在的 {{HTTPHeader("Content-Length")}} 标头表示所请求范围的大小（而非图像的完整大小）。{{HTTPHeader("Content-Range")}} 响应标头则表示此部分消息在完整资源中的位置。
+{{HTTPHeader("Content-Length")}} 标头现在表示所请求范围的大小（而非图像的完整大小）。{{HTTPHeader("Content-Range")}} 响应标头则表示此部分消息在完整资源中的位置。
 
 ### 多重范围
 
