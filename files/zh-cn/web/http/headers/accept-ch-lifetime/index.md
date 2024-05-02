@@ -19,13 +19,13 @@ l10n:
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name", "禁止修改的标头")}}</th>
-      <td>无</td>
+      <td>否</td>
     </tr>
     <tr>
       <th scope="row">
         {{Glossary("CORS-safelisted request header", "列入 CORS 白名单的请求标头")}}
       </th>
-      <td>无</td>
+      <td>否</td>
     </tr>
   </tbody>
 </table>
