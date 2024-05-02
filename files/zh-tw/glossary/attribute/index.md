@@ -48,5 +48,5 @@ console.log(attr.value); // 打印 `Modified placeholder`
 
 ### 技術參考
 
-- [HTML attribute reference](/zh-TW/docs/Web/HTML/Attributes)
+- [HTML 屬性參考](/zh-TW/docs/Web/HTML/Attributes)
 - HTML 的[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)相關資訊。
