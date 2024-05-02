@@ -429,4 +429,4 @@ div:nth-child(6) {
 - {{CSSXref("&lt;hue&gt;")}}：表示一个颜色的色相角度的数据类型
 - {{CSSXref("color")}}、{{CSSXref("background-color")}}、{{CSSXref("border-color")}}、{{CSSXref("box-shadow")}}、{{CSSXref("outline-color")}}、{{CSSXref("text-shadow")}}：使用 `<color>` 的常见属性
 - [使用 CSS 给元素应用颜色](/zh-CN/docs/Web/CSS/CSS_colors/Applying_color)
-- MDN 博客中的文章 [CSS 颜色中的新功能、渐变和色调（级别 4）](zh-CN/blog/css-color-module-level-4/)（2023 年）
+- MDN 博客中的文章 [CSS 颜色中的新功能、渐变和色调（级别 4）](/zh-CN/blog/css-color-module-level-4/)（2023 年）

@@ -181,4 +181,4 @@ body {
 - {{cssxref("image/image-set","image-set()")}}
 - {{cssxref("cross-fade", "cross-fade()")}}
 - [CSS 图像模块](/zh-CN/docs/Web/CSS/CSS_images)
-- MDN 博客中的文章 [CSS 颜色中的新功能、渐变和色调（级别 4）](zh-CN/blog/css-color-module-level-4/)（2023 年）
+- MDN 博客中的文章 [CSS 颜色中的新功能、渐变和色调（级别 4）](/zh-CN/blog/css-color-module-level-4/)（2023 年）
