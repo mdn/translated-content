@@ -51,7 +51,9 @@ slug: Web/API/Document_Object_Model/Examples
   <body onload="init();">
     <p>
       图片 1：无高度、宽度及样式
-      <img id="image1" src="https://www.mozilla.org/images/mozilla-banner.gif" />
+      <img
+        id="image1"
+        src="https://www.mozilla.org/images/mozilla-banner.gif" />
     </p>
 
     <p>
