@@ -1,16 +1,17 @@
 ---
-title: Boolean (JavaScript)
+title: 布尔值（JavaScript）
 slug: Glossary/Boolean/JavaScript
-page-type: glossary-definition
+l10n:
+  sourceCommit: 53e776eeb25d24e413d7a404257faebe1b7ce1be
 ---
 
 {{GlossarySidebar}}
 
-A **Boolean** in JavaScript is a {{Glossary("Primitive", "primitive value")}} that can be either `true` or `false`.
+在 JavaScript 中，布尔值是一个{{Glossary("Primitive", "原始值")}}，可以是 `true` 或 `false`。
 
-A {{jsxref("Boolean")}} object is a {{Glossary("wrapper")}} around a Boolean primitive.
+一个{{jsxref("Boolean", "布尔值"")}}对象是一个{{Glossary("wrapper", "包装器")}}，包装了一个布尔原始值。
 
 ## See also
 
-- [The JavaScript global object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
-- [JavaScript data types and data structures](/en-US/docs/Web/JavaScript/Data_structures)
+- [avaScript 全局对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
+- [JavaScript 数据类型与结构](/zh-CN/docs/Web/JavaScript/Data_structures)
