@@ -128,5 +128,5 @@ update();
 ## 参考资料
 
 - {{domxref("Element.getClientRects", "getClientRects()")}}
-- [MSDN: `getBoundingClientRect`](<https://msdn.microsoft.com/library/ms536433(VS.85).aspx>)
-- [MSDN: `ClientRect`](<https://msdn.microsoft.com/library/hh826029(VS.85).aspx>)，更早版本的 `DOMRect`
+- [MSDN: `getBoundingClientRect`](<https://msdn.microsoft.com/library/ms536433(VS.85) .aspx>)
+- [MSDN: `ClientRect`](<https://msdn.microsoft.com/library/hh826029(VS.85) .aspx>)，更早版本的 `DOMRect`

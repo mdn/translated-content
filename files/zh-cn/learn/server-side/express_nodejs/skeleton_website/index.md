@@ -280,7 +280,7 @@ DEBUG=express-locallibrary-tutorial:* npm run devstart
 
 ### www 文件
 
-文件 **/bin/www** 是应用入口！它做的第一件事是 `require()` “真实”的应用入口（即项目根目录中的 **app.js** ），**app.js** 会设置并返回 [`express()`](http://expressjs.com/en/api.html)应用对象。
+文件 **/bin/www** 是应用入口！它做的第一件事是 `require()` “真实”的应用入口（即项目根目录中的 **app.js** ），**app.js** 会设置并返回 [`express()`](http://expressjs.com/en/api.html) 应用对象。
 
 ```js
 #!/usr/bin/env node

@@ -66,7 +66,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
 
 {{WebExtExamples}}
 
-> **备注：** 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#type-Tab) API. 本文档来源于 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json).
+> **备注：** 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#type-Tab) API. 本文档来源于 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) .
 >
 > Microsoft Edge 兼容性数据由 Microsoft Corporation 提供，并包含在 Creative Commons Attribution 3.0 美国许可证下。
 

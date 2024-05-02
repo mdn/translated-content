@@ -85,7 +85,7 @@ browser.browserAction.onClicked.addListener(() => {
 
 {{WebExtExamples}}
 
-> **备注：** 本页 API 以谷歌 Chromium 的 [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-insertCSS) API 为基础。该篇文档由 Chromium 代码 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)衍变而来。
+> **备注：** 本页 API 以谷歌 Chromium 的 [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-insertCSS) API 为基础。该篇文档由 Chromium 代码 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) 衍变而来。
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
