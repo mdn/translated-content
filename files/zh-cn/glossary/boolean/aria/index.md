@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-在 ARIA 中，**布尔属性**是一个{{Glossary("Enumerated", "枚举属性")}}包括 `true` 或 `false`。
+在 ARIA 中，**布尔属性**是一个{{Glossary("Enumerated", "枚举属性")}}，可选值包括 `true` 或 `false`。
 
 在 ARIA 中，布尔值只以字符串形式 `"true"` 和 `"false"` 出现。
 
