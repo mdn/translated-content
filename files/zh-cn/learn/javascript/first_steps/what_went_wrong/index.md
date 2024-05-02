@@ -143,7 +143,7 @@ slug: Learn/JavaScript/First_steps/What_went_wrong
 
 ### 修正逻辑错误
 
-为了解决这个问题，让我们来思考这行代码如何工作。首先，我们调用 [`Math.random()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/random) ,它生成一个在 0 和 1 之间的十进制随机数，例如 0.5675493843。
+为了解决这个问题，让我们来思考这行代码如何工作。首先，我们调用 [`Math.random()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/random)，生成一个在 0 和 1 之间的十进制随机数，例如 0.5675493843。
 
 ```js
 Math.random();
