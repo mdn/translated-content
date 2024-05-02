@@ -9,7 +9,7 @@ l10n:
 
 在 JavaScript 中，布尔值是一个{{Glossary("Primitive", "原始值")}}，可以是 `true` 或 `false`。
 
-一个{{jsxref("Boolean", "布尔值"")}}对象是一个{{Glossary("wrapper", "包装器")}}，包装了一个布尔原始值。
+一个{{jsxref("Boolean", "布尔值")}}对象是一个{{Glossary("wrapper", "包装器")}}，包装了一个布尔原始值。
 
 ## See also
 
