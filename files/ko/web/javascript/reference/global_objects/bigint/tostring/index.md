@@ -21,7 +21,7 @@ toString(radix)
 ### 매개변수
 
 - `radix` {{optional_inline}}
-  - : BigInt 값을 표현하기 위해 사용할 기저를 지정하기 위해 사용하는 2부터 36까지의 정수로 기저. 기본 값은 10.
+  - : BigInt 값을 표현하기 위해 사용할 기저를 지정하기 위해 사용하는 2부터 36까지의 정수. 기본 값은 10.
 
 ### 반환 값
 
@@ -34,11 +34,12 @@ toString(radix)
 
 ## 설명
 
-{{jsxref("BigInt")}} 객체는 {{jsxref("Object")}}의 `toString` 메서드를 재정의합니다. 즉 {{jsxref("Object.prototype.toString()")}}를 상속받지 않습니다. {{jsxref("BigInt")}} 값의 경우 `toString()` 메서드는 값을 명시된 기저에 따라 표현하는 문자열을 반환합니다.
+{{jsxref("BigInt")}} 객체는 {{jsxref("Object")}}의 `toString` 메서드를 재정의합니다. 즉 {{jsxref("Object.prototype.toString()")}}를 상속받지 않습니다.
+{{jsxref("BigInt")}} 값의 경우 `toString()` 메서드는 값을 명시된 기저에 따라 표현하는 문자열을 반환합니다.
 
 기저가 10을 초과할 경우 알파벳 문자는 9 이상의 숫자를 가리킵니다. 예를 들어 16진수에서는 `a`부터 `f`까지 사용됩니다.
 
-명시된 BigInt 값이 음수일 경우 부호는 보존됩니다. 기저가 2일 경우에도 마찬가지 입니다. 반환되는 문자열은 앞에 `-`부호가 붙은 양의 2진 표현이며, BigInt값의 2의 보수가 아닙니다.
+명시된 BigInt 값이 음수일 경우 부호는 보존됩니다. 기저가 2일 경우에도 마찬가지 입니다. 반환되는 문자열은 앞에 `-`부호가 붙은 양의 2진 표현이며, BigInt 값의 2의 보수가 **아닙니다**.
 
 `toString()` 메서드는 `this` 값이 `BigInt` 원시 값 또는 래퍼 객체여야 합니다. 이 메서드는 다른 `this` 값을 강제로 BigInt 값으로 변환하려 하지 않고 {{jsxref("TypeError")}}를 발생시킵니다.
 
