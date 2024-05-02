@@ -55,7 +55,7 @@ _本接口从 {{domxref("EventTarget")}} 接口继承属性。_
   - : 获取浏览器窗口的内容区域的高度，包括（已渲染的）水平滚动条。
 - {{domxref("Window.innerWidth")}} {{ReadOnlyInline}}
   - : 获取浏览器窗口的内容区域的宽度，包括（已渲染的）竖直滚动条。
-- {{domxref("isSecureContext", "Window.isSecureContext")}} {{ReadOnlyInline}}
+- {{domxref("Window.isSecureContext")}} {{ReadOnlyInline}}
   - : 返回一个布尔值，表示当前上下文安全（`true`）或不安全（`false`）。
 - {{domxref("Window.launchQueue")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 当一个[渐进式 web 应用](/zh-CN/docs/Web/Progressive_web_apps)（PWA）以 `focus-existing`、`navigate-new` 或 `navigate-existing` 的 [`launch_handler`](/zh-CN/docs/Web/Manifest/launch_handler) `client_mode` 值启动时，`launchQueue` 提供对 {{domxref("LaunchQueue")}} 类的访问，这允许为 PWA 实现自定义的启动导航处理。
@@ -81,7 +81,7 @@ _本接口从 {{domxref("EventTarget")}} 接口继承属性。_
   - : 返回对 navigator 对象的引用。
 - {{domxref("Window.opener")}}
   - : 返回对打开当前窗口的 window 的引用。
-- {{domxref("origin", "Window.origin")}} {{ReadOnlyInline}}
+- {{domxref("Window.origin")}} {{ReadOnlyInline}}
   - : 返回全局对象的源，序列化为一个字符串。
 - {{domxref("Window.outerHeight")}} {{ReadOnlyInline}}
   - : 获取浏览器窗口外侧的高度。

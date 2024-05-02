@@ -11,4 +11,4 @@ slug: Glossary/Identifier
 
 ## 参见
 
-- [Identifier](https://zh.wikipedia.org/wiki/Identifier#In_computer_science) on Wikipedia
+- 维基百科上的[标识符](https://zh.wikipedia.org/wiki/標識符)

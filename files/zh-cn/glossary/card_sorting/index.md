@@ -9,4 +9,4 @@ slug: Glossary/Card_sorting
 
 ## 参见
 
-- [Card sorting](https://zh.wikipedia.org/wiki/Card_sorting) on Wikipedia
+- 维基百科上的[卡片分类法](https://zh.wikipedia.org/wiki/卡片分類法)

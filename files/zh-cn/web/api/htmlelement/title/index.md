@@ -1,30 +1,35 @@
 ---
-title: HTMLElement.title
+title: HTMLElement：title 属性
 slug: Web/API/HTMLElement/title
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{ APIRef() }}
+{{ APIRef("HTML DOM") }}
 
-**`HTMLElement.title`** 属性表示元素的 title。当鼠标移到节点上时，会以“工具提示”（tool tip）的弹出形式显示该属性的属性值文本。
+**`HTMLElement.title`** 属性表示元素的标题：当鼠标悬停于节点上时，通常会以“工具提示”（tooltip）的弹出形式显示该文本。
 
-如果一个节点没有 `title` 属性（attribute），默认继承其父节点的相应属性，父节点可能是从父节点的父节点继承，依此类推。
+## 值
 
-## 语法
+一个字符串。
 
-```plain
-var string = element.title;
-element.title = string;
+## 示例
+
+```js
+const link = document.createElement("a");
+link.innerText = "葡萄";
+link.href = "https://zh.wikipedia.org/wiki/葡萄";
+link.title = "维基百科页面上的葡萄";
 ```
 
-## 例子
+## 规范
 
-```plain
-const link = document.createElement('a');
-link.innerText = '葡萄';
-link.href = 'https://en.wikipedia.org/wiki/Grape';
-link.title = '维基百科上对葡萄的描述';
-```
+{{Specifications}}
 
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- HTML [**title**](/zh-CN/docs/Web/HTML/Global_attributes/title) 全局属性。

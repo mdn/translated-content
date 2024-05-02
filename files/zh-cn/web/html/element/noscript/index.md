@@ -1,70 +1,94 @@
 ---
-title: <noscript>
+title: <noscript>：无脚本元素
 slug: Web/HTML/Element/noscript
+l10n:
+  sourceCommit: fdd3ac5598c3ddceb71e59949b003936ae99f647
 ---
 
 {{HTMLSidebar}}
 
-如果页面上的脚本类型不受支持或者当前在浏览器中关闭了脚本，则在 **HTML \<noscript> 元素**中定义脚本未被执行时的替代内容。
-
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/zh-CN/docs/HTML/Content_categories">内容分类</a></th>
-   <td><a href="/zh-CN/docs/HTML/Content_categories#Metadata_content">Metadata content</a>, <a href="/zh-CN/docs/HTML/Content_categories#Flow_content">flow content</a>, <a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
-  </tr>
-  <tr>
-   <th scope="row">允许的内容</th>
-   <td>
-   <p>当脚本被禁用并且它是 {{HTMLElement("head")}}元素的后代时：以下顺序任意，零个或者多个{{HTMLElement("link")}}元素，零个或者多个{{HTMLElement("style")}}元素，零个或者多个{{HTMLElement("meta")}}元素。</p>
-
-   <p>当脚本被禁用并且它不是 {{HTMLElement("head")}} 元素的子元素时：任何 transparent content 都可以，但是在它的后代中必须没有 <code>&lt;noscript&gt;</code>元素。</p>
-
-   <p>否则：flow content 或 phrasing content。</p>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">标签省略</th>
-   <td>
-    <p>不允许，开始标签和结束标签都不能省略。</p>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">允许的父元素</th>
-   <td>
-    <p>如果没有根元素 <code>&lt;noscript&gt;</code>，或者在{{HTMLElement("head")}}元素中（仅用于 HTML 文档）也没有根元素 <code>&lt;noscript&gt;</code>，允许任何 <a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">phrasing content</a> 元素。</p>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row">DOM 接口</th>
-   <td>{{domxref("HTMLElement")}}</td>
-  </tr>
- </tbody>
-</table>
+**`<noscript>`** [HTML](/zh-CN/docs/Web/HTML) 元素定义了在页面上的脚本类型不支持或浏览器当前关闭脚本时插入的 HTML 部分。
 
 ## 属性
 
-该元素只包含 [全局属性](/zh-CN/docs/HTML/Global_attributes).
+这个元素只包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
 ## 示例
 
 ```html
 <noscript>
-  <!-- anchor linking to external file -->
-  <a href="http://www.mozilla.com/">External Link</a>
+  <!-- 外部文件的锚链接 -->
+  <a href="https://www.mozilla.org/">外部链接</a>
 </noscript>
-<p>Rocks!</p>
+<p>摇滚！</p>
 ```
 
-### 允许脚本时的结果
+### 启用脚本后的结果
 
-Rocks!
+摇滚！
 
-### 禁用脚本时的结果
+### 禁用脚本后的结果
 
-[External Link](http://www.mozilla.com/)
+[外部链接](https://www.mozilla.org/)
 
-Rocks!
+摇滚！
+
+## 技术概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/zh-CN/docs/Web/HTML/Content_categories"
+          >内容分类</a
+        >
+      </th>
+      <td>
+        <a href="/zh-CN/docs/Web/HTML/Content_categories#元数据内容"
+          >元数据内容</a
+        >、<a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
+          >流式内容</a
+        >、<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+          >短语内容</a
+        >。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允许的内容</th>
+      <td>
+        当脚本被禁用并且是 {{HTMLElement("head")}} 元素的后代时：按任意顺序，零个或多个 {{HTMLElement("link")}} 元素、零个或多个 {{HTMLElement("style")}} 元素，以及零个或多个 {{HTMLElement("meta")}} 元素。<br />当脚本被禁用且不是 {{HTMLElement("head")}} 元素的后代时：任何<a href="/zh-CN/docs/Web/HTML/Content_categories#透明内容模型">透明内容</a>，但其后代中不得包含 <code>&#x3C;noscript></code> 元素。<br />否则：流内容或短语内容。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">标签省略</th>
+      <td>不允许，开始标签和结束标签都不能省略。</td>
+    </tr>
+    <tr>
+      <th scope="row">允许的父元素</th>
+      <td>
+        任何接受<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容"
+          >短语内容</a
+        >的元素。如果没有祖先 <code>&#x3C;noscript></code> 元素，或者在 {{HTMLElement("head")}} 元素中（但仅限于 HTML 文档），同样如果没有任何祖先 <code>&#x3C;noscript></code> 元素。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">隐含的 ARIA 角色</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >没有对应的角色</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允许的 ARIA 角色</th>
+      <td>没有允许的 <code>role</code></td>
+    </tr>
+    <tr>
+      <th scope="row">DOM 接口</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 规范
 

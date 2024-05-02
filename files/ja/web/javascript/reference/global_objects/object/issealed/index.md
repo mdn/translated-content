@@ -1,6 +1,8 @@
 ---
 title: Object.isSealed()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isSealed
+l10n:
+  sourceCommit: 2ae5490e54b413897242860dfe2328e825773bda
 ---
 
 {{JSRef}}
@@ -11,7 +13,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/isSealed
 
 ## 構文
 
-```
+```js-nolint
 Object.isSealed(obj)
 ```
 
@@ -22,11 +24,11 @@ Object.isSealed(obj)
 
 ### 返値
 
-与えられたオブジェクトが封印されているかどうかを示す {{jsxref("Boolean")}}。
+論理値で、与えられたオブジェクトが封印されているかどうかを示します。
 
 ## 解説
 
-オブジェクトが封印されている場合は `true` が、そうでない場合は `false` が返ります。オブジェクトが{{jsxref("Object.isExtensible", "拡張不可", "", 1)}}かつすべてのプロパティが設定変更不可であり、それゆえ削除できない場合 (ただし書き込み不可である必要はありません) 場合に、封印されているとなります。
+オブジェクトが封印されている場合は `true` が、そうでない場合は `false` が返ります。オブジェクトが{{jsxref("Object/isExtensible", "拡張不可", "", 1)}}かつすべてのプロパティが設定変更不可であり、それゆえ削除できない場合に（ただし書き込み不可である必要はありません）、封印されているとなります。
 
 ## 例
 
@@ -34,52 +36,52 @@ Object.isSealed(obj)
 
 ```js
 // 既定でオブジェクトは封印されていません
-var empty = {};
-Object.isSealed(empty); // === false
+const empty = {};
+Object.isSealed(empty); // false
 
 // 空のオブジェクトを拡張不可にすると、
 // そのまま封印状態になります
 Object.preventExtensions(empty);
-Object.isSealed(empty); // === true
+Object.isSealed(empty); // true
 
 // 空でないオブジェクトでは、そのプロパティをすべて設定変更不可にしない限り
 // 上記と同じにはなりません
-var hasProp = { fee: "fie foe fum" };
+const hasProp = { fee: "fie foe fum" };
 Object.preventExtensions(hasProp);
-Object.isSealed(hasProp); // === false
+Object.isSealed(hasProp); // false
 
 // そこですべてのプロパティを設定変更不可にすると、
 // オブジェクトは封印状態になります
 Object.defineProperty(hasProp, "fee", {
   configurable: false,
 });
-Object.isSealed(hasProp); // === true
+Object.isSealed(hasProp); // true
 
 // オブジェクトを封印する最も簡単な方法は、
 // もちろん Object.seal です
-var sealed = {};
+const sealed = {};
 Object.seal(sealed);
-Object.isSealed(sealed); // === true
+Object.isSealed(sealed); // true
 
 // 封印されたオブジェクトはその定義により、拡張できません
-Object.isExtensible(sealed); // === false
+Object.isExtensible(sealed); // false
 
 // 封印されたオブジェクトは凍結されているかも
 // しれませんが、必ずしもそうではありません
-Object.isFrozen(sealed); // === true
+Object.isFrozen(sealed); // true
 // すべてのプロパティが書き込み不能でもあります
 
-var s2 = Object.seal({ p: 3 });
-Object.isFrozen(s2); // === false
-// "p" は依然書き込み可能です
+const s2 = Object.seal({ p: 3 });
+Object.isFrozen(s2); // false
+// "p" はまだ書き込み可能です
 
-var s3 = Object.seal({
+const s3 = Object.seal({
   get p() {
     return 0;
   },
 });
-Object.isFrozen(s3); // === true
-// アクセサプロパティでは設定変更が可能かという事柄だけになります
+Object.isFrozen(s3); // true
+// アクセサープロパティでは設定変更が可能かという事柄だけになります
 ```
 
 ### オブジェクト以外の型強制
@@ -88,10 +90,10 @@ ES5 では、このメソッドの引数がオブジェクトではない場合 
 
 ```js
 Object.isSealed(1);
-// TypeError: 1 is not an object (ES5 code)
+// TypeError: 1 はオブジェクトではない (ES5 のコード)
 
 Object.isSealed(1);
-// true                          (ES2015 code)
+// true                          (ES2015 のコード)
 ```
 
 ## 仕様書

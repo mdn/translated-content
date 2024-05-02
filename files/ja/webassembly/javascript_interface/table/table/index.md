@@ -35,7 +35,7 @@ new WebAssembly.Table(tableDescriptor);
 
 ### 新しい WebAssembly Table インスタンスの生成
 
-次の例では (table2.html の[ソースコード](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.html)と[実行例](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html)はこちら) 新しく WebAssembly テーブルのインスタンスを、初期の大きさを 2 要素して生成します。それからテーブルの長さと 2 つの要素の中身を ({{jsxref("WebAssembly/Table/get", "Table.prototype.get()")}} で取得して) 表示し、長さは 2 で 2 つの要素は共に {{jsxref("null")}} となります。
+次の例では (table2.html の[ソースコード](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.html)と[実行例](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html)はこちら) 新しく WebAssembly テーブルのインスタンスを、初期の大きさを 2 要素して生成します。それからテーブルの長さと 2 つの要素の中身を ({{jsxref("WebAssembly/Table/get", "Table.prototype.get()")}} で取得して) 表示し、長さは 2 で 2 つの要素は共に [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) となります。
 
 ```js
 var tbl = new WebAssembly.Table({ initial: 2, element: "anyfunc" });

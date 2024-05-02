@@ -1,6 +1,8 @@
 ---
 title: MDN Web 文档的本地化
 slug: MDN/Community/Contributing/Translated_content
+l10n:
+  sourceCommit: 7eed0e1e4ab478d78dc7ca23c19ae77406776e4e
 ---
 
 {{MDNSidebar}}
@@ -24,7 +26,7 @@ slug: MDN/Community/Contributing/Translated_content
 
 ### 汉语（zh-CN、zh-TW）
 
-- 讨论组：[Telegram（`Mozilla China`）](https://t.me/mozilla_china)、[Telegram（`MozTW L10n`）](https://moztw.org/community/telegram/)
+- 讨论组：[Discord (`#zh-cn`)](/discord)、[Discord (`#zh-tw`)](/discord)、[Telegram（`MozTW L10n`）](https://moztw.org/community/telegram/)
 - 目前的志愿者：[Irvin](https://github.com/irvin)、[t7yang](https://github.com/t7yang)、[yin1999](https://github.com/yin1999)、[jasonren0403](https://github.com/jasonren0403)、[JasonLamv-t](https://github.com/JasonLamv-t)
 
 ### 法语（fr）
