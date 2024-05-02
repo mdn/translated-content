@@ -21,7 +21,7 @@ cookieStore.onchange = (event) => { }
 
 ## 事件类型
 
-{{domxref("CookieChangeEvent")}} 继承自 {{domxref("Event")}}。
+一个 {{domxref("CookieChangeEvent")}}。继承自 {{domxref("Event")}}。
 
 {{InheritanceDiagram("CookieChangeEvent")}}
 
