@@ -53,20 +53,20 @@ border-width: unset;
 
 - 当指定**一个**值时，该宽度将应用于**四个角**。
 - 当指定**两个**值时，第一个宽度应用于**顶部和底部**，第二个宽度应用于**左侧和右侧**。
-- 当指定**三个**值时，the first width applies to the **top**, the second to the **left and right**, the third to the **bottom**.
-- 当指定**四个**值时，the widths apply to the **top**, **right**, **bottom**, and **left** in that order (clockwise).
+- 当指定**三个**值时，第一个宽度应用于**顶部**, 第二个宽度应用于**左侧和右侧**, 第三个宽度应用于**底部**.
+- 当指定**四个**值时，这些宽度按照**顶部**、**右侧**、**底部**和**左侧** 的顺序（顺时针）进行应用。
 
 ### 值
 
 - `<line-width>`
 
-  - : Defines the width of the border, either as an explicit nonnegative {{cssxref("&lt;length&gt;")}} or a keyword. If it's a keyword, it must be one of the following values:
+  - : 定义边框的宽度，可以是明确的非负数 {{cssxref("&lt;length&gt;")}} 或关键字。如果是关键字，则必须是以下值之一：
 
     - `thin`
     - `medium`
     - `thick`
 
-> **备注：** Because the specification doesn't define the exact thickness denoted by each keyword, the precise result when using one of them is implementation-specific. Nevertheless, they always follow the pattern `thin ≤ medium ≤ thick`, and the values are constant within a single document.
+> **备注：** 由于规范中没有明确定义每个关键字所表示的确切厚度，因此使用其中一个关键字的确切结果取决于具体实现。尽管如此，它们始终遵循 `thin ≤ medium ≤ thick` 这一模式，并且这些值在同一文档中是恒定的。
 
 ## 形式定义
 
@@ -78,22 +78,20 @@ border-width: unset;
 
 ## 示例
 
-### A mix of values and lengths
+### 值与 length 的组合
 
 #### HTML
 
 ```html
-<p id="one-value">one value: 6px wide border on all 4 sides</p>
+<p id="one-value">一个值：四边均有 6px 的边框宽度。</p>
 <p id="two-values">
-  two different values: 2px wide top and bottom border, 10px wide right and left
-  border
+  两个不同的值：顶部和底部边框宽 2px，右侧和左侧边框宽 10px。
 </p>
 <p id="three-values">
-  three different values: 0.3em top, 9px bottom, and zero width right and left
+  三个不同的值：顶部为 0.3em，底部为 9px，右侧和左侧的宽度为零。
 </p>
 <p id="four-values">
-  four different values: "thin" top, "medium" right, "thick" bottom, and 1em
-  left
+  四个不同的值：顶部为“thin”，右侧为“medium”，底部为“thick”，左侧为 1em。
 </p>
 ```
 
@@ -125,7 +123,7 @@ p {
 
 #### 结果
 
-{{ EmbedLiveSample('A_mix_of_values_and_lengths', 320, 320) }}
+{{ EmbedLiveSample('值与 length 的组合', 320, 320) }}
 
 ## 规范
 
@@ -137,5 +135,5 @@ p {
 
 ## 参见
 
-- The border-related shorthand properties: {{Cssxref("border")}}, {{Cssxref("border-style")}}, {{Cssxref("border-color")}}
-- The border-width-related properties: {{Cssxref("border-bottom-width")}}, {{Cssxref("border-left-width")}}, {{Cssxref("border-right-width")}}, {{Cssxref("border-top-width")}}
+- 与边框相关的简写属性：{{Cssxref("border")}}、{{Cssxref("border-style")}}、{{Cssxref("border-color")}}
+- 与边框宽度相关的属性：{{Cssxref("border-bottom-width")}}、{{Cssxref("border-left-width")}}、{{Cssxref("border-right-width")}}、{{Cssxref("border-top-width")}}
