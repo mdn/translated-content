@@ -78,7 +78,7 @@ border-width: unset;
 
 ## 示例
 
-### 值与 length 的组合
+### 值与 length 的混合
 
 #### HTML
 
