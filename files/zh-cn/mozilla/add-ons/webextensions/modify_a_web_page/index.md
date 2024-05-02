@@ -83,7 +83,7 @@ document.body.appendChild(header);
 
 这里我们要移除"`content_scripts`"键值，并添加两个键：
 
-- [`permissions`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) :要向页面中注入脚本，就需要拥有修改页面对应的权限。[`activeTab`](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission) 可以临时获得修改当前活动标签所加载的页面的权限。另外还通过 contextmenus 来获取添加右键菜单项的权限。
+- [`permissions`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)：要向页面中注入脚本，就需要拥有修改页面对应的权限。[`activeTab`](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission) 可以临时获得修改当前活动标签所加载的页面的权限。另外还通过 contextmenus 来获取添加右键菜单项的权限。
 - [`background`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background): 加载名为 "background.js" 的 ["background script"](/zh-CN/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts) （长期有效的后台脚本），在该脚本中，我们将设置注入右键菜单的内容脚本。
 
 在 "modify-page" 文件夹下创建名为 "background.js"的新文件，内容如下：
