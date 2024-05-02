@@ -20,4 +20,4 @@ Blink 是一个开源的浏览器布局引擎，由谷歌作为 Chromium 项目�
   - {{glossary("Gecko")}}
   - {{glossary("Trident")}}
   - {{glossary("WebKit")}}
-  - {{glossary("Rendering engine")}}
+  - {{glossary("Rendering engine", "渲染引擎")}}
