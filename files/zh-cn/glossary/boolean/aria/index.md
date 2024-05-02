@@ -1,15 +1,16 @@
 ---
 title: Boolean attribute (ARIA)
 slug: Glossary/Boolean/ARIA
-page-type: glossary-definition
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
 {{GlossarySidebar}}
 
-A **boolean attribute** in ARIA is an {{Glossary("Enumerated", "enumerated attribute")}} that includes `true` or `false` in the enumerated list.
+在 ARIA 中，**布尔属性**是一个{{Glossary("枚举", "枚举属性")}}包括 `true` 或 `false`。
 
-In ARIA, booleans only come in the form of strings `"true"` and `"false"`.
+在 ARIA 中，布尔值只以字符串形式 `"true"` 和 `"false"` 出现。
 
-## See also
+## 参见
 
-- [Enumerated](/en-US/docs/Glossary/Enumerated) that contains more behavioral details and examples of ARIA boolean attributes
+- {{Glossary("枚举", "枚举属性")}}包含更多有关 ARIA 布尔属性的行为细节和示例。
