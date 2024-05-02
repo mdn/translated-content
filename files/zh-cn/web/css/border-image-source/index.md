@@ -71,4 +71,4 @@ border-image-source: unset;
 - {{cssxref("box-shadow")}}
 - {{cssxref("background-image")}}
 - {{cssxref("url", "url()")}} 函数
-- MDN 博客：[CSS 中的边框图像：Interop 2023 的重点关注领域](/en-US/blog/border-images-interop-2023/)（2023）
+- MDN 博客：[CSS 中的边框图像：Interop 2023 的重点关注领域](zh-CN/blog/border-images-interop-2023/)（2023）
