@@ -10,7 +10,3 @@ l10n:
 根据语境的不同，**基线**（baseline）一词有多种含义。它可以指：
 
 {{GlossaryDisambiguation}}
-
-## 参见
-
-- 维基百科上的[基线](https://zh.wikipedia.org/wiki/基线)
