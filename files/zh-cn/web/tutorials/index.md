@@ -47,7 +47,7 @@ slug: Web/Tutorials
   - : Codecademy 是学习如何编写 JavaScript 最容易的方式。它互动、有趣，你能够和你的朋友们一起来学习。
 - [开始使用 JavaScript](/zh-CN/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
   - : JavaScript 是什么以及它如何帮助你？
-- [JavaScript 最佳实践](http://dev.opera.com/articles/view/javascript-best-practices/) _（来自 WebPlatform.org 网站）_
+- [JavaScript 最佳实践](https://dev.opera.com/articles/view/javascript-best-practices/) _（来自 WebPlatform.org 网站）_
   - : 学习一些明显或者不是很明显的编写 JavaScript 最佳实践。
 - [CodeAvengers](http://codeavengers.com/)_（来自 CodeAvengers.com 网站）_
   - : Code Avengers（代码复仇者联盟）是一个有趣且高效的学习使用 HTML, CSS, and JavaScript 编写网络 apps 和游戏代码的好地方。

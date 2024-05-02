@@ -103,7 +103,7 @@ mozilla.org 上托管了两个 JavaScript 实现。**首个** JavaScript 由网�
 
 - Google 的 [V8](http://code.google.com/p/v8/)，在 Google Chrome 浏览器和较新的 Opera 浏览器中使用。这同时也是[Node.js](https://nodejs.org/en/)使用的引擎。
 - [JavaScriptCore](http://www.webkit.org/projects/javascript/index.html) (SquirrelFish/Nitro)，被用在了一些 WebKit 浏览器如 Apple Safari。
-- [Carakan](http://my.opera.com/ODIN/blog/carakan-faq)，用在旧版本 Opera 中。
+- [Carakan](https://my.opera.com/ODIN/blog/carakan-faq)，用在旧版本 Opera 中。
 - [Chakra](http://en.wikipedia.org/wiki/Chakra_%28JScript_engine%29) 引擎，用在 Internet Explorer 中（尽管它实现的语言被正式地称作为“JScript”来避免商标问题）。
 
 每个 mozilla.org 的 JavaScript 引擎都提供了 公用 API 使程序开发者能将其 JavaScript 嵌入自己的软件中。目前最常见的 JavaScript 宿主环境是网页浏览器。浏览器一般通过 API 创建“宿主对象”来负责将[DOM](https://www.w3.org/DOM/) 反射到 JavaScript 中。

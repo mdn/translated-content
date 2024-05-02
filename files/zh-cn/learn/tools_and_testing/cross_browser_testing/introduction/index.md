@@ -135,7 +135,7 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 - [Edge Insider Preview](https://insider.windows.com/)
 - [Safari Technology Preview](https://developer.apple.com/safari/technology-preview/)
 - [Chrome Canary](https://www.google.com/chrome/browser/canary.html)
-- [Opera Developer](http://www.opera.com/computer/beta)
+- [Opera Developer](https://www.opera.com/computer/beta)
 
 假如你使用了很新的技术并想测试最新版本的实现，或者你在最新版的浏览器中遇到故障，你想检查浏览器开发者是否在新版本中修复了这个问题，这会是很普遍的做法。
 
