@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("HTMLIFrameElement")}} 接口的 **`name`** 属性是一个字符串值，反映 {{HTMLElement("iframe")}} 元素的 `name` 属性，表示 `<iframe>` 元素的特定名称。
+{{domxref("HTMLIFrameElement")}} 接口的 **`name`** 表示 {{HTMLElement("iframe")}} 元素的 `name` 属性的字符串值，`<iframe>` 元素为特定名称。
 
 ## 值
 

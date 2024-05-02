@@ -7,11 +7,11 @@ l10n:
 
 {{APIRef("Feature Policy API")}}{{SeeCompatTable}}
 
-{{DOMxRef("HTMLIFrameElement")}} 接口的 **`featurePolicy`** 只读属性返回 {{DOMxRef("FeaturePolicy")}} 接口，该接口提供了一个简单的 API 用于检查应用到特定框架的[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)。
+{{DOMxRef("HTMLIFrameElement")}} 接口的 **`featurePolicy`** 只读属性返回一个简单的 API 用于检查应用到特定 iframe 的[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy) 的 {{DOMxRef("FeaturePolicy")}} 接口。
 
 ## 值
 
-一个 [`FeaturePolicy`](/zh-CN/docs/Web/API/FeaturePolicy) 对象，可用于检查应用于框架的权限策略设置。
+[`FeaturePolicy`](/zh-CN/docs/Web/API/FeaturePolicy) 对象，可用于检查应用于 iframe 的权限策略设置。
 
 ## 规范
 

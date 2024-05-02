@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
-{{domxref("HTMLIFrameElement")}} 接口的 **`credentialless`** 属性指示 {{htmlelement("iframe")}} 是否无凭据，这意味着其中的文档将使用新的临时上下文加载。
+{{domxref("HTMLIFrameElement")}} 接口的 **`credentialless`** 属性表示 {{htmlelement("iframe")}} 是否无凭据，这意味着其中的文档将使用新的临时上下文加载。
 
 这些上下文无法访问与其源关联的网络、cookie 和存储数据。相反，它们使用与顶层文档生命周期相关的新的上下文。这意味着用户导航离开页面或重新加载页面后，任何存储的数据都将不可访问。
 

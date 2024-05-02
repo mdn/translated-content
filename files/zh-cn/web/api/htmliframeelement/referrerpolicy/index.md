@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef}}
 
-**`HTMLIFrameElement.referrerPolicy`** 属性反映了 {{HTMLElement("iframe")}} 元素定义在获取资源时发送哪个引用者时的 HTML [`referrerpolicy`](/zh-CN/docs/Web/HTML/Element/iframe#referrerpolicy) 属性定义在获取资源时发送哪个引用者时的 HTML
+**`HTMLIFrameElement.referrerPolicy`** 属性表示 {{HTMLElement("iframe")}} 元素定义在获取资源时发送哪个引用者时的 HTML [`referrerpolicy`](/zh-CN/docs/Web/HTML/Element/iframe#referrerpolicy) 属性定义在获取资源时发送哪个引用者时的 HTML。
 
 ## 值
 
