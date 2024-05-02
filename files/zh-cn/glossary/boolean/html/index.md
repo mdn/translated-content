@@ -1,7 +1,6 @@
 ---
 title: 布尔属性（HTML）
 slug: Glossary/Boolean/HTML
-spec-urls: https://html.spec.whatwg.org/#boolean-attributes
 l10n:
   sourceCommit: fb6bd88d0b3d226a008341198863e1d480f0e49a
 ---
