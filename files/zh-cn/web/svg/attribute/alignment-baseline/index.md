@@ -15,7 +15,7 @@ slug: Web/SVG/Attribute/alignment-baseline
 | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 值       | **auto** \| baseline \| before-edge \| text-before-edge \| middle \| central \| after-edge \| text-after-edge \| ideographic \| alphabetic \| hanging \| mathematical \| inherit |
 | 可变性   | Yes                                                                                                                                                                              |
-| 规范文档 | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG11/text.html#AlignmentBaselineProperty)                                                                                          |
+| 规范文档 | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG11/text.html#AlignmentBaselineProperty)                                                                                         |
 
 ## 示例
 
