@@ -32,7 +32,7 @@ slug: Web/CSS/display-internal
 - `ruby-text` {{Experimental_Inline}}
   - : 这些元素的行为类似于[`<rt>`](/zh-CN/docs/Web/HTML/Element/rt)HTML 元素。
 - `ruby-base-container` {{Experimental_Inline}}
-  - : 这些元素的行为类似于[`<rbc>`](/zh-CN/docs/Web/HTML/Element/rbc)匿名框生成的 HTML 元素。
+  - : 这些元素的行为类似于[`<rbc>`](/zh-CN/docs/Web/HTML/Element/rbc) 匿名框生成的 HTML 元素。
 - `ruby-text-container` {{Experimental_Inline}}
   - : 这些元素的行为类似于[`<rtc>`](/zh-CN/docs/Web/HTML/Element/rtc)HTML 元素。
 

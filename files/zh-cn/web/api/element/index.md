@@ -97,7 +97,7 @@ _`Element` 接口包括以下在 `ARIAMixin` 混入中定义的属性。_
 - {{domxref("Element.ariaBusy")}}
   - : 反映 [`aria-busy`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-busy) 属性的字符串，表示元素是否正在被修改，因为辅助技术可能希望等到修改完成后再向用户展示。
 - {{domxref("Element.ariaChecked")}}
-  - : 反映 [`aria-checked`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-checked)属性的字符串，表示复选框、单选按钮和其他具有选中状态的部件的当前“选中”状态。
+  - : 反映 [`aria-checked`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-checked) 属性的字符串，表示复选框、单选按钮和其他具有选中状态的部件的当前“选中”状态。
 - {{domxref("Element.ariaColCount")}}
   - : 反映 [`aria-colcount`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-colcount) 属性的字符串，该属性定义了表格、网格或树状网格中的列数。
 - {{domxref("Element.ariaColIndex")}}

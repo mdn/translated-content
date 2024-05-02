@@ -327,7 +327,7 @@ $: completedTodos = todos.filter((todo) => todo.completed).length;
    <form on:submit|preventDefault={addTodo}>
    ```
 
-   [`on:事件名称`](https://svelte.dev/docs#on_element_event)指令支持使用 `|` 字符向 DOM 事件添加修饰词（modifier）。在这种情况下，`preventDefault` 修饰词告诉 Svelte 在运行处理器之前生成调用 `event.preventDefault()` 的代码。浏览前一个链接以查看其他可用的修饰词有哪些。
+   [`on:事件名称`](https://svelte.dev/docs#on_element_event) 指令支持使用 `|` 字符向 DOM 事件添加修饰词（modifier）。在这种情况下，`preventDefault` 修饰词告诉 Svelte 在运行处理器之前生成调用 `event.preventDefault()` 的代码。浏览前一个链接以查看其他可用的修饰词有哪些。
 
 7. 假设你现在尝试添加新的待办事项，新的待办事项将被添加到待办事项数组中，但我们的用户界面不会更新。在 Svelte 中，[响应性是由指定操作来触发的](https://svelte.dev/docs#2_Assignments_are_reactive)。这意味着尽管 `addTodo()` 函数被执行，元素被新增到 `todos` 数组中，但 Svelte 不会检测到 push 方法修改了数组，所以它也不会刷新任务 `<ul>`。
 

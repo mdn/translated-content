@@ -77,7 +77,7 @@ browser.webRequest.onBeforeRequest.addListener(logURL, {
 }
 ```
 
-这里唯一的变化是[`权限`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)里新增了 `webRequestBlocking` 项。新增这个权限是为了随时都能修改请求。
+这里唯一的变化是[`权限`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) 里新增了 `webRequestBlocking` 项。新增这个权限是为了随时都能修改请求。
 
 下一步替换 `"background.js"` 文件内容如下：
 

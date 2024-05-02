@@ -54,7 +54,7 @@ File item(index);
 
 ###### 返回值
 
-所请求的[`File`](/zh-CN/docs/Web/API/File)对象。
+所请求的[`File`](/zh-CN/docs/Web/API/File) 对象。
 
 ## 示例
 

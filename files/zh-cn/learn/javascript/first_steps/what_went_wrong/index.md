@@ -73,7 +73,7 @@ slug: Learn/JavaScript/First_steps/What_went_wrong
 2. 现在，如果尝试输入一个数字并按确定按钮，你会看到...另一个错误！ ![](屏幕快照_2018-10-17_21.56.00.png)
 3. 此次出错信息为“TypeError：lowOrHi is null”（“类型错误：lowOrHi 为 null”），在第 78 行。
 
-   > **备注：** [`Null`](/zh-CN/docs/Glossary/Null)是一个特殊值，意思是“什么也没有”，或者“没有值”。这表示 `lowOrHi` 已声明并初始化，但没有任何有意义的值，可以说：它没有类型没有值。
+   > **备注：** [`Null`](/zh-CN/docs/Glossary/Null) 是一个特殊值，意思是“什么也没有”，或者“没有值”。这表示 `lowOrHi` 已声明并初始化，但没有任何有意义的值，可以说：它没有类型没有值。
 
    > **备注：** 这条错误没有在页面加载时立即发生，是因为它发生在函数内部（`checkGuess() { ... }`块中）。函数内部的代码运行于一个外部代码相互独立的域内，后面函数的文章中将更详细地讲解。此时此刻，只有当代码运行至 86 行并调用 `checkGuess()` 函数时，代码才会抛出出错信息。
 
@@ -143,7 +143,7 @@ slug: Learn/JavaScript/First_steps/What_went_wrong
 
 ### 修正逻辑错误
 
-为了解决这个问题，让我们来思考这行代码如何工作。首先，我们调用 [`Math.random()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/random),它生成一个在 0 和 1 之间的十进制随机数，例如 0.5675493843。
+为了解决这个问题，让我们来思考这行代码如何工作。首先，我们调用 [`Math.random()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/random) ,它生成一个在 0 和 1 之间的十进制随机数，例如 0.5675493843。
 
 ```js
 Math.random();

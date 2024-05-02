@@ -39,9 +39,9 @@ _这个接口也继承了{{domxref("UIEvent")}} 和 {{domxref("Event")}}原型�
 - {{domxref("MouseEvent.metaKey")}} {{readonlyinline}}
   - : 当鼠标事件触发时，如果 <kbd>meta</kbd> 键被按下，则返回 true；
 - {{domxref("MouseEvent.movementX")}} {{readonlyinline}}
-  - : 鼠标指针相对于最后[`mousemove`](/zh-CN/docs/Web/API/Element/mousemove_event)事件位置的 X 坐标。
+  - : 鼠标指针相对于最后[`mousemove`](/zh-CN/docs/Web/API/Element/mousemove_event) 事件位置的 X 坐标。
 - {{domxref("MouseEvent.movementY")}} {{readonlyinline}}
-  - : 鼠标指针相对于最后[`mousemove`](/zh-CN/docs/Web/API/Element/mousemove_event)事件位置的 Y 坐标。
+  - : 鼠标指针相对于最后[`mousemove`](/zh-CN/docs/Web/API/Element/mousemove_event) 事件位置的 Y 坐标。
 - {{domxref("MouseEvent.offsetX")}} {{readonlyinline}}{{experimental_inline}}
   - : 鼠标指针相对于目标节点内边位置的 X 坐标
 - {{domxref("MouseEvent.offsetY")}} {{readonlyinline}}{{experimental_inline}}

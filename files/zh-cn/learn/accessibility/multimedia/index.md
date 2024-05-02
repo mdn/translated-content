@@ -30,7 +30,7 @@ slug: Learn/Accessibility/Multimedia
 
 到目前为止，在这个模块中，我们已经查看了各种内容以及需要做些什么来确保其无障碍，从简单的文本内容到数据表，图像，本机控件（如表单元素和按钮）以及更复杂的标记结构（具有[WAI-ARIA](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics)属性）。
 
-另一方面，这篇文章着眼于另一个一般的内容类别，可以说它不容易确保对多媒体的无障碍。图像，视频，[`<canvas>`](/zh-CN/docs/Web/HTML/Element/canvas)元素，Flash 电影等不易被屏幕阅读器理解或被键盘导航，我们需要帮助他们。
+另一方面，这篇文章着眼于另一个一般的内容类别，可以说它不容易确保对多媒体的无障碍。图像，视频，[`<canvas>`](/zh-CN/docs/Web/HTML/Element/canvas) 元素，Flash 电影等不易被屏幕阅读器理解或被键盘导航，我们需要帮助他们。
 
 但不要绝望 - 在这里我们将帮助你浏览可用于使多媒体更容易访问的技术。
 

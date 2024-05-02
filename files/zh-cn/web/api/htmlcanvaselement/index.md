@@ -44,7 +44,7 @@ _从其父项{{domxref("HTMLElement")}}继承方法。_
 
 ## 事件
 
-使用[`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener)监听这些事件。
+使用[`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener) 监听这些事件。
 
 - [`webglcontextcreationerror`](/zh-CN/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event)
   - : 如果用户代理无法创建`WebGLRenderingContext` 或`WebGL2RenderingContext` 上下文，则触发该事件。

@@ -106,7 +106,7 @@ input:valid {
 
 ### required 属性
 
-最简单的 HTML5 校验功能是 [`required`](/zh-CN/docs/Web/HTML/Element/input#required)属性 — 如果要使输入成为必需的，则可以使用此属性标记元素。当设置此属性时，如果输入为空，该表单将不会提交（并将显示错误消息），输入也将被视为无效。
+最简单的 HTML5 校验功能是 [`required`](/zh-CN/docs/Web/HTML/Element/input#required) 属性 — 如果要使输入成为必需的，则可以使用此属性标记元素。当设置此属性时，如果输入为空，该表单将不会提交（并将显示错误消息），输入也将被视为无效。
 
 添加一个 `required` 属性到你的 input 元素，如下所示：
 

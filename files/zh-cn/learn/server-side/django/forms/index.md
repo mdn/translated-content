@@ -554,7 +554,7 @@ class AuthorDelete(DeleteView):
 
 对于“创建”和“更新”的情况，你还需要指定要在表单中显示的字段（使用与`ModelForm`相同的语法）。在这种情况下，我们将说明两者的语法，如何显示“所有”字段，以及如何单独列出它们。你还可以使用 field_name / value 对的字典，为每个字段指定初始值（此处我们为了演示目的，而任意设置死亡日期 - 你可能希望删除它！）。默认情况下，这些视图会在成功时，重定向到显示新创建/编辑的模型项的页面，在我们的示例中，这将是我们在上一个教程中，创建的作者详细信息视图。你可以通过显式声明参数`success_url` ，指定备用重定向位置（与`AuthorDelete` 类一样）。
 
-`AuthorDelete` 类不需要显示任何字段，因此不需要指定这些字段。但是你需要指定`success_url`，因为 Django 没有明显的默认值。在这种情况下，我们使用[`reverse_lazy()`](https://docs.djangoproject.com/en/2.0/ref/urlresolvers/#reverse-lazy)函数，在删除作者后，重定向到我们的作者列表 - `reverse_lazy()`是一个延迟执行的`reverse()`版本，在这里使用，是因为我们提供了一个基于类的 URL 查看属性。
+`AuthorDelete` 类不需要显示任何字段，因此不需要指定这些字段。但是你需要指定`success_url`，因为 Django 没有明显的默认值。在这种情况下，我们使用[`reverse_lazy()`](https://docs.djangoproject.com/en/2.0/ref/urlresolvers/#reverse-lazy) 函数，在删除作者后，重定向到我们的作者列表 - `reverse_lazy()`是一个延迟执行的`reverse()`版本，在这里使用，是因为我们提供了一个基于类的 URL 查看属性。
 
 ### 模板
 

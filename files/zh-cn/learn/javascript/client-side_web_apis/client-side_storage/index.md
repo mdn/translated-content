@@ -53,7 +53,7 @@ slug: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 ![](cookies-notice.png)
 
 由于这些原因，我们不会在本文中教你如何使用 cookie。毕竟它过时、存在各种[安全问题](/zh-CN/docs/Web/HTTP/Cookies#安全)，而且无法存储复杂数据，而且有更好的、更现代的方法可以在用户的计算机上存储种类更广泛的数据。
-cookie 的唯一优势是它们得到了非常旧的浏览器的支持，所以如果你的项目需要支持已经过时的浏览器（比如 Internet Explorer 8 或更早的浏览器），cookie 可能仍然有用，但是对于大多数项目（很明显不包括本站）来说，你不需要再使用它们了。其实 cookie 也没什么好说的，[`document.cookie`](/zh-CN/docs/Web/API/Document/cookie)一把梭就完事了。
+cookie 的唯一优势是它们得到了非常旧的浏览器的支持，所以如果你的项目需要支持已经过时的浏览器（比如 Internet Explorer 8 或更早的浏览器），cookie 可能仍然有用，但是对于大多数项目（很明显不包括本站）来说，你不需要再使用它们了。其实 cookie 也没什么好说的，[`document.cookie`](/zh-CN/docs/Web/API/Document/cookie) 一把梭就完事了。
 
 > **备注：** 为什么仍然有新创建的站点使用 cookies？这主要是因为开发人员的习惯，使用了仍然使用 cookies 的旧库，以及存在许多 web 站点，提供了过时的参考和培训材料来学习如何存储数据。
 
@@ -320,9 +320,9 @@ web storage 的一个关键特性是，数据在不同页面加载时都存在�
       };
       ```
 
-      如果系统返回：请求失败，[`request.onerror`](/zh-CN/docs/Web/API/IDBRequest/onerror)将会运行。这将允许你对这个问题做出响应。在我们的简单示例中，只是将消息打印到 JavaScript 控制台。
+      如果系统返回：请求失败，[`request.onerror`](/zh-CN/docs/Web/API/IDBRequest/onerror) 将会运行。这将允许你对这个问题做出响应。在我们的简单示例中，只是将消息打印到 JavaScript 控制台。
 
-      如果系统返回：请求成功，表明成功打开数据库，[`request.onsuccess`](/zh-CN/docs/Web/API/IDBRequest/onsuccess)将会运行。如果是这种情况，则表示已打开数据库的对象在[`request.result`](/zh-CN/docs/Web/API/IDBRequest/result)属性中变为可用，从而允许我们操作数据库。我们将它存储在`db`我们之前创建的变量中供以后使用。我们还运行了一个名为 `displayData()` 的函数，它在 {{HTMLElement("ul")}} 内显示数据库中的数据。我们现在运行它，以便在页面加载时立即显示已经在数据库中的笔记。你将在后面看到 `displayData()` 的定义。
+      如果系统返回：请求成功，表明成功打开数据库，[`request.onsuccess`](/zh-CN/docs/Web/API/IDBRequest/onsuccess) 将会运行。如果是这种情况，则表示已打开数据库的对象在[`request.result`](/zh-CN/docs/Web/API/IDBRequest/result) 属性中变为可用，从而允许我们操作数据库。我们将它存储在`db`我们之前创建的变量中供以后使用。我们还运行了一个名为 `displayData()` 的函数，它在 {{HTMLElement("ul")}} 内显示数据库中的数据。我们现在运行它，以便在页面加载时立即显示已经在数据库中的笔记。你将在后面看到 `displayData()` 的定义。
 
 4. 最后，对于本节，我们可能会添加最重要的事件处理程序来设置数据库：[`request.onupgradeneeded`](/zh-CN/docs/Web/API/IDBOpenDBRequest/onupgradeneeded)。如果尚未设置数据库，或者使用比现有存储数据库更大的版本号打开数据库（执行升级时），则运行此处理程序。在上一个处理程序下面添加以下代码：
 
@@ -351,7 +351,7 @@ web storage 的一个关键特性是，数据在不同页面加载时都存在�
 
    然后[`IDBDatabase.createObjectStore()`](/zh-CN/docs/Web/API/IDBDatabase/createObjectStore)，我们使用在打开的数据库中创建一个新的对象库。这相当于传统数据库系统中的单个表。我们给它起了名称注释，并且还指定了一个`autoIncrement`名为的关键字段`id`- 在每个新记录中，这将自动赋予增量值 - 开发人员不需要明确地设置它。作为密钥，该`id`字段将用于唯一标识记录，例如删除或显示记录时。
 
-   我们还使用以下[`IDBObjectStore.createIndex()`](/zh-CN/docs/Web/API/IDBObjectStore/createIndex)方法创建另外两个索引（字段）:( `title`每个音符将包含一个标题），以及`body`（包含音符的正文）。
+   我们还使用以下[`IDBObjectStore.createIndex()`](/zh-CN/docs/Web/API/IDBObjectStore/createIndex) 方法创建另外两个索引（字段）:( `title`每个音符将包含一个标题），以及`body`（包含音符的正文）。
 
 因此，通过设置这个简单的数据库模式，当我们开始向数据库添加记录时，每个记录都会沿着这些行表示为一个对象：
 
@@ -490,11 +490,11 @@ function displayData() {
 再次，让我们打破这个：
 
 - 首先，我们清空 [`<ul>`](/zh-CN/docs/Web/HTML/Element/ul) 元素的内容，然后填充更新的内容。如果你不这样做，那么每次更新时都会添加大量重复内容。
-- 接下来，我们`notes`使用[`IDBDatabase.transaction()`](/zh-CN/docs/Web/API/IDBDatabase/transaction)和[`IDBTransaction.objectStore()`](/zh-CN/docs/Web/API/IDBTransaction/objectStore)我们一样得到对象存储的引用`addData()`，除了这里我们将它们链接在一行中。
-- 下一步是使用[`IDBObjectStore.openCursor()`](/zh-CN/docs/Web/API/IDBObjectStore/openCursor)方法打开对游标的请求 - 这是一个可用于迭代对象存储中的记录的构造。我们将一个`onsuccess`处理程序链接到该行的末尾以使代码更简洁 - 当成功返回游标时，运行处理程序。
-- 我们[`IDBCursor`](/zh-CN/docs/Web/API/IDBCursor)使用 let 获取对游标本身（对象）的引用`cursor = e.target.result`。
+- 接下来，我们`notes`使用[`IDBDatabase.transaction()`](/zh-CN/docs/Web/API/IDBDatabase/transaction)和[`IDBTransaction.objectStore()`](/zh-CN/docs/Web/API/IDBTransaction/objectStore) 我们一样得到对象存储的引用`addData()`，除了这里我们将它们链接在一行中。
+- 下一步是使用[`IDBObjectStore.openCursor()`](/zh-CN/docs/Web/API/IDBObjectStore/openCursor) 方法打开对游标的请求 - 这是一个可用于迭代对象存储中的记录的构造。我们将一个`onsuccess`处理程序链接到该行的末尾以使代码更简洁 - 当成功返回游标时，运行处理程序。
+- 我们[`IDBCursor`](/zh-CN/docs/Web/API/IDBCursor) 使用 let 获取对游标本身（对象）的引用`cursor = e.target.result`。
 - 接下来，我们检查光标是否包含来自数据存储区（`if(cursor){ ... }`）的记录 - 如果是这样，我们创建一个 DOM 片段，用记录中的数据填充它，然后将其插入页面（`<ul>`元素内部）。我们还包括一个删除按钮，当单击该按钮时，将通过运行该`deleteItem()`功能删除该注释，我们将在下一节中查看。
-- 在`if`块结束时，我们使用该[`IDBCursor.continue()`](/zh-CN/docs/Web/API/IDBCursor/continue)方法将光标前进到数据存储区中的下一条记录，然后`if`再次运行块的内容。如果有另一个要迭代的记录，这会导致它被插入到页面中，然后`continue()`再次运行，依此类推。
+- 在`if`块结束时，我们使用该[`IDBCursor.continue()`](/zh-CN/docs/Web/API/IDBCursor/continue) 方法将光标前进到数据存储区中的下一条记录，然后`if`再次运行块的内容。如果有另一个要迭代的记录，这会导致它被插入到页面中，然后`continue()`再次运行，依此类推。
 - 当没有更多记录要迭代时，`cursor`将返回`undefined`，因此`else`块将运行而不是`if`块。此块检查是否有任何注释被插入`<ul>`- 如果没有，它会插入一条消息，说没有存储注释。
 
 ### 删除一条笔记
@@ -532,7 +532,7 @@ function deleteItem(e) {
 ```
 
 - 第一部分可以使用一些解释 - 我们检索要删除`Number(e.target.parentNode.getAttribute('data-note-id'))`的记录的 ID - 回想一下记录的 ID 是在第一次显示时保存在`data-note-id`属性中的`<li>`。但是，我们需要通过全局内置的[Number（）](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number)对象传递属性，因为它当前是一个字符串，否则将无法被数据库识别。
-- 然后，我们使用我们之前看到的相同模式获取对对象存储的引用，并使用该[`IDBObjectStore.delete()`](/zh-CN/docs/Web/API/IDBObjectStore/delete)方法从数据库中删除记录，并将 ID 传递给它。
+- 然后，我们使用我们之前看到的相同模式获取对对象存储的引用，并使用该[`IDBObjectStore.delete()`](/zh-CN/docs/Web/API/IDBObjectStore/delete) 方法从数据库中删除记录，并将 ID 传递给它。
 - 当数据库事务完成后，我们`<li>`从 DOM 中删除注释，然后再次检查以查看它是否`<ul>`为空，并根据需要插入注释。
 
 就是这样了！你的例子现在应该有效。
@@ -590,7 +590,7 @@ function deleteItem(e) {
    }
    ```
 
-3. 以下片段是从内部`fetchVideoFromNetwork()`获取的 - 这里我们使用两个单独的[`fetch()`](/zh-CN/docs/Web/API/Fetch)请求获取视频的 MP4 和 WebM 版本。然后，我们使用该[`Body.blob()`](/zh-CN/docs/Web/API/Blob)方法将每个响应的主体提取为 blob，为我们提供可以在以后存储和显示的视频的对象表示。
+3. 以下片段是从内部`fetchVideoFromNetwork()`获取的 - 这里我们使用两个单独的[`fetch()`](/zh-CN/docs/Web/API/Fetch) 请求获取视频的 MP4 和 WebM 版本。然后，我们使用该[`Body.blob()`](/zh-CN/docs/Web/API/Blob) 方法将每个响应的主体提取为 blob，为我们提供可以在以后存储和显示的视频的对象表示。
 
    我们在这里遇到了一个问题 - 这两个请求都是异步的，但我们只想在两个 promises 都满足时尝试显示或存储视频。幸运的是，有一种处理这种问题的内置方法 - [`Promise.all()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/all)。这需要一个参数 - 引用你要检查放置在数组中的履行的所有单个承诺 - 并且本身是基于承诺的。
 
@@ -634,7 +634,7 @@ function deleteItem(e) {
    };
    ```
 
-5. 最后但并非最不重要的是，我们`displayVideo()`创建了在 UI 中插入视频然后将它们附加到页面所需的 DOM 元素。最有趣的部分如下所示 - 要在`<video>`元素中实际显示我们的视频 blob，我们需要使用该[`URL.createObjectURL()`](/zh-CN/docs/Web/API/URL/createObjectURL)方法创建对象 URL（指向存储在内存中的视频 blob 的内部 URL）。完成后，我们可以将对象 URL 设置为 [`<source>`](/zh-CN/docs/Web/HTML/Element/source) 元素`src`属性的值，并且它可以正常工作。
+5. 最后但并非最不重要的是，我们`displayVideo()`创建了在 UI 中插入视频然后将它们附加到页面所需的 DOM 元素。最有趣的部分如下所示 - 要在`<video>`元素中实际显示我们的视频 blob，我们需要使用该[`URL.createObjectURL()`](/zh-CN/docs/Web/API/URL/createObjectURL) 方法创建对象 URL（指向存储在内存中的视频 blob 的内部 URL）。完成后，我们可以将对象 URL 设置为 [`<source>`](/zh-CN/docs/Web/HTML/Element/source) 元素`src`属性的值，并且它可以正常工作。
 
    ```js
    function displayVideo(mp4Blob, webmBlob, title) {
@@ -681,7 +681,7 @@ Cache API 是另一种客户端存储机制，略有不同 - 它旨在保存 HTT
 
 #### 注册服务工作者
 
-首先要注意的是，在主 JavaScript 文件中放置了一些额外的代码（请参阅[index.js](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.js)）。首先，我们进行特征检测测试，以查看`serviceWorker`该[`Navigator`](/zh-CN/docs/Web/API/Navigator)对象中是否有该成员。如果返回 true，那么我们知道至少支持服务工作者的基础知识。在这里，我们使用该[`ServiceWorkerContainer.register()`](/zh-CN/docs/Web/API/ServiceWorkerContainer/register)方法将`sw.js`文件中包含的服务工作者注册到它所驻留的源，因此它可以控制与它或子目录相同的目录中的页面。当其承诺履行时，服务人员被视为已注册。
+首先要注意的是，在主 JavaScript 文件中放置了一些额外的代码（请参阅[index.js](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.js)）。首先，我们进行特征检测测试，以查看`serviceWorker`该[`Navigator`](/zh-CN/docs/Web/API/Navigator) 对象中是否有该成员。如果返回 true，那么我们知道至少支持服务工作者的基础知识。在这里，我们使用该[`ServiceWorkerContainer.register()`](/zh-CN/docs/Web/API/ServiceWorkerContainer/register) 方法将`sw.js`文件中包含的服务工作者注册到它所驻留的源，因此它可以控制与它或子目录相同的目录中的页面。当其承诺履行时，服务人员被视为已注册。
 
 ```js
 // Register service worker to control making site work offline
@@ -705,9 +705,9 @@ if ("serviceWorker" in navigator) {
 
 让我们看一下[sw.js](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js)文件（服务工作者）中的一个例子。你将看到安装侦听器已注册`self`。此`self`关键字是一种从服务工作文件内部引用服务工作者的全局范围的方法。
 
-在`install` 处理程序内部，我们使用[`ExtendableEvent.waitUntil()`](/zh-CN/docs/Web/API/ExtendableEvent/waitUntil)事件对象上可用的方法来表示浏览器不应该完成服务工作者的安装，直到其中的 promise 成功完成。
+在`install` 处理程序内部，我们使用[`ExtendableEvent.waitUntil()`](/zh-CN/docs/Web/API/ExtendableEvent/waitUntil) 事件对象上可用的方法来表示浏览器不应该完成服务工作者的安装，直到其中的 promise 成功完成。
 
-这是我们在运行中看到 Cache API 的地方。我们使用该[`CacheStorage.open()`](/zh-CN/docs/Web/API/CacheStorage/open)方法打开一个可以存储响应的新缓存对象（类似于 IndexedDB 对象存储）。此承诺通过[`Cache`](/zh-CN/docs/Web/API/Cache)表示`video-store`缓存的对象来实现。然后，我们使用该[`Cache.addAll()`](/zh-CN/docs/Web/API/Cache/addAll)方法获取一系列资产并将其响应添加到缓存中。
+这是我们在运行中看到 Cache API 的地方。我们使用该[`CacheStorage.open()`](/zh-CN/docs/Web/API/CacheStorage/open) 方法打开一个可以存储响应的新缓存对象（类似于 IndexedDB 对象存储）。此承诺通过[`Cache`](/zh-CN/docs/Web/API/Cache) 表示`video-store`缓存的对象来实现。然后，我们使用该[`Cache.addAll()`](/zh-CN/docs/Web/API/Cache/addAll) 方法获取一系列资产并将其响应添加到缓存中。
 
 ```js
 self.addEventListener("install", function (e) {
@@ -732,9 +732,9 @@ self.addEventListener("install", function (e) {
 
 这就是第二位代码的`sw.js`作用。我们向服务工作者全局范围添加另一个侦听器，该范围在`fetch`引发事件时运行处理函数。只要浏览器在服务工作者注册的目录中请求资产，就会发生这种情况。
 
-在处理程序内部，我们首先记录所请求资产的 URL。然后，我们使用该[`FetchEvent.respondWith()`](/zh-CN/docs/Web/API/FetchEvent/respondWith)方法为请求提供自定义响应。
+在处理程序内部，我们首先记录所请求资产的 URL。然后，我们使用该[`FetchEvent.respondWith()`](/zh-CN/docs/Web/API/FetchEvent/respondWith) 方法为请求提供自定义响应。
 
-在这个块中，我们[`CacheStorage.match()`](/zh-CN/docs/Web/API/CacheStorage/match)用来检查是否可以在任何缓存中找到匹配的请求（即匹配 URL）。如果未找到匹配，或者`undefined`如果未找到匹配，则此承诺将满足匹配的响应。
+在这个块中，我们[`CacheStorage.match()`](/zh-CN/docs/Web/API/CacheStorage/match) 用来检查是否可以在任何缓存中找到匹配的请求（即匹配 URL）。如果未找到匹配，或者`undefined`如果未找到匹配，则此承诺将满足匹配的响应。
 
 如果找到匹配项，我们只需将其作为自定义响应返回。如果没有，我们从网络中[获取（）](/zh-CN/docs/Web/API/fetch)响应并返回该响应。
 

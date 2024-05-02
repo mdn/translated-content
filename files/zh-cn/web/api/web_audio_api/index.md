@@ -45,7 +45,7 @@ Web Audio API 中与生成音频图相关的定义与通用容器。
   - : **`音频节点`** 接口是一个音频处理模块，例如音频源（{{HTMLElement("audio")}}或{{HTMLElement("video")}}），音频输出、中间处理模块（例如：滤波器 {{domxref("BiquadFilterNode")}} 或者音量控制器 {{domxref("GainNode")}}）。
 - {{domxref("AudioParam")}}
   - : **`AudioParam`** 接口代表音频相关的参数，比如一个 {{domxref("AudioNode")}}的参数。它可以设置为特定值或值的变化，并且可以在指定的时间之后以指定模式变更。
-- [`ended`](/zh-CN/docs/Web/API/HTMLMediaElement/ended_event)结束事件
+- [`ended`](/zh-CN/docs/Web/API/HTMLMediaElement/ended_event) 结束事件
   - : 当媒体播放停止时，会触发`ended`事件。
 
 ### 定义音频源

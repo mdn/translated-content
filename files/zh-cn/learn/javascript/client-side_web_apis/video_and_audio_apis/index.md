@@ -49,7 +49,7 @@ HTML5 提供了用于在文档中嵌入富媒体的元素 — {{htmlelement("vid
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html", '100%', 380)}}
 
-你可以点击上面的文章链接来查看相关 HTML 元素的所有特性；但在这篇文章中，主要目的是学习我们最感兴趣的[`controls`](/zh-CN/docs/Web/HTML/Element/video#controls)属性，它会启用默认的播放设置。如果没有指定该属性，则播放器中不会显示相关控件：
+你可以点击上面的文章链接来查看相关 HTML 元素的所有特性；但在这篇文章中，主要目的是学习我们最感兴趣的[`controls`](/zh-CN/docs/Web/HTML/Element/video#controls) 属性，它会启用默认的播放设置。如果没有指定该属性，则播放器中不会显示相关控件：
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats-no-controls.html", '100%', 380)}}
 
@@ -379,7 +379,7 @@ button:before {
 
 #### 更新已用时间
 
-我们要实施的媒体播放器的最后一块是显示的时间。为此，我们将运行一个函数，以便每次在\<video>元素上触发 [`timeupdate`](/zh-CN/docs/Web/API/HTMLMediaElement/timeupdate_event)事件时更新时间显示。此事件触发的频率取决于你的浏览器，CPU 电源等（[see this stackoverflow post](http://stackoverflow.com/questions/9678177/how-often-does-the-timeupdate-event-fire-for-an-html5-video)）。
+我们要实施的媒体播放器的最后一块是显示的时间。为此，我们将运行一个函数，以便每次在\<video>元素上触发 [`timeupdate`](/zh-CN/docs/Web/API/HTMLMediaElement/timeupdate_event) 事件时更新时间显示。此事件触发的频率取决于你的浏览器，CPU 电源等（[see this stackoverflow post](http://stackoverflow.com/questions/9678177/how-often-does-the-timeupdate-event-fire-for-an-html5-video)）。
 
 在代码下方添加`addEventListener（）`行：
 

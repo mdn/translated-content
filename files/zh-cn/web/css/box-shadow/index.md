@@ -41,7 +41,7 @@ box-shadow: unset;
 
 向元素添加单个 box-shadow 效果时使用以下规则：
 
-- 当给出两个、三个或四个 [`<length>`](/zh-CN/docs/Web/CSS/length)值时。
+- 当给出两个、三个或四个 [`<length>`](/zh-CN/docs/Web/CSS/length) 值时。
 
   - 如果只给出两个值，那么这两个值将会被当作 `<offset-x><offset-y>` 来解释。
   - 如果给出了第三个值，那么第三个值将会被当作`<blur-radius>`解释。

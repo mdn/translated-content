@@ -11,8 +11,8 @@ Firefox 18 已于 2013 年 1 月 8 日发布。
 
 ### HTML
 
-- 实现了{{HTMLElement("ol")}}元素上的[`reversed`](/zh-CN/docs/Web/HTML/Element/ol#reversed)属性 ([Firefox bug 601912](https://bugzil.la/601912)).
-- 实现了{{HTMLElement("link")}}元素上的[`crossorigin`](/zh-CN/docs/Web/HTML/Element/link#crossorigin)属性 ([Firefox bug 786564](https://bugzil.la/786564)).
+- 实现了{{HTMLElement("ol")}}元素上的[`reversed`](/zh-CN/docs/Web/HTML/Element/ol#reversed) 属性 ([Firefox bug 601912](https://bugzil.la/601912)).
+- 实现了{{HTMLElement("link")}}元素上的[`crossorigin`](/zh-CN/docs/Web/HTML/Element/link#crossorigin) 属性 ([Firefox bug 786564](https://bugzil.la/786564)).
 
 ### CSS
 
@@ -27,7 +27,7 @@ Firefox 18 已于 2013 年 1 月 8 日发布。
 - 实现了 `window.devicePixelRatio` 属性。（[Firefox bug 564815](https://bugzil.la/564815)）
 - 在 MacOS 上实现了`window.navigator.battery` 属性。（[Firefox bug 696045](https://bugzil.la/696045)）
 - 删除了 {{domxref("BlobBuilder", "MozBlobBuilder")}}。开发者应该使用 {{domxref("Blob")}} 构造函数来创建 `Blob` 对象。（[Firefox bug 744907](https://bugzil.la/744907)）
-- [`visibilitychange`](/zh-CN/docs/Web/API/Document/visibilitychange_event)事件和[页面可见性 API](/zh-CN/docs/DOM/Using_the_Page_Visibility_API)取消前缀[Firefox bug 812086](https://bugzil.la/812086)).
+- [`visibilitychange`](/zh-CN/docs/Web/API/Document/visibilitychange_event) 事件和[页面可见性 API](/zh-CN/docs/DOM/Using_the_Page_Visibility_API)取消前缀[Firefox bug 812086](https://bugzil.la/812086)).
 - 实现了 `TextDecoder` 和 `TextEncoder`。（[Firefox bug 764234](https://bugzil.la/764234)）
 - `HTMLMediaElement.src` 被分成了两个属性：一个是标准的 `src` 属性，返回普通的字符串 {{domxref("DOMString")}},另一个是带前缀的`mozSrcObject`属性，返回 [media streams](/zh-CN/docs/WebRTC/MediaStream_API)（[Firefox bug 792665](https://bugzil.la/792665)）。
 
@@ -47,7 +47,7 @@ Firefox 18 已于 2013 年 1 月 8 日发布。
 ### 网络
 
 - HTTP 请求头`Accept-Language` 可以使用两位数字的质量因子（"q-values"）（[Firefox bug 672448](https://bugzil.la/672448)）。
-- HTTP 响应头支持了[`X-FRAME-OPTIONS`](/zh-CN/docs/The_X-FRAME-OPTIONS_response_header)中的`ALLOW-FROM`语法 ([Firefox bug 690168](https://bugzil.la/690168)).
+- HTTP 响应头支持了[`X-FRAME-OPTIONS`](/zh-CN/docs/The_X-FRAME-OPTIONS_response_header) 中的`ALLOW-FROM`语法 ([Firefox bug 690168](https://bugzil.la/690168)).
 
 ### 开发者工具
 
