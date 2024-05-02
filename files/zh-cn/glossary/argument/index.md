@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**实际参数**是作为一个输入传递给{{Glossary("function", "函数")}}的{{glossary("value", "值")}}，这个值可以是（{{Glossary("primitive", "原始值")}}或{{Glossary("object", "对象")}}）。
+**实际参数**是作为输入传递给{{Glossary("function", "函数")}}的{{glossary("value", "值")}}，这个值可以是{{Glossary("primitive", "原始值")}}或{{Glossary("object", "对象")}}。
 
 例如：
 
@@ -28,7 +28,7 @@ function example(parameter1, parameter2) {
 ```js
 const argument1 = "foo";
 const argument2 = [1, 2, 3];
-example(argument1, argument2); // 传递两个参数
+example(argument1, argument2); // 传递两个实际参数
 
 // 该函数只取一个值，因此传递的第二个实际参数将被忽略
 function example(parameter) {
@@ -38,5 +38,5 @@ function example(parameter) {
 
 ## 参见
 
-- [形式参数与实际参数之间的区别](/zh-CN/docs/Glossary/Parameter#parameters_versus_arguments)
+- [形式参数与实际参数之间的区别](/zh-CN/docs/Glossary/Parameter#形式参数与实际参数)
 - {{glossary("JavaScript")}} 中的 {{jsxref("Functions/arguments","arguments")}} 对象
