@@ -205,7 +205,9 @@ for spacing purposes  */
       Mozilla Developer Network</a
     >
   </li>
-  <li><a id="w3c" href="https://www.w3c.org/"> World Wide Web Consortium</a></li>
+  <li>
+    <a id="w3c" href="https://www.w3c.org/"> World Wide Web Consortium</a>
+  </li>
 </ul>
 ```
 
