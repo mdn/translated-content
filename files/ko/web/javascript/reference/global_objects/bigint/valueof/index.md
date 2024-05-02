@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-{{jsxref("BigInt")}}의 **`valueOf()`** 메서드는 {{jsxref("BigInt")}} 객체를 한 번 감싼 의 원시값을 반환합니다.
+{{jsxref("BigInt")}}의 **`valueOf()`** 메서드는 {{jsxref("BigInt")}} 객체의 감싸진  원시값을 반환합니다.
 
 {{EmbedInteractiveExample("pages/js/bigint-valueof.html", "shorter")}}
 
