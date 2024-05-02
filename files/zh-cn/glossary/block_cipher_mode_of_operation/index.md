@@ -1,6 +1,8 @@
 ---
 title: 分组密码工作模式
 slug: Glossary/Block_cipher_mode_of_operation
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
 {{GlossarySidebar}}
