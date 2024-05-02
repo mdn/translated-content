@@ -7,23 +7,23 @@ l10n:
 
 {{GlossarySidebar}}
 
-**引数**是一个作为 {{Glossary("function")}} 输入的 {{glossary("value")}}（{{Glossary("primitive")}} 或 {{Glossary("object")}}）。
+**引数**是一个作为{{Glossary("function", "函数")}}输入的{{glossary("value", "值")}}（{{Glossary("primitive", "原始值")}}或{{Glossary("object", "对象")}}）。
 
 例如：
 
 ```js
 const argument1 = "Web";
-const argument2 = "Development";
+const argument2 = "开发";
 example(argument1, argument2); // 传入两个引数
 
 // 这个函数接受两个参数
 function example(parameter1, parameter2) {
   console.log(parameter1); // 输出 = "Web"
-  console.log(parameter2); // 输出 = "Development"
+  console.log(parameter2); // 输出 = "开发"
 }
 ```
 
-在函数调用中的引数顺序应该与函数定义中的 {{Glossary("parameter","parameters")}} 顺序相同。
+在函数调用中的引数顺序应该与函数定义中的{{Glossary("parameter", "参数")}}顺序相同。
 
 ```js
 const argument1 = "foo";
@@ -38,5 +38,5 @@ function example(parameter) {
 
 ## 参见
 
-- 维基百科上的 [参数和引数](<https://zh.wikipedia.org/wiki/參數_(程式設計)#参数和引数)>)
+- 维基百科上的[参数和引数](<https://zh.wikipedia.org/wiki/參數_(程式設計)#参数和引数)>)
 - {{glossary("JavaScript")}} 的 {{jsxref("Functions/arguments","arguments")}} 对象
