@@ -244,7 +244,7 @@ Firefox 和 Chrome 浏览器都包含代理 API。不过，这两个 API 的设�
 
 ### 应用持久化
 
-- **在 Firefox 中**：本机消息传输连接关闭时，如果子进程没有脱离，Firefox 会将其杀死。在 Windows 系统中，浏览器会将本机应用程序的进程放入[作业对象](<https://msdn.microsoft.com/library/windows/desktop/ms684161(v=vs.85).aspx>)并杀死该作业。假设本地应用程序启动了其他进程，并希望这些进程在本地应用程序被杀死后继续打开。在这种情况下，本地应用程序必须使用 `CreateProcess` 而不是 `ShellExecute` 来启动其他进程，并使用 [`CREATE_BREAKAWAY_FROM_JOB`](<https://msdn.microsoft.com/library/windows/desktop/ms684863(v=vs.85) .aspx>) 标志。
+- **在 Firefox 中**：本机消息传输连接关闭时，如果子进程没有脱离，Firefox 会将其杀死。在 Windows 系统中，浏览器会将本机应用程序的进程放入[作业对象](<https://msdn.microsoft.com/library/windows/desktop/ms684161(v=vs.85).aspx>)并杀死该作业。假设本地应用程序启动了其他进程，并希望这些进程在本地应用程序被杀死后继续打开。在这种情况下，本地应用程序必须使用 `CreateProcess` 而不是 `ShellExecute` 来启动其他进程，并使用 [`CREATE_BREAKAWAY_FROM_JOB`](<https://msdn.microsoft.com/library/windows/desktop/ms684863(v=vs.85).aspx>) 标志。
 
 ## 数据克隆算法
 

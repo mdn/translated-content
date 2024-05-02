@@ -252,7 +252,7 @@ def renew_book_librarian(request, pk):
 - [`get_object_or_404()`](https://docs.djangoproject.com/en/2.0/topics/http/shortcuts/#get-object-or-404): 根据模型的主键值，从模型返回指定的对象，如果记录不存在，则引发`Http404` 异常（未找到）。
 - [`HttpResponseRedirect`](https://docs.djangoproject.com/en/2.0/ref/request-response/#django.http.HttpResponseRedirect): 这将创建指向指定 URL 的重定向（HTTP 状态代码 302）。
 - [`reverse()`](https://docs.djangoproject.com/en/2.0/ref/urlresolvers/#django.urls.reverse): 这将从 URL 配置名称和一组参数生成 URL。它是我们在模板中使用的 `url` 标记的 Python 等价物。
-- [`datetime`](https://docs.python.org/3/library/datetime.html) : 用于操作日期和时间的 Python 库。
+- [`datetime`](https://docs.python.org/3/library/datetime.html)：用于操作日期和时间的 Python 库。
 
 在视图中，我们首先使用 `get_object_or_404()`中的 `pk` 参数，来获取当前的 `BookInstance` （如果这不存在，视图将立即退出，页面将显示“未找到”错误）。如果这不是 `POST` 请求（由 `else` 子句处理），那么我们创建默认表单，传递 `renewal_date` 字段的`initial` 初始值（如下面的**粗体**所示，这是从当前日期起的 3 周）。
 

@@ -192,7 +192,7 @@ ls -l
 
 ![A vanilla mac terminal and a more colorful custom mac terminal, showing a file listing - the result of running the ls -l command](mac-terminals-ls.png)
 
-> **备注：** 要确切地了解每个命令有哪些可用选项，你可以查看它[man page](https://en.wikipedia.org/wiki/Man_page). 通过键入 `man` 命令，后跟要查找的命令的名称，例如`man ls`. 这将在终端的默认文本文件查看器中打开手册页 (例如，[`less`](<https://en.wikipedia.org/wiki/Less_(Unix) >)(在我的终端中)，然后你应该能够使用箭头键或其他类似的机制在页面中滚动。手册页详细地列出了所有选项，一开始可能有点吓人，但至少在需要时你知道它就在那里。一旦你完成了对手册页的查看，你需要使用文本查看器的 quit 命令退出它 ("q" 在 `less`;如果不明显，你可能需要在网上搜索才能找到).
+> **备注：** 要确切地了解每个命令有哪些可用选项，你可以查看它[man page](https://en.wikipedia.org/wiki/Man_page). 通过键入 `man` 命令，后跟要查找的命令的名称，例如`man ls`. 这将在终端的默认文本文件查看器中打开手册页 (例如，[`less`](<https://en.wikipedia.org/wiki/Less_(Unix)>)(在我的终端中)，然后你应该能够使用箭头键或其他类似的机制在页面中滚动。手册页详细地列出了所有选项，一开始可能有点吓人，但至少在需要时你知道它就在那里。一旦你完成了对手册页的查看，你需要使用文本查看器的 quit 命令退出它 ("q" 在 `less`;如果不明显，你可能需要在网上搜索才能找到).
 
 > **备注：** 要同时运行具有多个选项的命令，通常可以将它们全部放在破折号后面的单个字符串中`ls -lah`, 或`ls -ltrh`.尝试在 `ls` 了解这些额外选项的作用
 

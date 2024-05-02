@@ -43,7 +43,7 @@ Clear-Site-Data: "*"
     - [AppCache,](/zh-CN/docs/Web/HTML/Using_the_application_cache)
     - WebSQL 数据库，
     - [FileSystem API data](/zh-CN/docs/Web/API/File_and_Directory_Entries_API),
-    - Plugin data (Flash via [`NPP_ClearSiteData`](https://wiki.mozilla.org/NPAPI:ClearSiteData) ).
+    - Plugin data (Flash via [`NPP_ClearSiteData`](https://wiki.mozilla.org/NPAPI:ClearSiteData)).
 
 - `"executionContexts"`
   - : 表示服务端希望浏览器重新加载本请求 ({{domxref("Location.reload")}}).

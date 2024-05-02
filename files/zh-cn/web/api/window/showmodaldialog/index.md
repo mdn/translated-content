@@ -38,7 +38,7 @@ Introduced by Microsoft Internet Explorer 4. Support added to Firefox in Firefox
 
 ## Examples
 
-[Try out `showModalDialog()`](/samples/domref/showModalDialog.html) .
+[Try out `showModalDialog()`](/samples/domref/showModalDialog.html).
 
 ## Notes
 
