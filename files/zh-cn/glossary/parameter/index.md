@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-形式参数是传递给函数{{Glossary("function", "函数")}}的一个命名变量。形式参数变量用于将{{Glossary("argument","实际参数")}}导入函数。
+形式参数（Parameter）是传递给函数{{Glossary("function", "函数")}}的一个命名变量。形式参数变量用于将{{Glossary("argument","实际参数")}}导入函数。
 
 例如：
 
