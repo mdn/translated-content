@@ -21,9 +21,9 @@ new CookieChangeEvent(type, options)
 ### 参数
 
 - `type`
-  - : 写有此事件名称的字符串。大小写敏感且浏览器经常设置为 `change`。
+  - : 包含事件名称的字符串。它区分大小写，且浏览器总是将其设置为 `change`。
 - `options` {{Optional_Inline}}
-  - : 一个对象，该对象除了在 {{domxref("Event/Event", "Event()")}} 中定义的属性之外，还可以具有以下属性：
+  - : 一个对象，该对象*除了在 {{domxref("Event/Event", "Event()")}} 中定义的属性之外*，还可以具有以下属性：
     - `changed`{{Optional_Inline}}
       - : 一个包含已被修改的 cookie 的数组。
     - `deleted`{{Optional_Inline}}
