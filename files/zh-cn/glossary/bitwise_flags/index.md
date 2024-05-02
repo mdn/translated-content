@@ -17,18 +17,18 @@ usage: GPUBufferUsage.COPY_SRC | GPUBufferUsage.MAP_WRITE;
 
 这些值在同一个命名空间内定义，并且每个值都对应一个十六进制值：
 
-| 用法标志                           | 十六进制表示 | 十进制等价值 |
-|--------------------------------|--------|--------|
-| `GPUBufferUsage.MAP_READ`      | 0x0001 | 1      |
-| `GPUBufferUsage.MAP_WRITE`     | 0x0002 | 2      |
-| `GPUBufferUsage.COPY_SRC`      | 0x0004 | 4      |
-| `GPUBufferUsage.COPY_DST`      | 0x0008 | 8      |
-| `GPUBufferUsage.INDEX`         | 0x0010 | 16     |
-| `GPUBufferUsage.VERTEX`        | 0x0020 | 32     |
-| `GPUBufferUsage.UNIFORM`       | 0x0040 | 64     |
-| `GPUBufferUsage.STORAGE`       | 0x0080 | 128    |
-| `GPUBufferUsage.INDIRECT`      | 0x0100 | 256    |
-| `GPUBufferUsage.QUERY_RESOLVE` | 0x0200 | 512    |
+| 用法标志                       | 十六进制表示 | 十进制等价值 |
+| ------------------------------ | ------------ | ------------ |
+| `GPUBufferUsage.MAP_READ`      | 0x0001       | 1            |
+| `GPUBufferUsage.MAP_WRITE`     | 0x0002       | 2            |
+| `GPUBufferUsage.COPY_SRC`      | 0x0004       | 4            |
+| `GPUBufferUsage.COPY_DST`      | 0x0008       | 8            |
+| `GPUBufferUsage.INDEX`         | 0x0010       | 16           |
+| `GPUBufferUsage.VERTEX`        | 0x0020       | 32           |
+| `GPUBufferUsage.UNIFORM`       | 0x0040       | 64           |
+| `GPUBufferUsage.STORAGE`       | 0x0080       | 128          |
+| `GPUBufferUsage.INDIRECT`      | 0x0100       | 256          |
+| `GPUBufferUsage.QUERY_RESOLVE` | 0x0200       | 512          |
 
 当查询 {{domxref("GPUBuffer.usage")}}
 属性时，会返回一个单一的十进制数，该数是不同用法标志的不同十进制值的总和。回到上面的例子，查询具有先前指定用法的 `GPUBuffer`
