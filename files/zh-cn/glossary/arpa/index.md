@@ -7,9 +7,9 @@ l10n:
 
 {{GlossarySidebar}}
 
-**.arpa**（address and routing parameter area，地址路由参数域）是一个用于互联网基础设施配置的{{glossary("TLD","顶级域")}}，尤其是用于 DNS 反向解析，即从 {{glossary("IP address")}} 找出旗下的主机名（也就是找到 {{glossary('domain name')}}）。
+**.arpa**（address and routing parameter area，地址路由参数域）是一个用于互联网基础设施配置的{{glossary("TLD", "顶级域")}}，尤其是用于 DNS 反向查询，即从 {{glossary("IP address", "IP 地址")}}找出对应的{{glossary("domain name", "域名")}}。
 
-该名称源自 ARPA，目前被称为 DARPA，即国防高级研究计划局。DARPA 被认为是开发互联网（{{glossary("ARPANET")}}）、GPS、人工智能和虚拟现实的前身。
+该名称源自 **ARPA**，目前被称为 [DARPA](https://zh.wikipedia.org/wiki/國防高等研究計劃署)，即国防高级研究计划局。DARPA 被认为是开发互联网（{{glossary("ARPANET")}}）、GPS、人工智能和虚拟现实的先驱。
 
 {{glossary("TLD")}} 是在 DARPA 时期设计的，当时它被称为 ARPA，因此有 `.arpa` 域名。
 
