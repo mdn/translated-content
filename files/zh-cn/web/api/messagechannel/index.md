@@ -23,9 +23,9 @@ l10n:
 
 ## 示例
 
-在以下的代码块中，你可以看到使用 {{domxref("MessageChannel()", "MessageChannel.MessageChannel")}} 构造函数创建的新 Channel。
+在以下的代码块中，你可以看到使用 {{domxref("MessageChannel.MessageChannel", "MessageChannel()")}} 构造函数创建的新 Channel。
 
-当 IFrame 加载完成后，我们将为 {{domxref("MessageChannel.port1")}} 注册一个 {{domxref("MessagePort/message_event", "onmessage")}} 处理事件，并使用 {{domxref("window.postMessage")}} 方法将 {{domxref("MessageChannel.port2")}} 和一条信息传输到 IFrame。
+当 IFrame 加载完成后，我们将为 {{domxref("MessageChannel.port1")}} 注册一个 {{domxref("MessagePort/message_event", "onmessage")}} 处理器，并使用 {{domxref("window.postMessage")}} 方法将 {{domxref("MessageChannel.port2")}} 和一条信息传输到 IFrame。
 
 当收到 IFrame 返回的信息时，`onMessage` 函数会将信息输出到一个段落中。
 
