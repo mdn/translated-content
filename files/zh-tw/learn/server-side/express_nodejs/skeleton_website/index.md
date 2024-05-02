@@ -325,7 +325,7 @@ npm install --save-dev nodemon
 
 ### www 文件
 
-文件 **/bin/www** 是應用程序入口點！它做的第一件事是 `require()` 「真正的」 應用程序入口點（即項目根目錄中的 app.js ），**app.js** 會設置並返回 [`express()`](http://expressjs.com/en/api.html)應用程序的對象。
+文件 **/bin/www** 是應用程序入口點！它做的第一件事是 `require()` 「真正的」 應用程序入口點（即項目根目錄中的 app.js ），**app.js** 會設置並返回 [`express()`](http://expressjs.com/en/api.html) 應用程序的對象。
 
 ```js
 #!/usr/bin/env node

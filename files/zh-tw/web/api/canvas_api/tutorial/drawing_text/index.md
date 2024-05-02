@@ -191,7 +191,7 @@ nsIDOMTextMetrics measureText(
 
 #### 返回值
 
-[`nsIDOMTextMetrics`](/nsIDOMTextMetrics)物件的`width`屬性在繪製時會將數字設定給 CSS 的像素值寬度。
+[`nsIDOMTextMetrics`](/nsIDOMTextMetrics) 物件的`width`屬性在繪製時會將數字設定給 CSS 的像素值寬度。
 
 ### mozDrawText()
 
