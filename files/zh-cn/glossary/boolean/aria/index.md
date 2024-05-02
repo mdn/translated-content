@@ -2,7 +2,7 @@
 title: Boolean attribute (ARIA)
 slug: Glossary/Boolean/ARIA
 l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+  sourceCommit: fb6bd88d0b3d226a008341198863e1d480f0e49a
 ---
 
 {{GlossarySidebar}}
