@@ -7,7 +7,7 @@ slug: Web/API/HTMLFieldSetElement
 
 ## HTML Field Set Element
 
-DOM `fieldset` elements expose the [HTMLFieldSetElement](http://dev.w3.org/html5/spec/forms.html#htmlfieldsetelement) ([HTMLFieldSetElement](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-7365882)) interface, which provides special properties and methods (beyond the regular [element](/zh-CN/docs/Web/API/element) object interface they also have available to them by inheritance) for manipulating the layout and presentation of field-set elements.
+DOM `fieldset` elements expose the [HTMLFieldSetElement](https://dev.w3.org/html5/spec/forms.html#htmlfieldsetelement) ([HTMLFieldSetElement](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-7365882)) interface, which provides special properties and methods (beyond the regular [element](/zh-CN/docs/Web/API/element) object interface they also have available to them by inheritance) for manipulating the layout and presentation of field-set elements.
 
 ## 属性
 

@@ -13,7 +13,7 @@ IndexedDB api 中的 IDBRequest 接口提供了根据绑定事件处理函数访
 
 ## About this document
 
-This document was last updated on August 17, 2012 and follows the [W3C Specifications (Editor's Draft)](http://dvcs.w3.org/hg/IndexedDB/raw-file/tip/Overview.html#request-api) drafted on July 24, 2012. It has not yet been verified.
+This document was last updated on August 17, 2012 and follows the [W3C Specifications (Editor's Draft)](https://dvcs.w3.org/hg/IndexedDB/raw-file/tip/Overview.html#request-api) drafted on July 24, 2012. It has not yet been verified.
 
 ## 基础概念
 

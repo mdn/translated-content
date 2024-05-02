@@ -134,7 +134,7 @@ Touch event demonstrations:
 ## Community
 
 - [Touch Events Community Group](https://github.com/w3c/touch-events)
-- [Mail list](http://lists.w3.org/Archives/Public/public-touchevents/)
+- [Mail list](https://lists.w3.org/Archives/Public/public-touchevents/)
 - [W3C #touchevents IRC channel](irc://irc.w3.org:6667/)
 
 ## Related topics and resources

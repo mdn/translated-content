@@ -47,7 +47,7 @@ document.getElementById("container").appendChild(newNode);
 ## 规范
 
 - [DOM Level 2 Core: Document.importNode](https://www.w3.org/TR/DOM-Level-2-Core/core.html#Core-Document-importNode)
-- [DOM4 (draft): Document.importNode](http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#dom-document-importnode)
+- [DOM4 (draft): Document.importNode](https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#dom-document-importnode)
 
 ## 参见
 

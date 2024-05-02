@@ -195,7 +195,7 @@ Content-Security-Policy: default-src 'none'; style-src cdn.example.com; report-u
 }
 ```
 
-如你所见，该报告在 `blocked-uri` 字段中包含了违规资源的完整路径，但情况并非总是如此。比如，当 `signup.html` 试图从 `http://anothercdn.example.com/stylesheet.css` 加载 CSS 时，浏览器将*不会*包含完整路径，而只会保留源路径（`http://anothercdn.example.com`）。CSP 技术规范小组对此古怪行为给出了[解释](https://www.w3.org/TR/CSP/#violation-reports)。大体上说，这样是为了防止泄露跨源资源的敏感信息。
+如你所见，该报告在 `blocked-uri` 字段中包含了违规资源的完整路径，但情况并非总是如此。比如，当 `signup.html` 试图从 `https://anothercdn.example.com/stylesheet.css` 加载 CSS 时，浏览器将*不会*包含完整路径，而只会保留源路径（`http://anothercdn.example.com`）。CSP 技术规范小组对此古怪行为给出了[解释](https://www.w3.org/TR/CSP/#violation-reports)。大体上说，这样是为了防止泄露跨源资源的敏感信息。
 
 ## 浏览器兼容性
 

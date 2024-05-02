@@ -31,7 +31,7 @@ slug: Web/MathML
 
 ## 工具
 
-- [W3C Validator](http://validator.w3.org)
+- [W3C Validator](https://validator.w3.org)
 - [Mathzilla Firefox 拓展收藏集](https://addons.mozilla.org/firefox/collections/fred_wang/mathzilla/)
 - [TeXZilla](https://github.com/fred-wang/TeXZilla) - 基于 Javascript 的 LaTeX to MathML 转换器（[在线 demo](https://fred-wang.github.io/TeXZilla/)，[Firefox OS webapp](http://r-gaia-cs.github.io/TeXZilla-webapp/)，[Firefox 拓展](https://addons.mozilla.org/en-US/firefox/addon/texzilla/)，[在网页、JS 程序中使用，等等](https://github.com/fred-wang/TeXZilla/wiki/Using-TeXZilla)）
 - [LaTeXML](http://dlmf.nist.gov/LaTeXML/) - 将 LaTeX 文档转换为 HTML+MathML 网页

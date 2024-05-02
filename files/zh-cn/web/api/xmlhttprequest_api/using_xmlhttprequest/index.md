@@ -41,7 +41,7 @@ W3C 规范定义了 {{domxref("XMLHttpRequest.XMLHttpRequest", "XMLHttpRequest()
 3. 使用 [XMLSerializer](/zh-CN/docs/Web/API/XMLSerializer) 把 DOM 树序列化成字符串或文件。
 4. 如果你预先知道 XML 文档的内容，你可以使用 [RegExp](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)。如果你用 `RegExp` 扫描时受到换行符的影响，你也许想要删除所有的换行符。然而，这种方法是"最后手段"，因为如果 XML 代码发生轻微变化，该方法将可能失败。
 
-> **备注：** 在 W3C [XMLHttpRequest](http://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html) 规范中允许 HTML 通过 XMLHttpRequest.responseXML 属性进行解析。更多详细内容请阅读 [HTML in XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest) 。本条注意已在英文原文中更新。
+> **备注：** 在 W3C [XMLHttpRequest](https://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html) 规范中允许 HTML 通过 XMLHttpRequest.responseXML 属性进行解析。更多详细内容请阅读 [HTML in XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest) 。本条注意已在英文原文中更新。
 
 > **备注：** `XMLHttpRequest` 现在可以使用 {{domxref("XMLHttpRequest.responseXML", "responseXML")}} 属性解释 HTML。请阅读 [HTML in XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest) 这篇文章了解相关用法。
 
@@ -87,7 +87,7 @@ oReq.send();
 
 `XMLHttpRequest` 提供了各种在请求被处理期间发生的事件以供监听。这包括定期进度通知、错误通知，等等。
 
-支持 DOM 的 progress 事件监测之于 `XMLHttpRequest` 传输，遵循 Web API [进度事件规范](http://dev.w3.org/2006/webapi/progress/Progress.html)：这些事件实现了 {{domxref("ProgressEvent")}} 接口。
+支持 DOM 的 progress 事件监测之于 `XMLHttpRequest` 传输，遵循 Web API [进度事件规范](https://dev.w3.org/2006/webapi/progress/Progress.html)：这些事件实现了 {{domxref("ProgressEvent")}} 接口。
 
 - [`progress`](/zh-CN/docs/Web/API/XMLHttpRequest/progress_event)
   - : 检索的数据量发生了变化。

@@ -30,7 +30,7 @@ slug: Web/API/FileSystemSync
 
 ## 参见
 
-规范：[File API: Directories and System Specification](http://dev.w3.org/2009/dap/file-system/pub/FileSystem/)
+规范：[File API: Directories and System Specification](https://dev.w3.org/2009/dap/file-system/pub/FileSystem/)
 
 参考： [文件系统 API](/zh-CN/DOM/File_API/File_System_API)
 

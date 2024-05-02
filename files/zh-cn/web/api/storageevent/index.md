@@ -89,4 +89,4 @@ void initStorageEvent(
 
 ## 参阅
 
-- [Specification](http://dev.w3.org/html5/webstorage/#the-storage-event)
+- [Specification](https://dev.w3.org/html5/webstorage/#the-storage-event)

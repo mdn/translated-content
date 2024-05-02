@@ -90,7 +90,7 @@ xScrollWidth 的值是元素的内容宽度。
 
 ## 规范
 
-The [CSSOM View Module](http://dev.w3.org/csswg/cssom-view/#dom-element-scrollwidth) defines `scrollWidth`
+The [CSSOM View Module](https://dev.w3.org/csswg/cssom-view/#dom-element-scrollwidth) defines `scrollWidth`
 
 ## 相关
 

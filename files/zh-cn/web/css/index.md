@@ -62,7 +62,7 @@ CSS 是**开放 Web** 的核心语言之一，并根据 [W3C 规范](https://www
 
 ## CSS 开发工具
 
-- [万维网联盟 CSS 验证服务](http://jigsaw.w3.org/css-validator/)用于检查 CSS 是否有效。这是非常有价值的调试工具。
+- [万维网联盟 CSS 验证服务](https://jigsaw.w3.org/css-validator/)用于检查 CSS 是否有效。这是非常有价值的调试工具。
 - [Firefox 开发工具](https://firefox-source-docs.mozilla.org/devtools-user/index.html)允许通过[页面查看器](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html)和[样式编辑器](https://firefox-source-docs.mozilla.org/devtools-user/style_editor/index.html)工具查看和实时编辑页面的 CSS 样式。
 - Firefox 的 [Web Developer 扩展](https://addons.mozilla.org/zh-CN/firefox/addon/web-developer/)也允许实时查看和编辑网站的 CSS。
 

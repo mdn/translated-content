@@ -213,6 +213,6 @@ partial interface MouseEvent {
 
 ## 参见
 
-[W3C Pointer Lock API Specification](http://dvcs.w3.org/hg/pointerlock/raw-file/default/index.html)
+[W3C Pointer Lock API Specification](https://dvcs.w3.org/hg/pointerlock/raw-file/default/index.html)
 
 [MouseEvent](/zh-CN/DOM/MouseEvent)

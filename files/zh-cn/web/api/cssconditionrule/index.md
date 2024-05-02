@@ -11,7 +11,7 @@ slug: Web/API/CSSConditionRule
 
 ## Syntax
 
-The syntax is described using the [WebIDL](http://dev.w3.org/2006/webapi/WebIDL/) format.
+The syntax is described using the [WebIDL](https://dev.w3.org/2006/webapi/WebIDL/) format.
 
 ```plain
 interface CSSConditionRule : CSSGroupingRule {

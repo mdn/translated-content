@@ -84,7 +84,7 @@ function dumpComputedStyles(elem, prop) {
 
 ## 与伪元素一起使用
 
-getComputedStyle 可以从**伪元素**拉取样式信息 (比如，`::after`, `::before`, `::marker`, `::line-marker`—查看 [详情](http://dev.w3.org/csswg/css3-content/#pseudo-elements) 这里).
+getComputedStyle 可以从**伪元素**拉取样式信息 (比如，`::after`, `::before`, `::marker`, `::line-marker`—查看 [详情](https://dev.w3.org/csswg/css3-content/#pseudo-elements) 这里).
 
 ```html
 <style>
@@ -127,7 +127,7 @@ CSS 属性值可以使用`getPropertyValue(propName)`API 或直接索引到对�
 ## 规范
 
 - [DOM Level 2 Style: getComputedStyle](https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSview-getComputedStyle)
-- [CSS Object Model specification](http://dev.w3.org/csswg/cssom/#resolved-values)
+- [CSS Object Model specification](https://dev.w3.org/csswg/cssom/#resolved-values)
 
 ## 参见
 

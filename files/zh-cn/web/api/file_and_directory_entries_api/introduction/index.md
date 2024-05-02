@@ -169,7 +169,7 @@ slug: Web/API/File_and_Directory_Entries_API/Introduction
 
 ## 其他
 
-规范：<http://dev.w3.org/2009/dap/file-system/pub/FileSystem/>
+规范：<https://dev.w3.org/2009/dap/file-system/pub/FileSystem/>
 
 引用：[File System API Reference](/zh-CN/DOM/File_API/File_System_API)
 

@@ -343,7 +343,7 @@ button#tiny {
 ## 社区资源
 
 - [Pointer Events Working Group](https://github.com/w3c/pointerevents)
-- [Mail list](http://lists.w3.org/Archives/Public/public-pointer-events/)
+- [Mail list](https://lists.w3.org/Archives/Public/public-pointer-events/)
 - [W3C #pointerevents IRC channel](irc://irc.w3.org:6667/)
 
 ## 相关主题与资源

@@ -67,7 +67,7 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 
 ![The HTML validator homepage](validator.png)
 
-CSS 有一个类似的路线——你需要检查你的属性名拼写是否正确，属性值拼写正确，并且对于它们使用的属性是有效的，你不会丢失任何大括号，等等。为了这个目的，W3C 也有一个 [CSS 验证器](http://jigsaw.w3.org/css-validator/)。
+CSS 有一个类似的路线——你需要检查你的属性名拼写是否正确，属性值拼写正确，并且对于它们使用的属性是有效的，你不会丢失任何大括号，等等。为了这个目的，W3C 也有一个 [CSS 验证器](https://jigsaw.w3.org/css-validator/)。
 
 ### Linter
 
