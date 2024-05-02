@@ -52,7 +52,7 @@ slug: Web/MathML/Authoring
 </html>
 ```
 
-> **备注：** 要在 XML 文档（例如 XHTML、EPUB 或 OpenDocument）中使用 MathML，请在每个 `<math>` 元素中放置一个 `xmlns="http://www.w3.org/1998/Math/MathML"` 属性。
+> **备注：** 要在 XML 文档（例如 XHTML、EPUB 或 OpenDocument）中使用 MathML，请在每个 `<math>` 元素中放置一个 `xmlns="https://www.w3.org/1998/Math/MathML"` 属性。
 
 > **备注：** 某些电子邮件或即时通讯客户端能够发送和接收 HTML 格式的消息。因此，可以在此类消息中嵌入数学公式，只要标记清理程序未将 MathML 标签过滤掉。
 
@@ -206,7 +206,7 @@ cat input.html | node TeXZilla.js streamfilter > output.html
 
     <p>
       One over square root of two (inline style):
-      <math xmlns="http://www.w3.org/1998/Math/MathML"
+      <math xmlns="https://www.w3.org/1998/Math/MathML"
         ><semantics
           ><mfrac
             ><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac
@@ -217,7 +217,7 @@ cat input.html | node TeXZilla.js streamfilter > output.html
 
     <p>
       One over square root of two (display style):
-      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
+      <math xmlns="https://www.w3.org/1998/Math/MathML" display="block"
         ><semantics
           ><mfrac
             ><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac

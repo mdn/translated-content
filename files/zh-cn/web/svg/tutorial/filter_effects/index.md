@@ -19,7 +19,7 @@ slug: Web/SVG/Tutorial/Filter_effects
 <svg
   width="250"
   viewBox="0 0 200 85"
-  xmlns="http://www.w3.org/2000/svg"
+  xmlns="https://www.w3.org/2000/svg"
   version="1.1">
   <defs>
     <!-- Filter declaration -->

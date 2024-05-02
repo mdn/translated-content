@@ -9,7 +9,7 @@ slug: Web/API/FileSystemSync
 
 ## 关于这个文档
 
-这个文档最后更新与 2012 年 3 月 2 日，并且遵循 [W3C 规范（工作草案）](http://www.w3.org/TR/file-system-api/)，起草于 2011 年 4 月 19 日。
+这个文档最后更新与 2012 年 3 月 2 日，并且遵循 [W3C 规范（工作草案）](https://www.w3.org/TR/file-system-api/)，起草于 2011 年 4 月 19 日。
 
 规范目前已废弃，没有得到大量的关注。
 

@@ -24,7 +24,7 @@ The returned value is a [SVGRect](/zh-CN/docs/Web/API/SVGRect) object, which def
 ### HTML
 
 ```html
-<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 200 200" xmlns="https://www.w3.org/2000/svg">
   <g id="group_text_1">
     <text x="5" y="16" transform="scale(2, 2)">Hello World!</text>
     <text x="8" y="32" transform="translate(0 20) scale(1.25 1)">

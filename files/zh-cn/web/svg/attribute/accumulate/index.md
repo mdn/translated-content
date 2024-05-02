@@ -15,7 +15,7 @@ slug: Web/SVG/Attribute/accumulate
 | -------- | --------------------------------------------------------------------------------- |
 | 值       | **none** \| sum                                                                   |
 | 可变性   | No                                                                                |
-| 规范文档 | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/animate.html#AdditionAttributes) |
+| 规范文档 | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG/animate.html#AdditionAttributes) |
 
 - sum
   - : 指定第一次循环后的每次循环建立在上次循环的终值上。

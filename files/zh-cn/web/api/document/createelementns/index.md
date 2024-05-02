@@ -19,7 +19,7 @@ document.createElementNS(namespaceURI, qualifiedName[, options]);
 ### 参数
 
 - `namespaceURI`
-  - : 指定与元素相关联的[命名空间 URI](http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/glossary.html#dt-namespaceURI)的字符串。创建的元素的[namespaceURI](/zh-CN/docs/Web/API/Node/namespaceURI)属性使用 namespaceURI 的值进行初始化。参见[有效的命名空间 URL](/zh-CN/docs/Web/API/Document/createElementNS#Valid_Namespace_URI's)。
+  - : 指定与元素相关联的[命名空间 URI](https://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/glossary.html#dt-namespaceURI)的字符串。创建的元素的[namespaceURI](/zh-CN/docs/Web/API/Node/namespaceURI)属性使用 namespaceURI 的值进行初始化。参见[有效的命名空间 URL](/zh-CN/docs/Web/API/Document/createElementNS#Valid_Namespace_URI's)。
 - `qualifiedName`
   - : 指定要创建的元素的类型的字符串。创建的元素的[nodeName](/zh-CN/docs/DOM/element.nodeName)属性使用 qualifiedName 的值进行初始化。
 - `options`可选的
@@ -32,8 +32,8 @@ document.createElementNS(namespaceURI, qualifiedName[, options]);
 
 ## 有效的命名空间 URI
 
-- HTML - 参阅 `http://www.w3.org/1999/xhtml`
-- SVG - 参阅 `http://www.w3.org/2000/svg`
+- HTML - 参阅 `https://www.w3.org/1999/xhtml`
+- SVG - 参阅 `https://www.w3.org/2000/svg`
 - XBL - 参阅 `http://www.mozilla.org/xbl`
 - XUL - 参阅 `http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul`
 
@@ -44,7 +44,7 @@ document.createElementNS(namespaceURI, qualifiedName[, options]);
 ```xml
 <?xml version="1.0"?>
 <page xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
-      xmlns:html="http://www.w3.org/1999/xhtml"
+      xmlns:html="https://www.w3.org/1999/xhtml"
       title="||Working with elements||"
       onload="init()">
 
@@ -55,7 +55,7 @@ document.createElementNS(namespaceURI, qualifiedName[, options]);
 
  function init(){
    container = document.getElementById("ContainerBox");
-   newdiv = document.createElementNS("http://www.w3.org/1999/xhtml","div");
+   newdiv = document.createElementNS("https://www.w3.org/1999/xhtml","div");
    txtnode = document.createTextNode("这是使用 createElementNS 和 createTextNode 动态构造的文本，然后使用 appendChild 插入到文档中。");
    newdiv.appendChild(txtnode);
    container.appendChild(newdiv);

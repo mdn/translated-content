@@ -8,7 +8,7 @@ slug: Web/API/Element/dblclick_event
 ## 常规信息
 
 - 规范
-  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-dbclick)
+  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-dbclick)
 - 接口
   - : {{domxref("MouseEvent")}}
 - 是否冒泡

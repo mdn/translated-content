@@ -44,7 +44,7 @@ _document_ 的默认基 URL 是文档的地址（浏览器显示的地址，可�
 
 ## 规范
 
-[DOM Level 3 Core: baseURI](http://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-baseURI)
+[DOM Level 3 Core: baseURI](https://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-baseURI)
 
 ## 参考
 

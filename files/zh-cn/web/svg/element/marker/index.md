@@ -24,7 +24,7 @@ svg {
 ```
 
 ```html
-<svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 300 100" xmlns="https://www.w3.org/2000/svg">
   <defs>
     <!-- 用作箭头的 marker -->
     <marker
@@ -75,7 +75,7 @@ svg {
 ```
 
 ```html
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 100 100" xmlns="https://www.w3.org/2000/svg">
   <defs>
     <!-- 箭头 marker 定义 -->
     <marker
@@ -127,7 +127,7 @@ svg {
 以下示例展示了如何使用 `context-fill` 和 `context-stroke` 值可以让一个 marker 使用与其附加到的形状相同的填充和描边。
 
 ```html
-<svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 50 50" xmlns="https://www.w3.org/2000/svg">
   <marker
     id="circle"
     markerWidth="6"

@@ -13,7 +13,7 @@ slug: Web/SVG/Attribute/attributeName
 | -------- | ------------------------------------------------------------------------------------- |
 | 值       | \<attributeName>                                                                      |
 | 可变性   | No                                                                                    |
-| 规范文档 | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/animate.html#AttributeNameAttribute) |
+| 规范文档 | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG/animate.html#AttributeNameAttribute) |
 
 ## 示例
 
@@ -23,7 +23,7 @@ slug: Web/SVG/Attribute/attributeName
 <?xml version="1.0"?>
 <svg width="250" height="250"
   viewPort="0 0 250 250" version="1.1"
-  xmlns="http://www.w3.org/2000/svg">
+  xmlns="https://www.w3.org/2000/svg">
   <rect x="50" y="50" width="100" height="100">
     <animate attributeType="XML"
       attributeName="y"

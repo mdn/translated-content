@@ -7,7 +7,7 @@ slug: Web/API/NodeList/item
 
 ### 概述
 
-根据给定的索引，返回一个 [`NodeList`](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-536297177)对象中包含的 Node 对象。
+根据给定的索引，返回一个 [`NodeList`](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-536297177)对象中包含的 Node 对象。
 
 ### 语法
 
@@ -40,6 +40,6 @@ var firstTable = tables.item(1); // 或者简写为 tables[1]，返回一个文�
 
 ### 规范
 
-[DOM Level 1 Core: NodeList.item()](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-item)
+[DOM Level 1 Core: NodeList.item()](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-item)
 
-[DOM Level 2 Core: NodeList.item()](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-844377136)
+[DOM Level 2 Core: NodeList.item()](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-844377136)

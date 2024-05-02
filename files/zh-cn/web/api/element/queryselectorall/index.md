@@ -79,7 +79,7 @@ var matches = el.querySelectorAll("iframe[data-src]");
 
 ## 规范
 
-- [选择器 API](http://www.w3.org/TR/selectors-api/)
+- [选择器 API](https://www.w3.org/TR/selectors-api/)
 
 ## 参见
 

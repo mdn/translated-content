@@ -13,7 +13,7 @@ slug: Web/SVG/Attribute/dur
 | -------- | --------------------------------------------------------------------------- |
 | 值       | [\<clock-value>](/zh-CN/SVG/Content_type#Clock-value) \| **indefinite**     |
 | 可变性   | No                                                                          |
-| 规范文档 | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/animate.html#DurAttribute) |
+| 规范文档 | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG/animate.html#DurAttribute) |
 
 - [\<clock-value>](/zh-CN/SVG/Content_type#Clock-value)
   - : 指定简单持续时间的时长。值必须大于 0。可以用小时（h）、分钟（m）、秒（s）、毫秒（ms）表达这个值。可以组合这些时间表达式以提供一个复合的持续时间，比如这样：`hh:mm:ss.iii`或者这样：`mm:ss.iii`。

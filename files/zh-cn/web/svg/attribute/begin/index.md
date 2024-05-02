@@ -7,7 +7,7 @@ slug: Web/SVG/Attribute/begin
 
 这个属性定义了动画何时开始。
 
-这个属性值是一个分号分隔的数列值。SMIL 规范的["Evaluation of begin and end time lists"](http://www.w3.org/TR/2001/REC-smil-animation-20010904/#Timing-EvaluationOfBeginEndTimeLists)章节详细解释了开始时间数列。每个单独的值可以是下述之一：`<offset-value>`、`<syncbase-value>`、`<event-value>`、`<repeat-value>`、`<accessKey-value>`、`<wallclock-sync-value>`或者关键词`indefinite`。
+这个属性值是一个分号分隔的数列值。SMIL 规范的["Evaluation of begin and end time lists"](https://www.w3.org/TR/2001/REC-smil-animation-20010904/#Timing-EvaluationOfBeginEndTimeLists)章节详细解释了开始时间数列。每个单独的值可以是下述之一：`<offset-value>`、`<syncbase-value>`、`<event-value>`、`<repeat-value>`、`<accessKey-value>`、`<wallclock-sync-value>`或者关键词`indefinite`。
 
 ## 用法
 
@@ -15,7 +15,7 @@ slug: Web/SVG/Attribute/begin
 | -------- | ----------------------------------------------------------------------------- |
 | 值       | \<begin-value-list>                                                           |
 | 可变性   | No                                                                            |
-| 规范文档 | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/animate.html#BeginAttribute) |
+| 规范文档 | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG/animate.html#BeginAttribute) |
 
 `<begin-value-list>`中的每一个值可以是下述之一：
 
@@ -41,7 +41,7 @@ slug: Web/SVG/Attribute/begin
   width="120"
   height="120"
   viewBox="0 0 120 120"
-  xmlns="http://www.w3.org/2000/svg"
+  xmlns="https://www.w3.org/2000/svg"
   version="1.1">
   <!-- animated rectangles -->
   <rect x="10" y="35" height="15" width="0">
@@ -102,9 +102,9 @@ slug: Web/SVG/Attribute/begin
   width="120"
   height="120"
   viewBox="0 0 120 120"
-  xmlns="http://www.w3.org/2000/svg"
+  xmlns="https://www.w3.org/2000/svg"
   version="1.1"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
+  xmlns:xlink="https://www.w3.org/1999/xlink">
   <!-- animated rectangles -->
   <rect x="10" y="35" height="15" width="0">
     <animate
@@ -164,9 +164,9 @@ slug: Web/SVG/Attribute/begin
   width="120"
   height="120"
   viewBox="0 0 120 120"
-  xmlns="http://www.w3.org/2000/svg"
+  xmlns="https://www.w3.org/2000/svg"
   version="1.1"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
+  xmlns:xlink="https://www.w3.org/1999/xlink">
   <!-- animated rectangle -->
   <rect x="10" y="35" height="15" width="0">
     <animate
@@ -224,9 +224,9 @@ slug: Web/SVG/Attribute/begin
   width="120"
   height="120"
   viewBox="0 0 120 120"
-  xmlns="http://www.w3.org/2000/svg"
+  xmlns="https://www.w3.org/2000/svg"
   version="1.1"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
+  xmlns:xlink="https://www.w3.org/1999/xlink">
   <!-- animated rectangle -->
   <rect x="10" y="35" height="15" width="0">
     <animate
@@ -286,9 +286,9 @@ slug: Web/SVG/Attribute/begin
   width="120"
   height="120"
   viewBox="0 0 120 120"
-  xmlns="http://www.w3.org/2000/svg"
+  xmlns="https://www.w3.org/2000/svg"
   version="1.1"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
+  xmlns:xlink="https://www.w3.org/1999/xlink">
   <!-- animated rectangles -->
   <rect x="10" y="35" height="15" width="0">
     <animate

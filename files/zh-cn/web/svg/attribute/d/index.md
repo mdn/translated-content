@@ -24,7 +24,7 @@ svg {
 ```
 
 ```html
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 100 100" xmlns="https://www.w3.org/2000/svg">
   <path
     fill="none"
     stroke="red"
@@ -135,7 +135,7 @@ svg {
 ```
 
 ```html
-<svg id="svg_css_ex1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<svg id="svg_css_ex1" viewBox="0 0 100 100" xmlns="https://www.w3.org/2000/svg">
   <path
     fill="none"
     stroke="red"
@@ -247,7 +247,7 @@ svg {
 ```
 
 ```html
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 100 100" xmlns="https://www.w3.org/2000/svg">
   <path
     fill="none"
     stroke="red"
@@ -425,7 +425,7 @@ svg {
 ```
 
 ```html
-<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 200 100" xmlns="https://www.w3.org/2000/svg">
   <!-- LineTo commands with absolute coordinates -->
   <path
     fill="none"
@@ -607,8 +607,8 @@ svg {
 ```html
 <svg
   viewBox="0 0 200 100"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
+  xmlns="https://www.w3.org/2000/svg"
+  xmlns:xlink="https://www.w3.org/1999/xlink">
   <!-- Cubic Bézier curve with absolute coordinates -->
   <path
     fill="none"
@@ -813,8 +813,8 @@ svg {
 ```html
 <svg
   viewBox="0 0 200 100"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
+  xmlns="https://www.w3.org/2000/svg"
+  xmlns:xlink="https://www.w3.org/1999/xlink">
   <!-- Quadratic Bézier curve with implicit repetition -->
   <path
     fill="none"
@@ -974,7 +974,7 @@ svg {
 ```
 
 ```html
-<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 20 20" xmlns="https://www.w3.org/2000/svg">
   <!-- The influence of the arc flags with which the arc is drawn -->
   <path
     fill="none"
@@ -1038,7 +1038,7 @@ svg {
 ```
 
 ```html
-<svg viewBox="0 -1 30 11" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 -1 30 11" xmlns="https://www.w3.org/2000/svg">
   <!--
   An open shape with the last point of
   the path different to the first one

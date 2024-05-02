@@ -27,4 +27,4 @@ document.forms["myform"].reset();
 
 ### 规范
 
-[DOM Level 2 HTML: reset](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-76767677)
+[DOM Level 2 HTML: reset](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-76767677)

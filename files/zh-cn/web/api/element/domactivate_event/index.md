@@ -31,8 +31,8 @@ slug: Web/API/Element/DOMActivate_event
 ## 示例
 
 ```
-<svg xmlns="http://www.w3.org/2000/svg" version="1.2" baseProfile="tiny"
-     xmlns:ev="http://www.w3.org/2001/xml-events"
+<svg xmlns="https://www.w3.org/2000/svg" version="1.2" baseProfile="tiny"
+     xmlns:ev="https://www.w3.org/2001/xml-events"
      width="6cm" height="5cm" viewBox="0 0 600 500">
 
   <desc>Example: invoke an ECMAScript function from a DOMActivate event</desc>

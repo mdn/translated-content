@@ -43,7 +43,7 @@ slug: Web/API/SVGAElement
     <tr>
       <th scope="row">规范文档</th>
       <td>
-        <a href="http://www.w3.org/TR/SVG11/linking.html#InterfaceSVGAElement"
+        <a href="https://www.w3.org/TR/SVG11/linking.html#InterfaceSVGAElement"
           >SVG 1.1 (2nd Edition)</a
         >
       </td>

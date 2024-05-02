@@ -27,7 +27,7 @@ slug: Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements
 
 ## 规范
 
-<http://www.w3.org/TR/cssom-view/>
+<https://www.w3.org/TR/cssom-view/>
 
 ## 参考文献
 

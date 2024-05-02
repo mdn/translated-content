@@ -20,7 +20,7 @@ _This interface has no methods, but inherits methods from: {{DOMxRef("DocumentAn
 ### MathML
 
 ```html
-<math xmlns="http://www.w3.org/1998/Math/MathML">
+<math xmlns="https://www.w3.org/1998/Math/MathML">
   <msqrt>
     <mi>x</mi>
   </msqrt>

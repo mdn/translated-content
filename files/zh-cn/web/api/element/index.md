@@ -55,7 +55,7 @@ _`Element` 从其父接口 {{DOMxRef("Node")}} 以及该接口的父接口 {{DOM
 
   - : 元素对应的命名空间 URI，如果没有则返回 `null`。
 
-    > **备注：** 在 Firefox 3.5 及更早版本中，HTML 元素不在命名空间中。在以后的版本中，HTML 元素在 HTML 树和 XML 树中都属于 [`http://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml/) 命名空间。
+    > **备注：** 在 Firefox 3.5 及更早版本中，HTML 元素不在命名空间中。在以后的版本中，HTML 元素在 HTML 树和 XML 树中都属于 [`https://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml/) 命名空间。
 
 - {{DOMxRef("Element.nextElementSibling")}} {{ReadOnlyInline}}
   - : 一个 `Element`，树中紧跟给定元素的元素，如果没有同级节点，则为 `null`。

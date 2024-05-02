@@ -59,14 +59,14 @@ l10n:
 ### 指定 CSS 规则的文档
 
 ```css
-@document url("http://www.w3.org/"),
-          url-prefix("http://www.w3.org/Style/"),
+@document url("https://www.w3.org/"),
+          url-prefix("https://www.w3.org/Style/"),
           domain("mozilla.org"),
           media-document("video"),
           regexp("https:.*") {
   /* 这里适用的 CSS 规则：
-     - 页面为“http://www.w3.org/”
-     - 任何 URL 以“http://www.w3.org/Style/”开头的页面
+     - 页面为“https://www.w3.org/”
+     - 任何 URL 以“https://www.w3.org/Style/”开头的页面
      - 任何 URL 的主机为“mozilla.org”或以“.mozilla.org”结尾的页面
      - 任何独立视频
      - 任何以“https:”开头的页面 */

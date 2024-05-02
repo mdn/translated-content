@@ -22,7 +22,7 @@ svg {
 ```
 
 ```html
-<svg viewBox="0 0 480 200" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 480 200" xmlns="https://www.w3.org/2000/svg">
   <filter id="gaussianBlur1">
     <feGaussianBlur stdDeviation="1" />
   </filter>

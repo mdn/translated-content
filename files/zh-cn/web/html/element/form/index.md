@@ -96,8 +96,8 @@ slug: Web/HTML/Element/form
 
   - : 浏览器使用这种 [HTTP](/zh-CN/docs/HTTP) 方式来提交 表单。可能的值有：
 
-    - `post`：指的是 HTTP [POST 方法](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5)；表单数据会包含在表单体内然后发送给服务器。
-    - `get`：指的是 HTTP [GET 方法](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3)；表单数据会附加在 `action` 属性的 URL 中，并以 '?' 作为分隔符，[没有副作用](/zh-CN/docs/Glossary/Idempotent) 时使用这个方法。
+    - `post`：指的是 HTTP [POST 方法](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5)；表单数据会包含在表单体内然后发送给服务器。
+    - `get`：指的是 HTTP [GET 方法](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3)；表单数据会附加在 `action` 属性的 URL 中，并以 '?' 作为分隔符，[没有副作用](/zh-CN/docs/Glossary/Idempotent) 时使用这个方法。
     - `dialog`：如果表单在 {{HTMLElement("dialog")}} 元素中，提交时关闭对话框。此值可以被 {{HTMLElement("button")}}、[`<input type="submit">`](/zh-CN/docs/Web/HTML/Element/input/submit) 或 [`<input type="image">`](/zh-CN/docs/Web/HTML/Element/input/image) 元素中的 [`formmethod`](/zh-CN/docs/Web/HTML/Element/button#formmethod) 属性覆盖。
 
 - `novalidate`

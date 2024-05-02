@@ -43,7 +43,7 @@ span {
 
 ## 规范
 
-- [CSS 2.1 Syntax and basic data types #comments](http://www.w3.org/TR/CSS21/syndata.html#comments)
+- [CSS 2.1 Syntax and basic data types #comments](https://www.w3.org/TR/CSS21/syndata.html#comments)
 
 ## 参见
 

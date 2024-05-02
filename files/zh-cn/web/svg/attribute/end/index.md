@@ -15,7 +15,7 @@ slug: Web/SVG/Attribute/end
 | -------- | --------------------------------------------------------------------------- |
 | 值       | \<End-value-list>                                                           |
 | 可变性   | No                                                                          |
-| 规范文档 | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/animate.html#EndAttribute) |
+| 规范文档 | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG/animate.html#EndAttribute) |
 
 欲知在`<end-value-list>`中允许用哪些值，请阅读{{ SVGAttr("begin") }}属性。
 

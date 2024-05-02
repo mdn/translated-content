@@ -19,8 +19,8 @@ slug: Web/SVG/Element/a
 <svg
   width="140"
   height="30"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
+  xmlns="https://www.w3.org/2000/svg"
+  xmlns:xlink="https://www.w3.org/1999/xlink">
   <a xlink:href="https://developer.mozilla.org/zh-CN/docs/SVG" target="_blank">
     <rect height="30" width="120" y="0" x="0" rx="15" />
     <text fill="white" text-anchor="middle" y="21" x="60">SVG on MDN</text>

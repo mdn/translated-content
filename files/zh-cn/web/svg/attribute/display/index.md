@@ -36,7 +36,7 @@ svg {
 ```
 
 ```html
-<svg viewBox="0 0 220 100" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 220 100" xmlns="https://www.w3.org/2000/svg">
   <!-- Here the yellow rectangle is displayed -->
   <rect x="0" y="0" width="100" height="100" fill="skyblue"></rect>
   <rect x="20" y="20" width="60" height="60" fill="yellow"></rect>

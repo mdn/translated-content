@@ -15,7 +15,7 @@ SVG 允许我们定义以后需要重复使用的图形元素。建议把所有�
 
 ```xml
 <svg width="80px" height="30px" viewBox="0 0 80 30"
-     xmlns="http://www.w3.org/2000/svg">
+     xmlns="https://www.w3.org/2000/svg">
 
   <defs>
     <linearGradient id="Gradient01">

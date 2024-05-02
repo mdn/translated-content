@@ -18,7 +18,7 @@ slug: Web/SVG/Element/feDiffuseLighting
 以下示例演示了一个圆上的`feDiffuseLighting`元素的效果，演示了每种可用的光源，光的方向来自左上角。
 
 ```html
-<svg width="440" height="140" xmlns="http://www.w3.org/2000/svg">
+<svg width="440" height="140" xmlns="https://www.w3.org/2000/svg">
   <!-- No light is applied -->
   <text text-anchor="middle" x="60" y="22">No Light</text>
   <circle cx="60" cy="80" r="50" fill="green" />

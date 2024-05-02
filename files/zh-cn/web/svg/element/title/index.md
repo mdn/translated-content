@@ -18,7 +18,7 @@ SVG 绘图中的每个窗口元素或图形元素都可以提供一个`title`描
 下面的代码片段显示了 SVG `<title>`标签的用法。
 
 ```xml
-<svg width="500" height="300" xmlns="http://www.w3.org/2000/svg">
+<svg width="500" height="300" xmlns="https://www.w3.org/2000/svg">
   <g>
     <title>SVG Title Demo example</title>
     <rect x="10" y="10" width="200" height="50"

@@ -348,4 +348,4 @@ button#tiny {
 
 ## 相关主题与资源
 
-- [Touch Events Standard](http://www.w3.org/TR/touch-events/)
+- [Touch Events Standard](https://www.w3.org/TR/touch-events/)

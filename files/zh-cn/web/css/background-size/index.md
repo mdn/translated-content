@@ -164,7 +164,7 @@ background-size: unset;
 
 ## 备注
 
-如果用渐变作为背景并且对它使用了`background-size` ，最好不要只用一个 auto，或者只指定一个宽度值 (例如 `background-size: 50%`)。对这两种情况 Firefox 8 有所改变，并且目前各浏览器表现不一致，不是全部浏览器都完全支持 [CSS3 `background-size` 规范](http://www.w3.org/TR/css3-background/#the-background-size) 与 [CSS3 Image Values gradient 规范](http://dev.w3.org/csswg/css3-images/#gradients) 。
+如果用渐变作为背景并且对它使用了`background-size` ，最好不要只用一个 auto，或者只指定一个宽度值 (例如 `background-size: 50%`)。对这两种情况 Firefox 8 有所改变，并且目前各浏览器表现不一致，不是全部浏览器都完全支持 [CSS3 `background-size` 规范](https://www.w3.org/TR/css3-background/#the-background-size) 与 [CSS3 Image Values gradient 规范](http://dev.w3.org/csswg/css3-images/#gradients) 。
 
 ```css
 .bar {

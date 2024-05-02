@@ -22,7 +22,7 @@ button.svg:
 
 ```xml
 <?xml version="1.1" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="https://www.w3.org/2000/svg">
   <a xlink:href="page2.html" target="_top">
     <g>
       <!-- button graphical elements here -->
@@ -41,7 +41,7 @@ button.svg:
 
 ```xml
 <?xml version="1.1" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="https://www.w3.org/2000/svg">
   <g onclick="top.document.href='page2.html'" cursor="pointer">
     <!-- button graphical elements here -->
   </g>

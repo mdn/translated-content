@@ -22,7 +22,7 @@ svg {
 ```
 
 ```html
-<svg viewBox="0 0 480 200" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 480 200" xmlns="https://www.w3.org/2000/svg">
   <filter id="blending1" x="0" y="0" width="100%" height="100%">
     <feFlood
       result="floodFill"

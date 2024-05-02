@@ -23,7 +23,7 @@ MIME 类型描述了邮件或者 web 服务器或者 web 应用中的媒体内�
 
 完整的 MIME 类型列表可在 [IANA | MIME Media Types](http://www.iana.org/assignments/media-types/index.html) 查看。
 
-在[HTTP specification](http://www.w3.org/Protocols/HTTP/1.1/spec.html) 中定义了能够描述在 web 中使用的媒体类型的 MIME 超集。
+在[HTTP specification](https://www.w3.org/Protocols/HTTP/1.1/spec.html) 中定义了能够描述在 web 中使用的媒体类型的 MIME 超集。
 
 ### Why are correct MIME types important?
 
@@ -85,7 +85,7 @@ MIME 类型猜测导致 IE 浏览器的安全漏洞（通过利用 IE 能够将�
 
 - [Incorrect MIME Type for CSS Files](/zh-CN/Incorrect_MIME_Type_for_CSS_Files)
 - [IANA | MIME Media Types](http://www.iana.org/assignments/media-types/index.html)
-- [Hypertext Transfer Protocol — HTTP/1.1](http://www.w3.org/Protocols/HTTP/1.1/spec.html)
+- [Hypertext Transfer Protocol — HTTP/1.1](https://www.w3.org/Protocols/HTTP/1.1/spec.html)
 - [Microsoft - 293336 - INFO: WebCast: MIME Type Handling in Microsoft Internet Explorer](http://support.microsoft.com/default.aspx?sd=msdn&scid=kb;en-us;293336)
 - [Microsoft - Appendix A: MIME Type Detection in Internet Explorer](http://msdn.microsoft.com/workshop/networking/moniker/overview/appendix_a.asp)
 - [Microsoft - Security Update, March 29, 2001](http://www.microsoft.com/windows/ie/downloads/critical/q290108/)

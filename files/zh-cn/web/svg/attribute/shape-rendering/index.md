@@ -26,7 +26,7 @@ slug: Web/SVG/Attribute/shape-rendering
 ## 示例
 
 ```xml
-<svg xmlns="http://www.w3.org/2000/svg"
+<svg xmlns="https://www.w3.org/2000/svg"
   version="1.1" width="100" height="100"
   shape-rendering="optimizeSpeed"><!-- 这个示例在 Firefox 下看区别更明显 -->
 ```
@@ -37,7 +37,7 @@ slug: Web/SVG/Attribute/shape-rendering
 同样，你也可以在 CSS 样式中使用 shape-rendering:
 
 ```xml
-<svg xmlns="http://www.w3.org/2000/svg"
+<svg xmlns="https://www.w3.org/2000/svg"
   version="1.1" width="100" height="100"
   style="shape-rendering:optimizeSpeed;">
 ```

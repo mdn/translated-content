@@ -64,7 +64,7 @@ content: inherit
 <h1>5</h1>
 <p>
   We shall start this with a quote from Sir Tim Berners-Lee,
-  <q cite="http://www.w3.org/People/Berners-Lee/FAQ.html#Internet">
+  <q cite="https://www.w3.org/People/Berners-Lee/FAQ.html#Internet">
     I was lucky enough to invent the Web at the time when the Internet already
     existed - and had for a decade and a half.</q
   >
@@ -205,7 +205,7 @@ for spacing purposes  */
       Mozilla Developer Network</a
     >
   </li>
-  <li><a id="w3c" href="http://www.w3c.org/"> World Wide Web Consortium</a></li>
+  <li><a id="w3c" href="https://www.w3c.org/"> World Wide Web Consortium</a></li>
 </ul>
 ```
 

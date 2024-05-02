@@ -29,4 +29,4 @@ string = cssRule.cssText
 
 ## 规范
 
-- [DOM Level 2 Style CSS - Interface CSSStyleRule (introduced in DOM Level 2)](http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSRule)
+- [DOM Level 2 Style CSS - Interface CSSStyleRule (introduced in DOM Level 2)](https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSRule)

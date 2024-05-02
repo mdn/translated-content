@@ -12,7 +12,7 @@ slug: Web/SVG/Tutorial/SVG_In_HTML_Introduction
 源码如下： [查看示例](/presentations/xtech2005/svg-canvas/SVGDemo.xml)
 
 ```plain
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="https://www.w3.org/1999/xhtml">
 <head>
 <title>XTech SVG Demo</title>
 <style>
@@ -40,7 +40,7 @@ slug: Web/SVG/Tutorial/SVG_In_HTML_Introduction
   </fieldset>
 </form>
 
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+<svg xmlns="https://www.w3.org/2000/svg" version="1.1"
   viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice"
   style="width:100%; height:100%; position:absolute; top:0; left:0; z-index:-1;">
   <linearGradient id="gradient">
@@ -71,8 +71,8 @@ slug: Web/SVG/Tutorial/SVG_In_HTML_Introduction
 > **备注：** 如果需要给一个内嵌的 SVG 元素通过 DOM 方法添加一个有外链的图片，我们需要使用 `setAttributeNS` 来设置外链地址 `href`. 示例如下：
 >
 > ```js
-> var img = document.createElementNS("http://www.w3.org/2000/svg", "image");
-> img.setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "move.png");
+> var img = document.createElementNS("https://www.w3.org/2000/svg", "image");
+> img.setAttributeNS("https://www.w3.org/1999/xlink", "xlink:href", "move.png");
 > ```
 
 ## 细节

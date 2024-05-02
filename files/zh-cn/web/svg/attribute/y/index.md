@@ -59,7 +59,7 @@ svg {
 ```
 
 ```html
-<svg viewBox="0 0 100 300" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 100 300" xmlns="https://www.w3.org/2000/svg">
   <rect y="20" x="20" width="60" height="60" />
   <rect y="120" x="20" width="60" height="60" />
   <rect y="220" x="20" width="60" height="60" />

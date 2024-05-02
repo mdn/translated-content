@@ -9,8 +9,8 @@ slug: Web/API/FileSystem
 
 ## 关于本文档
 
-本文档的上次更新是 2012 年 3 月 2 日，引用来源是 2011 年 4 月 9 日的草案 [W3C Specifications (Working Draft)](http://www.w3.org/TR/2011/WD-file-system-api-20110419/)。
-[该草案](http://www.w3.org/TR/file-system-api/)似乎已经被放弃了，任何实现不应该参考这份草案，也不该引用它。
+本文档的上次更新是 2012 年 3 月 2 日，引用来源是 2011 年 4 月 9 日的草案 [W3C Specifications (Working Draft)](https://www.w3.org/TR/2011/WD-file-system-api-20110419/)。
+[该草案](https://www.w3.org/TR/file-system-api/)似乎已经被放弃了，任何实现不应该参考这份草案，也不该引用它。
 
 ## 基本概念
 

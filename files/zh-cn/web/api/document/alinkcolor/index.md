@@ -21,6 +21,6 @@ color 可以是一个“颜色名称”（例如，“blue”，“darkblue”�
 
 document.alinkcolor 在 [DOM Level 2 HTML](<DOM Level 2 HTML>) 中不推荐使用。可以使用 CSS 伪类选择器 {{ Cssxref(":active") }}。
 
-另一种选择是使用 document.body.alink，虽然这在 [HTML 4.01](http://www.w3.org/TR/html401/struct/global.html#adef-alink) 中可以用 CSS 使用替代。
+另一种选择是使用 document.body.alink，虽然这在 [HTML 4.01](https://www.w3.org/TR/html401/struct/global.html#adef-alink) 中可以用 CSS 使用替代。
 
 Gecko 支持 alinkcolor/:active 和 {{ Cssxref(":focus") }}。在 Internet Explorer 6/7 中 alinkcolor/:active 仅在 [HTML Elemeint A](/zh-CN/docs/Web/API/Document/en/HTML/Element/a) 上有效。

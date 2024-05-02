@@ -341,7 +341,7 @@ h1 {
 ## 参见
 
 - Specificity Calculator: An interactive website to test and understand your own CSS rules - <https://specificity.keegan.st/>
-- CSS3 选择器优先级 - <http://www.w3.org/TR/selectors/#specificity>
+- CSS3 选择器优先级 - <https://www.w3.org/TR/selectors/#specificity>
 - CSS 重要概念：
 
   - [CSS 语法](/zh-CN/docs/Web/CSS/Syntax)

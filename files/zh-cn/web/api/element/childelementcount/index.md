@@ -89,7 +89,7 @@ if (foo.childElementCount > 0) {
 
 ## 规范
 
-[childElementCount (W3C)](http://www.w3.org/TR/2008/WD-ElementTraversal-20080303/#attribute-childElementCount)
+[childElementCount (W3C)](https://www.w3.org/TR/2008/WD-ElementTraversal-20080303/#attribute-childElementCount)
 
 ## 参见
 

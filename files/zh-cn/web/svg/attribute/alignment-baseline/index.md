@@ -15,14 +15,14 @@ slug: Web/SVG/Attribute/alignment-baseline
 | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 值       | **auto** \| baseline \| before-edge \| text-before-edge \| middle \| central \| after-edge \| text-after-edge \| ideographic \| alphabetic \| hanging \| mathematical \| inherit |
 | 可变性   | Yes                                                                                                                                                                              |
-| 规范文档 | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/text.html#AlignmentBaselineProperty)                                                                                          |
+| 规范文档 | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG11/text.html#AlignmentBaselineProperty)                                                                                          |
 
 ## 示例
 
 ```plain
 <?xml version="1.0"?>
 <svg width="300" height="120" viewBox="0 0 300 120"
-     xmlns="http://www.w3.org/2000/svg" version="1.1">
+     xmlns="https://www.w3.org/2000/svg" version="1.1">
 
     <!-- Materialisation of anchors -->
     <path d="M60,10 L60,110

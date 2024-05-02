@@ -31,7 +31,7 @@ svg {
 ```
 
 ```html
-<svg viewBox="0 0 18 12" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 18 12" xmlns="https://www.w3.org/2000/svg">
   <!--
   Upper left path:
   Effect of the "miter" value
@@ -131,7 +131,7 @@ svg {
 ```
 
 ```html
-<svg viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 6 6" xmlns="https://www.w3.org/2000/svg">
   <!-- Effect of the "arcs" value -->
   <path
     d="M1,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3"
@@ -173,7 +173,7 @@ svg {
 ```
 
 ```html
-<svg viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 6 6" xmlns="https://www.w3.org/2000/svg">
   <!-- Effect of the "bevel" value -->
   <path
     d="M1,5 l2,-3 l2,3"
@@ -213,7 +213,7 @@ svg {
 ```
 
 ```html
-<svg viewBox="0 -1 10 7" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 -1 10 7" xmlns="https://www.w3.org/2000/svg">
   <!-- Effect of the "miter" value -->
   <path
     d="M1,5 l2,-3 l2,3"
@@ -277,7 +277,7 @@ svg {
 ```
 
 ```html
-<svg viewBox="0 -1 10 7" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 -1 10 7" xmlns="https://www.w3.org/2000/svg">
   <!-- Effect of the "miter-clip" value -->
   <path
     d="M1,5 l2,-3 l2,3"
@@ -336,7 +336,7 @@ svg {
 ```
 
 ```html
-<svg viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 6 6" xmlns="https://www.w3.org/2000/svg">
   <!-- Effect of the "round" value -->
   <path
     d="M1,5 l2,-3 l2,3"

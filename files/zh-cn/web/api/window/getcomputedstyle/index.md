@@ -126,7 +126,7 @@ CSS 属性值可以使用`getPropertyValue(propName)`API 或直接索引到对�
 
 ## 规范
 
-- [DOM Level 2 Style: getComputedStyle](http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSview-getComputedStyle)
+- [DOM Level 2 Style: getComputedStyle](https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSview-getComputedStyle)
 - [CSS Object Model specification](http://dev.w3.org/csswg/cssom/#resolved-values)
 
 ## 参见

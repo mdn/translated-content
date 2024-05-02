@@ -202,7 +202,7 @@ img:nth-of-type(2) {
 ```html hidden
 <svg
   id="MDN-logo"
-  xmlns="http://www.w3.org/2000/svg"
+  xmlns="https://www.w3.org/2000/svg"
   viewBox="0 0 361 104.2"
   xml:space="preserve"
   role="img">

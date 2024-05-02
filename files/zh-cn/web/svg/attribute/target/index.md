@@ -29,7 +29,7 @@ text {
 ```
 
 ```html
-<svg viewBox="0 0 300 120" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 300 120" xmlns="https://www.w3.org/2000/svg">
   <a href="https://developer.mozilla.org" target="_self">
     <text x="0" y="20">在 iframe 中打开链接</text>
   </a>

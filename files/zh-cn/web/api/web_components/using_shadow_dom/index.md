@@ -314,9 +314,9 @@ class FilledCircle extends HTMLElement {
     const shadow = this.attachShadow({ mode: "open" });
 
     // 创建内部实现
-    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    const svg = document.createElementNS("https://www.w3.org/2000/svg", "svg");
     const circle = document.createElementNS(
-      "http://www.w3.org/2000/svg",
+      "https://www.w3.org/2000/svg",
       "circle",
     );
     circle.setAttribute("cx", "50");

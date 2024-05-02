@@ -43,4 +43,4 @@ string
 
 ### 额外资源
 
-- [WAI-ARIA specification for aria-label](http://www.w3.org/TR/wai-aria/states_and_properties#aria-label)
+- [WAI-ARIA specification for aria-label](https://www.w3.org/TR/wai-aria/states_and_properties#aria-label)

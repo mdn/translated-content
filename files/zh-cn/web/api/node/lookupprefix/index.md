@@ -11,5 +11,5 @@ slug: Web/API/Node/lookupPrefix
 
 ### 相关链接
 
-- [http://www.w3.org/TR/DOM-Level-3-Cor...amespacePrefix](http://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-lookupNamespacePrefix)
+- [https://www.w3.org/TR/DOM-Level-3-Cor...amespacePrefix](https://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-lookupNamespacePrefix)
 - [Code snippets: lookupPrefix](/En/Code_snippets/LookupPrefix)

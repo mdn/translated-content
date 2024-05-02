@@ -11,7 +11,7 @@ slug: Web/Accessibility/Mobile_accessibility_checklist
 
 ## 颜色
 
-- 颜色对比度**必须**遵循 [WCAG 2.0](http://www.w3.org/TR/WCAG/) AA 等级需求：
+- 颜色对比度**必须**遵循 [WCAG 2.0](https://www.w3.org/TR/WCAG/) AA 等级需求：
 
   - 普通文本的对比率为 4.5:1（小于 18 磅或黑体 14 磅）
   - 大文本对比率为 3:1（大于等于 18 磅或黑体 14 磅）【译者注：字体单位为 point、PT】
@@ -33,7 +33,7 @@ slug: Web/Accessibility/Mobile_accessibility_checklist
 - 所有可激活元素**必须**可被聚焦：
 
   - 标准控件，如链接、按钮、表单域默认可被聚焦。
-  - 非标准控件**必须**分配给它们一个适当的 [ARIA Role](http://www.w3.org/TR/wai-aria/roles) 如 `button`，`link` 或者 `checkbox`。
+  - 非标准控件**必须**分配给它们一个适当的 [ARIA Role](https://www.w3.org/TR/wai-aria/roles) 如 `button`，`link` 或者 `checkbox`。
 
 - 焦点应该是有逻辑顺序，且方式一致。
 
@@ -42,14 +42,14 @@ slug: Web/Accessibility/Mobile_accessibility_checklist
 - 应用中，每个展示的非文本元素都**必须**提供等效文本。
 
   - 恰当的位置使用 _alt_ 和 _title_（请参考 Steve Faulkner 的帖子 - 关于 [Using the HTML title attribute](http://blog.paciellogroup.com/2013/01/using-the-html-title-attribute-updated/) 。）
-  - 如果上面的特性不适用，使用恰当的[ARIA Properties](http://www.w3.org/WAI/PF/aria/states_and_properties#global_states_header)，比如 `aria-label`, `aria-labelledby`, 或 `aria-describedby`.
+  - 如果上面的特性不适用，使用恰当的[ARIA Properties](https://www.w3.org/WAI/PF/aria/states_and_properties#global_states_header)，比如 `aria-label`, `aria-labelledby`, 或 `aria-describedby`.
 
 - **必须**避免文本图像。
 - 所有的表单控件**必须**有标签 ({{ htmlelement("label") }} elements) ，以便于读屏用户的使用。
 
 ## 状态处理
 
-- 标准控件，如单选按钮和复选是通过操作系统处理的，而其他自定义控件的状态改变需要通过 [ARIA States](http://www.w3.org/TR/wai-aria/states_and_properties#attrs_widgets_header) ，如 `aria-checked`, `aria-disabled`, `aria-selected`, `aria-expanded`,和 `aria-pressed`.
+- 标准控件，如单选按钮和复选是通过操作系统处理的，而其他自定义控件的状态改变需要通过 [ARIA States](https://www.w3.org/TR/wai-aria/states_and_properties#attrs_widgets_header) ，如 `aria-checked`, `aria-disabled`, `aria-selected`, `aria-expanded`,和 `aria-pressed`.
 
 ## General Guidelines 常规指南
 
@@ -63,7 +63,7 @@ slug: Web/Accessibility/Mobile_accessibility_checklist
   <h3>Low level heading</h3>
   ```
 
-- 应使用 [ARIA Landmark Roles](http://www.w3.org/TR/wai-aria/roles#landmark_roles_header) 描述应用或文档的结构，如 `banner`, `complementary`, `contentinfo`, `main`, `navigation`, `search`.
+- 应使用 [ARIA Landmark Roles](https://www.w3.org/TR/wai-aria/roles#landmark_roles_header) 描述应用或文档的结构，如 `banner`, `complementary`, `contentinfo`, `main`, `navigation`, `search`.
 - 触摸事件处理器，只能通过 `touchend` 事件触发。
 - 触摸目标必须足够大，方便用户交互 (参考 [BBC Mobile Accessibility Guidelines](http://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile/design/touch-target-size) 关于触摸目标尺寸的指南)
 

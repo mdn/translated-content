@@ -20,7 +20,7 @@ svg {
 ```
 
 ```html
-<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 300 200" xmlns="https://www.w3.org/2000/svg">
   <ellipse cx="50" cy="50" rx="0" ry="25" />
   <ellipse cx="150" cy="50" rx="25" ry="25" />
   <ellipse cx="250" cy="50" rx="50" ry="25" />

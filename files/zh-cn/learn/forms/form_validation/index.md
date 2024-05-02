@@ -352,7 +352,7 @@ input:focus:invalid {
 
 要自定义这些消息的外观和文本，你必须使用 JavaScript; 不能使用 HTML 和 CSS 来改变。
 
-HTML5 提供 [constraint validation API](http://www.w3.org/TR/html5/forms.html#the-constraint-validation-api) 来检测和自定义表单元素的状态。除此之外，他可以改变错误信息的文本。让我们快速的看一个例子：
+HTML5 提供 [constraint validation API](https://www.w3.org/TR/html5/forms.html#the-constraint-validation-api) 来检测和自定义表单元素的状态。除此之外，他可以改变错误信息的文本。让我们快速的看一个例子：
 
 ```html
 <form>

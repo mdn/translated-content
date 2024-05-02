@@ -20,7 +20,7 @@ svg {
 ```
 
 ```html
-<svg viewBox="0 0 30 10" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 30 10" xmlns="https://www.w3.org/2000/svg">
   <defs>
     <filter id="shadow">
       <feDropShadow dx="0.2" dy="0.4" stdDeviation="0.2" />

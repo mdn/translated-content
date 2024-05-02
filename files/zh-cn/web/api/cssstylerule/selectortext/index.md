@@ -30,4 +30,4 @@ alert(stylesheet.cssRules[0].selectorText); // body
 
 ## 标准
 
-- [Document Object Model CSS - #CSS-CSSRuleCSS](http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSRule)
+- [Document Object Model CSS - #CSS-CSSRuleCSS](https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSRule)

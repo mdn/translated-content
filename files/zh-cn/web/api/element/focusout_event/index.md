@@ -8,7 +8,7 @@ slug: Web/API/Element/focusout_event
 ## 基本信息
 
 - Specification
-  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-focusout)
+  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-focusout)
 - Interface
   - : {{domxref("FocusEvent")}}
 - Bubbles

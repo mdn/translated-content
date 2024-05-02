@@ -32,7 +32,7 @@ svg {
 ```
 
 ```html
-<svg viewBox="-10 -10 220 120" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="-10 -10 220 120" xmlns="https://www.w3.org/2000/svg">
   <!-- fill-rule 的默认值 -->
   <polygon
     fill-rule="nonzero"
@@ -59,7 +59,7 @@ svg {
 | 值       | nonzero \| evenodd                                                               |
 | 默认值   | nonzero                                                                          |
 | 可变性   | Yes                                                                              |
-| 规范文档 | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/painting.html#FillRuleProperty) |
+| 规范文档 | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG/painting.html#FillRuleProperty) |
 
 `fill-rule` 属性为如何确定一个形状的内部（即可以被填充的区域）提供了两个可选值：
 
@@ -78,7 +78,7 @@ svg {
 ```
 
 ```html
-<svg viewBox="-10 -10 320 120" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="-10 -10 320 120" xmlns="https://www.w3.org/2000/svg">
   <!-- nonzero 填充规则被用于路径段会相交的形状上的效果 -->
   <polygon
     fill-rule="nonzero"
@@ -124,7 +124,7 @@ svg {
 ```
 
 ```html
-<svg viewBox="-10 -10 320 120" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="-10 -10 320 120" xmlns="https://www.w3.org/2000/svg">
   <!-- evenodd 填充规则被用于路径段会相交的形状上的效果 -->
   <polygon
     fill-rule="evenodd"

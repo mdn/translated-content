@@ -16,7 +16,7 @@ slug: Web/SVG/Element/use
 ## 示例
 
 ```xml
-<svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="100%" height="100%" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
   <style>
     .classA { fill:red }
   </style>

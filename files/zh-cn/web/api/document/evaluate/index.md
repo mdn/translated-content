@@ -20,7 +20,7 @@ var xpathResult = document.evaluate(
 ```
 
 - `xpathExpression` 表示要计算的 Xpath 字符串。
-- `contextNode` 表示本次查询的*上下文节点*（参照 XPath 规范 <http://www.w3.org/TR/xpath>）。通常会使用 `document`。
+- `contextNode` 表示本次查询的*上下文节点*（参照 XPath 规范 <https://www.w3.org/TR/xpath>）。通常会使用 `document`。
 - `namespaceResolver` 是函数。传入名空间前缀，返回跟此前缀相关的名空间 URI（字符串）。通常用来解析 Xpath 内的前缀，以便对文档进行匹配。HTML 文档或者不使用名空间前缀的文档，通常传入 `null`。
 - `resultType` 是整数。指定所返回的 `XPathResult` 的类型，常使用 [named constant properties](#Result_types)，如 `XPathResult.ANY_TYPE`，范围 0 到 9，见下表。
 - `result` 为 `XPathResult` 型，用以存储查询结果。通常传入 `null`，此时将创建新的 `XPathResult` 对象。

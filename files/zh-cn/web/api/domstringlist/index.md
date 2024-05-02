@@ -21,4 +21,4 @@ slug: Web/API/DOMStringList
 
 ## Specifications
 
-- [http://www.w3.org/TR/DOM-Level-3-Cor...#DOMStringList](http://www.w3.org/TR/DOM-Level-3-Core/core.html#DOMStringList)
+- [https://www.w3.org/TR/DOM-Level-3-Cor...#DOMStringList](https://www.w3.org/TR/DOM-Level-3-Core/core.html#DOMStringList)

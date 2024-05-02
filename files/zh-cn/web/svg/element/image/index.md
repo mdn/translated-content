@@ -41,7 +41,7 @@ SVG 中 PNG 图像的基本渲染：
 ### SVG
 
 ```html
-<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+<svg width="200" height="200" xmlns="https://www.w3.org/2000/svg">
   <image href="mdn_logo_only_color.png" height="200" width="200" />
 </svg>
 ```

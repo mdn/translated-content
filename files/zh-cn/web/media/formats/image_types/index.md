@@ -945,7 +945,7 @@ SVG 是一种基于 [XML](/zh-CN/docs/Glossary/XML) 的[矢量图形](https://zh
 SVG 文件是包含源代码的文本文件，解释后可绘制所需的图像。例如，此示例定义了一个初始大小为 100 x 100 单位的绘图区域，其中包含一条斜穿方框的线：
 
 ```html
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 100 100" xmlns="https://www.w3.org/2000/svg">
   <line x1="0" y1="80" x2="100" y2="20" stroke="black" />
 </svg>
 ```

@@ -17,7 +17,7 @@ slug: Web/SVG/Element/svg
 
 ```xml
 <?xml version="1.0"?>
-<svg xmlns="http://www.w3.org/2000/svg"
+<svg xmlns="https://www.w3.org/2000/svg"
      width="150" height="100" viewBox="0 0 3 2">
 
   <rect width="1" height="2" x="0" fill="#008d46" />

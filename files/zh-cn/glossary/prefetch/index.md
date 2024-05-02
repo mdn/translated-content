@@ -50,7 +50,7 @@ Link: </images/big.jpeg>; rel=prefetch
 
 ### 链接预取是符合规范的吗？
 
-是的，本文档中描述的链接预取和现有 web 规范不冲突。实际上，在 HTML 4.01 规范允许定义新的 link type（参见 [章节 6.12：Like types](http://www.w3.org/TR/html4/types.html#type-links)）。但是 Mozilla 采用的具体处理机制还没有确定规范。一份互联网草案正在准备中。
+是的，本文档中描述的链接预取和现有 web 规范不冲突。实际上，在 HTML 4.01 规范允许定义新的 link type（参见 [章节 6.12：Like types](https://www.w3.org/TR/html4/types.html#type-links)）。但是 Mozilla 采用的具体处理机制还没有确定规范。一份互联网草案正在准备中。
 
 本特性的规范属于 HTML 5 的一部分，参见最新的工作草案，[章节 §5.11.3.13. Link type "prefetch"](http://www.whatwg.org/specs/web-apps/current-work/#link-type-prefetch)。
 

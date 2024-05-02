@@ -28,7 +28,7 @@ slug: Web/SVG/Attribute/stroke-dasharray
   height="200"
   viewPort="0 0 200 300"
   version="1.1"
-  xmlns="http://www.w3.org/2000/svg">
+  xmlns="https://www.w3.org/2000/svg">
   <line stroke-dasharray="5, 5" x1="10" y1="10" x2="190" y2="10" />
   <line stroke-dasharray="5, 10" x1="10" y1="30" x2="190" y2="30" />
   <line stroke-dasharray="10, 5" x1="10" y1="50" x2="190" y2="50" />

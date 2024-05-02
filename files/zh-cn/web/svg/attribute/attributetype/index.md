@@ -13,7 +13,7 @@ slug: Web/SVG/Attribute/attributeType
 | -------- | ------------------------------------------------------------------------------------- |
 | 值       | CSS \| XML \| **auto**                                                                |
 | 可变性   | No                                                                                    |
-| 规范文档 | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/animate.html#AttributeTypeAttribute) |
+| 规范文档 | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG/animate.html#AttributeTypeAttribute) |
 
 这个属性可取下列值之一：
 

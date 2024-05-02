@@ -16,8 +16,8 @@ slug: Web/SVG/Element/glyph
 ```xml
 <?xml version="1.0" standalone="yes"?>
 <svg width="400px" height="300px" version="1.1"
-  xmlns = 'http://www.w3.org/2000/svg'>
-<!-- Example copied from http://www.w3.org/TR/SVG/fonts.html#GlyphElement -->
+  xmlns = 'https://www.w3.org/2000/svg'>
+<!-- Example copied from https://www.w3.org/TR/SVG/fonts.html#GlyphElement -->
   <defs>
 
     <font id="Font1" horiz-adv-x="1000">

@@ -48,4 +48,4 @@ uri = stylesheet.href
 
 ### 规范
 
-[stylesheet.href](http://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/stylesheets.html#StyleSheets-StyleSheet-href)
+[stylesheet.href](https://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/stylesheets.html#StyleSheets-StyleSheet-href)

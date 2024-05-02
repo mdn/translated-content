@@ -26,8 +26,8 @@ svg {
 ```html
 <svg
   viewBox="-40 0 150 100"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
+  xmlns="https://www.w3.org/2000/svg"
+  xmlns:xlink="https://www.w3.org/1999/xlink">
   <g
     fill="grey"
     transform="rotate(-10 50 100)
@@ -103,7 +103,7 @@ svg {
 ```
 
 ```html
-<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 200 200" xmlns="https://www.w3.org/2000/svg">
   <rect x="10" y="10" width="30" height="20" fill="green" />
 
   <!--
@@ -164,7 +164,7 @@ svg {
 ```
 
 ```html
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 100 100" xmlns="https://www.w3.org/2000/svg">
   <!-- 未经平移 -->
   <rect x="5" y="5" width="40" height="40" fill="green" />
 
@@ -214,7 +214,7 @@ svg {
 ```
 
 ```html
-<svg viewBox="-50 -50 100 100" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="-50 -50 100 100" xmlns="https://www.w3.org/2000/svg">
   <!-- 等比缩放 -->
   <circle cx="0" cy="0" r="10" fill="red" transform="scale(4)" />
 
@@ -246,7 +246,7 @@ svg {
 ```
 
 ```html
-<svg viewBox="-12 -2 34 14" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="-12 -2 34 14" xmlns="https://www.w3.org/2000/svg">
   <rect x="0" y="0" width="10" height="10" />
 
   <!-- 绕 0,0 点旋转 -->
@@ -280,7 +280,7 @@ svg {
 ```
 
 ```html
-<svg viewBox="-5 -5 10 10" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="-5 -5 10 10" xmlns="https://www.w3.org/2000/svg">
   <rect x="-3" y="-3" width="6" height="6" />
 
   <rect x="-3" y="-3" width="6" height="6" fill="red" transform="skewX(30)" />
@@ -304,7 +304,7 @@ svg {
 ```
 
 ```html
-<svg viewBox="-5 -5 10 10" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="-5 -5 10 10" xmlns="https://www.w3.org/2000/svg">
   <rect x="-3" y="-3" width="6" height="6" />
 
   <rect x="-3" y="-3" width="6" height="6" fill="red" transform="skewY(30)" />

@@ -40,5 +40,5 @@ alert(span.tagName);
 
 ## 规范
 
-- [DOM Level 2 Core: tagName](http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-104682815)
+- [DOM Level 2 Core: tagName](https://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-104682815)
 - [HTML 5: APIs in HTML documents](http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#apis-in-html-documents)

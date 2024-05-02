@@ -56,7 +56,7 @@ slug: Web/HTML/Element/html
 - `version` {{deprecated_inline}}
   - : 指定控制当前文档的 HTML 版本{{glossary("Doctype", "文档类型定义")}}。这个属性已不再需要，因为这在文档类型声明中是多余的版本信息。
 - `xmlns`
-  - : 指派文档的 {{glossary("XML")}} {{glossary("Namespace", "命名空间")}}。默认的值是`"http://www.w3.org/1999/xhtml"`。这在由 XML {{glossary("parser", "解析器")}}解析的文档中是必需的，而在 text/html 文档中是可选的。
+  - : 指派文档的 {{glossary("XML")}} {{glossary("Namespace", "命名空间")}}。默认的值是`"https://www.w3.org/1999/xhtml"`。这在由 XML {{glossary("parser", "解析器")}}解析的文档中是必需的，而在 text/html 文档中是可选的。
 
 ## 示例
 

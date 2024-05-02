@@ -17,7 +17,7 @@ slug: Web/SVG/Tutorial/SVG_fonts
 
 ## 定义一个字体
 
-在 SVG 中嵌入一个字体，有一些原料要求。让我们用一个示例演示它（来自[规范文档](http://www.w3.org/TR/SVG/fonts.html#FontElement)的示例），并详细解释。
+在 SVG 中嵌入一个字体，有一些原料要求。让我们用一个示例演示它（来自[规范文档](https://www.w3.org/TR/SVG/fonts.html#FontElement)的示例），并详细解释。
 
 ```html
 <font id="Font1" horiz-adv-x="1000">

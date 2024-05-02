@@ -24,5 +24,5 @@ var win = document.defaultView;
 ### 规范
 
 - [HTML5: defaultView](/zh-CN/HTML/HTML5)
-- [DOM Level 2 Views: defaultView](http://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-DocumentView-defaultView)
-- [DOM Level 3 Views](http://www.w3.org/TR/DOM-Level-3-Views/) (Only developed to Working Group Note and not implemented)
+- [DOM Level 2 Views: defaultView](https://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-DocumentView-defaultView)
+- [DOM Level 3 Views](https://www.w3.org/TR/DOM-Level-3-Views/) (Only developed to Working Group Note and not implemented)

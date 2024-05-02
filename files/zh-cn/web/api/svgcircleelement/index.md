@@ -46,7 +46,7 @@ slug: Web/API/SVGCircleElement
       <th scope="row">规范文档</th>
       <td>
         <a
-          href="http://www.w3.org/TR/SVG11/shapes.html#InterfaceSVGCircleElement"
+          href="https://www.w3.org/TR/SVG11/shapes.html#InterfaceSVGCircleElement"
           >SVG 1.1 (2nd Edition)</a
         >
       </td>

@@ -119,7 +119,7 @@ if ( isset ( $_GET["value"] ) ) {
 
 ## 参考
 
-- <http://www.w3.org/TR/2011/WD-html5-20110525/timers.html#custom-handlers>
+- <https://www.w3.org/TR/2011/WD-html5-20110525/timers.html#custom-handlers>
 
 ## See also
 

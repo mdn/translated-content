@@ -29,8 +29,8 @@ l10n:
 <svg
   width="200"
   height="200"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
+  xmlns="https://www.w3.org/2000/svg"
+  xmlns:xlink="https://www.w3.org/1999/xlink">
   <title>
     使用 Mozilla 品牌吉祥物的头部（该头部出现在徽标上）平铺 MDN 徽标
   </title>

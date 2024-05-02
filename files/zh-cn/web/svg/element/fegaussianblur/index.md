@@ -19,8 +19,8 @@ slug: Web/SVG/Element/feGaussianBlur
 <svg
   width="230"
   height="120"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
+  xmlns="https://www.w3.org/2000/svg"
+  xmlns:xlink="https://www.w3.org/1999/xlink">
   <filter id="blurMe">
     <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
   </filter>
@@ -41,8 +41,8 @@ slug: Web/SVG/Element/feGaussianBlur
 <svg
   width="120"
   height="120"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
+  xmlns="https://www.w3.org/2000/svg"
+  xmlns:xlink="https://www.w3.org/1999/xlink">
   <filter id="dropShadow">
     <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
     <feOffset dx="2" dy="4" />

@@ -72,7 +72,7 @@ slug: Web/SVG/Tutorial/Texts
 ```xml
 <path id="my_path" d="M 20,20 C 40,40 80,40 100,20" fill="transparent" />
 <text>
-  <textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#my_path">
+  <textPath xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="#my_path">
     This text follows a curve.
   </textPath>
 </text>

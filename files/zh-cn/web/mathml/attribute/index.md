@@ -427,7 +427,7 @@ slug: Web/MathML/Attribute
       <td>
         指定 MathML 命名空间的 URI（<code
           ><a href="https://www.w3.org/1998/Math/MathML"
-            >http://www.w3.org/1998/Math/MathML</a
+            >https://www.w3.org/1998/Math/MathML</a
           ></code
         >）
       </td>

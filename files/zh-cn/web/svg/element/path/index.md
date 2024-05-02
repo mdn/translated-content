@@ -25,7 +25,7 @@ svg {
 ```
 
 ```html
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 100 100" xmlns="https://www.w3.org/2000/svg">
   <path
     d="M 10,30
            A 20,20 0,0,1 50,30

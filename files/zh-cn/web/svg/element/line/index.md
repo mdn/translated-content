@@ -22,7 +22,7 @@ svg {
 ```
 
 ```html
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 100 100" xmlns="https://www.w3.org/2000/svg">
   <line x1="0" y1="80" x2="100" y2="20" stroke="black" />
 
   <!-- 如果不指定描边颜色，则无法看见线条 -->

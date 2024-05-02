@@ -20,8 +20,8 @@ slug: Web/SVG/Tutorial/Clipping_and_masking
 ```html
 <svg
   version="1.1"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
+  xmlns="https://www.w3.org/2000/svg"
+  xmlns:xlink="https://www.w3.org/1999/xlink">
   <defs>
     <clipPath id="cut-off-bottom">
       <rect x="0" y="0" width="200" height="100" />
@@ -47,8 +47,8 @@ slug: Web/SVG/Tutorial/Clipping_and_masking
 ```html
 <svg
   version="1.1"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
+  xmlns="https://www.w3.org/2000/svg"
+  xmlns:xlink="https://www.w3.org/1999/xlink">
   <defs>
     <linearGradient id="Gradient">
       <stop offset="0" stop-color="white" stop-opacity="0" />
@@ -83,8 +83,8 @@ slug: Web/SVG/Tutorial/Clipping_and_masking
   width="200"
   height="200"
   version="1.1"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
+  xmlns="https://www.w3.org/2000/svg"
+  xmlns:xlink="https://www.w3.org/1999/xlink">
   <rect x="0" y="0" width="200" height="200" fill="blue" />
   <circle
     cx="100"

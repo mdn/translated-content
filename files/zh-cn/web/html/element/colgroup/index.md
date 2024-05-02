@@ -64,7 +64,7 @@ HTML 中的 表格列组（_Column Group_ **\<colgroup>**）标签用来定义�
 
 - `bgcolor` {{Non-standard_inline}}
 
-  - : 这个属性用于定义列组中的每一个列成员的背景颜色。在 [sRGB](http://www.w3.org/Graphics/Color/sRGB) 的定义中，它是一个以 '#' 开头的 6 位 16 进制值，有 16 个预定义的表示颜色的字符串可以使用
+  - : 这个属性用于定义列组中的每一个列成员的背景颜色。在 [sRGB](https://www.w3.org/Graphics/Color/sRGB) 的定义中，它是一个以 '#' 开头的 6 位 16 进制值，有 16 个预定义的表示颜色的字符串可以使用
 
     > **备注：** 不要使用这个并未标准化的属性，它只在 IE 的某些版本中生效，{{HTMLElement("colgroup")}} 标签应该使用 CSS 来定义样式。要实现和 **bgcolor** 属性相似的效果，可以在相关的 {{HTMLElement("td")}} 标签上使用 {{cssxref("background-color")}} 属性。 |
 

@@ -124,7 +124,7 @@ var range = selObj.getRangeAt(0);
 
 `getRangeAt` 方法返回对象的**引用**，并且对该函数返回的 `Range` 对象所运行的函数，会直接作用到选区上，并可能影响用户焦点的情况。
 
-正如 [Selection API 规范](http://www.w3.org/TR/selection-api/#h_note_15) 所指出的，Selection API 最初由 Netscape 创建，并允许多个区域（例如，允许用户从 {{HTMLElement("table")}} 中选择列）。但是，Gecko 以外的浏览器没有实现多个区域，而且规范还要求选择的内容始终（仅）具有一个范围（允许多个区域可能引起不必要的兼容性问题，例如同时从多处输入，译者注）。
+正如 [Selection API 规范](https://www.w3.org/TR/selection-api/#h_note_15) 所指出的，Selection API 最初由 Netscape 创建，并允许多个区域（例如，允许用户从 {{HTMLElement("table")}} 中选择列）。但是，Gecko 以外的浏览器没有实现多个区域，而且规范还要求选择的内容始终（仅）具有一个范围（允许多个区域可能引起不必要的兼容性问题，例如同时从多处输入，译者注）。
 
 ### Selection 及输入焦点
 

@@ -13,7 +13,7 @@ slug: Web/SVG/Tutorial/Patterns
 
 ```html
 <?xml version="1.0" standalone="no"?>
-<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg width="200" height="200" xmlns="https://www.w3.org/2000/svg" version="1.1">
   <defs>
     <linearGradient id="Gradient1">
       <stop offset="5%" stop-color="white" />

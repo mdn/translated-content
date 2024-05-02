@@ -24,8 +24,8 @@ name = element.localName
 (必须配合 XML 文档类型，如 `text/xml` 或 `application/xhtml+xml`.)
 
 ```xml
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:svg="http://www.w3.org/2000/svg">
+<html xmlns="https://www.w3.org/1999/xhtml"
+      xmlns:svg="https://www.w3.org/2000/svg">
 <head>
   <script type="application/javascript"><![CDATA[
   function test() {

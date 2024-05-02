@@ -20,7 +20,7 @@ svg {
 ```
 
 ```html
-<svg viewBox="0 0 20 10" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 20 10" xmlns="https://www.w3.org/2000/svg">
   <!--
   Circle 元素将始终拦截鼠标事件。
   为了改变较底部的 rect 元素的颜色，

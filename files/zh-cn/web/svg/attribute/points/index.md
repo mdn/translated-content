@@ -19,7 +19,7 @@ slug: Web/SVG/Attribute/points
 ## 示例
 
 ```xml
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg xmlns="https://www.w3.org/2000/svg" version="1.1">
   <polygon points="100,10 250,150 200,110"
            style="fill:lime;stroke:purple;stroke-width:1" />
 </svg>

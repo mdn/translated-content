@@ -109,7 +109,7 @@ event.dataTransfer.setDragImage(image, xOffset, yOffset);
 ```js
 function dragWithCustomImage(event) {
   var canvas = document.createElementNS(
-    "http://www.w3.org/1999/xhtml",
+    "https://www.w3.org/1999/xhtml",
     "canvas",
   );
   canvas.width = canvas.height = 50;

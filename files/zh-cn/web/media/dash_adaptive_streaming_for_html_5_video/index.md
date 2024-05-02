@@ -9,7 +9,7 @@ slug: Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
 
 Firefox 21 包含了针对 HTM5 WebM 视频的 DASH 实现，但默认没有启用。可以通过在“about:config”里调整“`media.dash.enabled`”首选项来开启。
 
-Firefox 23 移除了针对 HTML5 WebM 视频的 DASH 实现。此功能将被 [媒体源扩展 API（MSE）](http://www.w3.org/TR/media-source/)的实现取代。MSE 可实现通过 JavaScript 库（例如 dash.js）来提供对 DASH 的支持。详情参见 Bug [778617](https://bugzilla.mozilla.org/show_bug.cgi?id=778617)。
+Firefox 23 移除了针对 HTML5 WebM 视频的 DASH 实现。此功能将被 [媒体源扩展 API（MSE）](https://www.w3.org/TR/media-source/)的实现取代。MSE 可实现通过 JavaScript 库（例如 dash.js）来提供对 DASH 的支持。详情参见 Bug [778617](https://bugzilla.mozilla.org/show_bug.cgi?id=778617)。
 
 ## 使用 DASH - 服务端
 

@@ -20,7 +20,7 @@ svg {
 ```
 
 ```html
-<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 300 200" xmlns="https://www.w3.org/2000/svg">
   <radialGradient r="0" id="myGradient000">
     <stop offset="0" stop-color="white" />
     <stop offset="100%" stop-color="black" />

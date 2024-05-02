@@ -79,7 +79,7 @@ slug: Web/API/Node
 
   - : 该节点命名空间的`URL`，如果没有命名空间则为`null`。
 
-    > **备注：** 在 Firefox 3.5 以及更早的版本中，HTML 的元素都没有命名空间。而在最新的版本中，无论是 HTML 还是 XML 文档树，所有元素的命名空间统一为 [`http://www.w3.org/1999/xhtml/`](https://www.w3.org/1999/xhtml/)。
+    > **备注：** 在 Firefox 3.5 以及更早的版本中，HTML 的元素都没有命名空间。而在最新的版本中，无论是 HTML 还是 XML 文档树，所有元素的命名空间统一为 [`https://www.w3.org/1999/xhtml/`](https://www.w3.org/1999/xhtml/)。
 
 - {{DOMxRef("Node.nodePrincipal")}} {{Non-standard_inline}}{{Deprecated_Inline}}
   - : 返回节点优先级 `nsIPrincipal` 。

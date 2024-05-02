@@ -106,7 +106,7 @@ mozilla.org 上托管了两个 JavaScript 实现。**首个** JavaScript 由网�
 - [Carakan](http://my.opera.com/ODIN/blog/carakan-faq)，用在旧版本 Opera 中。
 - [Chakra](http://en.wikipedia.org/wiki/Chakra_%28JScript_engine%29) 引擎，用在 Internet Explorer 中（尽管它实现的语言被正式地称作为“JScript”来避免商标问题）。
 
-每个 mozilla.org 的 JavaScript 引擎都提供了 公用 API 使程序开发者能将其 JavaScript 嵌入自己的软件中。目前最常见的 JavaScript 宿主环境是网页浏览器。浏览器一般通过 API 创建“宿主对象”来负责将[DOM](http://www.w3.org/DOM/) 反射到 JavaScript 中。
+每个 mozilla.org 的 JavaScript 引擎都提供了 公用 API 使程序开发者能将其 JavaScript 嵌入自己的软件中。目前最常见的 JavaScript 宿主环境是网页浏览器。浏览器一般通过 API 创建“宿主对象”来负责将[DOM](https://www.w3.org/DOM/) 反射到 JavaScript 中。
 
 另一个常见的 JavaScript 应用是作为服务端脚本语言。JavaScript 服务器提供宿主对象代表 HTTP 请求和响应，随后可以通过 JavaScript 程序来动态的生成 Web 页面。[Node.js](https://nodejs.org/en/)便是一个流行的例子。
 

@@ -29,7 +29,7 @@ Strong 元素 (`<strong>`) 表示文本十分重要，一般用粗体显示。
   </tr>
   <tr>
    <td>规范文档</td>
-   <td><a href="http://www.w3.org/TR/html5/text-level-semantics.html#the-strong-element">HTML5, section 4.6.3</a>; <a href="http://www.w3.org/TR/html401/struct/text.html#edef-STRONG">HTML 4.01, section 9.2.1</a></td>
+   <td><a href="https://www.w3.org/TR/html5/text-level-semantics.html#the-strong-element">HTML5, section 4.6.3</a>; <a href="https://www.w3.org/TR/html401/struct/text.html#edef-STRONG">HTML 4.01, section 9.2.1</a></td>
   </tr>
  </tbody>
 </table>

@@ -34,14 +34,14 @@ elements = document.getElementsByTagNameNS(namespace, name)
 需要使用以下示例，只需复制/粘贴以下代码到用.xhtml 后缀名保存的新文件中即可。
 
 ```html
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="https://www.w3.org/1999/xhtml">
   <head>
     <title>getElementsByTagNameNS example</title>
 
     <script type="text/javascript">
       function getAllParaElems() {
         var allParas = document.getElementsByTagNameNS(
-          "http://www.w3.org/1999/xhtml",
+          "https://www.w3.org/1999/xhtml",
           "p",
         );
 
@@ -53,7 +53,7 @@ elements = document.getElementsByTagNameNS(namespace, name)
       function div1ParaElems() {
         var div1 = document.getElementById("div1");
         var div1Paras = div1.getElementsByTagNameNS(
-          "http://www.w3.org/1999/xhtml",
+          "https://www.w3.org/1999/xhtml",
           "p",
         );
 
@@ -65,7 +65,7 @@ elements = document.getElementsByTagNameNS(namespace, name)
       function div2ParaElems() {
         var div2 = document.getElementById("div2");
         var div2Paras = div2.getElementsByTagNameNS(
-          "http://www.w3.org/1999/xhtml",
+          "https://www.w3.org/1999/xhtml",
           "p",
         );
 
@@ -139,4 +139,4 @@ function getElementsByTagNameNSWrapper(ns, elName, doc, context) {
 
 ## 规范
 
-[DOM Level 2 Core: Document.getElementsByTagNameNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-getElBTNNS)
+[DOM Level 2 Core: Document.getElementsByTagNameNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-getElBTNNS)

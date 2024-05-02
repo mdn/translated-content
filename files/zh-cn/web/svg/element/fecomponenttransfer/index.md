@@ -36,7 +36,7 @@ slug: Web/SVG/Element/feComponentTransfer
 ### SVG
 
 ```html
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300">
+<svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 600 300">
   <defs>
     <linearGradient
       id="rainbow"

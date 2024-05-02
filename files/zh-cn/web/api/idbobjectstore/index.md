@@ -224,7 +224,7 @@ IDBRequest delete (in any key) raises (DOMException);
 ##### Returns
 
 - [IDBRequest](/zh-CN/IndexedDB/IDBRequest)
-  - : A request object on which subsequent events related to this operation are fired. As [per spec](http://www.w3.org/TR/IndexedDB/#object-store-deletion-operation) the result of the Object Store Deletion Operation algorithm is `undefined`, so it's not possible to know if some records were actually deleted by looking at the request result.
+  - : A request object on which subsequent events related to this operation are fired. As [per spec](https://www.w3.org/TR/IndexedDB/#object-store-deletion-operation) the result of the Object Store Deletion Operation algorithm is `undefined`, so it's not possible to know if some records were actually deleted by looking at the request result.
 
 ##### Exceptions
 

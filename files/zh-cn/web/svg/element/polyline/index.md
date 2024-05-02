@@ -22,7 +22,7 @@ svg {
 ```
 
 ```html
-<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 200 100" xmlns="https://www.w3.org/2000/svg">
   <!-- 具有默认填充的折线示例 -->
   <polyline points="0,100 50,25 50,75 100,0" />
 

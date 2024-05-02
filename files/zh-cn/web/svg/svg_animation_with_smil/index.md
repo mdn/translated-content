@@ -87,7 +87,7 @@ Firefox 4 利用 [Synchronized Multimedia Integration Language](https://www.w3.o
 在这个示例中，一个蓝色的圆球在左右边界之间弹动，一次又一次，永不停息。这个动画是用 {{SVGElement("animateMotion")}} 元素操纵的。在这个例子中，我们建立了一个由 **MoveTo** 命令和 **Horizontal-line** 命令、**Z** 命令构成的路径，**MoveTo** 命令命令指定动画路径的起始点，而 **Horizontal-line** 命令把圆移到右边 300 像素处，**Z** 命令闭合路径，建立一个回到起始点的回路。把 **repeatCount** 属性的值设置为 `indefinite`，我们指明了反复循环的动画，只要 SVG 图像还存在就会一直循环下去。
 
 ```html
-<svg xmlns="http://www.w3.org/2000/svg" width="300" height="100">
+<svg xmlns="https://www.w3.org/2000/svg" width="300" height="100">
   <title>SVG SMIL Animate with Path</title>
   <rect x="0" y="0" width="300" height="100" stroke="black" stroke-width="1" />
   <circle cx="0" cy="50" r="15" fill="blue" stroke="black" stroke-width="1">

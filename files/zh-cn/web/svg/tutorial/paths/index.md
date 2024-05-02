@@ -30,7 +30,7 @@ m dx dy
 这有一个比较好的例子，不过我们没画任何东西，只是将画笔移动到路径的起点，所以我们不会看到任何图案。但是，我把我们移动到的点标注出来了，所以在下面的例子里会看到 (10,10) 坐标上有一个点。注意，如果只画 path，这里什么都不会显示。（这段不太好理解，说明一下：为了更好地展示路径，下面的所有例子里，在用 path 绘制路径的同时，也会用 circle 标注路径上的点。）![](blank_path_area.png)
 
 ```xml
-<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+<svg width="200" height="200" xmlns="https://www.w3.org/2000/svg">
 
   <path d="M10 10"/>
 
@@ -62,7 +62,7 @@ v dy
 现在我们已经掌握了一些命令，可以开始画一些东西了。先从简单的地方开始，画一个简单的矩形（同样的效果用`<rect/>`元素可以更简单的实现），矩形是由水平线和垂直线组成的，所以这个例子可以很好地展现前面讲的画线的方法。![](path_line_commands.png)
 
 ```plain
-<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+<svg width="100" height="100" xmlns="https://www.w3.org/2000/svg">
 
   <path d="M 10 10 H 90 V 90 H 10 L 10 10"/>
 
@@ -118,7 +118,7 @@ c dx1 dy1, dx2 dy2, dx dy
 ![Cubic Bézier Curves with grid](cubic_bézier_curves_with_grid.png)
 
 ```xml
-<svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
+<svg width="190" height="160" xmlns="https://www.w3.org/2000/svg">
 
   <path d="M 10 10 C 20 20, 40 20, 50 10" stroke="black" fill="transparent"/>
   <path d="M 70 10 C 70 20, 110 20, 110 10" stroke="black" fill="transparent"/>
@@ -148,7 +148,7 @@ S 命令可以用来创建与前面一样的贝塞尔曲线，但是，如果 S 
 ![A smooth S-shaped curve is drawn from two Bézier curves. The second curve keeps the same slope of the control points as the first curve, which is reflected to the other side.](shortcut_cubic_bézier_with_grid.png)
 
 ```xml
-<svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
+<svg width="190" height="160" xmlns="https://www.w3.org/2000/svg">
   <path d="M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80" stroke="black" fill="transparent"/>
 </svg>
 ```
@@ -164,7 +164,7 @@ q dx1 dy1, dx dy
 ![Quadratic Bézier with grid](quadratic_bézier_with_grid.png)
 
 ```xml
-<svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
+<svg width="190" height="160" xmlns="https://www.w3.org/2000/svg">
   <path d="M 10 80 Q 95 10 180 80" stroke="black" fill="transparent"/>
 </svg>
 ```
@@ -182,7 +182,7 @@ t dx dy
 ![Two quadratic curves form one smooth S-shaped curve. The second curve's control points are reflected across the horizontal axis](shortcut_quadratic_bézier_with_grid.png)
 
 ```xml
-<svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
+<svg width="190" height="160" xmlns="https://www.w3.org/2000/svg">
   <path d="M 10 80 Q 52.5 10, 95 80 T 180 80" stroke="black" fill="transparent"/>
 </svg>
 ```
@@ -203,7 +203,7 @@ t dx dy
 ![SVGArcs_XAxisRotation_with_grid](svgarcs_xaxisrotation_with_grid.png)
 
 ```xml
-<svg width="320" height="320" xmlns="http://www.w3.org/2000/svg">
+<svg width="320" height="320" xmlns="https://www.w3.org/2000/svg">
   <path d="M 10 315
            L 110 215
            A 30 50 0 0 1 162.55 162.45
@@ -220,7 +220,7 @@ t dx dy
 ![Show the 4 arcs on the Ellipse example](svgarcs_xaxisrotation_with_grid_ellipses.png)
 
 ```xml
-<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320">
+<svg xmlns="https://www.w3.org/2000/svg" width="320" height="320">
   <path d="M 10 315
            L 110 215
            A 36 60 0 0 1 150.71 170.29
@@ -239,7 +239,7 @@ t dx dy
 ![Four examples are shown for each combination of large-arc-flag and sweep-flag for two circles overlapping, one in the top right, the other in the bottom left. For sweep-flag = 0, when large-arc-flag = 0, the interior arc of the top right circle is drawn, and when large-arc-flag = 1, the exterior arc of the bottom left circle is drawn. For sweep-flag = 1, when large-arc-flag = 0, the interior arc of the bottom left circle is drawn, and when large-arc-flag = 1, the exterior arc of the top right circle is drawn.](svgarcs_flags.png)
 
 ```xml
-<svg width="325" height="325" xmlns="http://www.w3.org/2000/svg">
+<svg width="325" height="325" xmlns="https://www.w3.org/2000/svg">
   <path d="M 80 80
            A 45 45, 0, 0, 0, 125 125
            L 125 80 Z" fill="green"/>

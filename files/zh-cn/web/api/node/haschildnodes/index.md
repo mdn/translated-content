@@ -40,7 +40,7 @@ if (foo.hasChildNodes()) {
 ## 规范
 
 - [WHATWG: hasChildNodes](https://dom.spec.whatwg.org/#dom-node-haschildnodes)
-- [hasChildNodes](http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-810594187)
+- [hasChildNodes](https://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-810594187)
 
 ## 相关链接
 

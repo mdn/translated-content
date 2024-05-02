@@ -60,7 +60,7 @@ _To-do: 添加事件名称到下表中。_
     <tr style="background-color: #eee">
       <td colspan="3">
         <a
-          href="http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-eventgroupings"
+          href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-eventgroupings"
           >DOM Level 2 Events</a
         >
       </td>
@@ -93,7 +93,7 @@ _To-do: 添加事件名称到下表中。_
     </tr>
     <tr style="background-color: #eee">
       <td colspan="3">
-        <a href="http://www.w3.org/TR/DOM-Level-3-Events/"
+        <a href="https://www.w3.org/TR/DOM-Level-3-Events/"
           >DOM Level 3 Events</a
         >
       </td>
@@ -164,7 +164,7 @@ _To-do: 添加事件名称到下表中。_
     </tr>
     <tr style="background-color: #eee">
       <td colspan="3">
-        <a href="http://www.w3.org/TR/SVG/script.html#DOMInterfaces"
+        <a href="https://www.w3.org/TR/SVG/script.html#DOMInterfaces"
           >SVG 1.1 Scripting</a
         >
       </td>
@@ -251,5 +251,5 @@ _To-do: 添加事件名称到下表中。_
 
 ## 规范
 
-- [DOM Level 2 Events: createEvent](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-DocumentEvent-createEvent)
-- [DOM Level 3 Events: createEvent](http://www.w3.org/TR/DOM-Level-3-Events/#events-Events-DocumentEvent-createEvent)
+- [DOM Level 2 Events: createEvent](https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-DocumentEvent-createEvent)
+- [DOM Level 3 Events: createEvent](https://www.w3.org/TR/DOM-Level-3-Events/#events-Events-DocumentEvent-createEvent)

@@ -19,7 +19,7 @@ slug: Web/SVG/Attribute/fill
 | -------- | ---------------------------------------------------------------------------- |
 | 值       | **remove** \| freeze                                                         |
 | 可变性   | No                                                                           |
-| 规范文档 | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/animate.html#FillAttribute) |
+| 规范文档 | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG/animate.html#FillAttribute) |
 
 - remove（默认值）
   - : 在动画的激活持续时间结束后，动画效果会移除（不再应用）。在动画的激活结束后，动画不再对目标元素有影响（除非动画重新开始）。
@@ -32,7 +32,7 @@ slug: Web/SVG/Attribute/fill
 | -------- | ---------------------------------------------------------------------------- |
 | 值       | [\<paint>](/zh-CN/SVG/Content_type#Paint)                                    |
 | 可变性   | Yes                                                                          |
-| 规范文档 | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/painting.html#FillProperty) |
+| 规范文档 | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG/painting.html#FillProperty) |
 
 ## 示例
 

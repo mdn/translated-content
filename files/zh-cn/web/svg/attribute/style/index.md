@@ -22,7 +22,7 @@ slug: Web/SVG/Attribute/style
 以下示例展示了使用 CSS 作为样式表语言来使用 style 属性，为一个矩形框添加样式。
 
 ```html
-<svg version="1.1" viewbox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
+<svg version="1.1" viewbox="0 0 1000 500" xmlns="https://www.w3.org/2000/svg">
   <rect
     height="300"
     width="600"

@@ -83,8 +83,8 @@ l10n:
 <div style="width: 420px; height: 220px;">
   <svg
     style="width:200px; height:200px; display: inline;"
-    xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink">
+    xmlns="https://www.w3.org/2000/svg"
+    xmlns:xlink="https://www.w3.org/1999/xlink">
     <defs>
       <filter id="backgroundMultiply">
         <!-- 这不会生效。 -->
@@ -107,8 +107,8 @@ l10n:
 
   <svg
     style="width:200px; height:200px; display: inline;"
-    xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink">
+    xmlns="https://www.w3.org/2000/svg"
+    xmlns:xlink="https://www.w3.org/1999/xlink">
     <defs>
       <filter id="imageMultiply">
         <!-- 这是一种解决方案。 -->

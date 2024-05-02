@@ -22,7 +22,7 @@ There are 5 targets to consider:
       <td><a href="/en/DOM/event.target">event.target</a></td>
       <td>
         <a
-          href="http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-interface"
+          href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-interface"
           >DOM Event Interface</a
         >
       </td>
@@ -39,19 +39,19 @@ There are 5 targets to consider:
       <td><a href="/en/DOM/event.currentTarget">event.currentTarget</a></td>
       <td>
         <a
-          href="http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-interface"
+          href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-interface"
           >DOM Event Interface</a
         >
       </td>
       <td>
         The
         <a
-          href="http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventTarget"
+          href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventTarget"
           ><code>EventTarget</code></a
         >
         whose
         <a
-          href="http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventListener"
+          href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventListener"
           ><code>EventListeners</code></a
         >
         are currently being processed. As the event capturing and bubbling
@@ -62,7 +62,7 @@ There are 5 targets to consider:
       <td><a href="/en/DOM/event.relatedTarget">event.relatedTarget</a></td>
       <td>
         <a
-          href="http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-MouseEvent"
+          href="https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-MouseEvent"
           >DOM MouseEvent Interface</a
         >
       </td>

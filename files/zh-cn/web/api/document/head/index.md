@@ -36,4 +36,4 @@ alert(document.head === document.querySelector("head")); // true
 
 ## 规范
 
-- [HTML5: DOM Tree Accessors](http://www.w3.org/TR/html5/dom.html#dom-tree-accessors)
+- [HTML5: DOM Tree Accessors](https://www.w3.org/TR/html5/dom.html#dom-tree-accessors)

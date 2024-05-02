@@ -15,7 +15,7 @@ slug: Web/SVG/Element/text
 
 ```xml
 <?xml version="1.0"?>
-<svg xmlns="http://www.w3.org/2000/svg"
+<svg xmlns="https://www.w3.org/2000/svg"
      width="100px" height="30px" viewBox="0 0 1000 300">
 
   <text x="250" y="150"
@@ -33,7 +33,7 @@ slug: Web/SVG/Element/text
 \<text>元素用来绘制文本。下面这段代码展示了如何在坐标系中绘制一段文本。
 
 ```xml
-<svg xmlns="http://www.w3.org/2000/svg" width="100px" height="50px">
+<svg xmlns="https://www.w3.org/2000/svg" width="100px" height="50px">
   <text x="10" y="20">SVG Text Example</text>
 </svg>
 ```
@@ -41,7 +41,7 @@ slug: Web/SVG/Element/text
 可以旋转 SVG 文本。下面的代码做了一个演示。
 
 ```xml
-<svg xmlns="http://www.w3.org/2000/svg" width="100px" height="50px">
+<svg xmlns="https://www.w3.org/2000/svg" width="100px" height="50px">
   <text x="10"  y="20"
         transform="rotate(30 20,40)">
     SVG Text Rotation example
@@ -52,7 +52,7 @@ slug: Web/SVG/Element/text
 SVG 文本还可以应用样式。
 
 ```xml
-<svg xmlns="http://www.w3.org/2000/svg" width="100px" height="50px">
+<svg xmlns="https://www.w3.org/2000/svg" width="100px" height="50px">
   <text x="10"  y="20"
         style="font-family: Times New Roman;
                font-size  : 24;

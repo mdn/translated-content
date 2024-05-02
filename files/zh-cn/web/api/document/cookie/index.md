@@ -332,7 +332,7 @@ Web 应用程序通常使用 cookies 来标识用户身份及他们的登录会�
 
 ## 规范
 
-[DOM Level 2: HTMLDocument.cookie](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-8747038)
+[DOM Level 2: HTMLDocument.cookie](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-8747038)
 
 ## 参见
 

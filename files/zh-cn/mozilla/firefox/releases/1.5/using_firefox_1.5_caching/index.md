@@ -83,7 +83,7 @@ slug: Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
 - 第一次加载页面，光标放置在表单的 Name 字段。在 Firefox 1.5, 当用户导航回该页面，光标依然在页面导航离开时的位置。在其他浏览器，光标移回到 Name 字段。
 
 ```html
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "https://www.w3.org/TR/html4/loose.dtd">
 <html>
   <head>
     <title>Order query Firefox 1.5 Example</title>

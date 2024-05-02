@@ -14,12 +14,12 @@ slug: Web/SVG/Attribute/color
 | 类别     | 外观属性                                                                     |
 | -------- | ---------------------------------------------------------------------------- |
 | 值       | [\<color>](/zh-CN/SVG/Content_type#Color) \| inherit                         |
-| 规范文档 | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/color.html#ColorProperty) |
+| 规范文档 | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG11/color.html#ColorProperty) |
 
 ## 示例
 
 ```html
-<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg width="100" height="100" xmlns="https://www.w3.org/2000/svg" version="1.1">
   <g color="green">
     <rect width="50" height="50" fill="currentColor" />
     <circle

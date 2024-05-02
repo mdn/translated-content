@@ -20,8 +20,8 @@ slug: Web/SVG/Tutorial/SVG_and_CSS
   width="600px"
   height="600px"
   viewBox="-300 -300 600 600"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
+  xmlns="https://www.w3.org/2000/svg"
+  xmlns:xlink="https://www.w3.org/1999/xlink">
   <link rel="stylesheet" href="style8.css" type="text/css" />
 
   <title>SVG demonstration</title>

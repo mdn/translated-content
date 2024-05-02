@@ -22,7 +22,7 @@ W3C 的长期目标是使不同类型的 XML 基本内容可以混合在同一�
 所以这些命名空间声明是什么样的呢，并且在什么地方用他们，如下的例子所示：
 
 ```plain
-<svg xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="https://www.w3.org/2000/svg">
   <!-- more tags here -->
 </svg>
 ```
@@ -36,10 +36,10 @@ W3C 的长期目标是使不同类型的 XML 基本内容可以混合在同一�
 如果根节点的所有子节点也被定义为默认命名空间，那么你如何混合使用另一种命名空间呢？很简单，你仅仅只需重新定义默认命名空间即可。这里是一个简单的例子。
 
 ```plain
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="https://www.w3.org/1999/xhtml">
   <body>
     <!-- 在这里放置一些 XHTML 标签 -->
-    <svg xmlns="http://www.w3.org/2000/svg" width="300px" height="200px">
+    <svg xmlns="https://www.w3.org/2000/svg" width="300px" height="200px">
       <!-- 在这里放置一些 SVG 标签 -->
     </svg>
     <!-- 在这里放置一些 XHTML 标签 -->
@@ -56,8 +56,8 @@ W3C 的长期目标是使不同类型的 XML 基本内容可以混合在同一�
 XML dialects not only define their own tags, but also their own attributes. By default, attributes don't have a namespace at all, and are only known to be unique because they appear on an element that itself has a unique name. However, sometimes it is necessary to define attributes so that they can be reused on many different elements and still be considered to be the same attribute, independently of the element with which they are used. A very good example of this is the `href` attribute defined by the XLink specification. This attribute is commonly used by other XML dialects as a means to link to external resources. But how do you tell the user agent which dialect the attribute belongs to, in this case XLink? Consider the following example.
 
 ```plain
-<svg xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg xmlns="https://www.w3.org/2000/svg"
+     xmlns:xlink="https://www.w3.org/1999/xlink">
   <script xlink:href="cool-script.js" type="text/ecmascript"/>
 </svg>
 ```
@@ -71,8 +71,8 @@ Note that it is an XML error to use a prefix that hasn't been bound to a namespa
 As an aside, it's useful to know that namespace prefixes can also be used for tag names. This tells the user agent that that particular tag (but not its children this time!) belongs to the namespace assigned to the prefix. Knowing this will save you some confusion if you come across markup like that in the following example:
 
 ```plain
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:svg="http://www.w3.org/2000/svg">
+<html xmlns="https://www.w3.org/1999/xhtml"
+      xmlns:svg="https://www.w3.org/2000/svg">
   <body>
     <h1>SVG embedded inline in XHTML</h1>
     <svg:svg width="300px" height="200px">
@@ -88,27 +88,27 @@ Note that because a namespace prefix is used for the `<svg:svg>` tag and its chi
 
 Namespaces affect not only markup, but also scripting. If you write scripts for namespaced XML such as SVG, read on.
 
-The [DOM Level 1](http://www.w3.org/TR/REC-DOM-Level-1/) recommendation was created before the [original Namespaces in XML](http://www.w3.org/TR/REC-xml-names/) recommendation was released; therefore, DOM1 isn't namespace aware. This causes problems for namespaced XML such as SVG. To resolve these problems, [DOM Level 2 Core](http://www.w3.org/TR/DOM-Level-2-Core/) added namespace aware equivalents of all the applicable DOM Level 1 methods. When scripting SVG, [it is important to use the namespace aware methods](http://www.w3.org/TR/DOM-Level-2-Core/core.html#Namespaces-Considerations). The table below lists the DOM1 methods that shouldn't be used in SVG, along with their equivalent DOM2 counterparts that should be used instead.
+The [DOM Level 1](https://www.w3.org/TR/REC-DOM-Level-1/) recommendation was created before the [original Namespaces in XML](https://www.w3.org/TR/REC-xml-names/) recommendation was released; therefore, DOM1 isn't namespace aware. This causes problems for namespaced XML such as SVG. To resolve these problems, [DOM Level 2 Core](https://www.w3.org/TR/DOM-Level-2-Core/) added namespace aware equivalents of all the applicable DOM Level 1 methods. When scripting SVG, [it is important to use the namespace aware methods](https://www.w3.org/TR/DOM-Level-2-Core/core.html#Namespaces-Considerations). The table below lists the DOM1 methods that shouldn't be used in SVG, along with their equivalent DOM2 counterparts that should be used instead.
 
 | DOM1 (don't use)                                                                                             | DOM2 (use these instead!)                                                                                                                                                      |
 | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [createAttribute](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-createAttribute)           | [createAttributeNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-DocCrAttrNS)                                                                                            |
-| [createElement](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-createElement)               | [createElementNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-DocCrElNS)                                                                                                |
-| [getAttributeNode](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getAttributeNode)         | [getAttributeNodeNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElGetAtNodeNS)                                                                                         |
-| [getAttribute](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getAttribute)                 | [getAttributeNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElGetAttrNS)                                                                                               |
-| [getElementsByTagName](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getElementsByTagName) | [getElementsByTagNameNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-getElBTNNS) (also [added to Element](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-A6C90942)) |
-| [getNamedItem](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getNamedItem)                 | [getNamedItemNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-getNamedItemNS)                                                                                            |
-| [hasAttribute](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#)                                    | [hasAttributeNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElHasAttrNS)                                                                                               |
-| [removeAttribute](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeAttribute)           | [removeAttributeNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElRemAtNS)                                                                                              |
-| [removeNamedItem](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeNamedItem)           | [removeNamedItemNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-removeNamedItemNS)                                                                                      |
-| [setAttribute](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setAttribute)                 | [setAttributeNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElSetAttrNS)                                                                                               |
-| [setAttributeNode](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setAttributeNode)         | [setAttributeNodeNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElSetAtNodeNS)                                                                                         |
-| [setNamedItem](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setNamedItem)                 | [setNamedItemNS](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-setNamedItemNS)                                                                                            |
+| [createAttribute](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-createAttribute)           | [createAttributeNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-DocCrAttrNS)                                                                                            |
+| [createElement](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-createElement)               | [createElementNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-DocCrElNS)                                                                                                |
+| [getAttributeNode](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getAttributeNode)         | [getAttributeNodeNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElGetAtNodeNS)                                                                                         |
+| [getAttribute](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getAttribute)                 | [getAttributeNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElGetAttrNS)                                                                                               |
+| [getElementsByTagName](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getElementsByTagName) | [getElementsByTagNameNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-getElBTNNS) (also [added to Element](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-A6C90942)) |
+| [getNamedItem](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getNamedItem)                 | [getNamedItemNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-getNamedItemNS)                                                                                            |
+| [hasAttribute](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#)                                    | [hasAttributeNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElHasAttrNS)                                                                                               |
+| [removeAttribute](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeAttribute)           | [removeAttributeNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElRemAtNS)                                                                                              |
+| [removeNamedItem](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeNamedItem)           | [removeNamedItemNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-removeNamedItemNS)                                                                                      |
+| [setAttribute](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setAttribute)                 | [setAttributeNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElSetAttrNS)                                                                                               |
+| [setAttributeNode](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setAttributeNode)         | [setAttributeNodeNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElSetAtNodeNS)                                                                                         |
+| [setNamedItem](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setNamedItem)                 | [setNamedItemNS](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-setNamedItemNS)                                                                                            |
 
-The first argument for all the DOM2 namespace aware methods must be the namespace name (also known as the namespace URI) of the element or attribute in question. For SVG **elements** this is `http://www.w3.org/2000/svg`. However, note carefully: the [Namespaces in XML 1.1](http://www.w3.org/TR/xml-names11/#defaulting) recommendation states that the namespace name for attributes without a prefix does not have a value. In other words, although the attributes belong to the namespace of the tag, you do not use the tag's namespace name. Instead, **you must use null as the namespace name for unqualified (prefixless) attributes**. So, to create an SVG `rect` _element_ using `document.createElementNS()`, you must write:
+The first argument for all the DOM2 namespace aware methods must be the namespace name (also known as the namespace URI) of the element or attribute in question. For SVG **elements** this is `https://www.w3.org/2000/svg`. However, note carefully: the [Namespaces in XML 1.1](https://www.w3.org/TR/xml-names11/#defaulting) recommendation states that the namespace name for attributes without a prefix does not have a value. In other words, although the attributes belong to the namespace of the tag, you do not use the tag's namespace name. Instead, **you must use null as the namespace name for unqualified (prefixless) attributes**. So, to create an SVG `rect` _element_ using `document.createElementNS()`, you must write:
 
 ```plain
-document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+document.createElementNS('https://www.w3.org/2000/svg', 'rect');
 ```
 
 But to retrieve the value of the `x` _attribute_ on an SVG `rect` element, you must write:
@@ -117,23 +117,23 @@ But to retrieve the value of the `x` _attribute_ on an SVG `rect` element, you m
 rect.getAttributeNS(null, 'x');
 ```
 
-Note that this isn't the case for attributes _with_ a namespace prefix (attributes that don't belong to the same XML dialect as the tag). Attributes such as the `xlink:href` attribute require the namespace name that was assigned to that prefix (`http://www.w3.org/1999/xlink` for XLink). Hence to get the value of the `xlink:href` attribute of an `<a>` element in SVG you would write:
+Note that this isn't the case for attributes _with_ a namespace prefix (attributes that don't belong to the same XML dialect as the tag). Attributes such as the `xlink:href` attribute require the namespace name that was assigned to that prefix (`https://www.w3.org/1999/xlink` for XLink). Hence to get the value of the `xlink:href` attribute of an `<a>` element in SVG you would write:
 
 ```plain
-elt.getAttributeNS('http://www.w3.org/1999/xlink', 'href');
+elt.getAttributeNS('https://www.w3.org/1999/xlink', 'href');
 ```
 
 For setting attributes that have a namespace, it is recommended (but not required) that you also include their prefix in the second argument so that the DOM can later be more easily converted back to XML (if for instance you want to send it back to the server). For example:
 
 ```plain
-elt.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', 'otherdoc.svg');
+elt.setAttributeNS('https://www.w3.org/1999/xlink', 'xlink:href', 'otherdoc.svg');
 ```
 
 As a final example, here's a demonstration of how you should dynamically create an `<image>` element using script:
 
 ```plain
-var SVG_NS = 'http://www.w3.org/2000/svg';
-var XLink_NS = 'http://www.w3.org/1999/xlink';
+var SVG_NS = 'https://www.w3.org/2000/svg';
+var XLink_NS = 'https://www.w3.org/1999/xlink';
 var image = document.createElementNS(SVG_NS, 'image');
 image.setAttributeNS(null, 'width', '100');
 image.setAttributeNS(null, 'height', '100');
@@ -147,9 +147,9 @@ Make sure you always declare the namespaces you use in your XML files. If you do
 ```plain
 <svg version="1.1"
      baseProfile="full"
-     xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink"
-     xmlns:ev="http://www.w3.org/2001/xml-events">
+     xmlns="https://www.w3.org/2000/svg"
+     xmlns:xlink="https://www.w3.org/1999/xlink"
+     xmlns:ev="https://www.w3.org/2001/xml-events">
 </svg>
 ```
 

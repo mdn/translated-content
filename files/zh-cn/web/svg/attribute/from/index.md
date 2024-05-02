@@ -13,7 +13,7 @@ slug: Web/SVG/Attribute/From
 | ---------- | ---------------------------------------------------------------------------- |
 | 值         | \<value>                                                                     |
 | 动画特征   | No                                                                           |
-| 标准化文档 | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/animate.html#FromAttribute) |
+| 标准化文档 | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG/animate.html#FromAttribute) |
 
 这个属性的准确的值类型取决于这个属性将要被用作动画的属性的值。
 
@@ -25,7 +25,7 @@ slug: Web/SVG/Attribute/From
 <?xml version="1.0"?>
 <svg width="200" height="200"
   viewPort="0 0 200 200" version="1.1"
-  xmlns="http://www.w3.org/2000/svg">
+  xmlns="https://www.w3.org/2000/svg">
 
   <rect x="10" y="10" width="100" height="100">
     <animate attributeType="XML"

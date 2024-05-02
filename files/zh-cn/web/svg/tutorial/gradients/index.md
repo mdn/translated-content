@@ -18,7 +18,7 @@ slug: Web/SVG/Tutorial/Gradients
 ### 基础示例
 
 ```html
-<svg width="120" height="240" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<svg width="120" height="240" version="1.1" xmlns="https://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="Gradient1">
       <stop class="stop1" offset="0%" />
@@ -82,7 +82,7 @@ slug: Web/SVG/Tutorial/Gradients
 >   x2="0"
 >   y1="0"
 >   y2="1"
->   xmlns:xlink="http://www.w3.org/1999/xlink"
+>   xmlns:xlink="https://www.w3.org/1999/xlink"
 >   xlink:href="#Gradient1" />
 > ```
 >
@@ -96,7 +96,7 @@ slug: Web/SVG/Tutorial/Gradients
 
 ```html
 <?xml version="1.0" standalone="no"?>
-<svg width="120" height="240" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<svg width="120" height="240" version="1.1" xmlns="https://www.w3.org/2000/svg">
   <defs>
     <radialGradient id="RadialGradient1">
       <stop offset="0%" stop-color="red" />
@@ -138,7 +138,7 @@ slug: Web/SVG/Tutorial/Gradients
 ```html
 <?xml version="1.0" standalone="no"?>
 
-<svg width="120" height="120" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<svg width="120" height="120" version="1.1" xmlns="https://www.w3.org/2000/svg">
   <defs>
     <radialGradient id="Gradient" cx="0.5" cy="0.5" r="0.5" fx="0.25" fy="0.25">
       <stop offset="0%" stop-color="red" />
@@ -186,7 +186,7 @@ slug: Web/SVG/Tutorial/Gradients
 ```html
 <?xml version="1.0" standalone="no"?>
 
-<svg width="220" height="220" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<svg width="220" height="220" version="1.1" xmlns="https://www.w3.org/2000/svg">
   <defs>
     <radialGradient
       id="GradientPad"

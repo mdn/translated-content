@@ -16,7 +16,7 @@ slug: Web/SVG/Attribute/id
   width="120"
   height="120"
   viewPort="0 0 120 120"
-  xmlns="http://www.w3.org/2000/svg">
+  xmlns="https://www.w3.org/2000/svg">
   <style type="text/css">
     <![CDATA[
       #smallRect {

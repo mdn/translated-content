@@ -55,7 +55,7 @@ var selectFormElement = document.forms[index].elements[index];
 
 ## 规范
 
-[forms DOM Level 2 HTML: forms](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-1689064)
+[forms DOM Level 2 HTML: forms](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-1689064)
 
 ## 参见
 

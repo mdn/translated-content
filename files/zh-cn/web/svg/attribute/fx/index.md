@@ -13,14 +13,14 @@ slug: Web/SVG/Attribute/fx
 | -------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | 值       | [\<coordinate>](/zh-CN/SVG/Content_type#Coordinate)                                                                          |
 | 可变性   | 非                                                                                                                           |
-| 规范文档 | [SVG 1.1 (2nd Edition): The radialGradient element](http://www.w3.org/TR/SVG/pservers.html#RadialGradientElementCXAttribute) |
+| 规范文档 | [SVG 1.1 (2nd Edition): The radialGradient element](https://www.w3.org/TR/SVG/pservers.html#RadialGradientElementCXAttribute) |
 
 ## 示例
 
 ```html
 <?xml version="1.0" standalone="no"?>
 
-<svg width="120" height="120" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<svg width="120" height="120" version="1.1" xmlns="https://www.w3.org/2000/svg">
   <defs>
     <radialGradient id="Gradient" cx="0.5" cy="0.5" r="0.5" fx="0.25" fy="0.25">
       <stop offset="0%" stop-color="red" />

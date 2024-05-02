@@ -18,7 +18,7 @@ svg {
 ```
 
 ```html
-<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 200 200" xmlns="https://www.w3.org/2000/svg">
   <style>
     polygon {
       fill: black;
@@ -40,7 +40,7 @@ svg {
       In the context of SVG embeded into HTML, the XHTML namespace could
       be avoided, but it is mandatory in the context of an SVG document
     -->
-    <div xmlns="http://www.w3.org/1999/xhtml">
+    <div xmlns="https://www.w3.org/1999/xhtml">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis mollis
       mi ut ultricies. Nullam magna ipsum, porta vel dui convallis, rutrum
       imperdiet eros. Aliquam erat volutpat.

@@ -69,7 +69,7 @@ This example establishes an event listener for [`keydown`](/zh-CN/docs/Web/API/E
 
 ```html
 <p>Use the WASD (ZQSD on AZERTY) keys to move and steer.</p>
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="world">
+<svg xmlns="https://www.w3.org/2000/svg" version="1.1" class="world">
   <polygon id="spaceship" points="15,0 0,30 30,30" />
 </svg>
 <script>

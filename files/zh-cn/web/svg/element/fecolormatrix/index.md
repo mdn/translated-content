@@ -19,8 +19,8 @@ slug: Web/SVG/Element/feColorMatrix
   height="100%"
   viewBox="0 0 150 360"
   preserveAspectRatio="xMidYMid meet"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
+  xmlns="https://www.w3.org/2000/svg"
+  xmlns:xlink="https://www.w3.org/1999/xlink">
   <text x="70" y="50">Reference</text>
   <g>
     <circle cx="30" cy="30" r="20" fill="blue" fill-opacity="0.5" />

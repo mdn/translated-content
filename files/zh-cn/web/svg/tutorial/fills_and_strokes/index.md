@@ -32,7 +32,7 @@ slug: Web/SVG/Tutorial/Fills_and_Strokes
 
 ```xml
 <?xml version="1.0" standalone="no"?>
-<svg width="160" height="140" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg width="160" height="140" xmlns="https://www.w3.org/2000/svg" version="1.1">
   <line x1="40" x2="120" y1="20" y2="20" stroke="black" stroke-width="20" stroke-linecap="butt"/>
   <line x1="40" x2="120" y1="60" y2="60" stroke="black" stroke-width="20" stroke-linecap="square"/>
   <line x1="40" x2="120" y1="100" y2="100" stroke="black" stroke-width="20" stroke-linecap="round"/>
@@ -55,7 +55,7 @@ slug: Web/SVG/Tutorial/Fills_and_Strokes
 
 ```xml
 <?xml version="1.0" standalone="no"?>
-<svg width="160" height="280" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg width="160" height="280" xmlns="https://www.w3.org/2000/svg" version="1.1">
   <polyline points="40 60 80 20 120 60" stroke="black" stroke-width="20"
       stroke-linecap="butt" fill="none" stroke-linejoin="miter"/>
 
@@ -75,7 +75,7 @@ slug: Web/SVG/Tutorial/Fills_and_Strokes
 
 ```xml
 <?xml version="1.0" standalone="no"?>
-<svg width="200" height="150" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg width="200" height="150" xmlns="https://www.w3.org/2000/svg" version="1.1">
   <path d="M 10 75 Q 50 10 100 75 T 190 75" stroke="black"
     stroke-linecap="round" stroke-dasharray="5,10,5" fill="none"/>
   <path d="M 10 75 L 190 75" stroke="red"
@@ -91,7 +91,7 @@ slug: Web/SVG/Tutorial/Fills_and_Strokes
 
 除了定义对象的属性外，你也可以通过 CSS 来样式化`填充`和`描边`。语法和在 HTML 里使用 CSS 一样，只不过你要把`background-color`、`border`改成`fill`和`stroke`。注意，不是所有的属性都能用 CSS 来设置。上色和填充的部分一般是可以用 CSS 来设置的，比如`fill`，`stroke`，`stroke-dasharray`等，但是不包括下面会提到的渐变和图案等功能。另外，`width`、`height`，以及路径的命令等等，都不能用 CSS 设置。判断它们能不能用 CSS 设置还是比较容易的。
 
-> **备注：** [SVG 规范](http://www.w3.org/TR/SVG/propidx.html)将属性区分成 properties 和其他 attributes，前者是可以用 CSS 设置的，后者不能。
+> **备注：** [SVG 规范](https://www.w3.org/TR/SVG/propidx.html)将属性区分成 properties 和其他 attributes，前者是可以用 CSS 设置的，后者不能。
 
 CSS 可以利用 style 属性插入到元素的行间：
 
@@ -105,7 +105,7 @@ CSS 可以利用 style 属性插入到元素的行间：
 
 ```xml
 <?xml version="1.0" standalone="no"?>
-<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg width="200" height="200" xmlns="https://www.w3.org/2000/svg" version="1.1">
   <defs>
     <style><![CDATA[
        #MyRect {
@@ -129,13 +129,13 @@ CSS 可以利用 style 属性插入到元素的行间：
 
 你最好读一下 CSS 教程以便掌握它，一些可以在 HTML 里使用的 CSS，在 svg 里可能无法正常工作，比如`before`和`after`伪类。所以这里需要一点经验。
 
-你也可以定义一个外部的样式表，但是要符合[常规 XML 样式表语法](http://www.w3.org/TR/xml-stylesheet/)的 CSS 规则：
+你也可以定义一个外部的样式表，但是要符合[常规 XML 样式表语法](https://www.w3.org/TR/xml-stylesheet/)的 CSS 规则：
 
 ```xml
 <?xml version="1.0" standalone="no"?>
 <?xml-stylesheet type="text/css" href="style.css"?>
 
-<svg width="200" height="150" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg width="200" height="150" xmlns="https://www.w3.org/2000/svg" version="1.1">
   <rect height="10" width="10" id="MyRect"/>
 </svg>
 ```

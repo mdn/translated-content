@@ -63,7 +63,7 @@ l10n:
   baseProfile="full"
   width="300"
   height="200"
-  xmlns="http://www.w3.org/2000/svg">
+  xmlns="https://www.w3.org/2000/svg">
   <rect width="100%" height="100%" fill="black" />
   <circle cx="150" cy="100" r="90" fill="blue" />
 </svg>
@@ -325,7 +325,7 @@ textarea.onkeyup = function () {
 
 - MDN [SVG 教程](/zh-CN/docs/Web/SVG/Tutorial/Getting_Started)
 - [Sara Soueidan 的响应式 SVG 图像教程](http://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/)
-- [SVG 在无障碍方面的好处](http://www.w3.org/TR/SVG-access/)
+- [SVG 在无障碍方面的好处](https://www.w3.org/TR/SVG-access/)
 - [如何缩放 SVG](https://css-tricks.com/scale-svg/)（它不像位图那么简单！）
 
 {{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
