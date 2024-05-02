@@ -1,6 +1,8 @@
 ---
 title: 块级内容
 slug: Glossary/Block-level_content
+l10n:
+  sourceCommit: afaf3aeeffa8408cf0a8a46c3d8fb0d347aad9f5
 ---
 
 {{GlossarySidebar}}
