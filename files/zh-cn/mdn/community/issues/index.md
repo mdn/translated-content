@@ -79,7 +79,7 @@ slug: MDN/Community/Issues
 
 ### 描述
 
-CSS 属性页面模板在[此处](https://developer.mozilla.org/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_property_page_template)定义。该议题中的任务列表用于将记录的 CSS 属性与模板进行比较，并跟踪属性页面的更改以与模板一致。
+CSS 属性页面模板在[此处](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_property_page_template)定义。该议题中的任务列表用于将记录的 CSS 属性与模板进行比较，并跟踪属性页面的更改以与模板一致。
 
 ### 已检查的页面列表
 
