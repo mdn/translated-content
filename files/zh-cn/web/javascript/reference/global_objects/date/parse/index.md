@@ -69,7 +69,7 @@ new Date("2014-25-23").toISOString();
 // 在所有遵循 ES5 的浏览器中返回 "RangeError: invalid date"
 ```
 
-SpiderMonkey 的引擎策略可以在 [`jsdate.cpp`](http://mxr.mozilla.org/mozilla-central/source/js/src/jsdate.cpp?rev=64553c483cd1#889) 中找到。字符串 `"10 06 2014"` 可以作为非 ISO 格式字符串使用自定义处理方式的例子。参见这篇关于解析如何进行的[粗略纲要](https://bugzilla.mozilla.org/show_bug.cgi?id=1023155#c6)。
+SpiderMonkey 的引擎策略可以在 [`jsdate.cpp`](https://mxr.mozilla.org/mozilla-central/source/js/src/jsdate.cpp?rev=64553c483cd1#889) 中找到。字符串 `"10 06 2014"` 可以作为非 ISO 格式字符串使用自定义处理方式的例子。参见这篇关于解析如何进行的[粗略纲要](https://bugzilla.mozilla.org/show_bug.cgi?id=1023155#c6)。
 
 ```js
 new Date("10 06 2014");

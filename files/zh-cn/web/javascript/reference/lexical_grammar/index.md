@@ -404,7 +404,7 @@ tag`string text ${expression} string text`
 - `continue`、`break`、`throw`
 - `return`
 
-ECMAScript 规格提到[自动分号补全的三个规则](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-rules-of-automatic-semicolon-insertion)。
+ECMAScript 规格提到[自动分号补全的三个规则](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-rules-of-automatic-semicolon-insertion)。
 
 1. 当出现一个不允许的[行终止符](#Line_terminators)或“}”时，会在其之前插入一个分号。
 

@@ -34,8 +34,8 @@ document.createElementNS(namespaceURI, qualifiedName[, options]);
 
 - HTML - 参阅 `https://www.w3.org/1999/xhtml`
 - SVG - 参阅 `https://www.w3.org/2000/svg`
-- XBL - 参阅 `http://www.mozilla.org/xbl`
-- XUL - 参阅 `http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul`
+- XBL - 参阅 `https://www.mozilla.org/xbl`
+- XUL - 参阅 `https://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul`
 
 ## 示例
 
@@ -43,7 +43,7 @@ document.createElementNS(namespaceURI, qualifiedName[, options]);
 
 ```xml
 <?xml version="1.0"?>
-<page xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+<page xmlns="https://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
       xmlns:html="https://www.w3.org/1999/xhtml"
       title="||Working with elements||"
       onload="init()">

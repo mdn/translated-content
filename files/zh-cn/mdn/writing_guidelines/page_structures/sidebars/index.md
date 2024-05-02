@@ -16,7 +16,7 @@ MDN 支持在页面中添加侧边栏；这些框是包含到 MDN 上的其他�
   <ol>
     <li><a href="http://docs.ckeditor.com/">CKEditor 文档站点</a></li>
     <li>
-      <a href="http://mxr.mozilla.org/">MXR：Mozilla 源代码交叉引用</a>
+      <a href="https://mxr.mozilla.org/">MXR：Mozilla 源代码交叉引用</a>
     </li>
     <li class="toggle">
       <details>

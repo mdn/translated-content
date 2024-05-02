@@ -59,5 +59,5 @@ _继承了其父对象_ _{{domxref("HTMLMediaElement")}}和_ _{{domxref("HTMLEle
 ## 参见
 
 - HTML element implementing this interface: {{HTMLElement("video")}}.
-- [Demo of video paint statistics](http://people.mozilla.org/~cpearce/paint-stats-demo.html)
+- [Demo of video paint statistics](https://people.mozilla.org/~cpearce/paint-stats-demo.html)
 - [Supported media formats](/zh-CN/docs/HTML/Supported_media_formats)

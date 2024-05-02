@@ -76,8 +76,8 @@ event.dataTransfer.setData("text/plain", "Text to drag");
 ```js
 const dt = event.dataTransfer;
 dt.setData("application/x.bookmark", bookmarkString);
-dt.setData("text/uri-list", "http://www.mozilla.org");
-dt.setData("text/plain", "http://www.mozilla.org");
+dt.setData("text/uri-list", "https://www.mozilla.org");
+dt.setData("text/plain", "https://www.mozilla.org");
 ```
 
 在这里，数据被添加到三种不同的类型中。第一个类型 `application/x-bookmark` 是一种自定义类型。其他应用程序不会支持这个类型，但你可以在同一站点或同以应用程序之间使用自定义类型。

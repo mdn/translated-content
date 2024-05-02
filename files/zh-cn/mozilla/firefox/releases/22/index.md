@@ -65,7 +65,7 @@ slug: Mozilla/Firefox/Releases/22
 
 ## 参见
 
-- [Firefox 22 Aurora Release Notes](http://www.mozilla.org/en-US/firefox/22.0a1/auroranotes/)
+- [Firefox 22 Aurora Release Notes](https://www.mozilla.org/en-US/firefox/22.0a1/auroranotes/)
 - [Site Compatibility for Firefox 22](/zh-CN/docs/Site_Compatibility_for_Firefox_22)
 - [Add-on Compatibility for Firefox 22](https://blog.mozilla.org/addons/2013/06/03/compatibility-for-firefox-22/)
 

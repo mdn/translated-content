@@ -38,7 +38,7 @@ var xpathResult = document.evaluate(
 
 ### 返回值
 
-返回 `xpathResult`，它是 `resultType` 参数中[指定的](/zh-CN/docs/Introduction_to_using_XPath_in_JavaScript#Specifying_the_Return_Type)类型的 `XPathResult` 对象。`XPathResult` 在[这里](http://mxr.mozilla.org/mozilla-central/source/dom/interfaces/xpath/nsIDOMXPathResult.idl)定义。
+返回 `xpathResult`，它是 `resultType` 参数中[指定的](/zh-CN/docs/Introduction_to_using_XPath_in_JavaScript#Specifying_the_Return_Type)类型的 `XPathResult` 对象。`XPathResult` 在[这里](https://mxr.mozilla.org/mozilla-central/source/dom/interfaces/xpath/nsIDOMXPathResult.idl)定义。
 
 ### 实现默认的命名空间解析器
 
@@ -273,7 +273,7 @@ while (thisHeading) {
 
 ```xml
 <?xml version="1.0"?>
-<people xmlns:xul = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" >
+<people xmlns:xul = "https://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" >
   <person>
   <name first="george" last="bush" />
   <address street="1600 pennsylvania avenue" city="washington" country="usa"/>

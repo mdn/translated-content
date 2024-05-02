@@ -21,7 +21,7 @@ result = node.isDefaultNamespace(namespaceURI)
 ### 例子
 
 ```plain
-var XULNS = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+var XULNS = "https://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 var el = document.getElementsByTagNameNS(XULNS, 'textbox')[0];
 alert(el.isDefaultNamespace(XULNS)); // true
 ```

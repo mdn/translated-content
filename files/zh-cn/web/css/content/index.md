@@ -75,7 +75,7 @@ content: inherit
 <h1>6</h1>
 <p>
   Here we shall quote the Mozilla Manifesto,
-  <q cite="http://www.mozilla.org/en-US/about/manifesto/">
+  <q cite="https://www.mozilla.org/en-US/about/manifesto/">
     Individuals must have the ability to shape the Internet and their own
     experiences on the Internet.</q
   >
@@ -113,14 +113,14 @@ h1::before {
 #### HTML
 
 ```html
-<a href="http://www.mozilla.org/en-US/">Home Page</a>
+<a href="https://www.mozilla.org/en-US/">Home Page</a>
 ```
 
 #### CSS
 
 ```css
 a::before {
-  content: url(http://www.mozilla.org/favicon.ico) " MOZILLA: ";
+  content: url(https://www.mozilla.org/favicon.ico) " MOZILLA: ";
   font:
     x-small Arial,
     freeSans,
@@ -199,7 +199,7 @@ for spacing purposes  */
 
 ```html
 <ul>
-  <li><a id="moz" href="http://www.mozilla.org/"> Mozilla Home Page</a></li>
+  <li><a id="moz" href="https://www.mozilla.org/"> Mozilla Home Page</a></li>
   <li>
     <a id="mdn" href="https://developer.mozilla.org/">
       Mozilla Developer Network</a

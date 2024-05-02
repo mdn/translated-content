@@ -45,7 +45,7 @@ focused = document.hasFocus();
       }
 
     function OpenWindow() {
-           window.open ("http://developer.mozilla.org/", "mozdev",
+           window.open ("https://developer.mozilla.org/", "mozdev",
                      "width=640, height=300, left=150, top=260");
     }
 </script>

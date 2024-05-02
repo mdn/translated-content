@@ -23,7 +23,7 @@ namespace = element.namespaceURI
 if (
   element.localName == "browser" &&
   element.namespaceURI ==
-    "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+    "https://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
 ) {
   // this is a XUL browser
 }

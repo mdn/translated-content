@@ -17,7 +17,7 @@ If the current document is not in a browsing context, the returned value is `nul
 
 ```js
 locationObj = document.location;
-document.location = "http://www.mozilla.org"; // Equivalent to document.location.href = 'http://www.mozilla.org'
+document.location = "https://www.mozilla.org"; // Equivalent to document.location.href = 'https://www.mozilla.org'
 ```
 
 ## 示例

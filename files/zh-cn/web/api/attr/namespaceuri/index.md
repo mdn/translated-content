@@ -23,7 +23,7 @@ namespace = attribute.namespaceURI
 if (
   attribute.localName == "value" &&
   attribute.namespaceURI ==
-    "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+    "https://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
 ) {
   // this is a XUL value
 }

@@ -65,7 +65,7 @@ let parser = new DOMParser(),
 如果解析失败，`DOMParser` 不会抛出任何异常，而是会返回一个给定的错误文档：
 
 ```xml
-<parsererror xmlns="http://www.mozilla.org/newlayout/xml/parsererror.xml">
+<parsererror xmlns="https://www.mozilla.org/newlayout/xml/parsererror.xml">
 (error description)
 <sourcetext>(a snippet of the source XML)</sourcetext>
 </parsererror>

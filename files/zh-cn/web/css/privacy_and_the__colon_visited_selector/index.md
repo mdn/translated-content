@@ -55,6 +55,6 @@ slug: Web/CSS/Privacy_and_the_:visited_selector
 
 ## 更多
 
-- [privacy-related changes coming to CSS :visited](http://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/) on Mozilla Hacks
+- [privacy-related changes coming to CSS :visited](https://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/) on Mozilla Hacks
 - [Plugging the CSS History Leak](http://blog.mozilla.com/security/2010/03/31/plugging-the-css-history-leak/) on the Mozilla Security Blog
 - [Preventing attacks on a user's history through CSS :visited selectors](http://dbaron.org/mozilla/visited-privacy)

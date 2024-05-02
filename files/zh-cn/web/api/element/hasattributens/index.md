@@ -32,7 +32,7 @@ hasAttributeNS(namespace,localName)
 // 在为属性设置值之前检测其是否存在
 const d = document.getElementById("div1");
 if (
-  d.hasAttributeNS("http://www.mozilla.org/ns/specialspace/", "special-align")
+  d.hasAttributeNS("https://www.mozilla.org/ns/specialspace/", "special-align")
 ) {
   d.setAttribute("align", "center");
 }

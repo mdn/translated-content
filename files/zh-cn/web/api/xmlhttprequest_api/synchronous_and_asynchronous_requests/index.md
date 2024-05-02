@@ -143,7 +143,7 @@ loadFile("message.txt", 2000, showMessage, "New message!\n");
 
 ```js
 var request = new XMLHttpRequest();
-request.open("GET", "http://www.mozilla.org/", false);
+request.open("GET", "https://www.mozilla.org/", false);
 request.send(null);
 if (request.status === 200) {
   console.log(request.responseText);

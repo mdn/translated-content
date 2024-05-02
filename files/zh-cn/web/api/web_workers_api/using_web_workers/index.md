@@ -592,7 +592,7 @@ onmessage = (event) => {
 
 ### 通过转让所有权（可转移对象）来传递数据
 
-现代浏览器包含另一种性能更高的方法来将特定类型的对象传递给一个 worker 或从 worker 传回。[可转移对象](http://developer.mozilla.org/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects)从一个上下文转移到另一个上下文而不会经过任何拷贝操作。这意味着当传递大型数据集时会获得极大的性能提升。
+现代浏览器包含另一种性能更高的方法来将特定类型的对象传递给一个 worker 或从 worker 传回。[可转移对象](https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects)从一个上下文转移到另一个上下文而不会经过任何拷贝操作。这意味着当传递大型数据集时会获得极大的性能提升。
 
 例如，当你将一个 {{jsxref("ArrayBuffer")}} 对象从主应用转让到 Worker 中，原始的 {{jsxref("ArrayBuffer")}} 被清除并且无法使用。它包含的内容会（完整无差的）传递给 Worker 上下文。
 

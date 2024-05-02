@@ -75,4 +75,4 @@ LocalMediaStream object
 
 WebRTC 在 Firefox 浏览器的偏好选择选项是隐藏的。可以到 [about:config](/about:config) 这个页面设置 'media.navigator.enabled' 为 'true'。
 
-> **备注：** 在 Source tree 中有一些测试文件可以提供给你关于 WebRTC 如何工作的一个想法。具体例子请查看：[dom/media/tests/local_video_test.html](http://hg.mozilla.org/projects/alder/file/tip/dom/media/tests/local_video_test.html)。你也可以尝试 [服务器 demo](http://webrtc-demo.herokuapp.com/mozdemo) ，源代码： [server source](https://github.com/anantn/webrtc-demo/)。
+> **备注：** 在 Source tree 中有一些测试文件可以提供给你关于 WebRTC 如何工作的一个想法。具体例子请查看：[dom/media/tests/local_video_test.html](https://hg.mozilla.org/projects/alder/file/tip/dom/media/tests/local_video_test.html)。你也可以尝试 [服务器 demo](http://webrtc-demo.herokuapp.com/mozdemo) ，源代码： [server source](https://github.com/anantn/webrtc-demo/)。

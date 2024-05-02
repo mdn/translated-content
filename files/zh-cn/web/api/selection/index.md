@@ -178,5 +178,5 @@ Selection API 有一个共同的行为（即在浏览器之间共通），该行
 
 - {{domxref("window.getSelection")}}，{{domxref("document.getSelection")}}及{{domxref("Range")}}
 - HTML5 DOM Range [Interface Selection](http://html5.org/specs/dom-range.html#selection)
-- [IDL definition in Mozilla cross-reference](http://lxr.mozilla.org/mozilla/source/content/base/public/nsISelection.idl)
+- [IDL definition in Mozilla cross-reference](https://lxr.mozilla.org/mozilla/source/content/base/public/nsISelection.idl)
 - [目前 CSS 实现竖排文本较为通用的方式是什么？](http://www.zhihu.com/question/20874144)（页内搜索"Bidi"可了解 Bidi 优先顺序）

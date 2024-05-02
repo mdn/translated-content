@@ -55,7 +55,7 @@ Firefox 19 已于 2013 年 2 月 19 日正式发布。
 
 ## 参见
 
-- [Firefox 19 发行说明](http://www.mozilla.org/zh-CN/firefox/19.0/releasenotes/)
+- [Firefox 19 发行说明](https://www.mozilla.org/zh-CN/firefox/19.0/releasenotes/)
 - [Firefox 19 网站兼容性](/zh-CN/docs/Site_Compatibility_for_Firefox_19)
 - [Firefox 19 附加组件兼容性](https://blog.mozilla.org/addons/2013/02/07/compatibility-for-firefox-19/)
 
