@@ -1,5 +1,5 @@
 ---
-title: "CookieStore: get() method"
+title: CookieStore：get() 方法
 slug: Web/API/CookieStore/get
 l10n:
   sourceCommit: 01e7af5aeee7833c129ddfa41eb719b123a8cdcc
@@ -34,7 +34,7 @@ get(options)
     - `url`
       - : 记录 cookie URL 的字符串。
 
-> **Note:** `url` 选项可以修改特定 URL 下的 cookie。Service Worker 在其作用域下可以获得发送至任何 URL 的 cookie。在文档中，你只能在当前 URL 处获取 Cookie，因此文档上下文中唯一有效的 URL 是文档的 URL。
+> **备注：** `url` 选项可以修改特定 URL 下的 cookie。Service Worker 在其作用域下可以获得发送至任何 URL 的 cookie。在文档中，你只能在当前 URL 处获取 Cookie，因此文档上下文中唯一有效的 URL 是文档的 URL。
 
 ### 返回值
 

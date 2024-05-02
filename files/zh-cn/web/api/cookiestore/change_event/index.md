@@ -7,11 +7,11 @@ l10n:
 
 {{securecontext_header}}{{APIRef("Cookie Store API")}}
 
-当 cookie 发生任何变更将触发 `change` 事件。
+`change` 事件会在 cookie 发生更改时于 {{domxref("CookieStore")}} 对象上触发。
 
 ## 语法
 
-像 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 一样在方法里使用事件名称，或设置事件处理器属性。
+在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 的方法中使用事件名称，或设置事件处理器属性。
 
 ```js-nolint
 cookieStore.addEventListener("change", (event) => { })
@@ -27,7 +27,7 @@ cookieStore.onchange = (event) => { }
 
 ## 示例
 
-你可以使用 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 添加一个处理器至 `CookieStore` 实例，当 cookie 发生更改时收到通知，就像这样：
+要在 cookie 发生更改时收到通知，你可以使用 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 为 `CookieStore` 实例添加一个处理器，就像这样：
 
 ```js
 cookieStore.addEventListener("change", (event) => {

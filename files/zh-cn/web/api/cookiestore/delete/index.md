@@ -47,11 +47,11 @@ delete(options)
 - `SecurityError` {{domxref("DOMException")}}
   - : 如果源无法被{{glossary("Serialization", "序列化")}}成 URL，则抛出该异常。
 - {{jsxref("TypeError")}}
-  - : 如果删除给定 `name` 或 `options` 指定的 cookie 失败，则抛出该异常。
+  - : 如果删除给定 `name` 或 `options` 所表示的 cookie 失败，则抛出该异常。
 
 ## 示例
 
-在此示例中，通过传 cookie 名称给 `delete()` 删除 cookie。
+在此示例中，通过将 cookie 名称传递给 `delete()` 方法来删除 cookie。
 
 ```js
 const result = cookieStore.delete("cookie1");
