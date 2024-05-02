@@ -2,7 +2,7 @@
 title: 基线
 slug: Glossary/Baseline
 l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+  sourceCommit: 8689d553a127a602c37a3c614e157eaff5fba4e1
 ---
 
 {{GlossarySidebar}}

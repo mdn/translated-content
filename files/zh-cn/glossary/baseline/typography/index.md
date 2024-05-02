@@ -2,7 +2,7 @@
 title: 基线（排版）
 slug: Glossary/Baseline/Typography
 l10n:
-  sourceCommit: d267a8cb862c20277f81bbc223221b36b0c613e6
+  sourceCommit: 8689d553a127a602c37a3c614e157eaff5fba4e1
 ---
 
 {{GlossarySidebar}}
