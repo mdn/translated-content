@@ -7,4 +7,4 @@ l10n:
 
 {{GlossarySidebar}}
 
-{{Glossary("CORS-safelisted request header", "列入 CORS 白名单的请求标头")}} 的旧称。
+{{Glossary("CORS-safelisted request header", "列入 CORS 白名单的请求标头")}}的旧称。
