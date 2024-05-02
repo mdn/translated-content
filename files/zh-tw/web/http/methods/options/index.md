@@ -2,7 +2,7 @@
 title: OPTIONS
 slug: Web/HTTP/Methods/OPTIONS
 l10n:
-  sourceCommit: 41f8475b594cf2cbb6cb2d332275a373f46a1328
+  sourceCommit: 38fb31b12de1019a538e868a90dd4dd4858e4871
 ---
 
 {{HTTPSidebar}}
@@ -81,7 +81,7 @@ Accept-Encoding: gzip,deflate
 Connection: keep-alive
 Origin: https://foo.example
 Access-Control-Request-Method: POST
-Access-Control-Request-Headers: X-PINGOTHER, Content-Type
+Access-Control-Request-Headers: content-type,x-pingother
 ```
 
 伺服器現在可以回應是否接受這些情況下的請求。在此範例中，伺服器回應表示：
