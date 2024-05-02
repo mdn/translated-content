@@ -7,7 +7,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-**`Access-Control-Allow-Headers`** 响应标头中用于一个包含了 {{HTTPHeader("Access-Control-Request-Headers")}} 的{{glossary("preflight request", "预检请求")}}来响应，以此来指示哪些在实际请求中可以使用 HTTP 标头。
+**`Access-Control-Allow-Headers`** 响应标头中用于响应包含了 {{HTTPHeader("Access-Control-Request-Headers")}} 的{{glossary("preflight request", "预检请求")}}，以指示在实际请求中可以使用哪些 HTTP 标头。
 
 如果请求中包含 {{HTTPHeader("Access-Control-Request-Headers")}} 标头，那么此响应标头是必需的。
 
@@ -37,7 +37,7 @@ Access-Control-Allow-Headers: *
 
 - `<header-name>`
   - : 支持的请求标头名称。此标头可以列出任意数量的请求标头，用逗号分隔。
-- `*` （通配符）
+- `*`（通配符）
   - : “`*`”值仅在无凭证的请求（即不包含 [HTTP cookie](/zh-CN/docs/Web/HTTP/Cookies) 或 HTTP 认证信息的请求）中视为特殊的通配符值。在带有凭证的请求中，它被当作字面意义的标头名称“`*`”处理，不具有特殊语义。请注意，在 {{HTTPHeader("Authorization")}} 标头不能被泛化处理，始终需要明确列出。
 
 ## 示例
