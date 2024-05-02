@@ -13,7 +13,7 @@ l10n:
 
 {{glossary("TLD")}} 是在 DARPA 时期设计的，当时它被称为 ARPA，因此有 `.arpa` 域名。
 
-最突出的 `.arpa` 域名包括 `addr.arpa` 和 `ip6.arpa`，它们分别提供了 IPv4 和 IPv6 地址的反向 DNS 查找的命名空间。
+最突出的 `.arpa` 域名包括 `in-addr.arpa` 和 `ip6.arpa`，它们分别提供了 IPv4 和 IPv6 地址的反向 DNS 查找的命名空间。
 
 ## 参见
 
