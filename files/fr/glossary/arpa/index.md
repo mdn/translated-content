@@ -15,7 +15,7 @@ Ce [domaine de premier niveau](/fr/docs/Glossary/TLD) a été créé lorsque la 
 
 Les domaines `.arpa` les plus connus incluent `addr.arpa` et `ip6.arpa`, qui fournissent des espaces de noms pour la recherche DNS inversée des adresses IPv4 et IPv6 respectivement.
 
-## Voir plus
+## Voir aussi
 
 - [ARPANET](/fr/docs/Glossary/Arpanet)
 - [Site web officiel](https://www.iana.org/domains/arpa)
