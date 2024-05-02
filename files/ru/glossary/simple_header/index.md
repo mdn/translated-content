@@ -1,30 +1,10 @@
 ---
 title: Простой заголовок
 slug: Glossary/Simple_header
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
 {{GlossarySidebar}}
 
-_Простой заголовок (или заголовок запроса с поддержкой безопасности CORS_) - это один из следующих [HTTP заголовков](/ru/docs/Web/HTTP/Заголовки):
-
-- {{HTTPHeader("Accept")}},
-- {{HTTPHeader("Accept-Language")}},
-- {{HTTPHeader("Content-Language")}},
-- {{HTTPHeader("Content-Type")}} с MIME-типом, найденным в этом значении (исключая параметры), либо `application/x-www-form-urlencoded`, `multipart/form-data` или `text/plain`.
-
-Или один из этих клиентских заголовков:
-
-- {{HTTPHeader("DPR")}}
-- {{HTTPHeader("Downlink")}}
-- {{HTTPHeader("Save-Data")}}
-- {{HTTPHeader("Viewport-Width")}}
-- {{HTTPHeader("Width")}}
-
-Если они содержат только простые заголовки, запросы считаются простыми и не нужно отправлять {{glossary("preflight request")}} в контексте {{glossary("CORS")}}.
-
-## Смотрите также
-
-- [HTTP заголовки](/ru/docs/Web/HTTP/Заголовки)
-- {{Glossary("Simple response header")}}
-- {{Glossary("Forbidden header name")}}
-- {{Glossary("Request header")}}
+Старый термин для {{Glossary("CORS-safelisted request header", "CORS-безопасный заголовок запроса")}}.
