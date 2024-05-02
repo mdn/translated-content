@@ -30,9 +30,7 @@ slug: Web/API/Document/DOMContentLoaded_event
   </tbody>
 </table>
 
-Разные события,[`load`](/ru/docs/Web/API/Window/load_event), должны быть использованы только для обнаружения полностью загруженной страницы. Это распространённая ошибка в использовании `load`, там где `DOMContentLoaded` было бы более уместным.
-
-Синхронный JavaScript останавливает разбор DOM. Если вы хотите что бы DOM был разобран как можно быстрее после того как пользователь запросит страницу, вы должны сделать ваш [JavaScript асинхронным](/ru/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests) and [оптимизировать загрузку таблиц стилей](https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery). Если загружать как обычно, таблицы стилей тормозят разбор DOM так как они загружаются параллельно, "крадя" трафик у основного HTML документа.
+Существует другое событие — {{domxref("Window/load_event", "load")}}, которое следует использовать для определения, что страница полностью загружена. Распространённой ошибкой является использование `load` вместо `DOMContentLoaded`.
 
 ## Примеры
 

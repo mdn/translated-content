@@ -11,8 +11,5 @@ slug: Glossary/Statement
 
 ### 一般知识
 
-- [Statement (computer science)](<https://zh.wikipedia.org/wiki/Statement_(computer_science)>) on Wikipedia
-
-### 技术参考
-
-- [JavaScript statements and declarations](/zh-CN/docs/Web/JavaScript/Reference/Statements)
+- 维基百科上的[语句（程序设计）](https://zh.wikipedia.org/wiki/陳述式)
+- [JavaScript 语句和声明](/zh-CN/docs/Web/JavaScript/Reference/Statements)

@@ -35,4 +35,4 @@ for(var i=0; i<4; i++) {
 
 ## 参见
 
-- 维基百科上的布尔值 [Boolean](https://zh.wikipedia.org/wiki/Boolean_data_type)
+- 维基百科上的[布尔值](<https://zh.wikipedia.org/wiki/布林_(資料類型)>)

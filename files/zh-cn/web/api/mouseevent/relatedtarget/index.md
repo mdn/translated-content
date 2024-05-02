@@ -3,7 +3,7 @@ title: MouseEvent.relatedTarget
 slug: Web/API/MouseEvent/relatedTarget
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 只读属性 **`MouseEvent.relatedTarget`** 是鼠标事件的次要目标（如果存在），它包括：
 

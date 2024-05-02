@@ -3,7 +3,7 @@ title: KeyboardEvent
 slug: Web/API/KeyboardEvent
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 Объекты **`KeyboardEvent`** описывают работу пользователя с клавиатурой. Каждое событие описывает клавишу; тип события (`keydown`, `keypress` или `keyup`) определяет произведённый тип действия.
 

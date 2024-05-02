@@ -13,4 +13,4 @@ slug: Glossary/Native
 
 ## 参见
 
-- 维基百科上的 [Native (computing)](<https://zh.wikipedia.org/wiki/Native_(computing)>)
+- 维基百科上的[原生（电脑）](<https://en.wikipedia.org/wiki/Native_(computing)>)

@@ -385,7 +385,7 @@
 /ru/docs/Web/API/Document/defaultView/storage_event	/ru/docs/Web/API/Window/storage_event
 /ru/docs/Web/API/Document/domConfig	/ru/docs/Web/API/Document
 /ru/docs/Web/API/Document/keypress_event	/ru/docs/Web/API/Element/keypress_event
-/ru/docs/Web/API/Document/origin	/ru/docs/Web/API/origin
+/ru/docs/Web/API/Document/origin	/ru/docs/Web/API/Window/origin
 /ru/docs/Web/API/Document/registerElement	/ru/docs/Web/API/CustomElementRegistry/define
 /ru/docs/Web/API/DocumentOrShadowRoot/activeElement	/ru/docs/Web/API/Document/activeElement
 /ru/docs/Web/API/DocumentOrShadowRoot/getSelection	/ru/docs/Web/API/Document/getSelection
@@ -514,6 +514,7 @@
 /ru/docs/Web/API/document.designMode	/ru/docs/Web/API/Document/designMode
 /ru/docs/Web/API/document.execCommand	/ru/docs/Web/API/Document/execCommand
 /ru/docs/Web/API/document.querySelector	/ru/docs/Web/API/Document/querySelector
+/ru/docs/Web/API/origin	/ru/docs/Web/API/Window/origin
 /ru/docs/Web/API/range.getBoundingClientRect	/ru/docs/Web/API/Range/getBoundingClientRect
 /ru/docs/Web/API/Видимость_страницы_API	/ru/docs/Web/API/Page_Visibility_API
 /ru/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video	/ru/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
