@@ -13,7 +13,7 @@ l10n:
 
 ## 参见
 
-- 维基百科上的 [Canvas（HTML 元素）](https://en.wikipedia.org/wiki/Canvas_(HTML元素))
+- 维基百科上的 [Canvas（HTML 元素）](<https://en.wikipedia.org/wiki/Canvas_(HTML元素)>)
 - MDN 上的 [Canvas 教程](/zh-CN/docs/Web/API/Canvas_API/Tutorial)
 - MDN 上的 HTML {{HTMLElement("canvas")}} 元素
 - MDN 上的 [Canvas 通用文档](/zh-CN/docs/Web/API/Canvas_API)
