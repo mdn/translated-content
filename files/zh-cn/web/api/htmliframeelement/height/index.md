@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("HTMLIFrameElement")}} 接口的 **`height`** 属性返回一个 {{HTMLElement("iframe")}} 元素的 `height` 属性的字符串，表示 iframe 的 CSS 像素高度。
+{{domxref("HTMLIFrameElement")}} 接口的 **`height`** 属性返回一个反映 {{HTMLElement("iframe")}} 元素的 `height` 属性的字符串，表示 iframe 的 CSS 像素高度。
 
 ## 值
 
@@ -21,7 +21,7 @@ l10n:
 
 ```js
 const el = document.getElementById("el");
-console.log(el.height); // 输出：'600'
+console.log(el.height); // 输出：“600”
 ```
 
 ## 规范

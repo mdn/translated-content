@@ -7,14 +7,14 @@ l10n:
 
 {{APIRef}}
 
-**`HTMLIFrameElement.referrerPolicy`** 属性表示 {{HTMLElement("iframe")}} 元素定义在获取资源时发送哪个引用者时的 HTML [`referrerpolicy`](/zh-CN/docs/Web/HTML/Element/iframe#referrerpolicy) 属性定义在获取资源时发送哪个引用者时的 HTML。
+**`HTMLIFrameElement.referrerPolicy`** 属性表示了 {{HTMLElement("iframe")}} 元素的 [`referrerpolicy`](/zh-CN/docs/Web/HTML/Element/iframe#referrerpolicy) 属性，该属性定义了在获取资源时发送哪个引用者。
 
 ## 值
 
 - `no-referrer`
   - : {{HTTPHeader("Referer")}} 标头将被完全省略。请求时不会发送任何引用者信息。
 - `no-referrer-when-downgrade`
-  - : 当协议安全级别保持不变（HTTP → HTTP，HTTPS → HTTPS）时，URL 作为引用者发送，但不会发送到安全性较低的目的地（HTTPS → HTTP）。
+  - : 当协议安全级别保持不变（HTTP → HTTP、HTTPS → HTTPS）时，URL 作为引用者发送，但不会发送到安全性较低的目的地（HTTPS → HTTP）。
 - `origin`
   - : 在所有情况下仅发送文档的源作为引用者。`https://example.com/page.html` 文档将发送引用者 `https://example.com/` 。
 - `origin-when-cross-origin`

@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("HTMLIFrameElement")}} 接口的 **`sandbox`** 只读属性表示返回 {{domxref("DOMTokenList")}} 表示对嵌套内容行为的限制。
+{{domxref("HTMLIFrameElement")}} 接口的 **`sandbox`** 只读属性返回表示对嵌套内容行为的限制的 {{domxref("DOMTokenList")}}。
 
 它表示 {{HTMLElement("iframe")}} 元素的 `sandbox` 属性。
 

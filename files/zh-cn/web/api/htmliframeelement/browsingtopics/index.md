@@ -15,7 +15,7 @@ l10n:
 
 ## 值
 
-一个布尔值，默认值为 `false`；将其设置为 `true`，将与关联的 `<iframe>` 源请求发送一个 {{httpheader("Sec-Browsing-Topics")}} 标头，其中包含当前用户选择的主题。
+一个布尔值，默认值为 `false`；将其设置为 `true` 可使与 `<iframe>` 相关联的源请求携带一个包含当前用户选定主题的 {{httpheader("Sec-Browsing-Topics")}} 标头。
 
 ## 示例
 
@@ -54,7 +54,7 @@ iframeElem.src = "adtech1.example";
 
 ## 规范
 
-此功能不是正式标准的一部分，尽管它在 [Topics API 非官方建议草案](https://patcg-individual-drafts.github.io/topics/)中有规定。
+此特性不属于官方标准，尽管它被定义在 [Topics API 非官方建议草案](https://patcg-individual-drafts.github.io/topics/)中。
 
 ## 浏览器兼容性
 

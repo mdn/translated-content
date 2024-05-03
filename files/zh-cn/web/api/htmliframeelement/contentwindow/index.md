@@ -36,11 +36,11 @@ iframe.document.querySelector("body").style.backgroundColor = "blue";
 // 这将使文档中的第一个 iframe 变成蓝色。
 ```
 
-### 将信息源映射到 iframe
+### 将消息源映射到 iframe
 
 此示例可在包含多个 iframe 的页面中运行，其中任何一个都可以使用 {{domxref("Window.postMessage()")}} 发送信息。当页面接收到消息时，就会知道哪个 iframe 包含发送消息的窗口。
 
-为了做到这一点，当接收到消息时，页面首先检查消息来自预期的源，然后通过比较消息事件的 {{domxref("MessageEvent.source", "source")}} 属性和 iframe 的 `contentWindow` 属性来找到 iframe 消息来源。
+为了做到这一点，当接收到消息时，页面首先检查消息是否来自预期的源，然后通过比较消息事件的 {{domxref("MessageEvent.source", "source")}} 属性和 iframe 的 `contentWindow` 属性来找到消息来自哪个 iframe。
 
 ```js
 const expectedOrigin = "https://example.org";
