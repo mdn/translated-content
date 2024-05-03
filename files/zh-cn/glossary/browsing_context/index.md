@@ -1,6 +1,8 @@
 ---
 title: 浏览上下文（Browsing context）
 slug: Glossary/Browsing_context
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
 {{GlossarySidebar}}
