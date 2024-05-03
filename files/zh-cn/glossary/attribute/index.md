@@ -15,9 +15,9 @@ l10n:
 
 ```html
 <input required />
-<!-- 等同于 HTML： -->
+<!-- 等同于 -->
 <input required="" />
-<!-- 或 XML： -->
+<!-- 或 -->
 <input required="required" />
 ```
 
