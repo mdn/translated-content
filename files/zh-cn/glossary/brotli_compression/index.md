@@ -15,8 +15,8 @@ Brotli 与大多数现代浏览器兼容，但同时仍需考虑备用方案。
 
 ## 参见
 
-- {{glossary("Lossless compression")}}
-- {{glossary("Lossy compression")}}
+- {{glossary("Lossless compression", "无损翻译")}}
+- {{glossary("Lossy compression", "有损翻译")}}
 - [brotli.org](https://brotli.org/)
 - [Brotli 的 Github 仓库](https://github.com/google/brotli)
 - 维基百科上的 [Brotli](https://zh.wikipedia.org/wiki/Brotli)
