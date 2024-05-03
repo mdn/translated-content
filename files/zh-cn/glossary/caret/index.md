@@ -1,7 +1,8 @@
 ---
 title: Caret
 slug: Glossary/Caret
-page-type: glossary-definition
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
 {{GlossarySidebar}}
@@ -10,17 +11,17 @@ page-type: glossary-definition
 
 大多数用户界面使用细长的，会闪烁的垂直线或字符大小的方框来表示插入符但这可能也会有所不同。文本中的这一点称为**插入点**。单词“插入符”将文本插入点与鼠标光标区分开来。
 
-在网络上，插入符用于表示 {{HTMLElement("input")}} 和 {{HTMLElement("textarea")}} 元素中的插入点，以及任何设置了 [`contenteditable`](/zh-CN/docs/Web/HTML/Global_attributes#contenteditable) 属性，从而允许用户编辑元素的内容的元素。
+在 Web 上，插入符用于表示 {{HTMLElement("input")}} 和 {{HTMLElement("textarea")}} 元素中的插入点，以及任何设置了 [`contenteditable`](/zh-CN/docs/Web/HTML/Global_attributes#contenteditable) 属性，从而允许用户编辑元素的内容的元素。
 
-## See also
+## 参见
 
 - 维基百科上的[插入符导航](https://en.wikipedia.org/wiki/Caret_navigation)
 
-### 与插入符相关的CSS
+### 与插入符相关的 CSS
 
-你可以通过将元素的CSS {{cssxref("caret-color")}} 属性设置为适当的 {{cssxref("&lt;color&gt;")}} 值来设置给定元素可编辑内容的插入符的颜色。
+你可以通过将元素的 CSS {{cssxref("caret-color")}} 属性设置为适当的 {{cssxref("&lt;color&gt;")}} 值来设置给定元素可编辑内容的插入符的颜色。
 
-### 可能显示插入符的HTML元素
+### 可能显示插入符的 HTML 元素
 
 这些元素提供文本输入字段或框，并因此使用插入符。
 
