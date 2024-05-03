@@ -2,7 +2,7 @@
 title: <input type="tel">
 slug: Web/HTML/Element/input/tel
 l10n:
-  sourceCommit: 72ca3d725e3e56b613de3ac9727bd0d6d619c38a
+  sourceCommit: 0f4b28bdc51e89cd25d132b9db12e3e903a9c5aa
 ---
 
 {{HTMLSidebar}}
@@ -530,8 +530,6 @@ input:valid + span::after {
 
 - [HTML フォームガイド](/ja/docs/Learn/Forms)
 - {{HTMLElement("input")}}
-
   - [`<input type="text">`](/ja/docs/Web/HTML/Element/input/text)
   - [`<input type="email">`](/ja/docs/Web/HTML/Element/input/email)
-
 - [CSS プロパティの互換性](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
