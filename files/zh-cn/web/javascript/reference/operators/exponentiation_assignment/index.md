@@ -7,7 +7,7 @@ l10n:
 
 {{jsSidebar("Operators")}}
 
-**幂赋值 (`**=`)** 对两个操作数执行[幂运算](/zh-CN/docs/Web/JavaScript/Reference/Operators/Exponentiation)，并将结果赋给左操作数。
+**幂赋值**（**`**=`**）对两个操作数执行[幂运算](/zh-CN/docs/Web/JavaScript/Reference/Operators/Exponentiation)，并将结果赋给左操作数。
 
 {{EmbedInteractiveExample("pages/js/expressions-exponentiation-assignment.html")}}
 
@@ -19,7 +19,7 @@ x **= y
 
 ## 描述
 
-`x **= y` 和 `x = x ** y` 是等价的，不同之处在于表达式 `x` 只被计算一次。
+`x **= y` 和 `x = x ** y` 是等价的，不同之处在于前者的 `x` 只被计算一次。
 
 ## 示例
 
