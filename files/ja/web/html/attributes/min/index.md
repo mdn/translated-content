@@ -2,7 +2,7 @@
 title: "HTML 属性: min"
 slug: Web/HTML/Attributes/min
 l10n:
-  sourceCommit: cfcbb39cc595bd536b107f6771bfb3f8e13bacca
+  sourceCommit: 4f001002691c7f16785c8fa191eff40a59a47cbb
 ---
 
 {{HTMLSidebar}}
