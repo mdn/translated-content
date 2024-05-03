@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`<number>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types) 表示一个整数或者是带有小数部分的数字。
+**`<number>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types)表示一个整数或者是带有小数部分的数字。
 
 ## 语法
 
