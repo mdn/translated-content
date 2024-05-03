@@ -15,4 +15,3 @@ l10n:
 - [继承和原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
 - 维基百科上的[基于类编程](https://zh.wikipedia.org/wiki/基于类编程)
 - 维基百科上的[面向对象程序设计](https://zh.wikipedia.org/wiki/面向对象程序设计)
-
