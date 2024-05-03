@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**標籤屬性** （Attribute）用於擴充 HTML {{Glossary("tag")}}，可改變標籤行為或提供額外資訊。
+**標籤屬性** （Attribute）用於擴充 HTML、XML {{Glossary("tag")}}，可改變標籤行為或提供額外資訊。
 
 一個標籤屬性通常的格式為 `name=value`（以屬性名稱對上屬性值）。
 
