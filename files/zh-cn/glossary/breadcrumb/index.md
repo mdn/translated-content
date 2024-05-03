@@ -19,7 +19,7 @@ l10n:
 
 ## 参见
 
-- [面包屑导航（CSS）](/zh-CN/docs/Web/CSS/Layout_cookbook/Breadcrumb_Navigation)
+- [面包屑导航](/zh-CN/docs/Web/CSS/Layout_cookbook/Breadcrumb_Navigation)
 - [
   Google 搜索中心：面包屑结构化数据](https://developers.google.cn/search/docs/appearance/structured-data/breadcrumb)
 - [APG 指南：Breadcrumb 示例](https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/examples/breadcrumb/)
