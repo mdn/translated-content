@@ -1,11 +1,11 @@
 ---
-title: Cache
+title: 缓存
 slug: Glossary/Cache
 ---
 
 {{GlossarySidebar}}
 
-**cache** (web cache 或者 HTTP cache) 是临时存储 HTTP 响应的组件，只要它符合一定条件，就可以用于后续的 HTTP 请求。
+**缓存** (Web cache 或者 HTTP cache) 是临时存储 HTTP 响应的组件。如果满足某些条件，则可以由缓存满足后续请求。
 
 ## 参见
 
