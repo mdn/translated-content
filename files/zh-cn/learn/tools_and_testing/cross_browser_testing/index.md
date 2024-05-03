@@ -2,7 +2,7 @@
 title: 跨浏览器测试
 slug: Learn/Tools_and_testing/Cross_browser_testing
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: 26e2f9883e0e73def04c0e86fec6da3ec42e66b3
 ---
 
 {{LearnSidebar}}
