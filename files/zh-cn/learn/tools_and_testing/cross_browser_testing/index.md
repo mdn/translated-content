@@ -25,7 +25,7 @@ l10n:
   - : 现在我们将研究常见的跨浏览器 JavaScript 问题以及如何解决它们。这包括使用浏览器开发工具来追踪和修复问题，使用 polyfills 和库来解决问题，以及在旧版浏览器中实现现代 JavaScript 功能等内容。
 - [处理常见的无障碍问题](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)
   - : 然后，我们把注意力转向无障碍上，提供有关常见问题的信息，介绍如何进行简单的测试，以及如何使用审计/自动化工具发现无障碍问题。
-- [实现特性检查](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
+- [实现特性检测](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
   - : 特性检测涉及到判断浏览器是否支持某一代码块，并根据其是否支持运行不同的代码，以便浏览器始终能正常工作，而不是在某些浏览器中崩溃或出错。本文详细介绍了如何编写你自己的简单特性检测，如何使用库来加速实现，以及用于特性检测的原生特性，例如 `@supports`。
 - [自动测试简介](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing)
   - : 手动在多个浏览器和设备上多次运行测试，是一件很乏味和耗时的事。为了有效地处理这一问题，你应该熟悉自动化工具。在本文中，我们将了解有哪些可用的工具，如何使用任务运行器，以及如何使用商业浏览器测试自动化应用程序（如 Sauce Labs 和 Browser Stack）的基础知识。
