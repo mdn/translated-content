@@ -1,6 +1,8 @@
 ---
 title: 可缓存
 slug: Glossary/Cacheable
+l10n:
+  sourceCommit: 35d631c3a3f4050344ffb8c1bf033137943c10b6
 ---
 
 {{GlossarySidebar}}
