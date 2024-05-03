@@ -7,11 +7,11 @@ l10n:
 
 {{GlossarySidebar}}
 
-在 JavaScript 中，布尔值是一个{{Glossary("Primitive", "原始值")}}，可以是 `true` 或 `false`。
+在 JavaScript 中，布尔值属于{{Glossary("Primitive", "原始值")}}，可以是 `true` 或 `false`。
 
-一个{{jsxref("Boolean", "布尔值")}}对象是一个{{Glossary("wrapper", "包装器")}}，包装了一个布尔原始值。
+{{jsxref("Boolean", "布尔")}}对象是包装了布尔原始值的{{Glossary("wrapper", "包装器")}}。
 
-## See also
+## 备注
 
-- [avaScript 全局对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
+- [JavaScript 全局对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
 - [JavaScript 数据类型与结构](/zh-CN/docs/Web/JavaScript/Data_structures)
