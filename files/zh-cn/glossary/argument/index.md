@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**实际参数（Argument）**是作为输入传递给{{Glossary("function", "函数")}}的{{glossary("value", "值")}}，这个值可以是{{Glossary("primitive", "原始值")}}或{{Glossary("object", "对象")}}。
+**实际参数**（Argument）是作为输入传递给{{Glossary("function", "函数")}}的{{glossary("value", "值")}}，可以是{{Glossary("primitive", "原始值")}}或{{Glossary("object", "对象")}}。
 
 例如：
 
@@ -16,7 +16,7 @@ const argument1 = "Web";
 const argument2 = "开发";
 example(argument1, argument2); // 传递两个参数
 
-// 该函数接收两个值
+// 该函数接受两个值
 function example(parameter1, parameter2) {
   console.log(parameter1); // 输出 = "Web"
   console.log(parameter2); // 输出 = "开发"
@@ -30,7 +30,7 @@ const argument1 = "foo";
 const argument2 = [1, 2, 3];
 example(argument1, argument2); // 传递两个实际参数
 
-// 该函数只取一个值，因此传递的第二个实际参数将被忽略
+// 该函数只接受一个值，因此传递的第二个实际参数将被忽略
 function example(parameter) {
   console.log(parameter); // 输出 = foo
 }
