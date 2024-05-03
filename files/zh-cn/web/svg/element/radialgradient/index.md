@@ -9,7 +9,7 @@ l10n:
 
 **`<radialGradient>`** 用来定义径向渐变，以对图形元素进行填充或描边。
 
-> **备注：** 不要与 CSS {{cssxref('gradient/radial-gradient', 'radial-gradient()')}} 搞混了，CSS 渐变只能应用在 HTML 元素上，而 SVG 渐变只能运用在 SVG 元素上。
+> **备注：** 不要与 CSS {{cssxref('gradient/radial-gradient', 'radial-gradient()')}} 混淆，CSS 渐变只能应用在 HTML 元素上，而 SVG 渐变只能运用在 SVG 元素上。
 
 ## 示例
 
@@ -53,7 +53,7 @@ svg {
 - {{SVGAttr("fy")}}
   - : 这个属性定义了径向渐变的起点圆的 Y 坐标。_值类型_：[**\<length>**](/zh-CN/docs/Web/SVG/Content_type#长度)；_默认值_：与 `cy` 相同；_动画性_：**有**
 - {{SVGAttr("gradientUnits")}}
-  - : 这个属性定义了 `cx`、`cy`、`r`、`fx`、`fy`、`fr` 属性的坐标系统；_值类型_：`userSpaceOnUse`|`objectBoundingBox`；_默认值_：`objectBoundingBox`；_动画性_：**有**
+  - : 这个属性定义了 `cx`、`cy`、`r`、`fx`、`fy`、`fr` 属性的坐标系统；_值类型_：`userSpaceOnUse`｜`objectBoundingBox`；_默认值_：`objectBoundingBox`；_动画性_：**有**
 - {{SVGAttr("gradientTransform")}}
   - : 这个属性为梯度坐标系提供了额外的[变换](/zh-CN/docs/Web/SVG/Attribute/transform)。_值类型_：**[\<transform-list>](/zh-CN/docs/Web/SVG/Content_type#平移数列)** ；_默认值_：_identity transform_；_动画性_：**有**
 - {{SVGAttr("href")}}
