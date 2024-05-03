@@ -1,6 +1,8 @@
 ---
 title: 字符
 slug: Glossary/Character
+l10n:
+  sourceCommit: d842f8c32316dbe36cff9fc5e0e777602e32d958
 ---
 
 {{GlossarySidebar}}
@@ -11,6 +13,6 @@ slug: Glossary/Character
 
 - 维基百科上的[字符（计算机科学）](<https://zh.wikipedia.org/wiki/字符_(计算机科学)>)
 - 维基百科上的[字符编码](https://zh.wikipedia.org/wiki/字符编码)
-- 维基百科上的 [ASCII](https://zh.wikipedia.org/wiki/ASCII)
+- {{glossary("ASCII")}}
 - 维基百科上的 [UTF-8](https://zh.wikipedia.org/wiki/UTF-8)
 - 维基百科上的 [Unicode](https://zh.wikipedia.org/wiki/Unicode)
