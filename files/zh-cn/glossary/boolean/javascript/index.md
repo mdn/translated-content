@@ -11,7 +11,7 @@ l10n:
 
 {{jsxref("Boolean", "布尔")}}对象是包装了布尔原始值的{{Glossary("wrapper", "包装器")}}。
 
-## 备注
+## 参见
 
 - [JavaScript 全局对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
 - [JavaScript 数据类型与结构](/zh-CN/docs/Web/JavaScript/Data_structures)
