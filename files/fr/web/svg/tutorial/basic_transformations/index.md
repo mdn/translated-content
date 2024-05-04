@@ -3,6 +3,8 @@ title: Transformations de base
 slug: Web/SVG/Tutorial/Basic_Transformations
 ---
 
+{{SVGRef}}
+
 {{ PreviousNext("Web/SVG/Tutoriel/Texts", "Web/SVG/Tutoriel/Découpages_et_masquages") }}
 
 Maintenant, nous sommes prêts à tordre nos images dans tous les sens. Mais avant toute chose, il faut vous présenter l'élément `<g>`. Cet assistant va vous permettre d'assigner des attributs à un ensemble d'éléments. En fait, c'est bien son seul rôle. Par exemple :
