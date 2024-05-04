@@ -2,7 +2,7 @@
 title: 加密算法
 slug: Glossary/Cipher
 l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+  sourceCommit: 5b1eab9d32f4b769d1d78b87a1fec8aed084cf86
 ---
 
 {{GlossarySidebar}}
@@ -27,7 +27,6 @@ l10n:
 - [MDN 术语表](/zh-CN/docs/Glossary)
 
   - {{Glossary("Block cipher mode of operation", "分组密码工作模式")}}
-  - {{Glossary("Cipher","密码")}}
   - {{Glossary("Ciphertext","密文")}}
   - {{Glossary("Cipher suite", "密码套件")}}
   - {{Glossary("Cryptanalysis", "密码分析")}}
