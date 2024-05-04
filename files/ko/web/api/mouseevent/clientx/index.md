@@ -3,7 +3,8 @@ title: MouseEvent.clientX
 slug: Web/API/MouseEvent/clientX
 ---
 
-{{APIRef("DOM 이벤트")}}
+{{APIRef("UI Events")}}
+
 {{domxref("MouseEvent")}} 인터페이스의 clientX 읽기 전용 속성은 이벤트가 발생한 애플리케이션 {{glossary("viewport")}} 내에 수평 좌표를 제공한다(페이지 내의 좌표와는 반대).
 
 예를 들어 뷰포트의 왼쪽 가장자리를 클릭하면 페이지가 수평으로 스크롤되는지 여부에 관계없이 항상 clientX 값이 0인 마우스 이벤트가 발생한다.
