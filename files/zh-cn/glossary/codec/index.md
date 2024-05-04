@@ -11,7 +11,7 @@ l10n:
 
 ## 参见
 
-- 维基百科上的[编解码器](https://zh.wikipedia.org/wiki/Codec)
+- 维基百科上的[编解码器](https://zh.wikipedia.org/wiki/编解码器)
 - [Web 视频编解码器教程](/zh-CN/docs/Web/Media/Formats/Video_codecs)
 - [Web 音频编解码器教程](/zh-CN/docs/Web/Media/Formats/Audio_codecs)
 - [Web 媒体类型和格式教程](/zh-CN/docs/Web/Media/Formats)
