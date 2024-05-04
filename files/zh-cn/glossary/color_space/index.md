@@ -27,35 +27,7 @@ RGB 颜色空间有几种，如 _Adobe RGB_ 颜色空间，它可以表示比 _s
 
 在 sRGB 颜色空间中，CSS `<color>` 值包括 {{cssxref("hex-color", "十六进制颜色")}}、{{cssxref("named-color", "命名颜色")}}、{{cssxref("color_value/rgb", "rgb()")}}、{{cssxref("color_value/hsl", "hsl()")}}（色调、饱和度、亮度）和{{cssxref("color_value/hwb", "hwb()")}}（色调、白度、黑度）。[`color`](/zh-CN/docs/Web/CSS/color_value/color) 函数还支持 还有 `srgb`、`srgb-linear`、`a98-rgb` 和 `prophoto-rgb` 色彩空间。
 
-HSV（色调、饱和度和值）颜色空间及其同义词 HSB（色调、饱和度和亮度）在 CSS 中都用 [`hwb()`](/zh-CN/docs/Web/CSS/color_value/hwb) 表示。命名颜色只是与特定十六进制值相对应的关键字。将这些不同的颜色表示法转换为 `sRGB` 的数学方法是直观的。请注意，{{cssxref("<color>","currentcolor","#currentcolor_keyword")}} 可以是任何颜色，它不限于 `sRGB` 色彩空间。
-
-The `rgb()` color function is not the only color function that can represent the _sRGB_ color space. Cylindrical coordinate systems like the [`HSL`](/zh-CN/docs/Web/CSS/color_value/hsl) (_hue-saturation-lightness_) or [`HWB`](/zh-CN/docs/Web/CSS/color_value/hwb) (_hue-whiteness-blackness_) color models are also used to represent a sRGB color on the web.
-
-- `srgb` color space
-
-  - : The sRGB color space, or "Standard RGB", is the standard RGB (red, green, blue) color space. It was created to be used on monitors, printers, and the Web. It is the most widely used color space and is supported by most operating systems, software programs, monitors, and printers. sRGB is based on `r`, `g`, and `b`, with in-gamut values ranging from `0` to `1`. The whitepoint is D65.
-
-- `srgb-linear` color space
-
-  - : The predefined linear-light sRGB color space, `srgb-linear`, is the same as `srgb` except that the transfer function is linear-light with no gamma-encoding. The `srgb-linear` color space accepts the three `r`, `g`, and `b` values as numeric parameters, with in-gamut colors ranging from `0` to `1`. The whitepoint is D65.
-
-- `display-p3` color space
-
-  - : Defined by Apple, the **Display P3** color space combines the DCI-P3 color gamut, the D65 whitepoint, and sRGB gamma curve. It is a wide gamut space typical of current wide-gamut monitors, enabling more vibrant greens and reds than the sRGB color gamut. The `display-p3` is based on `r`, `g`, and `b`, with in-gamut values ranging from `0` to `1`. The whitepoint is D65.
-
-- `a98-rgb` color space
-
-  - : `a98-rgb` is the Adobe® 1998 RGB color space designed to represent all the CMYK colors as RGB. About 50% of the visible colors specified by the [CIELab color space](#cielab_color_spaces) can be achieved, encompassing more cyan-green hues than other RGB color spaces. In-gamut `r`, `g`, and `b` values range from `0` to `1`. The transfer curve is a gamma function, close to but not exactly 1/2.2. The whitepoint is D65.
-
-- `prophoto-rgb`
-
-  - : Developed by Kodak, the `prophoto-rgb` color space can represent all the colors likely to occur in nature and about 90% of [CIElab colors](#cielab_color_spaces). In-gamut `r`, `g`, and `b` values range from `0` to `1`. The transfer curve is a gamma function, with a value of 1/1.8, and a small linear portion near black. The whitepoint is D50, the same one used by CIELab.
-
-- `rec2020`
-
-  - : `rec2020` is a broadcast industry standard for ultra-high definition 4k and 8k televisions. The ultra-wide gamut space is capable of representing almost all visible real-world colors, beyond the capabilities of most current displays. Coverage is expected to increase over time as displays improve. In-gamut `r`, `g`, and `b` values range from `0` to `1`. The whitepoint is D65.
-
-> **Note:** Additional cylindrical RGB spaces that are not in the CSS specification include: `HSI` (hue, saturation, and intensity), `Okhsv`, `Okhsl`, `HSLuv`, `HPLuv`, and `Cubehelix`.
+HSV（色调、饱和度和值）颜色空间及其同义词 HSB（色调、饱和度和亮度）在 CSS 中都用 [`hwb()`](/zh-CN/docs/Web/CSS/color_value/hwb) 表示。命名颜色只是与特定十六进制值相对应的关键字。将这些不同的颜色表示法转换为 `sRGB` 的数学方法是直观的。请注意，{{cssxref("&lt;color&gt;", "currentcolor", "#currentcolor_keyword")}} 可以是任何颜色，它不限于 `sRGB` 色彩空间。
 
 ### CIELAB 色彩空间
 
