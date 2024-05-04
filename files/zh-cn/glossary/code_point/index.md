@@ -1,5 +1,5 @@
 ---
-title: 码位（code point）
+title: 码位
 slug: Glossary/Code_point
 l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
