@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**缓存** (Web cache 或者 HTTP cache) 是临时存储 HTTP 响应的组件。如果满足某些条件，则可以由缓存满足后续请求。
+**缓存**（Web cache 或者 HTTP cache）是临时存储 HTTP 响应的组件。如果满足某些条件，则可以由缓存满足后续请求。
 
 ## 参见
 
