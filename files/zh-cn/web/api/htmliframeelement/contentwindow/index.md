@@ -9,7 +9,7 @@ l10n:
 
 **`contentWindow`** 属性返回 [HTMLIFrameElement](/zh-CN/docs/Web/API/HTMLIFrameElement) 的 [Window](/zh-CN/docs/Web/API/Window) 对象。
 
-该属性为只读。
+该属性只读。
 
 ## 值
 
