@@ -11,4 +11,4 @@ CMS（内容管理系统）是一个允许用户发布、组织、修改、删�
 
 ## 参见
 
-- 在维基百科上的 [内容管理系统](https://zh.wikipedia.org/wiki/内容管理系统)
+- 在维基百科上的[内容管理系统](https://zh.wikipedia.org/wiki/内容管理系统)
