@@ -45,6 +45,6 @@ console.log(node.getAttribute("my_attrib")); // "newVal"
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref("Document.createElement()")}}

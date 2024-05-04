@@ -28,6 +28,6 @@ _Нет специфичных методов; наследует методы �
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - The HTML element implementing this interface: {{ HTMLElement("h1") }}, {{ HTMLElement("h2") }}, {{ HTMLElement("h3") }}, {{ HTMLElement("h4") }}, {{ HTMLElement("h5") }}, and {{ HTMLElement("h6") }}.

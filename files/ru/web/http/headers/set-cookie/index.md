@@ -167,7 +167,7 @@ Set-Cookie: __Host-id=1; Secure; Path=/; domain=example.com
 
 - Starting with Chrome 52 and Firefox 52, insecure sites (`http:`) can't set cookies with the "secure" directive anymore.
 
-## See also
+## Смотрите также
 
 - [HTTP cookies](/ru/docs/Web/HTTP/Cookies)
 - {{HTTPHeader("Cookie")}}

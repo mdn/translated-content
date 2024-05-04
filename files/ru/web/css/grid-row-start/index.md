@@ -130,7 +130,7 @@ This property is specified as a single `<grid-line>` value. A `<grid-line>` valu
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - Related CSS properties: {{cssxref("grid-row-end")}}, {{cssxref("grid-row")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}, {{cssxref("grid-column")}}
 - Grid Layout Guide: _[Line-based placement with CSS Grid](/ru/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)_

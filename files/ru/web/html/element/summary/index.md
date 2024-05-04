@@ -103,6 +103,6 @@ This example adds some semantics to the `<summary>` element to indicate the labe
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{HTMLElement("details")}}

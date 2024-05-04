@@ -124,6 +124,6 @@ p.withRedBoxes {
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [Block formatting context](/ru/docs/Web/CSS/block_formatting_context)

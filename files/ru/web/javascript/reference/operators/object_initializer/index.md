@@ -288,7 +288,7 @@ assert(obj3.__proto__ === 17);
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [Property accessors](/ru/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
 - [`get`](/ru/docs/Web/JavaScript/Reference/Functions/get) / [`set`](/ru/docs/Web/JavaScript/Reference/Functions/set)

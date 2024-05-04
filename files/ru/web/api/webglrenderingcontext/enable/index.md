@@ -62,7 +62,7 @@ gl.isEnabled(gl.DITHER);
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref("WebGLRenderingContext.disable()")}}
 - {{domxref("WebGLRenderingContext.isEnabled()")}}

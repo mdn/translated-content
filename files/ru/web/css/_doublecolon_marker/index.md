@@ -64,6 +64,6 @@ ul li::marker {
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - HTML-элементы, у которые есть маркеры списка по умолчанию: {{HTMLElement("ol")}}, {{HTMLElement("li")}}, {{HTMLElement("summary")}}

@@ -61,7 +61,7 @@ Any statement which isn't a rule or an at-rule is invalid and ignored.
 
 There is another group of statements, the **nested statements**, these are statements that can be used in a specific subset of at-rules, the _conditional group rules_. These statements only apply if a specific condition is matched: the `@media` at-rule content is applied only if the device on which runs the browser matches the expressed condition; the `@document` at-rule content is applied only if the current page matches some conditions, and so on. In CSS1 and CSS2.1, only _rulesets_ could be used inside a conditional group rules. That was very restrictive and this restriction was lifted in [_CSS Conditionals Level 3_](/ru/docs/CSS/CSS3#conditionals). Now, though it still is experimental and not supported by every browser, a conditional group rules can contain a wider range of content, rulesets but also some, but not all, at-rules.
 
-## See also
+## Смотрите также
 
 - Ключевые концепции CSS
   - [Синтаксис CSS](/ru/docs/Web/CSS/Syntax)

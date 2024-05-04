@@ -90,6 +90,6 @@ if (navigator.getVRDisplays) {
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [WebVR API](/ru/docs/Web/API/WebVR_API)

@@ -31,7 +31,7 @@ Header set Access-Control-Allow-Origin 'origin-list'
 add_header 'Access-Control-Allow-Origin' 'origin-list'
 ```
 
-## See also
+## Смотрите также
 
 - [CORS errors](/ru/docs/Web/HTTP/CORS/Errors)
 - Glossary: {{Glossary("CORS")}}

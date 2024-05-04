@@ -64,6 +64,6 @@ A (possibly incomplete) list of ways a style sheet can be associated with a docu
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [Using dynamic styling information](/ru/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)

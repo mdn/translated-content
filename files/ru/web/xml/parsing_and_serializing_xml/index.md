@@ -93,7 +93,7 @@ var docHTML = document.documentElement.innerHTML;
 var docHTML = document.documentElement.outerHTML;
 ```
 
-## See also
+## Смотрите также
 
 - [XPath](/en/XPath)
 - {{domxref("XMLHttpRequest")}}

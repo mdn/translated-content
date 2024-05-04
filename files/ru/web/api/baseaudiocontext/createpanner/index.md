@@ -127,6 +127,6 @@ function positionPanner() {
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [Using the Web Audio API](/ru/docs/Web_Audio_API/Using_Web_Audio_API)

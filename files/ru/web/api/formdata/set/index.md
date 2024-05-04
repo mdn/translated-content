@@ -56,7 +56,7 @@ formData.set("userpic", myFileInput.files[0], "chris.jpg");
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref("XMLHTTPRequest")}}
 - [Using XMLHttpRequest](/ru/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)

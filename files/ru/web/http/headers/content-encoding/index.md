@@ -79,7 +79,7 @@ Note that the server is not obligated to use any compression method. Compression
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{HTTPHeader("Accept-Encoding")}}
 - {{HTTPHeader("Transfer-Encoding")}}

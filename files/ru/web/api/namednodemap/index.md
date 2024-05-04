@@ -45,6 +45,6 @@ slug: Web/API/NamedNodeMap
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref("Element.attributes")}}

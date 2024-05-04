@@ -19,7 +19,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/split
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{jsxref("Symbol.match")}}
 - {{jsxref("Symbol.replace")}}

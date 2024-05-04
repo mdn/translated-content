@@ -142,6 +142,6 @@ h1 {
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{Cssxref("font")}}, {{Cssxref("font-size")}}

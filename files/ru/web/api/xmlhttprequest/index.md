@@ -718,7 +718,7 @@ When using System XHR via the `mozSystem` property, for example for Firefox OS a
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - MDN articles about XMLHttpRequest:
 

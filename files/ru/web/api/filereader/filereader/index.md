@@ -35,6 +35,6 @@ function printFile(file) {
 
 {{Specifications}}
 
-## Смотреть также
+## Смотрите также
 
 - [Использование файлов из веб-приложений](/ru/docs/Web/API/File/Using_files_from_web_applications)

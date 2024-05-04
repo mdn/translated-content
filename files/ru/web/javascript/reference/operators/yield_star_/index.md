@@ -152,7 +152,7 @@ console.log(result); // "foo"
     }
     ```
 
-## See also
+## Смотрите также
 
 - [The Iterator protocol](/ru/docs/Web/JavaScript/Guide/The_Iterator_protocol)
 - {{jsxref("Statements/function*", "function*")}}

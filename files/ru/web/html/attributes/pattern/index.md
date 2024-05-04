@@ -146,7 +146,7 @@ While `title`s are used by some browsers to populate error messaging, because br
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [Constraint validation](/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation)
 - [Forms: Data form validation](/ru/docs/Web/Guide/HTML/Forms/Data_form_validation)
