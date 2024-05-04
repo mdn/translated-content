@@ -19,6 +19,6 @@ l10n:
 
 ## 参见
 
-- {{Glossary("Snake_case", "蛇形命名法")}}
-- {{Glossary("Kebab_case", "烤串命名法")}}
+- [蛇形命名法](/zh-CN/docs/Glossary/Snake_case)
+- [烤串命名法](/zh-CN/docs/Glossary/Kebab_case)
 - [typescript-eslint 规则：`naming-convention`](https://typescript-eslint.io/rules/naming-convention/)
