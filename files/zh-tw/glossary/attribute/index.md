@@ -7,17 +7,17 @@ l10n:
 
 {{GlossarySidebar}}
 
-**標籤屬性** （Attribute）用於擴充 HTML、XML {{Glossary("tag")}}，可改變標籤行為或提供額外資訊。
+**標籤屬性**（attribute）用於擴充 HTML 或 XML {{Glossary("element", "元素")}}，可改變其行為或提供後設資料。
 
-一個標籤屬性通常的格式為 `name=value`（以屬性名稱對上屬性值）。
+標籤屬性通常的格式為 `name=value`（屬性的標識符後面接其關聯值）。
 
 你可能會看到沒有等於號或者值的標籤屬性，那是一個簡寫，在 HTML 中指代空字符串，或者在 XML 中指代標籤屬性名。
 
 ```html
 <input required />
-<!-- 等同於 HTML⋯⋯ -->
+<!-- 等同於⋯⋯ -->
 <input required="" />
-<!-- 或者 XML： -->
+<!-- 或者 -->
 <input required="required" />
 ```
 
@@ -46,7 +46,7 @@ input.placeholder = "Modified placeholder";
 console.log(attr.value); // 打印 `Modified placeholder`
 ```
 
-### 技術參考
+## 參見
 
 - [HTML 屬性參考](/zh-TW/docs/Web/HTML/Attributes)
 - HTML 的[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)相關資訊。
