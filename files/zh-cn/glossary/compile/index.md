@@ -21,5 +21,5 @@ JIT 编译器通常不会直接调用，而是内部构建到软件运行时中�
 
 ## 参见
 
-- [WebAssembly](/en-US/docs/WebAssembly)
+- [WebAssembly](/zh-CN/docs/WebAssembly)
 - 维基百科上的[编译器](https://zh.wikipedia.org/wiki/編譯器)
