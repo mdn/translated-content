@@ -197,7 +197,7 @@ export DefaultExport from "bar.js"; // 无效
 export { default as DefaultExport } from "bar.js";
 ```
 
-”export from“语法允许省略 `as` 标记，这使得默认导出仍作为默认导出重新导出。
+“export from”语法允许省略 `as` 标记，这使得默认导出仍作为默认导出重新导出。
 
 ```js
 export { default, function2 } from "bar.js";
