@@ -217,7 +217,7 @@ class Person {
 }
 
 class Professor extends Person {
-  name = `Professor ${this.name}`;
+  name = `${this.name} 教授`;
 }
 
 console.log(new Professor("Radev", 54).name); // "Professor Radev"
