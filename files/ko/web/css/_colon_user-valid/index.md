@@ -1,5 +1,5 @@
 ---
-title: ":사용자-유효성"
+title: ":user-valid"
 slug: Web/CSS/:user-valid
 page-type: css-pseudo-class
 browser-compat: css.selectors.user-valid
