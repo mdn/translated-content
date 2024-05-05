@@ -108,8 +108,7 @@ export default function foo() {
   console.log("Hi");
 }
 
-// 从技术上讲，它仍然是一个声明，
-// 但允许匿名
+// 从技术上讲，它仍然是一个声明，但允许匿名
 export default function () {
   console.log("Hi");
 }
