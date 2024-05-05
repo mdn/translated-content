@@ -7,4 +7,4 @@ l10n:
 
 {{GlossarySidebar}}
 
-Старый термин для {{Glossary("CORS-safelisted response header", "CORS-безопасный заголовок ответа")}}.
+Старое название {{Glossary("CORS-safelisted response header", "CORS-безопасного заголовка ответа")}}.
