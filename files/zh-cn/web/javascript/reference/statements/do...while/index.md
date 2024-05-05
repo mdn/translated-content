@@ -54,7 +54,7 @@ do {
 } while ((match = regexp.exec(str)));
 ```
 
-但是，当你这样做时，就会在可读性上有所取舍。在 [`while`](/zh-CN/docs/Web/JavaScript/Reference/Statements/while) 文档中有一个 [使用赋值作为条件](/zh-CN/docs/Web/JavaScript/Reference/Statements/while#using_an_assignment_as_a_condition) 部分，其中包含了我们的建议。
+但是，当你这样做时，就会在可读性上有所取舍。在 [`while`](/zh-CN/docs/Web/JavaScript/Reference/Statements/while) 文档中有一个[使用赋值作为条件](/zh-CN/docs/Web/JavaScript/Reference/Statements/while#使用赋值作为条件)部分，其中包含了我们的建议。
 
 ## 规范
 
