@@ -91,7 +91,7 @@ Pour internationaliser ces propriétés, renseignez le manifeste ainsi&nbsp;:
 "description": "__MSG_extensionDescription__",
 ```
 
-Ces valeurs spéciales indiqueront au navigateur de rechercher la chaine localisée correspondante, plutôt que d'utiliser la mème valeur statique pour toutes les locales.
+Ces valeurs spéciales indiqueront au navigateur de rechercher la chaine localisée correspondante, plutôt que d'utiliser la même valeur statique pour toutes les locales.
 
 Pour faire référence à un message localisé, composez la chaine de caractères en concaténant&nbsp;:
 
