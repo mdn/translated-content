@@ -162,8 +162,7 @@ new (class extends null {
 ```js
 class NullClass extends null {
   constructor() {
-    // Using new.target allows derived classes to
-    // have the correct prototype chain
+    // 使用 new.target 允许派生类具有正确的原型链
     return Object.create(new.target.prototype);
   }
 }
