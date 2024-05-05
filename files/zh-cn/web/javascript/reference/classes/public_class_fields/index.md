@@ -166,7 +166,7 @@ class DerivedWithConstructor extends Base {
   }
 }
 
-const instance2 = new DerivedWithConstructor(); // Logs 1
+const instance2 = new DerivedWithConstructor(); // 打印 1
 ```
 
 > **备注：** 在类字段规范最终确定为`[[DefineOwnProperty]]`语义之前，包括 [Babel](https://babeljs.io/) 和 [tsc](https://www.typescriptlang.org/)在内的大多数转译器都将类字段转换为 `DerivedWithConstructor` 形式，这在类字段规范化之后造成了一些微妙的错误。
