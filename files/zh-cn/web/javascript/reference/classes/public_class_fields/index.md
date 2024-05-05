@@ -186,7 +186,7 @@ class Person {
 
 ```js example-good
 class Person {
-  // All instances of Person will have the same name
+  // Person 的所有实例会有相同的 name
   name = "Dragomir";
 }
 ```
