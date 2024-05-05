@@ -177,7 +177,7 @@ const person = new Person();
 person.introduce(); // 你好，我的名字是 Anonymous
 ```
 
-构造函数必须是一个明确的值。[计算属性](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names)不能成为构造函数。
+构造函数必须是一个明确的值。[计算属性](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer#计算属性名)不能成为构造函数。
 
 ```js
 class Foo {
