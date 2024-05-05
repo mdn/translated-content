@@ -288,7 +288,7 @@ console.log(mapped instanceof Array); // true
 
 许多内置复制方法都实现了这一行为。有关此功能的注意事项，请参阅 [subclassing built-ins](#subclassing_built-ins) 讨论。
 
-### Mix-ins
+### 混入
 
 抽象子类或 _mix-ins_ 是类的模板。一个类只能有一个超类，因此不可能从工具类等多重继承。功能必须由超类提供。
 
