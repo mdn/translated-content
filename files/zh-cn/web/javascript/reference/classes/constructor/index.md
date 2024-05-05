@@ -68,7 +68,7 @@ constructor(...args) {
 ```js
 class ValidationError extends Error {
   printCustomerMessage() {
-    return `Validation failed :-( (details: ${this.message})`;
+    return `验证失败 :-(（详细信息：${this.message}）`;
   }
 }
 
