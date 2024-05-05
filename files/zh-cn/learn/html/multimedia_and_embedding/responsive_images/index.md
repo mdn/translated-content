@@ -127,7 +127,7 @@ web 刚面世时，这样的问题并不存在，在上世纪 90 年代早期至
 <img
   srcset="elva-fairy-320w.jpg, elva-fairy-480w.jpg 1.5x, elva-fairy-640w.jpg 2x"
   src="elva-fairy-640w.jpg"
-  alt="打扮成仙女的埃尔瓦" />
+  alt="Elva dressed as a fairy" />
 ```
 
 ![一张照片，内容是一个小女孩打扮成仙女，图像应用了老式相机胶片效果](resolution-example.png)
@@ -149,7 +149,7 @@ img {
 回到我们最初的例子 [not-responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html)，我们有一张图片需要进行美术设计：
 
 ```html
-<img src="elva-800w.jpg" alt="克里斯站起来抱着女儿埃尔瓦" />
+<img src="elva-800w.jpg" alt="Chris standing up holding his daughter Elva" />
 ```
 
 让我们使用 {{htmlelement("picture")}} 来解决这个问题！就像 [`<video>` 和 `<audio>`](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content) 一样，`<picture>` 元素是包含多个 {{htmlelement("source")}} 元素的容器，它提供了多个不同的资源供浏览器选择，然后还有至关重要的 {{htmlelement("img")}} 元素。在 [responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) 中的代码如下所示：
