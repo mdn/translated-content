@@ -16,7 +16,7 @@ class ClassWithField {
   instanceField;
   instanceFieldWithInitializer = "instance field";
   static staticField;
-  static staticFieldWithInitializer = "static field";
+  static staticFieldWithInitializer = "静态字段";
 }
 ```
 
