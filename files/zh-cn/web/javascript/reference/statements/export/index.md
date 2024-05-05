@@ -60,8 +60,7 @@ export { default as name1 } from "module-name";
 // 导出其它地方声明的特征
 export { myFunction2, myVariable2 };
 
-// 导出单个特征（可导出 var、let、
-// const、function、class）
+// 导出单个特征（可导出 var、let、const、function、class）
 export let myVariable = Math.sqrt(2);
 export function myFunction() {
   // …
