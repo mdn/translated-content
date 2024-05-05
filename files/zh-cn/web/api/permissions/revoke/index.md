@@ -51,6 +51,10 @@ function revokePermission() {
 }
 ```
 
+## 规范
+
+{{Compat}}
+
 ## 浏览器兼容性
 
 {{Compat}}
