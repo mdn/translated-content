@@ -2,7 +2,7 @@
 title: Permissions：revoke() 方法
 slug: Web/API/Permissions/revoke
 l10n:
-  sourceCommit: ee253ac58d71b2ed336b705ab97dbe93122b3e04
+  sourceCommit: afdbe078d7c0357430ff360538edafba3af5496d
 ---
 
 {{APIRef("Permissions API")}}{{AvailableInWorkers}}{{deprecated_header}}
