@@ -20,7 +20,7 @@ revoke(descriptor)
 - `descriptor`
   - ：一个基于 `PermissionDescriptor` 字典的对象，用于设置由逗号分隔的键——值对列表组成的操作选项。可用的选项有：
     - `name`
-      - ：要查询其权限的 API 的名称。有效值为 `geolocation`、`midi`、`notifications` 和 `push`。
+      - ：要查询其权限的 API 的名称。每个浏览器支持不同的值集。你可以查阅 [Firefox 的值](https://searchfox.org/mozilla-central/source/dom/webidl/Permissions.webidl#10)、[Chromium 的值](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/third_party/blink/renderer/modules/permissions/permission_descriptor.idl)、[WebKit 的值](https://github.com/WebKit/WebKit/blob/main/Source/WebCore/Modules/permissions/PermissionName.idl)。
     - `userVisibleOnly`
       - ：（仅限推送，Firefox 不支持——请参阅下面的[浏览器兼容性](#浏览器兼容性)部分）表示是否要为每条信息显示通知，还是能够发送静默推送通知。默认为 `false`。
     - `sysex`（仅限 MIDI）
