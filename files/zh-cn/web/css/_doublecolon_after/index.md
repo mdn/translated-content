@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-在 CSS 中，**`::after`** 会创建一个[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)，作为所选元素的最后一个子元素。它通常用于为具有 {{CSSxRef(“content”)}} 属性的元素添加修饰内容。默认情况下，它是行向布局的。
+在 CSS 中，**`::after`** 会创建一个[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)，作为所选元素的最后一个子元素。它通常用于为具有 {{CSSxRef("content")}} 属性的元素添加修饰内容。默认情况下，它是行向布局的。
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-element-after.html", "tabbed-standard")}}
 
