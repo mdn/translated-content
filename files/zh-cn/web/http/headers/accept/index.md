@@ -7,7 +7,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-**`Accept`** 请求 HTTP 标头表示客户端能够理解的内容类型，以 [MIME 类型](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types)的形式表达。借助[内容协商机制](/zh-CN/docs/Web/HTTP/Content_negotiation), 服务器可以从诸多备选项中选择一项进行应用，并使用 {{HTTPHeader("Content-Type")}} 响应标头通知客户端它的选择。浏览器会基于请求的上下文来为这个请求标头设置合适的值，比如，获取一个 CSS 层叠样式表时值与获取图片、视频或脚本文件时的值是不同的。
+**`Accept`** 请求 HTTP 标头表示客户端能够理解的内容类型，以 [MIME 类型](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types)的形式表达。借助[内容协商机制](/zh-CN/docs/Web/HTTP/Content_negotiation), 服务器可以从诸多备选项中选择一项进行应用，并使用 {{HTTPHeader("Content-Type")}} 响应标头通知客户端它的选择。浏览器会基于请求的上下文来为这个请求标头设置合适的值，比如，获取一个 CSS 层叠样式表时的值与获取图片、视频或脚本文件时的值是不同的。
 
 <table class="properties">
   <tbody>
@@ -24,7 +24,7 @@ l10n:
         {{Glossary("CORS-safelisted request header", "列入 CORS 白名单的请求标头")}}
       </th>
       <td>
-        是的，但有额外的限制，即值中不能包含 <em>CORS 不安全请求标头字节</em>：0x00-0x1F（除了 0x09（制表符，HT）），<code>"():&#x3C;>?@[\]{}</code> 以及 0x7F（DEL）。
+        是，但有额外的限制，即值中不能包含 <em>CORS 不安全请求标头字节</em>：0x00-0x1F（除了 0x09（制表符，HT）），<code>"():&#x3C;>?@[\]{}</code> 以及 0x7F（DEL）。
       </td>
     </tr>
   </tbody>
