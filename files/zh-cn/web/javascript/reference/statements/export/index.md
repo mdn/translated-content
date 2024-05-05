@@ -140,7 +140,7 @@ export { myFunction as function1, myVariable as variable };
 export { myFunction as "my-function" };
 ```
 
-### 重导出 / 聚合
+### 重导出/聚合
 
 模块还可以 "中继 "从其他模块导出的值，而无需编写两条单独的导入/导出语句。这在创建一个集中了来自不同模块的各种导出值的单一模块（通常称为 "桶模块"）时通常非常有用。
 
