@@ -7,13 +7,13 @@ l10n:
 
 {{CSSRef}}
 
-[CSS](/en-US/docs/Web/CSS) **`transform`** 属性允许你旋转，缩放，倾斜或平移给定元素。这是通过修改 CSS [视觉格式化模型](/en-US/docs/Web/CSS/Visual_formatting_model)的坐标空间实现的。
+[CSS](/zh-CN/docs/Web/CSS) **`transform`** 属性允许你旋转，缩放，倾斜或平移给定元素。这是通过修改 CSS [视觉格式化模型](/zh-CN/docs/Web/CSS/Visual_formatting_model)的坐标空间实现的。
 
 {{EmbedInteractiveExample("pages/css/transform.html")}}
 
-如果属性的值不是 `none`，则将创建一个[堆叠上下文](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)。在这种情况下，该元素将作为任何包含的 `position: fixed;` 或 `position: absolute;` 元素的[包含块](/en-US/docs/Web/CSS/Containing_block)。
+如果属性的值不是 `none`，则将创建一个[堆叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)。在这种情况下，该元素将作为任何包含的 `position: fixed;` 或 `position: absolute;` 元素的[包含块](/zh-CN/docs/Web/CSS/Containing_block)。
 
-> **警告：** 只能 `transform` 由盒模型定位的元素，也就是所有布局由 CSS 盒模型管理的元素，除了：[非替换的行内盒子](/en-US/docs/Glossary/Inline-level_content)、[表格列](/en-US/docs/Web/HTML/Element/col)和[表格列组](/en-US/docs/Web/HTML/Element/colgroup)。
+> **警告：** 只能 `transform` 由盒模型定位的元素，也就是所有布局由 CSS 盒模型管理的元素，除了：[非替换的行内盒子](/zh-CN/docs/Glossary/Inline-level_content)、[表格列](/zh-CN/docs/Web/HTML/Element/col)和[表格列组](/zh-CN/docs/Web/HTML/Element/colgroup)。
 
 ## 语法
 
@@ -61,7 +61,7 @@ transform: unset;
 ### 值
 
 - {{cssxref("&lt;transform-function&gt;")}}
-  - : 要应用的一个或多个 [CSS 变换函数](/en-US/docs/Web/CSS/transform-function)。变换函数按从左到右的顺序相乘，也就是说复合变换按从右到左的顺序有效地应用。
+  - : 要应用的一个或多个 [CSS 变换函数](/zh-CN/docs/Web/CSS/transform-function)。变换函数按从左到右的顺序相乘，也就是说复合变换按从右到左的顺序有效地应用。
 - `none`
   - : 不应用任何变换。
 
@@ -69,11 +69,11 @@ transform: unset;
 
 缩放/缩放动画对可访问性存在问题，因为它们是某些类型的偏头痛的常见触发因素。如果你需要在您的网站上包含这种动画，你应该提供一个控件，允许用户在网站层面关闭所有动画。
 
-另外，考虑利用 {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} 媒体特性 —— 使用它编写一个[媒体查询](/en-US/docs/Web/CSS/CSS_media_queries) ，以便在用户在其系统首选项中指定减少动画时关闭动画。
+另外，考虑利用 {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} 媒体特性 —— 使用它编写一个[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries) ，以便在用户在其系统首选项中指定减少动画时关闭动画。
 
 了解更多信息：
 
-- [MDN 对 WCAG 的理解：对指南 2.3 的解读](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.3_—_seizures_and_physical_reactions_do_not_design_content_in_a_way_that_is_known_to_cause_seizures_or_physical_reactions)
+- [MDN 对 WCAG 的理解：对指南 2.3 的解读](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.3_—_seizures_and_physical_reactions_do_not_design_content_in_a_way_that_is_known_to_cause_seizures_or_physical_reactions)
 - [理解成功标准 2.3.3 | W3C 对 WCAG 2.1 的解读](https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions)
 
 ## 定义
@@ -175,7 +175,7 @@ div {
 
 ### 更多示例
 
-请查阅[使用 CSS 变换](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) 以及 {{cssxref("&lt;transform-function&gt;")}} 获取更多示例。 
+请查阅[使用 CSS 变换](/zh-CN/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) 以及 {{cssxref("&lt;transform-function&gt;")}} 获取更多示例。 
 
 ## 规范
 
