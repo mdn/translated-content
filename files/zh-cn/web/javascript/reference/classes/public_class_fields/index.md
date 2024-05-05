@@ -179,7 +179,7 @@ const instance2 = new DerivedWithConstructor(); // 打印 1
 
 ```js example-bad
 class Person {
-  name = nameArg; // nameArg is out of scope of the constructor
+  name = nameArg; // nameArg 在构造函数的作用域外
   constructor(nameArg) {}
 }
 ```
