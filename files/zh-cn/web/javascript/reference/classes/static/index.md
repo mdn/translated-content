@@ -11,7 +11,7 @@ l10n:
 
 静态方法通常是实用函数，如创建或克隆对象的函数，而静态属性则适用于缓存、固定配置或其他不需要跨实例复制的数据。
 
-> **备注：** 在类的上下文中，MDN Web Docs 内容交替使用 properties 和 [fields](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields) 这两个术语。
+> **备注：** 在类的上下文中，MDN Web 文档内容交替使用属性和[字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)这两个术语。
 
 {{EmbedInteractiveExample("pages/js/classes-static.html", "taller")}}
 
