@@ -9,9 +9,9 @@ l10n:
 
 Cookie 就是访问者在访问网站后留下的一个信息片段。
 
-Cookie 用于个性化用户的体验。可能包含用户在访问网站时的参数或输入。用户可以自定义浏览器来接受，拒绝或删除 Cookie。
+Cookie 用于个性化用户访问网站的体验。它可能包含用户在访问网站时的偏好或输入。用户可以自定义浏览器来接受、拒绝或删除 Cookie。
 
-Cookie 可以通过在服务器中使用 `Set-Cookie` [HTTP header](/zh-CN/docs/Web/HTTP/Cookies), 或者在 JavaScript 中用 [`document.cookie`](/zh-CN/docs/Web/API/Document/cookie) 进行设置、修改。
+Cookie 可以通过在服务器中使用 `Set-Cookie` [HTTP 标头](/zh-CN/docs/Web/HTTP/Cookies)，或者在 JavaScript 中用 [`document.cookie`](/zh-CN/docs/Web/API/Document/cookie) 进行设置、修改。
 
 ## 参见
 
