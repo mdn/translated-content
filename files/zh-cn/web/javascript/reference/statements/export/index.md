@@ -9,7 +9,7 @@ l10n:
 
 在创建 JavaScript 模块时，**`export`** 语句用于从模块中导出实时绑定的函数、对象或原始值，以便其他程序可以通过 {{jsxref("Statements/import", "import")}} 语句使用它们。被导出的绑定值依然可以在本地进行修改。在使用 import 进行导入时，这些绑定值只能被导入模块所读取，但在 export 导出模块中对这些绑定值进行修改，所修改的值也会实时地更新。
 
-要在源文件中使用 `export` 声明，运行时必须将该文件解释为 [模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)。在 HTML 中，可通过在 {{HTMLElement("script")}} 标记中添加 `type="module"` 或由其他模块导入来实现。模块会自动以 [严格](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode) 模式解释。
+要在源文件中使用 `export` 声明，运行时必须将该文件解释为[模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)。在 HTML 中，可通过在 {{HTMLElement("script")}} 标记中添加 `type="module"` 或由其他模块导入来实现。模块会自动以[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)解释。
 
 ## 语法
 
