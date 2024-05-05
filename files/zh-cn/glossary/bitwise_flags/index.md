@@ -7,9 +7,9 @@ l10n:
 
 {{GlossarySidebar}}
 
-**标志位**通常是一组变量，通常是简单的数字值，它们可以用于启用或禁用方法或其他代码结构的特定用法或特性。它们可以快速高效地完成这项任务，因为它们在位上运行。同一组中的相关标志通常被赋予互补值，这些值表示单个值（例如十六进制）中的不同位位置，以便可以用单个值表示多个标志设置。
+**标志位**通常是一组变量，通常是简单的数值，可用于启用或禁用方法或其他代码结构的特定用途或特性。由于它们在位级别上运行，因此可以快速有效地实现这一点。同一组中的相关标志通常被赋予互补值，这些值表示单个值（例如十六进制）中不同位的位置，以便可以用单个值表示多个标志设置。
 
-例如，在 {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} 中，可以使用 {{domxref("GPUDevice.createBuffer()")}} 方法创建 {{domxref("GPUBuffer")}} 对象实例。在调用此方法时，你就在描述符中定义一个 `usage` 属性，其中包含一个或多个标志，启用该缓冲区的不同允许的用法。
+例如，在 {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} 中，可以使用 {{domxref("GPUDevice.createBuffer()")}} 方法创建 {{domxref("GPUBuffer")}} 对象实例。在调用此方法时，需要在描述符中定义 `usage` 属性，其中包含一个或多个标志，启用该缓冲区不同的允许用途。
 
 ```js
 usage: GPUBufferUsage.COPY_SRC | GPUBufferUsage.MAP_WRITE;
@@ -30,9 +30,7 @@ usage: GPUBufferUsage.COPY_SRC | GPUBufferUsage.MAP_WRITE;
 | `GPUBufferUsage.INDIRECT`      | 0x0100       | 256          |
 | `GPUBufferUsage.QUERY_RESOLVE` | 0x0200       | 512          |
 
-当查询 {{domxref("GPUBuffer.usage")}}
-属性时，会返回一个单一的十进制数，该数是不同用法标志的不同十进制值的总和。回到上面的例子，查询具有先前指定用法的 `GPUBuffer`
-创建的 `GPUBuffer.usage` 将返回以下内容：
+当查询 {{domxref("GPUBuffer.usage")}} 属性时，会返回一个单一的十进制数，该数是不同用法标志的不同十进制值的总和。回到上面的例子，查询具有先前指定用法的 `GPUBuffer` 创建的 `GPUBuffer.usage` 将返回以下内容：
 
 - `GPUBufferUsage.COPY_SRC` 的十进制等价值，即 4
 - 加上 `GPUBufferUsage.MAP_WRITE` 的十进制等价值，即 2
@@ -48,5 +46,5 @@ if (buffer.usage & GPUBufferUsage.MAP_WRITE) {
 
 ## 参见
 
-- [标志位是美丽的，为什么？](https://www.hendrik-erz.de/post/bitwise-flags-are-beautiful-and-heres-why)
+- [标志位是优雅的，为什么？](https://www.hendrik-erz.de/post/bitwise-flags-are-beautiful-and-heres-why)
 - 维基百科上的[位操作](https://zh.wikipedia.org/wiki/位操作)
