@@ -1,7 +1,6 @@
 ---
 title: GlobalEventHandlers.oninput
 slug: Web/API/Element/input_event
-original_slug: Web/API/HTMLElement/input_event
 ---
 
 {{ApiRef("HTML DOM")}}
