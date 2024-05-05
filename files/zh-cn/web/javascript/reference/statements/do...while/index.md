@@ -20,7 +20,7 @@ while (condition);
 ```
 
 - `statement`
-  - : 执行至少一次的语句，并在每次 `condition` 值为真时重新执行。想执行多行语句，可使用{{jsxref("Statements/block", "block", "", 1)}} 语句（`{ ... }`）包裹这些语句。
+  - : 执行至少一次的语句，并在每次条件值为真时重新执行。想在循环中执行多行语句，可使用{{jsxref("Statements/block", "块", "", "nocode")}}语句（`{ /* ... */ }`）包裹这些语句。
 - `condition`
   - : 循环中每次都会计算的表达式。如果 `condition` [值为真](/zh-CN/docs/Glossary/Truthy)， `statement` 会再次执行。当 `condition` [值为假](/zh-CN/docs/Glossary/Falsy)，则跳到`do...while`之后的语句。
 
