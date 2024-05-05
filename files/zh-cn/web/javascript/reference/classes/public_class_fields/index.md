@@ -84,7 +84,7 @@ class Derived extends Base {
 const base = new Base();
 const sub = new Derived();
 
-console.log(base.anotherBaseField); // "base field"
+console.log(base.anotherBaseField); // "基类字段"
 
 console.log(sub.subField); // "基类方法输出"
 ```
