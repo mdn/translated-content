@@ -1,8 +1,7 @@
 ---
 title: ":user-valid"
 slug: Web/CSS/:user-valid
-page-type: css-pseudo-class
-browser-compat: css.selectors.user-valid
+
 ---
 
 {{CSSRef}}
