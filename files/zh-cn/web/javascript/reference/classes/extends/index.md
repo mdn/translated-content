@@ -124,8 +124,8 @@ console.log(new ChildClass()); // TypeError: Derived constructors may only retur
 
 下面是扩展类时可能会遇到的一些问题：
 
-- 在子类上调用静态工厂方法（如 {{jsxref("Promise.resolve()")}} 或 {{jsxref("Array.from()")}} ）时，返回的实例始终是子类的实例。
-- 在子类上调用返回新实例的实例方法（如 {{jsxref("Promise.prototype.then()")}} 或 {{jsxref("Array.prototype.map()")}} ）时，返回的实例始终是子类的实例。
+- 在子类上调用静态工厂方法（如 {{jsxref("Promise.resolve()")}} 或 {{jsxref("Array.from()")}}）时，返回的实例始终是子类的实例。
+- 在子类上调用返回新实例的实例方法（如 {{jsxref("Promise.prototype.then()")}} 或 {{jsxref("Array.prototype.map()")}}）时，返回的实例始终是子类的实例。
 - 在可能的情况下，实例方法会尽量委托给最小的原始方法集。例如，对于 {{jsxref("Promise")}} 的子类，覆盖 {{jsxref("Promise/then", "then()")}} 会自动导致 {{jsxref("Promise/catch", "catch()")}} 的行为发生变化；或对于 {{jsxref("Map")}} 的子类，覆盖 {{jsxref("Map/set", "set()")}} 会自动导致 {{jsxref("Map/Map", "Map()")}} 构造函数的行为发生变化。
 
 然而，要正确地实现上述期望，需要付出不小的努力。
