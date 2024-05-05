@@ -1,5 +1,5 @@
 ---
-title: transform
+title: 变换
 slug: Web/CSS/transform
 l10n:
   sourceCommit: 4940889b79f76552b95e092d48012cb6603a324b
@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-CSS **`transform`** 属性允许你旋转，缩放，倾斜或平移给定元素。这是通过修改 CSS 视觉格式化模型的坐标空间实现的。
+[CSS](/en-US/docs/Web/CSS) **`transform`** 属性允许你旋转，缩放，倾斜或平移给定元素。这是通过修改 CSS [视觉格式化模型](/en-US/docs/Web/CSS/Visual_formatting_model)的坐标空间实现的。
 
 {{EmbedInteractiveExample("pages/css/transform.html")}}
 
@@ -56,12 +56,12 @@ transform: revert-layer;
 transform: unset;
 ```
 
-`transform`属性可以指定为关键字值 `none` 或一个/多个 `<transform-function>` 值。
+`transform`属性可以指定为关键字值 `none`，或者是一个/多个 `<transform-function>` 值。
 
 ### 值
 
 - {{cssxref("&lt;transform-function&gt;")}}
-  - : 要应用的一个或多个 【CSS 变换函数](/en-US/docs/Web/CSS/transform-function)。变换函数按从左到右的顺序相乘，也就是说复合变换按从右到左的顺序有效地应用。
+  - : 要应用的一个或多个 [CSS 变换函数](/en-US/docs/Web/CSS/transform-function)。变换函数按从左到右的顺序相乘，也就是说复合变换按从右到左的顺序有效地应用。
 - `none`
   - : 不应用任何变换。
 
@@ -111,7 +111,7 @@ div {
 
 ### 变换顺序
 
-变换函数的顺序很重要。在这个例子中，两个盒子被相同的值旋转和平移；只有变换函数的顺序不同。
+变换函数的顺序很重要。在这个例子中，两个盒子被相同的值进行了旋转和平移；只不过，变换函数的顺序不同。
 
 #### HTML
 
