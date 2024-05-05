@@ -74,7 +74,7 @@ Object.getPrototypeOf(ChildClass) === ParentClass;
 Object.getPrototypeOf(ChildClass.prototype) === ParentClass.prototype;
 ```
 
-`extend` 的右侧不一定是标识符。你可以使用任何求值为构造函数的表达式。这通常有助于创建 [mixins]（#mix-ins）。`extends` 表达式中的 `this` 值是围绕类定义的 `this` ，而引用类的名称会导致{{jsxref("ReferenceError")}}，因为类尚未初始化。在此表达式中，{{jsxref("Operators/await", "await")}} 和 {{jsxref("Operators/yield", "yield")}} 按预期工作。
+`extend` 的右侧不一定是标识符。你可以使用任何求值为构造函数的表达式。这通常有助于创建[混入（mixin）](#混入)。`extends` 表达式中的 `this` 值是围绕类定义的 `this` ，而引用类的名称会导致{{jsxref("ReferenceError")}}，因为类尚未初始化。在此表达式中，{{jsxref("Operators/await", "await")}} 和 {{jsxref("Operators/yield", "yield")}} 按预期工作。
 
 ```js
 class SomeClass extends class {
