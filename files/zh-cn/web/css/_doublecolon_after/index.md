@@ -1,6 +1,8 @@
 ---
 title: "::after"
 slug: Web/CSS/::after
+l10n:
+  sourceCommit: bf02c31b6f160b0df7bef4045929033dfad1961c
 ---
 
 {{CSSRef}}
