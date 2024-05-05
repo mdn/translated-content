@@ -98,7 +98,7 @@ class ValidationError extends Error {
   }
 
   printCustomerMessage() {
-    return `发生未知错误 :-( (details: ${this.message}, code: ${this.code})`;
+    return `发生未知错误 :-(（详细信息：${this.message}，错误代码：${this.code}）`;
   }
 }
 
