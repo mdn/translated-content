@@ -74,4 +74,3 @@ input:user-valid + span::before {
 - {{CSSxRef(":invalid")}}
 - {{CSSxRef(":required")}}
 - {{CSSxRef(":optional")}}
-- {{CSSxRef(":user-invalid")}}
