@@ -15,7 +15,7 @@ l10n:
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
 ```
 
-一种常见的变体是“URL 安全的 Base64”，它省略了填充，并将 `+/` 替换为 `-_`，以避免在 URL 路径段或查询参数中可能引起问题的字符。
+一种常见的变体是“URL 安全的 Base64”，它省略了填充，并将 `+/` 替换为 `-_`，以避免在 URL 路径段或查询参数中可能引起问题的字符的问题。
 
 Base64 编码方案通常用于对二进制数据进行编码，以便在只能处理 ASCII 文本（或某些 ASCII 的超集，仍不接受任意二进制数据）的媒体上进行存储或传输。这确保了数据在传输过程中保持不变。Base64 的常见应用包括：
 
@@ -44,7 +44,7 @@ Base64 编码方案通常用于对二进制数据进行编码，以便在只能�
 
 由于 `btoa` 将其输入字符串的代码点解释为字节值，因此如果字符的代码点超过 `0xff`，调用 `btoa` 将导致“Character Out Of Range”异常。对于需要编码任意 Unicode 文本的用例，需要首先将字符串转换为其 UTF-8 的组成字节，然后对这些字节进行编码。
 
-最简单的解决方案是使用 TextEncoder 和 TextDecoder 在 UTF-8 和字符串的单字节表示之间进行转换：
+最简单的解决方案是使用 `TextEncoder` 和 `TextDecoder` 在 UTF-8 和字符串的单字节表示之间进行转换：
 
 ```js
 function base64ToBytes(base64) {
