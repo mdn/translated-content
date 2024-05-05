@@ -74,8 +74,7 @@ export function myFunction() {
 ```js
 export { x };
 const x = 1;
-// 这样做是可行的，因为 `export` 只是一个声明，并没有
-// 使用 `x` 的值。
+// 这样做是可行的，因为 `export` 只是一个声明，并没有使用 `x` 的值。
 ```
 
 默认导出：
