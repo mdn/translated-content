@@ -30,8 +30,8 @@ class ClassWithField {
 本页面将详细介绍公共实例字段。
 
 - 有关公共静态字段，请参阅 [`static`](/zh-CN/docs/Web/JavaScript/Reference/Classes/static)。
-- 关于私有字段，请参阅 [private properties](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)。
-- 公共方法请参见 [method definitions](/zh-CN/docs/Web/JavaScript/Reference/Functions/Method_definitions)。
+- 关于私有字段，请参阅[私有属性](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)。
+- 公共方法请参见[方法的定义](/zh-CN/docs/Web/JavaScript/Reference/Functions/Method_definitions)。
 - 有关公共访问器，请参阅 [getter](/zh-CN/docs/Web/JavaScript/Reference/Functions/get) 和 [setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set)。
 
 公有实例字段存在于类的每个已创建实例中。通过声明公共字段，可以确保该字段始终存在，而且类的定义也更加自文档化（self-documenting）。
