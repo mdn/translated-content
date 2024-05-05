@@ -180,8 +180,7 @@ console.log(proto(proto(new NullClass()))); // null
 ```js
 class Square extends Polygon {
   constructor(length) {
-    // 在这里，它会调用父类的构造函数，
-    // 并为多边形的宽度和高度提供长度
+    // 在这里，它会调用父类的构造函数，并为多边形的宽度和高度提供长度
     super(length, length);
     // 在派生类中，必须先调用 super() 才能用“this”。省略这一点将导致引用错误。
     this.name = "Square";
