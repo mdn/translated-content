@@ -286,7 +286,7 @@ console.log(mapped instanceof MyArray); // false
 console.log(mapped instanceof Array); // true
 ```
 
-许多内置复制方法都实现了这一行为。有关此功能的注意事项，请参阅 [subclassing built-ins](#subclassing_built-ins) 讨论。
+许多内置复制方法都实现了这一行为。有关此功能的注意事项，请参阅[内置子类](#内置子类)讨论。
 
 ### 混入
 
