@@ -106,7 +106,7 @@ try {
   throw new ValidationError("非有效手机号码");
 } catch (error) {
   if (error instanceof ValidationError) {
-    console.log(error.name); // 现在这是验证错误！
+    console.log(error.name); // 现在这是 ValidationError！
     console.log(error.printCustomerMessage());
   } else {
     console.log("未知错误", error);
