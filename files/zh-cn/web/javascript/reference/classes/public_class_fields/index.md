@@ -86,7 +86,7 @@ const sub = new Derived();
 
 console.log(base.anotherBaseField); // "base field"
 
-console.log(sub.subField); // "base method output"
+console.log(sub.subField); // "基类方法输出"
 ```
 
 每次创建新实例时，都会对字段初始化表达式进行评估。(因为每个实例的 `this` 值都不同，所以初始化表达式可以访问特定于实例的属性）。
