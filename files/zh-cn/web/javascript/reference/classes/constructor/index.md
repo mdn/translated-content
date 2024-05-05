@@ -221,7 +221,7 @@ class Square extends Polygon {
 }
 ```
 
-### 在绑定到不同原型的构造函数中调用 super
+### 在绑定了不同原型的构造函数中调用 super
 
 `super()` 调用当前类原型的构造函数。如果更改了当前类的原型，`super()` 将调用新原型的构造函数。更改当前类的 `prototype` 属性的原型不会影响 `super()` 调用哪个构造函数。
 
