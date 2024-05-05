@@ -63,7 +63,7 @@ class C {
 
 console.log(new C());
 console.log(new C());
-// Both instances have the same field name
+// 两个实例拥有相同的字段名称
 ```
 
 在字段初始化器中，[`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 指的是正在构建的类实例，而 [`super`](/zh-CN/docs/Web/JavaScript/Reference/Operators/super)指的是基类的 `prototype` 属性，它包含基类的实例方法，但不包含其实例字段。
