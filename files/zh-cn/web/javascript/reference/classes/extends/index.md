@@ -79,18 +79,18 @@ Object.getPrototypeOf(ChildClass.prototype) === ParentClass.prototype;
 ```js
 class SomeClass extends class {
   constructor() {
-    console.log("Base class");
+    console.log("基类");
   }
 } {
   constructor() {
     super();
-    console.log("Derived class");
+    console.log("派生类");
   }
 }
 
 new SomeClass();
-// Base class
-// Derived class
+// 基类
+// 派生类
 ```
 
 基类可以从构造函数中返回任何内容，而派生类必须返回对象或 `undefined` ，否则将抛出 {{jsxref("TypeError")}}} 。
