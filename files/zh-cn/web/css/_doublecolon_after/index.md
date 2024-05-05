@@ -11,7 +11,7 @@ l10n:
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-element-after.html", "tabbed-standard")}}
 
-> **备注：** `::before` 和 `::after` 生成的伪元素是行级盒子，就好像它们是应用它们的元素或“起源元素”的直接子元素，因此不能应用于[_替换元素_](/zh-CN/docs/Web/CSS/Replaced_element)（如 {{htmlelement(“img”)}}），它们的内容被替换，不受当前文档样式的影响。
+> **备注：** `::before` 和 `::after` 生成的伪元素是行级盒子，就好像它们是应用它们的元素或“起源元素”的直接子元素，因此不能应用于[_替换元素_](/zh-CN/docs/Web/CSS/Replaced_element)（如 {{htmlelement("img")}}），它们的内容被替换，不受当前文档样式的影响。
 
 ## 语法
 
