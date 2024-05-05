@@ -1,7 +1,6 @@
 ---
 title: WOFF (Web Open Font Format)
 slug: Web/CSS/CSS_fonts/WOFF
-original_slug: Web/Guide/WOFF
 ---
 
 **WOFF (Web Open Font Format)** は、Mozilla が Type Supply や LettError、他の組織と提携して開発した新しい Web フォント形式です。これは、TrueType および OpenType, Open Font Format に使用されているテーブルベースの `sfnt` 構造と同じ圧縮されたバージョンを使用しています。WOFF には、これにメタデータと個人利用のためのデータ構造が追加されており、作成者とベンダーがライセンス情報を書き込むことができる予約フィールドも含まれています。
