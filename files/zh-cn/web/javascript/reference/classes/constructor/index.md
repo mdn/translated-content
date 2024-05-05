@@ -194,7 +194,7 @@ foo.constructor(); // 记录“被调用”
 console.log(foo); // Foo { a: 1 }
 ```
 
-禁止将异步方法、生成器方法、访问器和类字段称为 `constructor`。私有名称不能称为 `#constructor`。任何名为 `constructor` 的成员都必须是普通方法。
+禁止将异步方法、生成器方法、访问器和类字段称为 `constructor`。私有名称不能被命名为 `#constructor`。任何名为 `constructor` 的成员都必须是普通方法。
 
 ## 示例
 
