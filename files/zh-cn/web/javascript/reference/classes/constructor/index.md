@@ -7,7 +7,7 @@ l10n:
 
 {{jsSidebar("Classes")}}
 
-**`constructor`** 是一种用于创建和初始化 [`class`](/zh-CN/docs/Web/JavaScript/Reference/Statements/class) 创建的对象的特殊方法。
+**`constructor`** 是一种用于创建和初始化 [`class`](/zh-CN/docs/Web/JavaScript/Reference/Statements/class) 对象实例的特殊方法。
 
 > **备注：** 本页介绍 `constructor` 语法。关于所有对象的 `constructor` 属性，请参见 {{jsxref("Object.prototype.constructor")}}。
 
