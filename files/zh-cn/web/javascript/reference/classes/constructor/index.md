@@ -76,7 +76,7 @@ try {
   throw new ValidationError("非有效电话号码");
 } catch (error) {
   if (error instanceof ValidationError) {
-    console.log(error.name); // 这是错误，而不是验证错误！
+    console.log(error.name); // 这是 Error，而不是 ValidationError！
     console.log(error.printCustomerMessage());
   } else {
     console.log("未知错误", error);
