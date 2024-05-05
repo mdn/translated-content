@@ -70,7 +70,7 @@ console.log(new C());
 
 ```js
 class Base {
-  baseField = "base field";
+  baseField = "基类字段";
   anotherBaseField = this.baseField;
   baseMethod() {
     return "base method output";
