@@ -292,7 +292,7 @@ console.log(mapped instanceof Array); // true
 
 抽象子类或 _mix-ins_ 是类的模板。一个类只能有一个超类，因此不可能从工具类等多重继承。功能必须由超类提供。
 
-一个以超类为输入，以扩展该超类的子类为输出的函数可以用来实现 mix-ins：
+一个以超类为输入，以扩展该超类的子类为输出的函数可以用来实现混入：
 
 ```js
 const calculatorMixin = (Base) =>
@@ -306,7 +306,7 @@ const randomizerMixin = (Base) =>
   };
 ```
 
-使用这些 mix-ins 的类可以这样编写：
+使用这些混入的类可以这样编写：
 
 ```js
 class Foo {}
