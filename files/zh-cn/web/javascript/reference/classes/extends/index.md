@@ -202,7 +202,7 @@ class Square extends Polygon {
 ```js
 const Animal = {
   speak() {
-    console.log(`${this.name}发出了噪音`);
+    console.log(`${this.name} 发出了噪音`);
   },
 };
 
