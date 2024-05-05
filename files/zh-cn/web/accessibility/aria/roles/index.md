@@ -3,6 +3,8 @@ title: WAI-ARIA 角色
 slug: Web/Accessibility/ARIA/Roles
 ---
 
+{{AccessibilitySidebar}}
+
 ARIA 角色为内容提供了语义，允许屏幕阅读器和其他工具与对象类型的用户预期一致的方式进行呈现并支持交互。<abbr>ARIA</abrr> 角色可以用于描述不在 HTML 中原生存在的元素，或者存在但没有完整的浏览器支持的元素。
 
 默认情况下，很多语义的 HTML 元素都有角色，例如，`<input type="radio">` 有“radio”角色。HTML 的非语义的元素没有角色，例如没有添加语义的 `<div>` 和 `<span>` 会返回 `null`。`role` 属性可以添加语义。
