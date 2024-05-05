@@ -218,7 +218,7 @@ const d = new Dog("Mitzie");
 d.speak(); // Mitzie 发出了噪音
 ```
 
-### 使用 `extends`与内置对象
+### 使用 `extends` 与内置对象
 
 这个示例继承了内置的 {{jsxref("Date")}} 对象。这个例子是从这个[在线演示](https://googlechrome.github.io/samples/classes-es6/index.html)中提取出来的[（源）](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html)。
 
