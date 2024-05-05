@@ -43,8 +43,8 @@ const PREFIX = "prefix";
 
 class ClassWithField {
   field;
-  fieldWithInitializer = "instance field";
-  [`${PREFIX}Field`] = "prefixed field";
+  fieldWithInitializer = "实例字段";
+  [`${PREFIX}Field`] = "带前缀字段";
 }
 
 const instance = new ClassWithField();
