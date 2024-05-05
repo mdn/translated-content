@@ -11,7 +11,7 @@ l10n:
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-element-after.html", "tabbed-standard")}}
 
-> **备注：** `::before` 和 `::after` 生成的伪元素是行级盒子，就好像它们是应用它们的元素或“起源元素”的直接子元素，因此不能应用于[*替换元素*](/zh-CN/docs/Web/CSS/Replaced_element)（如 {{htmlelement(“img”)}}），它们的内容被替换，不受当前文档样式的影响。
+> **备注：** `::before` 和 `::after` 生成的伪元素是行级盒子，就好像它们是应用它们的元素或“起源元素”的直接子元素，因此不能应用于[_替换元素_](/zh-CN/docs/Web/CSS/Replaced_element)（如 {{htmlelement(“img”)}}），它们的内容被替换，不受当前文档样式的影响。
 
 ## 语法
 
@@ -91,18 +91,17 @@ l10n:
 
 本例使用 `::after`，结合 [`attr()`](/zh-CN/docs/Web/CSS/attr) CSS 表达式和 `data-descr` [自定义数据属性](/zh-CN/docs/Web/HTML/Global_attributes/data-*)，创建工具提示。无需 JavaScript！
 
-我们还可以使用此技术为键盘用户提供支持，方法是添加一个值为 `0` 的 `tabindex` 使每个 `span` 都可在键盘上聚焦，并使用 CSS `:focus` 选择器。这说明了 
- `::before` 和 `::after` 可以多么灵活，不过要获得最方便的体验，以其他方式创建的语义披露部件（如使用 [detail 和 summary](/zh-CN/docs/Web/HTML/Element/details) 元素）可能更合适。
+我们还可以使用此技术为键盘用户提供支持，方法是添加一个值为 `0` 的 `tabindex` 使每个 `span` 都可在键盘上聚焦，并使用 CSS `:focus` 选择器。这说明了 `::before` 和 `::after` 可以多么灵活，不过要获得最方便的体验，以其他方式创建的语义披露部件（如使用 [detail 和 summary](/zh-CN/docs/Web/HTML/Element/details) 元素）可能更合适。
 
 #### HTML
 
 ```html
 <p>
-  这里我们有包含了一些<span tabindex="0" data-descr="鼠标悬停时出现的小弹出窗口">
+  这里我们有包含了一些<span
+    tabindex="0"
+    data-descr="鼠标悬停时出现的小弹出窗口">
     工具提示</span
-  >的<span tabindex="0" data-descr="文字和标点符号的集合">
-    文字
-  </span>。
+  >的<span tabindex="0" data-descr="文字和标点符号的集合">文字</span>。
 </p>
 ```
 
