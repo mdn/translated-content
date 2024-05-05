@@ -15994,9 +15994,5 @@
   "conflicting/Web/SVG/Attribute": {
     "modified": "2020-10-15T22:34:58.576Z",
     "contributors": ["osipov_s"]
-  },
-  "orphaned/Learn/Front-end_web_developer": {
-    "modified": "2020-10-26T19:26:16.101Z",
-    "contributors": ["Villian79", "bogpok", "Menma"]
   }
 }
