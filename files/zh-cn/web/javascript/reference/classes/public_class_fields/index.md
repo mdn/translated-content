@@ -73,7 +73,7 @@ class Base {
   baseField = "基类字段";
   anotherBaseField = this.baseField;
   baseMethod() {
-    return "base method output";
+    return "基类方法输出";
   }
 }
 
