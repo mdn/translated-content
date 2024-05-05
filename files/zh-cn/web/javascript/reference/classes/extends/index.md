@@ -235,7 +235,7 @@ class MyDate extends Date {
 
 所有 JavaScript 对象默认情况下都继承自 `Object.prototype`，因此乍一看，编写 `extends Object` 似乎是多余的。与完全不写 `extends` 的唯一区别是构造函数本身继承了 `Object` 的静态方法，例如 {{jsxref("Object.keys()")}}。然而，由于没有任何 `Object` 静态方法会使用 `this` 值，因此继承这些静态方法仍然没有任何价值。
 
-{{jsxref("Object/Object", "Object()")}}构造函数特殊处理了子类化情况。如果通过 [`super()`](/zh-CN/docs/Web/JavaScript/Reference/Operators/super)隐式调用该构造函数，则该构造函数始终以`new.target.prototype` 为原型初始化一个新对象。传递给 `super()` 的任何值都将被忽略。
+{{jsxref("Object/Object", "Object()")}} 构造函数特殊处理了子类化情况。如果通过 [`super()`](/zh-CN/docs/Web/JavaScript/Reference/Operators/super) 隐式调用该构造函数，则该构造函数始终以 `new.target.prototype` 为原型初始化一个新对象。传递给 `super()` 的任何值都将被忽略。
 
 ```js
 class C extends Object {
