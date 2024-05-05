@@ -1,7 +1,6 @@
 ---
 title: ":user-valid"
 slug: Web/CSS/:user-valid
-
 ---
 
 {{CSSRef}}
