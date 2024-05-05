@@ -220,7 +220,7 @@ class Professor extends Person {
   name = `${this.name} 教授`;
 }
 
-console.log(new Professor("Radev", 54).name); // "Professor Radev"
+console.log(new Professor("Radev", 54).name); // "Radev 教授"
 ```
 
 ## 规范
