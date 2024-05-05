@@ -61,7 +61,7 @@ console.log(Object.getPrototypeOf(new ParentClass()));
 |                                   | `ChildClass` 的原型对象 | `ChildClass.prototype` 的原型对象 |
 | --------------------------------- | ----------------------- | --------------------------------- |
 | `extends` clause absent           | `Function.prototype`    | `Object.prototype`                |
-| [`extends null`](#extending_null) | `Function.prototype`    | `null`                            |
+| [`extends null`](#拓展_null) | `Function.prototype`    | `null`                            |
 | `extends ParentClass`             | `ParentClass`           | `ParentClass.prototype`           |
 
 ```js
