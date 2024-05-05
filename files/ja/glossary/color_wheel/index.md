@@ -2,7 +2,7 @@
 title: Color wheel (色相環)
 slug: Glossary/Color_wheel
 l10n:
-  sourceCommit: 8daba6d316e3b68f45e09c44da9b6942307ca555
+  sourceCommit: 1a26583f60bdceece64347bf967d0653fe8df288
 ---
 
 {{GlossarySidebar}}
@@ -16,11 +16,13 @@ l10n:
 色相環は、異なる色合いを選びたいときに、実生活で使用します。例えば、壁のペンキや家具の色を選択するときなどです。
 
 デジタルの世界では、色相環はカラーピッカーで使用されます。 macOS の既定のものは次のものです。
-[![The default color picker on macOS Monterey](color_wheel_macos.png)](/ja/docs/Glossary/Color_wheel/color_wheel_macos.png)
+
+[![The default color picker on macOS](color_wheel_macos.png)](/ja/docs/Glossary/Color_wheel/color_wheel_macos.png)
 
 ## 関連情報
 
-- [_Color theory and the color wheel_](https://www.canva.com/colors/color-wheel/)
-- [_How to Use the Color Wheel to Pick Your Perfect Color Palette_](https://www.bhg.com/decorating/color/basics/color-wheel-color-chart/) in _Better Homes & Gardens_
-- [色相環](https://ja.wikipedia.org/wiki/色相#色相環)（ウィキペディア）
+- {{glossary("color_space", "色空間")}}
 - [`<color>`](/ja/docs/Web/CSS/color_value)（CSS 色の型）
+- [Color theory and the color wheel](https://www.canva.com/colors/color-wheel/)
+- [How to Use the Color Wheel to Pick Your Perfect Color Palette](https://www.bhg.com/decorating/color/basics/color-wheel-color-chart/) on Better Homes & Gardens
+- [色相環](https://ja.wikipedia.org/wiki/色相#色相環)（ウィキペディア）
