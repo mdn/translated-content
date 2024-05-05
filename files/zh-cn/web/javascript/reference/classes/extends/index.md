@@ -377,7 +377,7 @@ class ReadOnlyMap {
 
 ## 扩展阅读
 
-- [使用类](/zh-CN/docs/Web/JavaScript/Guide/Using_classes) guide
+- [使用类](/zh-CN/docs/Web/JavaScript/Guide/Using_classes)指南
 - [类](/zh-CN/docs/Web/JavaScript/Reference/Classes)
 - {{jsxref("Classes/constructor", "constructor")}}
 - {{jsxref("Statements/class", "class")}}
