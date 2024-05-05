@@ -274,7 +274,7 @@
 /ru/docs/Learn/Доступность/CSS_and_JavaScript	/ru/docs/Learn/Accessibility/CSS_and_JavaScript
 /ru/docs/Learn/Доступность/HTML	/ru/docs/Learn/Accessibility/HTML
 /ru/docs/Learn/Доступность/What_is_accessibility	/ru/docs/Learn/Accessibility/What_is_accessibility
-/ru/docs/Learn/Фронтенд_разработчик	https://developer.mozilla.org/ru/curriculum/
+/ru/docs/Learn/Фронтенд_разработчик	https://developer.mozilla.org/en-US/curriculum/
 /ru/docs/Learn/Что_такое_веб_сервер	/ru/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server
 /ru/docs/MDN/About	/ru/docs/MDN/Writing_guidelines
 /ru/docs/MDN/Contribute	/ru/docs/MDN/Community/Contributing
