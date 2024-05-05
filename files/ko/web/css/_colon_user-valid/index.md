@@ -5,7 +5,7 @@ slug: Web/CSS/:user-valid
 
 {{CSSRef}}
 
-[CSS](/ko/docs/Web/CSS) **`:user-valid`** CSS [가짜 클래스](/ko/docs/Web/CSS/Pseudo-classes) 해당 값을 기반으로 올바르게 유효성을 검사하는 유효성이 검사된 양식 요소를 나타냅니다 [validation constraints](/ko/docs/Learn/Forms#constraint_validation). 그러나,  {{cssxref(":valid")}}과 달리 사용자가 상호작용한 후에만 일치합니다
+[CSS](/ko/docs/Web/CSS) **`:user-valid`** CSS [가짜 클래스](/ko/docs/Web/CSS/Pseudo-classes) 해당 값을 기반으로 올바르게 유효성을 검사하는 유효성이 검사된 양식 요소를 나타냅니다 [validation constraints](/ko/docs/Learn/Forms#constraint_validation). 그러나, {{cssxref(":valid")}}과 달리 사용자가 상호작용한 후에만 일치합니다
 
 이 가짜(pseudo) 클래스는 양식 컨트롤이 유효하고 다음 중 하나가 발생한 경우 적용됩니다.
 
