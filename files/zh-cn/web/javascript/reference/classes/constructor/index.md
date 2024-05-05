@@ -92,7 +92,7 @@ try {
 ```js
 class ValidationError extends Error {
   constructor(message) {
-    super(message); // 调用父类构造器
+    super(message); // 调用父类构造函数
     this.name = "ValidationError";
     this.code = "42";
   }
