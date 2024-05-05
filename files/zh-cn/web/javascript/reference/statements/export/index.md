@@ -157,7 +157,7 @@ import { default as function1, function2 } from "bar.js";
 export { function1, function2 };
 ```
 
-大多数 "import from" 语法都有对应的 "export from" 语法。
+大多数“import from”语法都有对应的“export from”语法。
 
 ```js
 export { x } from "mod";
