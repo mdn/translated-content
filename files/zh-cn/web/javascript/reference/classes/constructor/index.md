@@ -131,8 +131,7 @@ new (class C extends class B {
   foo() {
     return this.#a; //TypeError: Cannot read private member #a from an object whose class did not declare it
     // 这并不是因为 class 没有声明它，
-    // 而是由于私有字段尚未初始化
-    // 在超类构造函数运行的时候
+    // 而是由于私有字段在父类构造函数运行的时候尚未初始化
   }
 })();
 ```
