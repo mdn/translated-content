@@ -117,7 +117,7 @@ export default function () {
 命名导出在需要导出多个值时非常有用。导入此模块时，命名导出必须使用完全相同的名称（可选择用 `as` 重命名），但默认导出可以使用任何名称导入。例如：
 
 ```js
-// file test.js
+// test.js 文件
 const k = 12;
 export default k;
 ```
