@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**CORS**（Cross-Origin Resource Sharing，跨源资源共享）是一个由一系列传输的 {{Glossary("Header", "HTTP 标头")}}组成的系统。这些 HTTP 标头决定浏览器是否阻止前端 JavaScript 代码获取跨源请求的响应。
+**CORS**（Cross-Origin Resource Sharing，跨源资源共享）是一个由一系列传输的 {{Glossary("HTTP_header", "HTTP 标头")}}组成的系统。这些 HTTP 标头决定浏览器是否阻止前端 JavaScript 代码获取跨源请求的响应。
 
 [同源安全策略](/zh-CN/docs/Web/Security/Same-origin_policy)默认阻止“跨源”获取资源。但是 CORS 给了 Web 服务器这样的权限，即服务器可以选择允许跨源请求访问到它们的资源。
 
