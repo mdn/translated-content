@@ -18,21 +18,21 @@ scrollTo(options)
 
 ### 参数
 
-- `x-coord` 是文档水平轴上的像素点，表示你希望在视口左上角显示的位置。
-- `y-coord` 是文档垂直轴上的像素点，表示你希望在视口左上角显示的位置。
+- `x-coord` 是你希望显示在左上角的文档水平轴像素。
+- `y-coord` 是你希望显示在左上角的文档垂直轴像素。
 
 ——或者——
 
 - `options`
-  - : 一个包含以下参数的字典：
+  - : 包含以下参数的字典：
     - `top`
       - : 指定沿 Y 轴滚动窗口或元素的像素数量。
     - `left`
       - : 指定沿 X 轴滚动窗口或元素的像素数量。
     - `behavior`
-      - : 确认滚动是立即完成还是平滑动画进行。此选项是一个字符串，必须取以下值之一：
+      - : 确定滚动是即时完成还是以平滑动画进行。该选项是一个字符串，必须取以下值之一：
         - `smooth`: 滚动应该平滑地进行动画展示
-        - `instant`: 滚动应当瞬间完成，一次性跳跃到位
+        - `instant`: 滚动应在一次跳转中即时完成
         - `auto`: 滚动行为由 {{cssxref("scroll-behavior")}} 的计算值来决定
 
 ### 返回值
@@ -57,9 +57,9 @@ window.scrollTo({
 
 ## 说明
 
-{{domxref("Window.scroll()")}} 实际上与此方法相同。对于相对滚动，请参阅 {{domxref("Window.scrollBy()")}}、{{domxref("Window.scrollByLines()")}} 和 {{domxref("Window.scrollByPages()")}}。
+{{domxref("Window.scroll()")}} 实际上与此方法相同。有关相对滚动，请参阅 {{domxref("Window.scrollBy()")}}、{{domxref("Window.scrollByLines()")}} 和 {{domxref("Window.scrollByPages()")}}。
 
-对于滚动元素，请参阅 {{domxref("Element.scrollTop")}} 和 {{domxref("Element.scrollLeft")}}。
+有关滚动元素，请参阅 {{domxref("Element.scrollTop")}} 和 {{domxref("Element.scrollLeft")}}。
 
 ## 规范
 
