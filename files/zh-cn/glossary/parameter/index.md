@@ -38,6 +38,6 @@ example(argument);
 
 ## 参见
 
-- 维基百科上的[形式参数与实际参数之间的区别](<https://zh.wikipedia.org/wiki/参数_(程序设计)#参数和引数>)
+- 维基百科上的[*形式参数*与*实际参数*之间的区别](<https://zh.wikipedia.org/wiki/参数_(程序设计)#参数和引数>)
 - [函数声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/function)
 - [函数表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function)
