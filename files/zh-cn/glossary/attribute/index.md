@@ -25,7 +25,7 @@ l10n:
 
 属性可以*反射*到特定接口的特定属性中。这意味着标签属性的值可以通过访问接口属性来读取，并可通过将接口属性设置为不同的值来修改标签属性的值性。
 
-例如，下面的 `placeholder` 反射到 {{domxref("HTMLInputElement.placeholder")}}。
+例如，下面的 `placeholder` 反射为 {{domxref("HTMLInputElement.placeholder")}}。
 
 考虑这段 HTML 代码：
 
