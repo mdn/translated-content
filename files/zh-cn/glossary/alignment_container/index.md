@@ -20,6 +20,6 @@ l10n:
 - CSS {{CSSXref("justify-items")}} 属性
 - CSS {{CSSXref("justify-self")}} 属性
 - CSS {{CSSXref("justify-tracks")}} 属性
-- CSS {{CSSXref("place-content")}} shorthand 属性
-- CSS {{CSSXref("place-self")}} shorthand 属性
+- CSS {{CSSXref("place-content")}} 简写属性
+- CSS {{CSSXref("place-self")}} 简写属性
 - CSS {{CSSXref("scroll-snap-align")}} 属性
