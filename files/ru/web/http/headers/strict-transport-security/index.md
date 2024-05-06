@@ -82,7 +82,7 @@ Strict-Transport-Security: max-age=31536000; includeSubDomains
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - Blog post: [HTTP Strict Transport Security has landed!](http://blog.sidstamm.com/2010/08/http-strict-transport-security-has.html)
 - Blog post: [HTTP Strict Transport Security (force HTTPS)](http://hacks.mozilla.org/2010/08/firefox-4-http-strict-transport-security-force-https/)

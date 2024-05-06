@@ -40,6 +40,6 @@ alert(window.getSelection().toString()); // What is actually being effectively c
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref("Selection")}}, the interface it belongs to.

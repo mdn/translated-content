@@ -73,6 +73,6 @@ while (treeWalker.nextNode()) nodeList.push(treeWalker.currentNode);
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - The interface of the object it creates: {{domxref("TreeWalker")}}.

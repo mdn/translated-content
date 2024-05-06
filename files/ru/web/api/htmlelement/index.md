@@ -114,6 +114,6 @@ _Inherits methods from its parent, {{domxref("Element")}}._
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref("Element")}}

@@ -136,7 +136,7 @@ This gives the following result:
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - HTML Ruby elements: {{HTMLElement("ruby")}}, {{HTMLElement("rt")}}, {{HTMLElement("rp")}}, and {{HTMLElement("rtc")}}.
 - CSS Ruby properties: {{cssxref("ruby-position")}}, {{cssxref("ruby-merge")}}.

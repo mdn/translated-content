@@ -126,7 +126,7 @@ b {
 }
 ```
 
-## See also
+## Смотрите также
 
 - [Stacking without the z-index property](/en/CSS/Understanding_z-index/Stacking_without_z-index): The stacking rules that apply when `z-index` is not used.
 - [Stacking with floated blocks](/en/CSS/Understanding_z-index/Stacking_and_float): How floating elements are handled with stacking.

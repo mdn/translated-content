@@ -100,7 +100,7 @@ if (navigator.getUserMedia) {
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref("MediaDevices.getUserMedia()")}} that replaces this deprecated method.
 - [WebRTC](/ru/docs/WebRTC) - the introductory page to the API

@@ -72,7 +72,7 @@ function logData() {
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref("navigator", "navigator")}}
 - {{domxref("WorkerNavigator.sendBeacon()")}} (Использование `sendBeacon()` в workers)

@@ -30,7 +30,7 @@ slug: Web/API/CSSValue
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref("CSSPrimitiveValue")}}
 - {{domxref("CSSValueList")}}

@@ -19,6 +19,6 @@ slug: Web/HTML/Global_attributes/class
 
 {{Compat}}
 
-## Смотреть также
+## Смотрите также
 
 - Все [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
