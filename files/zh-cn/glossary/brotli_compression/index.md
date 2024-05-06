@@ -11,7 +11,7 @@ l10n:
 
 Brotli 提供比 {{glossary("GZip_compression", "gzip")}} 更好的压缩率，压缩速率也与 deflate 相当。但 brotli 压缩速度比 gzip 慢，因此 gzip 可能更适合于压缩不{{glossary("Cache", "可缓存")}}的内容。
 
-Brotli 与大多数现代浏览器兼容，但同时仍需考虑备用方案。
+Brotli 与大多数现代浏览器兼容，但同时仍需考虑回落机制。
 
 ## 参见
 
