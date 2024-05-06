@@ -15,7 +15,7 @@ l10n:
 
 在现实生活中，当我们想要在不同的色调之间进行选择时，就会使用色环。例如，在选择墙漆或家具颜色时。
 
-在数字领域中，色环被用于*颜色选择器*，比如 macOS 上的默认颜色选择器：
+在计算机领域中，色环被用于*颜色选择器*，比如 macOS 上的默认颜色选择器：
 
 [![macOS 上的默认颜色选择器](color_wheel_macos.png)](/zh-CN/docs/Glossary/Color_wheel/color_wheel_macos.png)
 
