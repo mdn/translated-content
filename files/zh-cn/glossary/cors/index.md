@@ -16,7 +16,7 @@ l10n:
 - {{HTTPHeader("Access-Control-Allow-Origin")}}
   - : 指示响应的资源是否可以被给定的来源共享。
 - {{HTTPHeader("Access-Control-Allow-Credentials")}}
-  - : 指示当请求的凭证标记为 true 时，是否可以暴露对该请求的响应给脚本。
+  - : 指示当请求的凭据标记为 true 时，是否可以暴露对该请求的响应给脚本。
 - {{HTTPHeader("Access-Control-Allow-Headers")}}
   - : 用在对预检请求的响应中，指示实际的请求中可以使用哪些 HTTP 标头。
 - {{HTTPHeader("Access-Control-Allow-Methods")}}
