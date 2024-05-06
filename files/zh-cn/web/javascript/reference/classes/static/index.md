@@ -7,7 +7,7 @@ l10n:
 
 {{jsSidebar("Classes")}}
 
-类（class）或[静态初始化块](/zh-CN/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)（有关这种用法的更多信息，请参阅链接）通过 **static** 关键字定义[静态方法或字段](/zh-CN/docs/Web/JavaScript/Reference/Classes#静态方法和字段)，不能在类的实例上调用静态方法，而应该通过类本身调用。这些通常是实用程序方法，例如创建或克隆对象的功能。
+**`static`** 关键字定义了[静态方法或字段](/zh-CN/docs/Web/JavaScript/Reference/Classes#静态方法和字段)，或[静态初始化块](/zh-CN/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)（有关这种用法的更多信息，请参阅链接）。静态属性不能在类的实例上直接访问。相反，它们是在类本身上被访问的。
 
 静态方法通常是实用函数，如创建或克隆对象的函数，而静态属性则适用于缓存、固定配置或其他不需要跨实例复制的数据。
 
