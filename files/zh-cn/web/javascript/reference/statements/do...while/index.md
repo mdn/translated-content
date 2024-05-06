@@ -26,7 +26,7 @@ while (condition);
 
 ## 描述
 
-与其他循环语句一样，您可以在 `statement` 内使用 [control flow 语句](/zh-CN/docs/Web/JavaScript/Reference/Statements#control_flow)：
+与其他循环语句一样，你可以在 `statement` 内使用 [control flow 语句](/zh-CN/docs/Web/JavaScript/Reference/Statements#control_flow)：
 
 - {{jsxref(“Statements/break”, “break”)}} 停止执行 `statement`，转到循环后的第一条语句。
 - {{jsxref(“Statements/continue”, “continue”)}} 停止执行 `statement`，并重新评估 `condition`。
