@@ -320,6 +320,6 @@ import { myFunction, myVariable, myClass } from "parentModule.js";
 
 - {{jsxref("Statements/import", "import")}}
 - [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules) guide
-- [ES6 深入：模块](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) 在 hacks.mozilla.org （2015）
-- [ES 模块：用漫画深入探讨](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/) 在 hacks.mozilla.org （2018）
+- [ES6 深入：模块](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) 在 hacks.mozilla.org（2015）
+- [ES 模块：用漫画深入探讨](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/) 在 hacks.mozilla.org（2018）
 - [探索 JS，第 16 章：模块](https://exploringjs.com/es6/ch_modules.html) 由 Dr. Axel Rauschmayer 所著
