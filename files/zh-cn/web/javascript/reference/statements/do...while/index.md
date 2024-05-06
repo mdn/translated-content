@@ -26,7 +26,7 @@ while (condition);
 
 ## 示例
 
-### 使用 `do...while`
+### 使用 do...while
 
 下面的例子中，`do...while` 循环至少迭代一次，并且继续迭代直到 `i` 不再小于 5 时结束。
 
