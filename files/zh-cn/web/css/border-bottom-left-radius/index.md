@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`border-bottom-left-radius`** [CSS](/zh-CN/docs/Web/CSS) 属性通过指定椭圆的半径（或者定义角曲线的半主轴和半次轴的半径）来圆化元素的左下角。
+**`border-bottom-left-radius`** [CSS](/zh-CN/docs/Web/CSS) 属性通过指定定义元素左下角曲率的椭圆的半径（或半长轴和半短轴的半径），对元素的左下角进行圆角处理。
 
 {{EmbedInteractiveExample("pages/css/border-bottom-left-radius.html")}}
 
@@ -17,7 +17,7 @@ l10n:
 
 背景（无论是图片还是颜色）都会被边框处裁剪，即便是圆角边框也不例外；裁剪的具体位置由 {{cssxref("background-clip")}} 属性的值来定义。
 
-> **备注：** 如果 `border-bottom-left-radius` CSS 属性之后的元素的 {{cssxref("border-radius")}} 简写属性中未设置此属性值时，该属性值将会被[简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)重置为其默认初始值。
+> **备注：** 如果 `border-bottom-left-radius` CSS 属性之后的元素的 {{cssxref("border-radius")}} 简写属性中未设置此属性值，该属性值将会被[简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)重置为其默认初始值。
 
 ## 语法
 
@@ -55,8 +55,8 @@ border-bottom-left-radius: unset;
 
 只有两个值：
 
-- 首项数值为 {{cssxref("&lt;length&gt;")}} 或 {{cssxref("&lt;percentage&gt;")}}，表示该角落边框椭圆的水平半主轴尺寸。
-- 第二个值为 {{cssxref("&lt;length&gt;")}} 或 {{cssxref("&lt;percentage&gt;")}}，表示该角落边框椭圆的垂直半主轴尺寸。
+- 首项数值为 {{cssxref("&lt;length&gt;")}} 或 {{cssxref("&lt;percentage&gt;")}}，表示该角边框椭圆的水平半长轴尺寸。
+- 第二个值为 {{cssxref("&lt;length&gt;")}} 或 {{cssxref("&lt;percentage&gt;")}}，表示该角边框椭圆的垂直半长轴尺寸。
 
 ### 值
 
