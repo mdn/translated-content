@@ -65,7 +65,7 @@ navigator.serviceWorker.ready.then((registration) => {
 メッセージを受信するために、`service-worker.js` のサービスワーカーは、そのグローバルスコープで {{domxref("ServiceWorkerGlobalScope.message_event", "message")}} イベントを待ち受けする必要があります。
 
 ```js
-// これは `service-worker.s`` になる
+// これは `service-worker.js` になる
 addEventListener("message", (event) => {
   console.log(`Message received: ${event.data}`);
 });
