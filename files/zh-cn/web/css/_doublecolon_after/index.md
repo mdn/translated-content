@@ -11,7 +11,7 @@ l10n:
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-element-after.html", "tabbed-standard")}}
 
-> **备注：** `::before` 和 `::after` 生成的伪元素是行级盒子，就好像它们是应用它们的元素或“源元素”的直接子元素，因此不能应用于[_替换元素_](/zh-CN/docs/Web/CSS/Replaced_element)（如 {{htmlelement("img")}}），它们的内容被替换，不受当前文档样式的影响。
+> **备注：** `::before` 和 `::after` 生成的伪元素是行级盒子，就好像它们是应用它们的元素或“源元素”的直接子元素，因此不能应用于[_替换元素_](/zh-CN/docs/Web/CSS/Replaced_element)（如 {{htmlelement("img")}}），它们的内容在不受当前文档样式的影响的情况下被替换。
 
 ## 语法
 
@@ -97,9 +97,8 @@ l10n:
 
 ```html
 <p>
-  这里我们有包含了一些<span
-    tabindex="0"
-    data-descr="鼠标悬停时出现的小弹出窗口">工具提示</span
+  这里我们有包含了一些<span tabindex="0" data-descr="鼠标悬停时出现的小弹出窗口"
+    >工具提示</span
   >的<span tabindex="0" data-descr="文字和标点符号的集合">文字</span>。
 </p>
 ```
