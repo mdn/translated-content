@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**Brotli** 是一种通用的无损压缩算法。它结合使用一个 LZ77 算法现代变体 [Lempel-Ziv 编码](https://zh.wikipedia.org/wiki/LZ77与LZ78#L277)、[霍夫曼编码](https://rosettacode.org/wiki/Huffman_coding)和二阶上下文建模来压缩数据，提供了与当前最佳通用压缩方法相媲美的压缩比。
+**Brotli** 是一种通用的无损压缩算法。它结合使用 LZ77 算法的一个现代变体（[Lempel-Ziv 编码](https://zh.wikipedia.org/wiki/LZ77与LZ78#L277)）、[霍夫曼编码](https://rosettacode.org/wiki/Huffman_coding)和二阶上下文建模来压缩数据，提供了与当前最佳通用压缩方法相媲美的压缩比。
 
 Brotli 提供比 {{glossary("GZip_compression", "gzip")}} 更好的压缩率，也具有一个与 gzip 相当的压缩速率。但 brotli 解压缩速度比 gzip 慢，因此 gzip 可能更适合于压缩不{{glossary("Cache", "可缓存")}}的内容。
 
