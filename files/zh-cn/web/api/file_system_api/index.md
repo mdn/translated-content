@@ -63,7 +63,7 @@ l10n:
 - {{domxref("DataTransferItem.getAsFileSystemHandle()")}}
   - : 如果拖动的项目是文件，则返回 {{domxref('FileSystemFileHandle')}}；如果拖动的项目是目录，则返回 {{domxref('FileSystemDirectoryHandle')}}。
 - {{domxref("StorageManager.getDirectory()")}}
-  - : 用于获取对 {{domxref("FileSystemDirectoryHandle")}} 对象的引用，该对象允许访问存储在[源私有文件系统](/zh-CN/docs/Web/API/File_System_API/Origin_private_file_system)中的目录及其内容。返回一个由 {{domxref("FileSystemDirectoryHandle")}} 对象实现的 {{jsxref('Promise')}}。
+  - : 用于获取对 {{domxref("FileSystemDirectoryHandle")}} 对象的引用，该对象允许访问存储在[源私有文件系统](/zh-CN/docs/Web/API/File_System_API/Origin_private_file_system)中的目录及其内容。返回一个由 {{domxref("FileSystemDirectoryHandle")}} 对象兑现的 {{jsxref('Promise')}}。
 
 ## 示例
 

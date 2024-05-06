@@ -9,7 +9,7 @@ l10n:
 
 **源私有文件系统**（OPFS）是作为[文件系统 API](/zh-CN/docs/Web/API/File_System_API) 的一部分提供的一个存储端点。它是页面所属的源专用的，并且不像常规文件系统那样对用户可见。它提供了对一种特殊类型文件的访问能力，这种文件经过高度性能优化，并提供对其内容的原地写入访问特性。
 
-## 使用文件系统 API 处理文件
+## 使用文件系统访问 API 处理文件
 
 扩展自[文件系统 API](/zh-CN/docs/Web/API/File_System_API) 的[文件系统访问 API](https://wicg.github.io/file-system-access/) 使用选择器提供了对文件的访问能力。例如：
 
