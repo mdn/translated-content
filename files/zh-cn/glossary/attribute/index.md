@@ -7,9 +7,9 @@ l10n:
 
 {{GlossarySidebar}}
 
-**标签属性**（Attribute）可扩展 HTML 或 XML {{Glossary("element", "元素")}}，改变其行为或提供元数据。
+**属性**（Attribute）可扩展 HTML 或 XML {{Glossary("element", "元素")}}，改变其行为或提供元数据。
 
-标签属性的形式总是 `name="value"`（属性的标识符后跟相关的值）。
+属性的形式总是 `name="value"`（属性的标识符后跟相关的值）。
 
 你可能会看到没有等号或值的属性。这是在 HTML 中提供空字符串或在 XML 中提供属性名称的简写。
 
