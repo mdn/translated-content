@@ -24,7 +24,7 @@ Accept-Ranges: bytes
 Content-Length: 146515
 ```
 
-在此响应中，`Accept-Ranges: bytes` 表示可以使用字节作为单位来定义范围。在此处的 {{HTTPHeader("Content-Length")}} 标头信息也很有用，因为它指示了要检索的图像的完整大小。
+在此响应中，`Accept-Ranges: bytes` 表示可以使用字节作为单位来定义范围。在此处的 {{HTTPHeader("Content-Length")}} 标头也很有用，因为它指示了要检索的图像的完整大小。
 
 如果网站省略了 `Accept-Ranges` 标头，那么它们很可能不支持部分请求。有些网站会包含这个标头，但明确将其值设为“`none`”，以表明它们不支持这一特性：
 
