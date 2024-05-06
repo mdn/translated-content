@@ -36,8 +36,8 @@ class ClassWithStatic {
 
 本页介绍类的公共静态属性，包括静态方法、静态访问器和静态字段。
 
-- 关于私有静态特性，请参阅 [private properties](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)。
-- 关于实例特性，请参阅 [methods definitions](/zh-CN/docs/Web/JavaScript/Reference/Functions/Method_definitions)、[getter](/zh-CN/docs/Web/JavaScript/Reference/Functions/get)、[setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set) 和 [public class fields](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)。
+- 关于私有静态特性，请参阅[私有属性](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)。
+- 关于实例特性，请参阅[方法定义](/zh-CN/docs/Web/JavaScript/Reference/Functions/Method_definitions)、[getter](/zh-CN/docs/Web/JavaScript/Reference/Functions/get)、[setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set) 和[公开类字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)。
 
 公共静态特性是使用 `static` 关键字声明的。在 [class evaluation](/zh-CN/docs/Web/JavaScript/Reference/Classes#evaluation_order) 时，使用 [`[[DefineOwnProperty]]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty)语义（本质上是 {{jsxref("Object.defineProperty()")}}）将它们添加到类构造函数中。类构造函数会再次访问它们。
 
