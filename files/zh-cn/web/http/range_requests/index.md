@@ -1,5 +1,5 @@
 ---
-title: HTTP 请求范围
+title: HTTP 范围请求
 slug: Web/HTTP/Range_requests
 l10n:
   sourceCommit: 5e9631df85d021e84133e14f4bd3c712e4f8fe08
