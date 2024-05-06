@@ -40,7 +40,7 @@ slug: Web/API/Cache
 
 ## 示例
 
-此代码段来自 [service worker selective caching sample](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js). (请参阅 [selective caching live](https://googlechrome.github.io/samples/service-worker/selective-caching/)) 。该代码使用{{domxref("CacheStorage.open", "CacheStorage.open(cacheName)")}} 打开任何具有以`font/` 开始的 Content-Type 头的{{domxref("Cache")}}对象。
+此代码段来自 [service worker 选择性缓存示例](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js)。（请参阅[选择性缓存在线示例](https://googlechrome.github.io/samples/service-worker/selective-caching/)）该代码使用 {{domxref("CacheStorage.open()")}} 打开任何具有以 `font/` 开始的 `Content-Type` 标头的 `Cache` 对象。
 
 代码然后使用{{domxref("Cache.match", "Cache.match(request, options)")}}查看缓存中是否已经有一个匹配的 font，如果是，则返回它。如果没有匹配的字体，代码将通过网络获取字体，并使用 {{domxref("Cache.put","Cache.put(request, response)")}}来缓存获取的资源。
 
