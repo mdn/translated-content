@@ -42,7 +42,7 @@ Accept-Ranges: none
 
 ## 从服务器端请求特定的范围
 
-如果服务器支持范围请求，那么只需在 HTTP 请求中包含 {{HTTPHeader("Range")}} 标头，就可以希望服务器返回指定文档的哪一部分或哪些部分。
+如果服务器支持范围请求，那么只需在 HTTP 请求中包含 {{HTTPHeader("Range")}} 标头，你可以指定希望服务器返回文档的哪一部分或哪些部分。
 
 ### 单一范围
 
@@ -80,7 +80,7 @@ Content-Length: 1024
 curl http://www.example.com -i -H "Range: bytes=0-50, 100-150"
 ```
 
-服务器以 {{HTTPStatus("206")}} `Partial Content` 状态码以及 {{HTTPHeader("Content-Type")}}`: multipart/byteranges; boundary=3d6b6a416f9b5` 标头响应，表明随后的数据将采用多部分字节范围格式。每个部分都携带自己的 `Content-Type` 和 `Content-Range` 字段，而 boundary 必要参数定义了用于分割每个消息体部分的 boundary 字符串。
+服务器以 {{HTTPStatus("206")}} `Partial Content` 状态码以及 {{HTTPHeader("Content-Type")}}`: multipart/byteranges; boundary=3d6b6a416f9b5` 标头响应，表明随后的数据将采用多部分字节范围格式。每个部分都携带自己的 `Content-Type` 和 `Content-Range` 字段，而必须的 boundary 参数定义了用于分割每个消息体部分的边界字符串。
 
 ```http
 HTTP/1.1 206 Partial Content
