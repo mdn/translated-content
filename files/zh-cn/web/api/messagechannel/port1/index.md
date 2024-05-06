@@ -27,7 +27,7 @@ const otherWindow = ifr.contentWindow;
 ifr.addEventListener("load", iframeLoaded, false);
 
 function iframeLoaded() {
-  otherWindow.postMessage("来自主页的您好！", "*", [channel.port2]);
+  otherWindow.postMessage("来自主页的问候！", "*", [channel.port2]);
 }
 
 channel.port1.onmessage = handleMessage;

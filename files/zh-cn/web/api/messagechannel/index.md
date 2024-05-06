@@ -34,7 +34,7 @@ const channel = new MessageChannel();
 const output = document.querySelector(".output");
 const iframe = document.querySelector("iframe");
 
-// 在 iframe 上等待加载
+// 等待 iframe 加载
 iframe.addEventListener("load", onLoad);
 
 function onLoad() {
@@ -45,13 +45,13 @@ function onLoad() {
   iframe.contentWindow.postMessage("来自主页的您好！", "*", [channel.port2]);
 }
 
-// 处理 port 1 收到的报文
+// 处理 port 1 收到的消息
 function onMessage(e) {
   output.innerHTML = e.data;
 }
 ```
 
-有关完整的运行示例，请参阅我们的 [channel messaging 基础示例](https://github.com/mdn/dom-examples/tree/main/channel-messaging-basic)，在 GitHub 上（[也可以在线运行](https://mdn.github.io/dom-examples/channel-messaging-basic/)）。
+有关完整的运行示例，请参阅我们在 GitHub 上的 [channel messaging 基础示例](https://github.com/mdn/dom-examples/tree/main/channel-messaging-basic)，[也可以实时运行它](https://mdn.github.io/dom-examples/channel-messaging-basic/)。
 
 ## 规范
 

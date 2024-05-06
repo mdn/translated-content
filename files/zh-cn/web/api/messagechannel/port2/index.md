@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Channel Messaging API")}} {{AvailableInWorkers}}
 
-{{domxref("MessageChannel")}} 接口的 **`port2`** 只读属性返回消息 channel 的第一个端口——即附加到发起 channel 的上下文的端口。
+{{domxref("MessageChannel")}} 接口的 **`port2`** 只读属性返回消息 channel 的第二个端口——即连接到通道另一端上下文的端口，消息最初将发送到这个端口。
 
 ## 值
 
@@ -27,7 +27,7 @@ const otherWindow = ifr.contentWindow;
 ifr.addEventListener("load", iframeLoaded, false);
 
 function iframeLoaded() {
-  otherWindow.postMessage("来自主页的您好！", "*", [channel.port2]);
+  otherWindow.postMessage("来自主页的问候！", "*", [channel.port2]);
 }
 
 channel.port1.onmessage = handleMessage;
@@ -36,7 +36,7 @@ function handleMessage(e) {
 }
 ```
 
-有关完整的运行示例，请参阅我们的 [channel messaging 基础示例](https://github.com/mdn/dom-examples/tree/main/channel-messaging-basic)，在 GitHub 上（[也可以在线运行](https://mdn.github.io/dom-examples/channel-messaging-basic/)）。
+有关完整的运行示例，请参阅我们在 GitHub 上的 [channel messaging 基础示例](https://github.com/mdn/dom-examples/tree/main/channel-messaging-basic)，[也可以实时运行它](https://mdn.github.io/dom-examples/channel-messaging-basic/)。
 
 ## 规范
 
