@@ -54,7 +54,7 @@ class ClassWithStaticField {
 }
 
 class SubclassWithStaticField extends ClassWithStaticField {
-  static subStaticField = "subclass field";
+  static subStaticField = "子类的字段";
 }
 
 console.log(Object.hasOwn(ClassWithStaticField, "staticField")); // true
