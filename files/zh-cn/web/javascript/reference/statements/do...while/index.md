@@ -7,7 +7,7 @@ l10n:
 
 {{jsSidebar("Statements")}}
 
-**`do...while` 语句**创建一个执行指定语句的循环，直到`condition`值为 false。在执行`statement` 后检测`condition`，所以指定的`statement`至少执行一次。
+**`do...while` 语句**创建一个执行指定语句的循环，直到 `condition` 值为 false。在执行 `statement` 后检测 `condition`，所以指定的 `statement` 至少执行一次。
 
 {{EmbedInteractiveExample("pages/js/statement-dowhile.html")}}
 
@@ -23,6 +23,15 @@ while (condition);
   - : 执行至少一次的语句，并在每次条件值为真时重新执行。想在循环中执行多行语句，可使用{{jsxref("Statements/block", "块", "", "nocode")}}语句包裹这些语句。
 - `condition`
   - : 循环中每次都会计算的表达式。如果 `condition` [值为真](/zh-CN/docs/Glossary/Truthy)， `statement` 会再次执行。当 `condition` [值为假](/zh-CN/docs/Glossary/Falsy)，控制权传递到 `do...while` 之后的语句。
+
+## 描述
+
+与其他循环语句一样，您可以在 `statement` 内使用 [control flow 语句](/zh-CN/docs/Web/JavaScript/Reference/Statements#control_flow)：
+
+- {{jsxref(“Statements/break”, “break”)}} 停止执行 `statement`，转到循环后的第一条语句。
+- {{jsxref(“Statements/continue”, “continue”)}} 停止执行 `statement`，并重新评估 `condition`。
+
+`do...while` 语句的语法要求在末尾加上分号，但如果缺少分号导致语法无效，[自动插入分号](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion) 程序可能会为你插入一个分号。
 
 ## 示例
 
@@ -40,6 +49,66 @@ do {
 // 尽管 i === 0，但仍会进入循环，因为开始时没有进行测试
 
 console.log(result);
+```
+
+### 使用 false 作为 do..while 条件
+
+由于语句总是被执行一次，`do...while (false)` 等同于执行语句本身。这是类 C 语言中常见的习语，它允许你使用 `break` 来提前跳出分支逻辑。
+
+```js
+do {
+  if (!user.loggedIn) {
+    console.log("你未登陆");
+    break;
+  }
+  const friends = user.getFriends();
+  if (!friends.length) {
+    console.log("未找到朋友");
+    break;
+  }
+  for (const friend of friends) {
+    handleFriend(friend);
+  }
+} while (false);
+// 剩余代码
+```
+
+在 JavaScript 中，有一些替代方法，例如使用带有 `break` 的 [带标签块语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/label)：
+
+```js
+handleFriends: {
+  if (!user.loggedIn) {
+    console.log("你未登陆");
+    break handleFriends;
+  }
+  const friends = user.getFriends();
+  if (!friends.length) {
+    console.log("未找到朋友");
+    break handleFriends;
+  }
+  for (const friend of friends) {
+    handleFriend(friend);
+  }
+}
+```
+
+或者使用函数：
+
+```js
+function handleFriends() {
+  if (!user.loggedIn) {
+    console.log("你未登陆");
+    return;
+  }
+  const friends = user.getFriends();
+  if (!friends.length) {
+    console.log("未找到朋友");
+    return;
+  }
+  for (const friend of friends) {
+    handleFriend(friend);
+  }
+}
 ```
 
 ### 使用赋值作为条件
