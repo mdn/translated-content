@@ -7,7 +7,7 @@ l10n:
 
 {{HTTPSidebar}}{{securecontext_header}}{{Deprecated_header}}{{Non-standard_header}}
 
-> **警告：** 此標頭在 [draft 8](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-client-hints-08) 規範中被移除。
+> **警告：** 在[草案第 8 版](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-client-hints-08)中，此標頭已经从規範中移除。
 
 **`Accept-CH-Lifetime`** 標頭由伺服器設置，用於指定使用 {{HTTPHeader("Accept-CH")}} 所指定的[用戶端提示標頭](/zh-TW/docs/Web/HTTP/Client_hints)的持久性，用戶端應該在後續請求中包括這些標頭。
 
