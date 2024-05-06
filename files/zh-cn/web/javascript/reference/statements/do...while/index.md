@@ -24,8 +24,6 @@ while (condition);
 - `condition`
   - : 循环中每次都会计算的表达式。如果 `condition` [值为真](/zh-CN/docs/Glossary/Truthy)， `statement` 会再次执行。当 `condition` [值为假](/zh-CN/docs/Glossary/Falsy)，控制权传递到 `do...while` 之后的语句。
 
-> **备注：** 使用 {{jsxref("Statements/break", "break")}} 语句可在 `condition` 为 false 之前停止循环。
-
 ## 示例
 
 ### 使用 `do...while`
