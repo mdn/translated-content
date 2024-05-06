@@ -50,7 +50,7 @@ class ClassWithStatic {
 ```js
 class ClassWithStaticField {
   static staticField;
-  static staticFieldWithInitializer = "static field";
+  static staticFieldWithInitializer = "静态字段";
 }
 
 class SubclassWithStaticField extends ClassWithStaticField {
