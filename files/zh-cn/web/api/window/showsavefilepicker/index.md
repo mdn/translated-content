@@ -31,12 +31,12 @@ showSaveFilePicker()
       - : 一个{{jsxref('String', '字符串', '', 'nocode')}}。建议的文件名。
     - `types` {{Optional_Inline}}
 
-    - : 允许选择的文件类型的{{jsxref('Array', '数组', '', 'nocode')}}。每个项目都是一个具有以下选项的对象：
+      - : 允许选择的文件类型的{{jsxref('Array', '数组', '', 'nocode')}}。每个项目都是一个具有以下选项的对象：
 
-      - `description` {{Optional_Inline}}
-        - : 允许的文件类型类别的可选描述。默认为空字符串。
-      - `accept`
-        - : 一个 {{jsxref('Object')}}，其键设置为 [MIME 类型](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)，值设置为文件扩展名的{{jsxref('Array', '数组', '', 'nocode')}}（参见下面的示例）。
+        - `description` {{Optional_Inline}}
+          - : 允许的文件类型类别的可选描述。默认为空字符串。
+        - `accept`
+          - : 一个 {{jsxref('Object')}}，其键设置为 [MIME 类型](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)，值设置为文件扩展名的{{jsxref('Array', '数组', '', 'nocode')}}（参见下面的示例）。
 
 ### 返回值
 
