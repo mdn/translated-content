@@ -25,7 +25,7 @@ En el siguiente ejemplo, utilizamos un manejador `onclick` para abrir un sitio w
 ```js
 notification.onclick = function (event) {
   event.preventDefault(); // Evita que el navegador enfoque la pestaña del Notification
-  window.open("http://www.mozilla.org", "_blank");
+  window.open("https://www.mozilla.org", "_blank");
 };
 ```
 
