@@ -160,7 +160,7 @@ class StaticMethodCall {
 
 ## 参见
 
-- [使用类](/zh-CN/docs/Web/JavaScript/Guide/Using_classes)手册
+- [使用类](/zh-CN/docs/Web/JavaScript/Guide/Using_classes)指南
 - [类](/zh-CN/docs/Web/JavaScript/Reference/Classes)
 - [静态初始块](/zh-CN/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)
 - {{jsxref("Statements/class", "class")}}
