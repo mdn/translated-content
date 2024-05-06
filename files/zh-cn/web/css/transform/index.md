@@ -1,5 +1,5 @@
 ---
-title: 变换
+title: transform
 slug: Web/CSS/transform
 l10n:
   sourceCommit: 4940889b79f76552b95e092d48012cb6603a324b
@@ -56,7 +56,7 @@ transform: revert-layer;
 transform: unset;
 ```
 
-`transform`属性可以指定为关键字值 `none`，或者是一个/多个 `<transform-function>` 值。
+`transform` 属性可以指定为关键字值 `none`，或者是一个/多个 `<transform-function>` 值。
 
 ### 值
 
@@ -67,9 +67,9 @@ transform: unset;
 
 ## 无障碍问题
 
-缩放/缩放动画对可访问性存在问题，因为它们是某些类型的偏头痛的常见触发因素。如果你需要在网站上包含这种动画，你应该提供一个控件，允许用户在网站层面关闭所有动画。
+缩放动画对可访问性存在问题，因为它们是某些类型的偏头痛的常见触发因素。如果你需要在网站上包含这种动画，你应该提供一个控件，允许用户在网站层面关闭所有动画。
 
-另外，考虑利用 {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} 媒体特性 —— 使用它编写一个[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries) ，以便在用户在其系统首选项中指定减少动画时关闭动画。
+另外，考虑利用 {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} 媒体特性——使用它编写一个[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)，以便在用户在其系统首选项中指定减少动画时关闭动画。
 
 了解更多信息：
 
@@ -175,7 +175,7 @@ div {
 
 ### 更多示例
 
-请查阅[使用 CSS 变换](/zh-CN/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) 以及 {{cssxref("&lt;transform-function&gt;")}} 获取更多示例。
+请查阅[使用 CSS 变换](/zh-CN/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)以及 {{cssxref("&lt;transform-function&gt;")}} 获取更多示例。
 
 ## 规范
 
@@ -189,5 +189,5 @@ div {
 
 - [使用 CSS 变换](/zh-CN/docs/CSS/CSS_transforms/Using_CSS_transforms)
 - {{cssxref("&lt;transform-function&gt;")}} 数据类型，包含了所有的变换函数
-- 单独的 CSS 属性 {{cssxref('translate')}}, {{cssxref('rotate')}}, and {{cssxref('scale')}} (不存在 `skew` 属性。)：
-- 在线直观感受 CSS Transform 函数的工具：[CSS Transform Playground](https://css-transform.moro.es/)
+- 单独的 CSS 属性 {{cssxref('translate')}}、{{cssxref('rotate')}} 和 {{cssxref('scale')}}（不存在 `skew` 属性）。
+- 在线直观感受 CSS Transform 函数的工具：[CSS Transform 演练场](https://css-transform.moro.es/)
