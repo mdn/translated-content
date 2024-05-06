@@ -47,7 +47,7 @@ JavaScript 中的基本关键字和常用表达式。这些表达式具有最高
 左边的值是赋值的目标。
 
 - {{jsxref("Operators/Property_accessors", "属性访问符", "", 1)}}
-  - : 成员运算符提供了对对象的属性或方法的访问（`object.property` 和 `object["property"]`）。
+  - : 成员运算符用于访问对象的属性或方法（`object.property` 和 `object["property"]`）。
 - {{jsxref("Operators/Optional_chaining", "?.")}}
   - : 如果引用是[空值](/zh-CN/docs/Glossary/Nullish)（[`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null) 或 [`undefined`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined)），可选链运算符将返回 `undefined` 而不是导致错误。
 - {{jsxref("Operators/new", "new")}}
