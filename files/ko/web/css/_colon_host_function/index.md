@@ -5,7 +5,7 @@ slug: Web/CSS/:host_function
 
 {{CSSRef}}
 
-**`:host()`** [CSS](/ko/docs/Web/CSS) [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes) 함수는 내부에서 사용되는 CSS가 포함된 [shadow DOM](/ko/docs/Web/API/Web_comComponents/Using_shadow_DOM)의 섀도우 호스트(따라서 섀도우 DOM 내부에서 사용자 정의 요소를 선택할 수 있음) — 그러나 함수의 매개변수로 제공된 선택기는 섀도우 호스트와 일치합니다. **`:host()`**는 Shadow DOM 외부에서 사용될 때 아무런 효과가 없습니다.
+**`:host()`** [CSS](/ko/docs/Web/CSS) [의사(가짜) 클래스](/ko/docs/Web/CSS/Pseudo-classes) 함수는 내부에서 사용되는 CSS가 포함된 [shadow DOM](/ko/docs/Web/API/Web_comComponents/Using_shadow_DOM)의 섀도우 호스트(따라서 섀도우 DOM 내부에서 사용자 정의 요소를 선택할 수 있음) — 그러나 함수의 매개변수로 제공된 선택기는 섀도우 호스트와 일치합니다. **`:host()`**는 Shadow DOM 외부에서 사용될 때 아무런 효과가 없습니다.
 
 가장 확실한 용도는 특정 사용자 정의 요소 인스턴스에만 클래스 이름을 지정한 다음 관련 클래스 선택기를 함수 인수로 포함하는 것입니다. 특정 상위 항목 내에 있는 사용자 정의 요소의 인스턴스만 선택하기 위해 하위 항목 선택기 표현식과 함께 이를 사용할 수 없습니다. 그게 그 일이야 {{CSSxRef(":host-context", ":host-context()")}}.
 
@@ -65,7 +65,7 @@ style.textContent =
 
 The `:host(.footer) { color : red; }` rule styles all instances of the `<context-span>` element (the shadow host in this instance) in the document that have the `footer` class set on them — we've used it to give instances of the element inside the {{htmlelement("footer")}} a special color.
 
-## 명세
+## 명세부분
 
 {{Specifications}}
 
