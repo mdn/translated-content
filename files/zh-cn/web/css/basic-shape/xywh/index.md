@@ -23,7 +23,7 @@ clip-path: xywh(1px 2% 3px 4em round 0 1% 2px 3em);
 - `<length-percentage [0,∞]>`
   - : {{cssxref("&lt;length-percentage&gt;")}} 值为指定矩形宽度和高度的非负值。最小值可以为零，最大值没有限制。
 - `round <'border-radius'>`
-  - : 使用与 CSS [`border-radius`](/zh-CN/docs/Web/CSS/border-radius) 简写属性相同的语法来指定矩形圆角的半径。此参数为可选参数。
+  - : 与 CSS [`border-radius`](/zh-CN/docs/Web/CSS/border-radius) 简写属性使用相同的语法来指定矩形圆角的半径。此参数为可选参数。
 
 ## 示例
 
