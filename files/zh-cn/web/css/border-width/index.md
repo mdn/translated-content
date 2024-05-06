@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`border-width`** [CSS](/zh-CN/docs/Web/CSS) 是一个用于设置元素边框宽度的[简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)。
+**`border-width`** [CSS](/zh-CN/docs/Web/CSS) [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)用于设置元素边框的宽度。
 
 {{EmbedInteractiveExample("pages/css/border-width.html")}}
 
@@ -51,7 +51,7 @@ border-width: unset;
 
 `border-width` 属性可以通过一个、两个、三个或四个值来指定。
 
-- 当指定**一个**值时，该宽度将应用于**四个角**。
+- 当指定**一个**值时，该宽度将应用于**四条边**。
 - 当指定**两个**值时，第一个宽度应用于**顶部和底部**，第二个宽度应用于**左侧和右侧**。
 - 当指定**三个**值时，第一个宽度应用于**顶部**, 第二个宽度应用于**左侧和右侧**, 第三个宽度应用于**底部**.
 - 当指定**四个**值时，这些宽度按照**顶部**、**右侧**、**底部**和**左侧**的顺序（顺时针）进行应用。
