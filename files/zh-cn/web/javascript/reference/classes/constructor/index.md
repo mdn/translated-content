@@ -139,7 +139,7 @@ new (class C extends class B {
 })();
 ```
 
-`constructor` 方法可能有返回值。基类可以从构造函数中返回任何值，而派生类必须返回一个对象、 `undefined` 值、或将抛出 {{jsxref("TypeError")}}。
+`constructor` 方法可能有返回值。基类可以在构造函数中返回任何值，而派生类必须返回一个对象、 `undefined` 值，或抛出 {{jsxref("TypeError")}}。
 
 ```js
 class ParentClass {
