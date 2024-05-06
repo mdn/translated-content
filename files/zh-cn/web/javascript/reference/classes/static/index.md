@@ -45,7 +45,7 @@ class ClassWithStatic {
 
 静态字段名称可以[计算](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer#计算属性名)。计算表达式中的 `this` 值是类定义周围的 `this`，而引用类的名称则会导致{{jsxref("ReferenceError")}}，因为类尚未初始化。在此表达式中，{{jsxref("Operators/await", "await")}} 和 {{jsxref("Operators/yield", "yield")}} 按预期工作。
 
-静态字段可以有初始化器。没有初始化器的静态字段将被初始化为 `undefined` 。公共静态字段不会在子类中重新初始化，但可以通过原型链访问。
+静态字段可以有初始化器。没有初始化器的静态字段将被初始化为 `undefined`。公共静态字段不会在子类中重新初始化，但可以通过原型链访问。
 
 ```js
 class ClassWithStaticField {
