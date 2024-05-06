@@ -92,6 +92,8 @@ console.log(SubClassWithStaticField.subStaticField); // "base static method outp
 
 ## 示例
 
+### 在类中使用静态成员
+
 下面的例子说明了这几点：
 
 1. 静态方法如何在类上实现。
@@ -130,9 +132,30 @@ console.log(SquaredTriple.customName); // 'Tripler'
 console.log(tp.tripple()); // 'tp.tripple 不是一个函数'.
 ```
 
+### 从另一个静态方法调用静态成员
+
+为了在同一类的另一个静态方法中调用静态方法或属性，可以使用 [`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 关键字。
+
+```js
+class StaticMethodCall {
+  static staticProperty = "static property";
+  static staticMethod() {
+    return `Static method and ${this.staticProperty} has been called`;
+  }
+  static anotherStaticMethod() {
+    return `${this.staticMethod()} from another static method`;
+  }
+}
+StaticMethodCall.staticMethod();
+// 'Static method and static property has been called'
+
+StaticMethodCall.anotherStaticMethod();
+// 'Static method and static property has been called from another static method'
+```
+
 ### 从类的构造函数和其他方法中调用静态成员
 
-静态成员不能使用 {{jsxref("Operators/this", "this")}} 关键字从非静态方法直接访问静态成员。你需要使用类名来调用它们：`classname.static_method_name()` 或 `CLASSNAME.STATIC_PROPERTY_NAME`，或将以下方法作为 `constructor` 的属性调用：`this.constructor.STATIC_Method_NAME()` 或 `this.constructor.STATIC_PROPERTY_NAME`。
+静态成员不能使用 {{jsxref("Operators/this", "this")}} 关键字从非静态方法直接访问静态成员。你需要使用类名来调用 `classname.static_method_name()` 或 `CLASSNAME.STATIC_PROPERTY_NAME`，或将 `this.constructor.STATIC_Method_NAME()` 或 `this.constructor.STATIC_PROPERTY_NAME` 来作为 `constructor` 的属性调用。
 
 ```js
 class StaticMethodCall {
