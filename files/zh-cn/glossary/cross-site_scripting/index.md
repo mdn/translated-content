@@ -13,7 +13,7 @@ l10n:
 
 ## 参见
 
-- [攻击类型：跨站脚本（XSS）](/zh-CN/docs/Web/Security/Types_of_attacks#跨站脚本（XSS）)
+- [攻击类型：跨站脚本（XSS）](/zh-CN/docs/Web/Security/Types_of_attacks#跨站脚本（xss）)
 - 维基百科上的[跨站脚本](https://zh.wikipedia.org/wiki/跨網站指令碼)
 - [OWASP 上的跨站脚本（XSS）](https://owasp.org/www-community/attacks/xss/)
 - [另一个关于跨站脚本的文章](https://www.acunetix.com/blog/articles/dom-xss-explained/)
