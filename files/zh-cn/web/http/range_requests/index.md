@@ -115,7 +115,7 @@ If-Range: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## 范围请求的响应
 
-与范围请求相关的三种状态：
+与范围请求相关的有三种状态：
 
 - 范围请求成功后，服务器会发出 {{HTTPStatus("206")}} `Partial Content` 状态。
 - 超出范围的范围请求将导致 {{HTTPStatus("416")}} `Requested Range Not Satisfiable` 状态，这意味着没有任何范围值与资源的范围重叠。例如，每个范围的第一个字节位置可能大于资源的长度。
