@@ -16,7 +16,7 @@ l10n:
 ## 指南
 
 - [跨浏览器测试简介](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)
-  - : 本文是本模块的起始点，通过概述跨浏览器测试主题，回答了诸如“什么是跨浏览器测试？”、“会遇到哪些常见的问题？”和“测试、识别和解决问题主要有哪些方法？”等问题。
+  - : 本文是本模块的起始点，通过概述跨浏览器测试主题，回答了诸如什么是跨浏览器测试、会遇到哪些常见的问题和测试以及识别和解决问题主要有哪些方法等问题。
 - [测试策略](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies)
   - : 接下来，我们将深入探讨测试流程、确定目标受众（例如：你需要明确哪些浏览器、设备等需要进行测试）、实施低成本测试策略（在必要时在各种实体设备和虚拟机上进行临时测试）、采用更高级的技术策略（例如自动化测试和使用专门的测试应用程序）以及进行用户群体测试。
 - [处理常见的 HTML 和 CSS 问题](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
