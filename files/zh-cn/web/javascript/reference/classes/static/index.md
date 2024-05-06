@@ -88,7 +88,7 @@ console.log(SubClassWithStaticField.subStaticField); // "base static method outp
 
 静态字段初始化器和[静态初始化块](/zh-CN/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)是逐个求值的。字段初始化器可以引用其上的字段值，但不能引用其下的字段值。所有静态方法都会事先添加并可被访问，但如果它们引用的字段在被初始化的字段的下方，则调用它们时可能会出现与预期不符的情况。
 
-> **备忘：** 对于 [私有静态字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)而言，这一点更为重要，因为访问未初始化的私有字段会抛出 {{jsxref("TypeError")}}，即使该私有字段已在下面声明。(如果未声明私有字段，则会提前抛出{{jsxref("SyntaxError")}}）。
+> **备注：** 对于[私有静态字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)而言，这一点更为重要，因为访问未初始化的私有字段会抛出 {{jsxref("TypeError")}}，即使该私有字段已在下面声明。（如果未声明私有字段，则会提前抛出 {{jsxref("SyntaxError")}}）。
 
 ## 示例
 
