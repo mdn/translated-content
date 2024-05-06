@@ -1,9 +1,11 @@
 ---
 title: FileSystemSyncAccessHandle：getSize() 方法
 slug: Web/API/FileSystemSyncAccessHandle/getSize
+l10n:
+  sourceCommit: f10fbe2d2dc4857bf29ce955689a7ba7c1ffac8b
 ---
 
-{{securecontext_header}}{{APIRef("File System API")}}
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers("dedicated")}}
 
 {{domxref("FileSystemSyncAccessHandle")}} 接口的 **`getSize()`** 方法用于返回与句柄相关联文件的字节大小。
 
@@ -63,7 +65,7 @@ onmessage = async (e) => {
   // 将更改持久化至磁盘
   accessHandle.flush();
 
-  // 用完 FileSystemSyncAccessHandle 后记得把它关闭
+  // 如果完成，请始终关闭 FileSystemSyncAccessHandle
   accessHandle.close();
 };
 ```
@@ -79,4 +81,4 @@ onmessage = async (e) => {
 ## 参见
 
 - [文件系统 API](/zh-CN/docs/Web/API/File_System_API)
-- [文件系统访问 API：简化本地文件访问](https://developer.chrome.com/articles/file-system-access/)
+- [文件系统访问 API：简化本地文件访问](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)
