@@ -59,9 +59,9 @@ class SubclassWithStaticField extends ClassWithStaticField {
 
 console.log(Object.hasOwn(ClassWithStaticField, "staticField")); // true
 console.log(ClassWithStaticField.staticField); // undefined
-console.log(ClassWithStaticField.staticFieldWithInitializer); // "static field"
-console.log(SubclassWithStaticField.staticFieldWithInitializer); // "static field"
-console.log(SubclassWithStaticField.subStaticField); // "subclass field"
+console.log(ClassWithStaticField.staticFieldWithInitializer); // "静态字段"
+console.log(SubclassWithStaticField.staticFieldWithInitializer); // "静态字段"
+console.log(SubclassWithStaticField.subStaticField); // "子类的字段"
 ```
 
 在字段初始化器中，[`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 指向当前类（也可通过其名称访问），[`super`](/zh-CN/docs/Web/JavaScript/Reference/Operators/super) 指向基类构造函数。
