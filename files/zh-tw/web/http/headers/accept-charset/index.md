@@ -9,17 +9,17 @@ l10n:
 
 > **警告：** 不要使用此標頭。瀏覽器會省略此標頭，而伺服器應該忽略它。
 
-**`Accept-Charset`** 請求的 HTTP 標頭是用來宣告用戶端支援的{{glossary("character encoding", "字元編碼")}}。它已不再廣泛使用。
+**`Accept-Charset`** 請求 HTTP 標頭是用來宣告用戶端支援的{{glossary("character encoding", "字元編碼")}}的標頭。它已不再廣泛使用。
 
 UTF-8 得到廣泛支援，且是字元編碼的首選。為了[透過較少的基於設定的熵提供更好的隱私保護](https://www.eff.org/deeplinks/2010/01/primer-information-theory-and-privacy)，所有瀏覽器都省略了 `Accept-Charset` 標頭。
 
-如今，`Accept-Charset` 最為人知的是它是多個[禁止使用的標頭名稱](/zh-TW/docs/Glossary/Forbidden_header_name)之一。
+如今，`Accept-Charset` 最為人知的是它是多個[禁止修改的標頭名稱](/zh-TW/docs/Glossary/Forbidden_header_name)之一。
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">標頭類型</th>
-      <td>{{Glossary("Response header", "回應標頭")}}</td>
+      <td>{{Glossary("Request header", "請求標頭")}}</td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name", "禁止修改的標頭")}}</th>
