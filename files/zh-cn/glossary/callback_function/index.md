@@ -29,7 +29,7 @@ console.log(value);
 
 同步回调的示例包括传递给 {{jsxref("Array.prototype.map()")}}、{{jsxref("Array.prototype.forEach()")}} 等的回调。异步回调的示例包括传递给 [`setTimeout()`](/zh-CN/docs/Web/API/setTimeout) 和 {{jsxref("Promise.prototype.then()")}} 的回调。
 
-[使用 Promise](/zh-CN/docs/Web/JavaScript/Guide/Using_promises#timing) 指南提供了有关异步回调时机的更多信息。
+[使用 Promise](/zh-CN/docs/Web/JavaScript/Guide/Using_promises#时序) 指南提供了有关异步回调时序的更多信息。
 
 ## 参见
 
