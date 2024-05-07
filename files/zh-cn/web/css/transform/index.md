@@ -7,18 +7,18 @@ l10n:
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) **`transform`** 属性允许你旋转，缩放，倾斜或平移给定元素。这是通过修改 CSS [视觉格式化模型](/zh-CN/docs/Web/CSS/Visual_formatting_model)的坐标空间实现的。
+[CSS](/zh-CN/docs/Web/CSS) **`transform`** 属性允许你旋转、缩放、倾斜或平移给定元素。这是通过修改 CSS [视觉格式化模型](/zh-CN/docs/Web/CSS/Visual_formatting_model)的坐标空间实现的。
 
 {{EmbedInteractiveExample("pages/css/transform.html")}}
 
-如果属性的值不是 `none`，则将创建一个[堆叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)。在这种情况下，该元素将作为任何包含的 `position: fixed;` 或 `position: absolute;` 元素的[包含块](/zh-CN/docs/Web/CSS/Containing_block)。
+如果属性的值不是 `none`，则将创建一个[层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)。在这种情况下，该元素将作为任何包含的 `position: fixed;` 或 `position: absolute;` 元素的[包含块](/zh-CN/docs/Web/CSS/Containing_block)。
 
 > **警告：** 只能 `transform` 由盒模型定位的元素，也就是所有布局由 CSS 盒模型管理的元素，除了：[非替换的行内盒子](/zh-CN/docs/Glossary/Inline-level_content)、[表格列](/zh-CN/docs/Web/HTML/Element/col)和[表格列组](/zh-CN/docs/Web/HTML/Element/colgroup)。
 
 ## 语法
 
 ```css
-/* 关键词值 */
+/* 关键字值 */
 transform: none;
 
 /* 函数值 */
@@ -67,7 +67,7 @@ transform: unset;
 
 ## 无障碍考虑
 
-缩放动画对可访问性存在问题，因为它们是某些类型的偏头痛的常见触发因素。如果你需要在网站上包含这种动画，你应该提供一个控件，允许用户在网站层面关闭所有动画。
+缩放动画存在无障碍的问题，因为它们是某些类型的偏头痛的常见触发因素。如果你需要在网站上包含这种动画，你应该提供一个控件，允许用户在网站层面关闭所有动画。
 
 另外，考虑利用 {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} 媒体特性——使用它编写一个[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)，以便在用户在其系统首选项中指定减少动画时关闭动画。
 
@@ -76,11 +76,11 @@ transform: unset;
 - [MDN 对 WCAG 的理解：对指南 2.3 的解读](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.3_—_seizures_and_physical_reactions_do_not_design_content_in_a_way_that_is_known_to_cause_seizures_or_physical_reactions)
 - [理解成功标准 2.3.3 | W3C 对 WCAG 2.1 的解读](https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions)
 
-## 定义
+## 形式定义
 
 {{CSSInfo}}
 
-## 语法格式
+## 形式语法
 
 {{csssyntax}}
 
@@ -88,13 +88,13 @@ transform: unset;
 
 ### 平移旋转一个元素
 
-### HTML
+#### HTML
 
 ```html
 <div>被变换的元素</div>
 ```
 
-### CSS
+#### CSS
 
 ```css
 div {
@@ -105,13 +105,13 @@ div {
 }
 ```
 
-### 结果
+#### 结果
 
 {{EmbedLiveSample("平移旋转一个元素", "400", "160")}}
 
 ### 变换顺序
 
-变换函数的顺序很重要。在这个例子中，两个盒子被相同的值进行了旋转和平移；只不过，变换函数的顺序不同。
+变换函数的顺序很重要。在这个例子中，使用相同的值对两个盒子进行了旋转和平移；只不过，变换函数的顺序不同。
 
 #### HTML
 
@@ -189,5 +189,5 @@ div {
 
 - [使用 CSS 变换](/zh-CN/docs/CSS/CSS_transforms/Using_CSS_transforms)
 - {{cssxref("&lt;transform-function&gt;")}} 数据类型，包含了所有的变换函数
-- 单独的 CSS 属性 {{cssxref('translate')}}、{{cssxref('rotate')}} 和 {{cssxref('scale')}}（不存在 `skew` 属性）。
+- 单独的 CSS 属性：{{cssxref('translate')}}、{{cssxref('rotate')}} 和 {{cssxref('scale')}}（不存在 `skew` 属性）。
 - 在线直观感受 CSS Transform 函数的工具：[CSS Transform 演练场](https://css-transform.moro.es/)
