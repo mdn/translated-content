@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}{{Non-standard_header}}
 
-**`::-moz-progress-bar`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)是 [Mozilla 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)，表示 {{HTMLElement("progress")}} 元素中的进度条（此进度条表示已完成的进度）。
+**`::-moz-progress-bar`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)是用于表示 {{HTMLElement("progress")}} 元素中的进度条（此进度条表示已完成的进度）的 [Mozilla 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)。
 
 如果你想在 Mozilla 中选择 {{HTMLElement("progress")}} 的未完成部分，请直接选择 {{HTMLElement("progress")}} 元素。
 
