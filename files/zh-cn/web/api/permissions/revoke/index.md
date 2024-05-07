@@ -39,7 +39,7 @@ revoke(descriptor)
 - {{jsxref("TypeError")}}
   - : 以某种方式检索 `PermissionDescriptor` 信息失败，或该权限不存在或当前不支持（如 `midi`，或带有 `userVisibleOnly` 的 `push`）。
 
-## 例子
+## 示例
 
 应用程序可使用此函数请求撤销自己的地理位置 API 权限。
 
