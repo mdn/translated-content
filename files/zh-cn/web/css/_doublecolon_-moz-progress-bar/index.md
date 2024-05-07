@@ -1,17 +1,23 @@
 ---
 title: "::-moz-progress-bar"
 slug: Web/CSS/::-moz-progress-bar
+l10n:
+  sourceCommit: 8d4c0f94cefe7b3f25657566a44fcafaa8851edc
 ---
 
 {{CSSRef}}{{Non-standard_header}}
 
-[CSS](/zh-CN/docs/Web/CSS)[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements) **`::-moz-progress-bar`** 是{{HTMLElement("progress")}} 元素中，Mozilla 独有的特性（[Mozilla extension](/zh-CN/docs/Web/CSS/Mozilla_Extensions)），用于对进度条完成的部分进行选择。
+**`::-moz-progress-bar`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)是 [Mozilla 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)，表示 {{HTMLElement("progress")}} 元素中的进度条（此进度条表示已完成的进度）。
 
-如果你想选择未完成的部分，请直接选择 {{HTMLElement("progress")}} 。
+如果你想在 Mozilla 中选择 {{HTMLElement("progress")}} 的未完成部分，请直接选择 {{HTMLElement("progress")}} 元素。
 
 ## 语法
 
-{{csssyntax}}
+```css
+::-moz-progress-bar {
+  /* ... */
+}
+```
 
 ## 示例
 
@@ -19,7 +25,7 @@ slug: Web/CSS/::-moz-progress-bar
 
 ```html
 <progress value="30" max="100">30%</progress>
-<progress max="100">Indeterminate</progress>
+<progress max="100">未确定</progress>
 ```
 
 ### CSS
@@ -29,7 +35,7 @@ slug: Web/CSS/::-moz-progress-bar
   background-color: red;
 }
 
-/* Force indeterminate bars to have zero width */
+/* 使不确定进度的进度条宽度强制设置为零 */
 :indeterminate::-moz-progress-bar {
   width: 0;
 }
@@ -39,10 +45,13 @@ slug: Web/CSS/::-moz-progress-bar
 
 {{EmbedLiveSample('示例')}}
 
+## 规范
+
+不属于任何规范。
+
 ## 参见
 
 - {{HTMLElement("progress")}}
-- {{ cssxref("::-ms-fill") }}
 - {{ cssxref("::-webkit-progress-bar") }}
 - {{ cssxref("::-webkit-progress-value") }}
 - {{ cssxref("::-webkit-progress-inner-element") }}
