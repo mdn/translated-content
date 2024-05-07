@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`xywh()`** [CSS](/zh-CN/docs/Web/CSS) 函数使用与包含区块的左边缘（`x`）和顶部边缘（`y`）的指定距离，以及矩形的特定宽度（`w`）和高度（`h`）来创建一个矩形。它是 {{cssxref("&lt;basic-shape&gt;")}} 基本的[数据类型](/zh-CN/docs/Web/CSS/CSS_Types)形状函数。你可以在 {{cssxref("offset-path")}} 这样的 CSS 属性中使用 `xywh()` 函数中创建元素移动矩形路径，并且在 {{cssxref("clip-path")}} 属性中定义裁剪区域的形状。
+**`xywh()`** [CSS](/zh-CN/docs/Web/CSS) 函数使用与包含区块的左边缘（`x`）和顶部边缘（`y`）的指定距离，以及矩形的特定宽度（`w`）和高度（`h`）来创建一个矩形。它是 {{cssxref("&lt;basic-shape&gt;")}} [数据类型](/zh-CN/docs/Web/CSS/CSS_Types)的基本形状函数。你可以在 CSS 属性中使用 `xywh()` 函数，如在 {{cssxref("offset-path")}} 中创建元素移动的矩形路径，或在 {{cssxref("clip-path")}} 属性中定义裁剪区域的形状。
 
 ## 语法
 
@@ -19,7 +19,7 @@ clip-path: xywh(1px 2% 3px 4em round 0 1% 2px 3em);
 ### 值
 
 - `<length-percentage>`
-  - : 为矩形的`x` 和 `y` 坐标指定 {{cssxref("&lt;length-percentage&gt;")}} 值。
+  - : 为矩形的 `x` 和 `y` 坐标指定 {{cssxref("&lt;length-percentage&gt;")}} 值。
 - `<length-percentage [0,∞]>`
   - : {{cssxref("&lt;length-percentage&gt;")}} 值为指定矩形宽度和高度的非负值。最小值可以为零，最大值没有限制。
 - `round <'border-radius'>`
@@ -84,7 +84,7 @@ clip-path: xywh(1px 2% 3px 4em round 0 1% 2px 3em);
 {{EmbedLiveSample("使用 xywh() 创建偏移量路径", "100%", 600)}}
 
 - 路径 1 矩形与包含区块的左边缘和上边缘的偏移量为 `20px`。该路径矩形的尺寸与包含区块的尺寸相同，即宽度为包含区块宽度的 `100%`，高度为包含区块高度的 `100%`。注意框内的箭头如何沿着矩形路径边角上（由 `round 10%` 定义的）`10%` 曲线移动的。
-- 由于 `xywh()` 中宽度和高度的上限都是无穷大，因此在路径 2 矩形中将高度设置为 `200%` 会使生成的矩形是包含的区块的两倍。请注意，当未指定 `round <'border-radius'>` 时，方框内的箭头在边角处的表现。
+- 由于 `xywh()` 中宽度和高度的上限都是无穷大，因此在路径 2 矩形中将高度设置为 `200%` 会使生成的矩形是包含的区块的两倍。请注意当未指定 `round <'border-radius'>` 时，方框内的箭头在边角处的表现。
 
 ## 规范
 
@@ -101,5 +101,5 @@ clip-path: xywh(1px 2% 3px 4em round 0 1% 2px 3em);
 - {{cssxref("clip-path")}} 属性
 - {{cssxref("offset-path")}} 属性
 - {{cssxref("&lt;basic-shape&gt;")}} 数据类型
-- [CSS 形状](/zh-CN/docs/Web/CSS/CSS_shapes) 模块
+- [CSS 形状](/zh-CN/docs/Web/CSS/CSS_shapes)模块
 - [基本形状指南](/zh-CN/docs/Web/CSS/CSS_shapes/Basic_shapes)
