@@ -1,23 +1,28 @@
 ---
-title: Window.performance
+title: Window：performance 属性
 slug: Web/API/Window/performance
-original_slug: Web/API/performance_property
+l10n:
+  sourceCommit: 54962bbd1d367115cfd01b4e1ba6b552e8b68eb7
 ---
 
-{{APIREf}}Web Performance API 允许网页访问某些函数来测量网页和 Web 应用程序的性能，包括 [Navigation Timing](/zh-CN/docs/Navigation_timing) API 和高分辨率时间数据。
+{{APIRef("Performance API")}}
 
-## 方法
+{{domxref("Window")}} 接口的 **`performance`** 属性返回一个 {{domxref("Performance")}} 对象，该对象可用于收集有关在窗口的作用域内运行的代码的性能信息。
 
-- {{domxref("Performance.mark()", "performance.mark()")}}
-  - : 通过一个给定的名称，将该名称（作为键）和对应的{{domxref("DOMHighResTimeStamp")}}（作为值）保存在一个哈希结构里。该键值对表示了从某一时刻（译者注：某一时刻通常是 navigationStart 事件发生时刻）到记录时刻间隔的毫秒数。（译者注：该方法一般用来多次记录时间，用于求得各记录间的时间差）
-- {{domxref("Performance.now()", "performance.now()")}}
-  - : 该方法返回一个{{domxref("DOMHighResTimeStamp")}}对象，该对象表示从某一时刻（译者注：某一时刻通常是 navigationStart 事件发生时刻）到调用该方法时刻的毫秒数。
+性能条目是特定于上下文的。如果在主线程（或其他 worker）上创建一个标记，那么你无法在 worker 线程中看到它，反之亦然。
 
-## 属性
+## 值
 
-- {{domxref("Performance.timing", "performance.timing")}}
-  - : 是一个{{domxref("PerformanceTiming")}} 对象，包含延迟相关的性能信息。
-- {{domxref("Performance.navigation", "performance.navigation")}}
-  - : 是一个 {{domxref("PerformanceNavigation")}} 对象，该对象表示在当前给定浏览上下文中网页导航的类型（译者注：TYPE_BACK_FORWARD，TYPE_NAVIGATE，TYPE_RELOAD，TYPE_RESERVED）以及次数。
-- [performance.memory](https://docs.webplatform.org/apis/timing/properties/memory)
-  - : 在 Chrome 中添加的一个非标准扩展。
+一个 {{domxref("Performance")}} 对象，用于获取在窗口的作用域内运行的代码的性能以及与计时相关的信息。
+
+## 规范
+
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
+
+## 参见
+
+- {{domxref("WorkerGlobalScope.performance")}}
