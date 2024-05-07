@@ -2,7 +2,7 @@
 title: FileSystemDirectoryHandle：keys() 方法
 slug: Web/API/FileSystemDirectoryHandle/keys
 l10n:
-  sourceCommit: f10fbe2d2dc4857bf29ce955689a7ba7c1ffac8b
+  sourceCommit: fd4d2987e2db8b4183017b6a0ed5e4f054b18587
 ---
 
 {{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
