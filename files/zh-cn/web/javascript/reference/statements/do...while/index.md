@@ -51,7 +51,7 @@ do {
 console.log(result);
 ```
 
-### 使用 false 作为 do..while 条件
+### 使用 false 作为 do...while 条件
 
 由于语句总是被执行一次，`do...while (false)` 等同于执行语句本身。这是类 C 语言中常见的习语，它允许你使用 `break` 来提前跳出分支逻辑。
 
