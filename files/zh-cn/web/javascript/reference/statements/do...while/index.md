@@ -73,7 +73,7 @@ do {
 // 剩余代码
 ```
 
-在 JavaScript 中，有一些替代方法，例如使用带有 `break` 的 [带标签块语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/label)：
+在 JavaScript 中，有一些替代方法，例如使用带有 `break` 的[带标签块语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/label)：
 
 ```js
 handleFriends: {
