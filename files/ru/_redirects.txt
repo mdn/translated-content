@@ -287,8 +287,6 @@
 /ru/docs/MDN/Contribute/Howto/Report_a_problem	/ru/docs/MDN/Community/Issues
 /ru/docs/MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary	/ru/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
 /ru/docs/MDN/Contribute/Open_source_etiquette	/ru/docs/MDN/Community/Open_source_etiquette
-/ru/docs/MDN/Contribute/Processes	/ru/docs/conflicting/MDN/Community/Contributing
-/ru/docs/MDN/Contribute/Процессы	/ru/docs/conflicting/MDN/Community/Contributing
 /ru/docs/MDN/Feedback	/ru/docs/MDN/Community
 /ru/docs/MDN/Getting_started	/ru/docs/MDN/Community/Contributing/Getting_started
 /ru/docs/MDN/Structures	/ru/docs/MDN/Writing_guidelines/Page_structures
