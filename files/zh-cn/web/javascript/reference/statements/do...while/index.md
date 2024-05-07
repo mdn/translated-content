@@ -22,14 +22,14 @@ while (condition);
 - `statement`
   - : 执行至少一次的语句，并在每次条件值为真时重新执行。想在循环中执行多行语句，可使用{{jsxref("Statements/block", "块", "", "nocode")}}语句包裹这些语句。
 - `condition`
-  - : 循环中每次都会计算的表达式。如果 `condition` [值为真](/zh-CN/docs/Glossary/Truthy)，`statement` 会再次执行。当 `condition` [值为假](/zh-CN/docs/Glossary/Falsy)，控制权传递到 `do...while` 之后的语句。
+  - : 循环中每次都会计算的表达式。如果 `condition` [值为真](/zh-CN/docs/Glossary/Truthy)，`statement` 会再次执行。当 `condition` [值为假](/zh-CN/docs/Glossary/Falsy)时，控制权传递到 `do...while` 之后的语句。
 
 ## 描述
 
 与其他循环语句一样，你可以在 `statement` 内使用[控制流语句](/zh-CN/docs/Web/JavaScript/Reference/Statements#控制流)：
 
-- {{jsxref(“Statements/break”, “break”)}} 停止执行 `statement`，转到循环后的第一条语句。
-- {{jsxref(“Statements/continue”, “continue”)}} 停止执行 `statement`，并重新评估 `condition`。
+- {{jsxref("Statements/break", "break")}} 停止执行 `statement`，转到循环后的第一条语句。
+- {{jsxref("Statements/continue", "continue")}} 停止执行 `statement`，并重新评估 `condition`。
 
 `do...while` 语句的语法要求在末尾加上分号，但如果缺少分号导致语法无效，[自动分号补全](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#自动分号补全)过程可能会为你插入一个分号。
 
