@@ -31,7 +31,7 @@ while (condition);
 - {{jsxref(“Statements/break”, “break”)}} 停止执行 `statement`，转到循环后的第一条语句。
 - {{jsxref(“Statements/continue”, “continue”)}} 停止执行 `statement`，并重新评估 `condition`。
 
-`do...while` 语句的语法要求在末尾加上分号，但如果缺少分号导致语法无效，[自动插入分号](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion) 程序可能会为你插入一个分号。
+`do...while` 语句的语法要求在末尾加上分号，但如果缺少分号导致语法无效，[自动分号补全](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#自动分号补全)过程可能会为你插入一个分号。
 
 ## 示例
 
