@@ -18,7 +18,7 @@ revoke(descriptor)
 ### 参数
 
 - `descriptor`
-  - ：一个基于 `PermissionDescriptor` 字典的对象，用于设置由逗号分隔的键——值对列表组成的操作选项。可用的选项有：
+  - : 一个基于 `PermissionDescriptor` 字典的对象，用于设置由逗号分隔的键——值对列表组成的操作选项。可用的选项有：
     - `name`
       - ：要查询其权限的 API 的名称。每个浏览器支持不同的值集。你可以查阅 [Firefox 的值](https://searchfox.org/mozilla-central/source/dom/webidl/Permissions.webidl#10)、[Chromium 的值](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/third_party/blink/renderer/modules/permissions/permission_descriptor.idl)、[WebKit 的值](https://github.com/WebKit/WebKit/blob/main/Source/WebCore/Modules/permissions/PermissionName.idl)。
     - `userVisibleOnly`
