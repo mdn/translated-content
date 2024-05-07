@@ -2,12 +2,12 @@
 title: 无障碍
 slug: Glossary/Accessibility
 l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+  sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
 ---
 
 {{GlossarySidebar}}
 
-_无障碍网页_（Web Accessibility，缩写：**A11Y**）指尽管在物理条件和技术条件限制下，仍能保证网站可用的最佳实践。{{Glossary("W3C")}} 组织的 {{Glossary("WAI","Web 无障碍倡议")}}（WAI）正式定义和论述了 Web 无障碍技术。
+**无障碍**（Web Accessibility，缩写：**A11Y**）指尽管在物理条件和技术条件限制下，仍能保证网站可用的最佳实践。{{Glossary("W3C")}} 组织的 {{Glossary("WAI","Web 无障碍倡议")}}（WAI）正式定义和论述了 Web 无障碍技术。
 
 ## 参见
 

@@ -1,11 +1,13 @@
 ---
-title: Character encoding（字符编码）
+title: 字符编码
 slug: Glossary/Character_encoding
+l10n:
+  sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
 ---
 
 {{GlossarySidebar}}
 
-一套编码系统定义字节与文本间的映射。一连串字节文本能让不同文本解释得以进行。我们指明一套特定编码系统时（如 UTF-8），也就指明了字节得以解释的方式。
+一套**编码系统**定义字节与文本间的映射。一连串字节文本能让不同文本解释得以进行。我们指明一套特定编码系统时（如 UTF-8），也就指明了字节得以解释的方式。
 
 例如，我们通常在 HTML 里声明 UTF-8 字符编码，使用如下：
 
@@ -17,5 +19,5 @@ slug: Glossary/Character_encoding
 
 ## 参见
 
-- [Character encoding on W3C](https://www.w3.org/International/articles/definitions-characters/)
+- [W3C 上的字符编码](https://www.w3.org/International/articles/definitions-characters/)
 - 维基百科上的[字符编码](https://zh.wikipedia.org/wiki/字符编码)

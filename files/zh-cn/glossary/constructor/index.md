@@ -1,6 +1,8 @@
 ---
-title: Constructor
+title: 构造函数
 slug: Glossary/Constructor
+l10n:
+  sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
 ---
 
 {{GlossarySidebar}}
@@ -30,6 +32,6 @@ var defaultReference = new Default();
 
 ## 参见
 
+- [JavaScript 面向对象编程中的构造函数](/zh-CN/docs/Learn/JavaScript/Objects)
+- [JavaScript 的 `new` 操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)
 - 维基百科上的[构造函数](https://zh.wikipedia.org/wiki/构造器)
-- MDN 上的 [JavaScript 面向对象编程中的构造函数](/zh-CN/docs/Learn/JavaScript/Objects)
-- MDN 上的 [JavaScript 的 New 操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)

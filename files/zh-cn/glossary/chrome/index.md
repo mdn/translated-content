@@ -1,11 +1,13 @@
 ---
 title: Chrome
 slug: Glossary/Chrome
+l10n:
+  sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
 ---
 
 {{GlossarySidebar}}
 
-在浏览器中，chrome 指除了网页本身以外任何可视的部分（例如：{{glossary("UI")}}、工具栏、菜单栏、标签）。不要将这个概念与 {{glossary("Google Chrome")}} 浏览器混淆。
+在浏览器中，**chrome** 指除了网页本身以外任何可视的部分（例如：{{glossary("UI")}}、工具栏、菜单栏、标签）。不要将这个概念与 {{glossary("Google Chrome")}} 浏览器混淆。
 
 ## 参见
 

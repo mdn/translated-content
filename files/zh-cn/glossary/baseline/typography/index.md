@@ -2,7 +2,7 @@
 title: 基线（排版）
 slug: Glossary/Baseline/Typography
 l10n:
-  sourceCommit: 3e4bc80815d0fe8dd7879bb2af4f01572977aa10
+  sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
 ---
 
 {{GlossarySidebar}}
@@ -15,5 +15,5 @@ l10n:
 
 ## 参见
 
+- [CSS 盒子对齐](/zh-CN/docs/Web/CSS/CSS_box_alignment#对齐的种类)
 - 维基百科上的[基线](https://zh.wikipedia.org/wiki/基線)
-- MDN 上的 [CSS 盒子对齐](/zh-CN/docs/Web/CSS/CSS_box_alignment#对齐的种类)

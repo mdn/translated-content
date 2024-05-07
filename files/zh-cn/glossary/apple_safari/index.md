@@ -2,12 +2,12 @@
 title: Apple Safari
 slug: Glossary/Apple_Safari
 l10n:
-  sourceCommit: 09e550415b412a74c922cb48df92a85b397523ad
+  sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
 ---
 
 {{GlossarySidebar}}
 
-[Safari](https://www.apple.com.cn/safari/) 是苹果公司开发的 {{Glossary("Browser","Web 浏览器")}}，与 macOS、iPadOS 和 iOS 相绑定。它基于开源的 [WebKit](https://www.webkit.org/) 引擎。
+[**Safari**](https://www.apple.com.cn/safari/) 是苹果公司开发的 {{Glossary("Browser","Web 浏览器")}}，与 macOS、iPadOS 和 iOS 相捆绑。它基于开源的 [WebKit](https://www.webkit.org/) 引擎。
 
 ## 参见
 
