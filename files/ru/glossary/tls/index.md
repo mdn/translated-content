@@ -17,7 +17,7 @@ slug: Glossary/TLS
 - [RFC 8446](https://datatracker.ietf.org/doc/html/rfc8446) (The Transport Layer Security Protocol, Version 1.3)
 - [RFC 5246](https://datatracker.ietf.org/doc/html/rfc5246) (The Transport Layer Security Protocol, Version 1.2)
 - [Transport Layer Security](/ru/docs/Web/Security/Transport_Layer_Security)
-- [OWASP: Transport Layer Protection Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Security_Cheat_Sheet.html)
+- [Transport Layer Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Security_Cheat_Sheet.html) (OWASP)
 - [Глоссарий](/ru/docs/Glossary)
   - {{Glossary("HTTPS")}}
   - {{Glossary("SSL")}}
