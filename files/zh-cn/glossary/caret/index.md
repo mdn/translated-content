@@ -1,5 +1,5 @@
 ---
-title: Caret
+title: 插入符
 slug: Glossary/Caret
 l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
@@ -28,8 +28,8 @@ l10n:
 - [`<input type="text">`](/zh-CN/docs/Web/HTML/Element/input/text)
 - [`<input type="password">`](/zh-CN/docs/Web/HTML/Element/input/password)
 - [`<input type="search">`](/zh-CN/docs/Web/HTML/Element/input/search)
-- [`<input type="date">`](/zh-CN/docs/Web/HTML/Element/input/date), [`<input type="time">`](/zh-CN/docs/Web/HTML/Element/input/time), and [`<input type="datetime-local">`](/zh-CN/docs/Web/HTML/Element/input/datetime-local)
-- [`<input type="number">`](/zh-CN/docs/Web/HTML/Element/input/number), [`<input type="range">`](/zh-CN/docs/Web/HTML/Element/input/range)
-- [`<input type="email">`](/zh-CN/docs/Web/HTML/Element/input/email), [`<input type="tel">`](/zh-CN/docs/Web/HTML/Element/input/tel), and [`<input type="url">`](/zh-CN/docs/Web/HTML/Element/input/url)
+- [`<input type="date">`](/zh-CN/docs/Web/HTML/Element/input/date)、[`<input type="time">`](/zh-CN/docs/Web/HTML/Element/input/time) 以及 [`<input type="datetime-local">`](/zh-CN/docs/Web/HTML/Element/input/datetime-local)
+- [`<input type="number">`](/zh-CN/docs/Web/HTML/Element/input/number)、[`<input type="range">`](/zh-CN/docs/Web/HTML/Element/input/range)
+- [`<input type="email">`](/zh-CN/docs/Web/HTML/Element/input/email)、[`<input type="tel">`](/zh-CN/docs/Web/HTML/Element/input/tel) 以及 [`<input type="url">`](/zh-CN/docs/Web/HTML/Element/input/url)
 - {{HTMLElement("textarea")}}
 - 任何设置了 [`contenteditable`](/zh-CN/docs/Web/HTML/Global_attributes#contenteditable) 属性的元素
