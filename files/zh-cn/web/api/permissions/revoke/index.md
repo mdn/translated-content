@@ -32,7 +32,7 @@ revoke(descriptor)
 
 ### 返回值
 
-一个 {{jsxref("Promise")}}，其会调用对应处理器，该处理器会使用 {{domxref("PermissionStatus")}} 对象，指示请求的结果。
+一个 {{jsxref("Promise")}}，其会在调用兑现处理器时传入指示请求的结果的 {{domxref("PermissionStatus")}} 对象。
 
 ### 异常
 
