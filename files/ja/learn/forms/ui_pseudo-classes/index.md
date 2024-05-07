@@ -51,7 +51,7 @@ l10n:
 これらの基本的な擬似クラスについては、 もう慣れたことでしょう。 [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)では、他にも HTML フォームに関連する擬似クラスをいくつか提供しています。これらは、これらは、利用することができる有用なターゲット条件をいくつか提供しています。以下の節で詳しく説明しますが、簡単に説明すると、主なものは以下のとおりです。
 
 - {{cssxref(':required')}} および {{cssxref(':optional')}}: 必須となりうる要素（HTML [`required`](/ja/docs/Web/HTML/Attributes/required) 属性に対応している要素など）を、必須かオプションかに基づいて対象とします。
-必須または省略可能なフォームコントロールを対象とします。
+  必須または省略可能なフォームコントロールを対象とします。
 - {{cssxref(":valid")}} と {{cssxref(":invalid")}}、 {{cssxref(":in-range")}} と {{cssxref(":out-of-range")}}: 設定されたフォーム検証の制約に従って有効/無効、または範囲内/範囲外のフォームコントロールを対象とします。
 - {{cssxref(":enabled")}} と {{cssxref(":disabled")}}、 {{cssxref(":read-only")}} と {{cssxref(":read-write")}}: 無効化できる要素（HTML [`disabled`](/ja/docs/Web/HTML/Attributes/disabled) 属性に対応した要素など）については現在有効か無効かに基づいて、また、読み書き可能、読み取り専用のフォームコントロール（HTML [`readonly`](/ja/docs/Web/HTML/Attributes/readonly) 属性が設定された要素など）を対象にします。
 - {{cssxref(":checked")}}, {{cssxref(":indeterminate")}}, {{cssxref(":default")}}: それぞれ、チェックされているチェックボックスとラジオボタン、不確定な状態（チェックされていないかチェックされていないかのどちらか）、ページを読み込んだときの既定の選択オプション（例えば、 [`<input type="checkbox">`](/ja/docs/Web/HTML/Element/input/checkbox) に [`checked`](/ja/docs/Web/HTML/Element/input#checked) 属性が設定されているもの、または [`<option>`](/ja/docs/Web/HTML/Element/option) 要素に [`selected`](/ja/docs/Web/HTML/Element/option#selected) 属性が設定されているものなどが対象です。）
