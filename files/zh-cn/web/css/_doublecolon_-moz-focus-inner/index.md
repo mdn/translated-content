@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}{{SeeCompatTable}}
 
-**`::-moz-focus-inner`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)是 [Mozilla 拓展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)表示 {{HTMLElement("button")}} 元素以及 {{HTMLElement("input/button","button")}}、{{HTMLElement("input/submit","submit")}}、{{HTMLElement("input/reset","reset")}} 和 {{HTMLElement("input/color","color")}} 类型的 {{HTMLElement("input")}} 元素。
+**`::-moz-focus-inner`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)是 [Mozilla 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)表示 {{HTMLElement("button")}} 元素以及 {{HTMLElement("input/button","button")}}、{{HTMLElement("input/submit","submit")}}、{{HTMLElement("input/reset","reset")}} 和 {{HTMLElement("input/color","color")}} 类型的 {{HTMLElement("input")}} 元素。
 
 > **备注：** 使用 `::-moz-focus-inner` 时，除了支持它的按钮外，其他按钮都不匹配，也没有任何效果。
 
