@@ -25,7 +25,7 @@ l10n:
   <tbody>
     <tr>
       <th scope="row">標頭類型</th>
-      <td>{{Glossary("Response header", "回應標頭")}}</td>
+      <td>{{Glossary("Request header", "請求標頭")}}</td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name", "禁止修改的標頭")}}</th>
