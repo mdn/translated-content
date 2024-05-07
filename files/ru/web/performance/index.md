@@ -145,7 +145,7 @@ The MDN [Web Performance Learning Area](/ru/docs/Learn/Performance) contains mod
 - [Mobile performance checklist](/ru/docs/Web/Performance/Mobile_performance_checklist)
   - : A concise checklist of performance considerations impacting mobile network users on hand-held, battery operated devices.
 
-## See also
+## Смотрите также
 
 HTML
 

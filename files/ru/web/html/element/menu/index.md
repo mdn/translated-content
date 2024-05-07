@@ -136,6 +136,6 @@ div {
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - Other list-related HTML Elements: {{HTMLElement("ol")}}, {{HTMLElement("ul")}}, {{HTMLElement("li")}}, {{HTMLElement("hr")}}, and the obsolete {{HTMLElement("dir")}}.

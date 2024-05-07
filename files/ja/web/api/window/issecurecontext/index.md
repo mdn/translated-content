@@ -1,7 +1,6 @@
 ---
 title: isSecureContext
 slug: Web/API/Window/isSecureContext
-original_slug: Web/API/isSecureContext
 ---
 
 {{APIRef}}

@@ -36,7 +36,7 @@ var blob = instanceOfBlob.slice([start [, end [, contentType]]]);
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref("Blob")}}
 - {{domxref("BlobBuilder")}}

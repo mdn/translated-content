@@ -95,7 +95,7 @@ div {
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [`border`](/ru/docs/Web/CSS/border)
 - [`border-block`](/ru/docs/Web/CSS/border-block)

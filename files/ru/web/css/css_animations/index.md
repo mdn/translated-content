@@ -39,6 +39,6 @@ slug: Web/CSS/CSS_animations
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - Related to CSS Animations, [CSS Transitions](/ru/docs/Web/CSS/CSS_Transitions) can trigger animations on user actions.

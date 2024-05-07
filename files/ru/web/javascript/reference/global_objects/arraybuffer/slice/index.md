@@ -48,6 +48,6 @@ var buf2 = buf1.slice(0);
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{jsxref("ArrayBuffer")}}

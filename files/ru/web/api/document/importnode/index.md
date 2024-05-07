@@ -55,7 +55,7 @@ Firefox doesn't currently enforce this rule (it did for a while during the devel
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref("document.adoptNode()")}}
 - {{domxref("Node.appendChild()")}}
