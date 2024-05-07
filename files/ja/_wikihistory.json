@@ -14313,6 +14313,10 @@
     "modified": "2020-10-15T22:27:22.823Z",
     "contributors": ["mfuji09"]
   },
+  "Web/API/Window/performance": {
+    "modified": "2020-10-15T22:08:48.553Z",
+    "contributors": ["silverskyvicto"]
+  },
   "Web/API/Window/personalbar": {
     "modified": "2019-03-23T23:50:07.790Z",
     "contributors": ["momdo", "teoli", "khalid32", "ethertank", "Potappo"]
@@ -15191,10 +15195,6 @@
       "Piroro-hs",
       "chikoski"
     ]
-  },
-  "Web/API/performance_property": {
-    "modified": "2020-10-15T22:08:48.553Z",
-    "contributors": ["silverskyvicto"]
   },
   "Web/API/setInterval": {
     "modified": "2020-10-15T21:15:06.280Z",
