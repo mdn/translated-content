@@ -11,4 +11,4 @@ En {{glossary("JavaScript")}}, un **bloc** est un ensemble d'{{glossary("stateme
 
 ## Voir aussi
 
-- [Bloc d'instructions en JavaScript](/fr/docs/Web/JavaScript/Reference/Instructions/bloc)
+- [Bloc d'instructions en JavaScript](/fr/docs/Web/JavaScript/Reference/Statements/block)

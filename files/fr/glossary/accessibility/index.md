@@ -11,10 +11,10 @@ l10n:
 
 ## Voir aussi
 
-- [Ressources sur l'accessibilité](/fr/docs/Accessibility)
+- [Ressources sur l'accessibilité](/fr/docs/Web/Accessibility)
 - [Le guide sur l'accessibilité](/fr/docs/Learn/Accessibility)
 - [La Documentation ARIA](/fr/docs/Web/Accessibility/ARIA)
-- [La recommandation WAI-ARIA](http://www.w3.org/TR/wai-aria/) sur le site du W3C (en anglais)
+- [La recommandation WAI-ARIA](https://www.w3.org/TR/wai-aria/) sur le site du W3C (en anglais)
 - [Accessibilité du web](https://fr.wikipedia.org/wiki/Accessibilité_du_web) sur Wikipédia
 - [La page d'accueil de l'institut Web Accessibility in Mind](https://webaim.org/) (en anglais)
 - [La page d'accueil du W3C de la Web Accessibility Initiative](https://www.w3.org/WAI/) (en anglais)

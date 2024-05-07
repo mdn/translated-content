@@ -10,5 +10,5 @@ slug: Glossary/CalDAV
 ## Pour en savoir plus
 
 - [CalDAV](https://fr.wikipedia.org/wiki/CalDAV) sur Wikipédia
-- [RFC 4791: Calendaring extensions to WebDAV (CalDAV)](http://tools.ietf.org/html/rfc4791)
-- [RFC 6638: Scheduling Extensions to CalDAV](http://tools.ietf.org/html/rfc6638)
+- [RFC 4791: Calendaring extensions to WebDAV (CalDAV)](https://tools.ietf.org/html/rfc4791)
+- [RFC 6638: Scheduling Extensions to CalDAV](https://tools.ietf.org/html/rfc6638)
