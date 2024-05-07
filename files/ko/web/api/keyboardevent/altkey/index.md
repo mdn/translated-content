@@ -1,5 +1,5 @@
 ---
-title: "KeyboardEvent: altKey property"
+title: "KeyboardEvent: altKey 속성"
 slug: Web/API/KeyboardEvent/altKey
 l10n:
   sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
