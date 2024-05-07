@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}{{Non-standard_header}}
 
-**`::-moz-page`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)是 [Mozilla 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)，表示打印或打印预览时代表一个单独的页面。
+**`::-moz-page`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)是 [Mozilla 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)，表示打印或打印预览时一个单独的页面。
 
 ## 语法
 
