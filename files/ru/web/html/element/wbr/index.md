@@ -41,7 +41,7 @@ slug: Web/HTML/Element/wbr
 
 {{EmbedLiveSample("Пример")}}
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

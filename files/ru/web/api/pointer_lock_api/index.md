@@ -277,7 +277,7 @@ Pointer lock can only lock one iframe at a time. If you lock one iframe, you can
 
 While iframes work by default, "sandboxed" iframes block Pointer lock. The ability to avoid this limitation, in the form of the attribute/value combination `<iframe sandbox="allow-pointer-lock">`, is expected to appear in Chrome soon.
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

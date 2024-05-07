@@ -37,7 +37,7 @@ slug: Web/HTML/Element/nav
 </nav>
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

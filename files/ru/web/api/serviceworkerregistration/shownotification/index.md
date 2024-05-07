@@ -72,7 +72,7 @@ To invoke the above function at an appropriate time, you could use the {{domxref
 
 You can also retrieve details of the {{domxref("Notification")}}s have have been fired from the current service worker using {{domxref("ServiceWorkerRegistration.getNotifications()")}}.
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

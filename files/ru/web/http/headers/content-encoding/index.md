@@ -67,7 +67,7 @@ Content-Encoding: gzip
 
 Note that the server is not obligated to use any compression method. Compression highly depends on server settings and used server modules.
 
-## Specifications
+## Спецификации
 
 | Specification                                    | Title                                                         |
 | ------------------------------------------------ | ------------------------------------------------------------- |

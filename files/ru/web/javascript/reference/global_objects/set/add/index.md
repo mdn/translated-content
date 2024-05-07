@@ -38,7 +38,7 @@ console.log(mySet);
 // Set [1, 5, "some text"]
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

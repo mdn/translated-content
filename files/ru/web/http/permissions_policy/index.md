@@ -98,7 +98,7 @@ The features include:
 
 - See [Feature Policy Demos](http://feature-policy-demos.appspot.com/) for example usage of many policies.
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

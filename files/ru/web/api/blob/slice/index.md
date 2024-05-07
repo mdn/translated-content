@@ -28,7 +28,7 @@ var blob = instanceOfBlob.slice([start [, end [, contentType]]]);
 
 Новый {{domxref("Blob")}} объект содержит данные, указанные в источнике {{domxref("Blob")}}.
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

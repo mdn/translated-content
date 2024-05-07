@@ -49,7 +49,7 @@ slug: Web/HTML/Element/picture
 </picture>
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

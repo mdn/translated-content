@@ -142,7 +142,7 @@ var int32 = new Int32Array(iterable);
 // Int32Array[1, 2, 3]
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

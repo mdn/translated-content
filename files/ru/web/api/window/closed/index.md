@@ -55,6 +55,6 @@ function refreshPopupWindow() {
 }
 ```
 
-## Спецификация
+## Спецификации
 
 HTML5

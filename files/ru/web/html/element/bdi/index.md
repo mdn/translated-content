@@ -35,7 +35,7 @@ Like all other HTML elements, this element has the [global attributes](/ru/docs/
 
 This arabic word REDLOHECALP_CIBARA is automatically displayed right-to-left.
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

@@ -64,7 +64,7 @@ function logData() {
 }
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 
