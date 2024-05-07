@@ -2,12 +2,12 @@
 title: ATAG
 slug: Glossary/ATAG
 l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+  sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
 ---
 
 {{GlossarySidebar}}
 
-**ATAG** (pour <i lang="en">Authoring Tool Accessibility Guidelines</i> en anglais) est une recommandation [W3C](/fr/docs/Glossary/W3C) pour construire des outils de création accessibles et qui produisent des contenus accessibles.
+"Directives d'accessibilité des outils d'auteur" (**ATAG**, pour <i lang="en">Authoring Tool Accessibility Guidelines</i> en anglais) est une recommandation [W3C](/fr/docs/Glossary/W3C) pour construire des outils de création accessibles et qui produisent des contenus accessibles.
 
 ## Voir aussi
 

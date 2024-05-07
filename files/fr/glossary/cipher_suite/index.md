@@ -1,13 +1,15 @@
 ---
 title: Suite de chiffrement
 slug: Glossary/Cipher_suite
+l10n:
+  sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
 ---
 
 {{GlossarySidebar}}
 
 Une **suite de chiffrement** est un ensemble comprenant un algorithme d'échange de clefs, une méthode d'authentification, un {{glossary("Cipher","chiffre")}} et un code d'authentification des messages.
 
-Dans un {{glossary("cryptosystem","protocole de chiffrement")}} tel que {{glossary("TLS")}}, le client et le serveur doivent s'accorder sur une suite de chiffrement avant de pouvoir commencer à communiquer de manière sécurisée. Un exemple de suite de chiffrement peut être ECDHE_RSA_WITH_AES_128_GCM_SHA256 ou ECDHE-RSA-AES128-GCM-SHA256. Ces exemples indiquent :
+Dans un protocole de chiffrement" tel que {{glossary("TLS")}}, le client et le serveur doivent s'accorder sur une suite de chiffrement avant de pouvoir commencer à communiquer de manière sécurisée. Un exemple de suite de chiffrement peut être ECDHE_RSA_WITH_AES_128_GCM_SHA256 ou ECDHE-RSA-AES128-GCM-SHA256. Ces exemples indiquent :
 
 - ECDHE (elliptic curve Diffie-Hellman ephemeral) pour l'échange de clefs
 - RSA pour l'authentification
