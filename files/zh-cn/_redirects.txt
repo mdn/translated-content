@@ -1877,7 +1877,6 @@
 /zh-CN/docs/Web/API/Window/openDialog	/zh-CN/docs/Web/API/Window
 /zh-CN/docs/Web/API/Window/pageXOffset	/zh-CN/docs/Web/API/Window/scrollX
 /zh-CN/docs/Web/API/Window/pageYOffset	/zh-CN/docs/Web/API/Window/scrollY
-/zh-CN/docs/Web/API/Window/performance	/zh-CN/docs/Web/API/performance_property
 /zh-CN/docs/Web/API/Window/setInterval	/zh-CN/docs/Web/API/setInterval
 /zh-CN/docs/Web/API/Window/setTimeout	/zh-CN/docs/Web/API/setTimeout
 /zh-CN/docs/Web/API/WindowBase64/Base64_encoding_and_decoding	/zh-CN/docs/Glossary/Base64
@@ -2022,6 +2021,7 @@
 /zh-CN/docs/Web/API/notification/onerror	/zh-CN/docs/Web/API/Notification/error_event
 /zh-CN/docs/Web/API/notification/onshow	/zh-CN/docs/Web/API/Notification/show_event
 /zh-CN/docs/Web/API/origin	/zh-CN/docs/Web/API/Window/origin
+/zh-CN/docs/Web/API/performance_property	/zh-CN/docs/Web/API/Window/performance
 /zh-CN/docs/Web/API/range.getBoundingClientRect	/zh-CN/docs/Web/API/Range/getBoundingClientRect
 /zh-CN/docs/Web/API/range.startOffset	/zh-CN/docs/Web/API/Range/startOffset
 /zh-CN/docs/Web/API/range.surroundContents	/zh-CN/docs/Web/API/Range/surroundContents
