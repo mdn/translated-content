@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}{{Non-standard_Header}}
 
-**`::-moz-page-sequence`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)是 [Mozilla 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)，表示打印预览的背景。
+**`::-moz-page-sequence`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)是用于表示打印预览的背景的 [Mozilla 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)。
 
 ## 语法
 
