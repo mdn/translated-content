@@ -7358,6 +7358,10 @@
     "modified": "2019-03-23T22:52:14.067Z",
     "contributors": ["skip405", "olehrgf"]
   },
+  "Web/API/Window/performance": {
+    "modified": "2019-03-18T21:36:16.802Z",
+    "contributors": ["Demjan"]
+  },
   "Web/API/Window/popstate_event": {
     "modified": "2019-04-26T08:34:41.629Z",
     "contributors": [
@@ -7790,10 +7794,6 @@
   "Web/API/fetch": {
     "modified": "2020-10-15T22:06:28.491Z",
     "contributors": ["BadLame", "dasha_hshr"]
-  },
-  "Web/API/performance_property": {
-    "modified": "2019-03-18T21:36:16.802Z",
-    "contributors": ["Demjan"]
   },
   "Web/API/setInterval": {
     "modified": "2020-11-18T12:13:20.493Z",
