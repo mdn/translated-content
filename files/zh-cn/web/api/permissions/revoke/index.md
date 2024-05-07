@@ -26,7 +26,7 @@ revoke(descriptor)
     - `sysex`（仅限 MIDI）
       - : 表示是否需要接收系统专用消息。默认为 `false`。
 
-> **备注：** 从 Firefox 44 开始，[Notifications](/zh-CN/docs/Web/API/Notifications_API) 和 [Push](/zh-CN/docs/Web/API/Push_API) 的权限已经合并。如果权限已授予（例如由用户在相关权限对话框中授予），`navigator.permissions.query()` 将为 `notifications` 和 `push` 返回 `true` 。
+> **备注：** 从 Firefox 44 开始，[Notifications](/zh-CN/docs/Web/API/Notifications_API) 和 [Push](/zh-CN/docs/Web/API/Push_API) 的权限已经合并。如果权限已授予（例如由用户在相关权限对话框中授予），`navigator.permissions.query()` 将为 `notifications` 和 `push` 返回 `true`。
 
 > **备注：** `persistent-storage` 权限允许使用持久盒（即[持久存储](https://storage.spec.whatwg.org/#persistence)）进行存储，如 [Storage API](https://storage.spec.whatwg.org/) 所述。
 
