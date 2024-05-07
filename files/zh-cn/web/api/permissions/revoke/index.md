@@ -37,7 +37,7 @@ revoke(descriptor)
 ### 异常
 
 - {{jsxref("TypeError")}}
-  - ：以某种方式检索 `PermissionDescriptor` 信息失败，或该权限不存在或当前不支持（如 `midi`，或带有 `userVisibleOnly` 的 `push`）。
+  - : 以某种方式检索 `PermissionDescriptor` 信息失败，或该权限不存在或当前不支持（如 `midi`，或带有 `userVisibleOnly` 的 `push`）。
 
 ## 例子
 
