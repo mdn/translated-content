@@ -3175,7 +3175,6 @@
 /ja/docs/Web/API/Window/onmouseup	/ja/docs/Web/API/Element/mouseup_event
 /ja/docs/Web/API/Window/onreset	/ja/docs/Web/API/HTMLFormElement/reset_event
 /ja/docs/Web/API/Window/onresize	/ja/docs/Web/API/Window/resize_event
-/ja/docs/Web/API/Window/performance	/ja/docs/Web/API/performance_property
 /ja/docs/Web/API/Window/restore	/ja/docs/Web/API/Window/moveTo
 /ja/docs/Web/API/Window/setInterval	/ja/docs/Web/API/setInterval
 /ja/docs/Web/API/Window/setTimeout	/ja/docs/Web/API/setTimeout
@@ -3361,6 +3360,7 @@
 /ja/docs/Web/API/indexedDB	/ja/docs/Web/API/Window/indexedDB
 /ja/docs/Web/API/isSecureContext	/ja/docs/Web/API/Window/isSecureContext
 /ja/docs/Web/API/origin	/ja/docs/Web/API/Window/origin
+/ja/docs/Web/API/performance_property	/ja/docs/Web/API/Window/performance
 /ja/docs/Web/API/range.intersectsNode	/ja/docs/Web/API/Range/intersectsNode
 /ja/docs/Web/API/range.setStart	/ja/docs/Web/API/Range/setStart
 /ja/docs/Web/API/tableRow.insertCell	/ja/docs/Web/API/HTMLTableRowElement/insertCell
