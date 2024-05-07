@@ -34,7 +34,7 @@ revoke(descriptor)
 
 一个 {{jsxref("Promise")}}，其会调用对应处理器，该处理器会使用 {{domxref("PermissionStatus")}} 对象，指示请求的结果。
 
-### 异常情况
+### 异常
 
 - {{jsxref("TypeError")}}
   - ：以某种方式检索 `PermissionDescriptor` 信息失败，或该权限不存在或当前不支持（如 `midi`，或带有 `userVisibleOnly` 的 `push`）。
