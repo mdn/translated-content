@@ -18,13 +18,13 @@ class ChildClass extends ParentClass { /* … */ }
 ```
 
 - `ParentClass`
-  - ：求值为构造函数（包括类）或 `null` 的表达式。
+  - : 求值为构造函数（包括类）或 `null` 的表达式。
 
 ## 描述
 
-`extends` 关键字用来创建一个普通类或者内建对象的子类。
+`extends` 关键字用来创建自定义类或者内置对象的子类。
 
-任何可以用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 调用并具有 [`prototype`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) 属性的构造函数都可以作为父类的候选构造函数。这两个条件必须同时成立——例如，[绑定函数（bound functions）](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) 和 {{jsxref("Proxy")}} 可以被构造，但它们没有 `prototype` 属性，因此不能被子类化。
+任何可以用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 调用并具有 [`prototype`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) 属性的构造函数都可以作为候选的父类的构造函数。这两个条件必须同时成立——例如，[绑定函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)和 {{jsxref("Proxy")}} 可以被构造，但它们没有 `prototype` 属性，因此不能被子类化。
 
 ```js
 function OldStyleClass() {
@@ -42,7 +42,7 @@ class ModernClass {
 class AnotherChildClass extends ModernClass {}
 ```
 
-`ParentClass` 的 `prototype` 属性必须是 {{jsxref("Object")}} 或 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)，但在实践中很少会担心这个问题，因为非对象的 `prototype` 无论如何都不会按照应有的方式运行（[`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 操作符会忽略它）。
+`ParentClass` 的 `prototype` 属性必须是 {{jsxref("Object")}} 或 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)，但在实践中很少需要担心这个问题，因为非对象的 `prototype` 无论如何都不会按照应有的方式运行（[`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 运算符会忽略它）。
 
 ```js
 function ParentClass() {}
@@ -58,11 +58,11 @@ console.log(Object.getPrototypeOf(new ParentClass()));
 
 `extends` 为 `ChildClass` 和 `ChildClass.prototype` 设置了原型。
 
-|                                   | `ChildClass` 的原型对象 | `ChildClass.prototype` 的原型对象 |
-| --------------------------------- | ----------------------- | --------------------------------- |
-| `extends` clause absent           | `Function.prototype`    | `Object.prototype`                |
+|                              | `ChildClass` 的原型对象 | `ChildClass.prototype` 的原型对象 |
+| ---------------------------- | ----------------------- | --------------------------------- |
+| 缺少 `extends`               | `Function.prototype`    | `Object.prototype`                |
 | [`extends null`](#拓展_null) | `Function.prototype`    | `null`                            |
-| `extends ParentClass`             | `ParentClass`           | `ParentClass.prototype`           |
+| `extends ParentClass`        | `ParentClass`           | `ParentClass.prototype`           |
 
 ```js
 class ParentClass {}
@@ -74,7 +74,7 @@ Object.getPrototypeOf(ChildClass) === ParentClass;
 Object.getPrototypeOf(ChildClass.prototype) === ParentClass.prototype;
 ```
 
-`extend` 的右侧不一定是标识符。你可以使用任何求值为构造函数的表达式。这通常有助于创建[混入（mixin）](#混入)。`extends` 表达式中的 `this` 值是围绕类定义的 `this` ，而引用类的名称会导致{{jsxref("ReferenceError")}}，因为类尚未初始化。在此表达式中，{{jsxref("Operators/await", "await")}} 和 {{jsxref("Operators/yield", "yield")}} 按预期工作。
+`extend` 的右侧不一定是标识符。你可以使用任何求值为构造函数的表达式。这通常有助于创建[混入（mixin）](#混入)。`extends` 表达式中的 `this` 值是围绕类定义的 `this` ，而引用类的名称会导致 {{jsxref("ReferenceError")}}，因为类尚未初始化。在此表达式中，{{jsxref("Operators/await", "await")}} 和 {{jsxref("Operators/yield", "yield")}} 按预期工作。
 
 ```js
 class SomeClass extends class {
@@ -93,7 +93,7 @@ new SomeClass();
 // 派生类
 ```
 
-基类可以从构造函数中返回任何内容，而派生类必须返回对象或 `undefined` ，否则将抛出 {{jsxref("TypeError")}}} 。
+基类可以从构造函数中返回任何内容，而派生类必须返回对象或 `undefined` ，否则将抛出 {{jsxref("TypeError")}}。
 
 ```js
 class ParentClass {
@@ -116,11 +116,11 @@ class ChildClass extends ParentClass {
 console.log(new ChildClass()); // TypeError: Derived constructors may only return object or undefined
 ```
 
-如果父类构造函数返回一个对象，则在进一步初始化[类字段（class field）](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)时，该对象将被用作派生类的 `this` 值。这种技巧被称为[“返回覆盖”](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties#returning_overriding_object)，它允许在无关对象上定义派生类的字段（包括[私有](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)字段）。
+如果父类构造函数返回一个对象，则在进一步初始化[类字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)时，该对象将被用作派生类的 `this` 值。这种技巧被称为[“返回覆盖”](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties#返回重写对象)，它允许在无关对象上定义派生类的字段（包括[私有](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)字段）。
 
-### 内置子类
+### 子类化内置类
 
-> **警告：** 标准委员会目前的立场是，以前版本规范中的内置子类化机制设计过度，对性能和安全性造成了不可忽视的影响。新的内置方法较少考虑子类，引擎实现者正在[研究是否要删除某些子类机制](https://github.com/tc39/proposal-rm-builtin-subclassing)。在增强内置方法时，请考虑使用组合而非继承。
+> **警告：** 标准委员会目前的立场是，以前版本规范中的内置类的子类化机制设计过度，对性能和安全性造成了不可忽视的影响。新的内置方法较少考虑子类，引擎实现者正在[研究是否要删除某些子类机制](https://github.com/tc39/proposal-rm-builtin-subclassing)。在增强内置类时，请考虑使用组合而非继承。
 
 下面是扩展类时可能会遇到的一些问题：
 
@@ -130,15 +130,15 @@ console.log(new ChildClass()); // TypeError: Derived constructors may only retur
 
 然而，要正确地实现上述期望，需要付出不小的努力。
 
-- 第一个要求静态方法读取 [`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 的值，以获取构造函数来构造返回的实例。这意味着 `[p1,p2,p3].map(Promise.resolve)` 会出错，因为 `Promise.resolve` 中的 `this` 是 `undefined`。解决这个问题的方法是，如果 `this` 不是构造函数，就返回到基类，就像 {{jsxref("Array.from()")}} 所做的那样，但这仍然意味着基类是特例。
-- 第二个要求实例方法读取 [`this.constructor`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) 以获取构造函数。但是，`new this.constructor()` 可能会破坏传统代码，因为 `constructor` 属性是可写和可配置的，而且不受任何保护。因此，许多复制的内置方法都使用构造函数的 [`@@species`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/species) 属性（默认情况下只返回 `this`，即构造函数本身）。然而，`@@species` 允许运行任意代码和创建任意类型的实例，这就带来了安全问题，并使子类化语义变得非常复杂。
-- 第三个会导致自定义代码的可见调用，从而使很多优化更难实现。例如，如果使用包含 _x_ 个元素的可迭代元素调用 `Map()` 构造函数，那么它必须明显地调用 `set()` 方法 _x_ 次，而不仅仅是将元素复制到内部存储空间。
+- 第一个要求静态方法读取 [`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 的值，以获取构造函数来构造返回的实例。这意味着 `[p1,p2,p3].map(Promise.resolve)` 会抛出错误，因为 `Promise.resolve` 中的 `this` 是 `undefined`。解决这个问题的方法是，如果 `this` 不是构造函数，就回退到基类，就像 {{jsxref("Array.from()")}} 所做的那样，但这仍然意味着基类是特例。
+- 第二个要求实例方法读取 [`this.constructor`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) 以获取构造函数。但是，`new this.constructor()` 可能会破坏老旧的代码，因为 `constructor` 属性是可写和可配置的，而且不受任何保护。因此，许多复制的内置方法都使用构造函数的 [`@@species`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/species) 属性（默认情况下只返回 `this`，即构造函数本身）。然而，`@@species` 允许运行任意代码和创建任意类型的实例，这就带来了安全问题，并使子类化语义变得非常复杂。
+- 第三个会导致自定义代码的可见调用，从而使很多优化更难实现。例如，如果使用包含 _x_ 个元素的可迭代元素调用 `Map()` 构造函数，那么它必须明显地调用 `set()` 方法 _x_ 次，而不仅仅是将元素复制到内部存储。
 
-这些问题并非内置类所独有。对于你自己的类，你也可能需要做出同样的决定。不过，对于内置类来说，可优化性和安全性是更大的问题。新的内置方法总是构造基类，并尽可能少地调用自定义方法。如果你想在实现上述期望的同时对内置类进行子类化，你需要重写所有已内置默认行为的方法。在基类上添加任何新方法都可能会破坏子类的语义，因为这些方法是默认继承的。因此，扩展内置类的更好方法是使用[_组合_](#避免继承)。
+这些问题并非内置类所独有。对于你自己的类，你也可能需要做出同样的决定。不过，对于内置类来说，可优化性和安全性是更大的问题。新的内置方法总是构造基类，并尽可能少地调用自定义方法。如果你想在实现上述期望的同时对内置类进行子类化，你需要重写所有已具有默认行为的方法。在基类上添加任何新方法都可能会破坏子类的语义，因为这些方法是默认继承的。因此，扩展内置类的更好方法是使用[_组合_](#避免继承)。
 
 ### 拓展 null
 
-`extends null` 设计用于轻松创建[不继承于 `Object.prototype` 的对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects)。然而，由于关于是否应在构造函数中调用 `super()` 的决定尚未确定，因此在实践中不可能使用任何不返回对象的构造函数实现来构造这样的类。[TC39 委员会正在努力重新启用这一功能](https://github.com/tc39/ecma262/pull/1321)。
+`extends null` 设计用于轻松创建[不继承自 `Object.prototype` 的对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null_原型对象)。然而，由于关于是否应在构造函数中调用 `super()` 的决定尚未确定，因此在实践中不可能使用任何不返回对象的构造函数实现来构造这样的类。[TC39 委员会正在努力重新启用这一特性](https://github.com/tc39/ecma262/pull/1321)。
 
 ```js
 new (class extends null {})();
@@ -173,9 +173,9 @@ console.log(proto(proto(new NullClass()))); // null
 
 ## 示例
 
-### 使用 `extends`
+### 使用 extends
 
-第一个例子是根据名为 `Polygon` 类创建一个名为 `Square` 的类。这个例子是从这个[在线演示](https://googlechrome.github.io/samples/classes-es6/index.html)中提取出来的[（源）](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html)。
+第一个例子是根据名为 `Polygon` 类创建一个名为 `Square` 的类。当前示例是从这个[在线演示](https://googlechrome.github.io/samples/classes-es6/index.html)中提取出来的[（源代码）](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html)。
 
 ```js
 class Square extends Polygon {
@@ -215,9 +215,9 @@ const d = new Dog("Mitzie");
 d.speak(); // Mitzie 发出了噪音
 ```
 
-### 使用 `extends` 与内置对象
+### 扩展内置对象
 
-这个示例继承了内置的 {{jsxref("Date")}} 对象。这个例子是从这个[在线演示](https://googlechrome.github.io/samples/classes-es6/index.html)中提取出来的[（源）](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html)。
+这个示例继承了内置的 {{jsxref("Date")}} 对象。当前示例是从这个[在线演示](https://googlechrome.github.io/samples/classes-es6/index.html)中提取出来的[（源代码）](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html)。
 
 ```js-nolint
 class MyDate extends Date {
@@ -283,13 +283,13 @@ console.log(mapped instanceof MyArray); // false
 console.log(mapped instanceof Array); // true
 ```
 
-许多内置复制方法都实现了这一行为。有关此功能的注意事项，请参阅[内置子类](#内置子类)讨论。
+许多内置复制方法都实现了这一行为。有关此功能的注意事项，请参阅[子类化内置类](#子类化内置类)讨论。
 
 ### 混入
 
-抽象子类或 _mix-ins_ 是类的模板。一个类只能有一个超类，因此不可能从工具类等多重继承。功能必须由超类提供。
+抽象子类或*混入*是类的模板。一个类只能有一个父类，因此不可能从工具类等多重继承。功能必须由超类提供。
 
-一个以超类为输入，以扩展该超类的子类为输出的函数可以用来实现混入：
+一个以父类为输入，以扩展该父类的子类为输出的函数可以用来实现混入：
 
 ```js
 const calculatorMixin = (Base) =>
@@ -328,9 +328,9 @@ class ReadOnlyMap extends Map {
 const m = new ReadOnlyMap([["a", 1]]); // TypeError: A read-only map must be set at construction time.
 ```
 
-我们可以通过使用一个私有标志来指示是否正在构造实例来解决这个问题。然而，这种设计的一个更重要的问题是，它破坏了[里氏替换原则](https://zh.wikipedia.org/wiki/%E9%87%8C%E6%B0%8F%E6%9B%BF%E6%8D%A2%E5%8E%9F%E5%88%99)，该原则规定子类应该可以替换其超类。如果函数期望使用一个 `Map` 对象，那么它也应该能够使用一个 `ReadOnlyMap` 对象，这在这里就会被打破。
+我们可以通过使用一个私有标志来指示是否正在构造实例来解决这个问题。然而，这种设计的一个更重要的问题是，它破坏了[里氏替换原则](https://zh.wikipedia.org/wiki/里氏替换原则)，该原则规定子类应该可以替换其超类。如果函数期望使用一个 `Map` 对象，那么它也应该能够使用一个 `ReadOnlyMap` 对象，这在这里就会被打破。
 
-继承常常会导致[圆——椭圆问题](https://en.wikipedia.org/wiki/Circle%E2%80%93ellipse_problem)，因为两种类型虽然有很多共同特征，但都不能完美地包含另一种类型的行为。一般来说，除非有非常充分的理由使用继承，否则最好使用组合。组合是指一个类拥有另一个类对象的引用，但只将该对象用作实现细节。
+继承常常会导致[圆——椭圆问题](https://en.wikipedia.org/wiki/Circle–ellipse_problem)，因为两种类型虽然有很多共同特征，但都不能完美地包含另一种类型的行为。一般来说，除非有非常充分的理由使用继承，否则最好使用组合。组合是指一个类拥有另一个类对象的引用，但只将该对象用作实现细节。
 
 ```js
 class ReadOnlyMap {
@@ -362,7 +362,7 @@ class ReadOnlyMap {
 }
 ```
 
-在这种情况下，`ReadOnlyMap` 类不是 `Map` 的子类，但它仍然实现了大部分相同的方法。这意味着更多的代码重复，但也意味着 `ReadOnlyMap` 类与 `Map` 类不是强耦合的，并且在 `Map` 类更改时不会轻易中断，从而避免了[内置子类的语义问题](#内置子类)。例如，如果 `Map` 类添加了一个不调用 `set()` 的 [`emplace()`](https://github.com/tc39/proposal-upsert) 方法，就会导致 `ReadOnlyMap` 类不再是只读的，除非后者也相应地更新以覆盖 `emplace()`。此外，`ReadOnlyMap` 对象根本没有 `set` 方法，这比在运行时抛出错误更准确。
+在这种情况下，`ReadOnlyMap` 类不是 `Map` 的子类，但它仍然实现了大部分相同的方法。这意味着更多的代码重复，但也意味着 `ReadOnlyMap` 类与 `Map` 类不是强耦合的，并且在 `Map` 类更改时不会轻易中断，从而避免了[子类化内置类的语义问题](#子类化内置类)。例如，如果 `Map` 类添加了一个不调用 `set()` 的 [`emplace()`](https://github.com/tc39/proposal-upsert) 方法，就会导致 `ReadOnlyMap` 类不再是只读的，除非后者也相应地更新以覆盖 `emplace()`。此外，`ReadOnlyMap` 对象根本没有 `set` 方法，这比在运行时抛出错误更准确。
 
 ## 规范
 
@@ -372,7 +372,7 @@ class ReadOnlyMap {
 
 {{Compat}}
 
-## 扩展阅读
+## 参见
 
 - [使用类](/zh-CN/docs/Web/JavaScript/Guide/Using_classes)指南
 - [类](/zh-CN/docs/Web/JavaScript/Reference/Classes)
