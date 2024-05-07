@@ -1,19 +1,21 @@
 ---
 title: FileSystemHandle
 slug: Web/API/FileSystemHandle
+l10n:
+  sourceCommit: f10fbe2d2dc4857bf29ce955689a7ba7c1ffac8b
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
 
-{{domxref('File System Access API')}} 的 **`FileSystemHandle`** 接口是代表一个文件或一个目录的对象。多个句柄可以代表同一个条目。在大多数情况下，你不会直接使用 `FileSystemHandle`，而是会用到它的 {{domxref('FileSystemFileHandle')}} 和 {{domxref('FileSystemDirectoryHandle')}} 子接口。
+{{domxref('File System API', '文件系统 API', '', 'nocode')}} 的 **`FileSystemHandle`** 接口是代表一个文件或一个目录的对象。多个句柄可以代表同一个条目。在大多数情况下，你不会直接使用 `FileSystemHandle`，而是会用到它的 {{domxref('FileSystemFileHandle')}} 和 {{domxref('FileSystemDirectoryHandle')}} 子接口。
 
 ## 基于 FileSystemHandle 的接口
 
-以下是基于 FileSystemHandle 的接口的列表。
+以下是基于 `FileSystemHandle` 的接口的列表。
 
-- {{domxref("FileSystemFileHandle")}}
+- {{domxref("FileSystemFileHandle")}} {{SecureContext_Inline}}
   - : 提供一个指向文件条目的句柄。
-- {{domxref("FileSystemDirectoryHandle")}}
+- {{domxref("FileSystemDirectoryHandle")}} {{SecureContext_Inline}}
   - : 提供一个指向目录条目的句柄。
 
 ## 实例属性
@@ -26,7 +28,7 @@ slug: Web/API/FileSystemHandle
 ## 实例方法
 
 - {{domxref('FileSystemHandle.isSameEntry()', 'isSameEntry()')}}
-  - : 比对两个{{domxref("FileSystemHandle", "句柄", "", 1)}}以查看两者关联的条目（文件或目录）是否相符。
+  - : 比对两个句柄以查看两者关联的条目（文件或目录）是否相符。
 - {{domxref('FileSystemHandle.queryPermission()', 'queryPermission()')}} {{Experimental_Inline}}
   - : 查询当前句柄目前的权限状态。
 - {{domxref('FileSystemHandle.remove', 'remove()')}} {{Experimental_Inline}} {{Non-standard_Inline}}
@@ -108,4 +110,4 @@ function removeMatches(fileEntry, entriesArr) {
 ## 参见
 
 - [文件系统 API](/zh-CN/docs/Web/API/File_System_API)
-- [文件系统访问 API：简化本地文件访问](https://developer.chrome.com/articles/file-system-access/)
+- [文件系统访问 API：简化本地文件访问](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)

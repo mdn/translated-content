@@ -1,31 +1,35 @@
 ---
 title: FileSystemHandle：queryPermission() 方法
 slug: Web/API/FileSystemHandle/queryPermission
+l10n:
+  sourceCommit: f10fbe2d2dc4857bf29ce955689a7ba7c1ffac8b
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
 {{domxref("FileSystemHandle")}} 接口的 **`queryPermission()`** 方法用于查询当前句柄目前的权限状态。
 
 ## 语法
 
 ```js-nolint
-queryPermission(fileSystemHandlePermissionDescriptor)
+queryPermission(descriptor)
 ```
 
 ### 参数
 
-- FileSystemHandlePermissionDescriptor {{optional_inline}}
+- `descriptor` {{optional_inline}}
 
   - : 一个对象，指定需要查询的权限模式，包含以下选项：
 
-    - `'mode'`：可以是 `'read'` 或 `'readwrite'`。
+    - `'mode'` {{optional_inline}}
+
+      - : 可以是 `'read'` 或 `'readwrite'`。
 
 ### 返回值
 
-{{domxref('PermissionStatus.state')}}，值为 `'granted'`、`'denied'` 或 `'prompt'` 三者之一。
+一个兑现 {{domxref("PermissionStatus")}} 对象的 {{jsxref("Promise")}}。
 
-如果此方法返回了“prompt”，则站点必须在对句柄进行任何操作前调用 requestPermission() 请求授权。如果此方法返回了“denied”，则任何操作都会被拒绝。从本地文件系统句柄构造器返回的句柄通常会在初始时对只读权限状态返回“granted”。但是，除开用户收回了权限的情况，从 IndexedDB 获取的句柄也有可能会返回“prompt”。
+如果 {{domxref('PermissionStatus.state')}} 返回了“prompt”，则站点必须在对句柄进行任何操作前调用 `requestPermission()` 请求授权。如果此方法返回了“denied”，则任何操作都会被拒绝。从本地文件系统句柄构造器返回的句柄通常会在初始时对只读权限状态返回“granted”。但是，除开用户收回了权限的情况，从 IndexedDB 获取的句柄也有可能会返回“prompt”。
 
 ### 异常
 
@@ -72,4 +76,4 @@ async function verifyPermission(fileHandle, withWrite) {
 ## 参见
 
 - [文件系统 API](/zh-CN/docs/Web/API/File_System_API)
-- [文件系统访问 API：简化本地文件访问](https://developer.chrome.com/articles/file-system-access/)
+- [文件系统访问 API：简化本地文件访问](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)

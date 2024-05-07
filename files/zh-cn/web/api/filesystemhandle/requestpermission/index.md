@@ -1,29 +1,33 @@
 ---
 title: FileSystemHandle：requestPermission() 方法
 slug: Web/API/FileSystemHandle/requestPermission
+l10n:
+  sourceCommit: f10fbe2d2dc4857bf29ce955689a7ba7c1ffac8b
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
 {{domxref("FileSystemHandle")}} 接口的 **`queryPermission()`** 方法用于为文件句柄请求读取或读写权限。
 
 ## 语法
 
 ```js-nolint
-requestPermission(fileSystemHandlePermissionDescriptor)
+requestPermission(descriptor)
 ```
 
 ### 参数
 
-- FileSystemHandlePermissionDescriptor {{optional_inline}}
+- `descriptor` {{optional_inline}}
 
   - : 一个对象，指定需要查询的权限模式，包含以下选项：
 
-    - `'mode'`：可以是 `'read'` 或 `'readwrite'`。
+    - `'mode'` {{optional_inline}}
+
+      - : 可以是 `'read'` 或 `'readwrite'`。
 
 ### 返回值
 
-{{domxref('PermissionStatus.state')}}，值为 `'granted'`、`'denied'` 或 `'prompt'` 三者之一。
+一个兑现 {{domxref("PermissionStatus")}} 对象的 {{jsxref("Promise")}}。
 
 ### 异常
 
@@ -70,4 +74,4 @@ async function verifyPermission(fileHandle, withWrite) {
 ## 参见
 
 - [文件系统 API](/zh-CN/docs/Web/API/File_System_API)
-- [文件系统访问 API：简化本地文件访问](https://developer.chrome.com/articles/file-system-access/)
+- [文件系统访问 API：简化本地文件访问](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)
