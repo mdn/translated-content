@@ -106,7 +106,7 @@ class A {
 // '静态字段'
 ```
 
-[`super.property`](/zh-CN/docs/Web/JavaScript/Reference/Operators/super) 语法可在 `static` 代码块中使用，以引用超类的静态属性。
+[`super.property`](/zh-CN/docs/Web/JavaScript/Reference/Operators/super) 语法可在 `static` 代码块中使用，以引用父类的静态属性。
 
 ```js
 class A {
