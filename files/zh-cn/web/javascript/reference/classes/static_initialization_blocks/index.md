@@ -37,7 +37,7 @@ MyClass.init();
 
 不过，这种方法会向类的用户暴露一个实现细节（`init()` 方法）。另一方面，在类外声明的任何初始化逻辑都无法访问私有静态字段。静态初始化块允许在类中声明任意初始化逻辑，并在类求值的过程中执行。
 
-{{jsxref("Statements/class", "class")}} 类主体中可以包含任意数量的 `static {}` 初始块。这些静态字段与任何交错的静态字段初始器一起，按照声明的顺序进行 [评估](/zh-CN/docs/Web/JavaScript/Reference/Classes#evaluation_order)。超类的任何静态初始化都是先进行的，然后才是子类的初始化。
+{{jsxref("Statements/class", "类", "", "nocode")}}主体中可以包含任意数量的 `static {}` 初始化块。这些静态初始化块与任何交错的静态字段初始器一起，按照声明的顺序进行[求值](/zh-CN/docs/Web/JavaScript/Reference/Classes#求值顺序)。先进行父类的静态初始化，然后才是子类的静态初始化。
 
 静态代码块内声明的变量的作用域是该代码块的本地变量。这包括 `var`、`function`、`const` 和 `let` 声明。代码块中的 `var` 声明不会被提升。
 
