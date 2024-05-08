@@ -39,7 +39,7 @@ MyClass.init();
 
 {{jsxref("Statements/class", "类", "", "nocode")}}主体中可以包含任意数量的 `static {}` 初始化块。这些静态初始化块与任何交错的静态字段初始器一起，按照声明的顺序进行[求值](/zh-CN/docs/Web/JavaScript/Reference/Classes#求值顺序)。先进行父类的静态初始化，然后才是子类的静态初始化。
 
-静态代码块内声明的变量的作用域是该代码块的本地变量。这包括 `var`、`function`、`const` 和 `let` 声明。代码块中的 `var` 声明不会被提升。
+静态代码块内声明的变量的作用域是该代码块的本地。这包括 `var`、`function`、`const` 和 `let` 声明。代码块中的 `var` 声明不会被提升。
 
 ```js
 var y = "Outer y";
