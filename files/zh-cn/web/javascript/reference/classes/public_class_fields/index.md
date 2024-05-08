@@ -101,7 +101,7 @@ const instance2 = new C();
 console.log(instance1.obj === instance2.obj); // false
 ```
 
-表达式是同步求值的。不能在初始化表达式中使用 {{jsxref("Operators/await", "await")}} 或 {{jsxref("Operators/yield", "yield")}}} 。(将初始化表达式视为隐式封装在函数中）。
+表达式是同步求值的。不能在初始化表达式中使用 {{jsxref("Operators/await", "await")}} 或 {{jsxref("Operators/yield", "yield")}}。（将初始化表达式视为被隐式封装在函数中。）
 
 由于类的实例字段是在各自的构造函数运行之前添加的，因此可以在构造函数中访问字段的值。然而，由于派生类的实例字段是在 `super()` 返回后定义的，因此基类的构造函数无法访问派生类的字段。
 
