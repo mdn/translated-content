@@ -7,7 +7,7 @@ l10n:
 
 {{jsSidebar("Operators")}}
 
-该章节说明了 JavaScript 语言所有的运算符，表达式和关键字。
+该章节说明了 JavaScript 语言所有的运算符、表达式和关键字。
 
 ## 表达式和运算符分类
 
@@ -18,7 +18,7 @@ l10n:
 JavaScript 中的基本关键字和常用表达式。这些表达式具有最高的优先级（高于[运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_precedence)）。
 
 - {{jsxref("Operators/this", "this")}}
-  - : `this` 关键字指向函数的执行上下文。
+  - : `this` 关键字指向执行上下文的特殊属性。
 - [字面量](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#字面量)
   - : 基本的 `null`、布尔、数字和字符串字面量。
 - {{jsxref("Array", "[]")}}
@@ -40,7 +40,7 @@ JavaScript 中的基本关键字和常用表达式。这些表达式具有最高
 - {{jsxref("Template_literals", "`string`")}}
   - : 模版字面量语法。
 - {{jsxref("Operators/Grouping", "( )")}}
-  - : 分组操作符。
+  - : 分组运算符。
 
 ### 左表达式
 
@@ -53,11 +53,11 @@ JavaScript 中的基本关键字和常用表达式。这些表达式具有最高
 - {{jsxref("Operators/new", "new")}}
   - : `new` 运算符创建了构造函数实例。
 - {{jsxref("Operators/new%2Etarget", "new.target")}}
-  - : 在构造器中，`new.target` 指向 {{jsxref("Operators/new", "new")}} 调用的构造器。
+  - : 在构造函数中，`new.target` 指向 {{jsxref("Operators/new", "new")}} 调用的构造函数。
 - {{jsxref("Operators/import%2Emeta", "import.meta")}}
   - : 向 JavaScript 模块暴露特定上下文的元数据属性的对象。
 - {{jsxref("Operators/super", "super")}}
-  - : `super` 关键字调用父类的构造器。
+  - : `super` 关键字调用父类的构造函数或用于访问父类对象的属性。
 - {{jsxref("Operators/import", "import()")}}
   - : `import()` 语法允许将模块异步且动态地加载到可能为非模块环境的上下文中。
 
@@ -81,19 +81,19 @@ JavaScript 中的基本关键字和常用表达式。这些表达式具有最高
 - {{jsxref("Operators/delete", "delete")}}
   - : `delete` 运算符用来删除对象的属性。
 - {{jsxref("Operators/void", "void")}}
-  - : `void` 运算符表示表达式放弃返回值。
+  - : `void` 运算符执行表达式并丢弃其返回值。
 - {{jsxref("Operators/typeof", "typeof")}}
   - : `typeof` 运算符用来判断给定对象的类型。
 - {{jsxref("Operators/Unary_plus", "+")}}
-  - : 一元加运算符将操作转换为 Number 类型。
+  - : 一元加运算符将操作数转换为 Number 类型。
 - {{jsxref("Operators/Unary_negation", "-")}}
-  - : 一元减运算符将操作转换为 Number 类型并取反。
+  - : 一元减运算符将操作数转换为 Number 类型并取反。
 - {{jsxref("Operators/Bitwise_NOT", "~")}}
   - : 按位非运算符。
 - {{jsxref("Operators/Logical_NOT", "!")}}
   - : 逻辑非运算符。
 - {{jsxref("Operators/await", "await")}}
-  - : 暂停或恢复执行异步函数，并等待 promise 的已兑现或已拒绝的回调。
+  - : 暂停或恢复执行异步函数，并等待 promise 的兑现或拒绝。
 
 ### 算术运算符
 
@@ -133,20 +133,20 @@ JavaScript 中的基本关键字和常用表达式。这些表达式具有最高
 
 ### 相等运算符
 
-评估相等运算符的结果始终是一个布尔类型，该类型基于比较是否为 true。
+相等运算符的求值结果始终是布尔类型（基于比较是否为 true）。
 
 - {{jsxref("Operators/Equality", "==")}}
   - : 相等运算符。
 - {{jsxref("Operators/Inequality", "!=")}}
   - : 不等运算符。
 - {{jsxref("Operators/Strict_equality", "===")}}
-  - : 全等运算符。
+  - : 严格相等运算符。
 - {{jsxref("Operators/Strict_inequality", "!==")}}
-  - : 非全等运算符。
+  - : 严格不相等运算符。
 
 ### 位移运算符
 
-在二进制的基础上对数字进行移动操作
+对操作数的所有二进制位进行移动操作。
 
 - {{jsxref("Operators/Left_shift", "&lt;&lt;")}}
   - : 按位左移运算符。
@@ -164,7 +164,7 @@ JavaScript 中的基本关键字和常用表达式。这些表达式具有最高
 - {{jsxref("Operators/Bitwise_OR", "|")}}
   - : 按位或（OR）。
 - {{jsxref("Operators/Bitwise_XOR", "^")}}
-  - : 位异或（XOR）。
+  - : 按位异或（XOR）。
 
 ### 二元逻辑运算符
 
@@ -180,11 +180,11 @@ JavaScript 中的基本关键字和常用表达式。这些表达式具有最高
 ### 条件（三元）运算符
 
 - {{jsxref("Operators/Conditional_operator", "(condition ? ifTrue : ifFalse)")}}
-  - : 条件元素运算符把两个结果中其中一个符合运算逻辑的值返回。
+  - : 条件运算符返回两个值中符合条件逻辑值的那个值。
 
 ### 赋值运算符
 
-赋值运算符将右边的操作数的值分配给左边的操作数。
+赋值运算符将右边的操作数的值赋给左边的操作数。
 
 - {{jsxref("Operators/Assignment", "=")}}
   - : 赋值运算符。
@@ -218,7 +218,7 @@ JavaScript 中的基本关键字和常用表达式。这些表达式具有最高
   - : 逻辑或赋值运算符。
 - {{jsxref("Operators/Nullish_coalescing_assignment", "??=")}}
   - : 逻辑空赋值运算符。
-- [`[a, b] = arr`, `{ a, b } = obj`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+- [`[a, b] = arr`、`{ a, b } = obj`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
   - : 解构赋值允许你使用类似于数组或对象字面量的语法将数组或对象的属性赋值给变量。
 
 ### Yield 运算符
@@ -226,17 +226,17 @@ JavaScript 中的基本关键字和常用表达式。这些表达式具有最高
 - {{jsxref("Operators/yield", "yield")}}
   - : 暂停和恢复生成器函数。
 - {{jsxref("Operators/yield*", "yield*")}}
-  - : 委派给另外一个生成器函数或可迭代的对象。
+  - : 委派给另外一个生成器函数或可迭代对象。
 
 ### 展开语法
 
 - {{jsxref("Operators/Spread_syntax", "...obj")}}
-  - : 展开运算符允许在需要多个参数（用于函数调用）或多个元素（用于数组字面量）的地方展开表达式。
+  - : 展开语法允许在需要零个或多个参数（对于函数调用）或者元素（对于数组字面量）的地方展开可迭代对象（例如，数组或字符串）。而在对象字面量中，展开语法枚举对象的属性，并将其键值对添加到正在创建的对象中。
 
 ### 逗号运算符
 
 - {{jsxref("Operators/Comma_operator", ",")}}
-  - : 逗号操作符允许在一个判断状态中有多个表达式去进行运算并且最后返回最后一个表达式的值。
+  - : 逗号操作符允许在单个语句中对多个表达式进行求值，并返回最后一个表达式的结果。
 
 ## 规范
 
