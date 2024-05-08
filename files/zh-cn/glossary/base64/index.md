@@ -2,7 +2,7 @@
 title: Base64
 slug: Glossary/Base64
 l10n:
-  sourceCommit: 45421b1345139445c3364f3adf0713be90381eff
+  sourceCommit: 76d86face9211c33ba965763996ef09c7ee1fc68
 ---
 
 {{GlossarySidebar}}
