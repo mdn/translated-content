@@ -210,6 +210,18 @@ class Person {
 class Person {
   name;
   age;
+  constructor(properties) {
+    Object.assign(this, properties);
+  }
+}
+```
+
+由于初始化器是在基类执行完成后求值的，因此你可以访问由基类构造函数创建的属性。
+
+```js
+class Person {
+  name;
+  age;
   constructor(name, age) {
     this.name = name;
     this.age = age;
