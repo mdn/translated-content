@@ -57,7 +57,7 @@ console.log(y); // '外部的 y'
 
 静态代码块中的 `this` 是指类的构造函数对象。`super.property` 可用于访问父类的静态属性。但请注意，在类的静态初始化块中调用 {{jsxref("Operators/super", "super()")}} 或使用 {{jsxref("Functions/arguments", "arguments")}} 对象都会造成语法错误。
 
-这些语句是同步执行的。在此代码块中不能使用 {{jsxref("Operators/await", "await")}} 或 {{jsxref("Operators/yield", "yield")}} 。(将初始化语句视为隐式封装在函数中）。
+这些语句是同步执行的。在这些代码块中不能使用 {{jsxref("Operators/await", "await")}} 或 {{jsxref("Operators/yield", "yield")}}。（将初始化语句视为隐式封装在函数中。）
 
 静态代码块的作用域嵌套在类主体的词法作用域内，可以访问类内声明的 [私有名称](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)，而不会导致语法错误。
 
