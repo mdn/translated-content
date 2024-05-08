@@ -61,7 +61,7 @@ console.log(y); // '外部的 y'
 
 静态代码块的作用域嵌套在类主体的词法作用域*内*，并且可以访问类内声明的[私有名称](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)，而不会导致语法错误。
 
-[静态字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/static) 初始化器和静态初始化块是逐个评估的。初始化块可以引用其上方的字段值，但不能引用其下方的字段值。所有静态方法都会事先添加并可以访问，但如果这些方法引用的字段位于当前块的下方，则调用这些方法时可能会出现与预期不符的情况。
+[静态字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/static)初始化器和静态初始化块是逐个求值的。初始化块可以引用其上方的字段值，但不能引用其下方的字段值。所有静态方法都会事先添加并可以访问，但如果这些方法引用的字段位于当前块的下方，则调用这些方法时可能会出现与预期不符的情况。
 
 > **备忘：** 对于 [私有静态字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties) 而言，这一点更为重要，因为访问未初始化的私有字段会抛出 {{jsxref("TypeError")}}，即使该私有字段已在下面声明。(如果未声明私有字段，则会提前抛出{{jsxref("SyntaxError")}}）。
 
