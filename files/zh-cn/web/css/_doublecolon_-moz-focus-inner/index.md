@@ -43,7 +43,7 @@ input[type="submit"]::-moz-focus-inner {
 }
 ```
 
-### Result
+### 结果
 
 {{EmbedLiveSample("示例", 300, 50)}}
 
