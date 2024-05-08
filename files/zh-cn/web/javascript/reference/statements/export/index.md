@@ -134,7 +134,7 @@ console.log(m); // 12
 export { myFunction as function1, myVariable as variable };
 ```
 
-你可以使用字符串文字将名称重命名为非有效标识符。例如：
+你可以使用字符串字面量将名称重命名为非有效标识符。例如：
 
 ```js
 export { myFunction as "my-function" };
