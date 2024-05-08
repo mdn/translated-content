@@ -11,7 +11,7 @@ l10n:
 
 ![交叉轴沿列方向](basics3.png)
 
-如果你的主轴是列 `column` 或者反向列 `column-reverse`，那么交叉轴就是水平走向的。
+如果你的主轴是列（`column`）或者反向列（`column-reverse`），那么交叉轴就是水平走向的。
 
 ![交叉轴沿行方向](basics4.png)
 
