@@ -1,83 +1,82 @@
 ---
-title: 样式化 HTML 表单
+title: 样式化 Web 表单
 slug: Learn/Forms/Styling_web_forms
+l10n:
+  sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
 
-在这篇文章中，用户将学习如何使用 HTML 表单和 CSS 以使页面更加美观。令人惊讶的是，这可能有点棘手。由于历史和技术的原因，表单部件不能很好地与 CSS 配合工作。由于这些困难，许多开发人员选择[构建自己的 HTML 小部件](/zh-CN/docs/HTML/Forms/How_to_build_custom_form_widgets)以获得更好的控制和视觉观感。然而，在现代浏览器中，web 设计者越来越多地控制表单元素的设计。让我们深入研究。
+在前几篇文章中，我们介绍了如何用 HTML 创建网页表单。现在，我们将介绍如何使用 [CSS](/zh-CN/docs/Web/CSS) 来设置表单样式。
 
-## 为什么使用 CSS 美化表单组件这么困难？
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">前提：</th>
+      <td>
+        对 <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">HTML</a> 和 <a href="/zh-CN/docs/Learn/CSS/First_steps">CSS</a> 的基本理解。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">目标：</th>
+      <td>
+        了解样式化表单背后的问题，学习一些对你有用的基本样式技术。
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-在 1995 年左右的 Web 早期，表单组件 (或控件) 在 [HTML 2 规范](http://www.ietf.org/rfc/rfc1866.txt)中被添加到 HTML。由于表单组件的复杂性，实现者选择依靠底层操作系统来管理和渲染它们。
+## 表单微件样式设计的挑战
 
-若干年后，CSS 被创建出来了，那么技术上的必要性，就是使用原生组件来实现表单控制，这是因为风格的要求。在 CSS 的早期，表单样式控制不是优先事项。
+### 历史
 
-由于用户习惯于各自平台的视觉外观，浏览器厂商不愿意对表单控件样式进行调整;到目前为止，要重建所有控件以使它们可美化仍然是非常困难的。
+1995 年，[HTML 2 规范](https://www.ietf.org/rfc/rfc1866.txt)引入了表单控件（又称“表单微件”或“表单元素”）。但 CSS 直到 1996 年底才发布，而且大多数浏览器在几年后才支持 CSS；因此，在此期间，浏览器依赖底层操作系统来呈现表单部件。
 
-即使在今天，仍然没有一个浏览器完全实现了 CSS 2.1。然而，随着时间的推移，浏览器厂商已经改进了对表单元素的 CSS 支持，尽管可用性的声誉不好，但现在已经可以使用 CSS 来设计[HTML 表单](/zh-CN/docs/HTML/Forms)。
+即使有了 CSS，浏览器供应商起初也不愿意让表单元素具有样式，因为用户已经习惯了各自浏览器的外观。但现在情况已经发生了变化，除了少数例外情况，表单部件现在大部分都是可样式化的。
 
-### 涉及到 CSS，并非所有组件都是平等的
+### 微件类型
 
-目前，在使用表单时使用 CSS 仍然有一些困难。这些问题可以分为三类：
-
-#### 好的
-
-有些元素在跨平台上时很少出现问题。包括以下结构元素：
+#### 易于样式化
 
 1. {{HTMLElement("form")}}
-2. {{HTMLElement("fieldset")}}
-3. {{HTMLElement("label")}}
-4. {{HTMLElement("output")}}
+2. {{HTMLElement("fieldset")}} 和 {{HTMLElement("legend")}}
+3. 单行文本 {{HTMLElement("input")}}（如输入文本、url、电子邮件），但 [`<input type="search">`](/zh-CN/docs/Web/HTML/Element/input/search) 除外。
+4. 多行文本 {{HTMLElement("textarea")}}
+5. 按钮（包括 {{HTMLElement("input")}} 和 {{HTMLElement("button")}}）
+6. {{HTMLElement("label")}}
+7. {{HTMLElement("output")}}
 
-这还包括所有文本字段小部件（单行和多行）和按钮。
+#### 难为样式化
 
-#### 不好的
+- 复选框和单选按钮
+- [`<input type="search">`](/zh-CN/docs/Web/HTML/Element/input/search)
 
-一些元素难以被美化，并且可能需要一些复杂的技巧，偶尔需要高级的 CSS3 知识。
+[表单样式化进阶](/zh-CN/docs/Learn/Forms/Advanced_form_styling)一文介绍了如何设置这些样式。
 
-这些包括{{HTMLElement("legend")}}元素，但不能在所有平台上正确定位。Checkbox 和 radio 按钮也不能直接应用样式，但是，感谢 CSS3，你可以解决这个问题。[`placeholder`](/zh-CN/docs/Web/HTML/Element/input#placeholder) 的内容不能以任何标准方式应用样式，但是实现它的所有浏览器也都实现了私有的 CSS 伪元素或伪类，让你可以对其定义样式。
+#### 仅靠 CSS 无法对内部结构进行样式设计
 
-我们会在[如何构建自定义表单挂件](/zh-CN/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets)一文中讲述如何处理更多特定的问题。
+- [`<input type="color">`](/zh-CN/docs/Web/HTML/Element/input/color)
+- 与日期相关的控件，如 [`<input type="datetime-local">`](/zh-CN/docs/Web/HTML/Element/input/datetime-local)
+- [`<input type="range">`](/zh-CN/docs/Web/HTML/Element/input/range)
+- [`<input type="file">`](/zh-CN/docs/Web/HTML/Element/input/file)
+- 涉及到创建下拉部件的元素，包括 {{HTMLElement("select")}}、{{HTMLElement("option")}}、{{HTMLElement("optgroup")}} 和 {{HTMLElement("datalist")}}。
+- {{HTMLElement("progress")}} 和 {{HTMLElement("meter")}}
 
-#### 丑陋的
+例如，日期选择器的日历和点击时会显示选项列表的 \<select> 按钮不能仅使用 CSS 进行样式设计。
 
-有些元素根本不能用应用 CSS 样式。这些包括：所有高级用户界面小部件，如范围，颜色或日期控件; 和所有下拉小部件，包括{{HTMLElement("select")}}, {{HTMLElement("option")}}, {{HTMLElement("optgroup")}}和{{HTMLElement("datalist")}} 元素。文件选择器小部件也被称为不可样式化。新的{{HTMLElement("progress")}}和{{HTMLElement("meter")}} 元素也属于这个类别。
+[表单样式化进阶](/zh-CN/docs/Learn/Forms/Advanced_form_styling)和[如何构建自定义表单控件](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls)两篇文章介绍了如何设置这些样式。
 
-所有这些小部件的主要问题来自于它们具有非常复杂的结构，而 CSS 目前还不足以表达这些小部件的所有细微部分。如果你想定制这些小部件，你必须依靠 JavaScript 来构建一个你能够应用样式的 DOM 树。我们会在 [How to build custom form widgets](/zh-CN/docs/HTML/Forms/How_to_build_custom_form_widgets)一文中探索如何实现这一点。
+> **备注：** 一些专有的 CSS 伪元素（如 {{cssxref('::-moz-range-track')}}）可以为此类内部组件设计样式，但它们在不同浏览器之间并不一致，因此并不十分可靠。我们稍后会提到。
 
-## 基本样式美化
+## 对简单的表单微件进行样式设计
 
-为了使用 CSS 美化容易被美化的元素，你并不会碰到任何困难，因为它们的大部分行为同其他 HTML 元素差不多。但是，每个浏览器的用户代理样式表可能会有点不一致，所以有一些技巧可以帮助你更轻松地设计它们。
+可以使用[你的首个表单](/zh-CN/docs/Learn/Forms/Your_first_form)和 [CSS 构建](/zh-CN/docs/Learn/CSS/Building_blocks)文章中的技术对上一节中“易于样式化”的微件进行样式设计。还有一些特殊的选择器——[UI 伪类](/zh-CN/docs/Learn/Forms/UI_pseudo-classes)——可以根据用户界面的当前状态来设计样式。
 
-### Search 字段
-
-搜索框是唯一一种应用 CSS 样式有点棘手的文本字段。在基于 WebKit 的浏览器（Chrome，Safari 等）上，你必须使用`-webkit-appearance`专有属性来调整它。我们在文章中进一步讨论这个属性：[HTML 表单的高级样式](/zh-CN/docs/Advanced_styling_for_HTML_forms)。
-
-#### Example
-
-```html
-<form>
-  <input type="search" />
-</form>
-```
-
-```css
-input[type="search"] {
-  border: 1px dotted #999;
-  border-radius: 0;
-
-  -webkit-appearance: none;
-}
-```
-
-![This is a screenshot of a search filed on Chrome, with and without the use of -webkit-appearance](/files/4153/search-chrome-macos.png)
-
-截图中是 Chrome 浏览器中的两个搜索框，在我们的例子中，两个搜索框均被设置为有边框。第一个没有使用`-webkit-appearance`渲染，而第二个使用了 `-webkit-appearance:none`. 两者的不同显而易见。
+我们将在本文结尾举例说明，但首先，这里有一些值得了解的表单样式的特殊方面。
 
 ### 字体和文本
 
-CSS font 和 text 功能能被很容易的应用到任何组件上（当然你可以在 form 组件上使用{{cssxref("@font-face")}} ）。然而，浏览器的行为经常不一致。默认情况下，一些组件不会从它们的父元素继承 {{cssxref("font-family")}}和 {{cssxref("font-size")}} 。相反，许多浏览器使用系统默认的字体和文本。为了让 form 表单的外观和其他内容保持一致，你可以在你的样式表中增加以下内容：
+CSS 字体和文本功能可轻松用于任何微件（是的，可以将 {{cssxref("@font-face")}} 用于表单微件）。不过，浏览器的行为往往不一致。默认情况下，某些微件不会从其父代继承 {{cssxref("font-family")}} 和 {{cssxref("font-size")}}。许多浏览器会使用系统默认的外观。为了使表单的外观与其他内容保持一致，可以在样式表中添加以下规则：
 
 ```css
 button,
@@ -89,17 +88,21 @@ textarea {
 }
 ```
 
-下面的截图显示了不同之处; 左边是 Mac OS X 上 Firefox 中元素的默认渲染，其中使用了平台的默认字体样式。在右边是相同的元素，应用了我们的字体统一样式规则。
+{{cssxref('inherit')}} 属性值会使属性值与其父元素属性的计算值相匹配；继承父元素的值。
 
-![This is a screenshot of the main form widgets on Firefox on Mac OSX, with and without font harmonization](/files/4157/font-firefox-macos.png)
+下面的截图显示了两者的区别。左边是 MacOS 上 Chrome 浏览器中 `<input type="text">`、`<input type="date">`、{{htmlelement('select')}}、{{htmlelement('textarea')}}、`<input type="submit">` 和 `<button>` 的默认渲染结果，使用的是该平台的默认字体样式。右边是应用了上述样式规则的相同元素。
 
-关于使用系统默认样式的表单还是使用设计用于匹配内容的自定义样式表单，有很多争议。作为网站或 Web 应用程序的设计者，你可以自己做出决定。
+![具有默认和继承字体系列的表单控件。默认情况下，有些类型是有衬线字体，有些是无衬线字体。继承应将所有类型的字体更改为父类的字体族，在本例中就是段落。奇怪的是，提交类型的输入并不继承父级段落。](forms_fontfamily.png)
 
-### 盒子模型
+默认设置在许多方面存在差异。继承者应将其字体更改为父代的字体家族——在本例中，即父代容器的默认衬线字体。它们都能做到，但有一个奇怪的例外——在 Chrome 浏览器中，`<input type="submit">` 不能从父段落继承。相反，它使用 {{cssxref('font-family#Values', 'font-family: system-ui')}}。这也是使用 `<button>` 元素而非等价 input 类型的另一个原因！
 
-所有文本字段都完全支持与 CSS 盒模型相关的每个属性 ({{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("padding")}}, {{cssxref("margin")}}, 和 {{cssxref("border")}})。但是，像以前一样，浏览器在显示这些小部件时依赖于系统默认的样式。你需要定义如何将其融入到你的内容中。如果你既想保持小部件的原生外观和感觉，又想给他们一个一致的尺寸，那么你会遇到一些困难 (如果你想保持组件的原生观感，又想给它们一致的大小，你会面临一些困难)。
+关于使用系统默认样式的表单更好看，还是使用为匹配的内容而设计的自定义样式的表单更好看，有很多争论。作为网站或网络应用程序的设计者，你可以自行决定。
 
-**这是因为每个小部件都有自己的边框，填充和边距的规则。** 所以如果你想给几个不同的小部件相同的大小，你必须使用{{cssxref("box-sizing")}} 属性：
+### 盒子尺寸
+
+所有文本字段都完全支持 CSS 盒模型的所有相关属性，例如 {{cssxref("width")}}、{{cssxref("height")}}、{{cssxref("padding")}}、{{cssxref("margin")}} 以及 {{cssxref("border")}}。不过，和以前一样，浏览器在显示这些微件时会依赖系统默认样式。你可以自行定义如何将它们融入内容。如果你想保持这些部件的原生观感，那么如果你想给它们一个一致的大小，就会遇到一点困难。
+
+**这是因为每个微件都有自己的边框、外边距和内边距规则**。要为多个不同的微件提供相同的尺寸，可以使用 {{cssxref("box-sizing")}} 属性以及其他属性的一些一致值：
 
 ```css
 input,
@@ -107,68 +110,55 @@ textarea,
 select,
 button {
   width: 150px;
+  padding: 0;
   margin: 0;
-
-  -webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
-  -moz-box-sizing: border-box; /* For legacy (Firefox <29) Gecko based browsers */
   box-sizing: border-box;
 }
 ```
 
-![This is a screenshot of the main form widgets on Chrome on Windows 7, with and without the use of box-sizing.](/files/4161/size-chrome-win7.png)
+在下面的截图中，左栏显示了 `<input type="radio">`、`<input type="checkbox">`、`<input type="range">`、 `<input type="text">`、`<input type="date">`、{{htmlelement('select')}}、{{htmlelement('textarea')}}、`<input type="submit">`和 {{htmlelement('button')}} 的默认渲染结果。右栏则显示了应用了上述规则的相同元素。请注意，尽管平台对每种微件都有默认规则，但我们仍能确保所有元素占用相同的空间。
 
-在上面的屏幕截图中，左侧的列没有{{cssxref("box-sizing")}}，而右侧的列使用了这个属性和`border-box`。请注意我们是怎样确保所有元素都占用相同的空间量，尽管平台对每种窗口小部件都有默认规则。
+![盒模型对大多数 input 类型有效。](boxmodel_formcontrols1.png)
 
-### 定位（Positioning）
+从截图中可能看不出的是，单选框和复选框控件看起来还是一样的，但它们的居中位置是 {{cssxref('width')}} 属性提供的 150px 水平空间。其他浏览器可能不会将控件居中，但它们会遵守分配的空间。
 
-HTML 表单部件的定位通常不是问题; 但是，你应该特别注意两点：
+### 图例摆放
 
-#### legend
+{{HTMLElement("legend")}} 元素的样式设计没问题，但要控制它的位置就有点麻烦了。默认情况下，它总是位于 {{HTMLElement("fieldset")}} 父元素的顶部边框上方，靠近左上角。如果要将其置于其他位置，例如 fieldset 内部或左下角附近，则需要依靠定位。
 
-{{HTMLElement("legend")}}元素易于应用 CSS，除了定位。在所有浏览器中， {{HTMLElement("legend")}} 元素定位是其 {{HTMLElement("fieldset")}} 父元素的上边框的最顶端。在 HTML 流中无法改变它的绝对位置，无法让其远离顶部边框。然而，你可以使用 {{cssxref("position")}} 属性将其位置设置为绝对或相对。除此之外，它近几年是 fieldset 边框的一部分。
+看看下面这个示例：
 
-由于{{HTMLElement("legend")}}元素对无障碍非常重要，因为它能被无障碍技术作为每个 fieldset 中的表单元素的标签读出来，它通常与标题配对，并且在无障碍中被隐藏。例如：
+{{EmbedGHLiveSample("learning-area/html/forms/native-form-widgets/positioned-legend.html", '100%', 400)}}
 
-##### HTML
-
-```html
-<fieldset>
-  <legend>Hi!</legend>
-  <h1>Hello</h1>
-</fieldset>
-```
-
-##### CSS
+为了以这种方式定位图例，我们使用了以下 CSS（为简洁起见，删除了其他声明）：
 
 ```css
+fieldset {
+  position: relative;
+}
+
 legend {
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 ```
 
-#### textarea
+`<fieldset>` 也需要定位，以便使 `<legend>` 相对于它定位（否则 `<legend>` 将相对于 `<body>` 定位）。
 
-默认情况下，所有浏览器都认为{{HTMLElement("textarea")}} 元素是 inline block，与文本底线对齐。这很少是我们真正想看到的。要将内联 (`inline-block`) 块更改为块 (`block`)，使用{{cssxref("display")}}属性非常简单。但是如果你想以 inline 方式使用它，通常改变垂直对齐方式：
+{{HTMLElement("legend")}} 元素对于无障碍辅助功能非常重要，它将作为字段集内每个表单元素标签的一部分被辅助技术识别，但使用类似上述的技术也没有问题。图例内容仍将以相同的方式显示，只是视觉位置发生了变化。
 
-```css
-textarea {
-  vertical-align: top;
-}
-```
+> **备注：** 也可以使用 {{cssxref("transform")}} 属性来辅助定位 `<legend>`。但是，当使用 `transform: translateY();` 等属性定位时，它虽然移动了，但却在 `<fieldset>` 边框中留下了一个难看的缺口，而且很难消除。
 
-## 示例
+## 一个具体的样式设计示例
 
-让我们来看一个样式化 HTML 表单的实际的案例。这有助于理清这里面的许多概念。我们将构建下面的"明信片" 联系人表单：
+让我们来看一个如何为 HTML 表单设计样式的具体示例。我们将制作一个外观精美的“明信片”联系表单；[请参见此处的完成版](https://mdn.github.io/learning-area/html/forms/postcard-example/)。
 
-![This is what we want to achieve with HTML and CSS](/files/4149/screenshot.png)
+如果你想学习这个示例，请在本地拷贝我们的 [postcard-start.html 文件](https://github.com/mdn/learning-area/blob/main/html/forms/postcard-example/postcard-start.html)，然后按照下面的说明操作。
 
-如果你想继续关注这个例子，复制我们的 [postcard-start.html](https://github.com/mdn/learning-area/blob/main/html/forms/postcard-example/postcard-start.html) 文件，并遵循接下来的指导操作。
+### HTML
 
-### The HTML
-
-HTML 只比我们在 [the first article of this guide](/zh-CN/docs/HTML/Forms/My_first_HTML_form) 中涉及到的多一些；它只有一些额外的 id 和 title。
+与我们在[本指南第一篇文章](/zh-CN/docs/Learn/Forms/Your_first_form)中使用的示例相比，HTML 只是稍微复杂一些；它只是多了几个 ID 和一个标题。
 
 ```html
 <form>
@@ -195,28 +185,30 @@ HTML 只比我们在 [the first article of this guide](/zh-CN/docs/HTML/Forms/My
 </form>
 ```
 
-将上面的代码添加到你 HTML 的 body 中。
+将以上代码添加到 HTML 的 body 部分。
 
-### 组织你的静态文件
+### 整理资源文件
 
-好戏要开始了！在开始写代码之前，我们需要三个额外的静态文件：
+这就是有趣的开始！在开始编码之前，我们还需要三种额外的资源：
 
-1. 明信片的[背景](/files/4151/background.jpg)——下载这幅图片，把它和你的 HTML 文件保存在相同目录下。
-2. 打字机字体：[源自 fontsquirrel.com 的 "Secret Typewriter“字体](http://www.fontsquirrel.com/fonts/Secret-Typewriter)——将 TTF 文件下载到和上面相同的文件夹里。
-3. 手绘字体：[源自 fontsquirrel.com 的 The "Journal" 字体](http://www.fontsquirrel.com/fonts/Journal)——将 TTF 文件下载到和上面相同的文件夹里。
+1. [明信片背景](background.jpg)——下载该图片，并将其保存在与工作 HTML 文件相同的目录下。
+2. 打字机字体：[来自 dafont.com 的“Mom's Typewriter”字体](https://www.dafont.com/moms-typewriter.font?back=theme)——将 TTF 文件下载到与上述相同的目录中。
+3. 手绘字体：[来自 dafont.com 的“Journal”字体](https://www.dafont.com/journal.font)——将 TTF 文件下载到与上述相同的目录中。
 
-在你开始之前需要对字体做一些处理：
+在开始使用之前，你的字体还需要进一步处理：
 
-1. 打开 fontsquirrel [网络字体生成器](https://www.fontsquirrel.com/tools/webfont-generator).
-2. 使用表单，上传你的字体文件并生成一个网络字体包，将这个包下载到你的电脑上。
-3. 解压提供的 zip 文件。
-4. 再解压后的文件内容里你会找到两个 `.woff` 文件和两个`.woff2` 文件。将这四个文件拷贝到一个叫 fonts 的文件夹里，而 fonts 文件夹位于和上面相同的文件夹里。我们为每种字体使用两个不同的文件以最大限度地保证浏览器兼容性。查看我们的 [Web 字体](/zh-CN/docs/Learn/CSS/Styling_text/Web_fonts) 一文获取更多信息。
+1. 访问 fontsquirrel.com 的 [Webfont 生成器](https://www.fontsquirrel.com/tools/webfont-generator)工具。
+2. 使用表单上传字体文件，生成网络字体工具包。将该工具包下载到您的电脑上。
+3. 解压缩提供的压缩文件。
+4. 在解压后的内容中，你会发现一些字体文件（在撰写本文时，有两个 `.woff` 文件和两个 `.woff2` 文件；将来可能会有变化）。将这些文件复制到一个名为 fonts 的目录中，该目录与之前的目录相同。我们为每种字体使用了两个不同的文件，以最大限度地提高浏览器兼容性；请参阅我们的 [Web 字体](/zh-CN/docs/Learn/CSS/Styling_text/Web_fonts)文章，了解更多信息。
 
 ### CSS
 
-现在我们可以深入探究本例的 CSS 了。将下面所有的代码块一个接一个地加到{{htmlelement("style")}} 元素里。
+现在，我们可以为示例编写 CSS。在 {{htmlelement("style")}} 元素内逐一添加下图所示的所有代码块。
 
-首先，我们要准备一些基础。这需要定义 {{cssxref("@font-face")}} 规则，以及所有的 {{HTMLElement("body")}} 元素和 {{HTMLElement("form")}} 元素基本规则：
+#### 总体布局
+
+首先，我们要定义 {{cssxref("@font-face")}} 规则，并在 {{HTMLElement("body")}} 和 {{HTMLElement("form")}} 元素上设置所有基本样式。如果 fontsquirrel 的输出与我们上面描述的不同，可以在下载的 webfont 工具包的 `stylesheet.css` 文件中找到正确的 `@font-face` 块（需要用它们替换下面的 `@font-face` 块，并更新字体文件的路径）：
 
 ```css
 @font-face {
@@ -231,65 +223,59 @@ HTML 只比我们在 [the first article of this guide](/zh-CN/docs/HTML/Forms/My
 @font-face {
   font-family: "typewriter";
   src:
-    url("fonts/veteran_typewriter-webfont.woff2") format("woff2"),
-    url("fonts/veteran_typewriter-webfont.woff") format("woff");
+    url("fonts/momot___-webfont.woff2") format("woff2"),
+    url("fonts/momot___-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 body {
-  font: 21px sans-serif;
-
-  padding: 2em;
+  font: 1.3rem sans-serif;
+  padding: 0.5em;
   margin: 0;
-
   background: #222;
 }
 
 form {
   position: relative;
-
   width: 740px;
   height: 498px;
   margin: 0 auto;
-
+  padding: 1em;
+  box-sizing: border-box;
   background: #fff url(background.jpg);
+
+  /* we create our grid */
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 10em 1em 1em 1em;
 }
 ```
 
-现在我们可以定位我们的元素，包括标题和其他表单元素：
+请注意，我们使用了 [CSS 网格](/zh-CN/docs/Web/CSS/CSS_grid_layout)和[弹性盒](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)来布局表单。这样，我们就可以轻松定位元素，包括标题和所有表单元素：
 
 ```css
 h1 {
-  position: absolute;
-  left: 415px;
-  top: 185px;
-
   font:
     1em "typewriter",
-    sans-serif;
-}
-
-#from {
-  position: absolute;
-  left: 398px;
-  top: 235px;
-}
-
-#reply {
-  position: absolute;
-  left: 390px;
-  top: 285px;
+    monospace;
+  align-self: end;
 }
 
 #message {
-  position: absolute;
-  left: 20px;
-  top: 70px;
+  grid-row: 1 / 5;
+}
+
+#from,
+#reply {
+  display: flex;
 }
 ```
 
-现在我们开始处理表单元素本身。首先，让我们确保 {{HTMLElement("label")}} 被赋予了正确的字体：
+#### 标签与控件
+
+现在，我们可以开始处理表单元素本身了。首先，确保 {{HTMLElement("label")}} 的字体正确：
 
 ```css
 label {
@@ -299,47 +285,38 @@ label {
 }
 ```
 
-文本域需要一些通用的规则，我们只需简单的移除 {{cssxref("border","borders")}} 和 {{cssxref("background","backgrounds")}}, 并重新定义其{{cssxref("padding")}} 和 {{cssxref("margin")}}：
+文本字段需要一些通用规则。换句话说，我们删除了它们的{{cssxref("border", "边框")}}和{{cssxref("background", "背景")}}，并重新定义了它们的 {{cssxref("padding")}} 和 {{cssxref("margin")}}：
 
 ```css
 input,
 textarea {
   font:
-    0.9em/1.5em "handwriting",
+    1.4em/1.5em "handwriting",
+    cursive,
     sans-serif;
-
   border: none;
   padding: 0 10px;
   margin: 0;
-  width: 240px;
-
+  width: 80%;
   background: none;
 }
 ```
 
-当其中的一个域获得焦点后，我们用浅灰色、半透明的背景高亮它们，注意添加{{cssxref("outline")}} 属性非常重要，这样可以移除由某些浏览器添加的默认高亮效果：
+当其中一个字段获得焦点时，我们会用浅灰色透明背景来突出显示它们（为了便于使用和键盘无障碍，焦点样式总是很重要的）：
 
 ```css
 input:focus,
 textarea:focus {
-  background: rgba(0, 0, 0, 0.1);
+  background: rgb(0 0 0 / 10%);
   border-radius: 5px;
-  outline: none;
 }
 ```
 
-现在我们的文本域已经完成了，我们需要调整单行和多行文本域的显示，使其能够匹配，因为通常情况下它们不会以默认的设置而具有一样的外观。
+现在我们的文本字段已经完成，我们需要调整单行和多行文本字段的显示方式，使其匹配，因为使用默认设置时，它们的显示方式通常不会相同。
 
-单行文本需要一些调整才能在 Internet Explorer 中渲染良好。Internet Explorer 没有基于字体的自然高度来定义文本域的高度（而这是所有其他浏览器都有的行为）。为了修正这个问题，我们需要给域添加一个确定的高度，像下面这样：
+#### 调整 textarea
 
-```css
-input {
-  height: 2.5em; /* for IE */
-  vertical-align: middle; /* This is optional but it makes legacy IEs look better */
-}
-```
-
-{{HTMLElement("textarea")}} 元素默认地被渲染成一个块级元素。这里有重要地两点是 {{cssxref("resize")}} 和 {{cssxref("overflow")}} 属性。因为我们的设计是一个固定大小的设计，所以我们会使用 `resize` 属性来防止用户调整我们的多行文本域的大小。{{cssxref("overflow")}} 属性是用来让域在不同的浏览器上渲染得更一致。一些浏览器默认值为 `auto`，而一些将默认值设为 `scroll`。在我们得例子中，最好确定每个浏览器都使用 `auto`：
+{{HTMLElement("textarea")}} 元素默认渲染为 inline-block 元素。这里最重要的是 {{cssxref("resize")}} 和 {{cssxref("overflow")}} 属性。虽然我们的设计为固定尺寸，我们可以使用 `resize` 属性来阻止用户调整多行文本字段的大小，但最好不要阻止用户调整文本区域的大小（如果他们愿意的话）。{{cssxref("overflow")}} 属性用于使字段在不同浏览器中的呈现更加一致。有些浏览器默认值为 `auto`，而有些浏览器默认值为 `scroll`。在我们的示例中，最好确保每个人都使用 `auto`：
 
 ```css
 textarea {
@@ -347,35 +324,28 @@ textarea {
 
   padding: 10px;
   margin: 10px 0 0 -10px;
-  width: 340px;
-  height: 360px;
+  width: 100%;
+  height: 90%;
 
-  resize: none;
+  border-right: 1px solid;
+
+  /* resize  : none; */
   overflow: auto;
 }
 ```
 
-{{HTMLElement("button")}} 元素上使用 CSS 非常方便；你可以做你任何想做得事情，甚至包括使用 [伪元素](/zh-CN/docs/CSS/Pseudo-elements)：
+#### 对提交按钮进行样式设计
+
+{{HTMLElement("button")}} 元素非常便于使用 CSS 进行样式设计；你可以随心所欲，甚至可以使用[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)进行设置：
 
 ```css
 button {
-  position: absolute;
-  left: 440px;
-  top: 360px;
-
   padding: 5px;
-
   font: bold 0.6em sans-serif;
   border: 2px solid #333;
   border-radius: 5px;
   background: none;
-
   cursor: pointer;
-
-  -webkit-transform: rotate(-1.5deg);
-  -moz-transform: rotate(-1.5deg);
-  -ms-transform: rotate(-1.5deg);
-  -o-transform: rotate(-1.5deg);
   transform: rotate(-1.5deg);
 }
 
@@ -385,21 +355,26 @@ button:after {
 
 button:hover,
 button:focus {
-  outline: none;
   background: #000;
   color: #fff;
 }
 ```
 
-瞧！
+### 最终结果
 
-> **备注：** 如果你的例子没有像你预期的那样工作，你想将它同我们的版本检查对比，你可以在 Github 上找到它——查看[在线演示](https://mdn.github.io/learning-area/html/forms/postcard-example/)（也可以查看[源代码](https://github.com/mdn/learning-area/tree/main/html/forms/postcard-example)）。
+瞧！你的表单现在应该是这样的：
+
+![如上所述应用所有样式和调整后表单的最终外观和布局](updated-form-screenshot.jpg)
+
+> **备注：** 如果你的示例没有像你预期的那样工作，你想将它同我们的版本检查对比，你可以在 Github 上找到它——查看[在线演示](https://mdn.github.io/learning-area/html/forms/postcard-example/)（也可以查看[源代码](https://github.com/mdn/learning-area/tree/main/html/forms/postcard-example)）。
+
+## 技能测试
+
+本文已经结束，但你还记得最重要的信息吗？在继续学习之前，还可以通过一些测试来验证自己是否记住了这些信息——请参阅[技能测试：样式化基础](/zh-CN/docs/Learn/Forms/Test_your_skills:_Styling_basics)。
 
 ## 总结
 
-如你所见，若我们想构建只包含文本域和按钮的表单，用 CSS 美化它们非常容易。如果你想要知道更多能够让你的处理表单组件时更轻松的 CSS 小技巧，看一看 [normalize.css](http://necolas.github.com/normalize.css) 项目的表单部分。
-
-[下一篇文章中](/zh-CN/docs/Learn/Forms/Advanced_form_styling)，我们将会看到如何处理落入“不好的”和“丑陋的”分类的表单组件。
+正如你所看到的，只要我们想创建只有文本字段和按钮的表单，就很容易使用 CSS 对其进行样式设置。[下一篇文章中](/zh-CN/docs/Learn/Forms/Advanced_form_styling)，我们将会看到如何处理落入“不好的”和“丑陋的”分类的表单微件。
 
 {{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
 
