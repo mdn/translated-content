@@ -42,7 +42,7 @@ MyClass.init();
 静态代码块内声明的变量的作用域是该代码块的本地。这包括 `var`、`function`、`const` 和 `let` 声明。代码块中的 `var` 声明不会被提升。
 
 ```js
-var y = "Outer y";
+var y = "外部的 y";
 
 class A {
   static field = "Inner y";
