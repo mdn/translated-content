@@ -13,7 +13,7 @@ l10n:
   <tbody>
     <tr>
       <th scope="row">标头类型</th>
-      <td>{{Glossary("Request header", "请求标头"}}</td>
+      <td>{{Glossary("Request header", "请求标头")}}</td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden header name", "禁止修改的标头")}}</th>
