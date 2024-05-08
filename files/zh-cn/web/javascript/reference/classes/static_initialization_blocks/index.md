@@ -52,7 +52,7 @@ class A {
 }
 
 // 代码块中的 `var` 声明不会被提升
-console.log(y); // 'Outer y'
+console.log(y); // '外部的 y'
 ```
 
 静态代码块中的 `this` 是指类的构造函数对象。`super.property` 可用于访问超类的静态属性。但请注意，在类的静态初始化代码块中调用 {{jsxref("Operators/super", "super()")}} 或使用 {{jsxref("Functions/arguments", "arguments")}} 对象都是语法错误。
