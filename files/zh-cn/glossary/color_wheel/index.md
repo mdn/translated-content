@@ -2,7 +2,7 @@
 title: 色环
 slug: Glossary/Color_wheel
 l10n:
-  sourceCommit: 1a26583f60bdceece64347bf967d0653fe8df288
+  sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
 ---
 
 {{GlossarySidebar}}
