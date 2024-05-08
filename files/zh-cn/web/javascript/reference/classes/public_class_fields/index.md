@@ -245,7 +245,7 @@ console.log(new Professor("Radev", 54).name); // "Radev 教授"
 
 ## 参见
 
-- [使用类](/zh-CN/docs/Web/JavaScript/Guide/Using_classes) guide
+- [使用类](/zh-CN/docs/Web/JavaScript/Guide/Using_classes)指南
 - [类](/zh-CN/docs/Web/JavaScript/Reference/Classes)
 - [私有属性](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)
 - {{jsxref("Statements/class", "class")}}
