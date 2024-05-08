@@ -240,7 +240,7 @@ graph.options = {
   thickness: "3px",
 };
 
-graph.draw(); // 日志："来自graph draw function"
+graph.draw(); // 日志："来自 graph draw function"
 console.log(cube(3)); // 27
 console.log(foo); // 4.555806215962888
 ```
