@@ -155,5 +155,5 @@ console.log(getDPrivateField(new D("私有"))); // '私有'
 - [类](/zh-CN/docs/Web/JavaScript/Reference/Classes)
 - {{jsxref("Classes/static", "static")}}
 - {{jsxref("Statements/class", "class")}}
-- [类的静态初始块](https://v8.dev/features/class-static-initializer-blocks) on v8.dev (2021)
-- [ES2022 功能：类的静态初始块](https://2ality.com/2021/09/class-static-block.html) by Dr. Axel Rauschmayer (2021)
+- v8.dev 上的[类的静态初始块](https://v8.dev/features/class-static-initializer-blocks)（2021）
+- [ES2022 特性：类的静态初始块](https://2ality.com/2021/09/class-static-block.html) 来自 Axel Rauschmayer 博士（2021）
