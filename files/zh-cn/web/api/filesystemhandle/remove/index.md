@@ -81,6 +81,7 @@ async function deleteFile(e) {
 ## 规范
 
 This feature is not part of any specification, but may become standard in the future. See [_whatwg/fs#9_](https://github.com/whatwg/fs/pull/9) for the detail.
+此特性不属于任何规范的一部分，但将来可能会成为标准。有关详细信息，请参阅 [_whatwg/fs#9_](https://github.com/whatwg/fs/pull/9)。
 
 ## 浏览器兼容性
 
