@@ -138,7 +138,7 @@ class D {
   }
 }
 
-console.log(getDPrivateField(new D("private"))); // 'private'
+console.log(getDPrivateField(new D("私有"))); // '私有'
 ```
 
 ## 规范
