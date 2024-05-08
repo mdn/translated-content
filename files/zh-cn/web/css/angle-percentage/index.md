@@ -9,11 +9,11 @@ l10n:
 
 **`<angle-percentage>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types)表示 {{Cssxref("angle")}} 或 {{Cssxref("percentage")}} 的其中一个值。
 
-当 `<angle-percentage>` 作为允许的类型时，这意味着百分比解析为一个角度，因此可以在 {{Cssxref("calc", "calc()")}} 表达式中使用。
+当指定允许的类型为 `<angle-percentage>` 时，这意味着百分比值会解析为一个角度，因此可以在 {{Cssxref("calc", "calc()")}} 表达式中使用。
 
 ## 语法
 
-请参阅 {{Cssxref("angle")}} 和 {{Cssxref("percentage")}} 的文档，了解该类型允许使用的各种语法的详细信息。
+请参阅 {{Cssxref("angle")}} 和 {{Cssxref("percentage")}} 的文档，了解该类型允许使用的语法的详细信息。
 
 ## 形式语法
 
