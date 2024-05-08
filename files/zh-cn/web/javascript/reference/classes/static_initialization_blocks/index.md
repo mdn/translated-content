@@ -28,7 +28,7 @@ class ClassWithSIB {
 ```js
 class MyClass {
   static init() {
-    // Access to private static fields is allowed here
+    // 这里允许访问私有静态字段
   }
 }
 
