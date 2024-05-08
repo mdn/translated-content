@@ -48,7 +48,7 @@ export { default as name1 } from "module-name";
 ```
 
 - `nameN`
-  - : 要导出的标识符（以便其他脚本通过 {{jsxref("Statements/import", "import")}} 语句进行导入）。如果使用带有 `as` 的别名，实际导出的名称可以指定为字符串字面形式，但它可能不是有效的标识符。
+  - : 要导出的标识符（以便其他脚本通过 {{jsxref("Statements/import", "import")}} 语句进行导入）。如果使用带有 `as` 的别名，实际导出的名称可以指定为字符串字面量，但它可能不是有效的标识符。
 
 ## 描述
 
