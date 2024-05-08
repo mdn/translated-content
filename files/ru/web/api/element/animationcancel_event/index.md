@@ -179,7 +179,7 @@ If your browser supports `animationcancel`, hiding the box using the button will
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - The {{event("animationcancel")}} event this event handler is triggered by.
 - {{domxref("AnimationEvent")}}

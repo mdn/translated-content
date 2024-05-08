@@ -29,6 +29,6 @@ rect = range.getBoundingClientRect();
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [The DOM interfaces index](/ru/docs/DOM/DOM_Reference)

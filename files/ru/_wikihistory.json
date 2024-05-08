@@ -3153,25 +3153,8 @@
     ]
   },
   "MDN/Community/Contributing": {
-    "modified": "2020-01-05T13:03:37.237Z",
-    "contributors": [
-      "Ivan961",
-      "lesha.boklag",
-      "seliverstova",
-      "wbamberg",
-      "scrum",
-      "lavr1986uxa",
-      "BychekRU",
-      "dstereo",
-      "Daniil",
-      "Unregistered45",
-      "Aleksej",
-      "0leg",
-      "teoli",
-      "mitabuba",
-      "ilya",
-      "Mars"
-    ]
+    "modified": "2019-01-17T00:00:52.853Z",
+    "contributors": ["wbamberg", "warsan"]
   },
   "MDN/Community/Contributing/Getting_started": {
     "modified": "2020-10-30T09:48:31.108Z",
@@ -7350,9 +7333,17 @@
     "modified": "2020-10-15T22:12:17.873Z",
     "contributors": ["Mitrr", "ShantyHoz"]
   },
+  "Web/API/Window/origin": {
+    "modified": "2019-03-23T22:40:35.301Z",
+    "contributors": ["vyushin"]
+  },
   "Web/API/Window/parent": {
     "modified": "2019-03-23T22:52:14.067Z",
     "contributors": ["skip405", "olehrgf"]
+  },
+  "Web/API/Window/performance": {
+    "modified": "2019-03-18T21:36:16.802Z",
+    "contributors": ["Demjan"]
   },
   "Web/API/Window/popstate_event": {
     "modified": "2019-04-26T08:34:41.629Z",
@@ -7786,14 +7777,6 @@
   "Web/API/fetch": {
     "modified": "2020-10-15T22:06:28.491Z",
     "contributors": ["BadLame", "dasha_hshr"]
-  },
-  "Web/API/origin": {
-    "modified": "2019-03-23T22:40:35.301Z",
-    "contributors": ["vyushin"]
-  },
-  "Web/API/performance_property": {
-    "modified": "2019-03-18T21:36:16.802Z",
-    "contributors": ["Demjan"]
   },
   "Web/API/setInterval": {
     "modified": "2020-11-18T12:13:20.493Z",
@@ -15982,10 +15965,6 @@
   "WebAssembly/Using_the_JavaScript_API": {
     "modified": "2019-06-12T07:08:20.267Z",
     "contributors": ["deadblackclover", "vkorniiko"]
-  },
-  "conflicting/MDN/Community/Contributing": {
-    "modified": "2019-01-17T00:00:52.853Z",
-    "contributors": ["wbamberg", "warsan"]
   },
   "conflicting/Web/HTML/Element/img": {
     "modified": "2019-03-18T20:41:47.756Z",

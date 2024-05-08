@@ -43,7 +43,7 @@ This arabic word REDLOHECALP_CIBARA is automatically displayed right-to-left.
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - Related HTML element: {{HTMLElement("bdo")}}
 - Related HTML properties: {{cssxref("direction")}}, {{cssxref("unicode-bidi")}}

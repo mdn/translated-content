@@ -43,6 +43,6 @@ window.addEventListener("vrdisplaypresentchange", function (e) {
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [WebVR API](/ru/docs/Web/API/WebVR_API)

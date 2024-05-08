@@ -81,7 +81,7 @@ _本接口从 {{domxref("EventTarget")}} 接口继承属性。_
   - : 返回对 navigator 对象的引用。
 - {{domxref("Window.opener")}}
   - : 返回对打开当前窗口的 window 的引用。
-- {{domxref("origin", "Window.origin")}} {{ReadOnlyInline}}
+- {{domxref("Window.origin")}} {{ReadOnlyInline}}
   - : 返回全局对象的源，序列化为一个字符串。
 - {{domxref("Window.outerHeight")}} {{ReadOnlyInline}}
   - : 获取浏览器窗口外侧的高度。
@@ -93,7 +93,7 @@ _本接口从 {{domxref("EventTarget")}} 接口继承属性。_
   - : {{domxref("window.scrollY")}} 的别名。
 - {{domxref("Window.parent")}} {{ReadOnlyInline}}
   - : 返回对当前窗口或子框架的被继承对象的引用。
-- {{domxref("performance_property", "Window.performance")}} {{ReadOnlyInline}}
+- {{domxref("Window.performance")}} {{ReadOnlyInline}}
   - : 返回一个 {{domxref("Performance")}} 对象，其中包括 {{domxref("Performance.timing", "timing")}} 和 {{domxref("Performance.navigation", "navigation")}} 属性，每个属性都是提供[性能相关](/zh-CN/docs/Web/API/Performance_API/Navigation_timing)数据的对象。有关其他信息和例子，请参见[使用导航计时](/zh-CN/docs/Web/API/Performance_API/Navigation_timing)。
 - {{domxref("Window.personalbar")}} {{ReadOnlyInline}}
   - : 返回 personalbar 对象。

@@ -364,7 +364,7 @@ After declaring a few variables, we add an event listener to the button to contr
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [HTML forms guide](/ru/docs/Learn/HTML/Forms)
 - {{HTMLElement("input")}}

@@ -77,7 +77,7 @@ var atts = para.attributes;
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref("NamedNodeMap")}}, the interface of the returned object
 - Cross-browser compatibility considerations: on [quirksmode](http://www.quirksmode.org/dom/w3c_core.html#attributes)

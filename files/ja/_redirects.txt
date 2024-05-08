@@ -84,7 +84,7 @@
 /ja/docs/API/Document/onfullscreenerror	/ja/docs/Web/API/Document/fullscreenerror_event
 /ja/docs/API/Document/onselectionchange	/ja/docs/Web/API/HTMLInputElement/selectionchange_event
 /ja/docs/API/Document/open	/ja/docs/Web/API/Document/open
-/ja/docs/API/Document/origin	/ja/docs/Web/API/origin
+/ja/docs/API/Document/origin	/ja/docs/Web/API/Window/origin
 /ja/docs/API/Document/plugins	/ja/docs/Web/API/Document/plugins
 /ja/docs/API/Document/queryCommandSupported	/ja/docs/Web/API/Document/queryCommandSupported
 /ja/docs/API/Document/querySelector	/ja/docs/Web/API/Document/querySelector
@@ -2696,7 +2696,7 @@
 /ja/docs/Web/API/Document/onoffline	/ja/docs/Web/API/Window/offline_event
 /ja/docs/Web/API/Document/ononline	/ja/docs/Web/API/Window/online_event
 /ja/docs/Web/API/Document/onselectionchange	/ja/docs/Web/API/HTMLInputElement/selectionchange_event
-/ja/docs/Web/API/Document/origin	/ja/docs/Web/API/origin
+/ja/docs/Web/API/Document/origin	/ja/docs/Web/API/Window/origin
 /ja/docs/Web/API/Document/pointercancel_event	/ja/docs/Web/API/Element/pointercancel_event
 /ja/docs/Web/API/Document/pointerdown_event	/ja/docs/Web/API/Element/pointerdown_event
 /ja/docs/Web/API/Document/pointerenter_event	/ja/docs/Web/API/Element/pointerenter_event
@@ -3175,7 +3175,6 @@
 /ja/docs/Web/API/Window/onmouseup	/ja/docs/Web/API/Element/mouseup_event
 /ja/docs/Web/API/Window/onreset	/ja/docs/Web/API/HTMLFormElement/reset_event
 /ja/docs/Web/API/Window/onresize	/ja/docs/Web/API/Window/resize_event
-/ja/docs/Web/API/Window/performance	/ja/docs/Web/API/performance_property
 /ja/docs/Web/API/Window/restore	/ja/docs/Web/API/Window/moveTo
 /ja/docs/Web/API/Window/setInterval	/ja/docs/Web/API/setInterval
 /ja/docs/Web/API/Window/setTimeout	/ja/docs/Web/API/setTimeout
@@ -3214,7 +3213,7 @@
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/fetch	/ja/docs/Web/API/fetch
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/indexedDB	/ja/docs/Web/API/Window/indexedDB
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/isSecureContext	/ja/docs/Web/API/Window/isSecureContext
-/ja/docs/Web/API/WindowOrWorkerGlobalScope/origin	/ja/docs/Web/API/origin
+/ja/docs/Web/API/WindowOrWorkerGlobalScope/origin	/ja/docs/Web/API/Window/origin
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/setInterval	/ja/docs/Web/API/setInterval
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout	/ja/docs/Web/API/setTimeout
 /ja/docs/Web/API/WindowTimers	/ja/docs/Web/API/setTimeout
@@ -3360,6 +3359,8 @@
 /ja/docs/Web/API/form.target	/ja/docs/Web/API/HTMLFormElement/target
 /ja/docs/Web/API/indexedDB	/ja/docs/Web/API/Window/indexedDB
 /ja/docs/Web/API/isSecureContext	/ja/docs/Web/API/Window/isSecureContext
+/ja/docs/Web/API/origin	/ja/docs/Web/API/Window/origin
+/ja/docs/Web/API/performance_property	/ja/docs/Web/API/Window/performance
 /ja/docs/Web/API/range.intersectsNode	/ja/docs/Web/API/Range/intersectsNode
 /ja/docs/Web/API/range.setStart	/ja/docs/Web/API/Range/setStart
 /ja/docs/Web/API/tableRow.insertCell	/ja/docs/Web/API/HTMLTableRowElement/insertCell

@@ -1,7 +1,6 @@
 ---
 title: Using the Mozilla JavaScript interface to XSL Transformations
 slug: Web/API/XSLTProcessor
-original_slug: Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations
 ---
 
 이 문서는 Mozilla 1.2의 JavaScript 인터페이스부터 XSLT 처리 엔진(TransforMiiX)까지 설명합니다.

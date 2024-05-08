@@ -79,7 +79,7 @@ console.log(result); // ["(2016)", "(01)", "(02)"]
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{jsxref("String.prototype.split()")}}
 - {{jsxref("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}

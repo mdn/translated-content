@@ -354,7 +354,7 @@ If you're performing screen capture within an `<iframe>`, you can request permis
 <iframe src="https://mycode.example.net/etc" allow="display-capture"> </iframe>
 ```
 
-## See also
+## Смотрите также
 
 - [Screen Capture API](/ru/docs/Web/API/Screen_Capture_API)
 - [Media Capture and Streams API](/ru/docs/Web/API/Media_Streams_API)

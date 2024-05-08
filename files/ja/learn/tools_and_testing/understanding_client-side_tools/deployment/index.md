@@ -2,7 +2,7 @@
 title: アプリのデプロイ
 slug: Learn/Tools_and_testing/Understanding_client-side_tools/Deployment
 l10n:
-  sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
+  sourceCommit: 13c2df5af92c04e57a2e882e92306fcf6949b239
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
@@ -36,7 +36,7 @@ l10n:
 - テストの実行: テストの範囲は、「このコードは適切にフォーマットされていますか?」などです。「これは期待どおりの動作をするか?」ということを確認し、テストが失敗することを確認すると展開が妨げられます。
 - 更新されたコードを実際にライブデプロイした URL: または、最初に確認できるようにステージング URL にデプロイすることもできます。
 
-> **メモ：** キャッシュ無効化は、このモジュールではこれまでに見たことのない新しい用語です。これはブラウザ自体のキャッシュメカニズムを破壊する戦略であり、ブラウザにコードの新しいコピーを強制的にダウンロードさせます。 Parcel (そして実際には他の多くのツール) は、新しいビルドごとに一意のファイル名を生成します。この一意のファイル名はブラウザのキャッシュを「破棄」し、デプロイされたコードが更新されるたびにブラウザが新しいコードをダウンロードするようにします。
+> **メモ：** キャッシュ無効化は、このモジュールではこれまでに見たことのない新しい用語です。これはブラウザー自体のキャッシュメカニズムを破壊する戦略であり、ブラウザーにコードの新しいコピーを強制的にダウンロードさせます。 Parcel (そして実際には他の多くのツール) は、新しいビルドごとに一意のファイル名を生成します。この一意のファイル名はブラウザーのキャッシュを「破棄」し、デプロイされたコードが更新されるたびにブラウザーが新しいコードをダウンロードするようにします。
 
 上記のタスクはさらに別のタスクに分割されます。ほとんどのウェブ開発チームは、開発後のフェーズの少なくとも一部について独自の条件とプロセスを持っていることに注意してください。
 
@@ -177,7 +177,7 @@ git status
 
 GitHub から Netlify へのデプロイは、手順さえわかれば、特にこのプロジェクトのような「静的ウェブサイト」の場合、驚くほど簡単です。
 
-> **メモ:** 開発ワークフローの改善に役立つ [Netlify のガイドとチュートリアル](https://www.netlify.com/blog/tags/tutorial/)も多数あります。
+> **メモ:** 開発ワークフローの改善に役立つ [Netlify のガイドとチュートリアル](https://www.netlify.com/blog/tutorials/)も多数あります。
 
 これをやってみましょう。
 
@@ -221,7 +221,7 @@ Netlify については以上です。 必要に応じて、Netlify プロジェ
 - エンドツーエンドのテスト。訪問者が何かをクリックすると、別のことが起こります。
 - 統合テスト。基本的には、「あるコードブロックが別のブロックに接続されても機能するかどうか」をテストします。
 - ユニットテスト。機能の小さな特定のビットをテストして、期待どおりに動作するかどうかを確認します。
-- [その他にも多くの種類](https://en.wikipedia.org/wiki/Functional_testing)テストがあります。また多数の有用なテスト情報については、[クロスブラウザテストモジュール](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing)を参照してください。
+- [その他にも多くの種類](https://en.wikipedia.org/wiki/Functional_testing)テストがあります。また多数の有用なテスト情報については、[クロスブラウザーテストモジュール](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing)を参照してください。
 
 また、テストは JavaScript に限定されないことにも注意してください。テストはレンダリングされた DOM 、ユーザーインタラクション、 CSS 、さらにはページの外観に対して実行できます。
 
@@ -308,7 +308,7 @@ Netlify については以上です。 必要に応じて、Netlify プロジェ
 
 - ビルドステップ中に[画像を圧縮](https://github.com/ralscha/parcel-plugin-compress)できますか?
 - React を [もっと小さいもの](https://preactjs.com/) に置き換えることはできますか?
-- [パフォーマンス監査](https://web.dev/lighthouse-performance/) など、不正なビルドのデプロイを防ぐためのテストをさらに追加していただけますか?
+- [パフォーマンス監査](https://developer.chrome.com/docs/lighthouse/performance/) など、不正なビルドのデプロイを防ぐためのテストをさらに追加していただけますか?
 - 新しいデプロイが成功したか失敗したかを知らせる通知を設定していただけますか?
 
 {{PreviousMenu("Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain", "Learn/Tools_and_testing/Understanding_client-side_tools")}}

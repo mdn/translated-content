@@ -69,6 +69,6 @@ p {
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{cssxref("font-variant")}}, {{cssxref("font-kerning")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-position")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-synthesis")}}.

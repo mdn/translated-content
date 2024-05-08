@@ -245,7 +245,7 @@ teacher1.farewell();
 
 В следующей статье мы рассмотрим, как работать с JavaScript Object Notation (JSON), общим форматом обмена данными, написанным с использованием объектов JavaScript.
 
-## See also
+## Смотрите также
 
 - [ObjectPlayground.com](http://www.objectplayground.com/) — A really useful interactive learning site for learning about objects.
 - [Secrets of the JavaScript Ninja](https://www.amazon.com/gp/product/193398869X/), Chapter 6 — A good book on advanced JavaScript concepts and techniques, by John Resig and Bear Bibeault. Chapter 6 covers aspects of prototypes and inheritance really well; you can probably track down a print or online copy fairly easily.

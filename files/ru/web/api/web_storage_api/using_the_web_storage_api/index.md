@@ -166,6 +166,6 @@ Web Storage также предоставляет несколько прост�
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [Web Storage API landing page](/ru/docs/Web/API/Web_Storage_API)
