@@ -191,7 +191,7 @@ console.log(ns.a); // undefined
 export DefaultExport from "bar.js"; // 无效
 ```
 
-正确的做法是重新命名导出：
+正确的做法是重新命名这个导出：
 
 ```js
 export { default as DefaultExport } from "bar.js";
