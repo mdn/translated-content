@@ -90,3 +90,12 @@ async function dataUrlToBytes(dataUrl) {
 await bytesToBase64DataUrl(new Uint8Array([0, 1, 2])); // "data:application/octet-stream;base64,AAEC"
 await dataUrlToBytes("data:application/octet-stream;base64,AAEC"); // Uint8Array [0, 1, 2]
 ```
+
+## 参见
+
+- JavaScript API:
+  - [btoa() 全局函数](/zh-CN/docs/Web/API/btoa)
+  - [atob() 全局函数](/zh-CN/docs/Web/API/atob)
+- [Data URL](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)
+- 维基百科上的[Base64](https://zh.wikipedia.org/wiki/Base64)
+- [RFC 4648](https://datatracker.ietf.org/doc/html/rfc4648) 中对 Base64 算法的描述
