@@ -97,7 +97,7 @@ slug: Web/MathML/Element
 - [`<annotation>`](/ru/docs/MathML/Element/semantics) (Data annotations)
 - [`<annotation-xml>`](/ru/docs/MathML/Element/semantics) (XML annotations)
 
-## See also
+## Смотрите также
 
 - [MathML](/ru/docs/Web/MathML)
 - [MathML attribute reference](/ru/docs/Web/MathML/Attribute)

@@ -56,6 +56,6 @@ factorial(7);
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{jsxref("Function")}}

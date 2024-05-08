@@ -57,7 +57,7 @@ nonWellFormedIterable[Symbol.iterator] = () => 1
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [Протоколы перебора](/ru/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Array.@@iterator", "Array.prototype[@@iterator]()")}}

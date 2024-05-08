@@ -230,7 +230,7 @@ var array = [...obj]; // TypeError: obj is not iterable
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [Rest parameters](/ru/docs/Web/JavaScript/Reference/Functions_and_function_scope/rest_parameters) (also '`...`')
 - [fn.apply](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) (also '`...`')

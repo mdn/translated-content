@@ -9,8 +9,6 @@ slug: Glossary/OOP
 
 {{glossary("JavaScript")}} сильно объектно-ориентирован. Он следует модели, базирующейся на прототипах ([в отличии от модели, базирующейся на классах](/ru/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#Class-based_vs._prototype-based_languages)).
 
-## Смотреть также
-
-### Общие знания
+## Смотрите также
 
 - [Введение в объектно-ориентированный JavaScript](/ru/docs/Learn/JavaScript/Objects)

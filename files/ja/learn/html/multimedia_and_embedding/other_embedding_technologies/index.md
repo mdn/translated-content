@@ -2,7 +2,7 @@
 title: object から iframe まで — その他の埋め込み技術
 slug: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 l10n:
-  sourceCommit: 0b2ed45bea188abc27cdd92c3faffcb7483d3314
+  sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
@@ -14,7 +14,6 @@ l10n:
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        基本的なコンピューターリテラシー、
         <a
           href="/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
           >インストール済みの基本的なソフトウェア</a
@@ -229,7 +228,7 @@ textarea.onkeyup = function () {
 
 ブラウザーでコンソールを見ると、次のようなエラーメッセージが表示されているはずです。
 
-```
+```plain
 Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X-Frame-Options' to 'deny'.
 ```
 
@@ -272,12 +271,13 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 
 {{Glossary("HTTPS")}} は {{Glossary("HTTP")}} の暗号化されたバージョンです。可能であれば、HTTPS を使用してウェブサイトを提供する必要があります。
 
-1. HTTPS を使用すると、転送中にリモートコンテンツが改ざんされる可能性が減り、
+1. HTTPS を使用すると、転送中にリモートコンテンツが改ざんされる可能性が減ります。
 2. HTTPS は、埋め込みコンテンツが親文書内のコンテンツにアクセスすることを防止し、逆も同様です。
 
 サイトで HTTPS を有効にするには、特別なセキュリティ証明書をインストールする必要があります。多くのホスティングプロバイダーは、自分自身で資格情報を所有するための設定をすることなく、 HTTPS 対応のホスティングを提供しています。しかし、自分自身でサイトの HTTPS 対応を設定する必要がある場合、 [Let's Encrypt](https://letsencrypt.org/) は、必要な証明書を自動的に作成してインストールするためのツールや手順を、Apache web server、Nginx など、最も広く使用されているウェブサーバーの組み込み対応で使用する方法を提供しています。 Let's Encrypt のツールは、可能な限りプロセスを簡単にするように設計されているので、サイトを HTTPS 化するために、このツールまたは他に使用できる手段を避ける理由は、実に何もないのです。
 
-> **メモ:** [GitHub ページ](/ja/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages)では、既定で HTTPS 経由でコンテンツを提供できるため、コンテンツのホスティングに便利です。異なるホスティングを使用していて、わからない場合は、ホスティングプロバイダーに問い合わせてください。
+> **メモ:** [GitHub ページ](/ja/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages)では、既定で HTTPS 経由でコンテンツを提供できます。
+> 別のホスティングプロバイダーを使用している場合は、 HTTPS でコンテンツを提供するためにどのような対応をしているかを調べる必要があります。
 
 #### 常に `sandbox` 属性を使用する
 

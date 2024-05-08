@@ -53,7 +53,7 @@ gl.canvas; // OffscreenCanvas
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref("CanvasRenderingContext2D.canvas")}}
 - {{domxref("OffscreenCanvas")}}

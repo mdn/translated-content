@@ -2,7 +2,7 @@
 title: 動画と音声のコンテンツ
 slug: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 l10n:
-  sourceCommit: af0e71822122feda89495ab9215c131bbe34d65c
+  sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}
@@ -14,7 +14,6 @@ l10n:
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        基本的なコンピューターリテラシー、
         <a
           href="/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
           >インストール済みの基本的なソフトウェア</a
@@ -111,7 +110,7 @@ l10n:
 
 前節で説明したコーデックは、映像と音声を管理可能なファイルに圧縮するために存在します。生の映像と音声は非常に大きいからです。各ブラウザーには一連の **{{Glossary("Codec","コーデック")}}**、例えば Vorbis や H.264 などが含まれており、圧縮された音声や映像のデータをバイナリーデータに戻すために使用されます。各コーデックには利点と欠点があり、また各コンテナーにも長所と欠点があるため、どのコンテナーを使用するかの判断に影響を与えることがあります。
 
-ブラウザーの対応するコンテナーファイル形式がそれぞれ異なるだけでなく、コーデックの選択もそれぞれ異なるため、事態は少し複雑になります。ウェブサイトや アプリがユーザーのブラウザで動作する可能性を最大限に高めるには、使用する それぞれのメディアファイルを複数の形式で提供する必要があるかもしれません。自分のサイトとユーザーのブラウザーで共通の形式がない場合、メディアは再生されません。
+ブラウザーの対応するコンテナーファイル形式がそれぞれ異なるだけでなく、コーデックの選択もそれぞれ異なるため、事態は少し複雑になります。ウェブサイトや アプリがユーザーのブラウザーで動作する可能性を最大限に高めるには、使用する それぞれのメディアファイルを複数の形式で提供する必要があるかもしれません。自分のサイトとユーザーのブラウザーで共通の形式がない場合、メディアは再生されません。
 
 アプリのメディアを、リーチしたいブラウザー、プラットフォーム、機器のあらゆる組み合わせで表示できるようにすることは複雑なため、コーデックとコンテナーの最適な組み合わせを選ぶことは、複雑な作業になる可能性があります。ニーズに合ったコンテナーファイル形式の選択については、[正しいコンテナーの選択](/ja/docs/Web/Media/Formats/Containers#正しいコンテナーの選択)を参照してください。同様に、コンテンツや対象となる視聴者に合わせて最初に使用するメディアコーデックの選択については、[映像コーデックの選択](/ja/docs/Web/Media/Formats/Video_codecs#choosing_a_video_codec)や[音声コーデックの選択](/ja/docs/Web/Media/Formats/Audio_codecs#choosing_an_audio_codec)が参考になります。
 
@@ -276,7 +275,7 @@ WEBVTT
 
 ![再生、停止、音量、キャプションのオン/オフなどのスタンドコントロールを備えたビデオプレーヤー。 動画の再生には、槍のような武器を持つ男のシーンが表示され、キャプションには "Esta hoja tiene pasado oscuro." と表示されます。](video-player-with-captions.png)
 
-詳しくは、[HTML 動画にキャプションと字幕を追加する](/ja/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)をご覧ください。Github には Ian Devlin によって書かれた[この記事の例](http://iandevlin.github.io/mdn/video-player-with-captions/)があります ([ソースコード](https://github.com/iandevlin/iandevlin.github.io/tree/main/mdn/video-player-with-captions)も参照してください)。この例では、JavaScript を使用してさまざまな字幕を選択できるようにしています。字幕をオンにするには、\[CC] ボタンを押して、英語、ドイツ語、スペイン語のオプションを選択する必要があります。
+詳しくは、[HTML 動画にキャプションと字幕を追加する](/ja/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)をご覧ください。Github には Ian Devlin によって書かれた[この記事の例](http://iandevlin.github.io/mdn/video-player-with-captions/)があります ([ソースコード](https://github.com/iandevlin/iandevlin.github.io/tree/main/mdn/video-player-with-captions)も参照してください)。この例では、JavaScript を使用してさまざまな字幕を選択できるようにしています。字幕をオンにするには、\[CC] ボタンを押して、英語、ドイツ語、スペイン語のオプションを選択する必要があります。
 
 > **メモ:** テキストトラックは検索エンジンが特にテキスト上で成功するため、 {{glossary("SEO")}} にも役立ちます。テキストトラックを使用すると、検索エンジンは動画の途中地点に直接リンクすることもできます。
 
@@ -307,9 +306,9 @@ WEBVTT
 ## 関連情報
 
 - HTML メディア要素: {{htmlelement("audio")}}, {{htmlelement("video")}}, {{htmlelement("source")}}, {{htmlelement("track")}}
-- [HTML5 の動画へのキャプションと字幕の追加](/ja/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
-- [音声と動画の配信](/ja/docs/Web/Guide/Audio_and_video_delivery): HTML と JavaScript を使用して音声と動画を Web ページに配置することに関する詳細。
-- [音声と動画の加工](/ja/docs/Web/Guide/Audio_and_video_manipulation): JavaScript を使用して音声や動画を操作する方法について詳しく説明します（たとえばフィルターを追加するなど）。
+- [HTML5 の動画へのキャプションと字幕の追加](/ja/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
+- [音声と動画の配信](/ja/docs/Web/Media/Audio_and_video_delivery): HTML と JavaScript を使用して音声と動画をウェブページに配置することに関する詳細。
+- [音声と動画の加工](/ja/docs/Web/Media/Audio_and_video_manipulation): JavaScript を使用して音声や動画を操作する方法について詳しく説明します（たとえばフィルターを追加するなど）。
 - [ウェブメディア技術](/ja/docs/Web/Media)
 - [ウェブ上のメディア種別とファイル形式のガイド](/ja/docs/Web/Media/Formats)
 - [イベントリファレンス > メディア](/ja/docs/Web/Events#メディア)

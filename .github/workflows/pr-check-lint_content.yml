@@ -73,7 +73,9 @@ jobs:
         with:
           node-version-file: ".nvmrc"
           cache: yarn
-          cache-dependency-path: "**/yarn.lock"
+          cache-dependency-path: |
+            mdn/content/yarn.lock
+            yarn.lock
 
       - name: Install all yarn packages for mdn/translated-content
         if: ${{ env.DIFF_DOCUMENTS }}

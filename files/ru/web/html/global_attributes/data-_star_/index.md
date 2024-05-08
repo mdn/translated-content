@@ -40,7 +40,7 @@ The **data-\*** Глобальные атрибуты образуют клас�
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - All [global attributes](/ru/docs/Web/HTML/Global_attributes).
 - The {{domxref("HTMLElement.dataset")}} property that allows to access and modify these values.

@@ -86,7 +86,7 @@ body {
 
 {{Compat}}
 
-## Смотреть также
+## Смотрите также
 
 - CSS: {{Cssxref('white-space')}}, {{Cssxref('word-break')}}
 - Связанный элемент: {{HTMLElement("code")}}

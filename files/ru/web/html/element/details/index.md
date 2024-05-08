@@ -96,6 +96,6 @@ details[open] > summary::before {
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{HTMLElement("summary")}}

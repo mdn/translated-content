@@ -377,6 +377,6 @@ The example looks like this; have a play:
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [Using files from web applications](/ru/docs/Web/API/File_API/Using_files_from_web_applications) — contains a number of other useful examples related to `<input type="file">` and the [File API](/ru/docs/Web/API/File).

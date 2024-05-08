@@ -72,7 +72,7 @@ This guide covers flow layout and is therefore not referring to other possible f
 
 In this guide, we have looked in more detail at the block and Inline formatting contexts and the important subject of creating a block formatting context (BFC). In the next guide, we will find out [how normal flow interacts with different writing modes](/ru/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes).
 
-## See also
+## Смотрите также
 
 - [Block formatting context](/ru/docs/Web/Guide/CSS/Block_formatting_context)
 - [Visual Formatting Model](/ru/docs/Web/CSS/Visual_formatting_model)
