@@ -144,7 +144,7 @@ console.log(instance.b); // undefined
 
 > **备注：** 这对[私有字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)更为重要，因为访问未初始化的私有字段会抛出 {{jsxref("TypeError")}}，即使该私有字段已在下面声明。（如果未声明私有字段，则会提前抛出 {{jsxref("SyntaxError")}}。）
 
-由于类字段是使用 [`[[DefineOwnProperty]]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty) 语义（本质上是 {{jsxref("Object.defineProperty()")}}）添加的，因此派生类中的字段声明不会调用基类中的设置器。这种行为不同于在构造函数中使用 `this.field = ...`。
+由于类字段是使用 [`[[DefineOwnProperty]]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty) 语义（本质上是 {{jsxref("Object.defineProperty()")}}）添加的，因此派生类中的字段声明不会调用基类中的 setter。这种行为不同于在构造函数中使用 `this.field = …`。
 
 ```js
 class Base {
