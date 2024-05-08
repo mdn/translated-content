@@ -52,9 +52,9 @@ export { default as name1 } from "module-name";
 
 ## 描述
 
-有两种不同的导出方式，命名导出和默认导出。你能够在每一个模块中定义多个命名导出，但是只允许有一个默认导出。每种方式对应于上述的一种语法：
+有两种不同的导出方式，具名导出和默认导出。你能够在每一个模块中定义多个具名导出，但是只允许有一个默认导出。每种方式对应于上述的一种语法：
 
-命名导出：
+具名导出：
 
 ```js
 // 导出其它地方声明的特征
@@ -217,13 +217,13 @@ function cube(x) {
 
 const foo = Math.PI + Math.SQRT2;
 
-var graph = {
+const graph = {
   options: {
     color: "white",
     thickness: "2px",
   },
-  draw: function () {
-    console.log("From graph draw function");
+  draw() {
+    console.log("来自graph draw function");
   },
 };
 
@@ -240,7 +240,7 @@ graph.options = {
   thickness: "3px",
 };
 
-graph.draw();
+graph.draw(); // 日志："来自graph draw function"
 console.log(cube(3)); // 27
 console.log(foo); // 4.555806215962888
 ```
@@ -282,15 +282,22 @@ console.log(cube(3)); // 27
 
 ```js
 // childModule1.js 中
-let myFunction = ...; // assign something useful to myFunction
-let myVariable = ...; // assign something useful to myVariable
-export {myFunction, myVariable};
+function myFunction() {
+  console.log("Hello!");
+}
+const myVariable = 1;
+export { myFunction, myVariable };
 ```
 
 ```js
 // childModule2.js 中
-let myClass = ...; // assign something useful to myClass
-export myClass;
+class MyClass {
+  constructor(x) {
+    this.x = x;
+  }
+}
+
+export { MyClass };
 ```
 
 ```js
@@ -298,7 +305,7 @@ export myClass;
 // 仅仅聚合 childModule1 和 childModule2 中的导出
 // 以重新导出他们
 export { myFunction, myVariable } from "childModule1.js";
-export { myClass } from "childModule2.js";
+export { MyClass } from "childModule2.js";
 ```
 
 ```js
