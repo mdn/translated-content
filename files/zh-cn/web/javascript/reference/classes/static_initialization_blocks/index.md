@@ -103,7 +103,7 @@ class A {
     console.log(this.field);
   }
 }
-// 'static field'
+// '静态字段'
 ```
 
 [`super.property`](/zh-CN/docs/Web/JavaScript/Reference/Operators/super) 语法可在 `static` 代码块中使用，以引用超类的静态属性。
