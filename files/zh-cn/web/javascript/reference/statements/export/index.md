@@ -183,7 +183,7 @@ import * as ns from "./barrel.js";
 console.log(ns.a); // undefined
 ```
 
-如果试图直接导入重复的名称，则会出错。
+如果试图直接导入重复的名称，则会抛出错。
 
 下面的语法无效，尽管其导入等效：
 
