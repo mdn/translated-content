@@ -1,5 +1,5 @@
 ---
-title: 静态初始块
+title: 静态初始化块
 slug: Web/JavaScript/Reference/Classes/Static_initialization_blocks
 l10n:
   sourceCommit: 41cddfdaeed4a73fb8234c332150df8e54df31e9
