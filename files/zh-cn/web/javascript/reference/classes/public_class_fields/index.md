@@ -175,7 +175,7 @@ const instance2 = new DerivedWithConstructor(); // 打印 1
 
 ### 使用类字段
 
-类字段不能依赖于构造函数的参数，因此字段初始化器通常会对每个实例评估相同的值（除非同一表达式每次评估的值都不同，例如 {{jsxref("Date.now()")}} 或对象初始化器）。
+类字段不能依赖于构造函数的参数，因此字段初始化器通常会在每个实例中都求出相同的值（除非同一表达式每次求出的值都不同，例如 {{jsxref("Date.now()")}} 或对象初始化器）。
 
 ```js example-bad
 class Person {
