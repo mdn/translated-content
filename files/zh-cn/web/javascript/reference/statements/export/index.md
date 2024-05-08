@@ -205,7 +205,7 @@ export { default, function2 } from "bar.js";
 
 ## 示例
 
-### 使用命名导出
+### 使用具名导出
 
 在模块 `my-module.js` 中，可能包含以下代码：
 
