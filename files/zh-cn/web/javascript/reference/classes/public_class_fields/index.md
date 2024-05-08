@@ -14,7 +14,7 @@ l10n:
 ```js-nolint
 class ClassWithField {
   instanceField;
-  instanceFieldWithInitializer = "instance field";
+  instanceFieldWithInitializer = "实例字段";
   static staticField;
   static staticFieldWithInitializer = "静态字段";
 }
