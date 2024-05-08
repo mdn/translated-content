@@ -31,7 +31,7 @@ Access-Control-Request-Headers: <header-name>,<header-name>,…
 ## 指令
 
 - \<header-name>
-  - : 以逗号分隔包含了实际请求中一系列的 [HTTP 标头](/zh-CN/docs/Web/HTTP/Headers)。
+  - : 以逗号分隔、小写、排序、唯一 [HTTP 标头](/zh-CN/docs/Web/HTTP/Headers)列表包含在请求中。
 
 ## 示例
 
