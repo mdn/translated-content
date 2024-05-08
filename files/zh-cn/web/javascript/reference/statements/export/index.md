@@ -69,7 +69,7 @@ export function myFunction() {
 
 在 `export` 关键字之后，你可以使用 `let`、`const` 和 `var` 声明，以及函数或类声明。你还可以使用 `export { name1, name2 }` 语法导出在其他地方声明的名称列表。请注意，`export {}` 不会导出一个空对象——它是一个不导出任何东西（一个空的名称列表）的无操作声明。
 
-导出声明不受[临时死区](/zh-CN/docs/Web/JavaScript/Reference/Statements/let#暂时性死区)规则的限制。你可以在声明名称 `X` 之前声明模块导出 `X`。
+导出声明不受[暂时性死区](/zh-CN/docs/Web/JavaScript/Reference/Statements/let#暂时性死区)规则的限制。你可以在声明名称 `X` 之前声明当前模块导出 `X`。
 
 ```js
 export { x };
