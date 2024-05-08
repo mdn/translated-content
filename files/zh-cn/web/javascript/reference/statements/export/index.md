@@ -124,7 +124,7 @@ export default k;
 
 ```js
 // 其他文件
-import m from "./test"; // 请注意，我们可以自由地使用导入 m 而不是导入 k，因为 k 是默认导出值
+import m from "./test"; // 请注意，我们可以自由地使用 import m 而不是 import k，因为 k 是默认导出
 console.log(m); // 12
 ```
 
