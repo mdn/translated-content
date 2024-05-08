@@ -98,7 +98,7 @@ class MyClass {
 
 ```js
 class A {
-  static field = "static field";
+  static field = "静态字段";
   static {
     console.log(this.field);
   }
