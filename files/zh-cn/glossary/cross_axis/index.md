@@ -43,7 +43,7 @@ l10n:
 
 - [术语](/zh-CN/docs/Glossary)
 
-  - {{Glossary("Flex")}}
-  - {{Glossary("Flex Container")}}
-  - {{Glossary("Flex Item")}}
-  - {{Glossary("Grid")}}
+  - {{Glossary("Flex", "弹性布局")}}
+  - {{Glossary("Flex Container", "弹性容器")}}
+  - {{Glossary("Flex Item", "弹性项目")}}
+  - {{Glossary("Grid", "网格")}}
