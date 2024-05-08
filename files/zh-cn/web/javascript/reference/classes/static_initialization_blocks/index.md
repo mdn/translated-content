@@ -59,7 +59,7 @@ console.log(y); // '外部的 y'
 
 这些语句是同步执行的。在这些代码块中不能使用 {{jsxref("Operators/await", "await")}} 或 {{jsxref("Operators/yield", "yield")}}。（将初始化语句视为隐式封装在函数中。）
 
-静态代码块的作用域嵌套在类主体的词法作用域内，可以访问类内声明的 [私有名称](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)，而不会导致语法错误。
+静态代码块的作用域嵌套在类主体的词法作用域*内*，并且可以访问类内声明的[私有名称](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)，而不会导致语法错误。
 
 [静态字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/static) 初始化器和静态初始化块是逐个评估的。初始化块可以引用其上方的字段值，但不能引用其下方的字段值。所有静态方法都会事先添加并可以访问，但如果这些方法引用的字段位于当前块的下方，则调用这些方法时可能会出现与预期不符的情况。
 
