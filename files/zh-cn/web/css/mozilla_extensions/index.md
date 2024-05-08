@@ -316,13 +316,13 @@ Firefox 支持一些 _[CSS](/zh-CN/docs/Web/CSS) 的 Mozilla 扩展_，包括属
 - `-moz-button`
 - `-moz-info`
 - `-moz-desktop`
-- `-moz-dialog` (also a color)
+- `-moz-dialog`（也为一种颜色）
 - `-moz-document`
 - `-moz-workspace`
 - `-moz-window`
 - `-moz-list`
 - `-moz-pull-down-menu`
-- `-moz-field` (also a color)
+- `-moz-field`（也为一种颜色）
 
 ### font-family
 
