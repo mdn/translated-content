@@ -34,18 +34,18 @@ class ClassWithStatic {
 
 ## 描述
 
-本页介绍类的公共静态属性，包括静态方法、静态访问器和静态字段。
+本页介绍类的公有静态属性，包括静态方法、静态访问器和静态字段。
 
 - 关于私有静态特性，请参阅[私有属性](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)。
 - 关于实例特性，请参阅[方法定义](/zh-CN/docs/Web/JavaScript/Reference/Functions/Method_definitions)、[getter](/zh-CN/docs/Web/JavaScript/Reference/Functions/get)、[setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set) 和[公开类字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)。
 
-公共静态特性是使用 `static` 关键字声明的。在[类求值](/zh-CN/docs/Web/JavaScript/Reference/Classes#求值顺序)时，使用 [`[[DefineOwnProperty]]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty) 语义（本质上是 {{jsxref("Object.defineProperty()")}}）将它们添加到类构造函数中。类构造函数会再次访问它们。
+公有静态特性是使用 `static` 关键字声明的。在[类求值](/zh-CN/docs/Web/JavaScript/Reference/Classes#求值顺序)时，使用 [`[[DefineOwnProperty]]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty) 语义（本质上是 {{jsxref("Object.defineProperty()")}}）将它们添加到类构造函数中。类构造函数会再次访问它们。
 
-静态方法通常是实用函数，例如创建或克隆实例的函数。当你希望一个字段在每个类中只存在一次，而不是在你创建的每个类实例中都存在时，公共静态字段就很有用。这对缓存、固定配置或其他不需要在实例间复制的数据非常有用。
+静态方法通常是实用函数，例如创建或克隆实例的函数。当你希望一个字段在每个类中只存在一次，而不是在你创建的每个类实例中都存在时，公有静态字段就很有用。这对缓存、固定配置或其他不需要在实例间复制的数据非常有用。
 
 静态字段名称可以[计算](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer#计算属性名)。计算表达式中的 `this` 值是类定义周围的 `this`，而引用类的名称则会导致{{jsxref("ReferenceError")}}，因为类尚未初始化。在此表达式中，{{jsxref("Operators/await", "await")}} 和 {{jsxref("Operators/yield", "yield")}} 按预期工作。
 
-静态字段可以有初始化器。没有初始化器的静态字段将被初始化为 `undefined`。公共静态字段不会在子类中重新初始化，但可以通过原型链访问。
+静态字段可以有初始化器。没有初始化器的静态字段将被初始化为 `undefined`。公有静态字段不会在子类中重新初始化，但可以通过原型链访问。
 
 ```js
 class ClassWithStaticField {
