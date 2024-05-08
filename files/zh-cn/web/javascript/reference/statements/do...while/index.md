@@ -7,7 +7,7 @@ l10n:
 
 {{jsSidebar("Statements")}}
 
-**`do...while` 语句**创建一个执行指定语句的循环，直到 `condition` 值为 false。在执行 `statement` 后检测 `condition`，所以指定的 `statement` 至少执行一次。
+**`do...while`** 语句创建了一个循环，只要测试条件为 true，该循环就会执行指定语句。执行语句后会对条件进行评估，从而使指定语句至少执行一次。
 
 {{EmbedInteractiveExample("pages/js/statement-dowhile.html")}}
 
