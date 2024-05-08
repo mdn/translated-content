@@ -34,7 +34,7 @@ l10n:
         {{Glossary("CORS-safelisted request header", "列入 CORS 白名单的请求标头")}}
       </th>
       <td>
-        是的，但额外限制了值不能包含 <em>CORS-不安全的请求标头字节</em>：0x00-0x1F（除了 0x09（HT）），<code>"():&#x3C;>?@[\]{}</code> 和 0x7F（DEL）。
+        是，但额外限制了值不能包含 <em>CORS 不安全的请求标头字节</em>：0x00-0x1F（除了 0x09（HT））、<code>"():&#x3C;>?@[\]{}</code> 和 0x7F（DEL）。
         <br />解析值（忽略参数）的 MIME 类型也必须是 <code>application/x-www-form-urlencoded</code>、<code>multipart/form-data</code> 或 <code>text/plain</code>。
       </td>
     </tr>
@@ -55,7 +55,7 @@ Content-Type: multipart/form-data; boundary=something
 - charset
   - : 字符编码标准。不区分大小写，推荐使用小写。
 - boundary
-  - : 对于多部分实体，必须使用 `boundary` 指令。该指令由 1 至 70 个字符组成，这些字符选自一套已知能通过电子邮件网关的、非常健壮的字符集（并且不以空白字符结束）。它用于封装信息多个部分的边界。通常情况下，标头边界前会加上两个破折号，而最终边界的末尾也会加上两个破折号。
+  - : 对于多部分实体，必须使用 `boundary` 指令。该指令由 1 至 70 个字符组成，这些字符选自一套已知能通过电子邮件网关的、非常健壮的字符集（并且不以空白字符结束）。它用于封装信息多个部分的边界。通常情况下，开头的边界前会加上两个破折号，而末尾边界的后面也会加上两个破折号。
 
 ## 示例
 
@@ -86,7 +86,7 @@ Content-Disposition: form-data; name="description"
 Content-Disposition: form-data; name="myFile"; filename="foo.txt"
 Content-Type: text/plain
 
-(上传文件 foo.txt 的内容）
+（上传文件 foo.txt 的内容）
 -----------------------------974767299852498929531610575--
 ```
 
@@ -102,5 +102,5 @@ Content-Type: text/plain
 
 - {{HTTPHeader("Accept")}}
 - {{HTTPHeader("Content-Disposition")}}
-- {{HTTPStatus("206")}} 部分内容
+- {{HTTPStatus("206")}} Partial Content
 - {{HTTPHeader("X-Content-Type-Options")}}
