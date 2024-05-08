@@ -223,7 +223,7 @@ const graph = {
     thickness: "2px",
   },
   draw() {
-    console.log("来自graph draw function");
+    console.log("来自 graph draw function");
   },
 };
 
