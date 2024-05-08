@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`mask-border-slice`** [CSS](/zh-CN/docs/Web/CSS) 属性将 {{cssxref("mask-border-source")}} 设置的图像划分为多个区域。这些区域用于构成元素的[遮罩边框](/zh-CN/docs/Web/CSS/mask-border)部件。
+**`mask-border-slice`** [CSS](/zh-CN/docs/Web/CSS) 属性将 {{cssxref("mask-border-source")}} 设置的图像划分为多个区域。这些区域用于构成元素的[遮罩边框](/zh-CN/docs/Web/CSS/mask-border)部分。
 
 ## 语法
 
