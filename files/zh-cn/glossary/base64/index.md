@@ -42,7 +42,7 @@ Base64 编码方案通常用于对二进制数据进行编码，以便在只能�
 
 ## Unicode 问题
 
-由于 `btoa` 将其输入字符串的码位解释为字节值，因此如果字符的码位超过 `0xff`，调用 `btoa` 将导致“Character Out Of Range”异常。对于需要编码任意 Unicode 文本的用例，需要首先将字符串转换为其 UTF-8 的组成字节，然后对这些字节进行编码。
+由于 `btoa` 将其输入字符串的码位解释为字节值，因此如果字符的码位超过 `0xff`，调用 `btoa` 将导致“Character Out Of Range”异常。对于需要编码任意 Unicode 文本的用例，需要首先将字符串转换为其 {{glossary("UTF-8")}} 的组成字节，然后对这些字节进行编码。
 
 最简单的解决方案是使用 `TextEncoder` 和 `TextDecoder` 在 UTF-8 和字符串的单字节表示之间进行转换：
 
