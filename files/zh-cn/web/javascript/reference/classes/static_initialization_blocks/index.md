@@ -118,7 +118,7 @@ class B extends A {
     console.log(super.field);
   }
 }
-// 'static field'
+// '静态字段'
 ```
 
 ### 访问私有属性
