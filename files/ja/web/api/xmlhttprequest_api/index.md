@@ -11,7 +11,7 @@ l10n:
 
 **XMLHttpRequest API** を使用すことで、ウェブアプリケーションがウェブサーバーに HTTP リクエストを行い、JavaScript を使用してプログラムでレスポンスを受け取ることができます。これによりウェブサイトは、新しいページに移動することなく、サーバーからのデータでページの一部だけを更新することができます。この方法は、 {{glossary("Ajax")}} としても知られています。
 
-[フェッチ API](/ja/docs/Web/API/Fetch_API) は XMLHttpRequest API をより柔軟で強力に置き換えたものです。フェッチ API は、非同期レスポンスを処理するためにイベントの代わりに{{jsxref("Promise", "プロミス", "", "nocode")}}を使用し、[サービスワーカー](/ja/docs/Web/API/Service_Worker_API)とうまく統合し、 [CORS](/ja/docs/Web/HTTP/CORS) のような HTTP の高度な側面に対応しています。これらの理由から、現代のウェブアプリケーションでは、{{domxref("XMLHttpRequest")}} の代わりにフェッチ API を使用するのが一般的です。
+[フェッチ API](/ja/docs/Web/API/Fetch_API) は XMLHttpRequest API をより柔軟で強力に置き換えたものです。フェッチ API は、非同期レスポンスを処理するためにイベントの代わりに{{jsxref("Promise", "プロミス", "", 1)}}を使用し、[サービスワーカー](/ja/docs/Web/API/Service_Worker_API)とうまく統合し、 [CORS](/ja/docs/Web/HTTP/CORS) のような HTTP の高度な側面に対応しています。これらの理由から、現代のウェブアプリケーションでは、{{domxref("XMLHttpRequest")}} の代わりにフェッチ API を使用するのが一般的です。
 
 ## 概念と使用方法
 

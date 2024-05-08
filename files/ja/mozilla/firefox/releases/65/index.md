@@ -79,7 +79,7 @@ _変更なし。_
 ### JavaScript
 
 - {{jsxref("RelativeTimeFormat", "Intl.RelativeTimeFormat")}} をサポートしました ([Firefox バグ 1504334](https://bugzil.la/1504334))。
-- 文字列の {{jsxref("String/length","length","","1")}} の最大値を `2**28 - 1` (\~256MB) から `2**30 - 2` (\~1GB) に変更しました ([Firefox バグ 1509542](https://bugzil.la/1509542))。
+- 文字列の {{jsxref("String/length","length","",1)}} の最大値を `2**28 - 1` (\~256MB) から `2**30 - 2` (\~1GB) に変更しました ([Firefox バグ 1509542](https://bugzil.la/1509542))。
 - 常にトップレベルのグローバルオブジェクトを参照する {{jsxref("globalThis")}} プロパティを実装しました ([Firefox バグ 1317422](https://bugzil.la/1317422))。
 
 ### API
