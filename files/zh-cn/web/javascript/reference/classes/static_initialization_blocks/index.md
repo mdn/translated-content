@@ -45,7 +45,7 @@ MyClass.init();
 var y = "外部的 y";
 
 class A {
-  static field = "Inner y";
+  static field = "内部的 y";
   static {
     var y = this.field;
   }
