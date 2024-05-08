@@ -128,7 +128,7 @@ import m from "./test"; // 请注意，我们可以自由地使用导入 m 而�
 console.log(m); // 12
 ```
 
-你还可以重命名已命名的导出，以避免命名冲突：
+你还可以对具名导出进行重命名，以避免命名冲突：
 
 ```js
 export { myFunction as function1, myVariable as variable };
