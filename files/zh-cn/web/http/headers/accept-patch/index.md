@@ -2,7 +2,7 @@
 title: Accept-Patch
 slug: Web/HTTP/Headers/Accept-Patch
 l10n:
-  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+  sourceCommit: 48d9e84c6473101112582296ee4c6e3d960a2f79
 ---
 
 {{HTTPSidebar}}
@@ -15,8 +15,7 @@ l10n:
 
 > **备注：**
 >
-> - IANA 维护了[一个完整的官方支持的编码方式列表](https://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1)。
-> - 另外两种内容编码 `bzip` 和 `bzip2` 有时也会被使用。尽管它们并非标准。它们实现了这两个 UNIX 程序所使用的算法。请注意，由于专利许可问题，第一个已被弃用。
+> - IANA 维护了[媒体类型列表](https://www.iana.org/assignments/media-types/media-types.xhtml)。
 
 <table class="properties">
   <tbody>
