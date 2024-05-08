@@ -509,5 +509,5 @@ Firefox 支持一些 _[CSS](/zh-CN/docs/Web/CSS) 的 Mozilla 扩展_，包括属
 
 ## 参见
 
-- [厂商前缀](/zh-CN/docs/Glossary/Vendor_Prefix) 术语条目
+- [厂商前缀](/zh-CN/docs/Glossary/Vendor_Prefix)术语表条目
 - [具有 WebKit 厂商前缀的 CSS 扩展](/zh-CN/docs/Web/CSS/WebKit_Extensions)
