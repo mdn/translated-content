@@ -14,7 +14,7 @@ l10n:
 ```js
 const argument1 = "Web";
 const argument2 = "开发";
-example(argument1, argument2); // 传递两个参数
+example(argument1, argument2); // 传递两个实际参数
 
 // 该函数接受两个值
 function example(parameter1, parameter2) {
