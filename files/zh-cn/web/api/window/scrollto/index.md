@@ -31,9 +31,9 @@ scrollTo(options)
       - : 指定沿 X 轴滚动窗口或元素的像素数量。
     - `behavior`
       - : 确定滚动是即时完成还是以平滑动画进行。该选项是一个字符串，必须取以下值之一：
-        - `smooth`: 滚动应该平滑地进行动画展示
-        - `instant`: 滚动应在一次跳转中即时完成
-        - `auto`: 滚动行为由 {{cssxref("scroll-behavior")}} 的计算值来决定
+        - `smooth`：滚动应该平滑地进行动画展示
+        - `instant`：滚动应在一次跳转中即时完成
+        - `auto`：滚动行为由 {{cssxref("scroll-behavior")}} 的计算值来决定
 
 ### 返回值
 
@@ -55,7 +55,7 @@ window.scrollTo({
 });
 ```
 
-## 说明
+## 备注
 
 {{domxref("Window.scroll()")}} 实际上与此方法相同。有关相对滚动，请参阅 {{domxref("Window.scrollBy()")}}、{{domxref("Window.scrollByLines()")}} 和 {{domxref("Window.scrollByPages()")}}。
 
