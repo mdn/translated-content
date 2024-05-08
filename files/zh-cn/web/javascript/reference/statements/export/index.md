@@ -92,7 +92,7 @@ export default class { /* … */ }
 
 > **备注：** 导出声明的名称必须相互独立。导出名称重复或使用多个 `default` 导出将导致 {{jsxref("SyntaxError")}} 并阻止模块被执行。
 
-` export default` 语法允许任何表达式。
+`export default` 语法允许任何表达式。
 
 ```js
 export default 1 + 1;
@@ -184,6 +184,11 @@ console.log(ns.a); // undefined
 ```
 
 如果试图直接导入重复的名称，则会抛出错。
+
+```js
+import { a } from "./barrel.js";
+// SyntaxError: The requested module './barrel.js' contains conflicting star exports for name 'a'
+```
 
 下面的语法无效，尽管其导入等效：
 
