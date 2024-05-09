@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSSOM")}}
 
-**CSS 数字工厂函数**（例如 `CSS.em()` 和 `CSS.turn()`）是返回 [CSSUnitValues](/zh-CN/docs/Web/API/CSSUnitValue) 方法，其中值为实际参数，单位是所使用的方法名称。这些函数创建新的数值比使用 {{domxref("CSSUnitValue.CSSUnitValue", "CSSUnitValue()")}} 构造函数更加简洁。
+**CSS 数字工厂函数**（例如 `CSS.em()` 和 `CSS.turn()`）是返回 [CSSUnitValue](/zh-CN/docs/Web/API/CSSUnitValue) 的方法，其中值为实际参数，单位是所使用的方法名称。这些函数创建新的数值比使用 {{domxref("CSSUnitValue.CSSUnitValue", "CSSUnitValue()")}} 构造函数更加简洁。
 
 ## 语法
 
