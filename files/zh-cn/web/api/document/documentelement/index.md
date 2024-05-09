@@ -18,7 +18,7 @@ l10n:
 ```js
 const rootElement = document.documentElement;
 const firstTier = rootElement.childNodes;
-// firstTier 是一个包含根元素直接子元素的 NodeList
+// firstTier 是包含根元素直接子元素的 NodeList
 // 例如 <head> 和 <body>
 
 for (const child of firstTier) {
