@@ -49,6 +49,10 @@ l10n:
 
 不属于任何规范。
 
+## 浏览器兼容性
+
+{{Compat}}
+
 ## 参见
 
 - {{HTMLElement("progress")}}
