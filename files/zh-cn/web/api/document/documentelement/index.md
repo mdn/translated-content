@@ -28,7 +28,7 @@ for (const child of firstTier) {
 
 ## 备注
 
-对于任何非空 HTML 文档，`documentElement` 将始终是 {{HTMLElement("html")}} 元素。对于任何非空 XML 文档，`documentElement` 将始终是文档根元素的任何元素。
+对于任何非空 HTML 文档，`documentElement` 将始终是 {{HTMLElement("html")}} 元素。对于任何非空 XML 文档，`documentElement` 将始终是文档的根元素。
 
 ## 规范
 
