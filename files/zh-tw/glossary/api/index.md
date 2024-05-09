@@ -7,9 +7,9 @@ l10n:
 
 {{GlossarySidebar}}
 
-**API**（Application Programming Interface）是軟體（應用程序）擁有的功能和規則，允許通過它與其他程序交互（與用戶圖形介面相對）。API 可以被看作是一個提供它的應用程序與其他軟、硬體間的簡單的合約（接口）。
+**API**（Application Programming Interface）是軟體（應用程序）擁有的功能和規則，允許通過它與其他程序交互（與用戶圖形介面相對）。API 可以被看作是一個提供它的應用程序與其他軟、硬體間的簡單的合約（介面）。
 
-在 Web 開發中，API 通常指的是一系列的代碼功能（如：{{glossary("method","方法")}}, {{Glossary("property","屬性")}}、事件、以及 {{Glossary("URL","URL")}}）。這些特性被用於與用戶的 Web 瀏覽器中的組件、用戶計算機上的其他軟體或硬體，或與第三方網站和服務實現互動。
+在 Web 開發中，API 通常指的是一系列的代碼功能（如：{{glossary("method","方法")}}、{{Glossary("property","屬性")}}、事件，以及 {{Glossary("URL")}}）。這些特性被用於與用戶的 Web 瀏覽器中的組件、用戶計算機上的其他軟體或硬體，或與第三方網站和服務實現互動。
 
 例如：
 
@@ -20,4 +20,4 @@ l10n:
 ## 參見
 
 - [Web API 參考](/zh-TW/docs/Web/API)
-- 維基百科上的 [API](https://zh.wikipedia.org/wiki/Application_programming_interface)
+- 維基百科上的 [API](https://zh.wikipedia.org/wiki/应用程序接口)
