@@ -39,7 +39,7 @@ document.writeln("<p>输入密码：</p>");
 
 **document.writeln** 与 {{domxref("document.write")}} 相同，但是加了一个换行符。
 
-> **注意：** **document.writeln**（类似于 **document.write**）在 XHTML 文档中不起作用（你会在控制台上收到“操作不受支持”（`NS_ERROR_DOM_NOT_SUPPORTED_ERR`）的错误）。当以 .xhtml 文件扩展名打开本地文件，或者以 application/xhtml+xml MIME 类型提供的任何文档时，都会出现这种情况。更多详细信息，请参阅 [W3C XHTML 常见问题解答](https://www.w3.org/MarkUp/2004/xhtml-faq#docwrite)。
+> **注意：** **document.writeln**（类似于 **document.write**）在 XHTML 文档中无法正常工作（你会在控制台收到“操作不受支持”（`NS_ERROR_DOM_NOT_SUPPORTED_ERR`）错误）。当以 .xhtml 文件扩展名打开本地文件或任何使用 application/xhtml+xml MIME 类型的文档时，就会出现这种情况。更多详细信息，请参阅 [W3C XHTML 常见问题解答](https://www.w3.org/MarkUp/2004/xhtml-faq#docwrite)。
 
 ## 规范
 
