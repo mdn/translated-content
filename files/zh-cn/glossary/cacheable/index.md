@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**可缓存**的响应是可以缓存的，被存储起来以便后续的检索和使用的 HTTP 响应，省去了对服务器进行新的请求的需要。并非所有的 HTTP 响应都可以被缓存，以下是 HTTP 响应被缓存的约束条件：
+**可缓存**的响应是可以缓存的 HTTP 响应。它被存储起来以便后续的检索和使用，省去了对服务器的新的请求。并非所有的 HTTP 响应都可以被缓存，以下是 HTTP 响应被缓存的约束条件：
 
 - 请求中使用的方法本身就是*可缓存的*，即 {{HTTPMethod("GET")}} 或 {{HTTPMethod("HEAD")}} 方法。如果指示了有效期并且设置了 {{HTTPHeader("Content-Location")}} 标头，{{HTTPMethod("POST")}} 或 {{HTTPMethod("PATCH")}} 请求的响应也可以被缓存，但是这很少被实现。例如，Firefox 就不支持它（[Firefox bug 109553](https://bugzil.la/109553)）。其他方法，如 {{HTTPMethod("PUT")}} 或 {{HTTPMethod("DELETE")}} 是不可缓存的，其结果也不能被缓存。
 - 响应的状态码对应用程序的缓存可知，且被认为是*可缓存的*。以下状态代码是可缓存的：{{HTTPStatus("200")}}、{{HTTPStatus("203")}}、{{HTTPStatus("204")}}、{{HTTPStatus("206")}}、{{HTTPStatus("300")}}、{{HTTPStatus("301")}}、{{HTTPStatus("404")}}、{{HTTPStatus("405")}}、{{HTTPStatus("410")}}、{{HTTPStatus("414")}} 和 {{HTTPStatus("501")}}。
