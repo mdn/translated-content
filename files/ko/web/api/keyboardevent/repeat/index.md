@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("UI Events")}}
 
-**`repeat`** 은 {{domxref("KeyboardEvent")}} 인터페이스의 읽기 전용 속성으로, 주어진 키가 지속적으로 눌러진 상태로 자동으로 반복되는 경우 `true` 값을 반환하는 불리언 값입니다. 
+**`repeat`** 은 {{domxref("KeyboardEvent")}} 인터페이스의 읽기 전용 속성으로, 주어진 키가 지속적으로 눌러진 상태로 자동으로 반복되는 경우 `true` 값을 반환하는 불리언 값입니다.
 
 ## 값
 
