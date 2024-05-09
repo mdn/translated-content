@@ -48,7 +48,7 @@ Faites des essais avec certains de ces exemples et voyez lequel vous aimez le mi
 
 - [JSFiddle](https://jsfiddle.net/)
 - [Glitch](https://glitch.com/)
-- [JSBin](http://jsbin.com/)
+- [JSBin](https://jsbin.com/)
 - [CodePen](https://codepen.io/)
 
 ![](jsbin-screen.png)
