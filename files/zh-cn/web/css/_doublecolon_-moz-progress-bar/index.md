@@ -2,7 +2,7 @@
 title: "::-moz-progress-bar"
 slug: Web/CSS/::-moz-progress-bar
 l10n:
-  sourceCommit: 8d4c0f94cefe7b3f25657566a44fcafaa8851edc
+  sourceCommit: 469d7dd1064fb2911aca110e1d653e19f3438ca5
 ---
 
 {{CSSRef}}{{Non-standard_header}}
