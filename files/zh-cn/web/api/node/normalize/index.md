@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("DOM")}}
 
-{{domxref("Node")}} 接口的 **`normalize()`** 方法将指定的节点及其所有子树转化为*规范化*形式。在规范化子树中，子树上的文本节点都不为空，也没有相邻的文本节点。
+{{domxref("Node")}} 接口的 **`normalize()`** 方法将指定的节点及其所有子树转化为*规范化*形式。在规范化子树中，子树上的文本节点都不为空，且没有相邻的文本节点。
 
 ## 语法
 
@@ -36,18 +36,18 @@ wrapper.appendChild(document.createTextNode("第 1 部分"));
 wrapper.appendChild(document.createTextNode("第 2 部分"));
 
 let node = wrapper.firstChild;
-let result = "标准化之前：<br/>";
+let result = "规范化之前：<br/>";
 while (node) {
-  result += ` ${node.nodeName}: ${node.nodeValue}<br/>`;
+  result += ` ${node.nodeName}：${node.nodeValue}<br/>`;
   node = node.nextSibling;
 }
 
 wrapper.normalize();
 
 node = wrapper.firstChild;
-result += "<br/><br/>标准化之后：<br/>";
+result += "<br/><br/>规范化之后：<br/>";
 while (node) {
-  result += ` ${node.nodeName}: ${node.nodeValue}<br/>`;
+  result += ` ${node.nodeName}：${node.nodeValue}<br/>`;
   node = node.nextSibling;
 }
 
