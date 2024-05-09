@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-在{{glossary("OOP", "面向对象程序设计")}}中，一个*类*定义了一个{{glossary("object", "对象")}}的特征。类是定义{{glossary("property", "属性")}}和{{glossary("method", "方法")}}的模板，是用来绘制具体对象实例的“蓝图”。
+在{{glossary("OOP", "面向对象程序设计")}}中，一个**类**定义了一个{{glossary("object", "对象")}}的特征。类是定义{{glossary("property", "属性")}}和{{glossary("method", "方法")}}的模板，是用来绘制具体对象实例的“蓝图”。
 
 ## 参见
 

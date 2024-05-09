@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-在浏览器中，Chrome 指除了网页本身以外任何可视的部分（如 {{glossary("UI")}}、工具栏、菜单栏、标签）。不要将这个术语与 {{glossary("Google Chrome")}} 浏览器混淆。
+在浏览器中，**chrome** 指除了网页本身以外任何可视的部分（如 {{glossary("UI")}}、工具栏、菜单栏、标签）。不要将这个术语与 {{glossary("Google Chrome")}} 浏览器混淆。
 
 ## 参见
 
