@@ -20,7 +20,7 @@ l10n:
     <tr>
       <th scope="row">目标：</th>
       <td>
-        了解样式化表单背后的问题，学习一些对你有用的基本样式技术。
+        了解样式化表单背后的问题，学习一些实用的基本样式技术。
       </td>
     </tr>
   </tbody>
@@ -30,7 +30,7 @@ l10n:
 
 ### 历史
 
-1995 年，[HTML 2 规范](https://www.ietf.org/rfc/rfc1866.txt)引入了表单控件（又称“表单微件”或“表单元素”）。但 CSS 直到 1996 年底才发布，而且大多数浏览器在几年后才支持 CSS；因此，在此期间，浏览器依赖底层操作系统来呈现表单部件。
+1995 年，[HTML 2 规范](https://www.ietf.org/rfc/rfc1866.txt)引入了表单控件（又称“表单微件”或“表单元素”）。但 CSS 直到 1996 年底才发布，而且大多数浏览器在几年后才支持 CSS；因此，在此期间，浏览器依赖底层操作系统来渲染表单部件。
 
 即使有了 CSS，浏览器供应商起初也不愿意让表单元素具有样式，因为用户已经习惯了各自浏览器的外观。但现在情况已经发生了变化，除了少数例外情况，表单部件现在大部分都是可样式化的。
 
@@ -46,7 +46,7 @@ l10n:
 6. {{HTMLElement("label")}}
 7. {{HTMLElement("output")}}
 
-#### 难为样式化
+#### 难以样式化
 
 - 复选框和单选按钮
 - [`<input type="search">`](/zh-CN/docs/Web/HTML/Element/input/search)
@@ -96,7 +96,7 @@ textarea {
 
 默认设置在许多方面存在差异。继承者应将其字体更改为父代的字体家族——在本例中，即父代容器的默认衬线字体。它们都能做到，但有一个奇怪的例外——在 Chrome 浏览器中，`<input type="submit">` 不能从父段落继承。相反，它使用 {{cssxref('font-family#Values', 'font-family: system-ui')}}。这也是使用 `<button>` 元素而非等价 input 类型的另一个原因！
 
-关于使用系统默认样式的表单更好看，还是使用为匹配的内容而设计的自定义样式的表单更好看，有很多争论。作为网站或网络应用程序的设计者，你可以自行决定。
+关于使用系统默认样式的表单更好看，还是使用为匹配的内容而设计的自定义样式的表单更好看，有很多争论。作为网站或 Web 应用程序的设计者，你可以自行决定。
 
 ### 盒子尺寸
 
@@ -116,7 +116,7 @@ button {
 }
 ```
 
-在下面的截图中，左栏显示了 `<input type="radio">`、`<input type="checkbox">`、`<input type="range">`、 `<input type="text">`、`<input type="date">`、{{htmlelement('select')}}、{{htmlelement('textarea')}}、`<input type="submit">`和 {{htmlelement('button')}} 的默认渲染结果。右栏则显示了应用了上述规则的相同元素。请注意，尽管平台对每种微件都有默认规则，但我们仍能确保所有元素占用相同的空间。
+在下面的截图中，左栏显示了 `<input type="radio">`、`<input type="checkbox">`、`<input type="range">`、`<input type="text">`、`<input type="date">`、{{htmlelement('select')}}、{{htmlelement('textarea')}}、`<input type="submit">`和 {{htmlelement('button')}} 的默认渲染结果。右栏则显示了应用了上述规则的相同元素。请注意，尽管平台对每种微件都有默认规则，但我们仍能确保所有元素占用相同的空间。
 
 ![盒模型对大多数 input 类型有效。](boxmodel_formcontrols1.png)
 
@@ -154,7 +154,7 @@ legend {
 
 让我们来看一个如何为 HTML 表单设计样式的具体示例。我们将制作一个外观精美的“明信片”联系表单；[请参见此处的完成版](https://mdn.github.io/learning-area/html/forms/postcard-example/)。
 
-如果你想学习这个示例，请在本地拷贝我们的 [postcard-start.html 文件](https://github.com/mdn/learning-area/blob/main/html/forms/postcard-example/postcard-start.html)，然后按照下面的说明操作。
+如果你想学习这个示例，请将我们的 [postcard-start.html 文件](https://github.com/mdn/learning-area/blob/main/html/forms/postcard-example/postcard-start.html)拷贝到本地，然后按照下面的说明操作。
 
 ### HTML
 
@@ -191,14 +191,14 @@ legend {
 
 这就是有趣的开始！在开始编码之前，我们还需要三种额外的资源：
 
-1. [明信片背景](background.jpg)——下载该图片，并将其保存在与工作 HTML 文件相同的目录下。
+1. [明信片背景](background.jpg)——下载该图片，并将其保存在与需要处理的 HTML 文件相同的目录下。
 2. 打字机字体：[来自 dafont.com 的“Mom's Typewriter”字体](https://www.dafont.com/moms-typewriter.font?back=theme)——将 TTF 文件下载到与上述相同的目录中。
 3. 手绘字体：[来自 dafont.com 的“Journal”字体](https://www.dafont.com/journal.font)——将 TTF 文件下载到与上述相同的目录中。
 
 在开始使用之前，你的字体还需要进一步处理：
 
-1. 访问 fontsquirrel.com 的 [Webfont 生成器](https://www.fontsquirrel.com/tools/webfont-generator)工具。
-2. 使用表单上传字体文件，生成网络字体工具包。将该工具包下载到你的电脑上。
+1. 访问 fontsquirrel.com 的 [Web 字体生成器](https://www.fontsquirrel.com/tools/webfont-generator)工具。
+2. 使用表单上传字体文件，生成 Web 字体工具包。将该工具包下载到你的电脑上。
 3. 解压缩提供的压缩文件。
 4. 在解压后的内容中，你会发现一些字体文件（在撰写本文时，有两个 `.woff` 文件和两个 `.woff2` 文件；将来可能会有变化）。将这些文件复制到一个名为 fonts 的目录中，该目录与之前的目录相同。我们为每种字体使用了两个不同的文件，以最大限度地提高浏览器兼容性；请参阅我们的 [Web 字体](/zh-CN/docs/Learn/CSS/Styling_text/Web_fonts)文章，了解更多信息。
 
@@ -208,7 +208,7 @@ legend {
 
 #### 总体布局
 
-首先，我们要定义 {{cssxref("@font-face")}} 规则，并在 {{HTMLElement("body")}} 和 {{HTMLElement("form")}} 元素上设置所有基本样式。如果 fontsquirrel 的输出与我们上面描述的不同，可以在下载的 webfont 工具包的 `stylesheet.css` 文件中找到正确的 `@font-face` 块（需要用它们替换下面的 `@font-face` 块，并更新字体文件的路径）：
+首先，我们要定义 {{cssxref("@font-face")}} 规则，并在 {{HTMLElement("body")}} 和 {{HTMLElement("form")}} 元素上设置所有基本样式。如果 fontsquirrel 的输出与我们上面描述的不同，可以在下载的 Web 字体工具包的 `stylesheet.css` 文件中找到正确的 `@font-face` 块（需要用它们替换下面的 `@font-face` 块，并更新字体文件的路径）：
 
 ```css
 @font-face {
@@ -285,7 +285,7 @@ label {
 }
 ```
 
-文本字段需要一些通用规则。换句话说，我们删除了它们的{{cssxref("border", "边框")}}和{{cssxref("background", "背景")}}，并重新定义了它们的 {{cssxref("padding")}} 和 {{cssxref("margin")}}：
+文本字段需要一些通用规则。换句话说，我们删除了它们的 {{cssxref("border")}} 和 {{cssxref("background")}}，并重新定义了它们的 {{cssxref("padding")}} 和 {{cssxref("margin")}}：
 
 ```css
 input,
