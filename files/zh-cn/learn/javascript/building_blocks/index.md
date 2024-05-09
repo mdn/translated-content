@@ -11,7 +11,7 @@ slug: Learn/JavaScript/Building_blocks
 
 在开始这部分模块之前，你应该熟悉基本的 HTML 和 CSS, 并且已经看完我们之前的模块：[JavaScript 第一步](/zh-CN/docs/Learn/JavaScript/First_steps)。
 
-> **备注：** 如果你在使用无法创建自己文件的电脑/平板/其他设备，你可以试试在线编辑器，例如 [JSBin](http://jsbin.com/) 或 [Glitch](https://glitch.com/).
+> **备注：** 如果你在使用无法创建自己文件的电脑/平板/其他设备，你可以试试在线编辑器，例如 [JSBin](https://jsbin.com/) 或 [Glitch](https://glitch.com/).
 
 ## 指南
 

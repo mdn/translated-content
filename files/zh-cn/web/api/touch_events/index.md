@@ -264,7 +264,7 @@ function log(msg) {
 
 如果你的浏览器支持触摸，就可以 [在线试用](https://roy-tian.github.io/mdn-examples/javascript/touch-paint/)。
 
-[jsFiddle 上的示例](http://jsfiddle.net/Darbicus/z3Xdx/10/)
+[jsFiddle 上的示例](https://jsfiddle.net/Darbicus/z3Xdx/10/)
 
 ## 附加信息
 
