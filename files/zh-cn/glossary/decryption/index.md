@@ -16,3 +16,6 @@ slug: Glossary/Decryption
 ## 参见
 
 - [加密与解密](/zh-CN/docs/Encryption_and_Decryption)
+- - {{glossary("Encryption", "加密")}}
+- {{glossary("Cipher, "密码算法")}}
+- {{glossary("Cryptography", "密码学")}}
