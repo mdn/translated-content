@@ -67,7 +67,7 @@ canvas.addEventListener("mousemove", function(event) {
 
 <pre class="brush: js">ctx.addHitRegion({control: element});</pre>
 
-<p>これはたとえば、{{HTMLElement("input")}} 要素へイベントを送るのに有用です。<a href="http://codepen.io/adobe/pen/BhcmK">こちらの codepen demo</a> もご覧ください。</p>
+<p>これはたとえば、{{HTMLElement("input")}} 要素へイベントを送るのに有用です。<a href="https://codepen.io/adobe/pen/BhcmK">こちらの codepen demo</a> もご覧ください。</p>
 
 <h2 id="Focus_rings" name="Focus_rings">フォーカスリング</h2>
 
