@@ -46,6 +46,10 @@ li::-moz-list-number {
 
 不属于任何规范。
 
+## 浏览器兼容性
+
+{{Compat}}
+
 ## 参见
 
 - {{cssxref("::-moz-list-bullet")}}
