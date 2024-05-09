@@ -23,7 +23,7 @@ l10n:
 
 ```html
 <button onclick="console.log(document.characterSet);">输出字符编码</button>
-<!-- 在开发控制台中显示文档字符编码，例如 “ISO-8859-1” 或 “UTF-8” -->
+<!-- 在开发控制台中显示文档字符编码，例如“ISO-8859-1”或“UTF-8” -->
 ```
 
 ## 规范
