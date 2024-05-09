@@ -50,9 +50,9 @@ Existe un número de aplicaciones web que emulan un entorno de desarrollo de sit
 
 Prueba con algunos de estos ejemplos y observa cuál es el que mejor se adapta a tu gusto:
 
-- [JSFiddle](http://jsfiddle.net/)
+- [JSFiddle](https://jsfiddle.net/)
 - [Glitch](https://glitch.com/)
-- [JS Bin](http://jsbin.com/)
+- [JS Bin](https://jsbin.com/)
 - [CodePen](https://codepen.io/)
 
 ![](jsbin-screen.png)
