@@ -2,7 +2,7 @@
 title: "::-moz-list-bullet"
 slug: Web/CSS/::-moz-list-bullet
 l10n:
-  sourceCommit: 56c76424a5edb45f6716ac4ee48861dac8e7ae38
+  sourceCommit: 469d7dd1064fb2911aca110e1d653e19f3438ca5
 ---
 
 {{CSSRef}}{{Non-standard_header}}
