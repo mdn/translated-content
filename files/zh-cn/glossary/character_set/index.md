@@ -19,5 +19,5 @@ l10n:
 - 维基百科上的[乱码](https://zh.wikipedia.org/wiki/亂碼)
 - [术语表](/zh-CN/docs/Glossary)
 
-  - {{Glossary("Character")}}
+  - {{Glossary("Character", "字符")}}
   - {{Glossary("Unicode")}}
