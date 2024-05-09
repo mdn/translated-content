@@ -2,7 +2,7 @@
 title: "::-moz-list-number"
 slug: Web/CSS/::-moz-list-number
 l10n:
-  sourceCommit: c8b447485fd893d5511d88f592f5f3aec29a725b
+  sourceCommit: 469d7dd1064fb2911aca110e1d653e19f3438ca5
 ---
 
 {{CSSRef}}{{Non-standard_header}}
