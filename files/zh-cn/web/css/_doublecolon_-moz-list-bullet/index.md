@@ -42,11 +42,15 @@ li::-moz-list-bullet {
 
 #### 结果
 
-{{ EmbedLiveSample('列表项标记的样式') }}
+{{EmbedLiveSample('列表项标记的样式')}}
 
 ## 规范
 
 不属于任何规范。
+
+## 浏览器兼容性
+
+{{Compat}}
 
 ## 参见
 
