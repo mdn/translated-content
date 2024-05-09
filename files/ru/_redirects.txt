@@ -209,7 +209,7 @@
 /ru/docs/Learn/Common_questions/What_software_do_I_need	/ru/docs/Learn/Common_questions/Tools_and_setup/What_software_do_I_need
 /ru/docs/Learn/Common_questions/set_up_a_local_testing_server	/ru/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server
 /ru/docs/Learn/Discover_browser_developer_tools	/ru/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools
-/ru/docs/Learn/Front-end_web_developer	/ru/docs/orphaned/Learn/Front-end_web_developer
+/ru/docs/Learn/Front-end_web_developer	https://developer.mozilla.org/en-US/curriculum/
 /ru/docs/Learn/Getting_started_with_the_web/Веб_и_веб_стандарты	/ru/docs/Learn/Getting_started_with_the_web/The_web_and_web_standards
 /ru/docs/Learn/Getting_started_with_the_web/Установка_базового_программного_обеспечения	/ru/docs/Learn/Getting_started_with_the_web/Installing_basic_software
 /ru/docs/Learn/HTML/Forms	/ru/docs/Learn/Forms
@@ -274,7 +274,7 @@
 /ru/docs/Learn/Доступность/CSS_and_JavaScript	/ru/docs/Learn/Accessibility/CSS_and_JavaScript
 /ru/docs/Learn/Доступность/HTML	/ru/docs/Learn/Accessibility/HTML
 /ru/docs/Learn/Доступность/What_is_accessibility	/ru/docs/Learn/Accessibility/What_is_accessibility
-/ru/docs/Learn/Фронтенд_разработчик	/ru/docs/orphaned/Learn/Front-end_web_developer
+/ru/docs/Learn/Фронтенд_разработчик	https://developer.mozilla.org/en-US/curriculum/
 /ru/docs/Learn/Что_такое_веб_сервер	/ru/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server
 /ru/docs/MDN/About	/ru/docs/MDN/Writing_guidelines
 /ru/docs/MDN/Contribute	/ru/docs/MDN/Community/Contributing
@@ -873,6 +873,7 @@
 /ru/docs/XPath/Funkcje/floor	/ru/docs/Web/XPath/Functions/floor
 /ru/docs/XSLT	/ru/docs/Web/XSLT
 /ru/docs/en	/en-US/
+/ru/docs/orphaned/Learn/Front-end_web_developer	https://developer.mozilla.org/ru/curriculum/
 /ru/docs/Заглавная_страница	/ru/docs/Web
 /ru/docs/Повторное_введение_в_JavaScript	/ru/docs/Web/JavaScript/Language_overview
 /ru/docs/Руководство_по_JavaScript_1.5	/ru/docs/Web/JavaScript/Guide
