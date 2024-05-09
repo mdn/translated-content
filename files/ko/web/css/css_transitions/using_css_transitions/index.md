@@ -65,8 +65,6 @@ CSS transitions는 여러분이 (명시적으로 목록을 작성해서) 어떤 
 }
 ```
 
-{{ EmbedLiveSample('%EB%8B%A4%EC%88%98%EC%9D%98_%EC%95%A0%EB%8B%88%EB%A9%94%EC%9D%B4%EC%85%98%EC%9D%B4_%EC%A0%81%EC%9A%A9%EB%90%9C_%EC%86%8D%EC%84%B1_%EC%98%88%EC%A0%9C', '600', '300', '', 'Web/Guide/CSS/Using_CSS_transitions') }}
-
 ## 트랜지션 정의에 사용한 CSS 속성
 
 CSS 트랜지션은 단축(shorthand) 속성 {{cssxref("transition")}}을 사용하여 제어합니다. 이것은 트랜지션을 설정하는 가장 좋은 방법입니다. 파라미터 목록의 길이가 싱크가 맞지 않는 것을 피하기가 더 쉬워지기 때문입니다. 싱크가 맞지 않으면 CSS를 디버그하는데 많은 시간을 들여야 해서 크게 좌절할 수 있습니다.
