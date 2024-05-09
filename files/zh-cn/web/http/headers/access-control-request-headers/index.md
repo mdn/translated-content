@@ -7,7 +7,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-**`Access-Control-Request-Headers`** 请求标头用于浏览器在发起{{glossary("preflight request", "预检请求")}}时告知服务器客户端在实际请求发送时可能附带的 [HTTP 标头](/zh-CN/docs/Web/HTTP/Headers)（例如使用 {{domxref("fetch()")}} 或 {{domxref("XMLHttpRequest.setRequestHeader()")}}）。服务器端对应的响应标头为 {{HTTPHeader("Access-Control-Allow-Headers")}}，表示回应浏览器的请求标头信息。
+**`Access-Control-Request-Headers`** 请求标头用于浏览器在发起{{glossary("preflight request", "预检请求")}}时告知服务器客户端在实际请求发送时（例如使用 {{domxref("fetch()")}} 或 {{domxref("XMLHttpRequest.setRequestHeader()")}}）可能附带的 [HTTP 标头](/zh-CN/docs/Web/HTTP/Headers)。服务器端对应的响应标头为 {{HTTPHeader("Access-Control-Allow-Headers")}}，表示对浏览器的请求标头的回应。
 
 <table class="properties">
   <tbody>
@@ -31,7 +31,7 @@ Access-Control-Request-Headers: <header-name>,<header-name>,…
 ## 指令
 
 - \<header-name>
-  - : 以逗号分隔、小写、排序、唯一 [HTTP 标头](/zh-CN/docs/Web/HTTP/Headers)列表包含在请求中。
+  - : 在请求中包含的唯一的、以逗号分隔的小写 [HTTP 标头](/zh-CN/docs/Web/HTTP/Headers)的排序列表。
 
 ## 示例
 
