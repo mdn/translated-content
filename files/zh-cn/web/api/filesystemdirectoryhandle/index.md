@@ -24,7 +24,7 @@ _从父接口 {{DOMxRef("FileSystemHandle")}} 继承方法。_
 常规方法：
 
 - {{domxref('FileSystemDirectoryHandle.getDirectoryHandle()')}}
-  - : 返回一个 {{jsxref('Promise')}}，会兑现一个调用此方法的目录句柄内指定名称的子目录的 {{domxref('FileSystemDirectoryHandle')}}。
+  - : 返回一个 {{jsxref('Promise')}}，会兑现一个调用此方法的目录句柄内指定名称的子目录的 `FileSystemDirectoryHandle`。
 - {{domxref('FileSystemDirectoryHandle.getFileHandle()')}}
   - : 返回一个 {{jsxref('Promise')}}，会兑现一个调用此方法的目录句柄内指定名称的文件的 {{domxref('FileSystemFileHandle')}}。
 - {{domxref('FileSystemDirectoryHandle.removeEntry()')}}
