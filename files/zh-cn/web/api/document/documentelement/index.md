@@ -7,7 +7,7 @@ l10n:
 
 {{ApiRef("DOM")}}
 
-**`Document.documentElement`** 返回 {{domxref("document")}} 的根元素 {{domxref("Element")}}（例如，HTML 文档的 {{HTMLElement("html")}} 元素）。
+**`Document.documentElement`** 返回 {{domxref("document")}} 的根{{domxref("Element", "元素", "", "nocode")}}（例如，HTML 文档的 {{HTMLElement("html")}} 元素）。
 
 ## 值
 
