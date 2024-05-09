@@ -30,7 +30,7 @@ console.log(`doctypeObj.systemId: ${doctypeObj.systemId}`);
 
 如果当前文档没有关联 DTD，该属性将返回 `null`。
 
-DOM 第 2 级不支持编辑文档类型声明。
+DOM 第 2 级规范不支持编辑文档类型声明。
 
 ## 规范
 
