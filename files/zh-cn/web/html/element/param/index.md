@@ -9,7 +9,7 @@ l10n:
 
 **`<param>`** [HTML](/zh-CN/docs/Web/HTML) 元素为 {{HTMLElement("object")}} 元素定义形式参数。
 
-> **注意：** 使用带有 [`data`](/zh-CN/docs/Web/HTML/Element/object#data) 属性的 {{HTMLElement("object")}} 元素来设置外部资源的 URL。
+> **备注：** 使用带有 [`data`](/zh-CN/docs/Web/HTML/Element/object#data) 属性的 {{HTMLElement("object")}} 元素来设置外部资源的 URL。
 
 ## 属性
 
@@ -25,9 +25,9 @@ l10n:
 
   - : 指定 `value` 属性类型。可能的值包括：
 
-    - `data`: 默认值。该值以字符串形式传递给对象实现。
-    - `ref`: 该值是存储运行时值的资源的 URI。
-    - `object`: 在同一文档中另一个 {{HTMLElement("object")}} 元素的 ID。
+    - `data`：默认值。该值以字符串形式传递给对象实现。
+    - `ref`：该值是存储运行时值的资源的 URI。
+    - `object`：在同一文档中另一个 {{HTMLElement("object")}} 元素的 ID。
 
 ## 技术概要
 
@@ -54,7 +54,7 @@ l10n:
       <td>
         在任何<a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容"
           >流式内容</a
-        >之前放置 {{HTMLElement("object")}} 元素。
+        >之前的 {{HTMLElement("object")}} 元素。
       </td>
     </tr>
     <tr>
