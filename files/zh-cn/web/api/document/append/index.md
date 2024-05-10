@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("DOM")}}
 
-**`Document.append()`** 方法会在文档的最后一个子节点后插入一组{{domxref("Node", "节点", "1", "nocode")}}对象或字符串对象。字符串对象被插入为相同{{domxref("Text", "文本", "1", "nocode")}}节点。
+**`Document.append()`** 方法会在文档的最后一个子节点后插入一组{{domxref("Node", "节点", "", 1)}}对象或字符串对象。字符串对象被插入为相同{{domxref("Text", "文本", "", 1)}}节点。
 
 此方法将子级追加到 `Document` 中。要追加到树中的任意元素，请参阅 {{domxref("Element.append()")}}。
 
