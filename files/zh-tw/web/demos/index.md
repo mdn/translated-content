@@ -29,7 +29,6 @@ Mozilla 支援豐富、廣泛且扣人心弦的網路公開技術，並且我們
 - [Blobular](https://www.themaninblue.com/experiment/Blobular/) (interactive)
 - [Video embedded in SVG](http://www.double.co.nz/video_test/video.svg) (or use the [local download](http://www.double.co.nz/video_test/video_svg.tar.bz2))
 - [Summer HTML image map creator](http://summerstyle.github.io/summer/) ([source code](https://github.com/summerstyle/summer))
-- [SVG/CSS demo firefox developer edition](http://s.codepen.io/SoftwareRVG/debug/JRJZVW) design by Rober Villar from Software RVG ([source code](https://github.com/SoftwareRVG/mde_design/blob/master/css_svg_dev)) ([debug mode](http://s.codepen.io/SoftwareRVG/debug/JRJZVW))
 
 ### 影片
 
