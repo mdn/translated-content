@@ -2,14 +2,12 @@
 title: Document：doctype 属性
 slug: Web/API/Document/doctype
 l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+  sourceCommit: cf4cccd4696555c12318d0bd8ea9f34992b4b098
 ---
 
 {{ApiRef("DOM")}}
 
-返回与当前文档关联的文档类型声明（DTD）。返回的对象实现了 {{domxref("DocumentType")}} 接口。使用 {{domxref("DOMImplementation.createDocumentType()")}} 来创建 `DocumentType`。
-
-- `doctype` 是只读属性。
+{{domxref("Document")}} 接口的 **`doctype`** 只读属性表示与当前文档关联的{{glossary("Doctype", "文档类型声明 (DTD)")}}的 {{domxref("DocumentType")}} 对象。
 
 ## 值
 
