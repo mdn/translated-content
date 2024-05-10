@@ -7,7 +7,7 @@ l10n:
 
 {{securecontext_header}}{{APIRef("File System API")}}{{SeeCompatTable}}
 
-{{domxref("DataTransferItem")}} 接口的 **`getAsFileSystemHandle()`** 方法返回一个 {{domxref('FileSystemFileHandle')}}，若拖动的项目是文件，或者返回一个 {{domxref( 'FileSystemDirectoryHandle')}}，若拖动的项目是目录。
+{{domxref("DataTransferItem")}} 接口的 **`getAsFileSystemHandle()`** 方法返回一个 {{domxref('FileSystemFileHandle')}}（若拖动的项目是文件），或 {{domxref( 'FileSystemDirectoryHandle')}}（若拖动的项目是目录）。
 
 ## 语法
 
@@ -23,7 +23,7 @@ getAsFileSystemHandle()
 
 一个 {{jsxref('Promise')}}。
 
-如果项目的 {{domxref("DataTransferItem.kind", "kind")}} 属性为 `"file"`，并且在 {{domxref("HTMLElement/dragstart_event", "dragstart")}} 或 {{domxref("HTMLElement/drop_event", "drop")}} 事件处理器中访问此项目，则返回的 promise 兑现一个 {{domxref('FileSystemFileHandle')}}，若拖动的项目是文件；或一个 {{domxref ('FileSystemDirectoryHandle')}}，若拖动的项目是一个目录。
+如果项目的 {{domxref("DataTransferItem.kind", "kind")}} 属性为 `"file"`，并且在 {{domxref("HTMLElement/dragstart_event", "dragstart")}} 或 {{domxref("HTMLElement/drop_event", "drop")}} 事件处理器中访问此项目，则返回的 promise 兑现一个 {{domxref('FileSystemFileHandle')}}（若拖动的项目是文件）或 {{domxref ('FileSystemDirectoryHandle')}}（若拖动的项目是一个目录）。
 
 否则，promise 会兑现 `null`。
 
@@ -33,7 +33,7 @@ getAsFileSystemHandle()
 
 ## 示例
 
-本示例使用 `getAsFileSystemHandle()` 方法返回{{domxref('FileSystemHandle', '文件句柄', '', 'nocode')}}用于删除的项目。
+本示例使用 `getAsFileSystemHandle()` 方法返回一个表示放置的项目的{{domxref('FileSystemHandle', '文件句柄', '', 'nocode')}}。
 
 ```js
 elem.addEventListener("dragover", (e) => {
