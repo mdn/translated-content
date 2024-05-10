@@ -3,6 +3,8 @@ title: Paths
 slug: Web/SVG/Tutorial/Paths
 ---
 
+{{SVGRef}}
+
 {{ PreviousNext("Web/SVG/Tutoriel/Formes_de_base", "Web/SVG/Tutoriel/Fills_and_Strokes") }}
 
 L'élément [`<path>`](/fr/Web/SVG/Element/path) (_chemin_ en français) est le plus versatile des éléments de la bibliothèque SVG parmi les [formes basiques](/fr/docs/Web/SVG/Tutoriel/Formes_de_base). Vous pouvez l'utiliser pour créer des lignes, des courbes, des arcs et autres.

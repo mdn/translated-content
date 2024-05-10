@@ -3,6 +3,8 @@ title: ARIA：listitem 角色
 slug: Web/Accessibility/ARIA/Roles/listitem_role
 ---
 
+{{AccessibilitySidebar}}
+
 ARIA `listitem` 角色可用于标识项目列表中的项目。它通常与 [`list`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/list_role) 角色（用于标识列表容器）结合使用。
 
 ```html
@@ -72,11 +74,3 @@ ARIA `listitem` 角色可用于标识项目列表中的项目。它通常与 [`l
 - [无障碍对象模型](https://wicg.github.io/aom/spec/)
 - [HTML 中的 ARIA](https://w3c.github.io/html-aria/)
 - [ARIA 列表示例](https://www.scottohara.me/blog/2018/05/26/aria-lists.html) — by Scott O'Hara
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA 角色**](/zh-CN/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/zh-CN/docs/Web/Accessibility/ARIA/Roles")}}
-
-</section>
