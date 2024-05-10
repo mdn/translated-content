@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("DOM")}}
 
-**`Document.currentScript`** 属性返回当前正在处理其脚本并且[不是 JavaScript 模块](https://github.com/whatwg/html/issues/997)的 {{HTMLElement("script")}} 元素。（对于模块，请改用 [`import.meta`](/zh-CN/docs/Web/JavaScript/Reference/Operators/import.meta)）。
+**`Document.currentScript`** 属性返回当前正在处理其脚本（并且该脚本[不是 JavaScript 模块](https://github.com/whatwg/html/issues/997)）的 {{HTMLElement("script")}} 元素。（对于模块，请改用 [`import.meta`](/zh-CN/docs/Web/JavaScript/Reference/Operators/import.meta)）。
 
 值得注意的是，如果脚本中的代码是作为回调或事件处理器调用的，则不会引用 {{HTMLElement("script")}} 元素；它只会在最初处理时引用该元素。
 
