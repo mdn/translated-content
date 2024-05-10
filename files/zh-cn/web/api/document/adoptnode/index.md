@@ -7,7 +7,7 @@ l10n:
 
 {{ ApiRef("DOM") }}
 
-**`Document.adoptNode()`** 将{{Glossary("node/dom", "节点（DOM）")}}从另一个 {{domxref("Document", "document", "", "1")}} 文档转移至调用该方法的文档中。被采纳的节点及其子树将会从原始文档（如果存在的话）中移除，并且它们的 {{domxref("Node.ownerDocument", "ownerDocument")}} 会变更为当前文档。然后就可以将节点插入到当前文档中。
+**`Document.adoptNode()`** 将{{Glossary("node/dom", "节点（DOM）")}}从另一个{{domxref("Document", "文档", "", "nocode")}}转移至调用该方法的文档中。被采纳的节点及其子树将会从原始文档（如果存在的话）中移除，并且它们的 {{domxref("Node.ownerDocument", "ownerDocument")}} 会变更为当前文档。然后就可以将节点插入到当前文档中。
 
 ## 语法
 
