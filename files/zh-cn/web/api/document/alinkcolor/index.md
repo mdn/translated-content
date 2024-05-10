@@ -17,7 +17,7 @@ l10n:
 
 Mozilla Firefox 中该属性的默认值为红色（十六进制 `#ee0000`）。
 
-在 [DOM 第 2 版 HTML](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268) 中 `document.alinkColor` 已弃用。一种替代方法是 CSS 选择器 {{Cssxref(":active")}}.
+在 [DOM 第 2 版 HTML](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268) 中 `document.alinkColor` 已弃用。一种替代方法是 CSS 选择器 {{Cssxref(":active")}}。
 
 另一种替代方法是 `document.body.aLink`，不过这种方法已[在 HTML 4.01 中弃用](https://www.w3.org/TR/html401/struct/global.html#adef-alink)，转而使用 CSS 替代方法。
 
