@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("DOM")}}
 
-创建新的 {{domxref("Text", "文本")}} 节点。该方法可用于转义 HTML 字符。
+创建新的{{domxref("Text", "文本", "", 1)}}节点。该方法可用于转义 HTML 字符。
 
 ## 语法
 
@@ -22,13 +22,13 @@ createTextNode(data)
 
 ### 返回值
 
-{{domxref("Text", "文本")}} 节点。
+{{domxref("Text", "文本", "", 1)}}节点。
 
 ## 示例
 
 ```html
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <title>createTextNode 示例</title>
     <script>
@@ -43,8 +43,8 @@ createTextNode(data)
 
   <body>
     <button onclick="addTextNode('是！');">是！</button>
-    <button onclick="addTextNode('否！ ');">否！</button>
-    <button onclick="addTextNode('我们可以！ ');">我们可以！</button>
+    <button onclick="addTextNode('否！');">否！</button>
+    <button onclick="addTextNode('我们可以！');">我们可以！</button>
 
     <hr />
 
