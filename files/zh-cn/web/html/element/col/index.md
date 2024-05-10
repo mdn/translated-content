@@ -64,7 +64,7 @@ l10n:
   - {{cssxref("background")}}：各种 `background` 属性将为列中的单元格设置背景。由于列的背景色绘制在表格和列组（{{HTMLElement("colgroup")}}）的顶部，但绘制在行组（{{htmlelement("thead")}}、{{htmlelement("tbody")}} 和 {{htmlelement("tfoot")}}）的背景色之后、行（{{htmlelement("tr")}}）和单个单元格（{{htmlelement("th")}}和 {{htmlelement("td")}}），只有在表格列上方绘制的每个图层都具有透明背景时，应用于表格列的背景才会可见。
   - {{cssxref("border")}}：适用各种 `border` 属性，但前提是 `<table>` 已设置 {{cssxref("border-collapse", "border-collapse: collapse")}}。
   - {{cssxref("visibility")}}：如果某列的值为 `collapse`，则该列的所有单元格都不会渲染，而跨入其他列的单元格则会被剪切。这些列原本占据的空间会被移除。但是，其他列的大小仍按折叠列中的单元格计算。`visibility` 的其他值没有影响。
-  - {{cssxref(“width”)}}：`width` 属性定义了列的最小宽度，如同设置了 {{cssxref("min-width")}}。
+  - {{cssxref("width")}}：`width` 属性定义了列的最小宽度，如同设置了 {{cssxref("min-width")}}。
 
 ## 示例
 
