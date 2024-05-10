@@ -18,7 +18,7 @@ adoptNode(externalNode)
 ### 参数
 
 - `externalNode`
-  - : 采用另一份文件中的节点。
+  - : 将要采用另一份文档中的节点。
 
 ### 返回值
 
