@@ -1,7 +1,6 @@
 ---
 title: timeline-scope
 slug: Web/CSS/timeline-scope
-page-type: css-property
 l10n:
   sourceCommit: 48813be4b5187c6a17e744e7f9ba37a146302847
 ---
