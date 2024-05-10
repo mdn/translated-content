@@ -9,7 +9,7 @@ l10n:
 
 {{domxref("Document")}} 接口的 **`adoptedStyleSheets`** 属性用于设置文档使用的构造样式表数组。
 
-> **备注：** 构建样式表是指使用 [`CSSStyleSheet()` 构造函数](/zh-CN/docs/Web/API/CSSStyleSheet/CSSStyleSheet)以编程方式创建的样式表（与用户代理在从脚本导入样式表时创建的相比，用户代理使用 {{HTMLElement('style')}} 和 {{CSSXref('@import')}} 进行导入，或通过 {{HTMLElement('link')}}) 进行链接。
+> **备注：** 构建样式表是指使用 [`CSSStyleSheet()` 构造函数](/zh-CN/docs/Web/API/CSSStyleSheet/CSSStyleSheet)以编程方式创建的样式表（与用户代理在从脚本导入样式表时创建的相比，用户代理使用 {{HTMLElement('style')}} 和 {{CSSXref('@import')}} 进行导入，或通过 {{HTMLElement('link')}}）进行链接。
 
 相同的构造样式表也可以通过使用 [`ShadowRoot.adoptedStyleSheets`](/zh-CN/docs/Web/API/ShadowRoot/adoptedStyleSheets) 属性与一个或多个 {{domxref("ShadowRoot")}} 实例共享。更改采用样式表会影响采用该样式表的所有对象。
 
