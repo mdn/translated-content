@@ -5,13 +5,13 @@ slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 
 {{AddonSidebar}}
 
-Если вы уже прочитали статью [Ваше первое расширение](/ru/Add-ons/WebExtensions/Your_first_WebExtension), то уже представляете, как создавать расширения. В этой статье мы напишем более сложное дополнение, которое демонстрирует ещё несколько API.
+Если вы уже прочитали статью [Ваше первое расширение](/ru/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension), то уже представляете, как создавать расширения. В этой статье мы напишем более сложное дополнение, которое демонстрирует ещё несколько API.
 
 Дополнение добавляет новую кнопку на панель инструментов Firefox. Когда пользователь кликает по кнопке, мы показываем ему всплывающую панель с предложением выбрать животное. Когда животное выбрано, мы заменяем содержимое текущей страницы на изображение выбранного животного.
 
 Чтобы реализовать это, мы:
 
-- **определим [browser action](/ru/docs/Mozilla/Add-ons/WebExtensions/Browser_action) - кнопку, прикреплённую к панели инструментов Firefox.**
+- **определим [browser action](/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) - кнопку, прикреплённую к панели инструментов Firefox.**
   Для кнопки мы предоставим:
 
   - иконку с именем "beasts-32.png"
@@ -83,7 +83,7 @@ cd beastify
 - Первые три ключа: [`manifest_version`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version), [`name`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name), `и version`, являются обязательными и содержат основные мета-данные для дополнения.
 - [`description`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description) `и homepage_url` необязательны, но рекомендуемы: они предоставляют полезную информацию о дополнении.
 - [`icons`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) необязательный, но рекомендуемый: позволяет вам определять иконку для дополнения, которая будет показана в Менеджере Дополнений.
-- [`permissions`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) перечисляет разрешения для нужд дополнения. Здесь мы просто спрашиваем разрешения для [`activeTab` permission](/ru/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission).
+- [`permissions`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) перечисляет разрешения для нужд дополнения. Здесь мы просто спрашиваем разрешения для [`activeTab` permission](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission).
 - [`browser_action`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) задаёт кнопку на панели инструментов. Здесь мы предоставляем три вида информации:
 
   - `default_icon` это обязательная иконка для кнопки
@@ -348,7 +348,7 @@ beastify/
 
 ## Разработка из командной строки
 
-Вы можете автоматизировать этап временной установки используя [web-ext](/ru/Add-ons/WebExtensions/Getting_started_with_web-ext). Попробуйте это:
+Вы можете автоматизировать этап временной установки используя [web-ext](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/). Попробуйте это:
 
 ```bash
 cd beastify
