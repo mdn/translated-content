@@ -15,7 +15,7 @@ Dans cet article, nous listons les logiciels nécessaires pour éditer, mettre e
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Vous devriez déjà connaître
-        <a href="/fr/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engine"
+        <a href="/fr/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines"
           >la différence entre une page web, un serveur web et un moteur de
           recherche.</a
         >
@@ -258,7 +258,7 @@ Tous les systèmes d'exploitations possèdent un éditeur de texte basique par d
 
 Voici une capture d'écran qui illustre l'allure d'un éditeur de texte avancé (ici Notepad++)&nbsp;:
 
-![Impression d'écran de Notepad++.](notepadplusplu.png)
+![Impression d'écran de Notepad++.](notepadplusplus.png)
 
 Voici une capture d'écran d'un éditeur de texte en ligne&nbsp;:
 
