@@ -1,39 +1,51 @@
 ---
-title: element.onafterscriptexecute
+title: Document：afterscriptexecute 事件
 slug: Web/API/Document/afterscriptexecute_event
+l10n:
+  sourceCommit: 3966c40a3917825e6e467f1592bc7f8d59458e74
 ---
 
-{{ApiRef}}
+{{APIRef}}{{non-standard_header}}
 
-## 概述
-
-当 HTML 文档中的{{HTMLElement("script")}}标签内的代码执行完毕时触发该事件，如果这个`script`标签是用`appendChild()`等方法动态添加上去的，则不会触发该事件。
+当静态 {{HTMLElement("script")}} 元素完成脚本执行时会触发 `afterscriptexecute` 事件。如果元素是动态添加的（例如使用 {{domxref("Node.appendChild()", "appendChild()")}}）方法，则不会触发此事件。
 
 ## 语法
 
-```plain
-document.onafterscriptexecute = funcRef;
+在方法中使用事件名称，例如 {{domxref("EventTarget.addEventListener", "addEventListener()")}}，或者设置事件处理器属性。
+
+```js
+addEventListener("afterscriptexecute", (event) => {});
+
+onafterscriptexecute = (event) => {};
 ```
 
-当`afterscriptexecute`事件触发时，`funcRef`函数就会被调用。传入参数`event`的`target`属性指向触发该事件的那个`script`元素。
+## 事件类型
 
-## 例子
+通用 {{domxref("Event")}}。
+
+## 示例
 
 ```js
 function finished(e) {
-  logMessage("Finished script with ID: " + e.target.id);
+  logMessage(`完成带有 ID 的脚本：${e.target.id}`);
 }
 
 document.addEventListener("afterscriptexecute", finished, true);
+// 或
+document.onafterscriptexecute = finished;
 ```
 
-[查看在线演示](/samples/html/currentScript.html)
+[查看在线示例](https://mdn.dev/archives/media/samples/html/currentScript.html)
 
 ## 规范
 
-- [HTML5](http://www.whatwg.org/specs/web-apps/current-work/#the-script-element)
+不属于任何规范。
+
+## 浏览器兼容性
+
+{{Compat}}
 
 ## 参见
 
-- {{domxref("element.onbeforescriptexecute")}}
-- {{domxref("document.currentScript")}}
+- {{domxref("Document.beforescriptexecute_event")}}
+- {{domxref("Document.currentScript")}}
