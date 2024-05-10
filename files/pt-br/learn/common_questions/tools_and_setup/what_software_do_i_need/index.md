@@ -240,10 +240,9 @@ Como você já sabe, é necessário um navegador _web_ para visualizar _sites_. 
 
 - [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/)
 - [Google Chrome](https://www.google.com/chrome/)
-- [Microsoft Internet Explorer](http://windows.microsoft.com/en-US/internet-explorer/download-ie)
-- [Apple Safari](http://www.apple.com/safari/)
+- [Apple Safari](https://www.apple.com/safari/)
 
-Se você estiver buscando um grupo espécífico (como usuários de uma plataforma ou de algum país), deve testar seu _site_ em navegadores adicionais, como [Opera](http://www.opera.com/), [Konqueror](http://www.konqueror.org/), ou [UC Browser](http://www.ucweb.com/ucbrowser/).
+Se você estiver buscando um grupo espécífico (como usuários de uma plataforma ou de algum país), deve testar seu _site_ em navegadores adicionais, como [Opera](https://www.opera.com/) ou [Konqueror](https://apps.kde.org/konqueror/).
 
 Mas testar é complicado, pois alguns navegadores apenas funcionam em determinados sistemas operacionais. O _Apple Safari_ funciona no _iOS_ e no _Mac OS_, enquanto o _Internet Explorer_ funciona apenas no _Windows_. É melhor se valer dos benefícios de serviços como o [Browsershots](http://browsershots.org/) ou [Browserstack](http://www.browserstack.com/). O _Browsershots_ fornece capturas de tela de como seu _site_ é visto por vários navegadores. O _Browserstack_ atualmente concede a você total acesso remoto à máquinas virtuais de forma que você pode testar seu site nos ambientes mais comuns. Alternativamente você pode configurar sua própria máquina virtual, mas isso demanda certos conhecimentos específicos. (Se você quiser seguir esse caminho, a _Microsoft_ possui algumas ferramentas para desenvoledores, incluíndo uma máquina virtual pronta para o uso, chamada [modern.ie](https://modern.ie).).
 
