@@ -205,10 +205,9 @@ Comme vous le savez sans doute déjà, vous avez besoin d'un navigateur web pour
 
 - [Mozilla Firefox](https://www.mozilla.org/firefox/new/)
 - [Google Chrome](https://www.google.fr/chrome/browser/)
-- [Microsoft Internet Explorer](http://windows.microsoft.com/fr-fr/internet-explorer/download-ie)
-- [Apple Safari](http://www.apple.com/safari/)
+- [Apple Safari](https://www.apple.com/safari/)
 
-Si votre site s'adresse à un public particulier (par exemple un pays spécifique ou une plate-forme donnée), vous pourrez avoir à tester votre site sur des navigateurs supplémentaires comme [Opera](http://www.opera.com/), [Dolphin](http://dolphin.com/) ou [UC Browser](http://www.ucweb.com/ucbrowser/).
+Si votre site s'adresse à un public particulier (par exemple un pays spécifique ou une plate-forme donnée), vous pourrez avoir à tester votre site sur des navigateurs supplémentaires comme [Opera](https://www.opera.com/) ou [Konqueror](https://apps.kde.org/konqueror/).
 
 Cela se complique quand on réalise que certains navigateurs ne fonctionnent que sur certains systèmes d'exploitation. Apple Safari ne fonctionne que sur iOS et Mac OS, Internet Explorer ne fonctionne que sur Windows, etc. Face à ce problème, mieux vaut tirer parti de services comme [Browsershots](http://browsershots.org/) ou [Browserstack](http://www.browserstack.com/). Browsershots fournit des captures d'écran de votre site, tel qu'il est rendu dans les différents navigateurs. Browserstack vous permet de complètement contrôler des machines virtuelles afin que vous puissiez tester votre site sur les environnements les plus fréquents. Sinon, vous pouvez mettre en place votre propre machine virtuelle mais cela demandera quelques connaissances (si vous choisissez cette option, Microsoft met à disposition, sur [modern.ie](https://modern.ie), une machine virtuelle prête à être utilisée).
 
