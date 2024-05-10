@@ -46,7 +46,7 @@ console.log(up_names[0].tagName); // 显示“INPUT”
 
 ## 备注
 
-`name` 属性只有在（X）HTML 文档中可用。
+`name` 属性只在（X）HTML 文档中可用。
 
 返回的 {{domxref("NodeList")}} 集合包含了*所有*具有给定 `name` 的元素，例如 {{htmlelement("meta")}}、{{htmlelement("object")}} 甚至包括根本不支持 `name` 属性的元素。
 
