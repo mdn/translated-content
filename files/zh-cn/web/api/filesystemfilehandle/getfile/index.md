@@ -28,7 +28,7 @@ getFile()
 ### 异常
 
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : 如果只读模式下的 {{domxref('PermissionStatus.state')}} 不是 `granted` ，则抛出此异常。
+  - : 如果可读（`read`）模式下的 {{domxref('PermissionStatus.state')}} 不是 `granted` ，则抛出此异常。
 - `NotFoundError` {{domxref("DOMException")}}
   - : 如果未找到当前条目，则抛出该异常。
 

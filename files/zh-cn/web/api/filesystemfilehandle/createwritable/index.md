@@ -34,7 +34,7 @@ createWritable(options)
 ### 异常
 
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : 如果句柄在读写模式下的 {{domxref('PermissionStatus.state')}} 不为 `'granted'`，则抛出此异常。
+  - : 如果句柄在读写（`readwrite`）模式下的 {{domxref('PermissionStatus.state')}} 不为 `'granted'`，则抛出此异常。
 - `NotFoundError` {{domxref("DOMException")}}
   - : 如果未找到当前条目，则抛出该异常。
 - `NoModificationAllowedError` {{domxref("DOMException")}}
