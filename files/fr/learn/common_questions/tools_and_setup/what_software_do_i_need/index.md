@@ -317,7 +317,7 @@ Le téléversement des fichiers vers un serveur web est une étape importante da
       <td>Mac OS</td>
       <td>
         <a
-          href="http://cyberduck.de/" rel="external"
+          href="https://cyberduck.de/" rel="external"
           >Cyberduck</a
         >
       </td>
