@@ -17,7 +17,6 @@ l10n:
 
 - `span`
   - : 指定 `<col>` 元素跨越的连续列数。该值必须是大于 0 的正整数。如果不存在，其默认值为 `1`。
- 
 ### 弃用的属性
 
 以下属性已被弃用，不应再使用。下文记录了这些属性，供更新现有代码时参考，也仅供参考。
@@ -51,19 +50,18 @@ l10n:
     > **备注：** 在 `<col>` 元素上设置 `vertical-align` 没有任何作用，因为 `<col>` 没有后代，因此没有元素继承自它。
     >
     > 如果表格没有使用 [`colspan`](/zh-CN/docs/Web/HTML/Element/td#colspan) 属性，请使用 `td:nth-of-type(an+b)` CSS 选择器。将 `a` 设置为零，将 `b` 设置为表格中列的位置，例如，使用 `td:nth-of-type(2) { vertical-align: middle; }` 将第二列单元格垂直居中。
-    > 
+    >
     > 如果表格使用了 [`colspan`](/zh-CN/docs/Web/HTML/Element/td#colspan) 属性，则可以通过组合适当的 CSS 属性选择器（如 `[colspan=n]`）来达到效果，不过这并非易事。
 
 - `width` {{Deprecated_Inline}}
 
   - : 指定每一列的默认宽度。除标准像素值和百分比值外，该属性还可以使用特殊形式 `0*`，这意味着每列的宽度应为容纳该列内容所需的最小宽度。也可以使用相对宽度，如 `5*`。请注意，该属性会覆盖其 {{HTMLElement("colgroup")}} 父元素的指定 [`width`](/zh-CN/docs/Web/HTML/Element/colgroup#width)。请使用 {{cssxref("width")}} CSS 属性代替，因为该属性已被弃用。
- 
 ## 使用说明
 
 - 在没有 `span` 属性的 {{HTMLElement("colgroup")}} 元素中使用 `<col>` 元素。
 - `<col>` 元素不对列进行结构分组，这是 {{HTMLElement("colgroup")}} 元素的作用。
 - 只有数量有限的 CSS 属性会影响 `<col>`：
-  - {{cssxref("background")}}：各种 `background` 属性将为列中的单元格设置背景。由于列的背景色绘制在表格和列组（{{HTMLElement("colgroup")}}）的顶部，但绘制在行组（{{htmlelement("thead")}}、{{htmlelement("tbody")}} 和 {{htmlelement("tfoot")}}）的背景色之后、 行（{{htmlelement("tr")}}）和单个单元格（{{htmlelement("th")}}和 {{htmlelement("td")}}），只有在表格列上方绘制的每个图层都具有透明背景时，应用于表格列的背景才会可见。
+  - {{cssxref("background")}}：各种 `background` 属性将为列中的单元格设置背景。由于列的背景色绘制在表格和列组（{{HTMLElement("colgroup")}}）的顶部，但绘制在行组（{{htmlelement("thead")}}、{{htmlelement("tbody")}} 和 {{htmlelement("tfoot")}}）的背景色之后、行（{{htmlelement("tr")}}）和单个单元格（{{htmlelement("th")}}和 {{htmlelement("td")}}），只有在表格列上方绘制的每个图层都具有透明背景时，应用于表格列的背景才会可见。
   - {{cssxref("border")}}：适用各种 `border` 属性，但前提是 `<table>` 已设置 {{cssxref("border-collapse", "border-collapse: collapse")}}。
   - {{cssxref("visibility")}}：如果某列的值为 `collapse`，则该列的所有单元格都不会渲染，而跨入其他列的单元格则会被剪切。这些列原本占据的空间会被移除。但是，其他列的大小仍按折叠列中的单元格计算。`visibility` 的其他值没有影响。
   - {{cssxref(“width”)}}：`width` 属性定义了列的最小宽度，如同设置了 {{cssxref("min-width")}}。
