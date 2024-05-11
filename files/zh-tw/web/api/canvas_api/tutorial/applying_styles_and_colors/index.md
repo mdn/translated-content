@@ -5,7 +5,7 @@ slug: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}
 
-在[繪畫圖形](/zh-TW/docs//zh-TW/docs/Web/Guide/HTML/Canvas_tutorial/Drawing_shapes)章節中，我們只用了預設的線條與填滿樣式，而在本章，我們將進一步看看所有可用的樣式選項，畫出更吸引人的圖。
+在[繪畫圖形](/zh-TW/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)章節中，我們只用了預設的線條與填滿樣式，而在本章，我們將進一步看看所有可用的樣式選項，畫出更吸引人的圖。
 
 ## 顏色
 
@@ -66,7 +66,7 @@ draw();
 
 結果如下:
 
-{{EmbedLiveSample("fillStyle 範例", 160, 160, "canvas_fillstyle.png")}}
+{{EmbedLiveSample("fillStyle 範例", 160, 160)}}
 
 ### `strokeStyle` 範例
 
@@ -101,7 +101,7 @@ draw();
 
 結果如下:
 
-{{EmbedLiveSample("strokeStyle 範例", "180", "180", "canvas_strokestyle.png")}}
+{{EmbedLiveSample("strokeStyle 範例", "180", "180")}}
 
 ## 透明度
 
@@ -161,7 +161,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("globalAlpha 範例", "180", "180", "canvas_globalalpha.png")}}
+{{EmbedLiveSample("globalAlpha 範例", "180", "180")}}
 
 ### `rgba()` 使用範例
 
@@ -199,7 +199,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("rgba_使用範例", "180", "180", "canvas_rgba.png")}}
+{{EmbedLiveSample("rgba_使用範例", "180", "180")}}
 
 ## 線條樣式
 
@@ -245,7 +245,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("lineWidth 範例", "180", "180", "canvas_linewidth.png")}}
+{{EmbedLiveSample("lineWidth 範例", "180", "180")}}
 
 為了畫出清晰的直線，我們需要了解繪圖路徑是如何產生；如下方圖示，網格代表畫布座標軸，網格所框出的方格則代表螢幕上的像素，第一張圖片填滿了座標(2,1)到(5,5)的紅色區域，而這個紅色區域的邊際正好符合像素間的邊際，所以會產生出清晰的影像。
 
@@ -265,14 +265,12 @@ draw();
 
 這個屬性決定線條端點的樣式，總共有三種樣式可選:
 
-![](canvas_linecap.png)
-
 - `butt`
-  - : 線條端點樣式為方形
+  - : 線條端點樣式為方形。
 - `round`
-  - : 線條端點樣式為圓形
+  - : 線條端點樣式為圓形。
 - `square`
-  - : 增加寬同線條寬度、高線條寬度一半的的方塊於線條端點
+  - : 增加寬同線條寬度、高線條寬度一半的的方塊於線條端點。
 
 下面程式碼會畫出三條線，每條線的 lineCap 值皆不同。然後為了看清差異點，我們加上了兩條淡藍色的輔助線，線條的繪圖起始點和終點都剛好落在輔助線上。
 
@@ -313,15 +311,13 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("lineCap 範例", "180", "180", "canvas_linecap.png")}}
+{{EmbedLiveSample("lineCap 範例", "180", "180")}}
 
 ### `lineJoin` 範例
 
 lineJoin 屬性決定兩個連接區端(如線條、弧形或曲線)如何連接(對於長度為零，亦即終點和控制點為同一點的圖形無效)。
 
 lineJoin 屬性共有三個屬性值如下，其中 miter 為預設值，請注意一點若是兩個連接區段的繪圖方向一致，那代表不會有連接處，所以測定是無效的。
-
-![](canvas_linejoin.png)
 
 - `round`
   - : 代表圓弧型連接樣式。
@@ -358,7 +354,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("lineJoin 範例", "180", "180", "canvas_linejoin.png")}}
+{{EmbedLiveSample("lineJoin 範例", "180", "180")}}
 
 ### `miterLimit` 屬性
 
@@ -439,7 +435,7 @@ document.getElementById("miterLimit").value = document
 draw();
 ```
 
-{{EmbedLiveSample("miterLimit 屬性", "400", "180", "canvas_miterlimit.png")}}
+{{EmbedLiveSample("miterLimit 屬性", "400", "180")}}
 
 ## 漸層
 
@@ -511,7 +507,7 @@ draw();
 
 第二個漸層起始位置(position 0.0)的顏色並沒有被指定，所以下一個漸層顏色會自動被設為起始位置顏色，因此即使我們沒有指定漸層起始位置顏色也沒有關係，就像本範例自動會設定起始位置的顏色等於位置 0.5 的黑色。
 
-{{EmbedLiveSample("createLinearGradient 範例", "180", "180", "canvas_lineargradient.png")}}
+{{EmbedLiveSample("createLinearGradient 範例", "180", "180")}}
 
 ### `createRadialGradient` 範例
 
@@ -566,7 +562,7 @@ draw();
 
 每一個漸層圖案最後一個漸層色都是全透明的，如果希望倒數第二個漸層色能夠平順地轉換到這個最後一個漸層色，那麼兩者應該設定一樣的顏色值，像是程式碼範例中的漸層色 #019F62 其實就等於 rgba(1,159,98,1)。
 
-{{EmbedLiveSample("createRadialGradient 範例", "180", "180", "canvas_radialgradient.png")}}
+{{EmbedLiveSample("createRadialGradient 範例", "180", "180")}}
 
 ## 樣式(Patterns)
 
@@ -603,18 +599,18 @@ var ptrn = ctx.createPattern(img, "repeat");
 
 ### `createPattern` 範例
 
-這個範例中我們把 fillStyle 屬性值存為樣式物件，比較值得注意的是影像 onload 事件處理器，這是為了確保影像載入完成後再進行。
+這個範例中我們把 `fillStyle` 屬性值存為樣式物件，比較值得注意的是影像 `onload` 事件處理器，這是為了確保影像載入完成後再進行。
 
 ```js
 function draw() {
-  var ctx = document.getElementById("canvas").getContext("2d");
+  const ctx = document.getElementById("canvas").getContext("2d");
 
-  // create new image object to use as pattern
-  var img = new Image();
-  img.src = "/files/222/Canvas_createpattern.png";
-  img.onload = function () {
-    // create pattern
-    var ptrn = ctx.createPattern(img, "repeat");
+  // 建立新的、用作樣式的圖像物件
+  const img = new Image();
+  img.src = "canvas_createpattern.png";
+  img.onload = () => {
+    // 建立樣式
+    const ptrn = ctx.createPattern(img, "repeat");
     ctx.fillStyle = ptrn;
     ctx.fillRect(0, 0, 150, 150);
   };
@@ -622,7 +618,7 @@ function draw() {
 ```
 
 ```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
+<canvas id="canvas" width="150" height="150" role="presentation"></canvas>
 ```
 
 ```js hidden
@@ -631,7 +627,7 @@ draw();
 
 結果如下 :
 
-{{EmbedLiveSample("createPattern 範例", "180", "180", "canvas_createpattern.png")}}
+{{EmbedLiveSample("createPattern 範例", "180", "180")}}
 
 ## 陰影
 
@@ -677,6 +673,6 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("文字陰影範例", "180", "100", "shadowed-string.png")}}
+{{EmbedLiveSample("文字陰影範例", "180", "100")}}
 
 {{PreviousNext("Web/Guide/HTML/Canvas_tutorial/Using_images", "Web/Guide/HTML/Canvas_tutorial/Transformations")}}

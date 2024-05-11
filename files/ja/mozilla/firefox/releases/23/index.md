@@ -5,7 +5,7 @@ slug: Mozilla/Firefox/Releases/23
 
 Gecko 23 を搭載した Firefox 23 は米国時間 2013 年 8 月 6 日にリリースされました。このページでは、開発者に影響する Firefox 23 の変更点をまとめています。
 
-## Web 開発者向けの変更点一覧
+## ウェブ開発者向けの変更点一覧
 
 ### セキュリティ
 
@@ -14,8 +14,8 @@ Gecko 23 を搭載した Firefox 23 は米国時間 2013 年 8 月 6 日にリ�
 
 ### 開発者ツール
 
-- 開発者ツールにネットワークパネルを追加しました。これは、Web コンソールの "ネットワーク" ビューより詳細なツールです。
-- Web コンソールを "コンソール" に改名して、セキュリティのエラーや警告をフィルタリングする設定を追加しました。
+- 開発者ツールにネットワークパネルを追加しました。これは、ウェブコンソールの "ネットワーク" ビューより詳細なツールです。
+- ウェブコンソールを "コンソール" に改名して、セキュリティのエラーや警告をフィルタリングする設定を追加しました。
 - ツールボックスの新たな設定項目によって機能の無効化、Light/Dark テーマの切り替え、Chrome/Remote デバッグの有効化が可能になりました。
 
 ### HTML
@@ -37,9 +37,9 @@ Gecko 23 を搭載した Firefox 23 は米国時間 2013 年 8 月 6 日にリ�
 - 接頭辞のない版で {{domxref("Window.requestAnimationFrame")}} のコールバックは、詳細度が低い {{domxref("DOMTimeStamp")}} に代わり {{domxref("DOMHighResTimeStamp")}} を引数として受け取ります ([Firefox バグ 753453](https://bugzil.la/753453))。
 - {{domxref("window.alert")}} および {{domxref("window.confirm")}} のテキスト引数が省略可能になりました ([Firefox バグ 861605](https://bugzil.la/861605))。
 - 仕様書から削除された {{domxref("HTMLMediaElement.initialTime")}} プロパティのサポートを廃止しました ([Firefox バグ 742537](https://bugzil.la/742537))。
-- {{domxref("AnimationEvent.AnimationEvent", "AnimationEvent()")}} コンストラクタを追加しました ([Firefox バグ 848293](https://bugzil.la/848293))。
+- {{domxref("AnimationEvent.AnimationEvent", "AnimationEvent()")}} コンストラクターを追加しました ([Firefox バグ 848293](https://bugzil.la/848293))。
 - {{domxref("AnimationEvent.pseudoElement")}} プロパティを実装しました ([Firefox バグ 848293](https://bugzil.la/848293))。
-- {{domxref("TransitionEvent.TransitionEvent", "TransitionEvent()")}} コンストラクタを追加しました ([Firefox バグ 848291](https://bugzil.la/848291))。
+- {{domxref("TransitionEvent.TransitionEvent", "TransitionEvent()")}} コンストラクターを追加しました ([Firefox バグ 848291](https://bugzil.la/848291))。
 - {{domxref("TransitionEvent.pseudoElement")}} プロパティを実装しました ([Firefox バグ 848291](https://bugzil.la/848291))。
 - 非標準の {{domxref("TransitionEvent.initTransitionEvent()")}} および {{domxref("AnimationEvent.initAnimationEvent()")}} を削除しました ([Firefox バグ 868751](https://bugzil.la/868751))。
 

@@ -5,7 +5,7 @@ slug: Mozilla/Firefox/Releases/39
 
 Firefox 39 は、米国時間 2015 年 6 月 30 日にリリースされました。このページでは、開発者に影響する Firefox 39 の変更点をまとめています。
 
-## Web 開発者向けの変更点一覧
+## ウェブ開発者向けの変更点一覧
 
 ### 開発者ツール
 
@@ -14,9 +14,9 @@ Firefox 39 は、米国時間 2015 年 6 月 30 日にリリースされまし�
 - [WebIDE で、Wi-Fi 経由で Firefox OS デバイスのデバッグが可能になりました](/ja/docs/Tools/WebIDE/Setting_up_runtimes#Connecting_over_WiFi)
 - [WebIDE で Cordova のプロジェクトをサポートしました](/ja/docs/Tools/WebIDE/Working_with_Cordova_apps_in_WebIDE)
 - [アニメーションビューで早戻し、早送り、特定の時間へのジャンプが可能になりました](/ja/docs/Tools/Page_Inspector/How_to/Work_with_animations#Firefox_39)
-- [3 次ベジェ曲線エディタにプリセットを 31 個搭載しました](/ja/docs/Tools/Page_Inspector/How_to/Work_with_animations#Firefox_39)
+- [3 次ベジェ曲線エディターにプリセットを 31 個搭載しました](/ja/docs/Tools/Page_Inspector/How_to/Work_with_animations#Firefox_39)
 - [インスペクタで要素のドラッグ・アンド・ドロップが可能になりました](/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#Drag_and_drop)
-- [Web コンソールのコマンド履歴が、セッションをまたいで維持されるようになりました](/ja/docs/Tools/Web_Console#Command_history)
+- [ウェブコンソールのコマンド履歴が、セッションをまたいで維持されるようになりました](/ja/docs/Tools/Web_Console#Command_history)
 - [コンソールで最後に評価された式の結果を表示する $\_ コマンド](/ja/docs/Tools/Web_Console#Helper_commands)
 - [インライン要素のボックスモデルのハイライト機能を改善](/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_the_box_model#Firefox_39)
 
@@ -36,7 +36,7 @@ Firefox 39 は、米国時間 2015 年 6 月 30 日にリリースされまし�
 
 ### JavaScript
 
-- [`RegExp` コンストラクタ](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp)は第 1 引数に `RegExp`、また第 2 引数に `flags` を指定した場合に、例外が発生しないようになりました ([Firefox バグ 1108949](https://bugzil.la/1108949))。
+- [`RegExp` コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp)は第 1 引数に `RegExp`、また第 2 引数に `flags` を指定した場合に、例外が発生しないようになりました ([Firefox バグ 1108949](https://bugzil.la/1108949))。
 - `Object.prototype.__noSuchMethod__` プロパティは非推奨になり、コンソールに警告を表示します ([Firefox バグ 1140428](https://bugzil.la/1140428) および [platform でのアナウンス](https://groups.google.com/forum/#!topic/mozilla.dev.platform/0EkHgphxUo8)をご覧ください)。
 - {{jsxref("Proxy")}} オブジェクトの実装を、ES6 仕様へさらに準拠するよう更新しました:
 

@@ -2,7 +2,7 @@
 title: API リファレンスの書き方
 slug: MDN/Writing_guidelines/Howto/Write_an_api_reference
 l10n:
-  sourceCommit: 4ae3910612ddfe81b5acf95e58385275380fd87e
+  sourceCommit: cb1c745168764c4646631e7c4289319d782cc83b
 ---
 
 {{MDNSidebar}}
@@ -29,7 +29,7 @@ API の文書化を始める前に、利用可能なものを用意しておく�
 1. 最新の仕様書:
    W3C 勧告であれ、初期の編集者草案であれ、その機能をカバーする（またはカバーすることを指定する）仕様書の利用可能な最新の草案を参照する必要があります。それを見つけるには、通常、ウェブ検索を行います。最新版は、多くの場合、その仕様書のすべての版からリンクされており、 "latest draft" などとリストアップされているはずです。
 2. 最新のウェブブラウザー:
-   これらは、 [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/)/[Chrome Canary](https://www.google.com/intl/en/chrome/canary/) などの実験的/アルファビルドであるべきで、文書化しようとしている機能に対応している可能性がより高いものです。
+   これらは、 [Firefox Nightly](https://www.mozilla.org/ja/firefox/channel/desktop/)/[Chrome Canary](https://www.google.com/intl/en/chrome/canary/) などの実験的/アルファビルドであるべきで、文書化しようとしている機能に対応している可能性がより高いものです。
    これは、特に新しい/実験的な機能を文書化する場合に適切です。
 3. デモ/ブログ記事/その他の情報: できるだけ多くの情報を見つけてください。
 4. 有用な技術連絡先:
@@ -166,7 +166,6 @@ API の概要ページは、 API の役割、最上位のインターフェイ�
 - [https://developer.mozilla.org/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - [https://developer.mozilla.org/ja/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API](/ja/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
 - [https://developer.mozilla.org/ja/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics](/ja/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
-- [https://developer.mozilla.org/ja/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext](/ja/docs/Web/API/Web_Audio_API/Migrating_from_webkitAudioContext)
 - [https://developer.mozilla.org/ja/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API](/ja/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API)
 
 #### 例
@@ -231,12 +230,7 @@ API ランディングページは、 API の規模によって長さが大き�
 
 1. **\\{{APIRef}}**: 各インターフェイスページの最初の行に \\{{APIRef}} マクロを置き、引数に API の名前を入れてください。例えば \\{{APIRef("Web Audio API")}} のようにします。このマクロは、インターフェイスページの左側にリファレンスメニューを作成します。このマクロはインターフェイスページの左側のリファレンスメニューを構築します。そこにはプロパティやメソッド、および [GroupData](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json) マクロで定義されたその他のクイックリンクを含みます（既存の GroupData 項目に API を追加するか、まだリストにない場合は新しい項目を作成するよう誰かに依頼してください）。メニューは、以下のスクリーンショットのようなものになります。
    ![このスクリーンショットは、 APIRef マクロによって生成された、メソッドとプロパティの複数のサブリストを持つ OscillatorNode インターフェイスの垂直ナビゲーションメニューを示します。](apiref-links.png)
-2. **標準化の状況**: 次に標準化の状況を示すバナーを追加します（これらは、 \\{{APIRef}} マクロと同じ行に配置することができます）。
-
-   - \\{{SeeCompatTable}} は実験的な機能の場合（つまり、仕様が勧告候補レベルでない場合）。
-   - \\{{Deprecated_header}}
-   - \\{{Non-standard_header}}
-
+2. **機能状態**: [機能状態を示すバナー](/ja/docs/MDN/Writing_guidelines/Page_structures/Feature_status#feature_status_page_banners) （非推奨、標準外、実験的）が必要に応じて自動的に追加されます。そのために必要なことは、 [browser-compat-data リポジトリーの状態を更新](/ja/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses)することです。
 3. **説明**: インターフェイスページの最初の段落では、インターフェイスの包括的な目的を簡潔に説明する必要があります。追加の説明が必要な場合は、さらに数段落を含めるとよいでしょう。インターフェイスが実質的には辞書である場合、「インターフェイス」の代わりにその用語を使用する必要があります。
 4. **継承図:** [`\{{InheritanceDiagram}}`](https://github.com/mdn/yari/blob/main/kumascript/macros/InheritanceDiagram.ejs) マクロを使用して、このインターフェイスの SVG の継承図を埋め込みます。
 5. **プロパティの一覧、メソッドの一覧**: これらの節は、「プロパティ」と「メソッド」というタイトルで、そのインターフェイスのそれぞれのプロパティ/メソッドのリファレンスページへのリンクと（\\{{domxref}} マクロを使用します）、それぞれのプロパティが何を行うかの説明を提供します。これらは[説明/定義リスト](/ja/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#定義リスト)を使用してマークアップしてください。それぞれの説明は短く簡潔にしてください。可能であれば 1 文で。他のページへのリンクを素早く作成する方法については、「\\{{domxref}} マクロによる他の API 機能の参照」を参照してください。
@@ -279,11 +273,7 @@ API ランディングページは、 API の規模によって長さが大き�
 1. **タイトル**: ページのタイトルは、**インターフェイス名.プロパティ名** とする必要があります。インターフェイス名は大文字で始めなければなりません。 JavaScript ではインターフェイスはオブジェクトのプロトタイプに実装されますが、 [JavaScript リファレンス](/ja/docs/Web/JavaScript/Reference)のようにタイトルに `.prototype.` を含めることはありません。
 2. **\\{{APIRef}}**: 各プロパティページの最初の行に \\{{APIRef}} マクロを置き、引数に API の名前を入れてください。例えば \\{{APIRef("Web Audio API")}} のようにします。このマクロは、プロパティページの左側にリファレンスメニューを作成します。このマクロはプロパティページの左側のリファレンスメニューを構築します。そこにはプロパティやメソッド、および [GroupData](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json) マクロで定義されたその他のクイックリンクを含みます（既存の GroupData 項目に API を追加するか、まだリストにない場合は新しい項目を作成するよう誰かに依頼してください）。メニューは、以下のスクリーンショットのようなものになります。
    ![このスクリーンショットは、 APIRef マクロによって生成された、メソッドとプロパティの複数のサブリストを持つ OscillatorNode インターフェイスの垂直ナビゲーションメニューを示します。](apiref-links.png)
-3. **標準化の状況**: 次に標準化の状況を示すバナーを追加します（これらは、 \\{{APIRef}} マクロと同じ行に配置することができます）。
-
-   - \\{{SeeCompatTable}} は実験的な機能の場合（つまり、仕様が勧告候補レベルでない場合）。
-   - \\{{Deprecated_header}}
-   - \\{{Non-standard_header}}
+3. **機能状態**: [機能状態を示すバナー](/ja/docs/MDN/Writing_guidelines/Page_structures/Feature_status#feature_status_page_banners) （非推奨、標準外、実験的）が必要に応じて自動的に追加されます。そのために必要なことは、 [browser-compat-data リポジトリーの状態を更新](/ja/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses)することです。
 
 4. **説明**: プロパティページの最初の段落には、そのプロパティの包括的な目的を短く簡潔に説明する必要があります。また、追加の説明が必要な場合は、さらにいくつかの段落を書くととよいでしょう。明らかに記述すべき追加情報は、その既定値/初期値、および読み取り専用かどうかです。最初の文の構成は、次のようにしなければなりません。
 
@@ -317,11 +307,7 @@ API ランディングページは、 API の規模によって長さが大き�
 1. **タイトル**: ページのタイトルは、**インターフェイス名.メソッド名()** （最後に 2 つの括弧つき）とする必要がありますが、スラッグ（ページ URL の最後）は括弧をつけてはいけません。また、インターフェイス名は大文字で始めなければなりません。 JavaScript ではインターフェイスはオブジェクトのプロトタイプに実装されますが、 [JavaScript リファレンス](/ja/docs/Web/JavaScript/Reference)のようにタイトルに `.prototype.` を含めることはありません。
 2. **\\{{APIRef}}**: 各メソッドページの最初の行に \\{{APIRef}} マクロを置き、引数に API の名前を入れてください。例えば \\{{APIRef("Web Audio API")}} のようにします。このマクロは、メソッドページの左側にリファレンスメニューを作成します。このマクロはインターフェイスページの左側のリファレンスメニューを構築します。そこにはプロパティやメソッド、および [GroupData](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json) マクロで定義されたその他のクイックリンクを含みます（既存の GroupData 項目に API を追加するか、まだリストにない場合は新しい項目を作成するよう誰かに依頼してください）。メニューは、以下のスクリーンショットのようなものになります。
    ![このスクリーンショットは、 APIRef マクロによって生成された、メソッドとプロパティの複数のサブリストを持つ OscillatorNode インターフェイスの垂直ナビゲーションメニューを示します。](apiref-links.png)
-3. **標準化の状況**: 次に標準化の状況を示すバナーを追加します（これらは、 \\{{APIRef}} マクロと同じ行に配置することができます）。
-
-   - \\{{SeeCompatTable}} は実験的な機能の場合（つまり、仕様が勧告候補レベルでない場合）。
-   - \\{{Deprecated_header}}
-   - \\{{Non-standard_header}}
+3. **機能状態**: [機能状態を示すバナー](/ja/docs/MDN/Writing_guidelines/Page_structures/Feature_status#feature_status_page_banners) （非推奨、標準外、実験的）が必要に応じて自動的に追加されます。そのために必要なことは、 [browser-compat-data リポジトリーの状態を更新](/ja/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses)することです。
 
 4. **説明**: メソッドページの最初の段落には、そのメソッドの包括的な目的を短く簡潔に説明する必要があります。また、追加の説明が必要な場合は、さらにいくつかの段落を書くととよいでしょう。明らかに追加すべき情報は、デフォルト引数の値、そのメソッドが依存する理論、および引数値が行うことです。
 
@@ -338,7 +324,7 @@ API ランディングページは、 API の規模によって長さが大き�
    構文の節には、以下の 3 つの項を入れてください（例として、 {{domxref("SubtleCrypto.sign()")}} を参照してください）。
 
    - "引数": これには、メソッドが受け取る様々な引数を命名・記述した定義リスト（または順不同のリスト）を置く必要があります。オプションの引数の場合、引数名の隣に {{optional_inline}} マクロを置く必要があります。引数がない場合、この項は省略してください。
-   - "返値": これはメソッドが持つ返値を示すもので、 double や論理値のような単純な値でも、別なインターフェイスのオブジェクトのような複雑な値でも構いません。この場合、 \\{{domxref}} マクロを使って、そのインターフェースをカバーする MDN API ページに（存在すれば）リンクすることができます。 メソッドは何も返さない場合がありますが、その場合、返値は "\\{{jsxref('undefined')}}" と記述します（レンダリングすると {{jsxref("undefined")}} と表示されます）。
+   - "返値": これはメソッドが持つ返値を示すもので、 double や論理値のような単純な値でも、別なインターフェイスのオブジェクトのような複雑な値でも構いません。この場合、 \\{{domxref}} マクロを使って、そのインターフェイスをカバーする MDN API ページに（存在すれば）リンクすることができます。 メソッドは何も返さない場合がありますが、その場合、返値は "\\{{jsxref('undefined')}}" と記述します（レンダリングすると {{jsxref("undefined")}} と表示されます）。
    - "例外": これは、そのメソッドを呼び出したときに発生する可能性のあるさまざまな例外と、 その例外を発生させる状況を列挙してください。例外が発生しない場合は、この節は省略してください。
 
 6. **例**: プロパティの典型的な使用方法を示すために、コードのリストを入れてください。すべてのコードを列挙するのではなく、そのうちの興味深い部分のみを並べてください。完全なコードのリストを紹介する場合は。例の全体を含んだ [GitHub](https://github.com/) リポジトリーを参照することができます。また、 [GitHub gh-pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site) の機能を使って作成したライブサンプルにリンクすることもできます（もちろん、クライアント側のコードしか使用していなければですが）。サンプルが視覚的であれば、MDN [ライブサンプル](/ja/docs/MDN/Writing_guidelines/Page_structures/Live_samples) 機能を使ってページ内でライブ実行できるようにすることができます。

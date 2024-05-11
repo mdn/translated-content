@@ -29,7 +29,7 @@ slug: Web/HTML/Element/dt
 
 {{Compat}}
 
-## 相关内容
+## 参见
 
 - {{HTMLElement("dd")}}, {{HTMLElement("dl")}}
 

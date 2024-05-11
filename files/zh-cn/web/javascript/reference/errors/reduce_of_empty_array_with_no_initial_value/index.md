@@ -86,7 +86,7 @@ var name_list2 = Array.prototype.reduce.call(
 // name_list2 == "" when names is empty.
 ```
 
-## 另见
+## 参见
 
 - {{jsxref("Array.prototype.reduce()")}}
 - {{jsxref("Array.prototype.reduceRight()")}}

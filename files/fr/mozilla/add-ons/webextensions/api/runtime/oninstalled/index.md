@@ -20,11 +20,11 @@ browser.runtime.onInstalled.hasListener(listener);
 Les événements ont trois fonctions :
 
 - `addListener(callback)`
-  - : Ajouterun écouteur à cet événement.
+  - : Ajoute un gestionnaire d'événement à cet événement.
 - `removeListener(listener)`
-  - : Arrêtez d'écoutercet événement. L'argument `listener` est l'écouteur à supprimer.
+  - : Arrête d'écouter cet événement. L'argument `listener` est le gestionnaire d'événement à supprimer.
 - `hasListener(listener)`
-  - : Vérifie si un `écouteur` est enregistré pour cet événement. Renvoie `true` s'il écoute, `false` sinon.
+  - : Vérifie si un gestionnaire d'événement `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, `false` sinon.
 
 ## Syntaxe addListener
 
@@ -45,7 +45,7 @@ Les événements ont trois fonctions :
         - `reason`
           - : Une valeur {{WebExtAPIRef('runtime.OnInstalledReason')}}, indiquant la raison pour laquelle cet événement est distribué.
         - `temporary`
-          - : `boolean`. Vrai si le module complémentaire a été installé temporairement. Par exemple, en utilisant la page "about:debugging" dans Firefox ou en utilisant [web-ext run](/fr/Add-ons/WebExtensions/Getting_started_with_web-ext). Sinon faux.
+          - : `boolean`. Vrai si le module complémentaire a été installé temporairement. Par exemple, en utilisant la page "about:debugging" dans Firefox ou en utilisant [web-ext run](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/). Sinon faux.
 
 ## Compatibilité des navigateurs
 
@@ -53,7 +53,7 @@ Les événements ont trois fonctions :
 
 ## Exemples
 
-Lorsque l'extensin est installé, connectez-vous à la raison de l'installon et ouvrez <https://www.reddit.com/r/CatGifs/>:
+Lorsque l'extension est installée, enregistrer la raison de l'installation dans la console et ouvrir <https://www.reddit.com/r/CatGifs/>:
 
 ```js
 function handleInstalled(details) {

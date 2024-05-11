@@ -64,6 +64,6 @@ gl.uniform1f(u_alpha, 0.8);
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{domxref("WebGLRenderingContext.uniformMatrix()")}}

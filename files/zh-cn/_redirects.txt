@@ -1405,7 +1405,7 @@
 /zh-CN/docs/Web/API/Document/ononline	/zh-CN/docs/Web/API/Window/online_event
 /zh-CN/docs/Web/API/Document/onreadystatechange	/en-US/docs/Web/API/Document/readystatechange_event
 /zh-CN/docs/Web/API/Document/onvisibilitychange	/zh-CN/docs/Web/API/Document/visibilitychange_event
-/zh-CN/docs/Web/API/Document/origin	/zh-CN/docs/Web/API/origin
+/zh-CN/docs/Web/API/Document/origin	/zh-CN/docs/Web/API/Window/origin
 /zh-CN/docs/Web/API/Document/registerElement	/zh-CN/docs/Web/API/CustomElementRegistry/define
 /zh-CN/docs/Web/API/Document/selectstart_event	/zh-CN/docs/Web/API/Node/selectstart_event
 /zh-CN/docs/Web/API/Document/touchcancel_event	/zh-CN/docs/Web/API/Element/touchcancel_event
@@ -1877,7 +1877,6 @@
 /zh-CN/docs/Web/API/Window/openDialog	/zh-CN/docs/Web/API/Window
 /zh-CN/docs/Web/API/Window/pageXOffset	/zh-CN/docs/Web/API/Window/scrollX
 /zh-CN/docs/Web/API/Window/pageYOffset	/zh-CN/docs/Web/API/Window/scrollY
-/zh-CN/docs/Web/API/Window/performance	/zh-CN/docs/Web/API/performance_property
 /zh-CN/docs/Web/API/Window/setInterval	/zh-CN/docs/Web/API/setInterval
 /zh-CN/docs/Web/API/Window/setTimeout	/zh-CN/docs/Web/API/setTimeout
 /zh-CN/docs/Web/API/WindowBase64/Base64_encoding_and_decoding	/zh-CN/docs/Glossary/Base64
@@ -1898,11 +1897,11 @@
 /zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval	/zh-CN/docs/Web/API/clearInterval
 /zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout	/zh-CN/docs/Web/API/clearTimeout
 /zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap	/zh-CN/docs/Web/API/createImageBitmap
-/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/crossOriginIsolated	/zh-CN/docs/Web/API/crossOriginIsolated
+/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/crossOriginIsolated	/zh-CN/docs/Web/API/Window/crossOriginIsolated
 /zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/fetch	/zh-CN/docs/Web/API/fetch
-/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/indexedDB	/zh-CN/docs/Web/API/indexedDB
-/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/isSecureContext	/zh-CN/docs/Web/API/isSecureContext
-/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/origin	/zh-CN/docs/Web/API/origin
+/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/indexedDB	/zh-CN/docs/Web/API/Window/indexedDB
+/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/isSecureContext	/zh-CN/docs/Web/API/Window/isSecureContext
+/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/origin	/zh-CN/docs/Web/API/Window/origin
 /zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/queueMicrotask	/zh-CN/docs/Web/API/queueMicrotask
 /zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/setInterval	/zh-CN/docs/Web/API/setInterval
 /zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout	/zh-CN/docs/Web/API/setTimeout
@@ -1952,6 +1951,7 @@
 /zh-CN/docs/Web/API/console/timeStamp	/zh-CN/docs/Web/API/console/timestamp_static
 /zh-CN/docs/Web/API/console/trace	/zh-CN/docs/Web/API/console/trace_static
 /zh-CN/docs/Web/API/console/warn	/zh-CN/docs/Web/API/console/warn_static
+/zh-CN/docs/Web/API/crossOriginIsolated	/zh-CN/docs/Web/API/Window/crossOriginIsolated
 /zh-CN/docs/Web/API/document.URL	/zh-CN/docs/Web/API/Document/URL
 /zh-CN/docs/Web/API/document.activeElement	/zh-CN/docs/Web/API/Document/activeElement
 /zh-CN/docs/Web/API/document.anchors	/zh-CN/docs/Web/API/Document/anchors
@@ -2012,12 +2012,16 @@
 /zh-CN/docs/Web/API/event.stopPropagation	/zh-CN/docs/Web/API/Event/stopPropagation
 /zh-CN/docs/Web/API/event.timeStamp	/zh-CN/docs/Web/API/Event/timeStamp
 /zh-CN/docs/Web/API/event.type	/zh-CN/docs/Web/API/Event/type
+/zh-CN/docs/Web/API/indexedDB	/zh-CN/docs/Web/API/Window/indexedDB
+/zh-CN/docs/Web/API/isSecureContext	/zh-CN/docs/Web/API/Window/isSecureContext
 /zh-CN/docs/Web/API/navigator.doNotTrack	/zh-CN/docs/Web/API/Navigator/doNotTrack
 /zh-CN/docs/Web/API/notification/Using_Web_Notifications	/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API
 /zh-CN/docs/Web/API/notification/onclick	/zh-CN/docs/Web/API/Notification/click_event
 /zh-CN/docs/Web/API/notification/onclose	/zh-CN/docs/Web/API/Notification/close_event
 /zh-CN/docs/Web/API/notification/onerror	/zh-CN/docs/Web/API/Notification/error_event
 /zh-CN/docs/Web/API/notification/onshow	/zh-CN/docs/Web/API/Notification/show_event
+/zh-CN/docs/Web/API/origin	/zh-CN/docs/Web/API/Window/origin
+/zh-CN/docs/Web/API/performance_property	/zh-CN/docs/Web/API/Window/performance
 /zh-CN/docs/Web/API/range.getBoundingClientRect	/zh-CN/docs/Web/API/Range/getBoundingClientRect
 /zh-CN/docs/Web/API/range.startOffset	/zh-CN/docs/Web/API/Range/startOffset
 /zh-CN/docs/Web/API/range.surroundContents	/zh-CN/docs/Web/API/Range/surroundContents
@@ -2052,6 +2056,7 @@
 /zh-CN/docs/Web/CSS/-moz-outline-radius-bottomright	/zh-CN/docs/Web/CSS/outline
 /zh-CN/docs/Web/CSS/-moz-outline-radius-topleft	/zh-CN/docs/Web/CSS/outline
 /zh-CN/docs/Web/CSS/-moz-outline-radius-topright	/zh-CN/docs/Web/CSS/outline
+/zh-CN/docs/Web/CSS/-webkit-mask-attachment	/zh-CN/docs/Web/CSS
 /zh-CN/docs/Web/CSS/:blank空白伪类	/zh-CN/docs/Web/CSS/:blank
 /zh-CN/docs/Web/CSS/:host()	/zh-CN/docs/Web/CSS/:host_function
 /zh-CN/docs/Web/CSS/:matches	/zh-CN/docs/Web/CSS/:is
@@ -2382,6 +2387,7 @@
 /zh-CN/docs/Web/HTML/Element/basefont	/zh-CN/docs/Web/CSS/CSS_fonts
 /zh-CN/docs/Web/HTML/Element/bgsound	/zh-CN/docs/Web/HTML/Element/audio
 /zh-CN/docs/Web/HTML/Element/content	/zh-CN/docs/Web/HTML/Element/slot
+/zh-CN/docs/Web/HTML/Element/image	/zh-CN/docs/Web/HTML/Element/img
 /zh-CN/docs/Web/HTML/Element/video/timeupdate_event	/zh-CN/docs/Web/API/HTMLMediaElement/timeupdate_event
 /zh-CN/docs/Web/HTML/Element/视频	/zh-CN/docs/Web/HTML/Element/video
 /zh-CN/docs/Web/HTML/Element/选项	/zh-CN/docs/Web/HTML/Element/option
@@ -2389,6 +2395,7 @@
 /zh-CN/docs/Web/HTML/Forms/How_to_build_custom_form_widgets	/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls
 /zh-CN/docs/Web/HTML/Forms/Sending_forms_through_JavaScript	/zh-CN/docs/Learn/Forms/Sending_forms_through_JavaScript
 /zh-CN/docs/Web/HTML/Forms/表单入门	/zh-CN/docs/Learn/Forms/Your_first_form
+/zh-CN/docs/Web/HTML/Global_attributes/contextmenu	/zh-CN/docs/Web/HTML/Element/menu
 /zh-CN/docs/Web/HTML/Global_attributes/摩缺	/zh-CN/docs/Web/HTML/Global_attributes/accesskey
 /zh-CN/docs/Web/HTML/Index	/zh-CN/docs/Web/HTML
 /zh-CN/docs/Web/HTML/Inline_elemente	/zh-CN/docs/Glossary/Inline-level_content

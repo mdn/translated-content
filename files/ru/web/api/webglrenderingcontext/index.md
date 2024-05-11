@@ -299,6 +299,6 @@ These methods manage WebGL extensions:
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref("HTMLCanvasElement")}}

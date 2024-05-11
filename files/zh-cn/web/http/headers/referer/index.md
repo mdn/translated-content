@@ -45,7 +45,7 @@ Referer: https://developer.mozilla.org/zh-CN/docs/Web/JavaScript
 
 {{Compat}}
 
-## 相关内容
+## 参见
 
 - [HTTP referer on Wikipedia](https://zh.wikipedia.org/wiki/HTTP_referer)
 - {{HTTPHeader("Referrer-Policy")}}

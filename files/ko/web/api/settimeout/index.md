@@ -1,44 +1,78 @@
 ---
-title: setTimeout()
+title: setTimeout() 전역 함수
+short-title: setTimeout()
 slug: Web/API/setTimeout
+l10n:
+  sourceCommit: f7caa8a517867a37571e6bfb40c60b40081610fd
 ---
 
 {{APIRef("HTML DOM")}}
 
-전역 **`setTimeout()`** 메서드는 만료된 후 함수나 지정한 코드 조각을 실행하는 타이머를 설정합니다.
+전역 **`setTimeout()`** 메서드는 만료된 후 함수나 지정한 코드 조각을 한 번 실행하는 타이머를 설정합니다.
 
 ## 구문
 
-```js
-var timeoutID = setTimeout(function[, delay, arg1, arg2, ...]);
-var timeoutID = setTimeout(function[, delay]);
-var timeoutID = setTimeout(code[, delay]);
+```js-nolint
+setTimeout(code)
+setTimeout(code, delay)
+
+setTimeout(functionRef)
+setTimeout(functionRef, delay)
+setTimeout(functionRef, delay, param1)
+setTimeout(functionRef, delay, param1, param2)
+setTimeout(functionRef, delay, param1, param2, /* … ,*/ paramN)
 ```
 
 ### 매개변수
 
-- `function`
+- `functionRef`
   - : 타이머가 만료된 뒤 실행할 {{jsxref("function")}}입니다.
 - `code`
   - : 함수 대신 문자열을 지정하는 대체 구문으로, 타이머가 만료될 때 코드로 컴파일 후 실행합니다. {{jsxref("Global_Objects/eval", "eval()")}}이 보안 취약점인 것과 같은 이유로 **사용을 권장하지 않습니다**.
 - `delay` {{optional_inline}}
-  - : 주어진 함수 또는 코드를 실행하기 전에 기다릴 밀리초 단위 시간입니다. 생략하거나 0을 지정할 경우 "즉시", 더 정확히는 다음 이벤트 사이클에 실행한다는 뜻입니다. 그러나 실제 딜레이는 의도했던 것보다 더 길 수 있습니다. 아래의 [딜레이가 지정한 값보다 더 긴 이유](#딜레이가_지정한_값보다_더_긴_이유)를 참고하세요.
-- `arg1, ..., argN` {{optional_inline}}
-  - : `function`에 전달할 추가 매개변수입니다.
+  - : 주어진 함수 또는 코드를 실행하기 전에 기다릴 밀리초 단위 시간입니다. 생략하거나 0을 지정할 경우 "즉시", 더 정확히는 다음 이벤트 사이클에 실행한다는 뜻입니다. 그러나 실제 지연 시간는 의도했던 것보다 더 길 수 있습니다. 아래의 [지연 시간이 지정한 값보다 더 긴 이유](#지연_시간이_지정한_값보다_더_긴_이유)를 참고하세요.
+- `param1`, …, `paramN` {{optional_inline}}
+  - : `functionRef`에 전달할 추가 매개변수입니다.
 
 ### 반환 값
 
-반환하는 `timeoutID`는 양의 정수로서 `setTimeout()`이 생성한 타이머를 식별할 때 사용합니다. 이 값을 {{domxref("clearTimeout()")}}에 전달하면 타이머를 취소할 수 있습니다.
+반환하는 `timeoutID`는 양의 정수로서 `setTimeout()`이 생성한 타이머를 식별할 때 사용합니다. 이 값을 {{domxref("clearTimeout()")}}에 전달하면 타임아웃을 취소할 수 있습니다.
 
-같은 객체({{domxref("window")}}, 워커 등)에서 반복해 호출하는 `setTimeout()` 또는 {{domxref("setInterval()")}} 메서드는 절대 같은 `timeoutID`를 사용하지 않습니다. 그러나 다른 객체끼리는 다른 ID 풀을 사용합니다.
+같은 객체(창이나 워커)에서 반복해 호출하는 `setTimeout()` 또는 {{domxref("setInterval()")}} 메서드는 절대 같은 `timeoutID`를 사용하지 않습니다. 그러나 다른 객체끼리는 다른 ID 풀을 사용합니다.
 
 ## 설명
 
-{{domxref("clearTimeout()")}}으로 타이머를 취소할 수 있습니다.
+{{domxref("clearTimeout()")}}으로 타임아웃을 취소할 수 있습니다.
 
 어떤 함수를 몇 밀리초마다 반복적으로 호출해야 할 필요가 있으면 {{domxref("setInterval()")}}을 사용하세요.
 
-### 비동기 함수로 작업하기
+### 숫자 아닌 지연 시간은 조용히 숫자로 변환됨
+
+`setTimeout()`의 [지연 시간(_delay_)](#delay)에 숫자가 아닌 값을 제공하면 암시적인 [타입 변환](/ko/docs/Glossary/Type_coercion)을 통해 조용히 숫자로 바꿉니다. 예를 들어, 아래 코드와 같이 지연 시간 매개변수에 숫자 `1000` 대신 문자열 `"1000"`을 잘못 사용하더라도 정상적으로 동작합니다. 코드 실행 시 문자열이 숫자 `1000`으로 변환되므로, 콜백은 1초 후에 실행됩니다.
+
+```js example-bad
+setTimeout(() => {
+  console.log("1초 지연.");
+}, "1000");
+```
+
+하지만 대부분의 경우, 암시적 타입 변환은 예상하지 못한 결과로 이어집니다. 예컨대 아래 코드의 문자열 `"1초"`는 결과적으로 숫자 `0`으로 변환되므로 콜백이 지연 없이 바로 실행됩니다.
+
+```js example-bad
+setTimeout(() => {
+  console.log("1초 지연.");
+}, "1초");
+```
+
+그러니 지연 시간에 문자열을 사용하지 마세요. 항상 숫자를 지정하세요.
+
+```js example-good
+setTimeout(() => {
+  console.log("1초 지연.");
+}, 1000);
+```
+
+### 비동기 함수와 작업하기
 
 `setTimeout()`은 비동기 함수로서, 함수 스택의 다른 함수 호출을 막지 않습니다. 달리 말하자면, `setTimeout()`을 사용해서 다음 함수 호출을 "일시정지" 할 수는 없습니다.
 
@@ -68,8 +102,7 @@ setTimeout(() => {
 
 ### "this" 문제
 
-`setTimeout()`에 메서드를 지정할 경우, 내부의 `this` 값이 예상과 다를 수도 있습니다. 이 문제에 대한 일반적인 설명은 [JavaScript
-참고서](/ko/docs/Web/JavaScript/Reference/Operators/this#객체의_메서드로서)가 자세히 설명합니다.
+`setTimeout()`에 메서드를 지정할 경우, 내부의 `this` 값이 예상과 다를 수도 있습니다. [JavaScript 참고서](/ko/docs/Web/JavaScript/Reference/Operators/this#객체의_메서드로서)에서 자세한 설명을 참고하세요.
 
 `setTimeout()`이 실행하는 코드는 `setTimeout()`을 호출했던 함수와는 다른 실행 맥락에서 호출됩니다. 호출 함수의 `this` 키워드 값을 설정하는 일반적인 규칙이 여기서도 적용되며, `this`를 호출 시 지정하지도 않았고 `bind`로 바인딩하지도 않은 경우 기본 값인 `window` (또는 `global`) 객체를 가리키게 됩니다. 따라서 `setTimeout()`을 호출한 함수의 `this` 값과는 다르게 되는 것입니다.
 
@@ -92,7 +125,7 @@ setTimeout(myArray.myMethod, 1.0 * 1000); // 1초 후 "[object Window]" 기록
 setTimeout(myArray.myMethod, 1.5 * 1000, "1"); // 1.5초 후 "undefined" 기록
 ```
 
-`myArray.myMethod`를 `setTimeout`에 전달했고, 타이머 만료 후 호출 시점에 `this`가 따로 설정되지 않으므로 기본 값인 `window` 객체를 가리키게 돼 정상적인 동작을 하지 않습니다.
+`myArray.myMethod`를 `setTimeout`에 전달했고, 타임아웃 만료 후 호출 시점에 `this`가 따로 설정되지 않으므로 기본 값인 `window` 객체를 가리키게 돼 정상적인 동작을 하지 않습니다.
 
 {{jsxref("Array.forEach()", "forEach()")}}와 {{jsxref("Array.reduce()", "reduce()")}} 등 {{jsxref("Array")}}의 메서드와는 달리 `setTimeout()`에는 `thisArg`를 설정할 수 있는 방법 또한 존재하지 않습니다. 그리고 `call`을 사용해 `this`를 설정하는 것 역시 작동하지 않습니다.
 
@@ -161,20 +194,28 @@ setTimeout(function () {
 
 `setTimeout()`에 전달한 문자열은 전역 맥락에서 평가되므로, `setTimeout()` 호출 시점에 접근 가능했던 로컬 심볼은 문자열 평가 시점에서는 접근 불가능합니다.
 
-### 딜레이가 지정한 값보다 더 긴 이유
+### 지연 시간이 지정한 값보다 더 긴 이유
 
-지정한 타임아웃 값보다 실행에 긴 시간이 걸리는 이유에는 여러가지가 있습니다. 여기서는 가장 흔한 상황을 설명하겠습니다.
+여러가지 이유로 지정한 지연 시간보다 실제 실행에 걸린 시간이 더 길어질 수 있습니다. 여기서는 가장 흔한 상황들을 설명하겠습니다.
 
 #### 중첩 타임아웃
 
-[HTML 표준](https://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#timers)에 명시된 것과 같이, 브라우저는 `setTimeout` 호출이 5번 이상 중첩된 경우 4ms의 최소 타임아웃을 강제합니다.
+[HTML 표준](https://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#timers)에 명시된 것과 같이, 브라우저는 `setTimeout` 호출이 5번 이상 중첩된 경우 4ms의 최소 지연 시간을 강제합니다.
 
-다음 예제에서 이 동작을 확인할 수 있습니다. 딜레이로 `0`을 지정한 `setTimeout`을 여러 번 중첩하고, 각각의 콜백이 실제로 호출되기까지의 딜레이를 기록하는데, 첫 네 번 까지는 대략 0ms에 근접하지만, 그 이후로는 4ms에 근접함을 볼 수 있습니다.
+다음 예제에서 이 동작을 확인할 수 있습니다. 지연 시간으로 `0`을 지정한 `setTimeout`을 여러 번 중첩하고, 각각의 콜백이 실제로 호출되기까지의 지연 시간을 기록하는데, 첫 네 번 까지는 대략 0ms에 근접하지만 그 이후로는 4ms에 근접함을 볼 수 있습니다.
 
 ```html
-<button id="run">시작</button>
-<pre>이전        현재         실제 딜레이</pre>
-<div id="log"></div>
+<button id="run">실행</button>
+<table>
+  <thead>
+    <tr>
+      <th>이전</th>
+      <th>현재</th>
+      <th>실제 지연</th>
+    </tr>
+  </thead>
+  <tbody id="log"></tbody>
+</table>
 ```
 
 ```js
@@ -182,62 +223,72 @@ let last = 0;
 let iterations = 10;
 
 function timeout() {
-  // log the time of this call
+  // 이 호출의 시간 기록
   logline(new Date().getMilliseconds());
-
-  // if we are not finished, schedule the next call
+  // 끝나지 않았으면 다음 호출 예약
   if (iterations-- > 0) {
     setTimeout(timeout, 0);
   }
 }
 
 function run() {
-  // clear the log
+  // 기록 제거
   const log = document.querySelector("#log");
   while (log.lastElementChild) {
     log.removeChild(log.lastElementChild);
   }
 
-  // initialize iteration count and the starting timestamp
+  // 반복 횟수와 시작 타임스탬프 기록
   iterations = 10;
   last = new Date().getMilliseconds();
-
-  // start timer
+  // 타임아웃 시작
   setTimeout(timeout, 0);
 }
 
-function pad(number) {
-  return number.toString().padStart(3, "0");
-}
-
 function logline(now) {
-  // log the last timestamp, the new timestamp, and the difference
-  const newLine = document.createElement("pre");
-  newLine.textContent = `${pad(last)}         ${pad(now)}          ${
-    now - last
-  }`;
-  document.getElementById("log").appendChild(newLine);
+  // 이전 타임스탬프, 새로운 타임스탬프, 두 시간의 간격 기록
+  const tableBody = document.getElementById("log");
+  const logRow = tableBody.insertRow();
+  logRow.insertCell().textContent = last;
+  logRow.insertCell().textContent = now;
+  logRow.insertCell().textContent = now - last;
   last = now;
 }
 
 document.querySelector("#run").addEventListener("click", run);
 ```
 
+```css hidden
+* {
+  font-family: monospace;
+}
+th,
+td {
+  padding: 0 10px 0 10px;
+  text-align: center;
+  border: 1px solid;
+}
+table {
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+```
+
 {{EmbedLiveSample("중첩_타임아웃", 100, 420)}}
 
 #### 비활성 탭의 타임아웃
 
-백그라운드 탭으로 인한 부하(와 그로 인한 배터리 사용량)를 경감하기 위해, 브라우저는 비활성 탭에서의 최소 딜레이에 최소 값을 강제합니다. 또한 Web Audio API {{domxref("AudioContext")}}를 사용해 소리를 재생 중일 땐 이 최소 값 정책이 면제될 수도 있습니다.
+백그라운드 탭으로 인한 부하(와 그로 인한 배터리 사용량)를 경감하기 위해, 브라우저는 비활성 탭에서의 지연 시간에 최소 값을 강제합니다. 또한 Web Audio API {{domxref("AudioContext")}}를 사용해 소리를 재생 중일 땐 이 최소 값 정책이 면제될 수도 있습니다.
 
 정확한 동작은 브라우저에 따라 다릅니다.
 
-- Firefox Desktop과 Chrome 모두 비활성 탭에 최소 1초의 타임아웃을 강제합니다.
-- Firefox Android에서는 15분의 최소 타임아웃이 존재하고, 탭 전체를 언로드하는 경우도 있습니다.
-- Firefox는 비활성 탭이 {{domxref("AudioContext")}}를 포함하는 경우 최소 타임아웃을 강제하지 않습니다.
+- Firefox Desktop과 Chrome 모두 비활성 탭에 최소 1초의 지연 시간을 강제합니다.
+- Firefox Android에서는 15분의 최소 지연 시간이 존재하고, 탭 전체를 언로드하는 경우도 있습니다.
+- Firefox는 비활성 탭이 {{domxref("AudioContext")}}를 포함하는 경우 최소 지연 시간을 강제하지 않습니다.
 
 #### 추적 스크립트 스로틀링
 
-Firefox는 추적 스크립트로 인식한 스크립트에 대해 추가 스로틀링을 적용합니다. 전역 탭의 경우 스로틀링의 최소 딜레이는 여전히 4ms지만, 백그라운드 탭에서는 페이지의 첫 로드 이후 30초가 지나면 10,000ms, 또는 10초의 스로틀링을 적용합니다.
+Firefox는 추적 스크립트로 인식한 스크립트에 대해 추가 스로틀링을 적용합니다. 전역 탭의 경우 스로틀링의 최소 지연 시간은 여전히 4ms지만, 백그라운드 탭에서는 페이지의 첫 로드 이후 30초가 지나면 10,000ms, 또는 10초의 스로틀링을 적용합니다.
 
 [추적 방어](https://wiki.mozilla.org/Security/Tracking_protection) 문서에서 자세한 정보를 알아보세요.
 
@@ -260,25 +311,25 @@ setTimeout 완료
 foo 호출
 ```
 
-이렇게 되는 이유는, `setTimeout`을 0의 딜레이로 호출하기는 했으나, 이는 지정한 함수를 대기열에 넣고 가능한 바로 다음 기회에 실행하라는 것과 같으며 즉시 호출하라는 것은 아니기 때문입니다. 대기열의 함수를 실행하려면 현재 실행 중인 코드가 반드시 먼저 완료돼야 하므로, 실제 실행 결과는 예상하던 것과 다를 수 있습니다.
+이렇게 되는 이유는, `setTimeout`을 0의 지연 시간으로 호출하기는 했으나, 이는 지정한 함수를 대기열에 넣고 가능한 바로 다음 기회에 실행하라는 것과 같으며 즉시 호출하라는 것은 아니기 때문입니다. 대기열의 함수를 실행하려면 현재 실행 중인 코드가 반드시 먼저 완료돼야 하므로, 실제 실행 결과는 예상하던 것과 다를 수 있습니다.
 
 #### 페이지 로드 중 타임아웃 지연
 
 Firefox는 현재 탭이 로딩 중일 땐 `setTimeout()` 타이머 실행을 지연시킵니다. 실제 실행은 메인 스레드가 대기 상태에 들어가기 전까지({{domxref("window.requestIdleCallback()")}}과 비슷), 또는 `load` 이벤트가 발생하기 전까지 미뤄집니다.
 
-### WebExtension 백그라운드 페이지와 타이머
+### WebExtension 백그라운드 페이지와 타이머들
 
 [WebExtensions](/ko/docs/Mozilla/Add-ons/WebExtensions)에서는 `setTimeout()`을 신뢰할 수 없습니다. 확장 개발자는 `setTimeout()` 대신 [`alarms`](/ko/docs/Mozilla/Add-ons/WebExtensions/API/alarms) API를 사용해야 합니다.
 
-### 최대 딜레이
+### 최대 지연 시간
 
-Internet Explorer, Chrome, Safari, Firefox를 포함한 브라우저는 딜레이를 내부적으로 32비트 부호 있는 정수 값으로 저장합니다. 따라서 2,147,483,647ms(약 24.8일)보다 큰 값을 지정하면 정수 오버플로가 발생해서 타이머가 즉시 만료됩니다.
+브라우저들은 내부적으로 지연 시간을 32비트 부호 있는 정수 값으로 저장합니다. 따라서 2,147,483,647ms(약 24.8일)보다 큰 값을 지정하면 정수 오버플로가 발생해서 타임아웃이 즉시 만료됩니다.
 
 ## 예제
 
 ### 타임아웃 설정 및 해제
 
-다음 예제는 웹 페이지에 두 개의 간단한 버튼을 추가하고, 각각 `setTimeout()`과 `clearTimeout()`을 실행하도록 합니다. 첫 번째 버튼을 누르면 2초 뒤 메시지가 나타나는 타이머를 설정하고, `clearTimeout()`에서 사용할 수 있는 타임아웃 ID를 저장합니다. 두 번째 버튼을 누르면 첫 번째 버튼으로 설정한 타이머를 해제할 수 있습니다.
+다음 예제는 웹 페이지에 두 개의 간단한 버튼을 추가하고, 각각 `setTimeout()`과 `clearTimeout()`을 실행하도록 합니다. 첫 번째 버튼을 누르면 2초 뒤 메시지가 나타나는 타임아웃을 설정하고, `clearTimeout()`에서 사용할 수 있는 타임아웃 ID를 저장합니다. 두 번째 버튼을 누르면 첫 번째 버튼으로 설정한 타임아웃을 해제할 수 있습니다.
 
 #### HTML
 
@@ -320,7 +371,7 @@ function clearMessage() {
 
 [`clearTimeout()` 예제](/ko/docs/Web/API/clearTimeout#example)도 확인해보세요.
 
-## 명세
+## 명세서
 
 {{Specifications}}
 

@@ -39,7 +39,7 @@ slug: Mozilla/Firefox/Releases/96
 - {{domxref("navigator.canShare()")}} を Android でサポートしました。特定のターゲットに対して {{domxref("navigator.share()")}} が成功するかをコードから確認できます。
   この機能は、デスクトップオペレーティングシステムでは設定項目で制御されています
   ([Firefox バグ 1666203](https://bugzil.la/1666203))。
-- [Web Locks API](/ja/docs/Web/API/Web_Locks_API) をデフォルトで有効にしました。複数のタブや worker で実行されている Web アプリが、使用するリソースを調整できます ([Firefox バグ 1740044](https://bugzil.la/1740044))。
+- [Web Locks API](/ja/docs/Web/API/Web_Locks_API) をデフォルトで有効にしました。複数のタブや worker で実行されているウェブアプリが、使用するリソースを調整できます ([Firefox バグ 1740044](https://bugzil.la/1740044))。
 
 #### Canvas
 

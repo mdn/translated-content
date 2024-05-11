@@ -23,14 +23,14 @@ GET /example.html HTTP/1.1
 Host: example.com
 ```
 
-리다이렉트는 필수 헤더를 갖습니다({{HTTPHeader("Location")}}):
+리다이렉트는 필수 헤더를 갖습니다({{HTTPHeader("Location")}}).
 
 ```http
 302 Found
 Location: /NewPage.html
 ```
 
-대표적인 헤더의 집합:
+대표적인 헤더의 집합은 아래와 같습니다.
 
 ```http
 304 Not Modified

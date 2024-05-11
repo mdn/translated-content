@@ -56,7 +56,7 @@ gl.drawArrays(gl.POINTS, 0, 8);
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{domxref("WebGLRenderingContext.drawElements()")}}
 - {{domxref("ANGLE_instanced_arrays.drawArraysInstancedANGLE()", "ext.drawArraysInstancedANGLE()")}}

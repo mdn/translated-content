@@ -1,6 +1,8 @@
 ---
 title: "<img> : l'élément d'image embarquée"
 slug: Web/HTML/Element/img
+l10n:
+  sourceCommit: 9b73bdea5458572f77a401596fef9a06ed8bba1b
 ---
 
 {{HTMLSidebar}}
@@ -17,8 +19,8 @@ L'exemple qui précède illustre l'utilisation de l'élément `<img>`&nbsp;:
 Il existe de nombreux autres attributs&nbsp;:
 
 - Le contrôle du [référent](/fr/docs/Web/HTTP/Headers/Referrer-Policy) et de la politique de gestion des ressources d'origines multiples ([CORS](/fr/docs/Glossary/CORS)) avec les attributs `crossorigin` et `referrerpolicy`.
-- `width` et `height` qui permettent de définir la taille intrinsèque de l'image, lui permettant ainsi de prendre l'espace nécessaire avant son chargement (évitant ainsi d'avoir des décalages indésirables lors du chargement de la page).
-- Des indications <i lang="en">responsives</i> avec `sizes` et `srcset` (voir également l'élément [`<picture>`](/fr/docs/Web/HTML/Element/picture) et [le tutoriel sur les images adaptatives](/fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)).
+- [`width`](#width) et [`height`](#height) qui permettent de définir la taille intrinsèque de l'image, lui permettant ainsi de prendre l'espace nécessaire avant son chargement (évitant ainsi d'avoir des décalages indésirables lors du chargement de la page).
+- Des indications <i lang="en">responsives</i> avec [`sizes`](#sizes) et [`srcset`](#srcset) (voir également l'élément [`<picture>`](/fr/docs/Web/HTML/Element/picture) et [le tutoriel sur les images adaptatives](/fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)).
 
 ## Formats d'image pris en charge
 
@@ -42,7 +44,7 @@ SVG reste le format recommandé pour les images qui doivent être dessinées ave
 
 ## Erreur de chargement d'une image
 
-Si une erreur se produit lors du chargement ou du rendu de l'image et qu'un gestionnaire d'évènement [`onerror`](/fr/docs/Web/HTML/Global_attributes#onerror) a été défini pour intercepter l'évènement [`error`](/fr/docs/Web/API/Element/error_event), le gestionnaire sera appelé. Cela peut arriver pour plusieurs raisons&nbsp;:
+Si une erreur se produit lors du chargement ou du rendu de l'image et qu'un gestionnaire d'évènement [`onerror`](/fr/docs/Web/HTML/Global_attributes#onerror) a été défini pour intercepter l'évènement [`error`](/fr/docs/Web/API/HTMLElement/error_event), le gestionnaire sera appelé. Cela peut arriver pour plusieurs raisons&nbsp;:
 
 - L'attribut `src` est vide (`""`) ou absent (`null` pour le DOM).
 - L'URL utilisée pour l'attribut `src` est la même que celle de la page courante.
@@ -98,9 +100,26 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
     - `auto`
       - : La valeur par défaut qui indique qu'il n'y a pas de préférence. C'est le navigateur qui décide alors ce qui est le mieux.
 
+- `elementtiming`
+
+  - : Indique que l'image doit être observée par l'API [`PerformanceElementTiming`](/fr/docs/Web/API/PerformanceElementTiming). La vleur fournie devient un identifiant pour l'élément observé. Voir aussi la page de l'atttribut [`elementtiming`](/fr/docs/Web/HTML/Attributes/elementtiming).
+
+- `fetchpriority`
+
+  - : Fournit une indication de la priorité relative à utiliser poua la récupération de l'image. Les valeurs autorisées sont&nbsp;:
+
+    - `high`
+      - : Indique une priorité plus élevée que les autres images pour la récupération de la ressource.
+    - `low`
+      - : Indique une priorité plus faible que les autres images pour la récupération de la ressource.
+    - `auto`
+      - : La valeur par défaut. Le navigateur utilise une heuristique pour déterminer automatiquement la priorité.
+
 - `height`
 
   - : La hauteur intrinsèque de l'image, exprimée en pixels. Cette valeur doit être un nombre entier, sans unité.
+
+    > **Note :** Inclure `height` et [`width`](#width) permet au navigateur de calculer les proportions de l'image avant son chargement. Ces proportions sont utilisées pour réserver l'espace nécessaire afin d'afficher l'image et de réduire voire d'empêcher tout décalage à l'affichage, permettant ainsi une navigation plus agréable et de meilleures performances.
 
 - `ismap`
 
@@ -108,7 +127,7 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
 
     > **Note :** Cet attribut est uniquement autorisé lorsque l'élément `<img>` est un descendant d'un élément [`<a>`](/fr/docs/Web/HTML/Element/a) disposant d'un attribut `href` valide. Cela fournit une alternative lorsque la navigation se fait sans dispositif de pointage.
 
-- `loading` {{experimental_inline}}
+- `loading`
 
   - : Indique comment le navigateur devrait charger l'image&nbsp;:
 
@@ -119,6 +138,7 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
       - : Le chargement de l'image est retardé jusqu'à ce que celle-ci soit située à une certaine distance, définie par le navigateur, de la zone d'affichage. L'idée est d'éviter de consommer de la bande passante et des ressources réseaux avant d'être relativement certain que l'image est nécessaire. Pour la plupart des cas d'usage, cela permet d'améliorer les performances.
 
       > **Note :** Le retardement du chargement est uniquement activé lorsque JavaScript est activé dans le navigateur. Il s'agit d'une mesure pour limiter le pistage. En effet, si les scripts sont désactivés pour le navigateur et que le chargement retardé est actif, le pistage d'un utilisateur en fonction de sa position sur la page serait toujours possible (via des images placées à intervalle régulier sur la page).
+      > **Note :** Les images avec `loading` qui vaut `lazy` ne seront jamais chargées si elles n'ont pas d'intersection avec une partie visible d'un élément. Fournir les attributs `width` et `height` pour les iamges chargées à la demande règle ce problème et est [recommandé par la spécification](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element).
 
 - `referrerpolicy`
 
@@ -129,7 +149,7 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
     - `no-referrer-when-downgrade`
       - : L'en-tête [`Referer`](/fr/docs/Web/HTTP/Headers/Referer) ne sera pas envoyé aux origines sans TLS/HTTPS.
     - `origin`:
-      - : Le référent envoyé sera limité à l'origine de la page référente, c'est-à-dire qu'il ne contiendra que le [schéma, l'hôte et le port](/fr/docs/Learn/Common_questions/What_is_a_URL).
+      - : Le référent envoyé sera limité à l'origine de la page référente, c'est-à-dire qu'il ne contiendra que le [schéma, l'hôte et le port](/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL).
     - `origin-when-cross-origin`
       - : Le référent envoyé aux autres origines sera limité au schéma, à l'hôte et au port. La navigation vers la même origine contiendra le chemin.
     - `same-origin`
@@ -145,7 +165,7 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
 
   - : Une ou plusieurs chaînes de caractères séparées par des virgules et qui indiquent un ensemble de tailles de source possible. Chaque taille de source consiste en&nbsp;:
 
-    1. Une [condition de média](/fr/docs/Web/CSS/Media_Queries/Using_media_queries). Celle-ci doit être absente pour le dernier élément de la liste.
+    1. Une [condition de média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries). Celle-ci doit être absente pour le dernier élément de la liste.
     2. Une valeur de taille de source.
 
     La condition de média décrit les propriétés de _la zone d'affichage_ et pas de _l'image_. Ainsi, `(max-height: 500px) 1000px` proposera d'utiliser une source de largeur 1000px, si _la zone d'affichage_ n'est pas plus haute que 500px.
@@ -180,7 +200,7 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
 
   - : L'URL partielle (commençant par `#`) d'une [carte d'image](/fr/docs/Web/HTML/Element/map) associée à l'élément.
 
-    > **Note :** Cet attribut est invalide si l'élément `<img>` est à l'intérieur d'un élément [`<a>`](/fr/docs/Web/HTML/Element/a) ou d'un élément [`<button>`](/fr/docs/Web/HTML/Element/Button).
+    > **Note :** Cet attribut est invalide si l'élément `<img>` est à l'intérieur d'un élément [`<a>`](/fr/docs/Web/HTML/Element/a) ou d'un élément [`<button>`](/fr/docs/Web/HTML/Element/button).
 
 ### Attributs dépréciés
 
@@ -206,10 +226,6 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
 - `hspace` {{deprecated_inline}}
 
   - : Le nombre de pixels d'espace blanc à droite et à gauche de l'image. La propriété [`margin`](/fr/docs/Web/CSS/margin) doit être utilisée à la place.
-
-- `intrinsicsize` {{deprecated_inline}}
-
-  - : Cet attribut indique au navigateur d'ignorer la taille intrinsèque de l'image pour prendre en compte celle fournie par l'attribut.
 
 - `longdesc` {{deprecated_inline}}
 
@@ -312,6 +328,14 @@ Lorsque l'attribut `alt` n'est pas présent sur une image, certains lecteurs d'�
 - [MDN Comprendre les règles WCAG 1.1](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
 - [Comprendre les critères de succès 1.1.1 | W3C Comprendre WCAG 2.0 (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html)
 
+### Identifier le contenu SVG comme image
+
+En raison [d'un bug VoiceOver](https://webkit.org/b/216364), ce dernier n'annonce pas correctement les images SVG comme étant des images. Il faut inclure [`role="img"`](/fr/docs/Web/Accessibility/ARIA/Roles/img_role) pour les éléments `<img>` basés sur des fichiers sources SVG afin de s'assurer que les outils d'assistance annoncent le contenu SVG comme une image.
+
+```html
+<img src="mdn.svg" alt="MDN" role="img" />
+```
+
 ### L'attribut `title`
 
 L'attribut [`title`](/fr/docs/Web/HTML/Global_attributes/title) n'est pas un remplaçant acceptable pour l'attribut `alt`. Il vaut également mieux éviter de dupliquer la valeur de l'attribut `alt` dans un attribut `title` pour la même image. En effet, un tel doublon entraînera les lecteurs d'écran à annoncer deux fois la description, ce qui pourra être une source de confusion.
@@ -328,10 +352,10 @@ La valeur de l'attribut `title` est généralement affichée via une bulle d'inf
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories">Catégories de contenu</a>
+        <a href="/fr/docs/Web/HTML/Content_categories">Catégories de contenu</a>
       </th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_de_flux">Contenu de flux</a>, <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_phrasé">contenu phrasé</a>, <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_intégré">contenu intégré</a>, <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_tangible">contenu tangible</a>. Si l'élément utilise l'attribut <code>usemap</code>, il fait également partie de la catégorie de contenu interactif.
+        <a href="/fr/docs/Web/HTML/Content_categories#contenu_de_flux">Contenu de flux</a>, <a href="/fr/docs/Web/HTML/Content_categories#contenu_phrasé">contenu phrasé</a>, <a href="/fr/docs/Web/HTML/Content_categories#contenu_intégré">contenu intégré</a>, <a href="/fr/docs/Web/HTML/Content_categories#contenu_tangible">contenu tangible</a>. Si l'élément utilise l'attribut <code>usemap</code>, il fait également partie de la catégorie de contenu interactif.
       </td>
     </tr>
     <tr>
@@ -350,7 +374,7 @@ La valeur de l'attribut `title` est généralement affichée via une bulle d'inf
       <th scope="row">Rôle ARIA implicite</th>
       <td>
         <ul>
-          <li>Avec un attribut <code>alt</code> non vide ou aucun attribut <code>alt</code>&nbsp;: <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/Role_Img">img</a></code></li>
+          <li>Avec un attribut <code>alt</code> non vide ou aucun attribut <code>alt</code>&nbsp;: <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/img_role">img</a></code></li>
           <li>Avec un attribut <code>alt</code> vide&nbsp;: <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">pas de rôle correspondant</a></li>
         </ul>
       </td>
@@ -372,7 +396,7 @@ La valeur de l'attribut `title` est généralement affichée via une bulle d'inf
               <li><a href="https://w3c.github.io/aria/#scrollbar"><code>scrollbar</code></a></li>
               <li><a href="https://w3c.github.io/aria/#separator"><code>separator</code></a></li>
               <li><a href="https://w3c.github.io/aria/#slider"><code>slider</code></a></li>
-              <li><a href="/fr/docs/Web/Accessibility/ARIA/Roles/Switch_role"><code>switch</code></a></li>
+              <li><a href="/fr/docs/Web/Accessibility/ARIA/Roles/switch_role"><code>switch</code></a></li>
               <li><a href="/fr/docs/Web/Accessibility/ARIA/Roles/Tab_Role"><code>tab</code></a></li>
               <li><a href="https://w3c.github.io/aria/#treeitem"><code>treeitem</code></a></li>
             </ul>
@@ -410,5 +434,6 @@ La valeur de l'attribut `title` est généralement affichée via une bulle d'inf
   - [`object-fit`](/fr/docs/Web/CSS/object-fit),
   - [`object-position`](/fr/docs/Web/CSS/object-position),
   - [`image-orientation`](/fr/docs/Web/CSS/image-orientation),
-  - [`image-rendering`](/fr/docs/Web/CSS/Image-rendering),
+  - [`image-rendering`](/fr/docs/Web/CSS/image-rendering),
   - [`image-resolution`](/fr/docs/Web/CSS/image-resolution).
+- L'interface du DOM qui correspond à cet élément [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement)

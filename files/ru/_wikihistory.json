@@ -1667,10 +1667,6 @@
     "modified": "2020-09-02T11:05:36.300Z",
     "contributors": ["bogpok"]
   },
-  "Learn/Front-end_web_developer": {
-    "modified": "2020-10-26T19:26:16.101Z",
-    "contributors": ["Villian79", "bogpok", "Menma"]
-  },
   "Learn/Getting_started_with_the_web": {
     "modified": "2020-07-17T07:11:41.531Z",
     "contributors": [
@@ -3157,25 +3153,8 @@
     ]
   },
   "MDN/Community/Contributing": {
-    "modified": "2020-01-05T13:03:37.237Z",
-    "contributors": [
-      "Ivan961",
-      "lesha.boklag",
-      "seliverstova",
-      "wbamberg",
-      "scrum",
-      "lavr1986uxa",
-      "BychekRU",
-      "dstereo",
-      "Daniil",
-      "Unregistered45",
-      "Aleksej",
-      "0leg",
-      "teoli",
-      "mitabuba",
-      "ilya",
-      "Mars"
-    ]
+    "modified": "2019-01-17T00:00:52.853Z",
+    "contributors": ["wbamberg", "warsan"]
   },
   "MDN/Community/Contributing/Getting_started": {
     "modified": "2020-10-30T09:48:31.108Z",
@@ -7354,9 +7333,17 @@
     "modified": "2020-10-15T22:12:17.873Z",
     "contributors": ["Mitrr", "ShantyHoz"]
   },
+  "Web/API/Window/origin": {
+    "modified": "2019-03-23T22:40:35.301Z",
+    "contributors": ["vyushin"]
+  },
   "Web/API/Window/parent": {
     "modified": "2019-03-23T22:52:14.067Z",
     "contributors": ["skip405", "olehrgf"]
+  },
+  "Web/API/Window/performance": {
+    "modified": "2019-03-18T21:36:16.802Z",
+    "contributors": ["Demjan"]
   },
   "Web/API/Window/popstate_event": {
     "modified": "2019-04-26T08:34:41.629Z",
@@ -7790,14 +7777,6 @@
   "Web/API/fetch": {
     "modified": "2020-10-15T22:06:28.491Z",
     "contributors": ["BadLame", "dasha_hshr"]
-  },
-  "Web/API/origin": {
-    "modified": "2019-03-23T22:40:35.301Z",
-    "contributors": ["vyushin"]
-  },
-  "Web/API/performance_property": {
-    "modified": "2019-03-18T21:36:16.802Z",
-    "contributors": ["Demjan"]
   },
   "Web/API/setInterval": {
     "modified": "2020-11-18T12:13:20.493Z",
@@ -10154,10 +10133,6 @@
   "Web/HTML/Element/html": {
     "modified": "2020-10-15T21:31:50.271Z",
     "contributors": ["JCodeg", "PopovDaniil", "Aleksej", "karskiy"]
-  },
-  "Web/HTML/Element/image": {
-    "modified": "2019-03-18T20:41:47.756Z",
-    "contributors": ["Dozorengel", "KishiTako"]
   },
   "Web/HTML/Element/img": {
     "modified": "2020-10-15T21:32:27.907Z",
@@ -15451,10 +15426,6 @@
     "modified": "2019-03-23T23:20:13.909Z",
     "contributors": ["Solj", "Vasiliy.Poddubny", "BychekRU", "kscarfone"]
   },
-  "Web/SVG/Attribute/Core": {
-    "modified": "2020-10-15T22:34:58.576Z",
-    "contributors": ["osipov_s"]
-  },
   "Web/SVG/Attribute/additive": {
     "modified": "2019-03-23T22:07:14.939Z",
     "contributors": ["Solj", "warsan", "Vasiliy.Poddubny"]
@@ -15995,8 +15966,12 @@
     "modified": "2019-06-12T07:08:20.267Z",
     "contributors": ["deadblackclover", "vkorniiko"]
   },
-  "conflicting/MDN/Community/Contributing": {
-    "modified": "2019-01-17T00:00:52.853Z",
-    "contributors": ["wbamberg", "warsan"]
+  "conflicting/Web/HTML/Element/img": {
+    "modified": "2019-03-18T20:41:47.756Z",
+    "contributors": ["Dozorengel", "KishiTako"]
+  },
+  "conflicting/Web/SVG/Attribute": {
+    "modified": "2020-10-15T22:34:58.576Z",
+    "contributors": ["osipov_s"]
   }
 }

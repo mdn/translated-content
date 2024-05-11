@@ -2,7 +2,7 @@
 title: <input type="submit">
 slug: Web/HTML/Element/input/submit
 l10n:
-  sourceCommit: f6d04a43eadf5ab26a3488942dfb318b58234eb5
+  sourceCommit: 56f8b4b735a0c02f958121e29f0ec7adc890e7d1
 ---
 
 {{HTMLSidebar}}
@@ -11,7 +11,7 @@ l10n:
 
 ## 値
 
-`<input type="submit">` 要素の [`value`](/ja/docs/Web/HTML/Element/input#value) 属性は、ボタンのラベルとして表示される文字列を示します。ボタンはその他の真の値を持ちません。
+`<input type="submit">` 要素の [`value`](/ja/docs/Web/HTML/Element/input#value) 属性は、ボタンのラベルとして表示される文字列を示します。ボタンはその他の真の値を持ちません。 `value` はボタンの{{glossary("accessible description", "アクセシブル説明")}}を指定します。
 
 ### value 属性の設定
 
@@ -23,7 +23,7 @@ l10n:
 
 ### value 属性の省略
 
-`value` を指定しなかった場合、ボタンにはユーザーエージェントによって選ばれた既定のラベルが表示されます。このラベルは「送信」または「クエリを送信」などのものです。次のものはこのブラウザーにおける送信ボタンの既定のラベルです。
+`value` を指定しなかった場合、ボタンにはユーザーエージェントによって選ばれた既定のラベルが表示されます。このラベルは「送信」または「クエリーを送信」などのものです。次のものはこのブラウザーにおける送信ボタンの既定のラベルです。
 
 ```html
 <input type="submit" />
@@ -61,7 +61,7 @@ l10n:
 文字列で、フォームのデータを送信するときに使用する HTTP メソッドを示します。この値は所有者であるフォームの [`method`](/ja/docs/Web/HTML/Element/form#method) を上書きします。許可されている値は次の通りです。
 
 - `get`
-  - : URL は `formaction` または [`action`](/ja/docs/Web/HTML/Element/form#action) 属性で指定された URL に疑問符 ("?") を追加し、 `formenctype` または [`enctype`](/ja/docs/Web/HTML/Element/form#enctype) 属性で指定された方法でエンコードされたフォームのデータが続くものになります。この URL は HTTP の {{HTTPMethod("get")}} リクエストを用いてサーバーに送信されます。このメソッドは ASCII 文字のみを含む単純なフォームでうまく動作し、副作用はありません。これが既定値です。
+  - : URL は `formaction` または [`action`](/ja/docs/Web/HTML/Element/form#action) 属性で指定された URL に疑問符 ("?") を追加し、 `formenctype` または [`enctype`](/ja/docs/Web/HTML/Element/form#enctype) 属性で指定された方法でエンコードされたフォームのデータが続くものになります。この URL は HTTP の {{HTTPMethod("get")}} リクエストを用いてサーバーに送信されます。このメソッドは {{Glossary("ASCII")}} 文字のみを含む単純なフォームでうまく動作し、副作用はありません。これが既定値です。
 - `post`
   - : フォームのデータは、 `formaction` または [`action`](/ja/docs/Web/HTML/Element/form#action) で指定された URL に HTTP の {{HTTPMethod("post")}} メソッドを用いて送信されるリクエストの本文に含められます。このメソッドは複雑なデータやファイルの添付に対応しています。
 - `dialog`
@@ -126,7 +126,7 @@ l10n:
 
 キーボードショートカットは、アクセスキーやキーボード相当物とも呼ばれ、ユーザーがキーボードのキーまたはキーの組み合わせを使ってボタンを発生させることができます。送信ボタンにキーボードショートカットを追加するには、それが意味をなす他の {{HTMLElement("input")}} と同じように、[`accesskey`](/ja/docs/Web/HTML/Global_attributes/accesskey) グローバル属性を使用してください。
 
-この例では、 <kbd>s</kbd> がアクセスキーとして指定されています（<kbd>s</kbd> と、あなたのブラウザー/OS の組み合わせに応じた特定の修飾キーを押す必要があります）。ユーザーエージェント自身のキーボードショートカットとの競合を避けるために、ホストコンピュータ上の他のショートカットとは異なる修飾キーがアクセスキーに使用されます。詳しくは [`accesskey`](/ja/docs/Web/HTML/Global_attributes/accesskey) を参照してください。
+この例では、 <kbd>s</kbd> がアクセスキーとして指定されています（<kbd>s</kbd> と、あなたのブラウザー/OS の組み合わせに応じた特定の修飾キーを押す必要があります）。ユーザーエージェント自身のキーボードショートカットとの競合を避けるために、ホストコンピューター上の他のショートカットとは異なる修飾キーがアクセスキーに使用されます。詳しくは [`accesskey`](/ja/docs/Web/HTML/Global_attributes/accesskey) を参照してください。
 
 以下は、前回の例に <kbd>s</kbd> アクセスキーを追加した例です。
 

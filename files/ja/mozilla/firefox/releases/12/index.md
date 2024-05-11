@@ -5,7 +5,7 @@ slug: Mozilla/Firefox/Releases/12
 
 Firefox 12 は 米国時間 2012 年 4 月 24 日にリリースされました。この記事は開発者に影響がある Firefox 12 での変更点をまとめています。
 
-## Web 開発者向けの変更点一覧
+## ウェブ開発者向けの変更点一覧
 
 ### HTML
 
@@ -23,14 +23,14 @@ Firefox 12 は 米国時間 2012 年 4 月 24 日にリリースされました�
 ### DOM
 
 - [DOMParser](/ja/docs/DOM/DOMParser) が HTML ドキュメントのソース解析に対応しました。
-- {{ domxref("XMLHttpRequest") }} で `timeout` プロパティと {{ domxref("XMLHttpRequestEventTarget") }} インタフェース 上の `ontimeout` イベントハンドラである "timeout" イベントを用いた、タイムアウトがサポートされました。
+- {{ domxref("XMLHttpRequest") }} で `timeout` プロパティと {{ domxref("XMLHttpRequestEventTarget") }} インターフェイス 上の `ontimeout` イベントハンドラである "timeout" イベントを用いた、タイムアウトがサポートされました。
 - {{ domxref("XMLHttpRequest") }} が[`data:` URI](/ja/docs/data_URIs) から読み込めるようになりました。
 - {{ domxref("XMLHttpRequest") }} で巨大なデータをダウンロードしているとき、`responseType` に "moz-blob" を設定していると、 これまでに受信したデータのすべてを含む {{ domxref("Blob") }} であるレスポンスを参照できる progress イベントハンドラが定期的に呼び出されるようになりました。これによって、progress ハンドラでデータのすべてが到着するまで待つことなしにデータを処理し始められます。
 - Gecko が Android 上で [マルチタッチ](/ja/docs/DOM/Touch_events) をサポートしました。今までは一度に一つのタッチ操作しか認識しかできませんでした。
-- エディタ (フォーム) 上で IME を使った文字入力を行っている場合、従来は確定後に `input` イベントが発生していましたが、Firefox 12 では、IME で編集中の文字列が変更されたことを示す `compositionupdate` イベントの直後にも `input` イベントが発生するようになりました。これにより、`input` イベントハンドラを使って、日本語入力中にも未確定文字列を含めたフォームの入力内容を取得することが可能となりました。
+- エディター (フォーム) 上で IME を使った文字入力を行っている場合、従来は確定後に `input` イベントが発生していましたが、Firefox 12 では、IME で編集中の文字列が変更されたことを示す `compositionupdate` イベントの直後にも `input` イベントが発生するようになりました。これにより、`input` イベントハンドラを使って、日本語入力中にも未確定文字列を含めたフォームの入力内容を取得することが可能となりました。
 - DOM 4 仕様で定義されている {{ domxref("DOMError") }} が実装されました。
 - {{ domxref("Document.createNodeIterator()") }} メソッドが DOM 4 仕様に適合するように更新されました。これにより、`whatToShow` および `filter` 引数がオプションになり、非標準の 4 番目の引数である `entityReferenceExpansion` が削除されます。
-- {{ domxref("Blob") }} インタフェースの `slice()` メソッドは符号付き 64 ビット整数の範囲外の `start` の値と `end` の値を正しく受け取れないバグによる影響を受けていましたが、この問題は修正されました。`
+- {{ domxref("Blob") }} インターフェイスの `slice()` メソッドは符号付き 64 ビット整数の範囲外の `start` の値と `end` の値を正しく受け取れないバグによる影響を受けていましたが、この問題は修正されました。`
 - {{ domxref("element.getBoundingClientRect()") }} メソッドが要素の矩形の境界を算出するときに [CSS transforms](/ja/docs/CSS/Using_CSS_transforms) の効果を考慮するようになりました。
 
 #### 新しい WebAPI
@@ -42,7 +42,7 @@ Firefox 12 は 米国時間 2012 年 4 月 24 日にリリースされました�
 ### SVG
 
 - {{ domxref("SVGTests") }} DOM API に対応しました。([Firefox バグ 607854](https://bugzil.la/607854))
-- {{ domxref("SVGStringList") }} DOM インタフェースが非標準の `length` プロパティに対応しました。([Firefox バグ 711958](https://bugzil.la/711958))
+- {{ domxref("SVGStringList") }} DOM インターフェイスが非標準の `length` プロパティに対応しました。([Firefox バグ 711958](https://bugzil.la/711958))
 
 ### MathML
 
@@ -58,9 +58,9 @@ Firefox 12 は 米国時間 2012 年 4 月 24 日にリリースされました�
 - [Web Console](/ja/docs/Tools/Web_Console) がコンソールが開いていない状態の場合にエラーメッセージと {{ domxref("console.log()") }} を用いて追加したログエントリをキャッシュし、コンソールが開いたときにそれらを表示するようになりました。
 - [3D view](/ja/docs/Tools/Page_Inspector/3D_view) で "r" キーを押すことにより、ズームレベル、移動、回転をリセットできるようになりました。
 - [3D view](/ja/docs/Tools/Page_Inspector/3D_view) でノードを選択した後に "x" キーを押すことにより、そのノードを隠すことができるようになりました。
-- [ソースエディタ](/ja/docs/Tools/Using_the_Source_Editor) にいくつかの新しい編集機能とキーボードショートカットが追加されました。詳細は、[ソースエディタの利用](/ja/docs/Tools/Using_the_Source_Editor) を参照してください。
+- [ソースエディター](/ja/docs/Tools/Using_the_Source_Editor) にいくつかの新しい編集機能とキーボードショートカットが追加されました。詳細は、[ソースエディターの利用](/ja/docs/Tools/Using_the_Source_Editor) を参照してください。
 
-Mozilla は人気のアドオン [Firebug](http://getfirebug.com/) に依存するだけではなく、自身の Web 開発者ツールの統合作業を進めています。これらのツールについてのさらなる情報および Firefox での Web 開発を支援する外部リソースの一覧は、[Web developer tools](/ja/docs/Tools) にあります。
+Mozilla は人気のアドオン [Firebug](http://getfirebug.com/) に依存するだけではなく、自身のウェブ開発者ツールの統合作業を進めています。これらのツールについてのさらなる情報および Firefox でのウェブ開発を支援する外部リソースの一覧は、[Web developer tools](/ja/docs/Tools) にあります。
 
 ### その他の変更点
 
@@ -91,9 +91,9 @@ Mozilla は人気のアドオン [Firebug](http://getfirebug.com/) に依存す�
 
 - The [`PRUint64`](/ja/docs/PRUint64) data type was incorrectly essentially identical to [`PRint64`](/ja/docs/PRInt64) when used with XPConnect. This has been fixed.
 
-### インタフェースの変更
+### インターフェイスの変更
 
-- `nsIScreen_MOZILLA_2_0_BRANCH` インタフェースが `nsIScreen` へ統合されました。このインタフェースで定義されていた API (画面の最低輝度の調節) はこれまで文書化されていませんでしたが、これを機に文書化されました。
+- `nsIScreen_MOZILLA_2_0_BRANCH` インターフェイスが `nsIScreen` へ統合されました。このインターフェイスで定義されていた API (画面の最低輝度の調節) はこれまで文書化されていませんでしたが、これを機に文書化されました。
 - The `nsIScriptError2` interface has been merged into `nsIScriptError`.
 - `nsIDownloadManager.addDownload` is now handled asynchronously rather than synchronously.
 - The `imgIContainerObserver.frameChanged` method now receives as its first parameter an `imgIRequest` object identifying the corresponding request.

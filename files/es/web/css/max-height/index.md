@@ -29,9 +29,9 @@ max-height: <length> | <percentage>
 ### Ejemplos
 
 ```
-table { max-width: 75%; }
+table { max-height: 75%; }
 
-form { max-width: none; }
+form { max-height: none; }
 ```
 
 ### Notas

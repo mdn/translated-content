@@ -34,7 +34,7 @@ function handleMessage(request, sender, sendResponse) {
 browser.runtime.onMessage.addListener(handleMessage);
 ```
 
-## ブラウザの対応状況
+## ブラウザーの対応状況
 
 {{Compat}}
 

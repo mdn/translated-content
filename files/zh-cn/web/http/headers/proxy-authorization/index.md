@@ -40,7 +40,7 @@ Proxy-Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 
 {{Specifications}}
 
-## 相关内容
+## 参见
 
 - [HTTP authentication](/zh-CN/docs/Web/HTTP/Authentication)
 - {{HTTPHeader("Proxy-Authenticate")}}

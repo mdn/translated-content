@@ -57,7 +57,7 @@ Usually, a `foreignObject` will be used in conjunction with the {{SVGElement("sw
 
 - [条件処理属性](/ja/docs/Web/SVG/Attribute#Conditional_processing_attributes)
 - [コア属性](/ja/docs/Web/SVG/Attribute#Core_attributes)
-- [グラフィカルイベント属性](/ja/docs/Web/SVG/Attribute#Graphical_event_attributes)
+- [グラフィックイベント属性](/ja/docs/Web/SVG/Attribute#Graphical_event_attributes)
 - [プレゼンテーション属性](/ja/docs/Web/SVG/Attribute#Presentation_attributes)
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}

@@ -9,65 +9,6 @@ slug: Web/HTML/Element/footer
 
 {{EmbedInteractiveExample("pages/tabbed/footer.html", "tabbed-standard")}}
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/zh-TW/docs/Web/HTML/Content_categories">內容類型</a>
-      </th>
-      <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容">流內容</a>、捫及內容。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">允許的內容</th>
-      <td>
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容">流內容</a>，但不得包含 <code>&#x3C;footer></code> 或 {{HTMLElement("header")}} 的後代元素。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">標籤省略</th>
-      <td>{{no_tag_omission}}</td>
-    </tr>
-    <tr>
-      <th scope="row">允許的父元素</th>
-      <td>
-        任何接受
-        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容">流內容</a> 的元素。請注意，<code>&#x3C;footer></code> 元素不得是
-        {{HTMLElement("address")}}、{{HTMLElement("header")}}
-        或另一個 <code>&#x3C;footer></code> 元素的後代。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">隱含 ARIA 角色</th>
-      <td>
-        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/Contentinfo_role">contentinfo</a>，或者如果是
-        <a href="/zh-TW/docs/Web/HTML/Element/article">article<
-        /a>、<a href="/zh-TW/docs/Web/HTML/Element/aside">aside<
-        /a>、<a href="/zh-TW/docs/Web/HTML/Element/main">main<
-        /a>、<a href="/zh-TW/docs/Web/HTML/Element/nav">nav<
-        /a> 或 <a href="/zh-TW/docs/Web/HTML/Element/section">section<
-        /a> 元素的後代，或具有 <code>role=<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/Article_Role">article</a></code>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/Complementary_role">complementary<
-        /a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/Main_role">main<
-        /a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/Navigation_Role">navigation<
-        /a> 或 <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/Region_role">region<
-        /a> 的元素，則隱含為 <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/Generic_role">generic</a>。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">允許的 ARIA 角色</th>
-      <td>
-        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a> 或
-        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">DOM 介面</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
-  </tbody>
-</table>
-
 ## 屬性
 
 此元素僅包含[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
@@ -108,11 +49,71 @@ footer {
 
 {{EmbedLiveSample('範例')}}
 
-## 可訪問性注意事項
+## 無障礙議題
 
 在 Safari 13 之前的版本中，`contentinfo` [標誌角色](/zh-TW/docs/Learn/Accessibility/WAI-ARIA_basics#路標地標)未能被 [VoiceOver](https://help.apple.com/voiceover/info/guide/) 正確顯示。如果需要支持舊版 Safari 瀏覽器，請在 `footer` 元素中添加 `role="contentinfo"`，以確保該標誌能夠被正確顯示。
 
 - 相關：[WebKit Bugzilla: 146930 – AX: HTML native elements (header, footer, main, aside, nav) should work the same as ARIA landmarks, sometimes they don't](https://webkit.org/b/146930)
+
+## 技術摘要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/zh-TW/docs/Web/HTML/Content_categories">內容類型</a>
+      </th>
+      <td>
+        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容">流內容</a>、捫及內容。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允許的內容</th>
+      <td>
+        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容">流內容</a>，但不得包含 <code>&#x3C;footer></code> 或 {{HTMLElement("header")}} 的後代元素。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">標籤省略</th>
+      <td>不允許，開始和結束標籤都是必須的。</td>
+    </tr>
+    <tr>
+      <th scope="row">允許的父元素</th>
+      <td>
+        任何接受
+        <a href="/zh-TW/docs/Web/HTML/Content_categories#流內容">流內容</a> 的元素。請注意，<code>&#x3C;footer></code> 元素不得是
+        {{HTMLElement("address")}}、{{HTMLElement("header")}}
+        或另一個 <code>&#x3C;footer></code> 元素的後代。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">隱含 ARIA 角色</th>
+      <td>
+        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/Contentinfo_role">contentinfo</a>，或者如果是
+        <a href="/zh-TW/docs/Web/HTML/Element/article">article</a
+        >、<a href="/zh-TW/docs/Web/HTML/Element/aside">aside</a
+        >、<a href="/zh-TW/docs/Web/HTML/Element/main">main</a
+        >、<a href="/zh-TW/docs/Web/HTML/Element/nav">nav</a
+        > 或 <a href="/zh-TW/docs/Web/HTML/Element/section">section</a
+        > 元素的後代，或具有 <code>role=<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/Article_Role">article<a></code>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/Complementary_role">complementary</a
+        >、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/Main_role">main</a
+        >、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/Navigation_Role">navigation</a
+        > 或 <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/Region_role">region</a> 的元素，則隱含為 <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/Generic_role">generic</a>。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允許的 ARIA 角色</th>
+      <td>
+        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a> 或
+        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">DOM 介面</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 規範
 

@@ -1,6 +1,9 @@
 ---
-title: MediaStream.clone()
+title: "MediaStream: clone() メソッド"
+short-title: clone()
 slug: Web/API/MediaStream/clone
+l10n:
+  sourceCommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
 ---
 
 {{APIRef("Media Capture and Streams")}}
@@ -9,8 +12,8 @@ slug: Web/API/MediaStream/clone
 
 ## 構文
 
-```js
-var stream = MediaStream.clone();
+```js-nolint
+clone()
 ```
 
 ### 引数

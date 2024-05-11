@@ -7,7 +7,7 @@ slug: Web/API/Document/domain
 
 {{domxref("Document")}} インターフェイスの **`domain`** プロパティは、[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)で使用される現在の文書の{{glossary("origin", "オリジン")}}のうち、ドメインの部分を取得または設定します。
 
-このプロパティが正常に設定されると、オリジンのポート番号の部分も {{jsxref("null")}} に設定されます。
+このプロパティが正常に設定されると、オリジンのポート番号の部分も [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) に設定されます。
 
 ## 構文
 

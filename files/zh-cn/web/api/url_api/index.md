@@ -98,7 +98,7 @@ function fillTableWithParameters(tbl) {
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - [Fetch API](/zh-CN/docs/Web/API/Fetch_API)
 - CSS {{cssxref("&lt;url&gt;")}} type

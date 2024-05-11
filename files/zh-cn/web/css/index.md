@@ -20,14 +20,6 @@ CSS 是**开放 Web** 的核心语言之一，并根据 [W3C 规范](https://www
 - CSS 参考
   - : 我们针对资深 Web 开发者编写的[详细参考手册](/zh-CN/docs/Web/CSS/Reference)，描述了 CSS 的各个属性与概念。
 
-> **标注：**
->
-> #### 想要成为一名前端工程师？
->
-> 我们汇总了一门课程，其中包含你实现成为前端工程师目标所需要的所有基本信息。
->
-> [**点击开始**](/zh-CN/docs/Learn/Front-end_web_developer)
-
 ## 教程
 
 我们的 [CSS 学习区](/zh-CN/docs/Learn/CSS) 以多模块、零基础为特色进行 CSS 的教学——这也就意味着你不需要任何知识基础。

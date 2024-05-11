@@ -6,7 +6,7 @@ l10n:
 ---
 
 <section id="Quick_links">
-  {{ListSubpagesForSidebar("Web/Accessibility", 1)}}
+  {{ListSubpagesForSidebar("/ja/docs/Web/Accessibility", 1)}}
 </section>
 
 ウェブ開発におけるアクセシビリティとは、何らかの理由により能力に制約がある場合でも、可能な限り多くの人々がウェブサイトを使用できるようにすることを意味します。この記事では、アクセシビリティを考慮したコンテンツを開発するための情報を提供します。

@@ -17,7 +17,7 @@ slug: Games/Tutorials/2D_breakout_game_Phaser
 
 ## 강의 내용
 
-모든 강의 내용과 우리가 함께 만드는 [MDN 벽돌깨기 게임](http://breakout.enclavegames.com/lesson10.html)의 다른 버전들은 [GitHub](https://github.com/end3r/Canvas-gamedev-workshop)에서 찾을 수 있습니다.:
+모든 강의 내용과 우리가 함께 만드는 [MDN 벽돌깨기 게임](http://breakout.enclavegames.com/lesson10.html)의 다른 버전들은 [GitHub](https://github.com/end3r/Canvas-gamedev-workshop)에서 찾을 수 있습니다.
 
 1. [캔버스 생성과 그리기](/ko/docs/Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/캔버스_생성과_그리기)
 2. [공 움직이기](/ko/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball)

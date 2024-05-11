@@ -105,7 +105,7 @@ Object.defineProperty(p, "name", {
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{jsxref("Proxy")}}
 - {{jsxref("Proxy.handler", "handler")}}

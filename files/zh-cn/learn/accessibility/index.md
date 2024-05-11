@@ -21,19 +21,11 @@ Firefox 浏览器无障碍检查器是一个非常有用的工具，用于检查
 
 {{EmbedYouTube("7mqqgIxX_NU")}}
 
-> **标注：**
->
-> #### 想要成为一名前端工程师？
->
-> 我们汇总了一门课程，其中包含你实现成为前端工程师目标所需要的所有基本信息。
->
-> [**从这里开始**](/zh-CN/docs/Learn/Front-end_web_developer)
-
 ## 前提
 
 为了充分理解这个模块，你至少需要读过 [HTML](/zh-CN/docs/Learn/HTML)、[CSS](/zh-CN/docs/Learn/CSS) 和 [JavaScript](/zh-CN/docs/Learn/JavaScript) 各个主题的前两个模块，或者有可能的话，在你学习相关联的技术话题时也把无障碍相关的内容学习了，这样会更好。
 
-> **备注：** 如果在你所使用的设备上不能建立自己的文件，你可以使用在线编码平台运行大多数样例代码，比如 [JSBin](http://jsbin.com/) 或者 [Glitch](https://glitch.com/)。
+> **备注：** 如果在你所使用的设备上不能建立自己的文件，你可以使用在线编码平台运行大多数样例代码，比如 [JSBin](https://jsbin.com/) 或者 [Glitch](https://glitch.com/)。
 
 ## 指南
 

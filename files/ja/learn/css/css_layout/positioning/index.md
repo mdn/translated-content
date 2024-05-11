@@ -2,7 +2,7 @@
 title: 位置指定
 slug: Learn/CSS/CSS_layout/Positioning
 l10n:
-  sourceCommit: 751d58669499de0c6ea0d5b356e0e1448418c5d3
+  sourceCommit: 289d6314f3368aa3e28524e7d090f6e9c704e3b1
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout")}}
@@ -552,8 +552,8 @@ body {
 }
 
 .positioned {
-  background: rgba(255, 84, 104, 0.3);
-  border: 2px solid rgb(255, 84, 104);
+  background: rgb(255 84 104 / 30%);
+  border: 2px solid rgb(255 84 104);
   padding: 10px;
   margin: 10px;
   border-radius: 5px;
@@ -668,7 +668,7 @@ body {
 
 ## スキルテスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[Test your skills: Positioning](/ja/docs/Learn/CSS/CSS_layout/Position_skills) を参照してください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: 位置指定](/ja/docs/Learn/CSS/CSS_layout/Position_skills) を参照してください。
 
 ## まとめ
 

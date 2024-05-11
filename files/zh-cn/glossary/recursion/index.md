@@ -9,5 +9,5 @@ slug: Glossary/Recursion
 
 ## 参见
 
-- Wikipedia 页面：[Recursion (computer science)](<https://zh.wikipedia.org/wiki/Recursion_(computer_science)>)
+- 维基百科上的[递归（计算机科学）](<https://zh.wikipedia.org/wiki/递归_(计算机科学)>)
 - [更多关于 JavaScript 中递归的细节](/zh-CN/docs/Web/JavaScript/Guide/Functions#Recursion)

@@ -1,27 +1,35 @@
 ---
-title: Navigator.deviceMemory
+title: Navigator：deviceMemory 属性
 slug: Web/API/Navigator/deviceMemory
+l10n:
+  sourceCommit: ca577adc00ddc882765c131739ad2ed25edd2285
 ---
 
-{{SeeCompatTable}}{{APIRef("Device Memory")}}
+{{APIRef("Device Memory API")}}{{securecontext_header}}
 
-**`deviceMemory`** 只读属性返回千兆字节为单位的大概的机器内存。这个值是一个 2 的次方数除以 1024，舍去小数点的近似值。并且，上下边界也用来保护那些拥有非常低端或者高端设备的用户的隐私。
+{{domxref("Navigator")}} 接口的只读属性 **`deviceMemory`** 返回设备内存的近似值（以千兆字节为单位）。
 
-## 语法
+为了防止{{glossary("fingerprinting", "指纹识别")}}，报告的值并不精确。该值通过向下取整到最接近的 2 的幂，然后将其除以 1024 来近似。之后，将其限制在上下限范围内，以保护内存非常低或非常高的设备的所有者的隐私。
 
-```plain
-const memory = navigator.deviceMemory
-console.log ("This device has at least " + memory + "GiB of RAM.")
+## 值
+
+一个浮点数；取值范围为 `0.25`、`0.5`、`1`、`2`、`4`、`8`。
+
+## 示例
+
+```js
+const memory = navigator.deviceMemory;
+console.log(`此设备至少拥有 ${memory}GiB 的 RAM。`);
 ```
 
-### Value
-
-一个浮点类型的数，0.25,0.5,1,2,4,8 之一。
-
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- {{HTTPHeader("Device-Memory")}} HTTP 标头

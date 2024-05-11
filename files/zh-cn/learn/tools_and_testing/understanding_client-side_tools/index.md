@@ -13,14 +13,6 @@ slug: Learn/Tools_and_testing/Understanding_client-side_tools
 
 在尝试使用这里列举的工具之前，你应该先好好学习一下 [HTML](/zh-CN/docs/Learn/HTML), [CSS](/zh-CN/docs/Learn/CSS), 和 [JavaScript](/zh-CN/docs/Learn/JavaScript) 的核心基础知识。
 
-> **标注：**
->
-> ### 渴望成为一名前端开发人员？
->
-> 我们已经把你实现目标所需要的所有必要信息都放在了一个课程里面。
->
-> [开始](/zh-CN/docs/Learn/Front-end_web_developer)
-
 ## 指南
 
 - [1. 客户端工具概览](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview)

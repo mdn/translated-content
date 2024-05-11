@@ -2,14 +2,14 @@
 title: "HTML 属性: maxlength"
 slug: Web/HTML/Attributes/maxlength
 l10n:
-  sourceCommit: cfcbb39cc595bd536b107f6771bfb3f8e13bacca
+  sourceCommit: a78cecea4f3b1a7f35564a547052e163911ac491
 ---
 
 {{HTMLSidebar}}
 
-**`maxlength`** 属性は、ユーザーが {{htmlelement('input')}} または {{htmlelement('textarea')}} に入力できる最大文字数を（UTF-16 コード単位で）定義します。 0 以上の整数値である必要があります。
+**`maxlength`** 属性は、ユーザーが {{htmlelement('input')}} または {{htmlelement('textarea')}} に入力できる最大[文字列長](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/length)を（UTF-16 コード単位で）定義します。 0 以上の整数値である必要があります。
 
-maxlength が指定されなかった場合、または無効な値が指定された場合は、 input や textarea には最大長が設定されません。
+長さは UTF-16 コードユニットで測定され、（[多くの文字体系では](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/length#strings_with_length_not_equal_to_the_number_of_characters)）文字数と等しくなります。 `maxlength` が指定されなかった場合、または無効な値が指定された場合は、 input には最大長が設定されません。
 
 `maxlength` の値はすべて、 [`minlength`](/ja/docs/Web/HTML/Attributes/minlength) が存在して有効である場合は、その値以上である必要があります。フィールドのテキスト値の長さが maxlength の UTF-16 コード単位の長さを超える場合、入力欄は制約検証に失敗します。制約検証は、ユーザーが値を変更した場合にのみ適用されます。
 

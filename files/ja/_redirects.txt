@@ -84,7 +84,7 @@
 /ja/docs/API/Document/onfullscreenerror	/ja/docs/Web/API/Document/fullscreenerror_event
 /ja/docs/API/Document/onselectionchange	/ja/docs/Web/API/HTMLInputElement/selectionchange_event
 /ja/docs/API/Document/open	/ja/docs/Web/API/Document/open
-/ja/docs/API/Document/origin	/ja/docs/Web/API/origin
+/ja/docs/API/Document/origin	/ja/docs/Web/API/Window/origin
 /ja/docs/API/Document/plugins	/ja/docs/Web/API/Document/plugins
 /ja/docs/API/Document/queryCommandSupported	/ja/docs/Web/API/Document/queryCommandSupported
 /ja/docs/API/Document/querySelector	/ja/docs/Web/API/Document/querySelector
@@ -122,7 +122,7 @@
 /ja/docs/Accessibility:Community	/ja/docs/Web/Accessibility
 /ja/docs/Accessibility_FAQ	/ja/docs/Web/Accessibility
 /ja/docs/Accessible_DHTML	/ja/docs/Web/Accessibility/ARIA
-/ja/docs/Adapting_XUL_Applications_for_Firefox_1.5	/ja/docs/Mozilla/Firefox/Releases/1.5/Adapting_XUL_Applications_for_Firefox_1.5
+/ja/docs/Adapting_XUL_Applications_for_Firefox_1.5	/ja/docs/Mozilla/Firefox/Releases/1.5
 /ja/docs/Adding_feed_readers_to_Firefox	/ja/docs/Mozilla/Firefox/Releases/2/Adding_feed_readers_to_Firefox
 /ja/docs/Adding_feed_readers_to_Firefox-redirect-1	/ja/docs/Mozilla/Firefox/Releases/2/Adding_feed_readers_to_Firefox
 /ja/docs/Addons	/ja/docs/Mozilla/Add-ons
@@ -1371,7 +1371,7 @@
 /ja/docs/HTML/Element	/ja/docs/Web/HTML/Element
 /ja/docs/HTML/Element/Audio	/ja/docs/Web/HTML/Element/audio
 /ja/docs/HTML/Element/Heading_Elements	/ja/docs/Web/HTML/Element/Heading_Elements
-/ja/docs/HTML/Element/Img	/ja/docs/Web/HTML/Element/Img
+/ja/docs/HTML/Element/Img	/ja/docs/Web/HTML/Element/img
 /ja/docs/HTML/Element/Script	/ja/docs/Web/HTML/Element/Script
 /ja/docs/HTML/Element/Script/Script	/ja/docs/Web/API/Node/cloneNode
 /ja/docs/HTML/Element/Source	/ja/docs/Web/HTML/Element/source
@@ -2227,7 +2227,7 @@
 /ja/docs/MDN/Guidelines/Editorial	/ja/docs/MDN/Writing_guidelines/What_we_write
 /ja/docs/MDN/Guidelines/Video	/ja/docs/MDN/Writing_guidelines/Howto/Images_media
 /ja/docs/MDN/Guidelines/Writing_style_guide	/ja/docs/MDN/Writing_guidelines/Writing_style_guide
-/ja/docs/MDN/MDN_Product_Advisory_Board/Members	/ja/docs/conflicting/MDN/MDN_Product_Advisory_Board
+/ja/docs/MDN/MDN_Product_Advisory_Board/Members	/ja/docs/MDN/MDN_Product_Advisory_Board
 /ja/docs/MDN/Structures	/ja/docs/MDN/Writing_guidelines/Page_structures
 /ja/docs/MDN/Structures/API_references	/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference
 /ja/docs/MDN/Structures/API_references/API_reference_sidebars	/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars
@@ -2276,6 +2276,7 @@
 /ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications	/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
 /ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action	/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button
 /ja/docs/Mozilla/Add-ons/WebExtensions/デバッグ	https://extensionworkshop.com/documentation/develop/debugging/
+/ja/docs/Mozilla/Firefox/Releases/1.5/Adapting_XUL_Applications_for_Firefox_1.5	/ja/docs/Mozilla/Firefox/Releases/1.5
 /ja/docs/Mozilla/Firefox/Releases/Firefox_47_for_developers	/ja/docs/Mozilla/Firefox/Releases/47
 /ja/docs/Mozilla_Addons_FAQ_(external)	https://addons.mozilla.org/faq.php
 /ja/docs/NPAPI/Constants	/ja/docs/Glossary/Plugin
@@ -2695,7 +2696,7 @@
 /ja/docs/Web/API/Document/onoffline	/ja/docs/Web/API/Window/offline_event
 /ja/docs/Web/API/Document/ononline	/ja/docs/Web/API/Window/online_event
 /ja/docs/Web/API/Document/onselectionchange	/ja/docs/Web/API/HTMLInputElement/selectionchange_event
-/ja/docs/Web/API/Document/origin	/ja/docs/Web/API/origin
+/ja/docs/Web/API/Document/origin	/ja/docs/Web/API/Window/origin
 /ja/docs/Web/API/Document/pointercancel_event	/ja/docs/Web/API/Element/pointercancel_event
 /ja/docs/Web/API/Document/pointerdown_event	/ja/docs/Web/API/Element/pointerdown_event
 /ja/docs/Web/API/Document/pointerenter_event	/ja/docs/Web/API/Element/pointerenter_event
@@ -2705,10 +2706,10 @@
 /ja/docs/Web/API/Document/pointerover_event	/ja/docs/Web/API/Element/pointerover_event
 /ja/docs/Web/API/Document/pointerup_event	/ja/docs/Web/API/Element/pointerup_event
 /ja/docs/Web/API/Document/selectstart_event	/ja/docs/Web/API/Node/selectstart_event
-/ja/docs/Web/API/Document/touchcancel_event	/ja/docs/conflicting/Web/API/Element/touchcancel_event
-/ja/docs/Web/API/Document/touchend_event	/ja/docs/conflicting/Web/API/Element/touchend_event
+/ja/docs/Web/API/Document/touchcancel_event	/ja/docs/Web/API/Element/touchcancel_event
+/ja/docs/Web/API/Document/touchend_event	/ja/docs/Web/API/Element/touchend_event
 /ja/docs/Web/API/Document/touchmove_event	/ja/docs/Web/API/Element/touchmove_event
-/ja/docs/Web/API/Document/touchstart_event	/ja/docs/conflicting/Web/API/Element/touchstart_event
+/ja/docs/Web/API/Document/touchstart_event	/ja/docs/Web/API/Element/touchstart_event
 /ja/docs/Web/API/Document/transitioncancel_event	/ja/docs/Web/API/Element/transitioncancel_event
 /ja/docs/Web/API/Document/transitionend_event	/ja/docs/Web/API/Element/transitionend_event
 /ja/docs/Web/API/Document/transitionrun_event	/ja/docs/Web/API/Element/transitionrun_event
@@ -3174,7 +3175,6 @@
 /ja/docs/Web/API/Window/onmouseup	/ja/docs/Web/API/Element/mouseup_event
 /ja/docs/Web/API/Window/onreset	/ja/docs/Web/API/HTMLFormElement/reset_event
 /ja/docs/Web/API/Window/onresize	/ja/docs/Web/API/Window/resize_event
-/ja/docs/Web/API/Window/performance	/ja/docs/Web/API/performance_property
 /ja/docs/Web/API/Window/restore	/ja/docs/Web/API/Window/moveTo
 /ja/docs/Web/API/Window/setInterval	/ja/docs/Web/API/setInterval
 /ja/docs/Web/API/Window/setTimeout	/ja/docs/Web/API/setTimeout
@@ -3211,9 +3211,9 @@
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout	/ja/docs/Web/API/clearTimeout
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap	/ja/docs/Web/API/createImageBitmap
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/fetch	/ja/docs/Web/API/fetch
-/ja/docs/Web/API/WindowOrWorkerGlobalScope/indexedDB	/ja/docs/Web/API/indexedDB
-/ja/docs/Web/API/WindowOrWorkerGlobalScope/isSecureContext	/ja/docs/Web/API/isSecureContext
-/ja/docs/Web/API/WindowOrWorkerGlobalScope/origin	/ja/docs/Web/API/origin
+/ja/docs/Web/API/WindowOrWorkerGlobalScope/indexedDB	/ja/docs/Web/API/Window/indexedDB
+/ja/docs/Web/API/WindowOrWorkerGlobalScope/isSecureContext	/ja/docs/Web/API/Window/isSecureContext
+/ja/docs/Web/API/WindowOrWorkerGlobalScope/origin	/ja/docs/Web/API/Window/origin
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/setInterval	/ja/docs/Web/API/setInterval
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout	/ja/docs/Web/API/setTimeout
 /ja/docs/Web/API/WindowTimers	/ja/docs/Web/API/setTimeout
@@ -3357,6 +3357,10 @@
 /ja/docs/Web/API/form.reset	/ja/docs/Web/API/HTMLFormElement/reset
 /ja/docs/Web/API/form.submit	/ja/docs/Web/API/HTMLFormElement/submit
 /ja/docs/Web/API/form.target	/ja/docs/Web/API/HTMLFormElement/target
+/ja/docs/Web/API/indexedDB	/ja/docs/Web/API/Window/indexedDB
+/ja/docs/Web/API/isSecureContext	/ja/docs/Web/API/Window/isSecureContext
+/ja/docs/Web/API/origin	/ja/docs/Web/API/Window/origin
+/ja/docs/Web/API/performance_property	/ja/docs/Web/API/Window/performance
 /ja/docs/Web/API/range.intersectsNode	/ja/docs/Web/API/Range/intersectsNode
 /ja/docs/Web/API/range.setStart	/ja/docs/Web/API/Range/setStart
 /ja/docs/Web/API/tableRow.insertCell	/ja/docs/Web/API/HTMLTableRowElement/insertCell
@@ -3547,6 +3551,7 @@
 /ja/docs/Web/CSS/-moz-zoom-in	/ja/docs/Web/CSS/cursor
 /ja/docs/Web/CSS/-moz-zoom-out	/ja/docs/Web/CSS/cursor
 /ja/docs/Web/CSS/-ms-scroll-snap-type	/ja/docs/Web/CSS/scroll-snap-type
+/ja/docs/Web/CSS/-webkit-mask-attachment	/ja/docs/Web/CSS
 /ja/docs/Web/CSS/-webkit-print-color-adjust	/ja/docs/Web/CSS/print-color-adjust
 /ja/docs/Web/CSS/:-moz-focusring	/ja/docs/Web/CSS/:focus-visible
 /ja/docs/Web/CSS/:-moz-list-bullet	/ja/docs/Web/CSS/::-moz-list-bullet
@@ -4036,6 +4041,7 @@
 /ja/docs/Web/HTML/Element/h4	/ja/docs/Web/HTML/Element/Heading_Elements
 /ja/docs/Web/HTML/Element/h5	/ja/docs/Web/HTML/Element/Heading_Elements
 /ja/docs/Web/HTML/Element/h6	/ja/docs/Web/HTML/Element/Heading_Elements
+/ja/docs/Web/HTML/Element/image	/ja/docs/Web/HTML/Element/img
 /ja/docs/Web/HTML/Element/input/datetime	/ja/docs/Web/HTML/Element/input/datetime-local
 /ja/docs/Web/HTML/Element/video/waiting_event	/ja/docs/Web/API/HTMLMediaElement/waiting_event
 /ja/docs/Web/HTML/Focus_management_in_HTML	/ja/docs/Web/API/Document/hasFocus
@@ -4050,6 +4056,7 @@
 /ja/docs/Web/HTML/Forms/Styling_HTML_forms	/ja/docs/Learn/Forms/Styling_web_forms
 /ja/docs/Web/HTML/Forms/The_native_form_widgets	/ja/docs/Learn/Forms/Basic_native_form_controls
 /ja/docs/Web/HTML/Forms_in_HTML	/ja/docs/Learn/Forms/HTML5_input_types
+/ja/docs/Web/HTML/Global_attributes/contextmenu	/ja/docs/Web/HTML/Element/menu
 /ja/docs/Web/HTML/HTML5/Constraint_validation	/ja/docs/Web/HTML/Constraint_validation
 /ja/docs/Web/HTML/HTML5/Forms_in_HTML5	/ja/docs/Learn/Forms/HTML5_input_types
 /ja/docs/Web/HTML/HTML5/HTML5_element_list	/ja/docs/Web/HTML/Element
@@ -4537,6 +4544,11 @@
 /ja/docs/Web/Reference/Events/vrdisplayconnected	/ja/docs/Web/API/Window/vrdisplayconnect_event
 /ja/docs/Web/Reference/Events/vrdisplaydisconnected	/ja/docs/Web/API/Window/vrdisplaydisconnect_event
 /ja/docs/Web/Reference/Events/vrdisplaypresentchange	/ja/docs/Web/API/Window/vrdisplaypresentchange_event
+/ja/docs/Web/SVG/Attribute/Conditional_Processing	/ja/docs/Web/SVG/Attribute
+/ja/docs/Web/SVG/Attribute/Core	/ja/docs/Web/SVG/Attribute
+/ja/docs/Web/SVG/Attribute/Events	/ja/docs/Web/SVG/Attribute
+/ja/docs/Web/SVG/Attribute/Presentation	/ja/docs/Web/SVG/Attribute
+/ja/docs/Web/SVG/Attribute/Styling	/ja/docs/Web/SVG/Attribute
 /ja/docs/Web/SVG/Compatibility_sources	/ja/docs/Web/SVG
 /ja/docs/Web/SVG/Element/animateColor	/ja/docs/Web/SVG/Element/animate
 /ja/docs/Web/SVG/Element/hatchpath	/ja/docs/orphaned/Web/SVG/Element/hatchpath

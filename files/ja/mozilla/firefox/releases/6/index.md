@@ -3,20 +3,20 @@ title: Firefox 6 for developers
 slug: Mozilla/Firefox/Releases/6
 ---
 
-Firefox 6 は Gecko 6.0 ベースのブラウザで、2011 年 8 月 16 日にリリースされました。このページは Firefox 6 のリリースにあたり、開発者に関係する変更についてまとめたものです。
+Firefox 6 は Gecko 6.0 ベースのブラウザーで、2011 年 8 月 16 日にリリースされました。このページは Firefox 6 のリリースにあたり、開発者に関係する変更についてまとめたものです。
 
-## Web 開発者向けの変更点一覧
+## ウェブ開発者向けの変更点一覧
 
 ### HTML
 
 - プログレスバーを表す HTML5 の [`<progress>`](/ja/docs/Web/HTML/Element/progress) 要素がサポートされました。
 - メディア要素にテキストトラックを追加する HTML5 の [`<track>`](/ja/docs/Web/HTML/Element/track) 要素について、そのパース処理部分が実装されました。要素そのものは実装されていませんが、DOM に現れるようにはなります。
-- [`border-radius`](/ja/docs/Web/CSS/border-radius) プロパティによって角が丸められたコンテナ内の [`<iframe>`](/ja/docs/Web/HTML/Element/iframe) についても、適切に角が丸められるようになりました。
+- [`border-radius`](/ja/docs/Web/CSS/border-radius) プロパティによって角が丸められたコンテナー内の [`<iframe>`](/ja/docs/Web/HTML/Element/iframe) についても、適切に角が丸められるようになりました。
 - [`<form>`](/ja/docs/Web/HTML/Element/form) 要素の [`<input>`](/ja/docs/Web/HTML/Element/input) テキストフィールドが XUL の `maxwidth` プロパティをサポートしなくなりました。これは意図的なものではなく、また HTML 仕様違反でもあります。要素の最大幅を設定するには、[`size`](/ja/docs/Web/HTML/Element/input#attr-size) 属性を利用します。
 - [`<canvas>`](/ja/docs/Web/HTML/Element/canvas) の [`CanvasRenderingContext2d`](/ja/docs/Web/API/CanvasRenderingContext2d 'このインターフェイスのオブジェクトを取得するには、以下のようにのgetContext()の引数に"2d"を指定して呼び出します。') プロパティ `fillStyle` と `strokeStyle` はこれまで、妥当な色の指定の後に続く余計なものを無視する処理をしていましたが、適切にエラーとして処理されるように修正されました。たとえば、"red blue" を指定したとき、これまでは "red" と扱われていましたが、これからは指定そのものが無視されます。
 - [`<canvas>`](/ja/docs/Web/HTML/Element/canvas) 要素の width と height を適切に 0px と指定できるようになりました。これまではそう指定しても 300px にされていました。
 - HTML [カスタムデータ属性](/ja/docs/HTML/Global_attributes#attr-data-*) (data-\*) がサポートされました。DOM プロパティ [`element.dataset`](/ja/docs/Web/API/Element/dataset) からデータにアクセスできます。
-- [`<textarea>`](/ja/docs/Web/HTML/Element/textarea) 要素がフォーカスされたとき、テキスト挿入箇所が最後ではなく先頭になりました。これにより、他のブラウザの挙動と一致します。
+- [`<textarea>`](/ja/docs/Web/HTML/Element/textarea) 要素がフォーカスされたとき、テキスト挿入箇所が最後ではなく先頭になりました。これにより、他のブラウザーの挙動と一致します。
 
 ### CSS
 
@@ -37,17 +37,17 @@ Firefox 6 は Gecko 6.0 ベースのブラウザで、2011 年 8 月 16 日に�
 
 - [`@-moz-document`](/ja/docs/Web/CSS/@-moz-document) に新しく `regexp()` 関数記法が追加されました。これにより、スタイルシートを適用する文書の URL を [正規表現](/ja/docs/JavaScript/Guide/Regular_Expressions)でマッチさせられます。
 - `aural` 媒体グループのために持っていたコードを削除したため、[`azimuth`](/ja/docs/Web/CSS/azimuth) CSS プロパティのサポートが廃止されました。このプロパティはちゃんと実装されていなかったため、パッチを当て続けるのではなく未完成の実装を省くほうが理にかなっていると考えました。
-- これまで、[`:hover`](/ja/docs/Web/CSS/:hover) 擬似クラスは Quirks モードにおいてクラスセレクタに適用されませんでした。このため `.someclass:hover` といったコードは動きませんでしたが、この例外が取り払われました。
-- [`:indeterminate`](/ja/docs/Web/CSS/:indeterminate) 擬似クラスは [`<progress>`](/ja/docs/Web/HTML/Element/progress) 要素にも適用できます。これは非標準ですが、便利ですので他のブラウザにも取り入れられて欲しいと考えています。
+- これまで、[`:hover`](/ja/docs/Web/CSS/:hover) 擬似クラスは Quirks モードにおいてクラスセレクターに適用されませんでした。このため `.someclass:hover` といったコードは動きませんでしたが、この例外が取り払われました。
+- [`:indeterminate`](/ja/docs/Web/CSS/:indeterminate) 擬似クラスは [`<progress>`](/ja/docs/Web/HTML/Element/progress) 要素にも適用できます。これは非標準ですが、便利ですので他のブラウザーにも取り入れられて欲しいと考えています。
 
 ### DOM
 
-- [コード内でのメディアクエリの使用](/ja/docs/CSS/Using_media_queries_from_code)
-  - : [`window.matchMedia()`](/ja/docs/Web/API/Window/matchMedia) メソッドと [`MediaQueryList`](/ja/docs/Web/API/MediaQueryList) インターフェースによって、メディアクエリーの結果をプログラムから検証できます。
+- [コード内でのメディアクエリーの使用](/ja/docs/CSS/Using_media_queries_from_code)
+  - : [`window.matchMedia()`](/ja/docs/Web/API/Window/matchMedia) メソッドと [`MediaQueryList`](/ja/docs/Web/API/MediaQueryList) インターフェイスによって、メディアクエリーの結果をプログラムから検証できます。
 - [Touch events](/ja/docs/DOM/Touch_events)
   - : Firefox 6 は W3C の標準タッチイベント仕様をサポートします。これにより、タッチスクリーンやトラックパッドなどタッチセンサー式のデバイスでのタッチの解釈が容易になります。
 - [Server-sent events](/ja/docs/Server-sent_events)
-  - : Server-sent events はサーバが手元で生成された DOM イベントと同じようにイベントを送出するよう、Web アプリケーションが尋ねるための機能です。
+  - : Server-sent events はサーバが手元で生成された DOM イベントと同じようにイベントを送出するよう、ウェブアプリケーションが尋ねるための機能です。
 
 <!---->
 
@@ -55,9 +55,9 @@ Firefox 6 は Gecko 6.0 ベースのブラウザで、2011 年 8 月 16 日に�
 - [`BlobBuilder`](/ja/docs/Web/API/BlobBuilder) がサポートされました。現時点では接頭辞付きの実装 (`MozBlobBuilder`) となっています。
 - [`document.height`](/ja/docs/Web/API/Document/height), [`document.width`](/ja/docs/Web/API/Document/width) が削除されました。 [バグ 585877](https://bugzilla.mozilla.org/show_bug.cgi?id=585877)
 - [`DocumentType`](/ja/docs/Web/API/DocumentType) オブジェクトの `entities`, `notations` プロパティが削除されました。これは実装されておらず常に `null` を返しており、また仕様からも削除されていました。
-- `DOMConfiguration` インターフェースと、それを使用していた `document.domConfig` プロパティが削除されました。これらはサポートされておらず、また DOM 仕様からも削除されていました。
+- `DOMConfiguration` インターフェイスと、それを使用していた `document.domConfig` プロパティが削除されました。これらはサポートされておらず、また DOM 仕様からも削除されていました。
 - `hashchange` イベントが適切に [`newURL`, `oldURL` フィールド](/ja/docs/DOM/window.onhashchange#The_hashchange_event) を含むようになりました。
-- [`FileReader`](/ja/docs/Web/API/FileReader) インターフェースの `abort()` メソッドが、ファイルの読み込み中に利用された際に例外を投げるようになりました。
+- [`FileReader`](/ja/docs/Web/API/FileReader) インターフェイスの `abort()` メソッドが、ファイルの読み込み中に利用された際に例外を投げるようになりました。
 - [`window.postMessage()`](/ja/docs/Web/API/Window/postMessage) メソッドが [structured clone algorithm](/ja/docs/DOM/The_structured_clone_algorithm) を使用するようになり、あるウィンドウから他のウィンドウに文字列ではなく JavaScript オブジェクトを渡せるようになりました。
 - [`window.history`](/ja/docs/Web/API/Window/history) API が `pushState()`, `replaceState()` メソッドに渡されたオブジェクトのシリアライズに [structured clone algorithm](/ja/docs/DOM/The_structured_clone_algorithm) を使用するようになりました。これによって循環参照などを含むより複雑なオブジェクトも使用可能となりました。
 - 新しく追加された `beforeprint`, `afterprint` イベントによって、[印刷が行われたときと完了したときを検出する](/ja/docs/Printing#Detecting_print_requests) ことができるようになりました。
@@ -67,8 +67,8 @@ Firefox 6 は Gecko 6.0 ベースのブラウザで、2011 年 8 月 16 日に�
 - これまでドキュメントのなかった DOM views が削除されました。これらには実装の詳細が多く、また不必要に様々なものを複雑にしていたため削除されました。もしこの変化に気づいた場合は、何か誤ったことをしている可能性があります。
 - `EventTarget` の関数 [`addEventListener()`](/ja/docs/XPCOM_Interface_Reference/nsIDOMEventTarget) に指定する引数 `useCapture` が optional となりました。これは WebKit の動作とも共通し、また新しい仕様でもそう定義されています。
 - [`XMLHttpRequest`](/ja/docs/DOM/XMLHttpRequest) オブジェクトの `mozResponseArrayBuffer` プロパティが `responseType`, `response` プロパティに置き換えられました。
-- [`HTMLElement`](/ja/docs/DOM/HTMLElement) インターフェースに [`element.dataset`](/ja/docs/Web/API/Element/dataset) プロパティが追加されました。このプロパティにより [要素の `data-*` グローバル属性](/ja/docs/HTML/Global_attributes#attr-data-*) にアクセスできます。
-- [`CustomEvent`](/ja/docs/Web/API/CustomEvent) インターフェースが実装されました ([バグ 427537](https://bugzilla.mozilla.org/show_bug.cgi?id=427537))
+- [`HTMLElement`](/ja/docs/DOM/HTMLElement) インターフェイスに [`element.dataset`](/ja/docs/Web/API/Element/dataset) プロパティが追加されました。このプロパティにより [要素の `data-*` グローバル属性](/ja/docs/HTML/Global_attributes#attr-data-*) にアクセスできます。
+- [`CustomEvent`](/ja/docs/Web/API/CustomEvent) インターフェイスが実装されました ([バグ 427537](https://bugzilla.mozilla.org/show_bug.cgi?id=427537))
 - セキュリティの観点から、ユーザーがロケーションバーに `data:` URI と `javascript:` URI を入力した時、現在のページのセキュリティコンテキストを受け継がなくなりました。代わりに、新しい空のセキュリティコンテキストが生成されます。これにより、ロケーションバーに入力した `javascript:` URI から読み込まれたスクリプトは、DOM メソッドなどへのアクセスを持たなくなります。しかし、これらの URI がスクリプトから使用された場合は、これまでと同じように動作します。
 
 ### JavaScript
@@ -111,7 +111,7 @@ Firefox 6 は Gecko 6.0 ベースのブラウザで、2011 年 8 月 16 日に�
 
 Firefox 6 へアドオンを対応させるために必要な作業の概要は [アドオンの Firefox 6 対応](/ja/docs/Firefox/Updating_add-ons_for_Firefox_6) をご覧ください。
 
-> **メモ:** Firefox 6 では、従来のメジャーリリースと同様に、バイナリコンポーネントをコンパイルし直す必要があります。詳しくは [バイナリインタフェース](/ja/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces) をご覧ください。
+> **メモ:** Firefox 6 では、従来のメジャーリリースと同様に、バイナリコンポーネントをコンパイルし直す必要があります。詳しくは [バイナリインターフェイス](/ja/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces) をご覧ください。
 
 ### JavaScript コードモジュール
 
@@ -130,19 +130,19 @@ Firefox 6 へアドオンを対応させるために必要な作業の概要は 
 ### クロームからの DOM の使用
 
 - [クロームコードでの DOM File API の使用](/ja/docs/Extensions/Using_the_DOM_File_API_in_chrome_code)
-  - : これまでもクロームコード内で DOM File API を使うことは可能でしたが、[`File`](/ja/docs/DOM/File) コンストラクタをクロームで使用した場合に、ローカルパス名文字列を指定できるようになりました。また、[`nsIFile`](/ja/docs/XPCOM_Interface_Reference/nsIFile) オブジェクトを使用して、DOM File API を通じてアクセスするファイルを指定できるようになりました。
+  - : これまでもクロームコード内で DOM File API を使うことは可能でしたが、[`File`](/ja/docs/DOM/File) コンストラクターをクロームで使用した場合に、ローカルパス名文字列を指定できるようになりました。また、[`nsIFile`](/ja/docs/XPCOM_Interface_Reference/nsIFile) オブジェクトを使用して、DOM File API を通じてアクセスするファイルを指定できるようになりました。
 
-### インタフェースの変更
+### インターフェイスの変更
 
 - [`nsINavHistoryQueryOptions`](/ja/docs/XPCOM_Interface_Reference/nsINavHistoryQueryOptions) で、新たな定数 `SORT_BY_FRECENCY_ASCENDING` と `SORT_BY_FRECENCY_DESCENDING` を使った訪問頻度順のソートが可能になりました。
-- [`nsIFilePicker`](/ja/docs/XPCOM_Interface_Reference/nsIFilePicker) に [`addToRecentDocs`](/ja/docs/XPCOM_Interface_Reference/nsIFilePicker#addToRecentDocs) 属性が追加されました。これは、もしユーザの「最近使用したドキュメント」リストがあれば、そのリストに選択したファイルを追加するよう指定できるものです。この属性はプライベートブラウジングモードでは無視されます。
+- [`nsIFilePicker`](/ja/docs/XPCOM_Interface_Reference/nsIFilePicker) に [`addToRecentDocs`](/ja/docs/XPCOM_Interface_Reference/nsIFilePicker#addToRecentDocs) 属性が追加されました。これは、もしユーザーの「最近使用したドキュメント」リストがあれば、そのリストに選択したファイルを追加するよう指定できるものです。この属性はプライベートブラウジングモードでは無視されます。
 - [`nsINavBookmarkObserver`](/ja/docs/XPCOM_Interface_Reference/nsINavBookmarkObserver) メソッドにアイテム ID 引数を与える場合、GUID も必要となります。
-- [`nsIPrefBranch.clearUserPref()`](/ja/docs/XPCOM_Interface_Reference/nsIPrefBranch#clearUserPref%28%29) が、指定された設定が存在しない場合やユーザ設定値がない場合も、例外を投げなくなりました。その代わり、単に何もしなくなりました。
-- [`nsIMemoryReporter`](/ja/docs/XPCOM_Interface_Reference/nsIMemoryReporter) インタフェースで、調べたいメモリの種類 (マップ、ヒープ、その他) を指定できるようになりました。
+- [`nsIPrefBranch.clearUserPref()`](/ja/docs/XPCOM_Interface_Reference/nsIPrefBranch#clearUserPref%28%29) が、指定された設定が存在しない場合やユーザー設定値がない場合も、例外を投げなくなりました。その代わり、単に何もしなくなりました。
+- [`nsIMemoryReporter`](/ja/docs/XPCOM_Interface_Reference/nsIMemoryReporter) インターフェイスで、調べたいメモリの種類 (マップ、ヒープ、その他) を指定できるようになりました。
 - [`nsISHEntry`](/ja/docs/XPCOM_Interface_Reference/nsISHEntry) の `stateData` 属性が [`nsIStructuredCloneContainer`](/ja/docs/XPCOM_Interface_Reference/nsIStructuredCloneContainer) を返すようになりました。
 - [`nsIURI`](/ja/docs/XPCOM_Interface_Reference/nsIURI) に [`ref`](/ja/docs/XPCOM_Interface_Reference/nsIURI#ref) 属性が追加されました。これは、URI の一部の参照 (「#」以降の部分) を返すものです。また、参照メンバーなしに [`nsIURI`](/ja/docs/XPCOM_Interface_Reference/nsIURI) を複製できる [`cloneIgnoringRef()`](/ja/docs/XPCOM_Interface_Reference/nsIURI#cloneIgnoringRef%28%29) メソッドと、参照メンバーを無視して他の [`nsIURI`](/ja/docs/XPCOM_Interface_Reference/nsIURI) と比較できる [`equalsExceptRef()`](/ja/docs/XPCOM_Interface_Reference/nsIURI#equalsExceptRef%28%29) メソッドが追加されました。
 
-#### 新しいインタフェース
+#### 新しいインターフェイス
 
 - [`mozIAsyncFavicons`](/ja/docs/XPCOM_Interface_Reference/mozIAsyncFavicons)
   - : ブックマークアイコン (favicon) サービスへの非同期アクセスが可能な新サービスです。
@@ -153,9 +153,9 @@ Firefox 6 へアドオンを対応させるために必要な作業の概要は 
 - [`nsIGSettingsService`](/ja/docs/XPCOM_Interface_Reference/nsIGSettingsService)
   - : _詳細は後日解説します。_
 - [`nsIHttpUpgradeListener`](/ja/docs/XPCOM_Interface_Reference/nsIHttpUpgradeListener)
-  - : [`nsIHttpChannelInternal.HTTPUpgrade()`](/ja/docs/XPCOM_Interface_Reference/nsIHttpChannelInternal#HTTPUpgrade%28%29) メソッドを通じた HTTP アップグレード要求を処理するためのコールバックインタフェースです。
+  - : [`nsIHttpChannelInternal.HTTPUpgrade()`](/ja/docs/XPCOM_Interface_Reference/nsIHttpChannelInternal#HTTPUpgrade%28%29) メソッドを通じた HTTP アップグレード要求を処理するためのコールバックインターフェイスです。
 - [`nsIStructuredCloneContainer`](/ja/docs/XPCOM_Interface_Reference/nsIStructuredCloneContainer)
-  - : [構造化された複製アルゴリズム](/ja/docs/HTML/Structured_clones) を使ってシリアライズされたオブジェクトのためのコンテナです。
+  - : [構造化された複製アルゴリズム](/ja/docs/HTML/Structured_clones) を使ってシリアライズされたオブジェクトのためのコンテナーです。
 - [`nsITelemetry`](/ja/docs/XPCOM_Interface_Reference/nsITelemetry)
   - : パフォーマンス測定を目的とした [使用統計情報 (Telemetry)](http://mozilla.jp/legal/privacy/firefox/#telemetry) を記録とヒストグラムの生成に使用されます。[バグ 649502](https://bugzilla.mozilla.org/show_bug.cgi?id=649502) と [バグ 585196](https://bugzilla.mozilla.org/show_bug.cgi?id=585196) 参照。
 - [`nsITimedChannel`](/ja/docs/XPCOM_Interface_Reference/nsITimedChannel)
@@ -165,9 +165,9 @@ Firefox 6 へアドオンを対応させるために必要な作業の概要は 
 - [`nsIWebSocketProtocol`](/ja/docs/XPCOM_Interface_Reference/nsIWebSocketProtocol)
   - : [バグ 640003](https://bugzilla.mozilla.org/show_bug.cgi?id=640003) 参照。
 
-#### 削除されたインタフェース
+#### 削除されたインターフェイス
 
-以下のインタフェースは、不要となり削除された実装です。詳細はバグを参照してください。
+以下のインターフェイスは、不要となり削除された実装です。詳細はバグを参照してください。
 
 - `nsIDOMDocumentEvent` ([バグ 655517](https://bugzilla.mozilla.org/show_bug.cgi?id=655517))
 - `nsIDOMDocumentTraversal` ([バグ 655514](https://bugzilla.mozilla.org/show_bug.cgi?id=655514))

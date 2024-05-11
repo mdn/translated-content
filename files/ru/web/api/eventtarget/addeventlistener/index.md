@@ -3,7 +3,7 @@ title: Метод EventTarget.addEventListener()
 slug: Web/API/EventTarget/addEventListener
 ---
 
-{{apiref("DOM Events")}}
+{{APIRef("DOM")}}
 
 Метод `EventTarget.addEventListener()` регистрирует определённый обработчик события, вызванного на {{domxref("EventTarget")}}.
 
@@ -23,9 +23,8 @@ wantsUntrusted {{Non-standard_inline}}]); // только Gecko/Mozilla
 - `type`
   - : Чувствительная к регистру строка, представляющая [тип обрабатываемого события](/ru/docs/DOM/event.type).
 - `listener`
-  - : Объект, который принимает уведомление, когда событие указанного типа произошло. Это должен быть объект, реализующий интерфейс {{domxref("EventListener")}} или просто [функция JavaScript](/ru/docs/JavaScript/Guide/Functions).
 
-<!---->
+  - : Объект, который принимает уведомление, когда событие указанного типа произошло. Это должен быть объект, реализующий интерфейс {{domxref("EventListener")}} или просто [функция JavaScript](/ru/docs/JavaScript/Guide/Functions).
 
 - `options` {{optional_inline}}
 
@@ -34,7 +33,6 @@ wantsUntrusted {{Non-standard_inline}}]); // только Gecko/Mozilla
     - `capture`: {{jsxref("Boolean")}} указывает, что события этого типа будут отправлены зарегистрированному обработчику `listener` перед отправкой на `EventTarget`, расположенный ниже в дереве DOM.
     - `once`: {{jsxref("Boolean")}} указывает, что обработчик должен быть вызван не более одного раза после добавления. Если `true`, обработчик автоматически удаляется при вызове.
     - `passive`: {{jsxref("Boolean")}} указывает, что обработчик никогда не вызовет `preventDefault()`. Если всё же вызов будет произведён, браузер должен игнорировать его и генерировать консольное предупреждение. Пример [Улучшение производительности прокрутки с помощью passive true](#улучшение_производительности_прокрутки_с_помощью_passive_true)
-    - {{non-standard_inline}} `mozSystemGroup`: {{jsxref("Boolean")}} указывает, что обработчик должен быть добавлен в системную группу. Доступно только в коде, запущенном в XBL или в [расширении Chrome](https://chrome.google.com/webstore/detail/open-with-firefox/poeacjbaiakjnaepdjgggojcjoajakmd).
 
 - `useCapture` {{optional_inline}}
 

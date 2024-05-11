@@ -17,7 +17,7 @@ var duplicating = browser.tabs.duplicate(
 );
 ```
 
-### パラメータ
+### パラメーター
 
 - `tabId`
   - : `integer`. 複製するタブの ID を指定します。

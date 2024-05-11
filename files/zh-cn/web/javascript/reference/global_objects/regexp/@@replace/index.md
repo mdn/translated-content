@@ -89,7 +89,7 @@ console.log(newstr); // ###34567
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{jsxref("String.prototype.replace()")}}
 - {{jsxref("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}

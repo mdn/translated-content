@@ -35,7 +35,7 @@ JavaScript 源码通常被组合和压缩，使其从服务器传递更加高效
 X-SourceMap: /path/to/file.js.map
 ```
 
-## 另见
+## 参见
 
 - [如何使用源码映射 – Firefox Tools documentation](/zh-CN/docs/Tools/Debugger/How_to/Use_a_source_map)
 - [源码映射简介 – HTML5 rocks](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/)

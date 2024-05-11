@@ -11,7 +11,7 @@ l10n:
 
 ## 선결사항
 
-이번 과정을 시작하기 전에, 여러분은 이미 아래 내용을 알고 있어야 합니다:
+이번 과정을 시작하기 전에, 여러분은 이미 아래 내용을 알고 있어야 합니다.
 
 1. [HTML 소개](/ko/docs/Learn/HTML/Introduction_to_HTML) 과정에서 논의했듯이 HTML에 대해 기본적인 친숙도가 있어야 합니다.
 2. [CSS 소개](/ko/docs/Learn/CSS/Introduction_to_CSS) 과정에서 논의한 대로 CSS 기본 사항에 대해 익숙해야 합니다.

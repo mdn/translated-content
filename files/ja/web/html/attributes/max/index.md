@@ -2,12 +2,12 @@
 title: "HTML 属性: max"
 slug: Web/HTML/Attributes/max
 l10n:
-  sourceCommit: cfcbb39cc595bd536b107f6771bfb3f8e13bacca
+  sourceCommit: 940cd0b4ec3a07a5d5895459145cee15065fbb2c
 ---
 
 {{HTMLSidebar}}
 
-**`max`** 属性は、その属性を含む入力に対して許容可能で有効な最大値を定義します。要素の値 ([`value`](/ja/docs/Web/HTML/Element/input#value)) がこれより大きい場合、その要素は[制約検証](/ja/docs/Learn/Forms/Form_validation)に失敗します。この値は、 [`min`](min) 属性の値以上でなければなりません。 `max` 属性が指定されていないか無効であった場合、 `max` 値は適用されません。 `max` 属性が有効で、値が空でなく、 `max` 属性によって許容される最大値よりも大きい場合、制約検証によってフォームの送信が阻止されます。
+**`max`** 属性は、その属性を含む入力に対して許容可能で有効な最大値を定義します。要素の値 ([`value`](/ja/docs/Web/HTML/Element/input#value)) がこれより大きい場合、その要素は[制約検証](/ja/docs/Learn/Forms/Form_validation)に失敗します。この値は、 [`min`](min) 属性の値以上でなければなりません。 `max` 属性が存在していても、指定されていないか無効であった場合、 `max` 値は適用されません。 `max` 属性が有効で、値が空でなく、 `max` 属性によって許容される最大値よりも大きい場合、制約検証によってフォームの送信が阻止されます。
 
 これは数値入力型、例えば {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}}, {{HTMLElement("input/range", "range")}} 型や {{htmlelement('progress')}} および {{htmlelement('meter')}} 要素で有効であり、 `max` 属性はフォームコントロールで妥当と見なされる最も大きな値を指定する数値です。
 

@@ -77,7 +77,7 @@ inline-size: unset;
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - The mapped physical properties: {{cssxref("width")}} and {{cssxref("height")}}
 - {{cssxref("writing-mode")}}

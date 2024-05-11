@@ -86,7 +86,7 @@ TBD
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{CSSxRef("calc")}}
 - {{CSSxRef("max")}}

@@ -44,7 +44,7 @@ gl.deleteFramebuffer(framebuffer);
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{domxref("WebGLRenderingContext.bindFramebuffer()")}}
 - {{domxref("WebGLRenderingContext.createFramebuffer()")}}

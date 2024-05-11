@@ -9,4 +9,4 @@ slug: Glossary/Information_architecture
 
 ## 参见
 
-- [Information architecture](https://zh.wikipedia.org/wiki/Information_architecture) on Wikipedia
+- 维基百科上的[信息架构](https://zh.wikipedia.org/wiki/資訊架構)

@@ -70,7 +70,7 @@ slug: Web/CSS/@document
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [Per-site user style sheet rules](http://lists.w3.org/Archives/Public/www-style/2004Aug/0135) on the www-style mailing list.
 

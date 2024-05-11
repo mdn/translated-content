@@ -82,7 +82,7 @@ o9 = false || ""; // f || f は "" を返す
 o10 = false || varObject; // f || オブジェクトは varObject を返す
 ```
 
-> **メモ:** この演算子を使用していくつかの変数に既定値を提供する場合、*偽値*が使用されないことに注意してください。 {{jsxref("null")}} や {{jsxref("undefined")}} をフィルタリングする必要がある場合は、[Null 合体演算子](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)の使用を検討してください。
+> **メモ:** この演算子を使用していくつかの変数に既定値を提供する場合、*偽値*が使用されないことに注意してください。 [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) や {{jsxref("undefined")}} をフィルタリングする必要がある場合は、[Null 合体演算子](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)の使用を検討してください。
 
 ### 論理型の変換規則
 

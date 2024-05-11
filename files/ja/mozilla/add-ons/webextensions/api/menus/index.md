@@ -9,7 +9,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/menus
 
 この API は、Chrome のエクステンションでコンテキストメニューに項目を追加できる機能である["contextMenus"](https://developer.chrome.com/extensions/contextMenus) API をモデルにしています。この `browser.menus` API は Chrome の API にいくつかの機能を追加しています。
 
-Firefox 55 より前ではこの API は `contextMenus` という名前でした。その名称は一応エイリアスにしています。そのため `contextMenus` という名称を使って Firefox や他のブラウザでも動くコードを書くことできます。
+Firefox 55 より前ではこの API は `contextMenus` という名前でした。その名称は一応エイリアスにしています。そのため `contextMenus` という名称を使って Firefox や他のブラウザーでも動くコードを書くことできます。
 
 この API を使用するためには `menus` [permission](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) 必要です。 `menus` の代わりにエイリアスの `contextMenus` を使用することができますが、もし使用するのであれば`browser.contextMenus` で API にアクセスしなければなりません。.
 
@@ -150,9 +150,9 @@ browser.menus.create(
 - {{WebExtAPIRef("menus.onClicked")}}
   - : メニューアイテムがクリックされたときに発火。
 - {{WebExtAPIRef("menus.onHidden")}}
-  - : ブラウザがメニューを隠したときに発火。
+  - : ブラウザーがメニューを隠したときに発火。
 - {{WebExtAPIRef("menus.onShown")}}
-  - : ブラウザがメニューを見せたときに発火。
+  - : ブラウザーがメニューを見せたときに発火。
 
 ## ブラウザーの互換性
 

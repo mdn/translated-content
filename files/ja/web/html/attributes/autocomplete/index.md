@@ -2,7 +2,7 @@
 title: "HTML 属性: autocomplete"
 slug: Web/HTML/Attributes/autocomplete
 l10n:
-  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
+  sourceCommit: 2af097c9c4c869d3b0f60a0f3e52d9b8e079e731
 ---
 
 {{HTMLSidebar}}
@@ -13,9 +13,7 @@ HTML の `autocomplete` 属性は、ウェブ開発者は入力欄にどの種�
 
 提案値の情報源は、一般にブラウザーに依存します。ふつうは、ユーザーが入力した過去の値からとりますが、あらかじめ構成された値から取得することもあります。例えば、ブラウザーはユーザーに名前、住所、電話番号、メールアドレスを自動補完するために保存させることができます。おそらく、ブラウザーは以降の認証手続で自動補完を行うために、クレジットカード情報を暗号化して保存する機能を提供しています。
 
-{{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} 要素に `autocomplete` 属性がない場合、ブラウザーはその要素のフォームオーナー、つまりその要素を子孫に持つ {{HTMLElement("form")}} 要素、または `<form>` 要素で `id` がその要素の [`form`](/ja/docs/Web/HTML/Element/input#form) 属性で指定されているものの `autocomplete` 属性の値を使用します。
-
-詳しくは、 {{HTMLElement("form")}} 要素の [`autocomplete`](/ja/docs/Web/HTML/Element/form#autocomplete) 属性をご覧ください。
+{{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} 要素に `autocomplete` 属性がない場合、ブラウザーはその要素のフォームオーナー、つまりその要素を子孫に持つ {{HTMLElement("form")}} 要素、または `<form>` 要素で `id` がその要素の [`form`](/ja/docs/Web/HTML/Element/input#form) 属性で指定されているものの `autocomplete` 属性の値を使用します（詳しくは、 `<form>` の [`autocomplete`](/ja/docs/Web/HTML/Element/form#autocomplete) 属性をご覧ください）。
 
 > **メモ:** 自動補完を提供するために、ユーザーエージェントは `<input>`/`<select>`/`<textarea>` 要素に次のことを要求することがあります。
 >
@@ -61,21 +59,26 @@ HTML の `autocomplete` 属性は、ウェブ開発者は入力欄にどの種�
 - "`current-password`"
   - : ユーザーの現在のパスワードです。
 - "`one-time-code`"
-  - : ユーザー自身を確認するために使われるワンタイムコードです
+  - : ログインフローで追加要素として使用する、ユーザー ID を確認するためのワンタイムパスワード (OTP)。
+    一般的には、SMS、電子メール、認証アプリケーションなど、チャンネル外のメカニズムを通じて受信されるコードです。
 - "`organization-title`"
   - : 職名や組織内の肩書です (例: "上級技術ライター", "社長", "副部隊長")
 - "`organization`"
   - : 企業または団体の名前です。 "Acme Widget Company" や "Girl Scouts of America" など。
 - "`street-address`"
   - : 住所。複数行のテキストが使用でき、第2行政レベル (普通は市町村) の中で完全に住所を識別できるものですが、市町村名、郵便番号、国名は含めるべきではありません。
+    - "`shipping`"
+      - : 製品を送る住所。これは "`shipping street-address`" や "`shipping address-level2`" などのように、他のトークンと結合子することができます。
+    - "`billing`"
+      - : 使用する決済形式と関連付ける番地。これは "`billing street-address`" や "`billing address-level2`" などのように、他のトークンと結合子することができます。
 - "`address-line1`", "`address-line2`", "`address-line3`"
   - : 住所のそれぞれの行です。これらは "`street-address`" が存在しない場合のみ置くことができます。
 - "`address-level4`"
-  - : 住所が4段階まである場合のもっとも細かい[行政レベル](#住所における行政レベル)です。
+  - : 住所が 4 段階まである場合のもっとも細かい[行政レベル](#住所における行政レベル)です。
 - "`address-level3`"
-  - : 少なくとも3段階の行政レベルがある住所において、3番目の[行政レベル](#住所における行政レベル)です。
+  - : 少なくとも 3 段階の行政レベルがある住所において、 3 番目の[行政レベル](#住所における行政レベル)です。
 - "`address-level2`"
-  - : 少なくとも2段階の行政レベルがある住所において、2番目の[行政レベル](#住所における行政レベル)です。2つの行政レベルがある国では、これはふつう市町村や、住所のあるその他の地域を表します。
+  - : 少なくとも 2 段階の行政レベルがある住所において、 2 番目の[行政レベル](#住所における行政レベル)です。 2 つの行政レベルがある国では、これはふつう市町村や、住所のあるその他の地域を表します。
 - "`address-level1`"
   - : 住所の一番上[行政レベル](#住所における行政レベル)です。これはふつう、住所がある都道府県です。合衆国では州になります。スイスでは、カートンになります。イギリスでは、ポストタウンになります。
 - "`country`"
@@ -141,6 +144,8 @@ HTML の `autocomplete` 属性は、ウェブ開発者は入力欄にどの種�
   - : URL です。このフォームの他のフィールドの文脈から見て適切な、ホームページのや企業ウェブサイトのアドレスです。
 - "`photo`"
   - : このフォームの他のフィールドの文脈における人物、企業、連絡先情報を表す画像の URL です。
+- "`webauthn`"
+  - : [ウェブ認証 API](/ja/docs/Web/API/Web_Authentication_API) によって、条件付きの {{domxref("CredentialsContainer.get()", "navigator.credentials.get()")}} 呼び出し（すなわち、 `mediation: 'conditional'` を含む呼び出し）によってリクエストされた、生成されたパスキー。詳しくは [Sign in with a passkey through form autofill](https://web.dev/articles/passkey-form-autofill) を参照してください。
 
 詳しくは [WHATWG 仕様書](https://html.spec.whatwg.org/multipage/forms.html#autofill) をご覧ください。
 

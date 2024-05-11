@@ -5,13 +5,13 @@ slug: Mozilla/Firefox/Releases/15
 
 Firefox 15 は 2012 年 8 月 28 日にリリースされました。この記事では、ウェブ開発者に知らせるだけでなく、Firefox や Gecko 開発者、アドオン開発者にも役立つ主な変更点のリストを掲載しています。
 
-## Web 開発者向けの変更点
+## ウェブ開発者向けの変更点
 
 ### HTML
 
 - {{HTMLElement("font")}} 要素の `size` 属性が HTML5 仕様に従って扱われるようになりました。つまり、`10` より大きい、または、`-10` より小さい整数はすべて `10` か `-10` であるとみなされるようになりました。
 - `<font>` 要素の `font-weight` および `point-size` 属性のサポートが削除されました。これらは非標準であり、Gecko はそれらをサポートする唯一のレンダリングエンジンでした。
-- {{HTMLElement("audio")}} および {{HTMLElement("video")}} 要素のための Ogg コンテナで音声向けの [Opus コーデック](http://www.opus-codec.org/) がサポートされました。
+- {{HTMLElement("audio")}} および {{HTMLElement("video")}} 要素のための Ogg コンテナーで音声向けの [Opus コーデック](http://www.opus-codec.org/) がサポートされました。
 - {{HTMLElement("source")}} 要素で `media` 属性がサポートされました。
 - {{HTMLElement("audio")}} および {{HTMLElement("video")}} 要素で `played` 属性がサポートされました。この属性の値はこれまで再生したメディアの時間を一覧化した {{domxref("TimeRanges")}} オブジェクトです。
 
@@ -34,14 +34,14 @@ Firefox 15 は 2012 年 8 月 28 日にリリースされました。この記�
 - `Performance` API に新しいメソッド `now()` が追加されました。このメソッドは `DOMHighResTimeStamp` 型の高解像度タイマをサポートします（[bug 539095](https://bugzilla.mozilla.org/show_bug.cgi?id=539095)）。
 - [WebSMS API](/ja/docs/API/WebSMS) が更新され、SMS テキストメッセージが既読か未読かのどちらかを示す `read` 属性がサポートされました。
 - [FileHandle API](https://wiki.mozilla.org/WebAPI/FileHandleAPI) が実装されました。
-- [`Blob`](/ja/docs/DOM/Blob) コンストラクタが `blobParts` 引数の値として `ArrayBuffer` に加えて `ArrayBufferView` を取れるようになりました。 ([bug 752402](https://bugzilla.mozilla.org/show_bug.cgi?id=752402))
+- [`Blob`](/ja/docs/DOM/Blob) コンストラクターが `blobParts` 引数の値として `ArrayBuffer` に加えて `ArrayBufferView` を取れるようになりました。 ([bug 752402](https://bugzilla.mozilla.org/show_bug.cgi?id=752402))
 - [Ambient Light Events Working Draft](http://www.w3.org/TR/ambient-light/) で策定された `DeviceLightEvent` が実装されました。
 - {{domxref("DeviceProximityEvent")}} および {{domxref("UserProximityEvent")}} [Proximity Events](http://www.w3.org/TR/proximity/) が実装されました。
 - {{domxref("File")}} `lastModifiedDate` プロパティが実装されました。 ([Firefox バグ 673586](https://bugzil.la/673586))
 
 ### JavaScript
 
-- Typed Arrays 仕様由来の [`DataView`](/ja/docs/javascript_typed_arrays/DataView) インタフェースのサポートが追加されました。これは [`ArrayBuffer`](/ja/docs/javascript_typed_arrays/ArrayBuffer) に含まれるデータへの低レベルアクセスを提供します。
+- Typed Arrays 仕様由来の [`DataView`](/ja/docs/javascript_typed_arrays/DataView) インターフェイスのサポートが追加されました。これは [`ArrayBuffer`](/ja/docs/javascript_typed_arrays/ArrayBuffer) に含まれるデータへの低レベルアクセスを提供します。
 - ECMAScript Harmony の `Number.isNaN` のサポートが追加されました。([bug 749818](https://bugzilla.mozilla.org/show_bug.cgi?id=749818))
 - ECMAScript Harmony のデフォルトパラメータが追加されました。 ([bug 757676](https://bugzilla.mozilla.org/show_bug.cgi?id=757676))
 - ECMAScript Harmony のレストパラメータが追加されました。 ([bug 574132](https://bugzilla.mozilla.org/show_bug.cgi?id=574132))
@@ -68,7 +68,7 @@ Firefox 15 は 2012 年 8 月 28 日にリリースされました。この記�
 
 ## Mozilla 開発者とアドオン開発者向けの変更点
 
-### インタフェースの変更点
+### インターフェイスの変更点
 
 - `nsIDOMWindowUtils`
   - : `sendMouseEvent()`、`sendTouchEvent()`、`sendMouseEventToWindow()`、`sendMouseScrollEvent()` および `sendKeyEvent()` の `aModifiers` は [`KeyboardEvent.getModifierState()`](/ja/docs/DOM/KeyboardEvent#getModifierState%28%29) でサポートされている修飾キーのすべてをサポートします。`MODIFIER_*` という値を利用してください。 また、`sendKeyEvent()` の第 5 引数が `boolean` から `unsigned long` に変更されました。後方互換性のために、呼び出し元がそれに対して `true` または false を渡している場合、挙動は変更されません。この変更によって呼び出し元がキーの位置を指定することができるようになります。
@@ -79,14 +79,14 @@ Firefox 15 は 2012 年 8 月 28 日にリリースされました。この記�
 - `nsIINIParserWriter`
   - : `nsIINIParserWriter.writeFile` メソッドが `flags` プロパティを受け入れるようになりました。現在は 1 個のオプションのみを与えます: Windows および特定のインストーラーとの互換性のため、ファイルを UTF-8 形式の代わりに UTF-16 形式で書き込むことを知らせることができます。
 
-#### 新しいインタフェース
+#### 新しいインターフェイス
 
 - `nsISpeculativeConnect`
   - : 近い将来のいつかに要求される可能性がある、与えられた URI への接続をオープンするネットワーキング層のヒントを与えるための方法を提供します。これによりネットワーク層が時として高レイテンシプロセスで前もっと新しいネットワーク接続を開き始めることを可能にします。
 
-#### 削除されたインタフェース
+#### 削除されたインターフェイス
 
-以下のインタフェースが削除されました。
+以下のインターフェイスが削除されました。
 
 - `nsIGlobalHistory`
 

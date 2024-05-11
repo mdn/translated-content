@@ -628,7 +628,7 @@ function Personne() {
 var p = new Personne();
 ```
 
-Avec ECMAScript 3/5, ce problème fut résolu avec l'affectation de la valeur de `this` dans une variable a variable that could be closed over.
+Avec ECMAScript 3/5, ce problème fut résolu en affectant la valeur de `this` à une variable incluse dans la fermeture.
 
 ```js
 function Personne() {

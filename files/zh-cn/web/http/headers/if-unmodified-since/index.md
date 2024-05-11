@@ -55,7 +55,7 @@ If-Unmodified-Since: Wed, 21 Oct 2015 07:28:00 GMT
 
 {{Compat}}
 
-## 相关内容
+## 参见
 
 - {{HTTPHeader("If-Unmodified-since")}}
 - {{HTTPHeader("If-Match")}}

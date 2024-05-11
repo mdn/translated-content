@@ -126,7 +126,7 @@ pc.onicecandidate = (ev) => {
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [WebRTC API](/ru/docs/Web/API/WebRTC_API)
 - [Signaling and video calling](/ru/docs/Web/API/WebRTC_API/Signaling_and_video_calling)

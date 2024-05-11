@@ -11,4 +11,4 @@ slug: Glossary/Host
 
 ## 参见
 
-- [Host (network)](<https://zh.wikipedia.org/wiki/Host_(network)>) on Wikipedia
+- 维基百科上的[网络主机](https://zh.wikipedia.org/wiki/网络主机)

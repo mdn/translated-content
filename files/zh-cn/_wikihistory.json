@@ -2717,10 +2717,6 @@
       "sanxingming"
     ]
   },
-  "Learn/Front-end_web_developer": {
-    "modified": "2020-07-16T22:40:48.018Z",
-    "contributors": ["Ende93", "ex90rts"]
-  },
   "Learn/Getting_started_with_the_web": {
     "modified": "2020-09-24T11:26:23.243Z",
     "contributors": [
@@ -15186,6 +15182,10 @@
     "modified": "2020-10-15T22:30:15.212Z",
     "contributors": ["Jee"]
   },
+  "Web/API/Window/crossOriginIsolated": {
+    "modified": "2020-10-15T22:26:03.129Z",
+    "contributors": ["Fulgrim"]
+  },
   "Web/API/Window/customElements": {
     "modified": "2020-10-15T22:02:36.021Z",
     "contributors": ["RainSlide", "shhider", "bluetomlee", "lltemplar", "Mmzer"]
@@ -15300,6 +15300,10 @@
     "modified": "2019-09-19T09:48:51.675Z",
     "contributors": ["SphinxKnight", "joodo", "teoli", "khalid32", "monjer"]
   },
+  "Web/API/Window/indexedDB": {
+    "modified": "2019-09-21T03:34:03.050Z",
+    "contributors": ["FEhaoxinjie"]
+  },
   "Web/API/Window/innerHeight": {
     "modified": "2019-03-18T20:46:35.962Z",
     "contributors": ["WangLeto", "teoli", "AlexChao"]
@@ -15307,6 +15311,10 @@
   "Web/API/Window/innerWidth": {
     "modified": "2020-10-15T22:30:06.986Z",
     "contributors": ["Jee"]
+  },
+  "Web/API/Window/isSecureContext": {
+    "modified": "2019-09-21T03:37:23.951Z",
+    "contributors": ["Awe"]
   },
   "Web/API/Window/length": {
     "modified": "2019-03-23T23:33:15.311Z",
@@ -15446,6 +15454,10 @@
     "modified": "2020-10-15T22:00:40.756Z",
     "contributors": ["Carllllo", "fscholz", "zxsunrise", "Jijmin"]
   },
+  "Web/API/Window/origin": {
+    "modified": "2019-03-23T22:03:28.077Z",
+    "contributors": ["xgqfrms-GitHub"]
+  },
   "Web/API/Window/outerHeight": {
     "modified": "2019-07-20T05:24:24.610Z",
     "contributors": ["teoli", "AlexChao"]
@@ -15465,6 +15477,10 @@
   "Web/API/Window/parent": {
     "modified": "2019-03-24T00:16:12.247Z",
     "contributors": ["givebest", "teoli", "khalid32", "ziyunfei"]
+  },
+  "Web/API/Window/performance": {
+    "modified": "2019-08-22T06:18:57.970Z",
+    "contributors": ["vebuqi", "xgqfrms-GitHub", "AceMood"]
   },
   "Web/API/Window/popstate_event": {
     "modified": "2020-10-15T21:07:15.381Z",
@@ -16232,10 +16248,6 @@
     "modified": "2019-03-18T20:44:01.174Z",
     "contributors": ["fanerge", "varcat"]
   },
-  "Web/API/crossOriginIsolated": {
-    "modified": "2020-10-15T22:26:03.129Z",
-    "contributors": ["Fulgrim"]
-  },
   "Web/API/crypto_property": {
     "modified": "2019-03-23T22:22:09.825Z",
     "contributors": ["koaqiu", "Taoja"]
@@ -16260,14 +16272,6 @@
       "fuchao2012"
     ]
   },
-  "Web/API/indexedDB": {
-    "modified": "2019-09-21T03:34:03.050Z",
-    "contributors": ["FEhaoxinjie"]
-  },
-  "Web/API/isSecureContext": {
-    "modified": "2019-09-21T03:37:23.951Z",
-    "contributors": ["Awe"]
-  },
   "Web/API/notification": {
     "modified": "2020-09-28T00:03:47.900Z",
     "contributors": [
@@ -16280,14 +16284,6 @@
       "xgqfrms-GitHub",
       "Hawkeyes_Wind"
     ]
-  },
-  "Web/API/origin": {
-    "modified": "2019-03-23T22:03:28.077Z",
-    "contributors": ["xgqfrms-GitHub"]
-  },
-  "Web/API/performance_property": {
-    "modified": "2019-08-22T06:18:57.970Z",
-    "contributors": ["vebuqi", "xgqfrms-GitHub", "AceMood"]
   },
   "Web/API/queueMicrotask": {
     "modified": "2020-10-15T22:23:11.878Z",
@@ -16531,10 +16527,6 @@
   "Web/CSS/-webkit-line-clamp": {
     "modified": "2020-10-15T22:24:06.241Z",
     "contributors": ["liuruiqi1993", "herotangabc", "litaoAurora"]
-  },
-  "Web/CSS/-webkit-mask-attachment": {
-    "modified": "2019-03-18T21:45:10.830Z",
-    "contributors": ["mobiuskaikai"]
   },
   "Web/CSS/-webkit-overflow-scrolling": {
     "modified": "2019-03-23T23:02:52.440Z",
@@ -21554,10 +21546,6 @@
       "ZhangJianxiang"
     ]
   },
-  "Web/HTML/Element/image": {
-    "modified": "2019-03-30T00:32:55.632Z",
-    "contributors": ["raygift", "hoyt"]
-  },
   "Web/HTML/Element/img": {
     "modified": "2020-10-15T21:34:27.415Z",
     "contributors": [
@@ -22287,10 +22275,6 @@
   "Web/HTML/Global_attributes/contenteditable": {
     "modified": "2020-10-15T21:37:25.983Z",
     "contributors": ["zhangchen", "xgqfrms", "eforegist", "AlexChao"]
-  },
-  "Web/HTML/Global_attributes/contextmenu": {
-    "modified": "2020-10-15T21:51:27.709Z",
-    "contributors": ["SphinxKnight", "eforegist", "Ende93", "shuangya"]
   },
   "Web/HTML/Global_attributes/data-*": {
     "modified": "2020-10-15T21:36:49.775Z",

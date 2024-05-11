@@ -106,7 +106,7 @@ The features include:
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{HTTPHeader("Feature-Policy")}} HTTP header
 - {{HTMLElement('iframe','<code>allow</code>','#Attributes')}} attribute on iframes

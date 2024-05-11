@@ -1,17 +1,19 @@
 ---
-title: Navigator.maxTouchPoints
+title: Navigator：maxTouchPoints 属性
 slug: Web/API/Navigator/maxTouchPoints
+l10n:
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{apiref("HTML DOM")}}返回当前设备能够支持的最大同时触摸的点数。
+{{APIRef("HTML DOM")}}
 
-## 语法
+{{domxref("Navigator")}} 接口的 **`maxTouchPoints`** 只读属性返回当前设备支持的最大同时触摸接触点数。
 
-```plain
-touchPoints = navigator.maxTouchPoints;
-```
+## 值
 
-## 样例
+一个数字。
+
+## 示例
 
 ```js
 if (navigator.maxTouchPoints > 1) {

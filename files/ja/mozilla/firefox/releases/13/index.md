@@ -5,7 +5,7 @@ slug: Mozilla/Firefox/Releases/13
 
 Firefox 13 は 米国時間 2012 年 6 月 5 日にリリースされました。この記事は開発者に影響がある Firefox 13 での変更点をまとめています。
 
-## Web 開発者向けの変更点一覧
+## ウェブ開発者向けの変更点一覧
 
 ### HTML
 
@@ -31,15 +31,15 @@ Firefox 13 は 米国時間 2012 年 6 月 5 日にリリースされました�
 - DOM4 の規定により、{{ domxref("Node.cloneNode()") }} メソッドの引数 `deep` は省略可能になりました。
 - {{ domxref("window.setTimeout()") }} および {{ domxref("window.setInterval()") }} メソッドは、付加的な引数である "遅延" をコールバックルーチンに渡さないようになりました。
 - {{ domxref("Blob","Blob.mozSlice()") }} メソッドの接頭辞を削除しました。
-- {{ domxref("Blob") }} コンストラクタをサポートしました。
+- {{ domxref("Blob") }} コンストラクターをサポートしました。
 - [`globalStorage`](/ja/DOM/Storage#globalStorage) のサポートを削除しました。
-- バックグラウンドの処理の状態や結果を報告するために用いる {{ domxref("DOMRequest") }} インタフェースを新たに追加しました。
+- バックグラウンドの処理の状態や結果を報告するために用いる {{ domxref("DOMRequest") }} インターフェイスを新たに追加しました。
 - {{ domxref("HTMLOptionElement", "HTMLOptionElement.index()") }} メソッドは、{{ HTMLElement("option") }} が {{ HTMLElement("datalist") }} HTML 要素の内部にあるときに誤った値 `-1` ではなく `0` を返すようになりました。
 - {{ domxref("DOMException") }} のうち DOM Level 4 で定義された部分を実装しました。
-- 最新の File API 仕様での {{ domxref("DOMError") }} の定義に賛同して、{{ domxref("FileError") }} インタフェースを削除しました。
+- 最新の File API 仕様での {{ domxref("DOMError") }} の定義に賛同して、{{ domxref("FileError") }} インターフェイスを削除しました。
 - {{ domxref("Range") }} オブジェクトは `RangeException` 例外を投げなくなりました。代わりに DOM4 で定義された {{ domxref("DOMException") }} を用います。
 - {{ domxref("element.getAttributeNS()") }} は存在しない属性について空の文字列に代わり常に `null` を返すようになりました。以前は、空の文字列が返る場合がありました。存在しない属性には空の文字列ではなく null を返すべきであるという現在の DOM4 仕様に従います。
-- {{ domxref("HTMLCanvasElement") }} インタフェースに非標準の `mozFetchAsStream()` メソッドを追加しました。これは当該要素の画像データを指定した形式で含む入力ストリームを提供します。
+- {{ domxref("HTMLCanvasElement") }} インターフェイスに非標準の `mozFetchAsStream()` メソッドを追加しました。これは当該要素の画像データを指定した形式で含む入力ストリームを提供します。
 
 ### UA 文字列
 
@@ -48,7 +48,7 @@ Firefox 13 は 米国時間 2012 年 6 月 5 日にリリースされました�
 
 ### SVG
 
-- {{ domxref("SVGStringList") }} DOM インタフェースが [`Array`](/ja/JavaScript/Reference/Global_Objects/Array) と同様に添字を利用可能になりました。[Firefox バグ 722071](https://bugzil.la/722071) をご覧ください。
+- {{ domxref("SVGStringList") }} DOM インターフェイスが [`Array`](/ja/JavaScript/Reference/Global_Objects/Array) と同様に添字を利用可能になりました。[Firefox バグ 722071](https://bugzil.la/722071) をご覧ください。
 
 ### WebGL
 
@@ -67,7 +67,7 @@ Firefox 13 は 米国時間 2012 年 6 月 5 日にリリースされました�
 
 #### スタイルパネルの改良
 
-- [スタイルパネル](/ja/Tools/Page_Inspector/Style_panel) でルールの見出しをクリックすると、対応する CSS を [スタイルエディタ](/ja/Tools/Style_Editor) で開くようになりました。
+- [スタイルパネル](/ja/Tools/Page_Inspector/Style_panel) でルールの見出しをクリックすると、対応する CSS を [スタイルエディター](/ja/Tools/Style_Editor) で開くようになりました。
 - [スタイルパネル](/ja/Tools/Page_Inspector/Style_panel) でルールを右クリックすると、そのルールをクリップボードへコピーできるようになりました。
 - 未知のプロパティ名や誤った値を入力すると、プロパティの隣に警告アイコンを表示します。
 
@@ -85,23 +85,23 @@ Firefox 13 より、Windows 版の Firefox は Windows XP Service Pack 2 以降�
 
 #### source-editor.jsm
 
-- ソースエディタの API に、ダーティフラグのサポートを追加しました。
-- ソースエディタは、Orion を利用せずに {{ HTMLElement("textarea") }} へフォールバックする動作をサポートしなくなりました。
-- エディタが focus と blue のイベントを公開するようになりました。
-- [`getIndentationString()`](/ja/JavaScript_code_modules/source-editor.jsm#getIndentationString%28%29) メソッドを追加しました。これは、エディタでテキストのインデントに使用する文字を返します。
-- ソースエディタで、ブレークポイントのリストの管理とブレークポイントのオン・オフを切り替えるユーザインタフェースの表示をサポートしました。ただし実際は、ブレークポイントを実装していません。そのためのデバッガのコードを記述するのはあなた次第です。
+- ソースエディターの API に、ダーティフラグのサポートを追加しました。
+- ソースエディターは、Orion を利用せずに {{ HTMLElement("textarea") }} へフォールバックする動作をサポートしなくなりました。
+- エディターが focus と blue のイベントを公開するようになりました。
+- [`getIndentationString()`](/ja/JavaScript_code_modules/source-editor.jsm#getIndentationString%28%29) メソッドを追加しました。これは、エディターでテキストのインデントに使用する文字を返します。
+- ソースエディターで、ブレークポイントのリストの管理とブレークポイントのオン・オフを切り替えるユーザーインターフェイスの表示をサポートしました。ただし実際は、ブレークポイントを実装していません。そのためのデバッガのコードを記述するのはあなた次第です。
 - `highlightCurrentLine` 設定オプションを用いて、カレント行をハイライトする機能をサポートしました。
 
 ### ARIA
 
 - CSS プロパティ {{ cssxref("margin-left") }}、{{ cssxref("margin-right") }}、{{ cssxref("margin-top") }}、および {{ cssxref("margin-bottom") }} はすべて、同じ名前で ARIA オブジェクトに反映されます。詳しくは [Gecko object attributes](/ja/Accessibility/AT-APIs/Gecko/Attrs) をご覧ください。
 
-### インタフェースの変更
+### インターフェイスの変更
 
-- `nsIScreen` インタフェースが、新たに引数 `rotation` を通して回転の制御をサポートしました。
-- `nsIPrefBranch2` インタフェースを `nsIPrefBranch` に統合しました ([Firefox バグ 718255](https://bugzil.la/718255))。
+- `nsIScreen` インターフェイスが、新たに引数 `rotation` を通して回転の制御をサポートしました。
+- `nsIPrefBranch2` インターフェイスを `nsIPrefBranch` に統合しました ([Firefox バグ 718255](https://bugzil.la/718255))。
 - 以前のバージョンの Gecko で削除されたエイリアス `MozOpacity`、`MozOutline`、`MozOutlineStyle`、`MozOutlineWidth`、`MozOutlineOffset`、および `MozOutlineColor` を、`nsIDOMCSS2Properties` から削除しました。これは、エイリアスを削除した当初に行うべきでした。
-- `nsINavHistoryQueryOptions` の属性 `excludeItemIfParentHasAnnotation` を、対応するクエリ操作と共に削除しました。これはライブブックマークのサポート用に存在しましたが、もはや存在しません。
+- `nsINavHistoryQueryOptions` の属性 `excludeItemIfParentHasAnnotation` を、対応するクエリー操作と共に削除しました。これはライブブックマークのサポート用に存在しましたが、もはや存在しません。
 
 ## 関連記事
 

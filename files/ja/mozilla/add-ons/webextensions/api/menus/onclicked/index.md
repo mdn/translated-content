@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/menus/onClicked
 
 メニューアイテムがクリックされたときに発火します。
 
-他のブラウザとの互換性のために Firefox はこのイベントを名前空間`contextMenus`と`menu`を経由して利用可能にしています。
+他のブラウザーとの互換性のために Firefox はこのイベントを名前空間`contextMenus`と`menu`を経由して利用可能にしています。
 
 ## 書式
 
@@ -28,7 +28,7 @@ browser.menus.onClicked.hasListener(listener);
 
 ## addListener の書式
 
-### パラメータ
+### パラメーター
 
 - `callback`
 

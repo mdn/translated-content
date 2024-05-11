@@ -79,13 +79,13 @@ l10n:
 
 HTML 문서와 같은 폴더에 파일을 만들고 `styles.css` 로 저장하십시오. `.css` 확장자는 이것이 CSS 파일임을 보여줍니다.
 
-`styles.css` 파일을 `index.html` 에 링크하려면, HTML 문서의 {{htmlelement("head")}} 안에 다음 행을 추가하십시오:
+`styles.css` 파일을 `index.html` 에 링크하려면, HTML 문서의 {{htmlelement("head")}} 안에 다음 행을 추가하십시오.
 
 ```html
 <link rel="stylesheet" href="styles.css" />
 ```
 
-이 {{htmlelement("link")}} 요소는 `rel` 속성을 사용하는 스타일 시트와 해당 스타일 시트의 위치를 `href` 속성의 값으로 브라우저에게 알려줍니다. `styles.css` 에 규칙을 추가하여 CSS 가 작동하는지 테스트 할 수 있습니다. 코드 편집기를 사용하여 CSS 파일에 다음을 추가하십시오:
+이 {{htmlelement("link")}} 요소는 `rel` 속성을 사용하는 스타일 시트와 해당 스타일 시트의 위치를 `href` 속성의 값으로 브라우저에게 알려줍니다. `styles.css` 에 규칙을 추가하여 CSS 가 작동하는지 테스트 할 수 있습니다. 코드 편집기를 사용하여 CSS 파일에 다음을 추가하십시오.
 
 ```css
 h1 {

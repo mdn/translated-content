@@ -3,7 +3,7 @@ title: EventTarget.dispatchEvent()
 slug: Web/API/EventTarget/dispatchEvent
 ---
 
-{{ ApiRef("DOM Events") }}
+{{APIRef("DOM")}}
 
 Отправляет событие в общую систему событий. Это событие подчиняется тем же правилам поведения "Захвата" и "Всплывания" как и непосредственно инициированные события.
 

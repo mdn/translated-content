@@ -23,6 +23,6 @@ var str = channel.postMessage(object);
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - 所属接口：{{domxref("BroadcastChannel")}}

@@ -2,7 +2,7 @@
 title: アニメーションのパフォーマンスとフレームレート
 slug: Web/Performance/Animation_performance_and_frame_rate
 l10n:
-  sourceCommit: 6bff95b8adb7ecb18660320721433525a26360d1
+  sourceCommit: e74627e6fd9ba19696b918c2bdddfff8aa160787
 ---
 
 {{QuickLinksWithSubPages("/ja/docs/Web/Performance")}}
@@ -13,7 +13,7 @@ l10n:
 
 ユーザーは、すべてのインターフェイスとスムーズにやり取りできること、そしてすべてのユーザーインターフェイスが応答することを期待しています。アニメーションは、サイトをより速く、レスポンスよく感じさせるのに役立ちますが、アニメーションは正しく行われないと、サイトをより遅く、乱雑に感じさせることもあります。レスポンシブユーザーインターフェイスのフレームレートは 60 フレーム/秒 (fps) です。常に 60fps を維持することは不可能ですが、すべてのアニメーションで高いフレームレートと安定したフレームレートを維持することが重要です。
 
-[CSS アニメーション](/ja/docs/Web/CSS/CSS_Animations/Using_CSS_animations)では、いくつかの[キーフレーム](/ja/docs/Web/CSS/@keyframes)を指定して、それぞれのキーフレームがアニメーションの特定の段階での要素の姿を定義するために、 CSS を使用しています。ブラウザーは、各キーフレームから次のキーフレームへの遷移としてアニメーションを作成します。
+[CSS アニメーション](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)では、いくつかの[キーフレーム](/ja/docs/Web/CSS/@keyframes)を指定して、それぞれのキーフレームがアニメーションの特定の段階での要素の姿を定義するために、 CSS を使用しています。ブラウザーは、各キーフレームから次のキーフレームへの遷移としてアニメーションを作成します。
 
 JavaScript を使用して要素をアニメーション化するのに比べ、CSS アニメーションは簡単に作成することができます。また、ブラウザーがフレームをレンダリングするタイミングや、必要に応じてフレームを削除することを制御できるので、パフォーマンスも向上します。
 
@@ -35,72 +35,26 @@ JavaScript を使用して要素をアニメーション化するのに比べ、
 
 レンダリングウォーターフォールの文脈では、一部プロパティは他のプロパティよりもコストが高くなります。
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">プロパティの種類</th>
-      <th scope="col">コスト</th>
-      <th scope="col">例</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        要素の <em>形状</em> または <em>位置</em> に影響を与えるプロパティは、スタイル再計算、レイアウト、再描画を発生させます。
-      </td>
-      <td>
-        <img alt="スタイル再計算あり" src="recalculate-style.png" />
-        <img alt="レイアウト計算あり" src="layout.png" />
-        <img alt="再描画あり" src="paint.png" />
-      </td>
-      <td>
-        <p>
-          <code><a href="/ja/docs/Web/CSS/left">left</a></code
-          ><br /><code
-            ><a href="/ja/docs/Web/CSS/max-width">max-width</a></code
-          ><br /><code
-            ><a href="/ja/docs/Web/CSS/border-width">border-width</a></code
-          ><br /><code
-            ><a href="/ja/docs/Web/CSS/margin-left">margin-left</a></code
-          ><br /><code
-            ><a href="/ja/docs/Web/CSS/font-size">font-size</a></code
-          >
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <p>
-          形状や位置に影響しないが、独自のレイヤーで描画されないプロパティは、レイアウト処理が発生しません。
-        </p>
-      </td>
-      <td>
-        <img alt="スタイル再計算あり" src="recalculate-style.png" />
-        <img alt="レイアウト計算なし" src="layout-faint.png" />
-        <img alt="再描画あり" src="paint.png" />
-      </td>
-      <td>
-        <p>
-          <code><a href="/ja/docs/Web/CSS/color">color</a></code>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        独自のレイヤーでレンダリングされるプロパティは、更新がコンポジションで処理されるため、再描画が発生することもありません。
-      </td>
-      <td>
-        <img alt="スタイル再計算あり" src="recalculate-style.png" />
-        <img alt="レイアウト計算なし" src="layout-faint.png" />
-        <img alt="再描画なし" src="paint-faint.png" />
-      </td>
-      <td>
-        <code><a href="/ja/docs/Web/CSS/transform">transform</a></code
-        ><br /><code><a href="/ja/docs/Web/CSS/opacity">opacity</a></code>
-      </td>
-    </tr>
-  </tbody>
-</table>
+- 要素の**形状**または**位置**に影響するプロパティは、次のものを起動します。
+
+  - スタイルの再計算
+  - レイアウト
+  - 再描画
+
+  例: {{cssxref("left")}}, {{cssxref("max-width")}}, {{cssxref("border-width")}}, {{cssxref("margin-left")}}, {{cssxref("font-size")}}
+
+- 形状や位置に影響しないが、独自のレイヤーで描画されないプロパティは、次のものを起動します。
+
+  - スタイルの再計算
+  - 再描画
+
+  例: {{cssxref("color")}}
+
+- **独自のレイヤー**でレンダリングされるプロパティは、更新が**合成**で処理されるため、再描画が発生することもありません。次のものを起動します。
+
+  - スタイルの再計算
+
+  例: {{cssxref("transform")}}, {{cssxref("opacity")}}
 
 ## 開発者ツール
 

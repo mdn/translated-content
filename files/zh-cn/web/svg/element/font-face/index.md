@@ -1,66 +1,68 @@
 ---
-title: font-face
+title: <font-face>
 slug: Web/SVG/Element/font-face
+l10n:
+  sourceCommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
 ---
 
-{{SVGRef}}
+{{SVGRef}}{{deprecated_header}}
 
-font-face 元素相当于 (corresponds to) CSS 的 @font-face 规则声明，font-face 元素定义了一个字体的外部属性 (a font's outer properties)。
+**`<font-face>`** [SVG](/zh-CN/docs/Web/SVG) 元素对应于 CSS 的 {{cssxref("@font-face")}} 规则，用于定义字体的外部属性。
 
 ## 使用上下文
 
 {{svginfo}}
 
-## 例子
+## 属性
 
-## 属性 Attributes
-
-### 全局属性 Global attributes
-
-- [Core attributes](/zh-CN/SVG/Attribute#Core) »
-
-### 特定属性 Specific attributes
-
-- {{ SVGAttr("font-family") }}
-- {{ SVGAttr("font-style") }}
-- {{ SVGAttr("font-variant") }}
-- {{ SVGAttr("font-weight") }}
-- {{ SVGAttr("font-stretch") }}
-- {{ SVGAttr("font-size") }}
-- {{ SVGAttr("unicode-range") }}
-- {{ SVGAttr("units-per-em") }}
-- {{ SVGAttr("panose-1") }}
-- {{ SVGAttr("stemv") }}
-- {{ SVGAttr("stemh") }}
-- {{ SVGAttr("slope") }}
-- {{ SVGAttr("cap-height") }}
-- {{ SVGAttr("x-height") }}
-- {{ SVGAttr("accent-height") }}
-- {{ SVGAttr("ascent") }}
-- {{ SVGAttr("descent") }}
-- {{ SVGAttr("widths") }}
-- {{ SVGAttr("bbox") }}
-- {{ SVGAttr("ideographic") }}
-- {{ SVGAttr("alphabetic") }}
-- {{ SVGAttr("mathematical") }}
-- {{ SVGAttr("hanging") }}
-- {{ SVGAttr("v-ideographic") }}
-- {{ SVGAttr("v-alphabetic") }}
-- {{ SVGAttr("v-mathematical") }}
-- {{ SVGAttr("v-hanging") }}
-- {{ SVGAttr("underline-position") }}
-- {{ SVGAttr("underline-thickness") }}
-- {{ SVGAttr("strikethrough-position") }}
-- {{ SVGAttr("strikethrough-thickness") }}
-- {{ SVGAttr("overline-position") }}
-- {{ SVGAttr("overline-thickness") }}
+- {{SVGAttr("font-family")}} {{Deprecated_Inline}}
+- {{SVGAttr("font-style")}} {{Deprecated_Inline}}
+- {{SVGAttr("font-variant")}} {{Deprecated_Inline}}
+- {{SVGAttr("font-weight")}} {{Deprecated_Inline}}
+- {{SVGAttr("font-stretch")}} {{Deprecated_Inline}}
+- {{SVGAttr("font-size")}} {{Deprecated_Inline}}
+- {{SVGAttr("unicode-range")}} {{Deprecated_Inline}}
+- {{SVGAttr("units-per-em")}} {{Deprecated_Inline}}
+- {{SVGAttr("panose-1")}} {{Deprecated_Inline}}
+- {{SVGAttr("stemv")}} {{Deprecated_Inline}}
+- {{SVGAttr("stemh")}} {{Deprecated_Inline}}
+- {{SVGAttr("slope")}} {{Deprecated_Inline}}
+- {{SVGAttr("cap-height")}} {{Deprecated_Inline}}
+- {{SVGAttr("x-height")}} {{Deprecated_Inline}}
+- {{SVGAttr("accent-height")}} {{Deprecated_Inline}}
+- {{SVGAttr("ascent")}} {{Deprecated_Inline}}
+- {{SVGAttr("descent")}} {{Deprecated_Inline}}
+- {{SVGAttr("widths")}} {{Deprecated_Inline}}
+- {{SVGAttr("bbox")}} {{Deprecated_Inline}}
+- {{SVGAttr("ideographic")}} {{Deprecated_Inline}}
+- {{SVGAttr("alphabetic")}} {{Deprecated_Inline}}
+- {{SVGAttr("mathematical")}} {{Deprecated_Inline}}
+- {{SVGAttr("hanging")}} {{Deprecated_Inline}}
+- {{SVGAttr("v-ideographic")}} {{Deprecated_Inline}}
+- {{SVGAttr("v-alphabetic")}} {{Deprecated_Inline}}
+- {{SVGAttr("v-mathematical")}} {{Deprecated_Inline}}
+- {{SVGAttr("v-hanging")}} {{Deprecated_Inline}}
+- {{SVGAttr("underline-position")}} {{Deprecated_Inline}}
+- {{SVGAttr("underline-thickness")}} {{Deprecated_Inline}}
+- {{SVGAttr("strikethrough-position")}} {{Deprecated_Inline}}
+- {{SVGAttr("strikethrough-thickness")}} {{Deprecated_Inline}}
+- {{SVGAttr("overline-position")}} {{Deprecated_Inline}}
+- {{SVGAttr("overline-thickness")}} {{Deprecated_Inline}}
 
 ## DOM 接口
 
-这个元素实现了 [`SVGFontFaceElement`](/zh-CN/DOM/SVGFontFaceElement) 接口。
+此元素实现了 {{domxref("SVGFontFaceElement")}} 接口。
 
-## 另见
+## 规范
 
-- {{ SVGElement("font") }}
-- {{ SVGElement("font-face-src") }}
-- [SVG tutorial: SVG fonts](/zh-CN/SVG/Tutorial/SVG_fonts)
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
+
+## 参见
+
+- {{SVGElement("font")}}
+- {{SVGElement("font-face-src")}}
+- [SVG 教程：SVG 字体](/zh-CN/docs/Web/SVG/Tutorial/SVG_fonts)

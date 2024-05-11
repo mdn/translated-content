@@ -37,6 +37,6 @@ bc.postMessage("New listening connected!");
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - 所属接口：{{domxref("BroadcastChannel")}}

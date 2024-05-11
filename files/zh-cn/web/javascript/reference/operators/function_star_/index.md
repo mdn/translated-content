@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Operators/function*
 
 {{jsSidebar("Operators")}}
 
-**`function*`**关键字可以在表达式内部定义一个生成器函数。
+**`function*`** 关键字可以在表达式内部定义一个生成器函数。
 
 {{EmbedInteractiveExample("pages/js/expressions-functionasteriskexpression.html")}}
 

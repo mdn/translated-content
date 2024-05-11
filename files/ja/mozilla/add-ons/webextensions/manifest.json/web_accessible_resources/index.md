@@ -76,7 +76,7 @@ browser.runtime.getURL("images/my-image.png");
 // moz-extension://944cfddf-7a95-3c47-bd9a-663b3ce8d699/images/my-image.png
 ```
 
-この方法は拡張機能が実行されているブラウザがなんであれ正しい URL を取得します。
+この方法は拡張機能が実行されているブラウザーがなんであれ正しい URL を取得します。
 
 ### ワイルドカード
 

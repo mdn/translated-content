@@ -29,7 +29,7 @@ slug: Web/HTML/Global_attributes/tabindex
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - 所有[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
 - 反映这个属性的 {{domxref("HTMLElement.tabIndex")}}

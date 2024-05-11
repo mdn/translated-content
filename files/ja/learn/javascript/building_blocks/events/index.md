@@ -2,7 +2,7 @@
 title: イベント入門
 slug: Learn/JavaScript/Building_blocks/Events
 l10n:
-  sourceCommit: c64e813d8ab9dbe22cbc049c26f7c6703370a2b7
+  sourceCommit: f7c186696980fee97e72261370d7b5a8c1cd9302
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
@@ -16,7 +16,7 @@ l10n:
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        基本的なコンピューターリテラシー、基本的な HTML および CSS、
+        基本的な HTML および CSS、および
         <a href="/ja/docs/Learn/JavaScript/First_steps"
           >JavaScript の第一歩</a
         >について理解していること。
@@ -79,7 +79,7 @@ function random(number) {
 }
 
 btn.addEventListener("click", () => {
-  const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+  const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
   document.body.style.backgroundColor = rndCol;
 });
 ```
@@ -102,7 +102,7 @@ function random(number) {
 }
 
 btn.addEventListener("click", () => {
-  const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+  const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
   document.body.style.backgroundColor = rndCol;
 });
 ```
@@ -122,7 +122,7 @@ function random(number) {
 }
 
 function changeBackground() {
-  const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+  const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
   document.body.style.backgroundColor = rndCol;
 }
 
@@ -158,7 +158,7 @@ const controller = new AbortController();
 
 btn.addEventListener("click",
   () => {
-    const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+    const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
     document.body.style.backgroundColor = rndCol;
   },
   { signal: controller.signal } // このハンドラーに AbortSignal を渡す
@@ -210,7 +210,7 @@ function random(number) {
 }
 
 btn.onclick = () => {
-  const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+  const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
   document.body.style.backgroundColor = rndCol;
 };
 ```
@@ -225,7 +225,7 @@ function random(number) {
 }
 
 function bgChange() {
-  const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+  const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
   document.body.style.backgroundColor = rndCol;
 }
 
@@ -256,7 +256,7 @@ element.onclick = function2;
 
 ```js
 function bgChange() {
-  const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+  const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
   document.body.style.backgroundColor = rndCol;
 }
 ```
@@ -305,7 +305,7 @@ function random(number) {
 }
 
 function bgChange(e) {
-  const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+  const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
   e.target.style.backgroundColor = rndCol;
   console.log(e);
 }
@@ -733,7 +733,7 @@ function random(number) {
 }
 
 function bgChange() {
-  const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+  const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
   return rndCol;
 }
 
@@ -767,9 +767,9 @@ The [HTTP connect event docs](https://nodejs.org/api/http.html#event-connect) pr
 
 この段階では、他の環境について何かを理解する必要はありません。プログラミング環境が異なると、イベントが異なる可能性があることを明確にしたかっただけです。
 
-## スキルをテストしましょう
+## スキルテスト
 
-この記事の終わりまで到達しましたが、最も大事な情報を覚えていますか？次に行く前に、この情報が身に付いたかどうか確認するには — [Test your skills: Events](/ja/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Events) を見てください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: イベント](/ja/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Events)を見てください。
 
 ## まとめ
 

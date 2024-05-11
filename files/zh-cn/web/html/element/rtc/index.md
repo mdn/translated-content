@@ -62,7 +62,7 @@ slug: Web/HTML/Element/rtc
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{HTMLElement("ruby")}}
 - {{HTMLElement("rp")}}

@@ -41,7 +41,7 @@ console.log(x); // 1
 
 여기에는 "선언 전 접근"이 없는데, 이는 단순히 `var` 선언이 블록으로 범위가 지정되지 않았기 때문입니다.
 
-호이스팅에 대한 자세한 내용은 다음을 참조하십시오:
+호이스팅에 대한 자세한 내용은 다음을 참조하십시오.
 
 - `var`/`let`/`const` 호이스팅 - [문법 및 유형 가이드](/ko/docs/Web/JavaScript/Guide/Grammar_and_types#variable_hoisting)
 - `함수` 호이스팅 - [함수 가이드](/ko/docs/Web/JavaScript/Guide/Functions#function_hoisting)

@@ -10,7 +10,7 @@ l10n:
 
 **`localStorage`** は {{domxref("window")}} プロパティの読み取り専用プロパティで、この {{DOMxRef("Document")}} の {{glossary("origin")}} における {{DOMxRef("Storage")}} オブジェクトにアクセスできます。格納されたデータは、ブラウザーのセッションを跨いで保存されます。
 
-`localStorage` は {{DOMxRef("Window.sessionStorage", "sessionStorage")}} によく似ていまが、 `localStorage` のデータには期限がないのに対し、 `sessionStorage` のデータはページセッションが終了したとき、すなわちページが閉じられたときにクリアされます。（「プライベートブラウジング」や「プライバシーモード」のセッションに読み込まれた文書の `localStorage` のデータは、最後の「プライベート」タブが閉じられたときにクリアされます。）
+`localStorage` は {{DOMxRef("Window.sessionStorage", "sessionStorage")}} によく似ていますが、 `localStorage` のデータには期限がないのに対し、 `sessionStorage` のデータはページセッションが終了したとき、すなわちページが閉じられたときにクリアされます。（「プライベートブラウジング」や「プライバシーモード」のセッションに読み込まれた文書の `localStorage` のデータは、最後の「プライベート」タブが閉じられたときにクリアされます。）
 
 ## 値
 

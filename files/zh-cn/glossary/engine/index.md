@@ -9,4 +9,4 @@ slug: Glossary/Engine
 
 ## 参见
 
-- 维基百科上的[JavaScript engine](https://zh.wikipedia.org/wiki/JavaScript_engine)
+- 维基百科上的 [JavaScript 引擎](https://zh.wikipedia.org/wiki/JavaScript引擎)

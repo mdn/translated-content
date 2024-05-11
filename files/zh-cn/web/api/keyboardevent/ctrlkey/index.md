@@ -3,7 +3,7 @@ title: KeyboardEvent.ctrlKey
 slug: Web/API/KeyboardEvent/ctrlKey
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 **`KeyboardEvent.ctrlKey`** 只读属性返回一个 {{jsxref("Boolean")}} 值，表示事件触发时 <kbd>control</kbd> 键是 (`true`) 否 (`false`) 按下。
 

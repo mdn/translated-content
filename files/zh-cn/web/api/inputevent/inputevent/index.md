@@ -1,38 +1,46 @@
 ---
-title: InputEvent()
+title: InputEvent：InputEvent() 构造函数
 slug: Web/API/InputEvent/InputEvent
+l10n:
+  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
-{{APIRef("DOM Events")}}{{SeeCompatTable}}
+{{APIRef("UI Events")}}
 
-构造函数 **`InputEvent()`** 返回一个新创建的 {{domxref("InputEvent")}} 对象。
+**`InputEvent()`** 构造函数创建一个新的 {{domxref("InputEvent")}} 对象。
 
 ## 语法
 
-```
- event = new InputEvent(typeArg, inputEventInit);
+```js-nolint
+new InputEvent(type)
+new InputEvent(type, options)
 ```
 
 ### 参数
 
-- _typeArg_
-  - : 一个 {{domxref("DOMString")}} ，表示事件的名称。
-- _inputEventInit_{{optional_inline}}
+- `type`
+  - : 表示事件名称的字符串。区分大小写，浏览器将其设置为 `beforeinput` 或者 `input`。
+- `options` {{optional_inline}}
+  - : 一个对象，_除了 {{domxref("UIEvent/UIEvent", "UIEvent()")}} 中定义的属性之外_，还具有以下属性：
+    - `inputType` {{optional_inline}}
+      - : 指定可编辑内容更改类型的字符串，例如插入、删除或格式化文本。
+    - `data` {{optional_inline}}
+      - : 包含要插入的字符的字符串。如果更改未插入文本（例如删除字符时），则其可能为空字符串。
+    - `isComposing` {{optional_inline}}
+      - : 一个布尔值，指示事件是组合会话的一部分，这意味着它在 {{domxref("Element/compositionstart_event", "compositionstart")}} 事件之后，但在 {{domxref("Element/compositionend_event", "compositionend")}} 事件之前。默认值为 `false`。
 
-  - : 一个 `InputEventInit` 字典，有以下字段：
+## 返回值
 
-    - `inputType`（可选），指定可编辑内容更改类型的字符串，例如插入、删除或格式化文本。
-    - `data`（可选），包含要插入的字符的字符串。如果更改未插入文本（例如删除字符时），则其可能为空字符串。
-    - `dataTransfer`（可选），一个 {{domxref("DataTransfer")}} 对象，其中包含有关添加到可编辑内容，或从可编辑内容中删除的富文本或纯文本数据的信息。
-    - `isComposing`（可选），一个布尔值，指示事件是组合会话的一部分，这意味着它在 [`compositionstart`](/zh-CN/docs/Web/API/Element/compositionstart_event) 事件之后，但在 [`compositionend`](/zh-CN/docs/Web/API/Element/compositionend_event) 事件之前。默认值为 `false`。
-    - `ranges`（可选），一个静态 {{domxref("Range")}} 数组，如果输入事件没有被取消，它将受到对 DOM 的更改的影响。
+一个 {{domxref("InputEvent")}} 对象。
 
-`InputEventInit` 字典也接受来自 {{domxref("UIEvent.UIEvent", "UIEventInit")}} 以及 {{domxref("Event.Event", "EventInit")}} 字典的值。
+## 规范
+
+{{Specifications}}
 
 ## 浏览器兼容性
 
 {{Compat}}
 
-## 参考
+## 参见
 
 - {{domxref("InputEvent")}}，它构造的对象所属的接口。

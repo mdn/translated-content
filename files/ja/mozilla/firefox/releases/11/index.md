@@ -3,9 +3,9 @@ title: Firefox 11 for developers
 slug: Mozilla/Firefox/Releases/11
 ---
 
-Firefox 11 は米国時間 2012 年 3 月 13 日にリリースされました。この記事は Web 開発者とアドオン開発者向けに、今回のリリースにおける新機能と修正された重要なバグについての情報とより詳細なドキュメントへのリンクをまとめています。
+Firefox 11 は米国時間 2012 年 3 月 13 日にリリースされました。この記事はウェブ開発者とアドオン開発者向けに、今回のリリースにおける新機能と修正された重要なバグについての情報とより詳細なドキュメントへのリンクをまとめています。
 
-## Web 開発者向けの変更点一覧
+## ウェブ開発者向けの変更点一覧
 
 ### HTML
 
@@ -20,15 +20,15 @@ Firefox 11 は米国時間 2012 年 3 月 13 日にリリースされました�
 - {{ domxref("window.navigator.mozApps") }} は、[Open Web Applications](/ja/docs/Apps) のインストールや管理に用いることができる [`Apps`](/ja/docs/DOM/Apps) オブジェクトを返します。
 - `MozBeforePaint` イベントは発生しなくなりました。{{ domxref("window.requestAnimationFrame","mozRequestAnimationFrame()") }} でこのイベントを使用している場合は、代わりにコールバック関数を渡してください。
 - アニメーションフレームの要求をキャンセルする機能をサポートしました。{{ domxref("window.requestAnimationFrame", "window.mozRequestAnimationFrame()") }} はリクエスト ID を返すようになり、要求をキャンセルするにはこの値を {{ domxref("window.cancelAnimationFrame", "window.mozCancelAnimationFrame()") }} に渡します。
-- DOM4 仕様書で導入されたいくつかの {{ domxref("Event") }} コンストラクタ (`Event`、HTML イベント、 `UIEvent`、`MouseEvent`) がサポートされました。
+- DOM4 仕様書で導入されたいくつかの {{ domxref("Event") }} コンストラクター (`Event`、HTML イベント、 `UIEvent`、`MouseEvent`) がサポートされました。
 - {{ domxref("window.navigator.mozBattery", "Battery API") }} がデフォルトで有効になりました。
 - [`HTMLMediaElement`](/ja/docs/DOM/HTMLMediaElement) で、[`defaultMuted`](/ja/docs/DOM/HTMLMediaElement)、[`loop`](/ja/docs/DOM/HTMLMediaElement)、[`muted`](/ja/docs/DOM/HTMLMediaElement) の各プロパティがサポートされました。
 - ある要素で {{ domxref("element.mozRequestFullScreen()") }} メソッドを呼び出したときに別の要素がすでにフルスクリーンモードであった場合は、{{ domxref("document.mozCancelFullScreen()") }} を呼び出すときに、前にフルスクリーンモードであった要素を復元するようになりました。
 - {{ domxref("window.requestAnimationFrame", "window.mozRequestAnimationFrame()") }} メソッドは引数がない形式をサポートしなくなりました。このような形式はあまり使用されておらず、また標準化される見込みもありません。
 - 画像としての SVG が、[canvas を汚染せずに](/ja/docs/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F) canvas 内へ描画できるようになりました。
-- `GeoPositionAddress`インタフェースの非標準プロパティである `countryCode` を削除しました。`nsIDOMGeoPositionAddress` をご覧ください。
+- `GeoPositionAddress`インターフェイスの非標準プロパティである `countryCode` を削除しました。`nsIDOMGeoPositionAddress` をご覧ください。
 - [Server-sent events](/ja/docs/Server-sent_events) が [CORS](/ja/docs/HTTP_access_control) をサポートしました。
-- 従来、ユーザがリンクをたどると {{ domxref("window.navigator") }} オブジェクトでセットしている値は新しいページが保持していました。これが、新しいページ用に新たな `navigator` オブジェクトを作成するようになりました。これにより、Firefox は他のブラウザと同様に動作します。
+- 従来、ユーザーがリンクをたどると {{ domxref("window.navigator") }} オブジェクトでセットしている値は新しいページが保持していました。これが、新しいページ用に新たな `navigator` オブジェクトを作成するようになりました。これにより、Firefox は他のブラウザーと同様に動作します。
 
 ### CSS
 
@@ -37,7 +37,7 @@ Firefox 11 は米国時間 2012 年 3 月 13 日にリリースされました�
 
 ### SVG
 
-- {{ domxref("SVGSVGElement") }} DOM インタフェースが `getElementById` メソッドをサポートしました。
+- {{ domxref("SVGSVGElement") }} DOM インターフェイスが `getElementById` メソッドをサポートしました。
 
 ### WebSocket
 
@@ -53,12 +53,12 @@ Firefox 11 は米国時間 2012 年 3 月 13 日にリリースされました�
 ### Network
 
 - Firefox 8 で変更した、{{ rfc("2231") }} および {{ rfc("5987") }} でダブルクォートを区切り文字として利用できなくした点は、Outlook Web Access など一部のサイトで異常が発生するために取り消しました。
-- HTTP ヘッダのユーザエージェント文字列に、[携帯電話やタブレット上の Firefox がアクセスしているかをサーバが知ることができる](/ja/docs/Gecko_user_agent_string_reference#Mobile_and_Tablet_indicators)識別子を含むようになりました。
+- HTTP ヘッダのユーザーエージェント文字列に、[携帯電話やタブレット上の Firefox がアクセスしているかをサーバが知ることができる](/ja/docs/Gecko_user_agent_string_reference#Mobile_and_Tablet_indicators)識別子を含むようになりました。
 
 ### 開発ツール
 
 - システムが [WebGL](/ja/docs/WebGL) をサポートしている場合は、[ページ調査ツール](/ja/docs/Tools/Page_Inspector) で [3D ビュー](/ja/docs/Tools/Page_Inspector/3D_view) を提供します。
-- 新しいツールである [スタイルエディタ](/ja/docs/Tools/Style_Editor) は、リアルタイムな CSS スタイルシートの変更や作成を自由自在に行う機能を提供します。
+- 新しいツールである [スタイルエディター](/ja/docs/Tools/Style_Editor) は、リアルタイムな CSS スタイルシートの変更や作成を自由自在に行う機能を提供します。
 - [ソース表示機能](/ja/docs/View_source) が従来の HTML パーサーに代わり新しい HTML5 パーサーを使用するようになりました。
 
 ## Mozilla 開発者とアドオン開発者向けの変更点
@@ -72,18 +72,18 @@ Firefox 11 は米国時間 2012 年 3 月 13 日にリリースされました�
 #### 新しい JavaScript code modules
 
 - [`source-editor.jsm`](/ja/docs/JavaScript_code_modules/source-editor.jsm)
-  - : アドオンで利用可能な、便利で使いやすいソースコードエディタを提供します。これは [スクラッチパッド](/ja/docs/Tools/Scratchpad) など Firefox に統合している開発ツールで使用しているものと同じです。
+  - : アドオンで利用可能な、便利で使いやすいソースコードエディターを提供します。これは [スクラッチパッド](/ja/docs/Tools/Scratchpad) など Firefox に統合している開発ツールで使用しているものと同じです。
 
-### インタフェースの変更
+### インターフェイスの変更
 
-- `mozIAsyncHistory` インタフェースに、ある URI が訪問済みであるかを確認するためのメソッド `mozIAsyncHistory.isURIVisited` が追加されました。
-- `mozIAsyncHistory.isURIVisited` でコールバックハンドリング機能を提供するため、新たに `mozIVisitStatusCallback` インタフェースを追加しました。
-- `nsIMacDockSupport` インタフェースが新属性 `badgeText` を用いて、Dock のアプリケーションアイコンへのテキスト追加をサポートしました。
-- `nsINavHistoryResultObserver` インタフェースでは、非推奨になった `containerOpened()` および `containerClosed()` メソッドに代わり `nsINavHistoryResultObserver.containerStateChanged` を実装することが必要です。
+- `mozIAsyncHistory` インターフェイスに、ある URI が訪問済みであるかを確認するためのメソッド `mozIAsyncHistory.isURIVisited` が追加されました。
+- `mozIAsyncHistory.isURIVisited` でコールバックハンドリング機能を提供するため、新たに `mozIVisitStatusCallback` インターフェイスを追加しました。
+- `nsIMacDockSupport` インターフェイスが新属性 `badgeText` を用いて、Dock のアプリケーションアイコンへのテキスト追加をサポートしました。
+- `nsINavHistoryResultObserver` インターフェイスでは、非推奨になった `containerOpened()` および `containerClosed()` メソッドに代わり `nsINavHistoryResultObserver.containerStateChanged` を実装することが必要です。
 
-#### 削除されたインタフェース
+#### 削除されたインターフェイス
 
-以下のインタフェースは、不要になったため削除されました:
+以下のインターフェイスは、不要になったため削除されました:
 
 - `nsICharsetResolver`
 - `nsIDOMNSElement`、詳しくは [bug707576](https://bugzilla.mozilla.org/show_bug.cgi?id=707576) をご覧いただき、代わりに `nsIDOMElement` を使用してください。

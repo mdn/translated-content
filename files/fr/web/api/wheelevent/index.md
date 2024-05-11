@@ -3,7 +3,7 @@ title: WheelEvent
 slug: Web/API/WheelEvent
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 L'interface **`WheelEvent`** représente les évènements qui se produisent lorsque l'utilisateur déplace la molette de la souris ou un périphérique d'entrée similaire.
 
@@ -30,7 +30,7 @@ _Cette interface hérite des propriétés de ses ancêtres, {{DOMxRef("MouseEven
   - : Renvoie un `double` représentant le montant du défilement pour l'axe z.
 - {{DOMxRef("WheelEvent.deltaMode")}}{{ReadOnlyInline}}
 
-  - : Revnoie un `unsigned long` représentant l'unité du montant de défilement des valeurs `delta*`. Les valeurs autorisées sont :
+  - : Renvoie un `unsigned long` représentant l'unité du montant de défilement des valeurs `delta*`. Les valeurs autorisées sont :
 
     <table class="standard-table">
       <thead>

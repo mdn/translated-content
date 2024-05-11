@@ -3,7 +3,7 @@ title: MouseEvent.offsetX
 slug: Web/API/MouseEvent/offsetX
 ---
 
-{{APIRef("DOM Events")}}{{SeeCompatTable}}
+{{APIRef("UI Events")}}
 
 Свойство `MouseEvent.offsetX`, доступное только для чтения, показывает отступ курсора мыши по оси X от края целевого DOM узла.
 

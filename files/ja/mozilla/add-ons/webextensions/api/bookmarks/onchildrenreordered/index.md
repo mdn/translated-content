@@ -5,7 +5,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onChildrenReordered
 
 {{AddonSidebar}}
 
-UI で表示されている順序に伴って子フォルダの順序も変更された際に発火します。{{WebExtAPIRef("bookmarks.move()")}} の実行後や、UI におけるドラッグの際には発火しません。
+UI で表示されている順序に伴って子フォルダーの順序も変更された際に発火します。{{WebExtAPIRef("bookmarks.move()")}} の実行後や、UI におけるドラッグの際には発火しません。
 
 ## 構文
 
@@ -36,7 +36,7 @@ browser.bookmarks.onChildrenReordered.hasListener(listener)
   - : イベントが発火した際に呼び出される関数を指定します。この関数には以下の引数が渡ります。
 
     - `id`
-      - : 子要素の順序が変更されたフォルダの ID を表す {{jsxref("string")}} です。
+      - : 子要素の順序が変更されたフォルダーの ID を表す {{jsxref("string")}} です。
 
     <!---->
 
@@ -48,7 +48,7 @@ browser.bookmarks.onChildrenReordered.hasListener(listener)
 ### reorderInfo
 
 - `childIds`
-  - : {{jsxref("string")}} の {{jsxref("array")}} です。このフォルダに含まれるブックマーク要素すべての ID が含まれており、UI に表示されているのと同じ順番に並んでいます。
+  - : {{jsxref("string")}} の {{jsxref("array")}} です。このフォルダーに含まれるブックマーク要素すべての ID が含まれており、UI に表示されているのと同じ順番に並んでいます。
 
 ## ブラウザーの互換性
 

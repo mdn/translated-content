@@ -21,7 +21,7 @@ foo = "bar"; // foo 现在是一个字符串
 foo = true; // foo 现在是一个布尔值
 ```
 
-JavaScript 也是一个[弱类型](https://zh.wikipedia.org/wiki/强弱类型)语言，这意味着当操作涉及不匹配的类型时，它允许隐式类型转换，而不是抛出类型错误。
+JavaScript 也是一个[弱类型](https://zh.wikipedia.org/wiki/強弱型別)语言，这意味着当操作涉及不匹配的类型时，它允许隐式类型转换，而不是抛出类型错误。
 
 ```js
 const foo = 42; // foo 现在是一个数值

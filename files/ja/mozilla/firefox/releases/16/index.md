@@ -5,7 +5,7 @@ slug: Mozilla/Firefox/Releases/16
 
 Firefox 16 は、2012 年 10 月 9 日にリリースされました。この記事では、ウェブ開発者に知らせるだけでなく、Firefox や Gecko 開発者、アドオン開発者にも役立つ主な変更点のリストを掲載しています。
 
-## Web 開発者向けの変更点一覧
+## ウェブ開発者向けの変更点一覧
 
 ### HTML
 
@@ -26,18 +26,18 @@ Firefox 16 は、2012 年 10 月 9 日にリリースされました。この記
 - {{ cssxref("box-sizing", "-moz-box-sizing") }} の実装がテーブルのセルにも適用されるように更新されました。([bug 338554](https://bugzilla.mozilla.org/show_bug.cgi?id=338554))
 - 標準の、接頭辞無しの {{ cssxref("calc") }} が使えるようになりました。([bug 771678](https://bugzilla.mozilla.org/show_bug.cgi?id=771678))
 - {{cssxref("&lt;resolution&gt;")}} CSS データタイプが拡張され、`dppx` がサポートされるようになりました。([bug 741644](https://bugzilla.mozilla.org/show_bug.cgi?id=741644))
-- 画面上で、[メディアクエリ](/ja/docs/CSS/Media_queries) のために、`dppx`、`dpi`、および `dpcm` が物理単位ではなく、CSS ピクセル単位で再表現されるようになりました。 ([bug 771390](https://bugzilla.mozilla.org/show_bug.cgi?id=771390))
+- 画面上で、[メディアクエリー](/ja/docs/CSS/Media_queries) のために、`dppx`、`dpi`、および `dpcm` が物理単位ではなく、CSS ピクセル単位で再表現されるようになりました。 ([bug 771390](https://bugzilla.mozilla.org/show_bug.cgi?id=771390))
 - 特定の状態にある {{HTMLElement("meter")}} 要素へのアクセスやスタイル付けを行うため、新たに 3 つの疑似クラス `:-moz-meter-optimum`、`:-moz-meter-sub-optimum`、`:-moz-meter-sub-sub-optimum` を追加しました。([bug 660238](https://bugzilla.mozilla.org/show_bug.cgi?id=660238))
 - {{cssxref("-moz-appearance")}} プロパティが新たに 2 つの値を取り入れました : `meterbar` および `meterchunk`。これらは、{{HTMLElement("meter")}} 要素内部のコンポーネントを表します。([bug 659999](https://bugzilla.mozilla.org/show_bug.cgi?id=659999))
 - {{cssxref("min-width")}} および {{cssxref("min-height")}} で、flex item のための `auto` キーワードをサポートしました (他のアイテムでは `0` と解釈します)。([Firefox バグ 763689](https://bugzil.la/763689))
 
 ### API/DOM
 
-- `width` と `height` の 2 つの新しいプロパティが {{ domxref("HTMLInputElement") }} インタフェースに追加されました。([bug 683855](https://bugzilla.mozilla.org/show_bug.cgi?id=683855))
+- `width` と `height` の 2 つの新しいプロパティが {{ domxref("HTMLInputElement") }} インターフェイスに追加されました。([bug 683855](https://bugzilla.mozilla.org/show_bug.cgi?id=683855))
 - IndexedDB プロパティとメソッドが接頭辞無しになりました。([bug 726378](https://bugzilla.mozilla.org/show_bug.cgi?id=726378))
 - [Battery API](/ja/docs/DOM/window.navigator.battery) が接頭辞なしになりました。
 - Vibration API が接頭辞なしになりました。
-- 現在も接頭辞付きの `mozKeyboard` である {{domxref("Keyboard")}} インタフェースが、{{domxref("Keyboard.setSelectedOption()")}} および {{domxref("Keyboard.setValue()")}} メソッドと {{domxref("Keyboard.onfocuschange")}} プロパティを持つようになりました。
+- 現在も接頭辞付きの `mozKeyboard` である {{domxref("Keyboard")}} インターフェイスが、{{domxref("Keyboard.setSelectedOption()")}} および {{domxref("Keyboard.setValue()")}} メソッドと {{domxref("Keyboard.onfocuschange")}} プロパティを持つようになりました。
 - `Window.java` および `Window.packages` 属性を削除しました。これらは文書化されたことがなく、おそらく皆さんは使用していないでしょう!
 - {{ domxref("CSSNamespaceRule") }} に結びつけられている `CSSRule.type` を、`UNKNOWN_RULE` (`0`) から `NAMESPACE_RULE` (`10`) に更新しました。([bug 765590](https://bugzilla.mozilla.org/show_bug.cgi?id=765590))
 - WebSMS API: {{domxref("SmsRequest")}} は、より一般的な {{domxref("DOMRequest")}} に置き換えられました。
@@ -66,8 +66,8 @@ _変更なし。_
 
 ### 開発者ツール
 
-- 便利な開発ツールバーを実装しており、ツール > Web 開発 > 開発ツールバー から、あるいは Ctrl-Shift-V (Mac OS X では Cmd-Opt-V) を押して呼び出すことができます。このツールバーは、ボタンと同じように便利なツールをすばやく呼び出せるコマンドラインインタフェースを提供します。Graphical command line interface ([GCLI](/ja/docs/Tools/GCLI)) は、将来の拡張やコマンドの追加が容易であると期待されています。"help" と入力すると、サポートしているコマンドの一覧を得られます。
-- Web コンソールがエラーの回数を表示するようになり、この先あなたの作業がどれだけあるかをすばやく見ることができます。
+- 便利な開発ツールバーを実装しており、ツール > ウェブ開発 > 開発ツールバー から、あるいは Ctrl-Shift-V (Mac OS X では Cmd-Opt-V) を押して呼び出すことができます。このツールバーは、ボタンと同じように便利なツールをすばやく呼び出せるコマンドラインインターフェイスを提供します。Graphical command line interface ([GCLI](/ja/docs/Tools/GCLI)) は、将来の拡張やコマンドの追加が容易であると期待されています。"help" と入力すると、サポートしているコマンドの一覧を得られます。
+- ウェブコンソールがエラーの回数を表示するようになり、この先あなたの作業がどれだけあるかをすばやく見ることができます。
 - スクラッチパッドが、最近開いたファイルの一覧を提供するようになりました。
 
 ## Open Web App 開発者向けの変更点
@@ -76,12 +76,12 @@ _変更なし。_
 
 ## アドオンと Mozilla 開発者向け
 
-### インタフェースの変更点
+### インターフェイスの変更点
 
 `nsIPrivateDOMEvent` が `nsIDOMEvent` に併合されました ([Firefox バグ 761613](https://bugzil.la/761613))。
 
-#### 新しいインタフェース
+#### 新しいインターフェイス
 
-#### 削除されたインタフェース
+#### 削除されたインターフェイス
 
-以下のインタフェースが削除されました。
+以下のインターフェイスが削除されました。

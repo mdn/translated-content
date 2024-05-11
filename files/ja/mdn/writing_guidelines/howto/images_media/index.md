@@ -2,20 +2,20 @@
 title: 画像やメディアの追加方法
 slug: MDN/Writing_guidelines/Howto/Images_media
 l10n:
-  sourceCommit: aa66311219951396e7305df61eb31831360d2c79
+  sourceCommit: 2077d0702d038c9ccc743a53d8ad1c0c21fef5be
 ---
 
 {{MDNSidebar}}
 
 ## 画像の追加
 
-文書に画像を追加するには、文書のフォルダーに画像ファイルを追加し、文書の `index.md` ファイルから `<img>` 要素または [同等の Markdown 構文](https://github.github.com/gfm/#images) を使用して画像を参照してください。
+文書に画像を追加するには、文書のフォルダーに画像ファイルを追加し、文書の `index.md` ファイルで [Markdown の画像構文（英語）](https://github.github.com/gfm/#images) または HTML の `<img>` 要素を使用して画像を参照してください。
 
 例を通して説明しましょう。
 
 1. `mdn` リモートの `main` ブランチから、最新の内容を含む新しい作業用ブランチを作成することから始めましょう。
 
-   ```sh
+   ```bash
    cd ~/path/to/mdn/content
    git checkout main
    git pull mdn main
@@ -25,9 +25,9 @@ l10n:
    git checkout -b my-images
    ```
 
-2. 文書フォルダー内に自分の画像を追加してください。この例では、 `files/en-us/web/css` の記事に新しい画像を追加することを想定してみてください。
+2. 文書フォルダー内に自分の画像を追加してください。この例では、 `files/en-us/web/css` の記事に新しい画像を追加することを想定してください。
 
-   ```sh
+   ```bash
    cd ~/path/to/mdn/content
    cp ../some/path/my-cool-image.png files/en-us/web/css/
    ```
@@ -35,55 +35,55 @@ l10n:
 3. 各画像に対して `filecheck` を実行すると、何か問題があった場合にメッセージが表示されるかもしれません。
    詳しくは、[画像の圧縮](#画像の圧縮)の節を参照してください。
 
-   ```sh
+   ```bash
    yarn filecheck files/en-us/web/css/my-cool-image.png
    ```
 
-4. `files/en-us/web/css/index.md` 内の `<img>` 要素と `alt` 属性で、文書内の画像を参照します。
+4. 文書内で画像用の Markdown 構文を使って画像を参照し、画像を記述する括弧の間に [`alt` 属性用の説明テキスト](/ja/docs/Learn/Accessibility/HTML#代替テキスト)を記述するか、 `files/en-us/web/css/index.md` 内に `alt` 属性を持つ {{htmlelement("img")}} 要素を記述してください。
 
-   ```html
+   ```md
+   ![My cool image](my-cool-image.png)
    <img src="my-cool-image.png" alt="My cool image" />
    ```
 
-5. 削除・作成・変更したファイルをすべて追加してコミットし、さらにブランチをフォークにプッシュします。
+5. 削除・作成・変更したファイルをすべて追加してコミットし、さらにブランチをフォークにプッシュしてください。
 
-   ```sh
+   ```bash
    git add files/en-us/web/css/my-cool-image.png files/en-us/web/css/index.html
    git commit
    git push -u origin my-images
    ```
 
-6. これで
-   [プルリクエスト](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)を作成する準備ができました。
+6. これで[プルリクエスト](https://docs.github.com/ja/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)を作成する準備ができました。
 
 ## 画像に代替テキストを追加
 
-すべての画像、`![]`、`<img>` には、`alt` テキストを記載する必要があります。
+すべての画像、`![]` および `<img>` には、`alt` テキストを記載する必要があります。
 alt 属性は短く、画像が伝えるすべての関連情報を提供する必要があります。
-画像の説明を書くときは、画像の価値ある情報と、ページのコンテンツは読めるが画像を読み込むことができない人にその情報をどのように伝えるかについて考えてください。
+画像の説明文を書くときは、その画像の価値ある情報と、ページのコンテンツは読めても画像を読み込めない人にその情報をどう伝えるかを考えてください。
 
 画像の代替テキストは、その文脈に基づいたものにしましょう。
 犬のフラッフィーの写真が、Yuckymeat ドッグフードのレビューの横にいるアバターであれば、`alt="Fluffy"` が適切です。
 同じ写真が動物保護団体の里親募集ページの一部である場合、画像から伝わる情報は、犬の親になる見込みのある人に関連するものです。例えば、`alt="フラッフィー、テニスボールを咥えた、とても毛の短い三毛のテリア。"` のようにします。
-周囲のテキストには、フラッフィーのサイズや犬種が記載されている可能性が高いので、それを含めると冗長になってしまいます。
+周囲のテキストには、フラッフィーの大きさや犬種が記載されている可能性が高いので、それを含めると冗長になってしまいます。
 画像を詳細に記述するのは控えましょう。親になる見込みのある人は、犬が屋内か屋外か、赤い首輪と青いリードを持っているかなどは知る必要がありません。
 
 スクリーンショットの場合は、画像から何を知ったかを書き、スクリーンショットの内容は詳しく書かず、読者が必要としない、あるいはすでに知っている情報を除外しましょう。
 例えば、Bing の設定変更についてのページで、Bing の検索結果のスクリーンショットがある場合、検索語や検索結果の数などはこの画像のポイントではないので記載しないようにしましょう。
 alt は、Bing で設定を変更する方法という、その時点でのトピックに限定してください。
 alt は、`alt="設定アイコンは、検索フィールドの下記ナビゲーションバーにあります。"` のようにします。
-スクリーンショットであることをユーザーが知る必要はなく、Bing の設定変更を説明するページにいるため、すでにBing であることを知っているため、「スクリーンショット」や「Bing」を記載しないでください。
+スクリーンショットであることをユーザーが知る必要はなく、 Bing の設定変更を説明するページにいるため、すでに Bing であることを知っているため、「スクリーンショット」や「Bing」を記載しないでください。
 
 Markdown と HTML での構文は以下の通りです。
 
-```html-nolint
+```md-nolint
 ![<代替テキスト>](<画像の URL>)
 <img alt="<代替テキスト>" src="<画像の URL>">
 ```
 
 例えば次のようにします。
 
-```html
+```md
 ![OpenWebDocs のロゴ: 本の虫のカール](carle.png)
 <img alt="OpenWebDocs のロゴ: 本の虫のカール" src="carle.png" />
 ```
@@ -100,7 +100,7 @@ MDN Web Docs のページに画像を追加する場合、読者のためにダ�
 このオプションは画像を可能な限り圧縮し、元画像を圧縮後の画像に置き換えます。
 例えば、次のようにします。
 
-```sh
+```bash
 yarn filecheck files/en-us/web/css/my-cool-image.png --save-compression
 ```
 
@@ -262,13 +262,13 @@ macOS をお使いの場合は、 QuickTime Player が利用できるはずで�
 アップロードした動画は、[`EmbedYouTube`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedYouTube.ejs) というマクロを使って、ページ内に埋め込むことができます。
 これは、ページ内の動画を表示させたい位置に以下のように挿入することで使用します。
 
-```
+```plain
 \{{EmbedYouTube("you-tube-url-slug")}}
 ```
 
 マクロ呼び出しで取るプロパティは、 URL 全体ではなく、動画の URL の末尾にある文字の列です。
 例えば、動画の URL が `https://www.youtube.com/watch?v=ELS2OOUvxIw` であれば、必要なマクロ呼び出しは次のようになります。
 
-```
+```plain
 \{{EmbedYouTube("ELS2OOUvxIw")}}
 ```

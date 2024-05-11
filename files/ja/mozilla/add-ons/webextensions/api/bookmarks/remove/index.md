@@ -5,9 +5,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/remove
 
 {{AddonSidebar}}
 
-**`bookmarks.remove()`** は、ブックマークや空のブックマークフォルダを削除するメソッドです。
+**`bookmarks.remove()`** は、ブックマークや空のブックマークフォルダーを削除するメソッドです。
 
-ブックマークが見つからなかった、またはフォルダが空ではなかった場合には {{WebExtAPIRef("runtime.lastError")}} がセットされ、エラーの有無はコールバック内で確認できます。
+ブックマークが見つからなかった、またはフォルダーが空ではなかった場合には {{WebExtAPIRef("runtime.lastError")}} がセットされ、エラーの有無はコールバック内で確認できます。
 
 ## 構文
 
@@ -21,9 +21,9 @@ browser.bookmarks.remove(
 ### 引数
 
 - `id`
-  - : 削除したいブックマーク / 空フォルダの ID を指定する {{jsxref("string")}} です。
+  - : 削除したいブックマーク / 空フォルダーの ID を指定する {{jsxref("string")}} です。
 - `callback`{{optional_inline}}
-  - : ブックマークやフォルダが削除された際に実行される関数です。この関数に渡される引数はありません。
+  - : ブックマークやフォルダーが削除された際に実行される関数です。この関数に渡される引数はありません。
 
 ## ブラウザーの互換性
 

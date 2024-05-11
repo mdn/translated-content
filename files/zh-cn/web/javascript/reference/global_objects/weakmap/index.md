@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/WeakMap
 
 {{JSRef}}
 
-**`WeakMap`** 是一种**键值对**的集合，其中的键必须是对象或[非全局注册的符号](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol#全局共享的_symbol)，且值可以是任意的 [JavaScript 类型](/zh-CN/docs/Web/JavaScript/Data_structures)，并且不会创建对它的键的强引用。换句话说，一个对象作为 `WeakMap` 的键存在，不会阻止该对象被垃圾回收。一旦一个对象作为键被回收，那么在 `WeakMap` 中相应的值便成为了进行垃圾回收的候选对象，只要它们没有其他的引用存在。唯一可以作为 `WeakMap` 的键的类型是[非全局注册的符号](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol#全局共享的_symbol)，因为非全局注册的符号是保证唯一的，并且不能被重新创建。
+**`WeakMap`** 是一种**键值对**的集合，其中的键必须是对象或[非全局注册的符号](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol#全局共享的_symbol)，且值可以是任意的 [JavaScript 类型](/zh-CN/docs/Web/JavaScript/Data_structures)，并且不会创建对它的键的强引用。换句话说，一个对象作为 `WeakMap` 的键存在，不会阻止该对象被垃圾回收。一旦一个对象作为键被回收，那么在 `WeakMap` 中相应的值便成为了进行垃圾回收的候选对象，只要它们没有其他的引用存在。唯一可以作为 `WeakMap` 的键的原始类型是[非全局注册的符号](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol#全局共享的_symbol)，因为非全局注册的符号是保证唯一的，并且不能被重新创建。
 
 `WeakMap` 允许将数据与对象相关联，而不阻止键对象被垃圾回收，即使值引用了键。然而，`WeakMap` 并不允许观察其键的生命周期，这就是为什么它不允许枚举；如果 `WeakMap` 提供了任何获得其键的列表的方法，那么这些列表将会依赖于垃圾回收的状态，这引入了不确定性。如果你想要可以获取键的列表，你应该使用 {{jsxref("Map")}} 而不是 `WeakMap`。
 
@@ -254,7 +254,7 @@ function handleObjectValues(obj) {
 }
 ```
 
-只有当函数的输入是对象时才有效。此外，即使输入不再传入，结果依然永远保留在缓存中，更有效的方法是将 {{jsxref("Map")}} 与 {{jsxref("WeakRef")}} 对象配对使用，这允许你讲任何类型的输入值与各自的（很可能的）计算结果关联。有关更多详细信息，请参阅 [WeakRef 和 FinalizationRegistry](/zh-CN/docs/Web/JavaScript/Memory_management#weakrefs_and_finalizationregistry) 示例。
+只有当函数的输入是对象时才有效。此外，即使输入不再传入，结果依然永远保留在缓存中，更有效的方法是将 {{jsxref("Map")}} 与 {{jsxref("WeakRef")}} 对象配对使用，这允许你将任何类型的输入值与各自的（很可能的）计算结果关联。有关更多详细信息，请参阅 [WeakRef 和 FinalizationRegistry](/zh-CN/docs/Web/JavaScript/Memory_management#weakrefs_and_finalizationregistry) 示例。
 
 ## 规范
 

@@ -340,50 +340,47 @@ console.log(products.number); // 3
 
 ### 一个完整的 `traps` 列表示例
 
-出于教学目的，这里为了创建一个完整的 traps 列表示例，我们将尝试代理化一个非原生对象，这特别适用于这类操作：由 [发布在 document.cookie 页面上的“小型框架”](/zh-CN/docs/DOM/document.cookie#A_little_framework.3A_a_complete_cookies_reader.2Fwriter_with_full_unicode_support)创建的`docCookies`全局对象。
+出于教学目的，这里为了创建一个完整的 `traps` 列表示例，我们将尝试代理一个特别适用于这类操作的非原生对象：由[一个简单的 cookie 框架](https://reference.codeproject.com/dom/document/cookie/simple_document.cookie_framework)创建的 `docCookies` 全局对象。
 
 ```js
 /*
-  var docCookies = ... get the "docCookies" object here:
-  https://developer.mozilla.org/zh-CN/docs/DOM/document.cookie#A_little_framework.3A_a_complete_cookies_reader.2Fwriter_with_full_unicode_support
+  const docCookies = ……通过以下链接获取“docCookies”对象：
+  https://reference.codeproject.com/dom/document/cookie/simple_document.cookie_framework
 */
 
-var docCookies = new Proxy(docCookies, {
-  get: function (oTarget, sKey) {
-    return oTarget[sKey] || oTarget.getItem(sKey) || undefined;
+const docCookies = new Proxy(docCookies, {
+  get(target, key) {
+    return target[key] ?? target.getItem(key) ?? undefined;
   },
-  set: function (oTarget, sKey, vValue) {
-    if (sKey in oTarget) {
+  set(target, key, value) {
+    if (key in target) {
       return false;
     }
-    return oTarget.setItem(sKey, vValue);
+    return target.setItem(key, value);
   },
-  deleteProperty: function (oTarget, sKey) {
-    if (sKey in oTarget) {
+  deleteProperty(target, key) {
+    if (!(key in target)) {
       return false;
     }
-    return oTarget.removeItem(sKey);
+    return target.removeItem(key);
   },
-  enumerate: function (oTarget, sKey) {
-    return oTarget.keys();
+  ownKeys(target) {
+    return target.keys();
   },
-  ownKeys: function (oTarget, sKey) {
-    return oTarget.keys();
+  has(target, key) {
+    return key in target || target.hasItem(key);
   },
-  has: function (oTarget, sKey) {
-    return sKey in oTarget || oTarget.hasItem(sKey);
-  },
-  defineProperty: function (oTarget, sKey, oDesc) {
-    if (oDesc && "value" in oDesc) {
-      oTarget.setItem(sKey, oDesc.value);
+  defineProperty(target, key, descriptor) {
+    if (descriptor && "value" in descriptor) {
+      target.setItem(key, descriptor.value);
     }
-    return oTarget;
+    return target;
   },
-  getOwnPropertyDescriptor: function (oTarget, sKey) {
-    var vValue = oTarget.getItem(sKey);
-    return vValue
+  getOwnPropertyDescriptor(target, key) {
+    const value = target.getItem(key);
+    return value
       ? {
-          value: vValue,
+          value,
           writable: true,
           enumerable: true,
           configurable: false,
@@ -392,13 +389,13 @@ var docCookies = new Proxy(docCookies, {
   },
 });
 
-/* Cookies 测试 */
+/* Cookie 测试 */
 
-alert((docCookies.my_cookie1 = "First value"));
-alert(docCookies.getItem("my_cookie1"));
+console.log((docCookies.myCookie1 = "First value"));
+console.log(docCookies.getItem("myCookie1"));
 
-docCookies.setItem("my_cookie1", "Changed value");
-alert(docCookies.my_cookie1);
+docCookies.setItem("myCookie1", "Changed value");
+console.log(docCookies.myCookie1);
 ```
 
 ## 规范

@@ -1016,17 +1016,6 @@
       "khiby"
     ]
   },
-  "Learn/Front-end_web_developer": {
-    "modified": "2020-11-06T17:15:48.569Z",
-    "contributors": [
-      "flaviomicheletti",
-      "SphinxKnight",
-      "marcus.simei",
-      "vinidesign.web",
-      "victorwvieira",
-      "etc_william"
-    ]
-  },
   "Learn/Getting_started_with_the_web": {
     "modified": "2020-11-12T14:47:17.943Z",
     "contributors": [
@@ -10894,6 +10883,17 @@
   "orphaned/Instalando_Rust": {
     "modified": "2019-03-23T22:54:43.463Z",
     "contributors": ["molokdotc"]
+  },
+  "orphaned/Learn/Front-end_web_developer": {
+    "modified": "2020-11-06T17:15:48.569Z",
+    "contributors": [
+      "flaviomicheletti",
+      "SphinxKnight",
+      "marcus.simei",
+      "vinidesign.web",
+      "victorwvieira",
+      "etc_william"
+    ]
   },
   "orphaned/Learn/HTML/Forms/HTML5_updates": {
     "modified": "2019-03-23T23:38:57.820Z",

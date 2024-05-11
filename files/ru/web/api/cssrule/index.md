@@ -58,6 +58,6 @@ An up-to-date informal list of constants can be found on the [CSSWG Wiki](http:/
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [Using dynamic styling information](/ru/docs/Web/Guide/DOM/Using_dynamic_styling_information)

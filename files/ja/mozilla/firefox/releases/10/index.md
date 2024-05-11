@@ -7,7 +7,7 @@ Gecko 10.0 を搭載した Firefox 10 は米国時間 2012 年 1 月 31 日に�
 
 > **メモ:** Firefox 10 は、2 桁の数値で表記される最初のリリースです。これにより、一部の UserAgent 検出スクリプトで問題が発生するおそれがあります。そのようなスクリプトや、ページに埋め込まれているサードパーティのソフトウェア (ライブラリなど) で UserAgent 検出を行っているものの確認を行うようにしてください。この点に関する詳細情報は、hack.mozilla.org の記事 [Firefox goes 2-digit article on](http://hacks.mozilla.org/2012/01/firefox-goes-2-digit-time-to-check-your-ua-sniffing-scripts/) をご覧ください。
 
-## Web 開発者向けの変更点一覧
+## ウェブ開発者向けの変更点一覧
 
 ### HTML
 
@@ -62,7 +62,7 @@ Gecko 10.0 を搭載した Firefox 10 は米国時間 2012 年 1 月 31 日に�
 #### Web Workers
 
 - [Workers](/ja/docs/DOM/Worker/Functions_available_to_workers#section_2) 内で `XMLHttpRequest.responseType` 属性および `XMLHttpRequest.response` 属性が利用可能になりました。
-- [`Worker()`](</ja/docs/DOM/Worker#Worker()> "DOM/Worker#Worker()") コンストラクタが [data URIs](/ja/docs/data_URIs) を受け入れるようになりました。
+- [`Worker()`](</ja/docs/DOM/Worker#Worker()> "DOM/Worker#Worker()") コンストラクターが [data URIs](/ja/docs/data_URIs) を受け入れるようになりました。
 
 #### IndexedDB
 
@@ -73,7 +73,7 @@ IndexedDB を最新のドラフト仕様に更新するための大きな進展�
 - [`IDBObjectStore.createIndex()`](/ja/docs/IndexedDB/IDBObjectStore#createIndex) および [`IDBDatabase.createObjectStore()`](/ja/docs/IndexedDB/IDBDatabase#createObjectStore) で未知のオプション引数が渡されたとき、Gecko は例外を発生させるのではなくそれを無視するようになりました。
 - [`IDBTransaction.abort()`](/ja/docs/IndexedDB/IDBTransaction#abort%28%29) が呼び出されると、待機状態にあるすべての [`IDBRequest`](/ja/docs/IndexedDB/IDBRequest) は `errorCode` を `ABORT_ERROR` に設定します。
 - [`IDBObjectStore.delete()`](</ja/docs/IndexedDB/IDBObjectStore#delete()> "IndexedDB/IDBObjectStore#delete()") メソッドおよび [`IDBCursor.delete()`](</ja/docs/IndexedDB/IDBCursor#delete()> "IndexedDB/IDBCursor#delete()") メソッドは、戻り値となる [`IDBRequest`](/ja/docs/IndexedDB/IDBRequest) の `result` 属性の値を `undefined` にするようになりました。
-- 最新の仕様書で削除されたため、[`IDBDatabase.setVersion()`](</ja/docs/IndexedDB/IDBDatabase#setVersion()> "IndexedDB/IDBDatabase#setVersion()") メソッドは削除されました。データベースのバージョンは、更新された [`IDBFactory.open()`](/ja/docs/IndexedDB/IDBFactory#open) メソッドで渡すことができ、`onupgradeneeded` コールバックでデータベースのスキーマの更新が可能になります。なお、バージョンの型は `DOMString` から `unsigned long long` に替わりました。また、[`IDBVersionChangeRequest`](/ja/docs/IndexedDB/IDBVersionChangeRequest) インタフェースは削除され、新たな [`IDBOpenDBRequest`](/ja/docs/IndexedDB/IDBOpenDBRequest) インタフェースに置き換えられました。
+- 最新の仕様書で削除されたため、[`IDBDatabase.setVersion()`](</ja/docs/IndexedDB/IDBDatabase#setVersion()> "IndexedDB/IDBDatabase#setVersion()") メソッドは削除されました。データベースのバージョンは、更新された [`IDBFactory.open()`](/ja/docs/IndexedDB/IDBFactory#open) メソッドで渡すことができ、`onupgradeneeded` コールバックでデータベースのスキーマの更新が可能になります。なお、バージョンの型は `DOMString` から `unsigned long long` に替わりました。また、[`IDBVersionChangeRequest`](/ja/docs/IndexedDB/IDBVersionChangeRequest) インターフェイスは削除され、新たな [`IDBOpenDBRequest`](/ja/docs/IndexedDB/IDBOpenDBRequest) インターフェイスに置き換えられました。
 - [`IDBFactory.deleteDatabase()`](/ja/docs/IndexedDB/IDBFactory#deleteDatabase%28%29) メソッドが追加されました。
 
 #### その他の変更点
@@ -81,7 +81,7 @@ IndexedDB を最新のドラフト仕様に更新するための大きな進展�
 - SVG を含む文字列が与えられたとき、適切な MIME タイプ `image/svg+xml` が渡された場合は [`DOMParser` が `SVGDocument` を生成する](/ja/docs/DOM/DOMParser#Parsing_a_SVG_document)ようになりました。
 - 従来 {{ domxref("element.setAttribute()") }} が整数値の構文解析を行うときは、数値ではない文字列が含まれる場合 (例えば "42foo") にエラーを報告していました。これが仕様書へ合致させるために、数値 42 へ正しく切り詰めるようになりました。
 - ESC キーで {{ domxref("window.oninput") }} ハンドラが誤って呼び出されるという、間違った結果にならないようになりました。
-- 従来実装されていたものの実際にはアクセスする方法がない {{ domxref("NameList") }} インタフェースは削除されました。
+- 従来実装されていたものの実際にはアクセスする方法がない {{ domxref("NameList") }} インターフェイスは削除されました。
 - {{ domxref("document.createProcessingInstruction()") }} メソッドが HTML ドキュメントでも、XML ドキュメントの場合と同様に動作するようになりました。{{ domxref("ProcessingInstruction") }} ノードは現在も XML ドキュメントでのみサポートされていますが、ノードはドキュメントをまたいで移動させられますので、HTML ドキュメントでも同様にノードを作成することに役立ちます。
 - {{ domxref("XMLHttpRequest") }} のプロパティ `responseType` の値として [Firefox 9 で導入した](/ja/docs/Firefox_9_for_developers#DOM) "`moz-json`" は、最新のドラフト仕様への更新を行い接頭辞を削除しました。[Firefox バグ 707142#c13](https://bugzil.la/707142#c13) をご覧ください。
 
@@ -91,8 +91,8 @@ IndexedDB を最新のドラフト仕様に更新するための大きな進展�
 - {{ cssxref("unicode-bidi") }} CSS プロパティへ、新たに 2 つの値 `-moz-isolation` および `-moz-plaintext` が追加されました。値 `-moz-isolation` は、要素がその環境から受けるテキストの方向の見解から切り離すことで、異なる方向のテキストであることを示すことができます。`unicode-bidi:-moz-isolation` を指定した要素は、 {{ HTMLElement("bdi") }} 要素のように動作します。値 `-moz-plaintext` は、テキストの方向の決定に CSS の {{ cssxref("direction") }} プロパティではなく Unicode のヒューリスティックな方法を用いることを示します。
 - CSS の {{ cssxref("linear-gradient") }} プロパティおよび {{ cssxref("repeating-linear-gradient") }} プロパティは、新たに `to` 構文と _magic corner_ アルゴリズムをサポートするよう更新されました。これにより、グラデーションが描画されたボックスの隅へ精密に色を配置することができます。
 - {{ cssxref("text-overflow") }} プロパティに処理法が一つだけ指定されている場合に、ボックスの両側へオーバーフローする場合の `text-overflow` の扱いが [正しくなりました](/ja/docs/CSS/text-overflow#Gecko_notes)。
-- ポジショニングされた {{ HTMLElement("table") }} 要素内部での {{ cssxref("position") }} プロパティの扱いが [修正されました](/ja/docs/CSS/position#Gecko_notes)。**この変更はページのレイアウトに影響を与えますが、CSS 仕様書や他のブラウザに従うことになりますので、レイアウトの修正は容易でしょう。**
-- {{ HTMLElement("table") }} 要素のマージンの相殺が、CSS 仕様書に合致するようになりました。以前は table 要素のマージンは隣接する要素のマージンと相殺されなかったため、正しくないレイアウトになっていました。**この変更はページのレイアウトに影響を与えますが、CSS 仕様書や他のブラウザに従うことになりますので、レイアウトの修正は容易でしょう。**
+- ポジショニングされた {{ HTMLElement("table") }} 要素内部での {{ cssxref("position") }} プロパティの扱いが [修正されました](/ja/docs/CSS/position#Gecko_notes)。**この変更はページのレイアウトに影響を与えますが、CSS 仕様書や他のブラウザーに従うことになりますので、レイアウトの修正は容易でしょう。**
+- {{ HTMLElement("table") }} 要素のマージンの相殺が、CSS 仕様書に合致するようになりました。以前は table 要素のマージンは隣接する要素のマージンと相殺されなかったため、正しくないレイアウトになっていました。**この変更はページのレイアウトに影響を与えますが、CSS 仕様書や他のブラウザーに従うことになりますので、レイアウトの修正は容易でしょう。**
 
 ### SVG
 
@@ -126,12 +126,12 @@ IndexedDB を最新のドラフト仕様に更新するための大きな進展�
 
 - [`Components.utils`](/ja/docs/Components.utils) に、デバッグ用に用意された情報へのアクセスを可能にするプロパティとメソッドがいくつか追加されました。
 
-### インタフェースの変更
+### インターフェイスの変更
 
-- `mozISpellCheckingEngine` インタフェースおよび `nsIEditorSpellCheck` インタフェースは、再起動の不要なアドオンがスペルチェッカに辞書を追加できるように更新されました。**注: これを行う方法に関して [ドキュメントの更新](/ja/docs/Using_an_External_Spell-checker) が必要。**
+- `mozISpellCheckingEngine` インターフェイスおよび `nsIEditorSpellCheck` インターフェイスは、再起動の不要なアドオンがスペルチェッカに辞書を追加できるように更新されました。**注: これを行う方法に関して [ドキュメントの更新](/ja/docs/Using_an_External_Spell-checker) が必要。**
 - `nsIBrowserHistory.lastPageVisited` 属性は削除されました。
-- `nsIDocumentViewer` インタフェースは `nsIContentViewer` に統合されました。
-- `nsIURIFixup` インタフェースに、コンバートする際にプラットフォームの文字コードではなく UTF-8 を使用することを示す `FIXUP_FLAG_USE_UTF8` フラグが追加されました。
+- `nsIDocumentViewer` インターフェイスは `nsIContentViewer` に統合されました。
+- `nsIURIFixup` インターフェイスに、コンバートする際にプラットフォームの文字コードではなく UTF-8 を使用することを示す `FIXUP_FLAG_USE_UTF8` フラグが追加されました。
 
 ### プラグインの変更
 

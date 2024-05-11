@@ -56,7 +56,7 @@ _该接口会从它的父级 {{domxref("EventTarget")}} 继承方法。_
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - 一种在不同浏览器上下文之间通信的重量级方案：{{domxref("ServiceWorker")}}。
 - [Broadcast Channel API overview](/zh-CN/docs/Web/API/Broadcast_Channel_API)

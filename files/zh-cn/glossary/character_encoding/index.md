@@ -18,4 +18,4 @@ slug: Glossary/Character_encoding
 ## 参见
 
 - [Character encoding on W3C](https://www.w3.org/International/articles/definitions-characters/)
-- [Character encoding](https://zh.wikipedia.org/wiki/Character_encoding) on Wikipedia
+- 维基百科上的[字符编码](https://zh.wikipedia.org/wiki/字符编码)

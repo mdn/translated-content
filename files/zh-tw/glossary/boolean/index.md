@@ -30,13 +30,6 @@ for(var i=0; i<4; i++) {
 }
 ```
 
-## 了解更多
+## 參見
 
-### 常規知識
-
-- 維基百科[Boolean](https://zh.wikipedia.org/wiki/Boolean_data_type)
-
-### 技術參考
-
-- The JavaScript global object: {{jsxref("Boolean")}}
-- [JavaScript data types and data structures](/zh-TW/docs/Web/JavaScript/Data_structures)
+- 維基百科上的[布林](<https://zh.wikipedia.org/wiki/布林_(資料類型)>)

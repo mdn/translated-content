@@ -120,7 +120,7 @@ grid: unset;
 
 #### 結果
 
-{{EmbedLiveSample("Creating_a_grid_layout", "100%", 150)}}
+{{EmbedLiveSample("グリッドレイアウトの作成", "100%", 150)}}
 
 ## 仕様書
 

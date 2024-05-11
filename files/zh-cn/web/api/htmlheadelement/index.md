@@ -26,6 +26,6 @@ _没有特殊的方法；继承了父对象 {{domxref("HTMLElement")}} 的方法
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - 对应的 HTML 元素是根据 {{HTMLElement("head")}}实现。

@@ -62,8 +62,8 @@ Cookie: yummy_cookie=choco; tasty_cookie=strawberry
 
 쿠키의 라이프타임은 두가지 방법으로 정의할 수 있습니다:
 
-- _세션_ 쿠키는 현재 세션이 끝날 때 삭제됩니다. 브라우저는 "현재 세션"이 끝나는 시점을 정의하며, 어떤 브라우저들은 재시작할 때 *세션을 복원*해 세션 쿠키가 무기한 존재할 수 있도록 합니다.
-- *영속적인 쿠키*는 `Expires` 속성에 명시된 날짜에 삭제되거나, `Max-Age` 속성에 명시된 기간 이후에 삭제됩니다.
+- 세션 쿠키 (`Expires`, `Max-Age` 속성이 없는 쿠키)는 현재 세션이 끝날 때 삭제됩니다. 브라우저는 "현재 세션"이 끝나는 시점을 정의하며, 어떤 브라우저들은 재시작할 때 세션을 복원해 세션 쿠키가 무기한 존재할 수 있도록 합니다.
+- 영속적인 쿠키는 `Expires` 속성에 명시된 날짜에 삭제되거나, `Max-Age` 속성에 명시된 기간 이후에 삭제됩니다.
 
 예를 들면 아래와 같습니다:
 
@@ -71,7 +71,7 @@ Cookie: yummy_cookie=choco; tasty_cookie=strawberry
 Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT;
 ```
 
-> **참고:** When an expiry date is set, the time and date set is relative to the client the cookie is being set on, not the server.
+> **참고:** 쿠키 만료 시점을 설정할 때, 만료 시점의 시간과 날짜는 서버의 시간이 아니라 쿠키가 저장되는 클라이언트의 시간을 기준으로 합니다.
 
 ### `Secure`과 `HttpOnly` 쿠키
 

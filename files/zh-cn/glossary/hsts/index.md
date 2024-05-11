@@ -13,4 +13,4 @@ slug: Glossary/HSTS
 
 - {{HTTPHeader("Strict-Transport-Security")}}
 - OWASP 文章：[HTTP Strict Transport Security](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security)
-- 维基百科上的 [HTTP 严格传输安全](https://zh.wikipedia.org/wiki/HTTP_严格传输安全)
+- 维基百科上的 [HTTP 严格传输安全](https://zh.wikipedia.org/wiki/HTTP严格传输安全)

@@ -11,7 +11,7 @@ slug: Web/API/Canvas_API/Tutorial/Finale
 
 下面这些网站里有关于 canvas 的各种各样的演示以及更进一步的说明：
 
-- [Codepen.io](http://codepen.io/search?q=canvas)
+- [Codepen.io](https://codepen.io/search?q=canvas)
   - : 前端开发人员操练场和浏览器内的代码编辑器。
 - [Canvasdemos.com](http://www.canvasdemos.com/)(域名已失效)
   - : 关于 HTML5 canvas 元素的应用程序，游戏，工具和教程。

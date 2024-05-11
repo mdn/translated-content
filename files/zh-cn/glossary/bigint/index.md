@@ -1,6 +1,8 @@
 ---
 title: BigInt
 slug: Glossary/BigInt
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
 {{GlossarySidebar}}
@@ -9,6 +11,6 @@ slug: Glossary/BigInt
 
 ## 参见
 
-- 维基百科上的[数字类型](https://zh.wikipedia.org/wiki/資料類型#数值范围)
+- 维基百科上的[数值范围](https://zh.wikipedia.org/wiki/資料類型#数值范围)
 - JavaScript 类型：[`BigInt`](/zh-CN/docs/Web/JavaScript/Data_structures#bigint_类型)
 - JavaScript 全局对象 {{jsxref("BigInt")}}

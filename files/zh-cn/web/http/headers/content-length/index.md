@@ -30,6 +30,6 @@ Content-Length: <length>
 
 {{Compat}}
 
-## 相关内容
+## 参见
 
 - {{HTTPHeader("Transfer-Encoding")}}

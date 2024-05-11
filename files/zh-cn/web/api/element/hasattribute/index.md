@@ -1,39 +1,50 @@
 ---
-title: Element.hasAttribute()
+title: Element：hasAttribute() 方法
 slug: Web/API/Element/hasAttribute
+l10n:
+  sourceCommit: 990ab6637bb4d44f059597262cbf3c51abae79eb
 ---
 
-{{APIRef}}
+{{APIRef("DOM")}}
 
-## 概述
-
-`hasAttribute` 返回一个布尔值，指示该元素是否包含有指定的属性（attribute）。
+**`Element.hasAttribute()`** 方法返回一个表示当前元素的指定属性是否存在的**布尔**值。
 
 ## 语法
 
-```plain
-var result = element.hasAttribute(attName);
+```js-nolint
+hasAttribute(name)
 ```
 
-- `result` 为返回的布尔值：`true` 或 `false`。
-- `attName` 是一个字符串，表示属性的名称。
+### 参数
 
-## 例子
+- `name`
+  - : 表示属性名称的字符串。
+
+### 返回值
+
+一个布尔值。
+
+## 示例
 
 ```js
-// 在为属性设置新值前检测该属性是否存在
-var d = document.getElementById("div1");
-
-if (d.hasAttribute("align")) {
-  d.setAttribute("align", "center");
+const foo = document.getElementById("foo");
+if (foo.hasAttribute("bar")) {
+  // 做一些事情
 }
 ```
 
-## 备注
-
-{{DOMAttributeMethods}}
-
 ## 规范
 
-- [DOM Level 2 Core: hasAttribute](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElHasAttr)
-- [DOM Level 3 Core: hasAttribute](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-ElHasAttr)
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
+
+## 参见
+
+- {{domxref("Element.hasAttributes()")}}
+- {{domxref("Element.getAttribute()")}}
+- {{domxref("Element.setAttribute()")}}
+- {{domxref("Element.removeAttribute()")}}
+- {{domxref("Element.toggleAttribute()")}}

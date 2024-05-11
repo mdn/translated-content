@@ -61,7 +61,7 @@ var executing = browser.tabs.executeScript(
 
 オブジェクト配列を使って fulfilled 状態にされる [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) です。それぞれのオブジェクトは、フレームに挿入されたスクリプトの結果を表します。
 
-スクリプトの結果とは最後に評価された文のことです。これは、[Web コンソール](/ja/docs/Tools/Web_Console)で実行されたスクリプトの出力 (結果であって、`console.log()` の出力のことではありません) に似ています。例えば、次のようなスクリプトを挿入したとします。
+スクリプトの結果とは最後に評価された文のことです。これは、[ウェブコンソール](/ja/docs/Tools/Web_Console)で実行されたスクリプトの出力 (結果であって、`console.log()` の出力のことではありません) に似ています。例えば、次のようなスクリプトを挿入したとします。
 
 ```js
 var foo = "my result";

@@ -39,7 +39,7 @@ document.location.reload();
 clearInterval(interval); // Needed for Chrome to end game
 ```
 
-이를 통해 아래와 같이 약간 복잡한 논리를 추가할 수 있습니다:
+이를 통해 아래와 같이 약간 복잡한 논리를 추가할 수 있습니다.
 
 ```js
 lives--;
@@ -80,13 +80,13 @@ const interval = setInterval(draw, 10);
 draw();
 ```
 
-다음 각 인스턴스를 제거합니다:
+다음 각 인스턴스를 제거합니다.
 
 ```js
 clearInterval(interval); // Needed for Chrome to end game
 ```
 
-그 다음, `draw()`함수의 맨 아래 (닫는 '`}`'바로 전에) 다음 줄을 추가하여 `draw()`함수가 반복적으로 자신을 호출하게 합니다:
+그 다음, `draw()`함수의 맨 아래 (닫는 '`}`'바로 전에) 다음 줄을 추가하여 `draw()`함수가 반복적으로 자신을 호출하게 합니다.
 
 ```js
 requestAnimationFrame(draw);

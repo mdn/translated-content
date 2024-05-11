@@ -18,7 +18,7 @@ l10n:
 - [ボックスモデルビューで編集が可能](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_the_box_model/index.html)
 - [コンソールのメッセージにスタイルを設定する %c 書式](https://firefox-source-docs.mozilla.org/devtools-user/web_console/console_messages/index.html)
 - [ネットワークモニタの "cURL としてコピー" コマンド](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#copy-as-curl)
-- [ソースエディタで Sublime Text のキーバインドをサポート](https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html#source-editor)
+- [ソースエディターで Sublime Text のキーバインドをサポート](https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html#source-editor)
 - [ネットワークモニタのログを残し続けるオプション](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#network-request-list)
 - [ウェブコンソールで、JavaScript の警告をデフォルトで表示するように変更](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#javascript-errors-and-warnings)
 - [Alt+クリックでノードの子孫をすべて展開](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#page-inspector-ui-tour-html-pane)
@@ -55,7 +55,7 @@ l10n:
 - `InputEvent` インターフェイスを実装しました ([Firefox バグ 993253](https://bugzil.la/993253))。
 - `InputEvent.isComposing` 属性を実装しました ([Firefox バグ 993253](https://bugzil.la/993253))。
 - {{domxref("CSS.escape", "CSS.escape()")}} を実装しました ([Firefox バグ 955860](https://bugzil.la/955860))。
-- 他のブラウザと同様に {{domxref("Element/mousemove_event", "mousemove")}} がキャンセル可能になりました ([Firefox バグ 704423](https://bugzil.la/704423))。`preventDefault()` の呼び出しは `defaultPrevented` 属性に `true` を設定するだけであり、他の動作は変わりません。たとえば、`:hover` ステートの設定を抑止することはできません。
+- 他のブラウザーと同様に {{domxref("Element/mousemove_event", "mousemove")}} がキャンセル可能になりました ([Firefox バグ 704423](https://bugzil.la/704423))。`preventDefault()` の呼び出しは `defaultPrevented` 属性に `true` を設定するだけであり、他の動作は変わりません。たとえば、`:hover` ステートの設定を抑止することはできません。
 - {{domxref("Path2D")}} インターフェイスが実装されました。
 - {{domxref("CanvasRenderingContext2D.isPointInPath()")}}、{{domxref("CanvasRenderingContext2D.isPointInStroke()")}}、{{domxref("CanvasRenderingContext2D.clip()")}}、{{domxref("CanvasRenderingContext2D.fill()")}}、{{domxref("CanvasRenderingContext2D.stroke()")}} メソッドがオプションで {{domxref("Path2D")}} オブジェクトを受け付けるように更新されました。
 - {{domxref("HTMLMediaElement.fastSeek()")}} を実装しました。

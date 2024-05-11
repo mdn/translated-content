@@ -19,7 +19,7 @@ SVG 内でテキストが `<text>` 要素内以外で組み込まれた場合、
 
 - [条件処理属性](/ja/docs/Web/SVG/Attribute#Conditional_processing_attributes) »
 - [コア属性](/ja/docs/Web/SVG/Attribute#Core_attributes) »
-- [グラフィカルイベント属性](/ja/docs/Web/SVG/Attribute#Graphical_event_attributes) »
+- [グラフィックイベント属性](/ja/docs/Web/SVG/Attribute#Graphical_event_attributes) »
 - [プレゼンテーション属性](/ja/docs/Web/SVG/Attribute#Presentation_attributes) »
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}

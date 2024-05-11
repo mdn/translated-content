@@ -1,5 +1,6 @@
 ---
 title: "HTMLInputElement: disabled プロパティ"
+short-title: disabled
 slug: Web/API/HTMLInputElement/disabled
 l10n:
   sourceCommit: a36633398f827c87eb593f9647ed00bf33fd5b34
@@ -27,7 +28,7 @@ l10n:
 <p>
   <label>
     <input id="toggle-box" name="b" value="2" type="checkbox" />
-    他のボックスを有効にします。
+    もう一つのボックスを有効にします。
   </label>
 </p>
 ```

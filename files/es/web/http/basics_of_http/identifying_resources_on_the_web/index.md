@@ -9,7 +9,7 @@ El objetivo de una solicitud HTTP se denomina "recurso", (es decir: datos), y di
 
 La identidad y la localización del recursos en la Web son en su mayoria proporcionados por una sola dirección URL (Localicador de Recursos Uniforme; un tipo de URI). A veces, el mismo URI no proporciona la identidad ni la ubicación: HTTP usa un encabezado HTTP especifico, {{HTTPHeader("Alt-Svc")}} cuando el recurso solicitado por el cliente quiere acceder a él en otra ubicación.
 
-## URLs and URNs
+## URLs y URNs
 
 ### URLs
 
@@ -52,7 +52,7 @@ Las dos URNs corresponden a
 
 | Esquema     | Descripción                                                                 |
 | ----------- | --------------------------------------------------------------------------- |
-| data        | [Datos URIs](/es/docs/Web/HTTP/Basics_of_HTTP/Data_URIs)                    |
+| data        | [URLs de datos](/es/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)                 |
 | file        | Host-nombre de archivo específicos                                          |
 | ftp         | [Protocolo de Transferencia de Archivos](/es/docs/Glossary/FTP)             |
 | http/https  | [Protocolo de transferencia de Hipertexto (Seguro)](/es/docs/Glossary/HTTP) |
@@ -66,7 +66,7 @@ Las dos URNs corresponden a
 ### Autoridad
 
 - ![Domaine Name](mdn-url-domain@x2.png)
-  - : `www.example.com` es el nombre de dominio o autoridad que gobierna el espacio de nombres. Indica cuando es solicitado el servidor Web . Alternativamente, Es posile usar directamente una {{Glossary("IP address")}}, pero debido a que es menos conveniente, no se usa muy amenudo en la Web.
+  - : `www.example.com` es el nombre de dominio o autoridad que gobierna el espacio de nombres. Indica cuando es solicitado el servidor Web . Alternativamente, Es posile usar directamente una {{Glossary("IP address", "dirección IP")}}, pero debido a que es menos conveniente, no se usa muy amenudo en la Web.
 
 ### Puerto
 
@@ -106,5 +106,5 @@ urn:isbn:9780141036144
 
 ## Ver también
 
-- [Qué es una URL?](/es/docs/Learn/Common_questions/What_is_a_URL)
+- [¿Qué es una URL?](/es/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
 - [Lista de esquemas URI IANA](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml)

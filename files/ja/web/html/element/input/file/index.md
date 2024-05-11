@@ -2,7 +2,7 @@
 title: <input type="file">
 slug: Web/HTML/Element/input/file
 l10n:
-  sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
+  sourceCommit: 72ca3d725e3e56b613de3ac9727bd0d6d619c38a
 ---
 
 {{HTMLSidebar}}
@@ -50,7 +50,7 @@ l10n:
 
 ### `webkitdirectory`
 
-論理型の `webkitdirectory` 属性は、もし存在する場合は、ファイル選択インターフェイスでユーザーがディレクトリのみを選択することができることを示します。詳しい解説と例については {{domxref("HTMLInputElement.webkitdirectory")}} を参照してください。
+論理型の `webkitdirectory` 属性は、もし存在する場合は、ファイル選択インターフェイスでユーザーがディレクトリーのみを選択することができることを示します。詳しい解説と例については {{domxref("HTMLInputElement.webkitdirectory")}} を参照してください。
 
 > **メモ:** `webkitdirectory` はもともと WebKit ベースのブラウザー向けのみに実装されたものですが、 Microsoft Edge や Firefox 50 以降でも使用できます。しかし、比較的広く対応されていますが、まだ標準になっておらず、代替手段がない限りは使用するべきではありません。
 
@@ -119,7 +119,7 @@ div {
 - `type`
   - : ファイルの [MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types)です。
 - `webkitRelativePath` {{non-standard_inline}}
-  - : ディレクトリ選択ダイアログ (つまり、 [`webkitdirectory`](#webkitdirectory) 属性が設定されている `file` ダイアログ) で選択されたベースディレクトリからのファイルの相対パスを表す文字列です。_これは標準外なので使用するには注意してください。_
+  - : ディレクトリー選択ダイアログ (つまり、 [`webkitdirectory`](#webkitdirectory) 属性が設定されている `file` ダイアログ) で選択されたベースディレクトリーからのファイルの相対パスを表す文字列です。_これは標準外なので使用するには注意してください。_
 
 > **メモ:** 最近のブラウザーはすべて、 `HTMLInputElement.files` の値を取得だけではなく設定もできるようになっています。これが最も後に追加されたのは Firefox で、バージョン 57 で追加されました (see [Firefox バグ 1384030](https://bugzil.la/1384030))。
 
@@ -170,6 +170,26 @@ div {
 
 このため、 `accept` 属性は適切なサーバー側の検証でバックアップする必要があることを意識しておいてください。
 
+### キャンセルの検出
+
+`cancel` イベントは、ユーザーが選択を変更せず、前回選択したファイルを再選択した場合に発行されます。 `cancel`イベントはファイルピッカーダイアログが "cancel" ボタンや <kbd>escape</kbd> キーによって閉じられたり、取り消されたりした場合にも発行されます。
+
+例えば、次の例はユーザーがファイルを選択せずにポップアップを閉じた場合にコンソールにログ出力します。
+
+```js
+const elem = document.createElement("input");
+elem.type = "file";
+elem.addEventListener("cancel", () => {
+  console.log("Cancelled.");
+});
+elem.addEventListener("change", () => {
+  if (elem.files.length == 1) {
+    console.log("File selected: ", elem.files[0]);
+  }
+});
+elem.click();
+```
+
 ### 注
 
 1. スクリプトからファイル選択ダイアログの値を設定することはできません。 — 以下のようにしても効果はありません。
@@ -217,7 +237,6 @@ html {
 }
 
 form {
-  width: 580px;
   background: #ccc;
   margin: 0 auto;
   padding: 20px;
@@ -302,11 +321,11 @@ input.addEventListener("change", updateImageDisplay);
 - そうであるなら、次のことを行います。
 
   - ファイルの名前とファイルサイズを、前述の `<div>` (`file.name` および `file.size` で取得) 内のリストアイテムに出力します。独自の `returnFileSize()` 関数はファイルサイズを バイト/KB/MB のうち適切な形式で返します (既定でブラウザーは長さを絶対的なバイトで返します)。
-  - {{domxref("URL.createObjectURL_static", "URL.createObjectURL(curFiles[i])")}} を呼び出して、画像のプレビューのサムネイルを生成します。次に、新しい {{htmlelement("img")}} を生成し、その [`src`](/ja/docs/Web/HTML/Element/img#src) をサムネイルに設定することで、リスト項目にも画像を挿入します。
+  - {{domxref("URL/createObjectURL_static", "URL.createObjectURL(file)")}} を呼び出して、画像のプレビューのサムネイルを生成します。次に、新しい {{htmlelement("img")}} を生成し、その [`src`](/ja/docs/Web/HTML/Element/img#src) をサムネイルに設定することで、リスト項目にも画像を挿入します。
 
 - ファイル形式が無効である場合、リストのアイテム内にメッセージを表示して、ユーザーに別なファイル形式を選択する必要があることを伝えます。
 
-```js
+```js-nolint
 function updateImageDisplay() {
   while (preview.firstChild) {
     preview.removeChild(preview.firstChild);
@@ -325,11 +344,12 @@ function updateImageDisplay() {
       const listItem = document.createElement("li");
       const para = document.createElement("p");
       if (validFileType(file)) {
-        para.textContent = `ファイル名: ${
-          file.name
-        }, ファイルサイズ: ${returnFileSize(file.size)}.`;
+        para.textContent = `ファイル名: ${file.name}, ファイルサイズ: ${returnFileSize(
+          file.size,
+        )}.`;
         const image = document.createElement("img");
         image.src = URL.createObjectURL(file);
+        image.alt = image.title = file.name;
 
         listItem.appendChild(image);
         listItem.appendChild(para);
@@ -380,6 +400,16 @@ function returnFileSize(number) {
 }
 ```
 
+```js hidden
+const button = document.querySelector("form button");
+button.addEventListener("click", (e) => {
+  e.preventDefault();
+  const para = document.createElement("p");
+  para.append("Image uploaded!");
+  preview.replaceChildren(para);
+});
+```
+
 この例は次のようにできます。使ってみましょう。
 
 {{EmbedLiveSample('Examples', '100%', 200)}}
@@ -397,8 +427,9 @@ function returnFileSize(number) {
     <tr>
       <td><strong>イベント</strong></td>
       <td>
-        {{domxref("HTMLElement/change_event", "change")}} および
-        {{domxref("HTMLElement/input_event", "input")}}
+        {{domxref("HTMLElement/change_event", "change")}},
+        {{domxref("Element/input_event", "input")}},
+        {{domxref("HTMLElement/cancel_event", "cancel")}}
       </td>
     </tr>
     <tr>

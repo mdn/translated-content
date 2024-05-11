@@ -23,7 +23,7 @@ SVG ソフトウェアが対応する必要がある画像形式は {{glossary("
 
 - [条件処理属性](/ja/docs/Web/SVG/Attribute#Conditional_processing_attributes)
 - [コア属性](/ja/docs/Web/SVG/Attribute#Core_attributes)
-- [グラフィカルイベント属性](/ja/docs/Web/SVG/Attribute#Graphical_event_attributes)
+- [グラフィックイベント属性](/ja/docs/Web/SVG/Attribute#Graphical_event_attributes)
 - [プレゼンテーション属性](/ja/docs/Web/SVG/Attribute#Presentation_attributes)
 - [Xlink 属性](/ja/docs/Web/SVG/Attribute#Xlink_attributes)
 - {{SVGAttr("class")}}

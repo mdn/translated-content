@@ -44,7 +44,7 @@ class MyRegExp extends RegExp {
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{jsxref("RegExp")}}
 - {{jsxref("Symbol.species")}}

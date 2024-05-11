@@ -9,6 +9,6 @@ slug: Glossary/Tag
 
 ## 参见
 
-- 维基百科上的 [HTML 元素](https://zh.wikipedia.org/wiki/HTML_element)
+- 维基百科上的 [HTML 元素](https://zh.wikipedia.org/wiki/HTML元素)
 - 在 {{glossary("WHATWG")}} 的 [HTML 元素语法](https://html.spec.whatwg.org/multipage/syntax.html#elements-2)
 - [HTML 简介](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)

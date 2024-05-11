@@ -25,7 +25,7 @@ slug: Web/HTTP/Status/308
 
 {{Compat}}
 
-## 更多可见
+## 参见
 
 - {{HTTPStatus("301")}} `Moved Permanently`
 - {{HTTPStatus("302")}} `Found`, the temporary redirect

@@ -73,7 +73,7 @@ window.CSS.registerProperty({
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - [CSS 属性与值 API](/zh-CN/docs/Web/API/CSS_Properties_and_Values_API)
 - [CSS 绘图 API](/zh-CN/docs/Web/API/CSS_Painting_API)

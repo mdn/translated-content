@@ -2,10 +2,10 @@
 title: 遅延読み込み
 slug: Web/Performance/Lazy_loading
 l10n:
-  sourceCommit: fa8a44b8bff24a4032181c4fd155c459c0dc9161
+  sourceCommit: 9bbf5b1cc3cf5736fad6b3d972657df8f8cec234
 ---
 
-{{QuickLinksWithSubPages("Web/Performance")}}
+{{QuickLinksWithSubPages("/ja/docs/Web/Performance")}}
 
 **遅延読み込み** (Lazy loading) とは、リソースをノンブロッキング（クリティカルでない）ものとして識別し、必要なときだけこれらを読み込む戦略のことです。[クリティカルレンダリングパス](/ja/docs/Web/Performance/Critical_rendering_path)の長さを短縮する方法であり、ページのロード時間の短縮につながります。
 
@@ -25,15 +25,17 @@ l10n:
 
 ### 全般
 
-**コード分割**
+#### コード分割
+
 JavaScript、CSS、HTML は小さな塊に分割して送信することができます。これにより、値を提供するために必要な最小限のコードを前もって送信することができ、ページの読み込み時間を改善することができます。残りはオンデマンドで読み込むことができます。
 
 - エントリーポイント分割: アプリ内のエントリーポイントごとにコードを区切ります。
-- 動的分割: [dynamic import()](/ja/docs/Web/JavaScript/Reference/Statements/import) 文を使用しているコードを区切ります。
+- 動的分割: [dynamic import()](/ja/docs/Web/JavaScript/Reference/Operators/import) 式を使用しているコードを区切ります。
 
 ### JavaScript
 
-**モジュール型のスクリプト**
+#### モジュール型のスクリプト
+
 `type="module"` を持つスクリプトタグは、既定では [JavaScript モジュール](/ja/docs/Web/JavaScript/Guide/Modules) として扱われ、先送りされます。
 
 ### CSS
@@ -52,7 +54,7 @@ JavaScript、CSS、HTML は小さな塊に分割して送信することがで�
 
 既定では、フォントリクエストはレンダーツリーが構築されるまで遅延されるため、テキスト描画が遅延することがあります。
 
-既定値を上書きしてウェブのフォントリソースを先読みするために、`<link rel="preload">` や [CSS font-display プロパティ](/ja/docs/Web/CSS/@font-face/font-display)、[フォント読み込み API](/ja/docs/Web/API/CSS_Font_Loading_API) を使用することが可能です。
+既定値を上書きしてウェブのフォントリソースを事前読み込みするために、`<link rel="preload">` や [CSS font-display プロパティ](/ja/docs/Web/CSS/@font-face/font-display)、[フォント読み込み API](/ja/docs/Web/API/CSS_Font_Loading_API) を使用することが可能です。
 
 [link 要素](/ja/docs/Web/HTML/Element/link) も参照してください。
 
@@ -60,26 +62,26 @@ JavaScript、CSS、HTML は小さな塊に分割して送信することがで�
 
 ウェブページには、データ使用量やページの読み込み速度に影響する画像がたくさん格納されていることがとてもよくあります。これらの画像のほとんどは画面外にあり（[クリティカルではない](/ja/docs/Web/Performance/Critical_rendering_path)）、それらを表示するためにはスクロールなど、ユーザーの操作を必要とします。
 
-**loading 属性**
+#### loading 属性
+
 [`loading`](/ja/docs/Web/HTML/Element/img#loading) 属性を {{HTMLElement("img")}} 要素に（または [`loading`](/ja/docs/Web/HTML/Element/iframe#loading) 属性を {{HTMLElement("iframe")}} 要素に）設定することで、ユーザーが近くにスクロールするまで、画面に表示されている画像や iframe の読み込みを延期するように、ブラウザーに指示することができます。
+これにより、クリティカルでないリソースは必要な場合のみ読み込まれるようになり、ページの初期読み込みが高速化され、ネットワーク使用量が縮小する可能性があります。
 
 ```html
-<img src="image.jpg" alt="..." loading="lazy" />
-<iframe src="video-player.html" title="..." loading="lazy"></iframe>
+<img loading="lazy" src="image.jpg" alt="..." />
+<iframe loading="lazy" src="video-player.html" title="..."></iframe>
 ```
 
-`load` イベントは、積極的に読み込まれたコンテンツがすべて読み込まれたときに発行されます。このとき、{{Glossary("visual viewport", "視覚ビューポート")}}の範囲内にまだ読み込まれていない遅延読み込みされた画像があることは十分に考えられます（というか、あり得ます）。
+`load` イベントは、積極的に読み込まれたコンテンツがすべて読み込まれたときに発行されます。このとき、{{Glossary("visual viewport", "視覚ビューポート")}}の範囲内にまだ読み込まれていない遅延読み込みされた画像または iframe があることは十分に考えられます（というか、あり得ます）。
 
 指定された画像の読み込みが完了したかどうかは、論理型の {{domxref("HTMLImageElement.complete", "complete")}} プロパティの値を調べることで判断することができます。
 
-**ポリフィル**
-古いブラウザーや現在非互換性のあるブラウザーに対応するために、このポリフィルを記載してください。
-[loading-attribute-polyfill](https://github.com/mfranzke/loading-attribute-polyfill)
+#### 交差オブザーバー API
 
-**交差オブザーバー API**
 [交差オブザーバー](/ja/docs/Web/API/IntersectionObserver)は、監視対象要素がブラウザーのビューポートに入ったとき、または出たときに、ユーザーに知らせることができるようにします。
 
-**イベントハンドラー**
+#### イベントハンドラー
+
 ブラウザーとの互換性が重要な場合、いくつかのオプションがあります。
 
 - [交差オブザーバーのポリフィル](https://github.com/w3c/IntersectionObserver)
@@ -91,6 +93,5 @@ JavaScript、CSS、HTML は小さな塊に分割して送信することがで�
 
 ## 関連情報
 
-- [Render blocking CSS](https://web.dev/critical-rendering-path-render-blocking-css/)
-- [Optimizing loading and rendering](https://web.dev/fast/#optimize-webfonts)
-- [Lazy loading images and video](https://web.dev/fast/#lazy-load-images-and-video)
+- [Render blocking CSS](https://web.dev/articles/critical-rendering-path/render-blocking-css)
+- [Use lazy loading to improve loading speed](https://web.dev/articles/lazy-loading)

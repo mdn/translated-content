@@ -89,4 +89,4 @@ For details on how to create icons to use with your page action, see [Iconograph
 
 ## 例
 
-GitHub の [webextensions-examples](https://github.com/mdn/webextensions-examples) リポジトリには、ページアクションを使う拡張機能の例がいくつかあります。 [chill-out](https://github.com/mdn/webextensions-examples/tree/master/chill-out) はポップアップなしのページアクションを使います。
+GitHub の [webextensions-examples](https://github.com/mdn/webextensions-examples) リポジトリーには、ページアクションを使う拡張機能の例がいくつかあります。 [chill-out](https://github.com/mdn/webextensions-examples/tree/master/chill-out) はポップアップなしのページアクションを使います。

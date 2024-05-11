@@ -233,7 +233,7 @@ WebAssembly 表格是一个可变大小的带类型的引用数组，其中的�
 
 本文带你了解了使用 WebAssembly 的 JavaScript API 的基本知识，包括在 JavaScript 上下文中导入一个 WebAssembly 模块、使用该模块的函数以及在 JavaScript 中使用 WebAssembly 的内存和表格。同时，我们也介绍了多样性的概念。
 
-## 另见
+## 参见
 
 - [webassembly.org](http://webassembly.org/)
 - [WebAssembly concepts](/zh-CN/docs/WebAssembly/Concepts)

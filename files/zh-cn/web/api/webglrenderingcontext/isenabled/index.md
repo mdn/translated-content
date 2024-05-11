@@ -65,7 +65,7 @@ gl.disable(gl.STENCIL_TEST);
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{domxref("WebGLRenderingContext.enable()")}}
 - {{domxref("WebGLRenderingContext.disable()")}}

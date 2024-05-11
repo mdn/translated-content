@@ -22,5 +22,5 @@ slug: Glossary/Endianness
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}
 - [Typed Arrays](/zh-CN/docs/Web/JavaScript/Typed_arrays)
-- Wikipedia 上的 [Endianness](https://zh.wikipedia.org/wiki/Endianness)
+- 维基百科上的[字节序](https://zh.wikipedia.org/wiki/字节序)
 - {{Glossary("Data structure")}}

@@ -1,11 +1,13 @@
 ---
 title: grid-column-start
 slug: Web/CSS/grid-column-start
+l10n:
+  sourceCommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
 ---
 
 {{CSSRef}}
 
-**`grid-column-start`** は CSS のプロパティで、グリッドの配置に線または区間を使用したり、使用しなかったりして (自動)、グリッド列内のグリッドアイテムの先頭位置を指定します。この開始位置は、{{Glossary("grid areas", "グリッド領域")}}のブロックの開始側の端を指定します。
+**`grid-column-start`** は CSS のプロパティで、グリッド列内のグリッドアイテムの先頭位置を指定します。グリッド配置に線や区間を指定したり、何も指定しなかったり（自動）することで、{{glossary("grid areas", "グリッド領域")}}のブロック方向の先頭側の端を指定します。
 
 {{EmbedInteractiveExample("pages/css/grid-column-start.html")}}
 
@@ -31,10 +33,11 @@ grid-column-start: span somegridarea 5;
 grid-column-start: inherit;
 grid-column-start: initial;
 grid-column-start: revert;
+grid-column-start: revert-layer;
 grid-column-start: unset;
 ```
 
-このプロパティは単一の `<grid-line>` 値で指定します。 `<grid-line>` 値は次のように指定します。
+このプロパティは単一の `<grid-line>` 値で指定します。 `<grid-line>` 値は次のいずれかで指定します。
 
 - `auto` キーワード
 - `<custom-ident>` 値
@@ -50,7 +53,7 @@ grid-column-start: unset;
 
   - : `<custom-ident>-start` という名前の付いた線がある場合、これはそのような線の先頭がグリッドアイテムの配置に関わります。
 
-    > **メモ:** 名前付きグリッド領域、自動的にこの形で暗黙の名前付き線を生成しますので、 `grid-column-start: foo;` と指定すると名前付きグリッド領域の先頭側の端を選択します (その前に `foo-start` という名前の線が明示的に存在しない限り)。
+    > **メモ:** 名前付きグリッド領域、自動的にこの形で暗黙の名前付き線を生成しますので、 `grid-column-start: foo;` と指定すると名前付きグリッド領域の先頭側の端を選択します （その前に `foo-start` という名前の線が明示的に存在しない限り）。
 
     そうでなければ、これは `<custom-ident>` に沿って整数の `1` が指定されたものとして扱われます。
 
@@ -148,7 +151,7 @@ grid-column-start: unset;
 
 #### 結果
 
-{{ EmbedLiveSample('Setting_column_start_for_a_grid_item', '230', '420') }}
+{{ EmbedLiveSample('グリッドアイテムの列の開始位置の設定', '230', '420') }}
 
 ## 仕様書
 

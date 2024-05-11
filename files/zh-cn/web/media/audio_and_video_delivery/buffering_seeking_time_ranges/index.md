@@ -1,41 +1,42 @@
 ---
-title: Media buffering, seeking, and time ranges
+title: 媒体缓冲、拖动和时间范围
 slug: Web/Media/Audio_and_video_delivery/buffering_seeking_time_ranges
+l10n:
+  sourceCommit: 5aa89c0c0dd2aded106b8d6674fe5370e270f5e6
 ---
 
 {{QuickLinksWithSubPages("/zh-CN/docs/Web/Media")}}
 
-有时候知道 {{htmlelement("audio") }} 或 {{htmlelement("video") }} 已经下载了多少或有多少可以不延迟的播放是有用的——音频和视频的缓冲条就是这个的一个好例子。这篇文章讨论 用 [TimeRanges](/zh-CN/docs/Web/API/TimeRanges) 如何创建一个 buffer/seek bar，和 media API 的其他特性。
+有时候知道 {{htmlelement("audio") }} 或 {{htmlelement("video") }} 已经下载了多少或有多少可以不经过延迟直接播放是有用的——音频和视频的缓冲进度条就是一个很好的例子。本文讨论如何使用 [TimeRanges](/zh-CN/docs/Web/API/TimeRanges) 和媒体 API 的其他特性创建一个缓冲/拖动条。
 
 ## Buffered
 
-`Buffered` 属性会告诉我们媒体的哪一部分已经下载好了。它返回一个 {{ domxref("TimeRanges") }} 对象，表明哪些块已经下载。这通常是连续的但是如果用户在缓冲时跳过，就可能会有缺口。
+`buffered` 属性会告诉我们媒体的哪一部分已经下载好了。它返回一个 {{domxref("TimeRanges")}} 对象，表明哪些媒体分块已经下载。这通常是连续的但是如果用户在缓冲时跳过，就可能会有缺少的部分。
 
-它与 {{htmlelement("audio") }} 或 {{htmlelement("video") }} 一起工作，现在我们来考虑一个简单的音频示例：
+它与 {{htmlelement("audio")}} 或 {{htmlelement("video")}} 一起工作，现在让我们来考虑一个简单的音频示例：
 
 ```html
 <audio id="my-audio" controls src="music.mp3"></audio>
 ```
 
-我们可以这样访问这些属性：
+我们可以这样访问该属性：
 
 ```js
-var myAudio = document.getElementById("my-audio");
-
-var bufferedTimeRanges = myAudio.buffered;
+const audio = document.getElementById("my-audio");
+const bufferedTimeRanges = audio.buffered;
 ```
 
 ## TimeRanges 对象
 
-TimeRanges 是一系列有开始和结束时间的非重叠的时间范围。 ([learn more about TimeRanges](/zh-CN/docs/Web/API/TimeRanges)).
+TimeRanges 是一系列有开始和结束时间的非重叠的时间范围。（[学习更多有关 TimeRanges 的内容](/zh-CN/docs/Web/API/TimeRanges)）。
 
-一个 {{ domxref("TimeRanges") }} 对象包括以下内容。
+{{domxref("TimeRanges")}} 对象包含以下属性：
 
-- `length`: The number of time ranges in the object.
-- `start(index)`: The start time, in seconds, of a time range.
-- `end(index)`: The end time, in seconds, of a time range.
+- `length`：对象包含的时间范围的数量。
+- `start(index)`：时间范围的开始时间（以秒为单位）。
+- `end(index)`：时间范围的结束时间（以秒为单位）。
 
-没有用户操作的话通常只有一个时间范围，但是如果你在媒体中跳来跳去那么就会出现多个时间范围，下面形象化的表名了这一点。This represents two buffered time ranges — one spanning 0 to 5 seconds and the second spanning 15 to 19 seconds.
+没有用户交互的情况下通常只有一个时间范围，但是如果你在媒体中跳来跳去，那么就会出现多个时间范围，下面的示意图形象地表明了这一点。这表示两个缓冲的时间范围——第一个范围从 0 到 5 秒，第二个范围从 15 到 19 秒。
 
 ```plain
 ------------------------------------------------------
@@ -44,17 +45,17 @@ TimeRanges 是一系列有开始和结束时间的非重叠的时间范围。 ([
 0             5                    15          19    21
 ```
 
-对于这个 audio 实例，相关联的 {{ domxref("TimeRange") }} 对象会有以下的可用属性：
+对于该音频实例，相关联的 {{domxref("TimeRanges")}} 对象会有以下可用的属性：
 
 ```js
-myAudio.buffered.length; // returns 2
-myAudio.buffered.start(0); // returns 0
-myAudio.buffered.end(0); // returns 5
-myAudio.buffered.start(1); // returns 15
-myAudio.buffered.end(1); // returns 19
+audio.buffered.length; // 返回 2
+audio.buffered.start(0); // 返回 0
+audio.buffered.end(0); // 返回 5
+audio.buffered.start(1); // 返回 15
+audio.buffered.end(1); // 返回 19
 ```
 
-为了试用并形象化 buffered time ranges 我们可以写一点 HTML:
+要尝试并可视化缓冲的时间范围，我们可以写一点 HTML：
 
 ```html
 <p>
@@ -67,68 +68,68 @@ myAudio.buffered.end(1); // returns 19
 </p>
 ```
 
-and a little bit of JavaScript:
+以及一些 JavaScript：
 
 ```js
-window.onload = function () {
-  var myAudio = document.getElementById("my-audio");
-  var myCanvas = document.getElementById("my-canvas");
-  var context = myCanvas.getContext("2d");
+window.onload = () => {
+  const audio = document.getElementById("my-audio");
+  const canvas = document.getElementById("my-canvas");
+  const context = canvas.getContext("2d");
 
   context.fillStyle = "lightgray";
-  context.fillRect(0, 0, myCanvas.width, myCanvas.height);
+  context.fillRect(0, 0, canvas.width, canvas.height);
   context.fillStyle = "red";
   context.strokeStyle = "white";
 
-  var inc = myCanvas.width / myAudio.duration;
+  const inc = canvas.width / audio.duration;
 
-  // display TimeRanges
+  // 显示 TimeRanges
 
-  myAudio.addEventListener("seeked", function () {
-    for (i = 0; i < myAudio.buffered.length; i++) {
-      var startX = myAudio.buffered.start(i) * inc;
-      var endX = myAudio.buffered.end(i) * inc;
-      var width = endX - startX;
+  audio.addEventListener("seeked", () => {
+    for (let i = 0; i < audio.buffered.length; i++) {
+      const startX = audio.buffered.start(i) * inc;
+      const endX = audio.buffered.end(i) * inc;
+      const width = endX - startX;
 
-      context.fillRect(startX, 0, width, myCanvas.height);
-      context.rect(startX, 0, width, myCanvas.height);
+      context.fillRect(startX, 0, width, canvas.height);
+      context.rect(startX, 0, width, canvas.height);
       context.stroke();
     }
   });
 };
 ```
 
-这在长一些的 audio 或 video 上工作的更好，但是按开始键并在进度条上点击，你会得到这个。每个红色填充的长方形代表一个时间范围。
+这在长一些的音频或视频上工作得更好，但是按开始键并在播放进度条上点击，你会看到类似这样的东西。每个红色填充的长方形代表一个时间范围。
 
-![A simple audio player with play button, seek bar and volume control, with a series of red rectangles beneath it representing time ranges.](bufferedtimeranges.png)
+![一个简单的音频播放器，带有播放按钮、搜索栏和音量控制，下面有一系列代表时间范围的红色矩形。](bufferedtimeranges.png)
 
-> **备注：** You can see the [timerange code running live on JS Bin](http://jsbin.com/memazaro/1/edit).
+> **备注：** 你可以查看 [JS Bin 上实时运行的时间范围代码](https://jsbin.com/memazaro/1/edit)。
 
 ## Seekable
 
-`Seekable` 属性返回一个 {{ domxref("TimeRanges") }} 对象告诉我们哪一部分媒体可以不等待的播放; this is irrespective of whether that part has been downloaded or not. Some parts of the media may be seekable but not buffered if byte-range requests are enabled on the server. Byte range requests allow parts of the media file to be delivered from the server and so can be ready to play almost immediately — thus they are seekable.
+`seekable` 属性返回一个 {{domxref("TimeRanges")}} 对象，告诉我们媒体的哪一部分可以不经过延迟直接播放；这与该部分是否已被下载无关。如果服务器上启用了字节范围请求，媒体的一些部分可能是可查找（seekable）但又没有缓冲的，字节范围请求允许服务器分发媒体文件的某一部分，因此可以几乎立即准备好播放——故它们是可查找的。有关字节范围请求的更多信息，请参见 [HTTP 范围请求](/zh-CN/docs/Web/HTTP/Range_requests)。
 
 ```js
-var seekableTimeRanges = myAudio.seekable;
+const seekableTimeRanges = audio.seekable;
 ```
 
-## Creating our own Buffering Feedback
+## 创建我们自己的缓冲反馈
 
-If we wish to create our own custom player, we may want to provide feedback on how much of the media is ready to be played. In practice a good way to do this is use the `seekable` attribute, although as we have seen above seekable parts of the media are not neccessarily contiguous — they often are however and we can safely approximate this information to give the user an indication of which parts of the media can be played directly. We can find this point in the media using the following line of code:
+如果我们希望创建一个自定义播放器，我们可能希望提供有关多少媒体已经可供播放的反馈。实际上，一个很好的方法是使用 `seekable` 属性，尽管如上所述，媒体可查找的部分不一定是连续的——但它们通常是连续的，我们可以安全地近似这些信息，以便给用户一个指示哪些部分的媒体可以直接播放。我们可以使用以下代码找到媒体中的这一点：
 
 ```js
-var seekableEnd = myAudio.seekable.end(myAudio.seekable.length - 1);
+const seekableEnd = audio.seekable.end(audio.seekable.length - 1);
 ```
 
-> **备注：** `myAudio.seekable.end(myAudio.seekable.length - 1)` actually tells us the end point of the last time range that is seekable (not all seekable media). In practice this is good enough as the browser either enables range requests or it doesn't. If it doesn't then `audio.seekable` will be equivalent to `audio.buffered`, which will give a valid indication of the end of seekable media. If range requests are enabled this value usually becomes the duration of the media almost instantly.
+> **备注：** `audio.seekable.end(audio.seekable.length - 1)` 实际上告诉我们可查找的最后一个时间范围的结束点（而不是所有可查找的媒体）。在实践中，这已经足够了，因为浏览器要么启用范围请求，要么不启用。如果不启用，`audio.seekable` 将等同于 `audio.buffered`，这将给出媒体可查找的结束点的有效指示。如果启用了范围请求，这个值通常几乎立即变成媒体的持续时间。
 
-It is better perhaps to give an indication of how much media has actually downloaded — this what the browser's native players seem to display.
+也许最好的方法是给出媒体实际下载了多少的指示——这似乎是浏览器的原生播放器显示的内容。
 
-So let's build this. The HTML for our player looks like this:
+让我们来构建它。我们播放器的 HTML 如下：
 
-```css
+```html
 <audio id="my-audio" preload controls>
-  <source src="music.mp3" type="audio/mpeg">
+  <source src="music.mp3" type="audio/mpeg" />
 </audio>
 <div class="buffered">
   <span id="buffered-amount"></span>
@@ -138,7 +139,7 @@ So let's build this. The HTML for our player looks like this:
 </div>
 ```
 
-We'll use the following CSS to style the buffering display:
+我们将使用以下 CSS 来为缓冲显示添加样式：
 
 ```css
 .buffered {
@@ -170,47 +171,56 @@ We'll use the following CSS to style the buffering display:
 }
 ```
 
-And the following JavaScript provides our functionality:
+而以下 JavaScript 为我们提供了功能：
 
 ```js
-window.onload = function () {
-  var myAudio = document.getElementById("my-audio");
+window.onload = () => {
+  const audio = document.getElementById("my-audio");
 
-  myAudio.addEventListener("progress", function () {
-    var bufferedEnd = myAudio.buffered.end(myAudio.buffered.length - 1);
-    var duration = myAudio.duration;
+  audio.addEventListener("progress", () => {
+    const duration = audio.duration;
     if (duration > 0) {
-      document.getElementById("buffered-amount").style.width =
-        (bufferedEnd / duration) * 100 + "%";
+      for (let i = 0; i < audio.buffered.length; i++) {
+        if (
+          audio.buffered.start(audio.buffered.length - 1 - i) <
+          audio.currentTime
+        ) {
+          document.getElementById("buffered-amount").style.width = `${
+            (audio.buffered.end(audio.buffered.length - 1 - i) * 100) / duration
+          }%`;
+          break;
+        }
+      }
     }
   });
 
-  myAudio.addEventListener("timeupdate", function () {
-    var duration = myAudio.duration;
+  audio.addEventListener("timeupdate", () => {
+    const duration = audio.duration;
     if (duration > 0) {
-      document.getElementById("progress-amount").style.width =
-        (myAudio.currentTime / duration) * 100 + "%";
+      document.getElementById("progress-amount").style.width = `${
+        (audio.currentTime / duration) * 100
+      }%`;
     }
   });
 };
 ```
 
-The progress event is fired as data is downloaded, this is a good event to react to if we want to display download or buffering progress.
+下载数据时会触发 progress 事件，如果我们想要显示下载或缓冲进度，这是一个很好的用于做出反应的事件。
 
-The timeupdate event is fired 4 times a second as the media plays and that's where we increment our playing progress bar.
+当媒体播放时，timeupdate 事件每秒触发 4 次，这是我们推动播放进度条的地方。
 
-This should give you results similar to the following, where the light grey bar represents the buffered progress and green bar shows the played progress:
+这应该会为你提供类似这样的结果，浅灰色的条代表缓冲进度，绿色的条代表播放进度：
 
-![A simple audio player with play button, seek bar and volume control, with a bar below it. The bar has a red portion to show played video, and a dark gray bar to show how much has been buffered.](bufferedprogress.png)
+![一个简单的音频播放器，带有播放按钮、搜索栏和音量控制，以及控件下方的进度条，其中的绿色部分显示已播放的视频，还有一个浅灰色的部分表示已缓冲的部分。](bufferedprogress.png)
 
-> **备注：** You can see the [buffering code running live on JS Bin](http://jsbin.com/badimipi/1/edit).
+> **备注：** 你可以查看 [JS Bin 上实时运行的缓冲代码](https://jsbin.com/badimipi/1/edit)。
 
-## A quick word about Played
+## 关于 Played 的简短说明
 
-It's worth mentioning the `played` property — this tells us which time ranges have been played within the media. For example:
+`played` 属性值得一提——它告诉我们媒体中已经播放了哪些时间范围。例如：
 
 ```js
-var played = audio.played; // returns a TimeRanges object
+const played = audio.played; // 返回一个 TimeRanges 对象
 ```
 
-This could be useful for establishing the parts of your media that are most listened to or watched.
+这对于确定媒体中最常被收听或观看的部分可能很有用。

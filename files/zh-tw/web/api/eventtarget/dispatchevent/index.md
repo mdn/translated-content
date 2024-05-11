@@ -3,7 +3,7 @@ title: EventTarget.dispatchEvent()
 slug: Web/API/EventTarget/dispatchEvent
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("DOM")}}
 
 於此 {{domxref("EventTarget")}} 物件上觸發特定的 {{domxref("Event")}} 物件實體，相當於依照註冊的順序呼叫它的 {{domxref("EventListener")}}。一般事件處理規則（包含捕捉（capturing）和可選的冒泡（bubbling）階段）也適用於用 `dispatchEvent()` 手動觸發事件。
 

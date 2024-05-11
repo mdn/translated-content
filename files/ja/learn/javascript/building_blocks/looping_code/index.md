@@ -2,7 +2,7 @@
 title: ループするコード
 slug: Learn/JavaScript/Building_blocks/Looping_code
 l10n:
-  sourceCommit: 8e2641ebe076ab89299c77a51ece882de4ba5efb
+  sourceCommit: b072a7e62002e4765626c52dfdac5159071938e0
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
@@ -14,7 +14,7 @@ l10n:
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        基本的なコンピューターの知識、HTML と CSS への理解、
+        HTML と CSS への理解、
         <a href="/ja/docs/Learn/JavaScript/First_steps"
           >JavaScript の第一歩</a
         >
@@ -31,7 +31,7 @@ l10n:
 
 ループは、同じことを何度も何度も繰り返すものです。多くの場合、コードはループを一巡するたびに少しずつ異なり、また、同じコードを実行しても変数が異なることもあります。
 
-### ループコードの例
+### ループするコードの例
 
 例えば、{{htmlelement("canvas")}} 要素に 100 個のランダムな円を描画したいとします（\[更新] ボタンを押すと、例を何度も実行して異なるランダムコレクションを見ることができます）。
 
@@ -61,7 +61,7 @@ button {
 }
 ```
 
-{{ EmbedLiveSample('Looping_code_example', '100%', 400) }}
+{{ EmbedLiveSample('ループするコードの例', '100%', 400) }}
 
 こちらはこの例を実装している JavaScript コードです。
 
@@ -83,7 +83,7 @@ function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   for (let i = 0; i < 100; i++) {
     ctx.beginPath();
-    ctx.fillStyle = "rgba(255,0,0,0.5)";
+    ctx.fillStyle = "rgb(255 0 0 / 50%)";
     ctx.arc(
       random(canvas.width),
       random(canvas.height),
@@ -105,7 +105,7 @@ btn.addEventListener("click", draw);
 ```js
 for (let i = 0; i < 100; i++) {
   ctx.beginPath();
-  ctx.fillStyle = "rgba(255,0,0,0.5)";
+  ctx.fillStyle = "rgb(255 0 0 / 50%)";
   ctx.arc(
     random(canvas.width),
     random(canvas.height),
@@ -127,7 +127,7 @@ for (let i = 0; i < 100; i++) {
 
 ```js
 ctx.beginPath();
-ctx.fillStyle = "rgba(255,0,0,0.5)";
+ctx.fillStyle = "rgb(255 0 0 / 50%)";
 ctx.arc(
   random(canvas.width),
   random(canvas.height),
@@ -186,7 +186,7 @@ console.log(upperCats);
 
 ここでは、{{jsxref("Array.prototype.map()","cats.map()")}} に関数を渡すと、`map()` は配列内のそれぞれのアイテムにその関数を 1 回ずつ、そのアイテムを渡して呼び出します。そして、それぞれの関数呼び出しの返値を新しい配列に追加し、最後に新しい配列を返します。この場合、提供した関数はアイテムを大文字に変換するので、結果として得られる配列には、すべてのネコ科動物がが大文字で格納されます。
 
-```
+```js-nolint
 [ "LEOPARD", "SERVAL", "JAGUAR", "TIGER", "CARACAL", "LION" ]
 ```
 
@@ -205,10 +205,10 @@ console.log(filtered);
 // [ "Leopard", "Lion" ]
 ```
 
-これは `map()` とよく似ていますが、渡す関数が[論理値](/ja/docs/Learn/JavaScript/First_steps/Variables#論理値)を返す点が異なります。 もし `true` を返すなら、アイテムは新しい配列に含まれます。
+これは `map()` とよく似ていますが、渡す関数が[論理値](/ja/docs/Learn/JavaScript/First_steps/Variables#論理型)を返す点が異なります。 もし `true` を返すなら、アイテムは新しい配列に含まれます。
 この関数では、アイテムが文字「L」で始まるかどうかをテストするので、結果は名前が「L」で始まる猫だけを含む配列になります。
 
-```
+```js-nolint
 [ "Leopard", "Lion" ]
 ```
 
@@ -229,7 +229,7 @@ console.log(filtered);
 このような用途では、{{jsxref("statements/for","for")}} ループを使用する必要があります。
 これは以下のような構文があります。構文は以下の通りです。
 
-```
+```js-nolint
 for (初期化処理; 条件; 最後の式) {
   // 実行するコード
 }
@@ -267,7 +267,7 @@ function calculate() {
     const newResult = `${i} x ${i} = ${i * i}`;
     results.textContent += `${newResult}\n`;
   }
-  results.textContent += "\n完了!";
+  results.textContent += "\n完了!\n\n";
 }
 
 const calculateBtn = document.querySelector("#calculate");
@@ -348,13 +348,13 @@ console.log(myFavoriteCats); // "My cats are called Pete, Biggles, Jasmine, "
 
 最終的に出力される文章はあまり整ったものではありません。
 
-```
+```plain
 My cats are called Pete, Biggles, Jasmine,
 ```
 
 最後の猫については、このように別の処理をしてくれるのが望ましいと思います。
 
-```
+```plain
 My cats are called Pete, Biggles, and Jasmine.
 ```
 
@@ -395,7 +395,7 @@ console.log(myFavoriteCats); // "My cats are called Pete, Biggles, and Jasmine."
 <p></p>
 ```
 
-現在の JavaScript では、
+そして JavaScript です。
 
 ```js
 const contacts = [
@@ -442,16 +442,16 @@ btn.addEventListener("click", () => {
 
 > **メモ:** [すべてのソースは GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/contact-search.html) で見ることができます（[動いているデモ](https://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html)もあります）。
 
-## continue で繰り返しをスキップする
+## continue で繰り返しをスキップ
 
 [continue](/ja/docs/Web/JavaScript/Reference/Statements/continue) 文は `break` と同じような動作をします。けれど、ループを完全に抜けてしまうのではなく、次の繰り返しまで飛ばします。
 それでは、今度は入力として数値を受け取り、その数以下で整数の平方である値のみを返すという例を見てみましょう。
 
-HTML は基本的に前回の例と同じで、単純なテキスト入力と、出力用の段落があります。
+HTML は基本的に前回の例と同じで、単純な数値入力と、出力用の段落があります。
 
 ```html
 <label for="number">数値を入力してください: </label>
-<input id="number" type="text" />
+<input id="number" type="number" />
 <button>整数の平方を生成</button>
 
 <p>出力:</p>
@@ -496,7 +496,7 @@ btn.addEventListener("click", () => {
 
 まず、[while](/ja/docs/Web/JavaScript/Reference/Statements/while) ループを見てみましょう。このループの構文は次のようになります。
 
-```
+```js-nolint
 初期化処理
 while (条件) {
   // 実行するコード
@@ -538,7 +538,7 @@ console.log(myFavoriteCats); // "My cats are called Pete, Biggles, and Jasmine."
 
 [do...while](/ja/docs/Web/JavaScript/Reference/Statements/do...while) ループはとてもよく似ていますが、while 構造の別な形です。
 
-```
+```js-nolint
 初期化処理
 do {
   // 実行するコード
@@ -603,7 +603,7 @@ console.log(myFavoriteCats); // "My cats are called Pete, Biggles, and Jasmine."
 
 間違えた場合は、［リセット］ボタンを使用してこの例をいつでもリセットできます。あなたが本当に立ち往生したら、［解答を表示］を押して解決策を見てください。
 
-```html hidden
+```html-nolint hidden
 <h2>ライブ出力</h2>
 <div class="output" style="height: 410px;overflow: auto;"></div>
 
@@ -754,7 +754,7 @@ textarea.onkeyup = () => {
 
 {{ EmbedLiveSample('Active_learning_Launch_countdown', '100%', 900) }}
 
-## アクティブラーニング: ゲストリストに記入する
+## アクティブラーニング: ゲストリストへの記入
 
 この演習では、配列に格納された名前のリストを、ゲストリストにしていただきます。しかし、フィルとローラは貪欲で無礼で、いつも料理を全部食べてしまうので、ゲストに入れたくありません！私たちは 2 つのリストを用意しました。1 つはゲストを認めるためのリスト、もう 1 つはゲストを拒否するためのリストです。
 
@@ -777,11 +777,11 @@ textarea.onkeyup = () => {
 
 間違えた場合は、「リセット」ボタンを使用してこの例をいつでもリセットできます。あなたが本当に立ち往生したら、"ソリューションを表示"を押して解決策を見てください。
 
-```html hidden
+```html-nolint hidden
 <h2>ライブ出力</h2>
 <div class="output" style="height: 100px;overflow: auto;">
-  <p class="admitted">Admit: </p>
-  <p class="refused">Refuse: </p>
+  <p class="admitted">Admit:</p>
+  <p class="refused">Refuse:</p>
 </div>
 
 <h2>編集可能なコード</h2>
@@ -805,7 +805,7 @@ refused.textContent = 'Refuse: ';
 
 <div class="playable-buttons">
   <input id="reset" type="button" value="リセット" />
-  <input id="solution" type="button" value="解答を表示"
+  <input id="solution" type="button" value="解答を表示" />
 </div>
 ```
 
@@ -946,7 +946,7 @@ textarea.onkeyup = () => {
 
 まずは `for...of` です。
 
-```
+```js-nolint
 for (const 項目 of 配列) {
   // 実行するコード
 }
@@ -954,7 +954,7 @@ for (const 項目 of 配列) {
 
 `for` です。
 
-```
+```js-nolint
 for (初期化処理; 条件; 最後の式) {
   // 実行するコード
 }
@@ -962,7 +962,7 @@ for (初期化処理; 条件; 最後の式) {
 
 `while` です。
 
-```
+```js-nolint
 初期化処理
 while (条件) {
   // 実行するコード
@@ -973,7 +973,7 @@ while (条件) {
 
 そして最後は `do...while` です。
 
-```
+```js-nolint
 初期化処理
 do {
   // 実行するコード
@@ -986,7 +986,7 @@ do {
 
 ## スキルテスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[Test your skills: Loops](/ja/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Loops) を見てください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: ループ](/ja/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Loops)を見てください。
 
 ## まとめ
 
@@ -999,8 +999,8 @@ do {
 
 - [ループと反復処理](/ja/docs/Web/JavaScript/Guide/Loops_and_iteration)
 - [for...of のリファレンス](/ja/docs/Web/JavaScript/Reference/Statements/for...of)
+- [for 文のリファレンス](/ja/docs/Web/JavaScript/Reference/Statements/for)
 - [while](/ja/docs/Web/JavaScript/Reference/Statements/while) と [do...while](/ja/docs/Web/JavaScript/Reference/Statements/do...while) リファレンス
 - [break](/ja/docs/Web/JavaScript/Reference/Statements/break) と [continue](/ja/docs/Web/JavaScript/Reference/Statements/continue) リファレンス
-- [What's the Best Way to Write a JavaScript For Loop?](https://www.impressivewebs.com/javascript-for-loop/) — 高度なループのベストプラクティス
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}

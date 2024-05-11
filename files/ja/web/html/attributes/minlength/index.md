@@ -2,12 +2,14 @@
 title: "HTML 属性: minlength"
 slug: Web/HTML/Attributes/minlength
 l10n:
-  sourceCommit: cfcbb39cc595bd536b107f6771bfb3f8e13bacca
+  sourceCommit: a78cecea4f3b1a7f35564a547052e163911ac491
 ---
 
 {{HTMLSidebar}}
 
-**`minlength`** 属性は、ユーザーが {{htmlelement('input')}} または {{htmlelement('textarea')}} に入力できる最小文字数を（UTF-16 コード単位で）定義します。 0 以上の整数値である必要があります。 minlength が指定されなかった場合、または無効な値が指定された場合は、入力欄には最小文字数が設定されません。この値は [maxlength](/ja/docs/Web/HTML/Attributes/maxlength) の値以下である必要があります。そうでなければどちらの条件にも合わせることができないので、この値が有効になることはありません。
+**`minlength`** 属性は、ユーザーが {{htmlelement('input')}} または {{htmlelement('textarea')}} に入力できる最小[文字列長](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/length)を（UTF-16 コード単位で）定義します。この属性は 0 以上の整数値である必要があります。
+
+長さは UTF-16 コードユニットで測定され、（[多くの文字体系では](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/length#strings_with_length_not_equal_to_the_number_of_characters)）文字数と等しくなります。 `minlength` が指定されなかった場合、または無効な値が指定された場合は、入力欄には最小文字数が設定されません。この値は [maxlength](/ja/docs/Web/HTML/Attributes/maxlength) の値以下である必要があります。そうでなければどちらの条件にも合わせることができないので、この値が有効になることはありません。
 
 フィールドのテキスト値の長さが minlength を UTF-16 コード単位の長さで下回った場合、入力欄は制約検証に失敗し、 {{domxref('validityState.tooShort')}} が `true` を返します。制約検証は、ユーザーが値を変更した場合にのみ適用されます。送信に失敗すると、ブラウザーによっては必要な最小文字列と現在の長さを示してエラーメッセージを表示します。
 

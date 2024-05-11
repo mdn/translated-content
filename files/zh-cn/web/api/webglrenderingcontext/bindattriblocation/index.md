@@ -40,7 +40,7 @@ gl.bindAttribLocation(program, colorLocation, 'vColor');
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{domxref("WebGLRenderingContext.getActiveAttrib()")}}
 - {{domxref("WebGLRenderingContext.getAttribLocation()")}}

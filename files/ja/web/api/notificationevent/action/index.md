@@ -1,15 +1,18 @@
 ---
-title: NotificationEvent.action
+title: "NotificationEvent: action プロパティ"
+short-title: action
 slug: Web/API/NotificationEvent/action
+l10n:
+  sourceCommit: 212e53bbdaf88af59a57ec1f335bde5e828b68c5
 ---
 
 {{APIRef("Web Notifications")}}
 
-ユーザーがクリックした通知ボタンの文字列 ID を返します。ユーザーがアクションボタン以外の場所で通知をクリックした場合、または通知にボタンがない場合、この値は空の文字列を返します。通知 ID は、アクション配列属性を介した通知の作成中に設定され、通知が置き換えられない限り変更することはできません。
+**`action`** は {{domxref("NotificationEvent")}} インターフェイスの読み取り専用プロパティで、ユーザーがクリックした通知ボタンの文字列 ID を返します。ユーザーがアクションボタン以外の場所で通知をクリックした場合、または通知にボタンがない場合、この値は空の文字列を返します。通知 ID は、アクション配列属性を介した通知の作成中に設定され、通知が置き換えられない限り変更することはできません。
 
 ## 返値
 
-{{domxref("DOMString")}} オブジェクト。
+文字列です。
 
 ## 例
 
@@ -20,7 +23,7 @@ self.registration.showNotification("New articles available", {
 
 self.addEventListener(
   "notificationclick",
-  function (event) {
+  (event) => {
     event.notification.close();
     if (event.action === "get") {
       synchronizeReader();

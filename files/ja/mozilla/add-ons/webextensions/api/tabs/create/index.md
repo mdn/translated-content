@@ -17,7 +17,7 @@ var creating = browser.tabs.create(
 );
 ```
 
-### パラメータ
+### パラメーター
 
 - `createProperties`
 
@@ -54,7 +54,7 @@ var creating = browser.tabs.create(
         - 特権 about: URL (例、 `about:config`, `about:addons`, `about:debugging`)。ただし非特権 URL (`about:blank`) は使用できます。
         - 新しいタブ (`about:newtab`) は URL を指定しなければ開かれます。
 
-        拡張機能内のファイルをロードするためには manifest.json ファイルからの絶対パスで指定します。（例: '/path/to/my-page.html'）。もし'/'を省略すると相対パスとして解釈されます。またブラウザによっては、また異なった絶対パスとして解釈されます。
+        拡張機能内のファイルをロードするためには manifest.json ファイルからの絶対パスで指定します。（例: '/path/to/my-page.html'）。もし'/'を省略すると相対パスとして解釈されます。またブラウザーによっては、また異なった絶対パスとして解釈されます。
 
     - `windowId`{{optional_inline}}
       - : `整数値`。新しくタブを作るウィンドウを指定します。デフォルトは現在開いているウィンドウ。
@@ -63,7 +63,7 @@ var creating = browser.tabs.create(
 
 新しく作ったタブに関する{{WebExtAPIRef('tabs.Tab')}}オブジェクトを引数に持つ[`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise)が返されます。URL が特権 URL であるなどして、タブが作られなかった場合は promise はエラーメッセージとともに reject されます。
 
-## ブラウザー互換状況
+## ブラウザーの互換性
 
 {{Compat}}
 

@@ -9,4 +9,4 @@ slug: Glossary/Cache
 
 ## 参见
 
-- 维基百科上的[Web cache](https://zh.wikipedia.org/wiki/Web_cache)
+- 维基百科上的 [Web 缓存](https://zh.wikipedia.org/wiki/Web缓存)

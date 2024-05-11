@@ -94,7 +94,7 @@ loop1: for (i = 0; i < 3; i++) {
 
 ```js
 // 1 から 100 までの数
-const items = Array.from({ length: 100 }, (_, i) => i + 1));
+const items = Array.from({ length: 100 }, (_, i) => i + 1);
 const tests = [
   { pass: (item) => item % 2 === 0 },
   { pass: (item) => item % 3 === 0 },
@@ -117,7 +117,7 @@ itemIteration: for (const item of items) {
 
 ```js
 // 1 から 100 までの数
-const items = Array.from({ length: 100 }, (_, i) => i + 1));
+const items = Array.from({ length: 100 }, (_, i) => i + 1);
 const tests = [
   { pass: (item) => item % 2 === 0 },
   { pass: (item) => item % 3 === 0 },
@@ -145,7 +145,7 @@ for (const item of items) {
 
 ```js
 // 1 から 100 までの数
-const items = Array.from({ length: 100 }, (_, i) => i + 1));
+const items = Array.from({ length: 100 }, (_, i) => i + 1);
 const tests = [
   { pass: (item) => item % 2 === 0 },
   { pass: (item) => item % 3 === 0 },
@@ -167,7 +167,7 @@ itemIteration: for (const item of items) {
 
 ```js
 // 1 から 100 までの数
-const items = Array.from({ length: 100 }, (_, i) => i + 1));
+const items = Array.from({ length: 100 }, (_, i) => i + 1);
 const tests = [
   { pass: (item) => item % 2 === 0 },
   { pass: (item) => item % 3 === 0 },

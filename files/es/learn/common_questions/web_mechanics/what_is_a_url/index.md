@@ -11,14 +11,14 @@ Este artículo habla sobre las Uniform Resource Locators (URLs), explicando qué
       <th scope="row">Prerequisitos:</th>
       <td>
         Primero necesitas saber
-        <a href="/es/docs/Learn/How_the_Internet_works"
-          >Como funciona Internet</a
+        <a href="/es/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work"
+          >Cómo funciona Internet</a
         >,
-        <a href="/es/docs/Learn/What_is_a_Web_server"
+        <a href="/es/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server"
           >qué es un servidor Web</a
         >
         y
-        <a href="/es/docs/Learn/Understanding_links_on_the_web"
+        <a href="/es/docs/Learn/Common_questions/Web_mechanics/What_are_hyperlinks"
           >los conceptos detrás de los enlaces en la web</a
         >.
       </td>
@@ -34,11 +34,11 @@ Este artículo habla sobre las Uniform Resource Locators (URLs), explicando qué
 
 Junto con el {{Glossary("Hypertext", "Hipertexto")}} y {{Glossary("HTTP")}}, las **_URL_** son uno de los conceptos claves de la Web. Es el mecanismo usado por los {{Glossary("Browser","navegadores")}} para obtener cualquier recurso publicado en la web.
 
-**URL** significa _Uniform Resource Locator (Localizador de Recursos Uniforme)_. Una URL no es más que una direccion que es dada a un recurso único en la Web. En teoria, cada URL válida apunta a un único recurso. Dichos recursos pueden ser páginas HTML, documentos CSS, imagenes, etc. En la practica, hay algunas excepciones, siendo la más común una URL apuntando a un recurso que ya no existe o que ha sido movido. Como el recurso representado por la URL y la URL en si son manejadas por el servidor Web, depende del dueño del servidor web manejar ese recurso y su URL asociada adecuadamente.
+**URL** significa _Uniform Resource Locator (Localizador de Recursos Uniforme)_. Una URL no es más que una dirección que es dada a un recurso único en la Web. En teoria, cada URL válida apunta a un único recurso. Dichos recursos pueden ser páginas HTML, documentos CSS, imagenes, etc. En la practica, hay algunas excepciones, siendo la más común una URL apuntando a un recurso que ya no existe o que ha sido movido. Como el recurso representado por la URL y la URL en si son manejadas por el servidor Web, depende del dueño del servidor web manejar ese recurso y su URL asociada adecuadamente.
 
-## Active Learning
+## Aprendizaje activo
 
-_There is no active learning available yet. [Please, consider contributing](/es/docs/MDN/Getting_started)._
+_Por el momento no hay aprendizaje activo disponible. [Por favor, considere contribuir](/es/docs/MDN/Community/Contributing/Getting_started)._
 
 ## Profundizando
 
@@ -63,7 +63,7 @@ http://www.example.com:80/path/to/myfile.html?key1=value1&key2=value2#SomewhereI
 - ![Protocol](mdn-url-protocol@x2_update.png)
   - : `http` es el protocolo. La primera parte de la URL indica qué protocolo debe usar el navegador. Un protocolo es un método establecido para intercambiar o transferir datos alrededor de una red informática. Por lo general, para sitios web es el protocolo HTTP o su versión segura, HTTPS. La Web requiere uno de estos dos, pero los navegadores también saben cómo manejar otros protocolos como mailto: (para abrir un cliente de correo) o ftp: para manejar la transferencia de archivos, así que no se sorprenda si ve tales protocolos.
 - ![Domaine Name](mdn-url-domain@x2.png)
-  - : `www.example.com` es el nombre de dominio. Indica qué servidor web se solicita. Alternativamente, es posible usar directamente un {{Glossary("dirección IP")}}, pero debido a que es menos conveniente, no se usa con frecuencia en la Web.
+  - : `www.example.com` es el nombre de dominio. Indica qué servidor web se solicita. Alternativamente, es posible usar directamente una {{Glossary("IP Address", "dirección IP")}}, pero debido a que es menos conveniente, no se usa con frecuencia en la Web.
 - ![Port](mdn-url-port@x2.png)
   - : `:80` es el puerto. Indica la "puerta" técnica utilizada para acceder a los recursos en el servidor web. Por lo general, se omite si el servidor web utiliza los puertos estándar del protocolo HTTP (80 para HTTP y 443 para HTTPS) para otorgar acceso a sus recursos. De lo contrario es obligatorio.
 - ![Path to the file](mdn-url-path@x2.png)
@@ -73,7 +73,7 @@ http://www.example.com:80/path/to/myfile.html?key1=value1&key2=value2#SomewhereI
 - ![Anchor](mdn-url-anchor@x2.png)
   - : `#SomewhereInTheDocument` es un ancla para otra parte del recurso en sí. Un ancla representa una especie de "marcador" dentro del recurso, dando al navegador las instrucciones para mostrar el contenido ubicado en ese lugar "marcado". En un documento HTML, por ejemplo, el navegador se desplazará hasta el punto donde se define el ancla; en un video o documento de audio, el navegador intentará ir a la hora que representa el ancla. Vale la pena señalar que la parte después del #, también conocido como el identificador de fragmento, nunca se envía al servidor con la solicitud.
 
-> **Nota:** Existen [algunas partes extras y reglas extras](http://en.wikipedia.org/wiki/Uniform_Resource_Locator") con respecto a las URL, pero no son relevantes para usuarios habituales o desarrolladores web. No se preocupe por esto, no necesita conocerlos para construir y usar URL completamente funcionales.
+> **Nota:** Existen [algunas partes extras y reglas extras](https://es.wikipedia.org/wiki/Localizador_de_recursos_uniforme) con respecto a las URL, pero no son relevantes para usuarios habituales o desarrolladores web. No se preocupe por esto, no necesita conocerlos para construir y usar URL completamente funcionales.
 
 Puede pensar en una URL como una dirección de correo postal normal: el protocolo representa el servicio postal que desea utilizar, el nombre de dominio es la ciudad o el pueblo y el puerto es como el código postal; la ruta representa el edificio donde se debe entregar su correo; los parámetros representan información adicional como el número de apartamento en el edificio; y, finalmente, el ancla representa a la persona real a la que ha dirigido su correo.
 
@@ -81,7 +81,7 @@ Puede pensar en una URL como una dirección de correo postal normal: el protocol
 
 Se puede escribir cualquier URL dentro de la barra de direcciones del navegador para acceder al recurso que se encuentra detrás. ¡Pero esto es sólo la punta del iceberg!
 
-El lenguaje {{Glossary("HTML")}} — [que se discutirá más adelante](/es/docs/Learn/HTML/HTML_tags) — hace un uso extensivo de las URL:
+El lenguaje {{Glossary("HTML")}} — [que se discutirá más adelante](/es/docs/Learn/HTML/Introduction_to_HTML) — hace un uso extensivo de las URL:
 
 - para crear enlaces a otros documentos con el elemento {{HTMLElement("a")}};
 - para vincular un documento con sus recursos relacionados a través de varios elementos como {{HTMLElement("link")}} o {{HTMLElement("script")}};
@@ -129,7 +129,7 @@ Veamos algunos ejemplos para aclarar esto.
           documento HTML. El navegador utilizará el mismo protocolo y el mismo
           nombre de dominio que el utilizado para cargar el documento que aloja
           esa URL.
-          <strong>Note:</strong>
+          <strong>Nota:</strong>
           <em
             >no es posible omitir el nombre de dominio sin omitir también el
             protocolo.</em
@@ -189,4 +189,4 @@ La semántica lingüística es, por supuesto, irrelevante para las computadoras.
 
 ## Próximos pasos
 
-- [Comprendiendo nombres de dominio](/es/docs/Learn/Understanding_domain_names)
+- [Comprendiendo nombres de dominio](/es/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)

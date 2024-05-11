@@ -24,7 +24,7 @@ slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 
 请先下载 [index.html](https://github.com/roy-tian/learning-area/blob/master/javascript/oojs/bouncing-balls/index.html)、[style.css](https://github.com/roy-tian/learning-area/blob/master/javascript/oojs/bouncing-balls/style.css) 和 [main.js](https://github.com/roy-tian/learning-area/blob/master/javascript/oojs/bouncing-balls/main.js) 三个文件。
 
-> **备注：** 也可以使用 [JSBin](http://jsbin.com/) 或 [Glitch](https://glitch.com/) 这样的网站来进行测验。你可以选择其中一个将 HTML，CSS 和 JavaScript 粘贴过去。如果你的版本没有单独的 JavaScript / CSS 板块，可以把它们嵌入 HTML 页面内的 `<script>`/`<style>` 元素。
+> **备注：** 也可以使用 [JSBin](https://jsbin.com/) 或 [Glitch](https://glitch.com/) 这样的网站来进行测验。你可以选择其中一个将 HTML，CSS 和 JavaScript 粘贴过去。如果你的版本没有单独的 JavaScript / CSS 板块，可以把它们嵌入 HTML 页面内的 `<script>`/`<style>` 元素。
 
 ## 项目简介
 

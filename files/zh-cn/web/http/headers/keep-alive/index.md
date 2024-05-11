@@ -53,7 +53,7 @@ Server: Apache
 
 {{Compat}}
 
-## 相关内容
+## 参见
 
 - {{HTTPHeader("Connection")}}
 - [Connection management in HTTP/1.x](/zh-CN/docs/Web/HTTP/Connection_management_in_HTTP_1.x)

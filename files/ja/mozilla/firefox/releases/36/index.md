@@ -35,7 +35,7 @@ Firefox 36 は、米国時間 2015 年 2 月 24 日にリリースされまし�
 - {{cssxref("display")}} プロパティの値 `contents` を実験的に実装しました。デフォルトで無効に設定しています ([Firefox バグ 907396](https://bugzil.la/907396))。
 - [Quirks モード](/ja/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)で、[`:active` および `:hover` の Quirk](/ja/docs/Mozilla_Quirks_Mode_Behavior#Miscellaneous_.26_Style) の適用対象を削減しました。リンクにのみ、および要素内に擬似要素や他の擬似クラスがない場合や擬似クラスの要素の一部ではない場合に限り適用されます ([Firefox バグ 783213](https://bugzil.la/783213))。
 - {{cssxref("isolation")}} プロパティを実装しました ([Firefox バグ 1077872](https://bugzil.la/1077872))。
-- CSS の {{cssxref("&lt;gradient&gt;")}} が乗算済み色に適用されるようになり、仕様書や他ブラウザと合致しました。また、途中に予期しない灰色が現れないようになりました ([Firefox バグ 591600](https://bugzil.la/591600))。
+- CSS の {{cssxref("&lt;gradient&gt;")}} が乗算済み色に適用されるようになり、仕様書や他ブラウザーと合致しました。また、途中に予期しない灰色が現れないようになりました ([Firefox バグ 591600](https://bugzil.la/591600))。
 - {{cssxref("&lt;gradient&gt;")}} に、補間法のヒントを与える構文を追加しました ([Firefox バグ 1074056](https://bugzil.la/1074056))。
 - {{cssxref("scroll-behavior")}} プロパティを実装しました ([Firefox バグ 1010538](https://bugzil.la/1010538))。
 
@@ -68,7 +68,7 @@ Firefox 36 は、米国時間 2015 年 2 月 24 日にリリースされまし�
 - ES7 の {{jsxref("Array.prototype.includes")}} メソッドを実装しました。ただし、現在は Nightly ビルドのみで有効です ([Firefox バグ 1069063](https://bugzil.la/1069063))。
 - [`let`](/ja/docs/Web/JavaScript/Reference/Statements/let) および [`const`](/ja/docs/Web/JavaScript/Reference/Statements/const) とともに [`delete`](/ja/docs/Web/JavaScript/Reference/Operators/delete) 演算子を使用すると、「[一時的なデッドゾーン](/ja/docs/Web/JavaScript/Reference/Statements/let#一時的なデッドゾーン_tdz)」が発生するようになりました ([Firefox バグ 1074571](https://bugzil.la/1074571))。
 - 非標準の [`let` ブロックおよび `let` 式](/ja/docs/Web/JavaScript/Reference/Statements/let#non-standard_let_extensions)は非推奨になり、コンソールに警告が表示されます。将来削除する予定であるため、今後は使用しないようにしてください。
-- [WeakMap](/ja/docs/Web/JavaScript/Reference/Global_Objects/WeakMap) コンストラクタで、省略可能な引数 iterable を扱うようになりました ([Firefox バグ 1092537](https://bugzil.la/1092537))。
+- [WeakMap](/ja/docs/Web/JavaScript/Reference/Global_Objects/WeakMap) コンストラクターで、省略可能な引数 iterable を扱うようになりました ([Firefox バグ 1092537](https://bugzil.la/1092537))。
 
 ### インターフェイス/API/DOM
 
@@ -109,7 +109,7 @@ _変更なし。_
 
 ## セキュリティ
 
-- RC4 は安全でないとみなすようになり、すべての UI インジケータがそのように対応します。また SSLv3 は Firefox 34 からデフォルトで無効になっていますが、何が起きているかをユーザが理解しやすくなるように UI を変更しました ([Firefox バグ 1093595](https://bugzil.la/1093595))。
+- RC4 は安全でないとみなすようになり、すべての UI インジケータがそのように対応します。また SSLv3 は Firefox 34 からデフォルトで無効になっていますが、何が起きているかをユーザーが理解しやすくなるように UI を変更しました ([Firefox バグ 1093595](https://bugzil.la/1093595))。
 - TLS の初期ハンドシェイクで RC4 を提示しないようになりました ([Firefox バグ 1088915](https://bugzil.la/1088915))。
 - CSP 1.1 の [`form-action`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy#form-action) ディレクティブをサポートしました ([Firefox バグ 529697](https://bugzil.la/529697))。
 - Firefox のオプションで、[Do not track](/ja/docs/Web/Security/Do_not_track_field_guide) の設定ウィジェットを有効/無効の切り替えに戻しました ([Firefox バグ 1071747](https://bugzil.la/1071747))。

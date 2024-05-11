@@ -23,7 +23,7 @@ l10n:
 
 ### リクエスト時間の計測
 
-`requestStart` と {{domxref("PerformanceResourceTiming.responseStart", "responseStart")}} プロパティを使用して、、リクエストにかかる時間を測定することができます。
+`requestStart` と {{domxref("PerformanceResourceTiming.responseStart", "responseStart")}} プロパティを使用して、リクエストにかかる時間を測定することができます。
 
 ```js
 const request = entry.responseStart - entry.requestStart;

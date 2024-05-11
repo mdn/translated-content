@@ -33,7 +33,7 @@ console.log(regex.unicode); // true
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{jsxref("RegExp.lastIndex")}}
 - {{jsxref("RegExp.prototype.global")}}

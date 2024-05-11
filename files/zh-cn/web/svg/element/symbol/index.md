@@ -60,7 +60,7 @@ slug: Web/SVG/Element/symbol
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{ SVGElement("marker") }}
 - {{ SVGElement("pattern") }}

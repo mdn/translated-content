@@ -41,7 +41,7 @@ RegExp["$+"]; // "hi"
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{non-standard_inline}} {{jsxref("RegExp.input", "RegExp.input ($_)")}}
 - {{non-standard_inline}} {{jsxref("RegExp.lastMatch", "RegExp.lastMatch ($&amp;)")}}

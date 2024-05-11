@@ -29,7 +29,7 @@ Not part of specification.
 
 {{Compat}}
 
-### See also
+## Смотрите также
 
 - {{ domxref("window.mozRequestAnimationFrame()") }}
 - {{ domxref("window.onmozbeforepaint") }}
