@@ -17,10 +17,10 @@ Reason: CORS header 'Access-Control-Allow-Origin' missing
 
 サーバーを自分で制御できる場合は、要求しているサイトのオリジンを `Access-Control-Allow-Origin` ヘッダーの値に追加して、アクセスが許可されているドメインの一覧に追加してください。
 
-例えば、 `https://amazing.site` のサイトが CORS を使用したリソースにアクセスできるよう許可するためには、ヘッダーを以下のようにしてください。
+例えば、 `https://example.com` のサイトが CORS を使用したリソースにアクセスできるよう許可するためには、ヘッダーを以下のようにしてください。
 
 ```
-Access-Control-Allow-Origin: https://amazing.site
+Access-Control-Allow-Origin: https://example.com
 ```
 
 `*` を使用することで、あらゆるサイトにアクセスを許可するようサイトを構成することもできます。これは公開 API にのみ使用してください。非公開の API には `*` を使用するべきではなく、代わりに具体的なドメインやドメインの一覧を設定してください。加えて、ワイルドカードは [`crossorigin`](/ja/docs/Web/HTML/Attributes/crossorigin) 属性が `anonymous` に設定された要求にのみ動作し、リクエストでは Cookie のような資格情報の送信を抑制します。
