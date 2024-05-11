@@ -59,15 +59,16 @@ Voici un tableau de quelques éditeurs de texte connus :
   </thead>
   <tbody>
     <tr>
-      <td><a href="https://atom.io/">Atom</a></td>
-      <td>MIT/BSD</td>
+      <td><a href="https://bluefish.openoffice.nl">Bluefish</a></td>
+      <td>GPL 3</td>
       <td style="text-align: center">Gratuit</td>
       <td>Windows, Mac, Linux</td>
-      <td><a href="https://discuss.atom.io/categories">Forum</a></td>
-      <td><a href="https://atom.io/docs/latest/">Manuel en ligne</a></td>
-      <td style="text-align: center">
-        <a href="https://atom.io/packages">Oui</a>
+      <td>
+        <a href="https://bfwiki.tellefsen.net/index.php/Mailinglists">liste de diffusion</a>,
+        <a href="https://bfwiki.tellefsen.net/index.php/Main_Page">Wiki</a>
       </td>
+      <td><a href="https://bluefish.openoffice.nl/manual/">Manuel en ligne</a></td>
+      <td>Oui</td>
     </tr>
     <tr>
       <td><a href="http://brackets.io/">Brackets</a></td>
