@@ -1,6 +1,8 @@
 ---
 title: 디바이스 방향 감지
 slug: Web/API/Device_orientation_events/Detecting_device_orientation
+l10n:
+  sourceCommit: 49ed411c875121fd7585c379a6549562ceb980a9
 ---
 
 {{DefaultAPISidebar("Device Orientation Events")}}{{securecontext_header}}
@@ -98,14 +100,14 @@ const maxX = garden.clientWidth - ball.clientWidth;
 const maxY = garden.clientHeight - ball.clientHeight;
 
 function handleOrientation(event) {
-  let x = event.beta; // In degree in the range [-180,180)
-  let y = event.gamma; // In degree in the range [-90,90)
+  let x = event.beta; // 각도의 범위는 [-180,180)
+  let y = event.gamma; // 각도의 범위는 [-90,90)
 
   output.textContent = `beta: ${x}\n`;
   output.textContent += `gamma: ${y}\n`;
 
-  // Because we don't want to have the device upside down
-  // We constrain the x value to the range [-90,90]
+  // 장치를 반대로 인지하지 않게 하기 위해
+  // X 값을 다음과 같이 제한합니다. [-90,90]
   if (x > 90) {
     x = 90;
   }
@@ -113,15 +115,15 @@ function handleOrientation(event) {
     x = -90;
   }
 
-  // To make computation easier we shift the range of
-  // x and y to [0,180]
+  // 계산을 편하게 하기 위해 다음과 같이 범위를 조정합니다.
+  // x와 y는 [0,180]
   x += 90;
   y += 90;
 
-  // 10 is half the size of the ball
-  // It centers the positioning point to the center of the ball
-  ball.style.left = `${(maxY * y) / 180 - 10}px`; // rotating device around the y axis moves the ball horizontally
-  ball.style.top = `${(maxX * x) / 180 - 10}px`; // rotating device around the x axis moves the ball vertically
+  // 10은 공의 절반 크기입니다.
+  // 공의 지점을 중앙으로 이동하기 위합입니다.
+  ball.style.left = `${(maxY * y) / 180 - 10}px`; // y축을 중심으로 회전하면 공은 수평 방향으로 이동합니다.
+  ball.style.top = `${(maxX * x) / 180 - 10}px`; // x축을 중심으로 회전하면 공은 수직 방향으로 이동합니다.
 }
 
 window.addEventListener("deviceorientation", handleOrientation);
@@ -172,15 +174,15 @@ window.addEventListener("devicemotion", handleMotion, true);
 
 마지막으로, {{domxref("DeviceMotionEvent.interval","interval")}} 는 디바이스에서 데이터를 가져오는 간격을 나타냅니다.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 
-## See also
+## 같이 보기
 
 - {{domxref("DeviceOrientationEvent")}}
 - {{domxref("DeviceMotionEvent")}}
