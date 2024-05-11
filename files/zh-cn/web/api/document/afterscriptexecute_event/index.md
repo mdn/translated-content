@@ -21,7 +21,7 @@ onafterscriptexecute = (event) => {};
 
 ## 事件类型
 
-通用 {{domxref("Event")}}。
+通用的 {{domxref("Event")}}。
 
 ## 示例
 
