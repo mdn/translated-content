@@ -2,7 +2,7 @@
 title: 量词
 slug: Web/JavaScript/Guide/Regular_expressions/Quantifiers
 l10n:
-  sourceCommit: c6f0f106b9083984dbf597678def6561729bb459
+  sourceCommit: 95a838d5d8e0e40aaa15897d23de476efade14b1
 ---
 
 {{jsSidebar("JavaScript Guide")}}
@@ -65,7 +65,7 @@ l10n:
       </td>
       <td>
         <p>
-          其中“n”是一个正整数，与前一项“x”的 n 次匹配。例如，<code>/a{2}/</code
+          其中“n”是一个非负整数，与前一项“x”至少匹配“n”次。例如，<code>/a{2}/</code
           > 不匹配“candy”中的“a”，但它匹配“caandy”中的所有“a”，以及“caaandy”中的前两个“a”。
         </p>
       </td>
@@ -76,7 +76,7 @@ l10n:
       </td>
       <td>
         <p>
-          其中“n”是一个正整数，与前一项“x”至少匹配“n”次。例如，<code>/a{2，}/</code> 不匹配“candy”中的“a”，但匹配“caandy”和“caaaaaaandy”中的所有
+          其中“n”是一个非负整数，与前一项“x”至少匹配“n”次。例如，<code>/a{2，}/</code> 不匹配“candy”中的“a”，但匹配“caandy”和“caaaaaaandy”中的所有
           a。
         </p>
       </td>
@@ -87,7 +87,7 @@ l10n:
       </td>
       <td>
         <p>
-          其中“n”是非负整数，“m”是一个正整数，并且 <code><em>m</em> > <em>n</em></code>。与项“x”至少匹配“n”次，至多匹配“m”次。例如，<code>/a{1,3}/</code> 不匹配“cndy”中的任何内容，而匹配“candy”中的“a”、“caandy”中的两个“a”以及“caaaaaandy”中的前三个“a”。请注意，在匹配“caaaaaandy”时，匹配的是“aaa”，尽管原始字符串中有更多的“a”。
+          其中“n”和“m”为非负整数，并且 <code><em>m</em> >= <em>n</em></code>。与项“x”至少匹配“n”次，至多匹配“m”次。例如，<code>/a{1,3}/</code> 不匹配“cndy”中的任何内容，而匹配“candy”中的“a”、“caandy”中的两个“a”以及“caaaaaandy”中的前三个“a”。请注意，在匹配“caaaaaandy”时，匹配的是“aaa”，尽管原始字符串中有更多的“a”。
         </p>
       </td>
     </tr>
