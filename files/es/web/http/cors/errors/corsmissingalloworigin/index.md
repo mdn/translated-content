@@ -17,10 +17,10 @@ A la respuesta de la solicitud {{Glossary("CORS")}} le falta la requerida cabece
 
 Si el servidor está bajo su control, agregue el origen del sitio solicitado al conjunto de dominios con acceso permitido agregándolo al valor de la cabecera `Access-Control-Allow-Origin`.
 
-Por ejemplo, para permitir a un sitio como `https://amazing.site` acceder al recurso usando CORS, la cabecera deberia ser:
+Por ejemplo, para permitir a un sitio como `https://example.com` acceder al recurso usando CORS, la cabecera deberia ser:
 
 ```
-Access-Control-Allow-Origin: https://amazing.site
+Access-Control-Allow-Origin: https://example.com
 ```
 
 También puede configurar un sitio para permitirle el acceso desde cualquier otro sitio usando el comodín `"*"`. Solamente debería usar esto para APIs públicas. Las APIs privadas nunca deberían usar este comodín, en lugar de eso, se debería especificar un dominio o conjunto de dominios. Adicionalmente, el comodín solamente funciona para consultas con el atributo [`crossorigin`](/es/docs/Web/HTML/Global_attributes#crossorigin) establecido en `"anonymous"`.
