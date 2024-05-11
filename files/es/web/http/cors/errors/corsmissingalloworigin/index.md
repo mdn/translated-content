@@ -19,13 +19,13 @@ Si el servidor está bajo su control, agregue el origen del sitio solicitado al 
 
 Por ejemplo, para permitir a un sitio como `https://example.com` acceder al recurso usando CORS, la cabecera deberia ser:
 
-```
+```http
 Access-Control-Allow-Origin: https://example.com
 ```
 
 También puede configurar un sitio para permitirle el acceso desde cualquier otro sitio usando el comodín `"*"`. Solamente debería usar esto para APIs públicas. Las APIs privadas nunca deberían usar este comodín, en lugar de eso, se debería especificar un dominio o conjunto de dominios. Adicionalmente, el comodín solamente funciona para consultas con el atributo [`crossorigin`](/es/docs/Web/HTML/Global_attributes#crossorigin) establecido en `"anonymous"`.
 
-```
+```http
 Access-Control-Allow-Origin: *
 ```
 
