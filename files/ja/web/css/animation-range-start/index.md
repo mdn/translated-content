@@ -2,7 +2,7 @@
 title: animation-range-start
 slug: Web/CSS/animation-range-start
 l10n:
-  sourceCommit: 2adfb8760ac42c80966080e2e84211b14e43b589
+  sourceCommit: 34bc6ac7c5d03e5891bf94b0d4ebeccb0e7a29e5
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
