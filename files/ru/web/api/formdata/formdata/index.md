@@ -69,7 +69,7 @@ formData.has(name);
 formData.set(name, value, filename);
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

@@ -41,7 +41,7 @@ l10n:
 
 ## Примеры
 
-Ссылки на `CSSRule` можно получить, посмотрев список `cssRules` в {{domxref("CSSStyleSheet")}}.
+Ссылки на `CSSRule` можно получить из списка `cssRules` в {{domxref("CSSStyleSheet")}}.
 
 ```js
 let myRules = document.styleSheets[0].cssRules; // Вернёт CSSRuleList

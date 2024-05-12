@@ -35,7 +35,7 @@ window.addEventListener("vrdisplaypresentchange", function (e) {
 });
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
