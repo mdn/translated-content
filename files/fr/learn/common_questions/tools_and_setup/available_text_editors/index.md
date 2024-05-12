@@ -191,12 +191,12 @@ Voici un tableau de quelques éditeurs de texte connus :
       <td>Windows, Mac, Linux</td>
       <td><a href="http://forum.komodoide.com/" rel="external">Forum</a></td>
       <td>
-        <a href="http://docs.activestate.com/komodo/8.5/" rel="external"
+        <a href="https://docs.activestate.com/komodo" rel="external"
           >Manuel en ligne</a
         >
       </td>
       <td style="text-align: center">
-        <a href="http://komodoide.com/resources/addons/">Oui</a>
+        <a href="https://docs.activestate.com/komodo/12/manual/extensions.html">Oui</a>
       </td>
     </tr>
     <tr>
