@@ -7,7 +7,7 @@ l10n:
 
 {{ApiRef("DOM")}}
 
-{{domxref("Document")}} 接口的 **`doctype`** 只读属性表示与当前文档关联的{{glossary("Doctype", "文档类型声明 (DTD)")}}的 {{domxref("DocumentType")}} 对象。
+{{domxref("Document")}} 接口的 **`doctype`** 只读属性表示与当前文档关联的{{glossary("Doctype", "文档类型声明（DTD）")}}的 {{domxref("DocumentType")}} 对象。
 
 ## 值
 
