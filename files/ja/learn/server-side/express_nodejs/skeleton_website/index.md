@@ -11,7 +11,7 @@ slug: Learn/Server-side/Express_Nodejs/skeleton_website
 
 | 前提条件: | [Node 開発環境を設定します](/ja/docs/Learn/Server-side/Express_Nodejs/development_environment)。Express チュートリアルを確認してください。 |
 | --------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| 目標:     | Express Application Generator を使用して独自の新しいウェブサイトプロジェクトを開始できるようにする。                                        |
+| 目標:     | Express Application Generator を使用して独自の新しいウェブサイトプロジェクトを開始できるようにする。                                       |
 
 ## 概要
 
