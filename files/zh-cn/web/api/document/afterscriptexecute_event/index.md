@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef}}{{non-standard_header}}
 
-`afterscriptexecute` 事件会在静态 {{HTMLElement("script")}} 元素完成脚本执行时触发 。如果元素是动态添加的（例如使用 {{domxref("Node.appendChild()", "appendChild()")}}），则不会触发此事件。
+`afterscriptexecute` 事件会在静态 {{HTMLElement("script")}} 元素完成脚本执行时触发。如果元素是动态添加的（例如使用 {{domxref("Node.appendChild()", "appendChild()")}}），则不会触发此事件。
 
 ## 语法
 
