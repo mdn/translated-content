@@ -1,5 +1,5 @@
 ---
-title: "アクセシビリティ： より安全に閲覧するためにユーザーができること"
+title: アクセシビリティ： より安全に閲覧するためにユーザーができること
 slug: Web/Accessibility/Accessibility:_What_users_can_to_to_browse_safely
 l10n:
   sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
