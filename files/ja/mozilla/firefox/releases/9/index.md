@@ -36,7 +36,7 @@ Firefox 9 は Windows 向けに 2011 年 12 月 20 日にリリースされま�
 - DOM Level 3 [Composition イベント](/ja/docs/DOM/CompositionEvent) がサポートされました。
 - [`Document.scripts`](/ja/docs/Web/API/Document/scripts) 属性が実装されました。このメソッドはドキュメントのすべての [`<script>`](/ja/docs/Web/HTML/Element/script) 要素の [`HTMLCollection`](/ja/docs/Web/API/HTMLCollection) を返します。
 - [`Document.queryCommandSupported()`](/ja/docs/Web/API/Document/queryCommandSupported) メソッドが実装されました。
-- 標準 IDL インターフェイスとして Event ハンドラが実装されました。多くのケースで、これはコンテンツに影響を及ぼさないはずですが、[例外が存在します。](/ja/docs/DOM/DOM_event_handlers#Event_handler_changes_in_Firefox_9)
+- 標準 IDL インターフェイスとして Event ハンドラーが実装されました。多くのケースで、これはコンテンツに影響を及ぼさないはずですが、[例外が存在します。](/ja/docs/DOM/DOM_event_handlers#Event_handler_changes_in_Firefox_9)
 - 新しいレスポンスタイプ、 "moz-json" が XMLHttpRequest に追加されました。 そのタイプを用いると、 XMLHttpRequest に自動的に [JSON](/ja/docs/JSON) 文字列をパースさせられます。つまり、このタイプをリクエストしたときはパースされた JSON 文字列が返るので、`response` プロパティの値がパース結果の JavaScript オブジェクトになります。
 - [XMLHttpRequest の progress イベント](/ja/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress) が受け取ったデータの各チャンクに対して確実に送信されるようになりました。つまり、以前のバージョンでは受け取ったデータの最後のチャンクが progeress イベントを発生させない可能性がありました。データの最後のチャンクを受け取ったかを判定するために load イベントも監視する必要はもう無くなり、progress イベントだけで進捗を追えるようになります。
 - 過去に、`null` のリスナーを指定した [`addEventListener()`](/ja/docs/DOM/element.addEventListener) の呼び出しは例外を投げていましたが、エラーを出すことなく、何の影響も及ぼさずに処理を戻すようになりました。
@@ -105,9 +105,9 @@ See [Updating add-ons for Firefox 9](/ja/docs/Firefox/Updating_add-ons_for_Firef
 - The [`nsIAppStartup`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAppStartup) interface has a new `interrupted` attribute, which lets you know if the startup process was interrupted at any point by an interactive prompt. This can be helpful, for example, when timing startups during performance evaluation, to be able to drop numbers from sessions that were interrupted.
 - The [`nsIEditorSpellCheck`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIEditorSpellCheck) interface has been revised to support per-site selection of spell checker dictionaries.
 
-### IDL パーサ
+### IDL パーサー
 
-IDL パーサから、これまで完全に実装されたことのなかったユニークポインタの概念が削除されました。
+IDL パーサーから、これまで完全に実装されたことのなかったユニークポインタの概念が削除されました。
 
 ### Build system changes
 

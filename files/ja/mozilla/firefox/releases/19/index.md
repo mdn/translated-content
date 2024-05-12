@@ -47,7 +47,7 @@ Firefox 19 で、[XForms](/ja/docs/XForms) のサポートを[**削除しまし�
 ### インターフェイスの変更点
 
 - `nsIImgLoadingContent`
-  - : `addObserver()` メソッドのパラメータ (aObserver) が `imgIDecoderObserver` から `imgINotificationObserver` に替わりました。`imgINotificationObserver` の `notify()` メソッドはスクリプト可能ではありませんので、`imgITools` の `createScriptedObserver()` を使用しなければなりません。
+  - : `addObserver()` メソッドの引数 (aObserver) が `imgIDecoderObserver` から `imgINotificationObserver` に替わりました。`imgINotificationObserver` の `notify()` メソッドはスクリプト可能ではありませんので、`imgITools` の `createScriptedObserver()` を使用しなければなりません。
 - `nsIChannel`
   - : `contentLength` プロパティの型を `long` から `int64_t` に変更しました。
 

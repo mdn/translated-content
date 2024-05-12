@@ -39,7 +39,7 @@ Firefox 2 ではたくさんの新機能と能力を導入します。この記�
 - [フィードコンテンツへアクセスする API](/ja/docs/Feed_content_access_API)
   - : 開発者が RSS および Atom フィードをアクセスおよびパースできる API。
 - [SAX サポート](/ja/docs/SAX)
-  - : イベントベースの XML パーサ API.
+  - : イベントベースの XML パーサー API.
 - [ウェブページから検索エンジンを追加する](/ja/docs/Adding_search_engines_from_web_pages)
   - : JavaScript コードは Firefox に新しい検索プラグインをインストールするように命令することができます。OpenSearch か Sherlock フォーマットのどちらかを利用して検索プラグインを書くことができます。
 - [XUL でのスペルチェック](/ja/docs/Using_spell_checking_in_XUL)

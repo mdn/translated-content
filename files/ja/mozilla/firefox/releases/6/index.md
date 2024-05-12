@@ -47,7 +47,7 @@ Firefox 6 は Gecko 6.0 ベースのブラウザーで、2011 年 8 月 16 日�
 - [Touch events](/ja/docs/DOM/Touch_events)
   - : Firefox 6 は W3C の標準タッチイベント仕様をサポートします。これにより、タッチスクリーンやトラックパッドなどタッチセンサー式のデバイスでのタッチの解釈が容易になります。
 - [Server-sent events](/ja/docs/Server-sent_events)
-  - : Server-sent events はサーバが手元で生成された DOM イベントと同じようにイベントを送出するよう、ウェブアプリケーションが尋ねるための機能です。
+  - : Server-sent events はサーバーが手元で生成された DOM イベントと同じようにイベントを送出するよう、ウェブアプリケーションが尋ねるための機能です。
 
 <!---->
 
@@ -97,9 +97,9 @@ Firefox 6 は Gecko 6.0 ベースのブラウザーで、2011 年 8 月 16 日�
 
 <!---->
 
-- `Content-Disposition` ヘッダの構文解析が修正され、バックスラッシュでエスケープされた ASCII 文字が適切に文字そのものとして処理されるようになりました。これまではその文字をアンダースコア ("`_`")に置き換えるという誤った処理がなされていました。
-- `Set-Cookie` ヘッダのパスの値において、クォートが適切に処理されるようになりました。これまでクォートを使った場合はそれがデリミタではなく、パスの文字列として認識されていました。**この変更により、いくつかのサイトで互換性の問題が発生する可能性があります。**製作者はコードをチェックすることが望まれます。
-- [`Upgrade`](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.42) リクエストヘッダがサポートされました。[`nsIHttpChannelInternal.HTTPUpgrade()`](</ja/docs/XPCOM_Interface_Reference/nsIHttpChannelInternal#HTTPUpgrade()>) を呼ぶことで、HTTP チャネルから他のプロトコルへのアップグレードをリクエストできます。
+- `Content-Disposition` ヘッダーの構文解析が修正され、バックスラッシュでエスケープされた ASCII 文字が適切に文字そのものとして処理されるようになりました。これまではその文字をアンダースコア ("`_`")に置き換えるという誤った処理がなされていました。
+- `Set-Cookie` ヘッダーのパスの値において、クォートが適切に処理されるようになりました。これまでクォートを使った場合はそれがデリミタではなく、パスの文字列として認識されていました。**この変更により、いくつかのサイトで互換性の問題が発生する可能性があります。**製作者はコードをチェックすることが望まれます。
+- [`Upgrade`](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.42) リクエストヘッダーがサポートされました。[`nsIHttpChannelInternal.HTTPUpgrade()`](</ja/docs/XPCOM_Interface_Reference/nsIHttpChannelInternal#HTTPUpgrade()>) を呼ぶことで、HTTP チャネルから他のプロトコルへのアップグレードをリクエストできます。
 
 ### その他の変更
 
