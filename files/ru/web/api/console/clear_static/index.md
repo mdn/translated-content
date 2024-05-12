@@ -17,7 +17,7 @@ slug: Web/API/console/clear_static
 console.clear();
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

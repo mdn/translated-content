@@ -92,7 +92,7 @@ MY_ARRAY.push("A"); // ["A"]
 MY_ARRAY = ["B"]
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

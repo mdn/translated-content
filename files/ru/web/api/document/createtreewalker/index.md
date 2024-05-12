@@ -65,7 +65,7 @@ var nodeList = [];
 while (treeWalker.nextNode()) nodeList.push(treeWalker.currentNode);
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

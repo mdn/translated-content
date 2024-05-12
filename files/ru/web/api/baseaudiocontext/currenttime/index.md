@@ -26,8 +26,7 @@ console.log(audioCtx.currentTime);
 
 ## Снижение точности времени
 
-Для обеспечения защиты от атак и [слежения за пользователем](/ru/docs/Glossary/Fingerprinting), точность
-`audioCtx.currentTime` может округляться в зависимости от настроек браузера.
+Для обеспечения защиты от атак и [слежения за пользователем](/ru/docs/Glossary/Fingerprinting), точность `audioCtx.currentTime` может округляться в зависимости от настроек браузера.
 В Firefox настройка `privacy.reduceTimerPrecision` включена по умолчанию и равна 20 мкс в Firefox 59 (2 мс в Firefox 60).
 
 ```js
