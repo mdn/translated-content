@@ -80,7 +80,7 @@ browser.runtime.onMessage.hasListener(listener)
         - `sendResponse()` に対する参照を保持したままリスナー関数から `true` を返す。そうすると、リスナー関数から復帰した後でも `sendResponse()` が実行できます。
         - リスナー関数から {{jsxref("Promise")}} を返して、応答の準備ができたときにその Promise を解決する。こちらがより好ましい方法です。
 
-    リスナー関数は、Boolea または {{jsxref("Promise")}} のいずれかを返します。
+    リスナー関数は、Boolean または {{jsxref("Promise")}} のいずれかを返します。
 
     > **メモ:** `addListener()` に非同期関数を渡すと、リスナーはメッセージを受け取るたびに Promise を返すため、他のリスナーが応答できなくなります。
     >
