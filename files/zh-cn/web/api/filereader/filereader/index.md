@@ -23,7 +23,7 @@ new FileReader()
 
 ## 示例
 
-以下代码展示了如何使用 `FileReader()` 构造函数创建 [`FileReader`](/zh-CN/docs/Web/API/FileReader) 对象，和该对象的后续使用。
+以下代码展示了如何使用 `FileReader()` 构造函数创建 {{domxref("FileReader")}} 对象，和该对象的后续使用。
 
 ```js
 function printFile(file) {
