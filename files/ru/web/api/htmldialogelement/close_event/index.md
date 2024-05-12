@@ -23,7 +23,7 @@ window.onclose = funcRef;
 window.onclose = resetThatServerThing;
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

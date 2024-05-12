@@ -118,7 +118,7 @@ pc.onicecandidate = (ev) => {
 };
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

@@ -98,7 +98,7 @@ grid-area: unset;
 
 {{EmbedLiveSample("Example", "100%", "150px")}}
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

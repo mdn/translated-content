@@ -32,7 +32,7 @@ var audioCtx = new AudioContext();
 console.log(audioCtx.currentTime);
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

@@ -520,7 +520,7 @@ daySelect.onchange = function () {
 };
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

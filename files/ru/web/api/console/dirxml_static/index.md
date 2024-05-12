@@ -18,7 +18,7 @@ console.dirxml(object);
 - `object`
   - : Объект JavaScript свойства которого будут отображены.
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

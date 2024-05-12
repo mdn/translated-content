@@ -69,7 +69,7 @@ inline-size: unset;
 
 {{EmbedLiveSample("Setting_inline_size_in_pixels")}}
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

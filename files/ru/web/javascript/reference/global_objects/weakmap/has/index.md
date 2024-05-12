@@ -35,7 +35,7 @@ wm.has(window); // возвращает true
 wm.has("baz"); // возвращает false
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

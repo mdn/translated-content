@@ -49,7 +49,7 @@ slug: Web/HTML/Element/label
 
 {{EmbedLiveSample('Using_the_for_attribute', '200', '50', '')}}
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

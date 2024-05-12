@@ -128,7 +128,7 @@ div {
 
 {{EmbedLiveSample("Toolbar", "100%", 100)}}
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

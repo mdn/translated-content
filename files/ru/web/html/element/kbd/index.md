@@ -155,7 +155,7 @@ The output from this HTML looks like this:
 
 {{EmbedLiveSample("Representing_onscreen_input_options", 650, 120)}}
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

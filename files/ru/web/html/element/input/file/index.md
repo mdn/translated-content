@@ -369,7 +369,7 @@ The example looks like this; have a play:
   </tbody>
 </table>
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
