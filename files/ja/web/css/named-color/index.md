@@ -887,7 +887,7 @@ color: transparent;
   </tbody>
 </table>
 
-当初、 [CSS Level 1](https://www.w3.org/TR/REC-CSS1/#color-units) では 16 の基本色のみが定義され、 [CSS Level 2](https://www.w3.org/TR/CSS2/syndata.html#value-def-color) では `orange` が追加されました。ウェブデザイナーはこのリストが短すぎることに気づき、ブラウザーベンダーは X11の色名をもとに多数の色の名前を追加しました。 [SVG 1.0](https://www.w3.org/TR/2001/REC-SVG-20010904/)、そして [CSS Colors Level 3](https://www.w3.org/TR/css-color-3/#svg-color) で、これらの名前は標準化され、正式に定義され、統一されました（これで別名となった異なる綴りのものもあります）。これらは拡張色キーワード、_X11 色_、_SVG 色_と呼ばれます。
+当初、 [CSS Level 1](https://www.w3.org/TR/REC-CSS1/#color-units) では 16 の基本色のみが定義され、 [CSS Level 2](https://www.w3.org/TR/CSS2/syndata.html#value-def-color) では `orange` が追加されました。ウェブデザイナーはこのリストが短すぎることに気づき、ブラウザーベンダーは X11の色名をもとに多数の色の名前を追加しました。 [SVG 1.0](https://www.w3.org/TR/2001/REC-SVG-20010904/)、そして [CSS Colors Level 3](https://www.w3.org/TR/css-color-3/#svg-color) で、これらの名前は標準化され、正式に定義され、統一されました（これで別名となった異なる綴りのものもあります）。これらは拡張色キーワード、_X11 色_、*SVG 色*と呼ばれます。
 
 [CSS Colors Level 4](https://www.w3.org/TR/css-color-4/#named-colors) では、[ウェブのパイオニア Eric Meyer](https://meyerweb.com/eric/thoughts/2014/06/19/rebeccapurple/) に敬意を表して、 `rebeccapurple` という色が追加されました。
 
