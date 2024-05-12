@@ -11,7 +11,7 @@ JavaScript (JS) 是一种编程语言，为通常用于客户端（client-side�
 
 Brendan Eich（彼时受雇于 Netscape）为服务器端构想的语言 JavaScript，不久便在 1995 年 9 月被加入 Netscape Navigator 2.0。JavaScript 很快获得了成功，而 {{glossary("Microsoft Internet Explorer", "Internet Explorer 3.0")}} 也在 1996 年 8 月，引入了对 JavaScript 的支持，冠以 JScript 之名。
 
-1996 年 11 月，Netscape 开始与 ECMA 国际化组织合作以使 JavaScript 成为行业标准。从此以后，标准化的 JavaScript 就被称为 ECMAScript 并由 ECMA-262 规范，其最新版（第八版）在 2017 年 6 月生效。
+1996 年 11 月，Netscape 开始与 ECMA 国际化组织合作以使 JavaScript 成为行业标准。从此以后，标准化的 JavaScript 就被称为 ECMAScript 并由 ECMA-262 规范，其最新版（第十四版，ECMA2023）在 2023 年 6 月生效。
 
 JavaScript 通常用于浏览器，使开发者能通过{{Glossary("DOM")}}来操纵网页内容、或透过{{Glossary("AJAX")}}与{{Glossary("IndexedDB")}}来操作数据；还可以用它在{{Glossary("canvas")}}上面绘图、通过各种{{Glossary("API","APIs")}}与运行浏览器的各种设备交互……等等。由于近年来的发展、以及各浏览器的{{Glossary("API","APIs")}}性能改善，JavaScript 成了世界上最常用的编程语言之一。
 
