@@ -255,7 +255,7 @@ _利用可能なアクティブラーニングはまだありません。[ぜひ
 - [Google Chrome](https://www.google.com/chrome/)
 - [Apple Safari](https://www.apple.com/safari/)
 
-特定のグループ (技術プラットフォームや国など) を対象にする場合は、追加で [Opera](https://www.opera.com/), [Konqueror](https://apps.kde.org/konqueror/) などブラウザーでサイトをテストする必要があります。
+特定のグループ (技術プラットフォームや国など) を対象にする場合は、追加で [Opera](https://www.opera.com/), [Konqueror](https://apps.kde.org/konqueror/) などのブラウザーでサイトをテストする必要があります。
 
 しかし、ブラウザーによっては特定のオペレーティングシステムでしか動作しないものがあるため、テストをすることは複雑になります。 Apple Safari は iOS と Mac OS 上で動作し、 Internet Explorer は Windows 上でのみ動作します。 [Browsershots](https://browsershots.org/) や [Browserstack](https://www.browserstack.com/) のようなサービスを利用するのが最善です。 Browsershots は、様々なブラウザーで見た場合のウェブサイトのスナップショットを提供します。 Browserstack は実際には仮想マシンへの完全なリモートアクセスを提供し、最も一般的な環境でサイトをテストすることができます。他にも、独自の仮想マシンをセットアップする方法もありますが、それにはいくらかの専門知識が必要です。
 詳しくは[テスト実行のための戦略: テストラボを用意する](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#テストラボを用意する)を参照してください。
