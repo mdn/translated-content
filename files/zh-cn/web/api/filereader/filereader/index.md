@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("File API")}}{{AvailableInWorkers}}
 
-**`FileReader()`** 构造函数创建一个新的 FileReader 对象。
+**`FileReader()`** 构造函数创建一个新的 `FileReader` 对象。
 
 有关如何使用 `FileReader` 的详细信息，查看[在 Web 应用中使用文件](/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications)。
 

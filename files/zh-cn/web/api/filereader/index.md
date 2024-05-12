@@ -52,7 +52,7 @@ l10n:
 - {{domxref("FileReader.readAsText()")}}
   - : 开始读取指定的 {{domxref("Blob")}} 中的内容。一旦完成，`result` 属性中将包含一个表示所读取的文件内容的字符串。可以指定可选的编码名称。
 
-### 事件
+## 事件
 
 使用 {{domxref("EventTarget/addEventListener", "addEventListener()")}} 方法或通过将事件侦听器分配给此接口的 `oneeventname` 属性来侦听这些事件。一旦不再使用 `FileReader`，请使用 {{domxref("EventTarget.removeEventListener", "removeEventListener()")}} 删除事件侦听器，以避免内存泄漏。
 
