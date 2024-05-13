@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("File API")}} {{AvailableInWorkers("worker_except_service")}}
 
-{{DOMxRef("FileReaderSync")}} 接口的 **`readAsDataURL()`** 方法允许以同步方式读取 {{DOMxRef("File")}} 或 {{DOMxRef("Blob")}} 对象并转换为表示 data URL 的字符串。此接口仅在 [worker](/zh-CN/docs/Web/API/Worker) 中[可用](/zh-CN/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)，因为它支持同步 I/O，可能导致潜在的阻塞。
+{{DOMxRef("FileReaderSync")}} 接口的 **`readAsDataURL()`** 方法允许以同步方式读取 {{DOMxRef("File")}} 或 {{DOMxRef("Blob")}} 对象并将其转换为表示 data URL 的字符串。此接口仅在 [worker](/zh-CN/docs/Web/API/Worker) 中[可用](/zh-CN/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)，因为它支持同步 I/O，可能导致潜在的阻塞。
 
 ## 语法
 
