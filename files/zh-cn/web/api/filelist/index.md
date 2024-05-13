@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("File API")}}{{AvailableInWorkers}}
 
-**`FileList`** 接口表示由 HTML {{HTMLElement("input")}} 元素的 `files` 属性返回的该类型的对象；这使你·可以访问使用 `<input type="file">` 元素选择的文件列表。它还用于使用拖放 API 中放入 Web 内容中的文件列表；有关此用法的详细信息，请参阅 {{domxref("DataTransfer")}} 对象。
+**`FileList`** 接口表示由 HTML {{HTMLElement("input")}} 元素的 `files` 属性返回的该类型的对象；这使你可以访问使用 `<input type="file">` 元素选择的文件列表。它还用于使用拖放 API 中放入 Web 内容中的文件列表；有关此用法的详细信息，请参阅 {{domxref("DataTransfer")}} 对象。
 
 所有 `<input>` 元素节点都有一个 `FileList` 类型的 `files` 属性，其允许访问此列表中的项目。例如，如果 HTML 包含以下文件输入框：
 
