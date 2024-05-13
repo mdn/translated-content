@@ -13,13 +13,13 @@ l10n:
 
 从上面的示例中可以看出，在我们期望文本中断的地方都包含了一个 `<br>` 元素。`<br>` 之后的文本从文本块的下一行开始
 
-> **备注：** 不要用 `<br>` 来增加文本之间的行间隔；应使用 [CSS](/zh-CN/docs/CSS) {{cssxref('margin')}} 属性或 {{HTMLElement("p")}} 元素。
+> **备注：** 不要用 `<br>` 来增加文本之间的行间隔；请使用 {{HTMLElement("p")}} 元素来包装文本，并使用 [CSS](/zh-CN/docs/CSS) {{cssxref('margin')}} 属性来控制间隔大小。
 
 ## 属性
 
 此元素的属性包括[全局属性](/zh-CN/docs/HTML/Global_attributes)。
 
-### 废弃属性
+### 已弃用的属性
 
 - `clear` {{Deprecated_Inline}}
   - : 指定换行后下一行文本开始位置。
@@ -28,11 +28,11 @@ l10n:
 
 `<br>` 元素包含唯一且明确的语义——在文本块中创建换行符。因此，它没有自己的尺寸或视觉输出，几乎无法设计它的样式。
 
-你可以给 `<br>` 元素设置 {{cssxref("margin")}} 从而增加文本行之间的间距，但这是一种糟糕的做法 —— 你应该使用为此目的而设计的 {{cssxref("line-height")}}。
+你可以给 `<br>` 元素设置 {{cssxref("margin")}} 从而增加文本行之间的间距，但这是一种糟糕的做法——你应该使用为此目的而设计的 {{cssxref("line-height")}}。
 
 ## 示例
 
-### 一般使用
+### 简单的 br 示例
 
 在以下示例中，我们使用 `<br>` 元素在邮寄地址中间创建换行符。
 
@@ -54,7 +54,7 @@ USA
  <tbody>
   <tr>
    <th scope="row"><a href="/zh-CN/docs/HTML/Content_categories">内容分类</a></th>
-   <td><a href="/zh-CN/docs/HTML/Content_categories#Flow_content">流式内容</a>，<a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">短语内容</a>。</td>
+   <td><a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容">流式内容</a>、<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容">短语内容</a>。</td>
   </tr>
   <tr>
    <th scope="row">允许的内容</th>
@@ -66,7 +66,7 @@ USA
   </tr>
   <tr>
    <th scope="row">允许的父元素</th>
-   <td>任意可容纳<a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">短语内容</a>的元素。</td>
+   <td>任意可容纳<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容">短语内容</a>的元素。</td>
   </tr>
   <tr>
       <th scope="row">隐含的 ARIA 角色</th>
@@ -78,7 +78,9 @@ USA
     </tr>
   <tr>
    <th scope="row">允许的 ARIA 角色</th>
-   <td>任意</td>
+   <td>
+     <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>、<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
+   </td>
   </tr>
   <tr>
    <th scope="row">DOM 接口</th>
