@@ -41,7 +41,7 @@ l10n:
 
 - `char` {{deprecated_inline}}
 
-  - : 没有任何作用。其最初目的是指定内容与每列单元格中的一个字符对齐。当试图对齐数字或货币值时，其典型值包括句号（`.`）。如果 [`align`](#align) 未设置为 `char`，该属性将被忽略，但它仍将作为默认值用于属于该列组的 {{HTMLElement("col")}} 元素的 [`align`](/en-CN/docs/Web/HTML/Element/col#align)。
+  - : 没有任何作用。其最初目的是指定内容与每列单元格中的一个字符对齐。当试图对齐数字或货币值时，其典型值包括句号（`.`）。如果 [`align`](#align) 未设置为 `char`，该属性将被忽略，但它仍将作为默认值用于属于该列组的 {{HTMLElement("col")}} 元素的 [`align`](/zh-CN/docs/Web/HTML/Element/col#align)。
 
 - `charoff` {{deprecated_inline}}
 
