@@ -59,7 +59,7 @@ _该属性也继承了其父类 {{domxref("Event")}} 的属性_。
   <img src="" class="preview" height="200" alt="图片预览" />
 
   <div class="event-log">
-    <label for="eventLog">事件日志：</label>
+    <label for="eventLog">事件输出：</label>
     <textarea readonly class="event-log-contents" id="eventLog"></textarea>
   </div>
 </div>
