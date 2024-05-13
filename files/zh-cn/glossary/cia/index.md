@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-CIA（机密性 Confidentiality、完整性 Integrity、可用性 Availability，也称作 CIA 三要素或 AIC 三要素）是一个指导组织的信息安全政策的模型。
+**CIA**（机密性 Confidentiality、完整性 Integrity、可用性 Availability，也称作 CIA 三要素或 AIC 三要素）是一个指导组织的信息安全政策的模型。
 
 ## 参见
 
