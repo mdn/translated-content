@@ -2,12 +2,12 @@
 title: CORS-безопасный заголовок запроса
 slug: Glossary/CORS-safelisted_request_header
 l10n:
-  sourceCommit: 5e9631df85d021e84133e14f4bd3c712e4f8fe08
+  sourceCommit: fea9eb7420e6d70772144854242c30e421898415
 ---
 
 {{GlossarySidebar}}
 
-[CORS-безопасный заголовок запроса](https://fetch.spec.whatwg.org/#cors-safelisted-request-header) — это один из следующих [HTTP-заголовков](/ru/docs/Web/HTTP/Headers):
+[CORS-безопасный заголовок запроса](https://fetch.spec.whatwg.org/#cors-safelisted-request-header) (также известный как «простой заголовок») — это один из следующих [HTTP-заголовков](/ru/docs/Web/HTTP/Headers):
 
 - {{HTTPHeader("Accept")}}
 - {{HTTPHeader("Accept-Language")}}
