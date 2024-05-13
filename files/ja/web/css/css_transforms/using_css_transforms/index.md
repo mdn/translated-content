@@ -2,7 +2,7 @@
 title: CSS 座標変換の使用
 slug: Web/CSS/CSS_transforms/Using_CSS_transforms
 l10n:
-  sourceCommit: 7e649ddc14198ca9e55ac2ccfabc36a23bd16bb4
+  sourceCommit: 1c4eb0bfb5f72a26fcc21a83fac91aa3e66c2fb8
 ---
 
 {{CSSRef}}
@@ -172,7 +172,6 @@ CSS 座標変換の定義に使われる主なプロパティが 2 つありま�
 .cube {
   width: 100%;
   height: 100%;
-  backface-visibility: visible;
   perspective-origin: 150% 150%;
   transform-style: preserve-3d;
 }
@@ -188,41 +187,42 @@ CSS 座標変換の定義に使われる主なプロパティが 2 つありま�
   font-size: 60px;
   color: white;
   text-align: center;
+  backface-visibility: visible;
 }
 
 /* 方向に基づいてそれぞれの面を設定 */
 .front {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgb(0 0 0 / 30%);
   transform: translateZ(50px);
 }
 
 .back {
-  background: rgba(0, 255, 0, 1);
+  background: rgb(0 255 0 / 100%);
   color: black;
   transform: rotateY(180deg) translateZ(50px);
 }
 
 .right {
-  background: rgba(196, 0, 0, 0.7);
+  background: rgb(196 0 0 / 70%);
   transform: rotateY(90deg) translateZ(50px);
 }
 
 .left {
-  background: rgba(0, 0, 196, 0.7);
+  background: rgb(0 0 196 / 70%);
   transform: rotateY(-90deg) translateZ(50px);
 }
 
 .top {
-  background: rgba(196, 196, 0, 0.7);
+  background: rgb(196 196 0 / 70%);
   transform: rotateX(90deg) translateZ(50px);
 }
 
 .bottom {
-  background: rgba(196, 0, 196, 0.7);
+  background: rgb(196 0 196 / 70%);
   transform: rotateX(-90deg) translateZ(50px);
 }
 
-/* テーブルの見栄えをよくする */
+/* 表の見栄えをよくする */
 th,
 p,
 td {
@@ -469,7 +469,6 @@ td {
 .cube {
   width: 100%;
   height: 100%;
-  backface-visibility: visible;
   perspective: 300px;
   transform-style: preserve-3d;
 }
@@ -485,32 +484,33 @@ td {
   font-size: 60px;
   color: white;
   text-align: center;
+  backface-visibility: visible;
 }
 
 /* 方向に基づいてそれぞれの面を設定 */
 .front {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgb(0 0 0 / 30%);
   transform: translateZ(50px);
 }
 .back {
-  background: rgba(0, 255, 0, 1);
+  background: rgb(0 255 0 / 100%);
   color: black;
   transform: rotateY(180deg) translateZ(50px);
 }
 .right {
-  background: rgba(196, 0, 0, 0.7);
+  background: rgb(196 0 0 / 70%);
   transform: rotateY(90deg) translateZ(50px);
 }
 .left {
-  background: rgba(0, 0, 196, 0.7);
+  background: rgb(0 0 196 / 70%);
   transform: rotateY(-90deg) translateZ(50px);
 }
 .top {
-  background: rgba(196, 196, 0, 0.7);
+  background: rgb(196 196 0 / 70%);
   transform: rotateX(90deg) translateZ(50px);
 }
 .bottom {
-  background: rgba(196, 0, 196, 0.7);
+  background: rgb(196 0 196 / 70%);
   transform: rotateX(-90deg) translateZ(50px);
 }
 
