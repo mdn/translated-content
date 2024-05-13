@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("UI Events")}}
 
-**`KeyboardEvent.metaKey`**는 어떤 이벤트가 발생했을 때
+**`KeyboardEvent.metaKey`** 는 어떤 이벤트가 발생했을 때
 키보드의 <kbd>Meta</kbd>키가 눌려 있었는지 아닌지
 (`true`) 혹은 (`false`) 를 나타내는 읽기 전용 속성입니다. 일부 운영체제에서는
 키를 가로채서 감지되지 않을 수 있습니다.
