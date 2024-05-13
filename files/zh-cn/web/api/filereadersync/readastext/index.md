@@ -2,12 +2,12 @@
 title: FileReaderSync：readAsText() 方法
 slug: Web/API/FileReaderSync/readAsText
 l10n:
-  sourceCommit: 1dad49fff047729e8dcca313a45ccb4cc2d2526f
+  sourceCommit: 502e8c3f0be95c6f42afe6a72113b029b290b9e8
 ---
 
 {{APIRef("File API")}} {{AvailableInWorkers("worker_except_service")}}
 
-{{DOMxRef("FileReaderSync")}} 接口的 **`readAsText()`** 方法允许以同步方式读取 {{DOMxRef("File")}} 或 {{DOMxRef("Blob")}} 对象 并转换为字符串。此接口仅在 [worker](/zh-CN/docs/Web/API/Worker) 中[可用](/zh-CN/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)，因为它支持同步 I/O，可能导致潜在的阻塞。
+{{DOMxRef("FileReaderSync")}} 接口的 **`readAsText()`** 方法允许以同步方式读取 {{DOMxRef("File")}} 或 {{DOMxRef("Blob")}} 对象并转换为字符串。此接口仅在 [worker](/zh-CN/docs/Web/API/Worker) 中[可用](/zh-CN/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)，因为它支持同步 I/O，可能导致潜在的阻塞。
 
 ## 语法
 
@@ -21,7 +21,7 @@ readAsText(blob, encoding)
 - `blob`
   - : 要读取的 {{DOMxRef("File")}} 或 {{DOMxRef("Blob")}} 对象。
 - `encoding` {{optional_inline}}
-  - : 此可选参数指定要使用的编码（例如 `iso-8859-1` 或 `UTF-8`）。如果不存在，如果不存在，该方法将对其应用检测算法以确定其编码。
+  - : 此可选参数指定要使用的编码（例如 `iso-8859-1` 或 `UTF-8`）。如果不存在，该方法将对其应用检测算法以确定其编码。
 
 ### 返回值
 
