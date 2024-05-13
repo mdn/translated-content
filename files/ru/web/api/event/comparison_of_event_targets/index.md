@@ -1,120 +1,86 @@
 ---
-title: Сравнение разных Event Targets
+title: Сравнение разных целей событий
 slug: Web/API/Event/Comparison_of_Event_Targets
+l10n:
+  sourceCommit: f0f30c318c2a318552a753759fa0a09f6690f2a5
 ---
 
-{{ ApiRef() }}
+{{APIRef("DOM")}}
 
-### Event targets
+Легко запутаться в том, какую цель события (англ. _event target_) следует использовать при написании обработчика. В этой статье разъяснено использование свойств, связанных с целями событий.
 
-Легко запутаться в том, какую цель (target) следует изучить при написании обработчика событий. В этой статье разъяснено использование свойств target.
+Существуют 5 свойств, связанных с целями событий:
 
-Существуют 5 целей для рассмотрения:
-
-<table class="standard-table">
+<table class="no-markdown">
+  <thead>
+    <tr>
+      <th>Свойство</th>
+      <th>Определено&nbsp;в</th>
+      <th>Назначение</th>
+    </tr>
+  </thead>
   <tbody>
     <tr>
-      <th>Property</th>
-      <th>Defined in</th>
-      <th>Purpose</th>
-    </tr>
-    <tr>
       <td>
-        <a href="/ru/docs/Web/API/Event/target"
-          >event.target</a
-        >
+        <code><a href="/ru/docs/Web/API/Event/target">event.target</a></code>
       </td>
       <td>
-        <a
-          href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-interface"
-          >DOM Event Interface</a
-        >
+        <a href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-interface">DOM Event Interface</a>
       </td>
       <td>
-        <p>Элемент DOM слева от вызова этого события, например:</p>
-        <pre class="eval"><em>element</em>.dispatchEvent(<em>event</em>)
-</pre>
+        DOM-элемент слева от вызова этого события.
       </td>
     </tr>
     <tr>
       <td>
-        <a href="/ru/docs/Web/API/Event/currentTarget"
-          >event.currentTarget</a
-        >
+        <code><a href="/ru/docs/Web/API/Event/currentTarget">event.currentTarget</a></code>
       </td>
       <td>
-        <a
-          href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-interface"
-          >DOM Event Interface</a
-        >
+        <a href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-interface">DOM Event Interface</a>
       </td>
       <td>
-        <a
-          href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-EventTarget"
-          ><code>EventTarget</code></a
-        >, чьи
-        <a
-          href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-EventListener"
-          ><code>EventListeners</code></a
-        >
-        в настоящее время обрабатываются. По мере того, как происходит захват и
-        всплытие событий, это значение изменяется.
+        Цель <a href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-EventTarget"><code>EventTarget</code></a>, слушатели <a href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-EventListener"><code>EventListeners</code></a> которой в настоящее время обрабатываются. По мере того, как происходит захват и всплытие событий, это значение изменяется.
       </td>
     </tr>
     <tr>
       <td>
-        <a href="/ru/docs/Web/API/MouseEvent/relatedTarget"
-          >event.relatedTarget</a
-        >
+        <code><a href="/ru/docs/Web/API/MouseEvent/relatedTarget">event.relatedTarget</a></code>
       </td>
       <td>
-        <a
-          href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-MouseEvent"
-          >DOM MouseEvent Interface</a
-        >
+        <a href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-MouseEvent">DOM MouseEvent Interface</a>
       </td>
       <td>Определяет вторичную цель для события.</td>
     </tr>
     <tr>
       <td>
-        <a
-          href="/ru/docs/Web/API/Event/explicitOriginalTarget"
-          >event.explicitOriginalTarget</a
-        >
+        <code><a href="/ru/docs/Web/API/Event/explicitOriginalTarget">event.explicitOriginalTarget</a></code>
       </td>
       <td>
-        <a href="https://dxr.mozilla.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
+        <a href="https://searchfox.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
       </td>
       <td>
-        {{ Non-standard_inline() }} Если по какой-либо причине событие
-        было перенацелено, кроме анонимного пересечения границ, событие будет
-        установлено на цель до перенацеливания. Например, события мыши
-        перенацеливаются на их родительский узел, когда они встречаются над
-        текстовыми узлами ([Firefox bug 185889](https://bugzil.la/185889)), и в этом случае
-        <code>.target</code> покажет на родителя и
-        <code>.explicitOriginalTarget</code> покажет на текстовый узел.<br />В
-        отличие от <code>.originalTarget</code> —
-        <code>.explicitOriginalTarget</code> никогда не будет содержать
-        анонимный контент.
+        {{ Non-standard_inline() }} Если по какой-либо причине (кроме анонимного пересечения границ элемента) цель события была изменена, то будет содержать первоначальную цель. Например, события мыши перенацеливаются на их родительский узел, когда они встречаются над текстовыми узлами ([Firefox bug 185889](https://bugzil.la/185889)). В этом случае <code>.target</code> указывает на родителя, а <code>.explicitOriginalTarget</code> указывает на текстовый узел.<br />
+        <code>.explicitOriginalTarget</code> никогда не будет содержать анонимный контент в отличие от <code>.originalTarget</code>.
       </td>
     </tr>
     <tr>
       <td>
-        <a
-          href="/ru/docs/Web/API/Event/originalTarget"
-          >event.originalTarget</a
-        >
+        <code><a href="/ru/docs/Web/API/Event/originalTarget">event.originalTarget</a></code>
       </td>
       <td>
-        <a href="https://dxr.mozilla.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
+        <a href="https://searchfox.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
       </td>
       <td>
-        {{ Non-standard_inline() }} Первоначальная цель события перед
-        любым перенацеливанием. Подробнее см.
-        <a
-          href="/ru/docs/XBL/XBL_1.0_Reference/Anonymous_Content#Event_Flow_and_Targeting"
-          >Анонимный контент#Event_Flow_and_Targeting</a
-        >.
+        {{ Non-standard_inline() }} Первоначальная цель события до любых изменений.
+      </td>
+    </tr>
+    <tr>
+      <td>event.composedTarget</td>
+      <td>
+        <a href="https://searchfox.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
+      </td>
+      <td>
+        {{ Non-standard_inline() }} Первоначальная ненативная цель события до всплытия из Shadow DOM.
       </td>
     </tr>
   </tbody>
@@ -122,17 +88,17 @@ slug: Web/API/Event/Comparison_of_Event_Targets
 
 ### Использование `explicitOriginalTarget` и `originalTarget`
 
-> **Note:** These properties are only available in Mozilla-based browsers.
+> **Примечание:** Эти свойства доступны только в браузерах на базе Mozilla.
 
 ### Примеры
 
 ```html
 <!doctype html>
-<html>
+<html lang="ru">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Comparison of Event Targets</title>
+    <title>Сравнение разных целей событий</title>
     <style>
       table {
         border-collapse: collapse;
@@ -158,24 +124,26 @@ slug: Web/API/Event/Comparison_of_Event_Targets
       <thead>
         <tr>
           <td class="standard">
-            Изначальная цель, отправляющая событие <small>event.target</small>
+            Первоначальная цель, отправляющая событие
+            <small>event.target</small>
           </td>
           <td class="standard">
-            Цель, кто обрабатывает события <small>event.currentTarget</small>
+            Цель, слушатель события которой обрабатывает
+            <small>event.currentTarget</small>
           </td>
           <td class="standard">
-            Идентифицировать другой элемент (если он есть), участвующий в
-            событии <small>event.relatedTarget</small>
+            Определяет другой элемент (если он есть), участвующий в событии
+            <small>event.relatedTarget</small>
           </td>
           <td class="non-standard">
-            Если по какой-то причине произошло перенацеливание события
-            <small>event.explicitOriginalTarget</small> содержит цель перед
-            перенацеливанием (никогда не содержит анонимных целей)
+            Если по какой-то причине произошло изменение цели события, то
+            <small>event.explicitOriginalTarget</small> содержит цель до
+            изменений (никогда не содержит анонимных целей)
           </td>
           <td class="non-standard">
-            Если по какой-то причине произошло перенацеливание события
-            <small>event.originalTarget</small> содержит цель перед
-            перенацеливанием (может содержать анонимные цели)
+            Если по какой-то причине произошло изменение цели события, то
+            <small>event.originalTarget</small> содержит цель до изменений
+            (может содержать анонимные цели)
           </td>
         </tr>
       </thead>
@@ -215,14 +183,12 @@ slug: Web/API/Event/Comparison_of_Event_Targets
 
 ### Использование `target` и `relatedTarget`
 
-Свойство `relatedTarget` для события `mouseover` содержит узел, над которым ранее была указана мышь. Для события `mouseout` он удерживает узел, к которому движется мышь.
+Свойство `relatedTarget` для события `mouseover` содержит узел, над которым ранее была указатель мыши. Для события `mouseout` оно содержит узел, к которому движется мышь.
 
-| Тип события | [event.target](/ru/docs/Web/API/Event/target) | [event.relatedTarget](/ru/docs/Web/API/MouseEvent/relatedTarget) |
-| ----------- | --------------------------------------------- | ---------------------------------------------------------------- |
-| `mouseover` | EventTarget, в который входим указателем      | EventTarget, из которого выходим указателем                      |
-| `mouseout`  | EventTarget, из которого выходим указателем   | EventTarget, в который входим указателем                         |
-
-TODO: Также требуется описание событий `dragenter` и `dragexit`.
+| Тип&nbsp;события | [event.target](/ru/docs/Web/API/Event/target) | [event.relatedTarget](/ru/docs/Web/API/MouseEvent/relatedTarget) |
+| ---------------- | --------------------------------------------- | ---------------------------------------------------------------- |
+| `mouseover`      | цель, в которую входит указатель              | цель, из которой выходит указатель                               |
+| `mouseout`       | цель, из которой выходит указатель            | цель, в которую входит указатель                                 |
 
 #### Пример
 
