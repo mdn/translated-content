@@ -8,8 +8,8 @@ l10n:
 {{APIRef("UI Events")}}
 
 **`KeyboardEvent.location`** 은 키보드 혹은
- 다른 입력 장치에서의 키의 위치를 나타내는 `unsigned long` 을
- 반환하는 읽기 전용 속성입니다. 
+다른 입력 장치에서의 키의 위치를 나타내는 `unsigned long` 을
+반환하는 읽기 전용 속성입니다.
 
 가능한 값은 다음과 같습니다:
 
