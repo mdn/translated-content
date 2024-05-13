@@ -2,7 +2,7 @@
 title: FileSystemWritableFileStream：write() 方法
 slug: Web/API/FileSystemWritableFileStream/write
 l10n:
-  sourceCommit: 4458494807b6f4898d504b6c0af0a45f8031cbf3
+  sourceCommit: f10fbe2d2dc4857bf29ce955689a7ba7c1ffac8b
 ---
 
 {{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
@@ -29,7 +29,7 @@ write(data)
       - `type`
         - : 一个字符串，值为 `"write"`、`"seek"` 或 `"truncate"` 之一。
       - `data`
-        - : 用于写入的文件数据，可以是 {{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}}、{{jsxref("DataView")}}、{{domxref('Blob')}} 或字符串形式。这个属性在 `type` 被设为 `"write"` 时是必需的。
+        - : 用于写入的文件数据，可以是 {{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}}、{{jsxref("DataView")}}、{{domxref('Blob')}} 或字符串。这个属性在 `type` 被设为 `"write"` 时是必需的。
       - `position`
         - : 当 `type` 为 `"seek"` 时，表示文件当前指针应该移动到的位置。当 `type` 被设为 `"write"` 时也可以使用，这种情况下将会在指定的位置开始写入。
       - `size`
