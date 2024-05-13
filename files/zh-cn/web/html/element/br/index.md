@@ -46,7 +46,7 @@ USA
 
 #### 结果
 
-{{ EmbedLiveSample('Simple_br', 640, 120) }}
+{{ EmbedLiveSample('简单的 br 示例', 640, 120) }}
 
 ## 技术概要
 
