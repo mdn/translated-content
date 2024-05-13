@@ -1,22 +1,27 @@
 ---
-title: FileReader.abort()
+title: FileReader：abort() 方法
 slug: Web/API/FileReader/abort
+l10n:
+  sourceCommit: 497d322c61511b11e4877a77660f8d7b394a8277
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
-该方法可以取消 FileReader 的读取操作，触发之后 {{domxref("FileReader.readyState","readyState")}} 为已完成（DONE）。
+{{domxref("FileReader")}} 接口的 **`abort()`** 方法中止读取操作。返回后，{{domxref("FileReader.readyState","readyState")}} 将为 `DONE`。
 
 ## 语法
 
-```plain
-instanceOfFileReader.abort();
+```js-nolint
+abort()
 ```
 
-### 例外情况
+### 参数
 
-- `DOM_FILE_ABORT_ERR`
-  - : 对一个没有正在进行读取操作（{{domxref("FileReader.readyState","readyState")}} 不是 `LOADING`）的 `FileReader` 进行 `abort` 操作，会抛出 `DOM_FILE_ABORT_ERR` 错误。
+无。
+
+### 返回值
+
+无（{{jsxref("undefined")}}）。
 
 ## 规范
 
