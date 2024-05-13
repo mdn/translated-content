@@ -69,7 +69,7 @@ l10n:
              다른 경우에는, 노트북 컴퓨터처럼 키보드에 키패드가 없는 경우
              일부 키는 NumLock 키가 잠겨 있을 때 숫자 키패드가 됩니다.
              이러한 키들이 이벤트를 발생시킬 때, 위치 속성 값은 해당 키에 의존합니다.
-             즉, <code>DOM_KEY_LOCATION_NUMPAD</code> 가 아니어야 합니다. 
+             즉, <code>DOM_KEY_LOCATION_NUMPAD</code> 가 아니어야 합니다.
           </p>
         </div>
         <div class="note">
