@@ -5,7 +5,8 @@ slug: Web/CSS/:nth-child
 
 {{CSSRef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:nth-child(an+b)`** permet de cibler un élément qui possède `an+b-1` éléments voisins (au même niveau) avant lui dans l'arbre du document pour des valeurs entières `n` et qui possède un élément parent. Autrement dit, un sélecteur utilisant cette pseudo-classe permettra de cibler les éléments fils d'un élément dont les positions correspondent au motif _an+b_.
+
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:nth-child()`** permet de cibler les éléments en ce basant sur l'indice des éléments dans la liste des enfants de leur parent. Autrement dit, un sélecteur utilisant cette pseudo-classe permettra de cibler les éléments fils d'un élément dont les positions correspondent au motif.
 
 ```css
 /* Cible les éléments en fonction de leur position dans */
@@ -16,7 +17,7 @@ body :nth-child(4n) {
 }
 ```
 
-> **Note :** Pour CSS3, pour que l'élément soit ciblé, il faut qu'il ait un élément parent. En CSS4, cette restriction a été levée.
+> **Note :** Pour CSS3, pour qu'un élément soit ciblé, il faut qu'il ait un élément parent. En CSS4, cette restriction a été levée.
 
 Illustrons cela avec quelques exemples :
 
