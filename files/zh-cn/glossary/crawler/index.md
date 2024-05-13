@@ -2,7 +2,7 @@
 title: Web 爬虫
 slug: Glossary/Crawler
 l10n:
-  sourceCommit: oops, thx:)
+  sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
 ---
 
 {{GlossarySidebar}}
