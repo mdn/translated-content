@@ -24,7 +24,7 @@ l10n:
 
 ## 示例
 
-在此示例中，被 `registration` 指示的 {{domxref("ServiceWorkerRegistration")}} 订阅了 `"/path1"` 作用域下命名为 `"cookie1"`的 cookie 的变更事件。
+在此示例中，被 `registration` 指示的 {{domxref("ServiceWorkerRegistration")}} 订阅了 `"/path1"` 作用域下命名为 `"cookie1"` 的 cookie 的变更事件。
 
 ```js
 const subscriptions = [{ name: "cookie1", url: `/path1` }];
