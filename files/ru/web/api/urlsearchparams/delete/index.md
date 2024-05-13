@@ -34,7 +34,7 @@ let params = new URLSearchParams(url.search.slice(1));
 params.delete("foo"); //Строка запроса теперь: 'bar=2'
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

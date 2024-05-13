@@ -3,23 +3,17 @@ title: <form>
 slug: Web/HTML/Element/form
 ---
 
-## Резюме
+{{HTMLSidebar}}
 
-_Элемент HTML form_ (`<form>`) представляет (собой) раздел документа, содержащий интерактивные элементы управления, которые позволяют пользователю отправлять информацию на веб-сервер.
+HTML-элемент **`<form>`** представляет раздел документа, содержащий интерактивные элементы управления, которые позволяют отправлять информацию.
 
-Можно использовать [`:valid`](/ru/docs/CSS/%3Avalid) и [`:invalid`](/ru/docs/CSS/%3Ainvalid) CSS псевдоклассы для стилизации `<form>` элемента, в зависимости от того, валиден или нет конкретный элемент {{domxref("HTMLFormElement.elements", "elements")}} внутри формы.
+{{EmbedInteractiveExample("pages/tabbed/form.html", "tabbed-standard")}}
 
-## Контекст Использования
-
-| Категория содержимого  | [Flow content](/ru/docs/HTML/Content_categories#Flow_content)                                                                                                                         |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Разрешённое содержимое | [Flow content](/ru/docs/HTML/Content_categories#Flow_content), но не содержащий `<form>` элементов                                                                                    |
-| Пропуск тега           | Нет. И открывающий и закрывающий тег должны быть.                                                                                                                                     |
-| Нормативный документ   | [HTML5, section 4.10.3](http://www.w3.org/TR/html5/forms.html#the-form-element) ([HTML4.01, section 17.3](http://www.w3.org/TR/1999/REC-html401-19991224/interact/forms.html#h-17.3)) |
+Можно использовать CSS [псевдоклассы](/ru/docs/Web/CSS/Pseudo-classes) {{cssxref(':valid')}} и {{cssxref(':invalid')}} для стилизации элемента `<form>`, в зависимости от того, валидны или нет {{domxref("HTMLFormElement.elements", "элементы")}} внутри формы.
 
 ## Атрибуты
 
-Как и все HTML-элементы, этот элемент поддерживает [глобальные атрибуты](/ru/docs/HTML/Global_attributes).
+Как и все HTML-элементы, этот элемент поддерживает [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
 - `accept`
   - : Список типов содержимого, разделённых запятой, которые принимает сервер.
@@ -40,9 +34,9 @@ _Элемент HTML form_ (`<form>`) представляет (собой) ра
     - `multipart/form-data`: Используйте это значение, если пользуетесь элементом {{HTMLElement("input")}} атрибутом `type` установленным в "file".
     - `text/plain (HTML5)` Это значение может быть переписано атрибутом [`formenctype`](/ru/docs/Web/HTML/Element/button#formenctype) на элементе {{HTMLElement("button")}} или {{HTMLElement("input")}}.
 - `method`
-  - : [HTTP](/ru/docs/HTTP) метод, который браузер использует, для отправки формы. Возможные значения:
-    - `post`: Соответствует HTTP [POST методу](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5) ; данные из формы включаются в тело формы и посылаются на сервер.
-    - `get`: Соответствует [GET методу](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3); данные из формы добавляются к URI атрибута `action`, их разделяет '?', и полученный URI посылается на сервер. Используйте этот метод, когда форма содержит только ASCII символы и не имеет побочного эффекта.Это значение может быть переписано атрибутом [`formmethod`](/ru/docs/Web/HTML/Element/button#formmethod) на {{HTMLElement("button")}} или {{HTMLElement("input")}} элементе.
+  - : [HTTP](/ru/docs/Web/HTTP) метод, который браузер использует, для отправки формы. Возможные значения:
+    - `post`: Соответствует HTTP [POST методу](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5) ; данные из формы включаются в тело формы и посылаются на сервер.
+    - `get`: Соответствует [GET методу](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3); данные из формы добавляются к URI атрибута `action`, их разделяет '?', и полученный URI посылается на сервер. Используйте этот метод, когда форма содержит только ASCII символы и не имеет побочного эффекта.Это значение может быть переписано атрибутом [`formmethod`](/ru/docs/Web/HTML/Element/button#formmethod) на {{HTMLElement("button")}} или {{HTMLElement("input")}} элементе.
 - `name`
   - : Имя формы. В HTML 4 его использование запрещено (`id` следует использовать взамен). Оно должно быть уникальным и не пустым среди всех форм в документе в HTML 5.
 - `novalidate`
@@ -53,10 +47,6 @@ _Элемент HTML form_ (`<form>`) представляет (собой) ра
     - `_blank`: Загружает ответ в новом безымянном окне HTML 4 или HTML5 контексте просмотра.
     - `_parent`: Загружает ответ HTML 4 в родительском наборе фрейма для текущего фрейма или HTML5 родительский контекст просмотра для текущего просмотра. Если нет предка, эта опция действует точно так же как as `_self`.
     - `_top`: HTML 4: Загружает ответ в полное, оригинальное окно, закрывая все другие фреймы. HTML5: Загружает ответ в верхний уровень контекста просмотра (т.е., контекст просмотра это предок текущего и не имеет других предков). Если нет предка, эта опция действует точно так же как as `_self`.HTML5: Это значение может быть перезаписано [`formtarget`](/ru/docs/Web/HTML/Element/button#formtarget) атрибутом на {{HTMLElement("button")}} или {{HTMLElement("input")}} элементе.
-
-## DOM_interface
-
-Этот элемент реализует {{domxref("HTMLFormElement")}} интерфейс.
 
 ## Примеры
 
@@ -85,6 +75,18 @@ _Элемент HTML form_ (`<form>`) представляет (собой) ра
 </form>
 ```
 
+## Техническая сводка
+
+| Категория содержимого  | [Flow content](/ru/docs/Web/HTML/Content_categories#flow_content)                                                                                                                       |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Разрешённое содержимое | [Flow content](/ru/docs/Web/HTML/Content_categories#flow_content), но не содержащий `<form>` элементов                                                                                  |
+| Пропуск тега           | Нет. И открывающий и закрывающий тег должны быть.                                                                                                                                       |
+| Нормативный документ   | [HTML5, section 4.10.3](https://www.w3.org/TR/html5/forms.html#the-form-element) ([HTML4.01, section 17.3](https://www.w3.org/TR/1999/REC-html401-19991224/interact/forms.html#h-17.3)) |
+
+## Спецификации
+
+{{Specifications}}
+
 ## Совместимость с браузерами
 
 {{Compat}}
@@ -92,5 +94,3 @@ _Элемент HTML form_ (`<form>`) представляет (собой) ра
 ## Смотрите также
 
 - Другие элементы, которые используются для создания форм: {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{HTMLElement("label")}}, {{HTMLElement("legend")}}, {{HTMLElement("meter")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}.
-
-{{HTMLSidebar}}

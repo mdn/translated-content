@@ -45,7 +45,7 @@ var gl = offscreen.getContext("webgl");
 gl.canvas; // OffscreenCanvas
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

@@ -1,6 +1,8 @@
 ---
 title: 量词
 slug: Web/JavaScript/Guide/Regular_expressions/Quantifiers
+l10n:
+  sourceCommit: 95a838d5d8e0e40aaa15897d23de476efade14b1
 ---
 
 {{jsSidebar("JavaScript Guide")}}
@@ -10,6 +12,8 @@ slug: Web/JavaScript/Guide/Regular_expressions/Quantifiers
 {{EmbedInteractiveExample("pages/js/regexp-quantifiers.html", "taller")}}
 
 ## 类型
+
+> **备注：** 在下文中，*项*不仅指单个字符，还包括[字符类](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)、[组和反向引用](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)。
 
 <table class="standard-table">
   <thead>
@@ -25,7 +29,7 @@ slug: Web/JavaScript/Guide/Regular_expressions/Quantifiers
       </td>
       <td>
         <p>
-          将前面的项“x”匹配 0 次或更多次。例如，/bo*/匹配“A ghost
+          将前面的项“x”匹配 0 次或更多次。例如，<code>/bo*/</code> 匹配“A ghost
           booooed”中的“boooo”和“A bird warbled”中的“b”，但在“A goat
           grunt”中没有匹配。
         </p>
@@ -48,12 +52,10 @@ slug: Web/JavaScript/Guide/Regular_expressions/Quantifiers
       </td>
       <td>
         <p>
-          将前面的项“x”匹配 0 或 1 次。例如，/e?le?/匹配 angel 中的 el 和 angle
-          中的 le。
+          将前面的项“x”匹配 0 或 1 次。例如，<code>/e?le?/</code> 匹配“angel”中的“el”和“angle”中的“le”。
         </p>
         <p>
-          如果立即在任何量词*、+、?或{}之后使用，则使量词是非贪婪的
-          (匹配最小次数)，而不是默认的贪婪的 (匹配最大次数)。
+          如果立即在任何 <code>*</code>、<code>+</code>、<code>?</code> 或 <code>{}</code> 量词之后使用，则使量词变为非贪婪匹配（匹配最小次数），而不是默认的贪婪匹配（匹配最大次数）。
         </p>
       </td>
     </tr>
@@ -63,8 +65,8 @@ slug: Web/JavaScript/Guide/Regular_expressions/Quantifiers
       </td>
       <td>
         <p>
-          其中“n”是一个正整数，与前一项“x”的 n 次匹配。例如，<code>/a{2}/ </code
-          >不匹配“candy”中的“a”，但它匹配“caandy”中的所有“a”，以及“caaandy”中的前两个“a”。
+          其中“n”是一个非负整数，与前一项“x”至少匹配“n”次。例如，<code>/a{2}/</code
+          > 不匹配“candy”中的“a”，但它匹配“caandy”中的所有“a”，以及“caaandy”中的前两个“a”。
         </p>
       </td>
     </tr>
@@ -74,7 +76,7 @@ slug: Web/JavaScript/Guide/Regular_expressions/Quantifiers
       </td>
       <td>
         <p>
-          其中，“n”是一个正整数，与前一项“x”至少匹配“n”次。例如，<code>/a{2，}/</code>不匹配“candy”中的“a”，但匹配“caandy”和“caaaaaaandy”中的所有
+          其中“n”是一个非负整数，与前一项“x”至少匹配“n”次。例如，<code>/a{2，}/</code> 不匹配“candy”中的“a”，但匹配“caandy”和“caaaaaaandy”中的所有
           a。
         </p>
       </td>
@@ -85,8 +87,7 @@ slug: Web/JavaScript/Guide/Regular_expressions/Quantifiers
       </td>
       <td>
         <p>
-          其中，“n”是 0 或一个正整数，“m”是一个正整数，而 m > n
-          至少与前一项“x”匹配，最多与“m”匹配。例如，/a{1,3}/不匹配“cndy”中的“a”，“candy”中的“a”，“caandy”中的两个“a”，以及“caaaaaaandy”中的前三个“a”。注意，当匹配“caaaaaaandy”时，匹配的是“aaa”，即使原始字符串中有更多的“a”。
+          其中“n”和“m”为非负整数，并且 <code><em>m</em> >= <em>n</em></code>。与项“x”至少匹配“n”次，至多匹配“m”次。例如，<code>/a{1,3}/</code> 不匹配“cndy”中的任何内容，而匹配“candy”中的“a”、“caandy”中的两个“a”以及“caaaaaandy”中的前三个“a”。请注意，在匹配“caaaaaandy”时，匹配的是“aaa”，尽管原始字符串中有更多的“a”。
         </p>
       </td>
     </tr>
@@ -101,10 +102,7 @@ slug: Web/JavaScript/Guide/Regular_expressions/Quantifiers
       </td>
       <td>
         <p>
-          默认情况下，像 <code>* </code>和
-          <code>+ </code
-          >这样的量词是“贪婪的”，这意味着它们试图匹配尽可能多的字符串。量词后面的字符 `?` 使量词“非贪婪”：它一旦找到匹配就会停止。例如，给定一个字符串“some
-          &#x3C;foo> &#x3C;bar> new &#x3C;/bar> &#x3C;/foo> thing”:
+          默认情况下，像 <code>*</code> 和 <code>+</code> 这样的量词是“贪婪的”，这意味着它们试图匹配尽可能多的字符串。量词后面的字符 <code>?</code> 使量词“不贪婪”：它一旦找到匹配就会停止。例如，给定一个字符串“some &#x3C;foo> &#x3C;bar> new &#x3C;/bar> &#x3C;/foo> thing”:
         </p>
         <ul>
           <li>
@@ -123,37 +121,37 @@ slug: Web/JavaScript/Guide/Regular_expressions/Quantifiers
 ### 重复模式
 
 ```js
-var wordEndingWithAs = /\w+a+/;
-var delicateMessage = "This is Spartaaaaaaa";
+const wordEndingWithAs = /\w+a+\b/;
+const delicateMessage = "This is Spartaaaaaaa";
 
 console.table(delicateMessage.match(wordEndingWithAs)); // [ "Spartaaaaaaa" ]
 ```
 
-### 计算字符集
+### 统计单词
 
 ```js
-var singleLetterWord = /\b\w\b/g;
-var notSoLongWord = /\b\w{1,6}\b/g;
-var loooongWord = /\b\w{13,}\b/g;
+const singleLetterWord = /\b\w\b/g;
+const notSoLongWord = /\b\w{2,6}\b/g;
+const longWord = /\b\w{13,}\b/g;
 
-var sentence = "Why do I have to learn multiplication table?";
+const sentence = "Why do I have to learn multiplication table?";
 
 console.table(sentence.match(singleLetterWord)); // ["I"]
-console.table(sentence.match(notSoLongWord)); // [ "Why", "do", "I", "have", "to", "learn", "table" ]
-console.table(sentence.match(loooongWord)); // ["multiplication"] 可选可选字符
+console.table(sentence.match(notSoLongWord)); // [ "Why", "do", "have", "to", "learn", "table" ]
+console.table(sentence.match(longWord)); // ["multiplication"]
 ```
 
 ### 可选字符
 
 ```js
-var britishText = "He asked his neighbour a favour.";
-var americanText = "He asked his neighbor a favor.";
+const britishText = "He asked his neighbour a favour.";
+const americanText = "He asked his neighbor a favor.";
 
-var regexpEnding = /\w+ou?r/g;
-// \w+ One or several letters
-// o   followed by an "o",
-// u?  optionally followed by a "u"
-// r   followed by an "r"
+const regexpEnding = /\w+ou?r/g;
+// \w+ 一个及以上字母
+// o   跟随字母“o”，
+// u?  可能跟随字母“u”
+// r   跟随字母“r”
 
 console.table(britishText.match(regexpEnding));
 // ["neighbour", "favour"]
@@ -165,19 +163,19 @@ console.table(americanText.match(regexpEnding));
 ### 贪婪匹配与非贪婪匹配
 
 ```js
-var text = "I must be getting somewhere near the centre of the earth.";
-var greedyRegexp = /[\w ]+/;
-// [\w ]      a letter of the latin alphabet or a whitespace
-//      +     one or several times
+const text = "I must be getting somewhere near the center of the earth.";
+const greedyRegexp = /[\w ]+/;
+// [\w ]      一个拉丁字母或一个空格
+//      +     匹配一次及以上
 
 console.log(text.match(greedyRegexp)[0]);
-// "I must be getting somewhere near the centre of the earth"
-// almost all of the text matches (leaves out the dot character)
+// "I must be getting somewhere near the center of the earth"
+// 几乎所有文本都匹配（除了点字符）
 
-var nonGreedyRegexp = /[\w ]+?/; // Notice the question mark
+const nonGreedyRegexp = /[\w ]+?/; // 注意问号
 console.log(text.match(nonGreedyRegexp));
 // "I"
-// The match is the smallest one possible
+// 尽可能少的匹配
 ```
 
 ## 参见

@@ -28,7 +28,7 @@ _Интерфейс **PositionError** не наследует никаких с�
 
 **The `PositionError` interface _neither implements nor inherits any method._**
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

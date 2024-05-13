@@ -37,7 +37,7 @@ if (foo.hasAttributes()) {
 })(Element.prototype);
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

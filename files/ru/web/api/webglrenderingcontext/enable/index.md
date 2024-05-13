@@ -54,7 +54,7 @@ gl.isEnabled(gl.DITHER);
 // true
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

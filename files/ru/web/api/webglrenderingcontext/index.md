@@ -291,7 +291,7 @@ These methods manage WebGL extensions:
 - {{domxref("WebGLRenderingContext.getExtension()")}}
   - : Returns an extension object.
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
