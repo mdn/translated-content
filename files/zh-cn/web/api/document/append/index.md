@@ -9,7 +9,7 @@ l10n:
 
 **`Document.append()`** 方法会在文档的最后一个子节点后插入一组{{domxref("Node", "节点", "", 1)}}对象或字符串对象。字符串对象被插入为相同{{domxref("Text", "文本", "", 1)}}节点。
 
-此方法将子级追加到 `Document` 中。要追加到树中的任意元素，请参阅 {{domxref("Element.append()")}}。
+此方法将一个子元素追加到 `Document` 中。要向树中的任意元素添加子元素，请参阅 {{domxref("Element.append()")}}。
 
 ## 语法
 
@@ -22,7 +22,7 @@ append(param1, param2, /* …, */ paramN)
 ### 参数
 
 - `param1`, …, `paramN`
-  - : 要插入的 {{domxref("Node")}} 或字符串对象集。
+  - : 要插入的一组 {{domxref("Node")}} 或字符串对象。
 
 ### 返回值
 
@@ -45,7 +45,7 @@ document.append(html);
 // HierarchyRequestError: The operation would yield an incorrect node tree.
 ```
 
-如果创建的新文档没有任何现有元素，你可以附加 HTML 根元素（或 SVG 根元素）：
+如果创建的新文档没有任何现有元素，你可以添加一个 HTML 根元素（或 SVG 根元素）：
 
 ```js
 let doc = new Document();
