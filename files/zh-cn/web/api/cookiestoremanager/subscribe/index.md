@@ -19,7 +19,7 @@ subscribe(subscriptions)
 
 - `subscriptions`
 
-  - : 一个对象列表，每个对象包括以下属性:
+  - : 一个对象列表，每个对象包括以下属性：
 
     - `name`
       - : 记录 cookie 名称的字符串。
