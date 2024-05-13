@@ -46,18 +46,18 @@ seek(position)
 ```js
 async function saveFile() {
   try {
-    // 创建一个新句柄。
+    // 创建一个新句柄
     const newHandle = await window.showSaveFilePicker();
 
-    // 创建一个 FileSystemWritableFileStream 用于写入。
+    // 创建一个 FileSystemWritableFileStream 用于写入
     const writableStream = await newHandle.createWritable();
 
-    // 写入我们的文件。
+    // 写入我们的文件
     await writableStream.write("My first file content");
     await writableStream.seek(0);
     await writableStream.write("My second file content");
 
-    // 关闭文件并将内容写入磁盘。
+    // 关闭文件并将内容写入磁盘
     await writableStream.close();
   } catch (err) {
     console.error(err.name, err.message);
