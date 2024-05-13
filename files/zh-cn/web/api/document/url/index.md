@@ -11,7 +11,7 @@ l10n:
 
 ## 值
 
-A string containing the URL of the document.
+包含文档 URL 的字符串。
 
 ## 示例
 
