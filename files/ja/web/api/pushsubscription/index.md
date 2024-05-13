@@ -2,10 +2,10 @@
 title: PushSubscription
 slug: Web/API/PushSubscription
 l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+  sourceCommit: 3a91caa0ebbc5131ed75afe0e5168cd5bffc0976
 ---
 
-{{ApiRef("Push API")}}
+{{ApiRef("Push API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 `PushSubscription` は[プッシュ API](/ja/docs/Web/API/Push_API) のインターフェイスで、サブスクリプションの URL エンドポイントを提供し、ここからプッシュサービスの登録を脱退できます。
 
@@ -19,7 +19,7 @@ l10n:
   - : {{domxref("DOMHighResTimeStamp")}} で、存在すれば、プッシュサブスクリプションに関連付いたサブスクリプションの期限です。存在しない場合は `null` です。
 - {{domxref("PushSubscription.options")}} {{ReadOnlyInline}}
   - : サブスクリプションを作成するために用いられるオプションを含むオブジェクト。
-- {{domxref("PushSubscription.subscriptionId")}} {{deprecated_inline}} {{ReadOnlyInline}}
+- {{domxref("PushSubscription.subscriptionId")}} {{deprecated_inline}} {{ReadOnlyInline}} {{non-standard_inline}}
   - : 文字列で、このプッシュサブスクリプションに関連したサブスクリプション ID が入ります。
 
 ## インスタンスメソッド
