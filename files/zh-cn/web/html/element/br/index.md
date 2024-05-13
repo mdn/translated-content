@@ -26,7 +26,7 @@ l10n:
 
 ## 使用 CSS 设置样式
 
-`<br>` 元素包含唯一且明确的语义 —— 在文本块中创建换行符。因此，它没有自己的尺寸或视觉输出，几乎无法设计它的样式。
+`<br>` 元素包含唯一且明确的语义——在文本块中创建换行符。因此，它没有自己的尺寸或视觉输出，几乎无法设计它的样式。
 
 你可以给 `<br>` 元素设置 {{cssxref("margin")}} 从而增加文本行之间的间距，但这是一种糟糕的做法 —— 你应该使用为此目的而设计的 {{cssxref("line-height")}}。
 
@@ -54,7 +54,7 @@ USA
  <tbody>
   <tr>
    <th scope="row"><a href="/zh-CN/docs/HTML/Content_categories">内容分类</a></th>
-   <td><a href="/zh-CN/docs/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">phrasing content</a>。</td>
+   <td><a href="/zh-CN/docs/HTML/Content_categories#Flow_content">流式内容</a>，<a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">短语内容</a>。</td>
   </tr>
   <tr>
    <th scope="row">允许的内容</th>
@@ -66,18 +66,18 @@ USA
   </tr>
   <tr>
    <th scope="row">允许的父元素</th>
-   <td>任意可容纳 <a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">phrasing content</a> 的元素。</td>
+   <td>任意可容纳<a href="/zh-CN/docs/HTML/Content_categories#Phrasing_content">短语内容</a>的元素。</td>
   </tr>
   <tr>
-      <th scope="row">Implicit ARIA role</th>
+      <th scope="row">隐含的 ARIA 角色</th>
       <td>
         <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
+          >没有对应的角色</a
         >
       </td>
     </tr>
   <tr>
-   <th scope="row">Permitted ARIA roles</th>
+   <th scope="row">允许的 ARIA 角色</th>
    <td>任意</td>
   </tr>
   <tr>
@@ -97,6 +97,6 @@ USA
 
 ## 参见
 
-- {{HTMLElement("address")}} element
-- {{HTMLElement("p")}} element
-- {{HTMLElement("wbr")}} element
+- {{HTMLElement("address")}} 元素
+- {{HTMLElement("p")}} 元素
+- {{HTMLElement("wbr")}} 元素
