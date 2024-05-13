@@ -34,8 +34,7 @@ _该属性也继承了其父类 {{domxref("Event")}} 的属性_。
 - {{domxref("ProgressEvent.lengthComputable")}} {{ReadOnlyInline}}
   - : 一个布尔标志，表示底层进程要完成的总工作量及已完成的工作量是否可计算。换句话说，它表明进度是否可以衡量。
 - {{domxref("ProgressEvent.loaded")}} {{ReadOnlyInline}}
-  - : 一个 64 位无符号整数值，表示底层进程已完成的工作量。完成的工作量可以通过除以 `total` 属性的值来计算。当使用 HTTP 下载资源时，这仅计算 HTTP
-    消息体的大小，并且不包括标头以及其他开销。
+  - : 一个 64 位无符号整数值，表示底层进程已完成的工作量。完成工作的比例可以通过除以 `total` 属性的值来计算。当使用 HTTP 下载资源时，这仅计算 HTTP 消息的主体的大小，并且不包括标头以及其他开销。
 - {{domxref("ProgressEvent.total")}} {{ReadOnlyInline}}
   - : 一个 64 位无符号整数，表示底层进程正在执行的总工作量。当使用 HTTP 下载资源时，这是 `Content-Length`（消息体的大小），并且不包括标头以及其他开销。
 
@@ -48,7 +47,7 @@ _该属性也继承了其父类 {{domxref("Event")}} 的属性_。
 ```html
 <div class="example">
   <div class="file-select">
-    <label for="avatar">选择个人照片：</label>
+    <label for="avatar">选择你的头像：</label>
     <input
       type="file"
       id="avatar"
