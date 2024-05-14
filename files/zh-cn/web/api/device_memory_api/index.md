@@ -11,7 +11,7 @@ l10n:
 
 ## 获取设备内存
 
-有两种方法可以获取设备的 RAM 大小：使用设备内存 JavaScript API 或接受Client Hints
+有两种方法可以获取设备的 RAM 大小：使用设备内存 JavaScript API 或接受 Client Hints
 
 ### JavaScript API
 
@@ -23,7 +23,7 @@ const RAM = navigator.deviceMemory;
 
 ### Client Hints
 
-你也可以使用 [Client Hints](/zh-CN/docs/Web/HTTP/Client_hints) HTTP标头与 `Device-Memory` 指令来检索设备的近似 RAM 大小。
+你也可以使用 [Client Hints](/zh-CN/docs/Web/HTTP/Client_hints) HTTP 标头与 `Device-Memory` 指令来检索设备的近似 RAM 大小。
 
 ## 接口
 
