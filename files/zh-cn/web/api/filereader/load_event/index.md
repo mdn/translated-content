@@ -55,7 +55,7 @@ _还继承其父级 {{domxref("Event")}} 的属性。_
       accept="image/png, image/jpeg" />
   </div>
 
-  <img src="" class="preview" height="200" alt="Image preview" />
+  <img src="" class="preview" height="200" alt="图片预览" />
 
   <div class="event-log">
     <label for="eventLog">事件日志：</label>
