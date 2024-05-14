@@ -54,7 +54,7 @@ l10n:
 
 ## 事件
 
-使用 {{domxref("EventTarget/addEventListener", "addEventListener()")}} 方法或通过将事件侦听器分配给此接口的 `oneeventname` 属性来侦听这些事件。一旦不再使用 `FileReader`，请使用 {{domxref("EventTarget.removeEventListener", "removeEventListener()")}} 删除事件侦听器，以避免内存泄漏。
+使用 {{domxref("EventTarget/addEventListener", "addEventListener()")}} 方法或通过将事件侦听器分配给此接口的 `oneventname` 属性来侦听这些事件。一旦不再使用 `FileReader`，请使用 {{domxref("EventTarget.removeEventListener", "removeEventListener()")}} 删除事件侦听器，以避免内存泄漏。
 
 - {{domxref("FileReader/abort_event", "abort")}}
   - : 当读取被中止时触发，例如因为程序调用了 {{domxref("FileReader.abort()")}} 方法。
