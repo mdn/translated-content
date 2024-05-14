@@ -7,7 +7,7 @@ l10n:
 
 {{securecontext_header}}{{APIRef("Cookie Store API")}}{{AvailableInWorkers("window_and_service")}}
 
-{{domxref("CookieStoreManager")}} 接口的 **`unsubscribe()`** 方法，终止  {{domxref("ServiceWorkerRegistration")}} 接收之前订阅的事件。
+{{domxref("CookieStoreManager")}} 接口的 **`unsubscribe()`** 方法，终止 {{domxref("ServiceWorkerRegistration")}} 接收之前订阅的事件。
 
 ## 语法
 
@@ -19,7 +19,7 @@ unsubscribe(subscriptions)
 
 - `subscriptions`
 
-  - : 一个对象列表，每个对象包括以下属性:
+  - : 一个对象列表，每个对象包括以下属性：
 
     - `name`
       - : 记录 cookie 名称的字符串。
