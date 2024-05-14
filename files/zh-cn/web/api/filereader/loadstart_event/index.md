@@ -111,7 +111,7 @@ const eventLog = document.querySelector(".event-log-contents");
 const reader = new FileReader();
 
 function handleEvent(event) {
-  eventLog.textContent += `${event.type}：${event.loaded} 传输的字节数\n`;
+  eventLog.textContent += `${event.type}：传输了 ${event.loaded} 字节\n`;
 
   if (event.type === "load") {
     preview.src = reader.result;
