@@ -20,7 +20,7 @@ _也从 {{DOMxRef("Element")}} 接口继承属性。_
 - {{DOMxRef("HTMLElement.dataset")}} {{ReadOnlyInline}}
   - : 提供了命名数据属性的键/值对列表的 {{DOMxRef("DOMStringMap")}} 对象，这些数据属性与附加到元素上的[自定义数据属性](/zh-CN/docs/Learn/HTML/Howto/Use_data_attributes)相对应。这些属性也可以在 SVG 中使用 {{SVGAttr("data-*")}} 形式的属性来定义，其中 `*` 是数据对的关键名称。这就像 HTML 的 {{DOMxRef("HTMLElement.dataset")}} 属性和 HTML 的 [`data-*`](/zh-CN/docs/Web/HTML/Global_attributes/data-*) 全局属性一样。
 - {{DOMxRef("SVGElement.className")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
-  - : 反映给定元素上 {{SVGAttr(”class")}} 属性的 {{DOMxRef("SVGAnimatedString")}} 值；如果不存在 `class`，则为空字符串。该属性已被弃用，可能会在本规范的未来版本中删除。建议作者使用 {{DOMxRef("Element.classList")}} 代替。
+  - : 反映给定元素上 {{SVGAttr("class")}} 属性的 {{DOMxRef("SVGAnimatedString")}} 值；如果不存在 `class`，则为空字符串。该属性已被弃用，可能会在本规范的未来版本中删除。建议作者使用 {{DOMxRef("Element.classList")}} 代替。
 - {{DOMxRef("SVGElement.nonce")}}
   - : 返回内容安全策略用于确定是否允许进行给定获取请求的密码学数字。
 - {{DOMxRef("SVGElement.ownerSVGElement")}} {{ReadOnlyInline}}
