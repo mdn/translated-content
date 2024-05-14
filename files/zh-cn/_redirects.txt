@@ -525,6 +525,8 @@
 /zh-CN/docs/Glossary/I18N	/zh-CN/docs/Glossary/Internationalization
 /zh-CN/docs/Glossary/IP地址	/zh-CN/docs/Glossary/IP_Address
 /zh-CN/docs/Glossary/Serialize	/zh-CN/docs/Glossary/Serialization
+/zh-CN/docs/Glossary/Simple_header	/zh-CN/docs/conflicting/Glossary/CORS-safelisted_request_header
+/zh-CN/docs/Glossary/Simple_response_header	/zh-CN/docs/conflicting/Glossary/CORS-safelisted_response_header
 /zh-CN/docs/Glossary/Symbol	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol
 /zh-CN/docs/Glossary/Transferable_objects	/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects
 /zh-CN/docs/Glossary/XHR_(XMLHttpRequest)	/zh-CN/docs/Glossary/XMLHttpRequest
@@ -556,7 +558,7 @@
 /zh-CN/docs/Glossary/空元素	/zh-CN/docs/Glossary/Void_element
 /zh-CN/docs/Glossary/立即执行函数表达式	/zh-CN/docs/Glossary/IIFE
 /zh-CN/docs/Glossary/第一字节时间	/zh-CN/docs/Glossary/Time_to_first_byte
-/zh-CN/docs/Glossary/简单头部	/zh-CN/docs/Glossary/Simple_header
+/zh-CN/docs/Glossary/简单头部	/zh-CN/docs/conflicting/Glossary/CORS-safelisted_request_header
 /zh-CN/docs/Glossary/算法	/zh-CN/docs/Glossary/Algorithm
 /zh-CN/docs/Glossary/类型转换	/zh-CN/docs/Glossary/Type_Conversion
 /zh-CN/docs/Glossary/编译	/zh-CN/docs/Glossary/Compile
