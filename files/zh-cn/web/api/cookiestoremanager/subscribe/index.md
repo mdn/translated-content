@@ -24,7 +24,7 @@ subscribe(subscriptions)
     - `name`
       - : 记录 cookie 名称的字符串。
     - `url`
-      - : 记录 cookie URL 作用域的字符串。可能比 Service Worker 注册器的作用域更狭隘。
+      - : 记录 cookie URL 作用域的字符串。可能比 Service Worker Registration 的作用域更狭隘。
 
 ### 返回值
 
@@ -33,7 +33,7 @@ subscribe(subscriptions)
 ### 异常
 
 - {{jsxref("TypeError")}}
-  - : 如果传入的 URL 不匹配 Service Worker 注册器的{{domxref("ServiceWorkerRegistration.scope","作用域")}}抛出该异常。
+  - : 如果传入的 URL 不匹配 Service Worker Registration 的{{domxref("ServiceWorkerRegistration.scope","作用域","",1)}}抛出该异常。
 
 ## 示例
 
@@ -44,7 +44,7 @@ const subscriptions = [{ name: "cookie1", url: `/path1` }];
 await registration.cookies.subscribe(subscriptions);
 ```
 
-传给 `subscribe()` 方法的 URL 可能比 Service Worker 注册器的作用域更狭隘。以下示例订阅是针对 `/path/one/`的，所以只会接收到第一个 cookie 的变更事件，而第二个收不到。
+传给 `subscribe()` 方法的 URL 可能比 Service Worker Registration 的作用域更狭隘。以下示例订阅是针对 `/path/one/` 的，所以只会接收到第一个 cookie 的变更事件，而第二个收不到。
 
 ```js
 registration.cookies.subscribe([{ name: "cookie1", url: "/path/one/" }]); // 订阅 cookie1
