@@ -2,14 +2,14 @@
 title: FileReader：readAsBinaryString() 方法
 slug: Web/API/FileReader/readAsBinaryString
 l10n:
-  sourceCommit: 497d322c61511b11e4877a77660f8d7b394a8277
+  sourceCommit: e43bfd9b4a6c363a4ba7ef6ffa64c09b38fd111b
 ---
 
 {{APIRef("File API")}}{{AvailableInWorkers}}{{Deprecated_Header}}
 
 > **备注：** 此方法已弃用，取而代之的是 {{DOMxRef("FileReader.readAsArrayBuffer","readAsArrayBuffer()")}}。
 
-{{domxref("FileReader")}} 接口的 **`readAsBinaryString()`** 方法用于开始读取指定 {{domxref("Blob")}} 或 {{domxref("File")}} 对象的内容。当读操作完成后，{{domxref("FileReader.readyState","readyState")}} 属性变为 `DONE`，并且 {{domxref("FileReader.loadend_event", "loadend")}} 事件被触发。此时，{{domxref("FileReader.result","result")}} 属性包含来自的原始二进制数据文件。
+{{domxref("FileReader")}} 接口的 **`readAsBinaryString()`** 方法用于开始读取指定 {{domxref("Blob")}} 或 {{domxref("File")}} 对象的内容。当读操作完成后，{{domxref("FileReader.readyState","readyState")}} 属性变为 `DONE`，并且 {{domxref("FileReader/loadend_event", "loadend")}} 事件被触发。此时，{{domxref("FileReader.result","result")}} 属性包含来自的原始二进制数据文件。
 
 请注意，此方法曾经从文件 API 规范中删除，但重新引入以实现向后兼容性。建议使用 {{domxref("FileReader.readAsArrayBuffer()")}}。
 
