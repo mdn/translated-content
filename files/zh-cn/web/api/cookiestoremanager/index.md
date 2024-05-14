@@ -7,16 +7,16 @@ l10n:
 
 {{securecontext_header}}{{APIRef("Cookie Store API")}}{{AvailableInWorkers("window_and_service")}}
 
-{{domxref("Cookie Store API", "", "", "nocode")}} 的 **`CookieStoreManager`** 接口允许 Service Worker 订阅 cookie 变更事件。调用特定的 Service Worker 注册器的 {{domxref("CookieStoreManager.subscribe()","subscribe()")}} 方法接收变更事件。
+{{domxref("Cookie Store API", "", "", 1)}} 的 **`CookieStoreManager`** 接口允许 Service Worker 订阅 cookie 变更事件。调用特定的 Service Worker Registration 的 {{domxref("CookieStoreManager.subscribe()","subscribe()")}} 方法接收变更事件。
 
-`CookieStoreManager` 关联一个的 {{domxref("ServiceWorkerRegistration", "Service Worker 注册器")}}。每个 Service Worker 注册器包含一个 cookie 变更订阅列表，每个订阅都包含名称和 URL。此接口的方法允许 Service Worker 添加和移除订阅，以及获取所有订阅。
+`CookieStoreManager` 关联一个的 {{domxref("ServiceWorkerRegistration", "", "", 1)}}。每个 Service Worker Registration 包含一个 cookie 变更订阅列表，每个订阅都包含名称和 URL。此接口的方法允许 Service Worker 添加和移除订阅，以及获取所有订阅。
 
 调用 {{domxref("ServiceWorkerRegistration.cookies")}} 获取 `CookieStoreManager`。
 
 ## 实例方法
 
 - {{domxref("CookieStoreManager.getSubscriptions()")}}
-  - : 返回一个兑现为此 Service Worker 注册器的 cookie 变更订阅列表的 {{jsxref("Promise")}}。
+  - : 返回一个兑现为此 Service Worker Registration 的 cookie 变更订阅列表的 {{jsxref("Promise")}}。
 - {{domxref("CookieStoreManager.subscribe()")}}
   - : 订阅 cookie 变更。返回一个订阅后兑现为 {{jsxref("undefined")}} 的 {{jsxref("Promise")}}。
 - {{domxref("CookieStoreManager.unsubscribe()")}}
