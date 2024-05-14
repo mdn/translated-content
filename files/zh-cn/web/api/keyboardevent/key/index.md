@@ -3,7 +3,7 @@ title: KeyboardEvent.key
 slug: Web/API/KeyboardEvent/key
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 只读属性 **`KeyboardEvent.key`** 返回用户按下的物理按键的值。它还与 `shiftKey` 等调节性按键的状态和键盘的区域 / 和布局有关。它的值由以下因素决定：
 

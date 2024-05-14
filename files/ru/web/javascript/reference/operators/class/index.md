@@ -70,7 +70,7 @@ NamedFoo.name; // ReferenceError: NamedFoo is not defined
 Foo.name; // "NamedFoo"
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

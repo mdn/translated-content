@@ -62,7 +62,7 @@ function inputFocus() {
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{event("blur")}} event
 - Related event handler: {{domxref("GlobalEventHandlers.onfocus")}}

@@ -3,7 +3,7 @@ title: 键盘事件 KeyboardEvent()
 slug: Web/API/KeyboardEvent/KeyboardEvent
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 **`KeyboardEvent()`** 构造函数新建一个 {{domxref("KeyboardEvent")}} 实例。
 

@@ -50,7 +50,7 @@ The `CSSRule` interface specifies integer constants that can be used in conjunct
 
 An up-to-date informal list of constants can be found on the [CSSWG Wiki](http://wiki.csswg.org/spec/cssom-constants).
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
@@ -58,6 +58,6 @@ An up-to-date informal list of constants can be found on the [CSSWG Wiki](http:/
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [Using dynamic styling information](/ru/docs/Web/Guide/DOM/Using_dynamic_styling_information)

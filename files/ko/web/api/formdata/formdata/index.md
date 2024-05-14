@@ -3,7 +3,9 @@ title: FormData()
 slug: Web/API/FormData/FormData
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{AvailableInWorkers}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 **`FormData()`** 생성자(Constructor)는 새로운 {{domxref("FormData")}}객체를 만듭니다.
 

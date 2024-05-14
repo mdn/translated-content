@@ -23,7 +23,7 @@ xmlDoc.onload = loadXMLData;
 xmlDoc.load("querydata.xml");
 ```
 
-## Спецификация
+## Спецификации
 
 - [DOM Level 3 Load & Save module](http://www.w3.org/TR/DOM-Level-3-LS/load-save.html#LS-DocumentLS)
 

@@ -1,11 +1,13 @@
 ---
 title: 文件系统 API
 slug: Web/API/File_System_API
+l10n:
+  sourceCommit: 2b6bddfe281c0179fbde9c870f9de7c0dc3829e8
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("File System API")}}
+{{securecontext_header}}{{DefaultAPISidebar("File System API")}}{{AvailableInWorkers}}
 
-文件系统 API——以及通过[文件系统访问 API](https://wicg.github.io/file-system-access/)提供的扩展来访问设备文件系统中的文件——允许使用文件读写以及文件管理功能。
+**文件系统 API**（File System API）——以及通过[**文件系统访问 API**（File System Access API）](https://wicg.github.io/file-system-access/)提供的扩展来访问设备文件系统中的文件——允许使用文件读写以及文件管理功能。
 
 ## 概念与用法
 
@@ -40,15 +42,28 @@ slug: Web/API/File_System_API
 ## 接口
 
 - {{domxref("FileSystemHandle")}}
-  - : **`FileSystemHandle`** 接口的对象代表一个条目。多个句柄可以指代同一个条目。大多数情况你都不会直接用到 `FileSystemHandle`，而是会用到它的两个子接口 {{domxref('FileSystemFileHandle')}} 和 {{domxref('FileSystemDirectoryHandle')}}。
+  - : 代表文件或目录条目的对象。多个句柄可以指代同一个条目。大多数情况你都不会直接用到 `FileSystemHandle`，而是会用到它的子接口 {{domxref('FileSystemFileHandle')}} 和 {{domxref('FileSystemDirectoryHandle')}}。
 - {{domxref("FileSystemFileHandle")}}
   - : 提供一个文件系统条目的句柄。
 - {{domxref("FileSystemDirectoryHandle")}}
   - : 提供一个文件系统目录的句柄。
 - {{domxref("FileSystemSyncAccessHandle")}}
-  - : 提供一个文件系统条目的同步句柄，用于在磁盘上原地操作单个文件。其在文件读写上的同步特性可在异步操作开销较大的情景中使关键方法拥有更优秀的性能，例如 [WebAssembly](/zh-CN/docs/WebAssembly)。此类只能在专用于操作[源私有文件系统](#源私有文件系统)上的文件的 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API) 中访问。
+  - : 提供一个文件系统条目的同步句柄，用于在磁盘上原地操作单个文件。其在文件读写上的同步特性可在异步操作开销较大的情景中使关键方法拥有更优秀的性能，例如 [WebAssembly](/zh-CN/docs/WebAssembly)。此类只能在专用于操作[源私有文件系统](#源私有文件系统)上的文件的专用 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API) 中访问。
 - {{domxref("FileSystemWritableFileStream")}}
-  - : 属于 {{domxref('WritableStream')}} 对象，附加了便于操作磁盘上单个文件的方法。
+  - : 一个附加了便于操作磁盘上单个文件的方法的 {{domxref('WritableStream')}} 对象。
+
+### 其他接口的扩展
+
+- {{domxref("Window.showDirectoryPicker()")}}
+  - : 显示允许用户选择目录的目录选择器。
+- {{domxref("Window.showOpenFilePicker()")}}
+  - : 显示允许用户选择一个或多个文件的文件选择器。
+- {{domxref("Window.showSaveFilePicker()")}}
+  - : 显示允许用户保存文件的文件选择器。
+- {{domxref("DataTransferItem.getAsFileSystemHandle()")}}
+  - : 如果拖动的项目是文件，则返回 {{domxref('FileSystemFileHandle')}}；如果拖动的项目是目录，则返回 {{domxref('FileSystemDirectoryHandle')}}。
+- {{domxref("StorageManager.getDirectory()")}}
+  - : 用于获取对 {{domxref("FileSystemDirectoryHandle")}} 对象的引用，该对象允许访问存储在[源私有文件系统](/zh-CN/docs/Web/API/File_System_API/Origin_private_file_system)中的目录及其内容。返回一个由 {{domxref("FileSystemDirectoryHandle")}} 对象兑现的 {{jsxref('Promise')}}。
 
 ## 示例
 
@@ -97,7 +112,7 @@ async function getTheFile() {
 ```js
 const dirName = "directoryToGetName";
 
-// 假设我们已经有一个目录句柄：'currentDirHandle'
+// 假设我们已经有一个目录句柄：“currentDirHandle”
 const subDir = currentDirHandle.getDirectoryHandle(dirName, { create: true });
 ```
 
@@ -220,4 +235,5 @@ onmessage = async (e) => {
 
 ## 参见
 
-- [文件系统访问 API：简化本地文件访问](https://developer.chrome.com/articles/file-system-access/)
+- [文件系统访问 API：简化本地文件访问](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)
+- [源私有文件系统](https://web.dev/articles/origin-private-file-system)

@@ -98,4 +98,4 @@ Results of `NODE_SNAPSHOT` types are snapshots, which are essentially lists of m
 
 - [DOM:document.createExpression](/ja/docs/DOM/document.createExpression)
 - [XPath Code Snippets](/ja/docs/Code_snippets/XPath)
-- [Check for browser support](http://codepen.io/johan/full/ckFgn)
+- [Check for browser support](https://codepen.io/johan/full/ckFgn)

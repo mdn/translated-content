@@ -14121,6 +14121,10 @@
       "Potappo"
     ]
   },
+  "Web/API/Window/isSecureContext": {
+    "modified": "2020-10-15T22:08:54.038Z",
+    "contributors": ["k-kuwahara"]
+  },
   "Web/API/Window/languagechange_event": {
     "modified": "2020-10-15T22:28:08.684Z",
     "contributors": ["mfuji09"]
@@ -14269,6 +14273,10 @@
     "modified": "2020-10-15T21:52:18.082Z",
     "contributors": ["mfuji09", "fscholz", "shuuji3"]
   },
+  "Web/API/Window/origin": {
+    "modified": "2020-10-15T22:08:52.985Z",
+    "contributors": ["k-kuwahara"]
+  },
   "Web/API/Window/outerHeight": {
     "modified": "2020-10-15T21:16:37.970Z",
     "contributors": [
@@ -14304,6 +14312,10 @@
   "Web/API/Window/paste_event": {
     "modified": "2020-10-15T22:27:22.823Z",
     "contributors": ["mfuji09"]
+  },
+  "Web/API/Window/performance": {
+    "modified": "2020-10-15T22:08:48.553Z",
+    "contributors": ["silverskyvicto"]
   },
   "Web/API/Window/personalbar": {
     "modified": "2019-03-23T23:50:07.790Z",
@@ -15183,18 +15195,6 @@
       "Piroro-hs",
       "chikoski"
     ]
-  },
-  "Web/API/isSecureContext": {
-    "modified": "2020-10-15T22:08:54.038Z",
-    "contributors": ["k-kuwahara"]
-  },
-  "Web/API/origin": {
-    "modified": "2020-10-15T22:08:52.985Z",
-    "contributors": ["k-kuwahara"]
-  },
-  "Web/API/performance_property": {
-    "modified": "2020-10-15T22:08:48.553Z",
-    "contributors": ["silverskyvicto"]
   },
   "Web/API/setInterval": {
     "modified": "2020-10-15T21:15:06.280Z",

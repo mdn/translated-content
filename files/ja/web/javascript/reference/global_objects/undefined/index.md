@@ -123,4 +123,4 @@ if (y === void 0) {
 ## 関連情報
 
 - JavaScript の {{Glossary("Primitive", "プリミティブ型")}}
-- {{jsxref("null")}}
+- [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null)

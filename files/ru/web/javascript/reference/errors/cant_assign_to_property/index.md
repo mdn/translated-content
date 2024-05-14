@@ -45,7 +45,7 @@ var foo = new String("my string");
 foo.bar = {};
 ```
 
-## See also
+## Смотрите также
 
 - {{jsxref("Strict_mode")}}
 - [primitive](/ru/docs/Glossary/primitive)

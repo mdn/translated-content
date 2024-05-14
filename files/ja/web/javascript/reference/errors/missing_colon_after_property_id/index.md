@@ -57,7 +57,7 @@ var obj = { propertyKey; };
 // SyntaxError: missing : after property id
 ```
 
-値がないプロパティを定義する必要がある場合、値として {{jsxref("null")}} を使用することができます。
+値がないプロパティを定義する必要がある場合、値として [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) を使用することができます。
 
 ```js example-good
 var obj = { propertyKey: null };

@@ -3,7 +3,9 @@ title: FormData.entries()
 slug: Web/API/FormData/entries
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{AvailableInWorkers}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 **`FormData.entries()`** 메서드는 이 객체에 포함된 모든 key/value 쌍을 통과하는 {{jsxref("Iteration_protocols",'iterator')}} 를 반환합니다. 각 쌍의 key는 {{domxref("USVString")}} 객체입니다; value는 {{domxref("USVString")}} 또는 {{domxref("Blob")}} 중 하나입니다.
 

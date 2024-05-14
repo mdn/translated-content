@@ -27,24 +27,28 @@ Cross-Origin-Embedder-Policy: unsafe-none | require-corp
 
 ## 示例
 
-### 某些功能取决于跨域隔离
+### 某些功能取决于跨源隔离
 
-为了节省时间你可以只接受类似于{{jsxref("SharedArrayBuffer")}} 或者 {{domxref("Performance.now()")}} 对象，只要你的文档有一个值被设置为`require-corp` 的 COEP 头部。
+为了节省时间你可以只接受类似于 {{jsxref("SharedArrayBuffer")}} 或者 {{domxref("Performance.now()")}} 对象，只要你的文档有一个值被设置为 `require-corp` 的 COEP 标头。
 
-```plain
+```http
 Cross-Origin-Embedder-Policy: require-corp
 Cross-Origin-Opener-Policy: same-origin
 ```
 
-你可以看看这个头部 {{HTTPHeader("Cross-Origin-Opener-Policy")}} ，这样你设置起来会做的更好。
+你还需要设置的另一个标头：{{HTTPHeader("Cross-Origin-Opener-Policy")}}。
 
-检查 cross origin isolation 是否成功，你可以再次测试[`crossOriginIsolated`](/zh-CN/docs/Web/API/crossOriginIsolated) 这个属性 是否对窗口和工作的上下文有效：
+为了验证跨源隔离是否生效，你可以测试窗口和 worker 上下文中的 {{domxref("Window.crossOriginIsolated")}} 或 {{domxref("WorkerGlobalScope.crossOriginIsolated")}} 属性：
 
 ```js
+const myWorker = new Worker("worker.js");
+
 if (crossOriginIsolated) {
-  // Post SharedArrayBuffer
+  const buffer = new SharedArrayBuffer(16);
+  myWorker.postMessage(buffer);
 } else {
-  // Do something else
+  const buffer = new ArrayBuffer(16);
+  myWorker.postMessage(buffer);
 }
 ```
 

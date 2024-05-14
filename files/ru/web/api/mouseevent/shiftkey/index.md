@@ -3,7 +3,7 @@ title: MouseEvent.shiftKey
 slug: Web/API/MouseEvent/shiftKey
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 **`MouseEvent.shiftKey`** атрибут только для чтения , который указывает была ли нажата клавиша <kbd>shift</kbd> . Возвращает (`true`) если нажата <kbd>shift</kbd>, (`false`) если нет.
 
@@ -45,7 +45,7 @@ function showChar(e){
 </html>
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

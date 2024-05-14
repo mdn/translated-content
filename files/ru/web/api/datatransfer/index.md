@@ -302,6 +302,6 @@ Holds a list of the format types of the data that is stored for an item at the s
 - `index`
   - : The index of the data for which to retrieve the types.
 
-## See also
+## Смотрите также
 
 [Drag and Drop](/En/DragDrop/Drag_and_Drop)

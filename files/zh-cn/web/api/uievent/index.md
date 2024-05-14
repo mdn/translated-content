@@ -3,7 +3,7 @@ title: UIEvent
 slug: Web/API/UIEvent
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 `UIEvent` 接口表示简单的用户界面事件。
 

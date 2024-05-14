@@ -1,7 +1,6 @@
 ---
 title: Прямая и обратная обработка XML
 slug: Web/XML/Parsing_and_serializing_XML
-original_slug: Web/Guide/Parsing_and_serializing_XML
 ---
 
 Иногда возникает необходимость в обработке {{Glossary("XML")}} и в последующей конвертации в древо {{Glossary("DOM")}}. Или наоборот, необходимо перевести древо DOM в XML. В этой статье рассмотрим объекты платформы web для обработки XML.
@@ -93,7 +92,7 @@ var docHTML = document.documentElement.innerHTML;
 var docHTML = document.documentElement.outerHTML;
 ```
 
-## See also
+## Смотрите также
 
 - [XPath](/en/XPath)
 - {{domxref("XMLHttpRequest")}}

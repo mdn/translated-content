@@ -25,7 +25,7 @@ document.forms["myform"].addEventListener('submit', function() {
 }, false);
 ```
 
-## Спецификация
+## Спецификации
 
 [HTML 5.1 Forms: The Constraint Validation API](http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-constraint-validation-api)
 

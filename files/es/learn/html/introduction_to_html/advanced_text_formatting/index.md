@@ -336,7 +336,7 @@ Las citas se escriben en cursiva de forma predeterminada.
 Las fuentes de citación que necesitas son:
 
 - `http://www.brainyquote.com/quotes/authors/c/confucius.html` para la citas de Confucio
-- `http://www.affirmationsforpositivethinking.com` para "La necesidad de eliminar el diálogo interno negativo".
+- `https://example.com/affirmationsforpositivethinking` para "La necesidad de eliminar el diálogo interno negativo".
 
 Si cometes un error, siempre puedes restablecer el código anterior pulsando el botón _Restablecer_. Si te quedas realmente encallado, pulsa el botón _Mostrar solución_ para ver una buena propuesta.
 
@@ -417,7 +417,7 @@ solution.addEventListener("click", function () {
 });
 
 const htmlSolution =
-  '<p>Hola y bienvenido a mi página de motivación. Como dice <a href="http://www.brainyquote.com/quotes/authors/c/confucius.html"><cite>el sitio de citas de Confucio:</cite></a>:</p>\n\n<blockquote cite="http://www.brainyquote.com/quotes/authors/c/confucius.html">\n<p>No importa qué tan lento vayas siempre que no te detengas.</p>\n</blockquote>\n\n<p>También me encanta el concepto de pensamiento positivo y <q cite="http://www.affirmationsforpositivethinking.com">La necesidad de eliminar el diálogo interno negativo</q> (como se menciona en <a href="http://www.affirmationsforpositivethinking.com"><cite>Afirmaciones para el pensamiento positivo</cite></a>).</p>';
+  '<p>Hola y bienvenido a mi página de motivación. Como dice <a href="https://www.brainyquote.com/quotes/authors/c/confucius.html"><cite>el sitio de citas de Confucio:</cite></a>:</p>\n\n<blockquote cite="https://www.brainyquote.com/quotes/authors/c/confucius.html">\n<p>No importa qué tan lento vayas siempre que no te detengas.</p>\n</blockquote>\n\n<p>También me encanta el concepto de pensamiento positivo y <q cite="https://example.com/affirmationsforpositivethinking">La necesidad de eliminar el diálogo interno negativo</q> (como se menciona en <a href="https://example.com/affirmationsforpositivethinking"><cite>Afirmaciones para el pensamiento positivo</cite></a>).</p>';
 const solutionEntry = htmlSolution;
 
 textarea.addEventListener("input", updateCode);

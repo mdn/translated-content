@@ -23,7 +23,7 @@ dataTransfer.files;
 
 这个接口有两个实例：
 
-- 只针对 Firfox: <http://jsfiddle.net/9C2EF/>
+- 只针对 Firfox: <https://jsfiddle.net/9C2EF/>
 - 所有浏览器：[https://jsbin.com/hiqasek/](https://jsbin.com/hiqasek/edit?html,js,output)
 
 ## 规范
