@@ -39,7 +39,7 @@ requestIdleCallback(callback, options)
 
 Посмотрите наш [готовый пример](/ru/docs/Web/API/Background_Tasks_API#example) в статье [Cooperative Scheduling of Background Tasks API](/ru/docs/Web/API/Background_Tasks_API).
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

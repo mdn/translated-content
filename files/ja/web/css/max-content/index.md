@@ -2,12 +2,12 @@
 title: max-content
 slug: Web/CSS/max-content
 l10n:
-  sourceCommit: 5de665ecf1b9cea79dbed8d1c22c496e6f5950c9
+  sourceCommit: 726f971467b4cdd339e29ee10403fce5b3e87f42
 ---
 
 {{CSSRef}}
 
-`max-content` は大きさのキーワードで、コンテンツの内在的な最大幅や高さを表します。テキストコンテンツの場合、これはオーバーフローが発生しても、コンテンツがまったく折り返されないことを意味します。
+`max-content` は大きさのキーワードで、コンテンツの{{glossary("intrinsic size", "内在的な")}}最大幅や高さを表します。テキストコンテンツの場合、これはオーバーフローが発生しても、コンテンツがまったく折り返されないことを意味します。
 
 ## 構文
 
@@ -105,3 +105,4 @@ grid-template-columns: 200px 1fr max-content;
 ## 関連情報
 
 - 関連する大きさのキーワード: {{cssxref("min-content")}}, {{cssxref("fit-content")}}
+- [CSS ボックスサイズ](/ja/docs/Web/CSS/CSS_box_sizing)モジュール

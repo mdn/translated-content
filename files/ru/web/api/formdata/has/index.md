@@ -42,7 +42,7 @@ formData.append("username", "Chris");
 formData.has("username"); // Returns true
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

@@ -24,7 +24,7 @@ if (stylesheet.disabled) {
 }
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

@@ -57,7 +57,7 @@ blockquote {
 }
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

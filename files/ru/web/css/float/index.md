@@ -116,7 +116,7 @@ p.withRedBoxes {
 
 > **Примечание:** Setting `overflow` to `scroll` will also contain any floated child elements, but will show scrollbars no matter the height of the content. Here we're setting `height` to `auto` even though that's the default to indicate that the container should grow to accommodate its content.
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

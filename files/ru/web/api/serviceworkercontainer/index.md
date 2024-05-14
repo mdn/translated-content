@@ -72,7 +72,7 @@ if ("serviceWorker" in navigator) {
 }
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

@@ -49,7 +49,7 @@ var intersectionObserver = new IntersectionObserver(function (entries) {
 intersectionObserver.observe(document.querySelector(".scrollerFooter"));
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

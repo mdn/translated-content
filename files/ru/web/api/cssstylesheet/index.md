@@ -56,7 +56,7 @@ A (possibly incomplete) list of ways a style sheet can be associated with a docu
 | HTTP Link Header                                                              | Yes                                     | _N/A_                                                       | N/A                                                                                                | N/A                                                    |
 | User agent (default) style sheets                                             | No                                      | N/A                                                         | N/A                                                                                                | N/A                                                    |
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

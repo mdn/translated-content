@@ -5,7 +5,7 @@ slug: Web/HTML/Element/legend
 
 {{HTMLSidebar}}
 
-**HTML-элемент `<legend>`** представляет собой заголовок содержания родительского элемента {{HTMLElement("fieldset")}}.
+HTML-элемент **`<legend>`** представляет собой заголовок содержания родительского элемента {{HTMLElement("fieldset")}}.
 
 {{EmbedInteractiveExample("pages/tabbed/legend.html", "tabbed-standard")}}
 
