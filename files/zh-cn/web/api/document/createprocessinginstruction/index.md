@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("DOM")}}
 
-`createProcessingInstruction()` 生成新的 [processing instruction](/zh-CN/docs/Web/API/ProcessingInstruction) 节点并返回。
+`createProcessingInstruction()` 生成新的[处理指令](/zh-CN/docs/Web/API/ProcessingInstruction)节点并返回。
 
 新节点通常会被插入 XML 文档，以便完成任何操作，例如 {{ domxref("node.insertBefore") }}。
 
