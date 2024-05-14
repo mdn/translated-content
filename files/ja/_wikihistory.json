@@ -30165,14 +30165,6 @@
     "modified": "2020-07-17T23:22:13.809Z",
     "contributors": ["papparapa", "silverskyvicto"]
   },
-  "conflicting/Glossary/CORS-safelisted_request_header": {
-    "modified": "2020-08-11T15:13:18.407Z",
-    "contributors": ["mfuji09"]
-  },
-  "conflicting/Glossary/CORS-safelisted_response_header": {
-    "modified": "2019-08-11T03:51:18.097Z",
-    "contributors": ["mfuji09", "silverskyvicto"]
-  },
   "conflicting/Learn/JavaScript/Client-side_web_APIs/Fetching_data": {
     "modified": "2020-08-12T11:49:11.332Z",
     "contributors": [
