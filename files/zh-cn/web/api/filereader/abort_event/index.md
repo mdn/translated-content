@@ -2,7 +2,7 @@
 title: FileReader：abort 事件
 slug: Web/API/FileReader/abort_event
 l10n:
-  sourceCommit: 497d322c61511b11e4877a77660f8d7b394a8277
+  sourceCommit: e43bfd9b4a6c363a4ba7ef6ffa64c09b38fd111b
 ---
 
 {{APIRef("File API")}}{{AvailableInWorkers}}
