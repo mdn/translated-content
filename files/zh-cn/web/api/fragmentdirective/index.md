@@ -7,7 +7,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-**`FragmentDirective`** 接口是用于特性检测的对象，即用来判断浏览器是否支持文本片段。
+**`FragmentDirective`** 接口是用于特征检测的对象，即用来判断浏览器是否支持文本片段。
 
 可通过 {{domxref("Document.fragmentDirective")}} 属性访问。
 
