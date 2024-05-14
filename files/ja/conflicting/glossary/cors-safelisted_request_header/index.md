@@ -1,6 +1,7 @@
 ---
 title: Simple header (単純ヘッダー)
-slug: Glossary/Simple_header
+slug: conflicting/Glossary/CORS-safelisted_request_header
+original_slug: Glossary/Simple_header
 ---
 
 {{GlossarySidebar}}

@@ -1349,6 +1349,8 @@
 /ja/docs/Glossary/Scrollport	/ja/docs/Glossary/Scroll_container
 /ja/docs/Glossary/Signature/セキュリティ	/ja/docs/Glossary/Signature/Security
 /ja/docs/Glossary/Signature/関数	/ja/docs/Glossary/Signature/Function
+/ja/docs/Glossary/Simple_header	/ja/docs/conflicting/Glossary/CORS-safelisted_request_header
+/ja/docs/Glossary/Simple_response_header	/ja/docs/conflicting/Glossary/CORS-safelisted_response_header
 /ja/docs/Glossary/Symbol	/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol
 /ja/docs/Glossary/Transferable_objects	/ja/docs/Web/API/Web_Workers_API/Transferable_objects
 /ja/docs/Glossary/XHR_(XMLHttpRequest)	/ja/docs/Glossary/XMLHttpRequest
