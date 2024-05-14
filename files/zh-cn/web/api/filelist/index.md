@@ -21,7 +21,7 @@ l10n:
 const file = document.getElementById("fileItem").files[0];
 ```
 
-> **备注：** 此接口是[尝试创建不可修改的列表](https://stackoverflow.com/questions/74630989/why-use-domstringlist-rather-than-an-array/74641156#74641156)，并且仅因为避免破坏已经在使用它的代码而继续受支持。现代 API 使用围绕 ECMAScript 数组类型的类型，因此你可以像 ECMAScript 数组一样对待它们，同时对其使用施加额外的语义（例如使其项目只读）。
+> **备注：** 此接口的出现是[对创建不可修改列表的一次尝试](https://stackoverflow.com/questions/74630989/why-use-domstringlist-rather-than-an-array/74641156#74641156)，并且仅是出于避免破坏已经在使用它的代码而继续受到支持。现代 API 使用围绕 ECMAScript 数组类型的类型，因此你可以像 ECMAScript 数组一样对待它们，同时对其使用施加额外的语义（例如使其项目只读）。
 
 ## 实例属性
 
