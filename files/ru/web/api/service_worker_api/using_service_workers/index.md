@@ -42,9 +42,15 @@ slug: Web/API/Service_Worker_API/Using_Service_Workers
 
 ![Диаграмма жизненного цикла](sw-lifecycle.svg)
 
-Следующий рисунок кратко показывает доступные события Service Worker:
+Следующий список показывает доступные события Service Worker:
 
-![install, activate, message, fetch, sync, push](sw-events.png)
+- {{domxref("ServiceWorkerGlobalScope/install_event", "install")}}
+- {{domxref("ServiceWorkerGlobalScope/activate_event", "activate")}}
+- {{domxref("ServiceWorkerGlobalScope/message_event", "message")}}
+- Функциональные события:
+  - {{domxref("ServiceWorkerGlobalScope/fetch_event", "fetch")}}
+  - {{domxref("ServiceWorkerGlobalScope/sync_event", "sync")}}
+  - {{domxref("ServiceWorkerGlobalScope/push_event", "push")}}
 
 ### Промисы
 
