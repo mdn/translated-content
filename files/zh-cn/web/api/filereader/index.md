@@ -2,7 +2,7 @@
 title: FileReader
 slug: Web/API/FileReader
 l10n:
-  sourceCommit: df3ef3c53cb04854ee2dec538b677218b1a10c3c
+  sourceCommit: e43bfd9b4a6c363a4ba7ef6ffa64c09b38fd111b
 ---
 
 {{APIRef("File API")}}{{AvailableInWorkers}}
