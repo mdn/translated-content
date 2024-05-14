@@ -5,7 +5,6 @@ slug: Web/CSS/:nth-child
 
 {{CSSRef}}
 
-
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:nth-child()`** permet de cibler les éléments en ce basant sur l'indice des éléments dans la liste des enfants de leur parent. Autrement dit, un sélecteur utilisant cette pseudo-classe permettra de cibler les éléments fils d'un élément dont les positions correspondent au motif.
 
 ```css
