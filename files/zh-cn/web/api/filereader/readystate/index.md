@@ -2,22 +2,23 @@
 title: FileReader：readyState 属性
 slug: Web/API/FileReader/readyState
 l10n:
-  sourceCommit: 497d322c61511b11e4877a77660f8d7b394a8277
+  sourceCommit: 541c4d10b9a1fb1c3400087f2514cd7358f4298f
 ---
 
 {{APIRef("File API")}}{{AvailableInWorkers}}
 
-{{domxref("FileReader")}} 接口的 **`readyState`** 只读属性提供 `FileReader` 所在读取操作的当前状态。`FileReader` 存在以下之一的状态：
-
-| 值  | 状态      | 描述                                                                                                                                                                             |
-| --- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `0` | `EMPTY`   | reader 已经创建。还没有调用任何读取方法。                                                                                                                                        |
-| `1` | `LOADING` | 已调用读取方法。正在读取 {{domxref("File")}} 或 {{domxref("Blob")}}，尚未发生错误。                                                                                              |
-| `2` | `DONE`    | 读取操作完成。这可能意味着：整个 {{domxref("File")}} 或 {{domxref("Blob")}} 已读入内存，发生文件读取错误，或 {{domxref("FileReader.abort()", "abort()")}} 被调用并且读取被取消。 |
+{{domxref("FileReader")}} 接口的 **`readyState`** 只读属性提供读取操作的当前状态。这将是以下状态之一：`EMPTY`、`LOADING` 或 `DONE`。
 
 ## 值
 
 一个数值，是 {{domxref("FileReader")}} API 定义的三个可能状态的常量之一。
+
+- `FileReader.EMPTY`
+  - : Reader 已创建，但尚未调用任何读取方法。
+- `FileReader.LOADING`
+  - : 已调用读取方法。正在读取 {{domxref("File")}} 或 {{domxref("Blob")}}，尚未发生错误。
+- `FileReader.DONE`
+  - : 读取操作完成。这可能意味着：整个 {{domxref("File")}} 或 {{domxref("Blob")}} 已读入内存，发生文件读取错误，或 {{domxref("FileReader.abort()", "abort()")}} 被调用并且读取被取消。
 
 ## 示例
 
