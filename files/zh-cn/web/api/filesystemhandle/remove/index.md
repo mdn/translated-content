@@ -2,7 +2,7 @@
 title: FileSystemHandle：remove() 方法
 slug: Web/API/FileSystemHandle/remove
 l10n:
-  sourceCommit: f10fbe2d2dc4857bf29ce955689a7ba7c1ffac8b
+  sourceCommit: be3c45cd7a4d5c04139eceae10f7368251cdca64
 ---
 
 {{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Non-standard_header}}
@@ -80,7 +80,6 @@ async function deleteFile(e) {
 
 ## 规范
 
-This feature is not part of any specification, but may become standard in the future. See [_whatwg/fs#9_](https://github.com/whatwg/fs/pull/9) for the detail.
 此特性不属于任何规范的一部分，但将来可能会成为标准。有关详细信息，请参阅 [_whatwg/fs#9_](https://github.com/whatwg/fs/pull/9)。
 
 ## 浏览器兼容性

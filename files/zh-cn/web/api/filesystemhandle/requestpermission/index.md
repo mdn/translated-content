@@ -2,7 +2,7 @@
 title: FileSystemHandle：requestPermission() 方法
 slug: Web/API/FileSystemHandle/requestPermission
 l10n:
-  sourceCommit: f10fbe2d2dc4857bf29ce955689a7ba7c1ffac8b
+  sourceCommit: be3c45cd7a4d5c04139eceae10f7368251cdca64
 ---
 
 {{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
