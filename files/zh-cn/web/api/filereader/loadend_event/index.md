@@ -1,20 +1,19 @@
 ---
-title: "FileReader: loadend event"
-short-title: loadend
+title: FileReader：loadend 事件
 slug: Web/API/FileReader/loadend_event
-page-type: web-api-event
-browser-compat: api.FileReader.loadend_event
+l10n:
+  sourceCommit: e43bfd9b4a6c363a4ba7ef6ffa64c09b38fd111b
 ---
 
 {{APIRef("File API")}}{{AvailableInWorkers}}
 
-The **`loadend`** event of the {{domxref("FileReader")}} interface is fired when a file read has completed, successfully or not.
+{{domxref("FileReader")}} 接口的 **`loadend`** 事件在文件读取完成（无论成功与否）时触发。
 
-This event is not cancelable and does not bubble.
+此事件不可取消且不会冒泡。
 
-## Syntax
+## 语法
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中使用事件名称，或设置事件处理器属性。
 
 ```js
 addEventListener("loadend", (event) => {});
@@ -22,33 +21,33 @@ addEventListener("loadend", (event) => {});
 onloadend = (event) => {};
 ```
 
-## Event type
+## 事件类型
 
-A {{domxref("ProgressEvent")}}. Inherits from {{domxref("Event")}}.
+{{domxref("ProgressEvent")}}。继承自 {{domxref("Event")}}。
 
 {{InheritanceDiagram("ProgressEvent")}}
 
-## Event properties
+## 事件属性
 
-_Also inherits properties from its parent {{domxref("Event")}}_.
+_还继承其父级 {{domxref("Event")}} 的属性。_
 
 - {{domxref("ProgressEvent.lengthComputable")}} {{ReadOnlyInline}}
-  - : A boolean flag indicating if the total work to be done, and the amount of work already done, by the underlying process is calculable. In other words, it tells if the progress is measurable or not.
+  - : 一个布尔标志，指示底层进程要完成的总工作量以及已完成的工作量是否可计算。换句话说，它表明进展是否可衡量。
 - {{domxref("ProgressEvent.loaded")}} {{ReadOnlyInline}}
-  - : A 64-bit unsigned integer value indicating the amount of work already performed by the underlying process. The ratio of work done can be calculated by dividing `total` by the value of this property. When downloading a resource using HTTP, this only counts the body of the HTTP message, and doesn't include headers and other overhead.
+  - : 一个 64 位无符号整数值，指示底层进程已执行的工作量。完成工作的比率可以通过将 `total` 除以该属性的值来计算。使用 HTTP 下载资源时，仅计算 HTTP 消息的正文，不包括标头和其他开销。
 - {{domxref("ProgressEvent.total")}} {{ReadOnlyInline}}
-  - : A 64-bit unsigned integer representing the total amount of work that the underlying process is in the progress of performing. When downloading a resource using HTTP, this is the `Content-Length` (the size of the body of the message), and doesn't include the headers and other overhead.
+  - : 一个 64 位无符号整数，表示底层进程正在执行的工作总量。使用 HTTP 下载资源时，这是 `Content-Length`（消息正文的大小），不包括标头和其他开销。
 
-## Examples
+## 示例
 
-### Live example
+### 实时示例
 
 #### HTML
 
 ```html
 <div class="example">
   <div class="file-select">
-    <label for="avatar">Choose a profile picture:</label>
+    <label for="avatar">选择个人资料图片：</label>
     <input
       type="file"
       id="avatar"
@@ -56,10 +55,10 @@ _Also inherits properties from its parent {{domxref("Event")}}_.
       accept="image/png, image/jpeg" />
   </div>
 
-  <img src="" class="preview" height="200" alt="Image preview" />
+  <img src="" class="preview" height="200" alt="图片预览" />
 
   <div class="event-log">
-    <label for="eventLog">Event log:</label>
+    <label for="eventLog">事件日志：</label>
     <textarea readonly class="event-log-contents" id="eventLog"></textarea>
   </div>
 </div>
@@ -112,7 +111,7 @@ const eventLog = document.querySelector(".event-log-contents");
 const reader = new FileReader();
 
 function handleEvent(event) {
-  eventLog.textContent += `${event.type}: ${event.loaded} bytes transferred\n`;
+  eventLog.textContent += `${event.type}: ${event.loaded} 传输的字节数\n`;
 
   if (event.type === "load") {
     preview.src = reader.result;
@@ -140,18 +139,18 @@ function handleSelected(e) {
 fileInput.addEventListener("change", handleSelected);
 ```
 
-#### Result
+#### 结果
 
-{{ EmbedLiveSample('Live_example', '100%', '300px') }}
+{{ EmbedLiveSample('实时示例', '100%', '300px') }}
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- Related events: {{domxref("FileReader.loadstart_event", "loadstart")}}, {{domxref("FileReader.load_event", "load")}}, {{domxref("FileReader.progress_event", "progress")}}, {{domxref("FileReader.error_event", "error")}}, {{domxref("FileReader.abort_event", "abort")}}
+- 相关事件：{{domxref("FileReader.loadstart_event", "loadstart")}}、{{domxref("FileReader.load_event", "load")}}、{{domxref("FileReader.progress_event", "progress")}}、{{domxref("FileReader.error_event", "error")}}、{{domxref("FileReader.abort_event", "abort")}}
