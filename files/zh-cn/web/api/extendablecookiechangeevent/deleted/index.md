@@ -7,7 +7,7 @@ l10n:
 
 {{securecontext_header}}{{APIRef("Cookie Store API")}}{{AvailableInWorkers("service")}}
 
-{{domxref("ExtendableCookieChangeEvent")}} 接口的只读属性 **`deleted`** 返回给定 `ExtendableCookieChangeEvent` 实例已删除的 cookie。
+{{domxref("ExtendableCookieChangeEvent")}} 接口的 **`deleted`** 只读属性返回给定 `ExtendableCookieChangeEvent` 实例已删除的 cookie。
 
 ## 值
 
@@ -37,7 +37,7 @@ l10n:
       - : Cookie 将被发送至所有上下文。
 
 - `partitioned`
-  - : 一个布尔值，表示 cookie 是否是分区 cookie（`true`）或（`false`）。更多信息请参阅 [具有独立分区状态的 Cookie（CHIPS）](/zh-CN/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies)。
+  - : 一个布尔值，表示 cookie 是否是分区 cookie（`true`）或（`false`）。更多信息请参阅[具有独立分区状态的 Cookie（CHIPS）](/zh-CN/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies)。
 
 ## 示例
 
