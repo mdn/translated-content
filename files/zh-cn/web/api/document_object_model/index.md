@@ -85,9 +85,7 @@ HTML DOM API 提供了对各种浏览器特性的访问，如标签和窗口、C
 
 ## SVG DOM
 
-同样，包含 SVG 的文档也通过 {{DOMxRef("Document")}} 接口来描述，接口由 SVG 规范扩展，包含了各种 SVG 特有的特性。
-
-特别是 {{domxref("Element")}} 接口被增强为 {{domxref("SVGElement")}} 和各种子类，每个子类代表一个（或一系列密切相关的）元素。这些接口将在 [SVG API](/zh-CN/docs/Web/API/SVG_API) 文档中进一步讨论。
+同样，包含 SVG 的文档也通过 {{DOMxRef("Document")}} 接口来描述，接口由 SVG 规范扩展，包含了各种 SVG 特有的特性。特别是 {{domxref("Element")}} 接口被增强为 {{domxref("SVGElement")}} 和各种子类，每个子类代表一个（或一系列密切相关的）元素。这些接口将在 [SVG API](/zh-CN/docs/Web/API/SVG_API) 文档中进一步讨论。
 
 ## 规范
 
