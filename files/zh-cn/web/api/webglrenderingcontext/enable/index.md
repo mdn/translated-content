@@ -22,16 +22,16 @@ enable(cap)
   - : 一个指定要启用的 WebGL 的功能的 {{domxref("WebGL_API/Types", "GLenum")}}。可能的值有：
 
     | 常量                          | 描述                                                                                              |
-    | ----------------------------- | ------------------------------------------------------------------------------------------------- |
-    | `gl.BLEND`                    | 激活片元的颜色融合计算。参见 {{domxref("WebGLRenderingContext.blendFunc()")}}。                   |
-    | `gl.CULL_FACE`                | 激活多边形的面剔除。参见 {{domxref("WebGLRenderingContext.cullFace()")}}。                        |
-    | `gl.DEPTH_TEST`               | 激活深度比较，并更新深度缓冲区。参见 {{domxref("WebGLRenderingContext.depthFunc()")}}。           |
-    | `gl.DITHER`                   | 激活在写入颜色缓冲区之前，抖动颜色成分。                                                          |
-    | `gl.POLYGON_OFFSET_FILL`      | 激活添加多边形片段的深度值偏移。参见 {{domxref("WebGLRenderingContext.polygonOffset()")}}。       |
-    | `gl.SAMPLE_ALPHA_TO_COVERAGE` | 激活通过 alpha 值确定临时掩模的计算。                                                             |
-    | `gl.SAMPLE_COVERAGE`          | 激活片段掩模与临时掩模的与运算。参见 {{domxref("WebGLRenderingContext.sampleCoverage()")}}。      |
-    | `gl.SCISSOR_TEST`             | 激活剪裁测试，即丢弃在剪裁矩形范围外的片段。参见 {{domxref("WebGLRenderingContext.scissor()")}}。 |
-    | `gl.STENCIL_TEST`             | 激活模板测试并更新模板缓冲区。参见 {{domxref("WebGLRenderingContext.stencilFunc()")}}。           |
+| ----------------------------- | ------------------------------------------------------------------------------------------------- |
+| `gl.BLEND`                    | 激活片元的颜色融合计算。参见 {{domxref("WebGLRenderingContext.blendFunc()")}}。                   |
+| `gl.CULL_FACE`                | 激活多边形的面剔除。参见 {{domxref("WebGLRenderingContext.cullFace()")}}。                        |
+| `gl.DEPTH_TEST`               | 激活深度比较，并更新深度缓冲区。参见 {{domxref("WebGLRenderingContext.depthFunc()")}}。           |
+| `gl.DITHER`                   | 激活在写入颜色缓冲区之前，抖动颜色成分。                                                          |
+| `gl.POLYGON_OFFSET_FILL`      | 激活添加多边形片段的深度值偏移。参见 {{domxref("WebGLRenderingContext.polygonOffset()")}}。       |
+| `gl.SAMPLE_ALPHA_TO_COVERAGE` | 激活通过 alpha 值确定临时掩模的计算。                                                             |
+| `gl.SAMPLE_COVERAGE`          | 激活片段掩模与临时掩模的与运算。参见 {{domxref("WebGLRenderingContext.sampleCoverage()")}}。      |
+| `gl.SCISSOR_TEST`             | 激活剪裁测试，即丢弃在剪裁矩形范围外的片段。参见 {{domxref("WebGLRenderingContext.scissor()")}}。 |
+| `gl.STENCIL_TEST`             | 激活模板测试并更新模板缓冲区。参见 {{domxref("WebGLRenderingContext.stencilFunc()")}}。           |
 
     当使用 {{domxref("WebGL2RenderingContext", "WebGL 2 上下文", "", 1)}}时，还可以使用以下值：
 
