@@ -30,7 +30,7 @@ getSubscriptions()
 
 ## 示例
 
-如果注册器所指示的 {{domxref("ServiceWorkerRegistration")}} 订阅了任何 cookie 变更事件，`subscriptions` 将兑现为包含这些 cookie 的名称和 URL 的对象列表。
+如果注册（`registration`）所指示的 {{domxref("ServiceWorkerRegistration")}} 订阅了任何 cookie 变更事件，`subscriptions` 将兑现为包含这些 cookie 的名称和 URL 的对象列表。
 
 ```js
 const subscriptions = await self.registration.cookies.getSubscriptions();
