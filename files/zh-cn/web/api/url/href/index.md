@@ -19,7 +19,7 @@ l10n:
 const url = new URL(
   "https://developer.mozilla.org/zh-CN/docs/Web/API/URL/href",
 );
-console.log(url.href); // 输出：'https://developer.mozilla.org/en-US/docs/Web/API/URL/href'
+console.log(url.href); // 输出：'https://developer.mozilla.org/zh-CN/docs/Web/API/URL/href'
 ```
 
 ## 规范
