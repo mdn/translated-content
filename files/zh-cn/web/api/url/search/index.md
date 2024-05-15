@@ -1,5 +1,5 @@
 ---
-title: "URL：search 属性"
+title: URL：search 属性
 slug: Web/API/URL/search
 l10n:
   sourceCommit: 4de6f76bbfd76229db78ffb7d52cf6b4cb9f31f8
