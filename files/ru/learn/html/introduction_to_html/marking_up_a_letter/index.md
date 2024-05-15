@@ -13,7 +13,7 @@ slug: Learn/HTML/Introduction_to_HTML/Marking_up_a_letter
 
 ## Отправная точка
 
-Для начала задания, вы должны [скачать текст](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/marking-up-a-letter-start/letter-text.txt), который вам надо отформатировать, и [CSS стиль](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/marking-up-a-letter-start/css.txt), который вы должны подключить к вашему HTML. Создайте .html файл используя текстовый редактор, которым вы пользуетесь (или воспользуйтесь онлайн редакторами, таким как [JSBin](http://jsbin.com/) или [Thimble](https://thimble.mozilla.org/)).
+Для начала задания, вы должны [скачать текст](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/marking-up-a-letter-start/letter-text.txt), который вам надо отформатировать, и [CSS стиль](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/marking-up-a-letter-start/css.txt), который вы должны подключить к вашему HTML. Создайте .html файл используя текстовый редактор, которым вы пользуетесь (или воспользуйтесь онлайн редакторами, такими как [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) или [Glitch](https://glitch.com/)).
 
 ## Описание проекта
 

@@ -18,7 +18,7 @@ slug: Learn/CSS/Styling_text/Typesetting_a_homepage
 - Перейти и взять файлы [HTML](https://github.com/mdn/learning-area/blob/master/css/styling-text/typesetting-a-homepage-start/index.html) и [CSS](https://github.com/mdn/learning-area/blob/master/css/styling-text/typesetting-a-homepage-start/style.css) для упражнения, а также предоставленную [иконку внешней ссылки](https://github.com/mdn/learning-area/blob/master/css/styling-text/typesetting-a-homepage-start/external-link-52.png).
 - Сделайте их копии на вашем компьютере.
 
-В качестве альтернативы, вы можете пользоваться сайтами как [JSBin](http://jsbin.com/) или [Glitch](https://glitch.com/) чтобы выполнить оценку. Вы можете вставить HTML и заполнить CSS в одном из этих онлайн-редакторов и использовать [этот URL](https://mdn.github.io/learning-area/css/styling-text/typesetting-a-homepage-start/external-link-52.png) чтобы указать фоновое изображение. Если же онлайн-редактор, которым вы пользуетесь, не имеет отдельной CSS панели, тогда вводите его в элемент `<style>` в head документа.
+В качестве альтернативы, вы можете пользоваться сайтами как [JSBin](https://jsbin.com/) или [Glitch](https://glitch.com/) чтобы выполнить оценку. Вы можете вставить HTML и заполнить CSS в одном из этих онлайн-редакторов и использовать [этот URL](https://mdn.github.io/learning-area/css/styling-text/typesetting-a-homepage-start/external-link-52.png) чтобы указать фоновое изображение. Если же онлайн-редактор, которым вы пользуетесь, не имеет отдельной CSS панели, тогда вводите его в элемент `<style>` в head документа.
 
 > **Примечание:** Если вы застрянете, то попросите помощи — см. секцию [Оценка или дальнейшая помощь](#оценка_или_дальнейшая_помощь) в конце этой страницы.
 
