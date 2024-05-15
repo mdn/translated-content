@@ -38,7 +38,7 @@ _此接口本身没有方法，但从 {{domxref("Element")}} 继承方法。_
 
 ## 事件
 
-使用 [`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener) 监听这些事件，或将事件监听器分配给等效的 `on...` 处理程序属性。
+使用 [`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener) 监听这些事件，或将事件监听器分配给等效的 `on...` 处理器属性。
 
 - [`abort`](/zh-CN/docs/Web/API/SVGElement/abort_event)
   - : 当页面在 SVG 元素完全加载之前停止加载时触发。
