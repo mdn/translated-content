@@ -3,7 +3,7 @@ title: "HTMLImageElement: srcset プロパティ"
 short-title: srcset
 slug: Web/API/HTMLImageElement/srcset
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: ce85e3fb7865330e4ac2a6dad25db5cf5d27ea74
 ---
 
 {{APIRef("HTML DOM")}}
@@ -54,9 +54,9 @@ l10n:
 ```html
 <div class="box">
   <img
-    src="/en-us/web/html/element/img/clock-demo-200px.png"
+    src="/en-US/docs/Web/HTML/Element/img/clock-demo-200px.png"
     alt="Clock"
-    srcset="/en-us/web/html/element/img/clock-demo-400px.png 2x" />
+    srcset="/en-US/docs/Web/HTML/Element/img/clock-demo-400px.png 2x" />
 </div>
 ```
 
@@ -67,7 +67,7 @@ CSS では、画像とその周囲のボックスは 200 ピクセル四方で�
 ```css
 .box {
   width: 200px;
-  border: 2px solid rgb(150, 150, 150);
+  border: 2px solid rgb(150 150 150);
   padding: 0.5em;
   word-break: break-all;
 }

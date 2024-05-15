@@ -36,6 +36,6 @@ alert(new XMLSerializer().serializeToString(docu));
 
 - Вернёт **`NS_ERROR_DOM_INVALID_CHARACTER_ERR`**, если "--" есть в содержимом тега.
 
-## Спецификация
+## Спецификации
 
 - [createComment](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-createComment)

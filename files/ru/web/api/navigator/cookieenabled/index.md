@@ -29,7 +29,3 @@ if (!navigator.cookieEnabled) {
 ## Совместимость с браузерами
 
 {{Compat}}
-
-## Спецификация
-
-HTML WHATWG

@@ -1404,14 +1404,6 @@
     "modified": "2019-03-23T22:05:21.249Z",
     "contributors": ["zhangchen"]
   },
-  "Glossary/Simple_header": {
-    "modified": "2019-03-18T21:33:57.550Z",
-    "contributors": ["huangll"]
-  },
-  "Glossary/Simple_response_header": {
-    "modified": "2019-03-23T22:15:23.941Z",
-    "contributors": ["xgqfrms-GitHub"]
-  },
   "Glossary/Sloppy_mode": {
     "modified": "2019-03-18T21:11:47.868Z",
     "contributors": ["serverLua", "CapDuan"]

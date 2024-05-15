@@ -5,7 +5,7 @@ slug: Web/HTML/Element/meter
 
 {{HTMLSidebar}}
 
-**HTML-элемент `<meter>`** представляет собой скалярное значение в пределах известного диапазона или дробного значения.
+HTML-элемент **`<meter>`** представляет собой скалярное значение в пределах известного диапазона или дробного значения.
 
 {{EmbedInteractiveExample("pages/tabbed/meter.html", "tabbed-shorter")}}
 

@@ -18,7 +18,7 @@ slug: Learn/CSS/Styling_text/Typesetting_a_homepage
 - 練習用の [HTML](https://github.com/mdn/learning-area/blob/master/css/styling-text/typesetting-a-homepage-start/index.html) ファイルと [CSS](https://github.com/mdn/learning-area/blob/master/css/styling-text/typesetting-a-homepage-start/style.css) ファイルと、提供されている[外部リンクアイコン](https://github.com/mdn/learning-area/blob/master/css/styling-text/typesetting-a-homepage-start/external-link-52.png)を入手してください。
 - ローカルコンピュータにそれらのコピーを作成します。
 
-> **メモ:** あるいは、[JSBin](https://jsbin.com/) や [Thimble](https://thimble.mozilla.org/) などのサイトを使って評価することもできます。 HTML を貼り付けて CSS をこれらのオンラインエディタのいずれかに入力し、[この URL](http://mdn.github.io/learning-area/css/styling-text/typesetting-a-homepage-start/external-link-52.png) を使用して背景画像を指定することができます。 使用しているオンラインエディタに別の CSS パネルがない場合は、それをドキュメントの先頭の `<style>` 要素に自由に配置してください。
+あるいは、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/) や [Glitch](https://glitch.com/) などのサイトを使って評価することもできます。 HTML を貼り付けて CSS をこれらのオンラインエディタのいずれかに入力し、[この URL](http://mdn.github.io/learning-area/css/styling-text/typesetting-a-homepage-start/external-link-52.png) を使用して背景画像を指定することができます。 使用しているオンラインエディタに別の CSS パネルがない場合は、それをドキュメントの先頭の `<style>` 要素に自由に配置してください。
 
 ## プロジェクトの概要
 

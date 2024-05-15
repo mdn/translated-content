@@ -54,7 +54,11 @@ This property is specified as a single `<grid-line>` value. A `<grid-line>` valu
 - `span && [ <integer> || <custom-ident> ]`
   - : Contributes a grid span to the grid item's placement; such that the row start edge of the grid item's grid area is n lines from the end edge.If a name is given as a \<custom-ident>, only lines with that name are counted. If not enough lines with that name exist, all implicit grid lines on the side of the explicit grid, corresponding to the search direction, are assumed to have that name for the purpose of counting this span.If the \<integer> is omitted, it defaults to `1`. Negative integers or 0 are invalid.The `<custom-ident>` cannot take the `span` value.
 
-### Formal syntax
+## Formal definition
+
+{{cssinfo}}
+
+## Formal syntax
 
 {{csssyntax}}
 
@@ -120,11 +124,9 @@ This property is specified as a single `<grid-line>` value. A `<grid-line>` valu
 
 {{ EmbedLiveSample('Examples', '230', '420') }}
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
-
-{{cssinfo}}
 
 ## Совместимость с браузерами
 
