@@ -79,13 +79,13 @@ DOM 使用逻辑树的形式来表示文档。树的每个分支末端都是一�
 
 ## HTML DOM
 
-包含 HTML 的文档通过 {{DOMxRef("Document")}} 接口进行描述，HTML 规范扩展了这个接口，包含了各种 HTML 特有的特性。特别是 {{domxref("Element")}} 接口被增强为 {{domxref("HTMLElement")}} 和各种子类，每个子类代表一个（或一系列密切相关的）元素。
+包含 HTML 的文档通过 {{DOMxRef("Document")}} 接口进行描述，HTML 规范扩展了这个接口，包含了各种 HTML 特有的特性。尤其是 {{domxref("Element")}} 接口被拓展为 {{domxref("HTMLElement")}} 以及很多不同的子类，每个子类代表一个（或一系列密切相关的）元素。
 
 HTML DOM API 提供了对各种浏览器特性的访问，如标签和窗口、CSS 样式和样式表、浏览器历史记录等。这些接口将在 [HTML DOM API](/zh-CN/docs/Web/API/HTML_DOM_API) 文档中进一步讨论。
 
 ## SVG DOM
 
-同样，包含 SVG 的文档也通过 {{DOMxRef("Document")}} 接口来描述，接口由 SVG 规范扩展，包含了各种 SVG 特有的特性。特别是 {{domxref("Element")}} 接口被增强为 {{domxref("SVGElement")}} 和各种子类，每个子类代表一个（或一系列密切相关的）元素。这些接口将在 [SVG API](/zh-CN/docs/Web/API/SVG_API) 文档中进一步讨论。
+同样，包含 SVG 的文档也通过 {{DOMxRef("Document")}} 接口来描述，接口由 SVG 规范扩展，包含了各种 SVG 特有的特性。尤其是 {{domxref("Element")}} 接口被拓展为 {{domxref("SVGElement")}} 以及很多不同的子类，每个子类代表一个（或一系列密切相关的）元素。这些接口将在 [SVG API](/zh-CN/docs/Web/API/SVG_API) 文档中进一步讨论。
 
 ## 规范
 
