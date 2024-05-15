@@ -7,7 +7,7 @@ l10n:
 
 {{securecontext_header}}{{APIRef("Cookie Store API")}}{{AvailableInWorkers("window_and_service")}}
 
-{{domxref("CookieStoreManager")}} 接口的 **`unsubscribe()`** 方法，终止 {{domxref("ServiceWorkerRegistration")}} 接收之前订阅的事件。
+{{domxref("CookieStoreManager")}} 接口的 **`unsubscribe()`** 方法终止 {{domxref("ServiceWorkerRegistration")}} 接收之前订阅的事件。
 
 ## 语法
 
@@ -33,7 +33,7 @@ Service Worker 被取消订阅后兑现为 {{jsxref("undefined")}} 的 {{jsxref(
 ### 异常
 
 - {{jsxref("TypeError")}}
-  - : 当 `subscriptions` 中的 URL 不匹配 Service Worker Registration 的{{domxref("ServiceWorkerRegistration.scope","作用域")}}时抛出该异常。
+  - : 当 `subscriptions` 中的 URL 不匹配 Service Worker Registration 的{{domxref("ServiceWorkerRegistration.scope","作用域", "", 1)}}时抛出该异常。
 
 ## 示例
 
