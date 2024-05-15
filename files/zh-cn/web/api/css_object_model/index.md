@@ -89,7 +89,7 @@ CSSOM 相关规范也扩展了其他几个接口：{{DOMxRef("Document")}}、{{D
 
 ## 教程
 
-- [决定元素的维度](/zh-CN/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)（这篇文档可能有点过时，因为它是在 DHTML/Ajax 时代写的）。
+- [确定元素的尺寸](/zh-CN/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
 - [管理屏幕方向](/zh-CN/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
 
 ## 规范
@@ -98,7 +98,7 @@ CSSOM 相关规范也扩展了其他几个接口：{{DOMxRef("Document")}}、{{D
 
 ## 浏览器兼容性
 
-所有这些功能都是多年来一点一点地添加到不同的浏览器中的：这是一个相当复杂的过程，不能用一个简单的表格来概括。请参考具体的接口，了解其可用性。
+所有这些功能都是多年来一点一点地添加到不同的浏览器中的：这是一个相当复杂的过程，不能用一个简单的表格来概括。请参考具体的接口以了解其可用性。
 
 ## 参见
 
