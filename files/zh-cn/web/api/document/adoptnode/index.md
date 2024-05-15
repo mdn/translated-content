@@ -7,7 +7,7 @@ l10n:
 
 {{ ApiRef("DOM") }}
 
-**`Document.adoptNode()`** 将{{Glossary("node/dom", "节点（DOM）")}}从另一个{{domxref("Document", "文档", "", "nocode")}}转移至调用该方法的文档中。被采纳的节点及其子树将会从原始文档（如果存在的话）中移除，并且它们的 {{domxref("Node.ownerDocument", "ownerDocument")}} 会变更为当前文档。然后就可以将节点插入到当前文档中。
+**`Document.adoptNode()`** 将{{Glossary("node/dom", "节点（DOM）")}}从另一个{{domxref("Document", "文档", "", 1)}}转移至调用该方法的文档中。被转移的节点及其子树将会从原始文档（如果存在的话）中移除，并且它们的 {{domxref("Node.ownerDocument", "ownerDocument")}} 会变更为当前文档。然后节点将被插入到当前文档中。
 
 ## 语法
 
@@ -18,7 +18,7 @@ adoptNode(externalNode)
 ### 参数
 
 - `externalNode`
-  - : 将要采用另一份文档中的节点。
+  - : 将要从另一份文档中转移的节点。
 
 ### 返回值
 
@@ -44,8 +44,8 @@ iframeImages.forEach((imgEl) => {
 
 在将来自外部文档的节点插入到当前文档之前，应该先进行以下操作之一：
 
-- 使用 {{domXref("document.importNode()")}} 克隆；或
-- 使用 {{domXref("document.adoptNode()")}} 采用
+- 使用 {{domXref("document.importNode()")}} 进行克隆；或
+- 使用 `document.adoptNode()` 进行转移。
 
 > **备注：** 虽然 Firefox 目前没有强制执行这一规则，但我们鼓励你遵守这一规则，以提高未来的兼容性。
 
