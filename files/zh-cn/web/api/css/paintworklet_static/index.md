@@ -15,7 +15,7 @@ l10n:
 
 ## 示例
 
-以下示例演示了通过特征检测从 js 文件加载绘制 [worklet](/zh-CN/docs/Web/API/Worklet)。
+以下示例演示了通过特性检测从 js 文件加载绘制 [worklet](/zh-CN/docs/Web/API/Worklet)。
 
 ```js
 if ("paintWorklet" in CSS) {
