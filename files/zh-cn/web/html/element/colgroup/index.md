@@ -85,13 +85,9 @@ l10n:
   <caption>
     个人每周活动
   </caption>
-  <colgroup>
-    <col />
-    <col span="5" class="weekdays" />
-    <col span="2" class="weekend" />
-  </colgroup>
+  <colgroup span="5" class="weekdays"></colgroup>
+  <colgroup span="2" class="weekend"></colgroup>
   <tr>
-    <th>时段</th>
     <th>周一</th>
     <th>周二</th>
     <th>周三</th>
@@ -101,7 +97,6 @@ l10n:
     <th>周日</th>
   </tr>
   <tr>
-    <th>上午</th>
     <td>打扫房间</td>
     <td>足球训练</td>
     <td>舞蹈课</td>
@@ -111,7 +106,6 @@ l10n:
     <td>自由时间</td>
   </tr>
   <tr>
-    <th>下午</th>
     <td>瑜伽</td>
     <td>棋类俱乐部</td>
     <td>见朋友</td>
