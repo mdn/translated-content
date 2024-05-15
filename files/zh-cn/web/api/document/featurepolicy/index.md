@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Feature Policy")}}{{SeeCompatTable}}
 
-{{domxref("Document")}} 接口的 **`featurePolicy`** 只读属性返回了简单的 API 来检查应用于特定文档的[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)的 {{domxref("FeaturePolicy")}} 接口。
+{{domxref("Document")}} 接口的 **`featurePolicy`** 只读属性返回 {{domxref("FeaturePolicy")}} 接口，该接口提供了用于检查应用于特定文档的[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)的简单 API。
 
 ## 值
 
