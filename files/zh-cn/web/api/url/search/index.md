@@ -7,7 +7,7 @@ l10n:
 
 {{ApiRef("URL API")}} {{AvailableInWorkers}}
 
-{{domxref("URL")}} 接口的 **`search`** 属性表示包含一个 `'?'` 后跟随 URL 参数的搜索字符串（也被称为*查询字符串*）。
+{{domxref("URL")}} 接口的 **`search`** 属性是一个搜索字符串，也称为查询字符串，这是一个字符串包含一个 `'?'` 后面跟着 URL 的参数。
 
 现代浏览器提供了 {{domxref("URL.searchParams")}} 属性，以便轻松解析查询字符串中的参数。
 
@@ -21,7 +21,7 @@ l10n:
 const url = new URL(
   "https://developer.mozilla.org/zh-CN/docs/Web/API/URL/search?q=123",
 );
-console.log(url.search); // 输出 "?q=123"
+console.log(url.search); // 输出“?q=123”
 ```
 
 ## 规范

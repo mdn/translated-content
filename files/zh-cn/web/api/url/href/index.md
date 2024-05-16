@@ -7,7 +7,7 @@ l10n:
 
 {{ApiRef("URL API")}} {{AvailableInWorkers}}
 
-{{domxref("URL")}} 接口的 **`href`** 属性是包含整个 URL 的完整信息字符串。
+{{domxref("URL")}} 接口的 **`href`** 属性是包含整个 URL 的字符串。
 
 ## 值
 
