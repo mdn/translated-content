@@ -1,11 +1,13 @@
 ---
 title: 密码散列函数
 slug: Glossary/Cryptographic_hash_function
+l10n:
+  sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
 ---
 
 {{GlossarySidebar}}
 
-加密散列函数有时也称为*摘要函数*，其是一种{{glossary("cryptography", "密码学")}}原语，将任意大小的信息转为固定大小的消息，称为{{glossary("digest", "摘要")}}。加密散列函数通常用于授权、{{Glossary("digital signature", "数字签名")}}以及{{Glossary("HMAC", "密钥散列消息认证码")}}。
+**密码散列函数**有时也称为*摘要函数*，是一种{{glossary("cryptography", "密码学")}}原语，指将任意大小的信息转为固定大小的消息，也称为{{glossary("digest", "摘要")}}。加密散列函数通常用于授权、{{Glossary("digital signature", "数字签名")}}以及{{Glossary("HMAC", "密钥散列消息认证码")}}。
 
 散列函数必须有以下特征才能用于密码学：
 
