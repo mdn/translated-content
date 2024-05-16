@@ -80,7 +80,7 @@ IndexedDB を最新のドラフト仕様に更新するための大きな進展�
 
 - SVG を含む文字列が与えられたとき、適切な MIME タイプ `image/svg+xml` が渡された場合は [`DOMParser` が `SVGDocument` を生成する](/ja/docs/DOM/DOMParser#Parsing_a_SVG_document)ようになりました。
 - 従来 {{ domxref("element.setAttribute()") }} が整数値の構文解析を行うときは、数値ではない文字列が含まれる場合 (例えば "42foo") にエラーを報告していました。これが仕様書へ合致させるために、数値 42 へ正しく切り詰めるようになりました。
-- ESC キーで {{ domxref("window.oninput") }} ハンドラが誤って呼び出されるという、間違った結果にならないようになりました。
+- ESC キーで {{ domxref("window.oninput") }} ハンドラーが誤って呼び出されるという、間違った結果にならないようになりました。
 - 従来実装されていたものの実際にはアクセスする方法がない {{ domxref("NameList") }} インターフェイスは削除されました。
 - {{ domxref("document.createProcessingInstruction()") }} メソッドが HTML ドキュメントでも、XML ドキュメントの場合と同様に動作するようになりました。{{ domxref("ProcessingInstruction") }} ノードは現在も XML ドキュメントでのみサポートされていますが、ノードはドキュメントをまたいで移動させられますので、HTML ドキュメントでも同様にノードを作成することに役立ちます。
 - {{ domxref("XMLHttpRequest") }} のプロパティ `responseType` の値として [Firefox 9 で導入した](/ja/docs/Firefox_9_for_developers#DOM) "`moz-json`" は、最新のドラフト仕様への更新を行い接頭辞を削除しました。[Firefox バグ 707142#c13](https://bugzil.la/707142#c13) をご覧ください。
@@ -100,7 +100,7 @@ IndexedDB を最新のドラフト仕様に更新するための大きな進展�
 
 ### ネットワーク
 
-- HTTP ヘッダ `Accept-Charset` は、HTTP 要求時に送信されなくなりました。このヘッダがない場合、サーバは UTF-8 での送信として応答するべきです。
+- HTTP ヘッダー `Accept-Charset` は、HTTP 要求時に送信されなくなりました。このヘッダーがない場合、サーバーは UTF-8 での送信として応答するべきです。
 
 ### 開発ツール
 

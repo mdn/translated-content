@@ -43,8 +43,8 @@ Firefox 15 は 2012 年 8 月 28 日にリリースされました。この記�
 
 - Typed Arrays 仕様由来の [`DataView`](/ja/docs/javascript_typed_arrays/DataView) インターフェイスのサポートが追加されました。これは [`ArrayBuffer`](/ja/docs/javascript_typed_arrays/ArrayBuffer) に含まれるデータへの低レベルアクセスを提供します。
 - ECMAScript Harmony の `Number.isNaN` のサポートが追加されました。([bug 749818](https://bugzilla.mozilla.org/show_bug.cgi?id=749818))
-- ECMAScript Harmony のデフォルトパラメータが追加されました。 ([bug 757676](https://bugzilla.mozilla.org/show_bug.cgi?id=757676))
-- ECMAScript Harmony のレストパラメータが追加されました。 ([bug 574132](https://bugzilla.mozilla.org/show_bug.cgi?id=574132))
+- ECMAScript Harmony のデフォルト引数が追加されました。 ([bug 757676](https://bugzilla.mozilla.org/show_bug.cgi?id=757676))
+- ECMAScript Harmony のレスト引数が追加されました。 ([bug 574132](https://bugzilla.mozilla.org/show_bug.cgi?id=574132))
 
 ### WebGL
 

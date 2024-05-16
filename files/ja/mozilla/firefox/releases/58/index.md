@@ -185,7 +185,7 @@ _変更なし。_
 
 - webRequest
 
-  - [webRequest.onBeforeRequest](/ja/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRequest) が "frameAncestors" パラメーターを持つようになりました
+  - [webRequest.onBeforeRequest](/ja/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRequest) が "frameAncestors" 引数を持つようになりました
 
 ## 関連情報
 
