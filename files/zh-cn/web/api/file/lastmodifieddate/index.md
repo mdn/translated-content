@@ -2,7 +2,7 @@
 title: File：lastModifiedDate 属性
 slug: Web/API/File/lastModifiedDate
 l10n:
-  sourceCommit: 8fd2ee72038310e3ecc387df235ffac1cb08775c
+  sourceCommit: 367b982b93c07f7f99e7bb768a6bf326fa5198e6
 ---
 
 {{APIRef("File API")}}{{AvailableInWorkers}}{{Deprecated_Header}}{{Non-standard_Header}}
@@ -11,7 +11,7 @@ l10n:
 
 ## 值
 
-一个 [`Date`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date) 对象，指示上次修改文件的日期和时间。
+一个 {{JSXRef("Global_Objects/Date", "Date")}} 对象，指示上次修改文件的日期和时间。
 
 ## 示例
 
