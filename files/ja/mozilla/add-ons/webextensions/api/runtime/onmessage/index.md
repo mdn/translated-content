@@ -80,9 +80,9 @@ browser.runtime.onMessage.hasListener(listener)
         - `sendResponse()` に対する参照を保持したままリスナー関数から `true` を返す。そうすると、リスナー関数から復帰した後でも `sendResponse()` が実行できます。
         - リスナー関数から {{jsxref("Promise")}} を返して、応答の準備ができたときにその Promise を解決する。こちらがより好ましい方法です。
 
-    リスナー関数は、Boolean または {{jsxref("Promise")}} のいずれかを返します。
+    リスナー関数は、論理値または {{jsxref("Promise")}} のいずれかを返します。
 
-    > **メモ:** `addListener()` に非同期関数を渡すと、リスナーはメッセージを受け取るたびに Promise を返すため、他のリスナーが応答できなくなります。
+    > **メモ:** `addListener()` に非同期関数を渡すと、リスナーはメッセージを受け取るたびにプロミスを返すため、他のリスナーが応答できなくなります。
     >
     > ```js example-bad
     > // このようにしないでください
@@ -93,7 +93,7 @@ browser.runtime.onMessage.hasListener(listener)
     > });
     > ```
     >
-    > もし、リスナーが特定の種類のメッセージにのみ応答したい場合は、リスナーを `async` ではない関数として定義し、リスナーが応答するメッセージに対してのみ Promise を、それ以外は false または undefined を返してください。
+    > もし、リスナーが特定の種類のメッセージにのみ応答したい場合は、リスナーを `async` ではない関数として定義し、リスナーが応答するメッセージに対してのみプロミスを、それ以外は false または undefined を返してください。
     >
     > ```js example-good
     > browser.runtime.onMessage.addListener((data, sender) => {
