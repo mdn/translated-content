@@ -84,10 +84,9 @@ _Пока нет активного обучения._ [Пожалуйста, п
 
 - [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/new/)
 - [Google Chrome](https://www.google.fr/chrome/browser/)
-- [Microsoft Internet Explorer](https://windows.microsoft.com/en-US/internet-explorer/download-ie)
 - [Apple Safari](https://www.apple.com/safari/)
 
-Если вы ориентируетесь на определённую группу (например, техническую платформу или страну), возможно, вам придётся протестировать ваш сайт с помощью дополнительных браузеров, таких как [Opera](https://www.opera.com/), [Konqueror](http://www.konqueror.org/), или [UC Browser](http://www.ucweb.com/ucbrowser/).
+Если вы ориентируетесь на определённую группу (например, техническую платформу или страну), возможно, вам придётся протестировать ваш сайт с помощью дополнительных браузеров, таких как [Opera](https://www.opera.com/) и [Konqueror](https://www.konqueror.org/).
 
 Но тестирование усложняется, потому что некоторые браузеры работают только в определённых операционных системах. Apple Safari работает на iOS и Mac OS, а Internet Explorer работает только в Windows. Поэтому лучше воспользоваться такими сервисами, как [Browsershots](http://browsershots.org/) или [Browserstack](http://www.browserstack.com/). Browsershots предоставляет скриншоты вашего сайта, того как ваш сайт будет выглядеть в различных браузерах. Browserstack фактически предоставляет вам полный удалённый доступ к виртуальным машинам, поэтому вы можете протестировать ваш сайт в наиболее распространённых средах. Кроме того, вы можете настроить свою собственную виртуальную машину, но это требует некоторого опыта. Более подробную информацию можно найти в статье о [стратегиях тестирования](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#putting_together_a_testing_lab).
 
