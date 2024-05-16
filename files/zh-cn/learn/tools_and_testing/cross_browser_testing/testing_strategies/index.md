@@ -55,7 +55,7 @@ Opera Mini [在运行复杂 JavaScript 方面性能不太好](https://dev.opera.
 
 因此，我们基于预计用户会使用的浏览器来确定选择测试哪些浏览器。通过这种方法，我们得到了以下支持图表：
 
-1. A 级：Windows/Mac 上的 Chrome 和 Firefox，Mac 上的 Safari，Windows 上的Edge，iPhone/iPad 上的iOS Safari，手机/平板上的 Android 原生浏览器（最新两个版本），手机/平板上的 Android 版 Chrome 和 Firefox（最新两个版本）
+1. A 级：Windows/Mac 上的 Chrome 和 Firefox，Mac 上的 Safari，Windows 上的 Edge，iPhone/iPad 上的 iOS Safari，手机/平板上的 Android 原生浏览器（最新两个版本），手机/平板上的 Android 版 Chrome 和 Firefox（最新两个版本）
 2. B 级：Opera Mini
 3. C 级：无
 
@@ -82,7 +82,7 @@ Opera Mini [在运行复杂 JavaScript 方面性能不太好](https://dev.opera.
 5. 下一页会为你提供一些代码段和其他说明。对于基本网站，你需要做的是复制*网站跟踪*代码块，并将其粘贴到你要在网站上使用 Google Analytics 跟踪的所有页面。你可以将跟踪代码放在关闭 `</body>` 标记下方，也可以放在其他适当位置，以防止其与应用程序代码混淆。
 6. 将更改上传到开发服务器，或其他任何用到你的代码的位置。
 
-就是这样！ 现在，你的网站应该可以开始报告分析数据了。
+就是这样！现在，你的网站应该可以开始报告分析数据了。
 
 #### 学习分析数据
 
@@ -186,7 +186,7 @@ A 级：
 你还可以找到其他移动设备环境的模拟器，例如：
 
 - 如果你想要测试 Opera Mini，可以单独模拟 [Opera Mini](https://dev.opera.com/articles/installing-opera-mini-on-your-computer/)。
-- Windows Mobile 操作系统也有可用的模拟器：参见 [Windows Phone 8 的 Windows Phone 模拟器](https://msdn.microsoft.com/library/windows/apps/ff402563(v=vs.105).aspx)和[使用 Windows 10 Mobile 模拟器进行测试](https://docs.microsoft.com/windows/uwp/debug-test-perf/test-with-the-emulator)（这些仅能在 Windows 上运行）。
+- Windows Mobile 操作系统也有可用的模拟器：参见 [Windows Phone 8 的 Windows Phone 模拟器](<https://msdn.microsoft.com/library/windows/apps/ff402563(v=vs.105).aspx>)和[使用 Windows 10 Mobile 模拟器进行测试](https://docs.microsoft.com/windows/uwp/debug-test-perf/test-with-the-emulator)（这些仅能在 Windows 上运行）。
 
 > **备注：** 许多模拟器实际上需要使用虚拟机（参见下文）；当出现这种情况时，通常会提供说明，并且/或者虚拟机的使用已纳入模拟器的安装程序中。
 
@@ -198,7 +198,7 @@ A 级：
 
 要使用 Virtual Box，你需要：
 
-1. 获取要模拟的操作系统的安装程序光盘或映像（例如ISO文件）。Virtual Box 无法提供这些；因为大多数操作系统（如 Windows 操作系统）都是商业产品，不能自由分发。
+1. 获取要模拟的操作系统的安装程序光盘或映像（例如 ISO 文件）。Virtual Box 无法提供这些；因为大多数操作系统（如 Windows 操作系统）都是商业产品，不能自由分发。
 2. [下载适合你操作系统的安装程序](https://www.virtualbox.org/wiki/Downloads)并进行安装。
 3. 打开应用程序；你将看到以下界面：![应用程序窗口的左侧面板列出了 Windows 操作系统和 Opera TV 模拟器。右侧面板包括几个子面板，包括常规信息、系统、显示、设置、音频、网络和预览](./virtualbox.png)。
 4. 要创建新的虚拟机，请点击左上角的“新建”按钮。
