@@ -13,7 +13,7 @@ slug: Learn/Server-side/Express_Nodejs/Displaying_data
 
 ## 概要
 
-前回のチュートリアル記事では、データベースとやり取りするために使用できる [Mongoose モデル](/ja/docs/Learn/Server-side/Express_Nodejs/mongoose)を定義し、いくつかの初期ライブラリレコードを作成しました。その後、LocalLibraryウェブサイトに必要な[すべてのルートを作成しました](/ja/docs/Learn/Server-side/Express_Nodejs/routes)が、"ダミーコントローラ" 関数 (ページにアクセスすると "未実装" のメッセージを返すだけのスケルトンコントローラ関数) を使用しました。
+前回のチュートリアル記事では、データベースとやり取りするために使用できる [Mongoose モデル](/ja/docs/Learn/Server-side/Express_Nodejs/mongoose)を定義し、いくつかの初期ライブラリレコードを作成しました。その後、 LocalLibrary ウェブサイトに必要な[すべてのルートを作成しました](/ja/docs/Learn/Server-side/Express_Nodejs/routes)が、"ダミーコントローラ" 関数 (ページにアクセスすると "未実装" のメッセージを返すだけのスケルトンコントローラ関数) を使用しました。
 
 次のステップは、私たちの図書館情報を表示するページに適切な実装をすることです (後の記事で情報を作成、更新、または削除するフォームを特徴とする実装ページを見ます)。これには、モデルを使用してレコードを取得するためのコントローラ機能の更新、およびこの情報をユーザーに表示するためのテンプレートの定義が含まれます。
 
