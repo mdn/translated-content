@@ -11,7 +11,7 @@ l10n:
 
 `File` 对象通常从用户使用 {{HTMLElement("input")}} 元素选择文件而返回的 {{DOMxRef("FileList")}} 对象中检索，或者从拖放操作的 {{DOMxRef("DataTransfer")}} 对象中返回。
 
-`File` 对象是一种特定类型的 {{DOMxRef("Blob")}}，并且可以在 Blob 可以使用的任何上下文中使用。特别是，{{DOMxRef("FileReader")}}、{{DOMxRef("URL.createObjectURL_static"、"URL.createObjectURL()")}}、{{DOMxRef("createImageBitmap()")}}、{{domxref("fetch()")}} 方法的 [`body`](/zh-CN/docs/Web/API/fetch#body) 选项和 {{DOMxRef("XMLHttpRequest", "", "send( )")}} 都可以接收 `Blob` 对象和 `File` 对象。
+`File` 对象是一种特定类型的 {{DOMxRef("Blob")}}，并且可以在 Blob 可以使用的任何上下文中使用。特别是，{{DOMxRef("FileReader")}}、{{DOMxRef("URL.createObjectURL_static", "URL.createObjectURL()")}}、{{DOMxRef("createImageBitmap()")}}、{{domxref("fetch()")}} 方法的 [`body`](/zh-CN/docs/Web/API/fetch#body) 选项和 {{DOMxRef("XMLHttpRequest", "", "send( )")}} 都可以接收 `Blob` 对象和 `File` 对象。
 
 参见[在 Web 应用程序使用文件](/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications)了解更多信息和例子。
 
