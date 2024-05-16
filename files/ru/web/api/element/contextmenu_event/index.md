@@ -38,7 +38,7 @@ window.addEventListener(
 );
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

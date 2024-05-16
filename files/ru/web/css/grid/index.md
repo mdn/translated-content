@@ -92,7 +92,7 @@ grid: unset;
 
 {{EmbedLiveSample("Example", "100%", 150)}}
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

@@ -27,7 +27,7 @@ console.warn(msg [, subst1, ..., substN]);
 
 Больше подробностей смотрите в разделе [Вывод текста в консоль](/ru/docs/Web/API/Console#Outputting_text_to_the_console) документации {{domxref("console")}}.
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

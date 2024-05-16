@@ -89,7 +89,7 @@ _Не имеют унаследованных свойств._
 - {{ domxref("Range.isPointInRange()")}} {{experimental_inline}}
   - : Returns a `boolean` indicating whether the given point is in the `Range`.
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

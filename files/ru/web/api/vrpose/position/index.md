@@ -31,7 +31,7 @@ l10n:
 
 Смотрите примеры использования в [`VRDisplay.getFrameData()`](/ru/docs/Web/API/VRDisplay/getFrameData#examples).
 
-## Спецификация
+## Спецификации
 
 Это свойство было частью старого [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/), который был заменён на [WebXR Device API](https://immersive-web.github.io/webxr/). Больше не планируется сделать его стандартом.
 

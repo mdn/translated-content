@@ -19,7 +19,7 @@ Antes de comenzar este módulo deberías poseer:
 3. Una familiaridad básica con html, como es establecido en el módulo [Introdución a HTML](/es/docs/Learn/HTML/Introduccion_a_HTML).
 4. Un entendimiento elemental de CSS, como es discutido en el módulo [CSS first steps](/es/docs/Learn/CSS/First_steps).
 
-> **Nota:** Si estás trabajando en una computadora, tablet, u otro dispositivo en el que no eres capaz de crear tus propios archivos puedes intentar la mayor parte de los ejemplos en código en un programa para trabajar código en linea como [JSBin](http://jsbin.com/) o [Glitch](https://glitch.com/).
+> **Nota:** Si estás trabajando en una computadora, tablet, u otro dispositivo en el que no eres capaz de crear tus propios archivos puedes intentar la mayor parte de los ejemplos en código en un programa para trabajar código en linea como [JSBin](https://jsbin.com/) o [Glitch](https://glitch.com/).
 
 ## Guías
 

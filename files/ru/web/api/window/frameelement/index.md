@@ -31,7 +31,7 @@ if (frameEl) {
 
 Заметьте, что несмотря на своё имя, свойство также работает для документов внутри `<object>` и других встраиваемых элементов.
 
-## Спецификация
+## Спецификации
 
 [WHATWG](http://www.whatwg.org/specs/web-apps/current-work/#dom-frameelement)
 

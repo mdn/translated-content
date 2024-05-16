@@ -88,7 +88,7 @@ details[open] > summary::before {
 
 {{ EmbedLiveSample('Примеры_стилизации') }}
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

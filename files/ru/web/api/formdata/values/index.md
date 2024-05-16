@@ -42,7 +42,7 @@ value1
 value2
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 
