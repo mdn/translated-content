@@ -7,7 +7,7 @@ l10n:
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Introduction","Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
-本文解释如何进行跨浏览器测试：如何选择要测试的浏览器和设备，如何实际测试这些浏览器和设备，以及如何借助用户群体进行测试。
+本文解释如何进行跨浏览器测试：如何选择要测试的浏览器和设备、如何实际测试这些浏览器和设备，以及如何借助用户群体进行测试。
 
 <table>
   <tbody>
