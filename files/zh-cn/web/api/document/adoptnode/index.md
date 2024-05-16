@@ -2,7 +2,7 @@
 title: Document：adoptNode() 方法
 slug: Web/API/Document/adoptNode
 l10n:
-  sourceCommit: 0a881eea07f0cec6ca4ed85a24af43b367a9f80d
+  sourceCommit: 3d4f158c8ab2e1ee7141b59f020e8e5de911ac62
 ---
 
 {{ ApiRef("DOM") }}
@@ -47,9 +47,7 @@ iframeImages.forEach((imgEl) => {
 - 使用 {{domXref("document.importNode()")}} 进行克隆；或
 - 使用 `document.adoptNode()` 进行转移。
 
-> **备注：** 虽然 Firefox 目前没有强制执行这一规则，但我们鼓励你遵守这一规则，以提高未来的兼容性。
-
-有关 {{domXref("Node.ownerDocument")}} 问题的更多信息，请参阅 W3C DOM 常见问题。
+有关 {{domXref("Node.ownerDocument")}} 问题的更多信息，请参阅 [W3C DOM 常见问题](https://www.w3.org/DOM/faq.html#ownerdoc)。
 
 ## 规范
 
