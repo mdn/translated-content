@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("DOM")}} {{Deprecated_Header}}
 
-已弃用 `bgColor` 属性用于获取或设置当前文档的背景颜色。
+已弃用的 `bgColor` 属性用于获取或设置当前文档的背景颜色。
 
 ## 值
 
