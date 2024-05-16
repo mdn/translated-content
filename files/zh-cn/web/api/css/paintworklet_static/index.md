@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSSOM")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-{{DOMxRef("CSS")}} 接口的 **`paintWorklet`** 静态只读属性提供了对绘制 [worklet](/zh-CN/docs/Web/API/Worklet) 的访问方式，在 CSS 属性期望文件时，能够以编程的方式生成图像。
+{{DOMxRef("CSS")}} 接口的 **`paintWorklet`** 静态只读属性提供了对绘制 [worklet](/zh-CN/docs/Web/API/Worklet) 的访问方式，从而能够以编程的方式为期望文件的 CSS 属性生成图像。
 
 ## 值
 
