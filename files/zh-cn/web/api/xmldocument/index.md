@@ -11,13 +11,13 @@ l10n:
 
 {{InheritanceDiagram}}
 
-## 属性
+## 实例属性
 
-_同时继承自：{{DOMxRef("Document")}} 属性_。
+_同时继承自 {{DOMxRef("Document")}} 的属性_。
 
 ## 实例方法
 
-_同时继承自：{{DOMxRef("Document")}} 方法_。
+_同时继承自 {{DOMxRef("Document")}} 的方法_。
 
 ## 规范
 
