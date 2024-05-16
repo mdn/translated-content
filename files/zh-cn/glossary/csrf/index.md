@@ -1,5 +1,5 @@
 ---
-title: CSRF
+title: 跨站请求伪造
 slug: Glossary/CSRF
 l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
