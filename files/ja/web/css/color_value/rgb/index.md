@@ -14,11 +14,11 @@ l10n:
 ## 構文
 
 ```css
-/* Absolute values */
+/* 絶対値 */
 rgb(255 255 255)
 rgb(255 255 255 / 50%)
 
-/* Relative values */
+/* 相対値 */
 rgb(from green r g b / 0.5)
 rgb(from #0000FF calc(r + 40) calc(g + 40) b)
 rgb(from hwb(120deg 10% 20%) r g calc(b + 200))
@@ -115,10 +115,10 @@ rgb(from hsl(0 100% 50%) r 80 80)
 
 ```css
 rgb(from hsl(0 100% 50% / 0.8) r g b / alpha)
-/* Computed output color: color(srgb 1 0 0 / 0.8) */
+/* 計算された出力色: color(srgb 1 0 0 / 0.8) */
 
 rgb(from hsl(0 100% 50% / 0.8) r g b / 0.5)
-/* Computed output color: color(srgb 1 0 0 / 0.5) */
+/* 計算された出力色: color(srgb 1 0 0 / 0.5) */
 ```
 
 次の例では、`hsl()` 起点色は再び `rgb()` 表現 - `rgb(255 0 0)`に変換されます。`R`、`G`、`B`、および `A` 値に {{cssxref("calc")}} 計算が適用されます。計算後の R、G、B および A の値はそれぞれ `127.5`、`25`、`175`、および `0.9` になります。最終的な出力色は、sRGB 色空間の `rgb(127.5 25 175 / 0.9)` に相当します：`color(srgb 0.5 0.0980392 0.686275 / 0.9)`。
@@ -221,7 +221,7 @@ body {
 ```css
 :root {
   --base-color: orange;
-  /* equal to rgb(255 165 0) */
+  /* rgb(255 165 0) に等しい */
 }
 
 #one {
@@ -230,17 +230,15 @@ body {
 
 #two {
   background-color: rgb(from var(--base-color) calc(r - 76.5) g calc(b + 76.5));
-  /* 76.5 is 30% of 255 */
+  /* 76.5 は 255 の 30% */
 }
 
 #three {
   background-color: rgb(from var(--base-color) calc(r - 153) g calc(b + 153));
-  /* 153 is 60% of 255 */
+  /* 153 は 255 の 60% */
 }
 
-/* Use @supports to add in support for old syntax that requires r g b values to
-   be specified as percentages (with units) in calculations. This is required
-   for Safari 16.4+. */
+/* 計算で r g b 値をパーセンテージ (単位付き) として指定する必要がある古い構文をサポートするために @supports を使用します。これは Safari 16.4 以降で必要です */
 @supports (color: rgb(from red r g calc(b + 30%))) {
   #two {
     background-color: rgb(from var(--base-color) calc(r - 30%) g calc(b + 30%));
