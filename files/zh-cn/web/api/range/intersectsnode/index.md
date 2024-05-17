@@ -24,7 +24,7 @@ intersectsNode(referenceNode)
 
 布尔值。
 
-## Examples
+## 示例
 
 ```js
 const range = document.createRange();
