@@ -35,7 +35,7 @@ const paragraph = document.querySelector("p"); // 读取该段
 paragraph.removeChild(paragraph.childNodes[1]); // 删除 strong 元素
 ```
 
-现在你的结果是 _“徒步旅行很不错！然而，投票是一件棘手的事情。_，超链接前有两个节点：
+现在你的结果是 _“徒步旅行很不错！然而，投票是一件棘手的事情。"_，超链接前有两个节点：
 
 1. 包含 {{domxref("Text")}} 字符串的 `"徒步旅行很不错！"`
 2. 第二个 `Text` 节点包含字符串 `"然而，"`
