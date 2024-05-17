@@ -1863,7 +1863,6 @@
 /zh-CN/docs/Web/API/Window/caches	/zh-CN/docs/Web/API/caches
 /zh-CN/docs/Web/API/Window/clearInterval	/zh-CN/docs/Web/API/clearInterval
 /zh-CN/docs/Web/API/Window/content	/zh-CN/docs/Web/API/Window
-/zh-CN/docs/Web/API/Window/crypto	/zh-CN/docs/Web/API/crypto_property
 /zh-CN/docs/Web/API/Window/minimize	/zh-CN/docs/Web/API/Window
 /zh-CN/docs/Web/API/Window/mozPaintCount	/zh-CN/docs/Web/API/Window
 /zh-CN/docs/Web/API/Window/onappinstalled	/zh-CN/docs/Web/API/Window/appinstalled_event
@@ -1954,6 +1953,7 @@
 /zh-CN/docs/Web/API/console/trace	/zh-CN/docs/Web/API/console/trace_static
 /zh-CN/docs/Web/API/console/warn	/zh-CN/docs/Web/API/console/warn_static
 /zh-CN/docs/Web/API/crossOriginIsolated	/zh-CN/docs/Web/API/Window/crossOriginIsolated
+/zh-CN/docs/Web/API/crypto_property	/zh-CN/docs/Web/API/Window/crypto
 /zh-CN/docs/Web/API/document.URL	/zh-CN/docs/Web/API/Document/URL
 /zh-CN/docs/Web/API/document.activeElement	/zh-CN/docs/Web/API/Document/activeElement
 /zh-CN/docs/Web/API/document.anchors	/zh-CN/docs/Web/API/Document/anchors
