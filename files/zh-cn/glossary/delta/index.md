@@ -27,6 +27,6 @@ let deltaX = newX - oldX;
 let newX = oldX + deltaX;
 ```
 
-## See also
+## 参见
 
 - 例如鼠标滚轮事件 {{domxref("WheelEvent")}}，在其 {{domxref("WheelEvent.deltaX", "deltaX")}}、{{domxref("WheelEvent.deltaY", "deltaY")}} 和 {{domxref("WheelEvent.deltaZ", "deltaZ")}} 属性中提供了自上次事件以来滚轮移动的量。
