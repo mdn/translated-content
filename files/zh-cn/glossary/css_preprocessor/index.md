@@ -22,6 +22,6 @@ l10n:
   - [Stylus](https://stylus-lang.com/)
   - [PostCSS](https://postcss.org/)
 
-- [MDN Web Docs 术语表](/zh-CN/docs/Glossary)
+- [MDN Web 文档术语表](/zh-CN/docs/Glossary)
 
   - {{Glossary("CSS")}}
