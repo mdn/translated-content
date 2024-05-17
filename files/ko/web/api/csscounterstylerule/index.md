@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSS Counter Styles")}}
 
-**`CSSCounterStyleRule`** 인터페이스는 {{CSSxRef("@counter-style")}} [at-rule](/en-US/docs/Web/CSS/At-rule) 를 나타냅니다.
+**`CSSCounterStyleRule`** 인터페이스는 {{CSSxRef("@counter-style")}} [at-rule](/ko/docs/Web/CSS/At-rule) 를 나타냅니다.
 
 {{InheritanceDiagram}}
 
@@ -53,4 +53,4 @@ _이 인터페이스는 어떠한 특정한 메서드를 구현하지는 않지�
 ## 같이 보기
 
 - {{CSSxRef("@counter-style")}}
-- [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) 모듈
+- [CSS counter styles](/ko/docs/Web/CSS/CSS_counter_styles) 모듈
