@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`outline-offset`** CSS 属性设置了 [outline](/zh-CN/docs/Web/CSS/outline)（轮廓线）与元素边缘或边框之间的间距。
+**`outline-offset`** CSS 属性设置了 [outline](/zh-CN/docs/Web/CSS/outline) 与元素边缘或边框之间的间距。
 
 {{EmbedInteractiveExample("pages/css/outline-offset.html")}}
 
