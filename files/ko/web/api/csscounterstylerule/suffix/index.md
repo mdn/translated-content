@@ -15,7 +15,7 @@ l10n:
 
 ## 예제
 
-다음 예제는 {{cssxref("@counter-style")}} 의 규칙을 보여줍니다. JavaScript 에서, `myRules[0]` 은 이 `@counter-style` 규칙이며, `suffix` 를 반환하면 ": " 값을 얻을 수 있습니다..
+다음 예제는 {{cssxref("@counter-style")}} 의 규칙을 보여줍니다. JavaScript 에서, `myRules[0]` 은 이 `@counter-style` 규칙이며, `suffix` 를 반환하면 ": " 값을 얻을 수 있습니다.
 
 ```css
 @counter-style box-corner {
