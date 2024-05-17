@@ -30,7 +30,7 @@ sRGB 色を表現するために、`rgba()` 関数も使用できます。これ
 
 ### 値
 
-以下は、絶対値および[相対色](/ja/docs/Web/CSS/CSS_colors/Relative_colors)の両方に対して許可される値の説明です。
+以下は、絶対値および [相対色](/ja/docs/Web/CSS/CSS_colors/Relative_colors) の両方に対して許可される値の説明です。
 
 #### 絶対値構文
 
@@ -45,7 +45,7 @@ rgb(R G B[ / A])
 - `A` {{optional_inline}}
   - : アルファチャネル値を表す {{CSSXref("&lt;alpha-value&gt;")}} で、数値 `0` は `0%`（完全に透明）、`1` は `100%`（完全に不透明）に対応します。さらにキーワード `none` を使用して明示的にアルファチャネルを指定しないことも可能です。`A` チャネル値が明示的に指定されていない場合、デフォルトは `100%` です。`A` チャネル値を含める場合は、値の前にスラッシュ（`/`）が付きます。
 
-> **メモ:** `none` の効果については[色成分の欠落](/ja/docs/Web/CSS/color_value#色成分の欠落)を参照してください。
+> **メモ:** `none` の効果については [色成分の欠落](/ja/docs/Web/CSS/color_value#色成分の欠落) を参照してください。
 
 #### 相対値構文
 
@@ -56,7 +56,7 @@ rgb(from <color> R G B[ / A])
 パラメーターは以下の通りです：
 
 - `from <color>`
-  - : 相対色を定義する場合は、キーワード `from` が常に含まれ、次に**起点色**を表す{{cssxref("&lt;color&gt;")}}が続きます。これは相対色のベースとなる起点の色です。起点色には、別の相対色を含む _任意_ の有効な{{cssxref("&lt;color&gt;")}}構文を使用できます。
+  - : 相対色を定義する場合は、キーワード `from` が常に含まれ、次に**起点色**を表す {{cssxref("&lt;color&gt;")}} が続きます。これは相対色のベースとなる起点の色です。起点色には、別の相対色を含む _任意_ の有効な {{cssxref("&lt;color&gt;")}} 構文を使用できます。
 - `R`, `G`, `B`
   - : 各値は {{CSSXref("&lt;number&gt;")}} で `0` から `255` の間、{{CSSXref("&lt;percentage&gt;")}} で `0%` から `100%` の間、またはキーワード `none`（この場合は `0%` と同等）として表されます。これらの値はそれぞれ赤、緑、青のチャネルを表します。
 - `A` {{optional_inline}}
@@ -64,7 +64,7 @@ rgb(from <color> R G B[ / A])
 
 > **メモ:** `rgba()` エイリアスも相対色の出力や起点色の指定に使用できます。`rgba()` を使用して相対色を出力する場合、カンマのないモダン構文を使用する必要があります。
 
-> **メモ:** 完全な可視スペクトルを表現するために、相対 `rgb()` 色関数の出力は `color(srgb)` にシリアライズされます。つまり、{{DOMxRef("HTMLElement.style")}} プロパティまたは {{DOMxRef("CSSStyleDeclaration.getPropertyValue()")}} メソッドを介して出力色をクエリすると、出力色が[`color(srgb ...)`](/ja/docs/Web/CSS/color_value/color) 値として返されます。
+> **メモ:** 完全な可視スペクトルを表現するために、相対 `rgb()` 色関数の出力は `color(srgb)` にシリアライズされます。つまり、{{DOMxRef("HTMLElement.style")}} プロパティまたは {{DOMxRef("CSSStyleDeclaration.getPropertyValue()")}} メソッドを介して出力色をクエリすると、出力色が [`color(srgb ...)`](/ja/docs/Web/CSS/color_value/color) 値として返されます。
 
 #### 相対色出力チャネル成分の定義
 
