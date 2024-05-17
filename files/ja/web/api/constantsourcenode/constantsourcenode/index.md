@@ -1,8 +1,9 @@
 ---
-title: ConstantSourceNode()
+title: "ConstantSourceNode: ConstantSourceNode() コンストラクター"
+short-title: ConstantSourceNode()
 slug: Web/API/ConstantSourceNode/ConstantSourceNode
 l10n:
-  sourceCommit: 164d2b6e6c9ce32fcb8ad19436fe44766cb5c3eb
+  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
 ---
 
 {{APIRef("Web Audio API")}}
