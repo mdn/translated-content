@@ -4416,6 +4416,10 @@
     "modified": "2020-02-01T07:17:19.974Z",
     "contributors": ["alattalatta"]
   },
+  "Web/API/Window/crypto": {
+    "modified": "2020-10-15T21:40:03.517Z",
+    "contributors": ["alattalatta", "hoony"]
+  },
   "Web/API/Window/customElements": {
     "modified": "2020-10-15T22:26:45.848Z",
     "contributors": ["alattalatta"]
@@ -4648,10 +4652,6 @@
   "Web/API/XSLTProcessor": {
     "modified": "2019-11-21T00:57:37.403Z",
     "contributors": ["wbamberg", "chrisdavidmills", "teoli", "Netaras"]
-  },
-  "Web/API/crypto_property": {
-    "modified": "2020-10-15T21:40:03.517Z",
-    "contributors": ["alattalatta", "hoony"]
   },
   "Web/API/setTimeout": {
     "modified": "2019-03-23T22:22:22.449Z",
