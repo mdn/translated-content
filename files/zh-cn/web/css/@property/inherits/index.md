@@ -42,7 +42,7 @@ l10n:
 
 ## 示例
 
-为 `--my-color` {{cssxref('--*', '自定义属性', '', 1)}}添加类型检查，将其限定为颜色类型，并设置默认值，同时禁止其继承值。
+为 `--my-color` {{cssxref('--*', '自定义属性', '', 1)}} 添加类型检查，将其限定为颜色类型，并设置默认值，同时禁止其继承值。
 
 使用 [CSS](/zh-CN/docs/Web/CSS) {{cssxref('@property')}} [At 规则](/zh-CN/docs/Web/CSS/At-rule)：
 
