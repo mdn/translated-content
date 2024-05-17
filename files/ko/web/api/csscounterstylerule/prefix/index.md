@@ -1,5 +1,5 @@
 ---
-title: "CSSCounterStyleRule: prefix property"
+title: "CSSCounterStyleRule: prefix 속성"
 slug: Web/API/CSSCounterStyleRule/prefix
 l10n:
   sourceCommit: 59b1cd1f520971b89ccf521d53a1d9d3bf4c0756
