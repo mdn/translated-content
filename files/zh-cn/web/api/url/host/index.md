@@ -2,7 +2,7 @@
 title: URL：host 属性
 slug: Web/API/URL/host
 l10n:
-  sourceCommit:
+  sourceCommit: 1a91b0b63f0cbaca9125bd48d4e5bc8afed2a7a3
 ---
 
 {{ApiRef("URL API")}} {{AvailableInWorkers}}
