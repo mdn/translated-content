@@ -1,11 +1,13 @@
 ---
-title: self.crypto
-slug: Web/API/crypto_property
+title: Window：crypto 属性
+slug: Web/API/Window/crypto
+l10n:
+  sourceCommit: e897fbfbefff7a7178af36a57944821dbc49318f
 ---
 
-{{APIRef}}
+{{APIRef("Web Crypto API")}}
 
-**`crypto`** 全局只读属性返回与全局对象关联的 {{domxref("Crypto")}} 对象。此对象允许网页访问某些加密相关的服务。
+{{domxref("Window")}} 接口的 **`crypto`** 只读属性返回当前窗口的作用域的 {{domxref("Crypto")}} 对象。此对象允许网页访问某些加密相关的服务。
 
 虽然该属性自身的只读的，但它的所有方法（以及其子对象的方法——{{domxref("SubtleCrypto")}}）不仅是只读的，因此容易受到 {{glossary("polyfill")}} 的攻击。
 
@@ -24,7 +26,7 @@ slug: Web/API/crypto_property
 ```js
 globalThis.genRandomNumbers = () => {
   const array = new Uint32Array(10);
-  crypto.getRandomValues(array);
+  globalThis.crypto.getRandomValues(array);
 
   const randText = document.getElementById("myRandText");
   randText.textContent = `随机数为：${array.join(" ")}`;
@@ -52,5 +54,5 @@ globalThis.genRandomNumbers = () => {
 
 ## 参见
 
-- {{domxref("Window")}} 全局对象
 - {{domxref("Crypto")}} 接口
+- {{domxref("WorkerGlobalScope.crypto")}}
