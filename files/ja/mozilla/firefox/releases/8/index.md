@@ -52,7 +52,7 @@ Firefox 8 は 2011 年 11 月 8 日にリリースされました。このペー
 ### Network
 
 - ダブルクォートが [RFC 2231](https://tools.ietf.org/html/rfc2231)/[RFC 5987](https://tools.ietf.org/html/rfc5987) エンコーディングの区切り子として利用できなくなりました。これはそれらの RFC への準拠によるものです。
-- MIME ヘッダフィールドのパーサは、引数に「=」が含まれない `Content-Disposition` ヘッダを受け付けなくなりました。
+- MIME ヘッダーフィールドのパーサーは、引数に「=」が含まれない `Content-Disposition` ヘッダーを受け付けなくなりました。
 - JavaScript が無効な環境ではスクリプトファイルをダウンロードしないようになりました。
 - SSL 2.0 のサポートが打ち切られました。
 
@@ -63,7 +63,7 @@ Firefox 8 は 2011 年 11 月 8 日にリリースされました。このペー
 - The [`WebSocket`](/ja/docs/WebSockets/WebSockets_reference/WebSocket) オブジェクトの `extensions` アトリビュートがサポートされました。
 - WebSocket コンストラクターがひとつのプロトコル文字列だけではなく、プロトコルの配列もサポートするようになりました。
 - SSL と 非 SSL の混在が WebSocket で認められなくなりました。
-- WebSocket の接続エラーが `onerror` ハンドラをトリガーするようになりました。
+- WebSocket の接続エラーが `onerror` ハンドラーをトリガーするようになりました。
 - [WebSocket](/ja/docs/WebSockets) API が最新版の仕様に追従しました。(参考: [バグ 674890](https://bugzilla.mozilla.org/show_bug.cgi?id=674890), [バグ 674527](https://bugzilla.mozilla.org/show_bug.cgi?id=674527), [バグ 674716](https://bugzilla.mozilla.org/show_bug.cgi?id=674716))
 - WebSocket の deflate-stream 拡張が無効にされました。この拡張は非推奨とされており、またいくつかのウェブサイトとの互換性を損ねていました。
 

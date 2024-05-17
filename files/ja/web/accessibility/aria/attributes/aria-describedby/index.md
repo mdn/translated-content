@@ -2,8 +2,10 @@
 title: aria-describedby
 slug: Web/Accessibility/ARIA/Attributes/aria-describedby
 l10n:
-  sourceCommit: 570a1b34461e2a95f0bc943b3fc15aba241813a7
+  sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
 ---
+
+{{AccessibilitySidebar}}
 
 `aria-describedby` はグローバル属性で、その属性が設定されている要素を説明する要素（複数可）を特定します。
 
@@ -15,7 +17,7 @@ l10n:
 
 `aria-describedby` 属性は [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) 属性ととても似ています。 `aria-labelledby` がオブジェクトの本質を記述するラベルや要素の `id` を掲載しているのに対して、 `aria-describedby` はユーザーが必要とするかもしれないより詳細な情報を提供する記述や要素の `id` を掲載しています。 `aria-labelledby` と `aria-describedby` はどちらもテキストの代替を計算するために他の要素を参照しますが、ラベルは簡潔であるべきであるのに対し、説明はより詳細な情報を提供することを意図しています。ラベルはオブジェクトの本質を記述するのに対し、説明文はユーザーが必要とするかもしれないより多くの情報を提供します。
 
-`aria-describedby` によってリンクされた要素は表示されている必要はありません。要素が非表示であっても参照することは可能です。例えば、あるフォームコントロールは既定値では非表示の説明を持つことができ、「詳細情報」アイコンのような開示ウィジェットを使用してリクエストに応じて表示されます。視覚ユーザはアイコンをクリックします。支援技術のユーザーは、 `aria-describedby` で直接そのフォームフィールドから説明を参照します。
+`aria-describedby` によってリンクされた要素は表示されている必要はありません。要素が非表示であっても参照することは可能です。例えば、あるフォームコントロールは既定値では非表示の説明を持つことができ、「詳細情報」アイコンのような開示ウィジェットを使用してリクエストに応じて表示されます。視覚ユーザーはアイコンをクリックします。支援技術のユーザーは、 `aria-describedby` で直接そのフォームフィールドから説明を参照します。
 
 `aria-describedby` プロパティは、関連するコンテンツがプレーンテキストとして記述されている場合に適しています。コンテンツが大量のコンテンツ、有益な意味づけを含む場合、またはユーザーナビゲーションを必要とする複雑な構造を持つ場合は、 [`aria-details`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-details) を使用してください。 `aria-details` は、支援技術のユーザーが関連する構造化されたコンテンツにアクセスできるようにし、構造を理解しやすくしたり、情報を小分けにして使いやすくしたりする、追加のナビゲーションコマンドを提供します。
 
@@ -51,8 +53,3 @@ l10n:
 - [`aria-description`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-description)
 - [`aria-details`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-details)
 - [Browser and AT support for `aria-describedby`](https://a11ysupport.io/tech/aria/aria-describedby_attribute)
-
-<section id="Quick_links">
-<strong><a href="/ja/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA 状態とプロパティ</a></strong>
-{{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/aria/Attributes")}}
-</section>

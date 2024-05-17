@@ -77,7 +77,7 @@ _変更なし。_
 
 ## ネットワーク
 
-- WebSockets で `permessage` 圧縮法をサポートしました ([Firefox バグ 792831](https://bugzil.la/792831))。サーバが対応していれば使用できます。
+- WebSockets で `permessage` 圧縮法をサポートしました ([Firefox バグ 792831](https://bugzil.la/792831))。サーバーが対応していれば使用できます。
 
 ## セキュリティ
 

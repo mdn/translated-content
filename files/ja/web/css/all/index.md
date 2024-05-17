@@ -2,7 +2,7 @@
 title: all
 slug: Web/CSS/all
 l10n:
-  sourceCommit: 5f0a9e8c258072ed8146401584162c232331c77d
+  sourceCommit: 9e521726ed1d605756b73a788eaa55498d540821
 ---
 
 {{CSSRef}}

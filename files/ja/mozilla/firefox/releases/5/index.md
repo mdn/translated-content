@@ -43,7 +43,7 @@ Firefox 5 は Gecko 5.0 ベースのブラウザーで、2011 年 6 月 21 日�
 - 上記と同様に、アクティブでないタブにおける {{ domxref("window.setInterval()") }} も 1 秒に 1 回以下になりました。
 - [`XMLHttpRequest`](/ja/docs/DOM/XMLHttpRequest) が [`loadend` イベントをサポート](/ja/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Detecting_any_load_end_condition) for progress listeners. このイベントはすべての転送が終了した際 (つまり、`abort`, `error`, `load` イベントの後) に発生します。このイベントを利用すると、転送の成功・失敗に関わらず実行されるタスクを処理できます。
 - {{ domxref("Blob") }} オブジェクトと {{ domxref("File") }} オブジェクトの `slice()` メソッドが削除され、代わりに提案中のメソッドに置き換えられました。提案中のメソッドは JavaScript の [`Array.slice()`](/ja/docs/JavaScript/Reference/Global_Objects/Array/slice), [`String.slice()`](/ja/docs/JavaScript/Reference/Global_Objects/String/slice) メソッドにより近いものです。現時点では [`mozSlice()`](</ja/docs/DOM/Blob#mozSlice()>) という名前がつけられています。
-- {{ domxref("window.navigator.language") }} の値が `Accept-Language` [HTTP ヘッダ](/ja/docs/HTTP/Headers) の値から決定されるようになりました。
+- {{ domxref("window.navigator.language") }} の値が `Accept-Language` [HTTP ヘッダー](/ja/docs/HTTP/Headers) の値から決定されるようになりました。
 - DOM 仕様の要件により、{{ domxref("Node.prefix") }} プロパティが readonly になりました。
 
 ### JavaScript
@@ -52,7 +52,7 @@ Firefox 5 は Gecko 5.0 ベースのブラウザーで、2011 年 6 月 21 日�
 - [`Function.prototype.isGenerator()`](/ja/docs/JavaScript/Reference/Global_Objects/Function/isGenerator) メソッドがサポートされました。個のメソッドによってある関数が [generator](/ja/docs/JavaScript/Guide/Iterators_and_Generators#Generators.3a_a_better_way_to_build_Iterators) であるかを調べられます。
 - chrome コード内に生成された DOM 文書が sandbox 内のスクリプトに現れなくなりました。
 - [予約語](/ja/docs/JavaScript/Reference/Reserved_Words) `class`, `enum`, `export`, `extends`, `import`, `super` はこれまで Strict Mode のみで予約されていましたが、Strict Mode ではない通常のモードでも予約語扱いになりました。
-- JSON パーサが書き直され、スピードと準拠度が向上しました。この書き直しには [Firefox バグ 572279](https://bugzil.la/572279) の修正も含まれています。
+- JSON パーサーが書き直され、スピードと準拠度が向上しました。この書き直しには [Firefox バグ 572279](https://bugzil.la/572279) の修正も含まれています。
 
 ### SVG
 
@@ -61,9 +61,9 @@ Firefox 5 は Gecko 5.0 ベースのブラウザーで、2011 年 6 月 21 日�
 
 ### HTTP
 
-- Firefox は `Keep-Alive` HTTP ヘッダを送信しないようになります。私たちはこのヘッダを正しく整形していませんでした。また、{{ httpheader("Connection") }} や {{ httpheader("Proxy-Connection") }} ヘッダに "keep-alive" を指定していたため重複しており、意味がなかったのです。
+- Firefox は `Keep-Alive` HTTP ヘッダーを送信しないようになります。私たちはこのヘッダーを正しく整形していませんでした。また、{{ httpheader("Connection") }} や {{ httpheader("Proxy-Connection") }} ヘッダーに "keep-alive" を指定していたため重複しており、意味がなかったのです。
 - HTTP のトランザクションモデルを変更し、持続的接続プール内の接続を再利用するというより高度なものになりました。Necko はプールを [FIFO](https://ja.wikipedia.org/wiki/FIFO) と扱うのではなく、プール内の接続を [congestion window](https://en.wikipedia.org/wiki/congestion_window) (CWND) の大きい順に並べ替えます。Window のサイズ拡大を避けることで、多くのケースで HTTP トランザクションの確認応答時間 (RTT) を減少させることができるでしょう。
-- Firefox は `Content-Disposition` HTTP レスポンスヘッダについて、`filename`, `filename*` パラメタがどちらも与えられている場合にそれらをより効果的に処理するようになりました。これは `filename` が先に与えられている場合でも `filename*` をまず調べすべての名前を読み取ることで実現しています。これまでは最初にマッチしたパラメタが使われており、後により適切な名前が与えられていた場合でもそれが使われなかったのです。詳細は [Firefox バグ 588781](https://bugzil.la/588781) をお読みください。
+- Firefox は `Content-Disposition` HTTP レスポンスヘッダーについて、`filename`, `filename*` パラメタがどちらも与えられている場合にそれらをより効果的に処理するようになりました。これは `filename` が先に与えられている場合でも `filename*` をまず調べすべての名前を読み取ることで実現しています。これまでは最初にマッチしたパラメタが使われており、後により適切な名前が与えられていた場合でもそれが使われなかったのです。詳細は [Firefox バグ 588781](https://bugzil.la/588781) をお読みください。
 
 ### MathML
 
