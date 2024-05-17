@@ -218,7 +218,7 @@ A 级：
 
 完成该过程后，你将在主机计算机上的窗口中运行一个带有操作系统的虚拟机。
 
-![运行在 Virtual Box 虚拟机上的 Windows 操作系统](virtualbox-running.png)
+![在 macOS 上的 Virtual Box 中托管并运行的 Windows XP 截图](virtualbox-running.png)
 
 你需要像对待实际安装的操作系统一样对待这个虚拟操作系统安装——例如，除了安装你想要测试的浏览器之外，还要安装一个防病毒程序来保护它免受病毒的侵害。
 
