@@ -1,6 +1,8 @@
 ---
 title: Fetch 元数据请求标头
 slug: Glossary/Fetch_metadata_request_header
+l10n:
+  sourceCommit: 835d6632d59993861a0458510402787f8a2c3cb3
 ---
 
 {{GlossarySidebar}}
@@ -17,6 +19,11 @@ fetch 元数据请求标头：
 - {{HTTPHeader("Sec-Fetch-Mode")}}
 - {{HTTPHeader("Sec-Fetch-User")}}
 - {{HTTPHeader("Sec-Fetch-Dest")}}
+
+以下请求标头不是*严格意义上*的“fetch 元数据请求标头”，因为它们不在同一规范中，但同样提供有关资源使用方式的上下文信息。服务器可能会使用它们来修改其缓存行为，或返回的信息：
+
+- {{HTTPHeader("Sec-Purpose")}} {{Experimental_Inline}}
+- {{HTTPHeader("Service-Worker-Navigation-Preload")}}
 
 ## 参见
 
