@@ -1722,7 +1722,6 @@
 /es/docs/Web/API/Window.onbeforeunload	/es/docs/Web/API/Window/beforeunload_event
 /es/docs/Web/API/Window.setTimeout	/es/docs/Web/API/setTimeout
 /es/docs/Web/API/Window/applicationCache	/es/docs/orphaned/Web/API/Window/applicationCache
-/es/docs/Web/API/Window/crypto	/es/docs/Web/API/crypto_property
 /es/docs/Web/API/Window/dialogArguments	/es/docs/orphaned/Web/API/Window/dialogArguments
 /es/docs/Web/API/WindowBase64.atob	/es/docs/Web/API/atob
 /es/docs/Web/API/WindowBase64/Base64_codificando_y_decodificando	/es/docs/Glossary/Base64
@@ -1761,6 +1760,7 @@
 /es/docs/Web/API/console/timeEnd	/es/docs/Web/API/console/timeend_static
 /es/docs/Web/API/console/trace	/es/docs/Web/API/console/trace_static
 /es/docs/Web/API/console/warn	/es/docs/Web/API/console/warn_static
+/es/docs/Web/API/crypto_property	/es/docs/Web/API/Window/crypto
 /es/docs/Web/API/event.defaultPrevented	/es/docs/Web/API/Event/defaultPrevented
 /es/docs/Web/API/event.which	/es/docs/Web/API/UIEvent/which
 /es/docs/Web/API/indexedDB	/es/docs/Web/API/Window/indexedDB

@@ -920,7 +920,7 @@
 /ja/docs/DOM/window.confirm	/ja/docs/Web/API/Window/confirm
 /ja/docs/DOM/window.confirm-redirect-1	/ja/docs/Web/API/Window/confirm
 /ja/docs/DOM/window.content	/ja/docs/Web/API/Window
-/ja/docs/DOM/window.crypto	/ja/docs/Web/API/crypto_property
+/ja/docs/DOM/window.crypto	/ja/docs/Web/API/Window/crypto
 /ja/docs/DOM/window.defaultStatus	/ja/docs/Web/API/Window
 /ja/docs/DOM/window.document	/ja/docs/Web/API/Window/document
 /ja/docs/DOM/window.dump	/ja/docs/Web/API/Window/dump
@@ -1140,7 +1140,7 @@
 /ja/docs/DOM:window.closed	/ja/docs/Web/API/Window/closed
 /ja/docs/DOM:window.confirm	/ja/docs/Web/API/Window/confirm
 /ja/docs/DOM:window.content	/ja/docs/Web/API/Window
-/ja/docs/DOM:window.crypto	/ja/docs/Web/API/crypto_property
+/ja/docs/DOM:window.crypto	/ja/docs/Web/API/Window/crypto
 /ja/docs/DOM:window.defaultStatus	/ja/docs/Web/API/Window
 /ja/docs/DOM:window.document	/ja/docs/Web/API/Window/document
 /ja/docs/DOM:window.dump	/ja/docs/Web/API/Window/dump
@@ -3156,7 +3156,6 @@
 /ja/docs/Web/API/Window/animationstart_event	/ja/docs/Web/API/Element/animationstart_event
 /ja/docs/Web/API/Window/arguments	/ja/docs/Web/API/Window
 /ja/docs/Web/API/Window/content	/ja/docs/Web/API/Window
-/ja/docs/Web/API/Window/crypto	/ja/docs/Web/API/crypto_property
 /ja/docs/Web/API/Window/defaultStatus	/ja/docs/Web/API/Window
 /ja/docs/Web/API/Window/dispatchEvent	/ja/docs/Web/API/EventTarget/dispatchEvent
 /ja/docs/Web/API/Window/escape	/ja/docs/Web/JavaScript/Reference/Global_Objects/escape
@@ -3267,6 +3266,7 @@
 /ja/docs/Web/API/console/timeStamp	/ja/docs/Web/API/console/timestamp_static
 /ja/docs/Web/API/console/trace	/ja/docs/Web/API/console/trace_static
 /ja/docs/Web/API/console/warn	/ja/docs/Web/API/console/warn_static
+/ja/docs/Web/API/crypto_property	/ja/docs/Web/API/Window/crypto
 /ja/docs/Web/API/document.URL	/ja/docs/Web/API/Document/URL
 /ja/docs/Web/API/document.activeElement	/ja/docs/Web/API/Document/activeElement
 /ja/docs/Web/API/document.adoptNode	/ja/docs/Web/API/Document/adoptNode
@@ -3384,7 +3384,7 @@
 /ja/docs/Web/API/window.closed	/ja/docs/Web/API/Window/closed
 /ja/docs/Web/API/window.confirm	/ja/docs/Web/API/Window/confirm
 /ja/docs/Web/API/window.content	/ja/docs/Web/API/Window
-/ja/docs/Web/API/window.crypto	/ja/docs/Web/API/crypto_property
+/ja/docs/Web/API/window.crypto	/ja/docs/Web/API/Window/crypto
 /ja/docs/Web/API/window.defaultStatus	/ja/docs/Web/API/Window
 /ja/docs/Web/API/window.document	/ja/docs/Web/API/Window/document
 /ja/docs/Web/API/window.dump	/ja/docs/Web/API/Window/dump
