@@ -5,8 +5,16 @@ slug: Glossary/HTML5
 
 {{GlossarySidebar}}
 
-{{Glossary("HTML")}} 的最新稳定版本，HTML5 将 HTML 从用于构造一个文档的一个简单标记，到一个完整的应用程序开发平台。除其他功能外，HTML5 还包括新元素和用于增强存储、多媒体和硬件访问的{{glossary("JavaScript")}} {{glossary("API","APIs")}} 。
+HTML5 这个术语本质上是指一组现代 Web 技术的流行词汇。这包括 {{Glossary("HTML")}} 现行标准，以及增强存储、多媒体和硬件访问的 {{glossary("JavaScript")}} {{glossary("API")}}。
+
+你有时会听到“新的 HTML5 中的元素”，或发现 HTML5 被描述为 HTML 的新版本。HTML5 是以前版本 HTML 的继续，引入了新的元素和功能，改进或删除了一些现有功能。然而，作为一个现行标准，HTML 现在没有版本。最新的规范可以在 [html.spec.whatwg.org/](https://html.spec.whatwg.org/) 找到。
+
+任何现代网站都应该使用 [HTML 文档类型](/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML#doctype)——这将确保你使用的是最新版本的 HTML。
+
+> **备注：** 在 2019 年之前，{{glossary("W3C")}} 发布的是带有版本号的 HTML5 标准。自 2019 年 5 月 28 日起，W3C 宣布 WHATWG 现行标准为 HTML 的唯一版本。
 
 ## 参见
 
-- [our HTML5 guide](/zh-CN/docs/Glossary/HTML5)
+- [HTML 文档](/zh-CN/docs/Web/HTML)
+- [HTML 新手学习教程](/zh-CN/docs/Learn/HTML)
+- [Web API](/zh-CN/docs/Web/API)
