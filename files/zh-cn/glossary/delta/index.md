@@ -2,7 +2,7 @@
 title: Delta
 slug: Glossary/Delta
 l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+  sourceCommit: fd4435ca55ff683dc8574b700ef244e75c2dfb52
 ---
 
 {{GlossarySidebar}}
@@ -27,6 +27,4 @@ let deltaX = newX - oldX;
 let newX = oldX + deltaX;
 ```
 
-## 参见
-
-- 例如鼠标滚轮事件 {{domxref("WheelEvent")}}，在其 {{domxref("WheelEvent.deltaX", "deltaX")}}、{{domxref("WheelEvent.deltaY", "deltaY")}} 和 {{domxref("WheelEvent.deltaZ", "deltaZ")}} 属性中提供了自上次事件以来滚轮移动的量。
+例如鼠标滚轮事件 {{domxref("WheelEvent")}}，在其 {{domxref("WheelEvent.deltaX", "deltaX")}}、{{domxref("WheelEvent.deltaY", "deltaY")}} 和 {{domxref("WheelEvent.deltaZ", "deltaZ")}} 属性中提供了自上次事件以来滚轮移动的量。
