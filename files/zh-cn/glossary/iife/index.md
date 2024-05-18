@@ -78,12 +78,12 @@ const makeWithdraw = (balance) => {
           balance -= amount;
           return balance;
         }
-        return "不够钱"
+        return "不够钱";
       },
     };
   })(balance);
 
-  const firstAccount = makeWithdraw(100);// "我要用你的钱做坏事"
+  const firstAccount = makeWithdraw(100); // "我要用你的钱做坏事"
   console.log(firstAccount.balance); // undefined
   console.log(firstAccount.withdraw(20)); // 80
   console.log(firstAccount.withdraw(30)); // 50
