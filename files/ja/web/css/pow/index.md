@@ -7,41 +7,41 @@ browser-compat: css.types.pow
 
 {{CSSRef}}
 
-The **`pow()`** [CSS](/ja/docs/Web/CSS) [function](/ja/docs/Web/CSS/CSS_Functions) is an exponential function that returns the value of a base raised to the power of a number.
+**`pow()`** [CSS](/ja/docs/Web/CSS) [関数](/ja/docs/Web/CSS/CSS_Functions)は、基数を累乗した値を返す指数関数です。
 
-The {{CSSxRef("exp")}} function is a special case of `pow()` where the value of the base is the mathematical constant [e](<https://en.wikipedia.org/wiki/E_(mathematical_constant)>).
+{{CSSxRef("exp")}} 関数は `pow()` の特別なケースで、基数が数学定数 [e](<https://en.wikipedia.org/wiki/E_(mathematical_constant)>) になります。
 
-## Syntax
+## 構文
 
 ```css
-/* A <number> value */
+/* <number> 値 */
 width: calc(10px * pow(5, 2)); /* 10px * 25 = 250px */
 width: calc(10px * pow(5, 3)); /* 10px * 125 = 1250px */
 width: calc(10px * pow(2, 10)); /* 10px * 1024 = 10240px */
 ```
 
-### Parameters
+### 引数
 
-The `pow(base, number)` function accepts two comma-separated values as its parameters.
+`pow(base, number)` 関数は、カンマで区切られた 2 つの値を引数で受け取ります。
 
 - `base`
-  - : A calculation that resolves to a {{CSSxRef("&lt;number&gt;")}}, representing the base.
+  - : {{CSSxRef("&lt;number&gt;")}} に解決される計算式で、基数を表します。
 - `number`
-  - : A calculation that resolves to a {{CSSxRef("&lt;number&gt;")}}, representing the exponent.
+  - : {{CSSxRef("&lt;number&gt;")}} に解決される計算式で、指数を表します。
 
-### Return value
+### 返値
 
-Returns a {{CSSxRef("&lt;number&gt;")}} representing base<sup>number</sup>, that is, `base` raised to the power of `number`.
+返値は {{CSSxRef("&lt;number&gt;")}} で、base<sup>number</sup>、つまり `base` を `number` 乗した値になります。
 
-## Formal syntax
+## 形式文法
 
 {{CSSSyntax}}
 
-## Examples
+## 例
 
-### Scale headings by fixed ratio
+### 固定比率で見出しを拡大する
 
-The `pow()` function can be useful for strategies like CSS Modular Scale, which relates all the font-sizes on a page to each other by a fixed ratio.
+`pow()` 関数は、ページ上のすべてのフォントサイズを固定比率で関連付ける CSS モジュラースケールのような戦略に役立ちます。
 
 #### HTML
 
@@ -77,19 +77,19 @@ h6 {
 }
 ```
 
-#### Result
+#### 結果
 
 {{EmbedLiveSample('Scale headings by fixed ratio', '100%', '300px')}}
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 
-## See also
+## 関連情報
 
 - {{CSSxRef("sqrt")}}
 - {{CSSxRef("hypot")}}
