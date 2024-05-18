@@ -38,6 +38,6 @@ window.scrollByLines(lines)
 
 Не является частью спецификации
 
-## See also
+## Смотрите также
 
 - {{domxref("window.scrollBy")}}, {{domxref("window.scrollByPages")}}

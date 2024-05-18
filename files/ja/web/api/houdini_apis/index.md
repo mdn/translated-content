@@ -1,7 +1,6 @@
 ---
 title: Houdini API
 slug: Web/API/Houdini_APIs
-original_slug: Web/API/Houdini
 l10n:
   sourceCommit: 3b39e41fb9393a13b16aaf58ba25174a62205041
 ---

@@ -117,11 +117,11 @@ Voici un tableau qui montre quelles plateformes mobiles prennent en charge les f
 
 > **Note :** Safari 7 a des problèmes à jouer si vous essayez de démarrer tous les morceaux audio simultanément. Si vous échelonnez la lecture, vous aurez peut-être un certain succès.
 
-> **Note :** La lecture audio simultanée est testée à l'aide de notre [exemple de test audio simultané](http://jsfiddle.net/dmkyaq0r/), avec lequel nous essayons de lire trois morceaux en même temps en utilisant l'API audio standard.
+> **Note :** La lecture audio simultanée est testée à l'aide de notre [exemple de test audio simultané](https://jsfiddle.net/dmkyaq0r/), avec lequel nous essayons de lire trois morceaux en même temps en utilisant l'API audio standard.
 
-> **Note :** La fonctionnalité de lecture automatique simple est testée avec notre [exemp;e test lecture automatique](http://jsfiddle.net/vpdspp2b/).
+> **Note :** La fonctionnalité de lecture automatique simple est testée avec notre [exemp;e test lecture automatique](https://jsfiddle.net/vpdspp2b/).
 
-> **Note :** La variabilité du volume est testée avec notre [exemple test volume](http://jsfiddle.net/7ta12vw4/).
+> **Note :** La variabilité du volume est testée avec notre [exemple test volume](https://jsfiddle.net/7ta12vw4/).
 
 ## Solutions de contournement pour mobile
 
@@ -190,7 +190,7 @@ myAudio.addEventListener(
 );
 ```
 
-> **Note :** Vous pouvez [essayer notre lecteur de sprite audio](http://jsfiddle.net/59vwaame/) sur JSFiddle.
+> **Note :** Vous pouvez [essayer notre lecteur de sprite audio](https://jsfiddle.net/59vwaame/) sur JSFiddle.
 
 > **Note :** Sur mobile nous pouvons avoir besoin de déclencher ce code à partir d'un événement initié par l'utilisateur, tel qu'un bouton de démarrage pressé, comme décrit ci-dessus.
 
@@ -296,7 +296,7 @@ for (var i = 0, len = tracks.length; i < len; i++) {
 }
 ```
 
-> **Note :** Vous pouvez essayer notre [démo multipiste API Web Audio](http://jsfiddle.net/c87z11jj/1/) sur JSFiddle.
+> **Note :** Vous pouvez essayer notre [démo multipiste API Web Audio](https://jsfiddle.net/c87z11jj/1/) sur JSFiddle.
 
 Regardons maintenant le code. Nous créons d'abord un nouveau {{domxref ("AudioContext")}} et créons une fonction `(playTrack ())` qui charge et commence à jouer une piste.
 
@@ -333,7 +333,7 @@ if (offset == 0) {
 }
 ```
 
-> **Note :** Ici, vous pouvez [essayer notre code calculateur d'attente](http://jsfiddle.net/c87z11jj/2/) , sur JSFiddle (synchronisé à la mesure).
+> **Note :** Ici, vous pouvez [essayer notre code calculateur d'attente](https://jsfiddle.net/c87z11jj/2/) , sur JSFiddle (synchronisé à la mesure).
 
 > **Note :** Si le premier paramètre est 0 ou inférieur au contexte `currentTime`, la musique commence immédiatement.
 

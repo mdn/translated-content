@@ -1206,7 +1206,7 @@ input {
 
 If you want to start tinkering with the API, jump in to the [reference documentation](/en/IndexedDB) and checking out the different methods.
 
-## See also
+## Смотрите также
 
 Reference
 

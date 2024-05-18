@@ -3,7 +3,7 @@ title: 使用 XMLHttpRequest
 slug: Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{DefaultAPISidebar("XMLHttpRequest API")}}
 
 在该教程中，我们将使用{{domxref("XMLHttpRequest")}} 来发送 [HTTP](/zh-CN/docs/Web/HTTP) 请求以实现网站和服务器之间的数据交换。`XMLHttpRequest`常见和晦涩的使用情况都将包含在例子中。
 

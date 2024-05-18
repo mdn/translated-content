@@ -2,7 +2,7 @@
 title: 位置情報 API
 slug: Web/API/Geolocation_API
 l10n:
-  sourceCommit: 0444ab41bb372e63b3345f50e5b1e4e6a96c21d5
+  sourceCommit: 049b078b0fff80875027b89802b0399138df63a6
 ---
 
 {{securecontext_header}}{{DefaultAPISidebar("Geolocation API")}}
@@ -40,6 +40,9 @@ WebExtension で `Geolocation` オブジェクトを使用するには、マニ�
   - : ユーザーの位置の座標を表します。 `GeolocationCoordinates` のインスタンスには、緯度、経度、その他の重要な関連情報が含まれています。
 - {{domxref("GeolocationPositionError")}}
   - : `GeolocationPositionError` は、 {{domxref("Geolocation")}} に含まれるメソッドのいずれかの呼び出しに失敗した場合、エラーコールバック内で返され、エラーコードとメッセージが含まれています。
+
+### 他のインターフェイスへの拡張
+
 - {{domxref("Navigator.geolocation")}}
   - : API のエントリーポイント。 {{domxref("Geolocation")}} オブジェクトのインスタンスを返し、そこから他のすべての機能にアクセスすることができます。
 

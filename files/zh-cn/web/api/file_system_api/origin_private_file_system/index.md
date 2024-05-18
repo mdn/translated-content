@@ -1,18 +1,20 @@
 ---
 title: 源私有文件系统
 slug: Web/API/File_System_API/Origin_private_file_system
+l10n:
+  sourceCommit: 2b6bddfe281c0179fbde9c870f9de7c0dc3829e8
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("File System API")}}
+{{securecontext_header}}{{DefaultAPISidebar("File System API")}}{{AvailableInWorkers}}
 
-源私有文件系统（OPFS）是作为[文件系统 API](/zh-CN/docs/Web/API/File_System_API) 的一部分提供的一个存储端点。它是页面所属的源专用的，并且不像常规文件系统那样对用户可见。它提供了对一种特殊类型文件的访问能力，这种文件经过高度性能优化，并提供对其内容的原地写入访问特性。
+**源私有文件系统**（OPFS）是作为[文件系统 API](/zh-CN/docs/Web/API/File_System_API) 的一部分提供的一个存储端点。它是页面所属的源专用的，并且不像常规文件系统那样对用户可见。它提供了对一种特殊类型文件的访问能力，这种文件经过高度性能优化，并提供对其内容的原地写入访问特性。
 
-## 使用文件系统 API 处理文件
+## 使用文件系统访问 API 处理文件
 
 扩展自[文件系统 API](/zh-CN/docs/Web/API/File_System_API) 的[文件系统访问 API](https://wicg.github.io/file-system-access/) 使用选择器提供了对文件的访问能力。例如：
 
 1. {{domxref("Window.showOpenFilePicker()")}} 允许用户选择一个文件用于访问，文件将作为结果以一个 {{domxref("FileSystemFileHandle")}} 对象的形式被返回。
-2. 调用 {{domxref("FileSystemFileHandle.getFile()")}} 以访问文件的内容，使用 {{domxref("FileSystemFileHandle.createWritable()")}} / {{domxref("FileSystemWritableFileStream.write()")}} 来修改内容。
+2. 调用 {{domxref("FileSystemFileHandle.getFile()")}} 以访问文件的内容，使用 {{domxref("FileSystemFileHandle.createWritable()")}} 或 {{domxref("FileSystemWritableFileStream.write()")}} 来修改内容。
 3. 调用 {{domxref("FileSystemHandle.requestPermission()", "FileSystemHandle.requestPermission({mode: 'readwrite'})")}} 来请求用户的权限以保存更改。
 4. 如果用户接受了权限请求，更改就会保存回原文件。
 
@@ -159,7 +161,7 @@ const content = textEncoder.encode("Some text");
 accessHandle.write(content, { at: size });
 // 强制刷入更改。
 accessHandle.flush();
-// 文件当前的大小，现在是 `9`（"Some text" 的长度）。
+// 文件当前的大小，现在是 `9`（“Some text”的长度）。
 size = accessHandle.getSize();
 
 // 编码更多要写入文件的内容。
@@ -168,7 +170,7 @@ const moreContent = textEncoder.encode("More content");
 accessHandle.write(moreContent, { at: size });
 // 强制刷入更改。
 accessHandle.flush();
-// 文件当前的大小，现在是 `21`（"Some textMore content" 的长度）。
+// 文件当前的大小，现在是 `21`（“Some textMore content”的长度）。
 size = accessHandle.getSize();
 
 // 准备一个长度与文件相同的数据视图。
@@ -188,10 +190,6 @@ console.log(textDecoder.decode(dataView));
 accessHandle.truncate(4);
 ```
 
-## 浏览器兼容性
-
-{{Compat}}
-
 ## 参见
 
-- [源私有文件系统](https://web.dev/articles/origin-private-file-system)——web.dev
+- web.dev 上的[源私有文件系统](https://web.dev/articles/origin-private-file-system)

@@ -1,11 +1,13 @@
 ---
-title: Document.adoptNode()
+title: Document：adoptNode() 方法
 slug: Web/API/Document/adoptNode
+l10n:
+  sourceCommit: 3d4f158c8ab2e1ee7141b59f020e8e5de911ac62
 ---
 
 {{ ApiRef("DOM") }}
 
-从其他的 document 文档中获取一个节点。该节点以及它的子树上的所有节点都会从原文档删除 (如果有这个节点的话), 并且它的[`ownerDocument`](/zh-CN/docs/DOM/Node.ownerDocument) 属性会变成当前的 document 文档。之后你可以把这个节点插入到当前文档中。
+**`Document.adoptNode()`** 将{{Glossary("node/dom", "节点（DOM）")}}从另一个{{domxref("Document", "文档", "", 1)}}转移至调用该方法的文档中。被转移的节点及其子树将会从原始文档（如果存在的话）中移除，并且它们的 {{domxref("Node.ownerDocument", "ownerDocument")}} 会变更为当前文档。然后节点将被插入到当前文档中。
 
 ## 语法
 
@@ -13,8 +15,18 @@ slug: Web/API/Document/adoptNode
 adoptNode(externalNode)
 ```
 
+### 参数
+
 - `externalNode`
-  - : 将要从外部文档导入的节点。
+  - : 将要从另一份文档中转移的节点。
+
+### 返回值
+
+在导入文档的作用域中复制的 `importedNode`。
+
+调用此方法后，`importedNode` 和 `externalNode` 是同个对象。
+
+> **备注：** `importedNode` 的 {{domxref("Node.parentNode")}} 为 `null`，因为它尚未插入文档树中！
 
 ## 示例
 
@@ -28,26 +40,23 @@ iframeImages.forEach((imgEl) => {
 });
 ```
 
-## 笔记
+## 备注
 
-有时候调用 adopNode 可能会失败因为节点资源来自不同的源，但是这不应该是浏览器的实现问题。
+在将来自外部文档的节点插入到当前文档之前，应该先进行以下操作之一：
 
-In general the `adoptNode` call may fail due to the source node coming from a different implementation, however this should not be a problem with browser implementations.
+- 使用 {{domXref("document.importNode()")}} 进行克隆；或
+- 使用 `document.adoptNode()` 进行转移。
 
-> 译者注：
->
-> 该方法不但可以从 iframe 中获取 adopt 元素，在同一 document 文档下的不同两个元素中也可以使用，该方法可以实现从左边栏列表中选取某些元素加载到右边栏的功能。
-
-将外部文档的节点插入当前文档之前，你必须使用 [`document.importNode()`](/zh-CN/docs/Web/API/Document/importNode) 从外部文档导入源节点，或者使用 [`document.adoptNode()`](/zh-CN/docs/Web/API/Document/adoptNode)导入源节点，
-想要了解更多的 [`Node.ownerDocument`](/zh-CN/docs/Web/API/Node/ownerDocument) 问题，请参考 [W3C DOM FAQ](http://www.w3.org/DOM/faq.html#ownerdoc).
-
-即使你不执行导入动作，就执行插入外部文档中的节点.Firefox 目前也不会报错 (如果严格按标准执行，很多已有的网站都无法正常运行).
-我们鼓励开发者严格按标准修改自己已有的不符合上述标准的代码。
+有关 {{domXref("Node.ownerDocument")}} 问题的更多信息，请参阅 [W3C DOM 常见问题](https://www.w3.org/DOM/faq.html#ownerdoc)。
 
 ## 规范
 
-- [DOM Level 3 Core: Document.adoptNode](http://www.w3.org/TR/DOM-Level-3-Core/core.html#Document3-adoptNode)
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
 
 ## 参见
 
-- [document.importNode](/zh-CN/docs/DOM/document.importNode)
+- {{domxref("document.importNode()")}}

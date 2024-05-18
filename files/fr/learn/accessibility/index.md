@@ -11,7 +11,7 @@ Apprendre le HTML, le CSS et le JavaScript est utile si vous voulez devenir dév
 
 Pour tirer le meilleur parti de ce module, il serait judicieux de parcourir les sections relatives à [HTML](/fr/Apprendre/HTML), [CSS](/fr/Apprendre/CSS) et [JavaScript](/fr/Apprendre/JavaScript) en premier (au moins les deux premiers modules de chacune de ces sections) ou, peut-être encore mieux, de travailler les parties pertinentes du module d'accessibilité au fur et à mesure que vous travaillez les sujets technologiques connexes.
 
-> **Note :** Si vous travaillez sur un ordinateur, une tablette ou un autre appareil sur lequel vous n'avez pas la possibilité de créer vos propres fichiers, vous pouvez essayer la plupart des exemples de code dans un programme de code en ligne tel que [JSBin](https://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/).
+> **Note :** Si vous travaillez sur un ordinateur, une tablette ou un autre appareil sur lequel vous n'avez pas la possibilité de créer vos propres fichiers, vous pouvez essayer la plupart des exemples de code dans un programme de code en ligne tel que [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
 
 ## Guides
 

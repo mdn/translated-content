@@ -89,7 +89,7 @@ function sendData(data) {
   // リクエストをセットアップします
   XHR.open("POST", "https://example.com/cors.php");
 
-  // フォームデータの POST リクエストを扱うために必要な HTTP ヘッダを追加します
+  // フォームデータの POST リクエストを扱うために必要な HTTP ヘッダーを追加します
   XHR.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
   // 最後に、データを送信します
@@ -148,7 +148,7 @@ function sendData(data) {
   // リクエストをセットアップします
   XHR.open("POST", "https://example.com/cors.php");
 
-  // FormData オブジェクトを送信するだけです。HTTP ヘッダは自動的に設定されます
+  // FormData オブジェクトを送信するだけです。HTTP ヘッダーは自動的に設定されます
   XHR.send(FD);
 }
 

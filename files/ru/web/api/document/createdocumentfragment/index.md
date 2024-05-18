@@ -45,7 +45,7 @@ element.appendChild(fragment);
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref("DOMImplementation.createDocument", "document.implementation.createDocument()")}}
 - {{domxref("documentFragment")}}

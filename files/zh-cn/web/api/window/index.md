@@ -33,8 +33,8 @@ _本接口从 {{domxref("EventTarget")}} 接口继承属性。_
   - : 返回对 console 对象的引用，该对象提供对浏览器调试控制台的访问。
 - {{domxref("Window.credentialless")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{Non-standard_Inline}}
   - : 返回一个布尔值，表示当前文档是否在无凭据（credentialless）的 {{htmlelement("iframe")}} 中加载。参见 [IFrame credentialless](/zh-CN/docs/Web/Security/IFrame_credentialless) 以了解更多细节。
-- {{domxref("crypto_property", "Window.crypto")}} {{ReadOnlyInline}}
-  - : 返回浏览器的 crypto 对象。
+- {{domxref("Window.crypto")}} {{ReadOnlyInline}}
+  - : 返回与全局对象关联的 {{domxref("Crypto")}} 对象。
 - {{domxref("Window.customElements")}} {{ReadOnlyInline}}
   - : 返回对 {{domxref("CustomElementRegistry")}} 对象的引用，该对象可用于注册新的[自定义元素](/zh-CN/docs/Web/API/Web_components/Using_custom_elements)并获取之前注册的自定义元素的信息。
 - {{domxref("Window.devicePixelRatio")}} {{ReadOnlyInline}}
@@ -55,7 +55,7 @@ _本接口从 {{domxref("EventTarget")}} 接口继承属性。_
   - : 获取浏览器窗口的内容区域的高度，包括（已渲染的）水平滚动条。
 - {{domxref("Window.innerWidth")}} {{ReadOnlyInline}}
   - : 获取浏览器窗口的内容区域的宽度，包括（已渲染的）竖直滚动条。
-- {{domxref("isSecureContext", "Window.isSecureContext")}} {{ReadOnlyInline}}
+- {{domxref("Window.isSecureContext")}} {{ReadOnlyInline}}
   - : 返回一个布尔值，表示当前上下文安全（`true`）或不安全（`false`）。
 - {{domxref("Window.launchQueue")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : 当一个[渐进式 web 应用](/zh-CN/docs/Web/Progressive_web_apps)（PWA）以 `focus-existing`、`navigate-new` 或 `navigate-existing` 的 [`launch_handler`](/zh-CN/docs/Web/Manifest/launch_handler) `client_mode` 值启动时，`launchQueue` 提供对 {{domxref("LaunchQueue")}} 类的访问，这允许为 PWA 实现自定义的启动导航处理。
@@ -81,7 +81,7 @@ _本接口从 {{domxref("EventTarget")}} 接口继承属性。_
   - : 返回对 navigator 对象的引用。
 - {{domxref("Window.opener")}}
   - : 返回对打开当前窗口的 window 的引用。
-- {{domxref("origin", "Window.origin")}} {{ReadOnlyInline}}
+- {{domxref("Window.origin")}} {{ReadOnlyInline}}
   - : 返回全局对象的源，序列化为一个字符串。
 - {{domxref("Window.outerHeight")}} {{ReadOnlyInline}}
   - : 获取浏览器窗口外侧的高度。
@@ -93,7 +93,7 @@ _本接口从 {{domxref("EventTarget")}} 接口继承属性。_
   - : {{domxref("window.scrollY")}} 的别名。
 - {{domxref("Window.parent")}} {{ReadOnlyInline}}
   - : 返回对当前窗口或子框架的被继承对象的引用。
-- {{domxref("performance_property", "Window.performance")}} {{ReadOnlyInline}}
+- {{domxref("Window.performance")}} {{ReadOnlyInline}}
   - : 返回一个 {{domxref("Performance")}} 对象，其中包括 {{domxref("Performance.timing", "timing")}} 和 {{domxref("Performance.navigation", "navigation")}} 属性，每个属性都是提供[性能相关](/zh-CN/docs/Web/API/Performance_API/Navigation_timing)数据的对象。有关其他信息和例子，请参见[使用导航计时](/zh-CN/docs/Web/API/Performance_API/Navigation_timing)。
 - {{domxref("Window.personalbar")}} {{ReadOnlyInline}}
   - : 返回 personalbar 对象。

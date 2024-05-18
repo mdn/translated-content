@@ -21,7 +21,7 @@ CSS（階層式樣式表）被用來設定網頁的樣式及佈局。舉例來�
 2. 設定好一個基本的工作環境（參考[安裝基本軟體](/zh-TW/docs/Learn/Getting_started_with_the_web/Installing_basic_software)單元），並知道如何建立以及管檔案（參考[檔案的管理](/zh-TW/docs/Learn/Getting_started_with_the_web/Dealing_with_files)單元）。
 3. 對 HTML 有基本的認識，像是 [HTML 介紹](/zh-TW/docs/Learn/HTML/Introduction_to_HTML)單元裡所提到的。
 
-> **備註：** 如果你使用的電腦／平板／或其它裝置上，無法建立你所需要的檔案。你可以在像是 [JSBin](http://jsbin.com/) 或 [Glitch](https://glitch.com/) 的線上程式編輯平台上嘗試（絕大部分的）範例程式。
+> **備註：** 如果你使用的電腦／平板／或其它裝置上，無法建立你所需要的檔案。你可以在像是 [JSBin](https://jsbin.com/) 或 [Glitch](https://glitch.com/) 的線上程式編輯平台上嘗試（絕大部分的）範例程式。
 
 ## 導覽
 

@@ -3,7 +3,9 @@ title: FormData.set()
 slug: Web/API/FormData/set
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{AvailableInWorkers}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 {{domxref("FormData")}} 인터페이스의 **`set()`** 메서드는 `FormData` 객체 내에 있는 기존 키에 새 값을 설정하거나, 존재하지 않을 경우 key/value을 추가합니다.
 

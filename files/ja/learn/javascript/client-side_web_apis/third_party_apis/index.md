@@ -128,7 +128,7 @@ hybrid-style map にするために `'map'` を `'hybrid'` に変えてみてく
 map.addControl(L.mapquest.control());
 ```
 
-[`mapquest.control()`](https://developer.mapquest.com/documentation/mapquest-js/v1.3/l-mapquest-control/) メソッドは、単純なフル機能のコントロールセットを作成するだけで、デフォルトでは右上隅に配置されます。 `position` プロパティを含むコントロールのパラメータとしてオプションオブジェクトを指定することで、位置を調整することができます。例えば、次のようにしてみてください。
+[`mapquest.control()`](https://developer.mapquest.com/documentation/mapquest-js/v1.3/l-mapquest-control/) メソッドは、単純なフル機能のコントロールセットを作成するだけで、デフォルトでは右上隅に配置されます。 `position` プロパティを含むコントロールの引数としてオプションオブジェクトを指定することで、位置を調整することができます。例えば、次のようにしてみてください。
 
 ```js
 map.addControl(L.mapquest.control({ position: "bottomright" }));

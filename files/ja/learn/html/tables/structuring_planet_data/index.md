@@ -15,7 +15,7 @@ slug: Learn/HTML/Tables/Structuring_planet_data
 
 この評価を開始するには、ローカルコンピュータの新しいディレクトリーに、[blank-template.html](https://github.com/mdn/learning-area/blob/master/html/tables/assessment-start/blank-template.html)、[minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/assessment-start/minimal-table.css)、および [planets-data.txt](https://github.com/mdn/learning-area/blob/master/html/tables/assessment-start/planets-data.txt) のローカルコピーを作成します。
 
-> **メモ:** 代わりとして、[JSBin](https://jsbin.com/) や [Thimble](https://thimble.mozilla.org/) のようなサイトを使って評価することもできます。HTML、CSS、および JavaScript をこれらのオンラインエディタのいずれかに貼り付けることができます。使用しているオンラインエディタに個別の JavaScript/CSS パネルがない場合は、それらを HTML ページ内に `<script>`/`<style>` 要素をインラインで配置してください。
+> **メモ:** 代わりとして、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/) や [Glitch](https://glitch.com/) のようなサイトを使って評価することもできます。HTML、CSS、および JavaScript をこれらのオンラインエディタのいずれかに貼り付けることができます。使用しているオンラインエディタに個別の JavaScript/CSS パネルがない場合は、それらを HTML ページ内に `<script>`/`<style>` 要素をインラインで配置してください。
 
 ## やることの概要
 

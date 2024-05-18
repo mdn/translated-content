@@ -1,7 +1,6 @@
 ---
 title: Mémoire tampon, position, et plages de temps
 slug: Web/Media/Audio_and_video_delivery/buffering_seeking_time_ranges
-original_slug: Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges
 ---
 
 Il est parfois utile de savoir combien d'{{htmlelement("audio") }} ou {{htmlelement("video") }} a été téléchargé ou peut être joué sans délai — par exemple pour afficher la barre de progression du tampon dans un lecteur audio ou vidéo. Cet article explique comment construire une barre de progrès de mise en mémoire tampon en utilisant [TimeRanges](/fr/docs/Web/API/TimeRanges), et d'autres fonctionnalités de l'API Media.
@@ -101,7 +100,7 @@ Cela fonctionne mieux avec les morceaux audio ou vidéo un peu plus longs, mais 
 
 ![](bufferedtimeranges.png)
 
-> **Note :** Vous pouvez voir [cet exemple en direct sur JS Bin](http://jsbin.com/memazaro/1/edit).
+> **Note :** Vous pouvez voir [cet exemple en direct sur JS Bin](https://jsbin.com/memazaro/1/edit).
 
 ## Seekable
 
@@ -213,7 +212,7 @@ Cela devrait vous donner des résultats similaires à ce qui suit, où la barre 
 
 ![](bufferedprogress.png)
 
-> **Note :** Voir pouvez [voir l'exemple en direct sur JS Bin](http://jsbin.com/badimipi/1/edit).
+> **Note :** Voir pouvez [voir l'exemple en direct sur JS Bin](https://jsbin.com/badimipi/1/edit).
 
 ## Un petit mot sur Played
 

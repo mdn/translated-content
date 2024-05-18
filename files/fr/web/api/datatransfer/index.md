@@ -229,7 +229,7 @@ Contient une liste de tous les fichiers locaux disponibles sur le transfert de d
 
 #### Exemple
 
-Cet exemple retourne la liste des fichiers traînée dans la fenêtre du navigateur: <http://jsfiddle.net/9C2EF/>
+Cet exemple retourne la liste des fichiers traînée dans la fenêtre du navigateur: <https://jsfiddle.net/9C2EF/>
 
 ### types
 

@@ -3,6 +3,8 @@ title: Animation SVG avec SMIL
 slug: Web/SVG/SVG_animation_with_SMIL
 ---
 
+{{SVGRef}}
+
 > **Attention :** Bien que Chrome 45 déprécie SMIL en faveur des animations CSS et des animations Web, les développeurs Chrome ont depuis [suspendu](https://groups.google.com/a/chromium.org/d/msg/blink-dev/5o0yiO440LM/YGEJBsjUAwAJ) cette décision.
 
 Firefox 4 introduit le support pour les animations [SVG](/fr/SVG) en utilisant [Synchronized Multimedia Integration Language](http://www.w3.org/TR/REC-smil) (SMIL). SMIL permet :

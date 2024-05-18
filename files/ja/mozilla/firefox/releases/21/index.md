@@ -41,7 +41,7 @@ Gecko 21 を搭載した Firefox 21 は米国時間 2013 年 5 月 14 日にリ�
 
 - CSP 実装を CSP 1.0 仕様 (勧告候補になりました) に準拠させるよう更新する作業を続けています:
 
-  - 仕様書に準拠した `Content-Security-Policy` HTTP ヘッダを (実験的な `X-Content-Security-Policy` に加えて) サポートしました ([Firefox バグ 783049](https://bugzil.la/783049)。**注意**: 新たなヘッダのパッチは Firefox 21 で投入しましたが、ビルド時は無効にしています ([Firefox バグ 842657](https://bugzil.la/842657))。
+  - 仕様書に準拠した `Content-Security-Policy` HTTP ヘッダーを (実験的な `X-Content-Security-Policy` に加えて) サポートしました ([Firefox バグ 783049](https://bugzil.la/783049)。**注意**: 新たなヘッダーのパッチは Firefox 21 で投入しましたが、ビルド時は無効にしています ([Firefox バグ 842657](https://bugzil.la/842657))。
 
 ### Worker
 

@@ -113,7 +113,7 @@ For additional examples, see our guide to [responsive images](/ru/docs/Learn/HTM
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [Images in HTML](/ru/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
 - [Responsive images](/ru/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)

@@ -1,7 +1,6 @@
 ---
 title: console.countReset()
 slug: Web/API/console/countreset_static
-original_slug: Web/API/console/countReset
 ---
 
 {{APIRef("Console API")}}

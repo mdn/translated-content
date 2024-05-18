@@ -3,13 +3,11 @@ title: FormData.append()
 slug: Web/API/FormData/append
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers}}
 
 {{domxref("FormData")}} 接口的 **`append()`** 方法会添加一个新值到 `FormData` 对象内的一个已存在的键中，如果键不存在则会添加该键。
 
 {{domxref("FormData.set")}} 和 `append()` 的区别在于，如果指定的键已经存在， {{domxref("FormData.set")}} 会使用新值覆盖已有的值，而 `append()` 会把新值添加到已有值集合的后面。
-
-> **备注：** 这个方法在 [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API) 中可用。
 
 ## 语法
 

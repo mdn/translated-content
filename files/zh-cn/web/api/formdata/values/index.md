@@ -3,11 +3,9 @@ title: FormData.values()
 slug: Web/API/FormData/values
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers}}
 
-**`FormData.values()`** 方法返回一个允许遍历该对象中所有值的 {{jsxref("Iteration_protocols",'迭代器')}} 。这些值是 {{domxref("USVString")}} 或是{{domxref("Blob")}} 对象。
-
-> **备注：** 此方法在 [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API) 中可用
+**`FormData.values()`** 方法返回一个允许遍历 {{domxref("FormData")}} 中所有值的[迭代器](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)。这些值是字符串或是 {{domxref("Blob")}} 对象。
 
 ## 语法
 

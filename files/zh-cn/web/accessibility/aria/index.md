@@ -3,27 +3,7 @@ title: ARIA
 slug: Web/Accessibility/ARIA
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Annotations">ARIA 注解</a></li>
-    <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Guides">ARIA 指南</a></li>
-    <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Live_Regions">ARIA 实时区域</a></li>
-    <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide">ARIA 屏幕阅读器实现指南</a></li>
-    <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques">使用 ARIA：角色、状态和属性</a></li>
-    <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Multipart_labels">多部分标签</a></li>
-    <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs">如何提交与 ARIA 有关的 bug</a></li>
-    <li class="toggle">
-      <details><summary>ARIA 状态和属性</summary>
-        {{ListSubpagesForSidebar("Web/Accessibility/ARIA/Attributes", 1)}}
-      </details>
-    </li>
-    <li class="toggle">
-      <details><summary>WAI-ARIA 角色</summary>
-        {{ListSubpagesForSidebar("Web/Accessibility/ARIA/Roles", 1)}}
-      </details>
-    </li>
-  </ol>
-</section>
+{{AccessibilitySidebar}}
 
 无障碍富互联网应用（Accessible Rich Internet Applications，**<abbr>ARIA</abbr>**）是一组[角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles)和[属性](/zh-CN/docs/Web/Accessibility/ARIA/Attributes)，用于定义使残障人士更易于访问 web 内容和 web 应用程序（尤其是使用 JavaScript 开发的应用程序）的方法。
 

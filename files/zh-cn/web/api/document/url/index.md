@@ -1,26 +1,47 @@
 ---
-title: document.URL
+title: Document：URL 属性
 slug: Web/API/Document/URL
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{ ApiRef() }}
+{{APIRef("DOM")}}
 
-### 概述
+{{domxref("Document")}} 接口的 **`URL`** 只读属性以字符串形式返回文档位置。
 
-返回当前文档的 URL 地址
+## 值
 
-### 语法
+包含文档 URL 的字符串。
 
-```plain
-string = document.URL
+## 示例
+
+### JavaScript
+
+```js
+document.getElementById("url").textContent = document.URL;
 ```
 
-### 备注
+### HTML
 
-`该属性的值和`DOM Level 0 中的`document.location.href` 属性的值是相等的。然而 `document.location.href` 是可写的，`document.URL` 是只读的。
+```html
+<p id="urlText">
+  URL：<br />
+  <span id="url">URL 在此处</span>
+</p>
+```
 
-{{ domxref("document.documentURI") }} 也返回与该属性相同的值，不过它在非 HTML 文档中也可以使用。
+### 结果
 
-### 规范
+{{EmbedLiveSample("示例", "100%", 100)}}
 
-[DOM Level 2 HTML: URL](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-46183437)
+## 规范
+
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
+
+## 参见
+
+- 返回相同值的 {{domxref("document.documentURI")}} 属性。

@@ -375,7 +375,7 @@ if (!haveEvents) {
 }
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
