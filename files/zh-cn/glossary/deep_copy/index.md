@@ -42,7 +42,7 @@ let ingredients_list_deepcopy = JSON.parse(JSON.stringify(ingredients_list));
 ```js
 // 改变 ingredients_list_deepcopy 中 'list' 属性的值。
 ingredients_list_deepcopy[1].list = ["rice flour", "water"];
-// ingredients_list 的 'list' 属性不会发生变化。
+// ingredients_list 的“list”属性不会发生变化。
 console.log(ingredients_list[1].list);
 // Array(3) [ "eggs", "flour", "water" ]
 ```
