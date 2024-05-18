@@ -18,7 +18,7 @@ intersectsNode(referenceNode)
 ### 参数
 
 - `referenceNode`
-  - : 将 {{domxref("Node")}} 与 {{domxref("Range")}} 进行比较。
+  - : 与 {{domxref("Range")}} 进行比较的 {{domxref("Node")}}。
 
 ### 返回值
 
