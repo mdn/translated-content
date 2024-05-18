@@ -1,5 +1,5 @@
 ---
-title: 进行测试的策略
+title: 测试的策略
 slug: Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies
 l10n:
   sourceCommit: 5ec427445cf23074f4aabd47d54c69399d1fbeac
