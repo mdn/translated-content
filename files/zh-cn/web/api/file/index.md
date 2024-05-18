@@ -2,7 +2,7 @@
 title: File
 slug: Web/API/File
 l10n:
-  sourceCommit: 8fd2ee72038310e3ecc387df235ffac1cb08775c
+  sourceCommit: 467508d83e320be0680f334c3455d3cc232bce42
 ---
 
 {{APIRef("File API")}}{{AvailableInWorkers}}
@@ -33,7 +33,7 @@ _`File` 接口还继承了 {{DOMxRef("Blob")}} 接口的属性。_
 - {{DOMxRef("File.name")}} {{ReadOnlyInline}}
   - : 返回 `File` 对象引用的文件的名称。
 - {{DOMxRef("File.webkitRelativePath")}} {{ReadOnlyInline}}
-  - : 返回 {{DOMxRef("File")}} 对象相对于 URL 的路径。
+  - : 返回 `File` 对象相对于 URL 的路径。
 
 ## 实例方法
 
