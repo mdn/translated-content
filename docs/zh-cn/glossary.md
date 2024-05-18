@@ -37,7 +37,7 @@
 | ------------- | ------------ | ------------------------------------------------------------------------------------ | --------------------------------------------------------------------------- |
 | CORS          | 跨源资源共享 | 使用“域”并不准确，来源包括协议、域名和端口。                                         | https://github.com/mdn/translated-content/pull/3096#issuecomment-1114015297 |
 | cache busting | 缓存破坏     | 通过修改引用资源的文件名，强制浏览器重新下载新文件。实际使用可译作“（使）缓存失效”。 | https://github.com/mdn/translated-content/pull/18335#discussion_r1508540582 |
-| cross-origin  | 跨源         |                                                                                      | https://github.com/mdn/translated-content/pull/3096#issuecomment-2113197600 |
+| cross-origin  | 跨源         |                                                                                      | #3096                                                                       |
 | Header        | 标头         | HTTP 消息中的附加信息。                                                              | 来自 Google Chrome 控制台                                                   |
 
 ### JavaScript
