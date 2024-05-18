@@ -62,7 +62,7 @@ l10n:
   - オフスクリーンキャンバスも同じ方法で監視できますが、[`OffScreenCanvas`](/ja/docs/Web/API/OffscreenCanvas) の [`contextlost`](/ja/docs/Web/API/OffscreenCanvas/contextlost_event) および [`contextrestored`](/ja/docs/Web/API/OffscreenCanvas/contextrestored_event) イベントを [`OffscreenCanvasRenderingContext2D.isContextLost()`](/ja/docs/Web/API/OffscreenCanvasRenderingContext2D#context) とともに使用します。
 
 - `<template>` 要素の [`shadowrootclonable`](/ja/docs/Web/HTML/Element/template#shadowrootclonable) 属性、およびこれを反映して `HTMLTemplateElement` インターフェイスの [`shadowRootClonable`](/ja/docs/Web/API/HTMLTemplateElement/shadowRootClonable) プロパティをサポートしました。
-  これらは、[`<template>`] 要素を使用して宣言的に作成した [`ShadowRoot`](/ja/docs/Web/API/ShadowRoot) の [`clonable`](/ja/docs/Web/API/ShadowRoot/clonable) プロパティを設定します 
+  これらは、[`<template>`] 要素を使用して宣言的に作成した [`ShadowRoot`](/ja/docs/Web/API/ShadowRoot) の [`clonable`](/ja/docs/Web/API/ShadowRoot/clonable) プロパティを設定します
   ([Firefox bug 1880188](https://bugzil.la/1880188))。
 
 - [`Clipboard`](/ja/docs/Web/API/Clipboard) インターフェイスの [`readText()`](/ja/docs/Web/API/Clipboard/readText) メソッドが、システムのクリップボードからテキストの非同期読み取りをサポートしました。
