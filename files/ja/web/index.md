@@ -57,7 +57,7 @@ l10n:
 - [プログレッシブウェブアプリ (PWA)](/ja/docs/Web/Progressive_web_apps)
   - : プログレッシブウェブアプリは、ネイティブアプリのような使い勝手をもたらします。
 - [用語集](/ja/docs/Glossary)
-  - : Definitions of Web-related terms
+  - : ウェブ関連用語の定義。
 
 ## 開発者ツールの文書
 
