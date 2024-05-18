@@ -1,5 +1,5 @@
 ---
-title: Deserialization
+title: 反序列化
 slug: Glossary/Deserialization
 l10n:
   sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
