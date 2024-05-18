@@ -26,7 +26,7 @@ l10n:
 
 深拷贝可能会或可能不会复制它们的原型链（通常情况下不会）。但是，具有结构不等价原型链的两个对象（例如，一个是数组，另一个是普通对象）永远不会是彼此的副本。
 
-所有属性都具有原始值的对象的副本符合深拷贝和[浅拷贝](/zh-CN/docs/Glossary/Shallow_copy)的定义。然而，讨论这种副本的深度有点无意义，因为它没有嵌套属性，而我们通常在变异嵌套属性的上下文中讨论深拷贝。
+所有属性都具有原始值的对象的副本符合深拷贝和[浅拷贝](/zh-CN/docs/Glossary/Shallow_copy)的定义。然而，讨论这种副本的深度并无意义，因为它没有嵌套属性，而我们通常在改变嵌套属性的上下文中讨论深拷贝。
 
 在 JavaScript 中，标准的内置对象复制操作（[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)、[`Array.prototype.concat()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)、[`Array.prototype.slice()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)、[`Array.from()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/from)、[`Object.assign()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) 和 [`Object.create()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/create)）不创建深拷贝（相反，它们创建浅拷贝）。
 
