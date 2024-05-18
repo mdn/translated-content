@@ -63,5 +63,5 @@ function sayHello() {
 - [术语](/zh-CN/docs/Glossary)
 
   - {{glossary("Callback function", "回调函数")}}
-  - {{glossary("Function"，“含糊”)}}
+  - {{glossary("Function", “函数”)}}
   - {{glossary("Variable", "变量")}}
