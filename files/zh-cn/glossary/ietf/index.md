@@ -7,11 +7,11 @@ l10n:
 
 {{GlossarySidebar}}
 
-
 互联网工程任务组（**IETF**）是一个全球性的组织，负责起草规范，这些规范管理着{{glossary('Internet', '互联网')}}背后的机制，特别是 {{glossary("TCP")}}/{{glossary("IPv6","IP")}} 或互联网{{glossary("Protocol", "协议")}}套件。
 
 IETF 是一个开放的组织，由志愿者运行，并由[互联网协会](https://www.internetsociety.org/)赞助。
 
 ## 参见
-- 
+
+-
 - [官方网站](https://www.ietf.org/)
