@@ -1,38 +1,34 @@
 ---
 title: zoom
 slug: Web/CSS/zoom
-page-type: css-property
-browser-compat: css.properties.zoom
+l10n:
+  sourceCommit: 1f71ae6ad4874ed03f708e06ed90780997a0934b
 ---
 
 {{CSSRef}}
 
-The **`zoom`** [CSS](/en-US/docs/Web/CSS) property can be used to control the magnification level of an element.
-{{cssxref("transform-function/scale", "transform: scale()")}} can be used as an alternative to this property.
+要素の拡大レベルを制御するには、[CSS](/ja/docs/Web/CSS) の **zoom** プロパティを使用することができます。このプロパティの代わりに、{{cssxref("transform-function/scale", "transform: scale()")}} を使用することもできます。
 
-The `zoom` CSS property scales the targeted element, which can affect the page layout.
-When scaling, the zoomed element scales from `top` and `center` when using the default {{CSSXRef("writing-mode")}}.
+`zoom` プロパティは、対象となる要素を拡大縮小し、ページレイアウトに影響を与えます。拡大縮小の際、デフォルトの {{CSSXRef("writing-mode")}} を使用している場合、拡大縮小された要素は上部と中央から拡大縮小されます。
 
-In contrast, an element scaled using {{cssxref("transform-function/scale", "scale()")}} will not cause layout recalculation or move other elements on the page.
-If using `scale()` makes the contents larger than the containing element, then {{CSSXRef("overflow")}} comes into effect.
-Additionally, elements adjusted using `scale()` transform from the `center` by default; this can be changed with the {{CSSXRef("transform-origin")}} CSS property.
+対照的に、{{cssxref("transform-function/scale", "scale()")}} を使用して拡大縮小された要素は、レイアウトの再計算やページ上の他の要素を移動させることはありません。`scale()` を使用して、内容が含む要素よりも大きくなった場合は、オーバーフローが有効になります。さらに、`scale()` を使用して調整された要素は、デフォルトでは中心から変形します。これは、{{CSSXRef("transform-origin")}} プロパティで変更できます。
 
-## Syntax
+## 構文
 
 ```css
-/* Keyword values */
+/* キーワード値 */
 zoom: normal;
 zoom: reset;
 
-/* <percentage> values */
+/* <percentage> 値 */
 zoom: 50%;
 zoom: 200%;
 
-/* <number> values */
+/* <number> 値 */
 zoom: 1.1;
 zoom: 0.7;
 
-/* Global values */
+/* グローバル値 */
 zoom: inherit;
 zoom: initial;
 zoom: revert;
@@ -40,33 +36,33 @@ zoom: revert-layer;
 zoom: unset;
 ```
 
-### Values
+### 値
 
 - `normal`
-  - : Render this element at its normal size.
+  - : 要素を通常のサイズでレンダリングします。
 - `reset`
-  - : Do not (de)magnify this element if the user applies non-pinch-based zooming (e.g. by pressing <kbd>Ctrl</kbd> \- <kbd>-</kbd> or <kbd>Ctrl</kbd> \+ <kbd>+</kbd> keyboard shortcuts) to the document. **Do not use** this value, _use the standard `unset` value instead_.
+  - : ユーザーが非ピンチベースのズームを利用したとき（例えば <kbd>Ctrl</kbd> \- <kbd>-</kbd> または <kbd>Ctrl</kbd> \+ <kbd>+</kbd> のキーボード・ショートカットを利用したとき）は要素を拡大縮小しない。この値を**使用せず**、代わりに標準の `unset` 値を使用してください。
 - {{cssxref("&lt;percentage&gt;")}}
-  - : Zoom factor. `100%` is equivalent to `normal`. Values larger than `100%` zoom in. Values smaller than `100%` zoom out.
+  - : ズーム率です。`100%` と `normal` は等価です。`100%` よりも大きな値はズームイン、`100%` よりも小さな値はズームアウトします。
 - {{cssxref("&lt;number&gt;")}}
-  - : Zoom factor. Equivalent to the corresponding percentage (`1.0` = `100%` = `normal`). Values larger than `1.0` zoom in. Values smaller than `1.0` zoom out.
+  - : ズーム率です。対応するパーセンテージ（`1.0` = `100%` = `normal`）に相当します。`1.0` よりも大きな値はズームイン、`1.0` よりも小さな値はズームアウトします。
 
-## Formal definition
+## 公式定義
 
 {{cssinfo}}
 
-## Formal syntax
+## 形式文法
 
 ```plain
 zoom =
   normal | reset | <number> | <percentage>
 ```
 
-## Examples
+## 例
 
-### Resizing paragraphs
+### 段落のリサイズ
 
-In this example the paragraph elements are zoomed, on hovering a paragraph the `zoom` value is `unset`.
+この例では、段落要素はズームされており、段落にカーソルを合わせるとズーム値が解除されます。
 
 #### HTML
 
@@ -102,13 +98,13 @@ p:hover {
 }
 ```
 
-#### Result
+#### 結果
 
 {{EmbedLiveSample('resizing_paragraphs')}}
 
-### Resizing elements
+### 要素のリサイズ
 
-In this example the `div` elements are zoomed using the `normal`, `<percentage>`, and `<number>` values.
+この例では、`div` 要素は `normal`, `<percentage>`, `<number>` の値を使ってズームされています。
 
 #### HTML
 
@@ -142,17 +138,17 @@ div#c {
 }
 ```
 
-#### Result
+#### 結果
 
 {{EmbedLiveSample('resizing_elements')}}
 
-### Creating a zoom control
+### ズーム率を操作する
 
-In this example a `select` field is used to change the zoom level of the .
+この例では、`select` フィールドを使ってコンテンツのズームレベルを変更しています。
 
 #### HTML
 
-In this first block, of HTML, a `select` field is defined with the different `zoom` values to be used.
+HTML のこの最初のブロックでは、異なるズーム値を持つ `select` フィールドが定義されています。
 
 ```html
 <section class="controls">
@@ -169,13 +165,13 @@ In this first block, of HTML, a `select` field is defined with the different `zo
 </section>
 ```
 
-In this second block a **not supported** message is added that will be hidden if the browser supports `zoom`.
+この 2 番目のブロックには、ブラウザが `zoom` をサポートしている場合には非表示となる **not supported** メッセージが追加されています。
 
 ```html
 <p class="zoom-notice">CSS zoom is not supported</p>
 ```
 
-The final block just defines the content that will be zoomed.
+最後のブロックは、ズームされるコンテンツを定義しているだけです。
 
 ```html
 <section class="content">
@@ -197,7 +193,7 @@ The final block just defines the content that will be zoomed.
 
 #### CSS
 
-In this first block, of CSS, we are setting the starting value for the `--zoom-level` using [custom properties](/en-US/docs/Web/CSS/--*) and then using that as the value for `zoom` on the content block.
+この CSS の最初のブロックでは、[カスタムプロパティ](/ja/docs/Web/CSS/--*)を使って `--zoom-level` の開始値を設定し、それをコンテンツブロックの `zoom` の値として使っています。
 
 ```css
 html {
@@ -221,7 +217,7 @@ html {
 }
 ```
 
-In this final CSS block we are checking to see if the browser supports `zoom` and if so setting the **not supported** message to `diplay: none;`.
+この最後の CSS ブロックでは、ブラウザが `zoom` をサポートしているかどうかをチェックし、サポートしている場合は **not supported** メッセージを `display: none;` に設定しています。
 
 ```css
 @supports (zoom: 1) {
@@ -233,7 +229,7 @@ In this final CSS block we are checking to see if the browser supports `zoom` an
 
 #### JavaScript
 
-This JavaScript watches for a change in the select field and sets the new value for `--zoom-level` on the content `section`, e.g. `style="--zoom-level: 1.5;"`.
+この JavaScript は、`select` フィールドの変更を監視し、コンテンツ・セクションの `--zoom-level` に新しい値（例えば `style="--zoom-level: 1.5;"`）を設定します。
 
 ```js
 const zoomControl = document.querySelector("#zoom");
@@ -244,18 +240,18 @@ const updateZoom = () => {
 zoomControl.addEventListener("change", updateZoom);
 ```
 
-#### Result
+#### 結果
 
 {{EmbedLiveSample('creating_a_zoom_control', '550', '280')}}
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 
-## See also
+## 関連情報
 
-- [`zoom` entry in CSS-Tricks' CSS Almanac](https://css-tricks.com/almanac/properties/z/zoom/)
+- [CSS-Tricks' CSS Almanac の `zoom` の記事](https://css-tricks.com/almanac/properties/z/zoom/)
