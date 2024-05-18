@@ -1,6 +1,8 @@
 ---
 title: 立即调用函数表达式
 slug: Glossary/IIFE
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
 {{GlossarySidebar}}
@@ -23,7 +25,7 @@ slug: Glossary/IIFE
 
 它是一种设计模式，也被称为{{glossary("Self-Executing Anonymous Function", "自执行匿名函数")}}，主要包含两部分：
 
-1. 第一部分是一个具有词法作用域的匿名函数，并且用{{jsxref("Operators/Grouping", "圆括号运算符", "", 1)}} `()` 运算符闭合起来。这样不但阻止了外界访问 IIFE 中的变量，而且不会污染全局作用域。
+1. 第一部分是一个具有词法作用域的匿名函数，并且用{{jsxref("Operators/Grouping", "圆括号运算符", "", 1)}} `()` 运算符闭合起来。这样不但阻止了外界访问自执行匿名函数中的变量，而且不会污染全局作用域。
 
 2. 第二部分创建了一个立即执行函数表达式 `()`，通过它，JavaScript 引擎将立即执行该函数。
 
@@ -87,7 +89,7 @@ const makeWithdraw = (balance) => {
   console.log(firstAccount.balance); // undefined
   console.log(firstAccount.withdraw(20)); // 80
   console.log(firstAccount.withdraw(30)); // 50
-  console.log(firstAccount.doBadThings); // undefined; 这个方法是私有的
+  console.log(firstAccount.doBadThings); // undefined；这个方法是私有的
   const secondAccount = makeWithdraw(20); // "我要用你的钱做坏事"
   console.log(secondAccount.withdraw(30)); // "不够钱"
   console.log(secondAccount.withdraw(20)); // 0
@@ -110,7 +112,7 @@ for (var i = 0; i < 2; i++) {
 console.log(i); // 2
 ```
 
-当点击时，按钮 0 和按钮 1 都会 alert 2，因为 `i` 是全局的，并且值为 2。在 ES6 之前为了解决这个问题，我们可以使用立即调用函数表达式模式：
+当点击时，按钮 0 和按钮 1 都会弹窗 2，因为 `i` 是全局的，并且值为 2。在 ES6 之前为了解决这个问题，我们可以使用立即调用函数表达式模式：
 
 ```js
 for (var i = 0; i < 2; i++) {
@@ -126,7 +128,7 @@ for (var i = 0; i < 2; i++) {
 console.log(i); // 2
 ```
 
-当点击时，按钮 0 和按钮 1 会 alert 0 和 1，变量 `i` 是全局的。更简单的是使用 **let** 声明变量：
+当点击时，按钮 0 和按钮 1 会弹窗 0 和 1，变量 `i` 是全局的。更简单的是使用 **let** 声明变量：
 
 ```js
 for (let i = 0; i < 2; i++) {
@@ -145,7 +147,7 @@ console.log(i); // Uncaught ReferenceError: i is not defined.
 ## 参见
 
 - 维基百科上的[立即调用函数表达式](https://zh.wikipedia.org/wiki/立即调用函数表达式)
-- [术语表](/zh-CN/docs/Glossary)
+- [术语](/zh-CN/docs/Glossary)
 
   - {{Glossary("Function", "函数")}}
   - {{Glossary("Self-Executing Anonymous Function", "自执行匿名函数")}}
