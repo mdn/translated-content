@@ -25,7 +25,7 @@ new OffscreenCanvas(width, height)
 
 ## 例
 
-この例では `OffscreenCanvas()` コンストラクターを用いてオフスクリーンキャンバスを新しく生成します。次に、 {{domxref("OffscreenCanvas.getContext()", "getContext()")}} メソッドを使用して [WebGL](/en-US/docs/Web/API/WebGL_API) コンテキストを初期化します。
+この例では `OffscreenCanvas()` コンストラクターを用いてオフスクリーンキャンバスを新しく生成します。次に、 {{domxref("OffscreenCanvas.getContext()", "getContext()")}} メソッドを使用して [WebGL](/ja/docs/Web/API/WebGL_API) コンテキストを初期化します。
 
 ```js
 const offscreen = new OffscreenCanvas(256, 256);
