@@ -2,7 +2,7 @@
 title: Firefox 125 for developers
 slug: Mozilla/Firefox/Releases/125
 l10n:
-  sourceCommit: 3bebb6ff5ad615d540800fd53a4040af118e1679
+  sourceCommit: ffa9179059f16fa82e2687c2c80ac8c0108beb93
 ---
 
 {{FirefoxSidebar}}
@@ -53,6 +53,20 @@ l10n:
   これらは、{{domxref("RTCPeerConnection")}} の {{domxref("RTCPeerConnection.iceGatheringState","iceGatheringState")}} および {{domxref("RTCPeerConnection.connectionState","connectionState")}} プロパティで提供されるものよりとてもきめ細かいモニタリングを可能にします。
   ([Firefox bug 1811912](https://bugzil.la/1811912))
 - {{domxref("Element.ariaBrailleLabel")}} および {{domxref("Element.ariaBrailleRoleDescription")}} をサポートしました。それぞれ、ARIA のグローバル HTML 属性である [`aria-braillelabel`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-braillelabel) および [`aria-brailleroledescription`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-brailleroledescription) を反映します ([Firefox bug 1861201](https://bugzil.la/1861201))。
+
+- キャンバスが一時的に自身の 2D コンテキストを失ったとき、ウェブアプリケーションが体裁よく回復できるようになりました。これはキャンバスが GPU でハードウェアアクセラレーションされていて、GPU のドライバーがクラッシュしたときに発生する可能性があります ([Firefox bug 1887729](https://bugzil.la/1887729))。
+  以下は、キャンバスのコンテキストが失われたり回復したりするときのイベントの詳細情報です:
+
+  - アプリケーションで [`contextlost`](/ja/docs/Web/API/HTMLCanvasElement/contextlost_event) および [`contextrestored`](/ja/docs/Web/API/HTMLCanvasElement/contextrestored_event) イベントを監視できます。これらはそれぞれ、コンテキストが失われたり回復したりしたときに [`HTMLCanvasElement`](/ja/docs/Web/API/HTMLCanvasElement) で発生します。また、[`CanvasRenderingContext2D.isContextLost()`](/ja/docs/Web/API/CanvasRenderingContext2D/isContextLost) を使用してコンテキストを確認することもできます。
+  - `contentlost` が発生した後、ブラウザーはデフォルトで失われたコンテキストの再開を試みますが、コードでイベントをキャンセルするとこの動作を抑止できます。
+  - オフスクリーンキャンバスも同じ方法で監視できますが、[`OffScreenCanvas`](/ja/docs/Web/API/OffscreenCanvas) の [`contextlost`](/ja/docs/Web/API/OffscreenCanvas/contextlost_event) および [`contextrestored`](/ja/docs/Web/API/OffscreenCanvas/contextrestored_event) イベントを [`OffscreenCanvasRenderingContext2D.isContextLost()`](/ja/docs/Web/API/OffscreenCanvasRenderingContext2D#context) とともに使用します。
+
+- `<template>` 要素の [`shadowrootclonable`](/ja/docs/Web/HTML/Element/template#shadowrootclonable) 属性、およびこれを反映して `HTMLTemplateElement` インターフェイスの [`shadowRootClonable`](/ja/docs/Web/API/HTMLTemplateElement/shadowRootClonable) プロパティをサポートしました。
+  これらは、[`<template>`] 要素を使用して宣言的に作成した [`ShadowRoot`](/ja/docs/Web/API/ShadowRoot) の [`clonable`](/ja/docs/Web/API/ShadowRoot/clonable) プロパティを設定します 
+  ([Firefox bug 1880188](https://bugzil.la/1880188))。
+
+- [`Clipboard`](/ja/docs/Web/API/Clipboard) インターフェイスの [`readText()`](/ja/docs/Web/API/Clipboard/readText) メソッドが、システムのクリップボードからテキストの非同期読み取りをサポートしました。
+  異なるオリジンのページから提供されたクリップボードデータを読み取るときは、ユーザーに貼り付けのコンテキストメニューを表示します ([Firefox bug 1877400](https://bugzil.la/1877400))。
 
 #### Media、WebRTC、Web Audio
 
