@@ -1,6 +1,8 @@
 ---
 title: Svelte 앱 컴포넌트화하기
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components
+l10n:
+  sourceCommit: e9be22eaa7416206e3f263a058f0d509a7f81f88
 ---
 
 {{LearnSidebar}}
@@ -74,13 +76,13 @@ Svelte에서 애플리케이션은 하나 이상의 컴포넌트로 구성됩니
 
 하지만 어떤 것을 컴포넌트로 분리해야 할까요?
 
-규칙은 없습니다. 어떤 사람들은 직관적인 접근 방식을 선호하여 마크업을 살펴보고 각각의 독립적인 로직을 가진 것처럼 보이는 모든 컴포넌트와 서브컴포넌트 주변에 박스를 그립니다.
+규칙은 없습니다. 어떤 사람들은 직관적인 접근 방식을 선호하여 마크업을 살펴보고 각각의 독립적인 로직을 가진 것처럼 보이는 모든 컴포넌트와 하위 컴포넌트 주변에 박스를 그립니다.
 
-다른 사람들은 새로운 함수나 객체를 생성해야 하는지 결정할 때 사용하는 것과 같은 방법을 적용합니다. 예를 들어, 단일 책임 원칙에 따르면 컴포넌트는 이상적으로 하나의 일만 해야 합니다. 컴포넌트가 너무 복잡해지면 더 작은 서브컴포넌트로 분할되어야 합니다.
+다른 사람들은 새로운 함수나 객체를 생성해야 하는지 결정할 때 사용하는 것과 같은 방법을 적용합니다. 예를 들어, 단일 책임 원칙에 따르면 컴포넌트는 이상적으로 하나의 일만 해야 합니다. 컴포넌트가 너무 복잡해지면 더 작은 하위 컴포넌트로 분할되어야 합니다.
 
 이 두 가지 접근 방식은 서로 보완해야 하며, 컴포넌트를 더 잘 구성하는 데 도움이 되어야 합니다.
 
-결국, 우리는 앱을 다음 컴포넌트로 분할할 것입니다:
+결국, 우리는 앱을 다음 컴포넌트로 분할할 것입니다.
 
 - `Alert.svelte`: 발생한 작업을 알리기 위한 일반 알림 상자입니다.
 - `NewTodo.svelte`: 새로운 할 일(to-do) 항목을 입력할 수 있는 텍스트 입력란과 버튼입니다.
@@ -89,7 +91,7 @@ Svelte에서 애플리케이션은 하나 이상의 컴포넌트로 구성됩니
 - `Todo.svelte`: 개별 할 일(to-do) 항목입니다. 보이는 각각의 할 일(to-do) 항목은 이 컴포넌트의 별도 복사본에서 표시됩니다.
 - `MoreActions.svelte`: 사용자 인터페이스 하단에 위치한 Check All 및 Remove Completed 버튼으로, 작업 항목에 대한 대량 작업을 수행할 수 있습니다.
 
-![graphical representation of the list of components in our app](01-todo-components.png)
+![앱의 컴포넌트의 리스트를 시각적으로 표현](01-todo-components.png)
 
 이번 시간에는 `FilterButton` 와 `Todo` 컴포넌트를 만들겠습니다; 다른 구성 요소는 다음 시간에 다루도록 하겠습니다.
 
@@ -102,7 +104,7 @@ Svelte에서 애플리케이션은 하나 이상의 컴포넌트로 구성됩니
 `FilterButton.svelte`를 생성하겠습니다.
 
 1. 우선, `components/FilterButton.svelte`파일을 생성해주세요.
-2. 이 파일 내에 `filter` prop을 선언한 다음, `Todos.svelte`에서 관련 마크업을 이 파일로 복사해 넣습니다. 그리고 파일에 다음 내용을 추가하세요:
+2. 이 파일 내에 `filter` prop을 선언한 다음, `Todos.svelte`에서 관련 마크업을 이 파일로 복사해 넣습니다. 그리고 파일에 다음 내용을 추가하세요.
 
    ```svelte
    <script>
@@ -128,21 +130,21 @@ Svelte에서 애플리케이션은 하나 이상의 컴포넌트로 구성됩니
    </div>
    ```
 
-3. `Todos.svelte` 컴포넌트에서 `FilterButton` 컴포넌트를 사용하고자 합니다. 먼저, 그것을 import해야 합니다. `Todos.svelte <script>` section 상단에 다음을 추가하세요:
+3. `Todos.svelte` 컴포넌트에서 `FilterButton` 컴포넌트를 사용하고자 합니다. 먼저, 그것을 import해야 합니다. `Todos.svelte <script>` section 상단에 다음을 추가하세요.
 
    ```js
    import FilterButton from "./FilterButton.svelte";
    ```
 
-4. 이제 `<div class="filters...` 요소에서 현재 filter를 prop으로 하는 `FilterButton`컴포넌트로 교체합니다, 다음을 추가하세요:
+4. 이제 `<div class="filters...` 요소에서 현재 filter를 prop으로 하는 `FilterButton`컴포넌트로 교체합니다, 다음을 추가하세요.
 
    ```svelte
    <FilterButton {filter} />
    ```
 
-> **Note:** HTML 속성 이름과 변수가 일치할 때, `{variable}`로 대체될 수 있습니다. 그래서 `<FilterButton filter={filter} />` 를 `<FilterButton {filter} />`로 대체할 수 있었습니다.
+> **참고:** HTML 속성 이름과 변수가 일치할 때, `{variable}`로 대체될 수 있습니다. 그래서 `<FilterButton filter={filter} />` 를 `<FilterButton {filter} />`로 대체할 수 있었습니다.
 
-잘하고 있네요! 이제 앱을 한번 실행해 보세요. 필터 버튼을 클릭하면 선택된 상태가 되고 스타일이 적절히 업데이트됩니다. 하지만 문제가 있습니다: 할 일(to-do)들이 필터링되지 않습니다. 그 이유는 `filter` 변수가 `Todos` 컴포넌트에서 `FilterButton` 컴포넌트로 prop을 통해 전달되지만, `FilterButton` 컴포넌트에서 발생하는 변경사항이 부모로 다시 전달되지 않기 때문입니다 - 데이터 바인딩은 기본적으로 단방향입니다.- 이 문제를 해결할 방법을 살펴봅시다.
+잘하고 있네요! 이제 앱을 한번 실행해 보세요. 필터 버튼을 클릭하면 선택된 상태가 되고 스타일이 적절히 업데이트됩니다. 하지만 문제가 있습니다. 할 일(to-do)들이 필터링되지 않습니다. 그 이유는 `filter` 변수가 `Todos` 컴포넌트에서 `FilterButton` 컴포넌트로 prop을 통해 전달되지만, `FilterButton` 컴포넌트에서 발생하는 변경사항이 부모로 다시 전달되지 않기 때문입니다 - 데이터 바인딩은 기본적으로 단방향입니다.- 이 문제를 해결할 방법을 살펴봅시다.
 
 ## 컴포넌트 간 데이터 공유: 핸들러를 prop으로 전달하기
 
@@ -150,7 +152,7 @@ Svelte에서 애플리케이션은 하나 이상의 컴포넌트로 구성됩니
 
 `FilterButton` 컴포넌트는 부모로부터 `onclick` 핸들러를 받을 것입니다. 사용자가 필터 버튼 중 하나를 클릭할 때마다, 자식은 선택된 필터를 매개변수로 부모에게 전달하면서 `onclick` 핸들러를 호출할 것입니다.
 
-우리는 다음과 같이 오류를 방지하기 위해 더미 핸들러를 할당하면서 `onclick` prop을 선언할 것입니다:
+우리는 다음과 같이 오류를 방지하기 위해 더미 핸들러를 할당하면서 `onclick` prop을 선언할 것입니다.
 
 ```js
 export let onclick = (clicked) => {};
@@ -158,7 +160,7 @@ export let onclick = (clicked) => {};
 
 그리고 `$: onclick(filter)`라는 반응형 선언을 사용하여 `filter` 변수가 업데이트될 때마다 `onclick` 핸들러를 호출하도록 하겠습니다.
 
-1. FilterButton 컴포넌트의 `<script>` 섹션은 다음과 같이 보일 것입니다. 다음을 추가하세요:
+1. FilterButton 컴포넌트의 `<script>` 섹션은 다음과 같이 보일 것입니다. 다음을 추가하세요.
 
    ```js
    export let filter = "all";
@@ -166,7 +168,7 @@ export let onclick = (clicked) => {};
    $: onclick(filter);
    ```
 
-2. 이제 `Todos.svelte` 내에서 `FilterButton`을 호출할 때, 핸들러를 지정해야 합니다. 다음과 같이 업데이트하세요:
+2. 이제 `Todos.svelte` 내에서 `FilterButton`을 호출할 때, 핸들러를 지정해야 합니다. 다음과 같이 업데이트하세요.
 
    ```svelte
    <FilterButton {filter} onclick={ (clicked) => filter = clicked }/>
@@ -182,15 +184,15 @@ export let onclick = (clicked) => {};
 
 `bind`를 사용함으로써, `FilterButton` 컴포넌트에서 `filter` prop에 대한 모든 변경사항이 부모 컴포넌트인 `Todos`로 다시 전달되어야 함을 Svelte에 알릴 것입니다. 즉, 부모의 `filter` 변수 값을 자식의 값과 바인딩할 것입니다.
 
-1. `Todos.svelte`에서, `FilterButton` 컴포넌트 호출을 다음과 같이 업데이트하세요:
+1. `Todos.svelte`에서, `FilterButton` 컴포넌트 호출을 다음과 같이 업데이트하세요.
 
    ```svelte
    <FilterButton bind:filter={filter} />
    ```
 
-   Svelte는 축약형을 제공합니다: `bind:value={value}` 는 `bind:value`와 같습니다. 따라서 위 예제에서는 그냥 `<FilterButton bind:filter />`라고 작성할 수 있습니다.
+   Svelte는 축약형을 제공합니다. `bind:value={value}` 는 `bind:value`와 같습니다. 따라서 위 예제에서는 그냥 `<FilterButton bind:filter />`라고 작성할 수 있습니다.
 
-2. 이제 자식 컴포넌트는 부모의 필터 변수 값을 수정할 수 있으므로 `onclick` prop은 더 이상 필요하지 않습니다. `FilterButton` 의 `<script>` 요소를 다음과 같이 수정하세요:
+2. 이제 자식 컴포넌트는 부모의 필터 변수 값을 수정할 수 있으므로 `onclick` prop은 더 이상 필요하지 않습니다. `FilterButton` 의 `<script>` 요소를 다음과 같이 수정하세요.
 
    ```svelte
    <script>
@@ -207,7 +209,7 @@ export let onclick = (clicked) => {};
 `Todo` 컴포넌트는 하나의 `todo` 객체를 prop으로 받게 됩니다. `todo` prop을 선언하고 `Todos` 컴포넌트에서 코드를 이동시킵시다. 일단 지금은 `removeTodo` 호출을 알림으로 대체하고 나중에 기능을 다시 추가하겠습니다.
 
 1. 새 컴포넌트 파일 `components/Todo.svelte`를 생성합니다.
-2. 이 파일 안에 다음 내용을 넣습니다:
+2. 이 파일 안에 다음 내용을 넣습니다.
 
    ```svelte
    <script>
@@ -233,7 +235,7 @@ export let onclick = (clicked) => {};
    </div>
    ```
 
-3. 이제 `Todo` 컴포넌트를 `Todos.svelte`로 가져와야 합니다. 이 파일로 이동하여 이전의 `import` 문 아래에 다음 `import` 문을 추가하세요:
+3. 이제 `Todo` 컴포넌트를 `Todos.svelte`로 가져와야 합니다. 이 파일로 이동하여 이전의 `import` 문 아래에 다음 `import` 문을 추가하세요.
 
    ```js
    import Todo from "./Todo.svelte";
@@ -241,7 +243,7 @@ export let onclick = (clicked) => {};
 
 4. 다음으로, `Todo.svelte` 로 옮겨진 코드 대신 각 to-do마다 `<Todo>` 컴포넌트를 포함하도록 `{#each}` 블록을 업데이트 해야 합니다. 또한 현재 `todo` 객체를 prop으로 컴포넌트에 전달하고 있습니다.
 
-`Todos.svelte` 내의 `{#each}` 블록을 다음과 같이 업데이트 하세요:
+`Todos.svelte` 내의 `{#each}` 블록을 다음과 같이 업데이트 하세요.
 
 ```svelte
 <ul role="list" class="todo-list stack-large" aria-labelledby="list-heading">
@@ -271,14 +273,14 @@ export let onclick = (clicked) => {};
 
 우리는 `Todo` 컴포넌트를 수정하여 삭제되는 할 일(to-do)에 대한 추가 정보와 함께 `remove` 이벤트를 발생시킬 것입니다.
 
-1. 먼저, `Todo` 컴포넌트의 `<script>` 섹션 상단에 다음을 추가하세요:
+1. 먼저, `Todo` 컴포넌트의 `<script>` 섹션 상단에 다음을 추가하세요.
 
    ```js
    import { createEventDispatcher } from "svelte";
    const dispatch = createEventDispatcher();
    ```
 
-2. _Delete_ 버튼을 같은 파일의 마크다운 섹션에 다음과 같이 추가합니다.
+2. Delete 버튼을 같은 파일의 마크다운 섹션에 다음과 같이 추가합니다.
 
    ```svelte
    <button type="button" class="btn btn__danger" on:click={() => dispatch('remove', todo)}>
@@ -288,7 +290,7 @@ export let onclick = (clicked) => {};
 
    `dispatch('remove', todo)`를 사용하여 `remove` 이벤트를 발생시키고, 삭제되는 `todo`를 추가 데이터로 전달하고 있습니다. 핸들러는 이벤트 객체를 사용할 수 있게 호출되며, 추가 데이터는 `event.detail` 속성에서 사용할 수 있습니다.
 
-3. 이제 `Todos.svelte` 내부에서 이 이벤트를 수신하고 그에 따라 행동해야 합니다. 이 파일로 돌아가서 `<Todo>` 컴포넌트 호출을 다음과 같이 업데이트하세요:
+3. 이제 `Todos.svelte` 내부에서 이 이벤트를 수신하고 그에 따라 행동해야 합니다. 이 파일로 돌아가서 `<Todo>` 컴포넌트 호출을 다음과 같이 업데이트하세요.
 
    ```svelte
    <Todo {todo} on:remove={(e) => removeTodo(e.detail)} />
@@ -306,21 +308,21 @@ export let onclick = (clicked) => {};
 
 ### 이벤트 핸들링
 
-1. 편집 모드 여부를 추적할 변수와 업데이트되는 작업 이름을 저장할 또 다른 변수가 필요합니다. `Todo` 컴포넌트의 `<script>` 섹션 하단에 다음 변수 정의를 추가하세요:
+1. 편집 모드 여부를 추적할 변수와 업데이트되는 작업 이름을 저장할 또 다른 변수가 필요합니다. `Todo` 컴포넌트의 `<script>` 섹션 하단에 다음 변수 정의를 추가하세요.
 
    ```js
    let editing = false; // 편집 모드 추적
    let name = todo.name; // 편집중인 할 일(to-do)의 이름을 유지합니다
    ```
 
-2. `Todo` 컴포넌트가 발생시킬 이벤트를 결정해야 합니다:
+2. `Todo` 컴포넌트가 발생시킬 이벤트를 결정해야 합니다.
 
    - 상태 토글과 이름 편집에 대해 서로 다른 이벤트를 발생시킬 수 있습니다(예를 들면, `updateTodoStatus`와 `updateTodoName`).
    - 또는 더 일반적인 접근 방식을 취하여 두 작업 모두에 대해 단일 `update` 이벤트를 발생시킬 수 있습니다.
 
    우리는 다른 기법을 사용해보기 위해 두 번째 접근 방식을 사용할 것입니다. 이 방식의 장점은 나중에 할 일(to-do)에 더 많은 필드를 추가하더라도 동일한 이벤트로 모든 업데이트를 처리할 수 있다는 것입니다.
 
-   변경 사항을 받아 수정된 할 일(to-do)과 함께 업데이트 이벤트를 발생시킬 `update()` 함수를 만듭시다. 다시 `<script>` 섹션 하단에 다음을 추가하세요:
+   변경 사항을 받아 수정된 할 일(to-do)과 함께 업데이트 이벤트를 발생시킬 `update()` 함수를 만듭시다. 다시 `<script>` 섹션 하단에 다음을 추가하세요.
 
    ```js
    function update(updatedTodo) {
@@ -333,7 +335,7 @@ export let onclick = (clicked) => {};
 
 3. 다음으로, 각 사용자 동작을 처리할 다른 함수들을 만들겠습니다. 할 일(to-do)이 편집 모드에 있을 때 사용자는 변경 사항을 저장하거나 취소할 수 있습니다. 편집 모드가 아닐 때 사용자는 할 일(to-do)을 삭제하거나 편집하거나, 완료된 상태와 활성 상태 사이에서 상태를 토글(선택)할 수 있습니다.
 
-이전 함수 아래에 이러한 동작을 처리할 다음 함수 코드를 추가하세요:
+이전 함수 아래에 이러한 동작을 처리할 다음 함수 코드를 추가하세요.
 
 ```js
 function onCancel() {
@@ -369,7 +371,7 @@ function onToggle() {
 
 예를 들어, `editing`이 `true`일 경우, Svelte는 업데이트 양식을 표시하고, `false`일 경우, 체크박스를 DOM에 추가하고 양식을 제거합니다. Svelte의 반응성 덕분에 편집 변수의 값을 할당하는 것만으로도 올바른 HTML 요소를 표시할 수 있습니다.
 
-다음은 기본적인 `if` 블록 구조를 보여주는 예시입니다:
+다음은 기본적인 `if` 블록 구조를 보여주는 예시입니다.
 
 ```svelte
 <div class="stack-small">
@@ -403,14 +405,14 @@ function onToggle() {
 </div>
 ```
 
-주목할 만한 사항은 다음과 같습니다:
+주목할 만한 사항은 다음과 같습니다.
 
-- 사용자가 _Edit_ 버튼을 누르면, `onEdit()`을 실행하여 `editing` 변수를 `true`로 설정합니다.
+- 사용자가 Edit 버튼을 누르면, `onEdit()`을 실행하여 `editing` 변수를 `true`로 설정합니다.
 - 사용자가 체크박스를 클릭하면,`onToggle()` 함수를 호출하는데, 이 함수는 새로운 `completed` 값을 매개변수로 전달하여 `update()`를 실행합니다.
 - `update()` 함수는 수정된 할 일(to-do)의 사본을 추가 정보로 전달하면서 `update` 이벤트를 발생시킵니다.
 - 마지막으로, `onRemove()` 함수는 삭제될 `todo`를 추가 데이터로 전달하면서 `remove` 이벤트를 발생시킵니다.
 
-편집 UI(상단)는 변경 사항을 취소하거나 저장하기 위한 `<input>` 필드와 두 버튼을 포함할 것입니다:
+편집 UI(상단)는 변경 사항을 취소하거나 저장하기 위한 `<input>` 필드와 두 버튼을 포함할 것입니다.
 
 ```svelte
 <div class="stack-small">
@@ -440,7 +442,7 @@ function onToggle() {
 - `onCancel()`이 호출될 때, `name`은 원래 값(prop으로 전달된 값)으로 복원되고 편집 모드를 종료합니다(`editing`을 `false`로 설정).
 - `onSave()`가 호출되면, 수정된 `name`을 전달하여 `update()` 함수를 실행하고 편집 모드를 종료합니다.
 
-또한 `<input>`이 비어 있을 때 저장 버튼을 비활성화하기 위해 `disabled={!name}` 속성을 사용하고, 사용자가 <kbd>Escape</kbd> 키를 사용하여 편집을 취소할 수 있도록 다음과 같이 설정합니다:
+또한 `<input>`이 비어 있을 때 저장 버튼을 비활성화하기 위해 `disabled={!name}` 속성을 사용하고, 사용자가 <kbd>Escape</kbd> 키를 사용하여 편집을 취소할 수 있도록 다음과 같이 설정합니다.
 
 ```plain
 on:keydown={(e) => e.key === 'Escape' && onCancel()}
@@ -448,7 +450,7 @@ on:keydown={(e) => e.key === 'Escape' && onCancel()}
 
 또한 `todo.id`를 사용하여 새 입력 컨트롤과 레이블에 대한 고유 ID를 생성합니다.
 
-1. 우리의 `Todo` 컴포넌트의 업데이트된 마크업은 다음과 같습니다. 다음과 같이 업데이트하세요:
+1. 우리의 `Todo` 컴포넌트의 업데이트된 마크업은 다음과 같습니다. 다음과 같이 업데이트하세요.
 
    ```svelte
    <div class="stack-small">
@@ -488,9 +490,9 @@ on:keydown={(e) => e.key === 'Escape' && onCancel()}
    </div>
    ```
 
-   > **Note:** 이를 두 개의 다른 컴포넌트로 더 나눌 수도 있습니다. 하나는 할 일(to-do)을 편집하기 위한 것이고 다른 하나는 그것을 표시하기 위한 것입니다. 이것은 단일 컴포넌트에서 이 수준의 복잡성을 다루는 것에 대해 얼마나 숙련되어 있는지에 따라 다릅니다. 또한 이를 더 분리하면 다른 컨텍스트에서 이 컴포넌트를 재사용할 수 있게 될지도 고려해야 합니다.
+   > **참고:** 이를 두 개의 다른 컴포넌트로 더 나눌 수도 있습니다. 하나는 할 일(to-do)을 편집하기 위한 것이고 다른 하나는 그것을 표시하기 위한 것입니다. 이것은 단일 컴포넌트에서 이 수준의 복잡성을 다루는 것에 대해 얼마나 숙련되어 있는지에 따라 다릅니다. 또한 이를 더 분리하면 다른 컨텍스트에서 이 컴포넌트를 재사용할 수 있게 될지도 고려해야 합니다.
 
-2. 업데이트 기능을 작동시키기 위해, `Todos` 컴포넌트에서 `update` 이벤트를 처리해야 합니다. 그 `<script>` 섹션에 이 핸들러를 추가하세요:
+2. 업데이트 기능을 작동시키기 위해, `Todos` 컴포넌트에서 `update` 이벤트를 처리해야 합니다. 그 `<script>` 섹션에 이 핸들러를 추가하세요.
 
    ```js
    function updateTodo(todo) {
@@ -501,7 +503,7 @@ on:keydown={(e) => e.key === 'Escape' && onCancel()}
 
    우리는 `todos` 배열에서 `id`로 `todo`를 찾아 스프레드 구문을 사용하여 내용을 업데이트합니다. 이 경우 `todos[i] = todo`를 사용할 수도 있었지만, 이 구현이 더 안정적이며 `Todo` 컴포넌트가 할 일(to-do)의 업데이트된 부분만 반환하도록 허용할 수 있습니다.
 
-3. 다음으로, `<Todo>` 컴포넌트 호출에서 `update` 이벤트를 수신하고, 이벤트가 발생할 때 `updateTodo()` 함수를 실행하여 `name`과 `completed` 상태를 변경해야 합니다. `<Todo>` 호출을 다음과 같이 업데이트하세요:
+3. 다음으로, `<Todo>` 컴포넌트 호출에서 `update` 이벤트를 수신하고, 이벤트가 발생할 때 `updateTodo()` 함수를 실행하여 `name`과 `completed` 상태를 변경해야 합니다. `<Todo>` 호출을 다음과 같이 업데이트하세요.
 
    ```svelte
    {#each filterTodos(filter, todos) as todo (todo.id)}
@@ -515,13 +517,13 @@ on:keydown={(e) => e.key === 'Escape' && onCancel()}
 
 보시다시피, Svelte에서 "props-down, events-up" 패턴을 구현하는 것은 쉽습니다. 하지만, 간단한 컴포넌트의 경우 `bind`가 좋은 선택이 될 수 있습니다.
 
-> **참고:** Svelte는 컴포넌트 간 정보를 공유하기 위한 더 고급 메커니즘을 제공합니다: [Context API](https://svelte.dev/docs/svelte#setcontext) and [Stores](https://svelte.dev/docs/svelte-store). Context API는 컴포넌트와 그 자식들이 데이터와 함수를 prop으로 전달하거나 많은 이벤트를 발생시키지 않고 서로 "소통"할 수 있는 메커니즘을 제공합니다. Stores는 계층적으로 관련되지 않은 컴포넌트 간에 반응성 데이터를 공유할 수 있도록 합니다. 이 시리즈에서 나중에 Stores에 대해 더 살펴볼 것입니다.
+> **참고:** Svelte는 컴포넌트 간 정보를 공유하기 위한 더 고급 메커니즘을 제공합니다. [Context API](https://svelte.dev/docs/svelte#setcontext) and [Stores](https://svelte.dev/docs/svelte-store). Context API는 컴포넌트와 그 자식들이 데이터와 함수를 prop으로 전달하거나 많은 이벤트를 발생시키지 않고 서로 "소통"할 수 있는 메커니즘을 제공합니다. Stores는 계층적으로 관련되지 않은 컴포넌트 간에 반응성 데이터를 공유할 수 있도록 합니다. 이 시리즈에서 나중에 Stores에 대해 더 살펴볼 것입니다.
 
 ## 지금까지의 코드
 
 ### Git
 
-이 문서의 끝에서 코드의 상태를 확인하려면 다음과 같이 저장소 사본에 접근하세요:
+이 문서의 끝에서 코드의 상태를 확인하려면 다음과 같이 저장소 사본에 접근하세요.
 
 ```bash
 cd mdn-svelte-tutorial/05-advanced-concepts
@@ -537,15 +539,15 @@ npx degit opensas/mdn-svelte-tutorial/05-advanced-concepts
 
 ### REPL
 
-REPL에서 코드의 현재 상태를 보려면 다음에 방문하십시오.:
+REPL에서 코드의 현재 상태를 보려면 다음에 방문하십시오.
 
 <https://svelte.dev/repl/76cc90c43a37452e8c7f70521f88b698?version=3.23.2>
 
-## Summary
+## 요약
 
 이제 우리 앱에 필요한 모든 기능이 준비되었습니다. 할 일(to-do)을 표시, 추가, 편집, 삭제할 수 있으며, 완료로 표시하고 상태별로 필터링할 수 있습니다.
 
-요약하자면 다음 주제를 다뤘습니다:
+요약하자면 다음 주제를 다뤘습니다.
 
 - 새 컴포넌트로 기능 추출하기
 - 핸들러를 prop으로 받아 자식으로부터 부모에게 정보 전달하기
