@@ -13,7 +13,7 @@ l10n:
 
 - 在网页浏览器中，脚本未明确启动为后台任务的任何代码都将具有一个 {{domxref("Window")}} 作为其全局对象。这是网络上绝大多数 JavaScript 代码的情况。
 - 在 {{domxref("Worker")}} 中运行的代码具有一个 {{domxref("WorkerGlobalScope")}} 对象作为其全局对象。
-- 在 {{Glossary("Node.js")}} 下运行的脚本具有一个名为 global 的对象作为其全局对象。 
+- 在 {{Glossary("Node.js")}} 下运行的脚本具有一个名为 global 的对象作为其全局对象。
 
 [`globalThis`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/globalThis) 全局属性允许无论当前环境如何都能访问全局对象。
 
