@@ -18,7 +18,7 @@ elementList = baseElement.querySelectorAll(selectors);
 其中
 
 - `elementList`会是一个 non-live 的[`NodeList`](/zh-CN/docs/Web/API/NodeList)对象。
-- `baseElement 是一个`[元素](/zh-CN/docs/Web/API/element)对象。
+- `baseElement 是一个`[元素](/zh-CN/docs/Web/API/Element)对象。
 - `selectors`是一组 CSS 选择器。
 
 ## 示例
