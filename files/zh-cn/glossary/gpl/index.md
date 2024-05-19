@@ -12,5 +12,5 @@ l10n:
 ## 参见
 
 - GNU 许可证 [FAQ](https://www.gnu.org/licenses/gpl-faq.html)
-- 维基百科上的 [GNU GPL](https://en.wikipedia.org/wiki/GNU_General_Public_License)
+- 维基百科上的 [GNU GPL](https://zh.wikipedia.org/wiki/GNU通用公共许可证)
 - [GPL 许可证文本](https://www.gnu.org/licenses/gpl-3.0.html)
