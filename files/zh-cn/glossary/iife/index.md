@@ -47,7 +47,7 @@ l10n:
 
 ### 执行一个异步函数
 
-[`async`](/zh-CN/docs/Web/JavaScript/Reference/Operators/async_function) 立即调用函数表达式允许你在比较旧的浏览器或者 JavaScript 运行环境没有[顶层 await](/zh-CN/docs/Web/JavaScript/Reference/Operators/await#top_level_await) 中使用 [`await`](/zh-CN/docs/Web/JavaScript/Reference/Operators/async_function) 和 [`for-await`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for-await...of)：
+[`async`](/zh-CN/docs/Web/JavaScript/Reference/Operators/async_function) 立即调用函数表达式允许你在比较旧的浏览器中或者 JavaScript 运行环境没有[顶层 await](/zh-CN/docs/Web/JavaScript/Reference/Operators/await#在顶层使用_await) 时使用 [`await`](/zh-CN/docs/Web/JavaScript/Reference/Operators/await) 和 [`for-await`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for-await...of)：
 
 ```js
 const getFileStream = async (url) => {
