@@ -13,4 +13,4 @@ l10n:
 
 ## 参见
 
-- 维基百科上的[DSL](https://zh.wikipedia.org/wiki/DSL)
+- 维基百科上的 [DSL](https://zh.wikipedia.org/wiki/DSL)

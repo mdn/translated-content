@@ -13,5 +13,5 @@ l10n:
 
 ## 参见
 
-- 维基百科上的[领域特定语言](https://en.wikipedia.org/wiki/领域特定语言)
+- 维基百科上的[领域特定语言](https://zh.wikipedia.org/wiki/领域特定语言)
 - martinfowler.com 上的 [DSL 指南](https://martinfowler.com/dsl.html)
