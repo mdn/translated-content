@@ -126,15 +126,15 @@ div.circle {
 }
 div#a {
   background-color: gold;
-  zoom: normal; /* circle is 25px diameter */
+  zoom: normal; /* 円の直径は 25px */
 }
 div#b {
   background-color: green;
-  zoom: 200%; /* circle is 50px diameter */
+  zoom: 200%; /* 円の直径は 50px */
 }
 div#c {
   background-color: blue;
-  zoom: 2.9; /* circle is 72.5px diameter */
+  zoom: 2.9; /* 円の直径は 72.5px */
 }
 ```
 
