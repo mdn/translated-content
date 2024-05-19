@@ -13899,6 +13899,10 @@
     "modified": "2020-10-15T21:36:49.995Z",
     "contributors": ["Marsf", "mfuji09", "Uemmra3", "Kenju"]
   },
+  "Web/API/Window/caches": {
+    "modified": "2020-10-15T21:49:48.643Z",
+    "contributors": ["Wind1808", "unarist", "YuichiNukiyama"]
+  },
   "Web/API/Window/cancelAnimationFrame": {
     "modified": "2019-03-23T23:34:36.038Z",
     "contributors": ["Marsf", "fscholz", "ethertank"]
@@ -15060,10 +15064,6 @@
       "ethertank",
       "Potappo"
     ]
-  },
-  "Web/API/caches": {
-    "modified": "2020-10-15T21:49:48.643Z",
-    "contributors": ["Wind1808", "unarist", "YuichiNukiyama"]
   },
   "Web/API/clearInterval": {
     "modified": "2019-03-23T23:49:51.484Z",

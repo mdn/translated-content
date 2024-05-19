@@ -3068,7 +3068,7 @@
 /ja/docs/Web/API/ServiceWorkerContainer/oncontrollerchange	/ja/docs/Web/API/ServiceWorkerContainer/controllerchange_event
 /ja/docs/Web/API/ServiceWorkerContainer/onerror	/ja/docs/Web/API/ServiceWorkerContainer/error_event
 /ja/docs/Web/API/ServiceWorkerContainer/onmessage	/ja/docs/Web/API/ServiceWorkerContainer/message_event
-/ja/docs/Web/API/ServiceWorkerGlobalScope/caches	/ja/docs/Web/API/caches
+/ja/docs/Web/API/ServiceWorkerGlobalScope/caches	/ja/docs/Web/API/Window/caches
 /ja/docs/Web/API/ServiceWorkerGlobalScope/onactivate	/ja/docs/Web/API/ServiceWorkerGlobalScope/activate_event
 /ja/docs/Web/API/ServiceWorkerGlobalScope/onfetch	/ja/docs/Web/API/ServiceWorkerGlobalScope/fetch_event
 /ja/docs/Web/API/ServiceWorkerGlobalScope/oninstall	/ja/docs/Web/API/ServiceWorkerGlobalScope/install_event
@@ -3207,7 +3207,7 @@
 /ja/docs/Web/API/WindowEventHandlers/onunload	/ja/docs/Web/API/Window/unload_event
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/atob	/ja/docs/Web/API/atob
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/btoa	/ja/docs/Web/API/btoa
-/ja/docs/Web/API/WindowOrWorkerGlobalScope/caches	/ja/docs/Web/API/caches
+/ja/docs/Web/API/WindowOrWorkerGlobalScope/caches	/ja/docs/Web/API/Window/caches
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval	/ja/docs/Web/API/clearInterval
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout	/ja/docs/Web/API/clearTimeout
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap	/ja/docs/Web/API/createImageBitmap
@@ -3224,7 +3224,7 @@
 /ja/docs/Web/API/WindowTimers/setTimeout	/ja/docs/Web/API/setTimeout
 /ja/docs/Web/API/Worker/onerror	/ja/docs/Web/API/Worker/error_event
 /ja/docs/Web/API/Worker/onmessageerror	/ja/docs/Web/API/Worker/messageerror_event
-/ja/docs/Web/API/WorkerGlobalScope/caches	/ja/docs/Web/API/caches
+/ja/docs/Web/API/WorkerGlobalScope/caches	/ja/docs/Web/API/Window/caches
 /ja/docs/Web/API/WorkerGlobalScope/console	/ja/docs/conflicting/Web/API/console
 /ja/docs/Web/API/XMLDocument/async	/ja/docs/Web/API/XMLDocument
 /ja/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest	/ja/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest
@@ -3245,6 +3245,7 @@
 /ja/docs/Web/API/XRTargetRayMode	/ja/docs/Web/API/XRInputSource/targetRayMode
 /ja/docs/Web/API/XSLTProcessor/Browser_Differences	/ja/docs/orphaned/Web/API/XSLTProcessor/Browser_Differences
 /ja/docs/Web/API/XSLTProcessor/Resources	/ja/docs/Web/API/XSLTProcessor
+/ja/docs/Web/API/caches	/ja/docs/Web/API/Window/caches
 /ja/docs/Web/API/console.dir	/ja/docs/Web/API/console/dir_static
 /ja/docs/Web/API/console.log	/ja/docs/Web/API/console/log_static
 /ja/docs/Web/API/console.time	/ja/docs/Web/API/console/time_static
