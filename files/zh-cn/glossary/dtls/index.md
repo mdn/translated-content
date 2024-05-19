@@ -9,7 +9,7 @@ l10n:
 
 **资料包传输层安全**（**DTLS**）是一种用于保护基于数据报通信的协议。它基于面向流的传输层安全（{{Glossary("TLS")}}），提供类似的安全级别。作为一种数据报协议，DTLS 不保证消息的顺序传递，甚至不保证消息会被传递。然而，DTLS 也获得了数据报协议的好处，特别是更低的开销和减少的延迟。
 
-这些特性在 DTLS 最常用的一个领域中尤其有用：{{Glossary("WebRTC")}}。所有与 WebRTC 相关的协议都需要使用 DTLS 加密通信，包括{{Glossary("SCTP")}}、{{Glossary("RTP", "SRTP")}} 和 {{Glossary("STUN")}}。
+这些特性在 DTLS 最常用的一个领域中尤其有用：{{Glossary("WebRTC")}}。所有与 WebRTC 相关的协议都需要使用 DTLS 加密通信，包括 {{Glossary("SCTP")}}、{{Glossary("RTP", "SRTP")}} 和 {{Glossary("STUN")}}。
 
 ## 参见
 
