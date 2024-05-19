@@ -23,7 +23,7 @@ _本接口从 {{domxref("EventTarget")}} 接口继承属性。_
 
 注意，对象类型的属性（例如：覆盖内建元素的原型）被列于下面单独的小节之中。
 
-- {{domxref("caches", "Window.caches")}} {{ReadOnlyInline}}
+- {{domxref("Window.caches")}} {{ReadOnlyInline}}
   - : 返回与当前环境相关的 {{domxref("CacheStorage")}} 对象。这个对象可以实现一些功能，如存储供离线使用的资源，以及对请求生成自定义响应。
 - {{domxref("Window.navigator", "Window.clientInformation")}} {{ReadOnlyInline}}
   - : {{domxref("Window.navigator")}} 对象的别名。
