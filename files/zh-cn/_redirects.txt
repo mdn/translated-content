@@ -1757,7 +1757,7 @@
 /zh-CN/docs/Web/API/Selection.isCollapsed	/zh-CN/docs/Web/API/Selection/isCollapsed
 /zh-CN/docs/Web/API/Selection.removeRange	/zh-CN/docs/Web/API/Selection/removeRange
 /zh-CN/docs/Web/API/ServiceWorker/onstatechange	/zh-CN/docs/Web/API/ServiceWorker/statechange_event
-/zh-CN/docs/Web/API/ServiceWorkerGlobalScope/caches	/zh-CN/docs/Web/API/caches
+/zh-CN/docs/Web/API/ServiceWorkerGlobalScope/caches	/zh-CN/docs/Web/API/Window/caches
 /zh-CN/docs/Web/API/StorageEstimate	/zh-CN/docs/Web/API/StorageManager/estimate
 /zh-CN/docs/Web/API/Streams_API/使用可读文件流	/zh-CN/docs/Web/API/Streams_API/Using_readable_streams
 /zh-CN/docs/Web/API/Streams_API/概念	/zh-CN/docs/Web/API/Streams_API/Concepts
@@ -1860,7 +1860,6 @@
 /zh-CN/docs/Web/API/Window/Window.blur()	/zh-CN/docs/Web/API/Window/blur
 /zh-CN/docs/Web/API/Window/atob	/zh-CN/docs/Web/API/atob
 /zh-CN/docs/Web/API/Window/btoa	/zh-CN/docs/Web/API/btoa
-/zh-CN/docs/Web/API/Window/caches	/zh-CN/docs/Web/API/caches
 /zh-CN/docs/Web/API/Window/clearInterval	/zh-CN/docs/Web/API/clearInterval
 /zh-CN/docs/Web/API/Window/content	/zh-CN/docs/Web/API/Window
 /zh-CN/docs/Web/API/Window/minimize	/zh-CN/docs/Web/API/Window
@@ -1894,7 +1893,7 @@
 /zh-CN/docs/Web/API/WindowEventHandlers/onunload	/zh-CN/docs/Web/API/Window/unload_event
 /zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/atob	/zh-CN/docs/Web/API/atob
 /zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/btoa	/zh-CN/docs/Web/API/btoa
-/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/caches	/zh-CN/docs/Web/API/caches
+/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/caches	/zh-CN/docs/Web/API/Window/caches
 /zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval	/zh-CN/docs/Web/API/clearInterval
 /zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout	/zh-CN/docs/Web/API/clearTimeout
 /zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap	/zh-CN/docs/Web/API/createImageBitmap
@@ -1924,6 +1923,7 @@
 /zh-CN/docs/Web/API/XMLHttpRequestEventTarget/onload	/zh-CN/docs/Web/API/XMLHttpRequest/load_event
 /zh-CN/docs/Web/API/XMLHttpRequestEventTarget/onloadstart	/zh-CN/docs/Web/API/XMLHttpRequest/loadstart_event
 /zh-CN/docs/Web/API/XMLHttpRequestEventTarget/onprogress	/zh-CN/docs/Web/API/XMLHttpRequest/progress_event
+/zh-CN/docs/Web/API/caches	/zh-CN/docs/Web/API/Window/caches
 /zh-CN/docs/Web/API/console.dir	/zh-CN/docs/Web/API/console/dir_static
 /zh-CN/docs/Web/API/console.group	/zh-CN/docs/Web/API/console/group_static
 /zh-CN/docs/Web/API/console.groupCollapsed	/zh-CN/docs/Web/API/console/groupcollapsed_static

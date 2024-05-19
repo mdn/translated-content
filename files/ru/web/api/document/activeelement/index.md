@@ -3,7 +3,7 @@ title: Document.activeElement
 slug: Web/API/Document/activeElement
 ---
 
-{{ ApiRef() }}
+{{APIRef("Shadow DOM")}}
 
 ## Аннотация
 
