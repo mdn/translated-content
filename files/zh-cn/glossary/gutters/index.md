@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**网格间距**是网格轨道之间的间距，可以通过 {{cssxref("grid-column-gap")}}，{{cssxref("grid-row-gap")}} 或者 {{cssxref("grid-gap")}} 在[网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)中创建。
+**网格间距**是网格内容轨道之间的间距，可以通过 {{cssxref("column-gap")}}、{{cssxref("row-gap")}} 或 {{cssxref("gap")}} 属性在[网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)中创建。
 
 ## 示例
 
