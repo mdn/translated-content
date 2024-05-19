@@ -1,8 +1,7 @@
 ---
 title: Глобальное свойство caches
-slug: Web/API/caches
-l10n:
-  sourceCommit: cb279e20569055b200f93802d1704846c28aa04f
+slug: Web/API/Window/caches
+original_slug: Web/API/caches
 ---
 
 {{APIRef("Service Workers API")}}{{AvailableInWorkers}}

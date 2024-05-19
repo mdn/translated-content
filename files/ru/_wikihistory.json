@@ -7199,6 +7199,10 @@
     "modified": "2020-10-15T22:13:59.597Z",
     "contributors": ["AliaksandrZahorski"]
   },
+  "Web/API/Window/caches": {
+    "modified": "2020-10-29T09:02:45.566Z",
+    "contributors": ["ScratchFilin", "evilwithin93rus"]
+  },
   "Web/API/Window/cancelAnimationFrame": {
     "modified": "2020-10-15T22:22:40.555Z",
     "contributors": ["xcopy", "ekirpichyov"]
@@ -7222,6 +7226,10 @@
   "Web/API/Window/console": {
     "modified": "2019-03-18T21:20:36.516Z",
     "contributors": ["AndreiSoroka"]
+  },
+  "Web/API/Window/crypto": {
+    "modified": "2019-03-23T22:55:57.909Z",
+    "contributors": ["pinal"]
   },
   "Web/API/Window/devicePixelRatio": {
     "modified": "2020-10-15T21:52:27.387Z",
@@ -7650,10 +7658,6 @@
     "modified": "2019-09-17T16:11:11.862Z",
     "contributors": ["SerzN1", "uleming"]
   },
-  "Web/API/caches": {
-    "modified": "2020-10-29T09:02:45.566Z",
-    "contributors": ["ScratchFilin", "evilwithin93rus"]
-  },
   "Web/API/clearTimeout": {
     "modified": "2020-10-15T22:33:31.469Z",
     "contributors": ["andzion105"]
@@ -7765,10 +7769,6 @@
   "Web/API/console/warn_static": {
     "modified": "2020-10-15T22:00:31.979Z",
     "contributors": ["ekirpichyov", "ArtemPolanskiy"]
-  },
-  "Web/API/crypto_property": {
-    "modified": "2019-03-23T22:55:57.909Z",
-    "contributors": ["pinal"]
   },
   "Web/API/fetch": {
     "modified": "2020-10-15T22:06:28.491Z",
@@ -15961,6 +15961,10 @@
   "WebAssembly/Using_the_JavaScript_API": {
     "modified": "2019-06-12T07:08:20.267Z",
     "contributors": ["deadblackclover", "vkorniiko"]
+  },
+  "conflicting/Glossary/CORS-safelisted_request_header": {
+    "modified": "2019-03-18T21:32:57.580Z",
+    "contributors": ["Skinny-Hunter"]
   },
   "conflicting/Web/HTML/Element/img": {
     "modified": "2019-03-18T20:41:47.756Z",
