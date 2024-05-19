@@ -1,6 +1,7 @@
 ---
 title: Window.crypto
-slug: Web/API/crypto_property
+slug: Web/API/Window/crypto
+original_slug: Web/API/crypto_property
 ---
 
 {{APIRef}}
