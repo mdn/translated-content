@@ -15135,6 +15135,10 @@
     "modified": "2020-10-15T22:18:42.062Z",
     "contributors": ["zhangchen", "mozzix"]
   },
+  "Web/API/Window/caches": {
+    "modified": "2019-09-21T03:33:16.440Z",
+    "contributors": ["JarvanMo"]
+  },
   "Web/API/Window/cancelAnimationFrame": {
     "modified": "2019-03-23T23:39:18.899Z",
     "contributors": ["teoli", "insideyiqi", "ziyunfei"]
@@ -16083,10 +16087,6 @@
       "khalid32",
       "cuixiping"
     ]
-  },
-  "Web/API/caches": {
-    "modified": "2019-09-21T03:33:16.440Z",
-    "contributors": ["JarvanMo"]
   },
   "Web/API/clearInterval": {
     "modified": "2020-10-15T21:21:33.193Z",
