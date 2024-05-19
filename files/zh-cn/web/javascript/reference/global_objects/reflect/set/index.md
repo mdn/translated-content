@@ -9,7 +9,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/set
 
 ## 语法
 
-```plain
+```js-nolint
+Reflect.set(target, propertyKey, value)
 Reflect.set(target, propertyKey, value, receiver)
 ```
 
