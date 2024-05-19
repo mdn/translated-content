@@ -117,6 +117,4 @@ self.addEventListener("fetch", function (event) {
 
 - [使用 Service Worker](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service workers 基本代码示例](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
-- [是否支持 ServiceWorker](https://jakearchibald.github.io/isserviceworkerready/)
-- {{jsxref("Promise")}}
 - [使用 web worker](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)
