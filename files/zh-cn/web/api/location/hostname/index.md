@@ -7,7 +7,7 @@ l10n:
 
 {{ApiRef("URL API")}}
 
-{{domxref("Location")}} 接口的 **`hostname`** 属性是包含 URL 的{{glossary("domain name", "域名")}}的字符串。
+{{domxref("Location")}} 接口的 **`hostname`** 属性是包含 URL {{glossary("domain name", "域名")}}的字符串。
 
 ## 值
 
