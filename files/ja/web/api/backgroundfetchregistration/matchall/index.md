@@ -25,7 +25,7 @@ matchAll(request,options)
   - : `match` 操作のオプションを指定するオブジェクトです。以下が利用可能です。
 
     - `ignoreSearch`
-      - : URL 中のクエリ文字列を無視するかどうか指定するbool 値です。例えば `true` のとき、`http://foo.com/?value=bar` の `?value=bar` 部分はマッチ処理で無視されます。デフォルトは `false` です。
+      - : URL 中のクエリー文字列を無視するかどうか指定するbool 値です。例えば `true` のとき、`http://foo.com/?value=bar` の `?value=bar` 部分はマッチ処理で無視されます。デフォルトは `false` です。
     - `ignoreMethod`
       - : bool 値です。`true` のとき、マッチ処理は {{domxref("Request")}} の `http` メソッドを検証しません。`false` (デフォルト値)の場合、`GET` と `HEAD` のみ許可されます。
     - `ignoreVary`
