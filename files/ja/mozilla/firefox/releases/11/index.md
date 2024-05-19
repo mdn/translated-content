@@ -53,7 +53,7 @@ Firefox 11 は米国時間 2012 年 3 月 13 日にリリースされました�
 ### Network
 
 - Firefox 8 で変更した、{{ rfc("2231") }} および {{ rfc("5987") }} でダブルクォートを区切り文字として利用できなくした点は、Outlook Web Access など一部のサイトで異常が発生するために取り消しました。
-- HTTP ヘッダのユーザーエージェント文字列に、[携帯電話やタブレット上の Firefox がアクセスしているかをサーバが知ることができる](/ja/docs/Gecko_user_agent_string_reference#Mobile_and_Tablet_indicators)識別子を含むようになりました。
+- HTTP ヘッダーのユーザーエージェント文字列に、[携帯電話やタブレット上の Firefox がアクセスしているかをサーバーが知ることができる](/ja/docs/Gecko_user_agent_string_reference#Mobile_and_Tablet_indicators)識別子を含むようになりました。
 
 ### 開発ツール
 
@@ -67,7 +67,7 @@ Firefox 11 は米国時間 2012 年 3 月 13 日にリリースされました�
 
 #### NetUtil.jsm
 
-- [`readInputStreamToString()`](</ja/docs/JavaScript_code_modules/NetUtil.jsm#readInputStreamToString()> "JavaScript_code_modules/NetUtil.jsm#readInputStreamToString()") へ新たに、入力ストリームを読み取る際のキャラクタセットの解釈を設定するための、省略可能なパラメータが追加されました。
+- [`readInputStreamToString()`](</ja/docs/JavaScript_code_modules/NetUtil.jsm#readInputStreamToString()> "JavaScript_code_modules/NetUtil.jsm#readInputStreamToString()") へ新たに、入力ストリームを読み取る際のキャラクタセットの解釈を設定するための、省略可能な引数が追加されました。
 
 #### 新しい JavaScript code modules
 

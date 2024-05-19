@@ -12,9 +12,9 @@ Firefox 2 ではたくさんの新機能と能力を導入します。この記�
 - [マイクロサマリ](http://wiki.mozilla.org/Microsummaries)
   - : マイクロサマリ (Microsummaries)とはウェブページの最も重要な情報の、定期的に更新される要約です。ウェブサイトだけではなく第三者の開発者もマイクロサマリを提供することができます。 ユーザーがマイクロサマリの提供されたページをブックマークすると、通常の変化しないタイトルの代わりにマイクロサマリを表示させるかどうか選択できます。
 - [マイクロサマリの作成](/ja/docs/Creating_a_Microsummary)
-  - : マイクロサマリジェネレータ (microsummary generator)の作り方のチュートリアル
+  - : マイクロサマリジェネレーター (microsummary generator)の作り方のチュートリアル
 - [マイクロサマリ XML 文法リファレンス](/ja/docs/Microsummary_XML_grammar_reference)
-  - : マイクロサマリジェネレータで使われる XML 文法のリファレンスガイド
+  - : マイクロサマリジェネレーターで使われる XML 文法のリファレンスガイド
 - [Firefox 用 OpenSearch プラグインの作成](/ja/docs/Creating_OpenSearch_plugins_for_Firefox)
   - : Firefox 2 は OpenSearch 検索エンジンフォーマットをサポートします。
 - [MozSearch プラグインの作成](/ja/docs/Creating_MozSearch_plugins)
@@ -22,7 +22,7 @@ Firefox 2 ではたくさんの新機能と能力を導入します。この記�
 - [検索プラグインでの検索サジェスト機能のサポート](/ja/docs/Supporting_search_suggestions_in_search_plugins)
   - : 検索バーで入力中にドロップダウンリストが現れる検索サジェスト機能 (search suggestions)をサポートした MozSearch プラグインの作り方。
 - [New in JavaScript 1.7](/ja/docs/New_in_JavaScript_1.7)
-  - : Firefox 2 は JavaScript 1.7 をサポートします。JavaScript 1.7 には `let` や、分割代入 (destructuring assignment)、ジェネレータ (generator)とイテレータ (iterators)、配列内包 (array comprehensions)などの新機能が含まれます。
+  - : Firefox 2 は JavaScript 1.7 をサポートします。JavaScript 1.7 には `let` や、分割代入 (destructuring assignment)、ジェネレーター (generator)とイテレーター (iterators)、配列内包 (array comprehensions)などの新機能が含まれます。
 - [WHATWG のクライアントサイドのセッション及び永続ストレージ (DOM ストレージ)](/ja/docs/DOM/Storage)
   - : クライアントサイドのセッション及び永続ストレージにより、ウェブアプリケーションは構造化されたデータをクライアントサイドに保存できるようになります。
 - [SVG in Firefox](/ja/docs/SVG_in_Firefox)
@@ -39,7 +39,7 @@ Firefox 2 ではたくさんの新機能と能力を導入します。この記�
 - [フィードコンテンツへアクセスする API](/ja/docs/Feed_content_access_API)
   - : 開発者が RSS および Atom フィードをアクセスおよびパースできる API。
 - [SAX サポート](/ja/docs/SAX)
-  - : イベントベースの XML パーサ API.
+  - : イベントベースの XML パーサー API.
 - [ウェブページから検索エンジンを追加する](/ja/docs/Adding_search_engines_from_web_pages)
   - : JavaScript コードは Firefox に新しい検索プラグインをインストールするように命令することができます。OpenSearch か Sherlock フォーマットのどちらかを利用して検索プラグインを書くことができます。
 - [XUL でのスペルチェック](/ja/docs/Using_spell_checking_in_XUL)

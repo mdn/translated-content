@@ -3,7 +3,7 @@ title: GlobalEventHandlers.oncontextmenu
 slug: Web/API/Element/contextmenu_event
 ---
 
-{{ ApiRef("HTML DOM") }}
+{{APIRef}}
 
 Свойство обработчика событий для события клика правой кнопкой мыши внутри элемента window.
 
@@ -38,7 +38,7 @@ window.addEventListener(
 );
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

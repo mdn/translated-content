@@ -1,9 +1,9 @@
 ---
-title: GlobalEventHandlers.onchange
+title: "HTMLElement: событие change"
 slug: Web/API/HTMLElement/change_event
 ---
 
-{{ ApiRef("HTML DOM") }}
+{{APIRef}}
 
 Свойство `onchange` (Дословно "На изменение") устанавливает и возвращает [обработчик события](/docs/Web/Guide/Events/Event_handlers), для события {{event("change")}} (Изменение чего-либо).
 

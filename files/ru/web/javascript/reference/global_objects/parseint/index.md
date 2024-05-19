@@ -144,7 +144,7 @@ console.log(filterInt("hop1.61803398875")); // NaN
 console.log(filterInt("1.61803398875")); // NaN
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

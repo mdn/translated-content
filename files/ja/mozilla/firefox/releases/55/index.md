@@ -24,7 +24,7 @@ Firefox 55 は、米国時間 2017 年 8 月 8 日にリリースされました
 ### CSS
 
 - {{cssxref("transform-box")}} プロパティをデフォルトで有効にしました ([Firefox バグ 1208550](https://bugzil.la/1208550))。
-- [frames() タイミング関数](</ja/docs/Web/CSS/easing-function#the_frames()_class_of_timing-functions>) を実装しました ([Firefox バグ 1248340](https://bugzil.la/1248340))。
+- [frames() イージング関数](</ja/docs/Web/CSS/easing-function#the_frames()_class_of_timing-functions>) を実装しました ([Firefox バグ 1248340](https://bugzil.la/1248340))。
 - {{cssxref("text-justify")}} プロパティを実装しました ([Firefox バグ 1343512](https://bugzil.la/1343512), [Firefox バグ 276079](https://bugzil.la/276079)).
 - \[css-grid] repeat() 内で {{cssxref("fit-content")}} が、意図せず最大限に制限したサイズで領域を確保してしまう問題を修正しました ([Firefox バグ 1359060](https://bugzil.la/1359060))。
 - {{cssxref("float")}} / {{cssxref("clear")}} の論理値 `inline-start` および `inline-end` は、以前から実装していましたが Release チャンネルでは無効化していました。これを、すべてのチャンネルにおいてデフォルトで有効化しました ([Firefox バグ 1253919](https://bugzil.la/1253919))。

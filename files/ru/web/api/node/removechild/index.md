@@ -3,7 +3,7 @@ title: Node.removeChild
 slug: Web/API/Node/removeChild
 ---
 
-{{ApiRef}}
+{{APIRef("DOM")}}
 
 ## Аннотация
 

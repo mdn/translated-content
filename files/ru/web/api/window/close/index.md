@@ -44,7 +44,7 @@ function closeCurrentWindow() {
 }
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

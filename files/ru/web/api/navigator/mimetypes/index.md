@@ -3,7 +3,7 @@ title: "Navigator: свойство mimeTypes"
 slug: Web/API/Navigator/mimeTypes
 ---
 
-{{ ApiRef("HTML DOM") }}{{deprecated_header}}
+{{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
 Возвращает объект {{domxref("MimeTypeArray")}}, который содержит список объектов {{domxref("MimeType")}}, представляющий собой MIME-типы, известные браузеру.
 

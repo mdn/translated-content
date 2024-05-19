@@ -22,7 +22,7 @@ dump(window.navigator.doNotTrack);
 // prints "1" if DNT is enabled; "0" if the user opted-in for tracking; otherwise this is "unspecified"
 ```
 
-## Спецификация
+## Спецификации
 
 [Tracking Preference Expression](http://www.w3.org/TR/tracking-dnt/) (Working проект) основан на более ранней версии этой спецификации, где `navigator.doNotTrack` **это** значение посланное заголовком `do-not-track`.
 

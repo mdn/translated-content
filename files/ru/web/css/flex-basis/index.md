@@ -163,7 +163,7 @@ flex-basis: unset;
 
 {{ EmbedLiveSample('Example', '100%', '360') }}
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

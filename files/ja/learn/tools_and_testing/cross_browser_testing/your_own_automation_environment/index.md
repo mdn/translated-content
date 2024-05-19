@@ -862,7 +862,7 @@ Sauce Labs API を使用することで、合格したかどうか、テスト�
 
 ![Sauce Labs Updated Job info](sauce_labs_updated_job_info.png)
 
-### 自身のリモートサーバ
+### 自身のリモートサーバー
 
 Sauce Labs や BrowserStack のようなサービスを使用したくない場合は、常に自分自身でリモートテストサーバーを設定することができます。その方法を見ていきましょう。
 

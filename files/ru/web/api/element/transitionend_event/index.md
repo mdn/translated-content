@@ -45,7 +45,7 @@ var element = document.getElementById("slidingMenu");
 element.addEventListener("transitionend", showMessage, false);
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

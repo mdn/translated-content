@@ -30,7 +30,7 @@ Firefox 54 は、米国時間 2017 年 6 月 13 日にリリースされまし�
 ### JavaScript
 
 - `"u"` (Unicode) フラグと `"i"` (大文字・小文字を無視) フラグを設定した {{jsxref("RegExp")}} で `\b` および `\B` は、U+017F (LATIN SMALL LETTER LONG S) および U+212A (KELVIN SIGN) を単語に使用される文字として扱うようになりました ([Firefox バグ 1338373](https://bugzil.la/1338373))。
-- {{jsxref("DataView")}} コンストラクターで、`byteOffset` パラメーターが {{jsxref("Number.MAX_SAFE_INTEGER")}} (>= 2 \*\* 53) の範囲外であるときに {{jsxref("RangeError")}} が発生するようになりました ([Firefox バグ 1317382](https://bugzil.la/1317382))。
+- {{jsxref("DataView")}} コンストラクターで、`byteOffset` 引数が {{jsxref("Number.MAX_SAFE_INTEGER")}} (>= 2 \*\* 53) の範囲外であるときに {{jsxref("RangeError")}} が発生するようになりました ([Firefox バグ 1317382](https://bugzil.la/1317382))。
 - {{jsxref("Date.UTC()")}} メソッドで引数が 2 個未満である場合の動作を、ECMAScript 2017 に準拠するように更新しました ([Firefox バグ 1050755](https://bugzil.la/1050755))。
 - {{jsxref("Function.prototype.toString()")}} メソッドを、最新の [仕様案](https://tc39.es/Function-prototype-toString-revision/) に準拠するよう更新しました ([Firefox バグ 1317400](https://bugzil.la/1317400))。
 

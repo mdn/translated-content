@@ -1404,14 +1404,6 @@
     "modified": "2019-03-23T22:05:21.249Z",
     "contributors": ["zhangchen"]
   },
-  "Glossary/Simple_header": {
-    "modified": "2019-03-18T21:33:57.550Z",
-    "contributors": ["huangll"]
-  },
-  "Glossary/Simple_response_header": {
-    "modified": "2019-03-23T22:15:23.941Z",
-    "contributors": ["xgqfrms-GitHub"]
-  },
   "Glossary/Sloppy_mode": {
     "modified": "2019-03-18T21:11:47.868Z",
     "contributors": ["serverLua", "CapDuan"]
@@ -15143,6 +15135,10 @@
     "modified": "2020-10-15T22:18:42.062Z",
     "contributors": ["zhangchen", "mozzix"]
   },
+  "Web/API/Window/caches": {
+    "modified": "2019-09-21T03:33:16.440Z",
+    "contributors": ["JarvanMo"]
+  },
   "Web/API/Window/cancelAnimationFrame": {
     "modified": "2019-03-23T23:39:18.899Z",
     "contributors": ["teoli", "insideyiqi", "ziyunfei"]
@@ -15185,6 +15181,10 @@
   "Web/API/Window/crossOriginIsolated": {
     "modified": "2020-10-15T22:26:03.129Z",
     "contributors": ["Fulgrim"]
+  },
+  "Web/API/Window/crypto": {
+    "modified": "2019-03-23T22:22:09.825Z",
+    "contributors": ["koaqiu", "Taoja"]
   },
   "Web/API/Window/customElements": {
     "modified": "2020-10-15T22:02:36.021Z",
@@ -16088,10 +16088,6 @@
       "cuixiping"
     ]
   },
-  "Web/API/caches": {
-    "modified": "2019-09-21T03:33:16.440Z",
-    "contributors": ["JarvanMo"]
-  },
   "Web/API/clearInterval": {
     "modified": "2020-10-15T21:21:33.193Z",
     "contributors": [
@@ -16247,10 +16243,6 @@
   "Web/API/createImageBitmap": {
     "modified": "2019-03-18T20:44:01.174Z",
     "contributors": ["fanerge", "varcat"]
-  },
-  "Web/API/crypto_property": {
-    "modified": "2019-03-23T22:22:09.825Z",
-    "contributors": ["koaqiu", "Taoja"]
   },
   "Web/API/fetch": {
     "modified": "2020-10-15T21:38:47.827Z",

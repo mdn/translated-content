@@ -40,7 +40,7 @@ l10n:
   - {{cssxref("page-break-inside")}} は {{cssxref("break-inside")}} の別名になりました。
 
 - {{cssxref("overflow-wrap")}} プロパティの値 `anywhere` を実装しました ([Firefox バグ 1505786](https://bugzil.la/1505786))。
-- 新しいステップ位置のキーワードである `jump-start`、`jump-end`、`jump-none`、`jump-both` ([`steps()` タイミング関数](</ja/docs/Web/CSS/easing-function#the_steps()_class_of_timing_functions>) 内で使用可能) を実装しました ([Firefox バグ 1496619](https://bugzil.la/1496619))。これは `frames()` タイミング関数の削除と同時に行いました。この関数は過去に同様の機能を実装していたものであり、非推奨になりました。
+- 新しいステップ位置のキーワードである `jump-start`、`jump-end`、`jump-none`、`jump-both` ([`steps()` イージング関数](</ja/docs/Web/CSS/easing-function#the_steps()_class_of_timing_functions>) 内で使用可能) を実装しました ([Firefox バグ 1496619](https://bugzil.la/1496619))。これは `frames()` イージング関数の削除と同時に行いました。この関数は過去に同様の機能を実装していたものであり、非推奨になりました。
 - ほかのブラウザーとの互換性のために、{{cssxref("appearance", "-webkit-appearance")}} で新しい値をいくつか追加しました。特に、以下の値です。
 
   - `meter`。これはユーザーエージェントのスタイルシートで、{{htmlelement("meter")}} 要素のデフォルトの値として使用されます。既存の値 `meterbar` は、`meter` の別名になりました ([Firefox バグ 1501483](https://bugzil.la/1501483))。
@@ -70,7 +70,7 @@ l10n:
 
 - 設定項目 `layout.css.shape-outside.enabled` を削除しました。`about:config` で {{cssxref("shape-outside")}}、{{cssxref("shape-margin")}}、{{cssxref("shape-image-threshold")}} を無効化できなくなりました ([Firefox バグ 1504387](https://bugzil.la/1504387))。
 - {{cssxref("user-select")}} プロパティの、Firefox 限定の値である `-moz-all`、`-moz-text`、`tri-state`、`element`、`elements`、`toggle` を削除しました。[Firefox バグ 1492958](https://bugzil.la/1492958) および [Firefox バグ 1506547](https://bugzil.la/1506547) をご覧ください。
-- 前述のとおり、`frames()` タイミング関数を削除しました ([Firefox バグ 1496619](https://bugzil.la/1496619))。
+- 前述のとおり、`frames()` イージング関数を削除しました ([Firefox バグ 1496619](https://bugzil.la/1496619))。
 
 ### SVG
 

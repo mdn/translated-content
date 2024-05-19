@@ -87,7 +87,7 @@ div {
 
 {{EmbedLiveSample('Applying_a_bottom_border')}}
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

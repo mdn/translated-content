@@ -3,9 +3,7 @@ title: Node.textContent
 slug: Web/API/Node/textContent
 ---
 
-{{ApiRef}}
-
-## Аннотация
+{{APIRef("DOM")}}
 
 Позволяет задавать или получать текстовое содержимое элемента и его потомков.
 
@@ -55,7 +53,7 @@ document.getElementById("block").textContent = "Это — просто текс
 
 {{Compat}}
 
-## Спецификация
+## Спецификации
 
 - [textContent](http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/core.html#Node3-textContent)
 

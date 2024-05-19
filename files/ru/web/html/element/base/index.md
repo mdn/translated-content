@@ -38,7 +38,7 @@ slug: Web/HTML/Element/base
 <base target="_blank" href="http://www.example.com/page.html" />
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

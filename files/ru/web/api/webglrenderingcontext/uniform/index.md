@@ -62,7 +62,7 @@ None.
 GL.uniform1f(GL.getUniformLocation(PROGRAM, "u_time"), timeStamp / 1000.0);
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

@@ -181,7 +181,7 @@ The following changes were made to the [`CanvasRenderingContext2D`](/ja/docs/Web
 - [`document.createElement`](/ja/docs/Web/API/Document/createElement) メソッドが Quirks モードでタグ名の前後の `<` と `>` を受け入れないようになりました。
 - [`element.setCapture()`](/ja/docs/Web/API/Element/setCapture) および[`document.releaseCapture()`](/ja/docs/Web/API/Document/releaseCapture) メソッドが追加され、これらを用いることで、`指定要素で mousedown` イベントが発生した後にマウスが通常の追跡領域を越えても、マウスイベントを追い続けることができます。
 - The [`window.mozPaintCount`](/ja/docs/Web/API/Window/mozPaintCount) プロパティが追加されました。これを用いることで、何回ドキュメントが描画されたかを判定できます。これはウェブアプリケーションのパフォーマンスをテストするときに役立ちます。
-- [`window.navigator.appVersion`](/ja/docs/Web/API/Window/navigator/appVersion) および [`window.navigator.userAgent`](/ja/docs/Web/API/Window/navigator/userAgent) から言語トークンが削除されました。代わりに [`window.navigator.language`](/ja/docs/Web/API/Window/navigator/language) もしくは [Accept-Language ヘッダ](/ja/docs/Content_negotiation) を利用してください。 [バグ 572656](https://bugzilla.mozilla.org/show_bug.cgi?id=572656)
+- [`window.navigator.appVersion`](/ja/docs/Web/API/Window/navigator/appVersion) および [`window.navigator.userAgent`](/ja/docs/Web/API/Window/navigator/userAgent) から言語トークンが削除されました。代わりに [`window.navigator.language`](/ja/docs/Web/API/Window/navigator/language) もしくは [Accept-Language ヘッダー](/ja/docs/Content_negotiation) を利用してください。 [バグ 572656](https://bugzilla.mozilla.org/show_bug.cgi?id=572656)
 - [XMLHttpRequest](/ja/docs/XMLHttpRequest) オブジェクトに追加された Gecko 固有の `mozResponseArrayBuffer`プロパティを用いると、レスポンスを文字列と同様 に JavaScript Typed Array として扱えます。
 - [Mouse イベント](/ja/docs/DOM/Event/UIEvent/MouseEvent) に `mozPressure` プロパティが追加されました。このプロパティは圧力感知をサポートする入力デバイスでの圧力を示します。
 - ~~window\.createBlobURL()~~ [`window.URL.createObjectURL()`](/ja/docs/Web/API/Window/URL/createObjectURL) および [`window.URL.revokeObjectURL()`](/ja/docs/Web/API/Window/URL/revokeObjectURL) メソッドを用いることで、ローカルファイルを参照する BLOB ("Binary Large OBject") URL を作成できます。
@@ -189,7 +189,7 @@ The following changes were made to the [`CanvasRenderingContext2D`](/ja/docs/Web
 - [`Node.mozMatchesSelector()`](/ja/docs/Web/API/Node/mozMatchesSelector) が指定セレクター文字列が妥当ではない場合に正しくない `false` を返すのではなく、`SYNTAX_ERR` 例外を投げるようになりました。
 - CSS 同様の省略構文を用いて 要素の SVG プロパティの値を設定できるようになりました。例: `element.style.fill = 'lime'`。詳細は [`element.style`](/ja/docs/Web/API/Element/style) を参照してください。
 - ドキュメントルートに [`privatebrowsingmode` 属性](/ja/docs/Supporting_private_browsing_mode#Detecting_whether_private_browsing_mode_is_permanent) が追加されました。これはプライベートブラウジングがセッションで一時的であるか永続的であるかの状態を含む、プライベートブラウジングモードの状態を示します。
-- [`window.getComputedStyle()`](/ja/docs/Web/API/Window/getComputedStyle) メソッドの 2 番目のパラメータが、他の主なブラウザーと同様に省略可能になりました。
+- [`window.getComputedStyle()`](/ja/docs/Web/API/Window/getComputedStyle) メソッドの 2 番目の引数が、他の主なブラウザーと同様に省略可能になりました。
 - DOM の [`StorageEvent`](/ja/docs/DOM/event/StorageEvent) オブジェクトが仕様の最新版に合致するようになりました。
 - [`window.setTimeout()`](/ja/docs/Web/API/Window/setTimeout) メソッドの最小遅延時間を設定するための `dom.min_timeout_value が追加されました。`
 - [`MozAfterPaint`](/ja/docs/Gecko-Specific_DOM_Events#MozAfterPaint) イベントは、潜在的なセキュリティ問題があるため、デフォルトでは送られなくなりました。設定を変更することで有効にできます。
@@ -200,8 +200,8 @@ The following changes were made to the [`CanvasRenderingContext2D`](/ja/docs/Web
   - : Content Security Policy (CSP) は Mozilla が提案するウェブデザイナーとサーバー管理者がウェブサイトの相互利用でどのようなコンテンツを指定するかの仕様です。目的はクロスサイトスクリプティングを含む攻撃とデータインジェクション攻撃を判定し、軽減することです。
 - [HTTP Strict Transport Security](/ja/docs/Security/HTTP_Strict_Transport_Security)
   - : HTTP Strict Transport Security はウェブサイトがブラウザーに HTTP を用いる代わりに HTTPS を用いてのみやり取りすべきであることを伝えるセキュリティ機能です。
-- [X-FRAME-OPTIONS レスポンスヘッダ](/ja/docs/The_X-FRAME-OPTIONS_response_header)
-  - : Internet Explorer 8 で導入された X-FRAME-OPTIONS HTTP レスポンスヘッダが Firefox でサポートされるようになりました。これを用いることでサイトがページをフレーム内で用いることができるかどうか、フレーム内で利用可能ならば、同じドメイン内に限定するかどうかを指示することができます。
+- [X-FRAME-OPTIONS レスポンスヘッダー](/ja/docs/The_X-FRAME-OPTIONS_response_header)
+  - : Internet Explorer 8 で導入された X-FRAME-OPTIONS HTTP レスポンスヘッダーが Firefox でサポートされるようになりました。これを用いることでサイトがページをフレーム内で用いることができるかどうか、フレーム内で利用可能ならば、同じドメイン内に限定するかどうかを指示することができます。
 - [User Agent 文字列](/ja/docs/User_Agent_Strings_Reference) の変更
   - : [HTTP リクエストで送ったデータとエントロピーの総量を減少させるべき](https://bugzilla.mozilla.org/show_bug.cgi?id=572650)にあるように、 ユーザーエージェント文字列から暗号の強度を表す文字列と言語を表す文字列が削除されました。
 
@@ -356,7 +356,7 @@ Firefox 4 向けに既存の拡張を更新する上で役立つ Tips は、[Upd
 
 - [`nsIDocShell`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDocShell) および [`nsIWebBrowser`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebBrowser) インターフェイスに新しく `isActive` 属性が追加されました。これは現在表示されていないドキュメントのためにコードパスを最適化することを許可するために用いることができます。
 - [`nsIMemory`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMemory) のメソッドである [`isLowMemory()`](/ja/docs/XPCOM_Interface_Reference/nsIMemory/isLowMemory) は非推奨になりました。低メモリ状況を監視するには ["memory-pressure" 通知](/ja/docs/XPCOM_Interface_Reference/nsIMemory#Low_memory_notifications) を用いることが推奨されます。
-- HTTP チャンネル上でリダイレクトを扱う API が非同期で動作できるように変更されました。[`nsIChannelEventSink.onChannelRedirect()`](</ja/docs/XPCOM_Interface_Reference/nsIChannelEventSink#onChannelRedirect()>) を用いてリダイレクトを扱う実装を行なっているコードは `nsIChannelEventSink.asyncOnChannelRedirect` を代わりに用いて更新する必要があります。これはリダイレクトが正常に完了したときに呼び出されるコールバックハンドラを受け入れます。
+- HTTP チャンネル上でリダイレクトを扱う API が非同期で動作できるように変更されました。[`nsIChannelEventSink.onChannelRedirect()`](</ja/docs/XPCOM_Interface_Reference/nsIChannelEventSink#onChannelRedirect()>) を用いてリダイレクトを扱う実装を行なっているコードは `nsIChannelEventSink.asyncOnChannelRedirect` を代わりに用いて更新する必要があります。これはリダイレクトが正常に完了したときに呼び出されるコールバックハンドラーを受け入れます。
 - [`nsINavHistoryResultObserver.batching()`](</ja/docs/XPCOM_Interface_Reference/nsINavHistoryResultObserver#batching()>) メソッドが追加されました。このメソッドは Places 操作をバッチにグループ化する方法を提供し、送られてくる更新通知の数を減少させ、その結果、オブザーバが（ビューをリフレッシュするような）相対的にタスクを追加するときのパフォーマンスを向上させます。
 - 長い間廃止状態であった [`nsIPref`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIPref) インターフェイスがついに削除されました。まだ [`nsIPrefService`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIPrefService) に移行していないなら、今がそのときです。
 - [`nsISessionStore`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISessionStore) および [`nsISessionStartup`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISessionStartup) インターフェイスがユーザーの要求に応じたセッションリストアのサポートへの変更を受けとるようになりました。[`nsISessionStore.restoreLastSession()`](</ja/docs/XPCOM_Interface_Reference/nsISessionStore#restoreLastSession()>) メソッドを参照してください。
