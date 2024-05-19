@@ -43,7 +43,7 @@ string[Symbol.iterator]()
 
 ### for...of 반복를 사용한 순회
 
-이 메서드를 직접 호출할 필요는 거의 없습니다. `@@iterator` 메서드가 존재하기 때문에 문자열 [iterable](/ko/docs/Web/JavaScript/Reference/Iteration_proocols#the_iterable_proocol)과 `for...of` 같은 반복 구문은 자동으로 이 메서드를 호출하여 반복할 반복자를 얻습니다.
+이 메서드를 직접 호출할 필요는 거의 없습니다. `@@iterator` 메서드가 존재하기 때문에 문자열 [iterable](/ko/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_proocol)과 `for...of` 같은 반복 구문은 자동으로 이 메서드를 호출하여 반복할 반복자를 얻습니다.
 
 ```js
 const str = "A\uD835\uDC68B\uD835\uDC69C\uD835\uDC6A";
@@ -59,9 +59,9 @@ for (const v of str) {
 // "\uD835\uDC6A"
 ```
 
-### 반복기 수동으로 돌리기
+### 반복자 수동으로 돌리기
 
-반환된 반복기 객체의 `next()` 메서드를 수동으로 호출하여 반복 프로세스를 최대한 제어할 수 있습니다.
+반환된 반복자 객체의 `next()` 메서드를 수동으로 호출하여 반복 프로세스를 최대한 제어할 수 있습니다.
 
 ```js
 const str = "A\uD835\uDC68";
@@ -82,7 +82,7 @@ console.log(strIter.next().value); // "\uD835\uDC68"
 
 ## 같이 보기
 
-- [Polyfill of `String.prototype[@@iterator]` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [`core-js`에서 `String.prototype[@@iterator]`의 폴리필](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - [Text formatting](/ko/docs/Web/JavaScript/Guide/Text_formatting) 가이드
 - {{jsxref("Symbol.iterator")}}
 - [순회 프로토콜](/ko/docs/Web/JavaScript/Reference/Iteration_protocols)
