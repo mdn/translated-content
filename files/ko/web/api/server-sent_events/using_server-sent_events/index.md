@@ -2,10 +2,10 @@
 title: Server-Sent Events 사용하기
 slug: Web/API/Server-sent_events/Using_server-sent_events
 l10n:
-  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
+  sourceCommit: c669fa7426d621482ca4c2d980c476cc5f8b62df
 ---
 
-{{DefaultAPISidebar("Server Sent Events")}} {{AvailableInWorkers}}
+{{DefaultAPISidebar("Server Sent Events")}}
 
 [server-sent events](/ko/docs/Web/API/Server-sent_events)를 사용하는 웹 애플리케이션을 개발하는 것은 간단합니다. 서버 측에서는 프론트엔드로 이벤트를 스트리밍하는 약간의 코드가 필요하지만, 클라이언트 측 코드는 들어오는 이벤트를 처리하는 부분에서 [웹소켓](/ko/docs/Web/API/WebSockets_API)과 거의 동일하게 작동합니다. 이는 단방향 연결이기 때문에 클라이언트에서 서버로 이벤트를 보낼 수는 없습니다.
 
@@ -70,8 +70,9 @@ evtSource.addEventListener("ping", function (event) {
 
 ```php
 date_default_timezone_set("America/New_York");
-header("Cache-Control: no-store");
+header("X-Accel-Buffering: no");
 header("Content-Type: text/event-stream");
+header("Cache-Control: no-cache");
 
 $counter = rand(1, 10);
 while (true) {
@@ -91,7 +92,9 @@ while (true) {
     $counter = rand(1, 10);
   }
 
-  ob_end_flush();
+ if (ob_get_contents()) {
+      ob_end_flush();
+  }
   flush();
 
   // 클라이언트가 연결을 중단한 경우(페이지를 닫은 경우) 루프를 중단합니다.
