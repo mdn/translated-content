@@ -250,7 +250,7 @@ body {
 }
 ```
 
-#### Result
+#### 結果
 
 {{ EmbedLiveSample("Using relative colors with rgb()", "100%", "200") }}
 
