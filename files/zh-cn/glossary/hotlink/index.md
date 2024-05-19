@@ -14,4 +14,4 @@ l10n:
 ## 参见
 
 - 维基百科上的[热链接]https://zh.wikipedia.org/wiki/直接連結)
-- {{glossary("hyperlink", "超链接")}}
+- {{glossary("hyperlink", "超链接")}}（术语表）
