@@ -5,7 +5,7 @@ slug: Web/API/Element/querySelectorAll
 
 {{APIRef("DOM")}}
 
-返回一个 non-live 的[`NodeList`](/zh-CN/docs/Web/API/NodeList), 它包含所有元素的非活动节点，该元素来自与其匹配指定的 CSS 选择器组的元素。(基础元素本身不包括，即使它匹配。)
+返回一个静态（非动态，non-live）的 {{domxref("NodeList")}}，它包含所有元素的非动态节点，该元素来自与其匹配指定的 CSS 选择器组的元素。（基础元素本身不包括，即使它匹配。）
 
 > **备注：** 该 API 的定义已被移动到 {{domxref("ParentNode")}} 接口。
 
