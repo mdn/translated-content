@@ -10,7 +10,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/set
 ## 语法
 
 ```plain
-Reflect.set(target, propertyKey, value[, receiver])
+Reflect.set(target, propertyKey, value, receiver)
 ```
 
 ### 参数
