@@ -11,5 +11,5 @@ l10n:
 
 ## 参见
 
-- [Git 官方网站](https://git-scm.com/)
+- [Git 官方网站及文档](https://git-scm.com/)
 - [GitHub](https://github.com/)，一个基于 Git 的图形化项目托管站
