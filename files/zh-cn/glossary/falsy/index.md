@@ -25,7 +25,7 @@ l10n:
 | `""`                        | String    | 空[字符串](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String)值，也包括 `''` 和 ` `` `。               |
 | {{domxref("document.all")}} | Object    | 唯一具有假值的 JavaScript 对象是内置的 {{domxref("document.all")}}。                                                  |
 
-`null` 和 `undefined` 也都是[空值](/en-US/docs/Glossary/Nullish)。
+`null` 和 `undefined` 也都是[空值](/zh-CN/docs/Glossary/Nullish)。
 
 ## 示例
 
