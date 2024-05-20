@@ -82,4 +82,4 @@ console.log(0 && "dog");
 - {{Glossary("Truthy", "真值")}}
 - {{Glossary("Type_coercion", "类型转换")}}
 - {{Glossary("Boolean", "布尔值")}}
-- [布尔值转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean#boolean_coercion)
+- [布尔值转换](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean#布尔值转换)
