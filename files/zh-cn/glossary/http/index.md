@@ -11,7 +11,7 @@ l10n:
 
 作为 {{glossary("URI")}} 的一部分，“http\://example.com/”中的“http”被称为“方案（scheme）”。使用“http”方案的资源通常使用 HTTP 协议通过未加密连接传输。“https”方案（如 "https://developer.mozilla.org"）表示资源是使用 HTTP 协议，但通过安全的 {{glossary("TLS")}} 通道传输。
 
-HTTP 是基于文本的 (所有的通信都以纯文本的形式进行) 以及无状态的 (当前通信状态不会发现以前的通信状态)，该特性极大方便了在 Web 上浏览网页的人。除此之外，HTTP 也可以用于构建服务器之间交互的 {{glossary("REST")}} Web 服务，以及使得网站内容更加动态化的 {{domxref("fetch()")}}} 请求。
+HTTP 是基于文本的 (所有的通信都以纯文本的形式进行) 以及无状态的 (当前通信状态不会发现以前的通信状态)，该特性极大方便了在 Web 上浏览网页的人。除此之外，HTTP 也可以作为服务器之间的 {{glossary("REST")}} Web 服务的基础，以及使得网站内容更加动态化的 {{domxref("fetch()")}} 请求。
 
 ## 补充知识
 
