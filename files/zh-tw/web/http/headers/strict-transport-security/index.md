@@ -47,13 +47,13 @@ Strict-Transport-Security: max-age=<expire-time>; includeSubDomains; preload
 
 HTTP Strict Transport Security 標頭告知瀏覽器不應使用 HTTP 加載站點，應自動將所有嘗試使用 HTTP 訪問站點的請求轉換為 HTTPS。
 
-> **備註：** 當你的站點僅通過 HTTP 訪問時，瀏覽器會忽略 `Strict-Transport-Security` 標頭。一旦你的站點通過 HTTPS 訪問且沒有憑證錯誤，瀏覽器會知道你的站點支持 HTTPS，並會尊重 `Strict-Transport-Security` 標頭。瀏覽器這樣做是因為攻擊者可能會攔截到站點的 HTTP 連接並注入或刪除標頭。
+> **備註：** 當你的站點僅通過 HTTP 訪問時，瀏覽器會*忽略* `Strict-Transport-Security` 標頭。一旦你的站點通過 HTTPS 訪問且沒有憑證錯誤，瀏覽器會知道你的站點支持 HTTPS，並會尊重 `Strict-Transport-Security` 標頭。瀏覽器這樣做是因為攻擊者可能會攔截到站點的 HTTP 連接並注入或刪除標頭。
 
 ### 範例場景
 
-你在機場登錄到免費 Wi-Fi 接入點並開始上網，訪問你的在線銀行服務以查看餘額和支付一些帳單。不幸的是，你使用的接入點實際上是黑客的筆記本電腦，他們攔截了你的原始 HTTP 請求並將你重定向到一個仿冒的銀行網站，而不是實際的網站。現在，你的私人數據暴露在黑客面前。
+你在機場登錄到免費 Wi-Fi 接入點並開始上網，訪問你的在線銀行服務以查看餘額和支付一些帳單。不幸的是，你使用的接入點實際上是駭客的筆記本電腦，他們攔截了你的原始 HTTP 請求並將你重定向到一個仿冒的銀行網站，而不是實際的網站。現在，你的私人數據暴露在駭客面前。
 
-嚴格傳輸安全性解決了這個問題；只要你曾經使用 HTTPS 訪問過你的銀行網站，並且銀行網站使用嚴格傳輸安全性，你的瀏覽器就會知道自動僅使用 HTTPS，這可以防止黑客執行此類中間人攻擊。
+嚴格傳輸安全性解決了這個問題；只要你曾經使用 HTTPS 訪問過你的銀行網站，並且銀行網站使用嚴格傳輸安全性，你的瀏覽器就會知道自動僅使用 HTTPS，這可以防止駭客執行此類中間人攻擊。
 
 ### 瀏覽器處理方式
 
@@ -67,8 +67,8 @@ HTTP Strict Transport Security 標頭告知瀏覽器不應使用 HTTP 加載站�
 
 Google 維護[一個 HSTS 預加載服務](https://hstspreload.org/)。通過遵循指南並成功提交你的域，你可以確保瀏覽器僅通過安全連接訪問你的域。儘管服務由 Google 託管，但所有瀏覽器都在使用這個預加載列表。然而，它不是 HSTS 規範的一部分，不應被視為官方的。
 
-- 有關 Chrome 中 HSTS 預加載列表的訊息： <https://www.chromium.org/hsts>
-- 查閱 Firefox 的 HSTS 預加載列表： [nsSTSPreloadList.inc](https://searchfox.org/mozilla-central/source/security/manager/ssl/nsSTSPreloadList.inc)
+- 有關 Chrome 中 HSTS 預加載列表的訊息：<https://www.chromium.org/hsts>
+- 查閱 Firefox 的 HSTS 預加載列表：[nsSTSPreloadList.inc](https://searchfox.org/mozilla-central/source/security/manager/ssl/nsSTSPreloadList.inc)
 
 ## 範例
 
@@ -97,8 +97,8 @@ Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
 
 ## 參見
 
-- 部落格文章：[HTTP Strict Transport Security has landed!](https://blog.sidstamm.com/2010/08/http-strict-transport-security-has.html)
-- 部落格文章：[HTTP Strict Transport Security (force HTTPS)](https://hacks.mozilla.org/2010/08/firefox-4-http-strict-transport-security-force-https/)
+- 部落格文章：[HTTP 嚴格傳輸安全機制已經上線！](https://blog.sidstamm.com/2010/08/http-strict-transport-security-has.html)
+- 部落格文章：[HTTP 嚴格傳輸安全機制（強制使用 HTTPS）](https://hacks.mozilla.org/2010/08/firefox-4-http-strict-transport-security-force-https/)
 - OWASP 文章：[HTTP Strict Transport Security](https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html)
 - 維基百科：[HTTP Strict Transport Security](https://zh.wikipedia.org/wiki/HTTP严格传输安全)
 - [HSTS 預加載服務](https://hstspreload.org/)
