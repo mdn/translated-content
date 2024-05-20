@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-密钥散列消息认证码（HMAC）是一个被用于{{Glossary("cryptography", "密码学")}}的认证消息协议。
+**密钥散列消息认证码**（HMAC）是一个被用于{{Glossary("cryptography", "密码学")}}的认证消息协议。
 
 该协议可以使用于任何的{{Glossary("Cryptographic hash function", "密码学函数")}}。它的强度依赖底层的函数（例如 SHA1 或 MD5）以及被选中的密钥。出于这样使用上的组合，HMAC 认证{{Glossary("Algorithm", "算法")}}通常是以组合名字出现，如 HMAC-SHA1。
 
