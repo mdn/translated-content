@@ -1,11 +1,13 @@
 ---
 title: Accept-CH
 slug: Web/HTTP/Headers/Accept-CH
+l10n:
+  sourceCommit: 3350169912a6150f2af78d6ecf5e22fd7cfc4335
 ---
 
 {{HTTPSidebar}}{{securecontext_header}}
 
-**`Accept-CH`** 標頭可以由伺服器設置，以指定客戶端應該在後續請求中包含哪些[用戶端提示](/zh-TW/docs/Web/HTTP/Client_hints)標頭。
+**`Accept-CH`** 標頭可以由伺服器設置，以指定用戶端應該在後續請求中包含哪些[用戶端提示](/zh-TW/docs/Web/HTTP/Client_hints)標頭。
 
 <table class="properties">
   <tbody>
@@ -26,7 +28,7 @@ slug: Web/HTTP/Headers/Accept-CH
   </tbody>
 </table>
 
-> **備註：** 客戶端提示僅在安全來源（通過 TLS）上可訪問。應該對所有安全請求持久化 `Accept-CH`（和 `Accept-CH-Lifetime`）標頭，以確保可靠地發送客戶端提示。
+> **備註：** 用戶端提示僅在安全來源（通過 TLS）上可訪問。應該對所有安全請求持久化 `Accept-CH`（和 `Accept-CH-Lifetime`）標頭，以確保可靠地發送用戶端提示。
 
 ## 語法
 
@@ -41,7 +43,7 @@ Accept-CH: Viewport-Width, Width
 Vary: Viewport-Width, Width
 ```
 
-> **備註：** 請根據接受的客戶端提示來[改變回應](/zh-TW/docs/Web/HTTP/Client_hints#改變用戶端提示)。
+> **備註：** 請根據接受的用戶端提示來[改變回應](/zh-TW/docs/Web/HTTP/Client_hints#改變用戶端提示)。
 
 ## 規範
 
