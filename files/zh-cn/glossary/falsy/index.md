@@ -22,7 +22,7 @@ l10n:
 | `0`                         | Number    | {{jsxref("Number")}} 零，也包括 `0.0`、`0x0` 等。                                                               |
 | `-0`                        | Number    | {{jsxref("Number")}} 负的零，也包括 `-0.0`、`-0x0` 等。                                                         |
 | `0n`                        | BigInt    | {{jsxref("BigInt")}} 零，也包括 `0x0n` 等。需要注意没有 {{jsxref("BigInt")}} 负的零 —— `0n` 的相反数还是 `0n`。 |
-| `""`                        | String    | 空[字符传](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String)值，也包括 `''` 和 ` `` `。               |
+| `""`                        | String    | 空[字符串](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String)值，也包括 `''` 和 ` `` `。               |
 | {{domxref("document.all")}} | Object    | 唯一一个 JavaScript 对象是内置的 {{domxref("document.all")}}。                                                  |
 
 ## 示例
