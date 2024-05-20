@@ -11,4 +11,4 @@ l10n:
 
 ## 参见
 
-- [文档环境](https://html.spec.whatwg.org/multipage/webappapis.html#document-environment) 的 HTML 规范
+- [文档环境](https://html.spec.whatwg.org/multipage/webappapis.html#document-environment)的 HTML 规范
