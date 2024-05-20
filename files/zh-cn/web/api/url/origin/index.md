@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("URL API")}} {{AvailableInWorkers}}
 
-{{domxref("URL")}} 接口的 **`origin`** 只读属性返回一个包含所表示 URL 的起源的 Unicode 序列化形式的字符串。
+{{domxref("URL")}} 接口的 **`origin`** 只读属性返回一个包含所表示 URL 的源的 Unicode 序列化形式的字符串。
 
 具体结构因 URL 类型而异：
 
