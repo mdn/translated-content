@@ -142,7 +142,7 @@ for (let i = 0; i < 2; i++) {
 console.log(i); // Uncaught ReferenceError: i is not defined.
 ```
 
-当我们点击按钮时，就会弹窗 0 和 1。
+当我们点击按钮时，这些按钮会分别弹窗提示 0 和 1。
 
 ## 参见
 
