@@ -2,7 +2,7 @@
 title: Navigator：getVRDisplays() 方法
 slug: Web/API/Navigator/getVRDisplays
 l10n:
-  sourceCommit: null
+  sourceCommit: 9a9dcd5848aaf1c4226f746539e6218c48647249
 ---
 
 {{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
