@@ -2,7 +2,7 @@
 title: "Document: свойство images"
 slug: Web/API/Document/images
 l10n:
-  sourceCommit: 0a881eea07f0cec6ca4ed85a24af43b367a9f80d
+  sourceCommit: 0af9a589170f1535622062de89bbf73507580b8f
 ---
 
 {{APIRef("DOM")}}
