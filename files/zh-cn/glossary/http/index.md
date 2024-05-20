@@ -13,7 +13,7 @@ l10n:
 
 HTTP 是基于文本的 (所有的通信都以纯文本的形式进行) 以及无状态的 (当前通信状态不会发现以前的通信状态)，该特性极大方便了在 Web 上浏览网页的人。除此之外，HTTP 也可以作为服务器之间的 {{glossary("REST")}} Web 服务的基础，以及使得网站内容更加动态化的 {{domxref("fetch()")}} 请求。
 
-## 补充知识
+## 参见
 
 - 在 MDN 上的 [HTTP](/zh-CN/docs/Web/HTTP)
 - 在维基百科上的 [HTTP](https://zh.wikipedia.org/wiki/超文本传输协议)
