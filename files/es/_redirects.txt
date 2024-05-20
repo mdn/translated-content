@@ -1731,7 +1731,7 @@
 /es/docs/Web/API/WindowEventHandlers/onhashchange	/es/docs/Web/API/Window/hashchange_event
 /es/docs/Web/API/WindowEventHandlers/onpopstate	/es/docs/Web/API/Window/popstate_event
 /es/docs/Web/API/WindowOrWorkerGlobalScope/atob	/es/docs/Web/API/atob
-/es/docs/Web/API/WindowOrWorkerGlobalScope/caches	/es/docs/Web/API/caches
+/es/docs/Web/API/WindowOrWorkerGlobalScope/caches	/es/docs/Web/API/Window/caches
 /es/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval	/es/docs/Web/API/clearInterval
 /es/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout	/es/docs/Web/API/clearTimeout
 /es/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap	/es/docs/Web/API/createImageBitmap
@@ -1748,6 +1748,7 @@
 /es/docs/Web/API/XMLHttpRequest/FormData	/es/docs/Web/API/FormData
 /es/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest	/es/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
 /es/docs/Web/API/XMLHttpRequest/onreadystatechange	/es/docs/Web/API/XMLHttpRequest/readystatechange_event
+/es/docs/Web/API/caches	/es/docs/Web/API/Window/caches
 /es/docs/Web/API/console/assert	/es/docs/Web/API/console/assert_static
 /es/docs/Web/API/console/count	/es/docs/Web/API/console/count_static
 /es/docs/Web/API/console/dir	/es/docs/Web/API/console/dir_static

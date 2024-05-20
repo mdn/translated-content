@@ -1,6 +1,7 @@
 ---
 title: caches
-slug: Web/API/caches
+slug: Web/API/Window/caches
+original_slug: Web/API/caches
 ---
 
 {{APIRef()}}{{SeeCompatTable}}
