@@ -5456,6 +5456,10 @@
     "modified": "2019-03-23T22:33:17.308Z",
     "contributors": ["Grijander81"]
   },
+  "Web/API/Window/caches": {
+    "modified": "2019-03-23T22:16:45.016Z",
+    "contributors": ["ivannieto"]
+  },
   "Web/API/Window/cancelAnimationFrame": {
     "modified": "2019-03-23T22:30:46.211Z",
     "contributors": ["khrizenriquez"]
@@ -5699,10 +5703,6 @@
   "Web/API/btoa": {
     "modified": "2020-08-29T03:33:22.030Z",
     "contributors": ["Nachec"]
-  },
-  "Web/API/caches": {
-    "modified": "2019-03-23T22:16:45.016Z",
-    "contributors": ["ivannieto"]
   },
   "Web/API/clearInterval": {
     "modified": "2019-03-23T22:56:16.485Z",
