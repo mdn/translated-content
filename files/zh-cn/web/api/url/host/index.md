@@ -7,7 +7,7 @@ l10n:
 
 {{ApiRef("URL API")}} {{AvailableInWorkers}}
 
-{{domxref("URL")}} 接口的 **`host`** 属性是一个包含主机信息的字符串，即{{domxref("URL.hostname", "主机名", "", 1)}}，然后，如果 URL 的{{glossary("port", "端口")}}非空，则会出现 `':'`，后面是 URL 的{{domxref("URL.port", "端口", "", 1)}}。
+{{domxref("URL")}} 接口的 **`host`** 属性是一个包含主机信息（即{{domxref("URL.hostname", "主机名", "", 1)}}）的字符串，然后，如果 URL 的{{glossary("port", "端口")}}非空，则会出现 `':'`，后根 URL 的{{domxref("URL.port", "端口", "", 1)}}。
 
 ## 值
 
