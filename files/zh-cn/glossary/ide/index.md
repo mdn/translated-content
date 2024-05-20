@@ -1,5 +1,5 @@
 ---
-title: 集成编程开发环境（IDE）
+title: 集成开发环境
 slug: Glossary/IDE
 ---
 
