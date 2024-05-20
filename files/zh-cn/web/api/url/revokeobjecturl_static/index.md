@@ -11,7 +11,7 @@ l10n:
 
 当你完成对对象 URL 的使用后，请调用此方法，让浏览器知道无需再保持对文件的引用。
 
-> **备注：** 由于 {{domxref("Blob")}} 接口的生命周期问题及潜在的内存泄漏风险，此方法在 [Service Workers](/zh-CN/docs/Web/API/Service_Worker_API) 中*不*可用。
+> **备注：** 由于 {{domxref("Blob")}} 接口的生命周期问题及潜在的内存泄漏风险，此方法在 [Service Worker](/zh-CN/docs/Web/API/Service_Worker_API) 中*不*可用。
 
 ## 语法
 
