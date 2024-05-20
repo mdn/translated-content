@@ -2,7 +2,7 @@
 title: Text：wholeText 属性
 slug: Web/API/Text/wholeText
 l10n:
-  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
+  sourceCommit: a67dbdb14b9f3dfd7364b382fbc879f644ba1a39
 ---
 
 {{ apiref("DOM") }}
@@ -37,10 +37,10 @@ paragraph.removeChild(paragraph.childNodes[1]); // 删除 strong 元素
 
 现在你的结果是 _“徒步旅行很不错！然而，投票是一件棘手的事情。"_，超链接前有两个节点：
 
-1. 包含 {{domxref("Text")}} 字符串的 `"徒步旅行很不错！"`
-2. 第二个 `Text` 节点包含字符串 `"然而，"`
+1. 包含字符串 `"徒步旅行很不错！"` 的 {{domxref("Text")}} 节点
+2. 第二个 `Text` 节点，包含字符串 `"然而，"`
 
-要同时获取这两个节点，你需要调用 `paragraph.childNodes[0].wholeText`：
+要同时获取这两个节点，你可以调用 `paragraph.childNodes[0].wholeText`：
 
 ```js
 console.log(`'${paragraph.childNodes[0].wholeText}'`); // '徒步旅行很不错！然而， '
