@@ -27,7 +27,7 @@ new File(fileBits, fileName, options)
   - : 包含文件可选属性的选项对象。可用选项如下：
 
     - `type` {{optional_inline}}
-      - : 表示将放入文件的内容的 MIME 类型的字符串。默认值为`""`。
+      - : 表示将放入文件的内容的 MIME 类型的字符串。默认值为 `""`。
     - `endings` {{optional_inline}}
       - : 如果数据是文本，如何解释内容中的换行符（`\n`）。默认值 `transparent` 将换行符复制到 blob 中而不更改它们。要将换行符转换为主机系统的本机约定，指定值为 `native`。
     - `lastModified` {{optional_inline}}

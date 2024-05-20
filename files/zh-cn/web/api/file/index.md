@@ -9,7 +9,7 @@ l10n:
 
 **`File`** 接口提供有关文件的信息，并允许网页中的 JavaScript 访问其内容。
 
-`File` 对象通常从用户使用 {{HTMLElement("input")}} 元素选择文件而返回的 {{DOMxRef("FileList")}} 对象中检索，或者从拖放操作的 {{DOMxRef("DataTransfer")}} 对象中返回。
+`File` 对象通常从用户使用 {{HTMLElement("input")}} 元素选择文件返回的 {{DOMxRef("FileList")}} 对象中检索，或者从拖放操作返回的 {{DOMxRef("DataTransfer")}} 对象中检索。
 
 `File` 对象是一种特定类型的 {{DOMxRef("Blob")}}，并且可以在 Blob 可以使用的任何上下文中使用。特别是，{{DOMxRef("FileReader")}}、{{DOMxRef("URL.createObjectURL_static", "URL.createObjectURL()")}}、{{DOMxRef("createImageBitmap()")}}、{{domxref("fetch()")}} 方法的 [`body`](/zh-CN/docs/Web/API/fetch#body) 选项和 {{DOMxRef("XMLHttpRequest", "", "send( )")}} 都可以接收 `Blob` 对象和 `File` 对象。
 
