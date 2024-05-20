@@ -97,8 +97,8 @@ Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
 
 ## 參見
 
-- 部落格文章：[HTTP 嚴格傳輸安全機制已經上線！](https://blog.sidstamm.com/2010/08/http-strict-transport-security-has.html)
-- 部落格文章：[HTTP 嚴格傳輸安全機制（強制使用 HTTPS）](https://hacks.mozilla.org/2010/08/firefox-4-http-strict-transport-security-force-https/)
+- 部落格文章：[HTTP Strict Transport Security 已經上線！](https://blog.sidstamm.com/2010/08/http-strict-transport-security-has.html)
+- 部落格文章：[HTTP Strict Transport Security（強制使用 HTTPS）](https://hacks.mozilla.org/2010/08/firefox-4-http-strict-transport-security-force-https/)
 - OWASP 文章：[HTTP Strict Transport Security](https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html)
 - 維基百科：[HTTP Strict Transport Security](https://zh.wikipedia.org/wiki/HTTP严格传输安全)
 - [HSTS 預加載服務](https://hstspreload.org/)
