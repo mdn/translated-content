@@ -103,7 +103,7 @@ const makeWithdraw = (balance) => {
 ```js
 for (var i = 0; i < 2; i++) {
   const button = document.createElement("button");
-  button.innerText = `Button ${i}`;
+  button.innerText = `按钮 ${i}`;
   button.onclick = function () {
     console.log(i);
   };
@@ -117,7 +117,7 @@ console.log(i); // 2
 ```js
 for (var i = 0; i < 2; i++) {
   const button = document.createElement("button");
-  button.innerText = `Button ${i}`;
+  button.innerText = `按钮 ${i}`;
   button.onclick = (function (copyOfI) {
     return () => {
       console.log(copyOfI);
@@ -133,7 +133,7 @@ console.log(i); // 2
 ```js
 for (let i = 0; i < 2; i++) {
   const button = document.createElement("button");
-  button.innerText = `Button ${i}`;
+  button.innerText = `按钮 ${i}`;
   button.onclick = function () {
     console.log(i);
   };
