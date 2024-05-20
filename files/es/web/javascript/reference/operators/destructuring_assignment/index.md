@@ -162,8 +162,8 @@ console.log(b); // [2, 3]
 
 Ten en cuenta que se lanzará un {{jsxref("SyntaxError")}} si se usa una coma final en el lado derecho con un elemento `rest` o:
 
-```js example-bad
-const [a, ...b] = [1, 2, 3];
+```js-nolint example-bad
+const [a, ...b,] = [1, 2, 3];
 
 // SyntaxError: el elemento rest no puede tener una coma al final
 // Siempre considera usar el operador rest como último elemento
