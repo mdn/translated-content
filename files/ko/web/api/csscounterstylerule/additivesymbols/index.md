@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSS Counter Styles")}}
 
-{{domxref("CSSCounterStyleRule")}} 인터페이스의 **`additiveSymbols`** 속성은 {{cssxref("@counter-style/additive-symbols","additive-symbols")}} 기술자의 값을 호출하거나 지정합니다. 만일 기술자에 지정된 값이 없다면, 이 속성은 빈 문자열을 반환합니다.
+{{domxref("CSSCounterStyleRule")}} 인터페이스의 **`additiveSymbols`** 속성은 {{cssxref("@counter-style/additive-symbols","additive-symbols")}} 설명자의 값을 호출하거나 지정합니다. 만일 설명자에 지정된 값이 없다면, 이 속성은 빈 문자열을 반환합니다.
 
 ## 값
 
@@ -15,7 +15,7 @@ l10n:
 
 ## 예제
 
-다음 예제는 {{cssxref("@counter-style")}} 의 규칙을 보여줍니다. JavaScript 에서, `myRules[0]` 은 이 `@counter-style` 규칙이며, `additiveSymbols` 를 반환하면 " V 5, IV 4, I 1" 값을 얻을 수 있게 됩니다.
+다음 예제는 {{cssxref("@counter-style")}} 의 규칙을 보여줍니다. JavaScript에서, `myRules[0]` 은 이 `@counter-style` 규칙이며, `additiveSymbols` 를 반환하면 " V 5, IV 4, I 1" 값을 얻을 수 있게 됩니다.
 
 ```css
 @counter-style additive-symbols-example {
