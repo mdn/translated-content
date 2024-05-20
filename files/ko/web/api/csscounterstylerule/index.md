@@ -18,25 +18,25 @@ _이 인터페이스는 부모 {{DOMxRef("CSSRule")}} 로부터 상속받은 속
 - {{DOMxRef("CSSCounterStyleRule.name")}}
   - : 연관성 있는 규칙의 `name` 으로 정의된 {{CSSxRef("&lt;custom-ident&gt;")}} 의 직렬화가 포함된 문자열 객체입니다.
 - {{DOMxRef("CSSCounterStyleRule.system")}}
-  - : 연관성 있는 규칙에 의해 정의된 {{CSSxRef("@counter-style/system", "system")}} 기술자의 직렬화가 포함된 문자열 객체입니다. 만일 기술자가 연관된 규칙에 특정되지 않았다면, 이 속성은 빈 문자열을 반환합니다.
+  - : 연관성 있는 규칙에 의해 정의된 {{CSSxRef("@counter-style/system", "system")}} 설명자의 직렬화가 포함된 문자열 객체입니다. 만일 설명자가 연관된 규칙에 특정되지 않았다면, 이 속성은 빈 문자열을 반환합니다.
 - {{DOMxRef("CSSCounterStyleRule.symbols")}}
-  - : 연관성 있는 규칙에 의해 정의된 {{CSSxRef("@counter-style/symbols", "symbols")}} 기술자의 직렬화가 포함된 문자열 객체입니다. 만일 기술자가 연관된 규칙에 특정되지 않았다면, 이 속성은 빈 문자열을 반환합니다.
+  - : 연관성 있는 규칙에 의해 정의된 {{CSSxRef("@counter-style/symbols", "symbols")}} 설명자의 직렬화가 포함된 문자열 객체입니다. 만일 설명자가 연관된 규칙에 특정되지 않았다면, 이 속성은 빈 문자열을 반환합니다.
 - {{DOMxRef("CSSCounterStyleRule.additiveSymbols")}}
-  - : 연관성 있는 규칙에 의해 정의된 {{CSSxRef("@counter-style/additive-symbols", "additive-symbols")}} 기술자의 직렬화가 포함된 문자열 객체입니다. 만일 기술자가 연관된 규칙에 특정되지 않았다면, 이 속성은 빈 문자열을 반환합니다.
+  - : 연관성 있는 규칙에 의해 정의된 {{CSSxRef("@counter-style/additive-symbols", "additive-symbols")}} 설명자의 직렬화가 포함된 문자열 객체입니다. 만일 설명자가 연관된 규칙에 특정되지 않았다면, 이 속성은 빈 문자열을 반환합니다.
 - {{DOMxRef("CSSCounterStyleRule.negative")}}
-  - : 연관성 있는 규칙에 의해 정의된 {{CSSxRef("@counter-style/negative", "negative")}} 기술자의 직렬화가 포함된 문자열 객체입니다. 만일 기술자가 연관된 규칙에 특정되지 않았다면, 이 속성은 빈 문자열을 반환합니다.
+  - : 연관성 있는 규칙에 의해 정의된 {{CSSxRef("@counter-style/negative", "negative")}} 설명자의 직렬화가 포함된 문자열 객체입니다. 만일 설명자가 연관된 규칙에 특정되지 않았다면, 이 속성은 빈 문자열을 반환합니다.
 - {{DOMxRef("CSSCounterStyleRule.prefix")}}
-  - : 연관성 있는 규칙에 의해 정의된 {{CSSxRef("@counter-style/prefix", "prefix")}} 기술자의 직렬화가 포함된 문자열 객체입니다. 만일 기술자가 연관된 규칙에 특정되지 않았다면, 이 속성은 빈 문자열을 반환합니다.
+  - : 연관성 있는 규칙에 의해 정의된 {{CSSxRef("@counter-style/prefix", "prefix")}} 설명자의 직렬화가 포함된 문자열 객체입니다. 만일 설명자가 연관된 규칙에 특정되지 않았다면, 이 속성은 빈 문자열을 반환합니다.
 - {{DOMxRef("CSSCounterStyleRule.suffix")}}
-  - : 연관성 있는 규칙에 의해 정의된 {{CSSxRef("@counter-style/suffix", "suffix")}} 기술자의 직렬화가 포함된 문자열 객체입니다. 만일 기술자가 연관된 규칙에 특정되지 않았다면, 이 속성은 빈 문자열을 반환합니다.
+  - : 연관성 있는 규칙에 의해 정의된 {{CSSxRef("@counter-style/suffix", "suffix")}} 설명자의 직렬화가 포함된 문자열 객체입니다. 만일 설명자가 연관된 규칙에 특정되지 않았다면, 이 속성은 빈 문자열을 반환합니다.
 - {{DOMxRef("CSSCounterStyleRule.range")}}
-  - : 연관성 있는 규칙에 의해 정의된 {{CSSxRef("@counter-style/suffix", "suffix")}} 기술자의 직렬화가 포함된 문자열 객체입니다. 만일 기술자가 연관된 규칙에 특정되지 않았다면, 이 속성은 빈 문자열을 반환합니다.
+  - : 연관성 있는 규칙에 의해 정의된 {{CSSxRef("@counter-style/suffix", "suffix")}} 설명자의 직렬화가 포함된 문자열 객체입니다. 만일 설명자가 연관된 규칙에 특정되지 않았다면, 이 속성은 빈 문자열을 반환합니다.
 - {{DOMxRef("CSSCounterStyleRule.pad")}}
-  - : 연관성 있는 규칙에 의해 정의된 {{CSSxRef("@counter-style/pad", "pad")}} 기술자의 직렬화가 포함된 문자열 객체입니다. 만일 기술자가 연관된 규칙에 특정되지 않았다면, 이 속성은 빈 문자열을 반환합니다.
+  - : 연관성 있는 규칙에 의해 정의된 {{CSSxRef("@counter-style/pad", "pad")}} 설명자의 직렬화가 포함된 문자열 객체입니다. 만일 설명자가 연관된 규칙에 특정되지 않았다면, 이 속성은 빈 문자열을 반환합니다.
 - {{DOMxRef("CSSCounterStyleRule.speakAs")}}
-  - : 연관성 있는 규칙에 의해 정의된 {{CSSxRef("@counter-style/speak-as", "speak-as")}} 기술자의 직렬화가 포함된 문자열 객체입니다. 만일 기술자가 연관된 규칙에 특정되지 않았다면, 이 속성은 빈 문자열을 반환합니다.
+  - : 연관성 있는 규칙에 의해 정의된 {{CSSxRef("@counter-style/speak-as", "speak-as")}} 설명자의 직렬화가 포함된 문자열 객체입니다. 만일 설명자가 연관된 규칙에 특정되지 않았다면, 이 속성은 빈 문자열을 반환합니다.
 - {{DOMxRef("CSSCounterStyleRule.fallback")}}
-  - : 연관성 있는 규칙에 의해 정의된 {{CSSxRef("@counter-style/fallback", "fallback")}} 기술자의 직렬화가 포함된 문자열 객체입니다. 만일 기술자가 연관된 규칙에 특정되지 않았다면, 이 속성은 빈 문자열을 반환합니다.
+  - : 연관성 있는 규칙에 의해 정의된 {{CSSxRef("@counter-style/fallback", "fallback")}} 설명자의 직렬화가 포함된 문자열 객체입니다. 만일 설명자가 연관된 규칙에 특정되지 않았다면, 이 속성은 빈 문자열을 반환합니다.
 
 ## 인스턴스 메서드
 
