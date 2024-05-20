@@ -2,7 +2,7 @@
 title: Content-Type
 slug: Web/HTTP/Headers/Content-Type
 l10n:
-    sourceCommit: 27ed2557b2d3f07807b2f662dc2cf13208406eb9
+  sourceCommit: 27ed2557b2d3f07807b2f662dc2cf13208406eb9
 ---
 
 {{HTTPSidebar}}
