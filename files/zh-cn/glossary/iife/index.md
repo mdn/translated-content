@@ -85,15 +85,14 @@ const makeWithdraw = (balance) => {
     };
   })(balance);
 
-  const firstAccount = makeWithdraw(100); // "我要用你的钱做坏事"
-  console.log(firstAccount.balance); // undefined
-  console.log(firstAccount.withdraw(20)); // 80
-  console.log(firstAccount.withdraw(30)); // 50
-  console.log(firstAccount.doBadThings); // undefined；这个方法是私有的
-  const secondAccount = makeWithdraw(20); // "我要用你的钱做坏事"
-  console.log(secondAccount.withdraw(30)); // "不够钱"
-  console.log(secondAccount.withdraw(20)); // 0
-}
+const firstAccount = makeWithdraw(100); // "我要用你的钱做坏事"
+console.log(firstAccount.balance); // undefined
+console.log(firstAccount.withdraw(20)); // 80
+console.log(firstAccount.withdraw(30)); // 50
+console.log(firstAccount.doBadThings); // undefined；这个方法是私有的
+const secondAccount = makeWithdraw(20); // "我要用你的钱做坏事"
+console.log(secondAccount.withdraw(30)); // "不够钱"
+console.log(secondAccount.withdraw(20)); // 0
 ```
 
 ### ES6 之前在 For 循环中使用 var
