@@ -13,7 +13,7 @@ l10n:
 
 下列表格提供了 JavaScript 的所有假值。
 
-| Value                       | Type      | Description                                                                                                     |
+| 值                          | 类型       | 描述                                                                                                     |
 | --------------------------- | --------- | --------------------------------------------------------------------------------------------------------------- |
 | {{Glossary("null")}}        | Null      | 关键词 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null) — 任何值的缺失                             |
 | {{Glossary("undefined")}}   | Undefined | [`undefined`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined) — 原始类型值                       |
@@ -24,6 +24,8 @@ l10n:
 | `0n`                        | BigInt    | {{jsxref("BigInt")}} 零，也包括 `0x0n` 等。需要注意没有 {{jsxref("BigInt")}} 负的零 —— `0n` 的相反数还是 `0n`。 |
 | `""`                        | String    | 空[字符串](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String)值，也包括 `''` 和 ` `` `。               |
 | {{domxref("document.all")}} | Object    | 唯一一个 JavaScript 对象是内置的 {{domxref("document.all")}}。                                                  |
+
+`null` 和 `undefined` 也都是[空值](/en-US/docs/Glossary/Nullish)。
 
 ## 示例
 
