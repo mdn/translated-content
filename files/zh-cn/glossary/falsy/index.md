@@ -17,7 +17,7 @@ l10n:
 | --------------------------- | --------- | --------------------------------------------------------------------------------------------------------------- |
 | {{Glossary("null")}}        | Null      | 关键词 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null) — 任何值的缺失                             |
 | {{Glossary("undefined")}}   | Undefined | [`undefined`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined) — 原始类型值                       |
-| `false`                     | Boolean   | 关键字 [`false`](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#关键字)。                          |
+| `false`                     | Boolean   | 关键字 [`false`](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#关键字)。                                 |
 | {{Glossary("NaN")}}         | Number    | [`NaN`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN) — 不是一个数字                                 |
 | `0`                         | Number    | {{jsxref("Number")}} 零，也包括 `0.0`、`0x0` 等。                                                               |
 | `-0`                        | Number    | {{jsxref("Number")}} 负的零，也包括 `-0.0`、`-0x0` 等。                                                         |
