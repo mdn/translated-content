@@ -7,13 +7,13 @@ l10n:
 
 {{APIRef("File API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
-{{domxref("URL")}} 接口的 **`createObjectURL()`** 静态方法创建包含一个表示作为形式参数给出的对象的 URL 的字符串。
+{{domxref("URL")}} 接口的 **`createObjectURL()`** 静态方法创建一个用于表示参数中给出的对象的 URL 的字符串。
 
 URL 的生命周期与其创建时所在窗口的 {{domxref("document")}} 绑定在一起。新对象 URL 代表指定的 {{domxref("File")}} 对象或 {{domxref("Blob")}} 对象。
 
 要释放对象 URL，请调用 {{domxref("URL.revokeObjectURL_static", "revokeObjectURL()")}}。
 
-> **备注：** 此特性在 [Service Workers](/zh-CN/docs/Web/API/Service_Worker_API) 中*不*可用，因为它有可能导致内存泄漏。
+> **备注：** 此特性在 [Service Worker](/zh-CN/docs/Web/API/Service_Worker_API) 中*不*可用，因为它有可能导致内存泄漏。
 
 ## 语法
 
@@ -44,7 +44,7 @@ URL.createObjectURL(object)
 
 ### 使用对象 URL 进行媒体流处理
 
-在较早版本的媒体源规范中，将流附加到 {{HTMLElement("video")}} 元素需要为 {{domxref("MediaStream")}} 创建一个对象 URL。这已不再必要，浏览器正在逐步取消对此的支持。
+在较早版本的媒体源规范中，需要为 {{domxref("MediaStream")}} 创建一个对象 URL 才能将流附加到 {{HTMLElement("video")}} 元素。这已不再必要，浏览器正在逐步取消对此的支持。
 
 > **警告：** 如果你还有依赖于 {{domxref("URL.createObjectURL_static", "createObjectURL()")}} 将流附加到媒体元素的代码，你需要更新代码并将 {{domxref("HTMLMediaElement.srcObject", "srcObject")}} 设置为 `MediaStream`。
 
