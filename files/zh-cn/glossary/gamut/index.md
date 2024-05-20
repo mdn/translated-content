@@ -19,4 +19,4 @@ l10n:
 
 ## 参见
 
-- 维基百科上的[色域](https://en.wikipedia.org/wiki/Gamut)
+- 维基百科上的[色域](https://zh.wikipedia.org/wiki/色域)
