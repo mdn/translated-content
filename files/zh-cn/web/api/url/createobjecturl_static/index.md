@@ -1,5 +1,5 @@
 ---
-title: URL：createObjectURL() 实例方法
+title: URL：createObjectURL() 静态方法
 slug: Web/API/URL/createObjectURL_static
 l10n:
   sourceCommit: 367b982b93c07f7f99e7bb768a6bf326fa5198e6
