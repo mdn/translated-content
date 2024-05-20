@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-{{domxref("Navigator")}} 接口的 **`getVRDisplays()`** 方法会返回一个兑现为 {{domxref("VRDisplay")}} 对象数组的 promise，该数组代表连接到计算机的任何可用 VR 显示器。
+{{domxref("Navigator")}} 接口的 **`getVRDisplays()`** 方法会返回兑现为 {{domxref("VRDisplay")}} 对象数组的 promise，该数组代表连接到计算机的任何可用 VR 显示器。
 
 ## 语法
 
