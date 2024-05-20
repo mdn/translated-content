@@ -13,7 +13,7 @@ l10n:
 
 下列表格提供了 JavaScript 的所有假值。
 
-| 值                          | 类型       | 描述                                                                                                     |
+| 值                          | 类型      | 描述                                                                                                            |
 | --------------------------- | --------- | --------------------------------------------------------------------------------------------------------------- |
 | {{Glossary("null")}}        | Null      | 关键词 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null) — 任何值的缺失                             |
 | {{Glossary("undefined")}}   | Undefined | [`undefined`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined) — 原始类型值                       |
