@@ -1650,7 +1650,6 @@ window.addEventListener("load", () => {
 
 {{EmbedLiveSample("ライブ例_2",120,130)}}
 
-
 ちょっと待ってください、本当に終わったのでしょうか?
 
 ## アクセシブルにする
