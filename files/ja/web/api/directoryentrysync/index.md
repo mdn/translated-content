@@ -2,7 +2,7 @@
 title: DirectoryEntrySync
 slug: Web/API/DirectoryEntrySync
 l10n:
-  sourceCommit: 5f80944f03f785c729c12ac143cf88a1c12e72cd
+  sourceCommit: 8d0cbeacdc1872f7e4d966177151585c58fb879e
 ---
 
 {{APIRef("File and Directory Entries API")}}{{Non-standard_Header}}{{Deprecated_Header}}
@@ -45,9 +45,8 @@ const dirEntry = fs.root.getDirectory("project_dir", { create: true });
 
 #### 構文
 
-```
-DirectoryReaderSync createReader (
-) raises (FileException);
+```js
+createReader();
 ```
 
 ##### 返値
@@ -66,7 +65,7 @@ DirectoryReaderSync createReader (
 | 例外            | 説明                                                                                            |
 | --------------- | ----------------------------------------------------------------------------------------------- |
 | `NOT_FOUND_ERR` | ディレクトリーが存在しません。                                                                  |
-| `SECURITY_ERR`  | ブラウザはメタデータを検索するのは安全ではないと判断しました。\[ TODO: 理由を説明してください ] |
+| `SECURITY_ERR`  | ブラウザーはメタデータを検索するのは安全ではないと判断しました。\[ TODO: 理由を説明してください ] |
 
 ### getFile()
 
@@ -74,7 +73,7 @@ DirectoryReaderSync createReader (
 
 #### 構文
 
-```
+```js-nolint
 getFile(path)
 getFile(path, options)
 ```
@@ -154,7 +153,7 @@ getFile(path, options)
 
 #### 構文
 
-```
+```js-nolint
 getDirectory(path)
 getDirectory(path, options)
 ```
@@ -238,7 +237,7 @@ getDirectory(path, options)
 
 #### 構文
 
-```
+```js-nolint
 removeRecursively()
 ```
 
