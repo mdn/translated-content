@@ -95,5 +95,5 @@ Content-Type: text/plain
 
 - {{HTTPHeader("Accept")}}
 - {{HTTPHeader("Content-Disposition")}}
-- {{HTTPStatus("206")}}
+- {{HTTPStatus("206")}} Partial Content
 - {{HTTPHeader("X-Content-Type-Options")}}
