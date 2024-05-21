@@ -21,7 +21,7 @@ server-sent event API는 {{domxref("EventSource")}} 인터페이스에 포함돼
 const evtSource = new EventSource("ssedemo.php");
 ```
 
-이벤트를 생성하는 스크립트가 다른 오리진에 호스팅되어 있다면, URL과 옵션 딕셔너리를 모두 사용하여 새로운`EventSource` 객체를 만들어야 합니다. `example.com` 에 클라이언트 스크립트가 있는 경우를 예시로 들어 보겠습니다.
+이벤트를 생성하는 스크립트가 다른 오리진에 호스팅되어 있다면, URL과 옵션 딕셔너리를 모두 사용하여 새로운 `EventSource` 객체를 만들어야 합니다. `example.com` 에 클라이언트 스크립트가 있는 경우를 예시로 들어 보겠습니다.
 
 ```js
 const evtSource = new EventSource("//api.example.com/ssedemo.php", {
