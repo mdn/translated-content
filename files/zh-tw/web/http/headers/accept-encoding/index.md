@@ -18,7 +18,7 @@ l10n:
 
 > **備註：**
 >
-> - IANA 註冊表維護了一份[官方內容編碼列表](https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#content-coding)。
+> - IANA 註冊表維護[官方內容編碼列表](https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#content-coding)。
 > - `bzip` 和 `bzip2` 編碼是非標準的，但在某些情況下可能會使用，包括對舊版的支援。
 
 <table class="properties">
