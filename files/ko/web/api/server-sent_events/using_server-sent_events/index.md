@@ -13,7 +13,7 @@ l10n:
 
 server-sent event API는 {{domxref("EventSource")}} 인터페이스에 포함돼 있습니다.
 
-## `EventSource` 객체 생성하기
+## `EventSource` 인스턴스 생성하기
 
 이벤트 수신을 시작하기 위해 서버와의 연결을 열기 위해서는 이벤트를 생성하는 스크립트의 URL을 사용하여 새 `EventSource` 객체를 만들면 됩니다. 다음은 예시 코드입니다.
 
