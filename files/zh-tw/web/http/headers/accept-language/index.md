@@ -7,7 +7,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-**`Accept-Language`**  HTTP 請求標頭表示用戶端偏好的自然語言和地區設置。伺服器使用[內容協商](/zh-TW/docs/Web/HTTP/Content_negotiation)來選擇其中一個提議，並在回應標頭 {{HTTPHeader("Content-Language")}} 中告知用戶端所選擇的語言。瀏覽器根據其活動的用戶界面語言設置此標頭的所需值。用戶很少更改它，且不建議進行這樣的更改，因為這可能會導致[指紋識別](/zh-TW/docs/Glossary/Fingerprinting)。
+**`Accept-Language`** HTTP 請求標頭表示用戶端偏好的自然語言和地區設置。伺服器使用[內容協商](/zh-TW/docs/Web/HTTP/Content_negotiation)來選擇其中一個提議，並在回應標頭 {{HTTPHeader("Content-Language")}} 中告知用戶端所選擇的語言。瀏覽器根據其活動的用戶界面語言設置此標頭的所需值。用戶很少更改它，且不建議進行這樣的更改，因為這可能會導致[指紋識別](/zh-TW/docs/Glossary/Fingerprinting)。
 
 當伺服器無法通過其他方式確定目標內容語言時（例如，使用依賴於明確用戶決策的特定 URL），此標頭作為提示。伺服器絕不應該覆蓋用戶明確選擇的語言。`Accept-Language` 的內容通常不受用戶控制（例如在旅行時）。用戶也可能希望以與用戶界面語言不同的語言訪問頁面。
 
