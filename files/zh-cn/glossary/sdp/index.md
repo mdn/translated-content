@@ -28,4 +28,4 @@ SDP 协议从不会被单独使用，而是依靠 {{Glossary("RTP")}} 和{{Gloss
 ## 参见
 
 - [WebRTC protocols](/zh-CN/docs/Web/API/WebRTC_API/Protocols)
-- [Session Description Protocol](https://zh.wikipedia.org/wiki/Session_Description_Protocol) on Wikipedia
+- 维基百科上的[会话描述协议](https://zh.wikipedia.org/wiki/会话描述协议)

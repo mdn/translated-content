@@ -11,4 +11,4 @@ UX(User eXperience) 是用户体验的首字母缩写。它是研究用户和系
 
 ## 参见
 
-- 维基百科[User experience](https://zh.wikipedia.org/wiki/User_experience)
+- 维基百科[用户体验](https://zh.wikipedia.org/wiki/使用者經驗)

@@ -9,7 +9,7 @@ slug: Glossary/Number
 
 ## 参见
 
-- 维基百科上的[数字类型](https://zh.wikipedia.org/wiki/Data_type#Numeric_types)
+- 维基百科上的[数字类型](https://zh.wikipedia.org/wiki/資料類型#數值範圍)
 - JavaScript 类型：[`Number`](/zh-CN/docs/Web/JavaScript/Data_structures#number_类型)
 - JavaScript 全局对象 {{jsxref("Number")}}
 - [MDN 术语表](/zh-CN/docs/Glossary)

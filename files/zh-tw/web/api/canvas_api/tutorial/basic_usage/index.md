@@ -114,31 +114,35 @@ if (canvas.getContext) {
 首先，讓我們先來畫兩個相交的正方形，其中一個正方形有 alpha 透明值，之後我們會說明這是如何達成的。
 
 ```html
-<html>
+<!doctype html>
+<html lang="en-US">
   <head>
+    <meta charset="UTF-8" />
+    <title>Canvas experiment</title>
+  </head>
+  <body>
+    <canvas id="canvas" width="150" height="150"></canvas>
     <script type="application/javascript">
       function draw() {
-        var canvas = document.getElementById("canvas");
+        const canvas = document.getElementById("canvas");
         if (canvas.getContext) {
-          var ctx = canvas.getContext("2d");
+          const ctx = canvas.getContext("2d");
 
-          ctx.fillStyle = "rgb(200,0,0)";
-          ctx.fillRect(10, 10, 55, 50);
+          ctx.fillStyle = "rgb(200 0 0)";
+          ctx.fillRect(10, 10, 50, 50);
 
-          ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
-          ctx.fillRect(30, 30, 55, 50);
+          ctx.fillStyle = "rgb(0 0 200 / 50%)";
+          ctx.fillRect(30, 30, 50, 50);
         }
       }
+      draw();
     </script>
-  </head>
-  <body onload="draw();">
-    <canvas id="canvas" width="150" height="150"></canvas>
   </body>
 </html>
 ```
 
 本範例的結果如下:
 
-{{EmbedLiveSample("一個簡單的範例", 160, 160, "canvas_ex1.png")}}
+{{EmbedLiveSample("一個簡單的範例", 160, 160)}}
 
 {{PreviousNext("Web/Guide/HTML/Canvas_tutorial", "Web/Guide/HTML/Canvas_tutorial/Drawing_shapes")}}

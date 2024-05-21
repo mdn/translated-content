@@ -1,11 +1,15 @@
 ---
 title: "<menu> : l'élément de menu"
 slug: Web/HTML/Element/menu
+l10n:
+  sourceCommit: 9b73bdea5458572f77a401596fef9a06ed8bba1b
 ---
 
 {{HTMLSidebar}}
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<menu>`** est une alternative sémantique à [`<ul>`](/fr/docs/Web/HTML/Element/ul), mais est traité par les navigateurs, et en termes d'accessibilité comme un élément [`<ul>`](/fr/docs/Web/HTML/Element/ul). Il représente une liste d'éléments non-ordonnée (chaque élément de la liste étant représenté par un élément [`<li>`](/fr/docs/Web/HTML/Element/li)).
+
+{{EmbedInteractiveExample("pages/tabbed/menu.html", "tabbed-shorter")}}
 
 ## Attributs
 
@@ -75,10 +79,10 @@ button {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories">Catégories de contenu</a>
+        <a href="/fr/docs/Web/HTML/Content_categories">Catégories de contenu</a>
       </th>
       <td>
-        <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_de_flux">Contenu de flux</a> et <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_tangible">contenu tangible</a> si au moins un enfant du menu est un élément <a href="/fr/docs/Web/HTML/Element/li"><code>&lt;li&gt;</code></a>.
+        <a href="/fr/docs/Web/HTML/Content_categories#contenu_de_flux">Contenu de flux</a> et <a href="/fr/docs/Web/HTML/Content_categories#contenu_tangible">contenu tangible</a> si au moins un enfant du menu est un élément <a href="/fr/docs/Web/HTML/Element/li"><code>&lt;li&gt;</code></a>.
       </td>
     </tr>
     <tr>
@@ -93,7 +97,7 @@ button {
     <tr>
       <th scope="row">Parents autorisés</th>
       <td>
-        Tout élément qui accepte du <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_de_flux">contenu de flux</a>.
+        Tout élément qui accepte du <a href="/fr/docs/Web/HTML/Content_categories#contenu_de_flux">contenu de flux</a>.
       </td>
     </tr>
     <tr>
@@ -105,7 +109,7 @@ button {
     <tr>
       <th scope="row">Rôles ARIA autorisés</th>
       <td>
-        <a href="https://w3c.github.io/aria/#directory"><code>directory</code></a>, <a href="https://w3c.github.io/aria/#group"><code>group</code></a>, <a href="/fr/docs/Web/Accessibility/ARIA/Roles/listbox_role"><code>listbox</code></a>, <a href="https://w3c.github.io/aria/#menu"><code>menu</code></a>, <a href="https://w3c.github.io/aria/#menubar"><code>menubar</code></a>, <a href="https://w3c.github.io/aria/#none"><code>none</code></a>, <a href="https://w3c.github.io/aria/#presentation"><code>presentation</code></a>, <a href="https://w3c.github.io/aria/#radiogroup"><code>radiogroup</code></a>, <a href="https://w3c.github.io/aria/#tablist"><code>tablist</code></a>, <a href="https://w3c.github.io/aria/#toolbar"><code>toolbar</code></a> ou <a href="https://w3c.github.io/aria/#tree"><code>tree</code></a>
+        <a href="/fr/docs/Web/Accessibility/ARIA/Roles/directory_role"><code>directory</code></a>, <a href="/fr/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>, <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/listbox_role">listbox</a></code>, <a href="/fr/docs/Web/Accessibility/ARIA/Roles/menu_role"><code>menu</code></a>, <a href="/fr/docs/Web/Accessibility/ARIA/Roles/menubar_role"><code>menubar</code></a>, <a href="/fr/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>, <a href="/fr/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>, <a href="/fr/docs/Web/Accessibility/ARIA/Roles/radiogroup_role"><code>radiogroup</code></a>, <a href="/fr/docs/Web/Accessibility/ARIA/Roles/tablist_role"><code>tablist</code></a>, <a href="/fr/docs/Web/Accessibility/ARIA/Roles/toolbar_role"><code>toolbar</code></a> ou <a href="/fr/docs/Web/Accessibility/ARIA/Roles/tree_role"><code>tree</code></a>
       </td>
     </tr>
     <tr>

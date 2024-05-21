@@ -1,48 +1,45 @@
 ---
-title: Navigator.oscpu
+title: Navigator：oscpu 属性
 slug: Web/API/Navigator/oscpu
+l10n:
+  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{ ApiRef("HTML DOM") }}
+{{ ApiRef("HTML DOM") }} {{Deprecated_Header}}
 
-### 概述
+**`Navigator.oscpu`** 属性返回一个字符串，用于标识当前操作系统。
 
-返回一个字符串，代表当前所使用的操作系统类型。
+## 值
 
-### 语法
+一个字符串，用于标识浏览器运行所在的操作系统。
 
-```
-oscpuInfo = window.navigator.oscpu
-```
+| 操作系统                      | `oscpuInfo` 字符串格式                         |
+| ----------------------------- | ---------------------------------------------- |
+| OS/2                          | `OS/2 Warp x (either 3, 4 or 4.5)`             |
+| Windows CE                    | `WindowsCE x.y`                                |
+| Windows 64-bit (64-bit build) | `Windows NT x.y; Win64; x64`                   |
+| Windows 64-bit (32-bit build) | `Windows NT x.y; WOW64`                        |
+| Windows 32-bit                | `Windows NT x.y`                               |
+| Mac OS X (PPC build)          | `PowerPC Mac OS X version x.y`                 |
+| Mac OS X (i386/x64 build)     | `Intel Mac OS X` 或 `macOS version x.y`        |
+| Linux 64-bit (32-bit build)   | `uname -s` 的输出结果，然后是 `i686 on x86_64` |
+| Linux                         | `uname -sm` 的输出结果                         |
 
-- `oscpuInfo` 会有下面几种类型。
+本表中，`x.y` 表示操作系统版本。
 
-| 操作系统                      | `oscpuInfo` 字符串值                        |
-| ----------------------------- | ------------------------------------------- |
-| OS/2                          | OS/2 Warp x (3, 4 或 4.5)                   |
-| Windows CE                    | WindowsCE x.y1                              |
-| Windows 64-bit (64-bit build) | Windows NT x.y; Win64; x64                  |
-| Windows 64-bit (32-bit build) | Windows NT x.y; WOW64                       |
-| Windows 32-bit                | Windows NT x.y                              |
-| Mac OS X (PPC build)          | PPC Mac OS X x.y                            |
-| Mac OS X (i386/x64 build)     | Intel Mac OS X x.y                          |
-| Linux 64-bit (32-bit build)   | 命令 `uname -s` 的输出加上 "i686 on x86_64" |
-| Linux                         | 命令 `uname -sm` 的输出                     |
-
-1x.y 表示操作系统的版本号
-
-### 例子
+## 示例
 
 ```js
 function osInfo() {
-  alert(window.navigator.oscpu);
+  alert(navigator.oscpu);
 }
-// 可能返回:"Windows NT 6.1",表示 windows 7
+
+osInfo(); // 示例可能会输出“Windows NT 10.0; Win64; x64”
 ```
 
-### 备注
+## 使用说明
 
-在普通网页中，如果 about:config 中存在`general.oscpu.override` 项，则该属性的值会返回 about:config 中 `general.oscpu.override` 项的值。在特权代码中 (Chrome 上下文或者拥有 "UniversalBrowserRead" 特权的网页中)，返回的还是真实的操作系统类型。(译者注：语句：netscape.security.PrivilegeManager.enablePrivilege("UniversalBrowserRead") 用来激活所在网页的 UniversalBrowserRead 特权。)
+除非你的代码具有特权（例如在 Chrome 中运行或至少具有 UniversalBrowserRead 权限），否则它可能会获取 `general.oscpu.override` 偏好设置的值，而不是真正的平台信息。
 
 ## 规范
 

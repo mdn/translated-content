@@ -97,7 +97,7 @@ DOM 操作の学習を始めるにあたり、まずは実践的な例から始�
    const link = document.querySelector("a");
    ```
 
-4. 要素への参照を変数に保存したので、これが備えているプロパティとメソッドを使って DOM の操作を始められます (利用できるプロパティとメソッドは、たとえば {{htmlelement("a")}} 要素であれば {{domxref("HTMLAnchorElement")}} インターフェース、さらにその汎化した親のインターフェース {{domxref("HTMLElement")}} や {{domxref("Node")}} — これは DOM の全てノードが相当します — で定義されています)。まずは、リンクの中のテキストを、{{domxref("Node.textContent")}} プロパティを更新する事で変更してみましょう。上で書いた行の下に、次の行を追加して下さい。
+4. 要素への参照を変数に保存したので、これが備えているプロパティとメソッドを使って DOM の操作を始められます (利用できるプロパティとメソッドは、たとえば {{htmlelement("a")}} 要素であれば {{domxref("HTMLAnchorElement")}} インターフェイス、さらにその汎化した親のインターフェイス {{domxref("HTMLElement")}} や {{domxref("Node")}} — これは DOM の全てノードが相当します — で定義されています)。まずは、リンクの中のテキストを、{{domxref("Node.textContent")}} プロパティを更新する事で変更してみましょう。上で書いた行の下に、次の行を追加して下さい。
 
    ```js
    link.textContent = "Mozilla Developer Network";

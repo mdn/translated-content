@@ -21,7 +21,7 @@ localStorage["colorSetting"] = "#a4509b";
 localStorage.setItem("colorSetting", "#a4509b");
 ```
 
-> **メモ:** ウェブストレージ API (`setItem`, `getItem`, `removeItem`, `key`, `length`) の使用が推奨されているのは、単純なオブジェクトをキーと値の格納崎として使うという[落とし穴](https://2ality.com/2012/01/objects-as-maps.html)を防ぐためです。
+> **メモ:** ウェブストレージ API (`setItem`, `getItem`, `removeItem`, `key`, `length`) の使用が推奨されているのは、単純なオブジェクトをキーと値の格納先として使うという[落とし穴](https://2ality.com/2012/01/objects-as-maps.html)を防ぐためです。
 
 Web Storage には、以下の 2 種類の仕組みがあります。
 

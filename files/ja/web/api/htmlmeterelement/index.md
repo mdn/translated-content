@@ -2,7 +2,7 @@
 title: HTMLMeterElement
 slug: Web/API/HTMLMeterElement
 l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+  sourceCommit: ec8d5627e822d866f350d9d8c06f0df58948015e
 ---
 
 {{APIRef("HTML DOM")}}

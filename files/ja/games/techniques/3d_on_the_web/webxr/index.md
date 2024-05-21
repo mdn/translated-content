@@ -1,7 +1,6 @@
 ---
 title: WebVR — ウェブによる仮想現実
 slug: Games/Techniques/3D_on_the_web/WebXR
-original_slug: Games/Techniques/3D_on_the_web/WebVR
 ---
 
 {{GamesSidebar}}
@@ -105,7 +104,7 @@ function setView() {
 
 ![](sechelt.jpg)
 
-Boris Smus は、[レスポンシブ WebVR](http://smus.com/responsive-vr/) の概念について書いています。 このコンセプトでは、 VR ハードウェアのないラップトップ、 Oculus Rift を搭載した PC、Google Cardboard に内蔵したスマートフォンなど、さまざまなデバイスで単一のウェブゲームをプレイしながら、それらすべてにユニークで価値のある体験を提供できます。 レスポンシブデザインに似ていますが、 VR の世界に適用されます — 一度書けば VR ヘッドセットで実行できます ... またはそれなしで。 [WebVR ボイラープレート](http://github.com/borismus/webvr-boilerplate)のソースを確認できます。 これは、WebVR の学習を開始する良い例であり、Web ベースの VR 体験の出発点です。
+Boris Smus は、[レスポンシブ WebVR](http://smus.com/responsive-vr/) の概念について書いています。 このコンセプトでは、 VR ハードウェアのないラップトップ、 Oculus Rift を搭載した PC、Google Cardboard に内蔵したスマートフォンなど、さまざまなデバイスで単一のウェブゲームをプレイしながら、それらすべてにユニークで価値のある体験を提供できます。 レスポンシブデザインに似ていますが、 VR の世界に適用されます — 一度書けば VR ヘッドセットで実行できます ... またはそれなしで。 [WebVR ボイラープレート](http://github.com/borismus/webvr-boilerplate)のソースを確認できます。 これは、WebVR の学習を開始する良い例であり、ウェブベースの VR 体験の出発点です。
 
 WebVR のシンプルなビルディングブロックを提供する [A-Frame](https://aframe.io/) と呼ばれるマークアップフレームワークもあるため、VRウェブサイトやゲームをすばやく構築して実験できます。 詳細については、[A-Frame を使った基本的なデモの作成](/ja/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame)というチュートリアルを参照してください。
 
@@ -113,7 +112,7 @@ WebVR のシンプルなビルディングブロックを提供する [A-Frame](
 
 ## WebVR の未来
 
-それは起こっています — 消費者向けデバイスは現在市場に出回っており、Web 上でそれらをサポートする JavaScript API がすでにあります。 今必要なのは、安定した仕様、優れた UX と UI、より優れたハードウェア、より多くのツールとライブラリーです。 そしてそのすべてが間近に迫っています。 WebVR に飛び込んで実験するのに最適な時期です。
+それは起こっています — 消費者向けデバイスは現在市場に出回っており、ウェブ上でそれらをサポートする JavaScript API がすでにあります。 今必要なのは、安定した仕様、優れた UX と UI、より優れたハードウェア、より多くのツールとライブラリーです。 そしてそのすべてが間近に迫っています。 WebVR に飛び込んで実験するのに最適な時期です。
 
 ## 関連項目
 

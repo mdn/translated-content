@@ -2,8 +2,10 @@
 title: MDN のあゆみ
 slug: MDN/At_ten/History_of_MDN
 l10n:
-  sourceCommit: 356b0655db61fafedd864b54d39e04529b52fff4
+  sourceCommit: 0c163056cfe83fba519b757f15d2e20f83eddaff
 ---
+
+{{MDNSidebar}}
 
 このトピックでは、MDN プロジェクトへの貢献者たちが、[developer.mozilla.org](/) の過去 10 年間と、来たる 10 年間を見ていきます。異なる Wiki ソフトウェア間の移行やドキュメンテーションコミュニティがどうやって育ってきたのか、またいくつかのこのサイトの歴史におけるハイライトについて取り上げます。また現在の課題や今年の MDN コミュニティの取り組みについても語ります。
 
@@ -14,7 +16,7 @@ l10n:
 </pre><pre class="brush: css hidden">body{margin-top:8px;}
 </pre></div>
 
-{{ EmbedLiveSample('audio', '100%', '70px', '', '', 'no-buttons') }}
+{{ EmbedLiveSample('audio', '100%', '70px') }}
 
 ![The Berlin Office](11073502_781006205281080_8135317797319228200_o-600x400.jpg)
 
@@ -32,7 +34,7 @@ MDN は有益なウェブテクノロジーの情報を提供し、オープン�
 
 MDN はまた、Gecko や Firefox をハックする人々、アドオン開発者、 Firefox OS 貢献者などの Mozilla に携わる技術者のための場所でもあります。
 
-### MDN の歴史<br>Wiki より前の時代 – Netscape DevEdge
+### MDN の歴史: Wiki より前の時代 – Netscape DevEdge
 
 タイム：_0:07:15 - 0:08:17_
 
@@ -64,7 +66,7 @@ MediaWiki を新しいプロジェクトのプラットフォームとして、M
 
 タイム：_0:26:08 - 0:31:50_、_0:43:52 - 0:51:35_
 
-[Kuma](https://github.com/mdn/kuma) は 2011 年諸島頃に [Kitsune](https://github.com/mozilla/kitsune) からフォークされ、2012 年 8 月 3 日に立ち上がりました。 Django をベースに Mozilla が構築した Wiki プラットフォームで Node.js を使った [KumaScript](/ja/docs/MDN/Tools/KumaScript) マクロシステムも付随してます。
+[Kuma](https://github.com/mdn/kuma) は 2011 年諸島頃に [Kitsune](https://github.com/mozilla/kitsune) からフォークされ、2012 年 8 月 3 日に立ち上がりました。 Django をベースに Mozilla が構築した Wiki プラットフォームで Node.js を使った [KumaScript](https://github.com/mdn/yari/tree/main/docs/kumascript) マクロシステムも付随してます。
 
 コードは GitHub 上にあったので、コミュニティは、 MDN の CMS にも貢献し始めました。今後、"MDN のハック" には文書を書くことと Kuma のコーディングの両方が含まれることになるでしょう。
 
@@ -90,7 +92,7 @@ MDN の再設計はビッグプロジェクトでした。 [Sean Martell](https:
 
 タイム：_0:36:55 - 0:43:52_
 
-ローカライゼーションは Mozilla コミュニティの大きなパートです。これはほぼすべてのプロジェクトや製品で当てはまります。Kuma を使っている MDN も翻訳しやすく、私達の [L10n コミュニティ](/ja/docs/MDN/Contribute/Localize)のニーズに適しています。W3C の仕様や他のウェブの機能を記述しているリソースには直接的な目標はありません。そして仕様書を複数の言語で提供するコミュニティを持っています。特に初心者にとって、MDN はウェブの技術を探求する最初のステップであり、すべての人々にとってそうなることが私達の目標です。MDN は広いユーザーを持ち、英語を母語としない人も対象です。これは世界中の人々から高く評価されています。
+ローカライゼーションは Mozilla コミュニティの大きなパートです。これはほぼすべてのプロジェクトや製品で当てはまります。Kuma を使っている MDN も翻訳しやすく、私達の [L10n コミュニティ](/ja/docs/MDN/Community/Contributing/Translated_content)のニーズに適しています。W3C の仕様や他のウェブの機能を記述しているリソースには直接的な目標はありません。そして仕様書を複数の言語で提供するコミュニティを持っています。特に初心者にとって、MDN はウェブの技術を探求する最初のステップであり、すべての人々にとってそうなることが私達の目標です。MDN は広いユーザーを持ち、英語を母語としない人も対象です。これは世界中の人々から高く評価されています。
 
 ## 学習領域
 
@@ -130,7 +132,7 @@ Sheppy 氏は Mozilla の為に 2006 年から執筆を始め、MDC と MDN に�
 
 ![Jérémie Patonnier](jeremiepat.jpg)
 
-Jérémie 氏は長年 Mozilla Developer Network の貢献者として活動を続け、2000 年からウェブのプロフェッショナルになりました。彼はウェブ標準の擁護者であり、Web 技術のドキュメントを書き続け、すべての人々に届くようにと願っています。Twitter では [@JeremiePat](https://twitter.com/JeremiePat)
+Jérémie 氏は長年 Mozilla Developer Network の貢献者として活動を続け、2000 年からウェブのプロフェッショナルになりました。彼はウェブ標準の擁護者であり、ウェブ技術のドキュメントを書き続け、すべての人々に届くようにと願っています。Twitter では [@JeremiePat](https://twitter.com/JeremiePat)
 
 ### Janet Swisher<br>MDN コミュニティマネージャー
 
@@ -166,7 +168,7 @@ Florian 氏は Mozilla が焦点を当てているオープンなウェブ技術
 
 ![David Walsh](darkwing.png)
 
-Mozilla シニアウェブ開発者、フロントエンドエンジニア、 MooTools コア開発者、Javascript マニア、CSS の何でも屋、PHP ハッカーで、ウェブとオープンソースを愛する人。David は Twitter では [@davidwalshblog](https://twitter.com/davidwalshblog)。
+Mozilla シニアウェブ開発者、フロントエンドエンジニア、 MooTools コア開発者、JavaScript マニア、CSS の何でも屋、PHP ハッカーで、ウェブとオープンソースを愛する人。David は Twitter では [@davidwalshblog](https://twitter.com/davidwalshblog)。
 
 ### Luke Crouch<br>MDN ウェブ開発者
 

@@ -10,7 +10,7 @@ slug: Web/HTML/Element/nav
 | [Content categories](/zh-TW/docs/HTML/Content_categories) | [流內容](/zh-TW/docs/HTML/Content_categories#Flow_content)、[sectioning content](/zh-TW/docs/HTML/Content_categories#Sectioning_content)、palpable content. |
 | --------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 允許內容                                                  | [流內容](/zh-TW/docs/HTML/Content_categories#Flow_content)。                                                                                                |
-| 省略標籤                                                  | {{no_tag_omission}}                                                                                                                                         |
+| 標籤省略                                                  | 不允許，開始和結束標籤都是必須的。                                                                                                                          |
 | Permitted parents                                         | Any element that accepts [flow content](/zh-TW/docs/HTML/Content_categories#Flow_content).                                                                  |
 | Permitted ARIA roles                                      | None                                                                                                                                                        |
 | DOM interface                                             | {{domxref("HTMLElement")}}                                                                                                                                  |

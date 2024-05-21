@@ -2,16 +2,14 @@
 title: Notification：click 事件
 slug: Web/API/Notification/click_event
 l10n:
-  sourceCommit: 10b9d1a207b2bf467150b0ec72e2e5f09429d2d9
+  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
 ---
 
-{{APIRef("Web Notifications")}}{{securecontext_header}}
+{{APIRef("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
 
 {{domxref("Notification")}} 接口的 **`click`** 事件在用户点击显示的 {{domxref("Notification")}} 时触发。
 
 默认的事件行为是将焦点移动到与通知相关[浏览上下文](https://html.spec.whatwg.org/multipage/browsers.html#browsing-context)的视口上。如果你不想要默认行为，请在事件对象上调用 {{domxref("Event/preventDefault", "preventDefault()")}} 方法。
-
-{{AvailableInWorkers}}
 
 ## 语法
 
@@ -29,7 +27,7 @@ onclick = (event) => {};
 
 ## 示例
 
-在下面这个例子中，我们使用 onclick 处理器来监听点击通知的事件，并在新窗口（通过包含一个参数 `'_blank'`）打开一个新标签页：
+在下面这个例子中，我们使用 onclick 处理器来监听点击通知的事件，并在新标签页（通过包含一个参数 `'_blank'`）打开一个新标签页：
 
 ```js
 notification.onclick = (event) => {

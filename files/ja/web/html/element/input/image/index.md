@@ -2,7 +2,7 @@
 title: <input type="image">
 slug: Web/HTML/Element/input/image
 l10n:
-  sourceCommit: fa8a44b8bff24a4032181c4fd155c459c0dc9161
+  sourceCommit: 997a0ec66e1514b7269076195b2419db334e876e
 ---
 
 {{HTMLSidebar}}

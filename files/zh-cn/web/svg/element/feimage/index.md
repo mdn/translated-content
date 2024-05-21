@@ -48,7 +48,7 @@ l10n:
 
 {{EmbedLiveSample("示例", 200, 200)}}
 
-## 规格
+## 规范
 
 {{Specifications}}
 
@@ -58,7 +58,7 @@ l10n:
 
 ## 参见
 
-- [SVG 滤镜原始属性](/zh-CN/docs/Web/SVG/Attribute#滤镜属性)
+- [SVG 滤镜原语属性](/zh-CN/docs/Web/SVG/Attribute#滤镜属性)
 - {{SVGAttr("flood-color")}} 属性
 - {{SVGAttr("flood-opacity")}} 属性
 - {{SVGElement("filter")}}

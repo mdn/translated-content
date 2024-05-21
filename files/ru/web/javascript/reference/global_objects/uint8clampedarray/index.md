@@ -134,7 +134,7 @@ var buffer = new ArrayBuffer(8);
 var z = new Uint8ClampedArray(buffer, 1, 4);
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
@@ -156,7 +156,7 @@ var dv = Uint8ClampedArray([1, 2, 3]);
 var dv = new Uint8ClampedArray([1, 2, 3]);
 ```
 
-## See also
+## Смотрите также
 
 - [JavaScript typed arrays](/ru/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}

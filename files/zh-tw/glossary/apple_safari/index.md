@@ -9,7 +9,7 @@ slug: Glossary/Apple_Safari
 
 ## 參見
 
-- 維基百科上的 [Safari](<https://zh.wikipedia.org/wiki/Safari_(web_browser)>)
+- 維基百科上的 [Safari](https://zh.wikipedia.org/wiki/Safari)
 - [apple.com 上的 Safari](https://www.apple.com/safari/)
 - [WebKit 專案](https://www.webkit.org/)
 - [WebKit 每晚構建](https://webkit.org/build-archives/)

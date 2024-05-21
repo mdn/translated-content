@@ -133,8 +133,8 @@ slug: Web/HTML/Element/label
    <td><a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content">Phrasing content</a>, but no descendant <code>label</code> elements. No labelable elements other than the labeled control are allowed.</td>
   </tr>
   <tr>
-   <th scope="row">Tag omission</th>
-   <td>{{no_tag_omission}}</td>
+   <th scope="row">标签省略</th>
+   <td>不允许，开始标签和结束标签都不能省略。</td>
   </tr>
   <tr>
    <th scope="row">Permitted parents</th>

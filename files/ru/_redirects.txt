@@ -85,6 +85,8 @@
 /ru/docs/Glossary/Empty_element	/ru/docs/Glossary/Void_element
 /ru/docs/Glossary/First_interactive	/ru/docs/Glossary/First_CPU_idle
 /ru/docs/Glossary/Round_Trip_Time_(RTT)	/ru/docs/Glossary/Round_Trip_Time
+/ru/docs/Glossary/Simple_header	/ru/docs/Glossary/CORS-safelisted_request_header
+/ru/docs/Glossary/Simple_response_header	/ru/docs/Glossary/CORS-safelisted_response_header
 /ru/docs/Glossary/XHR_(XMLHttpRequest)	/ru/docs/Glossary/XMLHttpRequest
 /ru/docs/Glossary/пустой_элемент	/ru/docs/Glossary/Void_element
 /ru/docs/HTML	/ru/docs/Web/HTML
@@ -209,7 +211,7 @@
 /ru/docs/Learn/Common_questions/What_software_do_I_need	/ru/docs/Learn/Common_questions/Tools_and_setup/What_software_do_I_need
 /ru/docs/Learn/Common_questions/set_up_a_local_testing_server	/ru/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server
 /ru/docs/Learn/Discover_browser_developer_tools	/ru/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools
-/ru/docs/Learn/Front-end_web_developer	/ru/docs/orphaned/Learn/Front-end_web_developer
+/ru/docs/Learn/Front-end_web_developer	https://developer.mozilla.org/en-US/curriculum/
 /ru/docs/Learn/Getting_started_with_the_web/Веб_и_веб_стандарты	/ru/docs/Learn/Getting_started_with_the_web/The_web_and_web_standards
 /ru/docs/Learn/Getting_started_with_the_web/Установка_базового_программного_обеспечения	/ru/docs/Learn/Getting_started_with_the_web/Installing_basic_software
 /ru/docs/Learn/HTML/Forms	/ru/docs/Learn/Forms
@@ -274,7 +276,7 @@
 /ru/docs/Learn/Доступность/CSS_and_JavaScript	/ru/docs/Learn/Accessibility/CSS_and_JavaScript
 /ru/docs/Learn/Доступность/HTML	/ru/docs/Learn/Accessibility/HTML
 /ru/docs/Learn/Доступность/What_is_accessibility	/ru/docs/Learn/Accessibility/What_is_accessibility
-/ru/docs/Learn/Фронтенд_разработчик	/ru/docs/orphaned/Learn/Front-end_web_developer
+/ru/docs/Learn/Фронтенд_разработчик	https://developer.mozilla.org/en-US/curriculum/
 /ru/docs/Learn/Что_такое_веб_сервер	/ru/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server
 /ru/docs/MDN/About	/ru/docs/MDN/Writing_guidelines
 /ru/docs/MDN/Contribute	/ru/docs/MDN/Community/Contributing
@@ -287,8 +289,6 @@
 /ru/docs/MDN/Contribute/Howto/Report_a_problem	/ru/docs/MDN/Community/Issues
 /ru/docs/MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary	/ru/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
 /ru/docs/MDN/Contribute/Open_source_etiquette	/ru/docs/MDN/Community/Open_source_etiquette
-/ru/docs/MDN/Contribute/Processes	/ru/docs/conflicting/MDN/Community/Contributing
-/ru/docs/MDN/Contribute/Процессы	/ru/docs/conflicting/MDN/Community/Contributing
 /ru/docs/MDN/Feedback	/ru/docs/MDN/Community
 /ru/docs/MDN/Getting_started	/ru/docs/MDN/Community/Contributing/Getting_started
 /ru/docs/MDN/Structures	/ru/docs/MDN/Writing_guidelines/Page_structures
@@ -385,7 +385,7 @@
 /ru/docs/Web/API/Document/defaultView/storage_event	/ru/docs/Web/API/Window/storage_event
 /ru/docs/Web/API/Document/domConfig	/ru/docs/Web/API/Document
 /ru/docs/Web/API/Document/keypress_event	/ru/docs/Web/API/Element/keypress_event
-/ru/docs/Web/API/Document/origin	/ru/docs/Web/API/origin
+/ru/docs/Web/API/Document/origin	/ru/docs/Web/API/Window/origin
 /ru/docs/Web/API/Document/registerElement	/ru/docs/Web/API/CustomElementRegistry/define
 /ru/docs/Web/API/DocumentOrShadowRoot/activeElement	/ru/docs/Web/API/Document/activeElement
 /ru/docs/Web/API/DocumentOrShadowRoot/getSelection	/ru/docs/Web/API/Document/getSelection
@@ -474,9 +474,7 @@
 /ru/docs/Web/API/WebRTC_API/Taking_still_photos	/ru/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos
 /ru/docs/Web/API/WebRTC_API/протоколы	/ru/docs/Web/API/WebRTC_API/Protocols
 /ru/docs/Web/API/WebRTC_API/связь	/ru/docs/Web/API/WebRTC_API/Connectivity
-/ru/docs/Web/API/Window/crypto	/ru/docs/Web/API/crypto_property
 /ru/docs/Web/API/Window/mozAnimationStartTime	/ru/docs/Web/API/Animation/startTime
-/ru/docs/Web/API/Window/performance	/ru/docs/Web/API/performance_property
 /ru/docs/Web/API/WindowBase64/Base64_encoding_and_decoding	/ru/docs/Glossary/Base64
 /ru/docs/Web/API/WindowBase64/btoa	/ru/docs/Web/API/btoa
 /ru/docs/Web/API/WindowEventHandlers/onafterprint	/ru/docs/Web/API/Window/afterprint_event
@@ -489,6 +487,7 @@
 /ru/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests	/ru/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests
 /ru/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest	/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
 /ru/docs/Web/API/XMLHttpRequest/onreadystatechange	/ru/docs/Web/API/XMLHttpRequest/readystatechange_event
+/ru/docs/Web/API/caches	/ru/docs/Web/API/Window/caches
 /ru/docs/Web/API/console.timeEnd	/ru/docs/Web/API/console/timeend_static
 /ru/docs/Web/API/console/assert	/ru/docs/Web/API/console/assert_static
 /ru/docs/Web/API/console/clear	/ru/docs/Web/API/console/clear_static
@@ -509,11 +508,14 @@
 /ru/docs/Web/API/console/timeStamp	/ru/docs/Web/API/console/timestamp_static
 /ru/docs/Web/API/console/trace	/ru/docs/Web/API/console/trace_static
 /ru/docs/Web/API/console/warn	/ru/docs/Web/API/console/warn_static
+/ru/docs/Web/API/crypto_property	/ru/docs/Web/API/Window/crypto
 /ru/docs/Web/API/document.activeElement	/ru/docs/Web/API/Document/activeElement
 /ru/docs/Web/API/document.createComment	/ru/docs/Web/API/Document/createComment
 /ru/docs/Web/API/document.designMode	/ru/docs/Web/API/Document/designMode
 /ru/docs/Web/API/document.execCommand	/ru/docs/Web/API/Document/execCommand
 /ru/docs/Web/API/document.querySelector	/ru/docs/Web/API/Document/querySelector
+/ru/docs/Web/API/origin	/ru/docs/Web/API/Window/origin
+/ru/docs/Web/API/performance_property	/ru/docs/Web/API/Window/performance
 /ru/docs/Web/API/range.getBoundingClientRect	/ru/docs/Web/API/Range/getBoundingClientRect
 /ru/docs/Web/API/Видимость_страницы_API	/ru/docs/Web/API/Page_Visibility_API
 /ru/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video	/ru/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
@@ -874,6 +876,7 @@
 /ru/docs/XPath/Funkcje/floor	/ru/docs/Web/XPath/Functions/floor
 /ru/docs/XSLT	/ru/docs/Web/XSLT
 /ru/docs/en	/en-US/
+/ru/docs/orphaned/Learn/Front-end_web_developer	https://developer.mozilla.org/ru/curriculum/
 /ru/docs/Заглавная_страница	/ru/docs/Web
 /ru/docs/Повторное_введение_в_JavaScript	/ru/docs/Web/JavaScript/Language_overview
 /ru/docs/Руководство_по_JavaScript_1.5	/ru/docs/Web/JavaScript/Guide
@@ -1071,7 +1074,6 @@
 /ru/docs/Словарь/Порт	/ru/docs/Glossary/Port
 /ru/docs/Словарь/Пробельные_символы	/ru/docs/Glossary/Whitespace
 /ru/docs/Словарь/Прокси_сервер	/ru/docs/Glossary/Proxy_server
-/ru/docs/Словарь/Простой_заголовок	/ru/docs/Glossary/Simple_header
 /ru/docs/Словарь/Протокол	/ru/docs/Glossary/Protocol
 /ru/docs/Словарь/Прототип	/ru/docs/Glossary/Prototype
 /ru/docs/Словарь/Сертифицировано	/ru/docs/Glossary/Certified

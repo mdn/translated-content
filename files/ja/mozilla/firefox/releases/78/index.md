@@ -70,7 +70,7 @@ Mozilla hacks の記事「[New in Firefox 78: DevTools improvements, new regex e
 ### WebAssembly
 
 - [Wasm Multi-value](https://hacks.mozilla.org/2019/11/multi-value-all-the-wasm/) をサポートしました。WebAssembly の関数が複数の値を返したり、命令シーケンスが複数のスタックの値を使用および生成したりすることが可能になりました ([Firefox バグ 1628321](https://bugzil.la/1628321))。
-- WebAssembly で、[`BigInt`](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt) を使用して JavaScript から 64-bit 整数の関数パラメーター (i64) をインポートおよびエクスポートできるようになりました ([Firefox バグ 1608770](https://bugzil.la/1608770))。
+- WebAssembly で、[`BigInt`](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt) を使用して JavaScript から 64-bit 整数の関数引数 (i64) をインポートおよびエクスポートできるようになりました ([Firefox バグ 1608770](https://bugzil.la/1608770))。
 
 ### TLS 1.0 および 1.1 の廃止
 

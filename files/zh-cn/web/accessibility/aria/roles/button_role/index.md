@@ -3,6 +3,8 @@ title: ARIA：button 角色
 slug: Web/Accessibility/ARIA/Roles/button_role
 ---
 
+{{AccessibilitySidebar}}
+
 `button` 角色用于可单击的元素，在用户激活时触发响应。添加 `role="button"` 会告诉屏幕阅读器这个元素是个按钮，但是不提供按钮的功能。你应该使用的 {{HTMLElement("button")}} 或者 `type="button"` 的 {{HTMLElement("input")}}。
 
 ## 描述
@@ -288,11 +290,3 @@ function toggleButton(element) {
 - [HTML5 中强大的原生语义](https://html.spec.whatwg.org/multipage/dom.html#aria-usage-note)
 - [在 HTML 中使用 ARIA 的注意事项](https://www.w3.org/TR/aria-in-html/)
 - [官方 WAI-ARIA 示例代码](https://www.w3.org/TR/wai-aria-practices/examples/button/button.html)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA 角色**](/zh-CN/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/zh-CN/docs/Web/Accessibility/ARIA/Roles")}}
-
-</section>

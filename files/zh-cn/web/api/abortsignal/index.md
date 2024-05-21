@@ -28,7 +28,7 @@ _**`AbortSignal`** 接口继续它父接口 {{domxref("EventTarget")}} 的方法
 - {{domxref("AbortSignal.abort()")}}
   - : 返回一个已经被设置为中止的 **`AbortSignal`** 实例。
 - {{domxref("AbortSignal.timeout()")}}
-  - : 返回一个在指定事件后将自动终止的 **`AbortSignal`** 实例。
+  - : 返回一个在指定时间后自动终止的 **`AbortSignal`** 实例。
 
 ### 事件
 

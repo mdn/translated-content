@@ -9,4 +9,4 @@ slug: Glossary/BiDi
 
 ## 参见
 
-- 维基百科的[Bi-directional text](https://zh.wikipedia.org/wiki/Bi-directional_text)
+- 维基百科上的[双向文本](https://zh.wikipedia.org/wiki/雙向文稿)

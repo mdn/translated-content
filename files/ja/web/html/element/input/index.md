@@ -2,7 +2,7 @@
 title: "<input>: 入力欄（フォーム入力）要素"
 slug: Web/HTML/Element/input
 l10n:
-  sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
+  sourceCommit: c88c96a09084aadc20ac2cabae2e19609b4a30d8
 ---
 
 {{HTMLSidebar}}
@@ -302,10 +302,11 @@ l10n:
 | --------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
 | [`accept`](#accept)                           | `file`                                                              | ファイルアップロードコントロールで期待されるファイル形式のヒント               |
 | [`alt`](#alt)                                 | `image`                                                             | image 型の alt 属性です。アクセシビリティのために必要です。                    |
+| [`autocapitalize`](#autocapitalize)           | `url`, `email`, `password` を除くすべて                             | 入力されたテキストの自動大文字化を制御します。                                 |
 | [`autocomplete`](#autocomplete)               | `checkbox`、`radio`、ボタンを除くすべて                             | フォームの自動補完機能のためのヒント                                           |
 | [`capture`](#capture)                         | `file`                                                              | ファイルアップロードコントロールのメディアキャプチャ入力方法                   |
 | [`checked`](#checked)                         | `checkbox`, `radio`                                                 | コマンドやコントロールがチェックされているか                                   |
-| [`dirname`](#dirname)                         | `search`, `text`                                                    | フォーム送信時に要素の書字方向を送信するために使用するフォームフィールドの名前 |
+| [`dirname`](#dirname)                         | `hidden`, `text`, `search`, `url`, `tel`, `email`                   | フォーム送信時に要素の書字方向を送信するために使用するフォームフィールドの名前 |
 | [`disabled`](#disabled)                       | すべて                                                              | コントロールが無効であるかどうか                                               |
 | [`form`](#form)                               | すべて                                                              | コントロールを form 要素に関連付ける                                           |
 | [`formaction`](#formaction)                   | `image`, `submit`                                                   | フォームの送信に使用する URL                                                   |
@@ -346,6 +347,10 @@ l10n:
 
   - : `image` ボタンに対してのみ有効です。`alt` 属性は画像の代替テキストを提供します。[`src`](#src) の画像が存在しないか、または読み込みに失敗した場合にこの属性の値を表示します。{{HTMLElement("input/image", "image")}} 入力型を参照してください。
 
+- `autocapitalize`
+
+  - : 入力されたテキストを自動的に大文字にするかどうか、大文字にする場合はその方法を制御します。詳しい情報はグローバル属性 [`autocapitalize`](/ja/docs/Web/HTML/Global_attributes/autocapitalize) のページを参照してください。
+
 - [`autocomplete`](/ja/docs/Web/HTML/Attributes/autocomplete)
 
   - : （論理属性では**ありません**!） [`autocomplete`](/ja/docs/Web/HTML/Attributes/autocomplete) 属性は空白区切りの文字列の値を取り、指定された場合は、入力欄が提供する自動補完機能の種類を示します。自動補完のよくある実装は、以前同じ入力欄に入力された値を単に再呼び出しするものですが、もっと複雑な自動補完もあり得ます。例えば、ブラウザーが端末の連絡先リストと連携して、`email` 入力欄でメールアドレスを自動補完したりする可能性もあります。許可されている値は [`autocomplete`](/ja/docs/Web/HTML/Attributes/autocomplete#values) を参照してください。
@@ -380,20 +385,21 @@ l10n:
 
 - `dirname`
 
-  - : `text` および `search` 入力型のみに有効で、`dirname` 属性によって要素の書字方向を送信することができます。これが含まれていると、フォームコントロールは 2 組の名前と値を送信します。1 組目は [`name`](#name) と [`value`](#value) であり、2 組目は名前が `dirname` の値で、値に `ltr` または `rtl` がブラウザーによって設定されます。
+  - : `hidden`, `text`, `search`, `url`, `tel`, `email` 入力型について有効で、`dirname` 属性によって要素の書字方向を送信することができます。これが含まれていると、フォームコントロールは 2 組の名前と値を送信します。1 組目は [`name`](#name) と [`value`](#value) であり、2 組目は名前が `dirname` 属性の値で、値に `ltr` または `rtl` がブラウザーによって設定されます。
 
     ```html
     <form action="page.html" method="post">
-      <label
-        >Fruit:
-        <input type="text" name="fruit" dirname="fruit.dir" value="cherry" />
+      <label>
+        Fruit:
+        <input type="text" name="fruit" dirname="fruit-dir" value="cherry" />
       </label>
       <input type="submit" />
     </form>
-    <!-- page.html?fruit=cherry&fruit.dir=ltr -->
+    <!-- page.html?fruit=cherry&fruit-dir=ltr -->
     ```
 
-    上記のフォームが送信されると、入力欄は `name` / `value` の組である `fruit=cherry` と、`dirname` / 書字方向の組である `fruit.dir=ltr` が送信されます。
+    上記のフォームが送信されると、入力欄は `name` / `value` の組である `fruit=cherry` と、`dirname` / 書字方向の組である `fruit-dir=ltr` が送信されます。
+    詳しくは、 [`dirname` attribute](/ja/docs/Web/HTML/Attributes/dirname) を参照してください。
 
 - `disabled`
 
@@ -447,7 +453,7 @@ l10n:
 
 - `maxlength`
 
-  - : `text`, `search`, `url`, `tel`, `email`, `password` で有効であり、ユーザーがフィールドに入力することができる文字数（UTF-16 コード単位）を定義します。これは `0` 以上の整数値でなければなりません。`maxlength` が指定されなかった場合、または無効な値が指定された場合は、その入力欄には最大長が設定されません。この値は `minlength` の値以上である必要もあります。
+  - : `text`, `search`, `url`, `tel`, `email`, `password` で有効であり、ユーザーがフィールドに入力することができる最大文字列長（UTF-16 コード単位で計測）を定義します。これは `0` 以上の整数値でなければなりません。 `maxlength` が指定されなかった場合、または無効な値が指定された場合は、その入力欄には最大長が設定されません。この値は `minlength` の値以上である必要もあります。
 
     欄に入力されたテキストの文字数が UTF-16 コード単位で `maxlength` よりも多いと、この入力欄は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に不合格になります。既定では、ブラウザーはユーザーが `maxlength` 属性で許可された文字数以上を入力するのを防ぎます。詳しくは[クライアント側検証](#クライアント側検証)を参照してください。
 
@@ -461,7 +467,7 @@ l10n:
 
 - `minlength`
 
-  - : `text`, `search`, `url`, `tel`, `email`, `password` で有効であり、ユーザーがフィールドに入力することができる最小文字数 (UTF-16 コード単位) を定義します。これは負数ではなく、`maxlength` で指定された値以下の整数値でなければなりません。`minlength` が指定されなかった場合、または無効な値が指定された場合は、その入力欄には最小文字数が設定されません。
+  - : `text`, `search`, `url`, `tel`, `email`, `password` で有効であり、ユーザーがフィールドに入力することができる最小文字列長 (UTF-16 コード単位で計測) を定義します。これは負数ではなく、`maxlength` で指定された値以下の整数値でなければなりません。`minlength` が指定されなかった場合、または無効な値が指定された場合は、その入力欄には最小文字数が設定されません。
 
     欄に入力されたテキストの文字数が UTF-16 コード単位で `minlength` よりも少ないと、この入力欄は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に不合格になります。詳しくは[クライアント側検証](#クライアント側検証)を参照してください。
 
@@ -503,7 +509,7 @@ l10n:
 
 - `pattern`
 
-  - : `text`, `search`, `url`, `tel`, `email`, `password` で有効です。`pattern` 属性は、指定された場合、入力の [`value`](#value) が一致すれば値が[制約検証](/ja/docs/Web/HTML/Constraint_validation)を通過したとみなされる正規表現を指定します。これは {{jsxref("RegExp")}} 型で使用される有効な JavaScript の正規表現でなければならず、これは[正規表現のガイド](/ja/docs/Web/JavaScript/Guide/Regular_expressions)で説明されている通りです。正規表現をコンパイルする際には `'u'` フラグが指定され、パターンが ASCII ではなく Unicode コードポイントのシーケンスとして扱われます。パターンのテキストの周囲にスラッシュを指定しないでください。
+  - : `text`, `search`, `url`, `tel`, `email`, `password` で有効です。`pattern` 属性は、指定された場合、入力の [`value`](#value) が一致すれば値が[制約検証](/ja/docs/Web/HTML/Constraint_validation)を通過したとみなされる正規表現を指定します。これは {{jsxref("RegExp")}} 型で使用される有効な JavaScript の正規表現でなければならず、これは[正規表現のガイド](/ja/docs/Web/JavaScript/Guide/Regular_expressions)で説明されている通りです。正規表現をコンパイルする際には `'u'` フラグが指定され、パターンが {{Glossary("ASCII")}} ではなく Unicode コードポイントのシーケンスとして扱われます。パターンのテキストの周囲にスラッシュを指定しないでください。
 
     `pattern` 属性が存在するが、指定されていないか無効な場合、正規表現は適用されず、この属性は完全に無視されます。`pattern` 属性が有効で、空でない値がパターンと一致しない場合、制約の検証によりフォームの送信ができなくなります。
 
@@ -606,12 +612,6 @@ l10n:
   </thead>
   <tbody>
     <tr>
-      <td><a href="#autocapitalize"><code>autocapitalize</code></a></td>
-      <td>
-        テキスト要素の内容に、どのように自動大文字化が適用されるべきかを示す文字列です。<strong>Safari のみ</strong>。
-      </td>
-    </tr>
-    <tr>
       <td><a href="#autocorrect"><code>autocorrect</code></a></td>
       <td>
         自動補完が <code>on</code> であるか <code>off</code> であるかを示す文字列です。<strong>Safari のみ。</strong>
@@ -624,10 +624,9 @@ l10n:
       </td>
     </tr>
     <tr>
-      <td><code>mozactionhint</code></td>
+      <td><code>mozactionhint</code> {{deprecated_inline}}</td>
       <td>
-        <p>文字列で、ユーザーがフィールドの編集中に <kbd>Enter</kbd> キーや <kbd>Return</kbd> キーを押したときに実行されるアクションの種類を示す文字列です。仮想キーボード上で、そのキーに対応する適切なラベルを決定するために使用されます。</p>
-        <p><strong>非推奨: 代わりに <a href="/ja/docs/Web/HTML/Global_attributes/enterkeyhint"><code>enterkeyhint</code></a> を使用してください。</strong></p>
+        <p>文字列で、ユーザーがフィールドの編集中に <kbd>Enter</kbd> キーや <kbd>Return</kbd> キーを押したときに実行されるアクションの種類を示す文字列です。仮想キーボード上で、そのキーに対応する適切なラベルを決定するために使用されます。 <strong>この属性は非推奨になりましたので、代わりに <a href="/ja/docs/Web/HTML/Global_attributes/enterkeyhint"><code>enterkeyhint</code></a> を使用してください。</strong></p>
       </td>
     </tr>
     <tr>
@@ -653,19 +652,6 @@ l10n:
   </tbody>
 </table>
 
-- `autocapitalize` {{non-standard_inline}}
-
-  - : （Safari のみ） ユーザーがこのフィールドを編集している間、自動大文字化がどのように適用されるべきかを示す文字列。許可されている値は次の通りです。
-
-    - `none`
-      - : どのテキストにも自動大文字化を行いません。
-    - `sentences`
-      - : 各文の最初の文字を自動的に大文字化します。
-    - `words`
-      - : 各語の最初の文字を自動的に大文字化します。
-    - `characters`
-      - : すべての文字を自動的に大文字化します。
-
 - `autocorrect` {{non-standard_inline}}
 
   - : （Safari のみ）。文字列で、ユーザーがこの欄を編集している間に自動修正を有効にするかどうかを示します。次の値が許されています。
@@ -685,7 +671,7 @@ l10n:
 
 - `orient` {{non-standard_inline}}
 
-  - : CSS の標準外の -moz-orient non-standard プロパティと同様に {{htmlelement('progress')}} および {{htmlelement('meter')}} 要素に影響を与える `orient` 属性は、範囲スライダーの向きを定義する定義します。値は `horizontal` が範囲を水平方向に描画することを、`vertical` が範囲を垂直に描画することを意味します。
+  - : CSS の標準外の -moz-orient non-standard プロパティと同様に {{htmlelement('progress')}} および {{htmlelement('meter')}} 要素に影響を与える `orient` 属性は、範囲スライダーの向きを定義する定義します。値は `horizontal` が範囲を水平方向に描画することを、`vertical` が範囲を垂直に描画することを意味します。垂直フォームコントロールを作成する現行の手法については、[垂直フォームコントロールの作成](/ja/docs/Web/CSS/CSS_writing_modes/Vertical_controls)を参照してください。
 
 - `results` {{non-standard_inline}}
 
@@ -706,7 +692,7 @@ l10n:
 - {{domxref("HTMLInputElement.checkValidity", "checkValidity()")}}
   - : 要素の有効性チェックを直ちに実行し、値が有効でない場合は文書に対して {{domxref("HTMLInputElement.invalid_event", "invalid")}} イベントを要素に発生させます。
 - {{domxref("HTMLInputElement.reportValidity", "reportValidity()")}}
-  - : 要素の値が有効性チェックを通過した場合は `true` を返します。それ以外の場合は `false` を返し、要素に対して {{domxref("HTMLInputElement.invalid_event", "invalid")}} イベントを発行し、（そのイベントが取り消されない場合）問題をユーザに報告します。
+  - : 要素の値が有効性チェックを通過した場合は `true` を返します。それ以外の場合は `false` を返し、要素に対して {{domxref("HTMLInputElement.invalid_event", "invalid")}} イベントを発行し、（そのイベントが取り消されない場合）問題をユーザーに報告します。
 - {{domxref("HTMLInputElement.select", "select()")}}
   - : 要素が選択可能な場合、`<input>` 要素の内容を選択します。選択可能なテキストコンテンツがない要素（カラーピッカーまたはカレンダー日付入力など）では、このメソッドは何もしません。
 - {{domxref("HTMLInputElement.setCustomValidity", "setCustomValidity()")}}
@@ -715,6 +701,8 @@ l10n:
   - : 入力要素内の文字の指定された範囲のコンテンツを、指定された文字列に設定します。`selectMode` 引数を使用して、既存のコンテンツに影響させる方法を制御することができます。
 - {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}
   - : テキストの入力要素内で、指定された文字の範囲を選択します。テキスト入力欄として表現されない入力欄では何もしません。
+- {{domxref("HTMLInputElement.showPicker", "showPicker()")}}
+  - : 通常、要素が選択されたときに表示される入力要素のブラウザーピッカーを表示しますが、ボタン押下や他のユーザー操作によって発生させます。
 - {{domxref("HTMLInputElement.stepDown", "stepDown()")}}
   - : 数値入力欄の値を既定で 1、または指定された数値の単位だけ減少させます。
 - {{domxref("HTMLInputElement.stepUp", "stepUp()")}}
@@ -923,6 +911,12 @@ input.custom {
 
 {{EmbedLiveSample('caret-color', 500, 80)}}
 
+### field-sizing
+
+{{cssxref("field-sizing")}} プロパティは、フォーム入力欄のサイズ設定の動作を制御することができます（つまり、既定では推奨されるサイズが設定されています）。このプロパティを使用すると、既定の動作を上書きして、フォームコントロールがコンテンツに合わせてサイズを調整できるようになります。
+
+このプロパティは通常、コンテンツを収縮包装し、テキストが入力されるにつれて大きくなるフォームフィールドを形成するために使用します。これは、直接テキスト入力を受け入れる入力型（例えば、[`text`](/ja/docs/Web/HTML/Element/input/text)、[`url`](/ja/docs/Web/HTML/Element/input/url)、[`file`](/ja/docs/Web/HTML/Element/input/file) 入力型、{{htmlelement("textarea")}} 要素で動作します。
+
 ### object-position と object-fit
 
 `<input>` 要素は特定の場合（多くはテキスト以外の入力や特殊なインターフェイス）（には、[置換要素](/ja/docs/Web/CSS/Replaced_element)になることがあります。その場合、CSS の {{cssxref("object-position")}} および {{cssxref("object-fit")}} プロパティを使って、要素の枠内での大きさと位置を調整することができます。
@@ -951,15 +945,13 @@ HTML の要素に色を追加することの関する詳しい情報は、次の
 
 `<input>` 要素にプレーンテキストが隣接しているだけでは十分ではありません。ユーザビリティとアクセシビリティのためには、暗黙的または明示的な {{HTMLElement("label")}} を含めることが必要です。
 
-```html
+```html-nolint
 <!-- アクセシブルではない -->
 <p>名前を入力してください: <input id="name" type="text" size="30" /></p>
 
 <!-- 暗黙的なラベル -->
 <p>
-  <label
-    >名前を入力してください: <input id="name" type="text" size="30"
-  /></label>
+  <label>名前を入力してください: <input id="name" type="text" size="30" /></label>
 </p>
 
 <!-- 明示的なラベル -->
@@ -1085,8 +1077,8 @@ HTML の要素に色を追加することの関する詳しい情報は、次の
 - {{domxref('validityState.rangeOverflow')}}
 - {{domxref('validityState.stepMismatch')}}
 - {{domxref('validityState.badInput')}}
-- {{domxref('validityState.valid')}}
-- {{domxref('validityState.customError')}}
+- {{domxref('validityState', 'validityState.valid')}}
+- {{domxref('validityState', 'validityState.customError')}}
 
 これらの論理型プロパティではそれぞれ、`true` の値で指定された観点の検証に合格しなかった可能性があることを示しますが、`valid` プロパティは例外で、その要素の値がすべての検証に合格したときに `true` になります。
 
@@ -1113,11 +1105,9 @@ function validate(input) {
 
 フィールドの検査に不合格になった場合に独自のエラーメッセージを表示させたい場合は、`<input>` (および関連する) 要素で利用できる[制約検証機能](/ja/docs/Learn/Forms/Form_validation#validating_forms_using_javascript)を使用する必要があります。以下のような形を取ってください。
 
-```html
+```html-nolint
 <form>
-  <label for="name"
-    >ユーザー名を入力してください（英大文字および小文字）:
-  </label>
+  <label for="name">ユーザー名を入力してください（英大文字および小文字）: </label>
   <input type="text" name="name" id="name" required pattern="[A-Za-z]+" />
   <button>Submit</button>
 </form>
@@ -1171,7 +1161,7 @@ Firefox は（少なくとも `type="number"` において）ユーザーの入�
 - HTTP の `Content-Language` ヘッダーで指定された言語
 - 何も指定されていない場合は、ブラウザーのロケール
 
-### 技術的概要
+## 技術的概要
 
 <table class="properties">
   <tbody>

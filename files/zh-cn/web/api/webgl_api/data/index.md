@@ -57,7 +57,7 @@ void main()
 
 ### Varyings
 
-**Varyings** 在 vertex shader 中定义，用于从 vertex shader 向 fragment shader 传递数据。通常传递 [normal vector](<https://zh.wikipedia.org/wiki/Normal_(geometry)>) 等在 vertex shader 中计算生成的数据会使用 varying。
+**Varyings** 在 vertex shader 中定义，用于从 vertex shader 向 fragment shader 传递数据。通常传递[法向量](https://zh.wikipedia.org/wiki/法线)等在 vertex shader 中计算生成的数据会使用 varying。
 
 <\<how to use>>
 

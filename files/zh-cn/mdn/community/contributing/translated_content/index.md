@@ -1,11 +1,13 @@
 ---
 title: MDN Web 文档的本地化
 slug: MDN/Community/Contributing/Translated_content
+l10n:
+  sourceCommit: 7eed0e1e4ab478d78dc7ca23c19ae77406776e4e
 ---
 
 {{MDNSidebar}}
 
-自 2020 年 12 月 14 日起，MDN 一直运行在新的基于 Github 的 [Yari 平台](https://github.com/mdn/yari)上。这为 MDN 带来了许多积极影响，但我们需要彻底改变我们处理本地化内容的方式。这是因为在我们的非英语本地化语言中，有很多内容未经维护且已经过时，我们希望将来能更好地管理这些内容。
+自 2020 年 12 月 14 日起，MDN 一直运行在新的基于 GitHub 的 [Yari 平台](https://github.com/mdn/yari)上。这为 MDN 带来了许多积极影响，但我们需要彻底改变我们处理本地化内容的方式。这是因为在我们的非英语本地化语言中，有很多内容未经维护且已经过时，我们希望将来能更好地管理这些内容。
 
 除了以下语言，其他所有的本地化内容都已经归档，这意味着它们在 GitHub 上是只读的，不能在 MDN 上查看。活跃的本地语言有专门的团队负责维护。
 
@@ -24,7 +26,7 @@ slug: MDN/Community/Contributing/Translated_content
 
 ### 汉语（zh-CN、zh-TW）
 
-- 讨论组：[Telegram（`Mozilla China`）](https://t.me/mozilla_china)、[Telegram（`MozTW L10n`）](https://moztw.org/community/telegram/)
+- 讨论组：[Discord (`#zh-cn`)](/discord)、[Discord (`#zh-tw`)](/discord)、[Telegram（`MozTW L10n`）](https://moztw.org/community/telegram/)
 - 目前的志愿者：[Irvin](https://github.com/irvin)、[t7yang](https://github.com/t7yang)、[yin1999](https://github.com/yin1999)、[jasonren0403](https://github.com/jasonren0403)、[JasonLamv-t](https://github.com/JasonLamv-t)
 
 ### 法语（fr）

@@ -49,7 +49,7 @@ function draw() {
 
 本例結果如下:
 
-{{EmbedLiveSample("矩形範例", 160, 160, "canvas_rect.png")}}
+{{EmbedLiveSample("矩形範例", 160, 160)}}
 
 fillRect()函數畫出一個寬高都 100 pixels 的矩形，clearRect()函數清除中央 60 x 60 pixels 大的正方形區域，接著 strokeRect()在被清除區域內畫上一個 50 x 50 pixels 的矩形邊框。
 
@@ -111,7 +111,7 @@ function draw() {
 
 結果如下:
 
-{{EmbedLiveSample("畫一個三角形", 110, 110, "triangle.png")}}
+{{EmbedLiveSample("畫一個三角形", 110, 110)}}
 
 ### 移動畫筆
 
@@ -153,7 +153,7 @@ function draw() {
 
 結果如下:
 
-{{EmbedLiveSample("移動畫筆", 160, 160, "canvas_smiley.png")}}
+{{EmbedLiveSample("移動畫筆", 160, 160)}}
 
 移除 moveTo() 便可以看到線條連結起來。
 
@@ -204,7 +204,7 @@ function draw() {
 
 從呼叫 beginPath()起始一個新圖形路徑，然後用 moveTo()移到我們想要的起始點，然後再畫兩條線形成三角形的兩邊。
 
-{{EmbedLiveSample("線條", 160, 160, "canvas_lineTo.png")}}
+{{EmbedLiveSample("線條", 160, 160)}}
 
 我們可以看到填滿(fill)三角形和勾勒(stroke)三角形的區別；當填滿時，圖形會自動閉合，不過勾勒則不會，所以如果沒有呼叫 closePaht()的話，只會畫出兩條線而非三角形。
 
@@ -264,9 +264,9 @@ function draw() {
 }
 ```
 
-{{EmbedLiveSample("弧形", 160, 210, "canvas_arc.png")}}
+{{EmbedLiveSample("弧形", 160, 210)}}
 
-### 貝茲曲線(Bezier curve)與二次曲線(quadratic curve)
+### 貝茲曲線與二次曲線
 
 二次與三次[貝茲曲線(Bézier curves)](http://en.wikipedia.org/wiki/B%C3%A9zier_curve)是另一種可用來構成複雜有機圖形的路徑。
 
@@ -313,7 +313,7 @@ function draw() {
 }
 ```
 
-{{EmbedLiveSample("二次貝茲曲線", 160, 160, "canvas_quadratic.png")}}
+{{EmbedLiveSample("二次貝茲曲線", 160, 160)}}
 
 #### 三次貝茲曲線
 
@@ -347,7 +347,7 @@ function draw() {
 }
 ```
 
-{{EmbedLiveSample("三次貝茲曲線", 160, 160, "canvas_bezier.png")}}
+{{EmbedLiveSample("三次貝茲曲線", 160, 160)}}
 
 ### 矩形
 
@@ -511,7 +511,7 @@ function draw() {
 }
 ```
 
-{{EmbedLiveSample("Path2D_example", 130, 110, "path2d.png")}}
+{{EmbedLiveSample("Path2D_example", 130, 110)}}
 
 ### 使用向量路徑 (SVG paths)
 

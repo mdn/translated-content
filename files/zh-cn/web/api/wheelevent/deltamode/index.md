@@ -3,7 +3,7 @@ title: WheelEvent.deltaMode
 slug: Web/API/WheelEvent/deltaMode
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 **`WheelEvent.deltaMode`** 只读属性返回一个 `unsigned long` 类型的值，声明 delta 的滚动值的单位。可能的值为：
 

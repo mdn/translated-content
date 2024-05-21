@@ -118,7 +118,7 @@ if (i &lt; 10 &amp;&amp; i &gt; 0)
     </tr>
     <tr>
       <th scope="row">標籤省略</th>
-      <td>{{no_tag_omission}}</td>
+      <td>不允許，開始和結束標籤都是必須的。</td>
     </tr>
     <tr>
       <th scope="row">允許的父元素</th>

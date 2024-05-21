@@ -2,14 +2,12 @@
 title: Notification：show 事件
 slug: Web/API/Notification/show_event
 l10n:
-  sourceCommit: 10b9d1a207b2bf467150b0ec72e2e5f09429d2d9
+  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
 ---
 
-{{APIRef("Web Notifications")}}{{securecontext_header}}
+{{APIRef("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
 
 {{domxref("Notification")}} 接口的 **`show`** 事件在一个 {{domxref("Notification")}} 显示时触发。
-
-{{AvailableInWorkers}}
 
 ## 语法
 

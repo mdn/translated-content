@@ -1,15 +1,19 @@
 ---
 title: OpenSearch 記述形式
 slug: Web/OpenSearch
+l10n:
+  sourceCommit: f5ced29119fa3495e8d5664247c2680330c9310f
 ---
 
 {{AddonSidebar}}
 
-**[OpenSearch 記述形式](https://github.com/dewitt/opensearch)** は、ウェブサイトが自分自身のために検索エンジンを記述し、ブラウザーやその他のクライアントアプリケーションがその検索エンジンを使用できるようにするものです。 OpenSearch は、(少なくとも) Firefox、Edge、Internet Explorer、Safari、Chrome が対応しています。(他のブラウザーのドキュメントへのリンクは[参考資料](#reference_material)をご覧ください。)
+**[OpenSearch 記述形式](https://github.com/dewitt/opensearch)** は、検索エンジンのウェブインターフェイスを記述するために使用することができます。これにより、ウェブサイトは自分自身のために検索エンジンを記述することができ、ブラウザーや他のクライアントアプリケーションがその検索エンジンを使用することができます。OpenSearch は、(少なくとも) Firefox、Edge、Internet Explorer、Safari、Chrome が対応しています。（他のブラウザーのドキュメントへのリンクは[参考資料](#参考資料)をご覧ください。）
 
 また、Firefox では、検索候補や `<SearchForm>` 要素など、OpenSearch 規格にない追加機能にも対応しています。この記事では、これらの Firefox の追加機能に対応した OpenSearch 互換の検索プラグインの作成に焦点を当てます。
 
-OpenSearch 記述ファイルは、[検索プラグインの自動検出](#autodiscovery_of_search_plugins)で説明されているように通知することができ、[ウェブページからの検索エンジンの追加](/ja/docs/Web/OpenSearch)で説明されているようにプログラムでインストールすることができます。
+OpenSearch 記述ファイルは、[検索プラグインの自動検出](#autodiscovery_of_search_plugins)で説明されているように通知することができます。
+
+> **警告:** OpenSearch プラグインは [addons.mozilla.org](https://addons.mozilla.org) (AMO) にアップロードできなくなりました。検索エンジン機能は `manifest.json` ファイルに[クローム設定](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides)を指定して WebExtension API を使用する必要があります。
 
 ## OpenSearch 記述ファイル
 
@@ -33,12 +37,12 @@ OpenSearch 記述ファイルは、[検索プラグインの自動検出](#autod
 - Description
   - : 検索エンジンの簡単な説明です。 **1024 文字以下**のプレーンテキストで、 HTML やその他のマークアップは使用しないでください。
 - InputEncoding
-  - : 検索エンジンへ送信する入力欄に使用する[文字エンコーディング](/ja/docs/Glossary/character_encoding)です。
+  - : 検索エンジンへ送信する入力欄に使用する[文字エンコーディング](/ja/docs/Glossary/Character_encoding)です。
 - Image
 
-  - : 検索エンジンのアイコンの URI です。可能であれば、 16×16 の画像を `image/x-icon` 形式で (`/favicon.ico` など)、 および 64×64 の画像を `image/jpeg` または `image/png` 形式で含めてください。
+  - : 検索エンジンのアイコンの URL です。可能であれば、 16×16 の画像を `image/x-icon` 形式で (`/favicon.ico` など)、 および 64×64 の画像を `image/jpeg` または `image/png` 形式で含めてください。
 
-    この URI には [`data:` URI スキーム](/ja/docs/Web/HTTP/Basics_of_HTTP/Data_URIs)を使用することもできます。 (`data:` URI はアイコンファイルから [The `data:` URI kitchen](http://software.hixie.ch/utilities/cgi/data/data) で生成することができます。)
+    この URL には [`data:` URL スキーム](/ja/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)を使用することもできます。 (`data:` URL はアイコンファイルから [The `data:` URL kitchen](https://software.hixie.ch/utilities/cgi/data/data) で生成することができます。)
 
     ```xml
     <Image height="16" width="16" type="image/x-icon">https://example.com/favicon.ico</Image>
@@ -46,7 +50,7 @@ OpenSearch 記述ファイルは、[検索プラグインの自動検出](#autod
     <Image height="16" width="16">data:image/x-icon;base64,AAABAAEAEBAAA … DAAA=</Image>
     ```
 
-    Firefox はアイコンを [base64](https://ja.wikipedia.org/wiki/Base64) `data:` URI としてキャッシュします (検索プラグインは[プロファイル](/ja/docs/Mozilla/Profile_Manager)の `searchplugins/` フォルダーに格納されます)。これを行う際に、 `http:` および `https:` URL は `data:` URI に変換されます。
+    Firefox はアイコンを [base64](https://ja.wikipedia.org/wiki/Base64) `data:` URI としてキャッシュします (検索プラグインは[プロファイル](https://support.mozilla.org/ja/kb/profiles-where-firefox-stores-user-data)の `searchplugins/` フォルダーに格納されます)。これを行う際に、 `http:` および `https:` URL は `data:` URI に変換されます。
 
     > **メモ:** リモートからアイコンを読み込む際 (すなわち、 `data:` URI とは対照的に `https://` URI からの場合)、 Firefox は**10 KB**より大きなアイコンを拒否します。
 
@@ -55,27 +59,20 @@ OpenSearch 記述ファイルは、[検索プラグインの自動検出](#autod
 - Url
 
   - : 検索に使う 1 つまたは複数の URL を記述します。 `template` 属性は検索クエリーのベース URL を指定します。
+
     Firefox は 3 種類の URL に対応しています。
 
     - `type="text/html"` は実際の検索結果そのものの URL を指定します。
     - `type="application/x-suggestions+json"` は検索候補を読み取るための URL を指定します。 Firefox 63 以降では、 `type="application/json"` をこの別名として受け付けます。
     - `type="application/x-moz-keywordsearch"` はロケーションバーに入力されるキーワード検索の際に使用する URL を指定します。これは Firefox のみが対応しています。
 
-    これらの種類の URL では、ユーザーが検索バーやロケーションバーに入力した検索語に置き換えらえる `{searchTerms}` を使うことができます。対応している他の動的な検索引数は [OpenSearch 1.1 引数](http://www.opensearch.org/Specifications/OpenSearch/1.1/Draft_3#OpenSearch_1.1_parameters)に記述されています。
+    これらの種類の URL では、ユーザーが検索バーやロケーションバーに入力した検索語に置き換えらえる `{searchTerms}` を使うことができます。対応している他の動的な検索引数は [OpenSearch 1.1 引数]((https://github.com/dewitt/opensearch/blob/master/opensearch-1-1-draft-6.md#opensearch-11-parameters)に記述されています。
 
-    検索候補については、 `application/x-suggestions+json` URL テンプレートを使用して候補リストを [JSON](/ja/docs/Glossary/JSON) 形式で読み取ります。サーバー上で検索候補の対応を実装する方法の詳細は [検索プラグインでの検索候補の対応](/ja/docs/Archive/Add-ons/Supporting_search_suggestions_in_search_plugins)を参照してください。
-
-- Param
-  - : 検索クエリと一緒に渡さなければならない引数を、キー／値のペアで指定します。値を指定する際に、 `{searchTerms}` を使用すると、ユーザーが検索バーに入力した検索語を挿入することができます。
-- moz:SearchForm
-
-  - : プラグインのサイトの検索ページを開くための URL。これは Firefox にユーザーが直接ウェブサイトを訪れる方法を提供します。
-
-    > **メモ:** この要素は Firefox 特有で OpenSearch 仕様の一部ではないため、この要素に対応していない他のユーザーエージェントが安全に無視できるようにするために、上の例では "`moz:`" XML 名前空間接頭辞を使っています。
+    検索候補については、 `application/x-suggestions+json` URL テンプレートを使用して候補リストを [JSON](/ja/docs/Glossary/JSON) 形式で読み取ります。
 
 ## 検索プラグインの自動検出
 
-検索プラグインを提供しているウェブサイトは、 Firefox ユーザがプラグインを簡単にダウンロードしてインストールできるように通知することができます。
+検索プラグインを提供しているウェブサイトは、 Firefox ユーザーがプラグインを簡単にダウンロードしてインストールできるように通知することができます。
 
 自動検出に対応するには、それぞれのプラグインの `<link>` 要素をウェブページの `<head>` セクションにします。
 
@@ -138,14 +135,13 @@ OpenSearch プラグインは自動的に更新することができます。 `U
 - `text/html` の URL を含める**必要があります**。 Atom または [RSS](/ja/docs/Glossary/RSS) の URL 型のみを含む検索プラグインは (有効なものですが、 Firefox は対応していません)、 "could not download the search plugin" エラーを引き起こします。
 - リモートで取得されるファビコンは 10KB 以上でなければなりません ([Firefox バグ 361923](https://bugzil.la/361923) を参照)。
 
-さらに、検索プラグインサービスはプラグイン開発者に役立つであろうログの仕組みを提供します。 `about:config` を使い '`browser.search.log`' を `true` に設定してください。検索プラグインが追加されるとログ情報が Firefox の[エラーコンソール](/ja/docs/Archive/Mozilla/Error_console) (ツール ➤ エラーコンソール)に表示されます。
+さらに、検索プラグインサービスはプラグイン開発者に役立つであろうログの仕組みを提供します。 `about:config` を使い '`browser.search.log`' を `true` に設定してください。検索プラグインが追加されるとログ情報が Firefox の[ブラウザーコンソール](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html) (ツール ➤ ブラウザーツール ➤ ブラウザーコンソール)に表示されます。
 
 ## 参考資料
 
 - [OpenSearch ドキュメント](https://github.com/dewitt/opensearch)
 - [Safari 8.0 リリースノート: Quick Website Search](https://developer.apple.com/library/archive/releasenotes/General/WhatsNewInSafari/Articles/Safari_8_0.html)
-- [Microsoft Edge 開発ガイド: Search provider discovery](https://docs.microsoft.com/en-us/microsoft-edge/dev-guide/browser-features/search-provider-discovery)
+- [Microsoft Edge 開発ガイド: Search provider discovery](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/)
 - [The Chromium Projects: Tab to Search](https://www.chromium.org/tab-to-search)
 - imdb.com には [動作する `osd.xml`](https://m.media-amazon.com/images/G/01/imdb/images/imdbsearch-3349468880._CB470047351_.xml) があります
-- [OpenSearch Plugin Generator](http://www.7is7.com/software/firefox/opensearch.html)
-- [Ready2Search](http://ready.to/search/jp/) - OpenSearch プラグインの作成 (日本語可, GET メソッドのみ)。 [Customized Search through Ready2Search](http://ready.to/search/make/en_make_plugin.htm)
+- [Ready2Search](https://ready.to/search/jp/) - OpenSearch プラグインの作成 (日本語可, GET メソッドのみ)。 [Customized Search through Ready2Search](https://ready.to/search/make/en_make_plugin.htm)

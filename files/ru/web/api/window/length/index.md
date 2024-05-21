@@ -25,6 +25,6 @@ if (window.length) {
 }
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}

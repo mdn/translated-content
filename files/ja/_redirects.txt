@@ -84,7 +84,7 @@
 /ja/docs/API/Document/onfullscreenerror	/ja/docs/Web/API/Document/fullscreenerror_event
 /ja/docs/API/Document/onselectionchange	/ja/docs/Web/API/HTMLInputElement/selectionchange_event
 /ja/docs/API/Document/open	/ja/docs/Web/API/Document/open
-/ja/docs/API/Document/origin	/ja/docs/Web/API/origin
+/ja/docs/API/Document/origin	/ja/docs/Web/API/Window/origin
 /ja/docs/API/Document/plugins	/ja/docs/Web/API/Document/plugins
 /ja/docs/API/Document/queryCommandSupported	/ja/docs/Web/API/Document/queryCommandSupported
 /ja/docs/API/Document/querySelector	/ja/docs/Web/API/Document/querySelector
@@ -920,7 +920,7 @@
 /ja/docs/DOM/window.confirm	/ja/docs/Web/API/Window/confirm
 /ja/docs/DOM/window.confirm-redirect-1	/ja/docs/Web/API/Window/confirm
 /ja/docs/DOM/window.content	/ja/docs/Web/API/Window
-/ja/docs/DOM/window.crypto	/ja/docs/Web/API/crypto_property
+/ja/docs/DOM/window.crypto	/ja/docs/Web/API/Window/crypto
 /ja/docs/DOM/window.defaultStatus	/ja/docs/Web/API/Window
 /ja/docs/DOM/window.document	/ja/docs/Web/API/Window/document
 /ja/docs/DOM/window.dump	/ja/docs/Web/API/Window/dump
@@ -1140,7 +1140,7 @@
 /ja/docs/DOM:window.closed	/ja/docs/Web/API/Window/closed
 /ja/docs/DOM:window.confirm	/ja/docs/Web/API/Window/confirm
 /ja/docs/DOM:window.content	/ja/docs/Web/API/Window
-/ja/docs/DOM:window.crypto	/ja/docs/Web/API/crypto_property
+/ja/docs/DOM:window.crypto	/ja/docs/Web/API/Window/crypto
 /ja/docs/DOM:window.defaultStatus	/ja/docs/Web/API/Window
 /ja/docs/DOM:window.document	/ja/docs/Web/API/Window/document
 /ja/docs/DOM:window.dump	/ja/docs/Web/API/Window/dump
@@ -1349,6 +1349,8 @@
 /ja/docs/Glossary/Scrollport	/ja/docs/Glossary/Scroll_container
 /ja/docs/Glossary/Signature/セキュリティ	/ja/docs/Glossary/Signature/Security
 /ja/docs/Glossary/Signature/関数	/ja/docs/Glossary/Signature/Function
+/ja/docs/Glossary/Simple_header	/ja/docs/Glossary/CORS-safelisted_request_header
+/ja/docs/Glossary/Simple_response_header	/ja/docs/Glossary/CORS-safelisted_response_header
 /ja/docs/Glossary/Symbol	/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol
 /ja/docs/Glossary/Transferable_objects	/ja/docs/Web/API/Web_Workers_API/Transferable_objects
 /ja/docs/Glossary/XHR_(XMLHttpRequest)	/ja/docs/Glossary/XMLHttpRequest
@@ -2227,7 +2229,7 @@
 /ja/docs/MDN/Guidelines/Editorial	/ja/docs/MDN/Writing_guidelines/What_we_write
 /ja/docs/MDN/Guidelines/Video	/ja/docs/MDN/Writing_guidelines/Howto/Images_media
 /ja/docs/MDN/Guidelines/Writing_style_guide	/ja/docs/MDN/Writing_guidelines/Writing_style_guide
-/ja/docs/MDN/MDN_Product_Advisory_Board/Members	/ja/docs/conflicting/MDN/MDN_Product_Advisory_Board
+/ja/docs/MDN/MDN_Product_Advisory_Board/Members	/ja/docs/MDN/MDN_Product_Advisory_Board
 /ja/docs/MDN/Structures	/ja/docs/MDN/Writing_guidelines/Page_structures
 /ja/docs/MDN/Structures/API_references	/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference
 /ja/docs/MDN/Structures/API_references/API_reference_sidebars	/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars
@@ -2696,7 +2698,7 @@
 /ja/docs/Web/API/Document/onoffline	/ja/docs/Web/API/Window/offline_event
 /ja/docs/Web/API/Document/ononline	/ja/docs/Web/API/Window/online_event
 /ja/docs/Web/API/Document/onselectionchange	/ja/docs/Web/API/HTMLInputElement/selectionchange_event
-/ja/docs/Web/API/Document/origin	/ja/docs/Web/API/origin
+/ja/docs/Web/API/Document/origin	/ja/docs/Web/API/Window/origin
 /ja/docs/Web/API/Document/pointercancel_event	/ja/docs/Web/API/Element/pointercancel_event
 /ja/docs/Web/API/Document/pointerdown_event	/ja/docs/Web/API/Element/pointerdown_event
 /ja/docs/Web/API/Document/pointerenter_event	/ja/docs/Web/API/Element/pointerenter_event
@@ -3066,7 +3068,7 @@
 /ja/docs/Web/API/ServiceWorkerContainer/oncontrollerchange	/ja/docs/Web/API/ServiceWorkerContainer/controllerchange_event
 /ja/docs/Web/API/ServiceWorkerContainer/onerror	/ja/docs/Web/API/ServiceWorkerContainer/error_event
 /ja/docs/Web/API/ServiceWorkerContainer/onmessage	/ja/docs/Web/API/ServiceWorkerContainer/message_event
-/ja/docs/Web/API/ServiceWorkerGlobalScope/caches	/ja/docs/Web/API/caches
+/ja/docs/Web/API/ServiceWorkerGlobalScope/caches	/ja/docs/Web/API/Window/caches
 /ja/docs/Web/API/ServiceWorkerGlobalScope/onactivate	/ja/docs/Web/API/ServiceWorkerGlobalScope/activate_event
 /ja/docs/Web/API/ServiceWorkerGlobalScope/onfetch	/ja/docs/Web/API/ServiceWorkerGlobalScope/fetch_event
 /ja/docs/Web/API/ServiceWorkerGlobalScope/oninstall	/ja/docs/Web/API/ServiceWorkerGlobalScope/install_event
@@ -3154,7 +3156,6 @@
 /ja/docs/Web/API/Window/animationstart_event	/ja/docs/Web/API/Element/animationstart_event
 /ja/docs/Web/API/Window/arguments	/ja/docs/Web/API/Window
 /ja/docs/Web/API/Window/content	/ja/docs/Web/API/Window
-/ja/docs/Web/API/Window/crypto	/ja/docs/Web/API/crypto_property
 /ja/docs/Web/API/Window/defaultStatus	/ja/docs/Web/API/Window
 /ja/docs/Web/API/Window/dispatchEvent	/ja/docs/Web/API/EventTarget/dispatchEvent
 /ja/docs/Web/API/Window/escape	/ja/docs/Web/JavaScript/Reference/Global_Objects/escape
@@ -3175,7 +3176,6 @@
 /ja/docs/Web/API/Window/onmouseup	/ja/docs/Web/API/Element/mouseup_event
 /ja/docs/Web/API/Window/onreset	/ja/docs/Web/API/HTMLFormElement/reset_event
 /ja/docs/Web/API/Window/onresize	/ja/docs/Web/API/Window/resize_event
-/ja/docs/Web/API/Window/performance	/ja/docs/Web/API/performance_property
 /ja/docs/Web/API/Window/restore	/ja/docs/Web/API/Window/moveTo
 /ja/docs/Web/API/Window/setInterval	/ja/docs/Web/API/setInterval
 /ja/docs/Web/API/Window/setTimeout	/ja/docs/Web/API/setTimeout
@@ -3207,14 +3207,14 @@
 /ja/docs/Web/API/WindowEventHandlers/onunload	/ja/docs/Web/API/Window/unload_event
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/atob	/ja/docs/Web/API/atob
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/btoa	/ja/docs/Web/API/btoa
-/ja/docs/Web/API/WindowOrWorkerGlobalScope/caches	/ja/docs/Web/API/caches
+/ja/docs/Web/API/WindowOrWorkerGlobalScope/caches	/ja/docs/Web/API/Window/caches
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval	/ja/docs/Web/API/clearInterval
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout	/ja/docs/Web/API/clearTimeout
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap	/ja/docs/Web/API/createImageBitmap
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/fetch	/ja/docs/Web/API/fetch
-/ja/docs/Web/API/WindowOrWorkerGlobalScope/indexedDB	/ja/docs/Web/API/indexedDB
-/ja/docs/Web/API/WindowOrWorkerGlobalScope/isSecureContext	/ja/docs/Web/API/isSecureContext
-/ja/docs/Web/API/WindowOrWorkerGlobalScope/origin	/ja/docs/Web/API/origin
+/ja/docs/Web/API/WindowOrWorkerGlobalScope/indexedDB	/ja/docs/Web/API/Window/indexedDB
+/ja/docs/Web/API/WindowOrWorkerGlobalScope/isSecureContext	/ja/docs/Web/API/Window/isSecureContext
+/ja/docs/Web/API/WindowOrWorkerGlobalScope/origin	/ja/docs/Web/API/Window/origin
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/setInterval	/ja/docs/Web/API/setInterval
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout	/ja/docs/Web/API/setTimeout
 /ja/docs/Web/API/WindowTimers	/ja/docs/Web/API/setTimeout
@@ -3224,7 +3224,7 @@
 /ja/docs/Web/API/WindowTimers/setTimeout	/ja/docs/Web/API/setTimeout
 /ja/docs/Web/API/Worker/onerror	/ja/docs/Web/API/Worker/error_event
 /ja/docs/Web/API/Worker/onmessageerror	/ja/docs/Web/API/Worker/messageerror_event
-/ja/docs/Web/API/WorkerGlobalScope/caches	/ja/docs/Web/API/caches
+/ja/docs/Web/API/WorkerGlobalScope/caches	/ja/docs/Web/API/Window/caches
 /ja/docs/Web/API/WorkerGlobalScope/console	/ja/docs/conflicting/Web/API/console
 /ja/docs/Web/API/XMLDocument/async	/ja/docs/Web/API/XMLDocument
 /ja/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest	/ja/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest
@@ -3245,6 +3245,7 @@
 /ja/docs/Web/API/XRTargetRayMode	/ja/docs/Web/API/XRInputSource/targetRayMode
 /ja/docs/Web/API/XSLTProcessor/Browser_Differences	/ja/docs/orphaned/Web/API/XSLTProcessor/Browser_Differences
 /ja/docs/Web/API/XSLTProcessor/Resources	/ja/docs/Web/API/XSLTProcessor
+/ja/docs/Web/API/caches	/ja/docs/Web/API/Window/caches
 /ja/docs/Web/API/console.dir	/ja/docs/Web/API/console/dir_static
 /ja/docs/Web/API/console.log	/ja/docs/Web/API/console/log_static
 /ja/docs/Web/API/console.time	/ja/docs/Web/API/console/time_static
@@ -3266,6 +3267,7 @@
 /ja/docs/Web/API/console/timeStamp	/ja/docs/Web/API/console/timestamp_static
 /ja/docs/Web/API/console/trace	/ja/docs/Web/API/console/trace_static
 /ja/docs/Web/API/console/warn	/ja/docs/Web/API/console/warn_static
+/ja/docs/Web/API/crypto_property	/ja/docs/Web/API/Window/crypto
 /ja/docs/Web/API/document.URL	/ja/docs/Web/API/Document/URL
 /ja/docs/Web/API/document.activeElement	/ja/docs/Web/API/Document/activeElement
 /ja/docs/Web/API/document.adoptNode	/ja/docs/Web/API/Document/adoptNode
@@ -3358,6 +3360,10 @@
 /ja/docs/Web/API/form.reset	/ja/docs/Web/API/HTMLFormElement/reset
 /ja/docs/Web/API/form.submit	/ja/docs/Web/API/HTMLFormElement/submit
 /ja/docs/Web/API/form.target	/ja/docs/Web/API/HTMLFormElement/target
+/ja/docs/Web/API/indexedDB	/ja/docs/Web/API/Window/indexedDB
+/ja/docs/Web/API/isSecureContext	/ja/docs/Web/API/Window/isSecureContext
+/ja/docs/Web/API/origin	/ja/docs/Web/API/Window/origin
+/ja/docs/Web/API/performance_property	/ja/docs/Web/API/Window/performance
 /ja/docs/Web/API/range.intersectsNode	/ja/docs/Web/API/Range/intersectsNode
 /ja/docs/Web/API/range.setStart	/ja/docs/Web/API/Range/setStart
 /ja/docs/Web/API/tableRow.insertCell	/ja/docs/Web/API/HTMLTableRowElement/insertCell
@@ -3379,7 +3385,7 @@
 /ja/docs/Web/API/window.closed	/ja/docs/Web/API/Window/closed
 /ja/docs/Web/API/window.confirm	/ja/docs/Web/API/Window/confirm
 /ja/docs/Web/API/window.content	/ja/docs/Web/API/Window
-/ja/docs/Web/API/window.crypto	/ja/docs/Web/API/crypto_property
+/ja/docs/Web/API/window.crypto	/ja/docs/Web/API/Window/crypto
 /ja/docs/Web/API/window.defaultStatus	/ja/docs/Web/API/Window
 /ja/docs/Web/API/window.document	/ja/docs/Web/API/Window/document
 /ja/docs/Web/API/window.dump	/ja/docs/Web/API/Window/dump
@@ -3548,6 +3554,7 @@
 /ja/docs/Web/CSS/-moz-zoom-in	/ja/docs/Web/CSS/cursor
 /ja/docs/Web/CSS/-moz-zoom-out	/ja/docs/Web/CSS/cursor
 /ja/docs/Web/CSS/-ms-scroll-snap-type	/ja/docs/Web/CSS/scroll-snap-type
+/ja/docs/Web/CSS/-webkit-mask-attachment	/ja/docs/Web/CSS
 /ja/docs/Web/CSS/-webkit-print-color-adjust	/ja/docs/Web/CSS/print-color-adjust
 /ja/docs/Web/CSS/:-moz-focusring	/ja/docs/Web/CSS/:focus-visible
 /ja/docs/Web/CSS/:-moz-list-bullet	/ja/docs/Web/CSS/::-moz-list-bullet

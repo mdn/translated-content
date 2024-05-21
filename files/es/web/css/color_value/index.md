@@ -948,7 +948,7 @@ Hay algunas advertencias a tener en cuenta al usar las palabras clave relativas 
   </tbody>
 </table>
 
-El color `rebeccapurple` es equivalente al color `#639`, y se puede encontrar información adicional sobre por qué fue introducidoa en el blog Codepen blog en un post realizado por Trezy "[Honoring a Great Man](http://codepen.io/trezy/blog/honoring-a-great-man)."
+El color `rebeccapurple` es equivalente al color `#639`, y se puede encontrar información adicional sobre por qué fue introducidoa en el blog Codepen blog en un post realizado por Trezy "[Honoring a Great Man](https://codepen.io/trezy/blog/honoring-a-great-man)."
 
 ### `Palabra clave transparent`
 

@@ -3,7 +3,9 @@ title: FormData.set()
 slug: Web/API/FormData/set
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{AvailableInWorkers}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 Метод set() из интерфейса {{domxref("FormData")}} присваивает новое значение существующему ключу внутри объекта `FormData`, или добавляет ключ/значение если до этого они не были установлены.
 
@@ -54,7 +56,7 @@ formData.set("userpic", myFileInput.files[0], "chris.jpg");
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{domxref("XMLHTTPRequest")}}
 - [Using XMLHttpRequest](/ru/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)

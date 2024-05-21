@@ -50,7 +50,7 @@ Le diagramme ci-dessous montre l'architecture d'un serveur web basique pour un _
 
 Le serveur récupère le document demandé du système de fichiers et retourne une réponse HTTP contenant le document et le [statut de la réponse](/fr/docs/Web/HTTP/Status#Réponses_de_succès) (habituellement, 200 OK). Si le fichier ne peut pas être recupéré pour une raison x ou y, le statut d'erreur est retourné (voir [réponses d'erreur client](/fr/docs/Web/HTTP/Status#Réponses_d'erreur_côté_client) et [réponse d'erreur serveur](/fr/docs/Web/HTTP/Status#Réponses_d'erreur_côté_serveur)).
 
-![A simplified diagram of a static web server.](Basic%20Static%20App%20Server.png)
+![A simplified diagram of a static web server.](basic_static_app_server.png)
 
 ### Sites dynamiques
 
@@ -64,7 +64,7 @@ Le diagramme ci-dessous montre une architecture simple pour un _site web dynamiq
 
 Les requêtes pour les ressources _statiques_ sont toujours gérées de la même manière que pour les sites statiques (les ressources statiques sont tous les fichiers qui ne changent pas —typiquement : CSS, JavaScript, Images, fichiers PDF etc).
 
-![A simplified diagram of a web server that uses server-side programming to get information from a database and construct HTML from templates. This is the same diagram as is in the Client-Server overview.](Web%20Application%20with%20HTML%20and%20Steps.png)
+![A simplified diagram of a web server that uses server-side programming to get information from a database and construct HTML from templates. This is the same diagram as is in the Client-Server overview.](web_application_with_html_and_steps.png)
 
 Les requêtes pour les ressources _dynamiques_, elles, sont transmises (2) au code côté serveur (indiqué dans le diagramme comme _Web Application_). Le serveur interprète la requête, lit les informations correspondantes dans la base de données (3), combine les données récupérées avec les templates HTML (4), et renvoie la réponse avec le HTML généré (5,6).
 

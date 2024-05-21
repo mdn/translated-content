@@ -2,7 +2,7 @@
 title: MediaStreamAudioSourceNode
 slug: Web/API/MediaStreamAudioSourceNode
 l10n:
-  sourceCommit: 0d8d3980dc8b8267b60e899c41a76a2832556cbc
+  sourceCommit: fa1301aead2cee37516b7ad5a5ec2fb21e004227
 ---
 
 {{APIRef("Web Audio API")}}
@@ -63,9 +63,9 @@ _親の {{domxref("AudioNode")}} からメソッドを継承します。_
 
 ### トラックの順序付け
 
-`MediaStreamTrackAudioSourceNode` インターフェイスでは、ストリーム内の音声トラックの順番は、{{domxref("MediaStreamTrack.kind", "kind")}} が `audio` であるトラックを抽出し、抽出したトラックを {{domxref("MediaStreamTrack.id", "id")}} プロパティの値のユニコードのコードポイント順 (本質的には、ID が単純なアルファベットからなる文字列のときはアルファベット順 (辞書順)) でソートすることで決定されます。
+`MediaStreamTrackAudioSourceNode` インターフェイスでは、ストリーム内の音声トラックの順番は、{{domxref("MediaStreamTrack.kind", "kind")}} が `audio` であるトラックを抽出し、抽出したトラックを {{domxref("MediaStreamTrack.id", "id")}} プロパティの値の Unicode のコードポイント順 (本質的には、ID が単純なアルファベットからなる文字列のときはアルファベット順 (辞書順)) でソートすることで決定されます。
 
-そして、**最初の** トラックとは、トラックの ID がユニコードのコードポイント順でソートされたとき `id` が最初に来るトラックのことです。
+そして、**最初の** トラックとは、トラックの ID が Unicode のコードポイント順でソートされたとき `id` が最初に来るトラックのことです。
 
 しかし、重要な点として、この順序付けを確立するルールは、このインターフェイスが最初に [Web Audio API](/ja/docs/Web/API/Web_Audio_API) に追加されてからだいぶ後に追加されました。そのため、この順序付けがどの 2 種類のブラウザーやブラウザーのバージョンでも同じになるとして簡単に依存することはできません。
 
@@ -85,7 +85,7 @@ _親の {{domxref("AudioNode")}} からメソッドを継承します。_
 
 ## 関連情報
 
-- [Web Audio API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - [WebRTC API](/ja/docs/Web/API/WebRTC_API)
 - [メディアキャプチャとストリーム API (メディアストリーム)](/ja/docs/Web/API/Media_Capture_and_Streams_API)
 - {{domxref("MediaStreamTrackAudioSourceNode")}}

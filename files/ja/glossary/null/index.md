@@ -27,5 +27,5 @@ typeof null === "object"; // true
   - {{Glossary("symbol")}}
 
 - [JavaScript のデータ型](/ja/docs/Web/JavaScript/Data_structures)
-- JavaScript のグローバルオブジェクト: {{jsxref("null")}}
+- JavaScript のグローバルオブジェクト: [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null)
 - Wikipedia 上の記事「[Null](https://ja.wikipedia.org/wiki/Null)」

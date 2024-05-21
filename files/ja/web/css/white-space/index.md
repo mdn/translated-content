@@ -62,11 +62,11 @@ white-space: unset;
   <thead>
     <tr>
       <th></th>
-      <th>改行</th>
-      <th>空白とタブ文字</th>
-      <th>テキストの折り返し</th>
+      <th>改行文字</th>
+      <th>空白と<br>タブ文字</th>
+      <th>テキストの<br>折り返し</th>
       <th>行末の空白</th>
-      <th>行末のその他の空白区切り</th>
+      <th>行末の<br>その他の空白区切り</th>
     </tr>
   </thead>
   <tbody>

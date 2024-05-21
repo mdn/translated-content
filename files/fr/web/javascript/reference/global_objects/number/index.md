@@ -16,7 +16,7 @@ Le constructeur `Number()` contient des constantes et des méthodes pour manipul
 Les nombres sont généralement exprimés sous leur forme littérale comme `255` ou `3.14159`. La [grammaire lexicale](/fr/docs/Web/JavaScript/Reference/Lexical_grammar#littéraux_numériques) contient une référence plus détaillée à ce sujet.
 
 ```js
-255; // deux cent vingt-cinq
+255; // deux cent cinquante-cinq
 255.0; // le même nombre
 255 === 255.0; // true
 255 === 0xff; // true (notation hexadécimale)

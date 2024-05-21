@@ -1,24 +1,43 @@
 ---
 title: 基本的な CSS の理解
 slug: Learn/CSS/Building_blocks/Fundamental_CSS_comprehension
+l10n:
+  sourceCommit: c64e813d8ab9dbe22cbc049c26f7c6703370a2b7
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/CSS/Introduction_to_CSS/Debugging_CSS", "Learn/CSS/Introduction_to_CSS")}}
+{{LearnSidebar}}
+{{PreviousMenuNext("Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper", "Learn/CSS/Building_blocks")}}
 
 このモジュールで多くをカバーしてきました、最後まで来て気分が良いでしょう！ 次に進む前の最後のステップは、モジュールの評価を試みることです。これには、最終的なデザイン (名刺/ゲーマーカード/ソーシャルメディアプロファイル) を作成するために完了しなければならないいくつかの関連演習が含まれます。
 
-| 前提条件: | この評価を実施する前に、すでにこのモジュールのすべての記事を通して作業しているはずです。 |
-| --------- | ---------------------------------------------------------------------------------------- |
-| 目的:     | 基本的な CSS 理論、構文、およびメカニズムの理解をテストする。                            |
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">前提条件:</th>
+      <td>
+        この評価を実施する前に、すでにこのモジュールのすべての記事を通して作業しているはずです。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">目的:</th>
+      <td>
+        基本的な CSS 理論、構文、およびメカニズムの理解をテストする。
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## 出発点
 
 この評価を開始するには、次のことが必要です。
 
-- [練習用の HTML ファイル](https://github.com/mdn/learning-area/blob/master/css/introduction-to-css/fundamental-css-comprehension/index.html)とそれに[関連付けられた画像ファイル](https://github.com/mdn/learning-area/blob/master/css/introduction-to-css/fundamental-css-comprehension/chris.jpg)を探して、ローカルコンピュータの新しいディレクトリーに保存します。自身の画像ファイルを使い、自身の名前を記入したいのなら、それも大歓迎です — ちょうど画像が正方形であることを確認してください。
-- [CSS リソースのテキストファイル](https://github.com/mdn/learning-area/blob/master/css/introduction-to-css/fundamental-css-comprehension/style-resources.txt)を入手してください。これには、評価の一部に答えるために検討して組み合わせる必要がある一連の未加工のセレクタとルールセットが含まれています。
+- [練習用の HTML ファイル](https://github.com/mdn/learning-area/blob/main/css/introduction-to-css/fundamental-css-comprehension/index.html)とそれに[関連付けられた画像ファイル](https://github.com/mdn/learning-area/blob/main/css/introduction-to-css/fundamental-css-comprehension/chris.jpg)を探して、ローカルコンピューターの新しいディレクトリーに保存します。自身の画像ファイルを使い、自身の名前を記入したいのなら、それも大歓迎です — ちょうど画像が正方形であることを確認してください。
+- [CSS リソースのテキストファイル](https://github.com/mdn/learning-area/blob/main/css/introduction-to-css/fundamental-css-comprehension/style-resources.txt)を入手してください。これには、評価の一部に答えるために検討して組み合わせる必要がある一連の未加工のセレクターとルールセットが含まれています。
 
-> **メモ:** 代わりとして、[JSBin](https://jsbin.com/) や [Thimble](https://thimble.mozilla.org/) のようなサイトを使って評価することもできます。HTML を貼り付けて CSS をこれらのオンラインエディタのいずれかに入力し、この URL を使用して `<img>` 要素を画像ファイルに向けることができます。使用しているオンラインエディタに別の CSS パネルがない場合は、それをドキュメントの先頭の `<style>` 要素に自由に配置してください。
+また、[CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) などのオンラインエディターを使用することもできます。
+これらのオンラインエディターのいずれかに HTML を貼り付けて CSS を入力し、[この URL](https://mdn.github.io/learning-area/css/introduction-to-css/fundamental-css-comprehension/chris.jpg) を使用して `<img>` 要素を画像ファイルに指定することができます。
+
+> **メモ:** もし行き詰まったら、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してみてください。
 
 ## プロジェクト概要
 
@@ -29,17 +48,17 @@ slug: Learn/CSS/Building_blocks/Fundamental_CSS_comprehension
 - まず最初に、HTML と画像ファイルと同じディレクトリーに新しいファイルを作成してください。それを `style.css` のような本当に想像力豊かなものと呼びます。
 - `<link>` 要素を介して CSS を HTML ファイルにリンクします。
 - CSS リソースファイルの最初の 2 つのルールセットは無料です。幸運を祈って楽しんだら、コピーして新しい CSS ファイルの先頭に貼り付けます。これらをテストとして使用して、CSS が HTML に正しく適用されていることを確認してください。
-- 2 つの規則の上に、CSS コメントをその中にテキストを追加して、これがページ全体の一般的なスタイルのセットであることを示します。「一般的なページスタイル」でも構いません。また、CSS ファイルの下部にさらに 3 つのコメントを追加して、カードコンテナの設定に固有のスタイル、ヘッダーとフッターに固有のスタイル、およびメインの名刺の内容に固有のスタイルを示します。 今後、スタイルシートに追加された後続のスタイルは適切な場所に編成される必要があります。
+- 2 つの規則の上に、CSS コメントをその中にテキストを追加して、これがページ全体の一般的なスタイルのセットであることを示します。「一般的なページスタイル」でも構いません。また、CSS ファイルの下部にさらに 3 つのコメントを追加して、カードコンテナーの設定に固有のスタイル、ヘッダーとフッターに固有のスタイル、およびメインの名刺の内容に固有のスタイルを示します。 今後、スタイルシートに追加された後続のスタイルは適切な場所に編成される必要があります。
 
-CSS リソースファイルで提供されているセレクタとルールセットに注意してください。
+CSS リソースファイルで提供されているセレクターとルールセットに注意してください。
 
-- 次に、4 つのセレクタを見て、それぞれの詳細度を計算してください。CSS の上部にあるコメントなど、後で見つけられる場所にこれらを書き留めてください。
-- では、正しいセレクタを正しいルールセットに配置しましょう。CSS リソースには、4 組のセレクタとルールセットがあります。今すぐこれを行い、それらを CSS ファイルに追加してください。必要があるのは：
+- 次に、4 つのセレクターを見て、それぞれの詳細度を計算してください。CSS の上部にあるコメントなど、後で見つけられる場所にこれらを書き留めてください。
+- では、正しいセレクターを正しいルールセットに配置しましょう。CSS リソースには、4 組のセレクターとルールセットがあります。今すぐこれを行い、それらを CSS ファイルに追加してください。必要があるのは：
 
-  - メインカードコンテナの幅と高さ、背景色、ボーダー、ボーダー半径 (角丸) などを固定します。
-  - ヘッダーに、濃い色から明るい色への背景グラデーションと、メインカードコンテナに設定された丸みのある角に合う丸みのある角を付けます。
-  - フッターには、明るいものから暗いものまでの背景のグラデーションと、メインカードコンテナに設定された丸みのある角に合う丸みのある角を付けます。
-  - 画像をメインの名刺の内容の右側に貼り付け、最大の高さを 100％にします (どの高さになるかにかかわらず、親コンテナと同じ高さを維持するために拡大/縮小することを保証する巧妙なトリック) 。
+  - メインカードコンテナーの幅と高さ、背景色、ボーダー、ボーダー半径 (角丸) などを固定します。
+  - ヘッダーに、濃い色から明るい色への背景グラデーションと、メインカードコンテナーに設定された丸みのある角に合う丸みのある角を付けます。
+  - フッターには、明るいものから暗いものまでの背景のグラデーションと、メインカードコンテナーに設定された丸みのある角に合う丸みのある角を付けます。
+  - 画像をメインの名刺の内容の右側にぴったりくっつくように[浮動](/ja/docs/Learn/CSS/CSS_layout/Floats)させ、最大の高さを 100％にします (どの高さになるかにかかわらず、親コンテナーと同じ高さを維持するために拡大/縮小することを保証する巧妙なトリック) 。
 
 - 注意してください。提供されているルールセットには 2 つのエラーがあります。知っている任意のテクニックを使用して、これらを見つけ出して進む前に修正してください。
 
@@ -57,7 +76,7 @@ CSS リソースファイルで提供されているセレクタとルールセ�
 その他の考慮事項
 
 - 読みやすくするために CSS を作成すると、各行に個別の宣言を使用してボーナスマークが付けられます。
-- 他のコンテンツを大量に含む名刺をページに配置する場合にこれらのルールが他の要素のスタイル設定を妨げないように、すべてのルールのセレクタチェーンの先頭に `.card` を含める必要があります。
+- 他のコンテンツを大量に含む名刺をページに配置する場合にこれらのルールが他の要素のスタイル設定を妨げないように、すべてのルールのセレクターチェーンの先頭に `.card` を含める必要があります。
 
 ## ヒントとコツ
 
@@ -68,10 +87,6 @@ CSS リソースファイルで提供されているセレクタとルールセ�
 
 次のスクリーンショットは、完成したデザインの外観の例を示しています。
 
-![A view of the finished business card, show a reader header and footer, and a darker center panel containing the main details and image.](business-card.png)
+![完成した名刺の図。読者のヘッダーとフッターを表示させ、メインの詳細と画像を格納する暗い中央パネル。](business-card.png)
 
-## 評価
-
-組織的な研修の一部としてこの評価に従っているなら、あなたは採点のためにあなたの教師/メンターに作業結果を提出できるはずです。もし自己学習しているのであれば、[この練習問題についてのディスカッションスレッド](https://discourse.mozilla.org/t/fundamental-css-comprehension-assessment/24682)、または [Mozilla IRC](https://wiki.mozilla.org/IRC) の [#mdn](irc://irc.mozilla.org/mdn) IRC チャンネルで尋ねることで、非常に簡単に採点ガイドを入手できます。最初にエクササイズをしてみてください — 不正をすることによって得られるものは何もありません！
-
-{{PreviousMenu("Learn/CSS/Introduction_to_CSS/Debugging_CSS", "Learn/CSS/Introduction_to_CSS")}}
+{{PreviousMenuNext("Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper", "Learn/CSS/Building_blocks")}}

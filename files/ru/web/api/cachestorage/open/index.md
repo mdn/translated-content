@@ -53,7 +53,7 @@ var cachedResponse = caches
   });
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
@@ -61,7 +61,7 @@ var cachedResponse = caches
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [Using Service Workers](/ru/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
 - {{domxref("Cache")}}

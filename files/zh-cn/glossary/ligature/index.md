@@ -11,4 +11,4 @@ slug: Glossary/Ligature
 
 ## 参见
 
-- [Ligature](https://zh.wikipedia.org/wiki/Typographic_ligature) on Wikipedia
+- 维基百科上的[连字](https://zh.wikipedia.org/wiki/合字)

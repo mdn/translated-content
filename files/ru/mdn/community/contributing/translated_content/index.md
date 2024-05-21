@@ -29,7 +29,7 @@ slug: MDN/Community/Contributing/Translated_content
 
 ### Китайский (`zh-CN`, `zh-TW`)
 
-- Обсуждения: [Telegram (`Mozilla China`)](https://t.me/mozilla_china), [Telegram (`MozTW L10n`)](https://moztw.org/community/telegram/)
+- Обсуждения: [Discord (`#zh-cn`)](/discord), [Discord (`#zh-tw`)](/discord), [Telegram (`MozTW L10n`)](https://moztw.org/community/telegram/)
 - Активные участники: [Irvin](https://github.com/irvin), [t7yang](https://github.com/t7yang), [yin1999](https://github.com/yin1999), [jasonren0403](https://github.com/jasonren0403), [JasonLamv-t](https://github.com/JasonLamv-t)
 
 ### Корейский (`ko`)

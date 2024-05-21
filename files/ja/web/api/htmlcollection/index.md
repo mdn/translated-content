@@ -2,7 +2,7 @@
 title: HTMLCollection
 slug: Web/API/HTMLCollection
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: 3486d225bcf0b597263070b646e744fa248928fa
 ---
 
 {{APIRef("DOM")}}
@@ -24,7 +24,7 @@ HTML DOM 内の `HTMLCollection` は生きて (live) います。元になった
 
 - {{domxref("HTMLCollection.item()")}}
 
-  - : リスト内の指定された `index` (先頭はゼロ) 位置にある特定のノードを返します。`index` が範囲外なら `null` を返します。
+  - : リスト内の指定された `index` (先頭はゼロ) 位置にある特定の要素を返します。`index` が範囲外なら `null` を返します。
 
     これは `collection[i]` のアクセスの代替手段です（こちらは `i` が範囲外の場合は `undefined` を返します）。これは主に、 JavaScript 以外の DOM 実装で有用です。
 
@@ -36,7 +36,7 @@ HTML DOM 内の `HTMLCollection` は生きて (live) います。元になった
 
 ## JavaScript での使用法
 
-`HTMLCollection` は名前とインデックスの両方で、自身のメンバーをプロパティとして直接公開します。HTML の ID は `:` や `.` を有効な文字として含むことができ、これらはプロパティとしてアクセスするために角括弧構文を使用しなければなりません。現在の `HTMLCollections` は純粋な数値の ID を認識しません。このような ID は配列へのアクセスと競合しますが、HTML5 では許容しています。
+`HTMLCollection` は、自身のメンバーを名前とインデックスでプロパティとして公開します。 HTML の ID は `:` や `.` を有効な文字として含むことができ、これらはプロパティとしてアクセスするために角括弧構文を使用しなければなりません。現在、 `HTMLCollection` オブジェクトは純粋な数値の ID を認識しません。このような ID は配列へのアクセスと競合しますが、HTML では許容しています。
 
 例えば、文書内に 1 つの `<form>` 要素があるものと仮定してください。その `id` は `myForm` です。
 

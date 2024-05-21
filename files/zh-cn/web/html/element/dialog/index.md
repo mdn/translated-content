@@ -32,8 +32,8 @@ slug: Web/HTML/Element/dialog
       </td>
     </tr>
     <tr>
-      <th scope="row">标签是否可省略</th>
-      <td>{{no_tag_omission}}</td>
+      <th scope="row">标签省略</th>
+      <td>不允许，开始标签和结束标签都不能省略。</td>
     </tr>
     <tr>
       <th scope="row">允许的父元素</th>

@@ -5,7 +5,7 @@ slug: Web/HTML/Element/script
 
 {{HTMLSidebar}}
 
-HTML Элемент **`<script>`** используется для встраивания или подключения исполняемого JavaScript кода. Элемент `<script>` также может использоваться с другими языками, такими как [GLSL](/ru/docs/Web/API/WebGL_API/By_example/Hello_GLSL) от [WebGL](/ru/docs/Web/API/WebGL_API).
+HTML-элемент **`<script>`** используется для встраивания или подключения исполняемого JavaScript кода. Элемент `<script>` также может использоваться с другими языками, такими как [GLSL](/ru/docs/Web/API/WebGL_API/By_example/Hello_GLSL) от [WebGL](/ru/docs/Web/API/WebGL_API).
 
 | [Content categories](/ru/docs/Web/Guide/HTML/Content_categories) | [Метаданные](/ru/docs/Web/Guide/HTML/Content_categories#Метаданные), [Потоковый контент](/ru/docs/Web/Guide/HTML/Content_categories#Main_content_categories), [Фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content). |
 | ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

@@ -226,7 +226,7 @@ function generatePrimes(quota) {
 
 `generatePrimes()` 関数は同期関数と同じですが、値を返す代わりに、終了したらメインスクリプトにメッセージを送ります。このために {{domxref("DedicatedWorkerGlobalScope/postMessage", "postMessage()")}} 関数を使用します。これは `addEventListener()` と同様にワーカーのグローバル関数です。すでに見たように、メイン スクリプトはこのメッセージを待ち受けしており、メッセージを受信すると DOM を更新します。
 
-> **メモ:** このサイトを実行するには、ローカルのウェブサーバーを実行する必要があります。file:// URL はワーカーを読み込むことができないからです。[ローカルテストサーバの設定] (/ja/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server) のガイドを参照してください。これで、［素数の生成］をクリックすると、メインページが応答し続けるようになるはずです。
+> **メモ:** このサイトを実行するには、ローカルのウェブサーバーを実行する必要があります。file:// URL はワーカーを読み込むことができないからです。[ローカルテストサーバーの設定] (/ja/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server) のガイドを参照してください。これで、［素数の生成］をクリックすると、メインページが応答し続けるようになるはずです。
 >
 > 例の作成や実行に問題がある場合は、[完成版](https://github.com/mdn/learning-area/blob/main/javascript/asynchronous/workers/finished) を確認し、[ライブ](https://mdn.github.io/learning-area/javascript/asynchronous/workers/finished)で試してみることができます。
 

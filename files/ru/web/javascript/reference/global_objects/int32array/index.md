@@ -142,7 +142,7 @@ var int32 = new Int32Array(iterable);
 // Int32Array[1, 2, 3]
 ```
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
@@ -164,7 +164,7 @@ var dv = Int32Array([1, 2, 3]);
 var dv = new Int32Array([1, 2, 3]);
 ```
 
-## See also
+## Смотрите также
 
 - [JavaScript typed arrays](/ru/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}

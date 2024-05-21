@@ -3,7 +3,7 @@ title: MouseEvent.screenX
 slug: Web/API/MouseEvent/screenX
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 **`screenX`** - read-only свойство интерфейса события {{domxref("MouseEvent")}}, соответствующее горизонтальной координате (смещению) указателя мыши в глобальных (экранных) координатах.
 

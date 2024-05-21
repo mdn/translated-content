@@ -5,27 +5,7 @@ l10n:
   sourceCommit: 07f0cf4375aaa02e1071d8bd0e8518db7609b7a9
 ---
 
-<section id="Quick_links">
-  <ol>
-    <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Annotations">ARIA 注解</a></li>
-    <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Guides">ARIA 指南</a></li>
-    <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Live_Regions">ARIA 实时区域</a></li>
-    <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide">ARIA 屏幕阅读器实现指南</a></li>
-    <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques">使用 ARIA：角色、状态和属性</a></li>
-    <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Multipart_labels">多部分标签</a></li>
-    <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs">如何提交与 ARIA 有关的 bug</a></li>
-    <li class="toggle">
-      <details><summary>ARIA 状态和属性</summary>
-        {{ListSubpagesForSidebar("Web/Accessibility/ARIA/Attributes", 1)}}
-      </details>
-    </li>
-    <li class="toggle">
-      <details><summary>WAI-ARIA 角色</summary>
-        {{ListSubpagesForSidebar("Web/Accessibility/ARIA/Roles", 1)}}
-      </details>
-    </li>
-  </ol>
-</section>
+{{AccessibilitySidebar}}
 
 ARIA 定义了可以应用于元素的语义，这些语义分为**角色**（定义一种用户界面元素）和由角色支持的**状态**和**属性**。作者必须在元素的生命周期中为其分配一个 ARIA 角色和适当的状态和属性，除非该元素已经具有适当的 ARIA 语义（通过使用适当的 HTML 元素）。添加 ARIA 语义只会向浏览器的无障碍 API 公开额外信息，而不会影响页面的 DOM。
 

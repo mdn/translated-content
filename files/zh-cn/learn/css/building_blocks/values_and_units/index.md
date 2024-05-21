@@ -135,84 +135,14 @@ CSS 中的值类型是一种定义了一些可使用的值的集合的方式。�
 
 #### 相对长度单位
 
-相对长度单位相对于其他一些东西，比如父元素的字体大小，或者视图端口的大小。使用相对单位的好处是，经过一些仔细的规划，你可以使文本或其他元素的大小与页面上的其他内容相对应。下表列出了 web 开发中一些最有用的单位。
+相对长度单位是相对于其他某些东西的。例如：
 
-<table class="standard-table no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">单位</th>
-      <th scope="col">相对于</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>em</code></td>
-      <td>
-        在 <code><a href="/zh-CN/docs/Web/CSS/font-size">font-size</a></code
-        > 中使用是相对于父元素的字体大小，在其他属性中使用是相对于自身的字体大小，如 <code><a href="/zh-CN/docs/Web/CSS/width">width</a></code>。
-      </td>
-    </tr>
-    <tr>
-      <td><code>ex</code></td>
-      <td>字符“x”的高度。</td>
-    </tr>
-    <tr>
-      <td><code>ch</code></td>
-      <td>
-        数字“0”的宽度。
-      </td>
-    </tr>
-    <tr>
-      <td><code>rem</code></td>
-      <td>根元素的字体大小。</td>
-    </tr>
-    <tr>
-      <td><code>lh</code></td>
-      <td>元素的行高。</td>
-    </tr>
-    <tr>
-      <td><code>rlh</code></td>
-      <td>根元素的行高。当用于根元素的 <code><a href="/zh-CN/docs/Web/CSS/font-size">font-size</a></code> 或 <code><a href="/zh-CN/docs/Web/CSS/line-height">line-height</a></code
-        > 属性时，它指的是这些属性的初始值。</td>
-    </tr>
-    <tr>
-      <td><code>vw</code></td>
-      <td>视口宽度的 1%。</td>
-    </tr>
-    <tr>
-      <td><code>vh</code></td>
-      <td>视口高度的 1%。</td>
-    </tr>
-    <tr>
-      <td><code>vmin</code></td>
-      <td>视口较小尺寸的 1%。</td>
-    </tr>
-    <tr>
-      <td><code>vmax</code></td>
-      <td>视口大尺寸的 1%。</td>
-    </tr>
-    <tr>
-      <td><code>vb</code></td>
-      <td>在根元素的<a href="/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values#块向与行向">块向</a>上，初始包含块的尺寸的 1%。</td>
-    </tr>
-    <tr>
-      <td><code>vi</code></td>
-      <td>在根元素的<a href="/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values#块向与行向">行向</a>上，初始包含块的尺寸的 1%。</td>
-    </tr>
-    <tr>
-      <td><code>svw</code>、<code>svh</code></td>
-      <td>分别为<a href="/zh-CN/docs/Web/CSS/length#基于视口的相对长度单位">视口较小尺寸</a>的宽度和高度的 1%。</td>
-    </tr>
-    <tr>
-      <td><code>lvw</code>、<code>lvh</code></td>
-      <td>分别为<a href="/zh-CN/docs/Web/CSS/length#基于视口的相对长度单位">视口大尺寸</a>的宽度和高度的 1%。</td>
-    </tr>
-    <tr>
-      <td><code>dvw</code>、<code>dvh</code></td>
-      <td>分别为<a href="/zh-CN/docs/Web/CSS/length#基于视口的相对长度单位">动态视口</a>的宽度和高度的 1%。</td>
-    </tr>
-  </tbody>
-</table>
+- `em` 和 `rem` 分别相对于父元素和根元素的字体大小。
+- `vh` 和 `vw` 分别相对于视口的高度和宽度。
+
+使用相对单位的好处是，通过一些精心的规划，你可以使文本或其他元素的大小相对于页面上的任何指定的东西进行缩放。要获取可用的相对单位的完整列表，请参阅 {{cssxref("length")}} 类型的参考页面。
+
+在本节中，我们将探讨一些最常见的相对单位。
 
 #### 探索一个例子
 

@@ -24,7 +24,7 @@ _`PerformanceTiming` インターフェイスに継承したプロパティは�
 - {{domxref("PerformanceTiming.unloadEventStart")}} {{readonlyInline}} {{deprecated_inline}}
   - : イベント {{domxref("Window/unload_event", "unload")}} が発生したとき、ウィンドウ内の前の文書がアンロードを開始した時刻を示す。前の文書が存在しない場合、または前の文書や必要なリダイレクトが同じオリジンでない場合、返される値は `0` です。
 - {{domxref("PerformanceTiming.unloadEventEnd")}} {{readonlyInline}} {{deprecated_inline}}
-  - : domxref("Window/unload_event", "unload")}} イベントハンドラーが終了した時刻。前の文書が存在しない場合、または前の文書や必要なリダイレクトのいずれかが同じオリジンでない場合、返される値は `0` である。
+  - : {{domxref("Window/unload_event", "unload")}} イベントハンドラーが終了した時刻。前の文書が存在しない場合、または前の文書や必要なリダイレクトのいずれかが同じオリジンでない場合、返される値は `0` である。
 - {{domxref("PerformanceTiming.redirectStart")}} {{readonlyInline}} {{deprecated_inline}}
   - : 最初の HTTP リダイレクトが開始された時刻。リダイレクトがない場合、あるいはリダイレクトのひとつが同じオリジンでない場合、返される値は `0` になります。
 - {{domxref("PerformanceTiming.redirectEnd")}} {{readonlyInline}} {{deprecated_inline}}

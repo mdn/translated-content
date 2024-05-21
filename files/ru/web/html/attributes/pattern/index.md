@@ -138,7 +138,7 @@ When a control has a `pattern` attribute, the `title` attribute, if used, must d
 
 While `title`s are used by some browsers to populate error messaging, because browsers sometimes also show the title as text on hover, it therefore shows in non-error situations, so be careful not to word titles as if an error has occurred.
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
@@ -146,7 +146,7 @@ While `title`s are used by some browsers to populate error messaging, because br
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [Constraint validation](/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation)
 - [Forms: Data form validation](/ru/docs/Web/Guide/HTML/Forms/Data_form_validation)
