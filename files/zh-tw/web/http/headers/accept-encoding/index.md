@@ -2,7 +2,7 @@
 title: Accept-Encoding
 slug: Web/HTTP/Headers/Accept-Encoding
 l10n:
-  sourceCommit: ed305252b964ea5a81d804bb8a4a20f65d3b2a9c
+  sourceCommit: 3c29ffa78c551ea6a61bbb795a5f97a66c6868c0
 ---
 
 {{HTTPSidebar}}
@@ -18,8 +18,8 @@ l10n:
 
 > **備註：**
 >
-> - IANA 註冊表維護[官方內容編碼的完整列表](https://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1)。
-> - 還有兩種其他內容編碼，分別是 `bzip` 和 `bzip2`，有時會使用。這些非標準編碼實現了這兩個 UNIX 程序使用的演算法。請注意，由於專利許可問題，`bzip` 已停止使用。
+> - IANA 註冊表維護了一份[官方內容編碼列表](https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#content-coding)。
+> - `bzip` 和 `bzip2` 編碼是非標準的，但在某些情況下可能會使用，包括對舊版的支援。
 
 <table class="properties">
   <tbody>
