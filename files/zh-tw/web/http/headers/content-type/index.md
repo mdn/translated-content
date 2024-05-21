@@ -7,7 +7,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-**`Content-Type`** 表示標頭用來指示資源的原始 {{Glossary("MIME type","媒體類型")}}（在任何內容編碼應用於發送之前）。
+**`Content-Type`** 表示標頭用來指示資源的原始{{Glossary("MIME type","媒體類型")}}（在任何內容編碼應用於發送之前）。
 
 在回應中，`Content-Type` 標頭向用戶端提供返回內容的實際內容類型。此標頭的值可能會被忽略，例如在瀏覽器進行 MIME 嗅探時，設置 {{HTTPHeader("X-Content-Type-Options")}} 標頭值為 `nosniff` 可以防止這種行為。
 
@@ -29,7 +29,7 @@ l10n:
     </tr>
     <tr>
       <th scope="row">{{Glossary("CORS-safelisted request header", "CORS 安全清單請求標頭")}}</th>
-      <td>是，附加限制是值不能包含 <em>CORS-unsafe request header byte</em>：0x00-0x1F（除了 0x09 (HT)），<code>"():&#x3C;>?@[\]{}</code> 和 0x7F (DEL)。 <br />值解析後的 MIME 類型（忽略參數）必須是 <code>application/x-www-form-urlencoded</code>、<code>multipart/form-data</code> 或 <code>text/plain</code>。</td>
+      <td>是，附加限制是值不能包含 <em>CORS 不安全的請求標頭字節</em>：0x00-0x1F（除了 0x09 (HT)），<code>"():&#x3C;>?@[\]{}</code> 和 0x7F (DEL)。 <br />值解析後的 MIME 類型（忽略參數）必須是 <code>application/x-www-form-urlencoded</code>、<code>multipart/form-data</code> 或 <code>text/plain</code> 之一。</td>
     </tr>
   </tbody>
 </table>
@@ -95,5 +95,5 @@ Content-Type: text/plain
 
 - {{HTTPHeader("Accept")}}
 - {{HTTPHeader("Content-Disposition")}}
-- {{HTTPStatus("206")}} 部分內容
+- {{HTTPStatus("206")}}
 - {{HTTPHeader("X-Content-Type-Options")}}
