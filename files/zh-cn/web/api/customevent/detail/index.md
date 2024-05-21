@@ -2,7 +2,7 @@
 title: CustomEvent：detail 属性
 slug: Web/API/CustomEvent/detail
 l10n:
-  sourceCommit: null
+  sourceCommit: 14aec55e57117d0dc4a916112e23d310908e9937
 ---
 
 {{APIRef("DOM")}}{{AvailableInWorkers}}
@@ -28,14 +28,14 @@ const dogFound = new CustomEvent("animalfound", {
   },
 });
 
-const obj = document.createElement("div"); // 创建一个 <div> 元素
+const element = document.createElement("div"); // 创建一个 <div> 元素
 
 // 添加适当的事件监听
-obj.addEventListener("animalfound", (e) => console.log(e.detail.name));
+element.addEventListener("animalfound", (e) => console.log(e.detail.name));
 
 // 派发事件
-obj.dispatchEvent(catFound);
-obj.dispatchEvent(dogFound);
+element.dispatchEvent(catFound);
+element.dispatchEvent(dogFound);
 
 // 在控制台中输出“cat”和“dog”
 ```
