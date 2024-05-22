@@ -6,7 +6,7 @@ l10n:
 ---
 
 {{CSSRef}}
-**`place-content`** [CSS](/ko/docs/Web/CSS) [단축 속성](/ko/docs/Web/CSS/Shorthand_properties) 은 [그리드](/ko/docs/Web/CSS/CSS_grid_layout) 혹은 [플렉스박스](/ko/docs/Web/CSS/CSS_flexible_box_layout) 같은 관계형 레이아웃 시템에서 블록 방향과 인라인 방향에서 한번에 콘텐츠를 정렬합니다. (예를 들어, {{CSSxRef("align-content")}} 와 {{CSSxRef("justify-content")}} 속성) 
+**`place-content`** [CSS](/ko/docs/Web/CSS) [단축 속성](/ko/docs/Web/CSS/Shorthand_properties) 은 [그리드](/ko/docs/Web/CSS/CSS_grid_layout) 혹은 [플렉스박스](/ko/docs/Web/CSS/CSS_flexible_box_layout) 같은 관계형 레이아웃 시템에서 블록 방향과 인라인 방향에서 한번에 콘텐츠를 정렬합니다. (예를 들어, {{CSSxRef("align-content")}} 와 {{CSSxRef("justify-content")}} 속성)
 
 {{EmbedInteractiveExample("pages/css/place-content.html")}}
 
