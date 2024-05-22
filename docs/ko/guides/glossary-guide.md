@@ -178,7 +178,7 @@
 | Descriptor         | 설명자          |                             |                                                                                         |
 | Flexbox            | 플렉스박스      |                             |                                                                                         |
 | Flow               | 플로            | 레이아웃 방식일 경우에 한정 |                                                                                         |
-| Formal definition      | 형식 정의       |                             |                                                                                         |
+| Formal definition  | 형식 정의       |                             |                                                                                         |
 | Formal syntax      | 형식 구문       |                             |                                                                                         |
 | Grid               | 그리드          |                             |                                                                                         |
 | Inline             | 인라인          |                             |                                                                                         |
