@@ -234,9 +234,9 @@ div > div {
 
 ## 같이보기
 
-- CSS 플렉스박스 가이드: _[Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- CSS 플렉스박스 가이드: _[Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
-- CSS 그리드 가이드: _[Box alignment in CSS Grid layouts](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
-- [CSS Box Alignment](/en-US/docs/Web/CSS/CSS_box_alignment)
+- CSS 플렉스박스 가이드: _[Basic Concepts of Flexbox](/ko/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS 플렉스박스 가이드: _[Aligning items in a flex container](/ko/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
+- CSS 그리드 가이드: _[Box alignment in CSS Grid layouts](/ko/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
+- [CSS Box Alignment](/ko/docs/Web/CSS/CSS_box_alignment)
 - {{CSSxRef("align-content")}} 속성
 - {{CSSxRef("justify-content")}} 속성
