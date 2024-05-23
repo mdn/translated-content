@@ -88,4 +88,3 @@ bCondition
 
 - {{jsxref("Boolean")}}
 - {{Glossary("Truthy")}}
-- {{Glossary("Falsy")}}
