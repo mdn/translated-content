@@ -172,4 +172,4 @@ slug: WebAssembly/C_to_Wasm
 - [Calling compiled C functions from JavaScript using ccall/cwrap](https://kripken.github.io/emscripten-site/docs/porting/connecting_cpp_and_javascript/Interacting-with-code.html#calling-compiled-c-functions-from-javascript-using-ccall-cwrap)
 - [Why do functions in my C/C++ source code vanish when I compile to JavaScript, and/or I get No functions to process?](https://kripken.github.io/emscripten-site/docs/getting_started/FAQ.html#why-do-functions-in-my-c-c-source-code-vanish-when-i-compile-to-javascript-and-or-i-get-no-functions-to-process)
 - [WebAssembly on Mozilla Research](https://research.mozilla.org/webassembly/)
-- [Compiling an Existing C Module to WebAssembly](/zh-CN/docs/WebAssembly/existing_C_to_wasm)
+- [Compiling an Existing C Module to WebAssembly](/zh-TW/docs/WebAssembly/existing_C_to_wasm)
