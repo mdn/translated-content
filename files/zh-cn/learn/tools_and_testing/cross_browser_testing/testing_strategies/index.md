@@ -15,8 +15,8 @@ l10n:
       <th scope="row">准备：</th>
       <td>
         熟练掌握 <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a
-        href="/zh-CN/docs/Learn/CSS">CSS</a> 和<a
-        href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言; 了解<a
+        href="/zh-CN/docs/Learn/CSS">CSS</a> 和
+        <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言; 了解<a
           href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
           >跨浏览器测试的抽象准则</a
         >。
@@ -55,7 +55,7 @@ Opera Mini [在运行复杂 JavaScript 方面性能不太好](https://dev.opera.
 
 因此，我们基于预计用户会使用的浏览器来确定选择测试哪些浏览器。通过这种方法，我们得到了以下支持图表：
 
-1. A 级：Windows/Mac 上的 Chrome 和 Firefox，Mac 上的 Safari，Windows 上的 Edge，iPhone/iPad 上的 iOS Safari，手机/平板上的 Android 原生浏览器（最新两个版本），手机/平板上的 Android 版 Chrome 和 Firefox（最新两个版本）
+1. A 级：Windows/Mac 上的 Chrome 和 Firefox、Mac 上的 Safari、Windows 上的 Edge、iPhone/iPad 上的 iOS Safari、手机/平板上的 Android 原生浏览器（最新两个版本）、手机/平板上的 Android 版 Chrome 和 Firefox（最新两个版本）
 2. B 级：Opera Mini
 3. C 级：无
 
@@ -79,7 +79,7 @@ Opera Mini [在运行复杂 JavaScript 方面性能不太好](https://dev.opera.
 2. 选择 [Google Analytics](https://analytics.google.com/analytics/web/)（web）选项，然后点击*注册*按钮。
 3. 在注册页面中输入你的网站/应用详细信息。配置过程相当直观；最重要的字段是网站 URL，你需要确保它填写正确。这应当是你的网站/应用的根 URL。
 4. 填写完所有内容后，按*获取跟踪 ID*按钮，然后接受显示的服务条款。
-5. 下一页会为你提供一些代码段和其他说明。对于基本网站，你需要做的是复制*网站跟踪*代码块，并将其粘贴到你要在网站上使用 Google Analytics 跟踪的所有页面。你可以将跟踪代码放在关闭 `</body>` 标记下方，也可以放在其他适当位置，以防止其与应用程序代码混淆。
+5. 下一页会为你提供一些代码段和其他说明。对于基本网站，你需要做的是复制*网站跟踪*代码块，并将其粘贴到你要在网站上使用 Google Analytics 跟踪的所有页面。你可以将跟踪代码放在关闭标记 `</body>` 的下方，也可以放在其他适当位置，以防止其与应用程序代码混淆。
 6. 将更改上传到开发服务器，或其他任何用到你的代码的位置。
 
 就是这样！现在，你的网站应该可以开始报告分析数据了。
@@ -88,13 +88,13 @@ Opera Mini [在运行复杂 JavaScript 方面性能不太好](https://dev.opera.
 
 现在你可以回到 [Analytics Web](https://analytics.google.com/analytics/web) 首页，并开始查看你收集到的关于网站的数据（当然，你需要留出一些时间来收集一些实际的数据）。
 
-默认情况下，你应该看到类似下面这样的报告选项卡：
+默认情况下，你应该看到类似下面这样的报告标签页：
 
 ![Google Analytics 在其主报告仪表板中如何收集数据](analytics-reporting.png)
 
 借助 Google Analytics，你可以查看大量的数据（不同类别的自定义报告等等），我们暂时不讨论这些。[开始使用 Analytics](https://support.google.com/analytics/answer/9306384?visit_id=637855964517698041-2103767437&rd=1) 为初学者提供了一些关于报告的指导，这些指导很有用。
 
-你可以通过从左侧菜单选择*受众群体 > 技术 > 浏览器和操作系统*来查看用户使用的浏览器和操作系统。
+你可以通过从左侧菜单选择*用户 > 技术 > 浏览器和操作系统*来查看用户使用的浏览器和操作系统。
 
 > **备注：** 在使用 Google Analytics 时，你需要注意可能存在的误导性偏见，例如，“我们没有 Firefox 移动版用户”可能导致你不再支持 Firefox 移动版。但是，你之所以没有任何 Firefox 移动版用户，可能恰恰就是因为你的网站在 Firefox 移动版上受支持不佳。
 
@@ -108,7 +108,7 @@ Opera Mini [在运行复杂 JavaScript 方面性能不太好](https://dev.opera.
 
 因此，我们的最终版支持图表如下所示：
 
-1. A 级：Windows/Mac 的 Chrome 和 Firefox，Mac 的 Safari，以及 Edge（最新两个版本），iPhone/iPad 的 iOS Safari，手机/平板的 Android 原生浏览器（最新两个版本），手机/平板的 Android 版 Chrome 和 Firefox（最新两个版本）。通过常见的无障碍测试。
+1. A 级：Windows/Mac 的 Chrome 和 Firefox、Mac 的 Safari、Edge（最新两个版本）、iPhone/iPad 的 iOS Safari、手机/平板的 Android 原生浏览器（最新两个版本）、手机/平板的 Android 版 Chrome 和 Firefox（最新两个版本）。通过常见的无障碍测试。
 2. B 级：Opera Mini。
 3. C 级：Opera 以及其他小众的现代浏览器。
 
@@ -132,7 +132,7 @@ A 级和 B 级：
 A 级：
 
 - 信息框在出现/消失时应该具有平滑的动画效果。
-- 应该有渐变和文字阴影，以提升信息框的外观。
+- 应该有渐变和文字阴影，以增强信息框的外观。
 
 你可能会注意到，根据示例中的文本，它在 IE8 中无法工作——根据我们的支持图表，这是一个问题，如果浏览器不支持 CSS 过渡效果（请参见课程后面的“实施特性检测”部分），你可能需要通过使用特性检测库以不同的方式实现功能。
 
@@ -192,7 +192,7 @@ A 级：
 
 ### 虚拟机
 
-虚拟机是一种在台式计算机上运行的软件应用，它允许用户模拟整个操作系统。每个操作系统都在其自己的虚拟硬盘上运行（这通常由主机机器硬盘上的一个大型文件来表示），实现了隔离。市面上有多种流行的虚拟机应用程序，包括 [Parallels](https://www.parallels.com/)、[VMWare](https://www.vmware.com/) 和 [Virtual Box](https://www.virtualbox.org/wiki/Downloads)。我们更倾向于推荐后者，因为它不仅是免费的，而且作为开源软件，提供了更多的自由和灵活性。
+虚拟机是一种在台式计算机上运行的软件应用，它允许用户模拟整个操作系统。每个操作系统都在其自己的虚拟硬盘上运行（这通常由主机机器硬盘上的一个大型文件来表示），实现了隔离。市面上有多种流行的虚拟机应用程序，包括 [Parallels](https://www.parallels.com/)、[VMWare](https://www.vmware.com/) 和 [Virtual Box](https://www.virtualbox.org/wiki/Downloads)。我们更倾向于推荐后者，因为它是免费的。
 
 > **备注：** 运行虚拟机仿真需要大量的硬盘空间；每个模拟的操作系统可能会占用大量内存。你可以选择每次安装所需的硬盘空间；大约 10GB 的空间应该足够了，但有一些建议是使用多达 50GB 或更多的空间，以确保操作系统的可靠运行。大多数虚拟机应用程序都提供了创建**动态分配**的硬盘的功能，它会根据需要自动增长和收缩，这是一个很好的选择。
 
@@ -200,7 +200,7 @@ A 级：
 
 1. 获取要模拟的操作系统的安装程序光盘或映像（例如 ISO 文件）。Virtual Box 无法提供这些；因为大多数操作系统（如 Windows 操作系统）都是商业产品，不能自由分发。
 2. [下载适合你操作系统的安装程序](https://www.virtualbox.org/wiki/Downloads)并进行安装。
-3. 打开应用程序；你将看到以下界面：![应用程序窗口的左侧面板列出了 Windows 操作系统和 Opera TV 模拟器。右侧面板包括几个子面板，包括常规信息、系统、显示、设置、音频、网络和预览](./virtualbox.png)。
+3. 打开应用程序；你将看到以下界面：![应用程序窗口的左侧面板列出了 Windows 操作系统和 Opera TV 模拟器。右侧面板包括几个子面板，包括常规信息、系统、显示、设置、音频、网络和预览](virtualbox.png)
 4. 要创建新的虚拟机，请点击左上角的“新建”按钮。
 5. 按照说明填写适当的对话框。你需要：
 
@@ -214,7 +214,7 @@ A 级：
 
 ![如何为特定操作系统安装 Virtual Box](virtualbox-installer.png)
 
-**警告：** 请确保此时你有要安装在虚拟机上的操作系统映像，并立即进行安装。如果你在此时取消该过程，可能会导致虚拟机无法使用，并需要删除并重新创建它。这并不会导致严重问题，但会很麻烦。
+> **警告：** 请确保此时你有要安装在虚拟机上的操作系统映像，并立即进行安装。如果你在此时取消该过程，可能会导致虚拟机无法使用，并需要删除并重新创建它。这并不会导致严重问题，但会很麻烦。
 
 完成该过程后，你将在主机计算机上的窗口中运行一个带有操作系统的虚拟机。
 
@@ -227,7 +227,7 @@ A 级：
 - Windows 10 + Edge 14
 - Windows 10 + Edge 13
 
-- > **备注：** 虚拟机的另一个优势在于虚拟磁盘映像的相对独立性。如果你在团队中工作，你可以创建一个虚拟磁盘映像，复制并将其分发给团队其他成员。只需确保你拥有合法许可，以运行所有这些包含版权的 Windows 或其他产品的副本。
+> **备注：** 虚拟机的另一个优势在于虚拟磁盘映像的相对独立性。如果你在团队中工作，你可以创建一个虚拟磁盘映像，复制并将其分发给团队其他成员。只需确保你拥有合法许可，以运行所有这些包含版权的 Windows 或其他产品的副本。
 
 ### 自动化和商业应用
 
@@ -243,7 +243,7 @@ A 级：
 
 我们在本文末尾谈论一下用户测试——如果你有一个有意愿的用户组测试你的新功能，这可能是一个很好的选择。请记住，这可以像你希望的那样廉价又有效——用户组可以是一群朋友、一群同事，也可以是一群无报酬或有报酬的志愿者，这取决于你是否有资金用于测试。
 
-通常，你可以让用户在某种开发服务器上查看包含新功能的页面或视图，这样你就不用在完成之前放置最终站点或更改。你应该让他们遵守一些步骤并报告他们得到的结果。提供一组步骤（有时称为脚本）会非常有用，这样你就可以获得与你尝试测试的内容相关的更可靠的结果。我们在上面的[你想要测试什么](#你想要测试什么)部分中提到了这一点——很容易将其中详述的测试标准转换为要遵循的步骤。例如，以下内容适用于有视力的用户：
+通常，你可以让用户在某种开发服务器上查看包含新功能的页面或视图，这样你就不用在完成之前放置最终站点或更改。你应该让他们遵守一些步骤并报告他们得到的结果。提供一组步骤（有时称为脚本）会非常有用，这样你就可以获得与你尝试测试的内容相关的更可靠的结果。我们在上面的[你将要测试什么](#你将要测试什么？)部分中提到了这一点——很容易将其中详述的测试标准转换为要遵循的步骤。例如，以下内容适用于有视力的用户：
 
 - 在台式计算机上使用鼠标单击几次问号按钮。刷新浏览器窗口。
 - 使用台式计算机上的键盘选择并激活几次问号按钮。
@@ -255,7 +255,7 @@ A 级：
 运行测试时，最好还是：
 
 - 尽可能设置单独的浏览器配置文件，禁用浏览器扩展和其他类似功能，并在该配置文件中运行测试（例如，请参阅[使用配置文件管理器创建和删除 Firefox 配置文件](https://support.mozilla.org/zh-CN/kb/profile-manager-create-remove-switch-firefox-profiles) 和[与他人共享 Chrome 浏览器或添加角色](https://support.google.com/chrome/answer/2364824)）。
-- 如果可以，运行测试时使用浏览器的隐私（private）模式（例如，Firefox 中的 [隐私浏览](https://support.mozilla.org/zh-CN/kb/private-browsing-use-firefox-without-history)，Chrome 中的 [隐私模式](https://support.google.com/chrome/answer/95464)），进而 cookie 和临时文件等内容不会保存。
+- 如果可以，运行测试时使用浏览器的隐私（private）模式（例如，Firefox 中的[隐私浏览](https://support.mozilla.org/zh-CN/kb/private-browsing-use-firefox-without-history)，Chrome 中的[隐私模式](https://support.google.com/chrome/answer/95464)），进而不会保存 cookie 和临时文件等内容。
 
 这些步骤旨在确保你正在测试的浏览器尽可能“干净”，即没有安装任何可能影响测试结果的内容。
 
