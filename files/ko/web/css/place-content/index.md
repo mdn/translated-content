@@ -6,7 +6,7 @@ l10n:
 ---
 
 {{CSSRef}}
-**`place-content`** [CSS](/ko/docs/Web/CSS) [단축 속성](/ko/docs/Web/CSS/Shorthand_properties) 은 [그리드](/ko/docs/Web/CSS/CSS_grid_layout) 혹은 [플렉스박스](/ko/docs/Web/CSS/CSS_flexible_box_layout) 같은 관계형 레이아웃 시템에서 블록 방향과 인라인 방향에서 한번에 콘텐츠를 정렬합니다. (예를 들어, {{CSSxRef("align-content")}} 와 {{CSSxRef("justify-content")}} 속성)
+**`place-content`** [CSS](/ko/docs/Web/CSS) [단축 속성](/ko/docs/Web/CSS/Shorthand_properties) 은 [그리드](/ko/docs/Web/CSS/CSS_grid_layout) 혹은 [플렉스박스](/ko/docs/Web/CSS/CSS_flexible_box_layout) 같은 관계형 레이아웃 시스템에서 블록 방향과 인라인 방향에서 한번에 콘텐츠를 정렬합니다. (예를 들어, {{CSSxRef("align-content")}} 와 {{CSSxRef("justify-content")}} 속성)
 
 {{EmbedInteractiveExample("pages/css/place-content.html")}}
 
@@ -20,27 +20,27 @@ l10n:
 ## 구문
 
 ```css
-/* Positional alignment */
-/* align-content does not take left and right values */
+/* 위치 정렬 */
+/* align-content 속성은 left 혹은 right 값을 사용하지 않습니다. */
 place-content: center start;
 place-content: start center;
 place-content: end left;
 place-content: flex-start center;
 place-content: flex-end center;
 
-/* Baseline alignment */
-/* justify-content does not take baseline values */
+/* 기준선 정렬 */
+/* justify-content 속성은 기준선 값을 사용하지 않습니다.*/
 place-content: baseline center;
 place-content: first baseline space-evenly;
 place-content: last baseline right;
 
-/* Distributed alignment */
+/* 균일한 분배 */
 place-content: space-between space-evenly;
 place-content: space-around space-evenly;
 place-content: space-evenly stretch;
 place-content: stretch space-evenly;
 
-/* Global values */
+/* 전역 값 */
 place-content: inherit;
 place-content: initial;
 place-content: revert;
@@ -198,9 +198,9 @@ direction.addEventListener("change", (evt) => {
   width: 240px;
   flex-wrap: wrap;
   background-color: #8c8c8c;
-  writing-mode: horizontal-tb; /* Can be changed in the live sample */
-  direction: ltr; /* Can be changed in the live sample */
-  place-content: flex-end center; /* Can be changed in the live sample */
+  writing-mode: horizontal-tb; /* 라이브 샘플에서 변경할 수 있습니다. */
+  direction: ltr; /* 라이브 샘플에서 변경할 수 있습니다. */
+  place-content: flex-end center; /* 라이브 샘플에서 변경할 수 있습니다. */
 }
 
 div > div {
@@ -234,9 +234,9 @@ div > div {
 
 ## 같이보기
 
-- CSS 플렉스박스 가이드: _[Basic Concepts of Flexbox](/ko/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- CSS 플렉스박스 가이드: _[Aligning items in a flex container](/ko/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
-- CSS 그리드 가이드: _[Box alignment in CSS Grid layouts](/ko/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
+- CSS 플렉스박스 가이드: [Basic Concepts of Flexbox](/ko/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- CSS 플렉스박스 가이드: [Aligning items in a flex container](/ko/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
+- CSS 그리드 가이드: [Box alignment in CSS Grid layouts](/ko/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
 - [CSS Box Alignment](/ko/docs/Web/CSS/CSS_box_alignment)
 - {{CSSxRef("align-content")}} 속성
 - {{CSSxRef("justify-content")}} 속성
