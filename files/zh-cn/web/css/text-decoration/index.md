@@ -11,9 +11,9 @@ l10n:
 
 {{EmbedInteractiveExample("pages/css/text-decoration.html")}}
 
-文本装饰会覆盖子文本元素。这意味着如果一个元素指定了文本装饰，那么子元素无法去除这个装饰。例如，在标记 `<p>这段文字中有<em>一些强调词</em>。</p>` 中，样式规则 `p { text-decoration: underline; }` 会导致整个段落被下划线划掉。样式规则 `em { text-decoration: none; }` 不会有任何变化；整个段落仍然会被下划线划掉。但是，规则 `em { text-decoration: overline; }` 会导致“some emphasized words”上出现第二个装饰。
+文本装饰会覆盖子文本元素。这意味着如果一个元素指定了文本装饰，那么子元素无法去除这个装饰。例如，在标记 `<p>这段文字中有<em>一些强调词</em>。</p>` 中，样式规则 `p { text-decoration: underline; }` 会导致整个段落包含下划线。样式规则 `em { text-decoration: none; }` 不会有任何变化；整个段落仍然会包含下划线。但是，规则 `em { text-decoration: overline; }` 会导致“一些强调词”上出现上划线。
 
-## 复合属性
+## 属性构成
 
 该属性是以下 CSS 属性的简写：
 
@@ -60,7 +60,7 @@ text-decoration: unset;
 
 ## 示例
 
-### 文本装饰值的演示
+### text-decoration 值的演示
 
 ```css
 .under {
