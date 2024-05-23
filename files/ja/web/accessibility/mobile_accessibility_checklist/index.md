@@ -58,7 +58,7 @@ slug: Web/Accessibility/Mobile_accessibility_checklist
   ```
 
 - `banner`、`complementary`、`contentinfo`、`main`、`navigation`、`search` のような [ARIA のランドマークロール](https://www.w3.org/TR/wai-aria/#landmark_roles)（英語）は、アプリやドキュメントの構造を説明するために使用**するべきです**（SHOULD）。
-- タッチイベントハンドラは、`touchend` イベントでのみトリガ**されなければならない**。
+- タッチイベントハンドラーは、`touchend` イベントでのみトリガ**されなければならない**。
 - タッチターゲットは、ユーザーが対話するのに十分な大きさ**でなければならない**（有用なタッチターゲットサイズのガイドラインについては、[BBC モバイルアクセシビリティ・ガイドライン](http://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile/design/touch-target-size)（英語）を参照してください）。
 
 > **メモ:** [この文書のオリジナル版](http://yzen.github.io/firefoxos/2014/04/30/mobile-accessibility-checklist.html)（英語）は、[Yura Zenevich](http://yzen.github.io/) によって書かれました。
