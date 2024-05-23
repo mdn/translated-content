@@ -1,8 +1,6 @@
 ---
 title: NOT lógico (!)
 slug: Web/JavaScript/Reference/Operators/Logical_NOT
-page-type: javascript-operator
-browser-compat: javascript.operators.logical_not
 ---
 
 {{jsSidebar("Operators")}}
