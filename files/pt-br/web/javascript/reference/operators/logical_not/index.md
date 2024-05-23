@@ -48,7 +48,7 @@ O código a seguir mostra exemplos do operador lógico NOT `!`:
 ### Duplo NOT (`!!`)
 
 É possível usar alguns operadores NOT em série para forçar explicitamente a conversão de qualquer valor para um [primitivo booleano](/pt-BR/docs/Web/JavaScript/Data_structures#boolean_type) correspondente.
-A conversão é baseada na “veracidade” ou “falsidade” do valor (veja
+A conversão é baseada na "veracidade" ou "falsidade" do valor (veja
 {{Glossary("truthy")}} e {{Glossary("falsy")}}).
 
 A mesma conversão pode ser feita através da função {{jsxref("Boolean/Boolean", "Boolean()")}} do JavaScript.
