@@ -105,7 +105,7 @@ text-decoration: unset;
 <p class="blink">此文本可能会为你闪烁，具体取决于你使用的浏览器。</p>
 ```
 
-{{EmbedLiveSample('文本装饰值的演示','auto','320')}}
+{{EmbedLiveSample('text-decoration 值的演示','auto','320')}}
 
 ## 规范
 
