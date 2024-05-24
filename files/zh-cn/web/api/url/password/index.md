@@ -7,7 +7,7 @@ l10n:
 
 {{ApiRef("URL API")}} {{AvailableInWorkers}}
 
-{{domxref("URL")}} 接口的 **`password`** 属性是包含在域名之前指定密码的字符串。
+{{domxref("URL")}} 接口的 **`password`** 属性是一个包含域名之前指定的密码的字符串。
 
 如果未设置 {{domxref("URL.username", "username")}} 属性而直接设置该属性，将导致静默失败。
 
@@ -21,7 +21,7 @@ l10n:
 const url = new URL(
   "https://anonymous:flabada@developer.mozilla.org/zh-CN/docs/Web/API/URL/password",
 );
-console.log(url.password); // 输出 "flabada"
+console.log(url.password); // 输出“flabada”
 ```
 
 ## 规范
