@@ -251,7 +251,6 @@ await pc.setLocalDescription({ type: "rollback" });
 
 #### 使用旧的 API 实现完美协商
 
-
 在完美协商过程中，使用先前的 API 来实现传入的协商消息可能如下所示：
 
 ```js example-bad
