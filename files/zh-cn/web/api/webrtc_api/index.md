@@ -26,6 +26,7 @@ WebRTC 有多种用途；与 [媒体捕获和流 API](/zh-CN/docs/Web/API/Media_
 WebRTC 在现代浏览器中通常得到很好的支持，但仍存在一些不兼容性。[adapter.js](https://github.com/webrtcHacks/adapter) 库是一个垫片，可以使应用程序免受这些不兼容性的影响。
 
 ## WebRTC 参考
+
 由于 WebRTC 提供了一系列共同工作以完成各种任务的接口，我们将参考资料按类别进行了划分。请参阅侧边栏中的按字母顺序排列的列表。
 
 ### 连接设置和管理
