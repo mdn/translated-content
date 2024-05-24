@@ -21,7 +21,7 @@ WebRTC 不会将 DTMF 代码作为音频数据发送。相反，它们作为 RTP
 
 ## 在 RTCPeerConnection 上发送 DTMF
 
-一个给定的 {{domxref("RTCPeerConnection")}} 可以在其上发送或接收多个媒体轨道。当你希望传输DTMF信号时，你首先需要决定要将它们发送到哪个轨道，因为DTMF被发送为一系列带外载荷，由负责将该轨道数据传输到其他对等方的 {{domxref("RTCRtpSender")}} 负责。
+一个给定的 {{domxref("RTCPeerConnection")}} 可以在其上发送或接收多个媒体轨道。当你希望传输 DTMF 信号时，你首先需要决定要将它们发送到哪个轨道，因为 DTMF 被发送为一系列带外载荷，由负责将该轨道数据传输到其他对等方的 {{domxref("RTCRtpSender")}} 负责。
 
 一旦选择了轨道，你可以从其 `RTCRtpSender` 获取你将用于发送DTMF的 {{domxref("RTCDTMFSender")}} 对象。从那里，你可以调用 {{domxref("RTCDTMFSender.insertDTMF()")}} 将DTMF信号排队以发送到其他对等方的轨道上。然后，`RTCRtpSender` 将将音调作为数据包与轨道的音频数据一起发送到其他对等方。
 
