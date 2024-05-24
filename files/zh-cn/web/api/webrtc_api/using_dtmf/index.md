@@ -25,7 +25,7 @@ WebRTC 不会将 DTMF 代码作为音频数据发送。相反，它们作为 RTP
 
 一旦选择了轨道，你可以从其 `RTCRtpSender` 获取你将用于发送 DTMF 的 {{domxref("RTCDTMFSender")}} 对象。从那里，你可以调用 {{domxref("RTCDTMFSender.insertDTMF()")}} 将 DTMF 信号排队以发送到其他对等方的轨道上。然后，`RTCRtpSender` 将将音调作为数据包与轨道的音频数据一起发送到其他对等方。
 
-每次发送音调时，`RTCPeerConnection` 都会接收到一个带有 {{domxref("RTCDTMFToneChangeEvent.tone", "tone")}} 属性的 [`tonechange`](/zh-CN/docs/Web/API/RTCDTMFSender/tonechange_event) 事件，该属性指定了播放完成的音调，这是更新界面元素的机会，例如。当音调缓冲区为空时，表示所有音调都已发送完成，连接对象将接收到一个带有其 `tone` 属性设置为""(空字符串)的 `tonechange` 事件。
+每次发送音调时，`RTCPeerConnection` 都会接收到一个带有 {{domxref("RTCDTMFToneChangeEvent.tone", "tone")}} 属性的 [`tonechange`](/zh-CN/docs/Web/API/RTCDTMFSender/tonechange_event) 事件，该属性指定了播放完成的音调，这是更新界面元素的机会，例如。当音调缓冲区为空时，表示所有音调都已发送完成，连接对象将接收到一个带有其 `tone` 属性设置为""(空字符串) 的 `tonechange` 事件。
 
 如果你想了解更多关于这是如何工作的信息，请阅读 {{RFC(3550, "RTP: A Transport Protocol for Real-Time Applications")}} 和 {{RFC(4733, "RTP Payload for DTMF Digits, Telephony Tones, and Telephony Signals")}} 。关于如何在 RTP 上处理 DTMF 载荷的详细信息超出了本文的范围。相反，我们将重点放在如何在 {{domxref("RTCPeerConnection")}} 上使用 DTMF，通过研究一个示例的工作原理。
 
