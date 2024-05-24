@@ -22,6 +22,7 @@ WebRTC 有多种用途；与 [媒体捕获和流 API](/zh-CN/docs/Web/API/Media_
 你还可以使用两个对等方之间的连接来交换任意二进制数据，使用 {{DOMxRef("RTCDataChannel")}} 接口。这可以用于背向通道信息、元数据交换、游戏状态数据包、文件传输，甚至作为数据传输的主要通道。
 
 ### 互操作性
+
 WebRTC 在现代浏览器中通常得到很好的支持，但仍存在一些不兼容性。[adapter.js](https://github.com/webrtcHacks/adapter) 库是一个垫片，可以使应用程序免受这些不兼容性的影响。
 
 ## WebRTC 参考
