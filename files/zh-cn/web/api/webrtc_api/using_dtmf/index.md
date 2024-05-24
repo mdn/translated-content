@@ -102,7 +102,7 @@ let logElement = null;
 - `offerOptions`
   - ：提供选项以在调用 {{domxref("RTCPeerConnection.createOffer()")}} 时指定。在这种情况下，我们声明我们想要接收音频但不要视频。
 - `dialButton` 和 `logElement`
-    - ：这些变量将用于存储对拨号按钮和将记录信息写入的 {{HTMLElement("div")}} 的引用。它们将在页面首次加载时设置。请参见下面的 [初始化](#初始化)。
+  - ：这些变量将用于存储对拨号按钮和将记录信息写入的 {{HTMLElement("div")}} 的引用。它们将在页面首次加载时设置。请参见下面的 [初始化](#初始化)。
 
 #### 初始化
 
