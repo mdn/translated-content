@@ -269,7 +269,7 @@ function handleCallerIceEvent(event) {
 
 #### 在连接打开后进行拨号
 
-我们的设计要求在连接建立后立即发送DTMF字符串。为了实现这一点，我们会监视呼叫方接收到 {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}} 事件。当ICE连接过程的状态发生变化，包括成功建立连接时，就会发送这个事件。
+我们的设计要求在连接建立后立即发送 DTMF 字符串。为了实现这一点，我们会监视呼叫方接收到 {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}} 事件。当 ICE 连接过程的状态发生变化，包括成功建立连接时，就会发送这个事件。
 
 ```js
 function handleCallerIceConnectionStateChange() {
