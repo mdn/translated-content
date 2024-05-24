@@ -920,7 +920,7 @@
 /ja/docs/DOM/window.confirm	/ja/docs/Web/API/Window/confirm
 /ja/docs/DOM/window.confirm-redirect-1	/ja/docs/Web/API/Window/confirm
 /ja/docs/DOM/window.content	/ja/docs/Web/API/Window
-/ja/docs/DOM/window.crypto	/ja/docs/Web/API/crypto_property
+/ja/docs/DOM/window.crypto	/ja/docs/Web/API/Window/crypto
 /ja/docs/DOM/window.defaultStatus	/ja/docs/Web/API/Window
 /ja/docs/DOM/window.document	/ja/docs/Web/API/Window/document
 /ja/docs/DOM/window.dump	/ja/docs/Web/API/Window/dump
@@ -1140,7 +1140,7 @@
 /ja/docs/DOM:window.closed	/ja/docs/Web/API/Window/closed
 /ja/docs/DOM:window.confirm	/ja/docs/Web/API/Window/confirm
 /ja/docs/DOM:window.content	/ja/docs/Web/API/Window
-/ja/docs/DOM:window.crypto	/ja/docs/Web/API/crypto_property
+/ja/docs/DOM:window.crypto	/ja/docs/Web/API/Window/crypto
 /ja/docs/DOM:window.defaultStatus	/ja/docs/Web/API/Window
 /ja/docs/DOM:window.document	/ja/docs/Web/API/Window/document
 /ja/docs/DOM:window.dump	/ja/docs/Web/API/Window/dump
@@ -3068,7 +3068,7 @@
 /ja/docs/Web/API/ServiceWorkerContainer/oncontrollerchange	/ja/docs/Web/API/ServiceWorkerContainer/controllerchange_event
 /ja/docs/Web/API/ServiceWorkerContainer/onerror	/ja/docs/Web/API/ServiceWorkerContainer/error_event
 /ja/docs/Web/API/ServiceWorkerContainer/onmessage	/ja/docs/Web/API/ServiceWorkerContainer/message_event
-/ja/docs/Web/API/ServiceWorkerGlobalScope/caches	/ja/docs/Web/API/caches
+/ja/docs/Web/API/ServiceWorkerGlobalScope/caches	/ja/docs/Web/API/Window/caches
 /ja/docs/Web/API/ServiceWorkerGlobalScope/onactivate	/ja/docs/Web/API/ServiceWorkerGlobalScope/activate_event
 /ja/docs/Web/API/ServiceWorkerGlobalScope/onfetch	/ja/docs/Web/API/ServiceWorkerGlobalScope/fetch_event
 /ja/docs/Web/API/ServiceWorkerGlobalScope/oninstall	/ja/docs/Web/API/ServiceWorkerGlobalScope/install_event
@@ -3156,7 +3156,6 @@
 /ja/docs/Web/API/Window/animationstart_event	/ja/docs/Web/API/Element/animationstart_event
 /ja/docs/Web/API/Window/arguments	/ja/docs/Web/API/Window
 /ja/docs/Web/API/Window/content	/ja/docs/Web/API/Window
-/ja/docs/Web/API/Window/crypto	/ja/docs/Web/API/crypto_property
 /ja/docs/Web/API/Window/defaultStatus	/ja/docs/Web/API/Window
 /ja/docs/Web/API/Window/dispatchEvent	/ja/docs/Web/API/EventTarget/dispatchEvent
 /ja/docs/Web/API/Window/escape	/ja/docs/Web/JavaScript/Reference/Global_Objects/escape
@@ -3208,7 +3207,7 @@
 /ja/docs/Web/API/WindowEventHandlers/onunload	/ja/docs/Web/API/Window/unload_event
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/atob	/ja/docs/Web/API/atob
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/btoa	/ja/docs/Web/API/btoa
-/ja/docs/Web/API/WindowOrWorkerGlobalScope/caches	/ja/docs/Web/API/caches
+/ja/docs/Web/API/WindowOrWorkerGlobalScope/caches	/ja/docs/Web/API/Window/caches
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval	/ja/docs/Web/API/clearInterval
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout	/ja/docs/Web/API/clearTimeout
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap	/ja/docs/Web/API/createImageBitmap
@@ -3225,7 +3224,7 @@
 /ja/docs/Web/API/WindowTimers/setTimeout	/ja/docs/Web/API/setTimeout
 /ja/docs/Web/API/Worker/onerror	/ja/docs/Web/API/Worker/error_event
 /ja/docs/Web/API/Worker/onmessageerror	/ja/docs/Web/API/Worker/messageerror_event
-/ja/docs/Web/API/WorkerGlobalScope/caches	/ja/docs/Web/API/caches
+/ja/docs/Web/API/WorkerGlobalScope/caches	/ja/docs/Web/API/Window/caches
 /ja/docs/Web/API/WorkerGlobalScope/console	/ja/docs/conflicting/Web/API/console
 /ja/docs/Web/API/XMLDocument/async	/ja/docs/Web/API/XMLDocument
 /ja/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest	/ja/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest
@@ -3246,6 +3245,7 @@
 /ja/docs/Web/API/XRTargetRayMode	/ja/docs/Web/API/XRInputSource/targetRayMode
 /ja/docs/Web/API/XSLTProcessor/Browser_Differences	/ja/docs/orphaned/Web/API/XSLTProcessor/Browser_Differences
 /ja/docs/Web/API/XSLTProcessor/Resources	/ja/docs/Web/API/XSLTProcessor
+/ja/docs/Web/API/caches	/ja/docs/Web/API/Window/caches
 /ja/docs/Web/API/console.dir	/ja/docs/Web/API/console/dir_static
 /ja/docs/Web/API/console.log	/ja/docs/Web/API/console/log_static
 /ja/docs/Web/API/console.time	/ja/docs/Web/API/console/time_static
@@ -3267,6 +3267,7 @@
 /ja/docs/Web/API/console/timeStamp	/ja/docs/Web/API/console/timestamp_static
 /ja/docs/Web/API/console/trace	/ja/docs/Web/API/console/trace_static
 /ja/docs/Web/API/console/warn	/ja/docs/Web/API/console/warn_static
+/ja/docs/Web/API/crypto_property	/ja/docs/Web/API/Window/crypto
 /ja/docs/Web/API/document.URL	/ja/docs/Web/API/Document/URL
 /ja/docs/Web/API/document.activeElement	/ja/docs/Web/API/Document/activeElement
 /ja/docs/Web/API/document.adoptNode	/ja/docs/Web/API/Document/adoptNode
@@ -3384,7 +3385,7 @@
 /ja/docs/Web/API/window.closed	/ja/docs/Web/API/Window/closed
 /ja/docs/Web/API/window.confirm	/ja/docs/Web/API/Window/confirm
 /ja/docs/Web/API/window.content	/ja/docs/Web/API/Window
-/ja/docs/Web/API/window.crypto	/ja/docs/Web/API/crypto_property
+/ja/docs/Web/API/window.crypto	/ja/docs/Web/API/Window/crypto
 /ja/docs/Web/API/window.defaultStatus	/ja/docs/Web/API/Window
 /ja/docs/Web/API/window.document	/ja/docs/Web/API/Window/document
 /ja/docs/Web/API/window.dump	/ja/docs/Web/API/Window/dump

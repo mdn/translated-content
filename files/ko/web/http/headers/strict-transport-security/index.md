@@ -75,7 +75,7 @@ Google은 [HSTS 프리로딩 서비스](https://hstspreload.org/)를 관리하�
 그러나 HSTS 사양의 일부가 아니므로 공식적인 것으로 취급해서는 안 됩니다.
 
 - Chrome의 HSTS 사전 로드 목록 관련 정보: <https://www.chromium.org/hsts>
-- Firefox HSTS 사전 로드 목록 참조: [nsSTSPreloadList.inc](https://hg.mozilla.org/mozilla-central/raw-file/tip/security/manager/ssl/nsSTSPreloadList.inc)
+- Firefox HSTS 사전 로드 목록 참조: [nsSTSPreloadList.inc](https://searchfox.org/mozilla-central/source/security/manager/ssl/nsSTSPreloadList.inc)
 
 ## 예제
 

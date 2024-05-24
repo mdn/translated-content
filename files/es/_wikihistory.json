@@ -5456,6 +5456,10 @@
     "modified": "2019-03-23T22:33:17.308Z",
     "contributors": ["Grijander81"]
   },
+  "Web/API/Window/caches": {
+    "modified": "2019-03-23T22:16:45.016Z",
+    "contributors": ["ivannieto"]
+  },
   "Web/API/Window/cancelAnimationFrame": {
     "modified": "2019-03-23T22:30:46.211Z",
     "contributors": ["khrizenriquez"]
@@ -5471,6 +5475,10 @@
   "Web/API/Window/confirm": {
     "modified": "2019-03-23T22:45:47.266Z",
     "contributors": ["julian3xl"]
+  },
+  "Web/API/Window/crypto": {
+    "modified": "2020-02-12T20:26:38.795Z",
+    "contributors": ["joseluisq", "AlePerez92", "victorjavierss"]
   },
   "Web/API/Window/devicePixelRatio": {
     "modified": "2019-03-23T22:33:20.853Z",
@@ -5696,10 +5704,6 @@
     "modified": "2020-08-29T03:33:22.030Z",
     "contributors": ["Nachec"]
   },
-  "Web/API/caches": {
-    "modified": "2019-03-23T22:16:45.016Z",
-    "contributors": ["ivannieto"]
-  },
   "Web/API/clearInterval": {
     "modified": "2019-03-23T22:56:16.485Z",
     "contributors": ["Guitxo"]
@@ -5763,10 +5767,6 @@
   "Web/API/createImageBitmap": {
     "modified": "2020-10-15T22:14:17.553Z",
     "contributors": ["Bumxu"]
-  },
-  "Web/API/crypto_property": {
-    "modified": "2020-02-12T20:26:38.795Z",
-    "contributors": ["joseluisq", "AlePerez92", "victorjavierss"]
   },
   "Web/API/fetch": {
     "modified": "2020-10-15T22:01:57.457Z",

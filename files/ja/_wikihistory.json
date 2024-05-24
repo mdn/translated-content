@@ -13899,6 +13899,10 @@
     "modified": "2020-10-15T21:36:49.995Z",
     "contributors": ["Marsf", "mfuji09", "Uemmra3", "Kenju"]
   },
+  "Web/API/Window/caches": {
+    "modified": "2020-10-15T21:49:48.643Z",
+    "contributors": ["Wind1808", "unarist", "YuichiNukiyama"]
+  },
   "Web/API/Window/cancelAnimationFrame": {
     "modified": "2019-03-23T23:34:36.038Z",
     "contributors": ["Marsf", "fscholz", "ethertank"]
@@ -13943,6 +13947,17 @@
   "Web/API/Window/copy_event": {
     "modified": "2020-10-15T22:27:12.990Z",
     "contributors": ["mfuji09"]
+  },
+  "Web/API/Window/crypto": {
+    "modified": "2020-10-15T21:16:38.249Z",
+    "contributors": [
+      "yumetodo",
+      "Marsf",
+      "fscholz",
+      "AshfaqHossain",
+      "ethertank",
+      "Potappo"
+    ]
   },
   "Web/API/Window/customElements": {
     "modified": "2020-10-15T22:08:55.255Z",
@@ -15050,10 +15065,6 @@
       "Potappo"
     ]
   },
-  "Web/API/caches": {
-    "modified": "2020-10-15T21:49:48.643Z",
-    "contributors": ["Wind1808", "unarist", "YuichiNukiyama"]
-  },
   "Web/API/clearInterval": {
     "modified": "2019-03-23T23:49:51.484Z",
     "contributors": [
@@ -15159,17 +15170,6 @@
   "Web/API/createImageBitmap": {
     "modified": "2020-10-15T22:34:31.000Z",
     "contributors": ["silverskyvicto"]
-  },
-  "Web/API/crypto_property": {
-    "modified": "2020-10-15T21:16:38.249Z",
-    "contributors": [
-      "yumetodo",
-      "Marsf",
-      "fscholz",
-      "AshfaqHossain",
-      "ethertank",
-      "Potappo"
-    ]
   },
   "Web/API/fetch": {
     "modified": "2020-10-15T21:41:32.875Z",

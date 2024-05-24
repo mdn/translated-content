@@ -13,7 +13,6 @@ slug: Glossary/Code_splitting
 
 ## 関連項目
 
-- Bundling
 - [Lazy loading](/ja/docs/Learn/Performance/Lazy_loading)
 - [HTTP/2](/ja/docs/Glossary/HTTP_2)
 - [Tree shaking](/ja/docs/Glossary/Tree_shaking)

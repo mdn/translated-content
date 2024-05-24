@@ -127,7 +127,7 @@ l10n:
 
 全てのフォーカスの変更がキーイベントやマウスイベントを介して行われるとは限りません。 スクリーンリーダーなどの支援技術では、フォーカスを任意のフォーカス可能な要素に設定できます。 代わりに `onfocus` と `onblur` を使ってフォーカスを追跡します。
 
-`onfocus` と `onblur` は全ての要素で使用できるようになりました。 現在のドキュメントのフォーカスを取得するための標準的な DOM インターフェースはありません。 フォーカスの状態を追跡したい場合は、[document.activeElement](/ja/docs/Web/API/Document/activeElement) を使ってアクティブな要素を取得できます。 [document.hasFocus](/ja/docs/Web/API/Document/hasFocus) を使って、現在のドキュメントのフォーカスかどうかを確認することもできます。
+`onfocus` と `onblur` は全ての要素で使用できるようになりました。 現在のドキュメントのフォーカスを取得するための標準的な DOM インターフェイスはありません。 フォーカスの状態を追跡したい場合は、[document.activeElement](/ja/docs/Web/API/Document/activeElement) を使ってアクティブな要素を取得できます。 [document.hasFocus](/ja/docs/Web/API/Document/hasFocus) を使って、現在のドキュメントのフォーカスかどうかを確認することもできます。
 
 ### テクニック 2: `aria-activedescendant`
 

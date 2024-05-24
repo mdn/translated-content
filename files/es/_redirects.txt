@@ -1722,7 +1722,6 @@
 /es/docs/Web/API/Window.onbeforeunload	/es/docs/Web/API/Window/beforeunload_event
 /es/docs/Web/API/Window.setTimeout	/es/docs/Web/API/setTimeout
 /es/docs/Web/API/Window/applicationCache	/es/docs/orphaned/Web/API/Window/applicationCache
-/es/docs/Web/API/Window/crypto	/es/docs/Web/API/crypto_property
 /es/docs/Web/API/Window/dialogArguments	/es/docs/orphaned/Web/API/Window/dialogArguments
 /es/docs/Web/API/WindowBase64.atob	/es/docs/Web/API/atob
 /es/docs/Web/API/WindowBase64/Base64_codificando_y_decodificando	/es/docs/Glossary/Base64
@@ -1732,7 +1731,7 @@
 /es/docs/Web/API/WindowEventHandlers/onhashchange	/es/docs/Web/API/Window/hashchange_event
 /es/docs/Web/API/WindowEventHandlers/onpopstate	/es/docs/Web/API/Window/popstate_event
 /es/docs/Web/API/WindowOrWorkerGlobalScope/atob	/es/docs/Web/API/atob
-/es/docs/Web/API/WindowOrWorkerGlobalScope/caches	/es/docs/Web/API/caches
+/es/docs/Web/API/WindowOrWorkerGlobalScope/caches	/es/docs/Web/API/Window/caches
 /es/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval	/es/docs/Web/API/clearInterval
 /es/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout	/es/docs/Web/API/clearTimeout
 /es/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap	/es/docs/Web/API/createImageBitmap
@@ -1749,6 +1748,7 @@
 /es/docs/Web/API/XMLHttpRequest/FormData	/es/docs/Web/API/FormData
 /es/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest	/es/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
 /es/docs/Web/API/XMLHttpRequest/onreadystatechange	/es/docs/Web/API/XMLHttpRequest/readystatechange_event
+/es/docs/Web/API/caches	/es/docs/Web/API/Window/caches
 /es/docs/Web/API/console/assert	/es/docs/Web/API/console/assert_static
 /es/docs/Web/API/console/count	/es/docs/Web/API/console/count_static
 /es/docs/Web/API/console/dir	/es/docs/Web/API/console/dir_static
@@ -1761,6 +1761,7 @@
 /es/docs/Web/API/console/timeEnd	/es/docs/Web/API/console/timeend_static
 /es/docs/Web/API/console/trace	/es/docs/Web/API/console/trace_static
 /es/docs/Web/API/console/warn	/es/docs/Web/API/console/warn_static
+/es/docs/Web/API/crypto_property	/es/docs/Web/API/Window/crypto
 /es/docs/Web/API/event.defaultPrevented	/es/docs/Web/API/Event/defaultPrevented
 /es/docs/Web/API/event.which	/es/docs/Web/API/UIEvent/which
 /es/docs/Web/API/indexedDB	/es/docs/Web/API/Window/indexedDB
