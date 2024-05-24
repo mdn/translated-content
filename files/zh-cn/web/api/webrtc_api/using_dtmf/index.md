@@ -96,7 +96,7 @@ let logElement = null;
 - `dtmfSender`
   - ：连接的 {{domxref("RTCDTMFSender")}} 对象。这将在设置连接时获取，在 [将音频添加到连接](#将音频添加到连接) 中的 `gotStream()` 函数中进行。
 - `hasAddTrack`
-    - ：由于一些浏览器尚未实现 {{domxref("RTCPeerConnection.addTrack()")}}，因此需要使用废弃的 {{domxref("RTCPeerConnection.addStream", "addStream()")}}方法，我们使用此布尔值来确定用户代理是否支持 `addTrack()`；如果不支持，我们将退回到 `addStream()`。这将在 `connectAndDial()` 中确定，如下[启动连接过程](#启动连接过程)所示。
+  - ：由于一些浏览器尚未实现 {{domxref("RTCPeerConnection.addTrack()")}}，因此需要使用废弃的 {{domxref("RTCPeerConnection.addStream", "addStream()")}}方法，我们使用此布尔值来确定用户代理是否支持 `addTrack()`；如果不支持，我们将退回到 `addStream()`。这将在 `connectAndDial()` 中确定，如下[启动连接过程](#启动连接过程)所示。
 - `mediaConstraints`
     - ：指定启动连接时要使用的约束的对象。我们只想要音频连接，所以 `video` 是 `false`，而 `audio` 是 `true`。
 - `offerOptions`
