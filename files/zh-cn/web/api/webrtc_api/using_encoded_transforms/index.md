@@ -7,7 +7,7 @@ l10n:
 
 {{DefaultAPISidebar("WebRTC")}}
 
-WebRTC编码转换提供了一种机制，可以将高性能的 [流API](/zh-CN/docs/Web/API/Streams_API) 注入到传入和传出的WebRTC管道中，用于修改编码的视频和音频帧。这使得第三方代码可以对编码帧进行端到端加密等用例。
+WebRTC 编码转换提供了一种机制，可以将高性能的 [流 API](/zh-CN/docs/Web/API/Streams_API) 注入到传入和传出的 WebRTC 管道中，用于修改编码的视频和音频帧。这使得第三方代码可以对编码帧进行端到端加密等用例。
 
 该API定义了主线程和工作线程的对象。主线程接口是一个 {{domxref("RTCRtpScriptTransform")}} 实例，其在构造时指定了要实现转换器代码的 {{domxref("Worker")}}。在工作线程中运行的转换器通过分别将 `RTCRtpScriptTransform` 添加到 {{domxref("RTCRtpReceiver.transform")}} 或 {{domxref("RTCRtpSender.transform")}} 中，插入到传入或传出的WebRTC管道中。
 
