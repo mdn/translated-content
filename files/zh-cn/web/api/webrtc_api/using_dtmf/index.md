@@ -200,7 +200,7 @@ function gotStream(stream) {
 
 接下来，我们查看是否实现了 {{domxref("RTCPeerConnection.getSenders()")}} 方法。如果实现了，我们在 `callerPC` 上调用它，并获取返回的发送器列表中的第一个条目；这是负责传输呼叫的第一个音频轨道数据的 {{domxref("RTCRtpSender")}}（这是我们将发送 DTMF 的轨道）。然后，我们获取 `RTCRtpSender` 的 {{domxref("RTCRtpSender.dtmf", "dtmf")}} 属性，它是一个 {{domxref("RTCDTMFSender")}} 对象，可以在连接中从呼叫方发送到接收方发送 DTMF。
 
-如果 `getSenders()` 不可用，我们将调用 {{domxref("RTCPeerConnection.createDTMFSender()")}} 来获取 `RTCDTMFSender` 对象。尽管这个方法已经过时，但这个示例支持它作为一个备用方法，让旧的浏览器（和尚未更新以支持当前WebRTC DTMF API的浏览器）运行这个示例。
+如果 `getSenders()` 不可用，我们将调用 {{domxref("RTCPeerConnection.createDTMFSender()")}} 来获取 `RTCDTMFSender` 对象。尽管这个方法已经过时，但这个示例支持它作为一个备用方法，让旧的浏览器（和尚未更新以支持当前 WebRTC DTMF API 的浏览器）运行这个示例。
 
 最后，我们设置 DTMF 发送器的 {{domxref("RTCDTMFSender.tonechange_event", "ontonechange")}} 事件处理程序，以便每当一个 DTMF 音调完成播放时都会收到通知。
 
