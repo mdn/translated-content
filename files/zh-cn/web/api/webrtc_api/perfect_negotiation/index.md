@@ -411,5 +411,5 @@ pc.oniceconnectionstatechange = () => {
 
 ## 参见
 
-- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
-- [WebRTC 会话的生命周期](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)
+- [WebRTC API](/zh-CN/docs/Web/API/WebRTC_API)
+- [WebRTC 会话的生命周期](/zh-CN/docs/Web/API/WebRTC_API/Session_lifetime)
