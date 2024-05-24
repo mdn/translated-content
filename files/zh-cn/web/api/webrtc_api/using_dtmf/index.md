@@ -119,7 +119,7 @@ window.addEventListener("load", () => {
 
 #### 启动连接过程
 
-当点击拨号按钮时，将调用 `connectAndDial()`。这将开始构建WebRTC连接，为发送DTMF代码做准备。
+当点击拨号按钮时，将调用 `connectAndDial()`。这将开始构建 WebRTC 连接，为发送 DTMF 代码做准备。
 
 ```js
 function connectAndDial() {
