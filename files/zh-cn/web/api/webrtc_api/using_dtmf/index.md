@@ -90,7 +90,7 @@ let logElement = null;
 它们依次是：
 
 - `dialString`
-    - ：当用户点击“拨号”按钮时，呼叫方将发送的 DTMF 字符串。
+  - ：当用户点击“拨号”按钮时，呼叫方将发送的 DTMF 字符串。
 - `callerPC` 和 `receiverPC`
     - ：分别表示呼叫方和接收方的 {{domxref("RTCPeerConnection")}} 对象。这些对象将在呼叫启动时初始化，在我们的 `connectAndDial()` 函数中，如下[启动连接过程](#启动连接过程)所示。
 - `dtmfSender`
