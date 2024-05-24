@@ -168,7 +168,7 @@ onrtctransform = (event) => {
 // 创建一个包含 TransformStream 的 Worker 脚本
 const worker = new Worker("worker.js");
 
-// 创建一个channel
+// 创建一个 channel
 // 将 channel.port2 作为构造函数选项传递给 transform，并将其传输到 worker。
 const channel = new MessageChannel();
 const transform = new RTCRtpScriptTransform(
