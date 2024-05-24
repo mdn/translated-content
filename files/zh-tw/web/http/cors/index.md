@@ -1,5 +1,5 @@
 ---
-title: 跨來源資源共享 (CORS)
+title: 跨來源資源共享（CORS）
 slug: Web/HTTP/CORS
 l10n:
   sourceCommit: 3c29ffa78c551ea6a61bbb795a5f97a66c6868c0
