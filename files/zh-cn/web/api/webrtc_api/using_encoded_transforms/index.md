@@ -34,7 +34,7 @@ const supportsEncodedTransforms =
 
 通过将相应的 `RTCRtpScriptTransform` 分配给传出轨道的 {{domxref("RTCRtpSender.transform")}}，将运行在工作线程中的转换插入到传出的 WebRTC 管道中。
 
-以下示例展示了如何从用户的网络摄像头通过WebRTC传输视频，并添加一个WebRTC编码转换以修改传出流。代码假设已经有一个名为 `peerConnection` 的 {{domxref("RTCPeerConnection")}}，并且已经连接到远程对等端。
+以下示例展示了如何从用户的网络摄像头通过 WebRTC 传输视频，并添加一个 WebRTC 编码转换以修改传出流。代码假设已经有一个名为 `peerConnection` 的 {{domxref("RTCPeerConnection")}}，并且已经连接到远程对等端。
 
 首先，我们使用 {{domxref("MediaDevices/getUserMedia", "getUserMedia()")}} 从媒体设备获取视频 {{domxref("MediaStream")}}，然后使用 {{domxref("MediaStream.getTracks()")}} 方法获取流中的第一个 {{domxref("MediaStreamTrack")}}。
 
