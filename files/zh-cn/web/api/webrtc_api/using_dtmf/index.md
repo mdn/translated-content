@@ -202,7 +202,7 @@ function gotStream(stream) {
 
 如果 `getSenders()` 不可用，我们将调用 {{domxref("RTCPeerConnection.createDTMFSender()")}} 来获取 `RTCDTMFSender` 对象。尽管这个方法已经过时，但这个示例支持它作为一个备用方法，让旧的浏览器（和尚未更新以支持当前WebRTC DTMF API的浏览器）运行这个示例。
 
-最后，我们设置DTMF发送器的 {{domxref("RTCDTMFSender.tonechange_event", "ontonechange")}} 事件处理程序，以便每当一个DTMF音调完成播放时都会收到通知。
+最后，我们设置 DTMF 发送器的 {{domxref("RTCDTMFSender.tonechange_event", "ontonechange")}} 事件处理程序，以便每当一个 DTMF 音调完成播放时都会收到通知。
 
 你可以在文档底部找到日志函数。
 
