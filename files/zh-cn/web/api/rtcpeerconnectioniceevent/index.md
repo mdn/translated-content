@@ -50,4 +50,4 @@ pc.onicecandidate = (ev) => {
 ## 参见
 
 - [WebRTC](/zh-CN/docs/Web/API/WebRTC_API)
-- 它通常的目标是：{{domxref("RTCPeerConnection")}}。
+- 通常的目标是：{{domxref("RTCPeerConnection")}}。
