@@ -7,7 +7,7 @@ l10n:
 
 {{ApiRef("URL API")}} {{AvailableInWorkers}}
 
-{{domxref("URL")}} 接口的 **`username`** 属性表示在域名前指定的用户名的字符串。
+{{domxref("URL")}} 接口的 **`username`** 属性是一个表示在域名前指定的用户名的字符串。
 
 ## 值
 
