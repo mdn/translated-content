@@ -37,7 +37,7 @@ WebRTC 不会将 DTMF 代码作为音频数据发送。相反，它们作为 RTP
 
 ### HTML
 
-这个示例的HTML非常基础，只有三个重要的元素：
+这个示例的 HTML 非常基础，只有三个重要的元素：
 
 - 一个 {{HTMLElement("audio")}} 元素用于播放由被“呼叫”的 `RTCPeerConnection` 接收到的音频。
 - 一个 {{HTMLElement("button")}} 元素用于触发创建和连接两个 `RTCPeerConnection` 对象，然后发送 DTMF 音调。
