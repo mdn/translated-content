@@ -199,7 +199,7 @@ event.transformer.options.port.onmessage = (event) => {
 
 为了确保在需要时尽早发送新的关键帧，`event.transformer` 中的 {{domxref("RTCRtpScriptTransformer")}} 对象有两种方法：{{domxref("RTCRtpScriptTransformer.generateKeyFrame()")}}，它会导致编解码器生成一个关键帧，和 {{domxref("RTCRtpScriptTransformer.sendKeyFrameRequest()")}}，它会导致接收方可以从发送方请求一个关键帧。
 
-下面的示例显示了主线程如何将加密密钥传递给发送方转换，并触发编解码器生成一个关键帧。请注意，主线程无法直接访问 {{domxref("RTCRtpScriptTransformer")}} 对象，因此它需要将密钥和限制标识符（"rid" 是流 ID，指示必须生成关键帧的编码器）传递给worker。在这里，我们使用了一个 `MessageChannel`，使用了与前一节相同的模式。代码假定已经有一个对等连接，并且 `videoSender` 是一个 {{domxref("RTCRtpSender")}}。
+下面的示例显示了主线程如何将加密密钥传递给发送方转换，并触发编解码器生成一个关键帧。请注意，主线程无法直接访问 {{domxref("RTCRtpScriptTransformer")}} 对象，因此它需要将密钥和限制标识符（"rid" 是流 ID，指示必须生成关键帧的编码器）传递给 worker。在这里，我们使用了一个 `MessageChannel`，使用了与前一节相同的模式。代码假定已经有一个对等连接，并且 `videoSender` 是一个 {{domxref("RTCRtpSender")}}。
 
 ```js
 const worker = new Worker("worker.js");
