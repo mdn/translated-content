@@ -28,7 +28,7 @@ l10n:
         {{Glossary("CORS-safelisted request header", "CORS 安全清單請求標頭")}}
       </th>
       <td>
-        是，但有額外限制，值只能是<code>0-9</code>、<code>A-Z</code>、<code>a-z</code>、空格或<code>*,-.;=</code>。
+        是，但有額外限制，值只能是 <code>0-9</code>、<code>A-Z</code>、<code>a-z</code>、空格或 <code>*,-.;=</code>。
       </td>
     </tr>
   </tbody>
@@ -78,5 +78,5 @@ Accept-Language: en-US,en;q=0.5
 ## 參見
 
 - HTTP [內容協商](/zh-TW/docs/Web/HTTP/Content_negotiation)
-- 協商結果的標頭: {{HTTPHeader("Content-Language")}}
-- 其他類似標頭: {{HTTPHeader("TE")}}、{{HTTPHeader("Accept-Encoding")}}、{{HTTPHeader("Accept")}}
+- 協商結果的標頭：{{HTTPHeader("Content-Language")}}
+- 其他類似標頭：{{HTTPHeader("TE")}}、{{HTTPHeader("Accept-Encoding")}}、{{HTTPHeader("Accept")}}
