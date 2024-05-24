@@ -125,7 +125,7 @@ JavaScript フレームワークは、最新のフロントエンドウェブ開
 - [5. 高度な Svelte: リアクティブ、ライフサイクル、アクセシビリティ](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
   - : この記事では、アプリの最終的な機能を追加し、さらにアプリをコンポーネント化します。オブジェクトや配列の更新に関連するリアクティビティの問題に対処する方法について学びます。よくある落とし穴を避けるために、 Svelte のリアクティブシステムを少し深く掘り下げる必要があります。また、アクセシビリティのフォーカスに関する問題の解決や、その他の問題にも目を向けていきます。
 - [6. Svelte のストアでの作業](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
-  - : この記事では、Svelteで状態管理を処理するもう一つの方法である[ストア](https://svelte.dev/tutorial/writable-stores)を示します。ストアは、値を格納するグローバルなデータリポジトリです。コンポーネントはストアに格納され、その値が変更されたときに通知を受け取ることができます。
+  - : この記事では、Svelteで状態管理を処理するもう一つの方法である[ストア](https://svelte.dev/tutorial/writable-stores)を示します。ストアは、値を格納するグローバルなデータリポジトリーです。コンポーネントはストアに格納され、その値が変更されたときに通知を受け取ることができます。
 - [7. TypeScript support in Svelte](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
   - : これで、 Svelte アプリケーションで TypeScript を使用する方法を学ぶことができます。まず、 TypeScript とは何か、そして TypeScript が私たちにもたらす好ましいこととは何かを学びます。次に、 TypeScript ファイルを使用して作業するために、プロジェクトをどのように設定するかを見ていきます。最後に、 TypeScript の機能を十分に活かすためにはどのような修正が必要なのか、アプリを確認します。
 - [8. 展開と次の手順](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
