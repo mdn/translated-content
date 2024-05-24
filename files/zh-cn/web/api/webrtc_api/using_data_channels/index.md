@@ -38,7 +38,7 @@ dataChannel.addEventListener("open", (event) => {
 
 要手动协商数据通道连接，你需要首先在 {{domxref("RTCPeerConnection")}} 上使用 {{domxref("RTCPeerConnection.createDataChannel", "createDataChannel()")}} 方法创建一个新的 {{domxref("RTCDataChannel")}} 对象，并在选项中指定一个设置为 `true` 的 `negotiated` 属性。这会向对等连接发出信号，告知其不要代表你尝试协商通道。
 
-然后通过外带方式协商连接，使用 Web 服务器或其他手段。此过程应向远程对等方发出信号，让其使用相同的 {{domxref("RTCDataChannel.id", "id")}}，也将 `negotiated` 属性设置为 `true`，创建自己的 `RTCDataChannel`。这将在   `RTCPeerConnection` 中将两个对象链接起来。
+然后通过外带方式协商连接，使用 Web 服务器或其他手段。此过程应向远程对等方发出信号，让其使用相同的 {{domxref("RTCDataChannel.id", "id")}}，也将 `negotiated` 属性设置为 `true`，创建自己的 `RTCDataChannel`。这将在 `RTCPeerConnection` 中将两个对象链接起来。
 
 ```js
 let dataChannel = pc.createDataChannel("MyApp Channel", {
