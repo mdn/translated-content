@@ -1,8 +1,8 @@
 ---
- title: Using WebRTC data channels
- slug: Web/API/WebRTC_API/Using_data_channels
- l10n:
-   sourceCommit: bf7a7b9c81c465afc78519681bf0043ad3587689
+title: Using WebRTC data channels
+slug: Web/API/WebRTC_API/Using_data_channels
+l10n:
+  sourceCommit: bf7a7b9c81c465afc78519681bf0043ad3587689
 ---
 
 {{DefaultAPISidebar("WebRTC")}}
