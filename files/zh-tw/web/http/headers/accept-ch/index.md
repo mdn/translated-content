@@ -43,7 +43,7 @@ Accept-CH: Viewport-Width, Width
 Vary: Viewport-Width, Width
 ```
 
-> **備註：** 請根據接受的用戶端提示來[改變回應](/zh-TW/docs/Web/HTTP/Client_hints#改變用戶端提示)。
+> **備註：** 請根據接受的用戶端提示來[改變回應](/zh-TW/docs/Web/HTTP/Client_hints#緩存和用戶端提示)。
 
 ## 規範
 
