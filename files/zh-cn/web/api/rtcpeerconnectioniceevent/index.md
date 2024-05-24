@@ -23,7 +23,7 @@ _{{domxref("RTCPeerConnectionIceEvent")}} 是 {{domxref("Event")}}，该事件�
 ## 构造函数
 
 - {{domxref("RTCPeerConnectionIceEvent.RTCPeerConnectionIceEvent()", "RTCPeerConnectionIceEvent()")}}
-  - : 返回一个新的 `RTCPeerConnectionIceEvent`。它接收两个参数，第一个是表示事件类型的字符串；第二个包含它所引用的 {{domxref("RTCIceCandidate")}} 的字典。
+  - : 返回新的 `RTCPeerConnectionIceEvent`。它接收两个参数，第一个是表示事件类型的字符串；第二个包含它所引用的 {{domxref("RTCIceCandidate")}} 的字典。
 
 ## 实例方法
 
