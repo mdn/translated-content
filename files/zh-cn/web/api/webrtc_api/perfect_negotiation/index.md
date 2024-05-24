@@ -78,7 +78,7 @@ async function start() {
 
 ### 处理传入的轨道
 
-接下来，我们需要为 {{domxref("RTCPeerConnection.track_event",, "track")}} 事件设置一个处理程序，以处理该对等连接协商接收的入站视频和音频轨迹。为此，我们实施了 {{domxref("RTCPeerConnection")}} 的 {{domxref("RTCPeerConnection.track_event", "ontrack")}} 事件处理程序。
+接下来，我们需要为 {{domxref("RTCPeerConnection.track_event", "track")}} 事件设置一个处理程序，以处理该对等连接协商接收的入站视频和音频轨迹。为此，我们实施了 {{domxref("RTCPeerConnection")}} 的 {{domxref("RTCPeerConnection.track_event", "ontrack")}} 事件处理程序。
 
 ```js
 pc.ontrack = ({ track, streams }) => {
