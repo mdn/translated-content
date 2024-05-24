@@ -1,8 +1,8 @@
 ---
- title: "Establishing a connection: The WebRTC perfect negotiation pattern"
- slug: Web/API/WebRTC_API/Perfect_negotiation
- l10n:
-   sourceCommit: 0b2db5ae5d76003622a3fb7dab024a1e31e72561
+title: "Establishing a connection: The WebRTC perfect negotiation pattern"
+slug: Web/API/WebRTC_API/Perfect_negotiation
+l10n:
+  sourceCommit: 0b2db5ae5d76003622a3fb7dab024a1e31e72561
 ---
 
 {{DefaultAPISidebar("WebRTC")}}
