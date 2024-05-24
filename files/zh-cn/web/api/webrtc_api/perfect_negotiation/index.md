@@ -49,7 +49,7 @@ const signaler = new SignalingChannel();
 const pc = new RTCPeerConnection(config);
 ```
 
-这段代码还使用 “selfview” 和 “remoteview” 类获取 {{HTMLElement("video")}} 元素；这些元素将分别包含本地用户的自我视图和来自远程对等点的输入流视图。
+这段代码还使用“selfview”和“remoteview”类获取 {{HTMLElement("video")}} 元素；这些元素将分别包含本地用户的自我视图和来自远程对等点的输入流视图。
 
 ### 连接到远程对等点
 
