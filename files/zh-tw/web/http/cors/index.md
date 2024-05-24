@@ -19,7 +19,7 @@ CORS 機制支持瀏覽器和伺服器之間的安全跨來源請求和數據傳
 
 ## 什麼請求使用 CORS？
 
-這個[跨來源共享標準](https://fetch.spec.whatwg.org/#http-cors-protocol) 可以啟用以下跨來源 HTTP 請求：
+這個[跨來源共享標準](https://fetch.spec.whatwg.org/#http-cors-protocol)可以啟用以下跨來源 HTTP 請求：
 
 - 上述的 `fetch()` 或 `XMLHttpRequest` 的調用。
 - Web 字體（在 CSS 中使用 `@font-face` 進行跨域字體使用），[以便伺服器可以部署僅允許跨來源加載並由被允許的網站使用的 TrueType 字體。](https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements)
@@ -31,7 +31,7 @@ CORS 機制支持瀏覽器和伺服器之間的安全跨來源請求和數據傳
 
 ## 功能概述
 
-跨來源資源共享標準通過新增 [HTTP 標頭](/zh-TW/docs/Web/HTTP/Headers)來工作，這些標頭讓伺服器描述哪些來源被允許從 Web 瀏覽器讀取該訊息。此外，對於可能對伺服器數據產生副作用的 HTTP 請求方法（特別是 {{HTTPMethod("GET")}} 以外的 HTTP 方法，或具有特定 [MIME 類型](/zh-TW/docs/Web/HTTP/Basics_of_HTTP/MIME_types）的 {{HTTPMethod("POST")}} 方法)，規範要求瀏覽器「預檢」該請求，通過 HTTP {{HTTPMethod("OPTIONS")}} 請求方法向伺服器詢問支持的方法，然後在獲得伺服器「批准」後發送實際請求。伺服器還可以通知用戶端是否應該與請求一起發送「憑證」（例如 [Cookies](/zh-TW/docs/Web/HTTP/Cookies) 和 [HTTP 身份驗證](/zh-TW/docs/Web/HTTP/Authentication)）。
+跨來源資源共享標準通過新增 [HTTP 標頭](/zh-TW/docs/Web/HTTP/Headers)來工作，這些標頭讓伺服器描述哪些來源被允許從 Web 瀏覽器讀取該訊息。此外，對於可能對伺服器數據產生副作用的 HTTP 請求方法（特別是 {{HTTPMethod("GET")}} 以外的 HTTP 方法，或具有特定 [MIME 類型](/zh-TW/docs/Web/HTTP/Basics_of_HTTP/MIME_types)的 {{HTTPMethod("POST")}} 方法），規範要求瀏覽器「預檢」該請求，通過 HTTP {{HTTPMethod("OPTIONS")}} 請求方法向伺服器詢問支持的方法，然後在獲得伺服器「批准」後發送實際請求。伺服器還可以通知用戶端是否應該與請求一起發送「憑證」（例如 [Cookies](/zh-TW/docs/Web/HTTP/Cookies) 和 [HTTP 身份驗證](/zh-TW/docs/Web/HTTP/Authentication)）。
 
 CORS 失敗會導致錯誤，但出於安全原因，關於錯誤的具體訊息對 JavaScript 是不可用的。代碼只知道發生了錯誤。確定具體錯誤的唯一方法是查看瀏覽器的控制台以獲取詳細訊息。
 
@@ -43,7 +43,7 @@ CORS 失敗會導致錯誤，但出於安全原因，關於錯誤的具體訊息
 
 ### 簡單請求
 
-某些請求不會觸發 {{Glossary("Preflight_request","CORS 預檢請求")}}。這些請求被稱為*簡單請求*，這個術語來自過時的 [CORS 規範](https://www.w3.org/TR/2014/REC-cors-20140116/#terminology)，儘管現在定義 CORS 的 [Fetch 規範](https://fetch.spec.whatwg.org/)並未使用該術語。
+某些請求不會觸發{{Glossary("Preflight_request","CORS 預檢請求")}}。這些請求被稱為*簡單請求*，這個術語來自過時的 [CORS 規範](https://www.w3.org/TR/2014/REC-cors-20140116/#terminology)，儘管現在定義 CORS 的 [Fetch 規範](https://fetch.spec.whatwg.org/)並未使用該術語。
 
 這個概念的動機在於，來自 HTML 4.0 的 {{HTMLElement("form")}} 元素（早於跨站點 {{domxref("fetch()")}} 和 {{domxref("XMLHttpRequest")}}）可以向任何來源提交簡單請求，因此編寫伺服器的人必須已經防範{{Glossary("CSRF", "跨站請求偽造")}}（CSRF）。基於這個假設，伺服器不必通過回應預檢請求來選擇接收任何看起來像表單提交的請求，因為 CSRF 的威脅不會比表單提交更糟糕。然而，伺服器仍然必須通過使用 {{HTTPHeader("Access-Control-Allow-Origin")}} 來選擇*共享*回應與腳本。
 
@@ -168,7 +168,7 @@ fetchPromise.then((response) => {
 
 > **備註：** 如下所述，實際的 `POST` 請求不包括 `Access-Control-Request-*` 標頭。它們僅在 `OPTIONS` 請求中需要。
 
-讓我們看看用戶端和伺服器之間的完整交換。第一個交換是*預檢請求/回應*：
+讓我們看看用戶端和伺服器之間的完整交換。第一個交換是*預檢請求／回應*：
 
 ```http
 OPTIONS /doc HTTP/1.1
@@ -216,7 +216,7 @@ Access-Control-Max-Age: 86400
 
 伺服器還發送了帶有值「`X-PINGOTHER, Content-Type`」的 `Access-Control-Allow-Headers`，確認這些是允許與實際請求一起使用的標頭。像 `Access-Control-Allow-Methods` 一樣，`Access-Control-Allow-Headers` 是一個以逗號分隔的可接受標頭列表。
 
-最後，{{HTTPHeader("Access-Control-Max-Age")}} 給出了預檢查請求的回應可以在不發送另一個預檢查請求的情況下緩存的秒數值。默認值為 5 秒。在本例中，最大年齡是 86400 秒（= 24 小時）。請注意，每個瀏覽器都有一個 [最大內部值](/zh-TW/docs/Web/HTTP/Headers/Access-Control-Max-Age)，當 `Access-Control-Max-Age` 超過該值時，該值優先。
+最後，{{HTTPHeader("Access-Control-Max-Age")}} 給出了預檢查請求的回應可以在不發送另一個預檢查請求的情況下緩存的秒數值。默認值為 5 秒。在本例中，最大年齡是 86400 秒（= 24 小時）。請注意，每個瀏覽器都有一個[最大內部值](/zh-TW/docs/Web/HTTP/Headers/Access-Control-Max-Age)，當 `Access-Control-Max-Age` 超過該值時，該值優先。
 
 一旦預檢查請求完成，真正的請求就會被發送：
 
@@ -469,7 +469,7 @@ Origin: <origin>
 Access-Control-Request-Method: <method>
 ```
 
-此用法的範例可以[在上面找到](#預檢請求)
+此用法的範例可以[在上面找到](#預檢請求)。
 
 ### Access-Control-Request-Headers
 
@@ -479,7 +479,7 @@ Access-Control-Request-Method: <method>
 Access-Control-Request-Headers: <field-name>[,<field-name>]*
 ```
 
-此用法的範例可以[在上面找到。](#預檢請求)
+此用法的範例可以[在上面找到](#預檢請求)。
 
 ## 規範
 
@@ -495,7 +495,7 @@ Access-Control-Request-Headers: <field-name>[,<field-name>]*
 - [啟用 CORS：我想為我的伺服器添加 CORS 支持](https://enable-cors.org/server.html)
 - [Fetch API](/zh-TW/docs/Web/API/Fetch_API)
 - {{domxref("XMLHttpRequest")}}
-- [Will it CORS?](https://httptoolkit.com/will-it-cors/) - 一個互動式的CORS解釋器和生成器
+- [Will it CORS?](https://httptoolkit.com/will-it-cors/)——一個互動式的 CORS 解釋器和生成器
 - [如何在沒有 CORS 的情況下運行 Chrome 瀏覽器](https://alfilatov.com/posts/run-chrome-without-cors/)
 - [在所有（現代）瀏覽器中使用 CORS](https://www.telerik.com/blogs/using-cors-with-all-modern-browsers)
 - [Stack Overflow 回答，包含處理常見問題的「操作方法」訊息](https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe/43881141#43881141):
