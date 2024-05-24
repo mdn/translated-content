@@ -1,11 +1,13 @@
 ---
 title: Map.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/Map/set
+l10n:
+  sourceCommit: 3cfd663738e9963157d90f359789d675a6662ec2
 ---
 
 {{JSRef}}
 
-La méthode **`set()`** ajoute un nouvel élément avec une `clé` et une `valeur` données à un objet `Map`.
+La méthode **`set()`** ajoute ou met à jour un élément avec une `clé` et une `valeur` données à un objet `Map`.
 
 {{EmbedInteractiveExample("pages/js/map-prototype-set.html")}}
 
