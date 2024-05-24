@@ -258,4 +258,3 @@ event.transformer.options.port.onmessage = (event) => {
 - {{domxref("RTCRtpScriptTransformer")}}
 - {{domxref("RTCEncodedVideoFrame")}}
 - {{domxref("RTCEncodedAudioFrame")}}
-
