@@ -5,13 +5,13 @@ slug: Web/HTML/Element/figcaption
 
 {{HTMLSidebar}}
 
-**HTML `<figcaption>` 元素** 是用来描述其父节点 {{HTMLElement("figure")}} 元素里的其余内容的标题或说明。为 `<figure>` 提供一个 {{glossary("accessible description")}}。
+**`<figcaption>`** [HTML](/zh-CN/docs/Web/HTML) 元素是用来描述其父节点 {{HTMLElement("figure")}} 元素里的其余内容的标题或说明。为 `<figure>` 提供一个{{glossary("accessible description", "无障碍描述")}}。
 
 {{EmbedInteractiveExample("pages/tabbed/figcaption.html","tabbed-shorter")}}
 
 ## 属性
 
-该元素仅包含 [global attributes](/zh-CN/docs/Web/HTML/Global_attributes).
+该元素仅包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
 ## 示例
 
