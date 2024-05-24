@@ -11,7 +11,7 @@ WebRTC 编码转换提供了一种机制，可以将高性能的 [流 API](/zh-C
 
 该 API 定义了主线程和工作线程的对象。主线程接口是一个 {{domxref("RTCRtpScriptTransform")}} 实例，其在构造时指定了要实现转换器代码的 {{domxref("Worker")}}。在工作线程中运行的转换器通过分别将 `RTCRtpScriptTransform` 添加到 {{domxref("RTCRtpReceiver.transform")}} 或 {{domxref("RTCRtpSender.transform")}} 中，插入到传入或传出的 WebRTC 管道中。
 
-在工作线程中创建了一个对应的 {{domxref("RTCRtpScriptTransformer")}} 对象，它具有一个 {{domxref("ReadableStream")}} `readable` 属性，一个 {{domxref("WritableStream")}} `writable` 属性，以及一个从关联的 {{domxref("RTCRtpScriptTransform")}} 构造函数传递的 `options` 对象。来自WebRTC管道的编码视频帧（{{domxref("RTCEncodedVideoFrame")}}）或音频帧（{{domxref("RTCEncodedAudioFrame")}}）会被入队到 `readable` 上进行处理。
+在工作线程中创建了一个对应的 {{domxref("RTCRtpScriptTransformer")}} 对象，它具有一个 {{domxref("ReadableStream")}} `readable` 属性，一个 {{domxref("WritableStream")}} `writable` 属性，以及一个从关联的 {{domxref("RTCRtpScriptTransform")}} 构造函数传递的 `options` 对象。来自 WebRTC 管道的编码视频帧（{{domxref("RTCEncodedVideoFrame")}}）或音频帧（{{domxref("RTCEncodedAudioFrame")}}）会被入队到 `readable` 上进行处理。
 
 `RTCRtpScriptTransformer` 作为 {{domxref("DedicatedWorkerGlobalScope/rtctransform_event", "rtctransform")}} 事件的 `transformer` 属性向代码提供，该事件在每次编码帧被入队进行处理时（以及在相应的 {{domxref("RTCRtpScriptTransform")}} 构造函数的初始时）在工作线程全局范围内触发。工作线程代码必须实现一个事件处理程序，从 `transformer.readable` 中读取编码帧，根据需要对其进行修改，并按照相同的顺序且不重复地将它们写入 `transformer.writable`。
 
