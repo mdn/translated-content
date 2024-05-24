@@ -80,4 +80,4 @@ function fetchVideo() {
 ## 参见
 
 - [Fetch API](/zh-CN/docs/Web/API/Fetch_API)
-- [可中止的 Fetch](https://developer.chrome.com/blog/abortable-fetch/) by Jake Archibald
+- Jake Archibald 的[可中止的 Fetch](https://developer.chrome.com/blog/abortable-fetch/)
