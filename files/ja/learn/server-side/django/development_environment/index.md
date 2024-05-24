@@ -443,7 +443,7 @@ Git（と GitHub）は、コードを格納する最上位の「バケツ」と�
 
 1. GitHubで、緑の **Code** ボタンをクリックします。
    "Clone" の節で、"HTTPS" タブを選択し、URL をコピーしてください。
-   リポジトリー名 "django\_local\_library" を使用した場合、URL は `https://github.com/<git\_ユーザー\_id>/django_local_library.git` のようになります。
+   リポジトリー名 "django_local_library" を使用した場合、URL は `https://github.com/<git\_ユーザー\_id>/django_local_library.git` のようになります。
 
 2. コンピューターに _git_ をインストールしてください（さまざまなプラットフォーム用のバージョンは[ここ](https://git-scm.com/downloads)で探すことができます）。
 3. コマンドプロンプト/端末を開き、上記でコピーした URL を使用してリポジトリーをクローンしてください。
