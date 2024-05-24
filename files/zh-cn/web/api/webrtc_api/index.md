@@ -1,8 +1,8 @@
 ---
- title: WebRTC API
- slug: Web/API/WebRTC_API
- l10n:
-   sourceCommit: 9716100b38b40f0f2ee8b3bfa2c692958868c5a6
+title: WebRTC API
+slug: Web/API/WebRTC_API
+l10n:
+  sourceCommit: 9716100b38b40f0f2ee8b3bfa2c692958868c5a6
 ---
 
 {{DefaultAPISidebar("WebRTC")}}
