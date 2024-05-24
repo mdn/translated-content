@@ -33,7 +33,7 @@ L'objet `Map` courant (auquel l'élément a été ajouté).
 ### Utiliser la méthode `set()`
 
 ```js
-var maMap = new Map();
+const maMap = new Map();
 
 // On ajoute de nouveaux éléments à l'objet map
 maMap.set("truc", "toto");
