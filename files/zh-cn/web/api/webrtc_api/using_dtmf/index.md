@@ -388,7 +388,7 @@ function handleReceiverAddStreamEvent(event) {
 
 #### 日志记录
 
-代码中使用了一个简单的 `log()` 函数，用于将HTML附加到一个 {{HTMLElement("div")}} 盒子中，以向用户显示状态和错误。
+代码中使用了一个简单的 `log()` 函数，用于将 HTML 附加到一个 {{HTMLElement("div")}} 盒子中，以向用户显示状态和错误。
 
 ```js
 function log(msg) {
