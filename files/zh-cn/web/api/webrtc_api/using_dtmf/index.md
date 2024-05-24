@@ -1,8 +1,8 @@
 ---
- title: Using DTMF with WebRTC
- slug: Web/API/WebRTC_API/Using_DTMF
- l10n:
-   sourceCommit: f92df19cdf44d4352b89e446dc1b9d1e5addcbe1
+title: Using DTMF with WebRTC
+slug: Web/API/WebRTC_API/Using_DTMF
+l10n:
+  sourceCommit: f92df19cdf44d4352b89e446dc1b9d1e5addcbe1
 ---
 
 {{DefaultAPISidebar("WebRTC")}}
