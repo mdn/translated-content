@@ -313,7 +313,7 @@ function handleCallerNegotiationNeeded() {
       return receiverPC.setLocalDescription(answer);
     })
     .then(() => {
-      log("Setting caller's remote description to match");
+      log("设置呼叫方的远程描述以匹配");
       return callerPC.setRemoteDescription(receiverPC.localDescription);
     })
     .catch((err) => log(`Error during negotiation: ${err.message}`));
