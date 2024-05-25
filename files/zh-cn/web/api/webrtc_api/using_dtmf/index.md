@@ -151,7 +151,7 @@ function connectAndDial() {
 
 在为呼叫方（`callerPC`）创建 `RTCPeerConnection` 后，我们查看它是否具有 {{domxref("RTCPeerConnection.addTrack", "addTrack()")}} 方法。如果有，我们将 `hasAddTrack` 设置为 `true`；否则，我们将其设置为 `false`。这个变量将让示例即使在尚未实现较新的 `addTrack()` 方法的浏览器上也能运行；我们将通过退回到较旧的 {{domxref("RTCPeerConnection.addStream", "addStream()")}} 方法来实现。
 
-接下来，为呼叫方建立了事件处理程序。我们稍后将详细介绍这些。
+接下来，为呼叫方建立了事件处理器。我们稍后将详细介绍这些。
 
 然后创建第二个 `RTCPeerConnection`，代表呼叫的接收端，并存储在 `receiverPC` 中；它的 `onicecandidate` 事件处理程序也被设置了。
 
