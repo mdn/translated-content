@@ -2,7 +2,7 @@
 title: Blink
 slug: Glossary/Blink
 l10n:
-  sourceCommit: 5288fecd2bcd65bde5ecef008684d3cb343c7b34
+  sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
 ---
 
 {{GlossarySidebar}}
