@@ -300,7 +300,7 @@ function handleCallerNegotiationNeeded() {
     })
     .then(() => {
       log(
-        "Setting receiver's remote description to the same as caller's local",
+        "将接收方的远程描述设置为与呼叫方的本地描述相同",
       );
       return receiverPC.setRemoteDescription(callerPC.localDescription);
     })
