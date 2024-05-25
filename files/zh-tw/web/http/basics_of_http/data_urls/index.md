@@ -102,7 +102,7 @@ lots of text…
 - 不支持查詢字串等
   - : Data URL 的數據部分是不透明的，因此嘗試在 Data URL 中使用查詢字串（頁面特定參數，語法為 `<url>?parameter-data`）將只是將查詢字串包含在 URL 表示的數據中。
 - 安全問題
-  - : 一些與 Data URL 相關的安全問題（例如釣魚），以及在瀏覽器的頂層導航到 Data URL 的問題。為了減輕這些問題，現代瀏覽器在頂層導航中禁止 Data URL。詳情請參見[Mozilla 安全團隊的這篇博客文章](https://blog.mozilla.org/security/2017/11/27/blocking-top-level-navigations-data-urls-firefox-59/)。
+  - : 一些與 Data URL 相關的安全問題（例如釣魚），以及在瀏覽器的頂層導航到 Data URL 的問題。為了減輕這些問題，現代瀏覽器在頂層導航中禁止 Data URL。詳情請參見[Mozilla 安全團隊的這篇部落格文章](https://blog.mozilla.org/security/2017/11/27/blocking-top-level-navigations-data-urls-firefox-59/)。
 
 ## 規範
 
@@ -115,7 +115,7 @@ lots of text…
 ## 參見
 
 - [Base64](/zh-TW/docs/Glossary/Base64)
-- [URL 編碼](https://en.wikipedia.org/wiki/URL_encoding)
+- [URL 編碼](https://zh.wikipedia.org/wiki/百分号编码)
 - {{domxref("atob","atob()")}}
 - {{domxref("btoa","btoa()")}}
 - [CSS `url()`](/zh-TW/docs/Web/CSS/url)
