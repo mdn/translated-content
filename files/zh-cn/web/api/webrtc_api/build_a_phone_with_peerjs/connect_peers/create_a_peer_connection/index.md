@@ -13,11 +13,12 @@ l10n:
 
 1.  让我们创建一个变量来存储 ID，并创建一个函数来请求用户输入它，稍后我们将调用它。将以下内容添加到 script.js 文件的底部：
 
-    ```js
-   let code;
-   function getStreamCode() {
-     code = window.prompt("Please enter the sharing code");
-   }
+        ```js
+
+    let code;
+    function getStreamCode() {
+    code = window.prompt("Please enter the sharing code");
+    }
     ```
 
     window.prompt() 方法提供了一种方便的方式来获取相关的对等方ID — 你可以在需要收集对等方ID以创建连接时使用它。
