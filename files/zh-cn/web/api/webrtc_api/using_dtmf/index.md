@@ -316,7 +316,7 @@ function handleCallerNegotiationNeeded() {
       log("设置呼叫方的远程描述以匹配");
       return callerPC.setRemoteDescription(receiverPC.localDescription);
     })
-    .catch((err) => log(`Error during negotiation: ${err.message}`));
+    .catch((err) => log(`协商过程中出错：${err.message}`));
 }
 ```
 
