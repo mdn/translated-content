@@ -85,7 +85,7 @@ peerConnection.ontrack = (event) => {
 
 ## Worker 实现
 
-工作线程脚本必须实现一个处理 {{domxref("DedicatedWorkerGlobalScope/rtctransform_event", "rtctransform")}} 事件的处理程序，创建一个 [管道链](/zh-CN/docs/Web/API/Streams_API/Concepts#pipe_chains)，将 `event.transformer.readable`（{{DOMxRef("ReadableStream")}}）流通过 {{DOMxRef("TransformStream")}} 传输到 `event.transformer.writable`（{{DOMxRef("WritableStream")}}）流中。
+工作线程脚本必须实现一个处理 {{domxref("DedicatedWorkerGlobalScope/rtctransform_event", "rtctransform")}} 事件的处理程序，创建一个[链式管道](/zh-CN/docs/Web/API/Streams_API/Concepts#链式管道传输)，将 `event.transformer.readable`（{{DOMxRef("ReadableStream")}}）流通过 {{DOMxRef("TransformStream")}} 传输到 `event.transformer.writable`（{{DOMxRef("WritableStream")}}）流中。
 
 工作线程可能支持转换传入或传出的编码帧，也可能同时支持两者，并且转换可能是硬编码的，也可能是在运行时使用从 Web 应用传递的信息配置的。
 
