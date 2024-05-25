@@ -9,7 +9,7 @@ l10n:
 
 {{PreviousMenuNext("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Show_hide_html", "Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Creating_a_call")}}
 
-接下来，你需要确保用户有一种与其对等方连接的方法。为了连接两个对等方，你需要其中一个的对等方ID。
+接下来，你需要确保用户有一种与其对等方连接的方法。为了连接两个对等方，你需要其中一个的对等方 ID。
 
 1. 让我们创建一个变量来存储ID，并创建一个函数来请求用户输入它，稍后我们将调用它。将以下内容添加到script.js文件的底部：
 
