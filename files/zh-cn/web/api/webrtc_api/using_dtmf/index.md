@@ -165,7 +165,7 @@ function connectAndDial() {
 
 ```js
 function gotStream(stream) {
-  log("Got access to the microphone.");
+  log("已获取麦克风访问权限。");
 
   let audioTracks = stream.getAudioTracks();
 
