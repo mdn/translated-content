@@ -1,6 +1,8 @@
 ---
 title: 编写 MathML
 slug: Web/MathML/Authoring
+l10n:
+   sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{MathMLRef}}
@@ -20,13 +22,13 @@ slug: Web/MathML/Authoring
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
-    <title>MathML in HTML5</title>
+    <title>HTML5中的MathML</title>
   </head>
   <body>
-    <h1>MathML in HTML5</h1>
+    <h1>HTML5中的MathML</h1>
 
     <p>
-      One over square root of two (inline style):
+      一分之根号二（行内样式）：
       <math>
         <mfrac>
           <mn>1</mn>
@@ -38,7 +40,7 @@ slug: Web/MathML/Authoring
     </p>
 
     <p>
-      One over square root of two (display style):
+      一分之根号二（展示样式）：
       <math display="block">
         <mfrac>
           <mn>1</mn>
@@ -115,20 +117,20 @@ slug: Web/MathML/Authoring
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
-    <title>MathML in HTML5</title>
+    <title>HTML5中的MathML</title>
     <script src="https://fred-wang.github.io/TeXZilla/TeXZilla-min.js"></script>
     <script src="https://fred-wang.github.io/TeXZilla/examples/customElement.js"></script>
   </head>
   <body>
-    <h1>MathML in HTML5</h1>
+    <h1>HTML5中的MathML</h1>
 
     <p>
-      One over square root of two (inline style):
+      一分之根号二（行内样式）：
       <la-tex>\frac{1}{\sqrt{2}}</la-tex>
     </p>
 
     <p>
-      One over square root of two (display style):
+      一分之根号二（展示样式）：
       <la-tex display="block">\frac{1}{\sqrt{2}}</la-tex>
     </p>
   </body>
@@ -155,11 +157,11 @@ slug: Web/MathML/Authoring
   </head>
   <body>
     ...
-    <p>One over square root of two (inline style, ASCIIMath): `1/(sqrt 2)`</p>
+    <p>一分之根号二（行内样式，ASCIIMath）：`1/(sqrt 2)`</p>
     ...
-    <p>One over square root of two (inline style, jqMath): $1/√2$</p>
+    <p>一分之根号二（行内样式，jqMath）：$1/√2$</p>
     ...
-    <p>One over square root of two (display style, jqMath): $$1/√2$$</p>
+    <p>一分之根号二（展示样式，jqMath）：$$1/√2$$</p>
     ...
   </body>
 </html>
@@ -174,14 +176,14 @@ slug: Web/MathML/Authoring
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
-    <title>MathML in HTML5</title>
+    <title>HTML5中的MathML</title>
   </head>
   <body>
-    <h1>MathML in HTML5</h1>
+    <h1>HTML5中的MathML</h1>
 
-    <p>One over square root of two (inline style): $\frac{1}{\sqrt{2}}$</p>
+    <p>一分之根号二（行内样式）：$\frac{1}{\sqrt{2}}$</p>
 
-    <p>One over square root of two (display style): $$\frac{1}{\sqrt{2}}$$</p>
+    <p>一分之根号二（展示样式）：$$\frac{1}{\sqrt{2}}$$</p>
   </body>
 </html>
 ```
@@ -199,13 +201,13 @@ cat input.html | node TeXZilla.js streamfilter > output.html
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
-    <title>MathML in HTML5</title>
+    <title>HTML5中的MathML</title>
   </head>
   <body>
-    <h1>MathML in HTML5</h1>
+    <h1>HTML5中的MathML</h1>
 
     <p>
-      One over square root of two (inline style):
+      一分之根号二（行内样式）：
       <math xmlns="http://www.w3.org/1998/Math/MathML"
         ><semantics
           ><mfrac
@@ -216,7 +218,7 @@ cat input.html | node TeXZilla.js streamfilter > output.html
     </p>
 
     <p>
-      One over square root of two (display style):
+      一分之根号二（展示样式）：
       <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"
         ><semantics
           ><mfrac
