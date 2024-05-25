@@ -295,7 +295,7 @@ function handleCallerNegotiationNeeded() {
   callerPC
     .createOffer(offerOptions)
     .then((offer) => {
-      log(`Setting caller's local description: ${offer.sdp}`);
+      log(`设置呼叫方的本地描述：${offer.sdp}`);
       return callerPC.setLocalDescription(offer);
     })
     .then(() => {
