@@ -340,7 +340,7 @@ function handleCallerSignalingStateChangeEvent() {
 }
 
 function handleCallerGatheringStateChangeEvent() {
-  log(`Caller's ICE gathering state changed to ${callerPC.iceGatheringState}`);
+  log(`呼叫方的 ICE 收集状态已更改为 ${callerPC.iceGatheringState}`);
 }
 ```
 
