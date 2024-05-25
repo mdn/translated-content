@@ -10,16 +10,16 @@ l10n:
 
 JavaScript **提升**是指解释器在执行代码之前，似乎将函数、变量、类或导入的*声明*移动到其作用域的顶部的过程。
 
-*提升*不是 ECMAScript 规范中规范定义的术语。规范确实将一组声明定义为[可提升的声明](https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#prod-HoistableDeclaration)，但这只包括 [`function`](/zh-CN/docs/Web/JavaScript/Reference/Statements/function)、[`function*`](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)、[`async function`](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function) 以及 [`async function*`](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function*) 声明。提升通常也被认为是 [`var`](/zh-CN/docs/Web/JavaScript/Reference/Statements/var) 声明的一个特性，尽管方式不同。用通俗的话来说，以下任何行为都可以被视为提升：
+*提升*不是 ECMAScript 规范中规范定义的术语。规范确实将一组声明定义为[*可提升的声明*](https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#prod-HoistableDeclaration)，但这只包括 [`function`](/zh-CN/docs/Web/JavaScript/Reference/Statements/function)、[`function*`](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)、[`async function`](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function) 以及 [`async function*`](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function*) 声明。提升通常也被认为是 [`var`](/zh-CN/docs/Web/JavaScript/Reference/Statements/var) 声明的一个特性，尽管方式不同。用通俗的话来说，以下任何行为都可以被视为提升：
 
 1. 能够在声明变量之前在其作用域中使用该变量的值。（“值提升”）
-2. 能够在声明变量之前在其作用域中引用该变量而不抛出 {{jsxref("ReferenceError")}}，但值始终是 undefined。（“声明提升”）
+2. 能够在声明变量之前在其作用域中引用该变量而不抛出 {{jsxref("ReferenceError")}}，但值始终是 [`undefined`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined)。（“声明提升”）
 3. 变量的声明导致在声明行之前的作用域中行为发生变化。
 4. 声明的副作用在评估包含该声明的其余代码之前产生。
 
-前面说到的四种函数声明的提升表现为第 1 种行为；`var` 声明的提升表现为第 2 种行为；[`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let)、[`const`](/zh-CN/docs/Web/JavaScript/Reference/Statements/const) 和 [`class`](/zh-CN/docs/Web/JavaScript/Reference/Statements/class) 声明（也称为*词法声明*）的提升表现为第 3 种行为；[import](/zh-CN/docs/Web/JavaScript/Reference/Statements/import) 声明的提升表现为第 1 和第 4 种行为。
+前面说到的四种函数声明的提升表现为第 1 种行为；`var` 声明的提升表现为第 2 种行为；[`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let)、[`const`](/zh-CN/docs/Web/JavaScript/Reference/Statements/const) 和 [`class`](/zh-CN/docs/Web/JavaScript/Reference/Statements/class) 声明（也称为*词法声明*）的提升表现为第 3 种行为；[`import`](/zh-CN/docs/Web/JavaScript/Reference/Statements/import) 声明的提升表现为第 1 和第 4 种行为。
 
-有些人更倾向于将 `let`、`const` 和 `class` 视为不提升的，因为[暂时性死区](/zh-CN/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)严格禁止在声明之前使用变量。这种看法是可以接受的，因为提升并不是一个普遍认同的术语。然而，暂时性死区可以导致其作用域内的其他可观察变化，这表明存在某种形式的提升：
+有些人更倾向于将 `let`、`const` 和 `class` 视为不提升的，因为[暂时性死区](/zh-CN/docs/Web/JavaScript/Reference/Statements/let#暂时性死区)严格禁止在声明之前使用变量。这种看法是可以接受的，因为提升并不是一个普遍认同的术语。然而，暂时性死区可以导致其作用域内的其他可观察变化，这表明存在某种形式的提升：
 
 ```js
 const x = 1;
