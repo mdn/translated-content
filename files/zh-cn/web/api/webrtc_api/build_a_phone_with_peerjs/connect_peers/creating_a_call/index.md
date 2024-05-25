@@ -11,7 +11,7 @@ l10n:
 
 令人兴奋的时刻 — 现在你将让用户能够创建通话。
 
-1. 首先，通过将以下内容添加到`script.js`文件的底部，获取对HTML中定义的“Call”按钮的引用：
+1. 首先，通过将以下内容添加到`script.js`文件的底部，获取对 HTML 中定义的“Call”按钮的引用：
 
     ```js
    const callBtn = document.querySelector(".call-btn");
