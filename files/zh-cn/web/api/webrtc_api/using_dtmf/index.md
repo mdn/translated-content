@@ -409,4 +409,4 @@ function log(msg) {
 - [WebRTC API](/zh-CN/docs/Web/API/WebRTC_API)
 - [WebRTC 会话的生命周期](/zh-CN/docs/Web/API/WebRTC_API/Session_lifetime)
 - [信令与视频通话](/zh-CN/docs/Web/API/WebRTC_API/Signaling_and_video_calling)（一个更详细地解释信令过程的教程和示例）
-- [WebRTC 协议简介](/zh-CN/docs/Web/API/WebRTC_API/Protocols)
+- [WebRTC 协议介绍](/zh-CN/docs/Web/API/WebRTC_API/Protocols)
