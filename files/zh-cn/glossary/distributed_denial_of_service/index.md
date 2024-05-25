@@ -28,4 +28,4 @@ l10n:
 
 ## 参见
 
-- 维基百科上的[拒绝服务攻击](https://zh.wikipedia.org/zh-cn/阻斷服務攻擊)
+- 维基百科上的[拒绝服务攻击](https://zh.wikipedia.org/wiki/阻斷服務攻擊)

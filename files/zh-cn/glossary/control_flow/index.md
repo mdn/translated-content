@@ -29,6 +29,6 @@ if (isEmpty(field)) {
 
 ## 参见
 
-- MDN 上的 [JavaScript 参考——控制流](/zh-CN/docs/Web/JavaScript/Reference#control_flow)
+- [JavaScript 参考——控制流](/zh-CN/docs/Web/JavaScript/Reference#控制流)
 - MDN 上的[语句（控制流）](/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
 - 维基百科上的[控制流程](https://zh.wikipedia.org/wiki/控制流程)

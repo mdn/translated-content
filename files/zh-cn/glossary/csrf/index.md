@@ -17,7 +17,7 @@ l10n:
 
 对于在 `https://www.example.com` 有权限的用户，这个 `<img>` 标签会在他们根本注意不到的情况下对 `https://www.example.com` 执行这个操作，即使这个标签根本不在 `https://www.example.com` 内亦可。
 
-有很多预防跨站请求伪造的方法，比如实现 {{glossary("REST", "RESTful API")}}，增加 secure token 等等。
+有很多预防跨站请求伪造的方法，比如实现 {{glossary("REST", "RESTful API")}}、增加安全令牌等。
 
 ## 参见
 
