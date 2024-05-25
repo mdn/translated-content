@@ -348,7 +348,7 @@ function handleCallerGatheringStateChangeEvent() {
 
 当接收方的 `RTCPeerConnection` ICE 层提出一个新的候选者时，它会向 `receiverPC` 发出一个 {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} 事件。`icecandidate` 事件处理器的工作是将候选者传输给呼叫方。在我们的示例中，我们直接控制呼叫方和接收方，所以我们可以直接通过调用其 {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} 方法将候选者添加到呼叫方。这由 `handleReceiverIceEvent()` 处理。
 
-这段代码类似于上面 [添加候选者到呼叫方](#添加候选者到呼叫方) 中看到的呼叫方的 `icecandidate` 事件处理程序。
+这段代码类似于上面[添加候选者到呼叫方](#添加候选者到呼叫方)中看到的呼叫方的 `icecandidate` 事件处理器。
 
 ```js
 function handleReceiverIceEvent(event) {
