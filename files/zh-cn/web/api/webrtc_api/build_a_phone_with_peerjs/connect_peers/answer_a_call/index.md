@@ -55,6 +55,6 @@ l10n:
 
 3. 现在你已经有足够的代码来创建通话并接听它。刷新你的浏览器并进行测试。确保两个浏览器都打开了控制台，否则你将无法获得回答通话的提示。点击呼叫，提交另一个浏览器的对等 ID，然后接听通话。最终页面应该如下所示：
 
-    ![两个屏幕并排，都是深奶油色的背景，用深绿色的粗体字显示着“给朋友打电话”。紧接着是“你已连接”的字样，再下方是“请使用耳机！”和“你已自动静音，请取消静音！”。接着是一个大的深红色按钮，上面用与背景相同的深奶油色写着“挂断”。](screens_side_by_side.png)
+   ![两个屏幕并排，都是深奶油色的背景，用深绿色的粗体字显示着“给朋友打电话”。紧接着是“你已连接”的字样，再下方是“请使用耳机！”和“你已自动静音，请取消静音！”。接着是一个大的深红色按钮，上面用与背景相同的深奶油色写着“挂断”。](screens_side_by_side.png)
 
 {{PreviousMenuNext("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Creating_a_call", "Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/End_a_call")}}
