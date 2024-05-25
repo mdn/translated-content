@@ -175,7 +175,7 @@ function gotStream(stream) {
     }
   } else {
     log(
-      "Your browser doesn't support RTCPeerConnection.addTrack(). Falling " +
+      "你的浏览器不支持 RTCPeerConnection.addTrack()。正在退回到 <strong>已弃用</strong>的 addStream() 方法…",
         "back to the <strong>deprecated</strong> addStream() method…",
     );
     callerPC.addStream(stream);
