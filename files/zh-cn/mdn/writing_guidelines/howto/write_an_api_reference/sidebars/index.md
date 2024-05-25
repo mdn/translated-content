@@ -1,6 +1,8 @@
 ---
 title: API 参考侧边栏
 slug: MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars
+l10n:
+  sourceCommit: fc7310a85a8e6d5c0677dfaffba9b8fbbadc94a9
 ---
 
 {{MDNSidebar}}

@@ -84,7 +84,7 @@ API 参考一般会包含以下页面。你可以在我们的[页面类型](/zh-
 
 - 我们要为定义在实现该接口的对象原型上的方法（实例方法），以及定义在实际类本身上的方法（静态方法）撰写文档。在极少数情况下，如果它们都存在于同一个接口上，你应该把它们列在页面上的不同部分（静态方法/实例方法）。通常只有实例方法存在，在这种情况下，你可以把这些方法放在“Methods”标题下。
 - 不必为接口的继承属性和方法撰写文档：它们被列在各自的父接口上。不过我们确实暗示了它们的存在。
-- 我们确实为定义在 mixin 中的属性和方法撰写文档。请参阅 [mixins 的贡献指南](/zh-CN/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file#mixins)了解更多细节。
+- 我们确实为定义在 mixin 中的属性和方法撰写文档。请参阅[混入的贡献指南](/zh-CN/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file#混入)了解更多细节。
 - 如果存在特殊方法，如字符串化方法（`toString()`）和 JSON 化方法（`toJSON()`），也会列出。
 - 如果存在具名的构造函数（如 {{domxref("HTMLImageElement")}} 的 `Image()`），也会列出。
 
@@ -331,4 +331,4 @@ API 着陆页的长度会有很大的不同，这取决于 API 有多大，但�
 
 ## 侧边栏
 
-一旦你创建了你的 API 参考页面，你要在上面插入正确的侧边栏，把这些页面联系在一起。我们的 [API 参考侧边栏](/zh-CN/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars)指南解释了如何操作。
+一旦你创建了你的 API 参考页面，你要在上面插入正确的侧边栏，把这些页面联系在一起。我们的 [API 参考侧边栏](/zh-CN/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars)指南解释了如何操作。
