@@ -1,5 +1,5 @@
 ---
-title: Using WebRTC data channels
+title: 使用 WebRTC 数据通道
 slug: Web/API/WebRTC_API/Using_data_channels
 l10n:
   sourceCommit: bf7a7b9c81c465afc78519681bf0043ad3587689
