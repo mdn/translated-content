@@ -1,8 +1,8 @@
 ---
- title: Creating a Call
- slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Creating_a_call
- l10n:
-   sourceCommit: 65cd9754ed95f116b641c68cad80f14ecf580b41
+title: Creating a Call
+slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Creating_a_call
+l10n:
+  sourceCommit: 65cd9754ed95f116b641c68cad80f14ecf580b41
 ---
 
 {{DefaultAPISidebar("WebRTC")}}
