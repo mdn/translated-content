@@ -9,7 +9,7 @@ l10n:
 
 {{PreviousMenuNext("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Setup", "Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers")}}
 
-在本文中，我们将为我们的电话应用程序设置服务器。服务器文件看起来像一个常规的Express服务器文件，只有一个区别，即Peer服务器。
+在本文中，我们将为我们的电话应用程序设置服务器。服务器文件看起来像一个常规的 Express 服务器文件，只有一个区别，即 Peer 服务器。
 
 1. 首先，在与之前创建的HTML和CSS文件相同的位置创建一个名为`server.js`的文件。这是我们应用程序的入口点，如我们的`package.json`文件中定义的那样。
 2. 你需要在`server.js`文件的顶部启动你的代码，通过引入Peer服务器，以确保我们可以访问Peer服务器：
