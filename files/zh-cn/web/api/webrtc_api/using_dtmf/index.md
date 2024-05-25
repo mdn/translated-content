@@ -305,7 +305,7 @@ function handleCallerNegotiationNeeded() {
       return receiverPC.setRemoteDescription(callerPC.localDescription);
     })
     .then(() => {
-      log("Creating answer");
+      log("创建应答");
       return receiverPC.createAnswer();
     })
     .then((answer) => {
