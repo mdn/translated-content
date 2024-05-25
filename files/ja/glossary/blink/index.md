@@ -12,7 +12,7 @@ Blink は、 Google によって Chromium の一部（それゆえ {{glossary("G
 ## 関連情報
 
 - Blink プロジェクト[ホームページ](https://www.chromium.org/blink/)
-- [Blink](https://ja.wikipedia.org/wiki/Blink_(レンダリングエンジン))（ウィキペディア）
+- [Blink](<https://ja.wikipedia.org/wiki/Blink_(レンダリングエンジン)>)（ウィキペディア）
 - [FAQ](https://www.chromium.org/blink/developer-faq/) (Blink)
 - [用語集](/ja/docs/Glossary)
   - {{glossary("Google Chrome")}}
