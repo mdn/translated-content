@@ -42,7 +42,7 @@ The following changes were made to the [`CanvasRenderingContext2D`](/ja/docs/Web
 
 - [`<textarea>`](/ja/docs/Web/HTML/Element/textarea) 要素をデフォルトでサイズ変更できるようになりました。これを無効にするために [`resize`](/ja/docs/Web/CSS/resize) CSS プロパティが利用できます。
 - `canvas.getContext` および `canvas.toDataURL` が認識できない引数を指定して呼び出したときに例外を投げなくなりました。
-- [`<canvas>`](/ja/docs/Web/HTML/Element/canvas) 要素に Mozilla 固有の `mozGetAsFile()` メソッドが追加されました。これを用いることで、Canvas の内容である画像を含んだメモリベースのファイルを保持できます。詳細は [`HTMLCanvasElement`](/ja/docs/Web/API/HTMLCanvasElement) を参照してください。
+- [`<canvas>`](/ja/docs/Web/HTML/Element/canvas) 要素に Mozilla 固有の `mozGetAsFile()` メソッドが追加されました。これを用いることで、Canvas の内容である画像を含んだメモリーベースのファイルを保持できます。詳細は [`HTMLCanvasElement`](/ja/docs/Web/API/HTMLCanvasElement) を参照してください。
 - `canvas2dcontext.lineCap` および `canvas2dcontext.lineJoin` が認識できない値を設定したときに例外を投げなくなりました。
 - `canvas2dcontext.globalCompositeOperation` が認識できない値を設定したときに例外を投げなくなりました。また、非標準の値 `darker` をサポートしなくなりました。
 - 他のブラウザーでは実装されておらず、非推奨 な要素である [`<spacer>`](/ja/docs/Web/HTML/Element/spacer) 要素のサポートが無くなりました。
@@ -355,7 +355,7 @@ Firefox 4 向けに既存の拡張を更新する上で役立つ Tips は、[Upd
 <!---->
 
 - [`nsIDocShell`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDocShell) および [`nsIWebBrowser`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebBrowser) インターフェイスに新しく `isActive` 属性が追加されました。これは現在表示されていないドキュメントのためにコードパスを最適化することを許可するために用いることができます。
-- [`nsIMemory`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMemory) のメソッドである [`isLowMemory()`](/ja/docs/XPCOM_Interface_Reference/nsIMemory/isLowMemory) は非推奨になりました。低メモリ状況を監視するには ["memory-pressure" 通知](/ja/docs/XPCOM_Interface_Reference/nsIMemory#Low_memory_notifications) を用いることが推奨されます。
+- [`nsIMemory`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMemory) のメソッドである [`isLowMemory()`](/ja/docs/XPCOM_Interface_Reference/nsIMemory/isLowMemory) は非推奨になりました。低メモリー状況を監視するには ["memory-pressure" 通知](/ja/docs/XPCOM_Interface_Reference/nsIMemory#Low_memory_notifications) を用いることが推奨されます。
 - HTTP チャンネル上でリダイレクトを扱う API が非同期で動作できるように変更されました。[`nsIChannelEventSink.onChannelRedirect()`](</ja/docs/XPCOM_Interface_Reference/nsIChannelEventSink#onChannelRedirect()>) を用いてリダイレクトを扱う実装を行なっているコードは `nsIChannelEventSink.asyncOnChannelRedirect` を代わりに用いて更新する必要があります。これはリダイレクトが正常に完了したときに呼び出されるコールバックハンドラーを受け入れます。
 - [`nsINavHistoryResultObserver.batching()`](</ja/docs/XPCOM_Interface_Reference/nsINavHistoryResultObserver#batching()>) メソッドが追加されました。このメソッドは Places 操作をバッチにグループ化する方法を提供し、送られてくる更新通知の数を減少させ、その結果、オブザーバが（ビューをリフレッシュするような）相対的にタスクを追加するときのパフォーマンスを向上させます。
 - 長い間廃止状態であった [`nsIPref`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIPref) インターフェイスがついに削除されました。まだ [`nsIPrefService`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIPrefService) に移行していないなら、今がそのときです。
@@ -364,10 +364,10 @@ Firefox 4 向けに既存の拡張を更新する上で役立つ Tips は、[Upd
 - [`nsIPrompt`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIPrompt) インターフェイスがタブモーダルアラートをサポートするようになりました。詳細は[タブモーダルプロンプトの利用](/ja/docs/Using_tab-modal_prompts)を参照してください。
 - [`nsIEffectiveTLDService.getPublicSuffixFromHost()`](</ja/docs/XPCOM_Interface_Reference/nsIEffectiveTLDService#getPublicSuffixFromHost()>) メソッドがピリオド (".") で始まるホスト名を正しく拒否するようになりました。
 
-### メモリ管理
+### メモリー管理
 
-- [確実なメモリアロケーション](/ja/docs/Infallible_memory_allocation)
-  - : Mozilla は null を返さないことを保証する確実なメモリアロケータを複数提供するようになりました。この記事を読んでそれらがどのように動作し、どのようにして不確実な、あるいは、確実なメモリアロケーションを明確に指定して呼び出すのかを学んでください。
+- [確実なメモリーアロケーション](/ja/docs/Infallible_memory_allocation)
+  - : Mozilla は null を返さないことを保証する確実なメモリーアロケーターを複数提供するようになりました。この記事を読んでそれらがどのように動作し、どのようにして不確実な、あるいは、確実なメモリーアロケーションを明確に指定して呼び出すのかを学んでください。
 
 ### その他の変更
 

@@ -48,7 +48,7 @@ Firefox 15 は 2012 年 8 月 28 日にリリースされました。この記�
 
 ### WebGL
 
-- [`WEBGL_compressed_texture_s3tc`](/ja/docs/WebGL/Using_Extensions#WEBGL_compressed_texture_s3tc) 拡張のサポートが追加されました。圧縮されたテクスチャは GPU 上でテクスチャを保持するために必要なメモリの量を減少させます。その結果、より高解像度なテクスチャや同解像度でもより多くのテクスチャを扱えます。
+- [`WEBGL_compressed_texture_s3tc`](/ja/docs/WebGL/Using_Extensions#WEBGL_compressed_texture_s3tc) 拡張のサポートが追加されました。圧縮されたテクスチャは GPU 上でテクスチャを保持するために必要なメモリーの量を減少させます。その結果、より高解像度なテクスチャや同解像度でもより多くのテクスチャを扱えます。
 
 ### MathML
 
