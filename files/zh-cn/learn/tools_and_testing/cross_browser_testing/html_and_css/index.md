@@ -45,9 +45,9 @@ HTML 和 CSS 的问题在于，它们相当简单，简单到开发人员通常�
 
 ## 首先：解决一般问题
 
-在本系列的 [第一篇文章](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction#Testingdiscovery) 中，我们提到了一个有效的策略：首先在几种现代桌面和移动浏览器上测试你的代码以确保其正常运行，然后再解决跨浏览器的兼容性问题。
+在本系列的[第一篇文章](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction#Testingdiscovery)中，我们提到了一个有效的策略：首先在几种现代桌面和移动浏览器上测试你的代码以确保其正常运行，然后再解决跨浏览器的兼容性问题。
 
-在我们的 [调试 HTML](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML) 和 [调试 CSS](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS) 文章中，我们也提供了一些基础的 HTML 和 CSS 调试指南——如果你对这些基础知识还不太熟悉，建议你在继续之前先阅读这些内容。
+在我们的[调试 HTML](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML) 和[调试 CSS](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS) 文章中，我们也提供了一些基础的 HTML 和 CSS 调试指南——如果你对这些基础知识还不太熟悉，建议你在继续之前先阅读这些内容。
 
 总的来说，这涉及到检查你的 HTML 和 CSS 代码是否格式规范、无任何语法错误。
 
@@ -55,7 +55,7 @@ HTML 和 CSS 的问题在于，它们相当简单，简单到开发人员通常�
 
 ### 验证
 
-在编写 HTML 时，请确保所有标签都被正确关闭和嵌套，声明正确的 DOCTYPE，并且恰当使用各种标签。一个有效的策略是定期对代码进行验证。[W3C 标记验证服务](https://validator.w3.org/) 就提供了这样的功能，只需提交你的代码，它便会列出所有错误。
+在编写 HTML 时，请确保所有标签都被正确关闭和嵌套，声明正确的 DOCTYPE，并且恰当使用各种标签。一个有效的策略是定期对代码进行验证。[W3C 标记验证服务](https://validator.w3.org/)就提供了这样的功能，只需提交你的代码，它便会列出所有错误。
 
 ![HTML 验证器主页](validator.png)
 
@@ -81,7 +81,7 @@ HTML 和 CSS 的问题在于，它们相当简单，简单到开发人员通常�
 
 大多数浏览器中内置的开发者工具也提供了有用的工具来查找错误，主要是针对 CSS 的。
 
-> **备注：** 在开发工具中，HTML 错误不会直接显示，因为浏览器会尝试自动纠正错误的标记；目前，W3C 验证器是佳的获取 HTML 错误的方法——请参阅上面的 [验证](#验证)。
+> **备注：** 在开发工具中，HTML 错误不会直接显示，因为浏览器会尝试自动纠正错误的标记；目前，W3C 验证器是佳的获取 HTML 错误的方法——请参阅上面的[验证](#验证)。
 
 例如，在 Firefox 中，CSS 检查器将显示未应用的 CSS 声明，并带有警告三角形。悬停在警告三角上，其将提供描述性的错误信息：
 
@@ -95,9 +95,9 @@ HTML 和 CSS 的问题在于，它们相当简单，简单到开发人员通常�
 
 ### 浏览器不支持新特性
 
-这是一个常见的问题，特别是当你需要支持旧版浏览器或者使用某些浏览器尚未完全实现的功能时。总体而言，大多数核心的 HTML 和 CSS 功能（如基本的 HTML 元素、CSS 基本颜色和文本样式）适用于你需要支持的所有浏览器；当你开始使用较新的 HTML、CSS 和 API 时，可能会出现更多问题。MDN 显示了每个特性的浏览器兼容性数据；例如，请参阅 `:has()` 伪类的 [浏览器支持表格](/zh-CN/docs/Web/CSS/:has#浏览器兼容性)。
+这是一个常见的问题，特别是当你需要支持旧版浏览器或者使用某些浏览器尚未完全实现的功能时。总体而言，大多数核心的 HTML 和 CSS 功能（如基本的 HTML 元素、CSS 基本颜色和文本样式）适用于你需要支持的所有浏览器；当你开始使用较新的 HTML、CSS 和 API 时，可能会出现更多问题。MDN 显示了每个特性的浏览器兼容性数据；例如，请参阅 `:has()` 伪类的[浏览器支持表格](/zh-CN/docs/Web/CSS/:has#浏览器兼容性)。
 
-一旦你确定了将要使用但不被普遍支持的技术列表，最好研究一下它们在哪些浏览器中受支持，以及相关的有用技巧。请参阅下面的 [寻求帮助](#寻找帮助)。
+一旦你确定了将要使用但不被普遍支持的技术列表，最好研究一下它们在哪些浏览器中受支持，以及相关的有用技巧。请参阅下面的[寻求帮助](#寻找帮助)。
 
 #### HTML 回退行为
 
@@ -147,7 +147,7 @@ HTML 和 CSS 的问题在于，它们相当简单，简单到开发人员通常�
 
 {{EmbedGHLiveSample("learning-area/tools-testing/cross-browser-testing/html-css/forms-test", '100%', 150)}}
 
-> **备注：** 你也可以在 GitHub 上的 [forms-test.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/forms-test.html) 上查看此实时示例（也可以参阅 [源代码](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/forms-test.html)）。
+> **备注：** 你也可以在 GitHub 上的 [forms-test.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/forms-test.html) 上查看此实时示例（也可以参阅[源代码](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/forms-test.html)）。
 
 如果你查看示例，当你尝试输入数据时，UI 特性会发挥作用。在具有动态键盘的设备上，将显示特定于类型的输入面板（keypad）。在不支持新特性的浏览器上，输入框将默认为普通文本输入框，使得用户仍然可以输入正确的信息。
 
@@ -159,7 +159,7 @@ CSS 的情况可以说比 HTML 更好一些。如果浏览器遇到一个它不�
 
 ![具有圆角、内阴影和投影效果的红色按钮](blingy-button.png)
 
-> **备注：** 你也可以在 GitHub 上浏览这个实时运行的例子：[button-with-fallback.html](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/button-with-fallback.html)（也可以看 [源代码](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html)）。
+> **备注：** 你也可以在 GitHub 上浏览这个实时运行的例子：[button-with-fallback.html](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/button-with-fallback.html)（也可以看[源代码](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html)）。
 
 该按钮有一些样式声明，但我们最感兴趣的两个如下：
 
@@ -195,9 +195,9 @@ button:active {
 
 #### 选择器支持
 
-当然，如果你没有使用合适的 [选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors) 来选择你想要设置样式的元素，任何 CSS 特性都不会被应用！
+当然，如果你没有使用合适的[选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)来选择你想要设置样式的元素，任何 CSS 特性都不会被应用！
 
-在一个以逗号分隔的选择器列表中，如果你只是错误地编写了一个选择器，它可能无法匹配任何元素。但是，如果有一个选择器是无效的，**整个**选择器列表以及整个样式块都将被忽略。因此，建议只在 [可容错选择器列表](/zh-CN/docs/Web/CSS/Selector_list#可容错选择器列表）中使用带有 `:-moz-` 前缀的伪类或伪元素，例如 `:where(::-moz-thumb)`。请避免在逗号分隔的选择器组中使用带有 `:-moz-` 前缀的伪类或伪元素（除非它在 [`:is()`](/zh-CN/docs/Web/CSS/:is) 或 [`:where()`](/zh-CN/docs/Web/CSS/:where) 可容错选择器列表内），因为除了 Firefox 之外的所有浏览器都会忽略整个样式块。需要注意的是，`:is()` 和 `:where()` 都可以作为参数传递给其他选择器列表，包括 [`:has()`](/zh-CN/docs/Web/CSS/:has) 和 [`:not()`](/zh-CN/docs/Web/CSS/:not)。
+在一个以逗号分隔的选择器列表中，如果你只是错误地编写了一个选择器，它可能无法匹配任何元素。但是，如果有一个选择器是无效的，**整个**选择器列表以及整个样式块都将被忽略。因此，建议只在[可容错选择器列表](/zh-CN/docs/Web/CSS/Selector_list#可容错选择器列表）中使用带有 `:-moz-` 前缀的伪类或伪元素，例如 `:where(::-moz-thumb)`。请避免在逗号分隔的选择器组中使用带有 `:-moz-` 前缀的伪类或伪元素（除非它在 [`:is()`](/zh-CN/docs/Web/CSS/:is) 或 [`:where()`](/zh-CN/docs/Web/CSS/:where) 可容错选择器列表内），因为除了 Firefox 之外的所有浏览器都会忽略整个样式块。需要注意的是，`:is()` 和 `:where()` 都可以作为参数传递给其他选择器列表，包括 [`:has()`](/zh-CN/docs/Web/CSS/:has) 和 [`:not()`](/zh-CN/docs/Web/CSS/:not)。
 
 我们注意到，利用浏览器的开发者工具来检查目标元素的样式设置，以及审查 DOM 检查器所提供的 DOM 树面包屑路径，通常能有效帮助我们判断所用选择器是否恰当。
 
