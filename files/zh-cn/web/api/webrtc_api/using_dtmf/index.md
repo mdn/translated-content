@@ -309,7 +309,7 @@ function handleCallerNegotiationNeeded() {
       return receiverPC.createAnswer();
     })
     .then((answer) => {
-      log(`Setting receiver's local description to ${answer.sdp}`);
+      log(`将接收方的本地描述设置为 ${answer.sdp}`);
       return receiverPC.setLocalDescription(answer);
     })
     .then(() => {
