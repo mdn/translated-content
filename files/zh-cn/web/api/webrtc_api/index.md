@@ -95,7 +95,7 @@ WebRTC 在现代浏览器中通常得到很好的支持，但仍存在一些不�
 - {{domxref("RTCIceTransport.selectedcandidatepairchange_event", "selectedcandidatepairchange")}}
   - ：`RTCIceTransport` 上的当前选择的 ICE 候选对已更改时触发的事件。
 - {{domxref("RTCPeerConnection.track_event", "track")}}
-  - ：当成功协商了媒体流的流式传输后，将向 {{domxref("RTCPeerConnection")}} 添加新轨道时，会发送 `track` 事件，类型为 {{domxref("RTCTrackevent")}}。
+  - ：当成功协商了媒体流的流式传输后，将向 {{domxref("RTCPeerConnection")}} 添加新轨道时，会发送类型为 {{domxref("RTCTrackevent")}} 的 `track` 事件。
 - {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}}
   - ：在其 {{domxref("RTCPeerConnection.signalingstate", "signalingstate")}} 更改时，会发送到对等连接。这是由于调用 {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}} 或 {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}} 引起的。
 - {{domxref("RTCDtlsTransport.statechange_event", "statechange")}}
