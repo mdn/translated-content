@@ -27,7 +27,7 @@ l10n:
 
 2. 让我们充实这个事件监听器。更新如下：
 
-    ```js
+   ```js
    peer.on("call", (call) => {
      const answerCall = confirm("Do you want to answer?");
 
