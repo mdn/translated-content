@@ -42,4 +42,4 @@ l10n:
 
 ## 参见
 
-{{Glossary("Forbidden response header name", "禁止修改的响应标头")}}
+{{Glossary("Forbidden response header name", "禁止修改的响应标头")}}（术语表）
