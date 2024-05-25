@@ -21,9 +21,11 @@ l10n:
     }
     ```
 
-    window.prompt() 方法提供了一种方便的方式来获取相关的对等方ID — 你可以在需要收集对等方ID以创建连接时使用它。
-·
-2. 使用PeerJS框架，你将希望将`localPeer`连接到`remotePeer`。 PeerJS为我们提供了`connect()`函数，它接受一个对等方ID以连接到。将以下代码块添加到上述代码的下方：
+        window.prompt() 方法提供了一种方便的方式来获取相关的对等方ID — 你可以在需要收集对等方ID以创建连接时使用它。
+
+    ·
+
+2.  使用 PeerJS 框架，你将希望将`localPeer`连接到`remotePeer`。PeerJS 为我们提供了`connect()`函数，它接受一个对等方 ID 以连接到。将以下代码块添加到上述代码的下方：
 
     ```js
    let conn;
