@@ -17,7 +17,7 @@ l10n:
 
 ## 参见
 
-- 维基百科上的词条 [Database](https://zh.wikipedia.org/wiki/Database)
+- 维基百科上的词条[数据库](https://zh.wikipedia.org/wiki/数据库)
 - [术语](/zh-CN/docs/Glossary)
 
   - {{Glossary("IndexedDB")}}
