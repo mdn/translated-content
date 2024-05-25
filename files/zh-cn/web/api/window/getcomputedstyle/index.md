@@ -120,16 +120,16 @@ CSS 属性值可以使用`getPropertyValue(propName)`API 或直接索引到对�
 
 在 Firefox 中，属性值为`auto`的会直接返回使用值，而不是`auto`。比如，你在设定了一个元素的 css 为`height:30px; top: auto; bottom:0;`它的父元素`height:100px;`，在请求`top`的计算样式时，Firefox 会返回`'70px' = 100px - 30px;`。
 
+## 规范
+
+{{Specifications}}
+
 ## 浏览器兼容性
 
 {{Compat}}
 
-## 规范
-
-- [DOM Level 2 Style: getComputedStyle](http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSview-getComputedStyle)
-- [CSS Object Model specification](http://dev.w3.org/csswg/cssom/#resolved-values)
-
 ## 参见
 
-- {{domxref("window.getDefaultComputedStyle")}}
-- {{cssxref("resolved_value", "Resolved Value")}}
+- {{DOMxRef("Window.getDefaultComputedStyle()")}}
+- {{DOMxRef("CSSStyleDeclaration.getPropertyValue", "getPropertyValue()")}}
+- [解析值](/zh-CN/docs/Web/CSS/resolved_value)
