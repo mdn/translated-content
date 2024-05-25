@@ -13,7 +13,7 @@ l10n:
 
 所有的{{glossary("safe/http", "安全")}}方法也都是幂等的，包括 {{HTTPMethod("PUT")}} 和 {{HTTPMethod("DELETE")}}。而 {{HTTPMethod("POST")}} 方法不是幂等的。
 
-幂等性只考虑服务器的状态。每次请求返回的响应可能不同：例如，第一次调用 {{HTTPMethod("DELETE")}} 可能会返回 {{HTTPStatus("200")}}，而后续的调用可能会返回 {{HTTPStatus("404")}}。另一个 {{HTTPMethod("DELETE")}} 是幂等的含义是，开发者不应该使用 `DELETE` 方法实现 RESTful API 的*删除最后一个条目*功能。
+幂等性只考虑服务器的状态。每次请求返回的响应可能不同：例如，第一次调用 {{HTTPMethod("DELETE")}} 可能会返回 {{HTTPStatus("200")}}，而后续的调用可能会返回 {{HTTPStatus("404")}}。{{HTTPMethod("DELETE")}} 具有幂等性的另外一层含义是，开发者不应该使用 `DELETE` 方法实现 RESTful API 的*删除最后一个条目*功能。
 
 需要注意的是，方法的幂等性并不是由服务器保证的，有些应用程序可能会错误地破坏幂等性的约束。
 
