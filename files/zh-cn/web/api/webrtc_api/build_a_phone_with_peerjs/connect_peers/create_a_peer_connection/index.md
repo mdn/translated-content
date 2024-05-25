@@ -34,7 +34,7 @@ l10n:
     }
     ```
 
-3. 当创建连接时，让我们使用PeerJS框架的`on('connection')`来设置远程对等方的ID并打开连接。此侦听器的函数接受一个`connection`对象，该对象是`DataConnection`对象的实例（它是围绕WebRTC的[`RTCDataChannel`](/zh-CN/docs/Web/API/RTCDataChannel)的包装器）；在此函数中，你将希望将其分配给一个变量。同样，你需要在函数之外创建变量，以便稍后进行分配。在上述代码的下方添加以下内容：
+3.  当创建连接时，让我们使用 PeerJS 框架的`on('connection')`来设置远程对等方的 ID 并打开连接。此侦听器的函数接受一个`connection`对象，该对象是`DataConnection`对象的实例（它是围绕 WebRTC 的[`RTCDataChannel`](/zh-CN/docs/Web/API/RTCDataChannel)的包装器）；在此函数中，你将希望将其分配给一个变量。同样，你需要在函数之外创建变量，以便稍后进行分配。在上述代码的下方添加以下内容：
 
     ```js
    peer.on("connection", (connection) => {
