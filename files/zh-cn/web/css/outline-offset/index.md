@@ -2,12 +2,12 @@
 title: outline-offset
 slug: Web/CSS/outline-offset
 l10n:
-  sourceCommit: 7a9f9baa25d9a7313bd6c62ef5ef585b28459c58
+  sourceCommit: cc4592258b952f452e8715b67b14ce3534ccfa69
 ---
 
 {{CSSRef}}
 
-**`outline-offset`** CSS 属性设置了 [outline](/zh-CN/docs/Web/CSS/outline) 与元素边缘或边框之间的间距。
+**`outline-offset`** CSS 属性设置[轮廓](/zh-CN/docs/Web/CSS/outline)与元素边缘或边框之间的间距。
 
 {{EmbedInteractiveExample("pages/css/outline-offset.html")}}
 
@@ -28,12 +28,12 @@ outline-offset: unset;
 
 ### 值
 
-- `{{cssxref("&lt;length&gt;")}}`
+- {{cssxref("&lt;length&gt;")}}
   - : 元素与其轮廓线之间的间距宽度。负值会将轮廓线置于元素内部。当值为 `0` 时，轮廓线与元素之间没有间距。
 
 ## 描述
 
-轮廓线是绘制在元素周围、边框边缘之外的一条线。元素与其轮廓线之间的空间是透明的。换句话说，它与父元素的背景相同。
+轮廓线是绘制在元素周围、边框边缘之外的一条线。元素与其轮廓线之间的空间是透明的。换句话说，它与父元素具有相同的背景。
 
 ## 形式定义
 
