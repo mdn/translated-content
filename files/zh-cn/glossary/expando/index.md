@@ -7,10 +7,10 @@ l10n:
 
 {{GlossarySidebar}}
 
-可扩展对象（Expando）的动态属性是 {{glossary("JavaScript")}} 添加到 {{glossary("DOM")}} 节点的属性 , 可以直接从 DOM 元素中访问。这些属性不是 {{glossary("object", "对象的")}} DOM 规范的一部分：
+可扩展对象（Expando）属性是 {{glossary("JavaScript")}} 添加到 {{glossary("DOM")}} 节点的属性，这类属性不属于{{glossary("object", "对象")}} DOM 规范：
 
 ```js
 window.document.foo = 5; // foo 是一个自定义属性
 ```
 
-该术语也可以应用于添加到对象的属性，而不遵守对象的原始意图，例如非数字命名的属性添加到一个{{glossary("array", "数组")}}里。
+该术语还适用于在不遵守对象的原始意图的情况下添加的属性，例如添加到{{glossary("array", "数组")}}中的非数字命名属性。
