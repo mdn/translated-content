@@ -13,7 +13,7 @@ l10n:
 
 1. PeerJS 框架使`.on('call')`事件可用，让我们在这里使用它。将此添加到 `script.js` 文件的底部：
 
-    ```js
+   ```js
    peer.on("call", (call) => {
      const answerCall = confirm("Do you want to answer?");
    });
