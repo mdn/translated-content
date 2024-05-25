@@ -1,5 +1,5 @@
 ---
-title: 因特网信息访问协议（IMAP）
+title: IMAP
 slug: Glossary/IMAP
 l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
@@ -17,4 +17,4 @@ IMAP 最初由马克·克里斯平（Mark Crispin）于 1986 年开发，当时�
 
 - {{RFC(3501)}}
 - {{Glossary("POP")}}
-- 维基百科上的[IMAP](https://en.wikipedia.org/wiki/因特网信息访问协议)
+- 维基百科上的 [IMAP](https://zh.wikipedia.org/wiki/因特网信息访问协议)
