@@ -134,7 +134,7 @@ WebRTC 编码转换的实现类似于“通用” `TransformStream`，但存在�
 
 之前的例子在发送和接收时使用相同的转换函数时可以工作，但在许多情况下，算法会有所不同。你可以为发送器和接收器使用单独的 worker 脚本，或者在一个 worker 中处理这两种情况，如下所示。
 
-如果 worker 用于发送器和接收器，它需要知道当前的编码帧是来自编解码器的传出帧，还是来自封包器的传入帧。可以使用 [`RTCRtpScriptTransform` 构造函数](/zh-CN/docs/Web/API/RTCRtpScriptTransform/RTCRtpScriptTransform) 的第二个选项来指定此信息。
+如果 worker 用于发送器和接收器，它需要知道当前的编码帧是来自编解码器的传出帧，还是来自封包器的传入帧。可以使用 [`RTCRtpScriptTransform` 构造函数](/zh-CN/docs/Web/API/RTCRtpScriptTransform/RTCRtpScriptTransform)的第二个选项来指定此信息。
 例如，我们可以为发送器和接收器定义一个单独的 `RTCRtpScriptTransform`，传递相同的 worker 和一个 options 对象，其中的 `name` 属性指示转换是用于发送还是接收（如上面的前几节所示）。然后在 worker 中，可以通过 `event.transformer.options` 获取到此信息。
 
 在这个例子中，我们在全局专用 worker 范围对象上实现了 `onrtctransform` 事件处理程序。`name` 属性的值用于确定构造哪个 `TransformStream`（实际的构造方法没有显示）。
