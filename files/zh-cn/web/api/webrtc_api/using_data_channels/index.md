@@ -78,7 +78,7 @@ WebRTC 数据通道支持对传出数据进行缓冲。这是自动处理的。�
 
 当浏览器正确支持支持较大消息的当前标准——表示消息是应该被视为单个有效负载中的最后一个的结束记录（EOR）标志时，这将成为一个问题。这在 Firefox 57 中已实现，但尚未在 Chrome 中实现（参见 [Chromium Bug 7774](https://bugs.chromium.org/p/webrtc/issues/detail?id=7774)）。有了 EOR 支持，`RTCDataChannel` 的有效载荷可以更大（官方上限为 256 KiB，但 Firefox 的实现将它们限制在了高达 1 GiB 的惊人大小）。即使在 256 KiB 大小，这已经足够大到可能导致处理紧急流量时出现明显的延迟。如果消息变得更大，延迟可能会变得难以忍受，除非你对你的操作条件非常确定。
 
-为了解决这个问题，设计了一种新的**流调度器系统**（通常称为"SCTP ndata 规范"），使得可以在不同流上交错发送的消息，包括用于实现 WebRTC 数据通道的流。这个[提案](https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-sctp-ndata)目前仍处于 IETF 草案形式，但一旦实施，它将使得发送几乎没有大小限制的消息成为可能，因为 SCTP 层将自动交错底层的子消息，以确保每个通道的数据都有机会传递。
+为了解决这个问题，设计了一种新的**流调度器系统**（通常称为“SCTP ndata 规范“），使得可以在不同流上交错发送的消息，包括用于实现 WebRTC 数据通道的流。这个[提案](https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-sctp-ndata)目前仍处于 IETF 草案形式，但一旦实施，它将使得发送几乎没有大小限制的消息成为可能，因为 SCTP 层将自动交错底层的子消息，以确保每个通道的数据都有机会传递。
 
 Firefox 对 ndata 的支持正在实现中；查看 [Firefox bug 1381145](https://bugzil.la/1381145) 以跟踪它何时可以用于普通用途。Chrome 团队在[Chrome Bug 5696](https://bugs.chromium.org/p/webrtc/issues/detail?id=5696)中跟踪他们对 ndata 支持的实现。
 
