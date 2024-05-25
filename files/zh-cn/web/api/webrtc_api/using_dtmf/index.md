@@ -7,7 +7,7 @@ l10n:
 
 {{DefaultAPISidebar("WebRTC")}}
 
-为了更全面地支持音频/视频会议，[WebRTC](/zh-CN/docs/Web/API/WebRTC_API) 支持在 {{domxref("RTCPeerConnection")}} 上向远程对等方发送 {{Glossary("DTMF")}}。本文简要概述了 WebRTC 上的 DTMF 如何工作，然后提供了一个指南，指导开发人员如何通过 `RTCPeerConnection` 发送 DTMF。DTMF 系统通常被称为 "触摸音调"，这是一种旧的商标名称。
+为了更全面地支持音频/视频会议，[WebRTC](/zh-CN/docs/Web/API/WebRTC_API) 支持在 {{domxref("RTCPeerConnection")}} 上向远程对等方发送{{Glossary("DTMF", "双音多频")}}。本文简要概述了 WebRTC 上的 DTMF 如何工作，然后提供了一个指南，指导开发人员如何通过 `RTCPeerConnection` 发送 DTMF。DTMF 系统通常被称为“触摸音调”，这是一种旧的商标名称。
 
 WebRTC 不会将 DTMF 代码作为音频数据发送。相反，它们作为 RTP 负载在带外发送。但是，请注意，尽管可以使用 WebRTC _发送_ DTMF，但目前无法检测或接收 _传入_ DTMF。WebRTC 目前会忽略这些负载；这是因为 WebRTC 的 DTMF 支持主要用于与依赖于 DTMF 音调执行任务的传统电话服务一起使用，例如：
 
