@@ -34,7 +34,7 @@ l10n:
 4. 最后，你需要通过调用`app.use(peerServer)`告诉你的应用程序使用`peerServer`。你完成的`server.js`应包括在服务器文件中包含的其他必要依赖项，以及将`index.html`文件提供给根路径。
    更新`server.js`文件，使其看起来像这样：
 
-    ```js
+   ```js
    const express = require("express");
    const http = require("http");
    const path = require("path");
