@@ -336,7 +336,7 @@ function handleCallerNegotiationNeeded() {
 
 ```js
 function handleCallerSignalingStateChangeEvent() {
-  log(`Caller's signaling state changed to ${callerPC.signalingState}`);
+  log(`呼叫方的信令状态已更改为 ${callerPC.signalingState}`);
 }
 
 function handleCallerGatheringStateChangeEvent() {
