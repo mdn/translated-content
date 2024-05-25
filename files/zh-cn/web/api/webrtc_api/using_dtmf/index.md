@@ -357,7 +357,7 @@ function handleReceiverIceEvent(event) {
 
     callerPC
       .addIceCandidate(new RTCIceCandidate(event.candidate))
-      .catch((err) => log(`Error adding candidate to caller: ${err}`));
+      .catch((err) => log(`向呼叫方添加候选者时出错：${err}`));
   } else {
     log("Receiver is out of candidates.");
   }
