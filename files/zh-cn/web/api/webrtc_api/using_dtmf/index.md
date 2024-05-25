@@ -208,7 +208,7 @@ function gotStream(stream) {
 
 #### 当音调播放完成
 
-每当一个 DTMF 音调播放完成时，一个[`tonechange`](/zh-CN/docs/Web/API/RTCDTMFSender/tonechange_event)事件就会被传递给`callerPC`。对于这些事件的事件监听器被实现为 `handleToneChangeEvent()` 函数。
+每当一个 DTMF 音调播放完成时，[`tonechange`](/zh-CN/docs/Web/API/RTCDTMFSender/tonechange_event) 事件就会被传递给 `callerPC`。对于这些事件的事件监听器被实现为 `handleToneChangeEvent()` 函数。
 
 ```js
 function handleToneChangeEvent(event) {
