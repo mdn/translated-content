@@ -17,7 +17,6 @@ l10n:
    ```js
    const { ExpressPeerServer } = require("peer");
    ```
-3. 然后，你需要实际创建Peer服务器。在之前的代码行下面添加以下代码：
 
     ```js
    const peerServer = ExpressPeerServer(server, {
