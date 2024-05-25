@@ -1,8 +1,8 @@
 ---
- title: Answering a Call
- slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Answer_a_call
- l10n:
-   sourceCommit: 810f6895496d1525bb7800abfef363d6c1da9bb8
+title: Answering a Call
+slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Answer_a_call
+l10n:
+  sourceCommit: 810f6895496d1525bb7800abfef363d6c1da9bb8
 ---
 
 {{DefaultAPISidebar("WebRTC")}}
