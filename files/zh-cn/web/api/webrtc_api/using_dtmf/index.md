@@ -185,7 +185,7 @@ function gotStream(stream) {
     dtmfSender = callerPC.getSenders()[0].dtmf;
   } else {
     log(
-      "Your browser doesn't support RTCPeerConnection.getSenders(), so " +
+      "你的浏览器不支持 RTCPeerConnection.getSenders()，因此正在退回到使用 <strong>已弃用</strong> 的 createDTMFSender()。"
         "falling back to use <strong>deprecated</strong> createDTMFSender() " +
         "instead.",
     );
