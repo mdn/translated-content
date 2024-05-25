@@ -13,7 +13,7 @@ l10n:
 
 例如，`https://developer.mozilla.org` 的 URL 有一个路径段：空字符串，因此，其 `pathname` 值是通过在空字符串前添加 `/` 字符来构成的。
 
-某些系统中，术语*路径名*特指非空路径的最后一段，当这一段使用人类可读的关键词标识一个页面时。例如，URL `https://example.org/articles/this-that-other-outre-collection` 的 slug 部分为 `this-that-other-outre-collection`。
+某些系统中，术语*别名*（slug）特指非空路径的最后一段，当这一段使用人类可读的关键词标识一个页面时。例如，URL `https://example.org/articles/this-that-other-outre-collection` 的别名部分为 `this-that-other-outre-collection`。
 
 某些系统使用 `;` 和 `=` 字符来分隔适用于路径段的参数和参数值。例如，对于 `https://example.org/users;id=42/tasks;state=open?sort=modified` 的 URL，系统可能会从路径段 `users;id=42` 和 `tasks;state=open` 中提取并使用路径段参数 `id=42` 和 `state=open`。
 
@@ -27,7 +27,7 @@ l10n:
 const url = new URL(
   "https://developer.mozilla.org/zh-CN/docs/Web/API/URL/pathname?q=value",
 );
-console.log(url.pathname); // 输出 "/zh-CN/docs/Web/API/URL/pathname"
+console.log(url.pathname); // 输出“/zh-CN/docs/Web/API/URL/pathname”
 ```
 
 ## 规范
