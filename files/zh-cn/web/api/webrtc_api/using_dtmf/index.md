@@ -370,7 +370,7 @@ function handleReceiverIceEvent(event) {
 
 #### 向接收方添加媒体
 
-当接收方开始接收媒体时，一个事件会传递到接收方的 {{domxref("RTCPeerConnection")}}，即 `receiverPC`。如 [开始连接过程](#开始连接过程) 中所解释的，当前的 WebRTC 规范使用 {{domxref("RTCPeerConnection.track_event", "track")}} 事件来处理这个情况。由于一些浏览器尚未更新以支持此功能，我们还需要处理 {{domxref("RTCPeerConnection/addstream_event", "addstream")}} 事件。下面的 `handleReceiverTrackEvent()` 和 `handleReceiverAddStreamEvent()` 方法演示了这一点。
+当接收方开始接收媒体时，一个事件会传递到接收方的 {{domxref("RTCPeerConnection")}}，即 `receiverPC`。如[开始连接过程](#开始连接过程)中所解释的，当前的 WebRTC 规范使用 {{domxref("RTCPeerConnection.track_event", "track")}} 事件来处理这个情况。由于一些浏览器尚未更新以支持此功能，我们还需要处理 {{domxref("RTCPeerConnection/addstream_event", "addstream")}} 事件。下面的 `handleReceiverTrackEvent()` 和 `handleReceiverAddStreamEvent()` 方法演示了这一点。
 
 ```js
 function handleReceiverTrackEvent(event) {
