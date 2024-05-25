@@ -235,7 +235,7 @@ function handleToneChangeEvent(event) {
 }
 ```
 
-[`tonechange`](/zh-CN/docs/Web/API/RTCDTMFSender/tonechange_event)事件既用于指示单个音调已播放，也用于指示所有音调已完成播放。事件的 {{domxref("RTCDTMFToneChangeEvent.tone", "tone")}} 属性是一个字符串，指示刚刚完成播放的音调。如果所有音调都已完成播放，`tone`将是一个空字符串；在这种情况下，{{domxref("RTCDTMFSender.toneBuffer")}}为空。
+[`tonechange`](/zh-CN/docs/Web/API/RTCDTMFSender/tonechange_event) 事件既用于指示单个音调已播放，也用于指示所有音调已完成播放。事件的 {{domxref("RTCDTMFToneChangeEvent.tone", "tone")}} 属性是一个字符串，指示刚刚完成播放的音调。如果所有音调都已完成播放，`tone`将是一个空字符串；在这种情况下，{{domxref("RTCDTMFSender.toneBuffer")}}为空。
 
 在这个示例中，我们将刚刚完成播放的音调记录到屏幕上。在更高级的应用程序中，你可能会更新用户界面，例如，指示当前正在播放的音符。
 
