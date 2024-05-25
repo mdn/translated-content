@@ -1,6 +1,8 @@
 ---
 title: 属性
 slug: Web/MathML/Attribute
+l10n:
+   sourceCommit: 4d5e2c11f4b8cc32e54d2527d9576ed26ced9458
 ---
 
 {{MathMLRef}}
@@ -24,7 +26,7 @@ slug: Web/MathML/Attribute
         {{ MathMLElement("mo") }}
       </td>
       <td>
-         一个 <a href="/zh-CN/docs/Web/MathML/Attribute/Values#mathml-特定类型"><code>&lt;boolean&gt;</code></a> 值，表示在作为下标或上标使用时，运算符是否应着重表示。
+         一个 <a href="/zh-CN/docs/Web/MathML/Values#mathml-特定类型"><code>&lt;boolean&gt;</code></a> 值，表示在作为下标或上标使用时，运算符是否应着重表示。
       </td>
     </tr>
     <tr>
@@ -33,7 +35,7 @@ slug: Web/MathML/Attribute
         {{ MathMLElement("mover") }}、{{ MathMLElement("munderover") }}
       </td>
       <td>
-         一个 <a href="/zh-CN/docs/Web/MathML/Attribute/Values#mathml-特定类型"><code>&lt;boolean&gt;</code></a> 值，表示下标是否应着重表示。
+         一个 <a href="/zh-CN/docs/Web/MathML/Values#mathml-特定类型"><code>&lt;boolean&gt;</code></a> 值，表示下标是否应着重表示。
       </td>
     </tr>
     <tr>
@@ -42,7 +44,7 @@ slug: Web/MathML/Attribute
         {{ MathMLElement("munder") }}、{{ MathMLElement("munderover") }}
       </td>
       <td>
-         一个 <a href="/zh-CN/docs/Web/MathML/Attribute/Values#mathml-特定类型"><code>&lt;boolean&gt;</code></a> 值，表示上标是否应着重表示。
+         一个 <a href="/zh-CN/docs/Web/MathML/Values#mathml-特定类型"><code>&lt;boolean&gt;</code></a> 值，表示上标是否应着重表示。
       </td>
     </tr>
     <tr>
@@ -109,7 +111,7 @@ slug: Web/MathML/Attribute
       <td><code>depth</code></td>
       <td>{{ MathMLElement("mpadded") }}</td>
       <td>
-       一个 <a href="/zh-CN/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> 值，表示所需的深度（基线以下）。
+       一个 {{cssxref("length-percentage")}} 值，表示所需的深度（基线以下）。
       </td>
     </tr>
     <tr>
@@ -133,7 +135,7 @@ slug: Web/MathML/Attribute
       <td><a href="/zh-CN/docs/Web/MathML/Global_attributes">所有 MathML 元素</a></td>
       <td>
         <p>
-        一个 <a href="/zh-CN/docs/Web/MathML/Attribute/Values#mathml-特定类型"><code>&lt;boolean&gt;</code></a> 值，指定是否将 <a href="/zh-CN/docs/Web/CSS/math-style">math-style</a> 设置为 <code>normal</code>（如果为真）或 <code>compact</code>（其他情况下）。
+        一个 <a href="/zh-CN/docs/Web/MathML/Values#mathml-特定类型"><code>&lt;boolean&gt;</code></a> 值，指定是否将 <a href="/zh-CN/docs/Web/CSS/math-style">math-style</a> 设置为 <code>normal</code>（如果为真）或 <code>compact</code>（其他情况下）。
         </p>
       </td>
     </tr>
@@ -141,7 +143,7 @@ slug: Web/MathML/Attribute
       <td><code>fence</code></td>
       <td>{{ MathMLElement("mo") }}</td>
       <td>
-        一个 <a href="/zh-CN/docs/Web/MathML/Attribute/Values#mathml-特定类型"><code>&lt;boolean&gt;</code></a> 值，指定运算符是否为分隔符（如括号）。该属性没有视觉效果。
+        一个 <a href="/zh-CN/docs/Web/MathML/Values#mathml-特定类型"><code>&lt;boolean&gt;</code></a> 值，指定运算符是否为分隔符（如括号）。该属性没有视觉效果。
       </td>
     </tr>
     <tr>
@@ -192,7 +194,7 @@ slug: Web/MathML/Attribute
         {{ MathMLElement("mpadded") }}、{{ MathMLElement("mspace") }}
       </td>
       <td>
-        一个 <a href="/zh-CN/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> 值，表示所需的高度（基线之上）。
+        一个 {{cssxref("length-percentage")}} 值，表示所需的高度（基线之上）。
       </td>
     </tr>
     <tr>
@@ -208,7 +210,7 @@ slug: Web/MathML/Attribute
     <tr>
       <td><code>linethickness</code></td>
       <td>{{ MathMLElement("mfrac") }}</td>
-      <td>一个 <a href="/zh-CN/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> 值，表示水平分数线的厚度。</td>
+      <td>一个 {{cssxref("length-percentage")}} 值，表示水平分数线的厚度。</td>
     </tr>
     <tr>
       <td><code>lspace</code></td>
@@ -216,7 +218,7 @@ slug: Web/MathML/Attribute
         {{ MathMLElement("mo") }}
       </td>
       <td>
-        一个 <a href="/zh-CN/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> 值，表示运算符前的空间大小。
+        一个 {{cssxref("length-percentage")}} 值，表示运算符前的空间大小。
       </td>
     </tr>
     <tr>
@@ -225,7 +227,7 @@ slug: Web/MathML/Attribute
         {{ MathMLElement("mpadded") }}
       </td>
       <td>
-        一个 <a href="/zh-CN/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> 值，表示子内容的定位点相对于元素定位点的水平位置。
+        一个 {{cssxref("length-percentage")}} 值，表示子内容的定位点相对于元素定位点的水平位置。
       </td>
     </tr>
     <tr>
@@ -253,7 +255,7 @@ slug: Web/MathML/Attribute
       <td><code>mathsize</code></td>
       <td><a href="/zh-CN/docs/Web/MathML/Global_attributes">所有 MathML 元素</a></td>
       <td>
-        一个 <a href="/zh-CN/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> 值，作为元素的 <a href="/zh-CN/docs/Web/CSS/font-size"><code>font-size</code></a> 值。
+        一个 {{cssxref("length-percentage")}} 值，作为元素的 <a href="/zh-CN/docs/Web/CSS/font-size"><code>font-size</code></a> 值。
       </td>
     </tr>
     <tr>
@@ -264,18 +266,18 @@ slug: Web/MathML/Attribute
     <tr>
       <td><code>maxsize</code></td>
       <td>{{ MathMLElement("mo") }}</td>
-      <td>一个 <a href="/zh-CN/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> 值，表示运算符在拉伸状态下的最大尺寸。</td>
+      <td>一个 {{cssxref("length-percentage")}} 值，表示运算符在拉伸状态下的最大尺寸。</td>
     </tr>
     <tr>
       <td><code>minsize</code></td>
       <td>{{ MathMLElement("mo") }}</td>
-      <td>一个 <a href="/zh-CN/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> 值，表示运算符在拉伸状态下的最小尺寸。</td>
+      <td>一个 {{cssxref("length-percentage")}} 值，表示运算符在拉伸状态下的最小尺寸。</td>
     </tr>
     <tr>
       <td><code>movablelimits</code></td>
       <td>{{ MathMLElement("mo") }}</td>
       <td>
-        一个 <a href="/zh-CN/docs/Web/MathML/Attribute/Values#mathml-特定类型"><code>&lt;boolean&gt;</code></a> 值，表示当 <a href="/zh-CN/docs/Web/CSS/math-style">math-style</a> 设置为 <code>compact</code> 时，所附的下标和上标是否移动到下标和上标位置。
+        一个 <a href="/zh-CN/docs/Web/MathML/Values#mathml-特定类型"><code>&lt;boolean&gt;</code></a> 值，表示当 <a href="/zh-CN/docs/Web/CSS/math-style">math-style</a> 设置为 <code>compact</code> 时，所附的下标和上标是否移动到下标和上标位置。
       </td>
     </tr>
     <tr>
@@ -322,7 +324,7 @@ slug: Web/MathML/Attribute
     <tr>
       <td><code>rspace</code></td>
       <td>{{ MathMLElement("mo") }}</td>
-      <td>一个 <a href="/zh-CN/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> 值，表示运算符后的空格大小。</td>
+      <td>一个 {{cssxref("length-percentage")}} 值，表示运算符后的空格大小。</td>
     </tr>
     <tr>
       <td><code>rquote</code> {{deprecated_inline}}</td>
@@ -361,7 +363,7 @@ slug: Web/MathML/Attribute
       <td><code>separator</code></td>
       <td>{{ MathMLElement("mo") }}</td>
       <td>
-      一个 <a href="/zh-CN/docs/Web/MathML/Attribute/Values#mathml-特定类型"><code>&lt;boolean&gt;</code></a> 值，指定了该运算符是否为分割符（如逗号）。这个属性没有视觉效果。
+      一个 <a href="/zh-CN/docs/Web/MathML/Values#mathml-特定类型"><code>&lt;boolean&gt;</code></a> 值，指定了该运算符是否为分割符（如逗号）。这个属性没有视觉效果。
       </td>
     </tr>
     <tr>
@@ -375,7 +377,7 @@ slug: Web/MathML/Attribute
       <td><code>stretchy</code></td>
       <td>{{ MathMLElement("mo") }}</td>
       <td>
-        一个 <a href="/zh-CN/docs/Web/MathML/Attribute/Values#mathml-特定类型"><code>&lt;boolean&gt;</code></a> 值，表示运算符是否拉伸到相邻元素的大小。
+        一个 <a href="/zh-CN/docs/Web/MathML/Values#mathml-特定类型"><code>&lt;boolean&gt;</code></a> 值，表示运算符是否拉伸到相邻元素的大小。
       </td>
     </tr>
     <tr>
@@ -384,7 +386,7 @@ slug: Web/MathML/Attribute
         {{ MathMLElement("msub") }}、{{ MathMLElement("msubsup") }}、{{ MathMLElement("mmultiscripts") }}
       </td>
       <td>
-        一个 <a href="/zh-CN/docs/Web/MathML/Attribute/Values#mathml-特定类型"><code>&lt;boolean&gt;</code></a> 值，表示下标基线下移的最小量。
+        一个 {{cssxref("length-percentage")}} 值，表示下标基线下移的最小量。
       </td>
     </tr>
     <tr>
@@ -393,23 +395,21 @@ slug: Web/MathML/Attribute
         {{ MathMLElement("msup") }}、{{ MathMLElement("msubsup") }}、{{ MathMLElement("mmultiscripts") }}
       </td>
       <td>
-        一个 <a href="/zh-CN/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> 值，表示上标基线上移的最小量。
+        一个 {{cssxref("length-percentage")}} 值，表示上标基线上移的最小量。
       </td>
     </tr>
     <tr>
       <td><code>symmetric</code></td>
       <td>{{ MathMLElement("mo") }}</td>
       <td>
-        一个 <a href="/zh-CN/docs/Web/MathML/Attribute/Values#mathml-特定类型"><code>&lt;boolean&gt;</code></a> 值，表示拉伸运算符是否应围绕数学虚轴（居中分数线）垂直对称。
+        一个 <a href="/zh-CN/docs/Web/MathML/Values#mathml-特定类型"><code>&lt;boolean&gt;</code></a> 值，表示拉伸运算符是否应围绕数学虚轴（居中分数线）垂直对称。
       </td>
     </tr>
     <tr>
       <td><code>voffset</code></td>
       <td>{{ MathMLElement("mpadded") }}</td>
       <td>
-        一个 <a href="/zh-CN/docs/Web/CSS/length-percentage"
-          ><code>&lt;length-percentage&gt;</code></a
-        > 值，表示子内容的定位点相对于元素定位点的垂直位置。
+        一个 {{cssxref("length-percentage")}} 值，表示子内容的定位点相对于元素定位点的垂直位置。
       </td>
     </tr>
     <tr>
@@ -418,7 +418,7 @@ slug: Web/MathML/Attribute
         {{ MathMLElement("mpadded") }}、{{ MathMLElement("mspace") }}、{{ MathMLElement("mtable") }}
       </td>
       <td>
-        一个 <a href="/zh-CN/docs/Web/CSS/length-percentage"><code>&lt;length-percentage&gt;</code></a> 值，表示所需的宽度。
+        一个 {{cssxref("length-percentage")}} 值，表示所需的宽度。
       </td>
     </tr>
     <tr>
