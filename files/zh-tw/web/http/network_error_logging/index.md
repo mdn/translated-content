@@ -7,13 +7,13 @@ l10n:
 
 {{HTTPSidebar}}{{SeeCompatTable}}
 
-網路錯誤記錄（Network Error Logging, NEL）是一種可以透過 {{HTTPHeader("NEL")}} HTTP 回應標頭配置的機制。此實驗性標頭允許網站和應用程式選擇接收來自支援瀏覽器的失敗（如果需要可以成功）網路抓取報告。
+網路錯誤記錄（Network Error Logging, NEL）是一種可以透過 {{HTTPHeader("NEL")}} HTTP *[回應標頭](/zh-TW/docs/Glossary/Response_header)*配置的機制。此實驗性標頭允許網站和應用程式選擇接收來自支援瀏覽器的失敗（如果需要可以成功）網路抓取報告。
 
 報告會發送到在 {{HTTPHeader("Report-To")}} 標頭中定義的報告群組。
 
 ## 使用方式
 
-Web 應用程式透過 NEL 標頭選擇加入此行為，這是一個 JSON 編碼的物件：
+Web 應用程式透過 NEL 標頭選擇加入此行為，這是一個 *[JSON 編碼](/zh-TW/docs/Glossary/Response_header)*的物件：
 
 ```http
 NEL: { "report_to": "nel",
@@ -25,7 +25,7 @@ NEL: { "report_to": "nel",
 以下是 NEL 標頭中可以指定的物件鍵：
 
 - report_to
-  - : 發送網路錯誤報告的[報告 API](/en-US/docs/Web/API/Reporting_API) 群組（見下文）。
+  - : 發送網路錯誤報告的[報告 API](/zh-TW/docs/Web/API/Reporting_API) 群組（見下文）。
 - max_age
   - : 指定策略的存續時間（以秒為單位），類似於 HSTS 策略的時間限制。參考的報告群組應該有至少與 NEL 策略同樣長的存續時間。
 - include_subdomains
