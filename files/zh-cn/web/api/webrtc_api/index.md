@@ -226,7 +226,7 @@ WebRTC 在现代浏览器中通常得到很好的支持，但仍存在一些不�
 - {{DOMxRef("MediaStreamTrack")}}
 - {{DOMxRef("MessageEvent")}}
 - {{DOMxRef("MediaStream")}}
-- [媒体捕获和流 API](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API)
+- [媒体捕捉与媒体流 API](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API)
 - [Firefox 多流和 Jitsi Videobridge 的重新协商](https://hacks.mozilla.org/2015/06/firefox-multistream-and-renegotiation-for-jitsi-videobridge/)
 - [透过 WebRTC 雾霾与 SocketPeer](https://hacks.mozilla.org/2015/04/peering-through-the-webrtc-fog-with-socketpeer/)
 - [Party Bus 内部：构建具有多个实时视频流和交互式图形的 Web 应用](https://hacks.mozilla.org/2014/04/inside-the-party-bus-building-a-web-app-with-multiple-live-video-streams-interactive-graphics/)
