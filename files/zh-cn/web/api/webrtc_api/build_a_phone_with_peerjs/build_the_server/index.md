@@ -1,8 +1,8 @@
 ---
- title: Building the server
- slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Build_the_server
- l10n:
-   sourceCommit: 65cd9754ed95f116b641c68cad80f14ecf580b41
+title: Building the server
+slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Build_the_server
+l10n:
+  sourceCommit: 65cd9754ed95f116b641c68cad80f14ecf580b41
 ---
 
 {{DefaultAPISidebar("WebRTC")}}
