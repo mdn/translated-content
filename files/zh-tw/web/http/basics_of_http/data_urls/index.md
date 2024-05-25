@@ -1,123 +1,122 @@
 ---
-title: data URIs
+title: Data URLs
 slug: Web/HTTP/Basics_of_HTTP/Data_URLs
+l10n:
+  sourceCommit: 997a0ec66e1514b7269076195b2419db334e876e
 ---
 
 {{HTTPSidebar}}
 
-`data` URIs, 由 [RFC 2397](http://tools.ietf.org/html/rfc2397) 文件定義, 允許作者在文件中嵌入檔案.
+**Data URLs** 是以 `data:` 開頭的 URL，允許內容創作者將小型檔案嵌入文件中。以前它們被稱為「data URIs」，直到 WHATWG 將這個名稱廢除。
 
-## 表達式
+> **備註：** 現代瀏覽器將 Data URLs 視為唯一的不透明來源，而不是繼承導航設置對象的來源。
 
-data URI 的表達式如下：
+## 語法
+
+Data URLs 由四個部分組成：前綴 (`data:`)、指示數據類型的 [MIME 類型](/zh-TW/docs/Web/HTTP/Basics_of_HTTP/MIME_types)、如果非文本則可選的 `base64` 標記，以及數據本身：
 
 ```plain
 data:[<mediatype>][;base64],<data>
 ```
 
-`mediatype` 為一 MIME type 字串，例如 JPEG 圖檔為「`image/jpeg`」，為非必要參數，若省略的話，默認值為「`text/plain;charset=US-ASCII`」。
+`mediatype` 是一個 [MIME 類型](/zh-TW/docs/Web/HTTP/Basics_of_HTTP/MIME_types)字串，例如 `'image/jpeg'` 表示 JPEG 圖像文件。如果省略，默認為 `text/plain;charset=US-ASCII`。
 
-If the data is textual, you can simply embed the text (using the appropriate entities or escapes based on the enclosing document's type). Otherwise, you can specify `base64` to embed base64-encoded binary data.
+如果數據包含 [RFC 3986 定義的保留字元](https://datatracker.ietf.org/doc/html/rfc3986#section-2.2)或包含空格字元、換行字元或其他不可打印字元，這些字元必須 [URL 編碼](https://zh.wikipedia.org/wiki/百分号编码)。
 
-### 範例
+如果數據是文本，可以嵌入文本（使用適當的實體或根據包含文件的類型進行轉義）。否則，可以指定 `base64` 來嵌入 base64 編碼的二進制數據。你可以在[這裡](/zh-TW/docs/Web/HTTP/Basics_of_HTTP/MIME_types)和[這裡](/zh-TW/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)找到有關 MIME 類型的更多訊息。
 
-- data:,Hello%2C%20World!
-  - : 一個簡單的 text/plain data
-- data:text/plain;base64,SGVsbG8sIFdvcmxkIQ%3D%3D
-  - : 同前者，但經過 base64 編碼。
-- data:text/html,%3Ch1%3EHello%2C%20World!%3C%2Fh1%3E
-  - : 一 HTML 檔，內容為`<h1>Hello, World</h1>`
+幾個範例：
 
-## 以 base64 格式編碼資料
+- `data:,Hello%2C%20World%21`
+  - : 文本／純文本數據 `Hello, World!`。注意逗號被 [URL 編碼](https://en.wikipedia.org/wiki/URL_encoding)為 `%2C`，空格字元為 `%20`。
+- `data:text/plain;base64,SGVsbG8sIFdvcmxkIQ==`
+  - : 上述文本的 base64 編碼版本
+- `data:text/html,%3Ch1%3EHello%2C%20World%21%3C%2Fh1%3E`
+  - : 包含 `<h1>Hello, World!</h1>` 的 HTML 文件
+- `data:text/html,%3Cscript%3Ealert%28%27hi%27%29%3B%3C%2Fscript%3E`
+  - : 包含 `<script>alert('hi');</script>` 的 HTML 文件，執行 JavaScript 警告。注意閉合 script 標籤是必需的。
 
-在 Linux 和 Mac OS X 中，可以在終端機輸入下面的程式碼來進行編碼：
+## 將數據編碼為 base64 格式
+
+Base64 是一組二進制到文本編碼方案，通過轉換為 radix-64 表示法將二進制數據表示為 {{Glossary("ASCII")}} 字串格式。由於僅由 ASCII 字元組成，base64 字串通常是 URL 安全的，因此可以用來在 Data URLs 中編碼數據。
+
+### 在 JavaScript 中編碼
+
+Web API 原生方法提供了編碼或解碼為 base64 的方法：[Base64](/zh-TW/docs/Glossary/Base64)。
+
+### 在 Unix 系統上編碼
+
+在 Linux 和 macOS 系統上可以使用命令行 `base64` 來對文件或字串進行 base64 編碼（或者可以使用帶有 `-m` 參數的 `uuencode` 工具作為替代）。
+
+```bash
+echo -n hello|base64
+# 輸出到控制台: aGVsbG8=
+
+echo -n hello>a.txt
+base64 a.txt
+# 輸出到控制台: aGVsbG8=
+
+base64 a.txt>b.txt
+# 輸出到文件 b.txt: aGVsbG8=
+```
+
+### 在 Microsoft Windows 上編碼
+
+在 Windows 上，可以使用 PowerShell 的 [Convert.ToBase64String](https://docs.microsoft.com/dotnet/api/system.convert.tobase64string?view=net-5.0) 進行 base64 編碼：
 
 ```plain
-uuencode -m infile remotename
+[convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes("hello"))
+# 輸出到控制台: aGVsbG8=
 ```
 
-The `infile` parameter is the name of the file you wish to encode into base64 format, and `remotename` is the remote name for the file, which isn't actually used in `data` URLs.
+或者，可以使用 GNU／Linux shell（例如 [WSL](https://zh.wikipedia.org/wiki/适用于Linux的Windows子系统)）提供的 `base64` 工具：
 
-輸出結果如下所示：
-
-```plain
-begin-base64 664 test
-YSBzbGlnaHRseSBsb25nZXIgdGVzdCBmb3IgdGV2ZXIK
-====
+```bash
+bash$ echo -n hello | base64
+# 輸出到控制台: aGVsbG8=
 ```
 
-The `data` URI will use the encoded data after the initial header line.
+## 常見問題
 
-### JavaScript
+此部分描述創建和使用 `data` URLs 時常見的問題。
 
-請先閱讀文章《 [Base64 encoding and decoding](/zh-TW/docs/Web/JavaScript/Base64_encoding_and_decoding). 》。
-
-## 轉換 nsIFile 至 data URI
-
-This function returns a base 64-encoded data URI from the passed [nsIFile](/zh-TW/XPCOM_Interface_Reference/nsIFile).
-
-```js
-function generateDataURI(file) {
-  var contentType = Components.classes["@mozilla.org/mime;1"]
-    .getService(Components.interfaces.nsIMIMEService)
-    .getTypeFromFile(file);
-  var inputStream = Components.classes[
-    "@mozilla.org/network/file-input-stream;1"
-  ].createInstance(Components.interfaces.nsIFileInputStream);
-  inputStream.init(file, 0x01, 0600, 0);
-  var stream = Components.classes[
-    "@mozilla.org/binaryinputstream;1"
-  ].createInstance(Components.interfaces.nsIBinaryInputStream);
-  stream.setInputStream(inputStream);
-  var encoded = btoa(stream.readBytes(stream.available()));
-  return "data:" + contentType + ";base64," + encoded;
-}
+```html
+data:text/html,lots of text…<p><a name%3D"bottom">bottom</a>?arg=val</p>
 ```
 
-## 安全
+這表示一個 HTML 資源，其內容為：
 
-> **備註：** Prior to Gecko 6.0, `data` URIs inherited the security context of the page currently in the browser window if the user enters a `data` URI into the location bar. Now `data` URIs get a new, empty, security context.
+```html
+lots of text…
+<p><a name="bottom">bottom</a>?arg=val</p>
+```
 
-## 常見的問題
-
-以下列舉幾個再使用 `data` URIs 時常遇到的問題.
-
-- 表達式
-  - : `data` URIs 的格式十分簡單, 但是我們容易忘記在 "data" 區塊前面使用逗號, 或是不正確的將資料轉換為 base64 的格式.
-- 在 HTML 的格式
-  - : A `data` URI provides a file within a file, which can potentially be very wide relative to the width of the enclosing document. As a URL, the `data` should be formatable with whitespace (linefeed, tab, or spaces), but there are practical issues that arise [when using base64 encoding](http://bugzilla.mozilla.org/show_bug.cgi?id=73026#c12).
+- 語法
+  - : `data` URLs 的格式非常簡單，但很容易忘記在「data」段之前加上逗號，或者錯誤地將數據編碼為 base64 格式。
+- HTML 中的格式化
+  - : 一個 `data` URL 在文件中提供了一個文件，這可能相對於包含文件的寬度非常寬。作為 URL，`data` 應該可以用空白（換行、制表符或空格）來格式化，但在使用 base64 編碼時會出現一些實際問題。[更多訊息](https://bugzil.la/73026#c12)。
 - 長度限制
-  - : Although Mozilla supports `data` URIs of essentially unlimited length, browsers are not required to support any particular maximum length of data. For example, the Opera 11 browser limits `data` URIs to around 65000 characters.
+  - : 瀏覽器不需要支持任何特定的最大數據長度。例如，Opera 11 瀏覽器將 URL 限制為 65535 個字元，這限制了 `data` URLs 的最大長度為 65529 個字元（如果使用簡單的 `data:`，不指定 MIME 類型，65529 個字元是編碼數據的長度，而不是源長度）。Firefox 97 版本及更高版本支持的 `data` URLs 最多可達 32MB（97 之前的版本限制接近 256MB）。Chromium 對超過 512MB 的 URL 提出異議，Webkit (Safari) 對超過 2048MB 的 URL 提出異議。
 - 缺乏錯誤處理
-  - : Invalid parameters in media, or typos when specifying "base64", are ignored, but no error is provided.
-- 未支援 query 字串, etc.
+  - : 媒體中的無效參數或在指定 `'base64'` 時的錯字會被忽略，但不會提供錯誤。
+- 不支持查詢字串等
+  - : Data URL 的數據部分是不透明的，因此嘗試在 Data URL 中使用查詢字串（頁面特定參數，語法為 `<url>?parameter-data`）將只是將查詢字串包含在 URL 表示的數據中。
+- 安全問題
+  - : 一些與 Data URL 相關的安全問題（例如釣魚），以及在瀏覽器的頂層導航到 Data URL 的問題。為了減輕這些問題，現代瀏覽器在頂層導航中禁止 Data URL。詳情請參見[Mozilla 安全團隊的這篇博客文章](https://blog.mozilla.org/security/2017/11/27/blocking-top-level-navigations-data-urls-firefox-59/)。
 
-  - : The data portion of a data URI is opaque, so an attempt to use a query string (page-specific parameters, with the syntax `<url>?parameter-data`) with a data URI will just include the query string in the data the URI represents. For example:
+## 規範
 
-    ```plain
-    data:text/html,lots of text...<p><a name%3D"bottom">bottom</a>?arg=val
-    ```
+{{Specifications}}
 
-    This represents an HTML resource whose contents are:
+## 瀏覽器相容性
 
-    ```plain
-    lots of text...<p><a name="bottom">bottom</a>?arg=val
-    ```
-
-    Note: as of Firefox 6, fragments (anchors) are processed consistent with other URI schemes, thus a bare "#" in the content needs to be escaped as '%23'.
-
-## 瀏覽器的支援
-
-The `data` scheme is supported by Opera 7.20 and above, as well as Safari and Konqueror. Internet Explorer 7 and below, however, do not currently support it. Internet Explorer 8 and above only supports `data` URIs for images in CSS, \<link>, and \<img>.
+{{compat}}
 
 ## 參見
 
-- [Base64 encoding and decoding](/zh-TW/docs/Web/JavaScript/Base64_encoding_and_decoding)
-- {{domxref("WindowBase64.atob","atob()")}}
-- {{domxref("WindowBase64.btoa","btoa()")}}
-- [CSS `url()`](/zh-TW/docs/Web/CSS/uri)
-- [URI](/zh-TW/docs/URI)
-
-## 資源
-
-- [RFC 2397](http://tools.ietf.org/html/rfc2397) — The "data" URL scheme"
+- [Base64](/zh-TW/docs/Glossary/Base64)
+- [URL 編碼](https://en.wikipedia.org/wiki/URL_encoding)
+- {{domxref("atob","atob()")}}
+- {{domxref("btoa","btoa()")}}
+- [CSS `url()`](/zh-TW/docs/Web/CSS/url)
+- [URI](/zh-TW/docs/Glossary/URI)
