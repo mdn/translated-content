@@ -21,7 +21,7 @@ l10n:
 
    首先，我们使用确认提示（confirm prompt）提示用户进行回答。这将在屏幕上显示一个窗口（如图所示），用户可以选择“确定”或“取消” — 这对应于返回的布尔值。当你在浏览器中点击“呼叫”时，将出现以下提示：
 
-    ![A browser prompt that asks "Do you want to answer?" with two options: "Cancel" and "Ok"](confirm_prompt.png)
+   ![A browser prompt that asks "Do you want to answer?" with two options: "Cancel" and "Ok"](confirm_prompt.png)
 
     > **警告：** 由于我们使用`confirm`提示来询问用户是否要接听呼叫，因此很重要的一点是被呼叫的浏览器和标签必须是“活动”的，这意味着窗口不能最小化，并且标签应该在屏幕上并且鼠标的焦点应该在其内部的某个地方。理想情况下，在这个应用的生产版本中，你应该在HTML中创建自己的模态窗口，它不会有这些限制。
 
