@@ -1,5 +1,5 @@
 ---
-title: Using DTMF with WebRTC
+title: 在 WebRTC 中使用双音多频
 slug: Web/API/WebRTC_API/Using_DTMF
 l10n:
   sourceCommit: f92df19cdf44d4352b89e446dc1b9d1e5addcbe1
