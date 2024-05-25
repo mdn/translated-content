@@ -247,7 +247,7 @@ function handleToneChangeEvent(event) {
 
 #### 添加候选者到呼叫方
 
-当呼叫方的 `RTCPeerConnection` ICE 层提出一个新的候选者时，它会向 `callerPC` 发出一个 {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} 事件。`icecandidate` 事件处理程序的工作是将候选者传输给接收方。在我们的示例中，我们直接控制呼叫方和接收方，所以我们可以直接通过调用其 {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} 方法将候选者添加到接收方。这由 `handleCallerIceEvent()` 处理：
+当呼叫方的 `RTCPeerConnection` ICE 层提出一个新的候选者时，它会向 `callerPC` 发出一个 {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} 事件。`icecandidate` 事件处理器的工作是将候选者传输给接收方。在我们的示例中，我们直接控制呼叫方和接收方，所以我们可以直接通过调用其 {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} 方法将候选者添加到接收方。这由 `handleCallerIceEvent()` 处理：
 
 ```js
 function handleCallerIceEvent(event) {
