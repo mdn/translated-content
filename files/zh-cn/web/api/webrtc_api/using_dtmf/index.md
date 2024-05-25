@@ -283,7 +283,7 @@ function handleCallerIceConnectionStateChange() {
 
 实际上，`iceconnectionstatechange` 事件并没有在其中包含新状态，因此我们从 `callerPC` 的 {{domxref("RTCPeerConnection.iceConnectionState")}} 属性中获取连接过程的当前状态。在记录新状态后，我们查看状态是否为 `"connected"`。如果是，我们记录即将发送 DTMF 的事实，然后调用 {{domxref("RTCDTMFSender.insertDTMF", "dtmf.insertDTMF()")}} 在与我们[之前存储](#将音频添加到连接)在 `dtmfSender` 中的 `RTCDTMFSender` 相同的轨道上发送 DTMF。
 
-我们调用 `insertDTMF()` 不仅指定要发送的 DTMF 的 (`dialString`)，还指定了每个音调的长度（400 毫秒）和音调之间的时间间隔（50 毫秒）。
+我们调用 `insertDTMF()` 不仅指定要发送的 DTMF 的（`dialString`），还指定了每个音调的长度（400 毫秒）和音调之间的时间间隔（50 毫秒）。
 
 #### 协商连接
 
