@@ -155,7 +155,7 @@ function connectAndDial() {
 
 然后创建第二个 `RTCPeerConnection`，代表呼叫的接收端，并存储在 `receiverPC` 中；它的 `onicecandidate` 事件处理程序也被设置了。
 
-如果支持 `addTrack()`，我们设置接收方的 `ontrack` 事件处理程序；否则，我们设置 `onaddstream`。当媒体被添加到连接时，会发送 {{domxref("RTCPeerConnection.track_event", "track")}} 和 {{domxref("RTCPeerConnection/addstream_event", "addstream")}} 事件。
+如果支持 `addTrack()`，我们设置接收方的 `ontrack` 事件处理器；否则，我们设置 `onaddstream`。当媒体被添加到连接时，会发送 {{domxref("RTCPeerConnection.track_event", "track")}} 和 {{domxref("RTCPeerConnection/addstream_event", "addstream")}} 事件。
 
 最后，我们调用 {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} 来获取对呼叫方麦克风的访问权限。如果成功，将调用函数 `gotStream()`，否则我们记录错误，因为调用失败了。
 
