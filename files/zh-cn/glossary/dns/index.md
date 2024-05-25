@@ -14,4 +14,4 @@ DNS 最突出的功能是将易于记忆的域名（例如 mozilla.org）翻译�
 ## 参见
 
 - [理解域名](/zh-CN/docs/Learn/Common_questions/What_is_a_domain_name)
-- 维基百科上的[域名系统](https://zh.wikipedia.org/wiki/Domain_Name_System)
+- 维基百科上的[域名系统](https://zh.wikipedia.org/wiki/域名系统)
