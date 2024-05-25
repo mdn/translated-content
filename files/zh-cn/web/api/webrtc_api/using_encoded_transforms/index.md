@@ -162,7 +162,7 @@ onrtctransform = (event) => {
 
 虽然可以使用 {{domxref("Worker.postMessage()")}} 在运行变换代码的工作线程和主线程之间共享信息，但通常更容易使用 {{domxref("MessageChannel")}} 作为 [`RTCRtpScriptTransform` 构造函数](/zh-CN/docs/Web/API/RTCRtpScriptTransform/RTCRtpScriptTransform) 的选项共享频道，因为在处理新的编码帧时，通道上下文直接可在 `event.transformer.options` 中使用。
 
-以下代码创建了一个 {{domxref("MessageChannel")}} 并将其第二个端口 [传输](/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects) 给工作线程。主线程和变换随后可以使用第一个和第二个端口进行通信。
+以下代码创建了一个 {{domxref("MessageChannel")}} 并将其第二个端口[传输](/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects)给工作线程。主线程和变换随后可以使用第一个和第二个端口进行通信。
 
 ```js
 // 创建一个包含 TransformStream 的 Worker 脚本
