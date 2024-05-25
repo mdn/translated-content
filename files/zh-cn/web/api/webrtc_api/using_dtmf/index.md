@@ -275,7 +275,7 @@ function handleCallerIceEvent(event) {
 function handleCallerIceConnectionStateChange() {
   log(`呼叫方连接状态已更改为 ${callerPC.iceConnectionState}`);
   if (callerPC.iceConnectionState === "connected") {
-    log(`Sending DTMF: "${dialString}"`);
+    log(`发送 DTMF: "${dialString}"`);
     dtmfSender.insertDTMF(dialString, 400, 50);
   }
 }
