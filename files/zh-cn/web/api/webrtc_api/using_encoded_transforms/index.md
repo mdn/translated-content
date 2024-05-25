@@ -123,7 +123,7 @@ addEventListener("rtctransform", (event) => {
 });
 ```
 
-WebRTC 编码转换的实现类似于“通用” `TransformStream`，但存在一些重要的区别。像通用流一样，它的[构造函数](/zh-CN/docs/Web/API/TransformStream/TransformStream#parameters)接受一个定义了可选的 [`start()`](/zh-CN/docs/Web/API/TransformStream/TransformStream#startcontroller) 方法的对象，该方法在构造时调用，[`flush()`](/zh-CN/docs/Web/API/TransformStream/TransformStream#flushcontroller) 方法，在流即将关闭时调用，以及 [`transform()`](/zh-CN/docs/Web/API/TransformStream/TransformStream#transformchunk_controller) 方法，每当有一个块需要处理时都会调用。
+WebRTC 编码转换的实现类似于“通用” `TransformStream`，但存在一些重要的区别。像通用流一样，它的[构造函数](/zh-CN/docs/Web/API/TransformStream/TransformStream#参数)接受一个定义了可选的 [`start()`](/zh-CN/docs/Web/API/TransformStream/TransformStream#startcontroller) 方法的对象，该方法在构造时调用，[`flush()`](/zh-CN/docs/Web/API/TransformStream/TransformStream#flushcontroller) 方法，在流即将关闭时调用，以及 [`transform()`](/zh-CN/docs/Web/API/TransformStream/TransformStream#transformchunk_controller) 方法，每当有一个块需要处理时都会调用。
 
 与通用构造函数不同，任何在构造函数对象中传递的 `writableStrategy` 或 `readableStrategy` 属性都会被忽略，队列策略完全由用户代理管理。
 
