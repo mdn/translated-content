@@ -291,7 +291,7 @@ function handleCallerIceConnectionStateChange() {
 
 ```js
 function handleCallerNegotiationNeeded() {
-  log("Negotiating…");
+  log("协商中...");
   callerPC
     .createOffer(offerOptions)
     .then((offer) => {
