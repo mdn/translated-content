@@ -34,7 +34,7 @@ function sayHello() {
 function greeting(helloMessage, name) {
   console.log(helloMessage() + name);
 }
-// 传递 `sayHello` 作为 `greeting` 函数的参数
+// 将 `sayHello` 作为 `greeting` 函数的参数进行传递
 greeting(sayHello, "JavaScript!");
 // Hello, JavaScript!
 ```
