@@ -9,7 +9,7 @@ l10n:
 
 在本指南中，我们将探讨如何向对等连接添加数据通道，然后可以使用该通道安全地交换任意数据；也就是说，我们希望交换的任何类型和格式的数据。
 
-> **备注：** 由于所有 WebRTC 组件都需要使用加密，因此在 `RTCDataChannel` 上传输的任何数据都会自动使用 Datagram Transport Layer Security（**DTLS**）进行安全传输。有关更多信息，请参阅下面的 [安全](#安全) 部分。
+> **备注：** 由于所有 WebRTC 组件都需要使用加密，因此在 `RTCDataChannel` 上传输的任何数据都会自动使用 Datagram Transport Layer Security（**DTLS**）进行安全传输。有关更多信息，请参阅下面的[安全](#安全)部分。
 
 ## 创建数据通道
 
