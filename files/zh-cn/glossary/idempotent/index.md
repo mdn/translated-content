@@ -27,7 +27,7 @@ POST /add_row HTTP/1.1   -> 新增第二行内容
 POST /add_row HTTP/1.1   -> 新增第三行内容
 ```
 
-`DELETE /idX/delete HTTP/1.1` 是幂等的，即便是不同请求之间接收到的状态码不一样：
+`DELETE /idX/delete HTTP/1.1` 是幂等的，即使返回的状态代码在不同请求之间可能会发生变化：
 
 ```http
 DELETE /idX/delete HTTP/1.1   -> 返回 200，如果 idX 存在
