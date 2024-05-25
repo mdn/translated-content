@@ -213,7 +213,7 @@ function gotStream(stream) {
 ```js
 function handleToneChangeEvent(event) {
   if (event.tone !== "") {
-    log(`Tone played: ${event.tone}`);
+    log(`播放音调：${event.tone}`);
   } else {
     log("All tones have played. Disconnecting.");
     callerPC.getLocalStreams().forEach((stream) => {
