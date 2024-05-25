@@ -635,7 +635,7 @@
 /ja/docs/DOM/HTMLTitleElement	/ja/docs/Web/API/HTMLTitleElement
 /ja/docs/DOM/ImageData	/ja/docs/Web/API/ImageData
 /ja/docs/DOM/KeyboardEvent	/ja/docs/Web/API/KeyboardEvent
-/ja/docs/DOM/Locating_DOM_elements_using_selectors	/ja/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors
+/ja/docs/DOM/Locating_DOM_elements_using_selectors	/ja/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors
 /ja/docs/DOM/Manipulating_the_browser_history	/ja/docs/Web/API/History_API
 /ja/docs/DOM/MediaQueryList	/ja/docs/Web/API/MediaQueryList
 /ja/docs/DOM/Mozilla_event_reference/compositionend	/ja/docs/Web/API/Element/compositionend_event
@@ -2559,7 +2559,7 @@
 /ja/docs/Using_gradients	/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients
 /ja/docs/Using_native_JSON	/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON
 /ja/docs/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations	/ja/docs/Web/API/XSLTProcessor
-/ja/docs/Using_the_W3C_DOM_Level_1_Core	/ja/docs/Web/API/Document_object_model/Using_the_Document_Object_Model
+/ja/docs/Using_the_W3C_DOM_Level_1_Core	/ja/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
 /ja/docs/Using_the_Web_Console	https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html
 /ja/docs/Using_the_Web_Console/Helpers	https://firefox-source-docs.mozilla.org/devtools-user/web_console/helpers/index.html
 /ja/docs/Using_the_Web_Console/WebConsoleHelp	https://firefox-source-docs.mozilla.org/devtools-user/web_console/helpers/index.html
@@ -2728,7 +2728,7 @@
 /ja/docs/Web/API/DocumentOrShadowRoot/styleSheets	/ja/docs/Web/API/Document/styleSheets
 /ja/docs/Web/API/Document_Object_Model/Events	/ja/docs/orphaned/Web/API/Document_Object_Model/Events
 /ja/docs/Web/API/Document_Object_Model/Preface	/ja/docs/Web/API/Document_Object_Model
-/ja/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core	/ja/docs/Web/API/Document_object_model/Using_the_Document_Object_Model
+/ja/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core	/ja/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
 /ja/docs/Web/API/Element.contentEditable	/ja/docs/Web/API/HTMLElement/contentEditable
 /ja/docs/Web/API/Element.isContentEditable	/ja/docs/Web/API/HTMLElement/isContentEditable
 /ja/docs/Web/API/Element.querySelector	/ja/docs/Web/API/Element/querySelector
@@ -3410,7 +3410,7 @@
 /ja/docs/Web/API/window.moveTo	/ja/docs/Web/API/Window/moveTo
 /ja/docs/Web/API/window.mozInnerScreenX	/ja/docs/Web/API/Window/mozInnerScreenX
 /ja/docs/Web/API/window.mozInnerScreenY	/ja/docs/Web/API/Window/mozInnerScreenY
-/ja/docs/Web/API/window.mozRequestAnimationFrame	/ja/docs/Web/API/window/requestAnimationFrame
+/ja/docs/Web/API/window.mozRequestAnimationFrame	/ja/docs/Web/API/Window/requestAnimationFrame
 /ja/docs/Web/API/window.name	/ja/docs/Web/API/Window/name
 /ja/docs/Web/API/window.navigator	/ja/docs/Web/API/Window/navigator
 /ja/docs/Web/API/window.navigator.appCodeName	/ja/docs/Web/API/Navigator/appCodeName
@@ -3449,7 +3449,7 @@
 /ja/docs/Web/API/window.personalbar	/ja/docs/Web/API/Window/personalbar
 /ja/docs/Web/API/window.prompt	/ja/docs/Web/API/Window/prompt
 /ja/docs/Web/API/window.releaseEvents	/ja/docs/Web/API/Window/releaseEvents
-/ja/docs/Web/API/window.requestAnimationFrame	/ja/docs/Web/API/window/requestAnimationFrame
+/ja/docs/Web/API/window.requestAnimationFrame	/ja/docs/Web/API/Window/requestAnimationFrame
 /ja/docs/Web/API/window.resizeBy	/ja/docs/Web/API/Window/resizeBy
 /ja/docs/Web/API/window.resizeTo	/ja/docs/Web/API/Window/resizeTo
 /ja/docs/Web/API/window.screen	/ja/docs/Web/API/Window/screen
