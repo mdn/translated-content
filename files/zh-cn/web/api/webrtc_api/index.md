@@ -69,7 +69,7 @@ WebRTC 在现代浏览器中通常得到很好的支持，但仍存在一些不�
 - {{domxref("RTCDataChannel.closing_event", "closing")}}
   - ：`RTCDataChannel` 已转换为 `closing` 状态，表示它将很快关闭。你可以通过观察 `close` 事件来检测关闭过程的完成。
 - {{domxref("RTCPeerConnection.connectionstatechange_event", "connectionstatechange")}}
-  - ：连接的状态，可以通过 {{domxref("RTCPeerConnection.connectionState", "connectionState")}} 访问，已更改。
+  - ：连接状态已更改，可以在 {{domxref("RTCPeerConnection.connectionState", "connectionState")}} 中访问。
 - {{domxref("RTCPeerConnection.datachannel_event", "datachannel")}}
   - ：远程对等方打开新数据通道后，会有一个新的 {{domxref("RTCDataChannel")}} 可用。此事件的类型是 {{domxref("RTCDataChannelEvent")}}。
 - {{domxref("RTCDataChannel.error_event", "error")}}
