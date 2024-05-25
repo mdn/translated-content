@@ -7,7 +7,7 @@ l10n:
 
 {{ ApiRef("DOM") }}
 
-**`Document.hidden`** 只读属性返回表示页面是否被视为隐藏的一个布尔值。
+**`Document.hidden`** 只读属性返回一个表示页面是否被视为隐藏的布尔值。
 
 {{domxref("Document.visibilityState")}} 属性提供了另一种确定页面是否隐藏的方法。
 
@@ -20,7 +20,7 @@ l10n:
 ```js
 document.addEventListener("visibilitychange", () => {
   console.log(document.hidden);
-  // 修改行为...
+  // 修改行为……
 });
 ```
 
