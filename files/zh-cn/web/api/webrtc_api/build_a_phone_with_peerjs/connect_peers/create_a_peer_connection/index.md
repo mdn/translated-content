@@ -1,8 +1,8 @@
 ---
- title: Creating a peer connection
- slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Create_a_peer_connection
- l10n:
-   sourceCommit: c2274293475b0a5b4febf85a49c1f91bf43ebac7
+title: Creating a peer connection
+slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Create_a_peer_connection
+l10n:
+  sourceCommit: c2274293475b0a5b4febf85a49c1f91bf43ebac7
 ---
 
 {{DefaultAPISidebar("WebRTC")}}
