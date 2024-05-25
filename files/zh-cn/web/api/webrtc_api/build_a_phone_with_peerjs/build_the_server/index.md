@@ -62,7 +62,7 @@ l10n:
    console.log(`Listening on: ${port}`);
    ```
 
-5. 你应该能够通过`localhost`连接到你的应用程序（在我们的`server.js`中，我们使用端口8000（在第7行定义），但你可能正在使用另一个端口号）。在终端中运行`yarn start`（其中`start`是你在上一页的`package.json`中声明的脚本）。在浏览器中访问`localhost:8000`，你应该会看到一个类似下面这样的页面：
+5. 你应该能够通过`localhost`连接到你的应用程序（在我们的`server.js`中，我们使用端口 8000（在第 7 行定义），但你可能正在使用另一个端口号）。在终端中运行`yarn start`（其中`start`是你在上一页的`package.json`中声明的脚本）。在浏览器中访问`localhost:8000`，你应该会看到一个类似下面这样的页面：
 
     ![一个奶油色的背景，标题使用深绿色粗体字显示：“phone a friend”。下方紧接着是“Connecting...”，再下方是“please use headphones!”。接着是一个大大的深绿色按钮，上面写着“Call”，与背景色相同，呈奶油色。 ](connecting_screen.png)
 
