@@ -68,7 +68,7 @@ videoSender.transform = new RTCRtpScriptTransform(worker, {
 
 这个例子展示了如何添加一个转换来修改传入流。该代码假定已经连接到远程对等端的名为 `peerConnection` 的 {{domxref("RTCPeerConnection")}}。
 
-首先，我们添加了一个 `RTCPeerConnection` 的 [`track` 事件](/zh-CN/docs/Web/API/RTCPeerConnection/track_event) 处理程序，以捕获当对等端开始接收新轨道时的事件。在处理程序内部，我们构造了一个 `RTCRtpScriptTransform` 并将其添加到 `event.receiver.transform`（`event.receiver` 是一个 {{domxref("RTCRtpReceiver")}}）。
+首先，我们添加了一个 `RTCPeerConnection` 的 [`track` 事件](/zh-CN/docs/Web/API/RTCPeerConnection/track_event)处理程序，以捕获当对等端开始接收新轨道时的事件。在处理程序内部，我们构造了一个 `RTCRtpScriptTransform` 并将其添加到 `event.receiver.transform`（`event.receiver` 是一个 {{domxref("RTCRtpReceiver")}}）。
 与前一节相同，构造函数采用一个具有 `name` 属性的对象，但是在这里我们使用 `receiverTransform` 作为值，告诉 worker 正在传入帧。
 
 ```js
