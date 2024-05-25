@@ -19,7 +19,7 @@ l10n:
    });
    ```
 
-    首先，我们使用确认提示（confirm prompt）提示用户进行回答。这将在屏幕上显示一个窗口（如图所示），用户可以选择“确定”或“取消” — 这对应于返回的布尔值。当你在浏览器中点击“呼叫”时，将出现以下提示：
+   首先，我们使用确认提示（confirm prompt）提示用户进行回答。这将在屏幕上显示一个窗口（如图所示），用户可以选择“确定”或“取消” — 这对应于返回的布尔值。当你在浏览器中点击“呼叫”时，将出现以下提示：
 
     ![A browser prompt that asks "Do you want to answer?" with two options: "Cancel" and "Ok"](confirm_prompt.png)
 
