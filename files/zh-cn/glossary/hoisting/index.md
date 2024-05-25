@@ -29,7 +29,7 @@ const x = 1;
 }
 ```
 
-如果 `const x = 2` 声明完全没有提升（即仅在执行时生效），那么 `console.log(x)` 语句应该能够读取上层作用域的 `x` 值。然而，由于 `const` 声明仍然“污染”了其定义的整个作用域，`console.log(x)` 语句读取的是 `const x = 2` 声明的 `x`，但它尚未初始化，因此抛出 {{jsxref("ReferenceError")}}。不过，从实用角度看，将词法声明视为不提升可能更有用，因为这些声明的提升并没有带来任何有意义的功能。
+如果 `const x = 2` 声明完全没有提升（即仅在执行时生效），那么 `console.log(x)` 语句应该能够读取上层作用域的 `x` 值。然而，由于 `const` 声明仍然“污染”了其定义的整个作用域，`console.log(x)` 语句读取的是 `const x = 2` 声明的 `x`，但它尚未初始化，因此抛出 {{jsxref("ReferenceError")}}。不过，从实用角度看，将词法声明视为不提升可能更有用，因为这些声明的提升并没有带来任何有意义的特性。
 
 注意以下情况不属于提升：
 
@@ -44,10 +44,10 @@ console.log(x); // 1
 
 有关提升的更多信息，请参见：
 
-- `var`、`let`、`const` 提升 — [语法类型教程](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#variable_hoisting)
-- `function` 提升 — [函数教程](/zh-CN/docs/Web/JavaScript/Guide/Functions#function_hoisting)
-- `class` 提升 — [类教程](/zh-CN/docs/Web/JavaScript/Guide/Using_classes#class_declaration_hoisting)
-- `import` 提升 — [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules#import_declarations_are_hoisted)
+- `var`、`let`、`const` 提升——[语法类型教程](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#variable_hoisting)
+- `function` 提升——[函数教程](/zh-CN/docs/Web/JavaScript/Guide/Functions#function_hoisting)
+- `class` 提升——[类教程](/zh-CN/docs/Web/JavaScript/Guide/Using_classes#class_declaration_hoisting)
+- `import` 提升——[JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules#import_declarations_are_hoisted)
 
 ## 参见
 
