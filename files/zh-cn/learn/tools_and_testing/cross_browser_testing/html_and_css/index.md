@@ -2,7 +2,7 @@
 title: 处理常见的 HTML 和 CSS 问题
 slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: ec80e95431ed46f05946e9b12219fdd2962808e6
 ---
 
 {{LearnSidebar}}
