@@ -10,7 +10,7 @@ l10n:
 
 JavaScript **提升**是指解释器在执行代码之前，似乎将函数、变量、类或导入的*声明*移动到其作用域的顶部的过程。
 
-*提升*不是 ECMAScript 规范中规范定义的术语。规范确实将一组声明定义为[*可提升的声明*](https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#prod-HoistableDeclaration)，但这只包括 [`function`](/zh-CN/docs/Web/JavaScript/Reference/Statements/function)、[`function*`](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)、[`async function`](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function) 以及 [`async function*`](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function*) 声明。提升通常也被认为是 [`var`](/zh-CN/docs/Web/JavaScript/Reference/Statements/var) 声明的一个特性，尽管方式不同。用通俗的话来说，以下任何行为都可以被视为提升：
+*提升*不是 ECMAScript 规范中规范定义的术语。规范确实将一组声明定义为[_可提升的声明_](https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#prod-HoistableDeclaration)，但这只包括 [`function`](/zh-CN/docs/Web/JavaScript/Reference/Statements/function)、[`function*`](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)、[`async function`](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function) 以及 [`async function*`](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function*) 声明。提升通常也被认为是 [`var`](/zh-CN/docs/Web/JavaScript/Reference/Statements/var) 声明的一个特性，尽管方式不同。用通俗的话来说，以下任何行为都可以被视为提升：
 
 1. 能够在声明变量之前在其作用域中使用该变量的值。（“值提升”）
 2. 能够在声明变量之前在其作用域中引用该变量而不抛出 {{jsxref("ReferenceError")}}，但值始终是 [`undefined`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined)。（“声明提升”）
