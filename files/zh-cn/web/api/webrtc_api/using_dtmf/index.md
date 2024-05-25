@@ -359,7 +359,7 @@ function handleReceiverIceEvent(event) {
       .addIceCandidate(new RTCIceCandidate(event.candidate))
       .catch((err) => log(`向呼叫方添加候选者时出错：${err}`));
   } else {
-    log("Receiver is out of candidates.");
+    log("接收方已经没有更多的候选者。");
   }
 }
 ```
