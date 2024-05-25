@@ -252,7 +252,7 @@ function handleToneChangeEvent(event) {
 ```js
 function handleCallerIceEvent(event) {
   if (event.candidate) {
-    log(`Adding candidate to receiver: ${event.candidate.candidate}`);
+    log(`正在向接收方添加候选者：${event.candidate.candidate}`);
 
     receiverPC
       .addIceCandidate(new RTCIceCandidate(event.candidate))
