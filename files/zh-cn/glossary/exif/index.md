@@ -11,5 +11,5 @@ l10n:
 
 ## 参见
 
-- 维基百科上的[EXIF](https://zh.wikipedia.org/wiki/Exif)
-- [CIPA 标准，包括 "CIPA DC-008-Translation-2019 数码相机的可交换图像文件格式：Exif 版本 2.32"](https://www.cipa.jp/e/std/std-sec.html)
+- 维基百科上的 [EXIF](https://zh.wikipedia.org/wiki/Exif)
+- [CIPA 标准，包括“CIPA DC-008-Translation-2019 数码相机的可交换图像文件格式：Exif 版本 2.32”](https://www.cipa.jp/e/std/std-sec.html)
