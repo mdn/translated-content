@@ -33,7 +33,7 @@ Allow: <http-methods>
 ## 指令
 
 - \<http-methods>
-  - : 允許的 [HTTP 請求方法](/zh-tw/docs/Web/HTTP/Methods)的逗號分隔列表。
+  - : 允許的 [HTTP 請求方法](/zh-TW/docs/Web/HTTP/Methods)的逗號分隔列表。
 
 ## 範例
 
