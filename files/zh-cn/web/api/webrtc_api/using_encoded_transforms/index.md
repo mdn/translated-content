@@ -15,7 +15,7 @@ WebRTC 编码转换提供了一种机制，可以将高性能的 [Stream API](/z
 
 `RTCRtpScriptTransformer` 作为 {{domxref("DedicatedWorkerGlobalScope/rtctransform_event", "rtctransform")}} 事件的 `transformer` 属性向代码提供，该事件在每次编码帧被入队进行处理时（以及在相应的 {{domxref("RTCRtpScriptTransform")}} 构造函数的初始时）在工作线程全局范围内触发。工作线程代码必须实现一个事件处理程序，从 `transformer.readable` 中读取编码帧，根据需要对其进行修改，并按照相同的顺序且不重复地将它们写入 `transformer.writable`。
 
-虽然接口对实现没有其他限制，但一种自然的转换帧的方式是创建一个 [管道链](/zh-CN/docs/Web/API/Streams_API/Concepts#pipe_chains)，将在 `event.transformer.readable` 流上入队的帧通过 {{DOMxRef("TransformStream")}} 发送到 `event.transformer.writable` 流。我们可以使用 `event.transformer.options` 属性来配置任何取决于转换是从封包器入队传入帧，还是从编解码器出队传出帧的转换代码。
+虽然接口对实现没有其他限制，但一种自然的转换帧的方式是创建一个[链式管道](/zh-CN/docs/Web/API/Streams_API/Concepts#链式管道传输)，将在 `event.transformer.readable` 流上入队的帧通过 {{DOMxRef("TransformStream")}} 发送到 `event.transformer.writable` 流。我们可以使用 `event.transformer.options` 属性来配置任何取决于转换是从封包器入队传入帧，还是从编解码器出队传出帧的转换代码。
 
 {{domxref("RTCRtpScriptTransformer")}} 接口还提供了一些方法，可在发送编码视频时使用，以便让编解码器生成一个“关键”帧，在接收视频时请求发送一个新的关键帧。如果（例如）在发送增量帧时加入会议呼叫，则这些方法可能很有用，允许接收者更快地开始查看视频。
 
