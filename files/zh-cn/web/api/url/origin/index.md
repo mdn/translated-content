@@ -7,13 +7,13 @@ l10n:
 
 {{APIRef("URL API")}} {{AvailableInWorkers}}
 
-{{domxref("URL")}} 接口的 **`origin`** 只读属性返回一个包含所表示 URL 的源的 Unicode 序列化形式的字符串。
+{{domxref("URL")}} 接口的 **`origin`** 只读属性返回一个包含所表示 URL 的来源（origin）的 Unicode 序列化形式的字符串。
 
 具体结构因 URL 类型而异：
 
-- 对于 `http` 或 `https` URL，其格式为：协议名紧接 `'://'`，随后是域名，紧接着是 `':'`，之后是端口号（如果明确指定且非默认端口——分别为 `80` 和 `443` ）。
+- 对于 `http` 或 `https` URL，其格式为：协议名紧接 `'://'`，随后是域名，紧接着是 `':'`，之后是端口号（如果明确指定且非默认端口——分别为 `80` 和 `443`）。
 - 对于 `file:` URL，其值取决于浏览器。
-- 对于 `blob:` URL，将使用 `blob:` 后面的 URL 的源。例如，`"blob:https://mozilla.org"` 将返回 `"https://mozilla.org"`。
+- 对于 `blob:` URL，将使用 `blob:` 后面的 URL 的来源。例如，`"blob:https://mozilla.org"` 将返回 `"https://mozilla.org"`。
 
 ## 值
 
