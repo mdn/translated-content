@@ -16,7 +16,7 @@ l10n:
 - `depth`
   - : 一个 {{cssxref("length-percentage")}}，指示 `<mpadded>` 元素的期望深度（基线以下）。
 - `height`
-    - : 一个 {{cssxref("length-percentage")}}，指示 `<mpadded>` 元素的期望高度（基线以上）。
+  - : 一个 {{cssxref("length-percentage")}}，指示 `<mpadded>` 元素的期望高度（基线以上）。
 - `lspace`
     - : 一个 {{cssxref("length-percentage")}}，指示子内容的定位点相对于 `<mpadded>` 元素的定位点的水平位置。
 - `voffset`
