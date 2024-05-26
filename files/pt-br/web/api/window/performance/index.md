@@ -1,6 +1,7 @@
 ---
 title: Window.performance
-slug: Web/API/performance_property
+slug: Web/API/Window/performance
+original_slug: Web/API/performance_property
 ---
 
 {{APIREf}}A API Web Performance permite páginas da web acessarem algumas funções para medir a performance de páginas e aplicações da web, incluindo a API Navigation Timing e dados de tempo de alta resolução.
