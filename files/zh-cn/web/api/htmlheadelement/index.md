@@ -16,7 +16,7 @@ l10n:
 _继承父类 {{domxref("HTMLElement")}} 的属性。_
 
 - {{domxref("HTMLHeadElement.profile")}} {{deprecated_inline}}
-  - : 表示一个或多个元数据配置文件的 URI（以空格分隔）的字符串。
+  - : 表示一个或多个元数据配置文件的 URI 的字符串（以空格分隔）。
 
 ## 实例方法
 
