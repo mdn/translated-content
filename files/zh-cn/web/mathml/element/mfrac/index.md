@@ -22,7 +22,7 @@ l10n:
 - `denomalign` {{deprecated_inline}} {{Non-standard_Inline}}
   - ：分数下的分母对齐方式。可能的值包括：`left`、`center`（默认）和 `right`。
 - `linethickness`
-    - ：指示水平分数线的粗细的 {{cssxref("length-percentage")}}。
+  - ：指示水平分数线的粗细的 {{cssxref("length-percentage")}}。
 - `numalign` {{deprecated_inline}} {{Non-standard_Inline}}
     - ：分数上的分子对齐方式。可能的值包括：`left`、`center`（默认）和 `right`。
 
