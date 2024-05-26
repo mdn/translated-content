@@ -16,7 +16,7 @@ l10n:
 - `columnalign` {{Non-standard_Inline}}
   - : 覆盖此行单元格的水平对齐方式，该水平对齐方式由 {{ MathMLElement("mtable") }} 指定。允许使用以空格分隔的多个值，并应用于相应的列（例如 `columnalign="left center right"`）。可能的值为：`left`、`center` 和 `right`。
 - `rowalign` {{Non-standard_Inline}}
-    - : 覆盖此行单元格的垂直对齐方式，该垂直对齐方式由 {{ MathMLElement("mtable") }} 指定。可能的值为：`axis`、`baseline`、`bottom`、`center` 和 `top`。
+  - : 覆盖此行单元格的垂直对齐方式，该垂直对齐方式由 {{ MathMLElement("mtable") }} 指定。可能的值为：`axis`、`baseline`、`bottom`、`center` 和 `top`。
 
 ## 规范
 
