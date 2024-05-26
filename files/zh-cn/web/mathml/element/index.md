@@ -117,7 +117,7 @@ l10n:
 - {{MathMLElement("mover")}}（上标）
 - {{MathMLElement("mprescripts")}}（预脚本的分隔符）
 - {{MathMLElement("msub")}}（下标）
-- {{MathMLElement("msubsup")}}（下标-上标对）
+- {{MathMLElement("msubsup")}}（下标 - 上标对）
 - {{MathMLElement("msup")}}（上标）
 - {{MathMLElement("munder")}}（下标）
 - {{MathMLElement("munderover")}}（下标-上标对）
