@@ -28,7 +28,7 @@ l10n:
 - `scriptminsize` {{deprecated_inline}} {{Non-standard_Inline}}
   - : 由于 `scriptlevel` 的更改，指定允许的最小字体大小。默认值为 `8pt`。
 - `scriptsizemultiplier` {{deprecated_inline}} {{Non-standard_Inline}}
-    - : 指定用于调整字体大小的乘数，由于 `scriptlevel` 的更改。默认值为 `0.71`。
+  - : 指定用于调整字体大小的乘数，由于 `scriptlevel` 的更改。默认值为 `0.71`。
 
 ## 示例
 
