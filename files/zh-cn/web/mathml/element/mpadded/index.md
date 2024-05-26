@@ -14,7 +14,7 @@ l10n:
 该元素的属性包括[全局 MathML 属性](/zh-CN/docs/Web/MathML/Global_attributes)以及以下属性：
 
 - `depth`
-    - : 一个 {{cssxref("length-percentage")}}，指示 `<mpadded>` 元素的期望深度（基线以下）。
+  - : 一个 {{cssxref("length-percentage")}}，指示 `<mpadded>` 元素的期望深度（基线以下）。
 - `height`
     - : 一个 {{cssxref("length-percentage")}}，指示 `<mpadded>` 元素的期望高度（基线以上）。
 - `lspace`
