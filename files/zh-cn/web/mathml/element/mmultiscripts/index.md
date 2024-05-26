@@ -33,7 +33,7 @@ MathML 使用以下语法，即一个基本表达式，后跟任意数量的后�
 该元素的属性包括[全局 MathML 属性](/zh-CN/docs/Web/MathML/Global_attributes)以及以下已弃用的属性：
 
 - `subscriptshift`：{{deprecated_inline}} {{Non-standard_Inline}}
-    - : 表示将下标基线最小移动的量的 {{cssxref("length-percentage")}}。
+  - : 表示将下标基线最小移动的量的 {{cssxref("length-percentage")}}。
 - `superscriptshift`：{{deprecated_inline}} {{Non-standard_Inline}}
     - : 表示将上标基线最小移动的量的 {{cssxref("length-percentage")}}。
 
