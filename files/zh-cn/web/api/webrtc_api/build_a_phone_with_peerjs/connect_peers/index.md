@@ -1,8 +1,8 @@
 ---
- title: Connecting the peers
- slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers
- l10n:
-   sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+title: Connecting the peers
+slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
 {{DefaultAPISidebar("WebRTC")}}
