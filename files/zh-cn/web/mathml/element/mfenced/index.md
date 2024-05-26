@@ -42,7 +42,7 @@ l10n:
 
 你的浏览器中的渲染：
 
-{{ EmbedLiveSample('mfenced 示例1', 700, 200, "", "") }}
+{{ EmbedLiveSample('mfenced 示例 1', 700, 200, "", "") }}
 
 ### 所有多余的内容都被忽略（`,`）
 
