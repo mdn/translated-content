@@ -34,7 +34,7 @@ l10n:
 - `stretchy`
   - : 一个 [`<boolean>`](/zh-CN/docs/Web/MathML/Values#mathml-specific_types)，表示运算符是否拉伸到相邻元素的大小。
 - `symmetric`
-    - : 一个 [`<boolean>`](/zh-CN/docs/Web/MathML/Values#mathml-specific_types)，表示拉伸运算符是否应该在虚拟的数学轴（中心分数线）周围垂直对称。
+  - : 一个 [`<boolean>`](/zh-CN/docs/Web/MathML/Values#mathml-specific_types)，表示拉伸运算符是否应该在虚拟的数学轴（中心分数线）周围垂直对称。
 
 > **备注：** 对于 `lspace`、`maxsize`、`minsize` 和 `rspace` 属性，一些浏览器可能还接受[旧版 MathML 长度](/zh-CN/docs/Web/MathML/Values#legacy_mathml_lengths)。
 
