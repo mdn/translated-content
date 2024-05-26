@@ -178,7 +178,7 @@ signaler.onmessage = async ({ data: { description, candidate } }) => {
 
 在通过 `onmessage` 事件处理程序接收到来自 `SignalingChannel` 的传入消息时，会对接收到的 JSON 对象进行重组，以获得其中的 `description` 或 `candidate`。如果传入的消息有 `description`，那么它要么是对方发出的邀约，要么是对方发出的答复。
 
-另一方面，如果报文有 `candidate`，则它是作为[trickle ICE]（/zh-CN/docs/Web/API/RTCPeerConnection/canTrickleIceCandidates）的一部分从远程对等设备接收的 ICE 候选。通过将候选对象传入 {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}}，候选对象将被发送到本地 ICE 层。
+另一方面，如果报文有 `candidate`，则它是作为 [trickle ICE](/zh-CN/docs/Web/API/RTCPeerConnection/canTrickleIceCandidates) 的一部分从远程对等设备接收的 ICE 候选。通过将候选对象传入 {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}}，候选对象将被发送到本地 ICE 层。
 
 ##### 在收到说明时
 
