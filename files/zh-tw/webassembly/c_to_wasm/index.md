@@ -134,7 +134,7 @@ slug: WebAssembly/C_to_Wasm
 
 2. 為了方便起見，現在將 `html_template/shell_minimal.html` 也添加到這一資料夾（但在實際開發環境中你肯定需要將其放到某一特定位置）。
 
-3. 運行以下指令編譯。請注意，我們需要使用 `NO_EXIT_RUNTIME` 來進行編譯。否則，當 `main()` 退出時，程式將被關閉，無法繼續調用編譯後的程式碼。這對於正確模擬 C 語言是必要的：例如，確保 [`atexit()`](https://en.cppreference.com/w/c/program/atexit) 函式被調用。
+3. 運行以下指令編譯。請注意，我們需要使用 `NO_EXIT_RUNTIME` 來進行編譯。否則，當 `main()` 退出時，程式將被關閉，無法繼續調用編譯後的程式碼。這對於正確模擬 C 語言是必要的：例如，確保 [`atexit()`](https://zh.cppreference.com/w/c/program/atexit) 函式被調用。
 
    ```bash
    emcc -o hello3.html hello3.c --shell-file html_template/shell_minimal.html -s NO_EXIT_RUNTIME=1 -s "EXPORTED_RUNTIME_METHODS=['ccall']"
