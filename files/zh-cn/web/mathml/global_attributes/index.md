@@ -42,7 +42,7 @@ l10n:
 - [`mathsize`](/zh-CN/docs/Web/MathML/Global_attributes/mathsize)
   - : 用作元素的 [font-size](/zh-CN/docs/Web/CSS/font-size) 的 {{cssxref("length-percentage")}}。
 - [`nonce`](/zh-CN/docs/Web/HTML/Global_attributes/nonce)
-    - : 一种密码用途的随机数（"number used once"），可用于 [内容安全策略](/zh-CN/docs/Web/HTTP/CSP) 来确定是否允许给定的获取继续进行。
+  - : 一种密码用途的随机数（"number used once"），可用于 [内容安全策略](/zh-CN/docs/Web/HTTP/CSP) 来确定是否允许给定的获取继续进行。
 - [`scriptlevel`](/zh-CN/docs/Web/MathML/Global_attributes/scriptlevel)
     - : 为元素指定 [math-depth](/zh-CN/docs/Web/CSS/math-depth)。有关接受的值和映射，请参阅 [scriptlevel 页面](/zh-CN/docs/Web/MathML/Global_attributes/scriptlevel#values)。
 - [`style`](/zh-CN/docs/Web/HTML/Global_attributes/style)
