@@ -22,7 +22,7 @@ l10n:
 - `lspace`
   - : 一个 {{cssxref("length-percentage")}}，表示运算符前的空间量。
 - `maxsize`
-    - : 一个 {{cssxref("length-percentage")}}，表示运算符在可拉伸时的最大大小。
+  - : 一个 {{cssxref("length-percentage")}}，表示运算符在可拉伸时的最大大小。
 - `minsize`
     - : 一个 {{cssxref("length-percentage")}}，表示运算符在可拉伸时的最小大小。
 - `movablelimits`
