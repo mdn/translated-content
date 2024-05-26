@@ -30,9 +30,9 @@ l10n:
     - `rtl`，表示 _从右到左_，并用于从右到左呈现数学表达式（例如 Maghreb 或 Machrek 风格）；
 
 - [`displaystyle`](/zh-CN/docs/Web/MathML/Global_attributes/displaystyle)：
-    - : 一个布尔值，用于设置元素的 [math-style](/zh-CN/docs/Web/CSS/math-style)。
-        - `true`，表示 `normal`。
-        - `false`，表示 `compact`。
+  - : 一个布尔值，用于设置元素的 [math-style](/zh-CN/docs/Web/CSS/math-style)。
+    - `true`，表示 `normal`。
+    - `false`，表示 `compact`。
 - [`id`](/zh-CN/docs/Web/HTML/Global_attributes/id)
     - : 定义一个唯一标识符（ID），它必须在整个文档中是唯一的。它的目的是在链接（使用片段标识符）、脚本化或样式化（使用 CSS）时标识元素。
 - [`mathbackground`](/zh-CN/docs/Web/MathML/Global_attributes/mathbackground)
