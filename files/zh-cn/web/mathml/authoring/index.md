@@ -201,7 +201,7 @@ cat input.html | node TeXZilla.js streamfilter > output.html
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
-    <title>HTML5中的MathML</title>
+    <title>HTML5 中的 MathML</title>
   </head>
   <body>
     <h1>HTML5中的MathML</h1>
