@@ -103,7 +103,7 @@ var nomeDoObjeto = {
 };
 ```
 
-O valor de um membro do objeto pode ser praticamente qualquer tipo. Em nosso objeto pessoa, temos uma string, um número, dois arrays e duas functions. Os primeiros quatro são data items (dados) e são referenciados como **propriedades** do objeto. Enquanto os dois últimos itens são funções que permitem que o objeto faça algo com esses dados. São chamados de **métodos** do objeto.
+O valor de um membro do objeto pode ser praticamente qualquer coisa. Em nosso objeto pessoa, temos uma string, um número, dois arrays e duas functions. Os primeiros quatro são data items (dados) e são referenciados como **propriedades** do objeto. Enquanto os dois últimos itens são funções que permitem que o objeto faça algo com esses dados. São chamados de **métodos** do objeto.
 
 Um objeto como esse é chamado de **objeto literal** — ao pé da letra, escrevemos o conteúdo do objeto conforme o criamos. Isto está em contraste com objetos instanciados de classes, que veremos mais adiante.
 
