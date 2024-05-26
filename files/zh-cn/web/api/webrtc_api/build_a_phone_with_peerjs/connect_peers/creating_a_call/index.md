@@ -44,7 +44,7 @@ l10n:
    - 确保窗口的`peerStream`设置为传递给函数的流。
    - 最后，你希望显示正确的内容，因此调用你之前创建的`showConnectedContent()`函数。
 
-3. 为了测试这个功能，打开两个浏览器窗口中的localhost:8000，并在其中一个窗口中点击“Call”。你应该会看到这个页面：
+3. 为了测试这个功能，打开两个浏览器窗口中的 localhost:8000，并在其中一个窗口中点击“Call”。你应该会看到这个页面：
 
     ![两个屏幕并排放置，都有浓郁的奶油色背景，标题为“phone a friend”，以黑色深绿色字体加粗显示。第一个屏幕下方显示“Your device ID is: 3b77”，第二个屏幕下方显示“Your device ID is: 2doa”，紧接着标题下方，显示“please use headphones!”。在下方，有一个大大的深绿色按钮，上面写着“Call”，字体颜色与背景色相同。第二个屏幕有一个浏览器对话框，询问对等方ID。](screens_side_by_side.png)
 
