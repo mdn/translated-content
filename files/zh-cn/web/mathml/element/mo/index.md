@@ -32,7 +32,7 @@ l10n:
 - `separator`
   - : 一个 [`<boolean>`](/zh-CN/docs/Web/MathML/Values#mathml-specific_types)，表示运算符是否是一个分隔符（例如逗号）。该属性没有视觉效果。
 - `stretchy`
-    - : 一个 [`<boolean>`](/zh-CN/docs/Web/MathML/Values#mathml-specific_types)，表示运算符是否拉伸到相邻元素的大小。
+  - : 一个 [`<boolean>`](/zh-CN/docs/Web/MathML/Values#mathml-specific_types)，表示运算符是否拉伸到相邻元素的大小。
 - `symmetric`
     - : 一个 [`<boolean>`](/zh-CN/docs/Web/MathML/Values#mathml-specific_types)，表示拉伸运算符是否应该在虚拟的数学轴（中心分数线）周围垂直对称。
 
