@@ -37,12 +37,12 @@ l10n:
 
    让我们逐步解读这段代码：
 
-    - `const call = peer.call(code, window.localStream)`：这将使用我们之前分配的`code`和`window.localStream`创建一个呼叫。请注意，`localStream`将是用户的`localStream`。因此，对于呼叫者A，它将是他们的流，而对于B，它将是他们自己的流。
-    - `call.on('stream', (stream) => {`：peerJS为我们提供了一个`stream`事件，你可以在已创建的`call`上使用它。当呼叫开始流式传输时，你需要确保从呼叫中传来的远程流被分配给正确的HTML元素和窗口，这就是你要做的地方。
-    - 匿名函数以一个`MediaStream`对象作为参数，然后你必须将其设置为你窗口的HTML，就像之前所做的那样。在这里，我们获取你的远程`<audio>`元素，并将传递给函数的流分配给`srcObject`属性。
-    - 确保元素的`autoplay`属性也设置为`true`。
-    - 确保窗口的`peerStream`设置为传递给函数的流。
-    - 最后，你希望显示正确的内容，因此调用你之前创建的`showConnectedContent()`函数。
+   - `const call = peer.call(code, window.localStream)`：这将使用我们之前分配的`code`和`window.localStream`创建一个呼叫。请注意，`localStream`将是用户的`localStream`。因此，对于呼叫者 A，它将是他们的流，而对于 B，它将是他们自己的流。
+   - `call.on('stream', (stream) => {`：peerJS 为我们提供了一个`stream`事件，你可以在已创建的`call`上使用它。当呼叫开始流式传输时，你需要确保从呼叫中传来的远程流被分配给正确的 HTML 元素和窗口，这就是你要做的地方。
+   - 匿名函数以一个`MediaStream`对象作为参数，然后你必须将其设置为你窗口的 HTML，就像之前所做的那样。在这里，我们获取你的远程`<audio>`元素，并将传递给函数的流分配给`srcObject`属性。
+   - 确保元素的`autoplay`属性也设置为`true`。
+   - 确保窗口的`peerStream`设置为传递给函数的流。
+   - 最后，你希望显示正确的内容，因此调用你之前创建的`showConnectedContent()`函数。
 
 3. 为了测试这个功能，打开两个浏览器窗口中的localhost:8000，并在其中一个窗口中点击“Call”。你应该会看到这个页面：
 
