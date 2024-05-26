@@ -18,7 +18,7 @@ l10n:
 - `background` {{deprecated_inline}} {{Non-standard_Inline}}
   - : 使用 <a href="/zh-CN/docs/Web/CSS/background-color"><code>background-color</code></a> 替代。
 - `color` {{deprecated_inline}} {{Non-standard_Inline}}
-    - : 使用 <a href="/zh-CN/docs/Web/CSS/color"><code>color</code></a> 替代。
+  - : 使用 <a href="/zh-CN/docs/Web/CSS/color"><code>color</code></a> 替代。
 - `fontsize` {{deprecated_inline}} {{Non-standard_Inline}}
     - : 使用 <a href="/zh-CN/docs/Web/CSS/font-size"><code>font-size</code></a> 替代。
 - `fontstyle` {{deprecated_inline}} {{Non-standard_Inline}}
