@@ -25,7 +25,7 @@ l10n:
     <title>HTML5 中的 MathML</title>
   </head>
   <body>
-    <h1>HTML5中的MathML</h1>
+    <h1>HTML5 中的 MathML</h1>
 
     <p>
       一分之根号二（行内样式）：
