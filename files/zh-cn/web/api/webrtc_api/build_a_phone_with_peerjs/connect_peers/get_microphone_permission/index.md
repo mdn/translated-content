@@ -1,8 +1,8 @@
 ---
- title: Getting browser microphone permission
- slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Get_microphone_permission
- l10n:
-   sourceCommit: e099e74fe5c09c46f0dfe044894692721a713d29
+title: Getting browser microphone permission
+slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Get_microphone_permission
+l10n:
+  sourceCommit: e099e74fe5c09c46f0dfe044894692721a713d29
 ---
 
 {{DefaultAPISidebar("WebRTC")}}
