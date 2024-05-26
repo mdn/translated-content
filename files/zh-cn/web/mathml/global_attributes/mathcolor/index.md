@@ -56,7 +56,7 @@ l10n:
 
 {{Specifications}}
 
-- 在 MathML 3 和更早版本中，支持的值集更有限。自 MathML 核心版本以来，语法与 CSS {{cssxref("<color>")}} 值相匹配。
+- 在 MathML 3 和更早版本中，支持的值集更有限。自 MathML 核心版本以来，语法与 CSS {{cssxref("&lt;color&gt;")}} 值相匹配。
 
 - 此属性设计用于不支持 CSS 的 MathML 应用程序。自 MathML 核心版本以来，推荐使用等效的 CSS。
 
