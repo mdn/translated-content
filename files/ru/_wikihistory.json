@@ -4619,7 +4619,7 @@
       "Azijkes"
     ]
   },
-  "Web/API/Document_object_model/Locating_DOM_elements_using_selectors": {
+  "Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors": {
     "modified": "2019-03-23T22:13:41.294Z",
     "contributors": ["tavira"]
   },
@@ -7387,6 +7387,23 @@
       "Aruseli"
     ]
   },
+  "Web/API/Window/requestAnimationFrame": {
+    "modified": "2020-10-15T21:21:09.538Z",
+    "contributors": [
+      "BehemothOz",
+      "S-inTheory",
+      "Kiryhas",
+      "ekirpichyov",
+      "Yialo",
+      "YozhEzhi",
+      "RoBit",
+      "alexsanqp",
+      "Bargamut",
+      "torbasow",
+      "Beliarh",
+      "nyk0r"
+    ]
+  },
   "Web/API/Window/requestIdleCallback": {
     "modified": "2020-05-21T02:39:12.402Z",
     "contributors": ["piranha", "toptalo", "SerzN1", "Bargamut"]
@@ -7789,23 +7806,6 @@
       "neustroev.artyom",
       "fscholz",
       "ichent"
-    ]
-  },
-  "Web/API/window/requestAnimationFrame": {
-    "modified": "2020-10-15T21:21:09.538Z",
-    "contributors": [
-      "BehemothOz",
-      "S-inTheory",
-      "Kiryhas",
-      "ekirpichyov",
-      "Yialo",
-      "YozhEzhi",
-      "RoBit",
-      "alexsanqp",
-      "Bargamut",
-      "torbasow",
-      "Beliarh",
-      "nyk0r"
     ]
   },
   "Web/Accessibility": {

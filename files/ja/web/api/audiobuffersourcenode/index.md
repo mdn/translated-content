@@ -117,7 +117,7 @@ source.start();
 
 {{Specifications}}
 
-## ブラウザ互換性
+## ブラウザーの互換性
 
 {{Compat}}
 
