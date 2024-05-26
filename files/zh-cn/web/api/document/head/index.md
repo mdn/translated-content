@@ -32,7 +32,7 @@ l10n:
 
 ## 备注
 
-`document.head` 是只读的。尝试给这个属性赋值将会静默失败，或者在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下抛出一个 {{jsxref("TypeError")}}。
+`document.head` 是只读的。尝试给这个属性赋值将会静默失败，或者在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下抛出 {{jsxref("TypeError")}}。
 
 ## 规范
 
