@@ -20,7 +20,7 @@ l10n:
 - `color` {{deprecated_inline}} {{Non-standard_Inline}}
   - : 使用 <a href="/zh-CN/docs/Web/CSS/color"><code>color</code></a> 替代。
 - `fontsize` {{deprecated_inline}} {{Non-standard_Inline}}
-    - : 使用 <a href="/zh-CN/docs/Web/CSS/font-size"><code>font-size</code></a> 替代。
+  - : 使用 <a href="/zh-CN/docs/Web/CSS/font-size"><code>font-size</code></a> 替代。
 - `fontstyle` {{deprecated_inline}} {{Non-standard_Inline}}
     - : 使用 <a href="/zh-CN/docs/Web/CSS/font-style"><code>font-style</code></a> 替代。
 - `fontweight` {{deprecated_inline}} {{Non-standard_Inline}}
