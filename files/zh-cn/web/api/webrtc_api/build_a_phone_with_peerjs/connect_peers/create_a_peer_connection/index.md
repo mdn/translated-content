@@ -16,7 +16,7 @@ l10n:
     ```js
     let code;
     function getStreamCode() {
-    code = window.prompt("Please enter the sharing code");
+      code = window.prompt("Please enter the sharing code");
     }
 
     ```
