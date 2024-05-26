@@ -31,10 +31,10 @@ l10n:
 1. 可选的 `+` 或 `-` 符号作为前缀，指定对应维度的增量或减量（如果缺失，则对应维度直接设置为指定值）。
 2. 后跟一个 [`<unsigned-number>`](/zh-CN/docs/Web/MathML/Values#mathml-specific_types)（下面称为 α）。
 3. 可选地跟随一个值（如果缺失，则指定值被解释为“α 的百分比的 100 倍”）。
-    - 一个[unit](/zh-CN/docs/Web/MathML/Values#units)。指定值的解释方式与旧版 MathML 长度相同。
-    - 一个[namedspace constant](/zh-CN/docs/Web/MathML/Values#constants)。指定值被解释为α乘以常量。
-    - 一个伪单位 `width`、`height` 或 `depth`。指定值被解释为内容的对应维度的 α 倍。
-    - 一个百分号后跟伪单位 `width`、`height` 或 `depth`。指定值被解释为内容的对应维度的 α%。
+   - 一个[unit](/zh-CN/docs/Web/MathML/Values#units)。指定值的解释方式与旧版 MathML 长度相同。
+   - 一个[namedspace constant](/zh-CN/docs/Web/MathML/Values#constants)。指定值被解释为α乘以常量。
+   - 一个伪单位 `width`、`height` 或 `depth`。指定值被解释为内容的对应维度的 α 倍。
+   - 一个百分号后跟伪单位 `width`、`height` 或 `depth`。指定值被解释为内容的对应维度的 α%。
 
 ## 示例
 
