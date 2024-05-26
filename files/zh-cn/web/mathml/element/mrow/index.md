@@ -1,11 +1,13 @@
 ---
 title: <mrow>
 slug: Web/MathML/Element/mrow
+l10n:
+  sourceCommit: 67cbfbf7a408e7180137b286247025bc40716642
 ---
 
 {{MathMLRef}}
 
-MathML `<mrow>` 元素用于对连续多行表达式的不同子表达式进行分组，一条子表达式通常算作一行，至少包含一或多个[操作符](/zh-CN/docs/MathML/Element/mo)与其运算对象（比如 {{ MathMLElement("mi") }} 和 {{ MathMLElement("mn") }}）。此元素呈现为包含其内容的水平行。
+[MathML](/zh-CN/docs/Web/MathML) **`<mrow>`** 元素用于对连续多行表达式的不同子表达式进行分组，一条子表达式通常算作一行，至少包含一或多个[操作符](/zh-CN/docs/MathML/Element/mo)与其运算对象（比如 {{ MathMLElement("mi") }} 和 {{ MathMLElement("mn") }}）。此元素呈现为包含其内容的水平行。
 
 在编写 MathML 表达式时，你应该使用 `<mrow>` 将表达式中的元素分组，就像它们在数学解释时的分成一行行一样。正确的分组有助于表达式的呈现，具体体现在以下几个方面：
 
