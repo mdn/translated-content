@@ -113,7 +113,7 @@ fc-cache -sf
 
 ### 其他系统
 
-在其他系统上，考虑使用包管理器安装[带有MATH表的字体](#带有MATH表的字体)。请注意，这些字体通常随着 TeX 发行版（如 [TeX Live](https://www.tug.org/texlive/)）一起提供，但你可能需要遵循特定的说明，以使系统知道这些字体。作为最后的手段，可以安装 [MathML 字体插件](https://addons.mozilla.org/firefox/addon/mathml-fonts/)。
+在其他系统上，考虑使用包管理器安装[带有 MATH 表的字体](#带有MATH表的字体)。请注意，这些字体通常随着 TeX 发行版（如 [TeX Live](https://www.tug.org/texlive/)）一起提供，但你可能需要遵循特定的说明，以使系统知道这些字体。作为最后的手段，可以安装 [MathML 字体插件](https://addons.mozilla.org/firefox/addon/mathml-fonts/)。
 
 ## 高级设置
 
