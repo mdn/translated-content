@@ -34,7 +34,7 @@ l10n:
     - `true`，表示 `normal`。
     - `false`，表示 `compact`。
 - [`id`](/zh-CN/docs/Web/HTML/Global_attributes/id)
-    - : 定义一个唯一标识符（ID），它必须在整个文档中是唯一的。它的目的是在链接（使用片段标识符）、脚本化或样式化（使用 CSS）时标识元素。
+  - : 定义一个唯一标识符（ID），它必须在整个文档中是唯一的。它的目的是在链接（使用片段标识符）、脚本化或样式化（使用 CSS）时标识元素。
 - [`mathbackground`](/zh-CN/docs/Web/MathML/Global_attributes/mathbackground)
     - : 用于元素的 [background-color](/zh-CN/docs/Web/CSS/background-color)。
 - [`mathcolor`](/zh-CN/docs/Web/MathML/Global_attributes/mathcolor)
