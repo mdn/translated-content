@@ -38,7 +38,7 @@ l10n:
 - `true`
     - : 将显示样式设置为 `normal`。
 - `false`
-    - : 将显示样式设置为 `compact`。
+  - : 将显示样式设置为 `compact`。
 
 ## 规范
 
