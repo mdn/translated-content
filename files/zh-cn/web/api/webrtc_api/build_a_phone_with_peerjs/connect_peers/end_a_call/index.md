@@ -23,7 +23,7 @@ l10n:
 
 2. 当连接关闭时，你还需要显示正确的 HTML 内容，所以你可以直接调用你的 `showCallContent()` 函数。在 `call` 事件内部，你还需要确保远程浏览器也更新。为了实现这一点，在 `peer.on('call', (stream) => { }` 事件监听器内部，添加另一个事件监听器在条件块内。
 
-    ```js
+   ```js
    conn.on("close", () => {
      showCallContent();
    });
