@@ -48,7 +48,8 @@ l10n:
 
 - `rowalign` {{Non-standard_Inline}}
 
-    - : 指定单元格的垂直对齐方式。允许多个值以空格分隔，并适用于相应的行（例如 `rowalign="top bottom axis"`）。可能的值包括：`axis`、`baseline`（默认）、`bottom`、`center` 和 `top`。
+  - : 指定单元格的垂直对齐方式。允许多个值以空格分隔，并适用于相应的行（例如 `rowalign="top bottom axis"`）。可能的值包括：`axis`、`baseline`（默认）、`bottom`、`center` 和 `top`。
+
 - `rowlines` {{Non-standard_Inline}}
 
     - : 指定行边框。允许多个值以空格分隔，并适用于相应的行（例如 `rowlines="none none solid"`）。可能的值包括：`none`（默认）、`solid` 和 `dashed`。
