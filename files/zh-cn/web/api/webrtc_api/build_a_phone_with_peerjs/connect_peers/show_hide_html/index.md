@@ -1,8 +1,8 @@
 ---
- title: Showing and hiding HTML
- slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Show_hide_html
- l10n:
-   sourceCommit: 810f6895496d1525bb7800abfef363d6c1da9bb8
+title: Showing and hiding HTML
+slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Show_hide_html
+l10n:
+  sourceCommit: 810f6895496d1525bb7800abfef363d6c1da9bb8
 ---
 
 {{DefaultAPISidebar("WebRTC")}}
