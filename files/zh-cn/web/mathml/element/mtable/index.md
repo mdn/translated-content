@@ -52,7 +52,8 @@ l10n:
 
 - `rowlines` {{Non-standard_Inline}}
 
-    - : 指定行边框。允许多个值以空格分隔，并适用于相应的行（例如 `rowlines="none none solid"`）。可能的值包括：`none`（默认）、`solid` 和 `dashed`。
+  - : 指定行边框。允许多个值以空格分隔，并适用于相应的行（例如 `rowlines="none none solid"`）。可能的值包括：`none`（默认）、`solid` 和 `dashed`。
+
 - `rowspacing` {{Non-standard_Inline}}
 
     - : 指定表格行之间的间距。允许多个值以空格分隔，并适用于相应的行（例如 `rowspacing="1em 2em"`）。可能的值是 {{cssxref("length-percentage")}}。
