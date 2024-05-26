@@ -21,7 +21,7 @@ l10n:
 2. 打开 ZIP 压缩文件，进入 `latinmodern-math-1959` 目录，然后进入 `otf` 目录。你将找到一个 `latinmodern-math` 字体文件。
 3. 打开 `latinmodern-math` 字体文件，然后点击 安装 按钮。
 4. 下载 [static_otf.zip](https://raw.githubusercontent.com/stipub/stixfonts/master/zipfiles/static_otf.zip)。
-5. 打开 `static_otf.zip` ZIP压缩文件，然后进入 `static_otf` 目录。在那里的文件中，你将找到一个 `STIXTwoMath-Regular` 文件。
+5. 打开 `static_otf.zip` ZIP 压缩文件，然后进入 `static_otf` 目录。在那里的文件中，你将找到一个 `STIXTwoMath-Regular` 文件。
 6. 打开 `STIXTwoMath-Regular` 文件，然后点击 **安装** 按钮。如果需要，你也可以对目录中的其他字体文件执行相同操作。
 
 > **备注：** 在Windows上默认安装了 _Cambria Math_ 字体，应该可以确保相对良好的MathML渲染效果。
