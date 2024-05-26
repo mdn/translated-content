@@ -16,7 +16,7 @@ l10n:
 - `accent` {{Non-standard_Inline}}
   - : 一个 [`<boolean>`](/zh-CN/docs/Web/MathML/Values#mathml-specific_types)，表示运算符在被用作 [下标](/zh-CN/docs/Web/MathML/Element/munder) 或 [上标](/zh-CN/docs/Web/MathML/Element/mover) 时是否应该被视为重音（即被放大并靠近基础表达式）。
 - `fence`
-    - : 一个 [`<boolean>`](/zh-CN/docs/Web/MathML/Values#mathml-specific_types)，表示运算符是否是一个围栏（例如括号）。该属性没有视觉效果。
+  - : 一个 [`<boolean>`](/zh-CN/docs/Web/MathML/Values#mathml-specific_types)，表示运算符是否是一个围栏（例如括号）。该属性没有视觉效果。
 - `largeop`
     - : 一个 [`<boolean>`](/zh-CN/docs/Web/MathML/Values#mathml-specific_types)，表示当 [`math-style`](/zh-CN/docs/Web/CSS/math-style) 设置为 `normal` 时是否应该放大运算符。
 - `lspace`
