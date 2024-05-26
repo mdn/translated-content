@@ -129,7 +129,7 @@ fc-cache -sf
 
 在 UNIX 系统上的更好的替代方法是将 [Latin Modern Math](https://www.gust.org.pl/projects/e-foundry/lm-math/download/latinmodern-math-1959.zip) 和 [STIX](https://github.com/stipub/stixfonts) 的 OTF 文件安装到某个本地字体文件夹中，并（如果需要）在其上运行 `fc-cache`。在 macOS 和 Linux 上，标准路径分别是 `~/Library/Fonts/` 和 `~/.fonts`。
 
-### 带有MATH表的字体
+### 带有 MATH 表的字体
 
 实际上，你可以安装任何 [数学 OpenType 字体](https://fred-wang.github.io/MathFonts/) 并将它们用于 MathML 渲染。一些浏览器提供了在字体首选项菜单中配置 MathML 默认字体的方法。或者，你可以尝试使用 [MathML-fontsettings插件](https://addons.mozilla.org/zh-CN/firefox/addon/mathml-font-settings/)。
 
