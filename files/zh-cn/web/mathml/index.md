@@ -35,7 +35,7 @@ l10n:
 ## 从社区获得帮助
 
 - [W3C Math 主页](https://www.w3.org/Math/)
-- [在 GitHub w3c/mathml 代码库中提出issue](https://github.com/w3c/mathml/issues)
+- [在 GitHub w3c/mathml 代码库中提出 issue](https://github.com/w3c/mathml/issues)
 - [www-math w3.org 邮件存档](https://lists.w3.org/Archives/Public/www-math/)
 
 ## 工具
