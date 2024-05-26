@@ -36,7 +36,8 @@ l10n:
 
 - `columnspacing` {{Non-standard_Inline}}
 
-    - : 指定表格列之间的间距。允许多个值以空格分隔，并适用于相应的列（例如 `columnspacing="1em 2em"`）。可能的值是 {{cssxref("length-percentage")}}。
+  - : 指定表格列之间的间距。允许多个值以空格分隔，并适用于相应的列（例如 `columnspacing="1em 2em"`）。可能的值是 {{cssxref("length-percentage")}}。
+
 - `frame` {{Non-standard_Inline}}
 
     - : 指定整个表格的边框。可能的值包括：`none`（默认）、`solid` 和 `dashed`。
