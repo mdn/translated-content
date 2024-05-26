@@ -16,7 +16,7 @@ l10n:
 <math href="https://en.wikipedia.org/wiki/Pythagorean_theorem">
   <mi>c</mi>
   <mo>=</mo>
-  <!-- 将这个平方根链接到相应的SageMath计算。 -->
+  <!-- 将这个平方根链接到相应的 SageMath 计算。 -->
   <msqrt href="https://sagecell.sagemath.org/?z=eJwrLiwq0TCOM9I2iTPSBAAeqgPO">
     <msup>
       <mn>3</mn>
