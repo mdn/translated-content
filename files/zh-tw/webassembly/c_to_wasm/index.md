@@ -39,7 +39,7 @@ slug: WebAssembly/C_to_Wasm
    }
    ```
 
-2. 現在，使用一個已經配置完 Emscripten 編譯環境的終端機窗口，進入剛剛儲存 hello.c 的資料夾中，執行下列指令：
+2. 現在，使用一個已經配置完 Emscripten 編譯環境的終端機窗口，進入剛剛儲存 `hello.c` 的資料夾中，執行下列指令：
 
    ```bash
    emcc hello.c -o hello.html
