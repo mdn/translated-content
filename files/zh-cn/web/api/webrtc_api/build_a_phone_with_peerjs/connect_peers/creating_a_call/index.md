@@ -13,7 +13,7 @@ l10n:
 
 1. 首先，通过将以下内容添加到`script.js`文件的底部，获取对 HTML 中定义的“Call”按钮的引用：
 
-    ```js
+   ```js
    const callBtn = document.querySelector(".call-btn");
    ```
 
