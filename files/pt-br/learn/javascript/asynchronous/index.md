@@ -11,7 +11,7 @@ Javascript Assíncrono é um tópico razoavelmente avançado e é aconselhada a 
 
 Se você não estiver familiarizado com os conceitos de programação assíncrona, a sugestão é iniciar com o artigo [Conceitos gerais da programação assíncrona](/pt-BR/docs/Learn/JavaScript/Asynchronous/Conceitos) desse módulo. Caso contrário, você pode provavelmente pular para o módulo [Introdução ao Javascript Assíncrono](/pt-BR/docs/Learn/JavaScript/Asynchronous/Introdu%C3%A7%C3%A3o).
 
-> **Nota:** Se você está estudando a partir de um computador/tablet/ outro dispositivo onde não é capaz de criar seus próprios arquivos, é possível executar os códigos de exemplo (a maioria deles) em plataformas como [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/).
+> **Nota:** Se você está estudando a partir de um computador/tablet/ outro dispositivo onde não é capaz de criar seus próprios arquivos, é possível executar os códigos de exemplo (a maioria deles) em plataformas como [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com).
 
 ## Guias
 
