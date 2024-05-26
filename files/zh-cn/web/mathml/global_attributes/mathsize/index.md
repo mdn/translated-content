@@ -24,10 +24,10 @@ l10n:
 
 ### 可选值
 
-- {{cssxref("<length>")}}
+- {{cssxref("&lt;length&gt;")}}
 
     - : 一个正值的 {{cssxref("<length>")}}。对于大多数与字体相关的单位（例如 `em` 和 `ex`），字体大小是相对于父元素的字体大小的。
-- {{cssxref("<percentage>")}}
+- {{cssxref("&lt;percentage&gt;")}}
 
     - : 一个正值的 {{cssxref("<percentage>")}}，相对于父元素的字体大小。
 
