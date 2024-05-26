@@ -13,7 +13,7 @@ l10n:
 
 1. 在你的 `script.js` 文件的末尾添加以下内容：
 
-    ```js
+   ```js
    const hangUpBtn = document.querySelector(".hangup-btn");
    hangUpBtn.addEventListener("click", () => {
      conn.close();
