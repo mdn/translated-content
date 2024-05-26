@@ -117,7 +117,7 @@ l10n:
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
-    <title>HTML5中的MathML</title>
+    <title>HTML5 中的 MathML</title>
     <script src="https://fred-wang.github.io/TeXZilla/TeXZilla-min.js"></script>
     <script src="https://fred-wang.github.io/TeXZilla/examples/customElement.js"></script>
   </head>
