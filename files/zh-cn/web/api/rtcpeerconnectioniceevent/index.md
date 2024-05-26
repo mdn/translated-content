@@ -34,7 +34,7 @@ _{{domxref("RTCPeerConnectionIceEvent")}} 是 {{domxref("Event")}}，因此该�
 ```js
 pc.onicecandidate = (ev) => {
   console.log(
-    `交互式连接候选地址 (传输地址：“${ev.candidate.candidate}”）已添加到连接中。`,
+    `交互式连接候选地址（传输地址：“${ev.candidate.candidate}”）已添加到连接中。`,
   );
 };
 ```
