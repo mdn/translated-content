@@ -44,7 +44,6 @@ veryverythickmathspace => 0.3888888888888889em
 | `pc` | Picas (1 pica = 12 points)                                                                                     |
 | `%`  | Percentage of the default value.                                                                               |
 
-
 ### 常数
 
 | Constant                         | Value     |
