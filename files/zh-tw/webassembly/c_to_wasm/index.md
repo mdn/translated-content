@@ -28,7 +28,7 @@ slug: WebAssembly/C_to_Wasm
 
 我們先來看一個最簡單的例子，利用 Emscripten 來將程式碼轉為 WebAssembly，以便在瀏覽器上運行。
 
-1. 首先我們需要一段能夠編譯的範例程式碼。將下方的 C 程式碼複製一份，命名為 hello.c 並儲存到一個新的資料夾。
+1. 首先我們需要一段能夠編譯的範例程式碼。將下方的 C 程式碼複製一份，命名為 `hello.c` 並儲存到一個新的資料夾。
 
    ```cpp
    #include <stdio.h>
