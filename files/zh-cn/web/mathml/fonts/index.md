@@ -31,7 +31,7 @@ l10n:
 按照以下步骤安装 Latin Modern Math 字体：
 
 1. 下载 [latinmodern-math-1959.zip](https://www.gust.org.pl/projects/e-foundry/lm-math/download/latinmodern-math-1959.zip)。
-2. 解压缩ZIP文件，进入 `latinmodern-math-1959` 目录，然后进入 `otf` 目录。你将找到一个 `latinmodern-math` 字体文件。
+2. 解压缩 ZIP 文件，进入 `latinmodern-math-1959` 目录，然后进入 `otf` 目录。你将找到一个 `latinmodern-math` 字体文件。
 3. 双击 `latinmodern-math` 字体文件，然后点击打开的窗口中的 **安装字体** 按钮。
 
 > **备注：** 如果你使用的是 macOS Ventura (版本 13) 或更高版本，则 _STIX Two Math_ 已预先安装，你可以跳过以下步骤。
