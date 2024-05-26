@@ -20,7 +20,7 @@ l10n:
 - `largeop`
   - : 一个 [`<boolean>`](/zh-CN/docs/Web/MathML/Values#mathml-specific_types)，表示当 [`math-style`](/zh-CN/docs/Web/CSS/math-style) 设置为 `normal` 时是否应该放大运算符。
 - `lspace`
-    - : 一个 {{cssxref("length-percentage")}}，表示运算符前的空间量。
+  - : 一个 {{cssxref("length-percentage")}}，表示运算符前的空间量。
 - `maxsize`
     - : 一个 {{cssxref("length-percentage")}}，表示运算符在可拉伸时的最大大小。
 - `minsize`
