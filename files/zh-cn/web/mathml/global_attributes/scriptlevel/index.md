@@ -42,7 +42,7 @@ l10n:
 - `+<U>`
   - : 将 `math-depth` 设置为值 `add(<U>)`。这将使元素的 `font-size` 缩小 `<U>` 次。
 - `-<U>`
-    - : 将 `math-depth` 设置为值 `add(-<U>)`。这将使元素的 `font-size` 放大 `<U>` 次。
+  - : 将 `math-depth` 设置为值 `add(-<U>)`。这将使元素的 `font-size` 放大 `<U>` 次。
 
 ## 规范
 
