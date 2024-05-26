@@ -30,7 +30,7 @@ l10n:
 - `rspace`
   - : 一个 {{cssxref("length-percentage")}}，表示运算符后的空间量。
 - `separator`
-    - : 一个 [`<boolean>`](/zh-CN/docs/Web/MathML/Values#mathml-specific_types)，表示运算符是否是一个分隔符（例如逗号）。该属性没有视觉效果。
+  - : 一个 [`<boolean>`](/zh-CN/docs/Web/MathML/Values#mathml-specific_types)，表示运算符是否是一个分隔符（例如逗号）。该属性没有视觉效果。
 - `stretchy`
     - : 一个 [`<boolean>`](/zh-CN/docs/Web/MathML/Values#mathml-specific_types)，表示运算符是否拉伸到相邻元素的大小。
 - `symmetric`
