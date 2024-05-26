@@ -9,7 +9,7 @@ l10n:
 
 **Mathematical Markup Language (MathML)** 是一个用于描述数学公式、符号的一种 [XML](/zh-CN/docs/XML) 标记语言。
 
-[MathML](https://w3c.github.io/mathml/) 最初被设计为用于浏览器、办公套件、[计算机代数系统](https://zh.wikipedia.org/wiki/計算機代數系統)、[EPUB](https://www.w3.org/publishing/epub33/)阅读器和基于[LaTeX](https://zh.wikipedia.org/wiki/LaTeX)的生成器的通用规范。然而，这种方法并不非常适用于Web：[专注于语义的子集](https://w3c.github.io/mathml/#contm)从未在浏览器中实现，而[专注于数学布局](https://w3c.github.io/mathml/#presm)的子集导致了不完整和不一致的浏览器实现。
+[MathML](https://w3c.github.io/mathml/) 最初被设计为用于浏览器、办公套件、[计算机代数系统](https://zh.wikipedia.org/wiki/計算機代數系統)、[EPUB](https://www.w3.org/publishing/epub33/)阅读器和基于[LaTeX](https://zh.wikipedia.org/wiki/LaTeX)的生成器的通用规范。然而，这种方法并不非常适用于 Web：[专注于语义的子集](https://w3c.github.io/mathml/#contm)从未在浏览器中实现，而[专注于数学布局](https://w3c.github.io/mathml/#presm)的子集导致了不完整和不一致的浏览器实现。
 
 [MathML Core](https://w3c.github.io/mathml-core/) 是一个基于[LaTeX](https://zh.wikipedia.org/wiki/LaTeX)和[开放字体格式](https://docs.microsoft.com/typography/opentype/spec/math)规则的增加了实现细节的子集。它专门为浏览器量身定制，并设计成与其他Web标准（包括[HTML](/zh-CN/docs/Web/HTML)、[CSS](/zh-CN/docs/Web/CSS)、[DOM](/zh-CN/docs/Web/API/Document_Object_Model)、[JavaScript](/zh-CN/docs/Web/JavaScript)）良好配合。
 
