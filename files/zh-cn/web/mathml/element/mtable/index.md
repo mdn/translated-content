@@ -40,7 +40,8 @@ l10n:
 
 - `frame` {{Non-standard_Inline}}
 
-    - : 指定整个表格的边框。可能的值包括：`none`（默认）、`solid` 和 `dashed`。
+  - : 指定整个表格的边框。可能的值包括：`none`（默认）、`solid` 和 `dashed`。
+
 - `framespacing` {{Non-standard_Inline}}
 
     - : 指定表格和框架之间添加的额外空间。第一个值指定右侧和左侧的间距；第二个值指定上方和下方的间距。可能的值是 {{cssxref("length-percentage")}}。
