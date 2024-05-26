@@ -14,7 +14,7 @@ l10n:
 1. 首先，在与其他文件相同的位置创建一个 `script.js` 文件 — 这是你所有逻辑的存放地点。
 2. 我们需要创建一个带有 ID 的对等对象。该 ID 将用于将两个对等点连接在一起，如果你不创建一个，系统将会为对等点分配一个。将以下内容添加到 `script.js` 文件中：
 
-    ```js
+   ```js
    const peer = new Peer(
      `${Math.floor(Math.random() * 2 ** 18)
        .toString(36)
