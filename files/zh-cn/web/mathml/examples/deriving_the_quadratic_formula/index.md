@@ -1,6 +1,8 @@
 ---
 title: 推导二次方程求根公式
 slug: Web/MathML/Examples/Deriving_the_Quadratic_Formula
+l10n:
+  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
 {{MathMLRef}}
