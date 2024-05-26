@@ -120,7 +120,7 @@ In Firefox, properties with the value `auto` return the used value, not the valu
 
 {{Compat}}
 
-## Смотреть также
+## Смотрите также
 
 - {{domxref("window.getDefaultComputedStyle")}}
 - {{cssxref("resolved_value", "Resolved Value")}}

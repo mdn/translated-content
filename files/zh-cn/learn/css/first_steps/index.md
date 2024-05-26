@@ -15,7 +15,7 @@ CSS（层叠样式表）用于设置和布置网页——例如，更改内容�
 2. 基本工作环境的设置详见[安装基本软件](/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software)，并了解如何创建和管理文件，详见[处理文件](/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files)。
 3. 熟悉 [HTML 概述](/zh-CN/docs/Learn/HTML/Introduction_to_HTML) 章节中提到的基本 HTML 知识。
 
-> **备注：** 如果你在一个无权创建自己文件的电脑/平板/其他设备上工作，你可以在在线编程工具上尝试（大部分）代码示例，如 [JSBin](http://jsbin.com/) 或者 [Glitch](https://glitch.com/) 等。
+> **备注：** 如果你在一个无权创建自己文件的电脑/平板/其他设备上工作，你可以在在线编程工具上尝试（大部分）代码示例，如 [JSBin](https://jsbin.com/) 或者 [Glitch](https://glitch.com/) 等。
 
 ## 指南
 

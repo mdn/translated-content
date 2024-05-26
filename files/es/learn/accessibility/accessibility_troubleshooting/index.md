@@ -29,7 +29,7 @@ En la evaluación de este módulo, le presentamos un sitio simple con una serie 
 
 Para iniciar esta evaluación, debe ir y tomar el [archivo ZIP que contiene los archivos que componen el ejemplo.](https://github.com/mdn/learning-area/blob/master/accessibility/assessment-start/assessment-files.zip?raw=true) Descomprima el contenido en un nuevo directorio en algún lugar del equipo local.
 
-Alternativamente, podría usar un sitio como [JSBin](http://jsbin.com/) o [Glitch](https://glitch.com/) para hacer su evaluación. Puede pegar el HTML, CSS y JavaScript en uno de estos editores en línea. Si el editor en línea que está utilizando no tiene un panel CSS/JS independiente, no dude en colocarlos en elementos apropiados `<style>` / `<script>.`
+Alternativamente, podría usar un sitio como [JSBin](https://jsbin.com/) o [Glitch](https://glitch.com/) para hacer su evaluación. Puede pegar el HTML, CSS y JavaScript en uno de estos editores en línea. Si el editor en línea que está utilizando no tiene un panel CSS/JS independiente, no dude en colocarlos en elementos apropiados `<style>` / `<script>.`
 
 El sitio de evaluación terminado debe tener este aspecto:
 

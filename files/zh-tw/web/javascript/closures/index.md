@@ -27,7 +27,7 @@ init();
 
 {{JSFiddleEmbed("https://jsfiddle.net/78dg25ax/", "js,result", 250)}}
 
-[運行](http://jsfiddle.net/xAFs9/3/)這個程式碼並注意 `displayName()` 裡面的 `alert()` 宣告，它能顯示位於上一層的 `name` 變數。這實例在描述*語法作用域*碰上巢狀函式時，解析器（parser）會如何解讀（resolve）變數。「作用域」一詞，指的正是作用域環境在程式碼指定變數時，使用 location 來決定該變數用在哪裡的事情。巢狀函式的內部函式，能訪問在該函式作用域之外的變數。
+[運行](https://jsfiddle.net/xAFs9/3/)這個程式碼並注意 `displayName()` 裡面的 `alert()` 宣告，它能顯示位於上一層的 `name` 變數。這實例在描述*語法作用域*碰上巢狀函式時，解析器（parser）會如何解讀（resolve）變數。「作用域」一詞，指的正是作用域環境在程式碼指定變數時，使用 location 來決定該變數用在哪裡的事情。巢狀函式的內部函式，能訪問在該函式作用域之外的變數。
 
 ## 閉包
 

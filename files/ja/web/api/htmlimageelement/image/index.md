@@ -1,6 +1,9 @@
 ---
-title: Image()
+title: "HTMLImageElement: Image() コンストラクター"
+short-title: Image()
 slug: Web/API/HTMLImageElement/Image
+l10n:
+  sourceCommit: ce85e3fb7865330e4ac2a6dad25db5cf5d27ea74
 ---
 
 {{APIRef("HTML DOM")}}
@@ -11,10 +14,10 @@ slug: Web/API/HTMLImageElement/Image
 
 ## 構文
 
-```js
-new Image();
-new Image(width);
-new Image(width, height);
+```js-nolint
+new Image()
+new Image(width)
+new Image(width, height)
 ```
 
 ### 引数
@@ -31,7 +34,7 @@ new Image(width, height);
 ## 例
 
 ```js
-var myImage = new Image(100, 200);
+const myImage = new Image(100, 200);
 myImage.src = "picture.jpg";
 document.body.appendChild(myImage);
 ```

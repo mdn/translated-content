@@ -1,28 +1,24 @@
 ---
-title: Document.defaultView
+title: Document：defaultView 属性
 slug: Web/API/Document/defaultView
+l10n:
+  sourceCommit: 0a881eea07f0cec6ca4ed85a24af43b367a9f80d
 ---
 
-{{ ApiRef() }}
+{{ApiRef}}
 
-### 概述
+在浏览器中，**`document.defaultView`** 返回与{{Glossary("Browsing_context", "文档")}}关联的 {{domxref("Window", "window")}} 对象，如果没有可用的对象，则返回 `null`。
 
-在浏览器中，该属性返回当前 `document` 对象所关联的 [`window`](/zh-CN/DOM/window) 对象，如果没有，会返回 `null`。
+该属性是只读的。
 
-### 语法
+## 值
 
-```plain
-var win = document.defaultView;
-```
+{{domxref("Window", "window")}} 对象。
 
-该属性只读。
+## 规范
 
-### 备注
+{{Specifications}}
 
-根据 [quirksmode](http://www.quirksmode.org/dom/w3c_html.html)，IE 9 以下版本不支持 `defaultView`。
+## 浏览器兼容性
 
-### 规范
-
-- [HTML5: defaultView](/zh-CN/HTML/HTML5)
-- [DOM Level 2 Views: defaultView](http://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-DocumentView-defaultView)
-- [DOM Level 3 Views](http://www.w3.org/TR/DOM-Level-3-Views/) (Only developed to Working Group Note and not implemented)
+{{Compat}}

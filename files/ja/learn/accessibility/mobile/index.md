@@ -182,9 +182,9 @@ VoiceOver を使ったウェブ閲覧を試してみましょう。
 
 CSS および JavaScript のアクセシビリティの記事では、特定の種類の制御機構に固有のイベントの概念を調べました（[マウスに特有のイベント](/ja/docs/Learn/Accessibility/CSS_and_JavaScript#mouse-specific_events)を参照）。要約すると、他の制御機構は関連する機能をアクティブにできないため、これらはアクセシビリティの問題を引き起こします。
 
-例えば、[click](/ja/docs/Web/API/Element/click_event) イベントはアクセシビリティの点で優れています — 関連付けられているイベントハンドラは、ハンドラが設定されている要素をクリックするか、タブ移動して <kbd>Enter</kbd> / <kbd>Return</kbd> キーを押すか、タッチスクリーン端末でタップすることで起動できます。[simple-button-example.html](https://github.com/mdn/learning-area/blob/main/accessibility/mobile/simple-button-example.html) の例を試してみてください（[ライブで動いているのを見る](https://mdn.github.io/learning-area/accessibility/mobile/simple-button-example.html)）。
+例えば、[click](/ja/docs/Web/API/Element/click_event) イベントはアクセシビリティの点で優れています — 関連付けられているイベントハンドラーは、ハンドラーが設定されている要素をクリックするか、タブ移動して <kbd>Enter</kbd> / <kbd>Return</kbd> キーを押すか、タッチスクリーン端末でタップすることで起動できます。[simple-button-example.html](https://github.com/mdn/learning-area/blob/main/accessibility/mobile/simple-button-example.html) の例を試してみてください（[ライブで動いているのを見る](https://mdn.github.io/learning-area/accessibility/mobile/simple-button-example.html)）。
 
-あるいは、[mousedown](/ja/docs/Web/API/Element/mousedown_event) や [mouseup](/ja/docs/Web/API/Element/mouseup_event) のようなマウス固有のイベントは問題を引き起こします — それらのイベントハンドラはマウス以外の制御を使って呼び出すことはできません。
+あるいは、[mousedown](/ja/docs/Web/API/Element/mousedown_event) や [mouseup](/ja/docs/Web/API/Element/mouseup_event) のようなマウス固有のイベントは問題を引き起こします — それらのイベントハンドラーはマウス以外の制御を使って呼び出すことはできません。
 
 キーボードまたはタッチで、[simple-box-drag.html](https://github.com/mdn/learning-area/blob/main/accessibility/mobile/simple-box-drag.html) の例を制御しようとすると、問題が発生します（[ライブで例を見る](https://mdn.github.io/learning-area/accessibility/mobile/simple-box-drag.html)）。これは、次のようなコードを使用しているために発生します。
 

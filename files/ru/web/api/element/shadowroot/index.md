@@ -23,7 +23,7 @@ var shadowroot = element.createShadowRoot();
 
 Возвращает {{domxref("ShadowRoot")}}.
 
-## Спецификация
+## Спецификации
 
 Эта функция больше не определяется никакими спецификациями
 

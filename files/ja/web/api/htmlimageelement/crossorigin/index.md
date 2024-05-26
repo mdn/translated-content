@@ -3,7 +3,7 @@ title: "HTMLImageElement: crossOrigin プロパティ"
 short-title: crossOrigin
 slug: Web/API/HTMLImageElement/crossOrigin
 l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+  sourceCommit: ce85e3fb7865330e4ac2a6dad25db5cf5d27ea74
 ---
 
 {{APIRef("HTML DOM")}}
@@ -12,12 +12,12 @@ l10n:
 
 ## 値
 
-画像リソースを取得する際に使用する CORS モードを指定するキーワードの文字列です。 `crossOrigin` を指定しない場合、画像は CORS なしで取得されます（`no-cors` フェッチモード）。
+文字列で、画像リソースを取得する際に使用する CORS モードを指定するキーワードです。 `crossOrigin` を指定しない場合、画像は CORS なしで取得されます（`no-cors` フェッチモード）。
 
 許可されている値は次の通りです。
 
 - `anonymous`
-  - : {{HTMLElement("img")}} 要素によるリクエストは、{{domxref("Request.mode", "mode")}} が `cors` に、{{domxref("Request.credentials", "credentials")}} モードが `same-origin` に設定されて行われます。これは、CORS が有効であり、文書が読み込まれたのと同じオリジンから画像が取得された場合に、クレデンシャルが送信されることを意味します。
+  - : {{HTMLElement("img")}} 要素によるリクエストは、{{domxref("Request.mode", "mode")}} が `cors` に、{{domxref("Request.credentials", "credentials")}} モードが `same-origin` に設定されて行われます。これは、CORS が有効であり、文書が読み込まれたのと同じオリジンから画像が取得された場合に、資格情報が送信されることを意味します。
 - `use-credentials`
   - : {{domxref("HTMLImageElement")}} によるリクエストは `cors` モードと `include` 認証モードを使用します。この要素によるすべての画像リクエストは、取得元のドメインに関係なく CORS を使用します。
 
@@ -87,7 +87,7 @@ img {
 }
 
 output {
-  background: rgba(100, 100, 100, 0.1);
+  background: rgb(100 100 100 / 100%);
   font-family: Courier, monospace;
   width: 95%;
 }
@@ -104,3 +104,9 @@ output {
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- {{domxref("HTMLLinkElement.crossOrigin")}}
+- {{domxref("HTMLMediaElement.crossOrigin")}}
+- {{domxref("HTMLScriptElement.crossOrigin")}}

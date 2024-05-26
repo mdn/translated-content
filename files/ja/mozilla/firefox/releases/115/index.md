@@ -44,7 +44,7 @@ l10n:
 - [`URL.canParse()`](/ja/docs/Web/API/URL/canParse_static) 静的メソッドを使用して、絶対 URL または相対 URL とベース URL の解析や検証が可能になりました。
   これは `try...catch` ブロックや例外処理で構築するよりも高速かつ簡単に、URL が有効であるかを確認する手段を提供します ([Firefox bug 1823354](https://bugzil.la/1823354))。
 - [`URLSearchParams.has()`](/ja/docs/Web/API/URLSearchParams/has) および [`URLSearchParams.delete()`](/ja/docs/Web/API/URLSearchParams/delete) メソッドで、省略可能な引数 `value` をサポートしました。
-  これは `name` および `value` の両方で検索パラメーターとマッチングさせることができ、同じ名前で複数の検索パラメーターを持つクエリー文字列を操作できます ([Firefox bug 1831587](https://bugzil.la/1831587))。
+  これは `name` および `value` の両方で検索引数と照合させることができ、同じ名前で複数の検索引数を持つクエリー文字列を操作できます ([Firefox bug 1831587](https://bugzil.la/1831587))。
 
 #### 廃止
 

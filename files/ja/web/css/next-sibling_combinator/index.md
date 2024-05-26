@@ -1,7 +1,6 @@
 ---
 title: 次兄弟結合子
 slug: Web/CSS/Next-sibling_combinator
-original_slug: Web/CSS/Next-sibling_combinator
 l10n:
   sourceCommit: bb652aaf3e38f3c7fef970a62f813047dffac879
 ---

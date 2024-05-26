@@ -39,7 +39,7 @@ ondeviceorientation = (event) => {};
 - {{domxref("DeviceOrientationEvent.beta")}} {{ReadOnlyInline}}
   - : 数値で、端末の X 軸の回転量を表し、 -180 （含む）から 180 （含まない）までの範囲の値で表します。これは端末の前後方向の動きを表します。
 - {{domxref("DeviceOrientationEvent.gamma")}} {{ReadOnlyInline}}
-  - : 数値で、端末の Z 軸の回転量を表し、 -90 （含む）から 90 （含まない）までの範囲の値で表します。これは端末の左右方向の動きを表します。
+  - : 数値で、端末の Y 軸の回転量を表し、 -90 （含む）から 90 （含まない）までの範囲の値で表します。これは端末の左右方向の動きを表します。
 - `DeviceOrientationEvent.webkitCompassHeading` {{Non-Standard_Inline}} {{ReadOnlyInline}}
   - : 数値で、ワールドシステムの Z 軸を中心とした端末の動きと北の方向との差を表し、 0 から 360 の範囲の値で度数で表します。
 - `DeviceOrientationEvent.webkitCompassAccuracy` {{Non-Standard_Inline}} {{ReadOnlyInline}}

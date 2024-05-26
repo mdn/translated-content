@@ -3,7 +3,9 @@ title: FormData.set()
 slug: Web/API/FormData/set
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{AvailableInWorkers}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 La méthode `set()` de l'interface {{domxref("FormData")}} définit une nouvelle valeur pour une clé existante dans un objet `FormData`, ou ajoute la clé/valeur si elle n'existe pas encore.
 

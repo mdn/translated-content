@@ -52,7 +52,7 @@ Sin embargo, surgen problemas cuando comienza a ver el sitio en un dispositivo d
 
 ![Our example site as viewed on a narrow screen; the first image has shrunk to the point where it is hard to make out the detail on it.](non-responsive-narrow.png)
 
-Una mejora sería mostrar una versión recortada de la imagen que muestra los detalles importantes de la imagen cuando el sitio se ve en una pantalla estrecha. Se podría mostrar una segunda imagen recortada para un dispositivo de pantalla de ancho medio, como una tableta. A esto se le conoce comúnmente como **el problema de cambio de resolución.**
+Una mejora sería mostrar una versión recortada de la imagen que muestre los detalles importantes de la imagen cuando el sitio se ve en una pantalla estrecha. Se podría mostrar una segunda imagen recortada para un dispositivo de pantalla de ancho medio, como una tableta. A esto se le conoce comúnmente como **el problema de cambio de resolución.**
 
 Además, no es necesario incrustar imágenes más grandes en la página si se está viendo en una pantalla móvil. Y, a la inversa, una [imagen rasterizada](/es/docs/Glossary/Raster_image) pequeña comienza a verse más pixelada cuando se muestra mayor que su tamaño original (una imagen rasterizada es un conjunto determinado de píxeles de ancho y de alto, como vimos cuando vimos los gráficos vectoriales). Esto se denomina problema de cambio de resolución.
 

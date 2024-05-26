@@ -306,4 +306,4 @@ Isso começa por fechar cada par {{domxref("RTCDataChannel")}}, então, de forma
 
 ## Próximos passos
 
-Você poderia [tentar este exemplo](https://mdn-samples.mozilla.org/s/webrtc-simple-datachannel) e dar uma olhada no código fonte [webrtc-simple-datachannel](https://github.com/mdn/samples-server/tree/master/s/webrtc-simple-datachannel), disponível no GitHub.
+Dar uma olhada no código fonte [webrtc-simple-datachannel](https://github.com/mdn/samples-server/tree/master/s/webrtc-simple-datachannel), disponível no GitHub.

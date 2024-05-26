@@ -41,9 +41,9 @@ Firefox 11 は米国時間 2012 年 3 月 13 日にリリースされました�
 
 ### WebSocket
 
-- [WebSocket](/ja/docs/WebSockets) API がバイナリ形式のメッセージをサポートしました ([Firefox バグ 676439](https://bugzil.la/676439) を参照)。
+- [WebSocket](/ja/docs/WebSockets) API がバイナリー形式のメッセージをサポートしました ([Firefox バグ 676439](https://bugzil.la/676439) を参照)。
 - プロトコルおよび API が最新のドラフト仕様に更新され、また API から接頭辞が除去されました ([Firefox バグ 666349](https://bugzil.la/666349) および [Firefox バグ 695635](https://bugzil.la/695635) を参照)。
-- 以前 Firefox では WebSockets で送受信するメッセージのサイズが 16 MB に制限されていましたが、この制限を 2 GB に引き上げました (メモリ容量の制限で大きなデータを扱えない場合もありますが、Firefox は 2 GB までサポートします)。
+- 以前 Firefox では WebSockets で送受信するメッセージのサイズが 16 MB に制限されていましたが、この制限を 2 GB に引き上げました (メモリー容量の制限で大きなデータを扱えない場合もありますが、Firefox は 2 GB までサポートします)。
 
 ### IndexedDB
 
@@ -53,7 +53,7 @@ Firefox 11 は米国時間 2012 年 3 月 13 日にリリースされました�
 ### Network
 
 - Firefox 8 で変更した、{{ rfc("2231") }} および {{ rfc("5987") }} でダブルクォートを区切り文字として利用できなくした点は、Outlook Web Access など一部のサイトで異常が発生するために取り消しました。
-- HTTP ヘッダのユーザーエージェント文字列に、[携帯電話やタブレット上の Firefox がアクセスしているかをサーバが知ることができる](/ja/docs/Gecko_user_agent_string_reference#Mobile_and_Tablet_indicators)識別子を含むようになりました。
+- HTTP ヘッダーのユーザーエージェント文字列に、[携帯電話やタブレット上の Firefox がアクセスしているかをサーバーが知ることができる](/ja/docs/Gecko_user_agent_string_reference#Mobile_and_Tablet_indicators)識別子を含むようになりました。
 
 ### 開発ツール
 
@@ -67,7 +67,7 @@ Firefox 11 は米国時間 2012 年 3 月 13 日にリリースされました�
 
 #### NetUtil.jsm
 
-- [`readInputStreamToString()`](</ja/docs/JavaScript_code_modules/NetUtil.jsm#readInputStreamToString()> "JavaScript_code_modules/NetUtil.jsm#readInputStreamToString()") へ新たに、入力ストリームを読み取る際のキャラクタセットの解釈を設定するための、省略可能なパラメータが追加されました。
+- [`readInputStreamToString()`](</ja/docs/JavaScript_code_modules/NetUtil.jsm#readInputStreamToString()> "JavaScript_code_modules/NetUtil.jsm#readInputStreamToString()") へ新たに、入力ストリームを読み取る際のキャラクタセットの解釈を設定するための、省略可能な引数が追加されました。
 
 #### 新しい JavaScript code modules
 

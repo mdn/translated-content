@@ -3,7 +3,9 @@ title: FormData.delete()
 slug: Web/API/FormData/delete
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{AvailableInWorkers}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 {{domxref("FormData")}} 인터페이스의 **`delete()`** 메서드는 `FormData` 객체에서 key와 그 값에 해당하는 것을 지웁니다.
 

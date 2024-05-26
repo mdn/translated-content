@@ -1,7 +1,6 @@
 ---
 title: clear()
 slug: Web/API/console/clear_static
-original_slug: Web/API/console/clear
 ---
 
 {{APIRef("Console API")}}{{Non-standard_header}}
@@ -18,7 +17,7 @@ original_slug: Web/API/console/clear
 console.clear();
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

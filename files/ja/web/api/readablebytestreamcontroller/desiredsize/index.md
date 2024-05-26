@@ -3,10 +3,10 @@ title: "ReadableByteStreamController: desiredSize プロパティ"
 short-title: desiredSize
 slug: Web/API/ReadableByteStreamController/desiredSize
 l10n:
-  sourceCommit: dcce943de1c2fa0f6a82de3c90bc98285f27ed6f
+  sourceCommit: d8b4431bfde42f1bc195239ea1f378d763f8163e
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 **`desiredSize`** は {{domxref("ReadableByteStreamController")}} インターフェイスの読み取り専用プロパティで、ストリームの内部キューを満たすために必要な「希望サイズ」を返します。
 

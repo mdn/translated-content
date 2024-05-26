@@ -1,7 +1,6 @@
 ---
 title: Manipulation Audio et Vidéo
 slug: Web/Media/Audio_and_video_manipulation
-original_slug: Web/Guide/Audio_and_video_manipulation
 ---
 
 La beauté du web est qu'on peut combiner différentes technologies pour en créer de nouvelles. Avoir de l'audio et vidéo nativement dans le navigateur nous donne la possibilité d'utiliser ces flux de données avec d'autres technologies comme {{htmlelement("canvas")}}, [WebGL](/fr/docs/Web/API/WebGL_API) ou [Web Audio API](/fr/docs/Web/API/Web_Audio_API) pour modifier le média — par exemple ajouter des effets de réverbération ou de compression à l'audio, ou encore des filtres noir & blanc/sépia aux vidéos. Cet article fournit une référence pour expliquer ce que vous pouvez faire.
@@ -184,7 +183,7 @@ window.addEventListener("load", setPlaybackRate);
 
 {{ EmbedLiveSample('Code jouable', 700, 425) }}
 
-> **Note :** Essayez l' [exemple playbackRate](http://jsbin.com/qomuvefu/2/edit) en direct.
+> **Note :** Essayez l' [exemple playbackRate](https://jsbin.com/qomuvefu/2/edit) en direct.
 
 > **Note :** `playbackRate` marche avec les éléments `<audio>` et `<video>`; cependant, dans les deux cas, la vitesse change mais pas la hauteur du son. Pour manipuler la hauteur du son, vous devez utliliser l'API Web Audio — voir la propriété {{domxref("AudioBufferSourceNode.playbackRate")}}.
 

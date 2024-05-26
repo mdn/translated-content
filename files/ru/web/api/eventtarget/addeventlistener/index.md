@@ -3,7 +3,7 @@ title: Метод EventTarget.addEventListener()
 slug: Web/API/EventTarget/addEventListener
 ---
 
-{{apiref("DOM Events")}}
+{{APIRef("DOM")}}
 
 Метод `EventTarget.addEventListener()` регистрирует определённый обработчик события, вызванного на {{domxref("EventTarget")}}.
 
