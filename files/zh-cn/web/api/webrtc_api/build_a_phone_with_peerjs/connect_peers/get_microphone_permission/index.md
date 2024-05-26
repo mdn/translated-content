@@ -13,7 +13,7 @@ l10n:
 
 1. 在你的 script.js 文件底部添加以下代码：
 
-    ```js
+   ```js
    function getLocalStream() {
      navigator.mediaDevices
        .getUserMedia({ video: false, audio: true })
