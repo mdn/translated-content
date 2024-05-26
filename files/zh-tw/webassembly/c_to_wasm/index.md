@@ -69,7 +69,7 @@ slug: WebAssembly/C_to_Wasm
 
 有些時候你可能想要使用一個自訂的 HTML 模板。讓我們看看怎麼做到。
 
-1. 首先，在一個新資料夾中將以下 C 代碼儲存到 hello2.c 中：
+1. 首先，在一個新資料夾中將以下 C 代碼儲存到 `hello2.c` 中：
 
    ```cpp
    #include <stdio.h>
