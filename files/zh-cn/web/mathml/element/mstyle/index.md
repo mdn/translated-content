@@ -22,7 +22,7 @@ l10n:
 - `fontsize` {{deprecated_inline}} {{Non-standard_Inline}}
   - : 使用 <a href="/zh-CN/docs/Web/CSS/font-size"><code>font-size</code></a> 替代。
 - `fontstyle` {{deprecated_inline}} {{Non-standard_Inline}}
-    - : 使用 <a href="/zh-CN/docs/Web/CSS/font-style"><code>font-style</code></a> 替代。
+  - : 使用 <a href="/zh-CN/docs/Web/CSS/font-style"><code>font-style</code></a> 替代。
 - `fontweight` {{deprecated_inline}} {{Non-standard_Inline}}
     - : 使用 <a href="/zh-CN/docs/Web/CSS/font-weight"><code>font-weight</code></a> 替代。
 - `scriptminsize` {{deprecated_inline}} {{Non-standard_Inline}}
