@@ -38,7 +38,7 @@ l10n:
 
 2. 尝试调用你的 getLocalStream 函数，通过在代码底部添加以下行：
 
-    ```js
+   ```js
    getLocalStream();
    ```
 
