@@ -1,6 +1,8 @@
 ---
 title: <msqrt>
 slug: Web/MathML/Element/msqrt
+l10n:
+  sourceCommit: 67cbfbf7a408e7180137b286247025bc40716642
 ---
 
 {{MathMLRef}}
