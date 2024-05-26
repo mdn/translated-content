@@ -28,7 +28,7 @@ l10n:
 - `movablelimits`
   - : 一个 [`<boolean>`](/zh-CN/docs/Web/MathML/Values#mathml-specific_types)，表示附加的下标和上标在 [`math-style`](/zh-CN/docs/Web/CSS/math-style) 设置为 `compact` 时是否移动到上下标位置。
 - `rspace`
-    - : 一个 {{cssxref("length-percentage")}}，表示运算符后的空间量。
+  - : 一个 {{cssxref("length-percentage")}}，表示运算符后的空间量。
 - `separator`
     - : 一个 [`<boolean>`](/zh-CN/docs/Web/MathML/Values#mathml-specific_types)，表示运算符是否是一个分隔符（例如逗号）。该属性没有视觉效果。
 - `stretchy`
