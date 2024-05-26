@@ -120,7 +120,7 @@ l10n:
 - {{MathMLElement("msubsup")}}（下标 - 上标对）
 - {{MathMLElement("msup")}}（上标）
 - {{MathMLElement("munder")}}（下标）
-- {{MathMLElement("munderover")}}（下标-上标对）
+- {{MathMLElement("munderover")}}（下标 - 上标对）
 
 ### 表格数学
 
