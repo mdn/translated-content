@@ -219,7 +219,7 @@ pc.onnegotiationneeded = async () => {
 
 #### 使用更新后的 API 实现完美的协商
 
-正如在 [实现完美协商](#实现完美协商) 部分所示，我们可以通过引入一个变量（这里称为 `makingOffer` ），用于指示我们正在发送一个邀约的过程，并利用更新后的 `setLocalDescription()` 方法来消除这个问题。
+正如在[实现完美协商](#实现完美协商) 部分所示，我们可以通过引入一个变量（这里称为 `makingOffer` ），用于指示我们正在发送一个邀约的过程，并利用更新后的 `setLocalDescription()` 方法来消除这个问题。
 
 ```js example-good
 let makingOffer = false;
