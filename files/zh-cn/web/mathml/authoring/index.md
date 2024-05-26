@@ -198,7 +198,7 @@ cat input.html | node TeXZilla.js streamfilter > output.html
 
 ```html
 <!doctype html>
-<html lang="en-US">
+<html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
     <title>HTML5 中的 MathML</title>
