@@ -38,7 +38,7 @@ l10n:
 如果 `<U>` 是一个无符号[整数](/zh-CN/docs/Web/CSS/integer)（即移除了前缀符号的整数），则接受的值为：
 
 - `<U>`
-    - : 将 math-depth 设置为值 `<U>`。这将使元素的 `font-size` 与指定深度的元素的字体大小相同。
+  - : 将 math-depth 设置为值 `<U>`。这将使元素的 `font-size` 与指定深度的元素的字体大小相同。
 - `+<U>`
     - : 将 `math-depth` 设置为值 `add(<U>)`。这将使元素的 `font-size` 缩小 `<U>` 次。
 - `-<U>`
