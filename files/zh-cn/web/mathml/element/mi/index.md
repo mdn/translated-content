@@ -27,40 +27,40 @@ l10n:
 
     弃用的传统值包括：
 
-    - `bold` {{deprecated_inline}}
-        - : 尝试使用粗体字符，例如 "𝐀"。
-    - `italic` {{deprecated_inline}}
-        - : 尝试使用斜体字符，例如 "𝐴"。
-    - `bold-italic` {{deprecated_inline}}
-        - : 尝试使用粗斜体字符，例如 "𝑨"。
-    - `double-struck` {{deprecated_inline}}
-        - : 尝试使用双线字符，例如 "𝔸"。
-    - `bold-fraktur` {{deprecated_inline}}
-        - : 尝试使用粗体Fraktur字符，例如 "𝕬"。
-    - `script` {{deprecated_inline}}
-        - : 尝试使用手写体字符，例如 "𝒜"。
-    - `bold-script` {{deprecated_inline}}
-        - : 尝试使用粗体手写体字符，例如 "𝓐"。
-    - `fraktur` {{deprecated_inline}}
-        - : 尝试使用Fraktur字符，例如 "𝔄"。
-    - `sans-serif` {{deprecated_inline}}
-        - : 尝试使用无衬线字符，例如 "𝖠"。
-    - `bold-sans-serif` {{deprecated_inline}}
-        - : 尝试使用粗体无衬线字符，例如 "𝗔"。
-    - `sans-serif-italic` {{deprecated_inline}}
-        - : 尝试使用无衬线斜体字符，例如 "𝘈"。
-    - `sans-serif-bold-italic` {{deprecated_inline}}
-        - : 尝试使用粗体无衬线斜体字符，例如 "𝘼"。
-    - `monospace` {{deprecated_inline}}
-        - : 尝试使用等宽字符，例如 "𝙰"。
-    - `initial` {{deprecated_inline}}
-        - : 尝试使用带有花体样式的字符，例如 "𞸢"。
-    - `tailed` {{deprecated_inline}}
-        - : 尝试使用带有尾部样式的字符，例如 "𞹂"。
-    - `looped` {{deprecated_inline}}
-        - : 尝试使用带有循环样式的字符，例如 "𞺂"。
-    - `stretched` {{deprecated_inline}}
-        - : 尝试使用带有伸展样式的字符，例如 "𞹢"。
+  - `bold` {{deprecated_inline}}
+    - : 尝试使用粗体字符，例如 "𝐀"。
+  - `italic` {{deprecated_inline}}
+    - : 尝试使用斜体字符，例如 "𝐴"。
+  - `bold-italic` {{deprecated_inline}}
+    - : 尝试使用粗斜体字符，例如 "𝑨"。
+  - `double-struck` {{deprecated_inline}}
+    - : 尝试使用双线字符，例如 "𝔸"。
+  - `bold-fraktur` {{deprecated_inline}}
+    - : 尝试使用粗体 Fraktur 字符，例如 "𝕬"。
+  - `script` {{deprecated_inline}}
+    - : 尝试使用手写体字符，例如 "𝒜"。
+  - `bold-script` {{deprecated_inline}}
+    - : 尝试使用粗体手写体字符，例如 "𝓐"。
+  - `fraktur` {{deprecated_inline}}
+    - : 尝试使用 Fraktur 字符，例如 "𝔄"。
+  - `sans-serif` {{deprecated_inline}}
+    - : 尝试使用无衬线字符，例如 "𝖠"。
+  - `bold-sans-serif` {{deprecated_inline}}
+    - : 尝试使用粗体无衬线字符，例如 "𝗔"。
+  - `sans-serif-italic` {{deprecated_inline}}
+    - : 尝试使用无衬线斜体字符，例如 "𝘈"。
+  - `sans-serif-bold-italic` {{deprecated_inline}}
+    - : 尝试使用粗体无衬线斜体字符，例如 "𝘼"。
+  - `monospace` {{deprecated_inline}}
+    - : 尝试使用等宽字符，例如 "𝙰"。
+  - `initial` {{deprecated_inline}}
+    - : 尝试使用带有花体样式的字符，例如 "𞸢"。
+  - `tailed` {{deprecated_inline}}
+    - : 尝试使用带有尾部样式的字符，例如 "𞹂"。
+  - `looped` {{deprecated_inline}}
+    - : 尝试使用带有循环样式的字符，例如 "𞺂"。
+  - `stretched` {{deprecated_inline}}
+    - : 尝试使用带有伸展样式的字符，例如 "𞹢"。
 
 该元素还接受 [全局 MathML 属性](/zh-CN/docs/Web/MathML/Global_attributes)。
 
