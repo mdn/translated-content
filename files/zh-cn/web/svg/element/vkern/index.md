@@ -7,7 +7,7 @@ l10n:
 
 {{SVGRef}}{{deprecated_header}}
 
-**`<vkern>`** SVG 元素用于精细调整垂直方向字体中两个字形之间的距离。这一过程被称为[字距调整](https://zh.wikipedia.org/wiki/字距调整)。
+**`<vkern>`** SVG 元素用于精细调整垂直方向字体中两个字形之间的距离。这一过程被称为[字距调整](https://en.wikipedia.org/wiki/Kerning)。
 
 ## 使用上下文
 
