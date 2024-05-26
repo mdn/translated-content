@@ -45,9 +45,7 @@ WebRTC 不会将 DTMF 代码作为音频数据发送。相反，它们作为 RTP
 
 ```html
 <p>
-  This example demonstrates the use of DTMF in WebRTC. Note that this example is
-  "cheating" by generating both peers in one code stream, rather than having
-  each be a truly separate entity.
+  这个示例演示了在 WebRTC 中使用 DTMF。请注意，这个示例是“作弊”的，它通过在一个代码流中生成两个对等端，而不是让每个对等端都是一个真正独立的实体。
 </p>
 
 <audio id="audio" autoplay controls></audio><br />
