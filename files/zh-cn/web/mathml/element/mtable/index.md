@@ -56,7 +56,8 @@ l10n:
 
 - `rowspacing` {{Non-standard_Inline}}
 
-    - : 指定表格行之间的间距。允许多个值以空格分隔，并适用于相应的行（例如 `rowspacing="1em 2em"`）。可能的值是 {{cssxref("length-percentage")}}。
+  - : 指定表格行之间的间距。允许多个值以空格分隔，并适用于相应的行（例如 `rowspacing="1em 2em"`）。可能的值是 {{cssxref("length-percentage")}}。
+
 - `width` {{Non-standard_Inline}}
 
     - : 指定整个表格的宽度。这是一个 {{cssxref("length-percentage")}}。
