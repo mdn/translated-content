@@ -20,7 +20,7 @@ l10n:
 这个元素的属性包括 [全局 MathML 属性](/zh-CN/docs/Web/MathML/Global_attributes) 以及以下属性：
 
 - `denomalign` {{deprecated_inline}} {{Non-standard_Inline}}
-    - ：分数下的分母对齐方式。可能的值包括：`left`、`center`（默认）和 `right`。
+  - ：分数下的分母对齐方式。可能的值包括：`left`、`center`（默认）和 `right`。
 - `linethickness`
     - ：指示水平分数线的粗细的 {{cssxref("length-percentage")}}。
 - `numalign` {{deprecated_inline}} {{Non-standard_Inline}}
