@@ -11,7 +11,7 @@ l10n:
 
 ## 安装说明
 
-作为一个经验法则，建议安装 _Latin Modern Math_（采用数学公式中常见的 [Computer Modern](https://zh.wikipedia.org/wiki/Computer_Modern) 风格）和 _STIX Two Math_（具有科学字符的大量Unicode覆盖范围）两种字体。在接下来的章节中，你将找到安装这些字体的详细说明，适用于各种操作系统。
+作为一个经验法则，建议安装 _Latin Modern Math_（采用数学公式中常见的 [Computer Modern](https://zh.wikipedia.org/wiki/Computer_Modern) 风格）和 _STIX Two Math_（具有科学字符的大量 Unicode 覆盖范围）两种字体。在接下来的章节中，你将找到安装这些字体的详细说明，适用于各种操作系统。
 
 ### Windows
 
