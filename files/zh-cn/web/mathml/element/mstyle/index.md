@@ -16,7 +16,7 @@ l10n:
 此元素的属性包括[全局 MathML 属性](/zh-CN/docs/Web/MathML/Global_attributes)以及以下已弃用的属性：
 
 - `background` {{deprecated_inline}} {{Non-standard_Inline}}
-    - : 使用 <a href="/zh-CN/docs/Web/CSS/background-color"><code>background-color</code></a> 替代。
+  - : 使用 <a href="/zh-CN/docs/Web/CSS/background-color"><code>background-color</code></a> 替代。
 - `color` {{deprecated_inline}} {{Non-standard_Inline}}
     - : 使用 <a href="/zh-CN/docs/Web/CSS/color"><code>color</code></a> 替代。
 - `fontsize` {{deprecated_inline}} {{Non-standard_Inline}}
