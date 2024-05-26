@@ -74,7 +74,7 @@ async function start() {
 
 想要互相对话的两个端点中的任何一个都可以调用上面显示的 `start()` 函数。谁先调用并不重要，只需进行协商即可。
 
-这与旧版 WebRTC 连接建立代码没有明显区别。用户的摄像头和麦克风可通过调用 {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} 获得。然后，通过向 {{domxref("RTCPeerConnection.addTrack", "addTrack()")}} 传入{{domxref("RTCPeerConnection")}}，将得到的媒体轨道添加到{{domxref("RTCPeerConnection")}}中。最后，`selfVideo` 常量指示的自视图 {{HTMLElement("video")}} 元素的媒体源被设置为摄像头和麦克风流，这样本地用户就能看到对方看到的内容。
+这与旧版 WebRTC 连接建立代码没有明显区别。用户的摄像头和麦克风可通过调用 {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} 获得。然后，通过向 {{domxref("RTCPeerConnection.addTrack", "addTrack()")}} 传入 {{domxref("RTCPeerConnection")}}，将得到的媒体轨道添加到 {{domxref("RTCPeerConnection")}} 中。最后，`selfVideo` 常量指示的自视图 {{HTMLElement("video")}} 元素的媒体源被设置为摄像头和麦克风流，这样本地用户就能看到对方看到的内容。
 
 ### 处理传入的轨道
 
