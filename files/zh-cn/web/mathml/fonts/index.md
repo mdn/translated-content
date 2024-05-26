@@ -24,7 +24,7 @@ l10n:
 5. 打开 `static_otf.zip` ZIP 压缩文件，然后进入 `static_otf` 目录。在那里的文件中，你将找到一个 `STIXTwoMath-Regular` 文件。
 6. 打开 `STIXTwoMath-Regular` 文件，然后点击 **安装** 按钮。如果需要，你也可以对目录中的其他字体文件执行相同操作。
 
-> **备注：** 在Windows上默认安装了 _Cambria Math_ 字体，应该可以确保相对良好的MathML渲染效果。
+> **备注：** 在 Windows 上默认安装了 _Cambria Math_ 字体，应该可以确保相对良好的 MathML 渲染效果。
 
 ### macOS
 
