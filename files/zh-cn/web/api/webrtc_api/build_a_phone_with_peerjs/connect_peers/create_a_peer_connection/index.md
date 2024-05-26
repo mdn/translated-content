@@ -26,6 +26,8 @@ l10n:
 
     ·
 
+    ```
+
 2.  使用 PeerJS 框架，你将希望将`localPeer`连接到`remotePeer`。PeerJS 为我们提供了`connect()`函数，它接受一个对等方 ID 以连接到。将以下代码块添加到上述代码的下方：
 
     ```js
