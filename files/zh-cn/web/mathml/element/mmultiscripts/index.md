@@ -106,7 +106,7 @@ MathML 使用以下语法，即一个基本表达式，后跟任意数量的后�
 </math>
 ```
 
-{{ EmbedLiveSample('order_of_scripts示例', 700, 200, "", "") }}
+{{ EmbedLiveSample('order_of_scripts 示例', 700, 200, "", "") }}
 
 ## 规范
 
