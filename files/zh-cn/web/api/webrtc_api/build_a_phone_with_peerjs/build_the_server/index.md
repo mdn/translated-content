@@ -29,7 +29,7 @@ l10n:
    });
    ```
 
-   我们使用`ExpressPeerServer`对象来创建Peer服务器，在此过程中传递一些选项。Peer服务器将处理我们所需的WebRTC信令，因此我们无需担心STUN/TURN服务器或其他协议。
+   我们使用`ExpressPeerServer`对象来创建 Peer 服务器，在此过程中传递一些选项。Peer 服务器将处理我们所需的 WebRTC 信令，因此我们无需担心 STUN/TURN 服务器或其他协议。
 
 4. 最后，你需要通过调用`app.use(peerServer)`告诉你的应用程序使用`peerServer`。你完成的`server.js`应包括在服务器文件中包含的其他必要依赖项，以及将`index.html`文件提供给根路径。
    更新`server.js`文件，使其看起来像这样：
