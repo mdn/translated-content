@@ -2,7 +2,7 @@
 title: <msubsup>
 slug: Web/MathML/Element/msubsup
 l10n:
-   sourceCommit: 4d5e2c11f4b8cc32e54d2527d9576ed26ced9458
+  sourceCommit: 4d5e2c11f4b8cc32e54d2527d9576ed26ced9458
 ---
 
 {{MathMLRef}}
