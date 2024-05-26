@@ -60,7 +60,7 @@ l10n:
 
 ### 旧版 script 属性
 
-以下示例显示一个公式，其中 [`font-size`](/zh-CN/docs/Web/CSS/font-size) 设置为 `128pt`。 它包含了嵌套的上标中放置的数字，以及带有旧属性 `scriptsizemultiplier` 和 `scriptminsize` 的 `<mstyle>` 元素。 每当进入上标时，`font-size` 乘以 `0.5`，只要这不会使其小于 `16pt`。
+以下示例显示一个公式，其中 [`font-size`](/zh-CN/docs/Web/CSS/font-size) 设置为 `128pt`。它包含了嵌套的上标中放置的数字，以及带有旧属性 `scriptsizemultiplier` 和 `scriptminsize` 的 `<mstyle>` 元素。每当进入上标时，`font-size` 乘以 `0.5`，只要这不会使其小于 `16pt`。
 
 ```html
 <math display="block" style="font-size: 128pt">
