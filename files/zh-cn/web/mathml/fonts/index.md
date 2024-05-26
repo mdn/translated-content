@@ -7,7 +7,7 @@ l10n:
 
 {{MathMLRef}}
 
-需要具有适当Unicode覆盖范围和Open Font Format功能的字体才能实现良好的数学渲染。本页面描述了用户如何安装此类数学字体以正确显示浏览器中的MathML。
+需要具有适当 Unicode 覆盖范围和 Open Font Format 功能的字体才能实现良好的数学渲染。本页面描述了用户如何安装此类数学字体以正确显示浏览器中的 MathML。
 
 ## 安装说明
 
