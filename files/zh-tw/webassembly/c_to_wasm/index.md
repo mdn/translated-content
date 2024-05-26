@@ -47,7 +47,7 @@ slug: WebAssembly/C_to_Wasm
 
 下面列出了我們指令中選項的細節：
 
-- `-o hello.html` — 指定這個選項將會生成 HTML 頁面來運行我們的程式，並且會產生 Wasm 模組，編譯和實例化 Wasm 模組所需要的 JavaScript 膠水程式碼，讓程式能直接在 web 環境使用。
+- `-o hello.html`——指定這個選項將會生成 HTML 頁面來運行我們的程式，並且會產生 Wasm 模組，編譯和實例化 Wasm 模組所需要的 JavaScript 膠水程式碼，讓程式能直接在 web 環境使用。
 
 這個時候在你的原始碼資料夾應該有下列文件：
 
