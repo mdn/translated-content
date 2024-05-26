@@ -44,7 +44,8 @@ l10n:
 
 - `framespacing` {{Non-standard_Inline}}
 
-    - : 指定表格和框架之间添加的额外空间。第一个值指定右侧和左侧的间距；第二个值指定上方和下方的间距。可能的值是 {{cssxref("length-percentage")}}。
+  - : 指定表格和框架之间添加的额外空间。第一个值指定右侧和左侧的间距；第二个值指定上方和下方的间距。可能的值是 {{cssxref("length-percentage")}}。
+
 - `rowalign` {{Non-standard_Inline}}
 
     - : 指定单元格的垂直对齐方式。允许多个值以空格分隔，并适用于相应的行（例如 `rowalign="top bottom axis"`）。可能的值包括：`axis`、`baseline`（默认）、`bottom`、`center` 和 `top`。
