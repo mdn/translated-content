@@ -27,7 +27,7 @@ l10n:
 以下演示将 MathML 与其他 Web 技术混合使用，以生成高级内容。
 
 - [`<la-tex>` 自定义元素](https://fred-wang.github.io/TeXZilla/examples/customElement.html)
-    - : 接受 LaTeX 内容的 [自定义元素](/zh-CN/docs/Web/API/Web_components/Using_custom_elements)。
+  - : 接受 LaTeX 内容的 [自定义元素](/zh-CN/docs/Web/API/Web_components/Using_custom_elements)。
 - [磁场演示](https://fred-wang.github.io/TeXZilla/examples/toImageWebGL.html)
     - : 使用 [SVG](/zh-CN/docs/Web/SVG) 和 [WebGL](/zh-CN/docs/Web/API/WebGL_API) 的磁场的 3D 表示。
 - [Συνάρτηση ζήτα Ρήμαν (el)](https://fred-wang.github.io/MathFonts/%CE%A3%CF%85%CE%BD%CE%AC%CF%81%CF%84%CE%B7%CF%83%CE%B7_%CE%B6%CE%AE%CF%84%CE%B1_%CE%A1%CE%AE%CE%BC%CE%B1%CE%BD.html)
