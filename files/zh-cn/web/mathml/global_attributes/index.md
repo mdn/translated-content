@@ -38,7 +38,7 @@ l10n:
 - [`mathbackground`](/zh-CN/docs/Web/MathML/Global_attributes/mathbackground)
   - : 用于元素的 [background-color](/zh-CN/docs/Web/CSS/background-color)。
 - [`mathcolor`](/zh-CN/docs/Web/MathML/Global_attributes/mathcolor)
-    - : 元素的 [color](/zh-CN/docs/Web/CSS/color)。
+  - : 元素的 [color](/zh-CN/docs/Web/CSS/color)。
 - [`mathsize`](/zh-CN/docs/Web/MathML/Global_attributes/mathsize)
     - : 用作元素的 [font-size](/zh-CN/docs/Web/CSS/font-size) 的 {{cssxref("length-percentage")}}。
 - [`nonce`](/zh-CN/docs/Web/HTML/Global_attributes/nonce)
