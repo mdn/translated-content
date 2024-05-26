@@ -38,4 +38,3 @@ l10n:
 > **警告：** 目前我们编写的代码意味着当一个连接关闭时，**只有**发起通话的人首先点击 "挂断" 时，两个浏览器才会更新。如果回答通话的人先点击 "挂断"，则另一个呼叫者也必须点击 "挂断" 才能看到正确的 HTML。
 
 {{PreviousMenuNext("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Answer_a_call", "Web/API/WebRTC_API/Build_a_phone_with_peerjs/Deployment_and_further_reading")}}
-
