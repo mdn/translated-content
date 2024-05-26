@@ -263,7 +263,7 @@ function log(msg) {
 
 If your browser supports it, you can {{LiveSampleLink('Example', 'see it live')}}.
 
-[jsFiddle example](http://jsfiddle.net/Darbicus/z3Xdx/10/)
+[jsFiddle example](https://jsfiddle.net/Darbicus/z3Xdx/10/)
 
 ## Additional tips
 

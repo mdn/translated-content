@@ -123,11 +123,9 @@ p {
 
 {{ EmbedLiveSample('Сравнение_overflow-wrap_word-break_и_hyphens', '100%', 260) }}
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
-
-{{cssinfo}}
 
 ## Совместимость с браузерами
 

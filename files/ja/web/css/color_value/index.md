@@ -2,7 +2,7 @@
 title: <color>
 slug: Web/CSS/color_value
 l10n:
-  sourceCommit: 8daba6d316e3b68f45e09c44da9b6942307ca555
+  sourceCommit: 2e65771838405cdbee68bd38fb27a2ce0b1832d9
 ---
 
 {{CSSRef}}
@@ -29,7 +29,7 @@ rgb(255 0 153 / 80%)
 
 /* HSL (Hue, Saturation, Lightness) */
 hsl(150 30% 60%)
-hsl(150 30% 60% / 0.8)
+hsl(150 30% 60% / 80%)
 
 /* HWB (Hue, Whiteness, Blackness) */
 hwb(12 50% 0%)
@@ -51,6 +51,14 @@ oklab(59% 0.1 0.1 / 0.5)
 oklch(60% 0.15 50)
 oklch(60% 0.15 50 / 0.5)
 
+/* 相対的な CSS 色 */
+/* HSL 色相の変更 */
+hsl(from red 240deg s l)
+/* HWB アルファチャネルの変更 */
+hwb(from green h w b / 0.5)
+/* LCH 輝度の変更 */
+lch(from blue calc(l + 20) c h)
+
 /* light-dark */
 light-dark(white, black)
 light-dark(rgb(255 255 255), rgb(0 0 0))
@@ -60,11 +68,12 @@ light-dark(rgb(255 255 255), rgb(0 0 0))
 
 - キーワード: {{CSSXref("&lt;named-color&gt;")}} （`blue` や `pink` など）、{{CSSXref("&lt;system-color&gt;")}}、[`currentcolor`](#currentcolor_キーワード)
 - 16 進記法: {{CSSXref("&lt;hex-color&gt;")}} （`#ff0000` など）
-- 色空間の引数を関数記法を使用して:
+- `<color-function>` として、{{glossary("color space", "色空間")}}の引数を関数記法を使用して:
   - [sRGB](https://en.wikipedia.org/wiki/SRGB) 色空間: {{CSSXref("color_value/hsl", "hsl()")}}, {{CSSXref("color_value/hwb", "hwb()")}}, {{CSSXref("color_value/rgb", "rgb()")}}
   - [CIELAB](https://en.wikipedia.org/wiki/CIELAB_color_space) 色空間: {{CSSXref("color_value/lab", "lab()")}}, {{CSSXref("color_value/lch", "lch()")}}
   - [Oklab](https://bottosson.github.io/posts/oklab/) 色空間: {{CSSXref("color_value/oklab", "oklab()")}}, {{CSSXref("color_value/oklch", "oklch()")}}
   - その他の色空間: {{CSSXref("color_value/color", "color()")}}
+- [相対色](/ja/docs/Web/CSS/CSS_colors/Relative_colors)の構文を用いると、既存の色に基づく新しい色を出力することができます。上記の色関数はいずれも、**原色**の前に `from` キーワードが先行し、その後に新しい**出力色**のためのチャンネル値の定義を続けることができます。
 - 2 色の混合: {{CSSXref("color_value/color-mix", "color-mix()")}}
 - 2 つの色の指定。 1 つ目の色は明るいカラースキームに、 2 つ目は暗いカラースキームに使用: {{CSSXref("color_value/light-dark", "light-dark()")}}
 
@@ -88,7 +97,7 @@ light-dark(rgb(255 255 255), rgb(0 0 0))
 
 CSS 色関数の各成分（古いカンマ区切り文字を使用するものを除く）は、キーワード `none` を指定することで、欠落成分として指定することができます。
 
-[色の補間](#成分が欠落した補間) では、一部の色成分を補間したいが他の色成分は補間したくない場合に、欠落成分を明示的に指定するのに有益です。ほかはすべて、欠落した成分は適切な単位で値がゼロになります（`0`、`0%`、`0deg` など）。例えば、次の例は補間以外で使用しても等価な色です。
+[色補間における欠落成分](#成分が欠落した補間)を明示的に指定することは、一部の色成分は{{glossary("interpolation", "補間")}}したいが他の色成分は補間したくないという用途に有益です。ほかはすべて、欠落した成分は適切な単位で値がゼロになります（`0`、`0%`、`0deg` など）。例えば、次の例は補間以外で使用しても等価な色です。
 
 ```css
 /* これらは等価 */

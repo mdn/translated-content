@@ -169,7 +169,7 @@ select:focus {
    };
    ```
 
-   ここでは、`document` オブジェクトにリスナーを追加して、キーボードのボタンが押されたことを検出します。 イベントオブジェクトの [`keyCode`](/ja/docs/Web/API/KeyboardEvent/keyCode) プロパティを使ってどのボタンが押されたかをチェックし、 <kbd>Return</kbd>/<kbd>Enter</kbd> と一致するキーコードであれば、`document.activeElement.onclick()` を使用してボタンの `onclick` ハンドラに格納されている関数を実行します。 [`activeElement`](/ja/docs/Web/API/Document/activeElement) は現在ページにフォーカスしている要素を与えます。
+   ここでは、`document` オブジェクトにリスナーを追加して、キーボードのボタンが押されたことを検出します。 イベントオブジェクトの [`keyCode`](/ja/docs/Web/API/KeyboardEvent/keyCode) プロパティを使ってどのボタンが押されたかをチェックし、 <kbd>Return</kbd>/<kbd>Enter</kbd> と一致するキーコードであれば、`document.activeElement.onclick()` を使用してボタンの `onclick` ハンドラーに格納されている関数を実行します。 [`activeElement`](/ja/docs/Web/API/Document/activeElement) は現在ページにフォーカスしている要素を与えます。
 
 > **メモ:** この手法は、イベントハンドラープロパティ（`onclick` など）を使ってオリジナルのイベントハンドラーを設定した場合にのみ機能します。 `addEventListener` は機能しません。 これは、機能を再構築するための非常に面倒な作業です。 それに他にも問題があるはずです。 そもそも正しい要素を正しい仕事に使うほうがよいでしょう。
 

@@ -356,7 +356,7 @@ After declaring a few variables, we add an event listener to the button to contr
 
 > **Примечание:** Note that when the user clicks the button, we remove the `required` attribute(s) from the input(s) we are hiding, and empty the `value` attribute(s). This is so that we can submit the form if both input sets aren't filled in, and won't submit data that we didn't mean to submit. If we didn't do this, you'd have to fill in both feet/inches **and** meters to submit the form!
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

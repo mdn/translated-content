@@ -15,7 +15,7 @@ slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 
 Для начала скопируйте файлы [index-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/index-finished.html), [style.css](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/style.css) и [main-finished.js](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js) из предыдущей статьи в новую директорию на вашем компьютере.
 
-Для выполнения упражнения вы можете использовать сайт [JSBin](http://jsbin.com/) или [Thimble](https://thimble.mozilla.org/). Вы можете вставлять HTML, CSS и JavaScript-код в один из этих онлайн-редакторов. Если ваш онлайн-редактор не поддерживает раздельные панели для редактирования JavaScript/CSS кода, то вы можете встроить код в HTML с помощью тегов `<script>`/`<style>`.
+Для выполнения упражнения вы можете использовать сайт [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) или [Glitch](https://glitch.com/). Вы можете вставлять HTML, CSS и JavaScript-код в один из этих онлайн-редакторов. Если ваш онлайн-редактор не поддерживает раздельные панели для редактирования JavaScript/CSS кода, то вы можете встроить код в HTML с помощью тегов `<script>`/`<style>`.
 
 > **Примечание:** . Если у вас что-то не получается — попросите о помощи. Более подробная информация находится в секции [Assessment or further help](#assessment_or_further_help) в конце этой страницы.
 
@@ -159,9 +159,9 @@ window.onkeydown = function (e) {
 ## In this module
 
 - [Object basics](/ru/docs/Learn/JavaScript/Objects/Basics)
-- [Object-oriented JavaScript for beginners](/ru/docs/Learn/JavaScript/Objects/Object-oriented_JS)
+- [Object-oriented JavaScript for beginners](/ru/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)
 - [Object prototypes](/ru/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [Inheritance in JavaScript](/ru/docs/Learn/JavaScript/Objects/Inheritance)
+- [Inheritance in JavaScript](/ru/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)
 - [Working with JSON data](/ru/docs/Learn/JavaScript/Objects/JSON)
 - [Object building practice](/ru/docs/Learn/JavaScript/Objects/Object_building_practice)
 - [Adding features to our bouncing balls demo](/ru/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)

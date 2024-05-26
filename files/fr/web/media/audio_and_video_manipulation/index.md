@@ -183,7 +183,7 @@ window.addEventListener("load", setPlaybackRate);
 
 {{ EmbedLiveSample('Code jouable', 700, 425) }}
 
-> **Note :** Essayez l' [exemple playbackRate](http://jsbin.com/qomuvefu/2/edit) en direct.
+> **Note :** Essayez l' [exemple playbackRate](https://jsbin.com/qomuvefu/2/edit) en direct.
 
 > **Note :** `playbackRate` marche avec les éléments `<audio>` et `<video>`; cependant, dans les deux cas, la vitesse change mais pas la hauteur du son. Pour manipuler la hauteur du son, vous devez utliliser l'API Web Audio — voir la propriété {{domxref("AudioBufferSourceNode.playbackRate")}}.
 

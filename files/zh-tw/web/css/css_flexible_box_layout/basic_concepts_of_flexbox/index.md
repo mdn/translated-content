@@ -252,7 +252,7 @@ Recall that while the display order of the elements is independent of their orde
 
 - [Flexbox Playground](http://demo.agektmr.com/flexbox/)
 - [Flexy Boxes](http://the-echoplex.net/flexyboxes)
-- [Flexbox Properties Demonstration](http://codepen.io/justd/pen/yydezN)
+- [Flexbox Properties Demonstration](https://codepen.io/justd/pen/yydezN)
 - [Flexbox Froggy](http://flexboxfroggy.com/)
 
 ## 要注意的事情

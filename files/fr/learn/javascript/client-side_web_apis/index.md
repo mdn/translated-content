@@ -13,7 +13,7 @@ Pour tirer le meilleur parti de ce module, vous devriez avoir parcouru les préc
 
 Une connaissance basique de [HTML](/fr/docs/Learn/HTML) et [CSS](/fr/docs/Learn/CSS) serait aussi utile.
 
-> **Note :** Si vous travaillez sur un ordinateur/tablette/autre périphérique où vous n'avez pas la possibilité de créer vos propres fichiers, vous pouvez essayer (la plupart) des exemples de code dans un programme de code en ligne tel que [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/).
+> **Note :** Si vous travaillez sur un ordinateur/tablette/autre périphérique où vous n'avez pas la possibilité de créer vos propres fichiers, vous pouvez essayer (la plupart) des exemples de code dans un programme de code en ligne tel que [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
 
 ## Guides
 

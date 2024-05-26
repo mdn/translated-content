@@ -635,7 +635,7 @@
 /ja/docs/DOM/HTMLTitleElement	/ja/docs/Web/API/HTMLTitleElement
 /ja/docs/DOM/ImageData	/ja/docs/Web/API/ImageData
 /ja/docs/DOM/KeyboardEvent	/ja/docs/Web/API/KeyboardEvent
-/ja/docs/DOM/Locating_DOM_elements_using_selectors	/ja/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors
+/ja/docs/DOM/Locating_DOM_elements_using_selectors	/ja/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors
 /ja/docs/DOM/Manipulating_the_browser_history	/ja/docs/Web/API/History_API
 /ja/docs/DOM/MediaQueryList	/ja/docs/Web/API/MediaQueryList
 /ja/docs/DOM/Mozilla_event_reference/compositionend	/ja/docs/Web/API/Element/compositionend_event
@@ -920,7 +920,7 @@
 /ja/docs/DOM/window.confirm	/ja/docs/Web/API/Window/confirm
 /ja/docs/DOM/window.confirm-redirect-1	/ja/docs/Web/API/Window/confirm
 /ja/docs/DOM/window.content	/ja/docs/Web/API/Window
-/ja/docs/DOM/window.crypto	/ja/docs/Web/API/crypto_property
+/ja/docs/DOM/window.crypto	/ja/docs/Web/API/Window/crypto
 /ja/docs/DOM/window.defaultStatus	/ja/docs/Web/API/Window
 /ja/docs/DOM/window.document	/ja/docs/Web/API/Window/document
 /ja/docs/DOM/window.dump	/ja/docs/Web/API/Window/dump
@@ -1140,7 +1140,7 @@
 /ja/docs/DOM:window.closed	/ja/docs/Web/API/Window/closed
 /ja/docs/DOM:window.confirm	/ja/docs/Web/API/Window/confirm
 /ja/docs/DOM:window.content	/ja/docs/Web/API/Window
-/ja/docs/DOM:window.crypto	/ja/docs/Web/API/crypto_property
+/ja/docs/DOM:window.crypto	/ja/docs/Web/API/Window/crypto
 /ja/docs/DOM:window.defaultStatus	/ja/docs/Web/API/Window
 /ja/docs/DOM:window.document	/ja/docs/Web/API/Window/document
 /ja/docs/DOM:window.dump	/ja/docs/Web/API/Window/dump
@@ -1349,6 +1349,8 @@
 /ja/docs/Glossary/Scrollport	/ja/docs/Glossary/Scroll_container
 /ja/docs/Glossary/Signature/セキュリティ	/ja/docs/Glossary/Signature/Security
 /ja/docs/Glossary/Signature/関数	/ja/docs/Glossary/Signature/Function
+/ja/docs/Glossary/Simple_header	/ja/docs/Glossary/CORS-safelisted_request_header
+/ja/docs/Glossary/Simple_response_header	/ja/docs/Glossary/CORS-safelisted_response_header
 /ja/docs/Glossary/Symbol	/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol
 /ja/docs/Glossary/Transferable_objects	/ja/docs/Web/API/Web_Workers_API/Transferable_objects
 /ja/docs/Glossary/XHR_(XMLHttpRequest)	/ja/docs/Glossary/XMLHttpRequest
@@ -2557,7 +2559,7 @@
 /ja/docs/Using_gradients	/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients
 /ja/docs/Using_native_JSON	/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON
 /ja/docs/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations	/ja/docs/Web/API/XSLTProcessor
-/ja/docs/Using_the_W3C_DOM_Level_1_Core	/ja/docs/Web/API/Document_object_model/Using_the_Document_Object_Model
+/ja/docs/Using_the_W3C_DOM_Level_1_Core	/ja/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
 /ja/docs/Using_the_Web_Console	https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html
 /ja/docs/Using_the_Web_Console/Helpers	https://firefox-source-docs.mozilla.org/devtools-user/web_console/helpers/index.html
 /ja/docs/Using_the_Web_Console/WebConsoleHelp	https://firefox-source-docs.mozilla.org/devtools-user/web_console/helpers/index.html
@@ -2726,7 +2728,7 @@
 /ja/docs/Web/API/DocumentOrShadowRoot/styleSheets	/ja/docs/Web/API/Document/styleSheets
 /ja/docs/Web/API/Document_Object_Model/Events	/ja/docs/orphaned/Web/API/Document_Object_Model/Events
 /ja/docs/Web/API/Document_Object_Model/Preface	/ja/docs/Web/API/Document_Object_Model
-/ja/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core	/ja/docs/Web/API/Document_object_model/Using_the_Document_Object_Model
+/ja/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core	/ja/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
 /ja/docs/Web/API/Element.contentEditable	/ja/docs/Web/API/HTMLElement/contentEditable
 /ja/docs/Web/API/Element.isContentEditable	/ja/docs/Web/API/HTMLElement/isContentEditable
 /ja/docs/Web/API/Element.querySelector	/ja/docs/Web/API/Element/querySelector
@@ -3066,7 +3068,7 @@
 /ja/docs/Web/API/ServiceWorkerContainer/oncontrollerchange	/ja/docs/Web/API/ServiceWorkerContainer/controllerchange_event
 /ja/docs/Web/API/ServiceWorkerContainer/onerror	/ja/docs/Web/API/ServiceWorkerContainer/error_event
 /ja/docs/Web/API/ServiceWorkerContainer/onmessage	/ja/docs/Web/API/ServiceWorkerContainer/message_event
-/ja/docs/Web/API/ServiceWorkerGlobalScope/caches	/ja/docs/Web/API/caches
+/ja/docs/Web/API/ServiceWorkerGlobalScope/caches	/ja/docs/Web/API/Window/caches
 /ja/docs/Web/API/ServiceWorkerGlobalScope/onactivate	/ja/docs/Web/API/ServiceWorkerGlobalScope/activate_event
 /ja/docs/Web/API/ServiceWorkerGlobalScope/onfetch	/ja/docs/Web/API/ServiceWorkerGlobalScope/fetch_event
 /ja/docs/Web/API/ServiceWorkerGlobalScope/oninstall	/ja/docs/Web/API/ServiceWorkerGlobalScope/install_event
@@ -3154,7 +3156,6 @@
 /ja/docs/Web/API/Window/animationstart_event	/ja/docs/Web/API/Element/animationstart_event
 /ja/docs/Web/API/Window/arguments	/ja/docs/Web/API/Window
 /ja/docs/Web/API/Window/content	/ja/docs/Web/API/Window
-/ja/docs/Web/API/Window/crypto	/ja/docs/Web/API/crypto_property
 /ja/docs/Web/API/Window/defaultStatus	/ja/docs/Web/API/Window
 /ja/docs/Web/API/Window/dispatchEvent	/ja/docs/Web/API/EventTarget/dispatchEvent
 /ja/docs/Web/API/Window/escape	/ja/docs/Web/JavaScript/Reference/Global_Objects/escape
@@ -3175,7 +3176,6 @@
 /ja/docs/Web/API/Window/onmouseup	/ja/docs/Web/API/Element/mouseup_event
 /ja/docs/Web/API/Window/onreset	/ja/docs/Web/API/HTMLFormElement/reset_event
 /ja/docs/Web/API/Window/onresize	/ja/docs/Web/API/Window/resize_event
-/ja/docs/Web/API/Window/performance	/ja/docs/Web/API/performance_property
 /ja/docs/Web/API/Window/restore	/ja/docs/Web/API/Window/moveTo
 /ja/docs/Web/API/Window/setInterval	/ja/docs/Web/API/setInterval
 /ja/docs/Web/API/Window/setTimeout	/ja/docs/Web/API/setTimeout
@@ -3207,7 +3207,7 @@
 /ja/docs/Web/API/WindowEventHandlers/onunload	/ja/docs/Web/API/Window/unload_event
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/atob	/ja/docs/Web/API/atob
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/btoa	/ja/docs/Web/API/btoa
-/ja/docs/Web/API/WindowOrWorkerGlobalScope/caches	/ja/docs/Web/API/caches
+/ja/docs/Web/API/WindowOrWorkerGlobalScope/caches	/ja/docs/Web/API/Window/caches
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval	/ja/docs/Web/API/clearInterval
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout	/ja/docs/Web/API/clearTimeout
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap	/ja/docs/Web/API/createImageBitmap
@@ -3224,7 +3224,7 @@
 /ja/docs/Web/API/WindowTimers/setTimeout	/ja/docs/Web/API/setTimeout
 /ja/docs/Web/API/Worker/onerror	/ja/docs/Web/API/Worker/error_event
 /ja/docs/Web/API/Worker/onmessageerror	/ja/docs/Web/API/Worker/messageerror_event
-/ja/docs/Web/API/WorkerGlobalScope/caches	/ja/docs/Web/API/caches
+/ja/docs/Web/API/WorkerGlobalScope/caches	/ja/docs/Web/API/Window/caches
 /ja/docs/Web/API/WorkerGlobalScope/console	/ja/docs/conflicting/Web/API/console
 /ja/docs/Web/API/XMLDocument/async	/ja/docs/Web/API/XMLDocument
 /ja/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest	/ja/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest
@@ -3245,6 +3245,7 @@
 /ja/docs/Web/API/XRTargetRayMode	/ja/docs/Web/API/XRInputSource/targetRayMode
 /ja/docs/Web/API/XSLTProcessor/Browser_Differences	/ja/docs/orphaned/Web/API/XSLTProcessor/Browser_Differences
 /ja/docs/Web/API/XSLTProcessor/Resources	/ja/docs/Web/API/XSLTProcessor
+/ja/docs/Web/API/caches	/ja/docs/Web/API/Window/caches
 /ja/docs/Web/API/console.dir	/ja/docs/Web/API/console/dir_static
 /ja/docs/Web/API/console.log	/ja/docs/Web/API/console/log_static
 /ja/docs/Web/API/console.time	/ja/docs/Web/API/console/time_static
@@ -3266,6 +3267,7 @@
 /ja/docs/Web/API/console/timeStamp	/ja/docs/Web/API/console/timestamp_static
 /ja/docs/Web/API/console/trace	/ja/docs/Web/API/console/trace_static
 /ja/docs/Web/API/console/warn	/ja/docs/Web/API/console/warn_static
+/ja/docs/Web/API/crypto_property	/ja/docs/Web/API/Window/crypto
 /ja/docs/Web/API/document.URL	/ja/docs/Web/API/Document/URL
 /ja/docs/Web/API/document.activeElement	/ja/docs/Web/API/Document/activeElement
 /ja/docs/Web/API/document.adoptNode	/ja/docs/Web/API/Document/adoptNode
@@ -3361,6 +3363,7 @@
 /ja/docs/Web/API/indexedDB	/ja/docs/Web/API/Window/indexedDB
 /ja/docs/Web/API/isSecureContext	/ja/docs/Web/API/Window/isSecureContext
 /ja/docs/Web/API/origin	/ja/docs/Web/API/Window/origin
+/ja/docs/Web/API/performance_property	/ja/docs/Web/API/Window/performance
 /ja/docs/Web/API/range.intersectsNode	/ja/docs/Web/API/Range/intersectsNode
 /ja/docs/Web/API/range.setStart	/ja/docs/Web/API/Range/setStart
 /ja/docs/Web/API/tableRow.insertCell	/ja/docs/Web/API/HTMLTableRowElement/insertCell
@@ -3382,7 +3385,7 @@
 /ja/docs/Web/API/window.closed	/ja/docs/Web/API/Window/closed
 /ja/docs/Web/API/window.confirm	/ja/docs/Web/API/Window/confirm
 /ja/docs/Web/API/window.content	/ja/docs/Web/API/Window
-/ja/docs/Web/API/window.crypto	/ja/docs/Web/API/crypto_property
+/ja/docs/Web/API/window.crypto	/ja/docs/Web/API/Window/crypto
 /ja/docs/Web/API/window.defaultStatus	/ja/docs/Web/API/Window
 /ja/docs/Web/API/window.document	/ja/docs/Web/API/Window/document
 /ja/docs/Web/API/window.dump	/ja/docs/Web/API/Window/dump
@@ -3407,7 +3410,7 @@
 /ja/docs/Web/API/window.moveTo	/ja/docs/Web/API/Window/moveTo
 /ja/docs/Web/API/window.mozInnerScreenX	/ja/docs/Web/API/Window/mozInnerScreenX
 /ja/docs/Web/API/window.mozInnerScreenY	/ja/docs/Web/API/Window/mozInnerScreenY
-/ja/docs/Web/API/window.mozRequestAnimationFrame	/ja/docs/Web/API/window/requestAnimationFrame
+/ja/docs/Web/API/window.mozRequestAnimationFrame	/ja/docs/Web/API/Window/requestAnimationFrame
 /ja/docs/Web/API/window.name	/ja/docs/Web/API/Window/name
 /ja/docs/Web/API/window.navigator	/ja/docs/Web/API/Window/navigator
 /ja/docs/Web/API/window.navigator.appCodeName	/ja/docs/Web/API/Navigator/appCodeName
@@ -3446,7 +3449,7 @@
 /ja/docs/Web/API/window.personalbar	/ja/docs/Web/API/Window/personalbar
 /ja/docs/Web/API/window.prompt	/ja/docs/Web/API/Window/prompt
 /ja/docs/Web/API/window.releaseEvents	/ja/docs/Web/API/Window/releaseEvents
-/ja/docs/Web/API/window.requestAnimationFrame	/ja/docs/Web/API/window/requestAnimationFrame
+/ja/docs/Web/API/window.requestAnimationFrame	/ja/docs/Web/API/Window/requestAnimationFrame
 /ja/docs/Web/API/window.resizeBy	/ja/docs/Web/API/Window/resizeBy
 /ja/docs/Web/API/window.resizeTo	/ja/docs/Web/API/Window/resizeTo
 /ja/docs/Web/API/window.screen	/ja/docs/Web/API/Window/screen

@@ -23,7 +23,7 @@ _本接口从 {{domxref("EventTarget")}} 接口继承属性。_
 
 注意，对象类型的属性（例如：覆盖内建元素的原型）被列于下面单独的小节之中。
 
-- {{domxref("caches", "Window.caches")}} {{ReadOnlyInline}}
+- {{domxref("Window.caches")}} {{ReadOnlyInline}}
   - : 返回与当前环境相关的 {{domxref("CacheStorage")}} 对象。这个对象可以实现一些功能，如存储供离线使用的资源，以及对请求生成自定义响应。
 - {{domxref("Window.navigator", "Window.clientInformation")}} {{ReadOnlyInline}}
   - : {{domxref("Window.navigator")}} 对象的别名。
@@ -33,8 +33,8 @@ _本接口从 {{domxref("EventTarget")}} 接口继承属性。_
   - : 返回对 console 对象的引用，该对象提供对浏览器调试控制台的访问。
 - {{domxref("Window.credentialless")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{Non-standard_Inline}}
   - : 返回一个布尔值，表示当前文档是否在无凭据（credentialless）的 {{htmlelement("iframe")}} 中加载。参见 [IFrame credentialless](/zh-CN/docs/Web/Security/IFrame_credentialless) 以了解更多细节。
-- {{domxref("crypto_property", "Window.crypto")}} {{ReadOnlyInline}}
-  - : 返回浏览器的 crypto 对象。
+- {{domxref("Window.crypto")}} {{ReadOnlyInline}}
+  - : 返回与全局对象关联的 {{domxref("Crypto")}} 对象。
 - {{domxref("Window.customElements")}} {{ReadOnlyInline}}
   - : 返回对 {{domxref("CustomElementRegistry")}} 对象的引用，该对象可用于注册新的[自定义元素](/zh-CN/docs/Web/API/Web_components/Using_custom_elements)并获取之前注册的自定义元素的信息。
 - {{domxref("Window.devicePixelRatio")}} {{ReadOnlyInline}}
@@ -93,7 +93,7 @@ _本接口从 {{domxref("EventTarget")}} 接口继承属性。_
   - : {{domxref("window.scrollY")}} 的别名。
 - {{domxref("Window.parent")}} {{ReadOnlyInline}}
   - : 返回对当前窗口或子框架的被继承对象的引用。
-- {{domxref("performance_property", "Window.performance")}} {{ReadOnlyInline}}
+- {{domxref("Window.performance")}} {{ReadOnlyInline}}
   - : 返回一个 {{domxref("Performance")}} 对象，其中包括 {{domxref("Performance.timing", "timing")}} 和 {{domxref("Performance.navigation", "navigation")}} 属性，每个属性都是提供[性能相关](/zh-CN/docs/Web/API/Performance_API/Navigation_timing)数据的对象。有关其他信息和例子，请参见[使用导航计时](/zh-CN/docs/Web/API/Performance_API/Navigation_timing)。
 - {{domxref("Window.personalbar")}} {{ReadOnlyInline}}
   - : 返回 personalbar 对象。

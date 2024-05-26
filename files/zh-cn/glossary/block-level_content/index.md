@@ -1,6 +1,8 @@
 ---
 title: 块级内容
 slug: Glossary/Block-level_content
+l10n:
+  sourceCommit: afaf3aeeffa8408cf0a8a46c3d8fb0d347aad9f5
 ---
 
 {{GlossarySidebar}}
@@ -11,7 +13,7 @@ slug: Glossary/Block-level_content
 
 > **备注：** 如果包含块的 [`writing-mode`](/zh-CN/docs/Web/CSS/writing-mode) 被设置为[默认值](/zh-CN/docs/Web/CSS/writing-mode#形式定义)之外的值，上述的块布局行为将发生改变。
 
-> **备注：** HTML（_超文本标记语言_）元素历来被归类为“块级”元素或者“行级”元素。作为一种表现特性，现在这将由 CSS 来提供。
+> **备注：** HTML（_超文本标记语言_）元素历来被归类为“块级”元素或者“行级”元素。作为一种表现特性，现在由 CSS 来指定。
 
 ## 示例
 
@@ -24,7 +26,7 @@ slug: Glossary/Block-level_content
 </div>
 ```
 
-段落（{{HTMLElement("p")}}）元素默认是块级的。这是它们显示在块布局中的原因：
+段落（{{HTMLElement("p")}}）元素默认是块级的。这是它们显示在块级布局中的原因：
 
 ```css hidden
 p {

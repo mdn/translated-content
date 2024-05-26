@@ -1,8 +1,6 @@
 ---
 title: WebIDL ファイルに含まれる情報
-slug: MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file
-l10n:
-  sourceCommit: 24b4448c9dbaf3cb9084ad69a85c72e6aa2f72f9
+slug: MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file
 ---
 
 {{MDNSidebar}}

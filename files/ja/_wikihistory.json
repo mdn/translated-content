@@ -1757,14 +1757,6 @@
     "modified": "2020-03-30T14:20:00.023Z",
     "contributors": ["Uemmra3", "Marsf", "MaxfieldWalker"]
   },
-  "Glossary/Simple_header": {
-    "modified": "2020-08-11T15:13:18.407Z",
-    "contributors": ["mfuji09"]
-  },
-  "Glossary/Simple_response_header": {
-    "modified": "2019-08-11T03:51:18.097Z",
-    "contributors": ["mfuji09", "silverskyvicto"]
-  },
   "Glossary/Site": {
     "modified": "2020-04-12T14:25:01.758Z",
     "contributors": ["mfuji09"]
@@ -3801,7 +3793,7 @@
     "modified": "2020-05-17T21:57:28.358Z",
     "contributors": ["mfuji09", "wbamberg", "Potappo", "piza_suki"]
   },
-  "MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars": {
+  "MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars": {
     "modified": "2020-11-28T13:13:14.910Z",
     "contributors": ["mfuji09", "chrisdavidmills", "silverskyvicto"]
   },
@@ -7510,21 +7502,21 @@
       "Mgjbot"
     ]
   },
+  "Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors": {
+    "modified": "2020-09-27T08:56:01.656Z",
+    "contributors": ["mfuji09", "ethertank", "RobinEgg"]
+  },
   "Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces": {
     "modified": "2020-08-22T02:39:04.971Z",
     "contributors": ["mfuji09", "kohei.yoshino", "Mgjbot"]
   },
+  "Web/API/Document_Object_Model/Using_the_Document_Object_Model": {
+    "modified": "2020-10-05T13:58:00.928Z",
+    "contributors": ["mfuji09", "wbamberg", "kohei.yoshino", "Mgjbot"]
+  },
   "Web/API/Document_Object_Model/Whitespace": {
     "modified": "2020-03-27T15:45:14.756Z",
     "contributors": ["mfuji09", "chrisdavidmills", "ethertank", "Mgjbot", "Deq"]
-  },
-  "Web/API/Document_object_model/Locating_DOM_elements_using_selectors": {
-    "modified": "2020-09-27T08:56:01.656Z",
-    "contributors": ["mfuji09", "ethertank", "RobinEgg"]
-  },
-  "Web/API/Document_object_model/Using_the_Document_Object_Model": {
-    "modified": "2020-10-05T13:58:00.928Z",
-    "contributors": ["mfuji09", "wbamberg", "kohei.yoshino", "Mgjbot"]
   },
   "Web/API/DragEvent": {
     "modified": "2020-10-15T21:48:03.239Z",
@@ -13907,6 +13899,10 @@
     "modified": "2020-10-15T21:36:49.995Z",
     "contributors": ["Marsf", "mfuji09", "Uemmra3", "Kenju"]
   },
+  "Web/API/Window/caches": {
+    "modified": "2020-10-15T21:49:48.643Z",
+    "contributors": ["Wind1808", "unarist", "YuichiNukiyama"]
+  },
   "Web/API/Window/cancelAnimationFrame": {
     "modified": "2019-03-23T23:34:36.038Z",
     "contributors": ["Marsf", "fscholz", "ethertank"]
@@ -13951,6 +13947,17 @@
   "Web/API/Window/copy_event": {
     "modified": "2020-10-15T22:27:12.990Z",
     "contributors": ["mfuji09"]
+  },
+  "Web/API/Window/crypto": {
+    "modified": "2020-10-15T21:16:38.249Z",
+    "contributors": [
+      "yumetodo",
+      "Marsf",
+      "fscholz",
+      "AshfaqHossain",
+      "ethertank",
+      "Potappo"
+    ]
   },
   "Web/API/Window/customElements": {
     "modified": "2020-10-15T22:08:55.255Z",
@@ -14313,6 +14320,10 @@
     "modified": "2020-10-15T22:27:22.823Z",
     "contributors": ["mfuji09"]
   },
+  "Web/API/Window/performance": {
+    "modified": "2020-10-15T22:08:48.553Z",
+    "contributors": ["silverskyvicto"]
+  },
   "Web/API/Window/personalbar": {
     "modified": "2019-03-23T23:50:07.790Z",
     "contributors": ["momdo", "teoli", "khalid32", "ethertank", "Potappo"]
@@ -14362,6 +14373,19 @@
   "Web/API/Window/releaseEvents": {
     "modified": "2019-03-23T23:52:29.641Z",
     "contributors": ["teoli", "jsx", "ethertank", "Potappo"]
+  },
+  "Web/API/Window/requestAnimationFrame": {
+    "modified": "2020-10-15T21:24:04.571Z",
+    "contributors": [
+      "mfuji09",
+      "YuichiNukiyama",
+      "woodmix",
+      "Marsf",
+      "sohopro",
+      "teoli",
+      "yuxxxx",
+      "ethertank"
+    ]
   },
   "Web/API/Window/requestIdleCallback": {
     "modified": "2020-11-30T04:47:30.141Z",
@@ -15054,10 +15078,6 @@
       "Potappo"
     ]
   },
-  "Web/API/caches": {
-    "modified": "2020-10-15T21:49:48.643Z",
-    "contributors": ["Wind1808", "unarist", "YuichiNukiyama"]
-  },
   "Web/API/clearInterval": {
     "modified": "2019-03-23T23:49:51.484Z",
     "contributors": [
@@ -15164,17 +15184,6 @@
     "modified": "2020-10-15T22:34:31.000Z",
     "contributors": ["silverskyvicto"]
   },
-  "Web/API/crypto_property": {
-    "modified": "2020-10-15T21:16:38.249Z",
-    "contributors": [
-      "yumetodo",
-      "Marsf",
-      "fscholz",
-      "AshfaqHossain",
-      "ethertank",
-      "Potappo"
-    ]
-  },
   "Web/API/fetch": {
     "modified": "2020-10-15T21:41:32.875Z",
     "contributors": [
@@ -15191,10 +15200,6 @@
       "Piroro-hs",
       "chikoski"
     ]
-  },
-  "Web/API/performance_property": {
-    "modified": "2020-10-15T22:08:48.553Z",
-    "contributors": ["silverskyvicto"]
   },
   "Web/API/setInterval": {
     "modified": "2020-10-15T21:15:06.280Z",
@@ -15234,19 +15239,6 @@
   "Web/API/treeWalker": {
     "modified": "2020-10-15T21:21:02.292Z",
     "contributors": ["yyss", "xuancanh", "ethertank"]
-  },
-  "Web/API/window/requestAnimationFrame": {
-    "modified": "2020-10-15T21:24:04.571Z",
-    "contributors": [
-      "mfuji09",
-      "YuichiNukiyama",
-      "woodmix",
-      "Marsf",
-      "sohopro",
-      "teoli",
-      "yuxxxx",
-      "ethertank"
-    ]
   },
   "Web/Accessibility": {
     "modified": "2020-06-29T12:52:49.612Z",

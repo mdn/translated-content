@@ -40,8 +40,8 @@ Firefox 39 は、米国時間 2015 年 6 月 30 日にリリースされまし�
 - `Object.prototype.__noSuchMethod__` プロパティは非推奨になり、コンソールに警告を表示します ([Firefox バグ 1140428](https://bugzil.la/1140428) および [platform でのアナウンス](https://groups.google.com/forum/#!topic/mozilla.dev.platform/0EkHgphxUo8)をご覧ください)。
 - {{jsxref("Proxy")}} オブジェクトの実装を、ES6 仕様へさらに準拠するよう更新しました:
 
-  - {{jsxref("Global_Objects/Proxy/handler/defineProperty", "defineProperty")}} ハンドラおよび {{jsxref("Global_Objects/Proxy/handler/set", "set")}} ハンドラは、成功時に `true` を、strict モードで成功しない場合は {{jsxref("TypeError")}} 例外を明示的に返すことが必要になりました ([Firefox バグ 1132522](https://bugzil.la/1132522))。
-  - {{domxref("window")}} をターゲットとして設定した場合、これらのハンドラで `TypeError` 例外が発生します ([Firefox バグ 828137](https://bugzil.la/828137))。
+  - {{jsxref("Global_Objects/Proxy/handler/defineProperty", "defineProperty")}} ハンドラーおよび {{jsxref("Global_Objects/Proxy/handler/set", "set")}} ハンドラーは、成功時に `true` を、strict モードで成功しない場合は {{jsxref("TypeError")}} 例外を明示的に返すことが必要になりました ([Firefox バグ 1132522](https://bugzil.la/1132522))。
+  - {{domxref("window")}} をターゲットとして設定した場合、これらのハンドラーで `TypeError` 例外が発生します ([Firefox バグ 828137](https://bugzil.la/828137))。
 
 - [アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions) (`=>`) を使用する際、行末 (`\n`) をアロー関数の引数の後ろに置くことができなくなりました (`() \n => {}`) ([Firefox バグ 1141392](https://bugzil.la/1141392))。
 - {{jsxref("RegExp.prototype.toString")}} がジェネリック関数になりました ([Firefox バグ 1079919](https://bugzil.la/1079919))。

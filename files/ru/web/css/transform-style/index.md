@@ -37,7 +37,7 @@ transform-style: unset;
 
 {{csssyntax}}
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 

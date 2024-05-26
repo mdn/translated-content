@@ -188,6 +188,8 @@
 /ko/docs/Glossary/I18N	/ko/docs/Glossary/Internationalization
 /ko/docs/Glossary/Index	/ko/docs/Glossary
 /ko/docs/Glossary/Internationalization_and_localization	/ko/docs/conflicting/Glossary/Internationalization
+/ko/docs/Glossary/Simple_header	/ko/docs/conflicting/Glossary/CORS-safelisted_request_header
+/ko/docs/Glossary/Simple_response_header	/ko/docs/conflicting/Glossary/CORS-safelisted_response_header
 /ko/docs/Glossary/Symbol	/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol
 /ko/docs/Glossary/Transmission_Control_Protocol_(TCP)	/ko/docs/Glossary/TCP
 /ko/docs/Glossary/XHR_(XMLHttpRequest)	/ko/docs/Glossary/XMLHttpRequest
@@ -431,7 +433,7 @@
 /ko/docs/Web/API/DocumentOrShadowRoot/getSelection	/ko/docs/Web/API/Document/getSelection
 /ko/docs/Web/API/DocumentOrShadowRoot/styleSheets	/ko/docs/Web/API/Document/styleSheets
 /ko/docs/Web/API/Document_Object_Model/Preface	/ko/docs/Web/API/Document_Object_Model
-/ko/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core	/ko/docs/Web/API/Document_object_model/Using_the_Document_Object_Model
+/ko/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core	/ko/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
 /ko/docs/Web/API/Document_Object_Model/소개	/ko/docs/Web/API/Document_Object_Model/Introduction
 /ko/docs/Web/API/Document_Object_Model/예제	/ko/docs/Web/API/Document_Object_Model/Examples
 /ko/docs/Web/API/Element.clientHeight	/ko/docs/Web/API/Element/clientHeight
@@ -505,7 +507,6 @@
 /ko/docs/Web/API/WebRTC_API/adapter.js	/ko/docs/Web/API/WebRTC_API#상호_운용성
 /ko/docs/Web/API/Web_Audio_API/Migrating_from_webkitAudioContext	/ko/docs/conflicting/Web/API/Web_Audio_API
 /ko/docs/Web/API/Window/DOMContentLoaded_event	/ko/docs/Web/API/Document/DOMContentLoaded_event
-/ko/docs/Web/API/Window/crypto	/ko/docs/Web/API/crypto_property
 /ko/docs/Web/API/WindowEventHandlers/onhashchange	/ko/docs/Web/API/Window/hashchange_event
 /ko/docs/Web/API/WindowEventHandlers/onpopstate	/ko/docs/Web/API/Window/popstate_event
 /ko/docs/Web/API/WindowEventHandlers/onstorage	/ko/docs/Web/API/Window/storage_event
@@ -530,6 +531,7 @@
 /ko/docs/Web/API/console/timeLog	/ko/docs/Web/API/console/timelog_static
 /ko/docs/Web/API/console/trace	/ko/docs/Web/API/console/trace_static
 /ko/docs/Web/API/console/warn	/ko/docs/Web/API/console/warn_static
+/ko/docs/Web/API/crypto_property	/ko/docs/Web/API/Window/crypto
 /ko/docs/Web/API/document.importNode	/ko/docs/Web/API/Document/importNode
 /ko/docs/Web/API/window.navigator.battery	/ko/docs/Web/API/Navigator/getBattery
 /ko/docs/Web/API/window.navigator.connection	/ko/docs/Web/API/Navigator/connection

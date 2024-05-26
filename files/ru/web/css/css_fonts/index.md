@@ -89,6 +89,6 @@ p {
 - [Variable fonts guide](/ru/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide)
   - : **Variable fonts** are an evolution of the OpenType font specification that enables many different variations of a typeface to be incorporated into a single file, rather than having a separate font file for every width, weight, or style. This article will give you all you need to know to get you started using variable fonts.
 
-## Specifications
+## Спецификации
 
 {{Specifications}}

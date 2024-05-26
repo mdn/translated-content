@@ -3,6 +3,8 @@ title: <canvas>
 slug: Web/HTML/Element/canvas
 ---
 
+{{HTMLSidebar}}
+
 **HTML `<canvas>` Элемент** может быть использован для отрисовки графики через скрипты (обычно используется [JavaScript](/ru/docs/Web/JavaScript)). Например, его можно использовать для отрисовки графиков, делать композиции фото или даже выполнять анимации. Вы можете (и должны) дать альтернативное содержание внутри блока `<canvas>`. Этот контент будет рендерится в обоих браузерах, в старых которые не поддерживают canvas и в браузерах с отключённым JavaScript.
 
 Больше статей о canvas [canvas topic page](/ru/docs/Web/API/Canvas_API).
@@ -64,5 +66,3 @@ slug: Web/HTML/Element/canvas
 - [Canvas cheat sheet](https://simon.html5.org/dump/html5-canvas-cheat-sheet.html)
 - [Canvas-related demos](/en-US/demos/tag/tech:canvas)
 - [Canvas introduction by Apple](https://developer.apple.com/library/safari/documentation/AudioVideo/Conceptual/HTML-canvas-guide/Introduction/Introduction.html)
-
-{{HTMLSidebar}}
