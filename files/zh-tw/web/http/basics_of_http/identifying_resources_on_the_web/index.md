@@ -1,5 +1,5 @@
 ---
-title: 識別網絡上的資源
+title: 識別網路上的資源
 slug: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
 l10n:
   sourceCommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
@@ -91,7 +91,7 @@ urn:ietf:rfc:7230
 
 ## 使用筆記
 
-在 {{Glossary("HTML")}} 內容中使用 URL 時，通常只應該使用其中一些 URL 方案。當引用子資源（即作為較大文檔的一部分加載的文件）時，應僅使用 HTTP 和 HTTPS 方案。出於安全原因，越來越多的瀏覽器已經停用了使用 FTP 來加載子資源的支援。
+在 {{Glossary("HTML")}} 內容中使用 URL 時，通常只應該使用其中一些 URL 方案。當引用子資源（即作為更大文件一部分加載的檔案）時，應僅使用 HTTP 和 HTTPS 方案。出於安全原因，越來越多的瀏覽器已經停用了使用 FTP 來加載子資源的支援。
 
 FTP 在頂層（例如直接輸入到瀏覽器的 URL 欄中，或作為連接的目標）仍然可以接受，但一些瀏覽器可能將 FTP 內容的加載委派給另一個應用程序。
 
