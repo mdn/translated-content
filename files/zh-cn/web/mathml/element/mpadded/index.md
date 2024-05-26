@@ -22,7 +22,7 @@ l10n:
 - `voffset`
   - : 一个 {{cssxref("length-percentage")}}，指示子内容的定位点相对于 `<mpadded>` 元素的定位点的垂直位置。
 - `width`
-    - : 一个 {{cssxref("length-percentage")}}，指示 `<mpadded>` 元素的期望水平长度。
+  - : 一个 {{cssxref("length-percentage")}}，指示 `<mpadded>` 元素的期望水平长度。
 
 ### 旧版语法
 
