@@ -19,6 +19,7 @@ l10n:
     function getStreamCode() {
     code = window.prompt("Please enter the sharing code");
     }
+
     ```
 
         window.prompt() 方法提供了一种方便的方式来获取相关的对等方ID — 你可以在需要收集对等方ID以创建连接时使用它。
