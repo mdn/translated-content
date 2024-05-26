@@ -9,7 +9,7 @@ l10n:
 
 这是一份按字母排序的 MathML **呈现型**元素列表。所有这些元素都实现了 {{domxref("MathMLElement")}} 类。
 
-> **备注：** 注意： 如主 [MathML](/zh-CN/docs/Web/MathML) 页面所述，MDN 使用 [MathML Core](https://w3c.github.io/mathml-core/) 作为参考规范。然而，一些浏览器仍然实现的遗留特性也被记录在文档中。你可以在 [MathML 4](https://w3c.github.io/mathml/) 中找到这些和其他特性的更多详细信息。
+> **备注：** 注意：如主 [MathML](/zh-CN/docs/Web/MathML) 页面所述，MDN 使用 [MathML Core](https://w3c.github.io/mathml-core/) 作为参考规范。然而，一些浏览器仍然实现的遗留特性也被记录在文档中。你可以在 [MathML 4](https://w3c.github.io/mathml/) 中找到这些和其他特性的更多详细信息。
 
 ## MathML 呈现型元素（字母排序）
 
