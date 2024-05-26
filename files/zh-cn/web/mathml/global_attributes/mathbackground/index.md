@@ -37,7 +37,7 @@ l10n:
 
 ### 可选值
 
-- {{cssxref("<color>")}}
+- {{cssxref("&lt;color&gt;")}}
   - : 背景的统一颜色。
 
 ## 规范
