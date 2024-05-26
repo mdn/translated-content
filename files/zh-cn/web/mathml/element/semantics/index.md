@@ -34,7 +34,7 @@ l10n:
 - `encoding`
   - : 注释中语义信息的编码（例如 `"MathML-Content"`、`"MathML-Presentation"`、`"application/openmath+xml"`、`"image/png"`）
 - `src` {{deprecated_inline}}
-    - : 语义信息的外部源位置。
+  - : 语义信息的外部源位置。
 
 ## 示例
 
