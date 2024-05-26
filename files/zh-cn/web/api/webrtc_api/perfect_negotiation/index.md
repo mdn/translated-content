@@ -129,7 +129,7 @@ pc.onnegotiationneeded = async () => {
 
 #### 处理传入的 ICE 候选者
 
-接下来，我们需要处理“RTCPeerConnection”事件 {{domxref(“RTCPeerConnection.icecandidate_event”, “icecandidate”)}}，这是本地 ICE 层向我们传递候选对象的方式，以便通过信令信道将候选对象传送给远程对等设备。
+接下来，我们需要处理“RTCPeerConnection”事件 {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}}，这是本地 ICE 层向我们传递候选对象的方式，以便通过信令信道将候选对象传送给远程对等设备。
 
 ```js
 pc.onicecandidate = ({ candidate }) => signaler.send({ candidate });
