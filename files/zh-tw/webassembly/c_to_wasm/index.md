@@ -20,7 +20,7 @@ slug: WebAssembly/C_to_Wasm
 環境配置完畢了，讓我們看看如何使用它將 C 的程式編譯成 Wasm。使用 Emscripten 來編譯的時候，有很多種不同的作法。其中，主要有 2 種：
 
 - 編譯到 Wasm 並且產生一個用來運行我們的程式的 HTML，並引入所有 Wasm 在 web 環境下運行所需要的 JavaScript 膠水程式碼。
-- 編譯到 Wasm ，並僅僅生成 JavaScript。
+- 編譯到 Wasm，並僅僅生成 JavaScript。
 
 讓我們逐一檢視。
 
