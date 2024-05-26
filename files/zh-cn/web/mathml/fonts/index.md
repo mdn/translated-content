@@ -18,7 +18,7 @@ l10n:
 按以下步骤安装 _Latin Modern Math_ 和 _STIX Two Math_ 字体：
 
 1. 下载 [latinmodern-math-1959.zip](https://www.gust.org.pl/projects/e-foundry/lm-math/download/latinmodern-math-1959.zip)。
-2. 打开ZIP压缩文件，进入 `latinmodern-math-1959` 目录，然后进入 `otf` 目录。你将找到一个 `latinmodern-math` 字体文件。
+2. 打开 ZIP 压缩文件，进入 `latinmodern-math-1959` 目录，然后进入 `otf` 目录。你将找到一个 `latinmodern-math` 字体文件。
 3. 打开 `latinmodern-math` 字体文件，然后点击 安装 按钮。
 4. 下载 [static_otf.zip](https://raw.githubusercontent.com/stipub/stixfonts/master/zipfiles/static_otf.zip)。
 5. 打开 `static_otf.zip` ZIP压缩文件，然后进入 `static_otf` 目录。在那里的文件中，你将找到一个 `STIXTwoMath-Regular` 文件。
