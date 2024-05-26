@@ -41,7 +41,7 @@ l10n:
 ## 工具
 
 - [W3C Validator](http://validator.w3.org)
-- [W3C 的wiki页面](https://www.w3.org/wiki/Math_Tools)
+- [W3C 的 wiki 页面](https://www.w3.org/wiki/Math_Tools)
 
 ## 相关主题
 
