@@ -7,7 +7,7 @@ l10n:
 
 {{MathMLRef}}
 
-**`<mtr>`** 这个 [MathML](/en-US/docs/Web/MathML)元素表示表格或矩阵中的一行。它只能出现在 {{ MathMLElement("mtable") }} 元素中，其子元素是表示单元格的 {{ MathMLElement("mtd") }} 元素。该元素类似于 HTML 中的 {{ HTMLElement("tr") }} 元素。
+**`<mtr>`** 这个 [MathML](/zh-CN/docs/Web/MathML)元素表示表格或矩阵中的一行。它只能出现在 {{ MathMLElement("mtable") }} 元素中，其子元素是表示单元格的 {{ MathMLElement("mtd") }} 元素。该元素类似于 HTML 中的 {{ HTMLElement("tr") }} 元素。
 
 ## 属性
 
