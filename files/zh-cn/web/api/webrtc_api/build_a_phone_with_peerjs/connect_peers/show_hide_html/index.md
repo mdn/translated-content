@@ -9,7 +9,7 @@ l10n:
 
 {{PreviousMenuNext("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Get_microphone_permission", "Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Create_a_peer_connection")}}
 
-好了，你已经设置好了麦克风权限。下一步是确保每个用户知道他们的对等ID，以便他们可以建立连接。PeerJS框架为我们提供了一堆可以在之前创建的对等体上调用的事件侦听器。
+好了，你已经设置好了麦克风权限。下一步是确保每个用户知道他们的对等 ID，以便他们可以建立连接。PeerJS 框架为我们提供了一堆可以在之前创建的对等体上调用的事件侦听器。
 
 1. 让我们使用`open`事件创建一个侦听器，当对等体打开时显示对等体的ID。将以下代码添加到`script.js`的底部：
 
