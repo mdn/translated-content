@@ -35,7 +35,7 @@ l10n:
 
 ## 规范
 
-href属性在任何面向浏览器的规范中都没有定义，但你可以在 [MathML 4](https://w3c.github.io/mathml/#interf_link)中找到描述。
+href 属性在任何面向浏览器的规范中都没有定义，但你可以在 [MathML 4](https://w3c.github.io/mathml/#interf_link)中找到描述。
 
 ## 浏览器兼容性
 
