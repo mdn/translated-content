@@ -25,7 +25,7 @@ l10n:
 >   - `"text/html"`
 >   - `"image/svg+xml"`
 >   - `"application/xml"`。
-> 请注意，此处未提及 `"application/mathml+xml"`，因为它 _不_ 区分 Content 或 Presentation MathML。
+>     请注意，此处未提及 `"application/mathml+xml"`，因为它 _不_ 区分 Content 或 Presentation MathML。
 
 ## 属性
 
