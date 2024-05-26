@@ -23,13 +23,13 @@ l10n:
 
 ```js
 const url = new URL("blob:https://mozilla.org:443/");
-console.log(url.origin); // 输出 'https://mozilla.org'
+console.log(url.origin); // 输出“https://mozilla.org”
 
 const url = new URL("http://localhost:80/");
-console.log(url.origin); // 输出 'http://localhost'
+console.log(url.origin); // 输出“http://localhost”
 
 const url = new URL("https://mozilla.org:8080/");
-console.log(url.origin); // 输出 'https://mozilla.org:8080'
+console.log(url.origin); // 输出“https://mozilla.org:8080”
 ```
 
 ## 规范
