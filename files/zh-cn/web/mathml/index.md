@@ -28,7 +28,7 @@ l10n:
 - [编写 MathML](/zh-CN/docs/Web/MathML/Authoring)
   - : 编写 MathML 的一些建议和提示，包括建议使用的编辑器以及如何将编辑器的输出集成到网页中去。
 - [MathML 教程](/zh-CN/docs/Learn/MathML)
-  - : 一个对MathML的简要介绍。
+  - : 一个对 MathML 的简要介绍。
 
 [查看全部...](/zh-CN/docs/tag/MathML)
 
