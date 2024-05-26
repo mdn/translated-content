@@ -21,7 +21,7 @@ l10n:
 某些浏览器还可能支持以下属性：
 
 - `columnalign` {{Non-standard_Inline}}
-    - : 指定此单元格的水平对齐方式，并覆盖由 {{ MathMLElement("mtable") }} 或 {{ MathMLElement("mtr") }} 指定的值。
+  - : 指定此单元格的水平对齐方式，并覆盖由 {{ MathMLElement("mtable") }} 或 {{ MathMLElement("mtr") }} 指定的值。
     可能的值包括：`left`、`center` 和 `right`。
 - `rowalign` {{Non-standard_Inline}}
     - : 指定此单元格的垂直对齐方式，并覆盖由 {{ MathMLElement("mtable") }} 或 {{ MathMLElement("mtr") }} 指定的值。
