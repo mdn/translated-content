@@ -32,7 +32,8 @@ l10n:
 
 - `columnlines` {{Non-standard_Inline}}
 
-    - : 指定列边框。允许多个值以空格分隔，并适用于相应的列（例如 `columnlines="none none solid"`）。可能的值包括：`none`（默认）、`solid` 和 `dashed`。
+  - : 指定列边框。允许多个值以空格分隔，并适用于相应的列（例如 `columnlines="none none solid"`）。可能的值包括：`none`（默认）、`solid` 和 `dashed`。
+
 - `columnspacing` {{Non-standard_Inline}}
 
     - : 指定表格列之间的间距。允许多个值以空格分隔，并适用于相应的列（例如 `columnspacing="1em 2em"`）。可能的值是 {{cssxref("length-percentage")}}。
