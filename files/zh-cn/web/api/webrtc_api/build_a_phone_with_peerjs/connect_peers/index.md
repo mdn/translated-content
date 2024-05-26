@@ -35,7 +35,7 @@ l10n:
 
 4. 在另一个终端窗口中，通过在手机应用目录的根目录中运行以下命令来启动 Peer 服务器：
 
-     ```bash
+   ```bash
    peerjs --port 443 --key peerjs --path /myapp
    ```
 
