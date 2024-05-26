@@ -1,8 +1,8 @@
 ---
- title: Ending a call
- slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/End_a_call
- l10n:
-   sourceCommit: e099e74fe5c09c46f0dfe044894692721a713d29
+title: Ending a call
+slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/End_a_call
+l10n:
+  sourceCommit: e099e74fe5c09c46f0dfe044894692721a713d29
 ---
 
 {{DefaultAPISidebar("WebRTC")}}
