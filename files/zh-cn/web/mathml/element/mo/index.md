@@ -26,7 +26,7 @@ l10n:
 - `minsize`
   - : 一个 {{cssxref("length-percentage")}}，表示运算符在可拉伸时的最小大小。
 - `movablelimits`
-    - : 一个 [`<boolean>`](/zh-CN/docs/Web/MathML/Values#mathml-specific_types)，表示附加的下标和上标在 [`math-style`](/zh-CN/docs/Web/CSS/math-style) 设置为 `compact` 时是否移动到上下标位置。
+  - : 一个 [`<boolean>`](/zh-CN/docs/Web/MathML/Values#mathml-specific_types)，表示附加的下标和上标在 [`math-style`](/zh-CN/docs/Web/CSS/math-style) 设置为 `compact` 时是否移动到上下标位置。
 - `rspace`
     - : 一个 {{cssxref("length-percentage")}}，表示运算符后的空间量。
 - `separator`
