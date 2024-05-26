@@ -131,7 +131,7 @@ fc-cache -sf
 
 ### 带有 MATH 表的字体
 
-实际上，你可以安装任何 [数学 OpenType 字体](https://fred-wang.github.io/MathFonts/) 并将它们用于 MathML 渲染。一些浏览器提供了在字体首选项菜单中配置 MathML 默认字体的方法。或者，你可以尝试使用 [MathML-fontsettings插件](https://addons.mozilla.org/zh-CN/firefox/addon/mathml-font-settings/)。
+实际上，你可以安装任何 [数学 OpenType 字体](https://fred-wang.github.io/MathFonts/) 并将它们用于 MathML 渲染。一些浏览器提供了在字体首选项菜单中配置 MathML 默认字体的方法。或者，你可以尝试使用 [MathML-fontsettings 插件](https://addons.mozilla.org/zh-CN/firefox/addon/mathml-font-settings/)。
 
 - [Asana Math](https://www.ctan.org/tex-archive/fonts/Asana-Math/)
 - [Cambria Math](https://docs.microsoft.com/typography/font-list/?FID=360)
