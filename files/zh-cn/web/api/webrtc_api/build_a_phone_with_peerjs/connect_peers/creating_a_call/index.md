@@ -17,7 +17,7 @@ l10n:
    const callBtn = document.querySelector(".call-btn");
    ```
 
-2. 当呼叫者点击“Call”时，你将要求他们提供要呼叫的对等方的对等方ID（我们将在`getStreamCode()`中存储在code变量中），然后你将要创建与该代码的连接。在上述代码的下方添加以下内容：
+2. 当呼叫者点击“Call”时，你将要求他们提供要呼叫的对等方的对等方 ID（我们将在`getStreamCode()`中存储在 code 变量中），然后你将要创建与该代码的连接。在上述代码的下方添加以下内容：
 
     ```js
    callBtn.addEventListener("click", () => {
