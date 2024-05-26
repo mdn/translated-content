@@ -20,7 +20,7 @@ l10n:
 - [Mozilla MathML 测试](https://fred-wang.github.io/MathFonts/mozilla_mathml_test/)
   - : 来自 Mozilla MathML 项目的原始测试。它包含了从 [TeXbook](https://en.wikipedia.org/wiki/Computers_and_Typesetting) 中由 Tex 生成的带有图像引用的示例。
 - [MathML 浏览器测试](http://eyeasme.com/Joe/MathML/MathML_browser_test.html)
-    - : 类似的测试，使用了来自维基百科的具体公式。
+  - : 类似的测试，使用了来自维基百科的具体公式。
 
 ## 其他 Web 技术
 
