@@ -88,7 +88,7 @@ l10n:
 </math>
 ```
 
-{{ EmbedLiveSample('mi示例', 400, 100) }}
+{{ EmbedLiveSample('mi 示例', 400, 100) }}
 
 ## 规范
 
