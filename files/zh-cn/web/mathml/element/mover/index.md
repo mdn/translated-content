@@ -14,7 +14,7 @@ l10n:
 该元素的属性包括[全局 MathML 属性](/zh-CN/docs/Web/MathML/Global_attributes)以及以下属性：
 
 - `accent`
-    - : 一个 [`<boolean>`](/zh-CN/docs/Web/MathML/Values#mathml-specific_types)，表示上标是否应该被视为重音（即被放大并靠近基础表达式）。
+  - : 一个 [`<boolean>`](/zh-CN/docs/Web/MathML/Values#mathml-specific_types)，表示上标是否应该被视为重音（即被放大并靠近基础表达式）。
 
 ## 示例
 
