@@ -7,7 +7,7 @@ l10n:
 
 {{ ApiRef("DOM") }}
 
-**`Document.compatMode`** 只读属性指示文档是以[怪异模式](/zh-CN/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)或标准模式渲染。
+**`Document.compatMode`** 只读属性表示文档是以[怪异模式](/zh-CN/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)或标准模式渲染。
 
 ## 值
 
