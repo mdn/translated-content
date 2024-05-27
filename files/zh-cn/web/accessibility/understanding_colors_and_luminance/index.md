@@ -118,7 +118,7 @@ color(xyz-d65 0.59 0.28 0.96 / 1);
 
 RGB 是面向硬件的，反映了 CRT 的使用。许多开发人员和设计师更喜欢[`hsl()`](/zh-CN/docs/Web/CSS/color_value/hsl)记法的直观性。从 RGB 转换为 HSL 并不是一个简单的方程。幸运的是，浏览器会自动进行转换，并且在浏览器开发者工具中单击颜色可以提供转换功能。
 
-除了开发者工具外，许多工具可以为你将RGB转换为HSL，并提供RGB十六进制和CSS函数语法。一个很好的为你转换颜色的工具示例是Tom Jewett的"[迷你颜色选择器](https://colortutorial.design/microColorsC.html)"，该工具提供了HSL、RGB和Hex选项，用于在浏览器中检查对比度。请注意，开发人员工具颜色选择器和此工具都提供WCAG [颜色对比度值](https://webaim.org/resources/contrastchecker/)。
+除了开发者工具外，许多工具可以为你将 RGB 转换为 HSL，并提供 RGB 十六进制和 CSS 函数语法。一个很好的为你转换颜色的工具示例是 Tom Jewett 的"[迷你颜色选择器](https://colortutorial.design/microColorsC.html)"，该工具提供了 HSL、RGB 和 Hex 选项，用于在浏览器中检查对比度。请注意，开发人员工具颜色选择器和此工具都提供 WCAG [颜色对比度值](https://webaim.org/resources/contrastchecker/)。
 
 ![带有HSL和RGB的颜色选择器，以及颜色对比度值。](microcolorsc.jpg)
 
