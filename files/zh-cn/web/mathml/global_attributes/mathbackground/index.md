@@ -7,7 +7,7 @@ l10n:
 
 {{MathMLRef}}{{Deprecated_Header}}
 
-**`mathbackground`** [全局属性](/zh-CN/docs/Web/MathML/Global_attributes) 设置 MathML 元素的[背景颜色](/zh-CN/docs/Web/CSS/background-color)。
+**`mathbackground`** [全局属性](/zh-CN/docs/Web/MathML/Global_attributes)设置 MathML 元素的[背景颜色](/zh-CN/docs/Web/CSS/background-color)。
 
 > **备注：** 尽可能使用 CSS 对 MathML 进行样式设置。`mathbackground` 属性应仅在不支持 CSS 并且将被 CSS `background-color` 属性值覆盖的应用程序中包含。
 
