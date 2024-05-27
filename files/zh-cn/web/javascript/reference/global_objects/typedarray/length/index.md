@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-{{jsxref("TypedArray")}} 实例的 **`length`** 访问器属性返回该类型数组的（以元素为单位）长度。
+{{jsxref("TypedArray")}} 实例的 **`length`** 访问器属性返回该类型化数组的（以元素为单位）长度。
 
 {{EmbedInteractiveExample("pages/js/typedarray-length.html","shorter")}}
 
