@@ -127,8 +127,7 @@ WebRTC 编码转换的实现类似于“通用” `TransformStream`，但存在�
 
 与通用构造函数不同，任何在构造函数对象中传递的 `writableStrategy` 或 `readableStrategy` 属性都会被忽略，队列策略完全由用户代理管理。
 
-`transform()` 方法也不同，它接收的是 {{DOMxRef("RTCEncodedVideoFrame")}} 或 {{DOMxRef("RTCEncodedAudioFrame")}}，而不是通用的“块”。
-除了它展示了如何将帧转换为可以修改并在之后排队到流上的形式之外，此处显示的方法并不引人注目。
+`transform()` 方法也不同，它接收的是 {{DOMxRef("RTCEncodedVideoFrame")}} 或 {{DOMxRef("RTCEncodedAudioFrame")}}，而不是通用的“块”。除了它展示了如何将帧转换为可以修改并在之后排队到流上的形式之外，此处显示的方法并不引人注目。
 
 ### 使用单独的发送器和接收器转换
 
