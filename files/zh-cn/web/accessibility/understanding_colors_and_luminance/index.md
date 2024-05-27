@@ -48,7 +48,6 @@ l10n:
 技术，如[OpenGL](https://en.wikipedia.org/wiki/OpenGL)和[Direct3D](https://en.wikipedia.org/wiki/Direct3D)，都支持 sRGB 伽马曲线，尽管一些 OpenGL 的文章提到使用 RGBA 而不是 sRGB。WebGL 通常采用 RGBA 格式；在"[使用颜色清除](/zh-CN/docs/Web/API/WebGL_API/By_example/Clearing_with_colors)"的示例中可以看到它是如何使用的。
 
 ### CSS 颜色值
-重要的是要知道，即使在一个 {{glossary("颜色空间")}} 内，比如 {{glossary("RGB")}} 颜色空间，也会有变化。例如，RGB颜色空间的变体包括**RGB**、**sRGB**、**Adobe RGB**、**Adobe Wide Gamut RGB**和**RGBA**等。
 
 这些都是用于定义颜色的CSS表示法的示例。以下是每种表示法的示例颜色，都是完全不透明的洋红色：
 
