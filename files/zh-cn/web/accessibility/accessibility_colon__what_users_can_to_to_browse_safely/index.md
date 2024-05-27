@@ -69,7 +69,7 @@ l10n:
 
 在 Windows 10 操作系统中，用户可以关闭动画。这对动画 GIF 不起作用；动画的来源嵌入在 GIF 中，并不受这些设置的影响。
 
-![显示如何在Windows 10中关闭动画的屏幕截图](turnoffanimationsinwindows.png)
+![显示如何在 Windows 10 中关闭动画的屏幕截图](turnoffanimationsinwindows.png)
 
 #### 灰度
 
