@@ -75,7 +75,7 @@ color: #ff00ff; /* #rrggbb */
 color: #f0ff; /* #rgba */
 color: #ff00ffff; /* #rrggbbaa */
 
-/* 通过sRGB值的HSL表示 */
+/* 通过 sRGB 值的 HSL 表示 */
 color: hsl(300 100% 50%);
 color: hsl(300deg 100% 50% / 100%);
 
