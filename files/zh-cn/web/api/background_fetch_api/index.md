@@ -2,7 +2,7 @@
 title: Background Fetch API
 slug: Web/API/Background_Fetch_API
 l10n:
-   sourceCommit: c77a11ee1509542c16b0348afc4fcb3ffe588e1c
+  sourceCommit: c77a11ee1509542c16b0348afc4fcb3ffe588e1c
 ---
 
 {{DefaultAPISidebar("Background Fetch API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
