@@ -310,6 +310,7 @@ _不止一个"红色"可以被认为是"饱和"的红色。_ 例如，颜色 `#9
 - **红色色调的眼镜可以增加快乐或喜悦感：** [透过"玫瑰色"眼镜看世界：眼镜颜色对视觉情感加工的影响](https://pubmed.ncbi.nlm.nih.gov/31244627/)
 - **红色众所周知会对我们的行为产生显著影响：** [红色如何影响我们的行为](https://www.scientificamerican.com/article/how-the-color-red-influences-our-behavior/)，《科学美国人》，S. Martinez-Conde，Stephen L. Macknik
 - **红色环境：** 研究表明，对于那些患有创伤性脑损伤的人，[在红色环境中认知功能降低](https://www.ncbi.nlm.nih.gov/pubmed/20649469)。
+
 ## 参见
 - [无障碍](/zh-CN/docs/Web/Accessibility)
 - [无障碍学习路径](/zh-CN/docs/Learn/Accessibility)
