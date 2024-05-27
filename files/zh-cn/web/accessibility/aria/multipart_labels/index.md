@@ -44,6 +44,7 @@ body {
 ```
 
 ## 对 JAWS 8 用户的说明
+
 JAWS 8.0 有自己的逻辑来查找标签，导致它始终覆盖 HTML 文档中文本框的 accessibleName。对于 JAWS 8，我还没有找到一种方法让它接受上面示例中的标签。但是 NVDA 和 Window-Eyes 可以很好地实现，Linux 上的 Orca 也没有问题。
 
 > **备注：** 待定：添加更多兼容性信息
