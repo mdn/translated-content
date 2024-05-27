@@ -134,7 +134,7 @@ RGB 是面向硬件的，反映了 CRT 的使用。许多开发人员和设计�
 
 ### 红/绿色盲
 
-Protanopia是一种色觉缺陷，眼睛中没有红色锥；sRGB仍然可以通过绿色锥感知，尽管视觉较暗。Protan（红色缺失）和Deutan（绿色缺失）缺陷都导致难以区分红色 _和_ 绿色。
+Protanopia 是一种色觉缺陷，眼睛中没有红色锥；sRGB 仍然可以通过绿色锥感知，尽管视觉较暗。Protan（红色缺失）和 Deutan（绿色缺失）缺陷都导致难以区分红色 _和_ 绿色。
 
 开发者工具可以帮助在浏览器中模拟颜色视觉差异。例如，Firefox的Accessibility Inspector可以在辅助功能面板中模拟protanopia、deuteranopia、tritanopia、achromatopsia和对比度丧失。
 
