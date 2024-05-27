@@ -74,7 +74,7 @@ l10n:
 </math>
 ```
 
-{{ EmbedLiveSample('semantics_example', 700, 200, "", "") }}
+{{ EmbedLiveSample('semantics 示例', 700, 200, "", "") }}
 
 ## 规范
 
