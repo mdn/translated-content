@@ -18,7 +18,7 @@ arrayInstance.with(index, value)
 ### 参数
 
 - `index`
-  - : 要修改的数组索引（从 0 开始），[将会转换为整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#整数转换)。
+  - : 要修改的数组索引（从 0 开始），[会被转换为整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#整数转换)。
 - `value`
   - : 要分配给指定索引的任何值。
 
