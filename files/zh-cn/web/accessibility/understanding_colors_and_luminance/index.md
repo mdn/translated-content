@@ -124,7 +124,7 @@ RGB 是面向硬件的，反映了 CRT 的使用。许多开发人员和设计�
 
 如前所述，[CSS 颜色模块](/zh-CN/docs/Web/CSS/CSS_colors)包括添加额外的颜色空间，包括[`lch()`](/zh-CN/docs/Web/CSS/color_value/lch) 和[`oklch()`](/zh-CN/docs/Web/CSS/color_value/oklch)函数颜色记法以及[`lab()`](/zh-CN/docs/Web/CSS/color_value/lab)和[`oklab()`](/zh-CN/docs/Web/CSS/color_value/oklab)颜色坐标系统，可以指定任何可见颜色。尽管如此，由于其普及性，sRGB 仍然是默认和首选的可访问性颜色空间。
 
-然而，在涉及到可访问性的地方，标准和指南目前主要是使用sRGB颜色空间，尤其是在涉及颜色对比度比率时。
+然而，在涉及到可访问性的地方，标准和指南目前主要是使用 sRGB 颜色空间，尤其是在涉及颜色对比度比率时。
 
 > **备注：** 几乎所有今天用于查看Web内容的系统都假定使用sRGB编码。除非已知将使用其他颜色空间来处理和显示内容，否则作者应评估使用sRGB颜色空间。如果使用其他颜色空间，请应用[最小对比度比率](https://webaim.org/articles/contrast/#sc143)的原则。
 
