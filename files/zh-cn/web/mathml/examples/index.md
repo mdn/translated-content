@@ -13,8 +13,8 @@ l10n:
 
 以下演示在 Web 内容中显示越来越复杂的数学概念。
 
-- [毕达哥拉斯定理](/zh-CN/docs/Web/MathML/Examples/MathML_Pythagorean_Theorem)
-  - : 显示了毕达哥拉斯定理的证明的小例子。
+- [勾股定理](/zh-CN/docs/Web/MathML/Examples/MathML_Pythagorean_Theorem)
+  - : 展示勾股定理的证明的小例子。
 - [推导二次方程的公式](/zh-CN/docs/Web/MathML/Examples/Deriving_the_Quadratic_Formula)
   - : 概述了二次方程公式的推导过程。
 - [Mozilla MathML 测试](https://fred-wang.github.io/MathFonts/mozilla_mathml_test/)
