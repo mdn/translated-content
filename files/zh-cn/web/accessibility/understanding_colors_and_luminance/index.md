@@ -120,7 +120,7 @@ RGB 是面向硬件的，反映了 CRT 的使用。许多开发人员和设计�
 
 除了开发者工具外，许多工具可以为你将 RGB 转换为 HSL，并提供 RGB 十六进制和 CSS 函数语法。一个很好的为你转换颜色的工具示例是 Tom Jewett 的"[迷你颜色选择器](https://colortutorial.design/microColorsC.html)"，该工具提供了 HSL、RGB 和 Hex 选项，用于在浏览器中检查对比度。请注意，开发人员工具颜色选择器和此工具都提供 WCAG [颜色对比度值](https://webaim.org/resources/contrastchecker/)。
 
-![带有HSL和RGB的颜色选择器，以及颜色对比度值。](microcolorsc.jpg)
+![带有 HSL 和 RGB 的颜色选择器，以及颜色对比度值。](microcolorsc.jpg)
 
 如前所述，[CSS颜色模块](/zh-CN/docs/Web/CSS/CSS_colors)包括添加额外的颜色空间，包括[`lch()`](/zh-CN/docs/Web/CSS/color_value/lch) 和[`oklch()`](/zh-CN/docs/Web/CSS/color_value/oklch)函数颜色记法以及[`lab()`](/zh-CN/docs/Web/CSS/color_value/lab)和[`oklab()`](/zh-CN/docs/Web/CSS/color_value/oklab)颜色坐标系统，可以指定任何可见颜色。尽管如此，由于其普及性，sRGB仍然是默认和首选的可访问性颜色空间。
 
