@@ -11,7 +11,7 @@ l10n:
 
 ## 个性化和辅助功能设置
 
-从"**[了解成功标准2.3.1：三个闪烁或低于阈值](https://www.w3.org/WAI/WCAG21/Understanding/three-flashes-or-below-threshold.html)**"这篇文章中：
+从"**[了解成功标准 2.3.1：三个闪烁或低于阈值](https://www.w3.org/WAI/WCAG21/Understanding/three-flashes-or-below-threshold.html)**"这篇文章中：
 
 > 闪烁可能是由显示器、计算机渲染图像或正在渲染的内容引起的。作者对前两者没有控制权。这可以通过显示和计算机的设计和速度来解决。
 
