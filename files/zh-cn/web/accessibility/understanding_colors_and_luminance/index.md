@@ -218,7 +218,7 @@ _较大并且笔画较宽的文本在低对比度下更容易阅读。因此，�
 
 光适应则是相反的。从黑暗房间进入明亮的阳光下适应速度更快，但也可能伤害到眼睛。
 
-这意味着，寻求改善在房间环境条件发生变化时文本可读性的Web开发人员可以利用 AmbientLightSensor 接口和 [`prefers-contrast`](/zh-CN/docs/Web/CSS/@media/prefers-contrast) 媒体查询。
+这意味着，寻求改善在房间环境条件发生变化时文本可读性的 Web 开发人员可以利用 AmbientLightSensor 接口和 [`prefers-contrast`](/zh-CN/docs/Web/CSS/@media/prefers-contrast) 媒体查询。
 
 ## 饱和度
 
