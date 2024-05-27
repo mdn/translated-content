@@ -175,7 +175,7 @@ const transform = new RTCRtpScriptTransform(
   [channel.port2],
 );
 
-// 使用 port1 发送一个字符串。（我们可以发送和传输基本类型/对象）。
+// 使用 port1 发送一个字符串。（我们可以发送和传输基本类型/对象）
 channel.port1.postMessage("给 worker 的消息");
 channel.port1.start();
 ```
