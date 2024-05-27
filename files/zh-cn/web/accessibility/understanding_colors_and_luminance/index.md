@@ -162,7 +162,7 @@ _较大并且笔画较宽的文本在低对比度下更容易阅读。因此，�
 
 总的来说，对于可访问性目的，对比度越大越好。这在动画中会有所改变。"更安全"的动画意味着图像的对比度较低，而不是更高。有关动画中颜色对比度的更多信息，请参见[三次闪烁或低于阈值的理解 SC 2.3.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/seizure-does-not-violate.html)。
 
-此外，请注意图标需要足够的对比度以进行感知。请参阅[WCAG 2.1技术G207](https://www.w3.org/WAI/WCAG21/Techniques/general/G207)。
+此外，请注意图标需要足够的对比度以进行感知。请参阅[WCAG 2.1 技术 G207](https://www.w3.org/WAI/WCAG21/Techniques/general/G207)。
 
 ### 亮度
 
