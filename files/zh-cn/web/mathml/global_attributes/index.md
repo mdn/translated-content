@@ -26,8 +26,8 @@ l10n:
 
   - : 枚举属性，指示 MathML 元素的方向性。它可以具有以下值：
 
-    - `ltr`，表示 _从左到右_，并用于从左到右呈现数学表达式（例如英语或摩洛哥风格）；
-    - `rtl`，表示 _从右到左_，并用于从右到左呈现数学表达式（例如 Maghreb 或 Machrek 风格）；
+    - `ltr`，表示*从左到右*，并用于从左到右呈现数学表达式（例如英语或摩洛哥风格）；
+    - `rtl`，表示*从右到左*，并用于从右到左呈现数学表达式（例如 Maghreb 或 Machrek 风格）；
 
 - [`displaystyle`](/zh-CN/docs/Web/MathML/Global_attributes/displaystyle)：
   - : 一个布尔值，用于设置元素的 [math-style](/zh-CN/docs/Web/CSS/math-style)。
