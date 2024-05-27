@@ -265,6 +265,7 @@ _较大并且笔画较宽的文本在低对比度下更容易阅读。因此，�
 并非所有颜色（"色调"）在我们的大脑中被处理得一样。人类的生理和心理对红色产生的影响通常与其他颜色不同。我们对颜色的生理和心理反应。例如，已经证明[一些颜色比其他颜色更容易引起癫痫发作](https://www.sciencedaily.com/releases/2009/09/090925092858.htm)。一些设备提供了["灰度"设置作为辅助选项](https://ask.metafilter.com/312049/What-is-the-grayscale-setting-for-in-accessibility-options)，这可以帮助光敏感的人。要模仿灰度设置，请使用 CSS 的 {{cssxref("filter")}} 属性和 [`grayscale()`](/zh-CN/docs/Web/CSS/filter-function/grayscale) 或 [`saturate()`](/zh-CN/docs/Web/CSS/filter-function/saturate) [`<filter-function>`](/zh-CN/docs/Web/CSS/filter-function)。
 
 ### 饱和的红色
+
 "饱和红色"是一个特殊且危险的情况，针对它有特殊的测试。
 
 当只看数字和术语时，色彩饱和度是一个难以理解的概念，所以考虑查看下面的图像，以说明颜色饱和度的概念：
