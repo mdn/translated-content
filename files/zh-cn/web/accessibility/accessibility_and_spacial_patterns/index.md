@@ -56,9 +56,9 @@ WCAG 对于对比度感知的标准不考虑填充效果。例如，蓝色文本
 
 ### MDN
 
-- [可访问性：用户可以采取哪些措施以更安全地浏览](/en-US/docs/Web/Accessibility/Accessibility:_What_users_can_to_to_browse_safely)
-- [癫痫和身体反应的网络可访问性](/en-US/docs/Web/Accessibility/Seizure_disorders)
-- [网络可访问性：理解颜色和亮度](/en-US/docs/Web/Accessibility/Understanding_Colors_and_Luminance)
+- [可访问性：用户可以采取哪些措施以更安全地浏览](/zh-CN/docs/Web/Accessibility/Accessibility:_What_users_can_to_to_browse_safely)
+- [癫痫和身体反应的网络可访问性](/zh-CN/docs/Web/Accessibility/Seizure_disorders)
+- [网络可访问性：理解颜色和亮度](/zh-CN/docs/Web/Accessibility/Understanding_Colors_and_Luminance)
 
 ### 盲文
 
