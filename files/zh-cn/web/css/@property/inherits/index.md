@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`inherits`** [CSS](/zh-CN/docs/Web/CSS) 描述符使用 {{cssxref("@property")}} [At 规则](/zh-CN/docs/Web/CSS/At-rule)时是必须的，它控制着由 `@property` 指定的自定义属性注册是否默认继承。
+**`inherits`** [CSS](/zh-CN/docs/Web/CSS) 描述符是在使用 {{cssxref("@property")}} [At 规则](/zh-CN/docs/Web/CSS/At-rule)时所必须的，它控制着由 `@property` 指定的自定义属性注册是否默认继承。
 
 ## 语法
 
