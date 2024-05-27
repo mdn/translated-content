@@ -2,7 +2,7 @@
 title: 无障碍性：用户如何更安全地浏览网页
 slug: Web/Accessibility/Accessibility:_What_users_can_to_to_browse_safely
 l10n:
-   sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
+  sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
 ---
 
 {{AccessibilitySidebar}}
