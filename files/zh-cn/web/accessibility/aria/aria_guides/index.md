@@ -15,7 +15,7 @@ l10n:
 - [在嵌入字段的标签中使用 ARIA](/zh-CN/docs/Web/Accessibility/ARIA/Multipart_labels)
 - [在复合小部件中管理焦点](https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/) （`aria-activedescendant` vs. 循环 tabindex）
 - [测试 ARIA](https://www.w3.org/WAI/test-evaluate/)
-- [显示可访问的表格](https://www.w3.org/WAI/tutorials/tables/)
+- [显示无障碍的表格](https://www.w3.org/WAI/tutorials/tables/)
 
 ## 参见
 
