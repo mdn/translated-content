@@ -41,7 +41,7 @@ l10n:
 
 ## WCAG 指南
 
-WCAG，即Web内容无障碍指南，包括几项改善认知无障碍的指南。这些指南由万维网联盟（W3C）的Web无障碍倡议（WAI）发布，这是国际互联网主要的标准组织。该组织还负责[可访问的丰富互联网应用（ARIA）](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Guides)指南。
+WCAG，即 Web 内容无障碍指南，包括几项改善认知无障碍的指南。这些指南由万维网联盟（W3C）的 Web 无障碍倡议（WAI）发布，这是国际互联网主要的标准组织。该组织还负责[可访问的丰富互联网应用（ARIA）](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Guides)指南。
 
 WCAG的指导原则有四条：网站必须是可感知的、可操作的、可理解的和稳健的。为此，他们定义了17条具体的指南，其中有六条特别与认知无障碍相关。
 
