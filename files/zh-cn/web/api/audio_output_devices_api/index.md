@@ -45,8 +45,8 @@ l10n:
 
 - {{domxref("MediaDevices.selectAudioOutput()")}} 授予对所选设备用作音频输出的用户权限：
 
-    - 访问可能受 [`speaker-selection`](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) HTTP [权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy) 的限制。
-    - 需要[瞬态用户激活](/zh-CN/docs/Web/Security/User_activation)。用户必须与页面或 UI 元素交互，才能调用此方法。
+  - 访问可能受 [`speaker-selection`](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) HTTP [权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy) 的限制。
+  - 需要[瞬态用户激活](/zh-CN/docs/Web/Security/User_activation)。用户必须与页面或 UI 元素交互，才能调用此方法。
 
 - {{domxref("HTMLMediaElement.setSinkId()")}} 将允许的 ID 设置为音频输出：
 
