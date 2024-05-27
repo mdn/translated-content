@@ -2,7 +2,7 @@
 title: AbortController
 slug: Web/API/AbortController
 l10n:
-  sourceCommits: 15f0b5552bc9c2ea1f32b0cd5ee840a7d43c887e
+  sourceCommit: 15f0b5552bc9c2ea1f32b0cd5ee840a7d43c887e
 ---
 
 {{APIRef("DOM")}}{{AvailableInWorkers}}
