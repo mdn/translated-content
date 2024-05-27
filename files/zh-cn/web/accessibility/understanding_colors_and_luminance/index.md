@@ -284,6 +284,7 @@ _不止一个"红色"可以被认为是"饱和"的红色。_ 例如，颜色 `#9
 格雷格·范德海登（Gregg Vanderheiden）在测试 *光敏癫痫分析工具* 时注意到癫痫发作率远高于预期。他们发现我们对饱和红色闪烁的敏感性要高得多。 (参见视频，[光敏癫痫分析工具](https://www.pbs.org/video/university-place-the-photosensitive-epilepsy-analysis-tool-ep-429/))。
 
 ### 闪烁和癫痫发作
+
 以每秒三次以上的速率连续闪烁明暗交替已被证明会引发一些人的光致癫痫发作。还发现了特定的、非常规律的、高对比度的图案，例如平行的黑白条纹，也会引发癫痫发作。
 
 美国癫痫基金会对[光致和图案诱发癫痫](https://www.researchgate.net/publication/7615895_Photic-_and_Pattern-induced_Seizures_A_Review_for_the_Epilepsy_Foundation_of_America_Working_Group)进行了研究。该研究得出了几项基本指导原则：
