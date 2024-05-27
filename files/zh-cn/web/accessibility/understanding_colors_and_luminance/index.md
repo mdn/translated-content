@@ -83,7 +83,7 @@ color: hsl(300deg 100% 50% / 100%);
 color: hwb(300deg 0% 0%);
 color: hwb(300 0% 0% / 1);
 
-/* 通过sRGB值的LAB表示 */
+/* 通过 sRGB 值的 LAB 表示 */
 color: lab(60 93.56 -60.5);
 color: lab(60 93.56 -60.5 / 1);
 
