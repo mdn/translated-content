@@ -1,5 +1,5 @@
 ---
-title: 举个例子
+title: 示例
 slug: Web/MathML/Examples
 l10n:
   sourceCommit: 4d26c993afa39460cafd2e4f87a58e19d5262a39
