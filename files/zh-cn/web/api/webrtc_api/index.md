@@ -13,7 +13,7 @@ WebRTC 由几个相互关联的 API 和协议组成，它们共同工作以实�
 
 ## WebRTC 概念和用法
 
-WebRTC 有多种用途；与 [媒体捕捉与媒体流 API](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API) 一起使用时，它们为 Web 提供了强大的多媒体功能，包括支持音频和视频会议、文件交换、屏幕共享、身份管理以及与传统电话系统的接口，包括发送 {{Glossary("DTMF")}}（按键拨号）信号。两个对等方之间的连接可以在不需要任何特殊驱动程序或插件的情况下建立，并且通常可以在没有任何中间服务器的情况下建立连接。
+WebRTC 有多种用途；与[媒体捕捉与媒体流 API](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API) 一起使用时，它们为 Web 提供了强大的多媒体功能，包括支持音频和视频会议、文件交换、屏幕共享、身份管理以及与传统电话系统的接口，包括发送 {{Glossary("DTMF")}}（按键拨号）信号。两个对等方之间的连接可以在不需要任何特殊驱动程序或插件的情况下建立，并且通常可以在没有任何中间服务器的情况下建立连接。
 
 两个对等方之间的连接由 {{DOMxRef("RTCPeerConnection")}} 接口表示。一旦使用 `RTCPeerConnection` 建立并打开了连接，就可以向连接添加媒体流（{{DOMxRef("MediaStream")}}）或数据通道（{{DOMxRef("RTCDataChannel")}}）。
 
