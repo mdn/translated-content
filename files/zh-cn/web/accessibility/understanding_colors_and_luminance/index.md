@@ -65,7 +65,7 @@ color: rgb(100% 0% 100% / 100%);
 color: rgb(255 0 255);
 color: rgb(255 0 255 / 1);
 
-/* 传统的rgb和rgba表示法 */
+/* 传统的 rgb 和 rgba 表示法 */
 color: rgb(100%, 0%, 100%);
 color: rgba(255, 0, 255, 1);
 
