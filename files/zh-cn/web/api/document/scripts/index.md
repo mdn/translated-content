@@ -7,8 +7,7 @@ l10n:
 
 {{APIRef("DOM")}}
 
-{{domxref("Document")}} 接口的 **`scripts`** 属性返回文档中 {{HTMLElement("script")}} 元素的列表。
-返回的对象是 {{domxref("HTMLCollection")}}。
+{{domxref("Document")}} 接口的 **`scripts`** 属性返回文档中 {{HTMLElement("script")}} 元素的列表。返回的对象是 {{domxref("HTMLCollection")}}。
 
 ## 值
 
