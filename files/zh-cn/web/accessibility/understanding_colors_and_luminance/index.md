@@ -312,6 +312,7 @@ _不止一个"红色"可以被认为是"饱和"的红色。_ 例如，颜色 `#9
 - **红色环境：** 研究表明，对于那些患有创伤性脑损伤的人，[在红色环境中认知功能降低](https://www.ncbi.nlm.nih.gov/pubmed/20649469)。
 
 ## 参见
+
 - [无障碍](/zh-CN/docs/Web/Accessibility)
 - [无障碍学习路径](/zh-CN/docs/Learn/Accessibility)
 - CSS [`color`](/zh-CN/docs/Web/CSS/color) property 属性
