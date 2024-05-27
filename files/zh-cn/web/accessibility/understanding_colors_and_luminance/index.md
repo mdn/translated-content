@@ -122,7 +122,7 @@ RGB 是面向硬件的，反映了 CRT 的使用。许多开发人员和设计�
 
 ![带有 HSL 和 RGB 的颜色选择器，以及颜色对比度值。](microcolorsc.jpg)
 
-如前所述，[CSS颜色模块](/zh-CN/docs/Web/CSS/CSS_colors)包括添加额外的颜色空间，包括[`lch()`](/zh-CN/docs/Web/CSS/color_value/lch) 和[`oklch()`](/zh-CN/docs/Web/CSS/color_value/oklch)函数颜色记法以及[`lab()`](/zh-CN/docs/Web/CSS/color_value/lab)和[`oklab()`](/zh-CN/docs/Web/CSS/color_value/oklab)颜色坐标系统，可以指定任何可见颜色。尽管如此，由于其普及性，sRGB仍然是默认和首选的可访问性颜色空间。
+如前所述，[CSS 颜色模块](/zh-CN/docs/Web/CSS/CSS_colors)包括添加额外的颜色空间，包括[`lch()`](/zh-CN/docs/Web/CSS/color_value/lch) 和[`oklch()`](/zh-CN/docs/Web/CSS/color_value/oklch)函数颜色记法以及[`lab()`](/zh-CN/docs/Web/CSS/color_value/lab)和[`oklab()`](/zh-CN/docs/Web/CSS/color_value/oklab)颜色坐标系统，可以指定任何可见颜色。尽管如此，由于其普及性，sRGB 仍然是默认和首选的可访问性颜色空间。
 
 然而，在涉及到可访问性的地方，标准和指南目前主要是使用sRGB颜色空间，尤其是在涉及颜色对比度比率时。
 
