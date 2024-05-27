@@ -36,7 +36,7 @@ l10n:
 
 不要启用自动播放（对 GIF 不起作用）
 
-#### iOS Safari 10.3及以上（移动和平板电脑）
+#### iOS Safari 10.3 及以上（移动和平板电脑）
 
 在苹果操作系统的辅助功能设置中选择“减少动画选项”（图片来源：来自 Thomas Steiner 文章 "Move Ya! Or maybe, don't, if the user prefers-reduced-motion!" 的开发者网站）。这对动画 GIF 不起作用；动画的来源嵌入在 GIF 中，并不受这些设置的影响。![显示如何在MAC OS上减少动画的屏幕截图](macos-reduce-motion.png)
 
