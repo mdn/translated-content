@@ -30,7 +30,7 @@ URL.revokeObjectURL(objectURL)
 
 ## 示例
 
-参见[使用对象 URL 来显示图片](/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications#示例：使用对象_URL_来显示图片)。
+参见[使用对象 URL 来显示图片](/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications#示例：使用对象_url_来显示图片)。
 
 ## 规范
 
@@ -43,5 +43,5 @@ URL.revokeObjectURL(objectURL)
 ## 参见
 
 - [在 web 应用程序中使用文件](/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications)
-- [使用对象 URL 来显示图片](/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications#示例：使用对象_URL_来显示图片)
+- [使用对象 URL 来显示图片](/zh-CN/docs/Web/API/File_API/Using_files_from_web_applications#示例：使用对象_url_来显示图片)
 - {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}}
