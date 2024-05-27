@@ -41,7 +41,7 @@ l10n:
 
 ## sRGB 颜色空间
 
-对于数字问题，许多技术历来都存在于RGB颜色空间中。RGB颜色模型扩展到包括"alpha" — RGBA — 以允许指定颜色的不透明度。测量颜色的其他方法涉及使用其他颜色空间进行测量，并在现代显示器和浏览器中得到支持。但在RGB颜色空间中进行的颜色测量占主导地位，包括在视频制作中。
+颜色有很多定义方式，如[`<color>`数据类型](/zh-CN/docs/Web/CSS/color_value)中所示，包括 RGB、RGB 十进制、RGB 百分比、HSL、HWB、LCH、LAB 和 CMYK 等。
 
 技术，如[OpenGL](https://en.wikipedia.org/wiki/OpenGL)和[Direct3D](https://en.wikipedia.org/wiki/Direct3D)，都支持sRGB伽马曲线，尽管一些OpenGL的文章提到使用RGBA而不是sRGB。WebGL通常采用RGBA格式；在"[使用颜色清除](/zh-CN/docs/Web/API/WebGL_API/By_example/Clearing_with_colors)"的示例中可以看到它是如何使用的。
 
