@@ -24,7 +24,7 @@ l10n:
 ## 实例方法
 
 - {{domxref("AbortController.abort()")}}
-  - : 中止一个尚未完成的异步操作。这能够中止 [fetch](/zh-CN/docs/Web/API/fetch) 请求及任何响应体的消费和流。
+  - : 中止一个尚未完成的异步操作。这能够中止 [fetch 请求](/zh-CN/docs/Web/API/fetch)及任何响应体和流的使用。
 
 ## 示例
 
