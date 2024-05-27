@@ -229,8 +229,7 @@ event.transformer.options.port.onmessage = (event) => {
 };
 ```
 
-接收方请求新关键帧的代码几乎相同，只是没有指定“rid”。
-这里是仅包含端口消息处理程序的代码：
+接收方请求新关键帧的代码几乎相同，只是没有指定“rid”。这里是仅包含端口消息处理程序的代码：
 
 ```js
 event.transformer.options.port.onmessage = (event) => {
