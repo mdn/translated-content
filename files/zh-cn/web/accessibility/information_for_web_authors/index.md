@@ -2,7 +2,7 @@
 title: Accessibility information for web authors
 slug: Web/Accessibility/Information_for_Web_authors
 l10n:
-   sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
+  sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
 ---
 
 {{AccessibilitySidebar}}
