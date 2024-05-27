@@ -282,7 +282,7 @@ _不止一个"红色"可以被认为是"饱和"的红色。_ 例如，颜色 `#9
 
 除了红色环境影响患有创伤性脑损伤的人的认知功能外，红色光谱波长需要特别注意和测试。
 
-格雷格·范德海登（Gregg Vanderheiden）在测试 *光敏癫痫分析工具* 时注意到癫痫发作率远高于预期。他们发现我们对饱和红色闪烁的敏感性要高得多。 (参见视频，[光敏癫痫分析工具](https://www.pbs.org/video/university-place-the-photosensitive-epilepsy-analysis-tool-ep-429/))。
+格雷格·范德海登（Gregg Vanderheiden）在测试 _光敏癫痫分析工具_ 时注意到癫痫发作率远高于预期。他们发现我们对饱和红色闪烁的敏感性要高得多。 (参见视频，[光敏癫痫分析工具](https://www.pbs.org/video/university-place-the-photosensitive-epilepsy-analysis-tool-ep-429/))。
 
 ### 闪烁和癫痫发作
 
