@@ -23,7 +23,7 @@ l10n:
 </math>
 
 <math display="block">
-  <mtext>/* comment here */</mtext>
+  <mtext>/* 在此评论 */</mtext>
 </math>
 ```
 
