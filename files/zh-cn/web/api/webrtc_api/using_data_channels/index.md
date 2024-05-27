@@ -82,7 +82,7 @@ WebRTC 数据通道支持对传出数据进行缓冲。这是自动处理的。�
 
 Firefox 对 ndata 的支持正在实现中；查看 [Firefox bug 1381145](https://bugzil.la/1381145) 以跟踪它何时可以用于普通用途。Chrome 团队在 [Chrome Bug 5696](https://bugs.chromium.org/p/webrtc/issues/detail?id=5696) 中跟踪他们对 ndata 支持的实现。
 
-> **备注：** 这一部分的许多信息部分基于 Lennart Grahl 撰写的博客 [揭秘 WebRTC 数据通道消息大小限制](https://lgrahl.de/articles/demystifying-webrtc-dc-size-limit.html)。他在那里详细介绍了一些内容，但随着浏览器的更新，部分内容可能已经过时。此外，随着时间的推移，这种情况将变得更加明显，特别是一旦 EOR 和 ndata 支持完全集成到主流浏览器中。
+> **备注：** 这一部分的许多信息部分基于 Lennart Grahl 撰写的博客[揭秘 WebRTC 数据通道消息大小限制](https://lgrahl.de/articles/demystifying-webrtc-dc-size-limit.html)。他在那里详细介绍了一些内容，但随着浏览器的更新，部分内容可能已经过时。此外，随着时间的推移，这种情况将变得更加明显，特别是一旦 EOR 和 ndata 支持完全集成到主流浏览器中。
 
 ## 安全
 
