@@ -130,7 +130,7 @@ RGB 是面向硬件的，反映了 CRT 的使用。许多开发人员和设计�
 
 ### 查询颜色值
 
-{{domxref('Window.getComputedStyle()')}} 方法使用RGB十进制参考刻度或通过`color(srgb...)`返回值。例如，对设置了`background-color: #ff0000`的`<div>`调用`Window.getComputedStyle()`会将计算后的背景颜色返回为`rgb(255 0 0)` —— RGB十进制参考。但是，当[使用相对颜色](/zh-CN/docs/Web/CSS/CSS_colors/Relative_colors)（例如 `background-color: rgb(from blue 255 0 0)`）时，调用`Window.getComputedStyle()`将返回计算后的背景颜色为`color(srgb 1 0 0)`。由于与计算机硬件相关联，`Window.getComputedStyle()`以RGB为单位测量颜色，而不是人眼对颜色的感知。
+{{domxref('Window.getComputedStyle()')}} 方法使用 RGB 十进制参考刻度或通过`color(srgb...)`返回值。例如，对设置了`background-color: #ff0000`的`<div>`调用`Window.getComputedStyle()`会将计算后的背景颜色返回为`rgb(255 0 0)` —— RGB 十进制参考。但是，当[使用相对颜色](/zh-CN/docs/Web/CSS/CSS_colors/Relative_colors)（例如 `background-color: rgb(from blue 255 0 0)`）时，调用`Window.getComputedStyle()`将返回计算后的背景颜色为`color(srgb 1 0 0)`。由于与计算机硬件相关联，`Window.getComputedStyle()`以 RGB 为单位测量颜色，而不是人眼对颜色的感知。
 
 ### 红/绿色盲
 
