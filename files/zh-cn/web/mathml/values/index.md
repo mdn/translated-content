@@ -32,21 +32,21 @@ veryverythickmathspace => 0.3888888888888889em
 
 ### 单位
 
-| Unit | Description                                                                                                    |
+| 单位 | 描述                                                                                                            |
 | ---- | -------------------------------------------------------------------------------------------------------------- |
-| `em` | {{ Cssxref("font-size", "Font-relative") }} unit                                                               |
-| `ex` | {{ Cssxref("font-size", "Font-relative") }} unit. (The "x"-height of the element, `1ex ≈ 0.5em` in many fonts) |
-| `px` | Pixels                                                                                                         |
-| `in` | Inches (1 inch = 2.54 centimeters)                                                                             |
-| `cm` | Centimeters                                                                                                    |
-| `mm` | Millimeters                                                                                                    |
-| `pt` | Points (1 point = 1/72 inch)                                                                                   |
-| `pc` | Picas (1 pica = 12 points)                                                                                     |
-| `%`  | Percentage of the default value.                                                                               |
+| `em` | {{ Cssxref("font-size", "Font-relative") }} 单位                                                                |
+| `ex` | {{ Cssxref("font-size", "Font-relative") }} 单位。 （表示元素的 x-高度，在许多字体中大约等于 em 单位的一半。）           |
+| `px` | 像素                                                                                                            |
+| `in` | 英寸 (1 英寸 = 2.54 厘米)                                                                                        |
+| `cm` | 厘米                                                                                                            |
+| `mm` | 厘米                                                                                                            |
+| `pt` | 点 (1 点 = 1/72 英寸)                                                                                            |
+| `pc` | 派卡 (1 派卡 = 12 点)                                                                                            |
+| `%`  | 默认值的百分比                                                                                                    |
 
 ### 常数
 
-| Constant                         | Value     |
+| 常数                              | 值        |
 | -------------------------------- | --------- |
 | `veryverythinmathspace`          | 1/18`em`  |
 | `verythinmathspace`              | 2/18`em`  |
