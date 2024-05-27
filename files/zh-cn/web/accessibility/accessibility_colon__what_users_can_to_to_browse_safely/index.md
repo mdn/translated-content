@@ -23,7 +23,7 @@ l10n:
 
 现代浏览器支持 CSS 媒体功能 [prefers-reduced-motion](/zh-CN/docs/Web/CSS/@media/prefers-reduced-motion)。浏览器可以检测用户是否请求了减少动画的体验。用户可以通过辅助功能界面访问此功能，如下所示。
 
-![显示如何在Windows 10中关闭动画的截图](android-remove-animations.png)
+![显示如何在 Windows 10 中关闭动画的截图](android-remove-animations.png)
 
 支持 CSS 过渡事件。例如：
 
