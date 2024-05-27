@@ -7,7 +7,7 @@ l10n:
 
 {{MathMLRef}}
 
-**`<semantics>`** 这个 [MathML](/zh-CN/docs/Web/MathML) 元素将注释与一个 MathML 表达式关联起来，例如其文本源作为 [轻量级标记语言](https://zh.wikipedia.org/wiki/轻量级标记语言) 或以特殊的 {{glossary("XML")}} 方言表示的数学含义。通常，它的结构是：
+**`<semantics>`** [MathML](/zh-CN/docs/Web/MathML) 元素将注释与一个 MathML 表达式关联起来，例如其文本源作为 [轻量级标记语言](https://zh.wikipedia.org/wiki/轻量级标记语言) 或以特殊的 {{glossary("XML")}} 语言表示的数学含义。通常，它的结构是：
 
 - 第一个子元素是要注释的 MathML 表达式。
 - 后续的 `<annotation>` 或 `<annotation-xml>` 元素，后者保留用于 XML 格式，例如 [OpenMath](https://en.wikipedia.org/wiki/OpenMath)。
