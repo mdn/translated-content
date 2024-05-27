@@ -15,7 +15,7 @@ l10n:
 
 自 2021 年起，浏览器开始提供其他色域的功能，如电影行业广泛使用的 [_P3_](https://en.wikipedia.org/wiki/DCI-P3) 和 [_rec2020_](https://en.wikipedia.org/wiki/Rec._2020)。
 
-开发者可以使用 [`color-gamut`](/zh-CN/docs/Web/CSS/@media/color-gamut) [媒体特性](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)为支持更大色域的设备定义不同的颜色集。他们可以使用特定的 CSS 函数来描述 RGB 色域之外的颜色，比如基于 LCH 圆柱坐标系的 [`lch()`](/zh-CN/docs/Web/CSS/color_value/lch)，或者基于 Lab 坐标系的 [`lab()`](/zh-CN/docs/Web/CSS/color_value/lab)。
+开发者可以使用 [`color-gamut`](/zh-CN/docs/Web/CSS/@media/color-gamut) [媒体特性](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)为支持更大色域的设备定义不同的颜色集。它们可以使用特定的 CSS 函数来描述 RGB 色域之外的颜色，比如基于 LCH 圆柱坐标系的 [`lch()`](/zh-CN/docs/Web/CSS/color_value/lch)，或者基于 Lab 坐标系的 [`lab()`](/zh-CN/docs/Web/CSS/color_value/lab)。
 
 ## 参见
 
