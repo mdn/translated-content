@@ -36,7 +36,7 @@ WebRTC 在现代浏览器中通常得到很好的支持，但仍存在一些不�
 #### 接口
 
 - {{DOMxRef("RTCPeerConnection")}}
-  - ：表示本地计算机与远程对等方之间的 WebRTC 连接。它用于处理两个对等方之间的数据流式传输。
+  - : 表示本地计算机与远程对等方之间的 WebRTC 连接。它用于处理两个对等方之间的数据流式传输。
 - {{DOMxRef("RTCDataChannel")}}
   - ：表示连接的两个对等方之间的双向数据通道。
 - {{DOMxRef("RTCDataChannelEvent")}}
