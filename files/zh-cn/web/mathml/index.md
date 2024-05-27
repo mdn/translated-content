@@ -15,7 +15,7 @@ l10n:
 
 以下是有关 MathML 文档、示例和工具的链接。MDN 将 [MathML Core](https://w3c.github.io/mathml-core/) 用作参考规范，但由于不稳定的标准化历史，旧版 MathML 功能可能仍会出现在现有的实现和 Web 内容中。
 
-> **备注：** 强烈建议开发人员和作者切换到 MathML Core，或许依赖其他 Web 技术来满足缺失的用例。Math WG 正在维护一组[MathML polyfills](https://github.com/mathml-refresh/mathml-polyfills)以便促进这一过渡。
+> **备注：** 强烈建议开发人员和作者切换到 MathML Core，或许依赖其他 Web 技术来满足缺失的用例。Math WG 正在维护一组 [MathML polyfill](https://github.com/mathml-refresh/mathml-polyfills) 以便促进这一过渡。
 
 ## MathML 参考文档
 
