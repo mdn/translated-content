@@ -1,5 +1,5 @@
 ---
-title: Global attributes
+title: 全局属性
 slug: Web/MathML/Global_attributes
 l10n:
   sourceCommit: 4d5e2c11f4b8cc32e54d2527d9576ed26ced9458
