@@ -13,7 +13,7 @@ l10n:
 
 [MathML Core](https://w3c.github.io/mathml-core/) 是一个基于 [LaTeX](https://zh.wikipedia.org/wiki/LaTeX) 和[开放字体格式](https://docs.microsoft.com/typography/opentype/spec/math)规则的增加了实现细节的子集。它专门为浏览器量身定制，并设计成与其他 Web 标准（包括 [HTML](/zh-CN/docs/Web/HTML)、[CSS](/zh-CN/docs/Web/CSS)、[DOM](/zh-CN/docs/Web/API/Document_Object_Model)、[JavaScript](/zh-CN/docs/Web/JavaScript)）良好配合。
 
-以下是有关 MathML 文档、示例和工具的链接。MDN 将[MathML Core](https://w3c.github.io/mathml-core/)用作参考规范，但由于不稳定的标准化历史，旧版 MathML 功能可能仍会出现在现有的实现和 Web 内容中。
+以下是有关 MathML 文档、示例和工具的链接。MDN 将 [MathML Core](https://w3c.github.io/mathml-core/) 用作参考规范，但由于不稳定的标准化历史，旧版 MathML 功能可能仍会出现在现有的实现和 Web 内容中。
 
 > **备注：** 强烈建议开发人员和作者切换到 MathML Core，或许依赖其他 Web 技术来满足缺失的用例。Math WG 正在维护一组[MathML polyfills](https://github.com/mathml-refresh/mathml-polyfills)以便促进这一过渡。
 
