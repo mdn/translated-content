@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-{{domxref("XRAnchor")}} 接口的 **`delete()`** 方法可删除锚点。当应用程序不再希望接收到锚点的更新时，这将非常有用。
+{{domxref("XRAnchor")}} 接口的 **`delete()`** 方法可删除锚点。当应用程序不再希望接收到锚点的更新时，这会非常有用。
 
 ## 语法
 
