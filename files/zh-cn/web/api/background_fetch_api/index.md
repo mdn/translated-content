@@ -22,28 +22,28 @@ Background Fetch API 将在用户离线时启用 fetch。一旦用户重新连�
 ## 接口
 
 - {{domxref("BackgroundFetchManager")}} {{Experimental_Inline}}
-  - ：一个映射，其中键是后台 fetch 的 ID，值是 {{domxref("BackgroundFetchRegistration")}} 对象。
+  - : 一个映射，其中键是后台 fetch 的 ID，值是 {{domxref("BackgroundFetchRegistration")}} 对象。
 - {{domxref("BackgroundFetchRegistration")}} {{Experimental_Inline}}
-  - ：表示一个后台 fetch。
+  - : 表示一个后台 fetch。
 - {{domxref("BackgroundFetchRecord")}} {{Experimental_Inline}}
-  - ：表示一个单独的 fetch 请求和响应。
+  - : 表示一个单独的 fetch 请求和响应。
 - {{domxref("BackgroundFetchEvent")}} {{Experimental_Inline}}
-  - ：{{domxref("ServiceWorkerGlobalScope.backgroundfetchabort_event", "backgroundfetchabort")}} 和 {{domxref("ServiceWorkerGlobalScope.backgroundfetchclick_event", "backgroundfetchclick")}} 事件的事件类型。
+  - : {{domxref("ServiceWorkerGlobalScope.backgroundfetchabort_event", "backgroundfetchabort")}} 和 {{domxref("ServiceWorkerGlobalScope.backgroundfetchclick_event", "backgroundfetchclick")}} 事件的事件类型。
 - {{domxref("BackgroundFetchUpdateUIEvent")}} {{Experimental_Inline}}
-  - ：{{domxref("ServiceWorkerGlobalScope.backgroundfetchsuccess_event", "backgroundfetchsuccess")}} 和 {{domxref("ServiceWorkerGlobalScope.backgroundfetchfail_event", "backgroundfetchfail")}} 事件的事件类型。
+  - : {{domxref("ServiceWorkerGlobalScope.backgroundfetchsuccess_event", "backgroundfetchsuccess")}} 和 {{domxref("ServiceWorkerGlobalScope.backgroundfetchfail_event", "backgroundfetchfail")}} 事件的事件类型。
 
 ### 对其他接口的拓展
 
 - {{domxref("ServiceWorkerRegistration.backgroundFetch")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - ：返回一个引用到 {{domxref("BackgroundFetchManager")}} 对象的引用，该对象管理后台 fetch 操作。
+  - : 返回一个引用到 {{domxref("BackgroundFetchManager")}} 对象的引用，该对象管理后台 fetch 操作。
 - {{domxref("ServiceWorkerGlobalScope/backgroundfetchabort_event", "backgroundfetchabort")}} 事件 {{Experimental_Inline}}
-  - ：当用户或应用程序取消了后台 fetch 操作时触发。
+  - : 当用户或应用程序取消了后台 fetch 操作时触发。
 - {{domxref("ServiceWorkerGlobalScope/backgroundfetchclick_event", "backgroundfetchclick")}} 事件 {{Experimental_Inline}}
-  - ：当用户点击后台 fetch 操作的 UI 时触发。
+  - : 当用户点击后台 fetch 操作的 UI 时触发。
 - {{domxref("ServiceWorkerGlobalScope/backgroundfetchfail_event", "backgroundfetchfail")}} 事件 {{Experimental_Inline}}
-  - ：当后台 fetch 操作中至少有一个请求失败时触发。
+  - : 当后台 fetch 操作中至少有一个请求失败时触发。
 - {{domxref("ServiceWorkerGlobalScope/backgroundfetchsuccess_event", "backgroundfetchsuccess")}} 事件 {{Experimental_Inline}}
-  - ：当后台 fetch 操作中的所有请求成功时触发。
+  - : 当后台 fetch 操作中的所有请求成功时触发。
 
 ## 示例
 
