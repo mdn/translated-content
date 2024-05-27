@@ -2,7 +2,7 @@
 title: Cognitive accessibility
 slug: Web/Accessibility/Cognitive_accessibility
 l10n:
-   sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
+  sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
 ---
 
 认知无障碍涵盖了针对认知和学习障碍人群的无障碍考虑。本文介绍了认知无障碍以及改善网页对认知和学习差异人群的无障碍性的方法。
