@@ -7,9 +7,7 @@ l10n:
 
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-{{domxref("XRAnchor")}} 接口的 **`anchorSpace`** 只读属性返回将锚点相对于其他 `XRSpace` 对象进行定位的 {{domxref("XRSpace")}} 对象。
-
-它可以随后传递给 {{domxref("XRFrame.getPose()")}}。
+{{domxref("XRAnchor")}} 接口的 **`anchorSpace`** 只读属性返回将锚点相对于其他 `XRSpace` 对象进行定位的 {{domxref("XRSpace")}} 对象。它可以随后传递给 {{domxref("XRFrame.getPose()")}}。
 
 ## 值
 
