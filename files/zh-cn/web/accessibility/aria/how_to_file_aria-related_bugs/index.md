@@ -2,7 +2,7 @@
 title: 如何提交与 ARIA 相关的错误
 slug: Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs
 l10n:
-   sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
+  sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
 ---
 
 {{AccessibilitySidebar}}
