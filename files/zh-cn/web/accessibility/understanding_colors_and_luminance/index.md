@@ -150,7 +150,7 @@ Protanopia 是一种色觉缺陷，眼睛中没有红色锥；sRGB 仍然可以�
 
 ### 对比度和字体大小
 
-[WCAG对比度指南](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)将“大”文本定义为正常状态下为`18pt`（大约为`24px`）或更大，`加粗`文本为`14pt`（大约为`18.7px`）的文本。指出：
+[WCAG 对比度指南](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)将“大”文本定义为正常状态下为`18pt`（大约为`24px`）或更大，`加粗`文本为`14pt`（大约为`18.7px`）的文本。指出：
 
 _较大并且笔画较宽的文本在低对比度下更容易阅读。因此，较大文本的对比度要求较低。这允许作者对大文本使用更广泛的颜色选择，这有助于页面的设计，特别是标题部分。_
 
