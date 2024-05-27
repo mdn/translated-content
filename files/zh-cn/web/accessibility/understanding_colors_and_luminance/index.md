@@ -43,7 +43,9 @@ l10n:
 
 颜色有很多定义方式，如[`<color>`数据类型](/zh-CN/docs/Web/CSS/color_value)中所示，包括 RGB、RGB 十进制、RGB 百分比、HSL、HWB、LCH、LAB 和 CMYK 等。
 
-技术，如[OpenGL](https://en.wikipedia.org/wiki/OpenGL)和[Direct3D](https://en.wikipedia.org/wiki/Direct3D)，都支持sRGB伽马曲线，尽管一些OpenGL的文章提到使用RGBA而不是sRGB。WebGL通常采用RGBA格式；在"[使用颜色清除](/zh-CN/docs/Web/API/WebGL_API/By_example/Clearing_with_colors)"的示例中可以看到它是如何使用的。
+对于数字问题，许多技术历来都存在于 RGB 颜色空间中。RGB 颜色模型扩展到包括"alpha" — RGBA — 以允许指定颜色的不透明度。测量颜色的其他方法涉及使用其他颜色空间进行测量，并在现代显示器和浏览器中得到支持。但在 RGB 颜色空间中进行的颜色测量占主导地位，包括在视频制作中。
+
+技术，如[OpenGL](https://en.wikipedia.org/wiki/OpenGL)和[Direct3D](https://en.wikipedia.org/wiki/Direct3D)，都支持 sRGB 伽马曲线，尽管一些 OpenGL 的文章提到使用 RGBA 而不是 sRGB。WebGL 通常采用 RGBA 格式；在"[使用颜色清除](/zh-CN/docs/Web/API/WebGL_API/By_example/Clearing_with_colors)"的示例中可以看到它是如何使用的。
 
 ### CSS 颜色值
 重要的是要知道，即使在一个 {{glossary("颜色空间")}} 内，比如 {{glossary("RGB")}} 颜色空间，也会有变化。例如，RGB颜色空间的变体包括**RGB**、**sRGB**、**Adobe RGB**、**Adobe Wide Gamut RGB**和**RGBA**等。
