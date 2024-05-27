@@ -2,7 +2,7 @@
 title: 无障碍和空间模式
 slug: Web/Accessibility/Accessibility_and_Spacial_Patterns
 l10n:
-   sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
+  sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
 ---
 
 {{AccessibilitySidebar}}
