@@ -28,14 +28,12 @@ l10n:
 
 ## 인스턴스 속성
 
-The `CSSRule` interface specifies the properties common to all rules, while properties unique to specific rule types are specified in the more specialized interfaces for those rules' respective types.
 `CSSRule` 인터페이스는 모든 규칙에 대해 공통적인 속성을 지정하는 반면에, 특정 규칙 유형의 고유한 속성은 해당 규칙 유형에 해당하는 더 전문화된 인터페이스에서 지정됩니다.
 
 - {{domxref("CSSRule.cssText")}}
   - : 규칙의 텍스트 형식의 표현을 나타냅니다. 예를 들어, "`h1,h2 { font-size: 16pt }`" 또는 "`@import 'url'`" 형식입니다. 규칙의 일부에 접근하거나 일부를 변경하려면 (예제에서 "font-size" 의 값) [규칙 유형의 전문화된 인터페이스](#type_constants) 속성을 사용해야 합니다.
 - {{domxref("CSSRule.parentRule")}} {{ReadOnlyInline}}
-  - : Returns the containing rule, otherwise `null`. E.g. if this rule is a style rule inside an {{cssxref("@media")}} block, the parent rule would be that {{domxref("CSSMediaRule")}}.
-  - : 이 규칙을 포함하는 상위 규칙을 반환하고, 상위 규칙이 없는 경우 null을 반환합니다. 예를 들어, 이 규칙이 {{cssxref("@media")}} 블록 내에 있는 스타일 규칙인 경우, 상위 규칙은 {{domxref("CSSMediaRule")}}입니다.
+  - : 이 규칙을 포함하는 상위 규칙을 반환하고, 상위 규칙이 없는 경우 `null` 을 반환합니다. 예를 들어, 이 규칙이 {{cssxref("@media")}} 블록 내에 있는 스타일 규칙인 경우, 상위 규칙은 {{domxref("CSSMediaRule")}}입니다.
 - {{domxref("CSSRule.parentStyleSheet")}} {{ReadOnlyInline}}
   - : 해당 규칙을 포함하는 스타일 시트의 {{domxref("CSSStyleSheet")}} 객체를 반환합니다.
 - {{domxref("CSSRule.type")}} {{ReadOnlyInline}} {{deprecated_inline}}
@@ -60,4 +58,4 @@ console.log(myRules);
 
 ## 같이 보기
 
-- [Using dynamic styling information](/ko/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
+- [동적 스타일링 정보 사용하기](/ko/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
