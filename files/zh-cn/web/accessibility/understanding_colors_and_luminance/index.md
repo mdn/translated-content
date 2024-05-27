@@ -318,6 +318,6 @@ _不止一个"红色"可以被认为是"饱和"的红色。_ 例如，颜色 `#9
 - CSS [`color`](/zh-CN/docs/Web/CSS/color) property 属性
 - [`<color>`](/zh-CN/docs/Web/CSS/color_value) 数据类型
 - [癫痫和身体反应的网络无障碍](/zh-CN/docs/Web/Accessibility/Seizure_disorders)
-- [红色如何影响我们的行为](https://www.scientificamerican.com/article/how-the-color-red-influences-our-behavior/)  《科学美国人》 作者：Susana Martinez-Conde，Stephen L. Macknik，2014年11月1日
+- [红色如何影响我们的行为](https://www.scientificamerican.com/article/how-the-color-red-influences-our-behavior/) 《科学美国人》作者：Susana Martinez-Conde，Stephen L. Macknik，2014 年 11 月 1 日
 - [红色褪色](https://www.smart-optometry.com/red-desaturation/) 人眼对红色的敏感度非常高，因此眼科医生利用它进行测试，评估视神经的完整性。
 - [美国癫痫基金会工作组的专家共识：光致和图案诱发癫痫](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.532.7063&rep=rep1&type=pdf)
