@@ -69,8 +69,8 @@ color: rgb(255 0 255 / 1);
 color: rgb(100%, 0%, 100%);
 color: rgba(255, 0, 255, 1);
 
-/* 通过十六进制的sRGB值 */
-color: #f0f; /* #rgb，#rrggbb的简写 */
+/* 通过十六进制的 sRGB 值 */
+color: #f0f; /* #rgb，#rrggbb 的简写 */
 color: #ff00ff; /* #rrggbb */
 color: #f0ff; /* #rgba */
 color: #ff00ffff; /* #rrggbbaa */
