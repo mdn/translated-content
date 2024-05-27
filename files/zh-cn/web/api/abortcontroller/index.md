@@ -19,7 +19,7 @@ l10n:
 ## 实例属性
 
 - {{domxref("AbortController.signal")}} {{ReadOnlyInline}}
-  - : 返回一个 {{domxref("AbortSignal")}} 对象实例，可以用它与一个 异步操作进行通信或者中止该请求。
+  - : 返回一个 {{domxref("AbortSignal")}} 对象实例，可以用它来和异步操作进行通信或者中止这个操作。
 
 ## 实例方法
 
