@@ -1,5 +1,5 @@
 ---
-title: Cognitive accessibility
+title: 认知无障碍
 slug: Web/Accessibility/Cognitive_accessibility
 l10n:
   sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
