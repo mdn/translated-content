@@ -19,7 +19,7 @@ l10n:
 
 ```html
 <math display="block">
-  <mtext>Theorem of Pythagoras</mtext>
+  <mtext>勾股定理</mtext>
 </math>
 
 <math display="block">
