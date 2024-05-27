@@ -54,5 +54,5 @@ l10n:
 
 ## 参见
 
-- 所有 [全局属性](/zh-CN/docs/Web/MathML/Global_attributes)
+- 所有[全局属性](/zh-CN/docs/Web/MathML/Global_attributes)
 - {{cssxref("background-color")}}
