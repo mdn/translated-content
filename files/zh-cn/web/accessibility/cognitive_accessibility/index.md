@@ -89,7 +89,7 @@ WCAG 的指导原则有四条：网站必须是可感知的、可操作的、可
 
 ## 导航
 
-[指南 2.4](https://www.w3.org/WAI/WCAG21/Understanding/navigable)规定“提供帮助用户导航、查找内容和确定位置的方法”，并提供了10条指南来确保网站可导航且内容易于查找：
+[指南 2.4](https://www.w3.org/WAI/WCAG21/Understanding/navigable)规定“提供帮助用户导航、查找内容和确定位置的方法”，并提供了 10 条指南来确保网站可导航且内容易于查找：
 
 ### 包括 `<title>`
 
