@@ -57,7 +57,7 @@ l10n:
 /* 命名颜色 */
 color: magenta;
 
-/* 使用百分比值的sRGB值 */
+/* 使用百分比值的 sRGB 值 */
 color: rgb(100% 0% 100%);
 color: rgb(100% 0% 100% / 100%);
 
