@@ -2,7 +2,7 @@
 title: Audio Output Devices API
 slug: Web/API/Audio_Output_Devices_API
 l10n:
-   sourceCommit: 5a5f3d3cbbfabf138aa9f0d3e2c8fce4a168f5cc
+  sourceCommit: 5a5f3d3cbbfabf138aa9f0d3e2c8fce4a168f5cc
 ---
 
 {{DefaultAPISidebar("Audio Output Devices API")}}{{securecontext_header}}{{SeeCompatTable}}
