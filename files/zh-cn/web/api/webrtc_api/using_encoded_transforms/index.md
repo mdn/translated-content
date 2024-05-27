@@ -184,7 +184,7 @@ channel.port1.start();
 
 ```js
 event.transformer.options.port.onmessage = (event) => {
-  // 消息载荷在 'event.data' 中
+  // 消息载荷在“event.data”中
   console.log(event.data);
 };
 ```
