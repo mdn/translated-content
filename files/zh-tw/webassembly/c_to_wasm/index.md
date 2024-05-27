@@ -171,6 +171,5 @@ slug: WebAssembly/C_to_Wasm
 - [emscripten.org](http://emscripten.org/) — 了解更多有關 Emscripten 和其各種不同的設定
 - [利用 ccall/cwrap 從 JavaScript 調用編譯過的 C 函式](https://kripken.github.io/emscripten-site/docs/porting/connecting_cpp_and_javascript/Interacting-with-code.html#calling-compiled-c-functions-from-javascript-using-ccall-cwrap)
 - [為什麼當我要將 C/C++ 編譯成 JavaScript 時，原始碼中的函式會消失，和／或沒有函式可以處理？](https://kripken.github.io/emscripten-site/docs/getting_started/FAQ.html#why-do-functions-in-my-c-c-source-code-vanish-when-i-compile-to-javascript-and-or-i-get-no-functions-to-process)
-<!-- 註：https://research.mozilla.org/webassembly/ 已經不存在 -->
-- [Mozilla Research 上的 WebAssembly](https://research.mozilla.org/webassembly/)
+<!-- this link is no longer exist - [Mozilla Research 上的 WebAssembly](https://research.mozilla.org/webassembly/) -->
 - [將現成的 C 模組編譯為 WebAssembly](/zh-TW/docs/WebAssembly/existing_C_to_wasm)
