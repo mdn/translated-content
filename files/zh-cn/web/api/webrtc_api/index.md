@@ -42,7 +42,7 @@ WebRTC 在现代浏览器中通常得到很好的支持，但仍存在一些不�
 - {{DOMxRef("RTCDataChannelEvent")}}
   - ：表示在将 {{DOMxRef("RTCDataChannel")}} 附加到 {{DOMxRef("RTCPeerConnection")}} 时发生的事件。使用此接口发送的唯一事件是 {{domxref("RTCPeerConnection.datachannel_event", "datachannel")}}。
 - {{DOMxRef("RTCSessionDescription")}}
-  - ：表示会话的参数。每个 `RTCSessionDescription` 包括一个描述 {{DOMxRef("RTCSessionDescription.type", "type")}}，指示其描述的提议/应答协商过程的哪一部分，以及会话的 {{Glossary("SDP")}} 描述符。
+  - ：表示会话的参数。每个 `RTCSessionDescription` 包括一个描述 {{DOMxRef("RTCSessionDescription.type", "type")}}，指示其描述的提议/应答协商过程的哪一部分，以及{{Glossary("SDP", "会话描述协议")}}描述符。
 - {{DOMxRef("RTCStatsReport")}}
   - ：提供有关连接或连接上的个别轨道的统计信息的详细信息；可以通过调用 {{DOMxRef("RTCPeerConnection.getStats()")}} 来获取报告。
 - {{DOMxRef("RTCIceCandidate")}}
