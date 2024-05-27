@@ -106,7 +106,7 @@ color(xyz-d65 0.59 0.28 0.96 / 1);
 
 示例还显示了[`rgb()`和 `rgba()`](/zh-CN/docs/Web/CSS/color_value/rgb#examples)的传统语法。颜色函数的传统语法是逗号分隔的，当包含 alpha 通道时会有一个单独的函数。新的颜色函数只有一种语法，值之间用空格分隔（而不是逗号分隔），如果存在 alpha 通道，则在斜杠之前。现代语法允许混合数字和百分比，并支持`none`关键字；逗号分隔的传统语法不支持。
 
-接下来的示例显示了"HSL"，代表 _Hue、Saturation和Lightness_。对许多人来说，HSL颜色值比RGB值更直观。由设置产生的颜色仍然处于sRGB颜色空间，但[`hsl()`](/zh-CN/docs/Web/CSS/color_value/hsl)是许多人的直观语法。色调调整为角度，可以使用旋钮或圆形控件轻松调整色调。请注意，HSL颜色包含 _亮度_，而不是 _亮度_，这是一个重要的考虑因素。
+接下来的示例显示了"HSL"，代表 _Hue、Saturation 和 Lightness_。对许多人来说，HSL 颜色值比 RGB 值更直观。由设置产生的颜色仍然处于 sRGB 颜色空间，但[`hsl()`](/zh-CN/docs/Web/CSS/color_value/hsl)是许多人的直观语法。色调调整为角度，可以使用旋钮或圆形控件轻松调整色调。请注意，HSL 颜色包含 _亮度_，而不是 _亮度_，这是一个重要的考虑因素。
 
 接下来的示例显示了"HWB"，代表 _Hue、Whiteness和Blackness_。使用hsl()和[`hwb()`](/zh-CN/docs/Web/CSS/color_value/hwb)，第一个值可以是[`<number>`](/zh-CN/docs/Web/CSS/number)或[`<angle>`](/zh-CN/docs/Web/CSS/angle)值。当无单位时，该值被解释为`deg`度。
 
