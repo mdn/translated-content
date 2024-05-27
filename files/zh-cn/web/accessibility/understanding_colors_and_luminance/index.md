@@ -2,7 +2,7 @@
 title: Web 无障碍：理解颜色和亮度
 slug: Web/Accessibility/Understanding_Colors_and_Luminance
 l10n:
-   sourceCommit: 97e59e32880d5ad244f341239d1a3f1bdd0be7b4
+  sourceCommit: 97e59e32880d5ad244f341239d1a3f1bdd0be7b4
 ---
 
 {{AccessibilitySidebar}}
