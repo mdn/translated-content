@@ -50,10 +50,10 @@ l10n:
 
 - {{domxref("HTMLMediaElement.setSinkId()")}} 将允许的 ID 设置为音频输出：
 
-    - 访问可能受 [`speaker-selection`](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) HTTP [权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy) 的限制。
-    - 需要用户权限来设置非默认设备 ID。
-        - 这可以通过在由 `MediaDevices.selectAudioOutput()` 启动的提示中选择来获得。
-        - 如果用户已经授予使用相同组中媒体输入设备的权限，则用户还会隐式授予设置输出设备的权限 {{domxref("MediaDevices.getUserMedia()")}}。
+  - 访问可能受 [`speaker-selection`](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) HTTP [权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy) 的限制。
+  - 需要用户权限来设置非默认设备 ID。
+    - 这可以通过在由 `MediaDevices.selectAudioOutput()` 启动的提示中选择来获得。
+    - 如果用户已经授予使用相同组中媒体输入设备的权限，则用户还会隐式授予设置输出设备的权限 {{domxref("MediaDevices.getUserMedia()")}}。
 
 <!-- 下一行是“true”，但这在任何浏览器中都没有实现 -->
 <!-- 可以使用 [Permissions API](/zh-CN/docs/Web/API/Permissions_API) 方法 [`navigator.permissions.query()`](/zh-CN/docs/Web/API/Permissions/query) 查询权限状态，传递具有 `speaker-selection` 权限的权限描述符。 -->
