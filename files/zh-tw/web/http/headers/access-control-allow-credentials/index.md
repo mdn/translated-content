@@ -18,7 +18,7 @@ l10n:
 
 如果用戶端要求包含憑證：
 
-- 如果請求是 {{glossary("Preflight_request", "預檢請求")}}，則預檢請求不包括憑證。如果伺服器對預檢請求的回應設置了 `Access-Control-Allow-Credentials` 標頭為 `true`，則實際請求將包括憑證；否則，瀏覽器會報告網路錯誤。
+- 如果請求是{{glossary("Preflight_request", "預檢請求")}}，則預檢請求不包括憑證。如果伺服器對預檢請求的回應設置了 `Access-Control-Allow-Credentials` 標頭為 `true`，則實際請求將包括憑證；否則，瀏覽器會報告網路錯誤。
 
 - 如果請求不是預檢請求，則請求將包括憑證，如果伺服器的回應未設置 `Access-Control-Allow-Credentials` 標頭為 `true`，瀏覽器會報告網路錯誤。
 
