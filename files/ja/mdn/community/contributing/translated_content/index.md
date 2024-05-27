@@ -2,7 +2,7 @@
 title: MDN Web Docs のローカライズ
 slug: MDN/Community/Contributing/Translated_content
 l10n:
-  sourceCommit: c7f070e3ea133365dc9bba78c88dde17aab4f066
+  sourceCommit: 7eed0e1e4ab478d78dc7ca23c19ae77406776e4e
 ---
 
 {{MDNSidebar}}

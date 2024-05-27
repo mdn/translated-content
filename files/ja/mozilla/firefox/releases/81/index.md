@@ -14,7 +14,7 @@ slug: Mozilla/Firefox/Releases/81
 - [デバッガー](/ja/docs/Tools/Debugger) で、`.ts` および `.tsx` ファイルに対して TypeScript のアイコンを使用するようになりました ([Firefox バグ 1642769](https://bugzil.la/1642769))。以前は汎用ファイルのアイコンを使用していました。
 - [デバッガーのソースペイン](/ja/docs/Tools/Debugger/UI_Tour#Source_pane) で行の折り返しをサポートしました ([Firefox バグ 1590885](https://bugzil.la/1590885))。
 - [アクセシビリティインスペクター](/ja/docs/Tools/Accessibility_inspector) から、不必要な [色覚シミュレーション](/ja/docs/Tools/Accessibility_inspector/Simulation) (1 型 3 色覚、2 型 3 色覚、3 型 3 色覚) を削除して、1 色覚 (全色盲) のシミュレーションを追加しました ([Firefox バグ 1655053](https://bugzil.la/1655053))。
-- [要素にクラスを追加する](/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#Viewing_and_changing_classes_on_an_element) 際のオートコンプリートをサポートしました。文書内にあるクラスに基づいて、クラスを提案します ([Firefox バグ 1492797](https://bugzil.la/1492797))。
+- [要素にクラスを追加する](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#viewing-and-changing-classes-on-an-element) 際のオートコンプリートをサポートしました。文書内にあるクラスに基づいて、クラスを提案します ([Firefox バグ 1492797](https://bugzil.la/1492797))。
 
 ### HTML
 

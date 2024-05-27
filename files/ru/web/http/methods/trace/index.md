@@ -52,7 +52,7 @@ slug: Web/HTTP/Methods/TRACE
 TRACE /index.html
 ```
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

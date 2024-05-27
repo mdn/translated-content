@@ -2,10 +2,10 @@
 title: JSON.isRawJSON()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/isRawJSON
 l10n:
-  sourceCommit: f5ced29119fa3495e8d5664247c2680330c9310f
+  sourceCommit: 91e28c4fca37647aeae71365d811d0cca9024fe0
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 **`JSON.isRawJSON()`** は静的メソッドで、ある値が {{jsxref("JSON.rawJSON()")}} から返されるオブジェクトであるかどうかを検査します。
 

@@ -32,7 +32,7 @@ slug: Web/CSS/filter-function
 - {{cssxref("filter-function/sepia", "sepia()")}}
   - : Преобразует изображение в сепию.
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
 

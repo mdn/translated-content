@@ -103,7 +103,7 @@ Firefox 70 は、米国時間 2019 年 10 月 22 日 にリリースされまし
 
 #### Canvas と WebGL
 
-- {{domxref("CanvasRenderingContext2D.getTransform()")}} と、引数として行列の個々の要素を表す複数のパラメータに代わり matrix オブジェクトを受け入れる {{domxref("CanvasRenderingContext2D.setTransform()")}} の新しい派生形をサポートしました ([Firefox バグ 928150](https://bugzil.la/928150))。
+- {{domxref("CanvasRenderingContext2D.getTransform()")}} と、引数として行列の個々の要素を表す複数の引数に代わり matrix オブジェクトを受け入れる {{domxref("CanvasRenderingContext2D.setTransform()")}} の新しい派生形をサポートしました ([Firefox バグ 928150](https://bugzil.la/928150))。
 
 ### HTTP
 

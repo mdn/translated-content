@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-_列入 CORS 白名单的响应标头_（CORS-safelisted response header）是 [CORS](/zh-CN/docs/Web/HTTP/CORS) 响应中可以*安全地*暴露给客户端脚本的 [HTTP 标头](/zh-CN/docs/Web/HTTP/Headers)。只有列入白名单的响应标头才会对网页开放。
+_列入 CORS 白名单的响应标头_（CORS-safelisted response header，也被称作“简单响应标头”）是 [CORS](/zh-CN/docs/Web/HTTP/CORS) 响应中可以*安全地*暴露给客户端脚本的 [HTTP 标头](/zh-CN/docs/Web/HTTP/Headers)。只有列入白名单的响应标头才会对网页开放。
 
 默认情况下，白名单包括以下响应标头：
 

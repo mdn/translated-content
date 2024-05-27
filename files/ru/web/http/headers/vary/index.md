@@ -46,7 +46,7 @@ When using the `Vary: User-Agent` header, caching servers should consider the us
 Vary: User-Agent
 ```
 
-## Specifications
+## Спецификации
 
 | Specification                    | Title                                                         |
 | -------------------------------- | ------------------------------------------------------------- |

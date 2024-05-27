@@ -1,8 +1,8 @@
 ---
-title: 自動テストの紹介
+title: 自動化テストの紹介
 slug: Learn/Tools_and_testing/Cross_browser_testing/Automated_testing
 l10n:
-  sourceCommit: 02d11d391e3d376ed66b516c135147ea7cc34618
+  sourceCommit: 8ac5062e5ea3d3de01558977fcfa2ed5a8b152be
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Feature_detection", "Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment", "Learn/Tools_and_testing/Cross_browser_testing")}}
@@ -22,7 +22,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">目標:</th>
+      <th scope="row">目的:</th>
       <td>
         自動テストがどのようなものか、自動テストによってどのようにライフが楽になるか、また、自動テストを楽にする商用製品をどのように使用することができるか、理解できるようにすること。
       </td>

@@ -44,7 +44,7 @@ Firefox 7 は 2011 年 9 月 27 日にリリースされました。このペー
 ### DOM
 
 - {{ domxref("File") }} インターフェイスの非標準なメソッド `getAsBinary()`, `getAsDataURL()`, `getAsText()` が削除されました。あわせて、非標準なプロパティ `fileName` と `fileSize`も削除されました。
-- {{ domxref("Blob") }} によってデータが指定され、また `Content-Disposition` HTTP ヘッダが送信されたとき、{{ domxref("XMLHttpRequest/FormData", "FormData") }} インターフェイスはファイル名を空文字列として報告しないようになりました。これによって幾つかのサーバに起こっていたエラーが解消されます。
+- {{ domxref("Blob") }} によってデータが指定され、また `Content-Disposition` HTTP ヘッダーが送信されたとき、{{ domxref("XMLHttpRequest/FormData", "FormData") }} インターフェイスはファイル名を空文字列として報告しないようになりました。これによって幾つかのサーバーに起こっていたエラーが解消されます。
 - {{ domxref("element.dir") }} 属性が結果を常に小文字で返すようになりました。これは HTML 仕様の要件によるものです。
 - {{ domxref("FileReader") }} の `readAsArrayBuffer()` メソッドが実装されました。
 - {{ domxref("document.createEntityReference") }} が削除されました。このメソッドは適切に実装されておらず、他のブラウザーのほとんどで実装されていませんでした。
@@ -76,13 +76,13 @@ Firefox 7 は 2011 年 9 月 27 日にリリースされました。このペー
 
 ### XML
 
-- XSLT スタイルシートはこれまでサポートされていた `text/xsl` に加えて、正式な `MIME` 型 `application/xslt+xml` も利用可能になりました。(スタイルシート処理命令もしくは [HTTP Link ヘッダ](http://tools.ietf.org/html/rfc5988)で利用できます。)
+- XSLT スタイルシートはこれまでサポートされていた `text/xsl` に加えて、正式な `MIME` 型 `application/xslt+xml` も利用可能になりました。(スタイルシート処理命令もしくは [HTTP Link ヘッダー](http://tools.ietf.org/html/rfc5988)で利用できます。)
 
 ## Mozilla 開発者とアドオン開発者向けの変更点
 
 これらの変更は、アドオン開発者と、Mozilla 本体のコードに関わっている開発者の双方に影響するものです。アドオン開発者は [アドオンの Firefox 7 対応](/ja/docs/Firefox/Updating_extensions_for_Firefox_7) に書かれている追加情報も参照してください。
 
-> **メモ:** Firefox 7 では、従来のメジャーリリースと同様に、バイナリコンポーネントをコンパイルし直す必要があります。詳しくは [バイナリインターフェイス](/ja/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces) をご覧ください。
+> **メモ:** Firefox 7 では、従来のメジャーリリースと同様に、バイナリーコンポーネントをコンパイルし直す必要があります。詳しくは [バイナリーインターフェイス](/ja/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces) をご覧ください。
 
 ### JavaScript コードモジュール
 
@@ -126,7 +126,7 @@ Firefox 7 は 2011 年 9 月 27 日にリリースされました。このペー
 - [`nsITelemetry`](/ja/docs/XPCOM_Interface_Reference/nsITelemetry) に、ID からヒストグラムを返す [`getHistogramById()`](/ja/docs/XPCOM_Interface_Reference/nsITelemetry#getHistogramById%28%29) メソッドと、`false` 設定時に [使用統計情報 (Telemetry)](http://mozilla.jp/legal/privacy/firefox/#telemetry) の記録を無効化できる `canRecord` 属性が追加されました。使用統計情報はプライベートブラウジングモードでは記録されなくなりました。([Firefox バグ 661574](https://bugzil.la/661574)、[Firefox バグ 661573](https://bugzil.la/661573))
   [`newHistogram()`](/ja/docs/XPCOM_Interface_Reference/nsITelemetry#newHistogram%28%29) で定義された使用統計ヒストグラムは、Mozilla への定期報告に含まれません。
 - [`nsIMemoryReporter`](/ja/docs/XPCOM_Interface_Reference/nsIMemoryReporter) インターフェイスに大幅な変更が行われました。使用する場合はコードに変更を加える必要があるでしょう。
-- [`nsIXMLHttpRequest.setRequestHeader()`](/ja/docs/nsIXMLHttpRequest#setRequestHeader%28%29) によって設定されたヘッダが、リダイレクトを辿る際にもリクエストに含まれて送信されるようになりました。これまでこの方法で設定されたヘッダは送信されていませんでした。
+- [`nsIXMLHttpRequest.setRequestHeader()`](/ja/docs/nsIXMLHttpRequest#setRequestHeader%28%29) によって設定されたヘッダーが、リダイレクトを辿る際にもリクエストに含まれて送信されるようになりました。これまでこの方法で設定されたヘッダーは送信されていませんでした。
 - [`nsIDocShell`](/ja/docs/XPCOM_Interface_Reference/nsIDocShell) に `allowWindowControl` 属性が追加されました。`true` を設定すると、docshell のコンテンツがウィンドウをコントロールできるようになります (ウィンドウの移動やサイズ変更など)。
 - `nsIThreadInternal2` インターフェイスは [`nsIThreadInternal`](/ja/docs/XPCOM_Interface_Reference/nsIThreadInternal) インターフェイスへ統合されました。
 

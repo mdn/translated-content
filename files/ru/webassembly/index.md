@@ -62,13 +62,9 @@ WebAssembly разработан для дополнения JavaScript – ис
 - [WASMSobel](https://github.com/JasonWeathersby/WASMSobel)
 - Больше примеров вы можете найти в нашем репозитории [webassembly-examples](https://github.com/mdn/webassembly-examples/).
 
-## Спецификация
+## Спецификации
 
 {{Specifications}}
-
-## Совместимость с браузерами
-
-{{Compat}}
 
 ## Смотрите также
 

@@ -5,22 +5,22 @@ slug: Web/API/DataTransfer
 
 {{APIRef("HTML DOM")}}
 
-Объект **DataTransfer** используется для хранения данных, перетаскиваемых мышью во время операции **drag and drop**. Он может хранить от одного до нескольких элементов данных, вне зависимости от их типа. Для получения доп. информации об операции drag and drop, см. [Drag and Drop](/En/DragDrop/Drag_and_Drop)
+Объект **DataTransfer** используется для хранения данных, перетаскиваемых мышью во время операции **drag and drop**. Он может хранить от одного до нескольких элементов данных, вне зависимости от их типа. Для получения доп. информации об операции drag and drop, см. [Drag and Drop](/ru/docs/Web/API/HTML_Drag_and_Drop_API)
 
 Объект может быть получен из свойства **dataTransfer** всех событий перетаскивания. Он не может быть отдельно создан.
 
 ## Список свойств
 
-| Свойство                                                          | Тип                                                             |
-| ----------------------------------------------------------------- | --------------------------------------------------------------- |
-| [`dropEffect`](#dropEffect.28.29)                                 | [`String`](/ru/docs/JavaScript/Reference/Global_Objects/String) |
-| [`effectAllowed`](#effectAllowed.28.29)                           | [`String`](/ru/docs/JavaScript/Reference/Global_Objects/String) |
-| [`files`](#files.28.29)                                           | {{ domxref("FileList") }}                                       |
-| [`mozCursor`](#mozCursor) {{ non-standard_inline() }}             | [`String`](/ru/docs/JavaScript/Reference/Global_Objects/String) |
-| [`mozItemCount`](#mozItemCount.28.29) {{ non-standard_inline() }} | `unsigned long`                                                 |
-| [`mozSourceNode`](#mozSourceNode) {{ non-standard_inline() }}     | {{ domxref("Node") }}                                           |
-| [`mozUserCancelled`](#mozUserCancelled)                           | [`Boolean`](/en/JavaScript/Reference/Global_Objects/Boolean)    |
-| [`types`](#types.28.29)                                           | [`DOMStringList`](/ru/docs/Web/API/DOMStringList)               |
+| Свойство                                                          | Тип                                                                   |
+| ----------------------------------------------------------------- | --------------------------------------------------------------------- |
+| [`dropEffect`](#dropeffect.28.29)                                 | [`String`](/ru/docs/Web/JavaScript/Reference/Global_Objects/String)   |
+| [`effectAllowed`](#effectallowed.28.29)                           | [`String`](/ru/docs/Web/JavaScript/Reference/Global_Objects/String)   |
+| [`files`](#files.28.29)                                           | {{ domxref("FileList") }}                                             |
+| [`mozCursor`](#mozcursor) {{ non-standard_inline() }}             | [`String`](/ru/docs/Web/JavaScript/Reference/Global_Objects/String)   |
+| [`mozItemCount`](#mozitemcount.28.29) {{ non-standard_inline() }} | `unsigned long`                                                       |
+| [`mozSourceNode`](#mozsourcenode) {{ non-standard_inline() }}     | {{ domxref("Node") }}                                                 |
+| [`mozUserCancelled`](#mozusercancelled)                           | [`Boolean`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean) |
+| [`types`](#types.28.29)                                           | [`DOMStringList`](/ru/docs/Web/API/DOMStringList)                     |
 
 ## Список методов
 
@@ -82,7 +82,7 @@ Assigning any other value has no effect and retains the old value.
 
 Данный пример демонстрирует перетаскивание файлов в окно браузера:
 
-<http://jsfiddle.net/9C2EF/>
+<https://jsfiddle.net/9C2EF/>
 
 ### types
 
@@ -304,4 +304,4 @@ Holds a list of the format types of the data that is stored for an item at the s
 
 ## Смотрите также
 
-[Drag and Drop](/En/DragDrop/Drag_and_Drop)
+[Drag and Drop](/ru/docs/Web/API/HTML_Drag_and_Drop_API)

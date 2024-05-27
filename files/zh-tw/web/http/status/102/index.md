@@ -2,7 +2,7 @@
 title: 102 Processing
 slug: Web/HTTP/Status/102
 l10n:
-  sourceCommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
+  sourceCommit: 3c29ffa78c551ea6a61bbb795a5f97a66c6868c0
 ---
 
 {{HTTPSidebar}}{{deprecated_header}}
@@ -22,6 +22,10 @@ HTTP **`102 Processing`** 資訊回應碼是一個訊息性的狀態碼，表示
 ## 規範
 
 {{Specifications}}
+
+## 瀏覽器相容性
+
+此功能已被棄用，瀏覽器將忽略此回應標頭。
 
 ## 參見
 

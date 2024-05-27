@@ -13,7 +13,7 @@ slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
 
 ## 定義一個繪製用的迴圈
 
-為了固定更新 canvas 繪圖區域的每一個影格，我們需要定義一個繪製函式（drawing function），它將會重複執行，用不同的變數改變球的位置或其他物的位置。重複執行一個函式，其中使用 JavaScript timing function，像是 {{domxref("WindowTimers.setInterval()", "setInterval()")}} 或是 {{domxref("window.requestAnimationFrame()", "requestAnimationFrame()")}}.
+為了固定更新 canvas 繪圖區域的每一個影格，我們需要定義一個繪製函式（drawing function），它將會重複執行，用不同的變數改變球的位置或其他物的位置。重複執行一個函式，其中使用 JavaScript timing function，像是 {{domxref("WindowTimers.setInterval()", "setInterval()")}} 或是 {{domxref("Window.requestAnimationFrame()", "requestAnimationFrame()")}}。
 
 除了前兩行的 JavaScript，其餘的都刪除，並將以下的程式碼加入在前兩行之後。draw()函數每十毫秒會被 setInterval 執行一次:
 

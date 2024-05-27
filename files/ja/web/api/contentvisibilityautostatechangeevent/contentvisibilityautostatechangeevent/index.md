@@ -3,7 +3,7 @@ title: "ContentVisibilityAutoStateChangeEvent: ContentVisibilityAutoStateChangeE
 short-title: ContentVisibilityAutoStateChangeEvent()
 slug: Web/API/ContentVisibilityAutoStateChangeEvent/ContentVisibilityAutoStateChangeEvent
 l10n:
-  sourceCommit: 1c4eb0bfb5f72a26fcc21a83fac91aa3e66c2fb8
+  sourceCommit: 76717f752447b6eef25bf29c12272e407ee5cb6b
 ---
 
 {{APIRef("CSS Containment")}}
