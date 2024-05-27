@@ -15,7 +15,7 @@ l10n:
 
 **`document.write()`** 方法将文本字符串写入由 {{domxref("document.open()")}} 打开的文档流。
 
-> **备注：** 因为 `document.write()`是写入文档**流**的，所以在已关闭（已加载）的文档上调用 `document.write()` 会自动调用 `document.open()`，[这将清空文档](/zh-CN/docs/Web/API/Document/open#备注)。
+> **备注：** 因为 `document.write()`会向文档**流**中写入内容，所以在已关闭（已加载）的文档上调用 `document.write()` 会自动调用 `document.open()`，[这将清空文档](/zh-CN/docs/Web/API/Document/open#备注)。
 
 ## 语法
 
