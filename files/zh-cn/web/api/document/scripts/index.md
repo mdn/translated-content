@@ -15,7 +15,7 @@ l10n:
 
 ## 示例
 
-此示例将查看页面是否有任何 {{HTMLElement("script")}} 元素。
+此示例将查询页面是否有任何 {{HTMLElement("script")}} 元素。
 
 ```js
 let scripts = document.scripts;
