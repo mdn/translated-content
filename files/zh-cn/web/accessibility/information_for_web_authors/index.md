@@ -12,7 +12,7 @@ l10n:
 1. [<abbr>ARIA</abbr> 作者实践指南 (<abbr>APG</abbr>)](https://www.w3.org/WAI/ARIA/apg/)
    由 Accessible Rich Internet Application (<abbr>ARIA</abbr>) 规范定义的无障碍语义的指南，用于创建无障碍的 Web 体验。描述如何将无障碍语义应用于常见设计模式和小部件，提供设计模式和功能示例。
 2. [Web 内容无障碍性指南 (<abbr>WCAG</abbr>)](https://www.w3.org/WAI/standards-guidelines/wcag/)
-    来自 W3C _Web Accessibility Initiative (<abbr>WAI</abbr>)_ 的另一组重要指南。欧盟计划基于这些指南制定即将推出的无障碍性规定。这些指南在 [<abbr>WAI</abbr> 兴趣组讨论列表](https://www.w3.org/WAI/about/groups/waiig/#mailinglist)上进行了讨论。
+   来自 W3C _Web Accessibility Initiative (<abbr>WAI</abbr>)_ 的另一组重要指南。欧盟计划基于这些指南制定即将推出的无障碍性规定。这些指南在 [<abbr>WAI</abbr> 兴趣组讨论列表](https://www.w3.org/WAI/about/groups/waiig/#mailinglist)上进行了讨论。
 3. [本站点上的 ARIA](/zh-CN/docs/Web/Accessibility/ARIA)
     <abbr>MDN</abbr> 提供的关于所有 [ARIA 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles)和 [ARIA 属性](/zh-CN/docs/Web/Accessibility/ARIA/Attributes)的指南，包括最佳实践、相关角色和属性以及示例。
 
