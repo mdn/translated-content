@@ -679,7 +679,7 @@ JavaScript には、定義済みの最上位関数がいくつかあります。
 - {{jsxref("Global_Objects/eval", "eval()")}}
   - : **`eval()`** メソッドは文字列として書き表された JavaScript のコードを評価します。
 - {{jsxref("Global_Objects/uneval", "uneval()")}}
-  - : **`uneval()`** メソッドは{{jsxref("Object","オブジェクト","","true")}}のソースコードを表す文字列を生成します。
+  - : **`uneval()`** メソッドは{{jsxref("Object","オブジェクト","",1)}}のソースコードを表す文字列を生成します。
 - {{jsxref("Global_Objects/isFinite", "isFinite()")}}
   - : このグローバル関数 **`isFinite()`** は渡された値が有限数であるかを判定します。必要であれば、引数は初めに数値へと変換されます。
 - {{jsxref("Global_Objects/isNaN", "isNaN()")}}
