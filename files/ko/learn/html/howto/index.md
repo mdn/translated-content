@@ -1,6 +1,8 @@
 ---
 title: HTML을 사용하여 일반적인 문제 해결하기
 slug: Learn/HTML/Howto
+l10n:
+  sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
 
 {{LearnSidebar}}
@@ -79,7 +81,7 @@ HTML은 문서 구조만 설정합니다. 프레젠테이션 문제를 해결하
 - [HTML 줄 바꿈 제어](/ko/docs/Web/HTML/Element/br)
 - 변경 사항 표시 (추가 및 제거된 텍스트) — {{htmlelement("ins")}} 와 {{htmlelement("del")}} 요소를 참조하세요.
 
-### Advanced images & 멀티미디어
+### 고급 이미지 & 멀티미디어
 
 - [웹 페이지에 반응형 이미지 추가](/ko/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
 - [웹 페이지에 백터 이미지 추가](/ko/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
