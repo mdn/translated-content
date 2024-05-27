@@ -7,7 +7,6 @@ l10n:
 
 {{AccessibilitySidebar}}
 
-
 可访问的丰富互联网应用（**ARIA**）定义了使网络对残障人士更具可访问性的方法。本页面列出了你可以使用的指南，以帮助改善网页功能的可访问性，如表格、表单和键盘导航。
 
 - [设计可访问的表单](https://www.w3.org/WAI/tutorials/forms/)
