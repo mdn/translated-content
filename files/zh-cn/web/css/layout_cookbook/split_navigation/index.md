@@ -29,10 +29,6 @@ slug: Web/CSS/Layout_cookbook/Split_Navigation
 
 在这种情况下，左侧的自动边距会占用所有可用空间，并将项目推到右侧。你可以将类 `push` 应用到列表中的任何项目上。
 
-## 浏览器兼容性
-
-{{Compat}}
-
 ## 参见
 
 - [CSS 弹性盒布局](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)
