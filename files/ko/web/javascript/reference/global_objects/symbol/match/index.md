@@ -21,7 +21,7 @@ l10n:
 
 ## 설명
 
-이 함수는 [객체에 정규 표현식의 동작이 있는지](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes)를 식별하는 데에도 사용됩니다. {{jsxref("String.prototype.startsWith()")}}, {{jsxref("String.prototype.endsWith()")}} 그리고 {{jsxref("String.prototype.includes()")}}를 예로 들자면 첫 인수가 정규식인지 확인하고 정규식인 경우 {{jsxref("TypeError")}}를 발생시킵니다. 이제 `match` 심볼이 `false`(또는 `undefined`을 제외한 [거짓같은](/ko/docs/Glossary/Falsy) 값)로 설정되어 있으면 해당 객체를 정규식 객체로 사용할 수 없음을 나타냅니다.
+이 함수는 [객체에 정규 표현식의 동작이 있는지](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes)를 식별하는 데에도 사용됩니다. {{jsxref("String.prototype.startsWith()")}}, {{jsxref("String.prototype.endsWith()")}} 그리고 {{jsxref("String.prototype.includes()")}}를 예로 들자면 첫 인수가 정규식인지 확인하고 정규식인 경우 {{jsxref("TypeError")}}를 발생시킵니다. 이제 `match` 심볼이 `false`(또는 `undefined`을 제외한 [거짓 같은](/ko/docs/Glossary/Falsy) 값)로 설정되어 있으면 해당 객체를 정규식 객체로 사용할 수 없음을 나타냅니다.
 
 ## 예제
 
