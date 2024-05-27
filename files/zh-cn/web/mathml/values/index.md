@@ -18,7 +18,7 @@ l10n:
 
 {{deprecated_header}}
 
-在 {{cssxref("length-percentage")}} 之外，MathML 曾经定义了自己的 [用于描述长度的类型](https://www.w3.org/TR/MathML3/chapter2.html#type.length)。接受的值包括非零无单位长度值（例如 `5` 表示 `500%`）、以点结尾的数字（例如 `34.px`）或命名空间（例如 `thinmathspace`）。出于兼容性考虑，建议将非零无单位长度值替换为等效的 {{cssxref("percentage")}} 值，删除数字中不必要的点，并使用以下替代方案替换命名长度：
+在 {{cssxref("length-percentage")}} 之外，MathML 曾经定义了自己的[用于描述长度的类型](https://www.w3.org/TR/MathML3/chapter2.html#type.length)。接受的值包括非零无单位长度值（例如 `5` 表示 `500%`）、以点结尾的数字（例如 `34.px`）或命名空间（例如 `thinmathspace`）。出于兼容性考虑，建议将非零无单位长度值替换为等效的 {{cssxref("percentage")}} 值，删除数字中不必要的点，并使用以下替代方案替换具名长度：
 
 ```plain
 veryverythinmathspace  => 0.05555555555555555em
