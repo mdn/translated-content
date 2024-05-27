@@ -2,7 +2,7 @@
 title: "KeyboardEvent: metaKey 속성"
 slug: Web/API/KeyboardEvent/metaKey
 l10n:
-  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
+  sourceCommit: 6a11180a401c26ba7cab4119d419597f528be507
 ---
 
 {{APIRef("UI Events")}}
@@ -25,7 +25,7 @@ l10n:
 ## 예제
 
 ```html
-<button onclick="ismetaKey(event)">meta key를 이용하여 클릭해보세요</button>
+<button onclick="ismetaKey(event)">meta key를 이용하여 클릭해 보세요</button>
 
 <p id="output"></p>
 ```
