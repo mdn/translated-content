@@ -62,8 +62,8 @@ WCAG 对于对比度感知的标准不考虑填充效果。例如，蓝色文本
 
 ### 盲文
 
-- [第3部分：在Adobe Illustrator中正确排版ADA盲文的逐步指南](https://www.tinkeringmonkey.com/guides/ada-signage/a-step-by-step-guide-to-typesetting-ada-braille-correctly-in-adobe-illustrator/)
-- [盲文点中的空间数学（5个部分中的第4部分）](https://www.youtube.com/watch?v=yz9vefDsj1g)
+- [第 3 部分：在 Adobe Illustrator 中正确排版 ADA 盲文的逐步指南](https://www.tinkeringmonkey.com/guides/ada-signage/a-step-by-step-guide-to-typesetting-ada-braille-correctly-in-adobe-illustrator/)
+- [盲文点中的空间数学（5 个部分中的第 4 部分）](https://www.youtube.com/watch?v=yz9vefDsj1g)
 
 ### 政府文献
 
