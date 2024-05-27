@@ -73,7 +73,7 @@ l10n:
 
 #### 灰度
 
-那些遭受创伤性脑损伤（TBI）的人可能对颜色非常敏感；对他们来说，需要对颜色进行如此大量的 "认知能量投入"，以至于没有精力去做其他日常任务。启用内容的灰度呈现可降低认知工作负荷。这也可能有助于其他残疾人。在讨论 “[What is the "grayscale" setting for in accessibility options?](https://ask.metafilter.com/312049/What-is-the-grayscale-setting-for-in-accessibility-options)” 中，用户对使用灰度的好处进行了有趣的讨论。特别感兴趣的是一个患有光敏感性癫痫的用户，他在感觉到 "抽搐" 时使用灰度。
+那些遭受创伤性脑损伤（TBI）的人可能对颜色非常敏感；对他们来说，需要对颜色进行如此大量的 "认知能量投入"，以至于没有精力去做其他日常任务。启用内容的灰度呈现可降低认知工作负荷。这也可能有助于其他残疾人。在讨论“[What is the "grayscale" setting for in accessibility options?](https://ask.metafilter.com/312049/What-is-the-grayscale-setting-for-in-accessibility-options)”中，用户对使用灰度的好处进行了有趣的讨论。特别感兴趣的是一个患有光敏感性癫痫的用户，他在感觉到 "抽搐" 时使用灰度。
 
 大多数操作系统都有一种让用户在工作站上进行调整的方法。在下面的截图中，你可以看到 Windows 10 辅助功能设置的示例，允许选择颜色滤镜。当颜色滤镜按钮切换为 "on" 时，灰度被启用。
 
