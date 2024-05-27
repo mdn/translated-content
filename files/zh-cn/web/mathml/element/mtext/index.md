@@ -27,7 +27,7 @@ l10n:
 </math>
 ```
 
-{{ EmbedLiveSample('mtext_example', 700, 200, "", "") }}
+{{ EmbedLiveSample('mtext 示例', 700, 200, "", "") }}
 
 ## 规范
 
