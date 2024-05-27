@@ -15,8 +15,8 @@ l10n:
 
 - [勾股定理](/zh-CN/docs/Web/MathML/Examples/MathML_Pythagorean_Theorem)
   - : 展示勾股定理的证明的小例子。
-- [推导二次方程的公式](/zh-CN/docs/Web/MathML/Examples/Deriving_the_Quadratic_Formula)
-  - : 概述了二次方程公式的推导过程。
+- [推导二次方程式](/zh-CN/docs/Web/MathML/Examples/Deriving_the_Quadratic_Formula)
+  - : 概述了二次方程式的推导过程。
 - [Mozilla MathML 测试](https://fred-wang.github.io/MathFonts/mozilla_mathml_test/)
   - : 来自 Mozilla MathML 项目的原始测试。它包含了从 [TeXbook](https://en.wikipedia.org/wiki/Computers_and_Typesetting) 中由 Tex 生成的带有图像引用的示例。
 - [MathML 浏览器测试](http://eyeasme.com/Joe/MathML/MathML_browser_test.html)
