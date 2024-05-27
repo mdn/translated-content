@@ -35,4 +35,4 @@ l10n:
 - [佩尔方程](https://people.igalia.com/fwang/pell-bigint-mathml/)
   - : 使用 [`BigInt`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt) 解决佩尔方程的 JavaScript 程序。
 - [洛夫莱斯的伯努利数计算程序](https://people.igalia.com/fwang/lovelace-jsclass-mathml/)
-  : 一个模拟 Ada Lovelace 的计算伯努利数的程序，使用了 [私有属性](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)。
+  - : 一个模拟 Ada Lovelace 的计算伯努利数的程序，使用了[私有属性](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)。
