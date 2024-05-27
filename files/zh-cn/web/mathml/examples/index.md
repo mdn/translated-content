@@ -32,7 +32,7 @@ l10n:
   - : 使用 [SVG](/zh-CN/docs/Web/SVG) 和 [WebGL](/zh-CN/docs/Web/API/WebGL_API) 的磁场的 3D 表示。
 - [Συνάρτηση ζήτα Ρήμαν (el)](https://fred-wang.github.io/MathFonts/%CE%A3%CF%85%CE%BD%CE%AC%CF%81%CF%84%CE%B7%CF%83%CE%B7_%CE%B6%CE%AE%CF%84%CE%B1_%CE%A1%CE%AE%CE%BC%CE%B1%CE%BD.html)
   - : 有关黎曼泽塔函数的希腊文章，使用了来自 [Greek Font Society](https://greekfontsociety-gfs.gr/) 的 [Web 字体](/zh-CN/docs/Learn/CSS/Styling_text/Web_fonts)。
-- [Pell 方程](https://people.igalia.com/fwang/pell-bigint-mathml/)
-  - : 使用 [`BigInt`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt) 解决 Pell 方程的 JavaScript 程序。
+- [佩尔方程](https://people.igalia.com/fwang/pell-bigint-mathml/)
+  - : 使用 [`BigInt`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt) 解决佩尔方程的 JavaScript 程序。
 - [洛夫莱斯的伯努利数计算程序](https://people.igalia.com/fwang/lovelace-jsclass-mathml/)
   : 一个模拟 Ada Lovelace 的计算伯努利数的程序，使用了 [私有属性](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)。
