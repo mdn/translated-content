@@ -61,7 +61,7 @@ color: magenta;
 color: rgb(100% 0% 100%);
 color: rgb(100% 0% 100% / 100%);
 
-/* 通过sRGB数值 */
+/* 通过 sRGB 数值 */
 color: rgb(255 0 255);
 color: rgb(255 0 255 / 1);
 
