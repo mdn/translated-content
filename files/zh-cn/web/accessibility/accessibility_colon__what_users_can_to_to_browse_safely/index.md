@@ -32,7 +32,7 @@ l10n:
 - `transitionend`
 - `transitioncancel`
 
-### Safari 10.1及以上（桌面版）
+### Safari 10.1 及以上（桌面版）
 
 不要启用自动播放（对 GIF 不起作用）
 
