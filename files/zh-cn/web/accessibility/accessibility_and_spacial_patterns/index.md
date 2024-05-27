@@ -81,4 +81,4 @@ WCAG 对于对比度感知的标准不考虑填充效果。例如，蓝色文本
 
 #### 贡献者
 
-衷心感谢[Diagram Center](http://diagramcenter.org/)的吉姆·艾伦(Jim Allan)就替代教育手段的话题进行的讨论。
+衷心感谢[Diagram Center](http://diagramcenter.org/)的吉姆·艾伦 (Jim Allan) 就替代教育手段的话题进行的讨论。
