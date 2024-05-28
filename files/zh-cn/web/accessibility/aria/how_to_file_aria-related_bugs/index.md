@@ -62,7 +62,7 @@ ARIA 技术的状态一直依赖于社区。如果你注意到了一个实现问
   <tr>
    <td>Mozilla Firefox</td>
    <td><a href="https://bugzilla.mozilla.org/">提交 Firefox 错误</a></td>
-   <td>使用组件：Disability Access APIs</td>
+   <td>使用 Component: Disability Access APIs</td>
   </tr>
   <tr>
    <td>Opera</td>
