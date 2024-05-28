@@ -40,4 +40,4 @@ l10n:
   - _[排序弹性项目](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)_
   - _[控制主轴上弹性项目的比率](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)_
   - _[掌握如何包装弹性项目](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)_
-  - \_[弹性盒子的典型用例](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)
+  - _[弹性盒子的典型用例](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)
