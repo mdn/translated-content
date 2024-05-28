@@ -2,7 +2,7 @@
 title: 提升
 slug: Glossary/Hoisting
 l10n:
-  sourceCommit: 8fb5853ceee5db8ac6e1c564c6dda4b3f5ec86c5
+  sourceCommit: 9fd171abed5944476123db22360b1e086f0900d5
 ---
 
 {{GlossarySidebar}}
