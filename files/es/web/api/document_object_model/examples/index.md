@@ -46,13 +46,13 @@ El ejemplo siguiente muestra el uso de las propiedades de alto (`height`) y anch
       La 1ª imagen: - alto (height): no - ancho (width): no - estilo (style): no
       <img
         id="imagen1"
-        src="http://www.mozilla.org/images/mozilla-banner.gif" />
+        src="https://www.mozilla.org/images/mozilla-banner.gif" />
     </p>
     <p>
       La 2ª imagen: - height="50" - width="500" - style: no
       <img
         id="imagen2"
-        src="http://www.mozilla.org/images/mozilla-banner.gif"
+        src="https://www.mozilla.org/images/mozilla-banner.gif"
         height="50"
         width="500" />
     </p>
@@ -61,7 +61,7 @@ El ejemplo siguiente muestra el uso de las propiedades de alto (`height`) y anch
       sí
       <img
         id="imagen3"
-        src="http://www.mozilla.org/images/mozilla-banner.gif"
+        src="https://www.mozilla.org/images/mozilla-banner.gif"
         style="height: 50px; width: 500px;" />
     </p>
 
