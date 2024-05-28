@@ -2,7 +2,7 @@
 title: Firefox 125 的开发者说明
 slug: Mozilla/Firefox/Releases/125
 l10n:
-  sourceCommit: 793a7c1fb449944484220fdd7fe472a90428b707
+  sourceCommit: c213abeda305e87274d72b61394aa9ef53f7b886
 ---
 
 {{FirefoxSidebar}}
