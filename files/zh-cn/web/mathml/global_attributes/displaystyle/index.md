@@ -33,7 +33,7 @@ l10n:
 <math displaystyle="false"></math>
 ```
 
-### 可选值
+### 值
 
 - `true`
   - : 将显示样式设置为 `normal`。
