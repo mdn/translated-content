@@ -7,7 +7,7 @@ l10n:
 
 {{MathMLRef}}
 
-**`displaystyle`** [全局属性](/zh-CN/docs/Web/MathML/Global_attributes) 是一个布尔值，用于设置 MathML 元素的 [math-style](/zh-CN/docs/Web/CSS/math-style)。
+**`displaystyle`** [全局属性](/zh-CN/docs/Web/MathML/Global_attributes)是一个布尔值，用于设置 MathML 元素的 [math-style](/zh-CN/docs/Web/CSS/math-style)。
 
 ## 示例
 
