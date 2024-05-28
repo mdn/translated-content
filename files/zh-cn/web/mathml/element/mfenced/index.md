@@ -7,13 +7,13 @@ l10n:
 
 {{MathMLRef}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-`<mfenced>` 这个 [MathML](/zh-CN/docs/Web/MathML)元素提供了向表达式添加自定义开放和关闭括号（如圆括号）以及分隔符（如逗号或分号）的可能性。
+`<mfenced>` [MathML](/zh-CN/docs/Web/MathML) 元素提供了向表达式添加自定义开放和关闭括号（如圆括号）以及分隔符（如逗号或分号）的可能性。
 
 > **备注：** 从历史上看，`<mfenced>` 元素被定义为编写围栏表达式的一种简写形式，相当于涉及 {{MathMLElement("mrow")}} 和 {{MathMLElement("mo")}} 元素的扩展形式。现在，建议改用等效形式。
 
 ## 属性
 
-该元素的属性包括 [全局 MathML 属性](/zh-CN/docs/Web/MathML/Global_attributes)。
+该元素的属性包括[全局 MathML 属性](/zh-CN/docs/Web/MathML/Global_attributes)。
 
 - `close`
   - : 用于闭合定界符的字符串。默认值为 `")"`，任何空白都将被修剪。
