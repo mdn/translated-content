@@ -28,10 +28,10 @@ for (const file of fileInput.files) {
 
 为了防止计时攻击和{{glossary("fingerprinting", "指纹识别")}}，`someFile.lastModifiedDate.getTime()` 的精度可能会根据浏览器设置进行舍入。
 
-在 Firefox 中，`privacy.reduceTimerPrecision` 首选项默认启用，在 Firefox 59 中默认为 20us；Firefox 60 中为 2 毫秒。
+在 Firefox 中，`privacy.reduceTimerPrecision` 首选项默认启用，在 Firefox 59 中默认为 20 微秒；Firefox 60 中为 2 毫秒。
 
 ```js
-// Firefox 60 中的时间精度降低（2ms）
+// Firefox 60 中的时间精度降低（2 毫秒）
 someFile.lastModifiedDate.getTime();
 // 1519211809934
 // 1519211810362
