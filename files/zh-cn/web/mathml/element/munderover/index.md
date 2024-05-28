@@ -7,7 +7,7 @@ l10n:
 
 {{MathMLRef}}
 
-**`<munderover>`** 这个 [MathML](/zh-CN/docs/Web/MathML) 元素用于在表达式上方和下方同时附加重音或限制。
+**`<munderover>`** [MathML](/zh-CN/docs/Web/MathML) 元素用于在表达式上方和下方同时附加符号。
 
 它使用以下语法：`<munderover> base underscript overscript </munderover>`
 
