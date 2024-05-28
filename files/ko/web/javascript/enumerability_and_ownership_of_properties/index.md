@@ -134,13 +134,13 @@ const SimplePropertyRetriever = {
 
 ## 같이 보기
 
-- [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in)
-- [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in)
-- [`Object.prototype.hasOwnProperty()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty)
-- [`Object.prototype.propertyIsEnumerable()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable)
-- [`Object.getOwnPropertyNames()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames)
-- [`Object.getOwnPropertySymbols()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols)
-- [`Object.keys()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)
-- [`Object.getOwnPropertyDescriptors()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors)
-- [`Object.hasOwn()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn)
-- [`Reflect.ownKeys()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/ownKeys)
+- [`in`](/ko/docs/Web/JavaScript/Reference/Operators/in)
+- [`for...in`](/ko/docs/Web/JavaScript/Reference/Statements/for...in)
+- [`Object.prototype.hasOwnProperty()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty)
+- [`Object.prototype.propertyIsEnumerable()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable)
+- [`Object.getOwnPropertyNames()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames)
+- [`Object.getOwnPropertySymbols()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols)
+- [`Object.keys()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)
+- [`Object.getOwnPropertyDescriptors()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors)
+- [`Object.hasOwn()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn)
+- [`Reflect.ownKeys()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Reflect/ownKeys)
