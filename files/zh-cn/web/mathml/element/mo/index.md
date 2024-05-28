@@ -7,7 +7,7 @@ l10n:
 
 {{MathMLRef}}
 
-**`<mo>`** 这个 [MathML](/zh-CN/docs/Web/MathML) 元素表示广义上的运算符。除了严格数学意义上的运算符外，该元素还包括像括号、逗号和分号这样的分隔符，或者像"绝对值"符号这样的"运算符"。
+**`<mo>`** [MathML](/zh-CN/docs/Web/MathML)元素表示广义上的运算符。除了严格数学意义上的运算符外，该元素还包括像括号、逗号和分号这样的分隔符，或者像"绝对值"符号这样的"运算符"。
 
 ## 属性
 
@@ -18,7 +18,7 @@ l10n:
 - `fence`
   - : 一个 [`<boolean>`](/zh-CN/docs/Web/MathML/Values#mathml-specific_types)，表示运算符是否是一个围栏（例如括号）。该属性没有视觉效果。
 - `largeop`
-  - : 一个 [`<boolean>`](/zh-CN/docs/Web/MathML/Values#mathml-specific_types)，表示当 [`math-style`](/zh-CN/docs/Web/CSS/math-style) 设置为 `normal` 时是否应该放大运算符。
+  - : 一个 [`<boolean>`](/zh-CN/docs/Web/MathML/Values#mathml-specific_types)，表示当 [`math-style`](/zh-CN/docs/Web/CSS/math-style)设置为 `normal` 时是否应该放大运算符。
 - `lspace`
   - : 一个 {{cssxref("length-percentage")}}，表示运算符前的空间量。
 - `maxsize`
@@ -26,7 +26,7 @@ l10n:
 - `minsize`
   - : 一个 {{cssxref("length-percentage")}}，表示运算符在可拉伸时的最小大小。
 - `movablelimits`
-  - : 一个 [`<boolean>`](/zh-CN/docs/Web/MathML/Values#mathml-specific_types)，表示附加的下标和上标在 [`math-style`](/zh-CN/docs/Web/CSS/math-style) 设置为 `compact` 时是否移动到上下标位置。
+  - : 一个 [`<boolean>`](/zh-CN/docs/Web/MathML/Values#mathml-specific_types)，表示附加的下标和上标在 [`math-style`](/zh-CN/docs/Web/CSS/math-style)设置为 `compact` 时是否移动到上下标位置。
 - `rspace`
   - : 一个 {{cssxref("length-percentage")}}，表示运算符后的空间量。
 - `separator`
@@ -62,7 +62,7 @@ l10n:
 </math>
 ```
 
-{{ EmbedLiveSample('mo_example', 700, 200, "", "") }}
+{{ EmbedLiveSample('mo 示例', 700, 200, "", "") }}
 
 ## 规范
 
