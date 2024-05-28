@@ -46,9 +46,9 @@ filepicker.addEventListener("change", (event) => {
     const date = new Date(file.lastModified);
     // 如果文件超过 1 年没有修改，则为 true
     const stale = now.getTime() - file.lastModified > 31_536_000_000;
-    output.textContent += `${file.name} is ${
-      stale ? "stale" : "fresh"
-    } (${date}).\n`;
+    output.textContent += `${file.name} 是${
+      stale ? "陈旧的" : "新的"
+    }（${date}）。\n`;
   }
 });
 ```
