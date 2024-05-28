@@ -18,18 +18,18 @@ l10n:
         href="/zh-CN/docs/Learn/CSS">CSS</a> 和
         <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 语言; 了解<a
           href="/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
-          >跨浏览器测试的抽象准则</a
+          >跨浏览器测试的核心概念</a
         >。
       </td>
     </tr>
     <tr>
       <th scope="row">目标：</th>
-      <td>了解跨浏览器测试所涉及的抽象概念。</td>
+      <td>了解跨浏览器测试所涉及的高级概念。</td>
     </tr>
   </tbody>
 </table>
 
-## 是否需要测试？
+## 选择要测试的浏览器和设备
 
 由于不可能测试每一种浏览器与设备的组合，只需确保你的网站能在最关键的浏览器和设备上正常运行。在实际操作中，“关键”通常指的是“目标用户群经常使用的”。
 
@@ -73,7 +73,7 @@ Opera Mini [在运行复杂 JavaScript 方面性能不太好](https://dev.opera.
 
 你还可以考虑使用开源且注重隐私的分析平台，如 [Open Web Analytics](https://www.openwebanalytics.com/) 和 [Matomo](https://matomo.org)。它们要求你自行托管分析平台。
 
-#### 配置 Google 分析
+#### 配置 Google Analytics
 
 1. 首先，你需要一个谷歌帐户。使用此帐户登录 [Google Analytics](https://marketingplatform.google.com/about/analytics/)。
 2. 选择 [Google Analytics](https://analytics.google.com/analytics/web/)（web）选项，然后点击*注册*按钮。
