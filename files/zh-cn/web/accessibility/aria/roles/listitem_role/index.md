@@ -1,6 +1,8 @@
 ---
 title: ARIA：listitem 角色
 slug: Web/Accessibility/ARIA/Roles/listitem_role
+l10n:
+  sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
 ---
 
 {{AccessibilitySidebar}}
@@ -25,16 +27,16 @@ ARIA `listitem` 角色可用于标识项目列表中的项目。它通常与 [`l
 
 ### 关联的 WAI-ARIA 角色、状态和属性
 
-- [list](/zh-CN/docs/Web/Accessibility/ARIA/Roles/List_role)
+- [`list`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/List_role)
   - : 项目列表。角色为 `list` 的元素必须有一个或多个角色为 `listitem` 的元素作为子元素，一个或多个角色为 `group` 的元素具有一个或多个具有 `listitem` 角色的元素作为子元素。
-- [group](/zh-CN/docs/Web/Accessibility/ARIA/Roles/group_role)
+- [`group`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/group_role)
   - : 相关对象的集合，在嵌套在列表中时仅限于列表项，其重要性不足以在页面目录中拥有自己的位置。
 
 ## 最佳实践
 
 仅在必要时使用 `role="list"` 和 `role="listitem"`。例如，无法控制 HTML 但能够在之后动态使用 JavaScript 提升无障碍的时候。
 
-与 HTML {{HTMLElement("ol")}} 和 {{HTMLElement("ul")}} 不同，ARIA `list` 角色不区分有序列表和无序列表。如果可能，你应该使用适当的语义 HTML 元素来标记列表（{{HTMLElement("ol")}} 和 {{HTMLElement("ul")}}）和列表项（{{HTMLElement("li")}}）。例如，我们上面的例子应该改写如下：
+如果可能，你应该使用适当的语义 HTML 元素来标记列表（{{HTMLElement("ol")}} 和 {{HTMLElement("ul")}}）和列表项（{{HTMLElement("li")}}）。例如，我们上面的例子应该改写如下：
 
 ```html
 <ul>
@@ -58,7 +60,7 @@ ARIA `listitem` 角色可用于标识项目列表中的项目。它通常与 [`l
 
 > **备注：** 给列表添加 CSS 样式 `list-style: none;` 移除列表语义。添加 `role="listitem"` 获得列表语义。
 
-> **备注：** 如果要标记将用作选项卡式界面的项目列表，则应改为使用 `tab`、`tabpanel` 和 `tablist` 角色。
+> **备注：** 如果要标记将用作选项卡式界面的项目列表，则应改为使用[`tab`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/tab_role)、[`tabpanel`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/tabpanel_role) 和[`tablist`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/tablist_role) 角色。
 
 ## 规范
 
