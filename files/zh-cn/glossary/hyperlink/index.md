@@ -12,8 +12,8 @@ l10n:
 ## 参见
 
 - 维基百科上的[超链接](https://zh.wikipedia.org/wiki/超連結)
-- [超链接教程](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [HTML 文档中的链接 - W3C](https://www.w3.org/TR/1999/REC-html401-19991224/struct/links.html)
-- [HTML a - 超链接 - W3C](https://w3c.github.io/html-reference/a.html)
+- MDN 上的[超链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)教程
+- [HTML 文档中的链接——W3C](https://www.w3.org/TR/1999/REC-html401-19991224/struct/links.html)
+- [HTML a——超链接——W3C](https://w3c.github.io/html-reference/a.html)
 - [MDN 上的 `<a>`](/zh-CN/docs/Web/HTML/Element/a)
 - [MDN 上的 `<link>`](/zh-CN/docs/Web/HTML/Element/link)
