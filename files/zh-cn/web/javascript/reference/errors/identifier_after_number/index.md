@@ -1,5 +1,5 @@
 ---
-title: SyntaxError: identifier starts immediately after numeric literal
+title: "SyntaxError: identifier starts immediately after numeric literal"
 slug: Web/JavaScript/Reference/Errors/Identifier_after_number
 l10n:
   sourceCommit: 4f86aad2b0b66c0d2041354ec81400c574ab56ca
