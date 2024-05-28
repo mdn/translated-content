@@ -33,7 +33,7 @@ l10n:
   </mrow>
 </math>。
 
-**证明：** 我们可以代数地证明这个定理，通过展示在[这个图形](http://www.cut-the-knot.org/pythagoras/proof31.gif)上，大正方形的面积等于内正方形（斜边的平方）的面积加上四个三角形的面积：
+**证明：** 我们可以通过代数方式证明这个定理，即在[此图](http://www.cut-the-knot.org/pythagoras/proof31.gif)上，大正方形的面积等于内正方形（斜边的平方）的面积加上四个三角形的面积：
 
 <math display="block">
   <mtable>
