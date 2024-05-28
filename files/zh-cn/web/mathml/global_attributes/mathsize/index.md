@@ -32,7 +32,7 @@ l10n:
 
   - : 一个正的 {{cssxref("&lt;percentage&gt;")}} 值，相对于父元素的字体大小。
 
-> **备注：** 一些浏览器可能还接受[旧版 MathML 长度](/zh-CN/docs/Web/MathML/Values#legacy_mathml_lengths)。
+> **备注：** 一些浏览器可能还接受[旧版 MathML 长度](/zh-CN/docs/Web/MathML/Values#旧版_mathml_长度)。
 
 ## 规范
 
