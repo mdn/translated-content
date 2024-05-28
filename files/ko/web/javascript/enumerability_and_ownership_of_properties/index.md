@@ -9,7 +9,7 @@ page-type: guide
 JavaScript 객체의 모든 속성은 세 가지 요소로 분류할 수 있습니다.
 
 - 열거 가능(enumerable) 또는 열거 불가능(non-enumerable).
-- 문자열 또는 [심볼](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol).
+- 문자열 또는 [심볼](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol).
 - 자체 속성(own property) 또는 프로토타입 체인에서 상속된 속성.
 
 열거 가능한 속성(Enumerable properties)은 내부 열거 가능 플래그가 true로 설정된 속성을 말하며, 이는 단순한 할당이나 속성 초기화자를 통해 생성된 속성의 기본값입니다. [`Object.defineProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) 등을 통해 정의된 속성은 기본적으로 열거 가능하지 않습니다. 대부분의 반ㅂ고 수단 (예: [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) 루프와 [`Object.keys`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys))은 열거 가능한 키만 방문합니다.
