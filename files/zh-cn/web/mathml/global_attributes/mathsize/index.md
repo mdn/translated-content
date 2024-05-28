@@ -22,7 +22,7 @@ l10n:
 <math mathsize="80%">
 ```
 
-### 可选值
+### 值
 
 - {{cssxref("&lt;length&gt;")}}
 
