@@ -22,12 +22,12 @@ JavaScript 객체의 모든 속성은 세 가지 요소로 분류할 수 있습�
 
 객체의 속성을 쿼리하는 네 가지 기본 방법이 있습니다. 이들 모두 문자열 키와 심볼 키를 지원합니다. 다음 표는 각 메서드가 언제 `true`를 반환하는지 요약한 것입니다.
 
-|                                                                                                             | 열거 가능, 자체 속성 | 열거 가능, 상속 속성 | 열거 불가능, 자체 속성 | 열거 불가능, 상속 속성 |
-| ----------------------------------------------------------------------------------------------------------- | -------------------- | -------------------- | ---------------------- | ---------------------- |
-| [`propertyIsEnumerable()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable) | `true ✅`            | `false ❌`           | `false ❌`             | `false ❌`             |
-| [`hasOwnProperty()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty)             | `true ✅`            | `false ❌`           | `true ✅`              | `false ❌`             |
-| [`Object.hasOwn()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn)                      | `true ✅`            | `false ❌`           | `true ✅`              | `false ❌`             |
-| [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in)                                                   | `true ✅`            | `true ✅`            | `true ✅`              | `true ✅`              |
+|                                                                                                          | 열거 가능, 자체 속성 | 열거 가능, 상속 속성 | 열거 불가능, 자체 속성 | 열거 불가능, 상속 속성 |
+| -------------------------------------------------------------------------------------------------------- | -------------------- | -------------------- | ---------------------- | ---------------------- |
+| [`propertyIsEnumerable()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable) | `true ✅`            | `false ❌`           | `false ❌`             | `false ❌`             |
+| [`hasOwnProperty()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty)             | `true ✅`            | `false ❌`           | `true ✅`              | `false ❌`             |
+| [`Object.hasOwn()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn)                      | `true ✅`            | `false ❌`           | `true ✅`              | `false ❌`             |
+| [`in`](/ko/docs/Web/JavaScript/Reference/Operators/in)                                                   | `true ✅`            | `true ✅`            | `true ✅`              | `true ✅`              |
 
 ## 객체 속성 순회하기
 
