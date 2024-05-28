@@ -50,7 +50,7 @@ l10n:
 
 ## 参见
 
-- 所有 [全局属性](/zh-CN/docs/Web/MathML/Global_attributes)
+- 所有[全局属性](/zh-CN/docs/Web/MathML/Global_attributes)
 - [scriptlevel](/zh-CN/docs/Web/MathML/Global_attributes/scriptlevel) 全局属性
 - {{cssxref("font-size")}}
 - {{cssxref("math-depth")}}
