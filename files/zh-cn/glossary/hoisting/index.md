@@ -44,10 +44,10 @@ console.log(x); // 1
 
 有关提升的更多信息，请参见：
 
-- `var`、`let`、`const` 提升——[语法类型教程](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#variable_hoisting)
-- `function` 提升——[函数教程](/zh-CN/docs/Web/JavaScript/Guide/Functions#function_hoisting)
-- `class` 提升——[类教程](/zh-CN/docs/Web/JavaScript/Guide/Using_classes#class_declaration_hoisting)
-- `import` 提升——[JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules#import_declarations_are_hoisted)
+- `var`、`let`、`const` 提升——[语法类型教程](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#变量提升)
+- `function` 提升——[函数教程](/zh-CN/docs/Web/JavaScript/Guide/Functions#函数提升)
+- `class` 提升——[类教程](/zh-CN/docs/Web/JavaScript/Guide/Using_classes#类声明提升)
+- `import` 提升——[JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules#导入声明提升)
 
 ## 参见
 
