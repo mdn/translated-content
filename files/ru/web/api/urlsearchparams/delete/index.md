@@ -3,7 +3,7 @@ title: URLSearchParams.delete()
 slug: Web/API/URLSearchParams/delete
 ---
 
-{{ApiRef("URL API")}}
+{{APIRef("URL API")}} {{AvailableInWorkers}}
 
 Метод **`delete()`** интерфейса {{domxref("URLSearchParams")}} удаляет все указанные параметры и все связанные с ним значения из списка найденных параметров.
 

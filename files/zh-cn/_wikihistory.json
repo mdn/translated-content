@@ -4870,13 +4870,13 @@
     "modified": "2019-03-18T21:16:25.185Z",
     "contributors": ["wbamberg", "micblo"]
   },
-  "MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file": {
-    "modified": "2019-03-18T20:48:39.486Z",
-    "contributors": ["Syclover-u2400"]
-  },
   "MDN/Writing_guidelines/Howto/Write_an_api_reference": {
     "modified": "2019-03-18T20:48:40.005Z",
     "contributors": ["Sheppy"]
+  },
+  "MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file": {
+    "modified": "2019-03-18T20:48:39.486Z",
+    "contributors": ["Syclover-u2400"]
   },
   "MDN/Writing_guidelines/Page_structures": {
     "modified": "2020-10-15T21:37:24.190Z",
@@ -8252,6 +8252,10 @@
     "modified": "2019-03-24T00:15:45.643Z",
     "contributors": ["LianJilu", "Ke.shidong", "Ende93", "khalid32", "ziyunfei"]
   },
+  "Web/API/Document_Object_Model/How_to_create_a_DOM_tree": {
+    "modified": "2019-03-23T22:09:45.087Z",
+    "contributors": ["ArcherGrey"]
+  },
   "Web/API/Document_Object_Model/Introduction": {
     "modified": "2019-07-17T11:05:34.542Z",
     "contributors": [
@@ -8272,6 +8276,15 @@
       "Darrel.Hsu"
     ]
   },
+  "Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors": {
+    "modified": "2019-03-23T22:45:22.118Z",
+    "contributors": [
+      "xgqfrms-GitHub",
+      "ZhuYonglin",
+      "gavinkwoe",
+      "liurenxingyu"
+    ]
+  },
   "Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces": {
     "modified": "2020-10-08T06:13:28.865Z",
     "contributors": [
@@ -8289,26 +8302,13 @@
       "Heagle"
     ]
   },
+  "Web/API/Document_Object_Model/Using_the_Document_Object_Model": {
+    "modified": "2019-12-13T21:06:35.933Z",
+    "contributors": ["wbamberg", "alwxkxk", "xhlsrj", "EugeneZeng"]
+  },
   "Web/API/Document_Object_Model/Whitespace": {
     "modified": "2020-01-30T13:21:03.275Z",
     "contributors": ["chrisdavidmills", "lon", "ziyunfei"]
-  },
-  "Web/API/Document_object_model/How_to_create_a_DOM_tree": {
-    "modified": "2019-03-23T22:09:45.087Z",
-    "contributors": ["ArcherGrey"]
-  },
-  "Web/API/Document_object_model/Locating_DOM_elements_using_selectors": {
-    "modified": "2019-03-23T22:45:22.118Z",
-    "contributors": [
-      "xgqfrms-GitHub",
-      "ZhuYonglin",
-      "gavinkwoe",
-      "liurenxingyu"
-    ]
-  },
-  "Web/API/Document_object_model/Using_the_Document_Object_Model": {
-    "modified": "2019-12-13T21:06:35.933Z",
-    "contributors": ["wbamberg", "alwxkxk", "xhlsrj", "EugeneZeng"]
   },
   "Web/API/DragEvent": {
     "modified": "2019-03-23T22:58:48.150Z",
@@ -15135,6 +15135,10 @@
     "modified": "2020-10-15T22:18:42.062Z",
     "contributors": ["zhangchen", "mozzix"]
   },
+  "Web/API/Window/caches": {
+    "modified": "2019-09-21T03:33:16.440Z",
+    "contributors": ["JarvanMo"]
+  },
   "Web/API/Window/cancelAnimationFrame": {
     "modified": "2019-03-23T23:39:18.899Z",
     "contributors": ["teoli", "insideyiqi", "ziyunfei"]
@@ -15177,6 +15181,10 @@
   "Web/API/Window/crossOriginIsolated": {
     "modified": "2020-10-15T22:26:03.129Z",
     "contributors": ["Fulgrim"]
+  },
+  "Web/API/Window/crypto": {
+    "modified": "2019-03-23T22:22:09.825Z",
+    "contributors": ["koaqiu", "Taoja"]
   },
   "Web/API/Window/customElements": {
     "modified": "2020-10-15T22:02:36.021Z",
@@ -15263,6 +15271,10 @@
       "RobinXiong",
       "arcy"
     ]
+  },
+  "Web/API/Window/getDefaultComputedStyle": {
+    "modified": "2019-03-18T20:36:51.313Z",
+    "contributors": ["teoli", "xgqfrms-GitHub", "ektx"]
   },
   "Web/API/Window/getSelection": {
     "modified": "2020-10-15T21:28:34.122Z",
@@ -15530,6 +15542,32 @@
   "Web/API/Window/rejectionhandled_event": {
     "modified": "2020-10-15T22:26:00.037Z",
     "contributors": ["mengli404"]
+  },
+  "Web/API/Window/requestAnimationFrame": {
+    "modified": "2020-10-15T23:30:32.456Z",
+    "contributors": [
+      "wudexiang",
+      "ruiyang0012",
+      "oxyg3n",
+      "Yifang-Tongxing",
+      "hawtim",
+      "xianghui-ma",
+      "zhuangyin",
+      "LiaoNa",
+      "luoway",
+      "liuliangsir",
+      "tangj1206",
+      "PaperFlu",
+      "RayJune",
+      "King.",
+      "xgqfrms-GitHub",
+      "aki",
+      "chinaliyun",
+      "teoli",
+      "warmhug",
+      "ziyunfei",
+      "MiyagiRyota"
+    ]
   },
   "Web/API/Window/requestFileSystem": {
     "modified": "2020-10-15T22:21:45.553Z",
@@ -16080,10 +16118,6 @@
       "cuixiping"
     ]
   },
-  "Web/API/caches": {
-    "modified": "2019-09-21T03:33:16.440Z",
-    "contributors": ["JarvanMo"]
-  },
   "Web/API/clearInterval": {
     "modified": "2020-10-15T21:21:33.193Z",
     "contributors": [
@@ -16240,10 +16274,6 @@
     "modified": "2019-03-18T20:44:01.174Z",
     "contributors": ["fanerge", "varcat"]
   },
-  "Web/API/crypto_property": {
-    "modified": "2019-03-23T22:22:09.825Z",
-    "contributors": ["koaqiu", "Taoja"]
-  },
   "Web/API/fetch": {
     "modified": "2020-10-15T21:38:47.827Z",
     "contributors": [
@@ -16335,36 +16365,6 @@
       "khalid32",
       "Meteormatt",
       "ziyunfei"
-    ]
-  },
-  "Web/API/window/getDefaultComputedStyle": {
-    "modified": "2019-03-18T20:36:51.313Z",
-    "contributors": ["teoli", "xgqfrms-GitHub", "ektx"]
-  },
-  "Web/API/window/requestAnimationFrame": {
-    "modified": "2020-10-15T23:30:32.456Z",
-    "contributors": [
-      "wudexiang",
-      "ruiyang0012",
-      "oxyg3n",
-      "Yifang-Tongxing",
-      "hawtim",
-      "xianghui-ma",
-      "zhuangyin",
-      "LiaoNa",
-      "luoway",
-      "liuliangsir",
-      "tangj1206",
-      "PaperFlu",
-      "RayJune",
-      "King.",
-      "xgqfrms-GitHub",
-      "aki",
-      "chinaliyun",
-      "teoli",
-      "warmhug",
-      "ziyunfei",
-      "MiyagiRyota"
     ]
   },
   "Web/Accessibility": {

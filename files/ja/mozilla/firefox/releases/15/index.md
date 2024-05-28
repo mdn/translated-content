@@ -43,12 +43,12 @@ Firefox 15 は 2012 年 8 月 28 日にリリースされました。この記�
 
 - Typed Arrays 仕様由来の [`DataView`](/ja/docs/javascript_typed_arrays/DataView) インターフェイスのサポートが追加されました。これは [`ArrayBuffer`](/ja/docs/javascript_typed_arrays/ArrayBuffer) に含まれるデータへの低レベルアクセスを提供します。
 - ECMAScript Harmony の `Number.isNaN` のサポートが追加されました。([bug 749818](https://bugzilla.mozilla.org/show_bug.cgi?id=749818))
-- ECMAScript Harmony のデフォルトパラメータが追加されました。 ([bug 757676](https://bugzilla.mozilla.org/show_bug.cgi?id=757676))
-- ECMAScript Harmony のレストパラメータが追加されました。 ([bug 574132](https://bugzilla.mozilla.org/show_bug.cgi?id=574132))
+- ECMAScript Harmony のデフォルト引数が追加されました。 ([bug 757676](https://bugzilla.mozilla.org/show_bug.cgi?id=757676))
+- ECMAScript Harmony のレスト引数が追加されました。 ([bug 574132](https://bugzilla.mozilla.org/show_bug.cgi?id=574132))
 
 ### WebGL
 
-- [`WEBGL_compressed_texture_s3tc`](/ja/docs/WebGL/Using_Extensions#WEBGL_compressed_texture_s3tc) 拡張のサポートが追加されました。圧縮されたテクスチャは GPU 上でテクスチャを保持するために必要なメモリの量を減少させます。その結果、より高解像度なテクスチャや同解像度でもより多くのテクスチャを扱えます。
+- [`WEBGL_compressed_texture_s3tc`](/ja/docs/WebGL/Using_Extensions#WEBGL_compressed_texture_s3tc) 拡張のサポートが追加されました。圧縮されたテクスチャは GPU 上でテクスチャを保持するために必要なメモリーの量を減少させます。その結果、より高解像度なテクスチャや同解像度でもより多くのテクスチャを扱えます。
 
 ### MathML
 
@@ -73,7 +73,7 @@ Firefox 15 は 2012 年 8 月 28 日にリリースされました。この記�
 - `nsIDOMWindowUtils`
   - : `sendMouseEvent()`、`sendTouchEvent()`、`sendMouseEventToWindow()`、`sendMouseScrollEvent()` および `sendKeyEvent()` の `aModifiers` は [`KeyboardEvent.getModifierState()`](/ja/docs/DOM/KeyboardEvent#getModifierState%28%29) でサポートされている修飾キーのすべてをサポートします。`MODIFIER_*` という値を利用してください。 また、`sendKeyEvent()` の第 5 引数が `boolean` から `unsigned long` に変更されました。後方互換性のために、呼び出し元がそれに対して `true` または false を渡している場合、挙動は変更されません。この変更によって呼び出し元がキーの位置を指定することができるようになります。
 - `nsIBrowserHistory`
-  - : `hidePage()` メソッドは一度も実装されずに、かつ、このリリースで完全に削除されます。[Places](/ja/docs/Places) API のすべてを非同期化する進行中の作業の一部として、`addPageWithDetails()` メソッドも削除されます。代わりに `mozIAsyncHistory.updatePlaces` を利用してください。また、`count` 属性も削除されます。それはときどき実際のカウントを返していませんでした（代わりに、単純にエントリが存在したかどうかを返していました）。代わりに \`nsINavHistoryService.hasHistoryEntries\` を利用できます。
+  - : `hidePage()` メソッドは一度も実装されずに、かつ、このリリースで完全に削除されます。[Places](/ja/docs/Places) API のすべてを非同期化する進行中の作業の一部として、`addPageWithDetails()` メソッドも削除されます。代わりに `mozIAsyncHistory.updatePlaces` を利用してください。また、`count` 属性も削除されます。それはときどき実際のカウントを返していませんでした（代わりに、単純にエントリーが存在したかどうかを返していました）。代わりに \`nsINavHistoryService.hasHistoryEntries\` を利用できます。
 - `inIDOMUtils`
   - : `inlDOMUtils.parseStyleSheet` メソッドが追加され、CSS の (再) 解析ができるようになりました。
 - `nsIINIParserWriter`

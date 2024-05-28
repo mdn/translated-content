@@ -1,8 +1,6 @@
 ---
 title: DOM ツリーの作成方法
-slug: Web/API/Document_object_model/How_to_create_a_DOM_tree
-l10n:
-  sourceCommit: c3a0924949863b43957b4ba2ad5e64558165672d
+slug: Web/API/Document_Object_Model/How_to_create_a_DOM_tree
 ---
 
 {{DefaultAPISidebar("DOM")}}

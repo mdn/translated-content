@@ -65,7 +65,7 @@ _詳細および他の小規模な変更点については [Mozilla Hacks ブロ
 ### インターフェイス/API/DOM
 
 - 新たな種類の Worker である {{domxref("SharedWorker")}} をデフォルトで有効にしました ([Firefox バグ 924089](https://bugzil.la/924089))。
-- {{domxref("URLUtils")}} インターフェイスが、{{domxref("URLSearchParams")}} オブジェクトを返す {{domxref("URLUtils.searchParams", "searchParams")}} プロパティをサポートしました。URL の検索パラメータを変更できます ([Firefox バグ 887836](https://bugzil.la/887836))。{{domxref("URLSearchParams")}} コンストラクターにより、文字列のパースや検索が容易になります。
+- {{domxref("URLUtils")}} インターフェイスが、{{domxref("URLSearchParams")}} オブジェクトを返す {{domxref("URLUtils.searchParams", "searchParams")}} プロパティをサポートしました。URL の検索引数を変更できます ([Firefox バグ 887836](https://bugzil.la/887836))。{{domxref("URLSearchParams")}} コンストラクターにより、文字列のパースや検索が容易になります。
 - {{domxref("Worker.onLine")}} プロパティをサポートしました。Worker のオンライン/オフライン状況を知ることができます ([Firefox バグ 925437](https://bugzil.la/925437))。
 - Web Components の実装の一環として、{{domxref("HTMLShadowElement")}} インターフェイスを設定項目 `dom.webcomponents.enabled` のもとに実装しました。使用したい場合は値を `true` に変更してください。([Firefox バグ 887538](https://bugzil.la/887538))
 - 読み取り専用の {{domxref("HTMLIFrameElement.sandbox")}} プロパティの型は {{domxref("string")}} ではなく {{domxref("HTMLSettableToken")}} になりました ([Firefox バグ 845057](https://bugzil.la/845057))。

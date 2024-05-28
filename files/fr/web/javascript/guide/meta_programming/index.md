@@ -30,7 +30,7 @@ Ici, l'objet `Proxy` définit une `cible` (ici c'est un objet vide) et un gestio
 
 Lorsqu'on utilise les proxies et leurs fonctionnalités, on utilisera les termes suivants :
 
-- {{jsxref("Objets_globaux/Proxy/handler","gestionnaire (handler)","","true")}}
+- {{jsxref("Objets_globaux/Proxy/handler","gestionnaire (handler)","",1)}}
   - : L'objet qui contient les trappes.
 - trappes
   - : Les méthodes qui fournissent l'accès aux propriétés. Ce concept est analogue aux trappes utilisées dans les systèmes d'exploitations.
@@ -379,7 +379,7 @@ typeof proxy; // "object", typeof ne déclenche aucune trappe
 
 ## Réflexion
 
-{{jsxref("Reflect")}} est un objet natif qui fournit des méthodes pour les opérations JavaScript qui peuvent être interceptées. Ces méthodes sont les mêmes que celles gérées par les {{jsxref("Objets_globaux/Proxy/handler","gestionnaires de proxy","","true")}}. `Reflect` n'est pas un constructeur et ne peut pas être utilisé comme une fonction !
+{{jsxref("Reflect")}} est un objet natif qui fournit des méthodes pour les opérations JavaScript qui peuvent être interceptées. Ces méthodes sont les mêmes que celles gérées par les {{jsxref("Objets_globaux/Proxy/handler","gestionnaires de proxy","",1)}}. `Reflect` n'est pas un constructeur et ne peut pas être utilisé comme une fonction !
 
 `Reflect` aide à transférer les opérations par défaut depuis le gestionnaire vers la cible.
 

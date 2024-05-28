@@ -3,6 +3,8 @@ title: Introduction to using XPath in JavaScript
 slug: Web/XPath/Introduction_to_using_XPath_in_JavaScript
 ---
 
+{{XsltSidebar}}
+
 이 문서는 JavaScript 안, 확장기능, 웹사이트에서 [XPath](/ko/XPath)를 사용하기 위한 인터페이스를 설명합니다. Mozilla는 [DOM 3 XPath](http://www.w3.org/TR/DOM-Level-3-XPath/xpath.html)를 상당량 구현합니다. 이것은 XPath 식이 HTML과 XML 문서 모두에서 잘 돌아간다는 것을 뜻합니다.
 
 XPath를 사용하는 주 인터페이스는 [document](/ko/DOM/document) 개체의 [evaluate](/ko/DOM/document.evaluate) 함수입니다.
@@ -21,11 +23,7 @@ var xpathResult = document.evaluate( xpathExpression, contextNode, namespaceReso
 
 - `xpathExpression`: 평가할 XPath 식을 포함하는 문자열
 
-<!---->
-
 - `contextNode`: `xpathExpression`이 평가될 모든 자식 노드를 포함하는 문서의 노드. [document](/ko/DOM/document) 노드가 가장 흔히 쓰입니다.
-
-<!---->
 
 - `namespaceResolver`: 그 접두사와 관련된 namespace URI를 나타내는 문자열을 반환하는 `xpathExpression` 내에 포함되는 모든 namespace 접두사를 넘겨주는 함수. 이는 XPath 식에 쓰(이)는 접두사와 문서에 쓰(이)는 아마도 다른 접두사 사이에 변환을 가능하게 합니다. 함수는 어느 한쪽일 수 있습니다.
 
@@ -38,7 +36,7 @@ var xpathResult = document.evaluate( xpathExpression, contextNode, namespaceReso
 
 ### 반환값
 
-`resultType` 매개변수에서 [지정한](#Specifying_the_Return_Type) 형의 `XPathResult` 개체인 `xpathResult`를 반환합니다. `XPathResult` 인터페이스는 [여기](http://lxr.mozilla.org/seamonkey/source/dom/public/idl/xpath/nsIDOMXPathResult.idl)에서 정의됩니다.
+`resultType` 매개변수에서 [지정한](#Specifying_the_Return_Type) 형의 `XPathResult` 개체인 `xpathResult`를 반환합니다. `XPathResult` 인터페이스는 [여기](/ko/docs/Web/API/XPathResult)에서 정의됩니다.
 
 ### Default Namespace Resolver 구현
 

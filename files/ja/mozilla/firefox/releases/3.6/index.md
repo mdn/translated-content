@@ -107,7 +107,7 @@ Gecko 1.9.2 は JavaScript 1.8.2 を採用し、[ECMAScript 5 standard](/ja/Java
   - : ステートメントのすべてのプロパティを列挙する [`for..in`](/ja/docs/JavaScript/Reference/Statements/for...in) enumeration が利用できるようになりました。
 - mozIStorageStatement の getParameterIndex の動作が 3.5 と 3.6 の間で変更された
   - : 詳細は [バグ 528166](https://bugzilla.mozilla.org/show_bug.cgi?id=528166) を参照してください。
-- 複数のパラメータのセットを非同期バインドしてステートメントを実行
+- 複数の引数のセットを非同期バインドしてステートメントを実行
   - : 詳細は [バグ 490085](https://bugzilla.mozilla.org/show_bug.cgi?id=490085) を参照してください。ドキュメント準備中です。
 
 ### Preferences
@@ -123,7 +123,7 @@ Gecko 1.9.2 は JavaScript 1.8.2 を採用し、[ECMAScript 5 standard](/ja/Java
 
 ### その他
 
-- Firefox は components ディレクトリ内にインストールされたサードパーティのコンポーネントをロードしなくなりました。これはバグのあるサードパーティコンポーネントが実行されるのを防止することによる安定性の向上に貢献します。このやり方でコンポーネントをインストールする開発者は標準的なアドオンとしてインストールできるように[それらコンポーネントを XPI パッケージとして再パッケージする必要があります](/ja/docs/Migrating_raw_components_to_add-ons)。
+- Firefox は components ディレクトリー内にインストールされたサードパーティのコンポーネントをロードしなくなりました。これはバグのあるサードパーティコンポーネントが実行されるのを防止することによる安定性の向上に貢献します。このやり方でコンポーネントをインストールする開発者は標準的なアドオンとしてインストールできるように[それらコンポーネントを XPI パッケージとして再パッケージする必要があります](/ja/docs/Migrating_raw_components_to_add-ons)。
 - 拡張において chrome を登録するために用いていた `contents.rdf は利用できなくなりました`。 [`chrome.manifest`](/ja/docs/Install_Manifests) ファイルを代わりに利用しなければなりません。 [バグ 492008](https://bugzilla.mozilla.org/show_bug.cgi?id=492008) を参照してください。
 - メニューバーを自動的に隠すためのサポートが追加されました。[バグ 477256](https://bugzilla.mozilla.org/show_bug.cgi?id=477256) を参照してください。
 - オブジェクトに対して `container-live-role` 属性を持たせるためのサポートが追加されました。[バグ 391829](https://bugzilla.mozilla.org/show_bug.cgi?id=391829) を参照してください。
@@ -136,10 +136,10 @@ Gecko 1.9.2 は JavaScript 1.8.2 を採用し、[ECMAScript 5 standard](/ja/Java
 - 新しい [`openLocationLastURL.jsm`](/ja/docs/JavaScript_code_modules/openLocationLastURL.jsm) コードモジュールは、プライベートブラウジングモードであるかを正しく判断して、"Open Location" ダイアログボックスの記憶された URL データの読み込みと変更を容易にします。
 - Windows では、[`nsIScreen`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIScreen) インターフェイスは、グラフィックスドライバーが 32 ビットをサポートしていても、ピクセルごとに 24 ビットカラーをレポートします。これは 24 ビットは実際に利用されているカラーピクセルの数をより正確に表現するためです。
 - Window では [`toolbar`](/ja/docs/Mozilla/Tech/XUL/toolbar) XUL 要素の新しい [`autohide`](/ja/docs/Mozilla/Tech/XUL/Attribute/autohide) アトリビュートを用いてメニューバーを隠すことができます。
-- [`loadOneTab`](/ja/docs/Mozilla/Tech/XUL/Method/loadOneTab) と [`addTab`](/ja/docs/Mozilla/Tech/XUL/Method/addTab) メソッドは新しい `relatedToCurrent` パラメータをサポートし、加えて、多くのパラメータが省略可能であるために名前によるパラメータの指定ができます。
+- [`loadOneTab`](/ja/docs/Mozilla/Tech/XUL/Method/loadOneTab) と [`addTab`](/ja/docs/Mozilla/Tech/XUL/Method/addTab) メソッドは新しい `relatedToCurrent` 引数をサポートし、加えて、多くの引数が省略可能であるために名前による引数の指定ができます。
 - インストール manifests で "hidden" プロパティはサポートされなくなりました。アドオンマネージャウィンドウ上でユーザーが見ることのできないアドオンは不可能になりました。
 - @mozilla.org/webshell;1 コンポーネントはもう存在しません。代わりに @mozilla.org/docshell;1 を使う必要があります。
-- タイマーイベントをスケジュールするために、タイマーがコールするオブジェクトをインスタンシエイトすることなく update-timer カテゴリで登録できるようになりました。代わりに必要になったときにインスタンシエイトされます。詳細は [`nsIUpdateTimerManager.registerTimer()`](</ja/docs/XPCOM_Interface_Reference/nsIUpdateTimerManager#registerTimer()>) を参照してください。
+- タイマーイベントをスケジュールするために、タイマーがコールするオブジェクトをインスタンシエイトすることなく update-timer カテゴリーで登録できるようになりました。代わりに必要になったときにインスタンシエイトされます。詳細は [`nsIUpdateTimerManager.registerTimer()`](</ja/docs/XPCOM_Interface_Reference/nsIUpdateTimerManager#registerTimer()>) を参照してください。
 - The [`NPN_GetValue()`](/ja/NPN_GetValue) 関数はもはや変数値 `NPNVserviceManager`, `NPNVDOMelement`, `NPNVDOMWindow`を経由した XPCOM へのアクセスを提供しません。これは将来のバージョンの Gecko バージョンでプラグインを分離したプロセスで動作させるための作業の一部です。
 
 ## Firefox/Gecko 開発者向け

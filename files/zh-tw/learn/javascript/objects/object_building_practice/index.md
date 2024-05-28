@@ -36,7 +36,7 @@ slug: Learn/JavaScript/Objects/Object_building_practice
 
 ![](bouncing-balls.png)
 
-此範例將透過 [Canvas API](/zh-TW/docs/Web/API/Canvas_API) 在畫面上繪製球體，[requestAnimationFrame](/zh-TW/docs/Web/API/window/requestAnimationFrame) API 則是繪製整個動畫；而且你不需先了解此兩個 API。但我們希望在看完本文之後，能引起大家深入探究此兩個 API 的興趣。整個過程會利用某些花俏的物件，並讓你看到幾項有趣技術，像是球體從牆上回彈，並檢查球體是否互相碰撞 (也就是碰撞偵測)。
+此範例將透過 [Canvas API](/zh-TW/docs/Web/API/Canvas_API) 在畫面上繪製球體，[requestAnimationFrame](/zh-TW/docs/Web/API/Window/requestAnimationFrame) API 則是繪製整個動畫；而且你不需先了解此兩個 API。但我們希望在看完本文之後，能引起大家深入探究此兩個 API 的興趣。整個過程會利用某些花俏的物件，並讓你看到幾項有趣技術，像是球體從牆上回彈，並檢查球體是否互相碰撞 (也就是碰撞偵測)。
 
 ## 著手開始
 
@@ -297,7 +297,7 @@ Ball.prototype.update = function () {
 ## 另可參閱
 
 - [Canvas 線上教學](/zh-TW/docs/Web/API/Canvas_API/Tutorial) — 2D canvas 初學者指南
-- [requestAnimationFrame()](/zh-TW/docs/Web/API/window/requestAnimationFrame)
+- [requestAnimationFrame()](/zh-TW/docs/Web/API/Window/requestAnimationFrame)
 - [2D 碰撞偵測](/zh-TW/docs/Games/Techniques/2D_collision_detection)
 - [3D 碰撞偵測](/zh-TW/docs/Games/Techniques/3D_collision_detection)
 - [只使用 JavaScript 的 2D 打磚塊遊戲](/zh-TW/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) — 2D 遊戲開發初學者的絕佳線上教學

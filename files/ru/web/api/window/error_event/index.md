@@ -3,7 +3,7 @@ title: GlobalEventHandlers.onerror
 slug: Web/API/Window/error_event
 ---
 
-{{ ApiRef("HTML DOM") }}
+{{APIRef}}
 
 Обработчик события для ошибок среды Javascript.
 
