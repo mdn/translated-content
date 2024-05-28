@@ -1,7 +1,6 @@
 ---
 title: 열거성과 속성의 소유권
 slug: Web/JavaScript/Enumerability_and_ownership_of_properties
-page-type: guide
 ---
 
 {{jsSidebar("More")}}
