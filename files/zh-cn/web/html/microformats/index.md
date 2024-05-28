@@ -1,44 +1,43 @@
 ---
-title: Microformats
+title: 微格式
 slug: Web/HTML/microformats
-page-type: guide
 ---
 
 {{HTMLSidebar}}
 
-[_微格式_](https://microformats.org/)是一种用于在HTML中嵌入语义和结构化数据的标准，它为社交网络应用程序、搜索引擎、聚合器和其他工具提供了一个API。这些最小的HTML模式用于标记从基本到特定领域的信息实体，例如人物、组织、事件和地点。
-- 要创建一个微格式对象，需要在class属性中使用h-\*类名。
-- 要给对象添加属性，需要在对象的后代元素上使用p-\*, u-\*, dt-\*, e-\* 类名。
+[_微格式_](https://microformats.org/)是一种用于在 HTML 中嵌入语义和结构化数据的标准，它为社交网络应用程序、搜索引擎、聚合器和其他工具提供了一个 API。这些最小的 HTML 模式用于标记从基本到特定领域的信息实体，例如人物、组织、事件和地点。
 
-微格式使用支持词汇表来描述对象，并使用名称-值对为它们的属性赋值。属性被包含在可以添加到任何HTML元素的class属性中，而数据值则复用了HTML元素内容和语义属性。
+- 要创建一个微格式对象，需要在 class 属性中使用 h-\*类名。
+- 要给对象添加属性，需要在对象的后代元素上使用 p-\*, u-\*, dt-\*, e-\* 类名。
 
-微格式2（有时被称为mf2）是对微格式的更新，它提供了一种比以往使用RDFa和microdata的方法更简单的HTML结构化语法和词汇表注释方式。这些以前的方法需要获得新的属性。
+微格式使用支持词汇表来描述对象，并使用名称 - 值对为它们的属性赋值。属性被包含在可以添加到任何 HTML 元素的 class 属性中，而数据值则复用了 HTML 元素内容和语义属性。
 
-对于微格式2，[大多数语言都有开源的解析库](https://microformats.org/wiki/microformats2#Parsers)。
+微格式 2（有时被称为 mf2）是对微格式的更新，它提供了一种比以往使用 RDFa 和 microdata 的方法更简单的 HTML 结构化语法和词汇表注释方式。这些以前的方法需要获得新的属性。
+
+对于微格式 2，[大多数语言都有开源的解析库](https://microformats.org/wiki/microformats2#Parsers)。
 
 ## 微格式的工作原理
 
-网页的作者可以向他们的HTML中添加微格式。例如，如果他们想要标识自己的身份，可以使用[h-card](https://microformats.org/wiki/h-card)例如:
+网页的作者可以向他们的 HTML 中添加微格式。例如，如果他们想要标识自己的身份，可以使用[h-card](https://microformats.org/wiki/h-card)例如：
 
-### HTML案例
+### HTML 案例
 
 ```html
 <a class="h-card" href="https://alice.example.com">Alice Blogger</a>
 ```
 
-当解析器遇到这些数据时，它将知道这个页面包含了一个“卡片”，其描述了一个叫`Alice Blogger`的人或组织，其URL为`https://alice.example.com/`。解析器通过API使这些数据可用，这些API可以用于不同的应用程序。例如，应用程序可以扫描页面上的h-card，用作注册服务的某人的个人资料信息。
+当解析器遇到这些数据时，它将知道这个页面包含了一个“卡片”，其描述了一个叫`Alice Blogger`的人或组织，其 URL 为`https://alice.example.com/`。解析器通过 API 使这些数据可用，这些 API 可以用于不同的应用程序。例如，应用程序可以扫描页面上的 h-card，用作注册服务的某人的个人资料信息。
 正如在这个案例中，某些标记模式只需要一个单一的微格式根类名，解析器使用它来查找一些通用属性，例如`name`, `url`, `photo`.
 
 ## 微格式使用案例
 
-微格式有许多使用案例。首先，[Webmention标准](https://www.w3.org/TR/webmention/)使用微格式提供了一种方式，它可以将消息和评论从一个网站发送到另一个网站。Webmention规范定义了特定属性，以便于站点发布和消费，以创建丰富、可互操作的消息和评论发布方式。微格式也可以与Webmentions一起使用，便于从一个网站向另一个网站发送社交反应，如喜欢、转帖和书签。
+微格式有许多使用案例。首先，[Webmention 标准](https://www.w3.org/TR/webmention/)使用微格式提供了一种方式，它可以将消息和评论从一个网站发送到另一个网站。Webmention 规范定义了特定属性，以便于站点发布和消费，以创建丰富、可互操作的消息和评论发布方式。微格式也可以与 Webmentions 一起使用，便于从一个网站向另一个网站发送社交反应，如喜欢、转帖和书签。
 
 微格式还支持跨站点的轻松聚合。聚合器可以解析发布微格式的页面，寻找诸如帖子标题、帖子正文和帖子作者等信息。然后，这个聚合器可以使用收集到的语义信息在其站点上呈现结果。例如，新闻聚合器和社区发帖板可以促进提交，并使用微格式从页面中提取相关内容。此外，网站可以使用微格式来向第三方（例如社交网络）发送构建好的请求以发布内容。
 
 所有主流搜索引擎都支持读取和解析微格式。搜索引擎从直接访问结构化数据中获益匪浅，因为它们允许搜索引擎去理解网页上的信息。有了这些信息，搜索引擎可以为用户提供更具有相关性的结果。一些搜索引擎可能会根据微格式中提供的数据，在搜索结果页面上呈现特殊的片段，例如星级评分。
 
 除了可以被机器读取外，微格式还便于人类阅读。这种方法使人们容易理解和维护微格式数据。
-
 
 ## 微格式前缀
 
@@ -51,19 +50,19 @@ page-type: guide
   - [h-card](https://microformats.org/wiki/h-card)描述一个人或组织
   - [h-entry](https://microformats.org/wiki/h-entry)描述具有时间戳的在线内容，如博客帖子
   - [h-feed](https://microformats.org/wiki/h-feed)描述帖子的流或源
-  - 你可以在[microformats2 wiki上找到更多词汇表](https://microformats.org/wiki/microformats2#v2_vocabularies)。
+  - 你可以在[microformats2 wiki 上找到更多词汇表](https://microformats.org/wiki/microformats2#v2_vocabularies)。
 
 - **"p-\*" 用于纯（文本）属性**，例如："p-name", "p-summary"
 
-  - 通用纯文本解析，一般元素文本。在某些HTML元素上，首先使用特殊属性，例如：img/alt, abbr/。
+  - 通用纯文本解析，一般元素文本。在某些 HTML 元素上，首先使用特殊属性，例如：img/alt, abbr/。
 
-- **"u-\*"用于URL属性**，例如："u-url", "u-photo", "u-logo"
+- **"u-\*"用于 URL 属性**，例如："u-url", "u-photo", "u-logo"
 
-  - 特殊解析：元素属性a/href, img/src, object/data等属性优先于元素内容。
+  - 特殊解析：元素属性 a/href, img/src, object/data等属性优先于元素内容。
 
-- **"dt-\*"用于datetime属性**，例如："dt-start", "dt-end", "dt-bday"
+- **"dt-\*"用于 datetime 属性**，例如："dt-start", "dt-end", "dt-bday"
 
-  - 特殊解析：time元素datetime属性，[value-class-pattern](https://microformats.org/wiki/value-class-pattern) 和单独的日期时间值解析，以提高可读性。
+  - 特殊解析：time 元素 datetime 属性，[value-class-pattern](https://microformats.org/wiki/value-class-pattern) 和单独的日期时间值解析，以提高可读性。
 
 - **"e-\*"用于元素树属性**，其中整个包含的元素层次结构是值，例如"e-content"。"e-"前缀也可以通过"元素树"、"嵌入式标记"或"封装标记"来记忆。
 
@@ -73,9 +72,9 @@ page-type: guide
 
 [h-card](https://microformats.org/wiki/h-card)微格式表示一个人或组织。
 
-每个属性的值都是使用HTML中的类属性定义的，任何元素都可以携带。
+每个属性的值都是使用 HTML 中的类属性定义的，任何元素都可以携带。
 
-#### h-card示例
+#### h-card 示例
 
 ```html
 <p class="h-card">
@@ -88,18 +87,18 @@ page-type: guide
 </p>
 ```
 
-| 属性   | 描述               |
-| ------ | ------------------ |
-| **p-name** | 个人或组织的全名/格式化名称。|
-| **u-email** | 电子邮件地址。 |
-| **u-photo** | 个人或组织的照片。 |
-| **u-url** | 代表个人或组织的主页或其他URL。 |
-| **u-uid** | 通用唯一标识符，最好是规范URL。 |
-| **p-street-address** | 街道号码+名称。 |
-| **p-locality** | 城市/城镇/村庄。 |
-| **p-country-name** | 国家名称。 |
+| 属性                 | 描述                             |
+| -------------------- | -------------------------------- |
+| **p-name**           | 个人或组织的全名/格式化名称。    |
+| **u-email**          | 电子邮件地址。                   |
+| **u-photo**          | 个人或组织的照片。               |
+| **u-url**            | 代表个人或组织的主页或其他 URL。 |
+| **u-uid**            | 通用唯一标识符，最好是规范 URL。 |
+| **p-street-address** | 街道号码 + 名称。                |
+| **p-locality**       | 城市/城镇/村庄。                 |
+| **p-country-name**   | 国家名称。                       |
 
-#### 嵌套的h-card示例
+#### 嵌套的 h-card 示例
 
 ```html
 <div class="h-card">
@@ -110,7 +109,7 @@ page-type: guide
 </div>
 ```
 
-解析后的JSON：
+解析后的 JSON：
 
 ```json
 {
@@ -136,15 +135,15 @@ page-type: guide
 }
 ```
 
-在这个例子中，h-card分别指定了一个人和他们代表的组织。使用p-org属性指定了个人与链接组织的关联。
+在这个例子中，h-card 分别指定了一个人和他们代表的组织。使用 p-org 属性指定了个人与链接组织的关联。
 
-注意：嵌套的h-card具有隐含的'name'和'url'属性，就像任何其他仅根类名的h-card在`<a href>`上一样。
+注意：嵌套的 h-card 具有隐含的'name'和'url'属性，就像任何其他仅根类名的 h-card 在`<a href>`上一样。
 
 ### h-entry
 
-[h-entry](https://microformats.org/wiki/h-entry)微格式表示网络上的分集或有时间戳的内容。h-entry通常与打算进行聚合的内容一起使用，例如博客帖子和简短笔记。
+[h-entry](https://microformats.org/wiki/h-entry)微格式表示网络上的分集或有时间戳的内容。h-entry 通常与打算进行聚合的内容一起使用，例如博客帖子和简短笔记。
 
-示例： h-entry作为博客帖子：
+示例：h-entry 作为博客帖子：
 
 ```html
 <article class="h-entry">
@@ -167,13 +166,13 @@ page-type: guide
 
 #### 属性
 
-| 属性   | 描述               |
-| ------ | ------------------ |
-| **p-name** | 条目的名称/标题。 |
-| **p-author** | 编写条目的人，可选嵌入h-card。 |
-| **dt-published** | 条目发布的时间。 |
-| **p-summary** | 条目的简短摘要。 |
-| **e-content** | 条目的完整内容。 |
+| 属性             | 描述                            |
+| ---------------- | ------------------------------- |
+| **p-name**       | 条目的名称/标题。               |
+| **p-author**     | 编写条目的人，可选嵌入 h-card。 |
+| **dt-published** | 条目发布的时间。                |
+| **p-summary**    | 条目的简短摘要。                |
+| **e-content**    | 条目的完整内容。                |
 
 #### 解析后的回复 h-entry 示例
 
@@ -292,10 +291,10 @@ page-type: guide
 
 #### 属性
 
-| 属性            | 描述 |
-| -------------- | ------|
-| **`p-name`**   | 源的名称。 |
-| **`p-author`** | 源的作者，可选嵌入h-card。|
+| 属性           | 描述                        |
+| -------------- | --------------------------- |
+| **`p-name`**   | 源的名称。                  |
+| **`p-author`** | 源的作者，可选嵌入 h-card。 |
 
 #### 子级
 
@@ -314,7 +313,7 @@ page-type: guide
 
 ### h-event
 
-`h-event`用于网络上的事件。h-event通常用于活动列表和单个活动页面。
+`h-event`用于网络上的事件。h-event 通常用于活动列表和单个活动页面。
 
 ```html
 <div class="h-event">
@@ -335,9 +334,9 @@ page-type: guide
 
 #### 属性
 
-| 属性              | 描述                                                    |
-| ---------------- | ------------------------------------------------------- |
-| **`p-name`**     | 事件名称（或标题）。                                   |
+| 属性             | 描述                            |
+| ---------------- | ------------------------------- |
+| **`p-name`**     | 事件名称（或标题）。            |
 | **`p-summary`**  | 事件的简短摘要。                |
 | **`dt-start`**   | 事件开始的时间。                               |
 | **`dt-end`**     | 事件结束的时间。                                 |
