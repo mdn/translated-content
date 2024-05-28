@@ -14,6 +14,7 @@ l10n:
 该元素的属性包括 [全局 MathML 属性](/zh-CN/docs/Web/MathML/Global_attributes)。某些浏览器还可能支持以下属性：
 
 - `align` {{Non-standard_Inline}}
+
   - : 指定表格相对于其环境的垂直对齐方式。
     可能的值包括：
     - `axis`（默认）: 表格的垂直中心与环境的轴线（通常是负号）对齐。
