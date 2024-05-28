@@ -190,7 +190,7 @@ signaler.onmessage = async ({ data: { description, candidate } }) => {
 
 在确定要接受邀约后，我们将通过调用 {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}} 为传入的邀约设置远程描述。这会让 WebRTC 知道对方的建议配置是什么。如果我们是礼貌的对等点，就会放弃我们的邀约，接受新的邀约。
 
-如果新设置的远程描述是一个邀约，我们就会要求 WebRTC 通过调用 {{domxref("RTCPeerConnection")}} 方法 {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}} 来选择合适的本地配置，而无需参数。这样， `setLocalDescription()` 就会自动生成适当的应答，以回应收到的邀约。然后，我们通过信令信道将应答发送回第一个对等点。
+如果新设置的远程描述是一个邀约，我们就会要求 WebRTC 通过调用 {{domxref("RTCPeerConnection")}} 方法 {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}} 来选择合适的本地配置，而无需参数。这样，`setLocalDescription()` 就会自动生成适当的应答，以回应收到的邀约。然后，我们通过信令信道将应答发送回第一个对等点。
 
 ## 使协商完美
 
