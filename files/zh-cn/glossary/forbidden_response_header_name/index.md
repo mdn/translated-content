@@ -7,9 +7,9 @@ l10n:
 
 {{GlossarySidebar}}
 
-*禁止修改的响应标头*是一个无法通过编程方式修改的 [HTTP 标头](/zh-CN/docs/Web/HTTP/Headers)（`Set-Cookie`）。
+*禁止修改的响应标头*是一个无法通过编程方式修改的 [HTTP 标头](/zh-CN/docs/Web/HTTP/Headers)，如 `Set-Cookie`。
 
 ## 参见
 
 - [Fetch 规范：禁止修改的响应标头](https://fetch.spec.whatwg.org/#forbidden-response-header-name)
-- {{Glossary("Forbidden header name", "禁止修改的标头")}}
+- {{Glossary("Forbidden header name", "禁止修改的标头")}}（术语）
