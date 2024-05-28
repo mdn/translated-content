@@ -16,7 +16,7 @@ JavaScript 객체의 모든 속성은 세 가지 요소로 분류할 수 있습�
 
 속성의 소유 여부는 속성이 객체 자체에 속하는지 또는 프로토타입 체인에서 상속된 것인지를 기준으로 결정됩니다.
 
-열거 가능 여부와 관계없이 문자열이든 심볼이든, 자체 속성이든 상속된 속성이든, 모든 속성은 [점 표기법(dot notation) 또는 대괄호 표기법(bracket notation)](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors)을 사용하여 접근할 수 있습니다. 이 섹션에서는 JavaScript가 제공하는 객체 속성을 하나씩 방문하는 방법에 중점을 둡니다.
+열거 가능 여부와 관계없이 문자열이든 심볼이든, 자체 속성이든 상속된 속성이든, 모든 속성은 [점 표기법(dot notation) 또는 대괄호 표기법(bracket notation)](/ko/docs/Web/JavaScript/Reference/Operators/Property_accessors)을 사용하여 접근할 수 있습니다. 이 섹션에서는 JavaScript가 제공하는 객체 속성을 하나씩 방문하는 방법에 중점을 둡니다.
 
 ## 객체 속성 쿼리하기
 
