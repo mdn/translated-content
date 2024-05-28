@@ -11,7 +11,7 @@ l10n:
 
 ## 示例
 
-在这个示例中，使用 [munder](/zh-CN/docs/Web/MathML/Element/munder) 元素将脚本 "A" 附加到基础的 "∑" 上。默认情况下，求和符号是以从其父元素继承的 [font-size](/zh-CN/docs/Web/CSS/font-size) 渲染的，并且 A 作为缩小的下标。通过显式设置 `displaystyle="true"` 属性，求和符号将会变大，并且 "A" 变成一个下标。
+在这个示例中，使用 [munder](/zh-CN/docs/Web/MathML/Element/munder) 元素将脚本“A”附加到基础的“∑”上。默认情况下，求和符号是以从其父元素继承的[字体大小](/zh-CN/docs/Web/CSS/font-size)渲染的，并且 A 作为缩小的下标。通过显式设置 `displaystyle="true"` 属性，求和符号将会变大，并且“A”变成一个下标。
 
 ```html
 <math>
