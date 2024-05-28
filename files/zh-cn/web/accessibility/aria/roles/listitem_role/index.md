@@ -60,7 +60,7 @@ ARIA `listitem` 角色可用于标识项目列表中的项目。它通常与 [`l
 
 > **备注：** 给列表添加 CSS 样式 `list-style: none;` 移除列表语义。添加 `role="listitem"` 获得列表语义。
 
-> **备注：** 如果要标记将用作选项卡式界面的项目列表，则应改为使用[`tab`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/tab_role)、[`tabpanel`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/tabpanel_role) 和[`tablist`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/tablist_role) 角色。
+> **备注：** 如果要标记将用作选项卡式界面的项目列表，则应改为使用 [`tab`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/tab_role)、[`tabpanel`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/tabpanel_role)和 [`tablist`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/tablist_role)角色。
 
 ## 规范
 
@@ -75,4 +75,4 @@ ARIA `listitem` 角色可用于标识项目列表中的项目。它通常与 [`l
 - [ARIA：`group` 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles/group_role)
 - [无障碍对象模型](https://wicg.github.io/aom/spec/)
 - [HTML 中的 ARIA](https://w3c.github.io/html-aria/)
-- [ARIA 列表示例](https://www.scottohara.me/blog/2018/05/26/aria-lists.html) — by Scott O'Hara
+- [ARIA 列表示例](https://www.scottohara.me/blog/2018/05/26/aria-lists.html) 由 Scott O'Hara 所著
