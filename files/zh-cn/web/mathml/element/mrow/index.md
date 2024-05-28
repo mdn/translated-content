@@ -12,7 +12,7 @@ l10n:
 在编写 MathML 表达式时，你应该按照表达式的数学解释中所使用的分组方式，使用 `<mrow>` 对表达式中的元素进行分组。正确的分组有助于表达式的呈现，具体体现在以下几个方面：
 
 - 可以通过改变间距和阻止换行来改善显示效果。
-- 通过自动化系统，如计算机代数系统和音频渲染器（automated systems such as computer algebra systems and audio renderers），它能简化表达式的解释（interpretation）过程。
+- 通过自动化系统，如计算机代数系统和音频渲染器，它能简化表达式的解释（interpretation）过程。
 
 ## 属性
 
