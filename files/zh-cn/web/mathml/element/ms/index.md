@@ -7,7 +7,7 @@ l10n:
 
 {{MathMLRef}}
 
-**`<ms>`** [MathML](/zh-CN/docs/Web/MathML) 元素表示要由编程语言和计算机代数系统解释的**字符串文字**。
+**`<ms>`** [MathML](/zh-CN/docs/Web/MathML) 元素表示要由编程语言和计算机代数系统解释的**字符串**字面量。
 
 ## 属性
 
