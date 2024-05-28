@@ -31,9 +31,6 @@ l10n:
 
 이 명세서 레벨에서는 `<basic-shape>` 를 적용하기 위해서는 요소를 플로팅해야 합니다. 이것은 많은 경우에 대해 간단한 폴백을 만드는 부수 효과가 있습니다. 만일 브라우저에 도형 지원이 없는 경우, 사용자는 콘텐츠가 이전처럼 직사각형 박스의 양측에 따라 흐르는 콘텐츠를 보게 될 것입니다. 만일 브라우저에 도형 지원이 있는 경우는 시각적인 디스플레이가 향상됩니다.
 
-<!-- TODO dmdk -->
-
-
 ### 기본 도형
 
 `circle(50%)` 값은 기본 도형의 예제입니다. 명세서에서는 다음 네 가지를 `<basic-shape>` 값으로 정의합니다.
@@ -47,7 +44,7 @@ l10n:
 
 우리는 이미 `circle()` 이 원형 도형을 생성하는지 확인하였습니다. `ellipse()` 는 본질적으로는 납작해진 원형입니다. 이러한 간단한 도형들이 원하는대로 작동하지 않는다면 `polygon()` 을 사용하여 원하는 만큼의 복잡한 도형을 만들 수 있습니다.
 
-[기본 도형 안내서](/en-US/docs/Web/CSS/CSS_shapes/Basic_shapes) 문서에서 각 기본적인 도형을 알아보고 어떻게 생성하는지를 알 수 있습니다.
+[기본 도형 안내서](/ko/docs/Web/CSS/CSS_shapes/Basic_shapes) 문서에서 각 기본적인 도형을 알아보고 어떻게 생성하는지를 알 수 있습니다.
 
 ### 박스 값과 도형
 
@@ -62,13 +59,13 @@ l10n:
 
 {{EmbedGHLiveSample("css-examples/shapes/overview/box.html", '100%', 810)}}
 
-박스 값에 대하여 더 자세히 알아보려면, [박스 값과 도형](/en-US/docs/Web/CSS/CSS_shapes/From_box_values) 문서를 확인해 보세요.
+박스 값에 대하여 더 자세히 알아보려면, [박스 값과 도형](/ko/docs/Web/CSS/CSS_shapes/From_box_values) 문서를 확인해 보세요.
 
 ### 이미지와 도형
 
-경로를 생성하기 위한 흥미로운 방법 하나는 바로 알파 채널을 가진 이미지를 사용하는 것입니다. 텍스트는 이미지의 투명하지 않은 부분을 감싸게 됩니다. 그것은 감싸진 콘텐츠에 이미지를 따라 오버레이를 허용하거나  페이지에 표시되지 않는 이미지를 오직 복잡한 모양을 만들기 위한 방법으로 사용할 수 있어 폴리곤을 신중하게 매핑할 필요가 없습니다.
+경로를 생성하기 위한 흥미로운 방법 하나는 바로 알파 채널을 가진 이미지를 사용하는 것입니다. 텍스트는 이미지의 투명하지 않은 부분을 감싸게 됩니다. 그것은 감싸진 콘텐츠에 이미지를 따라 오버레이를 허용하거나 페이지에 표시되지 않는 이미지를 오직 복잡한 모양을 만들기 위한 방법으로 사용할 수 있어 폴리곤을 신중하게 매핑할 필요가 없습니다.
 
-이러한 용도로 사용되는 이미지는 [호환 가능한 CORS](/en-US/docs/Web/HTTP/CORS) 여야 합니다. 그렇지 않으면 `shape-outside` 는 마치 `none` 값을 부여한 것처럼 동작하여 아무런 도형도 나타나지 않게 됩니다.
+이러한 용도로 사용되는 이미지는 [호환 가능한 CORS](/ko/docs/Web/HTTP/CORS) 여야 합니다. 그렇지 않으면 `shape-outside` 는 마치 `none` 값을 부여한 것처럼 동작하여 아무런 도형도 나타나지 않게 됩니다.
 
 다음 예제는, 완전히 투명한 영역이 있는 이미지가 있고 이 이미지를 `shape-outside` 의 URL 값으로 사용하는 것입니다. 이 도형은 불투명한 영역, 즉 풍선의 이미지를 따라 생성됩니다.
 
@@ -82,7 +79,7 @@ l10n:
 
 {{EmbedGHLiveSample("css-examples/shapes/overview/threshold.html", '100%', 820)}}
 
-[이미지와 도형](/en-US/docs/Web/CSS/CSS_shapes/Shapes_from_images) 안내서에서 더 자세하게 이미지로부터 도형을 생성하는 방법에 대해 알아볼 수 있습니다.
+[이미지와 도형](/ko/docs/Web/CSS/CSS_shapes/Shapes_from_images) 안내서에서 더 자세하게 이미지로부터 도형을 생성하는 방법에 대해 알아볼 수 있습니다.
 
 ## `shape-margin` 속성
 
@@ -112,7 +109,7 @@ l10n:
 
 브라우저에서 CSS 도형 지원이 제공되는 것과 함께, 파이어폭스는 파이어폭스 개발자 도구에 [Shape Path Editor](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html) 를 포함하고 있습니다. 이 도구는 페이지의 어떤 도형이든 그것을 검사하고, 실시간 페이지에서 값을 변경할 수 있습니다. 만일 폴리곤이 완벽하지 않다면 Shapes Editor를 사용하여 약간 조정한 후, 새 값을 CSS에 복사할 수 있습니다.
 
-Shape Path Editor 는 `clip-path` 를 통하여 생성된 도형에 대해 파이어폭스 60 에서 기본적으로 활성화됩니다. 또한 `shape-outside` 를 통하여 생성된 도형을 수정할 때에도 사용할 수 있지만, `layout.css.shape-outside.enabled` 설정을 통해 활성화해야 합니다. 
+Shape Path Editor 는 `clip-path` 를 통하여 생성된 도형에 대해 파이어폭스 60 에서 기본적으로 활성화됩니다. 또한 `shape-outside` 를 통하여 생성된 도형을 수정할 때에도 사용할 수 있지만, `layout.css.shape-outside.enabled` 설정을 통해 활성화해야 합니다.
 
 ## 미래 CSS 도형 기능들
 
