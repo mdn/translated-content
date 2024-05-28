@@ -1,5 +1,5 @@
 ---
-title: "Express チュートリアル Part 5: ライブラリデータの表示"
+title: "Express チュートリアル Part 5: ライブラリーデータの表示"
 slug: Learn/Server-side/Express_Nodejs/Displaying_data
 ---
 
@@ -13,7 +13,7 @@ slug: Learn/Server-side/Express_Nodejs/Displaying_data
 
 ## 概要
 
-前回のチュートリアル記事では、データベースとやり取りするために使用できる [Mongoose モデル](/ja/docs/Learn/Server-side/Express_Nodejs/mongoose)を定義し、いくつかの初期ライブラリレコードを作成しました。その後、 LocalLibrary ウェブサイトに必要な[すべてのルートを作成しました](/ja/docs/Learn/Server-side/Express_Nodejs/routes)が、"ダミーコントローラ" 関数 (ページにアクセスすると "未実装" のメッセージを返すだけのスケルトンコントローラ関数) を使用しました。
+前回のチュートリアル記事では、データベースとやり取りするために使用できる [Mongoose モデル](/ja/docs/Learn/Server-side/Express_Nodejs/mongoose)を定義し、いくつかの初期ライブラリーレコードを作成しました。その後、 LocalLibrary ウェブサイトに必要な[すべてのルートを作成しました](/ja/docs/Learn/Server-side/Express_Nodejs/routes)が、"ダミーコントローラ" 関数 (ページにアクセスすると "未実装" のメッセージを返すだけのスケルトンコントローラ関数) を使用しました。
 
 次のステップは、私たちの図書館情報を表示するページに適切な実装をすることです (後の記事で情報を作成、更新、または削除するフォームを特徴とする実装ページを見ます)。これには、モデルを使用してレコードを取得するためのコントローラ機能の更新、およびこの情報をユーザーに表示するためのテンプレートの定義が含まれます。
 
@@ -21,7 +21,7 @@ slug: Learn/Server-side/Express_Nodejs/Displaying_data
 
 この記事が終わるときには、ルート、非同期関数、ビュー、およびモデルが実際にどのように機能するのかについてのエンドツーエンドの理解が十分にあるはずです。
 
-## ライブラリデータチュートリアルサブ記事の表示
+## ライブラリーデータチュートリアルサブ記事の表示
 
 次のサブ記事では、必要なウェブサイトページを表示するために必要なさまざまな機能を追加するプロセスについて説明します。次のものに進む前に、順番にこれらのそれぞれを読み、作業する必要があります。
 
