@@ -51,5 +51,5 @@ l10n:
 
 ## 参见
 
-- {{ MathMLElement("munder") }} (Underscript)
-- {{ MathMLElement("mover") }} (Overscript)
+- {{ MathMLElement("munder") }}（下标）
+- {{ MathMLElement("mover") }}（上标）
