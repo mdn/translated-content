@@ -1,6 +1,8 @@
 ---
 title: 移动无障碍清单
 slug: Web/Accessibility/Mobile_accessibility_checklist
+l10n:
+  sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
 ---
 
 {{AccessibilitySidebar}}
@@ -9,14 +11,12 @@ slug: Web/Accessibility/Mobile_accessibility_checklist
 
 ## 颜色
 
-- 颜色对比度**必须**遵循 [WCAG 2.0](http://www.w3.org/TR/WCAG/) AA 等级需求：
+- 颜色对比度**必须**遵循 [WCAG 2.1 AA 等级需求](https://www.w3.org/TR/WCAG/#contrast-minimum)：
 
   - 普通文本的对比率为 4.5:1（小于 18 磅或黑体 14 磅）
   - 大文本对比率为 3:1（大于等于 18 磅或黑体 14 磅）【译者注：字体单位为 point、PT】
 
 - 颜色传递的信息，**必须**也通过其他方式标明（例如，链接文本中的下划线）
-
-> **备注：** Jon Snook 开发的 [颜色对比度检查器 - Colour Contrast Checker](http://snook.ca/technical/colour_contrast/colour.html) 可以轻松检查前景和背景的对比度。同样，[Tanaguru Contrast-Finder](http://contrast-finder.tanaguru.com/) 这个工具能做类似的检查，并且会推荐你考虑使用类似的更好的对比度
 
 ## 可视化
 
@@ -43,11 +43,18 @@ slug: Web/Accessibility/Mobile_accessibility_checklist
   - 如果上面的特性不适用，使用恰当的[ARIA Properties](http://www.w3.org/WAI/PF/aria/states_and_properties#global_states_header)，比如 `aria-label`, `aria-labelledby`, 或 `aria-describedby`.
 
 - **必须**避免文本图像。
+- 所有带有可见文本（或文本图片）作为标签的用户界面组件必须在组件的编程[名称](https://www.w3.org/TR/WCAG21/#dfn-name)中提供相同的文本。见 [WCAG 2.1: 名称中的标签](https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html)。
 - 所有的表单控件**必须**有标签 ({{ htmlelement("label") }} elements) ，以便于读屏用户的使用。
 
 ## 状态处理
 
-- 标准控件，如单选按钮和复选是通过操作系统处理的，而其他自定义控件的状态改变需要通过 [ARIA States](http://www.w3.org/TR/wai-aria/states_and_properties#attrs_widgets_header) ，如 `aria-checked`, `aria-disabled`, `aria-selected`, `aria-expanded`,和 `aria-pressed`.
+- 标准控件，如单选按钮和复选是通过操作系统处理的，而其他自定义控件的状态改变需要通过 [ARIA States](http://www.w3.org/TR/wai-aria/states_and_properties#attrs_widgets_header) ，如 `aria-checked`, `aria-disabled`, `aria-selected`, `aria-expanded`,和 `aria-pressed`。
+
+## 方向
+
+- 内容不应仅限于单一方向，如纵向或横向，除非必要。见 [WCAG 2.1：方向](https://www.w3.org/WAI/WCAG21/Understanding/orientation.html)
+
+  - 方向是必要的例如在钢琴应用程序或银行支票。
 
 ## General Guidelines 常规指南
 
@@ -61,10 +68,14 @@ slug: Web/Accessibility/Mobile_accessibility_checklist
   <h3>Low level heading</h3>
   ```
 
-- 应使用 [ARIA Landmark Roles](http://www.w3.org/TR/wai-aria/roles#landmark_roles_header) 描述应用或文档的结构，如 `banner`, `complementary`, `contentinfo`, `main`, `navigation`, `search`.
-- 触摸事件处理器，只能通过 `touchend` 事件触发。
+- 应使用 [ARIA Landmark Roles](https://www.washington.edu/accessibility/websites/regions/) 描述应用或文档的结构，如 `banner`, `complementary`, `contentinfo`, `main`, `navigation`, `search`.
+- 对于触摸事件，以下至少有一项必须为真（[WCAG 2.1：指针取消](https://www.w3.org/WAI/WCAG21/Understanding/pointer-cancellation.html)）：
+
+  - 不应使用按下事件来触发任何操作
+  - 操作在释放事件上触发，并提供中止操作的选项，在其完成之前或提供撤消操作的选项
+  - 松开事件将撤消在按下事件上触发的任何操作
+  - 在按下事件上触发操作是必要的。例如，玩游戏或钢琴应用程序。
+
 - 触摸目标必须足够大，方便用户交互 (参考 [BBC Mobile Accessibility Guidelines](http://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile/design/touch-target-size) 关于触摸目标尺寸的指南)
 
-> **备注：** [Tanaguru's automated accessibility testing service](http://www.tanaguru.com/) 提供一个有效的方法，排查网页上的，或者是可安装的 Web 应用中无障碍问题（如，Firefox OS）。[tanaguru.org](http://tanaguru.org/)，你可以参与该项目或者发现更多技术实现。
-
-> **备注：** The 该文档的最初版本 - [original version of this document](http://yzen.github.io/firefoxos/2014/04/30/mobile-accessibility-checklist.html) 是由 [Yura Zenevich](http://yzen.github.io/) 完成。
+> **备注：** 该文档的[最初版本](https://yzen.github.io/firefoxos/2014/04/30/mobile-accessibility-checklist.html) 是由 [Yura Zenevich](https://yzen.github.io/) 完成。
