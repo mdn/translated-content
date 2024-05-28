@@ -1,5 +1,5 @@
 ---
-title: 证明毕达哥拉斯定理
+title: 证明勾股定理
 slug: Web/MathML/Examples/MathML_Pythagorean_Theorem
 l10n:
   sourceCommit: 8eece0b998c23e8ea35f936d7371a169974130f5
