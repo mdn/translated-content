@@ -7,7 +7,7 @@ l10n:
 
 {{MathMLRef}}
 
-**`<merror>`** 这个 [MathML](/zh-CN/docs/Web/MathML) 元素用于将内容显示为错误消息。该元素的目的是为从其他输入生成 MathML 的程序提供一种标准方法来报告语法错误。
+**`<merror>`** [MathML](/zh-CN/docs/Web/MathML)元素用于将内容显示为错误消息。该元素的目的是为从其他输入生成 MathML 的程序提供一种标准方法来报告语法错误。
 
 ## 属性
 
