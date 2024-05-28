@@ -7,7 +7,7 @@ l10n:
 
 {{MathMLRef}}
 
-现在我们将证明[毕达哥拉斯定理](https://zh.wikipedia.org/wiki/勾股定理)：
+现在我们将证明[勾股定理](https://zh.wikipedia.org/wiki/勾股定理)：
 
 **陈述：** 在一个直角三角形中，斜边的平方等于另外两条边的平方和。
 
