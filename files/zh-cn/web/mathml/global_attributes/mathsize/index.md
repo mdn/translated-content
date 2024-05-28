@@ -26,11 +26,11 @@ l10n:
 
 - {{cssxref("&lt;length&gt;")}}
 
-  - : 一个正值的 {{cssxref("&lt;length&gt;")}}。对于大多数与字体相关的单位（例如 `em` 和 `ex`），字体大小是相对于父元素的字体大小的。
+  - : 一个正的 {{cssxref("&lt;length&gt;")}} 值。对于大多数与字体相关的单位（例如 `em` 和 `ex`），字体大小是相对于父元素的字体大小的。
 
 - {{cssxref("&lt;percentage&gt;")}}
 
-  - : 一个正值的 {{cssxref("&lt;percentage&gt;")}}，相对于父元素的字体大小。
+  - : 一个正的 {{cssxref("&lt;percentage&gt;")}} 值，相对于父元素的字体大小。
 
 > **备注：** 一些浏览器可能还接受[旧版 MathML 长度](/zh-CN/docs/Web/MathML/Values#legacy_mathml_lengths)。
 
