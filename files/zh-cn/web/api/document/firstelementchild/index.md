@@ -7,7 +7,7 @@ l10n:
 
 {{ APIRef("DOM") }}
 
-**`Document.firstElementChild`** 只读属性返回文档的第一个子元素 {{domxref("Element")}}，如果没有子元素，则返回 `null`。
+**`Document.firstElementChild`** 只读属性返回文档的第一个子{{domxref("Element", "元素", "", 1)}}，如果没有子元素，则返回 `null`。
 
 对于 HTML 文档，这通常是唯一的子元素，即 `<html>` 根元素。
 
