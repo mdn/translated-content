@@ -7,7 +7,7 @@ l10n:
 
 {{MathMLRef}}
 
-**`<ms>`** 这个 [MathML](/zh-CN/docs/Web/MathML) 元素表示要由编程语言和计算机代数系统解释的**字符串文字**。
+**`<ms>`** [MathML](/zh-CN/docs/Web/MathML) 元素表示要由编程语言和计算机代数系统解释的**字符串文字**。
 
 ## 属性
 
@@ -16,11 +16,8 @@ l10n:
 某些浏览器还可能支持以下已弃用属性，并将`<ms>`元素的内容用指定的开放引号和闭合引号包围起来：
 
 - `lquote`
-
   - : 用于包围内容的开放引号。默认值为`&quot;`。
-
 - `rquote`
-
   - : 用于包围内容的闭合引号。默认值为`&quot;`。
 
 ## 示例
@@ -33,7 +30,7 @@ l10n:
 </math>
 ```
 
-{{ EmbedLiveSample('default_rendering', 700, 200, "", "") }}
+{{ EmbedLiveSample('默认渲染', 700, 200, "", "") }}
 
 ### 旧版 quote 属性
 
@@ -43,7 +40,7 @@ l10n:
 </math>
 ```
 
-{{ EmbedLiveSample('legacy_quote_attributes', 700, 200, "", "") }}
+{{ EmbedLiveSample('旧版 quote 属性', 700, 200, "", "") }}
 
 ## 规范
 
