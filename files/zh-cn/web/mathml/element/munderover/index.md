@@ -18,7 +18,7 @@ l10n:
 - `accent`
   - : [`<boolean>`](/zh-CN/docs/Web/MathML/Values#mathml-specific_types)，表示上标是否应被视为重音符号（即，绘制得更大并且更接近基本表达式）。
 - `accentunder`
-  - : [`<boolean>`](/zh-CN/docs/Web/MathML/Values#mathml-specific_types)，表示下标是否应被视为重音（即，绘制得更大并且更接近基本表达式）。
+  - : [`<boolean>`](/zh-CN/docs/Web/MathML/Values#mathml-specific_types)，表示下标是否应被视为重音符号（即，绘制得更大并且更接近基本表达式）。
 
 ## 示例
 
