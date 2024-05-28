@@ -338,9 +338,9 @@ slug: Web/HTML/microformats
 | ---------------- | ------------------------------- |
 | **`p-name`**     | 事件名称（或标题）。            |
 | **`p-summary`**  | 事件的简短摘要。                |
-| **`dt-start`**   | 事件开始的时间。                               |
-| **`dt-end`**     | 事件结束的时间。                                 |
-| **`p-location`** | 事件发生地点，可选嵌入h-card。 |
+| **`dt-start`**   | 事件开始的时间。                |
+| **`dt-end`**     | 事件结束的时间。                |
+| **`p-location`** | 事件发生地点，可选嵌入 h-card。 |
 
 #### 解析后的 h-event 示例
 
@@ -434,9 +434,9 @@ slug: Web/HTML/microformats
 }
 ```
 
-## 微格式rel属性示例
+## 微格式 rel 属性示例
 
-有一些微格式是通过使用特殊的`rel=属性`应用于页面的。这些微格式描述了当前文档和链接文档之间的关系。要获得完整的列表，请参阅微格式wiki上的[rel属性](https://microformats.org/wiki/rel-values)。
+有一些微格式是通过使用特殊的`rel=属性`应用于页面的。这些微格式描述了当前文档和链接文档之间的关系。要获得完整的列表，请参阅微格式 wiki 上的[rel 属性](https://microformats.org/wiki/rel-values)。
 
 ### rel=author
 
@@ -464,12 +464,12 @@ slug: Web/HTML/microformats
 
 ## 浏览器兼容性
 
-所有浏览器都支持class属性及其DOM API。
+所有浏览器都支持 class 属性及其 DOM API。
 
 ## 参见
 
-- [类属性](/en-US/docs/Web/HTML/Global_attributes/class)
+- [类属性](/zh-CN/docs/Web/HTML/Global_attributes/class)
 - [维基百科上的微格式](https://en.wikipedia.org/wiki/Microformat)
 - [微格式官网](https://microformats.org/)
 - 通过微格式官网[寻求帮助](https://microformats.org/wiki/search_engines)
-- [IndieWebCamp的微格式](https://indieweb.org/microformats)
+- [IndieWebCamp 的微格式](https://indieweb.org/microformats)
