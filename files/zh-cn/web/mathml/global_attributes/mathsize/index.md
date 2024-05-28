@@ -9,7 +9,7 @@ l10n:
 
 **`mathbackground`** [全局属性](/zh-CN/docs/Web/MathML/Global_attributes) 设置 MathML 元素的[字体大小](/zh-CN/docs/Web/CSS/font-size)。
 
-> **备注：** 尽可能使用 CSS 对 MathML 进行样式设置。`mathsize` 属性应仅在不支持 CSS 并且将被 CSS `font-size` 属性值覆盖的应用程序中包含。
+> **备注：** 尽可能使用 CSS 对 MathML 进行样式设置。`mathsize` 属性只应包含在不支持 CSS 的应用程序中，并且如果设置的话，其将被 CSS `font-size` 属性值覆盖。
 
 ## 语法
 
