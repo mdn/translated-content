@@ -9,7 +9,6 @@ l10n:
 
 [CSS 박스 모델](/ko/docs/Web/CSS/CSS_box_model) 모듈의 값을 이용하여 도형을 생성하는 쉬운 방법이 있습니다. 이 아티클에서는 그 방법에 대해 설명합니다.
 
-
 {{cssxref("box-edge")}} 박스 값은 다음 도형 값을 허용합니다.
 
 - `content-box`
