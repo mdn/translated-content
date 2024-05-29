@@ -37,7 +37,7 @@ l10n:
 - [`aria-owns`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-owns)
   - : 这是一个以空格分隔的元素 ID 列表，这些元素不是 listbox 的 DOM 子元素。此处列出的 ID 也不能列在任何其他元素的 [`aria-owns`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-owns) 属性中。
 - [`aria-multiselectable`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable)
-  - : 如果用户可以选择多个选项，则存在并设置为 `true`。如果设置为 `true`，_每个_ 可选的选项都应包含[`aria-selected`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-selected) 属性并设置为 `true` 或 `false`。 *不可选*的选项*不应该*具有[`aria-selected`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-selected) 属性。如果值为 `false` 或被省略，那么仅当前选中的选项（如果有任何选项被选中）才需要[`aria-selected`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-selected) 属性，而且必须设置为`true`。
+  - : 如果用户可以选择多个选项，则存在并设置为 `true`。如果设置为 `true`，*每个*可选的选项都应包含 [`aria-selected`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-selected) 属性并设置为 `true` 或 `false`。 *不可选*的选项*不应该*具有 [`aria-selected`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-selected) 属性。如果值为 `false` 或被省略，那么仅当前选中的选项（如果有任何选项被选中）才需要 [`aria-selected`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-selected) 属性，而且必须设置为 `true`。
 - [`aria-required`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-required)
   - : 一个布尔属性，指示必须选择具有非空字符串值的选项。
 - [`aria-readonly`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-readonly)
