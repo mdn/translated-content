@@ -33,7 +33,7 @@ l10n:
 #### 状态和属性
 
 - [`aria-activedescendant`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant)
-  - : 保存 listbox 中当前活动元素的 `id` 字符串。如果这是一个 option 元素，那么这将是最近与之交互选项的 `id`，无论该选项是否具有值为 `true` 的[`aria-selected`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-selected)。即使在多选列表框中，也只会有一个 `id`。如果 `id` 不引用 listbox 的 DOM 后代，则 `id` 必须包含在[`aria-owns`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-owns) 属性中的 ID 中。
+  - : 保存 listbox 中当前活动元素的 `id` 字符串。如果这是一个 option 元素，那么这将是最近与之交互选项的 `id`，无论该选项是否具有值为 `true` 的 [`aria-selected`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-selected)。即使在多选列表框中，也只会有一个 `id`。如果 `id` 不引用 listbox 的 DOM 后代，则 `id` 必须包含在 [`aria-owns`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-owns) 属性中的 ID 中。
 - [`aria-owns`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-owns)
   - : 这是一个以空格分隔的元素 ID 列表，它们不是 listbox 的 DOM 子元素。此处列出的 ID 也不能列在任何其他元素的[`aria-owns`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-owns) 属性中。
 - [`aria-multiselectable`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable)
