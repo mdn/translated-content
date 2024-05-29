@@ -13,7 +13,7 @@ l10n:
 
 有时，元素的默认{{Glossary("accessible_name", "无障碍名称")}}缺失，或者无障碍名称并不准确描述元素的内容，且在 DOM 中没有可见内容可以与对象相关联以赋予其含义。一个常见的示例是包含 SVG 或没有任何文本的图标字体的按钮。（查看这个关于[为什么不应该使用图标字体的视频](https://www.youtube.com/watch?v=9xXBYcWgCHA)。）
 
-在交互元素没有无障碍名称或无障碍名称不准确，且在 DOM 中没有可见内容可以通过[`aria-labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)属性引用时，可以使用`aria-label`属性定义一个字符串，为设置了该属性的交互元素提供标签。这为交互元素提供了无障碍名称。
+在交互元素没有无障碍名称或无障碍名称不准确，且在 DOM 中没有可见内容可以通过 [`aria-labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) 属性引用时，可以使用 `aria-label` 属性定义一个字符串，为设置了该属性的交互元素提供标签。这样做为交互元素提供了无障碍名称。
 
 以下代码示例演示了如何使用`aria-label`属性为`<button>`元素提供无障碍名称的示例。在这个示例中，按钮包含一个 SVG 图形并且缺乏文本内容，使得对于屏幕阅读器用户理解其功能（在本例中为“关闭”）而言，`aria-label`是必不可少的。
 
