@@ -103,4 +103,4 @@ aria-label 属性不受支持的角色有：
 - {{HTMLElement('label')}} 元素
 - [`aria-description`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-description)
 - [`aria-labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
-- [使用 HTML 地标角色来提高无障碍性](/zh-CN/blog/aria-accessibility-html-landmark-roles/) 在 MDN 博客（2023）
+- [使用 HTML 地标角色来提高无障碍性](/en-US/blog/aria-accessibility-html-landmark-roles/) 在 MDN 博客（2023）
