@@ -5,10 +5,10 @@ slug: Web/HTML/microformats
 
 {{HTMLSidebar}}
 
-[_微格式_](https://microformats.org/)是一种用于在 HTML 中嵌入语义和结构化数据的标准，它为社交网络应用程序、搜索引擎、聚合器和其他工具提供了一个 API。这些最小的 HTML 模式用于标记从基本到特定领域的信息实体，例如人物、组织、事件和地点。
+[_微格式_](https://microformats.org/)（microformat）是一种用于在 HTML 中嵌入语义和结构化数据的标准，它为社交网络应用程序、搜索引擎、聚合器和其他工具提供了一个 API。这些最小的 HTML 模式用于标记从基本到特定领域的信息实体，例如人物、组织、事件和地点。
 
-- 要创建一个微格式对象，需要在 class 属性中使用 h-\*类名。
-- 要给对象添加属性，需要在对象的后代元素上使用 p-\*, u-\*, dt-\*, e-\* 类名。
+- 要创建一个微格式对象，需要在 class 属性中使用 h-\* 类名。
+- 要给对象添加属性，需要在对象的后代元素上使用 p-\*、u-\*、dt-\*、e-\* 类名。
 
 微格式使用支持词汇表来描述对象，并使用名称——值对为它们的属性赋值。属性被包含在可以添加到任何 HTML 元素的 class 属性中，而数据值则复用了 HTML 元素内容和语义属性。
 
@@ -18,7 +18,7 @@ slug: Web/HTML/microformats
 
 ## 微格式的工作原理
 
-网页的作者可以向他们的 HTML 中添加微格式。例如，如果他们想要标识自己的身份，可以使用[h-card](https://microformats.org/wiki/h-card)例如：
+网页的作者可以向他们的 HTML 中添加微格式。例如，如果他们想要标识自己的身份，可以使用 [h-card](https://microformats.org/wiki/h-card) 例如：
 
 ### HTML 案例
 
@@ -26,8 +26,7 @@ slug: Web/HTML/microformats
 <a class="h-card" href="https://alice.example.com">Alice Blogger</a>
 ```
 
-当解析器遇到这些数据时，它将知道这个页面包含了一个“卡片”，其描述了一个叫`Alice Blogger`的人或组织，其 URL 为`https://alice.example.com/`。解析器通过 API 使这些数据可用，这些 API 可以用于不同的应用程序。例如，应用程序可以扫描页面上的 h-card，用作注册服务的某人的个人资料信息。
-正如在这个案例中，某些标记模式只需要一个单一的微格式根类名，解析器使用它来查找一些通用属性，例如`name`, `url`, `photo`.
+当解析器遇到这些数据时，它将知道这个页面包含了一个“卡片”，其描述了一个叫 `Alice Blogger` 的人或组织，其 URL 为 `https://alice.example.com/`。解析器通过 API 使这些数据可用，这些 API 可以用于不同的应用程序。例如，应用程序可以扫描页面上的 h-card，用作注册服务的某人的个人资料信息。正如在这个案例中，某些标记模式只需要一个单一的微格式根类名，解析器使用它来查找一些通用属性，例如 `name`、`url`、`photo`。
 
 ## 微格式使用案例
 
@@ -70,7 +69,7 @@ slug: Web/HTML/microformats
 
 ### h-card
 
-[h-card](https://microformats.org/wiki/h-card)微格式表示一个人或组织。
+[h-card](https://microformats.org/wiki/h-card) 微格式表示一个人或组织。
 
 每个属性的值都是使用 HTML 中的类属性定义的，任何元素都可以携带。
 
@@ -94,7 +93,7 @@ slug: Web/HTML/microformats
 | **u-photo**          | 个人或组织的照片。               |
 | **u-url**            | 代表个人或组织的主页或其他 URL。 |
 | **u-uid**            | 通用唯一标识符，最好是规范 URL。 |
-| **p-street-address** | 街道号码 + 名称。                |
+| **p-street-address** | 街道号码+名称。                |
 | **p-locality**       | 城市/城镇/村庄。                 |
 | **p-country-name**   | 国家名称。                       |
 
