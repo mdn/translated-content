@@ -131,7 +131,7 @@ l10n:
 
 1. 取消选择先前选择的选项，将 [`aria-selected`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-selected) 设置为 `false`，或完全删除该属性，将新未选择的选项的外观更改为未选择的。
 2. 选择新选择的选项，在该选项上设置 `aria-selected="true"` 并将新选择的选项的外观更改为选中。
-3. 将列表框上的[`aria-activedescendant`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) 值更新为新选择的选项的 ID。
+3. 将列表框上的 [`aria-activedescendant`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) 值更新为新选择的选项的 ID。
 4. 可视化处理选项的丢焦、聚焦和选定状态。
 
 #### 在多选列表框中切换选项的状态
