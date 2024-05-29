@@ -41,6 +41,7 @@ setSelectionRange(selectionStart, selectionEnd, selectionDirection)
     - `"forward"`
     - `"backward"`
     - `"none"` 默认值，表示方向未知或不相关。
+
 ### 返回值
 
 无 ({{jsxref("undefined")}})。
