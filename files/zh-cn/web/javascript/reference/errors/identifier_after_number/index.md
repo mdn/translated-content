@@ -23,15 +23,15 @@ SyntaxError: Unexpected number (Chrome)
 
 ## 什么地方出错了？
 
-变量的名称也称为[标识符](/zh-CN/docs/Glossary/Identifier)，需遵循特定的规则，你的代码必须遵循这些规则！
+变量的名称（也称为[标识符](/zh-CN/docs/Glossary/Identifier)）需遵循特定的规则，而这些规则是你的代码必须遵循的！
 
-JavaScript 标识符必须以字母、下划线（\_）或美元符号（$）开头。不能以数字开头！后面的字符只能是数字（0-9）。
+JavaScript 标识符必须以字母、下划线（\_）或美元符号（$）开头。不能以数字开头！只有后续的字符可以是数字（0-9）。
 
 ## 示例
 
 ### 以数字文字开头的变量名
 
-在 JavaScript 中，变量名不能以数字开头。下面的操作就会失败：
+在 JavaScript 中，变量名不能以数字开头。以下表达式会失败：
 
 ```js-nolint example-bad
 const 1life = "foo";
