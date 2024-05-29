@@ -7,7 +7,7 @@ l10n:
 
 {{MathMLRef}}
 
-**`<mtd>`** 这个 [MathML](/zh-CN/docs/Web/MathML) 元素表示表格或矩阵中的单元格。它只能出现在{{ MathMLElement("mtr") }}元素中。该元素类似于[HTML](/zh-CN/docs/Web/HTML)中的{{ HTMLElement("td") }}元素。
+**`<mtd>`** [MathML](/zh-CN/docs/Web/MathML) 元素表示表格或矩阵中的单元格。它只能出现在 {{ MathMLElement("mtr") }} 元素中。该元素类似于 [HTML](/zh-CN/docs/Web/HTML) 中的 {{ HTMLElement("td") }} 元素。
 
 ## 属性
 
