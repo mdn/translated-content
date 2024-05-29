@@ -31,7 +31,7 @@ clip-path: circle(6rem at 12rem 8rem);
 
 - `<position>`
 
-  - : 移动圆的中心。可以是一个 {{cssxref("length")}}，或者一个 {{cssxref("percentage")}}，或者类似 `left` 的值。如果省略了 `<position>` 值，则默认为中心。
+  - : 移动圆的中心。可以是一个 {{cssxref("length")}} 值，或者是一个 {{cssxref("percentage")}} 值，或者是类似 `left` 的值。如果省略了 `<position>` 值，则默认为中心。
 
 ## 形式语法
 
