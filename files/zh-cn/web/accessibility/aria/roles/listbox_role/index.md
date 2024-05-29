@@ -142,7 +142,7 @@ l10n:
 2. 更改选项的外观以反映其选定状态。
 3. 将列表框上的 [`aria-activedescendant`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) 值更新为用户刚刚与之交互的选项的 ID，即使他们将选项切换为取消选择。
 
-> **备注：** ARIA 使用的第一原则是你可以使用具有内置语义和行为的原生功能，而不是重新利用元素并**添加** ARIA 角色、状态或属性使其可访问。含有后代 {{HTMLElement("option")}} 元素的 {{HTMLElement("select")}} 元素带有所有需要的交互的原生处理方法。
+> **备注：** ARIA 使用的第一原则是你可以使用具有内置语义和行为的原生功能，而不是重新利用元素并**添加** ARIA 角色、状态或属性使其具有无障碍性。含有后代 {{HTMLElement("option")}} 元素的 {{HTMLElement("select")}} 元素带有所有需要的交互的原生处理方法。
 
 ## 示例
 
