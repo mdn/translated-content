@@ -1,6 +1,6 @@
 ---
-title: aria-atomic
-slug: Web/Accessibility/ARIA/Attributes/aria-atomic
+title: aria-autocomplete
+slug: Web/Accessibility/ARIA/Attributes/aria-autocomplete
 l10n:
   sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
 ---
