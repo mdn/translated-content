@@ -15,7 +15,7 @@ l10n:
 
 ![CORS 機制示意圖](cors_principle.png)
 
-CORS 機制支持瀏覽器和伺服器之間的安全跨來源請求和數據傳輸。瀏覽器在 `fetch()` 或 `XMLHttpRequest` 等 API 中使用 CORS 來減少跨來源 HTTP 請求的風險。
+CORS 機制支持瀏覽器和伺服器之間的安全跨來源請求和數據傳輸。瀏覽器在 `fetch()` 或 `XMLHttpRequest` 等 API 中使用 CORS 來降低跨來源 HTTP 請求的風險。
 
 ## 什麼請求使用 CORS？
 
@@ -31,7 +31,7 @@ CORS 機制支持瀏覽器和伺服器之間的安全跨來源請求和數據傳
 
 ## 功能概述
 
-跨來源資源共享標準通過新增 [HTTP 標頭](/zh-TW/docs/Web/HTTP/Headers)來工作，這些標頭讓伺服器描述哪些來源被允許從 Web 瀏覽器讀取該訊息。此外，對於可能對伺服器數據產生副作用的 HTTP 請求方法（特別是 {{HTTPMethod("GET")}} 以外的 HTTP 方法，或具有特定 [MIME 類型](/zh-TW/docs/Web/HTTP/Basics_of_HTTP/MIME_types)的 {{HTTPMethod("POST")}} 方法），規範要求瀏覽器「預檢」該請求，通過 HTTP {{HTTPMethod("OPTIONS")}} 請求方法向伺服器詢問支持的方法，然後在獲得伺服器「批准」後發送實際請求。伺服器還可以通知用戶端是否應該與請求一起發送「憑證」（例如 [Cookies](/zh-TW/docs/Web/HTTP/Cookies) 和 [HTTP 身份驗證](/zh-TW/docs/Web/HTTP/Authentication)）。
+跨來源資源共享標準通過新增 [HTTP 標頭](/zh-TW/docs/Web/HTTP/Headers)來工作，這些標頭讓伺服器描述哪些來源被允許從 Web 瀏覽器讀取該訊息。此外，對於可能對伺服器數據產生副作用的 HTTP 請求方法（特別是 {{HTTPMethod("GET")}} 以外的 HTTP 方法，或具有特定 [MIME 類型](/zh-TW/docs/Web/HTTP/Basics_of_HTTP/MIME_types)的 {{HTTPMethod("POST")}} 方法），規範要求瀏覽器「預檢」該請求，通過 HTTP {{HTTPMethod("OPTIONS")}} 請求方法向伺服器詢問支持的方法，然後在獲得伺服器「批准」後發送實際請求。伺服器還可以通知用戶端是否應該與請求一起發送「憑證」（例如 [Cookie](/zh-TW/docs/Web/HTTP/Cookies) 和 [HTTP 身份驗證](/zh-TW/docs/Web/HTTP/Authentication)）。
 
 CORS 失敗會導致錯誤，但出於安全原因，關於錯誤的具體訊息對 JavaScript 是不可用的。代碼只知道發生了錯誤。確定具體錯誤的唯一方法是查看瀏覽器的控制台以獲取詳細訊息。
 
@@ -43,11 +43,11 @@ CORS 失敗會導致錯誤，但出於安全原因，關於錯誤的具體訊息
 
 ### 簡單請求
 
-某些請求不會觸發{{Glossary("Preflight_request","CORS 預檢請求")}}。這些請求被稱為*簡單請求*，這個術語來自過時的 [CORS 規範](https://www.w3.org/TR/2014/REC-cors-20140116/#terminology)，儘管現在定義 CORS 的 [Fetch 規範](https://fetch.spec.whatwg.org/)並未使用該術語。
+某些請求不會觸發 {{Glossary("Preflight_request","CORS 預檢請求")}}。這些請求被稱為*簡單請求*，這個術語來自過時的 [CORS 規範](https://www.w3.org/TR/2014/REC-cors-20140116/#terminology)，儘管現在定義 CORS 的 [Fetch 規範](https://fetch.spec.whatwg.org/)並未使用該術語。
 
 這個概念的動機在於，來自 HTML 4.0 的 {{HTMLElement("form")}} 元素（早於跨站點 {{domxref("fetch()")}} 和 {{domxref("XMLHttpRequest")}}）可以向任何來源提交簡單請求，因此編寫伺服器的人必須已經防範{{Glossary("CSRF", "跨站請求偽造")}}（CSRF）。基於這個假設，伺服器不必通過回應預檢請求來選擇接收任何看起來像表單提交的請求，因為 CSRF 的威脅不會比表單提交更糟糕。然而，伺服器仍然必須通過使用 {{HTTPHeader("Access-Control-Allow-Origin")}} 來選擇*共享*回應與腳本。
 
-*簡單請求*是指 **符合以下所有條件的請求**：
+*簡單請求*是指**符合以下所有條件的請求**：
 
 - 使用以下允許的方法之一：
 
@@ -60,25 +60,25 @@ CORS 失敗會導致錯誤，但出於安全原因，關於錯誤的具體訊息
   - {{HTTPHeader("Accept")}}
   - {{HTTPHeader("Accept-Language")}}
   - {{HTTPHeader("Content-Language")}}
-  - {{HTTPHeader("Content-Type")}}（請注意以下附加要求）
+  - {{HTTPHeader("Content-Type")}}（請注意下方附加要求）
   - {{HTTPHeader("Range")}}（僅限於具有[簡單範圍標頭值](https://fetch.spec.whatwg.org/#simple-range-header-value) 的情況。例如，`bytes=256-` 或 `bytes=127-255`）
 
-- {{HTTPHeader("Content-Type")}} 標頭中指定的唯一允許的類型/子類型組合是：
+- {{HTTPHeader("Content-Type")}} 標頭中指定的唯一允許的類型／子類型組合是：
 
   - `application/x-www-form-urlencoded`
   - `multipart/form-data`
   - `text/plain`
 
-- 如果請求是使用 {{domxref("XMLHttpRequest")}} 對象發出的，則在通過 {{domxref("XMLHttpRequest.upload")}} 屬性返回的對象上未註冊任何事件監聽器（即給定一個 {{domxref("XMLHttpRequest")}} 實例 `xhr`，沒有代碼調用 `xhr.upload.addEventListener()` 來添加事件監聽器以監控上傳）
+- 如果請求是使用 {{domxref("XMLHttpRequest")}} 對象發出的，則在通過 {{domxref("XMLHttpRequest.upload")}} 屬性返回的對象上未註冊任何事件監聽器（即給定一個 {{domxref("XMLHttpRequest")}} 實例 `xhr`，沒有代碼調用 `xhr.upload.addEventListener()` 來添加事件監聽器以監控上傳）。
 - 請求中不使用 {{domxref("ReadableStream")}} 對象。
 
-> **備註：** WebKit Nightly 和 Safari Technology Preview 對 {{HTTPHeader("Accept")}}、{{HTTPHeader("Accept-Language")}} 和 {{HTTPHeader("Content-Language")}} 標頭中的值施加了額外的限制。如果這些標頭中的任何一個具有「非標準」值，WebKit/Safari 不會認為該請求是「簡單請求」。WebKit/Safari 認為「非標準」的值未在文檔中說明，除了以下 WebKit bugs：
+> **備註：** WebKit Nightly 和 Safari Technology Preview 對 {{HTTPHeader("Accept")}}、{{HTTPHeader("Accept-Language")}} 和 {{HTTPHeader("Content-Language")}} 標頭中的值施加了額外的限制。如果這些標頭中的任何一個具有「非標準」值，WebKit/Safari 不會認為該請求是「簡單請求」。WebKit/Safari 認為「非標準」的值未在文檔中說明，除了以下 WebKit bug：
 >
 > - [對於非標準的 CORS 安全列表請求標頭 Accept、Accept-Language 和 Content-Language 要求進行預檢](https://webkit.org/b/165178)
 > - [允許在簡單 CORS 請求中 Accept、Accept-Language 和 Content-Language 標頭中包含逗號](https://webkit.org/b/165566)
 > - [在簡單 CORS 請求中對 Accept 標頭值使用黑名單模型](https://webkit.org/b/166363)
 >
-> 沒有其他瀏覽器實施這些額外的限制，因為它們不是規範的一部分。
+> 沒有其他瀏覽器實施這些額外的限制，因為它們不屬於該規範。
 
 例如，假設 `https://foo.example` 上的 Web 內容希望從 `https://bar.other` 獲取 JSON 內容。以下代碼可能會在 `foo.example` 上部署的 JavaScript 中使用：
 
@@ -142,7 +142,7 @@ Access-Control-Allow-Origin: https://foo.example
 
 ### 預檢請求
 
-與[簡單請求](#簡單請求) 不同，對於「預檢」請求，瀏覽器首先使用 {{HTTPMethod("OPTIONS")}} 方法向另一個來源的資源發送 HTTP 請求，以確定實際請求是否安全可發送。這類跨來源請求會進行預檢，因為它們可能對用戶數據產生影響。
+與[簡單請求](#簡單請求)不同，對於「預檢」請求，瀏覽器首先使用 {{HTTPMethod("OPTIONS")}} 方法向另一個來源的資源發送 HTTP 請求，以確定實際請求是否安全可發送。這類跨來源請求會進行預檢，因為它們可能對用戶數據產生影響。
 
 下面是一個將會進行預檢的請求範例：
 
@@ -194,14 +194,14 @@ Keep-Alive: timeout=2, max=100
 Connection: Keep-Alive
 ```
 
-上述的第 1 至 10 行代表了使用 {{HTTPMethod("OPTIONS")}} 方法的預檢查請求。瀏覽器根據上面 JavaScript 代碼片段使用的請求參數來確定需要發送這個請求，這樣伺服器就可以回應是否接受使用實際的請求參數發送請求。OPTIONS 是一個 HTTP/1.1 方法，用於從伺服器獲取更多訊息，是一個{{Glossary("Safe/HTTP", "安全")}}方法，意味著它不能用於更改資源。請注意，除了 OPTIONS 請求外，還發送了兩個其他請求標頭（分別是第 9 和第 10 行）：
+上述的第 1 至 10 行代表了使用 {{HTTPMethod("OPTIONS")}} 方法的預檢請求。瀏覽器根據上面 JavaScript 代碼片段使用的請求參數來確定需要發送這個請求，這樣伺服器就可以回應是否接受使用實際的請求參數發送請求。OPTIONS 是一個 HTTP/1.1 方法，用於從伺服器獲取更多訊息，是一個{{Glossary("Safe/HTTP", "安全")}}方法，意味著它不能用於更改資源。請注意，除了 OPTIONS 請求外，還發送了兩個其他請求標頭（分別是第 9 和第 10 行）：
 
 ```http
 Access-Control-Request-Method: POST
 Access-Control-Request-Headers: content-type,x-pingother
 ```
 
-{{HTTPHeader("Access-Control-Request-Method")}} 標頭作為預檢查請求的一部分通知伺服器，當實際請求發送時，將使用 `POST` 請求方法。{{HTTPHeader("Access-Control-Request-Headers")}} 標頭通知伺服器，當實際請求發送時，將使用 `X-PINGOTHER` 和 `Content-Type` 自定義標頭。現在伺服器有機會確定是否可以在這些條件下接受請求。
+{{HTTPHeader("Access-Control-Request-Method")}} 標頭作為預檢請求的一部分通知伺服器，當實際請求發送時，將使用 `POST` 請求方法。{{HTTPHeader("Access-Control-Request-Headers")}} 標頭通知伺服器，當實際請求發送時，將使用 `X-PINGOTHER` 和 `Content-Type` 自定義標頭。現在伺服器有機會確定是否可以在這些條件下接受請求。
 
 上述的第 12 至 21 行是伺服器返回的回應，指示請求方法（`POST`）和請求標頭（`X-PINGOTHER`）是可接受的。讓我們仔細看一下第 15 至 18 行：
 
@@ -216,9 +216,9 @@ Access-Control-Max-Age: 86400
 
 伺服器還發送了帶有值「`X-PINGOTHER, Content-Type`」的 `Access-Control-Allow-Headers`，確認這些是允許與實際請求一起使用的標頭。像 `Access-Control-Allow-Methods` 一樣，`Access-Control-Allow-Headers` 是一個以逗號分隔的可接受標頭列表。
 
-最後，{{HTTPHeader("Access-Control-Max-Age")}} 給出了預檢查請求的回應可以在不發送另一個預檢查請求的情況下緩存的秒數值。默認值為 5 秒。在本例中，最大年齡是 86400 秒（= 24 小時）。請注意，每個瀏覽器都有一個[最大內部值](/zh-TW/docs/Web/HTTP/Headers/Access-Control-Max-Age)，當 `Access-Control-Max-Age` 超過該值時，該值優先。
+最後，{{HTTPHeader("Access-Control-Max-Age")}} 給出了預檢請求的回應可以在不發送另一個預檢請求的情況下緩存的秒數值。默認值為 5 秒。在本例中，最大年齡是 86400 秒（= 24 小時）。請注意，每個瀏覽器都有一個[最大內部值](/zh-TW/docs/Web/HTTP/Headers/Access-Control-Max-Age)，當 `Access-Control-Max-Age` 超過該值時，該值優先。
 
-一旦預檢查請求完成，真正的請求就會被發送：
+一旦預檢請求完成，真正的請求就會被發送：
 
 ```http
 POST /doc HTTP/1.1
@@ -252,26 +252,26 @@ Content-Type: text/plain
 [Some XML payload]
 ```
 
-#### 預檢查請求和重定向
+#### 預檢請求和重定向
 
-目前並非所有瀏覽器都支援在預檢查請求後跟隨重定向。如果在此類請求之後發生了重定向，一些瀏覽器目前會報告類似以下的錯誤訊息：
+目前並非所有瀏覽器都支援在預檢請求後跟隨重定向。如果在此類請求之後發生了重定向，一些瀏覽器目前會報告類似以下的錯誤訊息：
 
-> 該請求已被重定向到 `https://example.com/foo`，這對於需要預檢查的跨源請求是不允許的。
-> 請求需要預檢查，不允許跟隨跨源重定向。
+> 該請求已被重定向到 `https://example.com/foo`，這對於需要預檢的跨源請求是不允許的。
+> 請求需要預檢，不允許跟隨跨源重定向。
 
 CORS 協定最初要求該行為，但[後來已更改為不再需要](https://github.com/whatwg/fetch/commit/0d9a4db8bc02251cc9e391543bb3c1322fb882f2)。然而，並非所有瀏覽器都實施了這一變更，因此仍然展示了最初要求的行為。
 
 在瀏覽器跟上規範之前，你可以通過執行以下一項或兩項工作來解決此限制：
 
-- 更改伺服器端的行為，以避免預檢查和／或避免重定向
-- 更改請求，使其成為一個[簡單請求](#簡單請求)，不引起預檢查
+- 更改伺服器端的行為，以避免預檢和／或避免重定向
+- 更改請求，使其成為一個[簡單請求](#簡單請求)，不引起預檢
 
 如果這不可行，那麼另一種方法是：
 
-1. 發送一個[簡單請求](#簡單請求)（使用 {{domxref("Response.url")}} 進行 Fetch API，或 {{domxref("XMLHttpRequest.responseURL")}}）來確定真正的預檢查請求將到達的 URL。
+1. 發送一個[簡單請求](#簡單請求)（使用 {{domxref("Response.url")}} 進行 Fetch API，或 {{domxref("XMLHttpRequest.responseURL")}}）來確定真正的預檢請求將到達的 URL。
 2. 使用你在第一步中從 `Response.url` 或 `XMLHttpRequest.responseURL` 獲取的 URL 發送另一個請求（真正的請求）。
 
-然而，如果該請求由於請求中存在 `Authorization` 標頭而觸發預檢查，則你將無法使用上述步驟來解決此限制。除非你控制請求的伺服器，否則你將無法解決這個問題。
+然而，如果該請求由於請求中存在 `Authorization` 標頭而觸發預檢，則你將無法使用上述步驟來解決此限制。除非你控制請求的伺服器，否則你將無法解決這個問題。
 
 ### 具有憑證的請求
 
@@ -294,7 +294,7 @@ const fetchPromise = fetch(request);
 fetchPromise.then((response) => console.log(response));
 ```
 
-此代碼創建了一個 {{domxref("Request")}} 對象，並在構造函數中將 `credentials` 選項設置為 `"include"`，然後將此請求傳遞給 `fetch()`。由於這是一個簡單的 `GET` 請求，它不會被預檢查，但瀏覽器將**拒絕**任何沒有 {{HTTPHeader("Access-Control-Allow-Credentials")}}`: true` 標頭的回應，並且**不會**使回應可用於調用的 Web 內容。
+此代碼創建了一個 {{domxref("Request")}} 對象，並在構造函數中將 `credentials` 選項設置為 `"include"`，然後將此請求傳遞給 `fetch()`。由於這是一個簡單的 `GET` 請求，它不會被預檢，但瀏覽器將**拒絕**任何沒有 {{HTTPHeader("Access-Control-Allow-Credentials")}}`: true` 標頭的回應，並且**不會**使回應可用於調用的 Web 內容。
 
 ![帶有 Access-Control-Allow-Credentials 的簡單 GET 請求的示意圖](cred-req-updated.png)
 
@@ -358,7 +358,7 @@ CORS 預檢請求絕不能包含憑證。預檢請求的*回應*必須指定 `Ac
 
 還請注意，如果回應中的任何 `Set-Cookie` 回應標頭的 `Access-Control-Allow-Origin` 值是「`*`」通配符而不是實際來源，則該回應標頭將不會設置 cookie。
 
-#### 第三方Cookie
+#### 第三方 Cookie
 
 請注意，CORS 回應中設置的 Cookie 受到正常的第三方 Cookie 政策的約束。在上述範例中，頁面從 `foo.example` 加載，但第 19 行的 Cookie 是由 `bar.other` 發送的，如果用戶的瀏覽器配置為拒絕所有第三方 Cookie，則該 Cookie 將不會被保存。
 
@@ -366,7 +366,7 @@ CORS 預檢請求絕不能包含憑證。預檢請求的*回應*必須指定 `Ac
 
 關於 [SameSite](/zh-TW/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) 屬性的 Cookie 政策將適用。
 
-## HTTP回應標頭
+## HTTP 回應標頭
 
 本節列出了根據跨來源資源共享規範定義的伺服器返回的訪問控制請求的 HTTP 回應標頭。上一節概述了這些在實際操作中的情況。
 
@@ -443,7 +443,7 @@ Access-Control-Allow-Methods: <method>[, <method>]*
 Access-Control-Allow-Headers: <header-name>[, <header-name>]*
 ```
 
-## HTTP請求標頭
+## HTTP 請求標頭
 
 本節列出了用戶端在發出 HTTP 請求時可以使用的標頭，以利用跨來源共享功能。請注意，這些標頭在調用伺服器時會為你設置。開發者在進行跨來源請求時無需以編程方式設置任何跨來源共享請求標頭。
 
@@ -501,5 +501,5 @@ Access-Control-Request-Headers: <field-name>[,<field-name>]*
 - [Stack Overflow 回答，包含處理常見問題的「操作方法」訊息](https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe/43881141#43881141):
 
   - 如何避免 CORS 預檢
-  - 如何使用 CORS 代理來繞過<_「沒有Access-Control-Allow-Origin頭」_>
-  - 如何修復<_「Access-Control-Allow-Origin頭不能是通配符」_>
+  - 如何使用 CORS 代理來繞過_「沒有Access-Control-Allow-Origin頭」_
+  - 如何修復_「Access-Control-Allow-Origin頭不能是通配符」_
