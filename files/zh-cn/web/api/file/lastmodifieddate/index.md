@@ -46,7 +46,7 @@ someFile.lastModifiedDate.getTime();
 // …
 ```
 
-在 Firefox 中，你还可以启用 `privacy.resistFingerprinting`，精度将为 100ms 或 `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` 的值，以较大者为准。
+在 Firefox 中，你还可以启用 `privacy.resistFingerprinting`，精度将为 100 毫秒或 `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` 的值，以较大者为准。
 
 ## 规范
 
