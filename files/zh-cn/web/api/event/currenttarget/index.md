@@ -1,5 +1,5 @@
 ---
-title: Event: currentTarget 属性
+title: Event：currentTarget 属性
 slug: Web/API/Event/currentTarget
 l10n:
   sourceCommit: e2db3e53b257e07b5c469f8af5a68bd0d9db08d7
