@@ -43,7 +43,7 @@ l10n:
 - [`aria-readonly`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-readonly)
   - : 用户无法更改选择或取消选择，但 listbox 是可操作的。
 - [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-label)
-  - : 一个可供人类阅读的字符串，用于标识 listbox。如果有可见标签，则应使用[`aria-labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) 来引用该标签。
+  - : 一个可供人类阅读的字符串，用于标识 listbox。如果有可见标签，则应使用 [`aria-labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) 来引用该标签。
 - [`aria-labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
   - : 标识以空格分隔的元素 ID 列表中的一个或多个可见元素，这些元素标识 listbox。如果没有可见标签，则应该使用[`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-label) 来包含标签。（注意：带有两个 L 的 "labelled" 是基于辅助功能 API 约定的正确拼写。）
 - [`aria-roledescription`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription)
