@@ -1,5 +1,5 @@
 ---
-title: Data URLs
+title: Data URL
 slug: Web/HTTP/Basics_of_HTTP/Data_URLs
 l10n:
   sourceCommit: 997a0ec66e1514b7269076195b2419db334e876e
@@ -7,13 +7,13 @@ l10n:
 
 {{HTTPSidebar}}
 
-**Data URLs** 是以 `data:` 開頭的 URL，允許內容創作者將小型檔案嵌入文件中。以前它們被稱為「data URIs」，直到 WHATWG 將這個名稱廢除。
+**Data URL** 是以 `data:` 開頭的 URL，允許內容創作者將小型檔案嵌入文件中。以前它們被稱為「data URI」，直到 WHATWG 將這個名稱廢除。
 
-> **備註：** 現代瀏覽器將 Data URLs 視為唯一的不透明來源，而不是繼承導航設置對象的來源。
+> **備註：** 現代瀏覽器將 Data URL 視為唯一的不透明來源，而不是繼承導航設置對象的來源。
 
 ## 語法
 
-Data URLs 由四個部分組成：前綴 (`data:`)、指示數據類型的 [MIME 類型](/zh-TW/docs/Web/HTTP/Basics_of_HTTP/MIME_types)、如果非文本則可選的 `base64` 標記，以及數據本身：
+Data URL 由四個部分組成：前綴（`data:`）、指示數據類型的 [MIME 類型](/zh-TW/docs/Web/HTTP/Basics_of_HTTP/MIME_types)、如果非文本則可選的 `base64` 標記，以及數據本身：
 
 ```plain
 data:[<mediatype>][;base64],<data>
@@ -28,7 +28,7 @@ data:[<mediatype>][;base64],<data>
 幾個範例：
 
 - `data:,Hello%2C%20World%21`
-  - : 文本／純文本數據 `Hello, World!`。注意逗號被 [URL 編碼](https://en.wikipedia.org/wiki/URL_encoding)為 `%2C`，空格字元為 `%20`。
+  - : 文本／純文本數據 `Hello, World!`。注意逗號被 [URL 編碼](https://zh.wikipedia.org/wiki/百分号编码)為 `%2C`，空格字元為 `%20`。
 - `data:text/plain;base64,SGVsbG8sIFdvcmxkIQ==`
   - : 上述文本的 base64 編碼版本
 - `data:text/html,%3Ch1%3EHello%2C%20World%21%3C%2Fh1%3E`
@@ -38,7 +38,7 @@ data:[<mediatype>][;base64],<data>
 
 ## 將數據編碼為 base64 格式
 
-Base64 是一組二進制到文本編碼方案，通過轉換為 radix-64 表示法將二進制數據表示為 {{Glossary("ASCII")}} 字串格式。由於僅由 ASCII 字元組成，base64 字串通常是 URL 安全的，因此可以用來在 Data URLs 中編碼數據。
+Base64 是一組二進制到文本編碼方案，通過轉換為 radix-64 表示法將二進制數據表示為 {{Glossary("ASCII")}} 字串格式。由於僅由 ASCII 字元組成，base64 字串通常是 URL 安全的，因此可以用來在 Data URL 中編碼數據。
 
 ### 在 JavaScript 中編碼
 
@@ -78,7 +78,7 @@ bash$ echo -n hello | base64
 
 ## 常見問題
 
-此部分描述創建和使用 `data` URLs 時常見的問題。
+此部分描述創建和使用 `data` URL 時常見的問題。
 
 ```html
 data:text/html,lots of text…<p><a name%3D"bottom">bottom</a>?arg=val</p>
@@ -92,7 +92,7 @@ lots of text…
 ```
 
 - 語法
-  - : `data` URLs 的格式非常簡單，但很容易忘記在「data」段之前加上逗號，或者錯誤地將數據編碼為 base64 格式。
+  - : `data` URL 的格式非常簡單，但很容易忘記在「data」段之前加上逗號，或者錯誤地將數據編碼為 base64 格式。
 - HTML 中的格式化
   - : 一個 `data` URL 在文件中提供了一個文件，這可能相對於包含文件的寬度非常寬。作為 URL，`data` 應該可以用空白（換行、制表符或空格）來格式化，但在使用 base64 編碼時會出現一些實際問題。[更多訊息](https://bugzil.la/73026#c12)。
 - 長度限制
