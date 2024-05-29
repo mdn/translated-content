@@ -1,6 +1,6 @@
 ---
-title: aria-colindex
-slug: Web/Accessibility/ARIA/Attributes/aria-colindex
+title: circle()
+slug: Web/CSS/basic-shape/circle
 l10n:
   sourceCommit: 20315338453f387f8c1f6c20a07766f8f71e8032
 ---
