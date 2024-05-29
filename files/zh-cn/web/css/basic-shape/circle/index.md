@@ -22,7 +22,7 @@ clip-path: circle(6rem at 12rem 8rem);
 
 - `<shape-radius>`
 
-  - : 这可以是一个 {{cssxref("length")}}，或者是一个 {{cssxref("percentage")}}，或者是 `closest-side` 和 `farthest-side` 的值。
+  - : 这可以是一个 {{cssxref("length")}} 值，或者是一个 {{cssxref("percentage")}} 值，或者是 `closest-side` 和 `farthest-side` 关键字值。
 
     - `closest-side`
       - : 使用从形状中心到参考框的最近边缘的长度。对于圆形来说，这是任何维度中最近的边缘。
