@@ -7,7 +7,7 @@ l10n:
 
 {{AccessibilitySidebar}}
 
-`aria-label`属性定义了一个字符串值，用于为交互元素提供标签。
+`aria-label` 属性定义了一个字符串值，用于为交互元素提供标签。
 
 ## 描述
 
