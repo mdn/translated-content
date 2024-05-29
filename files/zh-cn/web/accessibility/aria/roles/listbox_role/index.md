@@ -148,7 +148,7 @@ l10n:
 
 ### 示例 1: 使用 aria-activedescendant 的单个选择列表框
 
-下面的代码片段显示了如何使用[`aria-activedescendant`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) 将列表框角色直接添加到 html 源代码中。
+下面的代码片段显示了如何使用 [`aria-activedescendant`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) 将列表框角色直接添加到 HTML 源代码中。
 
 ```html
 <p id="listbox1label" role="label">选择一种颜色：</p>
