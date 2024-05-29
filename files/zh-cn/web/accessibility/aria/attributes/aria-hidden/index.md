@@ -7,11 +7,11 @@ l10n:
 
 {{AccessibilitySidebar}}
 
-`aria-hidden` 状态指示元素是否暴露给辅助功能 API。
+`aria-hidden` 状态指示元素是否暴露给无障碍 API。
 
 ## 描述
 
-`aria-hidden` 属性可用于隐藏非交互内容，使其在辅助功能 API 中不可见。
+`aria-hidden` 属性可用于隐藏非交互内容，使其在无障碍 API 中不可见。
 
 将 `aria-hidden="true"` 添加到一个元素会将该元素及其所有子元素从辅助功能树中移除。这可以通过隐藏来改善辅助技术用户的体验：
 
@@ -27,9 +27,9 @@ l10n:
 
 元素的隐藏状态基于其是否被渲染。渲染通常由 CSS 控制。例如，通过 CSS 将元素的 `display` 属性设置为 `none`，该元素就不会被渲染。如果元素或其任何祖先元素没有被渲染或其 `aria-hidden` 属性值设置为 true，则该元素被视为隐藏。请注意，已在元素及其子元素上声明了 `aria-hidden="true"` 的元素仍然可见，除非也被 CSS 隐藏。
 
-在使用 `aria-hidden` 将可见渲染内容隐藏时，请谨慎使用。除非通过移除冗余或多余内容改善了辅助技术用户的体验，否则不应隐藏可见内容。只有当对辅助技术公开了相同或等同的含义和功能时，才可以将可见内容从辅助功能 API 中移除。
+在使用 `aria-hidden` 将可见渲染内容隐藏时，请谨慎使用。除非通过移除冗余或多余内容改善了辅助技术用户的体验，否则不应隐藏可见内容。只有当对辅助技术公开了相同或等同的含义和功能时，才可以将可见内容从无障碍 API 中移除。
 
-> **备注：** 在从辅助技术隐藏可见渲染内容时，请考虑所有残障。并非所有辅助技术用户都有视觉障碍。如果可见内容与辅助功能 API 中的文本内容不匹配，那么视觉用户的体验将受到负面影响。
+> **备注：** 在从辅助技术隐藏可见渲染内容时，请考虑所有残障。并非所有辅助技术用户都有视觉障碍。如果可见内容与无障碍 API 中的文本内容不匹配，那么视觉用户的体验将受到负面影响。
 
 表面上，`aria-hidden="true"` 和 `role="presentation"` 及其同义词 `role="none"` 看起来相似，但每个背后的意图是不同的。
 
@@ -42,13 +42,13 @@ l10n:
 - 使用 [`display: none`](/zh-CN/docs/Web/CSS/display) 隐藏了元素或元素的祖先元素
 - 使用 [`visibility: hidden`](/zh-CN/docs/Web/CSS/visibility) 隐藏了元素或元素的祖先元素
 
-在这三种情况下，添加此属性是不必要的，因为元素已经从辅助功能树中移除了。使用 `display` 或 `visibility` 隐藏元素会使其在屏幕和辅助技术中不可见。
+在这三种情况下，添加此属性是不必要的，因为元素已经从无障碍树中移除了。使用 `display` 或 `visibility` 隐藏元素会使其在屏幕和辅助技术中不可见。
 
 如果任何父级指定 `aria-hidden="true"`，则使用 `aria-hidden="false"` 不会重新将元素暴露给辅助技术。
 
 ## 示例
 
-将 `aria-hidden="true"` 添加到图标中会隐藏图标字符，使其不包含在可访问名称中。
+将 `aria-hidden="true"` 添加到图标中会隐藏图标字符，使其不包含在无障碍名称中。
 
 ```html
 <button>
@@ -62,18 +62,18 @@ l10n:
 ## 值
 
 - `false`
-  - : 元素向辅助功能 API 暴露，就像它被呈现一样。
+  - : 元素向无障碍 API 暴露，就像它被呈现一样。
 - `true`
-  - : 元素从辅助功能 API 中隐藏。
+  - : 元素从无障碍 API 中隐藏。
 - `undefined`（默认值）
   - : 用户代理根据元素是否被渲染来确定元素的隐藏状态。
 
 ## 相关接口
 
 - {{domxref("Element.ariaHidden")}}
-  - : [`ariaHidden`](/zh-CN/docs/Web/API/Element/ariaHidden) 属性，属于 {{domxref("Element")}} 接口的一部分，反映了 `aria-hidden` 属性的值，指示元素是否暴露给辅助功能 API。
+  - : [`ariaHidden`](/zh-CN/docs/Web/API/Element/ariaHidden) 属性，属于 {{domxref("Element")}} 接口，反映了 `aria-hidden` 属性的值，指示元素是否暴露给无障碍 API。
 - {{domxref("ElementInternals.ariaHidden")}}
-  - : [`ariaHidden`](/zh-CN/docs/Web/API/Element/ariaHidden) 属性，属于 {{domxref("ElementInternals")}} 接口的一部分，反映了 `aria-hidden` 属性的值。
+  - : [`ariaHidden`](/zh-CN/docs/Web/API/Element/ariaHidden) 属性，属于 {{domxref("ElementInternals")}} 接口，反映了 `aria-hidden` 属性的值。
 
 ## 相关角色
 
