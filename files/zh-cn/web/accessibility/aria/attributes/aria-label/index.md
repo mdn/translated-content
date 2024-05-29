@@ -55,7 +55,7 @@ l10n:
 
   > **备注：** 由于 `aria-label` 内容在辅助技术之外不显示，请考虑让所有用户看到重要信息。
 
-- 并非所有元素都可以获得无障碍名称。既不应该使用`aria-label`，也不应该使用`aria-labelledby`，与内联结构角色一起使用，例如`code`，`term`和`emphasis`，以及未映射到辅助技术 API 的角色，包括`none`。`aria-label`属性适用于链接、视频、表单控件以及具有[地标角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles#3._landmark_roles)或[小部件角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles#2._widget_roles)的元素；当 DOM 中不存在可见标签时，`aria-label`提供了无障碍名称。
+- 并非所有元素都可以获得无障碍名称。`aria-label` 和 `aria-labelledby` 均不应该与像 `code`、`term` 和 `emphasis` 这样的行内结构角色以及未映射到辅助技术 API 的角色（包括 `none`）一起使用。`aria-label`属性适用于链接、视频、表单控件以及具有[地标角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles#3._landmark_roles)或[小部件角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles#2._widget_roles)的元素；当 DOM 中不存在可见标签时，`aria-label`提供了无障碍名称。
 
 如果为{{HTMLElement('iframe')}}分配了`title`，为{{HTMLElement('img')}}定义了`alt`属性，或为{{HTMLElement('input')}}添加了{{HTMLElement('label')}}，则不需要`aria-label`。但是，如果存在`aria-label`属性，则它将优先于 iframe 的`title`，图像的`alt`或输入的`<label>`文本作为该元素的无障碍名称。
 
