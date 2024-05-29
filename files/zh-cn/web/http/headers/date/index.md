@@ -50,7 +50,7 @@ Date: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
 - \<month>
   - : “Jan”、“Feb”、“Mar”、“Apr”、“May”、“Jun”、“Jul”、“Aug”、“Sep”、“Oct”、“Nov”、“Dec”之一（区分大小写）。
 - \<year>
-  - : 4 位数的年号，例如“1990”或“2016”。
+  - : 4 位数的年份，例如“1990”或“2016”。
 - \<hour>
   - : 2 位数的小时，例如“09”或“23”。
 - \<minute>
