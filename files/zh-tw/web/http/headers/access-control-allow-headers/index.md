@@ -7,11 +7,11 @@ l10n:
 
 {{HTTPSidebar}}
 
-**`Access-Control-Allow-Headers`** 回應標頭用於回應包含 {{HTTPHeader("Access-Control-Request-Headers")}} 的 {{glossary("preflight request", "預檢請求")}}，以指示實際請求中可以使用哪些 HTTP 標頭。
+**`Access-Control-Allow-Headers`** 回應標頭用於回應包含 {{HTTPHeader("Access-Control-Request-Headers")}} 的{{glossary("preflight request", "預檢請求")}}，以指示實際請求中可以使用哪些 HTTP 標頭。
 
 如果請求包含 {{HTTPHeader("Access-Control-Request-Headers")}} 標頭，此標頭是必需的。
 
-> **備註：** {{glossary("CORS-safelisted_request_header", "CORS 安全名單請求標頭")}}總是允許的，通常不會列在 `Access-Control-Allow-Headers` 中（除非有必要繞過安全名單的[附加限制](/zh-TW/docs/Glossary/CORS-safelisted_request_header#附加限制)）。
+> **備註：** {{glossary("CORS-safelisted_request_header", "列入 CORS 白名單的請求標頭")}}總是允許的，通常不會列在 `Access-Control-Allow-Headers` 中（除非有必要繞過安全名單的[附加限制](/zh-TW/docs/Glossary/CORS-safelisted_request_header#附加限制)）。
 
 <table class="properties">
   <tbody>
@@ -44,7 +44,7 @@ Access-Control-Allow-Headers: *
 
 ### 自訂標頭
 
-以下是 `Access-Control-Allow-Headers` 標頭的範例。它表示伺服器支持 CORS 請求中名為 `X-Custom-Header` 的自訂標頭（除了 {{glossary("CORS-safelisted_request_header", "CORS 安全名單請求標頭")}} 之外）。
+以下是 `Access-Control-Allow-Headers` 標頭的範例。它表示伺服器支持 CORS 請求中名為 `X-Custom-Header` 的自訂標頭（除了{{glossary("CORS-safelisted_request_header", "列入 CORS 白名單的請求標頭")}}之外）。
 
 ```http
 Access-Control-Allow-Headers: X-Custom-Header
