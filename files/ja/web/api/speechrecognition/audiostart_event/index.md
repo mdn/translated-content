@@ -1,8 +1,9 @@
 ---
 title: "SpeechRecognition: audiostart イベント"
+short-title: audiostart
 slug: Web/API/SpeechRecognition/audiostart_event
 l10n:
-  sourceCommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
+  sourceCommit: f2f9346c0c0e9f6676f2df9f1850933e274401de
 ---
 
 {{APIRef("Web Speech API")}}
