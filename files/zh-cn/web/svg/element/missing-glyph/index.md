@@ -7,7 +7,7 @@ l10n:
 
 {{SVGRef}}{{deprecated_header}}
 
-**`<missing-glyph>`** [SVG](/zh-CN/docs/Web/SVG) 元素用于在给定字符的字体中没有定义适当 {{SVGElement("glyph")}} 时渲染内容。
+**`<missing-glyph>`** [SVG](/zh-CN/docs/Web/SVG) 元素用于在字体中没有为给定的字符定义适当的 {{SVGElement("glyph")}} 时渲染内容。
 
 ## 使用上下文
 
