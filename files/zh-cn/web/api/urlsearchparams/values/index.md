@@ -50,7 +50,7 @@ const searchParams = new URLSearchParams("key1=value1&key2=value2");
 console.log(Array.from(searchParams.values()));
 ```
 
-结果如下:
+结果如下：
 
 ```plain
 ['value1', 'value2']
