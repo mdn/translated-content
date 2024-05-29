@@ -198,7 +198,7 @@ l10n:
 - 建议作者在列表未聚焦时使用不同的样式进行选择，例如非活动选项通常以较浅的背景颜色显示。
 - 如果 listbox 不是另一个组件的一部分，那么它应该具有 [`aria-labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) 属性。
 - 如果一个或多个条目不是 listbox 的 DOM 子项，则需要设置额外的 `aria-*` 属性（参见 [ARIA Best Practices](https://www.w3.org/TR/wai-aria-practices/#listbox_div))。
-- 如果有理由 [展开](https://www.w3.org/TR/wai-aria-1.1/#aria-expanded) 列表框，[`combobox`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/combobox_role) 角色可能更合适。
+- 如果有理由[扩展](https://www.w3.org/TR/wai-aria-1.1/#aria-expanded)列表框，[`combobox`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/combobox_role) 角色可能更合适。
 
 ## 规范
 
