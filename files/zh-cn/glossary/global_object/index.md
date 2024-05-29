@@ -11,7 +11,7 @@ l10n:
 
 在 JavaScript 中，总是会定义一个全局对象。在网页浏览器中，当脚本使用 [`var`](/zh-CN/docs/Web/JavaScript/Reference/Statements/var) 关键字定义全局变量时，它们被创建为全局对象的成员（但是，在 {{Glossary("Node.js")}} 中并非如此）。全局对象的{{Glossary("interface", "接口")}}取决于脚本运行的执行上下文。例如：
 
-- 在网页浏览器中，脚本未明确启动为后台任务的任何代码都将具有一个 {{domxref("Window")}} 作为其全局对象。这是网络上绝大多数 JavaScript 代码的情况。
+- 在浏览器中，脚本未明确启动为后台任务的任何代码都将具有一个 {{domxref("Window")}} 作为其全局对象。这是 Web 上绝大多数 JavaScript 代码的情况。
 - 在 {{domxref("Worker")}} 中运行的代码具有一个 {{domxref("WorkerGlobalScope")}} 对象作为其全局对象。
 - 在 {{Glossary("Node.js")}} 下运行的脚本具有一个名为 global 的对象作为其全局对象。
 
