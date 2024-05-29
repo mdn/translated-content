@@ -138,7 +138,7 @@ l10n:
 
 当用户点击一个选项、聚焦在一个选项时按下 <kbd>Space</kbd>或者以其他方式切换一个选项的状态，必须发生以下情况：
 
-1. 切换当前聚焦选项的[`aria-selected`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-selected) 状态，如果它是 false，则将 `aria-selected` 的状态更改为 true，如果为 true，则将其更改为 false。
+1. 切换当前聚焦选项的 [`aria-selected`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-selected) 状态，如果它是 false，则将 `aria-selected` 的状态更改为 true，如果为 true，则将其更改为 false。
 2. 更改选项的外观以反映其选定状态。
 3. 将列表框上的[`aria-activedescendant`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) 值更新为用户刚刚与之交互的选项的 ID，即使他们将选项切换为取消选择。
 
