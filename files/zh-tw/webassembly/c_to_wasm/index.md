@@ -106,7 +106,7 @@ slug: WebAssembly/C_to_Wasm
 
 讓我們看看這是怎麼實現的。
 
-1. 首先，將以下程式碼在新資料夾中儲存為 `hello3.c` ：
+1. 首先，將以下程式碼在新資料夾中儲存為 `hello3.c`：
 
    ```cpp
    #include <stdio.h>
