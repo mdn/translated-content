@@ -7,7 +7,7 @@ l10n:
 
 {{DefaultAPISidebar("Encrypted Media Extensions")}} {{securecontext_header}}
 
-加密媒体扩展 API 提供的接口用于控制受数字限制管理方案约束的内容的播放。
+加密媒体扩展 API（Encrypted Media Extensions API）提供用于控制受数字限制管理方案约束的内容的播放的接口。
 
 {{domxref("Navigator.requestMediaKeySystemAccess()")}} 提供对这个 API 的访问。
 
