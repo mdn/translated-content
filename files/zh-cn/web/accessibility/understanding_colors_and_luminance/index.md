@@ -49,7 +49,7 @@ l10n:
 
 ### CSS 颜色值
 
-重要的是要知道，即使在一个 {{glossary("颜色空间")}} 内，比如 {{glossary("RGB")}} 颜色空间，也会有变化。例如，RGB 颜色空间的变体包括**RGB**、**sRGB**、**Adobe RGB**、**Adobe Wide Gamut RGB**和**RGBA**等。
+重要的是要知道，即使在一个{{glossary("color space", "颜色空间")}}内，比如 {{glossary("RGB")}} 颜色空间，也会有变化。例如，RGB 颜色空间的变体包括 **RGB**、**sRGB**、**Adobe RGB**、**Adobe Wide Gamut RGB** 和 **RGBA** 等。
 
 这些都是用于定义颜色的 CSS 表示法的示例。以下是每种表示法的示例颜色，都是完全不透明的洋红色：
 
