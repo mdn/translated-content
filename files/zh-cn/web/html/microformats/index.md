@@ -93,7 +93,7 @@ slug: Web/HTML/microformats
 | **u-photo**          | 个人或组织的照片。               |
 | **u-url**            | 代表个人或组织的主页或其他 URL。 |
 | **u-uid**            | 通用唯一标识符，最好是规范 URL。 |
-| **p-street-address** | 街道号码+名称。                |
+| **p-street-address** | 街道号码 + 名称。                |
 | **p-locality**       | 城市/城镇/村庄。                 |
 | **p-country-name**   | 国家名称。                       |
 
