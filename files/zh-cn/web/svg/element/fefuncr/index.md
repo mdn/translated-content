@@ -7,7 +7,7 @@ l10n:
 
 {{SVGRef}}
 
-**`<feFuncR>`** [SVG](/zh-CN/docs/Web/SVG) 滤镜基元为其 {{SVGElement("feComponentTransfer")}} 父元素输入图形的红色分量定义了传递函数。
+**`<feFuncR>`** [SVG](/zh-CN/docs/Web/SVG) 滤镜原语为其 {{SVGElement("feComponentTransfer")}} 父元素输入图形的红色分量定义了传递函数。
 
 ## 使用上下文
 

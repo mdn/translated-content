@@ -7,7 +7,7 @@ l10n:
 
 {{SVGRef}}
 
-**`<feFlood>`** SVG 滤镜基元使用由 {{SVGAttr("flood-color")}} 和 {{SVGAttr("flood-opacity")}} 定义的颜色和透明度填充滤镜子区域。
+**`<feFlood>`** SVG 滤镜原语使用由 {{SVGAttr("flood-color")}} 和 {{SVGAttr("flood-opacity")}} 定义的颜色和透明度填充滤镜子区域。
 
 ## 使用上下文
 
