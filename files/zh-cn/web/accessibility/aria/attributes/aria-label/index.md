@@ -53,7 +53,7 @@ l10n:
 
 - 不要“滥用”`aria-label`。记住它主要是为辅助技术设计的。为了提供额外的指示或澄清 UI，请使用可见文本和 `aria-describedby` 或 [`aria-description`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-description)，而不是 `aria-label`。说明应该对所有用户都无障碍，而不仅仅是屏幕阅读器用户（或者最好使你的 UI 更直观）。
 
-  **备注：** 由于`aria-label`内容在辅助技术之外不显示，请考虑为所有用户显示重要信息。
+  > **备注：** 由于 `aria-label` 内容在辅助技术之外不显示，请考虑让所有用户看到重要信息。
 
 - 并非所有元素都可以获得无障碍名称。既不应该使用`aria-label`，也不应该使用`aria-labelledby`，与内联结构角色一起使用，例如`code`，`term`和`emphasis`，以及未映射到辅助技术 API 的角色，包括`none`。`aria-label`属性适用于链接、视频、表单控件以及具有[地标角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles#3._landmark_roles)或[小部件角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles#2._widget_roles)的元素；当 DOM 中不存在可见标签时，`aria-label`提供了无障碍名称。
 
