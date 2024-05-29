@@ -53,7 +53,7 @@ l10n:
 ```html
 <button>
   <span class="fa fa-tweet" aria-hidden="true"></span>
-  <span class="label"> 发推 </span>
+  <span class="label">发推</span>
 </button>
 ```
 
