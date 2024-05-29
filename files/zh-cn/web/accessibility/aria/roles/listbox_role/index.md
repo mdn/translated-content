@@ -189,7 +189,7 @@ l10n:
 #### 更多示例
 
 - [可滚动列表框示例](https://w3c.github.io/aria-practices/examples/listbox/listbox-scrollable.html): 单选列表框，可以滚动显示更多选项，类似于带有 `size` 属性大于一的 HTML {{HTMLElement('select')}}。
-- [带有分组选项的列表框示例](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/examples/listbox-grouped/): 带有分组选项的单选列表框，类似于 HTML {{HTMLElement('select')}} 中 `size` 属性设置为大于 `"1"`，并且选项使用 optgroup 元素分组。
+- [带有分组选项的列表框示例](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/examples/listbox-grouped/): 带有分组选项的单选列表框，类似于 HTML {{HTMLElement('select')}} 中 `size` 属性设置为大于 `"1"`，并且选项使用 `optgroup` 元素分组。
 - [可重新排列选项的列表框示例](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/examples/listbox-rearrangeable/): 单选和多选列表框的示例，带有相应的工具栏，可以添加、移动和移除选项。
 
 ## 最佳实践
