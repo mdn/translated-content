@@ -75,7 +75,7 @@ l10n:
 
 几乎所有角色中都使用`aria-label`属性**除了**不能由作者提供无障碍名称的角色。
 
-aria-label 属性不受支持的角色有：
+aria-label 属性**不**受支持的角色有：
 
 - [`code`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/structural_roles)
 - [`caption`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/structural_roles)
