@@ -97,4 +97,4 @@ log(`查询参数 (删除后):\t ${params}`);
 
 ## 参见
 
-- [`core-js` 中`URLSearchParams` 的垫片](https://github.com/zloirock/core-js#url-and-urlsearchparams)
+- [`core-js` 中 `URLSearchParams` 的垫片](https://github.com/zloirock/core-js#url-and-urlsearchparams)
