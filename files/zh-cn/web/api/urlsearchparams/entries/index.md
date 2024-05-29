@@ -1,5 +1,5 @@
 ---
-title: URLSearchParams.entries()
+title: URLSearchParams：entries() 方法
 slug: Web/API/URLSearchParams/entries
 l10n:
   sourceCommit: 4de6f76bbfd76229db78ffb7d52cf6b4cb9f31f8
