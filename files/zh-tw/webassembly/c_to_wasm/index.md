@@ -59,7 +59,7 @@ slug: WebAssembly/C_to_Wasm
 
 現在只要使用一個支援 WebAssembly 的瀏覽器，加載產生的 `hello.html` 即可。自從 Firefox 52、Chrome 57、Edge 57 和 Opera 44 開始，已經預設啟用了 WebAssembly。
 
-> **注意：** 如果你試圖直接從本機硬碟打開產生的 HTML 檔案（`hello.html`）（例如 `file://your_path/hello.html`），你會得到一個錯誤訊息， _`both async and sync fetching of the wasm failed`._ 你需要藉由 HTTP 伺服器（`http://`）來執行你的 HTML 檔案——參見 [How do you set up a local testing server?](/zh-TW/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server) 來取得更多資訊.
+> **備註：** 如果你試圖直接從本機硬碟打開產生的 HTML 檔案（`hello.html`）（例如 `file://your_path/hello.html`），你會得到一個錯誤訊息，_`both async and sync fetching of the wasm failed`_。你需要藉由 HTTP 伺服器（`http://`）來執行你的 HTML 檔案——參見[如何設定本機測試伺服器？](/zh-TW/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)來取得更多資訊.
 
 如果一切順利，你應該可以在網頁上的 Emscripten 控制台和瀏覽器的 JavaScript 控制台中看到「Hello World」的輸出。
 
