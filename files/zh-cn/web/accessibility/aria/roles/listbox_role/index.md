@@ -17,7 +17,7 @@ l10n:
 
 具有 `listbox` 角色的元素含有隐式的 [`aria-orientation`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-orientation) 值，值为 `vertical`。
 
-当一个列表被 tab 聚焦到时，如果没有其他内容，将会选择列表中的第一项。可以用 Up/Down 方向键在列表中导航，按 Shift + Up/Down 方向键将移动并扩展选择。键入一个或多个字母将在列表项中导航（相同的字母指向以那个开头的每个选项，不同的字母指向以整个字符串开头的第一个选项）。如果当前选项有关联的菜单，Shift+F10 将启动该菜单。如果项目可被勾选，Space 可用于切换[checkboxes](/zh-CN/docs/Web/Accessibility/ARIA/Roles/checkbox_role)。对于可选择的列表项，Space 切换它们的选择，Shift+Space 可用于选择连续的项目，Ctrl+ 方向键 移动而不选择，Ctrl+Space 可用于选择非连续的项目。建议使用 checkbox、link 或其他方法来选择所有项目，为此可以使用 Ctrl+A 作为快捷键。
+当一个列表被 tab 聚焦到时，如果没有其他内容，将会选择列表中的第一项。可以用 Up/Down 方向键在列表中导航，按 Shift + Up/Down 方向键将移动并扩展选择。键入一个或多个字母将在列表项中导航（相同的字母指向以那个开头的每个选项，不同的字母指向以整个字符串开头的第一个选项）。如果当前选项有关联的菜单，Shift+F10 将启动该菜单。如果项目可被勾选，Space 可用于切换[复选框](/zh-CN/docs/Web/Accessibility/ARIA/Roles/checkbox_role)。对于可选择的列表项，Space 切换它们的选择，Shift+Space 可用于选择连续的项目，Ctrl+ 方向键移动而不选择，Ctrl+Space 可用于选择非连续的项目。建议使用复选框、链接或其他方法来选择所有项目，为此可以使用 Ctrl+A 作为快捷键。
 
 当 listbox 角色被添加到元素中，或含有它的元素变得可见时，屏幕阅读器会在 listbox 获得焦点时读出它的 label 和 role。如果列表中的 option 或选项获得焦点，则接下来会读出它，如果屏幕阅读器支持，则会在列表中指示选项的位置。当焦点在列表中移动时，屏幕阅读器会读出相关选项。
 
