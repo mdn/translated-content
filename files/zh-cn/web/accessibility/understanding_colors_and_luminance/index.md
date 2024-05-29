@@ -41,7 +41,7 @@ l10n:
 
 ## sRGB 颜色空间
 
-颜色有很多定义方式，如[`<color>`数据类型](/zh-CN/docs/Web/CSS/color_value)中所示，包括 RGB、RGB 十进制、RGB 百分比、HSL、HWB、LCH、LAB 和 CMYK 等。
+颜色有很多定义方式，如 [`<color>` 数据类型](/zh-CN/docs/Web/CSS/color_value)中所示，包括 RGB、RGB 十进制、RGB 百分比、HSL、HWB、LCH、LAB 和 CMYK 等。
 
 对于数字问题，许多技术历来都存在于 RGB 颜色空间中。RGB 颜色模型扩展到包括"alpha" — RGBA — 以允许指定颜色的不透明度。测量颜色的其他方法涉及使用其他颜色空间进行测量，并在现代显示器和浏览器中得到支持。但在 RGB 颜色空间中进行的颜色测量占主导地位，包括在视频制作中。
 
