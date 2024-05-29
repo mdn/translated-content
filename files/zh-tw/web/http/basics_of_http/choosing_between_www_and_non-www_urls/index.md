@@ -1,5 +1,5 @@
 ---
-title: 選擇 www 和 non-www 網址
+title: 選擇 www 和非 www 網址
 slug: Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
 l10n:
   sourceCommit: 3c29ffa78c551ea6a61bbb795a5f97a66c6868c0
@@ -7,7 +7,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-網站擁有者經常面臨的一個問題是選擇「www」（`www.example.com`）還是「non-www」（`example.com`）網址。本頁面將提供一些建議，幫助你做出最佳選擇。
+網站擁有者經常面臨的一個問題是選擇「www」（`www.example.com`）還是「非 www」（`example.com`）網址。本頁面將提供一些建議，幫助你做出最佳選擇。
 
 ## 什麼是域名？
 
@@ -28,7 +28,7 @@ l10n:
 
 ### 使用 HTTP 301 重定向
 
-在這種情況下，你需要配置接收 HTTP 請求的伺服器（「www」和「non-www」網址的伺服器很可能是同一個）以對任何非規範域名的請求作出適當的 HTTP {{HTTPStatus(301)}} 回應。這將把嘗試訪問非規範 URL 的瀏覽器重定向到它們的規範等價 URL。例如，如果你選擇使用「non-www」URL 作為規範類型，你應該將所有「www」URL 重定向到不帶「www」的等價 URL。
+在這種情況下，你需要配置接收 HTTP 請求的伺服器（「www」和「非 www」網址的伺服器很可能是同一個）以對任何非規範域名的請求作出適當的 HTTP {{HTTPStatus(301)}} 回應。這將把嘗試訪問非規範 URL 的瀏覽器重定向到它們的規範等價 URL。例如，如果你選擇使用「非 www」URL 作為規範類型，你應該將所有「www」URL 重定向到不帶「www」的等價 URL。
 
 範例：
 
@@ -48,18 +48,18 @@ l10n:
 <link href="http://example.org/whaddup" rel="canonical" />
 ```
 
-與前一種情況不同，瀏覽器歷史記錄將認為 non-www 和 www URL 是獨立的條目。
+與前一種情況不同，瀏覽器歷史記錄將認為非 www 和 www URL 是獨立的條目。
 
 ## 讓你的頁面對兩者都有效
 
-使用這些技術，你可以配置你的伺服器正確回應 www 前綴和 non-www 前綴的域名。這是個好建議，因為你無法預測用戶會在瀏覽器的 URL 欄中輸入哪個 URL。這是一個選擇哪種類型作為你的規範位置，然後將另一種類型重定向到它的問題。
+使用這些技術，你可以配置你的伺服器正確回應 www 前綴和非 www 前綴的域名。這是個好建議，因為你無法預測用戶會在瀏覽器的 URL 欄中輸入哪個 URL。這是一個選擇哪種類型作為你的規範位置，然後將另一種類型重定向到它的問題。
 
 ## 決策的考量
 
 這是一個非常主觀的話題——可以被視為一個 [bikeshedding](https://bikeshed.com/) 的問題。如果你想深入閱讀，以下是一些資源：
 
 - [裸域的選項](https://www.netlify.com/blog/2020/03/26/how-to-set-up-netlify-dns-custom-domains-cname-and-a-records/#options-for-bare-domains)（2020）
-- [WWW 與 non-WWW——哪個對 WordPress SEO 更好？](https://www.wpbeginner.com/beginners-guide/www-vs-non-www-which-is-better-for-wordpress-seo/)（2023）
+- [WWW 與非 WWW——哪個對 WordPress SEO 更好？](https://www.wpbeginner.com/beginners-guide/www-vs-non-www-which-is-better-for-wordpress-seo/)（2023）
 
 ## 參見
 
