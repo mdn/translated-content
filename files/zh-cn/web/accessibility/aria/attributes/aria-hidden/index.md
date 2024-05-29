@@ -33,9 +33,10 @@ l10n:
 
 表面上，`aria-hidden="true"` 和 `role="presentation"` 及其同义词 `role="none"` 看起来相似，但每个背后的意图是不同的。
 
-- `aria-hidden="true"`会将整个元素从辅助功能 API 中移除。
-- `role="presentation"` 和 `role="none"`会移除元素的语义含义，但仍然将其及其内容暴露给辅助技术。
-  当以下情况发生时，不应添加 `aria-hidden="true"`：
+- `aria-hidden="true"` 会将整个元素从无障碍 API 中移除。
+- `role="presentation"` 和 `role="none"` 会移除元素的语义含义，但仍然将其及其内容暴露给辅助技术。
+
+当以下情况发生时，不应添加 `aria-hidden="true"`：
 
 - HTML 中存在 [`hidden`](/zh-CN/docs/Web/HTML/Global_attributes/hidden) 属性
 - 使用 [`display: none`](/zh-CN/docs/Web/CSS/display) 隐藏了元素或元素的祖先元素
