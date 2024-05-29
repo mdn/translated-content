@@ -50,7 +50,7 @@ l10n:
 
 ### content-box
 
-`content-box` 값은 바깥쪽 콘텐츠 가장자리에 둘러싸여 있는 모양을 정의합니다. 이 박스의 각각의 모서리 둥글기는 `border-radius` 에서 `border-width` 와  `padding` 을 뺀 값 혹은 `0` 중에 더 큰 값을 차지하게 됩니다. 이것은 음수 값을 가질 수 없다는 것을 의미하기도 합니다.
+`content-box` 값은 바깥쪽 콘텐츠 가장자리에 둘러싸여 있는 모양을 정의합니다. 이 박스의 각각의 모서리 둥글기는 `border-radius` 에서 `border-width` 와 `padding` 을 뺀 값 혹은 `0` 중에 더 큰 값을 차지하게 됩니다. 이것은 음수 값을 가질 수 없다는 것을 의미하기도 합니다.
 
 {{EmbedGHLiveSample("css-examples/shapes/box/content-box.html", '100%', 800)}}
 
