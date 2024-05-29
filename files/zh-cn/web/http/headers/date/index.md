@@ -24,8 +24,7 @@ l10n:
     <tr>
       <th scope="row">标头类型</th>
       <td>
-        {{Glossary("Request header", "请求标头")}},
-        {{Glossary("Response header", "响应标头")}}
+        {{Glossary("Request header", "请求标头")}}、{{Glossary("Response header", "响应标头")}}
       </td>
     </tr>
     <tr>
