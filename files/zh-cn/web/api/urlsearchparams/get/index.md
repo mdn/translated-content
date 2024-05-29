@@ -31,7 +31,7 @@ get(name)
 ```js
 let params = new URLSearchParams(document.location.search);
 let name = params.get("name"); // name 的值是"Jonathan"
-let age = parseInt(params.get("age"), 10); // age 的值是数字18
+let age = parseInt(params.get("age"), 10); // age 的值是数字 18
 ```
 
 查找一个不存在的键名则返回 **`null`**:
