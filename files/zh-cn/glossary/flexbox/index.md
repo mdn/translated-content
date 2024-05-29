@@ -32,7 +32,7 @@ l10n:
 
 ### 延伸阅读
 
-- _[CSS 弹性盒布局模型一级规范](https://www.w3.org/TR/css-flexbox-1/)_
+- _[CSS 弹性盒布局模块第一版规范](https://www.w3.org/TR/css-flexbox-1/)_
 - CSS 弹性盒子指南：
   - [弹性盒子的基本概念](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
   - [弹性盒子与其他布局方法的关系](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods)
