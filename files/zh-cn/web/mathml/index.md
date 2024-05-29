@@ -30,8 +30,6 @@ l10n:
 - [MathML 教程](/zh-CN/docs/Learn/MathML)
   - : 一个对 MathML 的简要介绍。
 
-[查看全部...](/zh-CN/docs/tag/MathML)
-
 ## 从社区获得帮助
 
 - [W3C Math 主页](https://www.w3.org/Math/)
