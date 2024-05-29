@@ -49,7 +49,6 @@ l10n:
 - [`aria-roledescription`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription)
   - : 一个可供人类阅读的字符串，可以更清楚地标识 listbox 的作用。屏幕阅读器通常会在阅读标签（如果存在）后向用户阅读此值，而不是说“listbox”。
 
-（有关更多详细信息以及 ARIA 状态和属性的完整列表，请参阅 [ARIA `listbox` (role)](https://www.w3.org/TR/wai-aria-1.1/#listbox) 文档。 )
 
 ### 键盘交互
 
