@@ -49,7 +49,7 @@ l10n:
 
 在使用`aria-label`时，还需要考虑以下额外的准则：
 
-- `aria-label`属性可以与常规的语义 HTML 元素一起使用；不限于具有指定 [ARIA `role`](/zh-CN/docs/Web/Accessibility/ARIA/Roles) 的元素。
+- `aria-label` 属性可以与常规的语义 HTML 元素一起使用；不限于指定了 [ARIA `role`](/zh-CN/docs/Web/Accessibility/ARIA/Roles) 的元素。
 
 - 不要“滥用”`aria-label`。记住它主要是为辅助技术设计的。为了提供额外的指示或澄清 UI，请使用可见文本和 `aria-describedby` 或 [`aria-description`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-description)，而不是 `aria-label`。说明应该对所有用户都无障碍，而不仅仅是屏幕阅读器用户（或者最好使你的 UI 更直观）。
 
