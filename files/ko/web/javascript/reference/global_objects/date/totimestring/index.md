@@ -27,10 +27,7 @@ toTimeString()
 
 ## 설명
 
-{{jsxref("Date")}} instances refer to a specific point in time. `toTimeString()` interprets the date in the local timezone and formats the _time_ part in English. It always uses the format of `hh:mm:ss GMT±xxxx (TZ)`, where:
-
-{{jsxref("Date")}} 인스턴스는 특정 시점을 참조합니다. `toTimeString()`은 날짜를 현지 시간대로 해석하고 시간 부분의 형식을 영어로 지정합니다.
-항상 `hh:mm:ss GMT±xxxx (TZ)` 형식을 사용합니다.
+{{jsxref("Date")}} 인스턴스는 특정 시점을 참조합니다. `toTimeString()`은 날짜를 현지 시간대로 해석하고 시간 부분의 형식을 영어로 지정합니다. 항상 `hh:mm:ss GMT±xxxx (TZ)` 형식을 사용합니다.
 
 | 형식 문자열 | 설명                                                                                                |
 | ----------- | --------------------------------------------------------------------------------------------------- |
@@ -40,7 +37,7 @@ toTimeString()
 | `±xxxx`     | 현지 시간대의 오프셋. 시간을 나타내는 2자리 숫자와 분을 나타내는 2자리 숫자 (e.g. `-0500`, `+0800`) |
 | `TZ`        | 시간대의 이름(e.g. `PDT`, `PST`)                                                                    |
 
-예: "04:42:04 GMT+0000 (Coordinated Universal Time)".
+예: "04:42:04 GMT+0000 (협정 세계시)".
 
 - 날짜 부분만 가져오려면 {{jsxref("Date/toDateString", "toDateString()")}}를 사용합니다.
 - 날짜와 시간을 모두 가져오려면 {{jsxref("Date/toString", "toString()")}}를 사용합니다.
