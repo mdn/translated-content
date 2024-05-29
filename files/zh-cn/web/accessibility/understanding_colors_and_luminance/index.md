@@ -106,23 +106,23 @@ color(xyz-d65 0.59 0.28 0.96 / 1);
 
 示例还显示了 [`rgb()` 和 `rgba()`](/zh-CN/docs/Web/CSS/color_value/rgb#示例) 的传统语法。颜色函数的传统语法是逗号分隔的，当包含 alpha 通道时会有一个单独的函数。新的颜色函数只有一种语法，值之间用空格分隔（而不是逗号分隔），如果存在 alpha 通道，则在斜杠之前。现代语法允许混合数字和百分比，并支持 `none` 关键字；逗号分隔的传统语法不支持。
 
-接下来的示例显示了"HSL"，代表 _Hue、Saturation 和 Lightness_。对许多人来说，HSL 颜色值比 RGB 值更直观。由设置产生的颜色仍然处于 sRGB 颜色空间，但[`hsl()`](/zh-CN/docs/Web/CSS/color_value/hsl)是许多人的直观语法。色调调整为角度，可以使用旋钮或圆形控件轻松调整色调。请注意，HSL 颜色包含 _亮度_，而不是 _亮度_，这是一个重要的考虑因素。
+接下来的示例显示了"HSL"，代表 _色相（Hue）、饱和度（Saturation） 和亮度（Lightness）_。对许多人来说，HSL 颜色值比 RGB 值更直观。由设置产生的颜色仍然处于 sRGB 颜色空间，但[`hsl()`](/zh-CN/docs/Web/CSS/color_value/hsl)是许多人的直观语法。色调调整为角度，可以使用旋钮或圆形控件轻松调整色调。请注意，HSL 颜色包含 _亮度（lightness）_，而不是 _亮度（luminance）_，这是一个重要的考虑因素。
 
-接下来的示例显示了"HWB"，代表 _Hue、Whiteness 和 Blackness_。使用 hsl() 和[`hwb()`](/zh-CN/docs/Web/CSS/color_value/hwb)，第一个值可以是[`<number>`](/zh-CN/docs/Web/CSS/number)或[`<angle>`](/zh-CN/docs/Web/CSS/angle)值。当无单位时，该值被解释为`deg`度。
+接下来的示例显示了"HWB"，代表 _色相（Hue）、白度（Whiteness） 和黑度（Blackness）_。使用 hsl() 和 [`hwb()`](/zh-CN/docs/Web/CSS/color_value/hwb)，第一个值可以是 [`<number>`](/zh-CN/docs/Web/CSS/number) 或 [`<angle>`](/zh-CN/docs/Web/CSS/angle) 值。当无单位时，该值被解释为`deg`度。
 
-还有几种其他颜色函数和颜色空间。最后三个示例演示了使用[`lab()`](/zh-CN/docs/Web/CSS/color_value/lab)、[`oklch()`](/zh-CN/docs/Web/CSS/color_value/oklch)和[`color()`](/zh-CN/docs/Web/CSS/color_value/color)颜色函数表示品红。
+还有几种其他颜色函数和颜色空间。最后三个示例演示了使用 [`lab()`](/zh-CN/docs/Web/CSS/color_value/lab)、[`oklch()`](/zh-CN/docs/Web/CSS/color_value/oklch) 和 [`color()`](/zh-CN/docs/Web/CSS/color_value/color) 颜色函数表示品红。
 
 ### 转换
 
 正如我们所见，同一颜色空间中的一种颜色可以用许多方式来表示。观察如何使用 RGB 颜色空间来描述颜色"品红"，你会发现同一种颜色可以用简写、三位数字十六进制数表示，该数字转换为六位数字十六进制数，也转换为相同的 RGB 值，或者作为百分比表示的 RGBA 值。
 
-RGB 是面向硬件的，反映了 CRT 的使用。许多开发人员和设计师更喜欢[`hsl()`](/zh-CN/docs/Web/CSS/color_value/hsl)记法的直观性。从 RGB 转换为 HSL 并不是一个简单的方程。幸运的是，浏览器会自动进行转换，并且在浏览器开发者工具中单击颜色可以提供转换功能。
+RGB 是面向硬件的，反映了 CRT 的使用。许多开发人员和设计师更喜欢 [`hsl()`](/zh-CN/docs/Web/CSS/color_value/hsl) 记法的直观性。从 RGB 转换为 HSL 并不是一个简单的方程。幸运的是，浏览器会自动进行转换，并且在浏览器开发者工具中单击颜色可以提供转换功能。
 
-除了开发者工具外，许多工具可以为你将 RGB 转换为 HSL，并提供 RGB 十六进制和 CSS 函数语法。一个很好的为你转换颜色的工具示例是 Tom Jewett 的"[迷你颜色选择器](https://colortutorial.design/microColorsC.html)"，该工具提供了 HSL、RGB 和 Hex 选项，用于在浏览器中检查对比度。请注意，开发人员工具颜色选择器和此工具都提供 WCAG [颜色对比度值](https://webaim.org/resources/contrastchecker/)。
+除了开发者工具外，许多工具可以为你将 RGB 转换为 HSL，并提供 RGB 十六进制和 CSS 函数语法。一个很好的为你转换颜色的工具示例是 Tom Jewett 的“[迷你颜色选择器](https://colortutorial.design/microColorsC.html)”，该工具提供了 HSL、RGB 和 Hex 选项，用于在浏览器中检查对比度。请注意，开发人员工具颜色选择器和此工具都提供 WCAG [颜色对比度值](https://webaim.org/resources/contrastchecker/)。
 
 ![带有 HSL 和 RGB 的颜色选择器，以及颜色对比度值。](microcolorsc.jpg)
 
-如前所述，[CSS 颜色模块](/zh-CN/docs/Web/CSS/CSS_colors)包括添加额外的颜色空间，包括[`lch()`](/zh-CN/docs/Web/CSS/color_value/lch) 和[`oklch()`](/zh-CN/docs/Web/CSS/color_value/oklch)函数颜色记法以及[`lab()`](/zh-CN/docs/Web/CSS/color_value/lab)和[`oklab()`](/zh-CN/docs/Web/CSS/color_value/oklab)颜色坐标系统，可以指定任何可见颜色。尽管如此，由于其普及性，sRGB 仍然是默认和首选的无障碍性颜色空间。
+如前所述，[CSS 颜色模块](/zh-CN/docs/Web/CSS/CSS_colors)包括添加额外的颜色空间，包括 [`lch()`](/zh-CN/docs/Web/CSS/color_value/lch) 和 [`oklch()`](/zh-CN/docs/Web/CSS/color_value/oklch) 函数颜色记法以及 [`lab()`](/zh-CN/docs/Web/CSS/color_value/lab)和[`oklab()`](/zh-CN/docs/Web/CSS/color_value/oklab) 颜色坐标系统，可以指定任何可见颜色。尽管如此，由于其普及性，sRGB 仍然是默认和首选的无障碍性颜色空间。
 
 然而，在涉及到无障碍性的地方，标准和指南目前主要是使用 sRGB 颜色空间，尤其是在涉及颜色对比度比率时。
 
@@ -130,11 +130,11 @@ RGB 是面向硬件的，反映了 CRT 的使用。许多开发人员和设计�
 
 ### 查询颜色值
 
-{{domxref('Window.getComputedStyle()')}} 方法使用 RGB 十进制参考刻度或通过`color(srgb...)`返回值。例如，对设置了`background-color: #ff0000`的`<div>`调用`Window.getComputedStyle()`会将计算后的背景颜色返回为`rgb(255 0 0)` —— RGB 十进制参考。但是，当[使用相对颜色](/zh-CN/docs/Web/CSS/CSS_colors/Relative_colors)（例如 `background-color: rgb(from blue 255 0 0)`）时，调用`Window.getComputedStyle()`将返回计算后的背景颜色为`color(srgb 1 0 0)`。由于与计算机硬件相关联，`Window.getComputedStyle()`以 RGB 为单位测量颜色，而不是人眼对颜色的感知。
+{{domxref('Window.getComputedStyle()')}} 方法使用 RGB 十进制参考刻度或通过 `color(srgb...)` 返回值。例如，对设置了 `background-color: #ff0000` 的 `<div>` 调用 `Window.getComputedStyle()` 会将计算后的背景颜色返回为 `rgb(255 0 0)`（RGB 十进制参考）。但是，当[使用相对颜色](/zh-CN/docs/Web/CSS/CSS_colors/Relative_colors)（例如 `background-color: rgb(from blue 255 0 0)`）时，调用 `Window.getComputedStyle()` 将返回计算后的背景颜色为 `color(srgb 1 0 0)`。由于与计算机硬件相关联，`Window.getComputedStyle()` 以 RGB 为单位测量颜色，而不是人眼对颜色的感知。
 
 ### 红/绿色盲
 
-Protanopia 是一种色觉缺陷，眼睛中没有红色锥；sRGB 仍然可以通过绿色锥感知，尽管视觉较暗。Protan（红色缺失）和 Deutan（绿色缺失）缺陷都导致难以区分红色 _和_ 绿色。
+Protanopia 是一种色觉缺陷，眼睛中没有红色锥；sRGB 仍然可以通过绿色锥感知，尽管视觉较暗。Protan（红色缺失）和 Deutan（绿色缺失）缺陷都导致难以区分红色*和*绿色。
 
 开发者工具可以帮助在浏览器中模拟颜色视觉差异。例如，Firefox 的 Accessibility Inspector 可以在辅助功能面板中模拟 protanopia、deuteranopia、tritanopia、achromatopsia 和对比度丧失。
 
@@ -150,13 +150,13 @@ Protanopia 是一种色觉缺陷，眼睛中没有红色锥；sRGB 仍然可以�
 
 ### 对比度和字体大小
 
-[WCAG 对比度指南](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)将“大”文本定义为正常状态下为`18pt`（大约为`24px`）或更大，`加粗`文本为`14pt`（大约为`18.7px`）的文本。指出：
+[WCAG 对比度指南](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)将“大”文本定义为正常状态下为 `18pt`（大约为 `24px`）或更大，`加粗`文本为 `14pt`（大约为 `18.7px`）的文本。指出：
 
 _较大并且笔画较宽的文本在低对比度下更容易阅读。因此，较大文本的对比度要求较低。这允许作者对大文本使用更广泛的颜色选择，这有助于页面的设计，特别是标题部分。_
 
 虽然较大文本不需要与其背景具有与较小文本一样大的颜色对比度，但增加字体大小并不能解决所有问题。
 
-“正常”印刷通常被认为是 11.5pt 到 12pt，相当于屏幕上的 16px。虽然较小的字体可能是可辨认的——用户可以准确看出字母约为 70%——但那并不意味着可读。16px 的字体大小通常对于正常视力的人是可读的。视力为 20/40 的人需要两倍于此，约为 31px 的字体大小。这就是为什么 WCAG 指南要求用户能够将任何文本放大到更大尺寸。
+“正常”印刷通常被认为是 11.5pt 到 12pt，相当于屏幕上的 16px。虽然较小的字体可能是可辨认的——用户可以准确看出字母约为 70%（但那并不意味着可读）。16px 的字体大小通常对于正常视力的人是可读的。视力为 20/40 的人需要两倍于此，约为 31px 的字体大小。这就是为什么 WCAG 指南要求用户能够将任何文本放大到更大尺寸。
 
 虽然显示的文本太小很难阅读，但太大的文本也是如此。对于视力为 20/20 的用户，文本大小大约大于 96px，阅读速度会降低。此外，如果页面上的最小字体和最大字体大小之间存在很大的差异，那么当用户放大页面上较小的文本时，较大的文本将变得不那么容易阅读，因为大多数浏览器在用户放大文本时会将所有文本都放大。
 
@@ -168,7 +168,7 @@ _较大并且笔画较宽的文本在低对比度下更容易阅读。因此，�
 
 是颜色亮度的差异使我们能够看到对比度。在 WCAG 中，相对亮度被定义为“颜色空间中任何点的相对亮度，归一化为最黑的黑色为 0，最白的白色为 1”。
 
-当然，这个声明是准确的，但在与 RGB 颜色空间相关的情况下使用时可能会令人困惑，因为 RGB 颜色空间是介于 0 和 255 之间的整数。白色的相对亮度为 100%，黑色的相对亮度为 0%（在大多数但不是所有文献中如此）。按照上述 W3C 标准的解释，这意味着白色，归一化为 1，将具有 RGB 值 rgb(255 255 255)，黑色，归一化为 0，则具有 RGB 值 rgb(0 0 0)。请注意，黑色和白色也可以写作`rgb(100% 100% 100%)`和`rgb(0% 0% 0%)`，这可能更直观。
+当然，这个声明是准确的，但在与 RGB 颜色空间相关的情况下使用时可能会令人困惑，因为 RGB 颜色空间是介于 0 和 255 之间的整数。白色的相对亮度为 100%，黑色的相对亮度为 0%（在大多数但不是所有文献中如此）。按照上述 W3C 标准的解释，这意味着白色，归一化为 1，将具有 RGB 值 rgb(255 255 255)，黑色，归一化为 0，则具有 RGB 值 rgb(0 0 0)。请注意，黑色和白色也可以写作 `rgb(100% 100% 100%)` 和 `rgb(0% 0% 0%)`，这可能更直观。
 
 那么 0 到 255 的这些数字从哪里来？从历史上看，图形引擎将颜色通道存储为一个字节，这意味着介于 0 和 255 之间的整数范围。
 
@@ -182,7 +182,7 @@ _较大并且笔画较宽的文本在低对比度下更容易阅读。因此，�
 
 ## 感知颜色
 
-颜色是我们对红色、黄色、绿色到蓝色的窄波段可见光的感知。然而，我们对这些不同色调的敏感程度并不相同。我们[眼睛](https://www.verywellhealth.com/eye-cones-5088699)中的光敏感细胞，称为锥体，被调整以感知某些颜色而不是其他颜色。大约 65% 的锥体对黄/绿色*最*为敏感，但也对红色有反应（我们称这些为“红色”锥体）。30% 对绿色敏感，而仅有[5% 对蓝色敏感](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0144891#sec001)。虽然蓝色敏感的锥体数量远少于其他两种类型，但它们非常敏感，这在一定程度上弥补了它们的数量较少。
+颜色是我们对红色、黄色、绿色到蓝色的窄波段可见光的感知。然而，我们对这些不同色调的敏感程度并不相同。我们[眼睛](https://www.verywellhealth.com/eye-cones-5088699)中的光敏感细胞，称为锥体，被调整以感知某些颜色而不是其他颜色。大约 65% 的锥体对黄/绿色*最*为敏感，但也对红色有反应（我们称这些为“红色”锥体）。30% 对绿色敏感，而仅有 [5% 对蓝色敏感](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0144891#sec001)。虽然蓝色敏感的锥体数量远少于其他两种类型，但它们非常敏感，这在一定程度上弥补了它们的数量较少。
 
 深纯蓝色与其他颜色的感知不同，因为蓝色锥体不参与亮度，并且我们拥有的蓝色锥体比红色或绿色锥体要少得多。
 
@@ -228,7 +228,7 @@ _较大并且笔画较宽的文本在低对比度下更容易阅读。因此，�
 
 在计算机显示器上，饱和的颜色是特定波长的颜色。虽然每种颜色空间对饱和度的定义可能不同，但饱和度可以很容易地进行测量。关键是要知道你正在使用的是哪种颜色空间，并准备在必要时进行转换。
 
-在讨论光敏性时最经常考虑的颜色空间是 RGB、HSL 和 HSV（也称为 HSB）颜色空间。HSV 颜色空间代表 _色调_、_饱和度_ 和 _亮度_，而 HSB 的同义词代表 _色调_、_饱和度_ 和 _亮度_，在 CSS 中表示为 [`hwb()`](/zh-CN/docs/Web/CSS/color_value/hwb)，表示 _色调_、_白度_ 和 _黑度_。
+在讨论光敏性时最经常考虑的颜色空间是 RGB、HSL 和 HSV（也称为 HSB）颜色空间。HSV 颜色空间代表 _色调_、_饱和度_ 和 _亮度_，而 HSB 的同义词代表*色调*、*饱和度*和*亮度*，在 CSS 中表示为 [`hwb()`](/zh-CN/docs/Web/CSS/color_value/hwb)，表示*色调*、*白度*和*黑度*。
 
 重要的是要知道你正在使用的颜色空间。例如，在 HSL 中，饱和的颜色的亮度为 `0.5`，而在 HWB 中，它们的值为 `1`。在 RGB 颜色空间中，饱和度通常用颜色的 RGB 值 `255` 或 `100%` 来表示。例如，具有十六进制值 `#ff0000` 的饱和红色具有 RGB 值 `rgb(255 0 0)` 和 HSL 值 `hsl(0 100% 50%)`。具有十六进制值 `#ff3300` 的另一种饱和红色具有 RGB 值 `rgb(255 51 0)` 和 HSL 值 `hsl(12 100% 50%)`。两者都是“饱和”的红色。它们是两种不同的“色调”，但都被认为是饱和的颜色。
 
@@ -262,7 +262,7 @@ _较大并且笔画较宽的文本在低对比度下更容易阅读。因此，�
 
 ## 红色的特殊情况
 
-并非所有颜色（"色调"）在我们的大脑中被处理得一样。人类的生理和心理对红色产生的影响通常与其他颜色不同。我们对颜色的生理和心理反应。例如，已经证明[一些颜色比其他颜色更容易引起癫痫发作](https://www.sciencedaily.com/releases/2009/09/090925092858.htm)。一些设备提供了["灰度"设置作为辅助选项](https://ask.metafilter.com/312049/What-is-the-grayscale-setting-for-in-accessibility-options)，这可以帮助光敏感的人。要模仿灰度设置，请使用 CSS 的 {{cssxref("filter")}} 属性和 [`grayscale()`](/zh-CN/docs/Web/CSS/filter-function/grayscale) 或 [`saturate()`](/zh-CN/docs/Web/CSS/filter-function/saturate) [`<filter-function>`](/zh-CN/docs/Web/CSS/filter-function)。
+并非所有颜色（“色调”）在我们的大脑中被处理得一样。人类的生理和心理对红色产生的影响通常与其他颜色不同。我们对颜色的生理和心理反应。例如，已经证明[一些颜色比其他颜色更容易引起癫痫发作](https://www.sciencedaily.com/releases/2009/09/090925092858.htm)。一些设备提供了[“灰度”设置作为辅助选项](https://ask.metafilter.com/312049/What-is-the-grayscale-setting-for-in-accessibility-options)，这可以帮助光敏感的人。要模仿灰度设置，请使用 CSS 的 {{cssxref("filter")}} 属性和 [`grayscale()`](/zh-CN/docs/Web/CSS/filter-function/grayscale) 或 [`saturate()`](/zh-CN/docs/Web/CSS/filter-function/saturate) [`<filter-function>`](/zh-CN/docs/Web/CSS/filter-function)。
 
 ### 饱和的红色
 
@@ -272,11 +272,11 @@ _较大并且笔画较宽的文本在低对比度下更容易阅读。因此，�
 
 ![Red Saturation from Wikimedia Commons svg saved as png Attribution: Datumizer [CC0]](320px-red_saturations.svg.png)
 
-同一"颜色"从最不饱和的左侧到最饱和的右侧。
+同一“颜色”从最不饱和的左侧到最饱和的右侧。
 
-_不止一个"红色"可以被认为是"饱和"的红色。_ 例如，颜色 `#990000` 的 `hsl(0 100% 30%)` 完全饱和，但亮度较低。类似地，颜色 `#8b0000` 也具有 100% 的饱和度。
+_不止一个“红色”可以被认为是“饱和”的红色。_ 例如，颜色 `#990000` 的 `hsl(0 100% 30%)` 完全饱和，但亮度较低。类似地，颜色 `#8b0000` 也具有 100% 的饱和度。
 
-并非所有饱和红色都可以在 RGB 谱或其他在 Web 开发中常用的频谱中很好地表示。根据维基百科关于"红色的色调"的页面，颜色"洋红"是一种饱和红色，其颜料形式主要包含波长大于 600 纳米的红光；文章特别指出，"洋红"接近极端光谱。这将其置于标准色域（RGB 和 CMYK）之外，其给定的 RGB 值仅是一个粗略的近似。
+并非所有饱和红色都可以在 RGB 谱或其他在 Web 开发中常用的频谱中很好地表示。根据维基百科关于"红色的色调"的页面，颜色“洋红”是一种饱和红色，其颜料形式主要包含波长大于 600 纳米的红光；文章特别指出，“洋红”接近极端光谱。这将其置于标准色域（RGB 和 CMYK）之外，其给定的 RGB 值仅是一个粗略的近似。
 
 ### 饱和红色闪烁
 
@@ -307,7 +307,7 @@ _不止一个"红色"可以被认为是"饱和"的红色。_ 例如，颜色 `#9
 - **更高的对比度也可能对我们的情绪产生积极影响：** [通过 EEG 基于深度情绪识别控制视觉内容对情绪的影响变化](https://pubmed.ncbi.nlm.nih.gov/32823741/)
 - **某些颜色可能会影响我们对时间的感知：** [颜色与时间感知：关于蓝色刺激时间过度估计的证据](https://pubmed.ncbi.nlm.nih.gov/29374198/)
 - **蓝色还会显著影响亮度和眩光：** [蓝色、眩光和亮度](https://pubmed.ncbi.nlm.nih.gov/31288107/)
-- **红色色调的眼镜可以增加快乐或喜悦感：** [透过"玫瑰色"眼镜看世界：眼镜颜色对视觉情感加工的影响](https://pubmed.ncbi.nlm.nih.gov/31244627/)
+- **红色色调的眼镜可以增加快乐或喜悦感：** [透过”玫瑰色“眼镜看世界：眼镜颜色对视觉情感加工的影响](https://pubmed.ncbi.nlm.nih.gov/31244627/)
 - **红色众所周知会对我们的行为产生显著影响：** [红色如何影响我们的行为](https://www.scientificamerican.com/article/how-the-color-red-influences-our-behavior/)，《科学美国人》，S. Martinez-Conde，Stephen L. Macknik
 - **红色环境：** 研究表明，对于那些患有创伤性脑损伤的人，[在红色环境中认知功能降低](https://www.ncbi.nlm.nih.gov/pubmed/20649469)。
 
