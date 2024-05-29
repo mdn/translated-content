@@ -35,7 +35,7 @@ l10n:
 - [`aria-activedescendant`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant)
   - : 保存 listbox 中当前活动元素的 `id` 字符串。如果这是一个 option 元素，那么这将是最近与之交互选项的 `id`，无论该选项是否具有值为 `true` 的 [`aria-selected`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-selected)。即使在多选列表框中，也只会有一个 `id`。如果 `id` 不引用 listbox 的 DOM 后代，则 `id` 必须包含在 [`aria-owns`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-owns) 属性中的 ID 中。
 - [`aria-owns`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-owns)
-  - : 这是一个以空格分隔的元素 ID 列表，它们不是 listbox 的 DOM 子元素。此处列出的 ID 也不能列在任何其他元素的[`aria-owns`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-owns) 属性中。
+  - : 这是一个以空格分隔的元素 ID 列表，这些元素不是 listbox 的 DOM 子元素。此处列出的 ID 也不能列在任何其他元素的 [`aria-owns`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-owns) 属性中。
 - [`aria-multiselectable`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable)
   - : 如果用户可以选择多个选项，则存在并设置为 `true`。如果设置为 `true`，_每个_ 可选的选项都应包含[`aria-selected`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-selected) 属性并设置为 `true` 或 `false`。 *不可选*的选项*不应该*具有[`aria-selected`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-selected) 属性。如果值为 `false` 或被省略，那么仅当前选中的选项（如果有任何选项被选中）才需要[`aria-selected`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-selected) 属性，而且必须设置为`true`。
 - [`aria-required`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-required)
