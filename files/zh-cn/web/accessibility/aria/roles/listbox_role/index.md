@@ -194,7 +194,7 @@ l10n:
 
 ## 最佳实践
 
-- 为了便于键盘访问，作者应该对这个角色的所有后代进行 [焦点管理](https://www.w3.org/TR/wai-aria-1.1/#managingfocus)
+- 为了更具键盘无障碍性，作者应该对这个角色的所有后代进行[焦点管理](https://www.w3.org/TR/wai-aria-1.1/#managingfocus)
 - 建议作者在列表未聚焦时使用不同的样式进行选择，例如非活动选项通常以较浅的背景颜色显示。
 - 如果 listbox 不是另一个组件的一部分，那么它应该具有[`aria-labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) 属性。
 - 如果一个或多个条目不是 listbox 的 DOM 子项，则需要设置额外的 `aria-*` 属性（参见 [ARIA Best Practices](https://www.w3.org/TR/wai-aria-practices/#listbox_div))。
