@@ -11,7 +11,7 @@ l10n:
 
 ## 描述
 
-`listbox` 角色用于标识创建列表的元素，用户可以从中选择一个或多个静态选项，类似于 HTML {{HTMLElement("select")}} 元素。与 {{HTMLElement("select")}} 不同，`listbox` 可以包含图像。`listbox` 的每个子项都应该有一个 [`option`](https://www.w3.org/TR/2010/WD-wai-aria-20100916/roles#option) role。
+`listbox` 角色用于标识创建列表的元素，用户可以从中选择一个或多个静态选项，类似于 HTML {{HTMLElement("select")}} 元素。与 {{HTMLElement("select")}} 不同，`listbox` 可以包含图像。`listbox` 的每个子项都应该有一个 [`option`](https://www.w3.org/TR/2010/WD-wai-aria-20100916/roles#option) 角色。
 
 强烈建议使用 HTML select 元素，如果只能选择一个选项，则使用一组单选按钮，如果可以选择多个选项，则使用一组复选框，因为有很多键盘交互来管理所有后代的焦点和原生 HTML 元素为你提供相关的功能。
 
