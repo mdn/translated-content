@@ -48,7 +48,7 @@ setSelectionRange(selectionStart, selectionEnd, selectionDirection)
 ### 异常
 
 InvalidStateError {{domxref("DOMException")}}
-: 如果元素不是以下输入类型之一：[`password`](/en-US/docs/Web/HTML/Element/input/password)、[`search`](/en-US/docs/Web/HTML/Element/input/search)、[`tel`](/en-US/docs/Web/HTML/Element/input/tel)、[`text`](/en-US/docs/Web/HTML/Element/input/text) 或 [`url`](/en-US/docs/Web/HTML/Element/input/url)，则抛出该异常。
+: 如果元素不是以下输入类型之一：[`password`](/zh-CN/docs/Web/HTML/Element/input/password)、[`search`](/zh-CN/docs/Web/HTML/Element/input/search)、[`tel`](/zh-CN/docs/Web/HTML/Element/input/tel)、[`text`](/zh-CN/docs/Web/HTML/Element/input/text) 或 [`url`](/zh-CN/docs/Web/HTML/Element/input/url)，则抛出该异常。
 
 ## 示例
 
