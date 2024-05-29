@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-HTML5 这个术语本质上是指一组现代 Web 技术的流行词汇。这包括 {{Glossary("HTML")}} 现行标准，以及增强存储、多媒体和硬件访问的 {{glossary("JavaScript")}} {{glossary("API")}}。
+术语 HTML5 本质上是指一组现代 Web 技术的流行词汇。这包括 {{Glossary("HTML")}} 动态标准，以及用于增强存储、多媒体和硬件访问的 {{glossary("JavaScript")}} {{glossary("API")}}。
 
 你有时会听到“新的 HTML5 中的元素”，或发现 HTML5 被描述为 HTML 的新版本。HTML5 是以前版本 HTML 的继续，引入了新的元素和功能，改进或删除了一些现有功能。然而，作为一个现行标准，HTML 现在没有版本。最新的规范可以在 [html.spec.whatwg.org/](https://html.spec.whatwg.org/) 找到。
 
