@@ -13,7 +13,7 @@ l10n:
 
 任何现代网站都应该使用 [HTML 文档类型](/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML#doctype)——这将确保你使用的是最新版本的 HTML。
 
-> **备注：** 在 2019 年之前，{{glossary("W3C")}} 发布的是带有版本号的 HTML5 标准。自 2019 年 5 月 28 日起，W3C 宣布 WHATWG 现行标准为 HTML 的唯一版本。
+> **备注：** 在 2019 年之前，{{glossary("W3C")}} 发布的是带有版本号的 HTML5 标准。自 2019 年 5 月 28 日起，W3C 宣布 WHATWG 动态标准为 HTML 的唯一版本。
 
 ## 参见
 
