@@ -123,7 +123,7 @@ Connection: Keep-Alive
 Transfer-Encoding: chunked
 Content-Type: application/xml
 
-[…XML Data…]
+[…XML 資料…]
 ```
 
 在回應中，伺服器返回了一個帶有 `Access-Control-Allow-Origin: *` 的 {{HTTPHeader("Access-Control-Allow-Origin")}} 標頭，這意味著該資源可以被**任何**來源訪問。
