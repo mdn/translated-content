@@ -7,7 +7,7 @@ l10n:
 
 {{MathMLRef}}
 
-[MathML](/zh-CN/docs/Web/MathML) **`<msub>`** 元素用于为表达式附加下标。
+**`<msub>`** [MathML](/zh-CN/docs/Web/MathML) 元素用于为表达式附加下标。
 
 使用语法如下：`<msub> base subscript </msub>`。
 
