@@ -501,5 +501,5 @@ Access-Control-Request-Headers: <field-name>[,<field-name>]*
 - [Stack Overflow 回答，包含處理常見問題的「操作方法」訊息](https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe/43881141#43881141):
 
   - 如何避免 CORS 預檢
-  - 如何使用 CORS 代理來繞過_「沒有Access-Control-Allow-Origin頭」_
-  - 如何修復_「Access-Control-Allow-Origin頭不能是通配符」_
+  - 如何使用 CORS 代理來繞過*「沒有Access-Control-Allow-Origin頭」*
+  - 如何修復*「Access-Control-Allow-Origin頭不能是通配符」*
