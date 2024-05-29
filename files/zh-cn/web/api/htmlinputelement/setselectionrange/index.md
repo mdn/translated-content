@@ -1,6 +1,8 @@
 ---
 title: HTMLInputElement.setSelectionRange()
 slug: Web/API/HTMLInputElement/setSelectionRange
+l10n:
+  sourceCommit: 76960f06597294df2d93ebb9960ad40c909c7cb5
 ---
 
 {{APIRef("HTML DOM")}}
