@@ -49,14 +49,16 @@ L'exemple qui suit montre l'utilisation des propriétés `height` et `width` pou
   <body onload="init();">
     <p>
       Image 1: no height, width, or style
-      <img id="image1" src="http://www.mozilla.org/images/mozilla-banner.gif" />
+      <img
+        id="image1"
+        src="https://www.mozilla.org/images/mozilla-banner.gif" />
     </p>
 
     <p>
       Image 2: height="50", width="500", but no style
       <img
         id="image2"
-        src="http://www.mozilla.org/images/mozilla-banner.gif"
+        src="https://www.mozilla.org/images/mozilla-banner.gif"
         height="50"
         width="500" />
     </p>
@@ -65,7 +67,7 @@ L'exemple qui suit montre l'utilisation des propriétés `height` et `width` pou
       Image 3: no height, width, but style="height: 50px; width: 500px;"
       <img
         id="image3"
-        src="http://www.mozilla.org/images/mozilla-banner.gif"
+        src="https://www.mozilla.org/images/mozilla-banner.gif"
         style="height: 50px; width: 500px;" />
     </p>
 

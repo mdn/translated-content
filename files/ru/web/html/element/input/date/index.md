@@ -471,7 +471,7 @@ daySelect.onchange = function () {
 
 > **Примечание:** Remember that some years have 53 weeks in them (see [Weeks per year](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year))! You'll need to take this into consideration when developing production apps.
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
@@ -479,7 +479,7 @@ daySelect.onchange = function () {
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}
 - [Date and Time picker tutorial](/ru/docs/Web/Guide/HTML/Forms/The_native_form_widgets#Date_and_time_picker)

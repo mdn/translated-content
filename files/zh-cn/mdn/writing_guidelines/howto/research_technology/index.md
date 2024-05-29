@@ -38,7 +38,7 @@ slug: MDN/Writing_guidelines/Howto/Research_technology
 - [如何阅读 web 规范（第 1 部分）——又名：WebVR，你的原理是什么？](https://surma.dev/things/reading-specs/)虽然仅阐述了阅读 WebVR 规范的步骤，却属如何阅读 web API 规范的不错的介绍。
 - [如何阅读 web 规范（第 2a 部分）——又名：ECAMScript Symbol](https://surma.dev/things/reading-specs-2/) 为上一链接的第二部分，包含如何理解 ECMAScript 规范的信息，此规范描绘了 JavaScript 语言的大纲。
 
-此外，我们有关于 [WebIDL 文件所含信息](/zh-CN/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file)的指南，在阅读 web API 规范时大有裨益。
+此外，我们有关于 [WebIDL 文件所含信息](/zh-CN/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file)的指南，在阅读 web API 规范时大有裨益。
 
 ## 探索特性
 
@@ -52,7 +52,7 @@ slug: MDN/Writing_guidelines/Howto/Research_technology
 
 ### 侧边栏
 
-所写页面的侧边栏可能也需要进行定义或更新。为获知是否有必要操作及如何操作，请查阅[侧边栏指南](/zh-CN/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars)。
+所写页面的侧边栏可能也需要进行定义或更新。为获知是否有必要操作及如何操作，请查阅[侧边栏指南](/zh-CN/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars)。
 
 ### 代码示例
 

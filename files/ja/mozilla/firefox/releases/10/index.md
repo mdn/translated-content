@@ -5,7 +5,7 @@ slug: Mozilla/Firefox/Releases/10
 
 Gecko 10.0 を搭載した Firefox 10 は米国時間 2012 年 1 月 31 日にリリースされました。このページでは、開発者に影響する Firefox 10 の変更点をまとめています。
 
-> **メモ:** Firefox 10 は、2 桁の数値で表記される最初のリリースです。これにより、一部の UserAgent 検出スクリプトで問題が発生するおそれがあります。そのようなスクリプトや、ページに埋め込まれているサードパーティのソフトウェア (ライブラリなど) で UserAgent 検出を行っているものの確認を行うようにしてください。この点に関する詳細情報は、hack.mozilla.org の記事 [Firefox goes 2-digit article on](http://hacks.mozilla.org/2012/01/firefox-goes-2-digit-time-to-check-your-ua-sniffing-scripts/) をご覧ください。
+> **メモ:** Firefox 10 は、2 桁の数値で表記される最初のリリースです。これにより、一部の UserAgent 検出スクリプトで問題が発生するおそれがあります。そのようなスクリプトや、ページに埋め込まれているサードパーティのソフトウェア (ライブラリーなど) で UserAgent 検出を行っているものの確認を行うようにしてください。この点に関する詳細情報は、hack.mozilla.org の記事 [Firefox goes 2-digit article on](http://hacks.mozilla.org/2012/01/firefox-goes-2-digit-time-to-check-your-ua-sniffing-scripts/) をご覧ください。
 
 ## ウェブ開発者向けの変更点一覧
 
@@ -80,7 +80,7 @@ IndexedDB を最新のドラフト仕様に更新するための大きな進展�
 
 - SVG を含む文字列が与えられたとき、適切な MIME タイプ `image/svg+xml` が渡された場合は [`DOMParser` が `SVGDocument` を生成する](/ja/docs/DOM/DOMParser#Parsing_a_SVG_document)ようになりました。
 - 従来 {{ domxref("element.setAttribute()") }} が整数値の構文解析を行うときは、数値ではない文字列が含まれる場合 (例えば "42foo") にエラーを報告していました。これが仕様書へ合致させるために、数値 42 へ正しく切り詰めるようになりました。
-- ESC キーで {{ domxref("window.oninput") }} ハンドラが誤って呼び出されるという、間違った結果にならないようになりました。
+- ESC キーで {{ domxref("window.oninput") }} ハンドラーが誤って呼び出されるという、間違った結果にならないようになりました。
 - 従来実装されていたものの実際にはアクセスする方法がない {{ domxref("NameList") }} インターフェイスは削除されました。
 - {{ domxref("document.createProcessingInstruction()") }} メソッドが HTML ドキュメントでも、XML ドキュメントの場合と同様に動作するようになりました。{{ domxref("ProcessingInstruction") }} ノードは現在も XML ドキュメントでのみサポートされていますが、ノードはドキュメントをまたいで移動させられますので、HTML ドキュメントでも同様にノードを作成することに役立ちます。
 - {{ domxref("XMLHttpRequest") }} のプロパティ `responseType` の値として [Firefox 9 で導入した](/ja/docs/Firefox_9_for_developers#DOM) "`moz-json`" は、最新のドラフト仕様への更新を行い接頭辞を削除しました。[Firefox バグ 707142#c13](https://bugzil.la/707142#c13) をご覧ください。
@@ -100,7 +100,7 @@ IndexedDB を最新のドラフト仕様に更新するための大きな進展�
 
 ### ネットワーク
 
-- HTTP ヘッダ `Accept-Charset` は、HTTP 要求時に送信されなくなりました。このヘッダがない場合、サーバは UTF-8 での送信として応答するべきです。
+- HTTP ヘッダー `Accept-Charset` は、HTTP 要求時に送信されなくなりました。このヘッダーがない場合、サーバーは UTF-8 での送信として応答するべきです。
 
 ### 開発ツール
 
@@ -115,7 +115,7 @@ IndexedDB を最新のドラフト仕様に更新するための大きな進展�
 
 ### Manifests
 
-- インストールマニフェストに [`<em:strictCompatibility>`](/ja/docs/Install_Manifests#strictCompatibility) のサポートが追加されました。これによりアドオンの作者が、拡張機能で最大バージョンのチェックを有効にすることができます。`true` に設定すると、アプリケーションのバージョンが `<em:maxVersion>` を上回っている場合にアドオンが無効になります。Firefox 10 はデフォルトで、指定された最大バージョンに関わらずアドオンは互換性があるものとします。このフラグは、その設定を上書きします。Firefox の更新により動作しなくなる可能性があることをアドオンで行っている場合はこれを設定するべきですが、アドオンにバイナリコンポーネントが含まれている場合は常に厳密なチェックが行われますのでこれを**設定しない**ようにしてください (バイナリコンポーネントは Firefox のメジャーリリースごとに、必ず再コンパイルが必要です)。
+- インストールマニフェストに [`<em:strictCompatibility>`](/ja/docs/Install_Manifests#strictCompatibility) のサポートが追加されました。これによりアドオンの作者が、拡張機能で最大バージョンのチェックを有効にすることができます。`true` に設定すると、アプリケーションのバージョンが `<em:maxVersion>` を上回っている場合にアドオンが無効になります。Firefox 10 はデフォルトで、指定された最大バージョンに関わらずアドオンは互換性があるものとします。このフラグは、その設定を上書きします。Firefox の更新により動作しなくなる可能性があることをアドオンで行っている場合はこれを設定するべきですが、アドオンにバイナリーコンポーネントが含まれている場合は常に厳密なチェックが行われますのでこれを**設定しない**ようにしてください (バイナリーコンポーネントは Firefox のメジャーリリースごとに、必ず再コンパイルが必要です)。
 - 以前の動作、つまりマニフェストの `strictCompatibility` の値に関わらずすべてのアドオンで厳密な互換性チェックを行う方式に戻したい場合は、設定項目 `extensions.strictCompatibility` を `true` にしてください。
 
 ### XUL

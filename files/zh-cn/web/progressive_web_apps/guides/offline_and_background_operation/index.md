@@ -47,7 +47,7 @@ slug: Web/Progressive_web_apps/Guides/Offline_and_background_operation
 
 离线操作允许 PWA 即使在设备没有网络连接时也能提供良好的用户体验。这是通过向应用程序添加 service worker 来实现的。
 
-service worker *控制*应用的部分或全部页面。在安装 service worker 后，它可以从服务器获取它控制的页面的资源（包括页面、样式、脚本和图片等），并将它们添加到本地缓存中。使用 {{domxref("Cache")}} 接口将资源添加到缓存中。在 service worker 全局作用域内，可以通过 {{domxref("caches")}} 属性访问 `Cache` 实例。
+service worker *控制*应用的部分或全部页面。在安装 service worker 后，它可以从服务器获取它控制的页面的资源（包括页面、样式、脚本和图片等），并将它们添加到本地缓存中。使用 {{domxref("Cache")}} 接口将资源添加到缓存中。在 service worker 全局作用域内，可以通过 {{domxref("WorkerGlobalScope.caches")}} 属性访问 `Cache` 实例。
 
 然后，每当应用程序请求一个资源（例如，因为用户打开了应用程序或点击了内部链接），浏览器在 service worker 的全局作用域内触发一个名为 {{domxref("ServiceWorkerGlobalScope.fetch_event", "fetch")}} 的事件。通过监听此事件，service worker 可以拦截请求。
 

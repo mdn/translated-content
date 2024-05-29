@@ -1,8 +1,6 @@
 ---
 title: WebIDL ファイルに含まれる情報
-slug: MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file
-l10n:
-  sourceCommit: 24b4448c9dbaf3cb9084ad69a85c72e6aa2f72f9
+slug: MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file
 ---
 
 {{MDNSidebar}}
@@ -355,7 +353,7 @@ DOMString canPlayType(DOMString type);
 
 返値の型はメソッド名の前に示します。上記の場合、値は `DOMString` 型のオブジェクトです。返値に疑問符 (`'?'`) が続いた場合、 `null` という値も返すことができ、ドキュメントではこれがどのような場合に起こり得るかを説明しなければなりません。このように疑問符がない場合、その返値は `null` になることはありません。
 
-返値がキーワード `void` の場合は、返値が存在しないことを意味します。これは返値の型ではありません。WebIDL のエントリが `void` と書かれている場合、ドキュメントの返値の節にはシンプルに「なし (\{{jsxref("undefined")}})。」と示されているはずです。
+返値がキーワード `void` の場合は、返値が存在しないことを意味します。これは返値の型ではありません。WebIDL のエントリーが `void` と書かれている場合、ドキュメントの返値の節にはシンプルに「なし (\{{jsxref("undefined")}})。」と示されているはずです。
 
 ### 例外の発生
 

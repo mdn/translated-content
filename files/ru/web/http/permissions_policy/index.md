@@ -98,7 +98,7 @@ The features include:
 
 - See [Feature Policy Demos](http://feature-policy-demos.appspot.com/) for example usage of many policies.
 
-## Specifications
+## Спецификации
 
 {{Specifications}}
 
@@ -106,7 +106,7 @@ The features include:
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{HTTPHeader("Feature-Policy")}} HTTP header
 - {{HTMLElement('iframe','<code>allow</code>','#Attributes')}} attribute on iframes

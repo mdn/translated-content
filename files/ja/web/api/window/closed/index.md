@@ -31,7 +31,7 @@ var isClosed = windowRef.closed;
 ```js
 // 開いた側のウィンドウが存在するか、かつ、閉じられていないかを調べます。
 if (window.opener && !window.opener.closed) {
-  window.opener.location.href = "http://www.mozilla.org";
+  window.opener.location.href = "https://www.mozilla.org";
 }
 ```
 

@@ -44,7 +44,7 @@ Tôt ou tard nous apprenons tous à écrire une lettre&nbsp;; c'est aussi un exe
 
 ## Point de départ
 
-Pour commencer cet exercice, vous devez récupérer le [texte brut que vous allez baliser](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/marking-up-a-letter-start/letter-text.txt) et les CSS [à inclure](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/marking-up-a-letter-start/css.txt) dans l'HTML. Créez un nouveau fichier `.html` avec l'éditeur de texte dans lequel vous allez travailler (ou bien utilisez un site comme [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/) pour faire l'exercice.)
+Pour commencer cet exercice, vous devez récupérer le [texte brut que vous allez baliser](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/marking-up-a-letter-start/letter-text.txt) et les CSS [à inclure](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/marking-up-a-letter-start/css.txt) dans l'HTML. Créez un nouveau fichier `.html` avec l'éditeur de texte dans lequel vous allez travailler (ou bien utilisez un site comme [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/) pour faire l'exercice.)
 
 ## Projet «&nbsp;lettre&nbsp;»
 

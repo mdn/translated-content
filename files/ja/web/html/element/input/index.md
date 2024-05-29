@@ -2,7 +2,7 @@
 title: "<input>: 入力欄（フォーム入力）要素"
 slug: Web/HTML/Element/input
 l10n:
-  sourceCommit: 08b4db925d3236a67cf61518dd50c23e064ec099
+  sourceCommit: c88c96a09084aadc20ac2cabae2e19609b4a30d8
 ---
 
 {{HTMLSidebar}}
@@ -671,7 +671,7 @@ l10n:
 
 - `orient` {{non-standard_inline}}
 
-  - : CSS の標準外の -moz-orient non-standard プロパティと同様に {{htmlelement('progress')}} および {{htmlelement('meter')}} 要素に影響を与える `orient` 属性は、範囲スライダーの向きを定義する定義します。値は `horizontal` が範囲を水平方向に描画することを、`vertical` が範囲を垂直に描画することを意味します。
+  - : CSS の標準外の -moz-orient non-standard プロパティと同様に {{htmlelement('progress')}} および {{htmlelement('meter')}} 要素に影響を与える `orient` 属性は、範囲スライダーの向きを定義する定義します。値は `horizontal` が範囲を水平方向に描画することを、`vertical` が範囲を垂直に描画することを意味します。垂直フォームコントロールを作成する現行の手法については、[垂直フォームコントロールの作成](/ja/docs/Web/CSS/CSS_writing_modes/Vertical_controls)を参照してください。
 
 - `results` {{non-standard_inline}}
 
@@ -910,6 +910,12 @@ input.custom {
 #### 結果
 
 {{EmbedLiveSample('caret-color', 500, 80)}}
+
+### field-sizing
+
+{{cssxref("field-sizing")}} プロパティは、フォーム入力欄のサイズ設定の動作を制御することができます（つまり、既定では推奨されるサイズが設定されています）。このプロパティを使用すると、既定の動作を上書きして、フォームコントロールがコンテンツに合わせてサイズを調整できるようになります。
+
+このプロパティは通常、コンテンツを収縮包装し、テキストが入力されるにつれて大きくなるフォームフィールドを形成するために使用します。これは、直接テキスト入力を受け入れる入力型（例えば、[`text`](/ja/docs/Web/HTML/Element/input/text)、[`url`](/ja/docs/Web/HTML/Element/input/url)、[`file`](/ja/docs/Web/HTML/Element/input/file) 入力型、{{htmlelement("textarea")}} 要素で動作します。
 
 ### object-position と object-fit
 

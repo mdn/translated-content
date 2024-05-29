@@ -2,7 +2,7 @@
 title: <stop>
 slug: Web/SVG/Element/stop
 l10n:
-  sourceCommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
+  sourceCommit: 2f43f506240fa6c866cc3bc2d018364ae49421d9
 ---
 
 {{SVGRef}}
@@ -50,7 +50,7 @@ svg {
   - : この属性はグラデーションの色経由点の (不) 透明度を表します。 CSS プロパティとして使用することができます。
     _値の型_: [**\<opacity>**](/ja/docs/Web/SVG/Content_type#opacity_value); _既定値_: `1`; _アニメーション_: **可**
 
-## 使用上のメモ
+## 使用コンテキスト
 
 {{svginfo}}
 

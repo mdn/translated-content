@@ -1,5 +1,5 @@
 ---
-title: 属性
+title: 属性（Attribute）
 slug: Glossary/Attribute
 l10n:
   sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
@@ -15,16 +15,15 @@ l10n:
 
 ```html
 <input required />
-<!-- 与 -->
+<!-- 等同于 -->
 <input required="" />
 <!-- 或 -->
 <input required="required" />
-<!-- 相同 -->
 ```
 
 ## 属性的反射
 
-属性可以*反射*到特定接口的特定属性中。这意味着属性的值可以通过访问该属性来读取，并可通过将属性设置为不同的值来修改属性。
+属性可以*反射*到特定接口的特定属性中。这意味着标签属性的值可以通过访问接口属性来读取，并可通过将接口属性设置为不同的值来修改标签属性的值性。
 
 例如，下面的 `placeholder` 反射为 {{domxref("HTMLInputElement.placeholder")}}。
 
@@ -34,7 +33,7 @@ l10n:
 <input placeholder="原始占位符" />
 ```
 
-我们可以使用 {{domxref("HTMLInputElement.placeholder")}} 检查属性与 {{domxref("HTMLInputElement.placeholder")}} 之间的反射性：
+我们可以使用 {{domxref("HTMLInputElement.placeholder")}} 检查属性与 {{domxref("HTMLInputElement.placeholder")}} 之间的反射：
 
 ```js
 const input = document.querySelector("input");

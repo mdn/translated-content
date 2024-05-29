@@ -13,7 +13,7 @@ slug: Learn/JavaScript/Client-side_web_APIs
 
 了解 [HTML](/zh-TW/docs/Learn/HTML) 和 [CSS](/zh-TW/docs/Learn/CSS) 的基礎知識也會有所幫助。
 
-> **備註：** 假如你正在使用 電腦/平板/其他裝置，你不需要建立自己的檔案，你可以嘗試線上程式撰寫系統來撰寫範例程式，像是 [JSBin](http://jsbin.com/) 或 [Glitch](https://glitch.com/)。
+> **備註：** 假如你正在使用 電腦/平板/其他裝置，你不需要建立自己的檔案，你可以嘗試線上程式撰寫系統來撰寫範例程式，像是 [JSBin](https://jsbin.com/) 或 [Glitch](https://glitch.com/)。
 
 ## 概觀
 

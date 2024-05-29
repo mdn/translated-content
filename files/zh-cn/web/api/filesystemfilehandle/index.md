@@ -1,11 +1,13 @@
 ---
 title: FileSystemFileHandle
 slug: Web/API/FileSystemFileHandle
+l10n:
+  sourceCommit: f10fbe2d2dc4857bf29ce955689a7ba7c1ffac8b
 ---
 
-{{securecontext_header}}{{APIRef("File System API")}}
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
 
-{{domxref("File System API", "File System API", "", "nocode")}} 的 **`FileSystemFileHandle`** 接口表示一个指向文件系统条目的句柄。可通过 {{domxref('window.showOpenFilePicker()')}} 方法来访问此接口。
+{{domxref("File System API", "文件系统 API", "", "nocode")}} 的 **`FileSystemFileHandle`** 接口表示一个指向文件系统条目的句柄。可通过 {{domxref('window.showOpenFilePicker()')}} 方法来访问此接口。
 
 注意，读写操作所依赖的文件访问权限在刷新或关闭页面并且页面所属的源没有其他标签页保持打开的情况下不会继续保有。{{domxref("FileSystemHandle")}} 接口的 {{domxref("FileSystemHandle.queryPermission()", "queryPermission")}} 方法可用于在访问文件前验证权限状态。
 
@@ -112,7 +114,7 @@ onmessage = async (e) => {
 };
 ```
 
-> **备注：** 在规范早期版本中，{{domxref("FileSystemSyncAccessHandle.close()", "close()")}}、{{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}、{{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}} 和 {{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} 被错误地定义为异步方法。此问题现已被[修正](https://github.com/whatwg/fs/issues/7)，但某些浏览器依然支持异步版本。
+> **备注：** 在规范的早期版本中，{{domxref("FileSystemSyncAccessHandle.close()", "close()")}}、{{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}、{{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}} 和 {{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} 被错误地指定为异步方法，并且某些较旧版本的浏览器以这种方式实现它们。然而，当前所有支持这些方法的浏览器都将它们实现为同步方法。
 
 ## 规范
 
@@ -125,4 +127,4 @@ onmessage = async (e) => {
 ## 参见
 
 - [文件系统 API](/zh-CN/docs/Web/API/File_System_API)
-- [文件系统访问 API：简化本地文件访问](https://developer.chrome.com/articles/file-system-access/)
+- [文件系统访问 API：简化本地文件访问](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)

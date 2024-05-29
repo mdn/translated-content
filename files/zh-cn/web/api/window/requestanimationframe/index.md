@@ -1,6 +1,6 @@
 ---
 title: Window：requestAnimationFrame() 方法
-slug: Web/API/window/requestAnimationFrame
+slug: Web/API/Window/requestAnimationFrame
 ---
 
 {{APIRef}}

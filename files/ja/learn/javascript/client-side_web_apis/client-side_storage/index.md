@@ -2,7 +2,7 @@
 title: クライアント側ストレージ
 slug: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 l10n:
-  sourceCommit: e1f571eced916f60ca387ecb562271f6235beb5c
+  sourceCommit: 1b094710cd2816a6669ce616b6f56d0a5b25e6ad
 ---
 
 {{LearnSidebar}}
@@ -49,7 +49,7 @@ MDN 学習領域の他の場所で、[静的サイト](/ja/docs/Learn/Server-sid
 
 クライアント側とサーバー側のストレージが一緒に使用されることがよくあります。例えば、音楽ファイル（ウェブゲームや音楽プレーヤーアプリケーションで使用できる）を一括してダウンロードし、クライアント側のデータベースに格納し、必要に応じて再生できるようにすることができます。ユーザーが音楽ファイルをダウンロードするのは最初だけで、その後でアクセスした場合はデータベースから取得することになります。
 
-> **メモ:** クライアント側ストレージ API を使用して格納できるデータの量には上限があります（おそらく個々の API ごとと、総量の両方）。正確な上限はブラウザーによって異なり、またユーザーの設定に基づく可能性もあります。詳細な情報は[ブラウザーのストレージ制限と削除基準](/ja/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria)を参照してください。
+> **メモ:** クライアント側ストレージ API を使用して格納できるデータの量には上限があります（おそらく個々の API ごとと、総量の両方）。正確な上限はブラウザーによって異なり、またユーザーの設定に基づく可能性もあります。詳細な情報は[ブラウザーのストレージ制限と削除基準](/ja/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria)を参照してください。
 
 ### 古い流儀: クッキー
 
@@ -242,6 +242,10 @@ MDN 学習領域の他の場所で、[静的サイト](/ja/docs/Learn/Server-sid
 
 [IndexedDB API](/ja/docs/Web/API/IndexedDB_API) （ときには IDB と省略します）は、ブラウザーで利用可能であり、複雑で関係性のあるデータを保存できる、完全なデータベースシステムです。そのデータの型は、文字列または数値のような単純な値に限定されません。動画や静止画像、そして、その他のものもほとんどすべて、 IndexedDB インスタンスに保存することができます。
 
+IndexedDB API では、データベースを作成し、そのデータベース内にオブジェクトストアを作成することができます。
+オブジェクトストアはリレーショナルデータベースのテーブルのようなもので、各オブジェクトストアはいくつものオブジェクトを格納することができます。
+IndexedDB API の詳細については、[IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB) を参照してください。
+
 しかし、これには代償があります。IndexedDB はウェブストレージ API よりも使うのがはるかに複雑です。この節では、実際にそれが可能なことの表面に触れるだけですが、 始めるには十分な情報を提供します。
 
 ### メモのストレージの例での作業
@@ -319,8 +323,8 @@ MDN 学習領域の他の場所で、[静的サイト](/ja/docs/Learn/Server-sid
      // 開いたデータベースの参照を取得します。
      db = e.target.result;
 
-     // 自動増加するキーを含んだ、メモを格納するための objectStore を
-     // 作成します（基本的に単一の表のように）。
+     // メモと自動増加するキーを格納するために、データベースに objectStore を作成します。
+     // objectStore はリレーショナルデータベースの「テーブル」に似ています。
      const objectStore = db.createObjectStore("notes_os", {
        keyPath: "id",
        autoIncrement: true,
@@ -622,7 +626,7 @@ function deleteItem(e) {
    }
    ```
 
-5. 最後に、`displayVideo()` があります。これは、UI に動画を挿入するのに必要な DOM 要素を作成してから、それらの DOM 要素をページに追加します。これの一番面白い部分は、以下に示した箇所です。`<video>` 要素内に動画ブロブを実際に表示するには、{{domxref("URL.createObjectURL()")}} メソッドを使って、オブジェクト URL (メモリに記憶されている動画ブロブを指し示す内部 URL) を作成せねばならないのです。それが済んだら、オブジェクト URL を {{htmlelement("source")}} 要素の `src` 属性の値として設定できて、物事がうまく機能します。
+5. 最後に、`displayVideo()` があります。これは、UI に動画を挿入するのに必要な DOM 要素を作成してから、それらの DOM 要素をページに追加します。これの一番面白い部分は、以下に示した箇所です。`<video>` 要素内に動画ブロブを実際に表示するには、{{domxref("URL/createObjectURL_static", "URL.createObjectURL()")}} メソッドを使って、オブジェクト URL (メモリーに記憶されている動画ブロブを指し示す内部 URL) を作成せねばならないのです。それが済んだら、オブジェクト URL を {{htmlelement("source")}} 要素の `src` 属性の値として設定できて、物事がうまく機能します。
 
    ```js
    // displayVideo() 関数を定義します。

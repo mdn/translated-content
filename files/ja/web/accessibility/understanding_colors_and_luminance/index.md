@@ -2,12 +2,10 @@
 title: "ウェブアクセシビリティ: 色と輝度を理解する"
 slug: Web/Accessibility/Understanding_Colors_and_Luminance
 l10n:
-  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+  sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
 ---
 
-<section id="Quick_links">
-  {{ListSubpagesForSidebar("Web/Accessibility", 1)}}
-</section>
+{{AccessibilitySidebar}}
 
 色、輝度、彩度を理解することは、視力のあるすべてのユーザーにとってデザインや読み取り可能性を高めるために重要ですが、視力が低下している人や色覚障碍のある人、特定の神経障碍や認知障碍、他にも障碍のある人にとっては不可欠です。
 
@@ -39,11 +37,11 @@ l10n:
 
 色を印刷する場合、お使いのプリンターにはシアン、マゼンタ、黄、黒 (CMYK) のインクカートリッジがあるでしょう。 CMYK は減法混色モデルで、 4 つのインクが固有の波長の光を除去し、それぞれが関連する狭い範囲のみを反映します。 RGB は加法混色モデルで、赤、緑、青の光をさまざまな割合で追加します。
 
-現在、ウェブ開発者が作業する空間としては RGB 色空間が主流です。 HEX、RGB、HSL 色空間は異なる形で表記されますが、ブラウザーはこれらの色表記間の値を自動的に変換します。 [CSS カラーモジュール](/ja/docs/Web/CSS/CSS_colors) は追加の色空間を提供します。それでも、色出力を測定する上で RGB 色空間が現在支配的であるため、この文書内のほとんどの計算では RGB 色空間、そしてとても特殊な場合には sRGB 色空間での計算を想定しています。
+現在、ウェブ開発者が作業する空間としては {{glossary("RGB", "RGB 色空間")}}が主流です。 HEX、RGB、HSL 色空間は異なる形で表記されますが、ブラウザーはこれらの色表記間の値を自動的に変換します。 [CSS カラーモジュール](/ja/docs/Web/CSS/CSS_colors) は追加の色空間を提供します。それでも、色出力を測定する上で RGB 色空間が現在支配的であるため、この文書内のほとんどの計算では RGB 色空間、そしてとても特殊な場合には sRGB 色空間での計算を想定しています。
 
 ## sRGB 色空間
 
-色には、[`<color>` データ型](/ja/docs/Web/CSS/color_value) を入力することで明らかなように、RGB、RGB 10進数、RGB パーセント、HSL、HWB、LCH、CMYK、他にも多くの定義する方法があります。
+色には、[`<color>` データ型](/ja/docs/Web/CSS/color_value) を入力することで明らかなように、RGB、RGB 10進数、RGB パーセント、HSL、HWB、LCH、LAB、CMYK、他にも多くの定義する方法があります。
 
 デジタルに関わる技術の多くは、過去にはRGB色空間を使用していました。 RGB 色モデルは、色の不透明度を指定できるように、「アルファ」を含めるために拡張されています (RGBA)。色を測定するための他のメソッドは、他の色空間を使用して測定し、現代のディスプレイやブラウザーの対応しています。それでも、動画制作を含め、 RGB 色空間での色測定が主流です。
 
@@ -51,7 +49,7 @@ l10n:
 
 ### CSS カラー値
 
-RGB 色空間のように、 1 つの色空間の中にも派生形があることを知っておくことは重要です。例えば、 RGB 色空間の派生形には、**RGB**、**sRGB**、**Adobe RGB**、**Adobe Wide Gamut RGB**、**RGBA** などがあります。
+RGB 色空間のように、 1 つの{{glossary("color space", "色空間")}}の中にも派生形があることを知っておくことは重要です。例えば、 {{glossary("RGB")}} 色空間の派生形には、**RGB**、**sRGB**、**Adobe RGB**、**Adobe Wide Gamut RGB**、**RGBA** などがあります。
 
 この例は、色を定義するために使用する CSS 記法の例です。この例では、例えば完全に不透明なマゼンタ色を使用しています。
 
@@ -67,8 +65,8 @@ color: rgb(100% 0% 100% / 100%);
 color: rgb(255 0 255);
 color: rgb(255 0 255 / 1);
 
-/* 古い rgba 記法 */
-color: rgba(100%, 0%, 100%, 100%);
+/* 古い rgb および rgba 記法 */
+color: rgb(100%, 0%, 100%);
 color: rgba(255, 0, 255, 1);
 
 /* 16 進による sRGB 値 */
@@ -79,11 +77,23 @@ color: #ff00ffff; /* #rrggbbaa */
 
 /* sRGB 値の HSL 表現 */
 color: hsl(300 100% 50%);
-color: hsl(300deg 100% 50% / 1);
+color: hsl(300deg 100% 50% / 100%);
 
 /* sRGB 値の HWB 表現 */
 color: hwb(300deg 0% 0%);
 color: hwb(300 0% 0% / 1);
+
+/* sRGB 値の LAB 表現 */
+color: lab(60 93.56 -60.5);
+color: lab(60 93.56 -60.5 / 1);
+
+/* CIELAB 色空間の表現 */
+oklch(0.7 0.32 328.37);
+oklch(0.7 0.32 328.37 / 1);
+
+/* color() 関数における XYZ 色空間 */
+color(xyz-d65 0.59 0.28 0.96);
+color(xyz-d65 0.59 0.28 0.96 / 1);
 ```
 
 最初の例では、定義済みの[名前付きの色](/ja/docs/Web/CSS/named-color)を使用しています。
@@ -94,11 +104,13 @@ sRGB の値を直接パーセントで設定するには、 0% をオフ（黒�
 
 すべての値が同じ数字のペアである場合、値は単一の数字で表すことができ、ブラウザーはそれを複製します。したがって `f00` は `ff0000` と同じです。もし 4 つ目の数字の集合が存在するならば、その値は RGBA の A であり、アルファチャンネルで色の透過率を定義します。値が大きいほど色は不透明であり、したがって透過率は低くなります。上の例では、アルファ値は `f`、`ff`、`1`、そして完全に不透明な場合は `100%` となります。
 
-この例は古い [`rgba()`](/ja/docs/Web/CSS/color_value/rgb#legacy_syntax_rgba) 構文も示しています。色関数の古い構文はカンマ区切りで、アルファチャンネルを記載するために別個の関数がありました。新しい色関数は、（カンマ区切りではなく）空間区切りの値を持つ 1 つの構文のみで、アルファチャンネルが存在する場合は、その前にスラッシュを記述します。
+この例は古い [`rgb()` および `rgba()`](/ja/docs/Web/CSS/color_value/rgb#例) の構文も示しています。色関数の古い構文はカンマ区切りで、アルファチャンネルを記載するために別個の関数があります。新しい色関数は、（カンマ区切りではなく）空間区切りの値を持つ 1 つの構文のみで、アルファチャンネルが存在する場合は、その前にスラッシュを記述します。現行の構文では、数値とパーセントを混合することができ、 `none` キーワードに対応しています。カンマ区切りの古い構文は対応していません。
 
 次の例は "HSL" を示しています。"HSL" は _Hue, Saturation, Lightness_ の略です。 HSL の色値は、 RGB 値よりも直感的であると多くの人に考えられています。設定から生成される色はまだ sRGB 色空間ですが、 [`hsl()`](/ja/docs/Web/CSS/color_value/hsl) は多くの人にとって直感的な構文です。色相は角度として調整され、色相を調整するためにノブや円形のコントロールを使用してユーザーインターフェイスを作成するのは簡単です。HSL 色は輝度ではなく明るさであることに注意してください。
 
-最後の例は "HWB" を示しています。"HWB" は _Hue, Whiteness, Blackness_ の略です。 `rgba()` や `hsla()` とは異なり、 [`hwb()`](/ja/docs/Web/CSS/color_value/hwb) は古い `a` つきの構文がなく、カンマ区切りの値にも対応していません。 `hsl()` と `hwb()` の両方とも、最初の値は [`<number>`](/ja/docs/Web/CSS/number) または [`<angle>`](/ja/docs/Web/CSS/angle) になります。単位がない場合、値は `deg` 度として解釈されます。
+次の例は "HWB" を示しています。"HWB" は _Hue, Whiteness, Blackness_ の略です。 `hsl()` と [`hwb()`](/ja/docs/Web/CSS/color_value/hwb) の両方とも、最初の値は [`<number>`](/ja/docs/Web/CSS/number) または [`<angle>`](/ja/docs/Web/CSS/angle) になります。単位がない場合、値は `deg` 度として解釈されます。
+
+他にもいくつかの色関数や色空間があります。最後の 3 つの例では、[`lab()`](/ja/docs/Web/CSS/color_value/lab)、[`oklch()`](/ja/docs/Web/CSS/color_value/oklch)、[`color()`](/ja/docs/Web/CSS/color_value/color)の色関数を使用してマゼンタを表しています。
 
 ### 変換
 
@@ -110,17 +122,15 @@ RGBはCRTを使用することを反映したハードウェア指向のもの�
 
 ![HSL と RGB、色のコントラスト値を持つカラーピッカー。](microcolorsc.jpg)
 
-前述のように、 [CSS color module](/ja/docs/Web/CSS/CSS_colors) には、 [`lch()`](/ja/docs/Web/CSS/color_value/lch) 色関数記法や、 [`lab()`](/ja/docs/Web/CSS/color_value/lab) 色座標系を含む色空間を追加することができますが、 sRGB は既定のものであり、アクセビリティのために推奨される色空間です。
+前述のように、 [CSS 色モジュール](/ja/docs/Web/CSS/CSS_colors)には、 [`lch()`](/ja/docs/Web/CSS/color_value/lch) および [`oklch()`](/ja/docs/Web/CSS/color_value/oklch) の色関数記法や、 [`lab()`](/ja/docs/Web/CSS/color_value/lab) および [`oklab()`](/ja/docs/Web/CSS/color_value/oklab) 色座標系を含む色空間の追加を含んでいます。とはいえ、 sRGB は普遍的なものであるため、アクセシビリティのための既定で推奨する色空間であることに変わりはありません。
 
 しかし、アクセシビリティに関する標準と規格の作成は、特に色のコントラスト比に適用される sRGB 色空間を主に使用しています。
 
 > **メモ:** 今日、ウェブコンテンツを表示するために使用されているほとんどすべてのシステムは、 sRGB エンコード方式を想定しています。コンテンツの処理と表示に別の色空間を使用することがわかっていない限り、作成者は sRGB 色空間を使用して評価する必要があります。他にも色空間を用いる場合は、[最小コントラスト比](https://webaim.org/articles/contrast/#sc143)の原則を適用してください。
 
-[CSS Color Module Level 5](https://drafts.csswg.org/css-color-5/) では、 [`lch()`](/ja/docs/Web/CSS/color_value/lch) 色関数記法と、[`lab()`](/ja/docs/Web/CSS/color_value/lab) 色座標系が導入され、任意の可視色を指定することができるようになりました。これらは将来的に sRGB 色空間の支配を変えるでしょうが、私たちはまだそこに到達していません。
-
 ### 色値の問い合わせ
 
-{{domxref('Window.getComputedStyle()')}} メソッドは、 RGB 10 進参照スケールを使用して値を返します。例えば、`background-color: #990000;` を設定した div に対して `Window.getComputedStyle()` を呼び出すと、計算された背景色を `rgb(153 0 0)` — RGB 10 進参照として返します。コンピュータのハードウェアに関連しているため、 `Window.getComputedStyle()` は RGB の観点から色を測定します。
+{{domxref('Window.getComputedStyle()')}} メソッドは、 RGB 10 進参照スケールを使用するか、 `color(srgb...)` によって値を返します。例えば、 `Window.getComputedStyle()` を `<div>` に `background-color: #ff0000` を設定したものに対して呼び出すと、背景色の計算値を `rgb(255 0 0)` — RGB 10 進参照として返します。しかし、[相対色を使用する](/ja/docs/Web/CSS/CSS_colors/Relative_colors)（例えば `background-color: rgb(from blue 255 0 0)` の）場合、`Window.getComputedStyle()` を呼び出すと、計算された背景色が `color(srgb 1 0 0)` として返されます。コンピューターのハードウェアに関連しているため、 `Window.getComputedStyle()` は人間の目がどのように色を知覚するかではなく、 RGB の観点から色を測定します。
 
 ### 赤緑色覚障碍
 
@@ -311,4 +321,4 @@ RGBはCRTを使用することを反映したハードウェア指向のもの�
 - [発作と身体反応に関するウェブアクセシビリティ](/ja/docs/Web/Accessibility/Seizure_disorders)
 - [How the Color Red Influences Our Behavior](https://www.scientificamerican.com/article/how-the-color-red-influences-our-behavior/) Scientific American By Susana Martinez-Conde, Stephen L. Macknik on November 1, 2014
 - [Red Desaturation](https://www.smart-optometry.com/red-desaturation/) 人間の目は赤に敏感に反応するため、眼科医は赤を使用する検査を設定し、視神経の健全性を評価している。
-- [Photic- and pattern-induced seizures: expert consensus of the Epilepsy Foundation of America Working Group](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.532.7063&rep=rep1&type=pdf)
+- [Photic- and pattern-induced seizures: expert consensus of the Epilepsy Foundation of America Working Group](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.532.7063&rep=rep1&type=pdf)

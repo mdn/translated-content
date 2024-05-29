@@ -38,7 +38,7 @@ const p = new Proxy(target, handler)
 
 `handler` 对象是一个容纳一批特定属性的占位符对象。它包含有 `Proxy` 的各个捕获器（trap）。
 
-所有的捕捉器是可选的。如果没有定义某个捕捉器，那么就会保留源对象的默认行为。
+所有的捕捉器都是可选的。如果没有定义某个捕捉器，那么就会保留源对象的默认行为。
 
 - {{JSxRef("Global_Objects/Proxy/handler/getPrototypeOf", "handler.getPrototypeOf()")}}
   - : {{JSxRef("Object.getPrototypeOf")}} 方法的捕捉器。
@@ -286,7 +286,7 @@ let products = new Proxy(
   ],
   {
     get: function (obj, prop) {
-      // 默认行为是返回属性值，prop ?通常是一个整数
+      // 默认行为是返回属性值，prop 通常是一个整数
       if (prop in obj) {
         return obj[prop];
       }

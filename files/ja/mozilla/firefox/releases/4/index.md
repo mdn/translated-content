@@ -42,7 +42,7 @@ The following changes were made to the [`CanvasRenderingContext2D`](/ja/docs/Web
 
 - [`<textarea>`](/ja/docs/Web/HTML/Element/textarea) 要素をデフォルトでサイズ変更できるようになりました。これを無効にするために [`resize`](/ja/docs/Web/CSS/resize) CSS プロパティが利用できます。
 - `canvas.getContext` および `canvas.toDataURL` が認識できない引数を指定して呼び出したときに例外を投げなくなりました。
-- [`<canvas>`](/ja/docs/Web/HTML/Element/canvas) 要素に Mozilla 固有の `mozGetAsFile()` メソッドが追加されました。これを用いることで、Canvas の内容である画像を含んだメモリベースのファイルを保持できます。詳細は [`HTMLCanvasElement`](/ja/docs/Web/API/HTMLCanvasElement) を参照してください。
+- [`<canvas>`](/ja/docs/Web/HTML/Element/canvas) 要素に Mozilla 固有の `mozGetAsFile()` メソッドが追加されました。これを用いることで、Canvas の内容である画像を含んだメモリーベースのファイルを保持できます。詳細は [`HTMLCanvasElement`](/ja/docs/Web/API/HTMLCanvasElement) を参照してください。
 - `canvas2dcontext.lineCap` および `canvas2dcontext.lineJoin` が認識できない値を設定したときに例外を投げなくなりました。
 - `canvas2dcontext.globalCompositeOperation` が認識できない値を設定したときに例外を投げなくなりました。また、非標準の値 `darker` をサポートしなくなりました。
 - 他のブラウザーでは実装されておらず、非推奨 な要素である [`<spacer>`](/ja/docs/Web/HTML/Element/spacer) 要素のサポートが無くなりました。
@@ -181,7 +181,7 @@ The following changes were made to the [`CanvasRenderingContext2D`](/ja/docs/Web
 - [`document.createElement`](/ja/docs/Web/API/Document/createElement) メソッドが Quirks モードでタグ名の前後の `<` と `>` を受け入れないようになりました。
 - [`element.setCapture()`](/ja/docs/Web/API/Element/setCapture) および[`document.releaseCapture()`](/ja/docs/Web/API/Document/releaseCapture) メソッドが追加され、これらを用いることで、`指定要素で mousedown` イベントが発生した後にマウスが通常の追跡領域を越えても、マウスイベントを追い続けることができます。
 - The [`window.mozPaintCount`](/ja/docs/Web/API/Window/mozPaintCount) プロパティが追加されました。これを用いることで、何回ドキュメントが描画されたかを判定できます。これはウェブアプリケーションのパフォーマンスをテストするときに役立ちます。
-- [`window.navigator.appVersion`](/ja/docs/Web/API/Window/navigator/appVersion) および [`window.navigator.userAgent`](/ja/docs/Web/API/Window/navigator/userAgent) から言語トークンが削除されました。代わりに [`window.navigator.language`](/ja/docs/Web/API/Window/navigator/language) もしくは [Accept-Language ヘッダ](/ja/docs/Content_negotiation) を利用してください。 [バグ 572656](https://bugzilla.mozilla.org/show_bug.cgi?id=572656)
+- [`window.navigator.appVersion`](/ja/docs/Web/API/Window/navigator/appVersion) および [`window.navigator.userAgent`](/ja/docs/Web/API/Window/navigator/userAgent) から言語トークンが削除されました。代わりに [`window.navigator.language`](/ja/docs/Web/API/Window/navigator/language) もしくは [Accept-Language ヘッダー](/ja/docs/Content_negotiation) を利用してください。 [バグ 572656](https://bugzilla.mozilla.org/show_bug.cgi?id=572656)
 - [XMLHttpRequest](/ja/docs/XMLHttpRequest) オブジェクトに追加された Gecko 固有の `mozResponseArrayBuffer`プロパティを用いると、レスポンスを文字列と同様 に JavaScript Typed Array として扱えます。
 - [Mouse イベント](/ja/docs/DOM/Event/UIEvent/MouseEvent) に `mozPressure` プロパティが追加されました。このプロパティは圧力感知をサポートする入力デバイスでの圧力を示します。
 - ~~window\.createBlobURL()~~ [`window.URL.createObjectURL()`](/ja/docs/Web/API/Window/URL/createObjectURL) および [`window.URL.revokeObjectURL()`](/ja/docs/Web/API/Window/URL/revokeObjectURL) メソッドを用いることで、ローカルファイルを参照する BLOB ("Binary Large OBject") URL を作成できます。
@@ -189,7 +189,7 @@ The following changes were made to the [`CanvasRenderingContext2D`](/ja/docs/Web
 - [`Node.mozMatchesSelector()`](/ja/docs/Web/API/Node/mozMatchesSelector) が指定セレクター文字列が妥当ではない場合に正しくない `false` を返すのではなく、`SYNTAX_ERR` 例外を投げるようになりました。
 - CSS 同様の省略構文を用いて 要素の SVG プロパティの値を設定できるようになりました。例: `element.style.fill = 'lime'`。詳細は [`element.style`](/ja/docs/Web/API/Element/style) を参照してください。
 - ドキュメントルートに [`privatebrowsingmode` 属性](/ja/docs/Supporting_private_browsing_mode#Detecting_whether_private_browsing_mode_is_permanent) が追加されました。これはプライベートブラウジングがセッションで一時的であるか永続的であるかの状態を含む、プライベートブラウジングモードの状態を示します。
-- [`window.getComputedStyle()`](/ja/docs/Web/API/Window/getComputedStyle) メソッドの 2 番目のパラメータが、他の主なブラウザーと同様に省略可能になりました。
+- [`window.getComputedStyle()`](/ja/docs/Web/API/Window/getComputedStyle) メソッドの 2 番目の引数が、他の主なブラウザーと同様に省略可能になりました。
 - DOM の [`StorageEvent`](/ja/docs/DOM/event/StorageEvent) オブジェクトが仕様の最新版に合致するようになりました。
 - [`window.setTimeout()`](/ja/docs/Web/API/Window/setTimeout) メソッドの最小遅延時間を設定するための `dom.min_timeout_value が追加されました。`
 - [`MozAfterPaint`](/ja/docs/Gecko-Specific_DOM_Events#MozAfterPaint) イベントは、潜在的なセキュリティ問題があるため、デフォルトでは送られなくなりました。設定を変更することで有効にできます。
@@ -200,8 +200,8 @@ The following changes were made to the [`CanvasRenderingContext2D`](/ja/docs/Web
   - : Content Security Policy (CSP) は Mozilla が提案するウェブデザイナーとサーバー管理者がウェブサイトの相互利用でどのようなコンテンツを指定するかの仕様です。目的はクロスサイトスクリプティングを含む攻撃とデータインジェクション攻撃を判定し、軽減することです。
 - [HTTP Strict Transport Security](/ja/docs/Security/HTTP_Strict_Transport_Security)
   - : HTTP Strict Transport Security はウェブサイトがブラウザーに HTTP を用いる代わりに HTTPS を用いてのみやり取りすべきであることを伝えるセキュリティ機能です。
-- [X-FRAME-OPTIONS レスポンスヘッダ](/ja/docs/The_X-FRAME-OPTIONS_response_header)
-  - : Internet Explorer 8 で導入された X-FRAME-OPTIONS HTTP レスポンスヘッダが Firefox でサポートされるようになりました。これを用いることでサイトがページをフレーム内で用いることができるかどうか、フレーム内で利用可能ならば、同じドメイン内に限定するかどうかを指示することができます。
+- [X-FRAME-OPTIONS レスポンスヘッダー](/ja/docs/The_X-FRAME-OPTIONS_response_header)
+  - : Internet Explorer 8 で導入された X-FRAME-OPTIONS HTTP レスポンスヘッダーが Firefox でサポートされるようになりました。これを用いることでサイトがページをフレーム内で用いることができるかどうか、フレーム内で利用可能ならば、同じドメイン内に限定するかどうかを指示することができます。
 - [User Agent 文字列](/ja/docs/User_Agent_Strings_Reference) の変更
   - : [HTTP リクエストで送ったデータとエントロピーの総量を減少させるべき](https://bugzilla.mozilla.org/show_bug.cgi?id=572650)にあるように、 ユーザーエージェント文字列から暗号の強度を表す文字列と言語を表す文字列が削除されました。
 
@@ -227,7 +227,7 @@ Firefox 4 向けに既存の拡張を更新する上で役立つ Tips は、[Upd
 - [Services.jsm](/ja/docs/JavaScript_code_modules/Services.jsm)
   - : `Services.jsm` コードモジュールは preferences service や window mediator などのよく用いられているサービスへの参照を簡単に取得できるようにするゲッターを提供します。
 - [JS-ctypes API](/ja/docs/JavaScript_code_modules/ctypes.jsm)
-  - : JS-ctypes API は C 互換外部ライブラリ関数を XPCOM を利用すること無しに呼び出せるようにします。
+  - : JS-ctypes API は C 互換外部ライブラリー関数を XPCOM を利用すること無しに呼び出せるようにします。
 - [Add-ons Manager](/ja/docs/Addons/Add-on_Manager)
   - : 新しい Add-ons Manager はインストールされたアドオンについての情報の提供、それらの管理のためのサポート、および、アドオンのインストールと削除の方法を提供します。
 - [PopupNotifications.jsm](/ja/docs/JavaScript_code_modules/PopupNotifications.jsm)
@@ -235,7 +235,7 @@ Firefox 4 向けに既存の拡張を更新する上で役立つ Tips は、[Upd
 - [chrome: URL からコードモジュールを読み込む](/ja/docs/JavaScript_code_modules/Using#Locating_the_code_module)
   - : **chrome:** URL を用いて JavaScript コードモジュールを読め込むことができるようになりました。JAR ファイルの中でも可能です。
 - DownloadLastDir.jsm
-  - : [`DownloadLastDir.jsm`](/ja/docs/JavaScript_code_modules/DownloadLastDir.jsm) コードモジュールは `gDownloadLastDir` グローバル変数を提供します。この変数には最後のダウンロードが行われたディレクトリのパスを知るために利用可能な文字列が含まれています。このモジュールはプライベートブラウジングに対応しています。
+  - : [`DownloadLastDir.jsm`](/ja/docs/JavaScript_code_modules/DownloadLastDir.jsm) コードモジュールは `gDownloadLastDir` グローバル変数を提供します。この変数には最後のダウンロードが行われたディレクトリーのパスを知るために利用可能な文字列が含まれています。このモジュールはプライベートブラウジングに対応しています。
 - [PerfMeasurement.jsm コードモジュールを用いたパフォーマンスの測定](/ja/docs/Performance/Measuring_performance_using_the_PerfMeasurement.jsm_code_module)
   - : [`PerfMeasurement.jsm`](/ja/docs/JavaScript_code_modules/PerfMeasurement.jsm) コードモジュールは JavaScript コードにおける CPU レベルでのパフォーマンスデータを測定するための API を提供します。
 
@@ -355,8 +355,8 @@ Firefox 4 向けに既存の拡張を更新する上で役立つ Tips は、[Upd
 <!---->
 
 - [`nsIDocShell`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDocShell) および [`nsIWebBrowser`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebBrowser) インターフェイスに新しく `isActive` 属性が追加されました。これは現在表示されていないドキュメントのためにコードパスを最適化することを許可するために用いることができます。
-- [`nsIMemory`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMemory) のメソッドである [`isLowMemory()`](/ja/docs/XPCOM_Interface_Reference/nsIMemory/isLowMemory) は非推奨になりました。低メモリ状況を監視するには ["memory-pressure" 通知](/ja/docs/XPCOM_Interface_Reference/nsIMemory#Low_memory_notifications) を用いることが推奨されます。
-- HTTP チャンネル上でリダイレクトを扱う API が非同期で動作できるように変更されました。[`nsIChannelEventSink.onChannelRedirect()`](</ja/docs/XPCOM_Interface_Reference/nsIChannelEventSink#onChannelRedirect()>) を用いてリダイレクトを扱う実装を行なっているコードは `nsIChannelEventSink.asyncOnChannelRedirect` を代わりに用いて更新する必要があります。これはリダイレクトが正常に完了したときに呼び出されるコールバックハンドラを受け入れます。
+- [`nsIMemory`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMemory) のメソッドである [`isLowMemory()`](/ja/docs/XPCOM_Interface_Reference/nsIMemory/isLowMemory) は非推奨になりました。低メモリー状況を監視するには ["memory-pressure" 通知](/ja/docs/XPCOM_Interface_Reference/nsIMemory#Low_memory_notifications) を用いることが推奨されます。
+- HTTP チャンネル上でリダイレクトを扱う API が非同期で動作できるように変更されました。[`nsIChannelEventSink.onChannelRedirect()`](</ja/docs/XPCOM_Interface_Reference/nsIChannelEventSink#onChannelRedirect()>) を用いてリダイレクトを扱う実装を行なっているコードは `nsIChannelEventSink.asyncOnChannelRedirect` を代わりに用いて更新する必要があります。これはリダイレクトが正常に完了したときに呼び出されるコールバックハンドラーを受け入れます。
 - [`nsINavHistoryResultObserver.batching()`](</ja/docs/XPCOM_Interface_Reference/nsINavHistoryResultObserver#batching()>) メソッドが追加されました。このメソッドは Places 操作をバッチにグループ化する方法を提供し、送られてくる更新通知の数を減少させ、その結果、オブザーバが（ビューをリフレッシュするような）相対的にタスクを追加するときのパフォーマンスを向上させます。
 - 長い間廃止状態であった [`nsIPref`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIPref) インターフェイスがついに削除されました。まだ [`nsIPrefService`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIPrefService) に移行していないなら、今がそのときです。
 - [`nsISessionStore`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISessionStore) および [`nsISessionStartup`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISessionStartup) インターフェイスがユーザーの要求に応じたセッションリストアのサポートへの変更を受けとるようになりました。[`nsISessionStore.restoreLastSession()`](</ja/docs/XPCOM_Interface_Reference/nsISessionStore#restoreLastSession()>) メソッドを参照してください。
@@ -364,18 +364,18 @@ Firefox 4 向けに既存の拡張を更新する上で役立つ Tips は、[Upd
 - [`nsIPrompt`](/ja/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIPrompt) インターフェイスがタブモーダルアラートをサポートするようになりました。詳細は[タブモーダルプロンプトの利用](/ja/docs/Using_tab-modal_prompts)を参照してください。
 - [`nsIEffectiveTLDService.getPublicSuffixFromHost()`](</ja/docs/XPCOM_Interface_Reference/nsIEffectiveTLDService#getPublicSuffixFromHost()>) メソッドがピリオド (".") で始まるホスト名を正しく拒否するようになりました。
 
-### メモリ管理
+### メモリー管理
 
-- [確実なメモリアロケーション](/ja/docs/Infallible_memory_allocation)
-  - : Mozilla は null を返さないことを保証する確実なメモリアロケータを複数提供するようになりました。この記事を読んでそれらがどのように動作し、どのようにして不確実な、あるいは、確実なメモリアロケーションを明確に指定して呼び出すのかを学んでください。
+- [確実なメモリーアロケーション](/ja/docs/Infallible_memory_allocation)
+  - : Mozilla は null を返さないことを保証する確実なメモリーアロケーターを複数提供するようになりました。この記事を読んでそれらがどのように動作し、どのようにして不確実な、あるいは、確実なメモリーアロケーションを明確に指定して呼び出すのかを学んでください。
 
 ### その他の変更
 
 - Firefox 内に含まれるリソースのほとんどが単一の JAR アーカイブである `omni.jar` にまとめられました。これにより、 I/O が減少し、その結果、起動パフォーマンスが向上しています。詳細は [omni.jar について](/ja/docs/About_omni.jar)を読んでください。
 - `accessibility.disablecache` 設定はサポートされなくなりました。これはデバッグ目的で公開されており、もはや用いられません。
 - バージョンアップによって GUID が変更になるアドオンが正しく更新されるようになりました。
-- プラットフォーム固有のディレクトリを削除した副作用として、各プラットフォーム向けに異なった設定を提供することができなくなりました。
-- デフォルトで、拡張はインストール時に展開されなくなりました。その代わりに XPI ファイルから直接実行されます。拡張は古い挙動を選択するために[インストールマニフェスト](/ja/docs/Install_Manifests)内で [unpack](/ja/docs/Install_Manifests#unpack) プロパティを使用できます。バイナリコンポーネントや、[js-ctypes](/ja/docs/js-ctypes) を利用して読み込まれる DLL、[検索プラグイン](/ja/docs/Creating_OpenSearch_plugins_for_Firefox)、辞書、ウィンドウアイコンは展開される必要があるように指定しなければなりません。[SQLite データベースを生成する](/ja/docs/XUL/School_tutorial/Local_Storage#SQLite)拡張や、拡張ディレクトリからファイルシステムへ相対的に何かをコピーする拡張も、それらのコードを変更する必要があるかもしれません。
+- プラットフォーム固有のディレクトリーを削除した副作用として、各プラットフォーム向けに異なった設定を提供することができなくなりました。
+- デフォルトで、拡張はインストール時に展開されなくなりました。その代わりに XPI ファイルから直接実行されます。拡張は古い挙動を選択するために[インストールマニフェスト](/ja/docs/Install_Manifests)内で [unpack](/ja/docs/Install_Manifests#unpack) プロパティを使用できます。バイナリーコンポーネントや、[js-ctypes](/ja/docs/js-ctypes) を利用して読み込まれる DLL、[検索プラグイン](/ja/docs/Creating_OpenSearch_plugins_for_Firefox)、辞書、ウィンドウアイコンは展開される必要があるように指定しなければなりません。[SQLite データベースを生成する](/ja/docs/XUL/School_tutorial/Local_Storage#SQLite)拡張や、拡張ディレクトリーからファイルシステムへ相対的に何かをコピーする拡張も、それらのコードを変更する必要があるかもしれません。
 - カスタマイズされた Firefox に[アプリケーションスタートアップ時に自動でインストールされる](/ja/docs/Developer_Guide/Customizing_Firefox#Including_extensions_with_your_distribution_of_Firefox)拡張を含められるようになりました。
 
 ## その他の変更
@@ -389,9 +389,9 @@ Firefox 4 向けに既存の拡張を更新する上で役立つ Tips は、[Upd
 - [ブートストラップ拡張](/ja/docs/Extensions/Bootstrapped_extensions)
   - : ブラウザーを再起動せずにインストール、アンインストール、更新（またはダウングレード）できる拡張を作成できるようになりました。
 - デフォルトプラグイン の削除
-  - : デフォルトプラグインが削除されました。アプリケーションプラグインフォルダもデフォルトで削除されますが、このフォルダ経由でプラグインをインストールするためのサポートはまだ存在します。[bug 533891](https://bugzilla.mozilla.org/show_bug.cgi?id=533891) を参照してください。
+  - : デフォルトプラグインが削除されました。アプリケーションプラグインフォルダーもデフォルトで削除されますが、このフォルダー経由でプラグインをインストールするためのサポートはまだ存在します。[bug 533891](https://bugzilla.mozilla.org/show_bug.cgi?id=533891) を参照してください。
 - Extension Manager の AddonManager への置き換え
-  - : [nsIExtensionManager](/ja/docs/XPCOM_Interface_Reference/nsIExtensionManager) は [AddonManager](/ja/docs/Addons/Add-on_Manager/AddonManager) に置き換えられました。 指定した拡張 ID からインストール場所を取得するための方法は現在のところ存在しないと思われるので、それに最も近い回避策はプロファイルディレクトリを見つけるためにディレクトリサービスを用い、それに "extensions" を追加することです（この手段ではプロファイルディレクトリ外あるいは他の位置にエイリアスされている拡張は取得できません）。
+  - : [nsIExtensionManager](/ja/docs/XPCOM_Interface_Reference/nsIExtensionManager) は [AddonManager](/ja/docs/Addons/Add-on_Manager/AddonManager) に置き換えられました。 指定した拡張 ID からインストール場所を取得するための方法は現在のところ存在しないと思われるので、それに最も近い回避策はプロファイルディレクトリーを見つけるためにディレクトリーサービスを用い、それに "extensions" を追加することです（この手段ではプロファイルディレクトリー外あるいは他の位置にエイリアスされている拡張は取得できません）。
 - 子 HWND はもはや利用されません
   - : Firefox は Windows で内部利用していた 子 HWND を作成しないようになりました。これらの HWND を扱うネィティブコードを用いる拡張を書いていた場合、その拡張は Firefox 4 では動作しないでしょう。HWND を用いることを止めるか、[NPAPI](/ja/docs/NPAPI) プラグインで HWND に依存するコードをラップする必要があります。それは多大な作業であり、HWND を直接用いることを避けられるならば、そうすべきです。
 - ジェスチャの変更

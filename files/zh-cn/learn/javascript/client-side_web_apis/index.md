@@ -13,7 +13,7 @@ slug: Learn/JavaScript/Client-side_web_APIs
 
 若你知道 [HTML](/zh-CN/docs/Learn/HTML) 和 [CSS](/zh-CN/docs/Learn/CSS) 的基本知识，也会对理解这个单元的内容大有裨益。
 
-> **备注：** 如果你正在使用一台无法创建你自身文件的电脑、平板或其他设备，你可以尝试使用一些在线网页编辑器如[JSBin](http://jsbin.com/)或者[Glitch](https://glitch.com/)，来尝试编辑一些代码示例。
+> **备注：** 如果你正在使用一台无法创建你自身文件的电脑、平板或其他设备，你可以尝试使用一些在线网页编辑器如[JSBin](https://jsbin.com/)或者[Glitch](https://glitch.com/)，来尝试编辑一些代码示例。
 
 ## 向导
 

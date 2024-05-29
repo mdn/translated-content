@@ -32,7 +32,7 @@ slug: WebAssembly/JavaScript_interface/Table
 
 ### 新しい WebAssembly Table インスタンスの生成
 
-次の例では ([table2.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.html) と[動作例](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html)を確認してください)、新しい WebAssembly Table メソッドを初期サイズ 2 要素で生成します。それからそのテーブルの長さと 2 つの位置の内容を ({{jsxref("WebAssembly/Table/get", "Table.prototype.get()")}} を使用して受け取って) 表示し、長さが 2 で両方の要素が {{jsxref("null")}} であることを示します。
+次の例では ([table2.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.html) と[動作例](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html)を確認してください)、新しい WebAssembly Table メソッドを初期サイズ 2 要素で生成します。それからそのテーブルの長さと 2 つの位置の内容を ({{jsxref("WebAssembly/Table/get", "Table.prototype.get()")}} を使用して受け取って) 表示し、長さが 2 で両方の要素が [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) であることを示します。
 
 ```js
 var tbl = new WebAssembly.Table({ initial: 2, element: "anyfunc" });

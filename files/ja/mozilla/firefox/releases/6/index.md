@@ -47,7 +47,7 @@ Firefox 6 は Gecko 6.0 ベースのブラウザーで、2011 年 8 月 16 日�
 - [Touch events](/ja/docs/DOM/Touch_events)
   - : Firefox 6 は W3C の標準タッチイベント仕様をサポートします。これにより、タッチスクリーンやトラックパッドなどタッチセンサー式のデバイスでのタッチの解釈が容易になります。
 - [Server-sent events](/ja/docs/Server-sent_events)
-  - : Server-sent events はサーバが手元で生成された DOM イベントと同じようにイベントを送出するよう、ウェブアプリケーションが尋ねるための機能です。
+  - : Server-sent events はサーバーが手元で生成された DOM イベントと同じようにイベントを送出するよう、ウェブアプリケーションが尋ねるための機能です。
 
 <!---->
 
@@ -97,9 +97,9 @@ Firefox 6 は Gecko 6.0 ベースのブラウザーで、2011 年 8 月 16 日�
 
 <!---->
 
-- `Content-Disposition` ヘッダの構文解析が修正され、バックスラッシュでエスケープされた ASCII 文字が適切に文字そのものとして処理されるようになりました。これまではその文字をアンダースコア ("`_`")に置き換えるという誤った処理がなされていました。
-- `Set-Cookie` ヘッダのパスの値において、クォートが適切に処理されるようになりました。これまでクォートを使った場合はそれがデリミタではなく、パスの文字列として認識されていました。**この変更により、いくつかのサイトで互換性の問題が発生する可能性があります。**製作者はコードをチェックすることが望まれます。
-- [`Upgrade`](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.42) リクエストヘッダがサポートされました。[`nsIHttpChannelInternal.HTTPUpgrade()`](</ja/docs/XPCOM_Interface_Reference/nsIHttpChannelInternal#HTTPUpgrade()>) を呼ぶことで、HTTP チャネルから他のプロトコルへのアップグレードをリクエストできます。
+- `Content-Disposition` ヘッダーの構文解析が修正され、バックスラッシュでエスケープされた ASCII 文字が適切に文字そのものとして処理されるようになりました。これまではその文字をアンダースコア ("`_`")に置き換えるという誤った処理がなされていました。
+- `Set-Cookie` ヘッダーのパスの値において、クォートが適切に処理されるようになりました。これまでクォートを使った場合はそれがデリミタではなく、パスの文字列として認識されていました。**この変更により、いくつかのサイトで互換性の問題が発生する可能性があります。**製作者はコードをチェックすることが望まれます。
+- [`Upgrade`](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.42) リクエストヘッダーがサポートされました。[`nsIHttpChannelInternal.HTTPUpgrade()`](</ja/docs/XPCOM_Interface_Reference/nsIHttpChannelInternal#HTTPUpgrade()>) を呼ぶことで、HTTP チャネルから他のプロトコルへのアップグレードをリクエストできます。
 
 ### その他の変更
 
@@ -111,7 +111,7 @@ Firefox 6 は Gecko 6.0 ベースのブラウザーで、2011 年 8 月 16 日�
 
 Firefox 6 へアドオンを対応させるために必要な作業の概要は [アドオンの Firefox 6 対応](/ja/docs/Firefox/Updating_add-ons_for_Firefox_6) をご覧ください。
 
-> **メモ:** Firefox 6 では、従来のメジャーリリースと同様に、バイナリコンポーネントをコンパイルし直す必要があります。詳しくは [バイナリインターフェイス](/ja/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces) をご覧ください。
+> **メモ:** Firefox 6 では、従来のメジャーリリースと同様に、バイナリーコンポーネントをコンパイルし直す必要があります。詳しくは [バイナリーインターフェイス](/ja/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces) をご覧ください。
 
 ### JavaScript コードモジュール
 
@@ -138,7 +138,7 @@ Firefox 6 へアドオンを対応させるために必要な作業の概要は 
 - [`nsIFilePicker`](/ja/docs/XPCOM_Interface_Reference/nsIFilePicker) に [`addToRecentDocs`](/ja/docs/XPCOM_Interface_Reference/nsIFilePicker#addToRecentDocs) 属性が追加されました。これは、もしユーザーの「最近使用したドキュメント」リストがあれば、そのリストに選択したファイルを追加するよう指定できるものです。この属性はプライベートブラウジングモードでは無視されます。
 - [`nsINavBookmarkObserver`](/ja/docs/XPCOM_Interface_Reference/nsINavBookmarkObserver) メソッドにアイテム ID 引数を与える場合、GUID も必要となります。
 - [`nsIPrefBranch.clearUserPref()`](/ja/docs/XPCOM_Interface_Reference/nsIPrefBranch#clearUserPref%28%29) が、指定された設定が存在しない場合やユーザー設定値がない場合も、例外を投げなくなりました。その代わり、単に何もしなくなりました。
-- [`nsIMemoryReporter`](/ja/docs/XPCOM_Interface_Reference/nsIMemoryReporter) インターフェイスで、調べたいメモリの種類 (マップ、ヒープ、その他) を指定できるようになりました。
+- [`nsIMemoryReporter`](/ja/docs/XPCOM_Interface_Reference/nsIMemoryReporter) インターフェイスで、調べたいメモリーの種類 (マップ、ヒープ、その他) を指定できるようになりました。
 - [`nsISHEntry`](/ja/docs/XPCOM_Interface_Reference/nsISHEntry) の `stateData` 属性が [`nsIStructuredCloneContainer`](/ja/docs/XPCOM_Interface_Reference/nsIStructuredCloneContainer) を返すようになりました。
 - [`nsIURI`](/ja/docs/XPCOM_Interface_Reference/nsIURI) に [`ref`](/ja/docs/XPCOM_Interface_Reference/nsIURI#ref) 属性が追加されました。これは、URI の一部の参照 (「#」以降の部分) を返すものです。また、参照メンバーなしに [`nsIURI`](/ja/docs/XPCOM_Interface_Reference/nsIURI) を複製できる [`cloneIgnoringRef()`](/ja/docs/XPCOM_Interface_Reference/nsIURI#cloneIgnoringRef%28%29) メソッドと、参照メンバーを無視して他の [`nsIURI`](/ja/docs/XPCOM_Interface_Reference/nsIURI) と比較できる [`equalsExceptRef()`](/ja/docs/XPCOM_Interface_Reference/nsIURI#equalsExceptRef%28%29) メソッドが追加されました。
 

@@ -2,7 +2,7 @@
 title: ウェブページ、ウェブサイト、ウェブサーバー、検索エンジンの違いは？
 slug: Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines
 l10n:
-  sourceCommit: 8dfa0ecf5bda526ccd6244ca5c7720767e3f013f
+  sourceCommit: c62b98afeca1df0ffdd92bb96b8a006662073a8e
 ---
 
 {{QuicklinksWithSubPages("/ja/Learn/Common_questions")}}

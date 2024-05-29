@@ -16,7 +16,7 @@ Firefox 2 より、Firefox はフィードを読む際に使う RSS または At
 - `browser.contentHandlers.types.number.uri`
   - : フィードリーダの URI。フィードの URL が挿入されるべき部分に "%s" を使用する。
 
-`number` は既に使われている数のうち最大のものよりもより 1 つ大きな数で置き換えてください。例えば "Easy Reader" という新しいフィードリーダを追加したい場合、かつ 0 から 4 までの数が指定されたコンテンツハンドラが既に定義されている場合、このように `number` には 5 を使用してください。
+`number` は既に使われている数のうち最大のものよりもより 1 つ大きな数で置き換えてください。例えば "Easy Reader" という新しいフィードリーダを追加したい場合、かつ 0 から 4 までの数が指定されたコンテンツハンドラーが既に定義されている場合、このように `number` には 5 を使用してください。
 
 - `browser.contentHandlers.types.5.title`: `Easy Reader`
 - `browser.contentHandlers.types.5.type`: `application/vnd.mozilla.maybe.feed`

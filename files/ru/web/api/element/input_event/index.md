@@ -1,10 +1,9 @@
 ---
 title: GlobalEventHandlers.oninput
 slug: Web/API/Element/input_event
-original_slug: Web/API/HTMLElement/input_event
 ---
 
-{{ApiRef("HTML DOM")}}
+{{APIRef}}
 
 Обработчик события [`input`](/ru/docs/Web/Events/input) в окне. Событие ввода возникает при изменении значения элемента {{HTMLElement ("input")}}.
 
@@ -34,7 +33,7 @@ original_slug: Web/API/HTMLElement/input_event
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - [An HTML5 Browser maze, oninput support](http://blog.danielfriesen.name/2010/02/16/html5-browser-maze-oninput-support/)
 - [Fixing oninput in IE Using html5Widgets](http://www.useragentman.com/blog/2011/05/12/fixing-oninput-in-ie9-using-html5widgets/) includes polyfill for IE6-8

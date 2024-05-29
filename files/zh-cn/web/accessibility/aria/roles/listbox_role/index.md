@@ -3,6 +3,8 @@ title: ARIA：listbox 角色
 slug: Web/Accessibility/ARIA/Roles/listbox_role
 ---
 
+{{AccessibilitySidebar}}
+
 `listbox` 角色用于列表，用户可以从中选择一个或多个静态选项，并且与 HTML {{HTMLElement("select")}} 元素不同，它可能包含图像。
 
 ## 描述
@@ -212,11 +214,3 @@ slug: Web/Accessibility/ARIA/Roles/listbox_role
 - [ARIA: `listitem` 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles/Listitem_role)
 - [ARIA Best Practices – Listbox](https://www.w3.org/TR/wai-aria-practices/#Listbox)
 - [ARIA Role Model – Listbox](https://www.w3.org/TR/wai-aria-1.1/#listbox)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA 角色**](/zh-CN/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/zh-CN/docs/Web/Accessibility/ARIA/Roles")}}
-
-</section>
