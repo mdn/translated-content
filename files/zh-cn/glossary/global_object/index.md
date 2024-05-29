@@ -33,7 +33,7 @@ console.log(global === global.global); // true（在 Node.js 中）
 
 ## 参见
 
-- [MDN Web 术语](/zh-CN/docs/Glossary)
+- [MDN Web 文档术语](/zh-CN/docs/Glossary)
 
   - {{glossary("global scope", "全局作用域")}}
   - {{glossary("object", "对象")}}
