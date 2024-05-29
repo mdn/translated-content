@@ -108,7 +108,7 @@ color(xyz-d65 0.59 0.28 0.96 / 1);
 
 接下来的示例显示了"HSL"，代表 _色相（Hue）、饱和度（Saturation）和亮度（Lightness）_。对许多人来说，HSL 颜色值比 RGB 值更直观。由设置产生的颜色仍然处于 sRGB 颜色空间，但[`hsl()`](/zh-CN/docs/Web/CSS/color_value/hsl)是许多人的直观语法。色调调整为角度，可以使用旋钮或圆形控件轻松调整色调。请注意，HSL 颜色包含 _亮度（lightness）_，而不是 _亮度（luminance）_，这是一个重要的考虑因素。
 
-接下来的示例显示了"HWB"，代表 _色相（Hue）、白度（Whiteness） 和黑度（Blackness）_。使用 hsl() 和 [`hwb()`](/zh-CN/docs/Web/CSS/color_value/hwb)，第一个值可以是 [`<number>`](/zh-CN/docs/Web/CSS/number) 或 [`<angle>`](/zh-CN/docs/Web/CSS/angle) 值。当无单位时，该值被解释为`deg`度。
+接下来的示例显示了"HWB"，代表 _色相（Hue）、白度（Whiteness）和黑度（Blackness）_。使用 hsl() 和 [`hwb()`](/zh-CN/docs/Web/CSS/color_value/hwb)，第一个值可以是 [`<number>`](/zh-CN/docs/Web/CSS/number) 或 [`<angle>`](/zh-CN/docs/Web/CSS/angle) 值。当无单位时，该值被解释为`deg`度。
 
 还有几种其他颜色函数和颜色空间。最后三个示例演示了使用 [`lab()`](/zh-CN/docs/Web/CSS/color_value/lab)、[`oklch()`](/zh-CN/docs/Web/CSS/color_value/oklch) 和 [`color()`](/zh-CN/docs/Web/CSS/color_value/color) 颜色函数表示品红。
 
