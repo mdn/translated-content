@@ -9,7 +9,7 @@ l10n:
 
 **`Accept-Patch`** HTTP 回應標頭用來宣告伺服器在 PATCH 請求中能夠理解哪些媒體類型。
 
-當伺服器回應任何方法時，**`Accept-Patch`** 表示在由 Request-URI 所識別的資源上允許使用 PATCH。以下兩種常見情況會導致這種情況：
+當伺服器回應任何方法時，**`Accept-Patch`** 表示在由請求 URI 所標示的資源上允許使用 PATCH。以下兩種常見情況會導致這種情況：
 
 伺服器收到帶有不支援媒體類型的 PATCH 請求時，可能會回應 {{HTTPStatus("415")}} `Unsupported Media Type` 並帶有一個或多個支援的媒體類型的 Accept-Patch 標頭。
 
