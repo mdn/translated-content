@@ -7,7 +7,7 @@ l10n:
 
 {{AccessibilitySidebar}}
 
-虽然对于所有视力正常的用户来说，理解颜色、亮度和饱和度对设计和可读性都很重要，但对于视力减退、色盲以及特定神经、认知和其他障碍的人来说，这些因素尤为重要。
+对于所有视力正常的用户来说，理解颜色、亮度和饱和度对设计和可读性都很重要；对于视力减退、色盲以及特定神经、认知和其他障碍的人来说，这些因素也是必不可少的。
 
 无障碍性指南定义了适用于视力减退用户的[颜色对比度](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)以及旨在帮助色盲用户的准则。了解颜色还对预防患有前庭障碍或其他神经障碍的人产生[癫痫和其他身体反应](/zh-CN/docs/Web/Accessibility/Seizure_disorders)至关重要。
 
