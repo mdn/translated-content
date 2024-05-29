@@ -57,7 +57,7 @@ l10n:
 </button>
 ```
 
-我们有一个带有[Font Awesome 图标](https://fontawesome.com/)的按钮。我们使用 `aria-hidden="true"` 将图标从辅助技术中隐藏起来，因为将图标暴露给辅助技术可能会导致冗余，或者如果图标与可见文本内容不同，则会引起混淆。
+我们有一个带有 [Font Awesome 图标](https://fontawesome.com/)的按钮。我们使用 `aria-hidden="true"` 将图标从辅助技术中隐藏起来，因为将图标暴露给辅助技术可能会导致冗余，或者如果图标与可见文本内容不同，则会引起混淆。
 
 ## 值
 
