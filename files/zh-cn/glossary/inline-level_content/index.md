@@ -19,7 +19,8 @@ l10n:
 
 ```html
 <p>
-  这个 span 是一个<span class="highlight">行级元素</span>；背景已经被着色以显示元素的开始和结束。输入元素，如
+  这个 span 是一个<span class="highlight">行级元素</span
+  >；背景已经被着色以显示元素的开始和结束。输入元素，如
   <input type="radio" /> 和 <input type="checkbox" />，也是行级内容。
 </p>
 ```
