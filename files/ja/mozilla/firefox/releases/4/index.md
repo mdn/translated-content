@@ -142,7 +142,7 @@ The following changes were made to the [`CanvasRenderingContext2D`](/ja/docs/Web
 ### DOM
 
 - [JavaScript 型付き配列](/ja/docs/JavaScript_typed_arrays)
-  - : JavaScript 型付き配列 (typed arrays) のサポートが追加されました。これを用いることで、ネイティブデータ型を用いた生のデータを含むバッファを扱えます。 [File API](/ja/docs/DOM/File)、[WebGL](/ja/docs/WebGL)、および [WebSockets](/ja/docs/WebSockets) を含む、いくつかの API でこれを用いることができます。
+  - : JavaScript 型付き配列 (typed arrays) のサポートが追加されました。これを用いることで、ネイティブデータ型を用いた生のデータを含むバッファーを扱えます。 [File API](/ja/docs/DOM/File)、[WebGL](/ja/docs/WebGL)、および [WebSockets](/ja/docs/WebSockets) を含む、いくつかの API でこれを用いることができます。
 - 範囲の境界領域の保持
   - : [`Range`](/ja/docs/Web/API/Range) オブジェクトに [`range.getClientRects()`](/ja/docs/Web/API/Range/getClientRects) および [`range.getBoundingClientRect()`](/ja/docs/Web/API/Range/getBoundingClientRect) メソッドが追加されました。
 - 任意の要素上でのマウスイベントのキャプチャ
