@@ -59,7 +59,7 @@ GitHub 是一个非常重要和有用的社区，值得参与其中，Git / GitH
 2. 在此页面的“_Repository name_”框中，为你的代码库起一个名字，例如：_my-repository_。
 3. 还要填写一个描述来说明你的存储库将包含哪些内容。你的屏幕应该是这样的
    ![](create-new-repo.png)
-4. 单击 *Create repository*；你将会看到如下页面：
+4. 单击 _Create repository_；你将会看到如下页面：
    ![](github-repo.png)
 
 ### 将你的文件上传到 GitHub
