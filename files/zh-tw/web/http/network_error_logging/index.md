@@ -7,13 +7,13 @@ l10n:
 
 {{HTTPSidebar}}{{SeeCompatTable}}
 
-網路錯誤記錄（Network Error Logging, NEL）是一種可以透過 {{HTTPHeader("NEL")}} HTTP *[回應標頭](/zh-TW/docs/Glossary/Response_header)*配置的機制。此實驗性標頭允許網站和應用程式選擇接收來自支援瀏覽器的失敗（如果需要可以成功）網路抓取報告。
+網路錯誤記錄（Network Error Logging, NEL）是一種可以透過 {{HTTPHeader("NEL")}} HTTP [_回應標頭_](/zh-TW/docs/Glossary/Response_header)配置的機制。此實驗性標頭允許網站和應用程式選擇接收來自支援瀏覽器的失敗（和成功，如果需要）網路抓取報告。
 
 報告會發送到在 {{HTTPHeader("Report-To")}} 標頭中定義的報告群組。
 
 ## 使用方式
 
-Web 應用程式透過 NEL 標頭選擇加入此行為，這是一個 *[JSON 編碼](/zh-TW/docs/Glossary/Response_header)*的物件：
+Web 應用程式透過 NEL 標頭選擇加入此行為，這是一個 [_JSON 編碼_](/zh-TW/docs/Glossary/Response_header)的物件：
 
 ```http
 NEL: { "report_to": "nel",
