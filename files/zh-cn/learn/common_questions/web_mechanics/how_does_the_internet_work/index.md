@@ -35,14 +35,14 @@ l10n:
 
 ## 自主学习
 
-- [五分钟告诉你互联网是如何工作的](https://www.youtube.com/watch?v=7_LPdttKXPc)： Aaron Titus 在五分钟的一个视频中告诉你非常基础的互联网知识。
-- [互联网如何运作？](https://www.youtube.com/watch?v=x3c1ih2NJEg)：这是一个详细且可视化的9分钟视频。
+- [五分钟告诉你互联网是如何工作的](https://www.youtube.com/watch?v=7_LPdttKXPc)：Aaron Titus 在五分钟的一个视频中告诉你非常基础的互联网知识。
+- [互联网如何运作？](https://www.youtube.com/watch?v=x3c1ih2NJEg)：这是一个详细且可视化的 9 分钟视频。
 
 ## 深入探索
 
 ### 一个简单的网络
 
-当两台电脑需要通信的时候，你必须要连接他们，无论通过有线方式 (通常是[网线](http://en.wikipedia.org/wiki/Ethernet_crossover_cable))还是无线方式（比如 [WiFi](https://zh.wikipedia.org/wiki/Wi-Fi) 或 [蓝牙](https://zh.wikipedia.org/wiki/藍牙) )。所有现代电脑都支持这些连接。
+当两台电脑需要通信的时候，你必须要连接他们，无论通过有线方式 (通常是[网线](http://en.wikipedia.org/wiki/Ethernet_crossover_cable)) 还是无线方式（比如 [WiFi](https://zh.wikipedia.org/wiki/Wi-Fi) 或 [蓝牙](https://zh.wikipedia.org/wiki/藍牙) )。所有现代电脑都支持这些连接。
 
 > **备注：** 接下来的内容，我们将只谈论有线连接，而无线连接的原理与此相同。
 
@@ -80,7 +80,7 @@ l10n:
 
 如果你想给一台电脑发送一条信息，你必须指明它是哪台电脑。因此，任何连接到网络中的电脑都需要有一个唯一的地址来标记它，叫做 "IP 地址" （IP 代表*网络协议*）。这个地址由四部分被点分隔的数字序列组成，比如：`192.0.2.172`。
 
-这对于计算机来说完全没问题，但我们人类很难记住这种地址。为了使事情更简单，我们可以使用一个叫做*域名*的可读名称来替代IP地址。例如（在写作时，IP地址可能会变化），`google.com` 是用于 IP 地址 `142.250.190.78` 的域名。所以使用域名是我们通过互联网访问计算机的最简单方式。
+这对于计算机来说完全没问题，但我们人类很难记住这种地址。为了使事情更简单，我们可以使用一个叫做*域名*的可读名称来替代 IP 地址。例如（在写作时，IP 地址可能会变化），`google.com` 是用于 IP 地址 `142.250.190.78` 的域名。所以使用域名是我们通过互联网访问计算机的最简单方式。
 
 ![](dns-ip.png)
 
