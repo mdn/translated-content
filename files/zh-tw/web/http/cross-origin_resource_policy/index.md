@@ -22,6 +22,7 @@ CORP 是超越預設的{{Glossary("same-origin policy", "同源政策")}}的另�
 Web 應用程式通過 {{HTTPHeader("Cross-Origin-Resource-Policy")}} HTTP 回應標頭設置跨來源資源政策，該標頭接受下方三個值之一：
 
 - `same-site`
+
   - : 只有來自同一*{{Glossary("Site", "站點")}}*的請求可以讀取資源。
 
     > **警告：** 這比 {{Glossary("來源")}} 的安全性要低。檢查兩個來源是否為同一站點的 [算法](https://html.spec.whatwg.org/multipage/origin.html#same-site) 在 HTML 標準中定義，涉及檢查 _可註冊域_。
