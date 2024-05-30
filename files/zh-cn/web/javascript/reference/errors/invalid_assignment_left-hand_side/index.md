@@ -23,7 +23,7 @@ SyntaxError: Left side of assignment is not a reference. (Safari)
 
 ## 什么地方出错了？
 
-在某处出现了意外地赋值情况。比如说，这可能是因为[赋值运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators#赋值运算符)与[相等运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators#相等运算符)不匹配。单个 `=` 符号用于给变量赋值，而 `==` 或 `===` 运算符则是用于比较值。
+在某处出现了意外的赋值情况。比如说，这可能是因为[赋值运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators#赋值运算符)与[相等运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators#相等运算符)不匹配。单个 `=` 符号用于给变量赋值，而 `==` 或 `===` 运算符则是用于比较值。
 
 ## 示例
 
@@ -49,7 +49,7 @@ if (Math.PI + 1 === 3 || Math.PI + 1 === 4) {
 const str = "你好，" + "来自" + "另一个世界！";
 ```
 
-### 导致 ReferenceErrors 的赋值操作
+### 导致 ReferenceError 的赋值操作
 
 无效的赋值操作不一定会产生语法错误。有时语法几乎是正确的，但在运行过程中，左侧表达式计算得出的是一个*值*而非*引用*，因此赋值仍然无效。这类错误会在程序执行到该语句时发生，即在实际执行阶段出现。
 
