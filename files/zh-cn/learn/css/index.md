@@ -17,16 +17,16 @@ l10n:
 
 在开始这个主题之前，你还应该熟悉使用计算机和被动地使用网络（即，仅仅浏览和消费内容）。你应该按照[安装基础软件](/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software)中详细说明的内容设置好一个基本的工作环境，并且理解如何创建和管理文件，这在[处理文件](/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files)中有详细介绍——这些都是我们从零[开始学网页](/zh-CN/docs/Learn/Getting_started_with_the_web)初学者完整模块的一部分。
 
-如果你对网页开发完全陌生，建议你在继续学习这个主题之前，先完成从零[开始学网页](/zh-CN/docs/Learn/Getting_started_with_the_web)的学习。不过，[CSS 基础](/zh-CN/docs/Learn/Getting_started_with_the_web/CSS_basics)文章中涵盖的大部分内容也在我们的 [CSS 初步](/zh-CN/docs/Learn/CSS/First_steps)模块中有更详细的讲解。
+如果你对网页开发完全陌生，建议你在继续学习这个主题之前，先完成从零[开始学网页](/zh-CN/docs/Learn/Getting_started_with_the_web)的学习。不过，[CSS 基础](/zh-CN/docs/Learn/Getting_started_with_the_web/CSS_basics)文章中涵盖的大部分内容也在我们的 [CSS 第一步](/zh-CN/docs/Learn/CSS/First_steps)模块中有更详细的讲解。
 
 ## 模块
 
 本主题包含以下模块，建议按顺序阅读这些模块。你应该从第一个模块开始。
 
-- [CSS 初步](/zh-CN/docs/Learn/CSS/First_steps)
+- [CSS 第一步](/zh-CN/docs/Learn/CSS/First_steps)
   - : CSS（层叠样式表）用于样式化和布局网页。例如，可以更改内容的字体、颜色、大小和间距，将内容分成多列，或添加动画和其他装饰功能。本模块为你提供了通往 CSS 掌握之路的温和起点，介绍了它的基本工作原理、语法结构以及如何开始使用它来为 HTML 添加样式。
 - [构建 CSS 块](/zh-CN/docs/Learn/CSS/Building_Blocks)
-  - : 本模块承接[CSS 初步](/zh-CN/docs/Learn/CSS/First_steps)，进行进一步的学习——既然你已经熟悉了 CSS 的语言和语法，有了一些使用 CSS 的基本经验，是时候再深入一些了。本模块涉及了层叠与继承、可用的所有种类的选择器、单位、尺寸、样式化背景和边框、调试，还有更多。这样做的目的是，在继续深入到更加具体的规则，例如[样式化文本](/zh-CN/docs/Learn/CSS/Styling_text)和[CSS 布局](/zh-CN/docs/Learn/CSS/CSS_layout)前，为你提供一个用于编写堪用的 CSS 的工具箱，帮你理解所有必要的理论。
+  - : 本模块承接[CSS 第一步](/zh-CN/docs/Learn/CSS/First_steps)，进行进一步的学习——既然你已经熟悉了 CSS 的语言和语法，有了一些使用 CSS 的基本经验，是时候再深入一些了。本模块涉及了层叠与继承、可用的所有种类的选择器、单位、尺寸、样式化背景和边框、调试，还有更多。这样做的目的是，在继续深入到更加具体的规则，例如[样式化文本](/zh-CN/docs/Learn/CSS/Styling_text)和[CSS 布局](/zh-CN/docs/Learn/CSS/CSS_layout)前，为你提供一个用于编写堪用的 CSS 的工具箱，帮你理解所有必要的理论。
 - [样式化文本](/zh-CN/docs/Learn/CSS/Styling_text)
   - : 在覆盖了 CSS 语言的基础知识之后，下一个需要集中学习的 CSS 主题是文本样式化——这是你使用 CSS 最常做的事情之一。这里我们研究文本样式化的基本原理，包括设置字体、粗细、斜体、行距和字母间距、阴影等文本特征。我们最后还会讨论如何将自定义字体应用到页面上，以及如何样式化列表和链接。
 - [CSS 布局](/zh-CN/docs/Learn/CSS/CSS_layout)
