@@ -9,7 +9,7 @@ l10n:
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies","Learn/Tools_and_testing/Cross_browser_testing/JavaScript", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
-通过之前的准备工作，我们现在将专门研究在 HTML 和 CSS 代码中常见的跨浏览器问题，以及可以用来预防或解决这些问题的工具。这包括代码静态分析、处理 CSS 前缀、使用浏览器开发者工具追踪问题、使用 polyfills 为浏览器提供支持，以及解决响应式设计的问题等。
+通过之前的准备工作，我们现在将专门研究在 HTML 和 CSS 代码中常见的跨浏览器问题，以及可以用来预防或解决这些问题的工具。这包括代码静态分析、处理 CSS 前缀、使用浏览器开发者工具追踪问题、使用 polyfill 为浏览器提供支持，以及解决响应式设计的问题等。
 
 <table>
   <tbody>
@@ -17,7 +17,7 @@ l10n:
       <th scope="row">前提：</th>
       <td>
         <p>
-          熟悉 <a href="/zh-CN/docs/Learn/HTML">HTML</a>，<a
+          熟悉核心的 <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a
             href="/zh-CN/docs/Learn/CSS"
             >CSS</a
           >
@@ -39,7 +39,7 @@ l10n:
 
 ## HTML 和 CSS 的问题
 
-HTML 和 CSS 的问题在于，它们相当简单，简单到开发人员通常不会认真对待它们，因此难以确保代码简洁、高效，或是能在语义上描述页面各部分的功能。在最坏的情况下，一些网站甚至选择使用 JavaScript 来生成整个网页的内容和样式，这使得页面的可读性很差，并且性能低下（生成大量 DOM 元素的操作代价很昂贵）。有时候，最新功能并不能在浏览器中得到一致的支持，这可能会导致某些特性和样式对某些用户不起作用。响应式设计的问题也很常见——一个在桌面浏览器上看起来不错的网站，在移动设备上可能会体验很糟糕（因为内容太小而无法阅读，或者因为大量的动画而导致网站运行缓慢）。
+HTML 和 CSS 的问题在于，它们相当简单，简单到开发人员通常不会认真对待它们，因此难以确保代码简洁、高效，或是能在语义上描述页面各部分的特性。在最坏的情况下，一些网站甚至选择使用 JavaScript 来生成整个网页的内容和样式，这使得页面的可读性很差，并且性能低下（生成大量 DOM 元素的操作代价很昂贵）。有时候，最新的特性并不能在浏览器中得到一致的支持，这可能会导致某些特性和样式对某些用户不起作用。响应式设计的问题也很常见——一个在桌面浏览器上看起来不错的网站，在移动设备上可能会体验很糟糕（因为内容太小而无法阅读，或者因为大量的动画而导致网站运行缓慢）。
 
 让我们继续探讨如何减少由 HTML/CSS 引起的跨浏览器错误。
 
@@ -103,7 +103,7 @@ HTML 和 CSS 的问题在于，它们相当简单，简单到开发人员通常�
 
 某些问题可以通过利用 HTML/CSS 的自然工作方式来解决。
 
-浏览器会将无法识别的 HTML 元素视为匿名内联元素（实际上是没有语义值的内联元素，类似于 {{htmlelement("span")}} 元素）。你仍然可以通过它们的名称引用它们，并使用 CSS 对其进行样式设置，例如——你只需要确保它们按照你希望的方式运行即可。你可以像处理其他元素一样对其进行样式设置，包括根据需要将 `display` 属性设置为非 `inline` 的值。
+浏览器会将无法识别的 HTML 元素视为匿名行级元素（实际上是没有语义值的行级元素，类似于 {{htmlelement("span")}} 元素）。你仍然可以通过它们的名称引用它们，并使用 CSS 对其进行样式设置，例如——你只需要确保它们按照你希望的方式运行即可。你可以像处理其他元素一样对其进行样式设置，包括根据需要将 `display` 属性设置为非 `inline` 的值。
 
 像 HTML 的 [`<video>`](/zh-CN/docs/Web/HTML/Element/video)、[`<audio>`](/zh-CN/docs/Web/HTML/Element/audio)、[`<picture>`](/zh-CN/docs/Web/HTML/Element/picture)、[`<object>`](/zh-CN/docs/Web/HTML/Element/object) 和 [`<canvas>`](/zh-CN/docs/Web/HTML/Element/canvas)（以及其他特性）这样的更复杂的元素具有自然的回退机制，以防链接的资源不受支持。你可以在开标签和闭标签之间添加回退内容，不支持的浏览器将有效地忽略外部元素并执行嵌套内容。
 
@@ -185,19 +185,19 @@ button:active {
 }
 ```
 
-在这里，我们提供了一个 [RGB](/zh-CN/docs/Web/CSS/color_value/rgb){{cssxref("background-color")}}，它会在悬停时改变透明度，以提示用户按钮是交互式的，还提供了一些半透明的嵌入式 {{cssxref("box-shadow")}} 阴影，以赋予按钮一些质感和深度。尽管 RGB 颜色和盒子阴影目前已得到广泛支持，但它们并非一直存在——它们最早是在 IE9 中引入的。不支持 RGB 颜色的浏览器会忽略相关声明，这意味着在旧版浏览器中按钮背景就不会显示，文字也无法读取，这是非常不好的情况！
+在这里，我们提供了一个 [RGB](/zh-CN/docs/Web/CSS/color_value/rgb) {{cssxref("background-color")}}，它会在悬停时改变透明度，以提示用户按钮是交互式的，还提供了一些半透明的嵌入式 {{cssxref("box-shadow")}} 阴影，以赋予按钮一些质感和深度。尽管 RGB 颜色和盒子阴影目前已得到广泛支持，但它们并非一直存在——它们最早是在 IE9 中引入的。不支持 RGB 颜色的浏览器会忽略相关声明，这意味着在旧版浏览器中按钮背景就不会显示，文字也无法读取，这是非常不好的情况！
 
 ![难以辨读的药丸型按钮，文字白色，背景几乎全白](unreadable-button.png)
 
 为了解决这个问题，我们添加了第二个 `background-color` 声明，指定了一个十六进制颜色——这在非常老旧的浏览器中也得到支持，可以作为现代炫酷特性的后备方案。浏览器在访问此页面时，首先会应用第一个 `background-color` 值；当遇到第二个 `background-color` 声明时，如果浏览器支持 RGB 颜色，就会用这个值覆盖之前的值。如果不支持，它就会忽略整个声明，继续执行后续样式。
 
-> **备注：** 对于其他 CSS 特性，如 [media queries](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)、[`@font-face`](/zh-CN/docs/Web/CSS/@font-face) 和 [`@supports`](/zh-CN/docs/Web/CSS/@supports) 块来说，也是如此——如果不被支持，浏览器就会忽略它们。
+> **备注：** 对于其他 CSS 特性，如[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)、[`@font-face`](/zh-CN/docs/Web/CSS/@font-face) 和 [`@supports`](/zh-CN/docs/Web/CSS/@supports) 块来说，也是如此——如果不被支持，浏览器就会忽略它们。
 
 #### 选择器支持
 
 当然，如果你没有使用合适的[选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)来选择你想要设置样式的元素，任何 CSS 特性都不会被应用！
 
-在一个以逗号分隔的选择器列表中，如果你只是错误地编写了一个选择器，它可能无法匹配任何元素。但是，如果有一个选择器是无效的，**整个**选择器列表以及整个样式块都将被忽略。因此，建议只在[可容错选择器列表](/zh-CN/docs/Web/CSS/Selector_list#可容错选择器列表）中使用带有 `:-moz-` 前缀的伪类或伪元素，例如 `:where(::-moz-thumb)`。请避免在逗号分隔的选择器组中使用带有 `:-moz-` 前缀的伪类或伪元素（除非它在 [`:is()`](/zh-CN/docs/Web/CSS/:is) 或 [`:where()`](/zh-CN/docs/Web/CSS/:where) 可容错选择器列表内），因为除了 Firefox 之外的所有浏览器都会忽略整个样式块。需要注意的是，`:is()` 和 `:where()` 都可以作为参数传递给其他选择器列表，包括 [`:has()`](/zh-CN/docs/Web/CSS/:has) 和 [`:not()`](/zh-CN/docs/Web/CSS/:not)。
+在一个以逗号分隔的选择器列表中，如果你只是错误地编写了一个选择器，它可能无法匹配任何元素。但是，如果有一个选择器是无效的，**整个**选择器列表以及整个样式块都将被忽略。因此，建议只在[可容错选择器列表](/zh-CN/docs/Web/CSS/Selector_list#可容错选择器列表)中使用带有 `:-moz-` 前缀的伪类或伪元素，例如 `:where(::-moz-thumb)`。请避免在逗号分隔的选择器组中使用带有 `:-moz-` 前缀的伪类或伪元素（除非它在 [`:is()`](/zh-CN/docs/Web/CSS/:is) 或 [`:where()`](/zh-CN/docs/Web/CSS/:where) 可容错选择器列表内），因为除了 Firefox 之外的所有浏览器都会忽略整个样式块。需要注意的是，`:is()` 和 `:where()` 都可以作为参数传递给其他选择器列表，包括 [`:has()`](/zh-CN/docs/Web/CSS/:has) 和 [`:not()`](/zh-CN/docs/Web/CSS/:not)。
 
 我们注意到，利用浏览器的开发者工具来检查目标元素的样式设置，以及审查 DOM 检查器所提供的 DOM 树面包屑路径，通常能有效帮助我们判断所用选择器是否恰当。
 
@@ -219,7 +219,7 @@ form > #date
 
 例如，Firefox 使用 `-moz-`，而 Chrome/Edge/Opera/Safari 使用 `-webkit-`。你可能会在旧代码中遇到的其他（你可以安全删除）的前缀包括 `-ms-`（它由 Internet Explorer 和早期版本的 Edge 使用），以及 `-o`（它用于最初的 Opera 版本）。
 
-前缀特性从未打算在生产网站中使用——它们可能会在没有警告的情况下发生变化或被移除，可能会导致需要这些特性的旧版本浏览器遇到性能问题，并且一直是跨浏览器问题的罪魁祸首。例如，当开发人员决定仅使用 `-webkit-` 版本的属性时，这意味着该网站将无法在其他浏览器上正常工作。这种情况实际上发生过无数次，以至于其他浏览器供应商为几种 CSS 属性实施了 `-webkit-` 前缀版本。虽然浏览器仍然支持某些前缀属性名称、属性值和伪类，但现在实验性功能被放在标志后面，以便网页开发人员在开发过程中进行测试。
+请不要在用于生产的网站中使用前缀特性——它们可能会在没有警告的情况下发生变化或被移除，可能会导致需要这些特性的旧版本浏览器遇到性能问题，并且一直是跨浏览器问题的罪魁祸首。例如，当开发人员决定仅使用 `-webkit-` 版本的属性时，这意味着该网站将无法在其他浏览器上正常工作。这种情况实际上发生过无数次，以至于其他浏览器供应商为几种 CSS 属性实施了 `-webkit-` 前缀版本。虽然浏览器仍然支持某些前缀属性名称、属性值和伪类，但现在实验性特性需要使用标志来启用，以便网页开发人员在开发过程中进行测试。
 
 请确保尽在必要时使用前缀；属性是少数仍需使用前缀的特性之一。你可以查看 MDN 参考页面和 [caniuse.com](https://caniuse.com/) 等网站，了解哪些浏览器需要使用前缀。如果你不确定，也可以直接在浏览器中进行测试。请在带有前缀的样式声明后包含标准的不带前缀的版本；如果不支持，它将被忽略，当支持时将被使用。
 
@@ -249,7 +249,7 @@ form > #date
    test.style.transform = "rotate(90deg)";
    ```
 
-当你开始在第二个点后输入属性名表示时（请注意，在 JavaScript 中，CSS 属性名是用{{Glossary("camel_case", "驼峰格式")}}而不是{{Glossary("kebab_case", "连字符格式")}})，JavaScript 控制台应该能够匹配你输入的内容，并自动完成目前浏览器中已存在的属性名。这可以帮助你发现该浏览器中实现了哪些属性。
+当你开始在第二个点后输入属性名表示时（请注意，在 JavaScript 中，CSS 属性名是用{{Glossary("camel_case", "小驼峰式命名法")}}而不是{{Glossary("kebab_case", "烤肉串式命名法")}}），JavaScript 控制台应该能够匹配你输入的内容，并自动完成目前浏览器中已存在的属性名。这可以帮助你发现该浏览器中实现了哪些属性。
 
 如果需要使用现代特性，可以使用 [`@supports`](/zh-CN/docs/Web/CSS/@supports) 进行特性支持检测，并在 `@supports` 块中嵌套使用带有前缀的特性或新特性。
 
@@ -263,7 +263,7 @@ form > #date
 
 HTML 和 CSS 还有很多其他的问题。最重要的是如何在网上找到答案。
 
-其中最好的支持信息来源是 Mozilla 开发者网络（你现在就在这！）、[stackoverflow.com](http://stackoverflow.com/) 和 [caniuse.com](http://caniuse.com/)。
+其中最好的支持信息来源是 Mozilla 开发者网络（你现在就在这！）、[stackoverflow.com](https://stackoverflow.com/) 和 [caniuse.com](https://caniuse.com/)。
 
 为使用 Mozilla 开发者网络（MDN），大多数人会搜索他们正在尝试查找的信息的技术术语加上“mdn”，例如“mdn HTML5 video”。MDN 包含几种有用的内容类型：
 
@@ -271,7 +271,7 @@ HTML 和 CSS 还有很多其他的问题。最重要的是如何在网上找到�
 - 其他的支持性参考资料，例如 [web 媒体类型和格式指南](/zh-CN/docs/Web/Media/Formats)。
 - 解决特定问题的有用教程，例如[创建跨浏览器的视频播放器](/zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/cross_browser_video_player)。
 
-[caniuse.com](http://caniuse.com/) 提供支持信息，以及一些有用的外部资源链接。例如，请参阅<http://caniuse.com/#search=video>（你只需在文本框中输入要搜索的特性）。
+[caniuse.com](https://caniuse.com/) 提供支持信息，以及一些有用的外部资源链接。例如，请参阅 <https://caniuse.com/#search=video>（你只需在文本框中输入要搜索的特性）。
 
 [stackoverflow.com](https://stackoverflow.com/)（SO）是一个论坛网站，你可以提出问题，并让开发人员分享他们的解决方案，查看以前的帖子，并帮助其他开发人员。在发布新问题之前，建议你先看看是否已经有人回答了你的问题。例如，我们在 SO 上搜索了“disabling autofocus on HTML dialog”，并且很快得到了[使用 HTML 属性禁用 showModal 自动聚焦](https://stackoverflow.com/questions/63267581/disable-showmodal-auto-focusing-using-html-attributes)。
 
