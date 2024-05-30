@@ -56,7 +56,7 @@ https://developer.mozilla.org/zh-CN/search?q=URL
 
 > **备注：** 你可以将 URL 视为普通的邮寄地址：_scheme_ 代表你想要使用的邮政服务，_domain name_ 就像是城市或城镇，_port_ 就像邮政编码；_path_ 表示你的邮件应该送到的建筑物；_parameters_ 表示额外的信息，例如建筑物中公寓的编号；最后，_anchor_ 表示你实际寄信给的人。
 
-> **备注：** 关于 URL 还有[一些额外的部分和一些额外的规则](https://zh.wikipedia.org/wiki/统一资源定位符)，但对于普通用户或 Web 开发人员来说并不相关。不用担心这些，你不需要了解它们来构建和使用完全功能的URL。
+> **备注：** 关于 URL 还有[一些额外的部分和一些额外的规则](https://zh.wikipedia.org/wiki/统一资源定位符)，但对于普通用户或 Web 开发人员来说并不相关。不用担心这些，你不需要了解它们来构建和使用完全功能的 URL。
 
 ## 协议
 
@@ -68,10 +68,10 @@ URL 的第一部分是 _scheme_，它表示浏览器必须使用的协议来请�
 
 ![Authority](mdn-url-authority.png)
 
-接下来是*凭证*，它与 scheme 之间用字符模式 `://` 分隔。如果存在，凭证包括 *domain*（例如 `www.example.com`）和 *port*（`80`），由冒号分隔：
+接下来是*凭证*，它与 scheme 之间用字符模式 `://` 分隔。如果存在，凭证包括 _domain_（例如 `www.example.com`）和 _port_（`80`），由冒号分隔：
 
 - 域名指示被请求的 Web 服务器。通常这是一个域名，但也可以使用 {{Glossary("IP address")}}（但这很少见，因为它不太方便）。
-- 端口指示用于访问 Web 服务器上资源的技术“gate”。如果 Web 服务器使用 HTTP 协议的标准端口（HTTP 为80，HTTPS 为443）来授予对其资源的访问权限，则通常会省略端口。否则，端口是强制的。
+- 端口指示用于访问 Web 服务器上资源的技术“gate”。如果 Web 服务器使用 HTTP 协议的标准端口（HTTP 为 80，HTTPS 为 443）来授予对其资源的访问权限，则通常会省略端口。否则，端口是强制的。
 
 > **备注：** scheme 和凭证之间的分隔符是 `://`。冒号将 scheme 与 URL 的下一部分分隔开，而 `//` 表示 URL 的下一部分是凭证。
 >
@@ -103,16 +103,16 @@ URL 的第一部分是 _scheme_，它表示浏览器必须使用的协议来请�
 
 - 为在其他文档中新建链接，用 {{HTMLElement("a")}} ;
 - 为将文档与它的相关资源关联，用各种标签如 {{HTMLElement("link")}} 或 {{HTMLElement("script")}}；
-- 为显示多媒体如图片 (用 {{HTMLElement("img")}} )，视频 (用 {{HTMLElement("video")}} )，声音和音乐 (用 {{HTMLElement("audio")}} )， 等等；
+- 为显示多媒体如图片 (用 {{HTMLElement("img")}} )，视频 (用 {{HTMLElement("video")}} )，声音和音乐 (用 {{HTMLElement("audio")}} )，等等；
 - 为显示其他 HTML 文档，用 {{HTMLElement("iframe")}}。
 
-> **备注：** 当在页面中加载资源时指定URL（例如使用 `<script>`、`<audio>`、`<img>`、`<video>` 等），通常应只使用HTTP和HTTPS URL，除了一些例外情况（一个显著的例外是 `data:`；参见[数据 URL](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)）。例如，使用FTP是不安全的，并且不再受现代浏览器的支持。
+> **备注：** 当在页面中加载资源时指定 URL（例如使用 `<script>`、`<audio>`、`<img>`、`<video>` 等），通常应只使用 HTTP 和 HTTPS URL，除了一些例外情况（一个显著的例外是 `data:`；参见[数据 URL](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)）。例如，使用 FTP 是不安全的，并且不再受现代浏览器的支持。
 
 其他大量使用 URLs 的技术如 {{Glossary("CSS")}} 或 {{Glossary("JavaScript")}}, 这些才是 Web 的中心。
 
 ## 绝对 URL 和相对 URL
 
-我们上面看到的是一个*绝对 URL*，但也有一个叫做*相对 URL* 的东西。[URL 标准](https://url.spec.whatwg.org/#absolute-url-string)定义了两者——尽管它使用术语[*绝对 URL字符串*](https://url.spec.whatwg.org/#absolute-url-string)和[*相对URL 字符串*](https://url.spec.whatwg.org/#relative-url-string)，以将它们与[URL 对象](https://url.spec.whatwg.org/#url)（URL 的内存表示）区分开来。
+我们上面看到的是一个*绝对 URL*，但也有一个叫做*相对 URL* 的东西。[URL 标准](https://url.spec.whatwg.org/#absolute-url-string)定义了两者——尽管它使用术语[_绝对 URL 字符串_](https://url.spec.whatwg.org/#absolute-url-string)和[_相对 URL 字符串_](https://url.spec.whatwg.org/#relative-url-string)，以将它们与[URL 对象](https://url.spec.whatwg.org/#url)（URL 的内存表示）区分开来。
 
 让我们来看看在 URL 的背景下，*绝对*和*相对*之间的区别是什么。
 
@@ -189,4 +189,4 @@ URL 的必需部分在很大程度上取决于使用 URL 的上下文。在浏�
 
 ## 参见
 
-[数据URL](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)：以 data: 方案为前缀的URL允许内容创建者在文档中嵌入小文件。
+[数据 URL](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)：以 data: 方案为前缀的 URL 允许内容创建者在文档中嵌入小文件。
