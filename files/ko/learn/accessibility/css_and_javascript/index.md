@@ -1,6 +1,8 @@
 ---
 title: CSS와 JavaScript의 접근성 모범 사례
 slug: Learn/Accessibility/CSS_and_JavaScript
+l10n:
+  sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}
