@@ -9,7 +9,7 @@ l10n:
 
 **`mathbackground`** [全局属性](/zh-CN/docs/Web/MathML/Global_attributes)设置 MathML 元素的[背景颜色](/zh-CN/docs/Web/CSS/background-color)。
 
-> **备注：** 尽可能使用 CSS 对 MathML 进行样式设置。`mathbackground` 属性应仅在不支持 CSS 并且将被 CSS `background-color` 属性值覆盖的应用程序中包含。
+> **备注：** 尽可能使用 CSS 来设置 MathML 的样式。`mathbackground` 属性应仅在不支持 CSS 并且将被 CSS `background-color` 属性值覆盖的应用程序中使用。
 
 ## 语法
 
@@ -45,8 +45,7 @@ l10n:
 {{Specifications}}
 
 - 在 MathML 3 和更早版本中，支持的值集更有限。自 MathML 核心版本以来，语法与 CSS {{cssxref("&lt;color&gt;")}} 值相匹配。
-
-- 此属性设计用于不支持 CSS 的 MathML 应用程序。自 MathML 核心版本以来，推荐使用等效的 CSS。
+- 此属性旨在用于不支持 CSS 的 MathML 应用程序。自 MathML 核心版本以来，推荐使用等效的 CSS。
 
 ## 浏览器兼容性
 
