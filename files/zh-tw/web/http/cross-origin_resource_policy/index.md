@@ -23,14 +23,14 @@ Web 應用程式通過 {{HTTPHeader("Cross-Origin-Resource-Policy")}} HTTP 回�
 
 - `same-site`
 
-  - : 只有來自同一*{{Glossary("Site", "站點")}}*的請求可以讀取資源。
+  - : 只有來自同一[_站點_](/zh-TW/docs/Glossary/Site)的請求可以讀取資源。
 
     > **警告：** 這比{{Glossary("origin", "來源")}}的安全性要低。檢查兩個來源是否為同一站點的[算法](https://html.spec.whatwg.org/multipage/origin.html#same-site)在 HTML 標準中定義，涉及檢查*可註冊域*。
 
 - `same-origin`
-  - : 只有來自相同*{{Glossary("origin", "來源")}}*（即方案 + 主機 + 通訊埠）的請求可以讀取資源。
+  - : 只有來自相同[_來源_](/zh-TW/docs/Glossary/Origin)（即方案 + 主機 + 通訊埠）的請求可以讀取資源。
 - `cross-origin`
-  - : 來自任何*{{Glossary("origin", "來源")}}*（包括同站點和跨站點）的請求都可以讀取資源。這在使用 COEP 時很有用（見下文）。
+  - : 來自任何[_來源_](/zh-TW/docs/Glossary/Origin)（包括同站點和跨站點）的請求都可以讀取資源。這在使用 COEP 時很有用（見下文）。
 
 ```http
 Cross-Origin-Resource-Policy: same-site | same-origin | cross-origin
