@@ -2,7 +2,7 @@
 title: 测试的策略
 slug: Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies
 l10n:
-  sourceCommit: 5ec427445cf23074f4aabd47d54c69399d1fbeac
+  sourceCommit: 54c4741354cf49b4dd62e1bb3d8ab13181b210f0
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Introduction","Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS", "Learn/Tools_and_testing/Cross_browser_testing")}}
@@ -100,9 +100,9 @@ Opera Mini [在运行复杂 JavaScript 方面性能不太好](https://dev.opera.
 
 ### 其他注意事项
 
-你应该将无障碍性作为 A 级测试要求（我们将在我们的《处理常见无障碍性问题》文章中详细介绍你应该测试的内容）。
+你应该将无障碍性作为 A 级测试要求（我们将在我们的[处理常见无障碍性问题](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)文章中详细介绍你应该测试的内容）。
 
-此外，你应该注意特定情况下的需求。例如，如果你正在创建某种公司内部网络，用于向经理提供销售数据，并且所有经理都使用 Windows phone，你可能需要优先考虑支持移动 IE。
+此外，你还应注意特定情况下的需求。例如，如果你的产品面向的市场以手机为主要上网手段，那么你可能需要优先支持移动浏览器。
 
 ### 最终的支持图表
 
@@ -186,7 +186,6 @@ A 级：
 你还可以找到其他移动设备环境的模拟器，例如：
 
 - 如果你想要测试 Opera Mini，可以单独模拟 [Opera Mini](https://dev.opera.com/articles/installing-opera-mini-on-your-computer/)。
-- Windows Mobile 操作系统也有可用的模拟器：参见 [Windows Phone 8 的 Windows Phone 模拟器](<https://msdn.microsoft.com/library/windows/apps/ff402563(v=vs.105).aspx>)和[使用 Windows 10 Mobile 模拟器进行测试](https://docs.microsoft.com/windows/uwp/debug-test-perf/test-with-the-emulator)（这些仅能在 Windows 上运行）。
 
 > **备注：** 许多模拟器实际上需要使用虚拟机（参见下文）；当出现这种情况时，通常会提供说明，并且/或者虚拟机的使用已纳入模拟器的安装程序中。
 
