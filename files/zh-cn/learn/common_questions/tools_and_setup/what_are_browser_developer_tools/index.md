@@ -1,6 +1,8 @@
 ---
 title: 什么是浏览器开发者工具？
 slug: Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools
+l10n:
+  sourceCommit: 9a5b5597483ca34a58d400060f2e0534dceda240
 ---
 
 {{QuicklinksWithSubPages("/zh-CN/docs/Learn/Common_questions")}}
@@ -15,25 +17,25 @@ slug: Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools
 
 ![](devtools_63_inspector.png)
 
-**如何打开它？有三种方式：**
+如何打开它？有三种方式：
 
-- **_键盘快捷键_** _Ctrl + Shift + I_，除了以下的特例
+- **_键盘快捷键_** 
 
-  - **Internet Explorer.** _F12_
-  - **Mac OS X.** _⌘ + ⌥ + I_
+  - **Windows:** _<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd>_ or <kbd>F12</kbd>
+  - **macOS:** _<kbd>⌘</kbd> + <kbd>⌥</kbd> + <kbd>I</kbd>_
 
 - **_菜单栏_**
 
-  - **Firefox**：菜单 ![](2014-01-10-13-08-08-f52b8c.png) ➤ _Web 开发者_ ➤ _切换工具箱（译者注：此处修改为最新的 Firefox Quantum），或者工具栏中的_ ➤ _Web 开发者_ ➤ _切换工具箱_
-  - **Chrome**：菜单 _➤ 更多工具 ➤ 开发者工具_
-  - **Safari**：_Develop ➤ Show Web Inspector_。如果你看不到 _Develop_ 菜单，去到*Safari ➤ Preferences ➤ Advanced*，然后点击*Show Develop menu in menu bar* 复选框。
-  - **Opera**. _Developer ➤ Web Inspector_
+  - **Firefox**：菜单 ![](2014-01-10-13-08-08-f52b8c.png) _➤ 更多工具 ➤ Web 开发者工具_
+  - **Chrome**：_➤ 更多工具 ➤ 开发者工具_
+  - **Safari**：_开发 ➤ 显示网页检查器_。如果你看不到 _开发_ 菜单，去到 *Safari ➤ 设置 ➤ 高级*，然后点击*显示网页开发者功能*复选框。
+  - **Opera**. _开发者 ➤ 开发者工具_
 
-- **右键菜单**：右键单击网页中的一个项目上（在 Mac 上按 Ctrl 点击），并从弹出的菜单中选择`检查元素`（译者注：选择`检查`（Chrome）或`查看元素`（Firefox））。（这种方法的好处是：该方法直接将你右击的元素的代码突出显示）。
+- **_右键菜单：_** 右键单击网页中的一个项目上（在 Mac 上按 Ctrl 同时点击），并从弹出的菜单中选择*检查元素*（译者注：选择`检查`（Chrome）或`查看元素`（Firefox））。（这种方法的好处是：该方法直接将你右击的元素的代码突出显示）。
 
 ![](inspector_context.png)
 
-检查器（Inspector）：DOM 浏览器和 CSS 编辑器
+## 检查器（Inspector）：DOM 浏览器和 CSS 编辑器
 
 开发者工具在打开时默认为检查器页面，如下图所示。这个工具可以让你看到你的网页的 HTML 运行时的样子，以及哪些 CSS 规则被应用到了页面上元素。它还允许你立即修改 HTML 和 CSS 并在浏览器中实时观察修改的结果。
 
@@ -42,8 +44,8 @@ slug: Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools
 如果你看不到调试器，
 
 - 点击“检查”选项卡。
-- 在 Internet Explorer 中，点击 DOM Explorer，或按 Ctrl + 1。
-- 在 Safari 中，控制就不是很清楚了，但是你如果你没有选择的东西出现在窗口看到 HTML。按下按钮查看 CSS 样式。
+- 在 Chrome，Microsoft Edge，或 Opera 中，点击元素。
+- 在 Safari 中，控件的呈现并不是那么清晰，但如果你没有选择其他内容显示在窗口中，你应该能看到HTML。点击“样式”按钮查看 CSS。
 
 ### 探索 DOM 检查器
 
@@ -61,7 +63,9 @@ slug: Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools
 
 ### 探索 CSS 编辑器
 
-默认情况下，CSS 编辑器显示当前![](css_inspector.png)所选元素应用的 CSS 规则：
+默认情况下，CSS 编辑器显示当前所选元素应用的 CSS 规则：
+
+![](css_inspector.png)
 
 这些功能特别有用：
 
@@ -74,18 +78,19 @@ slug: Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools
 
 你会注意到 CSS 查看器顶部的一些可点击的选项卡：
 
-- _计算：显示当前所选元素的计算样式（浏览器应用的最终归一化值）。_
-- _盒子模型：这可以直观地表示当前元素的框模型，所以你可以一目了然地看到应用了什么填充，边框和边距，以及它的内容有多大。_
-- 字体：在 Firefox 中，“字体”选项卡显示应用于当前元素的字体。
+- _计算_：显示当前所选元素的计算样式（浏览器应用的最终归一化值）。
+- _布局_：在 Firefox 中，这包含两个方面：
+  - _盒子模型_：这可以直观地表示当前元素的框模型，所以你可以一目了然地看到应用了什么填充，边框和边距，以及它的内容有多大。
+  - _网格_：如果你正在检查的页面使用了 CSS 网格布局，这个部分允许你查看网格的详细信息。
+- _字体_：在 Firefox 中，*字体*选项卡显示应用于当前元素的字体。
 
 ### 了解更多
 
 了解更多 Inspector 在不同的浏览器中的细节：
 
-- [Firefox Page inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html)
-- [IE DOM Explorer](http://msdn.microsoft.com/en-us/library/ie/dn255008%28v=vs.85%29.aspx)
-- [Chrome DOM inspector](https://developer.chrome.com/devtools/docs/dom-and-styles) (Opera 的 inspector 和它一样)
-- [Safari DOM inspector and style explorer](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/ResourcesandtheDOM/ResourcesandtheDOM.html#//apple_ref/doc/uid/TP40007874-CH3-SW1)
+- [Firefox 页面检查器](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html)
+- [Chrome DOM 检查器](https://developer.chrome.com/docs/devtools/dom/) (Opera 的 inspector 和它一样)
+- [Safari DOM 检查器和 style 浏览器](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/ResourcesandtheDOM/ResourcesandtheDOM.html#//apple_ref/doc/uid/TP40007874-CH3-SW1)
 
 ## JavaScript 调试器
 
@@ -95,13 +100,15 @@ slug: Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools
 
 如何打开调试器：
 
-火狐，谷歌，IE，Edge：<kbd>F12</kbd>
+**Firefox**：选择 ![](2014-01-10-13-08-08-f52b8c.png) ➤ _Web开发者_ ➤ _调试器_ 或按 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> 打开 JavaScript 调试器。如果工具已经显示，点击**调试器**标签。
 
-Safari：开打开发者工具，然后选择 "Debugger" 标签。
+**Chrome**： 开打开发者工具，然后选择 **Source** 标签。（Opera 的操作方式相同。）
 
-### 尝一尝调试器的味
+**Safari**：开打开发者工具，然后选择 "Debugger" 标签。
 
-火狐的调试器有三个面板
+### 探索调试器
+
+Firefox 的 JavaScript 调试器有三个面板。
 
 #### 文件列表
 
@@ -121,17 +128,17 @@ Safari：开打开发者工具，然后选择 "Debugger" 标签。
 
 在下图中，第一个区域，**监视表达式**，显示了变量 listItem 已经被添加，你可以展开列表查看里面的值。
 
-接下来的部分，**断点 标签**，列出了页面上设置的断点。在 example.js（上上个图中）中，一个断点被定位在语句 `listItems.push(inputNewItem.value);` 上。
+接下来的部分，**断点**，列出了页面上设置的断点。在 example.js（上上个图中）中，一个断点被定位在语句 `listItems.push(inputNewItem.value);` 上。
 
 最后两个部分，只在代码运行时才出现。
 
-**调用栈** 区向你显示哪个代码执行后会达到当前行。你能看到代码处理了一次鼠标点击后，停在了断点处。
+**调用栈**区向你显示哪个代码执行后会达到当前行。你能看到代码处理了一次鼠标点击后，停在了断点处。
 
 最后一部分，**Scopes**，显示了在代码执行过程中，可见变量值的变化。例如，在下面图片中，你可以看到对象在 addItemClick 函数中是如何变化的。
 
 ![](watch_items.png)
 
-### 再了解一些
+### 了解更多
 
 了解不同浏览器中的 JavaScript 调试器：
 
@@ -142,7 +149,13 @@ Safari：开打开发者工具，然后选择 "Debugger" 标签。
 
 ## JavaScript 控制台
 
-JavaScript 控制台是一个非常有用的工具，用于调试没有按预期运行的 JavaScript。它允许你针对浏览器当前加载的页面运行 JavaScript 行，并报告浏览器尝试执行代码时遇到的错误。要在任何浏览器中访问控制台，只需按控制台按钮。 （在 Internet Explorer 中，按 Ctrl + 2.）这将给你一个如下所示的窗口：
+JavaScript 控制台是一个非常有用的工具，用于调试没有按预期运行的 JavaScript。它允许你针对浏览器当前加载的页面运行 JavaScript 行，并报告浏览器尝试执行代码时遇到的错误。要在任何浏览器中访问控制台：
+
+如果开发者工具已经打开，点击或按下控制台标签。
+
+如果没有，Firefox 允许你直接使用 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>K</kbd> 打开控制台，或使用菜单命令：菜单 ![Firefox menu](2014-01-10-13-08-08-f52b8c.png) _➤ Web开发者 ➤ Web控制台_，或 _工具 ➤ Web开发者 ➤ Web控制台_。在其他浏览器中，打开开发者工具，然后点击控制台标签。
+
+这将为你提供一个如下所示的窗口：
 
 ![](console_only.png)
 
@@ -157,17 +170,12 @@ document.querySelector("html").style.backgroundColor = "purple";
 ```
 
 ```js
-var my_image = document.createElement("img");
-
-//下面的 url 已经不再可用，这里注释掉，后面补上了一个可以 url
-//且 myImage 在文章开始给的“初学者示例网址”存在声明冲突，所以改为 my_image
-//myImage.setAttribute('src','https://farm4.staticflickr.com/3455/3372925208_e1f2aae4e3_b.jpg');
-my_image.setAttribute(
+const loginImage = document.createElement("img");
+loginImage.setAttribute(
   "src",
-  "https://media.giphy.com/media/3o6ozhxFlr4Ung40RG/giphy.gif",
+  "https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png",
 );
-
-document.querySelector("h1").appendChild(my_image);
+document.querySelector("h1").appendChild(loginImage);
 ```
 
 现在尝试输入以下错误的代码版本，看看你得到什么。
@@ -176,17 +184,17 @@ document.querySelector("h1").appendChild(my_image);
 alert('hello!);
 ```
 
-```js
+```js example-bad
 document.cheeseSelector("html").style.backgroundColor = "purple";
 ```
 
-```js
-var my_Image = document.createElement("img");
-myBanana.setAttribute(
+```js example-bad
+const loginImage = document.createElement("img");
+banana.setAttribute(
   "src",
-  "https://media.giphy.com/media/3o6ozhxFlr4Ung40RG/giphy.gif",
+  "https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png",
 );
-document.querySelector("h1").appendChild(my_Image);
+document.querySelector("h1").appendChild(loginImage);
 ```
 
 你将开始看到浏览器返回的错误类型。通常这些错误是相当神秘的，但是应该很简单的把这些问题解决出来！
@@ -196,8 +204,7 @@ document.querySelector("h1").appendChild(my_Image);
 了解更多 JavaScript 控制台在不同浏览器中的细节：
 
 - [Firefox Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)
-- [IE JavaScript console](http://msdn.microsoft.com/en-us/library/ie/dn255006%28v=vs.85%29.aspx)
-- [Chrome JavaScript Console](https://developer.chrome.com/devtools/docs/console) (Opera 与它相同)
+- [Chrome JavaScript Console](https://developer.chrome.com/docs/devtools/console/) (Opera 与它相同)
 - [Safari Console](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html#//apple_ref/doc/uid/TP40007874-CH6-SW1)
 
 ## 参见
