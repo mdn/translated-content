@@ -11,7 +11,7 @@ JavaScript（JS）是一种程序设计语言，通常用于客户端（client-s
 
 **不应该**把 JavaScript 和 [Java](https://zh.wikipedia.org/wiki/Java) 混淆。_“Java”_ 和 _“JavaScript”_ 都是 Oracle 公司在美国和其他国家注册的商标，但是这两种程序设计语言在语法、语义和使用方面都明显不同。
 
-JavaScript 主要用于浏览器中，让开发者可以通过{{Glossary("DOM", ”文档对象模型“)}}来操纵网页内容、通过 {{domxref("fetch()")}} API 从服务器获取内容、通过 {{Glossary("IndexedDB")}} 存储复杂数据、使用 {{Glossary("canvas")}} 绘制图形、通过各种 {{Glossary("API")}} 与设备交互等等。JavaScript 是世界上最广泛使用的语言之一，归功于浏览器中 {{Glossary("API")}} 的发展和性能提升。
+JavaScript 主要用于浏览器中，让开发者可以通过{{Glossary("DOM", "文档对象模型")}}来操纵网页内容、通过 {{domxref("fetch()")}} API 从服务器获取内容、通过 {{Glossary("IndexedDB")}} 存储复杂数据、使用 {{Glossary("canvas")}} 绘制图形、通过各种 {{Glossary("API")}} 与设备交互等等。JavaScript 是世界上最广泛使用的语言之一，归功于浏览器中 {{Glossary("API")}} 的发展和性能提升。
 
 ## 起源与历史
 
