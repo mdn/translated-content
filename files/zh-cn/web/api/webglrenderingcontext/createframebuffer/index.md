@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("WebGL")}}
 
-[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.creatFramebuffer()`** 方法用于创建和初始化 {{domxref("WebGLFramebuffer")}} 对象。
+[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.createFramebuffer()`** 方法用于创建和初始化 {{domxref("WebGLFramebuffer")}} 对象。
 
 ## 语法
 
@@ -21,7 +21,7 @@ createFramebuffer()
 
 ### 返回值
 
-{{domxref("WebGLFramebuffer")}} 对象
+{{domxref("WebGLFramebuffer")}} 对象。
 
 ## 示例
 
