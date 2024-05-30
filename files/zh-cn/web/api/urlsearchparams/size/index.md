@@ -24,7 +24,7 @@ const searchParams = new URLSearchParams("c=4&a=2&b=3&a=1");
 searchParams.size; // 4
 ```
 
-请注意参数 `a` 出现两次，但是 `size` 返回的数值是4不是3。获取唯一键值的数量，你可以使用 {{jsxref("Set")}}，例如：
+请注意参数 `a` 出现两次，但是 `size` 返回的数值是 4 不是 3。获取唯一键值的数量，你可以使用 {{jsxref("Set")}}，例如：
 
 ```js
 [...new Set(searchParams.keys())].length; // 3
