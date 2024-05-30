@@ -1,6 +1,8 @@
 ---
 title: 应该如何使用 Github Pages?
 slug: Learn/Common_questions/Tools_and_setup/Using_GitHub_pages
+l10n:
+  sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
 
 {{QuicklinksWithSubPages("/zh-CN/docs/Learn/Common_questions")}}
@@ -9,7 +11,7 @@ slug: Learn/Common_questions/Tools_and_setup/Using_GitHub_pages
 
 ## 发布内容
 
-GitHub 是一个非常重要和有用的社区，值得参与其中，Git / GitHub 也是一个非常受欢迎的[版本控制系统](http://git-scm.com/book/en/v2/Getting-Started-About-Version-Control) - 现在大多数科技公司在其工作流程中使用它。GitHub 有一个非常有用的功能，称为[GitHub Pages](https://pages.github.com/)，它允许你在 Web 上实时发布网站代码。
+GitHub 是一个非常重要和有用的社区，值得参与其中，Git / GitHub 也是一个非常受欢迎的[版本控制系统](http://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)——现在大多数科技公司在其工作流程中使用它。GitHub 有一个非常有用的功能，称为 [GitHub Pages](https://pages.github.com/)，它允许你在 Web 上实时发布网站代码。
 
 ### 基本 Github 设置
 
@@ -19,17 +21,17 @@ GitHub 是一个非常重要和有用的社区，值得参与其中，Git / GitH
 
 ### 准备上传代码
 
-你可以将任何你喜欢的代码存储在 Github 资源库中，但要使用 GitHub Pages 功能实现全面效果，你的代码应该被构造为典型的网站，例如主入口点是一个名为 index.html 的 HTML 文件。
+你可以将任何你喜欢的代码存储在 Github 资源库中，但要使用 GitHub Pages 功能实现全面效果，你的代码应该被构造为典型的网站，例如主入口点是一个名为 `index.html` 的 HTML 文件。
 
-第一步，你需要做的另一件事是将你的代码目录初始化为 Git 存储库。按照下述步骤：
+在开始之前，你需要做的另一件事是将你的代码目录初始化为 Git 存储库。按照下述步骤：
 
-1. 将命令行指向你的 test-site 目录（或者任何一个你能调用的包含有你的网站的目录）。为此，请使用 cd 命令（即“更改目录”）。如果你已经将你的网站放到了位于桌面上的 test-site 目录中，则可以输入以下内容：
+1. 将命令行指向你的 `test-site` 目录（或者任何一个你能调用的包含有你的网站的目录）。为此，请使用 `cd` 命令（即“更改目录”）。如果你已经将你的网站放到了位于桌面上的 `test-site` 目录中，则可以输入以下内容：
 
    ```bash
    cd Desktop/test-site
    ```
 
-2. 当命令行指向你的网站所在目录时，键入以下命令，该命令告诉 git 工具将目录转换为 git 仓库：
+2. 当命令行指向你的网站所在目录时，键入以下命令，该命令告诉 `git` 工具将目录转换为 git 仓库：
 
    ```bash
    git init
@@ -37,11 +39,11 @@ GitHub 是一个非常重要和有用的社区，值得参与其中，Git / GitH
 
 #### 命令行界面
 
-将代码上传到 Github 的最佳方法是通过命令行 - 这是一个窗口，你可以在其中输入命令来执行诸如创建文件和运行程序等操作，而不是在用户界面内单击。它看起来像这样：
+将代码上传到 Github 的最佳方法是通过命令行——这是一个窗口，你可以在其中输入命令来执行诸如创建文件和运行程序等操作，而不是在用户界面内单击。它看起来像这样：
 
 ![](command-line.png)
 
-> **备注：** 你也可以考虑使用[Git 图形用户界面](http://git-scm.com/downloads/guis)来执行相同的工作，如果你不熟悉命令行。
+> **备注：** 你也可以考虑使用 [Git 图形用户界面](https://git-scm.com/downloads/guis)来执行相同的工作，如果你不熟悉命令行。
 
 每个操作系统都附带有一个命令行工具：
 
@@ -49,7 +51,7 @@ GitHub 是一个非常重要和有用的社区，值得参与其中，Git / GitH
 - **OS X**: **终端**可以在应用程序>实用程序中找到。
 - **Linux**: 通常你可以用 Ctrl + Alt + T 启动一个终端。如果不行，请在应用程序栏或菜单中查找**Terminal**。
 
-起初这可能看起来有点吓人，但不要担心 - 你很快就会得到基本的窍门。你可以通过键入命令并按 Enter 键来告诉计算机在终端中执行某些操作，如上所示。
+起初这可能看起来有点吓人，但不要担心——你很快就会得到基本的窍门。你可以通过键入命令并按 Enter 键来告诉计算机在终端中执行某些操作，如上所示。
 
 ### 为你的代码创建一个仓库
 
@@ -57,7 +59,7 @@ GitHub 是一个非常重要和有用的社区，值得参与其中，Git / GitH
 2. 在此页面的“_Repository name_”框中，为你的代码库起一个名字，例如：_my-repository_。
 3. 还要填写一个描述来说明你的存储库将包含哪些内容。你的屏幕应该是这样的
    ![](create-new-repo.png)
-4. 单击*Create repository*;你将会看到如下页面：
+4. 单击 *Create repository*；你将会看到如下页面：
    ![](github-repo.png)
 
 ### 将你的文件上传到 GitHub
@@ -78,7 +80,7 @@ GitHub 是一个非常重要和有用的社区，值得参与其中，Git / GitH
 3. 最后，将代码推送到 GitHub，通过你正在访问的 GitHub 网页，然后输入我们看到的两个命令中的第二个命令“ **…or push an existing repository from the command line**（或从命令行部分推入现有存储库）部分”：
 
    ```bash
-   git push -u origin master
+   git push -u origin main
    ```
 
 4. 现在你需要为你的仓库开启 GitHub pages 分支。为此，其在仓库的主页中选择 _Settings_，然后从左侧的侧边栏中选择 _Pages_。在 _Source_ 下选择“main”分支。页面应该会自动刷新。
@@ -95,6 +97,6 @@ git commit -m 'another commit'
 git push
 ```
 
-你可以使用更合适的消息替换上一次的提交信息，以描述你刚刚做出的更改。
+你可以使用更合适的消息替换 _another commit_，以描述你刚刚做出的更改。
 
-我们仅仅提供了 Git 的浅显基本的信息。要了解更多信息，请先从 [GitHub 帮助站点](https://help.github.com/index.html)开始。
+我们仅仅提供了 Git 的浅显基本的信息。要了解更多信息，查看我们的 [Git and GitHub](/zh-CN/docs/Learn/Tools_and_testing/GitHub) 页面。
