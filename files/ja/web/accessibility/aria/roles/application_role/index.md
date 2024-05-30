@@ -64,7 +64,7 @@ slug: Web/Accessibility/ARIA/Roles/application_role
 アプリケーション (`application`) ロールを適切に使用するいくつかの有名なウェブアプリケーションは次のとおりです。
 
 - グーグルの Docs、Sheets、Slides
-- CKEditor と TinyMCE の WYSIWYG ウェブエディタは、Mozilla Developer Network で使用されているようなものです。
+- CKEditor と TinyMCE の WYSIWYG ウェブエディターは、Mozilla Developer Network で使用されているようなものです。
 - Gmail の一部 (訳注：[グーグルから使っていないという情報あり](https://www.marcozehe.de/2012/02/06/if-you-use-the-wai-aria-role-application-please-do-so-wisely/))
 
 ## アクセシビリティに関する懸念

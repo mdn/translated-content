@@ -30,7 +30,7 @@ Agora que analisamos os blocos de construção fundamentais do JavaScript, testa
 
 Para começar esta avaliação, você deve [pegar o arquivo ZIP](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/gallery/gallery-start.zip?raw=true) para o exemplo e descompactá-lo em algum lugar no seu computador.
 
-> **Nota:** Como alternativa, você pode usar um site como o [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/) para fazer sua avaliação. Você pode colar o HTML, CSS e JavaScript em um desses editores on-line. Se o editor on-line que você está usando não tiver painéis JavaScript / CSS separados, sinta-se à vontade para colocar os elementos in-line `<script>` e `<style>` dentro da página HTML.
+Como alternativa, você pode usar um site como o [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/) para fazer sua avaliação. Você pode colar o HTML, CSS e JavaScript em um desses editores on-line. Se o editor on-line que você está usando não tiver painéis JavaScript / CSS separados, sinta-se à vontade para colocar os elementos in-line `<script>` e `<style>` dentro da página HTML.
 
 ## Resumo do projeto
 

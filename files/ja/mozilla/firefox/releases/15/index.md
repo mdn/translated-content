@@ -73,7 +73,7 @@ Firefox 15 は 2012 年 8 月 28 日にリリースされました。この記�
 - `nsIDOMWindowUtils`
   - : `sendMouseEvent()`、`sendTouchEvent()`、`sendMouseEventToWindow()`、`sendMouseScrollEvent()` および `sendKeyEvent()` の `aModifiers` は [`KeyboardEvent.getModifierState()`](/ja/docs/DOM/KeyboardEvent#getModifierState%28%29) でサポートされている修飾キーのすべてをサポートします。`MODIFIER_*` という値を利用してください。 また、`sendKeyEvent()` の第 5 引数が `boolean` から `unsigned long` に変更されました。後方互換性のために、呼び出し元がそれに対して `true` または false を渡している場合、挙動は変更されません。この変更によって呼び出し元がキーの位置を指定することができるようになります。
 - `nsIBrowserHistory`
-  - : `hidePage()` メソッドは一度も実装されずに、かつ、このリリースで完全に削除されます。[Places](/ja/docs/Places) API のすべてを非同期化する進行中の作業の一部として、`addPageWithDetails()` メソッドも削除されます。代わりに `mozIAsyncHistory.updatePlaces` を利用してください。また、`count` 属性も削除されます。それはときどき実際のカウントを返していませんでした（代わりに、単純にエントリが存在したかどうかを返していました）。代わりに \`nsINavHistoryService.hasHistoryEntries\` を利用できます。
+  - : `hidePage()` メソッドは一度も実装されずに、かつ、このリリースで完全に削除されます。[Places](/ja/docs/Places) API のすべてを非同期化する進行中の作業の一部として、`addPageWithDetails()` メソッドも削除されます。代わりに `mozIAsyncHistory.updatePlaces` を利用してください。また、`count` 属性も削除されます。それはときどき実際のカウントを返していませんでした（代わりに、単純にエントリーが存在したかどうかを返していました）。代わりに \`nsINavHistoryService.hasHistoryEntries\` を利用できます。
 - `inIDOMUtils`
   - : `inlDOMUtils.parseStyleSheet` メソッドが追加され、CSS の (再) 解析ができるようになりました。
 - `nsIINIParserWriter`

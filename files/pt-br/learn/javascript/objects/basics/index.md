@@ -38,7 +38,7 @@ Um objeto é uma coleção de dados e/ou funcionalidades relacionadas (que geral
 
 Para começar, faça uma cópia do nosso arquivo [oojs.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs.html). Isto contém muito pouco — um elemento {{HTMLElement("script")}} para escrevermos nosso código-fonte. Vamos usar isto como base para explorar a sintaxe básica do objeto. Ao trabalhar com este exemplo, você deve ter seu [console de ferramentas de desenvolvedor JavaScript](/pt-BR/docs/Learn/Common_questions/What_are_browser_developer_tools#The_JavaScript_console) aberto e pronto para digitar alguns comandos.
 
-Como acontece com muitas coisas em JavaScript, a criação de um objeto geralmente começa com a definição e a inicialização de uma variável. Tente digitar o código a seguir no arquivo que você baixou, salve e atualize:
+Assim como é comum em JavaScript, a criação de um objeto geralmente começa com a definição e a inicialização de uma variável. Tente digitar o código a seguir no arquivo que você baixou, salve e atualize:
 
 ```js
 var pessoa = {};
@@ -50,7 +50,7 @@ Se você inserir `pessoa` no seu console JS e pressionar o botão, deverá obter
 [object Object]
 ```
 
-Parabéns, você acabou de criar seu primeiro objeto. Tarefa concluída! Mas este é um objeto vazio, então não podemos fazer muita coisa com isso. Vamos atualizar nosso objeto para ficar assim:
+Parabéns! Você acaba de criar seu primeiro objeto. Tarefa concluída! No entanto, como este objeto está vazio, não podemos realizar muitas operações com ele. Vamos atualizá-lo para ficar da seguinte forma:
 
 ```js
 var pessoa = {
@@ -111,7 +111,7 @@ Um objeto como esse é chamado de **objeto literal** — ao pé da letra, escrev
 
 ## Notação de ponto
 
-Acima, você acessou as propriedades de objetos e métodos usando **notação de ponto**. O objeto nome (pessoa) atua como **namespace** (espaço de nomes) — ele deve ser digitado primeiro para que você acesse qualquer coisa **encapsulada** dentro do objeto. Depois você escreve um ponto, então o item que quer acessar — isso pode ser o nome de uma simples propriedade, um item de um array ou a chamada para um dos métodos do objeto, por exemplo:
+Acima, você acessou as propriedades de objetos e métodos usando **notação de ponto**. O objeto nome (pessoa) atua como **namespace** (espaço de nomes) — ele deve ser digitado primeiro para que você acesse qualquer valor **encapsulada** dentro do objeto. Depois você escreve um ponto, então o item que quer acessar — isso pode ser o nome de uma simples propriedade, um item de um array ou a chamada para um dos métodos do objeto, por exemplo:
 
 ```js
 pessoa.idade;
@@ -175,7 +175,7 @@ pessoa["idade"];
 pessoa["nome"]["primeiro"];
 ```
 
-Fica muito parecido com a maneira que acessamos itens de um array, e é basicamente a mesma coisa, só que ao invés de usarmos um número de índice para selecionar um item, usamos o nome associado a cada valor. Não é por menos que objetos às vezes são chamados de **arrays associativos** — eles mapeiam strings a valores do mesmo modo que arrays mapeiam números a valores.
+Fica muito parecido com a maneira que acessamos itens de um array, e, na realidade, segue o mesmo princípio. Só que ao invés de usarmos um número de índice para selecionar um item, usamos o nome associado a cada valor. Não é por menos que objetos às vezes são chamados de **arrays associativos** — eles mapeiam strings a valores do mesmo modo que arrays mapeiam números a valores.
 
 ## Setando membros do objeto
 
@@ -305,7 +305,7 @@ Novamente, olharemos constructores num artigo mais na frente.
 
 ## Teste suas habilidades !
 
-Você chegou ao fim desse artigo,entretanto você consegue lembrar as informações mais importantes? Você pode encontrar mais testes para verificar se você consolidou as informações antes que você siga adiante — veja [Test your skills: Object basics](/pt-BR/docs/Learn/JavaScript/Objects/Test_your_skills:_Object_basics).
+Você chegou ao fim desse artigo, entretanto, você consegue lembrar as informações mais importantes? Você pode encontrar mais testes para verificar se você consolidou as informações antes que você siga adiante — veja [Test your skills: Object basics](/pt-BR/docs/Learn/JavaScript/Objects/Test_your_skills:_Object_basics).
 
 ## Resumo
 

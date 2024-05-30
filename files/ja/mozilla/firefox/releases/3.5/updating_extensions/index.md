@@ -13,7 +13,7 @@ slug: Mozilla/Firefox/Releases/3.5/Updating_extensions
 
 まずはじめに、拡張機能の `install.rdf` ファイルを編集して、(Firefox 3.1 beta 2 でテストを行っている場合は) `maxVersion` を 3.1b2 に更新し、それに合わせて `version` を上げましょう。
 
-Firefox のプロファイルを新規作成し、テストが常用のプロファイルに影響しないようにします。 Firefox が含まれるディレクトリに移動して、以下のコマンドを実行します。
+Firefox のプロファイルを新規作成し、テストが常用のプロファイルに影響しないようにします。 Firefox が含まれるディレクトリーに移動して、以下のコマンドを実行します。
 
 ```
 firefox -createProfile testBeta2
