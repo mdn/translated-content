@@ -53,4 +53,4 @@ if (url.searchParams.size) {
 ## 参见
 
 - {{domxref("URL.searchParams")}}
-- [`core-js` 中 `URLSearchParams` 的垫片](https://github.com/zloirock/core-js#url-and-urlsearchparams)
+- [`core-js` 中 `URLSearchParams` 的 Polyfill](https://github.com/zloirock/core-js#url-and-urlsearchparams)
