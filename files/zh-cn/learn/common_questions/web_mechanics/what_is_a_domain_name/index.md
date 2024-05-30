@@ -90,6 +90,7 @@ l10n:
   ```
 
   输出如下：
+
   ```plain
   $ whois mozilla.org
   Domain Name:MOZILLA.ORG
