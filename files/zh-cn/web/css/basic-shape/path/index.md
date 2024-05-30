@@ -62,7 +62,7 @@ path(evenodd,"M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80");
 
 ### 修改 SVG 路径 d 属性的值
 
-`path()` 可以用于修改 SVG 的 [d 属性](/zh-CN/docs/Web/SVG/Attribute/d)的值，该属性也可以在 CSS 中设置为 `none`。
+`path()` 可以用于修改 SVG 的 [`d` 属性](/zh-CN/docs/Web/SVG/Attribute/d)的值，该属性也可以在 CSS 中设置为 `none`。
 
 当 `d` 作为 CSS 属性时，当你悬停在上面时，“V”符号会垂直翻转。
 
