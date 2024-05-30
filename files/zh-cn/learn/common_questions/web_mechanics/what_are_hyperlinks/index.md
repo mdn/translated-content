@@ -1,6 +1,8 @@
 ---
 title: 什么是超链接？
 slug: Learn/Common_questions/Web_mechanics/What_are_hyperlinks
+l10n:
+  sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
 
 {{QuicklinksWithSubPages("/zh-CN/docs/Learn/Common_questions")}}
@@ -44,7 +46,7 @@ slug: Learn/Common_questions/Web_mechanics/What_are_hyperlinks
 
 在 Web 之前，很难访问文档并从一个文档跳转到另一个文档。人类可以理解的 URL 已经使得文档容易被访问，但是你很难通过输入一个长 URL 来访问一个文档。超链接改变了这一切。链接可以将任何文本与 URL 相关联，因此用户只要激活链接就可以到达目标文档。
 
-默认情况下，链接是一段具有下划线的蓝色文本，在视觉上与周围的文字明显不同。用手指触击或用鼠标点击一个链接会激活链接；你如果使用键盘，那么按 Tab 键直到链接处于焦点，然后按 Enter 键或空格键来激活链接。
+链接是一段具有下划线的蓝色文本，在视觉上与周围的文字明显不同。用手指触击或用鼠标点击一个链接会激活链接；你如果使用键盘，那么按 Tab 键直到链接处于焦点，然后按 Enter 键或空格键来激活链接。
 
 ![Example of a basic display and effect of a link in a web page](link-1.png)
 
@@ -69,7 +71,7 @@ slug: Learn/Common_questions/Web_mechanics/What_are_hyperlinks
 
 ### 锚
 
-**大多数链接将两个网页相连。而锚将一个网页中的两个段落相连。** 当你点击指向锚点的链接时，浏览器跳转到当前文档的另一部分，而不是加载新文档。但是，你可以像使用其他链接一样制作和使用锚点。
+大多数链接将两个网页相连。而**锚**将一个网页中的两个段落相连。 当你点击指向锚点的链接时，浏览器跳转到当前文档的另一部分，而不是加载新文档。但是，你可以像使用其他链接一样制作和使用锚点。
 
 ![Example of a basic display and effect of an anchor in a web page](link-2.png)
 
@@ -79,11 +81,11 @@ slug: Learn/Common_questions/Web_mechanics/What_are_hyperlinks
 
 所以链接会影响搜索引擎链接到你的网站的方式。麻烦的是，很难衡量搜索引擎的活动。公司自然希望他们的网站在搜索结果中排名很高，所有研究结果至少可以说明一些事情：
 
-- 链接的可见文本会影响哪些搜索查询会找到给定的网址。
-- 一个网页所拥有的链接越多，它在搜索结果中排名越高。
-- 外部链接影响源和目标网页的搜索排名，但有多少不明确。
+- 链接的*可见文本*会影响哪些搜索查询会找到给定的网址。
+- 一个网页所拥有的*传入链接*越多，它在搜索结果中排名越高。
+- *外链*影响源和目标网页的搜索排名，但有多少不明确。
 
-[SEO](http://en.wikipedia.org/wiki/Search_engine_optimization) (search engine optimization) 是如何使网站在搜索结果中排名高的研究。改善网站的链接使用是一种有用的搜索引擎优化技术。
+[SEO](https://zh.wikipedia.org/wiki/搜尋引擎最佳化) (search engine optimization) 是如何使网站在搜索结果中排名高的研究。改善网站的链接使用是一种有用的搜索引擎优化技术。
 
 ## 下一步
 
