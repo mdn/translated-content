@@ -20,7 +20,7 @@ l10n:
 - {{SVGAttr("color-interpolation")}} SVG 属性
 - {{CSSXref("color-interpolation")}} CSS 属性
 - {{CSSXref("color-interpolation-method")}} CSS 数据类型
-- {{CSSXref("hue-interpolation-method")}} CSS S数据类型
+- {{CSSXref("hue-interpolation-method")}} CSS 数据类型
 - {{CSSXref("color_value/color-mix", "color-mix()")}} CSS 函数
 - [CSS 中的颜色插值](/zh-CN/docs/Web/CSS/color_value#interpolation)
 - 维基百科上的[插值](https://zh.wikipedia.org/wiki/插值)
