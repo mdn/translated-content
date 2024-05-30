@@ -7,46 +7,46 @@ browser-compat: css.types.exp
 
 {{CSSRef}}
 
-The **`exp()`** [CSS](/ja/docs/Web/CSS) [function](/ja/docs/Web/CSS/CSS_Functions) is an exponential function that takes an number as an argument and returns the mathematical constant `e` raised to the power of the given number.
+**`exp()`** [CSS](/ja/docs/Web/CSS) [関数](/ja/docs/Web/CSS/CSS_Functions)は指数関数で、引数として数値を取り、その数値で数学定数 `e` を累乗した値を返します。
 
-The mathematical constant [e](<https://en.wikipedia.org/wiki/E_(mathematical_constant)>) is the base of natural logarithms, and is approximately `2.718281828459045`.
+数学定数 [e](<https://en.wikipedia.org/wiki/E_(mathematical_constant)>) は自然対数の底で、約 `2.718281828459045` です。
 
-The `exp(number)` function contains a calculation which returns the same value as {{CSSxRef("pow", "pow(e, number)")}}.
+`exp(number)` 関数は計算を含み、{{CSSxRef("pow", "pow(e, number)")}} と同じ値を返します。
 
-## Syntax
+## 構文
 
 ```css
-/* A <number> value */
+/* <number> 値 */
 width: calc(100px * exp(-1)); /* 100px * 0.367879441171442 = 36px */
 width: calc(100px * exp(0)); /* 100px * 1 = 100px */
 width: calc(100px * exp(1)); /* 100px * 2.718281828459045 = 217px */
 ```
 
-### Parameter
+### 引数
 
-The `exp(number)` function accepts only one value as its parameter.
+`exp(number)` 関数は、1 つの値のみを引数で受け取ります。
 
 - `number`
-  - : A calculation which resolves to a {{CSSxRef("number")}}. Representing the value to be raised by a power of `e`.
+  - : {{CSSxRef("number")}} に解決される計算式で、`e` を累乗する値を表します。
 
-### Return value
+### 返値
 
-Returns a non-negative {{CSSxRef("number")}} representing e<sup>number</sup>, which is the result of calculating `e` raised to the power of `number`.
+返値は非負の {{CSSxRef("number")}} で、e<sup>number</sup>、つまり e を `number` 乗した値になります。
 
-- If `number` is `-Infinity`, the result is `0`.
-- If `number` is `0`, the result is `1`.
-- If `number` is `1`, the result is `e` (i.e. `2.718281828459045`).
-- If `number` is `Infinity`, the result is `Infinity`.
+- `number` が `-Infinity` の場合、結果は `0` になります。
+- `number` が `0` の場合、結果は `1` になります。
+- `number` が `1` の場合、結果は `e`（すなわち `2.718281828459045`）になります。
+- `number` が `Infinity` の場合、結果は `Infinity` になります。
 
-### Formal syntax
+### 形式文法
 
 {{CSSSyntax}}
 
-## Examples
+## 例
 
-### Rotate elements
+### 要素を回転させる
 
-The `exp()` function can be used to {{CSSxRef("transform-function/rotate", "rotate")}} elements as it return a {{CSSxRef("number")}}.
+`exp()` 関数は {{CSSxRef("number")}} を返すため、要素の回転（{{CSSxRef("transform-function/rotate", "rotate")}}）に使用できます。
 
 #### HTML
 
@@ -93,13 +93,13 @@ div.box-5 {
 }
 ```
 
-#### Result
+#### 結果
 
 {{EmbedLiveSample('Rotate elements', '100%', '200px')}}
 
-### Scale headings by fixed ratio
+### 固定比率で見出しを拡大する
 
-The `exp()` function can be useful for strategies like CSS modular scale, which relates all the font-sizes on a page to each other by a fixed ratio.
+`exp()` 関数は、ページ上のすべてのフォントサイズを固定比率で関連付ける CSS モジュラースケールのような戦略に役立ちます。
 
 #### HTML
 
@@ -135,19 +135,19 @@ h6 {
 }
 ```
 
-#### Result
+#### 結果
 
 {{EmbedLiveSample('Scale headings by fixed ratio', '100%', '300px')}}
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 
-## See also
+## 関連情報
 
 - {{CSSxRef("pow")}}
 - {{CSSxRef("sqrt")}}
