@@ -41,7 +41,6 @@ l10n:
   - : 一个在互联网上托管网站的计算机。
 - 搜索引擎（search engine）
   - : 搜索引擎是帮助你查找其他网页的网络服务，例如 Google、Bing、Yahoo 或 DuckDuckGo。通常通过网络浏览器（例如，你可以直接在 Firefox、Chrome 等浏览器的地址栏中进行搜索引擎搜索）或通过网页（例如 [bing.com](https://www.bing.com/) 或 [duckduckgo.com](https://duckduckgo.com/)）访问搜索引擎。
- 
 这个简单的类比是很贴切的——公共图书馆。通常当你访问图书馆时会做以下事情：
 
 1. 找到搜索索引，查找你想要的书名。
