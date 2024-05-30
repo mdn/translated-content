@@ -20,26 +20,26 @@ l10n:
 ### A
 
 - {{MathMLElement("maction")}}（将动作绑定到子表达式）
-- {{MathMLElement("maligngroup")}}（对齐分组）
-- {{MathMLElement("malignmark")}}（对齐点）
+- {{MathMLElement("annotation")}}（数据注释）
+- {{MathMLElement("annotation-xml")}}（XML 注释）
 
 ### E
 
-- {{MathMLElement("menclose")}}（被包裹的内容）
+- {{MathMLElement("menclose")}} {{non-standard_inline}}（被包裹的内容）
 - {{MathMLElement("merror")}}（被包裹的语法错误消息）
 
 ### F
 
-- {{MathMLElement("mfenced")}}（圆括号）{{deprecated_inline}}
-- {{MathMLElement("mfrac")}}（因子 Fraction）
+- {{MathMLElement("mfenced")}} {{non-standard_inline}}{{deprecated_inline}}（圆括号）
+- {{MathMLElement("mfrac")}}（分数）
 
 ### I
 
-- {{MathMLElement("mi")}}（标识符 Identifier）
+- {{MathMLElement("mi")}}（标识符）
 
 ### M
 
-- {{MathMLElement("mmultiscripts")}}（Prescript 和张量指标 tensor indice）
+- {{MathMLElement("mmultiscripts")}}（前置角标和张量索引）
 
 ### N
 
@@ -47,25 +47,26 @@ l10n:
 
 ### O
 
-- {{MathMLElement("mo")}}（运算符 Operator）
+- {{MathMLElement("mo")}}（运算符）
 - {{MathMLElement("mover")}}（上标）
 
 ### P
 
 - {{MathMLElement("mpadded")}}（在内容周围增设空白）
 - {{MathMLElement("mphantom")}}（保留空白占位的不可见内容）
-- {{MathMLElement("mprescripts")}}（预脚本的分隔符）
+- {{MathMLElement("mprescripts")}}（前置角标的分隔符）
 
 ### R
 
-- {{MathMLElement("mroot")}}（带指定根数的根号）
-- {{MathMLElement("mrow")}}（分组后的子表达式）
+- {{MathMLElement("mroot")}}（带指定根指数的根号）
+- {{MathMLElement("mrow")}}（分组子表达式）
 
 ### S
 
 - {{MathMLElement("ms")}}（字符串字面量）
 - {{MathMLElement("semantics")}}（语义注释的容器）
 - {{MathMLElement("mspace")}}（空白）
+- {{MathMLElement("msqrt")}}（平方根，不带根指数）
 - {{MathMLElement("mstyle")}}（改变样式）
 - {{MathMLElement("msub")}}（下角标）
 - {{MathMLElement("msup")}}（上角标）
@@ -81,15 +82,15 @@ l10n:
 ### U
 
 - {{MathMLElement("munder")}}（下标）
-- {{MathMLElement("munderover")}}（上标 - 下标对）
+- {{MathMLElement("munderover")}}（上标下标对）
 
-## MathML 呈现型元素（类别分类）
+## MathML 元素（类别分类）
 
 ### 顶层元素
 
 - {{MathMLElement("math")}}（顶层元素）
 
-### 字符/符号元素
+### 标记元素
 
 - {{MathMLElement("mi")}}（标识符）
 - {{MathMLElement("mn")}}（数字）
@@ -98,7 +99,7 @@ l10n:
 - {{MathMLElement("mspace")}}（空格）
 - {{MathMLElement("mtext")}}（文本）
 
-### 通用布局元素
+### 通用布局
 
 - {{MathMLElement("menclose")}} {{non-standard_inline}}（封闭内容）
 - {{MathMLElement("merror")}}（封闭语法错误消息）
@@ -111,16 +112,16 @@ l10n:
 - {{MathMLElement("msqrt")}}（没有指数的平方根）
 - {{MathMLElement("mstyle")}}（样式更改）
 
-### 边标和角标元素
+### 附加符号和极限元素
 
-- {{MathMLElement("mmultiscripts")}}（Prescript 和张量指标 tensor indice）
+- {{MathMLElement("mmultiscripts")}}（前置角标和张量索引）
 - {{MathMLElement("mover")}}（上标）
-- {{MathMLElement("mprescripts")}}（预脚本的分隔符）
+- {{MathMLElement("mprescripts")}}（前置角标的分隔符）
 - {{MathMLElement("msub")}}（下标）
-- {{MathMLElement("msubsup")}}（下标 - 上标对）
+- {{MathMLElement("msubsup")}}（上下脚标对）
 - {{MathMLElement("msup")}}（上标）
 - {{MathMLElement("munder")}}（下标）
-- {{MathMLElement("munderover")}}（下标 - 上标对）
+- {{MathMLElement("munderover")}}（上标下标对）
 
 ### 表格数学
 
@@ -128,15 +129,15 @@ l10n:
 - {{MathMLElement("mtd")}}（表格或矩阵中的单元格）
 - {{MathMLElement("mtr")}}（表格或矩阵中的行）
 
-### 尚无分类的元素
+### 未分类元素
 
 - {{MathMLElement("maction")}} {{deprecated_inline}}（绑定到子表达式的操作）
 
-## 语义附注元素
+## 语义注释
 
 - {{MathMLElement("annotation")}}（数据注释）
 - {{MathMLElement("annotation-xml")}}（XML 注释）
-- {{MathMLElement("semantics")}}（语义注释的容器
+- {{MathMLElement("semantics")}}（语义注释的容器）
 
 ## 参见
 
