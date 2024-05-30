@@ -2,7 +2,7 @@
 title: ヘッド部には何が入る? HTML のメタデータ
 slug: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
 l10n:
-  sourceCommit: 4eed7cfb25979c09def6634b836eddc1485ce57b
+  sourceCommit: ec8d5627e822d866f350d9d8c06f0df58948015e
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML")}}
@@ -98,7 +98,9 @@ HTML のヘッド部は {{htmlelement("head")}} 要素の内容です。 {{htmle
 
 この要素は文書の文字エンコーディング、つまり文書が使用することを許可されている文字セットを指定します。 `utf-8` は普遍的な文字セットで、あらゆる人間の言語のほとんどすべての文字を含みます。これは、ウェブページがあらゆる言語の表示を扱うことができることを意味しています。したがって、作成するすべてのウェブページでこれを設定するのはよい考えです。例えば、このページは英語と日本語をうまく処理することができます。
 
-![日本語と英語を含むウェブページで、文字コードをユニバーサル (utf-8) に設定した場合。どちらの言語も問題なく表示されます。](correct-encoding.png)文字エンコーディングを、例えば `ISO-8859-1` （ラテン文字のアルファベットの文字セット）に指定すると、ページの表示はメチャクチャな見た目になります。
+![日本語と英語を含むウェブページで、文字コードをユニバーサル (utf-8) に設定した場合。どちらの言語も問題なく表示されます。](correct-encoding.png)
+
+文字エンコーディングを、例えば `ISO-8859-1`（ラテン文字のアルファベットの文字セット）に指定すると、ページの表示はメチャクチャな見た目になります。
 
 ![英語と日本語を含むウェブページで、文字コードを latin に設定した場合。日本語の文字が正しく表示されません。](bad-encoding.png)
 
@@ -140,7 +142,6 @@ description は検索エンジンの結果ページにも使われます。練�
 
 1. [Mozilla Developer Network のフロントページ](/ja/)に移動します。
 2. ページのソースを見ます（ページで右クリックし、コンテキストメニューから \[ページソースを表示] を選択）。
-
 3. description の meta タグを見てみます。このようなものです（変わっているかもしれませんが）。
 
    ```html
@@ -180,13 +181,7 @@ and HTML Apps." />
 
 この効果として、 Facebook で MDN Web Docs にリンクしたとき、リンクに画像と説明が表示されます。ユーザーにとってより便利になります。
 
-![MDN ホームページの Open Graph プロトコルデータを facebook で表示し、画像、タイトル、説明文を表示しています。](facebook-output.png)
-
-Twitter も同様に、 [Twitter Cards](https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards) という独自のメタデータを持っており、サイトの URL が twitter.com で表示されたときに同様の効果を実現しています。例えばこのようになります。
-
-```html
-<meta name="twitter:title" content="Mozilla Developer Network" />
-```
+![MDN ホームページのオープングラフプロトコルデータを facebook で表示し、画像、タイトル、説明文を表示しています。](facebook-output.png)
 
 ## サイトに自分の好きなアイコンをつける
 
@@ -212,22 +207,22 @@ Twitter も同様に、 [Twitter Cards](https://developer.twitter.com/en/docs/tw
 ```html
 <!-- 第 3 世代の iPad の高解像度レティナ画面 -->
 <link
-  rel="apple-touch-icon-precomposed"
+  rel="apple-touch-icon"
   sizes="144x144"
   href="https://developer.mozilla.org/static/img/favicon144.png" />
 <!-- iPhone の高解像度レティナ画面 -->
 <link
-  rel="apple-touch-icon-precomposed"
+  rel="apple-touch-icon"
   sizes="114x114"
   href="https://developer.mozilla.org/static/img/favicon114.png" />
 <!-- 第 1、2 世代の iPad -->
 <link
-  rel="apple-touch-icon-precomposed"
+  rel="apple-touch-icon"
   sizes="72x72"
   href="https://developer.mozilla.org/static/img/favicon72.png" />
 <!-- レティナではない iPhone、iPod Touch、Android 2.1 以降の端末 -->
 <link
-  rel="apple-touch-icon-precomposed"
+  rel="apple-touch-icon"
   href="https://developer.mozilla.org/static/img/favicon57.png" />
 <!-- 基本的なファビコン -->
 <link
@@ -261,7 +256,7 @@ Twitter も同様に、 [Twitter Cards](https://developer.twitter.com/en/docs/tw
 
 ### アクティブラーニング: ページに CSS と JavaScript を追加する
 
-1. アクティブラーニングを始めるにあたって、私たちの [meta-example.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/meta-example.html), [script.js](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/script.js) ,[style.css](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/style.css) をコピーしてローカルの同じフォルダに保存してください。ファイル名と拡張子が変わっていないことを確認してください。
+1. アクティブラーニングを始めるにあたって、私たちの [meta-example.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/meta-example.html), [script.js](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/script.js) ,[style.css](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/style.css) をコピーしてローカルの同じフォルダーに保存してください。ファイル名と拡張子が変わっていないことを確認してください。
 2. HTML ファイルをブラウザーとテキストエディターで開いてください。
 3. 先に述べた情報に従って、 {{htmlelement("link")}} 要素と {{htmlelement("script")}} 要素を HTML に書き加えてください。すると CSS と JavaScript が HTML に適用されます。
 
