@@ -23,7 +23,7 @@ SyntaxError: Left side of assignment is not a reference. (Safari)
 
 ## 什么地方出错了？
 
-在某处出现了意外地赋值情况。这可能是由于[赋值运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators#赋值运算符)与[相等运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators#相等运算符)不匹配导致的，例如。单个 `=` 符号用于给变量赋值，而 `==` 或 `===` 运算符则是用于比较值。
+在某处出现了意外地赋值情况。比如说，这可能是因为[赋值运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators#赋值运算符)与[相等运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators#相等运算符)不匹配。单个 `=` 符号用于给变量赋值，而 `==` 或 `===` 运算符则是用于比较值。
 
 ## 示例
 
@@ -60,9 +60,7 @@ function foo() {
 foo() = 1; // ReferenceError: invalid assignment left-hand side
 ```
 
-函数调用、[`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 调用、[`super()`](/zh-CN/docs/Web/JavaScript/Reference/Operators/super) 和 [`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 都是值而不是引用。
-
-如果你想在左侧使用它们，赋值目标需要是它们产生的属性值。
+函数调用、[`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 调用、[`super()`](/zh-CN/docs/Web/JavaScript/Reference/Operators/super) 和 [`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 都是值而不是引用。如果你想在左侧使用它们，赋值目标需要是它们产生的属性值。
 
 ```js example-good
 function foo() {
@@ -75,7 +73,7 @@ foo().a = 1;
 
 ### 使用可选链运算符作为赋值目标
 
-[可选链运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Optional_chaining)不是有效地赋值目标。
+[可选链运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Optional_chaining)不是有效的赋值目标。
 
 ```js-nolint example-bad
 obj?.foo = 1; // SyntaxError: invalid assignment left-hand side
