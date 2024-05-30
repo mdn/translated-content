@@ -186,7 +186,6 @@ A 级：
 你还可以找到其他移动设备环境的模拟器，例如：
 
 - 如果你想要测试 Opera Mini，可以单独模拟 [Opera Mini](https://dev.opera.com/articles/installing-opera-mini-on-your-computer/)。
-- Windows Mobile 操作系统也有可用的模拟器：参见 [Windows Phone 8 的 Windows Phone 模拟器](<https://msdn.microsoft.com/library/windows/apps/ff402563(v=vs.105).aspx>)和[使用 Windows 10 Mobile 模拟器进行测试](https://docs.microsoft.com/windows/uwp/debug-test-perf/test-with-the-emulator)（这些仅能在 Windows 上运行）。
 
 > **备注：** 许多模拟器实际上需要使用虚拟机（参见下文）；当出现这种情况时，通常会提供说明，并且/或者虚拟机的使用已纳入模拟器的安装程序中。
 
