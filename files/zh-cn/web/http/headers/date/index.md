@@ -57,7 +57,7 @@ Date: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
 - \<second>
   - : 2 位数的秒数，例如“04”或“59”。
 - GMT
-  - : 格林威治标准时间。HTTP 日期总是以 GMT 表示，从不使用当地时间。
+  - : 格林威治标准时间。HTTP 日期总是以 GMT 表示，而不是本地时间。
 
 ## 示例
 
