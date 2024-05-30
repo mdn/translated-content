@@ -36,7 +36,7 @@ function foo() {}
 const baz = () => {};
 ```
 
-**内部函数**是另一个函数内的函数（下面例子中的 `square`）。**外部函数**是包含一个函数的函数（下面例子中的 `addSquares`）：
+**内部函数**是函数内的另一个函数（下面例子中的 `square`）。**外部函数**是包含一个函数的函数（下面例子中的 `addSquares`）：
 
 ```js
 function addSquares(a, b) {
