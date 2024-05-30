@@ -20,7 +20,7 @@ l10n:
 - `id`
   - : 一个表示 cookie 存储的唯一标识符的 `string`。
 - `incognito` {{optional_inline}}
-  - : 一个布尔值，指示这是一个无痕 cookie 存储。此属性在 Chrome 或 Safari 中不受支持。但是，你可以通过其 `id` 始终为“1”来识别 Chrome 中的无痕 cookie 存储。
+  - : 一个布尔值，指示这是一个无痕 cookie 存储。此属性在 Chrome 或 Safari 中不受支持。不过，由于 Chrome 中无痕 cookie 存储的 `id` 值始终为“1”，你可以借此来识别这一存储。
 - `tabIds`
   - : 一个 `integers` 数组，标识共享此 cookie 存储的所有浏览器标签页。
 
