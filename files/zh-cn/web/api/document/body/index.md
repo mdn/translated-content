@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("DOM")}}
 
-**`Document.body`** 属性表示当前文档的 {{HTMLElement("body")}} 或 {{HTMLElement("frameset")}} 节点，如果不存在此类元素，则表示 `null`。
+**`Document.body`** 属性表示当前文档的 {{HTMLElement("body")}} 或 {{HTMLElement("frameset")}} 节点，如果不存在此类元素，则为 `null`。
 
 ## 值
 
