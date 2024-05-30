@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-实例是由{{glossary("constructor", "构造函数")}}所创建的一个{{glossary("object", "对象")}}。
+实例是由{{glossary("constructor", "构造函数")}}所创建的{{glossary("object", "对象")}}。
 
 ## 参见
 
