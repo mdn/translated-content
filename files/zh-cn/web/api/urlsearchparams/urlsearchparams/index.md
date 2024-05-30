@@ -83,7 +83,7 @@ const new_url = new URL(`${url.origin}${url.pathname}?${new_params}`);
 console.log(new_url.href);
 // https://example.com/?a=hello&b=world&c=a&d=2&e=false
 
-// 在这里，它是一个接受 (URL, Record<string, string>)
+// 在这里，它是一个接受 (URL, Record<string, string>) 的函数
 const addSearchParams = (url, params = {}) =>
   new URL(
     `${url.origin}${url.pathname}?${new URLSearchParams([
