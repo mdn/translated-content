@@ -1,8 +1,6 @@
 ---
 title: exp()
 slug: Web/CSS/exp
-page-type: css-function
-browser-compat: css.types.exp
 ---
 
 {{CSSRef}}
