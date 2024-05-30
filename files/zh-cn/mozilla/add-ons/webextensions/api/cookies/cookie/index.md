@@ -18,7 +18,7 @@ l10n:
 - `expirationDate` {{optional_inline}}
   - : 表示 cookie 到期日期的 `number`，以 UNIX 纪元以来的秒数表示。会话 cookie 不提供此属性。
 - `firstPartyDomain`
-  - : 表示与 cookie 关联的第一方域的 `string`。如果在第一方隔离关闭时设置 cookie，此属性将为空字符串。参见 [First-party isolation](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation)。
+  - : 表示与 cookie 关联的第一方域的 `string`。如果在第一方隔离关闭时设置 cookie，此属性将为空字符串。参见[第一方隔离](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/cookies#第一方隔离)。
 - `hostOnly`
   - : 一个 `boolean`，如果 cookie 仅适用于主机（即请求的主机必须与 cookie 的域完全匹配），则为 `true`，否则为 `false`。
 - `httpOnly`
