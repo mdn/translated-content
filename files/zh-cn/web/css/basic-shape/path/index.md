@@ -29,7 +29,9 @@ path( [<fill-rule>,]? <string> )
 
 - [`<fill-rule>`](/zh-CN/docs/Web/SVG/Attribute/fill-rule) {{optional_inline}}
 
-  - : 可选值为 [`nonzero`](/zh-CN/docs/Web/SVG/Attribute/fill-rule#nonzero)（默认值，当省略时）或 [`evenodd`](/zh-CN/docs/Web/SVG/Attribute/fill-rule#evenodd)，定义填充形状内部的规则。> **备注：** `<fill-rule>` 不支持在 {{cssxref("offset-path")}} 中，使用它会使属性失效。
+  - : 可选值为 [`nonzero`](/zh-CN/docs/Web/SVG/Attribute/fill-rule#nonzero)（默认值，当省略时）或 [`evenodd`](/zh-CN/docs/Web/SVG/Attribute/fill-rule#evenodd)，定义填充形状内部的规则。
+  
+    > **备注：** {{cssxref("offset-path")}} 不支持 `<fill-rule>` 值，使用它会使属性失效。
 
 - {{cssxref("string")}}
 
