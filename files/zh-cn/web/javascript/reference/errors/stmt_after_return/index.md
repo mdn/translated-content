@@ -11,7 +11,7 @@ l10n:
 
 ## 错误信息
 
-```
+```plain
 Warning: unreachable code after return statement (Firefox)
 ```
 
@@ -41,32 +41,32 @@ Warning: unreachable code after return statement (Firefox)
 
 ### 无效的例子
 
-```js example-bad
+```js-nolint example-bad
 function f() {
   let x = 3;
   x += 4;
-  return x; // return 语句立即退出当前方法
-  x -= 3; // 因而该语句从不会执行，即该语句为不可达语句
+  return x;   // return 立刻退出函数
+  x -= 3;     // 因此这一行永远不会执行；它是不可到达的代码。
 }
 
-function f() {
-  return; // 这条语句被视作 `return;`
-  3 + 4; // 因而此处该函数已经返回，该语句永不会执行
+function g() {
+  return     // 这被视为 `return;`
+    3 + 4;   // 因此函数返回，这行永不执行。
 }
 ```
 
 ### 有效的例子
 
-```js example-good
+```js-nolint example-good
 function f() {
   let x = 3;
   x += 4;
   x -= 3;
-  return x; // OK：执行完成所有语句之后返回
+  return x; // OK：在所有其他语句之后返回。
 }
 
-function f() {
-  return 3 + 4; // OK：省略分号的 return 语句与执行的表达式在同一行
+function g() {
+  return 3 + 4 // OK：在同一行上，无需分号的返回表达式。
 }
 ```
 
