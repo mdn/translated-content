@@ -1,6 +1,8 @@
 ---
 title: 互联网是如何工作的
 slug: Learn/Common_questions/Web_mechanics/How_does_the_Internet_work
+l10n:
+  sourceCommit: 8dfa0ecf5bda526ccd6244ca5c7720767e3f013f
 ---
 
 {{QuicklinksWithSubPages("/zh-CN/docs/Learn/Common_questions")}}
@@ -27,19 +29,20 @@ slug: Learn/Common_questions/Web_mechanics/How_does_the_Internet_work
 
 ## 概述
 
-互联网是网络的支柱，以这种技术为基础使网络成为可能。作为基础，互联网是把电脑互相连接起来的一个巨大网络。
+**互联网**是网络的支柱，以这种技术为基础使网络成为可能。作为基础，互联网是把电脑互相连接起来的一个巨大网络。
 
-[互联网的历史有些模糊不清](http://en.wikipedia.org/wiki/Internet#History)。它始于 1960 年美国军方资助的研究项目。1980 年在许多公共大学和公司的支持下，它演变为一种公共基础设施。随着时间的变化，各种各样的技术支持着互联网的发展，但是它的工作方式却没有改变多少：互联网确保所有的电脑之间的连接，无论发生什么他们依旧保持连接。
+[互联网的历史有些模糊不清](https://zh.wikipedia.org/wiki/互联网#历史)。它始于 1960 年美国军方资助的研究项目。1980 年在许多公共大学和公司的支持下，它演变为一种公共基础设施。随着时间的变化，各种各样的技术支持着互联网的发展，但是它的工作方式却没有改变多少：互联网确保所有的电脑之间的连接，无论发生什么他们依旧保持连接。
 
 ## 自主学习
 
-- [五分钟告诉你互联网是如何工作的](https://www.youtube.com/watch?v=7_LPdttKXPc): Aaron Titus 在五分钟的一个视频中告诉你非常基础的互联网知识。
+- [五分钟告诉你互联网是如何工作的](https://www.youtube.com/watch?v=7_LPdttKXPc)： Aaron Titus 在五分钟的一个视频中告诉你非常基础的互联网知识。
+- [互联网如何运作？](https://www.youtube.com/watch?v=x3c1ih2NJEg)：这是一个详细且可视化的9分钟视频。
 
 ## 深入探索
 
 ### 一个简单的网络
 
-当两台电脑需要通信的时候，你必须要连接他们，无论通过有线方式 (通常是[网线](http://en.wikipedia.org/wiki/Ethernet_crossover_cable)) 还是无线方式（比如 [WiFi](http://en.wikipedia.org/wiki/WiFi) 或 [蓝牙](http://en.wikipedia.org/wiki/Bluetooth) )。所有现代电脑都支持这些连接。
+当两台电脑需要通信的时候，你必须要连接他们，无论通过有线方式 (通常是[网线](http://en.wikipedia.org/wiki/Ethernet_crossover_cable))还是无线方式（比如 [WiFi](https://zh.wikipedia.org/wiki/Wi-Fi) 或 [蓝牙](https://zh.wikipedia.org/wiki/藍牙) )。所有现代电脑都支持这些连接。
 
 > **备注：** 接下来的内容，我们将只谈论有线连接，而无线连接的原理与此相同。
 
@@ -57,7 +60,7 @@ slug: Learn/Common_questions/Web_mechanics/How_does_the_Internet_work
 
 ### 网络中的网
 
-到目前为止一切都很好 . 但是我们要连接成百上千，上亿台电脑呢？当然一台路由器覆盖不了这么远，但是，如果你阅读得比较认真，我们曾提到路由器像其他电脑一样，所以我们为什么不把两个路由器彼此连接呢？
+到目前为止一切都很好 . 但是我们要连接成百上千，上亿台电脑呢？当然一台*路由器*覆盖不了这么远，但是，如果你阅读得比较认真，我们曾提到*路由器*像其他电脑一样，所以我们为什么不把两个*路由器*彼此连接呢？
 
 ![Two routers linked together](internet-schema-4.png)
 
@@ -69,15 +72,17 @@ slug: Learn/Common_questions/Web_mechanics/How_does_the_Internet_work
 
 ![A router linked to a modem](internet-schema-6.png)
 
-这样，我们可以通过电话基础设施相互连接。下一步是把信息从我们的网络发送到我们想要到达的地方。为了做这些，我们需要把我们的网络连接到互联网服务提供商（ISP）。ISP 是一家可以管理一些特殊的路由器的公司，这些路由器连接其他 ISP 的路由器。你的网络消息可以被 ISP 捕获并发送到相应的网络。互联网就是由这些所有的网络设施所组成。
+这样，我们可以通过电话基础设施相互连接。下一步是把信息从我们的网络发送到我们想要到达的地方。为了做这些，我们需要把我们的网络连接到互联网服务提供商（ISP）。ISP 是一家可以管理一些特殊的路由器的公司，这些路由器连接其他 ISP 的*路由器*。你的网络消息可以被 ISP 捕获并发送到相应的网络。互联网就是由这些所有的网络设施所组成。
 
 ![Full Internet stack](internet-schema-7.png)
 
 ### 寻找电脑
 
-如果你想给一台电脑发送一条信息，你必须指明它是哪台电脑。因此，任何连接到网络中的电脑都需要有一个唯一的地址来标记它，叫做 "IP 地址" （IP 代表网络协议）。这个地址由四部分被点分隔的数字序列组成，比如：`192.168.2.10`。
+如果你想给一台电脑发送一条信息，你必须指明它是哪台电脑。因此，任何连接到网络中的电脑都需要有一个唯一的地址来标记它，叫做 "IP 地址" （IP 代表*网络协议*）。这个地址由四部分被点分隔的数字序列组成，比如：`192.0.2.172`。
 
-对于电脑这样已经很好了，但是人类却很难记忆这一串地址。为了简单处理，我们给 IP 地址取一个容易阅读的别名：域名。比如，`google.com` 被用于 IP 地址 `172.217.7.14。`这样我们通过这些域名可以很容易的通过网络连接到电脑。
+这对于计算机来说完全没问题，但我们人类很难记住这种地址。为了使事情更简单，我们可以使用一个叫做*域名*的可读名称来替代IP地址。例如（在写作时，IP地址可能会变化），`google.com` 是用于 IP 地址 `142.250.190.78` 的域名。所以使用域名是我们通过互联网访问计算机的最简单方式。
+
+![](dns-ip.png)
 
 ### 互联网（Internet）和网络（web）
 
