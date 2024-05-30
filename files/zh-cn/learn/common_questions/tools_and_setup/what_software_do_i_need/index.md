@@ -169,7 +169,7 @@ _现在还没有自主学习活动。请[考虑投稿](/zh-CN/docs/MDN/Community
   <thead>
     <tr>
       <th scope="col">操作系统</th>
-      <th colspan="2" scope="col">FTP软件</th>
+      <th colspan="2" scope="col">FTP 软件</th>
     </tr>
   </thead>
   <tbody>
@@ -224,7 +224,7 @@ _现在还没有自主学习活动。请[考虑投稿](/zh-CN/docs/MDN/Community
 
 ### 浏览页面
 
-正如你所知，你需要一个网页浏览器去查看网页。这里有一系列的[许多](http://en.wikipedia.org/wiki/List_of_web_browsers)]可选浏览器供你个人使用，不过当你在开发一个网页时，你应当至少用以下的主流浏览器测试它，以保证你的网站可供大部分人浏览：
+正如你所知，你需要一个网页浏览器去查看网页。这里有一系列的[许多](http://en.wikipedia.org/wiki/List_of_web_browsers)] 可选浏览器供你个人使用，不过当你在开发一个网页时，你应当至少用以下的主流浏览器测试它，以保证你的网站可供大部分人浏览：
 
 - [Mozilla Firefox](https://www.mozilla.org/zh-CN/firefox/new/)
 - [Google Chrome](https://www.google.cn/chrome/)
@@ -232,7 +232,7 @@ _现在还没有自主学习活动。请[考虑投稿](/zh-CN/docs/MDN/Community
 
 如果你正以特定的群体（比如说技术平台或者国家）为目标，你或许需要用额外的浏览器，像是 [Opera](https://www.opera.com/)、[Konqueror](https://apps.kde.org/konqueror/) 来测试它。
 
-但是因为某些浏览器只会在特定的操作系统上运行，测试会变得复杂。特别是，Apple Safari 在 iOS、iPadOS 和 macOS 上运行。最好利用像 [Browsershots](https://browsershots.org/) 或 [Browserstack](https://www.browserstack.com/) 这样的服务。Browsershots 提供你的网站在各种浏览器中显示的截图。Browserstack则提供对虚拟机的完全远程访问，因此你可以在最常见的环境和不同操作系统上测试你的网站。或者，你也可以自行设置虚拟机，但这需要一定的专业知识。有关更多信息，请参阅[执行测试的策略：建立测试实验室](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#建立测试实验室)。
+但是因为某些浏览器只会在特定的操作系统上运行，测试会变得复杂。特别是，Apple Safari 在 iOS、iPadOS 和 macOS 上运行。最好利用像 [Browsershots](https://browsershots.org/) 或 [Browserstack](https://www.browserstack.com/) 这样的服务。Browsershots 提供你的网站在各种浏览器中显示的截图。Browserstack 则提供对虚拟机的完全远程访问，因此你可以在最常见的环境和不同操作系统上测试你的网站。或者，你也可以自行设置虚拟机，但这需要一定的专业知识。有关更多信息，请参阅[执行测试的策略：建立测试实验室](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#建立测试实验室)。
 
 无论如何，一定要在真实设备上进行一些测试，尤其是在真实的移动设备上。移动设备模拟是一项新的、不断发展的技术，比桌面模拟不太可靠。移动设备当然需要花费金钱，所以我们建议你看看[开放设备实验室倡议](https://www.smashingmagazine.com/2016/11/worlds-best-open-device-labs/#odls-have-opened-doors-for-idls)。如果你想在多个平台上进行测试而不花费太多，你也可以共享设备。
 
