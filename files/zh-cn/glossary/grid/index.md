@@ -69,4 +69,3 @@ l10n:
   - {{cssxref("grid-template-rows")}}
   - {{cssxref("grid")}}
   - {{cssxref("grid-template")}}
-
