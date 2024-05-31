@@ -9,7 +9,7 @@ l10n:
 
 为了更全面地支持音频/视频会议，[WebRTC](/zh-CN/docs/Web/API/WebRTC_API) 支持在 {{domxref("RTCPeerConnection")}} 上向远程对等方发送{{Glossary("DTMF", "双音多频")}}。本文简要概述了 WebRTC 上的 DTMF 如何工作，然后提供了一个指南，指导开发人员如何通过 `RTCPeerConnection` 发送 DTMF。DTMF 系统通常被称为“触摸音调”，这是一种旧的商标名称。
 
-WebRTC 不会将 DTMF 代码作为音频数据发送。相反，它们作为 RTP 负载在带外发送。但是，请注意，尽管可以使用 WebRTC _发送_ DTMF，但目前无法检测或接收 _传入_ DTMF。WebRTC 目前会忽略这些负载；这是因为 WebRTC 的 DTMF 支持主要用于与依赖于 DTMF 音调执行任务的传统电话服务一起使用，例如：
+WebRTC 不会将 DTMF 代码作为音频数据发送。相反，它们作为 RTP 负载在带外发送。但是，请注意，尽管可以使用 WebRTC *发送* DTMF，但目前无法检测或接收*传入* DTMF。WebRTC 目前会忽略这些负载；这是因为 WebRTC 的 DTMF 支持主要用于与依赖于 DTMF 音调执行任务的传统电话服务一起使用，例如：
 
 - 电话会议系统
 - 菜单系统
@@ -27,7 +27,7 @@ WebRTC 不会将 DTMF 代码作为音频数据发送。相反，它们作为 RTP
 
 每次发送音调时，`RTCPeerConnection` 都会接收到一个带有 {{domxref("RTCDTMFToneChangeEvent.tone", "tone")}} 属性的 [`tonechange`](/zh-CN/docs/Web/API/RTCDTMFSender/tonechange_event) 事件，该属性指定了播放完成的音调，这是更新界面元素的机会，例如。当音调缓冲区为空时，表示所有音调都已发送完成，连接对象将接收到一个带有其 `tone` 属性设置为""(空字符串) 的 `tonechange` 事件。
 
-如果你想了解更多关于这是如何工作的信息，请阅读 {{RFC(3550, "RTP：实时应用的传输协议")}}和 {{RFC(4733, "RTP 负载：用于 DTMF 数字、电话音调和电话信号")}}。关于如何在 RTP 上处理 DTMF 载荷的详细信息超出了本文的范围。相反，我们将重点放在如何在 {{domxref("RTCPeerConnection")}} 上使用 DTMF，通过研究一个示例的工作原理。
+如果你想了解更多关于这是如何工作的信息，请阅读{{RFC(3550, "RTP：实时应用的传输协议")}}和{{RFC(4733, "RTP 负载：用于 DTMF 数字、电话音调和电话信号")}}。关于如何在 RTP 上处理 DTMF 载荷的详细信息超出了本文的范围。相反，我们将重点放在如何在 {{domxref("RTCPeerConnection")}} 上使用 DTMF，通过研究一个示例的工作原理。
 
 ## 简单示例
 
