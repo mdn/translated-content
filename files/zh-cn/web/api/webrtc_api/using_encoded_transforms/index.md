@@ -158,7 +158,7 @@ onrtctransform = (event) => {
 
 [`RTCRtpScriptTransform` 构造函数](/zh-CN/docs/Web/API/RTCRtpScriptTransform/RTCRtpScriptTransform) 允许你传递选项和对象到工作线程。在前面的示例中，我们传递了静态信息，但有时你可能希望在运行时修改工作线程中的变换算法，或者从工作线程中获取信息。例如，支持加密的 WebRTC 会议可能需要向变换使用的算法添加一个新的密钥。
 
-虽然可以使用 {{domxref("Worker.postMessage()")}} 在运行变换代码的工作线程和主线程之间共享信息，但通常更容易使用 {{domxref("MessageChannel")}} 作为 [`RTCRtpScriptTransform` 构造函数](/zh-CN/docs/Web/API/RTCRtpScriptTransform/RTCRtpScriptTransform) 的选项共享频道，因为在处理新的编码帧时，通道上下文直接可在 `event.transformer.options` 中使用。
+虽然可以使用 {{domxref("Worker.postMessage()")}} 在运行变换代码的工作线程和主线程之间共享信息，但通常更容易使用 {{domxref("MessageChannel")}} 作为 [`RTCRtpScriptTransform` 构造函数](/zh-CN/docs/Web/API/RTCRtpScriptTransform/RTCRtpScriptTransform)的选项共享频道，因为在处理新的编码帧时，通道上下文直接可在 `event.transformer.options` 中使用。
 
 以下代码创建了一个 {{domxref("MessageChannel")}} 并将其第二个端口[传输](/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects)给工作线程。主线程和变换随后可以使用第一个和第二个端口进行通信。
 
