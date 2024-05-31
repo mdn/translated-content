@@ -1,6 +1,8 @@
 ---
 title: 作者 - author
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/author
+l10n:
+  sourceCommit: d86e14de2e66319fc0a0ec0539a05400dea5a453
 ---
 
 {{AddonSidebar}}
@@ -16,20 +18,26 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/author
       <td>非强制</td>
     </tr>
     <tr>
+      <th scope="row">Manifest 版本</th>
+      <td>2 或更高</td>
+    </tr>
+    <tr>
       <th scope="row">示例</th>
-      <td><pre class="brush: json">"author": "小明"</pre></td>
+      <td><pre class="brush: json">"author": "Walt Whitman"</pre></td>
     </tr>
   </tbody>
 </table>
 
-附加组件的作者，用于在浏览器用户界面上显示，这样别人下载安装使用该附加组件的时候，就能看见你的大名了。
+扩展的作者，用于显示在浏览器的用户界面中。如果提供了 [developer](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer) 键，并且它包含“name”属性，则它将覆盖作者键。无法指定多个作者。
+
+这是一个[可本地化属性](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json)。
 
 ## 示例
 
 ```json
-"author": "小明"
+"author": "Walt Whitman"
 ```
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
