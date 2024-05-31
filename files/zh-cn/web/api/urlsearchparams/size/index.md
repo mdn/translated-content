@@ -30,9 +30,9 @@ searchParams.size; // 4
 [...new Set(searchParams.keys())].length; // 3
 ```
 
-### 检查搜索参数是否存在
+### 检查查询参数是否存在
 
-`size` 属性用于检查是否存在任何搜索参数：
+`size` 属性用于检查是否存在任何查询参数：
 
 ```js
 const url = new URL("https://example.com?foo=1&bar=2");
