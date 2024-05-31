@@ -25,7 +25,7 @@ values()
 
 ## 示例
 
-以下示例将一个 URL 搜索字符串传递给 `URLSearchParams` 构造函数，然后使用 `values()` 返回的迭代器将值打印到控制台。
+以下示例将一个 URL 查询字符串传递给 `URLSearchParams` 构造函数，然后使用 `values()` 返回的迭代器将值打印到控制台。
 
 ```js
 const searchParams = new URLSearchParams("key1=value1&key2=value2");

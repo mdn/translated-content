@@ -7,7 +7,7 @@ l10n:
 
 {{ApiRef("URL API")}} {{AvailableInWorkers}}
 
-{{domxref("URLSearchParams")}}接口的 **`set()`** 方法用于设置和搜索参数相关联的值。如果设置前已经存在匹配的值，该方法会删除多余的，如果将要设置的值不存在，则创建它。
+{{domxref("URLSearchParams")}}接口的 **`set()`** 方法用于设置和查询参数相关联的值。如果设置前已经存在匹配的值，该方法会删除多余的，如果将要设置的值不存在，则创建它。
 
 ## 语法
 

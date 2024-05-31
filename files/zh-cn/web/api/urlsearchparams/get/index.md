@@ -7,7 +7,7 @@ l10n:
 
 {{ApiRef("URL API")}} {{AvailableInWorkers}}
 
-{{domxref("URLSearchParams")}} 接口的 **get()** 方法返回第一个与搜索参数对应的值。
+{{domxref("URLSearchParams")}} 接口的 **get()** 方法返回第一个与查询参数对应的值。
 
 ## 语法
 

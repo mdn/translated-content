@@ -7,7 +7,7 @@ l10n:
 
 {{ApiRef("URL API")}} {{AvailableInWorkers}}
 
-{{domxref("URLSearchParams")}} 接口的 **`getAll()`** 方法以数组的形式返回与指定搜索参数对应的所有值。
+{{domxref("URLSearchParams")}} 接口的 **`getAll()`** 方法以数组的形式返回与指定查询参数对应的所有值。
 
 ## 语法
 

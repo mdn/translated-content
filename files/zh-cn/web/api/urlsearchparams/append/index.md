@@ -7,7 +7,7 @@ l10n:
 
 {{ApiRef("URL API")}} {{AvailableInWorkers}}
 
-{{domxref("URLSearchParams")}} 接口的 **`append()`** 方法将指定的键/值对附加为新的搜索参数。
+{{domxref("URLSearchParams")}} 接口的 **`append()`** 方法将指定的键/值对附加为新的查询参数。
 
 如下面的示例所示，如果同一个键被多次附加，则它将为每个值多次出现在参数字符串中。
 
@@ -34,7 +34,7 @@ None ({{jsxref("undefined")}})。
 let url = new URL("https://example.com?foo=1&bar=2");
 let params = new URLSearchParams(url.search);
 
-// 添加第二个 foo 搜索参数。
+// 添加第二个 foo 查询参数。
 params.append("foo", 4);
 // 查询字符串变成：'foo=1&bar=2&foo=4'
 ```
