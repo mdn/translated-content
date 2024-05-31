@@ -7,13 +7,11 @@ l10n:
 
 {{GlossarySidebar}}
 
-{{Glossary("CSP", "内容安全策略")}} 的 **fetch 指令**用在{{HTTPHeader("Content-Security-Policy")}} 标头中，可以用来控制某些具体类型的资源可以从哪些来源被加载。比如说，{{CSP("script-src")}} 使得开发者可以允许可信任来源的脚本在页面上执行，{{CSP("font-src")}} 可以控制字体的来源。
+**{{Glossary("CSP", "内容安全策略")}} fetch 指令**用于 {{HTTPHeader("Content-Security-Policy")}} 标头中，可以用来控制某些具体类型的资源可以从哪些来源被加载。比如说，{{CSP("script-src")}} 使得开发者可以允许可信任来源的脚本在页面上执行，{{CSP("font-src")}} 可以控制字体的来源。
 
-所有的指令的值都会回落到 {{CSP("default-src")}}。也就是说，如果某个 fetch 指令在 CSP 头部中未定义，那么用户代理就会寻找 `default-src` 指令的值来替代。
+所有的指令的值都会回落到 {{CSP("default-src")}}。也就是说，如果某个 fetch 指令在 CSP 标头中未定义，那么用户代理就会寻找 `default-src` 指令的值来替代。
 
-这些 CSP 指令属于 fetch 指令：
-
-查看 [Fetch 指令](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directives)以获取完整列表。
+查看 [Fetch 指令](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_指令)以获取完整列表。
 
 ## 参见
 
