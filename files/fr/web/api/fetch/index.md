@@ -81,7 +81,7 @@ let maRequete = new Request("fleurs.jpg");
 
 fetch(maRequete)
   .then(function (reponse) {
-    if (!response.ok) {
+    if (!reponse.ok) {
       throw new Error(`erreur HTTP! statut: ${reponse.status}`);
     }
     return reponse.blob();
