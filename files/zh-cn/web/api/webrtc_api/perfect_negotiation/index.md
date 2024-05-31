@@ -293,7 +293,7 @@ signaler.onmessage = async ({ data: { description, candidate } }) => {
 
 代码检查消息是否是一个邀约，并且如果是，则检查本地信令状态是否不是 `stable`。如果不是稳定的，并且本地对等点是有礼貌的，那么我们需要触发回滚，以便我们可以用新收到的邀约替换正在传出的邀约。这两步都必须在我们继续处理收到的邀约之前完成。
 
-由于没有一个单独的“回滚并使用此邀约”，在有礼貌的对等方上执行此更改需要两个步骤，在 [`Promise.all()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) 的上下文中执行，该方法用于确保两个语句在继续处理接收到的邀约之前完全执行。第一个语句触发回滚，第二个语句将远程描述设置为接收到的描述，从而完成用新收到的邀约替换先前_发送的_邀约的过程。有礼貌的对等方现在成为被叫方而不是主叫方。
+由于没有一个单独的“回滚并使用此邀约”，在有礼貌的对等方上执行此更改需要两个步骤，在 [`Promise.all()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) 的上下文中执行，该方法用于确保两个语句在继续处理接收到的邀约之前完全执行。第一个语句触发回滚，第二个语句将远程描述设置为接收到的描述，从而完成用新收到的邀约替换先前*发送的*邀约的过程。有礼貌的对等方现在成为被叫方而不是主叫方。
 
 来自不礼貌对等方的所有其他描述都像平常一样被处理，通过将它们传递给 {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}}。
 
