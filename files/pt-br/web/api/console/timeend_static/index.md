@@ -1,7 +1,6 @@
 ---
 title: Console.timeEnd()
 slug: Web/API/console/timeend_static
-original_slug: Web/API/console/timeEnd
 ---
 
 {{APIRef("Console API")}}{{Non-standard_header}}

@@ -3777,6 +3777,7 @@
 /ja/docs/Web/CSS/offset-inline-start	/ja/docs/Web/CSS/inset-inline-start
 /ja/docs/Web/CSS/paint	/ja/docs/Web/CSS/image/paint
 /ja/docs/Web/CSS/paint()	/ja/docs/Web/CSS/image/paint
+/ja/docs/Web/CSS/path	/ja/docs/Web/CSS/basic-shape/path
 /ja/docs/Web/CSS/radial-gradient	/ja/docs/Web/CSS/gradient/radial-gradient
 /ja/docs/Web/CSS/radial-gradient()	/ja/docs/Web/CSS/gradient/radial-gradient
 /ja/docs/Web/CSS/repeat()	/ja/docs/Web/CSS/repeat

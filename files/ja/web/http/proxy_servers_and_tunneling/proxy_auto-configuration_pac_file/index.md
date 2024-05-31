@@ -128,7 +128,7 @@ PAC ファイルを作成するために、以下の関数を使用できます�
 > **メモ:** 以下の例をテストするために、 pactester ([pacparser](https://github.com/manugarg/pacparser) パッケージの一部) を使用しました。
 >
 > - PAC ファイルは `proxy.pac` という名前です
-> - コマンドライン: `pactester -p ~/pacparser-master/tests/proxy.pac -u http://www.mozilla.org` (引数 `host` に `www.mozilla.org` を、引数 `url` に `http://www.mozilla.org` を渡します)
+> - コマンドライン: `pactester -p ~/pacparser-master/tests/proxy.pac -u https://www.mozilla.org` (引数 `host` に `www.mozilla.org` を、引数 `url` に `https://www.mozilla.org` を渡します)
 
 ### isPlainHostName()
 

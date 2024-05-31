@@ -2,12 +2,12 @@
 title: 列入 CORS 白名单的请求标头
 slug: Glossary/CORS-safelisted_request_header
 l10n:
-  sourceCommit: 5e9631df85d021e84133e14f4bd3c712e4f8fe08
+  sourceCommit: fea9eb7420e6d70772144854242c30e421898415
 ---
 
 {{GlossarySidebar}}
 
-[列入 CORS 白名单的请求标头](https://fetch.spec.whatwg.org/#cors-safelisted-request-header)（CORS-safelisted request header，也被称作“简单标头”）包含以下 [HTTP 标头](/zh-CN/docs/Web/HTTP/Headers)：
+[**列入 CORS 白名单的请求标头**](https://fetch.spec.whatwg.org/#cors-safelisted-request-header)（CORS-safelisted request header，也被称作“简单标头”）包含以下 [HTTP 标头](/zh-CN/docs/Web/HTTP/Headers)：
 
 - {{HTTPHeader("Accept")}}
 - {{HTTPHeader("Accept-Language")}}

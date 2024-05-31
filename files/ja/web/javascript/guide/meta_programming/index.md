@@ -33,7 +33,7 @@ console.log(p.a, p.b); // 1, 42
 
 プロキシーの機能について話題にする際は、次の用語が使用されます。
 
-- {{jsxref("Global_Objects/Proxy/Proxy","ハンドラー","","true")}} (handler)
+- {{jsxref("Global_Objects/Proxy/Proxy","ハンドラー","",1)}} (handler)
   - : トラップを入れるためのプレースホルダ用オブジェクト。
 - トラップ (trap)
   - : プロパティへのアクセスを提供するメソッドです。 (オペレーティングシステムにおける*トラップ*の概念と同じようなものです。)
@@ -408,7 +408,7 @@ typeof proxy; // "object" が返され, typeof はどんなトラップも引き
 
 ## リフレクション
 
-{{jsxref("Reflect")}} は JavaScript で割り込み操作を行うメソッドを提供する組み込みオブジェクトです。そのメソッドは{{jsxref("Global_Objects/Proxy/Proxy","Proxy ハンドラー","","true")}}のメソッドと同じです。
+{{jsxref("Reflect")}} は JavaScript で割り込み操作を行うメソッドを提供する組み込みオブジェクトです。そのメソッドは{{jsxref("Global_Objects/Proxy/Proxy","Proxy ハンドラー","",1)}}のメソッドと同じです。
 
 `Reflect` は関数オブジェクトではありません。
 

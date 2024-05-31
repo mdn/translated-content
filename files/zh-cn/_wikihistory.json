@@ -831,10 +831,6 @@
     "modified": "2020-10-09T04:30:17.457Z",
     "contributors": ["benniks", "lizzxc"]
   },
-  "Glossary/GZip_compression": {
-    "modified": "2019-03-18T20:37:26.371Z",
-    "contributors": ["RainSlide"]
-  },
   "Glossary/Garbage_collection": {
     "modified": "2020-08-17T13:28:57.259Z",
     "contributors": ["xgqfrms"]
@@ -1605,6 +1601,10 @@
   "Glossary/XQuery": {
     "modified": "2019-03-18T21:21:58.755Z",
     "contributors": ["Chor"]
+  },
+  "Glossary/gzip_compression": {
+    "modified": "2019-03-18T20:37:26.371Z",
+    "contributors": ["RainSlide"]
   },
   "Learn": {
     "modified": "2020-07-16T22:43:49.854Z",

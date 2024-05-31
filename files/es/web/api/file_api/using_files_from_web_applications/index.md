@@ -291,7 +291,7 @@ function FileUpload(img, file) {
           canvas.parentNode.removeChild(canvas);
       }, false);
 
-  xhr.open("POST", "http://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php");
+  xhr.open("POST", "https://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php");
   xhr.overrideMimeType('text/plain; charset=x-user-defined-binary');
   xhr.sendAsBinary(file.getAsBinary());
 }

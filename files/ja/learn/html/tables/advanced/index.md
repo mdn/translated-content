@@ -1,19 +1,37 @@
 ---
 title: HTML 表の高度な機能とアクセシビリティ
 slug: Learn/HTML/Tables/Advanced
+l10n:
+  sourceCommit: 8badc6cef8a77fbf1ba8054555097565d0a7dbc9
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
 
 このモジュールの 2 番目の記事では、HTML テーブルのより高度な機能 (キャプション/要約、行をテーブルのヘッダー、本文、フッターのセクションにグループ化するなど) や、視覚障碍のあるユーザーのためのテーブルのアクセシビリティについて調べます。
 
-| 前提知識: | HTML の基礎 ([HTML 入門](/ja/docs/Learn/HTML/Introduction_to_HTML)を参照)。 |
-| --------- | --------------------------------------------------------------------------- |
-| 目標:     | 表のより高度な機能やアクセシビリティについて学ぶ                            |
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">前提知識:</th>
+      <td>
+        HTML の基礎（
+        <a href="/ja/docs/Learn/HTML/Introduction_to_HTML"
+          >HTML 入門</a
+        >を参照）。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">目的:</th>
+      <td>
+        表のより高度な機能やアクセシビリティについて学びます。
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## \<caption> を用いて表にキャプションを追加する
 
-テーブルにキャプションを付けるには、{{htmlelement("caption")}} 要素内に配置し、それを {{htmlelement("table")}} 要素内にネストします。これは `<table>` 要素の開始タグすぐ下に置くべきです。
+テーブルにキャプションを付けるには、{{htmlelement("caption")}} 要素内に配置し、それを {{htmlelement("table")}} 要素内に入れます。これは `<table>` 要素の開始タグすぐ下に置くべきです。
 
 ```html
 <table>
@@ -21,7 +39,7 @@ slug: Learn/HTML/Tables/Advanced
     ジュラ紀の恐竜
   </caption>
 
-  ...
+  …
 </table>
 ```
 
@@ -29,38 +47,38 @@ slug: Learn/HTML/Tables/Advanced
 
 キャプションは `<table>` タグのすぐ下に配置します。
 
-> **メモ:** [`summary`](/ja/docs/Web/HTML/Element/table#summary) 属性は、`<table>` 要素で説明を提供するためにも使用できます。 これはスクリーンリーダーによっても読み上げられます。 ただし、`summary` は HTML5 仕様では{{glossary("deprecated","推奨されておらず")}}、(ページには表示されないので)晴眼のユーザーには読むことができないため、代わりに `<caption>` 要素を使用することをお勧めします。
+> **メモ:** [`summary`](/ja/docs/Web/HTML/Element/table#summary) 属性は、`<table>` 要素で説明を提供するためにも使用できます。 これはスクリーンリーダーによっても読み上げられます。しかし、`<caption>`要素を使用することをお勧めします。なぜなら、`summary` は非推奨であり、視覚ユーザーには読めないからです（ページに現れません）。
 
 ### アクティブラーニング: キャプションの追加
 
 前の記事で最初に出会った例を再考しながら、これを試してみましょう。
 
-1. [HTML 表の基本](/ja/docs/Learn/HTML/Tables/Basics#Active_learning_colgroup_and_col)の最後から語学教師の学校の時間割を開くか、または [timetable-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html) ファイルのローカルコピーを作成してください。
+1. [HTML 表の基本](/ja/docs/Learn/HTML/Tables/Basics#アクティブラーニング_colgroup_と_col)の最後から語学教師の学校の時間割を開くか、または [timetable-fixed.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/timetable-fixed.html) ファイルのローカルコピーを作成してください。
 2. 表に適切なキャプションを追加します。
 3. コードを保存してブラウザーで開くと、コードがどのように見えるかがわかります。
 
-> **メモ:** GitHub で私たちのバージョンを見つけることができます — [timetable-caption.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/timetable-caption.html) を見てください([ライブもご覧ください](http://mdn.github.io/learning-area/html/tables/advanced/timetable-caption.html))。
+> **メモ:** GitHub で私たちのバージョンを見ることができます。 [timetable-caption.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/timetable-caption.html) を見てください（[ライブもご覧ください](https://mdn.github.io/learning-area/html/tables/advanced/timetable-caption.html)）。
 
-## \<thead>、\<tfoot>、\<tbody> を用いて構造を追加する
+## \<thead>、\<tbody>、\<tfoot> を用いて構造を追加
 
-表の構造がもう少し複雑になったら、それらにもっと構造的な定義を与えることは有用です。 これを行う明確な方法の 1 つは、{{htmlelement("thead")}}、{{htmlelement("tfoot")}}、および {{htmlelement("tbody")}} を使用することです。 これにより、表のヘッダー、フッター、および本体のセクションをマークアップできます。
+表の構造がもう少し複雑になったら、それらにもっと構造的な定義を与えることは有用です。 これを行う明確な方法の 1 つは、{{htmlelement("thead")}}、{{htmlelement("tbody")}}、{{htmlelement("tfoot")}} を使用することです。 これにより、表のヘッダー、フッター、および本体のセクションをマークアップできます。
 
 これらの要素によって表がスクリーンリーダーのユーザーにアクセスしやすくなることはなく、また視覚的な機能強化が生じることもありません。 ただし、これらはスタイリングやレイアウトに非常に役立ちます — CSS を表に追加するための便利なフックとして機能します。 いくつか興味深い例を挙げると、長い表の場合、全ての印刷ページで表のヘッダーとフッターを繰り返すようにしたり、表の本体を単一ページに表示して、上下にスクロールして内容を表示したりすることができます。
 
-それらを使用するには、
+使用するためには、以下の順番で記載してください。
 
-- `<thead>` 要素は、表のヘッダー部分をラップする必要があります — これは通常、列見出しを含む最初の行になりますが、必ずしもそうとは限りません。 {{htmlelement("col")}} 要素や {{htmlelement("colgroup")}} 要素を使用している場合、表のヘッダーはそれらのすぐ下にくるはずです。
-- `<tfoot>` 要素は、表のフッター部分をラップする必要があります — これは、例えば、前の行の項目が合計された最終行になります。 表のフッターは、期待通りに表の一番下に配置することも、表のヘッダーのすぐ下に配置することもできます(ブラウザーはそれを表の一番下に表示します)。
-- `<tbody>` 要素は、表のヘッダーまたはフッターではない表のコンテンツの他の部分をラップする必要があります。 どのように構成することにしたかに応じて、表のヘッダーの下に出現するか、時にはフッターの下に出現することがあります (上記の注を参照)。
+- `<thead>` 要素は、表のヘッダー部分を囲む必要があります — これは通常、列見出しを含む最初の行になりますが、必ずしもそうとは限りません。 {{htmlelement("col")}} 要素や {{htmlelement("colgroup")}} 要素を使用している場合、表のヘッダーはそれらのすぐ下にくるはずです。
+- `<tbody>` 要素は、表のヘッダーまたはフッターではない表のコンテンツの他の部分を囲む必要があります。
+- `<tfoot>` 要素は、表のフッター部分を囲む必要があります。これは、例えば、前の行の項目が合計された最終行になります。
 
-> **メモ:** `<tbody>` は常に全ての表に含まれていて、コードで指定しない場合は暗黙的に含まれます。 これを確認するには、`<tbody>` を含まない以前の例の 1 つを開き、[ブラウザー開発者ツール](/ja/docs/Learn/Common_questions/What_are_browser_developer_tools)の HTML コードを調べます — ブラウザーによってこのタグが追加されたことがわかります。 なぜそれを含まないのかと疑問に思うかもしれません — すべき、表の構造とスタイリングがより細かく制御できるためです。
+> **メモ:** `<tbody>` は常に全ての表に含まれていて、コードで指定しない場合にも暗黙的に含まれます。 これを確認するには、`<tbody>` を含まない以前の例の 1 つを開き、[ブラウザー開発者ツール](/ja/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)の HTML コードを調べます — ブラウザーによってこのタグが追加されたことがわかります。 なぜそれを含まないのかと疑問に思うかもしれません — すべき、表の構造とスタイリングがより細かく制御できるためです。
 
 ### アクティブラーニング: 表構造の追加
 
 これらの新しい要素を実行してみましょう。
 
-1. まず、新しいフォルダに [spending-record.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record.html) と [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/minimal-table.css) のローカルコピーを作成します。
-2. ブラウザーでそれを開いてみてください — あなたはそれが問題ないように見えますが、それは改善されることになるかもしれません。 支出額の合計を含む "SUM" 行は間違った場所にあるように思われ、コードから抜けている細部がいくつかあります。
+1. まず、新しいフォルダーに [spending-record.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/spending-record.html) と [minimal-table.css](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/minimal-table.css) のローカルコピーを作成します。
+2. ブラウザーでそれを開いてみてください。あなたはそれが問題ないように見えますが、それは改善されることになるかもしれません。 支出額の合計を含む "SUM" 行は間違った場所にあるように思われ、コードから抜けている細部がいくつかあります。
 3. 明白なヘッダー行を `<thead>` 要素内に、 "SUM" 行を `<tfoot>` 要素内に、そして残りの内容を `<tbody>` 要素内に配置します。
 4. 保存して更新すると、`<tfoot>` 要素を追加すると "SUM" 行が表の一番下に移動していることがわかります。
 5. 次に、[`colspan`](/ja/docs/Web/HTML/Element/td#colspan) 属性を追加して "SUM" セルを最初の 4 列にまたがるようにします。そのため、実際の数は "Cost" 列の下部に表示されます。
@@ -68,7 +86,7 @@ slug: Learn/HTML/Tables/Advanced
 
    ```css
    tbody {
-     font-size: 90%;
+     font-size: 95%;
      font-style: italic;
    }
 
@@ -79,122 +97,13 @@ slug: Learn/HTML/Tables/Advanced
 
 7. 保存して更新し、結果を確認します。 `<tbody>` 要素と `<tfoot>` 要素が適切に配置されていない場合は、同じスタイルを適用するためにはるかに複雑なセレクタ/規則を記述する必要があります。
 
-> **メモ:** 現時点で私たちはあなたが CSS を完全に理解しているとは思っていません。 あなたが私たちの CSS モジュールを一通り学ぶとき、これについてより多くを学ぶでしょう([CSS 入門](/ja/docs/Learn/CSS/Introduction_to_CSS)は始めるのに良い場所です。 [スタイリングされた表](/ja/docs/Learn/CSS/Styling_boxes/Styling_tables)に関する具体的な記事もあります)。
+> **メモ:** 現時点で私たちはあなたが CSS を完全に理解しているとは思っていません。 あなたが私たちの CSS モジュールを一通り学ぶとき、これについてより多くを学ぶでしょう（[CSS 入門](/ja/docs/Learn/CSS/First_steps)は始めるのに良い場所です。 [スタイル設定された表](/ja/docs/Learn/CSS/Building_blocks/Styling_tables)に関する具体的な記事もあります）。
 
-完成した表は次のようになります。
+最終的な票は、次のようになるでしょう。
 
-```html hidden
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>My spending record</title>
-    <style>
-      html {
-        font-family: sans-serif;
-      }
+{{ EmbedGHLiveSample('learning-area/html/tables/advanced/spending-record-finished.html', '100%', 400) }}
 
-      table {
-        border-collapse: collapse;
-        border: 2px solid rgb(200, 200, 200);
-        letter-spacing: 1px;
-        font-size: 0.8rem;
-      }
-
-      td,
-      th {
-        border: 1px solid rgb(190, 190, 190);
-        padding: 10px 20px;
-      }
-
-      th {
-        background-color: rgb(235, 235, 235);
-      }
-
-      td {
-        text-align: center;
-      }
-
-      tr:nth-child(even) td {
-        background-color: rgb(250, 250, 250);
-      }
-
-      tr:nth-child(odd) td {
-        background-color: rgb(245, 245, 245);
-      }
-
-      caption {
-        padding: 10px;
-      }
-
-      tbody {
-        font-size: 90%;
-        font-style: italic;
-      }
-
-      tfoot {
-        font-weight: bold;
-      }
-    </style>
-  </head>
-  <body>
-    <table>
-      <caption>
-        How I chose to spend my money
-      </caption>
-      <thead>
-        <tr>
-          <th>Purchase</th>
-          <th>Location</th>
-          <th>Date</th>
-          <th>Evaluation</th>
-          <th>Cost (€)</th>
-        </tr>
-      </thead>
-      <tfoot>
-        <tr>
-          <td colspan="4">SUM</td>
-          <td>118</td>
-        </tr>
-      </tfoot>
-      <tbody>
-        <tr>
-          <td>Haircut</td>
-          <td>Hairdresser</td>
-          <td>12/09</td>
-          <td>Great idea</td>
-          <td>30</td>
-        </tr>
-        <tr>
-          <td>Lasagna</td>
-          <td>Restaurant</td>
-          <td>12/09</td>
-          <td>Regrets</td>
-          <td>18</td>
-        </tr>
-        <tr>
-          <td>Shoes</td>
-          <td>Shoeshop</td>
-          <td>13/09</td>
-          <td>Big regrets</td>
-          <td>65</td>
-        </tr>
-        <tr>
-          <td>Toothpaste</td>
-          <td>Supermarket</td>
-          <td>13/09</td>
-          <td>Good</td>
-          <td>5</td>
-        </tr>
-      </tbody>
-    </table>
-  </body>
-</html>
-```
-
-{{ EmbedLiveSample('Hidden_example', '100%', 300, "", "", "hide-codepen-jsfiddle") }}
-
-> **メモ:** Github では、それを [spending-record-finished.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record-finished.html) として見つけることもできます([ライブもご覧ください](http://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html))。
+> **メモ:** GitHub で [spending-record-finished.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/spending-record-finished.html) として見ることもできます。
 
 ## ネストした表
 
@@ -232,60 +141,40 @@ slug: Learn/HTML/Tables/Advanced
 
 その出力は次のようになります。
 
-<table id="table1">
-  <tbody>
-    <tr>
-      <th>title1</th>
-      <th>title2</th>
-      <th>title3</th>
-    </tr>
-    <tr>
-      <td id="nested">
-        <table id="table2">
-          <tbody>
-            <tr>
-              <td>cell1</td>
-              <td>cell2</td>
-              <td>cell3</td>
-            </tr>
-          </tbody>
-        </table>
-      </td>
-      <td>cell2</td>
-      <td>cell3</td>
-    </tr>
-    <tr>
-      <td>cell4</td>
-      <td>cell5</td>
-      <td>cell6</td>
-    </tr>
-  </tbody>
-</table>
+```css hidden
+table {
+  border-collapse: collapse;
+}
+td,
+th {
+  border: 1px solid black;
+  padding: 10px 20px;
+}
+```
+
+{{EmbedLiveSample("Nesting_Tables")}}
 
 ## 視覚障碍者向けの表
 
 データ表の使用方法について簡単に説明しましょう。 表は、データにすばやくアクセスし、さまざまな値を検索できるようにするための便利なツールです。例えば、昨年 8 月に Gent で販売された指輪 (Rings) の数を確認するには、下の表を見てください。その情報を理解するために、この表内のデータとその列ヘッダーや行ヘッダーとの間の視覚的な関連付けを行います。
 
 <table>
-  <caption>
-    Items Sold August 2016
-  </caption>
-  <tbody>
+  <caption>Items Sold August 2016</caption>
+  <thead>
     <tr>
-      <td></td>
-      <td></td>
+      <td colspan="2" rowspan="2"></td>
       <th colspan="3" scope="colgroup">Clothes</th>
       <th colspan="2" scope="colgroup">Accessories</th>
     </tr>
     <tr>
-      <td></td>
-      <td></td>
       <th scope="col">Trousers</th>
       <th scope="col">Skirts</th>
       <th scope="col">Dresses</th>
       <th scope="col">Bracelets</th>
       <th scope="col">Rings</th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
       <th rowspan="3" scope="rowgroup">Belgium</th>
       <th scope="row">Antwerp</th>
@@ -333,15 +222,15 @@ slug: Learn/HTML/Tables/Advanced
 
 しかし、あなたがそれらの視覚的な関連付けをすることができないならば、どうですか？ では、どのようにして上記のような表を読むことができますか？ 視覚障碍者は、ウェブページの情報を読み上げるスクリーンリーダーをよく使用します。 平文を読んでいるときはこれは問題ありませんが、表を解釈することは視覚障碍者にとっては非常に困難な場合があります。 それでも、適切なマークアップを使用して、視覚的な関連付けをプログラムによる関連付けに置き換えることができます。
 
-> **メモ:** [WHO のデータ](http://www.who.int/mediacentre/factsheets/fs282/en/)によると、2017 年の視覚障碍者は約 253 百万人です。
+> **メモ:** [WHO のデータ](https://www.who.int/en/news-room/fact-sheets/detail/blindness-and-visual-impairment)によると、2017 年の視覚障碍者は約 253 百万人です。
 
-記事のこのセクションでは、可能な限りアクセス可能な表にするためのその他の手法について説明します。
+記事のこの節では、可能な限りアクセス可能な表にするためのその他の手法について説明します。
 
 ### 列ヘッダーと行ヘッダーを使用する
 
 スクリーンリーダーは全てのヘッダーを識別し、それらを使用してそれらのヘッダーとそれらが関連するセルとの間のプログラムによる関連付けを行います。 列ヘッダーと行ヘッダーの組み合わせにより、各セル内のデータが識別および解釈されるため、スクリーンリーダーのユーザーは、晴眼のユーザーの場合と同様に表を解釈できます。
 
-前の記事ですでにヘッダーについて説明しました — [`<th>` 要素によるヘッダーの追加](/ja/docs/Learn/HTML/Tables/Basics#Adding_headers_with_%3Cth%3E_elements)を参照してください。
+前の記事ですでにヘッダーについて説明しました。 [\<th> 要素によるヘッダーの追加](/ja/docs/Learn/HTML/Tables/Basics#th_要素による見出しの追加)を参照してください。
 
 ### scope 属性
 
@@ -375,37 +264,70 @@ slug: Learn/HTML/Tables/Advanced
 
 `scope` には、さらに 2 つの可能な値、`colgroup` と `rowgroup` があります。 これらは、複数列または複数行の上に位置する見出しに使用されます。 このセクションの最初にある "Items Sold August 2016" の表を見ると、"Clothes" セルが "Trousers"、"Skirts"、"Dresses" のセルの上に位置することがわかります。 これらのセルは全てヘッダー(`<th>`)としてマークアップするべきで、 "Clothes" はそれらの上に位置し、他の 3 つの小見出しを定義する見出しです。 従って、"Clothes" は `scope="colgroup"` の属性を得るべきですが、それ以外は `scope="col"` の属性を得ます。
 
+```html
+<thead>
+  <tr>
+    <th colspan="3" scope="colgroup">Clothes</th>
+  </tr>
+  <tr>
+    <th scope="col">Trousers</th>
+    <th scope="col">Skirts</th>
+    <th scope="col">Dresses</th>
+  </tr>
+</thead>
+```
+
+グループ化された複数の行のヘッダーも同様です。今度は "Items Sold August 2016" の表を、"Amsterdam" と "Utrecht" のヘッダー (`<th>`) を持つ行に注目して見てみましょう。 "The Netherlands" のヘッダーも `<th>` 要素としてマークアップされ、他の2種類の小見出しの見出しとして、両方の行にまたがっていることに気づくでしょう。したがって、`scope="rowgroup"` をこの見出しセルに指定して、スクリーンリーダーが正しい関連付けを作成するようにしてください。
+
+```html
+<tr>
+  <th rowspan="2" scope="rowgroup">The Netherlands</th>
+  <th scope="row">Amsterdam</th>
+  <td>89</td>
+  <td>34</td>
+  <td>69</td>
+</tr>
+<tr>
+  <th scope="row">Utrecht</th>
+  <td>80</td>
+  <td>12</td>
+  <td>43</td>
+</tr>
+```
+
 ### id 属性と headers 属性
 
-`scope` 属性を使用する代わりに、[`id`](/ja/docs/Web/HTML/Global_attributes#id) 属性と [`headers`](/ja/docs/Web/HTML/Element/td#headers) 属性を使用して、ヘッダーとセル間の関連付けを作成することもできます。 使い方は次のとおりです。
+`scope` 属性を使用する代わりに、[`id`](/ja/docs/Web/HTML/Global_attributes#id) 属性と [`headers`](/ja/docs/Web/HTML/Element/td#headers) 属性を使用して、ヘッダーとセル間の関連付けを作成することもできます。
 
-1. 各 `<th>` 要素に一意の `id` を追加します。
-2. 各 `<td>` 要素に `headers` 属性を追加します。 各 `headers` 属性には、そのセルのヘッダーとして機能する全ての `<th>` 要素の `id` のリストを、スペースで区切って含める必要があります。
+`headers` 属性はスペース区切りの{{Glossary("string", "文字列")}}の順不同リストを取ります。それぞれが、データセル（`<td>` 要素）または別のヘッダーセル（`<th>` 要素）の見出しを提供する `<th>` 要素の一意の `id` に対応します。
 
-これは HTML の表に、表内の各セルの位置の明示的な定義を与えます。 これは、それが属する各列と各行のヘッダーによって定義されます。 スプレッドシートのようなものです。 それがうまく機能するためには、表は本当に列と行の両方のヘッダーを必要とします。
+これは HTML の表において、表の中の各セルの位置を、表計算ソフトのように、所属する行と列のそれぞれのヘッダーによって定義します。これがうまく動作するためには、表の列と行の両方のヘッダーがどうしても必要です。
 
-支出コストの例に戻ると、前の 2 つのコードは次のように書き直すことができます。
+"Items Sold August 2016" の例に戻ると、以下のように `id` 属性と `headers` 属性を使用することができます：
+
+1. 表のそれぞれの `<th>` 要素に固有の `id` を追加します。
+2. `headers` 属性をそれぞれの小見出しとして機能する、つまり上にヘッダー要素がある、それぞれの `<th>` 要素に追加します。値は最上部に位置し、小見出しを定義する見出しの `id` で、例えばこの例では列のヘッダーは `"clothes"`、行のヘッダーは `"belgium"` となります。
+3. それぞれの `<td>` 要素に `headers` 属性を追加し、そこに関連する `<th>` 要素の `id` のスペース区切りのリストの形で追加します。スプレッドシートと同じように作業を進めることができます。データセルを探し、対応する行と列の見出しを探します。指定する `id` の順番は重要ではありませんが、整理しておくために一貫性を持たせておく必要があります。
 
 ```html
 <thead>
   <tr>
-    <th id="purchase">Purchase</th>
-    <th id="location">Location</th>
-    <th id="date">Date</th>
-    <th id="evaluation">Evaluation</th>
-    <th id="cost">Cost (€)</th>
+    <th id="clothes" colspan="3">Clothes</th>
+  </tr>
+  <tr>
+    <th id="trousers" headers="clothes">Trousers</th>
+    <th id="skirts" headers="clothes">Skirts</th>
+    <th id="dresses" headers="clothes">Dresses</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <th id="haircut">Haircut</th>
-    <td headers="location haircut">Hairdresser</td>
-    <td headers="date haircut">12/09</td>
-    <td headers="evaluation haircut">Great idea</td>
-    <td headers="cost haircut">30</td>
+    <th id="belgium" rowspan="3">Belgium</th>
+    <th id="antwerp" headers="belgium">Antwerp</th>
+    <td headers="antwerp belgium clothes trousers">56</td>
+    <td headers="antwerp belgium clothes skirts">22</td>
+    <td headers="antwerp belgium clothes dresses">43</td>
   </tr>
-
-  ...
 </tbody>
 ```
 
@@ -413,14 +335,18 @@ slug: Learn/HTML/Tables/Advanced
 
 ### アクティブラーニング: scope と headers で遊ぶ
 
-1. この最後の演習では、まず [items-sold.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold.html) と [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/minimal-table.css) のローカルコピーを新しいディレクトリーに作成してください。
+1. この最後の演習では、まず [items-sold.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/items-sold.html) と [minimal-table.css](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/minimal-table.css) のローカルコピーを新しいディレクトリーに作成してください。
 2. この表をより適切にするために適切な `scope` 属性を追加してみてください。
 3. 最後に、最初のファイルの別のコピーを作成して、今度は、`id` 属性と `headers` 属性を使用して表にアクセスしやすくします。
 
-> **メモ:** 完成した例と照らし合わせて作業内容を確認できます — [items-sold-scope.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-scope.html)([ライブもご覧ください](http://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html))および [items-sold-headers.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-headers.html)([ライブもご覧ください](http://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html))。
+> **メモ:** 完成した例と照らし合わせて作業内容を確認できます — [items-sold-scope.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/items-sold-scope.html)([ライブもご覧ください](https://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html))および [items-sold-headers.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/items-sold-headers.html)([ライブもご覧ください](https://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html))。
 
 ## まとめ
 
-表の HTML について他にも学べることがいくつかありますが、現時点で知っておく必要があることは全てここで説明しました。 この時点で、HTML の表のスタイリングについて学びたいと思うかもしれません — [スタイリングされた表](/ja/docs/Learn/CSS/Styling_boxes/Styling_tables)を参照してください。
+HTML の表について学ぶことは他にもいくつかありますが、知っておく必要があるものはこれですべてです。次に、[HTML 表の評価試験](/ja/docs/Learn/HTML/Tables/Structuring_planet_data)で自分自身を試してみることができます。楽しんでください！
+
+すでに CSS を学んでいて、評価試験がうまくいったなら、移動して HTML 表のスタイル設定について学びましょう。[表のスタイル設定](/ja/docs/Learn/CSS/Building_blocks/Styling_tables)を参照してください。
+
+CSS の学習を始めたい場合は、[CSS 学習領域](/ja/docs/Learn/CSS)を調べてください。
 
 {{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
