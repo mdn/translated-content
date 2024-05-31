@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**网格轨道**是两条{{glossary("grid lines","网格线")}}之间的空间。它们通过使用属性 {{cssxref("grid-template-columns")}} 和 {{cssxref("grid-template-rows")}} 或者简写属性 {{cssxref("grid")}} 和 {{cssxref("grid-template")}} 在*显式网格*中定义。通过将一个网格项目定位到显式网格中创建的轨道外面，也可以在*隐式网格*中创建网格轨道。
+**网格轨道**是两条{{glossary("grid lines","网格线")}}之间的空间。它们通过使用属性 {{cssxref("grid-template-columns")}} 和 {{cssxref("grid-template-rows")}} 或者简写属性 {{cssxref("grid")}} 和 {{cssxref("grid-template")}} 在*显式网格*中定义。也可以通过将网格项目定位到显式网格创建的轨道之外，以在*隐式网格*中创建轨道。
 
 下图展示该网格中的第一个行轨道（上色部分的空间）。
 
