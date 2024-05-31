@@ -11,7 +11,7 @@ l10n:
 
 ## 值
 
-一个数值表示 {{domxref("URLSearchParams")}} 对象的查询参数条目的总数。
+一个数字，表示 {{domxref("URLSearchParams")}} 对象的查询参数条目的总数。
 
 ## 示例
 
