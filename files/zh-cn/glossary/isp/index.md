@@ -12,4 +12,4 @@ l10n:
 ## 参见
 
 - [互联网是如何工作的](/zh-CN/docs/Learn/Common_questions/How_does_the_Internet_work)（给初学者的说明）
-- 维基百科上的[互联网服务提供者](https://zh.wikipedia.org/wiki/%E4%BA%92%E8%81%94%E7%BD%91%E6%9C%8D%E5%8A%A1%E4%BE%9B%E5%BA%94%E5%95%86)
+- 维基百科上的[互联网服务提供者](https://zh.wikipedia.org/wiki/互联网服务供应商)
