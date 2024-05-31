@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-互联网是由全世界众多网络连接而成的网络，使用了互联网协议族（也根据它两个最重要的 {{glossary("protocol","协议")}} 被称为 {{glossary("TCP")}}/{{glossary("IPv6","IP")}}）。
+互联网是由全世界众多网络连接而成的网络，使用了互联网协议族（也因它最重要的两个{{glossary("protocol","协议")}}而被称为 {{glossary("TCP")}}/{{glossary("IPv6","IP")}}）。
 
 ## 参见
 
