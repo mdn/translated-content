@@ -66,11 +66,6 @@ l10n:
 
 ## 参见
 
-### 属性参考
-
-
-### 扩展阅读
-
 - [网格布局的基本概念](/zh-CN/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
 - CSS 网格布局规范中[网格轨道的定义](https://drafts.csswg.org/css-grid/#grid-track-concept)
 - 属性参考
