@@ -74,7 +74,7 @@ write(markup)
 
 > **备注：** 在[延迟](/zh-CN/docs/Web/HTML/Element/script#defer)或[异步](/zh-CN/docs/Web/HTML/Element/script#async)脚本中使用 `document.write()` 将被忽略，并且你会在错误控制台中收到类似于“A call to `document.write()` from an asynchronously-loaded external script was ignored”的消息。
 
-> **备注：** 仅在 Edge 中，在 {{HTMLElement("iframe")}} 中多次调用  `document.write()` 会导致错误“SCRIPT70: Permission denied”。
+> **备注：** 仅在 Edge 中，在 {{HTMLElement("iframe")}} 中多次调用 `document.write()` 会导致错误“SCRIPT70: Permission denied”。
 
 > **备注：** 从 55 版本开始，当满足特定条件时，Chrome 将不会执行通过 `<script>` 元素中的 `document.write()` 。有关详细信息，请参阅[干预 document.write()](https://developer.chrome.com/blog/removing-document-write/)。
 
