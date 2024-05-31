@@ -55,7 +55,7 @@ const blob = new Blob([JSON.stringify(obj, null, 2)], {
 
 ### 创建一个表示类型化数组内容的 URL
 
-以下代码创建了一个 JavaScript [类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)，并创建一个新的包含类型化数组中的数据的 `Blob`。然后调用 {{DOMxRef("URL/createObjectURL_static", "URL.createObjectURL()")} 方法，将 blob 转换为一个 {{glossary("URL")}}。
+以下代码创建了一个 JavaScript [类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)，并创建一个新的包含类型化数组中的数据的 `Blob`。然后调用 {{DOMxRef("URL/createObjectURL_static", "URL.createObjectURL()")}} 方法，将 blob 转换为一个 {{glossary("URL")}}。
 
 #### HTML
 
