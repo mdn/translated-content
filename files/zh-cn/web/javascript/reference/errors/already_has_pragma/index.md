@@ -23,7 +23,7 @@ Warning: -file- is being assigned a //# sourceMappingURL, but already has one.
 
 对于给定的 JavaScript 源码，源码映射规定了不止一次。
 
-JavaScript 源码通常被组合和压缩，使其从服务器传递更加高效。使用[源码映射](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/)，调试器能够将执行的源码映射到原始的源码。有两种指派源码映射的方式，通过注释，或者对 JavaScript 设置标题。
+JavaScript 源码通常被组合和压缩，使其从服务器传递更加高效。使用[源码映射](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/)，调试器能够将执行的源码映射到原始的源码。有两种指派源码映射的方式，通过注释，或者对 JavaScript 设置标头。
 
 ## 示例
 
@@ -35,7 +35,7 @@ JavaScript 源码通常被组合和压缩，使其从服务器传递更加高效
 //# sourceMappingURL=http://example.com/path/to/your/sourcemap.map
 ```
 
-或者，你可以对你的 JavaScript 文件设置一个标题：
+或者，你可以对你的 JavaScript 文件设置标头：
 
 ```js example-good
 X-SourceMap: /path/to/file.js.map
@@ -43,5 +43,5 @@ X-SourceMap: /path/to/file.js.map
 
 ## 参见
 
-- 火狐源文档中的[使用源码映射](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html)
+- 火狐源代码文档中的[使用源码映射](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html)
 - 在 developer.chrome.com 上的 [JavaScript 源码映射简介](https://developer.chrome.google.cn/blog/sourcemaps/)（2012）
