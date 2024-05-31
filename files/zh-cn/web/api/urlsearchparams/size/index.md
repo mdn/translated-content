@@ -38,7 +38,7 @@ searchParams.size; // 4
 const url = new URL("https://example.com?foo=1&bar=2");
 
 if (url.searchParams.size) {
-  console.log("URL has search parameters!");
+  console.log("URL 具有查询参数！");
 }
 ```
 
