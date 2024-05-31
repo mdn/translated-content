@@ -1,6 +1,8 @@
 ---
 title: 描述 - description
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/description
+l10n:
+  sourceCommit: d86e14de2e66319fc0a0ec0539a05400dea5a453
 ---
 
 {{AddonSidebar}}
@@ -16,26 +18,30 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/description
       <td>不强制</td>
     </tr>
     <tr>
+      <th scope="row">Manifest 版本</th>
+      <td>2 或更高</td>
+    </tr>
+    <tr>
       <th scope="row">示例</th>
       <td>
         <pre class="brush: json">
-"description": "附加组件的主要功能特性的简短描述。"</pre
+"description": "Replaces pictures with pictures of cats."</pre
         >
       </td>
     </tr>
   </tbody>
 </table>
 
-用于在用户下载安装使用界面中显示的一段简短的关于该附加组件的描述。
+扩展的简短描述，用于在浏览器的用户界面中显示。在 Firefox 和 Chrome 中，此值最多可以达到 132 个字符。在其他浏览器中，限制可能不同。
 
-关于本地化，可查看 [localizable property](/zh-CN/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json).
+这是一个[可本地化属性](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json)。
 
 ## 示例
 
 ```json
-"description": "附加组件的主要功能特性的简短描述。"
+"description": "Replaces pictures with pictures of cats."
 ```
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
