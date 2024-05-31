@@ -11,7 +11,7 @@ l10n:
 
 不同浏览模式的窗口可能会使用不同的 cookie 存储。例如，隐私浏览/无痕模式窗口使用的 cookie 存储与非无痕/隐私窗口使用的 cookie 存储是分开的。此外，当使用[容器标签](https://wiki.mozilla.org/Security/Contextual_Identity_Project/Containers)功能时，一个窗口可能会有多个 cookie 存储。
 
-有关 cookie 存储的更多信息，请参见 [Work with the Cookies API](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_the_Cookies_API#cookie_stores)。
+有关 cookie 存储的更多信息，请参见[使用 Cookies API](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_the_Cookies_API#cookie_stores)。
 
 ## 类型
 
