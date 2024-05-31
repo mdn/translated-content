@@ -137,7 +137,7 @@ WebRTC 在现代浏览器中通常得到很好的支持，但仍存在一些不�
 #### 事件
 
 - {{domxref("RTCDTMFSender.tonechange_event", "tonechange")}}
-  - ：连接上已开始播放新的 DTMF 音调，或者 `RTCDTMFSender` 的 {{domxref("RTCDTMFSender.toneBuffer", "toneBuffer")}} 中的最后一个音调已发送，且缓冲区现在为空。事件的类型为 {{domxref("RTCDTMFToneChangeEvent")}}。
+  - : 连接上已开始播放新的 DTMF 音调，或者 `RTCDTMFSender` 的 {{domxref("RTCDTMFSender.toneBuffer", "toneBuffer")}} 中的最后一个音调已发送，且缓冲区现在为空。事件的类型为 {{domxref("RTCDTMFToneChangeEvent")}}。
 
 ### 编码转换
 
