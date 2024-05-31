@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("URL API")}} {{AvailableInWorkers}}
 
-{{domxref("URLSearchParams")}} 接口的 **`size`** 只读属性表示搜索参数项的总数。
+{{domxref("URLSearchParams")}} 接口的 **`size`** 只读属性表示查询参数条目的总数。
 
 ## 值
 
