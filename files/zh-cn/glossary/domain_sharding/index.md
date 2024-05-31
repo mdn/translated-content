@@ -15,7 +15,7 @@ HTTP 请求的初始响应通常是一个 HTML 文件，其中列出了需要下
 
 HTTP/2 支持无限制的并发请求，使得在启用 HTTP/2 时，域名分片成为不必要的要求。
 
-## See Also
+## 参见
 
 - {{Glossary("TLS", "传输层安全")}}
 - [DNS](/zh-CN/docs/Glossary/DNS)
