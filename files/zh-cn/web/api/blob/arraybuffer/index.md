@@ -1,9 +1,11 @@
 ---
 title: Blob：arrayBuffer() 方法
 slug: Web/API/Blob/arrayBuffer
+l10n:
+  sourceCommit: 84a9afd94f497d4173bde131731ef6bdf0b6135d
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
 {{domxref("Blob")}} 接口的 **`arrayBuffer()`** 方法返回一个 {{jsxref("Promise")}}，其会兑现一个包含 blob 二进制数据内容的 {{jsxref("ArrayBuffer")}}。
 
@@ -27,7 +29,7 @@ arrayBuffer()
 
 ## 使用说明
 
-{{domxref("FileReader.readAsArrayBuffer()")}} 方法与之类似，但 `arrayBuffer()` 返回一个 promise 对象，而不是像 `FileReader` 接口的方法一样返回一个基于事件的 API。
+{{domxref("FileReader.readAsArrayBuffer()")}} 方法与之类似，但 `arrayBuffer()` 返回一个 promise 对象，而不是像 `FileReader` 接口的方法一样是一个基于事件的 API。
 
 ## 规范
 
