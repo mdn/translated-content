@@ -7,11 +7,11 @@ l10n:
 
 {{APIRef("DOM")}}
 
-**`Document.open()`** 方法可打开文档供{{domxref("Document.write", "写入", "", "1")}}。
+**`Document.open()`** 方法可打开文档以供{{domxref("Document.write", "写入", "", "1")}}。
 
 这将会有一些连带的影响。例如：
 
-- 文档内所有节点、文档内或文档窗口上的事件监听器均移除。
+- 此时已注册到文档、文档中的节点或文档的 window 的所有事件监听器会被清除。
 - 文档中的所有节点会被清除。
 
 ## 语法
@@ -46,7 +46,7 @@ document.close();
 
 ### 内容安全
 
-该方法与其他属性一样受[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)的限制，如果执行该方法会改变文档的源将不起作用。
+该方法与其他属性一样受[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)的限制，会改变文档的来源的方法调用不会起作用。
 
 ## 三个参数的 document.open()
 
@@ -68,7 +68,7 @@ document.open(type, replace);
 
 `type` 指定要写入的数据的 MIME 类型（例如 `text/html`），如果设置了 replace（即 `"replace"` 字符串），新文档历史记录会替换当前写入文档的记录。
 
-这种形式现已过时；它不会抛出错误，而是直接转发到 `document.open()`（即相当于没有参数运行它）。历史替换行为现在总是会发生。
+这种形式现已过时；它不会抛出错误，而是直接转发到 `document.open()`（相当于无参数形式的调用）。历史替换行为现在总是会发生。
 
 ## 规范
 
