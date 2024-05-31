@@ -55,7 +55,7 @@ Firefox 12 は 米国時間 2012 年 4 月 24 日にリリースされました�
 
 ### 開発者ツール
 
-- [Web Console](/ja/docs/Tools/Web_Console) がコンソールが開いていない状態の場合にエラーメッセージと {{ domxref("console.log()") }} を用いて追加したログエントリをキャッシュし、コンソールが開いたときにそれらを表示するようになりました。
+- [Web Console](/ja/docs/Tools/Web_Console) がコンソールが開いていない状態の場合にエラーメッセージと {{ domxref("console.log()") }} を用いて追加したログエントリーをキャッシュし、コンソールが開いたときにそれらを表示するようになりました。
 - [3D view](/ja/docs/Tools/Page_Inspector/3D_view) で "r" キーを押すことにより、ズームレベル、移動、回転をリセットできるようになりました。
 - [3D view](/ja/docs/Tools/Page_Inspector/3D_view) でノードを選択した後に "x" キーを押すことにより、そのノードを隠すことができるようになりました。
 - [ソースエディター](/ja/docs/Tools/Using_the_Source_Editor) にいくつかの新しい編集機能とキーボードショートカットが追加されました。詳細は、[ソースエディターの利用](/ja/docs/Tools/Using_the_Source_Editor) を参照してください。

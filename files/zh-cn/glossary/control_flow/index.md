@@ -2,12 +2,12 @@
 title: 控制流
 slug: Glossary/Control_flow
 l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+  sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
 ---
 
 {{GlossarySidebar}}
 
-*控制流*是计算机执行一个程序中语句的顺序。
+**控制流**是计算机执行一个程序中语句的顺序。
 
 程序除非遇到改变控制流的代码结构（实际中非常常见），比如条件语句和循环，否则就会从第一行代码开始执行直至最后一行。
 
@@ -29,6 +29,6 @@ if (isEmpty(field)) {
 
 ## 参见
 
-- 维基百科上的[控制流程](https://zh.wikipedia.org/wiki/控制流程)
-- MDN 上的 [JavaScript 参考——控制流](/zh-CN/docs/Web/JavaScript/Reference#control_flow)
+- [JavaScript 参考——控制流](/zh-CN/docs/Web/JavaScript/Reference#控制流)
 - MDN 上的[语句（控制流）](/zh-CN/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
+- 维基百科上的[控制流程](https://zh.wikipedia.org/wiki/控制流程)

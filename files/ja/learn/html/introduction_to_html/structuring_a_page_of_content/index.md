@@ -2,7 +2,7 @@
 title: コンテンツのページの構造化
 slug: Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content
 l10n:
-  sourceCommit: 8e2641ebe076ab89299c77a51ece882de4ba5efb
+  sourceCommit: c64e813d8ab9dbe22cbc049c26f7c6703370a2b7
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
@@ -31,7 +31,7 @@ CSS を使用してレイアウトできるようにコンテンツのページ�
   </tbody>
 </table>
 
-## 開始地点
+## 開始点
 
 この評価を開始するには、[すべての開始資産を含む zip ファイル](https://raw.githubusercontent.com/mdn/learning-area/main/html/introduction-to-html/structuring-a-page-of-content-start/assets.zip)を入手してください。
 
@@ -41,9 +41,9 @@ zip ファイルには以下のものが含まれています。
 - マークアップをスタイルするための CSS
 - ページで使用されている画像
 
-例はローカルコンピュータで作成するか、あるいは [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), [Glitch](https://glitch.com/) などのサイトを使用して作業してください。
+例はローカルコンピューターで作成するか、あるいは [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), [Glitch](https://glitch.com/) などのサイトを使用して作業してください。
 
-> **メモ:** もし行き詰まったら、私たちに助けを求めてください。このページの下にある[評価またはさらなるヘルプ](#評価またはさらなるヘルプ)の節をご覧ください。
+> **メモ:** 行き詰まった場合は、[コミュニケーションチャンネル](/ja/docs/MDN/Community/Communication_channels)のいずれかに連絡してください。
 
 ## プロジェクト概要
 
@@ -78,17 +78,5 @@ zip ファイルには以下のものが含まれています。
 次のスクリーンショットは、マークアップされた後のホームページの外観の例を示しています。
 
 ![評価のための完成例。「バードウォッチング」という見出し、鳥の写真、ウェルカムメッセージを記載した、バードウォッチングに関するシンプルなウェブページ。](example-page.png)
-
-## 評価またはさらなるヘルプ
-
-この作品を評価してほしい、行き詰っているので相談に乗ってほしいという方。
-
-1. 作品をオンラインの共有可能なエディター、例えば [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) に置いてください。
-2. [MDN Discourse forum 学習カテゴリー](https://discourse.mozilla.org/c/mdn/learn/250)に評価や助けを依頼する記事を書いてください。投稿には以下を記載してください。
-
-   - 「手紙のマークアップのための評価希望」のようなわかりやすいタイトル。
-   - すでに持っている内容や、私たちに望むことの詳細。例えば、行き詰まって助けが必要な場合や、評価を希望する場合などを指示してください。
-   - 評価やヘルプが必要な例へのリンクを、オンライン共有エディターで示してください（上記のステップ 1 で述べたとおり）。コードを見ることができなければ、コーディングの問題で誰かを助けることはとても難しいのです。
-   - 実際の課題または評価ページへのリンク。あなたが助けを求めている問題を探すことができます。
 
 {{PreviousMenu("Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}

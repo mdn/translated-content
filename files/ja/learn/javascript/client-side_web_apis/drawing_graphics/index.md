@@ -2,12 +2,12 @@
 title: グラフィックの描画
 slug: Learn/JavaScript/Client-side_web_APIs/Drawing_graphics
 l10n:
-  sourceCommit: 4f6ba2f5a1615fe155292cac416c7ab6b9d711ec
+  sourceCommit: 4d4e7617f5d573bbf8f51333b959c73b10262d52
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
 
-ブラウザーには、 Scalable Vector Graphics ([SVG](/ja/docs/Web/SVG)) 言語から HTML の {{htmlelement("canvas")}} 要素に描画するための API まで、とても強力なグラフィックプログラミングツールが含まれています（[キャンバス API](/ja/docs/Web/API/Canvas_API) と [WebGL](/ja/docs/Web/API/WebGL_API) を参照）。この記事では、キャンバスについて紹介し、さらに詳しく学ぶためのリソースを提供します。
+ブラウザーには、Scalable Vector Graphics ([SVG](/ja/docs/Web/SVG)) 言語から HTML の {{htmlelement("canvas")}} 要素に描画するための API まで、とても強力なグラフィックプログラミングツールが含まれています（[キャンバス API](/ja/docs/Web/API/Canvas_API) と [WebGL](/ja/docs/Web/API/WebGL_API) を参照）。この記事では、キャンバスについて紹介し、さらに詳しく学ぶためのリソースを提供します。
 
 <table>
   <tbody>
@@ -26,7 +26,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">目標:</th>
+      <th scope="row">目的:</th>
       <td>
         JavaScript　で<code>&#x3C;canvas></code>　要素に描画するための基本を学ぶこと。
       </td>
@@ -40,7 +40,7 @@ HTML の [マルチメディアと埋め込み](/ja/docs/Learn/HTML/Multimedia_a
 
 しかし、これではまだ十分ではありません。 [CSS](/ja/docs/Learn/CSS) や [JavaScript](/ja/docs/Learn/JavaScript) を使用して、マークアップで表わされた SVG ベクター画像をアニメーションさせたり操作したりすることはできますが、ビットマップ画像に対して同じことをする方法はまだなく、利用できるツールもかなり限定されていたのです。ウェブでは、アニメーションやゲーム、 3D シーンなど、 C++ や Java といった低水準の言語が扱う要件を効果的に作成する方法がまだありませんでした。
 
-ブラウザーが {{htmlelement("canvas")}} 要素と関連する[キャンバス API](/ja/docs/Web/API/Canvas_API) に対応し始めた頃から状況は改善されました。 Apple が 2004 年頃にこれを発明し、それ以降の数年間で、他のブラウザーもこれを実装して後に続きました。後述するように、キャンバスは 2D アニメーション、ゲーム、データの視覚化、その他の種類のアプリケーションを作成するための多くの有用なツールを提供し、特にウェブプラットフォームが提供する他の API と組み合わせたときにその威力を発揮します。
+ブラウザーが {{htmlelement("canvas")}} 要素と関連する[キャンバス API](/ja/docs/Web/API/Canvas_API) に対応し始めた頃から状況は改善されました。後述するように、キャンバスは 2D アニメーション、ゲーム、データの視覚化、その他の種類のアプリケーションを作成するためのいくつかの有用なツールを提供し、特にウェブプラットフォームが提供する他の API と組み合わせたときにその威力を発揮しますが、アクセシブルにするには難しかったり不可能であったりします。
 
 以下の例は、もともと [JavaScript オブジェクト入門](/ja/docs/Learn/JavaScript/Objects/Object_building_practice)モジュールで出会った、キャンバスベースのシンプルな 2D の弾むボールアニメーションを示しています。
 
@@ -52,9 +52,7 @@ HTML の [マルチメディアと埋め込み](/ja/docs/Learn/HTML/Multimedia_a
 
 この記事では、生の WebGL コードはとても複雑であるため、主に 2D キャンバスに焦点を当てます。しかし、WebGL ライブラリーを使用してより簡単に 3D シーンを作成する方法を紹介します。また、生の WebGL を使用するチュートリアルは他の場所にあります。 [WebGL 入門](/ja/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL)を参照してください。
 
-> **メモ:** キャンバスの基本機能は、 2D キャンバスについては IE 8 以下、 WebGL については IE 11 以下を除き、すべてのブラウザーで十分に対応しています。
-
-## アクティブラーニング: \<canvas>を始めよう
+## アクティブラーニング: \<canvas> を始めよう
 
 ウェブページに 2D _または_ 3D シーンを作成する場合、HTML の {{htmlelement("canvas")}} 要素から開始する必要があります。この要素は、ページ上で画像が描画される領域を定義するために使用されます。これは、ページ上に要素を記載するのと同じくらい簡単です。
 
@@ -64,15 +62,17 @@ HTML の [マルチメディアと埋め込み](/ja/docs/Learn/HTML/Multimedia_a
 
 これにより、ページ上に 320 × 240 ピクセルの大きさのキャンバスが作成されます。
 
-canvas タグの内部には、ユーザーのブラウザーが canvas に対応していない場合に表示される代替コンテンツを置くことができます。
+`<canvas>` タグの中には、代替コンテンツを記述してください。これは、キャンバスに対応していないブラウザのユーザーや、スクリーンリーダーのユーザーに対して、キャンバスのコンテンツを記述するものです。
 
 ```html
 <canvas width="320" height="240">
-  <p>Your browser doesn't support canvas. Boo hoo!</p>
+  <p>キャンバスが見えない人向けの説明。</p>
 </canvas>
 ```
 
-もちろん、上記のメッセージは実に不親切です。実際の例では、代替コンテンツをキャンバスの内容に関連付けることが必要です。たとえば、常に更新される株価のグラフをレンダリングする場合、フォールバック コンテンツには最新の株価グラフの静止画像を使用し、代替テキストに株価を示すテキストを表示ようにすることができます。
+代替コンテンツは、キャンバスのコンテンツに代わる有益なコンテンツを提供する必要があります。例えば、常に更新される株価のグラフをレンダリングしている場合、代替コンテンツは最新の株価グラフの静止画像で、`alt` テキストで株価の内容を言ったり、個々の株価ページへのリンクのリストを表示したりすることができます。
+
+> **メモ:** キャンバスのコンテンツはスクリーンリーダーにアクセスできません。キャンバス要素自体に直接 [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性の値として説明テキストを含めるか、開始タグと閉じられた `<canvas>` タグ内に代替コンテンツを記述してください。キャンバスのコンテンツは DOM に所属しませんが、その中にある代替コンテンツは所属します。
 
 ### キャンバスの作成とサイズ変更
 
@@ -123,7 +123,7 @@ const ctx = canvas.getContext("2d");
 次に移動する前に最後のことをしましょう。キャンバスの背景を黒く塗って、キャンバス API を最初に体験してもらいましょう。 JavaScript の一番下に以下の行を追加してください。
 
 ```js
-ctx.fillStyle = "rgb(0, 0, 0)";
+ctx.fillStyle = "rgb(0 0 0)";
 ctx.fillRect(0, 0, width, height);
 ```
 
@@ -147,7 +147,7 @@ ctx.fillRect(0, 0, width, height);
 2. 次に、 JavaScript の一番下に、以下の行を追加してください。
 
    ```js
-   ctx.fillStyle = "rgb(255, 0, 0)";
+   ctx.fillStyle = "rgb(255 0 0)";
    ctx.fillRect(50, 50, 100, 150);
    ```
 
@@ -156,16 +156,16 @@ ctx.fillRect(0, 0, width, height);
 3. もうひとつ矩形を追加してみましょう。今度は緑色の矩形です。 JavaScript の一番下に以下のものを追加してください。
 
    ```js
-   ctx.fillStyle = "rgb(0, 255, 0)";
+   ctx.fillStyle = "rgb(0 255 0)";
    ctx.fillRect(75, 75, 100, 100);
    ```
 
    保存して更新すると、新しい矩形が表示されます。この点は重要です。矩形や行を描くなどのグラフィック処理は、発生した順番に実行されます。たとえば、壁にペンキを塗るとき、ペンキが重なり合うと、その下にあるものが隠れてしまうことがあります。これは何らかの方法で変更することはできないので、グラフィックを描く順序を注意深く考える必要があります。
 
-4. 半透明の色を指定することで、例えば `rgba()` を使用して半透明のグラフィックを描画することができることに注意してください。 `a` 値は「アルファチャンネル」と呼ばれるもの、つまり色が持つ透明度の量を定義します。この値が高いほど、その背後にあるものをより見えなくすることができます。あなたのコードに以下のように追加してください。
+4. 半透明の色を指定することで、例えば `rgb()` を使用して半透明のグラフィックを描画することができることに注意してください。「アルファチャンネル」は、色が持つ透明度の量を定義します。この値が高いほど、その背後にあるものをより見えなくすることができます。コードに以下のように追加してください。
 
    ```js
-   ctx.fillStyle = "rgba(255, 0, 255, 0.75)";
+   ctx.fillStyle = "rgb(255 0 255 / 75%)";
    ctx.fillRect(25, 100, 175, 50);
    ```
 
@@ -178,7 +178,7 @@ ctx.fillRect(0, 0, width, height);
 1. 前の例に以下のものを追加してください。また、前の JavaScript の行の下に追加してください。
 
    ```js
-   ctx.strokeStyle = "rgb(255, 255, 255)";
+   ctx.strokeStyle = "rgb(255 255 255)";
    ctx.strokeRect(25, 25, 175, 200);
    ```
 
@@ -211,7 +211,7 @@ ctx.fillRect(0, 0, width, height);
 典型的な、簡単なパス描画処理をすると、次のようになります。
 
 ```js
-ctx.fillStyle = "rgb(255, 0, 0)";
+ctx.fillStyle = "rgb(255 0 0)";
 ctx.beginPath();
 ctx.moveTo(50, 50);
 // draw your path
@@ -233,7 +233,7 @@ ctx.fill();
 2. 次に、先ほどの追加部分の下に従うことでパスを開始します。ここでは、三角形の色を設定し、パスを描き始め、何も描かずにペンを (50, 50) に移動させています。そこが三角形を描き始める場所です。
 
    ```js
-   ctx.fillStyle = "rgb(255, 0, 0)";
+   ctx.fillStyle = "rgb(255 0 0)";
    ctx.beginPath();
    ctx.moveTo(50, 50);
    ```
@@ -273,7 +273,7 @@ ctx.fill();
 1. キャンバスには円弧を追加してみましょう。コードの一番下に以下のように追加してください。
 
    ```js
-   ctx.fillStyle = "rgb(0, 0, 255)";
+   ctx.fillStyle = "rgb(0 0 255)";
    ctx.beginPath();
    ctx.arc(150, 106, 50, degToRad(0), degToRad(360), false);
    ctx.fill();
@@ -319,6 +319,8 @@ ctx.fill();
 
 また、テキスト レンダリングをコントロールするのに役立つプロパティもいくつかあります。このプロパティは、CSSの{{cssxref("font")}}プロパティと同じ構文を値として受け取ります。
 
+キャンバスのコンテンツはスクリーンリーダーに対するアクセシビリティがありません。キャンバスに描かれたテキストは DOM では利用できませんが、アクセシビリティを確保するためには利用できるようにする必要があります。この例では、テキストを `aria-label` の値として記載しています。
+
 以下のブロックを JavaScript の最下部に追加してみてください。
 
 ```js
@@ -330,6 +332,8 @@ ctx.strokeText("Canvas text", 50, 50);
 ctx.fillStyle = "red";
 ctx.font = "48px georgia";
 ctx.fillText("Canvas text", 50, 150);
+
+canvas.setAttribute("aria-label", "Canvas text");
 ```
 
 ここでは、アウトラインとストロークの 2 つのテキストを描きます。最終的な例はこのようになるはずです。
@@ -376,6 +380,12 @@ ctx.fillText("Canvas text", 50, 150);
    - 4 番目と 5 番目の引数は、読み込んだ元画像から切り出したい領域の幅と高さを定義します。
    - 6 番目と 7 番目の引数は、画像の切り出し部分の左上隅をキャンバスの左上隅と関連させて描画する座標を定義します。
    - 8 番目と 9 番目の引数は、画像の切り出し領域を描画するための幅と高さを定義するものです。今回は、元のスライスと同じ寸法を保有しましたが、異なる値を指定することでリサイズすることも可能です。
+
+5. 画像が有意に更新された場合、{{glossary("accessable description", "アクセシブル説明")}}も更新しななければなりません。
+
+   ```js
+   canvas.setAttribute("aria-label", "Firefox Logo");
+   ```
 
 最終的な例はこのようになるはずです。
 
@@ -424,7 +434,7 @@ ctx.fillText("Canvas text", 50, 150);
 4. ここでのアイディアは、 `for` ループの中でキャンバス上に何かを描くことができ、それを毎回反復処理することで、何か面白いものを作成することができるというものです。以下のコードを `for` ループの中に追加してください。
 
    ```js
-   ctx.fillStyle = `rgba(${255 - length},0,${255 - length},0.9)`;
+   ctx.fillStyle = `rgb(${255 - length} 0 ${255 - length} / 90%)`;
    ctx.beginPath();
    ctx.moveTo(moveOffset, moveOffset);
    ctx.lineTo(moveOffset + length, moveOffset);
@@ -463,7 +473,7 @@ ctx.fillText("Canvas text", 50, 150);
 
 ### アニメーション
 
-上で作成したループの例は楽しいものでしたが、実際のところ、本格的なキャンバスアプリケーション（ゲームやリアルタイムの視覚化など）には、継続的に続く一定のループが必要です。キャンバスを映画のようなものと考えると、フレームごとに表示を更新して更新されたビューを表示する必要があります。
+上で作成したループの例は楽しいものでしたが、本格的なキャンバスアプリケーション（ゲームやリアルタイムのビジュアライゼーションなど）では、実に継続的なループが必要です。キャンバスを映画のように考えるなら、ディスプレイをフレームごとに更新して、更新されたビューを表示させることが実際に必要であり、人間の目に滑らかな動きが現れるような、理想的なリフレッシュレートは 60 フレーム/秒です。
 
 JavaScript で、関数を 1 秒間に数回繰り返し実行することができる関数がいくつかありますが、ここでの目的に最適なのは {{domxref("window.requestAnimationFrame()")}} です。これは 1 つの引数を取ります - 各フレームに対して実行したい関数の名前です。次にブラウザーが画面の内側へ更新する準備ができたとき、その関数が呼び出されます。その関数がアニメーションの新しい更新を描画し、関数の終わりの直前に再び `requestAnimationFrame()` を呼び出すと、アニメーションループが実行され続けます。ループは `requestAnimationFrame()` の呼び出しをやめるか、呼び出した後、フレームが呼び出される前に {{domxref("window.cancelAnimationFrame()")}} を呼び出すと終わりになります。
 
@@ -475,7 +485,7 @@ JavaScript で、関数を 1 秒間に数回繰り返し実行することがで
 
 ```js
 function loop() {
-  ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
+  ctx.fillStyle = "rgb(0 0 0 / 25%)";
   ctx.fillRect(0, 0, width, height);
 
   for (const ball of balls) {
@@ -508,16 +518,25 @@ loop();
 
 ### 簡単なキャラクターのアニメーション
 
-それでは、自分自身で簡単なアニメーションを作ってみましょう。ある素晴らしいレトロコンピュータゲームのキャラクターが、画面内を歩き回るようにします。
+それでは、自分自身で簡単なアニメーションを作ってみましょう。ある素晴らしいレトロコンピューターゲームのキャラクターが、画面内を歩き回るようにします。
 
 1. キャンバスのテンプレート ([1_canvas_template](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template)) の新しいコピーを作成し、コードエディターで開いてください。
-2. JavaScript の一番下に、以下の行を追加して、座標原点が再びキャンバスの中央に来るようにします。
+
+2. 画像を反映するための内部 HTML を更新してください。
+
+   ```html
+   <canvas class="myCanvas">
+     <p>歩いている人。</p>
+   </canvas>
+   ```
+
+3. JavaScript の一番下に、以下の行を追加して、座標原点が再びキャンバスの中央に来るようにします。
 
    ```js
    ctx.translate(width / 2, height / 2);
    ```
 
-3. では、新しい {{domxref("HTMLImageElement")}} オブジェクトを作成し、その [`src`](/ja/docs/Web/HTML/Element/img#src) に読み込ませたい画像を設定しましょう。そして、`onload` イベントハンドラーを追加して、画像を読み込んだら `draw()` 関数が起動するよう設定しましょう。
+4. では、新しい {{domxref("HTMLImageElement")}} オブジェクトを作成し、その [`src`](/ja/docs/Web/HTML/Element/img#src) に読み込ませたい画像を設定しましょう。そして、`onload` イベントハンドラーを追加して、画像を読み込んだら `draw()` 関数が起動するよう設定しましょう。
 
    ```js
    const image = new Image();
@@ -525,7 +544,7 @@ loop();
    image.onload = draw;
    ```
 
-4. 次に、スプライトが画面上に描画される位置と、表示したいスプライトの番号を記録するための変数を追加します。
+5. 次に、スプライトが画面上に描画される位置と、表示したいスプライトの番号を記録するための変数を追加します。
 
    ```js
    let sprite = 0;
@@ -538,19 +557,19 @@ loop();
 
    これには 6 つのスプライトが含まれており、それぞれが幅 102 ピクセル、高さ 148 ピクセルで、歩行シーケンス全体を構成しています。それぞれのスプライトをきれいに表示するためには、上で Firefox のロゴに対して行ったように、 `drawImage()` を使用してスプライトシートから単一のスプライト画像を切り出し、その部分のみを表示する必要があります。スライスの X 座標は 102 の倍数でなければならず、Y 座標は常に 0 でなければなりません。
 
-5. では、コードの一番下に空の `draw()` 関数を挿入して、いくつかのコードで埋められるようにしましょう。
+6. では、コードの一番下に空の `draw()` 関数を挿入して、いくつかのコードで埋められるようにしましょう。
 
    ```js
    function draw() {}
    ```
 
-6. この節の残りのコードは `draw()` の中に記述します。まず、以下の行を追加します。これはキャンバスで各フレームを描画するための準備をするものです。長方形の左上隅を `-(width/2), -(height/2)` と指定しなければならないことに注意してください先ほど原点位置を `width/2, height/2` と指定したためです。
+7. この節の残りのコードは `draw()` の中に記述します。まず、以下の行を追加します。これはキャンバスで各フレームを描画するための準備をするものです。長方形の左上隅を `-(width/2), -(height/2)` と指定しなければならないことに注意してください先ほど原点位置を `width/2, height/2` と指定したためです。
 
    ```js
    ctx.fillRect(-(width / 2), -(height / 2), width, height);
    ```
 
-7. 次に、drawImage の引数 9 個版を使用して画像を描画します。従うことで以下が追加されます。
+8. 次に、drawImage の引数 9 個版を使用して画像を描画します。従うことで以下が追加されます。
 
    ```js
    ctx.drawImage(image, sprite * 102, 0, 102, 148, 0 + posX, -74, 102, 148);
@@ -564,7 +583,7 @@ loop();
    - 6 番目と 7 番目の引数は、キャンバス上にスライスを描画するボックスの左上隅を指定します。 X 位置は 0 + `posX` で、`posX` 値を変更することにより描画位置を変更できることを意味しています。
    - 8 番目と 9 番目の引数は、キャンバスで表示する画像の大きさを指定します。元の大きさを維持したいだけなので、幅と高さを 102 と 148 に指定しています。
 
-8. 今度は、描画するたびに `sprite` の値を変更します。まあ、とにかくいくつかの描画の後で。以下のブロックを `draw()` 関数の末尾に追加してください。
+9. 今度は、描画するたびに `sprite` の値を変更します。まあ、とにかくいくつかの描画の後で。以下のブロックを `draw()` 関数の末尾に追加してください。
 
    ```js
    if (posX % 13 === 0) {
@@ -580,23 +599,23 @@ loop();
 
    外側のブロックの中では [`if...else`](/ja/docs/Web/JavaScript/Reference/Statements/if...else) 文を使用して、 `sprite` の値が 5 （0 から 5 までのスプライト番号が実行されている最後のスプライト）であるかどうかを調べています。もし、すでに最後のスプライトを示していれば、 `sprite` を 0 に戻し、そうでなければ、 1 だけ増加させます。
 
-9. 次に、各フレームで `posX` 値を変更する方法を作業する必要があります。次のコードブロックを、前回のコードのすぐ下に追加してください。
+10. 次に、各フレームで `posX` 値を変更する方法を作業する必要があります。次のコードブロックを、前回のコードのすぐ下に追加してください。
 
-   ```js
-   if (posX > width / 2) {
-     let newStartPos = -(width / 2 + 102);
-     posX = Math.ceil(newStartPos);
-     console.log(posX);
-   } else {
-     posX += 2;
-   }
-   ```
+    ```js
+    if (posX > width / 2) {
+      let newStartPos = -(width / 2 + 102);
+      posX = Math.ceil(newStartPos);
+      console.log(posX);
+    } else {
+      posX += 2;
+    }
+    ```
 
-   別の `if...else` 文を使用して、 `posX` の値が `width/2` よりも大きくなったかどうか、つまりキャラクターが画面の右端から歩き出したかどうかを確認しています。もしそうなら、キャラクターが画面の左側の辺のすぐ左に来るように位置を計算します。
+    別の `if...else` 文を使用して、 `posX` の値が `width/2` よりも大きくなったかどうか、つまりキャラクターが画面の右端から歩き出したかどうかを確認しています。もしそうなら、キャラクターが画面の左側の辺のすぐ左に来るように位置を計算します。
 
-   キャラクターがまだ画面の端に達していない場合は、 `posX` を 2 だけ増加させます。これは、次に彼を描画するときに、彼を少し右側に移動させます。
+    キャラクターがまだ画面の端に達していない場合は、 `posX` を 2 だけ増加させます。これは、次に彼を描画するときに、彼を少し右側に移動させます。
 
-10. 最後に、アニメーションをループさせるために、 `draw()` 関数の一番下に {{domxref("window.requestAnimationFrame", "requestAnimationFrame()")}} を呼び出す必要があります。
+11. 最後に、アニメーションをループさせるために、 `draw()` 関数の一番下に {{domxref("window.requestAnimationFrame", "requestAnimationFrame()")}} を呼び出す必要があります。
 
     ```js
     window.requestAnimationFrame(draw);
@@ -606,7 +625,7 @@ loop();
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/loops_animation/7_canvas_walking_animation/index.html", '100%', 260)}}
 
-> **メモ:** The finished code is available on GitHub as [7_canvas_walking_animation](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/loops_animation/7_canvas_walking_animation).
+> **メモ:** 最終的なコードは、GitHub 上の [7_canvas_walking_animation](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/loops_animation/7_canvas_walking_animation) として利用できます。
 
 ### 簡単なお絵描きアプリ
 
@@ -638,7 +657,7 @@ canvas.addEventListener("mouseup", () => (pressed = false));
 
 ```js
 clearBtn.addEventListener("click", () => {
-  ctx.fillStyle = "rgb(0,0,0)";
+  ctx.fillStyle = "rgb(0 0 0)";
   ctx.fillRect(0, 0, width, height);
 });
 ```
@@ -667,7 +686,7 @@ function draw() {
 draw();
 ```
 
-> **メモ:** {{htmlelement("input")}} の `range` および `color` 型は、 Internet Explorer のバージョン 10 より前を除いて、すべてのブラウザーが対応しています。また、 Safari も `color` に対応していません。もしブラウザーがこれらの入力型に対応していない場合は、単純なテキストフィールドに戻り、有効な色や数の値を自分で入力する必要があります。
+すべての {{htmlelement("input")}} 型の対応が進んでいます。ブラウザーがある入力型に対応していない場合は、単純なテキストフィールドに戻ります。
 
 ## WebGL
 
@@ -687,8 +706,8 @@ WebGLライブラリーを使って何かを作成する簡単な例を見てみ
 
 1. まず、新しいフォルダーに [threejs-cube/index.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/threejs-cube/index.html) をローカルにコピーし、同じフォルダーに [metal003.png](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/threejs-cube/metal003.png) をコピーして保存してください。これは、後で立方体の表面テクスチャとして使用する画像です。
 2. 次に、 `script.js` というファイルを新規に作成し、これも先ほどと同じフォルダーに保存します。
-3. 次に、 [three.min.js ライブラリーをダウンロード](https://raw.githubusercontent.com/mrdoob/three.js/dev/build/three.min.js)して、先ほどと同じディレクトリーに保存する必要があります。
-4. これで `three.js` をページに持つことができたので、これを使用する JavaScript を `script.js` に書き始めることができます。まず、新しいシーンを作成することから始めましょう。 main.js ファイルに以下のように追加してください。
+3. 次に、Three.js ライブラリーがインストールしてある必要があります。[Three.js を使った基本的なデモの作成](/ja/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js)で記述されている環境構築の段階に従って、Three.js が期待通りに動作するようにしてください。
+4. これで `three.js` をページに割り当てることができたので、これを使用する JavaScript を `script.js` に書き始めることができます。まず、新しいシーンを作成することから始めましょう。`script.js` ファイルに以下のように追加してください。
 
    ```js
    const scene = new THREE.Scene();
@@ -711,7 +730,7 @@ WebGLライブラリーを使って何かを作成する簡単な例を見てみ
    [`PerspectiveCamera()`](https://threejs.org/docs/index.html#api/en/cameras/PerspectiveCamera) コンストラクターは 4 つの引数を取ります。
 
    - 視野角です。カメラの前方で画面に表示されるべき領域の広さを度数で表します。
-   - アスペクト比です。通常、これはシーンの幅をシーンの高さで割った比率です。別の値を使用すると、シーンが歪みます（それが狙いかもしれませんが、通常はそうではありません）。
+   - {{glossary("aspect ratio", "アスペクト比")}}です。通常、これはシーンの幅をシーンの高さで割った比率です。別の値を使用すると、シーンが歪みます（それが狙いかもしれませんが、通常はそうではありません）。
    - 前方平面です。カメラにどれだけ近づけば、オブジェクトを画面に描画しなくなるか、を指定します。指先を目と目の間の空間にどんどん移動させていくと、やがて見えなくなることを思い浮かべてください。
    - 後方平面です。カメラからどのくらい離れれば描画されなくなるかを指定します。
 
@@ -758,10 +777,10 @@ WebGLライブラリーを使って何かを作成する簡単な例を見てみ
 8. `draw()` の定義に入る前に、シーンを少し盛り上げるために、ライトをいくつか追加します。以下、ブロックを追加していきます。
 
    ```js
-   const light = new THREE.AmbientLight("rgb(255,255,255)"); // soft white light
+   const light = new THREE.AmbientLight("rgb(255 255 255)"); // soft white light
    scene.add(light);
 
-   const spotLight = new THREE.SpotLight("rgb(255,255,255)");
+   const spotLight = new THREE.SpotLight("rgb(255 255 255)");
    spotLight.position.set(100, 1000, 1000);
    spotLight.castShadow = true;
    scene.add(spotLight);
@@ -806,7 +825,7 @@ WebGLライブラリーを使って何かを作成する簡単な例を見てみ
 
 ## 例
 
-- [Violent theremin](https://github.com/mdn/webaudio-examples/tree/master/violent-theremin) — 音声を生成するためにウェブオーディオ API を使用し、それと一緒に美しく視覚化するためにキャンバスを使用します。
+- [Violent theremin](https://github.com/mdn/webaudio-examples/tree/main/violent-theremin) — 音声を生成するためにウェブオーディオ API を使用し、それと一緒に美しく視覚化するためにキャンバスを使用します。
 - [Voice change-o-matic](https://github.com/mdn/voice-change-o-matic) — ウェブオーディオ API からのリアルタイムの音声データを視覚化するためにキャンバスを使用します。
 
 {{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}

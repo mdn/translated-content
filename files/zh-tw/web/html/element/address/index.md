@@ -28,6 +28,7 @@ slug: Web/HTML/Element/address
 此範例演示了使用 `<address>` 標記文章作者的聯絡資訊。
 
 ```html
+<address>
   You can contact author at
   <a href="http://www.example.com/contact">www.example.com</a>.<br />
   If you see any bugs, please

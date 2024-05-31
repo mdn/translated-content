@@ -2,7 +2,7 @@
 title: "CSP: require-trusted-types-for"
 slug: Web/HTTP/Headers/Content-Security-Policy/require-trusted-types-for
 l10n:
-  sourceCommit: c49f6dcd20b14f28218aa26030ebbb2f54143521
+  sourceCommit: 835d6632d59993861a0458510402787f8a2c3cb3
 ---
 
 {{HTTPSidebar}}{{SeeCompatTable}}

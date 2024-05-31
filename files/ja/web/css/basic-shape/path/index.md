@@ -1,6 +1,7 @@
 ---
 title: path()
-slug: Web/CSS/path
+slug: Web/CSS/basic-shape/path
+original_slug: Web/CSS/path
 ---
 
 {{CSSRef}}
