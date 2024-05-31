@@ -1,5 +1,5 @@
 ---
- title: Building an Internet-Connected Phone with PeerJS
+ title: 使用 PeerJS 构建一部联网电话
  slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs
  l10n:
    sourceCommit: 76717f752447b6eef25bf29c12272e407ee5cb6b
@@ -9,7 +9,7 @@
 
 {{NextMenu("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Setup")}}
 
-WebRTC 的主要问题之一是它相当复杂，使用和开发起来很复杂--处理信令服务并知道何时调用正确的端点可能会令人困惑。但也有一些好消息；[PeerJS](https://peerjs.com/) 是一个 WebRTC 框架，它抽象了所有的 ICE 和信令逻辑，让你可以专注于应用程序的功能。PeerJS 有两个部分，客户端框架和服务器。
+WebRTC 的主要问题之一是它相当复杂，使用和开发起来很复杂——处理信令服务并知道何时调用正确的端点可能会令人困惑。但也有一些好消息；[PeerJS](https://peerjs.com/) 是一个 WebRTC 框架，它抽象了所有的 ICE 和信令逻辑，让你可以专注于应用程序的功能。PeerJS 有两个部分，客户端框架和服务器。
 
 在这一系列的文章中，我们将使用 PeerJS 创建一个简单的电话应用程序。我们将使用服务器和客户端框架，但我们的大部分工作将涉及处理客户端代码。
 

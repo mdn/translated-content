@@ -1,5 +1,5 @@
 ---
-title: Getting browser microphone permission
+title: 获取麦克风权限
 slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Get_microphone_permission
 l10n:
   sourceCommit: e099e74fe5c09c46f0dfe044894692721a713d29
@@ -68,7 +68,7 @@ function getLocalStream() {
       window.localAudio.autoplay = true;
     })
     .catch((err) => {
-      console.error(`you got an error: ${err}`);
+      console.error(`你得到了一个错误: ${err}`);
     });
 }
 

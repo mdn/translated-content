@@ -1,5 +1,5 @@
 ---
-title: Answering a Call
+title: 接听呼叫
 slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Answer_a_call
 l10n:
   sourceCommit: 810f6895496d1525bb7800abfef363d6c1da9bb8
@@ -11,7 +11,7 @@ l10n:
 
 现在我们的用户可以进行呼叫，但是他们无法回答来电。让我们添加下一个拼图的片段，以便用户可以回答打给他们的电话。
 
-1. PeerJS 框架使`.on('call')`事件可用，让我们在这里使用它。将此添加到 `script.js` 文件的底部：
+1. PeerJS 框架使 `.on('call')` 事件可用，让我们在这里使用它。将此添加到 `script.js` 文件的底部：
 
    ```js
    peer.on("call", (call) => {
@@ -23,7 +23,7 @@ l10n:
 
    ![A browser prompt that asks "Do you want to answer?" with two options: "Cancel" and "Ok"](confirm_prompt.png)
 
-   > **警告：** 由于我们使用`confirm`提示来询问用户是否要接听呼叫，因此很重要的一点是被呼叫的浏览器和标签必须是“活动”的，这意味着窗口不能最小化，并且标签应该在屏幕上并且鼠标的焦点应该在其内部的某个地方。理想情况下，在这个应用的生产版本中，你应该在 HTML 中创建自己的模态窗口，它不会有这些限制。
+   > **警告：** 由于我们使用 `confirm` 提示来询问用户是否要接听呼叫，因此很重要的一点是被呼叫的浏览器和标签必须是“活动”的，这意味着窗口不能最小化，并且标签应该在屏幕上并且鼠标的焦点应该在其内部的某个地方。理想情况下，在这个应用的生产版本中，你应该在 HTML 中创建自己的模态窗口，它不会有这些限制。
 
 2. 让我们充实这个事件监听器。更新如下：
 

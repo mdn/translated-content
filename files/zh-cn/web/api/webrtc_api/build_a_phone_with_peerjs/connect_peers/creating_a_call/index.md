@@ -1,5 +1,5 @@
 ---
-title: Creating a Call
+title: 创建呼叫
 slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Creating_a_call
 l10n:
   sourceCommit: 65cd9754ed95f116b641c68cad80f14ecf580b41
@@ -9,15 +9,15 @@ l10n:
 
 {{PreviousMenuNext("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Create_a_peer_connection", "Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Answer_a_call")}}
 
-令人兴奋的时刻 — 现在你将让用户能够创建通话。
+令人兴奋的时刻——现在你将让用户能够创建通话。
 
-1. 首先，通过将以下内容添加到`script.js`文件的底部，获取对 HTML 中定义的“Call”按钮的引用：
+1. 首先，通过将以下内容添加到 `script.js` 文件的底部，获取对 HTML 中定义的“Call”按钮的引用：
 
    ```js
    const callBtn = document.querySelector(".call-btn");
    ```
 
-2. 当呼叫者点击“Call”时，你将要求他们提供要呼叫的对等方的对等方 ID（我们将在`getStreamCode()`中存储在 code 变量中），然后你将要创建与该代码的连接。在上述代码的下方添加以下内容：
+2. 当呼叫者点击“Call”时，你将要求他们提供要呼叫的对等方的对等方 ID（我们将在 `getStreamCode()` 中存储在 code 变量中），然后你将要创建与该代码的连接。在上述代码的下方添加以下内容：
 
    ```js
    callBtn.addEventListener("click", () => {

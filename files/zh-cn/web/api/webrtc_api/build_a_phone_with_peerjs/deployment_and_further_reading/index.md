@@ -1,5 +1,5 @@
 ---
- title: Deployment and further reading
+ title: 部署和进一步阅读
  slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Deployment_and_further_reading
  l10n:
    sourceCommit: 3f7036e4dbe83e50c873c42a88a5a7d1d80a478e
@@ -11,7 +11,7 @@
 
 ## 部署
 
-部署这个应用程序最简单的地方可能是[Glitch](https://glitch.com/)，因为你不必费心配置 peer 服务器的端口。
+部署这个应用程序最简单的地方可能是 [Glitch](https://glitch.com/)，因为你不必费心配置 peer 服务器的端口。
 
 ## 进一步阅读
 

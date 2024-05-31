@@ -1,5 +1,5 @@
 ---
-title: Ending a call
+title: 结束呼叫
 slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/End_a_call
 l10n:
   sourceCommit: e099e74fe5c09c46f0dfe044894692721a713d29
@@ -29,12 +29,12 @@ l10n:
    });
    ```
 
-   这样，如果发起通话的人首先点击了 "挂断"，两个浏览器仍然会更新到新的状态。
+   这样，如果发起通话的人首先点击了“挂断”，两个浏览器仍然会更新到新的状态。
 
 3. 再次测试你的应用程序，并尝试关闭通话。
 
 > **备注：** 在 `conn` 变量上调用的 `on('close')` 事件在 Firefox 中尚不可用；这意味着在 Firefox 中，每个呼叫者都必须单独挂断。
 
-> **警告：** 目前我们编写的代码意味着当一个连接关闭时，**只有**发起通话的人首先点击 "挂断" 时，两个浏览器才会更新。如果回答通话的人先点击 "挂断"，则另一个呼叫者也必须点击 "挂断" 才能看到正确的 HTML。
+> **警告：** 目前我们编写的代码意味着当一个连接关闭时，**只有**发起通话的人首先点击“挂断”时，两个浏览器才会更新。如果回答通话的人先点击“挂断”，则另一个呼叫者也必须点击“挂断”才能看到正确的 HTML。
 
 {{PreviousMenuNext("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Answer_a_call", "Web/API/WebRTC_API/Build_a_phone_with_peerjs/Deployment_and_further_reading")}}
