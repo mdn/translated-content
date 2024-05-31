@@ -28,7 +28,7 @@ l10n:
   </tbody>
 </table>
 
-扩展的作者，用于显示在浏览器的用户界面中。如果提供了 [developer](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer) 键，并且它包含“name”属性，则它将覆盖作者键。无法指定多个作者。
+扩展的作者，用于显示在浏览器的用户界面中。如果提供了 [developer](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer) 键，并且它包含“name”属性，则它将覆盖作者键。无法指定多个作者。
 
 这是一个[可本地化属性](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json)。
 
