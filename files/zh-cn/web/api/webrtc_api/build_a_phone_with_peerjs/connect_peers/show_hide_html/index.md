@@ -13,7 +13,7 @@ l10n:
 
 1. 让我们使用 `open` 事件创建一个侦听器，当对等体打开时显示对等体的 ID。将以下代码添加到 `script.js` 的底部：
 
-    ```js
+   ```js
    peer.on("open", () => {
      window.caststatus.textContent = `Your device ID is: ${peer.id}`;
    });
@@ -23,11 +23,11 @@ l10n:
 
 2. 尝试在浏览器中重新加载应用程序。不再显示`connecting...`，而是应该看到 `Your device ID is: <peer ID>`。
 
-    ![一个深绿色粗体字的奶油色背景，上面写着“phone a friend”。紧接着是“Your device ID is: 3b77”，下面是“please use headphones!”。然后是一个大的深绿色按钮，上面写着“Call”，颜色与背景相同。](app_showing_device_id.png)
+   ![一个深绿色粗体字的奶油色背景，上面写着“phone a friend”。紧接着是“Your device ID is: 3b77”，下面是“please use headphones!”。然后是一个大的深绿色按钮，上面写着“Call”，颜色与背景相同。](app_showing_device_id.png)
 
 3. 当你在这里时，也可以创建一些函数来显示和隐藏各种内容，稍后会用到。你应该创建两个函数，`showCallContent()` 和 `showConnectedContent()`。这些函数将负责在适当时显示呼叫按钮，显示挂断按钮和音频元素。
 
-    ```js
+   ```js
    const audioContainer = document.querySelector(".call-container");
 
    // 显示呼叫按钮和对等体 ID

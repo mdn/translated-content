@@ -1,8 +1,8 @@
 ---
- title: 部署和进一步阅读
- slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Deployment_and_further_reading
- l10n:
-   sourceCommit: 3f7036e4dbe83e50c873c42a88a5a7d1d80a478e
+title: 部署和进一步阅读
+slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Deployment_and_further_reading
+l10n:
+  sourceCommit: 3f7036e4dbe83e50c873c42a88a5a7d1d80a478e
 ---
 
 {{DefaultAPISidebar("WebRTC")}}

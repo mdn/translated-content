@@ -1,8 +1,8 @@
 ---
- title: 设置
- slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Setup
- l10n:
-   sourceCommit: 3f7036e4dbe83e50c873c42a88a5a7d1d80a478e
+title: 设置
+slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Setup
+l10n:
+  sourceCommit: 3f7036e4dbe83e50c873c42a88a5a7d1d80a478e
 ---
 
 {{DefaultAPISidebar("WebRTC")}}
@@ -14,11 +14,12 @@
 1. 首先，在你的本地文件结构中找到一个合适的位置，然后运行 `mkdir audio_app`，然后使用 `cd audio_app` 创建一个包含你的应用程序的目录并进入其中。
 2. 接下来，通过运行 `yarn init` 创建一个新的应用程序。按照提示提供项目名称、版本、描述等信息。
 3. 然后，使用以下命令安装所需的依赖项：
+
    - [Express](https://expressjs.com/): `yarn add express`
    - [PeerJS](https://peerjs.com/docs/): `yarn add peerjs`
    - [Peer](https://github.com/peers/peerjs-server): `yarn add peer`
 
-    Peer 用于 Peer 服务器，而 PeerJS 用于访问 PeerJS API 和框架。安装完成依赖项后，你的 `package.json` 应该类似于以下内容：
+   Peer 用于 Peer 服务器，而 PeerJS 用于访问 PeerJS API 和框架。安装完成依赖项后，你的 `package.json` 应该类似于以下内容：
 
    ```json
    {

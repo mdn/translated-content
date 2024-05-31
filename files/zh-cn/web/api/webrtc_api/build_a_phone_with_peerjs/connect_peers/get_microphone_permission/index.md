@@ -68,7 +68,7 @@ function getLocalStream() {
       window.localAudio.autoplay = true;
     })
     .catch((err) => {
-      console.error(`你得到了一个错误: ${err}`);
+      console.error(`你得到了一个错误：${err}`);
     });
 }
 
