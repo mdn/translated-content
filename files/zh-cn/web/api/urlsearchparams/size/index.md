@@ -11,13 +11,13 @@ l10n:
 
 ## 值
 
-一个数值表示 {{domxref("URLSearchParams")}} 对象的搜索参数项的总数。
+一个数值表示 {{domxref("URLSearchParams")}} 对象的查询参数条目的总数。
 
 ## 示例
 
-### 获取搜索参数项的数量
+### 获取查询参数条目的数量
 
-你可以像这样获取搜索参数项的总数：
+你可以像这样获取查询参数条目的总数：
 
 ```js
 const searchParams = new URLSearchParams("c=4&a=2&b=3&a=1");
