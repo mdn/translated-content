@@ -53,7 +53,7 @@ let getting = browser.cookies.getAll(
 
     - `path` {{optional_inline}}
 
-      - : 一个 string，表示路径——Cookie 的路径必须与此路径相同。
+      - : 一个 `string`，表示路径—— Cookie 的路径必须与此路径相同。
 
     - `secure` {{optional_inline}}
 
