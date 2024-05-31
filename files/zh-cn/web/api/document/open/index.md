@@ -52,7 +52,7 @@ document.close();
 
 `document.open()` 有一个鲜为人知且很少使用的三参数版本，它是 {{domxref("Window.open()")}} 的别名（详见其页面）。
 
-例如，该调用会在新窗口中打开 github.com，并将其打开程序设置为 `null`：
+例如，该调用会在新窗口中打开 github.com，并将其 opener 设置为 `null`：
 
 ```js
 document.open("https://www.github.com", "", "noopener=true");
