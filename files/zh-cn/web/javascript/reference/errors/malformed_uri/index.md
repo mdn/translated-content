@@ -29,7 +29,7 @@ URI 编码和解码不成功。传递给 {{jsxref("decodeURI")}}、{{jsxref("enc
 
 ### 编码
 
-编码操作会将每一个字符实例替换为一到四个相对应的 UTF-8 编码形式的转义序列。如果试图编码一个非高 - 低位完整的代理字符，将会抛出一个 {{jsxref("URIError")}} 错误，例如：
+编码操作会将每一个字符实例替换为一到四个相对应的 UTF-8 编码形式的转义序列。如果试图编码一个非高-低位完整的代理字符，将会抛出 {{jsxref("URIError")}} 错误，例如：
 
 ```js example-bad
 encodeURI("\uD800");
@@ -39,7 +39,7 @@ encodeURI("\uDFFF");
 // "URIError: malformed URI sequence"
 ```
 
-高 - 低位完整的代理字符是没问题的，例如：
+高-低位完整的代理字符是没问题的，例如：
 
 ```js example-good
 encodeURI("\uD800\uDFFF");
