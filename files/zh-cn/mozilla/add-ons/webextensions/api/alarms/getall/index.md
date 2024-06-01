@@ -23,7 +23,7 @@ let getAlarms = browser.alarms.getAll()
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，将被解析为一个 [`Alarm`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/alarms/Alarm) 对象数组。每个对象代表属于扩展的一个活动闹钟。如果没有活动闹钟，则数组将为空。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个 [`Alarm`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/alarms/Alarm) 对象数组。每个对象代表属于扩展的一个活动闹钟。如果没有活动闹钟，则数组将为空。
 
 ## 示例
 
