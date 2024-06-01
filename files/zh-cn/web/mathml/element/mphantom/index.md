@@ -7,7 +7,7 @@ l10n:
 
 {{MathMLRef}}
 
-**<`mphantom>`** 这个 [MathML](/zh-CN/docs/Web/MathML) 元素用于渲染为不可见，但仍保留尺寸（如高度、宽度和基线位置）。
+**`<mphantom>`** [MathML](/zh-CN/docs/Web/MathML) 元素渲染为不可见内容，但仍保留尺寸（如高度、宽度和基线位置）。
 
 ## 属性
 
@@ -29,7 +29,7 @@ l10n:
 </math>
 ```
 
-{{EmbedLiveSample('Examples')}}
+{{EmbedLiveSample('示例')}}
 
 ## 规范
 
