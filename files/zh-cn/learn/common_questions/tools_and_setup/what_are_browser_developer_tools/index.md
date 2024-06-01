@@ -21,17 +21,17 @@ l10n:
 
 - **_键盘快捷键_**
 
-  - **Windows:** _<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd>_ or <kbd>F12</kbd>
-  - **macOS:** _<kbd>⌘</kbd> + <kbd>⌥</kbd> + <kbd>I</kbd>_
+  - **Windows：** _<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd>_ 或 <kbd>F12</kbd>
+  - **macOS：** _<kbd>⌘</kbd> + <kbd>⌥</kbd> + <kbd>I</kbd>_
 
 - **_菜单栏_**
 
-  - **Firefox**：菜单 ![](2014-01-10-13-08-08-f52b8c.png) _➤ 更多工具 ➤ Web 开发者工具_
-  - **Chrome**：_➤ 更多工具 ➤ 开发者工具_
-  - **Safari**：_开发 ➤ 显示网页检查器_。如果你看不到 _开发_ 菜单，去到 _Safari ➤ 设置 ➤ 高级_，然后点击*显示网页开发者功能*复选框。
-  - **Opera**. _开发者 ➤ 开发者工具_
+  - **Firefox：** 菜单 ![Firefox 浏览器汉堡菜单图标，提供更多自定义和控制 Firefox 浏览器的选项](2014-01-10-13-08-08-f52b8c.png) _➤ 更多工具 ➤ Web 开发者工具_
+  - **Chrome：** _➤ 更多工具 ➤ 开发者工具_
+  - **Safari：** _开发 ➤ 显示网页检查器_。如果你看不到*开发*菜单，去到 _Safari ➤ 设置 ➤ 高级_，然后点击*显示网页开发者功能*复选框。
+  - **Opera：** _开发者 ➤ 开发者工具_
 
-- **_右键菜单：_** 右键单击网页中的一个项目上（在 Mac 上按 Ctrl 同时点击），并从弹出的菜单中选择*检查元素*（译者注：选择`检查`（Chrome）或`查看元素`（Firefox））。（这种方法的好处是：该方法直接将你右击的元素的代码突出显示）。
+- **_右键菜单：_** 右键单击网页中的一个项目上（在 Mac 上按 Ctrl 同时点击），并从弹出的菜单中选择*检查元素*。（*这种方法的好处*：该方法直接将你右击的元素的代码突出显示）。
 
 ![](inspector_context.png)
 
@@ -41,10 +41,10 @@ l10n:
 
 ![](inspector_highlighted.png)
 
-如果你看不到调试器，
+如果你*看不到*调试器，
 
 - 点击“检查”选项卡。
-- 在 Chrome，Microsoft Edge，或 Opera 中，点击元素。
+- 在 Chrome、Microsoft Edge 或 Opera 中，点击元素。
 - 在 Safari 中，控件的呈现并不是那么清晰，但如果你没有选择其他内容显示在窗口中，你应该能看到 HTML。点击“样式”按钮查看 CSS。
 
 ### 探索 DOM 检查器
@@ -78,9 +78,9 @@ l10n:
 
 你会注意到 CSS 查看器顶部的一些可点击的选项卡：
 
-- _计算_：显示当前所选元素的计算样式（浏览器应用的最终归一化值）。
+- _计算值_：显示当前所选元素的计算样式（浏览器应用的最终归一化值）。
 - _布局_：在 Firefox 中，这包含两个方面：
-  - _盒子模型_：这可以直观地表示当前元素的框模型，所以你可以一目了然地看到应用了什么填充，边框和边距，以及它的内容有多大。
+  - _盒模型_：这可以直观地表示当前元素的盒模型，所以你可以一目了然地看到应用了什么内边距、边框和外边距，以及它的内容有多大。
   - _网格_：如果你正在检查的页面使用了 CSS 网格布局，这个部分允许你查看网格的详细信息。
 - _字体_：在 Firefox 中，*字体*选项卡显示应用于当前元素的字体。
 
@@ -89,8 +89,8 @@ l10n:
 了解更多 Inspector 在不同的浏览器中的细节：
 
 - [Firefox 页面检查器](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html)
-- [Chrome DOM 检查器](https://developer.chrome.com/docs/devtools/dom/) (Opera 的 inspector 和它一样)
-- [Safari DOM 检查器和 style 浏览器](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/ResourcesandtheDOM/ResourcesandtheDOM.html#//apple_ref/doc/uid/TP40007874-CH3-SW1)
+- [Chrome DOM 检查器](https://developer.chrome.com/docs/devtools/dom/)（Opera 的 inspector 和它一样）
+- [Safari DOM 检查器和样式浏览器](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/ResourcesandtheDOM/ResourcesandtheDOM.html#//apple_ref/doc/uid/TP40007874-CH3-SW1)
 
 ## JavaScript 调试器
 
@@ -104,7 +104,7 @@ l10n:
 
 **Chrome**：开打开发者工具，然后选择 **Source** 标签。（Opera 的操作方式相同。）
 
-**Safari**：开打开发者工具，然后选择 "Debugger" 标签。
+**Safari**：打开开发者工具，然后选择“调试器”标签。
 
 ### 探索调试器
 
@@ -128,13 +128,13 @@ Firefox 的 JavaScript 调试器有三个面板。
 
 在下图中，第一个区域，**监视表达式**，显示了变量 listItem 已经被添加，你可以展开列表查看里面的值。
 
-接下来的部分，**断点**，列出了页面上设置的断点。在 example.js（上上个图中）中，一个断点被定位在语句 `listItems.push(inputNewItem.value);` 上。
+接下来的部分，**断点**，列出了页面上设置的断点。在 example.js 中，一个断点被设置在语句 `listItems.push(inputNewItem.value);` 上。
 
 最后两个部分，只在代码运行时才出现。
 
-**调用栈**区向你显示哪个代码执行后会达到当前行。你能看到代码处理了一次鼠标点击后，停在了断点处。
+**调用堆栈**区向你显示哪个代码执行后会达到当前行。你能看到代码处理了一次鼠标点击后，停在了断点处。
 
-最后一部分，**Scopes**，显示了在代码执行过程中，可见变量值的变化。例如，在下面图片中，你可以看到对象在 addItemClick 函数中是如何变化的。
+最后一部分，**作用域**，显示了在代码执行过程中，可见变量值的变化。例如，在下面图片中，你可以看到对象在 addItemClick 函数中是如何变化的。
 
 ![](watch_items.png)
 
@@ -204,7 +204,7 @@ document.querySelector("h1").appendChild(loginImage);
 了解更多 JavaScript 控制台在不同浏览器中的细节：
 
 - [Firefox Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)
-- [Chrome JavaScript Console](https://developer.chrome.com/docs/devtools/console/) (Opera 与它相同)
+- [Chrome JavaScript Console](https://developer.chrome.com/docs/devtools/console/)（Opera 与它相同）
 - [Safari Console](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html#//apple_ref/doc/uid/TP40007874-CH6-SW1)
 
 ## 参见
