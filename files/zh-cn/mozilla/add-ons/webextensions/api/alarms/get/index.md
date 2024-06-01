@@ -26,7 +26,7 @@ let getAlarm = browser.alarms.get(
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，将被解析为一个 {{WebExtAPIRef('alarms.Alarm', "Alarm")}} 对象。这代表了名称与 `name` 匹配的闹钟。如果没有匹配的闹钟，则为 `undefined`。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个 {{WebExtAPIRef('alarms.Alarm', "Alarm")}} 对象。这代表了名称与 `name` 匹配的闹钟。如果没有匹配的闹钟，则为 `undefined`。
 
 ## 示例
 
