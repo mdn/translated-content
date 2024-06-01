@@ -9,13 +9,13 @@ l10n:
 
 **字面量**在 JavaScript 中表示固定的值，而不是变量，这些值是*直接*在脚本中提供的。
 
-- [数组字面量](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#array_literals)
-- [布尔字面量](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#boolean_literals)
-- [浮点字面量](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#floating-point_literals)
-- [数字字面量](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#numeric_literals)
-- [对象字面量](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#object_literals)
-- [正则表达式字面量](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#regexp_literals)
-- [字符串字面量](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#string_literals)
+- [数组字面量](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#array_literals)
+- [布尔字面量](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#boolean_literals)
+- [浮点字面量](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#floating-point_literals)
+- [数字字面量](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#numeric_literals)
+- [对象字面量](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#object_literals)
+- [正则表达式字面量](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#regexp_literals)
+- [字符串字面量](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#string_literals)
 
 ## 示例
 
