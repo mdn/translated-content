@@ -16,6 +16,6 @@ l10n:
 ## 参见
 
 - 维基百科上的[多媒体](https://zh.wikipedia.org/wiki/多媒体)
-- [网络媒体技术](/en-US/docs/Web/Media)：介绍了媒体在网络内容中的所有使用方式
-- MDN 学习区中的[多媒体和嵌入条目](/en-US/docs/Learn/HTML/Multimedia_and_embedding)
+- [网络媒体技术](/zh-CN/docs/Web/Media)：介绍了媒体在网络内容中的所有使用方式
+- MDN 学习区中的[多媒体和嵌入条目](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding)
 - {{HTMLElement("audio")}} 和 {{HTMLElement("video")}} 元素，用于在 {{Glossary("HTML")}} 文档中呈现媒体
