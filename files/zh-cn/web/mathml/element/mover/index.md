@@ -7,7 +7,7 @@ l10n:
 
 {{MathMLRef}}
 
-**`<mover>`** [MathML](/zh-CN/docs/Web/MathML) 元素用于在表达式上方着重标识或限制符号。使用以下语法：`<mover> base overscript </mover>`。
+**`<mover>`** [MathML](/zh-CN/docs/Web/MathML) 元素用于在表达式上方着重标识或界限符号。使用以下语法：`<mover> base overscript </mover>`。
 
 ## 属性
 
