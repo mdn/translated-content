@@ -1,6 +1,8 @@
 ---
-title: Mozilla Firefox 浏览器
+title: Mozilla Firefox
 slug: Glossary/Mozilla_Firefox
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
 {{GlossarySidebar}}
