@@ -1,0 +1,16 @@
+---
+title: Long task
+slug: Glossary/Long_task
+page-type: glossary-definition
+---
+
+{{GlossarySidebar}}
+
+**长任务**是指需要超过 50 毫秒完成的任务。
+
+这是[主 UI 线程](/en-US/docs/Glossary/Main_thread)持续忙碌 50 毫秒或更长时间的一段时间。常见的例子包括长时间运行的事件处理程序、耗费资源的[回流](/en-US/docs/Glossary/Reflow)和其他重新渲染，以及浏览器在事件循环的不同轮次之间执行的超过 50 毫秒的工作。
+
+## 参见
+
+- [长任务 API](/en-US/docs/Web/API/PerformanceLongTaskTiming)
+- [长动画帧 API](/en-US/docs/Web/API/Performance_API/Long_animation_frame_timing)
