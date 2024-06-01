@@ -11,7 +11,7 @@ l10n:
 
 欲使用此 API，一个附件组件必须请求“bookmarks” [permission](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)在它的 [`manifest.json`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 文件当中。
 
-Extensions 无法在书签树的根节点中创建、修改或删除书签。这样做会导致错误，错误消息为：“*无法修改书签根节点*”。
+Extensions 无法在书签树的根节点中创建、修改或删除书签。这样做会导致错误，错误消息为：“_无法修改书签根节点_”。
 
 ## 类型
 
