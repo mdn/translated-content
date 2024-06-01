@@ -3,7 +3,7 @@ title: 文件 API
 slug: Web/API/File_API
 ---
 
-{{DefaultAPISidebar("File API")}}
+{{DefaultAPISidebar("File API")}}{{AvailableInWorkers}}
 
 ## 概念和基本使用
 
@@ -30,10 +30,10 @@ slug: Web/API/File_API
 
 ### 对其他接口的扩展
 
-- {{domxref("URL.createObjectURL()")}}
+- {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}}
   - : 创建一个可用于获取 {{domxref("File")}} 或 {{domxref("Blob")}} 对象的 URL。
-- {{domxref("URL.revokeObjectURL()")}}
-  - : 释放先前通过调用 {{domxref("URL.createObjectURL()")}} 创建的现有对象 URL。
+- {{domxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}}
+  - : 释放先前通过调用 {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} 创建的现有对象 URL。
 
 ## 示例
 
