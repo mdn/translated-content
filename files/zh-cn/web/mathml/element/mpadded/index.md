@@ -80,7 +80,7 @@ l10n:
 </math>
 ```
 
-{{ EmbedLiveSample('旧版语法', 700, 200) }}
+{{ EmbedLiveSample('旧版语法_2', 700, 200) }}
 
 ## 规范
 
