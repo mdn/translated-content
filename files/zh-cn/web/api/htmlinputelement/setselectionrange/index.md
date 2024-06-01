@@ -1,5 +1,5 @@
 ---
-title: HTMLInputElement.setSelectionRange()
+title: HTMLInputElement：setSelectionRange() 方法
 slug: Web/API/HTMLInputElement/setSelectionRange
 l10n:
   sourceCommit: 76960f06597294df2d93ebb9960ad40c909c7cb5
@@ -11,7 +11,7 @@ l10n:
 
 该元素必须获得焦点才能使调用产生任何效果。
 
-在较新的浏览器中，你可以通过一个可选的 selectionDirection 来指定文本选中的方向。比如通过点击和拖动从结束位置往起始位置选中一个字符串。
+可选地，你可以指定选择应发生的方向。例如，这使你可以指示，选择是由用户从选定文本的末尾向开头处点击并拖动设置的。
 
 每次调用这个这个方法都会更新 {{domxref("HTMLInputElement.selectionStart")}}、{{domxref("HTMLInputElement.selectionEnd")}} 和 {{domxref("HTMLInputElement.selectionDirection")}} 属性。
 
@@ -31,7 +31,7 @@ setSelectionRange(selectionStart, selectionEnd, selectionDirection)
 如果 `selectionEnd` 小于 `selectionStart`，则二者都会被看作 `selectionEnd`。
 
 - `selectionStart`
-  - : 被选中的第一个字符的位置索引，从 0 开始。如果这个值比元素的 `value` 长度还大，则会被看作 `value` 最后一个位置的索引。
+  - : 被选中的第一个字符的位置索引，从 0 开始。如果这个值比元素的 value 长度还大，则会被看作 value 最后一个位置的索引。
 - `selectionEnd`
   - : 被选中的最后一个字符的 _下一个_ 位置索引。如果这个值比元素的 value 长度还大，则会被看作 value 最后一个位置的索引。
 - `selectionDirection` {{optional_inline}}
