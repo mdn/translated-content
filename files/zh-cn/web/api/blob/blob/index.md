@@ -2,7 +2,7 @@
 title: Blob：Blob() 构造函数
 slug: Web/API/Blob/Blob
 l10n:
-  sourceCommit: 84a9afd94f497d4173bde131731ef6bdf0b6135d
+  sourceCommit: 94df34126960a2f1bd3032c6e2cf203d67b912d8
 ---
 
 {{APIRef("File API")}}
