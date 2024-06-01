@@ -7,7 +7,7 @@ l10n:
 
 {{MathMLRef}}
 
-**`<mtext>`** [MathML](/zh-CN/docs/Web/MathML) 元素用于呈现没有符号意义的任意文本，例如注释或注解。
+**`<mtext>`** [MathML](/zh-CN/docs/Web/MathML) 元素用于呈现*没有*符号意义的任意文本，例如注释或注解。
 
 若要显示具有符号意义的文本，请改用 {{ MathMLElement("mi") }}、{{ MathMLElement("mn") }}、{{ MathMLElement("mo") }} 或 {{ MathMLElement("ms") }}。
 
@@ -23,11 +23,11 @@ l10n:
 </math>
 
 <math display="block">
-  <mtext>/* 在此评论 */</mtext>
+  <mtext>/* 在此注释 */</mtext>
 </math>
 ```
 
-{{ EmbedLiveSample('mtext 示例', 700, 200, "", "") }}
+{{ EmbedLiveSample('示例', 700, 200) }}
 
 ## 规范
 
