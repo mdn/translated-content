@@ -1,7 +1,8 @@
 ---
-title: Long task
+title: 长任务
 slug: Glossary/Long_task
-page-type: glossary-definition
+l10n:
+  sourceCommit: 1391eec245db45782d4c73572ce7b375cbe43989
 ---
 
 {{GlossarySidebar}}
