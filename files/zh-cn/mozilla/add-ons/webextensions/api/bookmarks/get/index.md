@@ -26,7 +26,7 @@ let getBookmarks = browser.bookmarks.get(
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，将被一个 [`BookmarkTreeNode`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode) 数组解决，每个匹配的节点一个。结果中不包括分隔符。如果找不到任何节点，promise 将以错误消息被拒绝。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个 [`BookmarkTreeNode`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode) 数组，每个匹配的节点一个。结果中不包括分隔符。如果找不到任何节点，promise 将以错误消息被拒绝。
 
 ## 示例
 
