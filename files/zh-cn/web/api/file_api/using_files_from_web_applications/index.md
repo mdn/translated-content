@@ -1,6 +1,8 @@
 ---
 title: 在 web 应用程序中使用文件
 slug: Web/API/File_API/Using_files_from_web_applications
+l10n:
+  sourceCommit: 94ef07a7b073c2663cbace0667bdb717a40bfa28
 ---
 
 {{DefaultAPISidebar("File API")}}{{AvailableInWorkers}}
