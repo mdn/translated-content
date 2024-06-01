@@ -9,8 +9,8 @@ l10n:
 
 **懒加载**是一种策略，根据用户的活动和导航模式，推迟某些资源（例如图片）的加载，直到用户需要时；通常来说，这些资源只有在滚动到可视区域时才会被加载。
 
-如果正确实现，这种资源加载的延迟对于用户体验是无缝的，并且可能有助于改善初始加载性能，包括[可交互时间](/en-US/docs/Glossary/Time_to_interactive)，因为页面开始工作所需的资源更少。
+如果正确实现，这种资源加载的延迟对于用户体验是无缝的，并且可能有助于改善初始加载性能，包括[可交互时间](/zh-CN/docs/Glossary/Time_to_interactive)，因为页面开始工作所需的资源更少。
 
 ## 参见
 
-- [懒加载](/en-US/docs/Web/Performance/Lazy_loading)
+- [懒加载](/zh-CN/docs/Web/Performance/Lazy_loading)
