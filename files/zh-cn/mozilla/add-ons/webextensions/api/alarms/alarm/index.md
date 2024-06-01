@@ -26,4 +26,4 @@ l10n:
 
 {{WebExtExamples}}
 
-> **备注：** 这个 API 是基于 Chromium 的[`chrome.alarms`](https://developer.chrome.com/extensions/alarms) API。
+> **备注：** 这个 API 是基于 Chromium 的 [`chrome.alarms`](https://developer.chrome.com/extensions/alarms) API。
