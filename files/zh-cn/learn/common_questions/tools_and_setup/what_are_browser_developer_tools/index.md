@@ -102,7 +102,7 @@ l10n:
 
 **Firefox**：选择 ![Firefox 菜单图标，具有更多选项，用于自定义和控制 Firefox。](2014-01-10-13-08-08-f52b8c.png) ➤ _Web 开发者_ ➤ _调试器_ 或按 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> 打开 JavaScript 调试器。如果工具已经显示，点击**调试器**标签。
 
-**Chrome**：开打开发者工具，然后选择 **Source** 标签。（Opera 的操作方式相同。）
+**Chrome**：打开开发者工具，然后选择**源代码/来源**标签。（Opera 的操作方式相同。）
 
 **Safari**：打开开发者工具，然后选择“调试器”标签。
 
