@@ -20,17 +20,19 @@ slug: Web/HTML/microformats
 
 网页的作者可以向他们的 HTML 中添加微格式。例如，如果他们想要标识自己的身份，可以使用 [h-card](https://microformats.org/wiki/h-card) 例如：
 
-### HTML 案例
+### HTML 示例
 
 ```html
 <a class="h-card" href="https://alice.example.com">Alice Blogger</a>
 ```
 
-当解析器遇到这些数据时，它将知道这个页面包含了一个“卡片”，其描述了一个叫 `Alice Blogger` 的人或组织，其 URL 为 `https://alice.example.com/`。解析器通过 API 使这些数据可用，这些 API 可以用于不同的应用程序。例如，应用程序可以扫描页面上的 h-card，用作注册服务的某人的个人资料信息。正如在这个案例中，某些标记模式只需要一个单一的微格式根类名，解析器使用它来查找一些通用属性，例如 `name`、`url`、`photo`。
+当解析器遇到这些数据时，它将知道这个页面包含了一个“卡片”，其描述了一个叫 `Alice Blogger` 的人或组织，其 URL 为 `https://alice.example.com/`。解析器通过 API 使这些数据可用，这些 API 可以用于不同的应用程序。例如，应用程序可以扫描页面上的 h-card，用作注册服务的某个人的个人资料信息。
+
+正如在这个案例中，某些标记模式只需要一个单一的微格式根类名，解析器使用它来查找一些通用属性，例如 `name`、`url`、`photo`。
 
 ## 微格式使用案例
 
-微格式有许多使用案例。首先，[Webmention 标准](https://www.w3.org/TR/webmention/)使用微格式提供了一种方式，它可以将消息和评论从一个网站发送到另一个网站。Webmention 规范定义了特定属性，以便于站点发布和消费，以创建丰富、可互操作的消息和评论发布方式。微格式也可以与 Webmentions 一起使用，便于从一个网站向另一个网站发送社交反应，如喜欢、转帖和书签。
+微格式有许多使用案例。首先，[Webmention 标准](https://www.w3.org/TR/webmention/)使用微格式提供了一种可以将消息和评论从一个网站发送到另一个网站的方式。Webmention 规范定义了特定属性，以便于站点发布和消费，以创建丰富、可互操作的消息和评论发布方式。微格式也可以与 Webmentions 一起使用，便于从一个网站向另一个网站发送社交反应，如喜欢、转帖和书签。
 
 微格式还支持跨站点的轻松聚合。聚合器可以解析发布微格式的页面，寻找诸如帖子标题、帖子正文和帖子作者等信息。然后，这个聚合器可以使用收集到的语义信息在其站点上呈现结果。例如，新闻聚合器和社区发帖板可以促进提交，并使用微格式从页面中提取相关内容。此外，网站可以使用微格式来向第三方（例如社交网络）发送构建好的请求以发布内容。
 
@@ -42,30 +44,30 @@ slug: Web/HTML/microformats
 
 所有微格式由根和属性集合组成。属性全部是可选的，可能是多值的——需要单一值的应用程序可以使用属性的第一个实例。层次数据通过嵌套微格式表示，通常作为属性值本身。
 
-所有微格式类名使用前缀。前缀是**与词汇表无关的语法**，它们被是独立开发出来的。
+所有微格式类名使用前缀。前缀是**与词汇表无关的语法**，它们是被独立开发出来的。
 
-- **"h-\*" 用于根类名**，例如"h-card", "h-entry", "h-feed"等。这些顶级根类通常指示一个类型和相应的预期属性词汇表。例如：
+- **“h-\*”用于根类名**，例如“h-card”、“h-entry”、“h-feed”等。这些顶级根类通常指示一个类型和相应的预期属性词汇表。例如：
 
-  - [h-card](https://microformats.org/wiki/h-card)描述一个人或组织
-  - [h-entry](https://microformats.org/wiki/h-entry)描述具有时间戳的在线内容，如博客帖子
-  - [h-feed](https://microformats.org/wiki/h-feed)描述帖子的流或源
-  - 你可以在[microformats2 wiki 上找到更多词汇表](https://microformats.org/wiki/microformats2#v2_vocabularies)。
+  - [h-card](https://microformats.org/wiki/h-card) 描述一个人或组织
+  - [h-entry](https://microformats.org/wiki/h-entry) 描述具有时间戳的在线内容，如博客帖子
+  - [h-feed](https://microformats.org/wiki/h-feed) 描述帖子的流或源
+  - 你可以在 [microformats2 wiki 上找到更多词汇表](https://microformats.org/wiki/microformats2#v2_vocabularies)。
 
-- **"p-\*" 用于纯（文本）属性**，例如："p-name", "p-summary"
+- **“p-\*”用于纯（文本）属性**，例如：“p-name”、“p-summary”
 
-  - 通用纯文本解析，一般元素文本。在某些 HTML 元素上，首先使用特殊属性，例如：img/alt, abbr/。
+  - 通用纯文本解析，一般元素文本。在某些 HTML 元素上，首先使用特殊属性，例如：img/alt、abbr/title。
 
-- **"u-\*"用于 URL 属性**，例如："u-url", "u-photo", "u-logo"
+- **“u-\*”用于 URL 属性**，例如：“u-url”、“u-photo”、“u-logo”
 
-  - 特殊解析：元素属性 a/href, img/src, object/data等属性优先于元素内容。
+  - 特殊解析：元素属性 a/href、img/src、object/data 等优先于元素内容。
 
-- **"dt-\*"用于 datetime 属性**，例如："dt-start", "dt-end", "dt-bday"
+- **“dt-\*”用于 datetime 属性**，例如：“dt-start”、“dt-end”、“dt-bday”
 
-  - 特殊解析：time 元素 datetime 属性，[value-class-pattern](https://microformats.org/wiki/value-class-pattern) 和单独的日期时间值解析，以提高可读性。
+  - 特殊解析：time 元素 datetime 属性、[value-class-pattern](https://microformats.org/wiki/value-class-pattern) 和单独的日期时间值解析，以提高可读性。
 
-- **"e-\*"用于元素树属性**，其中整个包含的元素层次结构是值，例如"e-content"。"e-"前缀也可以通过"元素树"、"嵌入式标记"或"封装标记"来记忆。
+- **“e-\*”用于元素树属性**，其中整个包含的元素层次结构是值，例如“e-content”。“e-”前缀也可以通过“元素树（element tree）”、“嵌入式标记（embedded markup）”或“封装标记（encapsulated markup）”来记忆。
 
-## 一些微格式示例
+## 微格式示例
 
 ### h-card
 
@@ -86,16 +88,16 @@ slug: Web/HTML/microformats
 </p>
 ```
 
-| 属性                 | 描述                             |
-| -------------------- | -------------------------------- |
-| **p-name**           | 个人或组织的全名/格式化名称。    |
-| **u-email**          | 电子邮件地址。                   |
-| **u-photo**          | 个人或组织的照片。               |
-| **u-url**            | 代表个人或组织的主页或其他 URL。 |
-| **u-uid**            | 通用唯一标识符，最好是规范 URL。 |
-| **p-street-address** | 街道号码 + 名称。                |
-| **p-locality**       | 城市/城镇/村庄。                 |
-| **p-country-name**   | 国家名称。                       |
+| 属性                   | 描述                           |
+| ---------------------- | ------------------------------ |
+| **`p-name`**           | 个人或组织的全名/格式化名称    |
+| **`u-email`**          | 电子邮件地址                   |
+| **`u-photo`**          | 个人或组织的照片               |
+| **`u-url`**            | 代表个人或组织的主页或其他 URL |
+| **`u-uid`**            | 通用唯一标识符，最好是规范 URL |
+| **`p-street-address`** | 街道号码 + 名称                |
+| **`p-locality`**       | 城市/城镇/村庄                 |
+| **`p-country-name`**   | 国家名称                       |
 
 #### 嵌套的 h-card 示例
 
@@ -136,11 +138,11 @@ slug: Web/HTML/microformats
 
 在这个例子中，h-card 分别指定了一个人和他们代表的组织。使用 p-org 属性指定了个人与链接组织的关联。
 
-注意：嵌套的 h-card 具有隐含的'name'和'url'属性，就像任何其他仅根类名的 h-card 在`<a href>`上一样。
+注意：嵌套的 h-card 具有隐含的“name”和“url”属性，就像任何其他仅根类名的 h-card 在 `<a href>` 上一样。
 
 ### h-entry
 
-[h-entry](https://microformats.org/wiki/h-entry)微格式表示网络上的分集或有时间戳的内容。h-entry 通常与打算进行聚合的内容一起使用，例如博客帖子和简短笔记。
+[h-entry](https://microformats.org/wiki/h-entry) 微格式表示 web 上的分集或有时间戳的内容。h-entry 通常与打算进行聚合的内容一起使用，例如博客帖子和简短笔记。
 
 示例：h-entry 作为博客帖子：
 
@@ -165,13 +167,13 @@ slug: Web/HTML/microformats
 
 #### 属性
 
-| 属性             | 描述                            |
-| ---------------- | ------------------------------- |
-| **p-name**       | 条目的名称/标题。               |
-| **p-author**     | 编写条目的人，可选嵌入 h-card。 |
-| **dt-published** | 条目发布的时间。                |
-| **p-summary**    | 条目的简短摘要。                |
-| **e-content**    | 条目的完整内容。                |
+| 属性               | 描述                        |
+| ------------------ | --------------------------- |
+| **`p-name`**       | 条目的名称/标题             |
+| **`p-author`**     | 编写条目的人，可嵌入 h-card |
+| **`dt-published`** | 条目发布的时间              |
+| **`p-summary`**    | 条目的简短摘要              |
+| **`e-content`**    | 条目的完整内容              |
 
 #### 解析后的回复 h-entry 示例
 
@@ -264,7 +266,7 @@ slug: Web/HTML/microformats
 
 ### h-feed
 
-[h-feed](https://microformats.org/wiki/h-feed) 是[h-entry](https://microformats.org/wiki/h-entry)帖子的流或源，如主页或存档页面上的所有帖子，或摘要或其他简短帖子列表。
+[h-feed](https://microformats.org/wiki/h-feed) 是 [h-entry](https://microformats.org/wiki/h-entry) 帖子的流或消息来源，如主页或存档页面上的所有帖子，或摘要或其他简短帖子列表。
 
 #### 示例 h-feed
 
@@ -290,21 +292,21 @@ slug: Web/HTML/microformats
 
 #### 属性
 
-| 属性           | 描述                        |
-| -------------- | --------------------------- |
-| **`p-name`**   | 源的名称。                  |
-| **`p-author`** | 源的作者，可选嵌入 h-card。 |
+| 属性           | 描述                    |
+| -------------- | ----------------------- |
+| **`p-name`**   | 源的名称                |
+| **`p-author`** | 源的作者，可嵌入 h-card |
 
 #### 子级
 
 <table class="standard-table">
   <tbody>
     <tr>
-      <td><strong>Nested h-entry</strong></td>
+      <td><strong>嵌套的 h-entry</strong></td>
       <td></td>
     </tr>
     <tr>
-      <td>objects representing the items of the feed</td>
+      <td>表示消息来源条目的对象</td>
       <td></td>
     </tr>
   </tbody>
@@ -312,7 +314,7 @@ slug: Web/HTML/microformats
 
 ### h-event
 
-`h-event`用于网络上的事件。h-event 通常用于活动列表和单个活动页面。
+`h-event` 用于 web 上的事件。h-event 通常用于活动列表和单个活动页面。
 
 ```html
 <div class="h-event">
@@ -333,13 +335,13 @@ slug: Web/HTML/microformats
 
 #### 属性
 
-| 属性             | 描述                            |
-| ---------------- | ------------------------------- |
-| **`p-name`**     | 事件名称（或标题）。            |
-| **`p-summary`**  | 事件的简短摘要。                |
-| **`dt-start`**   | 事件开始的时间。                |
-| **`dt-end`**     | 事件结束的时间。                |
-| **`p-location`** | 事件发生地点，可选嵌入 h-card。 |
+| 属性             | 描述                        |
+| ---------------- | --------------------------- |
+| **`p-name`**     | 事件名称（或标题）          |
+| **`p-summary`**  | 事件的简短摘要              |
+| **`dt-start`**   | 事件开始的时间              |
+| **`dt-end`**     | 事件结束的时间              |
+| **`p-location`** | 事件发生地点，可嵌入 h-card |
 
 #### 解析后的 h-event 示例
 
@@ -435,7 +437,7 @@ slug: Web/HTML/microformats
 
 ## 微格式 rel 属性示例
 
-有一些微格式是通过使用特殊的`rel=属性`应用于页面的。这些微格式描述了当前文档和链接文档之间的关系。要获得完整的列表，请参阅微格式 wiki 上的[rel 属性](https://microformats.org/wiki/rel-values)。
+有一些微格式是通过使用特殊的 `rel=` 属性应用于页面的。这些微格式描述了当前文档和链接文档之间的关系。要获得完整的列表，请参阅微格式维基上的 [rel 属性](https://microformats.org/wiki/rel-values)。
 
 ### rel=author
 
@@ -468,7 +470,7 @@ slug: Web/HTML/microformats
 ## 参见
 
 - [类属性](/zh-CN/docs/Web/HTML/Global_attributes/class)
-- [维基百科上的微格式](https://en.wikipedia.org/wiki/Microformat)
+- 维基百科上的[微格式](https://zh.wikipedia.org/wiki/微格式)
 - [微格式官网](https://microformats.org/)
-- 通过微格式官网[寻求帮助](https://microformats.org/wiki/search_engines)
-- [IndieWebCamp 的微格式](https://indieweb.org/microformats)
+- 微格式官网中的[搜索引擎支持](https://microformats.org/wiki/search_engines)
+- [IndieWebCamp 上的微格式](https://indieweb.org/microformats)
