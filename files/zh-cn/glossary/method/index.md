@@ -11,7 +11,7 @@ l10n:
 
 > **备注：** 在 JavaScript 中，函数本身也是对象，因此，在这个上下文中，方法实际上是对函数的{{glossary("object reference","对象引用")}}。
 
-当说 `F` 是 `O` 的一个*方法*时，通常意味着 `F` 将 `O` 作为其 [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) 绑定。没有根据它们的 `this` 值具有不同行为的函数属性（或者根本没有动态 `this` 绑定的函数——比如[绑定函数](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)和[箭头函数](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)）可能不被普遍认为是方法。
+当说 `F` 是 `O` 的一个*方法*时，通常意味着 `F` 将 `O` 作为其 [`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 绑定。没有根据它们的 `this` 值具有不同行为的函数属性（或者根本没有动态 `this` 绑定的函数——比如[绑定函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)和[箭头函数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)）可能不被普遍认为是方法。
 
 ## 参见
 
