@@ -22,11 +22,11 @@ l10n:
 
 ### JavaScript
 
-- 现已支持 {{jsxref("Intl.Segmenter")}}，其允许开发者按区域设置对字符串进行文本分割。例如，这可以将不使用空格分隔单词的语言的字符串拆分为单词：`Intl.Segmenter("ja-JP", { granularity: "word" })`。也可以将字符串拆分为字位或句子。（[Firefox bug 1423593](https://bugzil.la/1423593)、[Firefox bug 1883914](https://bugzil.la/1883914)。）
+- 现已支持 {{jsxref("Intl.Segmenter")}}，其允许开发者按区域设置对字符串进行文本分割。例如，这可以将不使用空格分隔单词的语言的字符串拆分为单词：`Intl.Segmenter("ja-JP", { granularity: "word" })`。也可以将字符串拆分为字位（grapheme）或句子。（[Firefox bug 1423593](https://bugzil.la/1423593)、[Firefox bug 1883914](https://bugzil.la/1883914)。）
 
 ### API
 
-- 现已完全支持 [Popover API](/zh-CN/docs/Web/API/Popover_API)，其用于创建顶级“弹出”UI 元素，可用于操作菜单、自定义“吐司”通知、表单元素建议、内容选择器等。可以使用 HTML 属性或 JavaScript 创建弹出窗口及其触发按钮或输入，并使用 CSS 设置样式。
+- 现已完全支持 [Popover API](/zh-CN/docs/Web/API/Popover_API)，其用于创建顶级的，可用于操作菜单、自定义“吐司”通知、表单元素建议、内容选择器等的“弹出框”UI 元素。可以使用 HTML 属性或 JavaScript 来创建弹出框及其触发按钮（或输入），并使用 CSS 设置样式。
 
   已实现以下 Web API：
 
@@ -34,10 +34,10 @@ l10n:
   - [`HTMLInputElement`](/zh-CN/docs/Web/API/HTMLInputElement) 的 [`popoverTargetElement`](/zh-CN/docs/Web/API/HTMLInputElement/popoverTargetElement) 和 [`popoverTargetAction`](/zh-CN/docs/Web/API/HTMLInputElement/popoverTargetAction) 属性。
   - [`HTMLElement`](/zh-CN/docs/Web/API/HTMLElement) 的 [`popover`](/zh-CN/docs/Web/API/HTMLElement/popover) 属性，[`hidePopover()`](/zh-CN/docs/Web/API/HTMLElement/hidePopover)、[`showPopover()`](/zh-CN/docs/Web/API/HTMLElement/showPopover) 和 [`togglePopover()`](/zh-CN/docs/Web/API/HTMLElement/togglePopover) 方法，[`beforetoggle`](/zh-CN/docs/Web/API/HTMLElement/beforetoggle_event) 和 [`toggle_event`](/zh-CN/docs/Web/API/HTMLElement/toggle_event) 事件（类型为 [`ToggleEvent`](/zh-CN/docs/Web/API/ToggleEvent)）。
 
-  已支持以下用于弹出窗口的 CSS 伪类和元素：
+  已支持以下用于弹出框的 CSS 伪类和元素：
 
   - [`:popover-open`](/zh-CN/docs/Web/CSS/:popover-open)
-  - [`::backdrop`](/zh-CN/docs/Web/CSS/::backdrop) 已扩展为支持弹出窗口
+  - [`::backdrop`](/zh-CN/docs/Web/CSS/::backdrop) 已被扩展以支持弹出框
 
   已支持以下 HTML 全局属性：
 
@@ -51,12 +51,12 @@ l10n:
 
 - 添加了允许 Web 应用程序在画布临时丢失其 2D 上下文时进行优雅恢复的支持。这可能发生在画布使用 GPU 进行硬件加速而出现驱动程序崩溃的情况下。（[Firefox bug 1887729](https://bugzil.la/1887729)）。以下是有关丢失和恢复画布上下文的事件的一些额外细节：
 
-  - 应用程序可以通过监听 [`contextlost`](/zh-CN/docs/Web/API/HTMLCanvasElement/contextlost_event) 和 [`contextrestored`](/zh-CN/docs/Web/API/HTMLCanvasElement/contextrestored_event) 事件来监视画布上下文的丢失和恢复，这些事件在上下文丢失和恢复时分别在 [`HTMLCanvasElement`](/zh-CN/docs/Web/API/HTMLCanvasElement) 上触发，并且还可以使用 [`CanvasRenderingContext2D.isContextLost()`](/zh-CN/docs/Web/API/CanvasRenderingContext2D/isContextLost) 检查上下文。
-  - 在触发 `contextrestored` 后，浏览器将会默认尝试恢复和重启丢失的上下文，但代码可以通过取消这一事件来阻止这一行为。
+  - 应用程序可以监听 [`contextlost`](/zh-CN/docs/Web/API/HTMLCanvasElement/contextlost_event) 和 [`contextrestored`](/zh-CN/docs/Web/API/HTMLCanvasElement/contextrestored_event) 事件，这些事件分别在上下文丢失和恢复时于 [`HTMLCanvasElement`](/zh-CN/docs/Web/API/HTMLCanvasElement) 上触发，还可以使用 [`CanvasRenderingContext2D.isContextLost()`](/zh-CN/docs/Web/API/CanvasRenderingContext2D/isContextLost) 来检查上下文。
+  - 在触发 `contentlost` 后，浏览器将会默认尝试恢复和重启丢失的上下文，但代码可以通过取消这一事件来阻止这一行为。
   - 可以通过相同方式监视离屏画布，但应该使用 [`OffScreenCanvas`](/zh-CN/docs/Web/API/OffscreenCanvas) 的 [`contextlost`](/zh-CN/docs/Web/API/OffscreenCanvas/contextlost_event) 和 [`contextrestored`](/zh-CN/docs/Web/API/OffscreenCanvas/contextrestored_event) 事件，以及 [`OffscreenCanvasRenderingContext2D.isContextLost()`](/zh-CN/docs/Web/API/OffscreenCanvasRenderingContext2D#上下文)。
 
-- 已添加对 `<template>` 元素的 [`shadowrootclonable`](/zh-CN/docs/Web/HTML/Element/template#shadowrootclonable) 属性以及 `HTMLTemplateElement` 接口中与之对应的 [`shadowRootClonable`](/zh-CN/docs/Web/API/HTMLTemplateElement/shadowRootClonable) 属性的支持。该属性设置了使用 [`<template>`](/zh-CN/docs/Web/HTML/Element/template) 元素以声明方式创建的 [`ShadowRoot`](/zh-CN/docs/Web/API/ShadowRoot) 的 [`clonable`](/zh-CN/docs/Web/API/ShadowRoot/clonable) 属性。（[Firefox bug 1880188](https://bugzil.la/1880188)）。
-- 现已支持 [`Clipboard`](/zh-CN/docs/Web/API/Clipboard) 接口的 [`readText()`](/zh-CN/docs/Web/API/Clipboard/readText) 方法，其用于从系统剪贴板异步读取文本。当读取不是由同源页面提供的剪贴板数据时，将会出现粘贴上下文菜单，以供用户确认。（[Firefox bug 1877400](https://bugzil.la/1877400)）。
+- 已添加对 `<template>` 元素的 [`shadowrootclonable`](/zh-CN/docs/Web/HTML/Element/template#shadowrootclonable) 属性以及 `HTMLTemplateElement` 接口中与之对应的 [`shadowRootClonable`](/zh-CN/docs/Web/API/HTMLTemplateElement/shadowRootClonable) 属性的支持。该属性用于设置以声明方式使用 [`<template>`](/zh-CN/docs/Web/HTML/Element/template) 元素创建的 [`ShadowRoot`](/zh-CN/docs/Web/API/ShadowRoot) 的 [`clonable`](/zh-CN/docs/Web/API/ShadowRoot/clonable) 属性。（[Firefox bug 1880188](https://bugzil.la/1880188)）。
+- 现已支持 [`Clipboard`](/zh-CN/docs/Web/API/Clipboard) 接口的 [`readText()`](/zh-CN/docs/Web/API/Clipboard/readText) 方法，其用于从系统剪贴板异步读取文本。在读取不是由同源页面提供的剪贴板数据时，将会出现粘贴上下文菜单，以供用户确认。（[Firefox bug 1877400](https://bugzil.la/1877400)）。
 
 #### Media、WebRTC 和 Web Audio
 
