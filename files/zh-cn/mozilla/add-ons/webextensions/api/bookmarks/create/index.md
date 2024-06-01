@@ -28,7 +28,7 @@ let createBookmark = browser.bookmarks.create(
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，将会被一个 {{WebExtAPIRef('bookmarks.BookmarkTreeNode', 'BookmarkTreeNode')}} 对象兑现，该对象描述了新创建的书签节点。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个 {{WebExtAPIRef('bookmarks.BookmarkTreeNode', 'BookmarkTreeNode')}} 对象，该对象描述了新创建的书签节点。
 
 > **备注：** 如果你创建多个书签，由于此 API 是异步的，因此创建调用可能以任何顺序处理。因此，每个书签的索引值在 {{WebExtAPIRef('bookmarks.BookmarkTreeNode', 'BookmarkTreeNode')}} 中返回的值可能会在所有创建调用完成之前发生变化或未知。如果书签的索引对你的扩展很重要，那么在创建多个书签时，扩展应等待每个 bookmarks.create 调用完成后再创建下一个书签。等待确保每个书签的索引不受在原始调用正在进行时并发执行的创建调用的影响。
 
