@@ -26,7 +26,7 @@ l10n:
         {{ MathMLElement("mo") }}
       </td>
       <td>
-         一个 <a href="/zh-CN/docs/Web/MathML/Values#mathml-特定类型"><code>&lt;boolean&gt;</code></a> 值，表示在作为下标或上标使用时，运算符是否应着重表示。
+         一个 <a href="/zh-CN/docs/Web/MathML/Values#mathml_特定类型"><code>&lt;boolean&gt;</code></a> 值，表示在作为下标或上标使用时，运算符是否应着重表示。
       </td>
     </tr>
     <tr>
@@ -44,7 +44,7 @@ l10n:
         {{ MathMLElement("munder") }}、{{ MathMLElement("munderover") }}
       </td>
       <td>
-         一个 <a href="/zh-CN/docs/Web/MathML/Values#mathml-特定类型"><code>&lt;boolean&gt;</code></a> 值，表示上标是否应着重表示。
+         一个 <a href="/zh-CN/docs/Web/MathML/Values#mathml_特定类型"><code>&lt;boolean&gt;</code></a> 值，表示上标是否应着重表示。
       </td>
     </tr>
     <tr>
@@ -135,7 +135,7 @@ l10n:
       <td><a href="/zh-CN/docs/Web/MathML/Global_attributes">所有 MathML 元素</a></td>
       <td>
         <p>
-        一个 <a href="/zh-CN/docs/Web/MathML/Values#mathml-特定类型"><code>&lt;boolean&gt;</code></a> 值，指定是否将 <a href="/zh-CN/docs/Web/CSS/math-style">math-style</a> 设置为 <code>normal</code>（如果为真）或 <code>compact</code>（其他情况下）。
+        一个 <a href="/zh-CN/docs/Web/MathML/Values#mathml_特定类型"><code>&lt;boolean&gt;</code></a> 值，指定是否将 <a href="/zh-CN/docs/Web/CSS/math-style">math-style</a> 设置为 <code>normal</code>（如果为真）或 <code>compact</code>（其他情况下）。
         </p>
       </td>
     </tr>
@@ -143,7 +143,7 @@ l10n:
       <td><code>fence</code></td>
       <td>{{ MathMLElement("mo") }}</td>
       <td>
-        一个 <a href="/zh-CN/docs/Web/MathML/Values#mathml-特定类型"><code>&lt;boolean&gt;</code></a> 值，指定运算符是否为分隔符（如括号）。该属性没有视觉效果。
+        一个 <a href="/zh-CN/docs/Web/MathML/Values#mathml_特定类型"><code>&lt;boolean&gt;</code></a> 值，指定运算符是否为分隔符（如括号）。该属性没有视觉效果。
       </td>
     </tr>
     <tr>
@@ -210,7 +210,7 @@ l10n:
     <tr>
       <td><code>linethickness</code></td>
       <td>{{ MathMLElement("mfrac") }}</td>
-      <td>一个 {{cssxref("length-percentage")}} 值，表示水平分数线的厚度。</td>
+      <td>一个 {{cssxref("length-percentage")}} 值，表示水平分数线的宽度。</td>
     </tr>
     <tr>
       <td><code>lspace</code></td>
@@ -277,7 +277,7 @@ l10n:
       <td><code>movablelimits</code></td>
       <td>{{ MathMLElement("mo") }}</td>
       <td>
-        一个 <a href="/zh-CN/docs/Web/MathML/Values#mathml-特定类型"><code>&lt;boolean&gt;</code></a> 值，表示当 <a href="/zh-CN/docs/Web/CSS/math-style">math-style</a> 设置为 <code>compact</code> 时，所附的下标和上标是否移动到下标和上标位置。
+        一个 <a href="/zh-CN/docs/Web/MathML/Values#mathml_特定类型"><code>&lt;boolean&gt;</code></a> 值，表示当 <a href="/zh-CN/docs/Web/CSS/math-style">math-style</a> 设置为 <code>compact</code> 时，所附的下标和上标是否移动到下角标和上角标的位置。
       </td>
     </tr>
     <tr>
@@ -363,7 +363,7 @@ l10n:
       <td><code>separator</code></td>
       <td>{{ MathMLElement("mo") }}</td>
       <td>
-      一个 <a href="/zh-CN/docs/Web/MathML/Values#mathml-特定类型"><code>&lt;boolean&gt;</code></a> 值，指定了该运算符是否为分割符（如逗号）。这个属性没有视觉效果。
+      一个 <a href="/zh-CN/docs/Web/MathML/Values#mathml_特定类型"><code>&lt;boolean&gt;</code></a> 值，指定了该运算符是否为分割符（如逗号）。这个属性没有视觉效果。
       </td>
     </tr>
     <tr>
@@ -377,7 +377,7 @@ l10n:
       <td><code>stretchy</code></td>
       <td>{{ MathMLElement("mo") }}</td>
       <td>
-        一个 <a href="/zh-CN/docs/Web/MathML/Values#mathml-特定类型"><code>&lt;boolean&gt;</code></a> 值，表示运算符是否拉伸到相邻元素的大小。
+        一个 <a href="/zh-CN/docs/Web/MathML/Values#mathml_特定类型"><code>&lt;boolean&gt;</code></a> 值，表示运算符是否拉伸到相邻元素的大小。
       </td>
     </tr>
     <tr>
@@ -402,7 +402,7 @@ l10n:
       <td><code>symmetric</code></td>
       <td>{{ MathMLElement("mo") }}</td>
       <td>
-        一个 <a href="/zh-CN/docs/Web/MathML/Values#mathml-特定类型"><code>&lt;boolean&gt;</code></a> 值，表示拉伸运算符是否应围绕数学虚轴（居中分数线）垂直对称。
+        一个 <a href="/zh-CN/docs/Web/MathML/Values#mathml_特定类型"><code>&lt;boolean&gt;</code></a> 值，表示拉伸运算符是否应围绕数学虚轴（居中分数线）垂直对称。
       </td>
     </tr>
     <tr>
