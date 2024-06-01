@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("URL API")}} {{AvailableInWorkers}}
 
-{{domxref("URLsearchParams")}} 接口的 **`values()`** 方法返回一个{{jsxref("Iteration_protocols",'iterator')}} 遍历器允许遍历对象中包含的所有键，这些键都是字符串对象。
+{{domxref("URLsearchParams")}} 接口的 **`values()`** 方法返回一个用于遍历对象中包含的所有键的{{jsxref("Iteration_protocols", "迭代器", "", 1)}}。这些键都是字符串对象。
 
 ## 语法
 

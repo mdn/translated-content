@@ -33,7 +33,7 @@ let params = new URLSearchParams(url.search);
 // 为 foo 添加第二个参数
 params.append("foo", 4);
 
-console.log(params.getAll("foo")); // 输出 ["1","4"].
+console.log(params.getAll("foo")); // 输出 ["1", "4"]。
 ```
 
 ## 规范

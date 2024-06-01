@@ -7,7 +7,7 @@ l10n:
 
 {{ApiRef("URL API")}} {{AvailableInWorkers}}
 
-{{domxref("URLSearchParams")}} 接口的 **get()** 方法返回第一个与查询参数对应的值。
+{{domxref("URLSearchParams")}} 接口的 **`get()`** 方法返回第一个与查询参数对应的值。
 
 ## 语法
 
@@ -17,24 +17,24 @@ get(name)
 
 ### 参数
 
-- 键名
-  - : 将要返回的参数的键名。
+- `name`
+  - : 要返回的参数的键名。
 
 ### 返回值
 
-返回一个字符串；如果没找到，返回 **`null`**。
+如果找到了给定的查询参数，则返回一个字符串；否则返回 **`null`**。
 
 ## 示例
 
-如果一个页面的 URL 是 `https://example.com/?name=Jonathan&age=18` ，你可以这样解析参数“name”和“age”：
+如果一个页面的 URL 是 `https://example.com/?name=Jonathan&age=18`，你可以这样解析参数“name”和“age”：
 
 ```js
 let params = new URLSearchParams(document.location.search);
-let name = params.get("name"); // name 的值是"Jonathan"
-let age = parseInt(params.get("age"), 10); // age 的值是数字 18
+let name = params.get("name"); // 字符串“Jonathan”
+let age = parseInt(params.get("age"), 10); // 数字 18
 ```
 
-查找一个不存在的键名则返回 **`null`**:
+查找一个不存在于查询字符串中的键名则返回 **`null`**:
 
 ```js
 let address = params.get("address"); // null

@@ -7,10 +7,10 @@ l10n:
 
 {{ApiRef("URL API")}} {{AvailableInWorkers}}
 
-{{domxref("URLSearchParams")}} 接口的 **`has()`** 方法返回一个布尔值，表示一个指定的键名对应的值是否存在。
+{{domxref("URLSearchParams")}} 接口的 **`has()`** 方法返回一个布尔值，表示指定的键名对应的值是否存在于查询参数中。
 
 一个参数名称和可选值用于匹配参数。如果只指定了一个参数名称，那么如果查询字符串中的任何参数与名称匹配，则该方法将返回 `true`，否则返回 `false`。
-如果同时指定了参数名称和值，则如果参数与名称和值都匹配，则该方法将返回 `true`。
+如果同时指定了参数名称和值，则如果参数与名称和值都匹配，该方法才返回 `true`。
 
 ## 语法
 
@@ -86,11 +86,11 @@ log(`bar=2?:\t${params.has("bar", "2")}`);
 log(`foo=4?:\t${params.has("foo", "4")}`);
 ```
 
-只有上面的第二个值是 `true`，因为参数名称`bar`和值为 `2` 的参数匹配。
+只有上面的第二个值是 `true`，因为仅有名称为 `bar` 且值为 `2` 的参数匹配。
 
 {{EmbedLiveSample('检查具有指定名称和值的参数', '100%', '80')}}
 
-如果你的浏览器不支持 `value` 选项，则该方法将在名称上匹配，并且所有结果都应为 `true`。
+如果你的浏览器不支持 `value` 选项，则该方法将基于名称进行匹配，并且所有结果都应为 `true`。
 
 ## 规范
 
@@ -102,4 +102,4 @@ log(`foo=4?:\t${params.has("foo", "4")}`);
 
 ## 参见
 
-- [`core-js` 中 `URLSearchParams` 的垫片](https://github.com/zloirock/core-js#url-and-urlsearchparams)
+- [`core-js` 中 `URLSearchParams` 的 polyfill](https://github.com/zloirock/core-js#url-and-urlsearchparams)

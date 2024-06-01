@@ -18,25 +18,25 @@ forEach(callback, thisArg)
 
 ### 参数
 
-- 回调函数
-  - : 在每个元素上执行的函数，该函数传递以下参数：
+- `callback`
+  - : 在每个元素上执行的函数，会传入以下参数：
     - `value`
-      - : 当前遍历到的键值。
+      - : `URLSearchParams` 对象中正在处理的条目的值。
     - `key`
-      - : 当前遍历到的键名。
+      - : `URLSearchParams` 对象中正在处理的条目的键。
     - `searchParams`
-      - : 当前调用 `forEach()` 方法的实例对象。
+      - : 当前调用 `forEach()` 方法的 `URLSearchParams` 对象。
 - `thisArg` {{optional_inline}}
   - : 执行 `callback` 时 `this` 的值。
 
 ### 返回值
 
-None ({{jsxref("undefined")}})。
+无（{{jsxref("undefined")}}）。
 
 ## 示例
 
 ```js
-// 创建 URLSearchParams 对象的实例对象，用于测试
+// 创建用于测试的 URLSearchParams 对象
 const searchParams = new URLSearchParams("key1=value1&key2=value2");
 
 // 输出值

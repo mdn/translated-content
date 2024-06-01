@@ -19,14 +19,14 @@ append(name, value)
 
 ### 参数
 
-- name
+- `name`
   - : 要附加的参数的键名。
-- value
+- `value`
   - : 要附加的参数的值。
 
 ### 返回值
 
-None ({{jsxref("undefined")}})。
+无（{{jsxref("undefined")}}）。
 
 ## 示例
 
@@ -36,7 +36,7 @@ let params = new URLSearchParams(url.search);
 
 // 添加第二个 foo 查询参数。
 params.append("foo", 4);
-// 查询字符串变成：'foo=1&bar=2&foo=4'
+// 查询字符串变成：“foo=1&bar=2&foo=4”
 ```
 
 ## 规范
