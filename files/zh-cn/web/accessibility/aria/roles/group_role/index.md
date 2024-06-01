@@ -1,6 +1,8 @@
 ---
-title: "ARIA: group role"
+title: ARIA：group 角色
 slug: Web/Accessibility/ARIA/Roles/group_role
+l10n:
+  sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
 ---
 
 {{AccessibilitySidebar}}
