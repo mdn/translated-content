@@ -7,7 +7,7 @@ l10n:
 
 {{MathMLRef}}
 
-**`<mpadded>`** 这个 [MathML](/zh-CN/docs/Web/MathML) 元素用于添加额外的填充，并设置封闭内容的位置和大小的一般调整。
+**`<mpadded>`** [MathML](/zh-CN/docs/Web/MathML) 元素用于添加额外的内边距，并设置封闭内容的位置和大小的一般调整。
 
 ## 属性
 
@@ -31,8 +31,8 @@ l10n:
 1. 可选的 `+` 或 `-` 符号作为前缀，指定对应维度的增量或减量（如果缺失，则对应维度直接设置为指定值）。
 2. 后跟一个 [`<unsigned-number>`](/zh-CN/docs/Web/MathML/Values#mathml_特定类型)（下面称为 α）。
 3. 可选地跟随一个值（如果缺失，则指定值被解释为“α 的百分比的 100 倍”）。
-   - 一个[unit](/zh-CN/docs/Web/MathML/Values#单位)。指定值的解释方式与旧版 MathML 长度相同。
-   - 一个[namedspace constant](/zh-CN/docs/Web/MathML/Values#常数)。指定值被解释为 α 乘以常量。
+   - 一个[单位](/zh-CN/docs/Web/MathML/Values#单位)。指定值的解释方式与旧版 MathML 长度相同。
+   - 一个[命名空间常量](/zh-CN/docs/Web/MathML/Values#常数)。指定值被解释为 α 乘以常量。
    - 一个伪单位 `width`、`height` 或 `depth`。指定值被解释为内容的对应维度的 α 倍。
    - 一个百分号后跟伪单位 `width`、`height` 或 `depth`。指定值被解释为内容的对应维度的 α%。
 
@@ -52,13 +52,13 @@ l10n:
 </math>
 ```
 
-{{ EmbedLiveSample('示例', 700, 200) }}
+{{ EmbedLiveSample('尺寸和偏移', 700, 200) }}
 
 ### 旧版语法
 
 ```html
 <math display="block">
-  <!-- 以一个长度增加 -->
+  <!-- 增加一定的长度 -->
   <mpadded width="+20px" style="background: lightblue">
     <mtext>+20px</mtext>
   </mpadded>
@@ -80,7 +80,7 @@ l10n:
 </math>
 ```
 
-{{ EmbedLiveSample('示例', 700, 200) }}
+{{ EmbedLiveSample('旧版语法', 700, 200) }}
 
 ## 规范
 
