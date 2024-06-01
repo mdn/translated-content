@@ -1,5 +1,5 @@
 ---
-title: alarms.create()
+title: alarms：create() 方法
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/create
 l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
@@ -13,8 +13,8 @@ l10n:
 
 ```js-nolint
 browser.alarms.create(
-  name, // 可选的字符串 (string) 类型
-  alarmInfo, // 可选的对象 (object) 类型
+  name, // 可选的字符串（string）类型
+  alarmInfo, // 可选的对象（object）类型
 );
 ```
 
@@ -24,13 +24,13 @@ browser.alarms.create(
 
   - : 字符串类型。闹钟的名称。默认为空的字符串。闹钟的名称可以在 {{WebExtAPIRef('alarms.get()')}} 方法和 {{WebExtAPIRef('alarms.clear()')}} 方法中引用。同时它也可以通过 {{WebExtAPIRef('alarms.onAlarm')}} 监听方法传入的参数对象 {{WebExtAPIRef('alarms.Alarm')}}的 `name` 属性访问到。
 
-  闹钟的名称是唯一的 (在单个附件范围内). 如果传入了已经在这个附件存在的名称，原来的同名闹钟会被移除并且没有警告。
+  闹钟的名称是唯一的（在单个附件范围内）。如果传入了已经在这个附件存在的名称，原来的同名闹钟会被移除并且没有警告。
 
 - `alarmInfo`{{optional_inline}}
 
   - : `object`（对象）类型。你可以对过它来指定什么时间闹钟会开始触发，其值可以是一个具体的时间值或者是一个延时（从闹钟设置开始）。为了让闹钟能复现，需要指定 `periodInMinutes`。
 
-    在 Chrome 浏览器上，除非附件以非打包 (unpackaged) 方式加载，闹钟的创建每分钟不允许超过一次。如果附件尝试设置 `delayInMinutes` 为小于 1 的值，闹钟只能在到达 1 分钟之后才会触发，并且会变成每分钟触发一次。
+    在 Chrome 浏览器上，除非附件以非打包（unpackaged）方式加载，闹钟的创建每分钟不允许超过一次。如果附件尝试设置 `delayInMinutes` 为小于 1 的值，闹钟只能在到达 1 分钟之后才会触发，并且会变成每分钟触发一次。
 
     `alarmInfo` 对象可以设置以下属性：
 
