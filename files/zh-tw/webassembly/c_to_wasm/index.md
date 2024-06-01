@@ -144,7 +144,7 @@ slug: WebAssembly/C_to_Wasm
 
 5. 現在我們需要運行新的 `myFunction()` JavaScript 函數。
 
-6. 首先，在 `<script type='text/javascript'>` 開頭標籤之前，依照以下範例添加一個 {{htmlelement("button")}} 。
+6. 首先，在 `<script type='text/javascript'>` 開頭標籤之前，依照以下範例添加一個 {{htmlelement("button")}}。
 
    ```html
    <button id="mybutton">Run myFunction</button>
