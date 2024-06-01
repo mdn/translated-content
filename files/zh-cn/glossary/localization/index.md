@@ -1,6 +1,8 @@
 ---
 title: 本地化
 slug: Glossary/Localization
+l10n:
+  sourceCommit: 5f5daffff583dffcf4650a8812bc228807a1b34d
 ---
 
 {{GlossarySidebar}}
@@ -29,5 +31,5 @@ slug: Glossary/Localization
 
 ## 参见
 
-- 维基百科上的[本地化](https://zh.wikipedia.org/wiki/语言本地化)词条
+- 维基百科上的[本地化](https://zh.wikipedia.org/wiki/语言本地化)
 - {{glossary("Internationalization", "国际化")}}
