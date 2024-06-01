@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLInputElement.setSelectionRange`** 方法用于设定{{HTMLElement("input")}} 或 {{HTMLElement("textarea")}} 元素中当前选中文本的起始和结束位置。
+**`HTMLInputElement.setSelectionRange`** 方法用于设定 {{HTMLElement("input")}} 或 {{HTMLElement("textarea")}} 元素中当前选中文本的起始和结束位置。
 
 该元素必须获得焦点才能使调用产生任何效果。
 
@@ -48,8 +48,8 @@ setSelectionRange(selectionStart, selectionEnd, selectionDirection)
 
 ### 异常
 
-InvalidStateError {{domxref("DOMException")}}
-: 如果元素不是以下输入类型之一：[`password`](/zh-CN/docs/Web/HTML/Element/input/password)、[`search`](/zh-CN/docs/Web/HTML/Element/input/search)、[`tel`](/zh-CN/docs/Web/HTML/Element/input/tel)、[`text`](/zh-CN/docs/Web/HTML/Element/input/text) 或 [`url`](/zh-CN/docs/Web/HTML/Element/input/url)，则抛出该异常。
+- InvalidStateError {{domxref("DOMException")}}
+  - : 如果元素不是以下输入类型之一：[`password`](/zh-CN/docs/Web/HTML/Element/input/password)、[`search`](/zh-CN/docs/Web/HTML/Element/input/search)、[`tel`](/zh-CN/docs/Web/HTML/Element/input/tel)、[`text`](/zh-CN/docs/Web/HTML/Element/input/text) 或 [`url`](/zh-CN/docs/Web/HTML/Element/input/url)，则抛出该异常。
 
 ## 示例
 
@@ -59,7 +59,7 @@ InvalidStateError {{domxref("DOMException")}}
 
 ```html
 <input type="text" id="text-box" size="20" value="Mozilla" />
-<button onclick="selectText()">Select text</button>
+<button onclick="selectText()">选择文本</button>
 ```
 
 ### JavaScript
