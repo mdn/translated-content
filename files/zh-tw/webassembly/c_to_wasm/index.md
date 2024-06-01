@@ -53,7 +53,7 @@ slug: WebAssembly/C_to_Wasm
 
 - `hello.wasm` 二進制的 Wasm 模組程式碼
 - `hello.js` 一個包含了用來在原生 C 函數和 JavaScript/Wasm 之間轉換的膠水程式碼的 JavaScript 檔案
-- `hello.html` 一個用來加載，編譯，實例化你的 Wasm 程式，並將它輸出在瀏覽器顯示上的 HTML 檔案
+- `hello.html` 一個用來加載、編譯、實例化你的 Wasm 程式，並將它輸出在瀏覽器顯示上的 HTML 檔案
 
 ### 運行你的範例
 
