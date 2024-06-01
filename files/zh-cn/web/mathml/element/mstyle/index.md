@@ -34,7 +34,7 @@ l10n:
 
 ### 映射到 CSS 的属性
 
-以下示例使用 [全局属性](/zh-CN/docs/Web/MathML/Global_attributes) `displaystyle` 和 `mathcolor` 分别覆盖 `<munder>` 和 `<munderover>` 子元素的 [`math-style`](/zh-CN/docs/Web/CSS/math-style) 和 [`color`](/zh-CN/docs/Web/CSS/color)：
+以下示例使用[全局属性](/zh-CN/docs/Web/MathML/Global_attributes) `displaystyle` 和 `mathcolor` 分别覆盖 `<munder>` 和 `<munderover>` 子元素的 [`math-style`](/zh-CN/docs/Web/CSS/math-style) 和 [`color`](/zh-CN/docs/Web/CSS/color)：
 
 ```html
 <math display="block">
@@ -56,7 +56,7 @@ l10n:
 </math>
 ```
 
-{{EmbedLiveSample('Attributes mapped to CSS')}}
+{{EmbedLiveSample('映射到 CSS 的属性')}}
 
 ### 旧版 script 属性
 
@@ -88,7 +88,7 @@ l10n:
 </math>
 ```
 
-{{EmbedLiveSample('Legacy script attributes', 700, 400)}}
+{{EmbedLiveSample('旧版附加符号属性', 700, 400)}}
 
 ## 规范
 
