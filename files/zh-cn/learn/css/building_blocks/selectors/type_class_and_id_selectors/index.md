@@ -38,7 +38,7 @@ slug: Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors
 
 **类型选择器**有时也叫做*标签名选择器*或者是*元素选择器*，因为它在文档中选择了一个 HTML 标签/元素的缘故。在下面的示例中，我们已经用了 span、em 和 strong 选择器，`<span>`、`<em>`和`<strong>`元素的所有实例这样就都被样式化了。
 
-**试着加上一条 CSS 规则，选择`<h1>`元素，把它的颜色变为蓝色。**
+**试着加上一条 CSS 规则，选择 `<h1>` 元素，把它的颜色变为蓝色。**
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/type.html", '100%', 1100)}}
 
