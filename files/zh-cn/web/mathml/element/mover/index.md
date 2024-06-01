@@ -45,5 +45,5 @@ l10n:
 
 ## 参见
 
-- {{ MathMLElement("munder") }} (下标)
-- {{ MathMLElement("munderover") }} (上下标对)
+- {{ MathMLElement("munder") }}（下标）
+- {{ MathMLElement("munderover") }}（上下标对）
