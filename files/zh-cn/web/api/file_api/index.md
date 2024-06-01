@@ -1,6 +1,8 @@
 ---
 title: 文件 API
 slug: Web/API/File_API
+l10n:
+  sourceCommit: 497d322c61511b11e4877a77660f8d7b394a8277
 ---
 
 {{DefaultAPISidebar("File API")}}{{AvailableInWorkers}}
