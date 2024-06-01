@@ -1,7 +1,8 @@
 ---
 title: 媒体查询
 slug: Glossary/Media_query
-page-type: glossary-definition
+l10n:
+  sourceCommit: 9ff83eb7950a8d4e2d55d61fcf9b06cf82eae6bf
 ---
 
 {{GlossarySidebar}}
