@@ -29,10 +29,10 @@ l10n:
 对于 `depth`、`height`、`lspace`、`voffset` 和 `width` 属性，一些浏览器可能接受更复杂的语法：
 
 1. 可选的 `+` 或 `-` 符号作为前缀，指定对应维度的增量或减量（如果缺失，则对应维度直接设置为指定值）。
-2. 后跟一个 [`<unsigned-number>`](/zh-CN/docs/Web/MathML/Values#mathml-specific_types)（下面称为 α）。
+2. 后跟一个 [`<unsigned-number>`](/zh-CN/docs/Web/MathML/Values#mathml_特定类型)（下面称为 α）。
 3. 可选地跟随一个值（如果缺失，则指定值被解释为“α 的百分比的 100 倍”）。
-   - 一个[unit](/zh-CN/docs/Web/MathML/Values#units)。指定值的解释方式与旧版 MathML 长度相同。
-   - 一个[namedspace constant](/zh-CN/docs/Web/MathML/Values#constants)。指定值被解释为α乘以常量。
+   - 一个[unit](/zh-CN/docs/Web/MathML/Values#单位)。指定值的解释方式与旧版 MathML 长度相同。
+   - 一个[namedspace constant](/zh-CN/docs/Web/MathML/Values#常数)。指定值被解释为 α 乘以常量。
    - 一个伪单位 `width`、`height` 或 `depth`。指定值被解释为内容的对应维度的 α 倍。
    - 一个百分号后跟伪单位 `width`、`height` 或 `depth`。指定值被解释为内容的对应维度的 α%。
 
@@ -52,35 +52,35 @@ l10n:
 </math>
 ```
 
-{{ EmbedLiveSample('dimensions_and_offsets_example', 700, 200, "", "") }}
+{{ EmbedLiveSample('示例', 700, 200) }}
 
 ### 旧版语法
 
 ```html
 <math display="block">
-  <!-- increment by a length -->
+  <!-- 以一个长度增加 -->
   <mpadded width="+20px" style="background: lightblue">
     <mtext>+20px</mtext>
   </mpadded>
 
-  <!-- set to a pseudo-unit -->
+  <!-- 设定为伪单位 -->
   <mpadded width="2width" style="background: lightgreen">
     <mtext>2width</mtext>
   </mpadded>
 
-  <!-- increment by a percent of a pseudo-unit -->
+  <!-- 以伪单位的百分比增加 -->
   <mpadded width="+400%height" style="background: lightyellow">
     <mtext>+400%height</mtext>
   </mpadded>
 
-  <!-- decrement to a multiple of a namedspace -->
+  <!-- 递减至命名空间的倍数 -->
   <mpadded width="-1thickmathspace" style="background: pink">
     <mtext>-.5thickmathspace</mtext>
   </mpadded>
 </math>
 ```
 
-{{ EmbedLiveSample('legacy_syntax_example', 700, 200, "", "") }}
+{{ EmbedLiveSample('示例', 700, 200) }}
 
 ## 规范
 
