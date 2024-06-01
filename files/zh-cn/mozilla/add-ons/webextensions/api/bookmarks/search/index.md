@@ -9,7 +9,7 @@ l10n:
 
 **`bookmarks.search()`** 函数用于搜索与给定查询匹配的书签树节点。
 
-如果任何输入参数无效或不是适当的类型，则此函数会引发异常；请查看 控制台 获取错误消息。异常没有错误 ID，并且消息本身可能会更改，因此不要编写试图解释它们的代码。
+如果任何输入参数无效或不是适当的类型，则此函数会引发异常；请查看[控制台](https://extensionworkshop.com/documentation/develop/debugging/)获取错误消息。异常没有错误 ID，并且消息本身可能会更改，因此不要编写试图解释它们的代码。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
