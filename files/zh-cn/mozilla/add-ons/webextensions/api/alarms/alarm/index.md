@@ -11,7 +11,7 @@ l10n:
 
 ## 类型
 
-此类型的值是对象。它们包含以下属性：
+此类型的值是对象，包含以下属性：
 
 - `name`
   - : `string`。此闹钟的名称。这是传递给创建此闹钟的 {{WebExtAPIRef('alarms.create()')}} 调用的名称。
@@ -26,4 +26,4 @@ l10n:
 
 {{WebExtExamples}}
 
-> **备注：** 这个 API 是基于 Chromium 的 [`chrome.alarms`](https://developer.chrome.com/extensions/alarms) API。
+> **备注：** 此 API 基于 Chromium 的 [`chrome.alarms`](https://developer.chrome.com/extensions/alarms) API。
