@@ -15,7 +15,7 @@ CSS 提供了几个功能，允许你根据查看设备的媒体**类型**（例
 
 ## 参见
 
-- [使用媒体查询](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [媒体查询](/en-US/docs/Web/CSS/CSS_media_queries)
-- {{cssxref("@media")}} [at-规则](/en-US/docs/Web/CSS/At-rule)：根据媒体查询的结果，有条件地应用[样式表](/en-US/docs/Learn/CSS/First_steps/How_CSS_works#applying_css_to_the_dom)的一部分。
+- [使用媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)
+- {{cssxref("@media")}} [at-规则](/zh-CN/docs/Web/CSS/At-rule)：根据媒体查询的结果，有条件地应用[样式表](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_works#applying_css_to_the_dom)的一部分。
 - {{domxref("Window.matchMedia()")}}：测试查看设备是否符合媒体查询条件。
