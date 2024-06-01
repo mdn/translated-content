@@ -1,6 +1,8 @@
 ---
 title: MathML
 slug: Glossary/MathML
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
 {{GlossarySidebar}}
@@ -9,7 +11,7 @@ slug: Glossary/MathML
 
 ## 参见
 
-- 维基百科上的 [MathML](https://zh.wikipedia.org/wiki/数学置标语言)
+- 维基百科上的[数学置标语言](https://zh.wikipedia.org/wiki/数学置标语言)
 - [MathML](/zh-CN/docs/Web/MathML)
 - [编写 MathML](/zh-CN/docs/Web/MathML/Authoring)
 - [什么是 MathML](https://www.w3.org/Math/whatIsMathML.html)
