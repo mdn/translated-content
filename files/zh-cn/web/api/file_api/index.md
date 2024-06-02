@@ -7,7 +7,7 @@ l10n:
 
 {{DefaultAPISidebar("File API")}}{{AvailableInWorkers}}
 
-## 概念和基本使用
+## 概念和用法
 
 文件 API 使得 web 应用可以访问文件和其中的内容。
 

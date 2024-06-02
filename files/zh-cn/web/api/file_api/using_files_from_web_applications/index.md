@@ -93,7 +93,7 @@ const numFiles = files.length;
             numberOfBytes += file.size;
           }
 
-          // 近似于最接近的前缀单位
+          // 近似到最接近的前缀单位
           const units = [
             "B",
             "KiB",
@@ -372,7 +372,7 @@ function handleFiles() {
    2. 创建一个新的图片（{{HTMLElement("img")}}）元素。
    3. 设置图片的源为一个新的指代文件的对象 URL，使用 {{DOMxref("URL.createObjectURL_static", "URL.createObjectURL()")}} 来创建 blob URL。
    4. 设置图片的高度为 60 像素。
-   5. 设置图片的 load 事件处理器来释放对象 URL，当图片加载完成之后对象 URL 就不再需要了。这个可以通过调用 {{DOMxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}} 方法并且传递 `img.src`中的对象 URL 字符串来实现。
+   5. 设置图片的 load 事件处理器来释放对象 URL，当图片加载完成之后对象 URL 就不再需要了。这个可以通过调用 {{DOMxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}} 方法并且传递 `img.src` 中的对象 URL 字符串来实现。
    6. 将新的列表项添加到列表中。
 
 这是上面代码的一个在线示例：
@@ -383,7 +383,7 @@ function handleFiles() {
 
 此示例展示了如何让用户将文件（例如使用上一个示例选择的图像）上传到服务器。
 
-> **备注：** 通常最好使用 [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 而不是 {{domxref("XMLHttpRequest")}} 发起 HTTP 请求。但是，在这种情况下，我们想向用户显示上传进度，而 Fetch API 仍然不支持此功能，因此示例使用 `XMLHttpRequest`。使用 Fetch API 跟踪进度通知标准化的工作位于 <https://github.com/whatwg/fetch/issues/607>。
+> **备注：** 通常最好使用 [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 而不是 {{domxref("XMLHttpRequest")}} 发起 HTTP 请求。但是，在这种情况下，我们想向用户显示上传进度，而 Fetch API 仍然不支持此特性，因此示例使用 `XMLHttpRequest`。使用 Fetch API 跟踪进度通知标准化的工作位于 <https://github.com/whatwg/fetch/issues/607>。
 
 ### 创建上传任务
 
